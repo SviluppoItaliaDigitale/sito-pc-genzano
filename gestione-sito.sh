@@ -1,52 +1,39 @@
 #!/bin/bash
 # ============================================================
 # GESTIONE SITO — Protezione Civile Genzano di Roma
-# v2.9 — 9 maggio 2026
-# Changelog v2.9:
-#   - voce 21: aggiunto git pull --ff-only automatico all'inizio.
-#     Recupera modifiche fatte da altre sessioni (mobile/cloud)
-#     prima di rigenerare il contesto, così il file su Scrivania
-#     riflette sempre lo stato di GitHub. Se ci sono conflitti
-#     o modifiche locali pending, avvisa ma procede col locale.
+# v3.0 — 22 maggio 2026
+# Changelog v3.0:
+#   - REINTRODOTTA la sezione BOZZE (voci 5-8): Crea, Modifica,
+#     Pubblica, Elimina. Architettura NUOVA rispetto al passato:
+#     le bozze NON stanno più in content/ con draft:true (pattern
+#     vietato dalla regola di progetto, le bozze si accumulavano
+#     dimenticate e rischiavano di andare live). Ora vivono nella
+#     cartella bozze/ alla radice del repo, che Hugo NON costruisce
+#     mai (come riferimenti-interni/) → zero rischio di pubblicazione
+#     accidentale. "Pubblica bozza" sposta il file in
+#     content/comunicazioni/<data>-<slug>.md con draft:false.
+#   - MENU RIORDINATO E RINUMERATO da 1 a 30 in ordine coerente:
+#     prima la numerazione saltava (24/25/26 dopo 21, GUIDE a 22/23,
+#     prompt "[0-23]" mentre esistevano voci fino a 26).
+#   - Aggiunto contatore "📝 Bozze in lavorazione: N" nell'header.
+#   - Aggiornati i riferimenti incrociati tra voci (es. "per
+#     pubblicare: voce 17") alla nuova numerazione.
 #
+# Changelog v2.9 (9 maggio 2026):
+#   - voce contesto AI: git pull --ff-only automatico all'inizio.
 # Changelog v2.8 (9 maggio 2026):
-#   - voce 21 "Esporta contesto per altra AI" ora chiede QUALE
-#     AI userai (Gemini / ChatGPT / Claude web) e adatta la
-#     procedura ai limiti di contesto di ognuna:
-#       Gemini (2M token)   → FULL via paste
-#       ChatGPT (128k tok)  → SLIM via paste, OPPURE FULL come
-#                             allegato drag-drop dalla Scrivania
-#       Claude web (200k)   → FULL via paste
-#   - export-contesto-ai.sh nel repo ora supporta flag --slim
-#     che genera CONTESTO-AI-slim.md (~250 KB / ~64k token):
-#     solo regole editoriali (01,02,03,06,07) + README + CLAUDE
-#     + PIANO + memorie. Esclude rules tecniche (04*/05/08),
-#     manuale split, workflow YAML, scripts. Stessa efficienza
-#     per la scrittura testi, ma sta in ChatGPT Plus.
-#
+#   - export contesto AI adattato ai limiti di Gemini/ChatGPT/Claude.
 # Changelog v2.7 (9 maggio 2026):
-#   - rimossa sezione BOZZE (voci 5-8) coerentemente con la
-#     regola progetto "niente articoli in revisione"
-#   - voce 1 "Crea nuova comunicazione": tolta la scelta
-#     bozza/pubblicata; gli articoli sono SEMPRE draft:false
-#   - rimossa la voce "Test sito con bozze visibili"
-#   - aggiunta voce 21 "Esporta contesto per altra AI"
-#   - menu rinumerato: ora 23 voci attive (era 27)
-#
-# Changelog v2.6 (9 maggio 2026):
-#   - menu: ogni voce ha una descrizione tra parentesi
-#   - sezione LINK RAPIDI: split su righe singole per coerenza
-#
-# Changelog v2.5 (26 aprile 2026):
-#   - voce 7 "Pubblica bozza": rispetta la calendarizzazione
-#   - voce 24: ActivePager → Smoke test sito live
-#   - voce 26 "Struttura sito": aggiornata
-#   - voce 27 "Guida pubblicazione": link a MANUALE-SITO.md
+#   - rimossa sezione BOZZE (regola "niente articoli in revisione").
+#     [Ripristinata in v3.0 con architettura fuori da content/.]
+# Changelog v2.6/2.5 (apr-mag 2026):
+#   - descrizioni voci, smoke test, struttura sito, guida.
 # ============================================================
 
 SITO_DIR="$HOME/sito-pc-genzano"
 CONTENT_DIR="$SITO_DIR/content"
 DATA_DIR="$SITO_DIR/data"
+BOZZE_DIR="$SITO_DIR/bozze"
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -66,6 +53,28 @@ lista_comunicazioni() {
   echo "${files[@]}"
 }
 
+# Funzione: lista delle bozze (file in bozze/, escluso README)
+lista_bozze() {
+  local files=()
+  for f in "$BOZZE_DIR/"*.md; do
+    [ ! -f "$f" ] && continue
+    [ "$(basename "$f")" = "README.md" ] && continue
+    files+=("$(basename "$f")")
+  done
+  echo "${files[@]}"
+}
+
+# Funzione: conta le bozze in lavorazione (per l'header del menu)
+conta_bozze() {
+  local count=0
+  for f in "$BOZZE_DIR/"*.md; do
+    [ ! -f "$f" ] && continue
+    [ "$(basename "$f")" = "README.md" ] && continue
+    count=$((count+1))
+  done
+  echo "$count"
+}
+
 # Funzione: mostra TUTTE le pagine del sito (index + sottopagine)
 lista_tutte_pagine() {
   find "$CONTENT_DIR" -name "*.md" ! -path "*/comunicazioni/*" | sort
@@ -76,7 +85,7 @@ mostra_menu() {
   echo -e "${BLUE}${BOLD}"
   echo "╔══════════════════════════════════════════════════════════╗"
   echo "║   GESTIONE SITO — Protezione Civile Genzano di Roma    ║"
-  echo "║   v2.9 — $(date '+%d/%m/%Y %H:%M')                              ║"
+  echo "║   v3.0 — $(date '+%d/%m/%Y %H:%M')                              ║"
   echo "╚══════════════════════════════════════════════════════════╝"
   echo -e "${NC}"
 
@@ -88,53 +97,61 @@ mostra_menu() {
       echo -e "  Emergenza: $stato_em"
     fi
   fi
+  nbozze=$(conta_bozze)
+  [ "$nbozze" -gt 0 ] && echo -e "  ${YELLOW}📝 Bozze in lavorazione: $nbozze${NC}"
   echo ""
 
   echo -e "${CYAN}── COMUNICAZIONI ──${NC}"
-  echo "  1) Crea nuova comunicazione         (nuovo articolo guidato — sempre pubblicato)"
+  echo "  1) Crea nuova comunicazione         (nuovo articolo guidato — pubblicato o calendarizzato)"
   echo "  2) Crea comunicazione da file Word  (mostra i comandi pandoc per convertire un .docx)"
   echo "  3) Modifica comunicazione           (apre con nano un articolo del sito)"
   echo "  4) Elimina comunicazione            (cancella definitivamente un articolo)"
   echo ""
+  echo -e "${CYAN}── BOZZE (lavori in corso, mai online) ──${NC}"
+  echo "  5) Crea bozza                       (scrivi con calma in bozze/, fuori dal sito)"
+  echo "  6) Modifica bozza                   (apre con nano una bozza esistente)"
+  echo "  7) Pubblica bozza                   (sposta la bozza in comunicazioni/ con la data scelta)"
+  echo "  8) Elimina bozza                    (cancella una bozza in lavorazione)"
+  echo ""
   echo -e "${CYAN}── PAGINE ──${NC}"
-  echo "  5) Modifica qualsiasi pagina        (apre con nano una pagina del sito, escluse le comunicazioni)"
-  echo "  6) Crea nuova pagina                (genera content/<sezione>/_index.md con frontmatter base)"
-  echo "  7) Elimina pagina                   (cancella una pagina del sito — attento alle pagine principali)"
+  echo "  9) Modifica qualsiasi pagina        (apre con nano una pagina del sito, escluse le comunicazioni)"
+  echo " 10) Crea nuova pagina                (genera content/<sezione>/_index.md con frontmatter base)"
+  echo " 11) Elimina pagina                   (cancella una pagina del sito — attento alle pagine principali)"
   echo ""
   echo -e "${CYAN}── EMERGENZA ──${NC}"
-  echo "  8) Attiva emergenza                 (mostra il banner rosso in homepage e attiva la modalità)"
-  echo "  9) Modifica emergenza attiva        (apre data/emergenza.json con nano per ritoccare i testi)"
-  echo " 10) Sospendi emergenza               (nasconde il banner; i dati restano per riattivarla dopo)"
+  echo " 12) Attiva emergenza                 (mostra il banner rosso in homepage e attiva la modalità)"
+  echo " 13) Modifica emergenza attiva        (apre data/emergenza.json con nano per ritoccare i testi)"
+  echo " 14) Sospendi emergenza               (nasconde il banner; i dati restano per riattivarla dopo)"
   echo ""
   echo -e "${CYAN}── ALLERTA METEO ──${NC}"
-  echo " 11) Imposta livello allerta          (scrive data/allerta.json: verde / giallo / arancione / rossa)"
+  echo " 15) Imposta livello allerta          (scrive data/allerta.json: verde / gialla / arancione / rossa)"
   echo ""
   echo -e "${CYAN}── PUBBLICA E TESTA ──${NC}"
-  echo " 12) Test sito in locale              (hugo server su http://localhost:1313)"
-  echo " 13) Pubblica modifiche online        (git add+commit+push → deploy Aruba in 2-3 minuti)"
-  echo " 14) Stato repository                 (git status + ultimi 10 commit)"
+  echo " 16) Test sito in locale              (hugo server su http://localhost:1313)"
+  echo " 17) Pubblica modifiche online        (git add+commit+push → deploy Aruba in 2-3 minuti)"
+  echo " 18) Stato repository                 (git status + ultimi 10 commit)"
   echo ""
   echo -e "${CYAN}── LINK RAPIDI ──${NC}"
-  echo " 15) Sito produzione                  (apre https://www.protezionecivilegenzano.it/)"
-  echo " 16) GitHub Actions                   (stato dei deploy e dei workflow automatici)"
-  echo " 17) Repository GitHub                (codice sorgente del sito)"
-  echo " 18) Bollettino Lazio                 (Centro Funzionale Regionale: allerte ufficiali)"
-  echo " 19) Smoke test sito                  (verifica che le pagine principali rispondano 200 OK)"
-  echo " 20) Avvia Claude Code                (lancia l'assistente AI in questo progetto, /exit per tornare)"
+  echo " 19) Sito produzione                  (apre https://www.protezionecivilegenzano.it/)"
+  echo " 20) GitHub Actions                   (stato dei deploy e dei workflow automatici)"
+  echo " 21) Repository GitHub                (codice sorgente del sito)"
+  echo " 22) Bollettino Lazio                 (Centro Funzionale Regionale: allerte ufficiali)"
+  echo " 23) Smoke test sito                  (verifica che le pagine principali rispondano 200 OK)"
+  echo " 24) Avvia Claude Code                (lancia l'assistente AI in questo progetto, /exit per tornare)"
   echo ""
   echo -e "${CYAN}── ALTRE AI (Gemini, ChatGPT, Claude web) ──${NC}"
-  echo " 21) Esporta contesto per altra AI    (scegli AI → genera + copia in appunti + apre il sito)"
+  echo " 25) Esporta contesto per altra AI    (scegli AI → genera + copia in appunti + apre il sito)"
   echo ""
   echo -e "${CYAN}── SOCIAL (assistito, human-in-the-loop) ──${NC}"
-  echo " 24) Pubblica bozze social di un articolo  (apre 4 tab + appunti, tu fai Ctrl+V e Pubblica)"
-  echo " 25) Stato opencli                         (verifica daemon + estensione Chrome + livello B)"
+  echo " 26) Pubblica bozze social di un articolo  (apre 4 tab + appunti, tu fai Ctrl+V e Pubblica)"
+  echo " 27) Stato opencli                         (verifica daemon + estensione Chrome + livello B)"
   echo ""
   echo -e "${CYAN}── SLIDE E PDF (open-design, locale) ──${NC}"
-  echo " 26) Avvia open-design (web UI locale)     (slide deck, brochure, mockup per formazione/scuole)"
+  echo " 28) Avvia open-design (web UI locale)     (slide deck, brochure, mockup per formazione/scuole)"
   echo ""
   echo -e "${CYAN}── GUIDE ──${NC}"
-  echo " 22) Struttura del sito               (panoramica menu, badge, workflow, data files)"
-  echo " 23) Guida pubblicazione              (apre MANUALE-SITO.md con less)"
+  echo " 29) Struttura del sito               (panoramica menu, badge, workflow, data files)"
+  echo " 30) Guida pubblicazione              (apre MANUALE-SITO.md con less)"
   echo ""
   echo -e "${YELLOW}  0) Esci${NC}                              (chiude il menu e torna al terminale)"
   echo ""
@@ -142,7 +159,7 @@ mostra_menu() {
 
 # ══════════════════════════════════════════
 mostra_menu
-echo -ne "${BOLD}Scegli [0-23]: ${NC}"
+echo -ne "${BOLD}Scegli [0-30]: ${NC}"
 read scelta
 
 case $scelta in
@@ -156,6 +173,7 @@ case $scelta in
   echo ""
   echo -e "${YELLOW}Nota: gli articoli sono sempre pubblicati (draft:false).${NC}"
   echo -e "${YELLOW}Per pubblicare in futuro, scegli una data avanti nel tempo.${NC}"
+  echo -e "${YELLOW}Se vuoi solo abbozzarlo senza mandarlo online, usa la voce 5 (Crea bozza).${NC}"
   echo ""
   echo -e "${YELLOW}Puoi usare le frecce ← → per muovere il cursore.${NC}"
   echo ""
@@ -230,7 +248,7 @@ EOF
     echo -e "Andrà online automaticamente quel giorno (workflow pubblica-programmata)."
   else
     echo -e "${GREEN}Articolo PUBBLICATO (data: $data).${NC}"
-    echo -e "Per mandarlo online: opzione ${BOLD}13${NC}."
+    echo -e "Per mandarlo online: opzione ${BOLD}17${NC}."
   fi
   echo -e "File: ${BOLD}$file${NC}"
   echo ""
@@ -246,7 +264,7 @@ EOF
   echo "Comandi da eseguire:"
   echo -e "  1. ${BOLD}pandoc nomefile.docx -t markdown -o articolo.md${NC}"
   echo -e "  2. ${BOLD}sed -i \"s/\\\\\\\\'/'/g\" articolo.md${NC}"
-  echo "  3. Usa opzione 1 per creare il file, poi incolla il contenuto."
+  echo "  3. Usa opzione 1 (o 5 per una bozza) per creare il file, poi incolla il contenuto."
   ;;
 
 # ══════════════════════════════════════════
@@ -292,9 +310,187 @@ EOF
   ;;
 
 # ══════════════════════════════════════════
-# 5) MODIFICA QUALSIASI PAGINA
+# 5) CREA BOZZA (in bozze/, fuori dal sito)
 # ══════════════════════════════════════════
 5)
+  echo ""
+  echo -e "${GREEN}══ Nuova bozza ══${NC}"
+  echo ""
+  echo -e "${YELLOW}Le bozze restano in bozze/ (fuori dal sito): non vanno MAI online${NC}"
+  echo -e "${YELLOW}finché non le pubblichi con la voce 7 (Pubblica bozza).${NC}"
+  echo ""
+  mkdir -p "$BOZZE_DIR"
+
+  echo -e "${BOLD}Titolo:${NC}"
+  read -e -p "> " titolo
+  [ -z "$titolo" ] && { echo -e "${RED}Titolo obbligatorio.${NC}"; read -p "Premi INVIO..."; exec bash "$0"; }
+
+  echo ""
+  echo -e "${BOLD}Tipo:${NC}"
+  echo "  1) Comunicazione   2) Allerta   3) Avviso    4) Evento"
+  echo "  5) Formazione      6) Attività  7) Volontariato"
+  read -p "Scegli [1-7, default 1]: " bn
+  case $bn in 2) badge="Allerta";; 3) badge="Avviso";; 4) badge="Evento";; 5) badge="Formazione";; 6) badge="Attività";; 7) badge="Volontariato";; *) badge="Comunicazione";; esac
+
+  echo ""
+  echo -e "${BOLD}Priorità:${NC}  1) Normale   2) Urgente"
+  read -p "Scegli [1-2, default 1]: " pn
+  [ "$pn" = "2" ] && priorita="urgente" || priorita="normale"
+
+  echo -e "${BOLD}Descrizione breve:${NC}"
+  read -e -p "> " desc
+
+  echo -e "${BOLD}Autore:${NC}"
+  read -e -p "> " -i "Gruppo Comunale Volontari PC Genzano" autore
+
+  echo -e "${BOLD}Area interessata (opzionale):${NC}"
+  read -e -p "> " area
+
+  slug=$(echo "$titolo" | tr '[:upper:]' '[:lower:]' | sed 's/à/a/g;s/è/e/g;s/é/e/g;s/ì/i/g;s/ò/o/g;s/ù/u/g' | sed 's/ /-/g;s/[^a-z0-9-]//g;s/--*/-/g;s/^-//;s/-$//')
+  [ -z "$slug" ] && slug="bozza-$(date +%Y%m%d-%H%M%S)"
+  file="$BOZZE_DIR/${slug}.md"
+
+  if [ -f "$file" ]; then
+    echo ""
+    echo -e "${YELLOW}Esiste già una bozza con questo nome: ${slug}.md${NC}"
+    read -p "Sovrascrivere? [s/N]: " sov
+    [ "$sov" != "s" ] && [ "$sov" != "S" ] && { echo "Annullato."; read -p "Premi INVIO..."; exec bash "$0"; }
+  fi
+
+  cat > "$file" << EOF
+---
+title: "$titolo"
+date: $(date +%Y-%m-%d)
+badge: "$badge"
+priorita: "$priorita"
+autore: "$autore"
+description: "$desc"
+image: ""
+area: "$area"
+scadenza: ""
+allegati: []
+draft: false
+---
+
+Scrivi qui il contenuto della comunicazione.
+EOF
+
+  echo ""
+  echo -e "${GREEN}Bozza creata: bozze/${slug}.md${NC}"
+  echo -e "${YELLOW}Non è online. Quando è pronta: voce 7 (Pubblica bozza).${NC}"
+  echo -e "${YELLOW}La data verrà scelta al momento della pubblicazione.${NC}"
+  echo ""
+  read -p "Aprire con nano? [S/n]: " apri
+  [ "$apri" != "n" ] && [ "$apri" != "N" ] && nano "$file"
+  ;;
+
+# ══════════════════════════════════════════
+# 6) MODIFICA BOZZA
+# ══════════════════════════════════════════
+6)
+  echo ""
+  echo -e "${GREEN}══ Modifica bozza ══${NC}"
+  echo ""
+  IFS=' ' read -ra files <<< "$(lista_bozze)"
+  if [ ${#files[@]} -eq 0 ]; then echo "Nessuna bozza in lavorazione. Creane una con la voce 5."
+  else
+    for i in "${!files[@]}"; do echo "  $((i+1))) ${files[$i]}"; done
+    echo ""
+    read -p "Numero: " num; idx=$((num-1))
+    if [ $idx -ge 0 ] && [ $idx -lt ${#files[@]} ]; then
+      echo -e "${YELLOW}Salva: Ctrl+O → INVIO — Esci: Ctrl+X${NC}"
+      read -p "Premi INVIO..."
+      nano "$BOZZE_DIR/${files[$idx]}"
+    else echo -e "${RED}Non valida.${NC}"; fi
+  fi
+  ;;
+
+# ══════════════════════════════════════════
+# 7) PUBBLICA BOZZA (sposta in content/comunicazioni)
+# ══════════════════════════════════════════
+7)
+  echo ""
+  echo -e "${GREEN}══ Pubblica bozza ══${NC}"
+  echo ""
+  IFS=' ' read -ra files <<< "$(lista_bozze)"
+  if [ ${#files[@]} -eq 0 ]; then echo "Nessuna bozza da pubblicare. Creane una con la voce 5."; read -p "Premi INVIO..."; exec bash "$0"; fi
+  for i in "${!files[@]}"; do echo "  $((i+1))) ${files[$i]}"; done
+  echo ""
+  read -p "Numero: " num; idx=$((num-1))
+  if [ $idx -lt 0 ] || [ $idx -ge ${#files[@]} ]; then echo -e "${RED}Non valida.${NC}"; read -p "Premi INVIO..."; exec bash "$0"; fi
+
+  bozza="${files[$idx]}"
+  slug="${bozza%.md}"
+  # togli eventuale prefisso data dal nome della bozza, se l'utente l'ha messo
+  slug=$(echo "$slug" | sed 's/^[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-//')
+
+  echo ""
+  echo -e "${BOLD}Data di pubblicazione:${NC}"
+  echo -e "${YELLOW}  - INVIO per pubblicare oggi"
+  echo -e "  - AAAA-MM-GG futura per calendarizzare (auto-pubblicata quel giorno)${NC}"
+  read -e -p "> " data_input
+  if [ -z "$data_input" ]; then
+    data=$(date +%Y-%m-%d)
+  else
+    if ! echo "$data_input" | grep -qE '^[0-9]{4}-[0-9]{2}-[0-9]{2}$'; then
+      echo -e "${RED}Formato data non valido (serve AAAA-MM-GG).${NC}"; read -p "Premi INVIO..."; exec bash "$0"
+    fi
+    data="$data_input"
+  fi
+
+  dest="$CONTENT_DIR/comunicazioni/${data}-${slug}.md"
+  if [ -f "$dest" ]; then
+    echo -e "${RED}Esiste già un articolo: ${data}-${slug}.md${NC}"
+    read -p "Sovrascrivere? [s/N]: " sov
+    [ "$sov" != "s" ] && [ "$sov" != "S" ] && { echo "Annullato."; read -p "Premi INVIO..."; exec bash "$0"; }
+  fi
+
+  # allinea il campo date e assicura draft:false nel frontmatter
+  sed -i "s/^date:.*/date: $data/" "$BOZZE_DIR/$bozza"
+  sed -i "s/^draft:.*/draft: false/" "$BOZZE_DIR/$bozza"
+
+  mv "$BOZZE_DIR/$bozza" "$dest"
+
+  echo ""
+  oggi=$(date +%Y-%m-%d)
+  if [ "$data" \> "$oggi" ]; then
+    echo -e "${GREEN}Bozza CALENDARIZZATA per $data.${NC}"
+    echo -e "Andrà online automaticamente quel giorno (workflow pubblica-programmata)."
+  else
+    echo -e "${GREEN}Bozza PUBBLICATA (data: $data).${NC}"
+  fi
+  echo -e "Articolo: ${BOLD}content/comunicazioni/${data}-${slug}.md${NC}"
+  echo -e "${YELLOW}Per mandarlo online sul sito: voce 17 (Pubblica modifiche online).${NC}"
+  echo ""
+  read -p "Aprire l'articolo con nano per una rilettura? [s/N]: " apri
+  [ "$apri" = "s" ] || [ "$apri" = "S" ] && nano "$dest"
+  ;;
+
+# ══════════════════════════════════════════
+# 8) ELIMINA BOZZA
+# ══════════════════════════════════════════
+8)
+  echo ""
+  echo -e "${RED}══ Elimina bozza ══${NC}"
+  echo ""
+  IFS=' ' read -ra files <<< "$(lista_bozze)"
+  if [ ${#files[@]} -eq 0 ]; then echo "Nessuna bozza."
+  else
+    for i in "${!files[@]}"; do echo "  $((i+1))) ${files[$i]}"; done
+    echo ""
+    read -p "Numero: " num; idx=$((num-1))
+    if [ $idx -ge 0 ] && [ $idx -lt ${#files[@]} ]; then
+      echo -e "${RED}Eliminare la bozza: ${files[$idx]}?${NC}"
+      read -p "Scrivi 'elimina': " conf
+      [ "$conf" = "elimina" ] && { rm "$BOZZE_DIR/${files[$idx]}"; echo -e "${GREEN}Eliminata.${NC}"; } || echo "Annullato."
+    else echo -e "${RED}Non valida.${NC}"; fi
+  fi
+  ;;
+
+# ══════════════════════════════════════════
+# 9) MODIFICA QUALSIASI PAGINA
+# ══════════════════════════════════════════
+9)
   echo ""
   echo -e "${GREEN}══ Modifica pagina ══${NC}"
   echo ""
@@ -325,9 +521,9 @@ EOF
   ;;
 
 # ══════════════════════════════════════════
-# 6) CREA PAGINA
+# 10) CREA PAGINA
 # ══════════════════════════════════════════
-6)
+10)
   echo ""
   echo -e "${GREEN}══ Crea nuova pagina ══${NC}"
   echo ""
@@ -358,9 +554,9 @@ EOF
   ;;
 
 # ══════════════════════════════════════════
-# 7) ELIMINA PAGINA
+# 11) ELIMINA PAGINA
 # ══════════════════════════════════════════
-7)
+11)
   echo ""
   echo -e "${RED}══ Elimina pagina ══${NC}"
   echo -e "${YELLOW}Non eliminare le pagine principali del sito!${NC}"
@@ -386,9 +582,9 @@ EOF
   ;;
 
 # ══════════════════════════════════════════
-# 8) ATTIVA EMERGENZA
+# 12) ATTIVA EMERGENZA
 # ══════════════════════════════════════════
-8)
+12)
   echo ""
   echo -e "${RED}══ Attiva emergenza ══${NC}"
   echo ""
@@ -399,7 +595,7 @@ EOF
   fi
 
   if [ "$attiva_esistente" = "True" ]; then
-    echo -e "${YELLOW}Già attiva! Usa 9 per modificare o 10 per sospendere.${NC}"
+    echo -e "${YELLOW}Già attiva! Usa 13 per modificare o 14 per sospendere.${NC}"
     read -p "INVIO..."; exec bash "$0"
   fi
 
@@ -413,7 +609,7 @@ import json
 with open('$DATA_DIR/emergenza.json','r') as f: d=json.load(f)
 d['attiva']=True; d['ultimo_aggiornamento']='$(date -Is)'
 with open('$DATA_DIR/emergenza.json','w') as f: json.dump(d,f,indent=2,ensure_ascii=False)"
-      echo -e "${GREEN}RIATTIVATA! Per pubblicare: opzione 13.${NC}"
+      echo -e "${GREEN}RIATTIVATA! Per pubblicare: opzione 17.${NC}"
       read -p "INVIO..."; exec bash "$0"
     fi
   fi
@@ -436,28 +632,28 @@ with open('$DATA_DIR/emergenza.json','w') as f: json.dump(d,f,indent=2,ensure_as
   "ultimo_aggiornamento": "$(date -Is)"
 }
 EOF
-  echo -e "${GREEN}ATTIVATA! Per pubblicare: opzione 13.${NC}"
+  echo -e "${GREEN}ATTIVATA! Per pubblicare: opzione 17.${NC}"
   ;;
 
 # ══════════════════════════════════════════
-# 9) MODIFICA EMERGENZA
+# 13) MODIFICA EMERGENZA
 # ══════════════════════════════════════════
-9)
+13)
   echo ""; cat "$DATA_DIR/emergenza.json"; echo ""
   echo -e "${YELLOW}Salva: Ctrl+O → INVIO — Esci: Ctrl+X${NC}"
   read -p "INVIO..."; nano "$DATA_DIR/emergenza.json"
   ;;
 
 # ══════════════════════════════════════════
-# 10) SOSPENDI EMERGENZA
+# 14) SOSPENDI EMERGENZA
 # ══════════════════════════════════════════
-10)
+14)
   echo ""
   attiva_em=$(python3 -c "import json;d=json.load(open('$DATA_DIR/emergenza.json'));print(d.get('attiva',False))" 2>/dev/null)
   if [ "$attiva_em" != "True" ]; then echo "Non attiva."; read -p "INVIO..."; exec bash "$0"; fi
   titolo_em=$(python3 -c "import json;d=json.load(open('$DATA_DIR/emergenza.json'));print(d.get('titolo',''))" 2>/dev/null)
   echo -e "Sospendere: ${BOLD}$titolo_em${NC}?"
-  echo -e "${YELLOW}I dati restano. Riattivabile con opzione 8.${NC}"
+  echo -e "${YELLOW}I dati restano. Riattivabile con opzione 12.${NC}"
   read -p "Confermi? [S/n]: " conf
   if [ "$conf" != "n" ] && [ "$conf" != "N" ]; then
     python3 -c "
@@ -465,14 +661,14 @@ import json
 with open('$DATA_DIR/emergenza.json','r') as f: d=json.load(f)
 d['attiva']=False
 with open('$DATA_DIR/emergenza.json','w') as f: json.dump(d,f,indent=2,ensure_ascii=False)"
-    echo -e "${GREEN}SOSPESA. Per pubblicare: opzione 13.${NC}"
+    echo -e "${GREEN}SOSPESA. Per pubblicare: opzione 17.${NC}"
   else echo "Annullato."; fi
   ;;
 
 # ══════════════════════════════════════════
-# 11) ALLERTA
+# 15) ALLERTA
 # ══════════════════════════════════════════
-11)
+15)
   echo ""
   echo "  1) Verde   2) Gialla   3) Arancione   4) Rossa"
   read -p "Scegli [1-4]: " ln
@@ -495,18 +691,18 @@ EOF
   ;;
 
 # ══════════════════════════════════════════
-# 12) TEST SITO IN LOCALE
+# 16) TEST SITO IN LOCALE
 # ══════════════════════════════════════════
-12)
+16)
   echo -e "Browser: ${BOLD}http://localhost:1313/${NC}  Ferma: ${BOLD}Ctrl+C${NC}"
   read -p "INVIO per avviare..."
   cd "$SITO_DIR" && hugo server
   ;;
 
 # ══════════════════════════════════════════
-# 13) PUBBLICA
+# 17) PUBBLICA
 # ══════════════════════════════════════════
-13)
+17)
   echo ""
   cd "$SITO_DIR"
   echo -e "${BOLD}File modificati:${NC}"
@@ -531,18 +727,18 @@ EOF
   ;;
 
 # ══════════════════════════════════════════
-# 14) STATO
+# 18) STATO
 # ══════════════════════════════════════════
-14) cd "$SITO_DIR"; echo ""; git status; echo ""; echo -e "${BOLD}Ultime 10:${NC}"; git log --oneline -10 ;;
+18) cd "$SITO_DIR"; echo ""; git status; echo ""; echo -e "${BOLD}Ultime 10:${NC}"; git log --oneline -10 ;;
 
 # ══════════════════════════════════════════
-# 15-20) LINK RAPIDI
+# 19-24) LINK RAPIDI
 # ══════════════════════════════════════════
-15) xdg-open "https://www.protezionecivilegenzano.it/" 2>/dev/null || echo "protezionecivilegenzano.it" ;;
-16) xdg-open "https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/actions" 2>/dev/null ;;
-17) xdg-open "https://github.com/SviluppoItaliaDigitale/sito-pc-genzano" 2>/dev/null ;;
-18) xdg-open "https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" 2>/dev/null ;;
-19)
+19) xdg-open "https://www.protezionecivilegenzano.it/" 2>/dev/null || echo "protezionecivilegenzano.it" ;;
+20) xdg-open "https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/actions" 2>/dev/null ;;
+21) xdg-open "https://github.com/SviluppoItaliaDigitale/sito-pc-genzano" 2>/dev/null ;;
+22) xdg-open "https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" 2>/dev/null ;;
+23)
   if [ -x "$SITO_DIR/scripts/smoke-test-live.sh" ]; then
     echo ""
     echo -e "${CYAN}══ Smoke test sito live ══${NC}"
@@ -553,7 +749,7 @@ EOF
     echo -e "${RED}Script smoke-test-live.sh non trovato in $SITO_DIR/scripts/.${NC}"
   fi
   ;;
-20)
+24)
   echo ""
   echo "Avvio Claude Code nel progetto Sito PC Genzano..."
   echo "(per uscire scrivi /exit, tornerai a questo menu)"
@@ -562,7 +758,7 @@ EOF
   ;;
 
 # ══════════════════════════════════════════
-# 21) ESPORTA CONTESTO PER ALTRA AI
+# 25) ESPORTA CONTESTO PER ALTRA AI
 #     (Gemini, ChatGPT, Claude web)
 #
 # Ogni AI ha un limite di contesto diverso, quindi la procedura
@@ -573,7 +769,7 @@ EOF
 #                   Scrivania, ChatGPT usa RAG interno)
 #   - Claude web Pro: 200k token → versione FULL via paste
 # ══════════════════════════════════════════
-21)
+25)
   echo ""
   echo -e "${GREEN}══ Esporta contesto per altra AI ══${NC}"
   echo ""
@@ -731,7 +927,8 @@ EOF
       echo -e "     ${CYAN}\"Scrivimi un articolo sul rischio incendio per giugno 2026\"${NC}"
       echo "  6) Copia la risposta e:"
       echo "     - per pubblicarla: voce 1 (Crea comunicazione)"
-      echo "     - per rifinitura tecnica: voce 20 (Avvia Claude Code)"
+      echo "     - per abbozzarla con calma: voce 5 (Crea bozza)"
+      echo "     - per rifinitura tecnica: voce 24 (Avvia Claude Code)"
       ;;
     ChatGPT)
       echo -e "  ${BOLD}HAI DUE STRADE — scegli quella che ti viene comoda${NC}"
@@ -776,71 +973,9 @@ EOF
   ;;
 
 # ══════════════════════════════════════════
-# 22) STRUTTURA
+# 26) SOCIAL — PUBBLICA BOZZE (assistito)
 # ══════════════════════════════════════════
-22)
-  echo ""
-  echo -e "${BOLD}STRUTTURA SITO${NC}"
-  echo ""
-  echo "Menu (8 voci, 5 dropdown):"
-  echo "  Home | Per il Cittadino ▾ | Per le scuole ▾ | Accessibilità e Supporti ▾"
-  echo "  Volontariato ▾ | Risorse ▾ | Comunicazioni | Contatti"
-  echo ""
-  echo "Per il Cittadino: Cosa Fare Adesso, Allerte Meteo, Rischi e Prevenzione,"
-  echo "                  Cartografia, Numeri Utili, Piano Familiare,"
-  echo "                  Kit pronti per situazioni vulnerabili"
-  echo "Per le scuole: Kit per le scuole, Percorsi didattici, Schede stampabili,"
-  echo "               Per i docenti, Storie e Racconti, Giochi della Sicurezza"
-  echo "Accessibilità e Supporti: Abili a Proteggere, Facile da Leggere"
-  echo "Volontariato: Diventa Volontario, Chi Siamo"
-  echo "Risorse: FAQ, Strumenti, Area Download, Normativa, Glossario,"
-  echo "         Standard ISO, Mappa del Sito"
-  echo ""
-  echo "Rischi (9): sismico, idrogeologico, incendio, vento, temporali,"
-  echo "            calore, blackout, kit-emergenza, necessità-specifiche"
-  echo ""
-  echo "Lingue (7): english, deutsch, espanol, francais, portugues,"
-  echo "  romana, esperanto"
-  echo ""
-  echo "Data files: allerta.json, emergenza.json, numeri_utili.yaml,"
-  echo "  quick_links.yaml, risk_cards.yaml, social_links.yaml,"
-  echo "  codici_colore.yaml"
-  echo ""
-  echo "Badge (13 categorie con colore dedicato):"
-  echo "  Allerta | Avviso | Comunicazione | Attività | Formazione |"
-  echo "  Evento | Volontariato | Radiocomunicazioni | Prevenzione |"
-  echo "  Esercitazione | Aggiornamento | Informazione | Emergenza"
-  echo ""
-  echo "Frontmatter articoli (campi):"
-  echo "  title, date (AAAA-MM-GG), description, badge, priorita, autore,"
-  echo "  image, image_alt, area, scadenza, allegati, draft (sempre false)"
-  echo ""
-  echo "Shortcode foto (per immagini nel corpo):"
-  echo "  {{< foto src=\"/images/X.webp\" alt=\"...\" caption=\"...\" >}}"
-  echo ""
-  echo "Automazioni GitHub Actions principali:"
-  echo "  deploy.yml (push), check-allerta.yml (orario),"
-  echo "  pubblica-programmata.yml (06:00 daily),"
-  echo "  audit-sito.yml (lun 09:00), check-links-sito.yml (lun 10:00),"
-  echo "  smoke-test-post-deploy.yml, lighthouse-audit.yml,"
-  echo "  genera-social-bozze.yml (a ogni push articolo)"
-  ;;
-
-# ══════════════════════════════════════════
-# 23) GUIDA
-# ══════════════════════════════════════════
-23)
-  if [ -f "$SITO_DIR/MANUALE-SITO.md" ]; then
-    less "$SITO_DIR/MANUALE-SITO.md"
-  elif [ -f "$SITO_DIR/CLAUDE.md" ]; then
-    less "$SITO_DIR/CLAUDE.md"
-  else
-    echo -e "${RED}MANUALE-SITO.md non trovato in $SITO_DIR.${NC}"
-  fi
-  ;;
-
-
-24)
+26)
   echo -e "\n${CYAN}── PUBBLICA BOZZE SOCIAL (assistito) ──${NC}"
   echo "Mostra ultime bozze disponibili in social-bozze/:"
   find "$SITO_DIR/social-bozze" -maxdepth 3 -mindepth 3 -type d 2>/dev/null \
@@ -854,7 +989,10 @@ EOF
   fi
   ;;
 
-25)
+# ══════════════════════════════════════════
+# 27) STATO OPENCLI
+# ══════════════════════════════════════════
+27)
   echo -e "\n${CYAN}── STATO OPENCLI ──${NC}"
   if command -v opencli >/dev/null 2>&1; then
     echo "Versione CLI: $(opencli --version 2>&1)"
@@ -878,7 +1016,10 @@ EOF
   fi
   ;;
 
-26)
+# ══════════════════════════════════════════
+# 28) OPEN-DESIGN (slide / PDF / mockup)
+# ══════════════════════════════════════════
+28)
   echo -e "\n${CYAN}── OPEN-DESIGN (web UI locale per slide/PDF/mockup) ──${NC}"
   if [ ! -d "$HOME/open-design" ]; then
     echo -e "${RED}open-design non installato in ~/open-design/${NC}"
@@ -890,6 +1031,74 @@ EOF
     echo "L'URL della UI compare nella console qui sotto."
     echo ""
     cd "$HOME/open-design" && corepack pnpm tools-dev run web
+  fi
+  ;;
+
+# ══════════════════════════════════════════
+# 29) STRUTTURA
+# ══════════════════════════════════════════
+29)
+  echo ""
+  echo -e "${BOLD}STRUTTURA SITO${NC}"
+  echo ""
+  echo "Menu (8 voci, 5 dropdown):"
+  echo "  Home | Per il Cittadino ▾ | Per le scuole ▾ | Accessibilità e Supporti ▾"
+  echo "  Volontariato ▾ | Risorse ▾ | Comunicazioni | Contatti"
+  echo ""
+  echo "Per il Cittadino: Cosa Fare Adesso, Allerte Meteo, Rischi e Prevenzione,"
+  echo "                  Cartografia, Numeri Utili, Piano Familiare,"
+  echo "                  Kit pronti per situazioni vulnerabili"
+  echo "Per le scuole: Kit per le scuole, Percorsi didattici, Schede stampabili,"
+  echo "               Per i docenti, Storie e Racconti, Giochi della Sicurezza"
+  echo "Accessibilità e Supporti: Abili a Proteggere, Facile da Leggere, Contenuti in LIS"
+  echo "Volontariato: Diventa Volontario, Chi Siamo"
+  echo "Risorse: FAQ, Glossario, Area Download, Normativa, Strumenti, Audio e podcast"
+  echo ""
+  echo "Rischi (9): sismico, idrogeologico, incendio, vento, temporali,"
+  echo "            calore, blackout, kit-emergenza, necessità-specifiche"
+  echo ""
+  echo "Lingue (7): english, deutsch, espanol, francais, portugues,"
+  echo "  romana, esperanto"
+  echo ""
+  echo "Data files: allerta.json, emergenza.json, numeri_utili.yaml,"
+  echo "  quick_links.yaml, risk_cards.yaml, social_links.yaml,"
+  echo "  codici_colore.yaml"
+  echo ""
+  echo "Badge (13 categorie con colore dedicato):"
+  echo "  Allerta | Avviso | Comunicazione | Attività | Formazione |"
+  echo "  Evento | Volontariato | Radiocomunicazioni | Prevenzione |"
+  echo "  Esercitazione | Aggiornamento | Informazione | Emergenza"
+  echo ""
+  echo "Frontmatter articoli (campi):"
+  echo "  title, date (AAAA-MM-GG), description, badge, priorita, autore,"
+  echo "  image, image_alt, area, scadenza, allegati, draft (sempre false)"
+  echo ""
+  echo "Bozze (lavori in corso):"
+  echo "  cartella bozze/ alla radice del repo — Hugo NON la costruisce,"
+  echo "  quindi le bozze non vanno mai online finché non le pubblichi"
+  echo "  (voce 7): vengono spostate in content/comunicazioni/<data>-<slug>.md"
+  echo ""
+  echo "Shortcode foto (per immagini nel corpo):"
+  echo "  {{< foto src=\"/images/X.webp\" alt=\"...\" caption=\"...\" >}}"
+  echo ""
+  echo "Automazioni GitHub Actions principali:"
+  echo "  deploy.yml (push), check-allerta.yml (orario),"
+  echo "  pubblica-programmata.yml (06:00 daily),"
+  echo "  audit-sito.yml (lun 09:00), check-links-sito.yml (lun 10:00),"
+  echo "  smoke-test-post-deploy.yml, lighthouse-audit.yml,"
+  echo "  genera-social-bozze.yml (a ogni push articolo)"
+  ;;
+
+# ══════════════════════════════════════════
+# 30) GUIDA
+# ══════════════════════════════════════════
+30)
+  if [ -f "$SITO_DIR/MANUALE-SITO.md" ]; then
+    less "$SITO_DIR/MANUALE-SITO.md"
+  elif [ -f "$SITO_DIR/CLAUDE.md" ]; then
+    less "$SITO_DIR/CLAUDE.md"
+  else
+    echo -e "${RED}MANUALE-SITO.md non trovato in $SITO_DIR.${NC}"
   fi
   ;;
 

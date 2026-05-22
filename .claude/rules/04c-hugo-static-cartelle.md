@@ -48,3 +48,16 @@ riferimenti-interni/
 | Verbali interni, note di redazione, riferimenti normativi pre-pubblicazione | `riferimenti-interni/<categoria>/` |
 
 **Verifica che non sia esposta**: il workflow `audit-sito.yml` non include `riferimenti-interni/` perché Hugo non la legge. Se in futuro il workflow viene esteso, escluderla esplicitamente. La directory `static/documenti/` è esclusa dal deploy FTP per ragioni storiche (vedi regola 05); `riferimenti-interni/` invece non rientra proprio nelle cartelle Hugo, quindi non serve esclusione FTP.
+
+## Cartella `bozze/` — articoli in lavorazione NON deployati
+
+Per la **stesura di articoli con calma** prima della pubblicazione, il repo ha una cartella di livello root `bozze/` (creata 22 maggio 2026, gestita dallo script `gestione-sito.sh` voci 5-8: Crea / Modifica / Pubblica / Elimina bozza). Funziona con lo **stesso meccanismo** di `riferimenti-interni/`: è una cartella estranea alle directory native di Hugo (`content/`, `static/`, `themes/`, `data/`, `assets/`, `layouts/`), quindi **non viene mai costruita né deployata** — una bozza non può finire online per sbaglio.
+
+**Perché qui e non in `content/comunicazioni/` con `draft: true`:** la regola di progetto vieta gli articoli `draft: true` dentro `content/` (vedi `09-regole-contenuti-qualita.md` punto e memoria `feedback_no_draft_in_revisione.md`) perché le bozze dimenticate si accumulavano e rischiavano di andare live. La cartella `bozze/` fuori da `content/` **rispetta** quella regola: zero file `draft: true` in `content/`, le bozze vivono in un'area separata che Hugo non vede.
+
+**Ciclo di vita:**
+1. **Crea bozza** → file `bozze/<slug>.md` con frontmatter completo e `draft: false` (la `date` è un placeholder, scelta alla pubblicazione).
+2. **Pubblica bozza** → lo script chiede la data (oggi o futura per calendarizzare), allinea il campo `date:`, garantisce `draft: false`, e **sposta** il file in `content/comunicazioni/<data>-<slug>.md`. Da quel momento è un articolo normale (gate AGID, cover, ecc. valgono come per ogni articolo).
+3. Le bozze sono **tracciate da git** (sincronizzate fra desktop/mobile/cloud), ma restano fuori dal sito finché non vengono pubblicate.
+
+Indice e spiegazione anche in `bozze/README.md`. **Non considerare la presenza di "bozze" in `gestione-sito.sh` una regressione della regola no-draft**: è il pattern fuori-da-content, conforme.
