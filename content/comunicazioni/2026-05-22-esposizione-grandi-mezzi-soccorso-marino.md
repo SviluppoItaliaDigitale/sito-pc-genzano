@@ -17,6 +17,10 @@ draft: false
 
 L'iniziativa è organizzata dalla **Protezione Civile del Comune di Marino**. Tra le squadre presenti c'è anche il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**, insieme ai gruppi di **Albano, Ariccia e Nemi**.
 
+{{< foto src="/images/comune-marino-esposizione-mezzi-2026.webp"
+         alt="Locandina del Comune di Marino per l'esposizione dei grandi mezzi di soccorso del 24 maggio 2026: fotografie di mezzi e volontari della Protezione Civile (Marino, Nemi, Albano) con data, orario e luogo dell'evento"
+         caption="Locandina ufficiale dell'esposizione dei grandi mezzi di soccorso a Cava dei Selci (Marino), domenica 24 maggio 2026, dalle 10:00 alle 18:00. Immagine: Comune di Marino." >}}
+
 ## Cosa si potrà vedere
 
 L'esposizione fa conoscere da vicino il lavoro dei volontari e i veicoli speciali usati nelle emergenze. Dietro ogni intervento c'è uno sforzo logistico, una tecnologia e una capacità di risposta che spesso restano invisibili: vederli da vicino aiuta a capirli.
