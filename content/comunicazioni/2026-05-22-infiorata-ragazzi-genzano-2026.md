@@ -67,7 +67,7 @@ Il Gruppo **non è attivabile direttamente dai cittadini**: in caso di emergenza
 
 ## Sul nostro sito
 
-- [Infiorata di Genzano 2026: cosa sapere prima di venire](/comunicazioni/2026-05-30-infiorata-genzano-2026/) — la 248ª Tradizionale Infiorata di giugno
+- [Infiorata di Genzano 2026: cosa sapere prima di venire](/comunicazioni/2026-05-22-infiorata-genzano-2026/) — la 248ª Tradizionale Infiorata di giugno
 - [Cosa fare adesso](/cosa-fare-adesso/) — guida rapida alle emergenze
 - [Numeri utili](/numeri-utili/) — chi chiamare in ogni situazione
 

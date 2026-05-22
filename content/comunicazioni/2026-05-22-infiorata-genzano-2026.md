@@ -5,7 +5,7 @@ description: "Infiorata di Genzano 2026, 248ª edizione dal 13 al 15 giugno: pro
 badge: "Evento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-05-30-infiorata-genzano-2026.webp"
+image: "/images/2026-05-22-infiorata-genzano-2026.webp"
 image_alt: "Cover dell'articolo: Infiorata di Genzano 2026: cosa sapere prima di venire"
 scadenza: "2026-06-16"
 area: "Genzano di Roma"
