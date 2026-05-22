@@ -84,8 +84,8 @@ mostra_menu() {
   clear
   echo -e "${BLUE}${BOLD}"
   echo "╔══════════════════════════════════════════════════════════╗"
-  echo "║   GESTIONE SITO — Protezione Civile Genzano di Roma    ║"
-  echo "║   v3.0 — $(date '+%d/%m/%Y %H:%M')                              ║"
+  echo "║   GESTIONE SITO — Protezione Civile Genzano di Roma      ║"
+  echo "║   v3.0 — $(date '+%d/%m/%Y %H:%M')                                ║"
   echo "╚══════════════════════════════════════════════════════════╝"
   echo -e "${NC}"
 
