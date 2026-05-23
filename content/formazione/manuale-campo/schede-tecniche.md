@@ -33,7 +33,7 @@ Per le spiegazioni estese, vedi [Capitolo 2 — Scouting](/formazione/manuale-ca
 
 **Camper supporto**: scorte 72 h × 5 pax · autosufficienza acqua/gas · bagagli · 2 PC + stampante · TV · lavagna magnetica · illuminazione emergenza · radio + caricabatterie
 
-## Scheda 3 — Informazioni per il briefing
+## Scheda 3 — Informazioni per la riunione informativa
 
 ### Evento
 

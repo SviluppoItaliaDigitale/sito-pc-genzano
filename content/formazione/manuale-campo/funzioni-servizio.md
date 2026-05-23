@@ -214,7 +214,7 @@ Per dare un'idea concreta di come si integrano le funzioni:
 |---|---|---|
 | 06:30 | Apertura cucina — colazione | Ristorazione, segreteria |
 | 07:00 | Cambio turno guardiania | Guardiania |
-| 07:30 | Briefing Capo Campo + responsabili funzioni | Direzione |
+| 07:30 | Riunione informativa Capo Campo + responsabili funzioni | Direzione |
 | 08:00–10:00 | Colazione ospiti a turni; pulizie mattutine | Ristorazione, pulizie |
 | 10:00 | Apertura infopoint | Infopoint, segreteria |
 | 10:30 | Attività di gruppo per bambini | Supporto psicosociale |

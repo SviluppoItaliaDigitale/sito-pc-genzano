@@ -270,7 +270,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 <a class="ms-card ms-edu" href="/formazione/percorsi-didattici/">
   <div class="ms-card-icon"><i class="bi bi-rocket-takeoff-fill"></i></div>
   <p class="ms-card-title">Percorsi didattici pronti</p>
-  <p class="ms-card-desc">Percorsi pronti all'uso per docenti con poco tempo: PC base, rischio meteo, terremoto, piano familiare, fake news, sicurezza nei luoghi di lavoro/PCTO. Ognuno con destinatari, durata, obiettivi e materiali linkati.</p>
+  <p class="ms-card-desc">Percorsi pronti all'uso per docenti con poco tempo: PC base, rischio meteo, terremoto, piano familiare, notizie false, sicurezza nei luoghi di lavoro/PCTO. Ognuno con destinatari, durata, obiettivi e materiali linkati.</p>
 </a>
 <a class="ms-card ms-edu" href="/formazione/scuole-strumenti/">
   <div class="ms-card-icon"><i class="bi bi-folder-fill"></i></div>
@@ -295,7 +295,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 <a class="ms-card ms-edu" href="/formazione/schede-stampabili/">
   <div class="ms-card-icon"><i class="bi bi-printer-fill"></i></div>
   <p class="ms-card-title">Schede stampabili</p>
-  <p class="ms-card-desc">Schede A4 pronte per la stampa: schede colorabili, case study delle maxi-emergenze italiane (Primaria, Sec I, Sec II), discipline curriculari, ed. civica, allertamento, rubriche valutative.</p>
+  <p class="ms-card-desc">Schede A4 pronte per la stampa: schede colorabili, caso studio delle maxi-emergenze italiane (Primaria, Sec I, Sec II), discipline curriculari, ed. civica, allertamento, rubriche valutative.</p>
 </a>
 <a class="ms-card ms-edu" href="/formazione/storie-e-racconti/">
   <div class="ms-card-icon"><i class="bi bi-book-half"></i></div>
@@ -310,7 +310,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 <a class="ms-card ms-edu" href="/formazione/kit-scuola-primaria/">
   <div class="ms-card-icon"><i class="bi bi-pencil-fill"></i></div>
   <p class="ms-card-title">Kit Scuola Primaria</p>
-  <p class="ms-card-desc">Materiale didattico per insegnanti 6-11 anni: percorso modulare, esperimenti, role-play, verifiche.</p>
+  <p class="ms-card-desc">Materiale didattico per insegnanti 6-11 anni: percorso modulare, esperimenti, gioco di ruolo, verifiche.</p>
 </a>
 <a class="ms-card ms-edu" href="/formazione/kit-scuola-secondaria-primo-grado/">
   <div class="ms-card-icon"><i class="bi bi-bookmark-fill"></i></div>

@@ -521,7 +521,7 @@ Strumenti mnemonici per fissare i concetti chiave. Si possono cantare su melodie
 
 Ripetere ogni giorno per una settimana. A fine settimana i bambini la sanno a memoria.
 
-### Scene di role-play con copione (5 scene pronte)
+### Scene di gioco di ruolo con copione (5 scene pronte)
 
 Il docente legge la scena ad alta voce; i bambini rispondono come indicato. Ogni scena dura 3-5 minuti. Utile per rinforzare dopo ogni incontro.
 

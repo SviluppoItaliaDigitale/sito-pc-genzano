@@ -99,7 +99,7 @@ Non esiste una "giornata tipo" sola: l'attività cambia in base al periodo (ordi
 
 ### Sabato mattina ordinario
 
-- **9:00** — arrivo in sede, briefing del Capo Gruppo (5-10 minuti)
+- **9:00** — arrivo in sede, riunione informativa del Capo Gruppo (5-10 minuti)
 - **9:15** — verifica mezzi, attrezzature, dotazioni radio
 - **10:00** — supporto a un'attività programmata: esercitazione, presenza in piazza per evento divulgativo, intervento nelle scuole, manutenzione magazzino
 - **12:30** — rientro in sede, debriefing breve, archiviazione schede
