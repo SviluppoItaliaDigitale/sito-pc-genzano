@@ -383,7 +383,7 @@ ol.scheda-elenco li {
   margin: 0.5rem 0;
 }
 .scheda-soluzioni strong {
-  color: var(--scheda-verde);
+  color: #0f5132;
 }
 
 /* Box nota locale "Approfondimenti per Genzano" */
@@ -501,7 +501,7 @@ table.scheda-tabella th {
   border-left: 4px solid var(--scheda-verde);
   font-size: 0.85rem;
 }
-.scheda-docente strong { color: var(--scheda-verde); }
+.scheda-docente strong { color: #0f5132; }
 
 /* Box "Pro / Contro / Lezioni" delle schede caso studio (3 colonne) */
 .scheda-pro-contro {

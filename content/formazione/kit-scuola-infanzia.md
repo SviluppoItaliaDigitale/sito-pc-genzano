@@ -262,6 +262,7 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 **Schede di letto-scrittura** a tema Protezione Civile per il pre-grafismo e il riconoscimento delle prime parole (5-6 anni):
 
 - 👉 [**ABC delle Vocali — Le parole che salvano**](/formazione/schede-stampabili/abc-vocali-infanzia/) — le 5 vocali abbinate a parole della Protezione Civile (A→AIUTO, E→ELMETTO, I→IDRANTE, O→OSPEDALE, U→USCITA), lettera da ricalcare e parola da ricopiare.
+- 👉 [**L'Alfabetiere della Sicurezza (A→Z)**](/formazione/schede-stampabili/alfabetiere-pc-infanzia/) — l'alfabeto completo: ogni lettera abbinata a una parola della Protezione Civile (A→ACQUA, C→CASCO, P→POMPIERE…) con la lettera da ricalcare. Completa l'ABC delle Vocali con tutte le 21 lettere. Adatta anche per la classe 1ª.
 - 👉 [**Riconosci l'Iniziale**](/formazione/schede-stampabili/riconosci-iniziale-infanzia/) — per ogni immagine il bambino cerchia la lettera con cui inizia la parola, fra tre opzioni. 10 parole-chiave della sicurezza.
 - 👉 [**Collega la Parola all'Immagine**](/formazione/schede-stampabili/collega-parola-immagine-infanzia/) — 8 parole in stampatello da collegare con una linea alle 8 immagini in colonna a destra. Adatta anche per la classe 1ª.
 
