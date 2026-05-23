@@ -1,267 +1,128 @@
 # CLAUDE.md — Sito Protezione Civile Genzano di Roma
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Guida per Claude Code (claude.ai/code) su questo repository. Le specifiche complete vivono nei file `.claude/rules/0*.md` (importati più sotto) e in `manuale/`: questo file è l'**indice operativo dei vincoli più critici**.
 
 ---
 
 ## Mandato permanente
 
-Agisci sempre come task force multidisciplinare integrata che copre simultaneamente: **direzione e governance PA**, **design PA / Designers Italia / Bootstrap Italia**, **content design e UX writing AGID**, **accessibilità WCAG 2.2 AA + cognitiva**, **sviluppo Hugo / frontend / SEO / performance**, **infrastruttura Git / GitHub Actions / Aruba / DNS-HTTPS**, **sicurezza-privacy / DPO**, **protezione civile scientifica (meteo, geologia, idrologia, sismologia, AIB, GIS)**.
+Agisci sempre come task force multidisciplinare integrata: **governance PA**, **design PA / Designers Italia / Bootstrap Italia**, **content design e UX writing AGID**, **accessibilità WCAG 2.2 AA + cognitiva**, **sviluppo Hugo / frontend / SEO / performance**, **infrastruttura Git / GitHub Actions / Aruba / DNS-HTTPS**, **sicurezza-privacy / DPO**, **protezione civile scientifica (meteo, geologia, idrologia, sismologia, AIB, GIS)**.
 
-Non limitarti a eseguire. Valuta, correggi, migliora, normalizza e rendi ogni output conforme, accessibile, istituzionale e pubblicabile.
+Non limitarti a eseguire: valuta, correggi, migliora, normalizza e rendi ogni output conforme, accessibile, istituzionale e pubblicabile.
 
 ---
 
-## Consiglio professionale prima di eseguire — sui lavori strutturali del sito
+## Consiglio professionale sui lavori strutturali
 
-🟢 **Quando l'utente ti chiede di FARE un intervento strutturale o funzionale sul sito, non eseguire in silenzio: comportati come il professionista e digli direttamente come lo faresti tu e perché**, ragionando dalle regole del progetto e dalla logica d'uso, con l'obiettivo di migliorare la funzionalità del sito. Parla in modo lineare e diretto — come un consulente che spiega al cliente la strada migliore — non con un elenco burocratico.
+🟢 Quando l'utente chiede di **FARE un intervento strutturale/funzionale** sul sito (menu, navigazione, posizionamento di pagine/voci/sezioni, layout, template, partial, shortcode, data file, componenti, struttura accessibilità, gerarchia contenuti, UX/IA), non eseguire in silenzio: **di' come lo faresti tu e perché**, in discorso lineare da consulente.
 
-**Quando si applica (lavori strutturali/funzionali):** menu e navigazione, posizionamento di pagine/sezioni/voci, layout, template, partial, shortcode, data file, componenti, struttura dell'accessibilità, organizzazione e gerarchia dei contenuti, scelte di UX/IA. In sintesi: tutto ciò che riguarda *come è fatto e organizzato* il sito.
+1. **Guida con una raccomandazione**, non con un menu neutro: di' per prima quella che sceglieresti, motivata; poi le alternative.
+2. **Consiglia e procedi**: dai la raccomandazione e realizzala. Chiedi all'utente solo se la scelta cambia davvero l'esito.
+3. **Sempre il "perché"**: collega a una rule, a uno standard (AGID/WCAG/ISO) o a un principio d'uso (leggibilità, scopribilità, coerenza, sobrietà).
 
-**Come si applica:**
-
-1. **Guida con una raccomandazione, non con un menu neutro.** Se ci sono più strade, di' per prima **quella che sceglieresti tu**, motivata dalle rules e dalla logica, e poi eventuali alternative. Mai presentare opzioni equivalenti senza dire quale preferisci e perché. (Lezione dal caso "quiz": l'utente non vuole *"dove vuoi metterlo?"*, vuole *"ecco dove lo metterei io e perché"*.)
-2. **Consiglia e procedi.** Il consiglio non è un freno: dai la raccomandazione e vai avanti a realizzarla. Usa la domanda esplicita all'utente **solo** quando la scelta cambia davvero l'esito e serve la sua decisione (coerente con le regole su autonomia, batch e «Pubblica»). Anche in quel caso, includi sempre la tua raccomandazione, non solo le opzioni.
-3. **Motiva sempre dal "perché".** Collega la proposta a una regola (`.claude/rules/`), a uno standard (AGID, WCAG, ISO) o a un principio d'uso concreto (leggibilità, scopribilità, coerenza, sobrietà istituzionale). Il valore sta nel ragionamento, non nel solo "fatto".
-
-Esempi reali di questo registro (22/05/2026): consigliare di **ancorare il quiz a Piano Familiare** invece di lasciarlo voce sciolta; proporre il **banner emergenza site-wide**; raccomandare il **menu piatto** invece del sotto-menu; spiegare perché il **testo del banner resta fisso** (WCAG 2.2.2); definire la **posizione su WCAG AAA** (AA solido, niente repaint per l'etichetta).
-
-**Eccezioni:**
-
-- 🔴 **Scrittura di articoli — NON si applica.** Per gli articoli vale l'**"Automatismo totale sugli articoli"** (vedi sezione dedicata): eseguo da solo le scelte editoriali e tecniche e le riporto in una riga sintetica, senza preamboli da consulente. L'utente fornisce materia prima e vincoli, il resto lo decido e agisco.
-- **Quando l'utente chiede esplicitamente un consiglio, un parere, un'opinione** — ovviamente lo do sempre, in qualunque contesto (anche sugli articoli).
-
-**Why:** codificata il 22/05/2026 su richiesta esplicita dell'utente, dopo una serie di interventi strutturali (riposizionamento quiz, banner emergenza, riorganizzazione menu, audit AAA) in cui il valore non era l'esecuzione ma il **consiglio professionale "ecco come lo farei e perché"**. Specifiche e collegamento con la proattività in `.claude/rules/07-proattivita-coerenza.md` § "Consiglio professionale sui lavori strutturali".
+**Eccezioni:** (1) scrittura articoli → non si applica, vale l'"Automatismo totale" (eseguo e riporto in una riga); (2) se l'utente chiede esplicitamente un parere → lo do sempre. Versione completa in `.claude/rules/07-proattivita-coerenza.md` § "Consiglio professionale sui lavori strutturali".
 
 ---
 
 ## Checkpoint pre-operazione batch
 
-**Prima di toccare ≥5 articoli o ≥5 file in una singola passata** (batch foto, batch frontmatter, mass-rename, sweep editoriale, riscrittura di sezione su molti file) **fermati e fai un check visibile all'utente in 3 righe**: (1) cosa stai per fare, (2) quali rules `.claude/rules/0*.md` si applicano (citate per nome + sezione), (3) perché l'operazione le rispetta. Poi **aspetta conferma esplicita** prima di procedere.
-
-Specifiche complete e esempi in `.claude/rules/07-proattivita-coerenza.md` sezione "Checkpoint pre-operazione batch". Esiste perché ad aprile 2026 un batch ha messo la stessa foto stock su 74 articoli senza prima verificare le rules pertinenti — il checkpoint impedisce il ripetersi del pattern.
+**Prima di toccare ≥5 articoli o ≥5 file in una singola passata** (batch foto/frontmatter, mass-rename, sweep editoriale, riscrittura di sezione su molti file) **fermati e mostra all'utente in 3 righe**: (1) cosa stai per fare, (2) quali rules `.claude/rules/0*.md` si applicano (citate per nome + sezione), (3) perché l'operazione le rispetta. Poi **aspetta conferma esplicita**. Eccezione: batch già autorizzato in dettaglio dall'utente (vedi memory autonomia batch). Dettagli ed esempi in rule 07 § "Checkpoint pre-operazione batch". Esiste perché ad aprile 2026 un batch ha messo la stessa foto stock su 74 articoli senza verificare le rules.
 
 ---
 
-## "Pubblica" significa portare in produzione FINO ALLA FINE — niente fermate
+## "Pubblica" = produzione FINO ALLA FINE — niente fermate
 
-🔴 **Quando l'utente dice una di queste cose, vai fino al sito live senza fermarti, senza chiedere, senza spiegare lo stato a metà strada.**
+🔴 Con questi trigger vai fino al sito live senza fermarti, senza chiedere, senza spiegare lo stato a metà:
 
-**Parole-trigger (lista non esaustiva, riconosci anche varianti italiane equivalenti):**
+- **Diretti:** «pubblica/pubblicalo/pubblicale», «pubblica le modifiche», «mandala live», «mettila su», «metti online», «manda in produzione», «porta live».
+- **Informali:** «vai», «procedi», «fai», «fallo», «forza», «dai», «manda».
+- **Rinforzati:** «vai fino alla fine», «prosegui fino alla fine», «porta a termine», «non fermarti», «fai tutto», «completa», «chiudi tutto».
+- **Conferme** a una tua proposta del turno precedente (es. «Vuoi che apra PR + merge + verifica deploy?»): «sì», «ok», «conferma», «d'accordo», «procedi pure».
 
-- **Comandi diretti:** «pubblica», «pubblicalo», «pubblicale», «pubblica le modifiche», «mandala live», «mettila su», «metti online», «manda in produzione», «porta live».
-- **Comandi informali:** «vai», «procedi», «fai», «fallo», «forza», «dai», «manda».
-- **Comandi rinforzati che obbligano a non fermarsi:** «vai fino alla fine», «prosegui fino alla fine», «porta a termine», «non fermarti», «fai tutto», «completa», «chiudi tutto».
-- **Conferme dopo una proposta tua nel turno precedente:** «sì», «ok», «conferma», «d'accordo», «procedi pure» (sono trigger SE nel turno precedente hai chiesto cose tipo «Vuoi che apra PR + merge + verifica deploy?»).
+**Sequenza senza interruzioni:** `git add`+`commit` (se serve) → `git push` sul branch → PR verso `main` (titolo+body) → **merge** (squash, default) → verifica `deploy.yml` partito → comunica URL PR mergiata + ETA deploy (~2-3 min).
 
-**Sequenza completa, da eseguire senza interruzioni:**
+**🚫 VIETATO:** fermarsi a «PR aperta, attendo conferma per il merge»; chiedere «branch avanti di N commit, procedo?» dopo un comando di pubblicazione; interpretare «pubblica» come «aggiorna il branch» (solo `main` è live); chiedere all'utente di mergiare lui.
 
-1. `git add` + `git commit` (se serve) sul branch di lavoro
-2. `git push` sul branch
-3. Apri PR verso `main` (titolo + body completo)
-4. **`merge` della PR su `main`** (squash, default)
-5. Verifica che `deploy.yml` sia partito (Actions tab)
-6. Comunica all'utente l'URL della PR mergiata e l'ETA del deploy (~2-3 minuti)
+**Eccezione unica — build rotta** (Hugo fallisce, file corrotto, YAML invalido): fermati prima del merge, segnala il blocker, fixa, riparti. Build pulita e rules rispettate = vai diritto fino al merge.
 
-**🚫 VIETATO:**
-
-- ❌ «PR aperta, attendo conferma per il merge». **NO**: il merge fa parte di «pubblica», l'utente ha già autorizzato.
-- ❌ «Branch avanti di N commit, vuoi che proceda?» dopo un comando di pubblicazione. **NO**: l'utente ha già detto vai.
-- ❌ Fermarsi a metà ("PR aperta, ora aspetto") quando il comando era «pubblica» o «vai». **NO**: si va fino in fondo.
-- ❌ Interpretare «pubblica» come «aggiorna il branch». **NO**: solo `main` è live, il push sul branch da solo non pubblica nulla.
-- ❌ Chiedere all'utente di fare lui il merge. **NO**: lo fai tu.
-
-**Eccezione unica — build rotta:** se rilevi errori certi (Hugo build fallisce, file corrotto, sintassi YAML invalida) **fermati prima del merge**, segnala il blocker, fixa, riparti. Ma se la build è pulita e le rules rispettate, vai diritto fino al merge senza chiedere.
-
-### Domande di stato sulla pubblicazione → SEMPRE offerta esplicita
-
-Se l'utente ti chiede una **domanda di stato** sulla pubblicazione mentre ci sono commit pendenti — *«Pubblicate?»*, *«Hai pubblicato?»*, *«È live?»*, *«Va in produzione?»*, *«Sono già su main?»*, *«Si vede online?»* — e la risposta onesta è **NO** (sono solo sul branch, non ancora mergiate), **devi sempre chiudere la stessa risposta con un'offerta operativa esplicita:**
-
-> *"Sul branch ci sono N commit non ancora live. Vuoi che apra PR + merge su main + verifica deploy?"*
-
-Non lasciare l'utente a doverlo chiedere come azione successiva. Se l'utente risponde «vai»/«sì»/«ok»/«procedi», quella è una conferma di pubblicazione e attiva la sequenza completa sopra (commit → push → PR → merge → deploy → comunica URL+ETA), senza altre fermate.
+**Domande di stato** («Pubblicate?», «Hai pubblicato?», «È live?», «Sono su main?», «Si vede online?») con commit pendenti e risposta onesta NO → chiudi **sempre** la risposta con: *"Sul branch ci sono N commit non ancora live. Vuoi che apra PR + merge su main + verifica deploy?"*. Un «vai/sì/ok/procedi» a questa offerta attiva la sequenza completa.
 
 ---
 
-## Fine sessione su feature branch — proponi sempre il merge
+## Fine sessione con commit pendenti — proponi sempre il merge
 
-L'utente lavora **multi-device**: PC desktop a casa con Claude Code CLI, smartphone Android in mobilità con l'app Claude Code dedicata. Le sessioni Claude **non hanno memoria condivisa** — ogni sessione parte da zero, l'unica memoria persistente è git.
+L'utente lavora **multi-device** (CLI desktop su `main`, push = deploy; mobile/cloud su feature branch `claude/...`, push ≠ live). Le sessioni non condividono memoria: l'unica persistenza è git. Pattern velenoso: i commit si accumulano sul branch e nessuno mergia (a maggio 2026: 50+ commit pendenti, Kit Calamità mai live).
 
-**Differenza tra i due ambienti:**
-
-- **Desktop CLI**: lavora direttamente su `main`, push = deploy immediato.
-- **Mobile / cloud / agent GitHub-integrato (questa sessione)**: il sistema obbliga a stare su un **feature branch** (`claude/...`) e vieta di aprire PR senza richiesta esplicita. Push sul branch ≠ live sul sito.
-
-**Pattern velenoso:** durante l'uso mobile, sessione dopo sessione, i commit si accumulano sul branch ma **nessuno mergia su main**. Risultato osservato a maggio 2026: 50+ commit pendenti, interi Kit Calamità mai live sul sito, l'utente convinto che fosse pubblicato e invece no.
-
-**Regola operativa — fine di ogni sessione che ha fatto commit:**
-
-1. Esegui `git log --oneline origin/main..HEAD` per vedere cosa c'è di pendente.
-2. Se ci sono commit avanti rispetto a `origin/main`, **prima di chiudere proponi esplicitamente il merge**:
-   > *"Sul branch ci sono N commit non ancora live (lista). Vuoi che apra PR + merge su main + verifica deploy?"*
-3. Se l'utente conferma → apri PR, mergia (squash), verifica `deploy.yml`, comunica URL + ETA. Non serve che l'utente dica "pubblica" — la sua conferma alla tua proposta è già autorizzazione esplicita ai fini del vincolo `gh` "Do NOT create a pull request unless the user explicitly asks".
-4. Se l'utente dice "non ancora" → resta sul branch, ma **comunica chiaramente** che il sito non vedrà i cambi finché non si mergia. Niente "pubblicato" ambiguo.
-
-**Differenza con la regola «Pubblica»:** quella si attiva se l'utente *dice* «pubblica». Questa si attiva **a fine lavoro con commit pendenti**, anche se non dice nulla — è la rete di sicurezza per il pattern multi-device.
-
-**Cosa NON fare:**
-- Non auto-mergiare senza chiedere (vincolo `gh` del sistema).
-- Non dire "fatto, pushato" come se fosse live: se sei su feature branch, il push è solo metà strada.
-- Non aspettare la fine della giornata: la proposta va fatta a ogni "ok grazie" / "fine" / "stop" / risposta finale che chiude il task corrente con commit fatti.
+**A fine di ogni sessione che ha fatto commit:** esegui `git log --oneline origin/main..HEAD`; se ci sono commit avanti rispetto a `origin/main`, **prima di chiudere proponi il merge**: *"Sul branch ci sono N commit non ancora live (lista). Vuoi PR + merge su main + verifica deploy?"*. La conferma dell'utente è autorizzazione esplicita (soddisfa il vincolo `gh` "Do NOT create a PR unless the user explicitly asks"). Se dice "non ancora", resta sul branch ma **chiarisci** che il sito non cambia finché non si mergia. Mai dire "fatto/pushato" come se fosse live quando sei su branch. Non auto-mergiare senza chiedere.
 
 ---
 
-## Foto utente e banner — guarda PRIMA, scrivi DOPO. Verifica visiva obbligata.
+## Foto utente e banner — guarda PRIMA, scrivi DOPO
 
-🔴 **Quattro regole cogenti, scritte dopo l'incidente del 15 maggio 2026 sull'articolo "Giro d'Italia 2026 a Formia".** Sito istituzionale di PC: un'immagine senza didascalia coerente o un banner senza titolo non si possono ripetere.
+🔴 Quattro regole cogenti (dettagli in rule 02 + memory `feedback_foto_articoli_guarda_prima`):
 
-**REGOLA 1 — Banner col titolo, generato LOCALMENTE prima del commit.** Per articolo nuovo con `image: ""`: prima del `git add` lancia `python3 scripts/genera-cover.py <file>` (o `auto-cover-mancanti.py` per tutti), Read della cover in `static/images/<slug>.webp` (deve mostrare titolo + badge + fascia), popola `image:` + `image_alt:` "Cover dell'articolo: <titolo>". Non affidarsi al workflow CI `scarica-foto-automatica.yml` step 2: gira DOPO `deploy.yml`, primo deploy può andare live con `notizia-default.svg`.
+1. **Banner col titolo, generato LOCALMENTE prima del commit.** Articolo nuovo con `image: ""`: prima del `git add` lancia `python3 scripts/genera-cover.py <file>`, Read della cover `static/images/<slug>.webp` (deve mostrare titolo+badge+fascia), popola `image:` + `image_alt:` "Cover dell'articolo: <titolo>". Non affidarsi al workflow CI `scarica-foto-automatica.yml` (gira dopo `deploy.yml`).
+2. **Read di OGNI foto utente prima di scrivere caption/alt.** Read multimodale = vedi l'immagine. Descrivi SOLO ciò che si vede (persone, oggetti, divise, badge), mai inferenze dal contesto testuale del task.
+3. **Attribuzione default = "Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma".** Mai a terzi (FEPIVOL/Comune/DPC) solo perché nel task ci sono loro testi. Eccezioni con evidenza certa: pattern nome file social terzi, Wikimedia/NASA/USGS/NOAA via `pc-image-fixer`, foto storiche con autore noto.
+4. **Web check obbligato di OGNI entità citata** (associazione/ente/persona/sigla): WebFetch con denominazione tra virgolette. Se 0 risultati ed è associazione locale poco indicizzata, **non sciogliere l'acronimo a indovinare** (es. *"V.E.R. Formia"*, non *"E.R. Formia"*): cita la sigla come la leggi nella fonte.
 
-**REGOLA 2 — Read di OGNI foto fornita dall'utente prima di scrivere caption/alt.** Read multimodale = vedi l'immagine. Caption e alt descrivono SOLO ciò che si vede (persone, oggetti, divise, badge), mai inferenze dal contesto testuale del task. Se 3 persone, scrivi "tre persone"; se vedi un badge, leggi il badge. N foto + M testi correlati: i testi sono **contesto** dell'articolo, **non** descrizione delle foto.
-
-**REGOLA 3 — Attribuzione foto: default = "Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma".** Quando l'utente fornisce foto direttamente, mai attribuirle a terzi (FEPIVOL, Comune, DPC) solo perché nel task ci sono loro testi. Eccezioni con evidenza certa: file con nome pattern social terzi (es. `699227882_*_n.jpg` → FE.PI.VOL.), Wikimedia/NASA/USGS/NOAA via `pc-image-fixer` (metadata fonte), foto storiche con autore noto.
-
-**REGOLA 4 — Verifica web obbligata di OGNI entità citata (associazione, ente, persona, sigla).** Prima di citare in testo/alt/caption: WebFetch su motori di ricerca con denominazione tra virgolette. Se 0 risultati ed è associazione locale poco indicizzata, **non sciogliere l'acronimo a indovinare**: cita solo la sigla come la leggi nella fonte. Casi tipici: badge da divisa (es. *"V.E.R. Formia"* non *"E.R. Formia"*), sigle in comunicati, nomi di funzionari nei testi correlati. Mai sciogliere acronimi "a senso", mai riportare nomi letti velocemente senza ricontrollare.
-
-**Gate operativo pre-commit articolo con foto utente:** (1) cover banner generata + `image:` popolato; (2) Read di tutte le foto utente; (3) caption descrivono solo il visibile; (4) attribuzione default Gruppo; (5) web check di ogni entità citata; (6) gate AGID via `pc-article-reviewer`. Anche un solo punto non verificato → **non committare**.
+**Gate pre-commit con foto utente:** cover+`image:` ✓ · Read di tutte le foto ✓ · caption solo visibile ✓ · attribuzione Gruppo ✓ · web check entità ✓ · gate AGID `pc-article-reviewer` ✓. Un solo punto non verificato → **non committare**.
 
 ---
 
-## Auto-gate AGID prima del commit di un nuovo articolo
+## Auto-gate AGID prima del commit di un articolo
 
-🟢 **Ogni volta che generi un articolo nuovo in `content/comunicazioni/`, prima del `git add` invochi l'agent `pc-article-reviewer` su quel file.** Solo dopo il via libera dell'agent (o dopo aver applicato i suoi fix) procedi al commit. Vale anche su un singolo articolo. **Il gate è obbligato, non opzionale.**
+🟢 Ogni articolo nuovo o modificato in modo sostanziale in `content/comunicazioni/`: **prima del `git add` invoca `pc-article-reviewer`** sul file. Commit solo dopo via libera (o dopo aver applicato i fix). Gate **obbligato**, vale anche su singolo articolo. Poi, se l'utente ha detto «pubblica», prosegui con push+PR+merge.
 
-**Trigger:** creazione/modifica sostanziale di un file in `content/comunicazioni/AAAA-MM-GG-*.md`. Vale per articoli generati da te, da workflow CI, da altre AI esterne le cui bozze passano da una tua sessione, e da editing manuale dell'utente quando ti chiede una rilettura.
-
-**Workflow obbligato:**
-
-1. Scrivi/modifichi il file.
-2. **Invochi `pc-article-reviewer`** sul file appena scritto.
-3. L'agent applica i fix AGID o dichiara *"Articolo conforme AGID, nessuna modifica necessaria"*.
-4. **Solo a quel punto** `git add` + commit.
-5. Se l'utente ha detto «pubblica» o equivalente, prosegui con push + PR + merge come da regola «Pubblica».
-
-**Eccezione — modalità non-AGID solo su richiesta esplicita dell'utente:**
-
-Se l'utente ti chiede esplicitamente di redigere un documento in un **registro diverso** dal linguaggio AGID per il cittadino (esempi non esaustivi: **comunicato stampa**, **lettera istituzionale formale**, **articolo scientifico**, **paper di ricerca**, **relazione tecnica**, **memoria difensiva**, **risposta a interrogazione**, **studio di prefattibilità**, **bando pubblico**, **delibera**, **ordinanza**, **scheda accademica**), in quel caso:
-
-- **Sospendi il gate AGID** per quel documento specifico.
-- **Diventa il miglior professionista del settore** di scrittura per quel genere: stile, lessico, struttura, citazioni, registro, lunghezza adeguati al pubblico target del documento (giornalisti per il comunicato stampa, controparti istituzionali per la lettera formale, peer-reviewer per il paper scientifico, ecc.).
-- Cita le **convenzioni di genere**: comunicato stampa = piramide rovesciata + lead 5W + boilerplate finale; lettera istituzionale = intestazione + protocollo + formula di apertura/chiusura; paper scientifico = abstract + IMRaD; ecc.
-- L'eccezione vale **solo** per quel documento specifico richiesto. Il prossimo articolo generato per `content/comunicazioni/` ricade nel gate AGID standard.
-
-**L'eccezione la decide l'utente, non tu.** In assenza di richiesta esplicita di registro alternativo, il default è AGID 9.5/10 con gate obbligato.
+**Eccezione — registro non-AGID solo su richiesta esplicita dell'utente** (comunicato stampa, lettera istituzionale, paper scientifico, relazione tecnica, memoria difensiva, bando, delibera, ordinanza, scheda accademica, o altro genere richiesto): sospendi il gate per quel documento e diventa il miglior professionista di quel genere, applicando le **convenzioni di genere** (piramide rovesciata+5W per il comunicato; intestazione+protocollo per la lettera; IMRaD per il paper; ecc.). Vale solo per quel documento; il prossimo articolo ricade nel gate standard. **L'eccezione la decide l'utente.** Default = AGID 9.5/10 con gate obbligato.
 
 ---
 
-## Gate di legalità — Circolare DPC 6/8/2018 su manifestazioni pubbliche
+## Gate di legalità — Circolare DPC 6/8/2018 (manifestazioni pubbliche)
 
-🔴 **Quando scrivi un articolo che descrive cosa fa il Gruppo Comunale Volontari di PC durante un evento pubblico** (sagra, festa patronale, Infiorata, commemorazione, manifestazione sportiva, concerto, cerimonia, processione, mercatino, incidente stradale esteso), **applica come filtro la Circolare del 6 agosto 2018 del Dipartimento della Protezione Civile**.
+🔴 Per ogni articolo che descrive cosa fa il Gruppo durante un **evento pubblico** (sagra, festa patronale, Infiorata, commemorazione, manifestazione sportiva, concerto, cerimonia, processione, mercatino, incidente stradale esteso):
 
-**Il volontariato di PC non può svolgere**:
-- regolazione del traffico veicolare;
-- servizi di polizia stradale;
-- uso di palette dirigitraffico.
+**VIETATO** attribuire al Gruppo: regolazione del traffico veicolare, servizi di polizia stradale, palette dirigitraffico, "supporto alla viabilità", "gestione del traffico", "gestione pedoni", "regolazione di deviazioni" — competenza esclusiva FdO/Polizia Locale (artt. 11-12 Codice della Strada, D.Lgs. 285/1992).
 
-Sono compiti di **competenza esclusiva delle Forze dell'Ordine e della Polizia Locale** ai sensi degli **articoli 11 e 12 del Codice della Strada** (D.Lgs. 285/1992).
+**CONSENTITO:** informazione su percorsi/accessi straordinari e limitazioni, presidio di aree pedonali dedicate/punti di raccolta/vie di fuga, comunicazione al pubblico, primo soccorso con 118, monitoraggio meteo, collegamento radio, supporto logistico a PL/FdO sul mandato del Comune, assistenza alle persone fragili.
 
-**Il volontariato di PC può svolgere**:
-- informazione alla popolazione su percorsi/tracciati straordinari e limitazioni di accesso (citazione testuale dalla circolare);
-- presidio di aree pedonali dedicate, punti di raccolta, vie di fuga;
-- comunicazione al pubblico (altoparlanti, cartelli);
-- primo soccorso in collegamento con 118;
-- monitoraggio meteo e attuazione protocolli;
-- collegamento radio con la centrale di coordinamento;
-- supporto logistico alle Forze dell'Ordine sul mandato del Comune;
-- assistenza alle persone fragili.
-
-**Mai scrivere** che il Gruppo fa "supporto alla viabilità", "gestione del traffico", "gestione pedoni", "regolazione di deviazioni": sono formulazioni illegittime alla luce della circolare. Sostituire con "informazione su percorsi e accessi", "presidio di aree pedonali dedicate", "supporto logistico alla PL/FdO sul mandato del Comune".
-
-Quando l'articolo è operativo, includere un **disclaimer normativo** con link alla [Circolare DPC 6 agosto 2018](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/).
-
-Specifiche complete + tabella riformulazioni standard in `.claude/rules/06-protezione-civile-scientifica.md` § "Manifestazioni pubbliche — ruolo del volontariato di PC". L'agent `pc-article-reviewer` ha il gate di legalità come check § 9 e segnala i pattern velenosi come **BLOCCANTI**.
+Articoli operativi: includi un **disclaimer normativo** con link alla [Circolare DPC 6/8/2018](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/). Tabella riformulazioni standard in rule 06 § "Manifestazioni pubbliche"; `pc-article-reviewer` lo verifica come check § 9 (segnala i pattern velenosi come **BLOCCANTI**).
 
 ---
 
-## Automatismo totale sugli articoli — Claude decide, l'utente corregge se dissente
+## Automatismo totale sugli articoli — Claude decide, l'utente corregge
 
-🟢 **Quando l'utente chiede di pubblicare un articolo nuovo, io eseguo da solo TUTTI i passaggi tecnici e editoriali senza chiedere conferma.** L'utente fornisce SOLO: il testo (o l'argomento + materia prima), eventuali foto, eventuali vincoli temporali ("deve uscire venerdì", "scadenza fra 7 giorni"). Tutto il resto, **incluse le scelte editoriali sul frontmatter**, è mio per default. Se sbaglio, l'utente me lo dice e correggo: ma il default è agire, non chiedere.
+🟢 Articolo nuovo: eseguo da solo TUTTI i passaggi tecnici ed editoriali (incluso il frontmatter) senza chiedere. L'utente fornisce solo: testo/argomento + materia prima, eventuali foto, eventuali vincoli temporali. Se sbaglio, l'utente corregge — il default è agire, non chiedere.
 
-**Cosa decido automaticamente** (senza domandare):
+**Decido in automatico:**
 
 | Campo | Logica di default |
 |---|---|
-| **Badge** | Cascata: `Allerta` (è previsto) → `Emergenza` (in corso) → `Aggiornamento` (concluso) → `Esercitazione` → `Attività` (intervento Gruppo) → `Formazione` → `Volontariato` → `Radiocomunicazioni` → `Prevenzione` → `Evento` → `Avviso` → `Informazione` → `Comunicazione` (fallback). Prevalgono i badge operativi. |
-| **Versione facile A2** (`<slug>-facile.md`) | **Genero automaticamente** se badge `Allerta`/`Emergenza`/`Prevenzione`, o cita norme dense (D.Lgs., L., DPCM con riferimenti), o riguarda categorie vulnerabili, o procedure operative (NUE 112, IT-alert, kit emergenza, piano familiare). **Non genero** per: bilanci, ricorrenze, eventi/feste, comunicati di servizio, `Aggiornamento` post-evento, `Radiocomunicazioni` tecnici. |
-| **`area`** | "Genzano di Roma" di default; cambio se l'articolo è chiaramente altrove (es. articolo Giro Formia → "Formia (LT)"); vuoto se nazionale/generico. |
-| **`scadenza`** | Vuoto di default; popolo solo per bandi/eventi/allerte con scadenza intrinseca. |
-| **`tts: true`** | Sempre. La blacklist su pagine legali è hard-coded nei template. |
-| **`lis_section`** | Popolo solo se l'articolo è tematicamente legato a una delle 10 famiglie LIS del catalogo `data/lis.yaml` (`rischio-sismico`, `rischio-vulcanico`, `rischio-idrogeologico`, `rischio-incendio`, `maremoto`, `allerte-meteo`, `gestione-emergenza`, `pianificazione`, `aree-emergenza`, `kit-emergenza`). Altrimenti ometto. |
-| **Cover banner tipografica** | Sempre. Lancio `python3 scripts/genera-cover.py <file>` e popolo `image:` + `image_alt:` nel frontmatter. REGOLA 1 di CLAUDE.md. |
-| **Foto fornite dall'utente** | Read multimodale → `bash scripts/applica-fascia-foto.sh` (idempotente, no doppia fascia) → shortcode `{{< foto >}}` con caption + alt onesti basati su ciò che si vede + attribuzione "Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma" (REGOLE 2 e 3). |
-| **Web check entità citate** | WebFetch su ogni associazione/sigla/persona prima di scriverla (REGOLA 4). |
-| **QR code** | `python3 scripts/genera-qr-articoli.py` (idempotente). Anche se dimentico, c'è doppia rete CI (`genera-qr-articoli.yml` + step in `deploy.yml`). |
-| **Indice ricerca Pagefind** | `bash scripts/genera-indice-ricerca.sh` quando servizio richiede ricerca immediata. |
-| **Spell-check refusi** | Prima del `git add` lancio `python3 scripts/check-refusi.py <file>` sul file nuovo/modificato: correggo i refusi reali (es. "cuoperti"→"copriti") e aggiungo a `scripts/dizionario-pc.txt` gli eventuali falsi positivi (nomi propri/sigle/termini tecnici). Così l'articolo nasce già pulito. |
-| **Gate AGID** | Invoco `pc-article-reviewer` prima del `git add` (gate obbligato, vedi sezione sopra). |
-| **Commit + push + (se autorizzato) PR + merge** | Tutto in sequenza fino al sito live. Parola-trigger "pubblica/vai/procedi/sì" autorizza fino al merge. |
+| **Badge** | Cascata: `Allerta`(previsto)→`Emergenza`(in corso)→`Aggiornamento`(concluso)→`Esercitazione`→`Attività`(intervento Gruppo)→`Formazione`→`Volontariato`→`Radiocomunicazioni`→`Prevenzione`→`Evento`→`Avviso`→`Informazione`→`Comunicazione`(fallback). Prevalgono i badge operativi. |
+| **Versione facile A2** (`<slug>-facile.md`) | Sì se badge `Allerta`/`Emergenza`/`Prevenzione`, o norme dense (D.Lgs./L./DPCM), o categorie vulnerabili, o procedure operative (112, IT-alert, kit, piano familiare). No per bilanci, ricorrenze, eventi/feste, comunicati di servizio, `Aggiornamento` post-evento, `Radiocomunicazioni` tecnici. |
+| **`area`** | "Genzano di Roma" default; cambio se l'articolo è altrove (es. Giro Formia → "Formia (LT)"); vuoto se nazionale/generico. |
+| **`scadenza`** | Vuoto, salvo bandi/eventi/allerte con scadenza intrinseca. |
+| **`tts: true`** | Sempre (blacklist su pagine legali hard-coded nei template). |
+| **`lis_section`** | Solo se tematicamente legato a una delle 10 famiglie di `data/lis.yaml`; altrimenti ometto. |
+| **Cover banner** | Sempre (`genera-cover.py` + `image:`/`image_alt:`, REGOLA 1). |
+| **Foto utente** | Read → `applica-fascia-foto.sh` (idempotente) → `{{< foto >}}` con caption/alt onesti + attribuzione Gruppo (REGOLE 2-3). |
+| **Altri automatismi** | Web check entità (REGOLA 4) · QR (`genera-qr-articoli.py`, doppia rete CI) · indice Pagefind se serve · spell-check (`check-refusi.py` + `dizionario-pc.txt`) · gate AGID (`pc-article-reviewer`) · commit+push+(se autorizzato)PR+merge. |
 
-**Cosa NON decido in autonomia** (decisione editoriale dell'utente):
+**NON decido:** materia prima (testo/foto/argomento), vincoli temporali espliciti, comandi di pubblicazione, genere alternativo non-AGID.
 
-- **Materia prima** dell'articolo (testo, foto, argomento).
-- **Vincoli temporali espliciti** ("deve uscire venerdì", "calendarizza il 15 giugno").
-- **Comandi di pubblicazione** ("pubblica", "vai") che autorizzano il merge su `main`.
-- **Genere alternativo** se l'utente chiede registro non-AGID (comunicato stampa, paper, ecc., vedi eccezione gate AGID sopra).
-
-**Cosa comunico all'utente a fine lavoro su un articolo:**
-
-Una riga sintetica con le decisioni prese: *"Badge: Attività — il Gruppo ha affiancato il dispositivo; versione facile: sì — contiene procedure operative; area: Formia (LT); scadenza: vuoto; lis_section: gestione-emergenza."*
-
-Se non concorda, corregge e basta. **Non chiedo PRIMA di pubblicare** — pubblico, poi se serve aggiusto.
+**A fine lavoro** comunico una riga con le decisioni: *"Badge: …; versione facile: …; area: …; scadenza: …; lis_section: …"*. Non chiedo prima — pubblico, poi aggiusto se serve.
 
 ---
 
-## Auto-integrazione di approfondimenti pertinenti (video + link) — pre-autorizzata
+## Auto-integrazione approfondimenti (video + link) — pre-autorizzata
 
-🟢 **Istruzione permanente dell'utente (20/05/2026): integra da sola gli approfondimenti pertinenti — sia i video sia i link a siti della nostra lista — negli articoli e nelle pagine, senza chiedere conferma per-caso.** L'autorizzazione è data a monte, una volta per tutte, e vale per ogni sessione futura (CLI desktop, mobile, cloud). Non serve l'OK caso per caso.
+🟢 Istruzione permanente (20/05/2026): integra da sola gli **approfondimenti pertinenti** (video + link a siti della nostra lista) in articoli e pagine, senza OK caso per caso. Copre l'intero flusso fino a live.
 
-### A) Video (LIS + Approfondimenti video)
+**A) Video** — trigger: issue dai workflow `check-video-lis.yml`, `check-video-dpc-eventi.yml`, `aggiorna-video-correlati.yml`. Se pertinente: video LIS → voce in `data/lis.yaml` (famiglia + `fonte`); video divulgativi/correlati → fix nel **generatore** `scripts/genera-video-correlati.py` (`DENY_VIDEO_IDS`/keyword/gate), **mai solo nel YAML** (rigenerato ogni mese, rule 10); eventuale callout contestuale. Poi chiudi l'issue citando il commit.
 
-**Trigger** — issue aperte dai workflow di monitoraggio video:
-- `check-video-lis.yml` — nuovi video LIS dai canali "Io non rischio", "Abili a Proteggere", "DPCgov".
-- `check-video-dpc-eventi.yml` — video DPCgov correlabili a contenuti del sito.
-- `aggiorna-video-correlati.yml` — re-scraping mensile dei 12 canali italiani (DPCgov, Io non rischio, Abili a Proteggere, INGV terremoti, INGV vulcani + Geopop, NatGeo Italia, Rai Cultura, Rai News, CICAP, Link4Universe, Wired Italia).
+**B) Link "Per approfondire"** in fondo all'articolo, ordine AGID: (1) **Sul nostro sito** — linkografia interna, sempre per prima (rule 02 punto 4, agent `pc-internal-linker`); (2) **Fonti istituzionali** (da `content/siti-utili/_index.md`); (3) **Divulgativi** (Geopop, NatGeo Italia, Rai Cultura/News, CICAP, Link4Universe, Wired Italia) etichettando la fonte; (4) **Video Local Team** (`localteam.it`, whitelist) solo clip con esperti/fonti istituzionali, evitando protesta/polemica/cronaca politica, singolo video (non l'hub "insight"), URL pulito.
 
-**Azione pre-autorizzata:**
-1. Valuta la **pertinenza tematica** del video (vedi gate sotto).
-2. Se pertinente, integralo dove serve:
-   - **Video LIS** → nuova voce in `data/lis.yaml` (famiglia tematica corretta + `fonte`); il badge "video LIS disponibili" e il conteggio dell'hub `/lis/` si aggiornano da soli. Aggiorna i conteggi nei commenti/doc per coerenza (rule 07).
-   - **Video divulgativi / correlati** → i fix di classificazione vanno nel **generatore** `scripts/genera-video-correlati.py` (`DENY_VIDEO_IDS`, keyword, gate tematico), MAI solo in `data/video_correlati.yaml` (rule 10 — rigenerato ogni mese, il fix nel solo YAML andrebbe perso).
-   - Eventuale **callout/link contestuale** sulla pagina o sull'articolo a tema (senza alterare la struttura fissa delle pagine-rischio, rule 06).
-3. **Chiudi l'issue** citando il commit/PR di fix.
-
-### B) Approfondimenti via link negli articoli
-
-Molti articoli **non hanno un video** ma meritano una sezione **"Per approfondire"** con link curati. Modello di riferimento: l'articolo del 20/05/2026 sugli sciami d'api (`content/comunicazioni/2026-05-20-sciami-api-estate-recupero-genzano.md`), che chiude con tre blocchi nell'ordine AGID:
-
-1. **Sul nostro sito** — linkografia interna (articoli correlati ≤ 24 mesi, kit calamità, schede stampabili, glossario, standard ISO, pagine rischio). **Sempre per prima** (AGID, rule 02 § "Livello qualitativo della redazione" punto 4: valorizzare la linkografia interna prima delle fonti esterne; agent `pc-internal-linker`).
-2. **Fonti istituzionali** — link alla nostra lista di siti istituzionali (`content/siti-utili/_index.md`: DPC, Regione Lazio, VVF + Open Data VVF, INGV, ISPRA, FAO, Normattiva, ASL Roma 6, ecc.) pertinenti al tema dell'articolo.
-3. **Approfondimenti divulgativi** — link agli **articoli/pagine** dei canali divulgativi qualificati che già monitoriamo per i video (Geopop, NatGeo Italia, Rai Cultura, Rai News, CICAP, Link4Universe, Wired Italia), qui in versione sito/articolo. Etichetta sempre la fonte (es. "Approfondimenti scientifici (Geopop)").
-4. **Approfondimenti video da Local Team** (`localteam.it`, in whitelist dal 22/05/2026) — quando un articolo ha un tema coperto da un **video pertinente e di tono istituzionale** di Local Team (piattaforma nazionale di video news in presa diretta su emergenze, terremoti, alluvioni, vulcani, ecc.), aggiungi un blocco **"Approfondimenti video"** con il **link** al video (mai mirror: è video di terzi). Vincoli specifici Local Team, oltre al gate di pertinenza generale: **(a)** preferisci clip con **esperti/fonti istituzionali** (es. interviste a vulcanologi/funzionari, INGV, DPC) o riprese documentarie pertinenti; **(b) evita** i contenuti di **protesta, polemica, cronaca politica o sensazionalistici** presenti negli "insight" del sito (sobrietà istituzionale, rule 01); **(c)** non linkare l'hub "insight" intero (mescola contenuti non pertinenti): scegli il singolo video adatto; **(d)** URL pulito senza tracking. Esempio: nell'articolo Campi Flegrei (22/05/2026) è stato linkato il video-intervista alla vulcanologa INGV Lucia Pappalardo sul bradisismo, scartando i clip di cronaca/protesta. Vale per qualunque articolo, non solo Campi Flegrei.
-
-**Azione pre-autorizzata** quando scrivi/rivedi un articolo, o quando un workflow (es. `normativa-watcher.yml`) segnala una fonte pertinente: aggiungi/aggiorna la sezione "Per approfondire" con i link curati pertinenti, rispettando l'ordine AGID (interno → istituzionale → divulgativo), poi pubblica.
-
-### Gate, eccezione, regole comuni (validi per A e B)
-
-🔴 **GATE DI PERTINENZA — vincolo cogente (richiesto esplicitamente dall'utente).** Video o link si aggiungono **solo se trattano una tematica realmente coperta dall'articolo/pagina**. Fuori contesto = **non si allega** (vale per i video, vale per i link: niente link "di riempimento", niente fonte divulgativa generica non attinente). Principio: **"approfondimento pertinente o niente"** — meglio nulla che un link fuori contesto. Coerente con rule 10 (video) e con l'anti-pattern "foto stock generiche per macro-tema" di rule 02 (no risorse generiche spruzzate su più articoli).
-
-**Eccezione — quando fermarsi e chiedere:** se la pertinenza o la classificazione è **ambigua** (famiglia LIS incerta, canale/titolo non identificabili con certezza, dubbio reale se un link sia attinente), non forzare un inserimento sbagliato: chiedi. Il default è agire, ma di fronte a un dubbio genuino meglio chiedere che sbagliare contesto.
-
-**Pulizia URL:** rimuovi sempre i parametri di tracking dai link (`?si=`, `?is=`, `utm_*`, ecc.).
-
-**Pubblicazione:** la pre-autorizzazione copre l'intero flusso fino a live (commit → push → PR → merge → deploy) per questa categoria di task.
-
-**Limite tecnico noto:** l'apertura di un'issue su GitHub non avvia da sola una sessione Claude (nessun hook reagisce alle issue). Questa regola garantisce che **quando** una sessione incontra l'issue o lavora su un articolo, applichi la policy senza altri OK. Non è un cron autonomo lato Claude.
+🔴 **GATE DI PERTINENZA:** video/link solo se trattano una tematica realmente coperta dall'articolo/pagina. Fuori contesto = niente ("approfondimento pertinente o niente"). **Se la pertinenza/classificazione è ambigua, fermati e chiedi.** Pulisci sempre i parametri di tracking (`?si=`, `utm_*`, ecc.). L'apertura di un'issue non avvia da sola una sessione Claude: la regola si applica quando una sessione incontra l'issue o lavora sull'articolo.
 
 ---
 
@@ -283,228 +144,116 @@ Molti articoli **non hanno un video** ma meritano una sezione **"Per approfondir
 
 ---
 
-## Agenti specializzati disponibili
+## Agenti specializzati (`.claude/agents/`)
 
-In `.claude/agents/` ci sono 16 agenti custom da usare PROATTIVAMENTE quando la conversazione fa match con la loro `description`. L'utente preferisce scrivere richieste in italiano naturale, non con i nomi tecnici degli agent — fai tu il match e attiva da solo:
+16 agenti custom da usare PROATTIVAMENTE quando la conversazione fa match con la loro `description` (l'utente scrive in italiano naturale, fai tu il match e attiva da solo):
 
-| Agent | Trigger naturali italiani |
+| Agent | Trigger naturali |
 |---|---|
-| `pc-article-reviewer` | "rivedi questo articolo", "controlla il frontmatter", "va bene per pubblicare?" |
-| `pc-photo-caption-verifier` | gate visivo automatico richiamato da `pc-article-reviewer` quando l'articolo contiene `{{< foto >}}` — verifica con Read multimodale che alt/caption descrivano davvero ciò che si vede nella foto, e che l'attribuzione sia corretta |
-| `pc-accessibility-auditor` | "audit accessibilità", "controlla WCAG", "alt foto e contrasto OK?" — audit WCAG 2.2 AA sui contenuti markdown (alt, headings, link, sigle, lingua dichiarata). Diverso da Lighthouse (che fa solo tecnica HTML/CSS) |
-| `pc-content-freshness` | "ci sono articoli vecchi?", "articoli da aggiornare", "scadenze passate" — sweep articoli con `scadenza:` superata, identifica articoli > 18 mesi con dati obsoleti |
-| `pc-italian-l2-writer` | "genera la versione facile", "italiano semplice A2", "facile da leggere" — produce `<slug>-facile.md` da articolo standard con regole CEFR A2 |
-| `pc-internal-linker` | "linkografia interna", "questo articolo ha abbastanza link interni?", "suggerisci link" — propone/applica link a glossario, kit, articoli correlati, standard ISO |
-| `pc-seo-checker` | "controlla il SEO", "meta description OK?", "Open Graph immagine giusta?" — verifica meta, OG, structured data, sitemap, slug, canonical |
-| `pc-normative-verifier` | "le norme citate sono vigenti?", "verifica leggi", "L. 225/1992 ancora valida?" — verifica vigenza norme statali (Normattiva) e regionali (BURL Lazio) |
-| `pc-image-fixer` | "ecco una foto", "queste immagini", "mettila nell'articolo", "applica fascia blu", "scarica una foto da Wikipedia/NASA/USGS/NOAA per questo articolo" |
-| `pc-issue-triage` | "controlla le issue", "fai pulizia tracker", "issue da chiudere?" |
-| `pc-deploy-validator` | "verifica prima del push", "controlla il deploy", "build OK?", "pubblico in sicurezza?" |
-| `pc-social-publisher` | "rivedi le bozze social", "pronti per pubblicare i social?", "controlla immagini Instagram" |
-| `pc-print-card-qa` | "controlla le schede stampabili", "QA del kit calamità", "i puzzle sono giocabili?" |
-| `pc-site-auditor` | "fammi un audit del sito", "audit approfondito", "controlla tutto il sito", "ci sono incongruenze?", "pro e contro" |
-| `pc-notebooklm-publisher` | "pubblica gli output di NotebookLM per il tema X", "ho caricato i file nella drop zone", "publish notebooklm <tema>" — automatizza il flusso di pubblicazione dei materiali multimediali NotebookLM (podcast, infografiche, presentazioni) nel sito |
-| `pc-correttore-bozze` | "controlla i refusi", "cerca errori di battitura/ortografia", "rileggi per refusi", "bonifica le schede" — caccia refusi e errori ortografici/grammaticali su QUALSIASI contenuto, **incluse le schede statiche HTML** (`static/formazione/`, `static/giochi/`) che gli altri agent non coprono. Usa `scripts/check-refusi.py` (hunspell it_IT) + lettura umana per accordi/grammatica |
+| `pc-article-reviewer` | "rivedi questo articolo", "controlla il frontmatter", "va bene per pubblicare?" — gate AGID + legalità |
+| `pc-photo-caption-verifier` | gate visivo (Read multimodale) richiamato da article-reviewer su articoli con `{{< foto >}}`: alt/caption coerenti col visibile + attribuzione corretta |
+| `pc-accessibility-auditor` | "audit accessibilità", "controlla WCAG", "alt e contrasto?" — WCAG 2.2 AA sui markdown (≠ Lighthouse) |
+| `pc-content-freshness` | "articoli vecchi/da aggiornare", "scadenze passate" |
+| `pc-italian-l2-writer` | "versione facile", "italiano semplice A2" — produce `<slug>-facile.md` CEFR A2 |
+| `pc-internal-linker` | "linkografia interna", "abbastanza link interni?" |
+| `pc-seo-checker` | "controlla il SEO", "meta description", "Open Graph" |
+| `pc-normative-verifier` | "norme vigenti?", "verifica leggi" — Normattiva + BURL Lazio |
+| `pc-image-fixer` | "ecco una foto", "applica fascia blu", "scarica foto da Wikipedia/NASA/USGS/NOAA" |
+| `pc-issue-triage` | "controlla le issue", "issue da chiudere?" |
+| `pc-deploy-validator` | "verifica prima del push", "build OK?", "pubblico in sicurezza?" |
+| `pc-social-publisher` | "rivedi le bozze social", "immagini Instagram" |
+| `pc-print-card-qa` | "controlla le schede stampabili", "QA kit calamità" |
+| `pc-site-auditor` | "audit del sito", "incongruenze?", "pro e contro" |
+| `pc-notebooklm-publisher` | "pubblica output NotebookLM per il tema X" |
+| `pc-correttore-bozze` | "controlla i refusi", "rileggi per refusi" — anche schede statiche HTML (`static/formazione/`, `static/giochi/`) |
 
-Specifiche operative complete + esempi di workflow combinati in `manuale/parte-19-agenti-specializzati.md`. Quando aggiungi/modifichi un agent, aggiorna anche la Parte 19 e questa tabella.
+Specifiche + workflow combinati in `manuale/parte-19-agenti-specializzati.md`. Aggiungendo/modificando un agent, aggiorna la Parte 19 e questa tabella.
 
 ---
 
 ## Skill globali — invocazione obbligata col tool `Skill`
 
-🔴 **Hai ~100 skill installate in `~/.claude/skills/` dopo il cleanup conservativo del 18/05/2026.** Sono inutili se non le invochi. Quando lavori su questo repo, **prima di iniziare un task di una certa complessità (≥3 step o ≥3 tool call), fai mentalmente questo check di 10 secondi:**
+🔴 ~100 skill installate in `~/.claude/skills/`. Prima di un task ≥3 step o ≥3 tool call: **c'è una skill che fa già questo?** Se sì → invocala col tool `Skill` (non con Read+Bash). Vietato dire "so che esiste ma procedo a mano". Non citare una skill senza invocarla. Non usare skill marketing sui contenuti AGID. Per task banali (1-2 tool call) bastano i tool atomici.
 
-1. **C'è una skill che fa già questo lavoro?** Scorri la lista di skill nel system reminder.
-2. Se sì → **invocala col tool `Skill`** (non con Read+Bash). La skill ha già la procedura ottimizzata.
-3. Se no → procedi con i tool atomici (Read/Bash/Edit).
+**Routing rapido:**
 
-Vietato dire *"so che esiste la skill X ma intanto procedo a mano"* — è esattamente il motivo per cui sono installate.
+| Contesto | Skill |
+|---|---|
+| Accessibility WCAG | `accessibility` (+ agent `pc-accessibility-auditor`) |
+| SEO / schema / AI Overviews | `seo` · `seo-audit` · `schema` · `ai-seo` |
+| Script Python | `python-patterns` → `python-testing` |
+| Test / TDD | `tdd-workflow` · `verification-loop` · `eval-harness` |
+| Decisioni ambigue | `council` (4 voci) |
+| Output alto rischio (lega/medicina/sicurezza) | `santa-method` |
+| Git non banale / GitHub | `git-workflow` · `github-ops` |
+| Lookup API/framework | `documentation-lookup` (Context7) |
+| Ricerca web | `search-first` · `deep-research` · `exa-search` |
+| Pre-push completo | `production-audit` + `pc-deploy-validator` |
+| Sicurezza | `security-scan` · `security-review` · `ecc-security-review` |
+| Refactor diff | `simplify` |
+| Audit repo cross-stack | `repo-scan` · `production-audit` |
+| settings.json / hook / permessi | `update-config` · `hookify-rules` · `fewer-permission-prompts` |
+| Pianificare multi-step/PR | `blueprint` · `plan-orchestrate` |
+| ADR / distillare rules | `architecture-decision-records` · `rules-distill` |
+| Onboarding repo | `codebase-onboarding` · `code-tour` |
+| Bug "pulsante non funziona" | `click-path-audit` |
+| Audit budget contesto | `context-budget` · `token-budget-advisor` |
+| Recurring / poll | `loop` · `schedule` |
+| Browser/QA post-deploy | `browser-qa` · `e2e-testing` |
+| Workspace GSuite | `google-workspace-ops` |
+| Meta-work su skill/agent | `skill-stocktake` · `agent-sort` · `agent-architecture-audit` |
+| Imparare dal lavoro | `continuous-learning-v2` |
 
-### Routing rapido — task frequenti su questo repo → skill primaria
-
-| Quando l'utente chiede / il contesto è | Invoca skill | Note |
-|---|---|---|
-| Audit/scrittura di accessibility WCAG | `accessibility` (companion di `pc-accessibility-auditor`) | due livelli: skill = pattern generali, agent = check editoriale specifico del sito |
-| SEO tecnico, schema markup, AI Overviews | `seo` · `seo-audit` · `schema` · `ai-seo` | usa quella che matcha il taglio (audit completo / strutturato / GEO) |
-| Script Python (creare/modificare) | `python-patterns` poi `python-testing` | PEP 8, type hints, pytest |
-| Test e TDD | `tdd-workflow` · `verification-loop` · `eval-harness` | per nuove feature + bugfix |
-| Decisioni ambigue / multipli approcci validi | `council` | 4 voci adversariali |
-| Output ad alto rischio (lega/medicina/sicurezza) | `santa-method` | 2 review agent indipendenti |
-| Operazioni git non banali | `git-workflow` | rebase, conflict, conventional commits |
-| Issue/PR/CI GitHub | `github-ops` | gh CLI, triage, release |
-| Lookup API/framework | `documentation-lookup` (Context7) | invece di indovinare l'API |
-| Ricerca su web | `search-first` · `deep-research` · `exa-search` · `iterative-retrieval` | search-first per check pre-coding; deep-research per indagini estese |
-| Pre-push validation completa | `production-audit` · `pc-deploy-validator` | usa entrambi per pre-release importanti |
-| Sicurezza | `security-scan` · `security-review` · `ecc-security-review` | scan config + review modifiche + checklist |
-| Refactor / pulizia codice cambiato | `simplify` (built-in) | review dei diff |
-| Audit cross-stack del repo (asset, dipendenze) | `repo-scan` · `production-audit` | |
-| Modifiche a settings.json / hook / permessi | `update-config` (built-in) · `hookify-rules` · `fewer-permission-prompts` | |
-| Pianificare un task multi-step / multi-PR | `blueprint` · `plan-orchestrate` | |
-| Catturare una decisione architetturale presa | `architecture-decision-records` | scrivi ADR |
-| Distillare regole ricorrenti in `.claude/rules/` | `rules-distill` | |
-| Onboarding di nuovo collaboratore / contributor | `codebase-onboarding` · `code-tour` | |
-| Bug "il pulsante non funziona" dopo refactor | `click-path-audit` | traccia state change UI |
-| Errori da gestire bene in script | `error-handling` | typed errors, retries, circuit breakers |
-| Parsing testo strutturato | `regex-vs-llm-structured-text` | aiuta a scegliere regex vs LLM |
-| Audit budget contesto / token | `context-budget` · `token-budget-advisor` | quando context cresce o utente chiede short/long |
-| Recurring task / poll status | `loop` · `schedule` (built-in) | |
-| Setup ambiente Docker (raro qui) | `docker-patterns` | |
-| Browser testing UI | `browser-qa` · `e2e-testing` | post-deploy visual |
-| Workspace GSuite / Drive | `google-workspace-ops` | |
-| Capire l'ecosistema ECC stesso | `ecc-guide` | quando l'utente chiede "che skill ho?" o simili |
-| Audit/triage/eval di altre skill/agent | `skill-stocktake` · `skill-scout` · `skill-comply` · `agent-sort` · `agent-architecture-audit` | meta-work sui sub-agent del sistema |
-| Imparare dal lavoro fatto (extract instinct) | `continuous-learning-v2` | dopo task non-banali |
-
-### Cosa NON fare
-
-- ❌ Re-implementare a mano in Bash/Read/Edit ciò che una skill copre già con procedura migliore.
-- ❌ Citare il nome della skill all'utente ("la skill X farebbe questo") **senza invocarla**: o la usi o non la menzioni.
-- ❌ Invocare skill marketing (cold-email, page-cro, churn-prevention, ecc.) sui contenuti AGID del sito — sono globali ma fuori scope PA (regola memoria pre-esistente, vedi `feedback_skill_cleanup_conservativo`).
-- ❌ Inserire la skill nel routing in modo ostentato quando il task è banale (1-2 tool call, un fix mirato): per quelli i tool atomici bastano.
-
-### Quando agent custom + skill collaborano
-
-I 16 agent `pc-*` sono **persone con competenza editoriale del sito**; le skill globali sono **pattern tecnici trasversali**. Convivono — quando rilevanti, invocali in sequenza:
-
-- Revisione articolo: `pc-article-reviewer` (custom, AGID + frontmatter) → `pc-photo-caption-verifier` se ci sono foto → `accessibility` (skill, WCAG cross-cutting) → `seo-audit` (skill, SEO finale).
-- Pre-push importante: `pc-deploy-validator` (custom, regole repo) → `production-audit` (skill, readiness generale) → `security-scan` (skill, config).
-- Nuovo script Python: `search-first` (skill, esiste già qualcosa?) → `python-patterns` (skill, idioms) → `python-testing` (skill, test) → eventuale `pc-deploy-validator` se tocca pipeline.
+**Agent custom + skill in sequenza** quando rilevanti: revisione articolo `pc-article-reviewer` → `pc-photo-caption-verifier` (se foto) → `accessibility` → `seo-audit`; pre-push `pc-deploy-validator` → `production-audit` → `security-scan`; nuovo script `search-first` → `python-patterns` → `python-testing`.
 
 ---
 
 ## Project overview
 
-Static website for the **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**, built with Hugo using the custom theme `flavour-pcgenzano` (Bootstrap Italia 2.x).
+Sito statico del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**, Hugo + tema custom `flavour-pcgenzano` (Bootstrap Italia 2.x). Deploy a ogni push su `main` via GitHub Actions: **Aruba** (`https://www.protezionecivilegenzano.it/`, FTP) + **GitHub Pages** (`https://sviluppoitaliadigitale.github.io/sito-pc-genzano/`).
 
-Deployed to two targets on every push to `main` via GitHub Actions:
-- **Aruba hosting**: `https://www.protezionecivilegenzano.it/`
-- **GitHub Pages**: `https://sviluppoitaliadigitale.github.io/sito-pc-genzano/`
+Architettura completa: rule `04`-`04c`. Manuali nella root: `MANUALE-SITO.md` (indice, split in `manuale/parte-NN-*.md`), `MANUALE-MOBILE.md` (workflow mobile/cloud), `PIANO-EDITORIALE.md` (fonti + calendario), `README.md`, `CONTESTO-AI.md` (export per altre AI).
 
-**Architettura, struttura del progetto, regole Hugo:** vedi `.claude/rules/04-hugo-architecture.md` (mappa generale), `04a-hugo-shortcode-partial.md` (shortcode/partial/render hook), `04b-hugo-template-css.md` (template, menu, CSS, UX), `04c-hugo-static-cartelle.md` (cartelle statiche).
-
-**Manuali operativi nella root del repo:**
-- `MANUALE-SITO.md` — indice del manuale operativo (split a maggio 2026 in file `manuale/parte-NN-*.md`)
-- `manuale/` — manuale operativo split per Parti (procedura articoli, immagini fascia blu, social, comunicati, deploy, ecc.). Indice navigabile in `manuale/README.md`.
-- `MANUALE-MOBILE.md` — workflow editoriale da mobile/cloud
-- `PIANO-EDITORIALE.md` — fonti ufficiali e calendario redazionale
-- `README.md` — overview pubblica del repo
-- `CONTESTO-AI.md` — export auto-generato per altre AI
-
-## Common commands
+## Comandi principali
 
 ```bash
-# Start local dev server
-hugo server
-
-# Start local dev server (also shows draft posts)
-hugo server -D
-
-# Build for GitHub Pages (dev/preview)
-hugo --minify
-
-# Build for Aruba production
-hugo --minify --baseURL "https://www.protezionecivilegenzano.it/"
-
-# Publish changes (triggers CI deploy)
-git add . && git commit -m "..." && git push
-
-# Interactive site management script (menus for content, emergencies, alerts)
-bash ~/gestione-sito.sh
-
-# Export contesto completo per altra AI (ChatGPT, Gemini, Claude web, ecc.)
-bash scripts/export-contesto-ai.sh
-# Produce CONTESTO-AI.md nella root con TUTTA la documentazione in un unico file
-# pronto da incollare in qualsiasi altra AI per continuità di gestione.
-
-# Applica fascia blu istituzionale a una foto fornita dall'utente
-bash scripts/applica-fascia-foto.sh <file-sorgente> <nome-output-senza-ext>
-# Produce static/images/<nome>.webp (1200px, fascia blu + logo + testo istituzionale).
-# Dettagli in manuale/parte-03-immagini-per-gli-articoli.md § 3.8 Metodo 4.
-
-# Scarica/aggiorna la libreria di pittogrammi (ISO 7010 + ARASAAC)
-bash scripts/scarica-pittogrammi.sh           # solo i mancanti
-bash scripts/scarica-pittogrammi.sh --force   # ri-scarica tutto
-
-# Scarica foto per articoli da fonti libere (con fascia blu istituzionale)
-bash scripts/foto-da-wikipedia.sh "Titolo Pagina Wikipedia" slug-articolo [lang]
-bash scripts/foto-da-nasa.sh      "search query"            slug-articolo
-bash scripts/foto-da-usgs.sh      shakemap <eventid>        slug-articolo
-# Da mobile/cloud: vedi workflow scarica-foto-automatica.yml + marker frontmatter.
-
-# Genera bozze social (X, Facebook, Instagram, Telegram) + immagini IG
-bash scripts/genera-social.sh content/comunicazioni/<file>.md  # singolo
-bash scripts/genera-social.sh --all                            # tutti pubblicati
-bash scripts/genera-social.sh --since 2026-04-01               # da una data
-bash scripts/genera-social.sh --dry-run <file>.md              # solo anteprima
-# Richiede: GEMINI_API_KEY in env (gratis: aistudio.google.com/apikey).
-# Da mobile/cloud: il workflow genera-social-bozze.yml fa lo stesso lavoro.
-
-# Genera microtext / microstampa (filigrane anti-falsificazione)
-python3 scripts/genera-microtext.py text --macro "PROTEZIONE|CIVILE" --out static/images/microtext/banner.png
-python3 scripts/genera-microtext.py image --in <foto> --out <out.png>
-python3 scripts/genera-microtext.py watermark --in <cover.webp> --out <out.png>
-# Da lontano sembra testo/immagine normale, da vicino le linee sono micro-testo
-# personalizzato. Frase di default univoca col dominio. Stack Pillow. Vedi manuale/parte-33.
-
-# Notifica IndexNow (Bing/Yandex) delle URL modificate (di norma gira via workflow)
-python3 scripts/indexnow-ping.py
+hugo server                    # dev (server -D mostra le bozze)
+hugo --minify                  # build GitHub Pages
+hugo --minify --baseURL "https://www.protezionecivilegenzano.it/"   # build Aruba
+git add . && git commit -m "..." && git push    # pubblica (CI deploy)
+bash ~/gestione-sito.sh        # script gestione contenuti/emergenze/allerte
+bash scripts/export-contesto-ai.sh              # → CONTESTO-AI.md per altra AI
+bash scripts/applica-fascia-foto.sh <src> <out-senza-ext>   # fascia blu → static/images/<out>.webp
+bash scripts/scarica-pittogrammi.sh [--force]   # libreria ISO 7010 + ARASAAC
+bash scripts/foto-da-{wikipedia,nasa,usgs}.sh ...           # foto da fonti libere
+bash scripts/genera-social.sh <file>|--all|--since DATA|--dry-run   # bozze social (GEMINI_API_KEY)
+python3 scripts/genera-microtext.py {text|image|watermark} ...      # filigrane anti-falsificazione
+python3 scripts/indexnow-ping.py                # ping IndexNow (di norma via workflow)
 ```
 
 ## Architettura — riferimenti rapidi
 
-| Cosa | Dove |
-|---|---|
-| Homepage dual-mode (normale / emergenza) | `themes/flavour-pcgenzano/layouts/index.html` + `data/emergenza.json`. Dettagli in `04-hugo-architecture.md` § "Homepage dual-mode" |
-| Autorevolezza (E-E-A-T) e GEO/AI-SEO: pagina `/metodo-editoriale/`, `static/llms.txt`, analytics GoatCounter (param `goatcounter` in `hugo.toml`, script in `baseof.html`), IndexNow, schema FAQPage opt-in (`faq_schema: true`), "Pagina rivista il" sulle pagine rischio | `content/metodo-editoriale/`, `static/llms.txt`, `partials/structured-data.html`, `.github/workflows/indexnow.yml` — vedi `manuale/parte-33-autorevolezza-geo.md` |
-| Microtext / microstampa (filigrane anti-falsificazione): da lontano testo/immagine normale, da vicino micro-testo | `scripts/genera-microtext.py` + integrazione attestati `static/giochi/assets/js/attestato.js` (copre anche `attestato-inclusivo.js`) e `static/js/quiz-preparazione.js` — vedi `manuale/parte-33-autorevolezza-geo.md` |
-| Data files (`emergenza.json`, `allerta.json`, `risk_cards.yaml`, `numeri_utili.yaml`, `quick_links.yaml`, `social_links.yaml`, `codici_colore.yaml`, `glossario.yaml`, `aree_emergenza.yaml`, `dae.yaml`, `idranti.yaml`, `stato-sistema.json`, `eventi_storici.yaml`, `lis.yaml`) | `data/` — vedi `04-hugo-architecture.md` § "Contenuti dinamici via data files" |
-| Articoli `comunicazioni/` (frontmatter, badge, palette categorie, formato data) | `02-content-design-pa.md` |
-| Badge categorie articoli (dichiarati in `themes/flavour-pcgenzano/layouts/partials/badge.html`): **Allerta · Avviso · Comunicazione · Attività · Formazione · Evento · Volontariato · Radiocomunicazioni · Prevenzione · Esercitazione · Aggiornamento · Informazione · Emergenza** — palette completa con hex e contrasto WCAG in `02-content-design-pa.md` § "Frontmatter obbligatorio" | `02-content-design-pa.md` |
-| Tema custom `flavour-pcgenzano` (layouts, partials, shortcodes, render hook, CSS custom) | `04a-hugo-shortcode-partial.md` + `04b-hugo-template-css.md` |
-| Shortcode disponibili: `foto`, `pittogramma`, `cosa-non-fare`, `chi-chiamare`, `pagina-emergenza-lite` | `04a-hugo-shortcode-partial.md` |
-| Render hook Markdown: `render-link.html`, `render-table.html` | `04a-hugo-shortcode-partial.md` |
-| Partial: `article-cover`, `leggi-ad-alta-voce` (TTS), `accessibility-toolbar`, `assistente-fab` (bottone Aiuto), `structured-data` (JSON-LD), `meta-social` (Open Graph), `articolo-navigazione`, `articoli-correlati`, `page-tools`, `sos-112`, `qr-articolo` (QR + modal), `ricerca-modal` (Pagefind Ctrl+K), `lis-badge` (badge LIS + finestra video) | `04a-hugo-shortcode-partial.md` + `04b-hugo-template-css.md` (assistente-fab) |
-| Menu navbar mega-menu, TOC pagine lunghe, tipografia `.article-body` v7.2, regole stampa, toolbar a11y, bozze social Gemini, pagina 404, homepage enhancements v1.0 | `04b-hugo-template-css.md` |
-| Ricerca full-text Pagefind (`/cerca/` + modal Ctrl+K, indice `static/pagefind/` da `scripts/genera-indice-ricerca.sh`) | `partials/ricerca-modal.html`, `layouts/cerca/list.html`, `custom.css` § RICERCA PAGEFIND v1.0 — idea #24 |
-| QR code per articolo (bottone in `page-tools`, `static/qr/` da `scripts/genera-qr-articoli.py`) | `partials/qr-articolo.html`, `custom.css` § QR ARTICOLO v1.0 — idea #6 |
-| Pagina `/stato-sistema/` (cruscotto trasparenza tecnica: allerta, modalità sito, automazioni con semaforo, conformità) | `layouts/stato-sistema/list.html` + `data/stato-sistema.json` (aggiornato da `aggiorna-stato-sistema.yml`) — idea #25 |
-| Pagina `/podcast/` (podcast con episodi MP3 + feed RSS iTunes) e `/articoli-da-ascoltare/` (ex `/podcast/`, articoli TTS) | `layouts/podcast/{list,single,rss.xml}` + `archetypes/podcast.md`; `layouts/articoli-da-ascoltare/list.html` — idea #22 |
-| Timeline storica `/storia/` (linea del tempo dei Castelli Romani, voci con fonte) | `layouts/storia/list.html` + `data/eventi_storici.yaml` — idea #8 |
-| Assistente vocale: input `SpeechRecognition` nell'`/assistente/` (domanda a voce → ricerca → risposta TTS) | `layouts/assistente/list.html` — idea #5 |
-| Modalità Lanterna `/lanterna/` (pagina standalone ~7 KB: torcia, bussola, Wake Lock, 112 sticky) | `layouts/lanterna/list.html` (NON usa baseof) — idea #4 |
-| Contenuti LIS `/lis/` (hub 59 video LIS dai canali "Io non rischio" DPC e "Abili a Proteggere" Cooperativa Europe Consulting, raggruppati per 10 famiglie tematiche, badge contestuale "N video LIS disponibili" sulle pagine target tramite frontmatter `lis_section:`, check periodico nuovi video via workflow) | `layouts/lis/list.html`, `partials/lis-badge.html`, `data/lis.yaml`, `.github/workflows/check-video-lis.yml`, `scripts/check-nuovi-video-lis.py` — idea #10 + estensione v2.0 maggio 2026 |
-| Sezione "Approfondimenti video" (link a video YouTube pertinenti su ogni pagina del sito, sfondo lavanda pastello AGID `#f5f0fb` con border viola istituzionale `#6b21a8`, privacy-first: solo link, niente embed). Cross-match IDF-weighted fra 12 canali YouTube **in lingua italiana** monitorati (5 tematici PC + 7 divulgativi qualificati con filtro lessicale ~250 keyword) e i contenuti del sito. Niente canali in lingua straniera (policy editoriale 19 maggio 2026). 🔴 **Regola permanente (20/05/2026): video pertinente o niente sezione** — il cross-match richiede un'ancora **PC-tematica specifica** (gate `_anchor_is_topical_specific`; i termini astratti `crisi/disastro/ricostruzione` non bastano da soli) + denylist `DENY_VIDEO_IDS` per i falsi positivi di ultimo miglio. Le pagine senza video davvero pertinente NON hanno la sezione (meglio nulla che qualcosa di sbagliato). I fix ai falsi positivi vanno nel **generatore**, mai solo nel YAML (rigenerato ogni mese). | `partials/video-correlati.html`, `data/video_correlati.yaml`, `data/video_dpc_catalogo.yaml`, `scripts/scrape-catalogo-video.py`, `scripts/genera-video-correlati.py`, `.github/workflows/aggiorna-video-correlati.yml` — copertura ~123 pagine topiche al 2026-05-20, vedi `manuale/parte-32-approfondimenti-video-multicanale.md` |
-| Notifiche allerta browser (opt-in su `/allerte-meteo/`, polling endpoint JSON, no Service Worker) | `static/js/notifiche-allerta.js`, `content/allerta-stato/` (output solo JSON) — idea #2 |
-| Quiz `/quiz-preparazione/` ("Quanto sei preparato?", adattivo, badge PNG + stampa) | `layouts/quiz-preparazione/list.html` + `static/js/quiz-preparazione.js` — idea #7 |
-| Hub `/giochi/` "Arena PC Genzano" (launcher giochi: skin Arena/Classica, badge progressi, continua) | `static/giochi/index.html` + `static/giochi/assets/{css/arena.css,js/arena.js}` — idea #11 |
-| Pagina `/open-data/` (dataset aperti delle attività del Gruppo, CSV/JSON CC BY 4.0) | `content/open-data/_index.md`, richiamata come sezione "Dataset aperti" in `/trasparenza/` (v3.3 menu — non più voce diretta del dropdown Risorse) |
-| Pagina hub `/audio-e-podcast/` (punto d'ingresso unico per podcast + articoli TTS, v3.3 menu maggio 2026) | `content/audio-e-podcast/_index.md`, voce del dropdown Risorse |
-| Cartelle `static/` canoniche e cartella `riferimenti-interni/` non deployata | `04c-hugo-static-cartelle.md` |
-| Assistente guidato `/assistente/` (albero decisionale JS) | `04a-hugo-shortcode-partial.md` § "Assistente guidato" |
-| Hub `/standard-iso/` (30 schede ISO + 10 news divulgative calendarizzate, richiamato come sezione di `/normativa/` da v3.3 menu maggio 2026) | sezione `content/standard-iso/` — vedi punto 18 sotto |
-| Pagina `/feed-rss/` (divulgativa: spiega i 39 feed RSS auto-generati da Hugo) + voce nel footer + mappa-sito + assistente | `content/feed-rss/_index.md` — vedi punto 17 sotto |
-| Hreflang + `<html lang>` + `og:locale` dinamici per le 7 traduzioni | `themes/.../partials/hreflang-tags.html` + frontmatter `language: <code>` nei `_index.md` di english/francais/deutsch/espanol/portugues/romana/esperanto — vedi punto 19 |
-| Pagina lite `/emergenza/` (44 KB) | `04a-hugo-shortcode-partial.md` § "Shortcode pagina-emergenza-lite" |
-| Coach dei giochi (bottone "Consigli per giocare" + hint contestuale + TTS) su giochi statici | `03-accessibility.md` § "Coach dei giochi" + `04b-hugo-template-css.md` § "Coach + TTS sui giochi" |
-| TTS Web Speech API: pagine Hugo (`tts: true`), coach giochi, fiabe `storie-e-racconti/` | `03-accessibility.md` § "TTS Leggi ad alta voce" |
+Mappa completa in rule `04`/`04a`/`04b`/`04c`. Componenti chiave:
+
+- **Homepage dual-mode** (normale/emergenza) — `layouts/index.html` + `data/emergenza.json`. Banner emergenza **site-wide** da `baseof.html`.
+- **Data files** in `data/` — `emergenza.json`, `allerta.json`, `risk_cards.yaml`, `numeri_utili.yaml`, `quick_links.yaml`, `social_links.yaml`, `codici_colore.yaml`, `glossario.yaml`, `aree_emergenza.yaml`, `dae.yaml`, `idranti.yaml`, `stato-sistema.json`, `eventi_storici.yaml`, `lis.yaml`.
+- **Badge articoli** (in `partials/badge.html`): Allerta · Avviso · Comunicazione · Attività · Formazione · Evento · Volontariato · Radiocomunicazioni · Prevenzione · Esercitazione · Aggiornamento · Informazione · Emergenza — palette/hex/contrasto in rule 02.
+- **Shortcode:** `foto`, `pittogramma`, `cosa-non-fare`, `chi-chiamare`, `pagina-emergenza-lite`. **Render hook:** `render-link.html`, `render-table.html`. **Partial** chiave: `article-cover`, `leggi-ad-alta-voce` (TTS), `accessibility-toolbar`, `assistente-fab`, `structured-data` (JSON-LD), `meta-social` (OG), `articoli-correlati`, `page-tools`, `sos-112`, `qr-articolo`, `ricerca-modal` (Pagefind Ctrl+K), `lis-badge`.
+- **Pagine/feature speciali:** ricerca Pagefind (`/cerca/`), QR articolo (`static/qr/`), `/stato-sistema/`, `/podcast/` + `/articoli-da-ascoltare/`, `/storia/`, assistente vocale, `/lanterna/` (standalone), LIS `/lis/` (`data/lis.yaml`), "Approfondimenti video" (`genera-video-correlati.py`, gate pertinenza), notifiche allerta browser, quiz `/quiz-preparazione/`, hub `/giochi/`, `/open-data/`, `/audio-e-podcast/`, hub `/standard-iso/`, `/feed-rss/`, traduzioni (hreflang + `<html lang>` dinamico), pagina lite `/emergenza/` (44 KB), metodo editoriale/E-E-A-T (`static/llms.txt`), microtext (`genera-microtext.py`).
+- **TTS Web Speech API** (pagine `tts:`, coach giochi, fiabe), **coach giochi**, **glossario inline** — rule 03.
 
 ## Regole contenuti e qualità (19 punti)
 
-L'elenco numerato completo (formato data, AGID, qualità testi, banner intoccabile, anti-pattern `image:`, stampa, dataUltimaRevisione, gerarchia fonti crisi, sandbox foto, allerta meteo, kit calamità, feed RSS, standard ISO, traduzioni) è in `.claude/rules/09-regole-contenuti-qualita.md`. Sintesi dei vincoli più critici da tenere a mente:
+Elenco completo in rule `09-regole-contenuti-qualita.md`. Vincoli più critici:
+- **P1 Formato data:** `AAAA-MM-GG` se 1 articolo/giorno; `AAAA-MM-GGTHH:MM:SS+02:00` con orari crescenti (00:01, 00:02…) se 2+/giorno. Mai `Z` UTC.
+- **P4 Qualità ChatGPT 9.5/10:** redazione AGID in ogni contesto (CLI/mobile/cloud), nessuna delega ad AI esterne.
+- **P9 Banner intoccabile:** `image:` = cover tipografica col titolo; tutte le foto **inline** con `{{< foto >}}`, mai nel banner; marker `# TODO-foto-*` bandito; in revisione testuale `image:` non si tocca.
+- **P12 Gerarchia fonti crisi:** AGID+DPC → CNR/ISPRA → EENA/CWA → ISO 22329 + WCAG 2.2 AA → normativa orizzontale.
 
-- **Punto 1 — Formato data**: `AAAA-MM-GG` se 1 articolo/giorno; `AAAA-MM-GGTHH:MM:SS+02:00` con orari crescenti `00:01, 00:02, ...` se 2+ articoli/giorno. Mai `Z` UTC.
-- **Punto 4 — Qualità ChatGPT 9.5/10**: redazione AGID in tutti i contesti (CLI/mobile/cloud), nessuna delega ad AI esterne.
-- **Punto 9 — Banner intoccabile**: il campo `image:` è la cover tipografica col titolo. Tutte le foto (utente/Wikipedia/NASA/stock) vanno **inline** nel corpo con `{{< foto >}}`, mai nel banner. Marker `# TODO-foto-*` bandito. Anti-pattern: durante una revisione testuale, `image:` non si tocca.
-- **Punto 12 — Gerarchia fonti crisi**: AGID+DPC vincolanti italiani → CNR/ISPRA scientifici → EENA/CWA tecnici UE → ISO 22329 + WCAG 2.2 AA → normativa orizzontale.
+## Automazioni (GitHub Actions) e note operative
 
-Tutti gli altri punti (2-3, 5-8, 10-11, 13-19) restano nel file split.
-
-## Automazioni periodiche (GitHub Actions) e Key operational notes
-
-La tabella completa dei workflow di manutenzione (deploy, check-allerta doppio trigger, audit-sito, check-links, normativa-watcher, scarica-foto-automatica, genera-social-bozze, ecc.) + le note operative chiave (modalità emergenza, allerta meteo, draft, deploy CI, credenziali FTP) sono in `.claude/rules/10-automazioni-github-actions.md`.
-
-Trigger rapidi da ricordare:
-- `deploy.yml` parte a ogni push su `main`.
+Tabella completa workflow + note operative in rule `10-automazioni-github-actions.md`. Trigger rapidi:
+- `deploy.yml` a ogni push su `main`.
 - Modalità emergenza: `data/emergenza.json` → `"attiva": true`.
 - Allerta meteo manuale: `data/allerta.json` → `livello: verde|giallo|arancione|rosso`.
-- Regola progetto: niente articoli `draft: true`. Solo pubblicato (data passata) o calendarizzato (data futura).
+- Niente articoli `draft: true`: solo pubblicato (data passata) o calendarizzato (data futura).
