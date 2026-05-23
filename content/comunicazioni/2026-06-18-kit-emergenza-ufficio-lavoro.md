@@ -32,7 +32,7 @@ In nessuno di questi scenari il cassetto vuoto ti aiuta. Un piccolo **kit di 30-
 ## Contenuto del kit ufficio
 
 ### Essenziali
-- **Acqua**: 500-750 ml in bottiglia UHT o boraccia.
+- **Acqua**: 500-750 ml in bottiglia UHT o borraccia.
 - **Snack non deperibili**: barrette, frutta secca, crackers sottovuoto.
 - **Fischietto**: per farti sentire se sotto macerie o in fumo.
 - **Piccola torcia** a LED con batterie di scorta o dynamo.

@@ -129,7 +129,7 @@ Un grazie a chi ha preparato e condotto il corso:
 
 A chi oggi si mette alla prova:
 
-**Calma**. L'esame serve per **verificare** che abbiate compreso, non per metervi in difficoltà. Chi ha seguito il corso con attenzione **non ha motivo di preoccuparsi**.
+**Calma**. L'esame serve per **verificare** che abbiate compreso, non per mettervi in difficoltà. Chi ha seguito il corso con attenzione **non ha motivo di preoccuparsi**.
 
 Anche in caso di non idoneità, l'esperienza vissuta è già un **patrimonio**: conoscenze acquisite, rete di persone, consapevolezza del territorio.
 
