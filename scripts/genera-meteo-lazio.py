@@ -10,7 +10,7 @@ Output:
 
 Geometria: data/meteo-lazio-geo.json (province del Lazio + contesto regioni confinanti),
 estratto una tantum dai confini ISTAT (openpolis/geojson-italy), così il generatore
-giornaliero non scarica i grandi file nazionali.
+orario non scarica i grandi file nazionali.
 
 Uso:
   python3 scripts/genera-meteo-lazio.py            # fetch live (runner CI / locale con rete)
