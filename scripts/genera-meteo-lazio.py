@@ -153,8 +153,9 @@ def fetch_map():
 
 def fetch_card():
     url = (f"https://api.open-meteo.com/v1/forecast?latitude={GENZANO[0]}&longitude={GENZANO[1]}"
-           "&current=temperature_2m,apparent_temperature,relative_humidity_2m,wind_speed_10m,weather_code"
-           "&daily=temperature_2m_max,temperature_2m_min,weather_code,precipitation_probability_max"
+           "&current=temperature_2m,apparent_temperature,relative_humidity_2m,wind_speed_10m,wind_gusts_10m,weather_code"
+           "&daily=temperature_2m_max,temperature_2m_min,weather_code,precipitation_probability_max,"
+           "precipitation_sum,wind_gusts_10m_max,uv_index_max,sunrise,sunset"
            "&timezone=Europe%2FRome&forecast_days=4")
     return _get(url)
 
@@ -268,6 +269,19 @@ def build_svg(map_data, card_data, oggi):
     return svg
 
 # ---------------------------------------------------------------- card Genzano
+# Indice UV: bande standard WHO (Global Solar UV Index) -> etichetta italiana.
+def uv_label(v):
+    v = round(v or 0)
+    if v <= 2:  return "basso"
+    if v <= 5:  return "moderato"
+    if v <= 7:  return "alto"
+    if v <= 10: return "molto alto"
+    return "estremo"
+
+def _hhmm(iso):
+    # "2026-05-23T05:39" -> "05:39"
+    return iso.split("T")[1][:5] if iso and "T" in iso else (iso or "")
+
 def build_card(card_data, now):
     cur = card_data["current"]
     d = card_data["daily"]
@@ -284,12 +298,18 @@ def build_card(card_data, now):
             "tmax": round(d["temperature_2m_max"][i]),
             "tmin": round(d["temperature_2m_min"][i]),
             "pioggia": d["precipitation_probability_max"][i],
+            "pioggia_mm": round(d["precipitation_sum"][i] or 0, 1),
+            "raffiche": round(d["wind_gusts_10m_max"][i] or 0),
+            "uv": round(d["uv_index_max"][i] or 0),
+            "uv_label": uv_label(d["uv_index_max"][i]),
         })
     data_lunga = f"{GIORNI_IT[now.weekday()]} {now.day} {MESI_IT[now.month]} {now.year}"
     return {
         "aggiornato": now.strftime("%Y-%m-%dT%H:%M"),
         "data_lunga": data_lunga,
         "aggiornato_label": f"{data_lunga}, ore {now.strftime('%H:%M')}",
+        "alba": _hhmm(d["sunrise"][0]),
+        "tramonto": _hhmm(d["sunset"][0]),
         "corrente": {
             "temp": round(cur["temperature_2m"], 1),
             "percepita": round(cur["apparent_temperature"], 1),
@@ -297,6 +317,7 @@ def build_card(card_data, now):
             "icona": icona_svg(ico_cur, 28, 28, 16),
             "umidita": round(cur["relative_humidity_2m"]),
             "vento": round(cur["wind_speed_10m"]),
+            "raffiche": round(cur["wind_gusts_10m"] or 0),
         },
         "giorni": giorni,
         "fonte": "Open-Meteo (modelli ECMWF)",
