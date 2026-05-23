@@ -191,9 +191,9 @@ publish_step 2 "Facebook" "$DIR/facebook.txt" "  → Tab Facebook → pagina del
 
 publish_step 3 "Instagram" "$DIR/instagram.txt" "  → Tab Instagram → click '+' in alto (Crea).
   → DRAG delle immagini DAL FILE MANAGER:
-     - SINGOLA: instagram-post.jpg
-     - CAROSELLO: instagram-post-1.jpg … instagram-post-N.jpg
-  → Per la STORY: post separato dopo, drag instagram-story.jpg.
+     - SINGOLA: feed-post.jpg
+     - CAROSELLO: feed-carosello-1.jpg … feed-carosello-N.jpg
+  → Per la STORIA: post separato dopo, drag storia.jpg.
   → Caption: Ctrl+V (già negli appunti).
   → Click 'Condividi'."
 

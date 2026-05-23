@@ -16,9 +16,9 @@ Per ogni articolo in `content/comunicazioni/*.md`:
 2. **`scripts/genera-immagini-social.py`** usa Pillow per generare immagini
    Instagram con template istituzionale (logo + brand + cover articolo + URL
    sito) salvate **nella stessa cartella** `social-bozze/AAAA/MM/<slug>/` accanto ai
-   testi (`instagram-post.jpg` per singola foto, `instagram-post-N.jpg` per
-   carosello, `instagram-story.jpg` per la story). Comodo da scaricare
-   insieme via mobile.
+   testi. Nomi a prova di errore: `feed-post.jpg` (post singolo nel feed),
+   `feed-carosello-N.jpg` (carosello nel feed), `storia.jpg` (storia 24h).
+   Tutte 1080×1350 (feed) o 1080×1920 (storia). Comodo da scaricare via mobile.
 
 ## Setup iniziale (una sola volta)
 
@@ -70,8 +70,8 @@ Output:
 - `social-bozze/2026/04/2026-04-20-articolo/instagram.txt`
 - `social-bozze/2026/04/2026-04-20-articolo/telegram.txt`
 - `social-bozze/2026/04/2026-04-20-articolo/README.md`
-- `social-bozze/2026/04/2026-04-20-articolo/instagram-post.jpg` (o `-1.jpg`, `-2.jpg`, … se carosello)
-- `social-bozze/2026/04/2026-04-20-articolo/instagram-story.jpg`
+- `social-bozze/2026/04/2026-04-20-articolo/feed-post.jpg` (o `feed-carosello-1.jpg`, `-2.jpg`, … se carosello)
+- `social-bozze/2026/04/2026-04-20-articolo/storia.jpg`
 
 ### Tutti gli articoli pubblicati (batch retroattivo)
 
@@ -144,7 +144,7 @@ cartella**, comoda da scaricare via mobile da GitHub.
 
 | Cartella | Contenuto | Deployata sul sito? |
 |---|---|---|
-| `social-bozze/AAAA/MM/<slug>/` | 4 .txt + README.md + `instagram-post*.jpg` + `instagram-story.jpg` | ❌ no (cartella fuori da Hugo, solo archivio di lavoro) |
+| `social-bozze/AAAA/MM/<slug>/` | 4 .txt + README.md + `feed-post.jpg`/`feed-carosello-*.jpg` + `storia.jpg` | ❌ no (cartella fuori da Hugo, solo archivio di lavoro) |
 
 > **Nota storica (2 maggio 2026)**:
 > 1. Le immagini stavano in `static/images-social/` con URL pubblico Aruba.

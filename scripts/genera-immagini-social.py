@@ -7,10 +7,19 @@ Template istituzionale:
   - Cover articolo ridimensionata (preserva proporzioni)
   - Footer con titolo articolo + URL del sito
 
+Design (formato 4:5 = 1080x1350, mai ritagliato neppure nella griglia profilo IG):
+  - Slide 1 / post singolo: card-titolo verticale nativa (brand + badge + titolo)
+  - Slide foto: immagine INTERA nitida (mai tagliata) su sfondo sfocato di se
+    stessa, card con angoli arrotondati + ombra morbida + barra brand
+  - Story 1080x1920: stessa estetica, sfondo sfocato + card intera + testo + CTA
+
 Output (accanto ai testi delle bozze, comodo da scaricare insieme via mobile):
-  social-bozze/<slug>/instagram-post.jpg         (1080x1080, 1 sola foto)
-  social-bozze/<slug>/instagram-post-N.jpg       (carosello, 2-10 foto)
-  social-bozze/<slug>/instagram-story.jpg        (1080x1920, sempre 1)
+  social-bozze/<slug>/feed-post.jpg          (1080x1350, post singolo per il FEED)
+  social-bozze/<slug>/feed-carosello-N.jpg   (1080x1350, carosello per il FEED)
+  social-bozze/<slug>/storia.jpg             (1080x1920, per le STORIE 24h)
+
+Nomi a prova di errore: "feed-" = post nel feed (Instagram + Facebook),
+"storia" = storia verticale 24h. Il numero del carosello è l'ordine di caricamento.
 
 Formato: JPEG quality 90. Universalmente accettato da Instagram, Facebook,
 X, Telegram, LinkedIn. WebP non funziona per upload su Instagram (web e
@@ -32,13 +41,14 @@ import subprocess
 import sys
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT_COMUNICAZIONI = ROOT / "content" / "comunicazioni"
 IMAGES_DIR = ROOT / "static" / "images"
 BOZZE_DIR = ROOT / "social-bozze"  # Output: stessa cartella dei testi (instagram.txt ecc.)
 LOGO_PATH = IMAGES_DIR / "logo-pc-genzano.png"
+SITE_BASE = "https://www.protezionecivilegenzano.it"
 
 
 def slug_to_path(slug: str) -> Path:
@@ -133,158 +143,253 @@ def wrap_testo(draw: ImageDraw.ImageDraw, testo: str, font: ImageFont.FreeTypeFo
     return righe
 
 
-def crea_post_quadrato(cover_path: Path, titolo: str, out_path: Path) -> Path:
-    """Genera l'immagine 1080x1080 per Instagram feed nel path indicato."""
-    W, H = 1080, 1080
-    HEADER_H = 140
-    FOOTER_H = 280
+# ---------------------------------------------------------------------------
+# Helper grafici — fit-contain (MAI ritaglio del contenuto), sfondo sfocato,
+# card arrotondate con ombra, velo gradiente, barra brand, palette badge.
+# ---------------------------------------------------------------------------
 
-    img = Image.new("RGB", (W, H), LIGHT_BG)
-    draw = ImageDraw.Draw(img)
+# Palette badge coerente con il sito (CLAUDE.md / custom.css).
+BADGE_COLORI = {
+    "allerta": (217, 54, 79), "emergenza": (127, 29, 29), "avviso": (180, 83, 9),
+    "evento": (192, 38, 211), "comunicazione": (0, 51, 102),
+    "radiocomunicazioni": (3, 105, 161), "informazione": (7, 89, 133),
+    "prevenzione": (21, 128, 61), "esercitazione": (194, 65, 12),
+    "aggiornamento": (67, 56, 202), "formazione": (124, 58, 237),
+    "volontariato": (180, 83, 9), "attività": (14, 116, 144),
+    "attivita": (14, 116, 144),
+}
+ACCENT = (255, 190, 46)       # giallo istituzionale #ffbe2e
 
-    # Header blu con logo + brand
-    draw.rectangle([(0, 0), (W, HEADER_H)], fill=PRIMARY)
+
+def _badge_colore(badge: str) -> tuple:
+    return BADGE_COLORI.get((badge or "").strip().lower(), PRIMARY)
+
+
+def fit_size(src_w: int, src_h: int, box_w: int, box_h: int) -> tuple[int, int]:
+    """Dimensioni per contenere l'immagine dentro box mantenendo le proporzioni.
+    Nessun ritaglio: l'immagine intera resta visibile (contain)."""
+    r = min(box_w / src_w, box_h / src_h)
+    return max(1, round(src_w * r)), max(1, round(src_h * r))
+
+
+def gradiente_verticale(W: int, H: int, top: tuple, bottom: tuple) -> Image.Image:
+    """Sfondo a gradiente verticale (1 colonna ridimensionata = veloce)."""
+    col = Image.new("RGB", (1, H))
+    for y in range(H):
+        t = y / max(1, H - 1)
+        col.putpixel((0, y), tuple(round(top[i] + (bottom[i] - top[i]) * t)
+                                   for i in range(3)))
+    return col.resize((W, H), Image.BILINEAR)
+
+
+def sfondo_sfocato(src: Image.Image, W: int, H: int,
+                   blur: int = 48, scurisci: float = 0.5) -> Image.Image:
+    """Sfondo W×H ricavato dall'immagine stessa: scalata a COPRIRE, sfocata e
+    scurita, per riempire le bande senza vuoti. NB: solo lo sfondo decorativo
+    viene coperto; l'immagine nitida sovrapposta resta SEMPRE intera."""
+    r = max(W / src.width, H / src.height)
+    nw, nh = max(1, round(src.width * r)), max(1, round(src.height * r))
+    big = src.resize((nw, nh), Image.LANCZOS)
+    left, top = (nw - W) // 2, (nh - H) // 2
+    bg = big.crop((left, top, left + W, top + H)).filter(ImageFilter.GaussianBlur(blur))
+    return Image.blend(bg, Image.new("RGB", (W, H), PRIMARY_DARK), scurisci)
+
+
+def _mask_arrotondata(size: tuple, raggio: int) -> Image.Image:
+    m = Image.new("L", size, 0)
+    ImageDraw.Draw(m).rounded_rectangle([(0, 0), (size[0] - 1, size[1] - 1)],
+                                        radius=raggio, fill=255)
+    return m
+
+
+def incolla_card(base: Image.Image, foto: Image.Image, x: int, y: int,
+                 raggio: int = 28, ombra: int = 22) -> None:
+    """Incolla 'foto' su 'base' (RGBA) come card: angoli arrotondati, cornice
+    bianca sottile, ombra morbida. base modificata in place. Nessun ritaglio."""
+    foto = foto.convert("RGB")
+    mask = _mask_arrotondata(foto.size, raggio)
+    # Ombra morbida
+    sh = Image.new("RGBA", base.size, (0, 0, 0, 0))
+    blocco = Image.new("RGBA", foto.size, (0, 20, 40, 135))
+    blocco.putalpha(mask)
+    sh.paste(blocco, (x, y + 12), blocco)
+    base.alpha_composite(sh.filter(ImageFilter.GaussianBlur(ombra)))
+    # Cornice bianca
+    b = 6
+    cornice = Image.new("RGBA", (foto.width + b * 2, foto.height + b * 2), (0, 0, 0, 0))
+    bianco = Image.new("RGBA", cornice.size, (255, 255, 255, 235))
+    bianco.putalpha(_mask_arrotondata(cornice.size, raggio + b))
+    base.alpha_composite(bianco, (x - b, y - b))
+    # Foto
+    fr = foto.convert("RGBA")
+    fr.putalpha(mask)
+    base.alpha_composite(fr, (x, y))
+
+
+def scrim(W: int, h: int, dall_alto: bool = True, alpha_max: int = 215,
+          colore: tuple = (0, 18, 38)) -> Image.Image:
+    """Velo gradiente verticale (per la leggibilità del testo sulle foto)."""
+    col = Image.new("RGBA", (1, h), (0, 0, 0, 0))
+    for y in range(h):
+        t = (1 - y / max(1, h - 1)) if dall_alto else (y / max(1, h - 1))
+        col.putpixel((0, y), (*colore, int(alpha_max * t)))
+    return col.resize((W, h))
+
+
+def _barra_brand(base: Image.Image, W: int) -> None:
+    """Logo + denominazione in alto su un velo scuro. base RGBA in place."""
+    base.alpha_composite(scrim(W, 210, dall_alto=True, alpha_max=205), (0, 0))
     if LOGO_PATH.exists():
         logo = Image.open(LOGO_PATH).convert("RGBA")
-        logo_h = 90
-        logo_w = int(logo.width * (logo_h / logo.height))
-        logo = logo.resize((logo_w, logo_h), Image.LANCZOS)
-        img.paste(logo, (40, (HEADER_H - logo_h) // 2), logo)
+        lh = 96
+        logo = logo.resize((round(logo.width * (lh / logo.height)), lh), Image.LANCZOS)
+        base.alpha_composite(logo, (60, 42))
+    d = ImageDraw.Draw(base)
+    d.text((176, 50), "PROTEZIONE CIVILE",
+           font=ImageFont.truetype(str(find_font("Bold")), 38), fill=WHITE)
+    d.text((176, 100), "Gruppo Comunale Volontari — Genzano di Roma",
+           font=ImageFont.truetype(str(find_font("Regular")), 24), fill=(220, 232, 245))
 
-    font_brand_lg = ImageFont.truetype(str(find_font("Bold")), 32)
-    font_brand_sm = ImageFont.truetype(str(find_font("Regular")), 20)
-    draw.text((150, 35), "Protezione Civile", font=font_brand_lg, fill=WHITE)
-    draw.text((150, 80), "Gruppo Comunale Volontari — Genzano di Roma",
-              font=font_brand_sm, fill=WHITE)
 
-    # Cover articolo
-    cover_area_h = H - HEADER_H - FOOTER_H  # 660
-    if cover_path.exists():
-        cover = Image.open(cover_path).convert("RGB")
-        # Crop al rapporto necessario (W/cover_area_h ≈ 1080/660 = 1.636).
-        # IMPORTANTE: le cover tipografiche del sito hanno il titolo
-        # allineato a SINISTRA. Un crop centrato taglierebbe le prime
-        # lettere. Usiamo offset=0 (preserve-left) per mantenere intatto
-        # il bordo sinistro. Per le foto evento il soggetto è di solito
-        # nei 2/3 sinistri, quindi anche per quelle preserve-left
-        # funziona meglio del crop centrato.
-        target_ratio = W / cover_area_h
-        src_ratio = cover.width / cover.height
-        if src_ratio > target_ratio:
-            # cover troppo larga: tieni il bordo sinistro, taglia da destra
-            new_w = int(cover.height * target_ratio)
-            cover = cover.crop((0, 0, new_w, cover.height))
-        else:
-            # cover troppo alta: crop centrato verticalmente
-            new_h = int(cover.width / target_ratio)
-            offset = (cover.height - new_h) // 2
-            cover = cover.crop((0, offset, cover.width, offset + new_h))
-        cover = cover.resize((W, cover_area_h), Image.LANCZOS)
-        img.paste(cover, (0, HEADER_H))
+def crea_slide_titolo(titolo: str, badge: str, out_path: Path,
+                      W: int = 1080, H: int = 1350) -> Path:
+    """Slide 1 del carosello / post singolo: card-titolo verticale nativa 4:5.
+    Costruita a misura: riempie perfettamente, senza ritagli né bande."""
+    base = gradiente_verticale(W, H, PRIMARY_DARK, PRIMARY).convert("RGBA")
+    # Trama diagonale appena percettibile, per profondità.
+    trama = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    dt = ImageDraw.Draw(trama)
+    for x in range(-H, W, 48):
+        dt.line([(x, 0), (x + H, H)], fill=(255, 255, 255, 6), width=2)
+    base.alpha_composite(trama)
 
-    # Footer con titolo + URL
-    draw.rectangle([(0, H - FOOTER_H), (W, H)], fill=LIGHT_BG)
-    font_titolo = ImageFont.truetype(str(find_font("Bold")), 38)
-    font_url = ImageFont.truetype(str(find_font("Regular")), 22)
+    _barra_brand(base, W)
+    d = ImageDraw.Draw(base)
+    d.line([(60, 190), (W - 60, 190)], fill=(255, 255, 255, 55), width=2)
 
-    # Titolo wrap fino a 4 righe
-    righe = wrap_testo(draw, titolo, font_titolo, W - 120)
-    righe = righe[:4]
-    y = H - FOOTER_H + 40
+    y = 250
+    if badge:
+        ft = ImageFont.truetype(str(find_font("Bold")), 30)
+        txt = badge.upper()
+        tb = d.textbbox((0, 0), txt, font=ft)
+        tw, th = tb[2] - tb[0], tb[3] - tb[1]
+        px, py = 30, 16
+        d.rounded_rectangle([(60, y), (60 + tw + px * 2, y + th + py * 2)],
+                            radius=(th + py * 2) // 2, fill=_badge_colore(badge))
+        d.text((60 + px, y + py - tb[1]), txt, font=ft, fill=WHITE)
+        y += th + py * 2 + 56
+
+    ft_tit = ImageFont.truetype(str(find_font("Bold")), 74)
+    righe = wrap_testo(d, titolo, ft_tit, W - 200)[:6]
+    line_h = 90
+    blocco_h = len(righe) * line_h
+    area_top, area_bot = y, H - 200
+    ty = area_top + max(0, (area_bot - area_top - blocco_h) // 2)
+    d.rectangle([(60, ty + 8), (72, ty + blocco_h - 12)], fill=ACCENT)
     for r in righe:
-        draw.text((60, y), r, font=font_titolo, fill=PRIMARY)
-        y += 50
+        d.text((100, ty), r, font=ft_tit, fill=WHITE)
+        ty += line_h
 
-    # URL in basso
-    draw.text((60, H - 60), "protezionecivilegenzano.it",
-              font=font_url, fill=TEXT_DARK)
+    base.alpha_composite(scrim(W, 170, dall_alto=False, alpha_max=150), (0, H - 170))
+    d.text((60, H - 92), "protezionecivilegenzano.it",
+           font=ImageFont.truetype(str(find_font("Bold")), 30), fill=WHITE)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    img.save(out_path, "JPEG", quality=90, optimize=True, progressive=True)
+    base.convert("RGB").save(out_path, "JPEG", quality=92, optimize=True, progressive=True)
+    return out_path
+
+
+def crea_slide_foto(foto_path: Path, out_path: Path,
+                    W: int = 1080, H: int = 1350) -> Path:
+    """Slide foto del carosello: l'immagine INTERA (mai tagliata) nitida su uno
+    sfondo sfocato ricavato da se stessa, in una card arrotondata con ombra,
+    barra brand in alto e URL in basso."""
+    foto = Image.open(foto_path).convert("RGB")
+    base = sfondo_sfocato(foto, W, H).convert("RGBA")
+
+    area_top, area_bot = 210, H - 150
+    box_w, box_h = W - 120, area_bot - area_top - 40
+    fw, fh = fit_size(foto.width, foto.height, box_w, box_h)
+    foto_fit = foto.resize((fw, fh), Image.LANCZOS)
+    x = (W - fw) // 2
+    yy = area_top + (area_bot - area_top - fh) // 2
+    incolla_card(base, foto_fit, x, yy)
+
+    _barra_brand(base, W)
+    base.alpha_composite(scrim(W, 150, dall_alto=False, alpha_max=175), (0, H - 150))
+    ImageDraw.Draw(base).text(
+        (60, H - 92), "protezionecivilegenzano.it",
+        font=ImageFont.truetype(str(find_font("Bold")), 30), fill=WHITE)
+
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    base.convert("RGB").save(out_path, "JPEG", quality=92, optimize=True, progressive=True)
     return out_path
 
 
 def crea_story_verticale(cover_path: Path, titolo: str, descrizione: str,
-                         out_path: Path) -> Path:
-    """Genera l'immagine 1080x1920 per Instagram story / reel nel path indicato."""
+                         out_path: Path, badge: str = "",
+                         hero_path: Path = None) -> Path:
+    """Story / reel 1080×1920: sfondo sfocato + badge + titolo + descrizione + CTA.
+    Se l'articolo ha una foto reale (es. locandina) la mette in evidenza come
+    card intera (mai tagliata); altrimenti resta una card-titolo nativa pulita.
+    Niente doppioni di badge/titolo. Testo fuori dalle safe-zone UI di IG/FB."""
     W, H = 1080, 1920
-    HEADER_H = 240
-    FOOTER_H = 200
+    featured = (hero_path if (hero_path and Path(hero_path).exists()) else None)
+    bg_path = featured or cover_path
+    bg_src = (Image.open(bg_path).convert("RGB")
+              if bg_path and Path(bg_path).exists() else None)
+    base = (sfondo_sfocato(bg_src, W, H) if bg_src
+            else gradiente_verticale(W, H, PRIMARY_DARK, PRIMARY)).convert("RGBA")
 
-    img = Image.new("RGB", (W, H), LIGHT_BG)
-    draw = ImageDraw.Draw(img)
+    _barra_brand(base, W)
+    d = ImageDraw.Draw(base)
 
-    # Header blu
-    draw.rectangle([(0, 0), (W, HEADER_H)], fill=PRIMARY)
-    if LOGO_PATH.exists():
-        logo = Image.open(LOGO_PATH).convert("RGBA")
-        logo_h = 130
-        logo_w = int(logo.width * (logo_h / logo.height))
-        logo = logo.resize((logo_w, logo_h), Image.LANCZOS)
-        img.paste(logo, (60, (HEADER_H - logo_h) // 2), logo)
+    # Badge sotto la barra brand (una volta sola)
+    testo_y = 250
+    if badge:
+        ft = ImageFont.truetype(str(find_font("Bold")), 30)
+        txt = badge.upper()
+        tb = d.textbbox((0, 0), txt, font=ft)
+        tw, th = tb[2] - tb[0], tb[3] - tb[1]
+        px, py = 30, 16
+        d.rounded_rectangle([(70, testo_y), (70 + tw + px * 2, testo_y + th + py * 2)],
+                            radius=(th + py * 2) // 2, fill=_badge_colore(badge))
+        d.text((70 + px, testo_y + py - tb[1]), txt, font=ft, fill=WHITE)
+        testo_y += th + py * 2 + 44
 
-    font_brand_lg = ImageFont.truetype(str(find_font("Bold")), 44)
-    font_brand_sm = ImageFont.truetype(str(find_font("Regular")), 26)
-    draw.text((220, 70), "Protezione Civile", font=font_brand_lg, fill=WHITE)
-    draw.text((220, 130), "Gruppo Comunale Volontari", font=font_brand_sm, fill=WHITE)
-    draw.text((220, 165), "Genzano di Roma", font=font_brand_sm, fill=WHITE)
+    # Foto reale in evidenza (NON la cover tipografica, che ripeterebbe titolo).
+    if featured:
+        fsrc = Image.open(featured).convert("RGB")
+        box_w, box_h = W - 140, 720
+        fw, fh = fit_size(fsrc.width, fsrc.height, box_w, box_h)
+        cov = fsrc.resize((fw, fh), Image.LANCZOS)
+        cy = testo_y
+        incolla_card(base, cov, (W - fw) // 2, cy + (box_h - fh) // 2)
+        testo_y = cy + box_h + 56
 
-    # Cover articolo (rapporto 16:9 originale, ridimensionata 1080 di larghezza).
-    # Stesso preserve-left del template post per mantenere intatto il titolo
-    # allineato a sinistra delle cover tipografiche.
-    cover_y = HEADER_H + 40
-    cover_h = 600
-    if cover_path.exists():
-        cover = Image.open(cover_path).convert("RGB")
-        target_ratio = W / cover_h
-        src_ratio = cover.width / cover.height
-        if src_ratio > target_ratio:
-            new_w = int(cover.height * target_ratio)
-            cover = cover.crop((0, 0, new_w, cover.height))
-        else:
-            new_h = int(cover.width / target_ratio)
-            offset = (cover.height - new_h) // 2
-            cover = cover.crop((0, offset, cover.width, offset + new_h))
-        cover = cover.resize((W, cover_h), Image.LANCZOS)
-        img.paste(cover, (0, cover_y))
-
-    # Area testo (titolo + descrizione)
-    testo_y = cover_y + cover_h + 60
-    font_titolo = ImageFont.truetype(str(find_font("Bold")), 56)
-    font_desc = ImageFont.truetype(str(find_font("Regular")), 30)
-
-    # Titolo
-    righe_t = wrap_testo(draw, titolo, font_titolo, W - 140)
-    righe_t = righe_t[:5]
-    y = testo_y
-    for r in righe_t:
-        draw.text((70, y), r, font=font_titolo, fill=PRIMARY)
-        y += 72
-
-    # Spazio + descrizione
-    y += 40
+    ft_tit = ImageFont.truetype(str(find_font("Bold")), 58)
+    for r in wrap_testo(d, titolo, ft_tit, W - 140)[:5]:
+        d.text((70, testo_y), r, font=ft_tit, fill=WHITE)
+        testo_y += 74
+    testo_y += 26
     if descrizione:
-        # Limita la descrizione a ~250 char
-        desc_breve = descrizione[:250]
-        if len(descrizione) > 250:
-            desc_breve = desc_breve.rsplit(" ", 1)[0] + "…"
-        righe_d = wrap_testo(draw, desc_breve, font_desc, W - 140)
-        # Limita a 6 righe massimo
-        righe_d = righe_d[:6]
-        for r in righe_d:
-            draw.text((70, y), r, font=font_desc, fill=TEXT_DARK)
-            y += 42
+        desc = descrizione[:240]
+        if len(descrizione) > 240:
+            desc = desc.rsplit(" ", 1)[0] + "…"
+        ft_d = ImageFont.truetype(str(find_font("Regular")), 30)
+        for r in wrap_testo(d, desc, ft_d, W - 140)[:6]:
+            d.text((70, testo_y), r, font=ft_d, fill=(223, 234, 245))
+            testo_y += 44
 
-    # Footer "Leggi sul sito"
-    draw.rectangle([(0, H - FOOTER_H), (W, H)], fill=PRIMARY)
-    font_cta = ImageFont.truetype(str(find_font("Bold")), 36)
-    font_url2 = ImageFont.truetype(str(find_font("Regular")), 28)
-    draw.text((70, H - FOOTER_H + 50), "→ Leggi sul sito", font=font_cta, fill=WHITE)
-    draw.text((70, H - FOOTER_H + 110), "protezionecivilegenzano.it",
-              font=font_url2, fill=WHITE)
+    # CTA footer (dentro la safe-zone bassa)
+    base.alpha_composite(scrim(W, 230, dall_alto=False, alpha_max=210), (0, H - 230))
+    d.text((70, H - 158), "→ Leggi sul sito",
+           font=ImageFont.truetype(str(find_font("Bold")), 38), fill=WHITE)
+    d.text((70, H - 100), "protezionecivilegenzano.it",
+           font=ImageFont.truetype(str(find_font("Regular")), 30), fill=(223, 234, 245))
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    img.save(out_path, "JPEG", quality=90, optimize=True, progressive=True)
+    base.convert("RGB").save(out_path, "JPEG", quality=92, optimize=True, progressive=True)
     return out_path
 
 
@@ -322,6 +427,52 @@ def crea_cover_tipografica(art_path: Path) -> Path | None:
     return IMAGES_DIR / f"{art_path.stem}.webp"
 
 
+def scrivi_readme(out_dir: Path, art: dict, n_immagini: int) -> None:
+    """Scrive README.md con la mappa 'a prova di errore' delle immagini + testi.
+    Unico proprietario del README della cartella (genera-social.py non lo scrive)."""
+    if n_immagini <= 1:
+        riga_feed = ("| `feed-post.jpg` | FEED Instagram + Facebook — post con "
+                     "una sola immagine (1080×1350) |")
+    else:
+        nomi = ", ".join(f"`feed-carosello-{i}.jpg`" for i in range(1, n_immagini + 1))
+        riga_feed = (f"| {nomi} | FEED Instagram + Facebook — carosello: "
+                     f"caricale **tutte, in ordine** (1080×1350) |")
+    url = f"{SITE_BASE}/comunicazioni/{art['slug']}/"
+    testo = f"""# Immagini e testi social per «{art['title']}»
+
+- **Articolo**: {url}
+- **Data**: {art.get('date', '')}
+- **Badge**: {art.get('badge', '')}
+
+## Dove va ogni file (a prova di errore)
+
+Regola: **`feed-` = post nel FEED** (Instagram + Facebook), **`storia` = STORIA 24h**.
+Il numero del carosello è l'ordine di caricamento.
+
+| File | Dove si pubblica |
+|---|---|
+{riga_feed}
+| `storia.jpg` | STORIE Instagram + Facebook — verticale, sparisce dopo 24h (1080×1920) |
+| `instagram.txt` | testo per Instagram |
+| `facebook.txt` | testo per Facebook (anteprima OG dall'URL) |
+| `x.txt` | testo per X — max 280 caratteri |
+| `telegram.txt` | testo per Telegram (Markdown) |
+
+I **testi** sono indipendenti per social: puoi pubblicare anche su un solo
+canale usando solo il suo `.txt`. Le **immagini** sono per destinazione (feed o
+storia) e sono condivise tra Instagram e Facebook (stesse misure).
+
+> La stessa immagine (es. una locandina) può comparire sia nel feed sia nella
+> storia: sono due posti diversi, quindi si usano **entrambe**, non sono alternative.
+
+> Per **X** e **Telegram** vanno bene le immagini del feed (1080×1350): Telegram
+> le mostra intere, X le espande al tap. Non servono misure dedicate.
+
+> **Nota**: queste sono BOZZE. Rileggi sempre prima di pubblicare.
+"""
+    (out_dir / "README.md").write_text(testo, encoding="utf-8")
+
+
 def estrai_articolo(path: Path) -> dict | None:
     try:
         testo = path.read_text(encoding="utf-8")
@@ -329,6 +480,9 @@ def estrai_articolo(path: Path) -> dict | None:
         return None
     fm, body = parse_frontmatter(testo)
     if fm.get("draft", "").lower() in ("true", "yes", "1"):
+        return None
+    # Le versioni "facile" (A2) sono nascoste da liste/feed: niente social dedicato.
+    if fm.get("versione_facile_di"):
         return None
     m = re.match(r"(\d{4}-\d{2}-\d{2})", fm.get("date", ""))
     if not m:
@@ -372,6 +526,8 @@ def estrai_articolo(path: Path) -> dict | None:
         "slug": path.stem,
         "title": fm.get("title", ""),
         "description": fm.get("description", ""),
+        "badge": fm.get("badge", ""),
+        "date": m.group(1),
         "cover": cover_path,
         "carousel": carousel_unique,
     }
@@ -389,6 +545,8 @@ def trova_articoli_pubblicati() -> list[Path]:
             continue
         fm, _ = parse_frontmatter(testo)
         if fm.get("draft", "").lower() in ("true", "yes", "1"):
+            continue
+        if fm.get("versione_facile_di"):
             continue
         m = re.match(r"(\d{4}-\d{2}-\d{2})", fm.get("date", ""))
         if not m or datetime.date.fromisoformat(m.group(1)) > oggi:
@@ -423,46 +581,54 @@ def main() -> int:
 
         n_foto = len(art["carousel"])
         out_dir = slug_dir(art["slug"])
-        story_path = out_dir / "instagram-story.jpg"
+        story_path = out_dir / "storia.jpg"
 
-        # Naming:
-        #   1 sola foto -> instagram-post.jpg
-        #   2+ foto    -> instagram-post-1.jpg, instagram-post-2.jpg, ...
+        # Nomi a prova di errore (la destinazione è nel nome):
+        #   1 sola immagine -> feed-post.jpg
+        #   2+ immagini     -> feed-carosello-1.jpg, feed-carosello-2.jpg, ...
+        #   storia          -> storia.jpg
         if n_foto == 1:
-            target = out_dir / "instagram-post.jpg"
+            target = out_dir / "feed-post.jpg"
             if not args.force and target.exists() and story_path.exists():
                 print(f"  GIÀ PRESENTE (--force per ri-generare): {art['slug']}",
                       file=sys.stderr)
                 saltati += 1
                 continue
         else:
-            target_1 = out_dir / "instagram-post-1.jpg"
+            target_1 = out_dir / "feed-carosello-1.jpg"
             if not args.force and target_1.exists() and story_path.exists():
                 print(f"  GIÀ PRESENTE carosello (--force per ri-generare): {art['slug']}",
                       file=sys.stderr)
                 saltati += 1
                 continue
 
-        # --force: pulisci eventuali immagini precedenti (incluse vecchie .webp
-        # da prima del 2 maggio 2026 quando IG non accettava il formato)
+        # --force: pulisci immagini precedenti, sia i nomi nuovi sia quelli
+        # vecchi (instagram-post*/instagram-story*, e .webp pre-2 maggio 2026).
         if args.force:
-            for old in out_dir.glob("instagram-post*.webp"):
-                old.unlink()
-            for old in out_dir.glob("instagram-post*.jpg"):
-                old.unlink()
+            for pat in ("feed-*.jpg", "storia.jpg",
+                        "instagram-post*.jpg", "instagram-post*.webp",
+                        "instagram-story*.jpg", "instagram-story*.webp"):
+                for old in out_dir.glob(pat):
+                    old.unlink()
 
         try:
+            # Slide 1 = card-titolo nativa; slide 2+ = foto inline intere.
             if n_foto == 1:
-                crea_post_quadrato(art["carousel"][0], art["title"],
-                                   out_dir / "instagram-post.jpg")
+                crea_slide_titolo(art["title"], art["badge"],
+                                  out_dir / "feed-post.jpg")
             else:
-                for idx, foto in enumerate(art["carousel"], 1):
-                    crea_post_quadrato(foto, art["title"],
-                                       out_dir / f"instagram-post-{idx}.jpg")
+                crea_slide_titolo(art["title"], art["badge"],
+                                  out_dir / "feed-carosello-1.jpg")
+                for idx, foto in enumerate(art["carousel"][1:], 2):
+                    crea_slide_foto(foto, out_dir / f"feed-carosello-{idx}.jpg")
 
-            # Story: sempre 1 sola, usa la cover principale
+            # Story: foto reale (1ª inline) in evidenza se c'è, altrimenti titolo
+            hero = art["carousel"][1] if len(art["carousel"]) > 1 else None
             crea_story_verticale(art["cover"], art["title"], art["description"],
-                                 story_path)
+                                 story_path, art["badge"], hero)
+
+            # README.md della cartella (mappa file -> destinazione)
+            scrivi_readme(out_dir, art, n_foto)
 
             tipo = "singolo" if n_foto == 1 else f"carosello x{n_foto}"
             print(f"  ✓ {art['slug']} ({tipo})", file=sys.stderr)

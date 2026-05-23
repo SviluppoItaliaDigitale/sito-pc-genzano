@@ -407,54 +407,28 @@ def salva_bozze(slug: str, bozze: dict, art: dict, dry_run: bool = False) -> Pat
             # Le immagini sono nella stessa cartella delle bozze (out_dir),
             # comodo da scaricare insieme via mobile. Formato JPG perché
             # Instagram non accetta WebP per upload (web e app mobile).
-            img_post_singola = out_dir / "instagram-post.jpg"
-            carousel = sorted(out_dir.glob("instagram-post-*.jpg"))
-            img_story = out_dir / "instagram-story.jpg"
+            img_post_singola = out_dir / "feed-post.jpg"
+            carousel = sorted(out_dir.glob("feed-carosello-*.jpg"))
+            img_story = out_dir / "storia.jpg"
 
             righe_img = []
             if img_post_singola.exists():
-                righe_img.append(f"📷 Post 1080x1080: {img_post_singola.name} (in questa cartella)")
+                righe_img.append(f"📷 FEED (post singolo, 1080x1350): {img_post_singola.name}")
             elif carousel:
-                righe_img.append(f"📷 CAROSELLO Instagram ({len(carousel)} immagini, "
+                righe_img.append(f"📷 FEED (carosello, {len(carousel)} immagini 1080x1350, "
                                  f"caricale in questo ordine):")
                 for i, c in enumerate(carousel, 1):
                     righe_img.append(f"   {i}. {c.name}")
             if img_story.exists():
-                righe_img.append(f"📷 Story 1080x1920: {img_story.name} (in questa cartella)")
+                righe_img.append(f"📷 STORIA (verticale 1080x1920, 24h): {img_story.name}")
             if righe_img:
                 suffix = "\n\n---\n" + "\n".join(righe_img) + "\n"
         (out_dir / f"{piattaforma}.txt").write_text(
             contenuto + suffix, encoding="utf-8"
         )
 
-    readme = f"""# Bozze social per «{art['title']}»
-
-Generate automaticamente da `scripts/genera-social.py` (motore: Gemini API).
-
-- **Articolo**: {art['url']}
-- **Data**: {art['date']}
-- **Badge**: {art['badge']}
-
-## Come usarle
-
-Apri il file della piattaforma desiderata, copia il testo, incollalo nel
-post composer del social. Per Instagram, le immagini (post 1080x1080,
-carosello, story 1080x1920) sono **in questa stessa cartella** —
-scaricale e caricale nel post composer.
-
-## File
-
-| Piattaforma | File | Note |
-|---|---|---|
-| X (Twitter) | `x.txt` | Max 280 caratteri |
-| Facebook | `facebook.txt` | Anteprima OG da URL |
-| Instagram | `instagram.txt` | + `instagram-post*.webp` + `instagram-story.webp` (qui dentro) |
-| Telegram | `telegram.txt` | Usa Markdown |
-
-> **Nota**: queste sono BOZZE. Rileggi sempre prima di pubblicare.
-> La AI può commettere errori.
-"""
-    (out_dir / "README.md").write_text(readme, encoding="utf-8")
+    # Il README.md della cartella lo scrive scripts/genera-immagini-social.py
+    # (unico proprietario: conosce le immagini create e gira anche nel batch).
     return out_dir
 
 
