@@ -64,7 +64,7 @@ La Protezione Civile non si occupa solo di intervenire quando il danno è fatto.
 
 ### Nelle scelte collettive
 
-La transizione ecologica è anche una **politica di protezione civile**. Più il sistema nel suo complesso riduce le emissioni e rinatura il territorio, meno frequenti saranno gli eventi estremi di cui poi tocca gestire le conseguenze.
+La transizione ecologica è anche una **politica di protezione civile**. Più il sistema nel suo complesso riduce le emissioni e rinaturalizza il territorio, meno frequenti saranno gli eventi estremi di cui poi tocca gestire le conseguenze.
 
 ## Conoscere il territorio è prevenzione
 

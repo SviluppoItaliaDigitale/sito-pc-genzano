@@ -35,7 +35,7 @@ Un **contatto fuori zona** — un parente o un amico che vive in un'altra città
 
 Preparare insieme lo **zaino di emergenza domestico** è un'attività da fare **in famiglia**, non delegata a uno solo. I bambini:
 
-- Partecipano con qualcosa di loro (una torcina, un gioco preferito, un libro).
+- Partecipano con qualcosa di loro (una torcia, un gioco preferito, un libro).
 - Imparano dove si trova lo zaino.
 - Ricordano meglio il senso del kit.
 
