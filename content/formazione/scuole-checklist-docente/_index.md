@@ -55,14 +55,14 @@ Materiali utili:
 
 ### Secondaria di primo grado, 11-14 anni
 
-- Introduci bollettini, fonti ufficiali, fake news e ruolo dei social.
+- Introduci bollettini, fonti ufficiali, notizie false e ruolo dei social.
 - Usa casi concreti, ma non sensazionalistici.
 - Chiarisci la differenza tra rischio, pericolo, allerta ed emergenza.
 
 ### Secondaria di secondo grado, 14-19 anni
 
 - Puoi introdurre normativa, comunicazione di crisi, PCTO, sicurezza nei luoghi di lavoro e cittadinanza attiva.
-- Usa compiti di realtà: messaggi di allerta, analisi di fake news, mini-campagne informative.
+- Usa compiti di realtà: messaggi di allerta, analisi di notizie false, mini-campagne informative.
 
 ## Durante la lezione
 

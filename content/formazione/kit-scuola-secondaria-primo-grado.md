@@ -51,7 +51,7 @@ La **Legge 17 febbraio 2025, n. 21** ha introdotto la **lettera h-ter)** all'art
 **Competenze chiave europee (Raccomandazione UE 2018/C 189/01)**
 - **Competenza alfabetica funzionale**: legge, produce e valuta testi informativi e istruzioni operative
 - **Competenza matematica + base in scienze e tecnologia**: utilizza dati numerici (magnitudo, mm di pioggia, livelli di allerta) e comprende fenomeni naturali
-- **Competenza digitale**: distingue fonti affidabili da fake news, usa correttamente strumenti di monitoraggio online
+- **Competenza digitale**: distingue fonti affidabili da notizie false, usa correttamente strumenti di monitoraggio online
 - **Competenza personale, sociale e imparare a imparare**: gestisce l'incertezza, pianifica comportamenti di autoprotezione
 - **Competenza in materia di cittadinanza**: comprende il ruolo delle istituzioni e del volontariato, esercita responsabilità civica
 
@@ -498,7 +498,7 @@ Schede pronte per la stampa specifiche per la scuola secondaria di primo grado:
 - 👉 [**Ondate di calore**](/formazione/schede-stampabili/ondate-calore-primaria/) — rischio sanitario del caldo: persone vulnerabili, comportamenti corretti, semaforo del caldo (verde/giallo/rosso) e mini quiz. *(scienze, ed. civica, valida anche per Primaria 4-5)*
 - 👉 [**Monossido di carbonio**](/formazione/schede-stampabili/monossido-carbonio-secondaria/) — il pericolo invisibile in case, garage e locali chiusi: prevenzione, usi vietati di barbecue/bracieri, segnali sospetti e azione sicura. Caccia al rischio in casa e mini quiz. *(scienze, tecnologia)*
 - 👉 [**IT-alert e comunicazioni ufficiali**](/formazione/schede-stampabili/it-alert-comunicazioni-secondaria/) — capire il sistema nazionale di allarme pubblico: anatomia di un messaggio (rischio/area/tempo/azione/fonte), esempio realistico, risposta in 140 caratteri, mini quiz. *(ed. civica, cittadinanza digitale, italiano)*
-- 👉 [**Fake news in emergenza**](/formazione/schede-stampabili/fake-news-emergenza-secondaria/) — riconoscere e fermare la disinformazione: regola dei 3 controlli (fonte/data/conferma), checklist "prima di condividere", classifica delle notizie a gruppi e mini quiz. *(ed. civica digitale, italiano)*
+- 👉 [**Notizie false in emergenza**](/formazione/schede-stampabili/fake-news-emergenza-secondaria/) — riconoscere e fermare la disinformazione: regola dei 3 controlli (fonte/data/conferma), checklist "prima di condividere", classifica delle notizie a gruppi e mini quiz. *(ed. civica digitale, italiano)*
 
 **Schede curriculari trasversali** (matematica, italiano, ed. civica, scienze):
 
@@ -518,7 +518,7 @@ Schede pronte per la stampa specifiche per la scuola secondaria di primo grado:
 - 👉 [**Calcolo dei tempi di evacuazione**](/formazione/schede-stampabili/labirinto-evacuazione-secondaria/) — pianta scuola di esempio + dati di norma (DM 3/8/2015): calcolo capacità uscite, tempo evacuazione totale, verifica conformità. Problemi matematici. *(matematica, tecnologia)*
 - 👉 [**Chiamare il 112 — Cosa NON dire**](/formazione/schede-stampabili/chiamo-112-secondaria/) — scenari realistici (incidente bici, bambino al parco, anziano svenuto) con riformulazione di chiamate inefficaci, sistema AML, art. 658 c.p. *(italiano, ed. civica)*
 
-**Case study — le maxi-emergenze italiane con analisi argomentativa (11-13 anni):** schede di analisi storica con cronologia evento, box "Cosa ha funzionato / Cosa NON ha funzionato", domande argomentative e note per il docente con riferimenti normativi (D.Lgs. 1/2018, L. 92/2019, D.M. 183/2024). Stesso evento disponibile in fasce per il curricolo a spirale (Primaria 9-11 → Sec I 11-13 → Sec II 14-19).
+**Casi studio — le maxi-emergenze italiane con analisi argomentativa (11-13 anni):** schede di analisi storica con cronologia evento, box "Cosa ha funzionato / Cosa NON ha funzionato", domande argomentative e note per il docente con riferimenti normativi (D.Lgs. 1/2018, L. 92/2019, D.M. 183/2024). Stesso evento disponibile in fasce per il curricolo a spirale (Primaria 9-11 → Sec I 11-13 → Sec II 14-19).
 
 - 👉 [**Caso Amatrice 2016**](/formazione/schede-stampabili/caso-amatrice-secondaria/) — cronologia 24 agosto/30 ottobre 2016, IT-alert, evacuazioni preventive, ricostruzione lenta. *(storia/scienze/ed. civica)*
 - 👉 [**Caso Friuli 1976**](/formazione/schede-stampabili/caso-friuli-secondaria/) — "dov'era e com'era": modello internazionale di ricostruzione + Legge 225/1992. *(storia/geografia)*
@@ -600,7 +600,7 @@ Storia del suono dell'allerta: la sirena antiaerea della Seconda Guerra Mondiale
 |---|---|---|---|---|
 | **Comprensione del sistema istituzionale** | Non riconosce la struttura del sistema | Elenca le componenti principali | Descrive ruoli e competenze con esempi | Analizza criticamente il principio di sussidiarietà con casi concreti |
 | **Conoscenza dei rischi** | Conoscenza frammentaria | Riconosce i rischi principali | Collega rischi, cause e territorio | Formula ipotesi su scenari futuri (cambiamento climatico) |
-| **Lettura delle fonti** | Usa fonti non ufficiali | Riconosce le fonti ufficiali se indicate | Consulta autonomamente fonti ufficiali e ne valuta l'attendibilità | Confronta più fonti e distingue fake news |
+| **Lettura delle fonti** | Usa fonti non ufficiali | Riconosce le fonti ufficiali se indicate | Consulta autonomamente fonti ufficiali e ne valuta l'attendibilità | Confronta più fonti e distingue notizie false |
 | **Comportamento in emergenza** | Non esegue correttamente le procedure | Esegue le procedure se guidato | Esegue correttamente in autonomia | Aiuta i compagni e riconosce errori nelle procedure osservate |
 | **Pianificazione** | Non produce il piano familiare | Produce un piano essenziale | Produce un piano completo e coerente | Produce un piano completo, lo discute con la famiglia, lo aggiorna |
 | **Comunicazione del rischio** | Produce messaggi allarmistici o imprecisi | Produce messaggi corretti ma poco efficaci | Produce messaggi corretti, chiari, adatti al target | Produce messaggi efficaci e sa progettare una campagna |
@@ -626,7 +626,7 @@ Storia del suono dell'allerta: la sirena antiaerea della Seconda Guerra Mondiale
 
 - Coordinati con il docente di sostegno: il PEI definisce obiettivi personalizzati
 - Privilegia i moduli 1, 4 e 5 (più concreti e operativi)
-- Usa role-play e simulazioni per fissare i concetti
+- Usa gioco di ruolo e simulazioni per fissare i concetti
 - Per il Piano familiare, semplifica la scheda a 3-4 voci essenziali
 
 ### Alunni con disturbo dello spettro autistico

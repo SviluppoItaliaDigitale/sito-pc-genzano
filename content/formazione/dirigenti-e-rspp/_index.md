@@ -39,7 +39,7 @@ Il Gruppo può supportare la scuola con:
 - affiancamento didattico a prove di evacuazione, insieme a RSPP e personale scolastico;
 - materiali didattici gratuiti, schede, giochi e attività inclusive;
 - percorsi PCTO, se compatibili con disponibilità, sicurezza e progetto formativo;
-- iniziative di plesso, open day, giornate della memoria e campagne informative.
+- iniziative di plesso, giornata aperta, giornate della memoria e campagne informative.
 
 ## Cosa non può fare il Gruppo
 

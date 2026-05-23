@@ -30,7 +30,7 @@ Scegli il riquadro che corrisponde al tempo che puoi davvero dedicare. I percors
   <a href="#tempo-2-3ore" class="tempo-card tempo-mezza" role="listitem" aria-label="Da 2 a 3 ore: percorso compatto">
     <div class="tempo-card-tempo"><span class="tempo-numero">2-3</span><span class="tempo-unita">ore</span></div>
     <h3 class="tempo-card-titolo">Percorso compatto</h3>
-    <p class="tempo-card-desc">Un tema affrontato a fondo in 2-3 lezioni: terremoto e piano scuola, rischio meteo, piano familiare, fake news in emergenza.</p>
+    <p class="tempo-card-desc">Un tema affrontato a fondo in 2-3 lezioni: terremoto e piano scuola, rischio meteo, piano familiare, notizie false in emergenza.</p>
     <span class="tempo-card-cta">Vai ai percorsi <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
   </a>
 
@@ -217,7 +217,7 @@ Una buona ora vale più di tre ore distratte. Scegli **un solo tema**, lavoraci 
 - **Decodifica di un bollettino di allerta reale** — Ora 2 del [Percorso 2](#percorso-2). Si lavora su un bollettino del **Centro Funzionale Regionale Lazio** del giorno e si estraggono tipo di rischio, area, livello, finestra temporale. Adatta a primaria IV-V e secondaria I.
 - **Piano di emergenza familiare** — Lezione 1 del [Percorso 4](#percorso-4). Presentazione del modello + compilazione iniziale in classe della scheda [Piano familiare — Primaria](/formazione/schede-stampabili/piano-familiare-primaria/) o [Piano familiare — Secondaria I](/formazione/schede-stampabili/piano-familiare-secondaria/). Il completamento è compito a casa con i genitori.
 - **Vie di fuga e punto di raccolta della classe** — Lezione 2 del [Percorso 3](#percorso-3). Lettura del piano di evacuazione scolastico + scheda [Labirinto evacuazione](/formazione/schede-stampabili/labirinto-evacuazione-primaria/) o equivalente per fascia. Si svolge in classe senza coinvolgere il RSPP (non è una prova di evacuazione, è la sua preparazione concettuale).
-- **Riconoscere una fake news in emergenza** — Ora 1 del [Percorso 5](#percorso-5). Cinque criteri concreti (fonte, data, foto, account, link) applicati a esempi reali. Scheda [Fake news in emergenza — Secondaria I](/formazione/schede-stampabili/fake-news-emergenza-secondaria/). Adatta a secondaria I e II.
+- **Riconoscere una notizia falsa in emergenza** — Ora 1 del [Percorso 5](#percorso-5). Cinque criteri concreti (fonte, data, foto, account, link) applicati a esempi reali. Scheda [Notizie false in emergenza — Secondaria I](/formazione/schede-stampabili/fake-news-emergenza-secondaria/). Adatta a secondaria I e II.
 - **IT-alert: perché suona, come si distingue dal phishing** — Ora 2 del [Percorso 5](#percorso-5). Cos'è il Cell Broadcast, perché non chiede password o dati, come riconoscere un messaggio vero. Scheda [IT-alert e comunicazioni ufficiali — Secondaria I](/formazione/schede-stampabili/it-alert-comunicazioni-secondaria/) + articolo [IT-alert: storia, tecnologia, accessibilità e falsi miti](/comunicazioni/2026-05-19-it-alert-tecnologia-accessibilita-falsi-miti/).
 - **Il volontariato di PC: chi siamo, cosa NON facciamo** — Ora 4 del [Percorso 1](#percorso-1) o sezione cittadinanza della secondaria. I compiti consentiti e quelli vietati al volontariato di PC nelle manifestazioni pubbliche secondo la **Circolare DPC del 6 agosto 2018** (no regolazione del traffico, no palette dirigitraffico, no servizi di polizia stradale: sono delle Forze dell'Ordine e della Polizia Locale). Distinguere bene il proprio ruolo è la prima forma di rispetto delle altre istituzioni.
 
@@ -230,7 +230,7 @@ Il formato più richiesto dai docenti. Affronta un tema in modo strutturato e la
 - [Percorso 2 — Rischio meteo e allerta](#percorso-2) (3 ore). Codici colore, bollettino, simulazione.
 - [Percorso 3 — Terremoto e piano scuola](#percorso-3) (2 ore + prova di evacuazione coordinata con il RSPP della scuola).
 - [Percorso 4 — Piano di emergenza familiare](#percorso-4) (2 ore in classe + compito a casa con i genitori).
-- [Percorso 5 — Fake news e comunicazione di crisi](#percorso-5) (3 ore). Riconoscere disinformazione, IT-alert, post di crisi sui social.
+- [Percorso 5 — Notizie false e comunicazione di crisi](#percorso-5) (3 ore). Riconoscere disinformazione, IT-alert, post di crisi sui social.
 - [Percorso 7 — Rischio idrogeologico e territorio](#percorso-7) (3 ore). Frane, alluvioni, allagamenti urbani, 16 zone di allerta del Lazio.
 - [Percorso 8 — Incendi boschivi e Castelli Romani](#percorso-8) (3 ore). Zona AIB 9, bollettino CFR, comportamenti corretti in estate.
 - [Percorso 10 — Volontariato e cittadinanza attiva](#percorso-10) (3 ore). Storia, sussidiarietà orizzontale, Codice del Terzo Settore.
@@ -282,7 +282,7 @@ Un'unità didattica vera, che attraversa più discipline e può integrare l'inco
 | 2 — [Rischio meteo e allerta](#percorso-2) | Primaria · Secondaria I | 3 ore | Bollettino, codici colore, temporali | L. 92/2019 art. 3 lett. h |
 | 3 — [Terremoto e piano scuola](#percorso-3) | Tutti i gradi | 2 ore + prova | Comportamenti, evacuazione | L. 92/2019 art. 3 lett. h + D.M. 26/08/1992 |
 | 4 — [Piano di emergenza familiare](#percorso-4) | Primaria · Secondaria I | 2 ore + compito | Scheda famiglia, kit emergenza | L. 92/2019 art. 3 lett. h |
-| 5 — [Fake news e comunicazione di crisi](#percorso-5) | Secondaria I-II | 3 ore | Fonti ufficiali, IT-alert | L. 92/2019 (Cittadinanza digitale) |
+| 5 — [Notizie false e comunicazione di crisi](#percorso-5) | Secondaria I-II | 3 ore | Fonti ufficiali, IT-alert | L. 92/2019 (Cittadinanza digitale) |
 | 6 — [Sicurezza nei luoghi di lavoro e PCTO](#percorso-6) | Secondaria II | 4-6 ore | DPI, rischio operativo, L. 21/2025 | L. 92/2019 art. 3 lett. h-ter |
 | 7 — [Rischio idrogeologico e territorio](#percorso-7) | Primaria · Secondaria I | 3 ore | Frane, alluvioni, zone allerta Lazio | L. 92/2019 art. 3 lett. h |
 | 8 — [Incendi boschivi e Castelli Romani](#percorso-8) | Secondaria I-II | 3 ore | Zona AIB 9, bollettino, comportamenti | L. 353/2000 + L.R. Lazio 39/2002 |
@@ -404,7 +404,7 @@ Rubrica fascia, indicatori 2 (comunicazione del rischio), 3 (conoscenza del terr
 **Lezione 1 — Cosa fare durante**
 - Infanzia: storia [La tartaruga saggia](/formazione/schede-stampabili/tartaruga-saggia-infanzia/) + colorazione [Terremoto — Infanzia](/formazione/schede-stampabili/colorare-terremoto-infanzia/).
 - Primaria: [Geografia sismica Italia — Primaria](/formazione/schede-stampabili/geografia-sismica-italia-primaria/) + scheda di rischio sismico per età.
-- Secondaria I-II: confronto magnitudo/intensità + case study (Irpinia 1980, L'Aquila 2009, Amatrice 2016).
+- Secondaria I-II: confronto magnitudo/intensità + caso studio (Irpinia 1980, L'Aquila 2009, Amatrice 2016).
 
 **Lezione 2 — Evacuazione**
 - Labirinto evacuazione: [Primaria](/formazione/schede-stampabili/labirinto-evacuazione-primaria/) · [Secondaria I](/formazione/schede-stampabili/labirinto-evacuazione-secondaria/) · [Secondaria II](/formazione/schede-stampabili/labirinto-evacuazione-secondaria2/).
@@ -488,7 +488,7 @@ Rubrica fascia, indicatori 1 (autoprotezione), 6 (cittadinanza attiva). Il piano
 
 ---
 
-## Percorso 5 — Fake news e comunicazione di crisi {#percorso-5}
+## Percorso 5 — Notizie false e comunicazione di crisi {#percorso-5}
 
 <div class="percorso-meta">
 <span class="meta-badge meta-fascia">Secondaria di I e II grado</span>
@@ -501,7 +501,7 @@ Rubrica fascia, indicatori 1 (autoprotezione), 6 (cittadinanza attiva). Il piano
 
 | Ora | Attività | Materiali |
 |---|---|---|
-| 1 | Cos'è una fake news in emergenza, come si riconosce, perché è pericolosa | Scheda [Fake news in emergenza — Secondaria I](/formazione/schede-stampabili/fake-news-emergenza-secondaria/) |
+| 1 | Cos'è una notizia falsa in emergenza, come si riconosce, perché è pericolosa | Scheda [Notizie false in emergenza — Secondaria I](/formazione/schede-stampabili/fake-news-emergenza-secondaria/) |
 | 2 | IT-alert: come funziona, chi lo invia, come distinguerlo dal phishing | Scheda [IT-alert e comunicazioni ufficiali — Secondaria I](/formazione/schede-stampabili/it-alert-comunicazioni-secondaria/) |
 | 3 | (Sec II) Comunicazione di crisi sui social: alt text, max 2 emoji, livello scritto + colore | Scheda [Comunicazione di crisi — Secondaria II](/formazione/schede-stampabili/comunicazione-crisi-secondaria2/) |
 

@@ -29,7 +29,7 @@ Queste schede sono **pronte da stampare in formato A4** e possono essere usate d
 | 3 | [Colora il campo della Protezione Civile](/formazione/kit-calamita-bambini/03-colora-tenda.html) | Per spiegare in modo semplice tende, punto informazioni, volontari e materiali di emergenza. |
 | 4 | [Colora l’elicottero della Protezione Civile](/formazione/kit-calamita-bambini/04-colora-elicottero.html) | Per familiarizzare con l’elicottero del soccorso e con la piazzola di atterraggio. |
 | 5 | [Colora il cane da soccorso](/formazione/kit-calamita-bambini/05-color-by-number-cane-soccorso.html) | Per conoscere le unità cinofile e svolgere una semplice attività di colorazione libera. |
-| 6 | [Labirinto facile — volontario verso casetta](/formazione/kit-calamita-bambini/06-labirinto-facile.html) | Per concentrazione, orientamento e piccola attività di problem solving. |
+| 6 | [Labirinto facile — volontario verso casetta](/formazione/kit-calamita-bambini/06-labirinto-facile.html) | Per concentrazione, orientamento e piccola attività di risoluzione dei problemi. |
 | 7 | [Mandala della calma](/formazione/kit-calamita-bambini/07-mandala-sole.html) | Per un’attività lenta e ripetitiva con simboli semplici di sicurezza e aiuto. |
 | 8 | [Storia sociale — cosa sta succedendo](/formazione/kit-calamita-bambini/08-storia-sociale-arasaac.html) | Per spiegare un evento con sequenza visiva, utile anche per bambini piccoli, autismo e italiano L2. |
 | 9 | [Carta emozioni con faccine](/formazione/kit-calamita-bambini/09-carta-emozioni-piccoli.html) | Per indicare come ci si sente quando parlare è difficile. |
