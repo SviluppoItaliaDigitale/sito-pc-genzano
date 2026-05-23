@@ -38,6 +38,10 @@ Chi è protetto: braccianti agricoli, addetti al florovivaismo, operai dei canti
 
 Il divieto non ferma l'intera giornata lavorativa. Protegge la fascia oraria in cui caldo, irraggiamento e afa rendono il lavoro fisico al sole più rischioso.
 
+{{< foto src="/images/2026-05-23-ordinanza-caldo-lavoro-locandina-regione-lazio.webp"
+         alt="Locandina dell'ordinanza regionale: stop ai lavori sotto il sole nelle giornate più calde, dalle ore 12:30 alle ore 16:00, fino al 15 settembre. Sullo sfondo operai in un cantiere. Firmato Francesco Rocca, presidente della Regione Lazio."
+         caption="La locandina ufficiale dell'ordinanza della Regione Lazio. (Immagine: profilo social del presidente Francesco Rocca)" >}}
+
 ## Quali settori sono interessati
 
 L'ordinanza riguarda le aree dove si lavora nei seguenti ambiti:
@@ -64,6 +68,14 @@ L'ordinanza non si applica a:
 - Operatori impegnati in interventi di **pubblica utilità, protezione civile o pubblica sicurezza**.
 
 Questo significa che i soccorsi e le attività di protezione civile non si fermano. Ma attenzione: l'esclusione è una necessità operativa, non un'assenza di rischio. Chi opera in emergenza sotto il sole resta esposto al colpo di calore e deve proteggersi con la stessa cura.
+
+## Le parole del presidente Rocca
+
+Nel presentare l'ordinanza, il presidente della Regione Lazio Francesco Rocca ha richiamato la priorità della salute di chi lavora:
+
+> «La tutela della salute e della sicurezza dei lavoratori prima di tutto: anche quest'anno interveniamo con tempestività per proteggere chi svolge attività particolarmente esposte alle alte temperature e ai rischi legati alle ondate di calore. Un atto di responsabilità e di civiltà, che mette al centro la salvaguardia delle persone e la dignità del lavoro.»
+
+Il presidente ha annunciato la convocazione di un **tavolo con organizzazioni sindacali, associazioni di categoria e istituzioni**, per monitorare la misura e, se necessario, rafforzarla con ulteriori interventi.
 
 ## Perché riguarda anche Genzano e i Castelli Romani
 
