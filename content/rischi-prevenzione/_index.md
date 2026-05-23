@@ -23,11 +23,13 @@ Conoscere i rischi del territorio aiuta a proteggere te, la tua famiglia e chi i
 
 Queste pagine aiutano a orientarsi in pochi minuti, anche senza conoscenze tecniche.
 
-- [Rischi principali in parole semplici](/rischi-prevenzione/rischi-in-parole-semplici/) — spiegazione accessibile per bambini, persone con bisogni cognitivi e parlanti italiano L2.
-- [Scuole di Genzano e rischi locali](/rischi-prevenzione/scuole-genzano-rischi-locali/) — riferimenti generali per famiglie e personale scolastico, da integrare con il piano di emergenza del singolo istituto.
-- [Sicurezza sullo scuolabus](/rischi-prevenzione/sicurezza-scuolabus/) — cosa fare in emergenza durante il tragitto: regole per bambini, autista e genitori.
-- [Kit di emergenza economico e progressivo](/rischi-prevenzione/kit-emergenza-economico-progressivo/) — come comporre il kit un pezzo alla volta, senza marchi né prodotti specifici.
-- [Dopo l'emergenza](/rischi-prevenzione/dopo-emergenza/) — rientro sicuro, verifica di gas, luce e acqua, animali e notizie false quando l'evento è passato.
+<div class="consulta-rapida">
+{{< link-card url="/rischi-prevenzione/rischi-in-parole-semplici/" icon="bi-chat-square-text" titolo="Rischi principali in parole semplici" desc="Spiegazione accessibile per bambini, persone con bisogni cognitivi e parlanti italiano L2." >}}
+{{< link-card url="/rischi-prevenzione/scuole-genzano-rischi-locali/" icon="bi-mortarboard" titolo="Scuole di Genzano e rischi locali" desc="Riferimenti per famiglie e personale scolastico, da integrare con il piano di emergenza del singolo istituto." >}}
+{{< link-card url="/rischi-prevenzione/sicurezza-scuolabus/" icon="bi-bus-front" titolo="Sicurezza sullo scuolabus" desc="Cosa fare in emergenza durante il tragitto: regole per bambini, autista e genitori." >}}
+{{< link-card url="/rischi-prevenzione/kit-emergenza-economico-progressivo/" icon="bi-bag-check" titolo="Kit di emergenza economico e progressivo" desc="Come comporre il kit un pezzo alla volta, senza marchi né prodotti specifici." >}}
+{{< link-card url="/rischi-prevenzione/dopo-emergenza/" icon="bi-house-check" titolo="Dopo l'emergenza" desc="Rientro sicuro, verifica di gas, luce e acqua, animali e notizie false quando l'evento è passato." >}}
+</div>
 
 ## Principali rischi
 

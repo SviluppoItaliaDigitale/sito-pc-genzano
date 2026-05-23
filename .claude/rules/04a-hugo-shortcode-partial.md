@@ -96,6 +96,21 @@ CSS scoped sezione **CHI CHIAMARE BOX v1.0** in `custom.css`. In stampa il numer
 
 **Struttura uniforme finale delle pagine rischio**: dopo l'introduzione "Perché è rilevante sul nostro territorio" e gli eventuali "Segnali e situazioni tipiche", ogni pagina ha l'ordine fisso **Cosa fare PRIMA → Cosa fare DURANTE → Cosa fare DOPO → `cosa-non-fare` → `chi-chiamare`**. Modello di riferimento per nuovi rischi che dovessero essere aggiunti in futuro.
 
+## Shortcode `link-card` (griglia di card link nei contenuti)
+
+Card link visibile (icona + titolo + descrizione) per griglie di consultazione dentro le pagine markdown, in alternativa all'elenco puntato anonimo. Nato per la sezione "Pagine di consultazione rapida" dell'hub `/rischi-prevenzione/` (la scheda scuolabus non si trovava in un bullet — maggio 2026).
+
+```go-html-template
+<div class="consulta-rapida">
+{{</* link-card url="/rischi-prevenzione/sicurezza-scuolabus/" icon="bi-bus-front" titolo="Sicurezza sullo scuolabus" desc="Cosa fare in emergenza durante il tragitto." */>}}
+... altre card ...
+</div>
+```
+
+- Parametri: `url` (path interno), `icon` (classe Bootstrap Icons), `titolo`, `desc`. Tutti obbligatori.
+- **Subpath GitHub Pages**: il template fa `.Get "url" | strings.TrimPrefix "/" | relURL` (stesso pattern del render-link hook), così i link funzionano sia su Aruba (root) sia su GitHub Pages (`/sito-pc-genzano/`). Scrivere `url` con leading slash.
+- Le card vanno avvolte in `<div class="consulta-rapida">` (raw HTML nel markdown), senza righe vuote tra gli shortcode. CSS scoped sezione **CARD CONSULTAZIONE RAPIDA v1.0** in `custom.css` (hover lift, focus visibile `#ffbe2e`, `prefers-reduced-motion` + `a11y-pause-anim`, stampa).
+
 ## Render hook tabelle (`_markup/render-table.html`)
 
 Tutte le tabelle Markdown del sito sono rese dal hook `themes/flavour-pcgenzano/layouts/_default/_markup/render-table.html`. Comportamento:
