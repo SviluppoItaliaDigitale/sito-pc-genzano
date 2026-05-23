@@ -1,0 +1,8 @@
+{{- /* Card link per griglie di consultazione (es. hub /rischi-prevenzione/).
+       Uso: {{< link-card url="/percorso/" icon="bi-bus-front" titolo="Titolo" desc="Descrizione" >}}
+       url passato senza leading slash a relURL per compatibilità subpath GitHub Pages. */ -}}
+{{- $url := .Get "url" | strings.TrimPrefix "/" | relURL -}}
+<a class="cr-card" href="{{ $url }}">
+  <span class="cr-icon" aria-hidden="true"><i class="bi {{ .Get "icon" }}"></i></span>
+  <span class="cr-corpo"><span class="cr-titolo">{{ .Get "titolo" }}</span><span class="cr-desc">{{ .Get "desc" }}</span></span>
+</a>

@@ -6378,3 +6378,82 @@ html.a11y-pause-anim .quiz-barra span { transition: none; }
   .scheda-1-min h2, .scheda-1-min-112, .scheda-1-min-url { color: #000; }
 }
 /* fine SCHEDE 1 MINUTO v1.0 */
+
+/* ==========================================================================
+   CARD CONSULTAZIONE RAPIDA v1.0 — griglia link (shortcode link-card)
+   usata su hub /rischi-prevenzione/ § "Pagine di consultazione rapida" (mag 2026)
+   ========================================================================== */
+.consulta-rapida {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 1.6rem;
+}
+.consulta-rapida .cr-card {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  background: #fff;
+  border: 1px solid #d4dce6;
+  border-left: 4px solid #003366;
+  border-radius: 8px;
+  padding: 1rem 1.05rem;
+  text-decoration: none !important;
+  color: inherit;
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.consulta-rapida .cr-card:hover,
+.consulta-rapida .cr-card:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 51, 102, 0.15);
+  border-color: #003366;
+}
+.consulta-rapida .cr-card:focus-visible {
+  outline: 3px solid #ffbe2e;
+  outline-offset: 2px;
+}
+.consulta-rapida .cr-icon {
+  flex-shrink: 0;
+  width: 2.6rem;
+  height: 2.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #e7f0fa;
+  color: #003366;
+  border-radius: 50%;
+  font-size: 1.3rem;
+}
+.consulta-rapida .cr-corpo { display: block; }
+.consulta-rapida .cr-titolo {
+  display: block;
+  font-weight: 700;
+  color: #003366;
+  font-size: 1.02rem;
+  line-height: 1.25;
+  margin-bottom: 0.25rem;
+}
+.consulta-rapida .cr-desc {
+  display: block;
+  font-size: 0.9rem;
+  color: #43484d;
+  line-height: 1.4;
+}
+@media (prefers-reduced-motion: reduce) {
+  .consulta-rapida .cr-card { transition: none; }
+  .consulta-rapida .cr-card:hover,
+  .consulta-rapida .cr-card:focus-visible { transform: none; }
+}
+html.a11y-pause-anim .consulta-rapida .cr-card { transition: none; }
+html.a11y-pause-anim .consulta-rapida .cr-card:hover { transform: none; }
+@media print {
+  .consulta-rapida { display: block; }
+  .consulta-rapida .cr-card {
+    border: 1px solid #999;
+    box-shadow: none;
+    transform: none;
+    margin-bottom: 0.4rem;
+    page-break-inside: avoid;
+  }
+}
+/* fine CARD CONSULTAZIONE RAPIDA v1.0 */
