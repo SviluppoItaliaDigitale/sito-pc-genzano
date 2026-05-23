@@ -20,6 +20,12 @@ Idempotente: sovrascrive sempre i due output con i dati del giorno.
 """
 import json, math, sys, os, urllib.request, datetime, ssl
 
+try:
+    from zoneinfo import ZoneInfo
+    TZ_ROMA = ZoneInfo("Europe/Rome")
+except Exception:  # tzdata assente: fallback orario di sistema
+    TZ_ROMA = None
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 GEO = os.path.join(ROOT, "data", "meteo-lazio-geo.json")
 OUT_SVG = os.path.join(ROOT, "static", "images", "meteo-lazio.svg")
@@ -242,6 +248,7 @@ def build_svg(map_data, card_data, oggi):
            f'{ticks}')
 
     data_lunga = f"{GIORNI_IT[oggi.weekday()]} {oggi.day} {MESI_IT[oggi.month]} {oggi.year}"
+    ora = oggi.strftime("%H:%M")
     svg = (
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W:.0f} {H:.0f}" '
         f'font-family="Trebuchet MS,Verdana,Arial,sans-serif" role="img" '
@@ -251,7 +258,7 @@ def build_svg(map_data, card_data, oggi):
         f'<g transform="translate({PAD},{HEAD})" clip-path="url(#mapclip)">{contesto}{prov_svg}{marker}{labels}{cardg}</g>'
         f'<rect x="0" y="0" width="{W:.0f}" height="{HEAD-2}" fill="#ffffff"/>'
         f'<text x="{W/2:.0f}" y="27" font-size="20" font-weight="700" text-anchor="middle" fill="#003366">Lazio &#8212; oggi: temperatura e cielo</text>'
-        f'<text x="{W/2:.0f}" y="47" font-size="12" text-anchor="middle" fill="#495057">{data_lunga} &#183; massime in &#176;C per provincia &#183; dettaglio Genzano di Roma</text>'
+        f'<text x="{W/2:.0f}" y="47" font-size="12" text-anchor="middle" fill="#495057">{data_lunga}, ore {ora} &#183; massime in &#176;C per provincia &#183; dettaglio Genzano</text>'
         f'<rect x="0" y="{HEAD+Hmap:.0f}" width="{W:.0f}" height="{FOOT+PAD}" fill="#ffffff"/>'
         f'<g>{leg}</g>'
         f'<text x="{W/2:.0f}" y="{H-20:.0f}" font-size="9.5" text-anchor="middle" fill="#495057">Dati: Open-Meteo (modelli ECMWF) &#183; elaborazione grafica Protezione Civile Genzano di Roma</text>'
@@ -282,6 +289,7 @@ def build_card(card_data, now):
     return {
         "aggiornato": now.strftime("%Y-%m-%dT%H:%M"),
         "data_lunga": data_lunga,
+        "aggiornato_label": f"{data_lunga}, ore {now.strftime('%H:%M')}",
         "corrente": {
             "temp": round(cur["temperature_2m"], 1),
             "percepita": round(cur["apparent_temperature"], 1),
@@ -295,7 +303,7 @@ def build_card(card_data, now):
     }
 
 def main():
-    now = datetime.datetime.now()
+    now = datetime.datetime.now(TZ_ROMA)  # ora italiana anche sul runner UTC
     if len(sys.argv) >= 4 and sys.argv[1] == "--from-file":
         map_data = json.load(open(sys.argv[2]))
         card_data = json.load(open(sys.argv[3]))
@@ -303,7 +311,7 @@ def main():
         map_data = fetch_map()
         card_data = fetch_card()
 
-    svg = build_svg(map_data, card_data, now.date())
+    svg = build_svg(map_data, card_data, now)
     os.makedirs(os.path.dirname(OUT_SVG), exist_ok=True)
     open(OUT_SVG, "w", encoding="utf-8").write(svg)
 
