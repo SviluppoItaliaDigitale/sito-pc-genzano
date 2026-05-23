@@ -64,7 +64,7 @@ Il **ricambio generazionale** è prioritario:
 
 ### Come raggiungerli
 - **scuole** superiori: incontri informativi;
-- **università**: banchetti e open day;
+- **università**: banchetti e giornata aperta;
 - **social** con contenuti dedicati;
 - **eventi pubblici** con postazione reclutamento;
 - **passaparola** volontari attuali.

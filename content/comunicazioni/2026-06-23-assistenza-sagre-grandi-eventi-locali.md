@@ -86,7 +86,7 @@ Tutti questi eventi richiedono un **Piano di sicurezza** coordinato.
 ## Preparazione del volontario
 
 Per operare in un evento il volontario riceve:
-- **Briefing operativo** pre-evento (postazioni, procedure, radio).
+- **Riunione informativa operativo** pre-evento (postazioni, procedure, radio).
 - **DPI** adeguati (giubbino alta visibilità obbligatorio).
 - **Turni definiti** con pause.
 - **Punti di rifornimento** acqua e snack.

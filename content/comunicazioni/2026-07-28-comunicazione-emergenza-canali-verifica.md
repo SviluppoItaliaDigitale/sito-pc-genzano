@@ -20,7 +20,7 @@ In **emergenza** circolano molte informazioni, non tutte affidabili. Notizie rap
 
 Durante un'emergenza tipicamente accade che:
 - **Notizie** si moltiplicano rapidamente.
-- **Fake news** si diffondono più delle vere.
+- **Notizie false** si diffondono più delle vere.
 - **Social** amplificano sensazionalismi.
 - **Chat** famigliari girano messaggi non verificati.
 - **Foto** vecchie vengono spacciate per attuali.
@@ -129,9 +129,9 @@ Prima di condividere una notizia:
 6. **Chiedi** al Comune se in dubbio.
 7. **Aspetta** 10 minuti se urgente: spesso smentite arrivano veloci.
 
-Il **tempo** per la verifica è **salvato** in confronto ai danni delle fake news.
+Il **tempo** per la verifica è **salvato** in confronto ai danni delle notizie false.
 
-## Le fake news più comuni in emergenza
+## Le notizie false più comuni in emergenza
 
 Pattern tipici:
 - "**Messaggio** urgente da autorità": spesso falso.
@@ -173,7 +173,7 @@ Preferire **testate riconosciute** a siti clickbait.
 
 ### WhatsApp e Telegram
 - **Messaggi** privati o in gruppi.
-- **Maggiore rischio** di fake news.
+- **Maggiore rischio** di notizie false.
 - **Non condividere** senza verifica.
 
 ## L'uso corretto di WhatsApp
@@ -181,7 +181,7 @@ Preferire **testate riconosciute** a siti clickbait.
 In emergenza WhatsApp può:
 - **Trasmettere** informazioni tra familiari.
 - **Coordinare** gruppi di vicinato.
-- **Portare** fake news.
+- **Portare** notizie false.
 
 ### Regole
 - **Non** inoltrare messaggi "catena".
@@ -216,7 +216,7 @@ In emergenza il Comune:
 - **Emette** comunicati ufficiali.
 - **Usa** sistemi di diffusione (se attivi).
 - **Risponde** a richieste.
-- **Smentisce** fake news.
+- **Smentisce** notizie false.
 - **Coordina** con mass media.
 
 La **comunicazione** è **parte del servizio pubblico**.
@@ -249,7 +249,7 @@ I Comuni italiani stanno progressivamente migliorando.
 Ogni cittadino ha **responsabilità** comunicative:
 - **Verificare** prima di condividere.
 - **Non creare** allarmi.
-- **Smentire** fake news che circolano.
+- **Smentire** notizie false che circolano.
 - **Usare** canali ufficiali.
 - **Informare** con calma chi è in difficoltà.
 - **Collaborare** con autorità.
@@ -270,7 +270,7 @@ Le **scuole** hanno percorsi di media literacy.
 ## L'esperienza italiana recente
 
 Eventi recenti con comunicazione di emergenza:
-- **Covid-19** — mole di informazioni, molte fake news.
+- **Covid-19** — mole di informazioni, molte notizie false.
 - **Alluvioni Emilia-Romagna** — canali ufficiali funzionanti.
 - **IT-alert** — test nazionali 2023-2024.
 - **Terremoti** — INGV come fonte primaria.

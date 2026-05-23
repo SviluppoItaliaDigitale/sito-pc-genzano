@@ -92,7 +92,7 @@ Il sito **Generazioni Connesse** del MIM (Ministero dell'Istruzione) offre mater
 La Protezione Civile tradizionalmente si occupa di **rischi naturali** e **antropici** (incidenti, incendi, ecc.). Oggi entra sempre di più nel novero dei rischi:
 
 - **Blackout digitale** di servizi essenziali.
-- **Disinformazione di massa** durante emergenze reali (fake news che ostacolano le operazioni).
+- **Disinformazione di massa** durante emergenze reali (notizie false che ostacolano le operazioni).
 - **Attacchi mirati** a sistemi di allertamento pubblico.
 - **Cyber-guerra** con impatti sulla popolazione civile.
 
@@ -102,7 +102,7 @@ Il **Dipartimento Nazionale di Protezione Civile** e l'**Agenzia per la Cybersic
 
 Anche quando l'emergenza è "classica" (terremoto, alluvione), il digitale ha un ruolo:
 
-- **Non diffondere fake news**: un messaggio WhatsApp "forwardato mille volte" può rallentare i soccorsi.
+- **Non diffondere notizie false**: un messaggio WhatsApp "forwardato mille volte" può rallentare i soccorsi.
 - **Verifica le fonti**: solo canali istituzionali sono affidabili per informazioni di emergenza.
 - **Conserva la batteria** del telefono: è il tuo collegamento con i soccorsi.
 - **Usa SMS** invece di chiamate quando la rete è satura.
