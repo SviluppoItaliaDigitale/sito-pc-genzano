@@ -6459,7 +6459,9 @@ html.a11y-pause-anim .consulta-rapida .cr-card:hover { transform: none; }
 /* fine CARD CONSULTAZIONE RAPIDA v1.0 */
 
 /* =========================================================================
-   METEO LAZIO v1.0 — cartina province (shortcode meteo-lazio) + riquadro Genzano
+   METEO LAZIO v1.1 — cartina province (shortcode meteo-lazio) + riquadro Genzano
+   v1.1 (2026-05-23): riquadro Genzano arricchito con raffiche di vento, pioggia
+   in mm, indice UV (bande WHO), alba/tramonto. Dati Open-Meteo, card difensiva.
    ========================================================================= */
 /* contenitore unico: cartina e riquadro condividono larghezza e bordi (allineati) */
 .meteo-lazio { max-width: 640px; margin: 1.2rem auto; }
@@ -6493,6 +6495,7 @@ html.a11y-pause-anim .consulta-rapida .cr-card:hover { transform: none; }
   display: flex; gap: 1.4rem; flex-wrap: wrap;
   margin-top: 0.6rem; font-size: 0.92rem; opacity: 0.95;
 }
+.meteo-gz-oggi { gap: 1.1rem; margin-top: 0.4rem; font-size: 0.86rem; opacity: 0.9; }
 .meteo-gz-giorni {
   display: grid; grid-template-columns: repeat(4, 1fr);
   gap: 0.5rem; margin-top: 1rem;
@@ -6506,6 +6509,7 @@ html.a11y-pause-anim .consulta-rapida .cr-card:hover { transform: none; }
 .meteo-gz-g .t { font-size: 0.95rem; font-weight: 700; }
 .meteo-gz-g .t small { font-weight: 400; opacity: 0.8; }
 .meteo-gz-g .p { font-size: 0.74rem; opacity: 0.9; margin-top: 0.15rem; }
+.meteo-gz-g .r { font-size: 0.72rem; opacity: 0.82; margin-top: 0.1rem; }
 .meteo-gz-fonte { font-size: 0.76rem; opacity: 0.82; margin-top: 0.9rem; line-height: 1.45; }
 /* !important: batte .article-body a:not(.btn){color:#003366} che renderebbe i link
    blu scuro illeggibili sul fondo blu del riquadro */

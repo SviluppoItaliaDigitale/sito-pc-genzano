@@ -15,7 +15,13 @@
 
 {{- with $m }}
 {{- $c := .corrente }}
-  <div class="meteo-gz no-gloss" role="img" aria-label="Meteo a Genzano di Roma, {{ .data_lunga }}: ora {{ $c.temp }} gradi, {{ $c.cielo | lower }}, percepita {{ $c.percepita }} gradi, umidità {{ $c.umidita }} per cento, vento {{ $c.vento }} chilometri orari. Previsione dei prossimi giorni a seguire.">
+{{- $oggi := index .giorni 0 }}
+{{- /* descrizione estesa per screen reader: aggiunge i nuovi dati solo se presenti */ -}}
+{{- $extra := "" }}
+{{- with $c.raffiche }}{{ $extra = printf "%s Raffiche di vento fino a %v chilometri orari." $extra . }}{{ end }}
+{{- with $oggi.uv }}{{ $extra = printf "%s Indice UV di oggi %v, %s." $extra . $oggi.uv_label }}{{ end }}
+{{- if and .alba .tramonto }}{{ $extra = printf "%s Alba alle %s, tramonto alle %s." $extra .alba .tramonto }}{{ end }}
+  <div class="meteo-gz no-gloss" role="img" aria-label="Meteo a Genzano di Roma, {{ .data_lunga }}: ora {{ $c.temp }} gradi, {{ $c.cielo | lower }}, percepita {{ $c.percepita }} gradi, umidità {{ $c.umidita }} per cento, vento {{ $c.vento }} chilometri orari.{{ $extra }} Previsione dei prossimi giorni a seguire.">
     <div class="meteo-gz-head">
       <span class="meteo-gz-icona" aria-hidden="true"><svg viewBox="0 0 56 56" width="58" height="58">{{ $c.icona | safeHTML }}</svg></span>
       <div>
@@ -27,14 +33,25 @@
     <div class="meteo-gz-sotto">
       <span><i class="bi bi-droplet-half" aria-hidden="true"></i> Umidità {{ $c.umidita }}%</span>
       <span><i class="bi bi-wind" aria-hidden="true"></i> Vento {{ $c.vento }} km/h</span>
+      {{- with $c.raffiche }}<span><i class="bi bi-wind" aria-hidden="true"></i> Raffiche {{ . }} km/h</span>{{- end }}
     </div>
+    {{- if or $oggi.uv .alba .tramonto }}
+    <div class="meteo-gz-sotto meteo-gz-oggi">
+      {{- with $oggi.uv }}<span><i class="bi bi-brightness-high" aria-hidden="true"></i> UV oggi {{ . }} ({{ $oggi.uv_label }})</span>{{- end }}
+      {{- with .alba }}<span><i class="bi bi-sunrise" aria-hidden="true"></i> Alba {{ . }}</span>{{- end }}
+      {{- with .tramonto }}<span><i class="bi bi-sunset" aria-hidden="true"></i> Tramonto {{ . }}</span>{{- end }}
+    </div>
+    {{- end }}
     <div class="meteo-gz-giorni">
     {{- range .giorni }}
+      {{- $prob := .pioggia }}
+      {{- $mm := .pioggia_mm }}
       <div class="meteo-gz-g">
         <div class="d">{{ .label }}</div>
         <div class="e" aria-hidden="true"><svg viewBox="0 0 32 32" width="42" height="42">{{ .icona | safeHTML }}</svg></div>
         <div class="t">{{ .tmax }}°<small>/{{ .tmin }}°</small></div>
-        {{- if gt .pioggia 20 }}<div class="p"><i class="bi bi-umbrella" aria-hidden="true"></i> {{ .pioggia }}%</div>{{- end }}
+        {{- if or (gt $prob 20) $mm }}<div class="p"><i class="bi bi-umbrella" aria-hidden="true"></i> {{ if gt $prob 20 }}{{ $prob }}%{{ end }}{{ with $mm }}{{ if gt $prob 20 }} · {{ end }}{{ . }} mm{{ end }}</div>{{- end }}
+        {{- with .raffiche }}<div class="r"><i class="bi bi-wind" aria-hidden="true"></i> {{ . }} km/h</div>{{- end }}
       </div>
     {{- end }}
     </div>
