@@ -1,0 +1,48 @@
+{{- /* Shortcode meteo-lazio — cartina del Lazio (aree colorate per provincia) +
+       riquadro meteo di Genzano di Roma. Dati: data/meteo_genzano.json e
+       static/images/meteo-lazio.svg, rigenerati ogni giorno da
+       scripts/genera-meteo-lazio.py (workflow meteo-lazio.yml) da Open-Meteo.
+       Privacy-first: immagine auto-ospitata, nessun cookie di terzi. */ -}}
+{{- $img := "images/meteo-lazio.svg" | relURL -}}
+{{- $m := .Site.Data.meteo_genzano -}}
+
+<div class="meteo-lazio">
+  <figure class="meteo-mappa">
+    <img src="{{ $img }}" loading="lazy"
+         alt="Cartina del Lazio con la temperatura massima e il cielo previsti oggi per ogni provincia: Viterbo, Rieti, Roma, Latina, Frosinone. Genzano di Roma è evidenziata con una stella.">
+    <figcaption>Temperatura e cielo previsti oggi nelle province del Lazio. Elaborazione del Gruppo su dati aperti Open-Meteo (modelli ECMWF).</figcaption>
+  </figure>
+
+{{- with $m }}
+{{- $c := .corrente }}
+  <div class="meteo-gz" role="img" aria-label="Meteo a Genzano di Roma, {{ .data_lunga }}: ora {{ $c.temp }} gradi, {{ $c.cielo | lower }}, percepita {{ $c.percepita }} gradi, umidità {{ $c.umidita }} per cento, vento {{ $c.vento }} chilometri orari. Previsione dei prossimi giorni a seguire.">
+    <div class="meteo-gz-head">
+      <span class="meteo-gz-icona" aria-hidden="true"><svg viewBox="0 0 56 56" width="58" height="58">{{ $c.icona | safeHTML }}</svg></span>
+      <div>
+        <div class="meteo-gz-luogo">Genzano di Roma · adesso</div>
+        <div class="meteo-gz-temp">{{ $c.temp }}°</div>
+        <div class="meteo-gz-cond">{{ $c.cielo }} · percepita {{ $c.percepita }}°</div>
+      </div>
+    </div>
+    <div class="meteo-gz-sotto">
+      <span><i class="bi bi-droplet-half" aria-hidden="true"></i> Umidità {{ $c.umidita }}%</span>
+      <span><i class="bi bi-wind" aria-hidden="true"></i> Vento {{ $c.vento }} km/h</span>
+    </div>
+    <div class="meteo-gz-giorni">
+    {{- range .giorni }}
+      <div class="meteo-gz-g">
+        <div class="d">{{ .label }}</div>
+        <div class="e" aria-hidden="true"><svg viewBox="0 0 32 32" width="42" height="42">{{ .icona | safeHTML }}</svg></div>
+        <div class="t">{{ .tmax }}°<small>/{{ .tmin }}°</small></div>
+        {{- if gt .pioggia 20 }}<div class="p"><i class="bi bi-umbrella" aria-hidden="true"></i> {{ .pioggia }}%</div>{{- end }}
+      </div>
+    {{- end }}
+    </div>
+    <div class="meteo-gz-fonte">
+      Aggiornato {{ .data_lunga }} · Dati: {{ .fonte }} · dato indicativo, per le allerte vale il <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Lazio</a> · in emergenza chiama il <a href="tel:112">112</a>.
+    </div>
+  </div>
+{{- else }}
+  <div class="alert alert-secondary" role="note">Previsione di Genzano momentaneamente non disponibile.</div>
+{{- end }}
+</div>

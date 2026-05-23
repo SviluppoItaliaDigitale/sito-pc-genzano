@@ -6457,3 +6457,57 @@ html.a11y-pause-anim .consulta-rapida .cr-card:hover { transform: none; }
   }
 }
 /* fine CARD CONSULTAZIONE RAPIDA v1.0 */
+
+/* =========================================================================
+   METEO LAZIO v1.0 — cartina province (shortcode meteo-lazio) + riquadro Genzano
+   ========================================================================= */
+.meteo-lazio { margin: 1.2rem 0; }
+.meteo-lazio .meteo-mappa { margin: 0 0 1rem; }
+.meteo-lazio .meteo-mappa img {
+  width: 100%; max-width: 640px; height: auto; display: block;
+  margin: 0 auto; border: 1px solid #d4dce6; border-radius: 10px; background: #fff;
+}
+.meteo-lazio .meteo-mappa figcaption {
+  font-size: 0.82rem; color: #6c757d; font-style: italic;
+  text-align: center; margin-top: 0.4rem;
+}
+/* riquadro Genzano */
+.meteo-gz {
+  background: linear-gradient(135deg, #003366, #0a4f8c); color: #fff;
+  border-radius: 14px; padding: 1.1rem 1.3rem; max-width: 640px; margin: 0 auto;
+}
+.meteo-gz-head { display: flex; align-items: center; gap: 1rem; }
+.meteo-gz-icona { flex: 0 0 auto; line-height: 0; }
+.meteo-gz-luogo { font-size: 0.85rem; opacity: 0.9; }
+.meteo-gz-temp { font-size: 2.6rem; font-weight: 800; line-height: 1.05; }
+.meteo-gz-cond { font-size: 1.02rem; opacity: 0.95; }
+.meteo-gz-sotto {
+  display: flex; gap: 1.4rem; flex-wrap: wrap;
+  margin-top: 0.6rem; font-size: 0.92rem; opacity: 0.95;
+}
+.meteo-gz-giorni {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem; margin-top: 1rem;
+}
+.meteo-gz-g {
+  background: rgba(255, 255, 255, 0.12); border-radius: 8px;
+  padding: 0.5rem 0.3rem; text-align: center;
+}
+.meteo-gz-g .d { font-size: 0.8rem; opacity: 0.9; }
+.meteo-gz-g .e { line-height: 0; margin: 0.2rem 0; }
+.meteo-gz-g .t { font-size: 0.95rem; font-weight: 700; }
+.meteo-gz-g .t small { font-weight: 400; opacity: 0.8; }
+.meteo-gz-g .p { font-size: 0.74rem; opacity: 0.9; margin-top: 0.15rem; }
+.meteo-gz-fonte { font-size: 0.76rem; opacity: 0.82; margin-top: 0.9rem; line-height: 1.45; }
+.meteo-gz-fonte a { color: #ffe08a; }
+@media (max-width: 480px) {
+  .meteo-gz-temp { font-size: 2.1rem; }
+  .meteo-gz-giorni { gap: 0.35rem; }
+  .meteo-gz-g .t { font-size: 0.85rem; }
+}
+@media print {
+  .meteo-gz { background: #fff !important; color: #1a1a1a !important; border: 1px solid #003366; }
+  .meteo-gz-g { background: #f1f4f8 !important; }
+  .meteo-gz-fonte a { color: #0a4f8c; }
+}
+/* fine METEO LAZIO v1.0 */
