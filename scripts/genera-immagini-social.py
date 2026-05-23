@@ -14,9 +14,12 @@ Design (formato 4:5 = 1080x1350, mai ritagliato neppure nella griglia profilo IG
   - Story 1080x1920: stessa estetica, sfondo sfocato + card intera + testo + CTA
 
 Output (accanto ai testi delle bozze, comodo da scaricare insieme via mobile):
-  social-bozze/<slug>/instagram-post.jpg         (1080x1350, 1 sola immagine)
-  social-bozze/<slug>/instagram-post-N.jpg       (carosello, 2-10 immagini)
-  social-bozze/<slug>/instagram-story.jpg        (1080x1920, sempre 1)
+  social-bozze/<slug>/feed-post.jpg          (1080x1350, post singolo per il FEED)
+  social-bozze/<slug>/feed-carosello-N.jpg   (1080x1350, carosello per il FEED)
+  social-bozze/<slug>/storia.jpg             (1080x1920, per le STORIE 24h)
+
+Nomi a prova di errore: "feed-" = post nel feed (Instagram + Facebook),
+"storia" = storia verticale 24h. Il numero del carosello è l'ordine di caricamento.
 
 Formato: JPEG quality 90. Universalmente accettato da Instagram, Facebook,
 X, Telegram, LinkedIn. WebP non funziona per upload su Instagram (web e
@@ -45,6 +48,7 @@ CONTENT_COMUNICAZIONI = ROOT / "content" / "comunicazioni"
 IMAGES_DIR = ROOT / "static" / "images"
 BOZZE_DIR = ROOT / "social-bozze"  # Output: stessa cartella dei testi (instagram.txt ecc.)
 LOGO_PATH = IMAGES_DIR / "logo-pc-genzano.png"
+SITE_BASE = "https://www.protezionecivilegenzano.it"
 
 
 def slug_to_path(slug: str) -> Path:
@@ -423,6 +427,52 @@ def crea_cover_tipografica(art_path: Path) -> Path | None:
     return IMAGES_DIR / f"{art_path.stem}.webp"
 
 
+def scrivi_readme(out_dir: Path, art: dict, n_immagini: int) -> None:
+    """Scrive README.md con la mappa 'a prova di errore' delle immagini + testi.
+    Unico proprietario del README della cartella (genera-social.py non lo scrive)."""
+    if n_immagini <= 1:
+        riga_feed = ("| `feed-post.jpg` | FEED Instagram + Facebook — post con "
+                     "una sola immagine (1080×1350) |")
+    else:
+        nomi = ", ".join(f"`feed-carosello-{i}.jpg`" for i in range(1, n_immagini + 1))
+        riga_feed = (f"| {nomi} | FEED Instagram + Facebook — carosello: "
+                     f"caricale **tutte, in ordine** (1080×1350) |")
+    url = f"{SITE_BASE}/comunicazioni/{art['slug']}/"
+    testo = f"""# Immagini e testi social per «{art['title']}»
+
+- **Articolo**: {url}
+- **Data**: {art.get('date', '')}
+- **Badge**: {art.get('badge', '')}
+
+## Dove va ogni file (a prova di errore)
+
+Regola: **`feed-` = post nel FEED** (Instagram + Facebook), **`storia` = STORIA 24h**.
+Il numero del carosello è l'ordine di caricamento.
+
+| File | Dove si pubblica |
+|---|---|
+{riga_feed}
+| `storia.jpg` | STORIE Instagram + Facebook — verticale, sparisce dopo 24h (1080×1920) |
+| `instagram.txt` | testo per Instagram |
+| `facebook.txt` | testo per Facebook (anteprima OG dall'URL) |
+| `x.txt` | testo per X — max 280 caratteri |
+| `telegram.txt` | testo per Telegram (Markdown) |
+
+I **testi** sono indipendenti per social: puoi pubblicare anche su un solo
+canale usando solo il suo `.txt`. Le **immagini** sono per destinazione (feed o
+storia) e sono condivise tra Instagram e Facebook (stesse misure).
+
+> La stessa immagine (es. una locandina) può comparire sia nel feed sia nella
+> storia: sono due posti diversi, quindi si usano **entrambe**, non sono alternative.
+
+> Per **X** e **Telegram** vanno bene le immagini del feed (1080×1350): Telegram
+> le mostra intere, X le espande al tap. Non servono misure dedicate.
+
+> **Nota**: queste sono BOZZE. Rileggi sempre prima di pubblicare.
+"""
+    (out_dir / "README.md").write_text(testo, encoding="utf-8")
+
+
 def estrai_articolo(path: Path) -> dict | None:
     try:
         testo = path.read_text(encoding="utf-8")
@@ -477,6 +527,7 @@ def estrai_articolo(path: Path) -> dict | None:
         "title": fm.get("title", ""),
         "description": fm.get("description", ""),
         "badge": fm.get("badge", ""),
+        "date": m.group(1),
         "cover": cover_path,
         "carousel": carousel_unique,
     }
@@ -530,49 +581,54 @@ def main() -> int:
 
         n_foto = len(art["carousel"])
         out_dir = slug_dir(art["slug"])
-        story_path = out_dir / "instagram-story.jpg"
+        story_path = out_dir / "storia.jpg"
 
-        # Naming:
-        #   1 sola foto -> instagram-post.jpg
-        #   2+ foto    -> instagram-post-1.jpg, instagram-post-2.jpg, ...
+        # Nomi a prova di errore (la destinazione è nel nome):
+        #   1 sola immagine -> feed-post.jpg
+        #   2+ immagini     -> feed-carosello-1.jpg, feed-carosello-2.jpg, ...
+        #   storia          -> storia.jpg
         if n_foto == 1:
-            target = out_dir / "instagram-post.jpg"
+            target = out_dir / "feed-post.jpg"
             if not args.force and target.exists() and story_path.exists():
                 print(f"  GIÀ PRESENTE (--force per ri-generare): {art['slug']}",
                       file=sys.stderr)
                 saltati += 1
                 continue
         else:
-            target_1 = out_dir / "instagram-post-1.jpg"
+            target_1 = out_dir / "feed-carosello-1.jpg"
             if not args.force and target_1.exists() and story_path.exists():
                 print(f"  GIÀ PRESENTE carosello (--force per ri-generare): {art['slug']}",
                       file=sys.stderr)
                 saltati += 1
                 continue
 
-        # --force: pulisci eventuali immagini precedenti (incluse vecchie .webp
-        # da prima del 2 maggio 2026 quando IG non accettava il formato)
+        # --force: pulisci immagini precedenti, sia i nomi nuovi sia quelli
+        # vecchi (instagram-post*/instagram-story*, e .webp pre-2 maggio 2026).
         if args.force:
-            for old in out_dir.glob("instagram-post*.webp"):
-                old.unlink()
-            for old in out_dir.glob("instagram-post*.jpg"):
-                old.unlink()
+            for pat in ("feed-*.jpg", "storia.jpg",
+                        "instagram-post*.jpg", "instagram-post*.webp",
+                        "instagram-story*.jpg", "instagram-story*.webp"):
+                for old in out_dir.glob(pat):
+                    old.unlink()
 
         try:
             # Slide 1 = card-titolo nativa; slide 2+ = foto inline intere.
             if n_foto == 1:
                 crea_slide_titolo(art["title"], art["badge"],
-                                  out_dir / "instagram-post.jpg")
+                                  out_dir / "feed-post.jpg")
             else:
                 crea_slide_titolo(art["title"], art["badge"],
-                                  out_dir / "instagram-post-1.jpg")
+                                  out_dir / "feed-carosello-1.jpg")
                 for idx, foto in enumerate(art["carousel"][1:], 2):
-                    crea_slide_foto(foto, out_dir / f"instagram-post-{idx}.jpg")
+                    crea_slide_foto(foto, out_dir / f"feed-carosello-{idx}.jpg")
 
             # Story: foto reale (1ª inline) in evidenza se c'è, altrimenti titolo
             hero = art["carousel"][1] if len(art["carousel"]) > 1 else None
             crea_story_verticale(art["cover"], art["title"], art["description"],
                                  story_path, art["badge"], hero)
+
+            # README.md della cartella (mappa file -> destinazione)
+            scrivi_readme(out_dir, art, n_foto)
 
             tipo = "singolo" if n_foto == 1 else f"carosello x{n_foto}"
             print(f"  ✓ {art['slug']} ({tipo})", file=sys.stderr)
