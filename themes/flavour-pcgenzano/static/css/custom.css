@@ -6507,8 +6507,11 @@ html.a11y-pause-anim .consulta-rapida .cr-card:hover { transform: none; }
 .meteo-gz-g .t small { font-weight: 400; opacity: 0.8; }
 .meteo-gz-g .p { font-size: 0.74rem; opacity: 0.9; margin-top: 0.15rem; }
 .meteo-gz-fonte { font-size: 0.76rem; opacity: 0.82; margin-top: 0.9rem; line-height: 1.45; }
-.meteo-gz-fonte a { color: #ffe08a; text-decoration: underline; font-weight: 600; }
-.meteo-gz-fonte a:hover, .meteo-gz-fonte a:focus { color: #fff; text-decoration: underline; }
+/* !important: batte .article-body a:not(.btn){color:#003366} che renderebbe i link
+   blu scuro illeggibili sul fondo blu del riquadro */
+.meteo-gz-fonte a,
+.meteo-gz-fonte a:not(.btn) { color: #ffe08a !important; text-decoration: underline !important; font-weight: 700; }
+.meteo-gz-fonte a:hover, .meteo-gz-fonte a:focus { color: #ffffff !important; text-decoration: underline !important; }
 @media (max-width: 480px) {
   .meteo-gz-temp { font-size: 2.1rem; }
   .meteo-gz-giorni { gap: 0.35rem; }
