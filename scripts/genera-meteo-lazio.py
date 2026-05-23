@@ -220,11 +220,11 @@ def build_svg(map_data, card_data, oggi):
         f'<text x="{bx+bw-12}" y="{by+98:.1f}" font-size="12" text-anchor="end" fill="#e7eef6">{gz_desc}</text>'
     )
 
-    PAD=18; HEAD=64; FOOT=66
+    PAD=18; HEAD=64; FOOT=82
     W = Wmap+2*PAD; H = Hmap+HEAD+FOOT+PAD
 
     # legenda: barra campionata 1°C alla volta (rende identica in ogni renderer)
-    barW = min(440, W-2*PAD-30); barX = (W-barW)/2; barY = H-50; barH = 13
+    barW = min(440, W-2*PAD-30); barX = (W-barW)/2; barY = H-64; barH = 13
     nseg = int(TEMP_MAX-TEMP_MIN)
     segw = barW/nseg
     segs = ""
@@ -254,7 +254,8 @@ def build_svg(map_data, card_data, oggi):
         f'<text x="{W/2:.0f}" y="47" font-size="12" text-anchor="middle" fill="#495057">{data_lunga} &#183; massime in &#176;C per provincia &#183; dettaglio Genzano di Roma</text>'
         f'<rect x="0" y="{HEAD+Hmap:.0f}" width="{W:.0f}" height="{FOOT+PAD}" fill="#ffffff"/>'
         f'<g>{leg}</g>'
-        f'<text x="{W/2:.0f}" y="{H-6:.0f}" font-size="9" text-anchor="middle" fill="#6c757d">Dati: Open-Meteo (modelli ECMWF) &#183; elaborazione Protezione Civile Genzano &#183; dato indicativo, per le allerte vale il Centro Funzionale Lazio</text>'
+        f'<text x="{W/2:.0f}" y="{H-20:.0f}" font-size="9.5" text-anchor="middle" fill="#495057">Dati: Open-Meteo (modelli ECMWF) &#183; elaborazione grafica Protezione Civile Genzano di Roma</text>'
+        f'<text x="{W/2:.0f}" y="{H-7:.0f}" font-size="9" text-anchor="middle" fill="#6c757d">Dato indicativo: per le allerte ufficiali vale il Centro Funzionale Regionale del Lazio</text>'
         f'</svg>'
     )
     return svg
