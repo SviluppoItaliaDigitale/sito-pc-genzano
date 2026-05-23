@@ -228,7 +228,7 @@
           <button type="button" class="schede-pill" data-fascia="primaria" aria-pressed="false">Primaria 6-11</button>
           <button type="button" class="schede-pill" data-fascia="secondaria1" aria-pressed="false">Secondaria I (11-14)</button>
           <button type="button" class="schede-pill" data-fascia="secondaria2" aria-pressed="false">Secondaria II (14-19)</button>
-          <span class="schede-counter" id="schede-counter" aria-live="polite"><strong>127</strong> schede</span>
+          <span class="schede-counter" id="schede-counter" aria-live="polite"><strong>147</strong> schede</span>
         </div>
       </div>
 
@@ -1730,7 +1730,10 @@
     var counter = document.getElementById('schede-counter');
     var noResults = document.getElementById('schede-no-results');
     var cards = document.querySelectorAll('.scheda-card');
-    var totale = cards.length;
+    // "schede vere" = card dentro una sezione con data-fascia: esclude le card
+    // utility "Stampa tutto"/rubriche/checklist, per un conteggio corretto.
+    var totale = 0;
+    cards.forEach(function (c) { if (c.closest('[data-fascia]')) totale++; });
 
     var stato = { fascia: '', cerca: '' };
 
@@ -1750,7 +1753,7 @@
         var visibile = okFascia && okCerca;
 
         col.classList.toggle('schede-hidden', !visibile);
-        if (visibile) visibili++;
+        if (visibile && sezione) visibili++;
       });
 
       // Nascondi gli h2/h3 di sezione che non hanno card visibili
@@ -1779,7 +1782,9 @@
       }
 
       // Aggiorna counter e messaggio "no results"
-      counter.innerHTML = '<strong>' + visibili + '</strong> di ' + totale + ' schede';
+      counter.innerHTML = (!q && !fasciaSel)
+        ? '<strong>' + totale + '</strong> schede'
+        : '<strong>' + visibili + '</strong> di ' + totale + ' schede';
       noResults.style.display = visibili === 0 ? 'block' : 'none';
     }
 
@@ -1815,6 +1820,10 @@
       var pillTarget = document.querySelector('.schede-pill[data-fascia="' + hashMatch[1] + '"]');
       if (pillTarget) pillTarget.click();
     }
+
+    // Esegui al caricamento: contatore corretto e stato iniziale coerente
+    // anche senza interazione dell'utente (prima il numero restava statico).
+    filtra();
   })();
   </script>
 </body>
