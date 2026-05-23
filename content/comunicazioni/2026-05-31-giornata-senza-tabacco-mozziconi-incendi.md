@@ -109,7 +109,7 @@ Sul nostro sito:
 
 - [Prevenzione incendi e pulizia dei terreni](/comunicazioni/2026-04-23-prevenzione-incendi-pulizia-terreni-primavera/).
 - [Rischio incendio boschivo — pagina operativa](/rischi-prevenzione/rischio-incendio/).
-- [Open Day antincendio boschivo Aprilia](/comunicazioni/2026-05-08-open-day-antincendio-boschivo-aprilia/).
+- [Giornata aperta antincendio boschivo Aprilia](/comunicazioni/2026-05-08-open-day-antincendio-boschivo-aprilia/).
 - [Estintori: classi di fuoco e uso corretto](/comunicazioni/2026-05-13-estintori-classi-fuoco-uso-corretto-manutenzione/).
 - [Incendi domestici](/comunicazioni/2026-05-13-incendi-domestici-cucina-elettrodomestici/).
 

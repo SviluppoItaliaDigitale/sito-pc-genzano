@@ -28,8 +28,8 @@ Il **sistema di Protezione Civile del Lazio** ha coordinato la giornata su tre l
 Al loro fianco hanno operato le **Forze dell'Ordine** e la **Polizia Locale** per la sicurezza pubblica.
 
 {{< foto src="/images/2026-05-15-formia-giro-briefing-fepivol.webp"
-         alt="Briefing operativo sotto un gazebo bianco con bandella 'Coordinamento Volontari Protezione Civile FE.PI.VOL.': un coordinatore in giubbino della Protezione Civile V.E.R. Formia (LT) è di spalle al centro, davanti a un tavolino con laptop aperto e fogli. In semicerchio numerosi volontari in divisa di varie associazioni (giubbini alta visibilità giallo/nero, divise rosse, stemmi 'Italia')."
-         caption="Il briefing operativo sotto il gazebo del Coordinamento FE.PI.VOL.: il coordinatore della Protezione Civile V.E.R. Formia (associazione del Coordinamento) illustra le assegnazioni alle altre associazioni prima dell'apertura del dispositivo. Foto: Coordinamento FE.PI.VOL." >}}
+         alt="Riunione informativa operativo sotto un gazebo bianco con bandella 'Coordinamento Volontari Protezione Civile FE.PI.VOL.': un coordinatore in giubbino della Protezione Civile V.E.R. Formia (LT) è di spalle al centro, davanti a un tavolino con laptop aperto e fogli. In semicerchio numerosi volontari in divisa di varie associazioni (giubbini alta visibilità giallo/nero, divise rosse, stemmi 'Italia')."
+         caption="La riunione informativa operativa sotto il gazebo del Coordinamento FE.PI.VOL.: il coordinatore della Protezione Civile V.E.R. Formia (associazione del Coordinamento) illustra le assegnazioni alle altre associazioni prima dell'apertura del dispositivo. Foto: Coordinamento FE.PI.VOL." >}}
 
 ## Il nostro contributo
 

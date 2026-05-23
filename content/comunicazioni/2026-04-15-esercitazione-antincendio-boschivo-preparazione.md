@@ -169,7 +169,7 @@ Sul nostro sito:
 - [Triangolo del fuoco e prevenzione incendi](/comunicazioni/2026-04-13-triangolo-del-fuoco-prevenzione-incendi/).
 - [Prevenzione incendi: pulizia terreni](/comunicazioni/2026-04-23-prevenzione-incendi-pulizia-terreni-primavera/).
 - [Radiocomunicazioni di emergenza](/comunicazioni/2026-05-03-radiocomunicazioni-emergenza-volontari/).
-- [Open Day antincendio boschivo Aprilia](/comunicazioni/2026-05-08-open-day-antincendio-boschivo-aprilia/).
+- [Giornata aperta antincendio boschivo Aprilia](/comunicazioni/2026-05-08-open-day-antincendio-boschivo-aprilia/).
 - [Rischio incendio boschivo — pagina operativa](/rischi-prevenzione/rischio-incendio/).
 
 Fonti istituzionali:

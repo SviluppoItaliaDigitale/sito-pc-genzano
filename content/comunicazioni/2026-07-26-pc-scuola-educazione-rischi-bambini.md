@@ -170,7 +170,7 @@ Sono occasioni per **riflettere** e imparare.
 
 Nella **scuola digitale** nuovi temi:
 - **App IT-alert** (spiegare cosa è).
-- **Fake news** in emergenza.
+- **Notizie false** in emergenza.
 - **Comunicazione** responsabile.
 - **Verifica** delle fonti.
 - **Uso corretto** di social.

@@ -214,7 +214,7 @@ Partecipare come volontario a un grande evento è **esperienza formativa**:
 - **Coordinamento** con altre forze.
 - **Gestione** della folla.
 - **Stress** e comunicazione.
-- **Imprevisti** e problem-solving.
+- **Imprevisti** e risoluzione dei problemi.
 - **Responsabilità**.
 
 Molti volontari sono passati da sagre a grandi attivazioni nazionali.

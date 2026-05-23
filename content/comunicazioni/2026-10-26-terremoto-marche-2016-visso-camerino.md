@@ -50,7 +50,7 @@ La sequenza Centro Italia 2016 è stata uno dei **massimi banchi di prova** del 
 - Furono allestite **tendopoli** e poi **moduli abitativi prefabbricati** (le famose **SAE — Soluzioni Abitative in Emergenza**) per migliaia di famiglie.
 - Il **Soccorso Alpino e Speleologico** lavorò per settimane sui versanti con frane indotte dal sisma.
 - Il **monitoraggio in continuo** delle scosse fu garantito dall'**INGV** con bollettini ogni due ore o anche più frequenti durante i picchi della crisi.
-- I **briefing quotidiani** del Capo Dipartimento (allora **Fabrizio Curcio**, in seguito **Angelo Borrelli**) furono il modello di **comunicazione di crisi** trasparente che è stato poi adottato anche per altre emergenze (compreso il Covid-19 nel 2020).
+- Le **riunioni informative quotidiane** del Capo Dipartimento (allora **Fabrizio Curcio**, in seguito **Angelo Borrelli**) furono il modello di **comunicazione di crisi** trasparente che è stato poi adottato anche per altre emergenze (compreso il Covid-19 nel 2020).
 
 ## La lezione: ricostruzione di lungo periodo e tutela del patrimonio
 

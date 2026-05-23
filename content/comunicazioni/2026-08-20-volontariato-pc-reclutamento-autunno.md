@@ -35,7 +35,7 @@ Le attività di un volontario del Gruppo, in condizioni ordinarie, sono:
 - **presidio** di eventi pubblici comunali e sovracomunali;
 - **esercitazioni** periodiche (mensili o a chiamata);
 - **formazione** continua (radiocomunicazioni, primo soccorso, cartografia, sicurezza);
-- **attività informativa** alla cittadinanza (incontri, campagne nelle scuole, open day).
+- **attività informativa** alla cittadinanza (incontri, campagne nelle scuole, giornata aperta).
 
 In emergenza, i volontari partecipano alle **attivazioni straordinarie** convocate dal Comune, dalla Regione o dal Dipartimento nazionale.
 

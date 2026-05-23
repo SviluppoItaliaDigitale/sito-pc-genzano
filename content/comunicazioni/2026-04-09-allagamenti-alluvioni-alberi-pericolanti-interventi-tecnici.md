@@ -135,7 +135,7 @@ Dopo un sisma o un evento che rende inagibili le abitazioni, si attivano i **cam
 - **rifocillamento** (colazione, pranzo, cena preparati da cucine da campo specializzate)
 - distribuzione di **beni di prima necessità** (coperte, vestiario, prodotti per l'igiene)
 - pulizia delle aree comuni
-- briefing mattutino con il **Capo Campo** per l'assegnazione dei compiti della giornata
+- riunione informativa mattutina con il **Capo Campo** per l'assegnazione dei compiti della giornata
 
 La gestione avviene in **collaborazione con altri gruppi** provenienti dalle colonne mobili regionali, con la supervisione della segreteria di campo che registra presenze, firme dei volontari e necessità logistiche.
 

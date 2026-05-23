@@ -78,7 +78,7 @@ Il principio fondamentale si chiama **"single voice"**: durante una crisi, una s
 
 In Italia, durante le crisi maggiori, queste regole si traducono in strumenti concreti:
 
-- I **briefing quotidiani** del Dipartimento di Protezione Civile nelle emergenze prolungate (esempio: i briefing serali del Capo Dipartimento durante la sequenza sismica del Centro Italia 2016).
+- Le **riunioni informative quotidiane** del Dipartimento di Protezione Civile nelle emergenze prolungate (esempio: le riunioni informative serali del Capo Dipartimento durante la sequenza sismica del Centro Italia 2016).
 - Il **portale ufficiale** [protezionecivile.gov.it](https://www.protezionecivile.gov.it/) e i canali social istituzionali verificati.
 - Il sistema **IT-alert**: invia notifiche dirette ai cellulari nelle aree colpite, senza app, anche con SIM straniera. Attivo dal 2023.
 - I **canali ufficiali** di Prefettura, Comune e Sindaco per le comunicazioni locali.

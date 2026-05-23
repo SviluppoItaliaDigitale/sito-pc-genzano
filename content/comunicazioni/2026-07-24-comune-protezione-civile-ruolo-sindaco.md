@@ -136,7 +136,7 @@ In emergenza il Sindaco deve:
 - **Informare** la popolazione tempestivamente.
 - **Usare** canali istituzionali (sito, social, radio).
 - **Emettere** comunicati chiari e verificati.
-- **Smentire** fake news.
+- **Smentire** notizie false.
 - **Coordinarsi** con mass media locali.
 - **Prevedere** canali accessibili.
 

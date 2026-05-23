@@ -59,7 +59,7 @@ I social sono **bidirezionali**: il cittadino fa domande, e si aspetta risposte.
 
 > **Mai amplificare per smentire.**
 
-Non condividere il post falso (nemmeno in critica). Niente screenshot leggibili. La risposta corretta è una **comunicazione breve** che cita la fonte ufficiale, senza polemica e senza nominare l'autore della fake news. La fonte unica di verità è sempre il **sito istituzionale**.
+Non condividere il post falso (nemmeno in critica). Niente screenshot leggibili. La risposta corretta è una **comunicazione breve** che cita la fonte ufficiale, senza polemica e senza nominare l'autore della notizia falsa. La fonte unica di verità è sempre il **sito istituzionale**.
 
 ## Accessibilità: una regola integrata
 

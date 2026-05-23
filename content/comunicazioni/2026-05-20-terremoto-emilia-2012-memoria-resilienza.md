@@ -61,7 +61,7 @@ La ricostruzione ha richiesto anni. La Regione Emilia-Romagna ha adottato un mod
 - **Tenuta sociale** delle comunità, spesso minacciata dallo svuotamento dei paesi colpiti.
 - **Continuità produttiva** di un tessuto industriale e agroalimentare essenziale.
 
-È stato un lavoro lungo, con critiche e successi, che è entrato nel **know-how nazionale** per la gestione delle ricostruzioni successive.
+È stato un lavoro lungo, con critiche e successi, che è entrato nella **competenza nazionale** per la gestione delle ricostruzioni successive.
 
 ## Cosa insegna al Lazio e ai Castelli Romani
 
