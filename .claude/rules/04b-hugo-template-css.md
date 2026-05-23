@@ -244,35 +244,43 @@ Logica skip in `assistente-fab.html`: `{{ $skipSections := slice "assistente" "e
 
 ## Bozze social automatiche (Gemini API + Pillow)
 
-Sistema completo per generare bozze post social (X, Facebook, Instagram, Telegram) e immagini Instagram (post 1080×1080 + carosello + story 1080×1920) a partire dagli articoli del sito. Usa il **tier gratuito Gemini 2.5 Flash** (1500 req/giorno = costo zero).
+Sistema completo per generare bozze post social (X, Facebook, Instagram, Telegram) e immagini per il **feed** (post/carosello 1080×1350, formato 4:5) e per le **storie** (1080×1920, 9:16) a partire dagli articoli del sito. I testi usano il **tier gratuito Gemini 2.5 Flash** (costo zero); le immagini sono generate da Pillow (nessun costo, nessun limite di quota).
 
 **Componenti operativi:**
-- `scripts/genera-social.py` — motore Python: legge le rules `.claude/rules/02|03|06.md` e le inietta nel system prompt di Gemini, ottiene 4 testi via JSON strutturato, salva in `social-bozze/AAAA/MM/<slug>/`.
-- `scripts/genera-immagini-social.py` — Pillow: template istituzionale per Instagram con auto-rilevamento carosello (estrae le foto inline `{{< foto >}}` dal body).
+- `scripts/genera-social.py` — motore Python: legge le rules `.claude/rules/02|03|06.md` e le inietta nel system prompt di Gemini, ottiene 4 testi via JSON strutturato, salva i `.txt` in `social-bozze/AAAA/MM/<slug>/`.
+- `scripts/genera-immagini-social.py` — Pillow: genera le immagini e il `README.md` della cartella. Font ufficiale **Titillium Web** (design system `.italia`, già nel repo `static/vendor/bootstrap-italia/`), colori istituzionali (#003366 + accento giallo #ffbe2e).
 - `scripts/genera-social.sh` — wrapper bash sequenziale.
 - `.github/workflows/genera-social-bozze.yml` — automazione CI a ogni push articolo.
 
-**Cartelle:**
-- `social-bozze/AAAA/MM/<slug>/` — fuori da Hugo (non deployata sul sito), visibile solo nel repo. Contiene **tutto** il materiale di un articolo per i social: 4 file `.txt` (X/Facebook/Instagram/Telegram), `README.md` operativo, `instagram-post.jpg` (1080×1080, singola foto) o `instagram-post-N.jpg` (carosello 2-10 foto), `instagram-story.jpg` (1080×1920). Comodo da scaricare insieme via mobile.
-- (Storico) Fino al 2 maggio 2026 le immagini Instagram stavano in `static/images-social/<slug>-instagram-*.jpg` con URL pubblico Aruba. Spostate in `social-bozze/AAAA/MM/<slug>/` perché l'URL pubblico non era usato da nessuna parte del sito (no template, no partial, no articolo le linkava): tenere tutto in un posto è molto più comodo dal mobile.
+**5 tipi di slide** (tutti 4:5 tranne la storia 9:16):
+- **Title card** — titolo + badge colorato per categoria + accento. Apre sempre il carosello (o è il post singolo).
+- **Citazione** — una frase forte dell'articolo, dal frontmatter `social_citazione`.
+- **Punti chiave "In sintesi"** — elenco 2-5 punti, dal frontmatter `social_punti`.
+- **Foto** — immagine inline `{{< foto >}}` mostrata **intera, mai tagliata** (fit-contain) su sfondo sfocato di se stessa, card con angoli arrotondati + ombra.
+- **Storia** (9:16) — foto reale in evidenza (o titolo) + descrizione + CTA "Leggi sul sito".
+
+Ordine carosello: **title card → citazione → punti → foto** (max 10 slide). Citazione e punti compaiono **solo se** i campi `social_citazione`/`social_punti` sono compilati nel frontmatter. Per CLAUDE.md § "Automatismo totale", Claude li compila **dal testo dell'articolo** quando lo scrive (mai inventati); il gate `pc-article-reviewer` ne verifica presenza e fedeltà. Le versioni "facile" (A2) sono escluse dalla generazione social.
+
+**Cartelle e nomi file (a prova di errore — la destinazione è nel nome):**
+- `social-bozze/AAAA/MM/<slug>/` — fuori da Hugo (non deployata), solo nel repo. Contiene tutto il materiale social di un articolo:
+  - 4 file `.txt` (X/Facebook/Instagram/Telegram) — testi indipendenti per canale (puoi pubblicare anche su un solo social).
+  - `feed-post.jpg` (post con una sola immagine) **oppure** `feed-carosello-1.jpg … feed-carosello-N.jpg` (carosello) → **FEED** (Instagram + Facebook).
+  - `storia.jpg` → **STORIE** (Instagram + Facebook).
+  - `README.md` — mappa "dove va ogni file" (scritto da `genera-immagini-social.py`).
+- Per **X** e **Telegram** vanno bene le immagini del feed (Telegram le mostra intere, X le espande al tap): nessuna misura dedicata.
+- (Storico) Fino al 2 maggio 2026 le immagini stavano in `static/images-social/` con URL pubblico Aruba, poi spostate in `social-bozze/`. Fino al 23 maggio 2026 i nomi erano `instagram-post*.jpg`/`instagram-story.jpg` e il formato 1080×1080 con font Liberation Sans: migrati a `feed-*`/`storia`, formato 4:5 (1080×1350) e font Titillium Web.
 
 **Setup chiave:**
 - Locale: `export GEMINI_API_KEY="..."` in `~/.bashrc` (chiave gratuita da `aistudio.google.com/apikey`).
 - CI: GitHub Secret `GEMINI_API_KEY`.
 
-**3 scenari auto-rilevati** (zero configurazione frontmatter aggiuntiva):
-
-| Scenario | `image:` | Foto inline `{{< foto >}}` | Output IG |
-|---|---|---|---|
-| A | vuoto | assenti | cover tipografica + story |
-| B | path | assenti | post + story |
-| C | path | 2-9 nel body | carosello (max 10) + story |
+Le foto utente vanno **sempre** inline nel corpo come `{{< foto >}}` (mai nel banner): lo script le rileva e le mette in carosello automaticamente. Se l'articolo non ha foto inline, il carosello = title card (+ citazione/punti se presenti).
 
 **Regole della scrittura sociale**: caricate dinamicamente dalle rules `02-content-design-pa.md` (linguaggio AGID, hashtag stabili, struttura post crisi), `03-accessibility.md` (a11y social: alt text, max 2 emoji, no Unicode decorativi), `06-protezione-civile-scientifica.md` (codici colore, struttura 6 punti per allerte).
 
 **Cosa NON fa** (intenzionalmente):
 - Non pubblica automaticamente sui social (le bozze sono per copia/incolla manuale).
-- Non aggiunge informazioni che non sono nell'articolo.
+- Non aggiunge informazioni che non sono nell'articolo (testo delle slide preso dall'articolo, mai inventato).
 - Non sostituisce la rilettura umana.
 
 **Documentazione operativa completa** in `scripts/README-social.md`. **Workflow mobile-first** in `MANUALE-MOBILE.md` (root).

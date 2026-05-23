@@ -474,7 +474,7 @@ Tutti i workflow di manutenzione girano **ogni lunedì** (primo giorno della set
 | `update-bootstrap-italia.yml` | Lunedì 06:00 UTC | Aggiornamenti Bootstrap Italia |
 | `audit-sito.yml` | Lunedì 09:00 UTC | **Audit completo (40 sezioni)**: contenuti, codice/template, governance docs, audit aggiuntivo, link critici normativa, **audit grammaticale italiano** (apostrofi finti, accenti mancanti, errori italiani tipici via `audit-grammatica-italiana.py`). Fusi `coerenza-docs.yml` + `check-normativa-links.yml` il 26 aprile 2026, sezione 40 grammaticale aggiunta il 29 aprile 2026. |
 | `check-links-sito.yml` | Lunedì 10:00 UTC | Crawl completo lychee: tutti i link (interni + esterni) |
-| `genera-social-bozze.yml` | Push su `content/comunicazioni/**.md` o `.claude/rules/**.md` (o `workflow_dispatch`) | Genera bozze post X/Facebook/Instagram/Telegram via Gemini API + immagini Instagram (post 1080x1080 + carosello + story 1080x1920). Output **tutto insieme** in `social-bozze/<slug>/` (testi e immagini). Tier gratuito Gemini, costo zero. |
+| `genera-social-bozze.yml` | Push su `content/comunicazioni/**.md` o `.claude/rules/**.md` (o `workflow_dispatch`) | Genera bozze post X/Facebook/Instagram/Telegram via Gemini API + immagini feed (1080x1350, 4:5) e storia (1080x1920) via Pillow, font Titillium Web. Output **tutto insieme** in `social-bozze/<slug>/` (`feed-*.jpg` + `storia.jpg` + 4 `.txt`). Tier gratuito Gemini, costo zero. |
 | `indexnow.yml` | Push su `content/comunicazioni/**.md` | Avvisa Bing/Yandex (IndexNow) degli articoli nuovi o aggiornati: attende il deploy e invia gli URL via `scripts/indexnow-ping.py`. Notizie indicizzate in minuti invece che in giorni. Ping non bloccante. |
 | `scarica-foto-automatica.yml` | Push su `content/comunicazioni/**` o sui suoi script foto | Step 2 attivo: cover tipografica auto col titolo per articoli con `image:""` (`auto-cover-mancanti.py` + protezione regenerate-missing). **Step 1 marker `# TODO-foto-*` deprecato** dal 3 maggio 2026 (CLAUDE.md punto 9: il marker veniva reso da Hugo come H1 in produzione + sovrascriveva il banner col foto, contro la regola "BANNER COL TITOLO INTOCCABILE"). Per inserire foto da fonti ufficiali nel corpo articolo, usare l'agent `pc-image-fixer` (procedura WebFetch + curl + applica-fascia + shortcode `{{< foto >}}` inline). |
 
@@ -511,7 +511,7 @@ Specifiche complete in [CLAUDE.md](CLAUDE.md) e nelle 11 regole `.claude/rules/`
 9. Verifica con `hugo server` in locale.
 10. Esegui la checklist pre-pubblicazione (Parte 5).
 11. `git add . && git commit -m "Nuovo articolo: titolo" && git push`.
-12. Al push automaticamente: deploy + bozze social generate (Gemini API) + immagini Instagram. Risultato **tutto insieme** in `social-bozze/<slug>/` (4 .txt + `instagram-post*.jpg` + `instagram-story.jpg`) entro 5–10 minuti.
+12. Al push automaticamente: deploy + bozze social generate (Gemini API) + immagini feed/storia (Pillow, Titillium Web). Risultato **tutto insieme** in `social-bozze/<slug>/` (4 .txt + `feed-*.jpg` + `storia.jpg`) entro 5–10 minuti.
 13. Controlla il deploy nella tab Actions.
 
 ---

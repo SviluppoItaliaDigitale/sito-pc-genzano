@@ -360,12 +360,15 @@ insieme.
 Nel file `instagram.txt` in fondo trovi un riferimento del tipo:
 
 ```
-📷 CAROSELLO Instagram (3 immagini, caricale in questo ordine):
-   1. instagram-post-1.jpg
-   2. instagram-post-2.jpg
-   3. instagram-post-3.jpg
-📷 Story 1080x1920: instagram-story.jpg (in questa cartella)
+📷 FEED (carosello, 3 immagini 1080x1350, caricale in questo ordine):
+   1. feed-carosello-1.jpg
+   2. feed-carosello-2.jpg
+   3. feed-carosello-3.jpg
+📷 STORIA (verticale 1080x1920, 24h): storia.jpg
 ```
+
+> I nomi dicono la destinazione: `feed-*` va nel feed (Instagram + Facebook),
+> `storia.jpg` va nelle storie. Un solo post → `feed-post.jpg`.
 
 Le trovi tutte nella stessa cartella su GitHub:
 
@@ -406,7 +409,7 @@ https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/tree/main/social-bozze
 
 1. Apri l'app Instagram
 2. Nuovo post
-3. Seleziona l'immagine `<slug>-instagram-post.jpg` dalla galleria
+3. Seleziona l'immagine `feed-post.jpg` dalla galleria
    (l'hai scaricata al passo 4)
 4. Caption: incolla il testo da `instagram.txt`
 5. Pubblica
@@ -417,14 +420,15 @@ https://github.com/SviluppoItaliaDigitale/sito-pc-genzano/tree/main/social-bozze
 2. Nuovo post
 3. Tocca l'icona del **carosello** (in alto a destra, due quadrati
    sovrapposti)
-4. Seleziona le immagini **NEL GIUSTO ORDINE** (1, 2, 3, ...)
+4. Seleziona le immagini `feed-carosello-1.jpg`, `feed-carosello-2.jpg`, …
+   **NEL GIUSTO ORDINE** (1, 2, 3, ...)
 5. Caption: incolla il testo da `instagram.txt`
 6. Pubblica
 
 #### Story
 
 1. Apri Instagram → Storie
-2. Sulla galleria seleziona `<slug>-instagram-story.jpg`
+2. Sulla galleria seleziona `storia.jpg`
 3. (Facoltativo) Aggiungi adesivi/sticker — la story ha già il
    template con titolo e link
 4. Pubblica

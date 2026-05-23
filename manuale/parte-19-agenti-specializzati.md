@@ -139,7 +139,7 @@ prossimo aggiornamento), verifica accessibilità social (alt text, max 2
 emoji, niente Unicode decorativi, niente maiuscole continue, niente solo
 colore per allerta), verifica hashtag policy del Gruppo (no virali, no
 generici svuotati), verifica formato JPG delle immagini Instagram (no WebP
-che IG rifiuta), verifica peso file e dimensioni 1080×1080 / 1080×1920.
+che IG rifiuta), verifica peso file e dimensioni feed 1080×1350 (4:5) / storia 1080×1920 (9:16).
 
 **Cosa NON fa**: non pubblica mai sui social. La pubblicazione è sempre
 manuale, è una scelta del Gruppo.
