@@ -168,6 +168,19 @@
       padding-left: 0.6rem;
     }
     .schede-counter strong { color: #003366; }
+    .schede-indice-fascia {
+      display: flex; flex-wrap: wrap; gap: 0.4rem 0.5rem; align-items: center;
+      background: #faf5ff; border: 1px solid #e9d5ff; border-left: 4px solid #c026d3;
+      border-radius: 8px; padding: 0.7rem 0.9rem; margin: 0 0 1.2rem;
+    }
+    .schede-indice-fascia .idx-label { font-weight: 700; color: #86198f; font-size: 0.9rem; margin-right: 0.3rem; }
+    .schede-indice-fascia a {
+      font-size: 0.86rem; text-decoration: none; color: #003366;
+      background: #fff; border: 1px solid #e9d5ff; border-radius: 999px; padding: 0.2rem 0.65rem;
+    }
+    .schede-indice-fascia a:hover, .schede-indice-fascia a:focus { background: #f3e8ff; text-decoration: underline; }
+    .schede-indice-fascia.schede-hidden { display: none; }
+    @media print { .schede-indice-fascia { display: none; } }
     .schede-no-results {
       display: none;
       padding: 1.5rem;
@@ -373,14 +386,28 @@
 
       <h2 class="fascia-titolo h4" data-fascia="infanzia">
         <span class="fascia-icona inf"><i class="bi bi-palette" aria-hidden="true"></i></span>
-        Schede da colorare — Infanzia 4-6 anni (29 schede)
+        Schede da colorare — Infanzia 4-6 anni (24 schede)
       </h2>
       <p class="text-muted mb-3" style="font-size: 0.95rem;">
         schede in stampatello con illustrazioni line-art da colorare con matite o pennarelli.
         Ogni scheda copre un tema in 6 passi facili. Organizzate per <strong>macro-area didattica</strong> per facilitare la progettazione del docente.
       </p>
 
-      <h3 class="h6 mt-4 mb-2 text-muted" data-fascia="infanzia" style="font-weight:600; letter-spacing:0.02em; border-left:3px solid #c026d3; padding-left:0.5rem;">🌍 Conoscere e prepararsi (4)</h3>
+      <nav class="schede-indice-fascia" data-fascia="infanzia" aria-label="Indice delle sezioni per la Scuola dell'Infanzia">
+        <span class="idx-label">Vai a una sezione dell'Infanzia:</span>
+        <a href="#inf-conoscere">🌍 Conoscere e prepararsi</a>
+        <a href="#inf-agire">🌋 Agire nei rischi</a>
+        <a href="#inf-soccorso">⛑️ Soccorso ed emergenze</a>
+        <a href="#inf-scuola">🏫 Sicurezza scolastica</a>
+        <a href="#inf-chi-aiuta">🤝 Chi aiuta</a>
+        <a href="#inf-valori">❤️ Valori e abilità</a>
+        <a href="#inf-leggere-scrivere">✏️ Leggere e scrivere</a>
+        <a href="#inf-numeri-forme">🔢 Numeri e forme</a>
+        <a href="#inf-giochi">🎮 Giochi e sequenze</a>
+        <a href="#inf-colorare-storie">🎨 Colorare e storie</a>
+      </nav>
+
+      <h3 class="h6 mt-4 mb-2 text-muted" data-fascia="infanzia" id="inf-conoscere" style="font-weight:600; letter-spacing:0.02em; border-left:3px solid #c026d3; padding-left:0.5rem;">🌍 Conoscere e prepararsi (4)</h3>
       <div class="row g-3 mb-2" data-fascia="infanzia">
         <div class="col-md-6 col-lg-4">
                   <div class="scheda-card">
@@ -424,7 +451,7 @@
                 </div>
       </div>
 
-      <h3 class="h6 mt-4 mb-2 text-muted" data-fascia="infanzia" style="font-weight:600; letter-spacing:0.02em; border-left:3px solid #c026d3; padding-left:0.5rem;">🌋 Agire nei rischi naturali (8)</h3>
+      <h3 class="h6 mt-4 mb-2 text-muted" data-fascia="infanzia" id="inf-agire" style="font-weight:600; letter-spacing:0.02em; border-left:3px solid #c026d3; padding-left:0.5rem;">🌋 Agire nei rischi naturali (8)</h3>
       <div class="row g-3 mb-2" data-fascia="infanzia">
         <div class="col-md-6 col-lg-4">
                   <div class="scheda-card">
@@ -508,7 +535,7 @@
                 </div>
       </div>
 
-      <h3 class="h6 mt-4 mb-2 text-muted" data-fascia="infanzia" style="font-weight:600; letter-spacing:0.02em; border-left:3px solid #c026d3; padding-left:0.5rem;">⛑️ Soccorso ed emergenze (5)</h3>
+      <h3 class="h6 mt-4 mb-2 text-muted" data-fascia="infanzia" id="inf-soccorso" style="font-weight:600; letter-spacing:0.02em; border-left:3px solid #c026d3; padding-left:0.5rem;">⛑️ Soccorso ed emergenze (5)</h3>
       <div class="row g-3 mb-2" data-fascia="infanzia">
         <div class="col-md-6 col-lg-4">
                   <div class="scheda-card">
@@ -562,7 +589,7 @@
                 </div>
       </div>
 
-      <h3 class="h6 mt-4 mb-2 text-muted" data-fascia="infanzia" style="font-weight:600; letter-spacing:0.02em; border-left:3px solid #c026d3; padding-left:0.5rem;">🏫 Sicurezza scolastica (2)</h3>
+      <h3 class="h6 mt-4 mb-2 text-muted" data-fascia="infanzia" id="inf-scuola" style="font-weight:600; letter-spacing:0.02em; border-left:3px solid #c026d3; padding-left:0.5rem;">🏫 Sicurezza scolastica (2)</h3>
       <div class="row g-3 mb-2" data-fascia="infanzia">
         <div class="col-md-6 col-lg-4">
                   <div class="scheda-card">
@@ -586,7 +613,7 @@
                 </div>
       </div>
 
-      <h3 class="h6 mt-4 mb-2 text-muted" data-fascia="infanzia" style="font-weight:600; letter-spacing:0.02em; border-left:3px solid #c026d3; padding-left:0.5rem;">🤝 Chi aiuta — i soccorritori (2)</h3>
+      <h3 class="h6 mt-4 mb-2 text-muted" data-fascia="infanzia" id="inf-chi-aiuta" style="font-weight:600; letter-spacing:0.02em; border-left:3px solid #c026d3; padding-left:0.5rem;">🤝 Chi aiuta — i soccorritori (2)</h3>
       <div class="row g-3 mb-2" data-fascia="infanzia">
         <div class="col-md-6 col-lg-4">
                   <div class="scheda-card">
@@ -610,7 +637,7 @@
                 </div>
       </div>
 
-      <h3 class="h6 mt-4 mb-2 text-muted" data-fascia="infanzia" style="font-weight:600; letter-spacing:0.02em; border-left:3px solid #c026d3; padding-left:0.5rem;">❤️ Valori e abilità del volontario (3)</h3>
+      <h3 class="h6 mt-4 mb-2 text-muted" data-fascia="infanzia" id="inf-valori" style="font-weight:600; letter-spacing:0.02em; border-left:3px solid #c026d3; padding-left:0.5rem;">❤️ Valori e abilità del volontario (3)</h3>
       <div class="row g-3 mb-2" data-fascia="infanzia">
         <div class="col-md-6 col-lg-4">
                   <div class="scheda-card">
@@ -646,150 +673,11 @@
 
       <h2 class="fascia-titolo h4 mt-5" data-fascia="infanzia">
         <span class="fascia-icona inf"><i class="bi bi-stars" aria-hidden="true"></i></span>
-        Scuola dell'Infanzia (3-6 anni) — Altre attività
+        Scuola dell'Infanzia (3-6 anni) — Leggere, scrivere, contare e giocare (20 schede)
       </h2>
+            <h3 class="h6 mt-4 mb-2 text-muted" data-fascia="infanzia" id="inf-leggere-scrivere" style="font-weight:600; letter-spacing:0.02em; border-left:3px solid #c026d3; padding-left:0.5rem;">✏️ Imparare a leggere e scrivere (5)</h3>
       <div class="row g-3 mb-2" data-fascia="infanzia">
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon infanzia"><i class="bi bi-emoji-smile" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Infanzia · 4-6 anni</span>
-            <h3>Vero o Falso con le Faccine</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>15-20 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
-            <p class="scheda-desc">8 affermazioni con due faccine da colorare: 😊 se vero, 😟 se falso. Per i comportamenti corretti in caso di terremoto, allarme e quando chiamare il 112.</p>
-            <a href="vero-falso-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon infanzia"><i class="bi bi-signpost" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Infanzia · 4-6 anni</span>
-            <h3>Il Labirinto dell'Uscita</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>10-15 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
-            <p class="scheda-desc">Il bambino traccia il percorso dal punto di partenza 🧒 al cartello uscita 🚪, evitando muri, zaini e fuoco. Per imparare a non correre.</p>
-            <a href="labirinto-uscita/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon infanzia"><i class="bi bi-link-45deg" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Infanzia · 4-6 anni</span>
-            <h3>Trova le Coppie</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>15-20 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
-            <p class="scheda-desc">8 coppie di immagini da collegare con una linea: oggetto-azione, pericolo-cosa fare. Sviluppa l'associazione visiva.</p>
-            <a href="trova-coppie-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon infanzia">🐢</div>
-            <span class="scheda-fascia">Infanzia · 3-6 anni</span>
-            <h3>Le Regole della Tartaruga Saggia</h3>
-            <div class="scheda-meta"><span><i class="bi bi-card-checklist me-1" aria-hidden="true"></i>poster da colorare</span></div>
-            <p class="scheda-desc">Poster con le 4 regole della Tartaruga in caso di terremoto, una filastrocca da memorizzare e cosa NON fare. Da appendere in classe.</p>
-            <a href="tartaruga-saggia-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon infanzia"><i class="bi bi-fonts" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Infanzia · 5-6 anni · letto-scrittura</span>
-            <h3>ABC delle Vocali — Le parole che salvano</h3>
-            <div class="scheda-meta"><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita, pennarelli</span><span><i class="bi bi-clock me-1" aria-hidden="true"></i>15-20 min</span></div>
-            <p class="scheda-desc">Le 5 vocali abbinate a parole della Protezione Civile (A→AIUTO, E→ELMETTO, I→IDRANTE, O→OSPEDALE, U→USCITA). Lettera da ricalcare, parola da ricopiare, esercizio finale di riconoscimento.</p>
-            <a href="abc-vocali-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon infanzia"><i class="bi bi-alphabet" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Infanzia 5-6 / 1ª · letto-scrittura</span>
-            <h3>L'Alfabetiere della Sicurezza</h3>
-            <div class="scheda-meta"><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita, colori</span><span><i class="bi bi-clock me-1" aria-hidden="true"></i>20-30 min</span></div>
-            <p class="scheda-desc">L'alfabeto completo dalla A alla Z: ogni lettera abbinata a una parola della Protezione Civile (A→ACQUA, C→CASCO, P→POMPIERE…) con la lettera da ricalcare. Completa l'ABC delle Vocali con tutte le 21 lettere.</p>
-            <a href="alfabetiere-pc-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon infanzia"><i class="bi bi-circle" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Infanzia · 5-6 anni · letto-scrittura</span>
-            <h3>Riconosci l'Iniziale</h3>
-            <div class="scheda-meta"><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span><span><i class="bi bi-clock me-1" aria-hidden="true"></i>15-20 min</span></div>
-            <p class="scheda-desc">Per ogni immagine il bambino cerchia la lettera con cui inizia la parola, scelta fra tre opzioni. 10 parole della Protezione Civile (CASCO, SIRENA, FUOCO, RADIO, MAPPA, USCITA…).</p>
-            <a href="riconosci-iniziale-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon infanzia"><i class="bi bi-link-45deg" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Infanzia / Prim. 1ª · 5-7 anni · letto-scrittura</span>
-            <h3>Collega la Parola all'Immagine</h3>
-            <div class="scheda-meta"><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span><span><i class="bi bi-clock me-1" aria-hidden="true"></i>15 min</span></div>
-            <p class="scheda-desc">8 parole in stampatello da collegare con una linea alle 8 immagini in colonna a destra (in ordine sparso). Esercizio di lettura globale e associazione.</p>
-            <a href="collega-parola-immagine-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon infanzia"><i class="bi bi-123" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Infanzia · 5-6 anni · numeri</span>
-            <h3>I Numeri della Protezione Civile</h3>
-            <div class="scheda-meta"><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita, pennarelli</span><span><i class="bi bi-clock me-1" aria-hidden="true"></i>15-20 min</span></div>
-            <p class="scheda-desc">Numeri da 1 a 5 abbinati agli oggetti della PC: 1 telefono, 2 caschi, 3 sirene, 4 torce, 5 volontari. Cifra da ricalcare e riscrivere. In fondo, il 112 in rosso.</p>
-            <a href="numeri-pc-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon infanzia"><i class="bi bi-droplet-fill" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Infanzia · 5-6 anni · scienze</span>
-            <h3>Il Ciclo dell'Acqua</h3>
-            <div class="scheda-meta"><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita, pennarelli</span><span><i class="bi bi-clock me-1" aria-hidden="true"></i>20 min</span></div>
-            <p class="scheda-desc">4 vignette in ordine sparso (sole/vapore/nuvola/pioggia) da numerare. Capire da dove arriva la pioggia. Collegamento al rischio idrogeologico dei Castelli.</p>
-            <a href="ciclo-acqua-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon infanzia">🔥</div>
-            <span class="scheda-fascia">Infanzia · 5-6 anni · scienze</span>
-            <h3>Cosa Serve al Fuoco — Il Triangolo</h3>
-            <div class="scheda-meta"><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita, pennarelli rossi</span><span><i class="bi bi-clock me-1" aria-hidden="true"></i>20 min</span></div>
-            <p class="scheda-desc">I 3 elementi del fuoco (legna, aria, calore) presentati come un triangolo. Esercizio: cosa toglie il pompiere quando spegne con l'acqua? Spazio per disegnare un pompiere.</p>
-            <a href="triangolo-fuoco-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon infanzia"><i class="bi bi-signpost-fill" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Infanzia · 5-6 anni · territorio</span>
-            <h3>I Cartelli della Sicurezza</h3>
-            <div class="scheda-meta"><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>pennarelli colorati</span><span><i class="bi bi-clock me-1" aria-hidden="true"></i>15-20 min</span></div>
-            <p class="scheda-desc">I 4 cartelli base disegnati in SVG (uscita verde, idrante rosso, divieto, pericolo giallo): riconoscere, abbinare al significato, disegnarne uno della propria scuola.</p>
-            <a href="cartelli-sicurezza-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon infanzia"><i class="bi bi-compass" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Infanzia · 5-6 anni · territorio</span>
-            <h3>I Punti Cardinali</h3>
-            <div class="scheda-meta"><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita, pennarelli</span><span><i class="bi bi-clock me-1" aria-hidden="true"></i>15-20 min</span></div>
-            <p class="scheda-desc">Rosa dei venti semplificata con N, S, E, O. Riconoscere dove sorge e tramonta il sole. Una rosa dei venti vuota da completare. Riferimento al territorio di Genzano.</p>
-            <a href="punti-cardinali-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon infanzia"><i class="bi bi-list-ol" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Infanzia · 5-6 anni · comprensione</span>
-            <h3>Riordina l'Evacuazione</h3>
-            <div class="scheda-meta"><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span><span><i class="bi bi-clock me-1" aria-hidden="true"></i>15 min</span></div>
-            <p class="scheda-desc">4 vignette di un'evacuazione scolastica (sirena, fila, uscita, punto di raccolta) in ordine sparso. Numerare da 1 a 4. Ripasso dei comportamenti corretti.</p>
-            <a href="riordina-vignette-evacuazione-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon infanzia"><i class="bi bi-pencil-fill" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Infanzia · 3-4 anni · pregrafismo</span>
@@ -799,7 +687,60 @@
             <a href="pregrafismo-linee-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon infanzia"><i class="bi bi-fonts" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Infanzia · 5-6 anni · letto-scrittura</span>
+            <h3>ABC delle Vocali — Le parole che salvano</h3>
+            <div class="scheda-meta"><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita, pennarelli</span><span><i class="bi bi-clock me-1" aria-hidden="true"></i>15-20 min</span></div>
+            <p class="scheda-desc">Le 5 vocali abbinate a parole della Protezione Civile (A→AIUTO, E→ELMETTO, I→IDRANTE, O→OSPEDALE, U→USCITA). Lettera da ricalcare, parola da ricopiare, esercizio finale di riconoscimento.</p>
+            <a href="abc-vocali-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon infanzia"><i class="bi bi-alphabet" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Infanzia 5-6 / 1ª · letto-scrittura</span>
+            <h3>L'Alfabetiere della Sicurezza</h3>
+            <div class="scheda-meta"><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita, colori</span><span><i class="bi bi-clock me-1" aria-hidden="true"></i>20-30 min</span></div>
+            <p class="scheda-desc">L'alfabeto completo dalla A alla Z: ogni lettera abbinata a una parola della Protezione Civile (A→ACQUA, C→CASCO, P→POMPIERE…) con la lettera da ricalcare. Completa l'ABC delle Vocali con tutte le 21 lettere.</p>
+            <a href="alfabetiere-pc-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon infanzia"><i class="bi bi-circle" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Infanzia · 5-6 anni · letto-scrittura</span>
+            <h3>Riconosci l'Iniziale</h3>
+            <div class="scheda-meta"><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span><span><i class="bi bi-clock me-1" aria-hidden="true"></i>15-20 min</span></div>
+            <p class="scheda-desc">Per ogni immagine il bambino cerchia la lettera con cui inizia la parola, scelta fra tre opzioni. 10 parole della Protezione Civile (CASCO, SIRENA, FUOCO, RADIO, MAPPA, USCITA…).</p>
+            <a href="riconosci-iniziale-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon infanzia"><i class="bi bi-link-45deg" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Infanzia / Prim. 1ª · 5-7 anni · letto-scrittura</span>
+            <h3>Collega la Parola all'Immagine</h3>
+            <div class="scheda-meta"><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span><span><i class="bi bi-clock me-1" aria-hidden="true"></i>15 min</span></div>
+            <p class="scheda-desc">8 parole in stampatello da collegare con una linea alle 8 immagini in colonna a destra (in ordine sparso). Esercizio di lettura globale e associazione.</p>
+            <a href="collega-parola-immagine-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+      </div>
+      <h3 class="h6 mt-4 mb-2 text-muted" data-fascia="infanzia" id="inf-numeri-forme" style="font-weight:600; letter-spacing:0.02em; border-left:3px solid #c026d3; padding-left:0.5rem;">🔢 Numeri, forme e attenzione (5)</h3>
+      <div class="row g-3 mb-2" data-fascia="infanzia">
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon infanzia"><i class="bi bi-123" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Infanzia · 5-6 anni · numeri</span>
+            <h3>I Numeri della Protezione Civile</h3>
+            <div class="scheda-meta"><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita, pennarelli</span><span><i class="bi bi-clock me-1" aria-hidden="true"></i>15-20 min</span></div>
+            <p class="scheda-desc">Numeri da 1 a 5 abbinati agli oggetti della PC: 1 telefono, 2 caschi, 3 sirene, 4 torce, 5 volontari. Cifra da ricalcare e riscrivere. In fondo, il 112 in rosso.</p>
+            <a href="numeri-pc-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon infanzia"><i class="bi bi-1-circle-fill" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Infanzia · 3-4 anni · numeri</span>
@@ -809,7 +750,7 @@
             <a href="conta-puntini-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon infanzia"><i class="bi bi-circle-square" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Infanzia · 3-4 anni · forme</span>
@@ -819,17 +760,73 @@
             <a href="riconosci-forme-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
-            <div class="scheda-card-icon infanzia"><i class="bi bi-palette-fill" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Infanzia · 3-4 anni · colori</span>
-            <h3>I Colori dei Mezzi di Soccorso</h3>
-            <div class="scheda-meta"><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>pennarelli rosso/arancione</span><span><i class="bi bi-clock me-1" aria-hidden="true"></i>15-20 min</span></div>
-            <p class="scheda-desc">Pompieri rosso, ambulanza bianca, volontari arancione. Sagome dei mezzi da colorare con il colore giusto. Ripasso del 112.</p>
-            <a href="colori-mezzi-soccorso-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+            <div class="scheda-card-icon infanzia"><i class="bi bi-link-45deg" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Infanzia · 4-6 anni</span>
+            <h3>Trova le Coppie</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>15-20 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
+            <p class="scheda-desc">8 coppie di immagini da collegare con una linea: oggetto-azione, pericolo-cosa fare. Sviluppa l'associazione visiva.</p>
+            <a href="trova-coppie-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon infanzia"><i class="bi bi-compass" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Infanzia · 5-6 anni · territorio</span>
+            <h3>I Punti Cardinali</h3>
+            <div class="scheda-meta"><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita, pennarelli</span><span><i class="bi bi-clock me-1" aria-hidden="true"></i>15-20 min</span></div>
+            <p class="scheda-desc">Rosa dei venti semplificata con N, S, E, O. Riconoscere dove sorge e tramonta il sole. Una rosa dei venti vuota da completare. Riferimento al territorio di Genzano.</p>
+            <a href="punti-cardinali-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+      </div>
+      <h3 class="h6 mt-4 mb-2 text-muted" data-fascia="infanzia" id="inf-giochi" style="font-weight:600; letter-spacing:0.02em; border-left:3px solid #c026d3; padding-left:0.5rem;">🎮 Giochi e sequenze (3)</h3>
+      <div class="row g-3 mb-2" data-fascia="infanzia">
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon infanzia"><i class="bi bi-emoji-smile" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Infanzia · 4-6 anni</span>
+            <h3>Vero o Falso con le Faccine</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>15-20 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
+            <p class="scheda-desc">8 affermazioni con due faccine da colorare: 😊 se vero, 😟 se falso. Per i comportamenti corretti in caso di terremoto, allarme e quando chiamare il 112.</p>
+            <a href="vero-falso-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon infanzia"><i class="bi bi-signpost" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Infanzia · 4-6 anni</span>
+            <h3>Il Labirinto dell'Uscita</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>10-15 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
+            <p class="scheda-desc">Il bambino traccia il percorso dal punto di partenza 🧒 al cartello uscita 🚪, evitando muri, zaini e fuoco. Per imparare a non correre.</p>
+            <a href="labirinto-uscita/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon infanzia"><i class="bi bi-list-ol" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Infanzia · 5-6 anni · comprensione</span>
+            <h3>Riordina l'Evacuazione</h3>
+            <div class="scheda-meta"><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span><span><i class="bi bi-clock me-1" aria-hidden="true"></i>15 min</span></div>
+            <p class="scheda-desc">4 vignette di un'evacuazione scolastica (sirena, fila, uscita, punto di raccolta) in ordine sparso. Numerare da 1 a 4. Ripasso dei comportamenti corretti.</p>
+            <a href="riordina-vignette-evacuazione-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+      </div>
+      <h3 class="h6 mt-4 mb-2 text-muted" data-fascia="infanzia" id="inf-colorare-storie" style="font-weight:600; letter-spacing:0.02em; border-left:3px solid #c026d3; padding-left:0.5rem;">🎨 Colorare, storie e creatività (7)</h3>
+      <div class="row g-3 mb-2" data-fascia="infanzia">
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon infanzia">🐢</div>
+            <span class="scheda-fascia">Infanzia · 3-6 anni</span>
+            <h3>Le Regole della Tartaruga Saggia</h3>
+            <div class="scheda-meta"><span><i class="bi bi-card-checklist me-1" aria-hidden="true"></i>poster da colorare</span></div>
+            <p class="scheda-desc">Poster con le 4 regole della Tartaruga in caso di terremoto, una filastrocca da memorizzare e cosa NON fare. Da appendere in classe.</p>
+            <a href="tartaruga-saggia-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon infanzia">🐢</div>
             <span class="scheda-fascia">Infanzia · 3-4 anni · linguaggio</span>
@@ -839,7 +836,47 @@
             <a href="filastrocca-illustrata-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon infanzia"><i class="bi bi-droplet-fill" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Infanzia · 5-6 anni · scienze</span>
+            <h3>Il Ciclo dell'Acqua</h3>
+            <div class="scheda-meta"><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita, pennarelli</span><span><i class="bi bi-clock me-1" aria-hidden="true"></i>20 min</span></div>
+            <p class="scheda-desc">4 vignette in ordine sparso (sole/vapore/nuvola/pioggia) da numerare. Capire da dove arriva la pioggia. Collegamento al rischio idrogeologico dei Castelli.</p>
+            <a href="ciclo-acqua-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon infanzia">🔥</div>
+            <span class="scheda-fascia">Infanzia · 5-6 anni · scienze</span>
+            <h3>Cosa Serve al Fuoco — Il Triangolo</h3>
+            <div class="scheda-meta"><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita, pennarelli rossi</span><span><i class="bi bi-clock me-1" aria-hidden="true"></i>20 min</span></div>
+            <p class="scheda-desc">I 3 elementi del fuoco (legna, aria, calore) presentati come un triangolo. Esercizio: cosa toglie il pompiere quando spegne con l'acqua? Spazio per disegnare un pompiere.</p>
+            <a href="triangolo-fuoco-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon infanzia"><i class="bi bi-signpost-fill" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Infanzia · 5-6 anni · territorio</span>
+            <h3>I Cartelli della Sicurezza</h3>
+            <div class="scheda-meta"><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>pennarelli colorati</span><span><i class="bi bi-clock me-1" aria-hidden="true"></i>15-20 min</span></div>
+            <p class="scheda-desc">I 4 cartelli base disegnati in SVG (uscita verde, idrante rosso, divieto, pericolo giallo): riconoscere, abbinare al significato, disegnarne uno della propria scuola.</p>
+            <a href="cartelli-sicurezza-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon infanzia"><i class="bi bi-palette-fill" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Infanzia · 3-4 anni · colori</span>
+            <h3>I Colori dei Mezzi di Soccorso</h3>
+            <div class="scheda-meta"><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>pennarelli rosso/arancione</span><span><i class="bi bi-clock me-1" aria-hidden="true"></i>15-20 min</span></div>
+            <p class="scheda-desc">Pompieri rosso, ambulanza bianca, volontari arancione. Sagome dei mezzi da colorare con il colore giusto. Ripasso del 112.</p>
+            <a href="colori-mezzi-soccorso-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon infanzia"><i class="bi bi-person-fill" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Infanzia · 3-4 anni · disegno guidato</span>
@@ -1779,6 +1816,12 @@
         var hCase = paraCase.previousElementSibling;
         paraCase.classList.toggle('schede-hidden',
           hCase && hCase.classList.contains('schede-hidden'));
+      }
+
+      // Mini-indice fascia Infanzia: visibile solo se non si sta filtrando un'altra fascia
+      var idxInfanzia = document.querySelector('.schede-indice-fascia');
+      if (idxInfanzia) {
+        idxInfanzia.classList.toggle('schede-hidden', !!fasciaSel && fasciaSel !== 'infanzia');
       }
 
       // Aggiorna counter e messaggio "no results"
