@@ -1,0 +1,68 @@
+name: "🌤️ Cartina meteo Lazio + riquadro Genzano"
+
+# Rigenera ogni mattina la cartina del Lazio (aree colorate per provincia) e il
+# riquadro meteo di Genzano di Roma, da dati aperti Open-Meteo (modelli ECMWF,
+# licenza CC-BY, nessuna chiave API). Output:
+#   - static/images/meteo-lazio.svg   (mappa choropleth temperatura + cielo)
+#   - data/meteo_genzano.json         (riquadro Genzano: oggi + prossimi giorni)
+# Mostrati in /allerte-meteo/ dallo shortcode {{< meteo-lazio >}}.
+#
+# deploy.yml NON e' toccato (vincolo): questo workflow committa i file e
+# ri-triggera deploy.yml esplicitamente (i push del GITHUB_TOKEN non
+# auto-triggerano i workflow su push).
+
+on:
+  schedule:
+    # Giornaliero alle 05:10 UTC (~07:10 ora italiana). Orario esplicito
+    # (non */N), fuori dai quarti d'ora canonici — vedi memoria
+    # feedback_github_cron_explicit_better.
+    - cron: "10 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: "meteo-lazio"
+  cancel-in-progress: false
+
+jobs:
+  genera:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v4
+
+      - name: "🐍 Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: "🗺️ Genera cartina + riquadro"
+        run: |
+          set -euo pipefail
+          python3 scripts/genera-meteo-lazio.py
+          python3 -c "import json; json.load(open('data/meteo_genzano.json'))" && echo "JSON valido"
+          test -s static/images/meteo-lazio.svg && echo "SVG presente"
+
+      - name: "💾 Commit se cambiato + ri-trigger deploy"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          if git diff --quiet static/images/meteo-lazio.svg data/meteo_genzano.json; then
+            echo "Nessun cambiamento meteo — niente commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add static/images/meteo-lazio.svg data/meteo_genzano.json
+          git commit -m "chore(meteo): cartina Lazio + riquadro Genzano aggiornati [skip-meteo]"
+          for tentativo in 1 2 3; do
+            if git push 2>&1; then break; fi
+            echo "Push fallito (tentativo $tentativo), rebase..."
+            git pull --rebase origin main || { echo "Rebase fallito"; exit 1; }
+            if [ "$tentativo" = "3" ]; then echo "Push fallito dopo 3 tentativi"; exit 1; fi
+          done
+          gh workflow run deploy.yml

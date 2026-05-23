@@ -37,6 +37,12 @@ Lo stato sotto è letto direttamente dai **bollettini ufficiali del Centro Funzi
 </div>
 </div>
 
+## Previsione meteo di oggi
+
+Temperatura massima e cielo previsti **oggi** nelle cinque province del Lazio, con il dettaglio per Genzano di Roma e i prossimi giorni. La cartina è una **nostra elaborazione** su dati aperti [Open-Meteo](https://open-meteo.com/) (modelli ECMWF), aggiornata ogni mattina. È un dato **indicativo**: per le allerte valgono i bollettini ufficiali del Centro Funzionale Regionale del Lazio.
+
+{{< meteo-lazio >}}
+
 ## Mappa meteo interattiva
 
 La mappa mostra radar, precipitazioni, vento, temperatura e altri parametri meteo centrati su Genzano di Roma. Dal menu del widget puoi cambiare il livello informativo e la scala temporale.
