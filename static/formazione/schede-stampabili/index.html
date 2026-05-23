@@ -180,6 +180,18 @@
     }
     .schede-indice-fascia a:hover, .schede-indice-fascia a:focus { background: #f3e8ff; text-decoration: underline; }
     .schede-indice-fascia.schede-hidden { display: none; }
+    .schede-indice-fascia.pri { background:#eef5ff; border-color:#cfe0f5; border-left-color:#0066cc; }
+    .schede-indice-fascia.pri .idx-label { color:#0066cc; }
+    .schede-indice-fascia.pri a { border-color:#cfe0f5; }
+    .schede-indice-fascia.pri a:hover, .schede-indice-fascia.pri a:focus { background:#e3eefb; }
+    .schede-indice-fascia.s1 { background:#eefaf0; border-color:#c8ecd2; border-left-color:#15803d; }
+    .schede-indice-fascia.s1 .idx-label { color:#15803d; }
+    .schede-indice-fascia.s1 a { border-color:#c8ecd2; }
+    .schede-indice-fascia.s1 a:hover, .schede-indice-fascia.s1 a:focus { background:#e0f3e6; }
+    .schede-indice-fascia.s2 { background:#fdf4ea; border-color:#f0dcc2; border-left-color:#b45309; }
+    .schede-indice-fascia.s2 .idx-label { color:#b45309; }
+    .schede-indice-fascia.s2 a { border-color:#f0dcc2; }
+    .schede-indice-fascia.s2 a:hover, .schede-indice-fascia.s2 a:focus { background:#fae9d6; }
     @media print { .schede-indice-fascia { display: none; } }
     .schede-no-results {
       display: none;
@@ -892,38 +904,17 @@
         <span class="fascia-icona pri"><i class="bi bi-mortarboard" aria-hidden="true"></i></span>
         Scuola Primaria (6-11 anni)
       </h2>
+            <nav class="schede-indice-fascia pri" data-fascia="primaria" aria-label="Indice delle sezioni — Primaria">
+        <span class="idx-label">Vai a una sezione — Primaria:</span>
+        <a href="#pri-italiano">✏️ Italiano: leggere, scrivere, comprendere</a>
+        <a href="#pri-numeri">🔢 Numeri, mappe e scienze</a>
+        <a href="#pri-emergenza">🆘 Emergenza e autoprotezione</a>
+        <a href="#pri-cittadinanza">🏛️ Cittadinanza, storia e comunicazione</a>
+        <a href="#primaria-casi">📅 Casi studio</a>
+      </nav>
+      <h3 class="h6 mt-4 mb-2 text-muted" data-fascia="primaria" id="pri-italiano" style="font-weight:600; letter-spacing:0.02em; border-left:3px solid #0066cc; padding-left:0.5rem;">✏️ Italiano: leggere, scrivere, comprendere (13)</h3>
       <div class="row g-3 mb-2" data-fascia="primaria">
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon primaria"><i class="bi bi-telephone-fill" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Primaria · 7-11 anni</span>
-            <h3>Chiamo il 112</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>20-30 min</span><span><i class="bi bi-people me-1" aria-hidden="true"></i>individuale o coppia</span></div>
-            <p class="scheda-desc">Role-play scritto della chiamata al Numero Unico di Emergenza. Lo studente compila i propri dati, poi risponde all'operatore in 5 dialoghi guidati.</p>
-            <a href="chiamo-112/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon primaria"><i class="bi bi-grid-3x3" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Primaria · 8-11 anni · classi III-V</span>
-            <h3>Cruciverba della Sicurezza</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>25-35 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
-            <p class="scheda-desc">8 definizioni orizzontali su temi della Protezione Civile (allerta, sisma, scale, radar, emergenza, volontario...). Soluzioni incluse per il docente.</p>
-            <a href="cruciverba-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon primaria"><i class="bi bi-house-heart-fill" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Primaria · 7-11 anni + famiglia</span>
-            <h3>Piano di Emergenza Familiare</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>30 min</span><span><i class="bi bi-people-fill me-1" aria-hidden="true"></i>con i genitori</span></div>
-            <p class="scheda-desc">Modello da compilare a casa: famiglia, contatti d'emergenza, punti di ritrovo, kit di emergenza. Da attaccare al frigorifero, aggiornare ogni 6 mesi.</p>
-            <a href="piano-familiare-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon primaria"><i class="bi bi-segmented-nav" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Primaria · classi 1ª-2ª · letto-scrittura</span>
@@ -933,7 +924,7 @@
             <a href="sillabe-protezione-civile-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon primaria"><i class="bi bi-input-cursor-text" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Primaria · classi 1ª-2ª · letto-scrittura</span>
@@ -943,7 +934,7 @@
             <a href="completa-parola-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon primaria"><i class="bi bi-pencil-square" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Primaria · classe 1ª · letto-scrittura</span>
@@ -953,7 +944,7 @@
             <a href="ricalca-scrivi-parole-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon primaria"><i class="bi bi-type" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Primaria · classe 1ª · letto-scrittura</span>
@@ -963,7 +954,7 @@
             <a href="maiuscolo-minuscolo-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon primaria"><i class="bi bi-image" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Primaria · classi 1ª-2ª · letto-scrittura</span>
@@ -973,7 +964,7 @@
             <a href="dettato-illustrato-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon primaria"><i class="bi bi-card-text" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Primaria · classi 1ª-2ª · letto-scrittura</span>
@@ -983,7 +974,7 @@
             <a href="prime-frasi-sicurezza-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon primaria"><i class="bi bi-pen" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Primaria · classe 2ª · letto-scrittura</span>
@@ -993,7 +984,7 @@
             <a href="corsivo-parole-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon primaria"><i class="bi bi-pen-fill" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Primaria · classe 2ª · letto-scrittura</span>
@@ -1003,7 +994,7 @@
             <a href="corsivo-frasi-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon primaria"><i class="bi bi-ear" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Primaria · classe 2ª · letto-scrittura</span>
@@ -1013,7 +1004,7 @@
             <a href="dettato-frasi-brevi-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon primaria"><i class="bi bi-vector-pen" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Primaria · classi 1ª-2ª · letto-scrittura</span>
@@ -1023,67 +1014,7 @@
             <a href="copia-frase-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon primaria"><i class="bi bi-telephone-plus-fill" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Primaria · classi 1ª-2ª · numeri</span>
-            <h3>Il Numero 112 — Tutto sull'emergenza</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>20-30 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita, pennarello rosso</span></div>
-            <p class="scheda-desc">Ricalca le tre cifre del 112 in rosso, scrivilo in lettere ("uno-uno-due"), mini-somma 1+1+2, scelta multipla su quando chiamare, le 3 cose da dire all'operatore.</p>
-            <a href="il-numero-112-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon primaria"><i class="bi bi-cloud-lightning-rain-fill" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Primaria · classi 2ª-3ª · numeri</span>
-            <h3>I Codici di Allerta Meteo</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>25-30 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>pennarelli colorati</span></div>
-            <p class="scheda-desc">I 4 codici colore della Regione Lazio (verde 1, giallo 2, arancione 3, rosso 4). Ordina per gravità, colora i bollini, vero/falso. Tabella di riferimento con significato.</p>
-            <a href="codici-allerta-numeri-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon primaria"><i class="bi bi-thermometer-half" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Primaria · classi 2ª-3ª · scienze</span>
-            <h3>Gli Strumenti del Meteorologo</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>30 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
-            <p class="scheda-desc">strumenti (termometro, pluviometro, anemometro, barometro, igrometro), cosa misurano e in quale unità. Esercizi: collega, indovina lo strumento dato l'indizio.</p>
-            <a href="strumenti-meteo-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon primaria"><i class="bi bi-pin-map-fill" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Primaria · classi 2ª-4ª · territorio</span>
-            <h3>La Mappa del Mio Quartiere</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>30-40 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita, pennarelli</span></div>
-            <p class="scheda-desc">Mappa SVG di un quartiere con 6 luoghi numerati (scuola, ospedale, farmacia, area di attesa, idrante, piazza). Etichette da scrivere + domande di comprensione.</p>
-            <a href="mappa-cieca-quartiere-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon primaria"><i class="bi bi-book-fill" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Primaria · classi 1ª-2ª · comprensione</span>
-            <h3>Leggi e Rispondi — Flavio e il Pompiere</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>25-30 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
-            <p class="scheda-desc">Mini-racconto di una piccola emergenza domestica (fiammata in cucina) + domande di comprensione (chi, cosa, dove, numero chiamato, scelta multipla finale). Soluzioni incluse.</p>
-            <a href="leggi-rispondi-pompiere-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon primaria"><i class="bi bi-fire" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Primaria · classi 3ª-5ª · scienze</span>
-            <h3>Il Triangolo del Fuoco — Esperimenti</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>1 ora</span><span><i class="bi bi-droplet-half me-1" aria-hidden="true"></i>candela + bicchiere</span></div>
-            <p class="scheda-desc">I 3 elementi del fuoco (combustibile, comburente, calore) con triangolo SVG, 2 esperimenti sicuri condotti dall'insegnante (soffocamento + allontanamento combustibile), applicazione alle 3 tecniche dei vigili del fuoco, quiz V/F e domanda di ragionamento. Soluzioni incluse.</p>
-            <a href="triangolo-fuoco-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon primaria"><i class="bi bi-arrow-down-up" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Primaria · classi 2ª-3ª · comprensione</span>
@@ -1093,47 +1024,17 @@
             <a href="riordina-frasi-allerta-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
-            <div class="scheda-card-icon primaria"><i class="bi bi-clock-history" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Primaria · classi 3ª-5ª · storia</span>
-            <h3>Eventi che hanno fatto la PC italiana</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>40-50 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
-            <p class="scheda-desc">6 eventi storici (Vajont, Friuli, Irpinia, Sarno, L'Aquila, Amatrice) da abbinare all'anno e riordinare cronologicamente. Quale evento ha portato a quale legge.</p>
-            <a href="eventi-pc-italiani-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+            <div class="scheda-card-icon primaria"><i class="bi bi-book-fill" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Primaria · classi 1ª-2ª · comprensione</span>
+            <h3>Leggi e Rispondi — Flavio e il Pompiere</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>25-30 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
+            <p class="scheda-desc">Mini-racconto di una piccola emergenza domestica (fiammata in cucina) + domande di comprensione (chi, cosa, dove, numero chiamato, scelta multipla finale). Soluzioni incluse.</p>
+            <a href="leggi-rispondi-pompiere-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon primaria"><i class="bi bi-calculator-fill" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Primaria · classi 3ª-5ª · matematica</span>
-            <h3>Problemi Matematici della PC</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>40-50 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
-            <p class="scheda-desc">6 problemi con dati reali: pioggia in mm, evacuazione, kit, divisione volontari, raggio di emergenza, magnitudo. Spazio per il calcolo + risposta.</p>
-            <a href="problemi-matematici-pc-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon primaria"><i class="bi bi-globe-europe-africa" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Primaria · classi 3ª-5ª · geografia</span>
-            <h3>Geografia Sismica dell'Italia</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>40 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>pennarelli</span></div>
-            <p class="scheda-desc">Mappa SVG dell'Italia con le 4 zone sismiche colorate. Abbina regione/zona, identifica Genzano, riflessione sul perché la Sardegna ha quasi zero sismi.</p>
-            <a href="geografia-sismica-italia-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon primaria"><i class="bi bi-bank" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Primaria · classi 4ª-5ª · ed. civica</span>
-            <h3>La Costituzione e la PC</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>45 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
-            <p class="scheda-desc">Articoli 32, 117, 118 spiegati in linguaggio semplice. Diritto alla salute, Stato/Regioni, principio di sussidiarietà. Riflessione su volontariato.</p>
-            <a href="costituzione-pc-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon primaria"><i class="bi bi-journal-text" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Primaria · classi 4ª-5ª · italiano</span>
@@ -1143,37 +1044,93 @@
             <a href="comprensione-testo-amatrice-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+      </div>
+      <h3 class="h6 mt-4 mb-2 text-muted" data-fascia="primaria" id="pri-numeri" style="font-weight:600; letter-spacing:0.02em; border-left:3px solid #0066cc; padding-left:0.5rem;">🔢 Numeri, mappe e scienze (6)</h3>
+      <div class="row g-3 mb-2" data-fascia="primaria">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
-            <div class="scheda-card-icon primaria"><i class="bi bi-mic-fill" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Primaria · classi 3ª-5ª · compito di realtà</span>
-            <h3>Intervista al Volontario PC</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>2 fasi</span><span><i class="bi bi-people me-1" aria-hidden="true"></i>con un volontario</span></div>
-            <p class="scheda-desc">Compito di realtà: prepara domande (5 suggerite + 5 personali), intervista un volontario, scrivi il testo giornalistico. Coordinabile con segreteria.</p>
-            <a href="intervista-volontario-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+            <div class="scheda-card-icon primaria"><i class="bi bi-fire" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Primaria · classi 3ª-5ª · scienze</span>
+            <h3>Il Triangolo del Fuoco — Esperimenti</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>1 ora</span><span><i class="bi bi-droplet-half me-1" aria-hidden="true"></i>candela + bicchiere</span></div>
+            <p class="scheda-desc">I 3 elementi del fuoco (combustibile, comburente, calore) con triangolo SVG, 2 esperimenti sicuri condotti dall'insegnante (soffocamento + allontanamento combustibile), applicazione alle 3 tecniche dei vigili del fuoco, quiz V/F e domanda di ragionamento. Soluzioni incluse.</p>
+            <a href="triangolo-fuoco-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
-            <div class="scheda-card-icon primaria"><i class="bi bi-newspaper" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Primaria · classi 4ª-5ª · giornalismo</span>
-            <h3>Diventa Giornalista della PC</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>50-60 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
-            <p class="scheda-desc">Anatomia di un articolo (occhiello/titolo/lead/corpo) con esempio modello, scrivi tu un articolo per il giornalino di classe + un post Instagram con hashtag.</p>
-            <a href="diventa-giornalista-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+            <div class="scheda-card-icon primaria"><i class="bi bi-calculator-fill" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Primaria · classi 3ª-5ª · matematica</span>
+            <h3>Problemi Matematici della PC</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>40-50 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
+            <p class="scheda-desc">6 problemi con dati reali: pioggia in mm, evacuazione, kit, divisione volontari, raggio di emergenza, magnitudo. Spazio per il calcolo + risposta.</p>
+            <a href="problemi-matematici-pc-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
-            <div class="scheda-card-icon primaria"><i class="bi bi-thermometer-sun" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Primaria · classi 4ª-5ª + Secondaria I</span>
-            <h3>Ondate di Calore</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>40 min</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Scienze, Ed. civica</span></div>
-            <p class="scheda-desc">Proteggere bambini, anziani, lavoratori all'aperto e animali domestici dal caldo: box "Ore calde / Acqua e alimenti / Casa / Mai in auto", semaforo del caldo (verde-giallo-rosso), mini-rubrica delle persone fragili e mini quiz.</p>
-            <a href="ondate-calore-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+            <div class="scheda-card-icon primaria"><i class="bi bi-globe-europe-africa" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Primaria · classi 3ª-5ª · geografia</span>
+            <h3>Geografia Sismica dell'Italia</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>40 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>pennarelli</span></div>
+            <p class="scheda-desc">Mappa SVG dell'Italia con le 4 zone sismiche colorate. Abbina regione/zona, identifica Genzano, riflessione sul perché la Sardegna ha quasi zero sismi.</p>
+            <a href="geografia-sismica-italia-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon primaria"><i class="bi bi-thermometer-half" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Primaria · classi 2ª-3ª · scienze</span>
+            <h3>Gli Strumenti del Meteorologo</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>30 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
+            <p class="scheda-desc">strumenti (termometro, pluviometro, anemometro, barometro, igrometro), cosa misurano e in quale unità. Esercizi: collega, indovina lo strumento dato l'indizio.</p>
+            <a href="strumenti-meteo-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon primaria"><i class="bi bi-pin-map-fill" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Primaria · classi 2ª-4ª · territorio</span>
+            <h3>La Mappa del Mio Quartiere</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>30-40 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita, pennarelli</span></div>
+            <p class="scheda-desc">Mappa SVG di un quartiere con 6 luoghi numerati (scuola, ospedale, farmacia, area di attesa, idrante, piazza). Etichette da scrivere + domande di comprensione.</p>
+            <a href="mappa-cieca-quartiere-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon primaria"><i class="bi bi-cloud-lightning-rain-fill" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Primaria · classi 2ª-3ª · numeri</span>
+            <h3>I Codici di Allerta Meteo</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>25-30 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>pennarelli colorati</span></div>
+            <p class="scheda-desc">I 4 codici colore della Regione Lazio (verde 1, giallo 2, arancione 3, rosso 4). Ordina per gravità, colora i bollini, vero/falso. Tabella di riferimento con significato.</p>
+            <a href="codici-allerta-numeri-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+      </div>
+      <h3 class="h6 mt-4 mb-2 text-muted" data-fascia="primaria" id="pri-emergenza" style="font-weight:600; letter-spacing:0.02em; border-left:3px solid #0066cc; padding-left:0.5rem;">🆘 Emergenza e autoprotezione (7)</h3>
+      <div class="row g-3 mb-2" data-fascia="primaria">
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon primaria"><i class="bi bi-telephone-fill" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Primaria · 7-11 anni</span>
+            <h3>Chiamo il 112</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>20-30 min</span><span><i class="bi bi-people me-1" aria-hidden="true"></i>individuale o coppia</span></div>
+            <p class="scheda-desc">Role-play scritto della chiamata al Numero Unico di Emergenza. Lo studente compila i propri dati, poi risponde all'operatore in 5 dialoghi guidati.</p>
+            <a href="chiamo-112/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon primaria"><i class="bi bi-telephone-plus-fill" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Primaria · classi 1ª-2ª · numeri</span>
+            <h3>Il Numero 112 — Tutto sull'emergenza</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>20-30 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita, pennarello rosso</span></div>
+            <p class="scheda-desc">Ricalca le tre cifre del 112 in rosso, scrivilo in lettere ("uno-uno-due"), mini-somma 1+1+2, scelta multipla su quando chiamare, le 3 cose da dire all'operatore.</p>
+            <a href="il-numero-112-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon primaria"><i class="bi bi-telephone-outbound-fill" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Primaria · 8-11 anni · italiano/ed. civica</span>
@@ -1183,7 +1140,27 @@
             <a href="chiamo-112-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon primaria"><i class="bi bi-house-heart-fill" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Primaria · 7-11 anni + famiglia</span>
+            <h3>Piano di Emergenza Familiare</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>30 min</span><span><i class="bi bi-people-fill me-1" aria-hidden="true"></i>con i genitori</span></div>
+            <p class="scheda-desc">Modello da compilare a casa: famiglia, contatti d'emergenza, punti di ritrovo, kit di emergenza. Da attaccare al frigorifero, aggiornare ogni 6 mesi.</p>
+            <a href="piano-familiare-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon primaria"><i class="bi bi-thermometer-sun" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Primaria · classi 4ª-5ª + Secondaria I</span>
+            <h3>Ondate di Calore</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>40 min</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Scienze, Ed. civica</span></div>
+            <p class="scheda-desc">Proteggere bambini, anziani, lavoratori all'aperto e animali domestici dal caldo: box "Ore calde / Acqua e alimenti / Casa / Mai in auto", semaforo del caldo (verde-giallo-rosso), mini-rubrica delle persone fragili e mini quiz.</p>
+            <a href="ondate-calore-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon primaria"><i class="bi bi-cloud-sun-fill" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Primaria · 8-11 anni · scienze/ed. civica</span>
@@ -1193,7 +1170,7 @@
             <a href="decodifica-bollettino-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon primaria"><i class="bi bi-door-open-fill" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Primaria · 9-11 anni · ed. civica</span>
@@ -1204,13 +1181,74 @@
           </div>
         </div>
       </div>
+      <h3 class="h6 mt-4 mb-2 text-muted" data-fascia="primaria" id="pri-cittadinanza" style="font-weight:600; letter-spacing:0.02em; border-left:3px solid #0066cc; padding-left:0.5rem;">🏛️ Cittadinanza, storia e comunicazione (5)</h3>
+      <div class="row g-3 mb-2" data-fascia="primaria">
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon primaria"><i class="bi bi-bank" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Primaria · classi 4ª-5ª · ed. civica</span>
+            <h3>La Costituzione e la PC</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>45 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
+            <p class="scheda-desc">Articoli 32, 117, 118 spiegati in linguaggio semplice. Diritto alla salute, Stato/Regioni, principio di sussidiarietà. Riflessione su volontariato.</p>
+            <a href="costituzione-pc-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon primaria"><i class="bi bi-clock-history" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Primaria · classi 3ª-5ª · storia</span>
+            <h3>Eventi che hanno fatto la PC italiana</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>40-50 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
+            <p class="scheda-desc">6 eventi storici (Vajont, Friuli, Irpinia, Sarno, L'Aquila, Amatrice) da abbinare all'anno e riordinare cronologicamente. Quale evento ha portato a quale legge.</p>
+            <a href="eventi-pc-italiani-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon primaria"><i class="bi bi-mic-fill" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Primaria · classi 3ª-5ª · compito di realtà</span>
+            <h3>Intervista al Volontario PC</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>2 fasi</span><span><i class="bi bi-people me-1" aria-hidden="true"></i>con un volontario</span></div>
+            <p class="scheda-desc">Compito di realtà: prepara domande (5 suggerite + 5 personali), intervista un volontario, scrivi il testo giornalistico. Coordinabile con segreteria.</p>
+            <a href="intervista-volontario-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon primaria"><i class="bi bi-newspaper" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Primaria · classi 4ª-5ª · giornalismo</span>
+            <h3>Diventa Giornalista della PC</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>50-60 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
+            <p class="scheda-desc">Anatomia di un articolo (occhiello/titolo/lead/corpo) con esempio modello, scrivi tu un articolo per il giornalino di classe + un post Instagram con hashtag.</p>
+            <a href="diventa-giornalista-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon primaria"><i class="bi bi-grid-3x3" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Primaria · 8-11 anni · classi III-V</span>
+            <h3>Cruciverba della Sicurezza</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>25-35 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
+            <p class="scheda-desc">8 definizioni orizzontali su temi della Protezione Civile (allerta, sisma, scale, radar, emergenza, volontario...). Soluzioni incluse per il docente.</p>
+            <a href="cruciverba-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+      </div>
 
       <h2 class="fascia-titolo h4 mt-5" data-fascia="secondaria1">
         <span class="fascia-icona s1"><i class="bi bi-book-half" aria-hidden="true"></i></span>
         Scuola Secondaria di Primo Grado (11-14 anni)
       </h2>
+            <nav class="schede-indice-fascia s1" data-fascia="secondaria1" aria-label="Indice delle sezioni — Secondaria I">
+        <span class="idx-label">Vai a una sezione — Secondaria I:</span>
+        <a href="#s1-analisi">📊 Analisi del rischio e del territorio</a>
+        <a href="#s1-scrittura">✍️ Scrittura e comunicazione</a>
+        <a href="#s1-emergenza">🆘 Emergenza, sicurezza, cittadinanza</a>
+        <a href="#secondaria1-casi">📅 Casi studio</a>
+      </nav>
+      <h3 class="h6 mt-4 mb-2 text-muted" data-fascia="secondaria1" id="s1-analisi" style="font-weight:600; letter-spacing:0.02em; border-left:3px solid #15803d; padding-left:0.5rem;">📊 Analisi del rischio e del territorio (5)</h3>
       <div class="row g-3 mb-2" data-fascia="secondaria1">
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria1"><i class="bi bi-cloud-rain-heavy-fill" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Secondaria I · 11-14 anni</span>
@@ -1220,7 +1258,7 @@
             <a href="decodifica-bollettino-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria1"><i class="bi bi-map-fill" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Secondaria I · 11-14 anni</span>
@@ -1230,7 +1268,7 @@
             <a href="mappa-rischi-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria1"><i class="bi bi-clipboard-check-fill" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Secondaria I · 11-14 anni</span>
@@ -1240,7 +1278,7 @@
             <a href="audit-piano-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria1"><i class="bi bi-bar-chart-fill" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Secondaria I · 11-14 anni · matematica</span>
@@ -1250,37 +1288,7 @@
             <a href="statistica-rischi-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon secondaria1"><i class="bi bi-pencil-square" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Secondaria I · 11-14 anni · italiano</span>
-            <h3>Scrivi un Testo Informativo</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>60 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
-            <p class="scheda-desc">Compito di scrittura: produrre un testo informativo di ~300 parole su un rischio del territorio (a scelta tra 4). Struttura 5W + conclusione, citazione fonti ufficiali.</p>
-            <a href="scrittura-informativa-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon secondaria1"><i class="bi bi-chat-square-quote-fill" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Secondaria I · 12-14 anni · ed. civica</span>
-            <h3>Debate strutturato sui Rischi</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>50-60 min</span><span><i class="bi bi-people-fill me-1" aria-hidden="true"></i>2 squadre</span></div>
-            <p class="scheda-desc">Debate scolastico in 5 fasi (preparazione, apertura PRO/CONTRO, confronto, conclusione). Tema: vietare costruzioni in zona sismica 1. Griglia di valutazione.</p>
-            <a href="debate-strutturato-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon secondaria1"><i class="bi bi-bank2" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Secondaria I · 12-14 anni · ed. civica</span>
-            <h3>Costituzione e PC — Analisi</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>45 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
-            <p class="scheda-desc">Articoli 32, 117, 118 della Costituzione: testo originale + analisi + glossario costituzionale (concorrente, sussidiarietà, indigenti). domande di approfondimento.</p>
-            <a href="costituzione-pc-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria1">🌋</div>
             <span class="scheda-fascia">Secondaria I · 12-14 anni · scienze</span>
@@ -1290,17 +1298,30 @@
             <a href="vulcanologia-castelli-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+      </div>
+      <h3 class="h6 mt-4 mb-2 text-muted" data-fascia="secondaria1" id="s1-scrittura" style="font-weight:600; letter-spacing:0.02em; border-left:3px solid #15803d; padding-left:0.5rem;">✍️ Scrittura e comunicazione (5)</h3>
+      <div class="row g-3 mb-2" data-fascia="secondaria1">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
-            <div class="scheda-card-icon secondaria1"><i class="bi bi-newspaper" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Secondaria I · 12-14 anni · italiano</span>
-            <h3>Cronaca Recente — Ischia 2022</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>50-60 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
-            <p class="scheda-desc">Articolo di cronaca su frana di Casamicciola del 2022. Analisi 5W + domande critiche su pioggia/COC/abusivismo. Riferimento al rischio idrogeologico locale.</p>
-            <a href="cronaca-recente-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+            <div class="scheda-card-icon secondaria1"><i class="bi bi-pencil-square" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Secondaria I · 11-14 anni · italiano</span>
+            <h3>Scrivi un Testo Informativo</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>60 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
+            <p class="scheda-desc">Compito di scrittura: produrre un testo informativo di ~300 parole su un rischio del territorio (a scelta tra 4). Struttura 5W + conclusione, citazione fonti ufficiali.</p>
+            <a href="scrittura-informativa-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon secondaria1"><i class="bi bi-chat-square-quote-fill" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Secondaria I · 12-14 anni · ed. civica</span>
+            <h3>Debate strutturato sui Rischi</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>50-60 min</span><span><i class="bi bi-people-fill me-1" aria-hidden="true"></i>2 squadre</span></div>
+            <p class="scheda-desc">Debate scolastico in 5 fasi (preparazione, apertura PRO/CONTRO, confronto, conclusione). Tema: vietare costruzioni in zona sismica 1. Griglia di valutazione.</p>
+            <a href="debate-strutturato-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria1"><i class="bi bi-megaphone-fill" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Secondaria I · 12-14 anni · giornalismo</span>
@@ -1310,37 +1331,7 @@
             <a href="articolo-stampa-social-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon secondaria1"><i class="bi bi-lightning-charge-fill" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Secondaria I-II · 11-19 anni · resilienza familiare</span>
-            <h3>Blackout e Servizi Essenziali</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>45 min + casa</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Ed. civica, Tecnologia</span></div>
-            <p class="scheda-desc">Disagio, urgenza ed emergenza quando saltano luce, telefono o acqua. box "Prima/Durante/Comunicazioni/Quando chiamare", mappa di casa, simulazione "15 minuti senza corrente", lista "prima ora" e mini quiz.</p>
-            <a href="blackout-servizi-essenziali-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon secondaria1"><i class="bi bi-house-exclamation-fill" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Secondaria I-II · 11-19 anni · sicurezza domestica</span>
-            <h3>Monossido di Carbonio</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>45 min</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Scienze, Tecnologia</span></div>
-            <p class="scheda-desc">Il pericolo invisibile in case, garage e locali chiusi: caldaie, stufe, barbecue. box "Prevenzione/Usi vietati/Segnali sospetti/Azione sicura", caccia al rischio in casa, una regola per ciascun apparecchio e mini quiz.</p>
-            <a href="monossido-carbonio-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon secondaria1"><i class="bi bi-broadcast-pin" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Secondaria I-II · 11-19 anni · cittadinanza digitale</span>
-            <h3>IT-alert e Comunicazioni Ufficiali</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>50 min</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Ed. civica, Italiano</span></div>
-            <p class="scheda-desc">Sistema nazionale di allarme pubblico: tabella dei 5 elementi del messaggio (rischio/area/tempo/azione/fonte), esempio realistico con allerta idrogeologica per Genzano, risposta in 140 caratteri alla famiglia, mini quiz.</p>
-            <a href="it-alert-comunicazioni-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria1"><i class="bi bi-shield-exclamation" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Secondaria I-II · 11-19 anni · ed. civica digitale</span>
@@ -1350,27 +1341,7 @@
             <a href="fake-news-emergenza-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon secondaria1"><i class="bi bi-clock-history" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Secondaria I · 11-13 anni · storia/ed. civica</span>
-            <h3>Caso Amatrice — cronologia e analisi</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>1 ora</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Storia, Scienze, Ed. civica</span></div>
-            <p class="scheda-desc">Cronologia del terremoto Centro Italia 2016 (24 agosto, 30 ottobre, Rigopiano gennaio 2017) + analisi cosa ha funzionato/non ha funzionato + domande di analisi. Versione intermedia tra Primaria e Sec II.</p>
-            <a href="caso-amatrice-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon secondaria1"><i class="bi bi-house-heart-fill" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Secondaria I · 11-13 anni + famiglia · ed. civica</span>
-            <h3>Piano di Emergenza Familiare — esteso</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>1 ora con i genitori</span><span><i class="bi bi-people me-1" aria-hidden="true"></i>famiglia</span></div>
-            <p class="scheda-desc">Versione estesa del piano familiare: scorte 72 ore, piano di comunicazione (contatto fuori comune), animali domestici, persone fragili, ruoli per ognuno. Esercitazioni semestrali.</p>
-            <a href="piano-familiare-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria1"><i class="bi bi-grid-3x3" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Secondaria I · 11-13 anni · italiano/scienze</span>
@@ -1380,7 +1351,60 @@
             <a href="cruciverba-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+      </div>
+      <h3 class="h6 mt-4 mb-2 text-muted" data-fascia="secondaria1" id="s1-emergenza" style="font-weight:600; letter-spacing:0.02em; border-left:3px solid #15803d; padding-left:0.5rem;">🆘 Emergenza, sicurezza, cittadinanza (8)</h3>
+      <div class="row g-3 mb-2" data-fascia="secondaria1">
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon secondaria1"><i class="bi bi-bank2" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Secondaria I · 12-14 anni · ed. civica</span>
+            <h3>Costituzione e PC — Analisi</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>45 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
+            <p class="scheda-desc">Articoli 32, 117, 118 della Costituzione: testo originale + analisi + glossario costituzionale (concorrente, sussidiarietà, indigenti). domande di approfondimento.</p>
+            <a href="costituzione-pc-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon secondaria1"><i class="bi bi-lightning-charge-fill" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Secondaria I-II · 11-19 anni · resilienza familiare</span>
+            <h3>Blackout e Servizi Essenziali</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>45 min + casa</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Ed. civica, Tecnologia</span></div>
+            <p class="scheda-desc">Disagio, urgenza ed emergenza quando saltano luce, telefono o acqua. box "Prima/Durante/Comunicazioni/Quando chiamare", mappa di casa, simulazione "15 minuti senza corrente", lista "prima ora" e mini quiz.</p>
+            <a href="blackout-servizi-essenziali-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon secondaria1"><i class="bi bi-house-exclamation-fill" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Secondaria I-II · 11-19 anni · sicurezza domestica</span>
+            <h3>Monossido di Carbonio</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>45 min</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Scienze, Tecnologia</span></div>
+            <p class="scheda-desc">Il pericolo invisibile in case, garage e locali chiusi: caldaie, stufe, barbecue. box "Prevenzione/Usi vietati/Segnali sospetti/Azione sicura", caccia al rischio in casa, una regola per ciascun apparecchio e mini quiz.</p>
+            <a href="monossido-carbonio-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon secondaria1"><i class="bi bi-broadcast-pin" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Secondaria I-II · 11-19 anni · cittadinanza digitale</span>
+            <h3>IT-alert e Comunicazioni Ufficiali</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>50 min</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Ed. civica, Italiano</span></div>
+            <p class="scheda-desc">Sistema nazionale di allarme pubblico: tabella dei 5 elementi del messaggio (rischio/area/tempo/azione/fonte), esempio realistico con allerta idrogeologica per Genzano, risposta in 140 caratteri alla famiglia, mini quiz.</p>
+            <a href="it-alert-comunicazioni-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon secondaria1"><i class="bi bi-house-heart-fill" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Secondaria I · 11-13 anni + famiglia · ed. civica</span>
+            <h3>Piano di Emergenza Familiare — esteso</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>1 ora con i genitori</span><span><i class="bi bi-people me-1" aria-hidden="true"></i>famiglia</span></div>
+            <p class="scheda-desc">Versione estesa del piano familiare: scorte 72 ore, piano di comunicazione (contatto fuori comune), animali domestici, persone fragili, ruoli per ognuno. Esercitazioni semestrali.</p>
+            <a href="piano-familiare-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria1"><i class="bi bi-stopwatch-fill" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Secondaria I · 11-13 anni · matematica/tecnologia</span>
@@ -1390,7 +1414,7 @@
             <a href="labirinto-evacuazione-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria1"><i class="bi bi-telephone-x-fill" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Secondaria I · 11-13 anni · italiano/ed. civica</span>
@@ -1400,54 +1424,32 @@
             <a href="chiamo-112-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon secondaria1"><i class="bi bi-newspaper" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Secondaria I · 12-14 anni · italiano</span>
+            <h3>Cronaca Recente — Ischia 2022</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>50-60 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
+            <p class="scheda-desc">Articolo di cronaca su frana di Casamicciola del 2022. Analisi 5W + domande critiche su pioggia/COC/abusivismo. Riferimento al rischio idrogeologico locale.</p>
+            <a href="cronaca-recente-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
       </div>
 
       <h2 class="fascia-titolo h4 mt-5" data-fascia="secondaria2">
         <span class="fascia-icona s2"><i class="bi bi-globe-europe-africa" aria-hidden="true"></i></span>
         Scuola Secondaria di Secondo Grado (14-19 anni)
       </h2>
+            <nav class="schede-indice-fascia s2" data-fascia="secondaria2" aria-label="Indice delle sezioni — Secondaria II">
+        <span class="idx-label">Vai a una sezione — Secondaria II:</span>
+        <a href="#s2-scienza">🔬 Scienza, clima ed economia del rischio</a>
+        <a href="#s2-comunicazione">✍️ Comunicazione, lingua e cittadinanza</a>
+        <a href="#s2-preparazione">🆘 Preparazione e volontariato</a>
+        <a href="#secondaria2-casi">📅 Casi studio</a>
+      </nav>
+      <h3 class="h6 mt-4 mb-2 text-muted" data-fascia="secondaria2" id="s2-scienza" style="font-weight:600; letter-spacing:0.02em; border-left:3px solid #b45309; padding-left:0.5rem;">🔬 Scienza, clima ed economia del rischio (5)</h3>
       <div class="row g-3 mb-2" data-fascia="secondaria2">
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon secondaria2"><i class="bi bi-activity" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Secondaria II · 14-19 anni</span>
-            <h3>Caso Studio: Amatrice 24 agosto 2016</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>3-4 ore + ricerca</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Ed. civica, Scienze, Storia</span></div>
-            <p class="scheda-desc">Analisi sistemica del terremoto del Centro Italia 2016: dati essenziali, domande approfondite (fenomeno fisico, fattori predisponenti, risposta, criticità, lezione, riflessione personale).</p>
-            <a href="caso-amatrice-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon secondaria2"><i class="bi bi-megaphone-fill" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Secondaria II · 14-19 anni</span>
-            <h3>Simulazione: Comunicazione di Crisi</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>90 min</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Italiano, Ed. civica</span></div>
-            <p class="scheda-desc">Lo studente è il responsabile comunicazione del Comune durante un'allerta arancione. Produce 3 testi: post social, messaggio Telegram, nota stampa. Vincoli e griglia valutazione.</p>
-            <a href="comunicazione-crisi-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon secondaria2"><i class="bi bi-pencil-square" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Secondaria II · quinto anno</span>
-            <h3>5 Tracce per l'Esame di Stato</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>simulazione 6 ore</span><span><i class="bi bi-file-text me-1" aria-hidden="true"></i>Tipologia B + C</span></div>
-            <p class="scheda-desc">Tracce nello stile della prima prova (Beck, Ischia 2022, IT-alert, art. 2 D.Lgs. 1/2018, volontariato). 2 di Tipologia B, 3 di Tipologia C.</p>
-            <a href="traccia-esame-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon secondaria2"><i class="bi bi-bank" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Secondaria II · 14-19 anni · diritto</span>
-            <h3>Il Codice della Protezione Civile</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>50-60 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
-            <p class="scheda-desc">Analisi del D.Lgs. 1/2018: artt. 1, 2, 6, 12, 18, 32-35. Tabella delle autorità per livello (Comune/Regione/Stato). domande di applicazione + sussidiarietà verticale e orizzontale.</p>
-            <a href="codice-pc-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria2"><i class="bi bi-globe-asia-australia" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Secondaria II · 14-17 anni · scienze</span>
@@ -1457,7 +1459,7 @@
             <a href="placche-tettoniche-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria2"><i class="bi bi-thermometer-sun" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Secondaria II · 14-19 anni · scienze</span>
@@ -1467,7 +1469,7 @@
             <a href="climate-change-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria2"><i class="bi bi-cash-coin" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Secondaria II · 16-19 anni · economia</span>
@@ -1477,57 +1479,7 @@
             <a href="economia-rischio-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon secondaria2"><i class="bi bi-scale" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Secondaria II · 16-19 anni · etica</span>
-            <h3>Il Caso L'Aquila 2009</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>60 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
-            <p class="scheda-desc">Il processo alla Commissione Grandi Rischi, citazione del "bicchiere di vino", distinzione fra valutazione scientifica e comunicazione pubblica, principio di precauzione. domande con dilemma personale.</p>
-            <a href="caso-aquila-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon secondaria2"><i class="bi bi-translate" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Secondaria II · 14-19 anni · inglese B1-B2</span>
-            <h3>English for Civil Protection</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>60 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
-            <p class="scheda-desc">Glossario tecnico inglese (14 termini con IPA), articolo "EU Civil Protection Mechanism for Greece floods", comprehension, traduzione, role-play in coppia per emergency call al 112 in inglese.</p>
-            <a href="english-civil-protection-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon secondaria2"><i class="bi bi-person-badge" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Secondaria II · 17-19 anni · ed. civica</span>
-            <h3>Diventare Volontario PC</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>50-60 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
-            <p class="scheda-desc">Requisiti, specialità (AIB, sanitario, radio, GIS…), 7 step del percorso, diritti e doveri (D.Lgs. 1/2018), mini-progetto personale del proprio futuro volontariato. Per chi sta per fare 18.</p>
-            <a href="percorso-volontariato-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon secondaria2"><i class="bi bi-universal-access" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Secondaria II · 14-19 anni · inclusione</span>
-            <h3>Emergenza Inclusiva</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>60 min</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Ed. civica, Scienze umane, Diritto</span></div>
-            <p class="scheda-desc">Aiutare persone con disabilità, fragilità o bisogni specifici senza improvvisare: box "Chiedi/Comunica/Prepara/Rete", modello "scheda bisogni essenziali" da compilare, simulazione di comunicazione chiara, verifica inclusiva del percorso e mini quiz.</p>
-            <a href="emergenza-inclusiva-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="scheda-card">
-            <div class="scheda-card-icon secondaria2"><i class="bi bi-cloud-haze2-fill" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Secondaria II · 14-19 anni · italiano/scienze</span>
-            <h3>Analisi critica di tre bollettini</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>1.5 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Italiano, Scienze della Terra, Ed. civica</span></div>
-            <p class="scheda-desc">Tre bollettini reali (giallo, arancione, rosso) della Regione Lazio: analisi linguistica, calcoli quantitativi (cumulati pioggia, zone allerta), critica costruttiva, riformulazione come post Instagram in 280 caratteri.</p>
-            <a href="decodifica-bollettino-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria2"><i class="bi bi-map-fill" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Secondaria II · 14-19 anni · geografia/scienze della Terra</span>
@@ -1537,17 +1489,60 @@
             <a href="mappa-rischi-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
-            <div class="scheda-card-icon secondaria2"><i class="bi bi-buildings-fill" aria-hidden="true"></i></div>
-            <span class="scheda-fascia">Secondaria II · 14-19 anni · tecnologia/sicurezza</span>
-            <h3>Piano emergenza condominio o scuola</h3>
-            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>2-3 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Tecnologia, Ed. civica</span></div>
-            <p class="scheda-desc">Progetto completo per un edificio reale: anagrafica, pianta vie di fuga, ruoli, procedure incendio/sisma/allagamento, persone con mobilità ridotta, esercitazioni. Vademecum A4 finale.</p>
-            <a href="piano-familiare-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+            <div class="scheda-card-icon secondaria2"><i class="bi bi-cloud-haze2-fill" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Secondaria II · 14-19 anni · italiano/scienze</span>
+            <h3>Analisi critica di tre bollettini</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>1.5 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Italiano, Scienze della Terra, Ed. civica</span></div>
+            <p class="scheda-desc">Tre bollettini reali (giallo, arancione, rosso) della Regione Lazio: analisi linguistica, calcoli quantitativi (cumulati pioggia, zone allerta), critica costruttiva, riformulazione come post Instagram in 280 caratteri.</p>
+            <a href="decodifica-bollettino-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+      </div>
+      <h3 class="h6 mt-4 mb-2 text-muted" data-fascia="secondaria2" id="s2-comunicazione" style="font-weight:600; letter-spacing:0.02em; border-left:3px solid #b45309; padding-left:0.5rem;">✍️ Comunicazione, lingua e cittadinanza (6)</h3>
+      <div class="row g-3 mb-2" data-fascia="secondaria2">
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon secondaria2"><i class="bi bi-megaphone-fill" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Secondaria II · 14-19 anni</span>
+            <h3>Simulazione: Comunicazione di Crisi</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>90 min</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Italiano, Ed. civica</span></div>
+            <p class="scheda-desc">Lo studente è il responsabile comunicazione del Comune durante un'allerta arancione. Produce 3 testi: post social, messaggio Telegram, nota stampa. Vincoli e griglia valutazione.</p>
+            <a href="comunicazione-crisi-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon secondaria2"><i class="bi bi-pencil-square" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Secondaria II · quinto anno</span>
+            <h3>5 Tracce per l'Esame di Stato</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>simulazione 6 ore</span><span><i class="bi bi-file-text me-1" aria-hidden="true"></i>Tipologia B + C</span></div>
+            <p class="scheda-desc">Tracce nello stile della prima prova (Beck, Ischia 2022, IT-alert, art. 2 D.Lgs. 1/2018, volontariato). 2 di Tipologia B, 3 di Tipologia C.</p>
+            <a href="traccia-esame-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon secondaria2"><i class="bi bi-bank" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Secondaria II · 14-19 anni · diritto</span>
+            <h3>Il Codice della Protezione Civile</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>50-60 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
+            <p class="scheda-desc">Analisi del D.Lgs. 1/2018: artt. 1, 2, 6, 12, 18, 32-35. Tabella delle autorità per livello (Comune/Regione/Stato). domande di applicazione + sussidiarietà verticale e orizzontale.</p>
+            <a href="codice-pc-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon secondaria2"><i class="bi bi-translate" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Secondaria II · 14-19 anni · inglese B1-B2</span>
+            <h3>English for Civil Protection</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>60 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
+            <p class="scheda-desc">Glossario tecnico inglese (14 termini con IPA), articolo "EU Civil Protection Mechanism for Greece floods", comprehension, traduzione, role-play in coppia per emergency call al 112 in inglese.</p>
+            <a href="english-civil-protection-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria2"><i class="bi bi-book-fill" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Secondaria II · 14-19 anni · italiano/ed. civica</span>
@@ -1557,7 +1552,40 @@
             <a href="cruciverba-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon secondaria2"><i class="bi bi-universal-access" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Secondaria II · 14-19 anni · inclusione</span>
+            <h3>Emergenza Inclusiva</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>60 min</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Ed. civica, Scienze umane, Diritto</span></div>
+            <p class="scheda-desc">Aiutare persone con disabilità, fragilità o bisogni specifici senza improvvisare: box "Chiedi/Comunica/Prepara/Rete", modello "scheda bisogni essenziali" da compilare, simulazione di comunicazione chiara, verifica inclusiva del percorso e mini quiz.</p>
+            <a href="emergenza-inclusiva-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+      </div>
+      <h3 class="h6 mt-4 mb-2 text-muted" data-fascia="secondaria2" id="s2-preparazione" style="font-weight:600; letter-spacing:0.02em; border-left:3px solid #b45309; padding-left:0.5rem;">🆘 Preparazione e volontariato (4)</h3>
+      <div class="row g-3 mb-2" data-fascia="secondaria2">
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon secondaria2"><i class="bi bi-person-badge" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Secondaria II · 17-19 anni · ed. civica</span>
+            <h3>Diventare Volontario PC</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>50-60 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
+            <p class="scheda-desc">Requisiti, specialità (AIB, sanitario, radio, GIS…), 7 step del percorso, diritti e doveri (D.Lgs. 1/2018), mini-progetto personale del proprio futuro volontariato. Per chi sta per fare 18.</p>
+            <a href="percorso-volontariato-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon secondaria2"><i class="bi bi-buildings-fill" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Secondaria II · 14-19 anni · tecnologia/sicurezza</span>
+            <h3>Piano emergenza condominio o scuola</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>2-3 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Tecnologia, Ed. civica</span></div>
+            <p class="scheda-desc">Progetto completo per un edificio reale: anagrafica, pianta vie di fuga, ruoli, procedure incendio/sisma/allagamento, persone con mobilità ridotta, esercitazioni. Vademecum A4 finale.</p>
+            <a href="piano-familiare-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria2"><i class="bi bi-clipboard2-check-fill" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Secondaria II · 14-19 anni · tecnologia/sicurezza</span>
@@ -1567,7 +1595,7 @@
             <a href="labirinto-evacuazione-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria2"><i class="bi bi-chat-quote-fill" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Secondaria II · 14-19 anni · italiano/sicurezza</span>
@@ -1579,44 +1607,44 @@
         </div>
       </div>
 
-      <h3 class="h5 mt-5 mb-3" style="color:#15803d;"><i class="bi bi-clipboard-data me-1" aria-hidden="true"></i> Case study Primaria — 12 maxi-emergenze raccontate ai bambini</h3>
+      <h3 class="h5 mt-5 mb-3" id="primaria-casi" data-fascia="primaria" style="color:#15803d;"><i class="bi bi-clipboard-data me-1" aria-hidden="true"></i> Case study Primaria — 12 maxi-emergenze raccontate ai bambini</h3>
       <p class="mb-3 text-muted small">schede narrative per la Scuola Primaria (9-11 anni). Ogni scheda: cronologia in box, "Cosa abbiamo imparato" in 3 punti, domande di comprensione, soluzioni e note didattiche per la maestra/o. Curricolo a spirale 6-19.</p>
-      <div class="row g-3 mb-2" data-fascia="primaria">
-        <div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon primaria"><i class="bi bi-house-heart" aria-hidden="true"></i></div><span class="scheda-fascia">Primaria · case study</span><h3>Friuli — 6 maggio 1976</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>1.5 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Storia, Geografia</span></div><p class="scheda-desc">"Là dov'era, com'era": ricostruzione esemplare e nascita della PC italiana moderna.</p><a href="caso-friuli-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
-        <div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon primaria"><i class="bi bi-newspaper" aria-hidden="true"></i></div><span class="scheda-fascia">Primaria · case study</span><h3>Irpinia — 23 novembre 1980</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>1.5 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Storia, Ed. civica</span></div><p class="scheda-desc">Da Zamberletti alla nascita del Servizio Nazionale di Protezione Civile.</p><a href="caso-irpinia-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
-        <div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon primaria"><i class="bi bi-buildings" aria-hidden="true"></i></div><span class="scheda-fascia">Primaria · case study</span><h3>L'Aquila — 6 aprile 2009</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>1.5 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Storia, Geografia</span></div><p class="scheda-desc">Solidarietà nazionale, Case C.A.S.E., comunicazione del rischio.</p><a href="caso-aquila-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
-        <div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon primaria"><i class="bi bi-egg-fried" aria-hidden="true"></i></div><span class="scheda-fascia">Primaria · case study</span><h3>Amatrice — 24 agosto 2016</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>1.5 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Storia, Geografia</span></div><p class="scheda-desc">Solidarietà fra cuochi e ristoranti italiani: la pasta all'amatriciana per la ricostruzione.</p><a href="caso-amatrice-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
-        <div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon primaria"><i class="bi bi-water" aria-hidden="true"></i></div><span class="scheda-fascia">Primaria · case study</span><h3>Vajont — 9 ottobre 1963</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>1.5 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Storia, Scienze, Ed. civica</span></div><p class="scheda-desc">Ascoltare gli scienziati: Tina Merlin e il principio della voce critica nella società civile.</p><a href="caso-vajont-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
-        <div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon primaria"><i class="bi bi-snow2" aria-hidden="true"></i></div><span class="scheda-fascia">Primaria · case study</span><h3>Rigopiano — 18 gennaio 2017</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>1.5 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Scienze, Ed. civica</span></div><p class="scheda-desc">Il coraggio dei soccorritori: 5 giorni nella neve per salvare 11 persone.</p><a href="caso-rigopiano-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
-        <div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon primaria"><i class="bi bi-tsunami" aria-hidden="true"></i></div><span class="scheda-fascia">Primaria · case study</span><h3>Messina-Reggio — 28 dicembre 1908</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>1.5 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Storia, Geografia</span></div><p class="scheda-desc">Solidarietà internazionale: navi russe, britanniche, americane in aiuto.</p><a href="caso-messina-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
-        <div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon primaria"><i class="bi bi-tools" aria-hidden="true"></i></div><span class="scheda-fascia">Primaria · case study</span><h3>Stava — 19 luglio 1985</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>1.5 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Scienze, Ed. civica</span></div><p class="scheda-desc">Il valore dei controlli: cosa significa "responsabilità d'impresa" per i bambini.</p><a href="caso-stava-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
-        <div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon primaria"><i class="bi bi-tree" aria-hidden="true"></i></div><span class="scheda-fascia">Primaria · case study</span><h3>Sarno — 5 maggio 1998</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>1.5 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Scienze, Geografia</span></div><p class="scheda-desc">Rispettare la fragilità del territorio: i boschi salvano i pendii.</p><a href="caso-sarno-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
-        <div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon primaria"><i class="bi bi-cloud-rain-heavy" aria-hidden="true"></i></div><span class="scheda-fascia">Primaria · case study</span><h3>Versilia — 19 giugno 1996</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>1.5 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Scienze, Geografia</span></div><p class="scheda-desc">Allerta meteo e codici colore: il bollettino salvavita per famiglie in vacanza.</p><a href="caso-versilia-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
-        <div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon primaria"><i class="bi bi-fire" aria-hidden="true"></i></div><span class="scheda-fascia">Primaria · case study</span><h3>I vulcani d'Italia</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>1.5 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Scienze, Geografia</span></div><p class="scheda-desc">Etna, Stromboli, Vesuvio: i vulcani come bellezza naturale e oggetti di studio scientifico.</p><a href="caso-vulcani-italia-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
-        <div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon primaria"><i class="bi bi-broadcast" aria-hidden="true"></i></div><span class="scheda-fascia">Primaria · case study</span><h3>Campi Flegrei</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>1.5 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Scienze, Geografia</span></div><p class="scheda-desc">Il vulcano nascosto vicino Napoli: monitoraggio scientifico e fiducia nelle istituzioni.</p><a href="caso-campi-flegrei-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
+            <div class="row g-3 mb-2" data-fascia="primaria">
+<div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon primaria"><i class="bi bi-house-heart" aria-hidden="true"></i></div><span class="scheda-fascia">Primaria · case study</span><h3>Friuli — 6 maggio 1976</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>1.5 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Storia, Geografia</span></div><p class="scheda-desc">"Là dov'era, com'era": ricostruzione esemplare e nascita della PC italiana moderna.</p><a href="caso-friuli-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
+<div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon primaria"><i class="bi bi-newspaper" aria-hidden="true"></i></div><span class="scheda-fascia">Primaria · case study</span><h3>Irpinia — 23 novembre 1980</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>1.5 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Storia, Ed. civica</span></div><p class="scheda-desc">Da Zamberletti alla nascita del Servizio Nazionale di Protezione Civile.</p><a href="caso-irpinia-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
+<div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon primaria"><i class="bi bi-buildings" aria-hidden="true"></i></div><span class="scheda-fascia">Primaria · case study</span><h3>L'Aquila — 6 aprile 2009</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>1.5 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Storia, Geografia</span></div><p class="scheda-desc">Solidarietà nazionale, Case C.A.S.E., comunicazione del rischio.</p><a href="caso-aquila-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
+<div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon primaria"><i class="bi bi-egg-fried" aria-hidden="true"></i></div><span class="scheda-fascia">Primaria · case study</span><h3>Amatrice — 24 agosto 2016</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>1.5 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Storia, Geografia</span></div><p class="scheda-desc">Solidarietà fra cuochi e ristoranti italiani: la pasta all'amatriciana per la ricostruzione.</p><a href="caso-amatrice-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
+<div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon primaria"><i class="bi bi-water" aria-hidden="true"></i></div><span class="scheda-fascia">Primaria · case study</span><h3>Vajont — 9 ottobre 1963</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>1.5 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Storia, Scienze, Ed. civica</span></div><p class="scheda-desc">Ascoltare gli scienziati: Tina Merlin e il principio della voce critica nella società civile.</p><a href="caso-vajont-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
+<div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon primaria"><i class="bi bi-snow2" aria-hidden="true"></i></div><span class="scheda-fascia">Primaria · case study</span><h3>Rigopiano — 18 gennaio 2017</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>1.5 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Scienze, Ed. civica</span></div><p class="scheda-desc">Il coraggio dei soccorritori: 5 giorni nella neve per salvare 11 persone.</p><a href="caso-rigopiano-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
+<div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon primaria"><i class="bi bi-tsunami" aria-hidden="true"></i></div><span class="scheda-fascia">Primaria · case study</span><h3>Messina-Reggio — 28 dicembre 1908</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>1.5 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Storia, Geografia</span></div><p class="scheda-desc">Solidarietà internazionale: navi russe, britanniche, americane in aiuto.</p><a href="caso-messina-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
+<div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon primaria"><i class="bi bi-tools" aria-hidden="true"></i></div><span class="scheda-fascia">Primaria · case study</span><h3>Stava — 19 luglio 1985</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>1.5 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Scienze, Ed. civica</span></div><p class="scheda-desc">Il valore dei controlli: cosa significa "responsabilità d'impresa" per i bambini.</p><a href="caso-stava-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
+<div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon primaria"><i class="bi bi-tree" aria-hidden="true"></i></div><span class="scheda-fascia">Primaria · case study</span><h3>Sarno — 5 maggio 1998</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>1.5 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Scienze, Geografia</span></div><p class="scheda-desc">Rispettare la fragilità del territorio: i boschi salvano i pendii.</p><a href="caso-sarno-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
+<div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon primaria"><i class="bi bi-cloud-rain-heavy" aria-hidden="true"></i></div><span class="scheda-fascia">Primaria · case study</span><h3>Versilia — 19 giugno 1996</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>1.5 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Scienze, Geografia</span></div><p class="scheda-desc">Allerta meteo e codici colore: il bollettino salvavita per famiglie in vacanza.</p><a href="caso-versilia-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
+<div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon primaria"><i class="bi bi-fire" aria-hidden="true"></i></div><span class="scheda-fascia">Primaria · case study</span><h3>I vulcani d'Italia</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>1.5 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Scienze, Geografia</span></div><p class="scheda-desc">Etna, Stromboli, Vesuvio: i vulcani come bellezza naturale e oggetti di studio scientifico.</p><a href="caso-vulcani-italia-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
+<div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon primaria"><i class="bi bi-broadcast" aria-hidden="true"></i></div><span class="scheda-fascia">Primaria · case study</span><h3>Campi Flegrei</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>1.5 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Scienze, Geografia</span></div><p class="scheda-desc">Il vulcano nascosto vicino Napoli: monitoraggio scientifico e fiducia nelle istituzioni.</p><a href="caso-campi-flegrei-primaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
       </div>
 
-      <h3 class="h5 mt-5 mb-3" style="color:#0369a1;"><i class="bi bi-clipboard-data me-1" aria-hidden="true"></i> Case study Secondaria I — 12 maxi-emergenze con analisi argomentativa</h3>
+      <h3 class="h5 mt-5 mb-3" id="secondaria1-casi" data-fascia="secondaria1" style="color:#0369a1;"><i class="bi bi-clipboard-data me-1" aria-hidden="true"></i> Case study Secondaria I — 12 maxi-emergenze con analisi argomentativa</h3>
       <p class="mb-3 text-muted small">schede di analisi storica per la Secondaria di primo grado (11-13 anni). Cronologia evento + box "Cosa ha funzionato / Cosa NON ha funzionato" + domande argomentative + note per il docente con riferimenti normativi (D.Lgs. 1/2018, L. 92/2019, D.M. 183/2024). Curricolo a spirale 6-19.</p>
-      <div class="row g-3 mb-2" data-fascia="secondaria1">
-        <div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon secondaria1"><i class="bi bi-egg-fried" aria-hidden="true"></i></div><span class="scheda-fascia">Secondaria I · case study</span><h3>Amatrice 2016</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>2 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Storia, Scienze, Ed. civica</span></div><p class="scheda-desc">Cronologia 24 agosto/30 ottobre 2016, IT-alert, evacuazioni preventive, ricostruzione.</p><a href="caso-amatrice-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
-        <div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon secondaria1"><i class="bi bi-house-heart" aria-hidden="true"></i></div><span class="scheda-fascia">Secondaria I · case study</span><h3>Friuli 1976</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>2 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Storia, Geografia</span></div><p class="scheda-desc">"Dov'era, com'era": modello internazionale di ricostruzione + L. 225/1992.</p><a href="caso-friuli-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
-        <div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon secondaria1"><i class="bi bi-newspaper" aria-hidden="true"></i></div><span class="scheda-fascia">Secondaria I · case study</span><h3>Irpinia 1980</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>2 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Storia, Ed. civica</span></div><p class="scheda-desc">"Fate presto": Pertini in tv, Zamberletti, nascita Servizio Nazionale PC.</p><a href="caso-irpinia-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
-        <div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon secondaria1"><i class="bi bi-buildings" aria-hidden="true"></i></div><span class="scheda-fascia">Secondaria I · case study</span><h3>L'Aquila 2009</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>2 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Storia, Scienze</span></div><p class="scheda-desc">Sciame sismico, Commissione Grandi Rischi, Case C.A.S.E., riforma comunicazione del rischio.</p><a href="caso-aquila-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
-        <div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon secondaria1"><i class="bi bi-water" aria-hidden="true"></i></div><span class="scheda-fascia">Secondaria I · case study</span><h3>Vajont 1963</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>2 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Storia, Scienze, Ed. civica</span></div><p class="scheda-desc">Disastro annunciato: ascolto della scienza, responsabilità tecnica e politica, Tina Merlin.</p><a href="caso-vajont-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
-        <div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon secondaria1"><i class="bi bi-tsunami" aria-hidden="true"></i></div><span class="scheda-fascia">Secondaria I · case study</span><h3>Messina-Reggio 1908</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>2 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Storia, Scienze</span></div><p class="scheda-desc">Tsunami, prima legge antisismica al mondo (R.D.L. 193/1909), cooperazione internazionale.</p><a href="caso-messina-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
-        <div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon secondaria1"><i class="bi bi-tools" aria-hidden="true"></i></div><span class="scheda-fascia">Secondaria I · case study</span><h3>Stava 1985</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>2 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Scienze, Ed. civica</span></div><p class="scheda-desc">Responsabilità d'impresa, riforma controlli ambientali, Direttiva Seveso II.</p><a href="caso-stava-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
-        <div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon secondaria1"><i class="bi bi-tree" aria-hidden="true"></i></div><span class="scheda-fascia">Secondaria I · case study</span><h3>Sarno 1998</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>2 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Scienze, Geografia</span></div><p class="scheda-desc">Colata detritica, Legge 267/1998, Piani di Assetto Idrogeologico (PAI).</p><a href="caso-sarno-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
-        <div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon secondaria1"><i class="bi bi-cloud-rain-heavy" aria-hidden="true"></i></div><span class="scheda-fascia">Secondaria I · case study</span><h3>Versilia 1996</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>2 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Scienze, Geografia</span></div><p class="scheda-desc">Flash flood, nascita dei Centri Funzionali, codici colore allerta meteo, IT-alert.</p><a href="caso-versilia-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
-        <div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon secondaria1"><i class="bi bi-snow2" aria-hidden="true"></i></div><span class="scheda-fascia">Secondaria I · case study</span><h3>Rigopiano 2017</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>2 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Scienze, Ed. civica</span></div><p class="scheda-desc">Rischio multiplo concomitante: sisma + neve + viabilità chiusa, responsabilità del Sindaco.</p><a href="caso-rigopiano-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
-        <div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon secondaria1"><i class="bi bi-fire" aria-hidden="true"></i></div><span class="scheda-fascia">Secondaria I · case study</span><h3>I vulcani d'Italia</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>2 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Scienze, Geografia</span></div><p class="scheda-desc">Etna, Stromboli, Vesuvio, Campi Flegrei, Vulcano: monitoraggio INGV, piani di evacuazione.</p><a href="caso-vulcani-italia-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
-        <div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon secondaria1"><i class="bi bi-broadcast" aria-hidden="true"></i></div><span class="scheda-fascia">Secondaria I · case study</span><h3>Campi Flegrei</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>2 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Scienze, Geografia, Ed. civica</span></div><p class="scheda-desc">Caldera, bradisismo, monitoraggio INGV-OV, piano di evacuazione 500.000 persone.</p><a href="caso-campi-flegrei-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
+            <div class="row g-3 mb-2" data-fascia="secondaria1">
+<div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon secondaria1"><i class="bi bi-egg-fried" aria-hidden="true"></i></div><span class="scheda-fascia">Secondaria I · case study</span><h3>Amatrice 2016</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>2 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Storia, Scienze, Ed. civica</span></div><p class="scheda-desc">Cronologia 24 agosto/30 ottobre 2016, IT-alert, evacuazioni preventive, ricostruzione.</p><a href="caso-amatrice-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
+<div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon secondaria1"><i class="bi bi-house-heart" aria-hidden="true"></i></div><span class="scheda-fascia">Secondaria I · case study</span><h3>Friuli 1976</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>2 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Storia, Geografia</span></div><p class="scheda-desc">"Dov'era, com'era": modello internazionale di ricostruzione + L. 225/1992.</p><a href="caso-friuli-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
+<div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon secondaria1"><i class="bi bi-newspaper" aria-hidden="true"></i></div><span class="scheda-fascia">Secondaria I · case study</span><h3>Irpinia 1980</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>2 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Storia, Ed. civica</span></div><p class="scheda-desc">"Fate presto": Pertini in tv, Zamberletti, nascita Servizio Nazionale PC.</p><a href="caso-irpinia-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
+<div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon secondaria1"><i class="bi bi-buildings" aria-hidden="true"></i></div><span class="scheda-fascia">Secondaria I · case study</span><h3>L'Aquila 2009</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>2 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Storia, Scienze</span></div><p class="scheda-desc">Sciame sismico, Commissione Grandi Rischi, Case C.A.S.E., riforma comunicazione del rischio.</p><a href="caso-aquila-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
+<div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon secondaria1"><i class="bi bi-water" aria-hidden="true"></i></div><span class="scheda-fascia">Secondaria I · case study</span><h3>Vajont 1963</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>2 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Storia, Scienze, Ed. civica</span></div><p class="scheda-desc">Disastro annunciato: ascolto della scienza, responsabilità tecnica e politica, Tina Merlin.</p><a href="caso-vajont-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
+<div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon secondaria1"><i class="bi bi-tsunami" aria-hidden="true"></i></div><span class="scheda-fascia">Secondaria I · case study</span><h3>Messina-Reggio 1908</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>2 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Storia, Scienze</span></div><p class="scheda-desc">Tsunami, prima legge antisismica al mondo (R.D.L. 193/1909), cooperazione internazionale.</p><a href="caso-messina-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
+<div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon secondaria1"><i class="bi bi-tools" aria-hidden="true"></i></div><span class="scheda-fascia">Secondaria I · case study</span><h3>Stava 1985</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>2 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Scienze, Ed. civica</span></div><p class="scheda-desc">Responsabilità d'impresa, riforma controlli ambientali, Direttiva Seveso II.</p><a href="caso-stava-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
+<div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon secondaria1"><i class="bi bi-tree" aria-hidden="true"></i></div><span class="scheda-fascia">Secondaria I · case study</span><h3>Sarno 1998</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>2 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Scienze, Geografia</span></div><p class="scheda-desc">Colata detritica, Legge 267/1998, Piani di Assetto Idrogeologico (PAI).</p><a href="caso-sarno-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
+<div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon secondaria1"><i class="bi bi-cloud-rain-heavy" aria-hidden="true"></i></div><span class="scheda-fascia">Secondaria I · case study</span><h3>Versilia 1996</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>2 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Scienze, Geografia</span></div><p class="scheda-desc">Flash flood, nascita dei Centri Funzionali, codici colore allerta meteo, IT-alert.</p><a href="caso-versilia-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
+<div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon secondaria1"><i class="bi bi-snow2" aria-hidden="true"></i></div><span class="scheda-fascia">Secondaria I · case study</span><h3>Rigopiano 2017</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>2 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Scienze, Ed. civica</span></div><p class="scheda-desc">Rischio multiplo concomitante: sisma + neve + viabilità chiusa, responsabilità del Sindaco.</p><a href="caso-rigopiano-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
+<div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon secondaria1"><i class="bi bi-fire" aria-hidden="true"></i></div><span class="scheda-fascia">Secondaria I · case study</span><h3>I vulcani d'Italia</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>2 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Scienze, Geografia</span></div><p class="scheda-desc">Etna, Stromboli, Vesuvio, Campi Flegrei, Vulcano: monitoraggio INGV, piani di evacuazione.</p><a href="caso-vulcani-italia-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
+<div class="col-md-6 col-lg-4"><div class="scheda-card"><div class="scheda-card-icon secondaria1"><i class="bi bi-broadcast" aria-hidden="true"></i></div><span class="scheda-fascia">Secondaria I · case study</span><h3>Campi Flegrei</h3><div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>2 ore</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Scienze, Geografia, Ed. civica</span></div><p class="scheda-desc">Caldera, bradisismo, monitoraggio INGV-OV, piano di evacuazione 500.000 persone.</p><a href="caso-campi-flegrei-secondaria/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a></div></div>
       </div>
 
-      <h3 class="h5 mt-5 mb-3" style="color:var(--scheda-blu);"><i class="bi bi-clipboard-data me-1" aria-hidden="true"></i> Case study delle maxi-emergenze italiane (Sec II)</h3>
+      <h3 class="h5 mt-5 mb-3" id="secondaria2-casi" data-fascia="secondaria2" style="color:var(--scheda-blu);"><i class="bi bi-clipboard-data me-1" aria-hidden="true"></i> Case study delle maxi-emergenze italiane (Sec II)</h3>
       <p class="mb-3 text-muted small">schede di analisi sistemica per la Secondaria II grado. Per ogni evento: dati essenziali, box «Cosa non andava / Cosa è cambiato / Lezioni apprese», domande di analisi e box per il docente.</p>
-      <div class="row g-3 mb-2" data-fascia="secondaria2">
-        <div class="col-md-6 col-lg-4">
+            <div class="row g-3 mb-2" data-fascia="secondaria2">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria2"><i class="bi bi-tsunami" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Secondaria II · case study</span>
@@ -1626,7 +1654,7 @@
             <a href="caso-messina-reggio-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria2"><i class="bi bi-newspaper" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Secondaria II · case study</span>
@@ -1636,7 +1664,7 @@
             <a href="caso-irpinia-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria2"><i class="bi bi-mortarboard-fill" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Secondaria II · case study</span>
@@ -1646,7 +1674,7 @@
             <a href="caso-san-giuliano-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria2"><i class="bi bi-water" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Secondaria II · case study</span>
@@ -1656,7 +1684,7 @@
             <a href="caso-vajont-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria2"><i class="bi bi-bricks" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Secondaria II · case study</span>
@@ -1666,7 +1694,7 @@
             <a href="caso-friuli-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria2"><i class="bi bi-camera-reels-fill" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Secondaria II · case study</span>
@@ -1676,7 +1704,7 @@
             <a href="caso-vermicino-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria2"><i class="bi bi-gear-wide-connected" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Secondaria II · case study</span>
@@ -1686,7 +1714,7 @@
             <a href="caso-stava-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria2"><i class="bi bi-cloud-rain-heavy-fill" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Secondaria II · case study</span>
@@ -1696,7 +1724,7 @@
             <a href="caso-versilia-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria2"><i class="bi bi-house-down-fill" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Secondaria II · case study</span>
@@ -1706,7 +1734,7 @@
             <a href="caso-sarno-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria2"><i class="bi bi-snow" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Secondaria II · case study</span>
@@ -1716,7 +1744,7 @@
             <a href="caso-rigopiano-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria2"><i class="bi bi-fire" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Secondaria II · case study</span>
@@ -1726,7 +1754,7 @@
             <a href="caso-vulcani-italia-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
-        <div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4">
           <div class="scheda-card">
             <div class="scheda-card-icon secondaria2"><i class="bi bi-arrow-up-circle-fill" aria-hidden="true"></i></div>
             <span class="scheda-fascia">Secondaria II · caso in evoluzione</span>
@@ -1734,6 +1762,26 @@
             <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>4 ore + monitoraggio</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Scienze della Terra, Comunicazione</span></div>
             <p class="scheda-desc">Sciami sismici, sollevamento del suolo, livello giallo INGV. Caso attivo da seguire con i bollettini settimanali. Decreto 2023, EXE Flegrei 2024.</p>
             <a href="caso-campi-flegrei-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon secondaria2"><i class="bi bi-activity" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Secondaria II · 14-19 anni</span>
+            <h3>Caso Studio: Amatrice 24 agosto 2016</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>3-4 ore + ricerca</span><span><i class="bi bi-mortarboard me-1" aria-hidden="true"></i>Ed. civica, Scienze, Storia</span></div>
+            <p class="scheda-desc">Analisi sistemica del terremoto del Centro Italia 2016: dati essenziali, domande approfondite (fenomeno fisico, fattori predisponenti, risposta, criticità, lezione, riflessione personale).</p>
+            <a href="caso-amatrice-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
+          </div>
+        </div>
+<div class="col-md-6 col-lg-4">
+          <div class="scheda-card">
+            <div class="scheda-card-icon secondaria2"><i class="bi bi-scale" aria-hidden="true"></i></div>
+            <span class="scheda-fascia">Secondaria II · 16-19 anni · etica</span>
+            <h3>Il Caso L'Aquila 2009</h3>
+            <div class="scheda-meta"><span><i class="bi bi-clock me-1" aria-hidden="true"></i>60 min</span><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita</span></div>
+            <p class="scheda-desc">Il processo alla Commissione Grandi Rischi, citazione del "bicchiere di vino", distinzione fra valutazione scientifica e comunicazione pubblica, principio di precauzione. domande con dilemma personale.</p>
+            <a href="caso-aquila-secondaria2/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
       </div>
@@ -1818,11 +1866,11 @@
           hCase && hCase.classList.contains('schede-hidden'));
       }
 
-      // Mini-indice fascia Infanzia: visibile solo se non si sta filtrando un'altra fascia
-      var idxInfanzia = document.querySelector('.schede-indice-fascia');
-      if (idxInfanzia) {
-        idxInfanzia.classList.toggle('schede-hidden', !!fasciaSel && fasciaSel !== 'infanzia');
-      }
+      // Mini-indici per fascia: ciascuno visibile solo se non si filtra un'altra fascia
+      document.querySelectorAll('.schede-indice-fascia').forEach(function (idx) {
+        var fIdx = idx.getAttribute('data-fascia');
+        idx.classList.toggle('schede-hidden', !!fasciaSel && fasciaSel !== fIdx);
+      });
 
       // Aggiorna counter e messaggio "no results"
       counter.innerHTML = (!q && !fasciaSel)
