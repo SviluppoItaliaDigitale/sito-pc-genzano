@@ -14,7 +14,7 @@ draft: false
 toc: true
 ---
 
-C'è una fotografia che racconta meglio di ogni discorso da cosa nasce il Dipartimento della Protezione Civile italiana. La scattano le agenzie nei giorni successivi al **23 novembre 1980**, lungo le strade dell'Irpinia. Si vedono case spaccate a metà, coperte da una garbatella di polvere e cemento, e ai bordi della strada uomini in abiti civili che scavano a mani nude. Non sono soccorritori: sono parenti delle vittime. I soccorsi organizzati arriveranno **dopo cinque giorni**. Gli abitanti di **Sant'Angelo dei Lombardi**, di **Conza della Campania**, di **Lioni**, di **Laviano**, in quei cinque giorni sentono ancora qualcuno respirare sotto le macerie. Poi, lentamente, sentono solo il silenzio.
+C'è una fotografia che racconta meglio di ogni discorso da cosa nasce il Dipartimento della Protezione Civile italiana. La scattano le agenzie nei giorni successivi al **23 novembre 1980**, lungo le strade dell'Irpinia. Si vedono case spaccate a metà, coperte da una coltre di polvere e cemento, e ai bordi della strada uomini in abiti civili che scavano a mani nude. Non sono soccorritori: sono parenti delle vittime. I soccorsi organizzati arriveranno **dopo cinque giorni**. Gli abitanti di **Sant'Angelo dei Lombardi**, di **Conza della Campania**, di **Lioni**, di **Laviano**, in quei cinque giorni sentono ancora qualcuno respirare sotto le macerie. Poi, lentamente, sentono solo il silenzio.
 
 Quel silenzio diventa un atto di accusa. Diventa la domanda che farà il presidente Sandro Pertini in televisione, due settimane dopo, con la voce che gli si rompe più volte: «**Dove sono stati lo Stato e i suoi Vigili del Fuoco?**».
 
