@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Maiuscolo e minuscolo (Primaria 1ª)</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Primaria: collega ogni lettera maiuscola alla sua minuscola e scrivi le coppie, usando parole della Protezione Civile.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .sezione-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 1rem 0 0.5rem 0; }
+    .sezione-titolo .num {
+      width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff;
+      border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 1rem; flex-shrink: 0;
+    }
+    .sezione-titolo h2 { font-size: 1.05rem; color: var(--scheda-blu); margin: 0; }
+
+    .mm-collega { display: flex; justify-content: space-between; gap: 2rem; margin: 0.6rem 0; }
+    .mm-col { display: flex; flex-direction: column; gap: 0.55rem; }
+    .mm-pallino {
+      font-family: "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700; font-size: 1.5rem; color: var(--scheda-blu);
+      border: 1.5px solid var(--scheda-bordo); border-radius: 8px;
+      width: 3.4rem; height: 2.6rem; display: flex; align-items: center; justify-content: center;
+    }
+    .mm-col.min .mm-pallino { color: var(--scheda-rosso); }
+
+    .mm-griglia { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; margin: 0.5rem 0; }
+    .mm-cella {
+      border: 1.5px solid var(--scheda-bordo); border-radius: 8px; padding: 0.4rem;
+      display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+    }
+    .mm-cella .grande {
+      font-family: "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700; font-size: 1.6rem; color: var(--scheda-blu);
+    }
+    .mm-cella .sep { color: var(--scheda-grigio); }
+    .mm-cella .vuoto { display: inline-block; min-width: 1.6rem; border-bottom: 2px solid var(--scheda-bordo); height: 1.6rem; }
+  </style>
+</head>
+<body>
+
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">← Torna alle schede</a>
+    <span class="scheda-titolo">Maiuscolo e minuscolo — Primaria 1ª</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Maiuscolo e minuscolo</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria (classe 1ª)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 6 anni</span>
+      <span><strong>Obiettivo:</strong> riconoscere la stessa lettera in grande e in piccolo</span>
+      <span><strong>Servono:</strong> matita</span>
+    </div>
+
+    <p class="scheda-intro">
+      Ogni lettera si scrive in due modi: <strong>grande</strong> (maiuscola) e <strong>piccola</strong> (minuscola). Sono la stessa lettera! Impara a riconoscerle: ti servono per leggere ogni parola.
+    </p>
+
+    <div class="sezione-titolo">
+      <span class="num">1</span>
+      <h2>Collega ogni lettera grande alla sua piccola</h2>
+    </div>
+
+    <div class="mm-collega">
+      <div class="mm-col grande" role="list" aria-label="Lettere maiuscole">
+        <span class="mm-pallino" role="listitem">C</span>
+        <span class="mm-pallino" role="listitem">A</span>
+        <span class="mm-pallino" role="listitem">P</span>
+        <span class="mm-pallino" role="listitem">R</span>
+        <span class="mm-pallino" role="listitem">M</span>
+        <span class="mm-pallino" role="listitem">Z</span>
+      </div>
+      <div class="mm-col min" role="list" aria-label="Lettere minuscole">
+        <span class="mm-pallino" role="listitem">r</span>
+        <span class="mm-pallino" role="listitem">z</span>
+        <span class="mm-pallino" role="listitem">a</span>
+        <span class="mm-pallino" role="listitem">m</span>
+        <span class="mm-pallino" role="listitem">c</span>
+        <span class="mm-pallino" role="listitem">p</span>
+      </div>
+    </div>
+    <p style="font-size: 0.82rem; color: #495057; margin: 0.2rem 0;">Tira una linea con la matita dalla lettera grande alla sua lettera piccola.</p>
+
+    <div class="sezione-titolo">
+      <span class="num">2</span>
+      <h2>Scrivi tu la lettera piccola accanto alla grande</h2>
+    </div>
+
+    <div class="mm-griglia">
+      <div class="mm-cella"><span class="grande">S</span><span class="sep" aria-hidden="true">→</span><span class="vuoto" aria-hidden="true"></span></div>
+      <div class="mm-cella"><span class="grande">O</span><span class="sep" aria-hidden="true">→</span><span class="vuoto" aria-hidden="true"></span></div>
+      <div class="mm-cella"><span class="grande">T</span><span class="sep" aria-hidden="true">→</span><span class="vuoto" aria-hidden="true"></span></div>
+      <div class="mm-cella"><span class="grande">U</span><span class="sep" aria-hidden="true">→</span><span class="vuoto" aria-hidden="true"></span></div>
+      <div class="mm-cella"><span class="grande">F</span><span class="sep" aria-hidden="true">→</span><span class="vuoto" aria-hidden="true"></span></div>
+      <div class="mm-cella"><span class="grande">I</span><span class="sep" aria-hidden="true">→</span><span class="vuoto" aria-hidden="true"></span></div>
+      <div class="mm-cella"><span class="grande">N</span><span class="sep" aria-hidden="true">→</span><span class="vuoto" aria-hidden="true"></span></div>
+      <div class="mm-cella"><span class="grande">G</span><span class="sep" aria-hidden="true">→</span><span class="vuoto" aria-hidden="true"></span></div>
+    </div>
+
+    <div class="sezione-titolo">
+      <span class="num">3</span>
+      <h2>La stessa parola, scritta nei due modi</h2>
+    </div>
+    <p style="font-size: 0.95rem; margin: 0.2rem 0;">
+      <span style="font-family:'Trebuchet MS',sans-serif; font-weight:700; letter-spacing:0.1em; color:var(--scheda-blu);">CASCO</span>
+      &nbsp;è uguale a&nbsp;
+      <span style="font-family:'Trebuchet MS',sans-serif; font-weight:700; letter-spacing:0.1em; color:var(--scheda-rosso);">casco</span>.
+      Leggile: dicono la stessa cosa. Ora prova con <strong>ACQUA / acqua</strong> e <strong>RADIO / radio</strong>.
+    </p>
+
+    <div class="scheda-docente">
+      <strong>Per la maestra/maestro — soluzioni:</strong>
+      <ul style="margin: 0.3rem 0 0 1rem; padding: 0;">
+        <li><strong>Sezione 1:</strong> C–c, A–a, P–p, R–r, M–m, Z–z.</li>
+        <li><strong>Sezione 2:</strong> S→s, O→o, T→t, U→u, F→f, I→i, N→n, G→g.</li>
+        <li><strong>Estensione orale:</strong> mostrare che alcune minuscole somigliano molto alla maiuscola (C/c, O/o, S/s, U/u, Z/z), altre cambiano forma (A/a, R/r, G/g): far notare le differenze.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Maiuscolo e minuscolo" · Primaria 1ª · letto-scrittura · rev. 2026</span>
+    </footer>
+
+  </article>
+
+</body>
+</html>
