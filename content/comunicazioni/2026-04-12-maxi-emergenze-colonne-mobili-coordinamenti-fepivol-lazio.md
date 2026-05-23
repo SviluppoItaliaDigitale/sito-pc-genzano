@@ -229,7 +229,7 @@ Le tende sono attrezzate con:
 
 **4. Vita quotidiana del campo**
 
-Ogni mattina il **Capo Campo** riunisce i responsabili delle squadre per un **briefing** in cui assegna i compiti della giornata: cucina, pulizie, montaggio di nuove tende, servizi ai residenti.
+Ogni mattina il **Capo Campo** riunisce i responsabili delle squadre per una **riunione informativa** in cui assegna i compiti della giornata: cucina, pulizie, montaggio di nuove tende, servizi ai residenti.
 
 Ai volontari viene chiesto — preferibilmente durante la colazione — di **firmare il foglio presenze** predisposto dalla segreteria. È un passaggio burocratico ma essenziale: serve per il riconoscimento delle giornate di servizio utili al mantenimento dei benefici dell'art. 39.
 
@@ -249,7 +249,7 @@ Una volta che le acque si sono ritirate, iniziano le operazioni di **ripristino*
 - **lavaggio strade** con autobotti, moduli AIB e attrezzi manuali (pale, spazzoloni, tiraacqua)
 - **convogliamento dell'acqua di lavaggio** nella rete fognaria o, se compromessa, tramite **autospurghi** attivati dal Comune
 
-Anche durante le alluvioni, il **briefing mattutino** resta il momento di organizzazione della giornata: le squadre vengono divise in base alle richieste che pervengono al **COC** (Centro Operativo Comunale) della zona colpita.
+Anche durante le alluvioni, la **riunione informativa mattutina** resta il momento di organizzazione della giornata: le squadre vengono divise in base alle richieste che pervengono al **COC** (Centro Operativo Comunale) della zona colpita.
 
 Differentemente dal terremoto, **i volontari non dormono in tenda**: vengono alloggiati in **strutture sicure** (palestre, scuole, strutture comunali adattate), dove possono anche **riporre mezzi e attrezzature** al termine della giornata.
 

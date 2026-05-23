@@ -122,7 +122,7 @@ Il Corpo Forestale contribuisce a:
 ## Il rapporto con i volontari di PC
 
 Nelle attività AIB estive il Corpo Forestale e il volontariato di PC si incontrano sul campo:
-- **Briefing** coordinati.
+- **Riunione informativa** coordinati.
 - **Postazioni** di avvistamento condivise.
 - **Comunicazioni radio** integrate.
 - **Pattuglie miste** in alcuni contesti.

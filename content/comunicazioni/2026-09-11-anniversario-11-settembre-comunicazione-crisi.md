@@ -27,7 +27,7 @@ Dopo l'11 settembre, le agenzie di PC di molti Paesi hanno rivisto:
 - la **comunicazione inter-agenzia** (più condivisione, meno gelosie di competenza);
 - la **comunicazione pubblica in tempo reale** (una conferenza stampa ogni ora, portavoce unico e riconoscibile);
 - la **pianificazione di scenari multi-rischio** (attentato, calamità, incidente tecnologico, pandemie);
-- la **gestione della disinformazione** (fake news, voci, confusione);
+- la **gestione della disinformazione** (notizie false, voci, confusione);
 - la **formazione del personale** in comunicazione di crisi e risk communication;
 - il **ruolo del volontariato organizzato** come primo contatto con la popolazione.
 

@@ -51,7 +51,7 @@ Sul nostro sito:
 - [Rischio incendio boschivo — pagina operativa](/rischi-prevenzione/rischio-incendio/).
 - [Antincendio boschivo: triangolo del fuoco e attrezzature](/comunicazioni/2026-04-11-antincendio-boschivo-triangolo-fuoco-attrezzature-tecniche-attacco/).
 - [Esercitazione antincendio boschivo](/comunicazioni/2026-04-15-esercitazione-antincendio-boschivo-preparazione/).
-- [Open Day antincendio boschivo Aprilia](/comunicazioni/2026-05-08-open-day-antincendio-boschivo-aprilia/).
+- [Giornata aperta antincendio boschivo Aprilia](/comunicazioni/2026-05-08-open-day-antincendio-boschivo-aprilia/).
 - [Chi siamo](/chi-siamo/).
 - [Diventa volontario](/diventa-volontario/).
 

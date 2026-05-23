@@ -67,7 +67,7 @@ Un volontario che partecipa ai turni AIB trova tipicamente:
 - **Postazione**: assegnata dal Coordinamento.
 - **Dotazione**: DPI, radio, binocolo, acqua, snack.
 - **Comunicazione**: check-in radio all'arrivo, comunicazioni periodiche, check-out.
-- **Briefing** pre-turno e debriefing finale.
+- **Riunione informativa** pre-turno e debriefing finale.
 
 ## Cosa fare se avvisti un incendio
 

@@ -67,7 +67,7 @@ Le grandi emergenze italiane (terremoti, alluvioni) hanno mostrato che **dove ci
 - **Autorizzazioni** amministrative.
 
 ### Svolgimento (ore o giorni)
-- **Briefing** iniziale.
+- **Riunione informativa** iniziale.
 - **Attivazione** dello scenario.
 - **Sviluppo** secondo timeline prefissata.
 - **Monitoraggio** da parte di osservatori.
