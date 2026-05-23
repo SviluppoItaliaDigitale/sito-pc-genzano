@@ -15,7 +15,7 @@
 
 {{- with $m }}
 {{- $c := .corrente }}
-  <div class="meteo-gz" role="img" aria-label="Meteo a Genzano di Roma, {{ .data_lunga }}: ora {{ $c.temp }} gradi, {{ $c.cielo | lower }}, percepita {{ $c.percepita }} gradi, umidità {{ $c.umidita }} per cento, vento {{ $c.vento }} chilometri orari. Previsione dei prossimi giorni a seguire.">
+  <div class="meteo-gz no-gloss" role="img" aria-label="Meteo a Genzano di Roma, {{ .data_lunga }}: ora {{ $c.temp }} gradi, {{ $c.cielo | lower }}, percepita {{ $c.percepita }} gradi, umidità {{ $c.umidita }} per cento, vento {{ $c.vento }} chilometri orari. Previsione dei prossimi giorni a seguire.">
     <div class="meteo-gz-head">
       <span class="meteo-gz-icona" aria-hidden="true"><svg viewBox="0 0 56 56" width="58" height="58">{{ $c.icona | safeHTML }}</svg></span>
       <div>
