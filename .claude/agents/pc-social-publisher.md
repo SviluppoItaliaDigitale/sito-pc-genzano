@@ -66,8 +66,8 @@ Possono essere narrativi, mostrare attività del Gruppo, raccontare formazione. 
 
 - Caption ≤2200 caratteri (limite tecnico).
 - **Link in bio**: dato che IG non rende cliccabili gli URL nelle caption, scrivi "Link in bio" → istruisci l'utente di aggiornare il bio.
-- **Carosello**: max 10 slide. La 1ª slide è la copertina (più gente vede solo quella). La 10ª slide può essere "Approfondimento sul sito" con call to action chiara.
-- **Story**: 1 sola immagine 1080x1920, dura 24h. Per messaggi durevoli usa post.
+- **Carosello**: max 10 slide. Ordine: title card → citazione (`social_citazione`) → punti "In sintesi" (`social_punti`) → foto. La 1ª slide è la copertina (più gente vede solo quella).
+- **Story**: 1 sola immagine 1080x1920, dura 24h. Per messaggi durevoli usa il feed.
 
 ### Specifico Telegram
 
@@ -78,8 +78,8 @@ Possono essere narrativi, mostrare attività del Gruppo, raccontare formazione. 
 
 In `social-bozze/<slug>/`:
 
-1. **`instagram-post.jpg`** o **`instagram-post-N.jpg`** (carosello): formato JPEG, 1080×1080. Verifica con `file social-bozze/<slug>/instagram-post*.jpg` che dica `JPEG image data ... 1080x1080`. Se WebP → la generazione è andata storta (fix 2 maggio 2026 ha cambiato formato perché IG rifiuta WebP).
-2. **`instagram-story.jpg`**: 1080×1920.
+1. **`feed-post.jpg`** (post singolo) o **`feed-carosello-N.jpg`** (carosello): formato JPEG, 1080×1350 (4:5). Verifica con `file social-bozze/<slug>/feed-*.jpg` che dica `JPEG image data ... 1080x1350`. Se WebP → la generazione è andata storta (IG rifiuta WebP).
+2. **`storia.jpg`**: 1080×1920 (9:16).
 3. **Peso file**: ottimale 100-300 KB per JPG. Se >500 KB, suggerisci ri-generazione con quality 85.
 4. **Logo + brand presenti**: visivamente verificabili (testo "PROTEZIONE CIVILE / Gruppo Comunale Volontari — Genzano di Roma" su fascia blu in basso).
 
@@ -104,10 +104,10 @@ In `social-bozze/<slug>/`:
 | Instagram | ⚠️ rivedere | sostituito hashtag generico | "Link in bio" da aggiornare manualmente |
 | Telegram | ✅ ready | aggiunto link fonte CFR | - |
 
-🖼️ IMMAGINI INSTAGRAM:
-  - instagram-post-1.jpg: ✅ 1080x1080 JPG, 142 KB
-  - instagram-post-2.jpg: ✅ 1080x1080 JPG, 167 KB
-  - instagram-story.jpg: ✅ 1080x1920 JPG, 198 KB
+🖼️ IMMAGINI:
+  - feed-carosello-1.jpg: ✅ 1080x1350 JPG, 142 KB
+  - feed-carosello-2.jpg: ✅ 1080x1350 JPG, 167 KB
+  - storia.jpg: ✅ 1080x1920 JPG, 198 KB
 
 📋 RACCOMANDAZIONI PRIMA DELLA PUBBLICAZIONE:
   1. Aggiornare il bio Instagram con il link all'articolo

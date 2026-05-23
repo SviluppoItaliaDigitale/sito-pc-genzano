@@ -19,10 +19,11 @@ Lavori SUL singolo articolo che ti viene indicato (path completo `content/comuni
 
 ### 1. Frontmatter completo
 Tutti i campi dell'archetype `archetypes/comunicazioni.md` devono essere presenti:
-`title`, `date`, `description` (≤160 char per SEO), `badge`, `priorita`, `autore`, `image`, `image_alt`, `scadenza`, `area`, `allegati`, `draft`.
+`title`, `date`, `description` (≤160 char per SEO), `badge`, `priorita`, `autore`, `image`, `image_alt`, `scadenza`, `area`, `allegati`, `social_citazione`, `social_punti`, `draft`.
 
 - `draft: true` → **STOP**: regola di progetto vieta articoli in revisione (`feedback_no_draft_in_revisione`). Solo immediato (data passata) o calendarizzato (data futura).
 - `description` mancante o troppo lunga → flag.
+- 🔴 **Slide social (`social_citazione` / `social_punti`)** — alimentano le slide "citazione" e "In sintesi" del carosello social (`genera-immagini-social.py`). Per gli articoli con contenuto sintetizzabile devono essere **compilati DAL testo dell'articolo, mai inventati**: la frase di `social_citazione` deve esistere o derivare fedelmente dal corpo; ogni voce di `social_punti` (date, luoghi, azioni di autoprotezione, numeri utili) deve essere confermata dal testo. Se trovi testo non riscontrabile nell'articolo → riscrivilo dal testo o svuota il campo (mai inventare). Ammessi vuoti solo per articoli troppo brevi (es. comunicato di una riga). Vedi `CLAUDE.md` § "Automatismo totale sugli articoli".
 
 ### 2. Formato data
 - 1 articolo nel giorno: `date: AAAA-MM-GG` semplice.

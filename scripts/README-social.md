@@ -1,8 +1,9 @@
 # Generazione bozze social automatica
 
 Sistema per generare bozze di post social (X, Facebook, Instagram, Telegram) +
-immagini Instagram (post 1080×1080, story 1080×1920) a partire dagli articoli
-del sito istituzionale.
+immagini per il feed (post/carosello 1080×1350, 4:5) e per le storie
+(1080×1920, 9:16), font ufficiale Titillium Web, a partire dagli articoli del
+sito istituzionale.
 
 ## Cosa fa
 
