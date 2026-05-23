@@ -6461,20 +6461,28 @@ html.a11y-pause-anim .consulta-rapida .cr-card:hover { transform: none; }
 /* =========================================================================
    METEO LAZIO v1.0 — cartina province (shortcode meteo-lazio) + riquadro Genzano
    ========================================================================= */
-.meteo-lazio { margin: 1.2rem 0; }
-.meteo-lazio .meteo-mappa { margin: 0 0 1rem; }
+/* contenitore unico: cartina e riquadro condividono larghezza e bordi (allineati) */
+.meteo-lazio { max-width: 640px; margin: 1.2rem auto; }
+.meteo-lazio .meteo-mappa,
+.meteo-lazio .meteo-mappa img,
+.meteo-lazio .meteo-gz { box-sizing: border-box; }
+/* annulla la cornice ereditata da .article-body figure (680px) per allineare al riquadro */
+.meteo-lazio .meteo-mappa {
+  max-width: 100%; margin: 0 0 1rem;
+  background: none; padding: 0; border: none; border-radius: 0; box-shadow: none;
+}
 .meteo-lazio .meteo-mappa img {
-  width: 100%; max-width: 640px; height: auto; display: block;
-  margin: 0 auto; border: 1px solid #d4dce6; border-radius: 10px; background: #fff;
+  width: 100%; max-width: 100%; height: auto; display: block;
+  border: 1px solid #d4dce6; border-radius: 10px; background: #fff;
 }
 .meteo-lazio .meteo-mappa figcaption {
   font-size: 0.82rem; color: #6c757d; font-style: italic;
-  text-align: center; margin-top: 0.4rem;
+  text-align: center; margin-top: 0.4rem; border-top: none; padding: 0;
 }
 /* riquadro Genzano */
 .meteo-gz {
   background: linear-gradient(135deg, #003366, #0a4f8c); color: #fff;
-  border-radius: 14px; padding: 1.1rem 1.3rem; max-width: 640px; margin: 0 auto;
+  border-radius: 14px; padding: 1.1rem 1.3rem; max-width: 100%; margin: 0;
 }
 .meteo-gz-head { display: flex; align-items: center; gap: 1rem; }
 .meteo-gz-icona { flex: 0 0 auto; line-height: 0; }
