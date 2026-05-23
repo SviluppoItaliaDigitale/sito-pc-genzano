@@ -113,7 +113,7 @@ compose_instagram() {
   opencli browser open "$URL_IG_PAGE"
   opencli browser click --selector "$SEL_IG_CREATE_TRIGGER"
   # Upload immagini IG (carosello)
-  for img in "$img_dir"/instagram-post-*.jpg "$img_dir"/instagram-post.jpg; do
+  for img in "$img_dir"/feed-carosello-*.jpg "$img_dir"/feed-post.jpg; do
     [ -f "$img" ] && opencli browser upload --file "$img"
   done
   opencli browser wait --selector "$SEL_IG_TEXTAREA" --timeout 15000

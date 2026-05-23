@@ -9,8 +9,8 @@
 #
 # Cosa fa, per ogni articolo:
 #   1) chiama scripts/genera-social.py (Gemini) -> 4 file .txt in social-bozze/AAAA/MM/<slug>/
-#   2) chiama scripts/genera-immagini-social.py (Pillow) -> .webp nella STESSA cartella
-#      social-bozze/AAAA/MM/<slug>/ (instagram-post*.webp + instagram-story.webp)
+#   2) chiama scripts/genera-immagini-social.py (Pillow) -> .jpg nella STESSA cartella
+#      social-bozze/AAAA/MM/<slug>/ (feed-post/feed-carosello-*.jpg + storia.jpg)
 #
 # Variabili richieste:
 #   GEMINI_API_KEY  (vedi README-social.md per setup)
