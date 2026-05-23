@@ -3,33 +3,83 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Scheda da colorare: Trova la strada per il punto di raccolta — Infanzia</title>
-  <meta name="description" content="Scheda fotocopiabile colorabile per la Scuola dell'Infanzia. Gioco labirinto in cui il bambino deve raggiungere il punto di raccolta evitando i pericoli (ascensore, fumo, pozzanghere, alberi caduti, transenne).">
+  <title>Scheda stampabile: Trova la strada per il punto di raccolta — Infanzia</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola dell'Infanzia: gioco labirinto con percorso valido. Il bambino raggiunge il punto di raccolta evitando i cinque pericoli (ascensore, fumo, pozzanghera, albero caduto, transenne).">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
   <style>
-    body { margin: 0; padding: 0; background: #f4f7fb; }
-    .scheda-immagine-wrapper { max-width: 900px; margin: 1rem auto; padding: 0 1rem; }
-    .scheda-immagine-wrapper img { width: 100%; height: auto; display: block; box-shadow: 0 4px 20px rgba(0,0,0,0.12); border-radius: 4px; }
-    @media print {
-      body { background: #fff; }
-      .scheda-immagine-wrapper { max-width: 100%; margin: 0; padding: 0; }
-      .scheda-immagine-wrapper img { box-shadow: none; border-radius: 0; width: 100%; height: auto; max-height: 100vh; object-fit: contain; }
-      @page { size: A4 portrait; margin: 8mm; }
-    }
+    .lab-wrap { max-width: 600px; margin: 0.4rem auto; }
+    .lab-legenda { display: flex; flex-wrap: wrap; gap: 0.5rem 1.1rem; justify-content: center; margin: 0.6rem 0; font-size: 0.9rem; }
+    .lab-legenda span { display: inline-flex; align-items: center; gap: 0.3rem; }
+    .lab-legenda .emo { font-size: 1.3rem; }
+    .lab-ricorda { background: #eaf2fb; border-left: 4px solid var(--scheda-blu); border-radius: 0 8px 8px 0; padding: 0.6rem 0.9rem; margin: 0.7rem 0; font-size: 0.95rem; }
+    .lab-soluzione { max-width: 320px; margin: 0.4rem 0; border: 1px solid var(--scheda-bordo); border-radius: 6px; }
   </style>
 </head>
 <body>
+
   <div class="scheda-toolbar no-print">
     <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">← Torna alle schede</a>
-    <span class="scheda-titolo">Da colorare: Trova la strada per il punto di raccolta — Infanzia</span>
+    <span class="scheda-titolo">Trova la strada per il punto di raccolta — Infanzia</span>
     <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
   </div>
 
-  <main class="scheda-immagine-wrapper">
-    <img src="scheda-completa.png"
-         alt="Scheda gioco-labirinto: trova la strada per il punto di raccolta. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo 'Trova la strada per il punto di raccolta'. Sottotitolo 'Aiuta il bambino a raggiungere il punto di raccolta seguendo la strada giusta e evitando i pericoli'. A sinistra in alto un bambino con zainetto è il punto di partenza. Il labirinto presenta 5 pericoli marcati con una X da evitare: ascensore, fumo, pozzanghera con acqua, albero caduto con rami spezzati, transenne stradali. A destra in basso il cartello 'Punto di raccolta'. Riquadro finale con nuvoletta sorridente e cuore 'Ricorda stai calmo chiedi aiuto e vai sempre in un posto sicuro'. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
-  </main>
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Trova la strada per il punto di raccolta</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola dell'Infanzia</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 4-5 anni</span>
+      <span><strong>Obiettivo:</strong> raggiungere il punto di raccolta evitando i pericoli</span>
+      <span><strong>Servono:</strong> matita o pennarello</span>
+    </div>
+
+    <p class="scheda-intro">
+      Aiuta il bambino con lo zainetto a raggiungere il <strong>punto di raccolta</strong> 📍. Segui la strada con la matita. <strong>Attenzione:</strong> non passare dove c'è una <span style="color:#dc3545;font-weight:700;">✗</span>, sono i pericoli da evitare!
+    </p>
+
+    <div class="lab-legenda" role="note" aria-label="I cinque pericoli da evitare">
+      <span><span class="emo" aria-hidden="true">🛗</span> ascensore</span>
+      <span><span class="emo" aria-hidden="true">💨</span> fumo</span>
+      <span><span class="emo" aria-hidden="true">💧</span> pozzanghera</span>
+      <span><span class="emo" aria-hidden="true">🌳</span> albero caduto</span>
+      <span><span class="emo" aria-hidden="true">🚧</span> transenne</span>
+    </div>
+
+    <div class="lab-wrap">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 608 448" role="img" aria-label="Labirinto: dal bambino con lo zainetto fino al punto di raccolta, evitando i cinque pericoli segnati con la X." style="width:100%;height:auto;"><rect x="0" y="0" width="608" height="448" fill="#ffffff"/><g stroke="#003366" stroke-width="6" stroke-linecap="round" fill="none"><line x1="24" y1="24" x2="104" y2="24"/><line x1="24" y1="104" x2="104" y2="104"/><line x1="24" y1="24" x2="24" y2="104"/><line x1="104" y1="24" x2="184" y2="24"/><line x1="104" y1="104" x2="184" y2="104"/><line x1="184" y1="24" x2="264" y2="24"/><line x1="264" y1="24" x2="264" y2="104"/><line x1="264" y1="24" x2="344" y2="24"/><line x1="264" y1="104" x2="344" y2="104"/><line x1="264" y1="24" x2="264" y2="104"/><line x1="344" y1="24" x2="424" y2="24"/><line x1="344" y1="104" x2="424" y2="104"/><line x1="424" y1="24" x2="504" y2="24"/><line x1="424" y1="104" x2="504" y2="104"/><line x1="504" y1="24" x2="584" y2="24"/><line x1="584" y1="24" x2="584" y2="104"/><line x1="24" y1="104" x2="104" y2="104"/><line x1="24" y1="184" x2="104" y2="184"/><line x1="24" y1="104" x2="24" y2="184"/><line x1="104" y1="104" x2="184" y2="104"/><line x1="184" y1="104" x2="184" y2="184"/><line x1="184" y1="184" x2="264" y2="184"/><line x1="184" y1="104" x2="184" y2="184"/><line x1="264" y1="104" x2="344" y2="104"/><line x1="264" y1="184" x2="344" y2="184"/><line x1="344" y1="104" x2="424" y2="104"/><line x1="344" y1="184" x2="424" y2="184"/><line x1="424" y1="104" x2="504" y2="104"/><line x1="424" y1="184" x2="504" y2="184"/><line x1="584" y1="104" x2="584" y2="184"/><line x1="24" y1="184" x2="104" y2="184"/><line x1="24" y1="184" x2="24" y2="264"/><line x1="104" y1="264" x2="184" y2="264"/><line x1="184" y1="184" x2="264" y2="184"/><line x1="184" y1="264" x2="264" y2="264"/><line x1="264" y1="184" x2="344" y2="184"/><line x1="344" y1="184" x2="424" y2="184"/><line x1="344" y1="264" x2="424" y2="264"/><line x1="424" y1="184" x2="504" y2="184"/><line x1="504" y1="184" x2="504" y2="264"/><line x1="424" y1="264" x2="504" y2="264"/><line x1="584" y1="184" x2="584" y2="264"/><line x1="504" y1="184" x2="504" y2="264"/><line x1="24" y1="264" x2="24" y2="344"/><line x1="104" y1="264" x2="184" y2="264"/><line x1="184" y1="264" x2="184" y2="344"/><line x1="184" y1="264" x2="264" y2="264"/><line x1="184" y1="344" x2="264" y2="344"/><line x1="184" y1="264" x2="184" y2="344"/><line x1="344" y1="264" x2="344" y2="344"/><line x1="264" y1="344" x2="344" y2="344"/><line x1="344" y1="264" x2="424" y2="264"/><line x1="344" y1="264" x2="344" y2="344"/><line x1="424" y1="264" x2="504" y2="264"/><line x1="504" y1="264" x2="504" y2="344"/><line x1="584" y1="264" x2="584" y2="344"/><line x1="504" y1="264" x2="504" y2="344"/><line x1="104" y1="344" x2="104" y2="424"/><line x1="24" y1="424" x2="104" y2="424"/><line x1="24" y1="344" x2="24" y2="424"/><line x1="104" y1="424" x2="184" y2="424"/><line x1="104" y1="344" x2="104" y2="424"/><line x1="184" y1="344" x2="264" y2="344"/><line x1="184" y1="424" x2="264" y2="424"/><line x1="264" y1="344" x2="344" y2="344"/><line x1="264" y1="424" x2="344" y2="424"/><line x1="424" y1="344" x2="424" y2="424"/><line x1="344" y1="424" x2="424" y2="424"/><line x1="424" y1="424" x2="504" y2="424"/><line x1="424" y1="344" x2="424" y2="424"/><line x1="584" y1="344" x2="584" y2="424"/><line x1="504" y1="424" x2="584" y2="424"/></g><rect x="30" y="30" width="68" height="68" rx="8" fill="#cfe2ff" stroke="#003366" stroke-width="3"/><text x="64" y="68" font-size="32" text-anchor="middle">🧒</text><text x="64" y="97" font-size="12" text-anchor="middle" fill="#003366" font-family="Trebuchet MS,sans-serif" font-weight="700">PARTI</text><rect x="510" y="350" width="68" height="68" rx="8" fill="#d1e7dd" stroke="#198754" stroke-width="3"/><text x="544" y="386" font-size="30" text-anchor="middle">📍</text><text x="544" y="417" font-size="10" text-anchor="middle" fill="#0f5132" font-family="Trebuchet MS,sans-serif" font-weight="700">RACCOLTA</text><text x="304" y="72" font-size="28" text-anchor="middle">🛗</text><text x="304" y="77" font-size="46" text-anchor="middle" fill="#dc3545" font-weight="900" opacity="0.8">✗</text><text x="464" y="232" font-size="28" text-anchor="middle">💨</text><text x="464" y="237" font-size="46" text-anchor="middle" fill="#dc3545" font-weight="900" opacity="0.8">✗</text><text x="224" y="312" font-size="28" text-anchor="middle">💧</text><text x="224" y="317" font-size="46" text-anchor="middle" fill="#dc3545" font-weight="900" opacity="0.8">✗</text><text x="64" y="392" font-size="28" text-anchor="middle">🌳</text><text x="64" y="397" font-size="46" text-anchor="middle" fill="#dc3545" font-weight="900" opacity="0.8">✗</text><text x="64" y="152" font-size="28" text-anchor="middle">🚧</text><text x="64" y="157" font-size="46" text-anchor="middle" fill="#dc3545" font-weight="900" opacity="0.8">✗</text></svg>
+    </div>
+
+    <div class="lab-ricorda">
+      <strong style="color: var(--scheda-blu);">Ricorda 💙</strong> — in un'emergenza: <strong>stai calmo</strong>, <strong>chiedi aiuto</strong> a un adulto e vai sempre in un <strong>posto sicuro</strong>.
+    </div>
+
+    <div class="scheda-docente">
+      <strong>Per la maestra/maestro — soluzione:</strong>
+      <div class="lab-soluzione">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 608 448" role="img" aria-label="Labirinto: dal bambino con lo zainetto fino al punto di raccolta, evitando i cinque pericoli segnati con la X." style="width:100%;height:auto;"><rect x="0" y="0" width="608" height="448" fill="#ffffff"/><polyline points="64,64 144,64 224,64 224,144 304,144 384,144 464,144 544,144 544,224 544,304 544,384" fill="none" stroke="#dc3545" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/><g stroke="#003366" stroke-width="6" stroke-linecap="round" fill="none"><line x1="24" y1="24" x2="104" y2="24"/><line x1="24" y1="104" x2="104" y2="104"/><line x1="24" y1="24" x2="24" y2="104"/><line x1="104" y1="24" x2="184" y2="24"/><line x1="104" y1="104" x2="184" y2="104"/><line x1="184" y1="24" x2="264" y2="24"/><line x1="264" y1="24" x2="264" y2="104"/><line x1="264" y1="24" x2="344" y2="24"/><line x1="264" y1="104" x2="344" y2="104"/><line x1="264" y1="24" x2="264" y2="104"/><line x1="344" y1="24" x2="424" y2="24"/><line x1="344" y1="104" x2="424" y2="104"/><line x1="424" y1="24" x2="504" y2="24"/><line x1="424" y1="104" x2="504" y2="104"/><line x1="504" y1="24" x2="584" y2="24"/><line x1="584" y1="24" x2="584" y2="104"/><line x1="24" y1="104" x2="104" y2="104"/><line x1="24" y1="184" x2="104" y2="184"/><line x1="24" y1="104" x2="24" y2="184"/><line x1="104" y1="104" x2="184" y2="104"/><line x1="184" y1="104" x2="184" y2="184"/><line x1="184" y1="184" x2="264" y2="184"/><line x1="184" y1="104" x2="184" y2="184"/><line x1="264" y1="104" x2="344" y2="104"/><line x1="264" y1="184" x2="344" y2="184"/><line x1="344" y1="104" x2="424" y2="104"/><line x1="344" y1="184" x2="424" y2="184"/><line x1="424" y1="104" x2="504" y2="104"/><line x1="424" y1="184" x2="504" y2="184"/><line x1="584" y1="104" x2="584" y2="184"/><line x1="24" y1="184" x2="104" y2="184"/><line x1="24" y1="184" x2="24" y2="264"/><line x1="104" y1="264" x2="184" y2="264"/><line x1="184" y1="184" x2="264" y2="184"/><line x1="184" y1="264" x2="264" y2="264"/><line x1="264" y1="184" x2="344" y2="184"/><line x1="344" y1="184" x2="424" y2="184"/><line x1="344" y1="264" x2="424" y2="264"/><line x1="424" y1="184" x2="504" y2="184"/><line x1="504" y1="184" x2="504" y2="264"/><line x1="424" y1="264" x2="504" y2="264"/><line x1="584" y1="184" x2="584" y2="264"/><line x1="504" y1="184" x2="504" y2="264"/><line x1="24" y1="264" x2="24" y2="344"/><line x1="104" y1="264" x2="184" y2="264"/><line x1="184" y1="264" x2="184" y2="344"/><line x1="184" y1="264" x2="264" y2="264"/><line x1="184" y1="344" x2="264" y2="344"/><line x1="184" y1="264" x2="184" y2="344"/><line x1="344" y1="264" x2="344" y2="344"/><line x1="264" y1="344" x2="344" y2="344"/><line x1="344" y1="264" x2="424" y2="264"/><line x1="344" y1="264" x2="344" y2="344"/><line x1="424" y1="264" x2="504" y2="264"/><line x1="504" y1="264" x2="504" y2="344"/><line x1="584" y1="264" x2="584" y2="344"/><line x1="504" y1="264" x2="504" y2="344"/><line x1="104" y1="344" x2="104" y2="424"/><line x1="24" y1="424" x2="104" y2="424"/><line x1="24" y1="344" x2="24" y2="424"/><line x1="104" y1="424" x2="184" y2="424"/><line x1="104" y1="344" x2="104" y2="424"/><line x1="184" y1="344" x2="264" y2="344"/><line x1="184" y1="424" x2="264" y2="424"/><line x1="264" y1="344" x2="344" y2="344"/><line x1="264" y1="424" x2="344" y2="424"/><line x1="424" y1="344" x2="424" y2="424"/><line x1="344" y1="424" x2="424" y2="424"/><line x1="424" y1="424" x2="504" y2="424"/><line x1="424" y1="344" x2="424" y2="424"/><line x1="584" y1="344" x2="584" y2="424"/><line x1="504" y1="424" x2="584" y2="424"/></g><rect x="30" y="30" width="68" height="68" rx="8" fill="#cfe2ff" stroke="#003366" stroke-width="3"/><text x="64" y="68" font-size="32" text-anchor="middle">🧒</text><text x="64" y="97" font-size="12" text-anchor="middle" fill="#003366" font-family="Trebuchet MS,sans-serif" font-weight="700">PARTI</text><rect x="510" y="350" width="68" height="68" rx="8" fill="#d1e7dd" stroke="#198754" stroke-width="3"/><text x="544" y="386" font-size="30" text-anchor="middle">📍</text><text x="544" y="417" font-size="10" text-anchor="middle" fill="#0f5132" font-family="Trebuchet MS,sans-serif" font-weight="700">RACCOLTA</text><text x="304" y="72" font-size="28" text-anchor="middle">🛗</text><text x="304" y="77" font-size="46" text-anchor="middle" fill="#dc3545" font-weight="900" opacity="0.8">✗</text><text x="464" y="232" font-size="28" text-anchor="middle">💨</text><text x="464" y="237" font-size="46" text-anchor="middle" fill="#dc3545" font-weight="900" opacity="0.8">✗</text><text x="224" y="312" font-size="28" text-anchor="middle">💧</text><text x="224" y="317" font-size="46" text-anchor="middle" fill="#dc3545" font-weight="900" opacity="0.8">✗</text><text x="64" y="392" font-size="28" text-anchor="middle">🌳</text><text x="64" y="397" font-size="46" text-anchor="middle" fill="#dc3545" font-weight="900" opacity="0.8">✗</text><text x="64" y="152" font-size="28" text-anchor="middle">🚧</text><text x="64" y="157" font-size="46" text-anchor="middle" fill="#dc3545" font-weight="900" opacity="0.8">✗</text></svg>
+      </div>
+      <ul style="margin: 0.3rem 0 0 1rem; padding: 0;">
+        <li>Il percorso giusto è segnato in rosso: parte dal bambino (in alto a sinistra) e arriva al punto di raccolta (in basso a destra), senza mai toccare i pericoli.</li>
+        <li>I cinque pericoli (ascensore, fumo, pozzanghera, albero caduto, transenne) sono in vicoli ciechi: spiegare a voce perché ognuno è pericoloso in un'emergenza.</li>
+        <li><strong>Estensione:</strong> chiedere al bambino dov'è il punto di raccolta della sua scuola e di casa.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Trova la strada per il punto di raccolta" · Infanzia · Rev. 3 - 2026</span>
+    </footer>
+
+  </article>
+
 </body>
 </html>

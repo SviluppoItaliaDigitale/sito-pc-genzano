@@ -500,6 +500,9 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 - 👉 [**Maiuscolo e Minuscolo**](/formazione/schede-stampabili/maiuscolo-minuscolo-primaria/) — collega ogni lettera grande alla sua piccola, scrivi la minuscola accanto alla maiuscola e scopri che CASCO e casco sono la stessa parola. Soluzioni incluse.
 - 👉 [**Dettato Illustrato**](/formazione/schede-stampabili/dettato-illustrato-primaria/) — guarda la figura e scrivi da solo il nome dell'oggetto della sicurezza (pompiere, ambulanza, casco…), con la prima lettera come aiuto. Anche come dettato letto dall'insegnante. Soluzioni incluse.
 - 👉 [**Le Prime Frasi della Sicurezza**](/formazione/schede-stampabili/prime-frasi-sicurezza-primaria/) — rimetti in ordine le parole e scrivi frasi vere di autoprotezione ("Chiamo il 112.", "Metto il casco."), con maiuscola all'inizio e punto alla fine. Soluzioni incluse.
+- 👉 [**Dallo Stampatello al Corsivo**](/formazione/schede-stampabili/corsivo-parole-primaria/) — *(classe 2ª)* leggi la parola della sicurezza in stampatello e riscrivila in corsivo sulle righe guida. Il primo passo verso il corsivo.
+- 👉 [**Le Prime Frasi in Corsivo**](/formazione/schede-stampabili/corsivo-frasi-primaria/) — *(classe 2ª)* ricopia in corsivo le frasi dell'autoprotezione sulle righe guida, con maiuscola e punto.
+- 👉 [**Dettato di Frasi Brevi**](/formazione/schede-stampabili/dettato-frasi-brevi-primaria/) — *(classe 2ª)* l'insegnante detta 5 brevi frasi sulla sicurezza, l'alunno le scrive. Elenco frasi e parole difficili per il docente.
 
 **Schede curriculari trasversali** a tema Protezione Civile (classi 1ª-4ª):
 
