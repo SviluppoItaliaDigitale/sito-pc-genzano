@@ -13,6 +13,8 @@ allegati: []
 draft: false
 ---
 
+> ✅ **Aggiornamento del 23 maggio 2026** — Via Nemorense è stata **riaperta** al traffico nei due sensi dal pomeriggio di venerdì 22 maggio. Leggi l'[aggiornamento sulla riapertura](/comunicazioni/2026-05-23-riapertura-via-nemorense-genzano-nemi/).
+
 Nella giornata di **mercoledì 15 aprile 2026** la **Polizia Locale di Genzano di Roma** ha richiesto il supporto del **Gruppo Comunale Volontari di Protezione Civile**. Motivo: la **chiusura di via Nemorense**, strada che da Genzano porta a Nemi. Causa: il **cedimento di un costone** avvenuto in territorio del Comune di Nemi.
 
 ## L'intervento
