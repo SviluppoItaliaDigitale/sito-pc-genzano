@@ -115,7 +115,7 @@ Cogliamo l'occasione per ripassare alcuni principi di **sicurezza dei bambini** 
 - **contenuti** inappropriati;
 - **cyberbullismo**;
 - **predatori** online;
-- **gaming** addictivi;
+- **videogiochi** che creano dipendenza;
 - **social** e immagine di sé.
 
 ### Strumenti di protezione
