@@ -112,17 +112,24 @@ def icona_svg(key, cx, cy, s):
     return f'<g>{_cloud(cx, cy, s)}</g>'
 
 # ---------------------------------------------------------------- colore temperatura
+# Scala meteo continua, ampia (da sotto zero a oltre 40 °C): viola/blu = freddo,
+# verde/giallo = mite, arancio/rosso = caldo. Copre tutte le stagioni.
+TEMP_STOPS = [(-6,"#4d4f9e"),(-2,"#3b5fb5"),(2,"#3a8bc2"),(6,"#56b0c9"),(10,"#7fc9b8"),
+              (14,"#a8db9c"),(18,"#d4e88a"),(22,"#f3ec79"),(26,"#fbd14e"),(30,"#f7a93b"),
+              (34,"#ef7733"),(38,"#df4a35"),(42,"#b81f3a")]
+TEMP_MIN, TEMP_MAX = TEMP_STOPS[0][0], TEMP_STOPS[-1][0]
+
 def colore(t):
-    stops = [(12,"#2c7fb8"),(18,"#41b6c4"),(22,"#a1dab4"),(26,"#fec44f"),(30,"#fe9929"),(34,"#d7301f")]
-    for i in range(len(stops)-1):
-        t0,c0 = stops[i]; t1,c1 = stops[i+1]
-        if t <= t1 or i == len(stops)-2:
+    t = max(TEMP_MIN, min(TEMP_MAX, t))
+    for i in range(len(TEMP_STOPS)-1):
+        t0,c0 = TEMP_STOPS[i]; t1,c1 = TEMP_STOPS[i+1]
+        if t <= t1 or i == len(TEMP_STOPS)-2:
             f = max(0, min(1, (t-t0)/(t1-t0)))
             c0 = [int(c0[1:][j:j+2],16) for j in (0,2,4)]
             c1 = [int(c1[1:][j:j+2],16) for j in (0,2,4)]
             rgb = [round(c0[k]+(c1[k]-c0[k])*f) for k in range(3)]
             return f"#{rgb[0]:02x}{rgb[1]:02x}{rgb[2]:02x}"
-    return "#d7301f"
+    return TEMP_STOPS[-1][1]
 
 # ---------------------------------------------------------------- fetch Open-Meteo
 def _get(url):
@@ -146,7 +153,7 @@ def fetch_card():
     return _get(url)
 
 # ---------------------------------------------------------------- proiezione mappa
-def build_svg(map_data, oggi):
+def build_svg(map_data, card_data, oggi):
     geo = json.load(open(GEO))
     LON0,LAT0,LON1,LAT1 = 11.25,40.55,14.15,42.98
     Wmap = 580; latmid = (LAT0+LAT1)/2
@@ -168,56 +175,86 @@ def build_svg(map_data, oggi):
 
     # dati per provincia (capoluogo): temp + weather_code
     perprov = {}
-    units = map_data[0].get("daily_units", {})
     for i, c in enumerate(CAPOLUOGHI):
         d = map_data[i]["daily"]
         perprov[c[0]] = (d["temperature_2m_max"][0], d["weather_code"][0])
-    # etichetta: posizione manuale per leggibilità
-    LBL = {"Viterbo":(12.10,42.42),"Rieti":(12.86,42.40),"Roma":(12.55,41.95),
-           "Latina":(12.95,41.45),"Frosinone":(13.45,41.66)}
+    # posizione manuale dell'etichetta-pillola (lon,lat)
+    LBL = {"Viterbo":(12.10,42.42),"Rieti":(12.86,42.40),"Roma":(12.50,41.99),
+           "Latina":(13.00,41.42),"Frosinone":(13.45,41.66)}
 
     prov_svg = ""; labels = ""
     for pr in geo["province"]:
         nome = pr["nome"]; t, wc = perprov[nome]
         col = colore(t)
         for ring in pr["rings"]:
-            prov_svg += f'<path d="{ring_path(ring)}" fill="{col}" fill-opacity="0.82" stroke="#ffffff" stroke-width="1.6"/>'
+            prov_svg += f'<path d="{ring_path(ring)}" fill="{col}" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.6"/>'
         lx, ly = px(LBL[nome][0], LBL[nome][1])
         desc, ico = wmo(wc)
-        labels += f'<text x="{lx:.1f}" y="{ly-22:.1f}" font-size="13" font-weight="700" text-anchor="middle" fill="#003366">{nome}</text>'
-        labels += f'<text x="{lx:.1f}" y="{ly+2:.1f}" font-size="23" font-weight="800" text-anchor="middle" fill="#1a1a1a">{round(t)}°</text>'
-        labels += icona_svg(ico, lx, ly+26, 9)
+        # pillola bianca: nome (sopra) + icona (sx) + temperatura (dx), sempre leggibile
+        pw, ph = 104, 46
+        labels += (f'<g>'
+                   f'<rect x="{lx-pw/2:.1f}" y="{ly-ph/2:.1f}" width="{pw}" height="{ph}" rx="9" '
+                   f'fill="#ffffff" fill-opacity="0.93" stroke="{col}" stroke-width="1.6"/>'
+                   f'<text x="{lx:.1f}" y="{ly-9:.1f}" font-size="12.5" font-weight="700" text-anchor="middle" fill="#003366">{nome}</text>'
+                   f'{icona_svg(ico, lx-26, ly+9, 8)}'
+                   f'<text x="{lx+12:.1f}" y="{ly+15:.1f}" font-size="20" font-weight="800" text-anchor="middle" fill="#1a1a1a">{round(t)}&#176;</text>'
+                   f'</g>')
 
-    # stella Genzano
+    # punto Genzano + riquadro di dettaglio collegato
     gx, gy = px(GENZANO[1], GENZANO[0])
-    star = (f'<path transform="translate({gx:.1f},{gy:.1f})" d="M0,-8 L2.4,-2.5 8,-2.5 3.4,1.3 5,7 0,3.4 -5,7 -3.4,1.3 -8,-2.5 -2.4,-2.5 Z" '
-            f'fill="#b8860b" stroke="#7a5c08" stroke-width="0.6"/>'
-            f'<text x="{gx+42:.1f}" y="{gy+3.5:.1f}" font-size="11.5" font-weight="700" text-anchor="middle" fill="#003366">Genzano</text>')
+    gz_d = card_data["daily"]
+    gz_max = round(gz_d["temperature_2m_max"][0]); gz_min = round(gz_d["temperature_2m_min"][0])
+    gz_desc, gz_ico = wmo(gz_d["weather_code"][0])
+    # marcatore sul punto
+    marker = (f'<circle cx="{gx:.1f}" cy="{gy:.1f}" r="5.5" fill="#b8860b" stroke="#ffffff" stroke-width="2"/>')
+    # riquadro nell'angolo basso-sinistra (mare, area libera), con linea al punto
+    bx, by, bw, bh = 8, Hmap-128, 224, 110
+    cardg = (
+        f'<line x1="{bx+bw:.1f}" y1="{by+22:.1f}" x2="{gx:.1f}" y2="{gy:.1f}" stroke="#b8860b" stroke-width="1.4" stroke-dasharray="4 3"/>'
+        f'<rect x="{bx}" y="{by}" width="{bw}" height="{bh}" rx="12" fill="#003366" stroke="#b8860b" stroke-width="2"/>'
+        f'<text x="{bx+14}" y="{by+25:.1f}" font-size="14" font-weight="800" fill="#ffffff">&#9733; Genzano di Roma</text>'
+        f'<text x="{bx+14}" y="{by+43:.1f}" font-size="11" fill="#cfe0f0">oggi, {GIORNI_IT[oggi.weekday()]} {oggi.day} {MESI_IT[oggi.month]}</text>'
+        f'{icona_svg(gz_ico, bx+34, by+78, 13)}'
+        f'<text x="{bx+72}" y="{by+74:.1f}" font-size="22" font-weight="800" fill="#ffffff">{gz_max}&#176;<tspan font-size="15" font-weight="400" fill="#cfe0f0"> max</tspan></text>'
+        f'<text x="{bx+72}" y="{by+98:.1f}" font-size="18" font-weight="700" fill="#9ec5e8">{gz_min}&#176;<tspan font-size="13" font-weight="400" fill="#9ec5e8"> min</tspan></text>'
+        f'<text x="{bx+bw-12}" y="{by+98:.1f}" font-size="12" text-anchor="end" fill="#e7eef6">{gz_desc}</text>'
+    )
 
-    PAD=18; HEAD=64; FOOT=46
+    PAD=18; HEAD=64; FOOT=66
     W = Wmap+2*PAD; H = Hmap+HEAD+FOOT+PAD
-    # legenda
-    legitems = [("16°","#41b6c4"),("20°","#a1dab4"),("24°","#cfe08a"),("28°","#fec44f"),("32°","#fe9929"),("34°+","#d7301f")]
-    leg=""; lx0=PAD; ly=H-26
-    for i,(lab,c) in enumerate(legitems):
-        lx = lx0+i*72
-        leg += f'<rect x="{lx}" y="{ly-9}" width="16" height="16" rx="3" fill="{c}" stroke="#adb5bd" stroke-width="0.6"/>'
-        leg += f'<text x="{lx+22}" y="{ly+3}" font-size="11" fill="#495057">{lab}</text>'
+
+    # legenda: barra campionata 1°C alla volta (rende identica in ogni renderer)
+    barW = min(440, W-2*PAD-30); barX = (W-barW)/2; barY = H-50; barH = 13
+    nseg = int(TEMP_MAX-TEMP_MIN)
+    segw = barW/nseg
+    segs = ""
+    for k in range(nseg):
+        tv = TEMP_MIN + k
+        segs += f'<rect x="{barX+k*segw:.2f}" y="{barY:.1f}" width="{segw+0.6:.2f}" height="{barH}" fill="{colore(tv+0.5)}"/>'
+    ticks = ""
+    for tv in (-5,0,5,10,15,20,25,30,35,40):
+        tx = barX + (tv-TEMP_MIN)/(TEMP_MAX-TEMP_MIN)*barW
+        ticks += (f'<line x1="{tx:.1f}" y1="{barY:.1f}" x2="{tx:.1f}" y2="{barY+barH+3:.1f}" stroke="#495057" stroke-width="0.9"/>'
+                  f'<text x="{tx:.1f}" y="{barY+barH+15:.1f}" font-size="9.5" text-anchor="middle" fill="#495057">{tv}&#176;</text>')
+    leg = (f'<text x="{barX:.1f}" y="{barY-5:.1f}" font-size="10" fill="#495057">Temperatura massima (&#176;C)</text>'
+           f'{segs}'
+           f'<rect x="{barX:.1f}" y="{barY:.1f}" width="{barW:.1f}" height="{barH}" rx="3" fill="none" stroke="#adb5bd" stroke-width="0.8"/>'
+           f'{ticks}')
 
     data_lunga = f"{GIORNI_IT[oggi.weekday()]} {oggi.day} {MESI_IT[oggi.month]} {oggi.year}"
     svg = (
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W:.0f} {H:.0f}" '
         f'font-family="Trebuchet MS,Verdana,Arial,sans-serif" role="img" '
-        f'aria-label="Mappa del Lazio con temperatura massima e cielo previsti oggi per ogni provincia. Genzano di Roma evidenziata con una stella.">'
-        f'<rect x="0" y="0" width="{W:.0f}" height="{H:.0f}" fill="#ffffff"/>'
+        f'aria-label="Mappa del Lazio con temperatura massima e cielo previsti oggi per ogni provincia, e un riquadro di dettaglio per Genzano di Roma con massima {gz_max} gradi, minima {gz_min} gradi, {gz_desc}.">'
         f'<defs><clipPath id="mapclip"><rect x="0" y="0" width="{Wmap:.0f}" height="{Hmap:.0f}"/></clipPath></defs>'
-        f'<g transform="translate({PAD},{HEAD})" clip-path="url(#mapclip)">{contesto}{prov_svg}{labels}{star}</g>'
+        f'<rect x="0" y="0" width="{W:.0f}" height="{H:.0f}" fill="#ffffff"/>'
+        f'<g transform="translate({PAD},{HEAD})" clip-path="url(#mapclip)">{contesto}{prov_svg}{marker}{labels}{cardg}</g>'
         f'<rect x="0" y="0" width="{W:.0f}" height="{HEAD-2}" fill="#ffffff"/>'
         f'<text x="{W/2:.0f}" y="27" font-size="20" font-weight="700" text-anchor="middle" fill="#003366">Lazio &#8212; oggi: temperatura e cielo</text>'
-        f'<text x="{W/2:.0f}" y="47" font-size="12" text-anchor="middle" fill="#495057">{data_lunga} &#183; massime in &#176;C per provincia &#183; &#9733; Genzano di Roma</text>'
+        f'<text x="{W/2:.0f}" y="47" font-size="12" text-anchor="middle" fill="#495057">{data_lunga} &#183; massime in &#176;C per provincia &#183; dettaglio Genzano di Roma</text>'
         f'<rect x="0" y="{HEAD+Hmap:.0f}" width="{W:.0f}" height="{FOOT+PAD}" fill="#ffffff"/>'
         f'<g>{leg}</g>'
-        f'<text x="{W-PAD}" y="{H-10:.0f}" font-size="9" text-anchor="end" fill="#6c757d">Dati: Open-Meteo (modelli ECMWF) &#183; elaborazione Protezione Civile Genzano &#183; dato indicativo, per le allerte vale il Centro Funzionale Lazio</text>'
+        f'<text x="{W/2:.0f}" y="{H-6:.0f}" font-size="9" text-anchor="middle" fill="#6c757d">Dati: Open-Meteo (modelli ECMWF) &#183; elaborazione Protezione Civile Genzano &#183; dato indicativo, per le allerte vale il Centro Funzionale Lazio</text>'
         f'</svg>'
     )
     return svg
@@ -265,7 +302,7 @@ def main():
         map_data = fetch_map()
         card_data = fetch_card()
 
-    svg = build_svg(map_data, now.date())
+    svg = build_svg(map_data, card_data, now.date())
     os.makedirs(os.path.dirname(OUT_SVG), exist_ok=True)
     open(OUT_SVG, "w", encoding="utf-8").write(svg)
 
