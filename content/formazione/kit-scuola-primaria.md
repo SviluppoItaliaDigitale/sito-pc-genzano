@@ -496,6 +496,10 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 - 👉 [**Sillabe della Protezione Civile**](/formazione/schede-stampabili/sillabe-protezione-civile-primaria/) — parole-chiave divise in sillabe (CA·SCO, SI·RE·NA, POM·PIE·RE…), esercizio di divisione, ricomposizione di puzzle sillabici e copiatura di una frase. Soluzioni per il docente.
 - 👉 [**Completa la Parola**](/formazione/schede-stampabili/completa-parola-primaria/) — 10 parole con una lettera mancante da completare usando la "banca delle lettere", più 4 parole intere da scrivere a partire dall'indizio. Soluzioni incluse.
 - 👉 [**Copia la Frase — Le parole della sicurezza**](/formazione/schede-stampabili/copia-frase-primaria/) — 5 frasi semplici sulle regole di autoprotezione (chiamata 112, posizione tartaruga, evacuazione, volontariato) da ricopiare in stampatello su righe con linea-guida.
+- 👉 [**Ricalca e Scrivi le Parole**](/formazione/schede-stampabili/ricalca-scrivi-parole-primaria/) — l'alunno ricalca la parola tratteggiata (CASA, ACQUA, 112, ZAINO, CASCO, AIUTO, USCITA, RADIO) e poi la riscrive da solo sulla riga. Il primo passo per imparare a scrivere in stampatello.
+- 👉 [**Maiuscolo e Minuscolo**](/formazione/schede-stampabili/maiuscolo-minuscolo-primaria/) — collega ogni lettera grande alla sua piccola, scrivi la minuscola accanto alla maiuscola e scopri che CASCO e casco sono la stessa parola. Soluzioni incluse.
+- 👉 [**Dettato Illustrato**](/formazione/schede-stampabili/dettato-illustrato-primaria/) — guarda la figura e scrivi da solo il nome dell'oggetto della sicurezza (pompiere, ambulanza, casco…), con la prima lettera come aiuto. Anche come dettato letto dall'insegnante. Soluzioni incluse.
+- 👉 [**Le Prime Frasi della Sicurezza**](/formazione/schede-stampabili/prime-frasi-sicurezza-primaria/) — rimetti in ordine le parole e scrivi frasi vere di autoprotezione ("Chiamo il 112.", "Metto il casco."), con maiuscola all'inizio e punto alla fine. Soluzioni incluse.
 
 **Schede curriculari trasversali** a tema Protezione Civile (classi 1ª-4ª):
 
