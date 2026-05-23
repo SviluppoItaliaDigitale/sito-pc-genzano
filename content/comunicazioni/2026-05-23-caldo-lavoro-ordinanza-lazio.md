@@ -25,6 +25,10 @@ Il **23 maggio 2026** la Regione Lazio ha firmato un'**ordinanza** contro il cal
 
 Chi è protetto: braccianti agricoli, addetti al florovivaismo, operai dei cantieri, lavoratori delle cave, addetti alla logistica e rider. Lo stress da calore è un rischio reale e le ore centrali sono le più pericolose.
 
+{{< foto src="/images/2026-05-23-francesco-rocca-presidente-regione-lazio.webp"
+         alt="Ritratto di Francesco Rocca, presidente della Regione Lazio."
+         caption="Francesco Rocca, presidente della Regione Lazio. (Foto: profilo social ufficiale del presidente della Regione Lazio)" >}}
+
 ## Cosa prevede l'ordinanza
 
 - **Divieto di lavoro** in condizioni di esposizione prolungata al sole **dalle 12:30 alle 16:00**.
@@ -46,7 +50,7 @@ L'ordinanza riguarda le aree dove si lavora nei seguenti ambiti:
 
 ## Come si capisce se è una "giornata a rischio alto"
 
-Il livello di rischio non si decide a occhio: si verifica ogni giorno sulla piattaforma **Worklimate**, dedicata all'impatto delle temperature estreme sulla salute e sulla produttività di chi lavora. Il progetto è coordinato dall'**Istituto per la Bioeconomia del Consiglio Nazionale delle Ricerche (CNR-IBE)** insieme all'**INAIL**.
+Il livello di rischio non si decide a occhio: si verifica ogni giorno sulla piattaforma **Worklimate**. La piattaforma misura l'impatto delle temperature estreme sulla salute e sulla produttività di chi lavora all'aperto. Il progetto è coordinato dall'**Istituto per la Bioeconomia del Consiglio Nazionale delle Ricerche (CNR-IBE)** insieme all'**INAIL (Istituto Nazionale per l'Assicurazione contro gli Infortuni sul Lavoro)**.
 
 La piattaforma pubblica **mappe colorate** suddivise per fasce orarie, per il giorno in corso e per i due successivi. I colori indicano il livello di rischio, dal **verde** (nessun rischio) al **rosso** (rischio alto). Quando per l'area e la fascia oraria il rischio è **alto**, scatta il divieto.
 
@@ -63,7 +67,7 @@ Questo significa che i soccorsi e le attività di protezione civile non si ferma
 
 ## Perché riguarda anche Genzano e i Castelli Romani
 
-Genzano di Roma e i Castelli Romani non sono al riparo dal caldo. Le notti sono più fresche grazie all'altitudine, ma le **temperature diurne** sono spesso simili a quelle di Roma. Sul territorio lavorano al sole molte persone: nel **florovivaismo** — un settore radicato qui, basti pensare ai fiori dell'Infiorata — nei cantieri, nei campi e, sempre di più, nelle consegne urbane.
+Genzano di Roma e i Castelli Romani non sono al riparo dal caldo. Le notti sono più fresche grazie all'altitudine, ma le **temperature diurne** sono spesso simili a quelle di Roma. Sul territorio lavorano al sole molte persone: nel **florovivaismo** — un settore radicato qui, basti pensare ai fiori dell'Infiorata —, nei cantieri, nei campi e nelle consegne urbane. Il loro numero cresce ogni anno.
 
 La misura tutela queste persone proprio nelle ore in cui lo sforzo fisico al sole può portare a malori seri.
 
@@ -95,7 +99,12 @@ Il colpo di calore è un'emergenza. I segnali principali:
 - **Debolezza** che non passa con il riposo.
 - **Temperatura corporea molto alta**.
 
-Se noti questi segnali in te o in un collega: **chiama subito il 112**, sposta la persona all'ombra o al fresco, falla sdraiare, bagnala con acqua tiepida e falle bere a piccoli sorsi se è cosciente.
+Se noti questi segnali in te o in un collega, agisci subito:
+
+1. **Chiama il 112**.
+2. Sposta la persona all'ombra o in un luogo fresco.
+3. Falla sdraiare e bagnala con acqua tiepida.
+4. Falle bere a piccoli sorsi se è cosciente.
 
 ## Una tutela che vale per tutti
 
