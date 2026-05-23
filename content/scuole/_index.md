@@ -83,7 +83,7 @@ Il Gruppo Comunale di Protezione Civile di Genzano di Roma offre **materiali did
 
 ## Per attività in classe o incontri formativi
 
-Il Gruppo Comunale è disponibile per **incontri formativi nelle scuole del territorio** (anche con tipologie diverse: lezioni in classe, esercitazioni nel cortile, allestimento di stand in occasione di open day o eventi scolastici).
+Il Gruppo Comunale è disponibile per **incontri formativi nelle scuole del territorio** (anche con tipologie diverse: lezioni in classe, esercitazioni nel cortile, allestimento di stand in occasione di giornata aperta o eventi scolastici).
 
 Scrivi a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it) per richiedere un intervento. Indicaci scuola, classe, fascia d'età, tema desiderato e date possibili.
 

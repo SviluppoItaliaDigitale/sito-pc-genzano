@@ -21,7 +21,7 @@ Durante i turni di servizio, oltre alle attività ordinarie (presidio del territ
 - **Uso dei mezzi**: prove di guida con i veicoli antincendio e i fuoristrada, manovra delle motopompe, verifica delle dotazioni di bordo, controllo degli equipaggiamenti.
 - **Uso delle attrezzature**: simulazioni di stendimento manichette, montaggio di gruppi elettrogeni, prove dei fari da campo, manutenzione di base.
 - **Radio e comunicazioni**: prove di rete VHF/UHF, contatti con la Sala Operativa Regionale, gestione delle chiamate tra mezzi.
-- **Procedure interne**: ripasso delle procedure operative standard, briefing sui rischi del territorio, aggiornamento sulle ordinanze comunali in vigore.
+- **Procedure interne**: ripasso delle procedure operative standard, riunione informativa sui rischi del territorio, aggiornamento sulle ordinanze comunali in vigore.
 - **DPI e sicurezza**: vestizione corretta, verifica dell'integrità dei dispositivi di protezione individuale, esercizi di evacuazione del personale.
 
 Queste attività non producono comunicati pubblici: sono il **lavoro silenzioso** che rende la squadra pronta quando serve davvero.

@@ -64,7 +64,7 @@ I giochi sono allineati con:
 
 | Gioco | Tema | Durata | Competenze | Completamento |
 |---|---|---|---|---|
-| [Abbina e impara](/giochi/primaria/abbina-impara/) | Abbinamento concetto-azione | 5-10 min | Logica, problem solving | Tutti gli abbinamenti corretti |
+| [Abbina e impara](/giochi/primaria/abbina-impara/) | Abbinamento concetto-azione | 5-10 min | Logica, risoluzione dei problemi | Tutti gli abbinamenti corretti |
 | [Anagrammi della sicurezza](/giochi/primaria/anagrammi/) | Lessico della Protezione Civile | 10-15 min | Lingua italiana, lessico tecnico | Tutte le parole risolte |
 | [Caccia al rischio](/giochi/primaria/caccia-al-rischio/) | Individuare pericoli in scene di vita quotidiana | 8-12 min | Percezione del rischio domestico | Tutti i rischi individuati |
 | [Chiamata al 112](/giochi/primaria/chiamata-112/) | Simulazione chiamata di emergenza | 10-15 min | Comunicazione operativa, calma in stress | Chiamata completa e corretta |
@@ -73,7 +73,7 @@ I giochi sono allineati con:
 | [Labirinto dell'evacuazione](/giochi/primaria/labirinto-evacuazione/) | Percorso di esodo, vie sicure | 5-10 min | Orientamento, evacuazione | Uscita raggiunta |
 | [Memory dei segnali](/giochi/primaria/memory/) | Pittogrammi ISO 7010 (W, P, M, E, F) | 5-10 min | Lettura segnaletica formale | Tutte le coppie trovate |
 | [Posiziona i cartelli](/giochi/primaria/posiziona-cartelli/) | Dove va il cartello "uscita di sicurezza"? | 5-10 min | Logica spaziale, sicurezza edifici | Cartelli posizionati correttamente |
-| [Puzzle degli scenari](/giochi/primaria/puzzle-scenari/) | Ricostruire scene di emergenza/soccorso | 10-15 min | Sequenze temporali, problem solving | Puzzle completato |
+| [Puzzle degli scenari](/giochi/primaria/puzzle-scenari/) | Ricostruire scene di emergenza/soccorso | 10-15 min | Sequenze temporali, risoluzione dei problemi | Puzzle completato |
 | [Quiz della Sicurezza](/giochi/primaria/quiz/) | Domande a risposta multipla sui rischi | 10-15 min | Conoscenza dei rischi del territorio | Punteggio target |
 | [Semaforo del rischio](/giochi/primaria/semaforo-rischio/) | Codici colore allerta meteo verde/giallo/arancione/rosso | 5-8 min | Lettura bollettini allerta | Tutti i colori abbinati |
 | [Zaino di emergenza](/giochi/primaria/zaino-emergenza/) | Cosa metto nel kit? Cosa lascio? | 10-12 min | Preparazione individuale e familiare | Zaino ottimale composto |
@@ -82,22 +82,22 @@ I giochi sono allineati con:
 
 ## Giochi per la Secondaria (11-19 anni)
 
-11 giochi di livello più alto: ragionamento, gestione del tempo, decision making complesso, role play.
+11 giochi di livello più alto: ragionamento, gestione del tempo, decision making complesso, gioco di ruolo.
 
 | Gioco | Tema | Durata | Competenze | Completamento |
 |---|---|---|---|---|
 | [Cartelli di pericolo](/giochi/ragazzi/cartelli-pericolo/) | Segnaletica UNI 7010 sostanze pericolose e ADR | 10-15 min | Riconoscimento rischio chimico | Tutti i pittogrammi identificati |
 | [Codice arancione](/giochi/ragazzi/codice-arancione/) | Decisioni in allerta meteo arancione | 15-20 min | Decision making in stress, gerarchia info | Scenario completato senza errori critici |
-| [Emergency Responder](/giochi/ragazzi/emergency-responder/) | Coordinamento risposta multi-rischio | 20-30 min | Pensiero sistemico, coordinamento | Tutte le emergenze gestite |
+| [Soccorritore in emergenza](/giochi/ragazzi/emergency-responder/) | Coordinamento risposta multi-rischio | 20-30 min | Pensiero sistemico, coordinamento | Tutte le emergenze gestite |
 | [Linea del tempo eventi](/giochi/ragazzi/linea-tempo-eventi/) | Eventi storici della PC italiana | 15-20 min | Memoria storica, contesto normativo | Cronologia completa corretta |
 | [Mappa del rischio](/giochi/ragazzi/mappa-rischio/) | Rischi del territorio dei Castelli Romani | 10-15 min | Conoscenza territoriale | Mappa completata correttamente |
 | [Radio Emergency](/giochi/ragazzi/radio-emergency/) | Comunicazioni radio in scenario PC | 15-20 min | Comunicazione operativa, calma | Trasmissione corretta in tutti gli scenari |
 | [Scelte difficili](/giochi/ragazzi/scelte-difficili/) | Dilemmi etici e operativi in emergenza | 20-30 min | Etica della responsabilità, gestione info | Tutti i dilemmi affrontati con razionale |
-| [Simulatore COC](/giochi/ragazzi/simulatore-coc/) | Role play Centro Operativo Comunale | 30-45 min | Governance PC, ruoli istituzionali | Tutte le funzioni COC coordinate |
+| [Simulatore COC](/giochi/ragazzi/simulatore-coc/) | Gioco di ruolo Centro Operativo Comunale | 30-45 min | Governance PC, ruoli istituzionali | Tutte le funzioni COC coordinate |
 | [Triage S.T.A.R.T.](/giochi/ragazzi/triage-start/) | Smistamento sanitario in maxi-emergenza | 15-20 min | Principi di triage sanitario | Triage corretto su scenario completo |
-| [Vero o bufala](/giochi/ragazzi/vero-o-bufala/) | Fake news, deep fake, disinformazione in crisi | 10-15 min | Pensiero critico, fact checking | Tutte le notizie classificate correttamente |
+| [Vero o bufala](/giochi/ragazzi/vero-o-bufala/) | Notizie false, deep fake, disinformazione in crisi | 10-15 min | Pensiero critico, fact checking | Tutte le notizie classificate correttamente |
 
-**Accessibilità ragazzi:** tutti i giochi hanno tastiera completa, screen reader, focus visibile. I giochi più lunghi (Simulatore COC, Emergency Responder) hanno salvataggio progressi locale. Per ipovedenti: i giochi rispettano le impostazioni "zoom testo" del browser.
+**Accessibilità ragazzi:** tutti i giochi hanno tastiera completa, screen reader, focus visibile. I giochi più lunghi (Simulatore COC, Soccorritore in emergenza) hanno salvataggio progressi locale. Per ipovedenti: i giochi rispettano le impostazioni "zoom testo" del browser.
 
 ## Suggerimenti per l'attività in classe
 

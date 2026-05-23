@@ -238,7 +238,7 @@ Il Responsabile TLC:
 - attiva e coordina la **maglia radio** del Gruppo
 - garantisce la **ridondanza** con i canali istituzionali
 - segnala al Sindaco **anomalie** sui canali
-- partecipa al **briefing** di aggiornamento al Sindaco
+- partecipa al **riunione informativa** di aggiornamento al Sindaco
 
 ### ICS — Incident Command System (riferimento internazionale)
 

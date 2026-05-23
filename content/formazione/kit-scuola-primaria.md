@@ -12,7 +12,7 @@ I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Ci
 
 > 📦 **Scarica il pacchetto offline** — [`kit-scuola-primaria.zip`](/formazione/pacchetti/kit-scuola-primaria.zip) (~134 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
-> ⚠️ **Avvertenza pedagogica — proporzionare l'argomento all'età.** Le attività di questo kit affrontano rischi reali (terremoto, alluvione, incendio, blackout, eventi storici) ma **non devono generare paura o ansia**. Il docente è chiamato a presentare i fenomeni in modo **concreto, rassicurante, agentivo**: l'attenzione è sui *comportamenti corretti che il bambino può fare* (preparare lo zaino, conoscere il punto di raccolta, chiamare il 112), non sull'enfasi del danno. Le case study delle maxi-emergenze italiane sono adattate per la fascia 9-11 anni con focus su lieto fine, ricostruzione, solidarietà — **mai con immagini di vittime o cronaca cruda**. Se nella classe ci sono bambini reduci da eventi traumatici familiari (lutti, evacuazioni, terremoti recenti), valutare con cautela e raccordarsi con il dirigente scolastico, lo psicologo scolastico e con la pagina [Psicologia dell'emergenza](/formazione/psicologia-emergenza/).
+> ⚠️ **Avvertenza pedagogica — proporzionare l'argomento all'età.** Le attività di questo kit affrontano rischi reali (terremoto, alluvione, incendio, blackout, eventi storici) ma **non devono generare paura o ansia**. Il docente è chiamato a presentare i fenomeni in modo **concreto, rassicurante, agentivo**: l'attenzione è sui *comportamenti corretti che il bambino può fare* (preparare lo zaino, conoscere il punto di raccolta, chiamare il 112), non sull'enfasi del danno. I casi studio delle maxi-emergenze italiane sono adattati per la fascia 9-11 anni con focus su lieto fine, ricostruzione, solidarietà — **mai con immagini di vittime o cronaca cruda**. Se nella classe ci sono bambini reduci da eventi traumatici familiari (lutti, evacuazioni, terremoti recenti), valutare con cautela e raccordarsi con il dirigente scolastico, lo psicologo scolastico e con la pagina [Psicologia dell'emergenza](/formazione/psicologia-emergenza/).
 
 ---
 
@@ -486,7 +486,7 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 
 **Schede già pronte per la stampa per la scuola primaria:**
 
-- 👉 [**Chiamo il 112**](/formazione/schede-stampabili/chiamo-112/) — role-play scritto: l'alunno simula una chiamata al numero unico di emergenza con consegna passo-passo.
+- 👉 [**Chiamo il 112**](/formazione/schede-stampabili/chiamo-112/) — gioco di ruolo scritto: l'alunno simula una chiamata al numero unico di emergenza con consegna passo-passo.
 - 👉 [**Cruciverba della Sicurezza**](/formazione/schede-stampabili/cruciverba-primaria/) — 14 definizioni sulle parole-chiave della Protezione Civile, con soluzioni per il docente.
 - 👉 [**Piano di Emergenza Familiare**](/formazione/schede-stampabili/piano-familiare-primaria/) — l'alunno compila con la famiglia il piano di casa: contatti, punti di raccolta, kit, percorso di evacuazione.
 - 👉 [**Ondate di calore**](/formazione/schede-stampabili/ondate-calore-primaria/) — proteggere bambini, anziani, lavoratori all'aperto e animali domestici: box "Ore calde / Acqua e alimenti / Casa / Mai in auto", semaforo del caldo, mini-rubrica delle persone fragili e mini quiz. *(classi 4-5, valida anche per Secondaria I grado)*
@@ -525,13 +525,13 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 
 **Schede del curricolo a spirale 6-19 anni — versione Primaria** (stessi temi disponibili anche per Secondaria I e II, per scelta del docente):
 
-- 👉 [**Chiamo il 112 — Role-play scritto**](/formazione/schede-stampabili/chiamo-112-primaria/) — due dialoghi guidati da completare (caduta nonna, fumo dal vicino) + le 4 cose da ricordare quando si chiama il 112. *(italiano/ed. civica, classi 3ª-5ª)*
+- 👉 [**Chiamo il 112 — Gioco di ruolo scritto**](/formazione/schede-stampabili/chiamo-112-primaria/) — due dialoghi guidati da completare (caduta nonna, fumo dal vicino) + le 4 cose da ricordare quando si chiama il 112. *(italiano/ed. civica, classi 3ª-5ª)*
 - 👉 [**I colori dell'allerta meteo**](/formazione/schede-stampabili/decodifica-bollettino-primaria/) — abbinamento codice colore (verde/giallo/arancione/rosso) → comportamento giusto, con cosa fare per ognuno. *(scienze/ed. civica, classi 3ª-5ª)*
 - 👉 [**Le due vie di fuga della scuola**](/formazione/schede-stampabili/labirinto-evacuazione-primaria/) — pianta-tipo da colorare con vie di fuga, punto di raccolta, pericoli. Versione introduzione al piano di evacuazione. *(ed. civica, classi 4ª-5ª)*
 
 Queste schede sono pronte per essere fotocopiate e consegnate agli alunni come esercitazione individuale, compito a casa o compito di fine modulo.
 
-**Case study — le maxi-emergenze italiane raccontate ai bambini (classi 4ª-5ª):** schede narrative su 12 eventi storici della Protezione Civile italiana. Ogni scheda ha cronologia in box, "Cosa abbiamo imparato" in 3 punti, domande di comprensione, soluzioni e note didattiche per il/la docente. Sono state escluse Vermicino e San Giuliano per sensibilità pedagogica (presenti solo nella fascia Sec II).
+**Casi studio — le maxi-emergenze italiane raccontate ai bambini (classi 4ª-5ª):** schede narrative su 12 eventi storici della Protezione Civile italiana. Ogni scheda ha cronologia in box, "Cosa abbiamo imparato" in 3 punti, domande di comprensione, soluzioni e note didattiche per il/la docente. Sono state escluse Vermicino e San Giuliano per sensibilità pedagogica (presenti solo nella fascia Sec II).
 
 - 👉 [**Caso Friuli 1976**](/formazione/schede-stampabili/caso-friuli-primaria/) — "là dov'era, com'era": ricostruzione esemplare e nascita della PC italiana moderna. *(storia/geografia)*
 - 👉 [**Caso Irpinia 1980**](/formazione/schede-stampabili/caso-irpinia-primaria/) — Zamberletti, "Fate presto" di Pertini, nascita del Servizio Nazionale di Protezione Civile. *(storia/ed. civica)*
@@ -566,7 +566,7 @@ Per la fascia **9-11 anni** (classi 4ª-5ª, 800-1200 parole, struttura narrativ
 - 👉 [**La piccola radio dimenticata**](/formazione/storie-e-racconti/radio-dimenticata/) — radioamatori, comunicazione in emergenza.
 - 👉 [**Il giardino delle parole sicure**](/formazione/storie-e-racconti/giardino-parole-sicure/) — lessico tecnico PC come fiaba.
 
-### Scheda 1 — La chiamata al 112 (role-play scritto) ✅ stampabile
+### Scheda 1 — La chiamata al 112 (gioco di ruolo scritto) ✅ stampabile
 
 > 👉 [Apri la scheda "Chiamo il 112" pronta per la stampa](/formazione/schede-stampabili/chiamo-112/)
 
@@ -679,7 +679,7 @@ Conversione orientativa per l'educazione civica:
 
 - Riduci il numero di moduli (concentra sui primi 3)
 - Usa molte immagini e video brevi (max 2 minuti)
-- Ripeti ogni concetto in più forme: racconto, disegno, role-play
+- Ripeti ogni concetto in più forme: racconto, disegno, gioco di ruolo
 - Coordinati con il docente di sostegno: il PEI indica obiettivi personalizzati
 
 ### Alunni con disabilità motoria
@@ -805,11 +805,11 @@ Dopo ogni lettura, 10 minuti di discussione guidata con domande aperte:
 
 **Esperimento 6 — Il ponte di carta che regge il terremoto** *(classi III-V)*. Materiale: fogli di carta, cannucce, spilli, scatole di scarpe. **Procedura**: in gruppi di 4, i bambini costruiscono un "ponte" di carta tra due scatole, poi provano a scuotere il tavolo. Chi resiste più a lungo? Perché? **Collegamento**: ingegneria antisismica. I progetti del Dipartimento di Protezione Civile per edifici scolastici sicuri.
 
-### Role-play strutturati con copione
+### Giochi di ruolo strutturati con copione
 
 Ideali per 20-30 minuti di didattica attiva. Il docente legge la cornice, i bambini leggono i dialoghi.
 
-**Role-play 1 — La chiamata al 112 (versione avanzata)**
+**Gioco di ruolo 1 — La chiamata al 112 (versione avanzata)**
 Scenario: "Sei a casa con la nonna. Senti un forte rumore in cucina. Vai e vedi che la nonna è per terra e non parla."
 - *Tu*: compone 112
 - *Operatore* (compagno): "112, qual è l'emergenza?"
@@ -819,12 +819,12 @@ Scenario: "Sei a casa con la nonna. Senti un forte rumore in cucina. Vai e vedi 
 - *Operatore*: "Lei respira?"
 - *Tu*: "Non lo so, sto controllando… sì, respira."
 - *Operatore*: "Bravissimo. Non spostarla. Arriva l'ambulanza. Stai in linea con me."
-Dopo il role-play, in plenaria: cosa ha fatto bene? Cosa si poteva fare meglio?
+Dopo il gioco di ruolo, in plenaria: cosa ha fatto bene? Cosa si poteva fare meglio?
 
-**Role-play 2 — L'evacuazione**
+**Gioco di ruolo 2 — L'evacuazione**
 Il docente impersona la voce dell'altoparlante. Un bambino fa il compagno che si nasconde sotto al banco invece di mettersi in fila (errore). La classe deve convincerlo con parole calme a uscire. Discussione: perché c'è chi si spaventa? Come aiutiamo?
 
-**Role-play 3 — Il vicino di casa**
+**Gioco di ruolo 3 — Il vicino di casa**
 Scenario: durante un'evacuazione al parco di Piazza Sforza, una signora anziana arriva zoppicando e chiede aiuto. Tu hai 10 anni. Cosa fai? Discussione in coppia, poi in plenaria: si va ad avvisare un volontario o un adulto. Non si cerca di portare via da soli.
 
 ### Attività artistiche

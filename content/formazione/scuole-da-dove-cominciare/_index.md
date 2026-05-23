@@ -45,14 +45,14 @@ Materiali consigliati:
 
 ## Docente della scuola secondaria di primo grado
 
-Con ragazze e ragazzi da 11 a 14 anni puoi introdurre bollettini, fonti ufficiali, fake news, rischio meteo, terremoto, evacuazione e cittadinanza attiva.
+Con ragazze e ragazzi da 11 a 14 anni puoi introdurre bollettini, fonti ufficiali, notizie false, rischio meteo, terremoto, evacuazione e cittadinanza attiva.
 
 Materiali consigliati:
 
 - [Kit scuola secondaria di primo grado](/formazione/kit-scuola-secondaria-primo-grado/) — UdA, casi studio e attività.
-- [Percorsi didattici pronti](/formazione/percorsi-didattici/) — rischio meteo, terremoto, piano familiare e fake news.
+- [Percorsi didattici pronti](/formazione/percorsi-didattici/) — rischio meteo, terremoto, piano familiare e notizie false.
 - [Decodifica bollettino allerta](/formazione/schede-stampabili/decodifica-bollettino-secondaria/) — lettura guidata di un avviso.
-- [Fake news in emergenza](/formazione/schede-stampabili/fake-news-emergenza-secondaria/) — uso corretto delle fonti.
+- [Notizie false in emergenza](/formazione/schede-stampabili/fake-news-emergenza-secondaria/) — uso corretto delle fonti.
 - [IT-alert e comunicazioni ufficiali](/formazione/schede-stampabili/it-alert-comunicazioni-secondaria/) — sistema nazionale di allarme pubblico.
 - [Mappa rischi del quartiere](/formazione/schede-stampabili/mappa-rischi-secondaria/) — osservazione del territorio.
 

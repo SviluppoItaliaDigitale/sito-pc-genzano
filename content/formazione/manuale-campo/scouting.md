@@ -58,7 +58,7 @@ A fianco del nucleo, una **squadra di supporto** più piccola segue con mezzo at
 ### Al verificarsi dell'evento
 
 - **attivazione** della squadra (nota dal Sindaco di Genzano, Prefettura di Roma, Regione Lazio o DPC a seconda della scala)
-- **briefing** in Sala Operativa: raccolta delle prime informazioni (vedi Check-list 3)
+- **riunione informativa** in Sala Operativa: raccolta delle prime informazioni (vedi Check-list 3)
 - **pianificazione del viaggio**: valutazione delle distanze per scegliere il mezzo
 - **partenza** della squadra
 
@@ -185,7 +185,7 @@ Il **"valigione giallo"** del 4x4 contiene:
 
 ### Check-list 3 — Informazioni da raccogliere
 
-Il **briefing** iniziale in Sala Operativa (prima della partenza) e l'**aggiornamento** sul campo (all'arrivo) devono coprire queste categorie di informazione:
+Il **riunione informativa** iniziale in Sala Operativa (prima della partenza) e l'**aggiornamento** sul campo (all'arrivo) devono coprire queste categorie di informazione:
 
 #### Evento principale
 

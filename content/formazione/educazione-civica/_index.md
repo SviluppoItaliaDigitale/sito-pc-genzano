@@ -63,12 +63,12 @@ Materiali utili:
 
 ### Nucleo 3 — Cittadinanza digitale
 
-In emergenza è essenziale saper distinguere fonti ufficiali, messaggi verificati, fake news, allarmi non confermati e comunicazioni istituzionali.
+In emergenza è essenziale saper distinguere fonti ufficiali, messaggi verificati, notizie false, allarmi non confermati e comunicazioni istituzionali.
 
 Materiali utili:
 
 - [IT-alert e comunicazioni ufficiali](/formazione/schede-stampabili/it-alert-comunicazioni-secondaria/)
-- [Fake news in emergenza](/formazione/schede-stampabili/fake-news-emergenza-secondaria/)
+- [Notizie false in emergenza](/formazione/schede-stampabili/fake-news-emergenza-secondaria/)
 - [Comunicazione di crisi — Secondaria II grado](/formazione/schede-stampabili/comunicazione-crisi-secondaria2/)
 - [Strumenti in tempo reale](/strumenti/)
 - [Glossario](/glossario/)
@@ -77,7 +77,7 @@ Materiali utili:
 
 | Materia | Collegamento con la protezione civile | Materiali consigliati |
 |---|---|---|
-| Italiano | Lettura di testi, messaggi di crisi, comunicazione chiara | Storie, bollettini, fake news |
+| Italiano | Lettura di testi, messaggi di crisi, comunicazione chiara | Storie, bollettini, notizie false |
 | Storia | Eventi italiani e sviluppo del sistema di protezione civile | Casi storici, Codice PC |
 | Geografia | Territorio, mappe, rischio sismico, idrogeologico e vulcanico | Mappe rischi, cartografia |
 | Scienze | Terremoti, meteo, clima, incendi, ambiente | Schede rischi, triangolo del fuoco |
@@ -120,7 +120,7 @@ Un percorso di 33 ore può essere costruito così:
 | Novembre | 3 | Costituzione, solidarietà e volontariato |
 | Dicembre | 2 | Allerte, bollettini e IT-alert |
 | Gennaio | 3 | Rischio sismico e comportamenti corretti |
-| Febbraio | 3 | Fake news e comunicazione in emergenza |
+| Febbraio | 3 | Notizie false e comunicazione in emergenza |
 | Marzo | 4 | Piano di emergenza familiare |
 | Aprile | 3 | Evacuazione, vie di fuga e sicurezza scolastica |
 | Maggio | 4 | Caso storico o evento reale documentato |

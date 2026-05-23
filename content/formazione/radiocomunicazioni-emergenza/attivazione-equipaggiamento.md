@@ -214,7 +214,7 @@ Se l'operazione durerà giorni, istituisci un **filing system** per i messaggi (
 2. **Log di chiusura** — ora, stazioni ancora attive, messaggi aperti
 3. **Smonta** antenna e apparato con cura — connettori nelle custodie, coassiali arrotolati senza sforzi
 4. **Restituisci** equipaggiamento di Gruppo (apparati in carico, documenti)
-5. **Briefing** col capo-squadra
+5. **Riunione informativa** col capo-squadra
 6. **Rientra** a casa
 7. **Post-missione**: segnala disfunzioni equipaggiamento al responsabile logistica
 

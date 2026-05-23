@@ -107,7 +107,7 @@ Il percorso completo si articola in **Moduli da 60-90 minuti**. Ogni modulo è a
 ### Metodologie didattiche suggerite
 
 - **Flipped classroom**: materiali di studio consegnati prima della lezione, discussione e analisi critica in aula
-- **Case study**: analisi approfondita di un evento reale (es. Amatrice 2016 + processo Commissione Grandi Rischi; Ischia 2017 frane; Genova 2018 crollo ponte Morandi)
+- **Caso studio**: analisi approfondita di un evento reale (es. Amatrice 2016 + processo Commissione Grandi Rischi; Ischia 2017 frane; Genova 2018 crollo ponte Morandi)
 - **Debate**: dibattito strutturato su temi controversi (art. 118 Cost., responsabilità Stato/cittadino, principio di precauzione)
 - **Project-based learning**: progetto di classe semestrale (vedi sezione dedicata)
 - **Service learning**: il gruppo classe realizza un servizio concreto per la comunità (es. campagna informativa per un quartiere)
@@ -406,7 +406,7 @@ Le organizzazioni di volontariato di protezione civile possono ospitare studenti
 **Competenze acquisibili:**
 - Lavoro di squadra in contesti operativi
 - Comunicazione efficace in situazioni di pressione
-- Problem solving e gestione dell'imprevisto
+- Risoluzione dei problemi e gestione dell'imprevisto
 - Competenze tecniche (radio, cartografia, primo soccorso, logistica)
 - Responsabilità civica e senso della comunità
 
@@ -490,7 +490,7 @@ Ogni gruppo ha 15 minuti per preparare le argomentazioni, poi 5 minuti ciascuno 
 
 **10. I PCTO con le organizzazioni di protezione civile permettono di sviluppare:**
 - a) Solo competenze tecniche
-- b) Competenze trasversali come lavoro di squadra, problem solving e responsabilità civica ✔
+- b) Competenze trasversali come lavoro di squadra, risoluzione dei problemi e responsabilità civica ✔
 - c) Solo conoscenze teoriche sul diritto delle emergenze
 
 ---
@@ -586,7 +586,7 @@ Nel sito sono disponibili pittogrammi ISO 7010: vedi [/pittogrammi/](/pittogramm
 I volontari del Gruppo, quando attivati in emergenza, applicano le stesse logiche del D.Lgs. 81/2008:
 - DPI di Cat. III per attività AIB (tute Nomex, elmetti, occhiali, guanti).
 - Linea di comando e principio della **catena di comando unica** (analogo al ruolo del preposto).
-- Procedura di **briefing e debriefing** per ogni intervento (analogo alla formazione operativa).
+- Procedura di **riunione informativa e debriefing** per ogni intervento (analogo alla formazione operativa).
 - **Valutazione del rischio sul posto** prima di entrare in scena.
 
 Il volontariato di Protezione Civile è un **laboratorio civico di cultura della sicurezza**: chi vi partecipa porta nel resto della propria vita lavorativa l'attitudine alla prevenzione.
@@ -685,7 +685,7 @@ I **Percorsi per le Competenze Trasversali e l'Orientamento** (D.Lgs. 77/2005; D
 
 - **Competenze tecniche specifiche**: basi di radiocomunicazioni, cartografia, primo soccorso, gestione logistica di un evento
 - **Competenze comunicative**: comunicazione pubblica, comunicazione istituzionale, redazione tecnica
-- **Competenze trasversali**: lavoro di squadra, gestione del tempo, problem solving, resilienza
+- **Competenze trasversali**: lavoro di squadra, gestione del tempo, risoluzione dei problemi, resilienza
 - **Competenze civiche**: responsabilità, sussidiarietà, partecipazione attiva
 
 ### Valutazione PCTO
@@ -715,7 +715,7 @@ Schede pronte per la stampa specifiche per la scuola secondaria di secondo grado
 - 👉 [**Blackout e servizi essenziali**](/formazione/schede-stampabili/blackout-servizi-essenziali-secondaria/) — disagio, urgenza ed emergenza: piano familiare in caso di interruzione di luce, telefono o acqua. box "Prima/Durante/Comunicazioni/Quando chiamare", attività domestiche, mini quiz. Adatta anche al secondo grado per il taglio cittadinanza/resilienza. *(ed. civica, tecnologia)*
 - 👉 [**Monossido di carbonio**](/formazione/schede-stampabili/monossido-carbonio-secondaria/) — sicurezza domestica e prevenzione del pericolo invisibile in case, garage e locali chiusi: caldaie, stufe, barbecue. Caccia al rischio in casa, regole per ogni apparecchio, mini quiz. *(scienze, tecnologia, ed. civica)*
 - 👉 [**IT-alert e comunicazioni ufficiali**](/formazione/schede-stampabili/it-alert-comunicazioni-secondaria/) — sistema nazionale di allarme pubblico: tabella dei 5 elementi del messaggio operativo, esempio realistico, attività di scrittura per il territorio, mini quiz. *(ed. civica, cittadinanza digitale, italiano)*
-- 👉 [**Fake news in emergenza**](/formazione/schede-stampabili/fake-news-emergenza-secondaria/) — disinformazione e comunicazione del rischio: regola dei 3 controlli, checklist "prima di condividere", riscrittura di un messaggio allarmistico in forma corretta, mini quiz. *(ed. civica digitale, italiano, sociologia della comunicazione)*
+- 👉 [**Notizie false in emergenza**](/formazione/schede-stampabili/fake-news-emergenza-secondaria/) — disinformazione e comunicazione del rischio: regola dei 3 controlli, checklist "prima di condividere", riscrittura di un messaggio allarmistico in forma corretta, mini quiz. *(ed. civica digitale, italiano, sociologia della comunicazione)*
 - 👉 [**Emergenza inclusiva**](/formazione/schede-stampabili/emergenza-inclusiva-secondaria2/) — aiutare persone con disabilità, fragilità o bisogni specifici senza improvvisare: box "Chiedi/Comunica/Prepara/Rete", modello "scheda bisogni essenziali", verifica inclusiva del percorso, mini quiz. *(ed. civica, scienze umane, inclusione, diritto)*
 
 **Schede curriculari trasversali** (diritto, scienze, economia, etica, inglese, ed. civica):
@@ -725,10 +725,10 @@ Schede pronte per la stampa specifiche per la scuola secondaria di secondo grado
 - 👉 [**Cambiamento climatico e rischi mediterranei**](/formazione/schede-stampabili/climate-change-secondaria2/) — IPCC, dati italiani, 6 eventi recenti, mitigazione vs adattamento, costruzione grafico, domande. *(scienze, geografia)*
 - 👉 [**Economia del rischio: prevenire o ricostruire**](/formazione/schede-stampabili/economia-rischio-secondaria2/) — rapporto 1:5 prevenzione/ricostruzione, costi reali italiani, formula BCR, domande con quesito etico finale. *(economia, statistica)*
 - 👉 [**Il caso L'Aquila 2009 — comunicazione di crisi**](/formazione/schede-stampabili/caso-aquila-secondaria2/) — il processo alla Commissione Grandi Rischi, dilemmi etici, principio di precauzione, domande con dilemma personale. *(diritto, etica)*
-- 👉 [**English for Civil Protection**](/formazione/schede-stampabili/english-civil-protection-secondaria2/) — glossario tecnico inglese, lettura di un articolo internazionale (EU Civil Protection Mechanism), comprehension, role-play emergency call. *(inglese L2)*
+- 👉 [**English for Civil Protection**](/formazione/schede-stampabili/english-civil-protection-secondaria2/) — glossario tecnico inglese, lettura di un articolo internazionale (EU Civil Protection Mechanism), comprehension, gioco di ruolo emergency call. *(inglese L2)*
 - 👉 [**Diventare volontario di PC**](/formazione/schede-stampabili/percorso-volontariato-secondaria2/) — requisiti, specialità, 7 step del percorso, diritti e doveri (D.Lgs. 1/2018), mini-progetto personale. *(ed. civica, orientamento)*
 
-**12 nuovi case study** delle maxi-emergenze italiane (analisi sistemica con format «Cosa non andava / Cosa è cambiato / Lezioni apprese» + domande di analisi + box per il docente):
+**12 nuovi caso studio** delle maxi-emergenze italiane (analisi sistemica con format «Cosa non andava / Cosa è cambiato / Lezioni apprese» + domande di analisi + box per il docente):
 
 - 👉 [**Caso Messina-Reggio Calabria 1908**](/formazione/schede-stampabili/caso-messina-reggio-secondaria2/) — terremoto + tsunami, 80.000-120.000 vittime: la più grande catastrofe naturale d'Europa moderna, prima legge antisismica italiana. *(storia, scienze della Terra, italiano)*
 - 👉 [**Caso Irpinia 1980**](/formazione/schede-stampabili/caso-irpinia-secondaria2/) — «Fate presto»: 2.914 vittime, soccorsi tardivi, nascita del Ministero della Protezione Civile, percorso verso la legge 225/1992. *(storia, diritto, ed. civica)*
@@ -843,7 +843,7 @@ Il percorso si presta bene come **argomento pluridisciplinare** per il colloquio
 | **Filosofia** | Filosofia del linguaggio, atti linguistici |
 | **Informatica** | Algoritmi dei social, camera dell'eco |
 | **Diritto** | Diritto all'informazione e limiti; libertà di stampa e responsabilità |
-| **Scienze** | Case study: comunicazione del Covid-19, Ebola, terremoti |
+| **Scienze** | Caso studio: comunicazione del Covid-19, Ebola, terremoti |
 
 ---
 
@@ -935,7 +935,7 @@ Una volta l'anno, organizza un'assemblea di classe con i genitori (60-90 minuti)
 
 I prodotti del progetto di classe (guida al rischio, campagna di comunicazione, report sul Piano scolastico) possono essere presentati in eventi pubblici:
 - Giornata della Protezione Civile (seconda domenica di ottobre, "Io non rischio")
-- Open day della scuola
+- Giornata aperta della scuola
 - Eventi del Comune di Genzano (Sagra dell'Infiorata, eventi culturali)
 - Assemblee di quartiere promosse dal Comitato di Quartiere
 

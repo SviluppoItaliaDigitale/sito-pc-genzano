@@ -150,7 +150,7 @@ Cosa aiuta:
 - rispetto degli spazi;
 - dialogo non forzato;
 - coinvolgimento in azioni utili;
-- attenzione a fake news, immagini forti e contenuti ripetuti.
+- attenzione a notizie false, immagini forti e contenuti ripetuti.
 
 ## A scuola
 
