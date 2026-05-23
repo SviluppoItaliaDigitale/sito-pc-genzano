@@ -318,3 +318,20 @@ body:not(.chrome-loaded) > .app-content {
 #review-container .card-header { background-color: #f8f9fa; color: #333; }
 #review-container .border-success { border-width: 2px !important; }
 #review-container .border-danger { border-width: 2px !important; }
+
+/* Categorie tematiche e mini-indice — pagina "Abili a Proteggere" (mag 2026) */
+.abili-indice {
+  display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center;
+  margin: 0 auto 1.8rem; max-width: 920px;
+}
+.abili-indice a {
+  font-size: 1rem; font-weight: 600; text-decoration: none; color: #003366;
+  background: #fff; border: 2px solid #c026d3; border-radius: 999px; padding: 0.5rem 1.05rem;
+}
+.abili-indice a:hover, .abili-indice a:focus { background: #f3e8ff; outline: 3px solid #ffbe2e; }
+.abili-categoria {
+  font-size: 1.4rem; color: #003366; font-weight: 700;
+  margin: 2.2rem 0 1rem; padding: 0.4rem 0.8rem;
+  border-left: 5px solid #c026d3; background: #faf5ff; border-radius: 0 8px 8px 0;
+}
+@media print { .abili-indice { display: none; } }
