@@ -67,6 +67,20 @@ area: ""
 #     dimensione: "120 KB"
 allegati: []
 
+# ── SLIDE SOCIAL OPZIONALI (carosello Instagram/Facebook) ──
+# Testo facoltativo per le slide grafiche del carosello social, generato da
+# scripts/genera-immagini-social.py. Il testo va PRESO dall'articolo, mai
+# inventato. Lasciali vuoti per non aggiungere slide di testo.
+#   social_citazione -> slide "citazione" (una frase forte, tra virgolette)
+#   social_punti     -> slide "In sintesi" (2-5 punti brevi)
+# Es:
+# social_citazione: "In ogni emergenza chiama il 112."
+# social_punti:
+#   - "Cosa fare prima"
+#   - "Cosa fare durante"
+social_citazione: ""
+social_punti: []
+
 # ── IMPOSTAZIONI ──
 draft: false
 ---
