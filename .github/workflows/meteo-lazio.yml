@@ -1,6 +1,6 @@
 name: "🌤️ Cartina meteo Lazio + riquadro Genzano"
 
-# Rigenera ogni 4 ore la cartina del Lazio (aree colorate per provincia) e il
+# Rigenera ogni ora la cartina del Lazio (aree colorate per provincia) e il
 # riquadro meteo di Genzano di Roma, da dati aperti Open-Meteo (modelli ECMWF,
 # licenza CC-BY, nessuna chiave API). Output:
 #   - static/images/meteo-lazio.svg   (mappa choropleth temperatura + cielo)
@@ -13,15 +13,11 @@ name: "🌤️ Cartina meteo Lazio + riquadro Genzano"
 
 on:
   schedule:
-    # Ogni 4 ore PARTENDO DA MEZZANOTTE (ora italiana): 00, 04, 08, 12, 16, 20.
-    # Ore ESPLICITE elencate (non "*/4", inaffidabile su GitHub Actions) al
-    # minuto 08, fuori dai quarti d'ora canonici — vedi memoria
-    # feedback_github_cron_explicit_better.
-    # GitHub usa UTC: con ora legale (CEST, UTC+2) 22,02,06,10,14,18 UTC =
-    # 00:08, 04:08, 08:08, 12:08, 16:08, 20:08 ora italiana.
-    # In inverno (CET, UTC+1) la cadenza scala di 1h (23,03,07... IT): differenza
-    # tollerabile; eventuale riallineamento al cambio d'ora.
-    - cron: "8 2,6,10,14,18,22 * * *"
+    # OGNI ORA, al minuto 08 (fuori dai quarti d'ora canonici — vedi memoria
+    # feedback_github_cron_explicit_better). Girando ogni ora copre tutte le 24
+    # ore (mezzanotte inclusa) sia in ora legale sia solare: il fuso non conta.
+    # Non è un pattern "*/N": "*" nel campo ore = tutte le ore esplicitamente.
+    - cron: "8 * * * *"
   workflow_dispatch:
 
 permissions:
