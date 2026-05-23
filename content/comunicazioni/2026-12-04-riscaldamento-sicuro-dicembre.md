@@ -55,7 +55,7 @@ A **dicembre** il **riscaldamento** funziona a pieno regime. È anche il mese di
 - **pressione** corretta (1-1,5 bar a freddo);
 - **spie** verdi costanti (senza allarmi);
 - **temperatura** acqua regolata;
-- **odori** di gas: chiusura gas e aereazione;
+- **odori** di gas: chiusura gas e aerazione;
 - **perdite** d'acqua: chiusura e chiamata tecnico.
 
 ### Caldaie a condensazione

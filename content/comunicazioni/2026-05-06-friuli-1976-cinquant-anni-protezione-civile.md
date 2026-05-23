@@ -62,7 +62,7 @@ La sequenza politica che ne seguì è altrettanto importante:
 - **1981** — Su iniziativa di Zamberletti viene istituito il **Ministero per il coordinamento della Protezione Civile**, con la legge 938/1981.
 - **1982** — Nasce il **Dipartimento della Protezione Civile** presso la Presidenza del Consiglio, organo operativo del nuovo sistema.
 - **1992** — La **legge 24 febbraio 1992, n. 225** istituisce ufficialmente il **Servizio Nazionale della Protezione Civile**: una rete che mette insieme Stato, Regioni, Comuni, vigili del fuoco, forze armate, volontariato organizzato. È la legge madre di tutto il sistema italiano.
-- **2018** — Il **Codice della Protezione Civile (D.Lgs. 1/2018)** riordina e moderniza la materia: è la cornice oggi in vigore.
+- **2018** — Il **Codice della Protezione Civile (D.Lgs. 1/2018)** riordina e modernizza la materia: è la cornice oggi in vigore.
 
 Ognuno di questi passaggi ha radici nel Friuli. La frase che Zamberletti pronunciò in quegli anni — *"In Italia la protezione civile non esisteva, l'abbiamo inventata noi in Friuli"* — è iperbolica ma non sbagliata.
 

@@ -56,7 +56,7 @@ Numeri utili da salvare:
 - **Stacca i dispositivi elettronici sensibili** (computer, TV, console): al ripristino può esserci un picco di tensione.
 - **Lascia acceso un punto luce**: così ti accorgi quando torna la corrente.
 - **Apri il frigo solo quando serve**: un frigo chiuso conserva freddo per 4-6 ore, un congelatore per 24-48 ore.
-- **Non usare stufe a gas, braceri o generatori in ambienti chiusi**: rischio di **avvelenamento da monossido di carbonio**.
+- **Non usare stufe a gas, bracieri o generatori in ambienti chiusi**: rischio di **avvelenamento da monossido di carbonio**.
 
 ### Se il blackout dura più ore
 

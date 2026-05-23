@@ -94,7 +94,7 @@ Ne abbiamo parlato nell'[articolo sui laghi di Nemi e Albano](/comunicazioni/202
 
 - **No ore calde** (12-17) d'estate per attività fisica intensa.
 - **Cappello e maglietta** sempre.
-- **Crema solare** reapplicata ogni 2 ore e dopo il bagno.
+- **Crema solare** riapplicata ogni 2 ore e dopo il bagno.
 - **Acqua costante**: i bambini sentono la sete meno degli adulti, bisogna "ricordare loro di bere".
 - **Riconoscere l'insolazione**: pelle rossa e calda, mal di testa, nausea, irritabilità. Sposta in ombra, idrata, raffredda. Se non migliora: 112.
 

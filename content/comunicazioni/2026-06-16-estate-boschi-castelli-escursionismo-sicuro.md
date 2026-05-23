@@ -58,7 +58,7 @@ Abbiamo trattato in dettaglio [perdersi nei boschi](/comunicazioni/2026-05-21-pe
 ## Orientamento
 
 - **Segnaletica CAI** — segnavia bianco-rossi su alberi e rocce.
-- **App GPS** — scarica mappe offline prima di partire (coprenza 4G non sempre garantita).
+- **App GPS** — scarica mappe offline prima di partire (copertura 4G non sempre garantita).
 - **Non "tagliare" sentieri** — crea erosione e può portare in zone pericolose.
 - **Bussola e mappa cartacea** come backup in escursioni lunghe.
 

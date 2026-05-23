@@ -148,7 +148,7 @@ Una casa fresca senza sprechi è possibile. Interventi efficaci:
 - **Coibentazione** del tetto.
 - **Vetri** a doppia camera.
 - **Sistemi di ombreggiamento** (pergolati, veranda alberata).
-- **Tetti verdi** o **tetti bianchi** (riflettanti).
+- **Tetti verdi** o **tetti bianchi** (riflettenti).
 - **Pompa di calore** per raffrescamento.
 
 Il **Bonus Casa** e simili incentivi fiscali coprono parte di questi interventi.
