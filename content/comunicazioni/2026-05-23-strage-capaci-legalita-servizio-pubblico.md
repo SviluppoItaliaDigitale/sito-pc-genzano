@@ -94,4 +94,8 @@ Fonti istituzionali:
 - [Ministero della Giustizia — Giornata della Legalità](https://www.giustizia.it/).
 - [Quirinale — Discorsi del Presidente sul 23 maggio](https://www.quirinale.it/).
 
+Approfondimenti divulgativi (Geopop):
+
+- [La ricostruzione 3D dell'attentato a Giovanni Falcone: le dinamiche tecniche della strage di Capaci](https://youtu.be/lvja_hkYI6U) — ricostruzione divulgativa di Geopop su come avvenne l'attentato del 23 maggio 1992.
+
 **Nel ricordo di Giovanni Falcone, Francesca Morvillo, Vito Schifani, Rocco Dicillo, Antonio Montinaro. E di Paolo Borsellino e della sua scorta.**
