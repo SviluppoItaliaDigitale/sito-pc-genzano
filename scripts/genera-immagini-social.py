@@ -49,6 +49,8 @@ IMAGES_DIR = ROOT / "static" / "images"
 BOZZE_DIR = ROOT / "social-bozze"  # Output: stessa cartella dei testi (instagram.txt ecc.)
 LOGO_PATH = IMAGES_DIR / "logo-pc-genzano.png"
 SITE_BASE = "https://www.protezionecivilegenzano.it"
+# Font ufficiale del design system .italia (Titillium Web), già nel repo.
+TITILLIUM_DIR = ROOT / "static" / "vendor" / "bootstrap-italia" / "fonts" / "Titillium_Web"
 
 
 def slug_to_path(slug: str) -> Path:
@@ -87,6 +89,13 @@ TEXT_DARK = (23, 50, 77)      # #17324D
 
 
 def find_font(weight: str = "Bold") -> Path:
+    """Restituisce il font ufficiale .italia (Titillium Web) dal repo; in mancanza,
+    ripiega su Liberation Sans di sistema. Pillow legge solo .ttf/.otf (non .woff)."""
+    titillium = {"Bold": "700", "Semibold": "600", "Regular": "regular"}.get(weight)
+    if titillium:
+        p = TITILLIUM_DIR / f"titillium-web-v10-latin-ext_latin-{titillium}.ttf"
+        if p.is_file():
+            return p
     candidates = [
         f"/usr/share/fonts/truetype/liberation/LiberationSans-{weight}.ttf",
         f"/usr/share/fonts/liberation/LiberationSans-{weight}.ttf",
@@ -97,7 +106,7 @@ def find_font(weight: str = "Bold") -> Path:
         if Path(c).is_file():
             return Path(c)
     raise RuntimeError(
-        "Font Liberation Sans non trovato. Su Ubuntu: sudo apt install fonts-liberation"
+        "Font non trovato: né Titillium Web nel repo né Liberation Sans di sistema."
     )
 
 
@@ -109,17 +118,32 @@ def parse_frontmatter(testo: str) -> tuple[dict, str]:
         return {}, testo
     raw_fm = testo[4:fine].strip()
     body = testo[fine + 4:].lstrip("\n")
+
+    def _strip_q(v: str) -> str:
+        v = v.strip()
+        if len(v) >= 2 and v[0] == v[-1] and v[0] in ("\"", "'"):
+            v = v[1:-1]
+        return v
+
     fm = {}
+    chiave_lista = None  # ultima chiave a valore vuoto (possibile lista YAML)
     for riga in raw_fm.split("\n"):
         if not riga.strip() or riga.lstrip().startswith("#"):
             continue
+        # Voce di lista semplice "  - valore" sotto una chiave a valore vuoto.
+        m_item = re.match(r"^\s+-\s+(.+)$", riga)
+        if chiave_lista is not None and m_item:
+            fm[chiave_lista].append(_strip_q(m_item.group(1)))
+            continue
         m = re.match(r"^([a-zA-Z_][a-zA-Z0-9_]*):\s*(.*)$", riga)
         if m:
-            chiave = m.group(1)
-            valore = m.group(2).strip()
-            if valore.startswith('"') and valore.endswith('"'):
-                valore = valore[1:-1]
-            fm[chiave] = valore
+            chiave, valore = m.group(1), m.group(2).strip()
+            if valore == "":
+                fm[chiave] = []          # possibile inizio di lista
+                chiave_lista = chiave
+            else:
+                fm[chiave] = _strip_q(valore)
+                chiave_lista = None
     return fm, body
 
 
@@ -255,14 +279,7 @@ def crea_slide_titolo(titolo: str, badge: str, out_path: Path,
                       W: int = 1080, H: int = 1350) -> Path:
     """Slide 1 del carosello / post singolo: card-titolo verticale nativa 4:5.
     Costruita a misura: riempie perfettamente, senza ritagli né bande."""
-    base = gradiente_verticale(W, H, PRIMARY_DARK, PRIMARY).convert("RGBA")
-    # Trama diagonale appena percettibile, per profondità.
-    trama = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    dt = ImageDraw.Draw(trama)
-    for x in range(-H, W, 48):
-        dt.line([(x, 0), (x + H, H)], fill=(255, 255, 255, 6), width=2)
-    base.alpha_composite(trama)
-
+    base = _sfondo_titolo(W, H)
     _barra_brand(base, W)
     d = ImageDraw.Draw(base)
     d.line([(60, 190), (W - 60, 190)], fill=(255, 255, 255, 55), width=2)
@@ -321,6 +338,71 @@ def crea_slide_foto(foto_path: Path, out_path: Path,
         (60, H - 92), "protezionecivilegenzano.it",
         font=ImageFont.truetype(str(find_font("Bold")), 30), fill=WHITE)
 
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    base.convert("RGB").save(out_path, "JPEG", quality=92, optimize=True, progressive=True)
+    return out_path
+
+
+def _sfondo_titolo(W: int, H: int) -> Image.Image:
+    """Sfondo blu istituzionale a gradiente + trama diagonale leggera (RGBA)."""
+    base = gradiente_verticale(W, H, PRIMARY_DARK, PRIMARY).convert("RGBA")
+    trama = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    dt = ImageDraw.Draw(trama)
+    for x in range(-H, W, 48):
+        dt.line([(x, 0), (x + H, H)], fill=(255, 255, 255, 6), width=2)
+    base.alpha_composite(trama)
+    return base
+
+
+def crea_slide_citazione(testo: str, out_path: Path,
+                         W: int = 1080, H: int = 1350) -> Path:
+    """Slide 'citazione': una frase forte dell'articolo, grande, tra virgolette.
+    Testo preso dal frontmatter (social_citazione), mai inventato."""
+    base = _sfondo_titolo(W, H)
+    _barra_brand(base, W)
+    d = ImageDraw.Draw(base)
+    # Virgoletta decorativa grande in accento
+    d.text((66, 232), "“",
+           font=ImageFont.truetype(str(find_font("Bold")), 180), fill=ACCENT)
+    ft = ImageFont.truetype(str(find_font("Semibold")), 60)
+    righe = wrap_testo(d, testo, ft, W - 200)[:8]
+    line_h = 80
+    blocco_h = len(righe) * line_h
+    area_top, area_bot = 440, H - 200
+    ty = area_top + max(0, (area_bot - area_top - blocco_h) // 2)
+    for r in righe:
+        d.text((100, ty), r, font=ft, fill=WHITE)
+        ty += line_h
+    base.alpha_composite(scrim(W, 170, dall_alto=False, alpha_max=150), (0, H - 170))
+    d.text((60, H - 92), "protezionecivilegenzano.it",
+           font=ImageFont.truetype(str(find_font("Bold")), 30), fill=WHITE)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    base.convert("RGB").save(out_path, "JPEG", quality=92, optimize=True, progressive=True)
+    return out_path
+
+
+def crea_slide_punti(punti: list, out_path: Path,
+                     W: int = 1080, H: int = 1350) -> Path:
+    """Slide 'punti chiave': elenco di 2-5 punti brevi dall'articolo (frontmatter
+    social_punti). Marcatore accento + testo, mai inventato."""
+    base = _sfondo_titolo(W, H)
+    _barra_brand(base, W)
+    d = ImageDraw.Draw(base)
+    d.line([(60, 190), (W - 60, 190)], fill=(255, 255, 255, 55), width=2)
+    d.text((60, 238), "IN SINTESI",
+           font=ImageFont.truetype(str(find_font("Bold")), 36), fill=ACCENT)
+    ft = ImageFont.truetype(str(find_font("Semibold")), 46)
+    y = 340
+    for p in punti[:5]:
+        righe = wrap_testo(d, p, ft, W - 230)[:3]
+        d.ellipse([(64, y + 18), (90, y + 44)], fill=ACCENT)
+        for r in righe:
+            d.text((120, y), r, font=ft, fill=WHITE)
+            y += 60
+        y += 30
+    base.alpha_composite(scrim(W, 170, dall_alto=False, alpha_max=150), (0, H - 170))
+    d.text((60, H - 92), "protezionecivilegenzano.it",
+           font=ImageFont.truetype(str(find_font("Bold")), 30), fill=WHITE)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     base.convert("RGB").save(out_path, "JPEG", quality=92, optimize=True, progressive=True)
     return out_path
@@ -522,12 +604,21 @@ def estrai_articolo(path: Path) -> dict | None:
     # Limite Instagram: 10 immagini per carosello
     carousel_unique = carousel_unique[:10]
 
+    citazione = fm.get("social_citazione", "")
+    if not isinstance(citazione, str):
+        citazione = ""
+    punti = fm.get("social_punti") or []
+    if not isinstance(punti, list):
+        punti = []
+
     return {
         "slug": path.stem,
         "title": fm.get("title", ""),
         "description": fm.get("description", ""),
         "badge": fm.get("badge", ""),
         "date": m.group(1),
+        "citazione": citazione.strip(),
+        "punti": [str(p).strip() for p in punti if str(p).strip()],
         "cover": cover_path,
         "carousel": carousel_unique,
     }
@@ -579,28 +670,29 @@ def main() -> int:
             saltati += 1
             continue
 
-        n_foto = len(art["carousel"])
         out_dir = slug_dir(art["slug"])
         story_path = out_dir / "storia.jpg"
 
-        # Nomi a prova di errore (la destinazione è nel nome):
-        #   1 sola immagine -> feed-post.jpg
-        #   2+ immagini     -> feed-carosello-1.jpg, feed-carosello-2.jpg, ...
-        #   storia          -> storia.jpg
-        if n_foto == 1:
-            target = out_dir / "feed-post.jpg"
-            if not args.force and target.exists() and story_path.exists():
-                print(f"  GIÀ PRESENTE (--force per ri-generare): {art['slug']}",
-                      file=sys.stderr)
-                saltati += 1
-                continue
-        else:
-            target_1 = out_dir / "feed-carosello-1.jpg"
-            if not args.force and target_1.exists() and story_path.exists():
-                print(f"  GIÀ PRESENTE carosello (--force per ri-generare): {art['slug']}",
-                      file=sys.stderr)
-                saltati += 1
-                continue
+        # Piano del carosello (ordine): titolo -> citazione -> punti -> foto.
+        # Citazione e punti solo se presenti nel frontmatter (social_citazione /
+        # social_punti). Max 10 slide (limite Instagram).
+        slides = [("titolo", None)]
+        if art.get("citazione"):
+            slides.append(("citazione", art["citazione"]))
+        if art.get("punti"):
+            slides.append(("punti", art["punti"]))
+        for foto in art["carousel"][1:]:
+            slides.append(("foto", foto))
+        slides = slides[:10]
+        n_slide = len(slides)
+
+        # Nomi a prova di errore: 1 sola slide -> feed-post.jpg; 2+ -> feed-carosello-N.jpg
+        primo = out_dir / ("feed-post.jpg" if n_slide == 1 else "feed-carosello-1.jpg")
+        if not args.force and primo.exists() and story_path.exists():
+            print(f"  GIÀ PRESENTE (--force per ri-generare): {art['slug']}",
+                  file=sys.stderr)
+            saltati += 1
+            continue
 
         # --force: pulisci immagini precedenti, sia i nomi nuovi sia quelli
         # vecchi (instagram-post*/instagram-story*, e .webp pre-2 maggio 2026).
@@ -611,16 +703,22 @@ def main() -> int:
                 for old in out_dir.glob(pat):
                     old.unlink()
 
-        try:
-            # Slide 1 = card-titolo nativa; slide 2+ = foto inline intere.
-            if n_foto == 1:
-                crea_slide_titolo(art["title"], art["badge"],
-                                  out_dir / "feed-post.jpg")
+        def _render(kind, data, dest):
+            if kind == "titolo":
+                crea_slide_titolo(art["title"], art["badge"], dest)
+            elif kind == "citazione":
+                crea_slide_citazione(data, dest)
+            elif kind == "punti":
+                crea_slide_punti(data, dest)
             else:
-                crea_slide_titolo(art["title"], art["badge"],
-                                  out_dir / "feed-carosello-1.jpg")
-                for idx, foto in enumerate(art["carousel"][1:], 2):
-                    crea_slide_foto(foto, out_dir / f"feed-carosello-{idx}.jpg")
+                crea_slide_foto(data, dest)
+
+        try:
+            if n_slide == 1:
+                _render(*slides[0], out_dir / "feed-post.jpg")
+            else:
+                for idx, (kind, data) in enumerate(slides, 1):
+                    _render(kind, data, out_dir / f"feed-carosello-{idx}.jpg")
 
             # Story: foto reale (1ª inline) in evidenza se c'è, altrimenti titolo
             hero = art["carousel"][1] if len(art["carousel"]) > 1 else None
@@ -628,9 +726,16 @@ def main() -> int:
                                  story_path, art["badge"], hero)
 
             # README.md della cartella (mappa file -> destinazione)
-            scrivi_readme(out_dir, art, n_foto)
+            scrivi_readme(out_dir, art, n_slide)
 
-            tipo = "singolo" if n_foto == 1 else f"carosello x{n_foto}"
+            extra = []
+            if art.get("citazione"):
+                extra.append("citazione")
+            if art.get("punti"):
+                extra.append("punti")
+            tipo = "singolo" if n_slide == 1 else f"carosello x{n_slide}"
+            if extra:
+                tipo += " +" + "/".join(extra)
             print(f"  ✓ {art['slug']} ({tipo})", file=sys.stderr)
             ok += 1
         except Exception as e:

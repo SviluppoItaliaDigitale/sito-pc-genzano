@@ -13,6 +13,12 @@ allegati:
   - titolo: "Ordinanza Polizia Locale n. 71 del 19 maggio 2026 — viabilità Infiorata dei Ragazzi"
     url: "/allegati/2026/ordinanza-71-2026-infiorata-ragazzi-viabilita.pdf"
     dimensione: "120 KB"
+social_citazione: "Durante l'Infiorata il Gruppo è presente per l'assistenza alla popolazione, l'informazione e il primo soccorso."
+social_punti:
+  - "30 e 31 maggio 2026, via Bruno Buozzi a Genzano"
+  - "Tema: «Inno al Creato — Cantico delle Creature»"
+  - "Modifiche alla viabilità dal 29 maggio"
+  - "Per ogni emergenza chiama il 112"
 draft: false
 ---
 
