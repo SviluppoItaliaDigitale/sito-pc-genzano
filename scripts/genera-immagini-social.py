@@ -431,6 +431,9 @@ def estrai_articolo(path: Path) -> dict | None:
     fm, body = parse_frontmatter(testo)
     if fm.get("draft", "").lower() in ("true", "yes", "1"):
         return None
+    # Le versioni "facile" (A2) sono nascoste da liste/feed: niente social dedicato.
+    if fm.get("versione_facile_di"):
+        return None
     m = re.match(r"(\d{4}-\d{2}-\d{2})", fm.get("date", ""))
     if not m:
         return None
@@ -491,6 +494,8 @@ def trova_articoli_pubblicati() -> list[Path]:
             continue
         fm, _ = parse_frontmatter(testo)
         if fm.get("draft", "").lower() in ("true", "yes", "1"):
+            continue
+        if fm.get("versione_facile_di"):
             continue
         m = re.match(r"(\d{4}-\d{2}-\d{2})", fm.get("date", ""))
         if not m or datetime.date.fromisoformat(m.group(1)) > oggi:
