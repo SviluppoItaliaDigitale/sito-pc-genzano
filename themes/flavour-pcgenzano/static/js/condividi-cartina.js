@@ -14,12 +14,33 @@
 
   function slug(s) { return (s || "cartina").replace(/[^a-z0-9]+/gi, "-").toLowerCase().replace(/^-|-$/g, ""); }
 
+  function feedback(btn, msg) {
+    var t = btn.querySelector(".cartina-azione-label");
+    if (!t) return;
+    var old = t.getAttribute("data-old") || t.textContent;
+    t.setAttribute("data-old", old);
+    t.textContent = msg;
+    setTimeout(function () { t.textContent = old; }, 2200);
+  }
+
+  async function copiaLink(btn, pagina) {
+    try { await navigator.clipboard.writeText(pagina); feedback(btn, "Link copiato"); return; }
+    catch (e) { /* prova il fallback execCommand */ }
+    try {
+      var ta = document.createElement("textarea");
+      ta.value = pagina; ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select(); document.execCommand("copy"); ta.remove();
+      feedback(btn, "Link copiato");
+    } catch (e) { feedback(btn, "Copia il link dalla barra"); }
+  }
+
   async function condividi(btn) {
     var url = btn.getAttribute("data-img");
     var titolo = btn.getAttribute("data-title") || "Cartina meteo";
     var pagina = location.href;
-    try {
-      if (navigator.canShare && url) {
+    // 1) condividi il FILE (ideale su mobile: condivide la cartina / la clip)
+    if (navigator.canShare && url) {
+      try {
         var resp = await fetch(url);
         var blob = await resp.blob();
         var ext = (blob.type.split("/")[1] || "png").replace("svg+xml", "svg");
@@ -28,19 +49,15 @@
           await navigator.share({ files: [file], title: titolo, text: titolo });
           return;
         }
-      }
-      if (navigator.share) { await navigator.share({ title: titolo, text: titolo, url: pagina }); return; }
-    } catch (e) {
-      if (e && e.name === "AbortError") return; // l'utente ha annullato
+      } catch (e) { if (e && e.name === "AbortError") return; }
     }
-    // fallback: scarica l'immagine + copia il link di pagina
-    if (url) scarica(url, slug(titolo));
-    try {
-      await navigator.clipboard.writeText(pagina);
-      btn.setAttribute("data-copiato", "1");
-      var t = btn.querySelector(".cartina-azione-label");
-      if (t) { var old = t.textContent; t.textContent = "Link copiato"; setTimeout(function () { t.textContent = old; }, 2000); }
-    } catch (e) { /* niente clipboard: il download è già partito */ }
+    // 2) condividi il LINK di pagina (Web Share senza file)
+    if (navigator.share) {
+      try { await navigator.share({ title: titolo, text: titolo, url: pagina }); return; }
+      catch (e) { if (e && e.name === "AbortError") return; }
+    }
+    // 3) fallback desktop: copia il link negli appunti (NIENTE download)
+    copiaLink(btn, pagina);
   }
 
   document.addEventListener("click", function (e) {
