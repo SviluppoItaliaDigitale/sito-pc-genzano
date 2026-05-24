@@ -1,16 +1,14 @@
-{{- /* Sezione meteo per la homepage: cartina del Lazio (con riquadro completo di
-       Genzano di Roma, dentro l'SVG) + carta sinottica dell'Italia. Immagini
-       auto-ospitate, rigenerate dai workflow meteo; cache-bust dal timestamp dati.
-       Pulsanti di condivisione (scarica / condividi la clip). */ -}}
+{{- /* Sezione homepage "Meteo e terremoti in tempo reale": la nostra cartina del
+       Lazio (con riquadro completo di Genzano di Roma, dentro l'SVG) + card sismica
+       con rimando diretto all'INGV. Tentativo 1 di riordino home: accorpa meteo e
+       sismica in un'unica sezione (prima erano due, con il guscio "Monitoraggio"). */ -}}
 {{- $svg := "images/meteo-lazio.svg" | relURL -}}
-{{- $webp := "images/meteo-sinottica-italia.webp" | relURL -}}
 {{- $vG := "" -}}{{- with .Site.Data.meteo_genzano }}{{ with .aggiornato }}{{ $vG = printf "?v=%s" (. | replaceRE `[^0-9]` "") }}{{ end }}{{ end -}}
-{{- $vS := "" -}}{{- with .Site.Data.meteo_sinottica }}{{ with .aggiornato }}{{ $vS = printf "?v=%s" (. | replaceRE `[^0-9]` "") }}{{ end }}{{ end -}}
 
 <section class="meteo-home" aria-labelledby="meteo-home-titolo">
   <div class="container">
-    <h2 id="meteo-home-titolo" class="meteo-home-titolo"><i class="bi bi-cloud-sun-fill" aria-hidden="true"></i> Meteo a Genzano di Roma e nel Lazio</h2>
-    <p class="meteo-home-intro">Temperatura e cielo previsti oggi, con il dettaglio completo di Genzano di Roma. Aggiornata automaticamente su dati aperti Open-Meteo (modelli ECMWF). Un dato <strong>indicativo</strong>: per le allerte valgono i bollettini del <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Regionale del Lazio</a>.</p>
+    <h2 id="meteo-home-titolo" class="meteo-home-titolo"><i class="bi bi-cloud-sun-fill" aria-hidden="true"></i> Meteo e terremoti in tempo reale</h2>
+    <p class="meteo-home-intro">La nostra cartina del Lazio con il dettaglio completo di Genzano di Roma e gli ultimi terremoti rilevati dall'INGV. Dati <strong>indicativi</strong>: per le allerte valgono i bollettini del <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Regionale del Lazio</a>.</p>
 
     <div class="meteo-home-grid">
       <figure class="meteo-home-card">
@@ -25,6 +23,23 @@
     </div>
 
     <p class="meteo-home-link"><a href="{{ "allerte-meteo/" | relURL }}">Sulla pagina Allerte meteo trovi anche la carta sinottica dell'Italia, l'animazione e il radar pioggia in tempo reale <i class="bi bi-arrow-right" aria-hidden="true"></i></a></p>
+
+    {{/* Card sismica — rimando diretto all'INGV (niente embed pesante) */}}
+    <div class="meteo-home-grid">
+      <div class="terremoto-card">
+        <div class="terremoto-card-icon" aria-hidden="true"><i class="bi bi-activity"></i></div>
+        <div class="terremoto-card-body">
+          <h3 class="terremoto-card-title">Hai sentito un terremoto?</h3>
+          <p class="terremoto-card-text">Controlla le <strong>ultime scosse</strong> rilevate in tempo reale dall'<strong>INGV</strong> (Istituto Nazionale di Geofisica e Vulcanologia) e scopri cosa fare in caso di terremoto.</p>
+          <div class="terremoto-card-actions">
+            <a class="btn btn-primary" href="https://terremoti.ingv.it/" target="_blank" rel="noopener noreferrer" aria-label="Vedi le ultime scosse di terremoto sul sito INGV (si apre in una nuova scheda)"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Ultime scosse (INGV)</a>
+            <a class="btn btn-outline-primary" href="{{ "rischi-prevenzione/rischio-sismico/" | relURL }}"><i class="bi bi-shield-check" aria-hidden="true"></i> Cosa fare in caso di terremoto</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="small text-muted text-center mt-3 mb-0">Fonti ufficiali: <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Bollettino Regione Lazio</a> · <a href="https://www.ingv.it/" target="_blank" rel="noopener noreferrer">INGV</a> · <a href="https://www.protezionecivile.gov.it/" target="_blank" rel="noopener noreferrer">Dipartimento Protezione Civile</a></p>
   </div>
 </section>
 <script src="{{ "js/condividi-cartina.js" | relURL }}" defer></script>

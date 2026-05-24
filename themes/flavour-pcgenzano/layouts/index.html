@@ -223,35 +223,8 @@
 {{/* Notizie in evidenza */}}
 {{ partial "latest-news.html" . }}
 
-{{/* Cartine meteo del Gruppo (Lazio + sinottica Italia) con condivisione */}}
+{{/* Meteo e terremoti in tempo reale — cartina Lazio + card sismica (sezione unica) */}}
 {{ partial "meteo-cartine-home.html" . }}
-
-{{/* Strumenti di monitoraggio in tempo reale — widget esterni click-to-load */}}
-<section class="section-padding bg-light" aria-labelledby="monitoraggio-title">
-  <div class="container">
-    <h2 id="monitoraggio-title" class="section-title text-center">Monitoraggio in tempo reale</h2>
-    <p class="text-muted text-center mb-4">Strumenti di consultazione da fonti scientifiche ufficiali. <strong>Non sostituiscono</strong> i bollettini di allerta della Regione Lazio.</p>
-    {{/* Card sismica — rimando diretto all'INGV (niente embed pesante) */}}
-    <div class="row mb-4 justify-content-center">
-      <div class="col-12 col-lg-10">
-        <div class="terremoto-card">
-          <div class="terremoto-card-icon" aria-hidden="true"><i class="bi bi-activity"></i></div>
-          <div class="terremoto-card-body">
-            <h3 class="terremoto-card-title">Hai sentito un terremoto?</h3>
-            <p class="terremoto-card-text">Controlla le <strong>ultime scosse</strong> rilevate in tempo reale dall'<strong>INGV</strong> (Istituto Nazionale di Geofisica e Vulcanologia) e scopri cosa fare in caso di terremoto.</p>
-            <div class="terremoto-card-actions">
-              <a class="btn btn-primary" href="https://terremoti.ingv.it/" target="_blank" rel="noopener noreferrer" aria-label="Vedi le ultime scosse di terremoto sul sito INGV (si apre in una nuova scheda)"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Ultime scosse (INGV)</a>
-              <a class="btn btn-outline-primary" href="{{ "rischi-prevenzione/rischio-sismico/" | relURL }}"><i class="bi bi-shield-check" aria-hidden="true"></i> Cosa fare in caso di terremoto</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <p class="small text-muted text-center mt-3 mb-0">
-      Fonti ufficiali: <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Bollettino Regione Lazio</a> · <a href="https://www.ingv.it/" target="_blank" rel="noopener noreferrer">INGV</a> · <a href="https://www.protezionecivile.gov.it/" target="_blank" rel="noopener noreferrer">Dipartimento Protezione Civile</a>
-    </p>
-  </div>
-</section>
 
 {{/* Giochi della Sicurezza — CTA formazione */}}
 {{ partial "games-cta.html" . }}
