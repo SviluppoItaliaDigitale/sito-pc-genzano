@@ -37,7 +37,8 @@
   async function condividi(btn) {
     var url = btn.getAttribute("data-img");
     var titolo = btn.getAttribute("data-title") || "Cartina meteo";
-    var pagina = location.href;
+    // URL ASSOLUTO della cartina (non della pagina): è questo che si condivide/copia.
+    var imgAbs = url ? new URL(url, location.href).href : location.href;
     // 1) condividi il FILE (ideale su mobile: condivide la cartina / la clip)
     if (navigator.canShare && url) {
       try {
@@ -51,13 +52,13 @@
         }
       } catch (e) { if (e && e.name === "AbortError") return; }
     }
-    // 2) condividi il LINK di pagina (Web Share senza file)
+    // 2) condividi il LINK della cartina (Web Share senza file)
     if (navigator.share) {
-      try { await navigator.share({ title: titolo, text: titolo, url: pagina }); return; }
+      try { await navigator.share({ title: titolo, text: titolo, url: imgAbs }); return; }
       catch (e) { if (e && e.name === "AbortError") return; }
     }
-    // 3) fallback desktop: copia il link negli appunti (NIENTE download)
-    copiaLink(btn, pagina);
+    // 3) fallback desktop: copia il link della CARTINA negli appunti (non la pagina)
+    copiaLink(btn, imgAbs);
   }
 
   document.addEventListener("click", function (e) {
