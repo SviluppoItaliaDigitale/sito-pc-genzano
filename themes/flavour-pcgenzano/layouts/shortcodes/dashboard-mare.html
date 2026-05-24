@@ -1,0 +1,36 @@
+{{/* Shortcode dashboard-mare — stato del mare / mareggiate sulla costa laziale.
+     Fonte: Open-Meteo Marine API (CORS aperto) -> fetch dal browser, niente terzi.
+     Punto di riferimento: largo di Anzio-Nettuno (la costa più vicina a Genzano,
+     che è interna). Solo indicatori, nessuna mappa. */}}
+<div class="dash-mare" aria-labelledby="dash-mare-tit">
+  <h2 id="dash-mare-tit" class="visually-hidden">Stato del mare sulla costa laziale</h2>
+  <p class="dash-aria-nota mb-2">Riferimento: largo di <strong>Anzio-Nettuno</strong>, la costa più vicina a Genzano di Roma (paese interno). Utile per gite ed eventi sul litorale.</p>
+  <div class="dash-sisma-kpi">
+    <div class="dash-kpi"><span class="dash-kpi-num" id="mare-h">—</span><span class="dash-kpi-lab">Altezza onde (m)</span></div>
+    <div class="dash-kpi"><span class="dash-kpi-num" id="mare-stato">—</span><span class="dash-kpi-lab">Stato del mare</span></div>
+    <div class="dash-kpi"><span class="dash-kpi-num" id="mare-t">—</span><span class="dash-kpi-lab">Periodo onde (s)</span></div>
+    <div class="dash-kpi"><span class="dash-kpi-num" id="mare-dir">—</span><span class="dash-kpi-lab">Direzione onde</span></div>
+  </div>
+  <p class="small text-muted mt-2 mb-0" id="mare-stato-agg"></p>
+  <p class="small text-muted mt-1 mb-0">Dati: <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo Marine</a> (modelli onde). Dato indicativo; per la balneazione e gli avvisi costieri vedi le fonti ufficiali (Guardia Costiera, 1530).</p>
+  <script>
+  (function(){
+    var API='https://marine-api.open-meteo.com/v1/marine?latitude=41.43&longitude=12.62&timezone=Europe%2FRome&current=wave_height,wave_period,wave_direction';
+    function cardinale(d){ if(d==null)return'n.d.'; var v=['N','NE','E','SE','S','SO','O','NO']; return v[Math.round(d/45)%8]; }
+    function scala(h){ // scala Douglas semplificata
+      if(h==null)return'n.d.'; if(h<0.1)return'Calmo'; if(h<0.5)return'Quasi calmo'; if(h<1.25)return'Poco mosso'; if(h<2.5)return'Mosso'; if(h<4)return'Molto mosso'; if(h<6)return'Agitato'; return'Molto agitato'; }
+    function carica(){
+      fetch(API).then(function(r){return r.json();}).then(function(j){
+        var c=j.current||{};
+        document.getElementById('mare-h').textContent=(c.wave_height==null?'n.d.':c.wave_height.toFixed(1));
+        document.getElementById('mare-stato').textContent=scala(c.wave_height);
+        document.getElementById('mare-t').textContent=(c.wave_period==null?'n.d.':Math.round(c.wave_period));
+        document.getElementById('mare-dir').textContent=cardinale(c.wave_direction);
+        var t=c.time?new Date(c.time):new Date();
+        document.getElementById('mare-stato-agg').textContent='Aggiornato alle '+('0'+t.getHours()).slice(-2)+':'+('0'+t.getMinutes()).slice(-2);
+      }).catch(function(){ document.getElementById('mare-stato-agg').textContent='Dati momentaneamente non disponibili.'; });
+    }
+    carica(); setInterval(carica, 1800000);
+  })();
+  </script>
+</div>
