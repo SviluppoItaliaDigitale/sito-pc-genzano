@@ -28,7 +28,48 @@
   </div>
 
   <p class="small text-muted mt-2 mb-0" id="aria-stato"></p>
-  <p class="small text-muted mt-1 mb-0">Dati: <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a> / servizio europeo <a href="https://atmosphere.copernicus.eu/" target="_blank" rel="noopener noreferrer">Copernicus CAMS</a>. Dato indicativo per Genzano di Roma; per soglie sanitarie ufficiali vedi <a href="https://www.arpalazio.it/" target="_blank" rel="noopener noreferrer">ARPA Lazio</a>.</p>
+  <p class="small text-muted mt-1 mb-0">Dato puntuale su Genzano di Roma: <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a> / servizio europeo <a href="https://atmosphere.copernicus.eu/" target="_blank" rel="noopener noreferrer">Copernicus CAMS</a>. Indicativo.</p>
+
+  <h3 class="dash-aria-h3">Previsione regionale <span class="dash-aria-nota">(mappe ufficiali ARPA Lazio — modello CHIMERE)</span></h3>
+  <div class="dash-sisma-toolbar" role="group" aria-label="Mappa di previsione regionale della qualità dell'aria">
+    <span class="dash-sisma-grp" role="group" aria-label="Inquinante">
+      <button type="button" class="dash-pill" data-inq="mean_pm10" aria-pressed="true">PM10</button>
+      <button type="button" class="dash-pill" data-inq="max_no2" aria-pressed="false">NO₂</button>
+      <button type="button" class="dash-pill" data-inq="max8hr_o3" aria-pressed="false">Ozono</button>
+      <button type="button" class="dash-pill" data-inq="mean_dust" aria-pressed="false">Polveri sahariane</button>
+    </span>
+    <span class="dash-sisma-grp" role="group" aria-label="Giorno previsto">
+      <button type="button" class="dash-pill" data-h="0" aria-pressed="true">Oggi</button>
+      <button type="button" class="dash-pill" data-h="24" aria-pressed="false">Domani</button>
+      <button type="button" class="dash-pill" data-h="48" aria-pressed="false">+2 giorni</button>
+      <button type="button" class="dash-pill" data-h="72" aria-pressed="false">+3 giorni</button>
+      <button type="button" class="dash-pill" data-h="96" aria-pressed="false">+4 giorni</button>
+    </span>
+  </div>
+  <figure class="dash-arpa-fig">
+    <img id="arpa-map" src="" alt="Mappa di previsione della qualità dell'aria nel Lazio (ARPA Lazio)" loading="lazy" width="900" height="700">
+    <figcaption class="dash-aria-nota mt-1" id="arpa-cap"></figcaption>
+  </figure>
+  <p class="small text-muted mt-1 mb-0">Mappe di previsione: <a href="https://qa.arpalazio.net/" target="_blank" rel="noopener noreferrer">ARPA Lazio — Qualità dell'aria</a> (modello CHIMERE). La legenda dei colori è riportata sulla mappa. Per le soglie sanitarie ufficiali e i dati delle centraline vedi il <a href="https://qa.arpalazio.net/" target="_blank" rel="noopener noreferrer">portale ARPA Lazio</a>.</p>
+
+  <script>
+  (function(){
+    var inq='mean_pm10', h='0';
+    var lab={mean_pm10:'PM10 (media giornaliera)',max_no2:'biossido d’azoto NO₂ (massimo orario)',max8hr_o3:'ozono O₃ (massimo della media su 8 ore)',mean_dust:'polveri sahariane (media)'};
+    var giorno={'0':'oggi','24':'domani','48':'tra 2 giorni','72':'tra 3 giorni','96':'tra 4 giorni'};
+    var img=document.getElementById('arpa-map'), cap=document.getElementById('arpa-cap');
+    function upd(){
+      var d=new Date(), bust=''+d.getFullYear()+('0'+(d.getMonth()+1)).slice(-2)+('0'+d.getDate()).slice(-2);
+      img.src='https://qa.arpalazio.net/img/qa/forecast/LAZIO/plots/'+inq+'_'+h+'.gif?_='+bust;
+      var testo=lab[inq]+' — '+giorno[h];
+      img.alt='Mappa di previsione ARPA Lazio della qualità dell’aria nel Lazio: '+testo;
+      cap.textContent='Previsione '+testo+' per il Lazio (mappa ufficiale ARPA Lazio).';
+    }
+    document.querySelectorAll('.dash-pill[data-inq]').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.dash-pill[data-inq]').forEach(function(x){x.setAttribute('aria-pressed','false');});b.setAttribute('aria-pressed','true');inq=b.dataset.inq;upd();});});
+    document.querySelectorAll('.dash-pill[data-h]').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.dash-pill[data-h]').forEach(function(x){x.setAttribute('aria-pressed','false');});b.setAttribute('aria-pressed','true');h=b.dataset.h;upd();});});
+    upd();
+  })();
+  </script>
 
   <script>
   (function(){
