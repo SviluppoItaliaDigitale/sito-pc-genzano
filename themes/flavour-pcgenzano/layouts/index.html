@@ -249,21 +249,20 @@
       </div>
     </div>
 
-    {{/* Widget INGV — riga propria, full-width su mobile per max usabilità */}}
-    <div class="row mb-4">
-      <div class="col-12">
-        {{ partial "external-widget.html" (dict
-          "src"              "https://terremoti.ingv.it/"
-          "title"            "Mappa interattiva dei terremoti recenti in Italia — INGV"
-          "placeholderTitle" "Terremoti recenti — INGV"
-          "placeholderDesc"  "Lista e mappa degli eventi sismici in Italia forniti da <strong>INGV</strong> (Istituto Nazionale di Geofisica e Vulcanologia)."
-          "icon"             "bi-activity"
-          "btnLabel"         "Carica la mappa INGV"
-          "altUrl"           "https://terremoti.ingv.it/"
-          "altLabel"         "terremoti.ingv.it"
-          "fallbackText"     "Elenco terremoti recenti su terremoti.ingv.it (Istituto Nazionale di Geofisica e Vulcanologia)"
-          "widgetId"         "home-sismico-ingv"
-        ) }}
+    {{/* Card sismica — rimando diretto all'INGV (niente embed pesante) */}}
+    <div class="row mb-4 justify-content-center">
+      <div class="col-12 col-lg-10">
+        <div class="terremoto-card">
+          <div class="terremoto-card-icon" aria-hidden="true"><i class="bi bi-activity"></i></div>
+          <div class="terremoto-card-body">
+            <h3 class="terremoto-card-title">Hai sentito un terremoto?</h3>
+            <p class="terremoto-card-text">Controlla le <strong>ultime scosse</strong> rilevate in tempo reale dall'<strong>INGV</strong> (Istituto Nazionale di Geofisica e Vulcanologia) e scopri cosa fare in caso di terremoto.</p>
+            <div class="terremoto-card-actions">
+              <a class="btn btn-primary" href="https://terremoti.ingv.it/" target="_blank" rel="noopener noreferrer" aria-label="Vedi le ultime scosse di terremoto sul sito INGV (si apre in una nuova scheda)"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Ultime scosse (INGV)</a>
+              <a class="btn btn-outline-primary" href="{{ "rischi-prevenzione/rischio-sismico/" | relURL }}"><i class="bi bi-shield-check" aria-hidden="true"></i> Cosa fare in caso di terremoto</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <p class="small text-muted text-center mt-3 mb-0">
