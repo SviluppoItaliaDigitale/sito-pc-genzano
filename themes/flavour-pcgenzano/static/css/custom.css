@@ -6574,3 +6574,36 @@ html.a11y-pause-anim .consulta-rapida .cr-card:hover { transform: none; }
 .meteo-approfondisci-card:hover .meteo-approfondisci-freccia { transform: translateX(4px); }
 @media (prefers-reduced-motion: reduce) { .meteo-approfondisci-card, .meteo-approfondisci-freccia { transition: none; }
   .meteo-approfondisci-card:hover { transform: none; } }
+
+/* ============================================================
+   CRUSCOTTO MULTIDISCIPLINARE v1.0 — /cruscotto/
+   Switch a schede (ARIA tabs) + cruscotto sismico INGV. WCAG 2.2 AA.
+   ============================================================ */
+.cruscotto-switch { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.2rem 0; border-bottom: 2px solid #e2e7eb; padding-bottom: .6rem; }
+.cruscotto-tab { display: inline-flex; align-items: center; gap: .4rem; border: 2px solid #003366; background: #fff; color: #003366; padding: .5rem 1rem; border-radius: 999px; font-size: .95rem; font-weight: 600; cursor: pointer; transition: background .15s, color .15s; }
+.cruscotto-tab[aria-selected="true"] { background: #003366; color: #fff; }
+.cruscotto-tab:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 2px; }
+.cruscotto-panel[hidden] { display: none; }
+
+/* cruscotto sismico */
+.dash-sisma-toolbar { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; margin-bottom: .8rem; }
+.dash-sisma-grp { display: inline-flex; gap: .35rem; }
+.dash-pill { border: 2px solid #003366; background: #fff; color: #003366; padding: .35rem .8rem; border-radius: 999px; font-size: .9rem; cursor: pointer; }
+.dash-pill[aria-pressed="true"] { background: #003366; color: #fff; }
+.dash-pill:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 2px; }
+.dash-sisma-stato { font-size: .88rem; color: #495057; margin-left: auto; }
+.dash-sisma-kpi { display: grid; grid-template-columns: repeat(4, 1fr); gap: .8rem; margin-bottom: 1rem; }
+.dash-kpi { background: #e7f0fa; border-left: 4px solid #003366; border-radius: 8px; padding: .7rem .9rem; text-align: center; }
+.dash-kpi-num { display: block; font-size: 1.5rem; font-weight: 800; color: #003366; line-height: 1.1; }
+.dash-kpi-lab { display: block; font-size: .78rem; color: #495057; margin-top: .2rem; }
+.dash-sisma-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 1rem; align-items: start; }
+#dash-sisma-mappa { height: 520px; border-radius: 8px; border: 2px solid #003366; background: #eaeaea; }
+.dash-sisma-liste h3 { font-size: 1rem; color: #003366; margin: .2rem 0 .4rem; }
+.dash-sisma-list { list-style: none; margin: 0 0 1rem; padding: 0; }
+.dash-sisma-list li { display: flex; align-items: baseline; gap: .5rem; padding: .35rem 0; border-bottom: 1px solid #eef1f4; font-size: .9rem; }
+.dash-mag { flex: 0 0 auto; background: #fff; color: #1a1a1a; border: 1px solid #d4dde6; border-left: 5px solid #9aa7b4; border-radius: 5px; padding: .1rem .4rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+.dash-luogo { flex: 1 1 auto; color: #1a1a1a; }
+.dash-meta { flex: 0 0 auto; color: #6c757d; font-size: .8rem; }
+.dash-sisma-legenda { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: .6rem; font-size: .8rem; color: #495057; }
+.dash-sisma-legenda i { display: inline-block; width: .85rem; height: .85rem; border-radius: 50%; vertical-align: middle; margin-right: .25rem; border: 1px solid rgba(0,0,0,.2); }
+@media (max-width: 768px) { .dash-sisma-grid { grid-template-columns: 1fr; } .dash-sisma-kpi { grid-template-columns: repeat(2, 1fr); } #dash-sisma-mappa { height: 420px; } }
