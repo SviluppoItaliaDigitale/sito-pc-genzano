@@ -205,27 +205,9 @@ def main():
         ("Rapporti compilati", rap_comp),
     ], periodo)
 
-    # ---------- RISPOSTE SELETTIVE (radio; solo aggregato) ----------
-    ws3 = wb["Risposte Selettive"]
-    d3 = [r for r in ws3.iter_rows(values_only=True)][1:]
-    d3 = [r for r in d3 if r and r[0]]
-    si = int(sum(fnum(r[1]) for r in d3))
-    no = int(sum(fnum(r[2]) for r in d3))
-    nr = int(sum(fnum(r[3]) for r in d3))
-    tot = si + no + nr
-    tasso = round((si + no) / tot * 100, 1) if tot else 0
-    write_kv("statistiche-radio-selettive", [
-        ("Selettive con risposta «presente»", si),
-        ("Selettive con risposta «non disponibile»", no),
-        ("Selettive senza risposta", nr),
-        ("Selettive totali inviate", tot),
-        ("Tasso di risposta (%)", tasso),
-    ], periodo)
-
     print("\nRiepilogo (anonimo):")
     print(f"  interventi: {n_tot} (approvati {n_appr}), ore {ore}, km {int(km)}, {per_label}")
     print(f"  volontari: {vol_elenco} in organico, {vol_attivi} attivi, {rap_tot} rapporti")
-    print(f"  selettive: SI {si} / NO {no} / no-risposta {nr} (tasso {tasso}%)")
     print("\nNessun dato personale scritto. Il file .xlsx NON va committato.")
 
 

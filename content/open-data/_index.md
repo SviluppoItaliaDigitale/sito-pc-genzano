@@ -33,7 +33,6 @@ I file sono rigenerati dallo script `scripts/genera-open-data.py` a partire dai 
 | **Statistiche interventi** | Numero di interventi, ore e chilometri del Gruppo nel periodo | [CSV](/open-data/statistiche-interventi.csv) · [JSON](/open-data/statistiche-interventi.json) |
 | **Interventi per tipologia** | Interventi raggruppati per tipo di evento | [CSV](/open-data/interventi-per-tipologia.csv) · [JSON](/open-data/interventi-per-tipologia.json) |
 | **Statistiche volontari** | Organico, volontari attivi e rapporti di intervento (aggregato anonimo) | [CSV](/open-data/statistiche-volontari.csv) · [JSON](/open-data/statistiche-volontari.json) |
-| **Radio — chiamate selettive** | Risposte alle chiamate selettive radio (aggregato anonimo) | [CSV](/open-data/statistiche-radio-selettive.csv) · [JSON](/open-data/statistiche-radio-selettive.json) |
 
 Periodo coperto: **dal 4 aprile 2026**. Generati da `scripts/genera-open-data-interventi.py` a partire dall'export del gestionale, che **resta riservato e non viene pubblicato** perché contiene dati personali: il sito ne espone solo i numeri aggregati.
 
@@ -149,7 +148,6 @@ Eventuali microdati sensibili sono **aggregati** a livello mensile o di macro-ar
 | `statistiche-interventi.{csv,json}` | a ogni export del gestionale | **pubblicato (provvisorio)** |
 | `interventi-per-tipologia.{csv,json}` | a ogni export del gestionale | **pubblicato (provvisorio)** |
 | `statistiche-volontari.{csv,json}` | a ogni export del gestionale | **pubblicato (provvisorio)** |
-| `statistiche-radio-selettive.{csv,json}` | a ogni export del gestionale | **pubblicato (provvisorio)** |
 | `esercitazioni-AAAA.csv` | trimestrale | in predisposizione |
 | `formazione-AAAA.csv` | trimestrale | in predisposizione |
 | `dotazioni.csv` | semestrale | in predisposizione |
