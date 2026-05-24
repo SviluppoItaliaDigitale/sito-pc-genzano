@@ -392,9 +392,14 @@ enableGitInfo = true
   weight = 7
 
 [[menus.footer]]
+  name = "Open Data"
+  url = "/open-data/"
+  weight = 8
+
+[[menus.footer]]
   name = "Feed RSS"
   url = "/feed-rss/"
-  weight = 8
+  weight = 9
 
 # Menu footer — Servizi
 [[menus.servizi]]

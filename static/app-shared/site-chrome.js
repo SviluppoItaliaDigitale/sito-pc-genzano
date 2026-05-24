@@ -226,6 +226,7 @@
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/siti-utili/" style="color:rgba(255,255,255,0.85);">Siti Utili</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/mappa-sito/" style="color:rgba(255,255,255,0.85);">Mappa del Sito</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/stato-sistema/" style="color:rgba(255,255,255,0.85);">Stato del Sito</a></li>' +
+                '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/open-data/" style="color:rgba(255,255,255,0.85);">Open Data</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/feed-rss/" style="color:rgba(255,255,255,0.85);">Feed RSS</a></li>' +
               '</ul></nav>' +
               '<div class="mt-3">' +
