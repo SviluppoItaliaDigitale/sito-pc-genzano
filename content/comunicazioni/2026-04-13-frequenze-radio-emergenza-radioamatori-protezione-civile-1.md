@@ -26,7 +26,7 @@ La Rete Zamberletti opera su due frequenze HF in banda laterale inferiore (LSB),
 
 Queste frequenze sono distinte dalle frequenze generali di emergenza della IARU Regione 1 (3.760 kHz e 7.060 kHz), che sono centri di attività raccomandati per qualsiasi comunicazione di emergenza radioamatoriale a livello internazionale. La Rete Zamberletti utilizza frequenze proprie e dedicate, coordinate dall'ARI a livello nazionale.
 
-A livello locale, le sottoreti tra Prefetture e Comuni del territorio operano in **banda VHF e UHF**, utilizzando frequenze definite da ciascuna Sezione ARI capoluogo di provincia in base all'orografia del territorio e alla disponibilità di ponti ripetitori. Per l'area metropolitana di Roma Capitale, l'ARI Roma ha individuato come frequenze di riferimento la **145,275 MHz FM** in VHF (principale) e la **433,425 MHz FM** in UHF (alternativa), sulle quali si svolgono prove di collegamento locali due volte al mese, in coordinamento con le esercitazioni della Rete Zamberletti.
+A livello locale, le sottoreti tra Prefetture e Comuni del territorio operano in **banda VHF e UHF**, utilizzando frequenze definite da ciascuna Sezione ARI capoluogo di provincia in base all'orografia del territorio e alla disponibilità di ponti ripetitori. Per l'area metropolitana di Roma Capitale, l'ARI Roma ha individuato come frequenze di riferimento la **145,275 MHz FM** in VHF (principale) e la **433,425 MHz FM** in UHF (alternativa). Su queste frequenze si svolgono prove di collegamento locali due volte al mese, in coordinamento con le esercitazioni della Rete Zamberletti.
 
 In caso di calamità, il traffico di emergenza ha priorità assoluta su ogni altra trasmissione radioamatoriale: è un principio sancito dalla ITU, l'Unione Internazionale delle Telecomunicazioni.
 
@@ -68,7 +68,7 @@ Ad aprile 2026, la Rete Zamberletti è prossima al traguardo della **500ª prova
 
 ## Perché le onde corte funzionano quando tutto il resto si ferma
 
-La ragione per cui le comunicazioni HF dei radioamatori restano operative anche nelle emergenze più gravi è di natura fisica. Le onde corte, nella gamma tra 3 e 30 MHz, si propagano sfruttando la **riflessione ionosferica**: il segnale viene irradiato verso l'alto, incontra gli strati ionizzati dell'atmosfera e viene riflesso nuovamente verso terra, coprendo distanze che possono superare i mille chilometri con un singolo salto.
+La ragione per cui le comunicazioni HF dei radioamatori restano operative anche nelle emergenze più gravi è di natura fisica. Le onde corte, nella gamma tra 3 e 30 MHz, si propagano sfruttando la **riflessione ionosferica**. Il segnale viene irradiato verso l'alto, incontra gli strati ionizzati dell'atmosfera e viene riflesso verso terra. Così può coprire distanze che superano i mille chilometri con un singolo salto.
 
 Questo tipo di propagazione, detta **NVIS** (Near Vertical Incidence Skywave) quando l'angolo di irradiazione è quasi verticale, è particolarmente efficace sulla banda degli 80 metri per i collegamenti nazionali. Non richiede ripetitori, non richiede centrali telefoniche, non richiede energia elettrica dalla rete: basta un ricetrasmettitore, un'antenna filare e una batteria.
 
@@ -80,7 +80,7 @@ Le due bande si completano: l'HF collega Roma con le Prefetture su scala naziona
 
 ## Il ruolo dei radioamatori oggi
 
-I radioamatori non sostituiscono i sistemi di telecomunicazione professionali delle istituzioni. Li integrano, li affiancano e, nei momenti più critici, li suppliscono. Quando nel 2009 il terremoto dell'Aquila interruppe le comunicazioni, quando nel 2016 il sisma di Amatrice isolò interi borghi, quando nel 2023 l'alluvione in Emilia-Romagna compromise le reti cellulari, i radioamatori furono tra i primi a ristabilire un filo di comunicazione tra il territorio colpito e le strutture di coordinamento.
+I radioamatori non sostituiscono i sistemi di telecomunicazione professionali delle istituzioni. Li integrano, li affiancano e, nei momenti più critici, li suppliscono. Nel 2009 il terremoto dell'Aquila interruppe le comunicazioni. Nel 2016 il sisma di Amatrice isolò interi borghi. Nel 2023 l'alluvione in Emilia-Romagna compromise le reti cellulari. In tutti questi casi i radioamatori furono tra i primi a ristabilire un filo di comunicazione tra il territorio colpito e le strutture di coordinamento.
 
 L'ARI gestisce in autonomia le stazioni radio installate nelle Prefetture. I radioamatori volontari, inquadrati nell'organizzazione ARI-RE (Radiocomunicazioni di Emergenza), sono formati per operare in condizioni di stress, con procedure standardizzate, modulistica dedicata e una disciplina operativa che trasforma il diletto radioamatoriale in un servizio pubblico di altissimo valore.
 

@@ -23,7 +23,7 @@ Sono passati **otto anni**. Fra il **27 e il 30 ottobre 2018**, una **tempesta a
 
 Il risultato fu **biblico**. La tempesta venne battezzata **Vaia** dal Servizio Meteorologico tedesco. Quando si esaurì, sui versanti del Trentino, dell'Alto Adige, del Friuli-Venezia Giulia, del Veneto e di parte della Lombardia c'erano **14 milioni di alberi abbattuti**. Distesi a terra come stuzzicadenti, su un'area complessiva di **42.500 ettari di foresta** distrutti o gravemente danneggiati. Le fotografie aeree mostravano centinaia di chilometri quadrati di bosco rovesciato in un'unica direzione, allineato come dopo l'esplosione di un'arma nucleare.
 
-Vaia è la **più grande catastrofe forestale** della storia europea recente. È un evento che ha imposto al sistema italiano della protezione civile una nuova categoria di rischio — il **rischio "vento estremo"** sui boschi montani — e ha aperto un capitolo lungo della **gestione delle foreste in crisi**, che si protrarrà per decenni.
+Vaia è la **più grande catastrofe forestale** della storia europea recente. Ha imposto al sistema italiano della protezione civile una nuova categoria di rischio: il **rischio "vento estremo"** sui boschi montani. E ha aperto un capitolo lungo della **gestione delle foreste in crisi**, destinato a protrarsi per decenni.
 
 {{< foto src="/images/2026-10-29-vaia-bosco-abbattuto-dolomiti.webp"
          alt="Foto a colori del 2019: vista panoramica di un versante alpino dopo la tempesta Vaia. Migliaia di abeti rossi sono stesi al suolo, allineati nella stessa direzione, schiantati dalla violenza del vento. Sopra, la striscia di bosco intatto rimasta in piedi. Le piante a terra sono ancora con le radici in superficie, alcune giovani conifere superstiti emergono dal cumulo."
@@ -40,7 +40,7 @@ Vaia non fu, propriamente, **una sola tempesta**: fu una **sequenza di sistemi p
 
 I danni si concentrarono soprattutto sui **versanti rivolti a sud-est** e in particolare sulle **piantagioni di abete rosso (Picea abies)** monoculturali — gli abeti rossi delle Dolomiti, alti, slanciati, con radici poco profonde, sono particolarmente vulnerabili al vento da scirocco.
 
-Le **vittime** umane di Vaia furono **almeno 13** in Italia (più altre nei Paesi limitrofi), per cause connesse: cadute di alberi, smottamenti, incidenti stradali, blackout elettrici prolungati. Oltre il numero immediato, i **danni a lungo termine** hanno alterato la morfologia di intere valli: i **boschi che proteggevano** da frane e valanghe sono caduti, i **ruscelli intasati** di legname hanno cambiato regime, le **infrastrutture viarie e di rifornimento** sono rimaste compromesse per mesi.
+Le **vittime** umane di Vaia furono **almeno 13** in Italia (più altre nei Paesi limitrofi), per cause connesse: cadute di alberi, smottamenti, incidenti stradali, blackout elettrici prolungati. Oltre al bilancio immediato, i **danni a lungo termine** hanno alterato la morfologia di intere valli. I **boschi che proteggevano** da frane e valanghe sono caduti, i **ruscelli intasati** di legname hanno cambiato regime e le **infrastrutture viarie e di rifornimento** sono rimaste compromesse per mesi.
 
 ## La crisi dopo la crisi: il bostrico
 
@@ -82,7 +82,7 @@ In passato Genzano e i Comuni vicini hanno registrato eventi di vento con caduta
 
 Le **vittime di Vaia** sono ricordate ogni anno con cerimonie sobrie nei Comuni alpini più colpiti. Le foreste schiantate stanno lentamente ricominciando a vivere: nuove generazioni di abeti, ma anche **specie miste più resistenti al cambiamento climatico** (faggi, larici, querce, aceri). Sarà un bosco diverso da quello di prima, e sarà più adatto al clima che verrà.
 
-Vaia ha anche generato un fenomeno positivo: il legname schiantato — milioni di tonnellate di abete rosso di altissima qualità — è stato in parte trasformato in **strumenti musicali** (l'abete della **Foresta dei Violini** della Val di Fiemme è il legno preferito dai liutai mondiali, fra cui i Stradivari). Centinaia di **violini e violoncelli "Vaia"** sono oggi nelle mani di musicisti in tutto il mondo. Ogni nota suonata su quegli strumenti porta dentro il ricordo di una tempesta e di una resilienza italiana.
+Vaia ha anche generato un fenomeno positivo. Il legname schiantato — milioni di tonnellate di abete rosso di altissima qualità — è stato in parte trasformato in **strumenti musicali**. L'abete della **Foresta dei Violini** della Val di Fiemme è il legno preferito dai liutai mondiali, fra cui gli Stradivari. Centinaia di **violini e violoncelli "Vaia"** sono oggi nelle mani di musicisti in tutto il mondo. Ogni nota suonata su quegli strumenti porta dentro il ricordo di una tempesta e di una resilienza italiana.
 
 ## Per approfondire (fonti istituzionali)
 
