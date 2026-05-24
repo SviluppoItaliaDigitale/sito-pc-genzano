@@ -103,7 +103,21 @@ Ora usa il **Google Chrome di sistema** (`/usr/bin/google-chrome-stable`, Chrome
 
 ---
 
+## MinerU — estrazione di PDF ostici (OCR + tabelle) in Markdown
 
+🟢 **Installato 23/05/2026** come tool **locale** (richiesta utente). Converte PDF difficili — **scansioni (OCR), tabelle dense, atti istituzionali a più colonne** — in Markdown/JSON puliti da cui redigere articoli. Gratuito, open source (AGPL-3.0). Gira **solo in locale sul PC** (PyTorch ~5,7 GB), **non** su sessione cloud né in CI.
+
+- **Dove:** venv dedicato `~/.mineru-venv` (MinerU 3.1.15). Python 3.12 via `uv` (il sistema ha solo Python 3.14, troppo nuovo per PyTorch). Modelli OCR/layout (~1,1 GB) in `~/.cache/huggingface`.
+- **Comando (backend `pipeline`, CPU, offline dopo il primo download):**
+  ```bash
+  MINERU_DEVICE_MODE=cpu HF_HUB_OFFLINE=1 ~/.mineru-venv/bin/mineru -p file.pdf -o cartella_output -b pipeline
+  ```
+  Output in `cartella_output/<nome>/auto/<nome>.md` (+ JSON struttura, PDF con layout). ~1-2 min per 4 pagine su CPU.
+- **Rete:** serve **solo la prima volta** per scaricare i modelli (già fatto, con sandbox off perché HuggingFace non è nell'allowlist locale). Dopo, con `HF_HUB_OFFLINE=1`, gira **senza rete** anche in sandbox normale.
+- **Quando usarlo (non come tuttofare):** solo per i PDF che gli strumenti leggeri non leggono. Per i PDF già testuali (Normattiva, GU, la maggior parte) bastano `pdftotext`/Firecrawl. **NON** metterlo nei workflow CI (i parser bollettini usano `poppler`, leggeri e sufficienti). È un tool **attivato in sessione da Claude**, non un'automazione schedulata.
+- **Dopo l'estrazione**: redigere l'articolo in stile AGID come al solito (gate `pc-article-reviewer`). Micro-refusi OCR (è→e, il→i1) si correggono in rilettura. Collaudato sull'ordinanza Infiorata (PDF scansionato): estrazione fedele di testata, dispositivo e regole di viabilità via per via.
+
+---
 
 ## Sandbox CLOUD vs sandbox LOCALE — non sono la stessa cosa
 
