@@ -53,6 +53,22 @@ NOTA = ("Dati PROVVISORI: censiti solo dall'adozione del nuovo gestionale, "
         "non coprono l'intero anno (mancano i mesi precedenti). Aggregati e "
         "anonimi, senza dati personali.")
 
+# un automezzo nel campo Veicoli: "M04 Evo [Pickup] (TARGA)". Più mezzi sono
+# concatenati nella stessa cella. La targa serve SOLO a deduplicare e NON si
+# pubblica mai (la policy privacy del sito esclude le targhe). Etichetta = sigla
+# + nome + tipo, es. "M04 Evo (Pickup)".
+RE_VEICOLO = re.compile(r'(.+?)\s*\[([^\]]+)\]\s*\(([A-Z0-9]+)\)')
+
+
+def automezzi(cella):
+    """Da una cella Veicoli ritorna lista di (etichetta_senza_targa, targa)."""
+    out = []
+    for nome, tipo, targa in RE_VEICOLO.findall(str(cella or "")):
+        nome = nome.strip()
+        if nome:
+            out.append((f"{nome} ({tipo.strip()})", targa))
+    return out
+
 
 def parse_data_it(s):
     if not s:
@@ -176,9 +192,27 @@ def main():
         t = str(col(r, "Tipologia evento") or "-").strip()
         tip["Non classificato" if t in ("-", "", "None") else t] += 1
 
+    # automezzi impiegati (dedup per targa entro la cella; targa MAI pubblicata)
+    veic_interventi = Counter()   # etichetta -> n. interventi in cui è usato
+    targhe_distinte = set()
+    interventi_con_mezzo = 0
+    for r in data:
+        mezzi = automezzi(col(r, "Veicoli"))
+        if not mezzi:
+            continue
+        interventi_con_mezzo += 1
+        visti = set()
+        for etichetta, targa in mezzi:
+            targhe_distinte.add(targa)
+            if etichetta not in visti:        # un mezzo conta 1 volta per intervento
+                visti.add(etichetta)
+                veic_interventi[etichetta] += 1
+
     write_kv("statistiche-interventi", [
         ("Periodo (provvisorio)", per_label or "n.d."),
         ("Interventi registrati", n_tot),
+        ("Interventi con automezzo", interventi_con_mezzo),
+        ("Automezzi impiegati (distinti)", len(targhe_distinte)),
         ("Ore di intervento totali", ore),
         ("Chilometri percorsi totali", int(km)),
     ], periodo)
@@ -186,6 +220,11 @@ def main():
     write_rows("interventi-per-tipologia",
                ["tipologia", "numero_interventi"],
                sorted(([k, v] for k, v in tip.items()), key=lambda x: -x[1]),
+               periodo)
+
+    write_rows("automezzi-impiegati",
+               ["automezzo", "interventi"],
+               sorted(([k, v] for k, v in veic_interventi.items()), key=lambda x: -x[1]),
                periodo)
 
     # ---------- MEMBRI (solo aggregato, niente nomi) ----------
