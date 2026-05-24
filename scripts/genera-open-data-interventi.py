@@ -195,12 +195,10 @@ def main():
     vol_elenco = len(d2)
     vol_attivi = sum(1 for r in d2 if fnum(r[1]) > 0)
     rap_tot = int(sum(fnum(r[1]) for r in d2))
-    rap_comp = int(sum(fnum(r[2]) for r in d2))
     write_kv("statistiche-volontari", [
         ("Volontari in organico", vol_elenco),
         ("Volontari con almeno un intervento", vol_attivi),
         ("Rapporti di intervento totali", rap_tot),
-        ("Rapporti compilati", rap_comp),
     ], periodo)
 
     print("\nRiepilogo (anonimo):")
