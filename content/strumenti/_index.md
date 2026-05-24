@@ -10,13 +10,21 @@ sitemap:
   changefreq: monthly
 toc: true
 tts: true
-dataUltimaRevisione: "2026-05-06"
+dataUltimaRevisione: "2026-05-24"
 ---
 
 Questa pagina raccoglie strumenti online utili per consultare informazioni sul territorio: meteo, terremoti, incendi, qualità dell'aria, viabilità ed emergenze. Alcuni strumenti si aprono nel sito. Altri rimandano al sito ufficiale del fornitore.
 
 <div class="alert alert-warning" role="note">
 <p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i><strong>Importante:</strong> questi strumenti aiutano a informarsi, ma non sostituiscono i bollettini ufficiali. Per Genzano di Roma la fonte di riferimento per le allerte meteo è il <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale della Regione Lazio</a>. In caso di emergenza chiama il <strong>112</strong>.</p>
+</div>
+
+## Il cruscotto del territorio
+
+Il modo più rapido per vedere tutto in un colpo d'occhio è il nostro **cruscotto**: terremoti, vulcani, radar pioggia, satellite, meteo, allerta, incendi, aria e mare, in tempo reale e in un'unica pagina, da fonti ufficiali e aperte.
+
+<div class="consulta-rapida">
+{{< link-card url="/cruscotto/" icon="bi-speedometer2" titolo="Cruscotto del territorio" desc="Tutti i dati di rischio in tempo reale, in un'unica pagina, da fonti ufficiali e aperte (INGV, DPC, ARPA Lazio, Copernicus, Open-Meteo)." >}}
 </div>
 
 ## Come usare questa pagina
