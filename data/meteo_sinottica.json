@@ -1,0 +1,28 @@
+{
+  "aggiornato": "2026-05-24T11:30",
+  "frame": 12,
+  "passo_ore": 6,
+  "dominio": {
+    "lon": [
+      5.0,
+      20.0
+    ],
+    "lat": [
+      35.0,
+      48.0
+    ]
+  },
+  "griglia": {
+    "nlat": 18,
+    "nlon": 21,
+    "passo_gradi": 0.75
+  },
+  "campi": [
+    "pressure_msl",
+    "temperature_850hPa",
+    "geopotential_height_500hPa",
+    "wind_speed_500hPa",
+    "wind_direction_500hPa"
+  ],
+  "fonte": "Open-Meteo (modelli ECMWF)"
+}

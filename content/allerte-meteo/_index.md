@@ -63,25 +63,7 @@ La mappa mostra radar, precipitazioni, vento, temperatura e altri parametri mete
     fallbackText="Mappa meteo online consultabile su windy.com — Genzano di Roma (41.6919 N, 12.6928 E)"
     widgetId="meteo-windy" >}}
 
-## Radar nazionale precipitazioni
-
-Il mosaico radar nazionale del **Dipartimento della Protezione Civile** mostra la pioggia misurata dai radar meteorologici italiani. È utile per vedere l'evoluzione delle precipitazioni in tempo reale.
-
-<div class="alert alert-success" role="note">
-<p class="mb-0"><i class="bi bi-patch-check-fill me-2" aria-hidden="true"></i><strong>Fonte istituzionale italiana:</strong> il radar DPC è uno strumento operativo del Dipartimento della Protezione Civile per la sorveglianza meteo-idrologica nazionale.</p>
-</div>
-
-{{< external-widget
-    src="https://mappe.protezionecivile.gov.it/it/mappe-e-dashboard-rischi/piattaforma-radar/"
-    title="Mosaico radar nazionale precipitazioni — Dipartimento Protezione Civile"
-    placeholderTitle="Radar DPC — precipitazioni in tempo reale"
-    placeholderDesc="Mosaico radar nazionale dal <strong>Dipartimento della Protezione Civile</strong>. Mostra la pioggia misurata in questo momento sul territorio italiano."
-    icon="bi-broadcast-pin"
-    btnLabel="Carica il radar DPC"
-    altUrl="https://mappe.protezionecivile.gov.it/it/mappe-e-dashboard-rischi/piattaforma-radar/"
-    altLabel="Piattaforma radar DPC"
-    fallbackText="Radar nazionale precipitazioni consultabile su mappe.protezionecivile.gov.it (Dipartimento Protezione Civile)"
-    widgetId="radar-dpc" >}}
+{{< radar-dpc >}}
 
 ## Previsione meteo per Genzano di Roma
 
