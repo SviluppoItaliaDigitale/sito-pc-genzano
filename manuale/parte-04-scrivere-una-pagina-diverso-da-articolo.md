@@ -228,7 +228,7 @@ Il template `single.html` del tema mostra questa data come **box evidente** in c
 | `/` | `layouts/index.html` | Homepage dinamica (normale/emergenza) |
 | `/chi-siamo/` | `content/chi-siamo/_index.md` | |
 | `/rischi-prevenzione/` | `content/rischi-prevenzione/_index.md` | Hub + 9 sotto-pagine |
-| `/allerte-meteo/` | `content/allerte-meteo/_index.md` | Widget Windy + Radar DPC (click-to-load) — vedi 4.9 |
+| `/allerte-meteo/` | `content/allerte-meteo/_index.md` | Cartine meteo del Gruppo (cartina Lazio + animazione + sinottica) + radar pioggia DPC nativo WMS + Windy/AM click-to-load — vedi 4.9 e 4.9-bis |
 | `/strumenti/` | `content/strumenti/_index.md` | **Hub strumenti consultazione in tempo reale** — vedi 4.10 |
 | `/comunicazioni/` | Generata da Hugo | Elenco articoli |
 | `/formazione/` | `content/formazione/_index.md` | Include kit scuola (vedi 4.8) |
@@ -305,9 +305,11 @@ Quando l'iframe è caricato, sopra di esso compare una **toolbar blu** con il ti
 
 | Widget | Fornitore | Pagine | Fonte ufficiale |
 |---|---|---|---|
-| Mappa meteo | **Windy.com** (Windyty, SE) | Home, [Allerte Meteo](/allerte-meteo/), [Strumenti](/strumenti/) | Strumento di consultazione: fonte ufficiale resta Centro Funzionale Regione Lazio |
-| Mappa sismica | **INGV** (Istituto Nazionale di Geofisica e Vulcanologia, ente pubblico di ricerca italiano) | Home, [Rischio Sismico](/rischi-prevenzione/rischio-sismico/), [Strumenti](/strumenti/) | INGV è la fonte scientifica ufficiale italiana per la sismologia |
-| Radar DPC | **Dipartimento della Protezione Civile** (ente pubblico italiano) | [Allerte Meteo](/allerte-meteo/), [Strumenti](/strumenti/) | Fonte istituzionale italiana per la sorveglianza meteo-idrologica |
+| Mappa meteo | **Windy.com** (Windyty, SE) | [Allerte Meteo](/allerte-meteo/), [Strumenti](/strumenti/) | Strumento di consultazione: fonte ufficiale resta Centro Funzionale Regione Lazio |
+| Mappa sismica | **INGV** (Istituto Nazionale di Geofisica e Vulcanologia, ente pubblico di ricerca italiano) | [Rischio Sismico](/rischi-prevenzione/rischio-sismico/), [Strumenti](/strumenti/) | INGV è la fonte scientifica ufficiale italiana per la sismologia |
+| Radar DPC | **Dipartimento della Protezione Civile** (ente pubblico italiano) | [Strumenti](/strumenti/) | Su /allerte-meteo/ il radar è ora **nativo WMS** (non più click-to-load), vedi 4.9-bis |
+
+> **Aggiornamento 24/05/2026 — homepage e radar.** La homepage **non usa più i widget esterni Windy e INGV**: il meteo è ora la **cartina del Gruppo** (vedi 4.9-bis) e la sismica è una **card semplice** che rimanda al sito INGV (accanto a IT-alert). Su **/allerte-meteo/** il radar pioggia DPC è stato sostituito dall'integrazione **nativa WMS** (shortcode `radar-dpc`, vedi 4.9-bis). I widget Windy/AM restano su /allerte-meteo/ e /strumenti/ come click-to-load.
 | Fulmini | **Blitzortung / Lightning Maps** (rete volontaria internazionale) | [Temporali Intensi](/rischi-prevenzione/temporali-intensi/), [Strumenti](/strumenti/) | Rete scientifica volontaria, non istituzionale |
 | Previsione meteo | **Aeronautica Militare** (Servizio Meteorologico Nazionale, Ministero Difesa) | [Allerte Meteo](/allerte-meteo/), [Strumenti](/strumenti/) | Fonte istituzionale italiana per le previsioni meteo |
 
@@ -374,6 +376,24 @@ La sezione "Monitoraggio in tempo reale" in home compare **solo in modalità ord
 | INGV | nessuno (URL fisso `https://terremoti.ingv.it/`) | Mostra tutta Italia; filtri magnitudo/periodo gestiti dall'utente dal menu INGV |
 | Radar DPC | nessuno (URL fisso `https://mappe.protezionecivile.it/`) | Mosaico nazionale; zoom/pan utente |
 | Blitzortung | `#8/41.6919/12.6928` nell'hash URL | Centro mappa su Genzano, zoom 8 (Lazio intero visibile) |
+
+### 4.9-bis — Cartine meteo del Gruppo e radar DPC nativo (24/05/2026)
+
+Da maggio 2026 il meteo del sito non dipende più da widget esterni: lo produce il Gruppo da **dati aperti**, auto-ospitato e privacy-first.
+
+**Cartine meteo (dati Open-Meteo, modelli ECMWF, licenza CC-BY, nessuna chiave):**
+
+| Cartina | Script | Output | Dove |
+|---|---|---|---|
+| Cartina Lazio (choropleth provincia + riquadro completo di Genzano di Roma) | `scripts/genera-meteo-lazio.py` | `static/images/meteo-lazio.svg` + `data/meteo_genzano.json` | Home + /allerte-meteo/ (shortcode `meteo-lazio`) |
+| Animazione Lazio 72 ore (SVG animato) | `scripts/genera-meteo-animazione.py` | `static/images/meteo-lazio-animata.svg` | /allerte-meteo/ (shortcode `meteo-anteprime`) |
+| Carta sinottica Italia (precipitazioni/neve a colori, isobare, 500 hPa, vento, B/A) | `scripts/genera-meteo-sinottica.py` (numpy+matplotlib+cartopy) | `static/images/meteo-sinottica-italia.webp` | /allerte-meteo/ (shortcode `meteo-anteprime`) |
+
+La cartina Lazio si rigenera **ogni ora** (workflow `meteo-lazio.yml`); animazione e sinottica **ogni 6 ore** (workflow `meteo-cartine-extra.yml`). I pulsanti **Scarica/Condividi** (`static/js/condividi-cartina.js`) usano l'URL con cache-bust `?v=` per condividere sempre la versione fresca. In homepage c'è solo la cartina Lazio; le altre stanno su /allerte-meteo/.
+
+**Radar pioggia DPC — integrazione nativa WMS** (shortcode `radar-dpc.html`): usa i servizi **OGC WMTS** ufficiali del Dipartimento (`radar-geowebcache.protezionecivile.it`, layer `radar:sri`/`radar:vmi`, gridset EPSG:900913) in una mappa **Leaflet self-hosted** + base scura CARTO (toggle chiara), niente iframe di terzi. L'orario reale del dato viene letto dall'API `findLastProductByType`. ⚠️ Il WMTS pubblico **ignora il parametro TIME** (nessuna animazione storica via tile): si mostra l'ultimo fotogramma. È un mosaico **grezzo**, con possibili echi non meteorologici ai bordi della copertura (nota nello shortcode + link al radar validato).
+
+**Card sismica in homepage:** non più widget INGV iframe, ma una **card semplice** ("Hai sentito un terremoto?") accanto a IT-alert, con link diretto a `terremoti.ingv.it` e a `/rischi-prevenzione/rischio-sismico/`.
 
 ### 4.10 — Hub strumenti di consultazione (`/strumenti/`)
 
