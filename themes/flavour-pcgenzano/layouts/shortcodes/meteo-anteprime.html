@@ -9,12 +9,12 @@
 {{- $vA := "" -}}{{- with .Site.Data.meteo_animazione }}{{ with .aggiornato }}{{ $vA = printf "?v=%s" (. | replaceRE `[^0-9]` "") }}{{ end }}{{ end -}}
 {{- $vB := "" -}}{{- with .Site.Data.meteo_sinottica }}{{ with .aggiornato }}{{ $vB = printf "?v=%s" (. | replaceRE `[^0-9]` "") }}{{ end }}{{ end -}}
 
-<h2 id="cartina-animata" style="color:#003366"><i class="bi bi-play-circle-fill me-2" aria-hidden="true"></i>Cartina meteo animata — versione in prova</h2>
-<p>Stiamo provando due modi di mostrare l'evoluzione del meteo delle prossime 72 ore con una cartina che si <strong>anima</strong> e si <strong>aggiorna da sola</strong>. Entrambe sono una nostra elaborazione su dati aperti Open-Meteo (modelli ECMWF). Faccelo sapere quale preferisci: ne terremo una (o tutte e due in punti diversi del sito).</p>
+<h2 id="cartina-animata" style="color:#003366"><i class="bi bi-play-circle-fill me-2" aria-hidden="true"></i>Cartina animata del Lazio e carta sinottica dell'Italia</h2>
+<p>Due viste complementari, una nostra elaborazione su dati aperti Open-Meteo (modelli ECMWF), aggiornate automaticamente: l'<strong>animazione</strong> delle prossime 72 ore sul Lazio e la <strong>carta sinottica</strong> dell'Italia con precipitazioni, pressione e correnti.</p>
 
 <div class="meteo-confronto">
   <div class="meteo-confronto-col">
-    <h3 id="opzione-a">Opzione A — Animazione del Lazio</h3>
+    <h3 id="opzione-a">Animazione del Lazio — prossime 72 ore</h3>
     <figure>
       <img src="{{ $svgA }}{{ $vA }}" loading="lazy"
            alt="Animazione della previsione del Lazio per le prossime 72 ore: la temperatura e il cielo previsti nelle cinque province e a Genzano di Roma cambiano fotogramma dopo fotogramma, a passo di sei ore.">
@@ -24,12 +24,11 @@
         <button type="button" class="btn btn-sm btn-outline-primary" data-condividi-cartina data-img="{{ $svgA }}" data-title="Animazione meteo del Lazio — Protezione Civile Genzano di Roma"><i class="bi bi-share" aria-hidden="true"></i> <span class="cartina-azione-label">Condividi</span></button>
       </div>
     </figure>
-    <p><strong>Pro:</strong> leggera (immagine vettoriale, nitida a ogni ingrandimento), accessibile, centrata sul nostro territorio (province + Genzano), nessuna dipendenza grafica pesante.</p>
-    <p><strong>Contro:</strong> mostra solo temperatura e cielo, non i campi tecnici (isobare, correnti in quota).</p>
+    <p class="meteo-confronto-desc">Leggera e nitida a ogni ingrandimento, centrata sul nostro territorio: temperatura e cielo previsti che cambiano fotogramma dopo fotogramma.</p>
   </div>
 
   <div class="meteo-confronto-col">
-    <h3 id="opzione-b">Opzione B — Carta sinottica Italia</h3>
+    <h3 id="opzione-b">Carta sinottica dell'Italia</h3>
     <figure>
       <img src="{{ $webpB }}{{ $vB }}" loading="lazy"
            alt="Carta sinottica animata dell'Italia e del Mediterraneo centrale per le prossime 72 ore: temperatura a 850 hPa a colori, pressione al livello del mare con isobare nere, geopotenziale a 500 hPa con linee viola, vento a 500 hPa con barbe; Genzano di Roma è indicata da una stella.">
@@ -39,8 +38,7 @@
         <button type="button" class="btn btn-sm btn-outline-primary" data-condividi-cartina data-img="{{ $webpB }}" data-title="Carta sinottica Italia — Protezione Civile Genzano di Roma"><i class="bi bi-share" aria-hidden="true"></i> <span class="cartina-azione-label">Condividi</span></button>
       </div>
     </figure>
-    <p><strong>Pro:</strong> vista d'insieme stile carte meteo professionali (isobare, 500 hPa, getto), copre Italia e Mediterraneo, clip animata condivisibile.</p>
-    <p><strong>Contro:</strong> più pesante, lettura più tecnica per il cittadino comune, richiede librerie aggiuntive nel processo automatico.</p>
+    <p class="meteo-confronto-desc">Vista d'insieme su Italia e Mediterraneo: precipitazioni e neve a colori, isobare, correnti in quota e minimi/massimi di pressione. Clip animata condivisibile.</p>
   </div>
 </div>
 
