@@ -97,7 +97,7 @@ Nel **1982**, il Consiglio Generale dell'AGESCI istituisce il **Settore Protezio
 
 Solo i **soci maggiorenni** operano in fase di emergenza. I più giovani fanno **formazione**: imparano dentro al gruppo le competenze che, da adulti, metteranno al servizio del territorio.
 
-Anche il **CNGEI** (Corpo Nazionale Giovani Esploratori ed Esploratrici Italiani — la branca laica dello scoutismo italiano) è riconosciuto dalla Protezione Civile, è rappresentato nella **Consulta Nazionale del Volontariato di PC**, e segue lo stesso principio: solo gli adulti operano in emergenza, i giovani sono in formazione.
+Anche il **CNGEI** (Corpo Nazionale Giovani Esploratori ed Esploratrici Italiani, la branca laica dello scoutismo italiano) è riconosciuto dalla Protezione Civile ed è rappresentato nella **Consulta Nazionale del Volontariato di PC**. Segue lo stesso principio: solo gli adulti operano in emergenza, i giovani sono in formazione.
 
 ## Una presenza costante nelle grandi emergenze italiane
 
@@ -129,7 +129,7 @@ In ognuna di queste situazioni gli scout hanno fatto **gli stessi servizi**: ten
 
 ## Centro Italia 2016: cinque "route" di servizio
 
-Dopo il terremoto del **24 agosto 2016** che ha distrutto Amatrice, Accumoli e Arquata del Tronto — magnitudo 6,0, sequenza sismica protrattasi fino a gennaio 2017 — gli scout dell'**AGESCI Umbria** propongono ai gruppi di tutta Italia un servizio diverso: non più solo emergenza immediata, ma **ricostruzione del tessuto sociale**.
+Il terremoto del **24 agosto 2016** distrugge Amatrice, Accumoli e Arquata del Tronto (magnitudo 6,0, con una sequenza sismica protrattasi fino a gennaio 2017). Gli scout dell'**AGESCI Umbria** propongono allora ai gruppi di tutta Italia un servizio diverso: non più solo emergenza immediata, ma **ricostruzione del tessuto sociale**.
 
 Tra il **17 giugno e il 10 settembre 2017** organizzano **cinque route di strada e servizio** in Valnerina: settimane di cammino e lavoro che attraversano i territori colpiti, con attività con bambini, anziani, disabili, e attività di recupero materiale. È una formula nuova: l'emergenza è passata, ma la **comunità ferita** ha bisogno di compagnia, di vita, di mani che lavorino accanto.
 
@@ -165,19 +165,19 @@ Il **Vademecum dell'Incaricato di Zona** (aggiornato 2025) è il documento di ri
 
 Dal **2007**, il **Dipartimento della Protezione Civile** organizza, in collaborazione con le Regioni e le associazioni di volontariato (scout compresi), i campi scuola **"Anch'io sono la Protezione Civile"**, dedicati ai ragazzi dai **10 ai 16 anni**.
 
-L'edizione **2024** ha portato il totale dei giovani formati a **circa ottantamila** dalla nascita del progetto. Nel 2025, in occasione dei 15 anni dell'iniziativa, **oltre 340 campi scuola** distribuiti su tutto il territorio nazionale accolgono **più di seimila ragazzi e ragazze** che incontrano Forze di Polizia, Vigili del Fuoco, 118, Croce Rossa, Comuni, Regioni, e — naturalmente — i volontari delle associazioni scout.
+L'edizione **2024** ha portato il totale dei giovani formati a **circa ottantamila** dalla nascita del progetto. Nel 2025, per i 15 anni dell'iniziativa, **oltre 340 campi scuola** distribuiti su tutto il territorio nazionale accolgono **più di seimila ragazzi e ragazze**. I partecipanti incontrano Forze di Polizia, Vigili del Fuoco, 118, Croce Rossa, Comuni, Regioni e, naturalmente, i volontari delle associazioni scout.
 
 I temi: primo soccorso, orientamento, educazione civica, sostenibilità ambientale, conoscenza del Piano Comunale di Emergenza. Non è un caso che molti **divulgatori scout** del Settore PC siano fra gli educatori dei campi scuola: gli scout sanno **fare scuola di emergenza ai loro coetanei** perché lo fanno da sempre.
 
 ## Cosa significa per Genzano di Roma
 
-Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** è un'associazione di volontariato OdV ai sensi del D.Lgs. 117/2017, autonoma rispetto alle associazioni scout. Ma **una parte significativa dei nostri volontari attivi proviene dal mondo scout locale**: in particolare dai gruppi **AGESCI Genzano 1** e **AGESCI Genzano 2**, che sono presenti sul territorio da decenni e hanno formato generazioni di ragazzi e ragazze del nostro Comune. L'esperienza scout — la disciplina, l'autonomia, il lavoro di squadra, il senso del servizio — è una **base solida** da cui parte chi sceglie di unirsi a noi.
+Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** è un'associazione di volontariato OdV ai sensi del D.Lgs. 117/2017, autonoma rispetto alle associazioni scout. Ma **una parte significativa dei nostri volontari attivi proviene dal mondo scout locale**, in particolare dai gruppi **AGESCI Genzano 1** e **AGESCI Genzano 2**. Sono presenti sul territorio da decenni e hanno formato generazioni di ragazzi e ragazze del nostro Comune. L'esperienza scout — la disciplina, l'autonomia, il lavoro di squadra, il senso del servizio — è una **base solida** da cui parte chi sceglie di unirsi a noi.
 
 Non è un caso: chi è cresciuto con la **squadriglia**, la **route**, il **campo estivo**, l'idea che servire la comunità sia parte naturale dell'essere cittadini, ritrova nel volontariato di Protezione Civile una continuità coerente del proprio percorso. Più che un cambio, è un passaggio di testimone: dalla formazione personale alla **responsabilità operativa** verso il territorio in cui si vive.
 
-La collaborazione fra il Gruppo PC e i gruppi AGESCI Genzano 1 e Genzano 2, in caso di emergenza locale (un'ondata di calore, un incendio boschivo, un evento meteo estremo), è un canale di **prossimità reale** che il Piano di Emergenza Comunale può attivare con poco preavviso.
+In caso di emergenza locale (un'ondata di calore, un incendio boschivo, un evento meteo estremo), la collaborazione fra il Gruppo PC e i gruppi AGESCI Genzano 1 e Genzano 2 è un canale di **prossimità reale**. Il Piano di Emergenza Comunale può attivarla con poco preavviso.
 
-Se sei uno scout di Genzano di Roma — del Genzano 1, del Genzano 2 o di un altro gruppo — o un capo, o un adulto del movimento, e vuoi sapere come mettere le tue competenze al servizio del territorio anche oltre lo scoutismo, scrivici a **segreteria@protezionecivilegenzano.it**. Spesso è il prossimo passo naturale.
+Sei uno scout di Genzano di Roma — del Genzano 1, del Genzano 2 o di un altro gruppo — un capo o un adulto del movimento? Se vuoi mettere le tue competenze al servizio del territorio anche oltre lo scoutismo, scrivici a **segreteria@protezionecivilegenzano.it**. Spesso è il prossimo passo naturale.
 
 ## Una storia che non finisce
 

@@ -69,7 +69,7 @@ Se i gas continuano ad alimentare la fiamma e la temperatura si mantiene alta, l
 
 In letteratura si parla talvolta di incendi spontanei dovuti all'alta temperatura estiva. È un'eccezione, non la regola: per arrivare all'innesco servono **oltre 100°C per l'evaporazione dell'acqua** e poi **oltre 200-300°C per la distillazione**. Sono condizioni difficili da raggiungere senza un innesco esterno.
 
-La verità statistica è che **in Italia gli incendi boschivi sono causati in larghissima maggioranza dalla mano dell'uomo**: dolo, colpa (sigarette, braci mal spente, saldature all'aperto, fuochi di cortesia in periodo vietato) o incidente (faville di mezzi meccanici, scintille elettriche). Solo una piccola percentuale è attribuibile a **cause naturali** (fulmini, fermentazione di cumuli di rifiuti vegetali).
+La verità statistica è che **in Italia gli incendi boschivi sono causati in larghissima maggioranza dalla mano dell'uomo**. Le cause sono il dolo, la colpa (sigarette, braci mal spente, saldature all'aperto, fuochi di cortesia in periodo vietato) o l'incidente (faville di mezzi meccanici, scintille elettriche). Solo una piccola percentuale è attribuibile a **cause naturali** (fulmini, fermentazione di cumuli di rifiuti vegetali).
 
 ---
 
@@ -184,7 +184,7 @@ Sono un esempio perfetto del principio del triangolo del fuoco applicato alla pr
 
 ## Il controfuoco: tecnica estrema, solo con VVF e DOS
 
-Il **controfuoco** è una tecnica di attacco indiretto: si **accende deliberatamente un secondo fuoco, controllato**, in una fascia di terreno tra il fronte principale e un punto strategico. Il controfuoco **sottrae combustibile** e genera un **richiamo di aria calda verso l'alto**, che a sua volta richiama aria più fredda da monte: i due fronti di fiamma si attraggono e, esaurito il combustibile, si spengono entrambi.
+Il **controfuoco** è una tecnica di attacco indiretto: si **accende deliberatamente un secondo fuoco, controllato**, in una fascia di terreno tra il fronte principale e un punto strategico. Il controfuoco **sottrae combustibile** e genera un **richiamo di aria calda verso l'alto**. Questo, a sua volta, richiama aria più fredda da monte. I due fronti di fiamma si attraggono e, esaurito il combustibile, si spengono entrambi.
 
 **Attenzione: il controfuoco è una tecnica estrema.** Il volontario di un gruppo comunale non lo applica mai da solo. Le regole sono precise:
 
@@ -229,7 +229,7 @@ Quando l'incendio è troppo vasto o inaccessibile per i mezzi terrestri, interve
 Quando sono in azione i mezzi aerei, i volontari a terra devono **tenersi alla larga dalla zona di sgancio**:
 
 - i **ritardanti** e gli **schiumogeni** possono **irritare pelle e occhi**
-- nei **lanci a schiaffo** da elicottero, se la benna non si apre per un guasto, il pilota **sgancia l'intera benna dal gancio baricentrico** per non perdere il controllo del velivolo: una benna piena d'acqua in caduta libera può essere letale per chi si trova sotto
+- nei **lanci a schiaffo** da elicottero, se la benna non si apre per un guasto, il pilota **sgancia l'intera benna dal gancio baricentrico** per non perdere il controllo del velivolo. Una benna piena d'acqua in caduta libera può essere letale per chi si trova sotto
 
 La regola è: **quando un mezzo aereo si avvicina al nostro fronte, ci allontaniamo in posizione sicura e riprendiamo solo dopo il lancio**.
 
@@ -251,7 +251,7 @@ Per le **autobotti 4x4** valgono le stesse regole del pickup, con alcune partico
 
 ## Un mestiere che si impara sul campo
 
-La teoria del triangolo del fuoco si può spiegare in un'ora. L'uso sicuro di un flabello o di una motopompa spalleggiata si impara in una giornata. Ma **scegliere la tecnica giusta nel momento giusto, capire la direzione del vento, sentire quando una ripresa sta per partire**: questo si impara sul campo, con anni di interventi e con Capi Squadra esperti che trasmettono ai più giovani la memoria operativa.
+La teoria del triangolo del fuoco si può spiegare in un'ora. L'uso sicuro di un flabello o di una motopompa spalleggiata si impara in una giornata. Ma c'è dell'altro: **scegliere la tecnica giusta nel momento giusto, capire la direzione del vento, sentire quando una ripresa sta per partire**. Questo si impara sul campo, con anni di interventi. Sono i Capi Squadra esperti a trasmettere ai più giovani la memoria operativa.
 
 Ogni volontario AIB del Gruppo passa attraverso corsi di formazione regionali, esercitazioni pratiche e servizi di campo prima di essere riconosciuto pienamente operativo. Non è un mestiere che si improvvisa.
 
