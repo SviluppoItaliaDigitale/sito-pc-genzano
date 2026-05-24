@@ -1,0 +1,64 @@
+{{/* Shortcode dashboard-aria — qualità dell'aria e pollini a Genzano di Roma.
+     Fonte: Open-Meteo Air Quality API (dati CAMS, licenza CC-BY, CORS aperto) -> fetch
+     diretto dal browser, niente widget di terzi. Indicatori, nessuna mappa.
+     AQI europeo (scala EEA), PM10, PM2.5, ozono, NO2 + pollini (graminacee, olivo,
+     ambrosia, betulla). Il valore numerico è sempre mostrato (non solo colore). */}}
+<div class="dash-aria" aria-labelledby="dash-aria-tit">
+  <h2 id="dash-aria-tit" class="visually-hidden">Qualità dell'aria e pollini a Genzano di Roma</h2>
+
+  <div class="dash-aria-hero" id="aria-hero">
+    <span class="dash-aria-aqi" id="aria-aqi">—</span>
+    <span class="dash-aria-aqilab" id="aria-aqilab">Qualità dell'aria · in aggiornamento…</span>
+  </div>
+
+  <h3 class="dash-aria-h3">Inquinanti</h3>
+  <div class="dash-sisma-kpi">
+    <div class="dash-kpi"><span class="dash-kpi-num" id="aria-pm10">—</span><span class="dash-kpi-lab">PM10 (µg/m³)</span></div>
+    <div class="dash-kpi"><span class="dash-kpi-num" id="aria-pm25">—</span><span class="dash-kpi-lab">PM2.5 (µg/m³)</span></div>
+    <div class="dash-kpi"><span class="dash-kpi-num" id="aria-o3">—</span><span class="dash-kpi-lab">Ozono (µg/m³)</span></div>
+    <div class="dash-kpi"><span class="dash-kpi-num" id="aria-no2">—</span><span class="dash-kpi-lab">Biossido d'azoto (µg/m³)</span></div>
+  </div>
+
+  <h3 class="dash-aria-h3">Pollini <span class="dash-aria-nota">(grani/m³ — valore indicativo)</span></h3>
+  <div class="dash-sisma-kpi" id="aria-pollini">
+    <div class="dash-kpi"><span class="dash-kpi-num" id="pol-grass">—</span><span class="dash-kpi-lab">Graminacee</span></div>
+    <div class="dash-kpi"><span class="dash-kpi-num" id="pol-olive">—</span><span class="dash-kpi-lab">Olivo</span></div>
+    <div class="dash-kpi"><span class="dash-kpi-num" id="pol-ragweed">—</span><span class="dash-kpi-lab">Ambrosia</span></div>
+    <div class="dash-kpi"><span class="dash-kpi-num" id="pol-birch">—</span><span class="dash-kpi-lab">Betulla</span></div>
+  </div>
+
+  <p class="small text-muted mt-2 mb-0" id="aria-stato"></p>
+  <p class="small text-muted mt-1 mb-0">Dati: <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a> / servizio europeo <a href="https://atmosphere.copernicus.eu/" target="_blank" rel="noopener noreferrer">Copernicus CAMS</a>. Dato indicativo per Genzano di Roma; per soglie sanitarie ufficiali vedi <a href="https://www.arpalazio.it/" target="_blank" rel="noopener noreferrer">ARPA Lazio</a>.</p>
+
+  <script>
+  (function(){
+    var API='https://air-quality-api.open-meteo.com/v1/air-quality?latitude=41.7085&longitude=12.6916&timezone=Europe%2FRome&current=european_aqi,pm10,pm2_5,ozone,nitrogen_dioxide,grass_pollen,olive_pollen,ragweed_pollen,birch_pollen';
+    function aqiInfo(v){
+      if(v==null)return['#9aa7b4','non disponibile'];
+      if(v<=20)return['#2ecc71','Buona'];
+      if(v<=40)return['#a8e05f','Discreta'];
+      if(v<=60)return['#f7e359','Moderata'];
+      if(v<=80)return['#f5a623','Scarsa'];
+      if(v<=100)return['#e8412b','Scadente'];
+      return['#7f1d1d','Pessima'];
+    }
+    function set(id,v,suf){ var e=document.getElementById(id); if(e) e.textContent=(v==null?'n.d.':Math.round(v)+(suf||'')); }
+    function carica(){
+      fetch(API).then(function(r){return r.json();}).then(function(j){
+        var c=j.current||{};
+        var info=aqiInfo(c.european_aqi);
+        var hero=document.getElementById('aria-hero');
+        document.getElementById('aria-aqi').textContent=(c.european_aqi==null?'n.d.':Math.round(c.european_aqi));
+        document.getElementById('aria-aqilab').textContent='Qualità dell’aria: '+info[1]+' (indice europeo AQI)';
+        hero.style.borderColor=info[0];
+        document.getElementById('aria-aqi').style.color=info[0];
+        set('aria-pm10',c.pm10); set('aria-pm25',c.pm2_5); set('aria-o3',c.ozone); set('aria-no2',c.nitrogen_dioxide);
+        set('pol-grass',c.grass_pollen); set('pol-olive',c.olive_pollen); set('pol-ragweed',c.ragweed_pollen); set('pol-birch',c.birch_pollen);
+        var t=c.time?new Date(c.time):new Date();
+        document.getElementById('aria-stato').textContent='Aggiornato alle '+('0'+t.getHours()).slice(-2)+':'+('0'+t.getMinutes()).slice(-2);
+      }).catch(function(){ document.getElementById('aria-stato').textContent='Dati momentaneamente non disponibili.'; });
+    }
+    carica(); setInterval(carica, 1800000); // ogni 30 minuti
+  })();
+  </script>
+</div>

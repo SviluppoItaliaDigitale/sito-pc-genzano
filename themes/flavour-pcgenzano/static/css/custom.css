@@ -6607,3 +6607,11 @@ html.a11y-pause-anim .consulta-rapida .cr-card:hover { transform: none; }
 .dash-sisma-legenda { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: .6rem; font-size: .8rem; color: #495057; }
 .dash-sisma-legenda i { display: inline-block; width: .85rem; height: .85rem; border-radius: 50%; vertical-align: middle; margin-right: .25rem; border: 1px solid rgba(0,0,0,.2); }
 @media (max-width: 768px) { .dash-sisma-grid { grid-template-columns: 1fr; } .dash-sisma-kpi { grid-template-columns: repeat(2, 1fr); } #dash-sisma-mappa { height: 420px; } }
+
+/* Cruscotto — scheda Aria/pollini e Mare (indicatori) */
+.dash-aria-hero { display: flex; align-items: center; gap: 1rem; background: #fff; border: 1px solid #d4dde6;
+  border-left: 8px solid #9aa7b4; border-radius: 10px; padding: 1rem 1.2rem; margin-bottom: 1.1rem; }
+.dash-aria-aqi { font-size: 2.6rem; font-weight: 800; line-height: 1; color: #003366; min-width: 2.5ch; text-align: center; font-variant-numeric: tabular-nums; }
+.dash-aria-aqilab { font-size: 1.05rem; color: #1a1a1a; font-weight: 600; }
+.dash-aria-h3 { font-size: 1rem; color: #003366; margin: 1rem 0 .5rem; }
+.dash-aria-nota { font-size: .82rem; color: #6c757d; font-weight: 400; }
