@@ -30,7 +30,7 @@
     <div class="meteo-gz-head">
       <span class="meteo-gz-icona" aria-hidden="true"><svg viewBox="0 0 56 56" width="58" height="58">{{ $c.icona | safeHTML }}</svg></span>
       <div>
-        <div class="meteo-gz-luogo">Genzano di Roma · adesso</div>
+        <div class="meteo-gz-luogo">Genzano di Roma · ore {{ substr $m.aggiornato 11 5 }}</div>
         <div class="meteo-gz-temp">{{ $c.temp }}°</div>
         <div class="meteo-gz-cond">{{ $c.cielo }} · percepita {{ $c.percepita }}°</div>
       </div>
