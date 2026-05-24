@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-05-24T11:58",
+  "aggiornato": "2026-05-24T12:08",
   "frame": 12,
   "passo_ore": 6,
   "dominio": {
@@ -22,7 +22,9 @@
     "temperature_850hPa",
     "geopotential_height_500hPa",
     "wind_speed_500hPa",
-    "wind_direction_500hPa"
+    "wind_direction_500hPa",
+    "precipitation",
+    "snowfall"
   ],
   "fonte": "Open-Meteo (modelli ECMWF)"
 }

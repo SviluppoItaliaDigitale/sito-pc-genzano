@@ -148,7 +148,7 @@ def fetch_map():
     lats = ",".join(f"{c[1]}" for c in CAPOLUOGHI)
     lons = ",".join(f"{c[2]}" for c in CAPOLUOGHI)
     url = ("https://api.open-meteo.com/v1/forecast?latitude=" + lats + "&longitude=" + lons +
-           "&daily=temperature_2m_max,weather_code&timezone=Europe%2FRome&forecast_days=1")
+           "&daily=temperature_2m_max,temperature_2m_min,weather_code&timezone=Europe%2FRome&forecast_days=1")
     return _get(url)
 
 def fetch_card():
@@ -180,31 +180,34 @@ def build_svg(map_data, card_data, oggi):
         for r in geo["contesto"]
     )
 
-    # dati per provincia (capoluogo): temp + weather_code
+    # dati per provincia (capoluogo): max, min, weather_code
     perprov = {}
     for i, c in enumerate(CAPOLUOGHI):
         d = map_data[i]["daily"]
-        perprov[c[0]] = (d["temperature_2m_max"][0], d["weather_code"][0])
+        tmin = d.get("temperature_2m_min", [None])[0]
+        perprov[c[0]] = (d["temperature_2m_max"][0], tmin, d["weather_code"][0])
     # posizione manuale dell'etichetta-pillola (lon,lat)
     LBL = {"Viterbo":(12.10,42.42),"Rieti":(12.86,42.40),"Roma":(12.50,41.99),
            "Latina":(13.00,41.42),"Frosinone":(13.45,41.66)}
 
     prov_svg = ""; labels = ""
     for pr in geo["province"]:
-        nome = pr["nome"]; t, wc = perprov[nome]
+        nome = pr["nome"]; t, tmin, wc = perprov[nome]
         col = colore(t)
         for ring in pr["rings"]:
             prov_svg += f'<path d="{ring_path(ring)}" fill="{col}" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.6"/>'
         lx, ly = px(LBL[nome][0], LBL[nome][1])
         desc, ico = wmo(wc)
-        # pillola bianca: nome (sopra) + icona (sx) + temperatura (dx), sempre leggibile
-        pw, ph = 104, 46
+        # pillola bianca: nome (sopra) + icona (sx) + max/min (dx). Larghezza invariata
+        # (province vicine: evitare sovrapposizioni), solo un filo più alta per la minima.
+        min_sp = f'<tspan font-size="12" font-weight="500" fill="#6c757d">/{round(tmin)}&#176;</tspan>' if tmin is not None else ''
+        pw, ph = 104, 50
         labels += (f'<g>'
                    f'<rect x="{lx-pw/2:.1f}" y="{ly-ph/2:.1f}" width="{pw}" height="{ph}" rx="9" '
                    f'fill="#ffffff" fill-opacity="0.93" stroke="{col}" stroke-width="1.6"/>'
-                   f'<text x="{lx:.1f}" y="{ly-9:.1f}" font-size="12.5" font-weight="700" text-anchor="middle" fill="#003366">{nome}</text>'
-                   f'{icona_svg(ico, lx-26, ly+9, 8)}'
-                   f'<text x="{lx+12:.1f}" y="{ly+15:.1f}" font-size="20" font-weight="800" text-anchor="middle" fill="#1a1a1a">{round(t)}&#176;</text>'
+                   f'<text x="{lx:.1f}" y="{ly-11:.1f}" font-size="12.5" font-weight="700" text-anchor="middle" fill="#003366">{nome}</text>'
+                   f'{icona_svg(ico, lx-30, ly+10, 8)}'
+                   f'<text x="{lx+14:.1f}" y="{ly+16:.1f}" font-size="18" font-weight="800" text-anchor="middle" fill="#1a1a1a">{round(t)}&#176;{min_sp}</text>'
                    f'</g>')
 
     # punto Genzano + riquadro di dettaglio collegato.
@@ -222,19 +225,40 @@ def build_svg(map_data, card_data, oggi):
     gz_wind = round(cur["wind_speed_10m"])
     gz_gust = round(cur.get("wind_gusts_10m") or 0)
     gz_desc, gz_ico = wmo(cur["weather_code"])
+    gz_uv = round(gz_d["uv_index_max"][0] or 0)
+    gz_uv_l = uv_label(gz_d["uv_index_max"][0])
+    gz_alba = (gz_d["sunrise"][0] or "")[11:16]
+    gz_tram = (gz_d["sunset"][0] or "")[11:16]
+    # prossimi 3 giorni (mini-strip)
+    days_svg = ""
     # marcatore sul punto
     marker = (f'<circle cx="{gx:.1f}" cy="{gy:.1f}" r="5.5" fill="#b8860b" stroke="#ffffff" stroke-width="2"/>')
-    # riquadro nell'angolo basso-sinistra (mare, area libera), con linea al punto
-    bx, by, bw, bh = 8, Hmap-162, 250, 144
+    # riquadro completo nell'angolo basso-sinistra (mare, area libera), con linea al punto
+    bx, by, bw, bh = 8, Hmap-232, 264, 214
+    for j, i in enumerate((1, 2, 3)):
+        try:
+            wcd = gz_d["weather_code"][i]
+            mx = round(gz_d["temperature_2m_max"][i]); mn = round(gz_d["temperature_2m_min"][i])
+            dd = oggi + datetime.timedelta(days=i)
+            _, ic = wmo(wcd)
+            cxd = bx + bw * (0.2 + 0.3 * j)
+            days_svg += (f'<text x="{cxd:.1f}" y="{by+170:.1f}" font-size="10.5" font-weight="700" text-anchor="middle" fill="#cfe0f0">{GIORNI_BREVI[dd.weekday()]}</text>'
+                         f'{icona_svg(ic, cxd, by+186, 6.5)}'
+                         f'<text x="{cxd:.1f}" y="{by+206:.1f}" font-size="10.5" text-anchor="middle" fill="#ffffff">{mx}&#176;<tspan fill="#9ec5e8">/{mn}&#176;</tspan></text>')
+        except Exception:
+            pass
     cardg = (
         f'<line x1="{bx+bw:.1f}" y1="{by+22:.1f}" x2="{gx:.1f}" y2="{gy:.1f}" stroke="#b8860b" stroke-width="1.4" stroke-dasharray="4 3"/>'
         f'<rect x="{bx}" y="{by}" width="{bw}" height="{bh}" rx="12" fill="#003366" stroke="#b8860b" stroke-width="2"/>'
         f'<text x="{bx+14}" y="{by+25:.1f}" font-size="13.5" font-weight="800" fill="#ffffff">&#9733; Genzano di Roma <tspan font-size="11" font-weight="400" fill="#cfe0f0">&#183; adesso</tspan></text>'
-        f'{icona_svg(gz_ico, bx+36, by+66, 14)}'
-        f'<text x="{bx+70}" y="{by+72:.1f}" font-size="26" font-weight="800" fill="#ffffff">{gz_now}&#176;</text>'
-        f'<text x="{bx+14}" y="{by+96:.1f}" font-size="11.5" fill="#cfe0f0">{gz_desc} &#183; percepita {gz_perc}&#176;</text>'
-        f'<text x="{bx+14}" y="{by+116:.1f}" font-size="11.5" fill="#9ec5e8">Massima {gz_max}&#176; &#183; minima {gz_min}&#176;</text>'
-        f'<text x="{bx+14}" y="{by+135:.1f}" font-size="10.5" fill="#e7eef6">Umidit&#224; {gz_hum}% &#183; Vento {gz_wind} (raff. {gz_gust}) km/h</text>'
+        f'{icona_svg(gz_ico, bx+36, by+64, 14)}'
+        f'<text x="{bx+70}" y="{by+70:.1f}" font-size="26" font-weight="800" fill="#ffffff">{gz_now}&#176;</text>'
+        f'<text x="{bx+14}" y="{by+92:.1f}" font-size="11.5" fill="#cfe0f0">{gz_desc} &#183; percepita {gz_perc}&#176;</text>'
+        f'<text x="{bx+14}" y="{by+110:.1f}" font-size="11.5" fill="#9ec5e8">Massima {gz_max}&#176; &#183; minima {gz_min}&#176;</text>'
+        f'<text x="{bx+14}" y="{by+128:.1f}" font-size="10.5" fill="#e7eef6">Umidit&#224; {gz_hum}% &#183; Vento {gz_wind} (raff. {gz_gust}) km/h</text>'
+        f'<text x="{bx+14}" y="{by+146:.1f}" font-size="10.5" fill="#e7eef6">UV {gz_uv} ({gz_uv_l}) &#183; Alba {gz_alba} &#183; Tramonto {gz_tram}</text>'
+        f'<line x1="{bx+12}" y1="{by+154:.1f}" x2="{bx+bw-12}" y2="{by+154:.1f}" stroke="#1f4a78" stroke-width="1"/>'
+        f'{days_svg}'
     )
 
     PAD=18; HEAD=64; FOOT=82
