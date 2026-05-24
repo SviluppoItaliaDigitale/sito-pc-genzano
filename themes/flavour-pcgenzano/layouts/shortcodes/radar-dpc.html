@@ -31,6 +31,13 @@
   .radar-dpc-legenda{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin-top:.6rem;font-size:.82rem;color:#495057}
   .radar-dpc-legenda .scala{display:inline-flex;height:.8rem;border-radius:3px;overflow:hidden;border:1px solid #adb5bd}
   .radar-dpc-legenda .scala i{width:1.4rem;height:100%}
+  .radar-dpc-mappa-box{position:relative}
+  .radar-dpc-aggiorna{position:absolute;top:12px;left:50%;transform:translateX(-50%);z-index:1000;display:flex;align-items:center;gap:.6rem;background:#003366;color:#fff;border:2px solid #ffbe2e;border-radius:999px;padding:.45rem .9rem;box-shadow:0 4px 14px rgba(0,0,0,.25);font-size:.92rem;max-width:92%}
+  .radar-dpc-aggiorna[hidden]{display:none}
+  .radar-dpc-aggiorna button{background:#ffbe2e;color:#1a1a1a;border:0;border-radius:999px;padding:.3rem .8rem;font-weight:700;cursor:pointer;white-space:nowrap}
+  .radar-dpc-aggiorna button:focus-visible{outline:3px solid #fff;outline-offset:2px}
+  @media (prefers-reduced-motion: no-preference){.radar-dpc-aggiorna{animation:radarPulse 1.8s ease-in-out infinite}}
+  @keyframes radarPulse{0%,100%{box-shadow:0 4px 14px rgba(0,0,0,.25)}50%{box-shadow:0 4px 22px rgba(255,190,46,.7)}}
   </style>
 
   <div class="radar-dpc-toolbar" role="group" aria-label="Prodotto radar">
@@ -40,7 +47,13 @@
     <span class="radar-dpc-stato" id="radar-dpc-stato" aria-live="polite"></span>
   </div>
 
-  <div id="radar-dpc-mappa" role="application" aria-label="Radar pioggia in tempo reale della Protezione Civile, centrato sull'Italia con Genzano di Roma evidenziata."></div>
+  <div class="radar-dpc-mappa-box">
+    <div id="radar-dpc-mappa" role="application" aria-label="Radar pioggia in tempo reale della Protezione Civile, centrato sull'Italia con Genzano di Roma evidenziata."></div>
+    <div id="radar-dpc-aggiorna" class="radar-dpc-aggiorna" role="status" aria-live="polite" hidden>
+      <span><i class="bi bi-arrow-repeat" aria-hidden="true"></i> È disponibile un aggiornamento del radar.</span>
+      <button type="button" id="radar-dpc-aggiorna-btn">Aggiorna ora</button>
+    </div>
+  </div>
 
   <noscript>
     <div class="alert alert-warning mt-3" role="note">
@@ -112,8 +125,14 @@
     }
     radar.on('load', segnaAggiornato);
 
-    function refresh(){ radar.setUrl(urlFor(prodotto)); }
-    setInterval(refresh, 300000); // ogni 5 minuti
+    // Notifica "aggiornamento disponibile" come sul sito ufficiale DPC: ogni 5'
+    // compare un avviso non bloccante; l'aggiornamento avviene al click (così
+    // l'utente sa che sta guardando il dato fresco). Versione accessibile: banner
+    // role=status aria-live, non un popup modale che obbliga.
+    var bannerAgg = document.getElementById('radar-dpc-aggiorna');
+    function mostraAggiornamento(){ if (bannerAgg) bannerAgg.hidden = false; }
+    function refresh(){ radar.setUrl(urlFor(prodotto)); if (bannerAgg) bannerAgg.hidden = true; }
+    setInterval(mostraAggiornamento, 300000); // ogni 5 minuti
 
     // cambio prodotto SRI/VMI
     document.querySelectorAll('.radar-dpc-filter[data-layer]').forEach(function(btn){
@@ -121,11 +140,13 @@
         document.querySelectorAll('.radar-dpc-filter[data-layer]').forEach(function(b){ b.setAttribute('aria-pressed','false'); });
         btn.setAttribute('aria-pressed','true');
         prodotto = btn.dataset.layer;
-        radar.setUrl(urlFor(prodotto));
+        refresh();
       });
     });
     var btnR = document.getElementById('radar-dpc-refresh');
     if (btnR) btnR.addEventListener('click', refresh);
+    var btnA = document.getElementById('radar-dpc-aggiorna-btn');
+    if (btnA) btnA.addEventListener('click', refresh);
   })();
   </script>
 </div>

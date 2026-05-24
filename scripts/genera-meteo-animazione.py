@@ -184,11 +184,11 @@ def build(hourly, now):
         gz_desc, _ = wmo(gz_wc)
         etich = f"{GIORNI_BREVI[ft.weekday()]} {ft.day} {MESI_IT[ft.month][:3]} · ore {ft.hour:02d}:00"
         banner = (f'<g transform="translate(8,{Hmap-40:.0f})">'
-                  f'<rect x="0" y="0" width="280" height="32" rx="9" fill="#003366" '
+                  f'<rect x="0" y="0" width="360" height="32" rx="9" fill="#003366" '
                   f'stroke="#b8860b" stroke-width="1.4"/>'
                   f'<text x="12" y="21" font-size="13" font-weight="700" fill="#ffffff">{etich}</text>'
-                  f'<text x="268" y="21" font-size="13" font-weight="800" text-anchor="end" '
-                  f'fill="#ffd166">Genzano {round(gz_t)}&#176;</text>'
+                  f'<text x="348" y="21" font-size="13" font-weight="800" text-anchor="end" '
+                  f'fill="#ffd166">Genzano di Roma {round(gz_t)}&#176;</text>'
                   f'</g>')
         # valori opacita' discreti: 1 solo nella propria finestra
         vals = ";".join("1" if j == k else "0" for j in range(nfr))
@@ -197,9 +197,9 @@ def build(hourly, now):
                          f'calcMode="discrete" values="{vals}"/>{pills}{banner}</g>')
 
     # legenda statica (identica alla cartina)
-    PAD = 18; HEAD = 64; FOOT = 70
+    PAD = 18; HEAD = 64; FOOT = 88
     W = Wmap + 2 * PAD; H = Hmap + HEAD + FOOT + PAD
-    barW = min(440, W - 2 * PAD - 30); barX = (W - barW) / 2; barY = H - 52; barH = 13
+    barW = min(440, W - 2 * PAD - 30); barX = (W - barW) / 2; barY = H - 64; barH = 13
     nseg = int(TEMP_MAX - TEMP_MIN); segw = barW / nseg
     segs = "".join(f'<rect x="{barX+kk*segw:.2f}" y="{barY:.1f}" width="{segw+0.6:.2f}" '
                    f'height="{barH}" fill="{colore(TEMP_MIN+kk+0.5)}"/>' for kk in range(nseg))
@@ -218,10 +218,12 @@ def build(hourly, now):
     titolo = (f'<text x="{PAD}" y="26" font-size="17" font-weight="800" fill="#003366">'
               f'Lazio — previsione animata 72 ore</text>'
               f'<text x="{PAD}" y="45" font-size="11" fill="#495057">'
-              f'Temperatura e cielo previsti, frame ogni 6 ore. Elaborazione del Gruppo su dati Open-Meteo (ECMWF).</text>')
-    fonte = (f'<text x="{W/2:.0f}" y="{H-14:.0f}" font-size="9.5" text-anchor="middle" '
-             f'fill="#495057">Dati: Open-Meteo (modelli ECMWF) &#183; dato indicativo, '
-             f'per le allerte vale il Centro Funzionale Lazio</text>')
+              f'Temperatura e cielo previsti nelle province, fotogramma ogni 6 ore.</text>')
+    fonte = (f'<text x="{W/2:.0f}" y="{H-21:.0f}" font-size="10.5" font-weight="700" text-anchor="middle" '
+             f'fill="#003366">Elaborazione grafica del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma</text>'
+             f'<text x="{W/2:.0f}" y="{H-8:.0f}" font-size="8.5" text-anchor="middle" '
+             f'fill="#6c757d">Dati: Open-Meteo (modelli ECMWF) &#183; dato indicativo, '
+             f'per le allerte vale il Centro Funzionale Regionale del Lazio</text>')
 
     aria = (f"Animazione della previsione meteo del Lazio per le prossime 72 ore: "
             f"temperatura e cielo previsti nelle province, con dettaglio per Genzano di Roma. "
