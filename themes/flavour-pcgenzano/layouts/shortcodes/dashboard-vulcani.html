@@ -1,0 +1,52 @@
+{{/* Shortcode dashboard-vulcani — monitoraggio del Distretto Vulcanico dei Colli Albani,
+     la caldera quiescente su cui sorge Genzano di Roma. Niente "stato vulcanico" inventato:
+     mostriamo il parametro realmente monitorato dall'INGV per le caldere quiescenti, cioè la
+     SISMICITÀ locale (ultimi 30 giorni) via INGV FDSN (CORS aperto), più i link ufficiali.
+     Solo indicatori, nessuna mappa (la mappa sismica è nella scheda Terremoti). */}}
+<div class="dash-vulcani" aria-labelledby="dash-vulc-tit">
+  <h2 id="dash-vulc-tit" class="visually-hidden">Monitoraggio del Distretto Vulcanico dei Colli Albani</h2>
+  <p class="dash-aria-nota mb-2">Genzano di Roma sorge sul <strong>Distretto Vulcanico dei Colli Albani</strong>, una caldera <strong>quiescente</strong> (non attiva, ma non estinta). Il parametro che l'INGV monitora di continuo è la <strong>sismicità</strong> dell'area: qui i numeri degli <strong>ultimi 30 giorni</strong>.</p>
+  <div class="dash-sisma-kpi">
+    <div class="dash-kpi"><span class="dash-kpi-num" id="vulc-num">—</span><span class="dash-kpi-lab">Terremoti 30 giorni (Colli Albani)</span></div>
+    <div class="dash-kpi"><span class="dash-kpi-num" id="vulc-max">—</span><span class="dash-kpi-lab">Magnitudo massima</span></div>
+    <div class="dash-kpi"><span class="dash-kpi-num" id="vulc-ult">—</span><span class="dash-kpi-lab">Ultimo evento</span></div>
+    <div class="dash-kpi"><span class="dash-kpi-num" id="vulc-prof">—</span><span class="dash-kpi-lab">Profondità tipica</span></div>
+  </div>
+  <p class="small text-muted mt-2 mb-0" id="vulc-stato"></p>
+  <p class="small text-muted mt-1 mb-0">
+    Dati sismici: <a href="https://terremoti.ingv.it/" target="_blank" rel="noopener noreferrer">INGV</a> (FDSN, open data), area Colli Albani.
+    Approfondimenti: <a href="https://www.ingv.it/" target="_blank" rel="noopener noreferrer">INGV</a>,
+    <a href="https://www.protezionecivile.gov.it/it/rischio/rischio-vulcanico/" target="_blank" rel="noopener noreferrer">rischio vulcanico — Protezione Civile</a>.
+    Una sismicità di fondo è <strong>normale</strong> per una caldera quiescente; non indica un'eruzione imminente. In emergenza: <a href="tel:112">112</a>.
+  </p>
+  <script>
+  (function(){
+    var FDSN='https://webservices.ingv.it/fdsnws/event/1/query';
+    var BBOX='&minlatitude=41.6&maxlatitude=41.85&minlongitude=12.5&maxlongitude=12.85';
+    function pad(n){return('0'+n).slice(-2);}
+    function carica(){
+      var from=new Date(Date.now()-30*86400000).toISOString().slice(0,19);
+      var url=FDSN+'?starttime='+from+'&minmagnitude=-1'+BBOX+'&format=geojson&orderby=time&limit=1000';
+      fetch(url).then(function(r){return r.json();}).then(function(j){
+        var f=(j.features||[]).map(function(x){var p=x.properties,g=x.geometry.coordinates;return{time:p.time,mag:p.mag,depth:g[2]};}).filter(function(e){return typeof e.mag==='number';});
+        var num=f.length, maxM=0, prof=[];
+        f.forEach(function(e){ if(e.mag>maxM)maxM=e.mag; if(e.depth!=null)prof.push(e.depth); });
+        document.getElementById('vulc-num').textContent=num;
+        document.getElementById('vulc-max').textContent=num?('M '+maxM.toFixed(1)):'—';
+        if(num){
+          var ult=f.slice().sort(function(a,b){return new Date(b.time)-new Date(a.time);})[0];
+          var mins=Math.round((Date.now()-new Date(ult.time).getTime())/60000);
+          document.getElementById('vulc-ult').textContent= mins<60?(mins+' min fa') : mins<2880?(Math.round(mins/60)+' ore fa') : (Math.round(mins/1440)+' gg fa');
+          prof.sort(function(a,b){return a-b;});
+          document.getElementById('vulc-prof').textContent=prof.length?(Math.round(prof[Math.floor(prof.length/2)])+' km'):'—';
+        } else {
+          document.getElementById('vulc-ult').textContent='nessuno';
+          document.getElementById('vulc-prof').textContent='—';
+        }
+        document.getElementById('vulc-stato').textContent='Aggiornato alle '+pad(new Date().getHours())+':'+pad(new Date().getMinutes())+'.';
+      }).catch(function(){ document.getElementById('vulc-stato').textContent='Dati momentaneamente non disponibili — vedi terremoti.ingv.it'; });
+    }
+    carica(); setInterval(carica, 600000);
+  })();
+  </script>
+</div>
