@@ -6532,9 +6532,10 @@ html.a11y-pause-anim .consulta-rapida .cr-card:hover { transform: none; }
    METEO CONFRONTO v1.0 — pagina temporanea /meteo-confronto/
    Due opzioni di cartina animata affiancate (A: Lazio SVG, B: sinottica WebP).
    ============================================================ */
-.meteo-confronto { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem; margin: 1.6rem 0; }
+/* colonna unica: mappe a piena larghezza per la massima leggibilità */
+.meteo-confronto { display: grid; grid-template-columns: 1fr; gap: 2.2rem; margin: 1.6rem 0; }
 .meteo-confronto-col { min-width: 0; }
-.meteo-confronto-col h2 { margin-top: 0; }
+.meteo-confronto-col h2, .meteo-confronto-col h3 { margin-top: 0; color: #003366; }
 .meteo-confronto-col figure { margin: 0 0 .7rem; max-width: none; }
 .meteo-confronto-col img { width: 100%; height: auto; border: 1px solid #d4dde6;
   border-radius: 8px; background: #fff; box-shadow: 0 2px 8px rgba(0,51,102,.08); }
@@ -6542,4 +6543,3 @@ html.a11y-pause-anim .consulta-rapida .cr-card:hover { transform: none; }
 .meteo-confronto-col p { font-size: .95rem; margin: .4rem 0; }
 .meteo-confronto-nota { background: #e7f0fa; border-left: 4px solid #003366;
   border-radius: 6px; padding: .85rem 1.05rem; font-size: .95rem; margin-top: 1rem; }
-@media (max-width: 768px) { .meteo-confronto { grid-template-columns: 1fr; } }

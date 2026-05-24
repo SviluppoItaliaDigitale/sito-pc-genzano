@@ -32,9 +32,11 @@ import numpy as np
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from matplotlib.colors import LinearSegmentedColormap
+from matplotlib.colors import LinearSegmentedColormap, ListedColormap, BoundaryNorm
+from matplotlib.cm import ScalarMappable
 import cartopy.crs as ccrs
 import cartopy.feature as cfeature
+import matplotlib.patheffects as pe
 from PIL import Image
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -57,7 +59,8 @@ STEP_H = 6                 # ogni 6 ore -> 72 ore
 GENZANO = (41.7085, 12.6916)
 
 HOURLY_VARS = ("pressure_msl", "temperature_850hPa",
-               "geopotential_height_500hPa", "wind_speed_500hPa", "wind_direction_500hPa")
+               "geopotential_height_500hPa", "wind_speed_500hPa", "wind_direction_500hPa",
+               "precipitation", "snowfall")
 
 
 # ----------------------------------------------------------------- fetch a griglia
@@ -124,6 +127,36 @@ def cmap_t850():
     return LinearSegmentedColormap.from_list("t850", pts), lo, hi
 
 
+# scala precipitazioni (mm/h, stile radar) e neve (cm)
+PRECIP_LEVELS = [0.2, 0.5, 1, 2, 4, 8, 16, 32, 64]
+PRECIP_COLORS = ["#a6d8ff", "#4aa3ff", "#2ecc71", "#a8e05f", "#f7e359", "#f5a623", "#e8412b", "#b5179e"]
+SNOW_LEVELS = [0.1, 0.5, 1, 2, 5, 10]
+SNOW_COLORS = ["#e6f2ff", "#bcd6ff", "#c3b6e8", "#9a7fd6", "#6f4fc0"]
+
+
+def find_centers(field, lon2d, lat2d, kind, n=2):
+    """Minimi (B) o massimi (A) locali della pressione, per marcare le strutture."""
+    ny, nx = field.shape
+    mean = float(np.nanmean(field))
+    out = []
+    for iy in range(1, ny - 1):
+        for ix in range(1, nx - 1):
+            v = field[iy, ix]
+            if np.isnan(v):
+                continue
+            win = field[iy - 1:iy + 2, ix - 1:ix + 2].copy()
+            win[1, 1] = np.nan
+            nb = win[~np.isnan(win)]
+            if nb.size == 0:
+                continue
+            if kind == "B" and v < nb.min() and v < mean - 1.0:
+                out.append((v, float(lon2d[iy, ix]), float(lat2d[iy, ix])))
+            if kind == "A" and v > nb.max() and v > mean + 1.0:
+                out.append((v, float(lon2d[iy, ix]), float(lat2d[iy, ix])))
+    out.sort(key=lambda r: r[0], reverse=(kind == "A"))
+    return out[:n]
+
+
 def main():
     now_utc = datetime.datetime.now(datetime.timezone.utc)
     now_roma = datetime.datetime.now(TZ_ROMA)
@@ -153,57 +186,106 @@ def main():
 
     frames = []
     preview_path = None
+    pcmap = ListedColormap(PRECIP_COLORS); pnorm = BoundaryNorm(PRECIP_LEVELS, pcmap.N)
+    scmap = ListedColormap(SNOW_COLORS); snorm = BoundaryNorm(SNOW_LEVELS, scmap.N)
+    land = cfeature.NaturalEarthFeature("physical", "land", "50m", facecolor="#f3efe6")
+    ocean = cfeature.NaturalEarthFeature("physical", "ocean", "50m", facecolor="#dfeaf2")
+
     for fi, hi in enumerate(indici):
         t850 = campo(results, "temperature_850hPa", nlat, nlon, hi)
         mslp = campo(results, "pressure_msl", nlat, nlon, hi)
         g500 = campo(results, "geopotential_height_500hPa", nlat, nlon, hi)
         ws = campo(results, "wind_speed_500hPa", nlat, nlon, hi)
         wd = campo(results, "wind_direction_500hPa", nlat, nlon, hi)
+        precip = campo(results, "precipitation", nlat, nlon, hi)
+        snow = campo(results, "snowfall", nlat, nlon, hi)
         # vento -> componenti (kt). dir = direzione DA cui spira.
         wr = np.radians(wd)
         u = -(ws / 1.852) * np.sin(wr)
         v = -(ws / 1.852) * np.cos(wr)
 
-        fig = plt.figure(figsize=(8.2, 7.2), dpi=100)
+        fig = plt.figure(figsize=(8.6, 7.9), dpi=100)
         ax = plt.axes(projection=proj)
         ax.set_extent([LON_MIN, LON_MAX, LAT_MIN, LAT_MAX], crs=proj)
 
+        # sfondo terra/mare tenue
+        ax.add_feature(land, zorder=0)
+        ax.add_feature(ocean, zorder=0)
+        # campo termico 850 hPa (sfondo, attenuato)
         cf = ax.contourf(lon2d, lat2d, t850, levels=t_levels, cmap=cmap,
-                         vmin=tlo, vmax=thi, extend="both", transform=proj, alpha=0.92)
+                         vmin=tlo, vmax=thi, extend="both", transform=proj, alpha=0.60, zorder=1)
+        # precipitazioni (pioggia) a colori stile radar
+        pr = np.where(precip >= PRECIP_LEVELS[0], precip, np.nan)
+        if np.isfinite(pr).any():
+            ax.contourf(lon2d, lat2d, pr, levels=PRECIP_LEVELS, cmap=pcmap, norm=pnorm,
+                        extend="max", alpha=0.85, transform=proj, zorder=3)
+        # neve (palette viola)
+        sn = np.where(snow >= SNOW_LEVELS[0], snow, np.nan)
+        if np.isfinite(sn).any():
+            ax.contourf(lon2d, lat2d, sn, levels=SNOW_LEVELS, cmap=scmap, norm=snorm,
+                        extend="max", alpha=0.92, transform=proj, zorder=4)
+        # isoterma 0 °C a 850 hPa (limite indicativo pioggia/neve)
+        try:
+            ci = ax.contour(lon2d, lat2d, t850, levels=[0], colors="#0050b3",
+                            linewidths=1.6, linestyles=(0, (5, 2)), transform=proj, zorder=5)
+            ax.clabel(ci, inline=True, fontsize=6, fmt="0°C")
+        except Exception:
+            pass
         # geopotenziale 500 hPa (saccature/promontori)
         cg = ax.contour(lon2d, lat2d, g500, levels=g_levels, colors="#5b2a86",
-                        linewidths=0.9, linestyles="dashed", transform=proj)
+                        linewidths=0.9, linestyles="dashed", transform=proj, zorder=5)
         ax.clabel(cg, inline=True, fontsize=6.5, fmt="%d")
         # isobare MSLP
         cp = ax.contour(lon2d, lat2d, mslp, levels=p_levels, colors="#111111",
-                        linewidths=1.0, transform=proj)
+                        linewidths=1.0, transform=proj, zorder=6)
         ax.clabel(cp, inline=True, fontsize=7, fmt="%d")
         # barbe vento 500 hPa, sottocampionate
         s = 2
         ax.barbs(lon2d[::s, ::s], lat2d[::s, ::s], u[::s, ::s], v[::s, ::s],
-                 length=4.6, linewidth=0.45, color="#23408f", transform=proj)
+                 length=4.6, linewidth=0.45, color="#23408f", transform=proj, zorder=6)
 
-        ax.add_feature(coast)
-        ax.add_feature(borders)
-        ax.plot(GENZANO[1], GENZANO[0], marker="*", markersize=11, color="#b8860b",
-                markeredgecolor="#ffffff", markeredgewidth=0.8, transform=proj, zorder=6)
+        ax.add_feature(coast, zorder=7)
+        ax.add_feature(borders, zorder=7)
+
+        # minimi (B) e massimi (A) di pressione, con valore
+        stroke = [pe.withStroke(linewidth=2.4, foreground="white")]
+        for vv, lo_, la_ in find_centers(mslp, lon2d, lat2d, "B"):
+            ax.text(lo_, la_, "B", color="#d9001b", fontsize=17, fontweight="bold",
+                    ha="center", va="center", transform=proj, zorder=8, path_effects=stroke)
+            ax.text(lo_, la_ - 0.5, f"{round(vv)}", color="#d9001b", fontsize=7,
+                    ha="center", va="top", transform=proj, zorder=8, path_effects=stroke)
+        for vv, lo_, la_ in find_centers(mslp, lon2d, lat2d, "A"):
+            ax.text(lo_, la_, "A", color="#0050b3", fontsize=17, fontweight="bold",
+                    ha="center", va="center", transform=proj, zorder=8, path_effects=stroke)
+            ax.text(lo_, la_ - 0.5, f"{round(vv)}", color="#0050b3", fontsize=7,
+                    ha="center", va="top", transform=proj, zorder=8, path_effects=stroke)
+
+        # Genzano di Roma
+        ax.plot(GENZANO[1], GENZANO[0], marker="*", markersize=13, color="#b8860b",
+                markeredgecolor="#ffffff", markeredgewidth=0.9, transform=proj, zorder=9)
+        ax.text(GENZANO[1] + 0.15, GENZANO[0] + 0.12, "Genzano di Roma", fontsize=6.8,
+                fontweight="bold", color="#1a1a1a", transform=proj, zorder=9, path_effects=stroke)
 
         ft = parsed[hi]
         valid_roma = ft.replace(tzinfo=datetime.timezone.utc).astimezone(TZ_ROMA) if TZ_ROMA else ft
         ax.set_title(
-            f"Carta sinottica Italia — 850 hPa (colore), MSLP (nero), 500 hPa (viola), vento 500 hPa\n"
+            f"Carta sinottica Italia — precipitazioni e neve (colore), 850 hPa, isobare MSLP, 500 hPa, vento, minimi/massimi\n"
             f"valido {GIORNI[ft.weekday()]} {ft.day:02d}/{ft.month:02d} ore {ft.hour:02d} UTC "
             f"({valid_roma.hour:02d}:00 ora italiana)",
-            fontsize=9, fontweight="bold")
+            fontsize=8.5, fontweight="bold")
 
-        cb = fig.colorbar(cf, ax=ax, orientation="vertical", shrink=0.8, pad=0.02, ticks=range(-30, 40, 5))
-        cb.set_label("Temperatura a 850 hPa (°C)", fontsize=8)
-        cb.ax.tick_params(labelsize=7)
-        fig.text(0.5, 0.030, "Elaborazione grafica del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma",
+        cb = fig.colorbar(cf, ax=ax, orientation="vertical", shrink=0.78, pad=0.01, ticks=range(-30, 40, 5))
+        cb.set_label("Temperatura 850 hPa (°C)", fontsize=7.5)
+        cb.ax.tick_params(labelsize=6.5)
+        cb2 = fig.colorbar(ScalarMappable(norm=pnorm, cmap=pcmap), ax=ax, orientation="horizontal",
+                           shrink=0.7, pad=0.07, aspect=45, ticks=PRECIP_LEVELS)
+        cb2.set_label("Precipitazione (mm/h) · neve in viola", fontsize=7)
+        cb2.ax.tick_params(labelsize=6)
+        fig.text(0.5, 0.028, "Elaborazione grafica del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma",
                  ha="center", fontsize=7.2, fontweight="bold", color="#003366")
-        fig.text(0.5, 0.012, "Dati: Open-Meteo (modelli ECMWF) · dato indicativo, per le allerte vale il Centro Funzionale Regionale del Lazio",
+        fig.text(0.5, 0.011, "Dati: Open-Meteo (modelli ECMWF) · dato indicativo, per le allerte vale il Centro Funzionale Regionale del Lazio",
                  ha="center", fontsize=6, color="#555555")
-        fig.subplots_adjust(left=0.02, right=0.98, top=0.9, bottom=0.06)
+        fig.subplots_adjust(left=0.02, right=0.98, top=0.89, bottom=0.12)
 
         buf = io.BytesIO()
         fig.savefig(buf, format="png")
