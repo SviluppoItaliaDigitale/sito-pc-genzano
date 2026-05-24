@@ -28,9 +28,13 @@
         document.getElementById('mare-dir').textContent=cardinale(c.wave_direction);
         var t=c.time?new Date(c.time):new Date();
         document.getElementById('mare-stato-agg').textContent='Aggiornato alle '+('0'+t.getHours()).slice(-2)+':'+('0'+t.getMinutes()).slice(-2);
-      }).catch(function(){ document.getElementById('mare-stato-agg').textContent='Dati momentaneamente non disponibili.'; });
+      }).catch(function(){ document.getElementById('mare-stato-agg').textContent='Aggiornamento in corso…'; setTimeout(carica, 60000); });
     }
-    carica(); setInterval(carica, 1800000);
+    // lazy: fetch solo quando la scheda Mare diventa visibile (nel cruscotto parte nascosta)
+    function avvia(){ carica(); setInterval(carica, 1800000); }
+    var box=document.querySelector('.dash-mare');
+    if(box && box.offsetParent!==null){ avvia(); }
+    else { window.addEventListener('cruscotto:mare', avvia, {once:true}); }
   })();
   </script>
 </div>

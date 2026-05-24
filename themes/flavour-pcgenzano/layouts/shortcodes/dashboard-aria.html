@@ -97,9 +97,13 @@
         set('pol-grass',c.grass_pollen); set('pol-olive',c.olive_pollen); set('pol-ragweed',c.ragweed_pollen); set('pol-birch',c.birch_pollen);
         var t=c.time?new Date(c.time):new Date();
         document.getElementById('aria-stato').textContent='Aggiornato alle '+('0'+t.getHours()).slice(-2)+':'+('0'+t.getMinutes()).slice(-2);
-      }).catch(function(){ document.getElementById('aria-stato').textContent='Dati momentaneamente non disponibili.'; });
+      }).catch(function(){ document.getElementById('aria-stato').textContent='Aggiornamento in corso…'; setTimeout(carica, 60000); });
     }
-    carica(); setInterval(carica, 1800000); // ogni 30 minuti
+    // lazy: nel cruscotto la scheda parte nascosta -> niente fetch al load, solo quando si apre
+    function avvia(){ carica(); setInterval(carica, 1800000); } // ogni 30 minuti
+    var box=document.querySelector('.dash-aria');
+    if(box && box.offsetParent!==null){ avvia(); }
+    else { window.addEventListener('cruscotto:aria', avvia, {once:true}); }
   })();
   </script>
 </div>

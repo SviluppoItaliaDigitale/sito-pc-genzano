@@ -1,0 +1,19 @@
+{{/* Card homepage "Cruscotto del territorio" — segnala il cruscotto multidisciplinare
+     con una card colorata (blu istituzionale). CTA verso /cruscotto/ (relURL subpath-safe).
+     Accessibile: contrasto WCAG AA, focus visibile, rispetta prefers-reduced-motion. */}}
+<section class="cruscotto-home" aria-labelledby="cruscotto-home-tit">
+  <div class="container">
+    <a class="cruscotto-home-card" href="{{ "cruscotto/" | relURL }}">
+      <span class="cruscotto-home-icon" aria-hidden="true"><i class="bi bi-speedometer2"></i></span>
+      <span class="cruscotto-home-testo">
+        <span class="cruscotto-home-occhiello">Dati in tempo reale</span>
+        <span class="cruscotto-home-tit" id="cruscotto-home-tit">Cruscotto del territorio</span>
+        <span class="cruscotto-home-desc">Terremoti, vulcani, radar pioggia, satellite, meteo, allerta, incendi, qualità dell'aria e stato del mare — da fonti ufficiali e aperte, in un'unica pagina.</span>
+        <span class="cruscotto-home-chips" aria-hidden="true">
+          <span>Terremoti</span><span>Vulcani</span><span>Radar</span><span>Satellite</span><span>Meteo</span><span>Allerta</span><span>Incendi</span><span>Aria</span><span>Mare</span>
+        </span>
+      </span>
+      <span class="cruscotto-home-cta">Apri il cruscotto <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+    </a>
+  </div>
+</section>
