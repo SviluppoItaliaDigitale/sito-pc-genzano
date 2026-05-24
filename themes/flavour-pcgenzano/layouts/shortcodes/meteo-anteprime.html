@@ -9,9 +9,12 @@
 {{- $vA := "" -}}{{- with .Site.Data.meteo_animazione }}{{ with .aggiornato }}{{ $vA = printf "?v=%s" (. | replaceRE `[^0-9]` "") }}{{ end }}{{ end -}}
 {{- $vB := "" -}}{{- with .Site.Data.meteo_sinottica }}{{ with .aggiornato }}{{ $vB = printf "?v=%s" (. | replaceRE `[^0-9]` "") }}{{ end }}{{ end -}}
 
+<h2 id="cartina-animata" style="color:#003366"><i class="bi bi-play-circle-fill me-2" aria-hidden="true"></i>Cartina meteo animata — versione in prova</h2>
+<p>Stiamo provando due modi di mostrare l'evoluzione del meteo delle prossime 72 ore con una cartina che si <strong>anima</strong> e si <strong>aggiorna da sola</strong>. Entrambe sono una nostra elaborazione su dati aperti Open-Meteo (modelli ECMWF). Faccelo sapere quale preferisci: ne terremo una (o tutte e due in punti diversi del sito).</p>
+
 <div class="meteo-confronto">
   <div class="meteo-confronto-col">
-    <h2 id="opzione-a">Opzione A — Animazione del Lazio</h2>
+    <h3 id="opzione-a">Opzione A — Animazione del Lazio</h3>
     <figure>
       <img src="{{ $svgA }}{{ $vA }}" loading="lazy"
            alt="Animazione della previsione del Lazio per le prossime 72 ore: la temperatura e il cielo previsti nelle cinque province e a Genzano di Roma cambiano fotogramma dopo fotogramma, a passo di sei ore.">
@@ -22,7 +25,7 @@
   </div>
 
   <div class="meteo-confronto-col">
-    <h2 id="opzione-b">Opzione B — Carta sinottica Italia</h2>
+    <h3 id="opzione-b">Opzione B — Carta sinottica Italia</h3>
     <figure>
       <img src="{{ $webpB }}{{ $vB }}" loading="lazy"
            alt="Carta sinottica animata dell'Italia e del Mediterraneo centrale per le prossime 72 ore: temperatura a 850 hPa a colori, pressione al livello del mare con isobare nere, geopotenziale a 500 hPa con linee viola, vento a 500 hPa con barbe; Genzano di Roma è indicata da una stella.">

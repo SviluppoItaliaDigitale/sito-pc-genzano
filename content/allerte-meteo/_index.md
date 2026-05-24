@@ -9,6 +9,7 @@ aliases:
   - /allertameteo.html
   - /allertameteo/
   - /allerta-oggi/
+  - /meteo-confronto/
 sitemap:
   priority: 0.9
   changefreq: daily
@@ -42,6 +43,8 @@ Lo stato sotto è letto direttamente dai **bollettini ufficiali del Centro Funzi
 Temperatura massima e cielo previsti **oggi** nelle cinque province del Lazio, con il dettaglio per Genzano di Roma e i prossimi giorni. La cartina è una **nostra elaborazione** su dati aperti [Open-Meteo](https://open-meteo.com/) (modelli ECMWF), aggiornata ogni ora. È un dato **indicativo**: per le allerte valgono i bollettini ufficiali del Centro Funzionale Regionale del Lazio.
 
 {{< meteo-lazio >}}
+
+{{< meteo-anteprime >}}
 
 ## Mappa meteo interattiva
 
