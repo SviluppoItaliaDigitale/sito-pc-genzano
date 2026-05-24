@@ -138,6 +138,12 @@ enableGitInfo = true
   parent = "per-il-cittadino"
   weight = 7
 
+[[menus.main]]
+  name = "Cruscotto del territorio"
+  url = "/cruscotto/"
+  parent = "per-il-cittadino"
+  weight = 8
+
 # --- Dropdown: Per le scuole (7 voci didattiche) ---
 # (rinominato da "Educazione e Inclusione" a maggio 2026 — splittato per
 # alleggerire e separare le 3 vocazioni mescolate: didattica scolastica,

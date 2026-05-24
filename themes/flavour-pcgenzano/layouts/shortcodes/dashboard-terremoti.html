@@ -1,0 +1,122 @@
+{{/* Shortcode dashboard-terremoti — cruscotto sismico nativo (dati ufficiali INGV).
+     Fonte: INGV FDSN event web service (https://webservices.ingv.it/fdsnws/event/1/query),
+     GeoJSON, CORS aperto (Access-Control-Allow-Origin: *) -> fetch diretto dal browser,
+     niente widget/iframe di terzi. Leaflet self-hosted. Mappa + indicatori + liste.
+     Replica nativa della dashboard ArcGIS "Terremoti in Italia negli ultimi 7 giorni". */}}
+{{ $leafletCSS := "vendor/leaflet/leaflet.css" | relURL }}
+{{ $leafletJS  := "vendor/leaflet/leaflet.js"  | relURL }}
+
+<link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">
+<div class="dash-sisma" aria-labelledby="dash-sisma-tit">
+  <h2 id="dash-sisma-tit" class="visually-hidden">Cruscotto terremoti in Italia</h2>
+
+  <div class="dash-sisma-toolbar" role="group" aria-label="Filtri terremoti">
+    <span class="dash-sisma-grp" role="group" aria-label="Finestra temporale">
+      <button type="button" class="dash-pill" data-win="1" aria-pressed="false">24 ore</button>
+      <button type="button" class="dash-pill" data-win="7" aria-pressed="true">7 giorni</button>
+    </span>
+    <span class="dash-sisma-grp" role="group" aria-label="Magnitudo minima">
+      <button type="button" class="dash-pill" data-mag="1.5" aria-pressed="true">tutti</button>
+      <button type="button" class="dash-pill" data-mag="2" aria-pressed="false">M≥2</button>
+      <button type="button" class="dash-pill" data-mag="3" aria-pressed="false">M≥3</button>
+      <button type="button" class="dash-pill" data-mag="4" aria-pressed="false">M≥4</button>
+    </span>
+    <span class="dash-sisma-stato" id="dash-sisma-stato" aria-live="polite"></span>
+  </div>
+
+  <div class="dash-sisma-kpi" id="dash-sisma-kpi" aria-live="polite">
+    <div class="dash-kpi"><span class="dash-kpi-num" id="kpi-num">—</span><span class="dash-kpi-lab">Eventi nel periodo</span></div>
+    <div class="dash-kpi"><span class="dash-kpi-num" id="kpi-max">—</span><span class="dash-kpi-lab">Magnitudo massima</span></div>
+    <div class="dash-kpi"><span class="dash-kpi-num" id="kpi-m3">—</span><span class="dash-kpi-lab">Eventi M≥3</span></div>
+    <div class="dash-kpi"><span class="dash-kpi-num" id="kpi-ult">—</span><span class="dash-kpi-lab">Ultimo evento</span></div>
+  </div>
+
+  <div class="dash-sisma-grid">
+    <div id="dash-sisma-mappa" role="application" aria-label="Mappa dei terremoti in Italia nel periodo selezionato, con Genzano di Roma evidenziata."></div>
+    <div class="dash-sisma-liste">
+      <h3>Ultimi eventi</h3>
+      <ol class="dash-sisma-list" id="lista-ultimi"></ol>
+      <h3>Più forti</h3>
+      <ol class="dash-sisma-list" id="lista-forti"></ol>
+    </div>
+  </div>
+
+  <div class="dash-sisma-legenda" aria-hidden="true">
+    <span><i style="background:#9aa7b4"></i> M&lt;2</span>
+    <span><i style="background:#f7e359"></i> 2–3</span>
+    <span><i style="background:#f5a623"></i> 3–4</span>
+    <span><i style="background:#e8412b"></i> 4–5</span>
+    <span><i style="background:#7f1d1d"></i> ≥5</span>
+  </div>
+
+  <noscript><div class="alert alert-warning mt-2" role="note">Per il cruscotto serve JavaScript. Dati ufficiali su <a href="https://terremoti.ingv.it/" target="_blank" rel="noopener noreferrer">terremoti.ingv.it</a>.</div></noscript>
+  <p class="small text-muted mt-2 mb-0">Dati: <a href="https://terremoti.ingv.it/" target="_blank" rel="noopener noreferrer">INGV — Istituto Nazionale di Geofisica e Vulcanologia</a> (FDSN, open data). Aggiornamento automatico. In emergenza chiama il <a href="tel:112">112</a>.</p>
+
+  <script src="{{ $leafletJS }}" crossorigin=""></script>
+  <script>
+  (function(){
+    if (typeof L === 'undefined') return;
+    var FDSN = 'https://webservices.ingv.it/fdsnws/event/1/query';
+    var GENZANO = [41.7085, 12.6916];
+    var win = 7, minmag = 1.5, eventi = [], markers = null, map = null;
+    var stato = document.getElementById('dash-sisma-stato');
+
+    function colore(m){ return m>=5?'#7f1d1d':m>=4?'#e8412b':m>=3?'#f5a623':m>=2?'#f7e359':'#9aa7b4'; }
+    function raggio(m){ return Math.max(4, (m+1)*2.4); }
+    function pad(n){ return ('0'+n).slice(-2); }
+    function oraIt(iso){ var d=new Date(iso); return pad(d.getDate())+'/'+pad(d.getMonth()+1)+' '+pad(d.getHours())+':'+pad(d.getMinutes()); }
+    function minFa(iso){ var m=Math.round((Date.now()-new Date(iso).getTime())/60000); if(m<60)return m+' min fa'; var h=Math.round(m/60); return h<48?h+' ore fa':Math.round(h/24)+' gg fa'; }
+    function dist(la,lo){ var R=6371,t=Math.PI/180,dla=(la-GENZANO[0])*t,dlo=(lo-GENZANO[1])*t,a=Math.sin(dla/2)**2+Math.cos(GENZANO[0]*t)*Math.cos(la*t)*Math.sin(dlo/2)**2; return Math.round(R*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a))); }
+
+    map = L.map('dash-sisma-mappa', { center: [42.2,12.6], zoom: 5, scrollWheelZoom:false });
+    map.on('focus', function(){ map.scrollWheelZoom.enable(); });
+    map.on('blur',  function(){ map.scrollWheelZoom.disable(); });
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      subdomains:'abcd', maxZoom:12, attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/attributions">CARTO</a>' }).addTo(map);
+    L.marker(GENZANO, { icon: L.divIcon({className:'dash-stella', html:'<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 26 26" aria-hidden="true"><path d="M13 1l3.4 7.6L24 9.3l-5.8 5 1.8 7.9L13 18.4 5.9 22.2l1.8-7.9L2 9.3l7.6-.7z" fill="#003366" stroke="#fff" stroke-width="1.4"/></svg>', iconSize:[22,22], iconAnchor:[11,11]}) }).bindPopup('<strong>Genzano di Roma</strong>').addTo(map);
+    markers = L.layerGroup().addTo(map);
+
+    function render(){
+      markers.clearLayers();
+      var el = document.getElementById('lista-ultimi'), ef = document.getElementById('lista-forti');
+      el.innerHTML=''; ef.innerHTML='';
+      if(!eventi.length){ stato.textContent='Nessun evento nel periodo selezionato.'; document.getElementById('kpi-num').textContent='0'; document.getElementById('kpi-max').textContent='—'; document.getElementById('kpi-m3').textContent='0'; document.getElementById('kpi-ult').textContent='—'; return; }
+      var maxM=0, m3=0;
+      eventi.forEach(function(e){
+        if(e.mag>maxM)maxM=e.mag; if(e.mag>=3)m3++;
+        L.circleMarker([e.lat,e.lon],{radius:raggio(e.mag),color:'#333',weight:0.6,fillColor:colore(e.mag),fillOpacity:0.8})
+          .bindPopup('<strong>M '+e.mag.toFixed(1)+'</strong><br>'+e.place+'<br>'+oraIt(e.time)+' · prof. '+e.depth+' km<br>'+dist(e.lat,e.lon)+' km da Genzano di Roma')
+          .addTo(markers);
+      });
+      document.getElementById('kpi-num').textContent=eventi.length;
+      document.getElementById('kpi-max').textContent='M '+maxM.toFixed(1);
+      document.getElementById('kpi-m3').textContent=m3;
+      var ult=eventi.slice().sort(function(a,b){return new Date(b.time)-new Date(a.time);});
+      document.getElementById('kpi-ult').textContent=minFa(ult[0].time);
+      function riga(e){ return '<li><span class="dash-mag" style="border-left-color:'+colore(e.mag)+'">M '+e.mag.toFixed(1)+'</span> <span class="dash-luogo">'+e.place+'</span> <span class="dash-meta">'+oraIt(e.time)+' · '+dist(e.lat,e.lon)+' km da Genzano di Roma</span></li>'; }
+      el.innerHTML=ult.slice(0,8).map(riga).join('');
+      ef.innerHTML=eventi.slice().sort(function(a,b){return b.mag-a.mag;}).slice(0,8).map(riga).join('');
+    }
+
+    function carica(){
+      stato.textContent='Aggiornamento…';
+      var from=new Date(Date.now()-win*86400000).toISOString().slice(0,19);
+      var url=FDSN+'?starttime='+from+'&minmagnitude='+minmag+'&minlatitude=35&maxlatitude=48&minlongitude=5&maxlongitude=20&format=geojson&orderby=time&limit=1500';
+      fetch(url).then(function(r){return r.json();}).then(function(j){
+        eventi=(j.features||[]).map(function(f){var p=f.properties,g=f.geometry.coordinates;return {time:p.time,mag:p.mag,place:p.place||'',depth:Math.round(g[2]),lat:g[1],lon:g[0]};}).filter(function(e){return typeof e.mag==='number';});
+        render();
+        stato.textContent='Aggiornato alle '+pad(new Date().getHours())+':'+pad(new Date().getMinutes());
+      }).catch(function(){ stato.textContent='Dati momentaneamente non disponibili — vedi terremoti.ingv.it'; });
+    }
+
+    document.querySelectorAll('.dash-pill[data-win]').forEach(function(b){ b.addEventListener('click',function(){ document.querySelectorAll('.dash-pill[data-win]').forEach(function(x){x.setAttribute('aria-pressed','false');}); b.setAttribute('aria-pressed','true'); win=parseInt(b.dataset.win,10); carica(); }); });
+    document.querySelectorAll('.dash-pill[data-mag]').forEach(function(b){ b.addEventListener('click',function(){ document.querySelectorAll('.dash-pill[data-mag]').forEach(function(x){x.setAttribute('aria-pressed','false');}); b.setAttribute('aria-pressed','true'); minmag=parseFloat(b.dataset.mag); carica(); }); });
+
+    // init quando la scheda diventa visibile (lazy) o subito se già visibile
+    var box=document.getElementById('dash-sisma-mappa');
+    function go(){ map.invalidateSize(); carica(); setInterval(carica, 300000); }
+    if (box.offsetParent !== null) { go(); }
+    else { window.addEventListener('cruscotto:terremoti', go, {once:true}); }
+  })();
+  </script>
+</div>
