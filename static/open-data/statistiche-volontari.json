@@ -9,8 +9,7 @@
   "nota": "Dati PROVVISORI: censiti solo dall'adozione del nuovo gestionale, non coprono l'intero anno (mancano i mesi precedenti). Aggregati e anonimi, senza dati personali.",
   "generato_il": "2026-05-24",
   "dati": {
-    "Volontari in organico": 42,
     "Volontari con almeno un intervento": 10,
-    "Rapporti di intervento totali": 46
+    "Presenze dei volontari agli interventi": 46
   }
 }
