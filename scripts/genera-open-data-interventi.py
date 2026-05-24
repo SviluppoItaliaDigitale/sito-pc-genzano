@@ -154,7 +154,6 @@ def main():
 
     data = [r for r in rows[1:] if col(r, "Numero") not in (None, "")]
     n_tot = len(data)
-    n_appr = sum(1 for r in data if str(col(r, "Stato")).strip().lower() == "approvato")
     min_tot = sum(minuti(col(r, "Durata")) for r in data)
     ore = round(min_tot / 60, 1)
     km = 0
@@ -180,7 +179,6 @@ def main():
     write_kv("statistiche-interventi", [
         ("Periodo (provvisorio)", per_label or "n.d."),
         ("Interventi registrati", n_tot),
-        ("Interventi approvati", n_appr),
         ("Ore di intervento totali", ore),
         ("Chilometri percorsi totali", int(km)),
     ], periodo)
@@ -206,7 +204,7 @@ def main():
     ], periodo)
 
     print("\nRiepilogo (anonimo):")
-    print(f"  interventi: {n_tot} (approvati {n_appr}), ore {ore}, km {int(km)}, {per_label}")
+    print(f"  interventi: {n_tot}, ore {ore}, km {int(km)}, {per_label}")
     print(f"  volontari: {vol_elenco} in organico, {vol_attivi} attivi, {rap_tot} rapporti")
     print("\nNessun dato personale scritto. Il file .xlsx NON va committato.")
 
