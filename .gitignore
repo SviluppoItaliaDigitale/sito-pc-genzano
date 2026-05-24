@@ -37,3 +37,7 @@ static/braille/
 # I file vengono pubblicati come asset della Release "backup-documenti-aruba",
 # mai committati nel repo (l'Atlante da solo è 118 MB).
 backup-aruba/
+
+# Export del gestionale interventi (contengono dati personali): MAI nel repo
+*global_reports*.xlsx
+gcpc-*_global_reports_*.xlsx

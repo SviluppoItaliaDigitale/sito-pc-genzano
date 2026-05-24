@@ -1,0 +1,17 @@
+{
+  "dataset": "statistiche-volontari",
+  "fonte": "Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma",
+  "licenza": "CC BY 4.0",
+  "periodo": {
+    "dal": "2026-04-04",
+    "al": "2026-05-23"
+  },
+  "nota": "Dati PROVVISORI: censiti solo dall'adozione del nuovo gestionale, non coprono l'intero anno (mancano i mesi precedenti). Aggregati e anonimi, senza dati personali.",
+  "generato_il": "2026-05-24",
+  "dati": {
+    "Volontari in organico": 42,
+    "Volontari con almeno un intervento": 10,
+    "Rapporti di intervento totali": 46,
+    "Rapporti compilati": 20
+  }
+}
