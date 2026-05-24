@@ -129,4 +129,8 @@ Fonti istituzionali:
 - [Dipartimento della Protezione Civile — Rischio industriale](https://www.protezionecivile.gov.it/it/pagina/rischio-chimico-industriale).
 - [D.Lgs. 105/2015 — recepimento Seveso III](https://www.gazzettaufficiale.it/eli/id/2015/07/14/15G00121/sg).
 
+Approfondimenti divulgativi (Geopop):
+
+- [Disastro di Seveso, uno degli incidenti ambientali più grandi d'Italia: cos'è accaduto e perché](https://youtu.be/zAmEhiOrk6w) — ricostruzione divulgativa di Geopop sull'incidente dell'ICMESA del 1976 che ha dato origine alla Direttiva Seveso.
+
 Un rischio conosciuto è un rischio **gestibile**. La trasparenza delle informazioni e la preparazione dei cittadini sono la migliore difesa contro gli incidenti industriali.
