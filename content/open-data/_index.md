@@ -4,7 +4,7 @@ description: "Dataset aperti delle attività del Gruppo Comunale Volontari di Pr
 layout: "single"
 toc: true
 tts: true
-dataUltimaRevisione: "2026-05-20"
+dataUltimaRevisione: "2026-05-24"
 ---
 
 Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** pubblica i dati delle proprie attività in **formato aperto** (CSV + JSON), riusabili da chiunque sotto **licenza Creative Commons BY 4.0** ai sensi del **D.Lgs. 36/2006** ("Codice di riutilizzo dell'informazione del settore pubblico") e della direttiva **(UE) 2019/1024** sui dati aperti.
@@ -145,7 +145,8 @@ Per chi vuole consultare i dati senza scaricare i file:
 
 - **CSV**: apribile con qualsiasi foglio elettronico (Excel, LibreOffice Calc, Numbers, Google Sheets) o editor di testo.
 - **JSON**: parsabile con qualsiasi linguaggio di programmazione moderno (Python, JavaScript, R, ecc.).
-- **Visualizzazioni dashboard**: il sito non offre dashboard interattive (scelta di sobrietà istituzionale). Se vuoi visualizzare i dati graficamente, scaricali e usa strumenti come [Datawrapper](https://www.datawrapper.de/), [Flourish](https://flourish.studio/), [Tableau Public](https://public.tableau.com/) o tool open source.
+- **Cruscotto del territorio**: per i dati di rischio in tempo reale (terremoti, vulcani, radar pioggia, satellite, meteo, allerta, incendi, aria e mare) il sito offre il [cruscotto del territorio](/cruscotto/), che legge le fonti ufficiali e aperte direttamente nel browser.
+- **Visualizzazioni personali**: per elaborazioni grafiche dei file CSV/JSON scaricabili da questa pagina, puoi usare strumenti come [Datawrapper](https://www.datawrapper.de/), [Flourish](https://flourish.studio/), [Tableau Public](https://public.tableau.com/) o tool open source.
 
 ## Hai bisogno di un dataset specifico?
 
@@ -153,7 +154,42 @@ Se hai un'esigenza particolare (ricerca accademica, articolo giornalistico, comp
 
 ## Dati aperti di altri enti
 
-Per i dati aperti su soccorso ed emergenze a livello nazionale, il riferimento istituzionale per il nostro settore è il portale **[Open Data dei Vigili del Fuoco](https://opendata.vigilfuoco.it/)**: pubblica statistiche e dataset aperti del Corpo Nazionale dei Vigili del Fuoco sugli interventi di soccorso. È una fonte utile per chi vuole inquadrare i dati locali del Gruppo nel contesto nazionale del sistema di emergenza.
+Oltre ai dataset del Gruppo, queste sono le fonti aperte ufficiali utili per inquadrare i dati locali nel contesto regionale e nazionale.
+
+### Soccorso, rischi ed emergenze
+
+- **[Open Data dei Vigili del Fuoco](https://opendata.vigilfuoco.it/)** — statistiche e dataset del Corpo Nazionale sugli interventi di soccorso.
+- **[INGV — terremoti](https://terremoti.ingv.it/)** — eventi sismici in tempo reale (servizio FDSN, open data). Alimentano le schede *Terremoti* e *Vulcani* del nostro [cruscotto del territorio](/cruscotto/).
+- **[EFFIS — Copernicus](https://forest-fire.emergency.copernicus.eu/)** — incendi boschivi in Europa (focolai da satellite, aree bruciate). Stessa fonte della scheda *Incendi* del [cruscotto](/cruscotto/).
+- **[ARPA Lazio — Qualità dell'aria](https://qa.arpalazio.net/)** — mappe ufficiali di previsione di PM10, NO₂, ozono e polveri sahariane per il Lazio. Stessa fonte della scheda *Aria* del [cruscotto](/cruscotto/).
+
+### Catalogo nazionale
+
+Il portale **[dati.gov.it](https://www.dati.gov.it/)** è il catalogo nazionale dei dati aperti della Pubblica Amministrazione: non è un singolo archivio, ma l'**indice** da cui partire per trovare i dataset di ministeri, regioni e comuni. Per la protezione civile sono utili le ricerche per parole chiave come *"protezione civile"*, *"rischio idrogeologico"*, *"aree di emergenza"*, *"frane"* e *"alluvioni"*.
+
+A livello regionale, il riferimento è **[dati.lazio.it](https://dati.lazio.it/)**, il portale open data della Regione Lazio.
+
+### Statistica ufficiale (ISTAT)
+
+L'**[ISTAT](https://www.istat.it/dati/open-data/)** pubblica le statistiche ufficiali in formato aperto (popolazione, famiglie, edifici, censimenti), consultabili anche dal portale **[esploradati.istat.it](https://esploradati.istat.it/)**. Sono la base per la pianificazione di protezione civile sulle **persone fragili**: la popolazione per fascia d'età aiuta a stimare quante persone potrebbero aver bisogno di assistenza in un'evacuazione, e gli edifici per epoca di costruzione aiutano a valutare la vulnerabilità sismica.
+
+#### Genzano di Roma in cifre (fonte ISTAT)
+
+<div class="table-responsive">
+<table>
+<caption>Dati statistici di base del Comune di Genzano di Roma, fonte ISTAT</caption>
+<thead>
+<tr><th scope="col">Indicatore</th><th scope="col">Valore</th><th scope="col">Riferimento</th></tr>
+</thead>
+<tbody>
+<tr><td>Popolazione residente</td><td>22.865 abitanti</td><td>ISTAT, 1° gennaio 2023</td></tr>
+<tr><td>Superficie comunale</td><td>17,9 km²</td><td>ISTAT</td></tr>
+<tr><td>Altitudine del centro</td><td>435 m s.l.m.</td><td>—</td></tr>
+</tbody>
+</table>
+</div>
+
+> Per i dati aggiornati e di dettaglio (popolazione per fascia d'età, per sezione di censimento, edifici), consulta il portale [ISTAT](https://esploradati.istat.it/). I numeri qui riportati sono l'ultimo dato consolidato disponibile e servono come riferimento di pianificazione, non come anagrafe in tempo reale.
 
 ## Vedi anche
 
