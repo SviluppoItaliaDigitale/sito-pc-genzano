@@ -395,6 +395,24 @@ La cartina Lazio si rigenera **ogni ora** (workflow `meteo-lazio.yml`); animazio
 
 **Card sismica in homepage:** non più widget INGV iframe, ma una **card semplice** ("Hai sentito un terremoto?") accanto a IT-alert, con link diretto a `terremoti.ingv.it` e a `/rischi-prevenzione/rischio-sismico/`.
 
+### 4.9-ter — Cruscotto del territorio (`/cruscotto/`) — 9 schede native (24/05/2026)
+
+La pagina **`/cruscotto/`** (in menu sotto *Per il Cittadino*) è un cruscotto multidisciplinare a **schede** (switch ARIA `tablist`, navigazione tastiera frecce/Home/End), ognuna alimentata **direttamente nel browser** da fonti ufficiali e aperte — niente iframe/SDK di terzi, niente chiavi API. Ogni scheda è uno **shortcode** dedicato; aggiungerne una nuova = un nuovo shortcode + un tab + un panel in `content/cruscotto/_index.md`.
+
+| Scheda | Shortcode | Fonte (CORS aperto / `<img>`) | Tipo di dato |
+|---|---|---|---|
+| Terremoti | `dashboard-terremoti` | INGV FDSN (`webservices.ingv.it`) | Eventi 24h/7gg, mappa+liste, switch Italia/Castelli |
+| Vulcani | `dashboard-vulcani` | INGV FDSN, box Colli Albani | Sismicità 30gg della caldera quiescente (no "stato vulcanico" inventato) |
+| Radar pioggia | `radar-dpc` | DPC WMTS | Ultimo fotogramma radar (vedi 4.9-bis) |
+| Satellite | `dashboard-satellite` | EUMETSAT WMS `msg_fes:rgb_natural` (15 min) + NASA GIBS true-color del giorno | Nuvole quasi-realtime + suolo del giorno |
+| Meteo | `meteo-lazio` | Open-Meteo (nostra cartina) | Cartina Lazio + Genzano |
+| Allerta | `allerta-stato-attuale` | `data/allerta.json` (CFR Lazio) | Livello allerta corrente |
+| Incendi | `dashboard-incendi` | EFFIS/Copernicus WMS `viirs.hs,modis.hs` su base satellitare Esri | Focolai da satellite VIIRS/MODIS |
+| Aria e pollini | `dashboard-aria` | Open-Meteo Air Quality (CAMS) **+ mappe ufficiali ARPA Lazio** (CHIMERE, `qa.arpalazio.net`) | AQI/PM/O₃ puntuale + previsione regionale PM10/NO₂/O₃/polveri 0-96h |
+| Mare | `dashboard-mare` | Open-Meteo Marine | Onde sulla costa laziale (Anzio-Nettuno) |
+
+**Principi:** ogni mappa Leaflet nascosta si inizializza **lazy** quando la sua scheda diventa visibile (lo switch emette l'evento `cruscotto:<nome>` + un `resize`); il marker Genzano è sempre presente; il valore è sempre in chiaro oltre al colore (WCAG); le immagini hanno `alt` descrittivo. **Onestà sul "tempo reale":** Meteosat ha ~15 min di latenza, NASA GIBS è il mosaico del giorno (non istantaneo), EFFIS sono rilevazioni satellitari near-real-time — etichettato così nelle schede. Le fonti non-real-time o senza CORS (catalogo **dati.gov.it**, statistica **ISTAT**) **non** stanno nel cruscotto: vivono in `/open-data/` come link curati + cifre verificate.
+
 ### 4.10 — Hub strumenti di consultazione (`/strumenti/`)
 
 La pagina **Strumenti in tempo reale** è un hub unico che elenca tutti gli strumenti online utili per il monitoraggio del territorio: meteo, sismico, idrogeologico, incendi, qualità dell'aria, viabilità, emergenze. Esiste per dare al cittadino un singolo punto di accesso invece di disperdere i link su molte pagine.

@@ -135,6 +135,13 @@
       baseBtn.setAttribute('aria-pressed', baseDark ? 'true' : 'false');
       radar.bringToFront();
     });
+
+    // Resilienza dentro il cruscotto a schede: se parto in una scheda NASCOSTA,
+    // Leaflet calcola dimensione 0 (tile mancanti, vista non centrata, marker in
+    // alto a sinistra). Ridisegno e ricentro appena la scheda diventa visibile.
+    function ridisegna(){ map.invalidateSize(); }
+    window.addEventListener('resize', ridisegna);
+    window.addEventListener('cruscotto:radar', function(){ map.invalidateSize(); map.setView([42.0, 12.5], 6); refresh(); }, { once: true });
   })();
   </script>
 </div>
