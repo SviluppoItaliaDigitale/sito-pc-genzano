@@ -1,6 +1,7 @@
 ---
 title: "Animali in fattoria: cosa fare in emergenza"
 date: 2026-11-28
+draft: false
 description: "Come proteggere gli animali della fattoria in caso di incendio, alluvione o terremoto."
 badge: "Prevenzione"
 priorita: "normale"

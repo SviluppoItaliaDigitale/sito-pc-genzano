@@ -1,6 +1,7 @@
 ---
 title: "Malori d'estate: cosa guardare e quando chiamare il 112"
 date: 2026-05-27
+draft: false
 description: "D'estate alcuni malori sono gravi. Impara a riconoscerli e chiama subito il 112."
 badge: "Informazione"
 priorita: "normale"

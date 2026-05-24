@@ -1,6 +1,7 @@
 ---
 title: "Fulmini: cosa fare per stare al sicuro"
 date: 2026-09-04
+draft: false
 description: "Cosa fare prima, durante e dopo un temporale con fulmini. Regole semplici per proteggerti."
 badge: "Prevenzione"
 priorita: "normale"
