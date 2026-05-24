@@ -28,14 +28,16 @@ I file sono rigenerati dallo script `scripts/genera-open-data.py` a partire dai 
 
 > ⚠️ **Dati provvisori.** Queste statistiche sono censite **solo a partire dall'adozione del nuovo sistema gestionale (aprile 2026)**: **non coprono l'intero anno** e non includono i mesi precedenti. Sono **aggregate e anonime** — nessun nome, nessun indirizzo, nessun dato personale. Si aggiornano a ogni nuovo export del gestionale.
 
-| Dataset | Contenuto | Scarica |
-|---|---|---|
-| **Statistiche interventi** | Numero di interventi, automezzi impiegati, ore e chilometri del Gruppo nel periodo | [CSV](/open-data/statistiche-interventi.csv) · [JSON](/open-data/statistiche-interventi.json) |
-| **Interventi per tipologia** | Interventi raggruppati per tipo di evento | [CSV](/open-data/interventi-per-tipologia.csv) · [JSON](/open-data/interventi-per-tipologia.json) |
-| **Automezzi impiegati** | Numero di interventi per ogni automezzo del Gruppo (senza targhe) | [CSV](/open-data/automezzi-impiegati.csv) · [JSON](/open-data/automezzi-impiegati.json) |
-| **Statistiche volontari** | Organico, volontari attivi e rapporti di intervento (aggregato anonimo) | [CSV](/open-data/statistiche-volontari.csv) · [JSON](/open-data/statistiche-volontari.json) |
+{{< statistiche-attivita >}}
 
-Periodo coperto: **dal 4 aprile 2026**. Generati da `scripts/genera-open-data-interventi.py` a partire dall'export del gestionale, che **resta riservato e non viene pubblicato** perché contiene dati personali: il sito ne espone solo i numeri aggregati.
+Periodo coperto: **dal 4 aprile 2026**. I dati sono **generati automaticamente** dall'export del gestionale, che **resta riservato e non viene pubblicato** perché contiene dati personali: il sito ne espone solo i numeri aggregati.
+
+**Scarica i dati grezzi:**
+
+- Statistiche interventi — [CSV](/open-data/statistiche-interventi.csv) · [JSON](/open-data/statistiche-interventi.json)
+- Interventi per tipologia — [CSV](/open-data/interventi-per-tipologia.csv) · [JSON](/open-data/interventi-per-tipologia.json)
+- Automezzi impiegati (senza targhe) — [CSV](/open-data/automezzi-impiegati.csv) · [JSON](/open-data/automezzi-impiegati.json)
+- Statistiche volontari — [CSV](/open-data/statistiche-volontari.csv) · [JSON](/open-data/statistiche-volontari.json)
 
 ### In preparazione
 
