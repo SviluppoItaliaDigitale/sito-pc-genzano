@@ -24,9 +24,22 @@ I seguenti dataset sono pubblicati **ora**, con dati reali e verificati, in form
 
 I file sono rigenerati dallo script `scripts/genera-open-data.py` a partire dai dati strutturati del sito.
 
+### Statistiche operative del Gruppo (dati provvisori)
+
+> ⚠️ **Dati provvisori.** Queste statistiche sono censite **solo a partire dall'adozione del nuovo sistema gestionale (aprile 2026)**: **non coprono l'intero anno** e non includono i mesi precedenti. Sono **aggregate e anonime** — nessun nome, nessun indirizzo, nessun dato personale. Si aggiornano a ogni nuovo export del gestionale.
+
+| Dataset | Contenuto | Scarica |
+|---|---|---|
+| **Statistiche interventi** | Numero di interventi, ore e chilometri del Gruppo nel periodo | [CSV](/open-data/statistiche-interventi.csv) · [JSON](/open-data/statistiche-interventi.json) |
+| **Interventi per tipologia** | Interventi raggruppati per tipo di evento | [CSV](/open-data/interventi-per-tipologia.csv) · [JSON](/open-data/interventi-per-tipologia.json) |
+| **Statistiche volontari** | Organico, volontari attivi e rapporti di intervento (aggregato anonimo) | [CSV](/open-data/statistiche-volontari.csv) · [JSON](/open-data/statistiche-volontari.json) |
+| **Radio — chiamate selettive** | Risposte alle chiamate selettive radio (aggregato anonimo) | [CSV](/open-data/statistiche-radio-selettive.csv) · [JSON](/open-data/statistiche-radio-selettive.json) |
+
+Periodo coperto: **dal 4 aprile 2026**. Generati da `scripts/genera-open-data-interventi.py` a partire dall'export del gestionale, che **resta riservato e non viene pubblicato** perché contiene dati personali: il sito ne espone solo i numeri aggregati.
+
 ### In preparazione
 
-Altri dataset **operativi** (interventi, ore di volontariato, esercitazioni, formazione, dotazioni) sono in pubblicazione progressiva, man mano che il Gruppo completa la trasformazione del registro interno in formato aperto. Lo schema dei campi è documentato qui sotto.
+Le **statistiche aggregate** di interventi e volontari sono già pubblicate sopra (in forma provvisoria). Restano in preparazione i dataset di dettaglio su **esercitazioni, formazione e dotazioni**, man mano che il Gruppo completa la trasformazione del registro interno in formato aperto. Lo schema dei campi è documentato qui sotto.
 
 I dataset su **defibrillatori (DAE)** e **idranti antincendio** saranno pubblicati **solo dopo** la ricezione dei dati ufficiali da ASL Roma 6 (Centrale 118) e dal Comando provinciale dei Vigili del Fuoco: il sito non pubblica posizioni non verificate.
 
@@ -133,8 +146,10 @@ Eventuali microdati sensibili sono **aggregati** a livello mensile o di macro-ar
 | `numeri-utili-emergenza.{csv,json}` | a ogni variazione | **pubblicato** |
 | `codici-colore-allerta.{csv,json}` | a ogni variazione | **pubblicato** |
 | `eventi-storici-castelli-romani.{csv,json}` | a ogni nuovo evento documentato | **pubblicato** |
-| `interventi-AAAA.csv` | mensile | in predisposizione |
-| `ore-volontariato-AAAA.csv` | mensile | in predisposizione |
+| `statistiche-interventi.{csv,json}` | a ogni export del gestionale | **pubblicato (provvisorio)** |
+| `interventi-per-tipologia.{csv,json}` | a ogni export del gestionale | **pubblicato (provvisorio)** |
+| `statistiche-volontari.{csv,json}` | a ogni export del gestionale | **pubblicato (provvisorio)** |
+| `statistiche-radio-selettive.{csv,json}` | a ogni export del gestionale | **pubblicato (provvisorio)** |
 | `esercitazioni-AAAA.csv` | trimestrale | in predisposizione |
 | `formazione-AAAA.csv` | trimestrale | in predisposizione |
 | `dotazioni.csv` | semestrale | in predisposizione |
