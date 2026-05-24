@@ -9,8 +9,8 @@
 
 <section class="meteo-home" aria-labelledby="meteo-home-titolo">
   <div class="container">
-    <h2 id="meteo-home-titolo" class="meteo-home-titolo"><i class="bi bi-cloud-sun-fill" aria-hidden="true"></i> Meteo e previsioni</h2>
-    <p class="meteo-home-intro">Le nostre cartine, aggiornate automaticamente su dati aperti Open-Meteo (modelli ECMWF). Un dato <strong>indicativo</strong>: per le allerte valgono i bollettini del <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Regionale del Lazio</a>.</p>
+    <h2 id="meteo-home-titolo" class="meteo-home-titolo"><i class="bi bi-cloud-sun-fill" aria-hidden="true"></i> Meteo a Genzano di Roma e nel Lazio</h2>
+    <p class="meteo-home-intro">Temperatura e cielo previsti oggi, con il dettaglio completo di Genzano di Roma. Aggiornata automaticamente su dati aperti Open-Meteo (modelli ECMWF). Un dato <strong>indicativo</strong>: per le allerte valgono i bollettini del <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Regionale del Lazio</a>.</p>
 
     <div class="meteo-home-grid">
       <figure class="meteo-home-card">
@@ -19,20 +19,12 @@
         <div class="cartina-azioni">
           <a class="btn btn-sm btn-outline-primary" href="{{ $svg }}" download><i class="bi bi-download" aria-hidden="true"></i> Scarica</a>
           <button type="button" class="btn btn-sm btn-outline-primary" data-condividi-cartina data-img="{{ $svg }}" data-title="Cartina meteo del Lazio — Protezione Civile Genzano di Roma"><i class="bi bi-share" aria-hidden="true"></i> <span class="cartina-azione-label">Condividi</span></button>
-        </div>
-      </figure>
-
-      <figure class="meteo-home-card">
-        <img src="{{ $webp }}{{ $vS }}" loading="lazy" alt="Carta sinottica animata dell'Italia: precipitazioni e neve a colori, temperatura a 850 hPa, isobare, geopotenziale a 500 hPa, vento e minimi/massimi di pressione; Genzano di Roma evidenziata.">
-        <figcaption>Carta sinottica dell'Italia: precipitazioni, pressione e correnti.</figcaption>
-        <div class="cartina-azioni">
-          <a class="btn btn-sm btn-outline-primary" href="{{ $webp }}" download><i class="bi bi-download" aria-hidden="true"></i> Scarica la clip</a>
-          <button type="button" class="btn btn-sm btn-outline-primary" data-condividi-cartina data-img="{{ $webp }}" data-title="Carta sinottica Italia — Protezione Civile Genzano di Roma"><i class="bi bi-share" aria-hidden="true"></i> <span class="cartina-azione-label">Condividi</span></button>
+          <a class="btn btn-sm btn-primary" href="{{ "allerte-meteo/" | relURL }}"><i class="bi bi-cloud-sun" aria-hidden="true"></i> Approfondisci il meteo</a>
         </div>
       </figure>
     </div>
 
-    <p class="meteo-home-link"><a href="{{ "allerte-meteo/" | relURL }}">Vai alle allerte meteo e al radar pioggia in tempo reale <i class="bi bi-arrow-right" aria-hidden="true"></i></a></p>
+    <p class="meteo-home-link"><a href="{{ "allerte-meteo/" | relURL }}">Sulla pagina Allerte meteo trovi anche la carta sinottica dell'Italia, l'animazione e il radar pioggia in tempo reale <i class="bi bi-arrow-right" aria-hidden="true"></i></a></p>
   </div>
 </section>
 <script src="{{ "js/condividi-cartina.js" | relURL }}" defer></script>
