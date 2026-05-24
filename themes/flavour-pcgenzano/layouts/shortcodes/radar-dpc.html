@@ -1,12 +1,12 @@
-{{/* Shortcode radar-dpc v2 — radar pioggia DPC in stile "piattaforma radar":
-     base scura (toggle chiara), legenda colorata debole→molto forte, e una
-     TIMELINE ANIMATA dell'ultima ora (play/pausa + barra + "N min fa").
-     Metodo ufficiale (dpc-radar.readthedocs.io): servizi OGC WMTS open-data CC-BY-SA,
-     gridset EPSG:900913, con parametro TIME per i frame storici. Leaflet self-hosted,
-     niente iframe di terzi (privacy-first).
-       - Endpoint: https://radar-geowebcache.protezionecivile.it/service/wmts
-       - Layer:    radar:sri (pioggia al suolo) · radar:vmi (intensità in quota)
-       - Frame:    ultimi 60 minuti a passo di 5 minuti; auto-refresh ogni 5'
+{{/* Shortcode radar-dpc v3 — radar pioggia DPC, LIVE (ultimo fotogramma reale).
+     Metodo ufficiale (dpc-radar.readthedocs.io): servizi OGC WMTS open-data CC-BY-SA.
+     NOTA TECNICA: il WMTS pubblico ignora il parametro TIME (serve sempre l'ultimo
+     campione in cache) -> niente animazione storica via tile (verificato 24/05/2026:
+     tile con TIME diversi sono identici). Mostriamo quindi l'ULTIMO fotogramma, con
+     l'orario reale del dato letto dall'API ufficiale findLastProductByType.
+     Leaflet self-hosted, base scura/chiara, niente iframe di terzi (privacy-first).
+       - Tile:  https://radar-geowebcache.protezionecivile.it/service/wmts (radar:sri/vmi)
+       - Orario: https://radar-api.protezionecivile.it/findLastProductByType?type=SRI|VMI
 */}}
 {{ $leafletCSS := "vendor/leaflet/leaflet.css" | relURL }}
 {{ $leafletJS  := "vendor/leaflet/leaflet.js"  | relURL }}
@@ -15,7 +15,7 @@
   <h2 id="radar-dpc-titolo" class="h3 mt-4 mb-3" style="color:#003366">
     <i class="bi bi-cloud-rain-heavy-fill me-2" aria-hidden="true"></i>Radar pioggia in tempo reale (Protezione Civile)
   </h2>
-  <p class="mb-2">Pioggia in corso e dell'ultima ora dalla rete radar nazionale del Dipartimento della Protezione Civile. Premi <strong>play</strong> per vedere il movimento delle precipitazioni. È un dato <strong>indicativo</strong>: per le allerte valgono i bollettini ufficiali del <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Regionale del Lazio</a>.</p>
+  <p class="mb-2">Pioggia rilevata in questo momento dalla rete radar nazionale del Dipartimento della Protezione Civile. È un dato <strong>indicativo</strong>: per le allerte valgono i bollettini ufficiali del <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Regionale del Lazio</a>.</p>
 
   <link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">
   <style>
@@ -23,17 +23,12 @@
   .radar-dpc-filter{display:inline-flex;align-items:center;gap:.4rem;border:2px solid #003366;background:#fff;color:#003366;padding:.4rem .85rem;border-radius:999px;font-size:.92rem;cursor:pointer;transition:all .15s}
   .radar-dpc-filter[aria-pressed="true"]{background:#003366;color:#fff}
   .radar-dpc-filter:focus-visible{outline:3px solid #ffbe2e;outline-offset:2px}
-  #radar-dpc-mappa{height:560px;width:100%;border-radius:8px 8px 0 0;border:2px solid #003366;border-bottom:0;background:#0b1622}
+  .radar-dpc-stato{font-size:.9rem;color:#495057;margin-left:auto}
+  @media (max-width:575px){.radar-dpc-stato{margin-left:0;width:100%}}
+  #radar-dpc-mappa{height:560px;width:100%;border-radius:8px;border:2px solid #003366;background:#0b1622}
   @media (max-width:575px){#radar-dpc-mappa{height:460px}}
-  .radar-dpc-overlay{position:absolute;top:10px;left:12px;z-index:600;background:rgba(11,33,56,.82);color:#fff;padding:.3rem .6rem;border-radius:6px;font-size:.85rem;font-weight:700;pointer-events:none}
   .radar-dpc-mappa-box{position:relative}
-  /* player */
-  .radar-dpc-player{display:flex;align-items:center;gap:.7rem;background:#0b2138;padding:.5rem .7rem;border:2px solid #003366;border-top:0;border-radius:0 0 8px 8px}
-  .radar-dpc-play{flex:0 0 auto;width:42px;height:42px;border-radius:50%;border:0;background:#2ecc71;color:#06351c;font-size:1.2rem;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
-  .radar-dpc-play:focus-visible{outline:3px solid #ffbe2e;outline-offset:2px}
-  .radar-dpc-slider{flex:1 1 auto;accent-color:#2ecc71;cursor:pointer}
-  .radar-dpc-time{flex:0 0 auto;color:#fff;font-variant-numeric:tabular-nums;font-size:.92rem;min-width:118px;text-align:right}
-  /* legenda colorata */
+  .radar-dpc-overlay{position:absolute;top:10px;left:12px;z-index:600;background:rgba(11,33,56,.82);color:#fff;padding:.3rem .6rem;border-radius:6px;font-size:.85rem;font-weight:700;pointer-events:none}
   .radar-dpc-legenda{margin-top:.6rem}
   .radar-dpc-legenda-barra{display:flex;height:18px;border-radius:4px;overflow:hidden;border:1px solid #adb5bd}
   .radar-dpc-legenda-barra i{flex:1}
@@ -44,17 +39,13 @@
     <button type="button" class="radar-dpc-filter" data-layer="radar:sri" aria-pressed="true">Pioggia al suolo (SRI)</button>
     <button type="button" class="radar-dpc-filter" data-layer="radar:vmi" aria-pressed="false">Intensità in quota (VMI)</button>
     <button type="button" class="radar-dpc-filter" id="radar-dpc-base" aria-pressed="true"><i class="bi bi-moon-stars" aria-hidden="true"></i> Sfondo scuro</button>
+    <button type="button" class="radar-dpc-filter" id="radar-dpc-refresh"><i class="bi bi-arrow-clockwise" aria-hidden="true"></i> Aggiorna</button>
+    <span class="radar-dpc-stato" id="radar-dpc-stato" aria-live="polite"></span>
   </div>
 
   <div class="radar-dpc-mappa-box">
-    <div id="radar-dpc-mappa" role="application" aria-label="Radar pioggia animato della Protezione Civile, ultima ora, centrato sull'Italia con Genzano di Roma evidenziata."></div>
+    <div id="radar-dpc-mappa" role="application" aria-label="Radar pioggia della Protezione Civile, ultimo rilevamento, centrato sull'Italia con Genzano di Roma evidenziata."></div>
     <div class="radar-dpc-overlay" id="radar-dpc-prodotto-lbl" aria-hidden="true">Pioggia al suolo (SRI)</div>
-  </div>
-
-  <div class="radar-dpc-player">
-    <button type="button" class="radar-dpc-play" id="radar-dpc-play" aria-label="Avvia l'animazione del radar"><i class="bi bi-play-fill" aria-hidden="true"></i></button>
-    <input type="range" class="radar-dpc-slider" id="radar-dpc-slider" min="0" max="11" value="11" step="1" aria-label="Scorri i fotogrammi del radar dell'ultima ora">
-    <span class="radar-dpc-time" id="radar-dpc-time" aria-live="polite"></span>
   </div>
 
   <div class="radar-dpc-legenda" aria-hidden="true">
@@ -71,18 +62,27 @@
     </div>
   </noscript>
 
-  <p class="small text-muted mt-2 mb-0">Radar: <a href="https://mappe.protezionecivile.gov.it/it/mappe-e-dashboard-rischi/piattaforma-radar/" target="_blank" rel="noopener noreferrer">Radar-DPC</a> © Dipartimento della Protezione Civile, servizi WMTS open-data (CC BY-SA) — base <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap</a> / <a href="https://carto.com/attributions" target="_blank" rel="noopener noreferrer">© CARTO</a>, libreria <a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer">Leaflet</a> self-hosted. In emergenza chiama il <a href="tel:112">112</a>.</p>
+  <p class="small text-muted mt-2 mb-0"><i class="bi bi-info-circle" aria-hidden="true"></i> Mosaico radar nazionale <strong>grezzo</strong>: ai bordi della copertura (per esempio sul mare presso la Sardegna) possono comparire echi non meteorologici. Per la versione validata e l'animazione apri il <a href="https://radar.protezionecivile.it/" target="_blank" rel="noopener noreferrer">radar ufficiale DPC</a>. Fonte: <a href="https://mappe.protezionecivile.gov.it/it/mappe-e-dashboard-rischi/piattaforma-radar/" target="_blank" rel="noopener noreferrer">Radar-DPC</a> © Dipartimento della Protezione Civile (WMTS open-data CC BY-SA) — base <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap</a> / <a href="https://carto.com/attributions" target="_blank" rel="noopener noreferrer">© CARTO</a>. In emergenza chiama il <a href="tel:112">112</a>.</p>
 
   <script src="{{ $leafletJS }}" crossorigin=""></script>
   <script>
   (function(){
     if (typeof L === 'undefined') return;
     var WMTS = 'https://radar-geowebcache.protezionecivile.it/service/wmts';
+    var API = 'https://radar-api.protezionecivile.it/findLastProductByType?type=';
     var GENZANO = [41.7085, 12.6916];
     var ITALIA = L.latLngBounds([35.0, 4.44], [47.92, 20.56]);
-    var BLANK = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==';
     var prodotto = 'radar:sri', baseDark = true;
-    var NFRAME = 12, STEP = 300000; // 12 frame, 5 minuti
+    var stato = document.getElementById('radar-dpc-stato');
+    var prodLbl = document.getElementById('radar-dpc-prodotto-lbl');
+
+    function pad(n){ return ('0'+n).slice(-2); }
+    function token(){ return Math.floor(Date.now()/300000); } // finestra 5'
+    function urlFor(layer){
+      return WMTS + '?Service=WMTS&Request=GetTile&Version=1.0.0&Layer=' + layer
+        + '&Style=&Format=image/png&TileMatrixSet=EPSG:900913&TileMatrix=EPSG:900913:{z}&TileRow={y}&TileCol={x}'
+        + '&cache=' + token();
+    }
 
     var map = L.map('radar-dpc-mappa', { center: [42.0, 12.5], zoom: 6, scrollWheelZoom: false });
     map.on('focus', function(){ map.scrollWheelZoom.enable(); });
@@ -94,65 +94,25 @@
       maxZoom: 12, attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>' });
     baseScura.addTo(map);
 
-    function pad(n){ return ('0'+n).slice(-2); }
-    function isoZ(d){ return d.getUTCFullYear()+'-'+pad(d.getUTCMonth()+1)+'-'+pad(d.getUTCDate())+'T'+pad(d.getUTCHours())+':'+pad(d.getUTCMinutes())+':00.000Z'; }
-    function urlFor(layer, ts){
-      return WMTS + '?Service=WMTS&Request=GetTile&Version=1.0.0&Layer=' + layer
-        + '&Style=&Format=image/png&TileMatrixSet=EPSG:900913&TileMatrix=EPSG:900913:{z}&TileRow={y}&TileCol={x}'
-        + '&TIME=' + ts;
-    }
-    function buildTimes(){
-      var latest = new Date(Math.floor(Date.now()/STEP)*STEP - STEP); // -5' di latenza
-      var out = [];
-      for (var k = NFRAME-1; k >= 0; k--){ out.push(new Date(latest.getTime() - k*STEP)); }
-      return out;
-    }
+    var radar = L.tileLayer(urlFor(prodotto), { opacity: 0.78, maxZoom: 11, maxNativeZoom: 9, tileSize: 256, bounds: ITALIA });
+    radar.addTo(map);
 
-    var times = [], layers = [], idx = NFRAME-1, playing = false, timer = null;
-    var playBtn = document.getElementById('radar-dpc-play');
-    var slider  = document.getElementById('radar-dpc-slider');
-    var timeLbl = document.getElementById('radar-dpc-time');
-    var prodLbl = document.getElementById('radar-dpc-prodotto-lbl');
-
-    function clearLayers(){ layers.forEach(function(l){ map.removeLayer(l); }); layers = []; }
-    function buildLayers(){
-      clearLayers();
-      times = buildTimes();
-      times.forEach(function(d){
-        layers.push(L.tileLayer(urlFor(prodotto, isoZ(d)), {
-          opacity: 0, maxZoom: 11, maxNativeZoom: 9, tileSize: 256,
-          bounds: ITALIA, errorTileUrl: BLANK
-        }).addTo(map));
-      });
-      if (idx > times.length-1) idx = times.length-1;
-      slider.max = times.length-1;
-      showFrame(idx);
-    }
-    function showFrame(i){
-      idx = i;
-      layers.forEach(function(l, j){ l.setOpacity(j === i ? 0.8 : 0); });
-      slider.value = i;
-      var d = times[i];
-      var mins = Math.round((Date.now() - d.getTime())/60000);
-      timeLbl.textContent = pad(d.getHours()) + ':' + pad(d.getMinutes()) + (mins > 0 ? (' · ' + mins + ' min fa') : ' · adesso');
-    }
-    function setPlay(on){
-      playing = on;
-      playBtn.innerHTML = on ? '<i class="bi bi-pause-fill" aria-hidden="true"></i>' : '<i class="bi bi-play-fill" aria-hidden="true"></i>';
-      playBtn.setAttribute('aria-label', on ? 'Metti in pausa l\'animazione del radar' : 'Avvia l\'animazione del radar');
-      if (timer){ clearInterval(timer); timer = null; }
-      if (on){ timer = setInterval(function(){ showFrame((idx+1) % times.length); }, 700); }
-    }
-
-    // stella su Genzano di Roma
     L.marker(GENZANO, { keyboard: true, icon: L.divIcon({ className: 'radar-dpc-stella',
       html: '<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M13 1l3.4 7.6L24 9.3l-5.8 5 1.8 7.9L13 18.4 5.9 22.2l1.8-7.9L2 9.3l7.6-.7z" fill="#ffd166" stroke="#0b1622" stroke-width="1.4"/></svg>',
       iconSize: [26,26], iconAnchor: [13,13] }) }).bindPopup('<strong>Genzano di Roma</strong>').addTo(map);
 
-    buildLayers();
-
-    playBtn.addEventListener('click', function(){ setPlay(!playing); });
-    slider.addEventListener('input', function(){ setPlay(false); showFrame(parseInt(slider.value, 10)); });
+    function aggiornaOrario(){
+      var tipo = prodotto.split(':')[1].toUpperCase();
+      fetch(API + tipo, { mode: 'cors' }).then(function(r){ return r.json(); }).then(function(j){
+        var ms = j.lastProducts[0].time;
+        var d = new Date(ms);
+        var mins = Math.round((Date.now() - ms)/60000);
+        stato.textContent = 'Ultimo rilevamento ' + pad(d.getHours()) + ':' + pad(d.getMinutes()) + (mins >= 0 ? (' (' + mins + ' min fa)') : '');
+      }).catch(function(){ stato.textContent = 'Aggiornato pochi minuti fa'; });
+    }
+    function refresh(){ radar.setUrl(urlFor(prodotto)); aggiornaOrario(); }
+    aggiornaOrario();
+    setInterval(refresh, 300000); // ogni 5 minuti il DPC pubblica un nuovo campione
 
     document.querySelectorAll('.radar-dpc-filter[data-layer]').forEach(function(btn){
       btn.addEventListener('click', function(){
@@ -160,9 +120,11 @@
         btn.setAttribute('aria-pressed','true');
         prodotto = btn.dataset.layer;
         prodLbl.textContent = btn.textContent.trim();
-        buildLayers();
+        radar.setUrl(urlFor(prodotto));
+        aggiornaOrario();
       });
     });
+    document.getElementById('radar-dpc-refresh').addEventListener('click', refresh);
     var baseBtn = document.getElementById('radar-dpc-base');
     baseBtn.addEventListener('click', function(){
       baseDark = !baseDark;
@@ -171,10 +133,8 @@
       else { map.removeLayer(baseScura); baseChiara.addTo(map); baseChiara.bringToBack();
         baseBtn.innerHTML = '<i class="bi bi-sun" aria-hidden="true"></i> Sfondo chiaro'; }
       baseBtn.setAttribute('aria-pressed', baseDark ? 'true' : 'false');
+      radar.bringToFront();
     });
-
-    // auto-refresh dei frame ogni 5 minuti (nuovo campione disponibile)
-    setInterval(function(){ var wasPlaying = playing; buildLayers(); if (wasPlaying) setPlay(true); }, STEP);
   })();
   </script>
 </div>
