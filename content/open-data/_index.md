@@ -85,9 +85,6 @@ Eventuali microdati sensibili sono **aggregati** a livello mensile o di macro-ar
 | `interventi-per-tipologia.{csv,json}` | a ogni export del gestionale | **pubblicato (provvisorio)** |
 | `automezzi-impiegati.{csv,json}` | a ogni export del gestionale | **pubblicato (provvisorio)** |
 | `statistiche-volontari.{csv,json}` | a ogni export del gestionale | **pubblicato (provvisorio)** |
-| `esercitazioni-AAAA.csv` | trimestrale | in predisposizione |
-| `formazione-AAAA.csv` | trimestrale | in predisposizione |
-| `dotazioni.csv` | semestrale | in predisposizione |
 
 ## Strumenti di consultazione
 
