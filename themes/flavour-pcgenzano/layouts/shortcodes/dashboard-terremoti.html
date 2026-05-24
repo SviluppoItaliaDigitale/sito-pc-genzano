@@ -38,6 +38,7 @@
   <div class="dash-sisma-grid">
     <div id="dash-sisma-mappa" role="application" aria-label="Mappa dei terremoti in Italia nel periodo selezionato, con Genzano di Roma evidenziata."></div>
     <div class="dash-sisma-liste">
+      <p class="dash-aria-nota" style="margin:0 0 .5rem">Tocca un evento per centrarlo sulla mappa.</p>
       <h3>Ultimi eventi</h3>
       <ol class="dash-sisma-list" id="lista-ultimi"></ol>
       <h3>Più forti</h3>
@@ -62,7 +63,7 @@
     if (typeof L === 'undefined') return;
     var FDSN = 'https://webservices.ingv.it/fdsnws/event/1/query';
     var GENZANO = [41.7085, 12.6916];
-    var win = 7, minmag = 1.5, zona = 'italia', eventi = [], markers = null, map = null;
+    var win = 7, minmag = 1.5, zona = 'italia', eventi = [], markers = null, map = null, markerById = {};
     var BBOX = {
       italia:   '&minlatitude=35&maxlatitude=48&minlongitude=5&maxlongitude=20',
       castelli: '&minlatitude=41.55&maxlatitude=41.95&minlongitude=12.35&maxlongitude=12.95'
@@ -84,24 +85,47 @@
     L.marker(GENZANO, { icon: L.divIcon({className:'dash-stella', html:'<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 26 26" aria-hidden="true"><path d="M13 1l3.4 7.6L24 9.3l-5.8 5 1.8 7.9L13 18.4 5.9 22.2l1.8-7.9L2 9.3l7.6-.7z" fill="#003366" stroke="#fff" stroke-width="1.4"/></svg>', iconSize:[22,22], iconAnchor:[11,11]}) }).bindPopup('<strong>Genzano di Roma</strong>').addTo(map);
     markers = L.layerGroup().addTo(map);
 
+    // click su una riga delle liste -> centra la mappa sull'evento e apre il popup
+    function vaiAEvento(i){
+      var e=eventi[i], cm=markerById[i]; if(!e||!cm) return;
+      map.setView([e.lat,e.lon], Math.max(map.getZoom(),8));
+      cm.openPopup();
+      document.getElementById('dash-sisma-mappa').scrollIntoView({behavior:'smooth',block:'nearest'});
+    }
+    ['lista-ultimi','lista-forti'].forEach(function(id){
+      document.getElementById(id).addEventListener('click',function(ev){
+        var b=ev.target.closest('.dash-evento-btn'); if(!b) return;
+        vaiAEvento(parseInt(b.dataset.ev,10));
+      });
+    });
+
     function render(){
-      markers.clearLayers();
+      markers.clearLayers(); markerById={};
       var el = document.getElementById('lista-ultimi'), ef = document.getElementById('lista-forti');
       el.innerHTML=''; ef.innerHTML='';
-      if(!eventi.length){ stato.textContent='Nessun evento nel periodo selezionato.'; document.getElementById('kpi-num').textContent='0'; document.getElementById('kpi-max').textContent='—'; document.getElementById('kpi-m3').textContent='0'; document.getElementById('kpi-ult').textContent='—'; return; }
+      if(!eventi.length){
+        document.getElementById('kpi-num').textContent='0';
+        document.getElementById('kpi-max').textContent='—';
+        document.getElementById('kpi-m3').textContent='0';
+        document.getElementById('kpi-ult').textContent='nessuno';
+        el.innerHTML='<li class="dash-vuoto"><strong>Nessun terremoto</strong> nel periodo e nell\'area selezionati. Nessuna scossa registrata: una buona notizia.</li>';
+        ef.innerHTML='';
+        return;
+      }
       var maxM=0, m3=0;
-      eventi.forEach(function(e){
+      eventi.forEach(function(e,i){
+        e._i=i;
         if(e.mag>maxM)maxM=e.mag; if(e.mag>=3)m3++;
-        L.circleMarker([e.lat,e.lon],{radius:raggio(e.mag),color:'#333',weight:0.6,fillColor:colore(e.mag),fillOpacity:0.8})
-          .bindPopup('<strong>M '+e.mag.toFixed(1)+'</strong><br>'+e.place+'<br>'+oraIt(e.time)+' · prof. '+e.depth+' km<br>'+dist(e.lat,e.lon)+' km da Genzano di Roma')
-          .addTo(markers);
+        var cm=L.circleMarker([e.lat,e.lon],{radius:raggio(e.mag),color:'#333',weight:0.6,fillColor:colore(e.mag),fillOpacity:0.8})
+          .bindPopup('<strong>M '+e.mag.toFixed(1)+'</strong><br>'+e.place+'<br>'+oraIt(e.time)+' · prof. '+e.depth+' km<br>'+dist(e.lat,e.lon)+' km da Genzano di Roma');
+        cm.addTo(markers); markerById[i]=cm;
       });
       document.getElementById('kpi-num').textContent=eventi.length;
       document.getElementById('kpi-max').textContent='M '+maxM.toFixed(1);
       document.getElementById('kpi-m3').textContent=m3;
       var ult=eventi.slice().sort(function(a,b){return new Date(b.time)-new Date(a.time);});
       document.getElementById('kpi-ult').textContent=minFa(ult[0].time);
-      function riga(e){ return '<li><span class="dash-mag" style="border-left-color:'+colore(e.mag)+'">M '+e.mag.toFixed(1)+'</span> <span class="dash-luogo">'+e.place+'</span> <span class="dash-meta">'+oraIt(e.time)+' · '+dist(e.lat,e.lon)+' km da Genzano di Roma</span></li>'; }
+      function riga(e){ return '<li><button type="button" class="dash-evento-btn" data-ev="'+e._i+'" title="Mostra sulla mappa"><span class="dash-mag" style="border-left-color:'+colore(e.mag)+'">M '+e.mag.toFixed(1)+'</span> <span class="dash-luogo">'+e.place+'</span> <span class="dash-meta">'+oraIt(e.time)+' · '+dist(e.lat,e.lon)+' km da Genzano di Roma</span></button></li>'; }
       el.innerHTML=ult.slice(0,8).map(riga).join('');
       ef.innerHTML=eventi.slice().sort(function(a,b){return b.mag-a.mag;}).slice(0,8).map(riga).join('');
     }
@@ -110,10 +134,14 @@
       stato.textContent='Aggiornamento…';
       var from=new Date(Date.now()-win*86400000).toISOString().slice(0,19);
       var url=FDSN+'?starttime='+from+'&minmagnitude='+minmag+BBOX[zona]+'&format=geojson&orderby=time&limit=1500';
-      fetch(url).then(function(r){return r.json();}).then(function(j){
+      fetch(url).then(function(r){
+        if(r.status===204) return {features:[]};            // FDSN: 204 = nessun terremoto nel periodo (non è un errore)
+        if(!r.ok) throw new Error('HTTP '+r.status);
+        return r.text().then(function(t){ return t ? JSON.parse(t) : {features:[]}; });
+      }).then(function(j){
         eventi=(j.features||[]).map(function(f){var p=f.properties,g=f.geometry.coordinates;return {time:p.time,mag:p.mag,place:p.place||'',depth:Math.round(g[2]),lat:g[1],lon:g[0]};}).filter(function(e){return typeof e.mag==='number';});
         render();
-        stato.textContent='Aggiornato alle '+pad(new Date().getHours())+':'+pad(new Date().getMinutes());
+        stato.textContent=(eventi.length?'Aggiornato':'Nessuna scossa · aggiornato')+' alle '+pad(new Date().getHours())+':'+pad(new Date().getMinutes());
       }).catch(function(){ stato.textContent='Dati momentaneamente non disponibili — vedi terremoti.ingv.it'; });
     }
 
