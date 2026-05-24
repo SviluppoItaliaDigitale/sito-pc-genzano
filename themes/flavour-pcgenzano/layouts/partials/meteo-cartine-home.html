@@ -14,8 +14,8 @@
         <img src="{{ $svg }}{{ $vG }}" loading="lazy" alt="Cartina del Lazio con temperatura e cielo previsti per provincia e il riquadro completo di Genzano di Roma (temperatura attuale, percepita, massima e minima, umidità, vento, pressione, nuvolosità, UV, alba, tramonto e prossimi giorni).">
         <figcaption>Lazio e dettaglio completo di Genzano di Roma.</figcaption>
         <div class="cartina-azioni">
-          <a class="btn btn-sm btn-outline-primary" href="{{ $svg }}" download><i class="bi bi-download" aria-hidden="true"></i> Scarica</a>
-          <button type="button" class="btn btn-sm btn-outline-primary" data-condividi-cartina data-img="{{ $svg }}" data-title="Cartina meteo del Lazio — Protezione Civile Genzano di Roma"><i class="bi bi-share" aria-hidden="true"></i> <span class="cartina-azione-label">Condividi</span></button>
+          <a class="btn btn-sm btn-outline-primary" href="{{ $svg }}{{ $vG }}" download><i class="bi bi-download" aria-hidden="true"></i> Scarica</a>
+          <button type="button" class="btn btn-sm btn-outline-primary" data-condividi-cartina data-img="{{ $svg }}{{ $vG }}" data-title="Cartina meteo del Lazio — Protezione Civile Genzano di Roma"><i class="bi bi-share" aria-hidden="true"></i> <span class="cartina-azione-label">Condividi</span></button>
           <a class="btn btn-sm btn-primary" href="{{ "allerte-meteo/" | relURL }}"><i class="bi bi-cloud-sun" aria-hidden="true"></i> Approfondisci il meteo</a>
         </div>
       </figure>
