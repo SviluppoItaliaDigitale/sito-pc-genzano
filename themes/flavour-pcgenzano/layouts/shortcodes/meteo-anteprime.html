@@ -19,6 +19,10 @@
       <img src="{{ $svgA }}{{ $vA }}" loading="lazy"
            alt="Animazione della previsione del Lazio per le prossime 72 ore: la temperatura e il cielo previsti nelle cinque province e a Genzano di Roma cambiano fotogramma dopo fotogramma, a passo di sei ore.">
       <figcaption>Evoluzione della temperatura e del cielo previsti nel Lazio, frame ogni 6 ore. <strong>Elaborazione grafica del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma</strong>, su dati Open-Meteo (modelli ECMWF).</figcaption>
+      <div class="cartina-azioni">
+        <a class="btn btn-sm btn-outline-primary" href="{{ $svgA }}" download><i class="bi bi-download" aria-hidden="true"></i> Scarica</a>
+        <button type="button" class="btn btn-sm btn-outline-primary" data-condividi-cartina data-img="{{ $svgA }}" data-title="Animazione meteo del Lazio — Protezione Civile Genzano di Roma"><i class="bi bi-share" aria-hidden="true"></i> <span class="cartina-azione-label">Condividi</span></button>
+      </div>
     </figure>
     <p><strong>Pro:</strong> leggera (immagine vettoriale, nitida a ogni ingrandimento), accessibile, centrata sul nostro territorio (province + Genzano), nessuna dipendenza grafica pesante.</p>
     <p><strong>Contro:</strong> mostra solo temperatura e cielo, non i campi tecnici (isobare, correnti in quota).</p>
@@ -30,6 +34,10 @@
       <img src="{{ $webpB }}{{ $vB }}" loading="lazy"
            alt="Carta sinottica animata dell'Italia e del Mediterraneo centrale per le prossime 72 ore: temperatura a 850 hPa a colori, pressione al livello del mare con isobare nere, geopotenziale a 500 hPa con linee viola, vento a 500 hPa con barbe; Genzano di Roma è indicata da una stella.">
       <figcaption>Carta sinottica in stile professionale: campo termico, isobare, saccature in quota e corrente a getto. <strong>Elaborazione grafica del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma</strong>, su dati Open-Meteo (modelli ECMWF).</figcaption>
+      <div class="cartina-azioni">
+        <a class="btn btn-sm btn-outline-primary" href="{{ $webpB }}" download><i class="bi bi-download" aria-hidden="true"></i> Scarica la clip</a>
+        <button type="button" class="btn btn-sm btn-outline-primary" data-condividi-cartina data-img="{{ $webpB }}" data-title="Carta sinottica Italia — Protezione Civile Genzano di Roma"><i class="bi bi-share" aria-hidden="true"></i> <span class="cartina-azione-label">Condividi</span></button>
+      </div>
     </figure>
     <p><strong>Pro:</strong> vista d'insieme stile carte meteo professionali (isobare, 500 hPa, getto), copre Italia e Mediterraneo, clip animata condivisibile.</p>
     <p><strong>Contro:</strong> più pesante, lettura più tecnica per il cittadino comune, richiede librerie aggiuntive nel processo automatico.</p>
@@ -37,3 +45,4 @@
 </div>
 
 <p class="meteo-confronto-nota"><i class="bi bi-info-circle" aria-hidden="true"></i> Entrambe le cartine sono <strong>una nostra elaborazione</strong> su dati aperti <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a> (modelli ECMWF) e si aggiornano automaticamente. Sono un dato <strong>indicativo</strong>: per le allerte valgono i bollettini ufficiali del <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Regionale del Lazio</a>. In emergenza chiama il <a href="tel:112">112</a>.</p>
+<script src="{{ "js/condividi-cartina.js" | relURL }}" defer></script>
