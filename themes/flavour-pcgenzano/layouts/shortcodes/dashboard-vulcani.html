@@ -27,7 +27,11 @@
     function carica(){
       var from=new Date(Date.now()-30*86400000).toISOString().slice(0,19);
       var url=FDSN+'?starttime='+from+'&minmagnitude=-1'+BBOX+'&format=geojson&orderby=time&limit=1000';
-      fetch(url).then(function(r){return r.json();}).then(function(j){
+      fetch(url).then(function(r){
+        if(r.status===204) return {features:[]};            // FDSN: 204 = nessun evento (caldera tranquilla, non è un errore)
+        if(!r.ok) throw new Error('HTTP '+r.status);
+        return r.text().then(function(t){ return t ? JSON.parse(t) : {features:[]}; });
+      }).then(function(j){
         var f=(j.features||[]).map(function(x){var p=x.properties,g=x.geometry.coordinates;return{time:p.time,mag:p.mag,depth:g[2]};}).filter(function(e){return typeof e.mag==='number';});
         var num=f.length, maxM=0, prof=[];
         f.forEach(function(e){ if(e.mag>maxM)maxM=e.mag; if(e.depth!=null)prof.push(e.depth); });
@@ -43,7 +47,10 @@
           document.getElementById('vulc-ult').textContent='nessuno';
           document.getElementById('vulc-prof').textContent='—';
         }
-        document.getElementById('vulc-stato').textContent='Aggiornato alle '+pad(new Date().getHours())+':'+pad(new Date().getMinutes())+'.';
+        var oraAgg='alle '+pad(new Date().getHours())+':'+pad(new Date().getMinutes())+'.';
+        document.getElementById('vulc-stato').textContent = num
+          ? ('Aggiornato '+oraAgg)
+          : ('Nessun terremoto negli ultimi 30 giorni nel distretto: la caldera è tranquilla. Aggiornato '+oraAgg);
       }).catch(function(){ document.getElementById('vulc-stato').textContent='Dati momentaneamente non disponibili — vedi terremoti.ingv.it'; });
     }
     carica(); setInterval(carica, 600000);
