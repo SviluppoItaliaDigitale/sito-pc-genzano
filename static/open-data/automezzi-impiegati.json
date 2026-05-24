@@ -1,0 +1,33 @@
+{
+  "dataset": "automezzi-impiegati",
+  "fonte": "Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma",
+  "licenza": "CC BY 4.0",
+  "periodo": {
+    "dal": "2026-04-04",
+    "al": "2026-05-23"
+  },
+  "nota": "Dati PROVVISORI: censiti solo dall'adozione del nuovo gestionale, non coprono l'intero anno (mancano i mesi precedenti). Aggregati e anonimi, senza dati personali.",
+  "generato_il": "2026-05-24",
+  "dati": [
+    {
+      "automezzo": "M05 Doblò (Autovettura)",
+      "interventi": 9
+    },
+    {
+      "automezzo": "M04 Evo (Pickup)",
+      "interventi": 8
+    },
+    {
+      "automezzo": "M02 Defender 130 (Pickup)",
+      "interventi": 2
+    },
+    {
+      "automezzo": "AB01 Atego (Mezzo speciale)",
+      "interventi": 1
+    },
+    {
+      "automezzo": "M03 WM-90 (Fuoristrada)",
+      "interventi": 1
+    }
+  ]
+}
