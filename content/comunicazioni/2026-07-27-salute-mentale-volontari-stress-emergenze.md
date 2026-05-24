@@ -225,7 +225,7 @@ Un Gruppo di PC funziona bene quando ha:
 
 Il **gruppo umano** è prima risorsa psicologica.
 
-## Nel Gruppo di Genzano
+## Nel Gruppo di Genzano di Roma
 
 Per volontari del nostro Gruppo:
 - Possibilità di **parlare** con il responsabile.

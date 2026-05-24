@@ -1,5 +1,5 @@
 ---
-title: "25 dicembre: buon Natale a Genzano"
+title: "25 dicembre: buon Natale a Genzano di Roma"
 date: 2026-12-25
 description: "Il nostro augurio di buon Natale a tutta la cittadinanza di Genzano di Roma."
 badge: "Comunicazione"
@@ -17,7 +17,7 @@ draft: false
 
 ## Buon Natale
 
-A **ogni casa** di Genzano, da Via del Corso al Buonriposo, dalle Fontane alle Due Santini, da Villa Sforza alla Cecchina e Landi, e fuori di qui a tutti i **genzanesi** sparsi nel mondo:
+A **ogni casa** di Genzano di Roma, da Via del Corso al Buonriposo, dalle Fontane alle Due Santini, da Villa Sforza alla Cecchina e Landi, e fuori di qui a tutti i **genzanesi** sparsi nel mondo:
 
 **Buon Natale**.
 

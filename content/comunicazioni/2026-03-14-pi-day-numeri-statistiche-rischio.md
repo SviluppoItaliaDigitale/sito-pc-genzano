@@ -47,7 +47,7 @@ Ogni **Piano di Protezione Civile comunale** si basa su **mappe**: aree di attes
 
 I sistemi **GIS** (Geographic Information System) permettono di **sovrapporre** dati multipli (popolazione, edifici, reti, rischi) e calcolare ciò che serve.
 
-## Un po' di numeri per Genzano
+## Un po' di numeri per Genzano di Roma
 
 Senza pretesa di essere esaustivi, alcuni dati utili sul nostro territorio:
 

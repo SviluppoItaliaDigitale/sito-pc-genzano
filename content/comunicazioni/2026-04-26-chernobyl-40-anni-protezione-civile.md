@@ -66,7 +66,7 @@ Quello che **non bisogna fare** è altrettanto importante: non andare a comprare
 
 ## Genzano e il rischio nucleare
 
-Il territorio dei Castelli Romani non ha centrali nucleari nelle vicinanze e non è classificato come area a rischio radiologico specifico nel **Piano di Emergenza Comunale**. Le emergenze a maggiore probabilità per Genzano restano quelle **idrogeologica**, **sismica** e **incendi boschivi**, descritte nelle pagine [Rischi e Prevenzione](/rischi-prevenzione/).
+Il territorio dei Castelli Romani non ha centrali nucleari nelle vicinanze e non è classificato come area a rischio radiologico specifico nel **Piano di Emergenza Comunale**. Le emergenze a maggiore probabilità per Genzano di Roma restano quelle **idrogeologica**, **sismica** e **incendi boschivi**, descritte nelle pagine [Rischi e Prevenzione](/rischi-prevenzione/).
 
 Tuttavia il sistema di protezione civile funziona come una rete: anche un evento lontano migliaia di chilometri può richiedere **ai Comuni italiani** un ruolo, soprattutto nella **comunicazione al cittadino** e nel **filtraggio delle informazioni**. È il motivo per cui la formazione dei volontari include sempre, fra le competenze di base, la gestione di emergenze non convenzionali.
 

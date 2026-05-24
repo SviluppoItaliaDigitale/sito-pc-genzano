@@ -94,7 +94,7 @@ Il NUE 112 in Italia gestisce chiamate in **italiano**, **inglese**, **francese*
 
 ## Formazione nelle scuole
 
-Il Gruppo Comunale di PC e la Polizia Locale tengono, nelle scuole di Genzano, **simulazioni di chiamata al 112** con bambini e ragazzi. Un esercizio che resta memorabile e utile per tutta la vita.
+Il Gruppo Comunale di PC e la Polizia Locale tengono, nelle scuole di Genzano di Roma, **simulazioni di chiamata al 112** con bambini e ragazzi. Un esercizio che resta memorabile e utile per tutta la vita.
 
 ## Per approfondire
 

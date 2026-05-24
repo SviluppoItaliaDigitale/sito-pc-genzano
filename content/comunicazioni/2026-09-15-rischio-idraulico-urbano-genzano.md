@@ -1,7 +1,7 @@
 ---
-title: "Rischio idraulico urbano a Genzano: conoscere i punti critici"
+title: "Rischio idraulico urbano a Genzano di Roma: conoscere i punti critici"
 date: 2026-09-15T00:01:00+02:00
-description: "Anche a Genzano, come in molti centri dei Castelli Romani, esistono punti critici di rischio idraulico urbano. Cosa significa, quali sono, come si interviene."
+description: "Anche a Genzano di Roma, come in molti centri dei Castelli Romani, esistono punti critici di rischio idraulico urbano. Cosa significa, quali sono, come si interviene."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -32,7 +32,7 @@ Le cause tipiche:
 
 La **Regione Lazio** e le **Autorità di Bacino** pubblicano il **PAI** (Piano di Assetto Idrogeologico) che mappa aree soggette a **pericolosità idraulica** e **pericolosità da frana**. Il Piano è consultabile online e vincola strumenti urbanistici comunali.
 
-Il Comune di Genzano, nell'elaborare il **Piano di Emergenza Comunale**, recepisce le indicazioni del PAI e individua scenari operativi.
+Il Comune di Genzano di Roma, nell'elaborare il **Piano di Emergenza Comunale**, recepisce le indicazioni del PAI e individua scenari operativi.
 
 ## Punti tipici di rischio urbano
 

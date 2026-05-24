@@ -61,7 +61,7 @@ Il Capo IV descrive le **emergenze di Tipo C**, non tutte le emergenze. È impor
 
 | Tipo | Esempio | Chi comanda |
 |---|---|---|
-| **A — locale** | Frana isolata in un quartiere di Genzano, incendio di autoveicolo, allagamento puntuale | Sindaco + strutture ordinarie |
+| **A — locale** | Frana isolata in un quartiere di Genzano di Roma, incendio di autoveicolo, allagamento puntuale | Sindaco + strutture ordinarie |
 | **B — sovracomunale** | Forte temporale che coinvolge più Castelli, interruzione viaria regionale | Regione con i Comuni coinvolti |
 | **C — nazionale** | Terremoto che interessa più Regioni, alluvione di grande estensione, pandemia | Stato — stato di emergenza di rilievo nazionale |
 

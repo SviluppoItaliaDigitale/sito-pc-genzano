@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Dietro ogni attivazione efficace c'è un lavoro **invisibile ma indispensabile**: la **manutenzione periodica** di mezzi, attrezzature, DPI, apparati radio, dotazioni del campo base. Settembre è, per il Gruppo Comunale di PC di Genzano, il mese della **revisione post-estate** e della **preparazione** alla stagione idrogeologica.
+Dietro ogni attivazione efficace c'è un lavoro **invisibile ma indispensabile**: la **manutenzione periodica** di mezzi, attrezzature, DPI, apparati radio, dotazioni del campo base. Settembre è, per il Gruppo Comunale di PC di Genzano di Roma, il mese della **revisione post-estate** e della **preparazione** alla stagione idrogeologica.
 
 ## Cosa viene controllato
 

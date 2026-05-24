@@ -42,7 +42,7 @@ Il sistema ha **tenuto** bene, con margini per migliorare.
 
 ## Il bilancio del Gruppo
 
-Il nostro Gruppo di Genzano a fine luglio 2026:
+Il nostro Gruppo di Genzano di Roma a fine luglio 2026:
 - **Turni** di avvistamento regolarmente coperti.
 - **Partecipazione** a eventi locali e sovracomunali.
 - **Formazione** continua dei volontari.

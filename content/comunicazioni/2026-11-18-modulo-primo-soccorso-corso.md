@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Nel weekend parte il **modulo di primo soccorso** del corso base per nuovi volontari del Gruppo Comunale di Protezione Civile di Genzano. Un modulo **essenziale** per la formazione del volontario e tenuto da **istruttori esterni certificati**.
+Nel weekend parte il **modulo di primo soccorso** del corso base per nuovi volontari del Gruppo Comunale di Protezione Civile di Genzano di Roma. Un modulo **essenziale** per la formazione del volontario e tenuto da **istruttori esterni certificati**.
 
 ## Il programma del modulo
 

@@ -16,7 +16,7 @@ Il podcast è generato con [NotebookLM](https://notebooklm.google.com) partendo 
 - Cos'è l'allerta meteo: previsione, non evento (è prima che succeda qualcosa).
 - I quattro codici colore: verde, giallo, arancione, rosso.
 - Differenza fondamentale fra allerta (previsione) ed emergenza (evento in corso).
-- Le zone di allerta del Lazio: come funzionano, dove cercare la zona di Genzano.
+- Le zone di allerta del Lazio: come funzionano, dove cercare la zona di Genzano di Roma.
 - Chi pubblica il bollettino: Centro Funzionale Regionale, non il meteo TV.
 - Cosa fare in giallo, arancione, rosso: azioni concrete crescenti.
 

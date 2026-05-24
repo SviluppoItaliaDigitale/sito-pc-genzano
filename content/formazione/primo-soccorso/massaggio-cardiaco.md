@@ -86,7 +86,7 @@ Se siete in più persone, **datevi il cambio ogni 2 minuti** per mantenere la qu
 
 Il massaggio cardiaco da solo **non fa ripartire il cuore**. Lo mantiene in circolo finché non arriva il **defibrillatore** (DAE), che è l'unico dispositivo capace di riavviare il ritmo cardiaco nella maggior parte dei casi.
 
-Manda sempre qualcuno a cercare un DAE mentre tu continui il massaggio. Per sapere dove trovarlo a Genzano, leggi la pagina [defibrillatore DAE](../defibrillatore-dae/).
+Manda sempre qualcuno a cercare un DAE mentre tu continui il massaggio. Per sapere dove trovarlo a Genzano di Roma, leggi la pagina [defibrillatore DAE](../defibrillatore-dae/).
 
 ## Fonte
 

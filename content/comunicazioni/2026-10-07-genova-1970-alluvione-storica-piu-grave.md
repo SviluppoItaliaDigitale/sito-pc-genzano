@@ -61,7 +61,7 @@ Tre lezioni dalla doppia esperienza genovese del 1970 e 2011:
 
 3. **Il cittadino deve conoscere il proprio territorio.** Sapere se la propria casa è in zona di esondazione storica, dove sono i rii tombati del proprio quartiere, dove vanno le acque in caso di pioggia eccezionale: queste informazioni sono nel **PAI (Piano di Assetto Idrogeologico)** della propria autorità di bacino, accessibili pubblicamente.
 
-## A Genzano
+## A Genzano di Roma
 
 Genzano non ha la specificità geografica di Genova (versanti scoscesi al mare, rii tombati sotto la città a forte pendenza). Ma il principio della **conoscenza del rischio** vale anche da noi:
 - I **fossi e i tombini** del centro storico vanno tenuti puliti e funzionanti

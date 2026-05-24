@@ -782,7 +782,7 @@ Il percorso può aprire un **PCTO di 30-50 ore** con il Gruppo Comunale su attiv
 - Conosce la **storia del volontariato di PC** in Italia: dal Friuli 1976 (nascita del modello Zamberletti) al D.Lgs. 1/2018.
 - Distingue i **compiti consentiti e vietati** al volontariato di PC nelle manifestazioni pubbliche secondo la **Circolare DPC del 6 agosto 2018** (no regolazione del traffico, no servizi di polizia stradale, no palette dirigitraffico).
 - Conosce il **Codice del Terzo Settore** e la distinzione tra OdV (Organizzazioni di Volontariato), APS (Associazioni di Promozione Sociale), ETS in genere.
-- Sa come **diventare volontario** del Gruppo Comunale di Genzano: requisiti, formazione iniziale, attivazione.
+- Sa come **diventare volontario** del Gruppo Comunale di Genzano di Roma: requisiti, formazione iniziale, attivazione.
 - Riconosce la **sussidiarietà orizzontale** (art. 118 Cost.) come fondamento del volontariato di PC: lo Stato non sostituisce, le associazioni di cittadini agiscono "in autonoma iniziativa" sull'interesse generale.
 
 #### Competenze chiave europee mobilitate

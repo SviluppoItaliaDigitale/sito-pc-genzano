@@ -208,7 +208,7 @@ Accedete al sito dell'INGV ([terremoti.ingv.it](https://terremoti.ingv.it/)) e s
 | Localizzazione (coordinate e nome) | |
 | Profondità ipocentrale | |
 | Magnitudo (Mw o Ml) | |
-| Distanza da Genzano | |
+| Distanza da Genzano di Roma | |
 | Zona sismica dell'epicentro | |
 | Sarebbe stato avvertito a Genzano? (stima) | |
 

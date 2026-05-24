@@ -61,7 +61,7 @@ Quando chiami il 112, la centrale smista la chiamata. Intervengono:
 
 ## Il nostro Gruppo
 
-I volontari del Gruppo di Genzano partecipano alla campagna AIB. Fanno turni di avvistamento. Lavorano insieme ai Vigili del Fuoco e alla Regione Lazio.
+I volontari del Gruppo di Genzano di Roma partecipano alla campagna AIB. Fanno turni di avvistamento. Lavorano insieme ai Vigili del Fuoco e alla Regione Lazio.
 
 ## Ricorda
 

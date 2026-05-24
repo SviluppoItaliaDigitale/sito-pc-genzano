@@ -83,7 +83,7 @@ Le grandi emergenze italiane (terremoti, alluvioni) hanno mostrato che **dove ci
 
 Una **esercitazione senza valutazione** è un'occasione sprecata.
 
-## Esercitazioni a Genzano
+## Esercitazioni a Genzano di Roma
 
 Il Gruppo comunale di Protezione Civile di Genzano partecipa periodicamente a:
 - **Esercitazioni comunali** organizzate dal Comune.

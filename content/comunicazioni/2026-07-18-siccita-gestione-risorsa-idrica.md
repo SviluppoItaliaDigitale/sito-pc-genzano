@@ -97,7 +97,7 @@ Ogni cittadino può fare la differenza. Gesti concreti:
 
 ## Il sistema idrico nei Castelli
 
-L'approvvigionamento idrico di Genzano e dei Castelli è gestito da:
+L'approvvigionamento idrico di Genzano di Roma e dei Castelli è gestito da:
 - **ACEA ATO 2** come gestore per la provincia di Roma.
 - **Comune** come autorità locale di controllo.
 - **Regione Lazio** per la pianificazione regionale.

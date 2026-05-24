@@ -55,7 +55,7 @@ Ogni Comune deve avere un **Piano di Protezione Civile** che contenga:
 
 Il Piano è **pubblico** e **aggiornato periodicamente**.
 
-## Il Piano di Genzano
+## Il Piano di Genzano di Roma
 
 Il Comune di Genzano di Roma ha un **Piano Comunale di Protezione Civile** che copre:
 - **Rischio sismico**.

@@ -33,7 +33,7 @@ Basta una nevicata di 5-10 cm perché il territorio **si fermi**. Non è un dife
 
 ## Il sistema di allerta
 
-Quando è prevista neve in pianura, il **Centro Funzionale Regionale del Lazio** emette un **bollettino di allerta meteo**. Il Comune di Genzano riceve le comunicazioni e si attiva:
+Quando è prevista neve in pianura, il **Centro Funzionale Regionale del Lazio** emette un **bollettino di allerta meteo**. Il Comune di Genzano di Roma riceve le comunicazioni e si attiva:
 
 - **Vigili urbani e cantonieri** in reperibilità.
 - **Mezzi spargisale** preparati per l'uscita.

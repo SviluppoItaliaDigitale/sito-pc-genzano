@@ -50,7 +50,7 @@ Il principio è semplice: **la zanzara tigre depone le uova in piccolissimi rist
 
 La zanzara tigre si sposta poco (100-200 metri dal sito di nascita). Questo significa che i **focolai locali** sono alimentati da ristagni **nel vicinato**. Un giardino curato accanto a un giardino trascurato non è protetto.
 
-La prevenzione è quindi **un lavoro di quartiere**, non solo individuale. In molti condomini di Genzano si fanno giornate collettive di pulizia in primavera: sono molto efficaci.
+La prevenzione è quindi **un lavoro di quartiere**, non solo individuale. In molti condomini di Genzano di Roma si fanno giornate collettive di pulizia in primavera: sono molto efficaci.
 
 ## Protezione personale
 

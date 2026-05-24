@@ -1,6 +1,6 @@
 ---
 title: "Social Media Policy"
-description: "Come il Gruppo PC di Genzano comunica sui social: canali ufficiali, orari di presìdio, netiquette, moderazione e licenza dei contenuti."
+description: "Come il Gruppo PC di Genzano di Roma comunica sui social: canali ufficiali, orari di presìdio, netiquette, moderazione e licenza dei contenuti."
 layout: "single"
 dataUltimaRevisione: "2026-05-06"
 toc: true
@@ -132,7 +132,7 @@ Non usiamo hashtag emozionali, virali o ironici durante eventi seri.
 
 Sui social circolano regolarmente notizie false su rischi, allerte ed emergenze. Le combattiamo con tre strumenti:
 
-- **Monitoraggio attivo** dei canali del territorio (gruppi locali, account istituzionali e cittadini di Genzano e Castelli Romani) durante le finestre di allerta.
+- **Monitoraggio attivo** dei canali del territorio (gruppi locali, account istituzionali e cittadini di Genzano di Roma e Castelli Romani) durante le finestre di allerta.
 - **Risposta breve, citazione della fonte ufficiale**: quando vediamo circolare una notizia non verificata, rispondiamo con un commento o un post che cita la **fonte ufficiale corretta**, senza polemica e senza nominare l'autore della disinformazione.
 - **Mai amplificare per smentire**: non condividiamo (nemmeno per ironia o critica) post chiaramente falsi, perché ogni condivisione aumenta la loro visibilità. Citiamo il contenuto a parole, mai con screenshot leggibili.
 

@@ -67,7 +67,7 @@ Violazioni: **sanzioni amministrative** significative e **responsabilità penali
 
 - **Bollettini di pericolosità** del DPC — valutano il rischio in base a indice meteo-climatico (Fire Weather Index).
 - **Allerte regionali** del Centro Funzionale Lazio, pubblicate ogni giorno.
-- **Sito del Comune di Genzano** per ordinanze locali.
+- **Sito del Comune di Genzano di Roma** per ordinanze locali.
 
 I **tre livelli di pericolosità** (bassa, media, alta) cambiano i divieti e le attenzioni operative del sistema.
 

@@ -81,7 +81,7 @@ Oggi, chi va a visitare Firenze e l'Archivio di Stato, la Biblioteca Nazionale, 
 
 I **Castelli Romani** sono un territorio straordinariamente ricco di beni culturali:
 
-- **Palazzi cardinalizi** e ville (Villa Aldobrandini a Frascati, Villa Sforza Cesarini, Palazzo Sforza Cesarini a Genzano).
+- **Palazzi cardinalizi** e ville (Villa Aldobrandini a Frascati, Villa Sforza Cesarini, Palazzo Sforza Cesarini a Genzano di Roma).
 - **Chiese** e piccoli oratori di grande valore artistico.
 - **Aree archeologiche** (Santuario di Diana al Lago di Nemi, villa di Domiziano, ville romane).
 - **Musei locali** con collezioni legate al territorio.

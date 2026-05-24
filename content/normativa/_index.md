@@ -84,6 +84,6 @@ Consulta sempre fonti ufficiali e aggiornate:
 ## Vedi anche
 
 - [Glossario](/glossario/) — sigle e termini tecnici spiegati in parole semplici
-- [Piano di emergenza comunale](/piano-emergenza/) — cosa prevede il Piano per Genzano
+- [Piano di emergenza comunale](/piano-emergenza/) — cosa prevede il Piano per Genzano di Roma
 - [Allerte meteo](/allerte-meteo/) — come leggere i bollettini regionali
 - [Siti utili](/siti-utili/) — fonti istituzionali e portali tecnici

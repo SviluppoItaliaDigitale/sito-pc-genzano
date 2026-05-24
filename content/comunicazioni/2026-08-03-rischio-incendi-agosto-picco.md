@@ -55,7 +55,7 @@ Nel Lazio il numero unico è il **112**. La Centrale Unica del NUE smista la chi
 - **Corpo Forestale dei Carabinieri** per le indagini su cause e responsabilità;
 - **Direzione regionale antincendio** per il coordinamento e l'eventuale richiesta di mezzi aerei (Canadair, elicotteri).
 
-## Il Gruppo di Genzano
+## Il Gruppo di Genzano di Roma
 
 Durante la campagna AIB il Gruppo Comunale Volontari di Protezione Civile di Genzano partecipa con i propri volontari qualificati ai turni di avvistamento, a supporto della Regione Lazio e in coordinamento con i Vigili del Fuoco.
 

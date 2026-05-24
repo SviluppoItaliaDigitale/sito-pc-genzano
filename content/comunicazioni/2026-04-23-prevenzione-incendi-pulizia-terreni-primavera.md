@@ -81,7 +81,7 @@ Nel Lazio, dal 2017, **l'unico numero di emergenza per il cittadino è il 112**,
 
 ## Il ruolo del volontariato
 
-Il Gruppo Comunale Volontari di Genzano partecipa, con altri gruppi dei Castelli Romani, alle attività di **sorveglianza antincendio** nel periodo estivo. È un'attività che si impara con la formazione, si svolge in squadra e ha un'utilità pubblica grande: molti incendi restano piccoli proprio perché qualcuno li ha segnalati in tempo.
+Il Gruppo Comunale Volontari di Genzano di Roma partecipa, con altri gruppi dei Castelli Romani, alle attività di **sorveglianza antincendio** nel periodo estivo. È un'attività che si impara con la formazione, si svolge in squadra e ha un'utilità pubblica grande: molti incendi restano piccoli proprio perché qualcuno li ha segnalati in tempo.
 
 Se ti interessa partecipare, trovi le informazioni nella pagina [Diventa volontario](/diventa-volontario/).
 

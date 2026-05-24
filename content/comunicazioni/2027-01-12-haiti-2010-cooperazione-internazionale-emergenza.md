@@ -49,7 +49,7 @@ A oltre 15 anni dal terremoto, Haiti non si è ancora ripresa completamente. Le 
 
 È una lezione anche per noi: **un'emergenza non finisce con la fase acuta**. La fase di **ricostruzione e ripristino** dura anni o decenni e richiede competenze, finanziamenti, governance solida. Senza di questi, l'aiuto internazionale rischia di non lasciare traccia.
 
-## A Genzano
+## A Genzano di Roma
 
 Anche se siamo un piccolo Gruppo Comunale, facciamo parte di una **rete nazionale e internazionale** di Protezione Civile. Ogni anno, formiamo i nostri volontari con criteri compatibili con gli standard del Servizio Nazionale e, indirettamente, con quelli internazionali. Quando un'emergenza italiana attiva il sistema, anche un volontario di Genzano può essere chiamato a operare in colonna mobile regionale o nazionale.
 

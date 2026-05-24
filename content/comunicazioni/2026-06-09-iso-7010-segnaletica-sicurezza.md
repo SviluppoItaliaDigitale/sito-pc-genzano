@@ -76,7 +76,7 @@ Significa che il segnale è leggibile anche da persone daltoniche, in fotocopia 
 
 In Italia il riferimento normativo per la segnaletica di sicurezza nei luoghi di lavoro è il **D.Lgs. 81/2008** (Testo Unico Sicurezza Lavoro), Titolo V. La norma italiana **rimanda esplicitamente a ISO 7010**: i segnali nei luoghi di lavoro italiani devono essere conformi allo standard internazionale.
 
-Questo significa che la segnaletica di un ospedale di Genzano è leggibile da un turista tedesco in vacanza nei Castelli Romani. È un piccolo ma concreto vantaggio dell'**armonizzazione normativa internazionale**.
+Questo significa che la segnaletica di un ospedale di Genzano di Roma è leggibile da un turista tedesco in vacanza nei Castelli Romani. È un piccolo ma concreto vantaggio dell'**armonizzazione normativa internazionale**.
 
 ## Cosa fare a casa propria
 

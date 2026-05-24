@@ -49,7 +49,7 @@ Una scossa che altrove si tradurrebbe in poco danno può, in aree con amplificaz
 ## I dati di riferimento
 
 - La [**Mappa di pericolosità sismica nazionale**](https://esse1.mi.ingv.it/) dell'**INGV** colloca i Castelli in zona 2-3 (pericolosità moderata).
-- Il **Piano regolatore** del Comune di Genzano recepisce gli studi di microzonazione disponibili.
+- Il **Piano regolatore** del Comune di Genzano di Roma recepisce gli studi di microzonazione disponibili.
 - Le **Norme tecniche per le costruzioni (NTC 2018)** impongono ai progettisti di considerare la MS nei calcoli antisismici.
 
 ## Effetti locali tipici

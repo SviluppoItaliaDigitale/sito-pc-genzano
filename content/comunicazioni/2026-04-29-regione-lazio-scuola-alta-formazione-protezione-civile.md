@@ -39,7 +39,7 @@ Una Scuola regionale serve a:
 - **Aggiornare con continuità**: la Protezione Civile è un settore in forte evoluzione (cambiamento climatico, nuovi rischi, IT-alert, social media in emergenza, intelligenza artificiale per la gestione dei dati). La formazione deve seguire il passo.
 - **Costruire una memoria istituzionale**: raccogliere e tramandare le esperienze operative del Lazio, dai terremoti dell'Appennino alle alluvioni costiere, dalle ondate di calore agli incendi boschivi.
 
-## Cosa significa per il Gruppo Comunale di Genzano
+## Cosa significa per il Gruppo Comunale di Genzano di Roma
 
 Per i volontari del Gruppo Comunale di Genzano l'avvio della Scuola può tradursi, nei prossimi mesi, in:
 

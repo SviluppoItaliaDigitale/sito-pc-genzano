@@ -42,7 +42,7 @@ Un piano di sicurezza per una sagra o una festa patronale contiene tipicamente:
 
 ## Il ruolo della Protezione Civile
 
-In molti eventi di Genzano e dei Castelli il Gruppo Comunale Volontari di Protezione Civile viene attivato dal Comune per:
+In molti eventi di Genzano di Roma e dei Castelli il Gruppo Comunale Volontari di Protezione Civile viene attivato dal Comune per:
 
 - **presidio** dei punti di raccolta e delle vie di fuga (compito esplicitamente consentito al volontariato dalla Circolare DPC del 6 agosto 2018);
 - **informazione al pubblico** su percorsi, accessi e vie di fuga deliberati dalle autorità competenti;

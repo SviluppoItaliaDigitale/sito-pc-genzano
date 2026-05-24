@@ -115,7 +115,7 @@ Quindi ogni chiamata al 112 non è solo un soccorso individuale: contribuisce al
 Insegnare a bambini e ragazzi il numero **112** è parte della formazione civile:
 
 - A **casa**: il numero memorizzato nel telefono, sul frigo, in un luogo visibile.
-- A **scuola**: molte scuole di Genzano fanno già lezioni con le forze dell'ordine.
+- A **scuola**: molte scuole di Genzano di Roma fanno già lezioni con le forze dell'ordine.
 - Con i **nonni** e anziani: un post-it vicino al telefono è utile.
 
 ## Per approfondire

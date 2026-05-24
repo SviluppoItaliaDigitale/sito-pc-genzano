@@ -57,7 +57,7 @@ Negli anni dopo Sarno l'Italia ha costruito un sistema integrato di prevenzione 
 - La **rete RESORAD per il rischio radiologico** (nata dopo Chernobyl) è stata affiancata da reti analoghe per il rischio idrogeologico: la **Rete Mareografica Nazionale**, la **Rete Idrografica Nazionale**, la rete dei **radar meteorologici**.
 - Il **D.Lgs. 1/2018** (Codice della protezione civile) ha sistematizzato tutto il sistema, definendo la catena di comando dal Sindaco al Dipartimento.
 
-## Il rischio idrogeologico a Genzano e nei Castelli Romani
+## Il rischio idrogeologico a Genzano di Roma e nei Castelli Romani
 
 Il territorio dei **Castelli Romani** non è esposto a colate rapide come quelle che colpirono il Pizzo d'Alvano: la nostra origine geologica è vulcanica, ma le rocce sono diverse e le pendenze più dolci. Tuttavia il rischio idrogeologico esiste anche qui, in forme diverse:
 

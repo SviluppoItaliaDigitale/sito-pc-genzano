@@ -116,7 +116,7 @@ In caso di **blackout elettrico** prolungato, in alcuni edifici con autoclave l'
 
 L'**agricoltura** usa circa il **50% dell'acqua** consumata in Italia. Nei Castelli, la viticoltura e i seminativi richiedono irrigazione nei mesi asciutti. La Regione Lazio e i **Consorzi di bonifica** gestiscono reti irrigue e piani di razionamento in anni siccitosi.
 
-## La Giornata mondiale a Genzano
+## La Giornata mondiale a Genzano di Roma
 
 Il **22 marzo** è un'occasione per:
 

@@ -83,7 +83,7 @@ Gli indirizzi unitari del Servizio nazionale sono adottati con **direttive del P
 
 ## Perché questo Capo è importante
 
-Il Capo II spiega **perché** una frana in un quartiere di Genzano è gestita dal Comune con il supporto della Regione, mentre un terremoto nell'Appennino centrale richiede l'intervento del Dipartimento Nazionale. Più un evento è circoscritto, più è gestito al livello basso; più è esteso e grave, più si attivano i livelli superiori. Il sistema funziona se ogni soggetto conosce il proprio ruolo e si coordina con gli altri.
+Il Capo II spiega **perché** una frana in un quartiere di Genzano di Roma è gestita dal Comune con il supporto della Regione, mentre un terremoto nell'Appennino centrale richiede l'intervento del Dipartimento Nazionale. Più un evento è circoscritto, più è gestito al livello basso; più è esteso e grave, più si attivano i livelli superiori. Il sistema funziona se ogni soggetto conosce il proprio ruolo e si coordina con gli altri.
 
 ## Leggi anche
 

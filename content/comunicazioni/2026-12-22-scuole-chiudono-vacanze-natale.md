@@ -114,7 +114,7 @@ Oggi **martedì 22 dicembre 2026** è tipicamente l'**ultimo giorno** di scuola 
 - **luoghi** familiari;
 - **autonomia** progressiva.
 
-### Luoghi a Genzano
+### Luoghi a Genzano di Roma
 - **centro storico** con luminarie;
 - **Piazza Frasconi** come punto di riferimento;
 - **parco** e aree verdi comunali;

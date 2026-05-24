@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-A **metà novembre**, il Gruppo Comunale Volontari di Protezione Civile di Genzano pubblica il consueto aggiornamento operativo. Un modo per restare in contatto con i cittadini e raccontare, con trasparenza, lo stato delle attività.
+A **metà novembre**, il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma pubblica il consueto aggiornamento operativo. Un modo per restare in contatto con i cittadini e raccontare, con trasparenza, lo stato delle attività.
 
 ## Corso base in svolgimento
 

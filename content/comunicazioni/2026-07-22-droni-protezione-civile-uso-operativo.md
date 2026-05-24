@@ -105,7 +105,7 @@ In emergenza **NON far volare** droni privati senza autorizzazione. Durante atti
 
 ## Il drone della PC Genzano?
 
-Il Gruppo di Genzano **non dispone** attualmente di drone operativo, ma:
+Il Gruppo di Genzano di Roma **non dispone** attualmente di drone operativo, ma:
 - **Volontari** abilitati partecipano a operazioni regionali.
 - **Collaborazione** con gruppi dotati.
 - **Formazione** in corso su alcuni volontari.

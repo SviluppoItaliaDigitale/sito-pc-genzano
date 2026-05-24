@@ -77,7 +77,7 @@ Fermarsi è sempre meglio che un **incidente**.
 - **nebbia** possibile, soprattutto al mattino;
 - **piogge** che peggiorano visibilità;
 - **fari** da adattare (anabbaglianti accesi in caso di dubbio);
-- **buio** precoce (tramonto a Genzano verso le 16:40 a dicembre).
+- **buio** precoce (tramonto a Genzano di Roma verso le 16:40 a dicembre).
 
 ### Consigli pratici
 - **velocità** adeguata alle condizioni (non al limite);

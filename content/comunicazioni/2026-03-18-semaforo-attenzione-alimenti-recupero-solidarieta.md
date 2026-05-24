@@ -120,7 +120,7 @@ Il capitolo 10 del manuale disciplina la **tracciabilità** dell'intero processo
 
 ## Collegamento con l'operatività del nostro Gruppo
 
-Quando il Gruppo Comunale Volontari di Protezione Civile di Genzano partecipa ad attività di **supporto alla popolazione** con distribuzione di alimenti (emergenza sociale, esercitazioni, sagre locali con rinfresco), il semaforo di attenzione è un riferimento diretto:
+Quando il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma partecipa ad attività di **supporto alla popolazione** con distribuzione di alimenti (emergenza sociale, esercitazioni, sagre locali con rinfresco), il semaforo di attenzione è un riferimento diretto:
 
 - Per **sagre e feste** dove la OC o l'associazione organizzatrice fa il recupero dei pasti avanzati, applicare i criteri della categoria "alto livello".
 - Per **pacchi viveri** distribuiti in emergenza, la categoria prevalente è "basso livello" (pasta, legumi in scatola, UHT, conserve) — più facile da gestire senza catena del freddo.

@@ -39,7 +39,7 @@ Il **weekend 19-21 dicembre 2026** rappresenta il **picco dell'esodo natalizio**
 - **A24 Roma-L'Aquila**: verso Abruzzo e montagna;
 - **A25 Roma-Pescara**: verso Adriatico e monti d'Italia.
 
-### Uscite critiche nei pressi di Genzano
+### Uscite critiche nei pressi di Genzano di Roma
 - **Valmontone** (A1): uscita per Sud Est Lazio;
 - **Frascati/Monte Porzio** (A1): Castelli;
 - **GRA**: Roma e dintorni (sempre congestionato);

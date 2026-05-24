@@ -42,7 +42,7 @@ Sono settimane delicate per diversi motivi:
 
 ## L'invito del Gruppo
 
-Ai cittadini di Genzano il Gruppo Comunale di PC propone, per queste prime settimane:
+Ai cittadini di Genzano di Roma il Gruppo Comunale di PC propone, per queste prime settimane:
 
 - **verificare** lo stato di grondaie, caditoie e fossi privati;
 - **aggiornare** contatti e riferimenti di emergenza;

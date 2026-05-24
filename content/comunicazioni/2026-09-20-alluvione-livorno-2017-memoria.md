@@ -76,7 +76,7 @@ Ricordare Livorno non è cronaca: è **promessa istituzionale** che nessuna vitt
 
 ## Per approfondire
 
-- [Rischio idraulico urbano a Genzano](/comunicazioni/2026-09-15-rischio-idraulico-urbano-genzano/)
+- [Rischio idraulico urbano a Genzano di Roma](/comunicazioni/2026-09-15-rischio-idraulico-urbano-genzano/)
 - [Pulizia fossi e caditoie](/comunicazioni/2026-08-28-pulizia-fossi-caditoie-prevenzione-autunno/)
 - [Dipartimento di Protezione Civile](https://www.protezionecivile.gov.it/)
 

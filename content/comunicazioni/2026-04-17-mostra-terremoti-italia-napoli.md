@@ -20,7 +20,7 @@ Dal **20 aprile al 9 maggio 2026** la mostra interattiva **«Terremoti d'Italia�
          alt="Logo ufficiale della mostra «Terremoti d'Italia» del Dipartimento della Protezione Civile, con grafica sismica stilizzata e titolo della mostra"
          caption="Locandina ufficiale della mostra «Terremoti d'Italia» — Dipartimento della Protezione Civile." >}}
 
-Il Gruppo Comunale di Genzano segnala l'iniziativa con particolare favore: **eventi di questa portata, gratuiti e accessibili a famiglie, scuole e cittadini, sono rari**. Una visita di un'ora può fare più di molte ore di lezione frontale per fissare i comportamenti corretti in caso di terremoto.
+Il Gruppo Comunale di Genzano di Roma segnala l'iniziativa con particolare favore: **eventi di questa portata, gratuiti e accessibili a famiglie, scuole e cittadini, sono rari**. Una visita di un'ora può fare più di molte ore di lezione frontale per fissare i comportamenti corretti in caso di terremoto.
 
 ## Cosa vedrai in mostra
 

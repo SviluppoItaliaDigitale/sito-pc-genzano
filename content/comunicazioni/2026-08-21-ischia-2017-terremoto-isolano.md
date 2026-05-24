@@ -47,7 +47,7 @@ Ischia 2017 è il caso scuola del **rischio sismico medio-basso che diventa cata
 
 3. **La memoria storica è patrimonio operativo.** I dati sui terremoti storici sono parte integrante della valutazione di rischio. INGV mantiene il **Catalogo Parametrico dei Terremoti Italiani (CPTI15)** con tutti gli eventi dal Medioevo a oggi, proprio per questo.
 
-## A Genzano
+## A Genzano di Roma
 
 Il nostro territorio si trova in **zona sismica 2B** ed è caratterizzato da edilizia mista: edifici recenti progettati con criteri sismici, palazzi storici nel centro, edilizia diffusa di varie epoche. Conoscere la **classificazione sismica della propria abitazione** è il primo passo per valutare se servono interventi di adeguamento (es. tramite il Sismabonus).
 

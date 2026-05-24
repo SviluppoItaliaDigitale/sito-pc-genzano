@@ -36,7 +36,7 @@ Il **13 dicembre** è la festa di **Santa Lucia**, martire siciliana vissuta tra
 - **solstizio d'inverno**: 21 dicembre (giornata con **meno ore di sole**);
 - **tramonto** più precoce: tra **8 e 13 dicembre** (in Italia centrale);
 - **alba** più tardiva: tra **29 dicembre e 4 gennaio**;
-- quindi il **13 dicembre** il tramonto è già al suo minimo (circa 16:37 a Genzano), ma l'alba è in leggero anticipo rispetto a fine mese.
+- quindi il **13 dicembre** il tramonto è già al suo minimo (circa 16:37 a Genzano di Roma), ma l'alba è in leggero anticipo rispetto a fine mese.
 
 ### Il detto popolare
 Nasce da questa **percezione**: il tramonto precoce domina la sensazione di "giorno corto" nella prima decade di dicembre. È il **vero minimo delle ore di luce serale**.

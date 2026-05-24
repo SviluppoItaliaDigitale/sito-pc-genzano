@@ -97,7 +97,7 @@ Molti anziani vivono lontani dai figli. Puoi aiutare anche:
 
 ## Servizi comunali e sanitari
 
-A Genzano e nei Castelli sono attivi:
+A Genzano di Roma e nei Castelli sono attivi:
 - **Servizi sociali comunali** — prendono in carico anziani soli o fragili. Contattabili dall'URP.
 - **ASL Roma 6** — medici di famiglia, geriatri, cure domiciliari.
 - **Punto unico di accesso (PUA)** — valutazione bisogni socio-sanitari.

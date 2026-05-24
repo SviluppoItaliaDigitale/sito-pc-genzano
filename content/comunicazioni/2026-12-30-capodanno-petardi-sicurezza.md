@@ -28,7 +28,7 @@ Ogni Capodanno in Italia:
 - **animali** domestici traumatizzati o fuggiti;
 - **fauna selvatica** disturbata.
 
-### A Genzano
+### A Genzano di Roma
 Non siamo esenti:
 - **feriti** ogni anno al pronto soccorso;
 - **chiamate** al 112 per incendi balconi;

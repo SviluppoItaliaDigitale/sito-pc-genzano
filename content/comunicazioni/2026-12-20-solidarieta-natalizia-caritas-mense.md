@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Il **Natale** è tempo di famiglia, regali, tavole imbandite. Ma per **molti** a Genzano e ovunque è anche tempo di **difficoltà**: perdita di lavoro, povertà nascosta, senza dimora, famiglie in crisi. La **solidarietà** concreta non è un lusso ma una necessità.
+Il **Natale** è tempo di famiglia, regali, tavole imbandite. Ma per **molti** a Genzano di Roma e ovunque è anche tempo di **difficoltà**: perdita di lavoro, povertà nascosta, senza dimora, famiglie in crisi. La **solidarietà** concreta non è un lusso ma una necessità.
 
 ## Povertà in Italia oggi
 

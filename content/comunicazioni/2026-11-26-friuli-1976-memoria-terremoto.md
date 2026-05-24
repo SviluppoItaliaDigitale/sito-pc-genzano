@@ -182,7 +182,7 @@ Il **Friuli-Venezia Giulia** ha oggi:
 
 Nel 2026 ricorre il **50° anniversario**. In Friuli iniziative commemorative sono programmate per tutto l'anno. Un'occasione per **rivisitare** non solo con dolore ma con **orgoglio** una storia di **rinascita**.
 
-## A Genzano
+## A Genzano di Roma
 
 Cosa possiamo portare a casa dal modello Friuli:
 

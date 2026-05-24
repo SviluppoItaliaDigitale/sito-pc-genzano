@@ -1,10 +1,10 @@
 ---
-title: "Esposizione dei grandi mezzi di soccorso a Marino: c'è anche Genzano"
+title: "Esposizione dei grandi mezzi di soccorso a Marino: c'è anche Genzano di Roma"
 date: 2026-05-22T00:08:00+02:00
 badge: "Evento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-description: "Domenica 24 maggio 2026 a Cava dei Selci (Marino) l'esposizione dei grandi mezzi di soccorso. Tra le squadre presenti anche la Protezione Civile di Genzano."
+description: "Domenica 24 maggio 2026 a Cava dei Selci (Marino) l'esposizione dei grandi mezzi di soccorso. Tra le squadre presenti anche la Protezione Civile di Genzano di Roma."
 image: "/images/2026-05-22-esposizione-grandi-mezzi-soccorso-marino.webp"
 image_alt: "Cover dell'articolo: esposizione dei grandi mezzi di soccorso a Marino, presente anche Genzano"
 area: "Marino (RM)"
@@ -33,7 +33,7 @@ Durante la giornata ci sono anche **attività per i più piccoli**: avvicinare b
 
 I cinque gruppi dei Castelli Romani — Albano, Ariccia, Genzano, Marino e Nemi — mostrano una collaborazione sempre più solida. Lavorare in rete è la forza del sistema di Protezione Civile: in caso di emergenza, le squadre si conoscono già e operano insieme.
 
-Per il Gruppo di Genzano è anche un'occasione di **divulgazione**: spiegare ai cittadini come funziona la Protezione Civile e perché la prevenzione riguarda tutti.
+Per il Gruppo di Genzano di Roma è anche un'occasione di **divulgazione**: spiegare ai cittadini come funziona la Protezione Civile e perché la prevenzione riguarda tutti.
 
 ## Sul nostro sito
 

@@ -62,7 +62,7 @@ Il 25 aprile non è solo ricordo del passato: è un impegno per il futuro. Ogni 
 Sul nostro sito:
 
 - [Giornata Nazionale della Protezione Civile](/comunicazioni/2026-02-28-giornata-protezione-civile-storia-volontariato/).
-- [Donne nella Protezione Civile di Genzano](/comunicazioni/2026-03-08-donne-protezione-civile-genzano/).
+- [Donne nella Protezione Civile di Genzano di Roma](/comunicazioni/2026-03-08-donne-protezione-civile-genzano/).
 - [Festa del Lavoro: i DPI dei volontari](/comunicazioni/2026-05-01-festa-lavoro-dpi-volontari-protezione-civile/).
 - [Strage di Capaci: legalità e servizio pubblico](/comunicazioni/2026-05-23-strage-capaci-legalita-servizio-pubblico/).
 - [Diventa volontario](/diventa-volontario/).

@@ -43,7 +43,7 @@ Tutti i Gruppi comunali di PC del Lazio sono **attivabili** durante la campagna 
 - **Supporto logistico** a VVF e CFdC.
 - **Informazione** alla popolazione.
 
-Per il Gruppo di Genzano le aree di competenza sono principalmente:
+Per il Gruppo di Genzano di Roma le aree di competenza sono principalmente:
 - **Parco Regionale dei Castelli Romani** (area comunale).
 - **Zone di interfaccia urbano-bosco**.
 - **Eventi estivi** con concentrazione di persone.

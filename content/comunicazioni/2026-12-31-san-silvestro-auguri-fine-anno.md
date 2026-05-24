@@ -1,5 +1,5 @@
 ---
-title: "San Silvestro: auguri di fine anno a Genzano"
+title: "San Silvestro: auguri di fine anno a Genzano di Roma"
 date: 2026-12-31
 description: "31 dicembre 2026. Gli auguri di fine anno del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma."
 badge: "Comunicazione"
@@ -15,7 +15,7 @@ draft: false
 
 **31 dicembre 2026**. **San Silvestro**. L'**ultimo giorno** del **2026**. Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** invia a tutti i **cittadini**, alle **istituzioni**, ai **colleghi volontari** un **augurio sincero** di **fine anno**.
 
-## Un augurio a Genzano
+## Un augurio a Genzano di Roma
 
 A **tutta Genzano**, dal **centro storico** al **Buonriposo**, dalle **Fontane** alle **Due Santini**, da **Villa Sforza** alla **Cecchina** e **Landi**, e a ogni **cittadino** sparso nel mondo:
 

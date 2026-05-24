@@ -75,7 +75,7 @@ Il Piano comunale prevede tre fasi operative crescenti:
 
 La discesa di livello è altrettanto importante: quando l'evento finisce, si ritorna a **rientro** e a **normalità**, con una fase di verifica e documentazione.
 
-## Dove si trova il COC a Genzano
+## Dove si trova il COC a Genzano di Roma
 
 A Genzano di Roma il **COC, quando attivato, ha sede presso il Comando di Polizia Locale**. È la sede primaria individuata dal Piano di Protezione Civile del Comune. Possono essere usate **sedi alternative** in caso di esigenze motivate (sede primaria non agibile, evento che la coinvolge direttamente, scelta operativa del Sindaco). Il dettaglio organizzativo è contenuto nel [Piano di Protezione Civile del Comune di Genzano di Roma](/piano-emergenza/).
 

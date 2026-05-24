@@ -79,7 +79,7 @@ Scenario esemplificativo: incendio nel Parco dei Castelli che coinvolge Genzano,
 1. **Primo avvistamento** da parte di volontari o cittadini.
 2. **Chiamata al 112** che smista l'intervento ai Vigili del Fuoco.
 3. **Attivazione della SOUP** per la richiesta di mezzi aerei.
-4. **COC di Genzano attivato**: valutazione del rischio per gli abitati.
+4. **COC di Genzano di Roma attivato**: valutazione del rischio per gli abitati.
 5. **COC di Rocca di Papa e Nemi attivati** se l'incendio raggiunge il loro territorio.
 6. **Prefettura informata**: se serve, attiva il CCS provinciale.
 7. **Coordinamento** tra Comuni per la condivisione di risorse e mezzi.

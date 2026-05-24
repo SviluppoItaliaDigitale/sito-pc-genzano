@@ -133,7 +133,7 @@ Ogni condomino può:
 - **segnalare** criticità all'amministratore;
 - **conoscere** i vicini di casa (utile in emergenza).
 
-## A Genzano
+## A Genzano di Roma
 
 Il Gruppo Comunale Volontari di PC è **disponibile** a:
 

@@ -52,7 +52,7 @@ La Regione Lazio pubblica le allerte meteo. Ci sono 3 livelli:
 
 ## Cosa fa il Gruppo di Protezione Civile
 
-A ottobre i volontari della Protezione Civile di Genzano:
+A ottobre i volontari della Protezione Civile di Genzano di Roma:
 
 - aggiornano il piano di emergenza con il Comune
 - controllano i bollettini meteo ogni giorno

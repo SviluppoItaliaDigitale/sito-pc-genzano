@@ -69,5 +69,5 @@ Ogni euro investito in prevenzione strutturale e culturale risparmia molti euro 
 - [Panoramica del Codice della Protezione Civile](/normativa/testo-unico-protezione-civile/)
 - [Capo II — Organizzazione del Servizio nazionale](/normativa/testo-unico-protezione-civile/capo-2-organizzazione/)
 - [Capo IV — Gestione delle emergenze di rilievo nazionale](/normativa/testo-unico-protezione-civile/capo-4-emergenze-nazionali/)
-- [Rischi e prevenzione a Genzano](/rischi-prevenzione/)
+- [Rischi e prevenzione a Genzano di Roma](/rischi-prevenzione/)
 - [Allerte Meteo](/allerte-meteo/)

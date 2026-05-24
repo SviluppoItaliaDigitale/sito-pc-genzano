@@ -54,7 +54,7 @@ L'allerta si riferisce sempre a un **rischio specifico** (idrogeologico, idrauli
 ## Come seguire le allerte
 
 - sito della **Regione Lazio — Protezione Civile**;
-- sito del **Comune di Genzano** e canali del Gruppo;
+- sito del **Comune di Genzano di Roma** e canali del Gruppo;
 - **app IT-Alert** e sistemi ufficiali;
 - **radio** e TV regionali;
 - bollettini del **Centro Funzionale Regionale**.

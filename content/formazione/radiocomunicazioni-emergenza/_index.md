@@ -6,7 +6,7 @@ layout: "single"
 
 Quando un terremoto fa cadere i ripetitori cellulari, quando un'alluvione taglia le linee telefoniche, quando un incendio isola una frazione per giorni, le **radiocomunicazioni amatoriali** tornano a essere — come nel secolo scorso — il collegamento che resta. Il radioamatore volontario di protezione civile non è un hobbista: è una **risorsa operativa** che la legge italiana (D.Lgs. 1/2018, art. 32) e la normativa europea riconoscono formalmente nel sistema di soccorso.
 
-Questa area tematica riprende, riorganizza e adatta al contesto italiano la **Guida IARU alle Telecomunicazioni di Emergenza** (*IARU Emergency Telecommunications Guide*, ed. 1 settembre 2016), documento di riferimento internazionale pubblicato dalla *International Amateur Radio Union*. La guida originale è pensata per formatori delle associazioni nazionali aderenti all'IARU; per il Gruppo Comunale di Genzano ne abbiamo estratto i contenuti che servono davvero a un volontario impiegato in emergenza a Genzano di Roma e nei Castelli Romani.
+Questa area tematica riprende, riorganizza e adatta al contesto italiano la **Guida IARU alle Telecomunicazioni di Emergenza** (*IARU Emergency Telecommunications Guide*, ed. 1 settembre 2016), documento di riferimento internazionale pubblicato dalla *International Amateur Radio Union*. La guida originale è pensata per formatori delle associazioni nazionali aderenti all'IARU; per il Gruppo Comunale di Genzano di Roma ne abbiamo estratto i contenuti che servono davvero a un volontario impiegato in emergenza a Genzano di Roma e nei Castelli Romani.
 
 ## I sei capitoli
 

@@ -1,7 +1,7 @@
 ---
 title: "Settimana della Protezione Civile nelle scuole: il programma"
 date: 2026-10-18
-description: "Anche quest'anno il Gruppo di Genzano partecipa alla Settimana nazionale della Protezione Civile nelle scuole. Ecco il programma."
+description: "Anche quest'anno il Gruppo di Genzano di Roma partecipa alla Settimana nazionale della Protezione Civile nelle scuole. Ecco il programma."
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Nel corso delle prossime settimane, il **Gruppo Comunale Volontari di Protezione Civile di Genzano** sarà presente in diverse **scuole del territorio** per attività di **sensibilizzazione** e **formazione** degli studenti. Si tratta della partecipazione alla Settimana nazionale della Protezione Civile promossa dal Dipartimento e da **Io Non Rischio Scuola**.
+Nel corso delle prossime settimane, il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** sarà presente in diverse **scuole del territorio** per attività di **sensibilizzazione** e **formazione** degli studenti. Si tratta della partecipazione alla Settimana nazionale della Protezione Civile promossa dal Dipartimento e da **Io Non Rischio Scuola**.
 
 ## Le scuole coinvolte
 

@@ -23,7 +23,7 @@ Per sapere cosa fare, consulta la pagina [Allerte meteo](/allerte-meteo/).
 
 ### Chi emette le allerte meteo?
 
-Le allerte sono emesse dal **Centro Funzionale Regionale** dell'Agenzia di Protezione Civile del Lazio. Non sono emesse dal Gruppo Comunale di Genzano né dal Comune.
+Le allerte sono emesse dal **Centro Funzionale Regionale** dell'Agenzia di Protezione Civile del Lazio. Non sono emesse dal Gruppo Comunale di Genzano di Roma né dal Comune.
 
 ### Dove trovo il bollettino ufficiale?
 

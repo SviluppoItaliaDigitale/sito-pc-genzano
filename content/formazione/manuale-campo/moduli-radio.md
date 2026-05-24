@@ -5,7 +5,7 @@ layout: "single"
 toc: true
 ---
 
-Questo capitolo raccoglie i **moduli e le tabelle di riferimento** per la squadra radiocomunicazioni del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**. Sono adattati dagli allegati del manuale *"Comunicazioni Radio in emergenza"* del Sistema di Protezione Civile, con i riferimenti di Genzano (COC, Ufficio Comunale PC, canali Regione Lazio).
+Questo capitolo raccoglie i **moduli e le tabelle di riferimento** per la squadra radiocomunicazioni del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**. Sono adattati dagli allegati del manuale *"Comunicazioni Radio in emergenza"* del Sistema di Protezione Civile, con i riferimenti di Genzano di Roma (COC, Ufficio Comunale PC, canali Regione Lazio).
 
 Per la parte teorica sulla rete TLC, le bande di frequenza (HF/VHF/UHF), il ponte radio e la catena di comando vedi [Capitolo 3 — Funzioni tecniche](/formazione/manuale-campo/funzioni-tecniche/).
 

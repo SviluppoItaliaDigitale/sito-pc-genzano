@@ -83,7 +83,7 @@ Se vuoi essere più attivo nel tuo palazzo o quartiere:
 - **Informa** i vicini sui numeri utili del Comune.
 - **Porta esempi** di piccoli aiuti (allerta meteo via chat, controllo post-evento).
 
-Il Gruppo di Protezione Civile di Genzano è interlocutore per iniziative di **cittadinanza attiva** sulla sicurezza condominiale.
+Il Gruppo di Protezione Civile di Genzano di Roma è interlocutore per iniziative di **cittadinanza attiva** sulla sicurezza condominiale.
 
 ## Reti digitali
 

@@ -201,7 +201,7 @@ Dotazione dettagliata: vedi [Capitolo 2 — Check-list 4](/formazione/manuale-ca
 |---|---|
 | **Numero Unico Emergenze (NUE)** | **112** |
 | Sala Operativa Protezione Civile Lazio | 803&nbsp;555 |
-| Comune di Genzano — centralino | (da verificare presso Ufficio PC) |
+| Comune di Genzano di Roma — centralino | (da verificare presso Ufficio PC) |
 | Ufficio Protezione Civile Comunale | (da verificare) |
 | Prefettura di Roma — Sala Operativa | (da verificare presso Ufficio PC) |
 | Agenzia Regionale Protezione Civile Lazio | (portale [regione.lazio.it](https://www.regione.lazio.it/cittadini/protezione-civile)) |

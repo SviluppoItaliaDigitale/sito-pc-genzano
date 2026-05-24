@@ -94,7 +94,7 @@ Nel territorio dei Castelli Romani è possibile visitare il [Museo Diffuso del V
 Sul nostro sito:
 
 - [Rischio sismico e tutela del patrimonio storico](/rischi-prevenzione/rischio-sismico/).
-- [Cartografia del territorio di Genzano](/cartografia/).
+- [Cartografia del territorio di Genzano di Roma](/cartografia/).
 
 Fonti istituzionali:
 

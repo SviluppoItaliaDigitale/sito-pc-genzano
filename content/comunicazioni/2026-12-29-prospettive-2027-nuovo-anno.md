@@ -1,7 +1,7 @@
 ---
 title: "Prospettive 2027: cosa ci aspetta nel nuovo anno"
 date: 2026-12-29
-description: "Uno sguardo alle prospettive 2027 per la Protezione Civile di Genzano: formazione, reclutamento, territorio, cittadinanza."
+description: "Uno sguardo alle prospettive 2027 per la Protezione Civile di Genzano di Roma: formazione, reclutamento, territorio, cittadinanza."
 badge: "Aggiornamento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -162,7 +162,7 @@ In presenza di fumo, fiamme o pericolo immediato allontanati e chiama il 112. Ap
 ## Collaborazioni
 
 ### Istituzioni
-- **Comune** di Genzano: programma congiunto 2027;
+- **Comune** di Genzano di Roma: programma congiunto 2027;
 - **Polizia Locale**: protocolli operativi;
 - **Carabinieri**: convenzione rinnovata;
 - **VVF Ariccia**: aggiornamento procedure;

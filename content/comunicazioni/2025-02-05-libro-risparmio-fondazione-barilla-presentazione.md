@@ -53,7 +53,7 @@ Nelle prossime settimane pubblicheremo articoli tematici che riprendono i consig
 
 ## Collegamento con il nostro Gruppo
 
-Il Gruppo Comunale Volontari di Protezione Civile di Genzano aderisce alla **Federazione Provinciale del Volontariato di Protezione Civile di Roma (FEPIVOL)**. La promozione di buone pratiche di sostenibilità alimentare rientra nelle attività di informazione al cittadino che il volontariato di Protezione Civile svolge nel tempo ordinario — in complemento alle attività di prevenzione dei rischi naturali.
+Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma aderisce alla **Federazione Provinciale del Volontariato di Protezione Civile di Roma (FEPIVOL)**. La promozione di buone pratiche di sostenibilità alimentare rientra nelle attività di informazione al cittadino che il volontariato di Protezione Civile svolge nel tempo ordinario — in complemento alle attività di prevenzione dei rischi naturali.
 
 ## Riferimenti
 

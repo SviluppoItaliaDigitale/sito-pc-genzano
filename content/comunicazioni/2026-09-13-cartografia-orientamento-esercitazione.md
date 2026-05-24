@@ -55,7 +55,7 @@ Saper **convertire** rapidamente tra i due è utile in coordinamento interforze.
 
 ## L'esercitazione di cartografia
 
-Il Gruppo Comunale di PC di Genzano organizza almeno **una esercitazione di cartografia** all'anno. Esercizi tipici:
+Il Gruppo Comunale di PC di Genzano di Roma organizza almeno **una esercitazione di cartografia** all'anno. Esercizi tipici:
 
 - **identificare** un punto descritto via radio;
 - **descrivere** la propria posizione ai colleghi;

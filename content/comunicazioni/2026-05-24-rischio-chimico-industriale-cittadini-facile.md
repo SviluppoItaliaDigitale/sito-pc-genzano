@@ -82,7 +82,7 @@ In caso di incidente, le autorità ti avvisano con:
 - SMS sul telefono.
 - **IT-alert**, il sistema nazionale di allerta del telefono. Tieni sempre gli avvisi del telefono attivi.
 
-## Il rischio chimico vicino a Genzano
+## Il rischio chimico vicino a Genzano di Roma
 
 Genzano non ha grandi fabbriche pericolose. Ma ci sono reti del gas e strade con camion. Il Comune ha un piano per gestire questi rischi.
 

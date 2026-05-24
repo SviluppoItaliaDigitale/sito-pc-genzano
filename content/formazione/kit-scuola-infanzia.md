@@ -98,7 +98,7 @@ Nessun prerequisito cognitivo particolare. È utile aver svolto in precedenza:
 
 ### Racconto introduttivo
 
-*"Sapete che nel nostro paese, qui a Genzano, ci sono delle persone speciali che, quando qualcuno ha bisogno di aiuto, arrivano subito? Indossano una divisa arancione e hanno dei mezzi grandi con le luci. Sono i volontari della Protezione Civile! Insieme ai vigili del fuoco, ai medici e ai carabinieri, formano una squadra che ci protegge."*
+*"Sapete che nel nostro paese, qui a Genzano di Roma, ci sono delle persone speciali che, quando qualcuno ha bisogno di aiuto, arrivano subito? Indossano una divisa arancione e hanno dei mezzi grandi con le luci. Sono i volontari della Protezione Civile! Insieme ai vigili del fuoco, ai medici e ai carabinieri, formano una squadra che ci protegge."*
 
 ### Concetti chiave (per il docente)
 

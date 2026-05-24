@@ -98,7 +98,7 @@ Nonostante i progressi:
 - **DPI** talora non adeguati a corporature femminili;
 - **difficoltà** a partecipare a turni notturni per chi ha figli piccoli.
 
-Il Gruppo Comunale di Genzano lavora per **superare** questi ostacoli.
+Il Gruppo Comunale di Genzano di Roma lavora per **superare** questi ostacoli.
 
 ## A Genzano
 
