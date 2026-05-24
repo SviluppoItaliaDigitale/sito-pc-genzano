@@ -1,6 +1,7 @@
 ---
 title: "Il COC: la sala dove il Comune coordina l'emergenza"
 date: 2026-05-14
+draft: false
 description: "Cos'è il COC e cosa fa il Comune durante un'emergenza. Spiegato in italiano semplice."
 badge: "Informazione"
 priorita: "normale"

@@ -1,6 +1,7 @@
 ---
 title: "I rimborsi per i volontari che lavorano in proprio"
 date: 2026-05-16T00:02:00+02:00
+draft: false
 description: "Se fai il volontario e lavori in proprio, puoi ricevere un rimborso. Ecco come fare."
 badge: "Aggiornamento"
 priorita: "normale"

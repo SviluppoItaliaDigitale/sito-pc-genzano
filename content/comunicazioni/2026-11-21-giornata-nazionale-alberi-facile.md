@@ -1,6 +1,7 @@
 ---
 title: "Giornata degli alberi: perché gli alberi ci proteggono"
 date: 2026-11-21
+draft: false
 description: "Il 21 novembre è la Giornata degli alberi. Gli alberi proteggono il territorio dai pericoli."
 badge: "Prevenzione"
 priorita: "normale"

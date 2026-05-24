@@ -1,6 +1,7 @@
 ---
 title: "IT-alert: cosa fare quando arriva il messaggio"
 date: 2026-07-10T00:01:00+02:00
+draft: false
 description: "IT-alert manda messaggi di allarme al tuo telefono. Ecco cosa fare."
 badge: "Comunicazione"
 priorita: "normale"

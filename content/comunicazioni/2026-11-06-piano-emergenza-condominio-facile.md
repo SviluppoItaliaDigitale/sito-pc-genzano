@@ -1,6 +1,7 @@
 ---
 title: "Il piano di emergenza del condominio"
 date: 2026-11-06
+draft: false
 description: "Come fare un piano di emergenza per il palazzo. Cosa fare in caso di incendio, gas, alluvione."
 badge: "Prevenzione"
 priorita: "normale"

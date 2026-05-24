@@ -1,6 +1,7 @@
 ---
 title: "Cibo speciale nel campo di accoglienza"
 date: 2025-07-14
+draft: false
 description: "Alcune persone non possono mangiare certi cibi. Ecco le regole da seguire in cucina."
 badge: "Prevenzione"
 priorita: "normale"

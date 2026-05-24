@@ -1,6 +1,7 @@
 ---
 title: "Come evitare le cadute in casa: guida per gli anziani"
 date: 2026-11-16
+draft: false
 description: "Consigli semplici per rendere la casa più sicura e non cadere."
 badge: "Prevenzione"
 priorita: "normale"

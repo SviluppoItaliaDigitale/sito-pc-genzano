@@ -1,6 +1,7 @@
 ---
 title: "Allerta gialla: cosa è e cosa fare"
 date: 2026-09-08
+draft: false
 description: "Allerta gialla: non è un'emergenza, ma devi fare attenzione. Leggi cosa fare."
 badge: "Informazione"
 priorita: "normale"

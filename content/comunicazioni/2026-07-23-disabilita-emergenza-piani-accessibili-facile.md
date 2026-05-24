@@ -1,6 +1,7 @@
 ---
 title: "Disabilità e emergenza: cosa fare"
 date: 2026-07-23
+draft: false
 description: "Cosa fare in emergenza se hai una disabilità o conosci qualcuno con disabilità."
 badge: "Informazione"
 priorita: "normale"

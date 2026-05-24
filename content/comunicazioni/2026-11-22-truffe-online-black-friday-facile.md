@@ -1,6 +1,7 @@
 ---
 title: "Black Friday: come evitare le truffe online"
 date: 2026-11-22
+draft: false
 description: "Come riconoscere le truffe online durante il Black Friday e cosa fare se vieni truffato."
 badge: "Prevenzione"
 priorita: "normale"

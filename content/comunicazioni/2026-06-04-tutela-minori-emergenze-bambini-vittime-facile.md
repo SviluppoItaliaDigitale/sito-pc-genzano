@@ -1,6 +1,7 @@
 ---
 title: "Come proteggere i bambini in emergenza"
 date: 2026-06-04
+draft: false
 description: "Il 4 giugno è la Giornata dei bambini vittime. Ecco come tenerli al sicuro."
 badge: "Informazione"
 priorita: "normale"

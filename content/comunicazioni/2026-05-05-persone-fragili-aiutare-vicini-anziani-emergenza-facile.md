@@ -1,6 +1,7 @@
 ---
 title: "Aiuta il tuo vicino fragile in caso di emergenza"
 date: 2026-05-05T00:01:00+02:00
+draft: false
 description: "Come aiutare anziani e persone fragili vicine a te in caso di emergenza."
 badge: "Prevenzione"
 priorita: "normale"
