@@ -5,10 +5,15 @@
        Privacy-first: immagine auto-ospitata, nessun cookie di terzi. */ -}}
 {{- $img := "images/meteo-lazio.svg" | relURL -}}
 {{- $m := .Site.Data.meteo_genzano -}}
+{{- /* cache-busting: l'SVG ha URL fisso, ma cambia ogni ora. Senza versione il
+       browser/CDN servirebbe la copia vecchia in cache (mappa "ferma"). Aggancio
+       la versione al timestamp dei dati, rigenerati nello stesso run dello SVG. */ -}}
+{{- $ver := "" -}}
+{{- with $m }}{{ with .aggiornato }}{{ $ver = printf "?v=%s" (. | replaceRE `[^0-9]` "") }}{{ end }}{{ end -}}
 
 <div class="meteo-lazio">
   <figure class="meteo-mappa">
-    <img src="{{ $img }}" loading="lazy"
+    <img src="{{ $img }}{{ $ver }}" loading="lazy"
          alt="Cartina del Lazio con la temperatura massima e il cielo previsti oggi per ogni provincia: Viterbo, Rieti, Roma, Latina, Frosinone. Genzano di Roma è evidenziata con una stella.">
     <figcaption>Temperatura e cielo previsti oggi nelle province del Lazio. Elaborazione del Gruppo su dati aperti Open-Meteo (modelli ECMWF).</figcaption>
   </figure>
