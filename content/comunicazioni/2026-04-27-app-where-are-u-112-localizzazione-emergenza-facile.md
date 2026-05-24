@@ -1,6 +1,7 @@
 ---
 title: "App Where Are U: aiuta il 112 a trovarti"
 date: 2026-04-27T00:02:00+02:00
+draft: false
 description: "Where Are U è un'app gratuita. Quando chiami il 112, manda la tua posizione ai soccorritori."
 badge: "Informazione"
 priorita: "normale"

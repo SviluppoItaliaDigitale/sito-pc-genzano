@@ -1,6 +1,7 @@
 ---
 title: "Agosto: il mese più difficile per la Protezione Civile"
 date: 2026-08-01
+draft: false
 description: "Agosto è il mese più difficile per la PC. Ecco cosa puoi fare tu."
 badge: "Prevenzione"
 priorita: "normale"

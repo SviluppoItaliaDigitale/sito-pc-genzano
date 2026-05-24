@@ -1,6 +1,7 @@
 ---
 title: "La sicurezza elettrica a casa"
 date: 2026-11-14
+draft: false
 description: "Come usare l'elettricità a casa in modo sicuro. Cosa controllare e cosa fare in caso di problema."
 badge: "Prevenzione"
 priorita: "normale"

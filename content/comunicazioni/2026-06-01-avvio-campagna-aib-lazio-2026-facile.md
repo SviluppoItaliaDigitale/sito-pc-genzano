@@ -1,6 +1,7 @@
 ---
 title: "Dal 1 giugno: attenzione agli incendi nei boschi"
 date: 2026-06-01
+draft: false
 description: "Dal 1 giugno è vietato accendere fuochi nei boschi. Se vedi fumo, chiama il 112."
 badge: "Prevenzione"
 priorita: "normale"

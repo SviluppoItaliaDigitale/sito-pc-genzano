@@ -1,6 +1,7 @@
 ---
 title: "Capodanno: petardi e sicurezza"
 date: 2026-12-30
+draft: false
 description: "Cosa fare con i petardi a Capodanno. Regole semplici per stare al sicuro."
 badge: "Prevenzione"
 priorita: "normale"

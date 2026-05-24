@@ -1,6 +1,7 @@
 ---
 title: "Nebbia: come guidare in sicurezza"
 date: 2026-11-12
+draft: false
 description: "La nebbia è pericolosa in auto. Ecco cosa fare per guidare sicuro."
 badge: "Prevenzione"
 priorita: "normale"

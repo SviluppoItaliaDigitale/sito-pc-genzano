@@ -1,6 +1,7 @@
 ---
 title: "Mozziconi di sigaretta e incendi: cosa sapere"
 date: 2026-05-31
+draft: false
 description: "Il 31 maggio è la Giornata senza tabacco. I mozziconi buttati per terra possono causare incendi."
 badge: "Prevenzione"
 priorita: "normale"

@@ -1,6 +1,7 @@
 ---
 title: "L'influenza in inverno: cosa fare"
 date: 2026-12-18
+draft: false
 description: "A dicembre e gennaio arriva l'influenza. Ecco come prevenirla e come stare meglio."
 badge: "Prevenzione"
 priorita: "normale"

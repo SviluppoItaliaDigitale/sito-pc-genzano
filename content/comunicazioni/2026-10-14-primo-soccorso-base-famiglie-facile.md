@@ -1,6 +1,7 @@
 ---
 title: "Primo soccorso in famiglia: cosa fare"
 date: 2026-10-14
+draft: false
 description: "Cosa fare in casa quando qualcuno si fa male. Frasi semplici per tutti."
 badge: "Prevenzione"
 priorita: "normale"

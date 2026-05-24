@@ -1,6 +1,7 @@
 ---
 title: "Freddo intenso: come proteggersi e aiutare gli anziani"
 date: 2026-11-05
+draft: false
 description: "Il grande freddo è pericoloso. Leggi cosa fare per stare al sicuro e aiutare chi è solo."
 badge: "Prevenzione"
 priorita: "normale"

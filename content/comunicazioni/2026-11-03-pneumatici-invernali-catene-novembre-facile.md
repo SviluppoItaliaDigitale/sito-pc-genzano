@@ -1,6 +1,7 @@
 ---
 title: "Pneumatici invernali e catene: le regole di novembre"
 date: 2026-11-03
+draft: false
 description: "Dal 15 novembre devi avere pneumatici invernali o catene in auto. Ecco cosa fare."
 badge: "Prevenzione"
 priorita: "normale"

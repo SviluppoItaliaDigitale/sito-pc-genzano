@@ -255,6 +255,7 @@ Elenco completo in rule `09-regole-contenuti-qualita.md`. Vincoli più critici:
 
 Tabella completa workflow + note operative in rule `10-automazioni-github-actions.md`. Trigger rapidi:
 - `deploy.yml` a ogni push su `main`.
+- `aggiorna-manuale.yml` (lunedì 06:00 UTC): monitora le fonti AGID/Designers Italia/DPC e apre issue quando cambiano — manuale e `.claude/rules/` vanno aggiornati in coppia (rule 02 § "Sincronizzazione automatica con gli aggiornamenti AGID").
 - Modalità emergenza: `data/emergenza.json` → `"attiva": true`.
 - Allerta meteo manuale: `data/allerta.json` → `livello: verde|giallo|arancione|rosso`.
 - Niente articoli `draft: true`: solo pubblicato (data passata) o calendarizzato (data futura).

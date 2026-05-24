@@ -1,6 +1,7 @@
 ---
 title: "Siccità: cosa puoi fare tu per l'acqua"
 date: 2026-07-18
+draft: false
 description: "La siccità è quando piove poco. L'acqua scarseggia. Puoi aiutare con gesti semplici ogni giorno."
 badge: "Prevenzione"
 priorita: "normale"

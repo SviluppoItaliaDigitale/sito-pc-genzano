@@ -1,6 +1,7 @@
 ---
 title: "Come conservare il cibo a casa"
 date: 2025-06-10
+draft: false
 description: "Regole semplici per conservare il cibo bene e sprecare meno."
 badge: "Prevenzione"
 priorita: "normale"

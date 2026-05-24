@@ -1,6 +1,7 @@
 ---
 title: "Rientro dal ponte: guida sicura e stanchezza"
 date: 2026-12-09
+draft: false
 description: "Consigli pratici per tornare a casa in sicurezza dopo il ponte dell'Immacolata."
 badge: "Prevenzione"
 priorita: "normale"

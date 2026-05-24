@@ -1,6 +1,7 @@
 ---
 title: "Kit di emergenza in auto per le vacanze"
 date: 2026-07-03
+draft: false
 description: "Cosa mettere in auto prima di partire. Come comportarsi in caso di panne o incidente."
 badge: "Prevenzione"
 priorita: "normale"

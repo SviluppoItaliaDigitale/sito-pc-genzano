@@ -1,6 +1,7 @@
 ---
 title: "Estate e piogge forti: cosa può succedere e cosa fare"
 date: 2026-06-22
+draft: false
 description: "D'estate ci sono rischi di frane e allagamenti. Spieghiamo perché e cosa fare."
 badge: "Prevenzione"
 priorita: "normale"

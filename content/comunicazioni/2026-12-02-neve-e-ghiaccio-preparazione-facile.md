@@ -1,6 +1,7 @@
 ---
 title: "Neve e ghiaccio: cosa fare"
 date: 2026-12-02
+draft: false
 description: "Neve e ghiaccio a Genzano di Roma: come prepararsi e cosa fare."
 badge: "Prevenzione"
 priorita: "normale"

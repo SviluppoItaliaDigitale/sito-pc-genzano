@@ -1,6 +1,7 @@
 ---
 title: "Cucina senza sprechi: come usare tutto il cibo"
 date: 2025-10-16
+draft: false
 description: "Bucce, gambi, avanzi: non buttare il cibo. Ecco come usarlo tutto."
 badge: "Prevenzione"
 priorita: "normale"

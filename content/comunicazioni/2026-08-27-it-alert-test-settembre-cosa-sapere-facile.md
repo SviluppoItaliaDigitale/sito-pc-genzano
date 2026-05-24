@@ -1,6 +1,7 @@
 ---
 title: "IT-Alert: cosa è e cosa fare"
 date: 2026-08-27
+draft: false
 description: "IT-Alert è il sistema di allarme sul cellulare. Cosa fare quando suona."
 badge: "Informazione"
 priorita: "normale"

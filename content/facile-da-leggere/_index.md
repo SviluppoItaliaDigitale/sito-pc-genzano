@@ -354,7 +354,7 @@ dataUltimaRevisione: "2026-05-06"
 
 <p>Sono luoghi aperti e larghi.</p>
 <p>Vai lì se la tua casa non è sicura.</p>
-<p><a href="/cartografia/" style="display: inline-block; background: #003366; color: #fff; padding: 0.8rem 1.2rem; border-radius: 8px; text-decoration: none; margin-top: 0.5rem;">Vedi le aree di attesa di Genzano</a></p>
+<p><a href="/cartografia/" style="display: inline-block; background: #003366; color: #fff; padding: 0.8rem 1.2rem; border-radius: 8px; text-decoration: none; margin-top: 0.5rem;">Vedi le aree di attesa di Genzano di Roma</a></p>
 </div>
 
 <div class="facile-blocco">

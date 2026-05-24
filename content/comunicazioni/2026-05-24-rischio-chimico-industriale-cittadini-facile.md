@@ -1,6 +1,7 @@
 ---
 title: "Rischio chimico: cosa fare in caso di incidente"
 date: 2026-05-24T00:01:00+02:00
+draft: false
 description: "Cosa fare se c'è un incidente chimico vicino a te. Guida in italiano semplice."
 badge: "Informazione"
 priorita: "normale"

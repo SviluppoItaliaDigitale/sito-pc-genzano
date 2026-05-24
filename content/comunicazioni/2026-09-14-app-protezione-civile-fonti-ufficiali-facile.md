@@ -1,6 +1,7 @@
 ---
 title: "Le app giuste da avere nel telefono"
 date: 2026-09-14
+draft: false
 description: "Quali app e siti seguire per sapere cosa succede in caso di rischio o emergenza."
 badge: "Informazione"
 priorita: "normale"

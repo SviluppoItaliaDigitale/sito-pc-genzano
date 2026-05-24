@@ -1,6 +1,7 @@
 ---
 title: "Ricevere i pacchi di Natale: cosa fare"
 date: 2026-12-16
+draft: false
 description: "Prima di Natale arrivano molti pacchi. Ecco come riceverli, evitare truffe e smaltire gli imballaggi."
 badge: "Prevenzione"
 priorita: "normale"
