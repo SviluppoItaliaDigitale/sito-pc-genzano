@@ -154,7 +154,7 @@ Con l'evoluzione della normativa sul Terzo Settore, alla fine del **2023** il Gr
 Di seguito sono riportati alcuni eventi e calamità in cui il Gruppo ha partecipato ad attività di supporto, dalla fondazione a oggi.
 
 {{< foto src="/images/storica-gruppo-volontari-anni-90.webp"
-         alt="Foto storica del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma negli anni Novanta: sei volontari in divisa azzurra schierati davanti a due automezzi del Gruppo, tra cui un'autobotte con la scritta 'Protezione Civile — Comune di Genzano'"
+         alt="Foto storica del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma negli anni Novanta: sei volontari in divisa azzurra schierati davanti a due automezzi del Gruppo, tra cui un'autobotte con la scritta 'Protezione Civile — Comune di Genzano di Roma'"
          caption="Una foto storica del Gruppo, anni Novanta. I volontari in divisa azzurra schierati davanti agli automezzi di servizio del Comune di Genzano." >}}
 
 <div class="timeline-wrapper mt-4">

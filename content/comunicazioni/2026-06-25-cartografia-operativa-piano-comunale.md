@@ -56,7 +56,7 @@ Il Piano identifica tre tipi di aree di emergenza:
 - **Aree di accoglienza** — zone attrezzate per ospitare sfollati a medio termine (strutture coperte, tendopoli).
 - **Aree di ammassamento** — zone per concentrare mezzi e personale di soccorso.
 
-Per Genzano queste aree sono identificate nel **Piano comunale** e dovrebbero essere note a tutti i cittadini.
+Per Genzano di Roma queste aree sono identificate nel **Piano comunale** e dovrebbero essere note a tutti i cittadini.
 
 ## La microzonazione sismica in cartografia
 

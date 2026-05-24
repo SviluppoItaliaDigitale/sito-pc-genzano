@@ -41,7 +41,7 @@ L'edizione **autunno 2026** di Io Non Rischio è la principale iniziativa pubbli
 Molti territori organizzano una **settimana dedicata** (data variabile per Regione) con eventi, lezioni, esercitazioni dimostrative.
 
 ### Lezioni nelle scuole
-Da ottobre partono i primi cicli di **lezioni nelle scuole** di Genzano, in coordinamento con i dirigenti scolastici.
+Da ottobre partono i primi cicli di **lezioni nelle scuole** di Genzano di Roma, in coordinamento con i dirigenti scolastici.
 
 ### Corso base volontari
 Le **iscrizioni al corso base** restano aperte fino al 31 ottobre. Il corso inizia nella seconda metà del mese.

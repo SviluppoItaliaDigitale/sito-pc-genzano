@@ -83,7 +83,7 @@ I corsi di **PBLSD** (Pediatric Basic Life Support and Defibrillation) durano 5-
 
 - [Italian Resuscitation Council (IRC)](https://www.ircouncil.it/)
 - [Croce Rossa Italiana](https://www.cri.it/)
-- ASL locali (ASL Roma 6 per il territorio di Genzano)
+- ASL locali (ASL Roma 6 per il territorio di Genzano di Roma)
 - Società pediatriche e associazioni di genitori
 - Alcune scuole dell'infanzia, per genitori e personale
 

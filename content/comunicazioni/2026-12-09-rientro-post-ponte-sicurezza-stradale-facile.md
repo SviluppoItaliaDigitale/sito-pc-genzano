@@ -57,7 +57,7 @@ In inverno le strade sono più pericolose.
 - Ghiaccio al mattino sulle strade fredde.
 - Foglie bagnate: scivolano come il ghiaccio.
 - Nebbia al mattino.
-- Poca luce: a Genzano fa buio verso le 16:40.
+- Poca luce: a Genzano di Roma fa buio verso le 16:40.
 
 ### Come guidare in sicurezza
 

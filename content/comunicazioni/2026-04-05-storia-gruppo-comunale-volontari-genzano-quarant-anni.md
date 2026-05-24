@@ -1,7 +1,7 @@
 ---
 title: "Quarant'anni di volontariato: la storia del Gruppo Comunale di Genzano di Roma, dalle radio CB al Terzo Settore"
 date: 2026-04-05
-description: "Dagli anni '80 come gruppo CB, all'istituzione nel 1993, alla flotta moderna: la storia del Gruppo Comunale di Genzano."
+description: "Dagli anni '80 come gruppo CB, all'istituzione nel 1993, alla flotta moderna: la storia del Gruppo Comunale di Genzano di Roma."
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -19,7 +19,7 @@ draft: false
 
 ## Gli anni Ottanta: dalla banda cittadina al volontariato organizzato
 
-La scintilla iniziale scocca tra la fine degli anni Settanta e l'inizio degli Ottanta. Un gruppo di cittadini di Genzano, appassionati di radiocomunicazioni in banda cittadina (CB), si ritrova per costituire una prima associazione di volontari. In quegli anni la radio CB è uno strumento popolare, accessibile, e durante le emergenze sul territorio si rivela spesso l'unico modo per coordinare persone e mezzi quando il telefono fisso non basta o non arriva.
+La scintilla iniziale scocca tra la fine degli anni Settanta e l'inizio degli Ottanta. Un gruppo di cittadini di Genzano di Roma, appassionati di radiocomunicazioni in banda cittadina (CB), si ritrova per costituire una prima associazione di volontari. In quegli anni la radio CB è uno strumento popolare, accessibile, e durante le emergenze sul territorio si rivela spesso l'unico modo per coordinare persone e mezzi quando il telefono fisso non basta o non arriva.
 
 Dal gruppo CB all'idea di un vero e proprio servizio di protezione civile il passo è breve. L'Italia intera, negli anni Ottanta, sta elaborando la lezione di due tragedie che segneranno la storia del volontariato: il **terremoto dell'Irpinia del 23 novembre 1980** e l'**incidente di Vermicino del giugno 1981**. Sono gli eventi che convincono il Paese della necessità di un sistema nazionale strutturato, e nelle comunità locali crescono le esperienze che poi confluiranno nei gruppi comunali.
 

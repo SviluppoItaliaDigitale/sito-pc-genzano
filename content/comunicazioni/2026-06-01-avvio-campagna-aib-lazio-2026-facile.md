@@ -34,7 +34,7 @@ Queste persone lavorano insieme per spegnere gli incendi:
 - La **Regione Lazio** coordina tutto.
 - Il **Comune** informa i cittadini.
 
-Il nostro Gruppo di Genzano fa turni di osservazione nelle zone a rischio.
+Il nostro Gruppo di Genzano di Roma fa turni di osservazione nelle zone a rischio.
 
 ## Cosa è vietato dal 1 giugno
 

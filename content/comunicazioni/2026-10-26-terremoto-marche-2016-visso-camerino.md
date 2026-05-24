@@ -74,7 +74,7 @@ A livello di **sistema**, dopo il Centro Italia 2016 sono stati introdotti o acc
 
 ## Cosa deve sapere il cittadino oggi
 
-Per chi vive in zona sismica — e a Genzano, classificato **2B**, vale anche per noi:
+Per chi vive in zona sismica — e a Genzano di Roma, classificato **2B**, vale anche per noi:
 
 1. **Conoscere la classe sismica della propria casa**. Edifici post-2008 (NTC 2008) o post-2018 (NTC 2018) sono progettati antisismicamente. Edifici precedenti possono essere stati o non essere stati adeguati.
 2. **Verificare la vulnerabilità dell'edificio**: è un'analisi tecnica che un ingegnere strutturista può eseguire (costo significativo ma necessario per chi vive in zone di sismicità medio-alta). Per gli edifici scolastici, il dato è pubblico (vedi anche [San Giuliano di Puglia 2002](/comunicazioni/2026-10-31-san-giuliano-puglia-2002-scuole-sicure/)).

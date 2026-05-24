@@ -90,7 +90,7 @@ Ogni volontario è responsabile della **cura** della propria divisa:
 
 La divisa deve permettere di identificare:
 
-- **appartenenza** al Gruppo Comunale di Genzano;
+- **appartenenza** al Gruppo Comunale di Genzano di Roma;
 - **logo** PC Genzano;
 - **eventuale** ruolo (squadra specifica, responsabile);
 - **numero** di identificazione volontario.

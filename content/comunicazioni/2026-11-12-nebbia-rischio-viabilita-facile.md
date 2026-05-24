@@ -22,7 +22,7 @@ La nebbia è pericolosa. Anche se non sembra una grande emergenza, ogni anno ci 
 
 ## Cos'è la nebbia
 
-La nebbia è come una nuvola vicina alla strada. Quando c'è la nebbia, vedi meno lontano. Sotto i 50 metri è molto pericolosa. A Genzano e nei Castelli Romani, la nebbia arriva spesso in autunno e in inverno. Si forma vicino al lago di Nemi e nelle valli.
+La nebbia è come una nuvola vicina alla strada. Quando c'è la nebbia, vedi meno lontano. Sotto i 50 metri è molto pericolosa. A Genzano di Roma e nei Castelli Romani, la nebbia arriva spesso in autunno e in inverno. Si forma vicino al lago di Nemi e nelle valli.
 
 ## I 3 errori più comuni
 

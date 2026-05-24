@@ -87,7 +87,7 @@ La **certificazione BLS-D** ha durata **biennale**. Va rinnovata con un retraini
 - le **competenze pratiche** si arrugginiscono;
 - i **dispositivi** possono cambiare.
 
-## A Genzano
+## A Genzano di Roma
 
 Il Gruppo Comunale di PC include il BLS-D nel corso base dei volontari. Cittadini interessati a formarsi possono rivolgersi a:
 

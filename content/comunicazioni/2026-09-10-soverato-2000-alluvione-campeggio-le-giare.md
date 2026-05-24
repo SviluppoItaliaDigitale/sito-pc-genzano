@@ -41,7 +41,7 @@ Soverato 2000 è memoria dolorosa ma essenziale. Tre lezioni:
 
 3. **Le piene improvvise notturne sono particolarmente letali.** Quando l'allerta arriva di notte, mentre la gente dorme, il margine di reazione è minimo. Per questo i sistemi di **allarme acustico** (sirene comunali, IT-alert sui telefoni) sono strumenti essenziali nelle zone a rischio idraulico noto.
 
-## A Genzano
+## A Genzano di Roma
 
 A Genzano e nei Castelli Romani non abbiamo la specificità geografica di Soverato (campeggi vicino a torrenti a regime torrentizio), ma la lezione vale per:
 

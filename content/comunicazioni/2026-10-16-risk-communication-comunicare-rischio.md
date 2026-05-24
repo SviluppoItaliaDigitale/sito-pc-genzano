@@ -65,7 +65,7 @@ Il **Dipartimento della Protezione Civile** e le **Regioni** hanno strutturato, 
 
 ## Il livello comunale
 
-Anche nei piccoli Comuni la comunicazione va curata. A Genzano:
+Anche nei piccoli Comuni la comunicazione va curata. A Genzano di Roma:
 
 - il **Comune** comunica attraverso il proprio sito e i canali istituzionali;
 - il **Gruppo Comunale Volontari di PC** segue una [Social Media Policy](/social-media-policy/) pubblica;

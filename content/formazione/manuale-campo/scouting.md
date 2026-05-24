@@ -57,7 +57,7 @@ A fianco del nucleo, una **squadra di supporto** più piccola segue con mezzo at
 
 ### Al verificarsi dell'evento
 
-- **attivazione** della squadra (nota dal Sindaco di Genzano, Prefettura di Roma, Regione Lazio o DPC a seconda della scala)
+- **attivazione** della squadra (nota dal Sindaco di Genzano di Roma, Prefettura di Roma, Regione Lazio o DPC a seconda della scala)
 - **riunione informativa** in Sala Operativa: raccolta delle prime informazioni (vedi Check-list 3)
 - **pianificazione del viaggio**: valutazione delle distanze per scegliere il mezzo
 - **partenza** della squadra

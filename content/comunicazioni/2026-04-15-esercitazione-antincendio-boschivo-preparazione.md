@@ -39,7 +39,7 @@ L'obiettivo di un'esercitazione AIB è **duplice**:
 
 Un'esercitazione AIB a scala territoriale può coinvolgere:
 
-- **Il Gruppo Comunale** di Genzano e i gruppi dei Comuni vicini.
+- **Il Gruppo Comunale** di Genzano di Roma e i gruppi dei Comuni vicini.
 - **Vigili del Fuoco** con squadre e mezzi.
 - **Carabinieri Forestali** per vigilanza e repressione.
 - **ARES 118** con ambulanze.

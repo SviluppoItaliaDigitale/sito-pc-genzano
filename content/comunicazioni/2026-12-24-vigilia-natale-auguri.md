@@ -1,7 +1,7 @@
 ---
 title: "Vigilia di Natale: auguri dalla Protezione Civile"
 date: 2026-12-24
-description: "Vigilia di Natale 2026. Auguri sinceri dalla Protezione Civile di Genzano a tutta la cittadinanza."
+description: "Vigilia di Natale 2026. Auguri sinceri dalla Protezione Civile di Genzano di Roma a tutta la cittadinanza."
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -29,7 +29,7 @@ A chi ha perso persone care **recentemente** o da tempo, questo è un Natale di 
 
 ## A chi soffre
 
-Oggi ci sono persone a Genzano e nel mondo che soffrono:
+Oggi ci sono persone a Genzano di Roma e nel mondo che soffrono:
 
 - **malati** in ospedale;
 - **soli** in casa;

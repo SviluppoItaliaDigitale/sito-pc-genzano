@@ -15,7 +15,7 @@ allegati: []
 draft: false
 ---
 
-Sono passati **quarantacinque anni** da quei tre giorni. La sera del **10 giugno 1981**, in via Sant'Ireneo, **località Selvotta** lungo la **via di Vermicino** — territorio del Comune di **Frascati**, a pochi chilometri da Genzano — un bambino di **sei anni**, **Alfredo "Alfredino" Rampi**, scivolò in un **pozzo artesiano** lasciato aperto e profondo circa **80 metri**. Si fermò in un restringimento a circa **60 metri** di profondità.
+Sono passati **quarantacinque anni** da quei tre giorni. La sera del **10 giugno 1981**, in via Sant'Ireneo, **località Selvotta** lungo la **via di Vermicino** — territorio del Comune di **Frascati**, a pochi chilometri da Genzano di Roma — un bambino di **sei anni**, **Alfredo "Alfredino" Rampi**, scivolò in un **pozzo artesiano** lasciato aperto e profondo circa **80 metri**. Si fermò in un restringimento a circa **60 metri** di profondità.
 
 {{< foto src="/images/2026-evento-vermicino-1981-pozzo.webp"
          alt="Il pozzo artesiano di Vermicino dove il 10 giugno 1981 precipitò il piccolo Alfredino Rampi"

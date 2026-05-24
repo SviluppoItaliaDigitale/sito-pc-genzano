@@ -14,7 +14,7 @@ howto_dopo: "Riaccendi gli elettrodomestici uno alla volta per evitare sovraccar
 Un blackout può durare ore. Gli eventi meteorologici estremi, i guasti alla rete e i sovraccarichi ne sono le cause più frequenti. Chi usa apparecchiature elettromedicali è esposto a rischi aggiuntivi: prepararsi in anticipo riduce i danni.
 
 ## <i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Perché è rilevante sul nostro territorio {#perche-rilevante}
-A Genzano la rete di distribuzione attraversa aree boschive e collinari. Durante eventi meteo intensi, alberi e rami caduti sulle linee elettriche causano interruzioni frequenti.
+A Genzano di Roma la rete di distribuzione attraversa aree boschive e collinari. Durante eventi meteo intensi, alberi e rami caduti sulle linee elettriche causano interruzioni frequenti.
 
 > 🎒 **Kit consigliato per questo rischio**: il [Kit "Casa 72 ore"](/rischi-prevenzione/kit-emergenza/#kit-casa) è pensato esattamente per questo. Acqua, alimenti che non richiedono cottura, torce, radio a pile, power bank: tutto quello che ti permette di stare autonomo per 3 giorni senza corrente. Per il controllo periodico stampa la [Checklist A4 da frigorifero](/formazione/schede-stampabili/checklist-kit-emergenza/).
 

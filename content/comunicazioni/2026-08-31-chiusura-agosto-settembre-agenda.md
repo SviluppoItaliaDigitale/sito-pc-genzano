@@ -1,5 +1,5 @@
 ---
-title: "Settembre 2026: l'agenda della Protezione Civile di Genzano"
+title: "Settembre 2026: l'agenda della Protezione Civile di Genzano di Roma"
 date: 2026-08-31
 description: "Con la fine di agosto, ecco le attività previste per settembre 2026: esercitazioni, formazione, scuole, incontri pubblici."
 badge: "Aggiornamento"
@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Con l'ultimo giorno di agosto si chiude un mese complesso per la Protezione Civile: ondate di calore, campagna AIB, presidio del territorio in periodo di ferie. **Settembre riapre la stagione** di incontri pubblici, esercitazioni, attività nelle scuole. Un'agenda di massima del Gruppo Comunale Volontari di PC di Genzano per il mese che inizia domani.
+Con l'ultimo giorno di agosto si chiude un mese complesso per la Protezione Civile: ondate di calore, campagna AIB, presidio del territorio in periodo di ferie. **Settembre riapre la stagione** di incontri pubblici, esercitazioni, attività nelle scuole. Un'agenda di massima del Gruppo Comunale Volontari di PC di Genzano di Roma per il mese che inizia domani.
 
 ## Le priorità di settembre
 

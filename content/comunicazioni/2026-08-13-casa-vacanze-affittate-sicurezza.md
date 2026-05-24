@@ -54,7 +54,7 @@ Se si viaggia con **bambini piccoli** o **persone anziane**, aggiungere:
 
 ## Il ruolo della comunità
 
-A Genzano come altrove, l'attivazione di una rete di vicinato è molto utile anche per chi viene ospite per poche settimane. Se vivi in un condominio con molti affitti turistici:
+A Genzano di Roma come altrove, l'attivazione di una rete di vicinato è molto utile anche per chi viene ospite per poche settimane. Se vivi in un condominio con molti affitti turistici:
 
 - **Condividi** informazioni sulle vie di fuga e sulla gestione degli allarmi.
 - **Segnala** anomalie al proprietario.

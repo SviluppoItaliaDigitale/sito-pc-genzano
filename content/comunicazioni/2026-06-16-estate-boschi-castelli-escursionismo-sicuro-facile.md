@@ -106,7 +106,7 @@ Il Parco Regionale dei Castelli Romani suggerisce questi sentieri:
 - **112** — chiama il 112 per qualsiasi emergenza nel bosco.
 - Guardia Parco Castelli Romani — per informazioni e segnalazioni non urgenti.
 
-Il Gruppo Comunale di Genzano può aiutare nelle ricerche di persone disperse. Ma lo attiva sempre il 112.
+Il Gruppo Comunale di Genzano di Roma può aiutare nelle ricerche di persone disperse. Ma lo attiva sempre il 112.
 
 ## Per saperne di più
 

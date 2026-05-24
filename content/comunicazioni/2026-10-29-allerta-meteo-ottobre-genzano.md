@@ -1,7 +1,7 @@
 ---
 title: "Allerta gialla per temporali: il Gruppo segue l'evoluzione"
 date: 2026-10-29T00:01:00+02:00
-description: "Il Centro Funzionale Regionale Lazio ha emesso allerta gialla per temporali. Il Gruppo monitora il territorio di Genzano."
+description: "Il Centro Funzionale Regionale Lazio ha emesso allerta gialla per temporali. Il Gruppo monitora il territorio di Genzano di Roma."
 badge: "Allerta"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -14,7 +14,7 @@ draft: false
 versione_facile: "2026-10-29-allerta-meteo-ottobre-genzano-facile"
 ---
 
-Il **Centro Funzionale Regionale del Lazio** ha emesso **allerta gialla** per **temporali** sul territorio dei **Castelli Romani**, con durata prevista dalle prossime ore fino a **giovedì 30 ottobre** sera. Il Gruppo Comunale Volontari di PC di Genzano segue l'evoluzione e coordina con il Comune.
+Il **Centro Funzionale Regionale del Lazio** ha emesso **allerta gialla** per **temporali** sul territorio dei **Castelli Romani**, con durata prevista dalle prossime ore fino a **giovedì 30 ottobre** sera. Il Gruppo Comunale Volontari di PC di Genzano di Roma segue l'evoluzione e coordina con il Comune.
 
 ## Cosa prevede il bollettino
 

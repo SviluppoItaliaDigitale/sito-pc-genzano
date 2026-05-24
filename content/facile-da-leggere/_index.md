@@ -347,7 +347,7 @@ dataUltimaRevisione: "2026-05-06"
 
 <div class="facile-blocco">
 <h2><span class="icona">📍</span> Dove andare</h2>
-<p>A Genzano ci sono <strong>posti sicuri</strong>.</p>
+<p>A Genzano di Roma ci sono <strong>posti sicuri</strong>.</p>
 <p>Si chiamano <strong>aree di attesa</strong>.</p>
 
 {{< pittogramma src="/pittogrammi/iso7010/punto-raccolta.svg" alt="Cartello del punto di raccolta" size="large" >}}

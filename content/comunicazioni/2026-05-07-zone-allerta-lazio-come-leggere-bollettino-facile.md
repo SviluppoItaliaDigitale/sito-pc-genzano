@@ -1,7 +1,7 @@
 ---
 title: "Le zone di allerta del Lazio: come leggere il bollettino"
 date: 2026-05-07
-description: "Genzano è in Zona F. Questo articolo spiega cosa significa il bollettino di allerta."
+description: "Genzano di Roma è in Zona F. Questo articolo spiega cosa significa il bollettino di allerta."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

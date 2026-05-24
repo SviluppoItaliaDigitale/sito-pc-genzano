@@ -231,7 +231,7 @@ L'Italia ne beneficia con **miliardi di euro** destinati.
 
 ## Il nostro contributo come Gruppo
 
-Il Gruppo di PC di Genzano può:
+Il Gruppo di PC di Genzano di Roma può:
 - **Informare** la cittadinanza sui cambiamenti.
 - **Collaborare** con scuole e Comune.
 - **Formarsi** sulle nuove tecniche.

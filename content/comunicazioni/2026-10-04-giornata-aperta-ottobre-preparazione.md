@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Entra nel vivo la preparazione della **Giornata Aperta** del Gruppo Comunale Volontari di Protezione Civile di Genzano, annunciata nelle scorse settimane. La data precisa, definita in coordinamento con il Comune, viene comunicata puntualmente sul sito e sui canali ufficiali. Ecco gli ultimi aggiornamenti su come partecipare utilmente.
+Entra nel vivo la preparazione della **Giornata Aperta** del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, annunciata nelle scorse settimane. La data precisa, definita in coordinamento con il Comune, viene comunicata puntualmente sul sito e sui canali ufficiali. Ecco gli ultimi aggiornamenti su come partecipare utilmente.
 
 ## Programma di massima
 

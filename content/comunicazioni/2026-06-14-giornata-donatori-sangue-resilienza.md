@@ -72,7 +72,7 @@ Si può donare **ogni 3 mesi** per gli uomini, ogni 6 mesi per le donne in età 
 ## Dove donare nei Castelli Romani
 
 - **ASL Roma 6** — centri prelievo: ospedale dei Castelli, punti periodici nei Comuni.
-- **AVIS** — sezioni di Genzano, Velletri, Marino, Albano, Ariccia.
+- **AVIS** — sezioni di Genzano di Roma, Velletri, Marino, Albano, Ariccia.
 - **FRATRES** — presenti in alcuni Comuni.
 - **Policlinico Tor Vergata** e **ospedali romani** per donazioni pianificate.
 

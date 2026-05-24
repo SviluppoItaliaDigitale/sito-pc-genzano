@@ -41,7 +41,7 @@ Il sisma del Centro Italia ha consolidato alcune lezioni della Protezione Civile
 
 1. **La normativa antisismica funziona, dove è applicata.** Edifici recenti progettati con criteri sismici hanno retto. Edifici storici **mai adeguati** sono crollati. Da qui la spinta al **Sismabonus**, alle linee guida sulla classificazione sismica degli edifici, e alla pianificazione della ricostruzione che impone standard più severi.
 
-2. **L'efficacia dei Centri Operativi.** I Centri Operativi Comunali (COC), Misti (COM) e Coordinati (DICOMAC) hanno permesso di gestire migliaia di soccorritori e decine di migliaia di sfollati in modo coordinato. La pianificazione comunale che chiediamo di sviluppare a Genzano (vedi [Piano di Emergenza](/piano-emergenza/)) si basa sugli stessi principi.
+2. **L'efficacia dei Centri Operativi.** I Centri Operativi Comunali (COC), Misti (COM) e Coordinati (DICOMAC) hanno permesso di gestire migliaia di soccorritori e decine di migliaia di sfollati in modo coordinato. La pianificazione comunale che chiediamo di sviluppare a Genzano di Roma (vedi [Piano di Emergenza](/piano-emergenza/)) si basa sugli stessi principi.
 
 3. **Il volontariato è il moltiplicatore del soccorso.** Senza i 5.000+ volontari attivi nelle prime settimane, il sistema non avrebbe retto. Per questo il [Codice della Protezione Civile](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1) protegge esplicitamente il volontariato organizzato come componente strutturale del Servizio Nazionale.
 

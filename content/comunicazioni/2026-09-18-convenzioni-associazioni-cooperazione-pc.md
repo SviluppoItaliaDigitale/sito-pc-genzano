@@ -1,7 +1,7 @@
 ---
-title: "Chi lavora con chi: le convenzioni del sistema di PC a Genzano"
+title: "Chi lavora con chi: le convenzioni del sistema di PC a Genzano di Roma"
 date: 2026-09-18
-description: "La Protezione Civile è un sistema. A Genzano, il Gruppo collabora con ARI, CRI, Carabinieri Forestali, ASL, enti Parco. Come funzionano le convenzioni."
+description: "La Protezione Civile è un sistema. A Genzano di Roma, il Gruppo collabora con ARI, CRI, Carabinieri Forestali, ASL, enti Parco. Come funzionano le convenzioni."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-La Protezione Civile non è un'unica struttura: è un **sistema integrato** in cui enti pubblici, volontariato organizzato, Forze Armate, sanità e associazioni cooperano attraverso **convenzioni**, **protocolli operativi**, **pianificazioni condivise**. A Genzano, il Gruppo Comunale Volontari collabora con una rete di realtà che vale la pena conoscere.
+La Protezione Civile non è un'unica struttura: è un **sistema integrato** in cui enti pubblici, volontariato organizzato, Forze Armate, sanità e associazioni cooperano attraverso **convenzioni**, **protocolli operativi**, **pianificazioni condivise**. A Genzano di Roma, il Gruppo Comunale Volontari collabora con una rete di realtà che vale la pena conoscere.
 
 ## I principali partner
 

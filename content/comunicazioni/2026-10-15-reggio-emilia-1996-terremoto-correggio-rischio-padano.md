@@ -54,7 +54,7 @@ Dopo il 1996, e ancor più dopo San Giuliano di Puglia 2002 (vedi [articolo](/co
 
 L'Emilia-Romagna è stata fra le prime regioni a riclassificare integralmente il proprio territorio.
 
-## A Genzano
+## A Genzano di Roma
 
 Il caso emiliano è importante per noi perché dimostra che **la classificazione sismica non è teorica**. Genzano è in **zona 2B**, pericolosità media. È una valutazione scientifica, non un'opinione. Vale la pena rispettarla:
 - Quando si costruisce o ristruttura: chiedere al tecnico se sono applicate le NTC vigenti

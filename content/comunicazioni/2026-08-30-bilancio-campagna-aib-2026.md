@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Con la fine dell'estate meteorologica si può fare un primo bilancio operativo della **campagna antincendio boschivo 2026** che il Gruppo Comunale Volontari di Protezione Civile di Genzano ha condiviso, come ogni anno, con il sistema territoriale di PC dei Castelli Romani.
+Con la fine dell'estate meteorologica si può fare un primo bilancio operativo della **campagna antincendio boschivo 2026** che il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma ha condiviso, come ogni anno, con il sistema territoriale di PC dei Castelli Romani.
 
 ## Il quadro generale
 

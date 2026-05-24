@@ -50,7 +50,7 @@ Chiamare un vicino una volta al giorno, anche solo per sapere come sta, è un ge
 
 ## L'attività del Gruppo
 
-Il Gruppo Comunale Volontari di Protezione Civile di Genzano continua la sua attività con:
+Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma continua la sua attività con:
 
 - **turni di avvistamento** antincendio;
 - **presidio** di eventi comunali;

@@ -1,7 +1,7 @@
 ---
-title: "Nuovo logo della Protezione Civile: cosa cambia per i volontari di Genzano"
+title: "Nuovo logo della Protezione Civile: cosa cambia per i volontari di Genzano di Roma"
 date: 2026-04-03
-description: "Il Dipartimento della Protezione Civile ha adottato una nuova identità visiva. Ecco cosa cambia per il Gruppo di Genzano."
+description: "Il Dipartimento della Protezione Civile ha adottato una nuova identità visiva. Ecco cosa cambia per il Gruppo di Genzano di Roma."
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -42,7 +42,7 @@ Le versioni ufficiali sono tre:
 
 Non è ammesso modificare proporzioni, colori o tipografia: il rispetto del Regolamento è condizione di corretto utilizzo del marchio.
 
-## Come viene applicato a Genzano
+## Come viene applicato a Genzano di Roma
 
 Il Comune sta aggiornando l'utilizzo del logo in modo graduale. Nella prima fase si interviene sul sito web e sui profili social ufficiali. In seguito si aggiorneranno la segnaletica, gli adesivi sui mezzi di soccorso e, progressivamente, le patch sulle uniformi dei volontari.
 

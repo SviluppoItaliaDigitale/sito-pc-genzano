@@ -86,7 +86,7 @@ Il modello che ha dimostrato di salvare più vite durante le ondate di calore è
 - **Servizi sociali** attivano visite domiciliari in caso di dubbio.
 - **Cooperative di vicinato** organizzano piccole commissioni (farmacia, spesa).
 
-A Genzano, in caso di allerta rossa, il **Comune** e i **Servizi sociali** attivano protocolli dedicati. Come volontari di PC possiamo supportare.
+A Genzano di Roma, in caso di allerta rossa, il **Comune** e i **Servizi sociali** attivano protocolli dedicati. Come volontari di PC possiamo supportare.
 
 ## Cosa può fare un cittadino
 

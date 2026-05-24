@@ -47,7 +47,7 @@ Durante queste esercitazioni, i **Gruppi Comunali di Volontariato di PC** posson
 - **accoglienza popolazione** figurante;
 - **assistenza a evacuazioni simulate**.
 
-Il Gruppo di Genzano, quando attivato dalla Regione Lazio, partecipa in coordinamento con gli altri Gruppi del Lazio.
+Il Gruppo di Genzano di Roma, quando attivato dalla Regione Lazio, partecipa in coordinamento con gli altri Gruppi del Lazio.
 
 ## Cosa lascia al territorio
 

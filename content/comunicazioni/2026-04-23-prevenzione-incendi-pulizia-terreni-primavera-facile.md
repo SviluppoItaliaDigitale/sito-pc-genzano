@@ -80,7 +80,7 @@ Quando chiami il 112:
 
 ## Il volontariato di PC Genzano
 
-Il Gruppo Comunale Volontari di Protezione Civile di Genzano fa sorveglianza in estate. Lavora con altri gruppi dei Castelli Romani. Grazie a questa sorveglianza, molti incendi restano piccoli.
+Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma fa sorveglianza in estate. Lavora con altri gruppi dei Castelli Romani. Grazie a questa sorveglianza, molti incendi restano piccoli.
 
 Vuoi diventare volontario? Leggi la pagina [Diventa volontario](/diventa-volontario/).
 

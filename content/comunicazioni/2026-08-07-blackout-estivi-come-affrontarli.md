@@ -57,7 +57,7 @@ devono **segnalare** la propria condizione al distributore di zona per essere in
 
 ## Il ruolo della Protezione Civile
 
-In caso di blackout diffuso e prolungato (oltre 12 ore) su Genzano, il Comune può attivare il Centro Operativo Comunale e chiedere al Gruppo Comunale Volontari di supportare:
+In caso di blackout diffuso e prolungato (oltre 12 ore) su Genzano di Roma, il Comune può attivare il Centro Operativo Comunale e chiedere al Gruppo Comunale Volontari di supportare:
 
 - il presidio di punti nevralgici (case di riposo, RSA, cittadini fragili identificati);
 - il presidio di incroci rimasti senza semafori;

@@ -32,7 +32,7 @@ Siamo a **metà dicembre 2026**. Mancano **10 giorni** al Natale e **16** a Capo
 - **cielo** variabile.
 
 ### Emergenze
-In questi 15 giorni: **nessuna emergenza rilevante** sul territorio di Genzano. Attività ordinaria di monitoraggio, coordinamento e prevenzione.
+In questi 15 giorni: **nessuna emergenza rilevante** sul territorio di Genzano di Roma. Attività ordinaria di monitoraggio, coordinamento e prevenzione.
 
 ## I prossimi giorni: fino a Natale
 

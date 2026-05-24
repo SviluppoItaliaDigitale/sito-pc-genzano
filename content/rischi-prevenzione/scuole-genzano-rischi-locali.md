@@ -1,5 +1,5 @@
 ---
-title: "Scuole di Genzano e rischi locali"
+title: "Scuole di Genzano di Roma e rischi locali"
 description: "Indicazioni di prevenzione per scuole, famiglie e studenti di Genzano di Roma: rischi locali, aree di attesa, kit e comportamenti corretti."
 tts: true
 weight: 8

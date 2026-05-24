@@ -77,7 +77,7 @@ Vai dal medico subito. Digli se sei tornato da un viaggio recente. Il medico fa 
 
 ## Il Comune disinfesta
 
-Il Comune tratta le strade e i tombini con prodotti anti-larve. A Genzano ci sono trattamenti ogni estate. Rispetta le ordinanze del Comune. Non creare ristagni nel tuo giardino.
+Il Comune tratta le strade e i tombini con prodotti anti-larve. A Genzano di Roma ci sono trattamenti ogni estate. Rispetta le ordinanze del Comune. Non creare ristagni nel tuo giardino.
 
 ## Se viaggi in zone tropicali
 

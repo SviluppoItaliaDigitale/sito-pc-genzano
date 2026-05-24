@@ -1,7 +1,7 @@
 ---
 title: "Apertura iscrizioni al corso base per volontari di Protezione Civile"
 date: 2026-09-07
-description: "Sono aperte le iscrizioni al nuovo corso base del Gruppo Comunale Volontari di PC di Genzano. Programma, requisiti, modalità di iscrizione."
+description: "Sono aperte le iscrizioni al nuovo corso base del Gruppo Comunale Volontari di PC di Genzano di Roma. Programma, requisiti, modalità di iscrizione."
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Sono aperte le **iscrizioni al nuovo corso base** per diventare **Volontario di Protezione Civile** nel Gruppo Comunale di Genzano. Il percorso è obbligatorio per chi vuole entrare nel Gruppo. È gratuito, si svolge in orario serale e prefestivo, e si conclude con un'abilitazione operativa riconosciuta dalla Regione Lazio.
+Sono aperte le **iscrizioni al nuovo corso base** per diventare **Volontario di Protezione Civile** nel Gruppo Comunale di Genzano di Roma. Il percorso è obbligatorio per chi vuole entrare nel Gruppo. È gratuito, si svolge in orario serale e prefestivo, e si conclude con un'abilitazione operativa riconosciuta dalla Regione Lazio.
 
 ## A chi è rivolto
 

@@ -74,7 +74,7 @@ Quando c'è un incendio nel Lazio intervengono:
 
 ## Il nostro Gruppo in estate
 
-Il Gruppo Comunale di Genzano lavora in estate per prevenire gli incendi. I volontari:
+Il Gruppo Comunale di Genzano di Roma lavora in estate per prevenire gli incendi. I volontari:
 
 - Controllano le zone a rischio.
 - Supportano i Vigili del Fuoco quando serve.

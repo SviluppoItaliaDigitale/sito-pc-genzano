@@ -65,6 +65,6 @@ Le prove sono comunicate prima al personale scolastico. Una vera emergenza viene
 
 ## Il Gruppo di Protezione Civile aiuta le scuole
 
-Il Gruppo Comunale Volontari di Protezione Civile di Genzano collabora con le scuole. Può supportare le prove di evacuazione. Può fare lezioni nelle classi sui rischi del territorio.
+Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma collabora con le scuole. Può supportare le prove di evacuazione. Può fare lezioni nelle classi sui rischi del territorio.
 
 In emergenza chiama il **112**.

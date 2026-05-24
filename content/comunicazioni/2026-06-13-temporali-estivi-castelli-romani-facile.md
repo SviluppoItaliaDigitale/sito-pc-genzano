@@ -70,7 +70,7 @@ Puoi anche controllare le allerte meteo della Regione Lazio. Le pubblica il CFR,
 
 ## Se le strade si allagano
 
-Le strade di Genzano possono allagarsi quando piove molto. I sottopassi sono i punti più a rischio.
+Le strade di Genzano di Roma possono allagarsi quando piove molto. I sottopassi sono i punti più a rischio.
 
 - Non entrare nei sottopassi allagati, né a piedi né in auto.
 - Non parcheggiare in strade in pendenza o sotto alberi.

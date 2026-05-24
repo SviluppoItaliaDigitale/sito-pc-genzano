@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Con l'arrivo dell'autunno inoltrato, il Gruppo Comunale Volontari di Protezione Civile di Genzano si prepara alla **stagione invernale**. Anche nel Lazio gli eventi di neve, gelo e **ondate di freddo** possono richiedere intervento: meglio essere pronti.
+Con l'arrivo dell'autunno inoltrato, il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma si prepara alla **stagione invernale**. Anche nel Lazio gli eventi di neve, gelo e **ondate di freddo** possono richiedere intervento: meglio essere pronti.
 
 ## Cosa comporta la preparazione invernale
 

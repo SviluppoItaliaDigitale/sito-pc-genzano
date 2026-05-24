@@ -63,7 +63,7 @@ Quando sai che arriva una pioggia forte:
 
 ## Quando interviene il Gruppo di Protezione Civile
 
-Il Gruppo Comunale Volontari di Protezione Civile di Genzano interviene quando lo chiede il Comune. Lavora insieme alla Polizia Locale e ai Vigili del Fuoco. Il Gruppo presidia i luoghi a rischio. Aiuta i cittadini nelle zone difficili. Dà informazioni verificate alla popolazione.
+Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma interviene quando lo chiede il Comune. Lavora insieme alla Polizia Locale e ai Vigili del Fuoco. Il Gruppo presidia i luoghi a rischio. Aiuta i cittadini nelle zone difficili. Dà informazioni verificate alla popolazione.
 
 Il COC (Centro Operativo Comunale) coordina tutte le operazioni.
 

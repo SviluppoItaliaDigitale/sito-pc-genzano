@@ -24,7 +24,7 @@ Il **Codice della Strada** (art. 6) e le **ordinanze prefettizie** regionali:
 - periodo: **dal 15 novembre al 15 aprile**;
 - **sanzioni** per chi non si adegua;
 - **responsabilità** personale del conducente;
-- l'obbligo scatta su specifiche arterie (strade di montagna e pianura a rischio); per Genzano e i Castelli Romani il **rispetto** si applica anche sulle strade principali in caso di neve o ghiaccio.
+- l'obbligo scatta su specifiche arterie (strade di montagna e pianura a rischio); per Genzano di Roma e i Castelli Romani il **rispetto** si applica anche sulle strade principali in caso di neve o ghiaccio.
 
 ## Pneumatici invernali
 

@@ -69,7 +69,7 @@ Se il messaggio non è un test:
 
 1. Leggi bene il testo.
 2. Segui le istruzioni che il messaggio ti dà.
-3. Controlla il sito del Comune di Genzano o il sito del DPC per aggiornamenti.
+3. Controlla il sito del Comune di Genzano di Roma o il sito del DPC per aggiornamenti.
 4. Non mandare informazioni non verificate ad altri.
 5. Metti in pratica i comportamenti di sicurezza che conosci.
 

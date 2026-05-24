@@ -137,7 +137,7 @@ La **scuola** è il luogo principale dove i bambini acquisiscono:
 - **professionalità** della PC in visite;
 - **continuità** educativa tra le età.
 
-Il **Gruppo Comunale di PC** collabora con le scuole del territorio di Genzano.
+Il **Gruppo Comunale di PC** collabora con le scuole del territorio di Genzano di Roma.
 
 ## Il ruolo della famiglia
 

@@ -34,7 +34,7 @@ Negli ultimi anni il Lazio ha avuto spesso estati molto secche.
 
 ## I nostri laghi
 
-I laghi di **Nemi** e **Albano** sono vicini a Genzano. Sono importanti per il nostro territorio. Negli ultimi anni il loro livello è sceso. Questo è preoccupante. Le autorità li controllano.
+I laghi di **Nemi** e **Albano** sono vicini a Genzano di Roma. Sono importanti per il nostro territorio. Negli ultimi anni il loro livello è sceso. Questo è preoccupante. Le autorità li controllano.
 
 ## Cosa puoi fare a casa
 

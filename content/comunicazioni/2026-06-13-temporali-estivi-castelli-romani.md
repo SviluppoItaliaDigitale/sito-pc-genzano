@@ -23,7 +23,7 @@ I **temporali convettivi** nascono dal riscaldamento del suolo durante la giorna
 - **Formazione** in poche ore nel primo pomeriggio-serata.
 - **Durata** relativamente breve (30 minuti - 2 ore).
 - **Intensità** molto alta: pioggia torrenziale, grandine, vento forte, fulmini.
-- **Estensione** spesso limitata (qualche chilometro quadrato): può diluviare a Genzano e fare sole a Lanuvio.
+- **Estensione** spesso limitata (qualche chilometro quadrato): può diluviare a Genzano di Roma e fare sole a Lanuvio.
 
 I Castelli Romani, con la loro **orografia collinare**, sono particolarmente esposti: l'aria calda risalendo i versanti accelera la convezione.
 

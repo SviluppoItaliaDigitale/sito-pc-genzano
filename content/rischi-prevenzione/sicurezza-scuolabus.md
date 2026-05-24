@@ -101,7 +101,7 @@ Durante una gita scolastica i principi non cambiano: si resta con il gruppo, si 
 
 **Sul nostro sito**
 
-- [Scuole di Genzano e rischi locali](/rischi-prevenzione/scuole-genzano-rischi-locali/)
+- [Scuole di Genzano di Roma e rischi locali](/rischi-prevenzione/scuole-genzano-rischi-locali/)
 - [Rischio sismico: cosa fare](/rischi-prevenzione/rischio-sismico/)
 - [Piano familiare di emergenza](/piano-familiare/)
 - [Numeri utili](/numeri-utili/)

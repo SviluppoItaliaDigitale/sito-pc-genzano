@@ -118,7 +118,7 @@ Se noti cani randagi o colonie di gatti in difficoltà:
 - **Segnala** al Comune colonie in aree pericolose.
 - **Collabora** con associazioni animaliste locali.
 
-Il Comune di Genzano ha un **servizio tutela animali** attivato tramite URP.
+Il Comune di Genzano di Roma ha un **servizio tutela animali** attivato tramite URP.
 
 ## Cosa fare se vedi un animale abbandonato
 

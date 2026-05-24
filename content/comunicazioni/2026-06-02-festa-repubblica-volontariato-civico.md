@@ -33,7 +33,7 @@ Le grandi esercitazioni nazionali, i campi di accoglienza nelle emergenze, le co
 
 ## Genzano di Roma: una storia di quarant'anni
 
-Il Gruppo comunale di Genzano compie nel 2026 **45 anni di attività**. La nostra storia si intreccia con le grandi emergenze nazionali — dall'Irpinia al Centro Italia 2016 — e con il quotidiano lavoro di prevenzione e formazione sul territorio.
+Il Gruppo comunale di Genzano di Roma compie nel 2026 **45 anni di attività**. La nostra storia si intreccia con le grandi emergenze nazionali — dall'Irpinia al Centro Italia 2016 — e con il quotidiano lavoro di prevenzione e formazione sul territorio.
 
 Il Gruppo nasce come espressione della **comunità locale**: volontari che dedicano tempo, competenze e attrezzature al servizio degli altri, in forma non retribuita e non gerarchica verso i cittadini.
 

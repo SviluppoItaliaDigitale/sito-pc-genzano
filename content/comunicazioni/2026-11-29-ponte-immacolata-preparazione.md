@@ -76,7 +76,7 @@ Il **ponte** è considerato l'**avvio** ufficiale della stagione natalizia turis
 - **Tivoli**: mercatini natalizi;
 - **Rieti**: mercatino del Sabino.
 
-### A Genzano
+### A Genzano di Roma
 - **centro storico** con luminarie e addobbi;
 - **iniziative** commerciali del corso;
 - **fiaccolata** e manifestazioni dell'8 dicembre (calendario diocesano);

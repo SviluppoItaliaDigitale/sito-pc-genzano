@@ -124,7 +124,7 @@ Per operare su **bande amatoriali** serve il **patentino di radiooperatore** ril
 
 Per operare sulle **frequenze della PC** non serve un patentino personale: la **licenza è del Gruppo** e il volontario è autorizzato come operatore dell'ente.
 
-## Il Gruppo radio di Genzano
+## Il Gruppo radio di Genzano di Roma
 
 Il Gruppo comunale di Protezione Civile di Genzano ha in dotazione apparati per comunicazioni operative sul territorio comunale e collegamenti con la Sala Operativa Regionale.
 

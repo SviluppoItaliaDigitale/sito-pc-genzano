@@ -87,7 +87,7 @@ I rapporti con il datore di lavoro funzionano meglio se:
 - il Gruppo **fornisce supporto** amministrativo al volontario e al datore;
 - si **riconosce** il valore civico dell'attività svolta.
 
-## A Genzano
+## A Genzano di Roma
 
 Il Gruppo Comunale dispone di **modulistica standard** per:
 

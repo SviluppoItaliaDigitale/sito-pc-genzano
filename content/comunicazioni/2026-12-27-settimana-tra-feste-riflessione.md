@@ -242,7 +242,7 @@ Questa settimana **sospesa** è **preziosa**:
 Sul nostro sito:
 
 - [Santo Stefano protomartire](/comunicazioni/2026-12-26-santo-stefano-protomartire/).
-- [Natale: auguri da Genzano](/comunicazioni/2026-12-25-natale-auguri-genzano/).
+- [Natale: auguri da Genzano di Roma](/comunicazioni/2026-12-25-natale-auguri-genzano/).
 - [Anziani soli a Natale](/comunicazioni/2026-12-17-anziani-soli-feste-attenzione/).
 - [Bilancio annuale PC Genzano](/comunicazioni/2026-12-28-bilancio-annuale-pc-genzano/).
 - [Prospettive 2027: nuovo anno](/comunicazioni/2026-12-29-prospettive-2027-nuovo-anno/).

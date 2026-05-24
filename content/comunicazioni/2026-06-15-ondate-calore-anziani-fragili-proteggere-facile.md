@@ -45,7 +45,7 @@ Ci sono 4 livelli:
 - **Livello 2**: pericolo alto per molte persone fragili.
 - **Livello 3**: pericolo per tutte le persone.
 
-Il bollettino di Roma vale anche per Genzano.
+Il bollettino di Roma vale anche per Genzano di Roma.
 
 ## Segnali di pericolo
 

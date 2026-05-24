@@ -1,7 +1,7 @@
 ---
 title: "Agosto si apre: il mese più critico per la Protezione Civile"
 date: 2026-08-01
-description: "Agosto è il mese più impegnativo per la Protezione Civile italiana. Un promemoria su rischi, responsabilità e preparazione per i cittadini di Genzano."
+description: "Agosto è il mese più impegnativo per la Protezione Civile italiana. Un promemoria su rischi, responsabilità e preparazione per i cittadini di Genzano di Roma."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -41,7 +41,7 @@ La Protezione Civile è un sistema, non un corpo separato. In agosto il sistema 
 
 ## Il Gruppo a pieno regime
 
-Il Gruppo Comunale Volontari di Protezione Civile di Genzano affronta agosto con:
+Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma affronta agosto con:
 
 - **turnazione** dei volontari per coprire l'intero mese;
 - **presìdio** degli eventi comunali con piani di sicurezza concordati;

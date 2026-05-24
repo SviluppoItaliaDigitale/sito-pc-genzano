@@ -45,7 +45,7 @@ Questi canali danno informazioni sicure.
 
 **ARES 118** gestisce le emergenze sanitarie nel Lazio. Il sito è ares118.it.
 
-## I canali ufficiali per Genzano
+## I canali ufficiali per Genzano di Roma
 
 **Il Comune di Genzano** aggiorna il suo sito e i suoi social. In emergenza pubblica comunicati ufficiali. Le ordinanze del Sindaco sono esecutive subito.
 

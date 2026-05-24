@@ -152,7 +152,7 @@ I loghi e gli stemmi ufficiali del Gruppo sono disponibili al download per **per
 |---|---|---|
 | [Stemma circolare classico PC Genzano](/manuali/loghi/stemma-pc-genzano-circolare-classico.png) | Stemma istituzionale del Gruppo Comunale: cerchio con scritta "Protezione Civile — Genzano di Roma" e stemma del Comune al centro. Sfondo trasparente, alta risoluzione. | PNG · 181 KB |
 | [Stemma circolare con trinacria PC Genzano](/manuali/loghi/stemma-pc-genzano-circolare-trinacria.jpg) | Variante con il simbolo nazionale della Protezione Civile (trinacria tricolore) al centro. | JPG · 89 KB |
-| [Logo PC Genzano + stemma del Comune](/manuali/loghi/logo-pc-genzano-volontariato-comune.jpg) | Logo composito verticale: stemma del Comune di Genzano + simbolo nazionale Protezione Civile, fascia "Volontariato" e dicitura completa "Gruppo Comunale Volontari di Protezione Civile — Genzano di Roma". | JPG · 122 KB |
+| [Logo PC Genzano + stemma del Comune](/manuali/loghi/logo-pc-genzano-volontariato-comune.jpg) | Logo composito verticale: stemma del Comune di Genzano di Roma + simbolo nazionale Protezione Civile, fascia "Volontariato" e dicitura completa "Gruppo Comunale Volontari di Protezione Civile — Genzano di Roma". | JPG · 122 KB |
 | [Logo Servizio Nazionale di Protezione Civile — Volontariato](/manuali/loghi/logo-dpc-volontariato-nazionale.jpg) | Logo ufficiale del Servizio Nazionale di Protezione Civile, settore Volontariato. Per uso istituzionale dei volontari del Sistema. | JPG · 75 KB |
 
 ## Locandine ufficiali

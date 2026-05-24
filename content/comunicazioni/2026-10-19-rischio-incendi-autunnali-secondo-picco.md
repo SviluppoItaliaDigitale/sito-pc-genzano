@@ -66,7 +66,7 @@ Chi **abita** in case sparse o confinate con aree boscate:
 
 ## I rischi al Comune
 
-A Genzano il rischio **AIB autunnale** è generalmente basso, ma:
+A Genzano di Roma il rischio **AIB autunnale** è generalmente basso, ma:
 
 - **aree verdi** non manutenute possono prendere fuoco;
 - **rifiuti** bruciati possono innescare incendi urbani;

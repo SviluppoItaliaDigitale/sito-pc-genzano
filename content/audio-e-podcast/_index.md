@@ -1,6 +1,6 @@
 ---
 title: "Audio e podcast"
-description: "Due modi per ascoltare i contenuti della PC di Genzano: podcast con episodi dedicati e articoli letti ad alta voce dal browser, senza app."
+description: "Due modi per ascoltare i contenuti della PC di Genzano di Roma: podcast con episodi dedicati e articoli letti ad alta voce dal browser, senza app."
 layout: "single"
 toc: false
 tts: true
@@ -14,7 +14,7 @@ Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma rende dispo
 
 ## Podcast — episodi audio dedicati
 
-**Voci dalla Protezione Civile di Genzano** è il podcast del Gruppo. Episodi brevi — dai 10 ai 20 minuti — su come funziona la protezione civile vicino a casa, sui rischi del territorio, sulle esercitazioni e con interviste a volontari ed esperti.
+**Voci dalla Protezione Civile di Genzano di Roma** è il podcast del Gruppo. Episodi brevi — dai 10 ai 20 minuti — su come funziona la protezione civile vicino a casa, sui rischi del territorio, sulle esercitazioni e con interviste a volontari ed esperti.
 
 Si ascolta gratis, senza account, dalle principali app podcast tramite il feed RSS. Ogni episodio ha la **trascrizione completa** in pagina.
 

@@ -73,7 +73,7 @@ Lo sport per i bambini non è solo salute fisica:
 - Insegna **regole** e cooperazione.
 - Sviluppa **consapevolezza del rischio**: un bambino che sa cadere in mountain bike sa gestire meglio una caduta a scuola.
 
-Nelle scuole di Genzano, molte associazioni sportive locali offrono attività pomeridiane accessibili.
+Nelle scuole di Genzano di Roma, molte associazioni sportive locali offrono attività pomeridiane accessibili.
 
 ## Sport inclusivo
 

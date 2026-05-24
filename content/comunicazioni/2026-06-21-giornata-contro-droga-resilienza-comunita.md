@@ -33,7 +33,7 @@ Le dipendenze da sostanze (alcol, stupefacenti, farmaci) comportano:
 
 In emergenza queste persone **vengono lasciate indietro** se non esiste una rete che le abbia già prese in carico.
 
-## La rete territoriale di Genzano
+## La rete territoriale di Genzano di Roma
 
 A Genzano e nei Castelli Romani operano per i temi della dipendenza:
 

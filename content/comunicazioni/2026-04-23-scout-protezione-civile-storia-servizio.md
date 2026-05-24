@@ -177,7 +177,7 @@ Non è un caso: chi è cresciuto con la **squadriglia**, la **route**, il **camp
 
 La collaborazione fra il Gruppo PC e i gruppi AGESCI Genzano 1 e Genzano 2, in caso di emergenza locale (un'ondata di calore, un incendio boschivo, un evento meteo estremo), è un canale di **prossimità reale** che il Piano di Emergenza Comunale può attivare con poco preavviso.
 
-Se sei uno scout di Genzano — del Genzano 1, del Genzano 2 o di un altro gruppo — o un capo, o un adulto del movimento, e vuoi sapere come mettere le tue competenze al servizio del territorio anche oltre lo scoutismo, scrivici a **segreteria@protezionecivilegenzano.it**. Spesso è il prossimo passo naturale.
+Se sei uno scout di Genzano di Roma — del Genzano 1, del Genzano 2 o di un altro gruppo — o un capo, o un adulto del movimento, e vuoi sapere come mettere le tue competenze al servizio del territorio anche oltre lo scoutismo, scrivici a **segreteria@protezionecivilegenzano.it**. Spesso è il prossimo passo naturale.
 
 ## Una storia che non finisce
 

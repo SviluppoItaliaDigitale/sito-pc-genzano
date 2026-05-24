@@ -1,7 +1,7 @@
 ---
 title: "Neve e ghiaccio: prepararsi per l'inverno rigido"
 date: 2026-12-02
-description: "A Genzano nevica raramente ma non è impossibile. Come comportarsi se arriva neve o ghiaccio su strade e tetti."
+description: "A Genzano di Roma nevica raramente ma non è impossibile. Come comportarsi se arriva neve o ghiaccio su strade e tetti."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -178,7 +178,7 @@ In caso di nevicata significativa:
 
 ## PC e emergenze neve
 
-In caso di neve a Genzano:
+In caso di neve a Genzano di Roma:
 - **sala operativa** comunale attivata;
 - **volontari** convocati;
 - **mezzi** (spalaneve, spargisale) mobilitati;

@@ -67,7 +67,7 @@ Il cambiamento climatico modifica la frequenza e intensità degli eventi che la 
 - **Incendi boschivi** favoriti da stagioni estive più secche.
 - **Eventi estremi** con tempi di ritorno in diminuzione.
 
-Il **Piano Comunale di Protezione Civile** di Genzano viene aggiornato periodicamente per integrare queste tendenze.
+Il **Piano Comunale di Protezione Civile** di Genzano di Roma viene aggiornato periodicamente per integrare queste tendenze.
 
 ## Previsione stagionale estate 2026
 

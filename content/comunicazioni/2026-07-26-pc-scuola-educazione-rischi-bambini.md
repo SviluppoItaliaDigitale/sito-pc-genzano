@@ -132,7 +132,7 @@ I volontari di PC collaborano con scuole tramite:
 - **Partecipazione** a giornate tematiche.
 - **Supporto** a progetti pluriennali.
 
-A Genzano il Gruppo Comunale ha collaborato negli anni con **scuole locali**.
+A Genzano di Roma il Gruppo Comunale ha collaborato negli anni con **scuole locali**.
 
 ## I progetti locali
 

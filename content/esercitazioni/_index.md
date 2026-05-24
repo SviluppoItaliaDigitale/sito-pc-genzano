@@ -1,6 +1,6 @@
 ---
 title: "Addestramento e buone pratiche"
-description: "Come si addestra il Gruppo PC di Genzano: turni, esercitazioni programmate, formazione su mezzi e attrezzature. Vetrina educativa, non diario operativo."
+description: "Come si addestra il Gruppo PC di Genzano di Roma: turni, esercitazioni programmate, formazione su mezzi e attrezzature. Vetrina educativa, non diario operativo."
 type: "esercitazioni"
 layout: "list"
 sitemap:

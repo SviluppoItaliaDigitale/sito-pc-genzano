@@ -138,7 +138,7 @@ In Italia la prevenzione del colpo di calore si basa su:
 - **Medici di famiglia** come primi riferimenti.
 - **Volontariato** di vicinato.
 
-A Genzano è attivo un **monitoraggio** sugli anziani soli.
+A Genzano di Roma è attivo un **monitoraggio** sugli anziani soli.
 
 ## Luoghi a rischio
 

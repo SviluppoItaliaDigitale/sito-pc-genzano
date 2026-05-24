@@ -1,7 +1,7 @@
 ---
 title: "Neve e ghiaccio: cosa fare"
 date: 2026-12-02
-description: "Neve e ghiaccio a Genzano: come prepararsi e cosa fare."
+description: "Neve e ghiaccio a Genzano di Roma: come prepararsi e cosa fare."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -132,7 +132,7 @@ Si forma di notte, quando fa freddo dopo la pioggia.
 
 Se c'è molta neve, il Sindaco può chiudere le scuole. Lo comunica sul sito del Comune e sui social. Aspetta la comunicazione ufficiale.
 
-## La Protezione Civile di Genzano
+## La Protezione Civile di Genzano di Roma
 
 Quando neve, la Protezione Civile di Genzano:
 

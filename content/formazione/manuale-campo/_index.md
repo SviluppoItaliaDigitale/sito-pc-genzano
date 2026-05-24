@@ -1,6 +1,6 @@
 ---
 title: "Manuale da Campo"
-description: "Guida operativa per il volontario PC in emergenza: struttura, scouting, funzioni tecniche e di servizio, schede tecniche. Per il Gruppo di Genzano."
+description: "Guida operativa per il volontario PC in emergenza: struttura, scouting, funzioni tecniche e di servizio, schede tecniche. Per il Gruppo di Genzano di Roma."
 ---
 
 Il **Manuale da Campo** raccoglie istruzioni pratiche, procedure e **schede tecniche** per i volontari del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** quando operano in un campo di accoglienza, in un'area di emergenza o a supporto di un centro operativo.
@@ -11,7 +11,7 @@ Questo manuale è stato redatto per il **Gruppo Comunale Volontari di Genzano di
 - **riferimenti territoriali** al contesto di Genzano di Roma (Prefettura di Roma, Regione Lazio, Area Metropolitana Roma Capitale)
 - **schede tecniche operative** (check-list kit personale, area accoglienza, progettazione, informazioni di scouting) come strumenti pratici per il volontario in missione
 
-Il manuale non sostituisce la **formazione di base regionale** del volontario (art. 37 D.Lgs. 1/2018), né il **Piano Comunale di Protezione Civile** di Genzano (art. 12 D.Lgs. 1/2018). Serve come **supporto rapido sul campo** e come traccia per esercitazioni e addestramento.
+Il manuale non sostituisce la **formazione di base regionale** del volontario (art. 37 D.Lgs. 1/2018), né il **Piano Comunale di Protezione Civile** di Genzano di Roma (art. 12 D.Lgs. 1/2018). Serve come **supporto rapido sul campo** e come traccia per esercitazioni e addestramento.
 
 ## A chi è rivolto
 

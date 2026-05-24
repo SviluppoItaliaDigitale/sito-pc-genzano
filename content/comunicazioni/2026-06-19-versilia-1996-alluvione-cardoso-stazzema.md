@@ -52,7 +52,7 @@ Versilia 1996 è il caso scuola dei **rischi idrogeologici legati a piogge inten
 
 3. **Il cambiamento climatico moltiplica gli eventi estremi.** Quello che nel 1996 era considerato evento "millenario", oggi può ripetersi in pochi anni. Eventi recenti (Senigallia 2014, [Marche 2022](/comunicazioni/2026-09-15-alluvione-marche-2022-bombe-acqua-cambiamento-climatico/), Romagna 2023) confermano il trend.
 
-## A Genzano
+## A Genzano di Roma
 
 I Castelli Romani non hanno l'orografia delle Apuane, ma il **rischio idrogeologico** esiste anche da noi:
 - Versanti instabili attorno ai laghi di **Nemi** e **Albano**, con storico di frane

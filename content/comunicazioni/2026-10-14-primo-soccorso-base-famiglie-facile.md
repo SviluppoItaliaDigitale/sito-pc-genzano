@@ -143,7 +143,7 @@ Puoi fare un corso di primo soccorso. I corsi li organizzano:
 - la Croce Rossa
 - l'ANPAS (Associazione Nazionale Pubbliche Assistenze)
 - le Misericordie
-- il Gruppo Comunale Volontari di Protezione Civile di Genzano
+- il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma
 
 ## Per approfondire
 

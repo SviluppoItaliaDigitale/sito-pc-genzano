@@ -17,7 +17,7 @@ Le comunicazioni in emergenza sono di **tre tipi**:
 
 Affiancano o integrano le reti di servizio (Vigili del Fuoco, Polizia, Carabinieri, ARES 118, CRI) per avere canali sempre aperti senza rischio di linee occupate. Le **maglie radio provinciali** collegano:
 
-- **COC di Genzano** ↔ operatore sul territorio
+- **COC di Genzano di Roma** ↔ operatore sul territorio
 - **COC ↔ COM** (Castelli Romani)
 - **COM ↔ CCS ↔ Regione Lazio ↔ DPC**
 

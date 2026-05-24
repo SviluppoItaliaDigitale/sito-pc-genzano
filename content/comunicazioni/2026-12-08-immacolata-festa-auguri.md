@@ -1,7 +1,7 @@
 ---
 title: "8 dicembre: auguri per la festa dell'Immacolata"
 date: 2026-12-08
-description: "Oggi 8 dicembre, festa dell'Immacolata. Un augurio dalla Protezione Civile di Genzano."
+description: "Oggi 8 dicembre, festa dell'Immacolata. Un augurio dalla Protezione Civile di Genzano di Roma."
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -24,7 +24,7 @@ L'Immacolata è **festività nazionale** in Italia dal 1933. È giornata di:
 - **tradizioni** familiari (addobbo albero, preparazione presepe);
 - **mercatini** aperti nelle città.
 
-## Oggi a Genzano
+## Oggi a Genzano di Roma
 
 Il **centro storico** è illuminato e animato:
 - **luminarie** accese;

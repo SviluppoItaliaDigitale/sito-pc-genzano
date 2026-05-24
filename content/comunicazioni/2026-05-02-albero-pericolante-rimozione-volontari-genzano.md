@@ -1,5 +1,5 @@
 ---
-title: "Albero pericolante a Genzano: rimozione e messa in sicurezza dell'area da parte dei volontari"
+title: "Albero pericolante a Genzano di Roma: rimozione e messa in sicurezza dell'area da parte dei volontari"
 date: 2026-05-02T00:03:00+02:00
 description: "Il 2 maggio nel pomeriggio i volontari, su richiesta della Polizia Locale, hanno rimosso un albero pericolante e messo in sicurezza l'area."
 badge: "Attività"

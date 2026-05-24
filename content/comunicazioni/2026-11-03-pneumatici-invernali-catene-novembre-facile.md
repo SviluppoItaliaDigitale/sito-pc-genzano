@@ -53,7 +53,7 @@ Le calze da neve sono di tessuto. Si mettono sopra ai pneumatici. Sono più faci
 
 ## I pneumatici 4 stagioni
 
-I pneumatici "4 stagioni" o "all-season" vanno bene tutto l'anno. Devono avere il simbolo del **fiocco di neve su montagna** sul fianco. Sono adeguati per Genzano e la maggior parte del Lazio.
+I pneumatici "4 stagioni" o "all-season" vanno bene tutto l'anno. Devono avere il simbolo del **fiocco di neve su montagna** sul fianco. Sono adeguati per Genzano di Roma e la maggior parte del Lazio.
 
 ## Come guidare in sicurezza con neve e ghiaccio
 

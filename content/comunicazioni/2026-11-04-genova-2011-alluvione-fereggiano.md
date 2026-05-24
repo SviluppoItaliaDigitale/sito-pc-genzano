@@ -52,7 +52,7 @@ Tre lezioni operative dalla tragedia di Genova:
 
 3. **Camminare in strada durante un evento intenso è pericoloso.** Le vittime di via Fereggiano stavano camminando sul marciapiede quando l'acqua è uscita dai tombini. **Se piove molto forte**, restare in casa e ai piani alti è la prima regola di autoprotezione (vedi pagina [Cosa Fare Adesso](/cosa-fare-adesso/)).
 
-## A Genzano
+## A Genzano di Roma
 
 Anche Genzano è una città storica con **fossi tombati** sotto strade e piazze, retaggio dell'urbanizzazione del Novecento. I punti storicamente sensibili agli allagamenti urbani in caso di temporali intensi sono noti al Comune e gestiti nel [Piano di Emergenza Comunale](/piano-emergenza/).
 

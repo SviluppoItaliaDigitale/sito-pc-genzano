@@ -114,7 +114,7 @@ I Comuni possono e dovrebbero:
 - **controlli** su caldaie non revisionate;
 - **informazione** alla popolazione.
 
-## A Genzano
+## A Genzano di Roma
 
 La qualità dell'aria nei Castelli Romani è generalmente **migliore** che in città, ma:
 

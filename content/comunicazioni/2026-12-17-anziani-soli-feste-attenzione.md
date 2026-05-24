@@ -24,7 +24,7 @@ Il **Natale** è tempo di **famiglia**, **tavole imbandite**, **calore**. Ma per
 - **solitudine cronica** associata a: depressione, declino cognitivo, malattie cardiovascolari, riduzione aspettativa di vita;
 - **festività**: effetto amplificatore.
 
-### A Genzano
+### A Genzano di Roma
 Non abbiamo numeri locali ufficiali, ma le **stime ISTAT** suggeriscono che anche nei Castelli Romani la percentuale di anziani soli sia rilevante. Molti:
 - **vedovi/e** recenti;
 - **figli** emigrati per lavoro;

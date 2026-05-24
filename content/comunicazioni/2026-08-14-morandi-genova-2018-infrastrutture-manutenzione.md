@@ -78,7 +78,7 @@ In caso di **incidente strutturale di un'infrastruttura** (un ponte che cede, un
 
 Il territorio dei **Castelli Romani** ha alcune infrastrutture critiche di rilevanza nazionale e regionale:
 
-- L'**Autostrada A1** Roma-Napoli, gestita da Autostrade per l'Italia, attraversa l'area metropolitana romana subito a sud-est di Genzano.
+- L'**Autostrada A1** Roma-Napoli, gestita da Autostrade per l'Italia, attraversa l'area metropolitana romana subito a sud-est di Genzano di Roma.
 - La **Via Appia Antica** e la **Via Appia Nuova (SS7)**, con ponti e attraversamenti storici di varia età.
 - Le **ferrovie** Roma-Albano e Roma-Velletri, con viadotti e gallerie risalenti a varie epoche.
 

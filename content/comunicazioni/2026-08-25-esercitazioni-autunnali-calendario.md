@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Un sistema di Protezione Civile vale **quanto è allenato**. Procedure, mezzi, radiocomunicazioni, coordinamento fra enti si consolidano solo con **esercitazioni periodiche** che ricreano, in condizioni controllate, scenari realistici di emergenza. Con la ripresa autunnale, il Gruppo Comunale Volontari di Protezione Civile di Genzano torna al calendario esercitativo.
+Un sistema di Protezione Civile vale **quanto è allenato**. Procedure, mezzi, radiocomunicazioni, coordinamento fra enti si consolidano solo con **esercitazioni periodiche** che ricreano, in condizioni controllate, scenari realistici di emergenza. Con la ripresa autunnale, il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma torna al calendario esercitativo.
 
 ## Perché si fanno esercitazioni
 

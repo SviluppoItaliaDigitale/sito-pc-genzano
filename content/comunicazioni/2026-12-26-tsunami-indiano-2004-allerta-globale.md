@@ -77,7 +77,7 @@ Per chi viaggia all'estero in aree a rischio (Asia sud-orientale, Pacifico, Cara
 
 ## Genzano e il rischio tsunami
 
-I **Castelli Romani** sono nell'entroterra laziale e non sono direttamente esposti al rischio tsunami. Ma molti dei nostri concittadini frequentano la **costa laziale tirrenica** (Anzio, Nettuno, Sabaudia, Terracina) o viaggiano in zone tropicali a rischio. La **conoscenza dei segnali e dei comportamenti** è quindi una conoscenza utile anche per chi vive a Genzano.
+I **Castelli Romani** sono nell'entroterra laziale e non sono direttamente esposti al rischio tsunami. Ma molti dei nostri concittadini frequentano la **costa laziale tirrenica** (Anzio, Nettuno, Sabaudia, Terracina) o viaggiano in zone tropicali a rischio. La **conoscenza dei segnali e dei comportamenti** è quindi una conoscenza utile anche per chi vive a Genzano di Roma.
 
 Per il rischio sismico locale del nostro territorio, vedi [Rischio sismico](/rischi-prevenzione/rischio-sismico/) e gli articoli su Friuli 1976, Centro Italia 2016, San Giuliano 2002.
 

@@ -58,7 +58,7 @@ La **Legge 24 febbraio 1992, n. 225** istituisce il **Servizio Nazionale della P
 
 Il **Decreto Legislativo 2 gennaio 2018, n. 1** — il **Codice della Protezione Civile** — aggiorna e riorganizza il sistema in un testo unico. Definisce i **componenti** (Stato, Regioni, Comuni, Volontariato), le **attività** (previsione, prevenzione, gestione, superamento dell'emergenza), gli **eventi** (A - locali, B - regionali, C - nazionali).
 
-È la cornice normativa in cui lavora oggi ogni gruppo comunale di volontari, incluso quello di Genzano.
+È la cornice normativa in cui lavora oggi ogni gruppo comunale di volontari, incluso quello di Genzano di Roma.
 
 ## La struttura attuale del sistema
 

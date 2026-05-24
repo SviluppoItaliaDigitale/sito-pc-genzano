@@ -109,7 +109,7 @@ Se vedi un cane o un gatto in difficoltà per il caldo:
 - Segnala al Comune se l'animale è in pericolo.
 - Chiama un'associazione animalista locale.
 
-Il Comune di Genzano ha un servizio per la tutela degli animali. Puoi chiamare l'URP, l'Ufficio Relazioni con il Pubblico.
+Il Comune di Genzano di Roma ha un servizio per la tutela degli animali. Puoi chiamare l'URP, l'Ufficio Relazioni con il Pubblico.
 
 ## Cosa fare se vedi un animale che soffre
 

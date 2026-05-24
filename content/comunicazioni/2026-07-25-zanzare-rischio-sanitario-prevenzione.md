@@ -135,7 +135,7 @@ I Comuni intervengono con:
 - **Sorveglianza** epidemiologica.
 - **Informazione** alla popolazione.
 
-A Genzano sono programmati **trattamenti** in stagione.
+A Genzano di Roma sono programmati **trattamenti** in stagione.
 
 ## La biosorveglianza
 

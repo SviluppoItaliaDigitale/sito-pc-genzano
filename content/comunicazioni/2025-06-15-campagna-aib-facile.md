@@ -52,7 +52,7 @@ Gli incendi spesso partono per sbaglio. Ecco cosa NON fare:
 
 Il periodo di rischio va dal 15 giugno al 30 settembre. Lo dice la legge della Regione Lazio.
 
-In questo periodo il Gruppo di Protezione Civile di Genzano è più attivo. Monitoriamo il territorio. Aiutiamo in caso di bisogno.
+In questo periodo il Gruppo di Protezione Civile di Genzano di Roma è più attivo. Monitoriamo il territorio. Aiutiamo in caso di bisogno.
 
 ## Per saperne di più
 

@@ -47,7 +47,7 @@ Il **manuale completo** è disponibile in allegato a questo articolo e nella pag
 
 ## Sul nostro sito
 
-- [Diventa volontario](/diventa-volontario/) — Come entrare nel Gruppo Comunale di Genzano: percorso di adesione, ruoli operativi e formazione, incluso il supporto alla ristorazione in emergenza.
+- [Diventa volontario](/diventa-volontario/) — Come entrare nel Gruppo Comunale di Genzano di Roma: percorso di adesione, ruoli operativi e formazione, incluso il supporto alla ristorazione in emergenza.
 
 ## Riferimenti
 

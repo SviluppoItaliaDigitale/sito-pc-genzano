@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Questa sera parte il **corso base per nuovi volontari** del Gruppo Comunale di Protezione Civile di Genzano. Le **iscrizioni sono ancora aperte** fino al 31 ottobre per chi volesse unirsi alle prime lezioni. Un benvenuto a tutte le persone che hanno scelto di dedicare una parte del proprio tempo al **servizio pubblico** e alla **comunità**.
+Questa sera parte il **corso base per nuovi volontari** del Gruppo Comunale di Protezione Civile di Genzano di Roma. Le **iscrizioni sono ancora aperte** fino al 31 ottobre per chi volesse unirsi alle prime lezioni. Un benvenuto a tutte le persone che hanno scelto di dedicare una parte del proprio tempo al **servizio pubblico** e alla **comunità**.
 
 ## La prima lezione
 

@@ -30,7 +30,7 @@ Diventare volontario di Protezione Civile significa mettere tempo, competenze e 
 <div class="row align-items-center mb-4 g-3">
 <div class="col-md-5 text-center">
 <a href="/manuali/locandine/locandina-diventa-volontario.pdf" target="_blank" rel="noopener" aria-label="Apri la locandina Diventa volontario in formato PDF">
-<img src="/images/locandina-diventa-volontario.webp" alt="Locandina del Gruppo Comunale Volontari di Protezione Civile di Genzano: Aiutaci ad aiutare — Diventa volontario. Sede in Via Sicilia 13/15, telefono 06 9362600, email segreteria@protezionecivilegenzano.it" loading="lazy" class="img-fluid border shadow-sm" style="max-width: 320px;">
+<img src="/images/locandina-diventa-volontario.webp" alt="Locandina del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma: Aiutaci ad aiutare — Diventa volontario. Sede in Via Sicilia 13/15, telefono 06 9362600, email segreteria@protezionecivilegenzano.it" loading="lazy" class="img-fluid border shadow-sm" style="max-width: 320px;">
 </a>
 </div>
 <div class="col-md-7">

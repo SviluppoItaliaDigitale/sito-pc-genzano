@@ -17,7 +17,7 @@ Il **14 agosto** apre il fine settimana più impegnativo dell'estate. Movimento 
 
 ## Il quadro operativo
 
-Nei giorni di **Ferragosto** sono tipicamente attivi su Genzano e nei Castelli:
+Nei giorni di **Ferragosto** sono tipicamente attivi su Genzano di Roma e nei Castelli:
 
 - **Volontari di Protezione Civile** in turnazione, con servizio di avvistamento antincendio.
 - **Polizia Locale** con pattuglie rinforzate per viabilità.

@@ -118,7 +118,7 @@ Nella Giornata di oggi:
 - **Forze di polizia** rilasciano comunicati dati;
 - **Media** dedicano spazio al tema.
 
-## A Genzano
+## A Genzano di Roma
 
 Il Gruppo ricorda:
 

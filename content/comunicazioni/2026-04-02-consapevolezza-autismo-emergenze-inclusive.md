@@ -93,7 +93,7 @@ Per persone non verbali o con difficoltà linguistiche, la **CAA** usa simboli e
 
 ## Nelle scuole
 
-Le **scuole inclusive** di Genzano (e di tutto il territorio) hanno sempre più consapevolezza di questi temi. I **Piani di Emergenza scolastici** possono prevedere:
+Le **scuole inclusive** di Genzano di Roma (e di tutto il territorio) hanno sempre più consapevolezza di questi temi. I **Piani di Emergenza scolastici** possono prevedere:
 
 - Percorsi di evacuazione **adattati** a bambini con disabilità.
 - Presenza di **educatori di riferimento** durante le esercitazioni.

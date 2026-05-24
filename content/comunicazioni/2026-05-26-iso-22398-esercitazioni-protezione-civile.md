@@ -56,7 +56,7 @@ Prima di iniziare, va dichiarato cosa si vuole verificare. Frasi come *"vogliamo
 
 ### Scenari realistici
 
-Lo scenario deve rispecchiare **rischi reali** del territorio. Una full-scale di evacuazione tsunami a Genzano sarebbe inutile (siamo nell'entroterra). Una full-scale di alluvione lampo sui versanti dei Castelli sarebbe **pertinente**. Lo scenario va costruito sulla cartografia di rischio reale.
+Lo scenario deve rispecchiare **rischi reali** del territorio. Una full-scale di evacuazione tsunami a Genzano di Roma sarebbe inutile (siamo nell'entroterra). Una full-scale di alluvione lampo sui versanti dei Castelli sarebbe **pertinente**. Lo scenario va costruito sulla cartografia di rischio reale.
 
 ### Valutatori indipendenti
 

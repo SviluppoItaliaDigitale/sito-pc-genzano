@@ -181,7 +181,7 @@ Questo è possibile perché ogni livello **non aspetta autorizzazione per agire 
 
 ## Il Gruppo Comunale nella catena
 
-Dove si colloca concretamente il Gruppo Comunale di Genzano?
+Dove si colloca concretamente il Gruppo Comunale di Genzano di Roma?
 
 - **In via ordinaria**: è la **componente operativa del COC di Genzano**, attivabile dal Sindaco per esercitazioni, attività di prevenzione, interventi minori
 - **Nelle emergenze locali**: opera sotto il **COI 14°** quando l'evento coinvolge più Comuni dei Castelli Romani

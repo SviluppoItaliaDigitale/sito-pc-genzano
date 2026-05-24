@@ -22,7 +22,7 @@ Questa pagina spiega il percorso completo, con linguaggio semplice. È materiale
 1. Il **Dipartimento Nazionale di Protezione Civile** emette ogni giorno una previsione meteo nazionale e identifica le criticità.
 2. Il **Centro Funzionale Regionale del Lazio** trasforma quella previsione in un **bollettino di criticità** per zone di allerta del Lazio (Genzano è in **Zona F — Bacini Costieri Sud**).
 3. Il bollettino assegna a ogni zona un **codice colore** per ogni rischio (idrogeologico, idraulico, temporali, vento, neve, ondate di calore).
-4. Il **Comune di Genzano** riceve il bollettino e, in base al livello, **attiva o no il Centro Operativo Comunale (COC)**.
+4. Il **Comune di Genzano di Roma** riceve il bollettino e, in base al livello, **attiva o no il Centro Operativo Comunale (COC)**.
 5. Quando il COC è attivo, può **convocare il Gruppo Comunale di Protezione Civile** per turni di presidio e supporto operativo.
 6. Tu, cittadino, **adotti i comportamenti consigliati** per il livello in corso e segui le **fonti ufficiali** del Comune e della Regione.
 

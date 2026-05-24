@@ -64,7 +64,7 @@ Tutto il resto si impara dopo aver detto «sì». Se la fiction ti ha incuriosit
 
 ### Sul sito
 
-- [Diventa Volontario](/diventa-volontario/) — come si entra nel Gruppo Comunale di Genzano
+- [Diventa Volontario](/diventa-volontario/) — come si entra nel Gruppo Comunale di Genzano di Roma
 - [Chi Siamo](/chi-siamo/) — la nostra storia, la nostra struttura, i nostri valori
 - [Formazione](/formazione/) — corsi, esercitazioni, kit didattici per le scuole
 - [Piano di Emergenza](/piano-emergenza/) — il documento ufficiale della nostra città

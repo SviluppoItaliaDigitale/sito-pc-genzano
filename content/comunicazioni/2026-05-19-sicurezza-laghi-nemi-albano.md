@@ -127,7 +127,7 @@ Sul nostro sito:
 
 - [Primo soccorso: le cinque regole di base](/comunicazioni/2026-04-29-primo-soccorso-cinque-regole-base/).
 - [Kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/).
-- [Cartografia del territorio di Genzano](/cartografia/).
+- [Cartografia del territorio di Genzano di Roma](/cartografia/).
 
 Fonti istituzionali:
 

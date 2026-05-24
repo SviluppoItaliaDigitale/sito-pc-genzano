@@ -233,7 +233,7 @@ Nei gruppi moderni il volontario TLC può assumere **compiti cross-training** ch
 
 ## Kit di stazione del Gruppo Comunale Genzano — proposta standard
 
-La dotazione tipica di un **posto radio di Gruppo** a Genzano:
+La dotazione tipica di un **posto radio di Gruppo** a Genzano di Roma:
 
 | Categoria | Elemento |
 |---|---|

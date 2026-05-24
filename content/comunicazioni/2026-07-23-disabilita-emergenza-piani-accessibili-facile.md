@@ -50,7 +50,7 @@ Se hai una disabilità, prepara un piano di emergenza adesso.
 
 Scrivi il nome e il numero di una persona di fiducia. Prepara i tuoi farmaci per almeno 7 giorni. Cerca il percorso per uscire da casa. Identifica chi ti può aiutare in emergenza. Scegli un posto sicuro dove andare.
 
-Il Comune di Genzano può aiutarti a fare questo piano.
+Il Comune di Genzano di Roma può aiutarti a fare questo piano.
 
 ## Il kit di emergenza per te
 

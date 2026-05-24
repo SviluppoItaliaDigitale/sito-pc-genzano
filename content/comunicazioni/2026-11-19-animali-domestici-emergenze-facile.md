@@ -81,7 +81,7 @@ Assicurati che il tuo animale abbia il microchip. Controlla che i tuoi dati sian
 
 Non puoi abbandonare il tuo animale. È un reato. Sei responsabile di lui anche in emergenza.
 
-## A Genzano
+## A Genzano di Roma
 
 Il Gruppo Comunale di Protezione Civile lavora con la ASL Roma 6 (l'azienda sanitaria del territorio) per aiutare gli animali in emergenza. Collaboriamo con le associazioni zoofile locali.
 

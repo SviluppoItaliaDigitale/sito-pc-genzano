@@ -60,7 +60,7 @@ La Regione Lazio coordina attraverso:
 
 Il volontariato **si inserisce** in un sistema pianificato, non opera autonomamente.
 
-## I turni tipo del Gruppo di Genzano
+## I turni tipo del Gruppo di Genzano di Roma
 
 Un volontario che partecipa ai turni AIB trova tipicamente:
 - **Orari**: fasce di 4-6 ore nelle ore più calde (10-18 o 12-20).

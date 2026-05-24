@@ -54,7 +54,7 @@ In un mondo saturo di informazioni, **conoscere le fonti ufficiali** è essenzia
 ### Numero verde PC Lazio
 - **803&nbsp;555**: segnalazioni non urgenti di Protezione Civile.
 
-## I riferimenti — Comune di Genzano
+## I riferimenti — Comune di Genzano di Roma
 
 ### Comune
 - sito: [comune.genzanodiroma.roma.it](https://www.comune.genzanodiroma.roma.it/)

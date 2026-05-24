@@ -119,7 +119,7 @@ Dopo questo breve ritorno di mitezza, arriva il **vero inverno**:
 - **programmare** visite a familiari anziani;
 - **adeguare** l'auto per l'inverno.
 
-## A Genzano
+## A Genzano di Roma
 
 Il territorio vive la festa con:
 

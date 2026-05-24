@@ -25,7 +25,7 @@ Molte città hanno attivato mappe dei **rifugi climatici urbani** — luoghi pub
 - **Centri civici** e aggregativi.
 - **Parchi pubblici** (zone alberate).
 
-A Genzano e nei Castelli Romani queste risorse sono disponibili con **orari estesi** durante le ondate di calore.
+A Genzano di Roma e nei Castelli Romani queste risorse sono disponibili con **orari estesi** durante le ondate di calore.
 
 ## La biblioteca comunale
 

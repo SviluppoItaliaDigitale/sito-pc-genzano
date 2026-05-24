@@ -61,7 +61,7 @@ Non è raro registrare frane sulle strade provinciali dei Castelli in piena esta
 
 ## Cosa fa la PC in estate
 
-Il Gruppo comunale di Genzano durante l'estate:
+Il Gruppo comunale di Genzano di Roma durante l'estate:
 - **Monitora** le aree a rischio durante allerte meteo.
 - **Verifica** lo stato di caditoie e tombini nelle zone critiche.
 - **Segnala** situazioni di potenziale rischio al Comune e agli enti gestori.

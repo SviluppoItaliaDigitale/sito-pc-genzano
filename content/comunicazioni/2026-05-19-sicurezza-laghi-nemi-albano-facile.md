@@ -19,7 +19,7 @@ build:
   publishResources: true
 ---
 
-I laghi di Nemi e di Albano sono vicino a Genzano. Sono laghi molto belli. Ma ci sono pericoli che devi conoscere.
+I laghi di Nemi e di Albano sono vicino a Genzano di Roma. Sono laghi molto belli. Ma ci sono pericoli che devi conoscere.
 
 ## I laghi sono profondi
 

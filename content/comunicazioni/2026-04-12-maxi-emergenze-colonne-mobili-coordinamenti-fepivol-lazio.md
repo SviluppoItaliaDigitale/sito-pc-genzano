@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-**Terremoto nelle Marche alle 4 del mattino. Entro le 10 la colonna mobile parte da Genzano.** Sei ore per organizzare mezzi, attrezzature, personale, pasti e logistica di un intervento che durerà giorni o settimane in una regione a 300 chilometri di distanza. Dietro a questa operazione c'è un sistema nazionale che si attiva automaticamente, un'architettura di coordinamenti regionali e un meccanismo europeo di mutuo soccorso. Questa è la guida al funzionamento delle **maxi emergenze** come le vive un volontario di un gruppo comunale.
+**Terremoto nelle Marche alle 4 del mattino. Entro le 10 la colonna mobile parte da Genzano di Roma.** Sei ore per organizzare mezzi, attrezzature, personale, pasti e logistica di un intervento che durerà giorni o settimane in una regione a 300 chilometri di distanza. Dietro a questa operazione c'è un sistema nazionale che si attiva automaticamente, un'architettura di coordinamenti regionali e un meccanismo europeo di mutuo soccorso. Questa è la guida al funzionamento delle **maxi emergenze** come le vive un volontario di un gruppo comunale.
 
 ---
 

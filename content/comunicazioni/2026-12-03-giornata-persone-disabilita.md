@@ -129,7 +129,7 @@ La PC **inclusiva** è obbligo **etico** e **legale**.
 - **"persona in carrozzina"** (non "costretta in carrozzina");
 - **linguaggio** che mette al centro la **persona**.
 
-## Barriere a Genzano
+## Barriere a Genzano di Roma
 
 Come ogni centro storico, Genzano ha:
 - **vie** strette, pavimentazione irregolare;

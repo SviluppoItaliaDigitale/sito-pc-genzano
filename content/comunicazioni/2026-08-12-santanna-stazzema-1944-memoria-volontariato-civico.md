@@ -51,7 +51,7 @@ Tre lezioni che orientano il volontariato di Protezione Civile contemporaneo:
 
 3. **L'impegno è permanente, non emergenziale.** Sant'Anna non si commemora solo il 12 agosto: la sua lezione informa il modo in cui pensiamo la sicurezza, l'inclusione, la cura dei più fragili tutto l'anno.
 
-## A Genzano
+## A Genzano di Roma
 
 Genzano ha la sua memoria della Resistenza e della guerra: come tutti i comuni del Lazio, fu attraversata dal passaggio del fronte, dalla fame, dalle deportazioni. Il volontariato di Protezione Civile genzanese si inserisce nella stessa tradizione civica che ha portato l'Italia, dopo il 1945, a costruire un sistema di sicurezza collettiva basato sulla partecipazione democratica.
 

@@ -1,7 +1,7 @@
 ---
 title: "Lezioni nelle scuole: la Protezione Civile racconta il territorio ai ragazzi"
 date: 2026-09-12
-description: "Il Gruppo Comunale di PC porta nelle scuole di Genzano lezioni sui rischi del territorio e sui comportamenti di autoprotezione."
+description: "Il Gruppo Comunale di PC porta nelle scuole di Genzano di Roma lezioni sui rischi del territorio e sui comportamenti di autoprotezione."
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Da settembre il Gruppo Comunale Volontari di PC riprende l'attività di **formazione nelle scuole** di Genzano: lezioni in classe, visite al gruppo, giornate di esercitazione con studenti. Un lavoro che si inserisce nei programmi scolastici di **educazione civica** e che prepara alla **cittadinanza consapevole**.
+Da settembre il Gruppo Comunale Volontari di PC riprende l'attività di **formazione nelle scuole** di Genzano di Roma: lezioni in classe, visite al gruppo, giornate di esercitazione con studenti. Un lavoro che si inserisce nei programmi scolastici di **educazione civica** e che prepara alla **cittadinanza consapevole**.
 
 ## Perché andare nelle scuole
 

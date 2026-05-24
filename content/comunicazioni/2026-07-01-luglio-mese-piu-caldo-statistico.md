@@ -86,7 +86,7 @@ Il **Ministero della Salute** pubblica il **bollettino ondate di calore** per 27
 - **Livello 2**: condizioni meteo che possono avere effetti negativi sulla salute.
 - **Livello 3**: ondata di calore con effetti gravi.
 
-Per Genzano valgono i bollettini di **Roma**. Consultabili su [salute.gov.it](https://www.salute.gov.it/).
+Per Genzano di Roma valgono i bollettini di **Roma**. Consultabili su [salute.gov.it](https://www.salute.gov.it/).
 
 ## Numeri verdi sanitari
 

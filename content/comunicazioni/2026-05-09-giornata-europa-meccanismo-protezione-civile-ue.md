@@ -55,7 +55,7 @@ L'Italia partecipa al Meccanismo sia come **Paese che offre assistenza** sia com
 
 Negli ultimi anni il sistema europeo si è attivato per incendi, terremoti, alluvioni, emergenze sanitarie e crisi umanitarie. In questi scenari operano professionisti, tecnici, enti pubblici e — quando previsto dalla pianificazione — componenti del volontariato organizzato.
 
-## Cosa significa per Genzano
+## Cosa significa per Genzano di Roma
 
 Genzano e i Castelli Romani fanno parte di una rete che opera ben oltre i confini comunali. I dati di monitoraggio, le mappe europee e i sistemi di cooperazione internazionale alimentano anche le analisi dei sistemi nazionali e regionali di protezione civile.
 

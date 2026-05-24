@@ -19,7 +19,7 @@ Il 16 marzo 2026, presso la sede della Regione Lazio, sono stati consegnati 100 
 Anche il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** è tra i beneficiari.
 
 {{< foto src="/images/2026-03-16-consegna-defibrillatori-regione-lazio.webp"
-         alt="I volontari del Gruppo Comunale di Genzano alla consegna dei defibrillatori, presso la sede della Regione Lazio, insieme a rappresentanti istituzionali della Protezione Civile regionale."
+         alt="I volontari del Gruppo Comunale di Genzano di Roma alla consegna dei defibrillatori, presso la sede della Regione Lazio, insieme a rappresentanti istituzionali della Protezione Civile regionale."
          caption="La consegna ufficiale dei defibrillatori presso la sede della Regione Lazio, marzo 2026." >}}
 
 ---

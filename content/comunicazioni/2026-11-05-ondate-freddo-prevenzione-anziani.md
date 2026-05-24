@@ -26,7 +26,7 @@ Un'**ondata di freddo** è definita come:
 - **vento** che amplifica la sensazione di freddo (wind-chill);
 - **umidità** alta che accelera la dispersione di calore corporeo.
 
-Nel Lazio e a Genzano, un'ondata di freddo tipica porta temperature sotto i **-5 °C** durante la notte.
+Nel Lazio e a Genzano di Roma, un'ondata di freddo tipica porta temperature sotto i **-5 °C** durante la notte.
 
 ## I rischi sanitari
 

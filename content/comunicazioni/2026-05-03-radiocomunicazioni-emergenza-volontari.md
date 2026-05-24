@@ -74,7 +74,7 @@ Mantenere apparati, formare operatori, fare esercitazioni periodiche è un **inv
 
 ## Le nostre attività di radiocomunicazione
 
-Il Gruppo Comunale Volontari di Genzano ha volontari attivi nelle radiocomunicazioni. Partecipiamo a esercitazioni regionali e contribuiamo alla sorveglianza radio durante eventi e manifestazioni pubbliche. Per saperne di più trovi un riferimento nella pagina [Diventa volontario](/diventa-volontario/).
+Il Gruppo Comunale Volontari di Genzano di Roma ha volontari attivi nelle radiocomunicazioni. Partecipiamo a esercitazioni regionali e contribuiamo alla sorveglianza radio durante eventi e manifestazioni pubbliche. Per saperne di più trovi un riferimento nella pagina [Diventa volontario](/diventa-volontario/).
 
 ## Per approfondire
 

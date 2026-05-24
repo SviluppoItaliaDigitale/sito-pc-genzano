@@ -18,7 +18,7 @@ L'estate dei **Castelli Romani** è fatta anche di **sagre, feste patronali, eve
 ## Gli eventi tradizionali
 
 Alcuni appuntamenti iconici della nostra zona:
-- **Infiorata di Genzano** (giugno).
+- **Infiorata di Genzano di Roma** (giugno).
 - **Sagra dell'uva** di Marino (ottobre).
 - **Festa del vino** di Velletri (estate).
 - **Feste patronali** in ogni Comune.

@@ -101,7 +101,7 @@ Molti anziani vivono lontani dai figli. Puoi aiutare così:
 
 ## I servizi del Comune e della ASL
 
-A Genzano puoi contattare:
+A Genzano di Roma puoi contattare:
 
 - **Servizi sociali del Comune**: per anziani soli o in difficoltà.
 - **ASL Roma 6**: medici di famiglia e cure a domicilio.

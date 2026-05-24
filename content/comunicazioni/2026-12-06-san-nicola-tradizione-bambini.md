@@ -195,7 +195,7 @@ Il nostro gruppo:
 
 ## Un augurio
 
-In questa giornata di **San Nicola**, mandiamo un augurio speciale a tutti i bambini di Genzano e al nostro futuro. Che siano **sani**, **sicuri**, **protetti**, **liberi** di giocare e imparare.
+In questa giornata di **San Nicola**, mandiamo un augurio speciale a tutti i bambini di Genzano di Roma e al nostro futuro. Che siano **sani**, **sicuri**, **protetti**, **liberi** di giocare e imparare.
 
 E a chi si prende cura di loro — genitori, insegnanti, medici, educatori, allenatori, volontari — un **grazie** per l'impegno silenzioso di ogni giorno.
 

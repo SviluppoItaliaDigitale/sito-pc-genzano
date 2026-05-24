@@ -46,7 +46,7 @@ Ogni Gruppo ha predisposto **stazioni radio mobili** e **fisse** nelle proprie s
 ## Modalità tecnica
 
 ### Frequenze
-- **VHF** per comunicazioni locali (tra Genzano e i comuni limitrofi);
+- **VHF** per comunicazioni locali (tra Genzano di Roma e i comuni limitrofi);
 - **UHF** per collegamenti a corto raggio;
 - **HF** per collegamenti di emergenza anche a lunghe distanze;
 - **APRS** (Automatic Packet Reporting System) per posizionamento.

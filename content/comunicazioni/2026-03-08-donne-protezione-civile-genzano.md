@@ -1,5 +1,5 @@
 ---
-title: "Le donne della Protezione Civile di Genzano"
+title: "Le donne della Protezione Civile di Genzano di Roma"
 date: 2026-03-08
 description: "L'8 marzo è la Giornata internazionale della donna. Nel volontariato di Protezione Civile le donne sono ogni giorno presenti, preparate."
 badge: "Volontariato"
@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Nel Gruppo Comunale di Genzano, come in tutto il sistema italiano, le donne sono **volontarie, formatrici, responsabili, coordinatrici, tecniche**. Non come eccezione, ma come **parte normale** di una realtà che funziona solo se tutti danno il proprio contributo.
+Nel Gruppo Comunale di Genzano di Roma, come in tutto il sistema italiano, le donne sono **volontarie, formatrici, responsabili, coordinatrici, tecniche**. Non come eccezione, ma come **parte normale** di una realtà che funziona solo se tutti danno il proprio contributo.
 
 L'**8 marzo**, **Giornata internazionale della donna**, è l'occasione per dirlo con chiarezza — e per continuare a migliorare.
 

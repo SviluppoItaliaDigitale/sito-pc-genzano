@@ -54,7 +54,7 @@ L'Italia ha:
 - **ciclo** dei nutrienti del suolo;
 - **resilienza** ecosistema.
 
-## I boschi di Genzano
+## I boschi di Genzano di Roma
 
 Il territorio di Genzano è in un **contesto boscato** significativo:
 

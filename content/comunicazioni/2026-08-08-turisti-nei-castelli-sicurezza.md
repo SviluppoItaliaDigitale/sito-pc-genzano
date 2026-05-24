@@ -17,7 +17,7 @@ Ad agosto i **Castelli Romani** registrano il picco annuale di presenze turistic
 
 ## Informazioni utili per chi ospita
 
-Chi ospita amici o parenti a Genzano — o gestisce una struttura ricettiva, anche non professionale — può dare ai propri ospiti alcune indicazioni base:
+Chi ospita amici o parenti a Genzano di Roma — o gestisce una struttura ricettiva, anche non professionale — può dare ai propri ospiti alcune indicazioni base:
 
 - **Il numero di emergenza è il 112.** Vale per chiunque sia in Italia, anche straniero: è il Numero Unico Europeo.
 - **La farmacia di turno** cambia ogni settimana; gli orari sono esposti in ogni farmacia o consultabili sul sito del Comune.

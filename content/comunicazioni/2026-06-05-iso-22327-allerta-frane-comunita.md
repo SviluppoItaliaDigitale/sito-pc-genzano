@@ -31,7 +31,7 @@ Senza conoscenza del rischio, ogni allerta è inutile. Conoscere significa saper
 - **Quando** si manifestano i fenomeni (stagione delle piogge, dopo eventi sismici, dopo incendi che hanno bruciato la vegetazione).
 - **Chi** è esposto (case, strade, scuole, ospedali, persone vulnerabili).
 
-Per Genzano e i Castelli Romani il riferimento è il **Piano di Assetto Idrogeologico (PAI)** dell'Autorità di Bacino del Distretto dell'Appennino Centrale e le mappe di **CNR-IRPI** (Istituto di Ricerca per la Protezione Idrogeologica) e **ISPRA**.
+Per Genzano di Roma e i Castelli Romani il riferimento è il **Piano di Assetto Idrogeologico (PAI)** dell'Autorità di Bacino del Distretto dell'Appennino Centrale e le mappe di **CNR-IRPI** (Istituto di Ricerca per la Protezione Idrogeologica) e **ISPRA**.
 
 ### 2. Monitoraggio
 

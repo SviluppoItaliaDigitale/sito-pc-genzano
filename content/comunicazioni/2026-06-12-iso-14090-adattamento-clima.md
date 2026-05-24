@@ -20,7 +20,7 @@ Lo standard internazionale **ISO 14090 — Adaptation to climate change — Prin
 
 ## Perché parlarne
 
-Per i Castelli Romani — e per Genzano in particolare — il cambiamento climatico si traduce in alcuni rischi concreti che si stanno intensificando:
+Per i Castelli Romani — e per Genzano di Roma in particolare — il cambiamento climatico si traduce in alcuni rischi concreti che si stanno intensificando:
 
 - **Ondate di calore** estive sempre più intense e prolungate;
 - **Siccità prolungate** che mettono sotto stress i sistemi idrici;

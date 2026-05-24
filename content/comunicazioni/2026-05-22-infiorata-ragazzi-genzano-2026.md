@@ -4,7 +4,7 @@ date: 2026-05-22T00:07:00+02:00
 badge: "Evento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-description: "Il 30 e 31 maggio 2026 torna la 22ª Infiorata dei Ragazzi a Genzano. Il Gruppo Comunale di PC è presente a supporto della popolazione."
+description: "Il 30 e 31 maggio 2026 torna la 22ª Infiorata dei Ragazzi a Genzano di Roma. Il Gruppo Comunale di PC è presente a supporto della popolazione."
 image: "/images/2026-05-22-infiorata-ragazzi-genzano-2026.webp"
 image_alt: "Cover dell'articolo: Infiorata dei Ragazzi 2026, il Gruppo a supporto dell'evento"
 area: "Genzano di Roma"
@@ -22,7 +22,7 @@ social_punti:
 draft: false
 ---
 
-Il **30 e 31 maggio 2026** le bambine e i bambini delle scuole di Genzano realizzeranno la **22ª Infiorata dei Ragazzi** su **via Bruno Buozzi** (l'antica via Sforza), la stessa strada della prima Infiorata.
+Il **30 e 31 maggio 2026** le bambine e i bambini delle scuole di Genzano di Roma realizzeranno la **22ª Infiorata dei Ragazzi** su **via Bruno Buozzi** (l'antica via Sforza), la stessa strada della prima Infiorata.
 
 Il tema di quest'anno è **«Inno al Creato: il Cantico delle Creature»**, omaggio a San Francesco d'Assisi nell'ottavo centenario della morte. I quadri sono realizzati dagli alunni di tutte le scuole, con la guida dell'**Associazione Accademia dei Maestri Infioratori** e degli insegnanti.
 

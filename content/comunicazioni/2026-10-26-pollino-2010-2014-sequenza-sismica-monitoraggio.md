@@ -56,7 +56,7 @@ Il Pollino ha lasciato lezioni operative ancora valide:
 
 3. **Il monitoraggio è prevenzione.** Gli investimenti nella **rete sismica nazionale**, nei centri di calcolo INGV, nel **CAT (Centro Allerta Tsunami)**, nei centri funzionali regionali sono prevenzione strutturale: trasformano la conoscenza scientifica in capacità di gestire le emergenze.
 
-## A Genzano e nei Castelli Romani
+## A Genzano di Roma e nei Castelli Romani
 
 Anche il nostro territorio ha **sismicità di fondo** legata al sistema vulcanico dei Colli Albani: scosse generalmente di bassa magnitudo (M 2-3) ma frequenti, con episodi storici di intensità maggiore. Il sistema di monitoraggio nazionale registra anche le micro-scosse del nostro territorio.
 

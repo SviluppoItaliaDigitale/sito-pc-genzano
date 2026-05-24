@@ -120,7 +120,7 @@ Il Lazio ha già partecipato a test nazionali. Nei prossimi mesi potrebbero esse
 Segui i canali ufficiali per annunci:
 - **Sito IT-alert.gov.it**.
 - **Regione Lazio — PC**.
-- **Comune di Genzano**.
+- **Comune di Genzano di Roma**.
 
 ## Se ricevi un messaggio sospetto
 

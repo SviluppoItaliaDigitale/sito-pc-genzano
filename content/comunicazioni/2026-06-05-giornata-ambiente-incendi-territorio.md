@@ -75,7 +75,7 @@ Adattarsi è già necessario. Mitigare è ancora possibile.
 
 ## Cosa fa un volontario per l'ambiente
 
-Il Gruppo comunale di Genzano contribuisce all'ambiente attraverso:
+Il Gruppo comunale di Genzano di Roma contribuisce all'ambiente attraverso:
 
 - **Avvistamento incendi** nei turni AIB estivi.
 - **Sensibilizzazione** nelle scuole e nelle sagre.

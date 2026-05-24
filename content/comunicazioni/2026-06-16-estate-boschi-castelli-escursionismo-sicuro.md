@@ -102,7 +102,7 @@ Per escursioni impegnative è utile il supporto di guide CAI o associazioni di e
 - **Guardia Parco Castelli Romani** — per informazioni e segnalazioni non urgenti.
 - **Corpo Forestale dei Carabinieri** — per illeciti ambientali.
 
-Il **Gruppo comunale di Genzano** può essere attivato dal 112 in caso di ricerca dispersi o supporto a Vigili del Fuoco.
+Il **Gruppo comunale di Genzano di Roma** può essere attivato dal 112 in caso di ricerca dispersi o supporto a Vigili del Fuoco.
 
 ## Per approfondire
 

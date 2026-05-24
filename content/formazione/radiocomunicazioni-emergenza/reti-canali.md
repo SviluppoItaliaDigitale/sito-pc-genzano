@@ -127,7 +127,7 @@ Obsoleto per la vita quotidiana ma ancora utile in contesti istituzionali (Comun
 - i **ripetitori** possono perdere alimentazione se manca rete elettrica prolungata e la batteria tampone si esaurisce
 - la qualità audio su palmare 5 W in zona urbana può essere **marginale**
 
-**Quando usarla**: scenario locale (paese, provincia, regione). Il **Lazio** ha ottima copertura VHF tramite ripetitori ARI-RE e radioamatori. A Genzano, il 2 m è la **prima scelta operativa** in simplex sui canali assegnati o tramite ripetitori ufficiali.
+**Quando usarla**: scenario locale (paese, provincia, regione). Il **Lazio** ha ottima copertura VHF tramite ripetitori ARI-RE e radioamatori. A Genzano di Roma, il 2 m è la **prima scelta operativa** in simplex sui canali assegnati o tramite ripetitori ufficiali.
 
 ### UHF — 430 MHz (70 cm)
 

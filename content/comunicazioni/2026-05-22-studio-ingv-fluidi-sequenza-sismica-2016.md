@@ -52,7 +52,7 @@ Sapere cosa fare prima, durante e dopo una scossa è la difesa più efficace. Su
 
 **Sul nostro sito**
 
-- [Rischio sismico](/rischi-prevenzione/rischio-sismico/) — cosa fare prima, durante e dopo un terremoto a Genzano e nei Castelli Romani
+- [Rischio sismico](/rischi-prevenzione/rischio-sismico/) — cosa fare prima, durante e dopo un terremoto a Genzano di Roma e nei Castelli Romani
 - [Il tuo piano di emergenza familiare](/piano-familiare/) — preparati con la tua famiglia
 - [Kit di emergenza](/rischi-prevenzione/kit-emergenza/) — cosa tenere pronto in casa
 - [Glossario](/glossario/) — il significato delle sigle e dei termini tecnici

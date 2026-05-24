@@ -347,7 +347,7 @@ Con click-to-load **l'utente sceglie quando attivare il widget**, conosce in ant
 
 Per ogni widget esterno il sito offre anche **un link diretto al sito ufficiale del fornitore**, dove il cittadino può consultare il contenuto con le opzioni di accessibilità del fornitore stesso (di solito più complete di quelle del widget embed). Esempi:
 
-- Mappa meteo Windy → link a [windy.com centrato su Genzano](https://www.windy.com/41.692/12.693)
+- Mappa meteo Windy → link a [windy.com centrato su Genzano di Roma](https://www.windy.com/41.692/12.693)
 - Mappa terremoti INGV → link a [terremoti.ingv.it](https://terremoti.ingv.it/)
 - Radar DPC → link al [portale Dipartimento di Protezione Civile](https://dpc-radar.ingv.it/)
 

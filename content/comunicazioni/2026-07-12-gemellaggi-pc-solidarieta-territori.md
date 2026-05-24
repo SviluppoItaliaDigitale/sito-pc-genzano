@@ -136,7 +136,7 @@ Questi scambi consolidano **interoperabilità** in ottica di emergenze transfron
 
 ## Come partecipare
 
-Se sei volontario del Gruppo di Genzano e ti interessa la dimensione sovracomunale:
+Se sei volontario del Gruppo di Genzano di Roma e ti interessa la dimensione sovracomunale:
 - **Segnala** disponibilità per attivazioni fuori territorio.
 - **Segui** formazioni di colonna mobile regionale.
 - **Partecipa** a esercitazioni congiunte.

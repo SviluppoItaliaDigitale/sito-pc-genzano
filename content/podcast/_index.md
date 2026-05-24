@@ -1,6 +1,6 @@
 ---
-title: "Podcast — Voci dalla Protezione Civile di Genzano"
-description: "Podcast del Gruppo PC di Genzano: rischi locali, esercitazioni, interviste a esperti. Ascoltabile su Spotify, Apple Podcasts e via feed RSS."
+title: "Podcast — Voci dalla Protezione Civile di Genzano di Roma"
+description: "Podcast del Gruppo PC di Genzano di Roma: rischi locali, esercitazioni, interviste a esperti. Ascoltabile su Spotify, Apple Podcasts e via feed RSS."
 type: "podcast"
 layout: "list"
 outputs:
@@ -29,7 +29,7 @@ params:
   podcast_apple: ""
 ---
 
-**Voci dalla Protezione Civile di Genzano** è il podcast del Gruppo Comunale Volontari. Episodi brevi — dai 10 ai 20 minuti — su come funziona la protezione civile vicino a casa: i rischi del nostro territorio, il racconto delle esercitazioni, le interviste ai volontari e agli esperti.
+**Voci dalla Protezione Civile di Genzano di Roma** è il podcast del Gruppo Comunale Volontari. Episodi brevi — dai 10 ai 20 minuti — su come funziona la protezione civile vicino a casa: i rischi del nostro territorio, il racconto delle esercitazioni, le interviste ai volontari e agli esperti.
 
 Si ascolta gratis, senza account. Puoi seguirlo dalla tua app preferita iscrivendoti al **feed RSS** qui sotto, oppure su Spotify e Apple Podcasts non appena il podcast sarà distribuito.
 

@@ -31,7 +31,7 @@ La **sera del 7 dicembre**, **vigilia dell'Immacolata**, è tradizionalmente occ
 - **presepi** allestiti nelle chiese;
 - **eventi** familiari in casa (preparazione addobbi, decorazione albero).
 
-### A Genzano
+### A Genzano di Roma
 Il Comune pubblica il **calendario** degli eventi istituzionali. Le parrocchie pubblicano gli orari delle celebrazioni religiose. Il **centro storico** si illumina.
 
 ## Sicurezza in eventi serali

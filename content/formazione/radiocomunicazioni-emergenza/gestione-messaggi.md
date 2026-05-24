@@ -35,7 +35,7 @@ In emergenza vera, la maglia libera **non funziona**: si sovrappongono troppe st
 
 All'**innesco** di un'emergenza, una maglia libera diventa una maglia diretta. Chi apre la maglia (in genere il primo ad accorgersi, o un operatore pre-designato) dichiara:
 
-*"Questa è la Maglia di Emergenza di Genzano, diretta, dal nominativo I0XYZ Net Control. Chiedo silenzio radio salvo traffico di emergenza o priorità. Stazioni con traffico di emergenza, chiamate ora."*
+*"Questa è la Maglia di Emergenza di Genzano di Roma, diretta, dal nominativo I0XYZ Net Control. Chiedo silenzio radio salvo traffico di emergenza o priorità. Stazioni con traffico di emergenza, chiamate ora."*
 
 ## Il Net Control Station (NCS)
 

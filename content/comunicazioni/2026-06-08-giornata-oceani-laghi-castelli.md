@@ -66,7 +66,7 @@ Gesti piccoli che contano: non abbandonare bottiglie, stoviglie usa-e-getta, imb
 
 ## Il ruolo del volontariato
 
-Il Gruppo comunale di Genzano può essere attivato per:
+Il Gruppo comunale di Genzano di Roma può essere attivato per:
 
 - **Soccorso a dispersi** nelle aree del Parco.
 - **Supporto logistico** in caso di eventi meteo che coinvolgono il bacino.

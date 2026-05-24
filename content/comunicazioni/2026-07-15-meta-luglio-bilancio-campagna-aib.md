@@ -23,7 +23,7 @@ Alla data del 15 luglio 2026, i dati indicativi regionali (Lazio):
 - **Ettari percorsi dal fuoco**: in crescita ma ancora sotto i picchi dei peggiori anni.
 - **Cause**: in prevalenza **colpose** (brucia-stoppie, abbandono di mozziconi, negligenza), in parte **dolose**, una minoranza **naturali** (fulmini).
 
-A Genzano e nei Castelli Romani non si sono verificati **grandi incendi** nei primi 30 giorni. Piccoli principi sono stati contenuti dagli interventi rapidi di VVF e squadre AIB.
+A Genzano di Roma e nei Castelli Romani non si sono verificati **grandi incendi** nei primi 30 giorni. Piccoli principi sono stati contenuti dagli interventi rapidi di VVF e squadre AIB.
 
 ## Il meteo del primo mese
 

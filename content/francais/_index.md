@@ -1,6 +1,6 @@
 ---
 title: "Français — Protection Civile Genzano di Roma"
-description: "Informations en français pour touristes et résidents : numéros d'urgence, comportements face aux risques, contacts de la protection civile de Genzano."
+description: "Informations en français pour touristes et résidents : numéros d'urgence, comportements face aux risques, contacts de la protection civile de Genzano di Roma."
 layout: "single"
 language: "fr"
 aliases:

@@ -59,7 +59,7 @@ La Regione Lazio ha regole specifiche. Chi causa un incendio può ricevere una m
 - Conosci la strada per uscire di casa in caso di incendio.
 - Segnala al 112 ogni fumo strano.
 
-## I rischi a Genzano
+## I rischi a Genzano di Roma
 
 A Genzano il rischio incendi in autunno è basso. Ma fai attenzione a:
 

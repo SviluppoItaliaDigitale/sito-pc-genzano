@@ -81,7 +81,7 @@ Per chi vive in **zone collinari, lungo corsi d'acqua minori, in aree urbane con
 
 I **Castelli Romani**, e in particolare Genzano, sono **direttamente esposti** allo stesso tipo di rischio che si è manifestato nelle Marche: rovesci temporaleschi convettivi di intensità eccezionale, generati dal calore residuo del **mare Tirreno** in tarda estate e inizio autunno. Negli ultimi anni eventi simili (anche se con minore intensità del 2022 marchigiano) si sono verificati nel territorio.
 
-Il **Piano di Emergenza Comunale** di Genzano descrive le aree a maggiore esposizione (vie strette in pendenza, zone basse della Strada Comunale Civita Lavinia, fossi naturali e tombati) e i comportamenti raccomandati. Vedi anche [Rischio idraulico urbano a Genzano](/comunicazioni/2026-09-15-rischio-idraulico-urbano-genzano/) e [Pulizia fossi e caditoie](/comunicazioni/2026-08-28-pulizia-fossi-caditoie-prevenzione-autunno/).
+Il **Piano di Emergenza Comunale** di Genzano di Roma descrive le aree a maggiore esposizione (vie strette in pendenza, zone basse della Strada Comunale Civita Lavinia, fossi naturali e tombati) e i comportamenti raccomandati. Vedi anche [Rischio idraulico urbano a Genzano](/comunicazioni/2026-09-15-rischio-idraulico-urbano-genzano/) e [Pulizia fossi e caditoie](/comunicazioni/2026-08-28-pulizia-fossi-caditoie-prevenzione-autunno/).
 
 ## In ricordo
 

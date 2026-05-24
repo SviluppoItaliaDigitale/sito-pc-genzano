@@ -32,7 +32,7 @@ Le radici degli alberi tengono fermo il suolo. Senza radici, la terra scivola vi
 
 In Italia il 36% del territorio ha boschi e foreste. Ci sono circa 11 milioni di ettari di bosco. Il bosco cresce ogni anno. Ci sono più di 100 tipi diversi di alberi italiani.
 
-## I boschi vicino a Genzano
+## I boschi vicino a Genzano di Roma
 
 Genzano è vicino al **Parco Regionale dei Castelli Romani**. Il parco ha grandi foreste. Ci sono boschi con castagni, querce e altri alberi. C'è anche la vegetazione vicino al lago di Nemi. Questi boschi riducono il rischio idrogeologico del nostro territorio.
 

@@ -1,7 +1,7 @@
 ---
 title: "Bilancio 2026: attività del Gruppo Comunale"
 date: 2026-12-28T00:01:00+02:00
-description: "Bilancio delle attività 2026 del Gruppo Comunale Volontari di PC di Genzano: formazione, presidi, informazione, prevenzione."
+description: "Bilancio delle attività 2026 del Gruppo Comunale Volontari di PC di Genzano di Roma: formazione, presidi, informazione, prevenzione."
 badge: "Aggiornamento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -197,7 +197,7 @@ Alle **famiglie** dei volontari: senza il vostro **supporto**, il nostro servizi
 Al **Comune**, alle **Forze dell'Ordine**, ai **Vigili del Fuoco**, all'**ASL**, alle **scuole**, alle **parrocchie**: **grazie** per la collaborazione.
 
 ### Ai cittadini
-Ai **cittadini** di Genzano: **grazie** per la fiducia, per le segnalazioni, per la pazienza, per il sostegno quando avete potuto.
+Ai **cittadini** di Genzano di Roma: **grazie** per la fiducia, per le segnalazioni, per la pazienza, per il sostegno quando avete potuto.
 
 ### Ai media
 Ai **media** locali che hanno raccontato le nostre attività: grazie per la copertura **corretta** e **rispettosa**.

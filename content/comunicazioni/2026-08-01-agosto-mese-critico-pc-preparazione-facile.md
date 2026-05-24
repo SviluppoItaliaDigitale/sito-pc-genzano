@@ -50,7 +50,7 @@ In agosto puoi:
 
 ## Il nostro Gruppo in agosto
 
-Il Gruppo Comunale Volontari di Protezione Civile di Genzano lavora tutto agosto.
+Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma lavora tutto agosto.
 
 I volontari si turnano per coprire tutto il mese. Sono presenti agli eventi in paese. Coordinano con il Comune, la Polizia Locale e i Vigili del Fuoco. Controllano il territorio e i boschi. Comunicano ogni giorno alla popolazione.
 

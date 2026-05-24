@@ -33,7 +33,7 @@ Ogni anno in Italia i petardi causano problemi:
 
 ## Le regole del Comune
 
-Il Sindaco di Genzano pubblica un'ordinanza. L'ordinanza è una regola ufficiale. Dice:
+Il Sindaco di Genzano di Roma pubblica un'ordinanza. L'ordinanza è una regola ufficiale. Dice:
 
 - quando puoi sparare petardi (esempio: solo dalle 23:00 del 31 dicembre alle 02:00 del 1 gennaio)
 - dove non puoi sparare (centro storico, parchi, boschi)

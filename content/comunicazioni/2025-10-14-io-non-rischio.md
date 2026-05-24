@@ -1,5 +1,5 @@
 ---
-title: "Io Non Rischio 2025 - Genzano in piazza"
+title: "Io Non Rischio 2025 - Genzano di Roma in piazza"
 date: 2025-10-14
 description: "I volontari del Gruppo in Piazza Tommaso Frasconi per la campagna nazionale Io Non Rischio."
 badge: "Evento"

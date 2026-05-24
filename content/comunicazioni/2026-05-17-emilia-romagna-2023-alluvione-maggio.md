@@ -77,7 +77,7 @@ Il [piano familiare di emergenza](/piano-familiare/) è uno strumento concreto p
 
 ## Genzano e il rischio "Romagna"
 
-Il territorio dei Castelli Romani non ha la **morfologia di pianura** dell'Emilia-Romagna né i suoi reticoli idraulici complessi. Ma l'**evento del 2023** porta una lezione anche per Genzano: nessun territorio italiano è **immune** da scenari di pioggia eccezionale. La **bomba d'acqua** del 16 settembre 2022 sulle Marche (vedi [articolo dedicato](/comunicazioni/2026-09-15-alluvione-marche-2022-bombe-acqua-cambiamento-climatico/)) ha mostrato che eventi di questa intensità possono colpire ovunque — anche su un territorio collinare di natura vulcanica come il nostro.
+Il territorio dei Castelli Romani non ha la **morfologia di pianura** dell'Emilia-Romagna né i suoi reticoli idraulici complessi. Ma l'**evento del 2023** porta una lezione anche per Genzano di Roma: nessun territorio italiano è **immune** da scenari di pioggia eccezionale. La **bomba d'acqua** del 16 settembre 2022 sulle Marche (vedi [articolo dedicato](/comunicazioni/2026-09-15-alluvione-marche-2022-bombe-acqua-cambiamento-climatico/)) ha mostrato che eventi di questa intensità possono colpire ovunque — anche su un territorio collinare di natura vulcanica come il nostro.
 
 Per il rischio idraulico locale di Genzano vedi [Rischio idraulico urbano a Genzano](/comunicazioni/2026-09-15-rischio-idraulico-urbano-genzano/) e [Pulizia fossi e caditoie](/comunicazioni/2026-08-28-pulizia-fossi-caditoie-prevenzione-autunno/).
 

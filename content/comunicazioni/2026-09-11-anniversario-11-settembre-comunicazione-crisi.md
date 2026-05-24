@@ -57,7 +57,7 @@ Non è un "di più": è **parte integrante** dell'intervento di soccorso.
 
 ## Genzano e la comunicazione di PC
 
-Il Gruppo Comunale Volontari di PC di Genzano cura la comunicazione seguendo:
+Il Gruppo Comunale Volontari di PC di Genzano di Roma cura la comunicazione seguendo:
 
 - le **linee guida AGID** per la PA;
 - la **Social Media Policy** pubblicata il 22 aprile 2026;

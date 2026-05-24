@@ -21,7 +21,7 @@ build:
 
 Il 3 giugno è la Giornata mondiale della bicicletta. La celebrano le Nazioni Unite dal 2018. È una giornata sulla bicicletta, sulla sicurezza stradale e sulle emergenze.
 
-## La bici a Genzano
+## La bici a Genzano di Roma
 
 Genzano di Roma è un paese su una collina. Le strade sono strette. Molte persone usano la bici per spostarsi. Oggi ci sono anche le **e-bike**, le bici elettriche.
 

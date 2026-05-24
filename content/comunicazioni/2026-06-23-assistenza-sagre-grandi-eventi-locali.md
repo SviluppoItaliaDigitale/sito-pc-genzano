@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Quando a Genzano si organizzano **sagre**, **feste patronali** o **grandi eventi** pubblici, accanto a Polizia Locale, Vigili del Fuoco e ASL operano anche i **volontari di Protezione Civile**. Non si tratta di presenza simbolica: la normativa sulla sicurezza degli eventi (cosiddetta "**circolare Gabrielli**" del 2017) impone misure precise di gestione dei rischi.
+Quando a Genzano di Roma si organizzano **sagre**, **feste patronali** o **grandi eventi** pubblici, accanto a Polizia Locale, Vigili del Fuoco e ASL operano anche i **volontari di Protezione Civile**. Non si tratta di presenza simbolica: la normativa sulla sicurezza degli eventi (cosiddetta "**circolare Gabrielli**" del 2017) impone misure precise di gestione dei rischi.
 
 ## Perché un evento è uno "scenario di rischio"
 

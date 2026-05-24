@@ -11,7 +11,7 @@ Un campo di accoglienza non è solo **strutture**: è soprattutto **persone che 
 
 ### Capo Missione
 
-Il **Capo Missione** ha la responsabilità **strategica** di tutto l'intervento. Riporta direttamente all'autorità che ha attivato la missione (Sindaco di Genzano, Prefetto, Regione, DPC).
+Il **Capo Missione** ha la responsabilità **strategica** di tutto l'intervento. Riporta direttamente all'autorità che ha attivato la missione (Sindaco di Genzano di Roma, Prefetto, Regione, DPC).
 
 Compiti:
 

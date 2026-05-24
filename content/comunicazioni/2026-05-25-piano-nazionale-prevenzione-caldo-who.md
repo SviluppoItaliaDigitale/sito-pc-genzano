@@ -96,7 +96,7 @@ Le linee di indirizzo dedicano un capitolo alla **mitigazione dell'isola di calo
 - **riduzione delle superfici impermeabili**
 - **rifugi climatici**: spazi pubblici refrigerati accessibili durante le ondate
 
-Per Genzano, pur essendo una cittadina collinare dei Castelli e non una metropoli, vale la stessa logica: preservare il verde, proteggere le vie pedonali con alberi, progettare nuove aree pubbliche tenendo conto del microclima.
+Per Genzano di Roma, pur essendo una cittadina collinare dei Castelli e non una metropoli, vale la stessa logica: preservare il verde, proteggere le vie pedonali con alberi, progettare nuove aree pubbliche tenendo conto del microclima.
 
 ## Cambiamento climatico: il contesto
 

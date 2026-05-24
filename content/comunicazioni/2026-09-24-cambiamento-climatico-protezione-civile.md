@@ -55,7 +55,7 @@ Il volontariato organizzato **non sostituisce** le strutture pubbliche, ma **est
 - **attrezzature moderne**;
 - **coordinamento interterritoriale** rinforzato.
 
-## Cosa cambia a Genzano
+## Cosa cambia a Genzano di Roma
 
 I rischi storici del territorio (**idrogeologico**, **AIB**, **sismico**, **meteo estremo**) non scompaiono: si **amplificano** nelle code della distribuzione (fenomeni più estremi). Il Gruppo Comunale di PC di Genzano, in coordinamento con il Comune e la Regione Lazio:
 

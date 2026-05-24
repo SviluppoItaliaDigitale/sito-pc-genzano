@@ -26,7 +26,7 @@ La Regione Lazio ha dato 100 defibrillatori ai volontari di Protezione Civile.
 Anche il nostro Gruppo di Genzano di Roma ne ha ricevuto 1.
 
 {{< foto src="/images/2026-03-16-consegna-defibrillatori-regione-lazio.webp"
-         alt="I volontari del Gruppo Comunale di Genzano alla consegna dei defibrillatori, presso la sede della Regione Lazio, insieme a rappresentanti istituzionali della Protezione Civile regionale."
+         alt="I volontari del Gruppo Comunale di Genzano di Roma alla consegna dei defibrillatori, presso la sede della Regione Lazio, insieme a rappresentanti istituzionali della Protezione Civile regionale."
          caption="La consegna ufficiale dei defibrillatori presso la sede della Regione Lazio, marzo 2026." >}}
 
 ## Cos'è un defibrillatore

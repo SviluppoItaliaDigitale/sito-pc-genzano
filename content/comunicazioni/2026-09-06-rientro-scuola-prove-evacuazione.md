@@ -73,7 +73,7 @@ Le prove sono **annunciate** al personale e in genere ai bambini. Un'**emergenza
 
 ## Il ruolo della Protezione Civile
 
-Il Gruppo Comunale Volontari di PC di Genzano collabora con le scuole che ne fanno richiesta:
+Il Gruppo Comunale Volontari di PC di Genzano di Roma collabora con le scuole che ne fanno richiesta:
 
 - supporta **prove di evacuazione** particolarmente complesse;
 - tiene **lezioni** nelle classi sui rischi del territorio;

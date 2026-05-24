@@ -28,7 +28,7 @@ Il Lazio concentra in estate oltre l'**80% degli incendi boschivi** dell'intero 
 - **Regione Lazio** — coordinamento, mezzi aerei e comunicazione del rischio.
 - **Comuni** — ordinanze locali, pulizia aree di pertinenza, informazione.
 
-Il Gruppo comunale di Genzano contribuisce alla campagna con turni di **avvistamento nelle zone a rischio** e attivazioni a chiamata dei Vigili del Fuoco.
+Il Gruppo comunale di Genzano di Roma contribuisce alla campagna con turni di **avvistamento nelle zone a rischio** e attivazioni a chiamata dei Vigili del Fuoco.
 
 ## Divieti in vigore dal 1 giugno
 

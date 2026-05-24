@@ -111,7 +111,7 @@ Ogni anniversario di disastro idrogeologico ricorda che:
 - il **singolo cittadino** deve conoscere il rischio del proprio territorio;
 - la **preparazione** salva vite.
 
-## A Genzano
+## A Genzano di Roma
 
 Il territorio di Genzano non presenta bacini come quelli versiliesi, ma ha:
 

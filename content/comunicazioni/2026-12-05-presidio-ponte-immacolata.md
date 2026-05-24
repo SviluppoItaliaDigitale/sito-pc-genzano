@@ -21,7 +21,7 @@ Il ponte dell'Immacolata coincide con:
 - **aumento** di presenze turistiche;
 - **mercatini** e manifestazioni;
 - **condizioni meteo** potenzialmente avverse;
-- **traffico** in entrata e uscita da Genzano;
+- **traffico** in entrata e uscita da Genzano di Roma;
 - **attività** commerciali del centro storico intensificate.
 
 La **presenza** della PC garantisce **pronta risposta** a segnalazioni ed emergenze.

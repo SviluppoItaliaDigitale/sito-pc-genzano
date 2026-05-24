@@ -17,7 +17,7 @@ draft: false
 
 ## Cambiamenti della giornata
 
-Oggi e nei giorni a venire, a Genzano:
+Oggi e nei giorni a venire, a Genzano di Roma:
 
 - **alba** intorno alle 6:50;
 - **tramonto** intorno alle 17:05;

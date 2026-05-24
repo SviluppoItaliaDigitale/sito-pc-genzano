@@ -1,6 +1,6 @@
 ---
 title: "Capitolo 1 — Struttura organizzativa e catena di comando"
-description: "Dalla struttura nazionale al COC di Genzano: chi fa cosa in emergenza secondo il Codice PC e il metodo Augustus aggiornato."
+description: "Dalla struttura nazionale al COC di Genzano di Roma: chi fa cosa in emergenza secondo il Codice PC e il metodo Augustus aggiornato."
 layout: "single"
 toc: true
 ---
@@ -59,7 +59,7 @@ Chi vi siede — l'**Unità di Crisi Locale** — è composto in forma tipica da
 - il **Sindaco** (o suo delegato)
 - il **Responsabile dell'Ufficio Tecnico Comunale**
 - il **Responsabile della Polizia Locale**
-- un **rappresentante dell'Arma dei Carabinieri** (Stazione di Genzano)
+- un **rappresentante dell'Arma dei Carabinieri** (Stazione di Genzano di Roma)
 - il **Responsabile del Gruppo Comunale Volontari PC**
 - l'**Ufficiale dell'Anagrafe**
 - **rappresentanti delle 9 funzioni di supporto** (vedi §1.4)

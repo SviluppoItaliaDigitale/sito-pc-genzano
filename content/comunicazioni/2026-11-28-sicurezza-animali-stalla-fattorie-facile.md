@@ -67,7 +67,7 @@ Il veterinario è molto importante. Visita gli animali regolarmente. In emergenz
 
 In una grande emergenza la Protezione Civile aiuta gli allevatori. Cerca posti dove mettere gli animali. Lavora con i veterinari dell'ASL e i vigili del fuoco.
 
-Il Comune di Genzano ha un elenco delle fattorie del territorio. Questo serve per organizzare i soccorsi.
+Il Comune di Genzano di Roma ha un elenco delle fattorie del territorio. Questo serve per organizzare i soccorsi.
 
 ## Cosa fare in questi casi
 

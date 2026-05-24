@@ -73,7 +73,7 @@ Il Gruppo può:
 - aprire le porte del gruppo per visite scolastiche
 - partecipare a progetti per le scuole, come "Io non rischio a scuola"
 
-## Le scuole di Genzano
+## Le scuole di Genzano di Roma
 
 A Genzano di Roma ci sono queste scuole:
 

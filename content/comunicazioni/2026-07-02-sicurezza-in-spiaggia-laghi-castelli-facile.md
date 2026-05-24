@@ -19,7 +19,7 @@ build:
   publishResources: true
 ---
 
-## I laghi vicino a Genzano
+## I laghi vicino a Genzano di Roma
 
 I laghi di Nemi e Albano sono vicini a Genzano di Roma. Molte persone ci vanno d'estate. L'acqua è bella e fresca. Ma l'acqua può essere pericolosa. Queste regole ti aiutano a stare al sicuro.
 

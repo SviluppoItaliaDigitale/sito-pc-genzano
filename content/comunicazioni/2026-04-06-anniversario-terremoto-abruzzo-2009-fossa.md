@@ -1,7 +1,7 @@
 ---
-title: "Diciassette anni fa il terremoto dell'Aquila: quando i volontari di Genzano portarono la speranza a Fossa"
+title: "Diciassette anni fa il terremoto dell'Aquila: quando i volontari di Genzano di Roma portarono la speranza a Fossa"
 date: 2026-04-06
-description: "Nel 17° anniversario del sisma del 6 aprile 2009, ricordiamo l'impegno dei volontari di Genzano nel comune di Fossa con la Fepivol."
+description: "Nel 17° anniversario del sisma del 6 aprile 2009, ricordiamo l'impegno dei volontari di Genzano di Roma nel comune di Fossa con la Fepivol."
 badge: "Volontariato"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -57,7 +57,7 @@ Ciò che rese straordinario l'intervento dei volontari genzanesi non fu soltanto
 
 Operare in condizioni di emergenza significa rinunciare al conforto, accettare la fatica, sapere di essere lontani da casa senza sapere esattamente quando si tornerà. Significa guardare negli occhi una famiglia che ha perso tutto e trovare le parole giuste, o anche solo stare in silenzio accanto a loro.
 
-I volontari di Genzano lo fecero. Giorno dopo giorno, turno dopo turno, con pazienza e con il cuore.
+I volontari di Genzano di Roma lo fecero. Giorno dopo giorno, turno dopo turno, con pazienza e con il cuore.
 
 ---
 

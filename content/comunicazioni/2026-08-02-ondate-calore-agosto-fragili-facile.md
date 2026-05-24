@@ -52,7 +52,7 @@ Alcune persone rischiano di più con il caldo:
 
 - **112** — il numero unico di emergenza. Chiamalo subito se qualcuno sta male.
 - **1500** — il numero verde del Ministero della Salute (è gratuito). Puoi chiamare per informazioni sul caldo e la salute.
-- **Servizi Sociali del Comune di Genzano** — segnala le persone sole che hanno bisogno di aiuto.
+- **Servizi Sociali del Comune di Genzano di Roma** — segnala le persone sole che hanno bisogno di aiuto.
 
 ## Il bollettino del caldo
 

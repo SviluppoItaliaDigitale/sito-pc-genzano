@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Chi è già volontario di PC non smette mai di formarsi. Oltre al **corso base** iniziale, la normativa prevede **aggiornamenti periodici** per mantenere le abilitazioni operative. Il Gruppo Comunale Volontari di PC di Genzano ripropone, con la ripresa autunnale, i principali **moduli di aggiornamento**.
+Chi è già volontario di PC non smette mai di formarsi. Oltre al **corso base** iniziale, la normativa prevede **aggiornamenti periodici** per mantenere le abilitazioni operative. Il Gruppo Comunale Volontari di PC di Genzano di Roma ripropone, con la ripresa autunnale, i principali **moduli di aggiornamento**.
 
 ## Perché aggiornarsi
 

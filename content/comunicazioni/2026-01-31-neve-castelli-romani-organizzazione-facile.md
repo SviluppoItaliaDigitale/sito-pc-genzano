@@ -85,7 +85,7 @@ L'ipotermia è quando il corpo diventa troppo freddo. I segnali sono: pelle fred
 
 - **112** — Numero Unico Europeo di Emergenza (incidenti, pericolo, salute).
 - **803 555** — Sala Operativa Protezione Civile Lazio.
-- **Comune di Genzano** — per problemi sulle strade comunali.
+- **Comune di Genzano di Roma** — per problemi sulle strade comunali.
 
 I numeri completi sono nella sezione [Numeri utili](/numeri-utili/) del sito.
 

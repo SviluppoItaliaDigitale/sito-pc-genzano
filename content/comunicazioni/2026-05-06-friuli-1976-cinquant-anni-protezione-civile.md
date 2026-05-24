@@ -88,7 +88,7 @@ Tutto questo, oggi, è descritto nel **Codice della Protezione Civile** e in pro
 
 ## Cosa deve sapere il cittadino oggi
 
-Chi vive in zona sismica — e in Italia significa quasi tutti, comprese le aree di Genzano e dei Castelli Romani classificate **zona 2B** — deve conoscere tre cose semplici.
+Chi vive in zona sismica — e in Italia significa quasi tutti, comprese le aree di Genzano di Roma e dei Castelli Romani classificate **zona 2B** — deve conoscere tre cose semplici.
 
 **Prima della scossa**:
 

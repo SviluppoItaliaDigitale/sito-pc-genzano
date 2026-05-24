@@ -27,7 +27,7 @@ Abili a proteggere è un portale nazionale. Lo gestisce il **Dipartimento della 
 
 ## Cos'è Abili a proteggere
 
-Abili a proteggere raccoglie esempi utili da tutta Italia. Spiega come aiutare le persone fragili in caso di emergenza. Il Gruppo di Genzano è tra gli esempi scelti.
+Abili a proteggere raccoglie esempi utili da tutta Italia. Spiega come aiutare le persone fragili in caso di emergenza. Il Gruppo di Genzano di Roma è tra gli esempi scelti.
 
 ---
 

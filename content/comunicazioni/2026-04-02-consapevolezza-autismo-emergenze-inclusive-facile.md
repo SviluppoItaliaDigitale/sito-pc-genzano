@@ -96,7 +96,7 @@ La CAA è un metodo che usa simboli e immagini. Aiuta le persone che non parlano
 
 ## Nelle scuole
 
-Le scuole di Genzano possono adattare le esercitazioni di emergenza. Per esempio:
+Le scuole di Genzano di Roma possono adattare le esercitazioni di emergenza. Per esempio:
 
 - Avvisare prima i bambini autistici dell'esercitazione.
 - Avere un educatore vicino durante l'esercitazione.

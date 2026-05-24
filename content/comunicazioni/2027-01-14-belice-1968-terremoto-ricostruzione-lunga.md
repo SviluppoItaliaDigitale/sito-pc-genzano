@@ -52,7 +52,7 @@ Il Belice è memoria scomoda ma essenziale:
 
 3. **La ricostruzione è ricchezza o povertà di un territorio.** Una ricostruzione rapida e partecipata rilancia un'area; una ricostruzione lenta e calata dall'alto la spegne. Il Belice è il caso negativo, l'Umbria 1997 il caso positivo.
 
-## A Genzano
+## A Genzano di Roma
 
 Il nostro Gruppo Comunale è nato come risposta civica a una **debolezza strutturale del nostro Paese** fino agli anni Settanta: la mancanza di un sistema diffuso di volontariato di Protezione Civile. Oggi siamo una piccola tessera di una rete nazionale di **migliaia di gruppi e associazioni** che il Codice della Protezione Civile riconosce come componente strategica.
 
