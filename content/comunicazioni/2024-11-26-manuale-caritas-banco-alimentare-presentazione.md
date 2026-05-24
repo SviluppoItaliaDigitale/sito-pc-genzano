@@ -56,7 +56,7 @@ Il recupero e la distribuzione di alimenti a fini di solidarietà rientra nel "c
 
 Il manuale introduce alcuni **strumenti operativi specifici per il mondo del volontariato**:
 
-1. **Distinzione tra OC di I livello e OC di II livello** — le prime (come i Banchi Alimentari) distribuiscono grandi quantitativi alle seconde, che operano direttamente con gli indigenti attraverso pacchi viveri, empori solidali, unità di strada, mense, comunità di accoglienza.
+1. **Distinzione tra OC di I livello e OC di II livello.** Le prime (come i Banchi Alimentari) distribuiscono grandi quantitativi alle seconde. Le seconde operano direttamente con gli indigenti, attraverso pacchi viveri, empori solidali, unità di strada, mense e comunità di accoglienza.
 2. **Sistema semplificato HACCP** — applicazione dei principi HACCP adattata alla dimensione e al grado di complessità delle OC. Il manuale fornisce un approccio schematico basato sulle fasi di processo, alternativo all'albero delle decisioni classico.
 3. **Livelli di attenzione a "semaforo"** — le tre macrocategorie di alimenti (alto/medio/basso livello di attenzione) sono contrassegnate da icone colorate (mano rossa/arancione/verde) per guidare gli operatori nella gestione in base al rischio.
 4. **Schede operative e registri pronti all'uso** — il manuale include in appendice le schede per la tracciabilità, il controllo delle temperature, il piano di sanificazione, l'elenco fornitori, le non conformità.
