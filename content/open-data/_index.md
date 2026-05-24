@@ -22,13 +22,21 @@ I seguenti dataset sono pubblicati **ora**, con dati reali e verificati, in form
 
 > Il dataset **Aree di emergenza** è il riferimento per altri Comuni, enti e applicazioni di terzi: contiene le coordinate GPS, verificate sul campo, dei punti del Piano comunale (aree di attesa della popolazione e aree di ammassamento dei soccorritori).
 
-I file sono rigenerati dallo script `scripts/genera-open-data.py` a partire dai dati strutturati del sito.
+I file sono rigenerati automaticamente a partire dai dati strutturati del sito.
 
 ### Statistiche operative del Gruppo (dati provvisori)
 
 > ⚠️ **Dati provvisori.** Queste statistiche sono censite **solo a partire dall'adozione del nuovo sistema gestionale (aprile 2026)**: **non coprono l'intero anno** e non includono i mesi precedenti. Sono **aggregate e anonime** — nessun nome, nessun indirizzo, nessun dato personale. Si aggiornano a ogni nuovo export del gestionale.
 
 {{< statistiche-attivita >}}
+
+#### Interventi per tipologia
+
+{{< grafico-csv file="static/open-data/interventi-per-tipologia.csv" tipo="barre,torta" titolo="Interventi per tipologia" unita="interventi" >}}
+
+#### Automezzi impiegati
+
+{{< grafico-csv file="static/open-data/automezzi-impiegati.csv" tipo="barre" titolo="Automezzi impiegati (numero di interventi per mezzo)" unita="interventi" >}}
 
 Periodo coperto: **dal 4 aprile 2026**. I dati sono **generati automaticamente** dall'export del gestionale, che **resta riservato e non viene pubblicato** perché contiene dati personali: il sito ne espone solo i numeri aggregati.
 

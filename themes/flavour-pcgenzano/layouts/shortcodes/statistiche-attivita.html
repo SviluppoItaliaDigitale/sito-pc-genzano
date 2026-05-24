@@ -1,10 +1,11 @@
 {{/* Mostra in UN'UNICA tabella accessibile le statistiche operative aggregate,
      leggendo i CSV generati da scripts/genera-open-data-interventi.py.
      Si aggiorna da solo a ogni nuovo export (nessun numero scritto a mano). */}}
+{{/* Tabella riassuntiva dei soli indicatori sintetici (KPI): interventi e
+     volontari. "Interventi per tipologia" e "Automezzi impiegati" hanno una
+     resa dedicata (grafico + tabella) tramite lo shortcode grafico-csv. */}}
 {{ $sezioni := slice
   (dict "tit" "Interventi" "file" "static/open-data/statistiche-interventi.csv")
-  (dict "tit" "Interventi per tipologia" "file" "static/open-data/interventi-per-tipologia.csv")
-  (dict "tit" "Automezzi impiegati" "file" "static/open-data/automezzi-impiegati.csv")
   (dict "tit" "Volontari" "file" "static/open-data/statistiche-volontari.csv")
 }}
 <div class="table-responsive">
