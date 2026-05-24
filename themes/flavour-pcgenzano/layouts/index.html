@@ -211,29 +211,32 @@
   </div>
 </section>
 
-{{/* Profili rapidi — 4 accessi per profilo utente (sorgente DRY in partial) */}}
+{{/* Tentativo 3 — riordino per priorità: hub in cima, notizie subito dopo,
+     numeri di emergenza e meteo (dati real-time) in alto, servizi/giochi più giù. */}}
+
+{{/* Profili rapidi — HUB: accessi per profilo utente */}}
 {{ partial "profili-rapidi.html" . }}
 
-{{/* Cosa fare in caso di... */}}
+{{/* Cosa fare in caso di... — azioni rapide (completa l'hub) */}}
 {{ partial "quick-links.html" . }}
+
+{{/* Notizie in evidenza — subito dopo l'hub */}}
+{{ partial "latest-news.html" . }}
+
+{{/* Numeri di emergenza — in evidenza, in alto */}}
+{{ partial "numbers-utility.html" . }}
+
+{{/* Meteo — cartina Lazio, dato in tempo reale (card sismica accanto a IT-alert in social-channels) */}}
+{{ partial "meteo-cartine-home.html" . }}
 
 {{/* Servizi per il cittadino */}}
 {{ partial "services.html" . }}
 
-{{/* Notizie in evidenza */}}
-{{ partial "latest-news.html" . }}
-
-{{/* Meteo — cartina Lazio (la card sismica è accanto a IT-alert in social-channels) */}}
-{{ partial "meteo-cartine-home.html" . }}
+{{/* Comunità: canali social + IT-alert + terremoti */}}
+{{ partial "social-channels.html" . }}
 
 {{/* Giochi della Sicurezza — CTA formazione */}}
 {{ partial "games-cta.html" . }}
-
-{{/* Numeri utili */}}
-{{ partial "numbers-utility.html" . }}
-
-{{/* Social + IT-alert */}}
-{{ partial "social-channels.html" . }}
 
 {{/* Box "Condividi e scarica" (QR + Stampa + share) — coerente con tutte
      le pagine del sito da maggio 2026 (richiesta utente di uniformità).
