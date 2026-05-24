@@ -55,7 +55,7 @@ Questi recapiti sono **per informazioni e richieste non urgenti**. In caso di em
 Per informazioni amministrative, ufficio anagrafe e servizi al cittadino. Per **emergenze chiama il 112**, non il centralino comunale.
 
 - **Sede:** Via Italo Belardi 81 — 00045 Genzano di Roma (RM)
-- **Centralino:** [+39 06 937111](tel:+390693711)
+- **Centralino:** [+39 06 937111](tel:+3906937111)
 - **Sito istituzionale:** [comune.genzanodiroma.roma.it](https://www.comune.genzanodiroma.roma.it/)
 
 ## Polizia Locale di Genzano di Roma

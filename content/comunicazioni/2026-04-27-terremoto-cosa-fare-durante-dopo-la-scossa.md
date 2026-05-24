@@ -89,7 +89,7 @@ Fonti istituzionali:
 
 - [Dipartimento Protezione Civile — Rischio sismico](https://www.protezionecivile.gov.it/it/pagina/rischio-sismico).
 - [INGV — Istituto Nazionale Geofisica e Vulcanologia](https://www.ingv.it/).
-- [Mappe di pericolosità sismica INGV](http://zonesismiche.mi.ingv.it/).
+- [Mappe di pericolosità sismica INGV](https://zonesismiche.mi.ingv.it/).
 - [Centro Microzonazione Sismica](https://www.centromicrozonazionesismica.it/).
 
 La prevenzione sismica non è paura: è **preparazione**. Due minuti di conversazione in famiglia oggi possono risparmiare molti rischi domani.

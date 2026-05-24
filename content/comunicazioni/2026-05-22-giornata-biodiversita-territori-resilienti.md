@@ -75,7 +75,7 @@ Il nostro territorio è un mosaico particolare:
 - **Agricolture tradizionali** (vigneti, frutteti, colture miste).
 - **Fauna di pregio** (rapaci, piccoli mammiferi, insetti impollinatori).
 
-Il [Parco Regionale dei Castelli Romani](http://www.parcocastelliromani.it/) tutela una parte significativa dell'area, ma la qualità del territorio dipende anche da **scelte private** (proprietari di terreni, aziende agricole, cittadini).
+Il [Parco Regionale dei Castelli Romani](https://www.parcocastelliromani.it/) tutela una parte significativa dell'area, ma la qualità del territorio dipende anche da **scelte private** (proprietari di terreni, aziende agricole, cittadini).
 
 ## Cosa può fare un cittadino
 
