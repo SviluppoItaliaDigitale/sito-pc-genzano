@@ -1,0 +1,82 @@
+name: "🗺️ Cartine meteo extra (animazione Lazio + sinottica Italia)"
+
+# Rigenera le due cartine meteo in valutazione (pagina /meteo-confronto/):
+#   A) static/images/meteo-lazio-animata.svg   (animazione choropleth Lazio, SVG)
+#   B) static/images/meteo-sinottica-italia.webp (carta sinottica Italia, WebP animata)
+# Dati aperti Open-Meteo (modelli ECMWF, licenza CC-BY, nessuna chiave API).
+#
+# Isolato dal workflow meteo-lazio.yml (cartina live) per non metterne a rischio
+# l'affidabilità: se la sinottica (matplotlib+cartopy) fallisse, la cartina live
+# continua a funzionare nel suo workflow. Commit solo se cambiano gli output, poi
+# ri-trigger esplicito di deploy.yml (i push del GITHUB_TOKEN non auto-triggerano).
+
+on:
+  schedule:
+    # ogni 6 ore, al minuto 23 (fuori dai quarti d'ora canonici — vedi memoria
+    # feedback_github_cron_explicit_better; ore esplicite, non pattern */N).
+    - cron: "23 2,8,14,20 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: "meteo-cartine-extra"
+  cancel-in-progress: false
+
+jobs:
+  genera:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v4
+
+      - name: "🐍 Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: "📦 Dipendenze"
+        run: pip install --quiet numpy matplotlib cartopy pillow
+
+      - name: "♻️ Cache coste Natural Earth (Cartopy)"
+        uses: actions/cache@v4
+        with:
+          path: ~/.local/share/cartopy
+          key: cartopy-naturalearth-50m
+
+      - name: "🎞️ A) Animazione Lazio (SVG)"
+        run: python3 scripts/genera-meteo-animazione.py
+
+      - name: "🌍 B) Carta sinottica Italia (WebP)"
+        continue-on-error: true
+        run: python3 scripts/genera-meteo-sinottica.py
+
+      - name: "✅ Validazione output"
+        run: |
+          set -e
+          python3 -c "import xml.dom.minidom as m; m.parse('static/images/meteo-lazio-animata.svg'); print('SVG animazione valido')"
+          test -s static/images/meteo-sinottica-italia.webp && echo "WebP sinottica presente" || echo "WebP sinottica assente (step B fallito, non bloccante)"
+
+      - name: "💾 Commit se cambiato + ri-trigger deploy"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          FILES="static/images/meteo-lazio-animata.svg data/meteo_animazione.json static/images/meteo-sinottica-italia.webp static/images/meteo-sinottica-italia.png data/meteo_sinottica.json"
+          if git diff --quiet -- $FILES; then
+            echo "Nessun cambiamento — niente commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add $FILES
+          git commit -m "chore(meteo): cartine extra (animazione + sinottica) aggiornate [skip-meteo]"
+          for t in 1 2 3; do
+            if git push 2>&1; then break; fi
+            echo "Push fallito (tentativo $t), rebase..."
+            git pull --rebase origin main || { echo "Rebase fallito"; exit 1; }
+            if [ "$t" = "3" ]; then echo "Push fallito dopo 3 tentativi"; exit 1; fi
+          done
+          gh workflow run deploy.yml

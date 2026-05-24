@@ -207,24 +207,34 @@ def build_svg(map_data, card_data, oggi):
                    f'<text x="{lx+12:.1f}" y="{ly+15:.1f}" font-size="20" font-weight="800" text-anchor="middle" fill="#1a1a1a">{round(t)}&#176;</text>'
                    f'</g>')
 
-    # punto Genzano + riquadro di dettaglio collegato
+    # punto Genzano + riquadro di dettaglio collegato.
+    # Il riquadro rispecchia i dati CORRENTI ("adesso") del riquadro grande della
+    # pagina (.meteo-gz): stessa temperatura, condizione e percepita, piu' max/min,
+    # umidita' e vento. Cosi' i due riquadri non si contraddicono (prima la cartina
+    # mostrava il codice meteo "del giorno", il riquadro grande quello "di adesso").
     gx, gy = px(GENZANO[1], GENZANO[0])
     gz_d = card_data["daily"]
+    cur = card_data["current"]
     gz_max = round(gz_d["temperature_2m_max"][0]); gz_min = round(gz_d["temperature_2m_min"][0])
-    gz_desc, gz_ico = wmo(gz_d["weather_code"][0])
+    gz_now = round(cur["temperature_2m"], 1)
+    gz_perc = round(cur["apparent_temperature"], 1)
+    gz_hum = round(cur["relative_humidity_2m"])
+    gz_wind = round(cur["wind_speed_10m"])
+    gz_gust = round(cur.get("wind_gusts_10m") or 0)
+    gz_desc, gz_ico = wmo(cur["weather_code"])
     # marcatore sul punto
     marker = (f'<circle cx="{gx:.1f}" cy="{gy:.1f}" r="5.5" fill="#b8860b" stroke="#ffffff" stroke-width="2"/>')
     # riquadro nell'angolo basso-sinistra (mare, area libera), con linea al punto
-    bx, by, bw, bh = 8, Hmap-128, 224, 110
+    bx, by, bw, bh = 8, Hmap-162, 250, 144
     cardg = (
         f'<line x1="{bx+bw:.1f}" y1="{by+22:.1f}" x2="{gx:.1f}" y2="{gy:.1f}" stroke="#b8860b" stroke-width="1.4" stroke-dasharray="4 3"/>'
         f'<rect x="{bx}" y="{by}" width="{bw}" height="{bh}" rx="12" fill="#003366" stroke="#b8860b" stroke-width="2"/>'
-        f'<text x="{bx+14}" y="{by+25:.1f}" font-size="14" font-weight="800" fill="#ffffff">&#9733; Genzano di Roma</text>'
-        f'<text x="{bx+14}" y="{by+43:.1f}" font-size="11" fill="#cfe0f0">oggi, {GIORNI_IT[oggi.weekday()]} {oggi.day} {MESI_IT[oggi.month]}</text>'
-        f'{icona_svg(gz_ico, bx+34, by+78, 13)}'
-        f'<text x="{bx+72}" y="{by+74:.1f}" font-size="22" font-weight="800" fill="#ffffff">{gz_max}&#176;<tspan font-size="15" font-weight="400" fill="#cfe0f0"> max</tspan></text>'
-        f'<text x="{bx+72}" y="{by+98:.1f}" font-size="18" font-weight="700" fill="#9ec5e8">{gz_min}&#176;<tspan font-size="13" font-weight="400" fill="#9ec5e8"> min</tspan></text>'
-        f'<text x="{bx+bw-12}" y="{by+98:.1f}" font-size="12" text-anchor="end" fill="#e7eef6">{gz_desc}</text>'
+        f'<text x="{bx+14}" y="{by+25:.1f}" font-size="13.5" font-weight="800" fill="#ffffff">&#9733; Genzano di Roma <tspan font-size="11" font-weight="400" fill="#cfe0f0">&#183; adesso</tspan></text>'
+        f'{icona_svg(gz_ico, bx+36, by+66, 14)}'
+        f'<text x="{bx+70}" y="{by+72:.1f}" font-size="26" font-weight="800" fill="#ffffff">{gz_now}&#176;</text>'
+        f'<text x="{bx+14}" y="{by+96:.1f}" font-size="11.5" fill="#cfe0f0">{gz_desc} &#183; percepita {gz_perc}&#176;</text>'
+        f'<text x="{bx+14}" y="{by+116:.1f}" font-size="11.5" fill="#9ec5e8">Massima {gz_max}&#176; &#183; minima {gz_min}&#176;</text>'
+        f'<text x="{bx+14}" y="{by+135:.1f}" font-size="10.5" fill="#e7eef6">Umidit&#224; {gz_hum}% &#183; Vento {gz_wind} (raff. {gz_gust}) km/h</text>'
     )
 
     PAD=18; HEAD=64; FOOT=82
@@ -253,7 +263,7 @@ def build_svg(map_data, card_data, oggi):
     svg = (
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W:.0f} {H:.0f}" '
         f'font-family="Trebuchet MS,Verdana,Arial,sans-serif" role="img" '
-        f'aria-label="Mappa del Lazio con temperatura massima e cielo previsti oggi per ogni provincia, e un riquadro di dettaglio per Genzano di Roma con massima {gz_max} gradi, minima {gz_min} gradi, {gz_desc}.">'
+        f'aria-label="Mappa del Lazio con temperatura massima e cielo previsti oggi per ogni provincia, e un riquadro di dettaglio per Genzano di Roma: adesso {gz_now} gradi, {gz_desc}, percepita {gz_perc} gradi, massima {gz_max} gradi, minima {gz_min} gradi.">'
         f'<defs><clipPath id="mapclip"><rect x="0" y="0" width="{Wmap:.0f}" height="{Hmap:.0f}"/></clipPath></defs>'
         f'<rect x="0" y="0" width="{W:.0f}" height="{H:.0f}" fill="#ffffff"/>'
         f'<g transform="translate({PAD},{HEAD})" clip-path="url(#mapclip)">{contesto}{prov_svg}{marker}{labels}{cardg}</g>'
