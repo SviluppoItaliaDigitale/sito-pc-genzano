@@ -306,7 +306,7 @@ def build_svg(map_data, card_data, oggi):
         f'<g transform="translate({PAD},{HEAD})" clip-path="url(#mapclip)">{contesto}{prov_svg}{marker}{labels}{cardg}</g>'
         f'<rect x="0" y="0" width="{W:.0f}" height="{HEAD-2}" fill="#ffffff"/>'
         f'<text x="{W/2:.0f}" y="27" font-size="20" font-weight="700" text-anchor="middle" fill="#003366">Lazio &#8212; oggi: temperatura e cielo</text>'
-        f'<text x="{W/2:.0f}" y="47" font-size="12" text-anchor="middle" fill="#495057">{data_lunga}, ore {ora} &#183; massime in &#176;C per provincia &#183; dettaglio Genzano di Roma</text>'
+        f'<text x="{W/2:.0f}" y="47" font-size="12" text-anchor="middle" fill="#495057">{data_lunga}, ore {ora} &#183; temperatura in &#176;C per provincia &#183; dettaglio Genzano di Roma</text>'
         f'<rect x="0" y="{HEAD+Hmap:.0f}" width="{W:.0f}" height="{FOOT+PAD}" fill="#ffffff"/>'
         f'<g>{leg}</g>'
         f'<text x="{W/2:.0f}" y="{H-22:.0f}" font-size="10.5" font-weight="700" text-anchor="middle" fill="#003366">Elaborazione grafica del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma</text>'
