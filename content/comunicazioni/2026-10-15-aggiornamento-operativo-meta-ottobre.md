@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-A metà ottobre, il Gruppo Comunale Volontari di Protezione Civile di Genzano pubblica un aggiornamento sulle attività in corso. Un modo per restare in contatto con i cittadini e raccontare, con trasparenza, come si lavora nei **mesi più operativi dell'anno**.
+A metà ottobre, il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma pubblica un aggiornamento sulle attività in corso. Un modo per restare in contatto con i cittadini e raccontare, con trasparenza, come si lavora nei **mesi più operativi dell'anno**.
 
 ## Corso base 2026: avvio imminente
 

@@ -114,7 +114,7 @@ Le ricerche in aree boschive e montane sono coordinate dal [Corpo Nazionale Socc
 Sul nostro sito:
 
 - [Kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/).
-- [Cartografia del territorio di Genzano](/cartografia/).
+- [Cartografia del territorio di Genzano di Roma](/cartografia/).
 - [Rischio incendio boschivo](/rischi-prevenzione/rischio-incendio/).
 
 Fonti istituzionali:

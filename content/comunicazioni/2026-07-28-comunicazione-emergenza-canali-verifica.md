@@ -70,7 +70,7 @@ Questo **"rumore"** è un pericolo di per sé.
 
 ## I canali ufficiali comunali (Genzano)
 
-### Comune di Genzano
+### Comune di Genzano di Roma
 - **Sito** comunale ufficiale.
 - **Albo pretorio** online.
 - **Social** istituzionali.

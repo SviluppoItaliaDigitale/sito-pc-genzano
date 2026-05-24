@@ -24,7 +24,7 @@ Se cerchi un termine che non trovi, scrivi a [segreteria@protezionecivilegenzano
 ## A
 
 ### AA / Area di attesa
-Luogo sicuro dove la popolazione può radunarsi nelle prime fasi di un'emergenza, in attesa di informazioni e assistenza. A Genzano le aree di attesa sono indicate nella [Cartografia](/cartografia/).
+Luogo sicuro dove la popolazione può radunarsi nelle prime fasi di un'emergenza, in attesa di informazioni e assistenza. A Genzano di Roma le aree di attesa sono indicate nella [Cartografia](/cartografia/).
 
 ### AeDES
 Scheda tecnica usata dopo un terremoto da tecnici abilitati per valutare il danno e l'agibilità degli edifici. Serve a stabilire se un edificio può essere usato, se servono limitazioni o se è inagibile.

@@ -49,7 +49,7 @@ Importante: un cane da macerie non segnala "**cose**" (vestiti, oggetti) ma **pe
 
 Sui Castelli Romani non manca la presenza cinofila: diverse associazioni di volontariato regionali e nazionali (RNCC, ENCI, FISC) operano sul territorio del Lazio. Durante eventi calamitosi nazionali — terremoto di Amatrice 2016, alluvione delle Marche 2022, frana di Casamicciola 2022 — squadre cinofile da tutta Italia (anche dal Lazio) hanno lavorato per giorni o settimane.
 
-Il **Gruppo Comunale di Genzano** non ha al momento un'unità cinofila propria. Quando serve, attiva tramite la Sala Operativa Regionale Lazio le squadre più vicine accreditate.
+Il **Gruppo Comunale di Genzano di Roma** non ha al momento un'unità cinofila propria. Quando serve, attiva tramite la Sala Operativa Regionale Lazio le squadre più vicine accreditate.
 
 ## Come si diventa conduttore cinofilo PC
 

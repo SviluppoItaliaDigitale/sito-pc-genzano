@@ -1,5 +1,5 @@
 ---
-title: "Scuole di Genzano: riprendere a settembre con un Piano di Emergenza aggiornato"
+title: "Scuole di Genzano di Roma: riprendere a settembre con un Piano di Emergenza aggiornato"
 date: 2026-08-26T00:01:00+02:00
 description: "A settembre riaprono le scuole. È il momento giusto per verificare Piani di Emergenza, prove di evacuazione, referenti di sicurezza."
 badge: "Prevenzione"
@@ -63,7 +63,7 @@ La prima prova di norma si fa entro **ottobre**. La seconda entro **aprile/maggi
 
 ## Il ruolo della Protezione Civile
 
-Il Gruppo Comunale Volontari di Protezione Civile di Genzano collabora con le scuole del territorio attraverso:
+Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma collabora con le scuole del territorio attraverso:
 
 - **lezioni nelle classi** sui rischi e sull'autoprotezione;
 - **supporto** in occasione delle prove di evacuazione;

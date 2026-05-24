@@ -1,7 +1,7 @@
 ---
 title: "Io Non Rischio: torna la campagna nazionale di volontariato per il rischio"
 date: 2026-09-25
-description: "Ogni autunno Io Non Rischio porta migliaia di volontari nelle piazze italiane per parlare di rischi e autoprotezione. Cosa fa il Gruppo di Genzano."
+description: "Ogni autunno Io Non Rischio porta migliaia di volontari nelle piazze italiane per parlare di rischi e autoprotezione. Cosa fa il Gruppo di Genzano di Roma."
 badge: "Volontariato"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Ogni autunno, **centinaia di piazze italiane** si riempiono di gazebo colorati e di volontari con la maglia blu. È la **campagna nazionale "Io Non Rischio"**, promossa dal **Dipartimento della Protezione Civile**, **ANPAS**, **INGV** e **ReLUIS**, con il supporto delle Regioni e del volontariato organizzato. Il Gruppo di Genzano partecipa, come ogni anno, all'edizione 2026.
+Ogni autunno, **centinaia di piazze italiane** si riempiono di gazebo colorati e di volontari con la maglia blu. È la **campagna nazionale "Io Non Rischio"**, promossa dal **Dipartimento della Protezione Civile**, **ANPAS**, **INGV** e **ReLUIS**, con il supporto delle Regioni e del volontariato organizzato. Il Gruppo di Genzano di Roma partecipa, come ogni anno, all'edizione 2026.
 
 ## Cosa è "Io Non Rischio"
 

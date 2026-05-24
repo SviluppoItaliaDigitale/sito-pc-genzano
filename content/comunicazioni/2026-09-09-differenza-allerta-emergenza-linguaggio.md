@@ -48,7 +48,7 @@ Usare le parole giuste evita due errori opposti:
 
 - **Centro Funzionale Regionale Lazio**: emette bollettini e allerte meteo;
 - **Dipartimento della Protezione Civile**: coordina a scala nazionale;
-- **Comune di Genzano**: adotta le ordinanze locali e attiva il COC in caso di emergenza;
+- **Comune di Genzano di Roma**: adotta le ordinanze locali e attiva il COC in caso di emergenza;
 - **Gruppo Comunale Volontari di PC**: opera sul campo e comunica agli operatori e alla cittadinanza.
 
 ## Cosa può fare il cittadino

@@ -1,7 +1,7 @@
 ---
 title: "Donare sangue e plasma: un gesto che salva vite"
 date: 2026-12-14
-description: "Chiudiamo l'anno ricordando l'importanza della donazione di sangue e plasma. A Genzano e Castelli i centri attivi."
+description: "Chiudiamo l'anno ricordando l'importanza della donazione di sangue e plasma. A Genzano di Roma e Castelli i centri attivi."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Nel **periodo natalizio** e nei **giorni festivi** aumentano gli **incidenti stradali** e si riduce la **disponibilità** di sangue e plasma. È un momento in cui la **donazione** è particolarmente preziosa. Qualche nota sulla donazione a Genzano e dintorni.
+Nel **periodo natalizio** e nei **giorni festivi** aumentano gli **incidenti stradali** e si riduce la **disponibilità** di sangue e plasma. È un momento in cui la **donazione** è particolarmente preziosa. Qualche nota sulla donazione a Genzano di Roma e dintorni.
 
 ## La situazione italiana
 

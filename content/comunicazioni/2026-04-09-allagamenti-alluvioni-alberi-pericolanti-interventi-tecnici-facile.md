@@ -131,7 +131,7 @@ Un volontario di Protezione Civile non improvvisa. Sa usare ogni attrezzo. Conos
 
 Sul nostro sito:
 
-- [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/) — il territorio di Genzano.
+- [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/) — il territorio di Genzano di Roma.
 - [Allagamenti urbani: cosa fare](/comunicazioni/2026-05-02-allagamenti-urbani-cosa-fare-acqua-casa/).
 - [Albero pericolante: intervento dei volontari](/comunicazioni/2026-05-02-albero-pericolante-rimozione-volontari-genzano/).
 - [Diventa volontario](/diventa-volontario/).

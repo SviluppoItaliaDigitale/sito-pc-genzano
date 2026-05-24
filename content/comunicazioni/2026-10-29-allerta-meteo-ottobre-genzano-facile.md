@@ -1,5 +1,5 @@
 ---
-title: "Allerta gialla per temporali a Genzano"
+title: "Allerta gialla per temporali a Genzano di Roma"
 date: 2026-10-29T00:01:00+02:00
 description: "C'è allerta gialla per temporali. Scopri cosa fare per stare al sicuro."
 badge: "Allerta"
@@ -55,7 +55,7 @@ L'allerta dura fino a giovedì 30 ottobre sera.
 
 ## Cosa fa il Gruppo Volontari
 
-Il Gruppo Comunale Volontari di Protezione Civile di Genzano sta lavorando.
+Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma sta lavorando.
 
 - Controlla i canali e le strade a rischio.
 - Segue i bollettini meteo.

@@ -68,7 +68,7 @@ Le organizzazioni di volontariato prestano la propria opera su richiesta delle *
 
 Istituisce il **Comitato nazionale del volontariato di protezione civile**, organismo di **rappresentanza** delle organizzazioni iscritte presso il Dipartimento. È lo strumento con cui il volontariato organizzato partecipa, in modo strutturato, alle scelte e agli indirizzi del Servizio nazionale.
 
-## In sintesi: cosa significa tutto questo per il Gruppo Comunale di Genzano
+## In sintesi: cosa significa tutto questo per il Gruppo Comunale di Genzano di Roma
 
 1. **Siamo un'organizzazione ufficialmente riconosciuta**: il nostro Gruppo Comunale è iscritto all'elenco territoriale della Regione Lazio.
 2. **Operiamo sotto attivazione formale**: nessun intervento è "privato". Ogni attività parte da una **nota di attivazione** del Comune, della Prefettura o della Regione.

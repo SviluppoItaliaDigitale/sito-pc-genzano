@@ -11,7 +11,7 @@ Questa pagina integra la mappa del sito con i nuovi contenuti di prevenzione pub
 
 ## Pagine aggiunte
 
-### Scuole di Genzano e rischi locali
+### Scuole di Genzano di Roma e rischi locali
 
 Pagina per scuole, famiglie e docenti. Collega rischi principali, materiali didattici, Piano Comunale e cartografia operativa. Non contiene dati inventati su singoli istituti scolastici.
 

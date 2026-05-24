@@ -111,7 +111,7 @@ Il Codice riconosce in modo esplicito tre principi che la 225 aveva solo accenna
 
 Il Codice è ancora la legge in vigore. Le sue **direttive attuative** continuano ad evolvere, ma la cornice è quella.
 
-## Cosa significa per noi, qui a Genzano
+## Cosa significa per noi, qui a Genzano di Roma
 
 Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma esiste perché esiste questo Sistema. Non siamo una emanazione del Comune in senso stretto: siamo una **componente del Servizio Nazionale di Protezione Civile** ai sensi del D.Lgs. 1/2018. Il nostro Sindaco è autorità locale di protezione civile ai sensi dell'**articolo 12** del Codice. La nostra catena di comando passa per il **Centro Operativo Comunale** quando viene attivato, sale al **Centro Funzionale Regionale del Lazio** per le allerte meteo, raggiunge il **Dipartimento** per gli eventi di rilievo nazionale.
 

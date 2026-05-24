@@ -153,7 +153,7 @@ I **Centri Antiviolenza** offrono:
 - **percorsi** di uscita dalla violenza;
 - **accompagnamento** in iter giudiziario.
 
-### A Genzano e dintorni
+### A Genzano di Roma e dintorni
 - **CAV** territoriale coordinato con ASL Roma 6;
 - **comune** con sportello anti-violenza;
 - **associazioni** locali dedicate;

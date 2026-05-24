@@ -96,7 +96,7 @@ Sul nostro sito trovi la scheda emergenza personale in [Abili a Proteggere — L
 
 ## Il ruolo dei volontari
 
-Il Gruppo Comunale Volontari di Protezione Civile di Genzano aiuta le persone fragili in emergenza. Lavoriamo insieme al Comune e all'ASL (l'Azienda Sanitaria Locale). Non sostituiamo i servizi sociali. Li aiutiamo a raggiungere tutti.
+Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma aiuta le persone fragili in emergenza. Lavoriamo insieme al Comune e all'ASL (l'Azienda Sanitaria Locale). Non sostituiamo i servizi sociali. Li aiutiamo a raggiungere tutti.
 
 ## Per sapere di più
 

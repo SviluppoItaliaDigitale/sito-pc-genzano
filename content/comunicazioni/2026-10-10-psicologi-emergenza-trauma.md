@@ -88,7 +88,7 @@ Se sei un volontario o un operatore, dopo un intervento difficile è normale pro
 
 **Reazioni che durano alcuni giorni** sono normali e si risolvono da sole. Se invece **persistono dopo 3-4 settimane**, è il momento di parlarne: con il Coordinatore del Gruppo, con un collega di fiducia, o con uno psicologo della rete. Chiedere aiuto **non** è un segno di debolezza; è un segno di professionalità.
 
-## A Genzano
+## A Genzano di Roma
 
 Il Gruppo Comunale di Volontari sta lavorando — in coordinamento con l'**ASL Roma 6** e con l'Ordine degli Psicologi del Lazio — per definire una procedura interna di supporto agli operatori dopo interventi significativi. Per chi soffre, anche solo un confronto con un collega che ha vissuto eventi simili può fare una differenza importante.
 

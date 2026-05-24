@@ -166,7 +166,7 @@ A **dicembre** il **riscaldamento** funziona a pieno regime. È anche il mese di
 
 ## Ordinanze comunali sul riscaldamento
 
-A Genzano:
+A Genzano di Roma:
 - **fasce orarie** di accensione: variabili per zona climatica (zona D);
 - **temperatura** massima negli edifici pubblici (19 °C + 2 tolleranza);
 - **termostati** ad ambiente obbligatori;

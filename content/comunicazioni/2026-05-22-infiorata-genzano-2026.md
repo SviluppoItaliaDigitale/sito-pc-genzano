@@ -1,7 +1,7 @@
 ---
-title: "Infiorata di Genzano 2026: cosa sapere prima di venire"
+title: "Infiorata di Genzano di Roma 2026: cosa sapere prima di venire"
 date: 2026-05-22T00:09:00+02:00
-description: "Infiorata di Genzano 2026, 248ª edizione dal 13 al 15 giugno: programma completo degli eventi giorno per giorno e indicazioni pratiche per il visitatore."
+description: "Infiorata di Genzano di Roma 2026, 248ª edizione dal 13 al 15 giugno: programma completo degli eventi giorno per giorno e indicazioni pratiche per il visitatore."
 badge: "Evento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -14,7 +14,7 @@ draft: false
 tts: true
 ---
 
-L'**Infiorata di Genzano** è la festa più conosciuta della nostra città: il tappeto di fiori che si stende lungo via Italo Belardi — l'antica Via Livia — in occasione del Corpus Domini è una tradizione che si rinnova ogni anno dal **1778**. Nel 2026 si celebra la **248ª edizione**.
+L'**Infiorata di Genzano di Roma** è la festa più conosciuta della nostra città: il tappeto di fiori che si stende lungo via Italo Belardi — l'antica Via Livia — in occasione del Corpus Domini è una tradizione che si rinnova ogni anno dal **1778**. Nel 2026 si celebra la **248ª edizione**.
 
 L'evento attira decine di migliaia di visitatori da tutta Italia e dall'estero, concentrati su un'unica via cittadina nell'arco di tre giorni. Per questo motivo l'Infiorata è una **manifestazione di rilievo per la Protezione Civile** comunale: ogni anno il Gruppo collabora con il Comune e con le altre componenti del sistema di soccorso per garantire un afflusso sicuro.
 

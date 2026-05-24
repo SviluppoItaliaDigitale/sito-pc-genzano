@@ -44,7 +44,7 @@ La ricostruzione delle Marche e dell'Umbria post-1997 è considerata, con tutti 
 
 Molti di questi strumenti sono stati riutilizzati e raffinati nelle emergenze successive: L'Aquila 2009, Emilia 2012, Centro Italia 2016.
 
-## A Genzano
+## A Genzano di Roma
 
 Anche Genzano custodisce un patrimonio storico-artistico vulnerabile: la **Collegiata di Santa Maria della Cima**, le chiese del centro storico, edifici di valore monumentale lungo la via Italo Belardi. Una scossa significativa potrebbe danneggiarli. Per questo il [Piano di Emergenza](/piano-emergenza/) comunale prevede l'attivazione di sopralluoghi mirati al patrimonio in caso di evento sismico, con il coordinamento della Soprintendenza.
 

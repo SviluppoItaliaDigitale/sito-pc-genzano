@@ -7,7 +7,7 @@ toc: true
 
 Un volontario ammalato, disidratato, esausto o preoccupato per la sua famiglia **non è una risorsa**: è un peso per il gruppo e un potenziale infortunato. La Guida IARU dedica il suo penultimo capitolo — non a caso — alla **sicurezza del volontario** stesso. Rispetto ai manuali tecnici, il messaggio è netto: *"Home and Family First. You First — the Mission Second."*
 
-Questo capitolo chiude la serie IARU adattata per il Gruppo Comunale di Genzano.
+Questo capitolo chiude la serie IARU adattata per il Gruppo Comunale di Genzano di Roma.
 
 ## Famiglia e casa prima della missione
 

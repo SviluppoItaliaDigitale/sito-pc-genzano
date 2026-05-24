@@ -19,7 +19,7 @@ Le stazioni amatoriali, ben gestite, contribuiscono in modo significativo alla *
 
 ## Perché serve una rete densa di osservazione
 
-Il tempo meteorologico **cambia rapidamente** anche su piccola scala. Tra Genzano (435 m), Lanuvio (300 m), Albano (420 m) e Rocca di Papa (680 m) le temperature, le precipitazioni e l'esposizione al vento possono differire molto.
+Il tempo meteorologico **cambia rapidamente** anche su piccola scala. Tra Genzano di Roma (435 m), Lanuvio (300 m), Albano (420 m) e Rocca di Papa (680 m) le temperature, le precipitazioni e l'esposizione al vento possono differire molto.
 
 Le stazioni ufficiali:
 

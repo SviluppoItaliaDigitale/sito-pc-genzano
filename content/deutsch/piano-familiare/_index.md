@@ -75,4 +75,4 @@ ____________________________________________
 - [Nützliche Nummern](/deutsch/numeri-utili/)
 - [Was jetzt tun](/deutsch/cosa-fare-adesso/)
 - [Italienisches interaktives Formular](/piano-familiare/) — online ausfüllen und einen anpassbaren druckbaren Plan erhalten (verwenden Sie den Browser-Übersetzer falls nötig)
-- [Karte der Sammelplätze in Genzano](/cartografia/)
+- [Karte der Sammelplätze in Genzano di Roma](/cartografia/)

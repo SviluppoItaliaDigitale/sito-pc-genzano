@@ -57,7 +57,7 @@ Controlla il giardino, il balcone e il terrazzo ogni 3 o 4 giorni.
 
 La zanzara tigre si sposta poco. Vola solo 100-200 metri. Nasce vicino a casa tua. Se il tuo vicino ha ristagni d'acqua, anche tu sei a rischio.
 
-Per questo è importante parlarne con i vicini. A Genzano alcuni condomini fanno pulizie collettive in primavera. È una buona idea.
+Per questo è importante parlarne con i vicini. A Genzano di Roma alcuni condomini fanno pulizie collettive in primavera. È una buona idea.
 
 ## Come proteggerti dalle punture
 

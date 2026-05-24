@@ -24,7 +24,7 @@ La nebbia è una **nuvola al suolo**:
 - **visibilità** ridotta sotto i **1.000 metri** (per definizione);
 - **densa** sotto i 200 metri, **fittissima** sotto i 50 metri.
 
-A Genzano e nei Castelli Romani la nebbia tipica:
+A Genzano di Roma e nei Castelli Romani la nebbia tipica:
 
 - **si forma** nei **bacini** (valli, pressi del lago);
 - **nelle ore** fredde e umide (tramonto, alba);

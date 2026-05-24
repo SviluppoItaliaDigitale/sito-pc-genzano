@@ -49,4 +49,4 @@ Il 23 settembre è anche un'occasione per ricordare i **volontari e le volontari
 ## Sul nostro sito
 
 - [Diventa volontario](/diventa-volontario/) — Come entrare nel Gruppo Comunale: percorso, formazione, ruoli operativi.
-- [Chi siamo](/chi-siamo/) — La storia del Gruppo Comunale di Genzano, la sua struttura e la sua adesione al sistema nazionale di PC.
+- [Chi siamo](/chi-siamo/) — La storia del Gruppo Comunale di Genzano di Roma, la sua struttura e la sua adesione al sistema nazionale di PC.

@@ -183,7 +183,7 @@ Gli esiti possibili sono sei:
 
 ## Perché questo conta anche per il volontariato
 
-Il rilievo del danno alle chiese **non è un'attività da volontari non specialisti**. Richiede competenze ingegneristiche, storico-artistiche e antincendio. Il volontario del Gruppo Comunale di Genzano non compila la scheda Modello A-DC.
+Il rilievo del danno alle chiese **non è un'attività da volontari non specialisti**. Richiede competenze ingegneristiche, storico-artistiche e antincendio. Il volontario del Gruppo Comunale di Genzano di Roma non compila la scheda Modello A-DC.
 
 Ma può trovarsi a **supportare** l'attività:
 

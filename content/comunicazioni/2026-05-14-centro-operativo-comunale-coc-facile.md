@@ -80,7 +80,7 @@ Il Piano del Comune prevede 3 livelli:
 
 Quando l'emergenza finisce, si torna alla normalità.
 
-## Dove si trova il COC a Genzano
+## Dove si trova il COC a Genzano di Roma
 
 A Genzano di Roma il COC si trova **al Comando di Polizia Locale**.
 

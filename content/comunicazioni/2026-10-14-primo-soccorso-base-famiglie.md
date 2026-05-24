@@ -121,7 +121,7 @@ Chi vuole **imparare bene**, non improvvisare:
 - **corsi** BLS-D (5 ore);
 - **corsi** di primo soccorso aziendale (D.Lgs. 81/2008);
 - **corsi** organizzati da **Croce Rossa**, **ANPAS**, **Misericordie**;
-- **corso base** del **Gruppo Comunale di PC** di Genzano (modulo incluso).
+- **corso base** del **Gruppo Comunale di PC** di Genzano di Roma (modulo incluso).
 
 ## Per approfondire
 

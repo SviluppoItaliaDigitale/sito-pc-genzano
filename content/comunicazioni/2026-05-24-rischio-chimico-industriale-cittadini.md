@@ -119,7 +119,7 @@ Sul nostro sito:
 
 - [Cartelli di pericolo delle sostanze pericolose: come riconoscerli](/comunicazioni/2026-05-24-cartelli-pericolo-sostanze-pericolose-riconoscere-agire/).
 - [ISO 22322 — Public warning e IT-alert](/comunicazioni/2026-05-15-iso-22322-public-warning-it-alert/).
-- [Piano di emergenza del Comune di Genzano](/piano-emergenza/).
+- [Piano di emergenza del Comune di Genzano di Roma](/piano-emergenza/).
 
 Fonti istituzionali:
 

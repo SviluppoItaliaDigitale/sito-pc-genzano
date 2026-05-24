@@ -125,7 +125,7 @@ Se vedi un **volontario di Protezione Civile** a un evento:
 - **Non impedirgli il passaggio** se è in movimento con attrezzature.
 - **Riconoscilo**: pettorina fluorescente, logo del Gruppo Comunale, tesserino di servizio.
 
-## Gli eventi a Genzano
+## Gli eventi a Genzano di Roma
 
 Il nostro Comune comunica gli eventi carnevaleschi sui canali ufficiali. Segui:
 

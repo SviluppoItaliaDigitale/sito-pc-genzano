@@ -85,7 +85,7 @@ Quando la Regione Lazio e il Centro Funzionale emettono **allerte per ghiaccio**
 - **Avvisa la scuola** se i bambini non andranno a scuola a causa del maltempo.
 - **Tieni d'occhio i familiari anziani** o fragili: un controllo telefonico al mattino fa la differenza.
 
-Il Comune di Genzano comunica eventuali **chiusure di strade** o **ordinanze scolastiche** sui propri canali ufficiali. In caso di allerta elevata, segui i canali istituzionali, non le voci informali.
+Il Comune di Genzano di Roma comunica eventuali **chiusure di strade** o **ordinanze scolastiche** sui propri canali ufficiali. In caso di allerta elevata, segui i canali istituzionali, non le voci informali.
 
 ## Salatura e spargimento sabbia
 

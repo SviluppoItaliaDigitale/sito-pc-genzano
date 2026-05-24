@@ -17,7 +17,7 @@ Ogni estate, in Italia, decine di persone anziane muoiono per cause evitabili: d
 
 ## Il quadro
 
-A Genzano, come in molti Comuni italiani, una fetta significativa della popolazione anziana vive sola. Le cause sono diverse: vedovanza, figli emigrati al Nord o all'estero, fragilità familiari, povertà. In molti casi la solitudine non è scelta: è condizione. E in agosto, con uffici ridotti, servizi sociali a regime estivo, vicini in ferie, le reti di prossimità si riducono proprio quando servono di più.
+A Genzano di Roma, come in molti Comuni italiani, una fetta significativa della popolazione anziana vive sola. Le cause sono diverse: vedovanza, figli emigrati al Nord o all'estero, fragilità familiari, povertà. In molti casi la solitudine non è scelta: è condizione. E in agosto, con uffici ridotti, servizi sociali a regime estivo, vicini in ferie, le reti di prossimità si riducono proprio quando servono di più.
 
 ## Cosa può fare un vicino di casa
 

@@ -1,6 +1,6 @@
 ---
 title: "Rischio Incendio — Fondamenti"
-description: "Rischio incendio: combustione, sostanze estinguenti, misure di protezione passiva e attiva, procedure di emergenza. Per il Gruppo Volontari PC Genzano."
+description: "Rischio incendio: combustione, sostanze estinguenti, misure di protezione passiva e attiva, procedure di emergenza. Per il Gruppo Volontari PC Genzano di Roma."
 ---
 
 Quest'area raccoglie i **fondamenti del rischio incendio** utili al volontario di protezione civile, al cittadino informato e al lavoratore incaricato dell'attività antincendio nei luoghi di lavoro (art. 37 c. 9 del D.Lgs. 81/2008).
@@ -9,7 +9,7 @@ Il contenuto è adattato dal **Manuale addetti antincendio** del Corpo Nazionale
 
 Questa guida **non sostituisce** il corso di formazione antincendio certificato, che resta obbligatorio per gli addetti designati nei luoghi di lavoro. Serve come **riferimento divulgativo** e come base per le attività di sensibilizzazione del Gruppo Comunale.
 
-## Perché parlare di incendi a Genzano
+## Perché parlare di incendi a Genzano di Roma
 
 Il territorio di Genzano di Roma — al margine del **Parco dei Castelli Romani** — presenta rischio elevato di **incendi boschivi** (Classe C di pericolosità AIB) nel periodo giugno-settembre. La vegetazione mediterranea, i versanti collinari del lago di Nemi e le aree urbane a contatto con il bosco richiedono conoscenze di base sulla natura del fuoco, sulle sostanze estinguenti e sulle procedure di evacuazione.
 

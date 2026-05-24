@@ -1,7 +1,7 @@
 ---
 title: "Corso base per volontari: la nostra squadra in formazione alla Sala Operativa Lazio"
 date: 2026-05-20T00:03:00+02:00
-description: "Una squadra del Gruppo di Genzano ha frequentato il corso base, oggi requisito obbligatorio per operare nel volontariato di Protezione Civile."
+description: "Una squadra del Gruppo di Genzano di Roma ha frequentato il corso base, oggi requisito obbligatorio per operare nel volontariato di Protezione Civile."
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

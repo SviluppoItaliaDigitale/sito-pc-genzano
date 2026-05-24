@@ -136,7 +136,7 @@ Visitarli è un gesto di **cultura civica**.
 
 ## Genzano e il rischio sismico
 
-A Genzano (**zona sismica 2B**):
+A Genzano di Roma (**zona sismica 2B**):
 
 - il **rischio** non è dei più alti in Italia, ma **non trascurabile**;
 - molti **edifici storici** non sono antisismici;

@@ -1,7 +1,7 @@
 ---
-title: "Io Non Rischio: il Gruppo di Genzano in piazza per la cittadinanza"
+title: "Io Non Rischio: il Gruppo di Genzano di Roma in piazza per la cittadinanza"
 date: 2026-10-11
-description: "In occasione della giornata nazionale Io Non Rischio, il Gruppo di PC di Genzano incontra i cittadini in piazza con gazebo e attività informative."
+description: "In occasione della giornata nazionale Io Non Rischio, il Gruppo di PC di Genzano di Roma incontra i cittadini in piazza con gazebo e attività informative."
 badge: "Evento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-La campagna nazionale **Io Non Rischio** è promossa dal **Dipartimento della Protezione Civile** in collaborazione con **ANPAS**, **INGV**, **ReLUIS** e il volontariato organizzato. Nell'ambito della campagna, il Gruppo Comunale Volontari di PC di Genzano incontra i cittadini in una giornata pubblica in piazza, secondo il calendario regionale. Date e luoghi puntuali sono comunicati sui canali ufficiali.
+La campagna nazionale **Io Non Rischio** è promossa dal **Dipartimento della Protezione Civile** in collaborazione con **ANPAS**, **INGV**, **ReLUIS** e il volontariato organizzato. Nell'ambito della campagna, il Gruppo Comunale Volontari di PC di Genzano di Roma incontra i cittadini in una giornata pubblica in piazza, secondo il calendario regionale. Date e luoghi puntuali sono comunicati sui canali ufficiali.
 
 ## Il senso della giornata
 

@@ -65,7 +65,7 @@ Risparmiare acqua aiuta tutti, anche in caso di incendio.
 ## Contatti utili
 
 - **Acea ATO 2** — pronto intervento guasti: **800 130 335** (gratuito, attivo sempre)
-- **Comune di Genzano** — sito ufficiale per le ordinanze locali
+- **Comune di Genzano di Roma** — sito ufficiale per le ordinanze locali
 - **Regione Lazio — Protezione Civile**
 
 In caso di emergenza grave chiama il **112**, il Numero Unico Europeo di Emergenza.

@@ -24,7 +24,7 @@ La Protezione Civile si prepara a questi cambiamenti. C'è una regola internazio
 
 ## Cosa cambia da noi
 
-Anche a Genzano il clima cambia. Vediamo più spesso:
+Anche a Genzano di Roma il clima cambia. Vediamo più spesso:
 
 - **caldo** forte e lungo in estate;
 - **siccità**: manca l'acqua;

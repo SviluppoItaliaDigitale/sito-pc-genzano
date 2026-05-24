@@ -1,5 +1,5 @@
 ---
-title: "Porte aperte al Gruppo: una giornata per conoscere la Protezione Civile di Genzano"
+title: "Porte aperte al Gruppo: una giornata per conoscere la Protezione Civile di Genzano di Roma"
 date: 2026-09-27
 description: "Il Gruppo Comunale di PC apre le porte della propria sede ai cittadini: una giornata per vedere mezzi, attrezzature, conoscere volontari."
 badge: "Evento"
@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Il Gruppo Comunale Volontari di Protezione Civile di Genzano organizza una **giornata di porte aperte** per la cittadinanza. Un'occasione per visitare la sede, vedere mezzi e attrezzature, parlare con i volontari, scoprire come funziona la Protezione Civile a livello locale. Data precisa, orari e programma saranno comunicati in modo puntuale nei prossimi giorni.
+Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma organizza una **giornata di porte aperte** per la cittadinanza. Un'occasione per visitare la sede, vedere mezzi e attrezzature, parlare con i volontari, scoprire come funziona la Protezione Civile a livello locale. Data precisa, orari e programma saranno comunicati in modo puntuale nei prossimi giorni.
 
 ## Cosa si vedrà
 

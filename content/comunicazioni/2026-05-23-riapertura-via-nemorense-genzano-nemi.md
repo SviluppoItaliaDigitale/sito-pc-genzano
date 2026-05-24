@@ -1,7 +1,7 @@
 ---
-title: "Riaperta via Nemorense tra Genzano e Nemi: strada percorribile nei due sensi"
+title: "Riaperta via Nemorense tra Genzano di Roma e Nemi: strada percorribile nei due sensi"
 date: 2026-05-23T00:02:00+02:00
-description: "Da venerdì 22 maggio via Nemorense, tra Genzano e Nemi, è di nuovo aperta al traffico nei due sensi dopo la chiusura per la frana del costone."
+description: "Da venerdì 22 maggio via Nemorense, tra Genzano di Roma e Nemi, è di nuovo aperta al traffico nei due sensi dopo la chiusura per la frana del costone."
 badge: "Aggiornamento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -25,7 +25,7 @@ La via era chiusa dal **15 aprile 2026** dopo il **cedimento di un costone** in 
 
 ## Cosa è cambiato
 
-Gli **enti competenti** hanno disposto la riapertura al termine delle verifiche e degli interventi sul versante. Da venerdì pomeriggio i collegamenti tra Genzano e Nemi lungo via Nemorense sono tornati regolari, senza le deviazioni in vigore durante la chiusura.
+Gli **enti competenti** hanno disposto la riapertura al termine delle verifiche e degli interventi sul versante. Da venerdì pomeriggio i collegamenti tra Genzano di Roma e Nemi lungo via Nemorense sono tornati regolari, senza le deviazioni in vigore durante la chiusura.
 
 > ⚠️ **Per eventuali nuove variazioni fai sempre riferimento ai canali ufficiali del [Comune di Nemi](https://www.comune.nemi.rm.it/).** Le decisioni di chiusura o riapertura delle strade spettano agli enti preposti (Comune di Nemi, Polizia Locale, gestori della strada). Il **Gruppo Comunale Volontari di Protezione Civile** riporta l'aggiornamento a titolo informativo e **non decide** sull'apertura delle strade.
 

@@ -18,7 +18,7 @@ Con l'ingresso di ottobre si apre, nel Lazio, il **periodo di maggiore attenzion
 
 ## Il quadro di rischio
 
-Il territorio di Genzano e dei Castelli Romani presenta vulnerabilità specifiche:
+Il territorio di Genzano di Roma e dei Castelli Romani presenta vulnerabilità specifiche:
 
 - **versanti** ripidi e con suoli di origine vulcanica, soggetti a **smottamenti**;
 - **fossi** e **canali** spesso tombati in contesti urbani, con capacità ridotta in piogge intense;

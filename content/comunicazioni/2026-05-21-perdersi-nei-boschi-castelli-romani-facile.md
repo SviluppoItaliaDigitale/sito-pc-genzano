@@ -112,5 +112,5 @@ Le ricerche nei boschi le fa il CNSAS. Il CNSAS è il Corpo Nazionale Soccorso A
 Sul nostro sito:
 
 - [Kit di emergenza: cosa mettere nello zaino](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/)
-- [Cartografia del territorio di Genzano](/cartografia/)
+- [Cartografia del territorio di Genzano di Roma](/cartografia/)
 - [Rischio incendio boschivo](/rischi-prevenzione/rischio-incendio/)

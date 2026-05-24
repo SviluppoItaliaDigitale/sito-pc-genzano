@@ -160,7 +160,7 @@ In tutti questi casi, **vittime** con **diritti violati** e sistemi che dovetter
 - **pari dignità** di cittadini;
 - **sussidiarietà** (intervento nella misura necessaria).
 
-## A Genzano
+## A Genzano di Roma
 
 ### La nostra attività
 - **inclusione** come principio operativo;

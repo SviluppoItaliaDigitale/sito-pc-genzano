@@ -52,7 +52,7 @@ L'evento del 30 ottobre 2016 dimostra che **prevenzione, evacuazione precauziona
 
 Le tre lezioni:
 
-1. **Prima della scossa: pianificazione.** Sapere dove sono i punti di raccolta, le strutture sicure, le aree di attesa. A Genzano questa informazione è raccolta nella sezione [Piano di Emergenza](/piano-emergenza/).
+1. **Prima della scossa: pianificazione.** Sapere dove sono i punti di raccolta, le strutture sicure, le aree di attesa. A Genzano di Roma questa informazione è raccolta nella sezione [Piano di Emergenza](/piano-emergenza/).
 
 2. **Durante l'allerta: ascolto delle istituzioni.** Quando il sistema dice "evacuare", evacuare. Non è un eccesso di prudenza: è il margine di sicurezza che salva le vite.
 

@@ -32,7 +32,7 @@ Nei comunicati istituzionali, quando si parla di "inverno" in **climatologia** o
 - **Roma** (costa): 5-12 °C (min/max);
 - **Genzano** (Castelli): 2-10 °C;
 - **Appennino** laziale: -5 / +5 °C;
-- **minime assolute** possibili: -3 / -5 °C a Genzano;
+- **minime assolute** possibili: -3 / -5 °C a Genzano di Roma;
 - **ondate di freddo** artico possibili (più rare a dicembre, più comuni a gennaio).
 
 ### Precipitazioni

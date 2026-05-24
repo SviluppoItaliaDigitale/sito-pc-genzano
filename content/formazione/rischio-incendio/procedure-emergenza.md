@@ -153,7 +153,7 @@ Area di piano protetta REI, segnalata, dove le **persone non deambulanti** atten
 
 ## Esempio di situazione di emergenza
 
-**Scenario**: alle ore 11:00 in un'aula al primo piano di una scuola di Genzano scoppia un incendio in un quadro elettrico.
+**Scenario**: alle ore 11:00 in un'aula al primo piano di una scuola di Genzano di Roma scoppia un incendio in un quadro elettrico.
 
 | Tempo | Chi | Azione |
 |---|---|---|

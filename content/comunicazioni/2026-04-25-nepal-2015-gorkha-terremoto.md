@@ -51,7 +51,7 @@ Il Nepal 2015 ha consolidato lezioni che valgono per tutti i Paesi sismici, Ital
 
 3. **Il *build back better* è una scelta politica.** La ricostruzione del Nepal è stata lenta e contestata. Alcune zone sono state ricostruite con criteri sismici migliorati, altre sono state lasciate al ripristino "come prima". Il **Sendai Framework** (vedi articolo del [13 ottobre](/comunicazioni/2026-10-13-undrr-sendai-framework-riduzione-rischio-disastri/)) raccomanda esplicitamente il principio del *build back better*: ricostruire più sicuro, non solo riparare.
 
-## A Genzano
+## A Genzano di Roma
 
 Il nostro territorio non è confrontabile con la sismicità del Nepal. Ma il principio della **valutazione e mitigazione del rischio sui beni culturali** vale anche da noi. La **Collegiata di Santa Maria della Cima**, le chiese del centro storico, i palazzi lungo via Italo Belardi sono elementi di **patrimonio vulnerabile**: il Piano di Protezione Civile li considera nelle valutazioni di rischio territoriale.
 

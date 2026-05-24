@@ -53,7 +53,7 @@ Tre lezioni per la Protezione Civile contemporanea:
 
 3. **L'allerta deve diventare azione, non solo comunicazione.** Sapere che c'è un'allerta arancione non basta: bisogna sapere **cosa fare** in caso di allerta. Per questo il sito riporta sempre, accanto allo stato di allerta, le indicazioni operative per il cittadino: consulta la pagina [Allerte Meteo](/allerte-meteo/).
 
-## A Genzano
+## A Genzano di Roma
 
 Genzano non è in territorio montano e il rischio valanghivo non ci riguarda. Ma il principio della **multi-rischiosità** vale anche da noi: una giornata di allerta meteo arancione può cumularsi con problemi di traffico, blackout, eventi locali. Il [Piano Familiare](/piano-familiare/) serve esattamente a essere pronti per scenari combinati, non solo per quello "ideale".
 

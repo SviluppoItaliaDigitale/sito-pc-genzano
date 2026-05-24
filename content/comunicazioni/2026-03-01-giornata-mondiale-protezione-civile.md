@@ -53,7 +53,7 @@ La Giornata Mondiale è un'occasione per **agire come cittadino**. Tre proposte 
 
 3. **Iscriviti al canale Telegram del Gruppo.** Per ricevere aggiornamenti su allerte, eventi formativi, attività del territorio: [t.me/pcalfagenzano](https://t.me/pcalfagenzano).
 
-## A Genzano
+## A Genzano di Roma
 
 Il Gruppo Comunale Volontari di Protezione Civile di Genzano partecipa alla Giornata Mondiale con iniziative di sensibilizzazione. Se vuoi entrare nel Gruppo, inizia dalla pagina [Diventa Volontario](/diventa-volontario/).
 

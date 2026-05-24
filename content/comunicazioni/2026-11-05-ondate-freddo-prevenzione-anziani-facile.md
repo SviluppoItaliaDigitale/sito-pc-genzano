@@ -22,7 +22,7 @@ Il grande freddo è pericoloso per la salute. Gli anziani rischiano di più. Leg
 
 ## Quando fa molto freddo
 
-A volte il freddo dura molti giorni. Le temperature scendono molto. A Genzano può fare sotto i -5 °C di notte. Questo si chiama "ondata di freddo".
+A volte il freddo dura molti giorni. Le temperature scendono molto. A Genzano di Roma può fare sotto i -5 °C di notte. Questo si chiama "ondata di freddo".
 
 ## I pericoli del freddo
 

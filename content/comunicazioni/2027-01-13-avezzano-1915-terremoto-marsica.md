@@ -44,7 +44,7 @@ Tre lezioni dalla Marsica per la Protezione Civile contemporanea:
 
 3. **La ricostruzione dopo decenni è una ricostruzione fallita.** Il caso Marsica (e poi Belice 1968) dimostra che lasciare le popolazioni in baracche per decenni distrugge il tessuto sociale di un territorio. La ricostruzione **rapida e partecipata** è oggi un principio acquisito (Codice Protezione Civile, D.Lgs. 1/2018).
 
-## A Genzano
+## A Genzano di Roma
 
 Anche se geograficamente distanti, i Castelli Romani e la Marsica condividono la stessa **faglia distensiva appenninica** che attraversa il Centro Italia. Storicamente i Castelli sono stati interessati da scosse di magnitudo media (M 4-5) generate dal sistema sismico locale (zona dei Colli Albani) e da risentimenti di eventi più lontani (Marsica 1915, L'Aquila 2009, Centro Italia 2016-17).
 

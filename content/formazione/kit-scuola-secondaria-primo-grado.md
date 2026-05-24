@@ -161,7 +161,7 @@ Genzano di Roma sorge sui **Colli Albani**, un complesso vulcanico quiescente si
 
 ### Mappa dei rischi
 
-| Rischio | Livello per Genzano | Descrizione |
+| Rischio | Livello per Genzano di Roma | Descrizione |
 |---|---|---|
 | **Sismico** | Medio | Zona sismica 2B — possibili scosse avvertite dalla popolazione |
 | **Idrogeologico** | Medio-alto in alcune zone | Fossi, impluvi e versanti collinari soggetti a frane e allagamenti localizzati |

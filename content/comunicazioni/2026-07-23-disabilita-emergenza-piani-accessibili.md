@@ -178,7 +178,7 @@ La **formazione** è continua.
 
 ## Associazioni del territorio
 
-A Genzano e nei Castelli Romani operano:
+A Genzano di Roma e nei Castelli Romani operano:
 - **FAND** (Federazione Associazioni Nazionali Disabili).
 - **AISM** (Sclerosi Multipla).
 - **ANFFAS** (disabilità intellettive).

@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Il **volontariato di Protezione Civile** non è riservato a chi ha raggiunto una certa età o maturità professionale. Anzi, **iniziare da giovane** porta benefici **formativi**, **civici** e **personali** che durano tutta la vita. Il Gruppo Comunale di Genzano accoglie con favore **studenti** e **giovani adulti** dai **18 anni**.
+Il **volontariato di Protezione Civile** non è riservato a chi ha raggiunto una certa età o maturità professionale. Anzi, **iniziare da giovane** porta benefici **formativi**, **civici** e **personali** che durano tutta la vita. Il Gruppo Comunale di Genzano di Roma accoglie con favore **studenti** e **giovani adulti** dai **18 anni**.
 
 ## Perché iniziare da giovane
 

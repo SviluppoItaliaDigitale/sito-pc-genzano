@@ -67,5 +67,5 @@ La comunità è la prima risorsa in emergenza. Se conosci persone fragili nel tu
 ## <i class="bi bi-bookmark-star-fill text-primary me-2" aria-hidden="true"></i>Risorse utili {#risorse}
 - [Piano Familiare — crea il tuo](/piano-familiare/)
 - [Kit di Emergenza — cosa preparare](/rischi-prevenzione/kit-emergenza/)
-- [Piano di Emergenza Comunale — cosa prevede per Genzano](/piano-emergenza/)
+- [Piano di Emergenza Comunale — cosa prevede per Genzano di Roma](/piano-emergenza/)
 - [Numeri utili e contatti del Comune](/contatti/)

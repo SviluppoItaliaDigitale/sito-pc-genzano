@@ -89,7 +89,7 @@ Chi ha particolari esigenze (es. persone con **disturbi dell'udito sensibili**) 
 
 ## IT-alert e volontariato
 
-Per il Gruppo comunale di Genzano, IT-alert è uno strumento che **integra** — non sostituisce — la comunicazione con i cittadini. Nelle emergenze locali, le informazioni tattiche (aree di evacuazione, punti di raccolta, messaggi personalizzati) continuano a passare per il Sindaco, la Polizia Locale, i canali comunali.
+Per il Gruppo comunale di Genzano di Roma, IT-alert è uno strumento che **integra** — non sostituisce — la comunicazione con i cittadini. Nelle emergenze locali, le informazioni tattiche (aree di evacuazione, punti di raccolta, messaggi personalizzati) continuano a passare per il Sindaco, la Polizia Locale, i canali comunali.
 
 Ma quando scatta un messaggio IT-alert, il Gruppo è già **attivo** o **in pronta attivazione** secondo i piani comunali.
 

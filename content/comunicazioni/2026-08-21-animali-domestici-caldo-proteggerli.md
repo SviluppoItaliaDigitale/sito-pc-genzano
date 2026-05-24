@@ -69,7 +69,7 @@ Per questi soggetti il rischio è molto più alto: agire con maggiore prudenza.
 
 ## Animali feriti o in difficoltà sul territorio
 
-Se si trova un animale ferito sul territorio di Genzano:
+Se si trova un animale ferito sul territorio di Genzano di Roma:
 
 - cani vaganti, gatti, fauna selvatica: contattare il **Servizio Veterinario della ASL Roma 6** o i **Carabinieri Forestali**;
 - in caso di pericolo immediato per l'animale o per persone: **112**.

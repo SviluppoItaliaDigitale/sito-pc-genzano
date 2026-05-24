@@ -51,7 +51,7 @@ La maggior parte consente di **inserire un indirizzo**, **zoomare** su un'area, 
 - mappe nazionali di **dissesto idrogeologico** (frane, alluvioni).
 
 ### Portali comunali
-- il Comune di Genzano rende accessibili **mappe urbanistiche** e **PRG** tramite il proprio sito o i sistemi regionali.
+- il Comune di Genzano di Roma rende accessibili **mappe urbanistiche** e **PRG** tramite il proprio sito o i sistemi regionali.
 
 ## Cosa puoi sapere sul tuo immobile
 

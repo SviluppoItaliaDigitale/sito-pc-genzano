@@ -30,7 +30,7 @@ D'estate a volte non piove per molte settimane. La terra diventa molto secca e d
 
 Anche 30 millimetri di pioggia in pochi minuti possono essere molto pericolosi.
 
-## Dove è più pericoloso a Genzano
+## Dove è più pericoloso a Genzano di Roma
 
 Ci sono luoghi più a rischio:
 

@@ -83,7 +83,7 @@ Sono raggiungibili anche dalla nostra pagina [Audio e podcast](/audio-e-podcast/
 
 Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** non è presente fisicamente al Salone — è un evento del **Dipartimento Nazionale**, in coordinamento con realtà nazionali come Anpas e con il supporto di Archivio Luce. Ne parliamo perché è un'occasione di **cultura della Protezione Civile rivolta al cittadino**, ed è esattamente la cornice culturale entro cui anche noi, sul territorio comunale, costruiamo le nostre iniziative di formazione e divulgazione.
 
-Quando un cittadino di Genzano legge un articolo del DPC, ascolta un podcast del Salone, guarda una foto della mostra Anpas sul terremoto del 2016, sta costruendo la **propria preparazione personale al rischio**. Lo stesso obiettivo che ha la nostra pagina [Cosa fare adesso](/cosa-fare-adesso/), la nostra sezione [Rischi e prevenzione](/rischi-prevenzione/), le nostre [schede "1 minuto per proteggerti"](/schede-1-minuto/).
+Quando un cittadino di Genzano di Roma legge un articolo del DPC, ascolta un podcast del Salone, guarda una foto della mostra Anpas sul terremoto del 2016, sta costruendo la **propria preparazione personale al rischio**. Lo stesso obiettivo che ha la nostra pagina [Cosa fare adesso](/cosa-fare-adesso/), la nostra sezione [Rischi e prevenzione](/rischi-prevenzione/), le nostre [schede "1 minuto per proteggerti"](/schede-1-minuto/).
 
 ## Andarci di persona
 

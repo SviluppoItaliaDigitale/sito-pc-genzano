@@ -191,7 +191,7 @@ Oggi, se hai un momento **tranquillo**, puoi chiedertelo:
 
 Sul nostro sito:
 
-- [Natale: auguri da Genzano](/comunicazioni/2026-12-25-natale-auguri-genzano/).
+- [Natale: auguri da Genzano di Roma](/comunicazioni/2026-12-25-natale-auguri-genzano/).
 - [Vigilia di Natale](/comunicazioni/2026-12-24-vigilia-natale-auguri/).
 - [Anziani soli a Natale](/comunicazioni/2026-12-17-anziani-soli-feste-attenzione/).
 - [Tsunami Indiano 2004: l'allerta globale](/comunicazioni/2026-12-26-tsunami-indiano-2004-allerta-globale/).

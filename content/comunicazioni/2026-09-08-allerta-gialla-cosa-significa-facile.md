@@ -53,7 +53,7 @@ L'allerta gialla dice che il tempo può cambiare. I fenomeni non sono gravi. Ma 
 ## Dove seguire le allerte
 
 - Sito della Regione Lazio — Protezione Civile.
-- Sito del Comune di Genzano e canali del Gruppo.
+- Sito del Comune di Genzano di Roma e canali del Gruppo.
 - App IT-Alert (l'app ufficiale del Governo italiano per le emergenze).
 - Radio e televisione regionali.
 - Bollettini del Centro Funzionale Regionale Lazio.

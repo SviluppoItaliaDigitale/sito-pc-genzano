@@ -68,7 +68,7 @@ Scegli 1 posto sicuro fuori dal palazzo. Tutti si trovano lì dopo l'evacuazione
 
 ## Come si fa il piano
 
-Bastano 2 o 3 riunioni tra i vicini. Si può chiedere aiuto all'amministratore. Il Gruppo Comunale Volontari di Protezione Civile di Genzano aiuta gratis.
+Bastano 2 o 3 riunioni tra i vicini. Si può chiedere aiuto all'amministratore. Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma aiuta gratis.
 
 Il piano deve stare in 2-4 pagine. Deve avere la mappa del palazzo e i numeri di emergenza. Si appende in bacheca. Una copia va a ogni famiglia.
 

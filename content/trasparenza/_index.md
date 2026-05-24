@@ -1,6 +1,6 @@
 ---
 title: "Trasparenza"
-description: "Natura giuridica del Gruppo PC di Genzano, iscrizione al RUNTS, accesso ai documenti istituzionali e procedura di accesso civico."
+description: "Natura giuridica del Gruppo PC di Genzano di Roma, iscrizione al RUNTS, accesso ai documenti istituzionali e procedura di accesso civico."
 layout: "single"
 toc: true
 tts: true
@@ -17,7 +17,7 @@ Dal **28 ottobre 2024** il Gruppo è anche **iscritto al RUNTS** (Registro Unico
 |---|---|
 | Anno di costituzione | 1981 |
 | Soggetto costituente | Consiglio Comunale di Genzano di Roma |
-| Forma giuridica | Ente del Terzo Settore (ETS) — articolazione del Comune di Genzano |
+| Forma giuridica | Ente del Terzo Settore (ETS) — articolazione del Comune di Genzano di Roma |
 | Iscrizione RUNTS | Sezione *"Altri Enti del Terzo Settore"*, determina n. G14230 del 28/10/2024 |
 | Coordinamento operativo | 14° COI — Centro Operativo Intercomunale della Provincia di Roma |
 | Coordinamento regionale | Aderente al coordinamento **FEPIVOL** |

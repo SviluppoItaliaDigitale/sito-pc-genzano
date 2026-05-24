@@ -181,7 +181,7 @@ Sul nostro sito:
 - [Perdersi in bosco](/comunicazioni/2026-05-21-perdersi-nei-boschi-castelli-romani/).
 - [Ricerca dispersi](/comunicazioni/2026-05-25-ricerca-dispersi-soccorso-volontariato/).
 - [Sicurezza ai laghi di Nemi e Albano](/comunicazioni/2026-05-19-sicurezza-laghi-nemi-albano/).
-- [Cartografia del territorio di Genzano](/cartografia/).
+- [Cartografia del territorio di Genzano di Roma](/cartografia/).
 - [Vento forte: cosa fare](/rischi-prevenzione/vento-forte/).
 
 Fonti istituzionali:

@@ -178,7 +178,7 @@ In emergenze di portata territoriale, la PC:
 - **comunica** con aziende del territorio;
 - **supporta** allevatori nella ripartenza.
 
-Per Genzano, la **PC comunale** tiene un elenco delle principali aziende zootecniche del territorio per pianificazione preventiva.
+Per Genzano di Roma, la **PC comunale** tiene un elenco delle principali aziende zootecniche del territorio per pianificazione preventiva.
 
 ## Emergenze veterinarie ordinarie
 

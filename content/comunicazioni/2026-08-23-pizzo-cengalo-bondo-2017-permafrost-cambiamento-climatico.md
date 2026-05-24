@@ -73,7 +73,7 @@ Per chi frequenta la **montagna alpina** d'estate, dopo il Pizzo Cengalo le rego
 
 ## Genzano e il rischio alpino
 
-Il territorio di Genzano e dei Castelli Romani non ha alta montagna. Tuttavia molti dei nostri concittadini frequentano d'estate l'arco alpino — Dolomiti, Alpi orientali, Alta Val di Susa — sia per turismo che per attività di volontariato di protezione civile (gemellaggi, esercitazioni nazionali, supporto a comunità alpine).
+Il territorio di Genzano di Roma e dei Castelli Romani non ha alta montagna. Tuttavia molti dei nostri concittadini frequentano d'estate l'arco alpino — Dolomiti, Alpi orientali, Alta Val di Susa — sia per turismo che per attività di volontariato di protezione civile (gemellaggi, esercitazioni nazionali, supporto a comunità alpine).
 
 Per chi viaggia in alta quota, le pagine ufficiali delle **ARPA regionali alpine** e i bollettini del **MeteoSchweiz** (per la Svizzera) sono riferimenti essenziali. Anche il sito del **Soccorso Alpino e Speleologico (CNSAS)** è una fonte aggiornata di informazioni di sicurezza in montagna.
 

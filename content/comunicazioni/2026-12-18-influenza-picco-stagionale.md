@@ -194,7 +194,7 @@ Durante picchi influenzali:
 - **scuole** con classi decimate;
 - **volontariato** con disponibilità ridotta.
 
-Il Gruppo PC di Genzano in questo periodo:
+Il Gruppo PC di Genzano di Roma in questo periodo:
 - **mantiene** servizio minimo garantito;
 - **coordinatori** di turno sempre individuabili;
 - **priorità** a emergenze reali;

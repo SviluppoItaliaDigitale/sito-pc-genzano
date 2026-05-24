@@ -79,7 +79,7 @@ Le **Piazze Io non rischio** organizzate dalle ODV di Protezione Civile sul terr
 
 Prosegue la collaborazione con **Radio Roma Sound**: trasmissioni di promozione delle attività di Protezione Civile **ogni due giovedì alle ore 12:00** per la durata di un'ora.
 
-## Cosa significa per Genzano e per i nostri volontari
+## Cosa significa per Genzano di Roma e per i nostri volontari
 
 Per il **Gruppo Comunale di Genzano di Roma**, iscritto all'Elenco territoriale regionale, sono molteplici i punti di interesse:
 

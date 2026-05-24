@@ -319,7 +319,7 @@ function stampaPiano(){
 
 - [Quanto sei preparato? (quiz)](/quiz-preparazione/) — verifica in pochi minuti il tuo livello di preparazione e ricevi consigli su cosa migliorare
 - [Schede "1 minuto per proteggerti"](/schede-1-minuto/) — sei azioni concrete di autoprotezione in un minuto, stampabili A5 per casa e bacheca
-- [Rischi e prevenzione](/rischi-prevenzione/) — i rischi del territorio di Genzano
+- [Rischi e prevenzione](/rischi-prevenzione/) — i rischi del territorio di Genzano di Roma
 - [Kit di emergenza](/rischi-prevenzione/kit-emergenza/) — cosa preparare per casa, auto ed evacuazione
 - [Cosa fare adesso](/cosa-fare-adesso/) — azioni immediate per il cittadino
 - [Numeri utili](/numeri-utili/) — chi chiamare in caso di emergenza

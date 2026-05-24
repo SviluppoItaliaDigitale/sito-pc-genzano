@@ -85,7 +85,7 @@ In caso di allagamento:
 - se è una situazione meno grave e il Comune ha attivato il COC: seguire le indicazioni del sistema comunale;
 - il Gruppo Comunale di PC può essere attivato **su richiesta** del Comune, non direttamente dal cittadino.
 
-## A Genzano
+## A Genzano di Roma
 
 Il Gruppo dispone di **moduli idrovora** della Regione Lazio, oltre a pompe proprie per interventi di supporto. L'uso è sempre **coordinato** con i Vigili del Fuoco, a cui spetta la primaria competenza in emergenza idraulica urbana.
 

@@ -133,7 +133,7 @@ Tieni un registro delle donazioni in entrata e in uscita. Questo si chiama rintr
 
 ## Come usiamo queste regole nel nostro Gruppo
 
-Il Gruppo Comunale Volontari di Protezione Civile di Genzano a volte distribuisce cibo. Lo fa in emergenze o durante attività con la comunità.
+Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma a volte distribuisce cibo. Lo fa in emergenze o durante attività con la comunità.
 
 Queste sono le regole che seguiamo:
 

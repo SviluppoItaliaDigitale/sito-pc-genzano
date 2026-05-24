@@ -191,7 +191,7 @@ Simulate un terremoto in classe:
 
 Un'**alluvione** avviene quando un fiume o un torrente riceve più acqua di quanta ne possa contenere e straripa, allagando le zone circostanti.
 
-Il territorio di Genzano e dei Castelli Romani è collinare, con pendii e fossi che in caso di piogge molto intense possono diventare pericolosi. L'acqua che scorre veloce lungo i pendii può trascinare fango, detriti e persino automobili.
+Il territorio di Genzano di Roma e dei Castelli Romani è collinare, con pendii e fossi che in caso di piogge molto intense possono diventare pericolosi. L'acqua che scorre veloce lungo i pendii può trascinare fango, detriti e persino automobili.
 
 **Cause principali:**
 - Piogge molto intense e prolungate

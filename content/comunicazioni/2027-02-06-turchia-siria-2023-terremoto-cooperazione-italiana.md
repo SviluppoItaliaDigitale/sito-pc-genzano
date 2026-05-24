@@ -54,7 +54,7 @@ Tre lezioni operative dal terremoto Turchia-Siria 2023:
 
 3. **L'effetto domino del rischio.** Una scossa principale ha innescato la seconda nove ore dopo, su una faglia adiacente. Le repliche si sono propagate per settimane. La Protezione Civile contemporanea ragiona per **scenari multi-evento**, non per evento singolo.
 
-## A Genzano e nel volontariato italiano
+## A Genzano di Roma e nel volontariato italiano
 
 Anche il nostro Gruppo Comunale fa parte di una **rete operativa nazionale** che si attiva, attraverso le colonne mobili regionali, in caso di grandi emergenze internazionali. Quando il Sistema Nazionale risponde a un'emergenza all'estero, i criteri di selezione dei volontari sono molto stringenti (formazione specifica, certificazioni, capacità linguistiche, idoneità sanitaria).
 

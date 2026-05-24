@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Si chiude **ottobre**, un mese intenso di attività per il Gruppo Comunale Volontari di Protezione Civile di Genzano. Facciamo il bilancio dei risultati e delineiamo gli obiettivi per **novembre**.
+Si chiude **ottobre**, un mese intenso di attività per il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Facciamo il bilancio dei risultati e delineiamo gli obiettivi per **novembre**.
 
 ## Il mese in numeri
 

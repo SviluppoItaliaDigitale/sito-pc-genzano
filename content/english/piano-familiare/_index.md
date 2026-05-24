@@ -75,4 +75,4 @@ ____________________________________________
 - [Useful Numbers](/english/numeri-utili/)
 - [What to Do Now](/english/cosa-fare-adesso/)
 - [Italian interactive form](/piano-familiare/) — fill in online, get a custom printable plan (use your browser's translator if needed)
-- [Map of waiting areas in Genzano](/cartografia/)
+- [Map of waiting areas in Genzano di Roma](/cartografia/)

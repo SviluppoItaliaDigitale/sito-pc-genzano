@@ -27,7 +27,7 @@ Si svolge oggi l'**esame finale** del **corso base di Protezione Civile** avviat
 ### Argomenti affrontati
 - **normativa** di PC e sistema nazionale;
 - **ruolo** del volontariato;
-- **rischi** del territorio di Genzano e Castelli;
+- **rischi** del territorio di Genzano di Roma e Castelli;
 - **primo soccorso** e BLSD;
 - **comunicazioni radio** (HF, VHF, UHF);
 - **cartografia** e orientamento;

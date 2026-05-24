@@ -38,7 +38,7 @@ Il nostro Gruppo ha messo a disposizione una squadra di volontari per il **presi
 Queste attivazioni sono anche **formazione operativa concreta**. Gli eventi di grande affluenza mettono alla prova le stesse competenze che servono in emergenza: comunicazione radio fra postazioni, raccordo con Forze dell'Ordine e sanità, gestione dei flussi di persone in spazi limitati. L'adesione al Coordinamento FE.PI.VOL. ci permette di partecipare a queste attivazioni regionali con continuità.
 
 {{< foto src="/images/2026-05-15-formia-giro-coordinamento-fepivol.webp"
-         alt="Due volontari del nostro Gruppo Comunale di Genzano nel veicolo della Protezione Civile a Formia: caposquadra e volontario in divisa rossa con stemma della Protezione Civile, radio Motorola in spalla, pollice in su."
+         alt="Due volontari del nostro Gruppo Comunale di Genzano di Roma nel veicolo della Protezione Civile a Formia: caposquadra e volontario in divisa rossa con stemma della Protezione Civile, radio Motorola in spalla, pollice in su."
          caption="La nostra squadra a Formia, durante la giornata di attivazione. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
 {{< foto src="/images/2026-05-15-formia-giro-volontari-territorio.webp"
