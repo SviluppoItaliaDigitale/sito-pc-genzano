@@ -1,0 +1,29 @@
+{{/* Mostra in UN'UNICA tabella accessibile le statistiche operative aggregate,
+     leggendo i CSV generati da scripts/genera-open-data-interventi.py.
+     Si aggiorna da solo a ogni nuovo export (nessun numero scritto a mano). */}}
+{{ $sezioni := slice
+  (dict "tit" "Interventi" "file" "static/open-data/statistiche-interventi.csv")
+  (dict "tit" "Interventi per tipologia" "file" "static/open-data/interventi-per-tipologia.csv")
+  (dict "tit" "Automezzi impiegati" "file" "static/open-data/automezzi-impiegati.csv")
+  (dict "tit" "Volontari" "file" "static/open-data/statistiche-volontari.csv")
+}}
+<div class="table-responsive">
+<table>
+<caption>Statistiche operative del Gruppo — dati provvisori, aggregati e anonimi</caption>
+<thead>
+<tr><th scope="col">Sezione</th><th scope="col">Voce</th><th scope="col">Valore</th></tr>
+</thead>
+<tbody>
+{{ range $s := $sezioni }}
+  {{ if fileExists $s.file }}
+    {{ $rows := os.ReadFile $s.file | transform.Unmarshal (dict "delimiter" ",") }}
+    {{ range $i, $r := $rows }}
+      {{ if gt $i 0 }}
+<tr><td>{{ $s.tit }}</td><td>{{ index $r 0 }}</td><td>{{ index $r 1 }}</td></tr>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+</tbody>
+</table>
+</div>
