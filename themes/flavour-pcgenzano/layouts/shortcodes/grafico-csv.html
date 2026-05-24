@@ -1,0 +1,112 @@
+{{/* Grafico accessibile (SVG inline, zero JavaScript) da un CSV a 2 colonne
+     "etichetta,valore". Generato al build: si aggiorna da solo a ogni export.
+     Parametri:
+       file    percorso del CSV (es. "static/open-data/interventi-per-tipologia.csv")
+       tipo    "barre" | "torta" | "barre,torta"  (default "barre")
+       titolo  testo per <caption> + descrizione ARIA
+       unita   parola per i valori nella descrizione (es. "interventi") - opzionale
+       tabella "true"|"false" - mostra la tabella-dati come alternativa testuale (default true)
+     Accessibilita: <svg role="img"> con <title>/<desc>, valori scritti in chiaro,
+     palette istituzionale, e la TABELLA resta come equivalente testuale (WCAG 1.1.1).
+*/}}
+{{ $file := .Get "file" }}
+{{ $tipo := .Get "tipo" | default "barre" }}
+{{ $tipi := split $tipo "," }}
+{{ $titolo := .Get "titolo" | default "Grafico dei dati" }}
+{{ $unita := .Get "unita" | default "" }}
+{{ $tabella := ne (.Get "tabella" | default "true") "false" }}
+{{ $id := path.BaseName $file }}
+{{ $palette := slice "#003366" "#b45309" "#15803d" "#7c3aed" "#0e7490" "#c026d3" "#0369a1" "#d9364f" }}
+
+{{ if fileExists $file }}
+  {{ $rows := os.ReadFile $file | transform.Unmarshal (dict "delimiter" ",") }}
+  {{ $head := index $rows 0 }}
+  {{ $data := after 1 $rows }}
+  {{ $n := len $data }}
+  {{ $max := 0.0 }}
+  {{ $total := 0.0 }}
+  {{ range $data }}
+    {{ $v := float (index . 1) }}
+    {{ $max = math.Max $max $v }}
+    {{ $total = math.Add $total $v }}
+  {{ end }}
+
+<div class="grafico-blocco">
+
+  {{/* ---------------- BARRE ---------------- */}}
+  {{ if in $tipi "barre" }}
+    {{ $W := 700 }}{{ $rowH := 46 }}{{ $left := 12 }}{{ $barMax := 520 }}
+    {{ $H := add (mul $n $rowH) 12 }}
+  <figure class="grafico-figura">
+  <svg class="grafico-svg" viewBox="0 0 {{ $W }} {{ $H }}" role="img"
+       aria-labelledby="gt-{{ $id }}-b gd-{{ $id }}-b" preserveAspectRatio="xMinYMin meet">
+    <title id="gt-{{ $id }}-b">{{ $titolo }} — grafico a barre</title>
+    <desc id="gd-{{ $id }}-b">{{ range $i, $r := $data }}{{ if $i }}; {{ end }}{{ index $r 0 }}: {{ int (float (index $r 1)) }}{{ with $unita }} {{ . }}{{ end }}{{ end }}.</desc>
+    {{ range $i, $r := $data }}
+      {{ $label := index $r 0 }}
+      {{ $v := float (index $r 1) }}
+      {{ $top := add 8 (mul $i $rowH) }}
+      {{ $bw := 0 }}{{ if gt $max 0.0 }}{{ $bw = int (math.Round (mul (div $v $max) $barMax)) }}{{ end }}
+    <text x="{{ $left }}" y="{{ add $top 13 }}" class="g-lab">{{ $label }}</text>
+    <rect x="{{ $left }}" y="{{ add $top 18 }}" width="{{ $bw }}" height="20" rx="2" class="g-bar" />
+    <text x="{{ add (add $left $bw) 7 }}" y="{{ add $top 33 }}" class="g-val">{{ int $v }}</text>
+    {{ end }}
+  </svg>
+  </figure>
+  {{ end }}
+
+  {{/* ---------------- TORTA ---------------- */}}
+  {{ if in $tipi "torta" }}
+    {{ $cx := 110.0 }}{{ $cy := 110.0 }}{{ $r := 100.0 }}
+    {{ $pi := math.Pi }}{{ $d2r := div $pi 180.0 }}
+    {{ $acc := 0.0 }}
+  <figure class="grafico-figura grafico-torta-wrap">
+  <svg class="grafico-svg grafico-torta" viewBox="0 0 220 220" role="img"
+       aria-labelledby="gt-{{ $id }}-p gd-{{ $id }}-p" preserveAspectRatio="xMidYMid meet">
+    <title id="gt-{{ $id }}-p">{{ $titolo }} — grafico a torta</title>
+    <desc id="gd-{{ $id }}-p">{{ range $i, $r := $data }}{{ $v := float (index $r 1) }}{{ $pct := 0 }}{{ if gt $total 0.0 }}{{ $pct = int (math.Round (mul (div $v $total) 100)) }}{{ end }}{{ if $i }}; {{ end }}{{ index $r 0 }}: {{ $pct }}%{{ end }}.</desc>
+    {{ if eq $n 1 }}
+    <circle cx="{{ $cx }}" cy="{{ $cy }}" r="{{ $r }}" fill="{{ index $palette 0 }}" stroke="#fff" stroke-width="2" />
+    {{ else }}
+      {{ range $i, $row := $data }}
+        {{ $v := float (index $row 1) }}
+        {{ $frac := 0.0 }}{{ if gt $total 0.0 }}{{ $frac = div $v $total }}{{ end }}
+        {{ $a0 := $acc }}{{ $a1 := add $acc (mul $frac 360.0) }}{{ $acc = $a1 }}
+        {{ $s := mul (sub $a0 90.0) $d2r }}{{ $e := mul (sub $a1 90.0) $d2r }}
+        {{ $x0 := add $cx (mul $r (math.Cos $s)) }}{{ $y0 := add $cy (mul $r (math.Sin $s)) }}
+        {{ $x1 := add $cx (mul $r (math.Cos $e)) }}{{ $y1 := add $cy (mul $r (math.Sin $e)) }}
+        {{ $large := cond (ge (sub $a1 $a0) 180.0) 1 0 }}
+    <path d="M {{ $cx }} {{ $cy }} L {{ printf "%.2f" $x0 }} {{ printf "%.2f" $y0 }} A {{ $r }} {{ $r }} 0 {{ $large }} 1 {{ printf "%.2f" $x1 }} {{ printf "%.2f" $y1 }} Z"
+          fill="{{ index $palette (mod $i (len $palette)) }}" stroke="#fff" stroke-width="2" />
+      {{ end }}
+    {{ end }}
+  </svg>
+  <ul class="grafico-legenda">
+    {{ range $i, $row := $data }}
+      {{ $v := float (index $row 1) }}
+      {{ $pct := 0 }}{{ if gt $total 0.0 }}{{ $pct = int (math.Round (mul (div $v $total) 100)) }}{{ end }}
+    <li><span class="grafico-swatch" style="background:{{ index $palette (mod $i (len $palette)) }}" aria-hidden="true"></span><span>{{ index $row 0 }} — <strong>{{ int $v }}</strong> ({{ $pct }}%)</span></li>
+    {{ end }}
+  </ul>
+  </figure>
+  {{ end }}
+
+  {{/* ---------------- TABELLA (alternativa testuale) ---------------- */}}
+  {{ if $tabella }}
+  <div class="table-responsive grafico-tabella">
+  <table>
+    <caption>{{ $titolo }}</caption>
+    <thead><tr><th scope="col">{{ index $head 0 | replaceRE "_" " " | humanize }}</th><th scope="col">{{ index $head 1 | replaceRE "_" " " | humanize }}</th></tr></thead>
+    <tbody>
+    {{ range $data }}
+      <tr><td>{{ index . 0 }}</td><td>{{ int (float (index . 1)) }}</td></tr>
+    {{ end }}
+    </tbody>
+  </table>
+  </div>
+  {{ end }}
+
+</div>
+{{ else }}
+  {{ warnf "grafico-csv: file non trovato: %s" $file }}
+{{ end }}
