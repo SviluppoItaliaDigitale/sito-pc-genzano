@@ -1,0 +1,61 @@
+name: Controllo freschezza contenuti
+
+# Sweep settimanale degli articoli "anziani" (content/comunicazioni/) che
+# contengono informazioni che invecchiano (telefoni, norme citate, link esterni).
+# Apre/aggiorna una issue con l'elenco; la riparazione si fa in sessione con
+# l'agent `pc-content-freshness`. Non tocca il sito, non fa deploy.
+#
+# È volutamente SILENZIOSO finché non ci sono articoli oltre le soglie (18/30
+# mesi): su un sito giovane non apre nulla, si attiva da solo col tempo.
+#
+# Scaglionato lunedì 11:07 UTC (slot libero tra i vari audit del lunedì).
+
+on:
+  schedule:
+    - cron: '7 11 * * 1'
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  controllo-freschezza:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Rileva articoli da riverificare
+        id: scan
+        run: |
+          set +e
+          python3 scripts/check-freshness.py > /tmp/freschezza.md
+          CODE=$?
+          set -e
+          echo "stale=$CODE" >> "$GITHUB_OUTPUT"
+          echo "----- report -----"
+          cat /tmp/freschezza.md
+
+      - name: Apri/aggiorna issue se ci sono articoli da riverificare
+        if: steps.scan.outputs.stale != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TITLE="Freschezza contenuti: ${{ steps.scan.outputs.stale }} articoli da riverificare"
+          EXISTING=$(gh issue list --label "automazione" --label "freschezza" --state open --json number --jq '.[0].number // empty')
+          if [ -n "$EXISTING" ]; then
+            gh issue edit "$EXISTING" --title "$TITLE"
+            gh issue comment "$EXISTING" --body-file /tmp/freschezza.md
+          else
+            gh issue create \
+              --title "$TITLE" \
+              --body-file /tmp/freschezza.md \
+              --label "automazione" \
+              --label "freschezza"
+          fi
+
+      - name: Nessun articolo da riverificare
+        if: steps.scan.outputs.stale == '0'
+        run: echo "✓ Nessun articolo supera le soglie di anzianità."
