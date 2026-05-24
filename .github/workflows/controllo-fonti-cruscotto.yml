@@ -1,0 +1,63 @@
+name: Controllo fonti cruscotto
+
+# Smoke-check settimanale delle fonti dati esterne del cruscotto (/cruscotto/).
+# Le schede leggono dati live da servizi di terzi (INGV, Open-Meteo, DPC,
+# EUMETSAT, NASA, EFFIS, ARPA Lazio): se un endpoint cambia o cade, la scheda
+# diventa vuota SENZA errore visibile. Questo workflow se ne accorge e apre
+# un'issue. Non tocca il sito, non fa deploy: solo monitoraggio.
+#
+# Scaglionato lunedì 10:53 UTC (dopo refusi 10:40, prima di LIS 11:23).
+
+on:
+  schedule:
+    - cron: '53 10 * * 1'
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  controllo-fonti:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Ping delle fonti del cruscotto
+        id: ping
+        run: |
+          set +e
+          python3 scripts/check-fonti-cruscotto.py > /tmp/fonti-report.md
+          CODE=$?
+          set -e
+          echo "fails=$CODE" >> "$GITHUB_OUTPUT"
+          echo "----- report -----"
+          cat /tmp/fonti-report.md
+
+      - name: Apri/aggiorna issue se una fonte è giù
+        if: steps.ping.outputs.fails != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TITLE="Cruscotto: ${{ steps.ping.outputs.fails }} fonte/i dati da verificare"
+          {
+            echo ""
+            echo "_Issue generata da \`controllo-fonti-cruscotto.yml\`. Si aggiorna ogni lunedì 10:53 UTC. Un ❌ è spesso un disservizio temporaneo del fornitore: se persiste su più settimane, l'endpoint è cambiato e va aggiornato lo shortcode della scheda._"
+          } >> /tmp/fonti-report.md
+          EXISTING=$(gh issue list --label "automazione" --label "cruscotto" --state open --json number --jq '.[0].number // empty')
+          if [ -n "$EXISTING" ]; then
+            gh issue edit "$EXISTING" --title "$TITLE"
+            gh issue comment "$EXISTING" --body-file /tmp/fonti-report.md
+          else
+            gh issue create \
+              --title "$TITLE" \
+              --body-file /tmp/fonti-report.md \
+              --label "automazione" \
+              --label "cruscotto"
+          fi
+
+      - name: Tutte le fonti rispondono
+        if: steps.ping.outputs.fails == '0'
+        run: echo "✓ Tutte le fonti del cruscotto rispondono correttamente."

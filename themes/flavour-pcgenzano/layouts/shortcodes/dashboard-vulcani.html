@@ -24,7 +24,8 @@
     var FDSN='https://webservices.ingv.it/fdsnws/event/1/query';
     var BBOX='&minlatitude=41.6&maxlatitude=41.85&minlongitude=12.5&maxlongitude=12.85';
     function pad(n){return('0'+n).slice(-2);}
-    function carica(){
+    function carica(retry){
+      retry = retry || 0;
       var from=new Date(Date.now()-30*86400000).toISOString().slice(0,19);
       var url=FDSN+'?starttime='+from+'&minmagnitude=-1'+BBOX+'&format=geojson&orderby=time&limit=1000';
       fetch(url).then(function(r){
@@ -51,9 +52,16 @@
         document.getElementById('vulc-stato').textContent = num
           ? ('Aggiornato '+oraAgg)
           : ('Nessun terremoto negli ultimi 30 giorni nel distretto: la caldera è tranquilla. Aggiornato '+oraAgg);
-      }).catch(function(){ document.getElementById('vulc-stato').textContent='Dati momentaneamente non disponibili — vedi terremoti.ingv.it'; });
+      }).catch(function(){
+        if(retry<3){ setTimeout(function(){ carica(retry+1); }, 4000); }
+        else { document.getElementById('vulc-stato').textContent='Aggiornamento in corso…'; setTimeout(function(){ carica(0); }, 60000); }
+      });
     }
-    carica(); setInterval(carica, 600000);
+    // lazy: fetch solo quando la scheda Vulcani diventa visibile
+    function avvia(){ carica(); setInterval(carica, 600000); }
+    var box=document.querySelector('.dash-vulcani');
+    if(box && box.offsetParent!==null){ avvia(); }
+    else { window.addEventListener('cruscotto:vulcani', avvia, {once:true}); }
   })();
   </script>
 </div>

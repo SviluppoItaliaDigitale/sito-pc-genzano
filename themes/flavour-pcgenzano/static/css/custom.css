@@ -6630,3 +6630,41 @@ html.a11y-pause-anim .consulta-rapida .cr-card:hover { transform: none; }
 /* Cruscotto — mappa di previsione regionale ARPA Lazio (scheda Aria) */
 .dash-arpa-fig { margin: .2rem 0 0; }
 .dash-arpa-fig img { width: 100%; height: auto; max-width: 760px; display: block; border: 2px solid #003366; border-radius: 8px; background: #fff; }
+
+/* ============================================================
+   CRUSCOTTO — CARD HOMEPAGE v1.0
+   Card colorata che segnala il cruscotto in homepage. WCAG AA.
+   ============================================================ */
+.cruscotto-home { margin: 2.5rem 0; }
+.cruscotto-home-card {
+  display: flex; align-items: center; gap: 1.4rem;
+  background: linear-gradient(135deg, #003366 0%, #0a4f8a 100%);
+  color: #fff; border-radius: 14px; padding: 1.6rem 1.8rem;
+  text-decoration: none; box-shadow: 0 4px 18px rgba(0,51,102,.22);
+  border: 1px solid rgba(255,255,255,.12);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.cruscotto-home-card:hover, .cruscotto-home-card:focus-visible {
+  transform: translateY(-3px); box-shadow: 0 8px 26px rgba(0,51,102,.32); color: #fff;
+}
+.cruscotto-home-card:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 3px; }
+.cruscotto-home-icon { flex: 0 0 auto; font-size: 2.8rem; line-height: 1; color: #ffbe2e; }
+.cruscotto-home-testo { flex: 1 1 auto; display: flex; flex-direction: column; gap: .35rem; }
+.cruscotto-home-occhiello { font-size: .8rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: #ffd166; }
+.cruscotto-home-tit { font-size: 1.5rem; font-weight: 800; line-height: 1.15; }
+.cruscotto-home-desc { font-size: .98rem; line-height: 1.45; color: #eaf2fb; }
+.cruscotto-home-chips { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .3rem; }
+.cruscotto-home-chips span { font-size: .76rem; font-weight: 600; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.22); border-radius: 999px; padding: .12rem .6rem; }
+.cruscotto-home-cta { flex: 0 0 auto; display: inline-flex; align-items: center; gap: .45rem; background: #fff; color: #003366; font-weight: 700; padding: .65rem 1.2rem; border-radius: 999px; white-space: nowrap; }
+.cruscotto-home-card:hover .cruscotto-home-cta i, .cruscotto-home-card:focus-visible .cruscotto-home-cta i { transform: translateX(4px); }
+.cruscotto-home-cta i { transition: transform .15s ease; }
+@media (max-width: 768px) {
+  .cruscotto-home-card { flex-direction: column; align-items: flex-start; text-align: left; }
+  .cruscotto-home-cta { align-self: stretch; justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cruscotto-home-card, .cruscotto-home-cta i { transition: none; }
+  .cruscotto-home-card:hover, .cruscotto-home-card:focus-visible { transform: none; }
+}
+html.a11y-pause-anim .cruscotto-home-card, html.a11y-pause-anim .cruscotto-home-cta i { transition: none; }
+@media print { .cruscotto-home { display: none; } }

@@ -130,8 +130,9 @@
       ef.innerHTML=eventi.slice().sort(function(a,b){return b.mag-a.mag;}).slice(0,8).map(riga).join('');
     }
 
-    function carica(){
-      stato.textContent='Aggiornamento…';
+    function carica(retry){
+      retry = retry || 0;
+      if(!retry) stato.textContent='Aggiornamento…';
       var from=new Date(Date.now()-win*86400000).toISOString().slice(0,19);
       var url=FDSN+'?starttime='+from+'&minmagnitude='+minmag+BBOX[zona]+'&format=geojson&orderby=time&limit=1500';
       fetch(url).then(function(r){
@@ -142,7 +143,11 @@
         eventi=(j.features||[]).map(function(f){var p=f.properties,g=f.geometry.coordinates;return {time:p.time,mag:p.mag,place:p.place||'',depth:Math.round(g[2]),lat:g[1],lon:g[0]};}).filter(function(e){return typeof e.mag==='number';});
         render();
         stato.textContent=(eventi.length?'Aggiornato':'Nessuna scossa · aggiornato')+' alle '+pad(new Date().getHours())+':'+pad(new Date().getMinutes());
-      }).catch(function(){ stato.textContent='Dati momentaneamente non disponibili — vedi terremoti.ingv.it'; });
+      }).catch(function(){
+        // mai mostrare un messaggio allarmante: riprova in silenzio, poi con cadenza più lunga
+        if(retry<3){ setTimeout(function(){ carica(retry+1); }, 4000); }
+        else { stato.textContent='Aggiornamento in corso…'; setTimeout(function(){ carica(0); }, 60000); }
+      });
     }
 
     document.querySelectorAll('.dash-pill[data-win]').forEach(function(b){ b.addEventListener('click',function(){ document.querySelectorAll('.dash-pill[data-win]').forEach(function(x){x.setAttribute('aria-pressed','false');}); b.setAttribute('aria-pressed','true'); win=parseInt(b.dataset.win,10); carica(); }); });
