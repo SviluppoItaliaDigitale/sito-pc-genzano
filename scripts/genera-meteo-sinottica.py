@@ -199,9 +199,10 @@ def main():
         cb = fig.colorbar(cf, ax=ax, orientation="vertical", shrink=0.8, pad=0.02, ticks=range(-30, 40, 5))
         cb.set_label("Temperatura a 850 hPa (°C)", fontsize=8)
         cb.ax.tick_params(labelsize=7)
-        fig.text(0.5, 0.015, "Dati: Open-Meteo (modelli ECMWF) · elaborazione Protezione Civile Genzano di Roma · "
-                 "dato indicativo, per le allerte vale il Centro Funzionale Lazio",
-                 ha="center", fontsize=6.2, color="#555555")
+        fig.text(0.5, 0.030, "Elaborazione grafica del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma",
+                 ha="center", fontsize=7.2, fontweight="bold", color="#003366")
+        fig.text(0.5, 0.012, "Dati: Open-Meteo (modelli ECMWF) · dato indicativo, per le allerte vale il Centro Funzionale Regionale del Lazio",
+                 ha="center", fontsize=6, color="#555555")
         fig.subplots_adjust(left=0.02, right=0.98, top=0.9, bottom=0.06)
 
         buf = io.BytesIO()
