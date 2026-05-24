@@ -45,61 +45,25 @@ I dataset su **defibrillatori (DAE)** e **idranti antincendio** saranno pubblica
 
 ## Schema dei dataset operativi (in preparazione)
 
-### 1. Interventi operativi
+### 1. Attività operative (tabella unica aggregata)
 
-**File**: `interventi-AAAA.csv`
+Siamo un gruppo di volontariato di dimensioni contenute: le attività **non** vengono pubblicate come dataset separati e dettagliati per ogni singolo evento, ma **aggregate in un'unica tabella** per periodo (interventi, ore, esercitazioni, formazione). È la stessa forma già adottata dalle *Statistiche operative* qui sopra. Nessun dato personale: solo conteggi e somme.
 
-| Campo | Tipo | Descrizione |
-|---|---|---|
-| `data` | data ISO 8601 | giorno dell'intervento (AAAA-MM-GG) |
-| `tipo` | enum | `allerta-meteo`, `incendio-boschivo`, `dispersione-persona`, `assistenza-evacuazione`, `supporto-evento`, `formazione-cittadini`, `altro` |
-| `descrizione_breve` | testo | sintesi 1-2 frasi (mai dati personali, mai indirizzi specifici) |
-| `durata_ore` | numero | durata totale dell'intervento |
-| `volontari_impiegati` | numero intero | numero volontari attivati |
-| `mezzi_impiegati` | testo | es. "1 fuoristrada, 1 autobotte" |
-| `coordinamento` | enum | `gruppo`, `coi`, `regione`, `dpc` |
-| `localita` | testo | macro-area (es. "Centro storico", "Zona industriale", "Crateri") — **mai indirizzi precisi che identifichino persone** |
-
-### 2. Ore di volontariato
-
-**File**: `ore-volontariato-AAAA.csv`
+**File**: `statistiche-attivita.csv` (aggregato, anonimo)
 
 | Campo | Tipo | Descrizione |
 |---|---|---|
-| `mese` | enum | `01`-`12` |
-| `anno` | numero intero | AAAA |
-| `ore_totali` | numero | somma delle ore dichiarate dai volontari nel mese |
-| `attivita_n` | numero intero | numero di attività distinte nel mese |
-| `volontari_attivi` | numero intero | volontari con almeno 1 ora nel mese |
+| `periodo` | testo | periodo coperto (es. "dal 4 aprile 2026") |
+| `interventi` | numero intero | numero di interventi nel periodo |
+| `ore_intervento` | numero | ore totali di intervento |
+| `km_percorsi` | numero | chilometri percorsi |
+| `automezzi_impiegati` | numero intero | automezzi distinti usati negli interventi |
+| `esercitazioni` | numero intero | esercitazioni svolte nel periodo |
+| `formazione_corsi` | numero intero | corsi o sessioni di formazione svolti |
+| `formazione_ore` | numero | ore di formazione |
+| `volontari_attivi` | numero intero | volontari con almeno un'attività |
 
-### 3. Esercitazioni
-
-**File**: `esercitazioni-AAAA.csv`
-
-| Campo | Tipo | Descrizione |
-|---|---|---|
-| `data` | data ISO 8601 | |
-| `titolo` | testo | nome dell'esercitazione |
-| `tipo_rischio_simulato` | enum | `sismico`, `idrogeologico`, `incendio-boschivo`, `comunicazione-emergenza`, `radio`, `multi-rischio` |
-| `partecipanti_volontari` | numero intero | |
-| `partecipanti_cittadini` | numero intero | |
-| `enti_coordinati` | testo | es. "Comune, ASL Roma 6, Croce Rossa, AVIS" |
-| `durata_ore` | numero | |
-
-### 4. Formazione
-
-**File**: `formazione-AAAA.csv`
-
-| Campo | Tipo | Descrizione |
-|---|---|---|
-| `data` | data ISO 8601 | |
-| `titolo_corso` | testo | |
-| `categoria` | enum | `BLSD`, `radiocomunicazioni`, `AIB`, `cartografia-GIS`, `psicologia-emergenza`, `altro` |
-| `ore` | numero | |
-| `formatori` | testo | enti/persone formatrici (cognome formatori solo se persone fisiche autorizzate alla pubblicazione) |
-| `partecipanti` | numero intero | |
-
-### 5. Risorse e dotazioni
+### 2. Risorse e dotazioni
 
 **File**: `dotazioni.csv` (versione corrente, con timestamp)
 
