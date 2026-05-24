@@ -41,7 +41,7 @@ Periodo coperto: **dal 4 aprile 2026**. I dati sono **generati automaticamente**
 
 ### In preparazione
 
-Le **statistiche aggregate** di interventi e volontari sono già pubblicate sopra (in forma provvisoria) e si aggiornano a ogni nuovo export del gestionale.
+Le **statistiche aggregate** (interventi, automezzi, volontari) sono già pubblicate qui sopra in forma provvisoria e si aggiornano a ogni nuovo export del gestionale. Essendo un gruppo di dimensioni contenute, **non** pubblichiamo dataset di dettaglio per ogni singolo evento: i numeri restano sempre aggregati e anonimi.
 
 I dataset su **defibrillatori (DAE)** e **idranti antincendio** saranno pubblicati **solo dopo** la ricezione dei dati ufficiali da ASL Roma 6 (Centrale 118) e dal Comando provinciale dei Vigili del Fuoco: il sito non pubblica posizioni non verificate.
 
