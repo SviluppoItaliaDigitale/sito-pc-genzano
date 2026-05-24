@@ -143,6 +143,12 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-desc">strumenti istituzionali: Windy, INGV, Radar DPC, MeteoAM, ISPRA, EFFIS, ARPA, ANAS.</p>
   <span class="ms-card-arrow">Apri hub →</span>
 </a>
+<a class="ms-card ms-tool" href="/cruscotto/">
+  <div class="ms-card-icon"><i class="bi bi-speedometer2"></i></div>
+  <p class="ms-card-title">Cruscotto del territorio</p>
+  <p class="ms-card-desc">Dati di rischio in tempo reale in un'unica pagina: terremoti, vulcani, radar pioggia, satellite, meteo, allerta, incendi, aria e mare.</p>
+  <span class="ms-card-arrow">Apri il cruscotto →</span>
+</a>
 </div>
 
 <div class="ms-section"><span class="ms-section-icon" style="background:#dc3545"><i class="bi bi-exclamation-triangle-fill"></i></span><h2>Allerte ed emergenze</h2></div>
