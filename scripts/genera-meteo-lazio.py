@@ -151,9 +151,16 @@ def fetch_map():
            "&daily=temperature_2m_max,temperature_2m_min,weather_code&timezone=Europe%2FRome&forecast_days=1")
     return _get(url)
 
+def cardinale(deg):
+    if deg is None:
+        return ""
+    dirs = ["N", "NE", "E", "SE", "S", "SO", "O", "NO"]
+    return dirs[int((deg % 360) / 45 + 0.5) % 8]
+
 def fetch_card():
     url = (f"https://api.open-meteo.com/v1/forecast?latitude={GENZANO[0]}&longitude={GENZANO[1]}"
-           "&current=temperature_2m,apparent_temperature,relative_humidity_2m,wind_speed_10m,wind_gusts_10m,weather_code"
+           "&current=temperature_2m,apparent_temperature,relative_humidity_2m,wind_speed_10m,wind_gusts_10m,"
+           "weather_code,pressure_msl,cloud_cover,precipitation,wind_direction_10m"
            "&daily=temperature_2m_max,temperature_2m_min,weather_code,precipitation_probability_max,"
            "precipitation_sum,wind_gusts_10m_max,uv_index_max,sunrise,sunset"
            "&timezone=Europe%2FRome&forecast_days=4")
@@ -229,12 +236,16 @@ def build_svg(map_data, card_data, oggi):
     gz_uv_l = uv_label(gz_d["uv_index_max"][0])
     gz_alba = (gz_d["sunrise"][0] or "")[11:16]
     gz_tram = (gz_d["sunset"][0] or "")[11:16]
+    gz_press = round(cur.get("pressure_msl") or 0)
+    gz_cloud = round(cur.get("cloud_cover") or 0)
+    gz_rain = round(cur.get("precipitation") or 0, 1)
+    gz_dir = cardinale(cur.get("wind_direction_10m"))
     # prossimi 3 giorni (mini-strip)
     days_svg = ""
     # marcatore sul punto
     marker = (f'<circle cx="{gx:.1f}" cy="{gy:.1f}" r="5.5" fill="#b8860b" stroke="#ffffff" stroke-width="2"/>')
     # riquadro completo nell'angolo basso-sinistra (mare, area libera), con linea al punto
-    bx, by, bw, bh = 8, Hmap-232, 264, 214
+    bx, by, bw, bh = 8, Hmap-256, 272, 238
     for j, i in enumerate((1, 2, 3)):
         try:
             wcd = gz_d["weather_code"][i]
@@ -242,22 +253,24 @@ def build_svg(map_data, card_data, oggi):
             dd = oggi + datetime.timedelta(days=i)
             _, ic = wmo(wcd)
             cxd = bx + bw * (0.2 + 0.3 * j)
-            days_svg += (f'<text x="{cxd:.1f}" y="{by+170:.1f}" font-size="10.5" font-weight="700" text-anchor="middle" fill="#cfe0f0">{GIORNI_BREVI[dd.weekday()]}</text>'
-                         f'{icona_svg(ic, cxd, by+186, 6.5)}'
-                         f'<text x="{cxd:.1f}" y="{by+206:.1f}" font-size="10.5" text-anchor="middle" fill="#ffffff">{mx}&#176;<tspan fill="#9ec5e8">/{mn}&#176;</tspan></text>')
+            days_svg += (f'<text x="{cxd:.1f}" y="{by+196:.1f}" font-size="10.5" font-weight="700" text-anchor="middle" fill="#cfe0f0">{GIORNI_BREVI[dd.weekday()]}</text>'
+                         f'{icona_svg(ic, cxd, by+212, 6.5)}'
+                         f'<text x="{cxd:.1f}" y="{by+232:.1f}" font-size="10.5" text-anchor="middle" fill="#ffffff">{mx}&#176;<tspan fill="#9ec5e8">/{mn}&#176;</tspan></text>')
         except Exception:
             pass
     cardg = (
         f'<line x1="{bx+bw:.1f}" y1="{by+22:.1f}" x2="{gx:.1f}" y2="{gy:.1f}" stroke="#b8860b" stroke-width="1.4" stroke-dasharray="4 3"/>'
         f'<rect x="{bx}" y="{by}" width="{bw}" height="{bh}" rx="12" fill="#003366" stroke="#b8860b" stroke-width="2"/>'
         f'<text x="{bx+14}" y="{by+25:.1f}" font-size="13.5" font-weight="800" fill="#ffffff">&#9733; Genzano di Roma <tspan font-size="11" font-weight="400" fill="#cfe0f0">&#183; adesso</tspan></text>'
-        f'{icona_svg(gz_ico, bx+36, by+64, 14)}'
-        f'<text x="{bx+70}" y="{by+70:.1f}" font-size="26" font-weight="800" fill="#ffffff">{gz_now}&#176;</text>'
-        f'<text x="{bx+14}" y="{by+92:.1f}" font-size="11.5" fill="#cfe0f0">{gz_desc} &#183; percepita {gz_perc}&#176;</text>'
-        f'<text x="{bx+14}" y="{by+110:.1f}" font-size="11.5" fill="#9ec5e8">Massima {gz_max}&#176; &#183; minima {gz_min}&#176;</text>'
-        f'<text x="{bx+14}" y="{by+128:.1f}" font-size="10.5" fill="#e7eef6">Umidit&#224; {gz_hum}% &#183; Vento {gz_wind} (raff. {gz_gust}) km/h</text>'
-        f'<text x="{bx+14}" y="{by+146:.1f}" font-size="10.5" fill="#e7eef6">UV {gz_uv} ({gz_uv_l}) &#183; Alba {gz_alba} &#183; Tramonto {gz_tram}</text>'
-        f'<line x1="{bx+12}" y1="{by+154:.1f}" x2="{bx+bw-12}" y2="{by+154:.1f}" stroke="#1f4a78" stroke-width="1"/>'
+        f'{icona_svg(gz_ico, bx+36, by+62, 14)}'
+        f'<text x="{bx+70}" y="{by+68:.1f}" font-size="26" font-weight="800" fill="#ffffff">{gz_now}&#176;</text>'
+        f'<text x="{bx+14}" y="{by+90:.1f}" font-size="11.5" fill="#cfe0f0">{gz_desc} &#183; percepita {gz_perc}&#176;</text>'
+        f'<text x="{bx+14}" y="{by+107:.1f}" font-size="11" fill="#9ec5e8">Massima {gz_max}&#176; &#183; minima {gz_min}&#176;</text>'
+        f'<text x="{bx+14}" y="{by+124:.1f}" font-size="10" fill="#e7eef6">Umidit&#224; {gz_hum}% &#183; Vento {gz_wind} km/h da {gz_dir} (raff. {gz_gust})</text>'
+        f'<text x="{bx+14}" y="{by+140:.1f}" font-size="10" fill="#e7eef6">Pressione {gz_press} hPa &#183; Nuvolosit&#224; {gz_cloud}% &#183; Pioggia {gz_rain} mm</text>'
+        f'<text x="{bx+14}" y="{by+156:.1f}" font-size="10" fill="#e7eef6">UV {gz_uv} ({gz_uv_l}) &#183; Alba {gz_alba} &#183; Tramonto {gz_tram}</text>'
+        f'<line x1="{bx+12}" y1="{by+166:.1f}" x2="{bx+bw-12}" y2="{by+166:.1f}" stroke="#1f4a78" stroke-width="1"/>'
+        f'<text x="{bx+14}" y="{by+182:.1f}" font-size="9.5" fill="#9ec5e8">Prossimi giorni</text>'
         f'{days_svg}'
     )
 
