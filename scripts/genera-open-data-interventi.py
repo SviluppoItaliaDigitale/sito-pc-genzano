@@ -172,11 +172,21 @@ def main():
     n_tot = len(data)
     min_tot = sum(minuti(col(r, "Durata")) for r in data)
     ore = round(min_tot / 60, 1)
+    # Un intervento con PIÙ mezzi ha più letture del contachilometri nella
+    # stessa cella, separate da spazi (es. "227412  13161"). float() su quella
+    # cella fallirebbe e scarterebbe i km dell'intervento: vanno estratti tutti
+    # i numeri e accoppiati per posizione iniziali[i] -> finali[i].
+    def km_letture(x):
+        return [float(t) for t in re.findall(r"\d+(?:[.,]\d+)?",
+                                             str(x or "").replace(",", "."))]
+
     km = 0
     for r in data:
-        a, b = num(col(r, "Km iniziali")), num(col(r, "Km finali"))
-        if a is not None and b is not None and b >= a:
-            km += b - a
+        ini = km_letture(col(r, "Km iniziali"))
+        fin = km_letture(col(r, "Km finali"))
+        for a, b in zip(ini, fin):
+            if b >= a:
+                km += b - a
     date = [parse_data_it(col(r, "Data Inizio")) for r in data]
     date = [d for d in date if d]
     periodo = {"dal": min(date).isoformat() if date else None,
@@ -185,12 +195,18 @@ def main():
     if date:
         per_label = f"dal {min(date).day} {MESI_NOME[min(date).month]} {min(date).year}"
 
-    # tipologie (vocabolario controllato; "-" => Non classificato)
+    # tipologie: si usa "Tipologia evento" (vocabolario controllato a menu) dove
+    # compilato; dove è vuoto ("-") si ripiega sul "Motivo", che gli operatori
+    # compilano sempre. NB: "Motivo" è un campo più libero del menu: va tenuto
+    # generico e senza dati personali nel gestionale (qui sono tutte categorie
+    # operative: "Taglio pianta", "Incendio sterpaglie", ...).
     from collections import Counter
     tip = Counter()
     for r in data:
-        t = str(col(r, "Tipologia evento") or "-").strip()
-        tip["Non classificato" if t in ("-", "", "None") else t] += 1
+        t = str(col(r, "Tipologia evento") or "").strip()
+        if t in ("", "-", "None"):
+            t = " ".join(str(col(r, "Motivo") or "").split())
+        tip[t or "Non classificato"] += 1
 
     # automezzi impiegati (dedup per targa entro la cella; targa MAI pubblicata)
     veic_interventi = Counter()   # etichetta -> n. interventi in cui è usato
@@ -234,10 +250,13 @@ def main():
     vol_elenco = len(d2)
     vol_attivi = sum(1 for r in d2 if fnum(r[1]) > 0)
     rap_tot = int(sum(fnum(r[1]) for r in d2))
+    # "Volontari in organico" rimosso dall'output: il foglio "Interventi membri"
+    # elenca i membri presenti nell'export del gestionale, non è la consistenza
+    # ufficiale dell'organico. Si pubblicano solo gli aggregati legati agli
+    # interventi effettivi.
     write_kv("statistiche-volontari", [
-        ("Volontari in organico", vol_elenco),
         ("Volontari con almeno un intervento", vol_attivi),
-        ("Rapporti di intervento totali", rap_tot),
+        ("Presenze dei volontari agli interventi", rap_tot),
     ], periodo)
 
     print("\nRiepilogo (anonimo):")
