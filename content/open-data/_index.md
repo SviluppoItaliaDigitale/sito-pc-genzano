@@ -41,40 +41,9 @@ Periodo coperto: **dal 4 aprile 2026**. I dati sono **generati automaticamente**
 
 ### In preparazione
 
-Le **statistiche aggregate** di interventi e volontari sono già pubblicate sopra (in forma provvisoria). Restano in preparazione i dataset di dettaglio su **esercitazioni, formazione e dotazioni**, man mano che il Gruppo completa la trasformazione del registro interno in formato aperto. Lo schema dei campi è documentato qui sotto.
+Le **statistiche aggregate** di interventi e volontari sono già pubblicate sopra (in forma provvisoria) e si aggiornano a ogni nuovo export del gestionale.
 
 I dataset su **defibrillatori (DAE)** e **idranti antincendio** saranno pubblicati **solo dopo** la ricezione dei dati ufficiali da ASL Roma 6 (Centrale 118) e dal Comando provinciale dei Vigili del Fuoco: il sito non pubblica posizioni non verificate.
-
-## Schema dei dataset operativi (in preparazione)
-
-### 1. Attività operative (tabella unica aggregata)
-
-Siamo un gruppo di volontariato di dimensioni contenute: le attività **non** vengono pubblicate come dataset separati e dettagliati per ogni singolo evento, ma **aggregate in un'unica tabella** per periodo (interventi, ore, esercitazioni, formazione). È la stessa forma già adottata dalle *Statistiche operative* qui sopra. Nessun dato personale: solo conteggi e somme.
-
-**File**: `statistiche-attivita.csv` (aggregato, anonimo)
-
-| Campo | Tipo | Descrizione |
-|---|---|---|
-| `periodo` | testo | periodo coperto (es. "dal 4 aprile 2026") |
-| `interventi` | numero intero | numero di interventi nel periodo |
-| `ore_intervento` | numero | ore totali di intervento |
-| `km_percorsi` | numero | chilometri percorsi |
-| `automezzi_impiegati` | numero intero | automezzi distinti usati negli interventi |
-| `esercitazioni` | numero intero | esercitazioni svolte nel periodo |
-| `formazione_corsi` | numero intero | corsi o sessioni di formazione svolti |
-| `formazione_ore` | numero | ore di formazione |
-| `volontari_attivi` | numero intero | volontari con almeno un'attività |
-
-### 2. Risorse e dotazioni
-
-**File**: `dotazioni.csv` (versione corrente, con timestamp)
-
-| Campo | Tipo | Descrizione |
-|---|---|---|
-| `categoria` | enum | `mezzi`, `radio`, `attrezzature-AIB`, `attrezzature-NBCR`, `kit-medici`, `gruppi-elettrogeni`, `altro` |
-| `descrizione` | testo | |
-| `quantita` | numero intero | |
-| `stato` | enum | `operativo`, `manutenzione`, `da-sostituire` |
 
 ## Licenza
 
