@@ -5,7 +5,7 @@ tts: true
 layout: "single"
 aliases:
   - /numeri-utili/
-dataUltimaRevisione: "2026-05-16"
+dataUltimaRevisione: "2026-05-24"
 ---
 
 <div class="card border-danger mb-4">
@@ -66,6 +66,22 @@ La Polizia Locale si occupa di viabilità, ordinanze, controlli stradali e attiv
 - **Telefono:** [+39 06 9364687](tel:+39069364687) · [+39 06 9397994](tel:+39069397994)
 - **Email:** [munipol@comune.genzanodiroma.roma.it](mailto:munipol@comune.genzanodiroma.roma.it)
 - **PEC:** [polizia_locale@comunegenzanodiromapec.it](mailto:polizia_locale@comunegenzanodiromapec.it)
+
+## Carabinieri — Stazione di Genzano di Roma
+
+I Carabinieri presidiano il territorio per la sicurezza pubblica e l'ordine. Per **emergenze in atto chiama il 112**, non il numero della stazione.
+
+- **Sede:** Via Carlo Alberto Dalla Chiesa 2 — 00045 Genzano di Roma (RM)
+- **Telefono:** [+39 06 9363639](tel:+39069363639)
+- **PEC:** [trm27835@pec.carabinieri.it](mailto:trm27835@pec.carabinieri.it)
+
+## Polizia di Stato — Commissariato di Genzano di Roma
+
+Il Commissariato si occupa di sicurezza pubblica, denunce e attività di polizia. Per **emergenze in atto chiama il 112**, non il numero del commissariato.
+
+- **Sede:** Via Chatillon 2 — 00045 Genzano di Roma (RM)
+- **Telefono:** [+39 06 9395681](tel:+39069395681)
+- **PEC:** [dipps172.5600@pecps.poliziadistato.it](mailto:dipps172.5600@pecps.poliziadistato.it)
 
 ## ASL Roma 6 — distretto di Genzano di Roma
 
