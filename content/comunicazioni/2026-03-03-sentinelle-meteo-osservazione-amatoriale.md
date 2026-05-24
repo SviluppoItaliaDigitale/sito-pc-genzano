@@ -120,7 +120,7 @@ Fare il meteo amatoriale ha **ritmi lunghi**. Un anno di dati è un punto di par
 ## Per approfondire
 
 - [Aeronautica Militare — Servizio Meteorologico](https://www.meteoam.it/)
-- [Centro Funzionale Regionale Lazio](http://www.idrografico.roma.it/)
+- [Centro Funzionale Regionale Lazio](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti)
 - [MeteoNetwork](https://www.meteonetwork.it/)
 - Articolo: [Zone di allerta Lazio: come leggere il bollettino](/comunicazioni/2026-05-07-zone-allerta-lazio-come-leggere-bollettino/)
 - Articolo: [Previsioni meteo e bollettini](/comunicazioni/2026-04-20-previsioni-meteo-bollettini-come-funzionano/)
