@@ -115,7 +115,7 @@ Per gli interventi in quota (ramo sospeso, albero che minaccia una linea elettri
 
 **Quando il ramo è in alto**
 
-Se il ramo pericolante è ad altezza superiore ai 4-5 metri, o se la caduta deve essere controllata per non danneggiare auto o edifici sottostanti, entra in scena la **PA1 – piattaforma aerea** del Gruppo, un Nissan Cabstar classificato come mezzo d'opera. Il cestello consente di raggiungere in sicurezza punti elevati.
+A volte il ramo pericolante è ad altezza superiore ai 4-5 metri, oppure la caduta va controllata per non danneggiare auto o edifici sottostanti. In questi casi entra in scena la **PA1 – piattaforma aerea** del Gruppo, un Nissan Cabstar classificato come mezzo d'opera. Il cestello consente di raggiungere in sicurezza punti elevati.
 
 L'uso della piattaforma aerea richiede **patentino specifico PLE** (Piattaforma di Lavoro Elevabile), ai sensi del D.Lgs. 81/2008 e dell'Accordo Stato-Regioni del 22 febbraio 2012. Chi non ha il patentino non manovra il mezzo, punto.
 

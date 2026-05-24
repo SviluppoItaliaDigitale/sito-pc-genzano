@@ -146,7 +146,7 @@ Indica che la **comunicazione è terminata** definitivamente. È diversa da "pas
 
 **Sigle e numeri: sempre con alfabeto fonetico**
 
-Quando la squadra detta una sigla (una targa di auto incidentata, un codice di magazzino) o un numero, l'operatore deve **far scandire le lettere con l'alfabeto fonetico ICAO-NATO** (Alfa Bravo Charlie Delta...) o, in alternativa pratica, con termini semplici (città, nomi comuni). I numeri si leggono **cifra per cifra**:
+Quando la squadra detta una sigla (una targa di auto incidentata, un codice di magazzino) o un numero, l'operatore deve **far scandire le lettere con l'alfabeto fonetico ICAO-NATO** (Alfa Bravo Charlie Delta...). In alternativa pratica si usano termini semplici, come nomi di città o parole comuni. I numeri si leggono **cifra per cifra**:
 
 - **354** va comunicato come *"tre-cinque-quattro"*, non come *"trecentocinquantaquattro"*
 
@@ -170,7 +170,7 @@ La trasmissione avviene premendo il pulsante **PTT** posto lateralmente all'appa
 
 **Il "Roger Beep"**
 
-Alcuni apparati emettono un breve suono elettronico al termine della trasmissione, il **Roger Beep**. Serve a comunicare al chiamato che la portante è stata rilasciata e può parlare. In alcuni apparati è presente **anche in apertura di trasmissione**: in quel caso è buona norma **attendere un paio di secondi dopo aver premuto il PTT prima di iniziare a parlare**, per evitare che il suono copra le prime parole del messaggio.
+Alcuni apparati emettono un breve suono elettronico al termine della trasmissione, il **Roger Beep**. Serve a comunicare al chiamato che la portante è stata rilasciata e può parlare. In alcuni apparati è presente **anche in apertura di trasmissione**. In quel caso è buona norma **attendere un paio di secondi dopo aver premuto il PTT prima di iniziare a parlare**: così il suono non copre le prime parole del messaggio.
 
 **La "coda"**
 

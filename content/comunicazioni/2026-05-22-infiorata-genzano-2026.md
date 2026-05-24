@@ -14,7 +14,7 @@ draft: false
 tts: true
 ---
 
-L'**Infiorata di Genzano di Roma** è la festa più conosciuta della nostra città: il tappeto di fiori che si stende lungo via Italo Belardi — l'antica Via Livia — in occasione del Corpus Domini è una tradizione che si rinnova ogni anno dal **1778**. Nel 2026 si celebra la **248ª edizione**.
+L'**Infiorata di Genzano di Roma** è la festa più conosciuta della nostra città. Il tappeto di fiori si stende lungo via Italo Belardi — l'antica Via Livia — in occasione del Corpus Domini. È una tradizione che si rinnova ogni anno dal **1778**. Nel 2026 si celebra la **248ª edizione**.
 
 L'evento attira decine di migliaia di visitatori da tutta Italia e dall'estero, concentrati su un'unica via cittadina nell'arco di tre giorni. Per questo motivo l'Infiorata è una **manifestazione di rilievo per la Protezione Civile** comunale: ogni anno il Gruppo collabora con il Comune e con le altre componenti del sistema di soccorso per garantire un afflusso sicuro.
 
@@ -98,7 +98,7 @@ In caso di **malore, incidente** o qualsiasi emergenza chiama il **112** — il 
 
 Per **piccoli malori, traumi lievi e prima assistenza sanitaria** sono attivi lungo il percorso **pattuglie a piedi di personale sanitario** e **ambulanze stazionate in piazza** ai piedi dell'Infiorata. Sono i riferimenti più rapidi per chi è già sul posto e ha bisogno di una valutazione immediata.
 
-In caso di **persona smarrita** — in particolare bambini che si separano dai genitori nella folla — funziona durante la manifestazione un **ufficio annunci dedicato** dotato di **altoparlanti diffusi su tutti i percorsi della festa**: l'annunciatore segnala la persona scomparsa e l'indicazione del punto dove ritrovarla. Se ti separi da qualcuno della tua famiglia, **avvicinati al volontario o all'operatore in divisa più vicino**: ti indicherà come arrivare all'ufficio annunci.
+In caso di **persona smarrita** — in particolare bambini che si separano dai genitori nella folla — durante la manifestazione funziona un **ufficio annunci dedicato**, con **altoparlanti diffusi su tutti i percorsi della festa**. L'annunciatore segnala la persona scomparsa e indica il punto dove ritrovarla. Se ti separi da qualcuno della tua famiglia, **avvicinati al volontario o all'operatore in divisa più vicino**: ti indicherà come arrivare all'ufficio annunci.
 
 Per **segnalazioni di Protezione Civile non urgenti** fuori dall'evento puoi chiamare la Sala Operativa Regionale Lazio al **803&nbsp;555**.
 
@@ -112,9 +112,9 @@ L'Infiorata è una manifestazione gestita con **pianificazione operativa pluri-e
 - **Ufficio annunci con altoparlanti** — segnala persone smarrite e ricongiunge i nuclei familiari.
 - **Comune di Genzano di Roma** — coordinamento generale e regia della manifestazione.
 
-Il **Gruppo Comunale Volontari di Protezione Civile** opera **a supporto della Polizia Locale e delle Forze dell'Ordine**, sulla base del **Piano Comunale di Protezione Civile** discusso preventivamente e del **tavolo operativo** che si tiene prima dell'evento con tutti gli enti e le istituzioni preposte alla gestione della sicurezza della manifestazione. I compiti specifici sono definiti di anno in anno dalla pianificazione operativa.
+Il **Gruppo Comunale Volontari di Protezione Civile** opera **a supporto della Polizia Locale e delle Forze dell'Ordine**. La cornice è il **Piano Comunale di Protezione Civile**, discusso preventivamente, e il **tavolo operativo** che si tiene prima dell'evento con tutti gli enti e le istituzioni preposte alla sicurezza della manifestazione. I compiti specifici sono definiti di anno in anno dalla pianificazione operativa.
 
-Il supporto del Gruppo **non include la regolazione del traffico né servizi di polizia stradale**: sono compiti di competenza esclusiva degli organi di polizia stradale (Forze dell'Ordine e Polizia Locale), come stabilito dagli **articoli 11 e 12 del Codice della Strada** (D.Lgs. 285/1992) e come ribadito dalla [Circolare del 6 agosto 2018 del Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/) sulle *"manifestazioni pubbliche: precisazioni sull'attivazione e l'impiego del volontariato di protezione civile"*. La stessa circolare consente al volontariato solo *"limitati compiti di informazione alla popolazione, anche in relazione a percorsi e tracciati straordinari o limitazioni di accesso"*, quando deliberati dalle autorità competenti. Anche **l'uso delle palette dirigitraffico è vietato** al volontariato di Protezione Civile.
+Il supporto del Gruppo **non include la regolazione del traffico né servizi di polizia stradale**. Sono compiti di competenza esclusiva degli organi di polizia stradale (Forze dell'Ordine e Polizia Locale), come stabilito dagli **articoli 11 e 12 del Codice della Strada** (D.Lgs. 285/1992). Lo ribadisce anche la [Circolare del 6 agosto 2018 del Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/) sulle *"manifestazioni pubbliche: precisazioni sull'attivazione e l'impiego del volontariato di protezione civile"*. La stessa circolare consente al volontariato solo *"limitati compiti di informazione alla popolazione, anche in relazione a percorsi e tracciati straordinari o limitazioni di accesso"*, quando deliberati dalle autorità competenti. Anche **l'uso delle palette dirigitraffico è vietato** al volontariato di Protezione Civile.
 
 Il Gruppo **non è attivabile direttamente dai cittadini**: in caso di emergenza il riferimento per il cittadino resta sempre il **112**.
 

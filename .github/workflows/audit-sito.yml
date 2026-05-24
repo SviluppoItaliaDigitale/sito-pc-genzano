@@ -337,11 +337,27 @@ jobs:
           LONG_SENT=""
           for art in "$CONTENT_GLOB"/comunicazioni/*.md; do
             [ -f "$art" ] || continue
-            # Rimuovi frontmatter e converti blocchi in righe "frase"
-            BODY=$(awk '/^---$/{c++; next} c>=2' "$art" \
-              | tr '\n' ' ' \
-              | sed 's/\([\.\!\?]\)/\1\n/g')
-            COUNT=$(echo "$BODY" | awk '{ if (NF > 40) c++ } END { print c+0 }')
+            # Conta SOLO le frasi di PROSA: salta righe di lista, titoli,
+            # citazioni, tabelle, shortcode, immagini e HTML. Senza questo filtro
+            # un elenco puntato senza punto finale verrebbe concatenato e contato
+            # come un'unica "frase" da decine di parole (falso positivo).
+            COUNT=$(awk '
+              /^---$/ { c++; next }
+              c < 2 { next }
+              {
+                # salta i blocchi shortcode multilinea ({{< ... >}}): alt/caption
+                # non sono prosa e altrimenti verrebbero contati come frasi lunghe
+                if (insc) { if ($0 ~ />}}/) insc=0; next }
+                if ($0 ~ /[{][{][<%]/) { if ($0 !~ />}}/) insc=1; next }
+                line=$0; sub(/^[ \t]+/,"",line)
+                if (line=="") next
+                if (line ~ /^([-*>|]|[0-9]+[.)][ \t]|#+[ \t]|!\[|<)/) next
+                gsub(/[.!?]+[ \t]/,"&\n",line)
+                m=split(line, arr, "\n")
+                for(i=1;i<=m;i++){ if (split(arr[i],w," ") > 40) cnt++ }
+              }
+              END { print cnt+0 }
+            ' "$art")
             if [ "$COUNT" -ge 3 ]; then
               LONG_SENT="$LONG_SENT\n- \`$art\`: $COUNT frasi con >40 parole"
             fi

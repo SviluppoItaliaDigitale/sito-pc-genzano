@@ -193,9 +193,9 @@ In ogni scenario, il Gruppo non agisce mai in modo isolato: è sempre un **tasse
 
 ## Un sistema che si regge sull'esercizio
 
-La catena descritta in questo articolo è teoria organizzativa. La sua efficacia reale dipende da una sola cosa: **quanto è esercitata**. Le **esercitazioni periodiche** — comunali, intercomunali, regionali, nazionali — servono esattamente a questo: a verificare che i flussi informativi funzionino, che i referenti si conoscano, che le sigle (COC, COM, COR, DI.COMA.C.) non siano solo parole ma **persone con un telefono, una procedura e un orario di reperibilità**.
+La catena descritta in questo articolo è teoria organizzativa. La sua efficacia reale dipende da una sola cosa: **quanto è esercitata**. Le **esercitazioni periodiche** — comunali, intercomunali, regionali, nazionali — servono esattamente a questo. Verificano che i flussi informativi funzionino e che i referenti si conoscano. E che le sigle (COC, COM, COR, DI.COMA.C.) non siano solo parole, ma **persone con un telefono, una procedura e un orario di reperibilità**.
 
-Ogni volontario di protezione civile, nel proprio piccolo, contribuisce a questa catena. Quando sale sul pickup con la radio in mano e chiama la Sala Operativa, non sta parlando con "la radio": sta parlando con la **Funzione 8 del COC**, che a sua volta comunica con la **Funzione 8 del COM**, che a sua volta riporta al COR. E così il sistema tiene.
+Ogni volontario di protezione civile, nel proprio piccolo, contribuisce a questa catena. Quando sale sul pickup con la radio in mano e chiama la Sala Operativa, non sta parlando con "la radio". Sta parlando con la **Funzione 8 del COC**, che a sua volta comunica con la **Funzione 8 del COM**, che riporta al COR. E così il sistema tiene.
 
 ---
 

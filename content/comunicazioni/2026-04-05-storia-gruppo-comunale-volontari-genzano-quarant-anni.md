@@ -62,7 +62,7 @@ Il Land Rover arriva senza dispositivi di segnalazione ottico-acustica. Il Grupp
 
 ## La missione Arcobaleno del 1999
 
-La fine degli anni Novanta porta per la prima volta il Gruppo a operare **fuori dai confini italiani**. Durante la guerra del Kosovo, il Dipartimento della Protezione Civile coordina la **missione Arcobaleno (1999)**, la più grande operazione internazionale di accoglienza gestita dall'Italia nel dopoguerra: circa 45.000 profughi albanesi e kosovari accolti nel nostro Paese, decine di campi di accoglienza allestiti, una mobilitazione senza precedenti del volontariato.
+La fine degli anni Novanta porta per la prima volta il Gruppo a operare **fuori dai confini italiani**. Durante la guerra del Kosovo, il Dipartimento della Protezione Civile coordina la **missione Arcobaleno (1999)**, la più grande operazione internazionale di accoglienza gestita dall'Italia nel dopoguerra. Vennero accolti nel nostro Paese circa 45.000 profughi albanesi e kosovari, con decine di campi di accoglienza allestiti e una mobilitazione del volontariato senza precedenti.
 
 Il Gruppo di Genzano partecipa alla missione, consolidando l'esperienza sui campi di accoglienza internazionali che tornerà utile negli anni successivi per le emergenze sismiche nazionali e, molto più tardi, per l'**emergenza Ucraina del 2022**.
 
@@ -152,7 +152,7 @@ Il mezzo rappresenta l'evoluzione del pickup da territorio: manovrabile, versati
 
 ## Quarant'anni di volontariato, di continuità
 
-Ripercorrere questa storia significa notare una costante: **il Gruppo non ha mai aspettato il mezzo perfetto**. Ha preso quello che c'era — un'ambulanza dismessa, un'autobotte militare da riconvertire, un Range Rover donato, un VM90 da smontare pezzo per pezzo — e l'ha reso utile al territorio. La cabina in lamiera autocostruita dell'ACP70 e il cassone rifatto del VM90 con i proventi di una donazione non sono aneddoti nostalgici: sono la dimostrazione che la protezione civile, prima di essere un organigramma, è un modo di rimboccarsi le maniche.
+Ripercorrere questa storia significa notare una costante: **il Gruppo non ha mai aspettato il mezzo perfetto**. Ha preso quello che c'era — un'ambulanza dismessa, un'autobotte militare da riconvertire, un Range Rover donato, un VM90 da smontare pezzo per pezzo — e l'ha reso utile al territorio. La cabina in lamiera autocostruita dell'ACP70 e il cassone rifatto del VM90 con i proventi di una donazione non sono aneddoti nostalgici. Dimostrano che la protezione civile, prima di essere un organigramma, è un modo di rimboccarsi le maniche.
 
 Dagli anni Ottanta ad oggi, il Gruppo ha attraversato:
 
