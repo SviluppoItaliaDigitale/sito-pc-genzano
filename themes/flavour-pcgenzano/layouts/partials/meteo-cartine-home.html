@@ -21,7 +21,16 @@
       </figure>
     </div>
 
-    <p class="meteo-home-link"><a href="{{ "allerte-meteo/" | relURL }}">Sulla pagina Allerte meteo trovi anche la carta sinottica dell'Italia, l'animazione e il radar pioggia in tempo reale <i class="bi bi-arrow-right" aria-hidden="true"></i></a></p>
+    <div class="meteo-home-grid">
+      <a class="meteo-approfondisci-card" href="{{ "allerte-meteo/" | relURL }}">
+        <span class="meteo-approfondisci-icona" aria-hidden="true"><i class="bi bi-cloud-lightning-rain-fill"></i></span>
+        <span class="meteo-approfondisci-testo">
+          <span class="meteo-approfondisci-titolo">Vuoi vedere di più?</span>
+          Sulla pagina <strong>Allerte meteo</strong> trovi la carta sinottica dell'Italia, l'animazione e il radar pioggia in tempo reale.
+        </span>
+        <span class="meteo-approfondisci-freccia" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+      </a>
+    </div>
   </div>
 </section>
 <script src="{{ "js/condividi-cartina.js" | relURL }}" defer></script>
