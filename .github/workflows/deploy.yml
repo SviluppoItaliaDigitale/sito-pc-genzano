@@ -19,12 +19,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
       - name: "⚙️ Setup Hugo"
-        uses: peaceiris/actions-hugo@v3
+        uses: peaceiris/actions-hugo@v3.2.1
         with:
           hugo-version: '0.143.1'
           extended: true
@@ -65,7 +65,7 @@ jobs:
         run: python3 scripts/aggiungi-pagine-statiche-al-cerca.py
 
       - name: "📤 Deploy FTP su Aruba"
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
@@ -98,4 +98,4 @@ jobs:
     steps:
       - name: "🌐 Deploy GitHub Pages"
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
