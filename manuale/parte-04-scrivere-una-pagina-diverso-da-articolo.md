@@ -395,7 +395,7 @@ La cartina Lazio si rigenera **ogni ora** (workflow `meteo-lazio.yml`); animazio
 
 **Card sismica in homepage:** non più widget INGV iframe, ma una **card semplice** ("Hai sentito un terremoto?") accanto a IT-alert, con link diretto a `terremoti.ingv.it` e a `/rischi-prevenzione/rischio-sismico/`.
 
-### 4.9-ter — Cruscotto del territorio (`/cruscotto/`) — 9 schede native (24/05/2026)
+### 4.9-ter — Cruscotto del territorio (`/cruscotto/`) — 14 schede native (aggiornato 25/05/2026)
 
 La pagina **`/cruscotto/`** (in menu sotto *Per il Cittadino*) è un cruscotto multidisciplinare a **schede** (switch ARIA `tablist`, navigazione tastiera frecce/Home/End), ognuna alimentata **direttamente nel browser** da fonti ufficiali e aperte — niente iframe/SDK di terzi, niente chiavi API. Ogni scheda è uno **shortcode** dedicato; aggiungerne una nuova = un nuovo shortcode + un tab + un panel in `content/cruscotto/_index.md`.
 
@@ -404,14 +404,19 @@ La pagina **`/cruscotto/`** (in menu sotto *Per il Cittadino*) è un cruscotto m
 | Terremoti | `dashboard-terremoti` | INGV FDSN (`webservices.ingv.it`) | Eventi 24h/7gg, mappa+liste, switch Italia/Castelli |
 | Vulcani | `dashboard-vulcani` | INGV FDSN, box Colli Albani | Sismicità 30gg della caldera quiescente (no "stato vulcanico" inventato) |
 | Radar pioggia | `radar-dpc` | DPC WMTS | Ultimo fotogramma radar (vedi 4.9-bis) |
-| Satellite | `dashboard-satellite` | EUMETSAT WMS `msg_fes:rgb_natural` (15 min) + NASA GIBS true-color del giorno | Nuvole quasi-realtime + suolo del giorno |
+| Radar ItaliaMeteo | `dashboard-italiameteo-radar` | ItaliaMeteo/MeteoHub WMS `meteohub:radar-sri` (`maps.mistralportal.it`, CC BY 4.0) | Radar SRI; auto-refresh 5 min come il radar DPC |
+| Satellite (EUMETSAT) | `dashboard-satellite` | EUMETSAT WMS `mtg_fd:rgb_geocolour`/`vis06_hrfi` (10 min) + NASA GIBS true-color del giorno | Nuvole quasi-realtime + suolo del giorno |
+| Satellite ItaliaMeteo | `dashboard-italiameteo-satellite` | EUMETSAT (Meteosat) come distribuito da ItaliaMeteo: GeoColour 1 km + visibile 500 m | Stessa fonte EUMETSAT, inquadratura ItaliaMeteo |
 | Meteo | `meteo-lazio` | Open-Meteo (nostra cartina) | Cartina Lazio + Genzano |
+| Previsioni ItaliaMeteo | `dashboard-italiameteo` | ItaliaMeteo/MeteoHub WMS modello ICON-2I (`maps.mistralportal.it`, CC BY 4.0) | 8 variabili (temp/pioggia/neve/vento/nuvole/umidità/pressione/zero termico), selettore orario, aggiornato 2×/giorno (00/12 UTC) |
+| Osservazioni ItaliaMeteo | `dashboard-italiameteo-osservazioni` | ItaliaMeteo API `meteohub.agenziaitaliameteo.it/api/observations` (CORS, solo stazioni `CCBY_COMPLIANT`) | Stazioni al suolo reali (temp/umidità/vento/pioggia 1h), ~3300 punti su canvas, aggiornamento orario |
 | Allerta | `allerta-stato-attuale` | `data/allerta.json` (CFR Lazio) | Livello allerta corrente |
 | Incendi | `dashboard-incendi` | EFFIS/Copernicus WMS `viirs.hs,modis.hs` su base satellitare Esri | Focolai da satellite VIIRS/MODIS |
 | Aria e pollini | `dashboard-aria` | Open-Meteo Air Quality (CAMS) **+ mappe ufficiali ARPA Lazio** (CHIMERE, `qa.arpalazio.net`) | AQI/PM/O₃ puntuale + previsione regionale PM10/NO₂/O₃/polveri 0-96h |
 | Mare | `dashboard-mare` | Open-Meteo Marine | Onde sulla costa laziale (Anzio-Nettuno) |
+| Mare ItaliaMeteo | `dashboard-italiameteo-mare` | ItaliaMeteo/MeteoHub WMS modello d'onda WW3 MEDITA (CC BY 4.0) | Altezza e periodo delle onde sui mari italiani |
 
-**Principi:** ogni mappa Leaflet nascosta si inizializza **lazy** quando la sua scheda diventa visibile (lo switch emette l'evento `cruscotto:<nome>` + un `resize`); il marker Genzano è sempre presente; il valore è sempre in chiaro oltre al colore (WCAG); le immagini hanno `alt` descrittivo. **Onestà sul "tempo reale":** Meteosat ha ~15 min di latenza, NASA GIBS è il mosaico del giorno (non istantaneo), EFFIS sono rilevazioni satellitari near-real-time — etichettato così nelle schede. Le fonti non-real-time o senza CORS (catalogo **dati.gov.it**, statistica **ISTAT**) **non** stanno nel cruscotto: vivono in `/open-data/` come link curati + cifre verificate.
+**Principi:** ogni mappa Leaflet nascosta si inizializza **lazy** quando la sua scheda diventa visibile (lo switch emette l'evento `cruscotto:<nome>` + un `resize`); il marker Genzano è sempre presente; il valore è sempre in chiaro oltre al colore (WCAG); le immagini hanno `alt` descrittivo. ⚠️ **Mappe a tanti punti su canvas** (es. Osservazioni ItaliaMeteo, ~3300 stazioni): **creare la mappa Leaflet solo all'apertura della scheda**, non a pagina caricata — se creata mentre il pannello è nascosto (dimensione 0) il renderer canvas non ha bounds validi e il disegno dei punti si interrompe (errore `intersects`). **Onestà sul "tempo reale":** Meteosat ha ~10-15 min di latenza, NASA GIBS è il mosaico del giorno (non istantaneo), EFFIS sono rilevazioni satellitari near-real-time, le **previsioni ItaliaMeteo** (ICON-2I) sono modello aggiornato 2×/giorno e le **osservazioni** sono orarie — etichettato così nelle schede. Il **Satellite ItaliaMeteo** usa la stessa fonte EUMETSAT della scheda Satellite (EUMETSAT): dichiarato esplicitamente nel testo per non confondere il cittadino. Le fonti non-real-time o senza CORS (catalogo **dati.gov.it**, statistica **ISTAT**) **non** stanno nel cruscotto: vivono in `/open-data/` come link curati + cifre verificate. Il workflow `controllo-fonti-cruscotto.yml` monitora settimanalmente le 14 fonti esterne (`scripts/check-fonti-cruscotto.py`).
 
 ### 4.10 — Hub strumenti di consultazione (`/strumenti/`)
 
