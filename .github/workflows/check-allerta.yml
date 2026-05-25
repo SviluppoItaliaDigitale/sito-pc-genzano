@@ -117,3 +117,25 @@ jobs:
         run: |
           echo "Triggering notifica-telegram workflow..."
           gh workflow run notifica-telegram.yml --ref main
+
+      # Trigger ORARIO affidabile della cartina meteo Lazio.
+      # meteo-lazio.yml dipendeva dal solo cron nativo GitHub (8 * * * *), che
+      # ritarda e SCARTA i run schedulati nelle ore di carico: la cartina
+      # restava ferma anche 5-7 ore (incidente 25/05/2026, ferma alle 06:48).
+      # Questo workflow invece gira ogni 5 min puntuale via cron-job.org: nel
+      # run che cade nei primi 5 minuti dell'ora lanciamo meteo-lazio.yml ->
+      # esattamente 1 rigenerazione/ora sul trigger affidabile. Il cron interno
+      # di meteo-lazio.yml (:08) resta come ulteriore fail-safe. Stesso pattern
+      # "doppio trigger" delle allerte. Indipendente dal commit allerta: la
+      # cartina va aggiornata anche quando il livello DPC non cambia.
+      - name: "🌤️ Rigenera cartina meteo Lazio (una volta all'ora)"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          MIN=$(date -u +%-M)
+          if [ "$MIN" -lt 5 ]; then
+            echo "Minuto $MIN < 5: avvio meteo-lazio.yml (rigenerazione oraria)."
+            gh workflow run meteo-lazio.yml --ref main
+          else
+            echo "Minuto $MIN: salto (la cartina si rigenera solo nei primi 5 min dell'ora)."
+          fi
