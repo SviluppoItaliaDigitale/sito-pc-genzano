@@ -14,6 +14,7 @@ Un'unica pagina per consultare i dati di rischio del territorio, da **fonti uffi
   <button type="button" class="cruscotto-tab" id="tab-terremoti" data-panel="terremoti" role="tab" aria-selected="true" aria-controls="panel-terremoti" tabindex="0"><i class="bi bi-activity" aria-hidden="true"></i> Terremoti</button>
   <button type="button" class="cruscotto-tab" id="tab-vulcani" data-panel="vulcani" role="tab" aria-selected="false" aria-controls="panel-vulcani" tabindex="-1"><i class="bi bi-triangle" aria-hidden="true"></i> Vulcani</button>
   <button type="button" class="cruscotto-tab" id="tab-radar" data-panel="radar" role="tab" aria-selected="false" aria-controls="panel-radar" tabindex="-1"><i class="bi bi-cloud-rain-heavy" aria-hidden="true"></i> Radar pioggia</button>
+  <button type="button" class="cruscotto-tab" id="tab-radar-im" data-panel="radar-im" role="tab" aria-selected="false" aria-controls="panel-radar-im" tabindex="-1"><i class="bi bi-cloud-rain-heavy-fill" aria-hidden="true"></i> Radar ItaliaMeteo</button>
   <button type="button" class="cruscotto-tab" id="tab-satellite" data-panel="satellite" role="tab" aria-selected="false" aria-controls="panel-satellite" tabindex="-1"><i class="bi bi-globe-europe-africa" aria-hidden="true"></i> Satellite</button>
   <button type="button" class="cruscotto-tab" id="tab-meteo" data-panel="meteo" role="tab" aria-selected="false" aria-controls="panel-meteo" tabindex="-1"><i class="bi bi-cloud-sun" aria-hidden="true"></i> Meteo</button>
   <button type="button" class="cruscotto-tab" id="tab-previsioni-im" data-panel="previsioni-im" role="tab" aria-selected="false" aria-controls="panel-previsioni-im" tabindex="-1"><i class="bi bi-cloud-sun-fill" aria-hidden="true"></i> Previsioni ItaliaMeteo</button>
@@ -39,6 +40,12 @@ Un'unica pagina per consultare i dati di rischio del territorio, da **fonti uffi
 <div class="cruscotto-panel" id="panel-radar" data-panel="radar" role="tabpanel" aria-labelledby="tab-radar" tabindex="0" hidden>
 
 {{< radar-dpc >}}
+
+</div>
+
+<div class="cruscotto-panel" id="panel-radar-im" data-panel="radar-im" role="tabpanel" aria-labelledby="tab-radar-im" tabindex="0" hidden>
+
+{{< dashboard-italiameteo-radar >}}
 
 </div>
 
@@ -126,6 +133,7 @@ Un'unica pagina per consultare i dati di rischio del territorio, da **fonti uffi
 - **Terremoti** — [INGV](https://terremoti.ingv.it/) (Istituto Nazionale di Geofisica e Vulcanologia), servizio FDSN open data, ultimi 7 giorni in Italia.
 - **Vulcani** — [INGV](https://terremoti.ingv.it/): sismicità degli ultimi 30 giorni nel Distretto Vulcanico dei Colli Albani, la caldera quiescente su cui sorge Genzano di Roma.
 - **Radar pioggia** — [Radar-DPC](https://mappe.protezionecivile.gov.it/it/mappe-e-dashboard-rischi/piattaforma-radar/) (Dipartimento della Protezione Civile), servizi WMTS open data.
+- **Radar ItaliaMeteo** — [Agenzia ItaliaMeteo](https://www.agenziaitaliameteo.it/meteo/dati-osservati/radar/) (prodotto SRI, intensità di pioggia al suolo), cartine WMS da [MeteoHub](https://meteohub.agenziaitaliameteo.it/), licenza CC BY 4.0. Complementare al radar DPC.
 - **Satellite** — [EUMETSAT](https://www.eumetsat.int/) (Meteosat, nuvole a colori naturali aggiornate ogni 15 minuti) e [NASA GIBS](https://worldview.earthdata.nasa.gov/) (immagine true-color del giorno).
 - **Meteo** — [Open-Meteo](https://open-meteo.com/) (modelli ECMWF), nostra elaborazione per il Lazio e Genzano di Roma.
 - **Previsioni ItaliaMeteo** — [Agenzia nazionale per la meteorologia e climatologia «ItaliaMeteo»](https://www.agenziaitaliameteo.it/), modello ICON-2I (con Arpae Emilia-Romagna e CINECA): temperatura, pioggia, neve, vento, nuvole, umidità, pressione, zero termico. Cartine WMS dalla piattaforma [MeteoHub](https://meteohub.agenziaitaliameteo.it/), licenza CC BY 4.0. Aggiornate **due volte al giorno** (corse delle 00 e 12 UTC), orizzonte 72 ore.

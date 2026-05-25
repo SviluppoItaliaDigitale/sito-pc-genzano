@@ -1,0 +1,115 @@
+{{/* Shortcode dashboard-italiameteo-radar — radar pioggia ItaliaMeteo (prodotto
+     SRI, intensità di pioggia al suolo) come layer Leaflet WMS dal servizio
+     pubblico maps.mistralportal.it. Fonte: Agenzia nazionale per la meteorologia
+     e climatologia «ItaliaMeteo» (CC BY 4.0). Privacy-first: solo immagini WMS,
+     nessun iframe, nessun cookie di terzi. Layer verificato il 25/05/2026.
+     È complementare al radar nazionale DPC già presente nel cruscotto. */}}
+{{ $leafletCSS := "vendor/leaflet/leaflet.css" | relURL }}
+{{ $leafletJS  := "vendor/leaflet/leaflet.js"  | relURL }}
+
+<div class="dimr-wrapper" aria-labelledby="dimr-titolo">
+  <h2 id="dimr-titolo" class="h3 mt-4 mb-3" style="color:#003366">
+    <i class="bi bi-cloud-rain-heavy-fill me-2" aria-hidden="true"></i>Radar pioggia ItaliaMeteo
+  </h2>
+  <p class="mb-2">Intensità della pioggia al suolo (prodotto <strong>SRI</strong>) elaborata dall'<strong>Agenzia ItaliaMeteo</strong> dalla rete radar nazionale. È un dato <strong>indicativo</strong>: per le allerte valgono i bollettini del <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Regionale del Lazio</a>. È complementare al <strong>radar DPC</strong> presente nell'altra scheda.</p>
+
+  <link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">
+  <style>
+  .dimr-toolbar{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-bottom:.6rem}
+  .dimr-filter{display:inline-flex;align-items:center;gap:.4rem;border:2px solid #003366;background:#fff;color:#003366;padding:.4rem .85rem;border-radius:999px;font-size:.92rem;cursor:pointer;transition:all .15s}
+  .dimr-filter[aria-pressed="true"]{background:#003366;color:#fff}
+  .dimr-filter:focus-visible{outline:3px solid #ffbe2e;outline-offset:2px}
+  .dimr-stato{font-size:.9rem;color:#495057;margin-left:auto}
+  @media (max-width:575px){.dimr-stato{margin-left:0;width:100%}}
+  #dimr-mappa{height:560px;width:100%;border-radius:8px;border:2px solid #003366;background:#0b1622}
+  @media (max-width:575px){#dimr-mappa{height:460px}}
+  .dimr-mappa-box{position:relative}
+  .dimr-legenda{position:absolute;top:10px;right:12px;z-index:600;background:rgba(255,255,255,.92);border:1px solid #adb5bd;border-radius:6px;padding:.3rem;max-height:72%;display:flex}
+  .dimr-legenda img{max-height:100%;width:auto;height:auto}
+  @media (max-width:575px){.dimr-legenda{max-height:55%;top:auto;bottom:10px}}
+  </style>
+
+  <div class="dimr-toolbar" role="group" aria-label="Sfondo e aggiornamento del radar">
+    <button type="button" class="dimr-filter" id="dimr-base" aria-pressed="true"><i class="bi bi-moon-stars" aria-hidden="true"></i> Sfondo scuro</button>
+    <button type="button" class="dimr-filter" id="dimr-refresh"><i class="bi bi-arrow-clockwise" aria-hidden="true"></i> Aggiorna</button>
+    <span class="dimr-stato" id="dimr-stato" aria-live="polite"></span>
+  </div>
+
+  <div class="dimr-mappa-box">
+    <div id="dimr-mappa" role="application" aria-label="Radar pioggia ItaliaMeteo, ultimo rilevamento, centrato sull'Italia con Genzano di Roma evidenziata."></div>
+    <div class="dimr-legenda" aria-hidden="true"><img id="dimr-legenda-img" src="" alt=""></div>
+  </div>
+
+  <noscript>
+    <div class="alert alert-warning mt-3" role="note">
+      <strong>JavaScript disattivato:</strong> apri il radar su
+      <a href="https://www.agenziaitaliameteo.it/meteo/dati-osservati/radar/mappa-radar-italia/" target="_blank" rel="noopener noreferrer">agenziaitaliameteo.it</a>.
+    </div>
+  </noscript>
+
+  <p class="small text-muted mt-2 mb-0"><i class="bi bi-info-circle" aria-hidden="true"></i> Prodotto radar <strong>SRI</strong> (intensità di pioggia al suolo). Mappa completa su <a href="https://meteohub.agenziaitaliameteo.it/app/maps/radar" target="_blank" rel="noopener noreferrer">MeteoHub</a>. Fonte: <strong>Agenzia nazionale per la meteorologia e climatologia «ItaliaMeteo»</strong>, licenza <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> — base <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap</a> / <a href="https://carto.com/attributions" target="_blank" rel="noopener noreferrer">© CARTO</a>. In emergenza chiama il <a href="tel:112">112</a>.</p>
+
+  <script src="{{ $leafletJS }}" crossorigin=""></script>
+  <script>
+  (function(){
+    if (typeof L === 'undefined') return;
+    var WMS = 'https://maps.mistralportal.it/wms';
+    var LAYER = 'meteohub:radar-sri';
+    var GENZANO = [41.7085, 12.6916];
+    var baseDark = true;
+    var stato = document.getElementById('dimr-stato');
+    var legImg = document.getElementById('dimr-legenda-img');
+
+    function pad(n){ return ('0'+n).slice(-2); }
+    function legendUrl(){
+      return WMS + '?service=WMS&request=GetLegendGraphic&format=image/png&version=1.1.1&layer=' + encodeURIComponent(LAYER);
+    }
+
+    var map = L.map('dimr-mappa', { center: [42.0, 12.5], zoom: 6, scrollWheelZoom: false });
+    map.on('focus', function(){ map.scrollWheelZoom.enable(); });
+    map.on('blur',  function(){ map.scrollWheelZoom.disable(); });
+
+    var baseScura = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+      subdomains: 'abcd', maxZoom: 12, attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/attributions">CARTO</a>' });
+    var baseChiara = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      subdomains: 'abcd', maxZoom: 12, attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/attributions">CARTO</a>' });
+    baseScura.addTo(map);
+
+    var wms = L.tileLayer.wms(WMS, {
+      layers: LAYER, format: 'image/png', transparent: true, version: '1.1.1',
+      opacity: 0.8, maxZoom: 12,
+      attribution: 'Fonte: Agenzia ItaliaMeteo (CC BY 4.0)'
+    });
+    wms.addTo(map);
+
+    L.marker(GENZANO, { keyboard: true, icon: L.divIcon({ className: 'dimr-stella',
+      html: '<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M13 1l3.4 7.6L24 9.3l-5.8 5 1.8 7.9L13 18.4 5.9 22.2l1.8-7.9L2 9.3l7.6-.7z" fill="#ffd166" stroke="#0b1622" stroke-width="1.4"/></svg>',
+      iconSize: [26,26], iconAnchor: [13,13] }) }).bindPopup('<strong>Genzano di Roma</strong>').addTo(map);
+
+    function refresh(){
+      wms.setParams({ layers: LAYER, _ts: Date.now() });
+      var d = new Date();
+      stato.textContent = 'Aggiornato alle ' + pad(d.getHours()) + ':' + pad(d.getMinutes());
+    }
+    legImg.src = legendUrl();
+    refresh();
+    // Auto-aggiornamento periodico come il radar DPC: nuovo campione ogni ~5 minuti.
+    setInterval(refresh, 300000);
+
+    document.getElementById('dimr-refresh').addEventListener('click', refresh);
+    var baseBtn = document.getElementById('dimr-base');
+    baseBtn.addEventListener('click', function(){
+      baseDark = !baseDark;
+      if (baseDark){ map.removeLayer(baseChiara); baseScura.addTo(map); baseScura.bringToBack();
+        baseBtn.innerHTML = '<i class="bi bi-moon-stars" aria-hidden="true"></i> Sfondo scuro'; }
+      else { map.removeLayer(baseScura); baseChiara.addTo(map); baseChiara.bringToBack();
+        baseBtn.innerHTML = '<i class="bi bi-sun" aria-hidden="true"></i> Sfondo chiaro'; }
+      baseBtn.setAttribute('aria-pressed', baseDark ? 'true' : 'false');
+      wms.bringToFront();
+    });
+
+    window.addEventListener('resize', function(){ map.invalidateSize(); });
+    window.addEventListener('cruscotto:radar-im', function(){ map.invalidateSize(); map.setView([42.0, 12.5], 6); refresh(); }, { once: true });
+  })();
+  </script>
+</div>
