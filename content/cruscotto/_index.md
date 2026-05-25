@@ -15,9 +15,11 @@ Un'unica pagina per consultare i dati di rischio del territorio, da **fonti uffi
   <button type="button" class="cruscotto-tab" id="tab-vulcani" data-panel="vulcani" role="tab" aria-selected="false" aria-controls="panel-vulcani" tabindex="-1"><i class="bi bi-triangle" aria-hidden="true"></i> Vulcani</button>
   <button type="button" class="cruscotto-tab" id="tab-radar" data-panel="radar" role="tab" aria-selected="false" aria-controls="panel-radar" tabindex="-1"><i class="bi bi-cloud-rain-heavy" aria-hidden="true"></i> Radar pioggia</button>
   <button type="button" class="cruscotto-tab" id="tab-radar-im" data-panel="radar-im" role="tab" aria-selected="false" aria-controls="panel-radar-im" tabindex="-1"><i class="bi bi-cloud-rain-heavy-fill" aria-hidden="true"></i> Radar ItaliaMeteo</button>
-  <button type="button" class="cruscotto-tab" id="tab-satellite" data-panel="satellite" role="tab" aria-selected="false" aria-controls="panel-satellite" tabindex="-1"><i class="bi bi-globe-europe-africa" aria-hidden="true"></i> Satellite</button>
+  <button type="button" class="cruscotto-tab" id="tab-satellite" data-panel="satellite" role="tab" aria-selected="false" aria-controls="panel-satellite" tabindex="-1"><i class="bi bi-globe-europe-africa" aria-hidden="true"></i> Satellite (EUMETSAT)</button>
+  <button type="button" class="cruscotto-tab" id="tab-satellite-im" data-panel="satellite-im" role="tab" aria-selected="false" aria-controls="panel-satellite-im" tabindex="-1"><i class="bi bi-globe2" aria-hidden="true"></i> Satellite ItaliaMeteo</button>
   <button type="button" class="cruscotto-tab" id="tab-meteo" data-panel="meteo" role="tab" aria-selected="false" aria-controls="panel-meteo" tabindex="-1"><i class="bi bi-cloud-sun" aria-hidden="true"></i> Meteo</button>
   <button type="button" class="cruscotto-tab" id="tab-previsioni-im" data-panel="previsioni-im" role="tab" aria-selected="false" aria-controls="panel-previsioni-im" tabindex="-1"><i class="bi bi-cloud-sun-fill" aria-hidden="true"></i> Previsioni ItaliaMeteo</button>
+  <button type="button" class="cruscotto-tab" id="tab-obs-im" data-panel="obs-im" role="tab" aria-selected="false" aria-controls="panel-obs-im" tabindex="-1"><i class="bi bi-thermometer-half" aria-hidden="true"></i> Osservazioni ItaliaMeteo</button>
   <button type="button" class="cruscotto-tab" id="tab-allerta" data-panel="allerta" role="tab" aria-selected="false" aria-controls="panel-allerta" tabindex="-1"><i class="bi bi-exclamation-triangle" aria-hidden="true"></i> Allerta</button>
   <button type="button" class="cruscotto-tab" id="tab-incendi" data-panel="incendi" role="tab" aria-selected="false" aria-controls="panel-incendi" tabindex="-1"><i class="bi bi-fire" aria-hidden="true"></i> Incendi</button>
   <button type="button" class="cruscotto-tab" id="tab-aria" data-panel="aria" role="tab" aria-selected="false" aria-controls="panel-aria" tabindex="-1"><i class="bi bi-wind" aria-hidden="true"></i> Aria e pollini</button>
@@ -55,6 +57,12 @@ Un'unica pagina per consultare i dati di rischio del territorio, da **fonti uffi
 
 </div>
 
+<div class="cruscotto-panel" id="panel-satellite-im" data-panel="satellite-im" role="tabpanel" aria-labelledby="tab-satellite-im" tabindex="0" hidden>
+
+{{< dashboard-italiameteo-satellite >}}
+
+</div>
+
 <div class="cruscotto-panel" id="panel-meteo" data-panel="meteo" role="tabpanel" aria-labelledby="tab-meteo" tabindex="0" hidden>
 
 {{< meteo-lazio >}}
@@ -64,6 +72,12 @@ Un'unica pagina per consultare i dati di rischio del territorio, da **fonti uffi
 <div class="cruscotto-panel" id="panel-previsioni-im" data-panel="previsioni-im" role="tabpanel" aria-labelledby="tab-previsioni-im" tabindex="0" hidden>
 
 {{< dashboard-italiameteo >}}
+
+</div>
+
+<div class="cruscotto-panel" id="panel-obs-im" data-panel="obs-im" role="tabpanel" aria-labelledby="tab-obs-im" tabindex="0" hidden>
+
+{{< dashboard-italiameteo-osservazioni >}}
 
 </div>
 
@@ -134,7 +148,9 @@ Un'unica pagina per consultare i dati di rischio del territorio, da **fonti uffi
 - **Vulcani** — [INGV](https://terremoti.ingv.it/): sismicità degli ultimi 30 giorni nel Distretto Vulcanico dei Colli Albani, la caldera quiescente su cui sorge Genzano di Roma.
 - **Radar pioggia** — [Radar-DPC](https://mappe.protezionecivile.gov.it/it/mappe-e-dashboard-rischi/piattaforma-radar/) (Dipartimento della Protezione Civile), servizi WMTS open data.
 - **Radar ItaliaMeteo** — [Agenzia ItaliaMeteo](https://www.agenziaitaliameteo.it/meteo/dati-osservati/radar/) (prodotto SRI, intensità di pioggia al suolo), cartine WMS da [MeteoHub](https://meteohub.agenziaitaliameteo.it/), licenza CC BY 4.0. Complementare al radar DPC.
-- **Satellite** — [EUMETSAT](https://www.eumetsat.int/) (Meteosat, nuvole a colori naturali aggiornate ogni 15 minuti) e [NASA GIBS](https://worldview.earthdata.nasa.gov/) (immagine true-color del giorno).
+- **Satellite (EUMETSAT)** — [EUMETSAT](https://www.eumetsat.int/) (Meteosat, nuvole a colori naturali aggiornate ogni 10 minuti) e [NASA GIBS](https://worldview.earthdata.nasa.gov/) (immagine true-color del giorno).
+- **Satellite ItaliaMeteo** — immagini Meteosat di [EUMETSAT](https://www.eumetsat.int/) come distribuite dall'[Agenzia ItaliaMeteo](https://www.agenziaitaliameteo.it/meteo/dati-osservati/satelliti/) (GeoColour 1 km + visibile alta risoluzione 500 m).
+- **Osservazioni ItaliaMeteo** — [Agenzia ItaliaMeteo](https://www.agenziaitaliameteo.it/meteo/dati-osservati/stazioni-al-suolo/), misure reali delle stazioni al suolo (temperatura, umidità, vento, pioggia) dall'API aperta [MeteoHub](https://meteohub.agenziaitaliameteo.it/) (solo stazioni a licenza CC BY 4.0, aggiornamento orario).
 - **Meteo** — [Open-Meteo](https://open-meteo.com/) (modelli ECMWF), nostra elaborazione per il Lazio e Genzano di Roma.
 - **Previsioni ItaliaMeteo** — [Agenzia nazionale per la meteorologia e climatologia «ItaliaMeteo»](https://www.agenziaitaliameteo.it/), modello ICON-2I (con Arpae Emilia-Romagna e CINECA): temperatura, pioggia, neve, vento, nuvole, umidità, pressione, zero termico. Cartine WMS dalla piattaforma [MeteoHub](https://meteohub.agenziaitaliameteo.it/), licenza CC BY 4.0. Aggiornate **due volte al giorno** (corse delle 00 e 12 UTC), orizzonte 72 ore.
 - **Mare ItaliaMeteo** — [Agenzia ItaliaMeteo](https://www.agenziaitaliameteo.it/mare/), modello d'onda WW3 MEDITA: altezza e periodo delle onde sui mari italiani (CC BY 4.0).

@@ -1,0 +1,171 @@
+{{/* Shortcode dashboard-italiameteo-osservazioni — osservazioni in tempo reale
+     delle stazioni al suolo ItaliaMeteo, dall'API pubblica MeteoHub
+     /api/observations (solo stazioni con licenza CCBY_COMPLIANT, CORS abilitato).
+     Punti di stazione su mappa Leaflet (renderer canvas per migliaia di punti).
+     Variabili: temperatura, umidità, vento, pioggia (1 h). Privacy-first: fetch
+     diretto dell'API aperta, nessun iframe, nessun cookie di terzi. Caricamento
+     SOLO all'apertura della scheda (la risposta è grande). Verificato 25/05/2026:
+     temp 3277, umidità 2227, vento 1693, pioggia 3900 stazioni. */}}
+{{ $leafletCSS := "vendor/leaflet/leaflet.css" | relURL }}
+{{ $leafletJS  := "vendor/leaflet/leaflet.js"  | relURL }}
+
+<div class="dimo-wrapper" aria-labelledby="dimo-titolo">
+  <h2 id="dimo-titolo" class="h3 mt-4 mb-3" style="color:#003366">
+    <i class="bi bi-thermometer-half me-2" aria-hidden="true"></i>Osservazioni in tempo reale ItaliaMeteo
+  </h2>
+  <p class="mb-2">Misure reali delle <strong>stazioni al suolo</strong> della rete nazionale, raccolte dall'<strong>Agenzia ItaliaMeteo</strong> (solo stazioni a licenza aperta). Scegli la grandezza qui sotto: ogni punto è una stazione. Sono dati <strong>indicativi</strong>; per le allerte valgono i bollettini del <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Regionale del Lazio</a>.</p>
+
+  <link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">
+  <style>
+  .dimo-toolbar{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-bottom:.6rem}
+  .dimo-filter{display:inline-flex;align-items:center;gap:.4rem;border:2px solid #003366;background:#fff;color:#003366;padding:.4rem .85rem;border-radius:999px;font-size:.92rem;cursor:pointer;transition:all .15s}
+  .dimo-filter[aria-pressed="true"]{background:#003366;color:#fff}
+  .dimo-filter:focus-visible{outline:3px solid #ffbe2e;outline-offset:2px}
+  .dimo-stato{font-size:.9rem;color:#495057;margin-left:auto}
+  @media (max-width:575px){.dimo-stato{margin-left:0;width:100%}}
+  #dimo-mappa{height:560px;width:100%;border-radius:8px;border:2px solid #003366;background:#eaf1f7}
+  @media (max-width:575px){#dimo-mappa{height:460px}}
+  .dimo-mappa-box{position:relative}
+  .dimo-legenda{position:absolute;bottom:10px;right:12px;z-index:600;background:rgba(255,255,255,.93);border:1px solid #adb5bd;border-radius:6px;padding:.4rem .5rem;font-size:.74rem;color:#333;max-width:46%}
+  .dimo-legenda b{display:block;font-size:.78rem;margin-bottom:.2rem;color:#003366}
+  .dimo-legenda .row{display:flex;align-items:center;gap:.35rem;line-height:1.5}
+  .dimo-legenda .sw{width:14px;height:14px;border-radius:3px;border:1px solid rgba(0,0,0,.25);flex:0 0 auto}
+  </style>
+
+  <div class="dimo-toolbar" role="group" aria-label="Grandezza osservata">
+    <button type="button" class="dimo-filter" data-var="temp" aria-pressed="true">Temperatura</button>
+    <button type="button" class="dimo-filter" data-var="umid" aria-pressed="false">Umidità</button>
+    <button type="button" class="dimo-filter" data-var="vento" aria-pressed="false">Vento</button>
+    <button type="button" class="dimo-filter" data-var="pioggia" aria-pressed="false">Pioggia (1 h)</button>
+    <button type="button" class="dimo-filter" id="dimo-refresh"><i class="bi bi-arrow-clockwise" aria-hidden="true"></i> Aggiorna</button>
+    <span class="dimo-stato" id="dimo-stato" aria-live="polite">Apri la scheda per caricare i dati…</span>
+  </div>
+
+  <div class="dimo-mappa-box">
+    <div id="dimo-mappa" role="application" aria-label="Mappa delle stazioni meteo al suolo ItaliaMeteo, centrata sull'Italia con Genzano di Roma evidenziata."></div>
+    <div class="dimo-legenda" id="dimo-legenda" aria-hidden="true"></div>
+  </div>
+
+  <noscript>
+    <div class="alert alert-warning mt-3" role="note">
+      <strong>JavaScript disattivato:</strong> apri le osservazioni su
+      <a href="https://www.agenziaitaliameteo.it/meteo/dati-osservati/stazioni-al-suolo/dati-in-tempo-reale/" target="_blank" rel="noopener noreferrer">agenziaitaliameteo.it</a>.
+    </div>
+  </noscript>
+
+  <p class="small text-muted mt-2 mb-0"><i class="bi bi-info-circle" aria-hidden="true"></i> Dati delle stazioni al suolo (ultimo dato disponibile, aggiornamento orario). Mappa completa su <a href="https://meteohub.agenziaitaliameteo.it/app/maps/observations" target="_blank" rel="noopener noreferrer">MeteoHub</a>. Fonte: <strong>Agenzia nazionale per la meteorologia e climatologia «ItaliaMeteo»</strong>, solo stazioni a licenza <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> — base <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap</a> / <a href="https://carto.com/attributions" target="_blank" rel="noopener noreferrer">© CARTO</a>. In emergenza chiama il <a href="tel:112">112</a>.</p>
+
+  <script src="{{ $leafletJS }}" crossorigin=""></script>
+  <script>
+  (function(){
+    if (typeof L === 'undefined') return;
+    var API = 'https://meteohub.agenziaitaliameteo.it/api/observations';
+    var GENZANO = [41.7085, 12.6916];
+    var stato = document.getElementById('dimo-stato');
+    var legBox = document.getElementById('dimo-legenda');
+
+    var VARS = {
+      temp:    { label:'Temperatura', prod:'B12101', tr:'254,0,0', lv:'103,2000,0,0', unit:'°C',   conv:function(v){return v-273.15;}, dec:1,
+        buckets:[{max:0,c:'#313695',l:'< 0'},{max:5,c:'#4575b4',l:'0–5'},{max:10,c:'#74add1',l:'5–10'},{max:15,c:'#abd9e9',l:'10–15'},{max:20,c:'#fee090',l:'15–20'},{max:25,c:'#fdae61',l:'20–25'},{max:30,c:'#f46d43',l:'25–30'},{max:35,c:'#d73027',l:'30–35'},{max:1e9,c:'#a50026',l:'> 35'}] },
+      umid:    { label:'Umidità', prod:'B13003', tr:'254,0,0', lv:'103,2000,0,0', unit:'%', conv:function(v){return v;}, dec:0,
+        buckets:[{max:30,c:'#d73027',l:'< 30'},{max:50,c:'#fdae61',l:'30–50'},{max:70,c:'#fee090',l:'50–70'},{max:85,c:'#abd9e9',l:'70–85'},{max:95,c:'#4575b4',l:'85–95'},{max:1e9,c:'#313695',l:'> 95'}] },
+      vento:   { label:'Vento', prod:'B11002', tr:'254,0,0', lv:'103,10000,0,0', unit:'km/h', conv:function(v){return v*3.6;}, dec:0,
+        buckets:[{max:5,c:'#ffffcc',l:'< 5'},{max:15,c:'#c2e699',l:'5–15'},{max:30,c:'#78c679',l:'15–30'},{max:50,c:'#fdae61',l:'30–50'},{max:70,c:'#f46d43',l:'50–70'},{max:1e9,c:'#d73027',l:'> 70'}] },
+      pioggia: { label:'Pioggia (1 h)', prod:'B13011', tr:'1,0,3600', lv:'1,0,0,0', unit:'mm', conv:function(v){return v;}, dec:1,
+        buckets:[{max:0.2,c:'#eef6ff',l:'~ 0'},{max:1,c:'#c6dbef',l:'0,2–1'},{max:3,c:'#6baed6',l:'1–3'},{max:7,c:'#3182bd',l:'3–7'},{max:15,c:'#08519c',l:'7–15'},{max:1e9,c:'#54278f',l:'> 15'}] }
+    };
+    var current = 'temp', loaded = false;
+    // La mappa viene creata SOLO alla prima apertura della scheda: se la creassimo
+    // mentre il pannello è nascosto (dimensione 0) il renderer canvas non avrebbe
+    // bounds validi e il disegno dei punti si interromperebbe (errore intersects).
+    var map = null, puntiLayer = null;
+    function ensureMap(){
+      if (map) return;
+      map = L.map('dimo-mappa', { center: [42.0, 12.5], zoom: 6, scrollWheelZoom: false, preferCanvas: true });
+      map.on('focus', function(){ map.scrollWheelZoom.enable(); });
+      map.on('blur',  function(){ map.scrollWheelZoom.disable(); });
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        subdomains:'abcd', maxZoom:12, attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/attributions">CARTO</a>' }).addTo(map);
+      L.marker(GENZANO, { keyboard:true, icon: L.divIcon({ className:'dimo-stella',
+        html:'<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M13 1l3.4 7.6L24 9.3l-5.8 5 1.8 7.9L13 18.4 5.9 22.2l1.8-7.9L2 9.3l7.6-.7z" fill="#ffd166" stroke="#0b1622" stroke-width="1.4"/></svg>',
+        iconSize:[26,26], iconAnchor:[13,13] }) }).bindPopup('<strong>Genzano di Roma</strong>').addTo(map);
+      puntiLayer = L.layerGroup().addTo(map);
+    }
+
+    function pad(n){ return ('0'+n).slice(-2); }
+    function reftimeQ(){
+      var end = new Date(); end.setUTCMinutes(59,0,0);
+      var start = new Date(end.getTime() - 3*3600*1000); start.setUTCMinutes(0,0,0);
+      function f(d){ return d.getUTCFullYear()+'-'+pad(d.getUTCMonth()+1)+'-'+pad(d.getUTCDate())+'%20'+pad(d.getUTCHours())+':'+pad(d.getUTCMinutes()); }
+      return 'reftime:%20%3E='+f(start)+',%3C='+f(end);
+    }
+    function apiUrl(cfg){
+      var q = reftimeQ()+';product:'+cfg.prod+';license:CCBY_COMPLIANT;timerange:'+cfg.tr+';level:'+cfg.lv;
+      return API+'?q='+q+'&reliabilityCheck=true&last=true&ts='+Date.now();
+    }
+    function bucketOf(v, cfg){ for(var i=0;i<cfg.buckets.length;i++){ if(v<=cfg.buckets[i].max) return cfg.buckets[i]; } return cfg.buckets[cfg.buckets.length-1]; }
+    function renderLegenda(cfg){
+      var h = '<b>'+cfg.label+' ('+cfg.unit+')</b>';
+      for(var i=0;i<cfg.buckets.length;i++){ h += '<div class="row"><span class="sw" style="background:'+cfg.buckets[i].c+'"></span> '+cfg.buckets[i].l+'</div>'; }
+      legBox.innerHTML = h;
+    }
+    function nomeStazione(stat){
+      if(stat && stat.details){ for(var i=0;i<stat.details.length;i++){ if(stat.details[i].var==='B01019') return stat.details[i].val; } }
+      return stat && stat.net ? stat.net : 'Stazione';
+    }
+
+    function carica(){
+      ensureMap();
+      var cfg = VARS[current];
+      stato.textContent = 'Caricamento ' + cfg.label.toLowerCase() + '…';
+      renderLegenda(cfg);
+      fetch(apiUrl(cfg), { mode:'cors' }).then(function(r){ return r.json(); }).then(function(j){
+        puntiLayer.clearLayers();
+        var data = (j && j.data) || [], n = 0, lastRef = '';
+        for(var i=0;i<data.length;i++){
+          var it = data[i], st = it.stat;
+          if(!st || typeof st.lat!=='number' || typeof st.lon!=='number') continue;
+          if(!it.prod || !it.prod[0] || !it.prod[0].val || !it.prod[0].val[0]) continue;
+          var raw = it.prod[0].val[0].val; if(typeof raw!=='number') continue;
+          var val = cfg.conv(raw); var b = bucketOf(val, cfg);
+          if(it.prod[0].val[0].ref > lastRef) lastRef = it.prod[0].val[0].ref;
+          var m = L.circleMarker([st.lat, st.lon], { radius:4, color:'#333', weight:.4, fillColor:b.c, fillOpacity:.9 });
+          (function(nome, valore, ref){
+            m.bindPopup(function(){ return '<strong>'+nome+'</strong><br>'+cfg.label+': <strong>'+valore.toFixed(cfg.dec)+' '+cfg.unit+'</strong>'+(ref?'<br><span style="color:#666">ore '+ref.slice(11,16)+'</span>':''); });
+          })(nomeStazione(st), val, it.prod[0].val[0].ref);
+          m.addTo(puntiLayer); n++;
+        }
+        var ora = lastRef ? (' · ultimo dato ore '+lastRef.slice(11,16)) : '';
+        stato.textContent = n + ' stazioni' + ora;
+        loaded = true;
+      }).catch(function(){
+        stato.textContent = 'Dati non disponibili in questo momento. Riprova tra poco.';
+      });
+    }
+
+    document.querySelectorAll('.dimo-filter[data-var]').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        document.querySelectorAll('.dimo-filter[data-var]').forEach(function(b){ b.setAttribute('aria-pressed','false'); });
+        btn.setAttribute('aria-pressed','true');
+        current = btn.dataset.var;
+        carica();
+      });
+    });
+    document.getElementById('dimo-refresh').addEventListener('click', carica);
+
+    window.addEventListener('resize', function(){ if(map) map.invalidateSize(); });
+    // Caricamento pigro: la mappa si crea (con dimensione reale) e i dati si
+    // scaricano solo alla prima apertura. requestAnimationFrame garantisce che
+    // il layout sia calcolato prima di proiettare i punti sul canvas.
+    window.addEventListener('cruscotto:obs-im', function(){
+      ensureMap();
+      requestAnimationFrame(function(){
+        map.invalidateSize(); map.setView([42.0, 12.5], 6);
+        if(!loaded) carica();
+      });
+    }, { once: true });
+    // Auto-aggiornamento orario (le osservazioni si aggiornano ogni ora).
+    setInterval(function(){ if(loaded) carica(); }, 1800000);
+  })();
+  </script>
+</div>
