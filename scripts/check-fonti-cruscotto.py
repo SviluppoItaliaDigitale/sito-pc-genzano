@@ -121,6 +121,7 @@ SORGENTI = [
     ("Qualità aria regionale — ARPA Lazio", "Aria e pollini", chk_arpa),
     ("Previsioni — ItaliaMeteo (ICON-2I)", "Previsioni ItaliaMeteo", lambda: chk_wms_getmap("meteohub:t2m-t2m", "https://maps.mistralportal.it/wms")),
     ("Mare onde — ItaliaMeteo (WW3)", "Mare ItaliaMeteo", lambda: chk_wms_getmap("meteohub:ww3_hs-hs", "https://maps.mistralportal.it/wms")),
+    ("Radar SRI — ItaliaMeteo", "Radar ItaliaMeteo", lambda: chk_wms_getmap("meteohub:radar-sri", "https://maps.mistralportal.it/wms")),
 ]
 
 
