@@ -1,0 +1,140 @@
+{{/* Shortcode dashboard-italiameteo-mare — previsioni del mare ItaliaMeteo
+     (modello d'onda WW3 MEDITA) come layer Leaflet WMS dal servizio pubblico
+     maps.mistralportal.it. Fonte: Agenzia nazionale per la meteorologia e
+     climatologia «ItaliaMeteo» (CC BY 4.0). Privacy-first: solo immagini WMS,
+     nessun iframe, nessun cookie di terzi. Layer verificati il 25/05/2026. */}}
+{{ $leafletCSS := "vendor/leaflet/leaflet.css" | relURL }}
+{{ $leafletJS  := "vendor/leaflet/leaflet.js"  | relURL }}
+
+<div class="dimm-wrapper" aria-labelledby="dimm-titolo">
+  <h2 id="dimm-titolo" class="h3 mt-4 mb-3" style="color:#003366">
+    <i class="bi bi-water me-2" aria-hidden="true"></i>Previsioni del mare ItaliaMeteo (onde)
+  </h2>
+  <p class="mb-2">Altezza e periodo delle onde previsti dal modello <strong>WW3 MEDITA</strong> dell'<strong>Agenzia ItaliaMeteo</strong> per i mari italiani. Utile per la costa laziale. Sono dati <strong>indicativi</strong>: per la sicurezza in mare valgono gli avvisi della <a href="https://www.guardiacostiera.gov.it/" target="_blank" rel="noopener noreferrer">Guardia Costiera</a> (emergenze in mare: <strong>1530</strong>).</p>
+
+  <link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">
+  <style>
+  .dimm-toolbar{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-bottom:.6rem}
+  .dimm-filter{display:inline-flex;align-items:center;gap:.4rem;border:2px solid #003366;background:#fff;color:#003366;padding:.4rem .85rem;border-radius:999px;font-size:.92rem;cursor:pointer;transition:all .15s}
+  .dimm-filter[aria-pressed="true"]{background:#003366;color:#fff}
+  .dimm-filter:focus-visible{outline:3px solid #ffbe2e;outline-offset:2px}
+  .dimm-stato{font-size:.9rem;color:#495057;margin-left:auto}
+  @media (max-width:575px){.dimm-stato{margin-left:0;width:100%}}
+  .dimm-sep{flex-basis:100%;height:0}
+  #dimm-mappa{height:560px;width:100%;border-radius:8px;border:2px solid #003366;background:#eaf1f7}
+  @media (max-width:575px){#dimm-mappa{height:460px}}
+  .dimm-mappa-box{position:relative}
+  .dimm-overlay{position:absolute;top:10px;left:12px;z-index:600;background:rgba(0,51,102,.85);color:#fff;padding:.3rem .6rem;border-radius:6px;font-size:.85rem;font-weight:700;pointer-events:none;max-width:70%}
+  .dimm-legenda{position:absolute;top:10px;right:12px;z-index:600;background:rgba(255,255,255,.92);border:1px solid #adb5bd;border-radius:6px;padding:.3rem;max-height:72%;display:flex}
+  .dimm-legenda img{max-height:100%;width:auto;height:auto}
+  @media (max-width:575px){.dimm-legenda{max-height:55%;top:auto;bottom:10px}}
+  </style>
+
+  <div class="dimm-toolbar" role="group" aria-label="Grandezza del mare e periodo della previsione">
+    <button type="button" class="dimm-filter" data-layer="meteohub:ww3_hs-hs" aria-pressed="true">Altezza onde</button>
+    <button type="button" class="dimm-filter" data-layer="meteohub:ww3_t01-t01" aria-pressed="false">Periodo onde</button>
+    <span class="dimm-sep"></span>
+    <button type="button" class="dimm-filter dimm-time" data-off="" aria-pressed="true">Adesso</button>
+    <button type="button" class="dimm-filter dimm-time" data-off="12" aria-pressed="false">+12 h</button>
+    <button type="button" class="dimm-filter dimm-time" data-off="24" aria-pressed="false">+24 h</button>
+    <button type="button" class="dimm-filter dimm-time" data-off="48" aria-pressed="false">+48 h</button>
+    <button type="button" class="dimm-filter" id="dimm-base" aria-pressed="false"><i class="bi bi-moon-stars" aria-hidden="true"></i> Sfondo scuro</button>
+    <span class="dimm-stato" id="dimm-stato" aria-live="polite"></span>
+  </div>
+
+  <div class="dimm-mappa-box">
+    <div id="dimm-mappa" role="application" aria-label="Cartina di previsione delle onde ItaliaMeteo, centrata sui mari italiani."></div>
+    <div class="dimm-overlay" id="dimm-prodotto-lbl" aria-hidden="true">Altezza onde</div>
+    <div class="dimm-legenda" aria-hidden="true"><img id="dimm-legenda-img" src="" alt=""></div>
+  </div>
+
+  <noscript>
+    <div class="alert alert-warning mt-3" role="note">
+      <strong>JavaScript disattivato:</strong> apri le previsioni del mare su
+      <a href="https://www.agenziaitaliameteo.it/mare/previsioni-mare/ww3-medita/" target="_blank" rel="noopener noreferrer">agenziaitaliameteo.it</a>.
+    </div>
+  </noscript>
+
+  <p class="small text-muted mt-2 mb-0"><i class="bi bi-info-circle" aria-hidden="true"></i> Modello d'onda <strong>WW3 MEDITA</strong>, aggiornato dall'Agenzia ItaliaMeteo. Mappa completa su <a href="https://meteohub.agenziaitaliameteo.it/app/maps/marine" target="_blank" rel="noopener noreferrer">MeteoHub</a>. Fonte: <strong>Agenzia nazionale per la meteorologia e climatologia «ItaliaMeteo»</strong>, licenza <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> — base <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap</a> / <a href="https://carto.com/attributions" target="_blank" rel="noopener noreferrer">© CARTO</a>. Emergenze in mare: <a href="tel:1530">1530</a>.</p>
+
+  <script src="{{ $leafletJS }}" crossorigin=""></script>
+  <script>
+  (function(){
+    if (typeof L === 'undefined') return;
+    var WMS = 'https://maps.mistralportal.it/wms';
+    var layer = 'meteohub:ww3_hs-hs', timeOff = '', baseDark = false;
+    var stato = document.getElementById('dimm-stato');
+    var prodLbl = document.getElementById('dimm-prodotto-lbl');
+    var legImg = document.getElementById('dimm-legenda-img');
+
+    function isoHour(off){
+      if (off === '' || off === null) return '';
+      var d = new Date(); d.setUTCMinutes(0,0,0);
+      d.setUTCHours(d.getUTCHours() + parseInt(off,10));
+      return d.toISOString();
+    }
+    function legendUrl(l){
+      return WMS + '?service=WMS&request=GetLegendGraphic&format=image/png&version=1.1.1&layer=' + encodeURIComponent(l);
+    }
+
+    var map = L.map('dimm-mappa', { center: [41.5, 12.8], zoom: 6, scrollWheelZoom: false });
+    map.on('focus', function(){ map.scrollWheelZoom.enable(); });
+    map.on('blur',  function(){ map.scrollWheelZoom.disable(); });
+
+    var baseChiara = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      subdomains: 'abcd', maxZoom: 12, attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/attributions">CARTO</a>' });
+    var baseScura = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+      subdomains: 'abcd', maxZoom: 12, attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/attributions">CARTO</a>' });
+    baseChiara.addTo(map);
+
+    var wms = L.tileLayer.wms(WMS, {
+      layers: layer, format: 'image/png', transparent: true, version: '1.1.1',
+      opacity: 0.82, maxZoom: 12,
+      attribution: 'Fonte: Agenzia ItaliaMeteo (CC BY 4.0)'
+    });
+    wms.addTo(map);
+
+    function applica(){
+      var p = { layers: layer };
+      var t = isoHour(timeOff);
+      p.time = t ? t : null;
+      wms.setParams(p);
+      legImg.src = legendUrl(layer);
+      stato.textContent = timeOff === '' ? 'previsione corrente' : 'previsione tra ' + timeOff + ' ore';
+    }
+    legImg.src = legendUrl(layer);
+    stato.textContent = 'previsione corrente';
+
+    document.querySelectorAll('.dimm-filter[data-layer]').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        document.querySelectorAll('.dimm-filter[data-layer]').forEach(function(b){ b.setAttribute('aria-pressed','false'); });
+        btn.setAttribute('aria-pressed','true');
+        layer = btn.dataset.layer;
+        prodLbl.textContent = btn.textContent.trim();
+        applica();
+      });
+    });
+    document.querySelectorAll('.dimm-filter.dimm-time').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        document.querySelectorAll('.dimm-filter.dimm-time').forEach(function(b){ b.setAttribute('aria-pressed','false'); });
+        btn.setAttribute('aria-pressed','true');
+        timeOff = btn.dataset.off;
+        applica();
+      });
+    });
+    var baseBtn = document.getElementById('dimm-base');
+    baseBtn.addEventListener('click', function(){
+      baseDark = !baseDark;
+      if (baseDark){ map.removeLayer(baseChiara); baseScura.addTo(map); baseScura.bringToBack();
+        baseBtn.innerHTML = '<i class="bi bi-sun" aria-hidden="true"></i> Sfondo chiaro'; }
+      else { map.removeLayer(baseScura); baseChiara.addTo(map); baseChiara.bringToBack();
+        baseBtn.innerHTML = '<i class="bi bi-moon-stars" aria-hidden="true"></i> Sfondo scuro'; }
+      baseBtn.setAttribute('aria-pressed', baseDark ? 'true' : 'false');
+      wms.bringToFront();
+    });
+
+    window.addEventListener('resize', function(){ map.invalidateSize(); });
+    window.addEventListener('cruscotto:mare-im', function(){ map.invalidateSize(); map.setView([41.5, 12.8], 6); }, { once: true });
+  })();
+  </script>
+</div>

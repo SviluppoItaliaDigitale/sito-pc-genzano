@@ -2,7 +2,7 @@
 """Smoke-check delle fonti dati esterne del cruscotto (/cruscotto/).
 
 Le schede del cruscotto leggono dati live da servizi di terzi (INGV, Open-Meteo,
-DPC, EUMETSAT, NASA, EFFIS, ARPA Lazio). Se uno di questi cambia endpoint o cade,
+DPC, EUMETSAT, NASA, EFFIS, ARPA Lazio, ItaliaMeteo/MeteoHub). Se uno di questi cambia endpoint o cade,
 la scheda diventa vuota SENZA errore visibile. Questo script verifica ogni fonte
 e stampa un report Markdown. Exit code = numero di fonti in errore (0 = tutto ok).
 
@@ -119,6 +119,8 @@ SORGENTI = [
     ("Satellite suolo — NASA GIBS", "Satellite", chk_gibs),
     ("Incendi — EFFIS/Copernicus", "Incendi", lambda: chk_wms_getmap("viirs.hs", "https://maps.effis.emergency.copernicus.eu/effis")),
     ("Qualità aria regionale — ARPA Lazio", "Aria e pollini", chk_arpa),
+    ("Previsioni — ItaliaMeteo (ICON-2I)", "Previsioni ItaliaMeteo", lambda: chk_wms_getmap("meteohub:t2m-t2m", "https://maps.mistralportal.it/wms")),
+    ("Mare onde — ItaliaMeteo (WW3)", "Mare ItaliaMeteo", lambda: chk_wms_getmap("meteohub:ww3_hs-hs", "https://maps.mistralportal.it/wms")),
 ]
 
 
