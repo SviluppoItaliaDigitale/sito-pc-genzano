@@ -13,11 +13,18 @@ name: "🌤️ Cartina meteo Lazio + riquadro Genzano"
 
 on:
   schedule:
-    # OGNI ORA, al minuto 08 (fuori dai quarti d'ora canonici — vedi memoria
-    # feedback_github_cron_explicit_better). Girando ogni ora copre tutte le 24
-    # ore (mezzanotte inclusa) sia in ora legale sia solare: il fuso non conta.
-    # Non è un pattern "*/N": "*" nel campo ore = tutte le ore esplicitamente.
+    # FAIL-SAFE minimale: cron nativo GitHub al minuto 08 (fuori dai quarti
+    # d'ora canonici — vedi memoria feedback_github_cron_explicit_better).
+    # NON è il trigger primario: il cron schedulato di GitHub ritarda e SCARTA
+    # i run nelle ore di carico, lasciando la cartina ferma anche 5-7 ore
+    # (incidente 25/05/2026, ferma alle 06:48). Il trigger PRIMARIO è ora la
+    # rigenerazione oraria avviata da check-allerta.yml (che gira ogni 5 min
+    # puntuale via cron-job.org e lancia questo workflow nei primi 5 min
+    # dell'ora). Questo cron interviene solo se quella catena si interrompe.
     - cron: "8 * * * *"
+  # Trigger PRIMARIO: workflow_dispatch avviato da check-allerta.yml una volta
+  # all'ora (vedi step "🌤️ Rigenera cartina meteo Lazio"). Anche cron-job.org
+  # potrebbe pingarlo direttamente, se in futuro si vuole disaccoppiarlo.
   workflow_dispatch:
 
 permissions:
