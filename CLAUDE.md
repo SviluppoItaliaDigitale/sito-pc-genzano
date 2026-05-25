@@ -115,6 +115,16 @@ Articoli operativi: includi un **disclaimer normativo** con link alla [Circolare
 
 ---
 
+## Presentazione del sito (deck) — rigenerare a ogni cambiamento di struttura o dati
+
+🟢 Esiste un **deck istituzionale di presentazione del portale**: `static/manuali/presentazione-struttura-sito.pdf` (+ `.pptx` editabile), generato da `scripts/genera-presentazione.py`, linkato dall'**Area Download** (`content/area-download/_index.md` § "Presentazione del sito").
+
+🔴 **Regola precisa:** ogni volta che una **sezione/area del sito viene aggiunta, modificata o eliminata**, o quando cambiano **dati, contatti, fonti o standard** mostrati nel deck (es. menu, schede del cruscotto, recapiti, affiliazioni come FEPIVOL), **rigenera il deck e ripubblicalo nello stesso commit** della modifica. Il deck non deve mai restare disallineato dal sito.
+
+**Come:** `python scripts/genera-presentazione.py` (serve un venv con `python-pptx pillow fonttools brotli` + **LibreOffice** per l'export PDF). Lo script ricava font-icone (Bootstrap Icons self-hostate), logo e contatti **dal repo**, produce PPTX+PDF in `static/manuali/`. Se aggiungi una sezione al sito, aggiungi la slide corrispondente nel generatore. Vincoli del deck: **nessun riferimento a strumenti automatici/IA**, logo + contatti reali, rischi mostrati come **copertura** (non dettaglio del singolo rischio), slide di autorevolezza con fonti/standard, agenda a pulsanti + navigazione (frecce + "torna all'agenda").
+
+---
+
 ## Auto-integrazione approfondimenti (video + link) — pre-autorizzata
 
 🟢 Istruzione permanente (20/05/2026): integra da sola gli **approfondimenti pertinenti** (video + link a siti della nostra lista) in articoli e pagine, senza OK caso per caso. Copre l'intero flusso fino a live.

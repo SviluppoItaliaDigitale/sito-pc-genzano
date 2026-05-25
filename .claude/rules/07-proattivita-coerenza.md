@@ -66,6 +66,7 @@ In modo automatico, dopo ogni:
 - **Bulk replace via sed o grep -l + xargs**: dopo l'esecuzione, fai sempre una passata di controllo per assicurarti che il pattern sia completamente esaurito.
 - **Rinomina di file, cartelle, slug**: verifica i link entranti e uscenti.
 - **Cambio di convenzione** (badge, naming, struttura frontmatter, schema dati): allinea ogni occorrenza esistente.
+- **Sezione/area del sito aggiunta, modificata o eliminata, o aggiornamento di dati/contatti/fonti**: rigenera e ripubblica il **deck di presentazione** (`scripts/genera-presentazione.py` → `static/manuali/presentazione-struttura-sito.{pdf,pptx}`, linkato dall'Area Download) nello stesso commit. Vedi `CLAUDE.md § "Presentazione del sito (deck)"`.
 
 ## Come applicare la regola
 
