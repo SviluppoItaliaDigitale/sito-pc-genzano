@@ -14,6 +14,7 @@ import sys
 import datetime
 import urllib.request
 import urllib.error
+import urllib.parse
 
 UA = "PCGenzano-cruscotto-healthcheck/1.0 (+https://www.protezionecivilegenzano.it)"
 TIMEOUT = 30
@@ -93,6 +94,24 @@ def chk_gibs():
     return ok, det
 
 
+def chk_obs_italiameteo():
+    """API osservazioni MeteoHub: stazioni al suolo (temperatura, licenza CC BY)."""
+    now = _utcnow()
+    end = now.replace(minute=59, second=0, microsecond=0)
+    start = (now - datetime.timedelta(hours=3)).replace(minute=0, second=0, microsecond=0)
+    fmt = "%Y-%m-%d %H:%M"
+    q = ("reftime: >=" + start.strftime(fmt) + ",<=" + end.strftime(fmt) +
+         ";product:B12101;license:CCBY_COMPLIANT;timerange:254,0,0;level:103,2000,0,0")
+    url = ("https://meteohub.agenziaitaliameteo.it/api/observations?q=" +
+           urllib.parse.quote(q, safe=":,;<>=") + "&reliabilityCheck=true&last=true")
+    ok, det, _, j = _get(url, expect_json=True)
+    if ok and not (isinstance(j, dict) and j.get("data")):
+        return False, "risposta senza stazioni nel blocco «data»"
+    if ok and isinstance(j, dict):
+        det += f" · {len(j.get('data', []))} stazioni"
+    return ok, det
+
+
 def chk_arpa():
     url = "https://qa.arpalazio.net/img/qa/forecast/LAZIO/plots/mean_pm10_0.gif"
     ok, det, lastmod, _ = _get(url, expect_image=True)
@@ -122,6 +141,7 @@ SORGENTI = [
     ("Previsioni — ItaliaMeteo (ICON-2I)", "Previsioni ItaliaMeteo", lambda: chk_wms_getmap("meteohub:t2m-t2m", "https://maps.mistralportal.it/wms")),
     ("Mare onde — ItaliaMeteo (WW3)", "Mare ItaliaMeteo", lambda: chk_wms_getmap("meteohub:ww3_hs-hs", "https://maps.mistralportal.it/wms")),
     ("Radar SRI — ItaliaMeteo", "Radar ItaliaMeteo", lambda: chk_wms_getmap("meteohub:radar-sri", "https://maps.mistralportal.it/wms")),
+    ("Osservazioni stazioni — ItaliaMeteo", "Osservazioni ItaliaMeteo", chk_obs_italiameteo),
 ]
 
 
