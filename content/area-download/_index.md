@@ -48,6 +48,14 @@ In questa sezione puoi consultare e scaricare documenti relativi all'attività d
 | [Regolamento del Gruppo di P.C. Genzano](https://www.protezionecivilegenzano.it/area-download/normativa/Regolamento_Gruppo_Comunale_PC_Genzano.pdf) | PDF · 1,0 MB |
 | [Domanda di ammissione al Gruppo Comunale](/manuali/moduli/domanda-ammissione-volontari.pdf) | PDF · 298 KB |
 
+## Presentazione del sito
+
+| Documento | Formato |
+|---|---|
+| [Il sito istituzionale: struttura e contenuti (presentazione)](/manuali/presentazione-struttura-sito.pdf) | PDF · 1,4 MB |
+
+<p class="small text-muted mb-4">Slide di presentazione della struttura, dei contenuti, dell'accessibilità e delle fonti del portale del Gruppo Comunale, pensate per cittadini, scuole ed enti. Aggiornata a ogni evoluzione del sito.</p>
+
 ## Normativa Regionale (Lazio)
 
 <div class="card border-primary mb-4">

@@ -341,6 +341,17 @@
   definizione: "Frattura nella crosta terrestre lungo cui si muovono le rocce. Quando il movimento è brusco si genera un terremoto. L'Italia centrale ne è ricca."
   link: "/glossario/#faglia"
 
+- id: fepivol
+  termine: "FE.PI.VOL."
+  varianti:
+    - "FEPIVOL"
+    - "FE.PI.VOL."
+    - "Fepivol"
+    - "Coordinamento FEPIVOL"
+    - "Coordinamento FE.PI.VOL."
+  definizione: "Federazione Pronto Intervento Volontariato ODV: coordinamento regionale del volontariato di Protezione Civile del Lazio a cui aderisce il Gruppo Comunale di Genzano di Roma. Organizza le colonne mobili regionali nelle grandi emergenze."
+  link: "/glossario/#fepivol"
+
 - id: where-are-u
   termine: "Where Are U"
   varianti:

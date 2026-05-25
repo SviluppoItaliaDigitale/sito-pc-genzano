@@ -175,6 +175,9 @@ Frattura nella crosta terrestre lungo cui possono avvenire movimenti e terremoti
 ### FEMA
 Federal Emergency Management Agency. È l'agenzia federale statunitense per la gestione delle emergenze.
 
+### FE.PI.VOL. {#fepivol}
+**Federazione Pronto Intervento Volontariato ODV**. Coordinamento regionale del volontariato di Protezione Civile del Lazio a cui aderisce il Gruppo Comunale di Genzano di Roma. Coordina le colonne mobili regionali nelle grandi emergenze.
+
 ## H
 
 ### HACCP {#haccp}
