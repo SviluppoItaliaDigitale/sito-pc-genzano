@@ -227,6 +227,30 @@ body {
   color: var(--scheda-blu);
 }
 
+/* ── Banda affiliazioni: Quality Label ESC (cod. E10435833 obbligatorio per
+   Reg. UE 2021/888) + Coordinamento FE.PI.VOL. + SNPC Volontariato.
+   Si applica via ::after a tutte le .scheda-page — zero modifiche all'HTML
+   delle ~150 schede esistenti. Visibile sia a schermo sia in stampa. ─ */
+.scheda-page::after {
+  content: "";
+  display: block;
+  height: 14mm;
+  background: url("/images/footer-print-affiliazioni.png") no-repeat center;
+  background-size: contain;
+  margin-top: 3mm;
+  padding-top: 2mm;
+  border-top: 0.3mm solid #ddd;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+@media print {
+  .scheda-page::after {
+    height: 13mm;
+    margin-top: 2mm;
+    page-break-inside: avoid;
+  }
+}
+
 /* Spazio per disegno libero del bambino */
 .scheda-box-disegno {
   border: 2px dashed var(--scheda-bordo);
