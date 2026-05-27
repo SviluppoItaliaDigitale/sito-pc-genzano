@@ -159,6 +159,30 @@ html, body {
   line-height: 1.4;
 }
 
+/* ── Banda affiliazioni: Quality Label ESC (cod. E10435833 obbligatorio per
+   Reg. UE 2021/888) + SNPC Volontariato. Si applica a tutte le schede A4
+   tramite ::after sul .scheda — zero modifiche all'HTML delle schede esistenti.
+   In stampa la banda compare a piè pagina; a schermo è nascosta per non
+   sovraccaricare il layout di consultazione. ─ */
+.scheda::after {
+  content: "Quality Label European Solidarity Corps — Codice E10435833 · Servizio Nazionale Protezione Civile — Volontariato";
+  display: none;
+}
+@media print {
+  .scheda::after {
+    content: "";
+    display: block;
+    height: 14mm;
+    background: url("../../images/footer-print-affiliazioni.png") no-repeat center;
+    background-size: contain;
+    margin-top: 3mm;
+    padding-top: 2mm;
+    border-top: 0.3mm solid #ddd;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
 /* ── Componenti riusabili ── */
 .box-prompt {
   border: 1.5px dashed var(--pc-blue);

@@ -115,6 +115,35 @@ Articoli operativi: includi un **disclaimer normativo** con link alla [Circolare
 
 ---
 
+## Affiliazioni e riconoscimenti europei — Quality Label ESC + codice obbligatorio
+
+🔴 Il Gruppo è organizzazione accreditata dal **Corpo europeo di solidarietà** (European Solidarity Corps, ESC) della Commissione europea. **Vincolo cogente** ai sensi del **Regolamento (UE) 2021/888**: il logo Quality Label **deve essere mostrato sempre accompagnato dal codice di accreditamento dell'organizzazione**. Mai logo nudo.
+
+- **Codice del Gruppo:** `E10435833` (sempre accanto al logo, in tutte le grafiche e i materiali di comunicazione).
+- **Logo ufficiale UE:** `static/images/quality-label-esc.png` (PNG 400×400). Versione hi-res per stampa/deck in `static/images/logo-esc-quality-label-it.png` (4016×4016). Pacchetto ufficiale UE in `static/manuali/loghi-esc-italiano-pacchetto-ufficiale.zip` (PDF vettoriale + PNG).
+- **Loghi affiliazione del Gruppo** = **2**, non 3: Quality Label ESC (+codice) e **SNPC Volontariato** (`static/images/logo-snpc-volontariato.png`). Il logo PC Genzano è la firma istituzionale del Gruppo (banner, header, schede): **non si conta tra le affiliazioni** per evitare duplicazione.
+
+**Dove sono già esposti (non duplicare):**
+
+| Superficie | Implementazione |
+|---|---|
+| Footer site-wide Hugo | `themes/flavour-pcgenzano/layouts/partials/footer.html` (blocco `.esc-quality-label`) |
+| Footer pagine statiche | `static/app-shared/site-chrome.js` (stesso blocco iniettato JS) |
+| Pagina `/chi-siamo/` | Sezione "Affiliazioni e riconoscimenti europei" con descrizione + codice + Reg. UE 2021/888 |
+| Carosello social Instagram | Slide finale "Affiliazioni" via `crea_slide_affiliazioni()` in `scripts/genera-immagini-social.py` (E10435833 in colore accento) |
+| Schede stampabili A4 | Banda piè pagina in stampa via `.scheda::after` in `static/formazione/kit-calamita-shared/print.css` (immagine `static/images/footer-print-affiliazioni.png`) |
+| Deck di presentazione | Slide "Affiliazioni e riconoscimenti europei" in `scripts/genera-presentazione.py` |
+
+**Cosa NON serve fare:**
+
+- **Mai aggiungere i 2 loghi al banner cover degli articoli** (fascia blu col titolo). Il vincolo UE è già soddisfatto dal footer site-wide; aggiungerli al banner sovraffolla il titolo e rompe l'identità visiva.
+- **Mai batch retroattivo** sulle ~577 immagini esistenti per aggiungere i loghi. La ricompressione WebP degrada la qualità senza valore aggiunto (i loghi sono già nel footer di ogni pagina che le mostra).
+- **Mai modificare i pittogrammi ISO 7010 / ARASAAC** per aggiungere loghi: violerebbe le licenze d'uso terze.
+
+**Cosa fare in nuove grafiche/slide future:** se la grafica include un blocco "affiliazioni / riconoscimenti", usare **sempre** i 2 loghi insieme + codice `E10435833` ben leggibile accanto al Quality Label. Mai logo ESC senza codice. Mai aggiungere PC Genzano tra gli "affiliati" (è la firma).
+
+---
+
 ## Presentazione del sito (deck) — rigenerare a ogni cambiamento di struttura o dati
 
 🟢 Esiste un **deck istituzionale di presentazione del portale**: `static/manuali/presentazione-struttura-sito.pdf` (+ `.pptx` editabile), generato da `scripts/genera-presentazione.py`, linkato dall'**Area Download** (`content/area-download/_index.md` § "Presentazione del sito").

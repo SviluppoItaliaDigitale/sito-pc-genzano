@@ -52,6 +52,41 @@ dataUltimaRevisione: "2026-05-06"
 </div>
 </div>
 
+## Affiliazioni e riconoscimenti europei
+
+Il Gruppo aderisce a sistemi nazionali ed europei di volontariato e protezione civile, sottoposti a verifica e accreditamento. Sono visibili nel footer di ogni pagina del sito.
+
+<div class="row mb-5">
+
+<div class="col-md-6 mb-3">
+<div class="card h-100 shadow-sm border-start border-primary border-4">
+<div class="card-body d-flex gap-3 align-items-start">
+<img src="/images/quality-label-esc.png" alt="Logo Quality Label European Solidarity Corps" width="96" height="96" style="flex-shrink:0;">
+<div>
+<h3 class="h6"><i class="bi bi-stars text-primary me-2" aria-hidden="true"></i> Quality Label — European Solidarity Corps</h3>
+<p class="small mb-2">Il Gruppo è organizzazione accreditata dal <a href="https://youth.europa.eu/solidarity/organisations/quality-label_it" target="_blank" rel="noopener noreferrer">Corpo europeo di solidarietà</a> (European Solidarity Corps, ESC) della Commissione europea. Il Quality Label certifica che l'organizzazione rispetta i principi e i requisiti di qualità del programma per ospitare attività di volontariato europeo.</p>
+<p class="small mb-0"><strong>Codice di accreditamento:</strong> <code>E10435833</code><br>
+<strong>Riferimento normativo:</strong> Regolamento (UE) 2021/888 del Parlamento europeo e del Consiglio del 20 maggio 2021.</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-md-6 mb-3">
+<div class="card h-100 shadow-sm border-start border-4" style="border-color:var(--pc-secondary)!important;">
+<div class="card-body d-flex gap-3 align-items-start">
+<img src="/images/logo-snpc-volontariato.png" alt="Logo Servizio Nazionale Protezione Civile — Volontariato" width="84" height="98" style="flex-shrink:0;">
+<div>
+<h3 class="h6"><i class="bi bi-shield-fill-check text-primary me-2" aria-hidden="true"></i> Servizio Nazionale di Protezione Civile</h3>
+<p class="small mb-2">Il Gruppo è organizzazione di volontariato di protezione civile ai sensi del <strong>D.Lgs. 2 gennaio 2018, n. 1</strong> (Codice della Protezione Civile), iscritta al Registro Regionale del Volontariato di Protezione Civile della Regione Lazio.</p>
+<p class="small mb-0">Coordinata dal <strong>Dipartimento della Protezione Civile</strong> (Presidenza del Consiglio dei Ministri) attraverso l'Agenzia regionale e il Sindaco quale autorità locale di protezione civile.</p>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
 ## La nostra storia
 
 <div class="row mb-4">

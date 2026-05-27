@@ -268,6 +268,19 @@ I contenuti operativi delle fonti (struttura messaggi, hashtag, accessibilità, 
 
 ---
 
+### 13.9-bis — Slide finale "Affiliazioni" nel carosello Instagram
+
+Da maggio 2026 ogni carosello Instagram generato automaticamente (e ogni post singolo trasformato in carosello) **chiude con una slide "Affiliazioni e riconoscimenti"** che mostra:
+
+- **Logo Quality Label European Solidarity Corps + codice `E10435833`** (vincolo cogente Reg. UE 2021/888: logo + codice sempre insieme, mai disgiunti)
+- **Logo SNPC Volontariato** (Servizio Nazionale di Protezione Civile)
+
+Implementazione: funzione `crea_slide_affiliazioni()` in `scripts/genera-immagini-social.py`. Inserita come ultima slide nel piano del carosello (titolo → citazione → punti → foto → **affiliazioni**). Se il carosello raggiunge il limite Instagram di 10 slide, la slide affiliazioni rimpiazza l'ultima foto (priorità all'esposizione legale).
+
+**Loghi del Gruppo nei post = 2**, non 3: l'identità PC Genzano è già nella **barra brand top** di ogni slide (logo PC + "Protezione Civile / Gruppo Comunale Volontari — Genzano di Roma"). Aggiungerla anche tra le "affiliazioni" sarebbe duplicazione: la regola è 2 loghi affiliazione (ESC + SNPC) + 1 firma istituzionale (PC Genzano).
+
+**Vincolo cogente per future modifiche al generatore**: se modifichi `crea_slide_affiliazioni()`, il codice `E10435833` deve restare **ben leggibile** accanto al logo Quality Label (colore accento giallo `#ffbe2e` su sfondo blu istituzionale per il contrasto WCAG). Mai logo nudo, mai codice nudo.
+
 ### 13.10 — Pubblicazione assistita delle bozze (lo script che ti aiuta sui social)
 
 **A cosa serve.** Quando pubblichi un nuovo articolo sul sito, lo script `genera-social-bozze.yml` produce in automatico 4 bozze (X, Facebook, Instagram, Telegram) e le mette in `social-bozze/AAAA/MM/<slug>/`. Fin qui è automatico. Poi però devi pubblicare a mano sui 4 canali, e ogni volta fai gli stessi gesti: copia, incolla, carica le foto, premi "Pubblica". Quattro volte.
