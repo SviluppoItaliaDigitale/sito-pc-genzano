@@ -731,7 +731,18 @@ Bypassa il check di idempotenza. Da usare solo manualmente, mai dentro script au
 | Pacchetto ufficiale UE (ZIP con PDF vettoriale + PNG) | `static/manuali/loghi-esc-italiano-pacchetto-ufficiale.zip` | Riferimento, manipolazione futura |
 | SNPC Volontariato | `static/images/logo-snpc-volontariato.png` | Sempre abbinato a Quality Label come "affiliazioni del Gruppo" |
 
-**Regola dei "2 loghi affiliazione":** il Gruppo si presenta con **2 loghi affiliazione**, non 3. Quality Label ESC + SNPC Volontariato. Il **logo PC Genzano è la firma istituzionale del Gruppo** (banner, header, fascia blu): NON va contato come affiliazione (sarebbe duplicazione).
+**Regola dei "3 loghi affiliazione + 1 firma" — ESATTAMENTE 4 LOGHI TOTALI, MAI DOPPIONI:**
+
+Ogni grafica istituzionale del Gruppo (cover, slide social, scheda A4, locandina, deck) ha **esattamente 4 loghi**:
+
+1. **PC Genzano** = firma del Gruppo, in header/banner/intestazione
+2. **Quality Label ESC + codice E10435833** = affiliazione, in footer
+3. **Coordinamento FE.PI.VOL.** = affiliazione, in footer
+4. **SNPC Volontariato** = affiliazione, in footer
+
+**Vietato:** mai mescolare PC Genzano tra le affiliazioni (doppione), mai inserire un 5° logo (PC Lazio, Comune, VVF, INGV, ecc. — vivono nei contenuti testuali o nel chrome del sito, non nella grafica del Gruppo), mai logo Quality Label ESC senza codice E10435833 (Reg. UE 2021/888).
+
+Vale anche per grafiche generate con AI esterne (ChatGPT, Gemini, Canva, ecc.): includere sempre la regola nel prompt + fornire i 4 file ufficiali del repo. Specifiche complete in `.claude/rules/02-content-design-pa.md § "Composizione standard"`.
 
 **Dove sono già esposti** (non ri-implementare):
 - Footer site-wide (`themes/flavour-pcgenzano/layouts/partials/footer.html` + `static/app-shared/site-chrome.js`)

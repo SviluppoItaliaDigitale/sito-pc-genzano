@@ -163,7 +163,24 @@ Articoli operativi: includi un **disclaimer normativo** con link alla [Circolare
 - **Mai batch retroattivo** sulle ~577 immagini esistenti per aggiungere i loghi. La ricompressione WebP degrada la qualità senza valore aggiunto (i loghi sono già nel footer di ogni pagina che le mostra).
 - **Mai modificare i pittogrammi ISO 7010 / ARASAAC** per aggiungere loghi: violerebbe le licenze d'uso terze.
 
-**Cosa fare in nuove grafiche/slide future:** se la grafica include un blocco "affiliazioni / riconoscimenti", usare **sempre** i 2 loghi insieme + codice `E10435833` ben leggibile accanto al Quality Label. Mai logo ESC senza codice. Mai aggiungere PC Genzano tra gli "affiliati" (è la firma).
+**Cosa fare in nuove grafiche/slide future:** se la grafica include un blocco "affiliazioni / riconoscimenti", usare **sempre** i 3 loghi affiliazione insieme + codice `E10435833` ben leggibile accanto al Quality Label. Mai logo ESC senza codice. Mai aggiungere PC Genzano tra gli "affiliati" (è la firma).
+
+**🔴 Composizione standard di ogni nuova grafica istituzionale = ESATTAMENTE 4 LOGHI, MAI DOPPIONI:**
+
+1. **Firma PC Genzano** (logo del Gruppo) — nell'**header/banner/intestazione** della grafica (cover articoli, header schede A4, barra brand top slide social, prima pagina deck). Identità visiva del Gruppo.
+2. **Quality Label ESC + codice E10435833** — nel **footer/blocco affiliazioni** della grafica. Mai logo nudo (vincolo cogente Reg. UE 2021/888).
+3. **Coordinamento FEPIVOL** — nel **footer/blocco affiliazioni** insieme agli altri 2.
+4. **SNPC Volontariato** — nel **footer/blocco affiliazioni** insieme agli altri 2.
+
+**Regole di composizione, vietato deviare:**
+
+- La firma (1) è sempre **separata** dalle affiliazioni (2-4): mai mescolare PC Genzano tra le card affiliazione (sarebbe doppione).
+- **Mai inserire lo stesso logo due volte** nella stessa grafica.
+- **Mai inserire un 5° logo** (PC Lazio, Comune, Croce Rossa, ANPAS, VVF, INGV, ecc.): quei loghi sono di enti coordinatori/operatori del Sistema PC e vanno citati nei contenuti testuali o nel footer site-wide del sito, MAI nella grafica istituzionale del Gruppo.
+
+**Vale anche per grafiche realizzate con AI esterne** (ChatGPT, Gemini, Midjourney, Canva, Adobe Express, DALL-E, ecc.): includere sempre nel prompt la regola "esattamente 4 loghi, mai doppioni, mai 5° logo, ESC sempre con codice E10435833" + fornire i 4 file dal repo. Specifiche complete + pattern brief da incollare alle AI esterne in `.claude/rules/02-content-design-pa.md § "Composizione standard"` (auto-incluso in `CONTESTO-AI.md` rigenerato).
+
+Le grafiche già aggiornate seguono questo schema: cover articoli, slide social, schede A4, deck, /chi-siamo/ § Affiliazioni. Footer site-wide del sito: blocco chrome del portale (non grafica isolata), ha 4 loghi con PC Lazio come ente territoriale al posto della firma PC Genzano (che è già nel banner top del sito, mai duplicato nel footer).
 
 ---
 
