@@ -23,6 +23,7 @@ Un'unica pagina per consultare i dati di rischio del territorio, da **fonti uffi
   <button type="button" class="cruscotto-tab" id="tab-allerta" data-panel="allerta" role="tab" aria-selected="false" aria-controls="panel-allerta" tabindex="-1"><i class="bi bi-exclamation-triangle" aria-hidden="true"></i> Allerta</button>
   <button type="button" class="cruscotto-tab" id="tab-incendi" data-panel="incendi" role="tab" aria-selected="false" aria-controls="panel-incendi" tabindex="-1"><i class="bi bi-fire" aria-hidden="true"></i> Incendi</button>
   <button type="button" class="cruscotto-tab" id="tab-aria" data-panel="aria" role="tab" aria-selected="false" aria-controls="panel-aria" tabindex="-1"><i class="bi bi-wind" aria-hidden="true"></i> Aria e pollini</button>
+  <button type="button" class="cruscotto-tab" id="tab-aria-cams" data-panel="aria-cams" role="tab" aria-selected="false" aria-controls="panel-aria-cams" tabindex="-1"><i class="bi bi-cloud-haze2" aria-hidden="true"></i> Aria Europa (CAMS)</button>
   <button type="button" class="cruscotto-tab" id="tab-mare" data-panel="mare" role="tab" aria-selected="false" aria-controls="panel-mare" tabindex="-1"><i class="bi bi-water" aria-hidden="true"></i> Mare</button>
   <button type="button" class="cruscotto-tab" id="tab-mare-im" data-panel="mare-im" role="tab" aria-selected="false" aria-controls="panel-mare-im" tabindex="-1"><i class="bi bi-tsunami" aria-hidden="true"></i> Mare ItaliaMeteo</button>
 </div>
@@ -96,6 +97,12 @@ Un'unica pagina per consultare i dati di rischio del territorio, da **fonti uffi
 <div class="cruscotto-panel" id="panel-aria" data-panel="aria" role="tabpanel" aria-labelledby="tab-aria" tabindex="0" hidden>
 
 {{< dashboard-aria >}}
+
+</div>
+
+<div class="cruscotto-panel" id="panel-aria-cams" data-panel="aria-cams" role="tabpanel" aria-labelledby="tab-aria-cams" tabindex="0" hidden>
+
+{{< dashboard-cams >}}
 
 </div>
 
