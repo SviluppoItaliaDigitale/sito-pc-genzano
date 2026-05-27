@@ -162,6 +162,29 @@ Se il diff contiene righe `+image:` / `-image:` (anche solo `image_alt:`) e l'ut
 
 **Why:** il 9 maggio 2026 ChatGPT-cloud durante la revisione AGID dell'articolo "Giornata Europa — Meccanismo UCPM" ha sostituito `image: ""` (cover tipografica da generare) con `image: "/images/2026-05-09-ercc-bruxelles.webp"` (foto reale Wikimedia ERCC). La foto era stata anche correttamente aggiunta inline come `{{< foto >}}`, ma il banner del sito è andato live con la foto reale invece della cover tipografica con il titolo. Identità visiva istituzionale rotta finché non si è corretto manualmente.
 
+## Nomi dei nostri mezzi, attrezzature e dotazioni — verifica dalla fonte canonica
+
+🔴 **Regola cogente** quando un articolo cita un **mezzo, un'attrezzatura o una dotazione in uso al Gruppo Comunale** (autocarro, autobotte, modulo AIB, fuoristrada, tenda sociale, generatore, radio, DPI, attrezzature manuali): **prima di scrivere il nome, verifica la denominazione tecnica ufficiale in `content/chi-siamo/_index.md` § "I nostri mezzi"** (sezione card con `<i class="bi bi-truck">`).
+
+**Why:** la scritta visibile sulla **livrea** di un mezzo è quasi sempre una **classificazione di sistema** del Servizio Nazionale o Regionale di Protezione Civile (es. *"Regione Lazio - Protezione Civile - Colonna Mobile - Volontariato"*, *"PROTEZIONE CIVILE - REGIONE LAZIO"*), **non** il modello tecnico del veicolo. Confondere i due livelli produce un articolo tecnicamente sbagliato anche se "letteralmente corretto" rispetto alla foto.
+
+**Incident 26 maggio 2026 — articolo visita scout AGESCI:** la foto del Gruppo davanti a un mezzo bianco con scritta *"Regione Lazio - Protezione Civile / Colonna Mobile - Volontariato"* è andata live citando *"l'autocarro Colonna Mobile - Volontariato della Regione Lazio in dotazione al Gruppo"*. Il modello reale è il **Mercedes Actros — autobotte antincendio da 14.000 litri**, come elencato in `content/chi-siamo/_index.md` riga 105. Fix in 3 punti (caption + corpo H2 + `social_punti`) applicato a posteriori, ma il primo deploy era live con nome mezzo sbagliato.
+
+**Procedura operativa pre-articolo:**
+
+1. Prima di nominare un mezzo o un'attrezzatura del Gruppo, fai:
+   ```bash
+   grep -in "<nome-presunto>\|autocarro\|autobotte\|modulo\|fuoristrada" content/chi-siamo/_index.md
+   ```
+2. Se il nome non compare, allarga la ricerca all'elenco tecnico:
+   ```bash
+   grep -iE "actros|atego|cabstar|vm90|nissan|iveco|mercedes|tenda" content/chi-siamo/_index.md
+   ```
+3. Nell'articolo usa il **modello tecnico** come identificazione primaria (es. *"Mercedes Actros"*, *"Iveco VM90"*, *"Nissan Cabstar"*), integrato dalla descrizione della funzione (autobotte 14.000 l, fuoristrada 4×4 con modulo 800 l, automezzo con piattaforma aerea).
+4. Le scritte sulla livrea possono comunque essere citate nell'`alt` della foto (descrivono ciò che è letteralmente visibile, conforme WCAG 1.1.1), ma **non sostituiscono il nome tecnico** nel corpo dell'articolo, nella caption e nei `social_punti`.
+
+**Estensione:** la stessa logica vale per ogni dotazione del Gruppo nominata nelle pagine (radio, generatori, DPI specifici, attrezzature AIB, kit emergenza, tende). Se la pagina `/chi-siamo/` non basta, controlla anche `data/dotazioni_*.yaml` (se esistono), articoli passati con badge `Attività`/`Esercitazione` che descrivono lo stesso mezzo, e la pagina di sezione `/area-volontari/` per le dotazioni operative interne.
+
 ## Regola pittogrammi — supporto comprensione (bambini, anziani, L2)
 
 Il sito ha una libreria di **Pittogrammi standardizzati** (46 ISO 7010 + 125 ARASAAC) in `static/pittogrammi/` per supportare la comprensione del testo a bambini, anziani, persone con disabilità cognitive e parlanti italiano L2 (regola di accessibilità cognitiva).

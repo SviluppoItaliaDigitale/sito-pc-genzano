@@ -66,7 +66,7 @@ L'utente lavora **multi-device** (CLI desktop su `main`, push = deploy; mobile/c
 3. **Attribuzione default = "Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma".** Mai a terzi (FEPIVOL/Comune/DPC) solo perché nel task ci sono loro testi. Eccezioni con evidenza certa: pattern nome file social terzi, Wikimedia/NASA/USGS/NOAA via `pc-image-fixer`, foto storiche con autore noto.
 4. **Web check obbligato di OGNI entità citata** (associazione/ente/persona/sigla): WebFetch con denominazione tra virgolette. Se 0 risultati ed è associazione locale poco indicizzata, **non sciogliere l'acronimo a indovinare** (es. *"V.E.R. Formia"*, non *"E.R. Formia"*): cita la sigla come la leggi nella fonte.
 
-**Gate pre-commit con foto utente:** cover+`image:` ✓ · Read di tutte le foto ✓ · caption solo visibile ✓ · attribuzione Gruppo ✓ · web check entità ✓ · gate AGID `pc-article-reviewer` ✓. Un solo punto non verificato → **non committare**.
+**Gate pre-commit con foto utente:** cover+`image:` ✓ · Read di tutte le foto ✓ · caption solo visibile ✓ · attribuzione Gruppo ✓ · web check entità ✓ · **nome mezzo/attrezzatura verificato in `content/chi-siamo/_index.md` § "I nostri mezzi"** (la livrea sul fianco non è il modello del veicolo — dettagli in rule 02 § "Nomi dei nostri mezzi") ✓ · gate AGID `pc-article-reviewer` ✓. Un solo punto non verificato → **non committare**.
 
 ---
 
