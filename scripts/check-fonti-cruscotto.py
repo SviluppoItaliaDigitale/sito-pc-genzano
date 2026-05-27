@@ -95,6 +95,15 @@ def chk_cams_eu():
     return ok, det
 
 
+def chk_ems_rapid():
+    # Copernicus EMS Rapid Mapping public JSON API (CORS abilitato, no auth).
+    url = "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/?limit=1"
+    ok, det, _, j = _get(url, expect_json=True)
+    if ok and isinstance(j, dict) and "results" in j:
+        return True, f"{det} · {j.get('count', '?')} attivazioni totali"
+    return False, det if not ok else "Risposta JSON inattesa (manca 'results')"
+
+
 def chk_gibs():
     today = datetime.date.today().isoformat()
     url = ("https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/"
@@ -149,6 +158,7 @@ SORGENTI = [
     ("Incendi — EFFIS/Copernicus", "Incendi", lambda: chk_wms_getmap("viirs.hs", "https://maps.effis.emergency.copernicus.eu/effis")),
     ("Qualità aria regionale — ARPA Lazio", "Aria e pollini", chk_arpa),
     ("Aria Europa — Copernicus CAMS (WMS ECMWF)", "Aria Europa (CAMS)", chk_cams_eu),
+    ("Emergenze EU — Copernicus EMS Rapid Mapping", "Emergenze EU (EMS)", chk_ems_rapid),
     ("Previsioni — ItaliaMeteo (ICON-2I)", "Previsioni ItaliaMeteo", lambda: chk_wms_getmap("meteohub:t2m-t2m", "https://maps.mistralportal.it/wms")),
     ("Mare onde — ItaliaMeteo (WW3)", "Mare ItaliaMeteo", lambda: chk_wms_getmap("meteohub:ww3_hs-hs", "https://maps.mistralportal.it/wms")),
     ("Radar SRI — ItaliaMeteo", "Radar ItaliaMeteo", lambda: chk_wms_getmap("meteohub:radar-sri", "https://maps.mistralportal.it/wms")),

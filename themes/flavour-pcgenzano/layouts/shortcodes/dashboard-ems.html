@@ -1,0 +1,130 @@
+{{/* Shortcode dashboard-ems — attivazioni Copernicus EMS Rapid Mapping in Europa.
+     Fonte: API pubblica JSON rapidmapping.emergency.copernicus.eu (CORS aperto, niente
+     API key). Mostra le ultime mappature di emergenza attivate dalle autorità nazionali
+     europee (incendi, alluvioni, terremoti, frane, eventi pubblici), filtrabili per
+     categoria e per area (tutte / Italia / Mediterraneo). Lista pulita, no mappa
+     (le mappe sono già negli altri tab). Lazy-load via cruscotto:ems event. */}}
+<div class="dash-ems" aria-labelledby="dash-ems-tit">
+  <h2 id="dash-ems-tit" class="visually-hidden">Attivazioni Copernicus EMS Rapid Mapping in Europa</h2>
+
+  <div class="dash-sisma-toolbar" role="group" aria-label="Filtri categoria e area">
+    <span class="dash-sisma-grp" role="group" aria-label="Categoria evento">
+      <button type="button" class="dash-pill" data-emscat="" aria-pressed="true">Tutte</button>
+      <button type="button" class="dash-pill" data-emscat="Wildfire" aria-pressed="false"><i class="bi bi-fire" aria-hidden="true"></i> Incendi</button>
+      <button type="button" class="dash-pill" data-emscat="Flood" aria-pressed="false"><i class="bi bi-water" aria-hidden="true"></i> Alluvioni</button>
+      <button type="button" class="dash-pill" data-emscat="Storm" aria-pressed="false"><i class="bi bi-cloud-lightning-rain" aria-hidden="true"></i> Tempeste</button>
+      <button type="button" class="dash-pill" data-emscat="Earthquake" aria-pressed="false"><i class="bi bi-activity" aria-hidden="true"></i> Terremoti</button>
+      <button type="button" class="dash-pill" data-emscat="Other" aria-pressed="false">Altro</button>
+    </span>
+    <span class="dash-sisma-grp" role="group" aria-label="Area geografica">
+      <button type="button" class="dash-pill" data-emsarea="all" aria-pressed="true">Tutta Europa</button>
+      <button type="button" class="dash-pill" data-emsarea="italy" aria-pressed="false"><i class="bi bi-flag" aria-hidden="true"></i> Solo Italia</button>
+    </span>
+    <span class="dash-sisma-stato" id="ems-stato" aria-live="polite">Caricamento attivazioni…</span>
+  </div>
+
+  <div id="dash-ems-lista" class="dash-ems-lista" aria-live="polite"></div>
+
+  <noscript><div class="alert alert-warning mt-2" role="note">Per consultare le attivazioni serve JavaScript. In alternativa: <a href="https://rapidmapping.emergency.copernicus.eu/" target="_blank" rel="noopener noreferrer">portale EMS Rapid Mapping</a>.</div></noscript>
+
+  <p class="small text-muted mt-3 mb-0">
+    Fonte: <a href="https://emergency.copernicus.eu/" target="_blank" rel="noopener noreferrer">Copernicus Emergency Management Service</a> — Rapid Mapping (servizio attivabile solo da autorità nazionali della protezione civile europee; le mappe pubblicate sono pubbliche e gratuite). I cartogrammi prodotti sono disponibili sul <a href="https://rapidmapping.emergency.copernicus.eu/" target="_blank" rel="noopener noreferrer">portale EMS</a>. Dato indicativo per consultazione: in emergenza chiama il <a href="tel:112">112</a>.
+  </p>
+
+  <script>
+  (function(){
+    var API='https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/?limit=50';
+    var lista=document.getElementById('dash-ems-lista');
+    var stato=document.getElementById('ems-stato');
+    var ATTIV=null, catSel='', areaSel='all';
+
+    var icone={Wildfire:'bi-fire', Flood:'bi-water', Storm:'bi-cloud-lightning-rain', Earthquake:'bi-activity', 'Volcanic activity':'bi-triangle', Landslide:'bi-graph-down', Other:'bi-info-circle'};
+    var nomi={Wildfire:'Incendio', Flood:'Alluvione', Storm:'Tempesta', Earthquake:'Terremoto', 'Volcanic activity':'Attività vulcanica', Landslide:'Frana', Other:'Altro'};
+
+    function escapeHtml(s){ return String(s||'').replace(/[&<>"']/g, function(c){ return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]); }); }
+
+    function fmtDate(s){
+      if(!s) return '—';
+      try { var d=new Date(s); return d.toLocaleDateString('it-IT',{day:'2-digit',month:'short',year:'numeric'}); }
+      catch(e){ return s.slice(0,10); }
+    }
+
+    function paesi(arr){
+      if(!arr||!arr.length) return '—';
+      var trad={Italy:'Italia', France:'Francia', Spain:'Spagna', Germany:'Germania', Austria:'Austria', Greece:'Grecia', Portugal:'Portogallo', 'United Kingdom':'Regno Unito', Switzerland:'Svizzera', Croatia:'Croazia', Slovenia:'Slovenia', Romania:'Romania', Bulgaria:'Bulgaria', Poland:'Polonia', Netherlands:'Paesi Bassi', Belgium:'Belgio', Norway:'Norvegia', Sweden:'Svezia', Finland:'Finlandia', Denmark:'Danimarca', Ireland:'Irlanda', Cyprus:'Cipro', Malta:'Malta', Albania:'Albania', 'North Macedonia':'Macedonia del Nord', Serbia:'Serbia', Montenegro:'Montenegro', 'Bosnia and Herzegovina':'Bosnia ed Erzegovina', Turkey:'Turchia', Hungary:'Ungheria', 'Czech Republic':'Repubblica Ceca', Slovakia:'Slovacchia', Estonia:'Estonia', Latvia:'Lettonia', Lithuania:'Lituania'};
+      return arr.map(function(p){return trad[p]||p;}).join(', ');
+    }
+
+    function rendiUna(a){
+      var cat=a.category||'Other';
+      var ico=icone[cat]||'bi-info-circle';
+      var nomeCat=nomi[cat]||cat;
+      var stato=a.closed?'<span class="dash-ems-stato-badge dash-ems-stato-chiusa">Chiusa</span>':'<span class="dash-ems-stato-badge dash-ems-stato-aperta">In corso</span>';
+      var link='https://rapidmapping.emergency.copernicus.eu/'+escapeHtml(a.code);
+      var nProd=(a.n_products||0)+' '+((a.n_products===1)?'prodotto':'prodotti');
+      return ''+
+        '<article class="dash-ems-item dash-ems-cat-'+escapeHtml(cat.toLowerCase().replace(/\s+/g,'-'))+'">'+
+          '<div class="dash-ems-head">'+
+            '<span class="dash-ems-cat"><i class="bi '+ico+'" aria-hidden="true"></i> '+escapeHtml(nomeCat)+'</span>'+
+            stato+
+            '<span class="dash-ems-data">'+escapeHtml(fmtDate(a.eventTime||a.activationTime))+'</span>'+
+          '</div>'+
+          '<h3 class="dash-ems-titolo"><a href="'+link+'" target="_blank" rel="noopener noreferrer">'+escapeHtml(a.code)+' — '+escapeHtml(a.name||'')+'</a></h3>'+
+          '<p class="dash-ems-meta"><i class="bi bi-geo-alt" aria-hidden="true"></i> '+escapeHtml(paesi(a.countries))+' · '+nProd+'</p>'+
+        '</article>';
+    }
+
+    function filtra(){
+      if(!ATTIV){ return []; }
+      return ATTIV.filter(function(a){
+        if(catSel && (a.category||'Other')!==catSel) return false;
+        if(areaSel==='italy'){
+          if(!a.countries || a.countries.indexOf('Italy')<0) return false;
+        }
+        return true;
+      });
+    }
+
+    function rendi(){
+      var arr=filtra();
+      if(!arr.length){
+        lista.innerHTML='<div class="dash-ems-vuoto">Nessuna attivazione che corrisponde ai filtri scelti negli ultimi mesi.</div>';
+        stato.textContent='0 attivazioni';
+        return;
+      }
+      // ordina per eventTime/activationTime desc
+      arr.sort(function(a,b){ var ta=a.eventTime||a.activationTime||''; var tb=b.eventTime||b.activationTime||''; return tb.localeCompare(ta); });
+      lista.innerHTML=arr.slice(0,15).map(rendiUna).join('');
+      stato.textContent=arr.length+' attivazion'+(arr.length===1?'e':'i')+(arr.length>15?' (mostrate le 15 più recenti)':'');
+    }
+
+    function carica(){
+      fetch(API).then(function(r){return r.json();}).then(function(j){
+        ATTIV=(j&&j.results)||[];
+        rendi();
+      }).catch(function(){
+        lista.innerHTML='<div class="alert alert-warning" role="note">Caricamento attivazioni in corso… Se l\'errore persiste, consulta il <a href="https://rapidmapping.emergency.copernicus.eu/" target="_blank" rel="noopener noreferrer">portale EMS</a>.</div>';
+        stato.textContent='Errore caricamento';
+      });
+    }
+
+    document.querySelectorAll('.dash-pill[data-emscat]').forEach(function(b){
+      b.addEventListener('click',function(){
+        document.querySelectorAll('.dash-pill[data-emscat]').forEach(function(x){x.setAttribute('aria-pressed','false');});
+        b.setAttribute('aria-pressed','true'); catSel=b.dataset.emscat; rendi();
+      });
+    });
+    document.querySelectorAll('.dash-pill[data-emsarea]').forEach(function(b){
+      b.addEventListener('click',function(){
+        document.querySelectorAll('.dash-pill[data-emsarea]').forEach(function(x){x.setAttribute('aria-pressed','false');});
+        b.setAttribute('aria-pressed','true'); areaSel=b.dataset.emsarea; rendi();
+      });
+    });
+
+    function avvia(){ carica(); setInterval(carica, 3600000); } // ogni ora
+    var box=document.querySelector('.dash-ems');
+    if(box && box.offsetParent!==null){ avvia(); }
+    else { window.addEventListener('cruscotto:ems', avvia, {once:true}); }
+  })();
+  </script>
+</div>
