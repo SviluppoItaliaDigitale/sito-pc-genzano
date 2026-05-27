@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pacchetto stampa: Scuola Primaria (6-11 anni) — 37 schede A4</title>
-  <meta name="description" content="Stampa in un click tutte le 37 schede stampabili della Scuola Primaria (6-11 anni). Pacchetto auto-aggiornato dal sito istituzionale.">
+  <title>Pacchetto stampa: Scuola Primaria (6-11 anni) — 44 schede A4</title>
+  <meta name="description" content="Stampa in un click tutte le 44 schede stampabili della Scuola Primaria (6-11 anni). Pacchetto auto-aggiornato dal sito istituzionale.">
   <meta name="robots" content="noindex,follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
@@ -852,6 +852,178 @@
 
 /* === stili scheda 8 === */
 
+    .rs-blocco {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      padding: 0.5rem 0.7rem;
+      border: 1.5px solid var(--scheda-bordo);
+      border-radius: 8px;
+      margin: 0.5rem 0;
+    }
+    .rs-emo { font-size: 1.8rem; line-height: 1; flex-shrink: 0; width: 2.2rem; text-align: center; }
+    .rs-testo { flex: 1; min-width: 0; }
+    .rs-modello {
+      font-family: "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700;
+      font-size: 1.55rem;
+      letter-spacing: 0.28em;
+      color: #cfd5db;
+      line-height: 1.1;
+    }
+    .rs-riga {
+      margin-top: 0.55rem;
+      border-bottom: 1.5px solid var(--scheda-bordo);
+      min-height: 1.7rem;
+    }
+    .rs-numero {
+      font-family: "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700;
+      font-size: 1.55rem;
+      letter-spacing: 0.2em;
+      color: #cfd5db;
+    }
+  
+
+/* === stili scheda 9 === */
+
+    .sezione-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 1rem 0 0.5rem 0; }
+    .sezione-titolo .num {
+      width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff;
+      border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 1rem; flex-shrink: 0;
+    }
+    .sezione-titolo h2 { font-size: 1.05rem; color: var(--scheda-blu); margin: 0; }
+
+    .mm-collega { display: flex; justify-content: space-between; gap: 2rem; margin: 0.6rem 0; }
+    .mm-col { display: flex; flex-direction: column; gap: 0.55rem; }
+    .mm-pallino {
+      font-family: "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700; font-size: 1.5rem; color: var(--scheda-blu);
+      border: 1.5px solid var(--scheda-bordo); border-radius: 8px;
+      width: 3.4rem; height: 2.6rem; display: flex; align-items: center; justify-content: center;
+    }
+    .mm-col.min .mm-pallino { color: var(--scheda-rosso); }
+
+    .mm-griglia { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; margin: 0.5rem 0; }
+    .mm-cella {
+      border: 1.5px solid var(--scheda-bordo); border-radius: 8px; padding: 0.4rem;
+      display: flex; align-items: center; justify-content: center; gap: 0.5rem;
+    }
+    .mm-cella .grande {
+      font-family: "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700; font-size: 1.6rem; color: var(--scheda-blu);
+    }
+    .mm-cella .sep { color: var(--scheda-grigio); }
+    .mm-cella .vuoto { display: inline-block; min-width: 1.6rem; border-bottom: 2px solid var(--scheda-bordo); height: 1.6rem; }
+  
+
+/* === stili scheda 10 === */
+
+    .di-griglia {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.7rem;
+      margin: 0.6rem 0;
+    }
+    .di-cella {
+      border: 1.5px solid var(--scheda-bordo);
+      border-radius: 10px;
+      padding: 0.6rem 0.5rem 0.7rem;
+      text-align: center;
+    }
+    .di-emo { font-size: 2.6rem; line-height: 1; }
+    .di-riga {
+      margin-top: 0.6rem;
+      border-bottom: 2px solid var(--scheda-bordo);
+      min-height: 1.7rem;
+    }
+    .di-iniziale {
+      font-size: 0.78rem;
+      color: var(--scheda-grigio);
+      margin-top: 0.2rem;
+    }
+    .di-iniziale b { color: var(--scheda-blu); font-size: 0.95rem; }
+  
+
+/* === stili scheda 11 === */
+
+    .pf-item { margin: 0.7rem 0; }
+    .pf-emo-titolo { display: flex; align-items: center; gap: 0.5rem; font-weight: 700; color: var(--scheda-blu); font-size: 0.95rem; margin-bottom: 0.3rem; }
+    .pf-emo-titolo .e { font-size: 1.4rem; }
+    .pf-tessere { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.4rem; }
+    .pf-tessera {
+      font-family: "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700; font-size: 1rem; letter-spacing: 0.04em;
+      background: #eaf2fb; border: 1.5px solid var(--scheda-blu); color: var(--scheda-blu);
+      border-radius: 6px; padding: 0.25rem 0.6rem;
+    }
+    .pf-riga { border-bottom: 2px solid var(--scheda-bordo); min-height: 1.7rem; margin-top: 0.2rem; }
+    .pf-libera .pf-riga { margin-top: 0.5rem; }
+  
+
+/* === stili scheda 12 === */
+
+    .cs-blocco { padding: 0.5rem 0.7rem; border: 1.5px solid var(--scheda-bordo); border-radius: 8px; margin: 0.55rem 0; }
+    .cs-modello { display: flex; align-items: center; gap: 0.7rem; }
+    .cs-modello .emo { font-size: 1.7rem; line-height: 1; }
+    .cs-modello .parola {
+      font-family: "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700; letter-spacing: 0.12em; color: var(--scheda-blu); font-size: 1.3rem;
+    }
+    /* riga di corsivo: banda con base piena e mezzeria tratteggiata */
+    .cs-banda {
+      height: 1.15rem; margin: 0.55rem 0 0.1rem;
+      background: #eef5ff;
+      border-top: 1.5px dashed #5b8ecf;
+      border-bottom: 2px solid #2f6fd0;
+      border-radius: 2px;
+    }
+  
+
+/* === stili scheda 13 === */
+
+    .cf-blocco { padding: 0.5rem 0.7rem; border: 1.5px solid var(--scheda-bordo); border-radius: 8px; margin: 0.6rem 0; }
+    .cf-modello { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.2rem; }
+    .cf-modello .emo { font-size: 1.5rem; line-height: 1; flex-shrink: 0; }
+    .cf-modello .frase {
+      font-family: "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
+      font-weight: 700; letter-spacing: 0.04em; color: var(--scheda-blu); font-size: 1.1rem;
+    }
+    .cf-banda {
+      height: 1.15rem; margin: 0.5rem 0;
+      background: #eef5ff;
+      border-top: 1.5px dashed #5b8ecf;
+      border-bottom: 2px solid #2f6fd0;
+      border-radius: 2px;
+    }
+  
+
+/* === stili scheda 14 === */
+
+    .dt-item { display: flex; align-items: flex-start; gap: 0.7rem; margin: 0.7rem 0; }
+    .dt-num {
+      width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff;
+      border-radius: 50%; display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 1rem; flex-shrink: 0; margin-top: 0.1rem;
+    }
+    .dt-righe { flex: 1; }
+    .dt-banda {
+      height: 1.15rem; margin: 0.35rem 0;
+      background: #eef5ff;
+      border-top: 1.5px dashed #5b8ecf;
+      border-bottom: 2px solid #2f6fd0;
+      border-radius: 2px;
+    }
+    .dt-aiuto {
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro); border-radius: 0 6px 6px 0;
+      padding: 0.55rem 0.85rem; margin: 0.6rem 0; font-size: 0.9rem; color: #664d03;
+    }
+    .dt-aiuto strong { color: #664d03; }
+  
+
+/* === stili scheda 15 === */
+
     .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
     .sez-titolo .num {
       width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff;
@@ -922,7 +1094,7 @@
     }
   
 
-/* === stili scheda 9 === */
+/* === stili scheda 16 === */
 
     .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
     .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
@@ -974,7 +1146,7 @@
     .istruzioni-maestra strong { color: #664d03; }
   
 
-/* === stili scheda 10 === */
+/* === stili scheda 17 === */
 
     .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
     .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
@@ -1048,7 +1220,7 @@
     }
   
 
-/* === stili scheda 11 === */
+/* === stili scheda 18 === */
 
     .mappa-svg {
       width: 100%; max-width: 600px;
@@ -1094,7 +1266,7 @@
     }
   
 
-/* === stili scheda 12 === */
+/* === stili scheda 19 === */
 
     .racconto-box {
       background: #f4f7fb; border-left: 4px solid var(--scheda-blu);
@@ -1147,7 +1319,7 @@
     }
   
 
-/* === stili scheda 13 === */
+/* === stili scheda 20 === */
 
     .frasi-griglia { display: grid; gap: 0.45rem; margin: 0.5rem 0; }
     .frase-card {
@@ -1197,7 +1369,7 @@
     }
   
 
-/* === stili scheda 14 === */
+/* === stili scheda 21 === */
 
     .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
     .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
@@ -1261,7 +1433,7 @@
     .istruzioni-maestra strong { color: #664d03; }
   
 
-/* === stili scheda 15 === */
+/* === stili scheda 22 === */
 
     .problema-card {
       padding: 0.7rem 0.85rem; background: #fff;
@@ -1316,7 +1488,7 @@
     }
   
 
-/* === stili scheda 16 === */
+/* === stili scheda 23 === */
 
     .mappa-italia { width: 100%; max-width: 360px; height: auto; margin: 0.4rem auto; display: block; }
     .legenda-zone {
@@ -1374,7 +1546,7 @@
     }
   
 
-/* === stili scheda 17 === */
+/* === stili scheda 24 === */
 
     .articolo-card {
       padding: 0.7rem 0.85rem; background: #fff;
@@ -1437,7 +1609,7 @@
     }
   
 
-/* === stili scheda 18 === */
+/* === stili scheda 25 === */
 
     .testo-box {
       background: #f4f7fb; border-left: 4px solid var(--scheda-blu);
@@ -1481,7 +1653,7 @@
     }
   
 
-/* === stili scheda 19 === */
+/* === stili scheda 26 === */
 
     .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
     .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
@@ -1551,7 +1723,7 @@
     .suggerimenti-box li { margin: 0.15rem 0; line-height: 1.4; }
   
 
-/* === stili scheda 20 === */
+/* === stili scheda 27 === */
 
     .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
     .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
@@ -1667,7 +1839,7 @@
     }
   
 
-/* === stili scheda 21 === */
+/* === stili scheda 28 === */
 
     .dialogo-box {
       background: #f4f7fb; border-left: 4px solid var(--scheda-blu);
@@ -1701,7 +1873,7 @@
     }
   
 
-/* === stili scheda 22 === */
+/* === stili scheda 29 === */
 
     .quattro-colori { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; margin: 0.5rem 0; }
     .col-card {
@@ -1736,7 +1908,7 @@
     @media (max-width: 580px) { .quattro-colori { grid-template-columns: 1fr; } }
   
 
-/* === stili scheda 23 === */
+/* === stili scheda 30 === */
 
     .scuola-mappa {
       border: 2.5px solid var(--scheda-blu); border-radius: 8px;
@@ -1765,7 +1937,7 @@
     .pf-checkbox { display: inline-block; width: 1.1rem; height: 1.1rem; border: 2px solid var(--scheda-bordo); border-radius: 3px; vertical-align: middle; margin-right: 0.35rem; }
   
 
-/* === stili scheda 24 === */
+/* === stili scheda 31 === */
 
     .timeline-box { background: #f4f7fb; border-left: 4px solid var(--scheda-blu); padding: 0.7rem 0.9rem; border-radius: 0 8px 8px 0; margin: 0.5rem 0; }
     .timeline-box .data { font-weight: 700; color: var(--scheda-blu); font-size: 0.95rem; margin-bottom: 0.3rem; }
@@ -1777,7 +1949,7 @@
     .istruzioni-maestra { margin-top: 0.8rem; padding: 0.55rem 0.85rem; background: #fff8e6; border-left: 4px solid var(--scheda-oro); border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45; }
   
 
-/* === stili scheda 25 === */
+/* === stili scheda 32 === */
 
     .timeline-box { background: #f4f7fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.35rem 0; }
     .timeline-box .data { font-weight: 700; color: var(--scheda-blu); font-size: 0.9rem; margin-bottom: 0.2rem; }
@@ -1800,7 +1972,7 @@
     .scheda-h2 { font-size: 1.02rem; margin: 0.7rem 0 0.3rem; }
   
 
-/* === stili scheda 26 === */
+/* === stili scheda 33 === */
 
     .timeline-box { background: #f4f7fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.35rem 0; }
     .timeline-box .data { font-weight: 700; color: var(--scheda-blu); font-size: 0.9rem; margin-bottom: 0.2rem; }
@@ -1822,7 +1994,7 @@
     .scheda-h2 { font-size: 1.02rem; margin: 0.7rem 0 0.3rem; }
   
 
-/* === stili scheda 27 === */
+/* === stili scheda 34 === */
 
     .timeline-box { background: #f4f7fb; border-left: 4px solid var(--scheda-blu); padding: 0.7rem 0.9rem; border-radius: 0 8px 8px 0; margin: 0.5rem 0; }
     .timeline-box .data { font-weight: 700; color: var(--scheda-blu); font-size: 0.95rem; margin-bottom: 0.3rem; }
@@ -1842,17 +2014,17 @@
 
   <header class="pacchetto-toolbar no-print" role="banner">
     <a href="/formazione/schede-stampabili/" aria-label="Torna alla hub delle schede stampabili">← Torna alle schede</a>
-    <span class="pacchetto-titolo">Pacchetto stampa: Scuola Primaria · 37 schede A4</span>
-    <button type="button" onclick="window.print()" aria-label="Apri la finestra di stampa per tutte le 37 schede di Scuola Primaria">
-      🖨️ Stampa tutto (37 fogli A4)
+    <span class="pacchetto-titolo">Pacchetto stampa: Scuola Primaria · 44 schede A4</span>
+    <button type="button" onclick="window.print()" aria-label="Apri la finestra di stampa per tutte le 44 schede di Scuola Primaria">
+      🖨️ Stampa tutto (44 fogli A4)
     </button>
   </header>
 
   <section class="pacchetto-intro no-print" aria-labelledby="pacchetto-intro-h1">
     <h1 id="pacchetto-intro-h1">Pacchetto stampa — Scuola Primaria</h1>
     <p>
-      Questo pacchetto contiene <strong>37 schede stampabili</strong> della Scuola Primaria (6-11 anni),
-      per un totale di <strong>37 fogli A4</strong>.
+      Questo pacchetto contiene <strong>44 schede stampabili</strong> della Scuola Primaria (6-11 anni),
+      per un totale di <strong>44 fogli A4</strong>.
       Premi <strong>"Stampa tutto"</strong> in alto (oppure <kbd>Ctrl+P</kbd> su Windows/Linux, <kbd>Cmd+P</kbd> su Mac)
       per aprire la finestra di stampa. Per archiviare in digitale scegli <em>"Salva come PDF"</em> come stampante.
     </p>
@@ -1869,7 +2041,7 @@
   </section>
 
   <nav class="pacchetto-toc no-print" aria-label="Indice del pacchetto">
-    <h2>Indice — 37 schede in questo pacchetto</h2>
+    <h2>Indice — 44 schede in questo pacchetto</h2>
     <ol>
       <li><a href="#scheda-rubrica-valutativa-primaria">Rubrica valutativa Educazione Civica — Scuola Primaria</a></li>
       <li><a href="#scheda-triangolo-fuoco-primaria">Il triangolo del fuoco — esperimenti</a></li>
@@ -1880,6 +2052,13 @@
       <li><a href="#scheda-sillabe-protezione-civile-primaria">Sillabe della Protezione Civile</a></li>
       <li><a href="#scheda-completa-parola-primaria">Completa la parola</a></li>
       <li><a href="#scheda-copia-frase-primaria">Copia la frase — Le parole della sicurezza</a></li>
+      <li><a href="#scheda-ricalca-scrivi-parole-primaria">Ricalca e scrivi le parole della sicurezza</a></li>
+      <li><a href="#scheda-maiuscolo-minuscolo-primaria">Maiuscolo e minuscolo</a></li>
+      <li><a href="#scheda-dettato-illustrato-primaria">Dettato illustrato</a></li>
+      <li><a href="#scheda-prime-frasi-sicurezza-primaria">Le prime frasi della sicurezza</a></li>
+      <li><a href="#scheda-corsivo-parole-primaria">Dallo stampatello al corsivo</a></li>
+      <li><a href="#scheda-corsivo-frasi-primaria">Le prime frasi in corsivo</a></li>
+      <li><a href="#scheda-dettato-frasi-brevi-primaria">Dettato di frasi brevi</a></li>
       <li><a href="#scheda-il-numero-112-primaria">Il numero 112 — Tutto sull'emergenza</a></li>
       <li><a href="#scheda-codici-allerta-numeri-primaria">I codici colore dell'allerta meteo</a></li>
       <li><a href="#scheda-strumenti-meteo-primaria">Gli strumenti del meteorologo</a></li>
@@ -3305,6 +3484,482 @@
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
       <span>Scheda "Copia la frase" · Primaria 1ª-2ª · letto-scrittura · rev. 2026</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-ricalca-scrivi-parole-primaria" class="pacchetto-scheda" aria-label="Scheda: Ricalca e scrivi le parole della sicurezza">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Ricalca e scrivi le parole della sicurezza</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria (classe 1ª)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 6 anni</span>
+      <span><strong>Obiettivo:</strong> imparare a scrivere le prime parole in stampatello</span>
+      <span><strong>Servono:</strong> matita</span>
+    </div>
+
+    <p class="scheda-intro">
+      Per ogni parola: prima <strong>ricalca</strong> con la matita le lettere grigie tratteggiate, poi <strong>riscrivi tu</strong> la stessa parola sulla riga vuota. Leggi sempre la parola ad alta voce.
+    </p>
+
+    <div class="rs-blocco">
+      <span class="rs-emo" aria-hidden="true">🏠</span>
+      <div class="rs-testo"><div class="rs-modello" aria-hidden="true">C A S A</div><div class="rs-riga" aria-hidden="true"></div></div>
+    </div>
+    <div class="rs-blocco">
+      <span class="rs-emo" aria-hidden="true">💧</span>
+      <div class="rs-testo"><div class="rs-modello" aria-hidden="true">A C Q U A</div><div class="rs-riga" aria-hidden="true"></div></div>
+    </div>
+    <div class="rs-blocco">
+      <span class="rs-emo" aria-hidden="true">📞</span>
+      <div class="rs-testo"><div class="rs-numero" aria-hidden="true">1 1 2</div><div class="rs-riga" aria-hidden="true"></div></div>
+    </div>
+    <div class="rs-blocco">
+      <span class="rs-emo" aria-hidden="true">🎒</span>
+      <div class="rs-testo"><div class="rs-modello" aria-hidden="true">Z A I N O</div><div class="rs-riga" aria-hidden="true"></div></div>
+    </div>
+    <div class="rs-blocco">
+      <span class="rs-emo" aria-hidden="true">⛑️</span>
+      <div class="rs-testo"><div class="rs-modello" aria-hidden="true">C A S C O</div><div class="rs-riga" aria-hidden="true"></div></div>
+    </div>
+    <div class="rs-blocco">
+      <span class="rs-emo" aria-hidden="true">🤝</span>
+      <div class="rs-testo"><div class="rs-modello" aria-hidden="true">A I U T O</div><div class="rs-riga" aria-hidden="true"></div></div>
+    </div>
+    <div class="rs-blocco">
+      <span class="rs-emo" aria-hidden="true">🚪</span>
+      <div class="rs-testo"><div class="rs-modello" aria-hidden="true">U S C I T A</div><div class="rs-riga" aria-hidden="true"></div></div>
+    </div>
+    <div class="rs-blocco">
+      <span class="rs-emo" aria-hidden="true">📻</span>
+      <div class="rs-testo"><div class="rs-modello" aria-hidden="true">R A D I O</div><div class="rs-riga" aria-hidden="true"></div></div>
+    </div>
+
+    <div class="scheda-docente">
+      <strong>Per la maestra/maestro:</strong>
+      <ul style="margin: 0.3rem 0 0 1rem; padding: 0;">
+        <li>Le parole sono in <strong>stampato maiuscolo</strong>, il carattere con cui i bambini iniziano a scrivere. Far ricalcare lentamente, una lettera alla volta, partendo dal punto giusto.</li>
+        <li>Il numero <strong>112</strong> è inserito di proposito: è la prima "parola" della sicurezza che ogni bambino deve saper scrivere e riconoscere.</li>
+        <li><strong>Estensione:</strong> sul retro del foglio l'alunno scrive il proprio nome e il nome della via di casa — informazioni utili in caso di emergenza.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Ricalca e scrivi" · Primaria 1ª · letto-scrittura · rev. 2026</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-maiuscolo-minuscolo-primaria" class="pacchetto-scheda" aria-label="Scheda: Maiuscolo e minuscolo">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Maiuscolo e minuscolo</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria (classe 1ª)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 6 anni</span>
+      <span><strong>Obiettivo:</strong> riconoscere la stessa lettera in grande e in piccolo</span>
+      <span><strong>Servono:</strong> matita</span>
+    </div>
+
+    <p class="scheda-intro">
+      Ogni lettera si scrive in due modi: <strong>grande</strong> (maiuscola) e <strong>piccola</strong> (minuscola). Sono la stessa lettera! Impara a riconoscerle: ti servono per leggere ogni parola.
+    </p>
+
+    <div class="sezione-titolo">
+      <span class="num">1</span>
+      <h2>Collega ogni lettera grande alla sua piccola</h2>
+    </div>
+
+    <div class="mm-collega">
+      <div class="mm-col grande" role="list" aria-label="Lettere maiuscole">
+        <span class="mm-pallino" role="listitem">C</span>
+        <span class="mm-pallino" role="listitem">A</span>
+        <span class="mm-pallino" role="listitem">P</span>
+        <span class="mm-pallino" role="listitem">R</span>
+        <span class="mm-pallino" role="listitem">M</span>
+        <span class="mm-pallino" role="listitem">Z</span>
+      </div>
+      <div class="mm-col min" role="list" aria-label="Lettere minuscole">
+        <span class="mm-pallino" role="listitem">r</span>
+        <span class="mm-pallino" role="listitem">z</span>
+        <span class="mm-pallino" role="listitem">a</span>
+        <span class="mm-pallino" role="listitem">m</span>
+        <span class="mm-pallino" role="listitem">c</span>
+        <span class="mm-pallino" role="listitem">p</span>
+      </div>
+    </div>
+    <p style="font-size: 0.82rem; color: #495057; margin: 0.2rem 0;">Tira una linea con la matita dalla lettera grande alla sua lettera piccola.</p>
+
+    <div class="sezione-titolo">
+      <span class="num">2</span>
+      <h2>Scrivi tu la lettera piccola accanto alla grande</h2>
+    </div>
+
+    <div class="mm-griglia">
+      <div class="mm-cella"><span class="grande">S</span><span class="sep" aria-hidden="true">→</span><span class="vuoto" aria-hidden="true"></span></div>
+      <div class="mm-cella"><span class="grande">O</span><span class="sep" aria-hidden="true">→</span><span class="vuoto" aria-hidden="true"></span></div>
+      <div class="mm-cella"><span class="grande">T</span><span class="sep" aria-hidden="true">→</span><span class="vuoto" aria-hidden="true"></span></div>
+      <div class="mm-cella"><span class="grande">U</span><span class="sep" aria-hidden="true">→</span><span class="vuoto" aria-hidden="true"></span></div>
+      <div class="mm-cella"><span class="grande">F</span><span class="sep" aria-hidden="true">→</span><span class="vuoto" aria-hidden="true"></span></div>
+      <div class="mm-cella"><span class="grande">I</span><span class="sep" aria-hidden="true">→</span><span class="vuoto" aria-hidden="true"></span></div>
+      <div class="mm-cella"><span class="grande">N</span><span class="sep" aria-hidden="true">→</span><span class="vuoto" aria-hidden="true"></span></div>
+      <div class="mm-cella"><span class="grande">G</span><span class="sep" aria-hidden="true">→</span><span class="vuoto" aria-hidden="true"></span></div>
+    </div>
+
+    <div class="sezione-titolo">
+      <span class="num">3</span>
+      <h2>La stessa parola, scritta nei due modi</h2>
+    </div>
+    <p style="font-size: 0.95rem; margin: 0.2rem 0;">
+      <span style="font-family:'Trebuchet MS',sans-serif; font-weight:700; letter-spacing:0.1em; color:var(--scheda-blu);">CASCO</span>
+      &nbsp;è uguale a&nbsp;
+      <span style="font-family:'Trebuchet MS',sans-serif; font-weight:700; letter-spacing:0.1em; color:var(--scheda-rosso);">casco</span>.
+      Leggile: dicono la stessa cosa. Ora prova con <strong>ACQUA / acqua</strong> e <strong>RADIO / radio</strong>.
+    </p>
+
+    <div class="scheda-docente">
+      <strong>Per la maestra/maestro — soluzioni:</strong>
+      <ul style="margin: 0.3rem 0 0 1rem; padding: 0;">
+        <li><strong>Sezione 1:</strong> C–c, A–a, P–p, R–r, M–m, Z–z.</li>
+        <li><strong>Sezione 2:</strong> S→s, O→o, T→t, U→u, F→f, I→i, N→n, G→g.</li>
+        <li><strong>Estensione orale:</strong> mostrare che alcune minuscole somigliano molto alla maiuscola (C/c, O/o, S/s, U/u, Z/z), altre cambiano forma (A/a, R/r, G/g): far notare le differenze.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Maiuscolo e minuscolo" · Primaria 1ª · letto-scrittura · rev. 2026</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-dettato-illustrato-primaria" class="pacchetto-scheda" aria-label="Scheda: Dettato illustrato">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Dettato illustrato</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria (classi 1ª-2ª)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 6-7 anni</span>
+      <span><strong>Obiettivo:</strong> scrivere da soli la parola giusta guardando l'immagine</span>
+      <span><strong>Servono:</strong> matita</span>
+    </div>
+
+    <p class="scheda-intro">
+      Guarda ogni figura, dì il suo nome ad alta voce e <strong>scrivilo sulla riga</strong>. Sotto ogni riga c'è la <strong>prima lettera</strong> per aiutarti a partire.
+    </p>
+
+    <div class="di-griglia">
+      <div class="di-cella"><div class="di-emo" aria-hidden="true">👨‍🚒</div><div class="di-riga" aria-hidden="true"></div><div class="di-iniziale">inizia con <b>P</b></div></div>
+      <div class="di-cella"><div class="di-emo" aria-hidden="true">🚑</div><div class="di-riga" aria-hidden="true"></div><div class="di-iniziale">inizia con <b>A</b></div></div>
+      <div class="di-cella"><div class="di-emo" aria-hidden="true">⛑️</div><div class="di-riga" aria-hidden="true"></div><div class="di-iniziale">inizia con <b>C</b></div></div>
+      <div class="di-cella"><div class="di-emo" aria-hidden="true">🧭</div><div class="di-riga" aria-hidden="true"></div><div class="di-iniziale">inizia con <b>B</b></div></div>
+      <div class="di-cella"><div class="di-emo" aria-hidden="true">🎒</div><div class="di-riga" aria-hidden="true"></div><div class="di-iniziale">inizia con <b>Z</b></div></div>
+      <div class="di-cella"><div class="di-emo" aria-hidden="true">🔦</div><div class="di-riga" aria-hidden="true"></div><div class="di-iniziale">inizia con <b>T</b></div></div>
+      <div class="di-cella"><div class="di-emo" aria-hidden="true">🗺️</div><div class="di-riga" aria-hidden="true"></div><div class="di-iniziale">inizia con <b>M</b></div></div>
+      <div class="di-cella"><div class="di-emo" aria-hidden="true">📻</div><div class="di-riga" aria-hidden="true"></div><div class="di-iniziale">inizia con <b>R</b></div></div>
+      <div class="di-cella"><div class="di-emo" aria-hidden="true">🏥</div><div class="di-riga" aria-hidden="true"></div><div class="di-iniziale">inizia con <b>O</b></div></div>
+    </div>
+
+    <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.5rem 0; font-size: 0.92rem;">
+      <strong style="color: var(--scheda-blu);">🆘 Il numero più importante</strong><br>
+      Scrivi nel riquadro il numero da chiamare in caso di emergenza:
+      <span style="display:inline-block; min-width:5rem; border-bottom:2px solid var(--scheda-blu); height:1.6rem; vertical-align:bottom;" aria-hidden="true"></span>
+    </div>
+
+    <div class="scheda-docente">
+      <strong>Per la maestra/maestro — soluzioni:</strong>
+      <ul style="margin: 0.3rem 0 0 1rem; padding: 0;">
+        <li>POMPIERE (o VIGILE DEL FUOCO), AMBULANZA, CASCO, BUSSOLA, ZAINO, TORCIA, MAPPA, RADIO, OSPEDALE.</li>
+        <li>Il numero da scrivere è <strong>112</strong>.</li>
+        <li>Si può svolgere come <strong>dettato</strong> (l'insegnante legge la parola, l'alunno la scrive) o in autonomia guardando solo l'immagine e l'iniziale.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Dettato illustrato" · Primaria 1ª-2ª · letto-scrittura · rev. 2026</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-prime-frasi-sicurezza-primaria" class="pacchetto-scheda" aria-label="Scheda: Le prime frasi della sicurezza">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Le prime frasi della sicurezza</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria (classi 1ª-2ª)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 6-7 anni</span>
+      <span><strong>Obiettivo:</strong> mettere in ordine le parole e scrivere una frase compiuta</span>
+      <span><strong>Servono:</strong> matita</span>
+    </div>
+
+    <p class="scheda-intro">
+      Le parole sono in disordine. Rimettile nell'ordine giusto e <strong>scrivi la frase</strong> sulla riga. Inizia con la <strong>lettera maiuscola</strong> e finisci con il <strong>punto</strong>.
+    </p>
+
+    <div class="pf-item">
+      <div class="pf-emo-titolo"><span class="e" aria-hidden="true">📞</span> Frase 1</div>
+      <div class="pf-tessere"><span class="pf-tessera">il</span><span class="pf-tessera">112</span><span class="pf-tessera">chiamo</span></div>
+      <div class="pf-riga" aria-hidden="true"></div>
+    </div>
+
+    <div class="pf-item">
+      <div class="pf-emo-titolo"><span class="e" aria-hidden="true">⛑️</span> Frase 2</div>
+      <div class="pf-tessere"><span class="pf-tessera">casco</span><span class="pf-tessera">metto</span><span class="pf-tessera">il</span></div>
+      <div class="pf-riga" aria-hidden="true"></div>
+    </div>
+
+    <div class="pf-item">
+      <div class="pf-emo-titolo"><span class="e" aria-hidden="true">🚶</span> Frase 3</div>
+      <div class="pf-tessere"><span class="pf-tessera">la</span><span class="pf-tessera">seguo</span><span class="pf-tessera">maestra</span></div>
+      <div class="pf-riga" aria-hidden="true"></div>
+    </div>
+
+    <div class="pf-item">
+      <div class="pf-emo-titolo"><span class="e" aria-hidden="true">🛗</span> Frase 4</div>
+      <div class="pf-tessere"><span class="pf-tessera">uso</span><span class="pf-tessera">non</span><span class="pf-tessera">l'ascensore</span></div>
+      <div class="pf-riga" aria-hidden="true"></div>
+    </div>
+
+    <div class="pf-item">
+      <div class="pf-emo-titolo"><span class="e" aria-hidden="true">😌</span> Frase 5</div>
+      <div class="pf-tessere"><span class="pf-tessera">calmo</span><span class="pf-tessera">resto</span></div>
+      <div class="pf-riga" aria-hidden="true"></div>
+    </div>
+
+    <div class="pf-item pf-libera">
+      <div class="pf-emo-titolo"><span class="e" aria-hidden="true">✏️</span> Ora scrivi tu una frase sulla sicurezza</div>
+      <div class="pf-riga" aria-hidden="true"></div>
+      <div class="pf-riga" aria-hidden="true"></div>
+    </div>
+
+    <div class="scheda-docente">
+      <strong>Per la maestra/maestro — soluzioni:</strong>
+      <ul style="margin: 0.3rem 0 0 1rem; padding: 0;">
+        <li><strong>1.</strong> Chiamo il 112. &nbsp; <strong>2.</strong> Metto il casco. &nbsp; <strong>3.</strong> Seguo la maestra. &nbsp; <strong>4.</strong> Non uso l'ascensore. &nbsp; <strong>5.</strong> Resto calmo.</li>
+        <li>Far notare le due regole della frase scritta: <strong>maiuscola</strong> all'inizio e <strong>punto</strong> alla fine.</li>
+        <li>Le frasi sono regole vere di autoprotezione: dopo la scrittura, commentarle insieme (perché non si usa l'ascensore? perché si segue chi guida l'evacuazione?).</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Le prime frasi della sicurezza" · Primaria 1ª-2ª · letto-scrittura · rev. 2026</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-corsivo-parole-primaria" class="pacchetto-scheda" aria-label="Scheda: Dallo stampatello al corsivo">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Dallo stampatello al corsivo</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria (classe 2ª)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 7 anni</span>
+      <span><strong>Obiettivo:</strong> trasformare le parole dallo stampatello al corsivo</span>
+      <span><strong>Servono:</strong> matita</span>
+    </div>
+
+    <p class="scheda-intro">
+      Leggi la parola scritta in <strong>STAMPATELLO</strong>, poi <strong>riscrivila in corsivo</strong> sulla riga azzurra. Le lettere stanno nella banda; quelle alte (l, t) salgono sopra, quelle basse (g, p) scendono sotto.
+    </p>
+
+    <div class="cs-blocco">
+      <div class="cs-modello"><span class="emo" aria-hidden="true">🏠</span><span class="parola">CASA</span></div>
+      <div class="cs-banda" aria-hidden="true"></div>
+    </div>
+    <div class="cs-blocco">
+      <div class="cs-modello"><span class="emo" aria-hidden="true">💧</span><span class="parola">ACQUA</span></div>
+      <div class="cs-banda" aria-hidden="true"></div>
+    </div>
+    <div class="cs-blocco">
+      <div class="cs-modello"><span class="emo" aria-hidden="true">🎒</span><span class="parola">ZAINO</span></div>
+      <div class="cs-banda" aria-hidden="true"></div>
+    </div>
+    <div class="cs-blocco">
+      <div class="cs-modello"><span class="emo" aria-hidden="true">⛑️</span><span class="parola">CASCO</span></div>
+      <div class="cs-banda" aria-hidden="true"></div>
+    </div>
+    <div class="cs-blocco">
+      <div class="cs-modello"><span class="emo" aria-hidden="true">🤝</span><span class="parola">AIUTO</span></div>
+      <div class="cs-banda" aria-hidden="true"></div>
+    </div>
+    <div class="cs-blocco">
+      <div class="cs-modello"><span class="emo" aria-hidden="true">🚪</span><span class="parola">USCITA</span></div>
+      <div class="cs-banda" aria-hidden="true"></div>
+    </div>
+    <div class="cs-blocco">
+      <div class="cs-modello"><span class="emo" aria-hidden="true">📻</span><span class="parola">RADIO</span></div>
+      <div class="cs-banda" aria-hidden="true"></div>
+    </div>
+
+    <div class="scheda-docente">
+      <strong>Per la maestra/maestro:</strong>
+      <ul style="margin: 0.3rem 0 0 1rem; padding: 0;">
+        <li>Si svolge dopo che l'alunno conosce lo stampatello (vedi scheda <em>Ricalca e Scrivi le Parole</em>). La banda azzurra è il "corpo" della scrittura: le lettere normali stanno dentro, le aste salgono o scendono.</li>
+        <li>Far collegare a voce ogni parola al suo significato di sicurezza prima di scriverla.</li>
+        <li><strong>Estensione:</strong> sul retro, scrivere in corsivo il proprio nome e cognome.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Dallo stampatello al corsivo" · Primaria 2ª · letto-scrittura · rev. 2026</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-corsivo-frasi-primaria" class="pacchetto-scheda" aria-label="Scheda: Le prime frasi in corsivo">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Le prime frasi in corsivo</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria (classe 2ª)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 7 anni</span>
+      <span><strong>Obiettivo:</strong> ricopiare in corsivo frasi complete sulle righe guida</span>
+      <span><strong>Servono:</strong> matita</span>
+    </div>
+
+    <p class="scheda-intro">
+      Leggi la frase in <strong>stampatello</strong>, poi <strong>ricopiala in corsivo</strong> sulle righe azzurre. Ricorda: <strong>maiuscola</strong> all'inizio e <strong>punto</strong> alla fine.
+    </p>
+
+    <div class="cf-blocco">
+      <div class="cf-modello"><span class="emo" aria-hidden="true">📞</span><span class="frase">Chiamo il 112.</span></div>
+      <div class="cf-banda" aria-hidden="true"></div>
+    </div>
+    <div class="cf-blocco">
+      <div class="cf-modello"><span class="emo" aria-hidden="true">😌</span><span class="frase">Resto calmo.</span></div>
+      <div class="cf-banda" aria-hidden="true"></div>
+    </div>
+    <div class="cf-blocco">
+      <div class="cf-modello"><span class="emo" aria-hidden="true">🧑‍🏫</span><span class="frase">Seguo l'adulto.</span></div>
+      <div class="cf-banda" aria-hidden="true"></div>
+    </div>
+    <div class="cf-blocco">
+      <div class="cf-modello"><span class="emo" aria-hidden="true">📍</span><span class="frase">Vado al punto di raccolta.</span></div>
+      <div class="cf-banda" aria-hidden="true"></div>
+      <div class="cf-banda" aria-hidden="true"></div>
+    </div>
+    <div class="cf-blocco">
+      <div class="cf-modello"><span class="emo" aria-hidden="true">⛑️</span><span class="frase">Metto il casco.</span></div>
+      <div class="cf-banda" aria-hidden="true"></div>
+    </div>
+
+    <div class="scheda-docente">
+      <strong>Per la maestra/maestro:</strong>
+      <ul style="margin: 0.3rem 0 0 1rem; padding: 0;">
+        <li>Le frasi sono regole vere di autoprotezione: dopo la copiatura, commentarle insieme (perché si segue l'adulto? cos'è il punto di raccolta?).</li>
+        <li>Curare i legami tra le lettere in corsivo e il rispetto della banda (corpo della scrittura).</li>
+        <li><strong>Estensione:</strong> l'alunno inventa e scrive in corsivo una sua frase sulla sicurezza.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Le prime frasi in corsivo" · Primaria 2ª · letto-scrittura · rev. 2026</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-dettato-frasi-brevi-primaria" class="pacchetto-scheda" aria-label="Scheda: Dettato di frasi brevi">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Dettato di frasi brevi</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria (classe 2ª)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 7 anni</span>
+      <span><strong>Obiettivo:</strong> scrivere correttamente sotto dettatura</span>
+      <span><strong>Servono:</strong> matita</span>
+    </div>
+
+    <p class="scheda-intro">
+      L'insegnante legge ogni frase due volte. Tu <strong>ascolti</strong> e poi <strong>scrivi</strong> la frase sulle righe. Ricorda la <strong>maiuscola</strong> all'inizio e il <strong>punto</strong> alla fine.
+    </p>
+
+    <div class="dt-item"><span class="dt-num">1</span><div class="dt-righe"><div class="dt-banda" aria-hidden="true"></div></div></div>
+    <div class="dt-item"><span class="dt-num">2</span><div class="dt-righe"><div class="dt-banda" aria-hidden="true"></div></div></div>
+    <div class="dt-item"><span class="dt-num">3</span><div class="dt-righe"><div class="dt-banda" aria-hidden="true"></div></div></div>
+    <div class="dt-item"><span class="dt-num">4</span><div class="dt-righe"><div class="dt-banda" aria-hidden="true"></div><div class="dt-banda" aria-hidden="true"></div></div></div>
+    <div class="dt-item"><span class="dt-num">5</span><div class="dt-righe"><div class="dt-banda" aria-hidden="true"></div></div></div>
+
+    <div class="dt-aiuto">
+      <strong>Parole un po' difficili</strong> (l'insegnante può scriverle alla lavagna prima del dettato): <em>ascensore, maestra, raccolta, casco.</em>
+    </div>
+
+    <div class="scheda-docente">
+      <strong>Per la maestra/maestro — le frasi da dettare:</strong>
+      <ul style="margin: 0.3rem 0 0 1rem; padding: 0;">
+        <li><strong>1.</strong> Metto il casco.</li>
+        <li><strong>2.</strong> Chiudo il gas.</li>
+        <li><strong>3.</strong> Resto vicino alla maestra.</li>
+        <li><strong>4.</strong> Non uso l'ascensore quando trema.</li>
+        <li><strong>5.</strong> Vado al punto di raccolta.</li>
+      </ul>
+      <p style="margin: 0.4rem 0 0;">Leggere ogni frase due volte, con calma. Dopo il dettato, correggere insieme alla lavagna e commentare il significato di ogni regola di sicurezza.</p>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Dettato di frasi brevi" · Primaria 2ª · letto-scrittura · rev. 2026</span>
     </footer>
 
   </article>
