@@ -7,7 +7,7 @@ aliases:
   - /sitiutili/
 toc: true
 tts: true
-dataUltimaRevisione: "2026-05-20"
+dataUltimaRevisione: "2026-05-27"
 ---
 
 Questa pagina raccoglie link a siti istituzionali, portali operativi, fonti tecniche e risorse educative. I link sono organizzati per tema, così puoi trovare più facilmente la fonte utile.
@@ -41,9 +41,34 @@ Questa pagina raccoglie link a siti istituzionali, portali operativi, fonti tecn
 - [INGV — Terremoti in tempo reale](https://terremoti.ingv.it/) — eventi sismici registrati in Italia.
 - [IdroGEO](https://idrogeo.isprambiente.it/) — mappe ISPRA su frane e alluvioni.
 - [ARPA Lazio](https://www.arpalazio.it/) — qualità dell'aria, acqua, rumore e altri dati ambientali.
-- [Copernicus Emergency Management Service](https://mapping.emergency.copernicus.eu/) — mappatura satellitare europea per la gestione delle emergenze.
 - [EUMETSAT View](https://view.eumetsat.int/) — immagini satellitari meteorologiche europee.
 - [Windy.com](https://www.windy.com/) — mappe meteorologiche di consultazione.
+
+## Programma europeo Copernicus
+
+**Copernicus** è il programma di osservazione della Terra dell'Unione Europea, gestito dalla Commissione europea con il supporto di ESA, EUMETSAT, ECMWF e Mercator Ocean. Fornisce dati gratuiti e aperti utili per la prevenzione, la conoscenza del territorio e l'analisi degli eventi.
+
+### Portali generali
+
+- [Copernicus — portale europeo](https://www.copernicus.eu/it) — pagina italiana ufficiale del programma con notizie, servizi e accesso ai dati.
+- [Copernicus Italia](https://www.copernicus-italia.it/) — punto di contatto nazionale italiano (Agenzia Spaziale Italiana) con eventi, opportunità e supporto agli utenti italiani.
+- [Sentinel — missioni satellitari](https://sentinels.copernicus.eu/) — sito istituzionale delle missioni Sentinel (radar, ottiche, ozono, oceanografiche).
+- [Eventi Copernicus in diretta](https://www.copernicus.eu/en/events/live-stream) — streaming di workshop, briefing tematici e conferenze.
+
+### Accesso ai dati satellitari (Sentinel)
+
+- [Copernicus Data Space Ecosystem (CDSE)](https://dataspace.copernicus.eu/) — piattaforma unica di accesso ai dati Sentinel-1 (radar), Sentinel-2 (ottico ad alta risoluzione), Sentinel-3, Sentinel-5P (atmosfera). Richiede registrazione gratuita.
+- [Copernicus Browser](https://browser.dataspace.copernicus.eu/) — visualizzatore interattivo del CDSE, utile per analisi visive post-evento (incendi, alluvioni, frane) senza dover scaricare i file. Cadenza di rivisita: 5 giorni per Sentinel-2, 6 giorni per Sentinel-1.
+- [Pagina ufficiale "Accesso ai dati"](https://www.copernicus.eu/en/copernicus-satellite-data-access) — sintesi delle modalità di accesso per cittadini, ricercatori e istituzioni.
+
+### Servizi tematici operativi
+
+- [CAMS — Atmosfera](https://atmosphere.copernicus.eu/) — qualità dell'aria europea (PM10, PM2.5, ozono, biossido di azoto), polveri sahariane, pollini. Previsioni orarie aggiornate quotidianamente.
+- [Copernicus EMS — Gestione emergenze](https://emergency.copernicus.eu/) — mappatura satellitare di emergenze in Europa (incendi, alluvioni, terremoti, frane). Attivabile solo da autorità competenti, ma le mappe pubblicate sono pubbliche.
+- [EFFIS — Incendi boschivi europei](https://forest-fire.emergency.copernicus.eu/) — punti caldi (hot spots), aree bruciate e indice di pericolo incendio (FWI) a livello europeo.
+- [GloFAS — Piene fluviali globali](https://global-flood.emergency.copernicus.eu/) — previsioni a 30 giorni dei livelli idrometrici dei grandi bacini fluviali.
+- [CMEMS — Mare](https://marine.copernicus.eu/) — temperature superficiali, onde, correnti, ondate di calore marine nel Mediterraneo.
+- [CLMS — Territorio](https://land.copernicus.eu/) — uso del suolo, vegetazione, ghiacciai, aree bruciate, siccità.
 
 ## App e servizi per il cittadino
 
