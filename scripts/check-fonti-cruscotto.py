@@ -85,6 +85,16 @@ def chk_wms_getmap(layer, base):
     return ok, det
 
 
+def chk_cams_eu():
+    # CAMS Europe via WMS pubblico ECMWF (token=public). Bbox Italia, layer PM2.5.
+    # Il server risponde HTTP 302 -> redirect al PNG renderizzato in CDN streaming.
+    url = ("https://eccharts.ecmwf.int/wms/?token=public"
+           "&service=wms&VERSION=1.3.0&LAYERS=composition_europe_pm2p5_forecast_surface"
+           "&FORMAT=image/png&REQUEST=GetMap&CRS=EPSG:4326&BBOX=35,5,48,20&WIDTH=64&HEIGHT=64")
+    ok, det, _, _ = _get(url, accept=(200, 302))
+    return ok, det
+
+
 def chk_gibs():
     today = datetime.date.today().isoformat()
     url = ("https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/"
@@ -138,6 +148,7 @@ SORGENTI = [
     ("Satellite suolo — NASA GIBS", "Satellite", chk_gibs),
     ("Incendi — EFFIS/Copernicus", "Incendi", lambda: chk_wms_getmap("viirs.hs", "https://maps.effis.emergency.copernicus.eu/effis")),
     ("Qualità aria regionale — ARPA Lazio", "Aria e pollini", chk_arpa),
+    ("Aria Europa — Copernicus CAMS (WMS ECMWF)", "Aria Europa (CAMS)", chk_cams_eu),
     ("Previsioni — ItaliaMeteo (ICON-2I)", "Previsioni ItaliaMeteo", lambda: chk_wms_getmap("meteohub:t2m-t2m", "https://maps.mistralportal.it/wms")),
     ("Mare onde — ItaliaMeteo (WW3)", "Mare ItaliaMeteo", lambda: chk_wms_getmap("meteohub:ww3_hs-hs", "https://maps.mistralportal.it/wms")),
     ("Radar SRI — ItaliaMeteo", "Radar ItaliaMeteo", lambda: chk_wms_getmap("meteohub:radar-sri", "https://maps.mistralportal.it/wms")),
