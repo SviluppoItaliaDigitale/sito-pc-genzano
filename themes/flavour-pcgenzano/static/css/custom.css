@@ -6733,3 +6733,28 @@ html.a11y-pause-anim .cruscotto-home-card, html.a11y-pause-anim .cruscotto-home-
 .dash-ems-meta i.bi { color: #6c757d; margin-right: .15rem; }
 .dash-ems-vuoto { padding: 1.2rem; text-align: center; color: #6c757d; background: #f8f9fa; border-radius: 6px; }
 @media print { .dash-ems-lista { grid-template-columns: 1fr; } .dash-ems-item { box-shadow: none; } }
+
+/* ─────────────────────────────────────────────────────────────
+   /chi-siamo/ — sezione Affiliazioni e riconoscimenti
+   Forzatura dimensioni img per evitare auto-stretch dentro .card-body
+   (ereditato da Bootstrap Italia o regole image-fluid del tema).
+   Layout stacked centrato: logo in alto centrato, testo sotto.
+   ───────────────────────────────────────────────────────────── */
+.affiliazioni-row .card-body img {
+  max-width: 96px !important;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem;
+  object-fit: contain;
+}
+.affiliazioni-row .card-body h3.h6 {
+  text-align: center;
+  min-height: 3em;
+}
+.affiliazioni-row .card-body p.small.text-start {
+  text-align: left;
+}
+@media print {
+  .affiliazioni-row .card-body img { max-width: 70px !important; }
+}

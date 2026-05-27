@@ -410,10 +410,13 @@ def crea_slide_punti(punti: list, out_path: Path,
 
 def crea_slide_affiliazioni(out_path: Path,
                             W: int = 1080, H: int = 1350) -> Path:
-    """Slide finale 'Affiliazioni e riconoscimenti': Quality Label ESC (codice
-    obbligatorio E10435833 ai sensi del Reg. UE 2021/888) + SNPC Volontariato.
+    """Slide finale 'Affiliazioni e riconoscimenti': 3 loghi affiancati.
+    - Quality Label ESC (codice E10435833 obbligatorio per Reg. UE 2021/888)
+    - Coordinamento FEPIVOL (Federazione Pronto Intervento Volontariato ODV)
+    - SNPC Volontariato (Servizio Nazionale Protezione Civile)
     Sempre come ultima slide del carosello: dichiara la legittimazione del
-    Gruppo davanti al pubblico social."""
+    Gruppo davanti al pubblico social. Il logo PC Genzano NON è qui: è la
+    firma istituzionale (barra brand top di ogni slide), non un'affiliazione."""
     base = _sfondo_titolo(W, H)
     _barra_brand(base, W)
     d = ImageDraw.Draw(base)
@@ -422,58 +425,56 @@ def crea_slide_affiliazioni(out_path: Path,
     d.text((60, 238), "AFFILIAZIONI E RICONOSCIMENTI",
            font=ImageFont.truetype(str(find_font("Bold")), 30), fill=ACCENT)
 
-    # 2 loghi affiancati in card bianche, allineamento centrato
+    # 3 loghi affiancati in card bianche rotonde
     repo_root = Path(__file__).resolve().parent.parent
-    logo_esc = repo_root / "static" / "images" / "quality-label-esc.png"
-    logo_snpc = repo_root / "static" / "images" / "logo-snpc-volontariato.png"
+    loghi = [
+        (repo_root / "static" / "images" / "quality-label-esc.png",
+         ["Quality Label", "European Solidarity Corps"],
+         "Codice: E10435833"),
+        (repo_root / "static" / "images" / "logo-fepivol.png",
+         ["Coordinamento", "FE.PI.VOL.", "Volontariato Lazio"],
+         None),
+        (repo_root / "static" / "images" / "logo-snpc-volontariato.png",
+         ["Servizio Nazionale", "Protezione Civile", "Volontariato"],
+         None),
+    ]
 
-    card_size = 320
-    gap = 60
-    total_w = card_size * 2 + gap
+    card_size = 240
+    gap = 40
+    total_w = card_size * 3 + gap * 2
     base_x = (W - total_w) // 2
     base_y = 380
 
-    for idx, lp in enumerate([logo_esc, logo_snpc]):
+    for idx, (lp, _, _) in enumerate(loghi):
         x = base_x + idx * (card_size + gap)
-        # Card bianca rotonda sotto al logo (coerente con il footer)
         card = Image.new("RGBA", (card_size, card_size), (0, 0, 0, 0))
         cd = ImageDraw.Draw(card)
         cd.ellipse([(0, 0), (card_size, card_size)], fill=WHITE)
         if lp.exists():
             li = Image.open(lp).convert("RGBA")
-            li.thumbnail((card_size - 40, card_size - 40), Image.LANCZOS)
+            li.thumbnail((card_size - 30, card_size - 30), Image.LANCZOS)
             lx = (card_size - li.width) // 2
             ly = (card_size - li.height) // 2
             card.paste(li, (lx, ly), li)
         base.alpha_composite(card, (x, base_y))
 
     # Etichette sotto ogni logo
-    lab_ft = ImageFont.truetype(str(find_font("Semibold")), 28)
-    code_ft = ImageFont.truetype(str(find_font("Bold")), 26)
-    labels_y = base_y + card_size + 40
-    # ESC
-    esc_lines = ["Quality Label", "European Solidarity Corps"]
-    cx = base_x + card_size // 2
-    yy = labels_y
-    for ln in esc_lines:
-        tb = d.textbbox((0, 0), ln, font=lab_ft)
-        d.text((cx - (tb[2] - tb[0]) // 2, yy), ln, font=lab_ft, fill=WHITE)
-        yy += 38
-    # Codice obbligatorio (Reg. UE 2021/888)
-    code = "Codice: E10435833"
-    tb = d.textbbox((0, 0), code, font=code_ft)
-    d.text((cx - (tb[2] - tb[0]) // 2, yy + 8), code, font=code_ft, fill=ACCENT)
+    lab_ft = ImageFont.truetype(str(find_font("Semibold")), 22)
+    code_ft = ImageFont.truetype(str(find_font("Bold")), 22)
+    labels_y = base_y + card_size + 30
 
-    # SNPC
-    cx2 = base_x + card_size + gap + card_size // 2
-    snpc_lines = ["Servizio Nazionale", "Protezione Civile", "Volontariato"]
-    yy = labels_y
-    for ln in snpc_lines:
-        tb = d.textbbox((0, 0), ln, font=lab_ft)
-        d.text((cx2 - (tb[2] - tb[0]) // 2, yy), ln, font=lab_ft, fill=WHITE)
-        yy += 38
+    for idx, (_, lines, code) in enumerate(loghi):
+        cx = base_x + idx * (card_size + gap) + card_size // 2
+        yy = labels_y
+        for ln in lines:
+            tb = d.textbbox((0, 0), ln, font=lab_ft)
+            d.text((cx - (tb[2] - tb[0]) // 2, yy), ln, font=lab_ft, fill=WHITE)
+            yy += 30
+        if code:
+            tb = d.textbbox((0, 0), code, font=code_ft)
+            d.text((cx - (tb[2] - tb[0]) // 2, yy + 8), code, font=code_ft, fill=ACCENT)
 
-    # Footer barra brand già applicato; aggiungo CTA in fondo
+    # Footer CTA URL
     base.alpha_composite(scrim(W, 170, dall_alto=False, alpha_max=150), (0, H - 170))
     d.text((60, H - 92), "protezionecivilegenzano.it",
            font=ImageFont.truetype(str(find_font("Bold")), 30), fill=WHITE)
