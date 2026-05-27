@@ -6706,3 +6706,30 @@ html.a11y-pause-anim .cruscotto-home-card, html.a11y-pause-anim .cruscotto-home-
   .grafico-svg { max-width: 100%; }
   .grafico-svg .g-bar { fill: #003366 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
+
+/* ─────────────────────────────────────────────────────────────
+   CRUSCOTTO — Scheda EMS Rapid Mapping v1.0 (28/05/2026)
+   Lista attivazioni Copernicus EMS Europa, filtrabili per cat+area.
+   ───────────────────────────────────────────────────────────── */
+.dash-ems { display: flex; flex-direction: column; }
+.dash-ems-lista { display: grid; grid-template-columns: 1fr; gap: .8rem; margin: 1rem 0 .5rem; }
+@media (min-width: 768px) { .dash-ems-lista { grid-template-columns: 1fr 1fr; } }
+.dash-ems-item { background: #fff; border: 1px solid #d4dde6; border-left: 4px solid #6c757d; border-radius: 6px; padding: .8rem 1rem; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+.dash-ems-item.dash-ems-cat-wildfire { border-left-color: #c2410c; }
+.dash-ems-item.dash-ems-cat-flood { border-left-color: #0369a1; }
+.dash-ems-item.dash-ems-cat-storm { border-left-color: #7c3aed; }
+.dash-ems-item.dash-ems-cat-earthquake { border-left-color: #b45309; }
+.dash-ems-head { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; font-size: .82rem; margin-bottom: .4rem; }
+.dash-ems-cat { font-weight: 600; color: #003366; }
+.dash-ems-cat i.bi { color: inherit; margin-right: .15rem; }
+.dash-ems-stato-badge { padding: .12rem .5rem; border-radius: 999px; font-size: .72rem; font-weight: 600; text-transform: uppercase; letter-spacing: .03em; }
+.dash-ems-stato-aperta { background: #fff8e1; color: #b45309; border: 1px solid #f5b54e; }
+.dash-ems-stato-chiusa { background: #e9ecef; color: #495057; border: 1px solid #ced4da; }
+.dash-ems-data { color: #6c757d; margin-left: auto; font-variant-numeric: tabular-nums; }
+.dash-ems-titolo { font-size: 1rem; margin: .2rem 0; line-height: 1.35; }
+.dash-ems-titolo a { color: #003366; text-decoration: none; }
+.dash-ems-titolo a:hover, .dash-ems-titolo a:focus { text-decoration: underline; }
+.dash-ems-meta { font-size: .85rem; color: #495057; margin: .2rem 0 0; }
+.dash-ems-meta i.bi { color: #6c757d; margin-right: .15rem; }
+.dash-ems-vuoto { padding: 1.2rem; text-align: center; color: #6c757d; background: #f8f9fa; border-radius: 6px; }
+@media print { .dash-ems-lista { grid-template-columns: 1fr; } .dash-ems-item { box-shadow: none; } }
