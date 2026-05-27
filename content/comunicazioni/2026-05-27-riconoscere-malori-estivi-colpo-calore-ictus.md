@@ -32,6 +32,10 @@ Se la persona è incosciente, non respira normalmente o presenta sintomi gravi, 
 
 Si presenta **d'estate**, con temperature elevate, soprattutto in persone anziane, bambini, chi lavora all'aperto e chi vive in ambienti molto caldi.
 
+{{< foto src="/images/2026-05-27-locandina-colpo-calore.webp"
+         alt="Locandina del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma sul colpo di calore: prevenzione (bere acqua, evitare sole 11-18, abiti leggeri, rinfrescare casa), segnali (pelle calda e arrossata, mal di testa, nausea, vertigini, debolezza, crampi, confusione, svenimento), cosa fare subito (spostare in luogo fresco, rinfrescare con acqua, far bere se cosciente, chiamare il 112 se confusione o svenimento). Attenzione speciale per anziani, bambini, persone fragili e animali: mai lasciarli in auto."
+         caption="Riconoscere e prevenire il colpo di calore può salvare una vita. Scarica e stampa la locandina, condividila con familiari fragili." >}}
+
 ### Segnali
 
 - **Temperatura corporea** molto alta, talvolta oltre 39-40 °C.

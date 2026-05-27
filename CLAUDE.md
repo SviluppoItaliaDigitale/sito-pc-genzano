@@ -115,6 +115,29 @@ Articoli operativi: includi un **disclaimer normativo** con link alla [Circolare
 
 ---
 
+## Verifica visiva pre-commit su markup HTML nelle pagine
+
+🔴 **Quando modifichi/aggiungi markup HTML custom dentro `content/**/*.md`** (card Bootstrap, blocchi `<div>` con `d-flex`/grid, layout custom, immagini in box affiancati), **`hugo --quiet --minify` NON BASTA**: la build può essere pulita mentre il rendering visivo è rotto. Incidente del 27/05/2026: card affiliazioni con `<div class="d-flex"><img></div>` viste come immagini giganti che schiacciavano il testo affiancato a 5ch di larghezza, con parole a capo lettera per lettera ("schifo" segnalato dall'utente sul live).
+
+**Procedura obbligatoria pre-commit** (5 passi):
+
+1. `hugo server --port 1314 --bind 127.0.0.1 --logLevel error > /tmp/hugo-server.log 2>&1 &` in background
+2. `mcp__playwright__browser_navigate` su `http://127.0.0.1:1314/sito-pc-genzano/<percorso-pagina>/` (nota: dev server usa subpath GitHub Pages)
+3. `mcp__playwright__browser_take_screenshot` con `element` + `target=".<selettore>"` zoomato sul nuovo blocco
+4. **Read del PNG** per verifica multimodale del rendering (vedi davvero come appare)
+5. **Solo se il rendering è corretto** → `kill %1` + commit + push. Se sbagliato → fix CSS/markup + ripetere
+
+**Eccezioni** (la verifica visiva non serve):
+
+- Modifiche puramente Markdown standard (paragrafi, liste, link, blockquote, code, tabelle MD pipe).
+- Modifiche a frontmatter, data files YAML/JSON, CSS già scoped a classe esistente che NON crea nuova struttura.
+- Fix testuale che non cambia struttura DOM (refusi, datazione, link).
+- Modifiche a template Hugo / partial che NON introducono nuovi pattern di layout (es. cambio testo, aggiunta classe utility a element esistente).
+
+**Per markup HTML custom (card, grid, flex con img, sezioni inline) la verifica visiva è SEMPRE obbligatoria.** Anche se "sembra ovvio". Meglio 30 secondi di Playwright che 1 ora di figura barbina sul live.
+
+---
+
 ## Affiliazioni e riconoscimenti europei — Quality Label ESC + codice obbligatorio
 
 🔴 Il Gruppo è organizzazione accreditata dal **Corpo europeo di solidarietà** (European Solidarity Corps, ESC) della Commissione europea. **Vincolo cogente** ai sensi del **Regolamento (UE) 2021/888**: il logo Quality Label **deve essere mostrato sempre accompagnato dal codice di accreditamento dell'organizzazione**. Mai logo nudo.
