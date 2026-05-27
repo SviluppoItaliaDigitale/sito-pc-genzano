@@ -45,7 +45,31 @@ Ogni testo deve aiutare l'utente a capire cosa sta leggendo, cosa deve fare e do
 **Quando crei una nuova grafica/slide che ha un blocco affiliazioni**, ricontrolla sempre questi 3 punti:
 1. Il logo ESC è accompagnato dal codice `E10435833` ben leggibile? → se no, non è conforme al Reg. UE 2021/888.
 2. Hai aggiunto il logo PC Genzano tra gli "affiliati"? → se sì, sbagliato: rimuovilo, non è un'affiliazione esterna.
-3. Hai aggiunto i 2 loghi al banner cover di un articolo? → se sì, sbagliato: il banner resta col solo titolo (vedi CLAUDE.md § "Affiliazioni e riconoscimenti europei").
+3. Hai aggiunto i 3 loghi al banner cover di un articolo? → se sì, sbagliato: il banner resta col solo titolo (vedi CLAUDE.md § "Affiliazioni e riconoscimenti europei").
+
+### Composizione standard di ogni nuova grafica = ESATTAMENTE 4 LOGHI, MAI DOPPIONI
+
+🔴 **Vincolo cogente: max 4 loghi totali per grafica, mai doppioni.** Vale per **tutte le grafiche istituzionali del Gruppo** prodotte in proprio o con strumenti esterni: cover articolo, slide social (carosello/post/storia), schede A4 stampabili (kit calamità, casi studio), locandine, deck di presentazione, infografiche, manifesti.
+
+| # | Logo | Dove | File |
+|---|---|---|---|
+| 1 | **PC Genzano** (firma del Gruppo) | header/banner/intestazione | `/images/logo-pc-genzano.webp` (o `.png`/`-hires.png`) |
+| 2 | **Quality Label ESC + codice `E10435833`** | footer/blocco affiliazioni | `/images/quality-label-esc.png` (web) o `/images/logo-esc-quality-label-it.png` (hi-res stampa) |
+| 3 | **Coordinamento FE.PI.VOL.** | footer/blocco affiliazioni | `/images/logo-fepivol.png` |
+| 4 | **SNPC Volontariato** | footer/blocco affiliazioni | `/images/logo-snpc-volontariato.png` |
+
+**Regole di composizione, vietato deviare:**
+
+- La **firma (1) è separata** dalle affiliazioni (2-4): mai mescolare PC Genzano tra le card affiliazione (sarebbe doppione — è già la firma istituzionale visibile come header/banner).
+- **Mai inserire lo stesso logo due volte** nella stessa grafica (es. PC Genzano nell'header E ancora in una card affiliazione = doppione, vietato).
+- **Mai inserire un 5° logo** nelle grafiche del Gruppo (es. PC Lazio, Comune di Genzano, Croce Rossa, ANPAS, VVF, INGV, ecc.). Quei loghi sono di **enti coordinatori/operatori del Sistema Nazionale di PC** e vanno citati nei **contenuti testuali** o nel **footer site-wide del sito** (chrome del portale), MAI dentro la grafica istituzionale del Gruppo.
+- **Vincolo cogente Quality Label:** il logo ESC va SEMPRE con il codice `E10435833` accanto, mai disgiunti (Reg. UE 2021/888). Le altre 3 affiliazioni non hanno codici obbligatori.
+
+**Vale anche per grafiche realizzate con AI esterne** (ChatGPT, Gemini, Midjourney, Canva, Adobe Express, DALL-E, Stable Diffusion, ecc.): quando dai un brief a un'AI esterna per generare una locandina/infografica/banner/post per il Gruppo, includi sempre nel prompt la regola **"esattamente 4 loghi, mai doppioni"** + fornisci i 4 file ufficiali del repo. Esempio di pattern brief da incollare in coda al prompt AI:
+
+> *Vincolo loghi (cogente): la grafica deve riportare ESATTAMENTE 4 loghi (1) PC Genzano in alto come firma; (2) Quality Label ESC + codice E10435833 accanto, (3) Coordinamento FE.PI.VOL., (4) SNPC Volontariato nel footer come blocco affiliazioni. Mai doppioni. Mai 5° logo. Mai logo ESC senza codice E10435833. File ufficiali: \[allegare i 4 PNG dal repo\].*
+
+Vedi `CONTESTO-AI.md` / `CONTESTO-AI-slim.md` per il prompt completo da incollare alle AI esterne (rigenera con `bash scripts/export-contesto-ai.sh` dopo qualsiasi modifica a CLAUDE.md o `.claude/rules/`).
 
 **Why:** richiesta utente del 27 maggio 2026 + verifica retroattiva che footer Hugo + site-chrome.js già hanno il blocco dal 18 maggio. La regola codifica il vincolo legale UE per impedire grafiche future che mostrino il logo Quality Label senza codice (sarebbero non conformi al Reg. UE 2021/888).
 

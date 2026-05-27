@@ -145,9 +145,9 @@ Materiali informativi della campagna nazionale [Io Non Rischio](https://www.iono
 |---|---|---|
 | [Atlante 2025 — Territori in trasformazione](https://www.protezionecivilegenzano.it/documenti/download/ATLANTE-2025-TERRITORI-IN-TRASFORMAZIONE-12-05.pdf) | Rapporto nazionale sui territori e i rischi ambientali | PDF · 118,7 MB |
 
-## Loghi e stemmi del Gruppo
+## Loghi ufficiali del Gruppo e delle affiliazioni
 
-I loghi e gli stemmi ufficiali del Gruppo sono disponibili al download per **personalizzazioni di abbigliamento, accessori e attrezzature** (divise, magliette, cappellini, borse, mezzi, gadget istituzionali, materiale informativo).
+I 4 loghi ufficiali per le grafiche del Gruppo (cover articoli, slide social, schede A4, locandine, infografiche). **Ogni grafica istituzionale deve riportare ESATTAMENTE questi 4 loghi, mai doppioni**: la firma PC Genzano in alto + le 3 affiliazioni (Quality Label ESC + codice E10435833, Coordinamento FEPIVOL, SNPC Volontariato) in basso.
 
 <div class="card border-warning bg-warning bg-opacity-10 mb-3">
 <div class="card-body p-3 small">
@@ -156,12 +156,35 @@ I loghi e gli stemmi ufficiali del Gruppo sono disponibili al download per **per
 </div>
 </div>
 
+### I 4 loghi standard per ogni grafica
+
+| # | Logo | URL diretto (pronto per AI esterne / Canva / stampa) | Formato |
+|---|---|---|---|
+| 1 | **PC Genzano** (firma) | <https://www.protezionecivilegenzano.it/images/logo-pc-genzano.webp> | WebP |
+| 1 | **PC Genzano hi-res** (stampa, gadget, mezzi) | <https://www.protezionecivilegenzano.it/images/logo-pc-genzano-hires.png> | PNG hi-res |
+| 2 | **Quality Label ESC** + codice E10435833 — web | <https://www.protezionecivilegenzano.it/images/quality-label-esc.png> | PNG · 400×400 |
+| 2 | **Quality Label ESC** — versione hi-res ufficiale UE | <https://www.protezionecivilegenzano.it/images/logo-esc-quality-label-it.png> | PNG · 4016×4016 |
+| 2 | **Quality Label ESC** — pacchetto ufficiale UE (PDF vettoriale + PNG) | <https://www.protezionecivilegenzano.it/manuali/loghi-esc-italiano-pacchetto-ufficiale.zip> | ZIP |
+| 3 | **Coordinamento FE.PI.VOL.** | <https://www.protezionecivilegenzano.it/images/logo-fepivol.png> | PNG · 400×400 |
+| 4 | **SNPC Volontariato** | <https://www.protezionecivilegenzano.it/images/logo-snpc-volontariato.png> | PNG · 400×482 |
+
+<div class="card border-primary bg-primary bg-opacity-10 mb-3">
+<div class="card-body p-3 small">
+<i class="bi bi-robot me-1" aria-hidden="true"></i>
+<strong>Per le AI esterne</strong> (ChatGPT, Gemini, Midjourney, Canva, Adobe Express, DALL-E, ecc.): gli URL sopra sono <strong>pubblici e diretti</strong>, scaricabili dalle AI con capacità web/image-fetch. Quando dai un brief a un'AI esterna per generare una grafica del Gruppo, includi <strong>ESATTAMENTE QUESTI 4 LOGHI</strong> e specifica:
+<br><br>
+<em>«La grafica deve riportare ESATTAMENTE 4 loghi: (1) PC Genzano in alto come firma; (2) Quality Label ESC + codice E10435833 accanto (mai disgiunti, Reg. UE 2021/888); (3) Coordinamento FE.PI.VOL.; (4) SNPC Volontariato — questi 3 nel footer come blocco affiliazioni. Mai doppioni. Mai 5° logo (Comune, PC Lazio, VVF, INGV, ecc.). Mai logo ESC senza codice E10435833.»</em>
+</div>
+</div>
+
+### Varianti storiche e composizioni del logo PC Genzano
+
 | Logo / stemma | Descrizione | Formato |
 |---|---|---|
 | [Stemma circolare classico PC Genzano](/manuali/loghi/stemma-pc-genzano-circolare-classico.png) | Stemma istituzionale del Gruppo Comunale: cerchio con scritta "Protezione Civile — Genzano di Roma" e stemma del Comune al centro. Sfondo trasparente, alta risoluzione. | PNG · 181 KB |
 | [Stemma circolare con trinacria PC Genzano](/manuali/loghi/stemma-pc-genzano-circolare-trinacria.jpg) | Variante con il simbolo nazionale della Protezione Civile (trinacria tricolore) al centro. | JPG · 89 KB |
 | [Logo PC Genzano + stemma del Comune](/manuali/loghi/logo-pc-genzano-volontariato-comune.jpg) | Logo composito verticale: stemma del Comune di Genzano di Roma + simbolo nazionale Protezione Civile, fascia "Volontariato" e dicitura completa "Gruppo Comunale Volontari di Protezione Civile — Genzano di Roma". | JPG · 122 KB |
-| [Logo Servizio Nazionale di Protezione Civile — Volontariato](/manuali/loghi/logo-dpc-volontariato-nazionale.jpg) | Logo ufficiale del Servizio Nazionale di Protezione Civile, settore Volontariato. Per uso istituzionale dei volontari del Sistema. | JPG · 75 KB |
+| [Logo Servizio Nazionale di Protezione Civile — Volontariato (alta risoluzione)](/manuali/loghi/logo-dpc-volontariato-nazionale.jpg) | Versione alta risoluzione del logo SNPC, ufficiale del Servizio Nazionale di Protezione Civile, settore Volontariato. Per stampa professionale. | JPG · 75 KB |
 
 ## Locandine ufficiali
 

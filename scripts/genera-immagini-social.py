@@ -425,25 +425,27 @@ def crea_slide_affiliazioni(out_path: Path,
     d.text((60, 238), "AFFILIAZIONI E RICONOSCIMENTI",
            font=ImageFont.truetype(str(find_font("Bold")), 30), fill=ACCENT)
 
-    # 3 loghi affiancati in card bianche rotonde
+    # 3 loghi affiancati in card bianche rotonde — ESC usa la versione HI-RES
+    # 4016x4016 ufficiale UE per massima nitidezza (cerchio Quality Label).
     repo_root = Path(__file__).resolve().parent.parent
     loghi = [
-        (repo_root / "static" / "images" / "quality-label-esc.png",
+        (repo_root / "static" / "images" / "logo-esc-quality-label-it.png",
          ["Quality Label", "European Solidarity Corps"],
          "Codice: E10435833"),
         (repo_root / "static" / "images" / "logo-fepivol.png",
          ["Coordinamento", "FE.PI.VOL.", "Volontariato Lazio"],
          None),
         (repo_root / "static" / "images" / "logo-snpc-volontariato.png",
-         ["Servizio Nazionale", "Protezione Civile", "Volontariato"],
+         ["Servizio Nazionale", "di Protezione Civile"],
          None),
     ]
 
-    card_size = 240
-    gap = 40
+    # Card più grandi per maggiore nitidezza visiva post-compressione JPEG
+    card_size = 280
+    gap = 30
     total_w = card_size * 3 + gap * 2
     base_x = (W - total_w) // 2
-    base_y = 380
+    base_y = 360
 
     for idx, (lp, _, _) in enumerate(loghi):
         x = base_x + idx * (card_size + gap)
@@ -452,7 +454,8 @@ def crea_slide_affiliazioni(out_path: Path,
         cd.ellipse([(0, 0), (card_size, card_size)], fill=WHITE)
         if lp.exists():
             li = Image.open(lp).convert("RGBA")
-            li.thumbnail((card_size - 30, card_size - 30), Image.LANCZOS)
+            # Scaling LANCZOS sulla risoluzione originale (massima nitidezza)
+            li.thumbnail((card_size - 36, card_size - 36), Image.LANCZOS)
             lx = (card_size - li.width) // 2
             ly = (card_size - li.height) // 2
             card.paste(li, (lx, ly), li)
@@ -461,7 +464,7 @@ def crea_slide_affiliazioni(out_path: Path,
     # Etichette sotto ogni logo
     lab_ft = ImageFont.truetype(str(find_font("Semibold")), 22)
     code_ft = ImageFont.truetype(str(find_font("Bold")), 22)
-    labels_y = base_y + card_size + 30
+    labels_y = base_y + card_size + 25
 
     for idx, (_, lines, code) in enumerate(loghi):
         cx = base_x + idx * (card_size + gap) + card_size // 2
@@ -480,7 +483,8 @@ def crea_slide_affiliazioni(out_path: Path,
            font=ImageFont.truetype(str(find_font("Bold")), 30), fill=WHITE)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    base.convert("RGB").save(out_path, "JPEG", quality=92, optimize=True, progressive=True)
+    # JPEG quality 95 (era 92) per ridurre artifact su dettagli fini dei loghi
+    base.convert("RGB").save(out_path, "JPEG", quality=95, optimize=True, progressive=True, subsampling=0)
     return out_path
 
 

@@ -277,7 +277,16 @@ Da maggio 2026 ogni carosello Instagram generato automaticamente (e ogni post si
 
 Implementazione: funzione `crea_slide_affiliazioni()` in `scripts/genera-immagini-social.py`. Inserita come ultima slide nel piano del carosello (titolo → citazione → punti → foto → **affiliazioni**). Se il carosello raggiunge il limite Instagram di 10 slide, la slide affiliazioni rimpiazza l'ultima foto (priorità all'esposizione legale).
 
-**Loghi del Gruppo nei post = 2**, non 3: l'identità PC Genzano è già nella **barra brand top** di ogni slide (logo PC + "Protezione Civile / Gruppo Comunale Volontari — Genzano di Roma"). Aggiungerla anche tra le "affiliazioni" sarebbe duplicazione: la regola è 2 loghi affiliazione (ESC + SNPC) + 1 firma istituzionale (PC Genzano).
+**Composizione cogente delle slide social del Gruppo = ESATTAMENTE 4 LOGHI, MAI DOPPIONI:**
+
+Ogni slide social istituzionale (carosello, post singolo, storia) deve mostrare **esattamente 4 loghi**:
+
+1. **PC Genzano** (firma) — nella barra brand top di ogni slide, generata da `_barra_brand()`
+2. **Quality Label ESC + codice E10435833** — nella slide finale "Affiliazioni" (`crea_slide_affiliazioni()`)
+3. **Coordinamento FE.PI.VOL.** — nella stessa slide affiliazioni
+4. **SNPC Volontariato** — nella stessa slide affiliazioni
+
+Mai inserire PC Genzano tra le affiliazioni (sarebbe doppione: è già la firma top). Mai inserire un 5° logo. Mai logo ESC senza codice E10435833.
 
 **Vincolo cogente per future modifiche al generatore**: se modifichi `crea_slide_affiliazioni()`, il codice `E10435833` deve restare **ben leggibile** accanto al logo Quality Label (colore accento giallo `#ffbe2e` su sfondo blu istituzionale per il contrasto WCAG). Mai logo nudo, mai codice nudo.
 
