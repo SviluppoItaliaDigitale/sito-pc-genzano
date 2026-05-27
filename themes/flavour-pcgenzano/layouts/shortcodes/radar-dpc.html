@@ -78,10 +78,16 @@
 
     function pad(n){ return ('0'+n).slice(-2); }
     function token(){ return Math.floor(Date.now()/300000); } // finestra 5'
-    function urlFor(layer){
+    function urlFor(layer, forceCacheBust){
+      // forceCacheBust=true: usa Date.now() istantaneo per il click "Aggiorna"
+      // manuale, così la URL cambia anche se l'utente clicca entro la stessa
+      // finestra di 5 minuti (altrimenti Leaflet vedrebbe URL identica e non
+      // ricaricerebbe i tile). Default = token() = finestra 5' allineata al
+      // ritmo di pubblicazione DPC.
+      var t = forceCacheBust ? Date.now() : token();
       return WMTS + '?Service=WMTS&Request=GetTile&Version=1.0.0&Layer=' + layer
         + '&Style=&Format=image/png&TileMatrixSet=EPSG:900913&TileMatrix=EPSG:900913:{z}&TileRow={y}&TileCol={x}'
-        + '&cache=' + token();
+        + '&cache=' + t;
     }
 
     var map = L.map('radar-dpc-mappa', { center: [42.0, 12.5], zoom: 6, scrollWheelZoom: false });
@@ -110,7 +116,7 @@
         stato.textContent = 'Ultimo rilevamento ' + pad(d.getHours()) + ':' + pad(d.getMinutes()) + (mins >= 0 ? (' (' + mins + ' min fa)') : '');
       }).catch(function(){ stato.textContent = 'Aggiornato pochi minuti fa'; });
     }
-    function refresh(){ radar.setUrl(urlFor(prodotto)); aggiornaOrario(); }
+    function refresh(){ radar.setUrl(urlFor(prodotto, true)); aggiornaOrario(); }
     aggiornaOrario();
     setInterval(refresh, 300000); // ogni 5 minuti il DPC pubblica un nuovo campione
 
