@@ -26,6 +26,29 @@ Ogni testo deve aiutare l'utente a capire cosa sta leggendo, cosa deve fare e do
 - Numeri di telefono: scrivi sempre in formato leggibile (es. 06 1234 5678).
 - Date: scrivi in formato esteso quando rivolto ai cittadini (es. "martedì 6 aprile 2026"), usa AAAA-MM-GG solo nel frontmatter Hugo.
 
+## Regola Quality Label ESC — logo + codice E10435833 sempre insieme
+
+🔴 **Vincolo cogente UE** (Regolamento UE 2021/888 — European Solidarity Corps Visual Identity Guidelines): il **logo Quality Label** dell'European Solidarity Corps **deve essere sempre mostrato accompagnato dal codice di accreditamento dell'organizzazione**. Mai logo nudo, mai codice nudo, mai disgiunti.
+
+- **Codice del Gruppo:** `E10435833`
+- **Logo ufficiale:** `/images/quality-label-esc.png` (PNG, 400×400, fondo bianco)
+- **Versione hi-res stampa:** `/images/logo-esc-quality-label-it.png` (4016×4016)
+- **Loghi affiliazione del Gruppo = 2**: Quality Label ESC + SNPC Volontariato (`/images/logo-snpc-volontariato.png`). Il logo PC Genzano è la firma istituzionale, **non si conta come affiliazione**.
+
+**Esposizione già attiva** (non duplicare):
+- Footer site-wide (`themes/flavour-pcgenzano/layouts/partials/footer.html` + `static/app-shared/site-chrome.js`)
+- Pagina `/chi-siamo/` § "Affiliazioni e riconoscimenti europei"
+- Carosello social Instagram (slide finale "Affiliazioni" via `crea_slide_affiliazioni()` in `genera-immagini-social.py`)
+- Schede stampabili A4 (banda piè pagina in `print.css` via `.scheda::after` + immagine `footer-print-affiliazioni.png`)
+- Deck di presentazione (slide dedicata in `genera-presentazione.py`)
+
+**Quando crei una nuova grafica/slide che ha un blocco affiliazioni**, ricontrolla sempre questi 3 punti:
+1. Il logo ESC è accompagnato dal codice `E10435833` ben leggibile? → se no, non è conforme al Reg. UE 2021/888.
+2. Hai aggiunto il logo PC Genzano tra gli "affiliati"? → se sì, sbagliato: rimuovilo, non è un'affiliazione esterna.
+3. Hai aggiunto i 2 loghi al banner cover di un articolo? → se sì, sbagliato: il banner resta col solo titolo (vedi CLAUDE.md § "Affiliazioni e riconoscimenti europei").
+
+**Why:** richiesta utente del 27 maggio 2026 + verifica retroattiva che footer Hugo + site-chrome.js già hanno il blocco dal 18 maggio. La regola codifica il vincolo legale UE per impedire grafiche future che mostrino il logo Quality Label senza codice (sarebbero non conformi al Reg. UE 2021/888).
+
 ## Regola immagini — fascia blu istituzionale
 
 Ogni immagine di copertina degli articoli DEVE avere una fascia blu in basso con:

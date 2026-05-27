@@ -408,6 +408,81 @@ def crea_slide_punti(punti: list, out_path: Path,
     return out_path
 
 
+def crea_slide_affiliazioni(out_path: Path,
+                            W: int = 1080, H: int = 1350) -> Path:
+    """Slide finale 'Affiliazioni e riconoscimenti': Quality Label ESC (codice
+    obbligatorio E10435833 ai sensi del Reg. UE 2021/888) + SNPC Volontariato.
+    Sempre come ultima slide del carosello: dichiara la legittimazione del
+    Gruppo davanti al pubblico social."""
+    base = _sfondo_titolo(W, H)
+    _barra_brand(base, W)
+    d = ImageDraw.Draw(base)
+
+    d.line([(60, 190), (W - 60, 190)], fill=(255, 255, 255, 55), width=2)
+    d.text((60, 238), "AFFILIAZIONI E RICONOSCIMENTI",
+           font=ImageFont.truetype(str(find_font("Bold")), 30), fill=ACCENT)
+
+    # 2 loghi affiancati in card bianche, allineamento centrato
+    repo_root = Path(__file__).resolve().parent.parent
+    logo_esc = repo_root / "static" / "images" / "quality-label-esc.png"
+    logo_snpc = repo_root / "static" / "images" / "logo-snpc-volontariato.png"
+
+    card_size = 320
+    gap = 60
+    total_w = card_size * 2 + gap
+    base_x = (W - total_w) // 2
+    base_y = 380
+
+    for idx, lp in enumerate([logo_esc, logo_snpc]):
+        x = base_x + idx * (card_size + gap)
+        # Card bianca rotonda sotto al logo (coerente con il footer)
+        card = Image.new("RGBA", (card_size, card_size), (0, 0, 0, 0))
+        cd = ImageDraw.Draw(card)
+        cd.ellipse([(0, 0), (card_size, card_size)], fill=WHITE)
+        if lp.exists():
+            li = Image.open(lp).convert("RGBA")
+            li.thumbnail((card_size - 40, card_size - 40), Image.LANCZOS)
+            lx = (card_size - li.width) // 2
+            ly = (card_size - li.height) // 2
+            card.paste(li, (lx, ly), li)
+        base.alpha_composite(card, (x, base_y))
+
+    # Etichette sotto ogni logo
+    lab_ft = ImageFont.truetype(str(find_font("Semibold")), 28)
+    code_ft = ImageFont.truetype(str(find_font("Bold")), 26)
+    labels_y = base_y + card_size + 40
+    # ESC
+    esc_lines = ["Quality Label", "European Solidarity Corps"]
+    cx = base_x + card_size // 2
+    yy = labels_y
+    for ln in esc_lines:
+        tb = d.textbbox((0, 0), ln, font=lab_ft)
+        d.text((cx - (tb[2] - tb[0]) // 2, yy), ln, font=lab_ft, fill=WHITE)
+        yy += 38
+    # Codice obbligatorio (Reg. UE 2021/888)
+    code = "Codice: E10435833"
+    tb = d.textbbox((0, 0), code, font=code_ft)
+    d.text((cx - (tb[2] - tb[0]) // 2, yy + 8), code, font=code_ft, fill=ACCENT)
+
+    # SNPC
+    cx2 = base_x + card_size + gap + card_size // 2
+    snpc_lines = ["Servizio Nazionale", "Protezione Civile", "Volontariato"]
+    yy = labels_y
+    for ln in snpc_lines:
+        tb = d.textbbox((0, 0), ln, font=lab_ft)
+        d.text((cx2 - (tb[2] - tb[0]) // 2, yy), ln, font=lab_ft, fill=WHITE)
+        yy += 38
+
+    # Footer barra brand già applicato; aggiungo CTA in fondo
+    base.alpha_composite(scrim(W, 170, dall_alto=False, alpha_max=150), (0, H - 170))
+    d.text((60, H - 92), "protezionecivilegenzano.it",
+           font=ImageFont.truetype(str(find_font("Bold")), 30), fill=WHITE)
+
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    base.convert("RGB").save(out_path, "JPEG", quality=92, optimize=True, progressive=True)
+    return out_path
+
+
 def crea_story_verticale(cover_path: Path, titolo: str, descrizione: str,
                          out_path: Path, badge: str = "",
                          hero_path: Path = None) -> Path:
@@ -673,9 +748,12 @@ def main() -> int:
         out_dir = slug_dir(art["slug"])
         story_path = out_dir / "storia.jpg"
 
-        # Piano del carosello (ordine): titolo -> citazione -> punti -> foto.
+        # Piano del carosello (ordine): titolo -> citazione -> punti -> foto -> affiliazioni.
         # Citazione e punti solo se presenti nel frontmatter (social_citazione /
-        # social_punti). Max 10 slide (limite Instagram).
+        # social_punti). Affiliazioni: slide finale fissa con Quality Label ESC
+        # (codice E10435833 obbligatorio, Reg. UE 2021/888) + SNPC Volontariato.
+        # Max 10 slide (limite Instagram): se ci sono troppe foto, l'affiliazione
+        # taglia in coda (ma viene sempre messa se c'è spazio).
         slides = [("titolo", None)]
         if art.get("citazione"):
             slides.append(("citazione", art["citazione"]))
@@ -683,7 +761,10 @@ def main() -> int:
             slides.append(("punti", art["punti"]))
         for foto in art["carousel"][1:]:
             slides.append(("foto", foto))
-        slides = slides[:10]
+        # Inserisci affiliazione come ultima slide, tagliando l'ultima foto se serve
+        if len(slides) >= 10:
+            slides = slides[:9]
+        slides.append(("affiliazioni", None))
         n_slide = len(slides)
 
         # Nomi a prova di errore: 1 sola slide -> feed-post.jpg; 2+ -> feed-carosello-N.jpg
@@ -710,6 +791,8 @@ def main() -> int:
                 crea_slide_citazione(data, dest)
             elif kind == "punti":
                 crea_slide_punti(data, dest)
+            elif kind == "affiliazioni":
+                crea_slide_affiliazioni(dest)
             else:
                 crea_slide_foto(data, dest)
 

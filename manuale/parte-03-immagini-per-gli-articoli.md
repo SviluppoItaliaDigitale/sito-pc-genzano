@@ -718,6 +718,34 @@ python3 scripts/applica-fascia-foto.py /tmp/foto.jpg nome-output --force
 
 Bypassa il check di idempotenza. Da usare solo manualmente, mai dentro script automatici.
 
+### 3.X — Loghi affiliazione: Quality Label ESC + SNPC Volontariato
+
+🔴 **Vincolo cogente** (Regolamento UE 2021/888): il logo Quality Label dell'European Solidarity Corps va **sempre** mostrato con il codice di accreditamento `E10435833` accanto. Mai disgiunti.
+
+**Loghi disponibili nel repo:**
+
+| Logo | Path | Uso |
+|---|---|---|
+| Quality Label ESC (PNG 400×400, web) | `static/images/quality-label-esc.png` | Footer site-wide, /chi-siamo/, slide social, schede A4 |
+| Quality Label ESC (PNG 4016×4016, hi-res stampa) | `static/images/logo-esc-quality-label-it.png` | Stampe alta qualità, locandine, totem |
+| Pacchetto ufficiale UE (ZIP con PDF vettoriale + PNG) | `static/manuali/loghi-esc-italiano-pacchetto-ufficiale.zip` | Riferimento, manipolazione futura |
+| SNPC Volontariato | `static/images/logo-snpc-volontariato.png` | Sempre abbinato a Quality Label come "affiliazioni del Gruppo" |
+
+**Regola dei "2 loghi affiliazione":** il Gruppo si presenta con **2 loghi affiliazione**, non 3. Quality Label ESC + SNPC Volontariato. Il **logo PC Genzano è la firma istituzionale del Gruppo** (banner, header, fascia blu): NON va contato come affiliazione (sarebbe duplicazione).
+
+**Dove sono già esposti** (non ri-implementare):
+- Footer site-wide (`themes/flavour-pcgenzano/layouts/partials/footer.html` + `static/app-shared/site-chrome.js`)
+- Pagina `/chi-siamo/` § "Affiliazioni e riconoscimenti europei"
+- Carosello social Instagram (slide finale generata da `crea_slide_affiliazioni()`)
+- Schede stampabili A4 (banda piè pagina in stampa via `print.css` + immagine `footer-print-affiliazioni.png`)
+- Deck di presentazione (slide "Affiliazioni e riconoscimenti europei")
+
+**Cosa NON fare:**
+- ❌ Aggiungere i 2 loghi al banner cover degli articoli (sovraffolla il titolo, vincolo UE già soddisfatto dal footer)
+- ❌ Batch retroattivo sulle ~577 immagini esistenti (ricompressione WebP degrada qualità, nessun valore aggiunto)
+- ❌ Modificare i pittogrammi ISO 7010 / ARASAAC (violerebbe licenze d'uso terze)
+- ❌ Mostrare il logo Quality Label senza il codice `E10435833` (non conforme al Reg. UE 2021/888)
+
 ---
 
 _[Indice manuale](README.md)_

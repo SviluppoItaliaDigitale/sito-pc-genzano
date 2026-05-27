@@ -646,6 +646,13 @@ content("Diventa volontario", [
     "Il valore del volontariato per la comunità.",
 ], N())
 
+content("Affiliazioni e riconoscimenti europei", [
+    "Quality Label del Corpo europeo di solidarietà (European Solidarity Corps) — Commissione europea.",
+    "Codice di accreditamento dell'organizzazione: E10435833 (sempre accanto al logo, Reg. UE 2021/888).",
+    "Servizio Nazionale di Protezione Civile (D.Lgs. 1/2018) — iscrizione al Registro Regionale del Volontariato.",
+    "Coordinamento FEPIVOL — Federazione Pronto Intervento Volontariato ODV.",
+], N(), fonti="European Solidarity Corps · DPC · Registro Regionale Lazio · FEPIVOL")
+
 slide_sistema(N())
 
 divider("Risorse e trasparenza", N())
