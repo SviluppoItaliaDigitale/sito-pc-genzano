@@ -6626,11 +6626,11 @@ html.a11y-pause-anim .consulta-rapida .cr-card:hover { transform: none; }
 .dash-aria-h3 { font-size: 1rem; color: #003366; margin: 1rem 0 .5rem; }
 .dash-aria-nota { font-size: .82rem; color: #6c757d; font-weight: 400; }
 
-/* Cruscotto — schede Satellite e Incendi (mappa a piena larghezza) */
+/* Cruscotto — schede Satellite/Incendi/CAMS (mappa a piena larghezza) */
 .dash-incendi-box { margin-bottom: .4rem; }
-#dash-incendi-mappa, #dash-sat-mappa { height: 520px; border-radius: 8px; border: 2px solid #003366; background: #0b1622; }
+#dash-incendi-mappa, #dash-sat-mappa, #dash-cams-mappa { height: 520px; border-radius: 8px; border: 2px solid #003366; background: #0b1622; }
 .dash-stella { background: transparent; border: 0; }
-@media (max-width: 768px) { #dash-incendi-mappa, #dash-sat-mappa { height: 420px; } }
+@media (max-width: 768px) { #dash-incendi-mappa, #dash-sat-mappa, #dash-cams-mappa { height: 420px; } }
 /* Cruscotto — scheda Vulcani (solo indicatori) */
 .dash-vulcani .dash-sisma-kpi { margin-bottom: .6rem; }
 /* Cruscotto — mappa di previsione regionale ARPA Lazio (scheda Aria) */
