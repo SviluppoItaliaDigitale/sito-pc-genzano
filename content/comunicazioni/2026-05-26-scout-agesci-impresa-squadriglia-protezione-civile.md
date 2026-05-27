@@ -16,7 +16,7 @@ social_citazione: "Chi conosce i rischi del proprio territorio e i comportamenti
 social_punti:
   - "Domenica 24 maggio una squadriglia scout AGESCI di Genzano ha visitato il nostro deposito mezzi."
   - "Tema della visita: impresa di squadriglia sulla protezione civile."
-  - "I ragazzi hanno conosciuto attrezzature antincendio boschivo e l'autocarro della Colonna Mobile regionale."
+  - "I ragazzi hanno conosciuto attrezzature antincendio boschivo e il Mercedes Actros, autobotte AIB da 14.000 litri del Gruppo."
   - "Il D.Lgs. 1/2018 riconosce la diffusione della cultura di protezione civile come compito istituzionale del Servizio Nazionale."
 ---
 
@@ -26,7 +26,7 @@ Domenica mattina 24 maggio una squadriglia del **gruppo scout AGESCI di Genzano 
 
 {{< foto src="/images/2026-05-24-scout-agesci-visita-colonna-mobile.webp"
          alt="Quattro persone in posa davanti a un grande autocarro bianco con la scritta \"Regione Lazio - Protezione Civile / Colonna Mobile - Volontariato\" e \"Città di Genzano di Roma\". A sinistra un adulto in maglia nera, al centro due ragazzi in maglia azzurra, a destra un adulto in polo scura con pantaloni operativi a bande rosse riflettenti."
-         caption="La squadriglia davanti all'autocarro \"Colonna Mobile - Volontariato\" della Regione Lazio in dotazione al nostro Gruppo. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+         caption="La squadriglia davanti al Mercedes Actros del Gruppo, autobotte antincendio da 14.000 litri della Regione Lazio. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
 L'**impresa di squadriglia** è il progetto autogestito della branca Esploratori e Guide (12-16 anni). I ragazzi lo ideano e lo portano avanti in piccolo gruppo, con il supporto dei loro capi. Il metodo è quello della tradizione scout: scegliere un tema, studiarlo, provarlo sul campo, restituirlo alla propria comunità.
 
@@ -36,7 +36,7 @@ Questa squadriglia ha scelto la protezione civile. Ha deciso di incontrare i vol
 
 ## Cosa hanno visto e provato
 
-Il punto di partenza è stato il deposito dei mezzi. I ragazzi sono saliti sull'**autocarro "Colonna Mobile - Volontariato" della Regione Lazio** in dotazione al nostro Gruppo. Hanno visto come è organizzato il vano di carico e a cosa serve in caso di intervento.
+Il punto di partenza è stato il deposito dei mezzi. I ragazzi sono saliti sul **Mercedes Actros** del Gruppo, l'autobotte antincendio della Regione Lazio con impianto da 14.000 litri. Hanno visto come è organizzato il mezzo e a cosa serve in caso di intervento.
 
 I volontari hanno mostrato le **attrezzature per l'antincendio boschivo (AIB)** che il Gruppo utilizza ogni estate nella campagna AIB regionale:
 
