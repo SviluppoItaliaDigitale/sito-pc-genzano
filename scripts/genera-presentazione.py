@@ -525,9 +525,10 @@ slide_cruscotto(N())
 content("Cruscotto — le fonti dei dati", [
     "INGV per la sismicità e i vulcani; Dipartimento della Protezione Civile per il radar pioggia.",
     "ItaliaMeteo (modello ICON-2I) ed EUMETSAT per previsioni e satellite.",
-    "EFFIS / Copernicus per gli incendi; ARPA Lazio per la qualità dell'aria.",
+    "EFFIS / Copernicus per gli incendi; ARPA Lazio per la qualità dell'aria regionale; Copernicus CAMS per la qualità dell'aria su scala europea.",
+    "Copernicus EMS Rapid Mapping per le attivazioni di mappatura emergenze in Europa.",
     "Rischio sismico comunale dalla piattaforma SicuroPiù.",
-], N(), fonti="INGV · DPC · ItaliaMeteo · EUMETSAT · Copernicus · ARPA Lazio · EUCENTRE/ReLUIS")
+], N(), fonti="INGV · DPC · ItaliaMeteo · EUMETSAT · Copernicus (CAMS · EMS · EFFIS) · ARPA Lazio · EUCENTRE/ReLUIS")
 
 slide_rischi(N())
 
