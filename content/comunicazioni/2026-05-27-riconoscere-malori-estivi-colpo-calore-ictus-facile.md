@@ -39,6 +39,10 @@ Se la persona non risponde o non respira, **chiama subito il 112**. Segui le ist
 
 Il colpo di calore succede d'estate con molto caldo.
 
+{{< foto src="/images/2026-05-27-locandina-colpo-calore.webp"
+         alt="Disegno con i consigli per evitare il colpo di calore: bere acqua, evitare il sole dalle 11 alle 18, vestiti leggeri, rinfrescare casa. I segnali sono: pelle calda, mal di testa, debolezza, confusione. Cosa fare: spostare in luogo fresco, rinfrescare con acqua, chiamare il 112 se la persona è confusa o sviene. Attenzione a anziani, bambini, persone fragili e animali: mai lasciarli in auto."
+         caption="Conserva questa scheda e tienila in casa. Aiuta a capire i segnali del colpo di calore." >}}
+
 ### Segnali del colpo di calore
 
 - La persona è molto calda.
