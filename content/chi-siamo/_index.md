@@ -188,6 +188,22 @@ Con l'evoluzione della normativa sul Terzo Settore, alla fine del **2023** il Gr
 </div>
 </div>
 </div>
+<div class="col-md-6 mb-3">
+<div class="card h-100 shadow-sm border-start border-4" style="border-color:#c1121f!important;">
+<div class="card-body">
+<h3 class="h5"><i class="bi bi-fire text-danger me-2" aria-hidden="true"></i> Antincendio boschivo (AIB)</h3>
+<p>Durante la campagna estiva (giugno-settembre) il Gruppo opera nella <strong>Zona AIB 9 — Castelli Romani</strong> della Regione Lazio, in coordinamento con la <strong>Sala Operativa Unica Permanente (SOUP)</strong> regionale e i Vigili del Fuoco. I volontari intervengono per spegnimento di incendi di vegetazione, presidio, bonifica e supporto logistico ai mezzi aerei (rifornimento delle vasche mobili). Mezzi dedicati: Mercedes Actros 14.000 L, Atego 6.000 L, Iveco VM90, Land Rover Defender 130, vasca mobile 8.000 L per elicotteri.</p>
+</div>
+</div>
+</div>
+<div class="col-md-6 mb-3">
+<div class="card h-100 shadow-sm border-start border-4" style="border-color:#0369a1!important;">
+<div class="card-body">
+<h3 class="h5"><i class="bi bi-droplet-fill text-info me-2" aria-hidden="true"></i> Rischio idraulico e allagamenti</h3>
+<p>Durante allerte meteo (gialla, arancione, rossa) dichiarate dal <strong>Centro Funzionale Regionale del Lazio</strong>, il Gruppo presidia il territorio, monitora fossi e tratti critici, ispeziona caditoie e griglie a rischio ostruzione, e interviene per allagamenti di scantinati e locali pubblici con motopompe e idrovore. In emergenza supporta la popolazione con assistenza, distribuzione di acqua potabile e installazione della tenda sociale come punto di raccolta.</p>
+</div>
+</div>
+</div>
 </div>
 
 ## Eventi e calamità significative
