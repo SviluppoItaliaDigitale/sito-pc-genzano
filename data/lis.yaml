@@ -399,6 +399,13 @@ video:
     youtube_url: "https://youtu.be/Q9JaOMzqd1w"
     durata: "30 secondi"
 
+  aap-coau:
+    titolo: "Glossario in LIS — COAU, Centro Operativo Aereo Unificato"
+    famiglia: "gestione-emergenza"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/GJgez22priw"
+    durata: "1 minuto e 19 secondi"
+
   aap-comitato-operativo:
     titolo: "Glossario in LIS — Comitato Operativo"
     famiglia: "gestione-emergenza"
