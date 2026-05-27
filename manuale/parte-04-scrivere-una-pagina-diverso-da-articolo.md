@@ -420,6 +420,27 @@ La pagina **`/cruscotto/`** (in menu sotto *Per il Cittadino*) è un cruscotto m
 
 **Principi:** ogni mappa Leaflet nascosta si inizializza **lazy** quando la sua scheda diventa visibile (lo switch emette l'evento `cruscotto:<nome>` + un `resize`); il marker Genzano è sempre presente; il valore è sempre in chiaro oltre al colore (WCAG); le immagini hanno `alt` descrittivo. ⚠️ **Mappe a tanti punti su canvas** (es. Osservazioni ItaliaMeteo, ~3300 stazioni): **creare la mappa Leaflet solo all'apertura della scheda**, non a pagina caricata — se creata mentre il pannello è nascosto (dimensione 0) il renderer canvas non ha bounds validi e il disegno dei punti si interrompe (errore `intersects`). **Onestà sul "tempo reale":** Meteosat ha ~10-15 min di latenza, NASA GIBS è il mosaico del giorno (non istantaneo), EFFIS sono rilevazioni satellitari near-real-time, le **previsioni ItaliaMeteo** (ICON-2I) sono modello aggiornato 2×/giorno e le **osservazioni** sono orarie — etichettato così nelle schede. Il **Satellite ItaliaMeteo** usa la stessa fonte EUMETSAT della scheda Satellite (EUMETSAT): dichiarato esplicitamente nel testo per non confondere il cittadino. Le fonti non-real-time o senza CORS (catalogo **dati.gov.it**, statistica **ISTAT**) **non** stanno nel cruscotto: vivono in `/open-data/` come link curati + cifre verificate. Il workflow `controllo-fonti-cruscotto.yml` monitora settimanalmente le 16 fonti esterne (`scripts/check-fonti-cruscotto.py`).
 
+#### Procedura "Aggiunta nuova scheda al cruscotto" — checklist riproducibile
+
+🟢 **5 file canonici da toccare** (mai il `.yml` del workflow — il check è auto-incluso via script):
+
+1. **`themes/flavour-pcgenzano/layouts/shortcodes/dashboard-<nome>.html`** — nuovo shortcode dedicato. Pattern: mappa Leaflet `L.map(...)` o lista `<div id="dash-...">` o KPI `<div class="dash-...-hero">`. Lazy-init via `window.addEventListener('cruscotto:<nome>', avvia, {once:true})`. Marker Genzano `L.marker([41.7085, 12.6916])`. Footer descrittivo con fonte + licenza + link "fonti ufficiali" + nota "in emergenza chiama 112".
+2. **`content/cruscotto/_index.md`** — nuovo tab `<button class="cruscotto-tab" id="tab-<nome>" data-panel="<nome>" ...>` + nuovo `<div class="cruscotto-panel" id="panel-<nome>" data-panel="<nome>" ... hidden>{{< dashboard-<nome> >}}</div>`.
+3. **`scripts/check-fonti-cruscotto.py`** — aggiungere `def chk_<nome>():` che fa GET HTTP/JSON sull'endpoint e ritorna `(ok:bool, dettaglio:str)`. Appendere riga alla tabella `CHECKS = [("Nome fonte", "Nome scheda", chk_<nome>), ...]`. Test locale: `python3 scripts/check-fonti-cruscotto.py` (deve uscire 0 = tutto verde).
+4. **`.claude/rules/10-automazioni-github-actions.md`** — aggiornare la riga `controllo-fonti-cruscotto.yml` da "N fonti" a "N+1 fonti" + descrizione della nuova fonte/endpoint.
+5. **`manuale/parte-04 § 4.9-ter`** (questo file) — aggiungere riga alla tabella schede sopra + aggiornare il conteggio "N schede native" nell'H3.
+
+🔴 **Cosa NON toccare:** mai `.github/workflows/controllo-fonti-cruscotto.yml` — il workflow chiama `scripts/check-fonti-cruscotto.py` come comando unico, qualsiasi nuova fonte aggiunta dentro lo script viene automaticamente inclusa nel check settimanale (lunedì 10:53 UTC). Mai duplicare le icone Bootstrap Icons (verificare che `bi-...` scelta non sia già usata da altre schede).
+
+🔴 **Gate di pertinenza ai sensi rule 02 § "Cruscotto del territorio":**
+- Fonte ufficiale e aperta (CORS abilitato per fetch lato browser, oppure pattern `<img>` per tile WMS).
+- Niente API key/OAuth (escluso CMEMS marine, CDSE Sentinel hub).
+- Aggiornamento ≥ giornaliero (no dati statici annuali, no archivi).
+- Pertinente al territorio italiano o europeo (no sole americano o asiatico).
+- Etichettare l'onestà del "tempo reale" se l'aggiornamento è > 10 min.
+
+Esempio reale: aggiunta CAMS Europa (15ª) ed EMS Rapid Mapping (16ª) ha generato 2 commit (uno per scheda) che hanno toccato esattamente questi 5 file in entrambi i casi. Zero `.yml` toccati. Vedi commit `3348012b` e `4ae54e5c` come riferimento storico.
+
 ### 4.10 — Hub strumenti di consultazione (`/strumenti/`)
 
 La pagina **Strumenti in tempo reale** è un hub unico che elenca tutti gli strumenti online utili per il monitoraggio del territorio: meteo, sismico, idrogeologico, incendi, qualità dell'aria, viabilità, emergenze. Esiste per dare al cittadino un singolo punto di accesso invece di disperdere i link su molte pagine.
