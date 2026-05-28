@@ -339,3 +339,25 @@ materiali:
   dimensione: 30.9 MB
   data_pubblicazione: '2026-05-24'
   licenza: CC BY-NC-SA 4.0
+- id: ondate-di-calore-podcast-2026-05-26
+  tema: ondate-di-calore
+  tema_titolo: Ondate di calore
+  tipo: podcast
+  titolo: 'Podcast: Ondate di calore'
+  descrizione: Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online
+    o scaricabile per ascolto offline.
+  file_url: /podcast/episodi/2026-05-26-ondate-di-calore-podcast.m4a
+  dimensione: 32.3 MB
+  data_pubblicazione: '2026-05-26'
+  licenza: CC BY-NC-SA 4.0
+- id: rischio-vulcanico-podcast-2026-05-22
+  tema: rischio-vulcanico
+  tema_titolo: Rischio vulcanico
+  tipo: podcast
+  titolo: 'Podcast: Rischio vulcanico'
+  descrizione: Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online
+    o scaricabile per ascolto offline.
+  file_url: /podcast/episodi/2026-05-22-rischio-vulcanico-podcast.m4a
+  dimensione: 29.7 MB
+  data_pubblicazione: '2026-05-22'
+  licenza: CC BY-NC-SA 4.0
