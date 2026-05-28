@@ -2,8 +2,8 @@ ultimo_audit: '2026-05-28'
 totale: 20
 riepilogo:
   ACCESSIBILE: 2
-  PARZIALE: 0
-  NON_ACCESSIBILE: 6
+  PARZIALE: 6
+  NON_ACCESSIBILE: 0
   TERZO: 12
   ERRORE: 0
 documenti:
@@ -153,17 +153,17 @@ documenti:
   verdict: TERZO
 - path: /manuali/locandine/locandina-diventa-volontario.pdf
   file: locandina-diventa-volontario.pdf
-  size_kb: 108.8
-  searchable: false
+  size_kb: 104.5
+  searchable: true
   tagged: false
-  language: null
+  language: it
   title: locandina-diventa-volontario
   pages: 1
   errors: []
-  text_chars_sample: 0
+  text_chars_sample: 211
   origine: GRUPPO
   origine_descrizione: Locandina del Gruppo
-  verdict: NON_ACCESSIBILE
+  verdict: PARZIALE
 - path: /manuali/moduli/domanda-ammissione-volontari.pdf
   file: domanda-ammissione-volontari.pdf
   size_kb: 298.0
@@ -192,79 +192,79 @@ documenti:
   verdict: TERZO
 - path: /manuali/presentazione-struttura-sito.pdf
   file: presentazione-struttura-sito.pdf
-  size_kb: 1422.0
+  size_kb: 1480.2
   searchable: true
   tagged: true
-  language: en-US
+  language: it-IT
   title: null
   pages: 55
   errors: []
-  text_chars_sample: 1023
+  text_chars_sample: 1017
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
   verdict: ACCESSIBILE
 - path: /presentazioni/2026-03-21-rischio-sismico-presentazione-pdf.pdf
   file: 2026-03-21-rischio-sismico-presentazione-pdf.pdf
-  size_kb: 16708.2
-  searchable: false
+  size_kb: 16740.1
+  searchable: true
   tagged: false
-  language: null
+  language: it
   title: null
   pages: 15
   errors: []
-  text_chars_sample: 0
+  text_chars_sample: 2213
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
-  verdict: NON_ACCESSIBILE
+  verdict: PARZIALE
 - path: /presentazioni/2026-03-25-allerta-meteo-presentazione-pdf.pdf
   file: 2026-03-25-allerta-meteo-presentazione-pdf.pdf
-  size_kb: 16414.4
-  searchable: false
+  size_kb: 16440.9
+  searchable: true
   tagged: false
-  language: null
+  language: it
   title: null
   pages: 13
   errors: []
-  text_chars_sample: 0
+  text_chars_sample: 1567
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
-  verdict: NON_ACCESSIBILE
+  verdict: PARZIALE
 - path: /presentazioni/2026-04-08-rischio-idrogeologico-presentazione-pdf.pdf
   file: 2026-04-08-rischio-idrogeologico-presentazione-pdf.pdf
-  size_kb: 19547.4
-  searchable: false
+  size_kb: 19577.5
+  searchable: true
   tagged: false
-  language: null
+  language: it
   title: null
   pages: 15
   errors: []
-  text_chars_sample: 0
+  text_chars_sample: 1546
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
-  verdict: NON_ACCESSIBILE
+  verdict: PARZIALE
 - path: /presentazioni/2026-04-17-kit-emergenza-presentazione-pdf.pdf
   file: 2026-04-17-kit-emergenza-presentazione-pdf.pdf
-  size_kb: 18185.6
-  searchable: false
+  size_kb: 18216.8
+  searchable: true
   tagged: false
-  language: null
+  language: it
   title: null
   pages: 15
   errors: []
-  text_chars_sample: 0
+  text_chars_sample: 1376
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
-  verdict: NON_ACCESSIBILE
+  verdict: PARZIALE
 - path: /presentazioni/2026-05-18-rischio-incendio-presentazione-pdf.pdf
   file: 2026-05-18-rischio-incendio-presentazione-pdf.pdf
-  size_kb: 14060.9
-  searchable: false
+  size_kb: 14084.6
+  searchable: true
   tagged: false
-  language: null
+  language: it
   title: null
   pages: 15
   errors: []
-  text_chars_sample: 0
+  text_chars_sample: 1128
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
-  verdict: NON_ACCESSIBILE
+  verdict: PARZIALE
