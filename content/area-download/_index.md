@@ -168,15 +168,6 @@ I 4 loghi ufficiali per le grafiche del Gruppo (cover articoli, slide social, sc
 | 3 | **Coordinamento FE.PI.VOL.** | <https://www.protezionecivilegenzano.it/images/logo-fepivol.png> | PNG · 400×400 |
 | 4 | **SNPC Volontariato** | <https://www.protezionecivilegenzano.it/images/logo-snpc-volontariato.png> | PNG · 400×482 |
 
-<div class="card border-primary bg-primary bg-opacity-10 mb-3">
-<div class="card-body p-3 small">
-<i class="bi bi-robot me-1" aria-hidden="true"></i>
-<strong>Per le AI esterne</strong> (ChatGPT, Gemini, Midjourney, Canva, Adobe Express, DALL-E, ecc.): gli URL sopra sono <strong>pubblici e diretti</strong>, scaricabili dalle AI con capacità web/image-fetch. Quando dai un brief a un'AI esterna per generare una grafica del Gruppo, includi <strong>ESATTAMENTE QUESTI 4 LOGHI</strong> e specifica:
-<br><br>
-<em>«La grafica deve riportare ESATTAMENTE 4 loghi: (1) PC Genzano in alto come firma; (2) Quality Label ESC + codice E10435833 accanto (mai disgiunti, Reg. UE 2021/888); (3) Coordinamento FE.PI.VOL.; (4) SNPC Volontariato — questi 3 nel footer come blocco affiliazioni. Mai doppioni. Mai 5° logo (Comune, PC Lazio, VVF, INGV, ecc.). Mai logo ESC senza codice E10435833.»</em>
-</div>
-</div>
-
 ### Varianti storiche e composizioni del logo PC Genzano
 
 | Logo / stemma | Descrizione | Formato |
