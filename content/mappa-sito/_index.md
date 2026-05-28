@@ -333,6 +333,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Giochi della Sicurezza</p>
   <p class="ms-card-desc">Giochi educativi gratuiti per bambini 3-19 anni: terremoto, evacuazione, 112.</p>
 </a>
+<a class="ms-card ms-edu" href="/catalogo-giochi/">
+  <div class="ms-card-icon"><i class="bi bi-card-checklist"></i></div>
+  <p class="ms-card-title">Catalogo dei giochi</p>
+  <p class="ms-card-desc">Scheda informativa di ogni gioco con fascia d'età, durata, obiettivo didattico, accessibilità e link al gioco interattivo.</p>
+</a>
 <a class="ms-card ms-edu" href="/abili-a-proteggere/">
   <div class="ms-card-icon"><i class="bi bi-heart-fill"></i></div>
   <p class="ms-card-title">Abili a Proteggere</p>

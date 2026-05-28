@@ -71,6 +71,7 @@ Il Gruppo Comunale di Protezione Civile di Genzano di Roma offre **materiali did
       <p class="card-text">Vuoi imparare divertendoti con giochi, storie, schede e quiz.</p>
       <ul class="list-unstyled small mb-3">
         <li>→ <a href="/giochi/">Giochi della sicurezza</a> (3-6, 6-11, 11-19 anni)</li>
+        <li>→ <a href="/catalogo-giochi/">Catalogo informativo dei giochi</a> (per docenti e genitori)</li>
         <li>→ <a href="/formazione/storie-e-racconti/">Storie e racconti</a></li>
         <li>→ <a href="/facile-da-leggere/">Versione facile da leggere</a></li>
         <li>→ <a href="/rischi-prevenzione/">Cosa è un rischio</a></li>

@@ -1,0 +1,9 @@
+{{- /* Bottone CTA per aprire il gioco interattivo dalla scheda /catalogo-giochi/<slug>/.
+       Uso:
+         {{< bottone-gioco url="/giochi/infanzia/acchiappa-pericolo/" testo="Apri «Acchiappa il Pericolo»" >}}
+       Il path è passato senza leading slash a relURL per compatibilità con il
+       subpath GitHub Pages (`/sito-pc-genzano/`). Bottone Bootstrap Italia
+       blu istituzionale, ampio, focus visibile WCAG 2.4.7. */ -}}
+{{- $url := .Get "url" | strings.TrimPrefix "/" | relURL -}}
+{{- $testo := .Get "testo" -}}
+<p class="bottone-gioco-wrap"><a class="btn btn-primary btn-lg" href="{{ $url }}" role="button" aria-label="{{ $testo }} (si apre nella stessa scheda)"><i class="bi bi-play-circle-fill me-2" aria-hidden="true"></i>{{ $testo }}</a></p>
