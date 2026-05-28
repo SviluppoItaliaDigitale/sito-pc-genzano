@@ -178,3 +178,4 @@ Un'unica pagina per consultare i dati di rischio del territorio, da **fonti uffi
 <!-- cache-bust: 2026-05-28-fix-terremoti-leaflet-pixelbounds — forza re-upload FTP -->
 <!-- cache-bust: 2026-05-28T17:15 preferCanvas fix -->
 <!-- cache-bust: 2026-05-28T17:24 render-defensive -->
+<!-- cache-bust: 2026-05-28T18:00 filtro-italia + divIcon -->
