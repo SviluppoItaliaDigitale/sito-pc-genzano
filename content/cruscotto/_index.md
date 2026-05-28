@@ -181,3 +181,4 @@ Un'unica pagina per consultare i dati di rischio del territorio, da **fonti uffi
 <!-- cache-bust: 2026-05-28T18:00 filtro-italia + divIcon -->
 <!-- cache-bust: 2026-05-28T18:30 tabella-terremoti -->
 <!-- cache-bust: 2026-05-28T18:40 stack verticale -->
+<!-- cache-bust: 2026-05-28T19:00 allineamento header tabella -->

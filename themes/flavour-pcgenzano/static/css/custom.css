@@ -6807,10 +6807,14 @@ html.a11y-pause-anim .cruscotto-home-card, html.a11y-pause-anim .cruscotto-home-
 .dash-sisma-tabella td { padding: .45rem .4rem; vertical-align: middle; }
 .dash-sisma-tabella td.dash-cell-time { font-variant-numeric: tabular-nums; white-space: nowrap; color: #444; font-size: .82rem; }
 .dash-sisma-tabella td.dash-cell-place { color: #1a1a1a; }
+/* Button occupa tutta la cella e eredita text-align del <th>. Così
+   le colonne numeriche (th.dash-num text-align:right) hanno l'header
+   allineato a destra come i valori sottostanti. */
 .dash-sort-btn {
   background: none; border: 0; color: inherit; font: inherit; font-weight: 600;
-  cursor: pointer; padding: 0; display: inline-flex; align-items: center; gap: .25rem;
+  cursor: pointer; padding: 0; display: block; width: 100%; text-align: inherit;
 }
+.dash-sort-btn .dash-sort-ind { margin-left: .25rem; }
 .dash-sort-btn:hover { text-decoration: underline; }
 .dash-sort-btn:focus-visible { outline: 2px solid #ffbe2e; outline-offset: 2px; border-radius: 2px; }
 .dash-sort-ind { display: inline-block; min-width: .8em; opacity: .9; }

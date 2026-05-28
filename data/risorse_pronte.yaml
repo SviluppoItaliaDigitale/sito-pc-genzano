@@ -405,3 +405,36 @@ materiali:
   dimensione: 20.9 MB
   data_pubblicazione: '2026-03-30'
   licenza: CC BY-NC-SA 4.0
+- id: rischio-vulcanico-presentazione-pdf-2026-05-23
+  tema: rischio-vulcanico
+  tema_titolo: Rischio vulcanico
+  tipo: presentazione-pdf
+  titolo: 'Presentazione (PDF): Rischio vulcanico'
+  descrizione: 'Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo
+    senza PowerPoint.'
+  file_url: /presentazioni/2026-05-23-rischio-vulcanico-presentazione-pdf.pdf
+  dimensione: 9.1 MB
+  data_pubblicazione: '2026-05-23'
+  licenza: CC BY-NC-SA 4.0
+- id: rischio-vulcanico-presentazione-2026-05-23
+  tema: rischio-vulcanico
+  tema_titolo: Rischio vulcanico
+  tipo: presentazione
+  titolo: 'Presentazione: Rischio vulcanico'
+  descrizione: 'Presentazione PowerPoint per docenti: 15 slide per un''ora di Educazione
+    Civica in classe (formato modificabile).'
+  file_url: /presentazioni/2026-05-23-rischio-vulcanico-presentazione.pptx
+  dimensione: 10.3 MB
+  data_pubblicazione: '2026-05-23'
+  licenza: CC BY-NC-SA 4.0
+- id: rischio-vulcanico-infografica-2026-05-23
+  tema: rischio-vulcanico
+  tema_titolo: Rischio vulcanico
+  tipo: infografica
+  titolo: 'Infografica: Rischio vulcanico'
+  descrizione: Infografica formato quadrato pronta per condivisione social, stampa
+    A4 e affissione in bacheca.
+  file_url: /infografiche/2026-05-23-rischio-vulcanico-infografica.png
+  dimensione: 3.6 MB
+  data_pubblicazione: '2026-05-23'
+  licenza: CC BY-NC-SA 4.0
