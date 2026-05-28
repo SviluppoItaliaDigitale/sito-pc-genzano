@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-05-28T06:36",
+  "aggiornato": "2026-05-28T07:02",
   "data_lunga": "giovedì 28 maggio 2026",
-  "aggiornato_label": "giovedì 28 maggio 2026, ore 06:36",
+  "aggiornato_label": "giovedì 28 maggio 2026, ore 07:02",
   "alba": "05:39",
   "tramonto": "20:33",
   "corrente": {
-    "temp": 20.5,
-    "percepita": 21.5,
+    "temp": 21.1,
+    "percepita": 22.2,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
     "umidita": 70,
     "vento": 4,
-    "raffiche": 21
+    "raffiche": 22
   },
   "giorni": [
     {
