@@ -1,15 +1,7 @@
 {
   "livello": "gialla",
   "titolo": "ALLERTA GIALLA — temporali",
-  "descrizione": "Ordinaria per rischio temporali, Zona F — Bacini Costieri Sud (Genzano). Bollettino DPC/Regione Lazio del 28 maggio 2026, validità 28 maggio 14:21–23:59.",
+  "descrizione": "Ordinaria per rischio temporali, Zona F — Bacini Costieri Sud (Genzano). Bollettino DPC/Regione Lazio del 28 maggio 2026, validità 29 maggio 00:00–23:59.",
   "ultimo_aggiornamento": "2026-05-28T18:06:54+02:00",
-  "ultimo_controllo": "2026-05-28T23:56:25+02:00",
-  "domani": {
-    "livello": "gialla",
-    "titolo": "Previsto giallo",
-    "rischi": [
-      "temporali"
-    ],
-    "data": "2026-05-29"
-  }
+  "ultimo_controllo": "2026-05-29T00:01:36+02:00"
 }
