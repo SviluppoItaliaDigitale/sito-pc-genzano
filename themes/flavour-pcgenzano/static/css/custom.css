@@ -6758,3 +6758,28 @@ html.a11y-pause-anim .cruscotto-home-card, html.a11y-pause-anim .cruscotto-home-
 @media print {
   .affiliazioni-row .card-body img { max-width: 70px !important; }
 }
+
+/* ──────────────────────────────────────────────────────────────────────────
+   AUDIT PDF TABLE v1.0
+   Stili scoped per la pagina /accessibilita/audit-pdf/.
+   Tabella accessibile con verdict colorati (mai solo-colore: c'è anche
+   l'icona emoji e il testo descrittivo).
+   ────────────────────────────────────────────────────────────────────── */
+.audit-pdf-summary { margin-bottom: 1.5rem; }
+.audit-pdf-summary ul { padding-left: 1.25rem; }
+.audit-pdf-table { width: 100%; font-size: 0.92rem; }
+.audit-pdf-table th { background: #003366; color: #fff; padding: 0.6rem 0.5rem; }
+.audit-pdf-table td { padding: 0.5rem; vertical-align: top; }
+.audit-pdf-table tr.verdict-ok td { background: #f0f9f0; }
+.audit-pdf-table tr.verdict-parziale td { background: #fff8e1; }
+.audit-pdf-table tr.verdict-nope td { background: #fdecea; }
+.audit-pdf-table tr.verdict-terzo td { background: #f4f7fb; color: #444; }
+.audit-pdf-table tr:hover td { background: #e7f0fa !important; }
+.audit-pdf-table a { color: #003366; text-decoration: underline; }
+@media (max-width: 576px) {
+  .audit-pdf-table { font-size: 0.85rem; }
+  .audit-pdf-table td, .audit-pdf-table th { padding: 0.4rem 0.3rem; }
+}
+@media print {
+  .audit-pdf-table tr td { background: #fff !important; color: #000; }
+}
