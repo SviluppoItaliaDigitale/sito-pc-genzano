@@ -53,6 +53,7 @@ Le seguenti aree del sito **non sono pienamente accessibili** per i motivi indic
 - **Alcuni PDF pre-2022** nell'Area Download (vecchi piani comunali, carte tematiche scansionate, ordinanze d'archivio) potrebbero non avere OCR completo e non rispettare PDF/UA.
 - **Motivazione**: documenti scansionati ricevuti da enti terzi (Comune, Regione, Prefettura), non rigenerabili dal Gruppo.
 - **Mitigazione**: per ogni PDF storico critico, il sito offre una pagina HTML equivalente accessibile. È in corso un audit progressivo per rigenerare i PDF con OCR completo e tag PDF/UA.
+- **Stato per documento**: consulta la pagina [Audit accessibilità dei PDF pubblicati](/accessibilita/audit-pdf/) per vedere il quadro aggiornato documento per documento (aggiornato al 28 maggio 2026).
 
 ### Mappe interattive
 - Le mappe Leaflet/MapLibre eventualmente integrate hanno limiti di interazione da sola tastiera per il pan/zoom (limite intrinseco delle librerie SVG-based).

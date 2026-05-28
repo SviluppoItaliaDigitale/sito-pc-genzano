@@ -1,0 +1,270 @@
+ultimo_audit: '2026-05-28'
+totale: 20
+riepilogo:
+  ACCESSIBILE: 2
+  PARZIALE: 0
+  NON_ACCESSIBILE: 6
+  TERZO: 12
+  ERRORE: 0
+documenti:
+- path: /allegati/2026/2026-05-08-dpc-art-39-rimborsi-volontari-lavoratori-autonomi.pdf
+  file: 2026-05-08-dpc-art-39-rimborsi-volontari-lavoratori-autonomi.pdf
+  size_kb: 888.9
+  searchable: false
+  tagged: false
+  language: null
+  title: null
+  pages: 5
+  errors: []
+  text_chars_sample: 44
+  origine: TERZO
+  origine_descrizione: DPC / Dipartimento Protezione Civile
+  verdict: TERZO
+- path: /allegati/2026/determinazione-lazio-g05626-2026-campagna-comunicazione-pc.pdf
+  file: determinazione-lazio-g05626-2026-campagna-comunicazione-pc.pdf
+  size_kb: 306.8
+  searchable: true
+  tagged: false
+  language: null
+  title: null
+  pages: 11
+  errors: []
+  text_chars_sample: 7729
+  origine: TERZO
+  origine_descrizione: Regione Lazio (BURL, DGR, determine, regolamenti regionali)
+  verdict: TERZO
+- path: /allegati/2026/dgr-lazio-270-2026-adozione-regolamento-safor-prociv.pdf
+  file: dgr-lazio-270-2026-adozione-regolamento-safor-prociv.pdf
+  size_kb: 408.9
+  searchable: true
+  tagged: false
+  language: null
+  title: null
+  pages: 18
+  errors: []
+  text_chars_sample: 6690
+  origine: TERZO
+  origine_descrizione: Regione Lazio (BURL, DGR, determine, regolamenti regionali)
+  verdict: TERZO
+- path: /allegati/2026/ordinanza-71-2026-infiorata-ragazzi-viabilita.pdf
+  file: ordinanza-71-2026-infiorata-ragazzi-viabilita.pdf
+  size_kb: 119.4
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: null
+  pages: 4
+  errors: []
+  text_chars_sample: 5212
+  origine: TERZO
+  origine_descrizione: Comune di Genzano di Roma (ordinanze, delibere)
+  verdict: TERZO
+- path: /allegati/2026/programma-talk-salone-del-libro-2026.pdf
+  file: programma-talk-salone-del-libro-2026.pdf
+  size_kb: 351.8
+  searchable: false
+  tagged: false
+  language: it-IT
+  title: programma-talk-salone-del-libro-2026.pdf
+  pages: 1
+  errors: []
+  text_chars_sample: 5
+  origine: TERZO
+  origine_descrizione: Salone del Libro Torino
+  verdict: TERZO
+- path: /allegati/2026/regolamento-regionale-lazio-4-2026-safor-prociv.pdf
+  file: regolamento-regionale-lazio-4-2026-safor-prociv.pdf
+  size_kb: 219.0
+  searchable: true
+  tagged: false
+  language: null
+  title: null
+  pages: 7
+  errors: []
+  text_chars_sample: 6458
+  origine: TERZO
+  origine_descrizione: Regione Lazio (BURL, DGR, determine, regolamenti regionali)
+  verdict: TERZO
+- path: /manuali/Caritas_Banco_Alimentare_Manuale_Emporio_Solidale.pdf
+  file: Caritas_Banco_Alimentare_Manuale_Emporio_Solidale.pdf
+  size_kb: 4173.9
+  searchable: true
+  tagged: false
+  language: null
+  title: ManualeCaritasBanco013
+  pages: 60
+  errors: []
+  text_chars_sample: 1016
+  origine: TERZO
+  origine_descrizione: Caritas / Banco Alimentare
+  verdict: TERZO
+- path: /manuali/DSEFIC_Manuale_Cucina_Emergenza_FIC.pdf
+  file: DSEFIC_Manuale_Cucina_Emergenza_FIC.pdf
+  size_kb: 3881.9
+  searchable: true
+  tagged: false
+  language: it-IT
+  title: null
+  pages: 88
+  errors: []
+  text_chars_sample: 517
+  origine: TERZO
+  origine_descrizione: Federazione Italiana Cuochi (FIC)
+  verdict: TERZO
+- path: /manuali/FondazioneBarilla_Libro_del_Risparmio.pdf
+  file: FondazioneBarilla_Libro_del_Risparmio.pdf
+  size_kb: 27994.1
+  searchable: true
+  tagged: false
+  language: it-IT
+  title: null
+  pages: 75
+  errors: []
+  text_chars_sample: 210
+  origine: TERZO
+  origine_descrizione: Fondazione Barilla
+  verdict: TERZO
+- path: /manuali/cna-best-practices-social-media-crisis-2023.pdf
+  file: cna-best-practices-social-media-crisis-2023.pdf
+  size_kb: 636.8
+  searchable: true
+  tagged: true
+  language: Lang <FEFF0045004E002D00550053>
+  title: (U) Best Practices in Social Media Crisis Communications for State and Local
+    Emergency Management Agencies
+  pages: 23
+  errors: []
+  text_chars_sample: 4153
+  origine: TERZO
+  origine_descrizione: CNA / Confederazione Nazionale Artigianato
+  verdict: TERZO
+- path: /manuali/fema-saver-innovative-uses-social-media-emergency-management.pdf
+  file: fema-saver-innovative-uses-social-media-emergency-management.pdf
+  size_kb: 1560.9
+  searchable: true
+  tagged: true
+  language: en
+  title: Innovative Uses of Social Media in Emergency Management
+  pages: 26
+  errors: []
+  text_chars_sample: 3839
+  origine: TERZO
+  origine_descrizione: FEMA (Federal Emergency Management Agency, USA)
+  verdict: TERZO
+- path: /manuali/locandine/locandina-diventa-volontario.pdf
+  file: locandina-diventa-volontario.pdf
+  size_kb: 108.8
+  searchable: false
+  tagged: false
+  language: null
+  title: locandina-diventa-volontario
+  pages: 1
+  errors: []
+  text_chars_sample: 0
+  origine: GRUPPO
+  origine_descrizione: Locandina del Gruppo
+  verdict: NON_ACCESSIBILE
+- path: /manuali/moduli/domanda-ammissione-volontari.pdf
+  file: domanda-ammissione-volontari.pdf
+  size_kb: 298.0
+  searchable: true
+  tagged: true
+  language: it
+  title: null
+  pages: 1
+  errors: []
+  text_chars_sample: 2973
+  origine: GRUPPO
+  origine_descrizione: Modulo del Gruppo (modulistica)
+  verdict: ACCESSIBILE
+- path: /manuali/polizia-stato-presentazione-youpol-esserci.pdf
+  file: polizia-stato-presentazione-youpol-esserci.pdf
+  size_kb: 3011.3
+  searchable: true
+  tagged: false
+  language: null
+  title: presentazione_youpol_#esserci
+  pages: 6
+  errors: []
+  text_chars_sample: 1870
+  origine: TERZO
+  origine_descrizione: Polizia di Stato
+  verdict: TERZO
+- path: /manuali/presentazione-struttura-sito.pdf
+  file: presentazione-struttura-sito.pdf
+  size_kb: 1422.0
+  searchable: true
+  tagged: true
+  language: en-US
+  title: null
+  pages: 55
+  errors: []
+  text_chars_sample: 1023
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: ACCESSIBILE
+- path: /presentazioni/2026-03-21-rischio-sismico-presentazione-pdf.pdf
+  file: 2026-03-21-rischio-sismico-presentazione-pdf.pdf
+  size_kb: 16708.2
+  searchable: false
+  tagged: false
+  language: null
+  title: null
+  pages: 15
+  errors: []
+  text_chars_sample: 0
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: NON_ACCESSIBILE
+- path: /presentazioni/2026-03-25-allerta-meteo-presentazione-pdf.pdf
+  file: 2026-03-25-allerta-meteo-presentazione-pdf.pdf
+  size_kb: 16414.4
+  searchable: false
+  tagged: false
+  language: null
+  title: null
+  pages: 13
+  errors: []
+  text_chars_sample: 0
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: NON_ACCESSIBILE
+- path: /presentazioni/2026-04-08-rischio-idrogeologico-presentazione-pdf.pdf
+  file: 2026-04-08-rischio-idrogeologico-presentazione-pdf.pdf
+  size_kb: 19547.4
+  searchable: false
+  tagged: false
+  language: null
+  title: null
+  pages: 15
+  errors: []
+  text_chars_sample: 0
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: NON_ACCESSIBILE
+- path: /presentazioni/2026-04-17-kit-emergenza-presentazione-pdf.pdf
+  file: 2026-04-17-kit-emergenza-presentazione-pdf.pdf
+  size_kb: 18185.6
+  searchable: false
+  tagged: false
+  language: null
+  title: null
+  pages: 15
+  errors: []
+  text_chars_sample: 0
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: NON_ACCESSIBILE
+- path: /presentazioni/2026-05-18-rischio-incendio-presentazione-pdf.pdf
+  file: 2026-05-18-rischio-incendio-presentazione-pdf.pdf
+  size_kb: 14060.9
+  searchable: false
+  tagged: false
+  language: null
+  title: null
+  pages: 15
+  errors: []
+  text_chars_sample: 0
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: NON_ACCESSIBILE

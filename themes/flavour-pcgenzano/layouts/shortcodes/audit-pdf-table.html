@@ -1,0 +1,61 @@
+{{/*
+  audit-pdf-table.html — Tabella accessibile dei PDF auditati.
+  Legge site.Data.audit-pdf (generato da scripts/audit-pdf-accessibilita.py).
+
+  Parametri opzionali:
+    filtro: "tutti" (default) | "gruppo" | "terzi" | "da-sistemare"
+*/}}
+{{ $audit := site.Data.audit-pdf }}
+{{ $filtro := .Get "filtro" | default "tutti" }}
+{{ $docs := $audit.documenti }}
+
+{{ if eq $filtro "gruppo" }}
+  {{ $docs = where $docs "origine" "GRUPPO" }}
+{{ else if eq $filtro "terzi" }}
+  {{ $docs = where $docs "origine" "TERZO" }}
+{{ else if eq $filtro "da-sistemare" }}
+  {{ $docs = where $docs "verdict" "in" (slice "NON_ACCESSIBILE" "PARZIALE") }}
+{{ end }}
+
+<div class="audit-pdf-summary alert alert-info" role="region" aria-labelledby="audit-pdf-summary-title">
+  <h3 id="audit-pdf-summary-title" class="h5 mb-2">Ultimo audit: {{ $audit.ultimo_audit }}</h3>
+  <ul class="mb-0">
+    <li><strong>{{ $audit.totale }}</strong> documenti analizzati</li>
+    <li>✅ <strong>{{ index $audit.riepilogo "ACCESSIBILE" }}</strong> accessibili (testo selezionabile e tag strutturali)</li>
+    <li>🟡 <strong>{{ index $audit.riepilogo "PARZIALE" }}</strong> parzialmente accessibili (testo selezionabile ma senza tag strutturali)</li>
+    <li>🔴 <strong>{{ index $audit.riepilogo "NON_ACCESSIBILE" }}</strong> non accessibili (scansione senza OCR, da sistemare)</li>
+    <li>⚪ <strong>{{ index $audit.riepilogo "TERZO" }}</strong> di terzi enti (accessibilità a carico dell'ente emittente)</li>
+  </ul>
+</div>
+
+<div class="table-responsive">
+<table class="audit-pdf-table">
+<caption class="visually-hidden">Elenco dei PDF auditati con stato di accessibilità ({{ len $docs }} righe). Cliccare l'intestazione di colonna per vedere l'ordinamento applicato.</caption>
+<thead>
+<tr>
+  <th scope="col">Documento</th>
+  <th scope="col">Origine</th>
+  <th scope="col">Stato</th>
+  <th scope="col">Pagine</th>
+  <th scope="col">Dimensione</th>
+</tr>
+</thead>
+<tbody>
+{{ range $docs }}
+{{ $icon := "" }}{{ $label := "" }}{{ $cls := "" }}
+{{ if eq .verdict "ACCESSIBILE" }}{{ $icon = "✅" }}{{ $label = "Accessibile" }}{{ $cls = "verdict-ok" }}
+{{ else if eq .verdict "PARZIALE" }}{{ $icon = "🟡" }}{{ $label = "Parziale" }}{{ $cls = "verdict-parziale" }}
+{{ else if eq .verdict "NON_ACCESSIBILE" }}{{ $icon = "🔴" }}{{ $label = "Non accessibile" }}{{ $cls = "verdict-nope" }}
+{{ else if eq .verdict "TERZO" }}{{ $icon = "⚪" }}{{ $label = "Terzo ente" }}{{ $cls = "verdict-terzo" }}
+{{ end }}
+<tr class="{{ $cls }}">
+  <td><a href="{{ .path }}" target="_blank" rel="noopener noreferrer">{{ .file }}</a></td>
+  <td><span title="{{ .origine_descrizione }}">{{ .origine_descrizione }}</span></td>
+  <td><span aria-label="{{ $label }}">{{ $icon }} {{ $label }}</span></td>
+  <td>{{ .pages }}</td>
+  <td>{{ .size_kb }} KB</td>
+</tr>
+{{ end }}
+</tbody>
+</table>
+</div>
