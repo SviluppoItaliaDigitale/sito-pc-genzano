@@ -59,6 +59,10 @@ temi:
   titolo: Aree di emergenza
   icona: bi-geo-alt
   descrizione: 'Attesa, accoglienza, ammassamento: dove andare e perché.'
+- slug: animali-emergenza
+  titolo: Animali in emergenza
+  icona: bi-heart
+  descrizione: 'DCD 167/2026 del DPC: come proteggere chi non può chiedere aiuto.'
 materiali:
 - id: allerta-meteo-podcast-2026-05-16
   tema: allerta-meteo

@@ -113,6 +113,12 @@ KEYWORDS_TEMA = {
         "area di ammassamento", "centro accoglienza", "tendopoli",
         "Cartografia", "punti raccolta",
     ],
+    "animali-emergenza": [
+        "animal", "cane", "gatto", "veterinari", "trasportino",
+        "microchip", "anagrafe canina", "petardi", "randagism",
+        "stalla", "fattoria", "bestiame", "pet", "ENPA", "LAV",
+        "WSAVA", "L. 281/1991", "L. 189/2004",
+    ],
 }
 
 # Dati per ogni tema. Ogni voce contiene:
@@ -511,6 +517,46 @@ TEMI = {
             "Coordinamento: chi gestisce le aree (Comune + Gruppo Volontari + VVF + ASL), come saperlo (Comune, sito, 112 NON per info)",
         ],
         "icona_emoji": "🗺️🚏",
+    },
+    "animali-emergenza": {
+        "titolo": "Animali in emergenza: come proteggere chi non può chiedere aiuto",
+        "pagina_sito": f"{SITO_BASE}/formazione/kit-calamita-animali/",
+        "articoli_correlati": [
+            f"{SITO_BASE}/comunicazioni/2026-11-19-animali-domestici-emergenze/",
+            f"{SITO_BASE}/comunicazioni/2026-11-28-sicurezza-animali-stalla-fattorie/",
+            f"{SITO_BASE}/comunicazioni/2026-12-30-capodanno-petardi-sicurezza/",
+            f"{SITO_BASE}/rischi-prevenzione/kit-emergenza/",
+            f"{SITO_BASE}/glossario/",
+        ],
+        "fonti_istituzionali": [
+            "🔴 Decreto del Capo del Dipartimento Protezione Civile n. 167 del 21 gennaio 2026 (GU n. 45 del 24/02/2026) — 'Indicazioni operative concernenti le attività di protezione civile in materia di soccorso e assistenza agli animali': https://www.protezionecivile.gov.it/it/normativa/decreto-cd-n-167-del-21-gennaio-2026/ — è la norma di riferimento del Sistema nazionale per gli animali in emergenza, con 3 allegati (indicazioni complete, azioni in pianificazione, azioni in emergenza)",
+            "Codice della Protezione Civile (D.Lgs. 1/2018) artt. 1, 2 comma 6, 7 — base normativa citata dal DCD 167/2026: https://www.normattiva.it",
+            "L. 281/1991 — Legge quadro animali d'affezione e prevenzione randagismo: https://www.normattiva.it",
+            "L. 189/2004 — Reato di maltrattamento e abbandono degli animali: https://www.normattiva.it",
+            "D.Lgs. 134/2022, 135/2022, 136/2022 — Identificazione animali, sanità animale, fauna selvatica (citati dal DCD 167/2026): https://www.normattiva.it",
+            "Regolamenti UE 2016/429 e 2019/2035 — Malattie animali trasmissibili: https://eur-lex.europa.eu",
+            "D.Lgs. 146/2001 — Protezione degli animali negli allevamenti: https://www.normattiva.it",
+            "Ministero della Salute — Anagrafe canina nazionale e microchip: https://www.salute.gov.it/portale/temi/p2_6.jsp?id=212",
+            "WSAVA — World Small Animal Veterinary Association, emergency preparedness: https://wsava.org",
+            "ENPA — Ente Nazionale Protezione Animali, vademecum emergenze: https://www.enpa.it",
+            "LAV — Lega Anti Vivisezione, sezione emergenze: https://www.lav.it",
+            "ASL Roma 6 — Servizio veterinario competente per Genzano: https://www.aslroma6.it",
+        ],
+        "focus_podcast": [
+            "🆕 Il decreto del 21 gennaio 2026 (DCD 167/2026) cambia tutto: per la prima volta il Dipartimento della Protezione Civile ha pubblicato indicazioni operative ufficiali su come gestire gli animali nelle emergenze, integrate nel Sistema Nazionale di PC (GU n. 45 del 24/02/2026)",
+            "Cosa dice il DCD 167/2026 in pratica: 3 allegati — indicazioni operative complete, azioni e responsabilità in fase di pianificazione (prima dell'emergenza), azioni e responsabilità in fase di emergenza (durante e dopo)",
+            "Perché gli animali contano nel piano emergenza: in tante famiglie l'animale è parte della famiglia, e il Codice PC lo riconosce esplicitamente (D.Lgs. 1/2018 artt. 1, 2 c.6, 7)",
+            "Falsi miti da smontare: \"torna da solo\" (no, spesso si perde o muore), \"nei centri non li accolgono\" (oggi col DCD 167/2026 il Sistema PC li integra ufficialmente), \"l'animale capisce e segue\" (in panico scappa nella direzione sbagliata)",
+            "Cosa preparare PRIMA: microchip registrato e dati aggiornati, trasportino familiare (NON solo per il viaggio dal vet), kit dedicato 7 giorni (cibo, acqua, farmaci, ciotole, lettiera, guinzaglio, oggetto familiare per ridurre stress)",
+            "Carta d'identità animale: foglio A4 con foto, nome, microchip, veterinario, farmaci, alimentazione, allergie — fondamentale se vi separate (coerente con la fase 'pianificazione' del DCD 167/2026)",
+            "Cosa fare DURANTE evacuazione: portarli con voi sempre che è sicuro, trasportino o guinzaglio (mai in braccio in panico), tenere distanza da altri animali stressati",
+            "Cosa fare se l'animale è SPARITO durante l'evento: ricerca strutturata, foto al canile, ASL veterinaria, gruppi locali Facebook, mai \"aspettiamo che torni\"",
+            "Capodanno e petardi: stress acuto, fughe, traumi — sedazione veterinaria (mai fai-da-te), stanza buia con musica, microchip funzionante",
+            "Animali di stalla e fattoria: piano specifico per cavalli, bovini, ovini — evacuazione vs riparo in stalla a seconda dell'evento (incendio = evacuare, terremoto = mai correre vicino agli zoccoli); D.Lgs. 146/2001 + Reg. UE 2016/429 come quadro sanitario",
+            "Animali esotici e non convenzionali (conigli, tartarughe, uccelli, rettili): bisogni termici e alimentari particolari, contattare veterinario specializzato",
+            "Cosa NON fare: lasciarli chiusi in auto al sole, slegarli in un'evacuazione di massa \"così si salvano da soli\", abbandonarli (è reato L. 189/2004)",
+        ],
+        "icona_emoji": "🐾🦮",
     },
 }
 
