@@ -176,3 +176,4 @@ Un'unica pagina per consultare i dati di rischio del territorio, da **fonti uffi
 > La scheda **Terremoti** ha lo switch **Italia / Castelli Romani**: la vista locale mostra la sismicità del distretto vulcanico dei Colli Albani, su cui sorge Genzano di Roma.
 
 <!-- cache-bust: 2026-05-28-fix-terremoti-leaflet-pixelbounds — forza re-upload FTP -->
+<!-- cache-bust: 2026-05-28T17:15 preferCanvas fix -->
