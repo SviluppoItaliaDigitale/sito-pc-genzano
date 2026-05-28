@@ -36,7 +36,11 @@ ACCENT  = RGBColor(0xFF, 0xBE, 0x2E)   # giallo accento
 DARK    = RGBColor(0x1A, 0x1A, 0x1A)
 GREY    = RGBColor(0x5A, 0x6B, 0x7B)
 WHITE   = RGBColor(0xFF, 0xFF, 0xFF)
-FONT = "Calibri"
+# Liberation Sans: open source, equivalente metrico di Arial, sempre presente
+# su Linux (pacchetto fonts-liberation). Sostituisce Calibri (Microsoft, NON
+# installato sul sistema) che faceva fallback di LibreOffice → rasterizzava
+# il testo come immagine nei PDF prodotti (bug audit PDF maggio 2026).
+FONT = "Liberation Sans"
 LOGO = os.path.join(REPO, "static/images/logo-pc-genzano.png")
 
 prs = Presentation()
