@@ -1,6 +1,6 @@
 ---
 title: "Bambini all'aperto: sicurezza nei giochi e nel tempo libero"
-date: 2026-05-28
+date: 2026-05-28T00:01:00+02:00
 description: "Parchi, biciclette, piscine, giochi in strada: la sicurezza dei bambini d'estate richiede attenzione degli adulti, non eccessive restrizioni."
 badge: "Prevenzione"
 priorita: "normale"
