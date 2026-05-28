@@ -29,6 +29,8 @@ params:
   podcast_apple: ""
 ---
 
+<!-- cache-bust: 2026-05-28 forza re-upload FTP indice podcast dopo ridistribuzione slug episodi (audit ChatGPT) -->
+
 **Voci dalla Protezione Civile di Genzano di Roma** è il podcast del Gruppo Comunale Volontari. Episodi brevi — dai 10 ai 20 minuti — su come funziona la protezione civile vicino a casa: i rischi del nostro territorio, il racconto delle esercitazioni, le interviste ai volontari e agli esperti.
 
 Si ascolta gratis, senza account. Puoi seguirlo dalla tua app preferita iscrivendoti al **feed RSS** qui sotto, oppure su Spotify e Apple Podcasts non appena il podcast sarà distribuito.

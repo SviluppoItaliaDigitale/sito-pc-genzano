@@ -1145,12 +1145,16 @@ jobs:
               THRESHOLD=7200      # 2h per Last-Modified HTTP
               SEM_THRESHOLD_H=24  # 24h per Sito aggiornato il (semantico)
               NOW_EPOCH=$(date -u +%s)
-              # 19 pagine Hugo critiche (NON statiche) + 1 articolo dinamico
-              # (totale 20 URL). Tutte dovrebbero essere ri-deployate ad ogni
+              # 21 pagine Hugo critiche (NON statiche) + 1 articolo dinamico
+              # (totale 22 URL). Tutte dovrebbero essere ri-deployate ad ogni
               # cambio del chrome (navbar/footer/utility-bar). Allargato da 8 a
               # 20 il 12 maggio 2026 per coprire l'intero campione di smoke test
               # raccomandato dalla rule 05 (homepage, sezioni servizi, pagine
-              # legali/istituzionali, archivio, articolo singolo).
+              # legali/istituzionali, archivio, articolo singolo). Ulteriormente
+              # allargato a 22 il 28 maggio 2026 dopo audit ChatGPT che ha
+              # rilevato /emergenza/ con data/allerta.json ultimo_controllo
+              # stantio (22/05 vs 28/05 reale) e /podcast/ con link episodi 404
+              # da slug ridistribuiti.
               SAMPLE_URLS="https://www.protezionecivilegenzano.it/
               https://www.protezionecivilegenzano.it/accessibilita/
               https://www.protezionecivilegenzano.it/cosa-fare-adesso/
@@ -1169,7 +1173,9 @@ jobs:
               https://www.protezionecivilegenzano.it/strumenti/
               https://www.protezionecivilegenzano.it/area-download/
               https://www.protezionecivilegenzano.it/normativa/
-              https://www.protezionecivilegenzano.it/glossario/"
+              https://www.protezionecivilegenzano.it/glossario/
+              https://www.protezionecivilegenzano.it/emergenza/
+              https://www.protezionecivilegenzano.it/podcast/"
               # Aggiunge dinamicamente un articolo recente come 20° URL (estratto
               # dal primo path articolo trovato nell'indice /comunicazioni/).
               # Pattern resiliente alle variazioni di Hugo minify (con/senza
@@ -1236,7 +1242,7 @@ jobs:
                 printf "%b" "$SEMANTIC_FAIL" >> "$REPORT"
               fi
               if [ -z "$STALE_PAGES" ] && [ -z "$SEMANTIC_FAIL" ]; then
-                ok "Tutte le pagine Hugo campione (19 fisse + 1 articolo dinamico = 20 URL): Last-Modified entro 2h dall'ultimo deploy + 4 marker semantici tutti OK (canonical-dropdown ≥ 1, niente Giochi legacy, niente tel: con spazi encoded, Sito aggiornato il entro 24h)."
+                ok "Tutte le pagine Hugo campione (21 fisse + 1 articolo dinamico = 22 URL): Last-Modified entro 2h dall'ultimo deploy + 4 marker semantici tutti OK (canonical-dropdown ≥ 1, niente Giochi legacy, niente tel: con spazi encoded, Sito aggiornato il entro 24h)."
               fi
             else
               warn "Impossibile recuperare timestamp ultimo deploy success via gh CLI: check § 43 saltato."
