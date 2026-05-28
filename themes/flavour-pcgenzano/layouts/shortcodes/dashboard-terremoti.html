@@ -38,11 +38,24 @@
   <div class="dash-sisma-grid">
     <div id="dash-sisma-mappa" role="application" aria-label="Mappa dei terremoti in Italia nel periodo selezionato, con Genzano di Roma evidenziata."></div>
     <div class="dash-sisma-liste">
-      <p class="dash-aria-nota" style="margin:0 0 .5rem">Tocca un evento per centrarlo sulla mappa.</p>
-      <h3>Ultimi eventi</h3>
-      <ol class="dash-sisma-list" id="lista-ultimi"></ol>
-      <h3>Più forti</h3>
-      <ol class="dash-sisma-list" id="lista-forti"></ol>
+      <p class="dash-aria-nota" style="margin:0 0 .5rem"><span id="dash-conteggio">—</span> · clicca un'intestazione per ordinare, una riga per centrarla sulla mappa.</p>
+      <div class="table-responsive">
+        <table class="dash-sisma-tabella" id="dash-sisma-tabella">
+          <caption class="visually-hidden">Elenco dei terremoti rilevati nel periodo e nell'area selezionati, con data, magnitudo, zona, profondità, latitudine e longitudine. Ordinabile per ogni colonna.</caption>
+          <thead>
+            <tr>
+              <th scope="col"><button type="button" class="dash-sort-btn" data-sort="time" aria-sort="descending">Data e Ora <span class="dash-sort-ind">↓</span></button></th>
+              <th scope="col"><button type="button" class="dash-sort-btn" data-sort="mag" aria-sort="none">Magnitudo <span class="dash-sort-ind"></span></button></th>
+              <th scope="col"><button type="button" class="dash-sort-btn" data-sort="place" aria-sort="none">Zona <span class="dash-sort-ind"></span></button></th>
+              <th scope="col" class="dash-num"><button type="button" class="dash-sort-btn" data-sort="depth" aria-sort="none">Profondità (km) <span class="dash-sort-ind"></span></button></th>
+              <th scope="col" class="dash-num"><button type="button" class="dash-sort-btn" data-sort="dist" aria-sort="none">Distanza (km) <span class="dash-sort-ind"></span></button></th>
+              <th scope="col" class="dash-num dash-col-hide-sm">Lat</th>
+              <th scope="col" class="dash-num dash-col-hide-sm">Lon</th>
+            </tr>
+          </thead>
+          <tbody id="dash-sisma-tbody"></tbody>
+        </table>
+      </div>
     </div>
   </div>
 
@@ -106,37 +119,94 @@
     L.marker(GENZANO, { icon: L.divIcon({className:'dash-stella', html:'<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 26 26" aria-hidden="true"><path d="M13 1l3.4 7.6L24 9.3l-5.8 5 1.8 7.9L13 18.4 5.9 22.2l1.8-7.9L2 9.3l7.6-.7z" fill="#003366" stroke="#fff" stroke-width="1.4"/></svg>', iconSize:[22,22], iconAnchor:[11,11]}) }).bindPopup('<strong>Genzano di Roma</strong>').addTo(map);
     markers = L.layerGroup().addTo(map);
 
-    // click su una riga delle liste -> centra la mappa sull'evento e apre il popup
+    // Stato ordinamento tabella (default: tempo desc come INGV)
+    var sortKey = 'time', sortDir = -1; // -1 desc, +1 asc
+
+    // click su una riga -> centra la mappa sull'evento e apre il popup
     function vaiAEvento(i){
       var e=eventi[i], cm=markerById[i]; if(!e||!cm) return;
       map.setView([e.lat,e.lon], Math.max(map.getZoom(),8));
       cm.openPopup();
       document.getElementById('dash-sisma-mappa').scrollIntoView({behavior:'smooth',block:'nearest'});
     }
-    ['lista-ultimi','lista-forti'].forEach(function(id){
-      document.getElementById(id).addEventListener('click',function(ev){
-        var b=ev.target.closest('.dash-evento-btn'); if(!b) return;
-        vaiAEvento(parseInt(b.dataset.ev,10));
+    document.getElementById('dash-sisma-tbody').addEventListener('click',function(ev){
+      var tr=ev.target.closest('tr[data-ev]'); if(!tr)return;
+      vaiAEvento(parseInt(tr.dataset.ev,10));
+    });
+
+    // ordinamento via click sulle intestazioni della tabella
+    document.querySelectorAll('.dash-sort-btn').forEach(function(b){
+      b.addEventListener('click',function(){
+        var k=b.dataset.sort;
+        // Default per ogni colonna: time/place desc=newest/Z-A, num desc=biggest
+        if(sortKey===k){ sortDir = -sortDir; }
+        else { sortKey=k; sortDir = (k==='time'||k==='mag'||k==='depth')?-1:+1; }
+        renderTabella();
       });
     });
 
+    function pad6(t){var d=new Date(t);return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())+' '+pad(d.getHours())+':'+pad(d.getMinutes())+':'+pad(d.getSeconds());}
+
+    function renderTabella(){
+      var tbody=document.getElementById('dash-sisma-tbody');
+      var cnt=document.getElementById('dash-conteggio');
+      if(!eventi.length){
+        tbody.innerHTML='<tr><td colspan="7" class="dash-vuoto"><strong>Nessun terremoto</strong> nel periodo e nell\'area selezionati. Nessuna scossa registrata: una buona notizia.</td></tr>';
+        cnt.textContent='Nessun terremoto trovato';
+        return;
+      }
+      // aggiorno indicatori sort sulle intestazioni
+      document.querySelectorAll('.dash-sort-btn').forEach(function(b){
+        var ind=b.querySelector('.dash-sort-ind');
+        if(b.dataset.sort===sortKey){
+          b.setAttribute('aria-sort', sortDir<0?'descending':'ascending');
+          ind.textContent = sortDir<0?'↓':'↑';
+        } else {
+          b.setAttribute('aria-sort','none');
+          ind.textContent='';
+        }
+      });
+      // ordino
+      var arr=eventi.slice();
+      arr.sort(function(a,b){
+        var va,vb;
+        if(sortKey==='time'){ va=new Date(a.time).getTime(); vb=new Date(b.time).getTime(); }
+        else if(sortKey==='mag'){ va=a.mag; vb=b.mag; }
+        else if(sortKey==='depth'){ va=a.depth; vb=b.depth; }
+        else if(sortKey==='dist'){ va=dist(a.lat,a.lon); vb=dist(b.lat,b.lon); }
+        else { va=(a.place||'').toLowerCase(); vb=(b.place||'').toLowerCase(); }
+        if(va<vb) return -1*sortDir; if(va>vb) return 1*sortDir; return 0;
+      });
+      // limite a 30 righe per leggibilità (come INGV)
+      var max=Math.min(arr.length,30);
+      cnt.textContent='Visualizzati '+max+' su '+eventi.length+' eventi';
+      var html='';
+      for(var i=0;i<max;i++){
+        var e=arr[i], k=eventi.indexOf(e);
+        html += '<tr data-ev="'+k+'" title="Centra sulla mappa">'+
+                '<td class="dash-cell-time">'+pad6(e.time)+'</td>'+
+                '<td><span class="dash-mag" style="border-left-color:'+colore(e.mag)+'">M '+e.mag.toFixed(1)+'</span></td>'+
+                '<td class="dash-cell-place">'+e.place+'</td>'+
+                '<td class="dash-num">'+e.depth+'</td>'+
+                '<td class="dash-num">'+dist(e.lat,e.lon)+'</td>'+
+                '<td class="dash-num dash-col-hide-sm">'+e.lat.toFixed(2)+'</td>'+
+                '<td class="dash-num dash-col-hide-sm">'+e.lon.toFixed(2)+'</td>'+
+                '</tr>';
+      }
+      tbody.innerHTML=html;
+    }
+
     function render(){
-      var el = document.getElementById('lista-ultimi'), ef = document.getElementById('lista-forti');
-      el.innerHTML=''; ef.innerHTML='';
       if(!eventi.length){
         document.getElementById('kpi-num').textContent='0';
         document.getElementById('kpi-max').textContent='—';
         document.getElementById('kpi-m3').textContent='0';
         document.getElementById('kpi-ult').textContent='nessuno';
-        el.innerHTML='<li class="dash-vuoto"><strong>Nessun terremoto</strong> nel periodo e nell\'area selezionati. Nessuna scossa registrata: una buona notizia.</li>';
-        ef.innerHTML='';
+        renderTabella();
         try { markers.clearLayers(); markerById={}; } catch(e){}
         return;
       }
-      // 1) Calcolo i KPI e li popolo PRIMA di toccare la mappa: se Leaflet
-      //    ha un bug nel renderer (1.9.4 + tab nascosta inizialmente fallisce
-      //    su _renderer._bounds undefined), almeno KPI e liste testuali si
-      //    popolano comunque. Degradazione graceful.
+      // 1) KPI + tabella PRIMA della mappa (degradazione graceful).
       var maxM=0, m3=0;
       eventi.forEach(function(e,i){
         e._i=i;
@@ -147,18 +217,7 @@
       document.getElementById('kpi-m3').textContent=m3;
       var ult=eventi.slice().sort(function(a,b){return new Date(b.time)-new Date(a.time);});
       document.getElementById('kpi-ult').textContent=minFa(ult[0].time);
-      function riga(e){ return '<li><button type="button" class="dash-evento-btn" data-ev="'+e._i+'" title="Mostra sulla mappa"><span class="dash-mag" style="border-left-color:'+colore(e.mag)+'">M '+e.mag.toFixed(1)+'</span> <span class="dash-luogo">'+e.place+'</span> <span class="dash-meta">'+oraIt(e.time)+' · '+dist(e.lat,e.lon)+' km da Genzano di Roma</span></button></li>'; }
-      // Ordinamento secondario:
-      //   "Ultimi eventi" — primario tempo desc, secondario distanza da Genzano asc
-      //   "Più forti"     — primario magnitudo desc, secondario tempo desc (tra eventi equimagnitudo: prima i più recenti)
-      el.innerHTML=ult.slice().sort(function(a,b){
-        var dt=new Date(b.time)-new Date(a.time); if(dt!==0)return dt;
-        return dist(a.lat,a.lon)-dist(b.lat,b.lon);
-      }).slice(0,8).map(riga).join('');
-      ef.innerHTML=eventi.slice().sort(function(a,b){
-        if(b.mag!==a.mag)return b.mag-a.mag;
-        return new Date(b.time)-new Date(a.time);
-      }).slice(0,8).map(riga).join('');
+      renderTabella();
       // 2) Disegno i marker sulla mappa usando L.marker + L.divIcon (HTML/CSS)
       //    invece di L.circleMarker (SVG/Canvas). I divIcon non triggerano il
       //    renderer Leaflet che ha il bug `_renderer._bounds undefined` su

@@ -6783,3 +6783,41 @@ html.a11y-pause-anim .cruscotto-home-card, html.a11y-pause-anim .cruscotto-home-
 @media print {
   .audit-pdf-table tr td { background: #fff !important; color: #000; }
 }
+
+/* ──────────────────────────────────────────────────────────────────────────
+   DASHBOARD TERREMOTI — TABELLA v1.0
+   Tabella ordinabile stile INGV. Sostituisce le vecchie liste
+   "Ultimi eventi" / "Più forti". Accessibile, responsive (su mobile
+   nasconde Lat/Lon), ordinamento per click sulle intestazioni.
+   ────────────────────────────────────────────────────────────────────── */
+.dash-sisma-tabella { width: 100%; border-collapse: collapse; font-size: .88rem; }
+.dash-sisma-tabella thead th {
+  background: #003366; color: #fff; padding: .5rem .4rem; text-align: left;
+  font-weight: 600; position: sticky; top: 0; z-index: 1;
+}
+.dash-sisma-tabella th.dash-num,
+.dash-sisma-tabella td.dash-num { text-align: right; font-variant-numeric: tabular-nums; }
+.dash-sisma-tabella tbody tr { border-bottom: 1px solid #eef1f4; cursor: pointer; transition: background .12s ease; }
+.dash-sisma-tabella tbody tr:nth-child(even) { background: #f8fafc; }
+.dash-sisma-tabella tbody tr:hover,
+.dash-sisma-tabella tbody tr:focus-visible { background: #e7f0fa; outline: none; }
+.dash-sisma-tabella td { padding: .45rem .4rem; vertical-align: middle; }
+.dash-sisma-tabella td.dash-cell-time { font-variant-numeric: tabular-nums; white-space: nowrap; color: #444; font-size: .82rem; }
+.dash-sisma-tabella td.dash-cell-place { color: #1a1a1a; }
+.dash-sort-btn {
+  background: none; border: 0; color: inherit; font: inherit; font-weight: 600;
+  cursor: pointer; padding: 0; display: inline-flex; align-items: center; gap: .25rem;
+}
+.dash-sort-btn:hover { text-decoration: underline; }
+.dash-sort-btn:focus-visible { outline: 2px solid #ffbe2e; outline-offset: 2px; border-radius: 2px; }
+.dash-sort-ind { display: inline-block; min-width: .8em; opacity: .9; }
+.dash-sisma-tabella .dash-vuoto { text-align: center; padding: 1rem; color: #555; }
+@media (max-width: 768px) {
+  .dash-sisma-tabella { font-size: .82rem; }
+  .dash-col-hide-sm { display: none; }
+  .dash-sisma-tabella td, .dash-sisma-tabella th { padding: .35rem .25rem; }
+}
+@media print {
+  .dash-sisma-tabella thead th { background: #fff; color: #000; border-bottom: 2px solid #000; }
+  .dash-sisma-tabella tbody tr { cursor: default; }
+}
