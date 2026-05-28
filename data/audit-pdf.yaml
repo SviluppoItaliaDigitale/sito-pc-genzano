@@ -1,8 +1,8 @@
 ultimo_audit: '2026-05-28'
-totale: 21
+totale: 22
 riepilogo:
   ACCESSIBILE: 2
-  PARZIALE: 7
+  PARZIALE: 8
   NON_ACCESSIBILE: 0
   TERZO: 12
   ERRORE: 0
@@ -252,6 +252,19 @@ documenti:
   pages: 15
   errors: []
   text_chars_sample: 1376
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: PARZIALE
+- path: /presentazioni/2026-05-14-ondate-di-calore-presentazione-pdf.pdf
+  file: 2026-05-14-ondate-di-calore-presentazione-pdf.pdf
+  size_kb: 13651.1
+  searchable: true
+  tagged: false
+  language: it
+  title: null
+  pages: 15
+  errors: []
+  text_chars_sample: 1358
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
   verdict: PARZIALE
