@@ -105,7 +105,6 @@
     });
 
     function render(){
-      markers.clearLayers(); markerById={};
       var el = document.getElementById('lista-ultimi'), ef = document.getElementById('lista-forti');
       el.innerHTML=''; ef.innerHTML='';
       if(!eventi.length){
@@ -115,15 +114,17 @@
         document.getElementById('kpi-ult').textContent='nessuno';
         el.innerHTML='<li class="dash-vuoto"><strong>Nessun terremoto</strong> nel periodo e nell\'area selezionati. Nessuna scossa registrata: una buona notizia.</li>';
         ef.innerHTML='';
+        try { markers.clearLayers(); markerById={}; } catch(e){}
         return;
       }
+      // 1) Calcolo i KPI e li popolo PRIMA di toccare la mappa: se Leaflet
+      //    ha un bug nel renderer (1.9.4 + tab nascosta inizialmente fallisce
+      //    su _renderer._bounds undefined), almeno KPI e liste testuali si
+      //    popolano comunque. Degradazione graceful.
       var maxM=0, m3=0;
       eventi.forEach(function(e,i){
         e._i=i;
         if(e.mag>maxM)maxM=e.mag; if(e.mag>=3)m3++;
-        var cm=L.circleMarker([e.lat,e.lon],{radius:raggio(e.mag),color:'#333',weight:0.6,fillColor:colore(e.mag),fillOpacity:0.8})
-          .bindPopup('<strong>M '+e.mag.toFixed(1)+'</strong><br>'+e.place+'<br>'+oraIt(e.time)+' · prof. '+e.depth+' km<br>'+dist(e.lat,e.lon)+' km da Genzano di Roma');
-        cm.addTo(markers); markerById[i]=cm;
       });
       document.getElementById('kpi-num').textContent=eventi.length;
       document.getElementById('kpi-max').textContent='M '+maxM.toFixed(1);
@@ -133,6 +134,18 @@
       function riga(e){ return '<li><button type="button" class="dash-evento-btn" data-ev="'+e._i+'" title="Mostra sulla mappa"><span class="dash-mag" style="border-left-color:'+colore(e.mag)+'">M '+e.mag.toFixed(1)+'</span> <span class="dash-luogo">'+e.place+'</span> <span class="dash-meta">'+oraIt(e.time)+' · '+dist(e.lat,e.lon)+' km da Genzano di Roma</span></button></li>'; }
       el.innerHTML=ult.slice(0,8).map(riga).join('');
       ef.innerHTML=eventi.slice().sort(function(a,b){return b.mag-a.mag;}).slice(0,8).map(riga).join('');
+      // 2) Disegno i marker sulla mappa in modo difensivo: ogni circleMarker
+      //    in try/catch così se Leaflet rompe su un punto non blocca gli altri
+      //    e soprattutto non fa rigettare la Promise del fetch → niente retry
+      //    infinito che impediva persino di vedere le liste.
+      try { markers.clearLayers(); markerById={}; } catch(e){}
+      eventi.forEach(function(e,i){
+        try {
+          var cm=L.circleMarker([e.lat,e.lon],{radius:raggio(e.mag),color:'#333',weight:0.6,fillColor:colore(e.mag),fillOpacity:0.8})
+            .bindPopup('<strong>M '+e.mag.toFixed(1)+'</strong><br>'+e.place+'<br>'+oraIt(e.time)+' · prof. '+e.depth+' km<br>'+dist(e.lat,e.lon)+' km da Genzano di Roma');
+          cm.addTo(markers); markerById[i]=cm;
+        } catch(err) { /* Leaflet bug noto su tab nascosta inizialmente */ }
+      });
     }
 
     function carica(retry){
