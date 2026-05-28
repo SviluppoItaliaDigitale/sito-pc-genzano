@@ -521,11 +521,14 @@ TEMI = {
     "animali-emergenza": {
         "titolo": "Animali in emergenza: come proteggere chi non può chiedere aiuto",
         "pagina_sito": f"{SITO_BASE}/formazione/kit-calamita-animali/",
+        # Solo URL gia' pubblicati/stabili: gli articoli stagionali su animali
+        # (11/2026 emergenze, 11/2026 stalle/fattorie, 12/2026 capodanno,
+        # 07-08/2026 caldo) sono in calendario e darebbero 404 se linkati ora.
         "articoli_correlati": [
-            f"{SITO_BASE}/comunicazioni/2026-11-19-animali-domestici-emergenze/",
-            f"{SITO_BASE}/comunicazioni/2026-11-28-sicurezza-animali-stalla-fattorie/",
-            f"{SITO_BASE}/comunicazioni/2026-12-30-capodanno-petardi-sicurezza/",
+            f"{SITO_BASE}/comunicazioni/2026-04-23-cani-gatti-caldo-ondate-calore/",
             f"{SITO_BASE}/rischi-prevenzione/kit-emergenza/",
+            f"{SITO_BASE}/rischi-prevenzione/persone-necessita-specifiche/",
+            f"{SITO_BASE}/normativa/",
             f"{SITO_BASE}/glossario/",
         ],
         "fonti_istituzionali": [
