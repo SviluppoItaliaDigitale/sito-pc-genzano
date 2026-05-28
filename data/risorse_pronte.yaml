@@ -19,6 +19,46 @@ temi:
   titolo: Kit emergenza famiglia
   icona: bi-bag-check
   descrizione: 'Tre kit (Vai, Casa, Auto): cosa preparare prima dell''evento.'
+- slug: rischio-vulcanico
+  titolo: Rischio vulcanico
+  icona: bi-triangle-fill
+  descrizione: 'Colli Albani: vulcano quiescente non estinto, monitoraggio INGV.'
+- slug: ondate-di-calore
+  titolo: Ondate di calore
+  icona: bi-thermometer-sun
+  descrizione: Come proteggersi davvero d'estate, soprattutto anziani e neonati.
+- slug: temporali-intensi
+  titolo: Temporali intensi
+  icona: bi-cloud-lightning-rain-fill
+  descrizione: 'Fulmini, grandine, downburst: cosa fare e dove ripararsi.'
+- slug: vento-forte
+  titolo: Vento forte
+  icona: bi-wind
+  descrizione: 'Raffiche, alberi, ponteggi: prevenzione e comportamenti.'
+- slug: blackout
+  titolo: Blackout
+  icona: bi-plug
+  descrizione: Come prepararsi all'interruzione elettrica, senza panico.
+- slug: dopo-emergenza
+  titolo: Dopo l'emergenza
+  icona: bi-house-heart
+  descrizione: 'La fase più lunga: agibilità, segnalazione danni, supporto psicologico.'
+- slug: nue-112
+  titolo: NUE 112
+  icona: bi-telephone-forward
+  descrizione: Il numero unico di emergenza europeo. Come si chiama davvero.
+- slug: it-alert
+  titolo: IT-alert
+  icona: bi-broadcast
+  descrizione: Il sistema italiano di allarme pubblico via cell broadcast.
+- slug: piano-familiare
+  titolo: Piano familiare di emergenza
+  icona: bi-people
+  descrizione: 'Un foglio A4 condiviso: punto di incontro, contatto fuori-area, prove.'
+- slug: aree-emergenza
+  titolo: Aree di emergenza
+  icona: bi-geo-alt
+  descrizione: 'Attesa, accoglienza, ammassamento: dove andare e perché.'
 materiali:
 - id: allerta-meteo-podcast-2026-05-16
   tema: allerta-meteo
