@@ -2,7 +2,7 @@
 title: "Podcast: Vento forte"
 date: 2026-05-27
 description: "Episodio podcast generato con NotebookLM sulla base delle fonti istituzionali del sito (CC BY-NC-SA 4.0). Ascoltabile online o scaricabile per ascolto offline."
-episodio: 9
+episodio: 11
 audio: "/podcast/episodi/2026-05-27-vento-forte-podcast.m4a"
 
 draft: false

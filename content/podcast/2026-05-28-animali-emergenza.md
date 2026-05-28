@@ -2,7 +2,7 @@
 title: "Podcast: Animali in emergenza"
 date: 2026-05-28
 description: "Episodio podcast generato con NotebookLM sulla base delle fonti istituzionali del sito (CC BY-NC-SA 4.0). Ascoltabile online o scaricabile per ascolto offline."
-episodio: 10
+episodio: 12
 audio: "/podcast/episodi/2026-05-28-animali-emergenza-podcast.m4a"
 
 draft: false
