@@ -156,7 +156,17 @@
 
     // init quando la scheda diventa visibile (lazy) o subito se già visibile
     var box=document.getElementById('dash-sisma-mappa');
-    function go(){ map.invalidateSize(); carica(); setInterval(carica, 300000); }
+    function go(){
+      map.invalidateSize();
+      // Forza Leaflet a calcolare _pixelBounds: con la tab "terremoti" attiva
+      // di default al load, map._loaded è true ma _pixelBounds resta undefined
+      // finché non avviene un _resetView esplicito → i CircleMarker creati
+      // da render() falliscono in _updateCircle → intersects(undefined). Il
+      // setView qui ricalcola i pixel bounds senza spostare la vista.
+      map.setView(map.getCenter(), map.getZoom(), {animate:false});
+      carica();
+      setInterval(carica, 300000);
+    }
     if (box.offsetParent !== null) { go(); }
     else { window.addEventListener('cruscotto:terremoti', go, {once:true}); }
   })();
