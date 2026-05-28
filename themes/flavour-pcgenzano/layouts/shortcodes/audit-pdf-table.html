@@ -5,7 +5,8 @@
   Parametri opzionali:
     filtro: "tutti" (default) | "gruppo" | "terzi" | "da-sistemare"
 */}}
-{{ $audit := site.Data.audit-pdf }}
+{{/* Hugo legge il trattino come operatore meno: serve `index` per chiavi con `-` */}}
+{{ $audit := index site.Data "audit-pdf" }}
 {{ $filtro := .Get "filtro" | default "tutti" }}
 {{ $docs := $audit.documenti }}
 
