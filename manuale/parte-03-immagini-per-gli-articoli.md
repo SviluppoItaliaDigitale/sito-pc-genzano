@@ -742,7 +742,22 @@ Ogni grafica istituzionale del Gruppo (cover, slide social, scheda A4, locandina
 
 **Vietato:** mai mescolare PC Genzano tra le affiliazioni (doppione), mai inserire un 5° logo (PC Lazio, Comune, VVF, INGV, ecc. — vivono nei contenuti testuali o nel chrome del sito, non nella grafica del Gruppo), mai logo Quality Label ESC senza codice E10435833 (Reg. UE 2021/888).
 
-Vale anche per grafiche generate con AI esterne (ChatGPT, Gemini, Canva, ecc.): includere sempre la regola nel prompt + fornire i 4 file ufficiali del repo. Specifiche complete in `.claude/rules/02-content-design-pa.md § "Composizione standard"`.
+Vale anche per grafiche generate con AI esterne (ChatGPT, Gemini, Midjourney, Canva, Adobe Express, DALL-E, Stable Diffusion, ecc.): includere sempre la regola nel prompt + fornire i 4 file ufficiali del repo. Specifiche complete in `.claude/rules/02-content-design-pa.md § "Composizione standard"`.
+
+**Brief pronto da incollare alle AI esterne** (uso interno: NON va pubblicato sul sito; gli URL sono pubblici e diretti, scaricabili dalle AI con capacità web/image-fetch):
+
+> «La grafica deve riportare ESATTAMENTE 4 loghi: (1) PC Genzano in alto come firma; (2) Quality Label ESC + codice E10435833 accanto (mai disgiunti, Reg. UE 2021/888); (3) Coordinamento FE.PI.VOL.; (4) SNPC Volontariato — questi 3 nel footer come blocco affiliazioni. Mai doppioni. Mai 5° logo (Comune, PC Lazio, VVF, INGV, ecc.). Mai logo ESC senza codice E10435833.»
+
+URL pubblici dei 4 file da allegare al prompt:
+
+| # | Logo | URL diretto |
+|---|---|---|
+| 1 | PC Genzano (firma, WebP) | `https://www.protezionecivilegenzano.it/images/logo-pc-genzano.webp` |
+| 1 | PC Genzano hi-res (stampa) | `https://www.protezionecivilegenzano.it/images/logo-pc-genzano-hires.png` |
+| 2 | Quality Label ESC + codice E10435833 (web) | `https://www.protezionecivilegenzano.it/images/quality-label-esc.png` |
+| 2 | Quality Label ESC hi-res (stampa) | `https://www.protezionecivilegenzano.it/images/logo-esc-quality-label-it.png` |
+| 3 | Coordinamento FE.PI.VOL. | `https://www.protezionecivilegenzano.it/images/logo-fepivol.png` |
+| 4 | SNPC Volontariato | `https://www.protezionecivilegenzano.it/images/logo-snpc-volontariato.png` |
 
 **Dove sono già esposti** (non ri-implementare):
 - Footer site-wide (`themes/flavour-pcgenzano/layouts/partials/footer.html` + `static/app-shared/site-chrome.js`)
