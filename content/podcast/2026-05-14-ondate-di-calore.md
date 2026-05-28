@@ -1,14 +1,14 @@
 ---
-title: "Podcast: Temporali intensi"
-date: 2026-05-25
+title: "Podcast: Ondate di calore"
+date: 2026-05-14
 description: "Episodio podcast generato con NotebookLM sulla base delle fonti istituzionali del sito (CC BY-NC-SA 4.0). Ascoltabile online o scaricabile per ascolto offline."
-episodio: 9
-audio: "/podcast/episodi/2026-05-25-temporali-intensi-podcast.m4a"
+episodio: 13
+audio: "/podcast/episodi/2026-05-14-ondate-di-calore-podcast.m4a"
 
 draft: false
 ---
 
-Episodio del podcast del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, sul tema **Temporali intensi**.
+Episodio del podcast del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, sul tema **Ondate di calore**.
 
 Il podcast è generato automaticamente con [NotebookLM](https://notebooklm.google.com) partendo dalle fonti istituzionali raccolte dal sito (Dipartimento di Protezione Civile, INGV, ISPRA, Centro Funzionale Regionale Lazio, standard ISO). I contenuti sono sempre verificati prima della pubblicazione.
 
@@ -25,4 +25,4 @@ Materiale pubblicato con licenza Creative Commons **CC BY-NC-SA 4.0**: puoi asco
 ## Sul sito
 
 - [Tutti i materiali multimediali pronti](/risorse-pronte/) — podcast, infografiche, presentazioni divisi per tema
-- [Temporali intensi](/risorse-pronte/#tema-temporali-intensi) — gli altri materiali su questo tema
+- [Ondate di calore](/risorse-pronte/#tema-ondate-di-calore) — gli altri materiali su questo tema

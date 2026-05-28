@@ -1,14 +1,14 @@
 ---
-title: "Podcast: Blackout"
-date: 2026-05-23
+title: "Podcast: Dopo l'emergenza"
+date: 2026-04-26
 description: "Episodio podcast generato con NotebookLM sulla base delle fonti istituzionali del sito (CC BY-NC-SA 4.0). Ascoltabile online o scaricabile per ascolto offline."
-episodio: 7
-audio: "/podcast/episodi/2026-05-23-blackout-podcast.m4a"
+episodio: 9
+audio: "/podcast/episodi/2026-04-26-dopo-emergenza-podcast.m4a"
 
 draft: false
 ---
 
-Episodio del podcast del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, sul tema **Blackout**.
+Episodio del podcast del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, sul tema **Dopo l'emergenza**.
 
 Il podcast è generato automaticamente con [NotebookLM](https://notebooklm.google.com) partendo dalle fonti istituzionali raccolte dal sito (Dipartimento di Protezione Civile, INGV, ISPRA, Centro Funzionale Regionale Lazio, standard ISO). I contenuti sono sempre verificati prima della pubblicazione.
 
@@ -25,4 +25,4 @@ Materiale pubblicato con licenza Creative Commons **CC BY-NC-SA 4.0**: puoi asco
 ## Sul sito
 
 - [Tutti i materiali multimediali pronti](/risorse-pronte/) — podcast, infografiche, presentazioni divisi per tema
-- [Blackout](/risorse-pronte/#tema-blackout) — gli altri materiali su questo tema
+- [Dopo l'emergenza](/risorse-pronte/#tema-dopo-emergenza) — gli altri materiali su questo tema

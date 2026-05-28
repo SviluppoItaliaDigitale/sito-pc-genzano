@@ -1,9 +1,9 @@
 ---
 title: "Podcast: Allerta meteo"
-date: 2026-04-04
+date: 2026-03-25
 description: "Episodio podcast sull'allerta meteo nel Lazio: codici colore, differenza fra allerta ed emergenza, come leggere i bollettini del Centro Funzionale Regionale."
 episodio: 2
-audio: "/podcast/episodi/2026-04-04-allerta-meteo-podcast.m4a"
+audio: "/podcast/episodi/2026-03-25-allerta-meteo-podcast.m4a"
 draft: false
 ---
 
