@@ -284,3 +284,58 @@ materiali:
   dimensione: 4.6 MB
   data_pubblicazione: '2026-04-18'
   licenza: CC BY-NC-SA 4.0
+- id: blackout-podcast-2026-05-23
+  tema: blackout
+  tema_titolo: Blackout
+  tipo: podcast
+  titolo: 'Podcast: Blackout'
+  descrizione: Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online
+    o scaricabile per ascolto offline.
+  file_url: /podcast/episodi/2026-05-23-blackout-podcast.m4a
+  dimensione: 41.1 MB
+  data_pubblicazione: '2026-05-23'
+  licenza: CC BY-NC-SA 4.0
+- id: animali-emergenza-podcast-2026-05-28
+  tema: animali-emergenza
+  tema_titolo: Animali in emergenza
+  tipo: podcast
+  titolo: 'Podcast: Animali in emergenza'
+  descrizione: Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online
+    o scaricabile per ascolto offline.
+  file_url: /podcast/episodi/2026-05-28-animali-emergenza-podcast.m4a
+  dimensione: 43.2 MB
+  data_pubblicazione: '2026-05-28'
+  licenza: CC BY-NC-SA 4.0
+- id: temporali-intensi-podcast-2026-05-25
+  tema: temporali-intensi
+  tema_titolo: Temporali intensi
+  tipo: podcast
+  titolo: 'Podcast: Temporali intensi'
+  descrizione: Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online
+    o scaricabile per ascolto offline.
+  file_url: /podcast/episodi/2026-05-25-temporali-intensi-podcast.m4a
+  dimensione: 31.0 MB
+  data_pubblicazione: '2026-05-25'
+  licenza: CC BY-NC-SA 4.0
+- id: vento-forte-podcast-2026-05-27
+  tema: vento-forte
+  tema_titolo: Vento forte
+  tipo: podcast
+  titolo: 'Podcast: Vento forte'
+  descrizione: Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online
+    o scaricabile per ascolto offline.
+  file_url: /podcast/episodi/2026-05-27-vento-forte-podcast.m4a
+  dimensione: 53.5 MB
+  data_pubblicazione: '2026-05-27'
+  licenza: CC BY-NC-SA 4.0
+- id: piano-familiare-podcast-2026-05-24
+  tema: piano-familiare
+  tema_titolo: Piano familiare di emergenza
+  tipo: podcast
+  titolo: 'Podcast: Piano familiare di emergenza'
+  descrizione: Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online
+    o scaricabile per ascolto offline.
+  file_url: /podcast/episodi/2026-05-24-piano-familiare-podcast.m4a
+  dimensione: 30.9 MB
+  data_pubblicazione: '2026-05-24'
+  licenza: CC BY-NC-SA 4.0
