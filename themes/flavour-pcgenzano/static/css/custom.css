@@ -6602,8 +6602,11 @@ html.a11y-pause-anim .consulta-rapida .cr-card:hover { transform: none; }
 .dash-kpi { background: #e7f0fa; border-left: 4px solid #003366; border-radius: 8px; padding: .7rem .9rem; text-align: center; }
 .dash-kpi-num { display: block; font-size: 1.5rem; font-weight: 800; color: #003366; line-height: 1.1; }
 .dash-kpi-lab { display: block; font-size: .78rem; color: #495057; margin-top: .2rem; }
-.dash-sisma-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 1rem; align-items: start; }
-#dash-sisma-mappa { height: 520px; border-radius: 8px; border: 2px solid #003366; background: #eaeaea; }
+/* Stack verticale: mappa sopra full-width, tabella sotto full-width.
+   La tabella INGV-style con 7 colonne ha bisogno di tutta la larghezza per
+   essere leggibile; affiancarla alla mappa la rendeva troppo stretta. */
+.dash-sisma-grid { display: flex; flex-direction: column; gap: 1rem; }
+#dash-sisma-mappa { height: 520px; border-radius: 8px; border: 2px solid #003366; background: #eaeaea; width: 100%; }
 .dash-sisma-liste h3 { font-size: 1rem; color: #003366; margin: .2rem 0 .4rem; }
 .dash-sisma-list { list-style: none; margin: 0 0 1rem; padding: 0; }
 .dash-sisma-list li { border-bottom: 1px solid #eef1f4; }
