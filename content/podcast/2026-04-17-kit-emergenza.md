@@ -9,8 +9,6 @@ draft: false
 
 Episodio del podcast del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, sul tema **Kit emergenza famiglia**.
 
-Il podcast è generato con [NotebookLM](https://notebooklm.google.com) partendo dalle fonti istituzionali raccolte dal sito (Dipartimento di Protezione Civile, IFRC Croce Rossa Internazionale, Sphere Handbook 2018, manuale FIC cucina emergenza). I contenuti sono verificati prima della pubblicazione.
-
 ## Cosa trovi in questo episodio
 
 - I tre kit distinti: KIT VAI (evacuazione rapida), KIT CASA (autonomia 72 ore), KIT AUTO.
@@ -37,3 +35,7 @@ Materiale pubblicato con licenza Creative Commons **CC BY-NC-SA 4.0**: puoi asco
 - [Tutti i materiali multimediali pronti](/risorse-pronte/) — podcast, infografiche, presentazioni divisi per tema.
 - [Materiali sul kit emergenza](/risorse-pronte/#tema-kit-emergenza) — gli altri materiali su questo tema (infografica, presentazione).
 - [Pagina Kit emergenza](/rischi-prevenzione/kit-emergenza/) — la guida operativa sul sito con liste dettagliate e checklist.
+
+## Nota sulla produzione
+
+L'audio di questo episodio è redatto e verificato dal **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** sulla base di fonti istituzionali del Sistema nazionale di Protezione Civile (Dipartimento Nazionale, INGV, ISPRA, Centro Funzionale Regionale Lazio, standard ISO). La traccia audio è prodotta con il supporto di [NotebookLM](https://notebooklm.google.com), uno strumento di Google che genera audio a partire dai testi caricati; i contenuti sono sempre verificati dal Gruppo prima della pubblicazione.

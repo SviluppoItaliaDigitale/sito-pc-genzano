@@ -225,7 +225,7 @@ Quando modifichi **un partial del chrome** (`navbar.html`, `footer.html`, `slim-
 
 **Principio**: il set di pagine "high-traffic sotto monitoraggio" deve essere identico fra **detection** (audit-sito.yml § 43, 20 URL) e **rimedio** (cache-bust qui sotto). Se § 43 controlla una pagina ma il rimedio non la copre, quella pagina può restare stale senza essere ricoperta dal pattern documentato. Riferimento incrociato: ogni pagina elencata qui è anche nel campione § 43 (cfr. sezione "Detection" sotto).
 
-9 file in ordine di priorità (alto-traffico + pagine flaggate negli incidenti reali):
+11 file in ordine di priorità (alto-traffico + pagine flaggate negli incidenti reali):
 
 1. `content/comunicazioni/_index.md` (archivio principale)
 2. `content/cosa-fare-adesso/_index.md` (pagina critica emergenza)
@@ -236,6 +236,8 @@ Quando modifichi **un partial del chrome** (`navbar.html`, `footer.html`, `slim-
 7. `content/chi-siamo/_index.md` (storia + direttivo, flaggata stale 13/05/2026)
 8. `content/numeri-utili/_index.md` (numeri emergenza, flaggata stale 13/05/2026)
 9. `content/diventa-volontario/_index.md` (recruiting, flaggata stale 13/05/2026)
+10. `content/emergenza/_index.md` (pagina lite, mostra `data/allerta.json` ultimo_controllo al build — flaggata stale 28/05/2026 con discrepanza data verifica allerta meteo)
+11. `content/podcast/_index.md` (hub podcast, le pagine episodio non sono in lista perché generate dinamicamente; cache-bustare l'indice basta a forzare re-upload di una sezione)
 
 Il commento HTML in fondo al frontmatter cambia per ogni cache-bust diverso (nuova data), Hugo lo rigenera, il timestamp/dimensione cambia, FTP lo riconosce come "diverso" → upload forzato.
 
@@ -245,7 +247,7 @@ Il commento HTML in fondo al frontmatter cambia per ogni cache-bust diverso (nuo
 
 ### Detection: il workflow audit-sito.yml controlla coerenza HTTP + 4 marker semantici
 
-Da maggio 2026, `audit-sito.yml` ha una sezione (sezione 43 — "Stale FTP files detection") che ogni lunedì 09:00 UTC fa **due check** su ciascuna delle **20 pagine Hugo campione** (19 fisse + 1 articolo dinamico estratto dall'indice `/comunicazioni/`): `/`, `/accessibilita/`, `/cosa-fare-adesso/`, `/formazione/`, `/comunicazioni/`, `/allerte-meteo/`, `/piano-emergenza/`, `/piano-familiare/`, `/numeri-utili/`, `/chi-siamo/`, `/contatti/`, `/rischi-prevenzione/`, `/cartografia/`, `/diventa-volontario/`, `/faq/`, `/strumenti/`, `/area-download/`, `/normativa/`, `/glossario/` + l'ultimo articolo pubblicato. **Allargato da 8 a 20 URL il 12 maggio 2026** dopo le 3 sessioni audit consecutive sullo stesso problema (il campione di 8 non includeva pagine come `/allerte-meteo/`, `/numeri-utili/`, `/area-download/` segnalate negli audit storici).
+Da maggio 2026, `audit-sito.yml` ha una sezione (sezione 43 — "Stale FTP files detection") che ogni lunedì 09:00 UTC fa **due check** su ciascuna delle **22 pagine Hugo campione** (21 fisse + 1 articolo dinamico estratto dall'indice `/comunicazioni/`): `/`, `/accessibilita/`, `/cosa-fare-adesso/`, `/formazione/`, `/comunicazioni/`, `/allerte-meteo/`, `/piano-emergenza/`, `/piano-familiare/`, `/numeri-utili/`, `/chi-siamo/`, `/contatti/`, `/rischi-prevenzione/`, `/cartografia/`, `/diventa-volontario/`, `/faq/`, `/strumenti/`, `/area-download/`, `/normativa/`, `/glossario/`, `/emergenza/`, `/podcast/` + l'ultimo articolo pubblicato. **Allargato da 8 a 20 URL il 12 maggio 2026** dopo le 3 sessioni audit consecutive sullo stesso problema (il campione di 8 non includeva pagine come `/allerte-meteo/`, `/numeri-utili/`, `/area-download/` segnalate negli audit storici). **Ulteriormente allargato a 22 URL il 28 maggio 2026** dopo audit ChatGPT che ha rilevato `/emergenza/` con `data/allerta.json` ultimo_controllo stantio (22/05 vs 28/05 reale) e `/podcast/` con link episodi 404 da slug ridistribuiti.
 
 **(a) Last-Modified HTTP** entro 2 ore dall'ultimo deploy `success` (recuperato via API GitHub `gh run list --workflow=deploy.yml --status=success --limit=1`). Soglia 2h copre il tempo di upload FTP (10-15 min) + ritardi occasionali senza falsi positivi.
 

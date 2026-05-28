@@ -1,7 +1,7 @@
 ---
 title: "Podcast: Piano familiare di emergenza"
 date: 2026-04-12
-description: "Episodio podcast generato con NotebookLM sulla base delle fonti istituzionali del sito (CC BY-NC-SA 4.0). Ascoltabile online o scaricabile per ascolto offline."
+description: "Podcast del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma sul tema Piano familiare di emergenza. Trascrizione completa in pagina con fonti istituzionali."
 episodio: 6
 audio: "/podcast/episodi/2026-04-12-piano-familiare-podcast.m4a"
 
@@ -9,8 +9,6 @@ draft: false
 ---
 
 Episodio del podcast del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, sul tema **Piano familiare di emergenza**.
-
-Il podcast è generato automaticamente con [NotebookLM](https://notebooklm.google.com) partendo dalle fonti istituzionali raccolte dal sito (Dipartimento di Protezione Civile, INGV, ISPRA, Centro Funzionale Regionale Lazio, standard ISO). I contenuti sono sempre verificati prima della pubblicazione.
 
 ## Come ascoltare
 
@@ -26,3 +24,7 @@ Materiale pubblicato con licenza Creative Commons **CC BY-NC-SA 4.0**: puoi asco
 
 - [Tutti i materiali multimediali pronti](/risorse-pronte/) — podcast, infografiche, presentazioni divisi per tema
 - [Piano familiare di emergenza](/risorse-pronte/#tema-piano-familiare) — gli altri materiali su questo tema
+
+## Nota sulla produzione
+
+L'audio di questo episodio è redatto e verificato dal **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** sulla base di fonti istituzionali del Sistema nazionale di Protezione Civile (Dipartimento Nazionale, INGV, ISPRA, Centro Funzionale Regionale Lazio, standard ISO). La traccia audio è prodotta con il supporto di [NotebookLM](https://notebooklm.google.com), uno strumento di Google che genera audio a partire dai testi caricati; i contenuti sono sempre verificati dal Gruppo prima della pubblicazione.
