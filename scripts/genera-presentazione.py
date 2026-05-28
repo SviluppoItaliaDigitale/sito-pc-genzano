@@ -594,6 +594,12 @@ content("Giochi della sicurezza", [
     "Supporto e teoria di rinforzo integrati.",
 ], N())
 
+content("Catalogo informativo dei giochi", [
+    "Una scheda dedicata per ogni gioco, divisa per fascia d'età.",
+    "Per ogni gioco: obiettivo didattico, durata, accessibilità e versione interattiva.",
+    "Pensato per docenti, genitori, motori di ricerca e lettori di schermo.",
+], N(), fonti="D.M. 183/2024 (Educazione Civica) · WCAG 2.2 AA")
+
 divider("Accessibilità e inclusione", N())
 
 content("Conformità WCAG 2.2 AA e barra strumenti", [
