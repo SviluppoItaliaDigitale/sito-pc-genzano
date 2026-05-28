@@ -77,7 +77,12 @@
     function minFa(iso){ var m=Math.round((Date.now()-new Date(iso).getTime())/60000); if(m<60)return m+' min fa'; var h=Math.round(m/60); return h<48?h+' ore fa':Math.round(h/24)+' gg fa'; }
     function dist(la,lo){ var R=6371,t=Math.PI/180,dla=(la-GENZANO[0])*t,dlo=(lo-GENZANO[1])*t,a=Math.sin(dla/2)**2+Math.cos(GENZANO[0]*t)*Math.cos(la*t)*Math.sin(dlo/2)**2; return Math.round(R*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a))); }
 
-    map = L.map('dash-sisma-mappa', { center: [42.2,12.6], zoom: 5, scrollWheelZoom:false });
+    // preferCanvas:true → fix bug Leaflet con CircleMarker che falliva su
+    // _renderer._bounds undefined (TypeError: reading 'x' in f.intersects).
+    // Canvas renderer non ha il problema "_bounds non inizializzato finché
+    // primo paint" che ha l'SVG renderer di default. Vantaggio collaterale:
+    // performance migliore con tanti marker.
+    map = L.map('dash-sisma-mappa', { center: [42.2,12.6], zoom: 5, scrollWheelZoom:false, preferCanvas: true });
     map.on('focus', function(){ map.scrollWheelZoom.enable(); });
     map.on('blur',  function(){ map.scrollWheelZoom.disable(); });
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
@@ -156,17 +161,7 @@
 
     // init quando la scheda diventa visibile (lazy) o subito se già visibile
     var box=document.getElementById('dash-sisma-mappa');
-    function go(){
-      map.invalidateSize();
-      // Forza Leaflet a calcolare _pixelBounds: con la tab "terremoti" attiva
-      // di default al load, map._loaded è true ma _pixelBounds resta undefined
-      // finché non avviene un _resetView esplicito → i CircleMarker creati
-      // da render() falliscono in _updateCircle → intersects(undefined). Il
-      // setView qui ricalcola i pixel bounds senza spostare la vista.
-      map.setView(map.getCenter(), map.getZoom(), {animate:false});
-      carica();
-      setInterval(carica, 300000);
-    }
+    function go(){ map.invalidateSize(); carica(); setInterval(carica, 300000); }
     if (box.offsetParent !== null) { go(); }
     else { window.addEventListener('cruscotto:terremoti', go, {once:true}); }
   })();
