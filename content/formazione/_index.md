@@ -18,7 +18,7 @@ Scegli il percorso più adatto al tuo bisogno.
 <div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-body"><h2 class="h5">Sono un docente</h2><p>Trova kit didattici, schede stampabili, percorsi pronti, attività inclusive e materiali per educazione civica.</p><a href="/formazione/scuole-da-dove-cominciare/" class="btn btn-primary">Scegli i materiali per la scuola</a></div></div></div>
 <div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-body"><h2 class="h5">Voglio diventare volontario</h2><p>Scopri requisiti, corso base, impegno richiesto e modalità di adesione al Gruppo Comunale.</p><a href="/diventa-volontario/" class="btn btn-primary">Leggi come diventare volontario</a></div></div></div>
 <div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-body"><h2 class="h5">Cerco materiali accessibili</h2><p>Consulta kit e schede per anziani, persone con disabilità, caregiver, bambini fragili e persone con difficoltà linguistiche.</p><a href="/formazione/kit-fragilita-vulnerabilita/" class="btn btn-primary">Vai ai kit accessibili</a></div></div></div>
-<div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-body"><h2 class="h5">Voglio imparare giocando</h2><p>Apri giochi educativi gratuiti per infanzia, primaria, ragazzi e famiglie, senza registrazione.</p><a href="/giochi/" class="btn btn-primary">Apri i giochi della sicurezza</a></div></div></div>
+<div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-body"><h2 class="h5">Voglio imparare giocando</h2><p>Apri giochi educativi gratuiti per infanzia, primaria, ragazzi e famiglie, senza registrazione.</p><a href="/giochi/" class="btn btn-primary">Apri i giochi della sicurezza</a> <a href="/catalogo-giochi/" class="btn btn-outline-primary mt-2 mt-md-0">Catalogo informativo</a></div></div></div>
 <div class="col-md-6 col-lg-4"><div class="card h-100 shadow-sm"><div class="card-body"><h2 class="h5">Cerco corsi e manuali</h2><p>Consulta aree tematiche su primo soccorso, rischio incendio, radiocomunicazioni, manuale da campo e psicologia dell'emergenza.</p><a href="#aree-tematiche" class="btn btn-primary">Vai alle aree tematiche</a></div></div></div>
 </div>
 
@@ -79,7 +79,8 @@ Alcune persone hanno bisogno di indicazioni più semplici, tempi più lunghi o m
 Le storie aiutano bambini e bambine ad avvicinarsi alla protezione civile senza paura. I giochi educativi sono gratuiti, funzionano da computer, tablet e smartphone e non richiedono registrazione.
 
 - [Storie e racconti](/formazione/storie-e-racconti/) — letture ad alta voce, drammatizzazioni e conversazioni guidate.
-- [Giochi della sicurezza](/giochi/) — giochi per infanzia, primaria, ragazzi e famiglie.
+- [Giochi della sicurezza](/giochi/) — giochi per infanzia, primaria, ragazzi e famiglie (Arena con badge e progressi).
+- [Catalogo dei giochi](/catalogo-giochi/) — scheda informativa di ogni gioco con fascia d'età, durata, obiettivo didattico e accessibilità.
 - [Schede stampabili](/formazione/schede-stampabili/) — schede A4 pronte per la classe.
 
 ## Aree tematiche {#aree-tematiche}
