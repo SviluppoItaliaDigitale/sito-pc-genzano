@@ -80,7 +80,13 @@
             <span class="stato-workflow-testo">
               <strong>{{ .nome }}</strong>
               <span class="stato-workflow-desc">{{ .descrizione }}</span>
-              {{- with .ultimo_run }}<span class="stato-meta">Ultima esecuzione automatica: <time datetime="{{ . }}">{{ time.Format "2 January 2006, 15:04" . }}</time></span>{{ end -}}
+              {{/* Per il controllo allerta usiamo il timestamp live del bollettino
+                   (data/allerta.json) invece dello snapshot giornaliero di
+                   stato-sistema.json: è la stessa automazione e così l'orario è
+                   coerente con il pannello "Allerta meteo" sopra. */}}
+              {{- $runTime := .ultimo_run -}}
+              {{- if eq .file "check-allerta.yml" -}}{{- with $allerta.ultimo_controllo }}{{ $runTime = . }}{{ end -}}{{- end -}}
+              {{- with $runTime }}<span class="stato-meta">Ultima esecuzione automatica: <time datetime="{{ . }}">{{ time.Format "2 January 2006, 15:04" . }}</time></span>{{ end -}}
             </span>
           </li>
           {{- end -}}
