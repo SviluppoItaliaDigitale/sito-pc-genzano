@@ -14,8 +14,16 @@
   {{- $pagePath := strings.TrimPrefix $basePath .RelPermalink -}}
   {{- $canonicalURL := printf "%s%s" (strings.TrimRight "/" $prodBase) (printf "/%s" $pagePath) -}}
   {{- $isProduction := eq (strings.TrimRight "/" .Site.BaseURL) (strings.TrimRight "/" $prodBase) -}}
+  {{- /* Pagine taxonomy auto-generate (es. /badges/ + /badges/<termine>/ dalla
+       tassonomia `badge` in hugo.toml): contenuto sottile, orfano (nessun link
+       interno) e duplicato dei filtri di /comunicazioni/. Le teniamo per il
+       filtro lato archivio ma le escludiamo dall'indice (noindex, follow).
+       Vale anche per qualsiasi pagina con `noindex: true` nel frontmatter. */ -}}
+  {{- $isTaxonomy := or (eq .Kind "taxonomy") (eq .Kind "term") -}}
   {{- if not $isProduction }}
   <meta name="robots" content="noindex, nofollow">
+  {{- else if or $isTaxonomy .Params.noindex }}
+  <meta name="robots" content="noindex, follow">
   {{- end }}
   {{- .Scratch.Set "canonicalURL" $canonicalURL }}
   {{ partial "meta-social.html" . }}
