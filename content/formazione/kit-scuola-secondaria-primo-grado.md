@@ -480,6 +480,8 @@ Per chi vuole strutturare il percorso come UdA valutabile a livello istituzional
 
 ---
 
+> 🔬 **Esperimenti e attività pratiche.** Approfondisci con gli [esperimenti di protezione civile](/formazione/esperimenti/). Per questa fascia funzionano bene la **viscosità del magma**, **città di asfalto contro città di prato**, la **diffusione di una nube** e **«quanto è lontano il temporale?»**.
+
 ## Schede fotocopiabili pronte per la stampa
 
 <div class="alert alert-success" role="note">

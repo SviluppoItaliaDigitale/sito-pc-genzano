@@ -243,6 +243,8 @@ Insegnate ai bambini a memorizzare il numero **112**.
 
 ---
 
+> 🔬 **Esperimenti e attività pratiche.** Prova gli [esperimenti di protezione civile](/formazione/esperimenti/) da fare in classe o a casa con materiali semplici. Per questa fascia sono adatti soprattutto il **memory dei segnali**, il gioco **«cosa metto nello zaino?»** e il termometro **sole/ombra**.
+
 ## Schede fotocopiabili per la classe
 
 <div class="alert alert-success" role="note">

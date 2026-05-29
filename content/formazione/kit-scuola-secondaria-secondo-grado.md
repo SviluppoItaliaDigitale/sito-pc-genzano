@@ -698,6 +698,8 @@ La convenzione tra la scuola e il Gruppo va sottoscritta prima dell'avvio delle 
 
 ---
 
+> 🔬 **Esperimenti e attività pratiche.** Collega le UdA agli [esperimenti di protezione civile](/formazione/esperimenti/): per le superiori sono adatti gli esperimenti più scientifici — **viscosità ed eruzioni**, **erosione e consumo di suolo**, **diffusione di una nube** e **distanza e schermatura** (i principi della radioprotezione).
+
 ## Schede fotocopiabili pronte per la stampa
 
 <div class="alert alert-success" role="note">
