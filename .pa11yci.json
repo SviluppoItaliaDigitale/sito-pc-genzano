@@ -1,0 +1,25 @@
+{
+  "defaults": {
+    "standard": "WCAG2AA",
+    "runners": ["axe"],
+    "timeout": 60000,
+    "wait": 1500,
+    "chromeLaunchConfig": {
+      "args": ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"]
+    },
+    "hideElements": ".leaflet-container, iframe, dialog"
+  },
+  "urls": [
+    "http://127.0.0.1:8080/",
+    "http://127.0.0.1:8080/cosa-fare-adesso/",
+    "http://127.0.0.1:8080/emergenza/",
+    "http://127.0.0.1:8080/allerte-meteo/",
+    "http://127.0.0.1:8080/numeri-utili/",
+    "http://127.0.0.1:8080/contatti/",
+    "http://127.0.0.1:8080/accessibilita/",
+    "http://127.0.0.1:8080/piano-familiare/",
+    "http://127.0.0.1:8080/rischi-prevenzione/",
+    "http://127.0.0.1:8080/comunicazioni/",
+    "http://127.0.0.1:8080/cruscotto/"
+  ]
+}
