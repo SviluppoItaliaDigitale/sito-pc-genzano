@@ -38,7 +38,7 @@ sitemap:
 
 1. Acqua e biscotti: SÌ.
 2. Torcia, casco, giacchetto: SÌ.
-3. Caramelle, videogioco, peluche: NO.
+3. Caramelle, videogioco, console: NO.
 4. Pochi oggetti, ma utili.
 
 ## Apri il gioco interattivo
