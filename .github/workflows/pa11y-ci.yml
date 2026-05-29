@@ -58,7 +58,7 @@ jobs:
         continue-on-error: true
         run: |
           set +e
-          pa11y-ci 2>&1 | tee pa11y-report.txt
+          pa11y-ci --config .pa11yci.json 2>&1 | tee pa11y-report.txt
           {
             echo "## ♿ Report accessibilità Pa11y (axe, WCAG 2.2 AA)"
             echo ''
