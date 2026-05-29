@@ -1111,6 +1111,25 @@ article:not(.card) .galleria img {
   margin: 0 0.5rem;
   vertical-align: middle;
 }
+/* ── SLIM HEADER — fix overflow orizzontale (29/05/2026) ──
+   Su desktop la barra istituzionale superiore mandava la zona destra
+   (Facile da leggere / Area Volontari / social) oltre il bordo a
+   larghezze 1280-1440px, generando scroll orizzontale su tutta la pagina.
+   Causa: .nav-mobile (link enti) con flex-grow alto comprimeva la
+   .it-header-slim-right-zone forzandola fuori dal contenitore.
+   Fix: consentire il wrap del wrapper e impedire che la zona destra
+   venga spinta fuori. Scoped allo slim header, nessuna nuova struttura. */
+.it-header-slim-wrapper-content {
+  flex-wrap: wrap;
+  row-gap: 0.25rem;
+}
+.it-header-slim-wrapper-content .it-header-slim-right-zone {
+  flex-shrink: 0;
+  margin-left: auto;
+}
+.it-header-slim-wrapper-content .nav-mobile {
+  min-width: 0;
+}
 
 /* ── COMUNICAZIONE URGENTE ── */
 .comunicazione-urgente {
