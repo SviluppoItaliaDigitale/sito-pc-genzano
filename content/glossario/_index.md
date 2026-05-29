@@ -225,6 +225,9 @@ Misura l'energia rilasciata da un terremoto. Non indica da sola i danni, che dip
 ### MCS / Mercalli
 Scala che descrive gli effetti di un terremoto su persone, edifici e ambiente. È diversa dalla magnitudo, che misura l'energia del terremoto.
 
+### Microzonazione sismica {#microzonazione-sismica}
+Studio che descrive, strada per strada, come il terreno risponde a un terremoto: alcune zone amplificano la scossa più di altre. Guida la pianificazione comunale e le norme di costruzione.
+
 ### Mitigazione {#mitigazione}
 Insieme di interventi che riducono gli effetti di un evento dannoso (argini, edifici antisismici). Distinta dalla prevenzione, che mira a evitare l'evento.
 

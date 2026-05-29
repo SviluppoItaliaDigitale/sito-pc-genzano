@@ -69,6 +69,7 @@ L'area dei Castelli Romani è soggetta a temporali convettivi intensi, specialme
 
 **Sul nostro sito**
 
+- **Approfondisci la materia:** [Il catalogo dei rischi](/conoscere/catalogo-dei-rischi/) — i rischi spiegati come materia, dal fenomeno alla scienza.
 - [Allerte meteo](/allerte-meteo/) — bollettini e codici colore del Centro Funzionale Regione Lazio
 - [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/) — allagamenti lampo che i temporali possono innescare
 - [Kit di emergenza](/rischi-prevenzione/kit-emergenza/)
