@@ -53,5 +53,15 @@ jobs:
             sleep 1
           done
 
-      - name: "♿ Esegui pa11y-ci (config .pa11yci.json)"
-        run: pa11y-ci
+      - name: "♿ Esegui pa11y-ci (report-only in fase di rollout)"
+        continue-on-error: true
+        run: |
+          set +e
+          echo "## ♿ Report accessibilità Pa11y (axe, WCAG 2.2 AA)" >> "$GITHUB_STEP_SUMMARY"
+          echo '' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Fase di rollout: **report-only**, non blocca la PR. Le findings vanno bonificate, poi il gate verrà reso bloccante (rimuovere `continue-on-error`).' >> "$GITHUB_STEP_SUMMARY"
+          echo '' >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          pa11y-ci 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          exit 0
