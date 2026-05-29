@@ -171,6 +171,18 @@ I materiali sono generati con [Google NotebookLM](https://notebooklm.google.com)
 
 Architettura di dettaglio nella tabella "Architettura — riferimenti rapidi" di [`CLAUDE.md`](CLAUDE.md) e nelle rules `.claude/rules/04a` / `04b`. Riepilogo operativo in [`manuale/parte-29-iniziative-roadmap.md`](manuale/parte-29-iniziative-roadmap.md).
 
+### Conoscere la Protezione Civile (`/conoscere/`) — livello dottrinale (maggio 2026)
+
+Sezione che spiega la protezione civile **come materia** (non come servizio operativo): è un livello additivo, complementare alle pagine operative (`/cosa-fare-adesso/`, `/rischi-prevenzione/`, `/allerte-meteo/`). Voce di menu di primo livello "Conoscere la Protezione Civile" (in `hugo.toml` + `static/app-shared/site-chrome.js`).
+
+- `/conoscere/` — landing della sezione.
+- `/conoscere/servizio-nazionale/` — componenti, strutture operative, ruolo del Sindaco (D.Lgs. 1/2018 artt. 4, 12, 13).
+- `/conoscere/le-quattro-fasi/` — previsione, prevenzione, soccorso, superamento + modello del rischio R = P×V×E (art. 2); una pagina per ciascuna fase.
+- `/conoscere/telecomunicazioni-emergenza/` — reti radio, radioamatori, IT-alert + `rete-zamberletti`.
+- `/conoscere/rischio-vulcanico-colli-albani/` — il Vulcano Laziale spiegato (fonti INGV + DPC); pagina "materia" affiancata alla pagina operativa `/rischi-prevenzione/rischio-vulcanico/`.
+
+Ogni fatto normativo è verificato su Normattiva; ogni pagina ha un disclaimer divulgativo e rimanda alle pagine operative. Scopribile anche dall'**assistente virtuale** (`/assistente/`, ramo "Conoscere la Protezione Civile") e dalla mappa del sito.
+
 ### File in `archetypes/` (template Hugo)
 
 | File | A cosa serve |
