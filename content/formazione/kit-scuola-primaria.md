@@ -475,6 +475,8 @@ L'uscita va preventivamente **autorizzata** dal Dirigente Scolastico e comunicat
 
 ---
 
+> 🔬 **Esperimenti e attività pratiche.** Integra il percorso con gli [esperimenti di protezione civile](/formazione/esperimenti/), da fare con materiali semplici. Per la primaria sono adatti il **terremoto di gelatina**, la **spugna e il fango**, il **triangolo del fuoco** (con l'insegnante) e la **chiamata al 112**.
+
 ## Schede fotocopiabili
 
 <div class="alert alert-success" role="note">
