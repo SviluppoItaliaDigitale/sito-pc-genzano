@@ -471,3 +471,168 @@ materiali:
   dimensione: 4.3 MB
   data_pubblicazione: '2026-05-14'
   licenza: CC BY-NC-SA 4.0
+- id: animali-emergenza-presentazione-pdf-2026-05-29
+  tema: animali-emergenza
+  tema_titolo: Animali in emergenza
+  tipo: presentazione-pdf
+  titolo: 'Presentazione (PDF): Animali in emergenza'
+  descrizione: 'Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo
+    senza PowerPoint.'
+  file_url: /presentazioni/2026-05-29-animali-emergenza-presentazione-pdf.pdf
+  dimensione: 13.2 MB
+  data_pubblicazione: '2026-05-29'
+  licenza: CC BY-NC-SA 4.0
+- id: animali-emergenza-presentazione-2026-05-29
+  tema: animali-emergenza
+  tema_titolo: Animali in emergenza
+  tipo: presentazione
+  titolo: 'Presentazione: Animali in emergenza'
+  descrizione: 'Presentazione PowerPoint per docenti: 15 slide per un''ora di Educazione
+    Civica in classe (formato modificabile).'
+  file_url: /presentazioni/2026-05-29-animali-emergenza-presentazione.pptx
+  dimensione: 15.6 MB
+  data_pubblicazione: '2026-05-29'
+  licenza: CC BY-NC-SA 4.0
+- id: animali-emergenza-infografica-2026-05-29
+  tema: animali-emergenza
+  tema_titolo: Animali in emergenza
+  tipo: infografica
+  titolo: 'Infografica: Animali in emergenza'
+  descrizione: Infografica formato quadrato pronta per condivisione social, stampa
+    A4 e affissione in bacheca.
+  file_url: /infografiche/2026-05-29-animali-emergenza-infografica.png
+  dimensione: 4.2 MB
+  data_pubblicazione: '2026-05-29'
+  licenza: CC BY-NC-SA 4.0
+- id: it-alert-infografica-2026-05-29
+  tema: it-alert
+  tema_titolo: IT-alert
+  tipo: infografica
+  titolo: 'Infografica: IT-alert'
+  descrizione: Infografica formato quadrato pronta per condivisione social, stampa
+    A4 e affissione in bacheca.
+  file_url: /infografiche/2026-05-29-it-alert-infografica.png
+  dimensione: 3.4 MB
+  data_pubblicazione: '2026-05-29'
+  licenza: CC BY-NC-SA 4.0
+- id: it-alert-presentazione-pdf-2026-05-29
+  tema: it-alert
+  tema_titolo: IT-alert
+  tipo: presentazione-pdf
+  titolo: 'Presentazione (PDF): IT-alert'
+  descrizione: 'Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo
+    senza PowerPoint.'
+  file_url: /presentazioni/2026-05-29-it-alert-presentazione-pdf.pdf
+  dimensione: 12.3 MB
+  data_pubblicazione: '2026-05-29'
+  licenza: CC BY-NC-SA 4.0
+- id: it-alert-presentazione-2026-05-29
+  tema: it-alert
+  tema_titolo: IT-alert
+  tipo: presentazione
+  titolo: 'Presentazione: IT-alert'
+  descrizione: 'Presentazione PowerPoint per docenti: 15 slide per un''ora di Educazione
+    Civica in classe (formato modificabile).'
+  file_url: /presentazioni/2026-05-29-it-alert-presentazione.pptx
+  dimensione: 14.7 MB
+  data_pubblicazione: '2026-05-29'
+  licenza: CC BY-NC-SA 4.0
+- id: nue-112-presentazione-pdf-2026-05-29
+  tema: nue-112
+  tema_titolo: NUE 112
+  tipo: presentazione-pdf
+  titolo: 'Presentazione (PDF): NUE 112'
+  descrizione: 'Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo
+    senza PowerPoint.'
+  file_url: /presentazioni/2026-05-29-nue-112-presentazione-pdf.pdf
+  dimensione: 10.8 MB
+  data_pubblicazione: '2026-05-29'
+  licenza: CC BY-NC-SA 4.0
+- id: nue-112-presentazione-2026-05-29
+  tema: nue-112
+  tema_titolo: NUE 112
+  tipo: presentazione
+  titolo: 'Presentazione: NUE 112'
+  descrizione: 'Presentazione PowerPoint per docenti: 15 slide per un''ora di Educazione
+    Civica in classe (formato modificabile).'
+  file_url: /presentazioni/2026-05-29-nue-112-presentazione.pptx
+  dimensione: 12.4 MB
+  data_pubblicazione: '2026-05-29'
+  licenza: CC BY-NC-SA 4.0
+- id: nue-112-infografica-2026-05-29
+  tema: nue-112
+  tema_titolo: NUE 112
+  tipo: infografica
+  titolo: 'Infografica: NUE 112'
+  descrizione: Infografica formato quadrato pronta per condivisione social, stampa
+    A4 e affissione in bacheca.
+  file_url: /infografiche/2026-05-29-nue-112-infografica.png
+  dimensione: 4.1 MB
+  data_pubblicazione: '2026-05-29'
+  licenza: CC BY-NC-SA 4.0
+- id: piano-familiare-presentazione-pdf-2026-05-29
+  tema: piano-familiare
+  tema_titolo: Piano familiare di emergenza
+  tipo: presentazione-pdf
+  titolo: 'Presentazione (PDF): Piano familiare di emergenza'
+  descrizione: 'Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo
+    senza PowerPoint.'
+  file_url: /presentazioni/2026-05-29-piano-familiare-presentazione-pdf.pdf
+  dimensione: 16.2 MB
+  data_pubblicazione: '2026-05-29'
+  licenza: CC BY-NC-SA 4.0
+- id: piano-familiare-presentazione-2026-05-29
+  tema: piano-familiare
+  tema_titolo: Piano familiare di emergenza
+  tipo: presentazione
+  titolo: 'Presentazione: Piano familiare di emergenza'
+  descrizione: 'Presentazione PowerPoint per docenti: 15 slide per un''ora di Educazione
+    Civica in classe (formato modificabile).'
+  file_url: /presentazioni/2026-05-29-piano-familiare-presentazione.pptx
+  dimensione: 19.8 MB
+  data_pubblicazione: '2026-05-29'
+  licenza: CC BY-NC-SA 4.0
+- id: piano-familiare-infografica-2026-05-29
+  tema: piano-familiare
+  tema_titolo: Piano familiare di emergenza
+  tipo: infografica
+  titolo: 'Infografica: Piano familiare di emergenza'
+  descrizione: Infografica formato quadrato pronta per condivisione social, stampa
+    A4 e affissione in bacheca.
+  file_url: /infografiche/2026-05-29-piano-familiare-infografica.png
+  dimensione: 4.2 MB
+  data_pubblicazione: '2026-05-29'
+  licenza: CC BY-NC-SA 4.0
+- id: temporali-intensi-infografica-2026-05-29
+  tema: temporali-intensi
+  tema_titolo: Temporali intensi
+  tipo: infografica
+  titolo: 'Infografica: Temporali intensi'
+  descrizione: Infografica formato quadrato pronta per condivisione social, stampa
+    A4 e affissione in bacheca.
+  file_url: /infografiche/2026-05-29-temporali-intensi-infografica.png
+  dimensione: 4.1 MB
+  data_pubblicazione: '2026-05-29'
+  licenza: CC BY-NC-SA 4.0
+- id: temporali-intensi-presentazione-pdf-2026-05-29
+  tema: temporali-intensi
+  tema_titolo: Temporali intensi
+  tipo: presentazione-pdf
+  titolo: 'Presentazione (PDF): Temporali intensi'
+  descrizione: 'Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo
+    senza PowerPoint.'
+  file_url: /presentazioni/2026-05-29-temporali-intensi-presentazione-pdf.pdf
+  dimensione: 13.4 MB
+  data_pubblicazione: '2026-05-29'
+  licenza: CC BY-NC-SA 4.0
+- id: temporali-intensi-presentazione-2026-05-29
+  tema: temporali-intensi
+  tema_titolo: Temporali intensi
+  tipo: presentazione
+  titolo: 'Presentazione: Temporali intensi'
+  descrizione: 'Presentazione PowerPoint per docenti: 15 slide per un''ora di Educazione
+    Civica in classe (formato modificabile).'
+  file_url: /presentazioni/2026-05-29-temporali-intensi-presentazione.pptx
+  dimensione: 16.5 MB
+  data_pubblicazione: '2026-05-29'
+  licenza: CC BY-NC-SA 4.0
