@@ -4,7 +4,9 @@
   {{- $prodBase := .Site.Params.productionBaseURL | default .Site.BaseURL -}}
   {{- $basePath := (urls.Parse .Site.BaseURL).Path | default "/" -}}
   {{- range .Data.Pages -}}
-  {{- if not .Params.noindex }}
+  {{/* Escludi le pagine taxonomy auto-generate (/badges/ + /badges/<termine>/):
+       thin content non indicizzato — coerente con il noindex in baseof.html. */}}
+  {{- if and (not .Params.noindex) (ne .Kind "taxonomy") (ne .Kind "term") }}
   {{- $pagePath := strings.TrimPrefix $basePath .RelPermalink -}}
   <url>
     <loc>{{ printf "%s/%s" (strings.TrimRight "/" $prodBase) $pagePath | safeHTML }}</loc>
