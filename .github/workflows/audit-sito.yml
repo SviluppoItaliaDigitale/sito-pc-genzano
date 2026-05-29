@@ -1252,6 +1252,62 @@ jobs:
           fi
 
           # ----------------------------------------------------------------
+          section "44. Lunghezza description articoli (≤160 caratteri)"
+          # La description alimenta la meta description SEO e og:description.
+          # Limite 160 caratteri (rule 02 § "Frontmatter obbligatorio").
+          # Nasce dall'audit 29/05/2026 (B2): 3 articoli oltre 160 char erano
+          # sfuggiti fino a un audit manuale → guard automatico anti-regressione.
+          LONG_DESC=""
+          for f in content/comunicazioni/*.md; do
+            case "$f" in *-facile.md) continue ;; esac
+            d=$(sed -n 's/^description:[[:space:]]*"\(.*\)"[[:space:]]*$/\1/p' "$f" | head -1)
+            [ -z "$d" ] && continue
+            len=$(printf '%s' "$d" | LC_ALL=C.UTF-8 wc -m | tr -d ' ')
+            if [ "$len" -gt 160 ]; then
+              LONG_DESC="${LONG_DESC}- \`$(basename "$f")\`: ${len} caratteri\n"
+            fi
+          done
+          if [ -n "$LONG_DESC" ]; then
+            err "Articoli con \`description\` oltre 160 caratteri (accorciare per SEO/OG):"
+            printf "%b" "$LONG_DESC" >> "$REPORT"
+          else
+            ok "Tutte le \`description\` degli articoli pubblicabili sono ≤160 caratteri."
+          fi
+
+          # ----------------------------------------------------------------
+          section "45. Link interni a file: estensioni coperte dal render-link hook"
+          # B1 (audit 29/05/2026): un link a /podcast/index.xml veniva reso come
+          # <span>Contenuto non ancora disponibile</span> perche' ".xml" non era
+          # in $staticExts del render-link hook → link non cliccabile. Questo check
+          # verifica che ogni estensione usata nei link interni a file del markdown
+          # sia coperta dal hook, e che le due copie del hook restino in sync.
+          RL="themes/flavour-pcgenzano/layouts/_default/_markup/render-link.html"
+          RL2="layouts/_default/_markup/render-link.html"
+          UNCOVERED=""
+          if [ -f "$RL" ]; then
+            EXTS=$(grep -oE '"\.[a-z0-9]+"' "$RL" | tr -d '"' | sort -u)
+            USED=$(grep -rhoE '\]\(/[^)]+\.[a-zA-Z0-9]+\)' content/ 2>/dev/null \
+              | grep -oE '\.[a-zA-Z0-9]+\)$' | tr -d ')' | tr 'A-Z' 'a-z' | sort -u)
+            for e in $USED; do
+              if ! echo "$EXTS" | grep -qx "$e"; then
+                UNCOVERED="${UNCOVERED}- estensione \`$e\` usata in link interni ma assente da \$staticExts del render-link hook (verrebbe resa come \"Contenuto non ancora disponibile\")\n"
+              fi
+            done
+            if [ -f "$RL2" ]; then
+              EXTS2=$(grep -oE '"\.[a-z0-9]+"' "$RL2" | tr -d '"' | sort -u)
+              if [ "$EXTS" != "$EXTS2" ]; then
+                err "Le due copie di render-link.html hanno \$staticExts divergenti (tema vs progetto). Allineare entrambe (rule 04a § Render-link hook)."
+              fi
+            fi
+          fi
+          if [ -n "$UNCOVERED" ]; then
+            err "Estensioni di link interni non coperte dal render-link hook (rischio B1 — link reso come testo grigio non cliccabile):"
+            printf "%b" "$UNCOVERED" >> "$REPORT"
+          else
+            ok "Tutte le estensioni dei link interni a file sono coperte dal render-link \$staticExts."
+          fi
+
+          # ----------------------------------------------------------------
           # Output
           # Garantisce default "false" se la variabile non è stata mai
           # toccata (improbabile con set +u ma difensivo per sicurezza).
