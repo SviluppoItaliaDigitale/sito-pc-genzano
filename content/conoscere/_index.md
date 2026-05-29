@@ -36,15 +36,16 @@ Sono le quattro fasi del ciclo del rischio. Le trovi spiegate una per una nella 
 
 ## Le altre pagine di questa sezione
 
+- **[Il catalogo dei rischi](/conoscere/catalogo-dei-rischi/)** — i rischi di cui si occupa la protezione civile, naturali e di origine umana: l'indice della materia, con il rimando alle pagine operative su cosa fare.
 - **[Il Servizio Nazionale](/conoscere/servizio-nazionale/)** — chi fa parte del sistema, chi fa cosa tra Stato, Regioni e Comuni, e il ruolo del Sindaco.
 - **[Telecomunicazioni in emergenza](/conoscere/telecomunicazioni-emergenza/)** — perché le reti radio sono insostituibili quando tutto il resto si interrompe, il ruolo dei radioamatori e il sistema IT-alert.
 - **[Il vulcanismo dei Colli Albani](/conoscere/rischio-vulcanico-colli-albani/)** — il Vulcano Laziale spiegato: storia eruttiva, i laghi di Albano e Nemi come crateri, le emissioni di gas e il monitoraggio dell'INGV.
 
 ## In costruzione
 
-Questo livello cresce nel tempo. Sono già previste, nelle prossime sessioni di lavoro, pagine dedicate a:
+Questo livello cresce nel tempo. L'ossatura è già tracciata; le pagine si pubblicano man mano che vengono scritte e verificate sulle fonti. In preparazione:
 
-- il **catalogo dei rischi** (sismico, idrogeologico, incendio, maremoto, sanitario, chimico-industriale, neve e gelo, siccità);
+- le **singole schede del catalogo dei rischi** (sismico, idrogeologico, incendio, maremoto, neve e gelo, siccità, chimico-industriale, nucleare-radiologico, sanitario) — l'[indice del catalogo](/conoscere/catalogo-dei-rischi/) è già consultabile;
 - la **storia della protezione civile** italiana, dal Vajont al Codice del 2018 (intanto trovi la [Storia del territorio](/storia/) e l'articolo sulla [nascita del Dipartimento](/comunicazioni/2026-04-29-nascita-dipartimento-protezione-civile-italia/));
 - la **scienza del rischio** e i Centri di competenza;
 - la **dimensione internazionale** (Meccanismo europeo di protezione civile e Quadro di Sendai).
