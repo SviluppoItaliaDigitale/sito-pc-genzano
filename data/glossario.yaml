@@ -381,6 +381,40 @@
   definizione: "Normativa europea che impone misure di sicurezza e piani di emergenza agli stabilimenti industriali con grandi quantità di sostanze pericolose. Dal nome dell'incidente di Seveso del 1976."
   link: "/glossario/#seveso"
 
+- id: incidente-rilevante
+  termine: "incidente rilevante"
+  varianti:
+    - "incidente rilevante"
+    - "stabilimenti a rischio di incidente rilevante"
+    - "rischio di incidente rilevante"
+  definizione: "Evento in uno stabilimento industriale (incendio, esplosione, nube tossica) che può creare grave pericolo per persone e ambiente. Gli stabilimenti oltre soglia (RIR) seguono la direttiva Seveso."
+  link: "/glossario/#incidente-rilevante"
+
+- id: maremoto
+  termine: "maremoto"
+  varianti:
+    - "maremoto"
+    - "maremoti"
+    - "tsunami"
+  definizione: "Serie di onde marine provocate dallo spostamento improvviso di una grande massa d'acqua (terremoti sottomarini, frane, eruzioni). In Italia l'allerta è gestita dal sistema SiAM."
+  link: "/glossario/#maremoto"
+
+- id: isin
+  termine: "ISIN"
+  varianti:
+    - "ISIN"
+    - "Ispettorato nazionale per la sicurezza nucleare e la radioprotezione"
+  definizione: "Ispettorato nazionale per la sicurezza nucleare e la radioprotezione: l'autorità che vigila su impianti, sorgenti e trasporti radioattivi. Istituito con il D.Lgs. 45/2014."
+  link: "/glossario/#isin"
+
+- id: pgra
+  termine: "PGRA"
+  varianti:
+    - "PGRA"
+    - "Piano di Gestione del Rischio di Alluvioni"
+  definizione: "Piano di Gestione del Rischio di Alluvioni: recepisce la Direttiva europea Alluvioni (2007/60/CE) e aggiorna ogni sei anni mappe e misure contro le alluvioni."
+  link: "/glossario/#pgra"
+
 - id: fepivol
   termine: "FE.PI.VOL."
   varianti:
