@@ -1130,6 +1130,20 @@ article:not(.card) .galleria img {
 .it-header-slim-wrapper-content .nav-mobile {
   min-width: 0;
 }
+/* ── NAVBAR — fit delle 8 voci sui laptop (29/05/2026) ──
+   Le 8 voci di primo livello (Home + 5 dropdown + Comunicazioni + Contatti)
+   col padding nativo Bootstrap Italia (24px/lato) sommano ~1265px e
+   sforavano il contenitore fra 992 e ~1330px, lasciando un residuo di
+   scroll orizzontale. Sul range desktop-laptop riduco il padding
+   orizzontale dei nav-link così tutte le voci rientrano. Sopra i 1400px
+   resta il padding pieno (c'è spazio); sotto i 992px la navbar collassa
+   già nel menu a panino (nessun effetto). */
+@media (min-width: 992px) and (max-width: 1399.98px) {
+  .navbar.has-megamenu .nav-item > .nav-link {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
 
 /* ── COMUNICAZIONE URGENTE ── */
 .comunicazione-urgente {
