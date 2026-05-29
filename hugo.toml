@@ -195,6 +195,12 @@ enableGitInfo = true
   parent = "per-le-scuole"
   weight = 7
 
+[[menus.main]]
+  name = "Esperimenti e attività"
+  url = "/formazione/esperimenti/"
+  parent = "per-le-scuole"
+  weight = 8
+
 # NB: il quiz "Quanto sei preparato?" (/quiz-preparazione/) NON è più una voce
 # di menu (rimosso il 22 maggio 2026). Era fuori contesto sotto "Per le scuole":
 # è un'autovalutazione della preparazione del cittadino/famiglia, quindi è stato
