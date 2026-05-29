@@ -55,6 +55,7 @@ A Genzano di Roma la rete di distribuzione attraversa aree boschive e collinari.
 
 **Sul nostro sito**
 
+- **Approfondisci la materia:** [Il catalogo dei rischi](/conoscere/catalogo-dei-rischi/) — i rischi spiegati come materia, dal fenomeno alla scienza.
 - [Kit di emergenza](/rischi-prevenzione/kit-emergenza/) — il Kit "Casa 72 ore" per restare autonomi senza corrente
 - [Cosa fare adesso](/cosa-fare-adesso/) e [Numeri utili](/numeri-utili/)
 

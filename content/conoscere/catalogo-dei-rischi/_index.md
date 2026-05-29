@@ -1,6 +1,6 @@
 ---
 title: "Il catalogo dei rischi di protezione civile"
-description: "I rischi di cui si occupa il Servizio Nazionale della Protezione Civile, spiegati come materia: naturali e di origine umana, dal sismico al sanitario, con il rimando alle pagine operative su cosa fare."
+description: "I rischi di cui si occupa la protezione civile, naturali e di origine umana: dal sismico al sanitario, spiegati come materia con rimando alle pagine su cosa fare."
 layout: "single"
 toc: true
 image: ""
