@@ -52,3 +52,11 @@ Sono le quattro fasi del ciclo del rischio. Le trovi spiegate una per una nella 
 - [Glossario](/glossario/) — il significato delle sigle e dei termini tecnici.
 - [Rischi e prevenzione](/rischi-prevenzione/) — la parte operativa, rischio per rischio.
 - [Strumenti in tempo reale](/strumenti/) — radar, mappe e dati live.
+
+## Pubblicazioni istituzionali da consultare
+
+Queste pagine si appoggiano alle pubblicazioni ufficiali del Dipartimento della Protezione Civile, liberamente consultabili. Le segnaliamo a insegnanti, volontari e cittadini che vogliono andare alla fonte:
+
+- [*La protezione civile in Italia. Testo istituzionale di riferimento per i docenti scolastici* (DPC, 2020)](https://www.protezionecivile.gov.it/it/pubblicazione/la-protezione-civile-italia-testo-istituzionale-di-riferimento-i-docenti-scolastici/) — il volume di base per l'insegnamento dei temi di protezione civile, pensato per l'educazione civica.
+- [*Metodi e strumenti per il potenziamento della governance a scala comunale e sovracomunale* (DPC, 2022)](https://www.protezionecivile.gov.it/it/pubblicazione/metodi-e-strumenti-il-potenziamento-della-governance-scala-comunale-e-sovracomunale-ai-fini-di-protezione-civile/) — come si rafforza la protezione civile a livello locale.
+- [Catalogo completo delle pubblicazioni DPC](https://www.protezionecivile.gov.it/it/pubblicazioni/) — vademecum, manuali e materiali divulgativi.

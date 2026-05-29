@@ -8,7 +8,7 @@ weight: 9
 toc: true
 # Schema.org HowTo — 3 step PRIMA/DURANTE/DOPO per rich result Google.
 howto_prima: "Conosci il tuo territorio: se vivi vicino a Cava dei Selci, Solforata di Pomezia o aree note, informati presso il Comune e l'ARPA Lazio. Aera cantine, scantinati e seminterrati prima di entrarci dopo periodi di chiusura prolungata. Mai entrare in pozzi senza autorizzazione e senza personale specializzato con strumentazione (ossimetro). Mantieni ventilate caldaie, scaldabagni a gas, ambienti dove si bruciano combustibili. Per chi ha bambini o animali domestici, tieni sempre chiuse le cantine non aerate."
-howto_durante: "Esci immediatamente all'aria aperta se senti odore strano o malessere. Non tornare indietro a controllare meglio. Non aiutare una persona priva di sensi entrando dentro: sarebbe la seconda vittima (il 60% delle vittime in spazi confinati è composta da soccorritori improvvisati senza protezione). Chiama il 112 specificando 'sospetto di gas in spazio confinato': arriveranno i Vigili del Fuoco con autorespiratori. Mantieni l'area isolata. Se sei in casa, apri tutte le finestre, esci, chiama il 112."
+howto_durante: "Esci immediatamente all'aria aperta se senti odore strano o malessere. Non tornare indietro a controllare meglio. Non aiutare una persona priva di sensi entrando dentro: sarebbe la seconda vittima (molte vittime in spazi confinati sono proprio soccorritori improvvisati senza protezione). Chiama il 112 specificando 'sospetto di gas in spazio confinato': arriveranno i Vigili del Fuoco con autorespiratori. Mantieni l'area isolata. Se sei in casa, apri tutte le finestre, esci, chiama il 112."
 howto_dopo: "Segnala al Comune e all'ARPA Lazio la presenza di anomalie ambientali persistenti (animali morti, vegetazione secca a macchia, bolle in sorgenti) per attivare il monitoraggio scientifico. Per il sistema sismico consulta INGV su terremoti.ingv.it per verificare se la scossa è stata registrata. Verifica eventuali danni strutturali alla casa (crepe nuove, infissi disallineati). Non entrare in cantine, pozzi, scantinati o spazi confinati non aerati. Non tentare il soccorso entrando in uno spazio confinato senza autorespiratore."
 ---
 
@@ -71,7 +71,7 @@ L'aria all'aperto, ventilata, **non** è un problema: il pericolo è confinato.
 Se entrando in uno spazio confinato senti **mancanza d'aria, capogiro, nausea, mal di testa improvviso**, oppure trovi un animale morto o una persona priva di sensi:
 
 - **Esci immediatamente** all'aria aperta. Non tornare indietro a "controllare meglio".
-- **Non soccorrere** una persona priva di sensi entrando nello spazio confinato: diventeresti la seconda vittima. Il 60% delle vittime in pozzi e spazi confinati sono soccorritori improvvisati senza protezione (fonte: DPC).
+- **Non soccorrere** una persona priva di sensi entrando nello spazio confinato: diventeresti la seconda vittima. Una parte rilevante delle vittime nei pozzi e negli spazi confinati sono proprio soccorritori improvvisati, entrati senza protezione respiratoria.
 - Chiama il **112** specificando "sospetto di gas in spazio confinato": arriveranno i Vigili del Fuoco con autorespiratori.
 - Mantieni l'area **isolata** e allontana le persone curiose. Nessuno deve entrare.
 - Se sei in casa e senti odore strano: apri tutte le finestre, esci, chiama il 112. Potrebbe essere monossido di carbonio (CO) da caldaia, anch'esso pericoloso.

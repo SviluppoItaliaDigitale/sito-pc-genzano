@@ -313,7 +313,7 @@ Evento sismico avvertito dalle persone o registrato dagli strumenti.
 Quadro di Sendai 2015-2030: l'accordo mondiale delle Nazioni Unite per ridurre i danni dei disastri. Indica priorità come conoscere il rischio, rafforzare la governance e ricostruire meglio (*build back better*).
 
 ### Seveso (direttiva) {#seveso}
-Normativa europea che impone misure di sicurezza e piani di emergenza agli stabilimenti industriali che trattano grandi quantità di sostanze pericolose. Prende il nome dall'incidente industriale di Seveso del 1976.
+Normativa europea che impone misure di sicurezza e piani di emergenza agli stabilimenti industriali che trattano grandi quantità di sostanze pericolose. Prende il nome dall'incidente industriale di Seveso del 1976. La versione vigente è la direttiva Seveso III (2012/18/UE), recepita in Italia con il decreto legislativo n. 105 del 2015.
 
 ### ShakeMap {#shakemap}
 Mappa che mostra l'intensità di scuotimento del terreno dopo un terremoto, calcolata in pochi minuti da INGV sulla base delle stazioni sismiche.

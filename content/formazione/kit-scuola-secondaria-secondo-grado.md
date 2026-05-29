@@ -189,7 +189,7 @@ L'Italia si trova al margine di convergenza tra la **placca africana** e la **pl
 
 ### Misura dei terremoti
 
-- **Magnitudo** (scala Richter / Magnitudo momento Mw): misura l'energia rilasciata. È una scala logaritmica: un aumento di 1 grado corrisponde a circa 32 volte più energia
+- **Magnitudo** (storicamente scala Richter, oggi Magnitudo momento Mw): misura l'energia rilasciata. È una scala logaritmica: un aumento di 1 grado corrisponde a circa 32 volte più energia
 - **Intensità** (scala Mercalli MCS): misura gli effetti su persone, edifici e territorio. Dipende dalla profondità, dalla distanza e dal tipo di suolo
 
 ### Il contesto sismico dei Castelli Romani
@@ -1021,9 +1021,9 @@ Tracce pronte nello stile della prima prova scritta dell'Esame di Stato (tipolog
 
 **Traccia 3 (Tipologia C)**: «Il sistema IT-alert, sperimentato in Italia nel 2023, è stato il primo caso di allerta diretta ai cellulari della popolazione. Dopo aver descritto funzionamento e base giuridica del sistema, rifletti sul rapporto tra tecnologia e cultura della sicurezza: gli strumenti tecnologici possono sostituire la preparazione individuale, o la presuppongono?»
 
-**Traccia 4 (Tipologia B)**: Testo di partenza: art. 2 del D.Lgs. 1/2018 (attività della protezione civile). «Il sistema italiano distingue attività: **previsione, prevenzione, soccorso, superamento dell'emergenza**. Analizza come questi quattro momenti si integrano in un caso a tua scelta (Amatrice 2016, Ischia 2022, Vaia 2018, alluvione Emilia-Romagna 2023). Quali sono le criticità strutturali emerse?»
+**Traccia 4 (Tipologia B)**: Testo di partenza: art. 2 del D.Lgs. 1/2018 (attività della protezione civile). «Il sistema italiano distingue quattro attività: **previsione, prevenzione e mitigazione, gestione delle emergenze, superamento dell'emergenza** (l'attività un tempo detta "soccorso" è oggi "gestione delle emergenze"). Analizza come questi quattro momenti si integrano in un caso a tua scelta (Amatrice 2016, Ischia 2022, Vaia 2018, alluvione Emilia-Romagna 2023). Quali sono le criticità strutturali emerse?»
 
-**Traccia 5 (Tipologia C)**: «Il volontariato di protezione civile in Italia coinvolge oltre 700.000 persone. È un fenomeno peculiare italiano, radicato nell'art. 118 ultimo comma della Costituzione (principio di sussidiarietà orizzontale). Analizza il ruolo del volontariato nella tua comunità e discuti se oggi possa essere considerato una "forma evoluta di cittadinanza".»
+**Traccia 5 (Tipologia C)**: «Il volontariato di protezione civile in Italia coinvolge oltre 300.000 persone. È un fenomeno peculiare italiano, radicato nell'art. 118 ultimo comma della Costituzione (principio di sussidiarietà orizzontale). Analizza il ruolo del volontariato nella tua comunità e discuti se oggi possa essere considerato una "forma evoluta di cittadinanza".»
 
 ### Template per prodotti PCTO — 5 formati concreti
 

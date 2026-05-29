@@ -69,6 +69,12 @@ L'**articolo 12 del Codice** stabilisce che la pianificazione di protezione civi
 
 Il Gruppo Comunale Volontari, come quello di Genzano di Roma, opera **a supporto del Sindaco e del Comune**: non si attiva da solo e non sostituisce le forze dell'ordine o i soccorsi sanitari.
 
+## Anche il cittadino fa parte del sistema
+
+Il Codice riserva un ruolo esplicito ai cittadini. L'**articolo 31** afferma un principio importante: da una parte i cittadini hanno il **diritto di essere informati** sugli scenari di rischio e sull'organizzazione dei servizi di protezione civile del proprio territorio; dall'altra hanno il **dovere di ottemperare alle disposizioni** delle autorità di protezione civile durante le emergenze. Conoscere i rischi e adottare comportamenti corretti è quindi parte integrante del sistema, non un di più.
+
+Per diffondere questa cultura, dal 2019 si celebra ogni anno la **Settimana Nazionale della Protezione Civile** (istituita con la Direttiva del Presidente del Consiglio dei Ministri del 1° aprile 2019), in corrispondenza del **13 ottobre**, Giornata internazionale delle Nazioni Unite per la riduzione dei disastri. È una settimana di iniziative di informazione e sensibilizzazione, con un'attenzione particolare alle scuole.
+
 ## Approfondimenti sul nostro sito
 
 - [Le quattro fasi della protezione civile](/conoscere/le-quattro-fasi/) — cosa fa concretamente il sistema.
