@@ -86,6 +86,36 @@ enableGitInfo = true
   url = "/"
   weight = 1
 
+# --- Conoscere la Protezione Civile (sezione dottrinale, Onda 1) ---
+[[menus.main]]
+  name = "Conoscere la Protezione Civile"
+  identifier = "conoscere"
+  weight = 2
+
+[[menus.main]]
+  name = "Cos'è la protezione civile"
+  url = "/conoscere/"
+  parent = "conoscere"
+  weight = 1
+
+[[menus.main]]
+  name = "Il Servizio Nazionale"
+  url = "/conoscere/servizio-nazionale/"
+  parent = "conoscere"
+  weight = 2
+
+[[menus.main]]
+  name = "Le quattro fasi"
+  url = "/conoscere/le-quattro-fasi/"
+  parent = "conoscere"
+  weight = 3
+
+[[menus.main]]
+  name = "Telecomunicazioni in emergenza"
+  url = "/conoscere/telecomunicazioni-emergenza/"
+  parent = "conoscere"
+  weight = 4
+
 # --- Dropdown: Per il Cittadino (7 voci) ---
 [[menus.main]]
   name = "Per il Cittadino"
