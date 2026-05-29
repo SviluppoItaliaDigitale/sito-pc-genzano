@@ -377,6 +377,7 @@
       title: 'Cosa vuoi scoprire?',
       prompt: 'Scegli una delle aree del sito.',
       options: [
+        { text: 'Conoscere la Protezione Civile', description: 'La protezione civile spiegata come materia: il Servizio Nazionale, le quattro fasi, le telecomunicazioni in emergenza, il vulcano dei Colli Albani.', icon: 'bi-mortarboard', next: 'info_conoscere' },
         { text: 'Per il cittadino', description: 'Allerte, rischi, cartografia, numeri, piano di famiglia, kit pronti per situazioni vulnerabili.', icon: 'bi-person-fill', next: 'info_cittadino' },
         { text: 'Per le scuole', description: 'Kit didattici per fascia, percorsi pronti, schede didattiche, ed. civica, storie, giochi.', icon: 'bi-mortarboard-fill', next: 'info_scuole' },
         { text: 'Kit Calamità per categorie vulnerabili', description: 'Schede stampabili A4 per bambini, anziani, disabilità, neonati, gravidanza, animali, caregiver, terapie salvavita, senza dimora, italiano L2, volontari PC.', icon: 'bi-printer-fill', next: 'info_kit_calamita' },
@@ -384,6 +385,70 @@
         { text: 'Volontariato', description: 'Diventare volontario, chi siamo, contatti del Gruppo.', icon: 'bi-heart-fill', next: 'info_volontariato' },
         { text: 'Territorio e norme', description: 'Genzano, Castelli, normativa, piano di emergenza comunale.', icon: 'bi-geo-alt-fill', next: 'info_territorio' },
         { text: 'Servizi e documenti', description: 'FAQ, area download, comunicazioni, mappa del sito.', icon: 'bi-files', next: 'info_servizi' }
+      ]
+    },
+
+    // --- Macro 0: Conoscere la Protezione Civile (livello dottrinale) ---
+    info_conoscere: {
+      kind: 'question',
+      title: 'Conoscere la Protezione Civile',
+      prompt: 'Cosa vuoi capire?',
+      options: [
+        { text: 'Cos\'è la protezione civile (panoramica)', next: 'info_conoscere_panoramica' },
+        { text: 'Il Servizio Nazionale: chi fa cosa', next: 'info_conoscere_servizio' },
+        { text: 'Le quattro fasi (previsione, prevenzione, soccorso, superamento)', next: 'info_conoscere_fasi' },
+        { text: 'Le telecomunicazioni in emergenza', next: 'info_conoscere_radio' },
+        { text: 'Il vulcano dei Colli Albani', next: 'info_conoscere_vulcano' }
+      ]
+    },
+    info_conoscere_panoramica: {
+      kind: 'answer',
+      title: 'Conoscere la Protezione Civile',
+      body: ['Una sezione che spiega la protezione civile come materia: come funziona il sistema e perché. È pensata per studenti, nuovi volontari, insegnanti e cittadini curiosi. Ogni pagina rimanda alle pagine operative del sito, così la teoria resta collegata alla pratica.'],
+      links: [
+        { text: 'Conoscere la Protezione Civile (panoramica)', url: '/conoscere/' },
+        { text: 'Il Servizio Nazionale', url: '/conoscere/servizio-nazionale/' },
+        { text: 'Le quattro fasi', url: '/conoscere/le-quattro-fasi/' }
+      ]
+    },
+    info_conoscere_servizio: {
+      kind: 'answer',
+      title: 'Il Servizio Nazionale della Protezione Civile',
+      body: ['La protezione civile non è un singolo ente: è un Servizio Nazionale. Le componenti (Stato, Regioni, Province autonome, enti locali) guidano il sistema; le strutture operative (Vigili del Fuoco, Forze armate, volontariato, INGV, CNR e altre) intervengono. Nel proprio territorio il Sindaco è la prima autorità di protezione civile.'],
+      links: [
+        { text: 'Il Servizio Nazionale', url: '/conoscere/servizio-nazionale/' },
+        { text: 'Piano di Emergenza Comunale', url: '/piano-emergenza/' },
+        { text: 'Diventa volontario', url: '/diventa-volontario/' }
+      ]
+    },
+    info_conoscere_fasi: {
+      kind: 'answer',
+      title: 'Le quattro fasi della protezione civile',
+      body: ['Il Codice della protezione civile organizza il lavoro in quattro attività: previsione (sapere prima cosa può accadere), prevenzione (ridurre i danni in anticipo), gestione dell\'emergenza (agire durante l\'evento), superamento (tornare alla normalità). Tutte ruotano attorno al modello del rischio: Pericolosità per Vulnerabilità per Esposizione.'],
+      links: [
+        { text: 'Le quattro fasi (panoramica)', url: '/conoscere/le-quattro-fasi/' },
+        { text: 'Previsione', url: '/conoscere/le-quattro-fasi/previsione/' },
+        { text: 'Prevenzione', url: '/conoscere/le-quattro-fasi/prevenzione/' },
+        { text: 'Soccorso e gestione dell\'emergenza', url: '/conoscere/le-quattro-fasi/soccorso/' },
+        { text: 'Superamento dell\'emergenza', url: '/conoscere/le-quattro-fasi/superamento/' }
+      ]
+    },
+    info_conoscere_radio: {
+      kind: 'answer',
+      title: 'Le telecomunicazioni in emergenza',
+      body: ['Durante un terremoto o un\'alluvione la rete telefonica spesso cade: la radio diventa l\'unico modo per coordinare i soccorsi. La sezione spiega perché le reti radio sono insostituibili, il ruolo dei radioamatori e il sistema di allarme pubblico IT-alert.'],
+      links: [
+        { text: 'Telecomunicazioni in emergenza', url: '/conoscere/telecomunicazioni-emergenza/' },
+        { text: 'La Rete Radio nazionale di emergenza (Zamberletti)', url: '/conoscere/telecomunicazioni-emergenza/rete-zamberletti/' }
+      ]
+    },
+    info_conoscere_vulcano: {
+      kind: 'answer',
+      title: 'Il vulcano dei Colli Albani',
+      body: ['I Castelli Romani sorgono su un vulcano quiescente, non spento: il Vulcano Laziale. La pagina spiega la storia eruttiva, i laghi di Albano e Nemi come antichi crateri, le emissioni di gas e come l\'INGV monitora l\'area. Per le regole pratiche di autoprotezione c\'è la pagina operativa dedicata.'],
+      links: [
+        { text: 'Il vulcanismo dei Colli Albani (capire)', url: '/conoscere/rischio-vulcanico-colli-albani/' },
+        { text: 'Rischio vulcanico: cosa fare (operativa)', url: '/rischi-prevenzione/rischio-vulcanico/' }
       ]
     },
 

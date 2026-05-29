@@ -86,36 +86,6 @@ enableGitInfo = true
   url = "/"
   weight = 1
 
-# --- Conoscere la Protezione Civile (sezione dottrinale, Onda 1) ---
-[[menus.main]]
-  name = "Conoscere la Protezione Civile"
-  identifier = "conoscere"
-  weight = 2
-
-[[menus.main]]
-  name = "Cos'è la protezione civile"
-  url = "/conoscere/"
-  parent = "conoscere"
-  weight = 1
-
-[[menus.main]]
-  name = "Il Servizio Nazionale"
-  url = "/conoscere/servizio-nazionale/"
-  parent = "conoscere"
-  weight = 2
-
-[[menus.main]]
-  name = "Le quattro fasi"
-  url = "/conoscere/le-quattro-fasi/"
-  parent = "conoscere"
-  weight = 3
-
-[[menus.main]]
-  name = "Telecomunicazioni in emergenza"
-  url = "/conoscere/telecomunicazioni-emergenza/"
-  parent = "conoscere"
-  weight = 4
-
 # --- Dropdown: Per il Cittadino (7 voci) ---
 [[menus.main]]
   name = "Per il Cittadino"
@@ -309,6 +279,17 @@ enableGitInfo = true
   name = "Risorse"
   identifier = "risorse"
   weight = 6
+
+# Sezione dottrinale "Conoscere la Protezione Civile" (Onda 1, maggio 2026).
+# Collocata sotto Risorse — non come voce di primo livello — perché l'etichetta
+# lunga sforava la navbar causando overflow orizzontale (regressione 29/05/2026).
+# La landing /conoscere/ indicizza tutte le sue pagine (Servizio Nazionale,
+# le quattro fasi, telecomunicazioni, Colli Albani).
+[[menus.main]]
+  name = "Conoscere la Protezione Civile"
+  url = "/conoscere/"
+  parent = "risorse"
+  weight = 0
 
 [[menus.main]]
   name = "FAQ"
