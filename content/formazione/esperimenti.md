@@ -17,6 +17,8 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 
 **Legenda dell'età consigliata:** 🟢 **Infanzia** (3-6 anni) · 🔵 **Primaria** (6-11 anni) · 🟠 **Ragazzi** (11 anni in su). Molte attività si adattano a più fasce: cambia la profondità della spiegazione, non il gioco.
 
+> 📄 **Versione stampabile per la classe.** Tutte queste attività sono disponibili anche come [schede A4 da stampare](/formazione/schede-stampabili/esperimenti-protezione-civile/): **un esperimento per foglio**, con materiali, procedura, cosa si impara, sicurezza e uno spazio «Cosa ho osservato». Puoi stampare tutto o solo le pagine che ti servono.
+
 ## Terremoti e vulcani
 
 ### 1. Vulcano lento o vulcano esplosivo? 🔵🟠
