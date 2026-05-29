@@ -28,6 +28,13 @@
       background: #fff8e6; border-left: 4px solid var(--scheda-oro);
       border-radius: 0 6px 6px 0; font-size: 0.9rem; line-height: 1.45; color: #664d03;
     }
+    /* Footer: più aria su queste schede dense (un esperimento per foglio).
+       Override locale, il CSS condiviso resta intatto per le altre schede. */
+    .scheda-footer {
+      margin-top: 2rem;       /* stacco garantito dal contenuto, anche a foglio pieno */
+      padding-top: 1.1rem;    /* aria tra la riga blu e il testo del footer */
+      padding-bottom: 0.5rem; /* stacco dalla banda affiliazioni sottostante */
+    }
     /* Stampa: forza un esperimento per foglio A4 */
     @media print {
       .scheda-toolbar, .esp-intro, .no-print { display: none !important; }
