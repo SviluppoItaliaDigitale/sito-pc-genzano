@@ -199,13 +199,13 @@
     var ROUNDS_LIVELLO_1 = [
       { giusto: {id:'casco', nome:'casco'}, sbagliati: [{id:'caramelle',nome:'caramelle'},{id:'tv',nome:'televisore'}], tip: 'Il casco protegge la testa!' },
       { giusto: {id:'torcia', nome:'torcia'}, sbagliati: [{id:'videogioco',nome:'videogioco'},{id:'pallone',nome:'pallone'}], tip: 'La torcia fa luce se va via la corrente!' },
-      { giusto: {id:'acqua', nome:"bottiglia d'acqua"}, sbagliati: [{id:'peluche',nome:'peluche'},{id:'caramelle',nome:'caramelle'}], tip: "L'acqua è sempre importante!" },
+      { giusto: {id:'acqua', nome:"bottiglia d'acqua"}, sbagliati: [{id:'tv',nome:'televisore'},{id:'caramelle',nome:'caramelle'}], tip: "L'acqua è sempre importante!" },
       { giusto: {id:'giacchetto', nome:'giacchetto giallo'}, sbagliati: [{id:'cuscino',nome:'cuscino'},{id:'tv',nome:'televisore'}], tip: 'Il giacchetto giallo ti rende ben visibile!' },
       { giusto: {id:'coperta', nome:'coperta'}, sbagliati: [{id:'pallone',nome:'pallone'},{id:'videogioco',nome:'videogioco'}], tip: 'La coperta scalda se fa freddo!' }
     ];
     var ROUNDS_LIVELLO_2 = [
       { giusto: {id:'fischietto', nome:'fischietto'}, sbagliati: [{id:'pattini',nome:'pattini'},{id:'console',nome:'console'}], tip: 'Il fischietto si sente da lontano se hai bisogno di aiuto!' },
-      { giusto: {id:'mascherina', nome:'mascherina'}, sbagliati: [{id:'gelato',nome:'gelato'},{id:'peluche',nome:'peluche'}], tip: 'La mascherina ti protegge dal fumo e dalla polvere!' },
+      { giusto: {id:'mascherina', nome:'mascherina'}, sbagliati: [{id:'gelato',nome:'gelato'},{id:'pattini',nome:'pattini'}], tip: 'La mascherina ti protegge dal fumo e dalla polvere!' },
       { giusto: {id:'caricatore', nome:'caricatore del telefono'}, sbagliati: [{id:'console',nome:'console'},{id:'pattini',nome:'pattini'}], tip: 'Il caricatore serve per chiamare aiuto col telefono!' },
       { giusto: {id:'documenti', nome:'documenti'}, sbagliati: [{id:'gelato',nome:'gelato'},{id:'pallone',nome:'pallone'}], tip: 'I documenti dicono chi sei: i grandi devono averli sempre!' },
       { giusto: {id:'biscotti', nome:'biscotti che durano tanto'}, sbagliati: [{id:'gelato',nome:'gelato'},{id:'caramelle',nome:'caramelle'}], tip: 'I biscotti che durano sono cibo che resta buono a lungo!' }
@@ -286,7 +286,7 @@
         if (window.AudioSintetico) window.AudioSintetico.tonoNeutro();
         setTimeout(function(){ btn.classList.remove('sbagliato'); }, 500);
         if (window.GameCoach && window.GameCoach.hint) {
-          window.GameCoach.hint('In emergenza servono: acqua, cibo, torcia, casco, giacchetto, coperta. NON servono: caramelle, peluche, videogiochi, TV.', '/rischi-prevenzione/kit-emergenza/');
+          window.GameCoach.hint('In emergenza servono: acqua, cibo, torcia, casco, giacchetto, coperta. NON servono: caramelle, videogiochi, TV. Un peluche piccolo aiuta a stare calmi.', '/rischi-prevenzione/kit-emergenza/');
         }
       }
     }

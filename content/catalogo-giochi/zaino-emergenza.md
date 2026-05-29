@@ -37,9 +37,10 @@ sitemap:
 ## Come si gioca
 
 1. Mettono dentro: acqua, cibo a lunga conservazione, torcia, radio, medicine, documenti, fischietto.
-2. NON metti dentro: videogiochi, peluche, oggetti pesanti.
-3. Lo zaino deve poterlo portare anche un bambino.
-4. Va lasciato vicino alla porta di casa, pronto.
+2. NON metti dentro: videogiochi, oggetti pesanti, troppi giochi.
+3. Un solo oggetto del cuore piccolo (un peluche, una foto) aiuta a stare calmi.
+4. Lo zaino deve poterlo portare anche un bambino.
+5. Va lasciato vicino alla porta di casa, pronto.
 
 ## Apri il gioco interattivo
 

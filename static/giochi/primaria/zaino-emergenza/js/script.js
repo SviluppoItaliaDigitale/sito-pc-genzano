@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Libri di scuola', icon: '\uD83D\uDCDA', correct: false, tip: 'Troppo pesanti: la scuola aspetta!' },
         { name: 'Vasetto di fiori', icon: '\uD83C\uDF37', correct: false, tip: 'Fragile e occupa spazio inutilmente.' },
         { name: 'Bicicletta', icon: '\uD83D\uDEB2', correct: false, tip: 'Non entra nello zaino — se serve va portata a parte.' },
-        { name: 'Animaletto di peluche', icon: '\uD83D\uDC30', correct: false, tip: 'Uno piccolo può rassicurare i bambini piccoli, ma qui valuta se c’è spazio.' },
+        { name: 'Animaletto di peluche', icon: '\uD83D\uDC30', correct: true, tip: 'Un solo oggetto del cuore piccolo aiuta a stare calmi: scegline uno.' },
         { name: 'Smalto per unghie', icon: '\uD83D\uDC85', correct: false, tip: 'Non è una priorità in emergenza.' },
     ];
 
