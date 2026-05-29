@@ -194,6 +194,9 @@ Bande di frequenza radio: HF a lunga portata (centinaia o migliaia di km), VHF e
 ### IFFI
 Inventario dei Fenomeni Franosi in Italia. È una banca dati nazionale, gestita da ISPRA, che raccoglie informazioni sulle frane censite.
 
+### Incidente rilevante (stabilimenti RIR) {#incidente-rilevante}
+Evento (incendio, esplosione, rilascio di sostanze tossiche) che in uno stabilimento industriale può creare grave pericolo per persone e ambiente. Gli stabilimenti che superano le soglie di legge sono detti «a rischio di incidente rilevante» (RIR) e seguono la direttiva Seveso.
+
 ### INGV
 Istituto Nazionale di Geofisica e Vulcanologia. Monitora terremoti, vulcani e maremoti ed è una fonte istituzionale per i dati sismici in Italia.
 
@@ -202,6 +205,9 @@ Misura degli effetti di un terremoto su persone, edifici e ambiente, valutata os
 
 ### Io non rischio {#io-non-rischio}
 Campagna nazionale del Dipartimento e di ANPAS per la riduzione del rischio: ogni anno i volontari informano i cittadini in piazza su terremoti, alluvioni, incendi e maremoti.
+
+### ISIN {#isin}
+Ispettorato nazionale per la sicurezza nucleare e la radioprotezione. È l'autorità che vigila su impianti, sorgenti e trasporti di materiale radioattivo in Italia. Istituito con il decreto legislativo n. 45 del 2014.
 
 ### ISPRA {#ispra}
 Istituto Superiore per la Protezione e la Ricerca Ambientale. Gestisce dati nazionali su frane, alluvioni, costa e suolo; pubblica la piattaforma IdroGEO.
@@ -224,6 +230,9 @@ Legge 24 febbraio 1992, n. 225. Ha istituito il Servizio nazionale della protezi
 
 ### Magnitudo
 Misura l'energia rilasciata da un terremoto. Non indica da sola i danni, che dipendono anche da distanza, profondità, tipo di terreno, edifici e vulnerabilità.
+
+### Maremoto (tsunami) {#maremoto}
+Serie di onde marine provocate dallo spostamento improvviso di una grande massa d'acqua: terremoti sottomarini, frane o eruzioni. In Italia l'allertamento è gestito dal sistema SiAM (INGV, ISPRA, DPC).
 
 ### MCS / Mercalli
 Scala che descrive gli effetti di un terremoto su persone, edifici e ambiente. È diversa dalla magnitudo, che misura l'energia del terremoto.
@@ -266,6 +275,9 @@ Presidenza del Consiglio dei Ministri. Il DPC è una sua struttura e da essa der
 
 ### PCTO
 Percorsi per le Competenze Trasversali e l'Orientamento. Sono attività formative per studenti della scuola secondaria di secondo grado. Possono essere svolti anche con organizzazioni di protezione civile, se ci sono progetto formativo, coperture e disponibilità operative.
+
+### PGRA {#pgra}
+Piano di Gestione del Rischio di Alluvioni. Recepisce la Direttiva europea Alluvioni (2007/60/CE) tramite il D.Lgs. 49/2010 e aggiorna ogni sei anni le mappe e le misure contro le alluvioni.
 
 ### Piano comunale di protezione civile {#piano-di-emergenza-comunale}
 Documento che descrive rischi, aree di emergenza, procedure, ruoli e risorse del Comune. Per Genzano consulta il [Piano di emergenza](/piano-emergenza/) e la [Cartografia](/cartografia/).
