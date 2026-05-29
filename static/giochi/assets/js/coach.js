@@ -147,8 +147,8 @@
       come: [
         'Acqua e biscotti: SÌ.',
         'Torcia, casco, giacchetto: SÌ.',
-        'Caramelle, videogioco, peluche: NO.',
-        'Pochi oggetti, ma utili.'
+        'Caramelle, videogioco, console: NO.',
+        'Pochi oggetti, ma utili. Un peluche piccolo aiuta a stare calmi.'
       ],
       teoria: [
         { titolo: 'Lo zaino per l\'emergenza', url: '/rischi-prevenzione/kit-emergenza/' }
@@ -349,7 +349,8 @@
       regola: 'Lo zaino di emergenza ha cose utili, non comode. Pochi oggetti, ben scelti.',
       come: [
         'Mettono dentro: acqua, cibo a lunga conservazione, torcia, radio, medicine, documenti, fischietto.',
-        'NON metti dentro: videogiochi, peluche, oggetti pesanti.',
+        'NON metti dentro: videogiochi, oggetti pesanti, troppi giochi.',
+        'Un solo oggetto del cuore piccolo (un peluche, una foto) aiuta a stare calmi.',
         'Lo zaino deve poterlo portare anche un bambino.',
         'Va lasciato vicino alla porta di casa, pronto.'
       ],

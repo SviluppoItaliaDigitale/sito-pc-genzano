@@ -212,10 +212,13 @@ body {
   background: #fff;
 }
 
-/* Footer istituzionale */
+/* Footer istituzionale — spaziatura armonizzata con le schede Kit Calamità
+   (kit-calamita-shared/print.css): più aria sopra il footer e sotto, così
+   la riga blu non resta incollata al testo né alla banda affiliazioni. */
 .scheda-footer {
   margin-top: auto;
-  padding-top: 0.8rem;
+  padding-top: 9mm;        /* stacco dal corpo della scheda */
+  padding-bottom: 4mm;     /* aria sopra la banda affiliazioni */
   border-top: 2px solid var(--scheda-blu);
   display: flex;
   justify-content: space-between;
@@ -225,6 +228,10 @@ body {
 .scheda-footer .scheda-site {
   font-weight: 600;
   color: var(--scheda-blu);
+}
+/* In stampa il footer è già spinto in fondo: un filo di aria coerente col Kit */
+@media print {
+  .scheda-footer { padding-top: 8mm; padding-bottom: 3mm; }
 }
 
 /* ── Banda affiliazioni: Quality Label ESC (cod. E10435833 obbligatorio per
