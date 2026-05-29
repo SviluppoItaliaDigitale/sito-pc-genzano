@@ -71,6 +71,9 @@ Basic Life Support (supporto vitale di base). Manovre di rianimazione di base �
 ### BLSD {#blsd}
 Basic Life Support Defibrillation. Il BLS unito all'uso del defibrillatore (DAE). È il livello base certificato per soccorrere un arresto cardiaco quando è disponibile un DAE.
 
+### Build back better {#build-back-better}
+Principio della ricostruzione dopo un disastro: non tornare com'era prima, ma ricostruire più sicuro e resiliente. È uno dei principi del Quadro di Sendai delle Nazioni Unite.
+
 ### Bollettino di criticità idrogeologica e idraulica {#bollettino-di-criticita-idrogeologica-e-idraulica}
 Documento emesso dal Centro Funzionale Regionale. Indica il livello previsto di criticità per rischio idrogeologico, idraulico e temporali nelle diverse zone di allerta.
 
@@ -225,6 +228,9 @@ Misura l'energia rilasciata da un terremoto. Non indica da sola i danni, che dip
 ### MCS / Mercalli
 Scala che descrive gli effetti di un terremoto su persone, edifici e ambiente. È diversa dalla magnitudo, che misura l'energia del terremoto.
 
+### Meccanismo europeo di protezione civile (UCPM) {#meccanismo-europeo}
+Il sistema con cui i Paesi dell'Unione Europea si aiutano nelle grandi emergenze, mettendo in comune mezzi e squadre. La sigla UCPM sta per *Union Civil Protection Mechanism*.
+
 ### Microzonazione sismica {#microzonazione-sismica}
 Studio che descrive, strada per strada, come il terreno risponde a un terremoto: alcune zone amplificano la scossa più di altre. Guida la pianificazione comunale e le norme di costruzione.
 
@@ -277,6 +283,9 @@ Detto di un vulcano che non ha eruzioni in corso, ma non è considerato spento. 
 ### RCP {#rcp}
 Rianimazione Cardio-Polmonare. Tecnica d'emergenza che combina compressioni toraciche e respiri di soccorso per chi ha avuto un arresto cardiaco.
 
+### rescEU {#resceu}
+La riserva europea di mezzi per le emergenze (per esempio aerei antincendio, scorte mediche), parte del Meccanismo europeo di protezione civile. Interviene quando le risorse di un Paese non bastano.
+
 ### Resilienza {#resilienza}
 Capacità di una comunità di assorbire un evento avverso, riorganizzarsi e tornare a funzionare. Si costruisce con prevenzione, formazione e pianificazione.
 
@@ -299,6 +308,12 @@ Sequenza di molte scosse di magnitudo simile in un'area ristretta, in giorni o s
 
 ### Scossa
 Evento sismico avvertito dalle persone o registrato dagli strumenti.
+
+### Sendai, Quadro di {#sendai}
+Quadro di Sendai 2015-2030: l'accordo mondiale delle Nazioni Unite per ridurre i danni dei disastri. Indica priorità come conoscere il rischio, rafforzare la governance e ricostruire meglio (*build back better*).
+
+### Seveso (direttiva) {#seveso}
+Normativa europea che impone misure di sicurezza e piani di emergenza agli stabilimenti industriali che trattano grandi quantità di sostanze pericolose. Prende il nome dall'incidente industriale di Seveso del 1976.
 
 ### ShakeMap {#shakemap}
 Mappa che mostra l'intensità di scuotimento del terreno dopo un terremoto, calcolata in pochi minuti da INGV sulla base delle stazioni sismiche.
@@ -333,6 +348,9 @@ Valutazione rapida delle vittime in un'emergenza per stabilire l'ordine di socco
 Testo Unico sulla Sicurezza sul Lavoro (D.Lgs. 81/2008). Obbliga ogni datore di lavoro a valutare i rischi (DVR) e a predisporre un piano di emergenza.
 
 ## U
+
+### UCPM {#ucpm}
+Sigla di *Union Civil Protection Mechanism*: è il [Meccanismo europeo di protezione civile](#meccanismo-europeo).
 
 ### USR
 Ufficio Speciale Ricostruzione. Struttura tecnica che segue la ricostruzione dopo grandi emergenze.
