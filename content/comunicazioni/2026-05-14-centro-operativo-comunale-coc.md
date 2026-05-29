@@ -105,6 +105,7 @@ Sul nostro sito:
 - [Piano di emergenza del Comune di Genzano di Roma](/piano-emergenza/).
 - [Numeri utili](/numeri-utili/).
 - [Cosa fare adesso in emergenza](/cosa-fare-adesso/).
+- [Conoscere la Protezione Civile: soccorso e gestione dell'emergenza](/conoscere/le-quattro-fasi/soccorso/).
 
 Fonti istituzionali:
 

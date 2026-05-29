@@ -9,7 +9,7 @@ aliases:
 tts: true
 dataUltimaRevisione: "2026-05-06"
 ---
-<!-- cache-bust: 2026-05-13 forza re-upload FTP per allineare header/footer (audit 13/05) -->
+<!-- cache-bust: 2026-05-29 forza re-upload FTP dopo aggiunta voce di menu globale "Conoscere la Protezione Civile" -->
 
 <div class="card border-primary mb-5">
 <div class="card-body bg-primary bg-opacity-10 p-4">

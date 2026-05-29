@@ -12,7 +12,7 @@ sitemap:
 dataUltimaRevisione: "2026-05-06"
 risorse_tema: "allerta-meteo"
 ---
-<!-- cache-bust: 2026-05-13 forza re-upload FTP per allineare header/footer (audit 13/05) -->
+<!-- cache-bust: 2026-05-29 forza re-upload FTP dopo aggiunta voce di menu globale "Conoscere la Protezione Civile" -->
 
 <div class="card border-danger mb-4">
 <div class="card-body bg-danger bg-opacity-10 p-4">

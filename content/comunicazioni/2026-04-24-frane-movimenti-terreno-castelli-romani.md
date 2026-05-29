@@ -74,6 +74,7 @@ Sul nostro sito:
 - [Sicurezza sui laghi di Nemi e Albano](/comunicazioni/2026-05-19-sicurezza-laghi-nemi-albano/).
 - [Sarno 1998](/comunicazioni/2026-05-05-sarno-frana-1998-rischio-idrogeologico-italia/).
 - [Frana costone Nemi: chiusura via Nemorense](/comunicazioni/2026-04-15-frana-costone-nemi-chiusura-via-nemorense/).
+- [Conoscere la Protezione Civile: la prevenzione](/conoscere/le-quattro-fasi/prevenzione/).
 
 Fonti istituzionali:
 

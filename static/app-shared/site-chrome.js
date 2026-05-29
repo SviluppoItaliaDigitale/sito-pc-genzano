@@ -75,6 +75,19 @@
                  * apre un'issue settimanale se trova drift.
                  */
                 '<li class="nav-item" role="none"><a class="nav-link" href="' + SITE_URL + '/" role="menuitem"><span>Home</span></a></li>' +
+                /* Dropdown: Conoscere la Protezione Civile (sezione dottrinale, Onda 1) */
+                '<li class="nav-item dropdown" role="none">' +
+                  '<a class="nav-link dropdown-toggle" href="#" id="navDropdown-conoscere" role="menuitem" data-bs-toggle="dropdown" aria-expanded="false">' +
+                    '<span>Conoscere la Protezione Civile</span>' +
+                    '<svg class="icon icon-xs"><use href="' + SITE_URL + '/vendor/bootstrap-italia/svg/sprites.svg#it-expand"></use></svg>' +
+                  '</a>' +
+                  '<div class="dropdown-menu" aria-labelledby="navDropdown-conoscere"><div class="link-list-wrapper"><ul class="link-list" role="menu">' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/conoscere/" role="menuitem"><span>Cos\'è la protezione civile</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/conoscere/servizio-nazionale/" role="menuitem"><span>Il Servizio Nazionale</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/conoscere/le-quattro-fasi/" role="menuitem"><span>Le quattro fasi</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/conoscere/telecomunicazioni-emergenza/" role="menuitem"><span>Telecomunicazioni in emergenza</span></a></li>' +
+                  '</ul></div></div>' +
+                '</li>' +
                 /* Dropdown: Per il Cittadino (7 voci, +Kit pronti maggio 2026) */
                 '<li class="nav-item dropdown" role="none">' +
                   '<a class="nav-link dropdown-toggle" href="#" id="navDropdown-per-il-cittadino" role="menuitem" data-bs-toggle="dropdown" aria-expanded="false">' +

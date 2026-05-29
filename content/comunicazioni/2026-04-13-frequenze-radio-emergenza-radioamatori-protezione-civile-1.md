@@ -111,6 +111,7 @@ Sul nostro sito:
 - [Sicurezza della rete e cybersecurity in emergenza](/comunicazioni/2026-02-07-sicurezza-rete-cybersecurity-emergenza/).
 - [Il Centro Operativo Comunale (COC)](/comunicazioni/2026-05-14-centro-operativo-comunale-coc/).
 - [Diventa volontario](/diventa-volontario/).
+- [Conoscere la Protezione Civile: telecomunicazioni in emergenza](/conoscere/telecomunicazioni-emergenza/).
 
 Fonti istituzionali:
 
