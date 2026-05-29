@@ -33,6 +33,8 @@ Sono le quattro fasi del ciclo del rischio. Le trovi spiegate una per una nella 
   - [Prevenzione](/conoscere/le-quattro-fasi/prevenzione/) — ridurre i danni prima dell'evento.
   - [Soccorso e gestione dell'emergenza](/conoscere/le-quattro-fasi/soccorso/) — agire durante l'evento.
   - [Superamento dell'emergenza](/conoscere/le-quattro-fasi/superamento/) — tornare alla normalità.
+  - [Il modello di intervento: dal COC alla DiComaC](/conoscere/le-quattro-fasi/modello-di-intervento/) — approfondimento sulla catena di coordinamento.
+  - [Dopo l'emergenza: stato di emergenza, agibilità, ricostruzione](/conoscere/le-quattro-fasi/dopo-l-emergenza/) — approfondimento sul post-evento.
 
 ## Le altre pagine di questa sezione
 
@@ -40,15 +42,9 @@ Sono le quattro fasi del ciclo del rischio. Le trovi spiegate una per una nella 
 - **[Il Servizio Nazionale](/conoscere/servizio-nazionale/)** — chi fa parte del sistema, chi fa cosa tra Stato, Regioni e Comuni, e il ruolo del Sindaco.
 - **[Telecomunicazioni in emergenza](/conoscere/telecomunicazioni-emergenza/)** — perché le reti radio sono insostituibili quando tutto il resto si interrompe, il ruolo dei radioamatori e il sistema IT-alert.
 - **[Il vulcanismo dei Colli Albani](/conoscere/rischio-vulcanico-colli-albani/)** — il Vulcano Laziale spiegato: storia eruttiva, i laghi di Albano e Nemi come crateri, le emissioni di gas e il monitoraggio dell'INGV.
-
-## In costruzione
-
-Questo livello cresce nel tempo. L'ossatura è già tracciata; le pagine si pubblicano man mano che vengono scritte e verificate sulle fonti. In preparazione:
-
-- le **singole schede del catalogo dei rischi** (sismico, idrogeologico, incendio, maremoto, neve e gelo, siccità, chimico-industriale, nucleare-radiologico, sanitario) — l'[indice del catalogo](/conoscere/catalogo-dei-rischi/) è già consultabile;
-- la **storia della protezione civile** italiana, dal Vajont al Codice del 2018 (intanto trovi la [Storia del territorio](/storia/) e l'articolo sulla [nascita del Dipartimento](/comunicazioni/2026-04-29-nascita-dipartimento-protezione-civile-italia/));
-- la **scienza del rischio** e i Centri di competenza;
-- la **dimensione internazionale** (Meccanismo europeo di protezione civile e Quadro di Sendai).
+- **[Storia della protezione civile italiana](/conoscere/storia-della-protezione-civile/)** — dal Vajont al Codice del 2018, e il ruolo di Giuseppe Zamberletti.
+- **[La scienza del rischio e i Centri di competenza](/conoscere/scienza-del-rischio/)** — come la conoscenza scientifica diventa allerta: la catena dal modello al bollettino.
+- **[La dimensione internazionale](/conoscere/dimensione-internazionale/)** — il Meccanismo europeo di protezione civile, rescEU e il Quadro di Sendai.
 
 ## Approfondimenti sul nostro sito
 
