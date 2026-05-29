@@ -14,7 +14,7 @@ La policy è pubblica per scelta: il cittadino deve sapere in anticipo cosa aspe
 
 I canali social ufficiali del Gruppo sono:
 
-- **Sito istituzionale**: [protezionecivilegenzano.it](https://www.protezionecivilegenzano.it/) — è la fonte unica di riferimento citata in tutti gli altri canali.
+- **Sito ufficiale del Gruppo**: [protezionecivilegenzano.it](https://www.protezionecivilegenzano.it/) — è la fonte unica di riferimento citata in tutti gli altri canali.
 - **Instagram**: account istituzionale del Gruppo.
 - **Facebook**: pagina ufficiale verificata del Gruppo. Non pubblichiamo da gruppi o profili personali.
 - **X (Twitter)**: account istituzionale del Gruppo.

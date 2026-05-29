@@ -1,41 +1,50 @@
 # Redirect vecchio sito → nuovo sito
 RewriteEngine On
 
-# Pagine vecchie → nuove
-Redirect 301 /chisiamo.html /chi-siamo/
-Redirect 301 /contatti.html /contatti/
-Redirect 301 /comunicazioni.html /comunicazioni/
-Redirect 301 /allertameteo.html /allerte-meteo/
-Redirect 301 /emergenza.html /piano-emergenza/
-Redirect 301 /pianodiemergenza.html /piano-emergenza/
-Redirect 301 /pianofamiliare.html /piano-familiare/
-Redirect 301 /diventavolontario.html /diventa-volontario/
-Redirect 301 /areadownload.html /area-download/
-Redirect 301 /mappe.html /cartografia/
-Redirect 301 /notelegali.html /note-legali/
-Redirect 301 /privacy.html /privacy/
-Redirect 301 /cerca.html /cerca/
-Redirect 301 /sitiutili.html /siti-utili/
-Redirect 301 /dichiarazione-accessibilita.html /accessibilita/
-Redirect 301 /areerischio.html /rischi-prevenzione/
-Redirect 301 /rischi.html /rischi-prevenzione/
-Redirect 301 /rischio-sismico.html /rischi-prevenzione/rischio-sismico/
-Redirect 301 /rischio-idrogeologico.html /rischi-prevenzione/rischio-idrogeologico/
-Redirect 301 /rischio-incendio.html /rischi-prevenzione/rischio-incendio/
-Redirect 301 /vulcano.html /rischi-prevenzione/rischio-vulcanico/
-Redirect 301 /sanitario.html /numeri-utili/
-Redirect 301 /cosafacciamo.html /chi-siamo/
-Redirect 301 /simulatore.html /
+# Forza HTTPS — PRIMA di ogni altro redirect, così nessuna richiesta http
+# può generare un hop intermedio insicuro verso le pagine nuove.
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Pagine vecchie → nuove.
+# I target sono URL ASSOLUTE https://www.protezionecivilegenzano.it/ — così il
+# 301 va in UN SOLO hop alla versione HTTPS canonica, indipendentemente
+# dall'ordine con cui Apache valuta mod_alias e mod_rewrite (evita la catena
+# .html → http://nuova → https://nuova rilevata nell'audit di maggio 2026).
+Redirect 301 /chisiamo.html https://www.protezionecivilegenzano.it/chi-siamo/
+Redirect 301 /contatti.html https://www.protezionecivilegenzano.it/contatti/
+Redirect 301 /comunicazioni.html https://www.protezionecivilegenzano.it/comunicazioni/
+Redirect 301 /allertameteo.html https://www.protezionecivilegenzano.it/allerte-meteo/
+Redirect 301 /emergenza.html https://www.protezionecivilegenzano.it/piano-emergenza/
+Redirect 301 /pianodiemergenza.html https://www.protezionecivilegenzano.it/piano-emergenza/
+Redirect 301 /pianofamiliare.html https://www.protezionecivilegenzano.it/piano-familiare/
+Redirect 301 /diventavolontario.html https://www.protezionecivilegenzano.it/diventa-volontario/
+Redirect 301 /areadownload.html https://www.protezionecivilegenzano.it/area-download/
+Redirect 301 /mappe.html https://www.protezionecivilegenzano.it/cartografia/
+Redirect 301 /notelegali.html https://www.protezionecivilegenzano.it/note-legali/
+Redirect 301 /privacy.html https://www.protezionecivilegenzano.it/privacy/
+Redirect 301 /cerca.html https://www.protezionecivilegenzano.it/cerca/
+Redirect 301 /sitiutili.html https://www.protezionecivilegenzano.it/siti-utili/
+Redirect 301 /dichiarazione-accessibilita.html https://www.protezionecivilegenzano.it/accessibilita/
+Redirect 301 /areerischio.html https://www.protezionecivilegenzano.it/rischi-prevenzione/
+Redirect 301 /rischi.html https://www.protezionecivilegenzano.it/rischi-prevenzione/
+Redirect 301 /rischio-sismico.html https://www.protezionecivilegenzano.it/rischi-prevenzione/rischio-sismico/
+Redirect 301 /rischio-idrogeologico.html https://www.protezionecivilegenzano.it/rischi-prevenzione/rischio-idrogeologico/
+Redirect 301 /rischio-incendio.html https://www.protezionecivilegenzano.it/rischi-prevenzione/rischio-incendio/
+Redirect 301 /vulcano.html https://www.protezionecivilegenzano.it/rischi-prevenzione/rischio-vulcanico/
+Redirect 301 /sanitario.html https://www.protezionecivilegenzano.it/numeri-utili/
+Redirect 301 /cosafacciamo.html https://www.protezionecivilegenzano.it/chi-siamo/
+Redirect 301 /simulatore.html https://www.protezionecivilegenzano.it/
 
 # URL rinominati post-pubblicazione
-Redirect 301 /formazione/kit-calamita-bambini/16-origami-cappello.html /formazione/kit-calamita-bambini/16-origami-barchetta.html
-Redirect 301 /comunicazioni/2026-05-16-infiorata-genzano-2026/ /comunicazioni/2026-05-30-infiorata-genzano-2026/
-Redirect 301 /comunicazioni/2026-05-16-infiorata-genzano-2026.html /comunicazioni/2026-05-30-infiorata-genzano-2026/
+Redirect 301 /formazione/kit-calamita-bambini/16-origami-cappello.html https://www.protezionecivilegenzano.it/formazione/kit-calamita-bambini/16-origami-barchetta.html
+Redirect 301 /comunicazioni/2026-05-16-infiorata-genzano-2026/ https://www.protezionecivilegenzano.it/comunicazioni/2026-05-30-infiorata-genzano-2026/
+Redirect 301 /comunicazioni/2026-05-16-infiorata-genzano-2026.html https://www.protezionecivilegenzano.it/comunicazioni/2026-05-30-infiorata-genzano-2026/
 
 # Cartelle vecchie → nuove
-Redirect 301 /assets/ /
-Redirect 301 /cache/ /
-Redirect 301 /immagini_web/ /
+Redirect 301 /assets/ https://www.protezionecivilegenzano.it/
+Redirect 301 /cache/ https://www.protezionecivilegenzano.it/
+Redirect 301 /immagini_web/ https://www.protezionecivilegenzano.it/
 
 # 410 Gone esplicito per i .php legacy del vecchio pannello admin Joomla
 # DEVE venire PRIMA del Redirect 301 della cartella /piano_protezione_civile/
@@ -46,18 +55,18 @@ Redirect 301 /immagini_web/ /
 # 7+ URL elimina.php?file=...&index=N classificati come Soft 404.
 RedirectMatch 410 ^/piano_protezione_civile/(elimina|aree|funzioni|scenari|genera_pdf|salva|modifica|carica)\.php(\?.*)?$
 
-Redirect 301 /piano_protezione_civile/ /piano-emergenza/
-Redirect 301 /sito_pc/ /
-Redirect 301 /sitovecchio/ /
+Redirect 301 /piano_protezione_civile/ https://www.protezionecivilegenzano.it/piano-emergenza/
+Redirect 301 /sito_pc/ https://www.protezionecivilegenzano.it/
+Redirect 301 /sitovecchio/ https://www.protezionecivilegenzano.it/
 
 # /documenti/normativa/ → /area-download/normativa/ (file duplicati lì)
 # /documenti/download/ NON reindirizzato — i PDF sono serviti direttamente
-RedirectMatch 301 ^/documenti/normativa/(.*)$ /area-download/normativa/$1
+RedirectMatch 301 ^/documenti/normativa/(.*)$ https://www.protezionecivilegenzano.it/area-download/normativa/$1
 
 # PDF storici del Piano serviti dalla root /documenti/ — Google Search
 # Console segnala come "scansionati ma non indicizzati". Reindirizziamo
 # alla cartella nuova del Piano.
-RedirectMatch 301 ^/documenti/(Carta_di_.*\.pdf|Piano_di_.*\.pdf|Piano_Emergenza.*\.pdf|Aree_Emergenza.*\.pdf|Inquadramento_.*\.pdf|Rischio_.*\.pdf|Cartina_.*\.pdf)$ /area-download/normativa/$1
+RedirectMatch 301 ^/documenti/(Carta_di_.*\.pdf|Piano_di_.*\.pdf|Piano_Emergenza.*\.pdf|Aree_Emergenza.*\.pdf|Inquadramento_.*\.pdf|Rischio_.*\.pdf|Cartina_.*\.pdf)$ https://www.protezionecivilegenzano.it/area-download/normativa/$1
 
 # URL Joomla "file_pii_*" del vecchio CMS (plugin Phoca o simile) —
 # nessuna corrispondenza nel nuovo sito. Restituiamo 410 Gone per dire
@@ -72,13 +81,13 @@ RedirectMatch 410 ^/joomla.*$
 # Vecchi articoli /comunicazioni/AAAA/...html (CMS precedente). Il nuovo
 # sito usa /comunicazioni/AAAA-MM-GG-slug/ senza estensione e senza anno
 # come segmento. Reindirizziamo all'archivio /comunicazioni/.
-RedirectMatch 301 ^/comunicazioni/[0-9]{4}/.*\.html?$ /comunicazioni/
+RedirectMatch 301 ^/comunicazioni/[0-9]{4}/.*\.html?$ https://www.protezionecivilegenzano.it/comunicazioni/
 
 # Vecchi nomi micro-siti standalone — il nuovo sito li chiama diversamente.
-RedirectMatch 301 ^/giochi_protezione_civile/?(.*)$ /giochi/$1
-RedirectMatch 301 ^/giochi-protezione-civile/?(.*)$ /giochi/$1
-RedirectMatch 301 ^/formazione_pc/?(.*)$ /formazionepc/$1
-RedirectMatch 301 ^/quiz_pc/?(.*)$ /quizpc/$1
+RedirectMatch 301 ^/giochi_protezione_civile/?(.*)$ https://www.protezionecivilegenzano.it/giochi/$1
+RedirectMatch 301 ^/giochi-protezione-civile/?(.*)$ https://www.protezionecivilegenzano.it/giochi/$1
+RedirectMatch 301 ^/formazione_pc/?(.*)$ https://www.protezionecivilegenzano.it/formazionepc/$1
+RedirectMatch 301 ^/quiz_pc/?(.*)$ https://www.protezionecivilegenzano.it/quizpc/$1
 
 # Pagine HTML standalone del vecchio sito senza corrispondenza diretta —
 # 410 Gone (rimossa) così Google le toglie subito.
@@ -92,10 +101,6 @@ RedirectMatch 410 ^/areefiltrate\.html$
 # /giochi/          — giochi educativi per infanzia, primaria e ragazzi
 # /formazionepc/    — piattaforma e-learning
 # /quizpc/          — quiz interattivo
-
-# Forza HTTPS
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Security headers
 <IfModule mod_headers.c>
