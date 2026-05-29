@@ -81,6 +81,7 @@ Le storie aiutano bambini e bambine ad avvicinarsi alla protezione civile senza 
 - [Storie e racconti](/formazione/storie-e-racconti/) — letture ad alta voce, drammatizzazioni e conversazioni guidate.
 - [Giochi della sicurezza](/giochi/) — giochi per infanzia, primaria, ragazzi e famiglie (Arena con badge e progressi).
 - [Catalogo dei giochi](/catalogo-giochi/) — scheda informativa di ogni gioco con fascia d'età, durata, obiettivo didattico e accessibilità.
+- [Esperimenti e attività di protezione civile](/formazione/esperimenti/) — esperimenti scientifici e giochi da fare a scuola o a casa, con materiali semplici, per capire i rischi e come ci si protegge.
 - [Schede stampabili](/formazione/schede-stampabili/) — schede A4 pronte per la classe.
 
 ## Aree tematiche {#aree-tematiche}
