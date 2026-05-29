@@ -1,13 +1,7 @@
 {
-  "livello": "gialla",
-  "titolo": "ALLERTA GIALLA — temporali",
-  "descrizione": "Ordinaria per rischio temporali, Zona F — Bacini Costieri Sud (Genzano). Bollettino DPC/Regione Lazio del 29 maggio 2026, validità 29 maggio 13:59–23:59.",
-  "ultimo_aggiornamento": "2026-05-28T18:06:54+02:00",
-  "ultimo_controllo": "2026-05-29T23:21:12+02:00",
-  "domani": {
-    "livello": "verde",
-    "titolo": "Previsto verde",
-    "rischi": [],
-    "data": "2026-05-30"
-  }
+  "livello": "verde",
+  "titolo": "NESSUNA ALLERTA",
+  "descrizione": "Non sono previsti fenomeni significativi sul nostro territorio.",
+  "ultimo_aggiornamento": "2026-05-30T00:01:16+02:00",
+  "ultimo_controllo": "2026-05-30T00:01:16+02:00"
 }
