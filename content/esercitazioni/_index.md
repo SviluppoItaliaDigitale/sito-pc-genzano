@@ -28,7 +28,7 @@ Queste attività non producono comunicati pubblici: sono il **lavoro silenzioso*
 
 ## Le esercitazioni programmate
 
-Oltre all'addestramento integrato nei turni, il Gruppo partecipa a **esercitazioni programmate** con cadenza variabile, organizzate dal Comune, dalla Regione Lazio, dal Coordinamento Provinciale o dai Coordinamenti delle Organizzazioni di Volontariato (COI) della Città Metropolitana di Roma. Sono le occasioni che documentiamo pubblicamente, perché coinvolgono più enti, hanno valore educativo per la cittadinanza e mettono alla prova procedure complesse.
+Oltre all'addestramento integrato nei turni, il Gruppo partecipa a **esercitazioni programmate** con cadenza variabile, organizzate dal Comune, dalla Regione Lazio, dal Coordinamento Provinciale o dai Coordinamenti delle Organizzazioni di Volontariato della Città Metropolitana di Roma. Sono le occasioni che documentiamo pubblicamente, perché coinvolgono più enti, hanno valore educativo per la cittadinanza e mettono alla prova procedure complesse.
 
 I tipi di esercitazione in cui ci muoviamo:
 
