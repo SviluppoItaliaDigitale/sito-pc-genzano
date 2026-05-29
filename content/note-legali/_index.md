@@ -2,7 +2,7 @@
 title: "Note Legali"
 description: "Informazioni legali sul sito web della Protezione Civile di Genzano di Roma."
 layout: "single"
-dataUltimaRevisione: "2026-05-27"
+dataUltimaRevisione: "2026-05-29"
 ---
 
 ## Titolarità del sito
@@ -22,6 +22,18 @@ Per segnalazioni di malfunzionamenti, errori nei contenuti o richieste di aggior
 I contenuti testuali e multimediali pubblicati su questo sito, salvo diversa indicazione, sono distribuiti con licenza [Creative Commons Attribuzione 4.0 Internazionale (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.it).
 
 In pratica: puoi **riutilizzare, copiare, modificare e ridistribuire** i contenuti — anche per scopi commerciali — a condizione di **citare la fonte** ("Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma") e di indicare se sono state apportate modifiche.
+
+### Come puoi riusare i contenuti
+
+Le licenze variano a seconda del tipo di materiale. Controlla sempre l'indicazione sulla singola pagina o scheda:
+
+| Tipo di materiale | Licenza | Cosa puoi fare |
+|---|---|---|
+| Pagine informative, articoli e testi del sito | **CC BY 4.0** | Riuso libero, anche commerciale, citando la fonte. |
+| Schede didattiche, kit e infografiche che includono pittogrammi **ARASAAC** | **CC BY-NC-SA 4.0** | Riuso **non commerciale**, citando la fonte e ridistribuendo con la **stessa licenza**. La condizione è imposta dalla licenza dei pittogrammi ARASAAC, che l'opera derivata eredita. |
+| Materiali di terzi (foto, loghi, documenti di enti esterni) | **Licenza del titolare originale** | Valgono le condizioni indicate dalla fonte citata. |
+
+Se una scuola, un'associazione o un altro Comune vuole riutilizzare un materiale e ha dubbi sulla licenza applicabile, può [contattarci](/contatti/).
 
 ## Responsabilità e limiti d'uso
 
