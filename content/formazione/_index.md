@@ -118,4 +118,4 @@ Tutti gli articoli su formazione e scuole sono filtrabili nell'[archivio delle c
 - [Rischi e prevenzione](/rischi-prevenzione/) — comportamenti per scenario
 - [Diventa volontario](/diventa-volontario/) — come entrare nel Gruppo
 
-<!-- cache-bust: 2026-05-12 forza re-upload FTP per allineare header/footer dopo audit -->
+<!-- cache-bust: 2026-05-29 forza re-upload FTP dopo aggiunta voce di menu globale "Conoscere la Protezione Civile" -->

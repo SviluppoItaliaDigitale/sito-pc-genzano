@@ -664,3 +664,19 @@ Pagina aggiornata automaticamente quando vengono pubblicate nuove sezioni del si
 Se trovi un link rotto o una pagina mancante, segnalacelo a
 <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a>.
 </p>
+
+## Conoscere la Protezione Civile
+
+La protezione civile spiegata come materia.
+
+- [Conoscere la Protezione Civile](/conoscere/) — la panoramica della sezione
+- [Il Servizio Nazionale](/conoscere/servizio-nazionale/)
+- [Le quattro fasi](/conoscere/le-quattro-fasi/)
+  - [Previsione](/conoscere/le-quattro-fasi/previsione/)
+  - [Prevenzione](/conoscere/le-quattro-fasi/prevenzione/)
+  - [Soccorso e gestione dell'emergenza](/conoscere/le-quattro-fasi/soccorso/)
+  - [Superamento dell'emergenza](/conoscere/le-quattro-fasi/superamento/)
+- [Telecomunicazioni in emergenza](/conoscere/telecomunicazioni-emergenza/)
+  - [La Rete Radio nazionale di emergenza (Zamberletti)](/conoscere/telecomunicazioni-emergenza/rete-zamberletti/)
+- [Il vulcanismo dei Colli Albani](/conoscere/rischio-vulcanico-colli-albani/)
+

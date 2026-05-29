@@ -8,6 +8,8 @@ aliases:
 dataUltimaRevisione: "2026-05-24"
 ---
 
+<!-- cache-bust: 2026-05-29 forza re-upload FTP dopo aggiunta voce di menu globale "Conoscere la Protezione Civile" -->
+
 <div class="card border-danger mb-4">
 <div class="card-body bg-danger bg-opacity-10 p-4">
 <h2 class="h4 text-danger fw-bold"><i class="bi bi-telephone-fill me-2" aria-hidden="true"></i>In emergenza chiama il 112</h2>

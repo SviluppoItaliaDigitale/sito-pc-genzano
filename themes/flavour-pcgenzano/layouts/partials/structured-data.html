@@ -133,8 +133,8 @@
   "name": "{{ .Title }}",
   "description": "{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}",
   "startDate": "{{ .Date.Format "2006-01-02" }}",
-  {{ with .Params.scadenza }}"endDate": "{{ . }}",
-  {{ end }}{{ with .Params.image }}"image": "{{ . | absURL }}",
+  "endDate": "{{ with .Params.scadenza }}{{ . }}{{ else }}{{ $.Date.Format "2006-01-02" }}{{ end }}",
+  {{ with .Params.image }}"image": "{{ . | absURL }}",
   {{ end }}"eventStatus": "https://schema.org/EventScheduled",
   "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
   "location": {

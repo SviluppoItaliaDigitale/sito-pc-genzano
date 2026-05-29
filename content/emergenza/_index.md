@@ -10,5 +10,5 @@ aliases:
   - /emergenza-essenziale/
   - /lite/
 ---
-<!-- cache-bust: 2026-05-28 forza re-upload FTP per allineare data ultimo_controllo allerta meteo (audit ChatGPT) -->
+<!-- cache-bust: 2026-05-29 forza re-upload FTP dopo aggiunta voce di menu globale "Conoscere la Protezione Civile" -->
 {{< pagina-emergenza-lite >}}

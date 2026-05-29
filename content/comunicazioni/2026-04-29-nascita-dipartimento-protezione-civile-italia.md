@@ -126,6 +126,7 @@ Sul nostro sito:
 - [Friuli 1976, cinquant'anni dopo](/comunicazioni/2026-05-06-friuli-1976-cinquant-anni-protezione-civile/).
 - [Centro Operativo Comunale (COC)](/comunicazioni/2026-05-14-centro-operativo-comunale-coc/).
 - [Catena delle comunicazioni in protezione civile](/comunicazioni/2026-04-16-catena-comunicazioni-protezione-civile-dpc-cor-com-coc/).
+- [Conoscere la Protezione Civile: il Servizio Nazionale](/conoscere/servizio-nazionale/).
 
 Fonti istituzionali:
 

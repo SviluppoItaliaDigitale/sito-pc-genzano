@@ -12,4 +12,4 @@ In questa pagina trovi l'**archivio completo degli articoli** pubblicati dal Gru
 
 In fondo alla pagina trovi anche i collegamenti ai **canali social ufficiali** del Gruppo, per seguirci anche su Facebook, Instagram, X e Telegram.
 
-<!-- cache-bust: 2026-05-12 forza re-upload FTP per allineare header/footer dopo audit -->
+<!-- cache-bust: 2026-05-29 forza re-upload FTP dopo aggiunta voce di menu globale "Conoscere la Protezione Civile" -->

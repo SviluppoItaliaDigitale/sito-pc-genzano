@@ -54,6 +54,7 @@ Sul nostro sito:
 
 - [Radiocomunicazioni in emergenza](/comunicazioni/2026-05-03-radiocomunicazioni-emergenza-volontari/).
 - [Rete emergenza metropolitana di Roma](/comunicazioni/2026-05-02-rete-emergenza-metropolitana-roma-radioamatori/).
+- [Conoscere la Protezione Civile: la Rete Radio nazionale di emergenza](/conoscere/telecomunicazioni-emergenza/rete-zamberletti/).
 
 Fonti istituzionali:
 

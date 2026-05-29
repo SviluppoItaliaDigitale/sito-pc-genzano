@@ -75,6 +75,7 @@ Sul nostro sito:
 - [Rete Zamberletti: 499ª esercitazione radio nazionale](/comunicazioni/2026-05-01-rete-zamberletti-499-esercitazione-radio/).
 - [Radiocomunicazioni in emergenza](/comunicazioni/2026-05-03-radiocomunicazioni-emergenza-volontari/).
 - [Giornata mondiale delle telecomunicazioni](/comunicazioni/2026-05-17-giornata-mondiale-telecomunicazioni/).
+- [Conoscere la Protezione Civile: telecomunicazioni in emergenza](/conoscere/telecomunicazioni-emergenza/).
 
 Fonti istituzionali:
 
