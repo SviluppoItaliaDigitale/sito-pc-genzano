@@ -38,7 +38,7 @@ Tutti questi rischi si leggono attraverso la stessa cornice: il modello **Rischi
 ## I rischi naturali
 
 ### Rischio sismico
-I terremoti: come nasce un sisma, la differenza tra magnitudo e intensità, la pericolosità sismica dell'Italia e la classificazione del nostro territorio. *Pagina materia in preparazione.* Intanto: [cosa fare in caso di terremoto](/rischi-prevenzione/rischio-sismico/).
+I terremoti: come nasce un sisma, la differenza tra magnitudo e intensità, la pericolosità sismica dell'Italia e la classificazione del nostro territorio. Leggi: [Il rischio sismico in Italia](/conoscere/catalogo-dei-rischi/rischio-sismico/). Per l'autoprotezione: [cosa fare in caso di terremoto](/rischi-prevenzione/rischio-sismico/).
 
 ### Rischio vulcanico
 Il vulcanismo, con un focus che pochi altri possono offrire: i **Castelli Romani sorgono su un vulcano quiescente**. La pagina materia c'è già: [Il vulcanismo dei Colli Albani](/conoscere/rischio-vulcanico-colli-albani/). Per l'autoprotezione dai gas: [Rischio vulcanico — cosa fare](/rischi-prevenzione/rischio-vulcanico/).
@@ -69,9 +69,9 @@ Le emergenze radiologiche e nucleari, il Piano nazionale e il ruolo delle autori
 ### Rischio sanitario
 Le emergenze sanitarie collettive, comprese le epidemie e le pandemie, e la pianificazione di sanità pubblica. Leggi: [Il rischio sanitario: emergenze, epidemie e pandemie](/conoscere/catalogo-dei-rischi/rischio-sanitario/).
 
-## Questa sezione cresce nel tempo
+## Una sezione che si aggiorna
 
-Stiamo costruendo una pagina-materia dedicata per ciascun rischio, ampia e ancorata alle fonti istituzionali (DPC, INGV, ISPRA, Ministero della Salute). Le voci segnate *«in preparazione»* saranno pubblicate man mano. Ogni pagina porterà la data dell'ultima revisione, così saprai sempre quanto è aggiornata.
+Ogni rischio ha la sua pagina-materia dedicata, ancorata alle fonti istituzionali (DPC, INGV, ISPRA, ISIN, Ministero della Salute). Ogni pagina porta la data dell'ultima revisione, così sai sempre quanto è aggiornata: la rivediamo quando cambiano i dati o le norme di riferimento.
 
 ## Approfondimenti sul nostro sito
 
