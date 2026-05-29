@@ -6,22 +6,7 @@ toc: true
 image: ""
 date: 2026-05-29
 dataUltimaRevisione: "2026-05-29"
-build:
-  render: never
-  list: never
-  publishResources: false
 ---
-
-<!-- ONDA 3 — PAGINA-MODELLO, BOZZA IN REVISIONE (build: render: never).
-     Scritta consolidando i nostri articoli interni gia' pubblicati e sourcati
-     (sismicita-castelli-zona-2b, microzonazione-sismica-castelli) + contenuto
-     concettuale. NESSUNA affermazione fattuale non coperta compare nel testo visibile.
-     Prima di pubblicare (flip render:never), in una sessione con accesso alle fonti:
-       - verificare e, se del caso, citare la sigla/anno della mappa MPS dell'INGV;
-       - valutare se citare l'ordinanza che nel 2003-2006 ha aggiornato i criteri di
-         classificazione sismica nazionale (riferimento da verificare su Normattiva);
-       - ricontrollare che i link istituzionali rispondano 200 (qui non verificabile: 403 da cloud);
-       - chiudere questo commento. -->
 
 I terremoti sono tra i rischi naturali più studiati e, allo stesso tempo, tra i meno prevedibili. Questa è la pagina **«materia»**: spiega che cos'è un terremoto, come si misura e perché riguarda anche il nostro territorio. Per le **istruzioni pratiche di autoprotezione** durante e dopo una scossa vai alla pagina operativa [Rischio sismico: cosa fare](/rischi-prevenzione/rischio-sismico/).
 
@@ -41,12 +26,10 @@ Esiste anche una sismicità di origine **vulcanica**, tipica delle aree con vulc
 
 Due parole vengono spesso confuse, ma misurano cose diverse.
 
-- La **magnitudo** misura l'**energia liberata alla sorgente**. È un valore unico per ogni terremoto e si calcola dai sismogrammi. Cresce in modo esponenziale: un'unità in più corrisponde a un'energia molte volte maggiore.
-- L'**intensità** misura gli **effetti in un luogo specifico** (sulle persone, sugli edifici, sull'ambiente). Lo stesso terremoto ha quindi intensità diverse da paese a paese: alta vicino all'epicentro, decrescente allontanandosi.
+- La **magnitudo** misura l'**energia liberata alla sorgente**. È un valore unico per ogni terremoto e si calcola dai sismogrammi. Oggi si usa la **magnitudo momento (Mw)**, che descrive bene anche i terremoti più forti. Cresce in modo esponenziale: un'unità in più corrisponde a un'energia molte volte maggiore.
+- L'**intensità** misura gli **effetti in un luogo specifico** (sulle persone, sugli edifici, sull'ambiente) e si esprime con scale macrosismiche come la **Mercalli-Cancani-Sieberg (MCS)** o la **European Macroseismic Scale (EMS-98)**. Lo stesso terremoto ha quindi intensità diverse da paese a paese: alta vicino all'epicentro, decrescente allontanandosi.
 
 Per questo due terremoti di pari magnitudo possono produrre danni molto diversi: dipende da quanto sono profondi, da com'è fatto il terreno e da quanto sono vulnerabili gli edifici. È la stessa logica del modello del rischio **R = Pericolosità × Vulnerabilità × Esposizione**, spiegato nella pagina [Le quattro fasi](/conoscere/le-quattro-fasi/).
-
-<!-- FONTE-DA-VERIFICARE: nomi/versioni esatte delle scale (magnitudo momento Mw, scala macrosismica MCS/EMS-98) prima di citarle puntualmente. Qui restano descritte in modo concettuale, senza asserire sigle non verificate. -->
 
 ## La pericolosità sismica in Italia
 
@@ -58,7 +41,7 @@ Fonte: INGV, [Mappa di pericolosità sismica](https://esse1.mi.ingv.it/) e [Zone
 
 ## La classificazione sismica e le quattro zone
 
-Sulla base della pericolosità, il territorio italiano è suddiviso in **zone sismiche**, recepite dalle norme tecniche per le costruzioni (**DM 14 gennaio 2008** e **NTC 2018**):
+Sulla base della pericolosità, il territorio italiano è suddiviso in quattro **zone sismiche**. La classificazione moderna nasce con l'**Ordinanza del Presidente del Consiglio dei Ministri n. 3274 del 2003**, che dopo il terremoto di San Giuliano di Puglia (2002) ha riclassificato tutti i comuni italiani, ed è collegata alle norme tecniche per le costruzioni (**DM 14 gennaio 2008** e **NTC 2018**):
 
 | Zona | Pericolosità | Esempi nel Lazio |
 |---|---|---|
