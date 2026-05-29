@@ -3,13 +3,14 @@ _[Indice manuale](README.md)_
 # Parte 19 — Agenti specializzati Claude Code (maggio 2026)
 
 A maggio 2026 sono stati installati nel repo **agenti specializzati**
-in `.claude/agents/` (**quindici al 18 maggio 2026**). Sono profili professionali
+in `.claude/agents/` (**sedici a maggio 2026**). Sono profili professionali
 virtuali con cui Claude Code ti aiuta nei compiti ricorrenti del Gruppo,
 ognuno con un'expertise mirata. La progressione:
 
 - **8 agent dell'apertura** (maggio 2026): redazione AGID, art direction, gestione issue, deploy engineering, comunicazione di crisi, QA schede stampabili, audit di sistema, **gate visivo foto** (aggiunto il 15 maggio dopo l'incidente "Giro d'Italia 2026 a Formia": caption fabbricate dai testi di terzi invece che dalle foto reali).
 - **5 agent professionisti aggiuntivi** (15 maggio 2026, in risposta alla richiesta utente *"assumi le migliori professionalità per essere perfetti"*): accessibility auditor IAAP CPACC, content strategist editoriale (Repubblica.it/ANSA), glottologa italiano L2 (Univ. Stranieri Siena), SEO editor (La Stampa/Sole 24 Ore Digital), avvocato amministrativista (Camera Deputati). Ognuno con CV credibile e responsabilità chiara nel ciclo editoriale.
 - **2 agent aggiunti il 16-18 maggio 2026**: `pc-photo-caption-verifier` (gate visivo Read multimodale foto, codificato dopo l'incidente Formia), `pc-notebooklm-publisher` (publishing engineer dei materiali multimediali NotebookLM su `/risorse-pronte/`).
+- **1 agent aggiunto a maggio 2026**: `pc-correttore-bozze` (correttore di bozze deterministico — caccia refusi e errori ortografici/grammaticali su QUALSIASI contenuto, incluse le schede statiche HTML, il punto cieco da cui era passato "cuoperti"→"copriti").
 
 **La parte importante:** non devi ricordare nessun nome tecnico. **Scrivi a
 Claude in italiano normale**, dicendo cosa vuoi fare, e Claude attiva da solo
@@ -19,7 +20,7 @@ l'agente giusto.
 
 ---
 
-## 19.1 I quindici agenti e quando si attivano
+## 19.1 I sedici agenti e quando si attivano
 
 ### 1. Caporedattore (revisione articoli) — 🔴 GATE OBBLIGATO
 
@@ -316,6 +317,22 @@ push) e dall'audit settimanale automatico `audit-sito.yml`.
 **Cosa fa**: estrae citazioni normative dal corpo (D.Lgs., L., L.R., DGR, DPCM, D.M.), verifica via WebFetch/Firecrawl su **Normattiva** / **Gazzetta Ufficiale** / **Consiglio regionale Lazio** / **BURL Lazio** se ogni norma è vigente, abrogata o modificata. Conoscenza pregressa di norme PC fondamentali (D.Lgs. 1/2018 vigente, L. 225/1992 abrogata, **L.R. Lazio 2/2014 = legge regionale PC vigente**, ecc.) per evitare WebFetch inutili. Per le pagine che riproducono una norma confronta Capi/articoli/rubriche con la fonte primaria (Normattiva per le statali, Consiglio regionale per le L.R. — Normattiva non contiene le regionali). Suggerisce sostituzioni dove abrogata o **riallinea le strutture fabbricate**.
 
 **Identità tecnica**: `pc-normative-verifier`.
+
+---
+
+### 15. Correttore di bozze (refusi e ortografia)
+
+**Quando lo attivi**: vuoi una rilettura mirata a refusi ed errori ortografici/grammaticali su uno o più file, una cartella, o le schede statiche. Diverso dal Caporedattore (`pc-article-reviewer`, che fa revisione AGID degli articoli in `content/comunicazioni/`): questo agent caccia **refusi** ed **errori ortografici/grammaticali** su QUALSIASI contenuto, incluse le **schede statiche HTML** in `static/formazione/` e `static/giochi/` (il punto cieco da cui era passato "cuoperti"→"copriti").
+
+**Frasi naturali che lo attivano automaticamente**:
+- *"Controlla i refusi in questo articolo."*
+- *"Cerca errori di battitura/ortografia."*
+- *"Rileggi per refusi questa scheda."*
+- *"Bonifica il legacy una sezione per volta."*
+
+**Cosa fa**: usa il correttore deterministico `scripts/check-refusi.py` (hunspell it_IT via spylls + allowlist `scripts/dizionario-pc.txt`) come prima passata, poi giudica ogni parola sospetta (refuso vs nome proprio/sigla/termine tecnico) e applica le correzioni o aggiorna l'allowlist. Restituisce: refusi corretti, parole valide aggiunte al dizionario, e una passata di lettura per errori grammaticali/di accordo che il correttore non vede. Complementare al workflow settimanale `controllo-refusi.yml`.
+
+**Identità tecnica**: `pc-correttore-bozze`.
 
 ---
 
