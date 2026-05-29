@@ -68,9 +68,19 @@ build:
 - ✅ **Frequenze radio** (VHF 144-146 MHz, UHF 430-440 MHz, HF, 145.500 MHz, CB 27 MHz canale 9): riusate dall'articolo già pubblicato sul sito. Nessuna frequenza inventata.
 - ✅ **Slug articoli collegati** corretti al pattern con prefisso data e verificati in build.
 
-## 8. `rischio-vulcanico-colli-albani.md` (BOZZA, non pubblicata)
+## 8. `rischio-vulcanico-colli-albani.md` — COMPLETATA E PUBBLICABILE (29 maggio 2026)
 
-- ⬜ **APERTO — di proposito.** Tutto il contenuto scientifico va scritto in sessione dedicata, su fonti **INGV**. La pagina ha `build: render: never`. I 7 marker `<!-- FONTE-DA-VERIFICARE -->` interni restano come traccia per quella sessione.
+- ✅✏️ **Contenuto scientifico scritto e verificato su fonti INGV + DPC.** Rimosso `build: render: never`: la pagina è ora pubblicabile, aggiunta alla landing `/conoscere/` e alla mappa del sito. Tutti i 7 marker interni chiusi. Fatti verificati:
+  - Denominazione (Colli Albani / Vulcano Laziale), ubicazione (~15-20 km da Roma), apparato centrale complesso, cono delle Faete 932 m — DPC + INGV.
+  - Laghi di Albano e Nemi come crateri *maar* della fase idromagmatica — DPC.
+  - Tre fasi eruttive (Tuscolano-Artemisio 600-350 ka, >280 km³; Faete 350-270 ka; Idromagmatica 270-36 ka) — DPC.
+  - Ultima eruzione ~36.000 anni fa; quiescente non spento — DPC + INGV.
+  - Sismicità: esempio datato **28-29 agosto 2020, 15 eventi M 1.2-3.0** — INGVterremoti (verbatim da metadati pagina ufficiale).
+  - Deformazioni GPS+InSAR; sollevamento+subsidenza → ricarica magmatica (Trasatti et al. 2018) — INGV.
+  - Emissioni gas CO₂/H₂S/SO₂/CH₄/Rn; Cava dei Selci principale; monitoraggio dal 2000 dopo moria di animali — DPC + INGV.
+  - Monitoraggio multiparametrico Sezione di Roma INGV (rete sismica, GPS dal 1990/continua dal 2007 in rete RING, geochimico) — INGV.
+  - Fonti (URL verificati 200): [DPC Colli Albani](https://rischi.protezionecivile.gov.it/it/vulcanico/vulcani-italia/colli-albani/), [INGV Sorveglianza Colli Albani](https://www.ingv.it/monitoraggio-e-infrastrutture/sorveglianza/servizio-sorveglianza-vulcani-attivi/sorveglianza-vulcani-colli-albani), [INGVterremoti ago 2020](https://ingvterremoti.com/2020/08/30/sismicitacollialbani/).
+  - **Nessuna duplicazione** con la pagina operativa `/rischi-prevenzione/rischio-vulcanico/`: questa è la pagina «materia», quella resta la pagina «cosa fare» (cross-link reciproco).
 
 ---
 

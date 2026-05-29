@@ -678,4 +678,5 @@ La protezione civile spiegata come materia.
   - [Superamento dell'emergenza](/conoscere/le-quattro-fasi/superamento/)
 - [Telecomunicazioni in emergenza](/conoscere/telecomunicazioni-emergenza/)
   - [La Rete Radio nazionale di emergenza (Zamberletti)](/conoscere/telecomunicazioni-emergenza/rete-zamberletti/)
+- [Il vulcanismo dei Colli Albani](/conoscere/rischio-vulcanico-colli-albani/)
 

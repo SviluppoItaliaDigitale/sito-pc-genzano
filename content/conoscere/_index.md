@@ -38,13 +38,13 @@ Sono le quattro fasi del ciclo del rischio. Le trovi spiegate una per una nella 
 
 - **[Il Servizio Nazionale](/conoscere/servizio-nazionale/)** — chi fa parte del sistema, chi fa cosa tra Stato, Regioni e Comuni, e il ruolo del Sindaco.
 - **[Telecomunicazioni in emergenza](/conoscere/telecomunicazioni-emergenza/)** — perché le reti radio sono insostituibili quando tutto il resto si interrompe, il ruolo dei radioamatori e il sistema IT-alert.
+- **[Il vulcanismo dei Colli Albani](/conoscere/rischio-vulcanico-colli-albani/)** — il Vulcano Laziale spiegato: storia eruttiva, i laghi di Albano e Nemi come crateri, le emissioni di gas e il monitoraggio dell'INGV.
 
 ## In costruzione
 
 Questo livello cresce nel tempo. Sono già previste, nelle prossime sessioni di lavoro, pagine dedicate a:
 
-- il **catalogo dei rischi** (sismico, idrogeologico, incendio, vulcanico, maremoto, sanitario, chimico-industriale, neve e gelo, siccità);
-- il **rischio vulcanico dei Colli Albani**, con il monitoraggio dell'INGV;
+- il **catalogo dei rischi** (sismico, idrogeologico, incendio, maremoto, sanitario, chimico-industriale, neve e gelo, siccità);
 - la **storia della protezione civile** italiana, dal Vajont al Codice del 2018 (intanto trovi la [Storia del territorio](/storia/) e l'articolo sulla [nascita del Dipartimento](/comunicazioni/2026-04-29-nascita-dipartimento-protezione-civile-italia/));
 - la **scienza del rischio** e i Centri di competenza;
 - la **dimensione internazionale** (Meccanismo europeo di protezione civile e Quadro di Sendai).
