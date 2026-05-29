@@ -44,7 +44,7 @@ I terremoti: come nasce un sisma, la differenza tra magnitudo e intensità, la p
 Il vulcanismo, con un focus che pochi altri possono offrire: i **Castelli Romani sorgono su un vulcano quiescente**. La pagina materia c'è già: [Il vulcanismo dei Colli Albani](/conoscere/rischio-vulcanico-colli-albani/). Per l'autoprotezione dai gas: [Rischio vulcanico — cosa fare](/rischi-prevenzione/rischio-vulcanico/).
 
 ### Rischio idrogeologico
-Frane, alluvioni e dissesto: perché i versanti dei Castelli sono fragili, come si forma un'alluvione, cosa dice il Piano di Assetto Idrogeologico. *Pagina materia in preparazione.* Intanto: [cosa fare per il rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/).
+Frane, alluvioni e dissesto: perché i versanti dei Castelli sono fragili, come si forma un'alluvione, cosa dice il Piano di Assetto Idrogeologico. Leggi: [Il rischio idrogeologico: frane, alluvioni e dissesto](/conoscere/catalogo-dei-rischi/rischio-idrogeologico/). Per l'autoprotezione: [cosa fare per il rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/).
 
 ### Rischio da maremoto (tsunami)
 Anche l'Italia è esposta ai maremoti del Mediterraneo. Come si genera un'onda di maremoto, il sistema di allertamento nazionale (SiAM) e perché conta anche lontano dalla costa. *Pagina materia in preparazione.*
