@@ -5,7 +5,7 @@
   {{- if in $path "#" }}{{ $path = index (split $path "#") 0 }}{{ end -}}
   {{- if in $path "?" }}{{ $path = index (split $path "?") 0 }}{{ end -}}
   {{- /* Se il link punta a un file statico (estensione nota), lo rendo direttamente senza lookup di pagina */ -}}
-  {{- $staticExts := slice ".pdf" ".webp" ".jpg" ".jpeg" ".png" ".gif" ".svg" ".doc" ".docx" ".xls" ".xlsx" ".ppt" ".pptx" ".zip" ".mp3" ".mp4" ".csv" ".json" ".txt" ".rtf" ".html" ".htm" -}}
+  {{- $staticExts := slice ".pdf" ".webp" ".jpg" ".jpeg" ".png" ".gif" ".svg" ".doc" ".docx" ".xls" ".xlsx" ".ppt" ".pptx" ".zip" ".mp3" ".mp4" ".csv" ".json" ".txt" ".rtf" ".html" ".htm" ".xml" -}}
   {{- $lowerPath := lower $path -}}
   {{- $isStatic := false -}}
   {{- range $staticExts -}}
