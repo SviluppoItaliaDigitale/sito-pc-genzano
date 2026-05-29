@@ -47,27 +47,27 @@ Il vulcanismo, con un focus che pochi altri possono offrire: i **Castelli Romani
 Frane, alluvioni e dissesto: perché i versanti dei Castelli sono fragili, come si forma un'alluvione, cosa dice il Piano di Assetto Idrogeologico. Leggi: [Il rischio idrogeologico: frane, alluvioni e dissesto](/conoscere/catalogo-dei-rischi/rischio-idrogeologico/). Per l'autoprotezione: [cosa fare per il rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/).
 
 ### Rischio da maremoto (tsunami)
-Anche l'Italia è esposta ai maremoti del Mediterraneo. Come si genera un'onda di maremoto, il sistema di allertamento nazionale (SiAM) e perché conta anche lontano dalla costa. *Pagina materia in preparazione.*
+Anche l'Italia è esposta ai maremoti del Mediterraneo. Come si genera un'onda di maremoto, il sistema di allertamento nazionale (SiAM) e perché conta anche lontano dalla costa. Leggi: [Il rischio da maremoto nel Mediterraneo](/conoscere/catalogo-dei-rischi/rischio-maremoto/).
 
 ### Rischio da incendi boschivi
-Il fuoco in bosco: cause, comportamento dell'incendio, la campagna estiva e il ruolo della previsione (RISICO). *Pagina materia in preparazione.* Intanto: [cosa fare per il rischio incendio](/rischi-prevenzione/rischio-incendio/).
+Il fuoco in bosco: cause, comportamento dell'incendio, la campagna estiva e il ruolo della previsione (RISICO). Leggi: [Il rischio da incendi boschivi](/conoscere/catalogo-dei-rischi/rischio-incendio/). Per l'autoprotezione: [cosa fare per il rischio incendio](/rischi-prevenzione/rischio-incendio/).
 
 ### Rischio da neve e gelo
-Nevicate, gelate e ghiaccio: effetti su viabilità, reti e persone fragili. *Pagina materia in preparazione.*
+Nevicate, gelate e ghiaccio: effetti su viabilità, reti e persone fragili. Leggi: [Il rischio da neve e gelo](/conoscere/catalogo-dei-rischi/rischio-neve-gelo/).
 
 ### Rischio da deficit idrico (siccità)
-La siccità come rischio lento: come si misura, gli effetti su acqua potabile, agricoltura e ambiente, il legame con il cambiamento climatico. *Pagina materia in preparazione.*
+La siccità come rischio lento: come si misura, gli effetti su acqua potabile, agricoltura e ambiente, il legame con il cambiamento climatico. Leggi: [Il rischio da deficit idrico (siccità)](/conoscere/catalogo-dei-rischi/rischio-siccita/).
 
 ## I rischi di origine antropica
 
 ### Rischio chimico-industriale
-Gli stabilimenti che trattano sostanze pericolose, la **direttiva Seveso** e i piani di emergenza esterna. *Pagina materia in preparazione.*
+Gli stabilimenti che trattano sostanze pericolose, la **direttiva Seveso** e i piani di emergenza esterna. Leggi: [Il rischio chimico-industriale e la direttiva Seveso](/conoscere/catalogo-dei-rischi/rischio-chimico-industriale/).
 
 ### Rischio nucleare e radiologico
-Le emergenze radiologiche e nucleari, il Piano nazionale e il ruolo delle autorità competenti. *Pagina materia in preparazione.*
+Le emergenze radiologiche e nucleari, il Piano nazionale e il ruolo delle autorità competenti. Leggi: [Il rischio nucleare e radiologico](/conoscere/catalogo-dei-rischi/rischio-nucleare-radiologico/).
 
 ### Rischio sanitario
-Le emergenze sanitarie collettive, comprese le epidemie e le pandemie, e la pianificazione di sanità pubblica. *Pagina materia in preparazione.*
+Le emergenze sanitarie collettive, comprese le epidemie e le pandemie, e la pianificazione di sanità pubblica. Leggi: [Il rischio sanitario: emergenze, epidemie e pandemie](/conoscere/catalogo-dei-rischi/rischio-sanitario/).
 
 ## Questa sezione cresce nel tempo
 
