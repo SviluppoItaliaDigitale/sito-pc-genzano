@@ -18,7 +18,7 @@ La prevenzione è la fase in cui si lavora **prima** che accada qualcosa, per fa
 
 Se la previsione studia la pericolosità, la prevenzione agisce sugli altri due fattori del rischio: la **vulnerabilità** (quanto siamo fragili) e l'**esposizione** (quanti e cosa si trova nell'area a rischio). Il Codice parla di «prevenzione **e mitigazione** dei rischi»: mitigare vuol dire ridurre, attenuare, anche quando non si può eliminare del tutto il pericolo.
 
-<!-- FONTE-DA-VERIFICARE: articolo del D.Lgs 1/2018 che definisce e dettaglia la prevenzione (strutturale e non strutturale) (ritenuto art. 2 e art. 11) — confermare su normattiva.it -->
+L'**articolo 2 del Codice** (commi 3, 4 e 5) distingue esplicitamente la prevenzione **non strutturale** da quella **strutturale**.
 
 ## Le due facce della prevenzione
 
@@ -53,4 +53,4 @@ I Castelli Romani hanno caratteristiche che rendono importante la prevenzione id
 
 ## Per approfondire — fonti istituzionali
 
-- [Codice della protezione civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n-1-del-2-gennaio-2018/) (Dipartimento della Protezione Civile)
+- [Codice della protezione civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n1-del-2-gennaio-2018-codice-della-protezione-civile/) (Dipartimento della Protezione Civile)

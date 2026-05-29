@@ -50,5 +50,5 @@ Nella previsione il Gruppo Comunale non «prevede» nulla in proprio: **riceve, 
 
 ## Per approfondire — fonti istituzionali
 
-- [Codice della protezione civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n-1-del-2-gennaio-2018/) (Dipartimento della Protezione Civile)
-- [Il Servizio nazionale della protezione civile](https://www.protezionecivile.gov.it/it/approfondimento/il-servizio-nazionale-della-protezione-civile/) (Dipartimento della Protezione Civile)
+- [Codice della protezione civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n1-del-2-gennaio-2018-codice-della-protezione-civile/) (Dipartimento della Protezione Civile)
+- [Il Servizio nazionale della protezione civile](https://servizio-nazionale.protezionecivile.gov.it/) (Dipartimento della Protezione Civile)

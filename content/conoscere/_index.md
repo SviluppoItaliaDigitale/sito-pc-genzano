@@ -24,7 +24,7 @@ I due livelli sono intrecciati: ogni pagina di questa sezione rimanda alle pagin
 
 ## Le quattro attività della protezione civile
 
-Il [Codice della protezione civile (decreto legislativo n. 1 del 2 gennaio 2018)](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n-1-del-2-gennaio-2018/) organizza il lavoro del Servizio Nazionale attorno a quattro attività: **previsione**, **prevenzione e mitigazione** dei rischi, **gestione delle emergenze** e loro **superamento**.
+Il [Codice della protezione civile (decreto legislativo n. 1 del 2 gennaio 2018)](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n1-del-2-gennaio-2018-codice-della-protezione-civile/) organizza il lavoro del Servizio Nazionale attorno a quattro attività: **previsione**, **prevenzione e mitigazione** dei rischi, **gestione delle emergenze** e loro **superamento**.
 
 Sono le quattro fasi del ciclo del rischio. Le trovi spiegate una per una nella pagina dedicata.
 

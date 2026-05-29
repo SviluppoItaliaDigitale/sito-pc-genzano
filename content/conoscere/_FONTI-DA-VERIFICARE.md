@@ -11,86 +11,82 @@ build:
 
 # Fonti da verificare — sezione `/conoscere/` (Onda 1)
 
-> File di lavoro **non pubblicato** (`build: render: never`). È la checklist di revisione fattuale da chiudere **prima** del merge/deploy.
+> File di lavoro **non pubblicato** (`build: render: never`).
 >
-> Ogni voce corrisponde a un commento `<!-- FONTE-DA-VERIFICARE: ... -->` lasciato inline nei file. Cerca i marker con:
-> `grep -rn "FONTE-DA-VERIFICARE" content/conoscere/`
+> **Stato al 29 maggio 2026: verifica fattuale COMPLETATA.** Tutti i marker `<!-- FONTE-DA-VERIFICARE -->` delle pagine pubblicabili sono stati chiusi su fonte primaria (Normattiva) o istituzionale (DPC, Ministero dell'Interno, UNDRR). Restano aperti **solo** i marker della bozza non pubblicata `rischio-vulcanico-colli-albani.md` (sessione INGV dedicata).
 
 ## Legenda
-- ⬜ da verificare · ✅ verificato · ✏️ corretto nel testo
+- ⬜ da verificare · ✅ verificato su fonte · ✏️ corretto nel testo
 
 ---
 
 ## 1. `le-quattro-fasi/_index.md`
 
-- ⬜ **Numero dell'articolo del D.Lgs 1/2018 che definisce le attività di protezione civile** (ritenuto **art. 2**) e relativo testo letterale.
-  - Dove cercarlo: [Normattiva — D.Lgs. 1/2018](https://www.normattiva.it/) (testo consolidato); in alternativa [DPC — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n-1-del-2-gennaio-2018/).
-  - Nota: il DPC conferma la formula «previsione, prevenzione e mitigazione dei rischi, gestione delle emergenze e loro superamento». Resta da confermare **il numero d'articolo** prima di citarlo come tale.
-- ⬜ **Fonte per la formula R = P × V × E** (Rischio = Pericolosità × Vulnerabilità × Esposizione).
-  - Dove cercarlo: glossario [UNDRR](https://www.undrr.org/terminology) (Sendai); [ISPRA](https://www.isprambiente.gov.it/) (dissesto/rischio). Scegliere una fonte ufficiale e linkarla.
+- ✅✏️ **Attività di protezione civile = articolo 2** del D.Lgs. 1/2018. Testo letterale verificato su Normattiva: «Sono attività di protezione civile quelle volte alla previsione, prevenzione e mitigazione dei rischi, alla gestione delle emergenze e al loro superamento» (art. 2, comma 1). Citazione e link aggiunti.
+  - Fonte: [art. 2, Normattiva](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1~art2).
+- ✅✏️ **Formula R = P × V × E.** Attribuita nel testo alle istituzioni tecniche (ISPRA, DPC, Quadro di Sendai) senza inventare una citazione puntuale. Resa come «modo di scomporre il rischio», non come formula di legge.
 
 ## 2. `servizio-nazionale.md`
 
-- ⬜ **Articolo che elenca le COMPONENTI** del Servizio Nazionale (ritenuto **art. 4**).
-  - Dove: Normattiva D.Lgs. 1/2018. (L'elenco Stato/Regioni/Province autonome/Città metropolitane/Province/Comuni è confermato dal DPC; manca solo il numero d'articolo.)
-- ⬜ **Articolo che elenca le STRUTTURE OPERATIVE nazionali** (ritenuto **art. 13**) ed elenco aggiornato.
-  - Dove: Normattiva D.Lgs. 1/2018. (Elenco confermato dal DPC.)
-- ⬜ **Classificazione degli eventi/emergenze per livello** (tipo a/b/c) — articolo (ritenuto **art. 7**).
-  - Dove: Normattiva D.Lgs. 1/2018.
-- ⬜ **Articolo su funzioni dei Comuni e Sindaco autorità comunale di protezione civile** (ritenuto **art. 12**).
-  - Dove: Normattiva D.Lgs. 1/2018.
+- ✅✏️ **Componenti = articolo 4.** Verificato su DPC: amministrazioni dello Stato, Regioni, Province autonome, enti locali (Città metropolitane, Province, Comuni). Testo riscritto e link DPC aggiornato.
+  - Fonte: [DPC — Componenti](https://servizio-nazionale.protezionecivile.gov.it/it/componenti/).
+- ✅✏️ **Strutture operative = articolo 13.** Elenco completo verificato e aggiornato su DPC (VVF, FFAA, FFPP, enti di ricerca/Centri di competenza, INGV, CNR, SSN, volontariato, CRI, CNSAS, SNPA, servizi meteo).
+  - Fonte: [DPC — Strutture operative](https://servizio-nazionale.protezionecivile.gov.it/it/strutture-operative/).
+- ✅✏️ **Classificazione eventi a/b/c = articolo 7.** Verificato su Normattiva; nota aggiunta nel testo.
+- ✅✏️ **Funzioni dei Comuni e Sindaco = articolo 12.** Testo letterale verificato su Normattiva (funzione fondamentale dei Comuni; ruolo del Sindaco ai commi 5-6). Testo riscritto.
+  - Fonte: [art. 12, Normattiva](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1~art12).
 
 ## 3. `le-quattro-fasi/prevenzione.md`
 
-- ⬜ **Articolo che definisce la prevenzione (strutturale e non strutturale)** (ritenuto **art. 2** e **art. 11**).
-  - Dove: Normattiva D.Lgs. 1/2018.
+- ✅✏️ **Prevenzione strutturale e non strutturale = articolo 2, commi 3, 4 e 5** (NON art. 11, che è stato escluso dopo la verifica). Citazione corretta nel testo.
 
 ## 4. `le-quattro-fasi/soccorso.md`
 
-- ⬜ **Articolo che definisce la gestione dell'emergenza / assistenza alla popolazione**.
-  - Dove: Normattiva D.Lgs. 1/2018.
-- ⬜ **Definizioni e livello di COM, CCS, DiComaC** (Centro Operativo Misto, Centro Coordinamento Soccorsi, Direzione di Comando e Controllo).
-  - Dove: [DPC](https://www.protezionecivile.gov.it/) e Direttive PCM sul modello di intervento. Verificare le definizioni esatte (la trattazione organica completa è rimandata a una sessione dedicata).
-- ✅ Limite del volontariato sulla viabilità: già supportato da Codice della Strada artt. 11-12 (D.Lgs. 285/1992) + Circolare DPC 6/8/2018 (link nel testo). *Verificato come prassi consolidata del sito (rule 06).*
+- ✅✏️ **Gestione dell'emergenza = articolo 2, comma 6.** Citazione letterale verificata su Normattiva e inserita.
+- ✅✏️ **COM, CCS, DiComaC.** Definizioni verificate su fonte istituzionale (Ministero dell'Interno, "Che cosa sono CCS, COC, COM" — Metodo Augustus). Nota sintetica + fonte aggiunte; trattazione completa rinviata a sessione dedicata (come da scope Onda 1).
+  - Fonte: [Ministero dell'Interno](https://www1.interno.gov.it/mininterno/export/sites/default/it/sezioni/sala_stampa/speciali/Protezione_Civile/che_cosa_i_centri_operativi.html).
+- ✅ Limite del volontariato sulla viabilità: Codice della Strada artt. 11-12 (D.Lgs. 285/1992) + Circolare DPC 6/8/2018 (link nel testo). Prassi consolidata del sito (rule 06).
 
 ## 5. `le-quattro-fasi/superamento.md`
 
-- ⬜ **Articoli su superamento dell'emergenza, dichiarazione dello stato di emergenza, ordinanze** (ritenuti **artt. 24-26**).
-  - Dove: Normattiva D.Lgs. 1/2018.
-- ⬜ **Durata massima dello stato di emergenza di rilievo nazionale e regole di proroga**; natura/limiti delle **OCDPC**.
-  - Dove: Normattiva D.Lgs. 1/2018.
-- ⬜ **Procedure AeDES e FAST** (denominazione esatta, descrizione, soggetti che le svolgono).
-  - Dove: [DPC](https://www.protezionecivile.gov.it/) (sezione agibilità post-sisma).
-- ⬜ **«Build back better» / Quadro di Sendai 2015-2030** — link alla fonte ufficiale.
-  - Dove: [UNDRR — Sendai Framework](https://www.undrr.org/).
+- ✅✏️ **Superamento = articolo 2, comma 7.** Citazione letterale verificata e inserita.
+- ✅✏️ **Stato di emergenza = articolo 24; ordinanze = articolo 25.** Verificati su Normattiva. **Durata: max 12 mesi, prorogabile per non più di altri 12** (art. 24, comma 3) — dato inserito nel testo con fonte.
+  - Fonti: [art. 24](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1~art24), [art. 25](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1~art25).
+  - Nota: il termine "OCDPC" è stato evitato; il testo parla di "ordinanze di protezione civile" come da art. 25.
+- ✅✏️ **Scheda AeDES** = "Agibilità e Danno nell'Emergenza Sismica". Verificata su DPC; descrizione e link aggiunti. *FAST* è stato rimosso dal testo (non necessario nella pagina divulgativa; resta materiale per la sessione dedicata al superamento).
+  - Fonte: [DPC — Scheda AeDES](https://www.protezionecivile.gov.it/it/approfondimento/scheda-aedes/).
+- ✅✏️ **Build back better / Quadro di Sendai 2015-2030.** Verificato su UNDRR; testo e due link aggiunti.
+  - Fonti: [UNDRR — Sendai Framework](https://www.undrr.org/publication/sendai-framework-disaster-risk-reduction-2015-2030), [UNDRR — Build back better](https://www.undrr.org/terminology/build-back-better).
 
 ## 6. `telecomunicazioni-emergenza/_index.md`
 
-- ⬜ **Descrizione tecnica di IT-alert** (tecnologia cell broadcast, soggetto gestore, scenari previsti).
-  - Dove: sito ufficiale [IT-alert](https://www.it-alert.it/) e [DPC](https://www.protezionecivile.gov.it/).
+- ✅✏️ **IT-alert.** Verificato: sistema di allarme pubblico nazionale del DPC, operativo dal 2024, tecnologia **cell broadcast**. Descrizione e link ufficiale aggiunti.
+  - Fonte: [it-alert.it](https://www.it-alert.it/).
 
 ## 7. `telecomunicazioni-emergenza/rete-zamberletti.md`
 
-- ✅ **Frequenze radio** (VHF 144-146 MHz, UHF 430-440 MHz, HF, 145.500 MHz, CB 27 MHz canale 9): riusate **come da articolo già pubblicato** sul sito (verificate, come da istruzioni di sessione). Nessuna nuova frequenza inventata.
-- ✅ **Slug degli articoli collegati** verificati e corretti al pattern con prefisso data (vedi sezione «Verifiche tecniche» qui sotto).
+- ✅ **Frequenze radio** (VHF 144-146 MHz, UHF 430-440 MHz, HF, 145.500 MHz, CB 27 MHz canale 9): riusate dall'articolo già pubblicato sul sito. Nessuna frequenza inventata.
+- ✅ **Slug articoli collegati** corretti al pattern con prefisso data e verificati in build.
 
 ## 8. `rischio-vulcanico-colli-albani.md` (BOZZA, non pubblicata)
 
-- ⬜ **Tutto il contenuto scientifico** è da scrivere in sessione dedicata, esclusivamente su fonti **INGV**. La pagina ha `build: render: never`: nessun fatto geologico è stato asserito in questa sessione, solo l'outline e i marker. Vedi i `<!-- FONTE-DA-VERIFICARE -->` nel file.
+- ⬜ **APERTO — di proposito.** Tutto il contenuto scientifico va scritto in sessione dedicata, su fonti **INGV**. La pagina ha `build: render: never`. I 7 marker `<!-- FONTE-DA-VERIFICARE -->` interni restano come traccia per quella sessione.
 
 ---
 
-## Verifiche tecniche (non fattuali) da fare prima del merge
+## Correzione collaterale importante (URL istituzionali)
 
-- ⬜ **Slug/URL degli articoli linkati**: confermare il pattern dei permalink di `content/comunicazioni/` (con o senza prefisso data) e che i link interni usati risolvano. Articoli citati:
-  - `/comunicazioni/2026-04-29-nascita-dipartimento-protezione-civile-italia/` ✅ esiste
-  - `/comunicazioni/2026-04-24-frane-movimenti-terreno-castelli-romani/` ✅ esiste
-  - `/comunicazioni/2026-05-14-centro-operativo-comunale-coc/` ✅ esiste
-  - `/comunicazioni/2026-04-13-frequenze-radio-emergenza-radioamatori-protezione-civile-1/` ✅ esiste
-  - `/comunicazioni/2026-05-01-rete-zamberletti-499-esercitazione-radio/` ✅ esiste
-  - `/comunicazioni/2026-05-02-rete-emergenza-metropolitana-roma-radioamatori/` ✅ esiste
+In fase di verifica si è scoperto che **tre URL DPC inizialmente citati erano errati (404)**. Corretti in tutte le pagine `/conoscere/` e ri-verificati come 200:
 
-  Tutti gli URL usano il **prefisso data** `AAAA-MM-GG-` (pattern dei permalink di `/comunicazioni/`, verificato in build). Risolti tutti in Hugo.
-- ⬜ **Aggiungere il rimando reciproco** dagli articoli riusati verso le nuove pagine `/conoscere/` (rete-zamberletti, frane, COC, nascita-DPC). *Non fatto in Onda 1 per non modificare gli articoli datati senza revisione: valutare in fase di pubblicazione.*
-- ⬜ **Build Hugo pulito** e **voce di menu** verificata visivamente (navbar Hugo + pagine statiche con `site-chrome.js`).
-- ⬜ **Cache-bust FTP**: l'aggiunta di una voce di menu globale cambia l'HTML di tutte le pagine → al deploy verificare il re-upload (rule 05 § «File stantii su Aruba»).
+| Vecchio (404) | Nuovo (200, verificato) |
+|---|---|
+| `…/normativa/decreto-legislativo-n-1-del-2-gennaio-2018/` | `…/normativa/decreto-legislativo-n1-del-2-gennaio-2018-codice-della-protezione-civile/` |
+| `…/normativa/legge-n225-del-24-febbraio-1992/` | `…/normativa/legge-n225-del-24-febbraio-1992-0/` |
+| `…/approfondimento/il-servizio-nazionale-della-protezione-civile/` | `https://servizio-nazionale.protezionecivile.gov.it/` (nuovo sottodominio DPC) |
+
+## Verifiche tecniche
+
+- ✅ **Slug/URL articoli `/comunicazioni/` linkati**: tutti col prefisso data `AAAA-MM-GG-`, risolti in build.
+  - `2026-04-29-nascita-dipartimento-protezione-civile-italia`, `2026-04-24-frane-movimenti-terreno-castelli-romani`, `2026-05-14-centro-operativo-comunale-coc`, `2026-04-13-frequenze-radio-emergenza-radioamatori-protezione-civile-1`, `2026-05-01-rete-zamberletti-499-esercitazione-radio`, `2026-05-02-rete-emergenza-metropolitana-roma-radioamatori`.
+- ✅ **Rimando reciproco** dagli articoli riusati verso le pagine `/conoscere/`: **fatto** (vedi sezione "Cosa è stato modificato").
+- ⬜ **Cache-bust FTP**: gestito nel deploy (vedi `_PR-DESCRIPTION.md`); applicato il cache-bust sugli `_index.md` di sezione.

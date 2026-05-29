@@ -16,13 +16,11 @@ La protezione civile lavora lungo un ciclo. Prima di un evento studia e prepara;
 
 ## Le quattro attività del Codice
 
-Il [Codice della protezione civile (decreto legislativo n. 1 del 2 gennaio 2018)](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n-1-del-2-gennaio-2018/) definisce le **attività di protezione civile** come quelle di **previsione**, **prevenzione e mitigazione** dei rischi, **gestione delle emergenze** e loro **superamento**.
+L'**articolo 2** del [Codice della protezione civile (decreto legislativo n. 1 del 2 gennaio 2018)](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n1-del-2-gennaio-2018-codice-della-protezione-civile/) definisce le **attività di protezione civile** come quelle «volte alla previsione, prevenzione e mitigazione dei rischi, alla gestione delle emergenze e al loro superamento».
 
-<!-- FONTE-DA-VERIFICARE: numero dell'articolo del D.Lgs 1/2018 che definisce le attività di protezione civile (ritenuto art. 2) e il testo letterale — confermare su normattiva.it -->
+Nel linguaggio storico, ereditato dalla [legge n. 225 del 1992](https://www.protezionecivile.gov.it/it/normativa/legge-n225-del-24-febbraio-1992-0/), le quattro fasi erano spesso indicate come **previsione, prevenzione, soccorso e superamento dell'emergenza**. Il Codice del 2018 ha ampliato il terzo punto da «soccorso» a «**gestione delle emergenze**»: il soccorso resta il cuore, ma il concetto include anche l'assistenza alla popolazione e l'informazione durante l'evento. In questo sito usiamo entrambe le formule per chiarezza.
 
-Nel linguaggio storico, ereditato dalla [legge n. 225 del 1992](https://www.protezionecivile.gov.it/it/normativa/legge-n225-del-24-febbraio-1992/), le quattro fasi erano spesso indicate come **previsione, prevenzione, soccorso e superamento dell'emergenza**. Il Codice del 2018 ha ampliato il terzo punto da «soccorso» a «**gestione delle emergenze**»: il soccorso resta il cuore, ma il concetto include anche il coordinamento, l'assistenza e tutte le azioni necessarie durante l'evento. In questo sito usiamo entrambe le formule per chiarezza.
-
-Fonte: Dipartimento della Protezione Civile, [Il Servizio nazionale della protezione civile](https://www.protezionecivile.gov.it/it/approfondimento/il-servizio-nazionale-della-protezione-civile/).
+Fonte: [art. 2 del D.Lgs. 1/2018, testo vigente su Normattiva](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1~art2).
 
 | Fase | Quando | Domanda a cui risponde |
 |---|---|---|
@@ -54,7 +52,7 @@ Ecco come le quattro fasi si collegano al modello:
 - Il **soccorso** limita i danni alle persone esposte quando l'evento è in corso.
 - Il **superamento** ricostruisce riducendo la vulnerabilità futura («ricostruire meglio»).
 
-<!-- FONTE-DA-VERIFICARE: la formula R = P × V × E è un modello concettuale standard nella letteratura sul rischio (ISPRA, glossario UNDRR/Sendai). Verificare la formulazione da citare come fonte e aggiungere il link ufficiale. -->
+Questo modo di scomporre il rischio in pericolosità, vulnerabilità ed esposizione è la base della valutazione del rischio adottata dalle istituzioni tecniche italiane e internazionali (ISPRA, Dipartimento della Protezione Civile, Quadro di Sendai delle Nazioni Unite).
 
 ## Le quattro fasi, una per una
 

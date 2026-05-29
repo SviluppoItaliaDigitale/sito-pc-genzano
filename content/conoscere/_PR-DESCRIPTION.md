@@ -53,12 +53,37 @@ Avvia un nuovo livello **dottrinale** del sito: la protezione civile spiegata co
 - Voce di menu presente in homepage (Hugo) e in `site-chrome.js` (statiche), nell'ordine corretto.
 - Disclaimer resi con il pattern `alert` già in uso sul sito (markdown→`<strong>` verificato nell'HTML).
 
-## ⚠️ Da fare PRIMA del merge/pubblicazione (umano)
+## Verifica fattuale — COMPLETATA (29 maggio 2026)
 
-1. **Chiudere `content/conoscere/_FONTI-DA-VERIFICARE.md`**: verificare su Normattiva i numeri d'articolo del D.Lgs. 1/2018 e le fonti UNDRR/DPC marcate. I marker inline sono `<!-- FONTE-DA-VERIFICARE -->`.
-2. **Rimandi reciproci**: valutare se aggiungere, dagli articoli `/comunicazioni/` riusati, un link alle nuove pagine `/conoscere/` (non fatto in Onda 1 per non modificare articoli datati senza revisione).
-3. **Decidere se rimuovere i 3 file di lavoro** (`_FONTI-DA-VERIFICARE.md`, `_PR-DESCRIPTION.md`, lo stub vulcano) prima del merge, o lasciarli: sono comunque esclusi dal sito generato (`build: render: never`).
+Tutti i fatti normativi puntuali sono stati **verificati su fonte primaria/istituzionale** e i marker `<!-- FONTE-DA-VERIFICARE -->` delle pagine pubblicabili sono stati chiusi. Dettaglio in `content/conoscere/_FONTI-DA-VERIFICARE.md`. In sintesi:
 
-## ⚠️ Nota deploy (NON risolvere in questa PR)
+- **D.Lgs. 1/2018 verificato verbatim su Normattiva**: attività di PC = **art. 2** (con prevenzione strutturale/non strutturale ai commi 3-5, NON art. 11); componenti = **art. 4**; classificazione eventi a/b/c = **art. 7**; funzioni dei Comuni/Sindaco = **art. 12**; strutture operative = **art. 13**; stato di emergenza = **art. 24** (**durata max 12 mesi + proroga max 12**); ordinanze = **art. 25**.
+- **DPC**: componenti, strutture operative, scheda **AeDES** ("Agibilità e Danno nell'Emergenza Sismica").
+- **Ministero dell'Interno**: definizioni di **CCS / COM / DiComaC** (Metodo Augustus).
+- **UNDRR**: Quadro di **Sendai 2015-2030** + *build back better*.
+- **IT-alert**: sistema nazionale DPC, cell broadcast, operativo dal 2024.
+- Citazioni e link aggiunti in ogni pagina; ogni numero d'articolo è ora sostanziato.
 
-L'aggiunta di una **voce di menu globale** cambia l'HTML renderizzato di **tutte** le pagine. Al momento del deploy va verificato che `FTP-Deploy-Action` ricarichi correttamente i file (scenario "file stantii su Aruba", rule `05-github-aruba-deploy.md`). Se necessario, applicare il pattern cache-bust sugli `_index.md` di sezione documentato nella rule 05. **Il deploy non è eseguito in questa PR** (nessun merge, nessun push su `main`).
+🔴 **Correzione collaterale**: in fase di verifica si è scoperto che **3 URL DPC inizialmente citati erano 404**. Corretti in tutte le pagine e ri-verificati 200:
+- Codice → `…/normativa/decreto-legislativo-n1-del-2-gennaio-2018-codice-della-protezione-civile/`
+- Legge 225/1992 → `…/normativa/legge-n225-del-24-febbraio-1992-0/`
+- Servizio Nazionale → nuovo sottodominio `https://servizio-nazionale.protezionecivile.gov.it/`
+
+## Rimandi reciproci — FATTI
+
+Aggiunto un link alle pagine `/conoscere/` in fondo (sezione "Sul nostro sito") di **6 articoli `/comunicazioni/` riusati**, senza toccare `image:` né altro (solo +1 bullet ciascuno):
+- nascita-DPC → `/conoscere/servizio-nazionale/`
+- frane Castelli Romani → `/conoscere/le-quattro-fasi/prevenzione/`
+- COC → `/conoscere/le-quattro-fasi/soccorso/`
+- frequenze radio → `/conoscere/telecomunicazioni-emergenza/`
+- Rete Zamberletti 499ª → `/conoscere/telecomunicazioni-emergenza/rete-zamberletti/`
+- rete metropolitana Roma → `/conoscere/telecomunicazioni-emergenza/`
+
+## Deploy / cache-bust — PREDISPOSTO
+
+Il pattern cache-bust della rule 05 è stato **applicato preventivamente**: comment `<!-- cache-bust: 2026-05-29 … -->` aggiornato/aggiunto sugli 11 `_index.md` di sezione canonici. Così, quando la PR verrà mergiata, il re-upload FTP dei file di sezione è non ambiguo (il byte-content dei sorgenti cambia → il minifier rimuove il comment, quindi è invisibile agli utenti ma forza il diff). **Non è un blocco**: il rischio "file stantii" si materializza solo se un deploy resta bloccato per ore da fallimenti non correlati; il cache-bust è la rete di sicurezza già documentata. **Il deploy non è eseguito in questa PR** (nessun merge, nessun push su `main`): la verifica live post-deploy resta a carico dell'operatore umano.
+
+## Da decidere PRIMA del merge (umano)
+
+1. **Rischio vulcanico Colli Albani** (`rischio-vulcanico-colli-albani.md`): resta **bozza non pubblicata** (`render: never`), da completare in sessione INGV dedicata. I suoi 7 marker `FONTE-DA-VERIFICARE` sono volutamente ancora aperti.
+2. **File di lavoro** (`_FONTI-DA-VERIFICARE.md`, `_PR-DESCRIPTION.md`, stub vulcano): decidere se rimuoverli prima del merge o lasciarli — sono comunque esclusi dal sito (`build: render: never`).

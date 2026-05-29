@@ -16,42 +16,40 @@ La protezione civile in Italia non è un singolo ente: è un **servizio nazional
 
 ## Che cos'è il Servizio Nazionale
 
-Il Servizio Nazionale della protezione civile è stato istituito con la [legge n. 225 del 24 febbraio 1992](https://www.protezionecivile.gov.it/it/normativa/legge-n225-del-24-febbraio-1992/) e riformato dal [Codice della protezione civile (decreto legislativo n. 1 del 2 gennaio 2018)](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n-1-del-2-gennaio-2018/).
+Il Servizio Nazionale della protezione civile è stato istituito con la [legge n. 225 del 24 febbraio 1992](https://www.protezionecivile.gov.it/it/normativa/legge-n225-del-24-febbraio-1992-0/) e riformato dal [Codice della protezione civile (decreto legislativo n. 1 del 2 gennaio 2018)](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n1-del-2-gennaio-2018-codice-della-protezione-civile/).
 
 È il sistema che tutela la vita, l'integrità fisica, i beni, gli insediamenti, gli animali e l'ambiente dai danni o dal pericolo di danni derivanti da eventi calamitosi, di origine naturale o connessi all'attività dell'uomo.
 
-Fonte: Dipartimento della Protezione Civile, [Il Servizio nazionale della protezione civile](https://www.protezionecivile.gov.it/it/approfondimento/il-servizio-nazionale-della-protezione-civile/).
+Fonte: Dipartimento della Protezione Civile, [Servizio Nazionale](https://servizio-nazionale.protezionecivile.gov.it/).
 
 ## Le componenti: chi guida il sistema
 
-Le **componenti** del Servizio Nazionale sono le autorità di protezione civile, cioè i livelli di governo del territorio che garantiscono l'unità del sistema secondo i principi di sussidiarietà, differenziazione e adeguatezza:
+Le **componenti** del Servizio Nazionale sono le autorità di protezione civile, cioè i livelli di governo del territorio. L'**articolo 4 del Codice** le individua in:
 
-- lo **Stato**;
+- le **amministrazioni dello Stato**;
 - le **Regioni** e le **Province autonome** di Trento e Bolzano;
-- le **Città metropolitane**;
-- le **Province**;
-- i **Comuni**.
+- gli **enti locali** (Città metropolitane, Province e Comuni).
 
-Fonte: Dipartimento della Protezione Civile, [Il Servizio nazionale della protezione civile](https://www.protezionecivile.gov.it/it/approfondimento/il-servizio-nazionale-della-protezione-civile/).
+Negli anni la competenza è progressivamente passata dallo Stato ai governi regionali e alle autonomie locali: con la riforma del Titolo V della Costituzione (legge costituzionale n. 3 del 2001) la protezione civile è diventata materia di legislazione concorrente, e ogni Regione si è organizzata con un proprio sistema.
 
-<!-- FONTE-DA-VERIFICARE: numero dell'articolo del D.Lgs 1/2018 che elenca le componenti (ritenuto art. 4) — confermare su normattiva.it -->
+Fonte: Dipartimento della Protezione Civile, [Componenti](https://servizio-nazionale.protezionecivile.gov.it/it/componenti/).
 
 ## Le strutture operative: chi interviene
 
-Accanto alle componenti, il Codice individua le **strutture operative nazionali**, cioè i soggetti che concorrono materialmente alle attività di protezione civile. Tra queste:
+Accanto alle componenti, l'**articolo 13 del Codice** individua le **strutture operative nazionali**, cioè i soggetti che concorrono materialmente alle attività di protezione civile:
 
-- il **Corpo nazionale dei vigili del fuoco**;
+- il **Corpo nazionale dei vigili del fuoco**, componente fondamentale della protezione civile;
 - le **Forze armate**;
 - le **Forze di polizia**;
-- gli **enti e istituti di ricerca** di rilievo nazionale;
-- la **Croce Rossa Italiana**;
-- il **Corpo nazionale del soccorso alpino e speleologico**;
-- il **Servizio sanitario nazionale**;
-- le **organizzazioni di volontariato** di protezione civile.
+- gli **enti e istituti di ricerca** di rilievo nazionale con finalità di protezione civile, anche organizzati come Centri di competenza;
+- l'**Istituto Nazionale di Geofisica e Vulcanologia (INGV)** e il **Consiglio Nazionale delle Ricerche (CNR)**;
+- le strutture del **Servizio Sanitario Nazionale**;
+- il **volontariato organizzato** di protezione civile;
+- la **Croce Rossa Italiana** e il **Corpo nazionale del soccorso alpino e speleologico**;
+- il **Sistema Nazionale per la Protezione dell'Ambiente (SNPA)**;
+- le strutture preposte alla **gestione dei servizi meteorologici** a livello nazionale.
 
-Fonte: Dipartimento della Protezione Civile, [Il Servizio nazionale della protezione civile](https://www.protezionecivile.gov.it/it/approfondimento/il-servizio-nazionale-della-protezione-civile/).
-
-<!-- FONTE-DA-VERIFICARE: numero dell'articolo del D.Lgs 1/2018 che elenca le strutture operative (ritenuto art. 13) e l'elenco completo aggiornato — confermare su normattiva.it -->
+Fonte: Dipartimento della Protezione Civile, [Strutture operative](https://servizio-nazionale.protezionecivile.gov.it/it/strutture-operative/).
 
 ## Come si dividono i compiti
 
@@ -63,15 +61,13 @@ Il sistema funziona per **livelli**, dal più vicino al cittadino al più ampio.
 | Regionale | Regione, Sala Operativa, Centro Funzionale | Coordinamento di area vasta, allertamento, risorse regionali |
 | Nazionale | Dipartimento della Protezione Civile | Indirizzo, coordinamento delle emergenze di rilievo nazionale |
 
-<!-- FONTE-DA-VERIFICARE: classificazione degli eventi/emergenze per livello (lettere a, b, c) — articolo del D.Lgs 1/2018 (ritenuto art. 7) — confermare su normattiva.it -->
+Questa scala corrisponde alla classificazione degli eventi dell'**articolo 7 del Codice**, che distingue gli eventi gestibili dai singoli enti competenti (lettera *a*), quelli che richiedono l'intervento coordinato di più enti in via ordinaria (lettera *b*) e le **emergenze di rilievo nazionale** (lettera *c*).
 
 ## Il Sindaco, prima autorità di protezione civile
 
-Nel proprio territorio il **Sindaco è la prima autorità di protezione civile**. È la figura più vicina ai cittadini e quella che, all'arrivo di un'emergenza locale, attiva la macchina comunale: convoca il **Centro Operativo Comunale (COC)**, informa la popolazione, dispone le prime misure di assistenza.
+L'**articolo 12 del Codice** stabilisce che la pianificazione di protezione civile e la direzione dei primi soccorsi in ambito comunale sono **funzione fondamentale dei Comuni**. Nel proprio territorio il **Sindaco** attiva la macchina comunale all'arrivo di un'emergenza: dà attuazione al piano comunale, informa la popolazione, coordina l'assistenza e, quando l'evento supera i mezzi del Comune, chiede l'intervento della Regione e del Prefetto.
 
 Il Gruppo Comunale Volontari, come quello di Genzano di Roma, opera **a supporto del Sindaco e del Comune**: non si attiva da solo e non sostituisce le forze dell'ordine o i soccorsi sanitari.
-
-<!-- FONTE-DA-VERIFICARE: articolo del D.Lgs 1/2018 sulle funzioni dei Comuni e sul Sindaco autorità comunale di protezione civile (ritenuto art. 12) — confermare su normattiva.it -->
 
 ## Approfondimenti sul nostro sito
 
@@ -83,5 +79,5 @@ Il Gruppo Comunale Volontari, come quello di Genzano di Roma, opera **a supporto
 
 ## Per approfondire — fonti istituzionali
 
-- [Codice della protezione civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n-1-del-2-gennaio-2018/) (Dipartimento della Protezione Civile)
-- [Il Servizio nazionale della protezione civile](https://www.protezionecivile.gov.it/it/approfondimento/il-servizio-nazionale-della-protezione-civile/) (Dipartimento della Protezione Civile)
+- [Codice della protezione civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n1-del-2-gennaio-2018-codice-della-protezione-civile/) (Dipartimento della Protezione Civile) — [testo vigente su Normattiva](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1)
+- [Servizio Nazionale della protezione civile](https://servizio-nazionale.protezionecivile.gov.it/) (Dipartimento della Protezione Civile)

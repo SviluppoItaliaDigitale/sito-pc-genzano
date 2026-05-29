@@ -16,9 +16,7 @@ Quando l'evento è in corso, la protezione civile passa all'azione. È la fase d
 
 ## Soccorso o "gestione delle emergenze"?
 
-La [legge n. 225 del 1992](https://www.protezionecivile.gov.it/it/normativa/legge-n225-del-24-febbraio-1992/) chiamava questa fase **soccorso**. Il [Codice del 2018](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n-1-del-2-gennaio-2018/) la chiama **gestione delle emergenze**: il soccorso resta il cuore, ma il termine include anche l'assistenza alla popolazione, il ripristino dei servizi essenziali e il coordinamento di tutte le strutture operative.
-
-<!-- FONTE-DA-VERIFICARE: articolo del D.Lgs 1/2018 che definisce la gestione dell'emergenza e l'eventuale articolo sull'assistenza alla popolazione — confermare su normattiva.it -->
+La [legge n. 225 del 1992](https://www.protezionecivile.gov.it/it/normativa/legge-n225-del-24-febbraio-1992-0/) chiamava questa fase **soccorso**. Il [Codice del 2018](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n1-del-2-gennaio-2018-codice-della-protezione-civile/) la chiama **gestione delle emergenze**. L'**articolo 2, comma 6** la definisce come «l'insieme, integrato e coordinato, delle misure e degli interventi diretti ad assicurare il soccorso e l'assistenza alle popolazioni colpite dagli eventi calamitosi e agli animali e la riduzione del relativo impatto […] e la relativa attività di informazione alla popolazione». Il soccorso resta il cuore, ma il termine include anche l'assistenza e l'informazione.
 
 ## Cosa accade quando l'evento è in corso
 
@@ -41,7 +39,9 @@ L'emergenza si gestisce per livelli, secondo il principio di sussidiarietà: si 
 | **CCS** | Centro Coordinamento Soccorsi | Provinciale |
 | **DiComaC** | Direzione di Comando e Controllo | Nazionale, sul luogo dell'evento |
 
-<!-- FONTE-DA-VERIFICARE: definizioni e livello esatti di COM, CCS e DiComaC secondo la Direttiva e gli atti DPC vigenti — confermare su protezionecivile.gov.it / normattiva.it. La trattazione organica completa della catena è prevista in una sessione dedicata. -->
+Questi centri organizzano il coordinamento secondo il cosiddetto **Metodo Augustus**, per «funzioni di supporto» (sanità, volontariato, telecomunicazioni e così via). Il CCS opera a livello provinciale ed è presieduto dal Prefetto; il COM è una struttura sovracomunale istituita vicino al luogo dell'evento; la DiComaC è il centro di coordinamento nazionale, attivato dal Dipartimento nelle grandi emergenze. La trattazione organica completa della catena è prevista in una sezione dedicata.
+
+Fonte: Ministero dell'Interno, [Che cosa sono CCS, COC, COM](https://www1.interno.gov.it/mininterno/export/sites/default/it/sezioni/sala_stampa/speciali/Protezione_Civile/che_cosa_i_centri_operativi.html).
 
 Il primo anello, e il più vicino al cittadino, è il **Centro Operativo Comunale (COC)**: lo attiva il Sindaco e raccoglie attorno a un tavolo le funzioni necessarie a gestire l'evento sul territorio. Ne abbiamo parlato in dettaglio nell'articolo [Centro Operativo Comunale (COC): cos'è e come funziona](/comunicazioni/2026-05-14-centro-operativo-comunale-coc/).
 
@@ -61,5 +61,5 @@ Ci sono però attività che la legge **riserva ad altri**: il volontariato di pr
 
 ## Per approfondire — fonti istituzionali
 
-- [Codice della protezione civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n-1-del-2-gennaio-2018/) (Dipartimento della Protezione Civile)
-- [Il Servizio nazionale della protezione civile](https://www.protezionecivile.gov.it/it/approfondimento/il-servizio-nazionale-della-protezione-civile/) (Dipartimento della Protezione Civile)
+- [Codice della protezione civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n1-del-2-gennaio-2018-codice-della-protezione-civile/) (Dipartimento della Protezione Civile)
+- [Il Servizio nazionale della protezione civile](https://servizio-nazionale.protezionecivile.gov.it/) (Dipartimento della Protezione Civile)
