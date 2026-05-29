@@ -1,0 +1,67 @@
+name: "♿ Pa11y accessibilità (PR)"
+
+# Gate di accessibilità sulle pull request: costruisce il sito, lo serve in
+# locale ed esegue pa11y-ci con runner axe-core (lo stesso usato per la
+# dichiarazione di accessibilità) su un campione di pagine chiave, secondo
+# WCAG 2.2 AA. Obiettivo: intercettare le regressioni di accessibilità PRIMA
+# del deploy, complementare a lighthouse-audit.yml (che gira post-deploy) e a
+# validate-pr.yml (che fa solo build Hugo). Config in .pa11yci.json.
+
+on:
+  pull_request:
+    branches: [main]
+    paths-ignore:
+      - 'manuale/**'
+      - 'riferimenti-interni/**'
+      - 'CONTESTO-AI.md'
+      - 'social-bozze/**'
+      - 'bozze/**'
+
+permissions:
+  contents: read
+
+jobs:
+  pa11y:
+    name: "WCAG 2.2 AA (axe) su pagine chiave"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v5
+
+      - name: "⚙️ Setup Hugo"
+        uses: peaceiris/actions-hugo@v3.2.1
+        with:
+          hugo-version: '0.143.1'
+          extended: true
+
+      - name: "🏗️ Build sito (baseURL locale per il test)"
+        run: hugo --minify --baseURL "http://127.0.0.1:8080/"
+
+      - name: "⚙️ Setup Node"
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: "📦 Installa pa11y-ci + http-server"
+        run: npm install -g pa11y-ci http-server
+
+      - name: "🌐 Avvia server locale e attendi"
+        run: |
+          http-server public -p 8080 -s -c-1 &
+          for i in $(seq 1 30); do
+            curl -sf http://127.0.0.1:8080/ >/dev/null && break
+            sleep 1
+          done
+
+      - name: "♿ Esegui pa11y-ci (report-only in fase di rollout)"
+        continue-on-error: true
+        run: |
+          set +e
+          echo "## ♿ Report accessibilità Pa11y (axe, WCAG 2.2 AA)" >> "$GITHUB_STEP_SUMMARY"
+          echo '' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Fase di rollout: **report-only**, non blocca la PR. Le findings vanno bonificate, poi il gate verrà reso bloccante (rimuovere `continue-on-error`).' >> "$GITHUB_STEP_SUMMARY"
+          echo '' >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          pa11y-ci 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          exit 0
