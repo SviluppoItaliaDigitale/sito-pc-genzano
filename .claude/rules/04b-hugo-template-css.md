@@ -10,7 +10,7 @@ Il menu è definito in `hugo.toml` sotto `[[menus.main]]` e renderizzato in `the
 |---|---|---|
 | Home | diretta | `/` |
 | Per il Cittadino ▾ | dropdown | Cosa Fare Adesso, Allerte Meteo, Rischi e Prevenzione, Cartografia, Numeri Utili, Piano Familiare, **Kit pronti per situazioni vulnerabili** (7 voci, riordino v3.4 maggio 2026: Storia → Risorse. Il Quiz "Quanto sei preparato?", prima qui, poi spostato a "Per le scuole", è stato infine **rimosso dal menu il 22/05/2026** perché fuori contesto: è un'autovalutazione del cittadino, ancorata come strumento dentro `/piano-familiare/`. Resta raggiungibile da URL, mappa-sito, ricerca) |
-| Per le scuole ▾ | dropdown | Kit per le scuole, Percorsi didattici pronti, Schede didattiche stampabili, Per i docenti — Ed. Civica, Storie e Racconti, Giochi della Sicurezza |
+| Per le scuole ▾ | dropdown | Kit per le scuole, Percorsi didattici pronti, Schede didattiche stampabili, Per i docenti — Ed. Civica, Storie e Racconti, Giochi della Sicurezza, Catalogo dei giochi, **Esperimenti e attività** (`/formazione/esperimenti/`, aggiunta 29/05/2026: 21 esperimenti scientifici/giochi per scuola e casa, copre tutto il catalogo dei rischi) |
 | Accessibilità e Supporti ▾ | dropdown | Abili a Proteggere, Facile da Leggere, **Contenuti in LIS** |
 | Volontariato ▾ | dropdown | Diventa Volontario, Chi Siamo |
 | Risorse ▾ | dropdown | FAQ, Glossario, Area Download, Normativa, Strumenti in Tempo Reale, **Audio e podcast** |
