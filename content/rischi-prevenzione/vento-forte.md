@@ -49,6 +49,7 @@ Genzano di Roma si trova in un'area collinare esposta ai venti, in particolare d
 
 **Sul nostro sito**
 
+- **Approfondisci la materia:** [Il catalogo dei rischi](/conoscere/catalogo-dei-rischi/) — i rischi spiegati come materia, dal fenomeno alla scienza.
 - [Allerte meteo](/allerte-meteo/) — avvisi per vento forte del Centro Funzionale Regione Lazio
 - [Kit di emergenza](/rischi-prevenzione/kit-emergenza/) e [Numeri utili](/numeri-utili/)
 

@@ -102,6 +102,9 @@ Per i comportamenti completi vedi la pagina dedicata: [Rischio Sismico — cosa 
 {{< chi-chiamare >}}
 
 ## <i class="bi bi-bookmark-star-fill text-primary me-2" aria-hidden="true"></i>Fonti istituzionali e scientifiche {#fonti}
+
+**Approfondisci la materia:** [Il vulcanismo dei Colli Albani](/conoscere/rischio-vulcanico-colli-albani/) — storia eruttiva, i laghi di Albano e Nemi come crateri, le emissioni di gas e il monitoraggio dell'INGV.
+
 - [INGV — Istituto Nazionale di Geofisica e Vulcanologia](https://www.ingv.it/) — riferimento nazionale per la sismologia e la vulcanologia
 - [INGV — terremoti recenti](https://terremoti.ingv.it/) — dati sismici in tempo reale, anche di bassa magnitudo
 - [CNR-IGAG](https://www.igag.cnr.it/) — Istituto di Geologia Ambientale e Geoingegneria

@@ -128,6 +128,7 @@ I terremoti non sono prevedibili. Non esistono segnali premonitori affidabili. N
 
 **Sul nostro sito**
 
+- **Approfondisci la materia:** [Il catalogo dei rischi](/conoscere/catalogo-dei-rischi/) — il rischio sismico spiegato come materia, dal fenomeno alla scienza.
 - [Rischio vulcanico (Colli Albani)](/rischi-prevenzione/rischio-vulcanico/) — contesto vulcano-tettonico del nostro territorio
 - [Cartografia](/cartografia/) — aree di attesa e di emergenza
 - [Piano Familiare](/piano-familiare/) e [Glossario sismico in LIS](/lis/#rischio-sismico)

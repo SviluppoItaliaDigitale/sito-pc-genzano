@@ -341,6 +341,14 @@
   definizione: "Frattura nella crosta terrestre lungo cui si muovono le rocce. Quando il movimento è brusco si genera un terremoto. L'Italia centrale ne è ricca."
   link: "/glossario/#faglia"
 
+- id: microzonazione
+  termine: "Microzonazione sismica"
+  varianti:
+    - "microzonazione sismica"
+    - "microzonazione"
+  definizione: "Studio che descrive, strada per strada, come il terreno risponde a un terremoto: alcune zone amplificano la scossa più di altre. Guida la pianificazione comunale e le norme di costruzione."
+  link: "/glossario/#microzonazione-sismica"
+
 - id: fepivol
   termine: "FE.PI.VOL."
   varianti:

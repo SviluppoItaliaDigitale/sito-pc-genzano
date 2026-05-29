@@ -63,6 +63,7 @@ Se conosci anziani o persone fragili nel tuo vicinato, chiamali o vai a trovarli
 
 **Sul nostro sito**
 
+- **Approfondisci la materia:** [Il catalogo dei rischi](/conoscere/catalogo-dei-rischi/) — i rischi spiegati come materia, dal fenomeno alla scienza.
 - [Persone con necessità specifiche](/rischi-prevenzione/persone-necessita-specifiche/) — protezione di anziani, bambini e persone fragili
 - [Kit di emergenza](/rischi-prevenzione/kit-emergenza/) — scorta d'acqua e farmaci
 - [Numeri utili](/numeri-utili/)

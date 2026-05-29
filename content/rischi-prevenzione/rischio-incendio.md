@@ -73,6 +73,7 @@ Genzano di Roma è parzialmente compresa nel Parco Regionale dei Castelli Romani
 
 **Sul nostro sito**
 
+- **Approfondisci la materia:** [Il catalogo dei rischi](/conoscere/catalogo-dei-rischi/) — i rischi spiegati come materia, dal fenomeno alla scienza.
 - [Allerte meteo](/allerte-meteo/) — bollettino rischio incendi del Lazio (Genzano è in Zona AIB 9)
 - [Kit di emergenza](/rischi-prevenzione/kit-emergenza/) — il Kit "Vai" per l'evacuazione rapida
 - [Numeri utili](/numeri-utili/)

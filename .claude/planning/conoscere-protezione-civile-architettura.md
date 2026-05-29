@@ -6,6 +6,25 @@
 
 ---
 
+## Stato avanzamento (aggiornato 29 maggio 2026)
+
+- **Onda 1** — ✅ live su `main` (PR #418): le quattro fasi, Servizio Nazionale, telecomunicazioni, vulcano Colli Albani.
+- **Onda 2 (ossatura)** — ✅ live su `main` (PR #420): hub `/conoscere/catalogo-dei-rischi/` + 14 scaffold `render:never` (9 rischi + storia-PC + internazionale + scienza-del-rischio + 2 approfondimenti fasi) + landing aggiornata. File di lavoro Onda 1 spostati in `.claude/planning/`.
+- **Onda 3 (riempimento)** — 🟡 avviata: pagina-modello `catalogo-dei-rischi/rischio-sismico.md` riempita come **bozza `render:never`** (commit `5e76f4b`, **solo sul branch** `claude/pc-doctrinal-discovery-phase0-U192V`, NON su `main`). ~1.470 parole, consolidando gli articoli interni già sourcati; nessun fatto non verificato nel testo visibile; 1 commento di verifica residuo (sigla/anno mappa MPS, ordinanza criteri classificazione).
+
+### 🔧 Handoff per la sessione LOCALE (CLI sul PC) — perché il fill rigoroso va fatto lì
+Da sessione **cloud** i siti istituzionali sono bloccati (403): impossibile verificare fonti primarie nuove. In **locale**, con `.claude/settings.local.json`, Normattiva/INGV/ISPRA/DPC sono raggiungibili. Procedura per ogni scheda da riempire:
+1. `git fetch && git checkout claude/pc-doctrinal-discovery-phase0-U192V` (qui c'è la bozza `rischio-sismico`; gli altri scaffold sono anche su `main`).
+2. Aprire lo scaffold `render:never`: ha già scaletta H2 + fonti previste.
+3. Verificare ogni fatto su fonte primaria (WebFetch/curl ora sbloccati); chiudere i marker `FONTE-DA-VERIFICARE`; espandere al target 2.000-3.000 parole.
+4. Gate: `pc-normative-verifier` (vigenza norme) + `pc-article-reviewer` (AGID) + `pc-accessibility-auditor`.
+5. `hugo --minify` pulito → **rimuovere `build: render: never`** → la pagina diventa pubblicabile.
+6. Aggiungere il link «Approfondisci la materia» dalla pagina operativa `/rischi-prevenzione/rischio-X/` corrispondente (cross-link §B.3) — senza toccare `image:`.
+7. PR → merge → deploy.
+- Ordine di riempimento consigliato: `rischio-sismico` (rifinire la bozza) → `idrogeologico` → `incendio` → `neve-gelo` (consolidabili, hanno articoli interni) → maremoto/siccità → tecnologici (ricerca fonti primarie) → storia-PC → scienza/internazionale.
+
+---
+
 ## Premessa onesta: NON siamo a un punto zero
 
 Il brief è scritto come una Fase 0 a campo libero, ma git racconta una storia diversa, e la riporto subito perché cambia tutto il resto del documento.

@@ -670,6 +670,7 @@ Se trovi un link rotto o una pagina mancante, segnalacelo a
 La protezione civile spiegata come materia.
 
 - [Conoscere la Protezione Civile](/conoscere/) — la panoramica della sezione
+- [Il catalogo dei rischi](/conoscere/catalogo-dei-rischi/) — i rischi naturali e di origine umana, spiegati come materia
 - [Il Servizio Nazionale](/conoscere/servizio-nazionale/)
 - [Le quattro fasi](/conoscere/le-quattro-fasi/)
   - [Previsione](/conoscere/le-quattro-fasi/previsione/)
