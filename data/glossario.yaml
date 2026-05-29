@@ -349,6 +349,38 @@
   definizione: "Studio che descrive, strada per strada, come il terreno risponde a un terremoto: alcune zone amplificano la scossa più di altre. Guida la pianificazione comunale e le norme di costruzione."
   link: "/glossario/#microzonazione-sismica"
 
+- id: meccanismo-europeo
+  termine: "Meccanismo europeo di protezione civile (UCPM)"
+  varianti:
+    - "Meccanismo europeo di protezione civile"
+    - "Meccanismo unionale di protezione civile"
+    - "UCPM"
+  definizione: "Il sistema con cui i Paesi dell'Unione Europea si aiutano nelle grandi emergenze, mettendo in comune mezzi e squadre (UCPM, Union Civil Protection Mechanism)."
+  link: "/glossario/#meccanismo-europeo"
+
+- id: resceu
+  termine: "rescEU"
+  varianti:
+    - "rescEU"
+  definizione: "La riserva europea di mezzi per le emergenze (per esempio aerei antincendio, scorte mediche), parte del Meccanismo europeo di protezione civile."
+  link: "/glossario/#resceu"
+
+- id: sendai
+  termine: "Quadro di Sendai"
+  varianti:
+    - "Quadro di Sendai"
+    - "Sendai"
+  definizione: "Accordo mondiale delle Nazioni Unite (2015-2030) per ridurre i danni dei disastri: conoscere il rischio, rafforzare la governance e ricostruire meglio."
+  link: "/glossario/#sendai"
+
+- id: seveso
+  termine: "Direttiva Seveso"
+  varianti:
+    - "direttiva Seveso"
+    - "Seveso"
+  definizione: "Normativa europea che impone misure di sicurezza e piani di emergenza agli stabilimenti industriali con grandi quantità di sostanze pericolose. Dal nome dell'incidente di Seveso del 1976."
+  link: "/glossario/#seveso"
+
 - id: fepivol
   termine: "FE.PI.VOL."
   varianti:
