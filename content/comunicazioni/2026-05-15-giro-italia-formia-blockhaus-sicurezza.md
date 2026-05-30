@@ -15,7 +15,7 @@ tts: true
 lis_section: "gestione-emergenza"
 ---
 
-Oggi, **venerdì 15 maggio 2026**, una squadra del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma ha affiancato il dispositivo di Protezione Civile a **Formia**, per la partenza della **7ª tappa del Giro d'Italia 2026**: la **Formia–Blockhaus**, 244 chilometri, la frazione più lunga dell'edizione. Abbiamo partecipato nell'ambito del **Coordinamento FE.PI.VOL. (Federazione Provinciale Volontari del Lazio)**, di cui il Gruppo fa parte.
+Oggi, **venerdì 15 maggio 2026**, una squadra del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma ha affiancato il dispositivo di Protezione Civile a **Formia**, per la partenza della **7ª tappa del Giro d'Italia 2026**: la **Formia–Blockhaus**, 244 chilometri, la frazione più lunga dell'edizione. Abbiamo partecipato nell'ambito del **Coordinamento FE.PI.VOL. (Federazione Pronto Intervento Volontariato ODV)**, di cui il Gruppo fa parte.
 
 ## Il quadro dell'attivazione
 

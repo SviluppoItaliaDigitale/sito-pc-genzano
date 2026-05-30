@@ -1,7 +1,7 @@
 ---
 title: "I nostri volontari all'Open Day antincendio boschivo del 9 maggio ad Aprilia"
 date: 2026-05-08T00:02:00+02:00
-description: "Sabato 9 maggio 2026 una rappresentanza del Gruppo Comunale prende parte all'Open Day su tecnologie."
+description: "Sabato 9 maggio 2026 una rappresentanza del Gruppo Comunale prende parte all'Open Day di Aprilia su tecnologie e prevenzione antincendio boschivo."
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -13,11 +13,11 @@ allegati: []
 draft: false
 ---
 
-**Sabato 9 maggio 2026** una rappresentanza del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** partecipa all'**Giornata aperta "Innovazione in azione — Antincendio Boschivo & DPI"**, che si svolge dalle **10:00 alle 17:30** presso il **Consorzio Tecnart** di Aprilia (Latina). L'iniziativa è organizzata da Estintori Cotterli e Falcim ed è rivolta a Protezione Civile, enti pubblici, aziende del settore e professionisti della sicurezza.
+**Sabato 9 maggio 2026** una rappresentanza del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** partecipa all'**Open Day "Innovazione in azione — Antincendio Boschivo & DPI"**, che si svolge dalle **10:00 alle 17:30** presso il **Consorzio Tecnart** di Aprilia (Latina). L'iniziativa è organizzata da Estintori Cotterli e Falcim ed è rivolta a Protezione Civile, enti pubblici, aziende del settore e professionisti della sicurezza.
 
 ## Perché ci andiamo
 
-L'**antincendio boschivo (AIB)** è una delle attività operative del Sistema di Protezione Civile, con periodo di massima pericolosità tra **giugno e settembre**. La stagione 2026 è alle porte: l'Giornata aperta è un'occasione per i volontari di:
+L'**antincendio boschivo (AIB)** è una delle attività operative del Sistema di Protezione Civile, con periodo di massima pericolosità tra **giugno e settembre**. La stagione 2026 è alle porte: l'Open Day è un'occasione per i volontari di:
 
 - toccare con mano le **nuove tecnologie** disponibili sul mercato per lo spegnimento e la prevenzione;
 - aggiornarsi sui **dispositivi di protezione individuale** (DPI) di nuova generazione, che migliorano la sicurezza degli operatori durante gli interventi;
@@ -27,7 +27,7 @@ L'**antincendio boschivo (AIB)** è una delle attività operative del Sistema di
 Per un Gruppo di volontariato l'aggiornamento tecnico continuo è essenziale. Mantiene alti gli standard di sicurezza e di efficacia operativa. È a tutela dei volontari stessi e dei cittadini che li vedono al lavoro durante un'emergenza.
 
 {{< foto src="/images/2026-05-09-open-day-cotterli-falcim-locandina.webp"
-         alt="Locandina dell'Giornata aperta Innovazione in azione — Antincendio Boschivo e DPI del 9 maggio 2026 ad Aprilia, organizzato da Estintori Cotterli e Falcim"
+         alt="Locandina dell'Open Day Innovazione in azione — Antincendio Boschivo e DPI del 9 maggio 2026 ad Aprilia, organizzato da Estintori Cotterli e Falcim"
          caption="Locandina ufficiale dell'evento. Fonte: Estintori Cotterli e Falcim SRL." >}}
 
 ## Quando e dove
