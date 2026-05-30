@@ -21,6 +21,7 @@ PC, usando solo:
 1. [Setup iniziale (una sola volta)](#1-setup-iniziale-una-sola-volta)
 1.bis [Agenti specializzati (frasi naturali)](#1bis-agenti-specializzati-frasi-naturali)
 1.ter [Stesura testi con ChatGPT/Gemini (workflow ibrido)](#1ter-stesura-testi-con-chatgptgemini-workflow-ibrido)
+1.quater [Lavorare dal telefono collegandoti al PC (Remote Control e SSH+tmux)](#1quater-lavorare-dal-telefono-collegandoti-al-pc-remote-control-e-sshtmux)
 2. [Pubblicare un articolo nuovo da mobile](#2-pubblicare-un-articolo-nuovo-da-mobile)
 3. [Aggiungere foto a un articolo](#3-aggiungere-foto-a-un-articolo)
 4. [Ottenere le bozze social per gli articoli](#4-ottenere-le-bozze-social-per-gli-articoli)
@@ -179,6 +180,73 @@ inventa dati" è alto. In quei casi scrivi direttamente con Claude Code (che ha
 accesso al repo e verifica `data/allerta.json`, recenti commit, dati reali).
 
 Specifiche complete: [`manuale/parte-14-...md` § 14.11](manuale/parte-14-configurazione-ambiente-di-sviluppo-claude-code.md).
+
+---
+
+## 1.quater Lavorare dal telefono collegandoti al PC (Remote Control e SSH+tmux)
+
+Le sezioni precedenti usano **GitHub web + app Claude**, che NON toccano il tuo PC: scrivi nel browser, le automazioni girano su GitHub Actions. Esiste però un secondo scenario: **far girare Claude Code direttamente sul tuo PC e pilotarlo dal telefono**. Utile quando vuoi tutto l'ambiente locale (filesystem del repo, MCP, script, `hugo server`) ma sei lontano dalla scrivania.
+
+Due modi, complementari. La differenza è **dove passa il collegamento**.
+
+### Modo 1 — Remote Control (relay Anthropic, comodo)
+
+Continui dal telefono una sessione di Claude Code che gira sul PC, attraverso l'app Claude o `claude.ai/code`. Claude resta sul PC: filesystem e configurazione del repo restano locali, web/app sono solo una finestra.
+
+**Requisiti** (già soddisfatti su questo setup): Claude Code ≥ 2.1.51, login `claude.ai` (non API key), piano Pro/Max/Team/Enterprise.
+
+**Attivazione:**
+- È già **abilitato di default su ogni nuova sessione** (impostato in `~/.claude/settings.json` con `remoteControlAtStartup: true`). Apri `claude` sul PC e la sessione si registra da sola.
+- Per attivarlo su una sessione già aperta, digita nel prompt di Claude Code: `/remote-control` (alias `/rc`). Compaiono URL + QR code.
+
+**Connetterti dal telefono:** apri l'app Claude (sezione **Code**) o `claude.ai/code`, scegli la sessione (icona computer + pallino verde), oppure scansiona il QR. Puoi scrivere indifferentemente da terminale, browser e telefono: la conversazione resta sincronizzata.
+
+**Notifiche push** (abilitate qui con `agentPushNotifEnabled` e `inputNeededNotifEnabled`): Claude avvisa sul telefono quando un task lungo finisce o quando gli serve una tua decisione. Serve l'app Claude installata e loggata con lo stesso account; al primo collegamento il token push si registra.
+
+**Limiti:** il processo `claude` sul PC deve restare attivo (se chiudi il terminale la sessione finisce); se il PC perde la rete per ~10 minuti la sessione va in timeout; avviare un *ultraplan* disconnette il Remote Control.
+
+### Modo 2 — SSH + Tailscale + tmux (collegamento diretto al PC, robusto)
+
+Entri **dentro** il PC con un terminale vero (Termux) attraverso la rete privata Tailscale e lanci `claude` lì. Niente relay Anthropic in mezzo. È la strada giusta per le sessioni lunghe perché, con **tmux**, la sessione resta viva sul PC anche se il telefono si blocca o chiude Termux: ti ricolleghi quando vuoi.
+
+**Requisiti sul PC** (una sola volta): `openssh-server` attivo, `tmux` installato, `tailscale` attivo e loggato. Per ricavare i dati del tuo PC, sul PC esegui:
+```bash
+tailscale ip -4     # IP Tailscale del PC (rete 100.x, raggiungibile solo dal tuo tailnet)
+whoami              # il tuo nome utente
+```
+
+**Sul telefono:**
+1. Apri l'**app Tailscale** così il telefono è online nella tua rete (stesso account del PC).
+2. In **Termux**: `pkg install openssh` (se non c'è).
+3. Entra nel PC:
+   ```bash
+   ssh <utente>@<IP-TAILSCALE-DEL-PC>
+   ```
+4. Apri/riattacca una sessione persistente con tmux:
+   ```bash
+   tmux new -s lavoro            # la prima volta
+   cd ~/sito-pc-genzano && claude
+   ```
+   - Stacca senza chiudere: `Ctrl+b` poi `d`
+   - Riattacca dopo (anche da una nuova connessione): `ssh ...` poi `tmux attach -t lavoro`
+   - Lista sessioni aperte: `tmux ls`
+
+**Se l'SSH rifiuta la password:** il server accetta solo chiavi. Genera una chiave su Termux (`ssh-keygen`) e copiala sul PC (`ssh-copy-id <utente>@<IP>`).
+
+> ⚠️ **Attenzione — sei direttamente su `main`.** Con SSH operi sul PC esattamente come alla scrivania: il branch è `main`, quindi un `git push` va **live in produzione**. È diverso dal workflow GitHub web su feature branch. Tienilo presente prima di pubblicare.
+
+### Quale scegliere
+
+| | Remote Control | SSH + Tailscale + tmux |
+|---|---|---|
+| Dove gira Claude | sul tuo PC | sul tuo PC |
+| Canale | relay Anthropic (app/web) | diretto PC↔telefono (Tailscale) |
+| Interfaccia | app Claude / `claude.ai/code` (comoda) | terminale Termux (potente) |
+| Se il telefono si blocca/perde rete | regge ~10 min poi va in timeout | con tmux la sessione **resta viva**, ti riattacchi |
+| Conflitto con ultraplan | sì (si disconnette) | nessuno |
+| Setup | nessuno (già attivo) | una tantum: tmux + Tailscale + SSH |
+
+In pratica: **Remote Control** per dare indicazioni al volo dall'app; **SSH+tmux** per le sessioni lunghe che non vuoi perdere. Per le sole modifiche semplici (articoli, allerta, emergenza, social) resta validissimo anche il workflow GitHub web delle sezioni 2-8, che non richiede il PC acceso.
 
 ---
 
