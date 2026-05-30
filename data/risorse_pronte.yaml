@@ -757,3 +757,36 @@ materiali:
   dimensione: 3.8 MB
   data_pubblicazione: '2026-05-30'
   licenza: CC BY-NC-SA 4.0
+- id: dopo-emergenza-infografica-2026-05-30
+  tema: dopo-emergenza
+  tema_titolo: Dopo l'emergenza
+  tipo: infografica
+  titolo: 'Infografica: Dopo l''emergenza'
+  descrizione: Infografica formato quadrato pronta per condivisione social, stampa
+    A4 e affissione in bacheca.
+  file_url: /infografiche/2026-05-30-dopo-emergenza-infografica.png
+  dimensione: 4.3 MB
+  data_pubblicazione: '2026-05-30'
+  licenza: CC BY-NC-SA 4.0
+- id: dopo-emergenza-presentazione-pdf-2026-05-30
+  tema: dopo-emergenza
+  tema_titolo: Dopo l'emergenza
+  tipo: presentazione-pdf
+  titolo: 'Presentazione (PDF): Dopo l''emergenza'
+  descrizione: 'Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo
+    senza PowerPoint.'
+  file_url: /presentazioni/2026-05-30-dopo-emergenza-presentazione-pdf.pdf
+  dimensione: 15.3 MB
+  data_pubblicazione: '2026-05-30'
+  licenza: CC BY-NC-SA 4.0
+- id: dopo-emergenza-presentazione-2026-05-30
+  tema: dopo-emergenza
+  tema_titolo: Dopo l'emergenza
+  tipo: presentazione
+  titolo: 'Presentazione: Dopo l''emergenza'
+  descrizione: 'Presentazione PowerPoint per docenti: 15 slide per un''ora di Educazione
+    Civica in classe (formato modificabile).'
+  file_url: /presentazioni/2026-05-30-dopo-emergenza-presentazione.pptx
+  dimensione: 19.1 MB
+  data_pubblicazione: '2026-05-30'
+  licenza: CC BY-NC-SA 4.0
