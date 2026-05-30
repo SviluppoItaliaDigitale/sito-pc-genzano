@@ -21,7 +21,7 @@ draft: false
 
 La **Rete Zamberletti** ha tagliato un traguardo storico: **500 prove radio**. Il convegno celebrativo si è svolto **martedì 26 maggio 2026** a **Villa Recalcati**, a Varese, sede della Prefettura e della Provincia.
 
-Non è solo un numero. Sono **oltre quarant'anni** di prove mensili che hanno tenuto viva una rete radio **alternativa, autonoma e resiliente**. Pronta a far parlare le Istituzioni quando ogni altro canale si spegne.
+Non è solo un numero. Sono **oltre quarant'anni** di prove mensili che hanno tenuto viva una rete radio **alternativa, autonoma e resiliente**, pronta a far parlare le istituzioni quando ogni altro canale si spegne.
 
 ## Che cos'è la Rete Zamberletti
 
@@ -43,9 +43,9 @@ Da quell'esperienza nacque l'idea di una **maglia HF nazionale**, capace di coll
 
 ## Una rete che oggi unisce istituzioni e Forze Armate
 
-Dopo quarant'anni la rete non è un ricordo: è una struttura **operativa e in crescita**. Alle prove mensili partecipano oggi **Prefetture**, **Dipartimento della Protezione Civile**, **Vigili del Fuoco** (dal 2024), **Marina Militare**, reparti dell'**Esercito** come il **7° Reggimento Alpini** e centinaia di radioamatori.
+Dopo quarant'anni la rete non è un ricordo: è una struttura **operativa e in crescita**. Alle prove mensili partecipano oggi **Prefetture**, il **Dipartimento della Protezione Civile**, i **Vigili del Fuoco** (dal 2024) e la **Marina Militare**. Sono presenti anche reparti dell'**Esercito** come il **7° Reggimento Alpini** e centinaia di radioamatori.
 
-Il mondo scientifico segue la rete da vicino. L'**INGV — Istituto Nazionale di Geofisica e Vulcanologia** collabora con l'ARI da oltre quarant'anni sullo studio della **propagazione ionosferica**: le condizioni fisiche che rendono possibili i collegamenti in onde corte.
+Il mondo scientifico segue la rete da vicino. L'**INGV — Istituto Nazionale di Geofisica e Vulcanologia** collabora con l'ARI da oltre quarant'anni. Il tema comune è la **propagazione ionosferica**: le condizioni fisiche che rendono possibili i collegamenti in onde corte.
 
 ## La 500ª prova e il passaggio di testimone
 
@@ -53,7 +53,7 @@ Il momento centrale è arrivato alle **11:00**, con la **500ª prova di sintonia
 
 La giornata ha segnato anche un **passaggio di testimone**. **Giannino Romeo** (I2RGV), che ha coordinato la rete per decenni, lascia la guida a **Dario Palasciano** (IT9AOI). La rete non dipende da una sola persona: è una **comunità di volontari** che si rinnova nel tempo.
 
-Forte l'attenzione delle istituzioni. Il presidente della Regione Lombardia **Attilio Fontana** ha definito la rete «**una garanzia assoluta**». Dal Governo è arrivato un messaggio del ministro **Giancarlo Giorgetti**; per il Ministero dell'Interno è intervenuto il sottosegretario **Emanuele Prisco**. Tutti hanno richiamato lo stesso tema: di fronte ai rischi informatici e alla dipendenza dal digitale, le comunicazioni radio alternative tornano **strategiche**.
+Forte l'attenzione delle istituzioni. Il presidente della Regione Lombardia **Attilio Fontana** ha definito la rete «**una garanzia assoluta**». Dal Governo ha inviato un messaggio il ministro **Giancarlo Giorgetti**; per il Ministero dell'Interno è intervenuto il sottosegretario **Emanuele Prisco**. Il messaggio condiviso: di fronte ai rischi informatici e alla dipendenza dal digitale, le comunicazioni radio alternative sono **strategiche**.
 
 ## Perché ci riguarda da vicino
 
@@ -69,7 +69,7 @@ La Rete Zamberletti ricorda una lezione semplice: la tecnologia da sola non bast
 - [Radiocomunicazioni di emergenza: il ruolo dei volontari](/comunicazioni/2026-05-03-radiocomunicazioni-emergenza-volontari/)
 - [Frequenze radio di emergenza e radioamatori](/comunicazioni/2026-04-13-frequenze-radio-emergenza-radioamatori-protezione-civile-1/)
 
-**Fonti istituzionali e di stampa** (con foto della giornata):
+**Fonti istituzionali e di stampa:**
 
 - [ARI-RE Lombardia ODV — La 500ª Prova della Rete Zamberletti](https://www.arirelombardia.it/2026/05/28/500a-prova-della-rete-zamberletti-a-varese-la-storia-delle-comunicazioni-demergenza-incontra-il-futuro-della-resilienza-nazionale/)
 - [Ministero dell'Interno — Il convegno per la 500ª esercitazione](https://www.interno.gov.it/it/notizie/protezione-civile-varese-convegno-500a-esercitazione-rete-zamberletti)
