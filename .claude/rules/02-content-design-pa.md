@@ -99,26 +99,26 @@ Specifiche complete: `MANUALE-SITO.md`, Parte 3.
             caption="Didascalia opzionale." >}}
    ```
 3. Il **nome del file foto** deve essere **diverso dallo slug dell'articolo** (es. `2026-04-20-incendio-cecchina-casolare.webp`), così lo script `genera-cover.py` non sovrascrive la foto reale con una copertina tipografica.
-4. Ogni foto deve comunque avere la **fascia blu istituzionale** (vedi regola sopra). Per trattare in modo uniforme le foto fornite dall'utente, usa lo script `scripts/applica-fascia-foto.sh`:
+4. Ogni foto deve avere la **fascia blu istituzionale** (regola sopra). Usa lo script `scripts/applica-fascia-foto.sh`:
    ```bash
    bash scripts/applica-fascia-foto.sh <file-sorgente> <nome-output-senza-ext>
    ```
-   Ridimensiona a 1200 px, sovrappone logo + testo istituzionale, esporta WebP qualità 85 (ricompresso a 75 se >200 KB) in `static/images/<nome>.webp`. Evita passaggi manuali in Canva/GIMP. Dettagli in `MANUALE-SITO.md` Parte 3.8, Metodo 4.
-5. Lo shortcode produce `<figure>`/`<figcaption>` accessibili, immagine cliccabile per ingrandire (apre in nuova scheda), `aria-label` descrittivo, `loading="lazy"`. La tipografia `.article-body` v7.2 (`custom.css`) applica automaticamente cornice con ombra morbida e didascalia in corsivo blu — non serve CSS inline.
+   Ridimensiona a 1200 px, sovrappone logo + testo, esporta WebP qualità 85 (ricompresso a 75 se >200 KB) in `static/images/<nome>.webp`. Niente passaggi manuali Canva/GIMP. Dettagli in `MANUALE-SITO.md` Parte 3.8, Metodo 4.
+5. Lo shortcode produce `<figure>`/`<figcaption>` accessibili, immagine cliccabile (apre in nuova scheda), `aria-label` descrittivo, `loading="lazy"`. La tipografia `.article-body` v7.2 (`custom.css`) applica cornice con ombra morbida e didascalia in corsivo blu — niente CSS inline.
 
-6. **Posizionamento di foto multiple in articoli storici** (convenzione adottata aprile 2026 dopo arricchimento di 35 foto su 30+ articoli memoria/anniversario):
-   - **1ª foto**: dopo il **1° H2** dell'articolo, dopo il primo paragrafo di contenuto.
-   - **2ª foto**: dopo il **2° H2**, per aprire una seconda dimensione narrativa (ricostruzione, contesto, conseguenze).
-   - **3ª foto e oltre**: una per ogni H2 di **evento storico specifico citato** (es. articoli che raccontano sequenze di terremoti — Irpinia 1980, L'Aquila 2009, Centro Italia 2016).
-   - **Mai foto a casaccio**: ogni foto va legata tematicamente alla sezione che la precede.
-   - **Quando aggiungere foto multiple**: l'articolo deve avere ≥5 H2, raccontare eventi storici specifici, e le foto candidate devono avere valore narrativo (luoghi, persone, mappe, satellite — non bandiere o stemmi). Non per articoli di servizio quotidiano o dottrinali.
-   - **Filtro automatico bandiere/stemmi comunali**: lo script `scripts/foto-da-wikipedia.sh` scarta i risultati con pattern `*Bandiera.svg`, `Flag_of_*`, `*-Stemma.svg`, `*Coat_of_arms*`, `*Stemma_di_*` (exit code `4`). Se capita, provare un titolo più specifico (un monumento, una piazza, una veduta).
+6. **Posizionamento di foto multiple in articoli storici** (convenzione aprile 2026):
+   - **1ª foto**: dopo il **1° H2**, dopo il primo paragrafo di contenuto.
+   - **2ª foto**: dopo il **2° H2** (seconda dimensione narrativa: ricostruzione, contesto, conseguenze).
+   - **3ª foto e oltre**: una per ogni H2 di **evento storico specifico citato** (es. Irpinia 1980, L'Aquila 2009, Centro Italia 2016).
+   - **Mai foto a casaccio**: ogni foto legata tematicamente alla sezione che la precede.
+   - **Quando**: articolo con ≥5 H2, eventi storici specifici, foto con valore narrativo (luoghi, persone, mappe, satellite — non bandiere/stemmi). Non per servizio quotidiano o articoli dottrinali.
+   - **Filtro bandiere/stemmi**: `scripts/foto-da-wikipedia.sh` scarta i pattern `*Bandiera.svg`, `Flag_of_*`, `*-Stemma.svg`, `*Coat_of_arms*`, `*Stemma_di_*` (exit code `4`). Provare un titolo più specifico (monumento, piazza, veduta).
 
 7. **Idempotenza della fascia blu (no doppia fascia)** — incident 16 maggio 2026 "Giro d'Italia Formia":
-   - **Mai applicare la fascia blu su una foto che ce l'ha già.** Il risultato è 2 fasce sovrapposte, visibili come 2 bande blu istituzionali con lo stesso testo "PROTEZIONE CIVILE / Gruppo Comunale Volontari" sotto la foto.
-   - Lo script `scripts/applica-fascia-foto.py` da **v2 (16 maggio 2026) è idempotente**: rileva automaticamente fasce esistenti (sample pixel a 98% h centro fascia + 80% h zona foto, confronto con `#003366 ± 30`) e va in **skip** invece di sovrapporre. Output `[skip] La foto ha già una fascia ... Non applico una seconda fascia`.
-   - **Override esplicito** con flag `--force` (solo casi edge, mai automatico). Se uno script o un agent passa `--force` senza richiesta utente, è un bug.
-   - **Pattern operativo "foto aggiunte dopo la pubblicazione"** (frequente: l'utente pubblica un articolo prima di avere le foto e le aggiunge in giorni successivi): è un workflow legittimo e ricorrente, non un'eccezione. Backup difensivo in `/tmp/`, applica fascia via script, rigenera carosello IG via `genera-immagini-social.py --force`. Vedi `manuale/parte-03-immagini-per-gli-articoli.md` § "Aggiungere foto dopo la pubblicazione" e agent `pc-image-fixer.md` § "Foto aggiunte post-pubblicazione".
+   - **Mai applicare la fascia su una foto che ce l'ha già** (risultato: 2 bande blu sovrapposte con lo stesso testo).
+   - `scripts/applica-fascia-foto.py` da **v2 (16 maggio 2026) è idempotente**: rileva fasce esistenti (sample pixel a 98% h centro fascia + 80% h zona foto, confronto `#003366 ± 30`) e va in **skip**. Output `[skip] La foto ha già una fascia...`.
+   - **Override** con `--force` (solo casi edge, mai automatico). Un `--force` passato senza richiesta utente è un bug.
+   - **Pattern "foto aggiunte dopo la pubblicazione"** (workflow legittimo ricorrente): backup in `/tmp/`, applica fascia via script, rigenera carosello IG via `genera-immagini-social.py --force`. Vedi `manuale/parte-03-immagini-per-gli-articoli.md` § "Aggiungere foto dopo la pubblicazione" e agent `pc-image-fixer.md`.
 
 Specifiche complete in `MANUALE-SITO.md` Parte 14.9. Questa regola nasce dopo un incidente in cui una foto fornita dall'utente era stata sostituita dalla sola copertina automatica — comportamento non accettabile.
 
@@ -126,31 +126,26 @@ Specifiche complete in `MANUALE-SITO.md` Parte 14.9. Questa regola nasce dopo un
 
 **Mai** generare batch di foto inline che assegnano la **stessa foto stock** (Pexels/Pixabay/Unsplash) a gruppi di articoli accomunati solo da un macro-tema (es. "tutti gli articoli sul volontariato" → stessa foto di volontari generici, "tutti gli articoli sul calore" → stessa foto di sole). Mai usare query generiche tipo `"italian civil defense"`, `"volunteers"`, `"heat wave"` per popolare automaticamente decine di articoli: le API stock restituiscono sempre la stessa prima immagine, e il sito si riempie di foto duplicate non pertinenti.
 
-**Why:** ad aprile 2026 un batch automatico ha aggiunto 289 foto inline a 278 articoli usando solo 43 immagini distinte (74 articoli avevano la stessa foto della Croce Rossa con la stessa caption *"Il sistema italiano di Protezione Civile in azione"*). Ripetizione massiccia di foto stock generiche danneggia l'autorità istituzionale del sito e contraddice il principio AGID di sobrietà ("no foto è meglio di foto sbagliata"). I 14 commit batch sono stati ripuliti.
+**Why:** ad aprile 2026 un batch ha aggiunto 289 foto inline a 278 articoli con solo 43 immagini distinte (74 articoli con la stessa foto Croce Rossa e la stessa caption *"Il sistema italiano di Protezione Civile in azione"*). Danneggia l'autorità del sito e contraddice la sobrietà AGID ("no foto è meglio di foto sbagliata"). I 14 commit batch sono stati ripuliti.
 
 **How to apply:**
-- Foto inline `{{< foto >}}` solo se realmente pertinente al **singolo** articolo, mai per macro-tema.
-- Fonti accettabili per la foto inline: foto fornita dall'utente, foto Wikipedia/NASA/USGS/NOAA con query specifica all'evento o al soggetto dell'articolo (es. `"Terremoto dell'Aquila 2009"`, non `"earthquake italy"`), foto stock **solo** se l'articolo lo richiede in modo non sostituibile e con query specifica al contenuto.
-- **Mai** scrivere script o workflow che iterano su un elenco di articoli e cercano una foto stock con la stessa query categoriale.
-- Caption e alt text vanno scritti **per ogni singola foto**, mai riusati su più articoli.
-- Se un articolo non ha una foto evidente da inserire, lasciarlo senza foto inline: la sola cover tipografica con titolo è sufficiente.
+- Foto inline `{{< foto >}}` solo se pertinente al **singolo** articolo, mai per macro-tema.
+- Fonti accettabili: foto utente; Wikipedia/NASA/USGS/NOAA con query specifica all'evento/soggetto (es. `"Terremoto dell'Aquila 2009"`, non `"earthquake italy"`); foto stock **solo** se non sostituibile e con query specifica.
+- **Mai** script/workflow che iterano su una lista cercando una foto stock con la stessa query categoriale.
+- Caption e alt **per ogni singola foto**, mai riusati.
+- Se non c'è una foto evidente, lasciare l'articolo senza foto inline: la cover tipografica col titolo basta.
 
 ### Foto utente — banner pulito (sito) vs carosello (social)
 
-Le foto fornite dall'utente **non vanno mai nel banner/copertina** del sito (campo `image:` del frontmatter). Il banner deve restare pulito col solo titolo dell'articolo e il page-hero blu istituzionale: è una scelta di design istituzionale che non si tocca.
+Le foto utente **non vanno mai nel banner/copertina** del sito (campo `image:`). Il banner resta pulito col solo titolo + page-hero blu istituzionale: scelta di design che non si tocca.
 
 **Regola sito (web):**
-- `image:` resta `""` o viene popolato solo dalla **cover tipografica** automatica (gradiente blu + titolo, generata da `auto-cover-mancanti.py`). MAI da foto utente, MAI da foto Wikipedia/NASA/USGS — quelle vanno **sempre inline nel corpo** come `{{< foto >}}`. Il marker `# TODO-foto-*` è bandito (vedi CLAUDE.md punto 9).
-- Le foto utente vanno **tutte dentro il corpo articolo** come `{{< foto >}}`:
-  - 1 foto → punto narrativamente sensato (dopo l'apertura o sotto un H2 pertinente).
-  - 2-3 foto → 1ª dopo 1° H2, 2ª dopo 2° H2, ecc. (convenzione articoli storici).
-  - **≥4 foto → galleria/carosello dentro l'articolo** (CSS scoped, immagini cliccabili, riga responsive o slider accessibile).
+- `image:` resta `""` o viene popolato solo dalla **cover tipografica** automatica (gradiente blu + titolo, da `auto-cover-mancanti.py`). MAI da foto utente/Wikipedia/NASA/USGS — quelle vanno **sempre inline** come `{{< foto >}}`. Il marker `# TODO-foto-*` è bandito (CLAUDE.md punto 9).
+- Foto utente **tutte nel corpo** come `{{< foto >}}`: 1 foto → punto narrativamente sensato; 2-3 foto → 1ª dopo 1° H2, 2ª dopo 2° H2; **≥4 foto → galleria/carosello inline** (CSS scoped, immagini cliccabili, riga responsive o slider accessibile).
 
-**Regola social (Instagram/Facebook/X/Telegram):**
-- Stesse foto che stanno nel corpo articolo diventano automaticamente **carosello Instagram**: lo script `genera-immagini-social.py` rileva i blocchi `{{< foto src="..." >}}` nel body e li combina con la cover tipografica (max 10 immagini). Story sempre 1 sola.
-- **Niente da configurare**: stessa fonte (foto nel corpo), due usi distinti.
+**Regola social (Instagram/Facebook/X/Telegram):** le stesse foto del corpo diventano automaticamente **carosello Instagram** — `genera-immagini-social.py` rileva i blocchi `{{< foto src="..." >}}` e li combina con la cover (max 10 immagini). Story sempre 1 sola. Niente da configurare.
 
-**Riassunto pratico:** quando l'utente dice "ecco una foto" o "queste foto", `image:` resta vuoto, le foto vanno tutte nel corpo, e i social pescano da lì in automatico al prossimo workflow.
+**Riassunto:** quando l'utente dice "ecco una foto", `image:` resta vuoto, le foto vanno tutte nel corpo, i social pescano da lì al prossimo workflow.
 
 **🔴 ANTI-PATTERN — modifica del campo `image:` durante una revisione testuale.** Quando il task è *"rivedi questo articolo"*, *"riscrivi secondo AGID"*, *"correggi i refusi"*, *"miglioralo"* o simile, **il campo `image:` non deve cambiare** rispetto al valore originale. Anche se trovi una foto pertinente su Wikimedia/NASA/altro, la foto va inline nel corpo come `{{< foto >}}`, non nel banner. **Check pre-commit obbligatorio:**
 
@@ -160,30 +155,30 @@ git diff <file.md> | grep -E '^[+-]image' | head -5
 
 Se il diff contiene righe `+image:` / `-image:` (anche solo `image_alt:`) e l'utente non ha richiesto esplicitamente un cambio di copertina, **stop**: ripristina il valore originale prima del commit.
 
-**Why:** il 9 maggio 2026 ChatGPT-cloud durante la revisione AGID dell'articolo "Giornata Europa — Meccanismo UCPM" ha sostituito `image: ""` (cover tipografica da generare) con `image: "/images/2026-05-09-ercc-bruxelles.webp"` (foto reale Wikimedia ERCC). La foto era stata anche correttamente aggiunta inline come `{{< foto >}}`, ma il banner del sito è andato live con la foto reale invece della cover tipografica con il titolo. Identità visiva istituzionale rotta finché non si è corretto manualmente.
+**Why:** il 9 maggio 2026 ChatGPT-cloud, in revisione AGID dell'articolo "Giornata Europa — Meccanismo UCPM", ha sostituito `image: ""` con una foto reale Wikimedia ERCC. Il banner è andato live con la foto invece della cover tipografica col titolo — identità visiva rotta fino al fix manuale.
 
 ## Nomi dei nostri mezzi, attrezzature e dotazioni — verifica dalla fonte canonica
 
 🔴 **Regola cogente** quando un articolo cita un **mezzo, un'attrezzatura o una dotazione in uso al Gruppo Comunale** (autocarro, autobotte, modulo AIB, fuoristrada, tenda sociale, generatore, radio, DPI, attrezzature manuali): **prima di scrivere il nome, verifica la denominazione tecnica ufficiale in `content/chi-siamo/_index.md` § "I nostri mezzi"** (sezione card con `<i class="bi bi-truck">`).
 
-**Why:** la scritta visibile sulla **livrea** di un mezzo è quasi sempre una **classificazione di sistema** del Servizio Nazionale o Regionale di Protezione Civile (es. *"Regione Lazio - Protezione Civile - Colonna Mobile - Volontariato"*, *"PROTEZIONE CIVILE - REGIONE LAZIO"*), **non** il modello tecnico del veicolo. Confondere i due livelli produce un articolo tecnicamente sbagliato anche se "letteralmente corretto" rispetto alla foto.
+**Why:** la scritta sulla **livrea** è quasi sempre una **classificazione di sistema** del Servizio Nazionale/Regionale di PC (es. *"Regione Lazio - Protezione Civile - Colonna Mobile - Volontariato"*), **non** il modello tecnico. Confonderli produce un articolo tecnicamente sbagliato anche se "letterale" rispetto alla foto.
 
-**Incident 26 maggio 2026 — articolo visita scout AGESCI:** la foto del Gruppo davanti a un mezzo bianco con scritta *"Regione Lazio - Protezione Civile / Colonna Mobile - Volontariato"* è andata live citando *"l'autocarro Colonna Mobile - Volontariato della Regione Lazio in dotazione al Gruppo"*. Il modello reale è il **Mercedes Actros — autobotte antincendio da 14.000 litri**, come elencato in `content/chi-siamo/_index.md` riga 105. Fix in 3 punti (caption + corpo H2 + `social_punti`) applicato a posteriori, ma il primo deploy era live con nome mezzo sbagliato.
+**Incident 26 maggio 2026 — visita scout AGESCI:** la foto davanti a un mezzo con scritta *"Colonna Mobile - Volontariato"* è andata live citando *"l'autocarro Colonna Mobile della Regione Lazio"*. Il modello reale è il **Mercedes Actros — autobotte antincendio da 14.000 litri** (`content/chi-siamo/_index.md` riga 105). Fix a posteriori (caption + corpo H2 + `social_punti`), ma il primo deploy era live col nome sbagliato.
 
-**Procedura operativa pre-articolo:**
+**Procedura pre-articolo:**
 
-1. Prima di nominare un mezzo o un'attrezzatura del Gruppo, fai:
+1. Prima di nominare un mezzo, fai:
    ```bash
    grep -in "<nome-presunto>\|autocarro\|autobotte\|modulo\|fuoristrada" content/chi-siamo/_index.md
    ```
-2. Se il nome non compare, allarga la ricerca all'elenco tecnico:
+2. Se non compare, allarga:
    ```bash
    grep -iE "actros|atego|cabstar|vm90|nissan|iveco|mercedes|tenda" content/chi-siamo/_index.md
    ```
-3. Nell'articolo usa il **modello tecnico** come identificazione primaria (es. *"Mercedes Actros"*, *"Iveco VM90"*, *"Nissan Cabstar"*), integrato dalla descrizione della funzione (autobotte 14.000 l, fuoristrada 4×4 con modulo 800 l, automezzo con piattaforma aerea).
-4. Le scritte sulla livrea possono comunque essere citate nell'`alt` della foto (descrivono ciò che è letteralmente visibile, conforme WCAG 1.1.1), ma **non sostituiscono il nome tecnico** nel corpo dell'articolo, nella caption e nei `social_punti`.
+3. Usa il **modello tecnico** come identificazione primaria (*"Mercedes Actros"*, *"Iveco VM90"*, *"Nissan Cabstar"*) + funzione (autobotte 14.000 l, fuoristrada 4×4 con modulo 800 l, piattaforma aerea).
+4. Le scritte sulla livrea si possono citare nell'`alt` (descrivono il visibile, WCAG 1.1.1) ma **non sostituiscono il nome tecnico** nel corpo, caption e `social_punti`.
 
-**Estensione:** la stessa logica vale per ogni dotazione del Gruppo nominata nelle pagine (radio, generatori, DPI specifici, attrezzature AIB, kit emergenza, tende). Se la pagina `/chi-siamo/` non basta, controlla anche `data/dotazioni_*.yaml` (se esistono), articoli passati con badge `Attività`/`Esercitazione` che descrivono lo stesso mezzo, e la pagina di sezione `/area-volontari/` per le dotazioni operative interne.
+**Estensione:** stessa logica per ogni dotazione (radio, generatori, DPI, attrezzature AIB, kit, tende). Se `/chi-siamo/` non basta, controlla `data/dotazioni_*.yaml` (se esistono), articoli passati con badge `Attività`/`Esercitazione` sullo stesso mezzo, e `/area-volontari/`.
 
 ## Regola pittogrammi — supporto comprensione (bambini, anziani, L2)
 
@@ -216,11 +211,9 @@ Specifiche complete in `MANUALE-SITO.md` Parte 3.16.
 
 Lo schema dipende da quanti articoli condividono la giornata.
 
-**Caso A — un solo articolo nella giornata** (default, ~85% dei casi)
-Usa il formato semplice `AAAA-MM-GG` (esempio: `date: 2026-04-06`). Hugo lo interpreta automaticamente come mezzanotte ora italiana grazie alla `timeZone = "Europe/Rome"` configurata in `hugo.toml`.
+**Caso A — un solo articolo nella giornata** (default, ~85% dei casi): formato semplice `AAAA-MM-GG` (es. `date: 2026-04-06`). Hugo lo interpreta come mezzanotte ora italiana (`timeZone = "Europe/Rome"` in `hugo.toml`).
 
-**Caso B — due o più articoli nella stessa giornata**
-Usa il formato ISO 8601 con orario crescente per ogni articolo, in ordine di pubblicazione (ultimo scritto = orario maggiore = finisce in cima all'archivio).
+**Caso B — due o più articoli nella stessa giornata**: formato ISO 8601 con orario crescente per ordine di pubblicazione (ultimo scritto = orario maggiore = in cima all'archivio).
 
 ```yaml
 # 1° articolo del giorno:
@@ -230,20 +223,13 @@ date: 2026-04-30T00:01:00+02:00
 date: 2026-04-30T00:02:00+02:00
 ```
 
-**Perché orari minimi (00:01, 00:02, …) e non semantici (08:00, 14:00, 18:00):**
-L'orario non viene mai mostrato all'utente (il template formatta solo la data lunga "30 aprile 2026"). Serve esclusivamente come tie-break per l'ordering Hugo `Date desc`. Orari minimi garantiscono che gli articoli del **giorno corrente** non risultino "futuri" per Hugo (cosa che li escluderebbe dal build fino al rebuild successivo del workflow `pubblica-programmata.yml`, alle 06:00 UTC).
+**Perché orari minimi (00:01, 00:02…) e non semantici:** l'orario non è mai mostrato (il template formatta solo "30 aprile 2026"), serve solo come tie-break per l'ordering `Date desc`. Orari minimi evitano che gli articoli del **giorno corrente** risultino "futuri" per Hugo (esclusi dal build fino al rebuild di `pubblica-programmata.yml`, 06:00 UTC).
 
-**Perché esiste questa regola:**
-Ad aprile 2026 si è scoperto che Hugo, con due articoli a `date: AAAA-MM-GG` identico, applica come tie-break l'ordine alfabetico del filename, non l'ordine di pubblicazione: 47 giornate del sito avevano articoli renderizzati in ordine arbitrario rispetto a quando erano stati scritti. Aggiungere orario crescente risolve.
+**Perché la regola esiste:** ad aprile 2026 si è scoperto che con due articoli a `date: AAAA-MM-GG` identico Hugo usa come tie-break l'ordine alfabetico del filename, non quello di pubblicazione: 47 giornate avevano articoli in ordine arbitrario. L'orario crescente risolve.
 
-**Cosa NON usare:**
-- `date: 2026-04-06T03:32:00Z` (timezone UTC esplicita in fondo): comportamento meno chiaro, rischio di "articolo futuro" se l'utente è in Europa pre-tz-fix. Usa sempre `+02:00` (italiana).
-- `date: "2026-04-06"` (con virgolette): tecnicamente accettato da Hugo ma sconsigliato per coerenza con tutti gli articoli del sito.
+**Cosa NON usare:** `date: ...Z` (UTC esplicita: rischio "articolo futuro", usa sempre `+02:00`); `date: "2026-04-06"` (con virgolette: accettato ma sconsigliato per coerenza).
 
-**Workflow operativo per l'utente:**
-- Quando scrivi un articolo nuovo con `hugo new comunicazioni/AAAA-MM-GG-titolo.md`, l'archetype produce `date: {{ .Date }}` che si espande automaticamente al timestamp completo. Va bene per il caso B.
-- Per il caso A (singolo articolo giorno) lo riduci a `date: AAAA-MM-GG` semplice.
-- Se ti accorgi a posteriori di aver pubblicato 2 articoli nello stesso giorno con `date` solo-data, lancia `python3 scripts/fix-ordering-articoli-stesso-giorno.py` (idempotente, riassegna orari `00:01, 00:02, ...` basati su git first-commit asc).
+**Workflow operativo:** `hugo new comunicazioni/AAAA-MM-GG-titolo.md` produce `date: {{ .Date }}` → timestamp completo (va bene per il caso B); per il caso A riducilo a `AAAA-MM-GG`. Se ti accorgi a posteriori di 2 articoli stesso giorno con `date` solo-data, lancia `python3 scripts/fix-ordering-articoli-stesso-giorno.py` (idempotente, riassegna `00:01, 00:02, ...` da git first-commit asc).
 
 ## Regole editoriali
 
@@ -272,35 +258,35 @@ Ad aprile 2026 si è scoperto che Hugo, con due articoli a `date: AAAA-MM-GG` id
 
 ## Sincronizzazione automatica con gli aggiornamenti AGID
 
-Le linee guida AGID e Designers Italia **si aggiornano nel tempo**. Il sito ha un'automazione settimanale che monitora le 10 fonti ufficiali (Linee guida design PA, Designers Italia home + Writing Toolkit + Content Toolkit + UI Kit, Bootstrap Italia, Accessibilità AGID, Dichiarazione accessibilità, DPC) tramite hash SHA-256 con BeautifulSoup: workflow `.github/workflows/aggiorna-manuale.yml`, ogni lunedì 06:00 UTC.
+Le linee guida AGID/Designers Italia si aggiornano nel tempo. Il workflow `.github/workflows/aggiorna-manuale.yml` (lunedì 06:00 UTC) monitora le 10 fonti ufficiali (Linee guida design PA, Designers Italia + Writing/Content Toolkit + UI Kit, Bootstrap Italia, Accessibilità AGID, Dichiarazione accessibilità, DPC) via hash SHA-256 (BeautifulSoup).
 
-Quando una fonte cambia, il workflow apre automaticamente un'issue di label `manuale + documentazione + revisione` con checklist a 3 sezioni: **(A)** aggiornare il manuale operativo (`manuale/parte-02`, `parte-03`, `parte-11`, `parte-12`, `MANUALE-SITO.md`), **(B)** aggiornare in coerenza i file `.claude/rules/`, `CLAUDE.md` e gli agent `pc-article-reviewer`/`pc-social-publisher`/`pc-deploy-validator` letti da Claude Code in ogni sessione, **(C)** verifica finale (build, grep date, chiusura issue).
+Quando una fonte cambia, apre un'issue (label `manuale + documentazione + revisione`) con checklist a 3 sezioni: **(A)** aggiornare il manuale operativo (`manuale/parte-02`, `03`, `11`, `12`, `MANUALE-SITO.md`); **(B)** aggiornare in coerenza `.claude/rules/`, `CLAUDE.md` e gli agent `pc-article-reviewer`/`pc-social-publisher`/`pc-deploy-validator`; **(C)** verifica finale (build, grep date, chiusura issue).
 
 **Regola di coerenza obbligatoria**: il manuale operativo (rivolto all'utente) e le rules `.claude/` (lette dall'AI in tutte le sessioni: CLI desktop, mobile, cloud) devono dire **la stessa cosa** sulla stessa regola AGID. Se aggiorni l'uno senza l'altro, il sito ha due fonti di verità divergenti e Claude continua ad applicare regole obsolete in tutte le sessioni successive.
 
-**Why**: l'utente ha sollevato il punto il 9 maggio 2026 — la regola "Claude Code redige come ChatGPT 9.5/10" non sopravvive nel tempo se quando AGID si aggiorna (Writing Toolkit nuove sezioni, Content Toolkit revisioni, Linee guida PA versioni successive) le rules Claude restano alla baseline iniziale. La versione storicamente esposta è già coperta dall'automazione: questa sezione documenta il vincolo di applicazione speculare.
+**Why**: punto sollevato dall'utente il 9 maggio 2026 — la regola "Claude redige come ChatGPT 9.5/10" non sopravvive se, quando AGID si aggiorna, le rules restano alla baseline iniziale. Questa sezione documenta il vincolo di applicazione speculare.
 
-**How to apply** quando ti viene segnalata o trovi un'issue del workflow:
-1. Apri ogni URL elencato e identifica le novità.
-2. Aggiorna **simultaneamente** il manuale (cartella `manuale/`) e le rules (`.claude/rules/02-content-design-pa.md`, `.claude/rules/03-accessibility.md`, `CLAUDE.md` punti 2-4, agent rilevanti).
-3. Se la modifica AGID introduce un nuovo principio o una nuova regola, citalo come fonte ufficiale nei due posti.
-4. Esegui `grep -rn "<data-modifica>" manuale/ .claude/rules/ CLAUDE.md` per verificare la sincronia.
+**How to apply** quando trovi un'issue del workflow:
+1. Apri ogni URL e identifica le novità.
+2. Aggiorna **simultaneamente** il manuale (`manuale/`) e le rules (`02`, `03`, `CLAUDE.md` punti 2-4, agent rilevanti).
+3. Se introduce un nuovo principio, citalo come fonte ufficiale in entrambi i posti.
+4. `grep -rn "<data-modifica>" manuale/ .claude/rules/ CLAUDE.md` per verificare la sincronia.
 5. Build Hugo pulito + commit "Aggiornamento AGID DD/MM/AAAA — manuale + rules Claude in sincronia" + push.
-6. Chiudi l'issue con riferimento al commit.
+6. Chiudi l'issue citando il commit.
 
 ## Livello qualitativo della redazione — qualità ChatGPT 9.5/10
 
-**La regola vale per ogni contesto Claude Code**: CLI desktop sul PC, app mobile, sessione cloud, agent GitHub-integrato. **Nessuno dei tre delega ad AI esterne** la redazione/revisione di articoli: tutti applicano integralmente le regole AGID con la stessa cura del migliore strumento esterno di riferimento (test del 9 maggio 2026: ChatGPT 9.5/10 con drag-drop allegato, vedi `feedback_workflow_ai_esterne_validato.md`).
+**Vale per ogni contesto Claude Code** (CLI desktop, mobile, cloud, agent GitHub): **nessuno delega ad AI esterne** la redazione/revisione, tutti applicano integralmente AGID con la cura del miglior strumento di riferimento (test 9 maggio 2026: ChatGPT 9.5/10, vedi `feedback_workflow_ai_esterne_validato.md`).
 
-**Cosa significa concretamente in revisione:**
+**Cosa significa in revisione:**
 
-1. **Lettura UX writer**: ogni paragrafo viene letto chiedendosi "il cittadino lo capisce in 30 secondi?". Frasi >20 parole vanno spezzate, nominalizzazioni ("effettuazione del pagamento") vanno sostituite con verbi attivi ("pagare"), passive vanno ridotte.
-2. **Lede concreto, non retorico**: il primo paragrafo dice cosa l'articolo fa per l'utente, non riempie di formule generiche ("è un'occasione per pensare a...", "è importante ricordare che...").
-3. **Fonti istituzionali sempre citate**: ogni claim tecnico (numeri, codici colore, regole operative) deve avere una fonte verificabile (DPC, CFR Lazio, ISPRA, INGV, ASL Roma 6, MIM, ecc.). Niente "secondo gli esperti" generici.
-4. **Valorizzazione linkografia interna**: prima di rimandare a fonti esterne, verificare se il sito ha già contenuti pertinenti (kit-calamita, schede stampabili, articoli correlati, glossario, standard ISO). Pattern `[Sul nostro sito:] / [Fonti istituzionali:]`.
-5. **Bullet uniformi**: in una stessa lista, tutti i bullet iniziano con la stessa parte del discorso (tutti verbi all'imperativo, oppure tutti sostantivi). Coerenza grammaticale.
-6. **H2 senza enfasi ridondante**: niente `**bold**` dentro l'H2, niente "🔥 ATTENZIONE 🔥". L'H2 è già visivamente forte.
-7. **Punto fermo a fine bullet**: regola Designers Italia. Bullet con frase compiuta = punto fermo. Bullet di una parola = nessun punto.
+1. **Lettura UX writer**: ogni paragrafo "il cittadino lo capisce in 30 secondi?". Frasi >20 parole spezzate, nominalizzazioni → verbi attivi, passive ridotte.
+2. **Lede concreto, non retorico**: il primo paragrafo dice cosa l'articolo fa per l'utente, niente formule generiche ("è un'occasione per pensare a...").
+3. **Fonti istituzionali sempre citate**: ogni claim tecnico (numeri, codici colore, regole) ha fonte verificabile (DPC, CFR Lazio, ISPRA, INGV, ASL Roma 6, MIM). Niente "secondo gli esperti".
+4. **Linkografia interna valorizzata**: prima delle fonti esterne, verifica se il sito ha già contenuti pertinenti (kit-calamita, schede, articoli correlati, glossario, ISO). Pattern `[Sul nostro sito:] / [Fonti istituzionali:]`.
+5. **Bullet uniformi**: in una lista tutti i bullet iniziano con la stessa parte del discorso (tutti imperativi, o tutti sostantivi).
+6. **H2 senza enfasi ridondante**: niente `**bold**` o "🔥 ATTENZIONE 🔥" nell'H2 (è già forte).
+7. **Punto fermo a fine bullet** (Designers Italia): frase compiuta = punto fermo; bullet di una parola = nessun punto.
 8. **Distinzione `Allerta`/`Emergenza`/`Aggiornamento`** sempre rispettata (vedi `06-protezione-civile-scientifica.md`).
 9. **Niente burocratese residuo**: "ad uopo", "giusta delibera", "nelle more di", "si prega di", "la S.V." — eliminare anche se presenti nel testo originale dell'utente.
 
@@ -316,9 +302,9 @@ Quando una fonte cambia, il workflow apre automaticamente un'issue di label `man
 6. Commit + push solo dopo conferma o se l'utente ha già autorizzato un batch.
 ```
 
-**Quando un articolo non ha modifiche da fare**, dichiara esplicitamente *"Articolo conforme AGID, nessuna modifica necessaria"* — è un esito legittimo della revisione, non un fallimento. Inventare modifiche per dimostrare attività è anti-pattern.
+**Quando un articolo non ha modifiche**, dichiara *"Articolo conforme AGID, nessuna modifica necessaria"* — esito legittimo. Inventare modifiche per dimostrare attività è anti-pattern.
 
-**Per batch di revisione ≥5 articoli**: applicare il checkpoint pre-batch (`07-proattivita-coerenza.md`), ottenere conferma esplicita, lavorare in serie con commit a tappe (≈30-50 articoli per commit) per mantenere la cronologia git navigabile.
+**Per batch ≥5 articoli**: applica il checkpoint pre-batch (`07-proattivita-coerenza.md`), conferma esplicita, commit a tappe (≈30-50 articoli per commit).
 
 ### Auto-gate AGID prima del commit (sintesi operativa)
 
@@ -328,7 +314,7 @@ La regola completa è in `CLAUDE.md` § "Auto-gate AGID prima del commit di un n
 2. Solo dopo il via libera dell'agent (o dopo aver applicato i suoi fix) procedi al commit.
 3. Il gate è **obbligato**, non opzionale. Vale anche su singolo articolo.
 
-**Eccezione — registro non-AGID solo su richiesta esplicita dell'utente.** Se l'utente chiede di redigere un documento in registro diverso (comunicato stampa, lettera istituzionale, paper scientifico, relazione tecnica, memoria, bando, delibera, ordinanza, scheda accademica, **o qualunque altro documento per cui chiede esplicitamente uno stile diverso**), sospendi il gate AGID per quel documento e applica le **convenzioni di genere** del settore di appartenenza (piramide rovesciata + 5W per il comunicato stampa; intestazione + protocollo per la lettera; IMRaD per il paper; ecc.). Diventa il miglior professionista di quel genere. L'eccezione vale solo per il documento richiesto: il prossimo articolo per `content/comunicazioni/` ricade nel gate AGID standard. **L'eccezione la decide l'utente, non tu.**
+**Eccezione — registro non-AGID solo su richiesta esplicita dell'utente.** Se l'utente chiede un registro diverso (comunicato stampa, lettera istituzionale, paper, relazione tecnica, memoria, bando, delibera, ordinanza, scheda accademica, **o altro genere esplicito**), sospendi il gate per quel documento e applica le **convenzioni di genere** (piramide rovesciata + 5W per il comunicato; intestazione + protocollo per la lettera; IMRaD per il paper; ecc.). Vale solo per quel documento; il prossimo articolo ricade nel gate standard. **L'eccezione la decide l'utente, non tu.**
 
 ## Frontmatter obbligatorio per gli articoli (comunicazioni/)
 
@@ -440,7 +426,7 @@ Ogni kit deve linkarne almeno tante quante ne contiene la cartella per il suo li
 
 ## Versione "italiano semplice" (A2 CEFR) — file affiancato
 
-Da maggio 2026 (Punto 16 della roadmap) gli articoli del sito possono avere una **versione semplificata** in italiano L2 livello A2 CEFR, pensata per parlanti italiano L2, persone con disabilità cognitive, anziani con esperienza scolastica limitata, e chi legge in fretta. Vedi `manuale/parte-25-italiano-l2-versione-facile.md` per la guida completa.
+Da maggio 2026 (Punto 16 roadmap) gli articoli possono avere una **versione semplificata** in italiano L2 A2 CEFR, per parlanti L2, disabilità cognitive, anziani con poca scuola, chi legge in fretta. Guida completa: `manuale/parte-25-italiano-l2-versione-facile.md`.
 
 **Convenzione di naming:**
 
@@ -468,9 +454,9 @@ build:
 
 ⚠️ **CRITICO**: la chiave del frontmatter è `build:` (senza underscore). La vecchia sintassi `_build:` (con underscore) è stata **rimossa** da Hugo 0.145.0 e causa **ERROR error building site** su Hugo 0.161+, bloccando completamente il deploy. Storia: 12 maggio 2026 le PR #186/#187/#188/#190 hanno introdotto `_build:` per errore, causando 3 deploy falliti consecutivi prima del fix in PR #191.
 
-Senza questa configurazione la versione facile compare in homepage, archivio `/comunicazioni/`, pagina `/podcast/`, feed RSS, sitemap, index.json (ricerca) e articoli correlati — confondendo gli utenti che si trovano due "card articolo" praticamente identiche. Con `build.list: never` la versione facile è raggiungibile **solo** dal bottone "Leggi in italiano semplice" sull'articolo madre. È esattamente il comportamento richiesto.
+Senza questa config la versione facile compare in homepage, `/comunicazioni/`, `/podcast/`, RSS, sitemap, index.json e correlati — due card quasi identiche. Con `build.list: never` è raggiungibile **solo** dal bottone "Leggi in italiano semplice" sull'articolo madre.
 
-**Storia:** regola aggiunta il 12 maggio 2026 dopo prima pubblicazione P16 che aveva fatto comparire la versione facile in homepage come "ultima notizia" doppia (fix in PR #186 + #187 + #188). Specifiche complete: `manuale/parte-25-italiano-l2-versione-facile.md § 25.11`.
+**Storia:** regola aggiunta il 12 maggio 2026 dopo che la prima P16 fece comparire la versione facile in homepage come doppia "ultima notizia" (fix PR #186/#187/#188). Specifiche: `manuale/parte-25 § 25.11`.
 
 **Eccezione gate AGID obbligata.** La versione facile NON segue il linguaggio AGID standard. Usa le **regole CEFR A2**:
 - frasi corte (8-12 parole massimo),
@@ -480,8 +466,8 @@ Senza questa configurazione la versione facile compare in homepage, archivio `/c
 - numeri in cifre, mai in lettere,
 - niente subordinate concatenate, niente metafore, niente retorica.
 
-Questa è la formalizzazione del registro non-AGID già coperto da `CLAUDE.md § "Auto-gate AGID"` come eccezione. **Non invocare `pc-article-reviewer` sui file `<slug>-facile.md`**: l'agent rigetterebbe le frasi "troppo corte" o "tono troppo elementare". Il review della versione facile va fatto secondo i criteri CEFR A2, non secondo l'AGID.
+Formalizzazione del registro non-AGID già coperto da `CLAUDE.md § "Auto-gate AGID"` come eccezione. **Non invocare `pc-article-reviewer` sui file `<slug>-facile.md`** (rigetterebbe frasi "troppo corte"): il review va fatto secondo i criteri CEFR A2, non AGID.
 
-**Workflow operativo on-demand** (per articolo): vedi Parte 25 § 25.6. Non è automatico, è una scelta editoriale per i contenuti ad alta priorità (bollettini allerta, procedure autoprotezione, numeri emergenza, articoli normativi densi).
+**Workflow on-demand** (per articolo): Parte 25 § 25.6. Non automatico, scelta editoriale per contenuti ad alta priorità (bollettini allerta, autoprotezione, numeri emergenza, articoli normativi densi).
 
 **Articolo campione live**: `content/comunicazioni/2026-05-12-iso-22324-codici-colore-allerta-facile.md` (associato alla versione completa `2026-05-12-iso-22324-codici-colore-allerta.md`).

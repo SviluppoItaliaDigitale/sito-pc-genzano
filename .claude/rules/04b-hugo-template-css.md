@@ -19,23 +19,23 @@ Il menu è definito in `hugo.toml` sotto `[[menus.main]]` e renderizzato in `the
 
 Razionale: voci flat erano troppe per mobile e per l'utente in emergenza. L'accorpamento mantiene tutte le pagine raggiungibili in ≤ 2 click ma riduce il rumore visivo.
 
-**Storia del riordino — v3 (maggio 2026):** audit di usabilità della struttura v2 (aprile 2026) ha rilevato 4 problemi:
-1. **"Educazione e Inclusione" sovraccarico** (10 voci, oltre Miller 7±2): mescolava materiale didattico per scuole + accessibilità trasversale + Glossario. Splittato in **"Per le scuole"** (6 voci didattiche coerenti) e **"Accessibilità e Supporti"** (2 voci trasversali).
-2. **"Kit Emergenza Schede"** (kit-calamita per cittadini in difficoltà — anziano in evacuazione, caregiver, neogenitore in calamità) era nel posto sbagliato (Educazione). Spostato in **"Per il Cittadino"** e rinominato *"Kit pronti per situazioni vulnerabili"*.
-3. **"Glossario"** è uno strumento di consultazione, non un'area didattica. Spostato in **"Risorse"** dove vivono FAQ, normativa, area download.
-4. **"Schede Stampabili"** era ambiguo (sembravano kit per cittadini): rinominato **"Schede didattiche stampabili"** per chiarezza vs Kit Calamità.
+**Storia del riordino — v3 (maggio 2026):** l'audit di usabilità della v2 (aprile 2026) rilevò 4 problemi:
+1. **"Educazione e Inclusione" sovraccarico** (10 voci): mescolava didattica scuole + accessibilità + Glossario. Splittato in **"Per le scuole"** (6 voci) e **"Accessibilità e Supporti"** (2 voci).
+2. **"Kit Emergenza Schede"** (kit-calamita per cittadini vulnerabili) era in Educazione: spostato in **"Per il Cittadino"** e rinominato *"Kit pronti per situazioni vulnerabili"*.
+3. **"Glossario"** è strumento di consultazione, non area didattica: spostato in **"Risorse"** (con FAQ, normativa, area download).
+4. **"Schede Stampabili"** era ambiguo: rinominato **"Schede didattiche stampabili"** per chiarezza vs Kit Calamità.
 
 **Aggiunta v3.1 (8 maggio 2026):** voce **"Standard ISO"** sotto Risorse, dopo Glossario e prima di Mappa del Sito. Punta all'hub `/standard-iso/` con 30 schede degli standard internazionali rilevanti per la PC (ISO/TC 292 emergency management, famiglia ISO 31000 risk management, ISO 14090 adattamento climatico, ISO 7010 segnaletica, città e infrastrutture). Il dropdown Risorse passa da 6 a 7 voci.
 
 **Aggiunte v3.2 (roadmap, maggio 2026):** le iniziative della roadmap hanno aggiunto voci ai dropdown: **Per il Cittadino** → "Quanto sei preparato? (quiz)" (idea #7); **Accessibilità e Supporti** → "Contenuti in LIS" (idea #10); **Risorse** → "Trasparenza", "Storia del territorio" (#8), "Open Data" (reinserita), "Podcast" (#22), "Articoli da ascoltare" (#22, ex `/podcast/`), "Stato del Sito" (#25). Il dropdown Risorse era cresciuto a 13 voci, oltre il limite Miller 7±2 → riorganizzato in v3.3 (vedi sotto). Ogni voce di menu va sempre aggiunta **sia in `hugo.toml` sia in `static/app-shared/site-chrome.js`** (vedi § "Sincronizzazione obbligatoria").
 
-**Riorganizzazione v3.3 (15 maggio 2026) — accorpamento Risorse 13→6 voci.** Strategia "accorpamento per hub" applicata per riportare Risorse dentro Miller 7±2:
-- **Podcast** + **Articoli da ascoltare** → fusi in una nuova pagina hub **"Audio e podcast"** (`content/audio-e-podcast/_index.md`) che spiega la differenza fra i due canali e linka entrambi. Le pagine madre `/podcast/` e `/articoli-da-ascoltare/` restano accessibili al loro URL (link interni, sitemap, ricerca).
-- **Open Data** e **Stato del Sito** → richiamati come sezioni dedicate dentro `/trasparenza/` ("Dataset aperti" + "Stato tecnico del sito"). Le pagine madre restano accessibili al loro URL.
-- **Trasparenza** + **Stato del Sito** → spostati nel footer accanto a Note Legali / Privacy / Accessibilità (accountability istituzionale coerente con le altre pagine legali).
-- **Mappa del Sito** → rimossa dal dropdown Risorse (era duplicata: già nel footer).
-- **Storia del territorio** → spostata in **"Per il Cittadino"** (è contenuto narrativo per il cittadino, non strumento di consultazione).
-- **Standard ISO** → spostata come sezione `## Standard tecnici internazionali (ISO)` dentro `/normativa/`. Razionale: le schede del hub `/standard-iso/` non riproducono il testo della norma (a pagamento, copyright ISO/UNI) e rimandano tutte a iso.org/uni.com per il testo integrale; non è quindi uno *"strumento di consultazione quotidiana"* come FAQ/Glossario/Area Download. Inserito in `/normativa/` completa la tassonomia delle fonti (nazionale → regionale → comunale → internazionale), che è il suo livello naturale di lettura.
+**Riorganizzazione v3.3 (15 maggio 2026) — accorpamento Risorse 13→6 voci** ("accorpamento per hub" per rientrare in Miller 7±2):
+- **Podcast** + **Articoli da ascoltare** → fusi nell'hub **"Audio e podcast"** (`content/audio-e-podcast/_index.md`). Le pagine madre `/podcast/` e `/articoli-da-ascoltare/` restano accessibili al loro URL.
+- **Open Data** e **Stato del Sito** → sezioni dentro `/trasparenza/` ("Dataset aperti" + "Stato tecnico del sito"). Pagine madre accessibili al loro URL.
+- **Trasparenza** + **Stato del Sito** → nel footer accanto a Note Legali / Privacy / Accessibilità.
+- **Mappa del Sito** → rimossa dal dropdown (già nel footer).
+- **Storia del territorio** → in **"Per il Cittadino"** (contenuto narrativo, non strumento).
+- **Standard ISO** → sezione `## Standard tecnici internazionali (ISO)` dentro `/normativa/`: le schede `/standard-iso/` non riproducono il testo della norma (copyright ISO/UNI, rimandano a iso.org/uni.com), quindi non è "consultazione quotidiana" come FAQ/Glossario; in `/normativa/` completa la tassonomia delle fonti (nazionale → regionale → comunale → internazionale).
 
 Risultato: Risorse a **6 voci** pulite (FAQ, Glossario, Area Download, Normativa, Strumenti in Tempo Reale, Audio e podcast), 5 dropdown di primo livello (invariati), footer a 8 voci nella sezione "Link Utili". Margine Miller: 1 voce di spazio libero per future aggiunte.
 
@@ -75,7 +75,7 @@ Non aggiungere voci di primo livello senza valutarne l'impatto sul mobile: il li
 
 Il sito **non riporta numeri di inventario** dei materiali (schede stampabili, giochi, storie, attività accessibili, kit, pittogrammi, fac-simile, case study, percorsi, moduli, ecc.). Le descrizioni sono **qualitative**: "schede stampabili per tutte le fasce", "giochi educativi divisi per fascia di età", ecc.
 
-**Why:** i conteggi inventario erano una fonte continua di drift fra dichiarato e reale. Ogni volta che si aggiungeva o si toglieva un materiale serviva ricordarsi di aggiornare otto-dieci posti diversi: `assistente/list.html`, `games-cta.html`, `static/giochi/index.html`, `static/formazione/schede-stampabili/index.html`, `content/faq/_index.md`, `content/mappa-sito/_index.md`, `content/formazione/_index.md`, `MANUALE-SITO.md`. Era stato costruito uno script (`scripts/verifica-conteggi.sh`) + un hook `PostToolUse` + una sezione catch-all in `audit-sito.yml § 42` per inseguire il drift, ma il rimedio era complesso quanto il problema. La decisione di maggio 2026 elimina la causa: niente numeri, niente drift.
+**Why:** i conteggi inventario erano una fonte continua di drift fra dichiarato e reale: ogni aggiunta/rimozione di materiale richiedeva di aggiornare 8-10 posti (`assistente/list.html`, `games-cta.html`, `static/giochi/index.html`, `static/formazione/schede-stampabili/index.html`, `content/faq/_index.md`, `mappa-sito/_index.md`, `formazione/_index.md`, `MANUALE-SITO.md`). Lo script `verifica-conteggi.sh` + hook `PostToolUse` + `audit-sito.yml § 42` inseguivano il drift, ma il rimedio era complesso quanto il problema. Maggio 2026 elimina la causa: niente numeri, niente drift.
 
 **Cosa NON va toccato:**
 
@@ -183,7 +183,7 @@ Regole operative:
 
 ## Strumenti di Accessibilità (toolbar utente)
 
-In ogni pagina del sito, in basso a sinistra, è presente un **bottone rotondo blu istituzionale** (FAB) con icona `bi-universal-access` che apre un **dialog modale** con preferenze di lettura: dimensione testo (livelli), allineamento, carattere ad alta leggibilità, spaziatura ampia, contrasto (default/alto/invertito), scala di grigi, nascondi immagini decorative, pausa animazioni, evidenzia link, cursore grande, **nascondi pulsanti flottanti** (Assistente virtuale + SOS 112, utile da mobile dove possono coprire il testo — il FAB a11y stesso resta sempre visibile per riabilitare gli altri).
+In ogni pagina, in basso a sinistra, un **FAB rotondo blu** (`bi-universal-access`) apre un **dialog modale** con preferenze di lettura: dimensione testo, allineamento, carattere ad alta leggibilità, spaziatura ampia, contrasto (default/alto/invertito), scala di grigi, nascondi immagini decorative, pausa animazioni, evidenzia link, cursore grande, **nascondi pulsanti flottanti** (Assistente + SOS 112; il FAB a11y stesso resta sempre visibile per riabilitarli).
 
 **File coinvolti** (tutti nel tema, modificabili liberamente):
 
@@ -244,7 +244,7 @@ Logica skip in `assistente-fab.html`: `{{ $skipSections := slice "assistente" "e
 
 ## Bozze social automatiche (Gemini API + Pillow)
 
-Sistema completo per generare bozze post social (X, Facebook, Instagram, Telegram) e immagini per il **feed** (post/carosello 1080×1350, formato 4:5) e per le **storie** (1080×1920, 9:16) a partire dagli articoli del sito. I testi usano il **tier gratuito Gemini 2.5 Flash** (costo zero); le immagini sono generate da Pillow (nessun costo, nessun limite di quota).
+Genera bozze post social (X, Facebook, Instagram, Telegram) + immagini per il **feed** (post/carosello 1080×1350, 4:5) e le **storie** (1080×1920, 9:16) dagli articoli. Testi via **tier gratuito Gemini 2.5 Flash** (costo zero); immagini via Pillow (nessun costo né limite di quota).
 
 **Componenti operativi:**
 - `scripts/genera-social.py` — motore Python: legge le rules `.claude/rules/02|03|06.md` e le inietta nel system prompt di Gemini, ottiene 4 testi via JSON strutturato, salva i `.txt` in `social-bozze/AAAA/MM/<slug>/`.
@@ -268,7 +268,7 @@ Ordine carosello: **title card → citazione → punti → foto** (max 10 slide)
   - `storia.jpg` → **STORIE** (Instagram + Facebook).
   - `README.md` — mappa "dove va ogni file" (scritto da `genera-immagini-social.py`).
 - Per **X** e **Telegram** vanno bene le immagini del feed (Telegram le mostra intere, X le espande al tap): nessuna misura dedicata.
-- (Storico) Fino al 2 maggio 2026 le immagini stavano in `static/images-social/` con URL pubblico Aruba, poi spostate in `social-bozze/`. Fino al 23 maggio 2026 i nomi erano `instagram-post*.jpg`/`instagram-story.jpg` e il formato 1080×1080 con font Liberation Sans: migrati a `feed-*`/`storia`, formato 4:5 (1080×1350) e font Titillium Web.
+- (Storico) Fino al 2 maggio 2026 le immagini erano in `static/images-social/` (URL Aruba), poi in `social-bozze/`. Fino al 23 maggio 2026 i nomi erano `instagram-post*.jpg`/`instagram-story.jpg`, formato 1080×1080 font Liberation Sans: migrati a `feed-*`/`storia`, 4:5 (1080×1350), font Titillium Web.
 
 **Setup chiave:**
 - Locale: `export GEMINI_API_KEY="..."` in `~/.bashrc` (chiave gratuita da `aistudio.google.com/apikey`).
@@ -320,15 +320,15 @@ Le fiabe in `static/formazione/storie-e-racconti/*/` hanno un bottone "🔊 Asco
 
 ## Homepage enhancements v1.0 (aprile 2026)
 
-Quattro micro-miglioramenti grafici applicati alla **sola homepage** (scoped via `body.home-page`), tutti AGID-compliant, tutti con copertura `prefers-reduced-motion` + `@media print` + toolbar a11y "pausa animazioni" + supporto mobile (nessuna `@media (hover: hover)` o esclusione touch — funzionano identico su iOS/Android).
+Quattro micro-miglioramenti grafici sulla **sola homepage** (scoped via `body.home-page`), tutti AGID-compliant, con copertura `prefers-reduced-motion` + `@media print` + toolbar a11y "pausa animazioni" + mobile (nessuna esclusione touch).
 
-1. **Live dot pulse** (`.live-dot` + `@keyframes livePulse`) — cerchio blu istituzionale `#003366` accanto al titolo "Notizie in Evidenza", animazione box-shadow espansiva 2.5s. Ricalca il pattern `sosPulse` del bottone SOS-112 in chiave informativa anziché di emergenza. Markup: `<span class="live-dot" aria-hidden="true"></span>` davanti al testo del titolo, in `partials/latest-news.html`.
+1. **Live dot pulse** (`.live-dot` + `@keyframes livePulse`) — cerchio blu `#003366` accanto al titolo "Notizie in Evidenza", box-shadow espansiva 2.5s (pattern `sosPulse` in chiave informativa). Markup `<span class="live-dot" aria-hidden="true"></span>` in `partials/latest-news.html`.
 
-2. **Reveal-on-scroll** (`.reveal-on-scroll.is-revealed` + `js/homepage-reveal.js`) — IntersectionObserver puro stdlib applicato ai selettori `.quick-action-card`, `.card-servizio`, `.card-notizia-hero`, `section .card.border-danger`, `.stat-hero-item`, `.card-numero-utile`. Le card appaiono con `opacity 0→1 + translateY(15px→0)` quando entrano nel viewport (threshold 0.15, rootMargin -50px). Auto-disable se reduced-motion o IntersectionObserver assente. Script caricato `defer` solo per `.IsHome`.
+2. **Reveal-on-scroll** (`.reveal-on-scroll.is-revealed` + `js/homepage-reveal.js`) — IntersectionObserver stdlib su `.quick-action-card`, `.card-servizio`, `.card-notizia-hero`, `section .card.border-danger`, `.stat-hero-item`, `.card-numero-utile`. Card con `opacity 0→1 + translateY(15px→0)` al viewport (threshold 0.15, rootMargin -50px). Auto-disable se reduced-motion o IntersectionObserver assente. `defer` solo per `.IsHome`.
 
-3. **Hero pattern + gradiente animato** (`@keyframes heroGradientShift` + `body.home-page .hero-section::after`) — pattern di linee oblique sottili (`opacity: 0.045`) via `repeating-linear-gradient` (zero data:URL) sovrapposto al gradiente blu esistente. Il gradiente shifta cromaticamente in 35s loop con `background-size: 180%`. Il movimento è quasi impercettibile ma dà profondità.
+3. **Hero pattern + gradiente animato** (`@keyframes heroGradientShift` + `body.home-page .hero-section::after`) — linee oblique sottili (`opacity: 0.045`) via `repeating-linear-gradient` sul gradiente blu; shift cromatico in 35s loop con `background-size: 180%`. Quasi impercettibile, dà profondità.
 
-4. **Hover lift card + freccia CTA** — `translateY(-3px)` + ombra blu istituzionale al `:hover` o `:focus-within`. La `bi-arrow-right` delle CTA scivola di 4px a destra. Stessa estetica già usata in articoli prev/next + correlati. Su mobile si attiva al `:focus-within` (touch).
+4. **Hover lift card + freccia CTA** — `translateY(-3px)` + ombra blu al `:hover`/`:focus-within`; la `bi-arrow-right` delle CTA scivola 4px a destra. Su mobile al `:focus-within` (touch).
 
 CSS scoped sezione **HOMEPAGE ENHANCEMENTS v1.0** in `custom.css` (~150 righe). Body class `home-page` aggiunta condizionalmente in `baseof.html`: `<body{{ if .IsHome }} class="home-page"{{ end }}>` — necessaria per scope CSS, evita leak su altre pagine.
 
@@ -352,12 +352,10 @@ Da maggio 2026 **tutte le pagine** del sito (articoli, sezioni con `_index.md`, 
 | Template specifici (`rischi-prevenzione/single.html`, `articoli-da-ascoltare/list.html`, `pittogrammi/single.html`) | Non ancora uniformati — eredita comportamento attuale del template, che usa `page-tools.html` per il box azione |
 
 **Blacklist TTS (per il box "Leggi"):**
-- Match basato su `.Section` + `.Kind == "section"` (NON su `.RelPermalink` come prima).
-- Sezioni in blacklist: `privacy`, `note-legali`, `accessibilita`, `social-media-policy`, `mappa-sito`, `attribuzioni-pittogrammi`, `cerca`, `glossario`, più `comunicazioni` (solo su list.html, perché è l'archivio di card, non un articolo).
-- Fix del 16/05/2026: il match precedente su `.RelPermalink` confrontato con stringhe tipo `/privacy/` falliva sui build GitHub Pages dove `.RelPermalink` ha il subpath `/sito-pc-genzano/privacy/`. Match su `.Section` è invariante rispetto al baseURL.
-- Articoli (`.Kind == "page"`) non sono mai blacklist: `.Section == "comunicazioni"` non blocca un singolo articolo, solo la list page.
-
-**Box sopra il corpo** — `.strumenti-articolo.strumenti-lettura`:
+- Match su `.Section` + `.Kind == "section"` (NON su `.RelPermalink` come prima).
+- Sezioni: `privacy`, `note-legali`, `accessibilita`, `social-media-policy`, `mappa-sito`, `attribuzioni-pittogrammi`, `cerca`, `glossario`, più `comunicazioni` (solo su list.html, è l'archivio di card).
+- Fix 16/05/2026: il match su `.RelPermalink` vs `/privacy/` falliva su GitHub Pages (subpath `/sito-pc-genzano/privacy/`); `.Section` è invariante rispetto al baseURL.
+- Articoli (`.Kind == "page"`) mai blacklist: `.Section == "comunicazioni"` blocca solo la list page, non il singolo articolo.
 
 **Box sopra il corpo** — `.strumenti-articolo.strumenti-lettura`:
 - Header: *"ℹ️ Leggi questo articolo in altri modi"*
@@ -373,7 +371,7 @@ Da maggio 2026 **tutte le pagine** del sito (articoli, sezioni con `_index.md`, 
 
 CSS scoped sezione **STRUMENTI ARTICOLO v1.0** in `custom.css`. Box con sfondo `#e7f0fa`, bordo sinistro 4px `#003366`, border-radius 6px. I partial atomici interni (`tts-wrapper`, `braille-download`, `trascrizione-pdf-download`) hanno margine/padding/sfondo azzerati dentro al wrapper. Gli hint testuali ridondanti (`.braille-download-hint`, `.trascrizione-pdf-hint`) sono nascosti dentro il wrapper (l'utente ha chiesto 1-2 righe pulite, non hint sotto ogni bottone). Mobile: gap ridotto. Stampa: entrambi i box nascosti via `@media print`.
 
-**Storia del layout** (16/05/2026): l'utente ha segnalato che *"il bottone QR sta in fondo mentre tutti gli altri in alto..."*. Tre opzioni valutate: (A) tutto sopra in un unico box, (B) due box gemelli sopra/sotto, (C) tutto sopra + share sotto. Scelta (B) per mantenere la logica WCAG (accessibilità prima del contenuto) con stile coerente. Stessa data, l'utente ha chiesto di portare i 2 box **su tutte le pagine** (non solo articoli `/comunicazioni/`): estensione a `_default/list.html` (box lettura + box azione su pagine sezione tipo `/contatti/`, `/numeri-utili/`) e `layouts/index.html` (solo box azione, perché la homepage è un launcher non un articolo). Fix collaterale: blacklist TTS spostata da `.RelPermalink` a `.Section` per funzionare anche su GitHub Pages (subpath). Bottone QR cambiato da `btn-outline-secondary` a `btn-outline-primary` per coerenza visiva con Stampa.
+**Storia del layout** (16/05/2026): segnalato dall'utente che *"il bottone QR sta in fondo mentre gli altri in alto"*. Tre opzioni valutate (A unico box sopra, B due box gemelli, C tutto sopra + share sotto): scelta (B) per la logica WCAG (accessibilità prima del contenuto). Stessa data, estensione dei 2 box **a tutte le pagine**: `_default/list.html` (lettura + azione su pagine sezione) e `layouts/index.html` (solo azione, è un launcher). Fix collaterale: blacklist TTS da `.RelPermalink` a `.Section` (GitHub Pages subpath); bottone QR da `btn-outline-secondary` a `btn-outline-primary`.
 
 **Naming dei file QR** (allineato fra `qr-articolo.html` partial e `scripts/genera-qr-articoli.py`):
 - Kind `home` → `static/qr/home.png` (homepage)
