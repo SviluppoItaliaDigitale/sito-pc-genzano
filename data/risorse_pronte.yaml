@@ -680,3 +680,47 @@ materiali:
   dimensione: 4.3 MB
   data_pubblicazione: '2026-05-30'
   licenza: CC BY-NC-SA 4.0
+- id: vento-forte-presentazione-pdf-2026-05-30
+  tema: vento-forte
+  tema_titolo: Vento forte
+  tipo: presentazione-pdf
+  titolo: 'Presentazione (PDF): Vento forte'
+  descrizione: 'Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo
+    senza PowerPoint.'
+  file_url: /presentazioni/2026-05-30-vento-forte-presentazione-pdf.pdf
+  dimensione: 10.7 MB
+  data_pubblicazione: '2026-05-30'
+  licenza: CC BY-NC-SA 4.0
+- id: vento-forte-presentazione-2026-05-30
+  tema: vento-forte
+  tema_titolo: Vento forte
+  tipo: presentazione
+  titolo: 'Presentazione: Vento forte'
+  descrizione: 'Presentazione PowerPoint per docenti: 15 slide per un''ora di Educazione
+    Civica in classe (formato modificabile).'
+  file_url: /presentazioni/2026-05-30-vento-forte-presentazione.pptx
+  dimensione: 12.4 MB
+  data_pubblicazione: '2026-05-30'
+  licenza: CC BY-NC-SA 4.0
+- id: vento-forte-podcast-2026-05-30
+  tema: vento-forte
+  tema_titolo: Vento forte
+  tipo: podcast
+  titolo: 'Podcast: Vento forte'
+  descrizione: Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online
+    o scaricabile per ascolto offline.
+  file_url: /podcast/episodi/2026-05-30-vento-forte-podcast.m4a
+  dimensione: 53.5 MB
+  data_pubblicazione: '2026-05-30'
+  licenza: CC BY-NC-SA 4.0
+- id: vento-forte-infografica-2026-05-30
+  tema: vento-forte
+  tema_titolo: Vento forte
+  tipo: infografica
+  titolo: 'Infografica: Vento forte'
+  descrizione: Infografica formato quadrato pronta per condivisione social, stampa
+    A4 e affissione in bacheca.
+  file_url: /infografiche/2026-05-30-vento-forte-infografica.png
+  dimensione: 4.3 MB
+  data_pubblicazione: '2026-05-30'
+  licenza: CC BY-NC-SA 4.0
