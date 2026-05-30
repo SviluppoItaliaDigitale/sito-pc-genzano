@@ -724,3 +724,36 @@ materiali:
   dimensione: 4.3 MB
   data_pubblicazione: '2026-05-30'
   licenza: CC BY-NC-SA 4.0
+- id: aree-emergenza-presentazione-pdf-2026-05-30
+  tema: aree-emergenza
+  tema_titolo: Aree di emergenza
+  tipo: presentazione-pdf
+  titolo: 'Presentazione (PDF): Aree di emergenza'
+  descrizione: 'Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo
+    senza PowerPoint.'
+  file_url: /presentazioni/2026-05-30-aree-emergenza-presentazione-pdf.pdf
+  dimensione: 14.1 MB
+  data_pubblicazione: '2026-05-30'
+  licenza: CC BY-NC-SA 4.0
+- id: aree-emergenza-presentazione-2026-05-30
+  tema: aree-emergenza
+  tema_titolo: Aree di emergenza
+  tipo: presentazione
+  titolo: 'Presentazione: Aree di emergenza'
+  descrizione: 'Presentazione PowerPoint per docenti: 15 slide per un''ora di Educazione
+    Civica in classe (formato modificabile).'
+  file_url: /presentazioni/2026-05-30-aree-emergenza-presentazione.pptx
+  dimensione: 17.1 MB
+  data_pubblicazione: '2026-05-30'
+  licenza: CC BY-NC-SA 4.0
+- id: aree-emergenza-infografica-2026-05-30
+  tema: aree-emergenza
+  tema_titolo: Aree di emergenza
+  tipo: infografica
+  titolo: 'Infografica: Aree di emergenza'
+  descrizione: Infografica formato quadrato pronta per condivisione social, stampa
+    A4 e affissione in bacheca.
+  file_url: /infografiche/2026-05-30-aree-emergenza-infografica.png
+  dimensione: 3.8 MB
+  data_pubblicazione: '2026-05-30'
+  licenza: CC BY-NC-SA 4.0
