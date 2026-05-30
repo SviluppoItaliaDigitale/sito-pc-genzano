@@ -118,7 +118,7 @@ Ogni fase ha i suoi rischi, le sue misure di prevenzione e i suoi DPI.
 
 ## Perché riguarda anche il Gruppo di Genzano di Roma
 
-Il Gruppo Comunale Volontari di Protezione Civile di Genzano aderisce a **FEPIVOL** (Federazione Provinciale Volontari di Protezione Civile) ed è iscritto all'Elenco territoriale regionale. Nelle attivazioni in supporto ad altri comuni può essere chiamato a contribuire al servizio di ristorazione di un campo. Sapere come è organizzata una cucina conforme, quali rischi esistono e quali procedure rispettare è parte integrante della preparazione di chi entra in turno.
+Il Gruppo Comunale Volontari di Protezione Civile di Genzano aderisce a **FE.PI.VOL.** (Federazione Pronto Intervento Volontariato ODV) ed è iscritto all'Elenco territoriale regionale. Nelle attivazioni in supporto ad altri comuni può essere chiamato a contribuire al servizio di ristorazione di un campo. Sapere come è organizzata una cucina conforme, quali rischi esistono e quali procedure rispettare è parte integrante della preparazione di chi entra in turno.
 
 ## Sul nostro sito
 

@@ -100,6 +100,9 @@ Struttura regionale che analizza previsioni e dati di monitoraggio e pubblica i 
 ### CNR {#cnr}
 Consiglio Nazionale delle Ricerche. Maggiore ente pubblico di ricerca italiano; per la protezione civile fornisce conoscenze scientifiche sui rischi naturali (frane via CNR-IRPI).
 
+### CNSAS {#cnsas}
+Corpo Nazionale Soccorso Alpino e Speleologico. Struttura del Club Alpino Italiano (CAI) specializzata nel soccorso in montagna, in grotta e negli ambienti impervi. È una struttura operativa del Servizio nazionale di protezione civile.
+
 ### COC — Centro Operativo Comunale
 Struttura che il Sindaco attiva per coordinare un'emergenza sul territorio comunale. Riunisce le funzioni necessarie, come tecnica, volontariato, sanità, assistenza alla popolazione, comunicazione e viabilità.
 
@@ -158,6 +161,9 @@ Situazione in cui un evento è in corso o imminente e richiede interventi immedi
 ### Epicentro e ipocentro {#epicentro-e-ipocentro}
 L'ipocentro è il punto in profondità dove si genera il terremoto; l'epicentro è il punto in superficie sulla sua verticale, di norma l'area di maggiore danno.
 
+### ERCC {#ercc}
+Emergency Response Coordination Centre (Centro di coordinamento della risposta alle emergenze). Centro della Commissione europea che coordina 24 ore su 24 gli aiuti tra i Paesi durante le grandi emergenze, nell'ambito del Meccanismo unionale di protezione civile.
+
 ### Esercitazione
 Attività simulata usata per verificare piani, procedure, comunicazioni e capacità operative.
 
@@ -196,6 +202,9 @@ Inventario dei Fenomeni Franosi in Italia. È una banca dati nazionale, gestita 
 
 ### Incidente rilevante (stabilimenti RIR) {#incidente-rilevante}
 Evento (incendio, esplosione, rilascio di sostanze tossiche) che in uno stabilimento industriale può creare grave pericolo per persone e ambiente. Gli stabilimenti che superano le soglie di legge sono detti «a rischio di incidente rilevante» (RIR) e seguono la direttiva Seveso.
+
+### INAIL {#inail}
+Istituto Nazionale per l'Assicurazione contro gli Infortuni sul Lavoro. Ente pubblico che assicura i lavoratori contro infortuni e malattie professionali; garantisce la copertura anche ai volontari di protezione civile nelle attività autorizzate.
 
 ### INGV
 Istituto Nazionale di Geofisica e Vulcanologia. Monitora terremoti, vulcani e maremoti ed è una fonte istituzionale per i dati sismici in Italia.
@@ -332,6 +341,9 @@ Mappa che mostra l'intensità di scuotimento del terreno dopo un terremoto, calc
 
 ### Sistema di allertamento {#sistema-di-allertamento}
 Catena di soggetti (DPC, Centri Funzionali, Comuni) che valutano il rischio e fanno arrivare l'allerta al cittadino. Opera 24 ore su 24, 7 giorni su 7.
+
+### SNPC {#snpc}
+Servizio Nazionale della Protezione Civile. L'insieme di Stato, Regioni, Comuni, enti e volontariato che concorrono alle attività di protezione civile in Italia, coordinati dal Dipartimento (D.Lgs. 1/2018).
 
 ### Soggetto Attuatore {#soggetto-attuatore}
 Figura nominata nelle ordinanze di emergenza per realizzare interventi specifici (es. la ricostruzione post-sisma). Risponde al Commissario.

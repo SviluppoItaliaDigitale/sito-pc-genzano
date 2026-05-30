@@ -790,3 +790,43 @@
     - "App YouPol"
   definizione: "App ufficiale della Polizia di Stato per segnalare bullismo, violenza domestica, droga e altri reati. Le segnalazioni possono essere anonime e includere foto, video o messaggi vocali."
   link: "/glossario/#youpol"
+
+# ============================================================
+# Aggiunte 2026-05-30 — sigle istituzionali ad alta frequenza
+# (audit copertura glossario: usate nei contenuti ma assenti dal popover)
+# CSV escluso di proposito: collide con il formato file CSV (open-data).
+# ============================================================
+
+- id: snpc
+  termine: "SNPC"
+  varianti:
+    - "SNPC"
+    - "Servizio Nazionale della Protezione Civile"
+    - "Servizio Nazionale di Protezione Civile"
+  definizione: "Servizio Nazionale della Protezione Civile: l'insieme di Stato, Regioni, Comuni, enti e volontariato che fanno protezione civile in Italia, coordinati dal DPC (D.Lgs. 1/2018)."
+  link: "/glossario/#snpc"
+
+- id: cnsas
+  termine: "CNSAS"
+  varianti:
+    - "CNSAS"
+    - "Corpo Nazionale Soccorso Alpino e Speleologico"
+    - "Soccorso Alpino e Speleologico"
+  definizione: "Corpo Nazionale Soccorso Alpino e Speleologico: struttura del CAI che soccorre le persone in montagna, in grotta e negli ambienti impervi. È una struttura operativa del Servizio nazionale di PC."
+  link: "/glossario/#cnsas"
+
+- id: ercc
+  termine: "ERCC"
+  varianti:
+    - "ERCC"
+    - "Emergency Response Coordination Centre"
+  definizione: "Emergency Response Coordination Centre: centro della Commissione europea che coordina 24 ore su 24 gli aiuti tra i Paesi nelle grandi emergenze (Meccanismo unionale di protezione civile)."
+  link: "/glossario/#ercc"
+
+- id: inail
+  termine: "INAIL"
+  varianti:
+    - "INAIL"
+    - "Istituto Nazionale per l'Assicurazione contro gli Infortuni sul Lavoro"
+  definizione: "Istituto Nazionale per l'Assicurazione contro gli Infortuni sul Lavoro: ente pubblico che assicura i lavoratori contro infortuni e malattie professionali; copre anche i volontari di PC nelle attività autorizzate."
+  link: "/glossario/#inail"
