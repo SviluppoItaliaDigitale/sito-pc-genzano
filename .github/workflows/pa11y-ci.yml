@@ -19,6 +19,7 @@ on:
 
 permissions:
   contents: read
+  pull-requests: write
 
 jobs:
   pa11y:
@@ -57,11 +58,33 @@ jobs:
         continue-on-error: true
         run: |
           set +e
-          echo "## ♿ Report accessibilità Pa11y (axe, WCAG 2.2 AA)" >> "$GITHUB_STEP_SUMMARY"
-          echo '' >> "$GITHUB_STEP_SUMMARY"
-          echo 'Fase di rollout: **report-only**, non blocca la PR. Le findings vanno bonificate, poi il gate verrà reso bloccante (rimuovere `continue-on-error`).' >> "$GITHUB_STEP_SUMMARY"
-          echo '' >> "$GITHUB_STEP_SUMMARY"
-          echo '```' >> "$GITHUB_STEP_SUMMARY"
-          pa11y-ci 2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
-          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          pa11y-ci --config .pa11yci.json 2>&1 | tee pa11y-report.txt
+          {
+            echo "## ♿ Report accessibilità Pa11y (axe, WCAG 2.2 AA)"
+            echo ''
+            echo 'Fase di rollout: **report-only**, non blocca la PR.'
+            echo ''
+            echo '```'
+            cat pa11y-report.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
           exit 0
+
+      - name: "💬 Pubblica il report come commento sulla PR"
+        if: github.event_name == 'pull_request'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          {
+            echo "## ♿ Report accessibilità Pa11y (axe, WCAG 2.2 AA) — report-only"
+            echo ''
+            echo 'Gate non bloccante in fase di rollout. Findings da bonificare prima di rendere il gate obbligatorio.'
+            echo ''
+            echo '```'
+            head -c 60000 pa11y-report.txt
+            echo '```'
+          } > pa11y-body.md
+          gh pr comment "${{ github.event.pull_request.number }}" \
+            --body-file pa11y-body.md \
+            --repo "${{ github.repository }}"
