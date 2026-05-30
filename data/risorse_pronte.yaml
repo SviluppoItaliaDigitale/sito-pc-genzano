@@ -636,3 +636,47 @@ materiali:
   dimensione: 16.5 MB
   data_pubblicazione: '2026-05-29'
   licenza: CC BY-NC-SA 4.0
+- id: blackout-presentazione-pdf-2026-05-30
+  tema: blackout
+  tema_titolo: Blackout
+  tipo: presentazione-pdf
+  titolo: 'Presentazione (PDF): Blackout'
+  descrizione: 'Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo
+    senza PowerPoint.'
+  file_url: /presentazioni/2026-05-30-blackout-presentazione-pdf.pdf
+  dimensione: 13.7 MB
+  data_pubblicazione: '2026-05-30'
+  licenza: CC BY-NC-SA 4.0
+- id: blackout-presentazione-2026-05-30
+  tema: blackout
+  tema_titolo: Blackout
+  tipo: presentazione
+  titolo: 'Presentazione: Blackout'
+  descrizione: 'Presentazione PowerPoint per docenti: 15 slide per un''ora di Educazione
+    Civica in classe (formato modificabile).'
+  file_url: /presentazioni/2026-05-30-blackout-presentazione.pptx
+  dimensione: 16.6 MB
+  data_pubblicazione: '2026-05-30'
+  licenza: CC BY-NC-SA 4.0
+- id: blackout-podcast-2026-05-30
+  tema: blackout
+  tema_titolo: Blackout
+  tipo: podcast
+  titolo: 'Podcast: Blackout'
+  descrizione: Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online
+    o scaricabile per ascolto offline.
+  file_url: /podcast/episodi/2026-05-30-blackout-podcast.m4a
+  dimensione: 41.1 MB
+  data_pubblicazione: '2026-05-30'
+  licenza: CC BY-NC-SA 4.0
+- id: blackout-infografica-2026-05-30
+  tema: blackout
+  tema_titolo: Blackout
+  tipo: infografica
+  titolo: 'Infografica: Blackout'
+  descrizione: Infografica formato quadrato pronta per condivisione social, stampa
+    A4 e affissione in bacheca.
+  file_url: /infografiche/2026-05-30-blackout-infografica.png
+  dimensione: 4.3 MB
+  data_pubblicazione: '2026-05-30'
+  licenza: CC BY-NC-SA 4.0
