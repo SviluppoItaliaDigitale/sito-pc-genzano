@@ -59,9 +59,15 @@
   }
 
   // ---- Stato UI ------------------------------------------------------------
-  function stato(msg, errore) {
+  function stato(msg, errore, loading) {
     var el = $('lab-stato');
-    el.textContent = msg || '';
+    if (loading) {
+      el.textContent = '';
+      el.appendChild(el.ownerDocument.createElement('span')).className = 'pc-spinner';
+      el.appendChild(el.ownerDocument.createTextNode(msg || ''));
+    } else {
+      el.textContent = msg || '';
+    }
     el.className = 'lab-stato' + (errore ? ' lab-stato-errore' : '');
   }
 
@@ -79,7 +85,7 @@
       '&daily=' + v.daily.join(',') + '&timezone=Europe%2FRome';
 
     $('lab-output').hidden = false;
-    stato('Sto scaricando i dati di ' + luogo.nome + '…');
+    stato('Sto scaricando i dati di ' + luogo.nome + '…', false, true);
     $('lab-grafico-wrap').hidden = true;
     $('lab-tabella-blocco').hidden = true;
 
@@ -407,7 +413,7 @@
   function apriEsempio(file) {
     var path = file.charAt(0) === '/' ? file : (OPENDATA + file);
     $('lab-output').hidden = false;
-    stato("Apro l'esempio…");
+    stato("Apro l'esempio…", false, true);
     fetch(path).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
       .then(function (dati) { disegna(dati); stato(''); $('lab-output').scrollIntoView({ behavior: 'smooth', block: 'start' }); })
       .catch(function (e) { stato('Esempio non disponibile (' + e.message + ').', true); });

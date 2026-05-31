@@ -6792,6 +6792,38 @@ html.a11y-pause-anim .scelta-card:hover { transform: none; }
 @media print { .timeline-wrap ul { border-color: #000; } .timeline-wrap ul > li::before { border-color: #000; } }
 
 /* ============================================================
+   SPINNER v1.0 — indicatore di caricamento (Bootstrap Italia "progress-spinner")
+   ============================================================ */
+.pc-spinner { display: inline-block; width: 1em; height: 1em; vertical-align: -0.15em; margin-right: .45rem; border: 2px solid rgba(0,51,102,.25); border-top-color: #003366; border-radius: 50%; animation: pc-spin .7s linear infinite; }
+@keyframes pc-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .pc-spinner { animation-duration: 2.2s; } }
+html.a11y-pause-anim .pc-spinner { animation: none; border-top-color: rgba(0,51,102,.25); }
+
+/* ============================================================
+   TABELLE — intestazione sticky sui tabelloni lunghi (.table-sticky)
+   ============================================================ */
+.article-body .table-sticky, .list-intro-content .table-sticky { max-height: 70vh; overflow-y: auto; }
+.table-sticky table thead th { position: sticky; top: 0; z-index: 2; }
+@media print { .table-sticky { max-height: none; overflow: visible; } .table-sticky table thead th { position: static; } }
+
+/* ============================================================
+   GALLERIA v1.0 — carosello accessibile per ≥4 foto (shortcode {{< galleria >}})
+   Solo avanzamento manuale (mai autoplay — WCAG 2.2.2).
+   ============================================================ */
+.galleria { position: relative; margin: 1.2rem 0; }
+.galleria-track { display: flex; gap: .6rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding-bottom: .4rem; -webkit-overflow-scrolling: touch; }
+.galleria-track > figure { scroll-snap-align: center; flex: 0 0 88%; max-width: 88%; margin: 0; }
+.galleria-track > figure img { width: 100%; height: auto; border-radius: 8px; border: 1px solid #cdd9e8; }
+.galleria-track > figure figcaption { font-size: .85rem; color: #33415c; margin-top: .35rem; font-style: italic; }
+.galleria-nav { display: flex; justify-content: space-between; gap: .5rem; margin-top: .5rem; }
+.galleria-btn { background: #003366; color: #fff; border: 0; border-radius: 50%; width: 2.4rem; height: 2.4rem; font-size: 1.1rem; cursor: pointer; }
+.galleria-btn:hover { background: #00284f; }
+.galleria-btn:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 2px; }
+.galleria-btn[disabled] { opacity: .4; cursor: default; }
+@media (min-width: 768px) { .galleria-track > figure { flex-basis: 46%; max-width: 46%; } }
+@media print { .galleria-track { display: block; overflow: visible; } .galleria-track > figure { max-width: 100%; page-break-inside: avoid; margin-bottom: .6rem; } .galleria-nav { display: none; } }
+
+/* ============================================================
    LABORATORIO METEO v1.0 — costruttore di grafici client-side
    ============================================================ */
 .lab-esempi, .lab-builder { margin: 2rem 0 0; }
