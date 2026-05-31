@@ -86,7 +86,7 @@ Di seguito il programma diffuso dal **Comune di Genzano di Roma**. È un program
 
 ## Indicazioni per il cittadino e il visitatore
 
-- **Dove parcheggiare**: i parcheggi del centro storico sono inutilizzabili per la chiusura della viabilità. Sono predisposti **parcheggi di scambio** alla periferia della città, con navette gratuite verso il centro. Le indicazioni puntuali vengono pubblicate dal Comune nei giorni precedenti l'evento.
+- **Dove parcheggiare**: i parcheggi del centro storico non sono utilizzabili per la chiusura della viabilità. Per le aree di sosta alternative e gli eventuali servizi di collegamento, fai riferimento alle indicazioni che il Comune di Genzano di Roma pubblica nei giorni precedenti l'evento.
 - **Viabilità**: chiusure totali su via Italo Belardi e sulle vie immediatamente limitrofe per tutta la durata della manifestazione. Sono previste **deviazioni** per il traffico locale e i mezzi pubblici. Controlla la cartellonistica e le notifiche del Comune.
 - **Cosa portare**: acqua, cappello, **scarpe comode** (l'asfalto si surriscalda con il sole pieno), eventualmente protezione solare. Documento di identità per accedere ai presidi sanitari.
 - **Cosa evitare**: bottiglie di vetro, fuochi pirotecnici non autorizzati, droni non concordati con l'organizzazione e i Vigili del Fuoco. Non superare le transenne intorno al tappeto: il quadro è composto da petali freschi e si rovina con il passaggio non controllato.
@@ -133,9 +133,9 @@ Il Gruppo **non è attivabile direttamente dai cittadini**: in caso di emergenza
 
 ## Fonti ufficiali
 
-Le informazioni puntuali su **chiusure stradali, ordinanze, parcheggi di scambio, navette, orari** vengono diffuse dai canali ufficiali nella settimana che precede l'evento. Controlla:
+Le informazioni puntuali su **chiusure stradali, ordinanze, parcheggi, eventuali navette, orari** vengono diffuse dai canali ufficiali nella settimana che precede l'evento. Controlla:
 
-- [Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/) — ordinanze sulla viabilità, comunicati ufficiali, parcheggi di scambio e linee navetta. Le informazioni operative compaiono di norma nei **5-7 giorni prima** della manifestazione.
+- [Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/) — ordinanze sulla viabilità, comunicati ufficiali, aree di parcheggio ed eventuali collegamenti. Le informazioni operative compaiono di norma nei **5-7 giorni prima** della manifestazione.
 - [infioratadigenzano.it](https://www.infioratadigenzano.it/) — sito ufficiale della manifestazione: programma definitivo, mappa dei quadri, storia delle 248 edizioni.
 - [DPC — Circolare del 6 agosto 2018 sulle manifestazioni pubbliche](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/) — precisazioni del Dipartimento Nazionale della Protezione Civile sull'attivazione e l'impiego del volontariato di Protezione Civile nelle manifestazioni pubbliche (cornice normativa del ruolo del Gruppo durante l'Infiorata).
 
