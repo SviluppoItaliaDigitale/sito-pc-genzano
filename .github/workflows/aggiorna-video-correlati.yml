@@ -141,6 +141,4 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # GITHUB_TOKEN push non auto-triggera deploy.yml, lo lanciamo
-          # esplicitamente
-          gh workflow run deploy.yml
+          echo "Mappa video aggiornata nel repo; deploy delegato a deploy-coalescer.yml."
