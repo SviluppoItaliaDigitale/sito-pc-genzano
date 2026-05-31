@@ -56,11 +56,19 @@ body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
   color: #001f3d;
   text-decoration: none;
 }
+/* Voce attiva del dropdown (pagina corrente): Bootstrap Italia forza un
+   testo azzurro slavato #1f5c99 + underline con una regola più specifica
+   (.navbar .dropdown-menu .link-list-wrapper ul li a.list-item.active) che
+   su sfondo chiaro falliva WCAG 1.4.3. Allineiamo la specificità e forziamo
+   sfondo blu istituzionale + testo bianco (12.6:1). */
+.navbar .dropdown-menu .link-list-wrapper ul li a.list-item.active,
 .navbar .dropdown-menu .list-item.active {
-  background: #003366;
-  color: #fff;
+  background: #003366 !important;
+  color: #fff !important;
   font-weight: 600;
+  text-decoration: none;
 }
+.navbar .dropdown-menu .link-list-wrapper ul li a.list-item.active span { color: #fff !important; }
 .navbar .nav-link.dropdown-toggle .icon { vertical-align: middle; transition: transform 0.2s; }
 .navbar .nav-link.dropdown-toggle[aria-expanded="true"] .icon { transform: rotate(180deg); }
 
