@@ -166,6 +166,34 @@ def fetch_card():
            "&timezone=Europe%2FRome&forecast_days=4")
     return _get(url)
 
+# ---------------------------------------------------------------- cornice microtesto
+def microtext_frame(W, H, band, year):
+    """Cornice di microtesto lungo i 4 bordi: incide la provenienza (nome + sito)
+    in caratteri minuscoli, leggibili solo allo zoom. Funzione anti-appropriazione:
+    chi ripubblica la cartina si porta dietro l'attribuzione; ritagliare la cornice
+    è evidente e distruttivo. Decorativa per gli screen reader (aria-hidden): la
+    descrizione testuale della mappa è già nell'aria-label dell'<svg>."""
+    base = ("PROTEZIONE CIVILE GENZANO DI ROMA · www.protezionecivilegenzano.it · "
+            "elaborazione grafica del Gruppo Comunale Volontari di Protezione Civile · "
+            "© %d · " % year)
+    fs = 4.6
+    col, op = "#003366", "0.55"
+    cw = fs * 0.52  # larghezza media carattere stimata
+    def rep(length):
+        n = max(2, int(length / (len(base) * cw)) + 1)
+        return base * n
+    Wt, Ht = W - 2 * band, H - 2 * band
+    top   = (f'<text x="{band:.1f}" y="{band*0.72:.1f}" textLength="{Wt:.1f}" lengthAdjust="spacing" '
+             f'font-size="{fs}" fill="{col}" fill-opacity="{op}">{rep(Wt)}</text>')
+    bot   = (f'<text x="{band:.1f}" y="{H-band*0.42:.1f}" textLength="{Wt:.1f}" lengthAdjust="spacing" '
+             f'font-size="{fs}" fill="{col}" fill-opacity="{op}">{rep(Wt)}</text>')
+    left  = (f'<text transform="translate({band*0.72:.1f},{H-band:.1f}) rotate(-90)" textLength="{Ht:.1f}" '
+             f'lengthAdjust="spacing" font-size="{fs}" fill="{col}" fill-opacity="{op}">{rep(Ht)}</text>')
+    right = (f'<text transform="translate({W-band*0.42:.1f},{band:.1f}) rotate(90)" textLength="{Ht:.1f}" '
+             f'lengthAdjust="spacing" font-size="{fs}" fill="{col}" fill-opacity="{op}">{rep(Ht)}</text>')
+    return (f'<g aria-hidden="true" font-family="Trebuchet MS,Verdana,Arial,sans-serif" '
+            f'letter-spacing="0.2">{top}{bot}{left}{right}</g>')
+
 # ---------------------------------------------------------------- proiezione mappa
 def build_svg(map_data, card_data, oggi):
     geo = json.load(open(GEO))
@@ -298,10 +326,8 @@ def build_svg(map_data, card_data, oggi):
 
     data_lunga = f"{GIORNI_IT[oggi.weekday()]} {oggi.day} {MESI_IT[oggi.month]} {oggi.year}"
     ora = oggi.strftime("%H:%M")
-    svg = (
-        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W:.0f} {H:.0f}" '
-        f'font-family="Trebuchet MS,Verdana,Arial,sans-serif" role="img" '
-        f'aria-label="Mappa del Lazio con temperatura massima e cielo previsti oggi per ogni provincia, e un riquadro di dettaglio per Genzano di Roma: alle {gz_ora}, {gz_now} gradi, {gz_desc}, percepita {gz_perc} gradi, massima {gz_max} gradi, minima {gz_min} gradi.">'
+    # contenuto della cartina (coordinate invariate); verrà traslato dentro la cornice
+    inner = (
         f'<defs><clipPath id="mapclip"><rect x="0" y="0" width="{Wmap:.0f}" height="{Hmap:.0f}"/></clipPath></defs>'
         f'<rect x="0" y="0" width="{W:.0f}" height="{H:.0f}" fill="#ffffff"/>'
         f'<g transform="translate({PAD},{HEAD})" clip-path="url(#mapclip)">{contesto}{prov_svg}{marker}{labels}{cardg}</g>'
@@ -312,6 +338,17 @@ def build_svg(map_data, card_data, oggi):
         f'<g>{leg}</g>'
         f'<text x="{W/2:.0f}" y="{H-22:.0f}" font-size="10.5" font-weight="700" text-anchor="middle" fill="#003366">Elaborazione grafica del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma</text>'
         f'<text x="{W/2:.0f}" y="{H-8:.0f}" font-size="8.5" text-anchor="middle" fill="#6c757d">Dati: Open-Meteo (modelli ECMWF) &#183; dato indicativo, per le allerte vale il Centro Funzionale Regionale del Lazio</text>'
+    )
+    # cornice di microtesto attorno a tutto (banda dedicata, non sovrapposta al contenuto)
+    F = 13
+    W2, H2 = W + 2 * F, H + 2 * F
+    svg = (
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W2:.0f} {H2:.0f}" '
+        f'font-family="Trebuchet MS,Verdana,Arial,sans-serif" role="img" '
+        f'aria-label="Mappa del Lazio con temperatura massima e cielo previsti oggi per ogni provincia, e un riquadro di dettaglio per Genzano di Roma: alle {gz_ora}, {gz_now} gradi, {gz_desc}, percepita {gz_perc} gradi, massima {gz_max} gradi, minima {gz_min} gradi.">'
+        f'<rect x="0" y="0" width="{W2:.0f}" height="{H2:.0f}" fill="#ffffff"/>'
+        f'<g transform="translate({F},{F})">{inner}</g>'
+        f'{microtext_frame(W2, H2, F, oggi.year)}'
         f'</svg>'
     )
     return svg
