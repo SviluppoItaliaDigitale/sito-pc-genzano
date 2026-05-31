@@ -14,7 +14,9 @@ Compila il modulo per creare un piano di emergenza da stampare e conservare in c
 
 Un piano familiare aiuta tutti a sapere cosa fare se non c'è tempo per decidere con calma. È utile soprattutto quando in famiglia ci sono bambini, anziani, persone con disabilità, terapie da seguire o animali domestici.
 
-> Compila il piano insieme alla famiglia. Rileggilo almeno una volta l'anno e aggiornalo quando cambiano casa, scuola, lavoro, numeri di telefono, farmaci, ausili o composizione del nucleo familiare.
+{{< callout tipo="info" titolo="Come usare questo piano" >}}
+Compila il piano insieme alla famiglia. Rileggilo almeno una volta l'anno e aggiornalo quando cambiano casa, scuola, lavoro, numeri di telefono, farmaci, ausili o composizione del nucleo familiare.
+{{< /callout >}}
 
 <div class="card border-primary shadow-sm p-3 mb-4" role="note">
 
@@ -28,11 +30,13 @@ Durante un'emergenza potresti non essere con i tuoi familiari. Se avete già dec
 
 Un piano familiare risponde a cinque domande:
 
+{{< passi >}}
 1. **Dove ci troviamo?** I punti di ritrovo concordati.
 2. **Chi chiamiamo?** Un contatto fuori città o fuori zona.
 3. **Cosa portiamo?** Il kit di emergenza e gli oggetti essenziali.
 4. **Chi ha bisogno di aiuto?** Bambini, anziani, persone con disabilità, terapie e animali domestici.
 5. **Cosa facciamo prima di uscire?** Gas, acqua, quadro elettrico, documenti, farmaci e chiavi, solo se si può fare in sicurezza.
+{{< /passi >}}
 
 ## <i class="bi bi-clipboard-check-fill text-primary me-2" aria-hidden="true"></i>Prima di compilare {#prima-di-compilare}
 

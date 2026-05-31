@@ -77,6 +77,7 @@ Ogni attività viene svolta secondo le procedure del sistema di protezione civil
 
 Prima dell'impiego operativo è previsto un percorso di formazione. Il corso di accesso affronta, in modo progressivo:
 
+{{< passi titolo="Il corso di accesso, passo dopo passo" >}}
 1. struttura del Sistema nazionale di protezione civile;
 2. rischi del territorio;
 3. sicurezza personale e uso dei dispositivi di protezione;
@@ -84,6 +85,7 @@ Prima dell'impiego operativo è previsto un percorso di formazione. Il corso di 
 5. comunicazioni radio di base;
 6. primo soccorso e autoprotezione;
 7. comportamento corretto in scenario.
+{{< /passi >}}
 
 Dopo il corso base è possibile approfondire settori specifici, come antincendio boschivo, logistica, radiocomunicazioni, supporto alla popolazione, comunicazione, divulgazione e altre attività coerenti con le necessità del Gruppo.
 
@@ -99,19 +101,23 @@ Non esiste una "giornata tipo" sola: l'attività cambia in base al periodo (ordi
 
 ### Sabato mattina ordinario
 
+{{< timeline >}}
 - **9:00** — arrivo in sede, riunione informativa del Capo Gruppo (5-10 minuti)
 - **9:15** — verifica mezzi, attrezzature, dotazioni radio
 - **10:00** — supporto a un'attività programmata: esercitazione, presenza in piazza per evento divulgativo, intervento nelle scuole, manutenzione magazzino
 - **12:30** — rientro in sede, debriefing breve, archiviazione schede
+{{< /timeline >}}
 
 Niente di "eroico": è lavoro tecnico fatto bene. La maggior parte delle attività ordinarie non è azione, è **preparazione e manutenzione**.
 
 ### Sera con allerta meteo arancione
 
+{{< timeline >}}
 - **18:00** — il Capo Gruppo riceve l'attivazione dal Comune (COC)
 - **18:30** — volontari reperibili si presentano in sede in turni
 - **19:00** — presidio del territorio: cancelli su strade allagabili, supporto ai Vigili del Fuoco se richiesto, monitoraggio radio
 - **dopo cessazione allerta** — ripristino mezzi, segnalazione situazioni residue, archiviazione
+{{< /timeline >}}
 
 Lo scenario può durare **anche tutta la notte**: si lavora in turni di 4-6 ore.
 

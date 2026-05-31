@@ -1,0 +1,12 @@
+{{- /* Stepper / passi numerati. Avvolge una lista ordinata Markdown e la
+       trasforma in passi con pallini numerati. Uso:
+       {{< passi >}}
+       1. Primo passo…
+       2. Secondo passo…
+       {{< /passi >}}
+       Parametro opzionale titolo. */ -}}
+{{- $titolo := .Get "titolo" -}}
+<div class="passi-wrap" role="group"{{ with $titolo }} aria-label="{{ . }}"{{ end }}>
+  {{- with $titolo }}<p class="passi-titolo"><i class="bi bi-signpost-split me-1" aria-hidden="true"></i>{{ . }}</p>{{ end -}}
+  {{ .Inner | markdownify }}
+</div>

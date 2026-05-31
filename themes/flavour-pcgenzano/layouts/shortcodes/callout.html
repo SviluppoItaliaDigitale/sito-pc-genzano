@@ -1,0 +1,11 @@
+{{- /* Callout istituzionale (Bootstrap Italia "callout").
+       Uso: {{< callout tipo="info|avviso|pericolo|ok" titolo="…" >}} testo markdown {{< /callout >}}
+       tipo default: info. */ -}}
+{{- $tipo := .Get "tipo" | default "info" -}}
+{{- $titolo := .Get "titolo" -}}
+{{- $icone := dict "info" "bi-info-circle" "avviso" "bi-exclamation-triangle" "pericolo" "bi-x-octagon" "ok" "bi-check-circle" -}}
+{{- $icona := index $icone $tipo | default "bi-info-circle" -}}
+<div class="callout callout-{{ $tipo }}" role="note">
+  {{- with $titolo }}<p class="callout-title"><i class="bi {{ $icona }}" aria-hidden="true"></i> {{ . }}</p>{{ end -}}
+  <div class="callout-body">{{ .Inner | markdownify }}</div>
+</div>

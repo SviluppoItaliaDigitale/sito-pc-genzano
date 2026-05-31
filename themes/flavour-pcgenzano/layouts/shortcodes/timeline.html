@@ -1,0 +1,13 @@
+{{- /* Linea del tempo. Avvolge una lista Markdown (un evento per voce, di norma
+       "**data/titolo** — descrizione") e la rende come timeline verticale con
+       marcatori. Uso:
+       {{< timeline >}}
+       - **1980** — Terremoto dell'Irpinia: nasce il bisogno di un sistema…
+       - **1992** — Legge 225: istituito il Servizio nazionale…
+       {{< /timeline >}}
+       Parametro opzionale titolo. */ -}}
+{{- $titolo := .Get "titolo" -}}
+<div class="timeline-wrap"{{ with $titolo }} role="group" aria-label="{{ . }}"{{ end }}>
+  {{- with $titolo }}<p class="timeline-titolo"><i class="bi bi-clock-history me-1" aria-hidden="true"></i>{{ . }}</p>{{ end -}}
+  {{ .Inner | markdownify }}
+</div>
