@@ -78,6 +78,12 @@ Per ogni file in `git diff --name-only HEAD origin/main -- content/comunicazioni
 20. **Animazioni senza `prefers-reduced-motion`**: cerca `@keyframes` non protette da media query reduce.
 21. **Immagini senza `alt`**: `grep -nE '<img[^>]+>' themes/ | grep -v 'alt='`.
 22. **Selettori CSS con `:has()` senza fallback `.is-X`**: comune problema cross-browser, vedi caso galleria-auto.js.
+22b. **Contrasto su isole brand scure** (WCAG 1.4.3) — anti-pattern testo-scuro-su-sfondo-scuro. Candidati: file con un hero/footer scuro che contengono classi pensate per sfondo chiaro:
+   ```bash
+   grep -rlE 'app-page-hero|page-hero|hero-section|it-footer' static themes/flavour-pcgenzano/layouts --include=*.html 2>/dev/null \
+     | xargs grep -lnE 'text-muted|btn-outline-(primary|secondary)' 2>/dev/null
+   ```
+   Per ogni candidato, **verifica se l'anti-pattern è DENTRO il blocco hero/footer scuro** (non su una card a sfondo chiaro nella stessa pagina) e, se sì, **calcola il contrasto** (snippet Python in `pc-accessibility-auditor` § 7): `text-muted` grigio su blu = 2.69:1 / `btn-outline-primary` blu su blu = 2.80:1 → FAIL. Fix: testo bianco + `btn-light`/`btn-outline-light`. ⚠️ Il bianco a opacità su blu PASSA: non è un fail. Incidente /giochi/ 31/05/2026.
 
 ### F. Performance — WARNING
 
