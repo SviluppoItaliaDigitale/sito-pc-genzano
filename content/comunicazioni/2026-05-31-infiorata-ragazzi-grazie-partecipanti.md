@@ -41,11 +41,19 @@ Durante le due giornate i nostri volontari hanno garantito **presenza e assisten
 
 Il Gruppo opera sempre **a supporto della Polizia Locale e delle Forze dell'Ordine**, sul mandato del Comune. Il nostro servizio **non comprende la regolazione del traffico né i servizi di polizia stradale**: sono compiti di competenza esclusiva degli organi di polizia, come stabilito dagli **articoli 11 e 12 del Codice della Strada** (D.Lgs. 285/1992) e ribadito dalla [Circolare del 6 agosto 2018 del Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/) sulle manifestazioni pubbliche.
 
+{{< foto src="/images/2026-05-31-infiorata-volontari-selfie.webp"
+         alt="Cinque volontari di Protezione Civile sorridenti, in maglia blu, con la fontana e la scalinata di Genzano sullo sfondo."
+         caption="Una pausa tra i turni di servizio all'Infiorata dei Ragazzi." >}}
+
 ## Sulle nostre maglie c'è Olly's
 
 Chi ci ha incontrati lungo la via avrà notato una scritta sulle nostre maglie: **"PROTEZIONE CIVILE per Olly's"**. Olly's è un'associazione vicina al nostro Gruppo, dedicata alle persone con **epidermolisi bollosa**: una malattia rara della pelle. I bambini che ne soffrono sono conosciuti come **"bambini farfalla"**, perché la loro pelle è fragile come le ali di una farfalla.
 
 Indossare il loro nome è il nostro modo di **far conoscere e sostenere la loro causa**.
+
+{{< foto src="/images/2026-05-31-infiorata-maglie-ollys.webp"
+         alt="Quattro volontari di spalle davanti alla fontana di Genzano: sulle maglie blu si leggono la scritta PROTEZIONE CIVILE e il logo Olly's."
+         caption="Sulla schiena delle nostre maglie: PROTEZIONE CIVILE per Olly's." >}}
 
 ## Sul nostro sito
 
