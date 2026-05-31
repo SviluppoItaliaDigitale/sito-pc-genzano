@@ -1,0 +1,94 @@
+name: "🌍 Carte ECMWF OpenCharts (Meteo Europa)"
+
+# Scarica e auto-ospita un sottoinsieme curato di carte di previsione sinottiche
+# europee a medio termine dell'ECMWF (OpenCharts API pubblica), per la scheda
+# "Meteo Europa (ECMWF)" del cruscotto (/cruscotto/).
+#
+# Dati pienamente aperti CC BY 4.0 (dal 1° ottobre 2025), nessuna chiave API.
+# Privacy-first: le immagini sono auto-ospitate (static/images/ecmwf/), niente
+# embed di terzi nel browser del cittadino. Stesso pattern dei workflow meteo-*.
+#
+# Commit solo se le carte cambiano, poi ri-trigger esplicito di deploy.yml
+# (i push del GITHUB_TOKEN non auto-triggerano i workflow su evento push).
+
+on:
+  schedule:
+    # Le carte sinottiche a medio termine ECMWF si rinnovano di fatto 2×/giorno
+    # (corse 00Z e 12Z), disponibili ~08:30 e ~20:30 UTC; le corse 06Z/18Z sono
+    # supplementari. Preleviamo 4×/giorno appena dopo ogni finestra di disponibilità
+    # per non mancare un refresh — lo script committa SOLO se le carte cambiano
+    # davvero (confronto byte WebP), quindi le corse "a vuoto" non producono deploy.
+    # Ore esplicite, minuto fuori dai quarti canonici (cfr. cron-job stagger).
+    #   03:47 → dopo 18Z (giorno prima) · 09:47 → dopo 00Z
+    #   15:47 → dopo 06Z              · 21:47 → dopo 12Z
+    - cron: "47 3,9,15,21 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+  issues: write
+
+concurrency:
+  group: "ecmwf-charts"
+  cancel-in-progress: false
+
+jobs:
+  genera:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v5
+
+      - name: "🐍 Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: "📦 Dipendenze"
+        run: pip install --quiet pillow
+
+      - name: "🌍 Scarica carte ECMWF OpenCharts"
+        run: python3 scripts/genera-ecmwf-charts.py
+
+      - name: "✅ Validazione output"
+        run: |
+          set -e
+          test -s data/ecmwf_charts.json && echo "Metadati presenti"
+          python3 -c "import json,sys; d=json.load(open('data/ecmwf_charts.json')); n=len(d.get('carte',[])); print(f'{n} carte'); sys.exit(0 if n>0 else 1)"
+
+      - name: "💾 Commit se cambiato + ri-trigger deploy"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          git add static/images/ecmwf data/ecmwf_charts.json
+          if git diff --cached --quiet; then
+            echo "Nessun cambiamento — niente commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(meteo): carte ECMWF OpenCharts aggiornate [skip-ecmwf]"
+          for t in 1 2 3; do
+            if git push 2>&1; then break; fi
+            echo "Push fallito (tentativo $t), rebase..."
+            git pull --rebase origin main || { echo "Rebase fallito"; exit 1; }
+            if [ "$t" = "3" ]; then echo "Push fallito dopo 3 tentativi"; exit 1; fi
+          done
+          gh workflow run deploy.yml
+
+      - name: "🚨 Apri issue se il prelievo è fallito"
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          TITLE="ECMWF OpenCharts: prelievo carte fallito"
+          EXISTING=$(gh issue list --state open --search "$TITLE in:title" --json number --jq '.[0].number' || echo "")
+          BODY="Il workflow \`ecmwf-charts.yml\` non è riuscito a scaricare le carte ECMWF dall'OpenCharts API.\n\nPossibili cause: API \`charts.ecmwf.int\` non raggiungibile, slug prodotto cambiato nel catalogo, formato risposta variato. Controllare il log del run e \`scripts/genera-ecmwf-charts.py\` (lista \`PRODOTTI\`). Le carte già presenti nel sito restano invariate fino al ripristino. Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --body "$(printf '%b' "$BODY")"
+          else
+            gh issue create --title "$TITLE" --label "automazione" --body "$(printf '%b' "$BODY")"
+          fi
