@@ -4,7 +4,7 @@ description: "Due modi per ascoltare i contenuti della PC di Genzano di Roma: po
 layout: "single"
 toc: false
 tts: true
-dataUltimaRevisione: "2026-05-15"
+dataUltimaRevisione: "2026-05-31"
 sitemap:
   priority: 0.6
   changefreq: monthly
@@ -30,10 +30,22 @@ Utile per chi non sente bene, per chi preferisce ascoltare mentre fa altro, per 
 
 ## Quale scegliere?
 
-- Vuoi **episodi audio strutturati**, da seguire nel tempo, da ascoltare in macchina o durante una camminata? → Il [podcast](/podcast/).
-- Vuoi **ascoltare un singolo articolo** mentre lavori al computer, o aiutare chi non legge bene? → Gli [articoli da ascoltare](/articoli-da-ascoltare/).
+<div class="scelta-audio">
+  <a class="scelta-card scelta-podcast" href="/podcast/">
+    <span class="scelta-icona"><i class="bi bi-broadcast" aria-hidden="true"></i></span>
+    <span class="scelta-titolo">Scegli il podcast</span>
+    <span class="scelta-testo">Vuoi <strong>episodi audio strutturati</strong>, da seguire nel tempo, da ascoltare in macchina o durante una camminata.</span>
+    <span class="scelta-cta">Vai al podcast <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+  </a>
+  <a class="scelta-card scelta-articoli" href="/articoli-da-ascoltare/">
+    <span class="scelta-icona"><i class="bi bi-volume-up-fill" aria-hidden="true"></i></span>
+    <span class="scelta-titolo">Scegli gli articoli da ascoltare</span>
+    <span class="scelta-testo">Vuoi <strong>ascoltare un singolo articolo</strong> mentre lavori al computer, o aiutare chi non legge bene.</span>
+    <span class="scelta-cta">Vai agli articoli <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+  </a>
+</div>
 
-Entrambe le opzioni sono **gratuite**, **accessibili** (WCAG 2.2 AA) e **rispettose della privacy**.
+<p class="scelta-garanzie">Le due opzioni sono entrambe <span class="scelta-badge"><i class="bi bi-cash-coin" aria-hidden="true"></i> gratuite</span> <span class="scelta-badge"><i class="bi bi-universal-access" aria-hidden="true"></i> accessibili (WCAG 2.2 AA)</span> <span class="scelta-badge"><i class="bi bi-shield-lock" aria-hidden="true"></i> rispettose della privacy</span></p>
 
 ## Podcast del Sistema nazionale di Protezione Civile
 
