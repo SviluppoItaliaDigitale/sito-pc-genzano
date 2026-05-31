@@ -313,6 +313,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Esperimenti e attività</p>
   <p class="ms-card-desc">Esperimenti scientifici e giochi da fare a scuola o a casa, con materiali semplici, per capire terremoti, vulcani, frane, alluvioni, incendi, maremoti, caldo, neve, temporali e i rischi antropici. Per ogni attività: età consigliata, materiali, sicurezza.</p>
 </a>
+<a class="ms-card ms-edu" href="/laboratorio-meteo/">
+  <div class="ms-card-icon"><i class="bi bi-graph-up"></i></div>
+  <p class="ms-card-title">Laboratorio meteo</p>
+  <p class="ms-card-desc">Strumento interattivo per esplorare i dati meteo e climatici dei Castelli Romani: scegli luogo, periodo e variabile, costruisci il grafico e leggi la tabella dei dati. Con esempi pronti sul clima locale (dati ERA5 / Open-Meteo).</p>
+</a>
 <a class="ms-card ms-edu" href="/formazione/kit-scuola-infanzia/">
   <div class="ms-card-icon"><i class="bi bi-stars"></i></div>
   <p class="ms-card-title">Kit Scuola Infanzia</p>
