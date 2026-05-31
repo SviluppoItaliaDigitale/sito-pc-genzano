@@ -28,8 +28,11 @@
     <figure class="ecmwf-figura{{ if ne $i 0 }} d-none{{ end }}" data-ecmwf-fig="{{ $c.slug }}">
       <img src="{{ printf "%s%s" $c.file $v | relURL }}" loading="lazy"
            class="img-fluid"
-           alt="Carta di previsione ECMWF a medio termine sull'Europa: {{ $c.titolo }}. {{ $c.descr }}">
-      <figcaption>{{ $c.descr }}</figcaption>
+           alt="Carta di previsione ECMWF sull'Europa: {{ $c.titolo }}{{ with $c.valido }}, valida per {{ . }}{{ end }}. {{ $c.descr }}">
+      <figcaption>
+        {{ $c.descr }}
+        {{ with $c.valido }}<span class="ecmwf-valido"><i class="bi bi-calendar-event" aria-hidden="true"></i> Previsione valida per <strong>{{ . }}</strong>{{ with $c.passo }} <span class="text-muted">({{ . }})</span>{{ end }}.</span>{{ end }}
+      </figcaption>
     </figure>
     {{ end }}
   </div>
@@ -37,11 +40,11 @@
   <noscript><div class="alert alert-warning mt-2" role="note">Per cambiare carta serve JavaScript: tutte le carte sono comunque caricate qui sopra.</div></noscript>
 
   <p class="small text-muted mt-2 mb-0">
-    Carte a <strong>medio termine</strong> (quadro generale europeo, fino a diversi giorni avanti):
+    Previsioni europee a <strong>medio termine</strong> (quadro sinottico a circa <strong>3 giorni</strong>):
     <a href="https://charts.ecmwf.int/" target="_blank" rel="noopener noreferrer">ECMWF OpenCharts</a>
     (Centro europeo per le previsioni meteo a medio termine), licenza <strong>CC BY 4.0</strong> —
     <em>based on data and products of the European Centre for Medium-Range Weather Forecasts (ECMWF)</em>.
-    Aggiornate automaticamente; ultimo prelievo: <strong>{{ .aggiornato }}</strong>.
+    {{ with .corsa }}Corsa del modello delle <strong>{{ . }}</strong>; aggiornamento automatico.{{ else }}Aggiornamento automatico.{{ end }}
     Sono il <strong>contesto sinottico</strong>, non il bollettino locale: per la previsione puntuale
     su Genzano vedi le schede <strong>Meteo</strong> e <strong>Previsioni ItaliaMeteo</strong>;
     per le allerte vale il <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Regionale del Lazio</a>.
