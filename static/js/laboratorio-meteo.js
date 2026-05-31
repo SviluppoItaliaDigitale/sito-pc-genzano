@@ -4,7 +4,8 @@
 (function () {
   'use strict';
 
-  var ARCHIVE = 'https://archive-api.open-meteo.com/v1/archive';
+  var ARCHIVE = 'https://archive-api.open-meteo.com/v1/archive';   // ERA5: storico, latenza ~5 gg
+  var FORECAST = 'https://api.open-meteo.com/v1/forecast';         // copre il recente passato fino a ieri
   var OPENDATA = (window.LAB_OPENDATA || '/open-data/');
 
   // Luoghi dei Castelli Romani (coordinate indicative del centro abitato).
@@ -69,7 +70,11 @@
   // ---- Fetch live ----------------------------------------------------------
   function caricaLive(luogo, varKey, da, a) {
     var v = VARIABILI[varKey];
-    var url = ARCHIVE + '?latitude=' + luogo.lat + '&longitude=' + luogo.lon +
+    // Per periodi recenti (inizio entro ~90 gg) uso l'endpoint forecast, che ha i dati
+    // fino a ieri; per le serie storiche lunghe uso l'archivio ERA5 (latenza ~5 gg).
+    var limite = ggFa(90);
+    var endpoint = (new Date(da) >= limite) ? FORECAST : ARCHIVE;
+    var url = endpoint + '?latitude=' + luogo.lat + '&longitude=' + luogo.lon +
       '&start_date=' + da + '&end_date=' + a +
       '&daily=' + v.daily.join(',') + '&timezone=Europe%2FRome';
 
@@ -315,12 +320,12 @@
     LUOGHI.forEach(function (l) {
       var o = document.createElement('option'); o.value = l.id; o.textContent = l.nome; sel.appendChild(o);
     });
-    // periodo default: ultimi 30 giorni con margine di 6 gg (latenza archivio ERA5)
-    var fine = ggFa(6), inizio = ggFa(36);
+    // periodo default: ultimi 30 giorni fino a ieri (l'endpoint forecast copre fino a ieri)
+    var fine = ggFa(1), inizio = ggFa(31);
     $('lab-a').value = iso(fine);
     $('lab-da').value = iso(inizio);
-    $('lab-a').max = iso(ggFa(5));
-    $('lab-da').max = iso(ggFa(5));
+    $('lab-a').max = iso(ggFa(1));
+    $('lab-da').max = iso(ggFa(1));
 
     $('lab-form').addEventListener('submit', function (e) {
       e.preventDefault();
@@ -333,12 +338,12 @@
 
     Array.prototype.forEach.call(document.querySelectorAll('.lab-chip'), function (chip) {
       chip.addEventListener('click', function () {
-        var fineD = ggFa(6);
+        var fineD = ggFa(1);
         if (chip.dataset.giorni) {
           $('lab-a').value = iso(fineD);
-          $('lab-da').value = iso(ggFa(6 + parseInt(chip.dataset.giorni, 10)));
+          $('lab-da').value = iso(ggFa(1 + parseInt(chip.dataset.giorni, 10)));
         } else if (chip.dataset.annoScorso) {
-          var f = ggFa(6); f.setFullYear(f.getFullYear() - 1);
+          var f = ggFa(1); f.setFullYear(f.getFullYear() - 1);
           var i = new Date(f); i.setMonth(i.getMonth() - 1);
           $('lab-a').value = iso(f); $('lab-da').value = iso(i);
         }
