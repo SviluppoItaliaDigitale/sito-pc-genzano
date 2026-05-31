@@ -6724,6 +6724,39 @@ html.a11y-pause-anim .scelta-card:hover { transform: none; }
 }
 
 /* ============================================================
+   INDICE DI PAGINA v1.0 — navscroll con scrollspy (sticky desktop)
+   ============================================================ */
+.page-index { margin: 0 0 1.5rem; border: 1px solid #dbe4ef; border-radius: 8px; background: #f8fafd; padding: .4rem .6rem; }
+.page-index-summary { display: flex; align-items: center; gap: .5rem; cursor: pointer; padding: .35rem .4rem; list-style: none; font-weight: 700; color: #003366; }
+.page-index-summary::-webkit-details-marker { display: none; }
+.page-index-title { font-size: .95rem; }
+.page-index-chevron { margin-left: auto; transition: transform .2s; }
+.page-index[open] .page-index-chevron { transform: rotate(180deg); }
+.page-index-nav { margin-top: .3rem; }
+/* la lista è prodotta da .TableOfContents: <nav id="TableOfContents"><ul>… */
+.page-index-nav ul { list-style: none; margin: 0; padding: 0; border-left: 2px solid #dbe4ef; }
+.page-index-nav ul ul { border-left: 0; padding-left: .7rem; }
+.page-index-nav a { display: block; padding: .3rem .8rem; margin-left: -2px; border-left: 3px solid transparent; color: #33415c; text-decoration: none; font-size: .92rem; line-height: 1.35; }
+.page-index-nav ul ul a { font-size: .86rem; color: #5a6678; padding-top: .2rem; padding-bottom: .2rem; }
+.page-index-nav a:hover { color: #003366; background: #eef3fa; }
+.page-index-nav a.active { color: #003366; font-weight: 700; border-left-color: #003366; background: #eef3fa; }
+.page-index-nav a:focus-visible { outline: 3px solid #ffbe2e; outline-offset: -2px; }
+/* offset per le ancore sotto la navbar fissa */
+.article-body h2[id], .article-body h3[id], .list-intro-content h2[id], .list-intro-content h3[id] { scroll-margin-top: 100px; }
+
+@media (min-width: 992px) {
+  .col-indice { order: 1; }
+  .col-contenuto-indice { order: 2; }
+  .page-index { position: sticky; top: 90px; max-height: calc(100vh - 110px); overflow-y: auto; margin-bottom: 0; }
+  .page-index-summary { cursor: default; }
+  .page-index-chevron { display: none; }
+  /* su desktop la lista è sempre visibile anche se l'utente l'ha chiusa */
+  .page-index .page-index-nav { display: block !important; }
+}
+@media (prefers-reduced-motion: reduce) { .page-index-chevron { transition: none; } }
+@media print { .page-index { display: none; } }
+
+/* ============================================================
    LABORATORIO METEO v1.0 — costruttore di grafici client-side
    ============================================================ */
 .lab-esempi, .lab-builder { margin: 2rem 0 0; }
