@@ -6862,11 +6862,18 @@ html.a11y-pause-anim .pc-spinner { animation: none; border-top-color: rgba(0,51,
 .lab-tabella th:first-child, .lab-tabella td:first-child { text-align: left; }
 .lab-tabella thead th { background: #003366; color: #fff; }
 .lab-tabella tbody tr:nth-child(even) { background: #f4f7fb; }
+/* barra azioni sotto il grafico: scarica PNG / stampa / copia link / condividi */
+.lab-azioni { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .7rem; }
 
 @media (max-width: 768px) {
   .lab-form { gap: .7rem; padding: .9rem; }
   .lab-field select, .lab-field input[type="date"] { min-width: 100%; }
   .lab-field { flex: 1 1 100%; }
+}
+/* stampa: solo titolo + grafico + tabella; via form, esempi, pulsanti, stato */
+@media print {
+  .lab-form, .lab-scorciatoie, .lab-esempi, .lab-azioni, .lab-tabella-azioni button, .lab-stato, .lab-fonte { display: none !important; }
+  .lab-grafico { border-color: #000; }
 }
 @media (prefers-reduced-motion: reduce) { .lab-esempio-card { transition: none; } }
 html.a11y-pause-anim .lab-esempio-card:hover { transform: none; }

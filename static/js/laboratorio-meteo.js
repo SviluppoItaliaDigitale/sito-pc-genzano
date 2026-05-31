@@ -108,6 +108,7 @@
       };
       disegna(dati);
       stato('');
+      aggiornaUrl({ l: luogo.id, v: varKey, da: da, a: a });
     }).catch(function (e) {
       stato('Non sono riuscito a caricare i dati (' + e.message + '). Riprova tra qualche istante o cambia periodo.', true);
       $('lab-grafico-wrap').hidden = true;
@@ -415,8 +416,94 @@
     $('lab-output').hidden = false;
     stato("Apro l'esempio…", false, true);
     fetch(path).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
-      .then(function (dati) { disegna(dati); stato(''); $('lab-output').scrollIntoView({ behavior: 'smooth', block: 'start' }); })
+      .then(function (dati) { disegna(dati); stato(''); aggiornaUrl({ ex: file }); $('lab-output').scrollIntoView({ behavior: 'smooth', block: 'start' }); })
       .catch(function (e) { stato('Esempio non disponibile (' + e.message + ').', true); });
+  }
+
+  // ---- URL condivisibile + scarica PNG + stampa + condividi ----------------
+  function aggiornaUrl(cfg) {
+    try {
+      var qs = Object.keys(cfg).map(function (k) { return k + '=' + encodeURIComponent(cfg[k]); }).join('&');
+      history.replaceState(null, '', location.pathname + '?' + qs);
+    } catch (e) { /* no-op */ }
+  }
+
+  // Cornice di microtesto sul PNG (provenienza). Disegnata SOLO nella banda-bordo
+  // (mai sopra il grafico), bassa opacità: visibile ma non invasiva.
+  var MICRO_BASE = 'PROTEZIONE CIVILE GENZANO DI ROMA · www.protezionecivilegenzano.it · ';
+  function corniceMicrotesto(ctx, totW, totH, F, scale) {
+    ctx.save();
+    ctx.fillStyle = 'rgba(0,51,102,0.5)';
+    var fs = 4.6 * scale;
+    ctx.font = fs + 'px Trebuchet MS,Verdana,Arial,sans-serif';
+    ctx.textBaseline = 'middle'; ctx.textAlign = 'left';
+    var oneW = ctx.measureText(MICRO_BASE).width || (MICRO_BASE.length * fs * 0.5);
+    function rip(len) { return new Array(Math.max(2, Math.ceil(len / oneW) + 1) + 1).join(MICRO_BASE); }
+    var W2 = totW * scale, H2 = totH * scale, m = F * scale * 0.3;
+    ctx.fillText(rip(W2), m, F * 0.55 * scale);                 // alto
+    ctx.fillText(rip(W2), m, H2 - F * 0.45 * scale);            // basso
+    ctx.save(); ctx.translate(F * 0.55 * scale, H2 - m); ctx.rotate(-Math.PI / 2); ctx.fillText(rip(H2), 0, 0); ctx.restore();   // sinistra
+    ctx.save(); ctx.translate(W2 - F * 0.45 * scale, m); ctx.rotate(Math.PI / 2); ctx.fillText(rip(H2), 0, 0); ctx.restore();    // destra
+    ctx.restore();
+  }
+
+  function scaricaPng() {
+    var svg = document.querySelector('#lab-grafico svg');
+    if (!svg) return;
+    var clone = svg.cloneNode(true);
+    var style = document.createElementNS(SVGNS, 'style');
+    style.textContent = 'text{font-family:Trebuchet MS,Verdana,Arial,sans-serif}' +
+      '.lab-svg-tick{font-size:11px;fill:#5a6678}.lab-svg-axis{font-size:12px;fill:#003366;font-weight:600}' +
+      '.lab-svg-legend{font-size:13px;fill:#1a1a1a}' +
+      '.lab-svg-val{font-size:10.5px;fill:#1a2a3a;font-weight:600;stroke:#fff;stroke-width:3px;paint-order:stroke fill}';
+    clone.insertBefore(style, clone.firstChild);
+    clone.setAttribute('width', W); clone.setAttribute('height', H);
+    var xml = new XMLSerializer().serializeToString(clone);
+    var src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(xml);
+    var titolo = ($('lab-grafico-titolo').textContent || 'Laboratorio meteo');
+    var img = new Image();
+    img.onload = function () {
+      var scale = 2, th = 28, F = 15;            // th=banda titolo, F=banda cornice
+      var totW = W + 2 * F, totH = F + th + H + F;
+      var canvas = document.createElement('canvas');
+      canvas.width = totW * scale; canvas.height = totH * scale;
+      var ctx = canvas.getContext('2d');
+      ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, canvas.width, canvas.height);
+      // titolo (sotto la cornice in alto)
+      ctx.fillStyle = '#003366'; ctx.textBaseline = 'alphabetic';
+      ctx.font = 'bold ' + (13 * scale) + 'px Trebuchet MS,Verdana,Arial,sans-serif';
+      ctx.fillText(titolo, (F + 6) * scale, (F + th * 0.7) * scale, (W - 12) * scale);
+      // grafico
+      ctx.drawImage(img, F * scale, (F + th) * scale, W * scale, H * scale);
+      // cornice di microtesto (provenienza): visibile ma non invasiva, solo nel bordo
+      corniceMicrotesto(ctx, totW, totH, F, scale);
+      canvas.toBlob(function (blob) {
+        var url = URL.createObjectURL(blob), a = document.createElement('a');
+        a.href = url; a.download = 'laboratorio-meteo-' + (ultimoDati && ultimoDati.x[0] ? ultimoDati.x[0] : 'grafico') + '.png';
+        document.body.appendChild(a); a.click(); document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }, 'image/png');
+    };
+    img.onerror = function () { stato('Non riesco a generare il PNG su questo browser. Usa Stampa → Salva come PDF.', true); };
+    img.src = src;
+  }
+
+  function copiaLink() {
+    var url = location.href;
+    var done = function () {
+      var b = $('lab-copia-link'); if (!b) return;
+      var t = b.innerHTML; b.innerHTML = '<i class="bi bi-check2 me-1" aria-hidden="true"></i>Link copiato';
+      setTimeout(function () { b.innerHTML = t; }, 2000);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(done, function () { window.prompt('Copia il link:', url); });
+    } else { window.prompt('Copia il link:', url); }
+  }
+
+  function condividi() {
+    if (navigator.share) {
+      navigator.share({ title: $('lab-grafico-titolo').textContent || 'Laboratorio meteo', url: location.href }).catch(function () {});
+    }
   }
 
   function escapeHtml(s) {
@@ -464,7 +551,26 @@
     });
 
     $('lab-scarica-csv').addEventListener('click', scaricaCsv);
+    $('lab-scarica-png').addEventListener('click', scaricaPng);
+    $('lab-stampa').addEventListener('click', function () { window.print(); });
+    $('lab-copia-link').addEventListener('click', copiaLink);
+    if (navigator.share) { var cd = $('lab-condividi'); cd.hidden = false; cd.addEventListener('click', condividi); }
+
     caricaEsempi();
+
+    // grafico condivisibile: ricostruisci dallo stato nell'URL
+    var p = new URLSearchParams(location.search);
+    if (p.get('ex')) {
+      apriEsempio(p.get('ex'));
+    } else if (p.get('l') && p.get('v') && p.get('da') && p.get('a')) {
+      var luogo = LUOGHI.filter(function (l) { return l.id === p.get('l'); })[0];
+      if (luogo) {
+        sel.value = luogo.id;
+        if (VARIABILI[p.get('v')]) $('lab-variabile').value = p.get('v');
+        $('lab-da').value = p.get('da'); $('lab-a').value = p.get('a');
+        caricaLive(luogo, $('lab-variabile').value, p.get('da'), p.get('a'));
+      }
+    }
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
