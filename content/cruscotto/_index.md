@@ -10,6 +10,8 @@ aliases:
 
 Un'unica pagina per consultare i dati di rischio del territorio, da **fonti ufficiali e aperte**. Scegli il tema con i pulsanti qui sotto. Sono dati **indicativi**: per le allerte valgono i bollettini del [Centro Funzionale Regionale del Lazio](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti), in emergenza chiama il **112**.
 
+<div class="cruscotto-callout" role="note"><i class="bi bi-graph-up-arrow" aria-hidden="true"></i> <span>Vuoi <strong>esplorare i dati nel tempo</strong>? Nel <a href="/laboratorio-meteo/">Laboratorio meteo</a> costruisci grafici di temperatura, pioggia e vento dei Castelli Romani, con tabella dei dati e download.</span></div>
+
 <div class="cruscotto-switch" role="tablist" aria-label="Temi del cruscotto">
   <button type="button" class="cruscotto-tab" id="tab-terremoti" data-panel="terremoti" role="tab" aria-selected="true" aria-controls="panel-terremoti" tabindex="0"><i class="bi bi-activity" aria-hidden="true"></i> Terremoti</button>
   <button type="button" class="cruscotto-tab" id="tab-vulcani" data-panel="vulcani" role="tab" aria-selected="false" aria-controls="panel-vulcani" tabindex="-1"><i class="bi bi-triangle" aria-hidden="true"></i> Vulcani</button>
