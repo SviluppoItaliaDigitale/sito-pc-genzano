@@ -79,7 +79,8 @@ jobs:
 
           # I push fatti dal GITHUB_TOKEN non auto-triggerano i workflow su
           # evento push, quindi triggera esplicitamente deploy.yml.
-          echo "Trigger esplicito di deploy.yml per portare i QR su Aruba..."
-          gh workflow run deploy.yml
+          # QR già rigenerati inline da deploy.yml ad ogni deploy: qui niente deploy,
+          # i QR nel repo verranno portati live dal coalescer (deploy-coalescer.yml).
+          echo "QR aggiornati nel repo; deploy delegato al coalescer."
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -73,4 +73,4 @@ jobs:
             git pull --rebase origin main || { echo "Rebase fallito"; exit 1; }
             if [ "$tentativo" = "3" ]; then echo "Push fallito dopo 3 tentativi"; exit 1; fi
           done
-          gh workflow run deploy.yml
+          echo "Commit fatto; deploy delegato a deploy-coalescer.yml (dati non urgenti)."

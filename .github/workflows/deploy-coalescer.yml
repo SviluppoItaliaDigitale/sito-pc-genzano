@@ -1,0 +1,53 @@
+name: "🧲 Deploy coalescer (dati non urgenti)"
+
+# Raggruppa i deploy degli aggiornamenti di SFONDO (cartine meteo, ECMWF, clima,
+# video correlati, stato-sistema, QR, pacchetti, indice ricerca) in UN SOLO deploy
+# periodico, invece di farne uno per ogni commit automatico.
+#
+# Modello di priorità del deploy (vedi rule 10-automazioni-github-actions.md):
+#   🔴 Urgente   → check-allerta, pubblica-programmata: deploy immediato (-f priority=urgent)
+#   🟦 Contenuti → merge PR articoli: deploy immediato (evento push, preempta)
+#   ⬜ Sfondo    → questo coalescer: un deploy ogni ~30 min (-f priority=background, cede)
+#
+# I workflow di sfondo committano soltanto (niente più "gh workflow run deploy.yml"):
+# qui si controlla se main è avanti rispetto all'ultimo deploy e, se sì, si lancia
+# un singolo deploy a priorità background (che non preempta mai allerta/contenuti).
+
+on:
+  schedule:
+    # 2×/ora, orari espliciti scaglionati fuori dai quarti d'ora canonici
+    # (memory: i cron espliciti battono i pattern */N su GitHub Actions).
+    - cron: "13,43 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: write
+
+concurrency:
+  group: "deploy-coalescer"
+  cancel-in-progress: false
+
+jobs:
+  coalesce:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v5
+
+      - name: "🧲 Deploy se main è avanti rispetto all'ultimo deploy"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          HEAD_SHA="$(git rev-parse HEAD)"
+          # headSha dell'ultimo run di deploy.yml (qualsiasi stato): se coincide
+          # con HEAD, un deploy per questo commit è già partito/concluso → skip.
+          LAST_SHA="$(gh run list --workflow=deploy.yml --limit=1 --json headSha -q '.[0].headSha' 2>/dev/null || echo "")"
+          echo "HEAD main      = $HEAD_SHA"
+          echo "ultimo deploy  = ${LAST_SHA:-<nessuno>}"
+          if [ -z "$LAST_SHA" ] || [ "$LAST_SHA" != "$HEAD_SHA" ]; then
+            echo "→ Ci sono commit non ancora deployati: lancio un deploy (priorità background)."
+            gh workflow run deploy.yml --ref main -f priority=background
+          else
+            echo "→ Nessun commit nuovo da deployare. Skip (niente deploy ridondante)."
+          fi
