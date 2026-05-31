@@ -1,0 +1,60 @@
+{
+  "titolo": "Le giornate molto calde a Genzano — 2005–2025",
+  "sottotitolo": "Numero di giorni con temperatura massima di almeno 35 °C",
+  "tipo": "bar",
+  "unita": "giorni",
+  "x": [
+    "2005",
+    "2006",
+    "2007",
+    "2008",
+    "2009",
+    "2010",
+    "2011",
+    "2012",
+    "2013",
+    "2014",
+    "2015",
+    "2016",
+    "2017",
+    "2018",
+    "2019",
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+    "2024",
+    "2025"
+  ],
+  "serie": [
+    {
+      "nome": "Giorni ≥ 35 °C",
+      "colore": "#b45309",
+      "tratto": "solid",
+      "valori": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        2,
+        0,
+        2,
+        2,
+        2,
+        0
+      ]
+    }
+  ],
+  "fonte": "Rianalisi ERA5 via Open-Meteo (CC BY 4.0), allineata al Copernicus Climate Data Store."
+}
