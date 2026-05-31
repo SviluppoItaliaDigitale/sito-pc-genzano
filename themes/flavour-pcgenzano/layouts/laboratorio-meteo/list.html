@@ -1,0 +1,118 @@
+{{ define "main" }}
+<div class="page-hero">
+  <div class="container">
+    <nav aria-label="Percorso di navigazione">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ "/" | relURL }}">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Laboratorio meteo</li>
+      </ol>
+    </nav>
+    <h1>{{ .Title }}</h1>
+  </div>
+</div>
+
+<div class="container py-4">
+  <div class="row">
+    <div class="col-lg-10 mx-auto">
+
+      <div class="list-intro-content">{{ .Content }}</div>
+
+      {{/* ─── Esempi pronti (dataset climatici pre-cotti) ─── */}}
+      <section class="lab-esempi" aria-labelledby="lab-esempi-h">
+        <h2 id="lab-esempi-h"><i class="bi bi-collection me-2" aria-hidden="true"></i>Esempi pronti sui Castelli Romani</h2>
+        <p class="text-muted small">Dataset climatici già preparati. Aprine uno per vederlo come grafico, oppure costruisci il tuo qui sotto.</p>
+        <div class="lab-esempi-grid" id="lab-esempi-grid">
+          <p class="text-muted" id="lab-esempi-vuoto">Caricamento esempi…</p>
+        </div>
+      </section>
+
+      {{/* ─── Costruttore di grafici (motore live Open-Meteo) ─── */}}
+      <section class="lab-builder" aria-labelledby="lab-builder-h">
+        <h2 id="lab-builder-h"><i class="bi bi-sliders me-2" aria-hidden="true"></i>Costruisci il tuo grafico</h2>
+
+        <form id="lab-form" class="lab-form" novalidate>
+          <div class="lab-field">
+            <label for="lab-luogo">Luogo</label>
+            <select id="lab-luogo" name="luogo"></select>
+          </div>
+
+          <div class="lab-field">
+            <label for="lab-variabile">Cosa vuoi vedere</label>
+            <select id="lab-variabile" name="variabile">
+              <option value="temperatura">Temperatura (massime e minime)</option>
+              <option value="pioggia">Pioggia (mm al giorno)</option>
+              <option value="vento">Vento (velocità massima)</option>
+            </select>
+          </div>
+
+          <div class="lab-field">
+            <label for="lab-da">Dal giorno</label>
+            <input type="date" id="lab-da" name="da">
+          </div>
+
+          <div class="lab-field">
+            <label for="lab-a">Al giorno</label>
+            <input type="date" id="lab-a" name="a">
+          </div>
+
+          <div class="lab-field lab-field-azione">
+            <button type="submit" class="btn btn-primary" id="lab-genera">
+              <i class="bi bi-bar-chart-line me-1" aria-hidden="true"></i>Crea il grafico
+            </button>
+          </div>
+        </form>
+
+        <p class="lab-scorciatoie">
+          Periodi rapidi:
+          <button type="button" class="lab-chip" data-giorni="30">Ultimo mese</button>
+          <button type="button" class="lab-chip" data-giorni="365">Ultimo anno</button>
+          <button type="button" class="lab-chip" data-anno-scorso="1">Stesso periodo, anno scorso</button>
+        </p>
+      </section>
+
+      {{/* ─── Output: grafico + tabella ─── */}}
+      <section class="lab-output" id="lab-output" aria-labelledby="lab-output-h" aria-live="polite" hidden>
+        <h2 id="lab-output-h" class="visually-hidden">Risultato del grafico</h2>
+
+        <div class="lab-stato" id="lab-stato" role="status"></div>
+
+        <figure class="lab-grafico-wrap" id="lab-grafico-wrap" hidden>
+          <figcaption id="lab-grafico-titolo" class="lab-grafico-titolo"></figcaption>
+          <div class="lab-grafico" id="lab-grafico"></div>
+        </figure>
+
+        <div class="lab-tabella-blocco" id="lab-tabella-blocco" hidden>
+          <div class="lab-tabella-azioni">
+            <h3 id="lab-tabella-h">Tabella dei dati</h3>
+            <button type="button" class="btn btn-outline-primary btn-sm" id="lab-scarica-csv">
+              <i class="bi bi-download me-1" aria-hidden="true"></i>Scarica CSV
+            </button>
+          </div>
+          <div class="table-responsive">
+            <table class="lab-tabella" id="lab-tabella" aria-labelledby="lab-tabella-h"></table>
+          </div>
+        </div>
+      </section>
+
+      <noscript>
+        <div class="alert alert-warning" role="note">
+          Per usare il laboratorio interattivo serve JavaScript. I dati storici sono comunque consultabili
+          come <a href="{{ "/open-data/" | relURL }}">open data scaricabili</a> e nella scheda
+          <a href="{{ "/cruscotto/" | relURL }}">Cruscotto del territorio</a>.
+        </div>
+      </noscript>
+
+      <p class="lab-fonte small text-muted mt-4">
+        Fonte dati: rianalisi <strong>ERA5</strong> via <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a>
+        (licenza CC BY 4.0), allineata ai dati del <a href="https://cds.climate.copernicus.eu/" target="_blank" rel="noopener noreferrer">Copernicus Climate Data Store</a>.
+        Per costruire il grafico in tempo reale, il tuo browser contatta direttamente <code>open-meteo.com</code>: nessun cookie, nessun tracciamento
+        (vedi <a href="{{ "/privacy/" | relURL }}">Privacy</a>). Dati indicativi a scopo didattico.
+      </p>
+
+    </div>
+  </div>
+</div>
+
+<script>window.LAB_OPENDATA = "{{ "open-data/" | relURL }}";</script>
+<script src="{{ "js/laboratorio-meteo.js" | relURL }}" defer></script>
+{{ end }}

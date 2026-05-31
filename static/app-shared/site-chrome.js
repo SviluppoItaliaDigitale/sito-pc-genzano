@@ -107,6 +107,7 @@
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/giochi/" role="menuitem"><span>Giochi della Sicurezza</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/catalogo-giochi/" role="menuitem"><span>Catalogo dei giochi</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/esperimenti/" role="menuitem"><span>Esperimenti e attività</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/laboratorio-meteo/" role="menuitem"><span>Laboratorio meteo</span></a></li>' +
                     /* Quiz "Quanto sei preparato?" rimosso dal menu il 22 maggio 2026:
                        ancorato come strumento dentro /piano-familiare/ (autovalutazione del cittadino). */
                   '</ul></div></div>' +

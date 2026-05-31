@@ -4,7 +4,7 @@ description: "Informativa sul trattamento dei dati personali e sull'uso dei cook
 layout: "single"
 toc: true
 tts: true
-dataUltimaRevisione: "2026-05-27"
+dataUltimaRevisione: "2026-05-31"
 ---
 
 Questa pagina spiega quali dati possono essere trattati durante la navigazione del sito e come sono gestiti cookie, widget esterni e strumenti interattivi.
@@ -138,6 +138,10 @@ La pagina [Cartografia](/cartografia/) usa una mappa interattiva realizzata con 
 All'apertura della pagina, il browser scarica le sole porzioni di mappa necessarie alla visualizzazione. OpenStreetMap può quindi ricevere dati tecnici della richiesta, come indirizzo IP, area visualizzata e livello di zoom, secondo le proprie policy.
 
 La funzione **Centra sulla mia posizione** usa la Geolocation API del browser. La posizione viene letta solo dopo autorizzazione dell'utente, è usata localmente per centrare la mappa e non viene inviata al nostro server.
+
+## Laboratorio meteo
+
+La pagina [Laboratorio meteo](/laboratorio-meteo/) permette di costruire grafici con i dati climatici del territorio. Quando scegli di creare un grafico, il browser contatta direttamente il servizio **Open-Meteo** (Open-Meteo, Zurigo) per scaricare i dati storici richiesti. Open-Meteo può quindi ricevere dati tecnici della richiesta, come l'indirizzo IP, secondo la propria [privacy policy](https://open-meteo.com/en/terms). La connessione avviene **solo su tua richiesta** (al clic su "Crea il grafico"), senza cookie né tracciamento. Gli esempi pronti, invece, usano dati già salvati sul nostro sito e non comportano connessioni esterne.
 
 ## Link esterni
 

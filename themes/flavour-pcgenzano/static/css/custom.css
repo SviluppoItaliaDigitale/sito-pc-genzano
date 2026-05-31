@@ -6680,6 +6680,62 @@ html.a11y-pause-anim .consulta-rapida .cr-card:hover { transform: none; }
 @media print { .ecmwf-figura img { border-color: #000; } }
 
 /* ============================================================
+   LABORATORIO METEO v1.0 — costruttore di grafici client-side
+   ============================================================ */
+.lab-esempi, .lab-builder { margin: 2rem 0 0; }
+.lab-esempi h2, .lab-builder h2 { color: #003366; }
+.lab-esempi-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: .75rem; margin-top: .5rem; }
+.lab-esempio-card { text-align: left; background: #f4f7fb; border: 1px solid #cdd9e8; border-left: 4px solid #003366; border-radius: 8px; padding: .8rem 1rem; cursor: pointer; transition: transform .15s, box-shadow .15s; }
+.lab-esempio-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,51,102,.15); }
+.lab-esempio-card:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 2px; }
+.lab-esempio-titolo { display: block; font-weight: 600; color: #003366; margin-bottom: .25rem; }
+.lab-esempio-descr { display: block; font-size: .88rem; color: #33415c; line-height: 1.45; }
+
+.lab-form { display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-end; background: #e7f0fa; border-left: 4px solid #003366; border-radius: 6px; padding: 1rem 1.2rem; margin-top: .5rem; }
+.lab-field { display: flex; flex-direction: column; gap: .25rem; }
+.lab-field label { font-weight: 600; color: #003366; font-size: .9rem; }
+.lab-field select, .lab-field input[type="date"] { border: 1px solid #8aa0bd; border-radius: 6px; padding: .45rem .6rem; font-size: .95rem; background: #fff; min-width: 11rem; }
+.lab-field select:focus-visible, .lab-field input:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 1px; border-color: #003366; }
+.lab-field-azione { flex: 1 1 auto; }
+.lab-scorciatoie { margin-top: .8rem; font-size: .9rem; color: #33415c; }
+.lab-chip { background: #fff; border: 1px solid #8aa0bd; border-radius: 999px; padding: .25rem .8rem; margin: 0 .25rem; font-size: .85rem; color: #003366; cursor: pointer; }
+.lab-chip:hover { background: #003366; color: #fff; }
+.lab-chip:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 2px; }
+
+.lab-output { margin-top: 1.5rem; }
+.lab-stato { min-height: 1.2rem; color: #33415c; font-size: .95rem; }
+.lab-stato-errore { color: #842029; font-weight: 600; }
+.lab-grafico-wrap { margin: .5rem 0 0; }
+.lab-grafico-titolo { font-weight: 600; color: #003366; margin-bottom: .4rem; }
+.lab-grafico { width: 100%; border: 2px solid #003366; border-radius: 8px; background: #fff; padding: .5rem; }
+.lab-svg { width: 100%; height: auto; display: block; }
+.lab-svg-tick { font-size: 11px; fill: #5a6678; }
+.lab-svg-axis { font-size: 12px; fill: #003366; font-weight: 600; }
+.lab-svg-legend { font-size: 13px; fill: #1a1a1a; }
+
+.lab-tabella-blocco { margin-top: 1.5rem; }
+.lab-tabella-azioni { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.lab-tabella-azioni h3 { color: #003366; margin: 0; }
+.lab-tabella { width: 100%; border-collapse: collapse; font-size: .92rem; }
+.lab-tabella th, .lab-tabella td { border: 1px solid #dde4ee; padding: .35rem .6rem; text-align: right; }
+.lab-tabella th:first-child, .lab-tabella td:first-child { text-align: left; }
+.lab-tabella thead th { background: #003366; color: #fff; }
+.lab-tabella tbody tr:nth-child(even) { background: #f4f7fb; }
+
+@media (max-width: 768px) {
+  .lab-form { gap: .7rem; padding: .9rem; }
+  .lab-field select, .lab-field input[type="date"] { min-width: 100%; }
+  .lab-field { flex: 1 1 100%; }
+}
+@media (prefers-reduced-motion: reduce) { .lab-esempio-card { transition: none; } }
+html.a11y-pause-anim .lab-esempio-card:hover { transform: none; }
+@media print {
+  .lab-form, .lab-scorciatoie, .lab-esempi, .lab-tabella-azioni button, .lab-stato { display: none !important; }
+  .lab-grafico { border-color: #000; }
+  .lab-tabella thead th { background: #fff; color: #000; }
+}
+
+/* ============================================================
    CRUSCOTTO — CARD HOMEPAGE v1.0
    Card colorata che segnala il cruscotto in homepage. WCAG AA.
    ============================================================ */
