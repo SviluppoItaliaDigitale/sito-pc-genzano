@@ -1,0 +1,16 @@
+{{/* Indice di pagina con scrollspy (Bootstrap Italia "navscroll" semplificato).
+     L'elenco è prodotto da .TableOfContents (H2/H3, ordine del documento).
+     Sticky su desktop, accordion collassabile su mobile. Evidenzia la sezione
+     corrente mentre si scorre (static/js/indice-pagina.js, che aggiunge .active
+     ai link). Render solo se il chiamante ha verificato la soglia di heading
+     (len .Fragments.Identifiers ≥ 3 — vedi single.html / list.html). */}}
+<details class="page-index" id="indice" open>
+  <summary class="page-index-summary">
+    <span class="page-index-title"><i class="bi bi-list-ul me-1" aria-hidden="true"></i>In questa pagina</span>
+    <i class="bi bi-chevron-down page-index-chevron" aria-hidden="true"></i>
+  </summary>
+  <nav class="page-index-nav" aria-label="Indice della pagina">
+    {{ .TableOfContents }}
+  </nav>
+</details>
+<script src="{{ "js/indice-pagina.js" | relURL }}" defer></script>

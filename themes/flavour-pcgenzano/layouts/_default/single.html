@@ -6,8 +6,16 @@
   </div>
 </div>
 <div class="container py-4">
-  <div class="row">
-    <div class="col-lg-8 mx-auto">
+  {{/* ── INDICE DI PAGINA SITE-WIDE (scrollspy) ──
+       Compare automaticamente sulle pagine con ≥3 sezioni H2, tranne le pagine
+       strumento/lite. Opt-out: indice:false o toc:false nel frontmatter. */}}
+  {{ $idxBan := slice "cruscotto" "laboratorio-meteo" "cerca" "emergenza" "lanterna" "mappa-sito" "attribuzioni-pittogrammi" }}
+  {{ $banned := false }}{{ range $idxBan }}{{ if eq $.Section . }}{{ $banned = true }}{{ end }}{{ end }}
+  {{ $nh := len .Fragments.Identifiers }}
+  {{ $idx := and (ge $nh 3) (not $banned) (ne .Params.indice false) (ne .Params.toc false) }}
+  <div class="row{{ if $idx }} justify-content-center gx-lg-5{{ end }}">
+    {{ if $idx }}<div class="col-lg-3 col-indice d-print-none">{{ partial "indice-pagina.html" . }}</div>{{ end }}
+    <div class="{{ if $idx }}col-lg-8 col-contenuto-indice{{ else }}col-lg-8 mx-auto{{ end }}">
       {{ with .Params.subtitle }}<p class="lead">{{ . }}</p>{{ end }}
 
       {{/* ── DATA ULTIMA REVISIONE (pagine istituzionali/legali) ── */}}
@@ -72,22 +80,9 @@
            Specifiche: manuale/parte-25-italiano-l2-versione-facile.md */}}
       {{ partial "versione-facile-toggle.html" . }}
 
-      {{/* ── INDICE DELLA PAGINA (frontmatter: toc: true) ── */}}
-      {{ if .Params.toc }}
-      <div id="indice" class="article-toc mb-4" tabindex="-1" aria-label="Indice della pagina">
-        <details open>
-          <summary class="article-toc-summary">
-            <span class="article-toc-title h6 fw-bold mb-0">
-              <i class="bi bi-list-ul me-1" aria-hidden="true"></i>In questa pagina
-            </span>
-            <i class="bi bi-chevron-down article-toc-chevron ms-auto" aria-hidden="true"></i>
-          </summary>
-          <div class="article-toc-body">
-            {{ .TableOfContents }}
-          </div>
-        </details>
-      </div>
-      {{ end }}
+      {{/* L'indice della pagina è ora gestito site-wide come colonna sticky
+           con scrollspy (vedi partial indice-pagina.html, innestato in cima a
+           questo template). Il vecchio TOC in <details> è stato rimosso. */}}
 
       {{/* ── TEMPO DI LETTURA + PULSANTE TTS + GLOSSARIO INLINE ── */}}
       {{/* Opt-out: TTS e glossario attivi di default su tutte le pagine,
