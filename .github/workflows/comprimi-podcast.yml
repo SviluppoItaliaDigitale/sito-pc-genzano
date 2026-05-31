@@ -66,4 +66,4 @@ jobs:
             git pull --rebase origin main || { echo "Rebase fallito"; exit 1; }
             [ "$t" = "3" ] && { echo "Push fallito"; exit 1; }
           done
-          gh workflow run deploy.yml
+          gh workflow run deploy.yml --ref main -f priority=background

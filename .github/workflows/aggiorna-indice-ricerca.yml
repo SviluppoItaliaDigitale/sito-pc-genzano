@@ -82,7 +82,7 @@ jobs:
           # I push del GITHUB_TOKEN non auto-triggerano workflow su evento
           # push, quindi triggera esplicitamente deploy.yml per portare il
           # nuovo indice su Aruba.
-          echo "Trigger esplicito deploy.yml per portare l'indice su Aruba..."
-          gh workflow run deploy.yml
+          # Indice nel repo; deploy delegato a deploy-coalescer.yml (contenuto non urgente).
+          echo "Indice aggiornato nel repo; deploy delegato al coalescer."
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

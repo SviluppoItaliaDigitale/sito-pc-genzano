@@ -4,6 +4,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      priority:
+        description: "Priorità deploy: urgent (preempta) | background (cede ad allerta/contenuti)"
+        required: false
+        default: "urgent"
 
 permissions:
   contents: read
@@ -12,7 +17,9 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  # I contenuti (push merge PR) e i dispatch non-background (allerta, manuale)
+  # PREEMPTANO un deploy in corso; il deploy "background" (coalescer) cede sempre.
+  cancel-in-progress: ${{ github.event_name != 'workflow_dispatch' || github.event.inputs.priority != 'background' }}
 
 jobs:
   build-and-deploy:
