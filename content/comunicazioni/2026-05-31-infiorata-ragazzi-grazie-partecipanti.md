@@ -5,8 +5,8 @@ description: "La 22ª Infiorata dei Ragazzi si è svolta a Genzano il 30 e 31 ma
 badge: "Attività"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-05-31-infiorata-ragazzi-grazie-partecipanti.webp"
+image_alt: "Cover dell'articolo: Infiorata dei Ragazzi 2026: grazie a chi l'ha resa bella"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
