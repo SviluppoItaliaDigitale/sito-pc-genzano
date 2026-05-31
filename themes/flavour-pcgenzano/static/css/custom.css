@@ -6756,18 +6756,8 @@ html.a11y-pause-anim .scelta-card:hover { transform: none; }
 @media (prefers-reduced-motion: reduce) { .page-index-chevron { transition: none; } }
 @media print { .page-index { display: none; } }
 
-/* ============================================================
-   CALLOUT v1.0 — box nota istituzionale (shortcode {{< callout >}})
-   ============================================================ */
-.callout { border-left: 4px solid; border-radius: 8px; padding: .85rem 1.05rem; margin: 1.1rem 0; background: #f4f7fb; }
-.callout-title { font-weight: 700; margin: 0 0 .35rem; display: flex; align-items: center; gap: .45rem; }
-.callout-body > :first-child { margin-top: 0; }
-.callout-body > :last-child { margin-bottom: 0; }
-.callout-info { border-color: #003366; background: #e7f0fa; } .callout-info .callout-title { color: #003366; }
-.callout-avviso { border-color: #b45309; background: #fdf3e7; } .callout-avviso .callout-title { color: #92400e; }
-.callout-pericolo { border-color: #c1121f; background: #fdeaec; } .callout-pericolo .callout-title { color: #842029; }
-.callout-ok { border-color: #15803d; background: #e9f5ee; } .callout-ok .callout-title { color: #136a34; }
-@media print { .callout { background: #fff; border-color: #000; } }
+/* Callout: si usa il componente NATIVO Bootstrap Italia (.callout .note/.warning/
+   .danger/.success), nessuna CSS custom qui per non collidere col design system. */
 
 /* ============================================================
    PASSI / STEPPER v1.0 — lista ordinata con pallini numerati (shortcode {{< passi >}})
