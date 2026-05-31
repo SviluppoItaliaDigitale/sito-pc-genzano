@@ -428,6 +428,25 @@
     } catch (e) { /* no-op */ }
   }
 
+  // Cornice di microtesto sul PNG (provenienza). Disegnata SOLO nella banda-bordo
+  // (mai sopra il grafico), bassa opacità: visibile ma non invasiva.
+  var MICRO_BASE = 'PROTEZIONE CIVILE GENZANO DI ROMA · www.protezionecivilegenzano.it · ';
+  function corniceMicrotesto(ctx, totW, totH, F, scale) {
+    ctx.save();
+    ctx.fillStyle = 'rgba(0,51,102,0.5)';
+    var fs = 4.6 * scale;
+    ctx.font = fs + 'px Trebuchet MS,Verdana,Arial,sans-serif';
+    ctx.textBaseline = 'middle'; ctx.textAlign = 'left';
+    var oneW = ctx.measureText(MICRO_BASE).width || (MICRO_BASE.length * fs * 0.5);
+    function rip(len) { return new Array(Math.max(2, Math.ceil(len / oneW) + 1) + 1).join(MICRO_BASE); }
+    var W2 = totW * scale, H2 = totH * scale, m = F * scale * 0.3;
+    ctx.fillText(rip(W2), m, F * 0.55 * scale);                 // alto
+    ctx.fillText(rip(W2), m, H2 - F * 0.45 * scale);            // basso
+    ctx.save(); ctx.translate(F * 0.55 * scale, H2 - m); ctx.rotate(-Math.PI / 2); ctx.fillText(rip(H2), 0, 0); ctx.restore();   // sinistra
+    ctx.save(); ctx.translate(W2 - F * 0.45 * scale, m); ctx.rotate(Math.PI / 2); ctx.fillText(rip(H2), 0, 0); ctx.restore();    // destra
+    ctx.restore();
+  }
+
   function scaricaPng() {
     var svg = document.querySelector('#lab-grafico svg');
     if (!svg) return;
@@ -444,14 +463,20 @@
     var titolo = ($('lab-grafico-titolo').textContent || 'Laboratorio meteo');
     var img = new Image();
     img.onload = function () {
-      var scale = 2, th = 30;
+      var scale = 2, th = 28, F = 15;            // th=banda titolo, F=banda cornice
+      var totW = W + 2 * F, totH = F + th + H + F;
       var canvas = document.createElement('canvas');
-      canvas.width = W * scale; canvas.height = (H + th) * scale;
+      canvas.width = totW * scale; canvas.height = totH * scale;
       var ctx = canvas.getContext('2d');
       ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = '#003366'; ctx.font = 'bold ' + (13 * scale) + 'px Trebuchet MS,Verdana,Arial,sans-serif';
-      ctx.fillText(titolo, 8 * scale, 19 * scale, canvas.width - 16 * scale);
-      ctx.drawImage(img, 0, th * scale, W * scale, H * scale);
+      // titolo (sotto la cornice in alto)
+      ctx.fillStyle = '#003366'; ctx.textBaseline = 'alphabetic';
+      ctx.font = 'bold ' + (13 * scale) + 'px Trebuchet MS,Verdana,Arial,sans-serif';
+      ctx.fillText(titolo, (F + 6) * scale, (F + th * 0.7) * scale, (W - 12) * scale);
+      // grafico
+      ctx.drawImage(img, F * scale, (F + th) * scale, W * scale, H * scale);
+      // cornice di microtesto (provenienza): visibile ma non invasiva, solo nel bordo
+      corniceMicrotesto(ctx, totW, totH, F, scale);
       canvas.toBlob(function (blob) {
         var url = URL.createObjectURL(blob), a = document.createElement('a');
         a.href = url; a.download = 'laboratorio-meteo-' + (ultimoDati && ultimoDati.x[0] ? ultimoDati.x[0] : 'grafico') + '.png';
