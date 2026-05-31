@@ -377,7 +377,7 @@ def slide_sistema(num):
 def slide_cruscotto(num):
     s = base_slide("Cruscotto del territorio — dati in tempo reale", num)
     srcs = [("Scientifiche", "INGV (sismica, vulcani)"),
-            ("Meteo e satellite", "ItaliaMeteo, EUMETSAT, Copernicus"),
+            ("Meteo e satellite", "ItaliaMeteo, EUMETSAT, ECMWF, Copernicus"),
             ("Istituzionali", "DPC, ARPA Lazio")]
     sx, sw, shh, sy0, sgap = Inches(0.85), Inches(3.5), 0.95, 2.35, 0.4
     for i, (t, d) in enumerate(srcs):
@@ -401,7 +401,7 @@ def slide_cruscotto(num):
         put(b, [(t, 12, tc, True)])
     fn = textbox(s, Inches(0.85), Inches(6.25), Inches(11.6), Inches(0.5))
     setrun(fn.paragraphs[0].add_run(),
-           "Fonti: INGV · DPC · ItaliaMeteo · EUMETSAT · Copernicus · ARPA Lazio. Codici colore: Centro Funzionale Regionale del Lazio (ISO 22324).",
+           "Fonti: INGV · DPC · ItaliaMeteo · EUMETSAT · ECMWF · Copernicus · ARPA Lazio. Codici colore: Centro Funzionale Regionale del Lazio (ISO 22324).",
            11, GREY, italic=True)
     return s
 
@@ -603,6 +603,12 @@ content("Catalogo informativo dei giochi", [
     "Per ogni gioco: obiettivo didattico, durata, accessibilità e versione interattiva.",
     "Pensato per docenti, genitori, motori di ricerca e lettori di schermo.",
 ], N(), fonti="D.M. 183/2024 (Educazione Civica) · WCAG 2.2 AA")
+
+content("Laboratorio meteo — esplorare i dati del clima", [
+    "Strumento interattivo: si scelgono luogo, periodo e variabile e si costruisce il grafico.",
+    "Dati storici reali dei Castelli Romani (rianalisi ERA5) ed esempi già pronti sul clima locale.",
+    "Ogni grafico ha la tabella dati, la stampa, il download (CSV e immagine) e un link condivisibile.",
+], N(), fonti="ERA5 · Open-Meteo (CC BY 4.0) · Copernicus Climate Data Store")
 
 divider("Accessibilità e inclusione", N())
 
