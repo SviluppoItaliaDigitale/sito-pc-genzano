@@ -6757,6 +6757,41 @@ html.a11y-pause-anim .scelta-card:hover { transform: none; }
 @media print { .page-index { display: none; } }
 
 /* ============================================================
+   CALLOUT v1.0 — box nota istituzionale (shortcode {{< callout >}})
+   ============================================================ */
+.callout { border-left: 4px solid; border-radius: 8px; padding: .85rem 1.05rem; margin: 1.1rem 0; background: #f4f7fb; }
+.callout-title { font-weight: 700; margin: 0 0 .35rem; display: flex; align-items: center; gap: .45rem; }
+.callout-body > :first-child { margin-top: 0; }
+.callout-body > :last-child { margin-bottom: 0; }
+.callout-info { border-color: #003366; background: #e7f0fa; } .callout-info .callout-title { color: #003366; }
+.callout-avviso { border-color: #b45309; background: #fdf3e7; } .callout-avviso .callout-title { color: #92400e; }
+.callout-pericolo { border-color: #c1121f; background: #fdeaec; } .callout-pericolo .callout-title { color: #842029; }
+.callout-ok { border-color: #15803d; background: #e9f5ee; } .callout-ok .callout-title { color: #136a34; }
+@media print { .callout { background: #fff; border-color: #000; } }
+
+/* ============================================================
+   PASSI / STEPPER v1.0 — lista ordinata con pallini numerati (shortcode {{< passi >}})
+   ============================================================ */
+.passi-titolo { font-weight: 700; color: #003366; margin: 0 0 .4rem; }
+.passi-wrap ol { list-style: none; counter-reset: passo; padding-left: 0; margin: .6rem 0; }
+.passi-wrap ol > li { counter-increment: passo; position: relative; padding: .15rem 0 1.1rem 1.4rem; border-left: 2px solid #cdd9e8; margin-left: 1.05rem; }
+.passi-wrap ol > li::before { content: counter(passo); position: absolute; left: -1.05rem; top: -.1rem; width: 2rem; height: 2rem; border-radius: 50%; background: #003366; color: #fff; font-weight: 700; font-size: .95rem; display: flex; align-items: center; justify-content: center; }
+.passi-wrap ol > li:last-child { border-left-color: transparent; padding-bottom: 0; }
+.passi-wrap ol > li > :first-child { margin-top: 0; }
+@media print { .passi-wrap ol > li::before { background: #fff; color: #000; border: 1px solid #000; } }
+
+/* ============================================================
+   TIMELINE v1.0 — linea del tempo verticale (shortcode {{< timeline >}})
+   ============================================================ */
+.timeline-titolo { font-weight: 700; color: #003366; margin: 0 0 .4rem; }
+.timeline-wrap ul { list-style: none; padding-left: 0; margin: .6rem 0 .6rem .4rem; border-left: 3px solid #003366; }
+.timeline-wrap ul > li { position: relative; padding: 0 0 1.15rem 1.5rem; margin-left: .3rem; }
+.timeline-wrap ul > li::before { content: ""; position: absolute; left: -.62rem; top: .3rem; width: .85rem; height: .85rem; border-radius: 50%; background: #fff; border: 3px solid #003366; }
+.timeline-wrap ul > li:last-child { padding-bottom: 0; }
+.timeline-wrap ul > li strong { color: #003366; }
+@media print { .timeline-wrap ul { border-color: #000; } .timeline-wrap ul > li::before { border-color: #000; } }
+
+/* ============================================================
    LABORATORIO METEO v1.0 — costruttore di grafici client-side
    ============================================================ */
 .lab-esempi, .lab-builder { margin: 2rem 0 0; }
