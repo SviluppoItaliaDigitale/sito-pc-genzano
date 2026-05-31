@@ -1,69 +1,70 @@
 ---
 title: "Infiorata dei Ragazzi 2026: grazie a chi l'ha resa bella"
 date: 2026-05-31T00:02:00+02:00
-description: "La 22ª Infiorata dei Ragazzi si è svolta a Genzano il 30 e 31 maggio. Grazie ai ragazzi, alle scuole, alle famiglie, ai visitatori e ai nostri volontari."
 badge: "Attività"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
+description: "Grazie ai ragazzi, alle scuole, alle famiglie e ai visitatori per la 22ª Infiorata dei Ragazzi. Sulle nostre maglie c'è Olly's, l'associazione che sosteniamo."
 image: "/images/2026-05-31-infiorata-ragazzi-grazie-partecipanti.webp"
-image_alt: "Cover dell'articolo: Infiorata dei Ragazzi 2026: grazie a chi l'ha resa bella"
-scadenza: ""
+image_alt: "Cover dell'articolo: Infiorata dei Ragazzi 2026, grazie a chi l'ha resa bella"
 area: "Genzano di Roma"
+scadenza: ""
 allegati: []
-draft: false
-tts: true
-social_citazione: "Un'Infiorata bella si fa in tanti: i ragazzi che disegnano i fiori, le scuole, le famiglie, i visitatori e chi lavora dietro le quinte."
+social_citazione: "Un'Infiorata bella si fa in tanti: ragazzi, scuole, famiglie, visitatori e volontari. Grazie a tutti."
 social_punti:
-  - "22ª Infiorata dei Ragazzi: Genzano di Roma, 30 e 31 maggio 2026."
-  - "Grazie ai ragazzi, alle scuole, alle famiglie, ai visitatori e ai volontari."
-  - "I nostri volontari hanno garantito presenza, informazione e primo soccorso."
-  - "Sulle nostre maglie c'è Olly's, l'associazione che sosteniamo per i bambini farfalla."
+  - "22ª Infiorata dei Ragazzi, 30 e 31 maggio 2026 a Genzano"
+  - "Grazie ai ragazzi, alle scuole, alle famiglie e ai visitatori"
+  - "Sulle nostre maglie c'è Olly's, l'associazione per l'epidermolisi bollosa"
+  - "Olly's è vicina al Gruppo e noi la promuoviamo: ollyaps.org"
+draft: false
 ---
 
-La **22ª Infiorata dei Ragazzi** si è svolta a Genzano di Roma il **30 e 31 maggio 2026**. È la versione dei più giovani della nostra festa più conosciuta. Bambini e ragazzi delle scuole disegnano e compongono i loro quadri di fiori lungo la salita di via Italo Belardi: gli stessi luoghi che a giugno ospitano l'Infiorata del Corpus Domini.
+La **22ª Infiorata dei Ragazzi** si è svolta il **30 e 31 maggio 2026** a Genzano di Roma. Anche quest'anno il **Gruppo Comunale Volontari di Protezione Civile** era presente. I quadri di fiori hanno colorato la via: grazie a tutte le persone che li hanno resi possibili.
 
-Anche quest'anno il **Gruppo Comunale Volontari di Protezione Civile** era presente per dare una mano. Le due giornate sono andate bene: vogliamo dire **grazie** a tutti.
+## Grazie a chi ha reso possibile l'Infiorata
 
-## Grazie a chi l'ha resa bella
+Un'Infiorata bella non nasce da sola. La fanno **i ragazzi e le ragazze** che hanno disegnato e steso i petali, **le scuole** e gli insegnanti che li hanno guidati, l'**Accademia dei Maestri Infioratori**. La fanno anche **le famiglie** che hanno accompagnato i più piccoli e i **tanti visitatori** arrivati a Genzano per ammirare i quadri.
 
-Un'Infiorata non nasce da sola. La fanno **i ragazzi** che hanno disegnato e steso i petali, le **scuole** che li hanno guidati e le **famiglie** che li hanno accompagnati. E i **visitatori** arrivati a Genzano per ammirare i quadri. Grazie a ognuno di voi.
+Un ringraziamento va anche al **Comune di Genzano di Roma**, alla **Polizia Locale** e a tutte le componenti del sistema di Protezione Civile. Insieme hanno garantito la sicurezza e l'ordine della giornata.
 
-Grazie anche a chi lavora dietro le quinte: il **Comune di Genzano di Roma**, che ha coordinato la manifestazione, e tutte le componenti del sistema di soccorso sul percorso.
+{{< foto src="/images/2026-05-31-infiorata-squadra-volontari.webp"
+         alt="Undici volontari del Gruppo Comunale di Protezione Civile in posa sorridenti in una via del centro storico di Genzano di Roma, maglie blu navy con scritta e logo Protezione Civile, pantaloni rosso acceso"
+         caption="I volontari del Gruppo Comunale durante l'Infiorata dei Ragazzi 2026, nel centro storico di Genzano di Roma. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
-{{< foto src="/images/2026-05-31-infiorata-squadra-volontari-1.webp"
-         alt="Gruppo di volontari di Protezione Civile in maglia blu e pantaloni rossi, in posa in una via di Genzano accanto a un mezzo fuoristrada."
-         caption="I volontari del Gruppo Comunale durante l'Infiorata dei Ragazzi 2026." >}}
+## I nostri volontari in servizio
 
-## Il nostro servizio durante le due giornate
+Durante le due giornate i volontari hanno garantito:
 
-Durante le due giornate i nostri volontari hanno garantito **presenza e assistenza** lungo il percorso:
+- **assistenza alle persone**, con attenzione a bambini, anziani e persone fragili;
+- **informazione al pubblico** sui percorsi e gli accessi all'area dell'evento;
+- **primo soccorso** in raccordo con il 112;
+- **collegamento radio** con la centrale di coordinamento.
 
-- informazione ai visitatori su percorsi e accessi
-- presidio delle aree pedonali e dei punti di accesso
-- primo soccorso in collegamento con il 112
-- collegamento radio con la centrale di coordinamento
-
-Il Gruppo opera sempre **a supporto della Polizia Locale e delle Forze dell'Ordine**, sul mandato del Comune. Il nostro servizio **non comprende la regolazione del traffico né i servizi di polizia stradale**: sono compiti di competenza esclusiva degli organi di polizia, come stabilito dagli **articoli 11 e 12 del Codice della Strada** (D.Lgs. 285/1992) e ribadito dalla [Circolare del 6 agosto 2018 del Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/) sulle manifestazioni pubbliche.
+Il volontariato di Protezione Civile **non regola il traffico** e non svolge servizi di polizia stradale: questi compiti spettano alle Forze dell'Ordine e alla Polizia Locale (D.Lgs. 285/1992, artt. 11-12; [Circolare DPC del 6 agosto 2018](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/)). In caso di emergenza il riferimento resta sempre il **112**.
 
 {{< foto src="/images/2026-05-31-infiorata-volontari-selfie.webp"
-         alt="Cinque volontari di Protezione Civile sorridenti, in maglia blu, con la fontana e la scalinata di Genzano sullo sfondo."
-         caption="Una pausa tra i turni di servizio all'Infiorata dei Ragazzi." >}}
+         alt="Quattro volontari del Gruppo Comunale di Protezione Civile sorridenti in un selfie, maglie blu navy con logo PC, pantaloni rossi, in una via del centro di Genzano con edifici e una colonna sullo sfondo"
+         caption="Una pausa tra i turni di servizio all'Infiorata dei Ragazzi 2026. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
 ## Sulle nostre maglie c'è Olly's
 
-Chi ci ha incontrati lungo la via avrà notato una scritta sulle nostre maglie: **"PROTEZIONE CIVILE per Olly's"**. Olly's è un'associazione vicina al nostro Gruppo, dedicata alle persone con **epidermolisi bollosa**: una malattia rara della pelle. I bambini che ne soffrono sono conosciuti come **"bambini farfalla"**, perché la loro pelle è fragile come le ali di una farfalla.
+Chi ci ha incontrati lungo la via avrà notato una scritta sulle nostre maglie: **«Protezione Civile per Olly's»**. **Olly's** è un'**Associazione di Promozione Sociale** dei Castelli Romani. Si occupa di **epidermolisi bollosa**: una malattia genetica rara della pelle che la rende fragilissima. Per questo i piccoli pazienti sono chiamati **«bambini farfalla»**.
 
-Indossare il loro nome è il nostro modo di **far conoscere e sostenere la loro causa**.
+Olly's è **vicina al nostro Gruppo** e lo sostiene. Noi, a nostra volta, **portiamo il suo logo sulle maglie** per farla conoscere. È un piccolo gesto di reciprocità tra realtà di volontariato che credono nelle stesse cose.
 
-{{< foto src="/images/2026-05-31-infiorata-maglie-ollys.webp"
-         alt="Quattro volontari di spalle davanti alla fontana di Genzano: sulle maglie blu si leggono la scritta PROTEZIONE CIVILE e il logo Olly's."
-         caption="Sulla schiena delle nostre maglie: PROTEZIONE CIVILE per Olly's." >}}
+Se vuoi conoscere il loro lavoro o dare una mano, il riferimento è il sito ufficiale **[ollyaps.org](https://ollyaps.org/)**.
+
+{{< foto src="/images/2026-05-31-infiorata-volontari-olly-scalinata.webp"
+         alt="Quattro volontari del Gruppo Comunale di spalle, maglie blu navy con scritta Protezione Civile e logo Olly's sul dorso, pantaloni rosso-arancio, davanti alla scalinata monumentale e alla fontana nel centro di Genzano di Roma"
+         caption="Le nostre maglie portano il logo di Olly's, l'associazione per l'epidermolisi bollosa che il Gruppo sostiene. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
 ## Sul nostro sito
 
-- [Infiorata di Genzano 2026](/comunicazioni/2026-05-22-infiorata-genzano-2026/) — programma e indicazioni per l'Infiorata del Corpus Domini (13-15 giugno)
-- [Chi siamo](/chi-siamo/) — il Gruppo Comunale Volontari di Protezione Civile di Genzano
-- [Diventa volontario](/diventa-volontario/) — come dare una mano anche tu
+- [Infiorata dei Ragazzi 2026: il Gruppo a supporto dell'evento](/comunicazioni/2026-05-22-infiorata-ragazzi-genzano-2026/) — programma, viabilità e ruolo del Gruppo
+- [Infiorata di Genzano 2026: cosa sapere prima di venire](/comunicazioni/2026-05-22-infiorata-genzano-2026/) — la 248ª Tradizionale Infiorata di giugno
+- [Diventa volontario](/diventa-volontario/) — come entrare nel Gruppo Comunale
 - [Numeri utili](/numeri-utili/) — chi chiamare in ogni situazione
 
-In caso di emergenza il riferimento per il cittadino resta sempre il **112**. Il Gruppo **non è attivabile direttamente dai cittadini**.
+## Per approfondire
+
+- [Olly's APS — sito ufficiale](https://ollyaps.org/) — l'associazione per l'epidermolisi bollosa che sosteniamo
