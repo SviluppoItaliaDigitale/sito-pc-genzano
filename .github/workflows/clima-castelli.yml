@@ -1,0 +1,67 @@
+name: "📈 Dataset clima Castelli (Laboratorio meteo)"
+
+# Rigenera mensilmente i dataset climatici pre-cotti del Laboratorio meteo
+# (/laboratorio-meteo/), da dati aperti ERA5 via Open-Meteo (CC BY 4.0, nessuna
+# chiave API). Output: static/open-data/clima-*.json + clima-manifest.json.
+# Lo script calcola l'ultimo anno solare completo in automatico, così i dataset
+# si estendono da soli al passare degli anni. Gli esempi mostrati nelle card del
+# Laboratorio restano aggiornati senza intervento manuale.
+#
+# deploy.yml NON è toccato (vincolo): il workflow committa i file e ri-triggera
+# deploy.yml esplicitamente (i push del GITHUB_TOKEN non auto-triggerano i push).
+
+on:
+  schedule:
+    # 1° del mese, minuto 41 (fuori dai quarti d'ora canonici — vedi memoria
+    # feedback_github_cron_explicit_better). I dati climatici cambiano lentamente.
+    - cron: "41 4 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: "clima-castelli"
+  cancel-in-progress: false
+
+jobs:
+  genera:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v5
+
+      - name: "🐍 Python"
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: "📊 Genera dataset clima"
+        run: |
+          set -euo pipefail
+          python3 scripts/genera-clima-castelli.py
+          for f in clima-manifest clima-anno-temperature-genzano clima-pioggia-annuale-genzano clima-luglio-temperature-genzano clima-giorni-molto-caldi-genzano; do
+            python3 -c "import json; json.load(open('static/open-data/$f.json'))" && echo "$f.json valido"
+          done
+
+      - name: "💾 Commit se cambiato + ri-trigger deploy"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          if git diff --quiet static/open-data/clima-*.json; then
+            echo "Nessun cambiamento nei dataset clima — niente commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add static/open-data/clima-*.json
+          git commit -m "chore(clima): dataset Laboratorio meteo aggiornati [skip-clima]"
+          for tentativo in 1 2 3; do
+            if git push 2>&1; then break; fi
+            echo "Push fallito (tentativo $tentativo), rebase..."
+            git pull --rebase origin main || { echo "Rebase fallito"; exit 1; }
+            if [ "$tentativo" = "3" ]; then echo "Push fallito dopo 3 tentativi"; exit 1; fi
+          done
+          gh workflow run deploy.yml

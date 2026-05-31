@@ -10,6 +10,7 @@ le aggrega in dataset didattici e scrive:
 Output JSON: { titolo, sottotitolo?, tipo: 'line'|'bar', unita, x[], serie[] }
 Eseguibile in locale (rete) o in CI. Stdlib pura, nessuna dipendenza.
 """
+import datetime
 import json
 import sys
 import urllib.parse
@@ -23,7 +24,11 @@ ARCHIVE = "https://archive-api.open-meteo.com/v1/archive"
 
 # Genzano di Roma (centro abitato)
 LAT, LON = 41.7085, 12.6916
-ANNO_DA, ANNO_A = 2005, 2025  # anni interi disponibili nell'archivio ERA5
+# Ultimo anno solare completo (l'archivio ERA5 è affidabile fino all'anno scorso),
+# e finestra di 20 anni indietro. Calcolato dinamicamente: a un refresh periodico
+# i dataset si estendono da soli all'ultimo anno disponibile.
+ANNO_A = datetime.date.today().year - 1
+ANNO_DA = ANNO_A - 20
 
 FONTE = "Rianalisi ERA5 via Open-Meteo (CC BY 4.0), allineata al Copernicus Climate Data Store."
 
@@ -52,8 +57,8 @@ def aggrega(d):
     per_anno_prec = defaultdict(list)
     per_anno_caldo = defaultdict(int)   # giorni con tmax >= 35
     per_anno_lug_tmax = defaultdict(list)
-    mese_2025_max = defaultdict(list)
-    mese_2025_min = defaultdict(list)
+    mese_ult_max = defaultdict(list)   # mesi dell'ultimo anno completo (ANNO_A)
+    mese_ult_min = defaultdict(list)
 
     for i, t in enumerate(d["time"]):
         anno, mese = int(t[:4]), int(t[5:7])
@@ -68,11 +73,11 @@ def aggrega(d):
                 per_anno_lug_tmax[anno].append(tmax)
         if prec is not None:
             per_anno_prec[anno].append(prec)
-        if anno == 2025:
+        if anno == ANNO_A:
             if tmax is not None:
-                mese_2025_max[mese].append(tmax)
+                mese_ult_max[mese].append(tmax)
             if tmin is not None:
-                mese_2025_min[mese].append(tmin)
+                mese_ult_min[mese].append(tmin)
 
     anni = list(range(ANNO_DA, ANNO_A + 1))
     return {
@@ -81,8 +86,8 @@ def aggrega(d):
         "prec_annua": [round(sum(per_anno_prec[a]), 0) if per_anno_prec[a] else None for a in anni],
         "giorni_caldo": [per_anno_caldo[a] for a in anni],
         "mesi": list(range(1, 13)),
-        "mese_max": [media(mese_2025_max[m]) for m in range(1, 13)],
-        "mese_min": [media(mese_2025_min[m]) for m in range(1, 13)],
+        "mese_max": [media(mese_ult_max[m]) for m in range(1, 13)],
+        "mese_min": [media(mese_ult_min[m]) for m in range(1, 13)],
     }
 
 
@@ -127,7 +132,7 @@ def main():
     })
 
     scrivi("anno-temperature-genzano", {
-        "titolo": "Un anno di temperature a Genzano — 2025",
+        "titolo": f"Un anno di temperature a Genzano — {ANNO_A}",
         "sottotitolo": "Media mensile delle massime e delle minime",
         "tipo": "line", "unita": "°C", "x": MESI,
         "serie": [
@@ -144,7 +149,7 @@ def main():
         {"titolo": "Le giornate molto calde", "file": "clima-giorni-molto-caldi-genzano.json",
          "descr": "Quanti giorni all'anno superano i 35 °C a Genzano."},
         {"titolo": "Un anno di temperature", "file": "clima-anno-temperature-genzano.json",
-         "descr": "Massime e minime mese per mese a Genzano nel 2025."},
+         "descr": f"Massime e minime mese per mese a Genzano nel {ANNO_A}."},
     ]
     (OUTDIR / "clima-manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
