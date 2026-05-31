@@ -1,0 +1,79 @@
+{{/* Shortcode dashboard-ecmwf — carte di previsione sinottiche europee a medio termine
+     del Centro europeo per le previsioni meteo (ECMWF OpenCharts).
+     Le immagini sono AUTO-OSPITATE (privacy-first): scaricate dal workflow
+     ecmwf-charts.yml via scripts/genera-ecmwf-charts.py dall'OpenCharts API pubblica,
+     convertite in WebP e servite dal nostro dominio. Nessun embed di terzi nel browser
+     del cittadino. Licenza dati CC BY 4.0 — attribuzione ECMWF obbligatoria.
+     Complementare alle previsioni locali (Open-Meteo/ItaliaMeteo/ARPA): qui il quadro
+     generale europeo a medio termine, non il bollettino puntuale su Genzano. */}}
+<div class="dash-sat" aria-labelledby="dash-ecmwf-tit">
+  <h2 id="dash-ecmwf-tit" class="visually-hidden">Carte di previsione europee a medio termine — ECMWF OpenCharts</h2>
+
+  {{ with .Site.Data.ecmwf_charts }}
+  {{ $v := "" }}{{ with .aggiornato }}{{ $v = printf "?v=%s" (. | replaceRE `[^0-9]` "") }}{{ end }}
+  <div class="dash-sisma-toolbar" role="group" aria-label="Carta da visualizzare">
+    <span class="dash-sisma-grp" role="group" aria-label="Prodotto ECMWF">
+      {{ range $i, $c := .carte }}
+      <button type="button" class="dash-pill" data-ecmwf="{{ $c.slug }}"
+              aria-pressed="{{ if eq $i 0 }}true{{ else }}false{{ end }}">
+        <i class="bi {{ $c.icona }}" aria-hidden="true"></i> {{ $c.titolo }}
+      </button>
+      {{ end }}
+    </span>
+    <span class="dash-sisma-stato" id="ecmwf-stato" aria-live="polite"></span>
+  </div>
+
+  <div class="dash-incendi-box">
+    {{ range $i, $c := .carte }}
+    <figure class="ecmwf-figura{{ if ne $i 0 }} d-none{{ end }}" data-ecmwf-fig="{{ $c.slug }}">
+      <img src="{{ printf "%s%s" $c.file $v | relURL }}" loading="lazy"
+           class="img-fluid"
+           alt="Carta di previsione ECMWF a medio termine sull'Europa: {{ $c.titolo }}. {{ $c.descr }}">
+      <figcaption>{{ $c.descr }}</figcaption>
+    </figure>
+    {{ end }}
+  </div>
+
+  <noscript><div class="alert alert-warning mt-2" role="note">Per cambiare carta serve JavaScript: tutte le carte sono comunque caricate qui sopra.</div></noscript>
+
+  <p class="small text-muted mt-2 mb-0">
+    Carte a <strong>medio termine</strong> (quadro generale europeo, fino a diversi giorni avanti):
+    <a href="https://charts.ecmwf.int/" target="_blank" rel="noopener noreferrer">ECMWF OpenCharts</a>
+    (Centro europeo per le previsioni meteo a medio termine), licenza <strong>CC BY 4.0</strong> —
+    <em>based on data and products of the European Centre for Medium-Range Weather Forecasts (ECMWF)</em>.
+    Aggiornate automaticamente; ultimo prelievo: <strong>{{ .aggiornato }}</strong>.
+    Sono il <strong>contesto sinottico</strong>, non il bollettino locale: per la previsione puntuale
+    su Genzano vedi le schede <strong>Meteo</strong> e <strong>Previsioni ItaliaMeteo</strong>;
+    per le allerte vale il <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Regionale del Lazio</a>.
+    Dato indicativo: in emergenza chiama il <a href="tel:112">112</a>.
+  </p>
+
+  <script>
+  (function(){
+    var stato=document.getElementById('ecmwf-stato');
+    var figs=document.querySelectorAll('[data-ecmwf-fig]');
+    var nomi={};
+    document.querySelectorAll('.dash-pill[data-ecmwf]').forEach(function(b){
+      nomi[b.dataset.ecmwf]=b.textContent.trim();
+    });
+    function mostra(slug){
+      figs.forEach(function(f){ f.classList.toggle('d-none', f.dataset.ecmwfFig!==slug); });
+      document.querySelectorAll('.dash-pill[data-ecmwf]').forEach(function(b){
+        b.setAttribute('aria-pressed', b.dataset.ecmwf===slug ? 'true' : 'false');
+      });
+      if(stato) stato.textContent=nomi[slug]||'';
+    }
+    document.querySelectorAll('.dash-pill[data-ecmwf]').forEach(function(b){
+      b.addEventListener('click', function(){ mostra(b.dataset.ecmwf); });
+    });
+    var first=document.querySelector('.dash-pill[data-ecmwf]');
+    if(first){ if(stato) stato.textContent=nomi[first.dataset.ecmwf]||''; }
+  })();
+  </script>
+  {{ else }}
+  <div class="alert alert-info" role="note">
+    Le carte di previsione europee ECMWF sono in fase di prima generazione e compariranno qui al prossimo aggiornamento automatico.
+    Nel frattempo puoi consultarle sul portale ufficiale <a href="https://charts.ecmwf.int/" target="_blank" rel="noopener noreferrer">ECMWF OpenCharts</a>.
+  </div>
+  {{ end }}
+</div>
