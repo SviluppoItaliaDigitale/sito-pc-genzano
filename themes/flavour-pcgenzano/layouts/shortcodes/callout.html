@@ -1,11 +1,23 @@
-{{- /* Callout istituzionale (Bootstrap Italia "callout").
-       Uso: {{< callout tipo="info|avviso|pericolo|ok" titolo="…" >}} testo markdown {{< /callout >}}
-       tipo default: info. */ -}}
+{{- /* Callout NATIVO Bootstrap Italia (componente "callout" del design system).
+       API autore invariata: {{< callout tipo="info|avviso|pericolo|ok" titolo="…" >}} testo {{< /callout >}}
+       Mappa sui modificatori nativi BI: note/warning/danger/success. */ -}}
 {{- $tipo := .Get "tipo" | default "info" -}}
 {{- $titolo := .Get "titolo" -}}
-{{- $icone := dict "info" "bi-info-circle" "avviso" "bi-exclamation-triangle" "pericolo" "bi-x-octagon" "ok" "bi-check-circle" -}}
-{{- $icona := index $icone $tipo | default "bi-info-circle" -}}
-<div class="callout callout-{{ $tipo }}" role="note">
-  {{- with $titolo }}<p class="callout-title"><i class="bi {{ $icona }}" aria-hidden="true"></i> {{ . }}</p>{{ end -}}
-  <div class="callout-body">{{ .Inner | markdownify }}</div>
+{{- $map := dict
+      "info"     (dict "cls" "note"    "icon" "it-info-circle")
+      "avviso"   (dict "cls" "warning" "icon" "it-warning-circle")
+      "pericolo" (dict "cls" "danger"  "icon" "it-error")
+      "ok"       (dict "cls" "success" "icon" "it-check-circle") -}}
+{{- $c := index $map $tipo | default (index $map "info") -}}
+{{- $sprite := "vendor/bootstrap-italia/svg/sprites.svg" | relURL -}}
+<div class="callout {{ $c.cls }}" role="note">
+  <div class="callout-inner">
+    {{- with $titolo }}
+    <div class="callout-title">
+      <svg class="icon" aria-hidden="true"><use href="{{ $sprite }}#{{ $c.icon }}"></use></svg>
+      <span>{{ . }}</span>
+    </div>
+    {{- end }}
+    {{ .Inner | markdownify }}
+  </div>
 </div>
