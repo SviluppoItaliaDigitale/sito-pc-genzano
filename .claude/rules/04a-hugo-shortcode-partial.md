@@ -111,6 +111,26 @@ Card link visibile (icona + titolo + descrizione) per griglie di consultazione d
 - **Subpath GitHub Pages**: il template fa `.Get "url" | strings.TrimPrefix "/" | relURL` (stesso pattern del render-link hook), così i link funzionano sia su Aruba (root) sia su GitHub Pages (`/sito-pc-genzano/`). Scrivere `url` con leading slash.
 - Le card vanno avvolte in `<div class="consulta-rapida">` (raw HTML nel markdown), senza righe vuote tra gli shortcode. CSS scoped sezione **CARD CONSULTAZIONE RAPIDA v1.0** in `custom.css` (hover lift, focus visibile `#ffbe2e`, `prefers-reduced-motion` + `a11y-pause-anim`, stampa).
 
+## Componenti Bootstrap Italia — `callout`, `passi`, `timeline`, `galleria` (maggio 2026)
+
+Quattro shortcode di contenuto, AGID/WCAG, applicabili a contenuto già esistente per migliorarne lettura e orientamento.
+
+- **`callout`** — box nota del design system: **usa il componente NATIVO Bootstrap Italia** (`.callout .note/.warning/.danger/.success` + `.callout-inner` + `.callout-title` con icona dallo sprite BI `vendor/bootstrap-italia/svg/sprites.svg`). API autore: `{{</* callout tipo="info|avviso|pericolo|ok" titolo="…" */>}} testo markdown {{</* /callout */>}}` (mappa: info→note, avviso→warning, pericolo→danger, ok→success). 🔴 **Non creare CSS `.callout` custom**: collide col bundle BI (incidente: titolo con `margin-bottom:2.222rem` ereditato). Nessuna CSS custom per il callout.
+- **`passi`** (stepper) — avvolge una **lista ordinata Markdown** e la rende con pallini numerati (CSS counter su `<ol>` reale → ordine annunciato dagli screen reader). `{{</* passi titolo="…" */>}}` … lista `1. 2. 3.` … `{{</* /passi */>}}`. CSS sezione **PASSI / STEPPER v1.0**.
+- **`timeline`** — avvolge una **lista Markdown** (un evento per voce, di norma `**data/titolo** — testo`) e la rende come linea del tempo verticale con marcatori. CSS sezione **TIMELINE v1.0**.
+- **`galleria`** (carosello) — per articoli con **≥4 foto**: avvolge più `{{</* foto */>}}` in un carosello accessibile, **solo avanzamento manuale** (mai autoplay — WCAG 2.2.2), scroll-snap + pulsanti prev/next con `aria-label` disabilitati ai bordi, `static/js/galleria.js` idempotente. CSS sezione **GALLERIA v1.0**.
+
+Utility correlate in `custom.css`: **`.pc-spinner`** (indicatore di caricamento, rispetta `prefers-reduced-motion` + `a11y-pause-anim`; cablato negli stati di caricamento del Laboratorio meteo) e **`.table-sticky`** (intestazione tabella sticky per tabelloni lunghi, `max-height:70vh`).
+
+## Partial `indice-pagina` — indice di pagina con scrollspy (site-wide)
+
+`themes/flavour-pcgenzano/layouts/partials/indice-pagina.html` produce l'**indice "In questa pagina"** (navscroll Bootstrap Italia semplificato): elenco da `.TableOfContents`, sticky a sinistra su desktop (colonna 2-col in `_default/single.html` e `_default/list.html`), accordion collassabile su mobile. `static/js/indice-pagina.js` evidenzia la sezione corrente mentre si scorre (scrollspy → `.active` + `aria-current` sui link). CSS sezione **INDICE DI PAGINA v1.0**.
+
+- **Gate site-wide**: compare automaticamente sulle pagine con `len .Fragments.Identifiers >= 3` (≥3 heading). ⚠️ Non usare `len .Fragments.Headings` (top-level): in Hugo 0.154 risultava inaffidabile (tornava 1).
+- **Opt-out**: `indice: false` oppure `toc: false` nel frontmatter.
+- **Escluse** (pagine-strumento): `cruscotto`, `laboratorio-meteo`, `cerca`, `emergenza`, `lanterna`, `mappa-sito`, `attribuzioni-pittogrammi` (più `comunicazioni` su list.html).
+- Sostituisce il vecchio TOC in `<details>` (rimosso da single.html/list.html). Mantiene `id="indice"` per il back-to-top contestuale.
+
 ## Render hook tabelle (`_markup/render-table.html`)
 
 Tutte le tabelle Markdown del sito sono rese dal hook `themes/flavour-pcgenzano/layouts/_default/_markup/render-table.html`. Comportamento:

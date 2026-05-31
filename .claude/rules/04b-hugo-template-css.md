@@ -10,7 +10,7 @@ Il menu è definito in `hugo.toml` sotto `[[menus.main]]` e renderizzato in `the
 |---|---|---|
 | Home | diretta | `/` |
 | Per il Cittadino ▾ | dropdown | Cosa Fare Adesso, Allerte Meteo, Rischi e Prevenzione, Cartografia, Numeri Utili, Piano Familiare, **Kit pronti per situazioni vulnerabili** (7 voci, riordino v3.4 maggio 2026: Storia → Risorse. Il Quiz "Quanto sei preparato?", prima qui, poi spostato a "Per le scuole", è stato infine **rimosso dal menu il 22/05/2026** perché fuori contesto: è un'autovalutazione del cittadino, ancorata come strumento dentro `/piano-familiare/`. Resta raggiungibile da URL, mappa-sito, ricerca) |
-| Per le scuole ▾ | dropdown | Kit per le scuole, Percorsi didattici pronti, Schede didattiche stampabili, Per i docenti — Ed. Civica, Storie e Racconti, Giochi della Sicurezza, Catalogo dei giochi, **Esperimenti e attività** (`/formazione/esperimenti/`, aggiunta 29/05/2026: 21 esperimenti scientifici/giochi per scuola e casa, copre tutto il catalogo dei rischi) |
+| Per le scuole ▾ | dropdown | Kit per le scuole, Percorsi didattici pronti, Schede didattiche stampabili, Per i docenti — Ed. Civica, Storie e Racconti, Giochi della Sicurezza, Catalogo dei giochi, **Esperimenti e attività** (`/formazione/esperimenti/`, aggiunta 29/05/2026: 21 esperimenti scientifici/giochi per scuola e casa, copre tutto il catalogo dei rischi), **Laboratorio meteo** (`/laboratorio-meteo/`, aggiunta 31/05/2026: costruttore di grafici climatici interattivo — dati ERA5/Open-Meteo live + esempi pre-cotti sui Castelli) |
 | Accessibilità e Supporti ▾ | dropdown | Abili a Proteggere, Facile da Leggere, **Contenuti in LIS** |
 | Volontariato ▾ | dropdown | Diventa Volontario, Chi Siamo |
 | Risorse ▾ | dropdown | FAQ, Glossario, Area Download, Normativa, Strumenti in Tempo Reale, **Audio e podcast** |
@@ -116,25 +116,19 @@ Implementazione: costanti `SOS_HTML` + `A11Y_HTML` + funzioni `wireSos()` / `inj
 
 **Vincolo di coerenza:** il markup di `SOS_HTML` e `A11Y_HTML` in `site-chrome.js` va tenuto allineato ai partial `sos-112.html` e `accessibility-toolbar.html`. Se modifichi i partial (nuovo controllo a11y, nuovo bottone nel modal SOS), replica in `site-chrome.js`. Stesso pattern del menu (duplicazione consapevole chrome Hugo ↔ statico).
 
-## Indice della pagina (TOC) per articoli lunghi
+## Indice di pagina con scrollspy (site-wide, dal 31/05/2026)
 
-Le pagine con frontmatter `toc: true` mostrano in cima un **indice cliccabile** (Table of Contents) generato automaticamente da Hugo a partire dalle intestazioni H2/H3 del Markdown. Si applica solo a pagine che usano `_default/single.html` (Hugo richiede `layout: "single"` nel frontmatter, già usato dai kit didattici).
+Tutte le pagine con **almeno 3 heading** mostrano l'indice **"In questa pagina"** (navscroll Bootstrap Italia semplificato), generato automaticamente. Dettagli del partial e del gate in `04a-hugo-shortcode-partial.md` § "Partial `indice-pagina`". Sintesi lato template:
 
-Pagine attualmente con TOC attivo: `/formazione/`, `/formazione/kit-scuola-infanzia/`, `/formazione/kit-scuola-primaria/`, `/formazione/kit-scuola-secondaria-primo-grado/`, `/formazione/kit-scuola-secondaria-secondo-grado/`. Sono pagine da 500-950 righe con 15-20 sezioni: navigarle senza un indice è proibitivo.
+- **Desktop**: colonna **sticky** a sinistra che evidenzia la sezione corrente mentre si scorre (scrollspy, `static/js/indice-pagina.js` → `.active` + `aria-current`). Innestato come 2 colonne in `_default/single.html` e `_default/list.html` (gate `len .Fragments.Identifiers >= 3`).
+- **Mobile**: accordion collassabile in cima.
+- **Costruito da `.TableOfContents`** (H2/H3). Wrapper `id="indice"` mantenuto per il back-to-top contestuale.
+- **Opt-out**: `indice: false` o `toc: false`. **Escluse** le pagine-strumento (cruscotto, laboratorio-meteo, cerca, emergenza, lanterna, mappa-sito, attribuzioni-pittogrammi; + comunicazioni su list).
+- CSS sezione **INDICE DI PAGINA v1.0**; ancore con `scroll-margin-top` per non finire sotto la navbar.
 
-**Cosa rende:** un `<details open>` Bootstrap-Italia-flavoured con icona elenco, titolo "In questa pagina", chevron animato e una griglia `auto-fill minmax(260px, 1fr)` che su desktop dispone le voci in 2-3 colonne, su mobile (≤768px) in colonna singola. La sezione è dentro un wrapper `<div id="indice">` per consentire il salto diretto.
+🔴 **Storia**: sostituisce il vecchio TOC opt-in `toc: true` in `<details>` (rimosso da single.html e list.html). Ora l'indice è **automatico** in base al numero di heading, non più attivato a mano. Non reintrodurre il blocco `{{ if .Params.toc }}<details>…{{ end }}`.
 
-**Back-to-top contestuale:** il bottone `#backToTop` in `baseof.html` rileva la presenza di `#indice` con `getElementById`. Se presente, lo scroll punta lì invece che a `scrollY=0`, e l'`aria-label` diventa "Torna all'indice della pagina". Backward compatible: senza TOC, comportamento standard.
-
-**Quando attivare `toc: true`:**
-- Pagina con almeno 8-10 H2 OPPURE
-- Pagina molto lunga (>500 righe Markdown) anche con meno H2
-
-**Regole operative:**
-- Non duplicare l'indice nel corpo Markdown.
-- Mantenere intestazioni H2 chiare e brevi: appariranno come voci di indice.
-- L'indice è nascosto in stampa (`@media print { .article-toc { display: none } }`).
-- Non serve aggiungere ID manuali: Hugo li genera dallo slug del titolo.
+**Back-to-top contestuale:** il bottone `#backToTop` in `baseof.html` rileva `#indice` con `getElementById`; se presente, lo scroll punta lì e l'`aria-label` diventa "Torna all'indice della pagina".
 
 ## Pagine legali/istituzionali con data di revisione
 
