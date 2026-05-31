@@ -30,6 +30,10 @@ Un'Infiorata non nasce da sola. La fanno **i ragazzi** che hanno disegnato e ste
 
 Grazie anche a chi lavora dietro le quinte: il **Comune di Genzano di Roma**, che ha coordinato la manifestazione, e tutte le componenti del sistema di soccorso sul percorso.
 
+{{< foto src="/images/2026-05-31-infiorata-squadra-volontari-1.webp"
+         alt="Gruppo di volontari di Protezione Civile in maglia blu e pantaloni rossi, in posa in una via di Genzano accanto a un mezzo fuoristrada."
+         caption="I volontari del Gruppo Comunale durante l'Infiorata dei Ragazzi 2026." >}}
+
 ## Il nostro servizio durante le due giornate
 
 Durante le due giornate i nostri volontari hanno garantito **presenza e assistenza** lungo il percorso:
