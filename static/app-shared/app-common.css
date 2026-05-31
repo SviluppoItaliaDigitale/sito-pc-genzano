@@ -51,6 +51,10 @@ body:not(.chrome-loaded) > .app-content {
   margin-top: 0.5rem;
   font-size: 1rem;
 }
+/* Contrasto sul hero scuro (WCAG 1.4.3): testo chiaro, mai grigio/blu su blu.
+   Difensivo: qualunque .text-muted dentro l'hero scuro diventa chiaro. */
+.app-page-hero p, .app-page-hero .small, .app-page-hero .arena-hero-hint { position: relative; z-index: 1; }
+.app-page-hero .text-muted, .app-page-hero .arena-hero-hint { color: rgba(255,255,255,0.85) !important; }
 
 @media (max-width: 768px) {
   .app-page-hero h1 { font-size: 1.4rem; }

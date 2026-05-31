@@ -33,6 +33,17 @@ Per ogni modifica a template, layout o contenuto, verifica sempre:
 - Non affidarsi solo al colore per veicolare informazioni critiche (es. stato allerta)
 - Dimensioni testo scalabili (usa rem/em, non px fissi)
 
+#### 🔴 Contrasto testo su sfondo colorato — "isole brand" (WCAG 1.4.3)
+
+Le superfici a **sfondo scuro/colorato** del sito (page-hero/`.app-page-hero` blu #003366, footer #003366/#00244d, barre allerta, badge, callout) vogliono **testo chiaro**. **Vietato** metterci sopra classi pensate per sfondo chiaro:
+
+- **MAI** `text-muted` (grigio #6c757d → 2.69:1 su blu, FAIL), `btn-outline-primary` (blu #0d6efd → 2.80:1, FAIL) o `btn-outline-secondary` su hero/footer scuri. Usa testo bianco e, per i pulsanti, `btn-light`/`btn-outline-light`. Incidente 31/05/2026: hero `/giochi/` con `text-muted`+`btn-outline-primary` su blu.
+- **MAI** bianco su arancione `#fd7e14` (2.57:1, FAIL): l'arancione vuole **testo nero** (8.17:1), come la barra gialla.
+- ⚠️ Il **bianco a opacità** su blu **PASSA** (`rgba(255,255,255,0.7)` ≈ 6.9:1): non è un problema, non "correggerlo".
+- **Calcola sempre** il contrasto (non a occhio: causa di falsi positivi/negativi). Difesa CSS attiva: `.app-page-hero .text-muted` è già forzato a chiaro in `static/app-shared/app-common.css`.
+
+Vale anche per le **pagine HTML statiche** (`static/**/index.html`, hero iniettato da `site-chrome.js`). L'agent `pc-accessibility-auditor` § 7 ha lo snippet di calcolo deterministico.
+
 ### Form e controlli
 - Ogni campo ha una `<label>` associata correttamente
 - Errori descritti testualmente, non solo con colore o icona
