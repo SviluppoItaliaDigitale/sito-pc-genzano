@@ -19,6 +19,7 @@ Un'unica pagina per consultare i dati di rischio del territorio, da **fonti uffi
   <button type="button" class="cruscotto-tab" id="tab-satellite-im" data-panel="satellite-im" role="tab" aria-selected="false" aria-controls="panel-satellite-im" tabindex="-1"><i class="bi bi-globe2" aria-hidden="true"></i> Satellite ItaliaMeteo</button>
   <button type="button" class="cruscotto-tab" id="tab-meteo" data-panel="meteo" role="tab" aria-selected="false" aria-controls="panel-meteo" tabindex="-1"><i class="bi bi-cloud-sun" aria-hidden="true"></i> Meteo</button>
   <button type="button" class="cruscotto-tab" id="tab-previsioni-im" data-panel="previsioni-im" role="tab" aria-selected="false" aria-controls="panel-previsioni-im" tabindex="-1"><i class="bi bi-cloud-sun-fill" aria-hidden="true"></i> Previsioni ItaliaMeteo</button>
+  <button type="button" class="cruscotto-tab" id="tab-ecmwf" data-panel="ecmwf" role="tab" aria-selected="false" aria-controls="panel-ecmwf" tabindex="-1"><i class="bi bi-globe-europe-africa" aria-hidden="true"></i> Meteo Europa (ECMWF)</button>
   <button type="button" class="cruscotto-tab" id="tab-obs-im" data-panel="obs-im" role="tab" aria-selected="false" aria-controls="panel-obs-im" tabindex="-1"><i class="bi bi-thermometer-half" aria-hidden="true"></i> Osservazioni ItaliaMeteo</button>
   <button type="button" class="cruscotto-tab" id="tab-allerta" data-panel="allerta" role="tab" aria-selected="false" aria-controls="panel-allerta" tabindex="-1"><i class="bi bi-exclamation-triangle" aria-hidden="true"></i> Allerta</button>
   <button type="button" class="cruscotto-tab" id="tab-incendi" data-panel="incendi" role="tab" aria-selected="false" aria-controls="panel-incendi" tabindex="-1"><i class="bi bi-fire" aria-hidden="true"></i> Incendi</button>
@@ -74,6 +75,12 @@ Un'unica pagina per consultare i dati di rischio del territorio, da **fonti uffi
 <div class="cruscotto-panel" id="panel-previsioni-im" data-panel="previsioni-im" role="tabpanel" aria-labelledby="tab-previsioni-im" tabindex="0" hidden>
 
 {{< dashboard-italiameteo >}}
+
+</div>
+
+<div class="cruscotto-panel" id="panel-ecmwf" data-panel="ecmwf" role="tabpanel" aria-labelledby="tab-ecmwf" tabindex="0" hidden>
+
+{{< dashboard-ecmwf >}}
 
 </div>
 
@@ -167,6 +174,7 @@ Un'unica pagina per consultare i dati di rischio del territorio, da **fonti uffi
 - **Osservazioni ItaliaMeteo** — [Agenzia ItaliaMeteo](https://www.agenziaitaliameteo.it/meteo/dati-osservati/stazioni-al-suolo/), misure reali delle stazioni al suolo (temperatura, umidità, vento, pioggia) dall'API aperta [MeteoHub](https://meteohub.agenziaitaliameteo.it/) (solo stazioni a licenza CC BY 4.0, aggiornamento orario).
 - **Meteo** — [Open-Meteo](https://open-meteo.com/) (modelli ECMWF), nostra elaborazione per il Lazio e Genzano di Roma.
 - **Previsioni ItaliaMeteo** — [Agenzia nazionale per la meteorologia e climatologia «ItaliaMeteo»](https://www.agenziaitaliameteo.it/), modello ICON-2I (con Arpae Emilia-Romagna e CINECA): temperatura, pioggia, neve, vento, nuvole, umidità, pressione, zero termico. Cartine WMS dalla piattaforma [MeteoHub](https://meteohub.agenziaitaliameteo.it/), licenza CC BY 4.0. Aggiornate **due volte al giorno** (corse delle 00 e 12 UTC), orizzonte 72 ore.
+- **Meteo Europa (ECMWF)** — [ECMWF OpenCharts](https://charts.ecmwf.int/), carte di previsione sinottiche a medio termine del Centro europeo per le previsioni meteo (pressione e vento, temperatura, precipitazioni, temporali). Dato pienamente aperto con licenza CC BY 4.0; le carte sono **auto-ospitate** dal nostro sito e aggiornate automaticamente. Quadro generale europeo, complementare alle previsioni locali Open-Meteo/ItaliaMeteo.
 - **Mare ItaliaMeteo** — [Agenzia ItaliaMeteo](https://www.agenziaitaliameteo.it/mare/), modello d'onda WW3 MEDITA: altezza e periodo delle onde sui mari italiani (CC BY 4.0).
 - **Allerta** — [Centro Funzionale Regionale del Lazio](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti).
 - **Incendi** — [EFFIS — Copernicus EMS](https://forest-fire.emergency.copernicus.eu/): focolai attivi rilevati dai satelliti VIIRS e MODIS, su base satellitare.
