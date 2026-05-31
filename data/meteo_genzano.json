@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-05-31T07:02",
+  "aggiornato": "2026-05-31T07:45",
   "data_lunga": "domenica 31 maggio 2026",
-  "aggiornato_label": "domenica 31 maggio 2026, ore 07:02",
+  "aggiornato_label": "domenica 31 maggio 2026, ore 07:45",
   "alba": "05:37",
   "tramonto": "20:36",
   "corrente": {
-    "temp": 19.5,
-    "percepita": 19.0,
+    "temp": 21.0,
+    "percepita": 21.5,
     "cielo": "Sereno",
     "icona": "<g><line x1=\"44.8\" y1=\"28.0\" x2=\"52.8\" y2=\"28.0\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"39.9\" y1=\"39.9\" x2=\"45.5\" y2=\"45.5\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"28.0\" y1=\"44.8\" x2=\"28.0\" y2=\"52.8\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"16.1\" y1=\"39.9\" x2=\"10.5\" y2=\"45.5\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"11.2\" y1=\"28.0\" x2=\"3.2\" y2=\"28.0\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"16.1\" y1=\"16.1\" x2=\"10.5\" y2=\"10.5\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"28.0\" y1=\"11.2\" x2=\"28.0\" y2=\"3.2\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"39.9\" y1=\"16.1\" x2=\"45.5\" y2=\"10.5\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><circle cx=\"28.0\" cy=\"28.0\" r=\"16.0\" fill=\"#f6a800\"/></g>",
-    "umidita": 56,
-    "vento": 4,
-    "raffiche": 18
+    "umidita": 60,
+    "vento": 3,
+    "raffiche": 19
   },
   "giorni": [
     {
@@ -35,8 +35,8 @@
       "pioggia": 3,
       "pioggia_mm": 0,
       "raffiche": 46,
-      "uv": 7,
-      "uv_label": "alto"
+      "uv": 8,
+      "uv_label": "molto alto"
     },
     {
       "label": "Mar 2",
@@ -47,8 +47,8 @@
       "pioggia": 3,
       "pioggia_mm": 0,
       "raffiche": 53,
-      "uv": 7,
-      "uv_label": "alto"
+      "uv": 8,
+      "uv_label": "molto alto"
     },
     {
       "label": "Mer 3",
@@ -59,8 +59,8 @@
       "pioggia": 88,
       "pioggia_mm": 7.4,
       "raffiche": 53,
-      "uv": 7,
-      "uv_label": "alto"
+      "uv": 8,
+      "uv_label": "molto alto"
     }
   ],
   "fonte": "Open-Meteo (modelli ECMWF)"
