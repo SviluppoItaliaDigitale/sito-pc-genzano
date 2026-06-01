@@ -37,7 +37,7 @@ from matplotlib.cm import ScalarMappable
 import cartopy.crs as ccrs
 import cartopy.feature as cfeature
 import matplotlib.patheffects as pe
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFont
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT_WEBP = os.path.join(ROOT, "static", "images", "meteo-sinottica-italia.webp")
@@ -61,6 +61,53 @@ GENZANO = (41.7085, 12.6916)
 HOURLY_VARS = ("pressure_msl", "temperature_850hPa",
                "geopotential_height_500hPa", "wind_speed_500hPa", "wind_direction_500hPa",
                "precipitation", "snowfall")
+
+# ---------------------------------------------------------------- cornice microtesto
+# Banda di provenienza in microscrittura sui 4 bordi (anti-appropriazione): chi
+# ripubblica la cartina si porta dietro l'attribuzione; ritagliare la cornice è
+# evidente e distruttivo. Stessa logica della cornice SVG di genera-meteo-lazio.py,
+# qui in versione raster (Pillow) perché la sinottica è un WebP da matplotlib.
+_MICRO_BASE = ("PROTEZIONE CIVILE GENZANO DI ROMA · www.protezionecivilegenzano.it · "
+               "elaborazione grafica del Gruppo Comunale Volontari di Protezione Civile · © {year} · ")
+_MICRO_FONT_PATHS = (
+    "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+    "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
+)
+
+def _micro_font(size):
+    for p in _MICRO_FONT_PATHS:
+        if os.path.exists(p):
+            return ImageFont.truetype(p, size)
+    return ImageFont.load_default()
+
+def cornice_microtesto(img, year, band=15, fs=9, col=(140, 163, 186)):
+    """Aggiunge una banda bianca con microtesto di provenienza sui 4 bordi.
+    `col` è il blu istituzionale #003366 schiarito ~55% su bianco (effetto filigrana,
+    leggibile allo zoom). Decorativa: l'alt/aria della cartina è già nel template."""
+    w, h = img.size
+    band = int(band)
+    W2, H2 = w + 2 * band, h + 2 * band
+    canvas = Image.new("RGB", (W2, H2), "white")
+    canvas.paste(img, (band, band))
+    d = ImageDraw.Draw(canvas)
+    f = _micro_font(fs)
+    base = _MICRO_BASE.format(year=year)
+    unit = d.textlength(base, font=f) or 1.0
+    def fill(length):
+        return base * (int(length / unit) + 2)
+    yb = (band - fs) / 2
+    d.text((band, yb), fill(w), font=f, fill=col)                 # bordo alto
+    d.text((band, H2 - band + yb), fill(w), font=f, fill=col)     # bordo basso
+    strip = fill(h)                                               # lati: strip ruotata
+    sw = int(d.textlength(strip, font=f)) + 2
+    tmp = Image.new("RGBA", (sw, fs + 3), (0, 0, 0, 0))
+    ImageDraw.Draw(tmp).text((0, 0), strip, font=f, fill=col)
+    xb = int((band - fs) / 2)
+    left = tmp.rotate(90, expand=True)                           # bordo sinistro (basso→alto)
+    canvas.paste(left, (xb, band), left)
+    right = tmp.rotate(-90, expand=True)                         # bordo destro (alto→basso)
+    canvas.paste(right, (W2 - band + xb, band), right)
+    return canvas
 
 
 # ----------------------------------------------------------------- fetch a griglia
@@ -291,7 +338,8 @@ def main():
         fig.savefig(buf, format="png")
         plt.close(fig)
         buf.seek(0)
-        frames.append(Image.open(buf).convert("RGB"))
+        frame = cornice_microtesto(Image.open(buf).convert("RGB"), now_roma.year)
+        frames.append(frame)
         if fi == 0:
             preview_path = OUT_PNG
             frames[0].save(OUT_PNG)
