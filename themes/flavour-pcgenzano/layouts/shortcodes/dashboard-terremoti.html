@@ -44,11 +44,11 @@
           <caption class="visually-hidden">Elenco dei terremoti rilevati nel periodo e nell'area selezionati, con data, magnitudo, zona, profondità, latitudine e longitudine. Ordinabile per ogni colonna.</caption>
           <thead>
             <tr>
-              <th scope="col"><button type="button" class="dash-sort-btn" data-sort="time" aria-sort="descending">Data e Ora <span class="dash-sort-ind">↓</span></button></th>
-              <th scope="col"><button type="button" class="dash-sort-btn" data-sort="mag" aria-sort="none">Magnitudo <span class="dash-sort-ind"></span></button></th>
-              <th scope="col"><button type="button" class="dash-sort-btn" data-sort="place" aria-sort="none">Zona <span class="dash-sort-ind"></span></button></th>
-              <th scope="col" class="dash-num"><button type="button" class="dash-sort-btn" data-sort="depth" aria-sort="none">Profondità (km) <span class="dash-sort-ind"></span></button></th>
-              <th scope="col" class="dash-num"><button type="button" class="dash-sort-btn" data-sort="dist" aria-sort="none">Distanza (km) <span class="dash-sort-ind"></span></button></th>
+              <th scope="col" aria-sort="descending"><button type="button" class="dash-sort-btn" data-sort="time">Data e Ora <span class="dash-sort-ind">↓</span></button></th>
+              <th scope="col" aria-sort="none"><button type="button" class="dash-sort-btn" data-sort="mag">Magnitudo <span class="dash-sort-ind"></span></button></th>
+              <th scope="col" aria-sort="none"><button type="button" class="dash-sort-btn" data-sort="place">Zona <span class="dash-sort-ind"></span></button></th>
+              <th scope="col" class="dash-num" aria-sort="none"><button type="button" class="dash-sort-btn" data-sort="depth">Profondità (km) <span class="dash-sort-ind"></span></button></th>
+              <th scope="col" class="dash-num" aria-sort="none"><button type="button" class="dash-sort-btn" data-sort="dist">Distanza (km) <span class="dash-sort-ind"></span></button></th>
               <th scope="col" class="dash-num dash-col-hide-sm">Lat</th>
               <th scope="col" class="dash-num dash-col-hide-sm">Lon</th>
             </tr>
@@ -158,11 +158,12 @@
       // aggiorno indicatori sort sulle intestazioni
       document.querySelectorAll('.dash-sort-btn').forEach(function(b){
         var ind=b.querySelector('.dash-sort-ind');
+        var th=b.closest('th');
         if(b.dataset.sort===sortKey){
-          b.setAttribute('aria-sort', sortDir<0?'descending':'ascending');
+          if(th) th.setAttribute('aria-sort', sortDir<0?'descending':'ascending');
           ind.textContent = sortDir<0?'↓':'↑';
         } else {
-          b.setAttribute('aria-sort','none');
+          if(th) th.setAttribute('aria-sort','none');
           ind.textContent='';
         }
       });
