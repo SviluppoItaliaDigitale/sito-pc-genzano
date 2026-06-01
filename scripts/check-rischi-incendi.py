@@ -261,6 +261,7 @@ def main():
     changed = (
         current.get("livello") != rischio_block["livello"]
         or current.get("livello_aib") != rischio_block["livello_aib"]
+        or current.get("data") != rischio_block["data"]
         or (current.get("domani") or {}).get("livello") != (rischio_block.get("domani") or {}).get("livello")
     )
 

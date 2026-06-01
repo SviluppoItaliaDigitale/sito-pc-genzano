@@ -110,6 +110,7 @@
 {{ $incendiZona := 0 }}
 {{ $incendiDomLiv := "" }}
 {{ $incendiDomAib := "" }}
+{{ $incendiDataLeg := "" }}
 {{ with $allerta.rischio_incendi }}
   {{ if in (slice "gialla" "arancione" "rossa") .livello }}
     {{ $incendiVisibile = true }}
@@ -117,6 +118,10 @@
     {{ $incendiTitolo = .titolo }}
     {{ $incendiAib = .livello_aib }}
     {{ $incendiZona = .zona_aib }}
+    {{ if .data }}
+      {{ $ti := time.AsTime .data }}
+      {{ $incendiDataLeg = printf "%d %s %d" $ti.Day (index $mesi (int $ti.Month)) $ti.Year }}
+    {{ end }}
     {{ with .domani }}
       {{ $incendiDomLiv = .livello }}
       {{ $incendiDomAib = .livello_aib }}
@@ -129,6 +134,7 @@
     <strong>Rischio incendi boschivi:</strong>
     <span id="incendi-titolo" class="ms-1">{{ $incendiTitolo }}</span>
     {{ if $incendiAib }}<span class="incendi-aib ms-2">(Zona AIB {{ $incendiZona }} — livello {{ $incendiAib }})</span>{{ end }}
+    {{ if $incendiDataLeg }}<span class="incendi-validita ms-2">· Valido per il {{ $incendiDataLeg }}</span>{{ end }}
     {{ if $incendiDomAib }}<span class="incendi-domani d-none d-md-inline ms-2">· Domani: {{ $incendiDomAib }}</span>{{ end }}
     <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini/rischi-incendi" target="_blank" rel="noopener noreferrer" class="ms-2 incendi-link">Bollettino AIB <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
   </div>
