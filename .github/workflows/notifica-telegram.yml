@@ -1,7 +1,8 @@
 name: "📲 Notifica Telegram (allerta + emergenza)"
 
 # Manda messaggio al canale Telegram del Gruppo quando cambia lo stato di
-# allerta meteo (livello verde/gialla/arancione/rossa) o emergenza in corso.
+# allerta meteo (livello verde/gialla/arancione/rossa), avviso meteo avverso
+# (vento/neve/calore/gelate nel blocco avviso_meteo) o emergenza in corso.
 #
 # Si triggera SOLO quando vengono modificati i due file di stato. Non manda
 # nulla per modifiche di codice, contenuti, articoli, schede, ecc.
@@ -14,6 +15,7 @@ name: "📲 Notifica Telegram (allerta + emergenza)"
 #
 # Logica anti-spam in scripts/notifica-telegram.py:
 #   - allerta.json: solo se cambia il LIVELLO (non per ultimo_controllo periodico)
+#   - avviso_meteo: solo se cambia tipo/livello o all'eventuale rientro
 #   - emergenza.json: solo per attivazione, cessazione o aggiornamento sostanziale
 
 on:

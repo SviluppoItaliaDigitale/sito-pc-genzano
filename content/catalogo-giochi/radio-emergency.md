@@ -52,7 +52,7 @@ Puoi giocare adesso, gratis e senza registrazione. Si apre in una nuova pagina d
 
 I contenuti del gioco si collegano a queste pagine del sito, dove trovi spiegazioni più estese e le fonti istituzionali (Dipartimento di Protezione Civile, INGV, ISPRA, Centro Funzionale Regionale Lazio, standard ISO):
 
-- [Radiocomunicazioni del Gruppo](/comunicazioni/?categoria=Radiocomunicazioni)
+- [Radiocomunicazioni del Gruppo](/comunicazioni/#cat=radiocomunicazioni)
 - [Diventa volontario](/diventa-volontario/)
 
 ## Accessibilità

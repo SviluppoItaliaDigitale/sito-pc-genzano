@@ -66,4 +66,4 @@ Se vuoi imparare a usare correttamente i mezzi e le attrezzature, addestrarti co
 - [Diventa volontario](/diventa-volontario/) — come entrare nel Gruppo Comunale
 - [Formazione](/formazione/) — i percorsi di formazione del Gruppo e per le scuole
 - [Chi siamo](/chi-siamo/) — la storia e l'organizzazione del Gruppo
-- [Comunicazioni con badge "Esercitazione"](/comunicazioni/?filter=Esercitazione) — esercitazioni documentate
+- [Comunicazioni con badge "Esercitazione"](/comunicazioni/#cat=esercitazione) — esercitazioni documentate

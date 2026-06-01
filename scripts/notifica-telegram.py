@@ -111,6 +111,39 @@ def msg_allerta_cambiata(prev: dict | None, curr: dict) -> str:
     return "\n".join(parti)
 
 
+def msg_avviso_meteo(curr: dict | None) -> str:
+    """Messaggio per il blocco avviso_meteo (vento, neve, calore, gelate...).
+    curr=None o senza `tipo` => avviso rientrato."""
+    if not curr or not (curr.get("tipo") or "").strip():
+        return "\n".join([
+            "🟢 <b>AVVISO METEO RIENTRATO</b>",
+            "",
+            "L'avviso per fenomeni meteo avversi non è più in vigore.",
+            "",
+            f"🔗 Dettagli: {SITO_URL}/allerte-meteo/",
+            "",
+            "<i>Fonte: Centro Funzionale Regione Lazio · Gruppo Comunale Volontari PC Genzano</i>",
+        ])
+    tipo = (curr.get("tipo") or "").strip()
+    livello = (curr.get("livello") or "").lower()
+    emoji = EMOJI_LIVELLO.get(livello, "🟠")
+    descrizione = (curr.get("descrizione") or "").strip()
+    liv_label = livello.upper() if livello else ""
+    header = f"{emoji} <b>AVVISO METEO — {tipo.upper()}</b>"
+    sotto = f"Livello <b>{liv_label}</b>." if liv_label else "Avviso per fenomeni meteo avversi."
+    parti = [header, "", sotto]
+    if descrizione:
+        parti.extend(["", descrizione])
+    parti.extend([
+        "",
+        f"🔗 Dettagli: {SITO_URL}/allerte-meteo/",
+        f"📞 In emergenza chiama <b>112</b>",
+        "",
+        "<i>Fonte: Centro Funzionale Regione Lazio · Gruppo Comunale Volontari PC Genzano</i>",
+    ])
+    return "\n".join(parti)
+
+
 def msg_emergenza_attivata(curr: dict) -> str:
     titolo = curr.get("titolo") or "Emergenza in corso"
     descrizione = curr.get("descrizione") or ""
@@ -200,15 +233,28 @@ def determina_notifica() -> tuple[str, str] | None:
             if livello_curr and livello_curr != "verde":
                 cat = CRITICAL if livello_curr in ("arancione", "rossa", "rosso") else INFORMATIONAL
                 return (msg_allerta_cambiata(None, allerta_curr), cat)
-            return None
-
-        if livello_curr != livello_prev:
+        elif livello_curr != livello_prev:
             if livello_curr == "verde":
                 return (msg_allerta_cambiata(allerta_prev, allerta_curr), CESSATION)
             if livello_curr in ("arancione", "rossa", "rosso"):
                 return (msg_allerta_cambiata(allerta_prev, allerta_curr), CRITICAL)
             # gialla
             return (msg_allerta_cambiata(allerta_prev, allerta_curr), INFORMATIONAL)
+
+    # Priorità 3: avviso meteo avverso (blocco avviso_meteo), se l'allerta non ha già notificato.
+    # Scatta su comparsa/variazione di tipo o livello, e su rientro.
+    avviso_curr = (allerta_curr or {}).get("avviso_meteo") or {}
+    avviso_prev = (allerta_prev or {}).get("avviso_meteo") or {}
+    tipo_curr = (avviso_curr.get("tipo") or "").strip()
+    tipo_prev = (avviso_prev.get("tipo") or "").strip()
+    liv_curr = (avviso_curr.get("livello") or "").lower()
+    liv_prev = (avviso_prev.get("livello") or "").lower()
+    if (tipo_curr, liv_curr) != (tipo_prev, liv_prev):
+        if not tipo_curr and tipo_prev:
+            return (msg_avviso_meteo(None), CESSATION)
+        if tipo_curr:
+            cat = CRITICAL if liv_curr in ("arancione", "rossa", "rosso") else INFORMATIONAL
+            return (msg_avviso_meteo(avviso_curr), cat)
 
     return None
 
