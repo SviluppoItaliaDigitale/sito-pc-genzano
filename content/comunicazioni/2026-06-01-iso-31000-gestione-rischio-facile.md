@@ -1,16 +1,16 @@
 ---
 title: "Cos'è un rischio? Spiegato facile da leggere"
-date: 2026-06-02T00:03:00+02:00
+date: 2026-06-01
 description: "Versione semplificata (italiano A2) dell'articolo sul rischio e lo standard ISO 31000. Frasi corte, parole comuni."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-06-02-iso-31000-gestione-rischio-facile.webp"
+image: "/images/2026-06-01-iso-31000-gestione-rischio-facile.webp"
 image_alt: "Cover dell'articolo: Cos'è un rischio? Spiegato facile da leggere"
 scadenza: ""
 area: "Italia"
 allegati: []
-versione_facile_di: "2026-06-02-iso-31000-gestione-rischio"
+versione_facile_di: "2026-06-01-iso-31000-gestione-rischio"
 draft: false
 build:
   list: never
@@ -86,4 +86,4 @@ Il 112 è il **numero unico europeo**. Risponde sempre. La chiamata è gratuita.
 
 ## Per approfondire
 
-Se vuoi leggere l'articolo completo con tutti i dettagli e le fonti, vai alla [versione completa](/comunicazioni/2026-06-02-iso-31000-gestione-rischio/).
+Se vuoi leggere l'articolo completo con tutti i dettagli e le fonti, vai alla [versione completa](/comunicazioni/2026-06-01-iso-31000-gestione-rischio/).
