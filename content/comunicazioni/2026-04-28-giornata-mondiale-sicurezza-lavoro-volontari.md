@@ -75,6 +75,7 @@ Sul nostro sito:
 
 - [Lo zaino del volontario in attivazione](/comunicazioni/2026-05-11-zaino-volontario-attivazione/).
 - [Festa del Lavoro: i DPI dei volontari](/comunicazioni/2026-05-01-festa-lavoro-dpi-volontari-protezione-civile/).
+- [Il fondo del Lazio per i volontari infortunati in servizio](/comunicazioni/2026-04-28-lazio-fondo-solidarieta-volontari-protezione-civile/).
 - [Allagamenti, alluvioni e alberi pericolanti: interventi tecnici](/comunicazioni/2026-04-09-allagamenti-alluvioni-alberi-pericolanti-interventi-tecnici/).
 - [SAFOR-PROCIV — Scuola Alta Formazione PC Lazio](/comunicazioni/2026-05-08-safor-prociv-scuola-alta-formazione-pc-lazio/).
 - [Diventa volontario](/diventa-volontario/).

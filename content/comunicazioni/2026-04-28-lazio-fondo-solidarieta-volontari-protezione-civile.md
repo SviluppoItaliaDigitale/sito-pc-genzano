@@ -49,6 +49,7 @@ Molti volontari non conoscono questa possibilità. Per questo ne parliamo: un di
 
 **Sul nostro sito:**
 
+- [28 aprile: la sicurezza sul lavoro riguarda anche i volontari](/comunicazioni/2026-04-28-giornata-mondiale-sicurezza-lavoro-volontari/)
 - [Diventa volontario](/diventa-volontario/)
 - [Chi siamo](/chi-siamo/)
 
