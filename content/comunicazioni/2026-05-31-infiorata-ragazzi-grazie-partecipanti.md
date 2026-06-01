@@ -4,7 +4,7 @@ date: 2026-05-31T00:02:00+02:00
 badge: "Attività"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-description: "Grazie ai ragazzi, alle scuole, alle famiglie e ai visitatori per la 22ª Infiorata dei Ragazzi. Sulle nostre maglie c'è Olly's, l'associazione che sosteniamo."
+description: "Grazie ai ragazzi, alle scuole, alle famiglie e ai visitatori per la 22ª Infiorata dei Ragazzi. Sulle nostre maglie c'è Olly, l'associazione che sosteniamo."
 image: "/images/2026-05-31-infiorata-ragazzi-grazie-partecipanti.webp"
 image_alt: "Cover dell'articolo: Infiorata dei Ragazzi 2026, grazie a chi l'ha resa bella"
 area: "Genzano di Roma"
@@ -14,8 +14,8 @@ social_citazione: "Un'Infiorata bella si fa in tanti: ragazzi, scuole, famiglie,
 social_punti:
   - "22ª Infiorata dei Ragazzi, 30 e 31 maggio 2026 a Genzano"
   - "Grazie ai ragazzi, alle scuole, alle famiglie e ai visitatori"
-  - "Sulle nostre maglie c'è Olly's, l'associazione per l'epidermolisi bollosa"
-  - "Olly's è vicina al Gruppo e noi la promuoviamo: ollyaps.org"
+  - "Sulle nostre maglie c'è Olly, l'associazione per l'epidermolisi bollosa"
+  - "Olly è vicina al Gruppo e noi la promuoviamo: ollyaps.org"
 draft: false
 ---
 
@@ -46,17 +46,17 @@ Il volontariato di Protezione Civile **non regola il traffico** e non svolge ser
          alt="Quattro volontari del Gruppo Comunale di Protezione Civile sorridenti in un selfie, maglie blu navy con logo PC, pantaloni rossi, in una via del centro di Genzano con edifici e una colonna sullo sfondo"
          caption="Una pausa tra i turni di servizio all'Infiorata dei Ragazzi 2026. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
-## Sulle nostre maglie c'è Olly's
+## Sulle nostre maglie c'è Olly
 
-Chi ci ha incontrati lungo la via avrà notato una scritta sulle nostre maglie: **«Protezione Civile per Olly's»**. **Olly's** è un'**Associazione di Promozione Sociale** dei Castelli Romani. Si occupa di **epidermolisi bollosa**: una malattia genetica rara della pelle che la rende fragilissima. Per questo i piccoli pazienti sono chiamati **«bambini farfalla»**.
+Chi ci ha incontrati lungo la via avrà notato una scritta sulle nostre maglie: **«Protezione Civile per Olly»**. **Olly APS** è un'**Associazione di Promozione Sociale** dei Castelli Romani. Si occupa di **epidermolisi bollosa**: una malattia genetica rara della pelle che la rende fragilissima. Per questo i piccoli pazienti sono chiamati **«bambini farfalla»**.
 
-Olly's è **vicina al nostro Gruppo** e lo sostiene. Noi, a nostra volta, **portiamo il suo logo sulle maglie** per farla conoscere. È un piccolo gesto di reciprocità tra realtà di volontariato che credono nelle stesse cose.
+Olly è **vicina al nostro Gruppo** e lo sostiene. Noi, a nostra volta, **portiamo il suo logo sulle maglie** per farla conoscere. È un piccolo gesto di reciprocità tra realtà di volontariato che credono nelle stesse cose.
 
 Se vuoi conoscere il loro lavoro o dare una mano, il riferimento è il sito ufficiale **[ollyaps.org](https://ollyaps.org/)**.
 
 {{< foto src="/images/2026-05-31-infiorata-volontari-olly-scalinata.webp"
-         alt="Quattro volontari del Gruppo Comunale di spalle, maglie blu navy con scritta Protezione Civile e logo Olly's sul dorso, pantaloni rosso-arancio, davanti alla scalinata monumentale e alla fontana nel centro di Genzano di Roma"
-         caption="Le nostre maglie portano il logo di Olly's, l'associazione per l'epidermolisi bollosa che il Gruppo sostiene. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+         alt="Quattro volontari del Gruppo Comunale di spalle, maglie blu navy con scritta Protezione Civile e logo Olly sul dorso, pantaloni rosso-arancio, davanti alla scalinata monumentale e alla fontana nel centro di Genzano di Roma"
+         caption="Le nostre maglie portano il logo di Olly, l'associazione per l'epidermolisi bollosa che il Gruppo sostiene. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
 ## Sul nostro sito
 
@@ -67,4 +67,4 @@ Se vuoi conoscere il loro lavoro o dare una mano, il riferimento è il sito uffi
 
 ## Per approfondire
 
-- [Olly's APS — sito ufficiale](https://ollyaps.org/) — l'associazione per l'epidermolisi bollosa che sosteniamo
+- [Olly APS — sito ufficiale](https://ollyaps.org/) — l'associazione per l'epidermolisi bollosa che sosteniamo
