@@ -228,15 +228,22 @@ def build(hourly, now):
     aria = (f"Animazione della previsione meteo del Lazio per le prossime 72 ore: "
             f"temperatura e cielo previsti nelle province, con dettaglio per Genzano di Roma. "
             f"{nfr} fotogrammi a passo di 6 ore.")
-    svg = (
-        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W:.0f} {H:.0f}" '
-        f'font-family="Trebuchet MS,Verdana,Arial,sans-serif" role="img" aria-label="{aria}">'
+    inner = (
         f'<rect x="0" y="0" width="{W:.0f}" height="{H:.0f}" fill="#ffffff"/>'
         f'<defs><clipPath id="mapclipA"><rect x="0" y="0" width="{Wmap:.0f}" height="{Hmap:.0f}"/></clipPath></defs>'
         f'{titolo}'
         f'<g transform="translate({PAD},{HEAD})" clip-path="url(#mapclipA)">'
         f'{contesto}{prov_svg}{marker}{frame_groups}</g>'
-        f'{leg}{fonte}'
+        f'{leg}{fonte}')
+    # cornice di microtesto attorno a tutto (banda dedicata, non sovrapposta al contenuto)
+    F = 13
+    W2, H2 = W + 2 * F, H + 2 * F
+    svg = (
+        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W2:.0f} {H2:.0f}" '
+        f'font-family="Trebuchet MS,Verdana,Arial,sans-serif" role="img" aria-label="{aria}">'
+        f'<rect x="0" y="0" width="{W2:.0f}" height="{H2:.0f}" fill="#ffffff"/>'
+        f'<g transform="translate({F},{F})">{inner}</g>'
+        f'{ml.microtext_frame(W2, H2, F, now.year)}'
         f'</svg>')
     meta = {
         "aggiornato": now.strftime("%Y-%m-%dT%H:%M"),
