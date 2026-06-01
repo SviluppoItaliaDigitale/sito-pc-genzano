@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-06-01T17:03",
+  "aggiornato": "2026-06-01T18:04",
   "data_lunga": "lunedì 1 giugno 2026",
-  "aggiornato_label": "lunedì 1 giugno 2026, ore 17:03",
+  "aggiornato_label": "lunedì 1 giugno 2026, ore 18:04",
   "alba": "05:37",
   "tramonto": "20:37",
   "corrente": {
-    "temp": 24.5,
-    "percepita": 23.5,
+    "temp": 24.1,
+    "percepita": 23.6,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 50,
-    "vento": 14,
-    "raffiche": 41
+    "umidita": 54,
+    "vento": 12,
+    "raffiche": 37
   },
   "giorni": [
     {
@@ -22,7 +22,7 @@
       "tmin": 18,
       "pioggia": 5,
       "pioggia_mm": 0,
-      "raffiche": 48,
+      "raffiche": 47,
       "uv": 8,
       "uv_label": "molto alto"
     },
@@ -32,9 +32,9 @@
       "cielo": "Coperto",
       "tmax": 24,
       "tmin": 18,
-      "pioggia": 3,
+      "pioggia": 5,
       "pioggia_mm": 0,
-      "raffiche": 59,
+      "raffiche": 55,
       "uv": 7,
       "uv_label": "alto"
     },
@@ -43,9 +43,9 @@
       "icona": "<g><g><ellipse cx=\"16.0\" cy=\"17.2\" rx=\"13.8\" ry=\"6.7\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"10.0\" cy=\"14.2\" r=\"6.2\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.7\" cy=\"12.9\" r=\"5.3\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"10.4\" r=\"6.2\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g><polygon points=\"15.1,24.1 20.5,24.1 16.4,33.1 18.7,25.9 14.2,25.9\" fill=\"#f6a800\"/></g>",
       "cielo": "Temporale",
       "tmax": 22,
-      "tmin": 17,
+      "tmin": 18,
       "pioggia": 85,
-      "pioggia_mm": 9.4,
+      "pioggia_mm": 6.2,
       "raffiche": 55,
       "uv": 8,
       "uv_label": "molto alto"
@@ -54,11 +54,11 @@
       "label": "Gio 4",
       "icona": "<g><g><ellipse cx=\"16.0\" cy=\"19.1\" rx=\"14.5\" ry=\"7.0\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"9.7\" cy=\"16.0\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.9\" cy=\"14.7\" r=\"5.6\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"11.9\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
       "cielo": "Coperto",
-      "tmax": 25,
-      "tmin": 16,
-      "pioggia": 10,
+      "tmax": 26,
+      "tmin": 17,
+      "pioggia": 5,
       "pioggia_mm": 0,
-      "raffiche": 59,
+      "raffiche": 41,
       "uv": 7,
       "uv_label": "alto"
     }
