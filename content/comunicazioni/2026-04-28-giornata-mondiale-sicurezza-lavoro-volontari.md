@@ -1,6 +1,6 @@
 ---
 title: "28 aprile: la sicurezza sul lavoro riguarda anche i volontari"
-date: 2026-04-28
+date: 2026-04-28T00:01:00+02:00
 description: "La Giornata mondiale sulla sicurezza del lavoro ricorda il diritto a lavorare in sicurezza."
 badge: "Formazione"
 priorita: "normale"
