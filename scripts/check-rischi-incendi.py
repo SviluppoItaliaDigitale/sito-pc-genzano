@@ -221,6 +221,13 @@ def main():
     liv_oggi_aib, liv_dom_aib, data_oggi, data_dom = estrai_zona_livello_oggi_e_domani(
         testo, ZONA_AIB_GENZANO
     )
+    # Fallback data di validità: se la regex interna al PDF non aggancia l'header
+    # "Previsioni per oggi DD-MM-YYYY", usa la data del PDF scaricato (è nel nome
+    # del file ed è il giorno di validità del bollettino "oggi"). Evita data=null.
+    if not data_oggi and pdf_date:
+        data_oggi = pdf_date.strftime("%Y-%m-%d")
+    if not data_dom and pdf_date:
+        data_dom = (pdf_date + timedelta(days=1)).strftime("%Y-%m-%d")
     print(f"  OGGI ({data_oggi}): Zona {ZONA_AIB_GENZANO} = {liv_oggi_aib}")
     print(f"  DOMANI ({data_dom}): Zona {ZONA_AIB_GENZANO} = {liv_dom_aib}")
 
