@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-06-01T19:04",
+  "aggiornato": "2026-06-01T20:03",
   "data_lunga": "lunedì 1 giugno 2026",
-  "aggiornato_label": "lunedì 1 giugno 2026, ore 19:04",
+  "aggiornato_label": "lunedì 1 giugno 2026, ore 20:03",
   "alba": "05:37",
   "tramonto": "20:37",
   "corrente": {
-    "temp": 23.2,
-    "percepita": 23.9,
+    "temp": 22.7,
+    "percepita": 23.7,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 60,
-    "vento": 7,
-    "raffiche": 30
+    "umidita": 62,
+    "vento": 4,
+    "raffiche": 21
   },
   "giorni": [
     {
@@ -34,7 +34,7 @@
       "tmin": 18,
       "pioggia": 5,
       "pioggia_mm": 0,
-      "raffiche": 55,
+      "raffiche": 54,
       "uv": 7,
       "uv_label": "alto"
     },
@@ -59,8 +59,8 @@
       "pioggia": 5,
       "pioggia_mm": 0,
       "raffiche": 41,
-      "uv": 7,
-      "uv_label": "alto"
+      "uv": 8,
+      "uv_label": "molto alto"
     }
   ],
   "fonte": "Open-Meteo (modelli ECMWF)"
