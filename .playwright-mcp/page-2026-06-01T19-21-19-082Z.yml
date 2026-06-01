@@ -1,0 +1,967 @@
+- generic [active] [ref=e1]:
+  - link "Vai al contenuto principale" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e3]:
+    - generic [ref=e7]:
+      - navigation "Navigazione enti istituzionali" [ref=e9]:
+        - list [ref=e11]:
+          - listitem [ref=e12]:
+            - link "Sito del Comune di Genzano di Roma (si apre in una nuova finestra)" [ref=e13] [cursor=pointer]:
+              - /url: https://www.comune.genzanodiroma.roma.it/
+              - strong [ref=e14]: Comune di Genzano di Roma
+          - listitem [ref=e15]:
+            - link "Dipartimento Nazionale Protezione Civile" [ref=e16] [cursor=pointer]:
+              - /url: https://www.protezionecivile.gov.it/it/
+          - listitem [ref=e17]:
+            - link "Agenzia Regionale Protezione Civile Lazio" [ref=e18] [cursor=pointer]:
+              - /url: https://protezionecivile.regione.lazio.it/
+      - navigation "Link rapidi e social" [ref=e19]:
+        - link "Vai alla versione facile da leggere del sito" [ref=e20] [cursor=pointer]:
+          - /url: /facile-da-leggere/
+          - generic [ref=e21]: 
+          - text: Facile da leggere
+        - 'link "Area Volontari: informazioni e accesso al gestionale" [ref=e22] [cursor=pointer]':
+          - /url: /area-volontari/
+          - generic [ref=e23]: 
+          - text: Area Volontari
+        - link "Facebook" [ref=e25] [cursor=pointer]:
+          - /url: https://www.facebook.com/protezionecivilegenzanodiroma
+          - generic [ref=e26]: 
+        - link "Instagram" [ref=e27] [cursor=pointer]:
+          - /url: https://www.instagram.com/protezionecivilegenzano/
+          - generic [ref=e28]: 
+        - link "Telegram" [ref=e29] [cursor=pointer]:
+          - /url: https://t.me/pcalfagenzano
+          - generic [ref=e30]: 
+        - link "X Twitter" [ref=e31] [cursor=pointer]:
+          - /url: https://x.com/alfagenzano
+          - generic [ref=e32]: 
+  - generic [ref=e37]:
+    - link "Protezione Civile Gruppo Comunale Volontari di Genzano di Roma Torna alla pagina iniziale" [ref=e39] [cursor=pointer]:
+      - /url: /
+      - img [ref=e41]
+      - generic [ref=e42]:
+        - generic [ref=e43]: Protezione Civile
+        - generic [ref=e44]: Gruppo Comunale Volontari di Genzano di Roma
+      - generic [ref=e45]: Torna alla pagina iniziale
+    - link "Cerca nel sito (Ctrl+K)" [ref=e48] [cursor=pointer]:
+      - /url: /cerca/
+      - img [ref=e49]
+  - navigation "Navigazione principale" [ref=e55]:
+    - menubar [ref=e58]:
+      - menuitem "Home" [ref=e59] [cursor=pointer]:
+        - generic [ref=e60]: Home
+      - menuitem "Per il Cittadino" [ref=e61] [cursor=pointer]:
+        - generic [ref=e62]: Per il Cittadino
+        - img [ref=e63]
+      - menuitem "Per le scuole" [ref=e65] [cursor=pointer]:
+        - generic [ref=e66]: Per le scuole
+        - img [ref=e67]
+      - menuitem "Accessibilità e Supporti" [ref=e69] [cursor=pointer]:
+        - generic [ref=e70]: Accessibilità e Supporti
+        - img [ref=e71]
+      - menuitem "Volontariato" [ref=e73] [cursor=pointer]:
+        - generic [ref=e74]: Volontariato
+        - img [ref=e75]
+      - menuitem "Risorse" [ref=e77] [cursor=pointer]:
+        - generic [ref=e78]: Risorse
+        - img [ref=e79]
+      - menuitem "Comunicazioni" [ref=e81] [cursor=pointer]:
+        - generic [ref=e82]: Comunicazioni
+      - menuitem "Contatti" [ref=e83] [cursor=pointer]:
+        - generic [ref=e84]: Contatti
+  - main [ref=e85]:
+    - generic [ref=e87]:
+      - navigation "Percorso di navigazione" [ref=e88]:
+        - list [ref=e89]:
+          - listitem [ref=e90]:
+            - link "Home" [ref=e91] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e92]: / Allerte meteo
+      - heading "Allerte meteo" [level=1] [ref=e93]
+    - generic [ref=e95]:
+      - group [ref=e97]:
+        - generic "In questa pagina" [ref=e98]:
+          - generic [ref=e99]:
+            - generic [ref=e100]: 
+            - text: In questa pagina
+          - text: 
+        - navigation "Indice della pagina" [ref=e101]:
+          - navigation [ref=e102]:
+            - list [ref=e103]:
+              - listitem [ref=e104]:
+                - link "Stato attuale dell’allerta" [ref=e105] [cursor=pointer]:
+                  - /url: "#stato-attuale-dellallerta"
+              - listitem [ref=e106]:
+                - link "Previsione meteo di oggi" [ref=e107] [cursor=pointer]:
+                  - /url: "#previsione-meteo-di-oggi"
+              - listitem [ref=e108]:
+                - link "Mappa meteo interattiva" [ref=e109] [cursor=pointer]:
+                  - /url: "#mappa-meteo-interattiva"
+              - listitem [ref=e110]:
+                - link "Previsione meteo per Genzano di Roma" [ref=e111] [cursor=pointer]:
+                  - /url: "#previsione-meteo-per-genzano-di-roma"
+              - listitem [ref=e112]:
+                - link "Come funziona il sistema di allertamento" [ref=e113] [cursor=pointer]:
+                  - /url: "#come-funziona-il-sistema-di-allertamento"
+                - list [ref=e114]:
+                  - listitem [ref=e115]:
+                    - link "Previsione meteo e allerta non sono la stessa cosa" [ref=e116] [cursor=pointer]:
+                      - /url: "#previsione-meteo-e-allerta-non-sono-la-stessa-cosa"
+              - listitem [ref=e117]:
+                - link "Significato dei codici colore" [ref=e118] [cursor=pointer]:
+                  - /url: "#significato-dei-codici-colore"
+                - list [ref=e119]:
+                  - listitem [ref=e120]:
+                    - link "VERDE — Nessuna allerta" [ref=e121] [cursor=pointer]:
+                      - /url: "#verde--nessuna-allerta"
+                      - generic [ref=e122]: VERDE
+                      - text: — Nessuna allerta
+                  - listitem [ref=e123]:
+                    - link "GIALLA — Attenzione" [ref=e124] [cursor=pointer]:
+                      - /url: "#gialla--attenzione"
+                      - generic [ref=e125]: GIALLA
+                      - text: — Attenzione
+                  - listitem [ref=e126]:
+                    - link "ARANCIONE — Preallarme" [ref=e127] [cursor=pointer]:
+                      - /url: "#arancione--preallarme"
+                      - generic [ref=e128]: ARANCIONE
+                      - text: — Preallarme
+                  - listitem [ref=e129]:
+                    - link "ROSSA — Allarme" [ref=e130] [cursor=pointer]:
+                      - /url: "#rossa--allarme"
+                      - generic [ref=e131]: ROSSA
+                      - text: — Allarme
+              - listitem [ref=e132]:
+                - link "Tipi di rischio monitorati" [ref=e133] [cursor=pointer]:
+                  - /url: "#tipi-di-rischio-monitorati"
+              - listitem [ref=e134]:
+                - link "Domande frequenti" [ref=e135] [cursor=pointer]:
+                  - /url: "#domande-frequenti"
+              - listitem [ref=e136]:
+                - link "Approfondimenti dall’archivio" [ref=e137] [cursor=pointer]:
+                  - /url: "#approfondimenti-dallarchivio"
+              - listitem [ref=e138]:
+                - link "Fonti ufficiali" [ref=e139] [cursor=pointer]:
+                  - /url: "#fonti-ufficiali"
+              - listitem [ref=e140]:
+                - link "Vedi anche" [ref=e141] [cursor=pointer]:
+                  - /url: "#vedi-anche"
+      - generic [ref=e142]:
+        - note [ref=e143]:
+          - generic [ref=e144]: 
+          - text: Pagina rivista il
+          - strong [ref=e145]:
+            - time [ref=e146]: 6 maggio 2026
+          - text: .
+        - region "Strumenti di lettura del contenuto" [ref=e147]:
+          - generic [ref=e148]:
+            - generic [ref=e149]: 
+            - text: Leggi questa pagina in altri modi
+          - generic [ref=e150]:
+            - generic "Tempo di lettura stimato (200 parole al minuto)" [ref=e151]:
+              - generic [ref=e152]: 
+              - text: ~7 min
+              - generic [ref=e153]: di lettura stimati
+            - region "Strumenti di lettura ad alta voce" [ref=e154]:
+              - generic [ref=e155]:
+                - button "Leggi ad alta voce il contenuto della pagina" [ref=e156] [cursor=pointer]:
+                  - generic [ref=e157]: 
+                  - text: Leggi ad alta voce
+                - group "Velocità di lettura" [ref=e158]:
+                  - generic [ref=e159]: Velocità di lettura
+                  - generic "Lento" [ref=e160] [cursor=pointer]:
+                    - radio "Velocità lenta"
+                    - generic [ref=e161]: Lento
+                    - generic [ref=e162]: Velocità lenta
+                  - generic "Normale" [ref=e163] [cursor=pointer]:
+                    - radio "Velocità normale" [checked]
+                    - generic [ref=e164]: Normale
+                    - generic [ref=e165]: Velocità normale
+                  - generic "Veloce" [ref=e166] [cursor=pointer]:
+                    - radio "Velocità veloce"
+                    - generic [ref=e167]: Veloce
+                    - generic [ref=e168]: Velocità veloce
+        - 'link "Contenuti su questo tema disponibili in Lingua Italiana dei Segni: 4 video — apri la sezione dedicata" [ref=e171] [cursor=pointer]':
+          - /url: /lis/#allerte-meteo
+          - generic [ref=e172]: LIS
+          - generic [ref=e173]: 4 video in LIS disponibili
+        - article [ref=e174]:
+          - paragraph [ref=e175]: Le allerte meteo indicano i possibili effetti al suolo di pioggia, temporali, vento e altri fenomeni. Servono a prepararsi prima che la situazione diventi pericolosa.
+          - heading "Stato attuale dell’allerta" [level=2] [ref=e176]:
+            - text: Stato attuale dell’
+            - button "allerta" [ref=e178] [cursor=pointer]: allertaⓘ
+          - paragraph [ref=e179]:
+            - text: Lo stato sotto è letto direttamente dai
+            - strong [ref=e180]:
+              - text: bollettini ufficiali del
+              - button "Centro Funzionale Regionale" [ref=e182] [cursor=pointer]: Centro Funzionale Regionaleⓘ
+              - text: del Lazio
+            - text: per il Comune di Genzano di Roma. È lo stesso valore mostrato nella barra in cima alla
+            - link "homepage" [ref=e183] [cursor=pointer]:
+              - /url: /
+            - text: e aggiornato automaticamente quando cambia il livello.
+          - region "Stato allerta meteo attuale" [ref=e184]:
+            - generic [ref=e185]:
+              - generic [ref=e186]:
+                - generic [ref=e187]: 
+                - generic [ref=e188]:
+                  - 'heading "Stato attuale: NESSUNA ALLERTA" [level=2] [ref=e189]'
+                  - paragraph [ref=e190]: Livello Verde · Comune di Genzano di Roma
+              - paragraph [ref=e191]: Non sono previsti fenomeni significativi sul nostro territorio.
+              - paragraph [ref=e192]:
+                - generic [ref=e193]: 
+                - text: "Verificato:"
+                - strong [ref=e194]: 1 giugno 2026, 15:36
+                - text: "· Fonte:"
+                - link "Centro Funzionale Regionale Lazio" [ref=e195] [cursor=pointer]:
+                  - /url: https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti
+              - link "Bollettino ufficiale Regione Lazio" [ref=e196] [cursor=pointer]:
+                - /url: https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti
+                - generic [ref=e197]: 
+                - text: Bollettino ufficiale Regione Lazio
+          - generic [ref=e199]:
+            - heading "Notifiche di allerta sul browser" [level=2] [ref=e200]:
+              - generic [ref=e201]: 
+              - text: Notifiche di allerta sul browser
+            - paragraph [ref=e202]: Attiva le notifiche del browser per ricevere un avviso quando il livello di allerta sale.
+            - button "Attiva le notifiche di allerta" [ref=e203] [cursor=pointer]
+            - paragraph [ref=e204]:
+              - text: Le notifiche funzionano
+              - strong [ref=e205]: solo finché tieni aperta una scheda del sito
+              - text: "(non è un'app: è una scelta di progetto per evitare versioni del sito non aggiornate). Nessun dato personale viene raccolto: il sito controlla solo il bollettino pubblico. Per un avviso che arriva sempre, iscriviti anche al canale Telegram qui sotto."
+          - generic [ref=e207]:
+            - heading "Ricevi le allerte su Telegram" [level=2] [ref=e208]:
+              - generic [ref=e209]: 
+              - text: Ricevi le allerte su Telegram
+            - paragraph [ref=e210]:
+              - text: Iscriviti al
+              - strong [ref=e211]: canale Telegram ufficiale
+              - text: del Gruppo Comunale. Riceverai una notifica quando cambia il livello di allerta o quando vengono pubblicate comunicazioni operative importanti.
+            - paragraph [ref=e212]: "L'iscrizione è anonima: Telegram gestisce la lista degli iscritti. Puoi lasciare il canale in qualsiasi momento."
+            - link "Iscriviti al canale Telegram" [ref=e213] [cursor=pointer]:
+              - /url: https://t.me/pcalfagenzano
+              - generic [ref=e214]: 
+              - text: Iscriviti al canale Telegram
+          - heading "Previsione meteo di oggi" [level=2] [ref=e215]
+          - paragraph [ref=e216]:
+            - text: Temperatura massima e cielo previsti
+            - strong [ref=e217]: oggi
+            - text: nelle cinque province del Lazio, con il dettaglio per Genzano di Roma e i prossimi giorni. La cartina è una
+            - strong [ref=e218]: nostra elaborazione
+            - text: su dati aperti
+            - link "Open-Meteo" [ref=e219] [cursor=pointer]:
+              - /url: https://open-meteo.com/
+            - text: (modelli ECMWF), aggiornata ogni ora. È un dato
+            - strong [ref=e220]: indicativo
+            - text: ": per le allerte valgono i bollettini ufficiali del Centro Funzionale Regionale del Lazio."
+          - generic [ref=e221]:
+            - figure "Temperatura e cielo previsti oggi nelle province del Lazio, con il dettaglio per Genzano di Roma. Elaborazione grafica del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, su dati aperti Open-Meteo (modelli ECMWF)." [ref=e222]:
+              - 'img "Cartina del Lazio con la temperatura massima e il cielo previsti oggi per ogni provincia: Viterbo, Rieti, Roma, Latina, Frosinone. Genzano di Roma è evidenziata con una stella." [ref=e223]'
+              - generic [ref=e224]:
+                - text: Temperatura e cielo previsti oggi nelle province del Lazio, con il dettaglio per Genzano di Roma.
+                - strong [ref=e225]: Elaborazione grafica del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma
+                - text: ", su dati aperti Open-Meteo (modelli ECMWF)."
+            - 'img "Meteo a Genzano di Roma, lunedì 1 giugno 2026: ora 23.2 gradi, coperto, percepita 23.9 gradi, umidità 60 per cento, vento 7 chilometri orari. Raffiche di vento fino a 30 chilometri orari. Indice UV di oggi 8, molto alto. Alba alle 05:37, tramonto alle 20:37. Previsione dei prossimi giorni a seguire." [ref=e226]':
+              - generic [ref=e227]:
+                - img [ref=e229]
+                - generic [ref=e236]:
+                  - generic [ref=e237]: Genzano di Roma · ore 19:04
+                  - generic [ref=e238]: 23.2°
+                  - generic [ref=e239]: Coperto · percepita 23.9°
+              - generic [ref=e240]:
+                - generic [ref=e241]:
+                  - generic [ref=e242]: 
+                  - text: Umidità 60%
+                - generic [ref=e243]:
+                  - generic [ref=e244]: 
+                  - text: Vento 7 km/h
+                - generic [ref=e245]:
+                  - generic [ref=e246]: 
+                  - text: Raffiche 30 km/h
+              - generic [ref=e247]:
+                - generic [ref=e248]:
+                  - generic [ref=e249]: 
+                  - text: UV oggi 8 (molto alto)
+                - generic [ref=e250]:
+                  - generic [ref=e251]: 
+                  - text: Alba 05:37
+                - generic [ref=e252]:
+                  - generic [ref=e253]: 
+                  - text: Tramonto 20:37
+              - generic [ref=e254]:
+                - generic [ref=e255]:
+                  - generic [ref=e256]: Oggi
+                  - img [ref=e258]
+                  - generic [ref=e265]: 25°/18°
+                  - generic [ref=e266]:
+                    - generic [ref=e267]: 
+                    - text: 47 km/h
+                - generic [ref=e268]:
+                  - generic [ref=e269]: Mar 2
+                  - img [ref=e271]
+                  - generic [ref=e278]: 24°/18°
+                  - generic [ref=e279]:
+                    - generic [ref=e280]: 
+                    - text: 55 km/h
+                - generic [ref=e281]:
+                  - generic [ref=e282]: Mer 3
+                  - img [ref=e284]
+                  - generic [ref=e292]: 22°/18°
+                  - generic [ref=e293]:
+                    - generic [ref=e294]: 
+                    - text: 85% · 6.2 mm
+                  - generic [ref=e295]:
+                    - generic [ref=e296]: 
+                    - text: 55 km/h
+                - generic [ref=e297]:
+                  - generic [ref=e298]: Gio 4
+                  - img [ref=e300]
+                  - generic [ref=e307]: 26°/17°
+                  - generic [ref=e308]:
+                    - generic [ref=e309]: 
+                    - text: 41 km/h
+              - generic [ref=e310]:
+                - text: "Aggiornato lunedì 1 giugno 2026, ore 19:04 · Dati: Open-Meteo (modelli ECMWF) · dato indicativo, per le allerte vale il"
+                - link "Centro Funzionale Lazio" [ref=e311] [cursor=pointer]:
+                  - /url: https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti
+                - text: · in emergenza chiama il
+                - link "112" [ref=e312] [cursor=pointer]:
+                  - /url: tel:112
+                - text: .
+          - heading "Cartina animata del Lazio e carta sinottica dell'Italia" [level=2] [ref=e313]:
+            - generic [ref=e314]: 
+            - text: Cartina animata del Lazio e carta sinottica dell'Italia
+          - paragraph [ref=e315]:
+            - text: "Due viste complementari, una nostra elaborazione su dati aperti Open-Meteo (modelli ECMWF), aggiornate automaticamente: l'"
+            - strong [ref=e316]: animazione
+            - text: delle prossime 72 ore sul Lazio e la
+            - strong [ref=e317]: carta sinottica
+            - text: dell'Italia con precipitazioni, pressione e correnti.
+          - generic [ref=e318]:
+            - generic [ref=e319]:
+              - heading "Animazione del Lazio — prossime 72 ore" [level=3] [ref=e320]
+              - figure "Evoluzione della temperatura e del cielo previsti nel Lazio, frame ogni 6 ore. Elaborazione grafica del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, su dati Open-Meteo (modelli ECMWF)." [ref=e321]:
+                - 'img "Animazione della previsione del Lazio per le prossime 72 ore: la temperatura e il cielo previsti nelle cinque province e a Genzano di Roma cambiano fotogramma dopo fotogramma, a passo di sei ore."'
+                - generic [ref=e322]:
+                  - text: Evoluzione della temperatura e del cielo previsti nel Lazio, frame ogni 6 ore.
+                  - strong [ref=e323]: Elaborazione grafica del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma
+                  - text: ", su dati Open-Meteo (modelli ECMWF)."
+                - generic [ref=e324]:
+                  - link "Scarica" [ref=e325] [cursor=pointer]:
+                    - /url: /images/meteo-lazio-animata.svg?v=202606011628
+                    - generic [ref=e326]: 
+                    - text: Scarica
+                  - button "Condividi" [ref=e327] [cursor=pointer]:
+                    - generic [ref=e328]: 
+                    - text: Condividi
+              - paragraph [ref=e329]: "Leggera e nitida a ogni ingrandimento, centrata sul nostro territorio: temperatura e cielo previsti che cambiano fotogramma dopo fotogramma."
+            - generic [ref=e330]:
+              - heading "Carta sinottica dell'Italia" [level=3] [ref=e331]
+              - 'figure "Carta sinottica in stile professionale: campo termico, isobare, saccature in quota e corrente a getto. Elaborazione grafica del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, su dati Open-Meteo (modelli ECMWF)." [ref=e332]':
+                - 'img "Carta sinottica animata dell''Italia e del Mediterraneo centrale per le prossime 72 ore: temperatura a 850 hPa a colori, pressione al livello del mare con isobare nere, geopotenziale a 500 hPa con linee viola, vento a 500 hPa con barbe; Genzano di Roma è indicata da una stella."'
+                - generic [ref=e333]:
+                  - text: "Carta sinottica in stile professionale: campo termico, isobare, saccature in quota e corrente a getto."
+                  - strong [ref=e334]: Elaborazione grafica del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma
+                  - text: ", su dati Open-Meteo (modelli ECMWF)."
+                - generic [ref=e335]:
+                  - link "Scarica la clip" [ref=e336] [cursor=pointer]:
+                    - /url: /images/meteo-sinottica-italia.webp?v=202606011628
+                    - generic [ref=e337]: 
+                    - text: Scarica la clip
+                  - button "Condividi" [ref=e338] [cursor=pointer]:
+                    - generic [ref=e339]: 
+                    - text: Condividi
+              - paragraph [ref=e340]: "Vista d'insieme su Italia e Mediterraneo: precipitazioni e neve a colori, isobare, correnti in quota e minimi/massimi di pressione. Clip animata condivisibile."
+          - paragraph [ref=e341]:
+            - generic [ref=e342]: 
+            - text: Entrambe le cartine sono
+            - strong [ref=e343]: una nostra elaborazione
+            - text: su dati aperti
+            - link "Open-Meteo" [ref=e344] [cursor=pointer]:
+              - /url: https://open-meteo.com/
+            - text: (modelli ECMWF) e si aggiornano automaticamente. Sono un dato
+            - strong [ref=e345]: indicativo
+            - text: ": per le allerte valgono i bollettini ufficiali del"
+            - link "Centro Funzionale Regionale del Lazio" [ref=e346] [cursor=pointer]:
+              - /url: https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti
+            - text: . In
+            - button "emergenza" [ref=e348] [cursor=pointer]: emergenzaⓘ
+            - text: chiama il
+            - link "112" [ref=e349] [cursor=pointer]:
+              - /url: tel:112
+            - text: .
+          - heading "Mappa meteo interattiva" [level=2] [ref=e350]
+          - paragraph [ref=e351]: La mappa mostra radar, precipitazioni, vento, temperatura e altri parametri meteo centrati su Genzano di Roma. Dal menu del widget puoi cambiare il livello informativo e la scala temporale.
+          - note [ref=e352]:
+            - paragraph [ref=e353]:
+              - generic [ref=e354]: 
+              - strong [ref=e355]: "Attenzione:"
+              - text: la mappa è un ausilio visivo fornito da
+              - strong [ref=e356]:
+                - text: Windy.
+                - button "com" [ref=e358] [cursor=pointer]: comⓘ
+              - text: . Non sostituisce il bollettino ufficiale. Per le allerte valide sul territorio consulta sempre il Centro Funzionale della Regione Lazio.
+          - region "Mappa meteo interattiva Windy centrata su Genzano di Roma" [ref=e359]:
+            - heading "Mappa meteo interattiva Windy centrata su Genzano di Roma" [level=3] [ref=e360]
+            - generic [ref=e362]:
+              - generic [ref=e363]: 
+              - heading "Mappa meteo interattiva" [level=4] [ref=e364]
+              - paragraph [ref=e365]:
+                - text: Per visualizzare la mappa devi caricare i contenuti forniti da
+                - strong [ref=e366]: Windy.com
+                - text: . Il tuo browser riceverà risorse dal loro server e potrebbe impostare cookie tecnici di terze parti.
+              - button "Carica la mappa meteo" [ref=e367] [cursor=pointer]:
+                - generic [ref=e368]: 
+                - text: Carica la mappa meteo
+              - paragraph [ref=e369]:
+                - text: In alternativa apri
+                - link "Windy.com centrato su Genzano di Roma" [ref=e370] [cursor=pointer]:
+                  - /url: https://www.windy.com/?41.691,12.692,12
+                - text: .
+          - generic "Radar pioggia in tempo reale (Protezione Civile)" [ref=e371]:
+            - heading "Radar pioggia in tempo reale (Protezione Civile)" [level=2] [ref=e372]:
+              - generic [ref=e373]: 
+              - text: Radar pioggia in tempo reale (Protezione Civile)
+            - paragraph [ref=e374]:
+              - text: Pioggia rilevata in questo momento dalla rete radar nazionale del
+              - button "Dipartimento della Protezione Civile" [ref=e376] [cursor=pointer]: Dipartimento della Protezione Civileⓘ
+              - text: . È un dato
+              - strong [ref=e377]: indicativo
+              - text: ": per le allerte valgono i bollettini ufficiali del"
+              - link "Centro Funzionale Regionale del Lazio" [ref=e378] [cursor=pointer]:
+                - /url: https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti
+              - text: .
+            - group "Prodotto e sfondo del radar" [ref=e379]:
+              - button "Pioggia al suolo (SRI)" [pressed] [ref=e380] [cursor=pointer]
+              - button "Intensità in quota (VMI)" [ref=e381] [cursor=pointer]
+              - button "Sfondo scuro" [pressed] [ref=e382] [cursor=pointer]:
+                - generic [ref=e383]: 
+                - text: Sfondo scuro
+              - button "Aggiorna" [ref=e384] [cursor=pointer]:
+                - generic [ref=e385]: 
+                - text: Aggiorna
+              - generic [ref=e386]: Ultimo rilevamento 21:10 (11 min fa)
+            - generic [ref=e387]:
+              - application "Radar pioggia della Protezione Civile, ultimo rilevamento, centrato sull'Italia con Genzano di Roma evidenziata." [ref=e388]:
+                - button [ref=e389] [cursor=pointer]:
+                  - img [ref=e390]
+                - generic:
+                  - generic [ref=e392]:
+                    - button "Zoom in" [ref=e393] [cursor=pointer]: +
+                    - button "Zoom out" [ref=e394] [cursor=pointer]: −
+                  - generic [ref=e395]:
+                    - link "Leaflet" [ref=e396] [cursor=pointer]:
+                      - /url: https://leafletjs.com
+                      - img [ref=e397]
+                      - text: Leaflet
+                    - text: "| ©"
+                    - link "OpenStreetMap" [ref=e401] [cursor=pointer]:
+                      - /url: https://www.openstreetmap.org/copyright
+                    - text: ©
+                    - link "CARTO" [ref=e402] [cursor=pointer]:
+                      - /url: https://carto.com/attributions
+              - generic: Pioggia al suolo (SRI)
+            - generic [ref=e412]:
+              - generic [ref=e413]: debole
+              - generic [ref=e414]: moderato
+              - generic [ref=e415]: intenso
+              - generic [ref=e416]: forte
+              - generic [ref=e417]: molto forte
+            - paragraph [ref=e418]:
+              - generic [ref=e419]: 
+              - text: Mosaico radar nazionale
+              - strong [ref=e420]: grezzo
+              - text: ": ai bordi della copertura (per esempio sul mare presso la Sardegna) possono comparire echi non meteorologici. Per la versione validata e l'animazione apri il"
+              - link "radar ufficiale DPC" [ref=e421] [cursor=pointer]:
+                - /url: https://radar.protezionecivile.it/
+              - text: ". Fonte:"
+              - link "Radar-DPC" [ref=e422] [cursor=pointer]:
+                - /url: https://mappe.protezionecivile.gov.it/it/mappe-e-dashboard-rischi/piattaforma-radar/
+              - text: © Dipartimento della Protezione Civile (WMTS open-data CC BY-SA) — base
+              - link "© OpenStreetMap" [ref=e423] [cursor=pointer]:
+                - /url: https://www.openstreetmap.org/copyright
+              - text: /
+              - link "© CARTO" [ref=e424] [cursor=pointer]:
+                - /url: https://carto.com/attributions
+              - text: . In emergenza chiama il
+              - link "112" [ref=e425] [cursor=pointer]:
+                - /url: tel:112
+              - text: .
+          - heading "Previsione meteo per Genzano di Roma" [level=2] [ref=e426]
+          - paragraph [ref=e427]:
+            - text: Consulta la previsione del
+            - strong [ref=e428]: Servizio Meteorologico dell’Aeronautica Militare
+            - text: per Genzano di Roma. È una fonte istituzionale per le previsioni meteorologiche.
+          - region "Previsione meteo ufficiale per Genzano di Roma — Aeronautica Militare" [ref=e429]:
+            - heading "Previsione meteo ufficiale per Genzano di Roma — Aeronautica Militare" [level=3] [ref=e430]
+            - generic [ref=e432]:
+              - generic [ref=e433]: 
+              - heading "Previsione meteo — Aeronautica Militare" [level=4] [ref=e434]
+              - paragraph [ref=e435]:
+                - text: Previsione ufficiale del
+                - strong [ref=e436]: Servizio Meteorologico dell'Aeronautica Militare
+                - text: per Genzano di Roma.
+              - button "Carica la previsione AM" [ref=e437] [cursor=pointer]:
+                - generic [ref=e438]: 
+                - text: Carica la previsione AM
+              - paragraph [ref=e439]:
+                - text: In alternativa apri
+                - link "meteoam.it — Genzano di Roma" [ref=e440] [cursor=pointer]:
+                  - /url: https://www.meteoam.it/it/meteo-citta/genzano-di-roma
+                - text: .
+          - heading "Come funziona il sistema di allertamento" [level=2] [ref=e441]:
+            - text: Come funziona il
+            - button "sistema di allertamento" [ref=e443] [cursor=pointer]: sistema di allertamentoⓘ
+          - paragraph [ref=e444]: "Il sistema nazionale di allertamento per il rischio meteo-idrogeologico e idraulico funziona su due livelli:"
+          - list [ref=e445]:
+            - listitem [ref=e446]:
+              - strong [ref=e447]: Dipartimento della Protezione Civile
+              - text: — emette avvisi di condizioni meteorologiche avverse quando sono previsti fenomeni significativi.
+            - listitem [ref=e448]:
+              - strong [ref=e449]: Centro Funzionale Regionale del Lazio
+              - text: — valuta i possibili effetti al suolo e assegna il livello di criticità per ciascuna
+              - button "zona di allerta" [ref=e451] [cursor=pointer]: zona di allertaⓘ
+              - text: .
+          - paragraph [ref=e452]:
+            - text: Genzano di Roma rientra nella
+            - strong [ref=e453]: Zona di allerta F — Bacini Costieri Sud
+            - text: ", secondo la classificazione regionale DGR 865/2019. Il bollettino viene emesso ogni giorno, di norma entro le ore 14:00, con validità per le successive 24-36 ore."
+          - heading "Previsione meteo e allerta non sono la stessa cosa" [level=3] [ref=e454]
+          - list [ref=e455]:
+            - listitem [ref=e456]:
+              - strong [ref=e457]: "Previsione meteo:"
+              - text: indica il tempo previsto, per esempio pioggia, vento o temperatura.
+            - listitem [ref=e458]:
+              - strong [ref=e459]: "Allerta di criticità:"
+              - text: indica gli effetti possibili al suolo, per esempio allagamenti, frane o piene.
+          - paragraph [ref=e460]: Il codice colore dipende dagli effetti attesi, non solo dalla quantità di pioggia prevista.
+          - heading "Significato dei codici colore" [level=2] [ref=e461]
+          - heading "VERDE — Nessuna allerta" [level=3] [ref=e462]:
+            - generic [ref=e463]: VERDE
+            - text: — Nessuna allerta
+          - paragraph [ref=e464]:
+            - 'img "Pittogramma: situazione di calma"'
+            - text: Non sono previsti fenomeni significativi.
+          - paragraph [ref=e465]:
+            - strong [ref=e466]: "Cosa fare:"
+          - list [ref=e467]:
+            - listitem [ref=e468]: Non sono richieste azioni specifiche.
+            - listitem [ref=e469]: Resta informato attraverso i canali ufficiali.
+          - heading "GIALLA — Attenzione" [level=3] [ref=e470]:
+            - generic [ref=e471]: GIALLA
+            - text: — Attenzione
+          - paragraph [ref=e472]:
+            - 'img "Pittogramma: attenzione"'
+            - text: Sono possibili fenomeni localizzati, anche intensi.
+          - paragraph [ref=e473]:
+            - strong [ref=e474]: "Cosa fare:"
+          - list [ref=e475]:
+            - listitem [ref=e476]: Segui i bollettini ufficiali.
+            - listitem [ref=e477]: Evita zone soggette ad allagamento.
+            - listitem [ref=e478]: Non sostare lungo corsi d’acqua, fossi o sottopassaggi.
+            - listitem [ref=e479]: Fai attenzione ad alberi, impalcature e oggetti esposti al vento.
+          - heading "ARANCIONE — Preallarme" [level=3] [ref=e480]:
+            - generic [ref=e481]: ARANCIONE
+            - text: — Preallarme
+          - paragraph [ref=e482]:
+            - 'img "Pittogramma: allarme"'
+            - text: I fenomeni previsti possono essere diffusi e pericolosi.
+          - paragraph [ref=e483]:
+            - strong [ref=e484]: "Cosa fare:"
+          - list [ref=e485]:
+            - listitem [ref=e486]: Limita gli spostamenti non necessari.
+            - listitem [ref=e487]: Metti in sicurezza balconi, cantine e locali seminterrati, solo se puoi farlo senza pericolo.
+            - listitem [ref=e488]:
+              - text: Tieni pronto il
+              - link "kit di emergenza" [ref=e489] [cursor=pointer]:
+                - /url: /rischi-prevenzione/kit-emergenza/
+              - text: .
+            - listitem [ref=e490]: Segui le indicazioni delle autorità.
+          - heading "ROSSA — Allarme" [level=3] [ref=e491]:
+            - generic [ref=e492]: ROSSA
+            - text: — Allarme
+          - paragraph [ref=e493]:
+            - 'img "Pittogramma: emergenza"'
+            - text: I fenomeni previsti sono molto intensi e possono causare danni gravi.
+          - paragraph [ref=e494]:
+            - strong [ref=e495]: "Cosa fare:"
+          - list [ref=e496]:
+            - listitem [ref=e497]: Non uscire se non è strettamente necessario.
+            - listitem [ref=e498]: Allontanati da piani interrati e seminterrati.
+            - listitem [ref=e499]: Non attraversare strade allagate o sottopassaggi.
+            - listitem [ref=e500]: Segui solo le indicazioni delle autorità.
+            - listitem [ref=e501]: Tieni il telefono carico.
+          - heading "Tipi di rischio monitorati" [level=2] [ref=e502]
+          - paragraph [ref=e503]: "Nel bollettino possono essere valutati diversi rischi:"
+          - list [ref=e504]:
+            - listitem [ref=e505]:
+              - strong [ref=e506]: rischio idrogeologico
+              - text: — frane, smottamenti, colate di fango;
+            - listitem [ref=e507]:
+              - strong [ref=e508]: rischio idraulico
+              - text: — esondazioni, piene, allagamenti;
+            - listitem [ref=e509]:
+              - strong [ref=e510]: rischio temporali
+              - text: — grandine, fulmini, raffiche di vento, piogge intense;
+            - listitem [ref=e511]:
+              - strong [ref=e512]: criticità generale
+              - text: — valutazione complessiva.
+          - paragraph [ref=e513]: Il livello mostrato nella barra del sito corrisponde al valore più alto rilevato per il Comune di Genzano di Roma.
+          - heading "Domande frequenti" [level=2] [ref=e514]
+          - group [ref=e515]:
+            - generic "Chi emette le allerte?" [ref=e516] [cursor=pointer]:
+              - strong [ref=e517]: Chi emette le allerte?
+          - group [ref=e518]:
+            - generic "Con allerta gialla devo stare a casa?" [ref=e519] [cursor=pointer]:
+              - strong [ref=e520]: Con allerta gialla devo stare a casa?
+          - group [ref=e521]:
+            - generic "Perché piove forte ma non c'è allerta?" [ref=e522] [cursor=pointer]:
+              - strong [ref=e523]: Perché piove forte ma non c'è allerta?
+          - group [ref=e524]:
+            - generic "Come ricevo le notifiche?" [ref=e525] [cursor=pointer]:
+              - strong [ref=e526]: Come ricevo le notifiche?
+          - heading "Approfondimenti dall’archivio" [level=2] [ref=e527]
+          - list [ref=e528]:
+            - listitem [ref=e529]:
+              - 'link "Previsioni meteo e bollettini: come funziona il sistema" [ref=e530] [cursor=pointer]':
+                - /url: /comunicazioni/2026-04-20-previsioni-meteo-bollettini-come-funzionano/
+            - listitem [ref=e531]:
+              - 'link "Zone di allerta del Lazio: come leggere il bollettino" [ref=e532] [cursor=pointer]':
+                - /url: /comunicazioni/2026-05-07-zone-allerta-lazio-come-leggere-bollettino/
+            - listitem [ref=e533]:
+              - 'link "Temporali intensi: comportamenti corretti" [ref=e534] [cursor=pointer]':
+                - /url: /comunicazioni/2026-05-09-temporali-intensi-comportamenti-corretti/
+            - listitem [ref=e535]:
+              - 'link "Vento forte: cosa fare prima, durante e dopo" [ref=e536] [cursor=pointer]':
+                - /url: /comunicazioni/2026-05-16-vento-forte-prima-durante-dopo/
+            - listitem [ref=e537]:
+              - 'link "Sentinelle del tempo: osservazione meteo amatoriale" [ref=e538] [cursor=pointer]':
+                - /url: /comunicazioni/2026-03-03-sentinelle-meteo-osservazione-amatoriale/
+          - heading "Fonti ufficiali" [level=2] [ref=e539]
+          - list [ref=e540]:
+            - listitem [ref=e541]:
+              - link "Bollettini e allertamenti — Regione Lazio" [ref=e542] [cursor=pointer]:
+                - /url: https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti
+            - listitem [ref=e543]:
+              - link "Dipartimento della Protezione Civile" [ref=e544] [cursor=pointer]:
+                - /url: https://www.protezionecivile.gov.it/it/
+            - listitem [ref=e545]:
+              - link "Radar nazionale precipitazioni" [ref=e546] [cursor=pointer]:
+                - /url: https://mappe.protezionecivile.gov.it/it/mappe-e-dashboard-rischi/piattaforma-radar/
+            - listitem [ref=e547]:
+              - link "Meteo Aeronautica Militare" [ref=e548] [cursor=pointer]:
+                - /url: https://www.meteoam.it/it/home
+          - heading "Vedi anche" [level=2] [ref=e549]
+          - list [ref=e550]:
+            - listitem [ref=e551]:
+              - link "Rischi e prevenzione" [ref=e552] [cursor=pointer]:
+                - /url: /rischi-prevenzione/
+              - text: — cosa fare per ogni tipo di rischio
+            - listitem [ref=e553]:
+              - link "Cartografia operativa" [ref=e554] [cursor=pointer]:
+                - /url: /cartografia/
+              - text: — mappe del territorio e aree di emergenza
+            - listitem [ref=e555]:
+              - link "Cosa fare adesso" [ref=e556] [cursor=pointer]:
+                - /url: /cosa-fare-adesso/
+              - text: — azioni immediate per il cittadino
+            - listitem [ref=e557]:
+              - link "Piano di emergenza familiare" [ref=e558] [cursor=pointer]:
+                - /url: /piano-familiare/
+              - text: — il piano per la tua famiglia
+        - generic [ref=e560]:
+          - heading "Strumenti di Prevenzione" [level=2] [ref=e561]:
+            - generic [ref=e562]: 
+            - text: Strumenti di Prevenzione
+          - generic [ref=e563]:
+            - list [ref=e565]:
+              - listitem [ref=e566]:
+                - link "Panoramica Rischi" [ref=e567] [cursor=pointer]:
+                  - /url: /rischi-prevenzione/
+                  - generic [ref=e568]: 
+                  - text: Panoramica Rischi
+              - listitem [ref=e569]:
+                - link "Piano di Emergenza" [ref=e570] [cursor=pointer]:
+                  - /url: /piano-emergenza/
+                  - generic [ref=e571]: 
+                  - text: Piano di Emergenza
+              - listitem [ref=e572]:
+                - link "Piano Familiare" [ref=e573] [cursor=pointer]:
+                  - /url: /piano-familiare/
+                  - generic [ref=e574]: 
+                  - text: Piano Familiare
+            - list [ref=e576]:
+              - listitem [ref=e577]:
+                - link "Allertamento Meteo" [ref=e578] [cursor=pointer]:
+                  - /url: /allerte-meteo/
+                  - generic [ref=e579]: 
+                  - text: Allertamento Meteo
+              - listitem [ref=e580]:
+                - link "Cartografia Operativa" [ref=e581] [cursor=pointer]:
+                  - /url: /cartografia/
+                  - generic [ref=e582]: 
+                  - text: Cartografia Operativa
+              - listitem [ref=e583]:
+                - link "Kit di Emergenza" [ref=e584] [cursor=pointer]:
+                  - /url: /rischi-prevenzione/kit-emergenza/
+                  - generic [ref=e585]: 
+                  - text: Kit di Emergenza
+        - region "Materiali pronti su questo tema" [ref=e586]:
+          - heading "Materiali pronti su questo tema" [level=2] [ref=e587]:
+            - generic [ref=e588]: 
+            - text: Materiali pronti su questo tema
+          - paragraph [ref=e589]: Podcast da ascoltare, infografiche da condividere, presentazioni per docenti, quiz e flashcard. Liberamente scaricabili (CC BY-NC-SA 4.0).
+          - generic [ref=e590]:
+            - 'link "Scarica Podcast: Allerta meteo (podcast)" [ref=e592] [cursor=pointer]':
+              - /url: /podcast/episodi/2026-03-25-allerta-meteo-podcast.m4a
+              - generic [ref=e593]:
+                - generic [ref=e594]:
+                  - generic [ref=e595]: 
+                  - text: Podcast
+                - 'heading "Podcast: Allerta meteo" [level=3] [ref=e596]'
+                - paragraph [ref=e597]: Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online o scaricabile per ascolto offline.
+                - generic [ref=e598]: 37.1 MB
+            - 'link "Scarica Infografica: Allerta meteo (infografica)" [ref=e600] [cursor=pointer]':
+              - /url: /infografiche/2026-03-25-allerta-meteo-infografica.png
+              - generic [ref=e601]:
+                - generic [ref=e602]:
+                  - generic [ref=e603]: 
+                  - text: Infografica
+                - 'heading "Infografica: Allerta meteo" [level=3] [ref=e604]'
+                - paragraph [ref=e605]: Infografica formato quadrato pronta per condivisione social, stampa A4 e affissione in bacheca.
+                - generic [ref=e606]: 4.1 MB
+            - 'link "Scarica Presentazione: Allerta meteo (presentazione)" [ref=e608] [cursor=pointer]':
+              - /url: /presentazioni/2026-03-25-allerta-meteo-presentazione.pptx
+              - generic [ref=e609]:
+                - generic [ref=e610]:
+                  - generic [ref=e611]: 
+                  - text: Presentazione PPTX
+                - 'heading "Presentazione: Allerta meteo" [level=3] [ref=e612]'
+                - paragraph [ref=e613]: "Presentazione PowerPoint per docenti: 15 slide per un'ora di Educazione Civica in classe (formato modificabile)."
+                - generic [ref=e614]: 20.3 MB
+            - 'link "Scarica Presentazione (PDF): Allerta meteo (presentazione-pdf)" [ref=e616] [cursor=pointer]':
+              - /url: /presentazioni/2026-03-25-allerta-meteo-presentazione-pdf.pdf
+              - generic [ref=e617]:
+                - generic [ref=e618]:
+                  - generic [ref=e619]: 
+                  - text: Presentazione PDF
+                - 'heading "Presentazione (PDF): Allerta meteo" [level=3] [ref=e620]'
+                - paragraph [ref=e621]: "Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo senza PowerPoint."
+                - generic [ref=e622]: 16.0 MB
+          - paragraph [ref=e623]:
+            - link "Vedi tutti i materiali pronti" [ref=e624] [cursor=pointer]:
+              - /url: /risorse-pronte/#tema-allerta-meteo
+              - text: Vedi tutti i materiali pronti
+              - generic [ref=e625]: 
+        - region "Strumenti di condivisione e scarica dell'articolo" [ref=e626]:
+          - generic [ref=e627]:
+            - generic [ref=e628]: 
+            - text: Condividi e scarica
+          - generic [ref=e629]:
+            - generic [ref=e630]:
+              - button "Stampa questa pagina" [ref=e631] [cursor=pointer]:
+                - generic [ref=e632]: 
+                - text: Stampa
+              - button "Apri il QR code di questo articolo, per stamparlo o condividerlo" [ref=e633] [cursor=pointer]:
+                - generic [ref=e634]: 
+                - text: Scarica QR
+            - group "Condividi questa pagina" [ref=e635]:
+              - generic [ref=e636]:
+                - generic [ref=e637]: 
+                - text: "Condividi:"
+              - link "Condividi su WhatsApp" [ref=e638] [cursor=pointer]:
+                - /url: https://wa.me/?text=Allerte+meteo%20https%3A%2F%2Fwww.protezionecivilegenzano.it%2Fallerte-meteo%2F
+                - generic [ref=e639]: 
+                - generic [ref=e640]: WhatsApp
+              - link "Condividi su Telegram" [ref=e641] [cursor=pointer]:
+                - /url: https://t.me/share/url?url=https%3A%2F%2Fwww.protezionecivilegenzano.it%2Fallerte-meteo%2F&text=Allerte+meteo
+                - generic [ref=e642]: 
+                - generic [ref=e643]: Telegram
+              - link "Condividi su Facebook" [ref=e644] [cursor=pointer]:
+                - /url: https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.protezionecivilegenzano.it%2Fallerte-meteo%2F
+                - generic [ref=e645]: 
+                - generic [ref=e646]: Facebook
+              - link "Condividi su X (Twitter)" [ref=e647] [cursor=pointer]:
+                - /url: https://x.com/intent/post?text=Allerte+meteo&url=https%3A%2F%2Fwww.protezionecivilegenzano.it%2Fallerte-meteo%2F
+                - generic [ref=e648]: 
+                - generic [ref=e649]: X (Twitter)
+              - link "Condividi su LinkedIn" [ref=e650] [cursor=pointer]:
+                - /url: https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.protezionecivilegenzano.it%2Fallerte-meteo%2F&title=Allerte+meteo&summary=Consulta+le+allerte+meteo+per+Genzano+di+Roma+e+capisci+il+significato+dei+codici+colore.&source=https%3A%2F%2Fwww.protezionecivilegenzano.it%2F
+                - generic [ref=e651]: 
+                - generic [ref=e652]: LinkedIn
+              - link "Condividi per email" [ref=e653] [cursor=pointer]:
+                - /url: mailto:?subject=Allerte+meteo&body=Allerte+meteo%250A%250Ahttps%3A%2F%2Fwww.protezionecivilegenzano.it%2Fallerte-meteo%2F
+                - generic [ref=e654]: 
+                - generic [ref=e655]: Email
+              - button "Copia il link di questa pagina" [ref=e656] [cursor=pointer]:
+                - generic [ref=e657]: 
+                - generic [ref=e658]: Copia link
+              - text: 
+  - generic "Informazioni di aggiornamento" [ref=e659]:
+    - generic [ref=e661]:
+      - generic [ref=e662]:
+        - generic [ref=e663]: 
+        - generic "Data e ora corrente" [ref=e664]: lunedì 1 giugno 2026 — 21:21
+      - generic [ref=e665]:
+        - generic [ref=e666]: 
+        - text: Sito aggiornato il
+        - time [ref=e667]: 1 giugno 2026 alle 17:52 UTC
+  - contentinfo [ref=e668]:
+    - generic [ref=e672]:
+      - generic [ref=e673]:
+        - heading "Protezione Civile" [level=2] [ref=e674]
+        - paragraph [ref=e675]: Gruppo Comunale Volontari di Genzano di Roma
+        - paragraph [ref=e676]:
+          - strong [ref=e677]: "Sede:"
+          - text: Via Sicilia, 13-15 - 00045 Genzano di Roma (RM)
+          - strong [ref=e678]: "Telefono:"
+          - link "+39 06 9362600" [ref=e679] [cursor=pointer]:
+            - /url: tel:+39069362600
+          - strong [ref=e680]: "Email:"
+          - link "segreteria@protezionecivilegenzano.it" [ref=e681] [cursor=pointer]:
+            - /url: mailto:segreteria@protezionecivilegenzano.it
+        - paragraph [ref=e682]:
+          - text: 14° COI Prov. di Roma — Registro Regionale P.C. n.184
+          - text: Iscritta al RUNTS sez. 'Altri Enti del Terzo Settore' con determina n. G14230 del 28/10/2024
+          - text: Aderente al Coordinamento FEPIVOL
+        - generic "Loghi istituzionali di appartenenza" [ref=e683]:
+          - img "Servizio Nazionale Protezione Civile — Volontariato" [ref=e684]
+          - img "Protezione Civile Regione Lazio" [ref=e685]
+          - img "Coordinamento FE.PI.VOL. — Federazione Pronto Intervento Volontariato ODV" [ref=e686]
+        - generic [ref=e687]:
+          - img "Quality Label European Solidarity Corps" [ref=e688]
+          - generic [ref=e689]:
+            - text: Quality Label
+            - text: European Solidarity Corps
+            - text: "Codice: E10435833"
+      - generic [ref=e690]:
+        - heading "Servizi" [level=2] [ref=e691]
+        - navigation "Servizi nel footer" [ref=e692]:
+          - list [ref=e693]:
+            - listitem [ref=e694]:
+              - link "Piano di Emergenza" [ref=e695] [cursor=pointer]:
+                - /url: /piano-emergenza/
+            - listitem [ref=e696]:
+              - link "Piano Familiare" [ref=e697] [cursor=pointer]:
+                - /url: /piano-familiare/
+            - listitem [ref=e698]:
+              - link "Area Download" [ref=e699] [cursor=pointer]:
+                - /url: /area-download/
+            - listitem [ref=e700]:
+              - link "Cartografia Operativa" [ref=e701] [cursor=pointer]:
+                - /url: /cartografia/
+            - listitem [ref=e702]:
+              - link "Allerte Meteo" [ref=e703] [cursor=pointer]:
+                - /url: /allerte-meteo/
+            - listitem [ref=e704]:
+              - link "Cosa Fare Adesso" [ref=e705] [cursor=pointer]:
+                - /url: /cosa-fare-adesso/
+            - listitem [ref=e706]:
+              - link "Numeri Utili" [ref=e707] [cursor=pointer]:
+                - /url: /numeri-utili/
+            - listitem [ref=e708]:
+              - link "FAQ" [ref=e709] [cursor=pointer]:
+                - /url: /faq/
+            - listitem [ref=e710]:
+              - link "Formazione" [ref=e711] [cursor=pointer]:
+                - /url: /formazione/
+      - generic [ref=e712]:
+        - heading "Link Utili" [level=2] [ref=e713]
+        - navigation "Link utili nel footer" [ref=e714]:
+          - list [ref=e715]:
+            - listitem [ref=e716]:
+              - link "Note Legali" [ref=e717] [cursor=pointer]:
+                - /url: /note-legali/
+            - listitem [ref=e718]:
+              - link "Privacy" [ref=e719] [cursor=pointer]:
+                - /url: /privacy/
+            - listitem [ref=e720]:
+              - link "Accessibilità" [ref=e721] [cursor=pointer]:
+                - /url: /accessibilita/
+            - listitem [ref=e722]:
+              - link "Metodo editoriale" [ref=e723] [cursor=pointer]:
+                - /url: /metodo-editoriale/
+            - listitem [ref=e724]:
+              - link "Trasparenza" [ref=e725] [cursor=pointer]:
+                - /url: /trasparenza/
+            - listitem [ref=e726]:
+              - link "Siti Utili" [ref=e727] [cursor=pointer]:
+                - /url: /siti-utili/
+            - listitem [ref=e728]:
+              - link "Mappa del Sito" [ref=e729] [cursor=pointer]:
+                - /url: /mappa-sito/
+            - listitem [ref=e730]:
+              - link "Stato del Sito" [ref=e731] [cursor=pointer]:
+                - /url: /stato-sistema/
+            - listitem [ref=e732]:
+              - link "Open Data" [ref=e733] [cursor=pointer]:
+                - /url: /open-data/
+            - listitem [ref=e734]:
+              - link "Feed RSS" [ref=e735] [cursor=pointer]:
+                - /url: /feed-rss/
+        - generic [ref=e736]:
+          - heading "Seguici su" [level=3] [ref=e737]
+          - list [ref=e738]:
+            - listitem [ref=e739]:
+              - link "Facebook" [ref=e740] [cursor=pointer]:
+                - /url: https://www.facebook.com/protezionecivilegenzanodiroma
+                - generic [ref=e741]: 
+                - generic [ref=e742]: Facebook
+            - listitem [ref=e743]:
+              - link "Instagram" [ref=e744] [cursor=pointer]:
+                - /url: https://www.instagram.com/protezionecivilegenzano/
+                - generic [ref=e745]: 
+                - generic [ref=e746]: Instagram
+            - listitem [ref=e747]:
+              - link "Telegram" [ref=e748] [cursor=pointer]:
+                - /url: https://t.me/pcalfagenzano
+                - generic [ref=e749]: 
+                - generic [ref=e750]: Telegram
+            - listitem [ref=e751]:
+              - link "X Twitter" [ref=e752] [cursor=pointer]:
+                - /url: https://x.com/alfagenzano
+                - generic [ref=e753]: 
+                - generic [ref=e754]: X Twitter
+    - generic [ref=e756]:
+      - heading "Informazioni legali" [level=3] [ref=e757]
+      - list [ref=e758]:
+        - listitem [ref=e759]:
+          - link "Note legali" [ref=e760] [cursor=pointer]:
+            - /url: /note-legali/
+        - listitem [ref=e761]:
+          - link "Privacy e cookie" [ref=e762] [cursor=pointer]:
+            - /url: /privacy/
+        - listitem [ref=e763]:
+          - link "Accessibilità" [ref=e764] [cursor=pointer]:
+            - /url: /accessibilita/
+        - listitem [ref=e765]:
+          - link "Social Media Policy" [ref=e766] [cursor=pointer]:
+            - /url: /social-media-policy/
+        - listitem [ref=e767]:
+          - link "Attribuzioni pittogrammi" [ref=e768] [cursor=pointer]:
+            - /url: /attribuzioni-pittogrammi/
+        - listitem [ref=e769]:
+          - link "Pagina di emergenza (versione leggera)" [ref=e770] [cursor=pointer]:
+            - /url: /emergenza/
+            - generic [ref=e771]: 
+            - text: Pagina di emergenza (versione leggera)
+      - paragraph [ref=e772]:
+        - text: © 2026 Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma — C.F. 92011880588
+        - text: I contenuti di questo sito, salvo diversa indicazione, sono distribuiti con licenza
+        - link "CC BY 4.0" [ref=e773] [cursor=pointer]:
+          - /url: https://creativecommons.org/licenses/by/4.0/deed.it
+        - text: .
+        - text: Sito Web ideato e realizzato da Alessandro Cuollo - Alfa 19 - IU0QVW.
+  - button "Cambia lingua del sito" [ref=e774] [cursor=pointer]:
+    - generic [ref=e775]: 
+    - generic [ref=e776]: IT
+  - text:            
+  - button "Apri strumenti di accessibilità" [ref=e777] [cursor=pointer]:
+    - generic [ref=e778]: 
+    - generic [ref=e779]: Strumenti di accessibilità
+  - text:                     
+  - 'link "Apri l''Assistente virtuale: ti aiuta a trovare ciò che cerchi sul sito" [ref=e780] [cursor=pointer]':
+    - /url: /assistente/
+    - generic [ref=e781]: 
+    - generic [ref=e782]: Assistente virtuale

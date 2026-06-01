@@ -466,9 +466,9 @@ body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
 .card-notizia:hover { border-left-color: var(--pc-secondary); box-shadow: var(--pc-shadow-md); }
 
 /* ── BADGES ALLERTE ── */
-.badge-allerta-verde { background: #28a745; color: #fff; padding: 0.5em 1em; border-radius: var(--pc-radius-sm); }
+.badge-allerta-verde { background: #28a745; color: #000; padding: 0.5em 1em; border-radius: var(--pc-radius-sm); }
 .badge-allerta-gialla { background: #ffc107; color: #000; padding: 0.5em 1em; border-radius: var(--pc-radius-sm); }
-.badge-allerta-arancione { background: #fd7e14; color: #fff; padding: 0.5em 1em; border-radius: var(--pc-radius-sm); }
+.badge-allerta-arancione { background: #fd7e14; color: #000; padding: 0.5em 1em; border-radius: var(--pc-radius-sm); }
 .badge-allerta-rossa { background: #dc3545; color: #fff; padding: 0.5em 1em; border-radius: var(--pc-radius-sm); }
 
 /* ── TIMELINE ── */
