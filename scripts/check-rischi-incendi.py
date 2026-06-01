@@ -231,6 +231,32 @@ def main():
     print(f"  OGGI ({data_oggi}): Zona {ZONA_AIB_GENZANO} = {liv_oggi_aib}")
     print(f"  DOMANI ({data_dom}): Zona {ZONA_AIB_GENZANO} = {liv_dom_aib}")
 
+    # Scadenza per data: la sezione "oggi" del PDF può riferirsi a IERI quando il
+    # bollettino di oggi non è ancora pubblicato (di norma la mattina). In quel
+    # caso il PDF di ieri contiene già la previsione "domani" = oggi reale:
+    # la promuoviamo a giorno corrente, così la barra non resta mai datata indietro.
+    today_str = now.strftime("%Y-%m-%d")
+    if data_oggi and data_oggi < today_str:
+        if data_dom == today_str and liv_dom_aib:
+            print(f"  ↪ Bollettino 'oggi' = {data_oggi} è passato: promuovo 'domani' ({data_dom}) a giorno corrente")
+            liv_oggi_aib, data_oggi = liv_dom_aib, data_dom
+            liv_dom_aib, data_dom = None, None
+        else:
+            # Bollettino troppo vecchio per coprire oggi → cessazione automatica.
+            allerta = load_allerta()
+            changed = "rischio_incendi" in allerta
+            if changed:
+                print(f"⚠️  Bollettino scaduto (oggi={today_str}, PDF copre {data_oggi}) → rimuovo blocco rischio_incendi")
+                del allerta["rischio_incendi"]
+                save_allerta(allerta)
+            else:
+                print(f"ℹ️  Bollettino scaduto (oggi={today_str}, PDF copre {data_oggi}) e nessun blocco da rimuovere")
+            gh_out = os.environ.get("GITHUB_OUTPUT", "")
+            if gh_out:
+                with open(gh_out, "a") as f:
+                    f.write(f"changed={'true' if changed else 'false'}\n")
+            return 0
+
     livello_oggi = aib_to_pc(liv_oggi_aib)
     livello_dom = aib_to_pc(liv_dom_aib)
 

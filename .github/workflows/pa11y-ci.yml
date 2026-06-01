@@ -16,6 +16,7 @@ on:
       - 'CONTESTO-AI.md'
       - 'social-bozze/**'
       - 'bozze/**'
+  workflow_dispatch:        # esecuzione manuale on-demand (es. baseline findings)
 
 permissions:
   contents: read
@@ -43,8 +44,10 @@ jobs:
         with:
           node-version: '20'
 
-      - name: "📦 Installa pa11y-ci + http-server"
-        run: npm install -g pa11y-ci http-server
+      - name: "📦 Installa http-server + axe-core + puppeteer"
+        run: |
+          npm install -g http-server
+          npm install puppeteer axe-core
 
       - name: "🌐 Avvia server locale e attendi"
         run: |
@@ -54,21 +57,22 @@ jobs:
             sleep 1
           done
 
-      - name: "♿ Esegui pa11y-ci (report-only in fase di rollout)"
+      - name: "♿ Gate axe-core (fallisce solo su violazioni; incomplete informativi)"
         continue-on-error: true
         run: |
           set +e
-          pa11y-ci --config .pa11yci.json 2>&1 | tee pa11y-report.txt
+          node scripts/axe-gate.js 2>&1 | tee axe-report.txt
+          code=${PIPESTATUS[0]}
           {
-            echo "## ♿ Report accessibilità Pa11y (axe, WCAG 2.2 AA)"
+            echo "## ♿ Gate accessibilità axe-core (WCAG 2.2 AA)"
             echo ''
-            echo 'Fase di rollout: **report-only**, non blocca la PR.'
+            echo 'Fallisce SOLO sulle **violazioni confermate**. Gli *incomplete* (testo su gradiente, pseudo-elementi, sovrapposizioni) sono falsi-positivi da revisione manuale e NON bloccano.'
             echo ''
             echo '```'
-            cat pa11y-report.txt
+            cat axe-report.txt
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
-          exit 0
+          exit $code
 
       - name: "💬 Pubblica il report come commento sulla PR"
         if: github.event_name == 'pull_request'
@@ -77,14 +81,14 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           {
-            echo "## ♿ Report accessibilità Pa11y (axe, WCAG 2.2 AA) — report-only"
+            echo "## ♿ Gate accessibilità axe-core (WCAG 2.2 AA)"
             echo ''
-            echo 'Gate non bloccante in fase di rollout. Findings da bonificare prima di rendere il gate obbligatorio.'
+            echo 'Solo le **violazioni confermate** bloccano. Gli *incomplete* sono informativi.'
             echo ''
             echo '```'
-            head -c 60000 pa11y-report.txt
+            head -c 60000 axe-report.txt
             echo '```'
-          } > pa11y-body.md
+          } > axe-body.md
           gh pr comment "${{ github.event.pull_request.number }}" \
-            --body-file pa11y-body.md \
+            --body-file axe-body.md \
             --repo "${{ github.repository }}"

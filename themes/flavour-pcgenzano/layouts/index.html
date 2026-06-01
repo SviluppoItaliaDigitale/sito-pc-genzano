@@ -111,8 +111,11 @@
 {{ $incendiDomLiv := "" }}
 {{ $incendiDomAib := "" }}
 {{ $incendiDataLeg := "" }}
+{{/* Il bollettino AIB vale solo per la sua data: se è già passata (es. bollettino
+     di ieri non ancora rinnovato), la barra NON si mostra (scadenza per data). */}}
+{{ $oggiISO := now.Format "2006-01-02" }}
 {{ with $allerta.rischio_incendi }}
-  {{ if in (slice "gialla" "arancione" "rossa") .livello }}
+  {{ if and (in (slice "gialla" "arancione" "rossa") .livello) (ge (string .data) $oggiISO) }}
     {{ $incendiVisibile = true }}
     {{ $incendiLiv = .livello }}
     {{ $incendiTitolo = .titolo }}
@@ -128,7 +131,7 @@
     {{ end }}
   {{ end }}
 {{ end }}
-<div id="incendi-bar" class="incendi-bar incendi-bar-{{ $incendiLiv }}" role="alert" aria-label="Rischio incendi boschivi"{{ if not $incendiVisibile }} style="display:none"{{ end }}>
+<div id="incendi-bar" class="incendi-bar incendi-bar-{{ $incendiLiv }}" data-valido="{{ with $allerta.rischio_incendi }}{{ .data }}{{ end }}" role="alert" aria-label="Rischio incendi boschivi"{{ if not $incendiVisibile }} style="display:none"{{ end }}>
   <div class="container">
     <i class="bi bi-fire me-2" aria-hidden="true"></i>
     <strong>Rischio incendi boschivi:</strong>
@@ -139,6 +142,17 @@
     <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini/rischi-incendi" target="_blank" rel="noopener noreferrer" class="ms-2 incendi-link">Bollettino AIB <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
   </div>
 </div>
+<script>
+/* Guard lato browser: nasconde la barra rischio incendi se la sua data di
+   validità è già passata, anche quando l'HTML statico non è stato rigenerato
+   (deploy in ritardo). Difesa complementare al guard di build Hugo. */
+(function(){
+  var b=document.getElementById('incendi-bar'); if(!b) return;
+  var d=b.getAttribute('data-valido'); if(!d) return;
+  var t=new Date(), oggi=t.getFullYear()+'-'+('0'+(t.getMonth()+1)).slice(-2)+'-'+('0'+t.getDate()).slice(-2);
+  if(d < oggi){ b.style.display='none'; }
+})();
+</script>
 {{ end }}
 
 {{/* ══════════════════════════════════════════════════════

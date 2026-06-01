@@ -7,7 +7,7 @@
 {{ $leafletJS  := "vendor/leaflet/leaflet.js"  | relURL }}
 
 <link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">
-<div class="dash-sisma" aria-labelledby="dash-sisma-tit">
+<div class="dash-sisma" role="group" aria-labelledby="dash-sisma-tit">
   <h2 id="dash-sisma-tit" class="visually-hidden">Cruscotto terremoti in Italia</h2>
 
   <div class="dash-sisma-toolbar" role="group" aria-label="Filtri terremoti">
@@ -44,11 +44,11 @@
           <caption class="visually-hidden">Elenco dei terremoti rilevati nel periodo e nell'area selezionati, con data, magnitudo, zona, profondità, latitudine e longitudine. Ordinabile per ogni colonna.</caption>
           <thead>
             <tr>
-              <th scope="col"><button type="button" class="dash-sort-btn" data-sort="time" aria-sort="descending">Data e Ora <span class="dash-sort-ind">↓</span></button></th>
-              <th scope="col"><button type="button" class="dash-sort-btn" data-sort="mag" aria-sort="none">Magnitudo <span class="dash-sort-ind"></span></button></th>
-              <th scope="col"><button type="button" class="dash-sort-btn" data-sort="place" aria-sort="none">Zona <span class="dash-sort-ind"></span></button></th>
-              <th scope="col" class="dash-num"><button type="button" class="dash-sort-btn" data-sort="depth" aria-sort="none">Profondità (km) <span class="dash-sort-ind"></span></button></th>
-              <th scope="col" class="dash-num"><button type="button" class="dash-sort-btn" data-sort="dist" aria-sort="none">Distanza (km) <span class="dash-sort-ind"></span></button></th>
+              <th scope="col" aria-sort="descending"><button type="button" class="dash-sort-btn" data-sort="time">Data e Ora <span class="dash-sort-ind">↓</span></button></th>
+              <th scope="col" aria-sort="none"><button type="button" class="dash-sort-btn" data-sort="mag">Magnitudo <span class="dash-sort-ind"></span></button></th>
+              <th scope="col" aria-sort="none"><button type="button" class="dash-sort-btn" data-sort="place">Zona <span class="dash-sort-ind"></span></button></th>
+              <th scope="col" class="dash-num" aria-sort="none"><button type="button" class="dash-sort-btn" data-sort="depth">Profondità (km) <span class="dash-sort-ind"></span></button></th>
+              <th scope="col" class="dash-num" aria-sort="none"><button type="button" class="dash-sort-btn" data-sort="dist">Distanza (km) <span class="dash-sort-ind"></span></button></th>
               <th scope="col" class="dash-num dash-col-hide-sm">Lat</th>
               <th scope="col" class="dash-num dash-col-hide-sm">Lon</th>
             </tr>
@@ -84,19 +84,31 @@
     // Whitelist sigle provincia italiane (107 + sigle storiche): l'API INGV
     // restituisce eventi nella bbox geografica che include parti di Francia,
     // Svizzera, Austria, Slovenia, Croazia, Bosnia, Albania, Tunisia. Filtriamo
-    // lato client mostrando solo eventi italiani: il `place` di INGV per gli
-    // italiani termina con "(XX)" dove XX è la sigla provincia.
+    // lato client mostrando solo eventi italiani: il `place` di INGV termina
+    // con la provincia tra parentesi — a volte la SIGLA "(CS)", a volte il
+    // NOME ESTESO "(Cosenza)" / "(Reggio Calabria)" (tipico degli eventi
+    // costieri/offshore, es. "Costa Calabra nord-occidentale (Cosenza)").
     var PROVINCE_IT = {AG:1,AL:1,AN:1,AO:1,AR:1,AP:1,AT:1,AV:1,BA:1,BT:1,BL:1,BN:1,BG:1,BI:1,BO:1,BZ:1,BS:1,BR:1,CA:1,CL:1,CB:1,CI:1,CE:1,CT:1,CZ:1,CH:1,CO:1,CS:1,CR:1,KR:1,CN:1,EN:1,FM:1,FE:1,FI:1,FG:1,FC:1,FR:1,GE:1,GO:1,GR:1,IM:1,IS:1,SP:1,AQ:1,LT:1,LE:1,LC:1,LI:1,LO:1,LU:1,MC:1,MN:1,MS:1,MT:1,VS:1,ME:1,MI:1,MO:1,MB:1,NA:1,NO:1,NU:1,OG:1,OT:1,OR:1,PD:1,PA:1,PR:1,PV:1,PG:1,PU:1,PE:1,PC:1,PI:1,PT:1,PN:1,PZ:1,PO:1,RG:1,RA:1,RC:1,RE:1,RI:1,RN:1,RM:1,RO:1,SA:1,SS:1,SV:1,SI:1,SR:1,SO:1,SU:1,TA:1,TE:1,TR:1,TO:1,TP:1,TN:1,TV:1,TS:1,UD:1,VA:1,VE:1,VB:1,VC:1,VR:1,VV:1,VI:1,VT:1};
-    // Mari italiani (anche se la sigla provincia manca): pattern presenti nel
-    // "place" INGV per eventi in mare nelle nostre acque.
-    var MARI_IT = /^(mar|costa)\s+(adriatico|tirreno|ionio|ligure|sardo|sicilia)|mare adriatico|mar mediterraneo centrale|coste? (calabre|pugliesi|sicilian|sard|laziali|liguri|toscan|venet|marchigian|abruzzesi|molisan|romagnol)/i;
+    // Nomi ESTESI delle 107 province (lowercase) + varianti usate da INGV.
+    var PROVINCE_NOMI = {'agrigento':1,'alessandria':1,'ancona':1,'aosta':1,'arezzo':1,'ascoli piceno':1,'asti':1,'avellino':1,'bari':1,'barletta-andria-trani':1,'belluno':1,'benevento':1,'bergamo':1,'biella':1,'bologna':1,'bolzano':1,'brescia':1,'brindisi':1,'cagliari':1,'caltanissetta':1,'campobasso':1,'caserta':1,'catania':1,'catanzaro':1,'chieti':1,'como':1,'cosenza':1,'cremona':1,'crotone':1,'cuneo':1,'enna':1,'fermo':1,'ferrara':1,'firenze':1,'foggia':1,'forlì-cesena':1,'forli-cesena':1,'frosinone':1,'genova':1,'gorizia':1,'grosseto':1,'imperia':1,'isernia':1,'la spezia':1,"l'aquila":1,'aquila':1,'latina':1,'lecce':1,'lecco':1,'livorno':1,'lodi':1,'lucca':1,'macerata':1,'mantova':1,'massa-carrara':1,'massa carrara':1,'matera':1,'messina':1,'milano':1,'modena':1,'monza e della brianza':1,'monza':1,'napoli':1,'novara':1,'nuoro':1,'oristano':1,'padova':1,'palermo':1,'parma':1,'pavia':1,'perugia':1,'pesaro e urbino':1,'pesaro-urbino':1,'pescara':1,'piacenza':1,'pisa':1,'pistoia':1,'pordenone':1,'potenza':1,'prato':1,'ragusa':1,'ravenna':1,'reggio calabria':1,'reggio di calabria':1,'reggio emilia':1,"reggio nell'emilia":1,'rieti':1,'rimini':1,'roma':1,'rovigo':1,'salerno':1,'sassari':1,'savona':1,'siena':1,'siracusa':1,'sondrio':1,'sud sardegna':1,'taranto':1,'teramo':1,'terni':1,'torino':1,'trapani':1,'trento':1,'treviso':1,'trieste':1,'udine':1,'varese':1,'venezia':1,'verbano-cusio-ossola':1,'vercelli':1,'verona':1,'vibo valentia':1,'vicenza':1,'viterbo':1};
+    // Mari/zone italiane: i terremoti offshore nelle nostre acque hanno spesso
+    // nomi descrittivi (Tirreno, Adriatico, Ionio, Costa Calabra...). La bbox è
+    // già centrata sull'Italia: gli eventi esteri sono nominati col Paese
+    // (Croazia, Grecia, Albania...) e non matchano questi token.
+    var MARI_IT = /\b(tirreno|adriatic|ionio|jonio|mar ligure|canale di sicilia|stretto di messina|mediterraneo centrale|costa (calabr|sicilian|pugli|lazial|toscan|ligur|campan|abruzzes|molisan|marchigian|romagnol|sard|venet|salentin))/i;
     // Vero per eventi che con buona probabilità sono "italiani".
     function isItaliano(e){
-      // 1) Sigla provincia ITA in coda al place: "(RO)", "(MT)", ecc.
-      var m = /\(([A-Z]{2})\)\s*$/.exec(e.place||'');
-      if (m && PROVINCE_IT[m[1]]) return true;
-      // 2) Nome mare italiano riconoscibile
-      if (MARI_IT.test(e.place||'')) return true;
+      var place = e.place || '';
+      // 1) Provincia in coda al place, tra parentesi: SIGLA "(RM)" o NOME
+      //    ESTESO "(Cosenza)" / "(Reggio Calabria)".
+      var m = /\(([^)]+)\)\s*$/.exec(place);
+      if (m) {
+        var par = m[1].trim();
+        if (/^[A-Z]{2}$/.test(par) && PROVINCE_IT[par]) return true;   // sigla
+        if (PROVINCE_NOMI[par.toLowerCase()]) return true;            // nome esteso
+      }
+      // 2) Nome mare/zona costiera italiana riconoscibile
+      if (MARI_IT.test(place)) return true;
       // 3) Tutto il resto (esteri o mari extra-italiani) → escluso.
       // NOTA: in modalità "castelli" la bbox è già strettissima dentro l'Italia,
       // quindi il filtro è ridondante ma innocuo.
@@ -158,11 +170,12 @@
       // aggiorno indicatori sort sulle intestazioni
       document.querySelectorAll('.dash-sort-btn').forEach(function(b){
         var ind=b.querySelector('.dash-sort-ind');
+        var th=b.closest('th');
         if(b.dataset.sort===sortKey){
-          b.setAttribute('aria-sort', sortDir<0?'descending':'ascending');
+          if(th) th.setAttribute('aria-sort', sortDir<0?'descending':'ascending');
           ind.textContent = sortDir<0?'↓':'↑';
         } else {
-          b.setAttribute('aria-sort','none');
+          if(th) th.setAttribute('aria-sort','none');
           ind.textContent='';
         }
       });

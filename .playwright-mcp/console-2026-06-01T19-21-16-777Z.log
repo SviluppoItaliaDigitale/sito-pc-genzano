@@ -1,0 +1,5 @@
+[     184ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://www.protezionecivilegenzano.it/allerte-meteo/:0
+[    1679ms] [INFO] [Report Only] Refused to load the script 'https://gc.zgo.at/count.js' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+ @ https://www.protezionecivilegenzano.it/allerte-meteo/:0
+[   11743ms] [INFO] [Report Only] Refused to load the script 'https://cdnjs.cloudflare.com/ajax/libs/axe-core/4.10.2/axe.min.js' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+ @ :6

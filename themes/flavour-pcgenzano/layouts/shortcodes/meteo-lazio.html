@@ -26,7 +26,10 @@
 {{- with $c.raffiche }}{{ $extra = printf "%s Raffiche di vento fino a %v chilometri orari." $extra . }}{{ end }}
 {{- with $oggi.uv }}{{ $extra = printf "%s Indice UV di oggi %v, %s." $extra . $oggi.uv_label }}{{ end }}
 {{- if and .alba .tramonto }}{{ $extra = printf "%s Alba alle %s, tramonto alle %s." $extra .alba .tramonto }}{{ end }}
-  <div class="meteo-gz no-gloss" role="img" aria-label="Meteo a Genzano di Roma, {{ .data_lunga }}: ora {{ $c.temp }} gradi, {{ $c.cielo | lower }}, percepita {{ $c.percepita }} gradi, umidità {{ $c.umidita }} per cento, vento {{ $c.vento }} chilometri orari.{{ $extra }} Previsione dei prossimi giorni a seguire.">
+  {{/* Niente role=img qui: il box contiene link reali (Centro Funzionale, 112)
+       che con role=img sarebbero focalizzabili ma nascosti agli screen reader
+       (nested-interactive WCAG). Il contenuto è testo visibile autodescrittivo. */}}
+  <div class="meteo-gz no-gloss">
     <div class="meteo-gz-head">
       <span class="meteo-gz-icona" aria-hidden="true"><svg viewBox="0 0 56 56" width="58" height="58">{{ $c.icona | safeHTML }}</svg></span>
       <div>
