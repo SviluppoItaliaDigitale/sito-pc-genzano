@@ -25,3 +25,13 @@ live. Qui invece sono separate in modo netto.
 
 Le bozze sono tracciate da git, quindi una bozza iniziata sul PC è modificabile
 anche da mobile/cloud (sincronizzate via GitHub).
+
+## Articoli sospesi in attesa di ufficialità
+
+- **`2026-06-01-avvio-campagna-aib-lazio-2026.md`** (+ versione facile) —
+  sospeso il 1 giugno 2026 perché l'avvio della campagna antincendio boschivo
+  del Lazio **non era ancora ufficiale** (manca il decreto/atto regionale con la
+  data). La cover resta in `static/images/`. Per **ripubblicarlo** quando esce
+  l'atto ufficiale: aggiorna il campo `date:` alla data reale, sposta i due file
+  in `content/comunicazioni/<data>-<slug>.md`, e ricontrolla regole e divieti
+  citati con la fonte ufficiale. I QR verranno rigenerati al deploy.
