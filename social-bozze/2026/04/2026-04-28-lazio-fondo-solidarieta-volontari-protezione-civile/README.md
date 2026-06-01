@@ -1,8 +1,8 @@
-# Immagini e testi social per «28 aprile: la sicurezza sul lavoro riguarda anche i volontari»
+# Immagini e testi social per «Lazio: il fondo che tutela i volontari di protezione civile infortunati in servizio»
 
-- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-04-28-giornata-mondiale-sicurezza-lavoro-volontari/
+- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-04-28-lazio-fondo-solidarieta-volontari-protezione-civile/
 - **Data**: 2026-04-28
-- **Badge**: Formazione
+- **Badge**: Volontariato
 
 ## Dove va ogni file (a prova di errore)
 
@@ -11,7 +11,7 @@ Il numero del carosello è l'ordine di caricamento.
 
 | File | Dove si pubblica |
 |---|---|
-| `feed-carosello-1.jpg`, `feed-carosello-2.jpg` | FEED Instagram + Facebook — carosello: caricale **tutte, in ordine** (1080×1350) |
+| `feed-carosello-1.jpg`, `feed-carosello-2.jpg`, `feed-carosello-3.jpg`, `feed-carosello-4.jpg` | FEED Instagram + Facebook — carosello: caricale **tutte, in ordine** (1080×1350) |
 | `storia.jpg` | STORIE Instagram + Facebook — verticale, sparisce dopo 24h (1080×1920) |
 | `instagram.txt` | testo per Instagram |
 | `facebook.txt` | testo per Facebook (anteprima OG dall'URL) |
