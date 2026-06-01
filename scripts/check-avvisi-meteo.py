@@ -25,9 +25,9 @@ Dipendenze runtime:
 - python3 (stdlib only)
 
 Anti-spam: lo script aggiorna allerta.json solo se cambia il "tipo" o il
-"livello" dell'avviso_meteo (non per refresh periodici). Il workflow
-notifica-telegram.yml deve essere esteso separatamente per gestire questo
-nuovo campo (TODO follow-up).
+"livello" dell'avviso_meteo (non per refresh periodici). La notifica Telegram
+del blocco avviso_meteo è gestita da scripts/notifica-telegram.py
+(Priorità 3: comparsa/variazione/rientro di tipo o livello) — risolto 01/06/2026.
 """
 
 import json

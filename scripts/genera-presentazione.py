@@ -673,6 +673,13 @@ slide_sistema(N())
 
 divider("Risorse e trasparenza", N())
 
+content("Conoscere la Protezione Civile", [
+    "Sezione dottrinale: storia, Servizio Nazionale e le quattro fasi (previsione, prevenzione, soccorso, superamento).",
+    "La scienza del rischio e i Centri di competenza; la dimensione internazionale del sistema.",
+    "Il catalogo dei rischi e il vulcanismo dei Colli Albani (Vulcano Laziale).",
+    "Le telecomunicazioni in emergenza: capire come funziona la rete radio.",
+], N(), fonti="DPC · INGV · ISPRA · CNR")
+
 content("FAQ e Glossario", [
     "Risposte alle domande frequenti dei cittadini.",
     "Glossario dei termini e delle sigle della Protezione Civile.",
