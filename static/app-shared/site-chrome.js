@@ -175,10 +175,10 @@
     '</div>';
 
   var FOOTER_HTML =
-    '<div class="utility-bar" aria-label="Informazioni di aggiornamento">' +
+    '<div class="utility-bar" role="group" aria-label="Informazioni di aggiornamento">' +
       '<div class="container">' +
         '<div class="d-flex flex-wrap justify-content-between align-items-center">' +
-          '<div class="utility-bar-item"><i class="bi bi-clock me-1" aria-hidden="true"></i><span id="live-datetime" aria-live="polite" aria-label="Data e ora corrente"></span></div>' +
+          '<div class="utility-bar-item"><i class="bi bi-clock me-1" aria-hidden="true"></i><span id="live-datetime"></span></div>' +
           '<div class="utility-bar-item"><i class="bi bi-arrow-repeat me-1" aria-hidden="true"></i><span id="site-build-time">Sito aggiornato</span></div>' +
         '</div>' +
       '</div>' +
@@ -192,7 +192,7 @@
               '<p class="text-white">Gruppo Comunale Volontari di Genzano di Roma</p>' +
               '<p style="color:rgba(255,255,255,0.85);"><strong>Sede:</strong> Via Sicilia, 13-15 - 00045 Genzano di Roma (RM)<br><strong>Telefono:</strong> <a href="tel:+39069362600" class="text-white fw-bold">+39 06 9362600</a><br><strong>Email:</strong> <a href="mailto:segreteria@protezionecivilegenzano.it" class="text-white fw-bold">segreteria@protezionecivilegenzano.it</a></p>' +
               '<p class="small" style="color:rgba(255,255,255,0.75);">14&deg; COI Prov. di Roma &mdash; Registro Regionale P.C. n.184<br>Iscritta al RUNTS sez. &laquo;Altri Enti del Terzo Settore&raquo; con determina n. G14230 del 28/10/2024<br>Aderente al Coordinamento FEPIVOL</p>' +
-              '<div class="loghi-istituzionali d-flex align-items-center gap-3 flex-wrap mt-3" aria-label="Loghi istituzionali di appartenenza">' +
+              '<div class="loghi-istituzionali d-flex align-items-center gap-3 flex-wrap mt-3" role="group" aria-label="Loghi istituzionali di appartenenza">' +
                 '<img src="' + SITE_URL + '/images/logo-snpc-volontariato.png" alt="Servizio Nazionale Protezione Civile — Volontariato" width="96" height="112" style="background:#fff; border-radius:6px; padding:3px;">' +
                 '<img src="' + SITE_URL + '/images/logo-pc-lazio.png" alt="Protezione Civile Regione Lazio" width="104" height="104" style="background:#fff; border-radius:50%; padding:3px;">' +
                 '<img src="' + SITE_URL + '/images/logo-fepivol.png" alt="Coordinamento FE.PI.VOL. — Federazione Pronto Intervento Volontariato ODV" width="104" height="104" style="background:#fff; border-radius:50%; padding:3px;">' +
@@ -273,7 +273,7 @@
      MARKUP DA TENERE ALLINEATO con i partial Hugo citati sopra.
      ---------------------------------------------------------------- */
   var SOS_HTML =
-    '<button type="button" id="sos-button" class="sos-button" aria-label="Chiama il numero unico di emergenza 112 (con conferma)" aria-haspopup="dialog" aria-controls="sos-modal">' +
+    '<button type="button" id="sos-button" class="sos-button" aria-label="Chiama il numero unico di emergenza 112 (con conferma)" aria-haspopup="dialog">' +
       '<span class="sos-icon" aria-hidden="true">SOS</span>' +
       '<span class="sos-label">112</span>' +
     '</button>' +
@@ -298,7 +298,7 @@
     '</div>';
 
   var A11Y_HTML =
-    '<button type="button" id="a11yToolbarOpen" class="a11y-fab" aria-label="Apri strumenti di accessibilità" aria-haspopup="dialog" aria-controls="a11yDialog" title="Strumenti di accessibilità">' +
+    '<button type="button" id="a11yToolbarOpen" class="a11y-fab" aria-label="Apri strumenti di accessibilità" aria-haspopup="dialog" title="Strumenti di accessibilità">' +
       '<i class="bi bi-universal-access" aria-hidden="true"></i><span class="visually-hidden">Strumenti di accessibilità</span>' +
     '</button>' +
     '<div class="a11y-backdrop" id="a11yBackdrop" hidden></div>' +
