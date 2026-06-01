@@ -16,6 +16,7 @@ on:
       - 'CONTESTO-AI.md'
       - 'social-bozze/**'
       - 'bozze/**'
+  workflow_dispatch:        # esecuzione manuale on-demand (es. baseline findings)
 
 permissions:
   contents: read
