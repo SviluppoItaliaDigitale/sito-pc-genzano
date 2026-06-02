@@ -38,7 +38,7 @@
   <div class="dash-sisma-grid">
     <div id="dash-sisma-mappa" role="application" aria-label="Mappa dei terremoti in Italia nel periodo selezionato, con Genzano di Roma evidenziata."></div>
     <div class="dash-sisma-liste">
-      <p class="dash-aria-nota" style="margin:0 0 .5rem"><span id="dash-conteggio">—</span> · clicca un'intestazione per ordinare, una riga per centrarla sulla mappa.</p>
+      <p class="dash-aria-nota" style="margin:0 0 .5rem"><span id="dash-conteggio">—</span> · clicca un'intestazione per ordinare, una riga per aprire la scheda completa del terremoto.</p>
       <div class="table-responsive">
         <table class="dash-sisma-tabella" id="dash-sisma-tabella">
           <caption class="visually-hidden">Elenco dei terremoti rilevati nel periodo e nell'area selezionati, con data, magnitudo, zona, profondità, latitudine e longitudine. Ordinabile per ogni colonna.</caption>
@@ -143,9 +143,11 @@
       document.getElementById('dash-sisma-mappa').scrollIntoView({behavior:'smooth',block:'nearest'});
     }
     document.getElementById('dash-sisma-tbody').addEventListener('click',function(ev){
-      if(ev.target.closest('a')) return; // click su link "scheda" → naviga, non centrare
+      if(ev.target.closest('a')) return; // link interni gestiscono da soli
       var tr=ev.target.closest('tr[data-ev]'); if(!tr)return;
-      vaiAEvento(parseInt(tr.dataset.ev,10));
+      var e=eventi[parseInt(tr.dataset.ev,10)];
+      if(e&&e.id){ window.location.href = SCHEDA+'#'+e.id; return; } // riga intera → scheda evento
+      vaiAEvento(parseInt(tr.dataset.ev,10));             // fallback: centra sulla mappa
     });
 
     // ordinamento via click sulle intestazioni della tabella
@@ -198,7 +200,7 @@
       var html='';
       for(var i=0;i<max;i++){
         var e=arr[i], k=eventi.indexOf(e);
-        html += '<tr data-ev="'+k+'" title="Centra sulla mappa">'+
+        html += '<tr data-ev="'+k+'" title="Apri la scheda completa del terremoto" style="cursor:pointer">'+
                 '<td class="dash-cell-time">'+pad6(e.time)+'</td>'+
                 '<td><span class="dash-mag" style="border-left-color:'+colore(e.mag)+'">M '+e.mag.toFixed(1)+'</span></td>'+
                 '<td class="dash-cell-place">'+(e.id?'<a class="dash-scheda-link" href="'+SCHEDA+'#'+e.id+'" title="Apri la scheda completa di questo terremoto">'+e.place+'</a>':e.place)+'</td>'+
