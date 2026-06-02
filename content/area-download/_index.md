@@ -114,6 +114,21 @@ Per segnalare un link non funzionante scrivi a <a href="mailto:segreteria@protez
 | [La Protezione Civile in famiglia](https://www.protezionecivilegenzano.it/documenti/download/PC_famiglia.pdf) | Buone pratiche da adottare in famiglia | PDF · 4,5 MB |
 | [Il ruolo del DPC](https://www.protezionecivilegenzano.it/documenti/download/Ruolo_DPC.pdf) | Pieghevole informativo | PDF · 883 KB |
 
+## Poster di emergenza multilingua
+
+Poster A4/A2 stampabili **"In emergenza chiama il 112"** in **otto lingue**, pensati per spazi comunitari, scuole, ambulatori e luoghi frequentati da residenti e turisti stranieri. Ogni poster riporta il numero unico 112, le azioni essenziali e il QR alla pagina di emergenza del sito. Stampa la lingua che ti serve e affiggila.
+
+| Lingua | Stampa (PDF A2) | Anteprima |
+|---|---|---|
+| Italiano | [PDF](/poster-emergenza-multilingua/poster-emergenza-it.pdf) | [PNG](/poster-emergenza-multilingua/poster-emergenza-it.png) |
+| English | [PDF](/poster-emergenza-multilingua/poster-emergenza-en.pdf) | [PNG](/poster-emergenza-multilingua/poster-emergenza-en.png) |
+| Français | [PDF](/poster-emergenza-multilingua/poster-emergenza-fr.pdf) | [PNG](/poster-emergenza-multilingua/poster-emergenza-fr.png) |
+| Deutsch | [PDF](/poster-emergenza-multilingua/poster-emergenza-de.pdf) | [PNG](/poster-emergenza-multilingua/poster-emergenza-de.png) |
+| Español | [PDF](/poster-emergenza-multilingua/poster-emergenza-es.pdf) | [PNG](/poster-emergenza-multilingua/poster-emergenza-es.png) |
+| Português | [PDF](/poster-emergenza-multilingua/poster-emergenza-pt.pdf) | [PNG](/poster-emergenza-multilingua/poster-emergenza-pt.png) |
+| Română | [PDF](/poster-emergenza-multilingua/poster-emergenza-ro.pdf) | [PNG](/poster-emergenza-multilingua/poster-emergenza-ro.png) |
+| Esperanto | [PDF](/poster-emergenza-multilingua/poster-emergenza-eo.pdf) | [PNG](/poster-emergenza-multilingua/poster-emergenza-eo.png) |
+
 ## Formazione e solidarietà
 
 Manuali tecnici prodotti da enti del Terzo Settore in collaborazione con il sistema di Protezione Civile, utili per i volontari impiegati in attività di supporto alla popolazione.

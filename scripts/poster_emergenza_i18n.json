@@ -1,0 +1,130 @@
+[
+  {
+    "code": "it",
+    "endonimo": "Italiano",
+    "title": "In emergenza chiama il 112",
+    "subtitle": "Numero unico europeo di emergenza — gratuito, attivo 24 ore su 24",
+    "actionsHeading": "Cosa fare",
+    "actions": [
+      "Mantieni la calma e pensa prima di agire.",
+      "Chiama il 112 se c'è pericolo per persone, edifici o ambiente.",
+      "Non usare l’ascensore.",
+      "Segui solo le fonti ufficiali (Comune, Regione, Protezione Civile).",
+      "Aiuta le persone fragili se puoi farlo senza rischio.",
+      "Tieni il telefono carico e libera le linee telefoniche."
+    ],
+    "footerTagline": "Pagina di emergenza essenziale online"
+  },
+  {
+    "code": "en",
+    "endonimo": "English",
+    "title": "In an emergency, call 112",
+    "subtitle": "The single European emergency number — free of charge, available 24 hours a day",
+    "actionsHeading": "What to do",
+    "actions": [
+      "Stay calm and think before you act.",
+      "Call 112 if there is danger to people, buildings or the environment.",
+      "Do not use the lift.",
+      "Follow official sources only (Municipality, Region, Civil Protection).",
+      "Help vulnerable people if you can do so safely.",
+      "Keep your phone charged and keep phone lines free."
+    ],
+    "footerTagline": "Essential emergency page online"
+  },
+  {
+    "code": "fr",
+    "endonimo": "Français",
+    "title": "En cas d'urgence, appelez le 112",
+    "subtitle": "Numéro d'urgence européen unique — gratuit, disponible 24 heures sur 24",
+    "actionsHeading": "Que faire",
+    "actions": [
+      "Gardez votre calme et réfléchissez avant d'agir.",
+      "Appelez le 112 en cas de danger pour les personnes, les bâtiments ou l'environnement.",
+      "N'utilisez pas l'ascenseur.",
+      "Suivez uniquement les sources officielles (Commune, Région, Protection civile).",
+      "Aidez les personnes vulnérables si vous pouvez le faire sans risque.",
+      "Gardez votre téléphone chargé et libérez les lignes téléphoniques."
+    ],
+    "footerTagline": "Page d'urgence essentielle en ligne"
+  },
+  {
+    "code": "de",
+    "endonimo": "Deutsch",
+    "title": "Im Notfall die 112 anrufen",
+    "subtitle": "Einheitliche europäische Notrufnummer – kostenlos, rund um die Uhr erreichbar",
+    "actionsHeading": "Was zu tun ist",
+    "actions": [
+      "Bleiben Sie ruhig und denken Sie nach, bevor Sie handeln.",
+      "Rufen Sie die 112 an, wenn Gefahr für Menschen, Gebäude oder Umwelt besteht.",
+      "Benutzen Sie nicht den Aufzug.",
+      "Folgen Sie nur den offiziellen Quellen (Gemeinde, Region, Zivilschutz).",
+      "Helfen Sie hilfsbedürftigen Personen, wenn Sie es ohne Risiko tun können.",
+      "Halten Sie Ihr Telefon geladen und halten Sie die Telefonleitungen frei."
+    ],
+    "footerTagline": "Wesentliche Notfallseite online"
+  },
+  {
+    "code": "es",
+    "endonimo": "Español",
+    "title": "En una emergencia llama al 112",
+    "subtitle": "Número único europeo de emergencia: gratuito y activo las 24 horas",
+    "actionsHeading": "Qué hacer",
+    "actions": [
+      "Mantén la calma y piensa antes de actuar.",
+      "Llama al 112 si hay peligro para personas, edificios o el medio ambiente.",
+      "No uses el ascensor.",
+      "Sigue solo las fuentes oficiales (Ayuntamiento, Región, Protección Civil).",
+      "Ayuda a las personas vulnerables si puedes hacerlo sin riesgo.",
+      "Mantén el teléfono cargado y deja libres las líneas telefónicas."
+    ],
+    "footerTagline": "Página de emergencia esencial en línea"
+  },
+  {
+    "code": "pt",
+    "endonimo": "Português",
+    "title": "Em emergência, ligue 112",
+    "subtitle": "Número único europeu de emergência — gratuito, ativo 24 horas por dia",
+    "actionsHeading": "O que fazer",
+    "actions": [
+      "Mantenha a calma e pense antes de agir.",
+      "Ligue 112 se houver perigo para pessoas, edifícios ou ambiente.",
+      "Não utilize o elevador.",
+      "Siga apenas as fontes oficiais (Câmara Municipal, Região, Proteção Civil).",
+      "Ajude as pessoas vulneráveis se puder fazê-lo sem risco.",
+      "Mantenha o telemóvel carregado e liberte as linhas telefónicas."
+    ],
+    "footerTagline": "Página de emergência essencial online"
+  },
+  {
+    "code": "ro",
+    "endonimo": "Română",
+    "title": "În caz de urgență sună la 112",
+    "subtitle": "Numărul unic european de urgență — gratuit, disponibil 24 de ore din 24",
+    "actionsHeading": "Ce trebuie să faci",
+    "actions": [
+      "Păstrează-ți calmul și gândește înainte de a acționa.",
+      "Sună la 112 dacă există pericol pentru persoane, clădiri sau mediu.",
+      "Nu folosi liftul.",
+      "Urmărește doar sursele oficiale (Primăria, Regiunea, Protecția Civilă).",
+      "Ajută persoanele vulnerabile dacă poți face acest lucru fără risc.",
+      "Ține telefonul încărcat și eliberează liniile telefonice."
+    ],
+    "footerTagline": "Pagină esențială de urgență online"
+  },
+  {
+    "code": "eo",
+    "endonimo": "Esperanto",
+    "title": "En krizo voku la 112",
+    "subtitle": "Unueca eŭropa kriznumero — senpaga, funkcianta 24 horojn el 24",
+    "actionsHeading": "Kion fari",
+    "actions": [
+      "Restu trankvila kaj pripensu antaŭ ol agi.",
+      "Voku la 112 se estas danĝero por homoj, konstruaĵoj aŭ medio.",
+      "Ne uzu la lifton.",
+      "Sekvu nur la oficialajn fontojn (Komunumo, Regiono, Civila Protektado).",
+      "Helpu la vundeblajn homojn se vi povas fari tion sen risko.",
+      "Tenu la telefonon ŝargita kaj liberigu la telefonliniojn."
+    ],
+    "footerTagline": "Esenca krizpaĝo enrete"
+  }
+]
