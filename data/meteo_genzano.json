@@ -1,7 +1,7 @@
 {
-  "aggiornato": "2026-06-03T00:02",
+  "aggiornato": "2026-06-03T00:04",
   "data_lunga": "mercoledì 3 giugno 2026",
-  "aggiornato_label": "mercoledì 3 giugno 2026, ore 00:02",
+  "aggiornato_label": "mercoledì 3 giugno 2026, ore 00:04",
   "alba": "05:36",
   "tramonto": "20:38",
   "corrente": {
@@ -11,7 +11,7 @@
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
     "umidita": 88,
     "vento": 11,
-    "raffiche": 39
+    "raffiche": 40
   },
   "giorni": [
     {
@@ -22,7 +22,7 @@
       "tmin": 18,
       "pioggia": 93,
       "pioggia_mm": 4.9,
-      "raffiche": 56,
+      "raffiche": 58,
       "uv": 8,
       "uv_label": "molto alto"
     },
@@ -34,7 +34,7 @@
       "tmin": 17,
       "pioggia": 0,
       "pioggia_mm": 0,
-      "raffiche": 37,
+      "raffiche": 47,
       "uv": 8,
       "uv_label": "molto alto"
     },
@@ -46,7 +46,7 @@
       "tmin": 16,
       "pioggia": 25,
       "pioggia_mm": 0,
-      "raffiche": 50,
+      "raffiche": 39,
       "uv": 8,
       "uv_label": "molto alto"
     },
@@ -58,7 +58,7 @@
       "tmin": 16,
       "pioggia": 1,
       "pioggia_mm": 0,
-      "raffiche": 41,
+      "raffiche": 42,
       "uv": 8,
       "uv_label": "molto alto"
     }
