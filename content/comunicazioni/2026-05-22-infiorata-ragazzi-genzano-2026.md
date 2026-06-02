@@ -13,7 +13,7 @@ allegati:
   - titolo: "Ordinanza Polizia Locale n. 71 del 19 maggio 2026 — viabilità Infiorata dei Ragazzi"
     url: "/allegati/2026/ordinanza-71-2026-infiorata-ragazzi-viabilita.pdf"
     dimensione: "120 KB"
-social_citazione: "Durante l'Infiorata il Gruppo è presente per l'assistenza alla popolazione, l'informazione e il primo soccorso."
+social_citazione: "Durante l'Infiorata il Gruppo è presente per l'assistenza alla popolazione, l'informazione e il supporto alle squadre sanitarie."
 social_punti:
   - "30 e 31 maggio 2026, via Bruno Buozzi a Genzano"
   - "Tema: «Inno al Creato — Cantico delle Creature»"
@@ -81,7 +81,7 @@ Le attività del Gruppo durante l'evento:
 
 - **Assistenza alle persone** — in particolare bambini, anziani e persone fragili.
 - **Informazione al pubblico** — percorsi e accessi alle aree dell'evento.
-- **Supporto sanitario di primo soccorso** — in raccordo con il 112 / 118.
+- **Ausilio alle squadre sanitarie** — che operano in raccordo con il 112 / 118.
 - **Collegamento radio** — con la centrale di coordinamento.
 
 Il volontariato di Protezione Civile **non può regolare il traffico né svolgere servizi di polizia stradale**. Questi compiti spettano in via esclusiva alle Forze dell'Ordine e alla Polizia Locale (D.Lgs. 285/1992, artt. 11-12). È vietato anche l'uso delle palette dirigitraffico ([Circolare DPC del 6 agosto 2018](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/)).

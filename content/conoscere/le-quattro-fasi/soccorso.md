@@ -23,7 +23,7 @@ La [legge n. 225 del 1992](https://www.protezionecivile.gov.it/it/normativa/legg
 In emergenza la priorità è chiara: **salvaguardare la vita e l'integrità delle persone**. In pratica significa:
 
 - mettere in salvo chi è in pericolo;
-- prestare il **primo soccorso sanitario**, in raccordo con l'emergenza sanitaria;
+- dare **ausilio alle squadre sanitarie**, che operano in raccordo con l'emergenza sanitaria (118);
 - **assistere la popolazione** colpita: accoglienza, informazione, beni di prima necessità;
 - ripristinare, dove possibile, i servizi essenziali;
 - mantenere le **comunicazioni** anche quando le reti ordinarie cadono (vedi [Telecomunicazioni in emergenza](/conoscere/telecomunicazioni-emergenza/)).
@@ -47,7 +47,7 @@ Il primo anello, e il più vicino al cittadino, è il **Centro Operativo Comunal
 
 ## Cosa fa — e cosa NON fa — il volontariato
 
-Durante un'emergenza il Gruppo Comunale opera **a supporto del Comune e delle autorità**, sul mandato del Sindaco. Tra i compiti tipici: assistenza alla popolazione, supporto logistico, collegamento radio, monitoraggio, primo soccorso in raccordo con il 118.
+Durante un'emergenza il Gruppo Comunale opera **a supporto del Comune e delle autorità**, sul mandato del Sindaco. Tra i compiti tipici: assistenza alla popolazione, supporto logistico, collegamento radio, monitoraggio, ausilio alle squadre sanitarie (in collegamento con il 118).
 
 Ci sono però attività che la legge **riserva ad altri**: il volontariato di protezione civile **non svolge la regolazione del traffico né servizi di polizia stradale**, che competono alle Forze dell'Ordine e alla Polizia Locale (artt. 11 e 12 del Codice della Strada, D.Lgs. 285/1992). È un limite importante, ribadito dalla [Circolare del 6 agosto 2018 del Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/) sulle manifestazioni pubbliche.
 
