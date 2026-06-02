@@ -2,7 +2,7 @@
 title: "Note Legali"
 description: "Informazioni legali sul sito web della Protezione Civile di Genzano di Roma."
 layout: "single"
-dataUltimaRevisione: "2026-05-29"
+dataUltimaRevisione: "2026-06-02"
 ---
 
 ## Titolarità del sito
@@ -11,9 +11,9 @@ Il presente sito web è di proprietà del **Gruppo Comunale Volontari di Protezi
 
 Iscritto al RUNTS, sezione "Altri Enti del Terzo Settore", con determina n. G14230 del 28/10/2024.
 
-## Referente web del Gruppo
+## Referente web e comunicazione istituzionale
 
-Il sito è ideato, realizzato e gestito da **Alessandro Cuollo** (nominativo radio "Alfa 19", indicativo radioamatoriale **IU0QVW**), in qualità di **Referente Web del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**.
+Il sito è ideato, realizzato e gestito da **Alessandro Cuollo** (nominativo radio "Alfa 19", indicativo radioamatoriale **IU0QVW**), in qualità di **Referente Web e Comunicazione Istituzionale del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**.
 
 Per segnalazioni di malfunzionamenti, errori nei contenuti o richieste di aggiornamento: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
 
