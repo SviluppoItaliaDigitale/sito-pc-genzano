@@ -7,7 +7,7 @@ aliases:
   - /pianofamiliare.html
   - /pianofamiliare/
 toc: true
-dataUltimaRevisione: "2026-05-22"
+dataUltimaRevisione: "2026-06-02"
 risorse_tema: "kit-emergenza"
 ---
 Compila il modulo per creare un piano di emergenza da stampare e conservare in casa. **I dati restano sul tuo computer**: non vengono inviati al sito, non vengono salvati online e non vengono trasmessi al Gruppo.
@@ -231,6 +231,62 @@ Aggiorna il piano familiare:
 - quando arriva o manca un animale domestico;
 - dopo una prova di evacuazione o dopo aver scoperto un problema pratico.
 
+## <i class="bi bi-backpack4-fill text-primary me-2" aria-hidden="true"></i>Calcolatore dello zaino delle 72 ore {#calcolatore-zaino}
+
+<div class="card border-primary shadow-sm p-4 mb-4 d-print-none" id="zaino-card">
+
+Indica chi compone il nucleo familiare: il calcolatore stima l'**acqua** da tenere pronta e ti mostra una **lista di controllo** che si salva sul tuo dispositivo. Niente viene inviato al sito.
+
+<div class="row g-3 mb-3">
+<div class="col-6 col-md-3">
+<label for="z-persone" class="form-label">Persone</label>
+<input type="number" class="form-control" id="z-persone" min="1" max="30" value="2" oninput="aggiornaZaino()">
+</div>
+<div class="col-6 col-md-3">
+<label for="z-neonati" class="form-label">di cui neonati o bambini piccoli</label>
+<input type="number" class="form-control" id="z-neonati" min="0" max="30" value="0" oninput="aggiornaZaino()">
+</div>
+<div class="col-6 col-md-3">
+<label for="z-animali" class="form-label">Animali domestici</label>
+<input type="number" class="form-control" id="z-animali" min="0" max="30" value="0" oninput="aggiornaZaino()">
+</div>
+<div class="col-6 col-md-3">
+<label for="z-farmaci" class="form-label">Terapie o farmaci salvavita</label>
+<select class="form-select" id="z-farmaci" onchange="aggiornaZaino()">
+<option value="no">No</option>
+<option value="si">Sì</option>
+</select>
+</div>
+</div>
+
+<div id="z-acqua" class="alert alert-info" role="status" aria-live="polite"></div>
+
+<p class="small text-muted">Riferimento per l'acqua: circa <strong>4 litri a persona al giorno</strong> (Ready.gov/FEMA, ~3,8 litri arrotondati), per 3 giorni. Per <strong>neonati e animali</strong> serve una <strong>scorta dedicata in più</strong>: il fabbisogno varia e non è compreso nel totale. Quantità orientative e fonti complete nella pagina <a href="/rischi-prevenzione/kit-emergenza/">Kit di emergenza</a>.</p>
+
+<div class="d-flex justify-content-between align-items-center mb-2 mt-4">
+<strong>La mia lista di controllo</strong>
+<span id="z-progress-label" class="badge bg-primary">0%</span>
+</div>
+<div class="progress mb-3" id="z-progressbar-wrap" role="progressbar" aria-label="Avanzamento preparazione dello zaino" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+<div class="progress-bar" id="z-progressbar" style="width:0%"></div>
+</div>
+
+<ul class="list-unstyled mb-3" id="z-lista"></ul>
+
+<button type="button" class="btn btn-outline-secondary btn-sm" onclick="resetZaino()"><i class="bi bi-trash me-1" aria-hidden="true"></i>Cancella i dati salvati</button>
+</div>
+
+## <i class="bi bi-calendar-check-fill text-primary me-2" aria-hidden="true"></i>Promemoria di controllo delle scorte {#promemoria-scorte}
+
+<div class="card border-primary shadow-sm p-4 mb-4 d-print-none">
+
+Le scorte vanno controllate con regolarità: l'acqua va cambiata, farmaci e alimenti scadono, le batterie si scaricano. Aggiungi un **promemoria ricorrente ogni 6 mesi** al calendario del telefono o del computer.
+
+<button type="button" class="btn btn-primary" onclick="scaricaPromemoriaIcs()"><i class="bi bi-calendar-plus me-2" aria-hidden="true"></i>Aggiungi il promemoria al calendario</button>
+
+<p class="small text-muted mt-2">Scarichi un file standard <code>.ics</code> che si apre con Google Calendar, Apple Calendario o Outlook. Nessun dato viene inviato al sito.</p>
+</div>
+
 </div>
 
 <script>
@@ -317,6 +373,186 @@ function stampaPiano(){
     if(document.body.classList.contains('piano-printing')) cleanup();
   },2000);
 }
+
+/* ----------------------------------------------------------------------
+   Calcolatore zaino 72 ore — acqua (cifra Ready.gov del sito) + checklist
+   persistita in localStorage. Solo dati a bassa sensibilità: composizione
+   e spunte. Nessun dato del PEF (nomi, farmaci, indirizzo) viene salvato.
+   ---------------------------------------------------------------------- */
+var ZAINO_KEY='pcgenzano-zaino-72h';
+var ZAINO_LITRI_PERSONA_GIORNO=4; /* ~3,8 L Ready.gov/FEMA arrotondati */
+var ZAINO_GIORNI=3;
+
+function zaModello(){
+  var persone=Math.max(0,parseInt(document.getElementById('z-persone').value)||0);
+  var neonati=Math.max(0,parseInt(document.getElementById('z-neonati').value)||0);
+  var animali=Math.max(0,parseInt(document.getElementById('z-animali').value)||0);
+  var farmaci=document.getElementById('z-farmaci').value==='si';
+  /* voci checklist con id stabili → la spunta sopravvive al ricalcolo */
+  var voci=[
+    {id:'acqua',t:'Acqua in bottiglia (vedi quantità sopra)'},
+    {id:'cibo',t:'Cibo a lunga conservazione per 72 ore (non deperibile, pronto)'},
+    {id:'apriscatole',t:'Apriscatole manuale e posate usa e getta'},
+    {id:'torcia',t:'Torcia a pile (meglio se a manovella o a LED) e pile di scorta'},
+    {id:'radio',t:'Radio a pile o a manovella per i bollettini'},
+    {id:'powerbank',t:'Caricabatterie e powerbank carico per il telefono'},
+    {id:'primosoccorso',t:'Kit di primo soccorso e farmaci da banco di base'},
+    {id:'igiene',t:'Igiene: salviette, gel mani, sacchetti, carta igienica'},
+    {id:'documenti',t:'Copia dei documenti e dei contatti utili in busta impermeabile'},
+    {id:'contanti',t:'Un po’ di contanti in piccoli tagli'},
+    {id:'coperta',t:'Coperta termica e un cambio di vestiti a persona'},
+    {id:'fischietto',t:'Fischietto per segnalare la propria presenza'},
+    {id:'chiavi',t:'Chiavi di casa e dell’auto di riserva'}
+  ];
+  if(farmaci) voci.push({id:'salvavita',t:'Farmaci salvavita personali: almeno 3 giorni di scorta, secondo indicazione medica'});
+  if(neonati>0) voci.push({id:'neonati',t:'Per neonati e bambini piccoli: latte, pannolini, omogeneizzati, acqua dedicata in più'});
+  if(animali>0) voci.push({id:'animali',t:'Per gli animali: cibo, acqua dedicata, guinzaglio, trasportino, libretto sanitario'});
+  return {persone:persone,neonati:neonati,animali:animali,farmaci:farmaci,voci:voci};
+}
+
+function zaStatoSalvato(){
+  try{var s=JSON.parse(localStorage.getItem(ZAINO_KEY));return s&&typeof s==='object'?s:{};}
+  catch(e){return {};}
+}
+
+function zaSalva(spunte){
+  try{
+    localStorage.setItem(ZAINO_KEY,JSON.stringify({
+      persone:document.getElementById('z-persone').value,
+      neonati:document.getElementById('z-neonati').value,
+      animali:document.getElementById('z-animali').value,
+      farmaci:document.getElementById('z-farmaci').value,
+      spunte:spunte
+    }));
+  }catch(e){/* localStorage non disponibile: il calcolatore funziona lo stesso, senza memoria */}
+}
+
+function aggiornaZaino(){
+  var m=zaModello();
+  var litri=m.persone*ZAINO_LITRI_PERSONA_GIORNO*ZAINO_GIORNI;
+  var aq=document.getElementById('z-acqua');
+  if(m.persone>0){
+    aq.innerHTML='<i class="bi bi-droplet-half me-2" aria-hidden="true"></i>Acqua per bere e igiene minima: circa <strong>'+litri+' litri</strong> per '+m.persone+(m.persone===1?' persona':' persone')+' in 3 giorni.'+((m.neonati>0||m.animali>0)?' <span class="d-block mt-1">Aggiungi una scorta dedicata in più per neonati e animali.</span>':'');
+  } else {
+    aq.innerHTML='Indica almeno una persona per stimare l’acqua.';
+  }
+  /* spunte correnti dal DOM + quelle salvate (al primo render il DOM è vuoto) */
+  var precedenti={};
+  document.querySelectorAll('#z-lista input[type=checkbox]').forEach(function(c){precedenti[c.value]=c.checked;});
+  var salvate=zaStatoSalvato().spunte||{};
+  var lista=document.getElementById('z-lista');
+  var html='';
+  m.voci.forEach(function(v){
+    var on=(v.id in precedenti)?precedenti[v.id]:!!salvate[v.id];
+    html+='<li class="mb-2"><div class="form-check">'+
+      '<input class="form-check-input" type="checkbox" id="z-chk-'+v.id+'" value="'+v.id+'"'+(on?' checked':'')+' onchange="zaSpunta()">'+
+      '<label class="form-check-label" for="z-chk-'+v.id+'">'+v.t+'</label></div></li>';
+  });
+  lista.innerHTML=html;
+  zaProgresso();
+  zaSpunta(true);
+}
+
+function zaSpunta(soloSalva){
+  var box=document.querySelectorAll('#z-lista input[type=checkbox]');
+  var spunte={};
+  box.forEach(function(c){spunte[c.value]=c.checked;});
+  zaSalva(spunte);
+  if(!soloSalva) zaProgresso();
+}
+
+function zaProgresso(){
+  var box=document.querySelectorAll('#z-lista input[type=checkbox]');
+  var tot=box.length,fatte=0;
+  box.forEach(function(c){if(c.checked) fatte++;});
+  var pct=tot?Math.round(fatte/tot*100):0;
+  var bar=document.getElementById('z-progressbar');
+  bar.style.width=pct+'%';
+  document.getElementById('z-progress-label').textContent=pct+'%';
+  document.getElementById('z-progressbar-wrap').setAttribute('aria-valuenow',pct);
+}
+
+function resetZaino(){
+  try{localStorage.removeItem(ZAINO_KEY);}catch(e){}
+  document.getElementById('z-persone').value=2;
+  document.getElementById('z-neonati').value=0;
+  document.getElementById('z-animali').value=0;
+  document.getElementById('z-farmaci').value='no';
+  aggiornaZaino();
+}
+
+/* ----------------------------------------------------------------------
+   Promemoria .ics — evento ricorrente ogni 6 mesi (RFC 5545)
+   ---------------------------------------------------------------------- */
+function icsEsc(t){return String(t).replace(/\\/g,'\\\\').replace(/;/g,'\\;').replace(/,/g,'\\,').replace(/\n/g,'\\n');}
+
+function icsFold(line){
+  /* righe ≤ 75 ottetti, continuazione con CRLF + spazio (RFC 5545 §3.1).
+     Conta i BYTE UTF-8, non i caratteri: l’apostrofo tipografico pesa 3 byte.
+     Margine a 72 byte di contenuto + spazio iniziale ⇒ riga fisica ≤ 73. */
+  function byti(ch){return unescape(encodeURIComponent(ch)).length;}
+  var out='',cur='',n=0;
+  for(var i=0;i<line.length;i++){
+    var b=byti(line[i]);
+    if(n+b>72){out+=cur+'\r\n ';cur='';n=0;}
+    cur+=line[i];n+=b;
+  }
+  return out+cur;
+}
+
+function scaricaPromemoriaIcs(){
+  var pad=function(n){return (n<10?'0':'')+n;};
+  var oggi=new Date();
+  var inizio=new Date(oggi.getFullYear(),oggi.getMonth()+6,oggi.getDate());
+  var fine=new Date(inizio.getFullYear(),inizio.getMonth(),inizio.getDate()+1);
+  var ymd=function(d){return d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate());};
+  var stamp=new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d{3}Z$/,'Z');
+  var uid='pcgenzano-scorte-'+Date.now()+'-'+Math.random().toString(36).slice(2)+'@protezionecivilegenzano.it';
+  var desc='Controlla le scadenze di farmaci, alimenti e batterie nel kit e nello zaino di emergenza. Cambia l’acqua. Verifica torcia, radio e powerbank. Aggiorna il piano familiare. Guida: https://www.protezionecivilegenzano.it/rischi-prevenzione/kit-emergenza/';
+  var righe=[
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//Protezione Civile Genzano di Roma//Promemoria scorte//IT',
+    'CALSCALE:GREGORIAN',
+    'METHOD:PUBLISH',
+    'BEGIN:VEVENT',
+    'UID:'+uid,
+    'DTSTAMP:'+stamp,
+    'DTSTART;VALUE=DATE:'+ymd(inizio),
+    'DTEND;VALUE=DATE:'+ymd(fine),
+    'RRULE:FREQ=MONTHLY;INTERVAL=6',
+    icsFold('SUMMARY:'+icsEsc('Protezione Civile Genzano: controlla scorte e kit di emergenza')),
+    icsFold('DESCRIPTION:'+icsEsc(desc)),
+    'BEGIN:VALARM',
+    'ACTION:DISPLAY',
+    icsFold('DESCRIPTION:'+icsEsc('Controlla le scorte e il kit di emergenza')),
+    'TRIGGER:PT9H',
+    'END:VALARM',
+    'END:VEVENT',
+    'END:VCALENDAR'
+  ];
+  var contenuto=righe.join('\r\n')+'\r\n';
+  var blob=new Blob([contenuto],{type:'text/calendar;charset=utf-8'});
+  var url=URL.createObjectURL(blob);
+  var a=document.createElement('a');
+  a.href=url;
+  a.download='promemoria-scorte-protezione-civile-genzano.ics';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  setTimeout(function(){URL.revokeObjectURL(url);},1000);
+}
+
+/* init: ripristina la composizione salvata e disegna il calcolatore */
+(function(){
+  if(!document.getElementById('z-persone')) return;
+  var s=zaStatoSalvato();
+  if(s.persone!==undefined) document.getElementById('z-persone').value=s.persone;
+  if(s.neonati!==undefined) document.getElementById('z-neonati').value=s.neonati;
+  if(s.animali!==undefined) document.getElementById('z-animali').value=s.animali;
+  if(s.farmaci!==undefined) document.getElementById('z-farmaci').value=s.farmaci;
+  aggiornaZaino();
+})();
 </script>
 
 ## Vedi anche
