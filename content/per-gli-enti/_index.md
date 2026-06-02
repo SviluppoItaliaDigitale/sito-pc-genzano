@@ -20,6 +20,7 @@ Mettiamo a disposizione dei docenti materiali pronti, gratuiti e riutilizzabili:
 - [Schede didattiche stampabili](/formazione/schede-stampabili/) — attività fotocopiabili per la classe.
 - [Giochi della sicurezza](/giochi/) ed [esperimenti e attività](/formazione/esperimenti/) — imparare facendo.
 - [Storie e racconti](/formazione/storie-e-racconti/) — la prevenzione spiegata ai più piccoli.
+- [Poster di emergenza multilingua](/area-download/#poster-di-emergenza-multilingua) — "In emergenza chiama il 112" in otto lingue, da stampare e affiggere negli spazi comuni.
 
 Per organizzare un incontro nella tua scuola, scrivici dalla pagina [Contatti](/contatti/).
 
