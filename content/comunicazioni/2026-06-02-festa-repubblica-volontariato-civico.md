@@ -51,6 +51,10 @@ Il **Sistema nazionale di Protezione Civile**, nella forma che conosciamo, nasce
 
 Le esercitazioni nazionali, i campi di accoglienza, le colonne mobili regionali: dietro ogni mezzo operativo c'è un'idea di **Stato come cura**.
 
+{{< foto src="/images/2026-06-02-festa-repubblica-tricolore-paracadute.webp"
+         alt="Un paracadutista discende nel cielo azzurro dispiegando una grande bandiera tricolore italiana, con il verde, il bianco e il rosso ben distesi al vento."
+         caption="Un momento delle celebrazioni nazionali del 2 giugno: il lancio con il tricolore. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+
 ## Genzano di Roma: una storia di quarant'anni
 
 Il Gruppo comunale di Genzano di Roma compie nel 2026 **45 anni di attività**. La nostra storia si intreccia con le grandi emergenze nazionali — dall'Irpinia al Centro Italia 2016 — e con il quotidiano lavoro di prevenzione e formazione sul territorio.
