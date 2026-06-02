@@ -18,7 +18,11 @@ Il rischio idrogeologico riguarda alluvioni, allagamenti, frane e smottamenti. P
 {{< emergenza-ora >}}
 
 ## <i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Perché è rilevante sul nostro territorio {#perche-rilevante}
-Genzano di Roma si trova su un territorio collinare di origine vulcanica, con versanti che possono essere soggetti a frane e smottamenti, soprattutto quando il terreno è saturo d'acqua. Le aree più basse del territorio e le zone lungo i fossi possono essere interessate da allagamenti durante piogge intense. Il rischio aumenta nei periodi autunnali e primaverili.
+Genzano di Roma sorge sul bordo di un antico cratere vulcanico del **Vulcano Laziale**: il paese affaccia sul **lago di Nemi**, ospitato in una conca craterica dai versanti ripidi. Questa morfologia — pendii acclivi, terreni piroclastici, conche chiuse che raccolgono l'acqua — rende il territorio sensibile sia alle **frane e agli smottamenti** sui versanti, sia agli **allagamenti** nelle zone basse e lungo i fossi quando le piogge sono intense e prolungate. L'impermeabilizzazione delle aree urbanizzate accelera il deflusso e aumenta il rischio di allagamenti improvvisi. Il rischio cresce nei periodi autunnali e primaverili, quando il terreno è più saturo.
+
+Genzano rientra nella **Zona di allerta F — Bacini Costieri Sud** del sistema regionale (vedi [Allerte meteo](/allerte-meteo/)).
+
+> 🔎 **Il tuo indirizzo è in area a pericolosità?** La pericolosità da frana e da alluvione è mappata parcella per parcella. Per verificare un indirizzo specifico consulta la piattaforma nazionale **[IdroGEO di ISPRA](https://idrogeo.isprambiente.it/)** (Inventario IFFI e mappe di pericolosità), il **Piano di Assetto Idrogeologico (PAI)** dell'autorità di bacino competente e la nostra [Cartografia del territorio](/cartografia/). La pericolosità indica dove un fenomeno può avvenire: è un dato di base, diverso dall'allerta in corso.
 
 ## <i class="bi bi-eye-fill text-primary me-2" aria-hidden="true"></i>Segnali e situazioni tipiche {#segnali}
 - Piogge intense e prolungate per diverse ore
