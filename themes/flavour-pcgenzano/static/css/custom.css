@@ -6679,8 +6679,12 @@ html.a11y-pause-anim .consulta-rapida .cr-card:hover { transform: none; }
 .dash-incendi-box { margin-bottom: .4rem; }
 #dash-incendi-mappa, #dash-sat-mappa, #dash-cams-mappa { height: 520px; border-radius: 8px; border: 2px solid #003366; background: #0b1622; }
 .dash-stella { background: transparent; border: 0; }
-.dash-stella-label { background: #003366; color: #fff; border: 1px solid #fff; border-radius: 4px; font-weight: 600; font-size: .78rem; padding: 2px 7px; box-shadow: 0 1px 3px rgba(0,0,0,.35); }
-.dash-stella-label::before { border-right-color: #003366; }
+.dash-stella-label { background: #003366; color: #fff; border: 1px solid #fff; border-radius: 4px; font-weight: 600; font-size: .78rem; padding: 2px 7px; box-shadow: 0 1px 3px rgba(0,0,0,.35); pointer-events: none; transition: opacity .15s ease; }
+.dash-stella-label.is-faded { opacity: .12; }
+.dash-stella-label.leaflet-tooltip-right::before { border-right-color: #003366; }
+.dash-stella-label.leaflet-tooltip-left::before { border-left-color: #003366; }
+.dash-stella-label.leaflet-tooltip-top::before { border-top-color: #003366; }
+.dash-stella-label.leaflet-tooltip-bottom::before { border-bottom-color: #003366; }
 @media (max-width: 768px) { #dash-incendi-mappa, #dash-sat-mappa, #dash-cams-mappa { height: 420px; } }
 /* Cruscotto — scheda Vulcani (solo indicatori) */
 .dash-vulcani .dash-sisma-kpi { margin-bottom: .6rem; }
