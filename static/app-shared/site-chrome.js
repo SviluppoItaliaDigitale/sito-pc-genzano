@@ -133,6 +133,7 @@
                   '<div class="dropdown-menu" aria-labelledby="navDropdown-volontariato"><div class="link-list-wrapper"><ul class="link-list" role="menu">' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/diventa-volontario/" role="menuitem"><span>Diventa Volontario</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/chi-siamo/" role="menuitem"><span>Chi Siamo</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/per-gli-enti/" role="menuitem"><span>Per gli enti e le scuole</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/san-pio-da-pietrelcina/" role="menuitem"><span>Il nostro patrono</span></a></li>' +
                     /* Aggiunto 16/05/2026: hub addestramento del Gruppo (turni + esercitazioni) */
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/esercitazioni/" role="menuitem"><span>Addestramento e buone pratiche</span></a></li>' +

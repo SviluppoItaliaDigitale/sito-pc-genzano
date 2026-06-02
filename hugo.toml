@@ -258,6 +258,12 @@ enableGitInfo = true
   weight = 2
 
 [[menus.main]]
+  name = "Per gli enti e le scuole"
+  url = "/per-gli-enti/"
+  parent = "volontariato"
+  weight = 3
+
+[[menus.main]]
   name = "Il nostro patrono"
   url = "/san-pio-da-pietrelcina/"
   parent = "volontariato"
