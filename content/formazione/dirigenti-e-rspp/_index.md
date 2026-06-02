@@ -19,7 +19,7 @@ Questa pagina è rivolta a Dirigenti scolastici, DSGA, RSPP, ASPP, referenti sic
 
 Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma:
 
-- è un'organizzazione di volontariato di protezione civile;
+- è un gruppo comunale di volontariato di protezione civile, articolazione del Comune;
 - opera nel quadro del D.Lgs. 1/2018 e della L.R. Lazio 2/2014;
 - è iscritto all'Elenco regionale del volontariato di protezione civile del Lazio;
 - svolge attività gratuite e senza fini di lucro;

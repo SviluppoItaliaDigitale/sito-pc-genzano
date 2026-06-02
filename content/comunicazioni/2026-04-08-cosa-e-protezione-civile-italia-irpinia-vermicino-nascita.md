@@ -25,7 +25,7 @@ Fanno parte del Servizio Nazionale:
 
 - le **Forze dell'Ordine** (Polizia di Stato, Arma dei Carabinieri, Guardia di Finanza, Polizie Locali)
 - il **Corpo Nazionale dei Vigili del Fuoco**, componente fondamentale per il soccorso tecnico urgente
-- le **Organizzazioni di Volontariato (OdV)**, tra cui i Gruppi Comunali come quello di Genzano di Roma
+- le **Organizzazioni di Volontariato (OdV)** e i **Gruppi Comunali** come quello di Genzano di Roma
 - le **Forze Armate** (Esercito, Marina, Aeronautica, Arma dei Carabinieri)
 - la **Croce Rossa Italiana** (CRI)
 - il **Servizio Sanitario Nazionale** (SSN) nelle sue articolazioni di emergenza
