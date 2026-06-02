@@ -51,7 +51,7 @@ Le attività tipiche dei volontari:
 ### Durante l'evento
 - **Presidio** delle aree pedonali dedicate (punti di accesso, piazze, palchi) in coordinamento con Polizia Locale e Forze dell'Ordine.
 - **Informazione al pubblico** su percorsi, accessi, vie di fuga e posizione dei servizi (compito esplicitamente consentito dalla [Circolare DPC del 6 agosto 2018](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/) sull'impiego del volontariato).
-- **Assistenza sanitaria** di primo soccorso (con ASL/ARES 118).
+- **Ausilio alle squadre sanitarie** (ASL/ARES 118).
 - **Monitoraggio meteo** con attivazione delle procedure in caso di allerta.
 - **Collegamento radio** con il Comando di coordinamento.
 

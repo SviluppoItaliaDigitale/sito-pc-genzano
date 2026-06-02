@@ -149,7 +149,7 @@ Questi eventi hanno mostrato che **nessuna area è completamente sicura** senza 
 ## Il ruolo del volontariato
 
 Dopo un flash flood il volontariato di PC opera:
-- **Primo soccorso** a persone coinvolte.
+- **Ausilio alle squadre sanitarie** per le persone coinvolte.
 - **Supporto** alla Protezione Civile e VVF.
 - **Liberazione** di strade e abitazioni da fango.
 - **Distribuzione** di beni di prima necessità.

@@ -41,7 +41,7 @@ Su **esplicito mandato del Comune di Genzano di Roma**, supportiamo le manifesta
 
 - informazione alla popolazione su percorsi, accessi e limitazioni decise dalle autorità;
 - presidio delle aree pedonali dedicate, dei punti di raccolta e delle vie di fuga;
-- primo soccorso in collegamento con il 118;
+- ausilio alle squadre sanitarie, che operano in collegamento con il 118;
 - monitoraggio meteo e attuazione dei protocolli in caso di allerta;
 - collegamento radio con la centrale di coordinamento;
 - assistenza alle persone fragili (anziani, persone con disabilità, bambini);
