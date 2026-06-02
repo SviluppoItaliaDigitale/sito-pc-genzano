@@ -107,7 +107,7 @@ Segui i canali ufficiali per aggiornamenti, allerte e comunicazioni del Gruppo.
 
 ## Mappa della sede
 
-{{< mappa-punto lat="41.7075" lon="12.6895" zoom="16" label="Sede del Gruppo Comunale Volontari di Protezione Civile — Via Sicilia 13-15, Genzano di Roma" >}}
+{{< mappa-punto lat="41.70273" lon="12.69588" zoom="17" label="Sede del Gruppo Comunale Volontari di Protezione Civile — Via Sicilia 13-15, Genzano di Roma" >}}
 
 <p><strong>Sede:</strong> Via Sicilia, 13-15 — 00045 Genzano di Roma (RM).</p>
 
