@@ -129,21 +129,14 @@
   {{ if eq .Section "glossario" }}<script src="{{ "js/glossario-pagina.js" | relURL }}" defer></script>{{ end }}
   {{ if eq .Section "quiz-preparazione" }}<script>window.SITO_BASEURL={{ "/" | relURL | jsonify }};</script><script src="{{ "js/quiz-preparazione.js" | relURL }}" defer></script>{{ end }}
   <script>
-    // Back to top — se la pagina ha un indice (#indice), salta direttamente lì,
-    // altrimenti torna in cima. La label aria si adatta al contesto.
+    // Back to top — la freccia (↑) torna SEMPRE in cima alla pagina, come si aspetta
+    // l'utente. (Prima, sulle pagine con indice, saltava all'#indice e poteva finire
+    // più in basso: comportamento percepito come bug. Fix 2026-06-02.)
     (function(){
       var b=document.getElementById('backToTop');
       if(!b)return;
-      var idx=document.getElementById('indice');
-      if(idx){
-        b.setAttribute('aria-label','Torna all’indice della pagina');
-        b.setAttribute('title','Torna all’indice');
-      }
       window.addEventListener('scroll',function(){b.classList.toggle('visible',window.scrollY>300)});
-      b.addEventListener('click',function(){
-        if(idx){idx.scrollIntoView({behavior:'smooth',block:'start'});idx.focus({preventScroll:true});}
-        else{window.scrollTo({top:0,behavior:'smooth'});}
-      });
+      b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
     })();
     // Scroll animations
     (function(){var e=document.querySelectorAll('.fade-in-up');if(!e.length)return;var o=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('visible');o.unobserve(en.target)}})},{threshold:0.1});e.forEach(function(el){o.observe(el)})})();
