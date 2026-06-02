@@ -19,6 +19,20 @@ Conoscere i rischi del territorio aiuta a proteggere te, la tua famiglia e chi i
 <p class="mb-0"><i class="bi bi-exclamation-triangle me-2" aria-hidden="true"></i>In caso di pericolo immediato, persone ferite, incendio, incidente o rischio per edifici e viabilità, chiama subito il <strong>112</strong>.</p>
 </div>
 
+## Cosa puoi fare stasera
+
+La preparazione non richiede tempo né soldi. Cinque azioni che puoi fare **oggi stesso**:
+
+1. Salva in rubrica il **112** e il numero della Sala Operativa Regionale **803 555**, e scrivili anche su un foglio di carta (in un blackout il telefono potrebbe essere scarico).
+2. Metti in un punto fisso una **torcia** e una **radio a pile** (o a manovella) con le batterie cariche.
+3. Riempi qualche **bottiglia d'acqua** e controlla la scadenza dei farmaci che usi ogni giorno.
+4. Parla con la tua famiglia di **dove ritrovarsi** se doveste uscire di casa, e spiega ai bambini come e quando chiamare il 112.
+5. Apri il [Piano Familiare](/piano-familiare/) e compila la scheda con i recapiti e i punti di ritrovo.
+
+## Effetti a cascata: un rischio ne innesca un altro
+
+Un evento raramente arriva da solo. Un **temporale violento** può far cadere alberi e linee elettriche, causando un **blackout**; il blackout può fermare le **pompe dell'acqua** e i **dispositivi salvavita** a casa; una **frana** può interrompere una strada e isolare un quartiere. Preparati pensando alla catena, non al singolo evento: il [kit di emergenza](/rischi-prevenzione/kit-emergenza/) e una scorta minima di acqua, cibo e farmaci ti coprono in tutti questi scenari.
+
 ## Pagine di consultazione rapida
 
 Queste pagine aiutano a orientarsi in pochi minuti, anche senza conoscenze tecniche.
