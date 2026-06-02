@@ -75,6 +75,7 @@
   (function(){
     if (typeof L === 'undefined') return;
     var FDSN = 'https://webservices.ingv.it/fdsnws/event/1/query';
+    var SCHEDA = {{ "cruscotto/terremoto/" | relURL | jsonify }};
     var GENZANO = [41.7085, 12.6916];
     var win = 7, minmag = 1.5, zona = 'italia', eventi = [], markers = null, map = null, markerById = {};
     var BBOX = {
@@ -142,6 +143,7 @@
       document.getElementById('dash-sisma-mappa').scrollIntoView({behavior:'smooth',block:'nearest'});
     }
     document.getElementById('dash-sisma-tbody').addEventListener('click',function(ev){
+      if(ev.target.closest('a')) return; // click su link "scheda" → naviga, non centrare
       var tr=ev.target.closest('tr[data-ev]'); if(!tr)return;
       vaiAEvento(parseInt(tr.dataset.ev,10));
     });
@@ -199,7 +201,7 @@
         html += '<tr data-ev="'+k+'" title="Centra sulla mappa">'+
                 '<td class="dash-cell-time">'+pad6(e.time)+'</td>'+
                 '<td><span class="dash-mag" style="border-left-color:'+colore(e.mag)+'">M '+e.mag.toFixed(1)+'</span></td>'+
-                '<td class="dash-cell-place">'+e.place+'</td>'+
+                '<td class="dash-cell-place">'+(e.id?'<a class="dash-scheda-link" href="'+SCHEDA+'#'+e.id+'" title="Apri la scheda completa di questo terremoto">'+e.place+'</a>':e.place)+'</td>'+
                 '<td class="dash-num">'+e.depth+'</td>'+
                 '<td class="dash-num">'+dist(e.lat,e.lon)+'</td>'+
                 '<td class="dash-num dash-col-hide-sm">'+e.lat.toFixed(2)+'</td>'+
@@ -246,7 +248,7 @@
               iconSize:[s,s], iconAnchor:[r,r]
             }),
             keyboard:false, riseOnHover:true, alt:'Terremoto M '+e.mag.toFixed(1)
-          }).bindPopup('<strong>M '+e.mag.toFixed(1)+'</strong><br>'+e.place+'<br>'+oraIt(e.time)+' · prof. '+e.depth+' km<br>'+dist(e.lat,e.lon)+' km da Genzano di Roma');
+          }).bindPopup('<strong>M '+e.mag.toFixed(1)+'</strong><br>'+e.place+'<br>'+oraIt(e.time)+' · prof. '+e.depth+' km<br>'+dist(e.lat,e.lon)+' km da Genzano di Roma'+(e.id?'<br><a href="'+SCHEDA+'#'+e.id+'">Scheda completa →</a>':''));
           cm.addTo(markers); markerById[i]=cm;
         } catch(err) { /* aggira eventuali corner case Leaflet residui */ }
       });
@@ -262,7 +264,7 @@
         if(!r.ok) throw new Error('HTTP '+r.status);
         return r.text().then(function(t){ return t ? JSON.parse(t) : {features:[]}; });
       }).then(function(j){
-        eventi=(j.features||[]).map(function(f){var p=f.properties,g=f.geometry.coordinates;return {time:p.time,mag:p.mag,place:p.place||'',depth:Math.round(g[2]),lat:g[1],lon:g[0]};}).filter(function(e){return typeof e.mag==='number' && isItaliano(e);});
+        eventi=(j.features||[]).map(function(f){var p=f.properties||{},g=(f.geometry&&f.geometry.coordinates)||null;if(!g)return null;return {time:p.time,mag:p.mag,place:p.place||'',depth:Math.round(g[2]),lat:g[1],lon:g[0],id:p.eventId};}).filter(function(e){return e && typeof e.mag==='number' && isItaliano(e);});
         render();
         stato.textContent=(eventi.length?'Aggiornato':'Nessuna scossa · aggiornato')+' alle '+pad(new Date().getHours())+':'+pad(new Date().getMinutes());
       }).catch(function(){

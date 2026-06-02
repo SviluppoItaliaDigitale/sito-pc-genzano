@@ -1,0 +1,366 @@
+{{/* Shortcode scheda-terremoto — scheda di dettaglio di un singolo terremoto,
+     sul modello della pagina evento di terremoti.ingv.it (tab: Dati evento,
+     Localizzazioni e Magnitudo, Meccanismo di sorgente, Impatto, Sismicità,
+     Download).
+     Fonte dati: INGV FDSN event web service (CORS aperto) — GeoJSON per il
+     riepilogo, QuakeML per origini/magnitudo multiple. Mappa Leaflet
+     self-hosted. I prodotti scientifici INGV (ShakeMap, meccanismo focale)
+     NON sono ricalcolati: vengono mostrati come immagini ufficiali con
+     attribuzione CC BY-SA se esistono, altrimenti con deep-link alla scheda
+     INGV. L'evento si passa via hash (#<id>) o query (?event=<id>). */}}
+{{ $leafletCSS := "vendor/leaflet/leaflet.css" | relURL }}
+{{ $leafletJS  := "vendor/leaflet/leaflet.js"  | relURL }}
+{{ $rischioSismico := "rischi-prevenzione/rischio-sismico/" | relURL }}
+
+<link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">
+<div class="scheda-eq" id="scheda-eq" aria-live="polite">
+
+  <div class="scheda-eq-stato" id="eq-stato" role="status">Caricamento dei dati dell'evento…</div>
+
+  <header class="scheda-eq-head" id="eq-head" hidden>
+    <p class="scheda-eq-occhiello">Scheda evento sismico</p>
+    <h2 class="scheda-eq-titolo" id="eq-titolo">—</h2>
+    <p class="scheda-eq-sommario" id="eq-sommario"></p>
+    <p class="scheda-eq-kpi">
+      <span class="eq-badge" id="eq-mag-badge">M —</span>
+      <span class="eq-meta" id="eq-meta-ora"></span>
+      <span class="eq-meta" id="eq-meta-prof"></span>
+      <span class="eq-meta" id="eq-meta-dist"></span>
+    </p>
+  </header>
+
+  {{/* TABLIST accessibile (pattern ARIA Authoring Practices) */}}
+  <div class="scheda-eq-tabs" id="eq-tabs" hidden>
+    <div role="tablist" aria-label="Sezioni della scheda terremoto" class="eq-tablist">
+      <button role="tab" id="tab-dati" aria-controls="panel-dati" aria-selected="true" class="eq-tab">Dati evento</button>
+      <button role="tab" id="tab-loc"  aria-controls="panel-loc"  aria-selected="false" tabindex="-1" class="eq-tab">Localizzazioni e magnitudo</button>
+      <button role="tab" id="tab-mec"  aria-controls="panel-mec"  aria-selected="false" tabindex="-1" class="eq-tab">Meccanismo di sorgente</button>
+      <button role="tab" id="tab-imp"  aria-controls="panel-imp"  aria-selected="false" tabindex="-1" class="eq-tab">Impatto</button>
+      <button role="tab" id="tab-sis"  aria-controls="panel-sis"  aria-selected="false" tabindex="-1" class="eq-tab">Sismicità</button>
+      <button role="tab" id="tab-cosa" aria-controls="panel-cosa" aria-selected="false" tabindex="-1" class="eq-tab">Cosa fare</button>
+      <button role="tab" id="tab-dl"   aria-controls="panel-dl"   aria-selected="false" tabindex="-1" class="eq-tab">Download</button>
+    </div>
+
+    {{/* ── DATI EVENTO ── */}}
+    <section role="tabpanel" id="panel-dati" aria-labelledby="tab-dati" class="eq-panel" tabindex="0">
+      <div id="eq-mappa" role="application" aria-label="Mappa con l'epicentro del terremoto e Genzano di Roma"></div>
+      <dl class="eq-dati-grid">
+        <div class="eq-dato"><dt>Magnitudo</dt><dd id="d-mag">—</dd></div>
+        <div class="eq-dato"><dt>Data e ora (Italia)</dt><dd id="d-ora-it">—</dd></div>
+        <div class="eq-dato"><dt>Data e ora (UTC)</dt><dd id="d-ora-utc">—</dd></div>
+        <div class="eq-dato"><dt>Profondità</dt><dd id="d-prof">—</dd></div>
+        <div class="eq-dato"><dt>Coordinate</dt><dd id="d-coord">—</dd></div>
+        <div class="eq-dato"><dt>Zona</dt><dd id="d-zona">—</dd></div>
+        <div class="eq-dato"><dt>Distanza da Genzano</dt><dd id="d-dist">—</dd></div>
+        <div class="eq-dato"><dt>Rilevato da</dt><dd id="d-autore">—</dd></div>
+      </dl>
+    </section>
+
+    {{/* ── LOCALIZZAZIONI E MAGNITUDO ── */}}
+    <section role="tabpanel" id="panel-loc" aria-labelledby="tab-loc" class="eq-panel" tabindex="0" hidden>
+      <p class="eq-nota">Tutte le stime di <strong>magnitudo</strong> calcolate dall'INGV per questo evento (la prima è quella preferita).</p>
+      <div class="table-responsive">
+        <table class="eq-tab-loc"><caption class="visually-hidden">Magnitudo calcolate</caption>
+          <thead><tr><th scope="col">Tipo</th><th scope="col">Valore</th><th scope="col">N. stazioni</th><th scope="col">Autore</th></tr></thead>
+          <tbody id="loc-mag-body"><tr><td colspan="4">—</td></tr></tbody>
+        </table>
+      </div>
+      <p class="eq-nota mt-3">Stime di <strong>localizzazione</strong> (origine) dell'ipocentro.</p>
+      <div class="table-responsive">
+        <table class="eq-tab-loc"><caption class="visually-hidden">Localizzazioni dell'ipocentro</caption>
+          <thead><tr><th scope="col">Data e ora (UTC)</th><th scope="col">Lat</th><th scope="col">Lon</th><th scope="col">Prof. (km)</th><th scope="col">Autore</th></tr></thead>
+          <tbody id="loc-ori-body"><tr><td colspan="5">—</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    {{/* ── MECCANISMO DI SORGENTE ── */}}
+    <section role="tabpanel" id="panel-mec" aria-labelledby="tab-mec" class="eq-panel" tabindex="0" hidden>
+      <div id="mec-contenuto">
+        <p class="eq-nota">Il <strong>meccanismo di sorgente</strong> (tensore momento / meccanismo focale) descrive come si è rotta la faglia. È un prodotto scientifico calcolato dall'INGV e disponibile, quando elaborato, sulla scheda ufficiale dell'evento.</p>
+        <p><a id="mec-link" class="eq-link-ext" href="https://terremoti.ingv.it/" target="_blank" rel="noopener noreferrer">Apri il meccanismo di sorgente su INGV <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a></p>
+      </div>
+    </section>
+
+    {{/* ── IMPATTO (ShakeMap / Hai sentito il terremoto) ── */}}
+    <section role="tabpanel" id="panel-imp" aria-labelledby="tab-imp" class="eq-panel" tabindex="0" hidden>
+      <p class="eq-nota">La stima dello <strong>scuotimento</strong> del suolo (ShakeMap) e la raccolta delle segnalazioni dei cittadini (<em>Hai sentito il terremoto?</em>) sono prodotti INGV. Per gli eventi profondi o lontani dalla costa potrebbero non essere elaborati.</p>
+      <figure id="imp-shakemap" class="eq-figura" hidden>
+        <img id="imp-shakemap-img" alt="ShakeMap INGV: stima dello scuotimento del suolo per questo terremoto" loading="lazy">
+        <figcaption>ShakeMap — © INGV (CC BY-SA 4.0)</figcaption>
+      </figure>
+      <p><a id="imp-link" class="eq-link-ext" href="https://shakemap.ingv.it/" target="_blank" rel="noopener noreferrer">Apri ShakeMap e segnalazioni su INGV <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a></p>
+    </section>
+
+    {{/* ── SISMICITÀ INTORNO ── */}}
+    <section role="tabpanel" id="panel-sis" aria-labelledby="tab-sis" class="eq-panel" tabindex="0" hidden>
+      <p class="eq-nota">Altri terremoti registrati dall'INGV <strong>negli ultimi 30 giorni entro ~50 km</strong> dall'epicentro (utile a leggere la sequenza sismica).</p>
+      <p id="sis-conteggio" class="eq-nota"><span class="pc-spinner" aria-hidden="true"></span> Conteggio in corso…</p>
+      <div class="table-responsive">
+        <table class="eq-tab-loc"><caption class="visually-hidden">Sismicità recente nell'area</caption>
+          <thead><tr><th scope="col">Data e ora (UTC)</th><th scope="col">Magnitudo</th><th scope="col">Zona</th><th scope="col">Prof. (km)</th></tr></thead>
+          <tbody id="sis-body"><tr><td colspan="4">—</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    {{/* ── COSA FARE ── */}}
+    <section role="tabpanel" id="panel-cosa" aria-labelledby="tab-cosa" class="eq-panel" tabindex="0" hidden>
+      <div class="eq-cosa">
+        <p><strong>In caso di terremoto, la regola è una sola:</strong> durante la scossa <strong>riparati</strong>, dopo la scossa <strong>esci con prudenza</strong>.</p>
+        <ul>
+          <li><strong>Durante:</strong> riparati sotto un tavolo robusto o accanto a un muro portante; sta' lontano da finestre, mobili alti e oggetti che possono cadere.</li>
+          <li><strong>Dopo:</strong> chiudi gas e luce, esci con calma usando le scale (mai l'ascensore), raggiungi uno spazio aperto lontano da edifici.</li>
+          <li><strong>Non</strong> usare il telefono se non per una vera emergenza: lascia le linee libere per i soccorsi.</li>
+          <li>In caso di persone ferite o pericolo concreto chiama il <a href="tel:112">112</a>.</li>
+        </ul>
+        <p><a class="eq-link-int" href="{{ $rischioSismico }}">Guida completa al rischio sismico sul nostro territorio <i class="bi bi-arrow-right" aria-hidden="true"></i></a></p>
+        <p class="eq-nota">Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma <strong>non può essere attivato direttamente dai cittadini</strong>: in emergenza si chiama il 112.</p>
+      </div>
+    </section>
+
+    {{/* ── DOWNLOAD / FONTI ── */}}
+    <section role="tabpanel" id="panel-dl" aria-labelledby="tab-dl" class="eq-panel" tabindex="0" hidden>
+      <p class="eq-nota">Dati grezzi e scheda ufficiale dell'evento. Fonte: <strong>INGV — Istituto Nazionale di Geofisica e Vulcanologia</strong>, dati aperti CC BY-SA 4.0.</p>
+      <ul class="eq-download">
+        <li><a id="dl-ingv" class="eq-link-ext" href="https://terremoti.ingv.it/" target="_blank" rel="noopener noreferrer">Scheda ufficiale INGV dell'evento <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a></li>
+        <li><a id="dl-quakeml" class="eq-link-ext" href="#" target="_blank" rel="noopener noreferrer">QuakeML (XML) <i class="bi bi-download" aria-hidden="true"></i></a></li>
+        <li><a id="dl-geojson" class="eq-link-ext" href="#" target="_blank" rel="noopener noreferrer">GeoJSON <i class="bi bi-download" aria-hidden="true"></i></a></li>
+      </ul>
+    </section>
+  </div>
+
+  <p class="scheda-eq-fonte small text-muted">Dati: <a href="https://terremoti.ingv.it/" target="_blank" rel="noopener noreferrer">INGV — Istituto Nazionale di Geofisica e Vulcanologia</a> (FDSN, dati aperti CC BY-SA 4.0). Mappa: © OpenStreetMap, © CARTO. In emergenza chiama il <a href="tel:112">112</a>.</p>
+
+  <noscript><div class="alert alert-warning mt-2" role="note">Per questa scheda serve JavaScript. La scheda ufficiale è su <a href="https://terremoti.ingv.it/" target="_blank" rel="noopener noreferrer">terremoti.ingv.it</a>.</div></noscript>
+</div>
+
+<style>
+/* SCHEDA TERREMOTO v1.0 — scoped */
+.scheda-eq{margin:1rem 0}
+.scheda-eq-stato{padding:1rem;background:#e7f0fa;border-left:4px solid #003366;border-radius:6px;color:#003366;font-weight:500}
+.scheda-eq-occhiello{text-transform:uppercase;letter-spacing:.05em;font-size:.8rem;color:#0e7490;margin:0 0 .25rem;font-weight:600}
+.scheda-eq-titolo{color:#003366;margin:0 0 .5rem;line-height:1.25}
+.scheda-eq-sommario{font-size:1.05rem;color:#1a1a1a;margin:0 0 .75rem}
+.scheda-eq-kpi{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin:0 0 1rem}
+.eq-badge{display:inline-block;font-weight:700;color:#fff;background:#7f1d1d;border-radius:6px;padding:.25rem .7rem;font-size:1.05rem}
+.eq-meta{background:#f4f7fb;border:1px solid #d6e0ec;border-radius:6px;padding:.2rem .6rem;font-size:.92rem;color:#1a1a1a}
+.eq-tablist{display:flex;flex-wrap:wrap;gap:.25rem;border-bottom:2px solid #d6e0ec;margin-bottom:1rem}
+.eq-tab{appearance:none;border:none;background:transparent;border-bottom:3px solid transparent;padding:.55rem .9rem;font-size:.95rem;font-weight:600;color:#003366;cursor:pointer;border-radius:6px 6px 0 0}
+.eq-tab:hover{background:#eef4fb}
+.eq-tab[aria-selected="true"]{border-bottom-color:#003366;background:#eef4fb}
+.eq-tab:focus-visible{outline:3px solid #ffbe2e;outline-offset:1px}
+.eq-panel{animation:eqfade .2s ease}
+@keyframes eqfade{from{opacity:.4}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.eq-panel{animation:none}}
+#eq-mappa{height:480px;width:100%;border-radius:8px;border:1px solid #d6e0ec;background:#eef2f5}
+@media (max-width:576px){#eq-mappa{height:340px}}
+.eq-dati-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.6rem;margin:1rem 0 0;padding:0}
+.eq-dato{background:#f4f7fb;border:1px solid #d6e0ec;border-radius:8px;padding:.6rem .85rem}
+.eq-dato dt{font-size:.78rem;text-transform:uppercase;letter-spacing:.03em;color:#0e7490;font-weight:600;margin:0 0 .15rem}
+.eq-dato dd{margin:0;font-size:1.02rem;color:#1a1a1a;font-weight:500}
+.eq-tab-loc{width:100%;border-collapse:collapse;font-size:.92rem}
+.eq-tab-loc th,.eq-tab-loc td{padding:.4rem .5rem;border-bottom:1px solid #e7edf3;text-align:left}
+.eq-tab-loc thead th{color:#003366;border-bottom:2px solid #d6e0ec}
+.eq-tab-loc tr.eq-pref td{background:#fff8e6}
+.eq-nota{color:#444;font-size:.95rem}
+.eq-figura{margin:1rem 0;text-align:center}
+.eq-figura img{max-width:100%;height:auto;border:1px solid #d6e0ec;border-radius:8px}
+.eq-figura figcaption{font-size:.82rem;color:#555;font-style:italic;margin-top:.35rem}
+.eq-link-ext,.eq-link-int{font-weight:600}
+.eq-download{list-style:none;padding:0;display:flex;flex-direction:column;gap:.5rem}
+.eq-download li{background:#f4f7fb;border:1px solid #d6e0ec;border-radius:6px;padding:.55rem .8rem}
+.eq-cosa ul{margin:.5rem 0 1rem;padding-left:1.2rem}
+.eq-cosa li{margin-bottom:.4rem}
+@media print{.eq-tablist{display:none}.eq-panel[hidden]{display:block!important}#eq-mappa{display:none}}
+</style>
+
+<script src="{{ $leafletJS }}" crossorigin=""></script>
+<script>
+(function(){
+  var FDSN='https://webservices.ingv.it/fdsnws/event/1/query';
+  var GENZANO=[41.7085,12.6916];
+  var stato=document.getElementById('eq-stato');
+
+  // 1) eventid da hash (#46107472) o query (?event=46107472), solo cifre
+  function getEventId(){
+    var h=(location.hash||'').replace('#','').trim();
+    if(/^\d+$/.test(h)) return h;
+    var m=/[?&]event=(\d+)/.exec(location.search||'');
+    return m?m[1]:'';
+  }
+  var EID=getEventId();
+  if(!EID){
+    stato.innerHTML='Nessun evento indicato. Apri questa scheda da una riga del <a href="../">cruscotto terremoti</a>.';
+    return;
+  }
+
+  function pad(n){return ('0'+n).slice(-2);}
+  function fmtUTC(iso){var d=new Date(iso);return d.getUTCFullYear()+'-'+pad(d.getUTCMonth()+1)+'-'+pad(d.getUTCDate())+' '+pad(d.getUTCHours())+':'+pad(d.getUTCMinutes())+':'+pad(d.getUTCSeconds())+' UTC';}
+  function fmtIT(iso){try{return new Date(iso).toLocaleString('it-IT',{day:'2-digit',month:'long',year:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit'});}catch(e){return fmtUTC(iso);}}
+  function magColor(m){return m>=5?'#7f1d1d':m>=4?'#e8412b':m>=3?'#f5a623':m>=2?'#bb9a00':'#5b6b78';}
+  function toRad(x){return x*Math.PI/180;}
+  function distKm(la,lo){var R=6371,dla=toRad(la-GENZANO[0]),dlo=toRad(lo-GENZANO[1]),a=Math.sin(dla/2)**2+Math.cos(toRad(GENZANO[0]))*Math.cos(toRad(la))*Math.sin(dlo/2)**2;return Math.round(R*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a)));}
+  function bearing(la,lo){var y=Math.sin(toRad(lo-GENZANO[1]))*Math.cos(toRad(la)),x=Math.cos(toRad(GENZANO[0]))*Math.sin(toRad(la))-Math.sin(toRad(GENZANO[0]))*Math.cos(toRad(la))*Math.cos(toRad(lo-GENZANO[1]));var b=(Math.atan2(y,x)*180/Math.PI+360)%360;var dirs=['Nord','Nord-Est','Est','Sud-Est','Sud','Sud-Ovest','Ovest','Nord-Ovest'];return dirs[Math.round(b/45)%8];}
+
+  var ev=null, mapDrawn=false;
+
+  // ── Costruzione tab accessibili ──
+  var tabs=Array.prototype.slice.call(document.querySelectorAll('.eq-tab'));
+  function selectTab(tab){
+    tabs.forEach(function(t){
+      var sel=t===tab;
+      t.setAttribute('aria-selected',sel?'true':'false');
+      t.tabIndex=sel?0:-1;
+      var p=document.getElementById(t.getAttribute('aria-controls'));
+      if(p) p.hidden=!sel;
+    });
+    if(tab.id==='tab-dati' && ev && !mapDrawn){ drawMap(); }
+    if(tab.id==='tab-sis' && ev){ loadSismicita(); }
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){selectTab(t);});
+    t.addEventListener('keydown',function(e){
+      var idx=i;
+      if(e.key==='ArrowRight'||e.key==='ArrowDown'){idx=(i+1)%tabs.length;}
+      else if(e.key==='ArrowLeft'||e.key==='ArrowUp'){idx=(i-1+tabs.length)%tabs.length;}
+      else if(e.key==='Home'){idx=0;}
+      else if(e.key==='End'){idx=tabs.length-1;}
+      else return;
+      e.preventDefault(); tabs[idx].focus(); selectTab(tabs[idx]);
+    });
+  });
+
+  // ── Mappa epicentro ──
+  function drawMap(){
+    if(typeof L==='undefined'||!ev) return;
+    var box=document.getElementById('eq-mappa'); if(!box||box.offsetParent===null) return;
+    var map=L.map('eq-mappa',{scrollWheelZoom:false}).setView([ev.lat,ev.lon],7);
+    map.on('focus',function(){map.scrollWheelZoom.enable();});
+    map.on('blur',function(){map.scrollWheelZoom.disable();});
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{subdomains:'abcd',maxZoom:12,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/attributions">CARTO</a>'}).addTo(map);
+    var r=Math.max(8,(ev.mag+1)*3);
+    L.circleMarker([ev.lat,ev.lon],{radius:r,color:'#333',weight:1,fillColor:magColor(ev.mag),fillOpacity:.8}).addTo(map).bindPopup('<strong>M '+ev.mag.toFixed(1)+'</strong><br>'+ev.place+'<br>prof. '+ev.depth+' km');
+    L.marker(GENZANO,{icon:L.divIcon({className:'eq-stella',html:'<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 26 26" aria-hidden="true"><path d="M13 1l3.4 7.6L24 9.3l-5.8 5 1.8 7.9L13 18.4 5.9 22.2l1.8-7.9L2 9.3l7.6-.7z" fill="#003366" stroke="#fff" stroke-width="1.4"/></svg>',iconSize:[22,22],iconAnchor:[11,11]})}).addTo(map).bindPopup('<strong>Genzano di Roma</strong>');
+    try{map.fitBounds(L.latLngBounds([ [ev.lat,ev.lon], GENZANO ]).pad(0.4));}catch(e){}
+    mapDrawn=true;
+    setTimeout(function(){map.invalidateSize();},120);
+  }
+
+  // ── 1. Riepilogo (GeoJSON) ──
+  fetch(FDSN+'?eventid='+EID+'&format=geojson').then(function(r){
+    if(!r.ok) throw new Error('HTTP '+r.status); return r.json();
+  }).then(function(j){
+    var f=(j.features&&j.features[0])||j; var p=f.properties||{}; var g=(f.geometry&&f.geometry.coordinates)||[];
+    ev={mag:p.mag,magType:p.magType||'M',place:p.place||'—',time:p.time,depth:Math.round(g[2]),lat:g[1],lon:g[0],author:p.author||'INGV'};
+    var d=distKm(ev.lat,ev.lon), dir=bearing(ev.lat,ev.lon);
+
+    document.getElementById('eq-stato').hidden=true;
+    document.getElementById('eq-head').hidden=false;
+    document.getElementById('eq-tabs').hidden=false;
+
+    document.getElementById('eq-titolo').textContent='Terremoto '+ev.place;
+    document.getElementById('eq-sommario').textContent='Un terremoto di magnitudo '+ev.magType+' '+ev.mag.toFixed(1)+' è avvenuto il '+fmtIT(ev.time)+' (ora italiana), a una profondità di '+ev.depth+' km, '+d+' km a '+dir+' di Genzano di Roma.';
+    var badge=document.getElementById('eq-mag-badge'); badge.textContent=ev.magType+' '+ev.mag.toFixed(1); badge.style.background=magColor(ev.mag);
+    document.getElementById('eq-meta-ora').textContent=fmtIT(ev.time);
+    document.getElementById('eq-meta-prof').textContent='Profondità '+ev.depth+' km';
+    document.getElementById('eq-meta-dist').textContent=d+' km da Genzano';
+
+    document.getElementById('d-mag').textContent=ev.magType+' '+ev.mag.toFixed(1);
+    document.getElementById('d-ora-it').textContent=fmtIT(ev.time);
+    document.getElementById('d-ora-utc').textContent=fmtUTC(ev.time);
+    document.getElementById('d-prof').textContent=ev.depth+' km';
+    document.getElementById('d-coord').textContent=ev.lat.toFixed(3)+', '+ev.lon.toFixed(3);
+    document.getElementById('d-zona').textContent=ev.place;
+    document.getElementById('d-dist').textContent=d+' km a '+dir;
+    document.getElementById('d-autore').textContent=ev.author;
+
+    document.title='Terremoto '+ev.place+' — M '+ev.mag.toFixed(1);
+
+    // link ufficiali / download
+    var ingvUrl='https://terremoti.ingv.it/event/'+EID;
+    document.getElementById('dl-ingv').href=ingvUrl;
+    document.getElementById('mec-link').href=ingvUrl;
+    document.getElementById('imp-link').href=ingvUrl;
+    document.getElementById('dl-quakeml').href=FDSN+'?eventid='+EID;
+    document.getElementById('dl-geojson').href=FDSN+'?eventid='+EID+'&format=geojson';
+
+    // ShakeMap: prova l'immagine ufficiale; se non carica resta solo il deep-link
+    var smUrl='https://shakemap.ingv.it/shake4/data/'+EID+'/current/products/intensity.jpg';
+    var smImg=document.getElementById('imp-shakemap-img');
+    smImg.onload=function(){document.getElementById('imp-shakemap').hidden=false;};
+    smImg.onerror=function(){document.getElementById('imp-shakemap').hidden=true;};
+    smImg.src=smUrl;
+
+    drawMap();
+    loadLocalizzazioni();
+  }).catch(function(){
+    stato.innerHTML='Non è stato possibile caricare i dati dell\'evento. Consulta la <a href="https://terremoti.ingv.it/event/'+EID+'" target="_blank" rel="noopener noreferrer">scheda ufficiale INGV</a>.';
+  });
+
+  // ── 2. Localizzazioni e magnitudo (QuakeML, senza arrivi per non scaricare MB) ──
+  function loadLocalizzazioni(){
+    var url=FDSN+'?eventid='+EID+'&includeallmagnitudes=true&includeallorigins=true&includearrivals=false';
+    fetch(url).then(function(r){return r.ok?r.text():Promise.reject();}).then(function(xml){
+      var doc=new DOMParser().parseFromString(xml,'application/xml');
+      var NS='http://quakeml.org/xmlns/bed/1.2';
+      function val(node,tag){var e=node.getElementsByTagNameNS(NS,tag)[0];if(!e)return '';var v=e.getElementsByTagNameNS(NS,'value')[0];return v?v.textContent:e.textContent;}
+      // Magnitudo
+      var mags=doc.getElementsByTagNameNS(NS,'magnitude');
+      var mb=document.getElementById('loc-mag-body'); mb.innerHTML='';
+      if(mags.length){
+        for(var i=0;i<mags.length;i++){
+          var m=mags[i];
+          var type=val(m,'type')||'—';
+          var mag=parseFloat(val(m,'mag'));
+          var nst=val(m,'stationCount')||'—';
+          var auth=val(m,'agencyID')||'INGV';
+          var tr=document.createElement('tr'); if(i===0)tr.className='eq-pref';
+          tr.innerHTML='<td>'+type+'</td><td>'+(isNaN(mag)?'—':mag.toFixed(1))+'</td><td>'+nst+'</td><td>'+auth+'</td>';
+          mb.appendChild(tr);
+        }
+      } else { mb.innerHTML='<tr><td colspan="4">Dati non disponibili. Vedi la scheda INGV.</td></tr>'; }
+      // Origini
+      var oris=doc.getElementsByTagNameNS(NS,'origin');
+      var ob=document.getElementById('loc-ori-body'); ob.innerHTML='';
+      if(oris.length){
+        for(var k=0;k<oris.length;k++){
+          var o=oris[k];
+          var t=val(o,'time'); var la=parseFloat(val(o,'latitude')); var lo=parseFloat(val(o,'longitude')); var dp=parseFloat(val(o,'depth'));
+          var auth2=val(o,'agencyID')||'INGV';
+          var tr2=document.createElement('tr'); if(k===0)tr2.className='eq-pref';
+          tr2.innerHTML='<td>'+(t?fmtUTC(t).replace(' UTC',''):'—')+'</td><td>'+(isNaN(la)?'—':la.toFixed(3))+'</td><td>'+(isNaN(lo)?'—':lo.toFixed(3))+'</td><td>'+(isNaN(dp)?'—':Math.round(dp/1000))+'</td><td>'+auth2+'</td>';
+          ob.appendChild(tr2);
+        }
+      } else { ob.innerHTML='<tr><td colspan="5">Dati non disponibili. Vedi la scheda INGV.</td></tr>'; }
+    }).catch(function(){
+      document.getElementById('loc-mag-body').innerHTML='<tr><td colspan="4">Dettaglio non disponibile. <a href="https://terremoti.ingv.it/event/'+EID+'" target="_blank" rel="noopener noreferrer">Vedi su INGV</a>.</td></tr>';
+      document.getElementById('loc-ori-body').innerHTML='<tr><td colspan="5">—</td></tr>';
+    });
+  }
+
+  // ── 5. Sismicità intorno (lazy, al primo accesso alla tab) ──
+  var sisLoaded=false;
+  function loadSismicita(){
+    if(sisLoaded||!ev) return; sisLoaded=true;
+    var dlat=0.45, dlon=0.6; // ~50 km
+    var from=new Date(Date.now()-30*86400000).toISOString().slice(0,19);
+    var url=FDSN+'?starttime='+from+'&minlatitude='+(ev.lat-dlat)+'&maxlatitude='+(ev.lat+dlat)+'&minlongitude='+(ev.lon-dlon)+'&maxlongitude='+(ev.lon+dlon)+'&minmagnitude=1&format=geojson&orderby=time&limit=200';
+    fetch(url).then(function(r){return r.status===204?{features:[]}:r.json();}).then(function(j){
+      var fs=j.features||[];
+      document.getElementById('sis-conteggio').textContent=fs.length+' eventi M≥1 negli ultimi 30 giorni entro ~50 km.';
+      var tb=document.getElementById('sis-body'); tb.innerHTML='';
+      if(!fs.length){tb.innerHTML='<tr><td colspan="4">Nessun altro evento registrato nel periodo.</td></tr>';return;}
+      fs.slice(0,30).forEach(function(f){
+        var p=f.properties,g=f.geometry.coordinates;
+        var tr=document.createElement('tr');
+        tr.innerHTML='<td>'+fmtUTC(p.time).replace(' UTC','')+'</td><td>M '+(p.mag||0).toFixed(1)+'</td><td>'+(p.place||'—')+'</td><td>'+Math.round(g[2])+'</td>';
+        tb.appendChild(tr);
+      });
+    }).catch(function(){document.getElementById('sis-conteggio').textContent='Conteggio non disponibile al momento.';});
+  }
+
+  // se l'utente arriva con un hash che cambia, ricarica
+  window.addEventListener('hashchange',function(){ if(getEventId()!==EID) location.reload(); });
+})();
+</script>
