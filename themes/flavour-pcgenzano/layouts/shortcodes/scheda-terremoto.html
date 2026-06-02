@@ -54,6 +54,7 @@
         <div class="eq-dato"><dt>Distanza da Genzano</dt><dd id="d-dist">—</dd></div>
         <div class="eq-dato"><dt>Rilevato da</dt><dd id="d-autore">—</dd></div>
       </dl>
+      <p class="eq-interpreta" id="eq-interpreta" hidden></p>
     </section>
 
     {{/* ── LOCALIZZAZIONI E MAGNITUDO ── */}}
@@ -164,6 +165,8 @@
 .eq-tab-loc thead th{color:#003366;border-bottom:2px solid #d6e0ec}
 .eq-tab-loc tr.eq-pref td{background:#fff8e6}
 .eq-nota{color:#444;font-size:.95rem}
+.eq-interpreta{margin:1rem 0 0;padding:.9rem 1.1rem;background:#eef4fb;border-left:4px solid #003366;border-radius:6px;font-size:.98rem;line-height:1.6}
+.eq-interpreta-note{display:block;margin-top:.5rem;color:#444;font-size:.85rem}
 .eq-figura{margin:1rem 0;text-align:center}
 .eq-figura img{max-width:100%;height:auto;border:1px solid #d6e0ec;border-radius:8px}
 .eq-figura figcaption{font-size:.82rem;color:#555;font-style:italic;margin-top:.35rem}
@@ -292,6 +295,24 @@
     document.getElementById('d-zona').textContent=ev.place;
     document.getElementById('d-dist').textContent=d+' km a '+dir;
     document.getElementById('d-autore').textContent=ev.author;
+
+    // Interpretazione in chiaro della magnitudo (spirito USGS "Science for Everyone"/PAGER):
+    // traduce il numero in effetti indicativi, con il caveat che l'effetto reale dipende da
+    // profondità, distanza e tipo di terreno. La magnitudo NON è l'intensità avvertita.
+    (function(){
+      var m=ev.mag, cls;
+      if(m<2.0) cls='un evento molto lieve, di norma <strong>rilevato solo dagli strumenti</strong> e non avvertito dalle persone.';
+      else if(m<3.0) cls='un evento <strong>lieve</strong>, avvertito al più da poche persone vicino all\'epicentro. Non provoca danni.';
+      else if(m<4.0) cls='un evento <strong>leggero</strong>, avvertito da molte persone vicino all\'epicentro. Solo raramente causa danni lievi.';
+      else if(m<5.0) cls='un evento <strong>moderato</strong>, avvertito su un\'area ampia. Può causare danni lievi a edifici vulnerabili vicino all\'epicentro.';
+      else if(m<6.0) cls='un evento <strong>forte</strong>: può causare danni a edifici nell\'area epicentrale.';
+      else cls='un evento <strong>molto forte</strong>: vicino all\'epicentro può causare danni gravi.';
+      var prof = ev.depth>=100 ? ' Essendo un terremoto <strong>profondo</strong> ('+ev.depth+' km), in superficie viene avvertito molto meno di uno superficiale di pari magnitudo.' : (ev.depth<=15 ? ' Essendo un terremoto <strong>superficiale</strong> ('+ev.depth+' km), a parità di magnitudo lo scuotimento in superficie è più marcato.' : '');
+      var lontano = d>150 ? ' A '+d+' km da Genzano di Roma, qui è stato presumibilmente avvertito poco o per nulla.' : '';
+      var el=document.getElementById('eq-interpreta');
+      el.innerHTML='<strong>Cosa significa:</strong> magnitudo '+m.toFixed(1)+' indica '+cls+prof+lontano+' <span class="eq-interpreta-note">L\'effetto realmente avvertito dipende da profondità, distanza e tipo di terreno: la magnitudo misura l\'energia, non lo scuotimento percepito. I terremoti non si prevedono: l\'INGV li monitora.</span>';
+      el.hidden=false;
+    })();
 
     document.title='Terremoto '+ev.place+' — M '+ev.mag.toFixed(1);
 
