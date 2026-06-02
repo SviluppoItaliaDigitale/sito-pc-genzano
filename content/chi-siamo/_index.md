@@ -105,7 +105,7 @@ Nel **1991** viene istituito il Gruppo Comunale di Protezione Civile con deliber
 </div>
 <div class="col-md-6">
 
-Con l'evoluzione della normativa sul Terzo Settore, alla fine del **2023** il Gruppo aggiorna il proprio assetto organizzativo. Vengono costituiti il Direttivo e l'Assemblea dei volontari e vengono rinnovati Statuto e Regolamento.
+Con l'evoluzione della normativa sul Terzo Settore, alla fine del **2023** il Gruppo aggiorna il proprio assetto organizzativo. Vengono costituiti il Direttivo e l'Assemblea dei volontari e vengono rinnovati Statuto e Regolamento. La costituzione è formalizzata con la [Delibera del Consiglio Comunale n. 31 del 31 luglio 2023](/manuali/delibera-cc-31-2023-costituzione-gruppo-comunale-pc-genzano.pdf), in attuazione dell'art. 35, comma 1, del D.Lgs. 1/2018.
 
 </div>
 </div>
