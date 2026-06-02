@@ -14,6 +14,8 @@ howto_dopo: "Presta attenzione a cavi elettrici caduti o danneggiati. Non entrar
 ---
 I temporali intensi portano piogge forti, fulmini, grandine e raffiche di vento improvvise. Si formano in pochi minuti, soprattutto tra maggio e ottobre e durante i cambi di stagione.
 
+{{< emergenza-ora >}}
+
 ## <i class="bi bi-lightning-charge-fill text-primary me-2" aria-hidden="true"></i>Fulmini in tempo reale {#fulmini-realtime}
 Mappa dei fulmini rilevati in Europa, aggiornata in tempo reale dalla rete volontaria **Blitzortung / Lightning Maps**. Utile quando è in corso un temporale per capire dove si sta muovendo la cella e quanto è distante.
 

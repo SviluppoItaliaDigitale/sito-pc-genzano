@@ -31,9 +31,20 @@ Queste pagine aiutano a orientarsi in pochi minuti, anche senza conoscenze tecni
 {{< link-card url="/rischi-prevenzione/dopo-emergenza/" icon="bi-house-check" titolo="Dopo l'emergenza" desc="Rientro sicuro, verifica di gas, luce e acqua, animali e notizie false quando l'evento è passato." >}}
 </div>
 
+## I più cercati
+
+Le quattro schede più consultate per il nostro territorio. Parti da qui se non sai da dove cominciare.
+
+<div class="consulta-rapida">
+{{< link-card url="/rischi-prevenzione/rischio-sismico/" icon="bi-activity" titolo="Rischio sismico" desc="Cosa fare prima, durante e dopo una scossa. Zona sismica 2B, Colli Albani." >}}
+{{< link-card url="/rischi-prevenzione/rischio-idrogeologico/" icon="bi-water" titolo="Rischio idrogeologico" desc="Piogge intense, allagamenti, frane e smottamenti: il rischio più probabile in zona." >}}
+{{< link-card url="/rischi-prevenzione/rischio-incendio/" icon="bi-fire" titolo="Rischio incendio" desc="Incendi boschivi e di interfaccia. Campagna AIB giugno-settembre, Zona 9." >}}
+{{< link-card url="/rischi-prevenzione/ondate-di-calore/" icon="bi-thermometer-sun" titolo="Caldo e ondate di calore" desc="Come proteggere anziani, bambini e persone fragili durante le ondate di calore." >}}
+</div>
+
 ## Principali rischi
 
-Consulta la scheda del rischio che ti interessa.
+Consulta la scheda completa del rischio che ti interessa.
 
 | Rischio | Quando usarla | Pagina |
 |---|---|---|

@@ -102,6 +102,10 @@ Il codice colore dipende dagli effetti attesi, non solo dalla quantità di piogg
 
 ## Significato dei codici colore
 
+{{< callout tipo="avviso" titolo="Verde non vuol dire rischio zero" >}}
+L'assenza di allerta significa che **non sono previsti fenomeni significativi**, non che il rischio sia nullo. La preparazione si fa **prima**, quando il cielo è sereno: tieni pronto il [kit di emergenza](/rischi-prevenzione/kit-emergenza/), conosci le aree di attesa del tuo quartiere e compila il [Piano Familiare](/piano-familiare/). Quando arriva l'allerta è troppo tardi per organizzarsi.
+{{< /callout >}}
+
 ### <span class="badge badge-allerta-verde">VERDE</span> — Nessuna allerta
 
 {{< pittogramma src="/pittogrammi/arasaac/calma.png" alt="Pittogramma: situazione di calma" size="small" inline="true" >}} Non sono previsti fenomeni significativi.

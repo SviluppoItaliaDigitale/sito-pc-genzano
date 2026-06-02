@@ -14,6 +14,8 @@ howto_dopo: "Segnala al 112 situazioni di pericolo (alberi caduti su strade, cav
 ---
 Il vento forte colpisce spesso i Castelli Romani, soprattutto in autunno e in inverno. Le raffiche violente possono abbattere alberi, rami e tegole, con rischi seri per le persone e i veicoli.
 
+{{< emergenza-ora >}}
+
 ## <i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Perché è rilevante sul nostro territorio {#perche-rilevante}
 Genzano di Roma si trova in un'area collinare esposta ai venti, in particolare durante le perturbazioni atlantiche. La presenza di alberature storiche lungo le strade comunali e nei parchi aumenta il rischio di caduta rami, soprattutto in caso di terreno inzuppato dalle piogge.
 

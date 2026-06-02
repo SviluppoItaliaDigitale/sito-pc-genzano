@@ -14,6 +14,8 @@ howto_dopo: "Non accedere alla zona percorsa dal fuoco: possono esserci tronchi 
 ---
 L'incendio boschivo divampa in aree vegetate — boschi, macchia mediterranea, terreni incolti — e si propaga rapidamente per effetto del vento, della siccità e della vegetazione secca. Nella grande maggioranza dei casi, comportamenti umani imprudenti o dolosi ne sono la causa.
 
+{{< emergenza-ora >}}
+
 ## <i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Perché è rilevante sul nostro territorio {#perche-rilevante}
 Genzano di Roma è parzialmente compresa nel Parco Regionale dei Castelli Romani, con ampie aree boschive e di macchia mediterranea. Il periodo di massimo rischio va da giugno a settembre: siccità prolungata e venti caldi possono trasformare una piccola fiamma in un incendio devastante. Il nostro Gruppo partecipa attivamente alle campagne antincendio boschivo (AIB).
 

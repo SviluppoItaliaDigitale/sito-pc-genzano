@@ -15,6 +15,8 @@ howto_dopo: "Non rientrare in casa finché le autorità non lo autorizzano. Non 
 ---
 Il rischio idrogeologico riguarda alluvioni, allagamenti, frane e smottamenti. Piogge intense e persistenti possono innescarli anche in poche ore.
 
+{{< emergenza-ora >}}
+
 ## <i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Perché è rilevante sul nostro territorio {#perche-rilevante}
 Genzano di Roma si trova su un territorio collinare di origine vulcanica, con versanti che possono essere soggetti a frane e smottamenti, soprattutto quando il terreno è saturo d'acqua. Le aree più basse del territorio e le zone lungo i fossi possono essere interessate da allagamenti durante piogge intense. Il rischio aumenta nei periodi autunnali e primaverili.
 

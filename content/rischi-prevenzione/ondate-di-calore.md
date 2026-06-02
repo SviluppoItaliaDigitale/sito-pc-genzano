@@ -13,6 +13,8 @@ howto_dopo: "Se qualcuno mostra sintomi di colpo di calore, chiama il 112 immedi
 ---
 Il caldo estremo prolungato mette a rischio la vita, soprattutto degli anziani, dei bambini piccoli e di chi ha patologie croniche. Ogni estate il Ministero della Salute attiva la sorveglianza sulle ondate di calore: seguire i bollettini ufficiali e adottare pochi comportamenti corretti può prevenire conseguenze gravi.
 
+{{< emergenza-ora >}}
+
 ## <i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Perché è rilevante sul nostro territorio {#perche-rilevante}
 Genzano di Roma, pur trovandosi in area collinare, è soggetta a ondate di calore intense da giugno ad agosto. Le temperature possono superare i 38-40°C. Gli effetti più gravi colpiscono anziani, bambini piccoli e persone con patologie croniche.
 
