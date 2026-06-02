@@ -108,6 +108,14 @@ I terremoti non sono prevedibili. Non esistono segnali premonitori affidabili. N
 - Non scendere dall'auto durante la scossa.
 - Dopo la scossa, evita di percorrere ponti e sopraelevate che potrebbero essere danneggiati.
 
+### Se hai difficoltà di movimento {#riparo-mobilita}
+Il riparo "abbassati, copriti, tieniti" va adattato: la regola è **proteggere la testa e il collo** e **non muoversi durante la scossa** se spostarsi è rischioso. Se non riesci a scendere a terra in sicurezza, **non buttarti**: resta dove sei e copriti.
+
+- **In sedia a rotelle:** blocca le ruote (freni), piégati in avanti il più possibile e copri testa e collo con le braccia o con un cuscino. Aspetta la fine della scossa, poi allontanati dalle finestre.
+- **Con deambulatore o bastone:** siediti su una sedia robusta o sul letto vicino a un muro portante, lontano da finestre e mobili alti; copri testa e collo. Non tentare di raggiungere un tavolo se rischi di cadere.
+- **A letto:** resta a letto, girati a pancia in giù e proteggi la testa e il collo con il cuscino. Spostarti al buio tra calcinacci è più pericoloso che restare.
+- **Per chi assiste una persona fragile:** proteggi prima la testa della persona, poi la tua; tieni a portata di mano eventuali ausili (occhiali, apparecchi acustici, farmaci salvavita) per la fase DOPO.
+
 ## <i class="bi bi-arrow-counterclockwise text-primary me-2" aria-hidden="true"></i>Cosa fare DOPO la scossa {#cosa-fare-dopo}
 - Verifica che le persone intorno a te stiano bene.
 - Esci con prudenza, **indossando le scarpe** (possono esserci vetri e calcinacci).

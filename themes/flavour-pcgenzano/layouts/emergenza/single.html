@@ -1,0 +1,41 @@
+{{- /*
+  Pagina /emergenza/ — STANDALONE, ultra-leggera (idea roadmap, fix audit 2026-06).
+  NON usa baseof.html: niente navbar, footer, FAB, Bootstrap Italia bundle, JS pesante.
+  Prima del fix la pagina ereditava tutto il chrome (~132 KB) tradendo la promessa "lite".
+  Tutto il contenuto e gli stili vengono dallo shortcode pagina-emergenza-lite (CSS inline,
+  niente JS, niente font esterni, niente widget di terzi). Caricabile con rete debolissima.
+  Stessa filosofia standalone di layouts/lanterna/list.html.
+*/ -}}
+<!doctype html>
+<html lang="it" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ .Title }} — Protezione Civile Genzano di Roma</title>
+<meta name="description" content="{{ .Description }}">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#c1121f">
+<link rel="canonical" href="{{ .Permalink }}">
+<meta property="og:title" content="{{ .Title }} — Protezione Civile Genzano di Roma">
+<meta property="og:description" content="{{ .Description }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:locale" content="it_IT">
+<link rel="icon" type="image/x-icon" href="{{ "images/favicon.ico" | relURL }}">
+<style>
+  :root{color-scheme:light}
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:#fff;color:#1a1a1a;font-family:-apple-system,system-ui,"Segoe UI",Arial,sans-serif;padding:1rem;}
+  a:focus,.call:focus{outline:3px solid #ffbe2e;outline-offset:2px}
+  .lite-skip{position:absolute;left:-999px}
+  .lite-skip:focus{position:static;display:inline-block;margin:.3rem 0}
+</style>
+</head>
+<body>
+<a class="lite-skip" href="#main">Vai al contenuto</a>
+<main id="main">
+{{ .Content }}
+</main>
+</body>
+</html>
