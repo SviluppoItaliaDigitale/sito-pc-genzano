@@ -14,6 +14,8 @@ howto_dopo: "Assicurati dello stato di salute delle persone intorno a te. Esci c
 ---
 Il terremoto non si può prevedere. L'unica difesa è prepararsi prima: sapere cosa fare, avere il kit pronto, conoscere le vie di fuga.
 
+{{< emergenza-ora >}}
+
 ## <i class="bi bi-broadcast text-primary me-2" aria-hidden="true"></i>Terremoti recenti in Italia {#terremoti-recenti}
 Mappa e lista degli eventi sismici recenti rilevati dall'**Istituto Nazionale di Geofisica e Vulcanologia (INGV)** — fonte scientifica ufficiale in Italia. La vista mostra tutti i terremoti localizzati sul territorio nazionale; usa il menu interno per filtrare per magnitudo, profondità e periodo.
 

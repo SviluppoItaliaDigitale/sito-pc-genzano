@@ -21,7 +21,7 @@ codici:
   - livello: "arancione"
     titolo: "Allerta Arancione — Livello di Preallarme"
     colore_bg: "#fd7e14"
-    colore_testo: "#fff"
+    colore_testo: "#000"  # nero su arancione = 8.17:1 (WCAG AA). Bianco su #fd7e14 = 2.57:1 FAIL (rule 03)
     significato: "Criticità moderata. I fenomeni previsti possono essere diffusi e potenzialmente pericolosi."
     cosa_fare: "Limita gli spostamenti allo stretto necessario. Metti in sicurezza beni in locali interrati. Tieni pronto il kit di emergenza. Segui le indicazioni delle autorità."
     icona: "bi-exclamation-triangle-fill"

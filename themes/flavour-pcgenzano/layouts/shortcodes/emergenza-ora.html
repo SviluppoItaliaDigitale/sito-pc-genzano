@@ -1,0 +1,16 @@
+{{- /* emergenza-ora: callout standard "Sei in pericolo adesso?" che intercetta chi è
+       in emergenza anche sulle pagine fredde di prevenzione (pattern FEMA "survivor box").
+       Usa il componente callout NATIVO di Bootstrap Italia (nessun CSS custom).
+       Uso autore: {{< emergenza-ora >}} — nessun parametro. */ -}}
+{{- $sprite := "vendor/bootstrap-italia/svg/sprites.svg" | relURL -}}
+{{- $emerg := "emergenza/" | relURL -}}
+<div class="callout danger" role="note">
+  <div class="callout-inner">
+    <div class="callout-title">
+      <svg class="icon" aria-hidden="true"><use href="{{ $sprite }}#it-error"></use></svg>
+      <span>Sei in pericolo in questo momento?</span>
+    </div>
+    <p>Se c'è un pericolo immediato per le persone — incendio, crollo, allagamento, persona ferita — <strong>chiama subito il <a href="tel:112">112</a></strong>, il numero unico di emergenza. Questa pagina serve a prepararsi <em>prima</em>: non sostituisce la chiamata di soccorso.</p>
+    <p class="mb-0">Hai poca rete? Le informazioni essenziali sono nella <a href="{{ $emerg }}">pagina Emergenza</a>, leggera e veloce.</p>
+  </div>
+</div>
