@@ -122,6 +122,19 @@ Quattro shortcode di contenuto, AGID/WCAG, applicabili a contenuto già esistent
 
 Utility correlate in `custom.css`: **`.pc-spinner`** (indicatore di caricamento, rispetta `prefers-reduced-motion` + `a11y-pause-anim`; cablato negli stati di caricamento del Laboratorio meteo) e **`.table-sticky`** (intestazione tabella sticky per tabelloni lunghi, `max-height:70vh`).
 
+## Shortcode `scheda-terremoto` (scheda dettaglio evento sismico)
+
+`themes/flavour-pcgenzano/layouts/shortcodes/scheda-terremoto.html` rende la **scheda di dettaglio di un singolo terremoto** sul modello della pagina evento di `terremoti.ingv.it`. Usato dalla pagina `content/cruscotto/terremoto.md` (URL `/cruscotto/terremoto/`), che riceve l'ID evento via **hash** (`#46107472`) o query (`?event=46107472`).
+
+- **Dati live INGV FDSN** (CORS aperto, fetch dal browser, niente widget di terzi): GeoJSON (`?eventid=<id>&format=geojson`) per il riepilogo; QuakeML (`&includeallmagnitudes=true&includeallorigins=true&includearrivals=false`) per le magnitudo/origini multiple. L'ID evento INGV è in `properties.eventId`; coordinate GeoJSON `[lon, lat, prof]`.
+- **Tab accessibili** (pattern ARIA tablist, frecce/Home/End, roving tabindex): Dati evento (mappa epicentro **a piena larghezza** Leaflet self-hosted + griglia parametri `.eq-dati-grid` sotto) · Localizzazioni e magnitudo · Meccanismo di sorgente · Impatto · Sismicità (FDSN bbox ~50 km, ultimi 30 gg) · Cosa fare (autoprotezione sismica + link a `/rischi-prevenzione/rischio-sismico/`) · Download.
+- **Prodotti scientifici INGV non ricalcolati** (vincolo: siamo associazione di volontariato, non ente sismologico — coerente con lo schema `Organization`): ShakeMap e meccanismo focale sono **embed ufficiali con attribuzione CC BY-SA** se esistono (img con `onerror` → fallback), altrimenti **deep-link** alla scheda INGV. Per eventi profondi/offshore questi prodotti spesso non esistono.
+- **Condivisione/stampa/QR** dal chrome standard di pagina (`page-tools.html`); il tab Download offre QuakeML/GeoJSON + scheda ufficiale INGV.
+- CSS scoped in un blocco `<style>` interno allo shortcode (sezione **SCHEDA TERREMOTO v1.0**). La pagina ha `tts: false`, `indice: false`, `build.list: never` (non in liste/RSS/sitemap: è una pagina-strumento che richiede l'hash).
+- **Collegamento dal cruscotto**: `dashboard-terremoti.html` cattura `properties.eventId` e linka ogni riga (cella "Zona") e popup mappa a `/cruscotto/terremoto/#<id>` (URL via `relURL | jsonify`).
+
+🔴 **Filtro eventi italiani (`isItaliano`) in `dashboard-terremoti.html`**: l'API INGV chiude il `place` con la provincia tra parentesi, a volte come **sigla** `(CS)`, a volte come **nome esteso** `(Cosenza)`/`(Reggio Calabria)` (tipico degli eventi offshore). Il filtro accetta entrambi (set `PROVINCE_IT` sigle + `PROVINCE_NOMI` nomi estesi) + mari/coste italiane. **Non restringere a sole sigle**: il 1° giugno 2026 un M6.2 "Costa Calabra nord-occidentale (Cosenza)" non compariva perché il filtro accettava solo `(CS)`.
+
 ## Partial `indice-pagina` — indice di pagina con scrollspy (site-wide)
 
 `themes/flavour-pcgenzano/layouts/partials/indice-pagina.html` produce l'**indice "In questa pagina"** (navscroll Bootstrap Italia semplificato): elenco da `.TableOfContents`, sticky a sinistra su desktop (colonna 2-col in `_default/single.html` e `_default/list.html`), accordion collassabile su mobile. `static/js/indice-pagina.js` evidenzia la sezione corrente mentre si scorre (scrollspy → `.active` + `aria-current` sui link). CSS sezione **INDICE DI PAGINA v1.0**.

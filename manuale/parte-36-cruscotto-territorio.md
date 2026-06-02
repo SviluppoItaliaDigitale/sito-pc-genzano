@@ -50,7 +50,17 @@ Le fonti esterne possono cambiare URL o cadere, lasciando una scheda vuota **sen
 4. Aggiungi la fonte a `scripts/check-fonti-cruscotto.py` perché venga monitorata.
 5. **Verifica visiva** (CLAUDE.md § "Verifica visiva pre-commit su markup HTML"): è markup custom, va guardato con Playwright prima del commit.
 
-## 36.6 Cosa non fare
+## 36.6 Scheda di dettaglio del singolo terremoto (`/cruscotto/terremoto/`)
+
+Dal cruscotto sismico ogni terremoto ha una **scheda di dettaglio** sul modello della pagina evento di `terremoti.ingv.it`. Si raggiunge cliccando la **zona** nella tabella del cruscotto (o "Scheda completa →" nel popup della mappa): l'URL è `/cruscotto/terremoto/#<id-evento-INGV>`.
+
+La scheda (shortcode `scheda-terremoto`, pagina `content/cruscotto/terremoto.md`) prende i dati **live da INGV** (FDSN, dati aperti) e mostra tab accessibili: **Dati evento** (mappa dell'epicentro a piena larghezza + i parametri in griglia sotto), **Localizzazioni e magnitudo** (tutte le stime INGV, es. Mw e ML), **Meccanismo di sorgente**, **Impatto** (ShakeMap), **Sismicità** dell'area negli ultimi 30 giorni, **Cosa fare** (autoprotezione sismica), **Download**.
+
+Principio: i prodotti scientifici dell'INGV (ShakeMap, meccanismo focale) **non vengono ricalcolati**: si mostrano le carte ufficiali con attribuzione quando esistono, altrimenti si rimanda alla scheda INGV. Per i terremoti profondi o lontani dalla costa questi prodotti spesso non sono elaborati, e la scheda lo dichiara. Condivisione, stampa e QR sono quelli standard di ogni pagina del sito.
+
+> Nota tecnica: il cruscotto considera "italiano" un terremoto guardando la provincia tra parentesi nel nome località INGV, accettando sia la sigla `(CS)` sia il nome esteso `(Cosenza)`. Senza il nome esteso, gli eventi al largo (es. un M6.2 "Costa Calabra nord-occidentale (Cosenza)") sparirebbero dal cruscotto.
+
+## 36.7 Cosa non fare
 
 - Non trasformare il cruscotto in un bollettino ufficiale: resta **indicativo**, l'avviso 112/Centro Funzionale non si tocca.
 - Non aggiungere embed con cookie di terze parti: rompe la promessa privacy-first e richiederebbe un banner di consenso.
