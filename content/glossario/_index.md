@@ -266,7 +266,7 @@ Numero Unico Europeo di Emergenza. È il numero da chiamare per incendio, malore
 ## O
 
 ### OdV {#odv}
-Organizzazione di Volontariato. Forma giuridica del Codice del Terzo Settore (D.Lgs. 117/2017): il Gruppo Comunale Volontari di PC Genzano è iscritto come OdV.
+Organizzazione di Volontariato. Forma giuridica del Codice del Terzo Settore (D.Lgs. 117/2017). Il Gruppo Comunale Volontari di PC Genzano, essendo un gruppo comunale (articolazione del Comune), è invece iscritto al RUNTS nella sezione «Altri Enti del Terzo Settore», non come OdV.
 
 ### OMS {#oms}
 Organizzazione Mondiale della Sanità. Agenzia delle Nazioni Unite per la salute pubblica: pubblica linee guida su epidemie, ondate di calore e primo soccorso.

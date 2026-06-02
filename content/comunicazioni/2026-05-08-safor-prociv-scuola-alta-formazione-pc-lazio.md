@@ -81,7 +81,7 @@ L'articolo 7 fissa i criteri minimi di qualità per le attività formative svolt
 
 Il regolamento è una **buona notizia per il volontariato organizzato di Protezione Civile** della Regione Lazio: dà finalmente cornice formale a un percorso di alta formazione che era atteso da anni e fissa standard chiari di qualità.
 
-Per il **Gruppo Comunale di Genzano di Roma** — e per ogni Organizzazione di Volontariato iscritta all'**Elenco territoriale regionale** ai sensi dell'art. 10 della l.r. 2/2014 — i punti più rilevanti sono:
+Per il **Gruppo Comunale di Genzano di Roma** — e per tutto il volontariato organizzato di protezione civile (Gruppi Comunali e Organizzazioni di Volontariato) iscritto all'**Elenco territoriale regionale** ai sensi dell'art. 10 della l.r. 2/2014 — i punti più rilevanti sono:
 
 - arriverà una programmazione triennale di alta formazione per le **figure specialistiche** (caposquadra, operatori AIB, addetti sala operativa, esperti rischio idrogeologico, ecc.);
 - il volontariato avrà **cinque seggi nel Comitato scientifico**, uno per provincia, riservati a volontari già formati nei percorsi specialistici (la designazione passa per il **CTC del Volontariato Lazio**);

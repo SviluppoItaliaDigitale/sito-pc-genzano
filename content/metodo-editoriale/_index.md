@@ -8,7 +8,7 @@ dataUltimaRevisione: "2026-05-21"
 ---
 Questa pagina spiega **come lavoriamo**. Vogliamo che ogni cittadino, ma anche ogni ente, possa verificare da dove vengono le nostre informazioni e quanto sono affidabili. La trasparenza del metodo è parte della qualità del contenuto.
 
-Il sito è curato dal **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**, un'organizzazione di volontariato. Non siamo un ente pubblico: traduciamo in linguaggio chiaro le indicazioni delle autorità competenti e le adattiamo al nostro territorio, citando sempre la fonte.
+Il sito è curato dal **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**, articolazione del Comune di Genzano di Roma iscritta al RUNTS come Ente del Terzo Settore. Non siamo un'autorità di protezione civile: traduciamo in linguaggio chiaro le indicazioni delle autorità competenti e le adattiamo al nostro territorio, citando sempre la fonte.
 
 ## Le nostre fonti, in ordine di priorità {#fonti}
 

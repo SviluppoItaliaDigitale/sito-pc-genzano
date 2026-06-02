@@ -4,7 +4,7 @@ description: "Informativa sul trattamento dei dati personali e sull'uso dei cook
 layout: "single"
 toc: true
 tts: true
-dataUltimaRevisione: "2026-05-31"
+dataUltimaRevisione: "2026-06-02"
 ---
 
 Questa pagina spiega quali dati possono essere trattati durante la navigazione del sito e come sono gestiti cookie, widget esterni e strumenti interattivi.
@@ -22,7 +22,7 @@ Email: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivil
 
 ## Contatto privacy
 
-Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma è un'organizzazione di volontariato (OdV) iscritta al RUNTS. Per le caratteristiche e i volumi di trattamento gestiti, non è obbligato alla nomina formale di un Responsabile della protezione dei dati (DPO/RPD) ai sensi dell'art. 37 del Regolamento (UE) 2016/679.
+Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma è un'articolazione del Comune di Genzano di Roma, iscritta al RUNTS nella sezione «Altri Enti del Terzo Settore». Per le caratteristiche e i volumi di trattamento gestiti, non è obbligato alla nomina formale di un Responsabile della protezione dei dati (DPO/RPD) ai sensi dell'art. 37 del Regolamento (UE) 2016/679.
 
 Per informazioni sul trattamento dei dati personali, per esercitare i diritti previsti dal GDPR o per segnalare un problema relativo alla privacy puoi scrivere a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
 

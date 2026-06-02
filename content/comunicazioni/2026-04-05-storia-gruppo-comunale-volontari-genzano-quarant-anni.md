@@ -132,7 +132,7 @@ Lo **Statuto** e il **Regolamento interno**, in vigore dagli anni Ottanta con pi
 - un **Direttivo** eletto, responsabile della conduzione ordinaria e delle scelte operative
 - un'**Assemblea dei Volontari**, organo sovrano che approva bilanci, indirizzi e modifiche statutarie
 
-È la fine di un'epoca e l'inizio di un'altra. Il Gruppo non è più solo un'articolazione tecnica del Comune: è un soggetto del Terzo Settore con propria autonomia gestionale, pur restando strumento operativo del Sindaco ai fini della protezione civile.
+È la fine di un'epoca e l'inizio di un'altra. Il Gruppo, pur restando un'articolazione del Comune di Genzano di Roma, è anche — de facto — un Ente del Terzo Settore iscritto al RUNTS, con un assetto interno più strutturato (Statuto, Regolamento, Direttivo), al servizio del Sindaco ai fini della protezione civile.
 
 ---
 
