@@ -129,7 +129,19 @@
     map.on('blur',  function(){ map.scrollWheelZoom.disable(); });
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
       subdomains:'abcd', maxZoom:12, attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/attributions">CARTO</a>' }).addTo(map);
-    L.marker(GENZANO, { icon: L.divIcon({className:'dash-stella', html:'<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 26 26" aria-hidden="true"><path d="M13 1l3.4 7.6L24 9.3l-5.8 5 1.8 7.9L13 18.4 5.9 22.2l1.8-7.9L2 9.3l7.6-.7z" fill="#003366" stroke="#fff" stroke-width="1.4"/></svg>', iconSize:[22,22], iconAnchor:[11,11]}) }).bindTooltip('Genzano di Roma',{permanent:true,direction:'right',offset:[10,0],className:'dash-stella-label'}).bindPopup('<strong>Genzano di Roma</strong>').addTo(map);
+    var genzMk = L.marker(GENZANO, { icon: L.divIcon({className:'dash-stella', html:'<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 26 26" aria-hidden="true"><path d="M13 1l3.4 7.6L24 9.3l-5.8 5 1.8 7.9L13 18.4 5.9 22.2l1.8-7.9L2 9.3l7.6-.7z" fill="#003366" stroke="#fff" stroke-width="1.4"/></svg>', iconSize:[22,22], iconAnchor:[11,11]}) }).bindPopup('<strong>Genzano di Roma</strong>').addTo(map);
+    // Etichetta "Genzano di Roma": non copre mai gli eventi (si sposta sul lato meno affollato),
+    // non intercetta i click (pointer-events:none via CSS) e sbiadisce al passaggio del mouse.
+    var GENZ_ETI='Genzano di Roma';
+    function genzOff(d){return d==='right'?[12,0]:d==='left'?[-12,0]:d==='top'?[0,-12]:[0,12];}
+    function genzBind(dir){ genzMk.unbindTooltip(); genzMk.bindTooltip(GENZ_ETI,{permanent:true,direction:dir,offset:genzOff(dir),className:'dash-stella-label'}); }
+    function genzPts(){ var a=[]; (eventi||[]).forEach(function(e){ try{a.push(map.latLngToContainerPoint([e.lat,e.lon]));}catch(_){} }); return a; }
+    function genzOverlap(dir,pts,mr){ genzBind(dir); var tt=genzMk.getTooltip(),el=tt&&tt.getElement(); if(!el)return 0; var b=el.getBoundingClientRect(),x0=b.left-mr.left-6,y0=b.top-mr.top-6,x1=b.right-mr.left+6,y1=b.bottom-mr.top+6,n=0; pts.forEach(function(p){if(p.x>=x0&&p.x<=x1&&p.y>=y0&&p.y<=y1)n++;}); return n; }
+    function posizionaEtichettaGenzano(){ if(!genzMk||!map)return; try{ var pts=genzPts(),mr=map.getContainer().getBoundingClientRect(),dirs=['right','left','top','bottom'],best='right',bn=Infinity; dirs.forEach(function(d){var n=genzOverlap(d,pts,mr); if(n<bn){bn=n;best=d;}}); genzBind(best);}catch(_){ genzBind('right'); } }
+    genzBind('right');
+    map.on('zoomend moveend', posizionaEtichettaGenzano);
+    map.on('mousemove', function(me){ var tt=genzMk.getTooltip(),el=tt&&tt.getElement(); if(!el)return; var mr=map.getContainer().getBoundingClientRect(),b=el.getBoundingClientRect(),x=me.containerPoint.x,y=me.containerPoint.y; el.classList.toggle('is-faded', x>=b.left-mr.left-4&&x<=b.right-mr.left+4&&y>=b.top-mr.top-4&&y<=b.bottom-mr.top+4); });
+    map.on('mouseout', function(){ var tt=genzMk.getTooltip(),el=tt&&tt.getElement(); if(el)el.classList.remove('is-faded'); });
     markers = L.layerGroup().addTo(map);
 
     // Stato ordinamento tabella (default: tempo desc come INGV)
@@ -254,6 +266,7 @@
           cm.addTo(markers); markerById[i]=cm;
         } catch(err) { /* aggira eventuali corner case Leaflet residui */ }
       });
+      try{ posizionaEtichettaGenzano(); }catch(e){}
     }
 
     function carica(retry){
