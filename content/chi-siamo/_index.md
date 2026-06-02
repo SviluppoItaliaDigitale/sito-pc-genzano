@@ -7,7 +7,7 @@ aliases:
   - /chisiamo.html
   - /chisiamo/
 tts: true
-dataUltimaRevisione: "2026-05-06"
+dataUltimaRevisione: "2026-06-02"
 ---
 <!-- cache-bust: 2026-05-29 forza re-upload FTP dopo aggiunta voce di menu globale "Conoscere la Protezione Civile" -->
 
@@ -45,7 +45,7 @@ dataUltimaRevisione: "2026-05-06"
 <div class="card h-100 shadow-sm border-start border-4" style="border-color:var(--pc-secondary)!important;">
 <div class="card-body">
 <h3 class="h6"><i class="bi bi-people-fill text-primary me-2" aria-hidden="true"></i> Gruppo volontari</h3>
-<p class="small mb-2">Il Gruppo Comunale Volontari è un Ente del Terzo Settore iscritto al RUNTS, con Statuto e Regolamento propri.</p>
+<p class="small mb-2">Il Gruppo Comunale Volontari è un'articolazione del Comune di Genzano di Roma, iscritta al RUNTS come Ente del Terzo Settore (sezione «Altri Enti del Terzo Settore»), con Statuto e Regolamento propri.</p>
 <p class="small mb-0">Opera in coordinamento con il Sindaco, autorità locale di protezione civile, con il Comando di Polizia Locale, con la Sala Operativa Regionale Lazio e con il coordinamento FEPIVOL.</p>
 </div>
 </div>
@@ -74,7 +74,7 @@ Il Gruppo aderisce a sistemi europei, nazionali e regionali di volontariato e pr
 <div class="card-body text-center">
 <img src="/images/logo-snpc-volontariato.png" alt="Logo Servizio Nazionale Protezione Civile — Volontariato" style="width:84px;height:98px;display:block;margin:0 auto 1rem;">
 <h3 class="h6 text-center"><i class="bi bi-shield-fill-check text-primary me-2" aria-hidden="true"></i> Servizio Nazionale di Protezione Civile</h3>
-<p class="small text-start mb-2">Il Gruppo è organizzazione di volontariato di protezione civile ai sensi del <strong>D.Lgs. 2 gennaio 2018, n. 1</strong> (Codice della Protezione Civile), iscritta al Registro Regionale del Volontariato di Protezione Civile della Regione Lazio.</p>
+<p class="small text-start mb-2">Il Gruppo è un gruppo comunale di volontariato di protezione civile ai sensi del <strong>D.Lgs. 2 gennaio 2018, n. 1</strong> (Codice della Protezione Civile), articolazione del Comune di Genzano di Roma, iscritto al Registro Regionale del Volontariato di Protezione Civile della Regione Lazio.</p>
 <p class="small text-start mb-0">Coordinata dal <strong>Dipartimento della Protezione Civile</strong> (Presidenza del Consiglio dei Ministri) attraverso l'Agenzia regionale e il Sindaco quale autorità locale di protezione civile.</p>
 </div>
 </div>
