@@ -41,3 +41,6 @@ backup-aruba/
 # Export del gestionale interventi (contengono dati personali): MAI nel repo
 *global_reports*.xlsx
 gcpc-*_global_reports_*.xlsx
+
+# Playwright MCP scratch
+.playwright-mcp/
