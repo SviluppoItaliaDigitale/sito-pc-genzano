@@ -229,7 +229,7 @@ Se la missione continua dopo la tua uscita e il successore arriva meno attrezzat
 
 ## Compiti specializzati oltre la radio
 
-Nei gruppi moderni il volontario TLC può assumere **compiti cross-training** che includano la radio ma che vanno oltre: *damage assessment*, logistica, supporto al 118, gestione punti di accoglienza. Non è più il tempo del "faccio solo il radiofonista". Conosci cosa il tuo Gruppo prevede e preparati di conseguenza.
+Nei gruppi moderni il volontario TLC può assumere **compiti cross-training** che includano la radio ma che vanno oltre: *damage assessment*, logistica, ausilio alle squadre sanitarie, gestione punti di accoglienza. Non è più il tempo del "faccio solo il radiofonista". Conosci cosa il tuo Gruppo prevede e preparati di conseguenza.
 
 ## Kit di stazione del Gruppo Comunale Genzano — proposta standard
 

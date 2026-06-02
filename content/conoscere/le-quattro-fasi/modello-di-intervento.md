@@ -64,7 +64,7 @@ Il volontariato di protezione civile **supporta** questa catena (logistica, alle
 
 ## Cosa fa — e cosa NON fa — il volontariato
 
-Nel modello di intervento il Gruppo Comunale opera **a supporto del Comune e delle autorità**, sul mandato del Sindaco: assistenza alla popolazione, supporto logistico, collegamento radio, monitoraggio, primo soccorso in raccordo con il 118.
+Nel modello di intervento il Gruppo Comunale opera **a supporto del Comune e delle autorità**, sul mandato del Sindaco: assistenza alla popolazione, supporto logistico, collegamento radio, monitoraggio, ausilio alle squadre sanitarie (in collegamento con il 118).
 
 Restano però attività **riservate ad altri**: il volontariato di protezione civile **non svolge la regolazione del traffico né servizi di polizia stradale**, di competenza delle Forze dell'Ordine e della Polizia Locale (articoli 11 e 12 del Codice della Strada, D.Lgs. 285/1992), come ribadito dalla [Circolare del 6 agosto 2018 del DPC](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/) sulle manifestazioni pubbliche.
 

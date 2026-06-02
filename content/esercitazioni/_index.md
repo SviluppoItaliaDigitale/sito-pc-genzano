@@ -37,7 +37,7 @@ I tipi di esercitazione in cui ci muoviamo:
 - **Idrogeologica** — gestione di un'alluvione simulata, manovre con motopompe, posa di sacchi sabbia, evacuazione di un'area.
 - **Radiocomunicazioni** — prove di rete inter-comunali con i COI vicini, esercitazioni nazionali (rete radio HF/VHF/UHF, supporto in scenari "tutto giù").
 - **Logistica e colonna mobile** — montaggio tende pneumatiche, allestimento area di accoglienza, gestione del campo, cucina da campo.
-- **Sanitaria** — supporto al 118, manovre di primo soccorso, BLSD, gestione di un'area sanitaria avanzata.
+- **Sanitaria** — ausilio alle squadre sanitarie, manovre di primo soccorso e BLSD, supporto logistico a un'area sanitaria.
 
 ## Trasparenza vs. riservatezza
 
