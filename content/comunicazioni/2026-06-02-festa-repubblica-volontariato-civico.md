@@ -6,14 +6,34 @@ badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-02-festa-repubblica-volontariato-civico.webp"
-image_alt: "Bandiera italiana sventola davanti a un edificio pubblico in una mattinata chiara"
+image_alt: "Cover dell'articolo: 2 giugno: Festa della Repubblica e volontariato civico"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+social_citazione: "La Repubblica esiste perché c'è chi se ne prende cura."
+social_punti:
+  - "2 giugno: il Gruppo partecipa alla cerimonia al monumento ai caduti di Genzano"
+  - "La solidarietà è un dovere costituzionale (art. 2 della Costituzione)"
+  - "Il Sistema nazionale di PC nasce dal patto costituzionale del dopoguerra"
+  - "Vuoi unirti? protezionecivilegenzano.it/diventa-volontario/"
 draft: false
 ---
 
 Il **2 giugno** si celebra la **Festa della Repubblica Italiana**, nell'anniversario del referendum del **1946** con cui gli italiani scelsero la forma repubblicana. È una data che richiama i principi della **Costituzione** — tra cui uno particolarmente vicino al mondo della Protezione Civile: l'articolo 2, sulla **solidarietà politica, economica e sociale**.
+
+## Il Gruppo alla cerimonia di Genzano di Roma
+
+Quest'anno il Gruppo Comunale di Protezione Civile ha partecipato attivamente alla cerimonia per la Festa della Repubblica a Genzano di Roma. I volontari hanno preso parte alla commemorazione al monumento ai caduti, accanto alla corona d'alloro tricolore e alla bandiera italiana.
+
+{{< foto src="/images/2026-06-02-festa-repubblica-genzano-deposizione-corona.webp"
+         alt="Volontari di Protezione Civile in tuta arancione, agenti della Polizia Locale in alta uniforme e un rappresentante con fascia tricolore posano davanti al monumento ai caduti di Genzano di Roma, con la bandiera italiana sventolante e la corona d'alloro tricolore alla base del monumento."
+         caption="La cerimonia del 2 giugno al monumento ai caduti di Genzano di Roma: i volontari del Gruppo insieme alle autorità civili e militari. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+
+Alla commemorazione erano presenti l'Amministrazione comunale, la Polizia Locale e l'Arma dei Carabinieri. La partecipazione del Gruppo conferma il legame tra volontariato di Protezione Civile e istituzioni, nel segno dei valori repubblicani.
+
+{{< foto src="/images/2026-06-02-festa-repubblica-genzano-autorita-monumento.webp"
+         alt="Volontari di Protezione Civile in tuta arancione, agenti della Polizia Locale in alta uniforme e un rappresentante con fascia tricolore in posa davanti al monumento ai caduti, con la corona d'alloro tricolore e la bandiera italiana."
+         caption="Volontari del Gruppo e rappresentanti delle istituzioni davanti al monumento, durante la Festa della Repubblica. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
 ## Volontariato e Costituzione
 
@@ -27,7 +47,7 @@ Il volontariato di Protezione Civile è uno degli esempi più diretti di questa 
 
 ## Dal 1946 a oggi: una continuità
 
-Il **Sistema nazionale di Protezione Civile**, nella forma che conosciamo, nasce dopo il terremoto dell'**Irpinia del 1980** e si consolida con la legge **225/1992** e con il **Codice del 2018** (D.Lgs 1/2018). Ma la cultura della solidarietà che lo sostiene affonda le radici nel patto costituzionale del dopoguerra: nessuno resta indietro, la comunità si prende cura dei suoi membri.
+Il **Sistema nazionale di Protezione Civile**, nella forma che conosciamo, nasce dopo il terremoto dell'**Irpinia del 1980** e si consolida con la legge **225/1992** e con il **Codice del 2018** (D.Lgs. 1/2018). Ma la cultura della solidarietà che lo sostiene affonda le radici nel patto costituzionale del dopoguerra: nessuno resta indietro, la comunità si prende cura dei suoi membri.
 
 Le grandi esercitazioni nazionali, i campi di accoglienza nelle emergenze, le colonne mobili regionali: dietro ogni mezzo operativo c'è un'idea di **Stato come cura**.
 
@@ -69,5 +89,5 @@ Buona Festa della Repubblica a tutti.
 - Pagina: [Chi siamo — Storia del Gruppo](/chi-siamo/)
 - Pagina: [Diventa Volontario](/diventa-volontario/)
 - [Costituzione della Repubblica Italiana](https://www.governo.it/it/costituzione-italiana)
-- [Codice della Protezione Civile (D.Lgs 1/2018)](https://www.normattiva.it/)
+- [Codice della Protezione Civile (D.Lgs. 1/2018)](https://www.normattiva.it/)
 - [Dipartimento Protezione Civile — Il Sistema nazionale](https://www.protezionecivile.gov.it/)
