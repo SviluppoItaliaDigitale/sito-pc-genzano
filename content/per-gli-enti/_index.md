@@ -34,7 +34,7 @@ Se rappresenti un altro gruppo o un'associazione dei Castelli Romani e vuoi cost
 
 Il Gruppo collabora con il **Coordinamento FE.PI.VOL. — Federazione Pronto Intervento Volontariato ODV**, partecipando alle sue **iniziative** e alle **attività di addestramento**. Far parte di una rete di coordinamento permette ai volontari di formarsi insieme ad altri gruppi, condividere procedure comuni e crescere in capacità operativa.
 
-## <i class="bi bi-calendar-event-fill text-primary me-2" aria-hidden="true"></i>Con il Comune, durante le manifestazioni
+## <i class="bi bi-bank text-primary me-2" aria-hidden="true"></i>Con il Comune, durante le manifestazioni
 
 Su **esplicito mandato del Comune di Genzano di Roma**, supportiamo le manifestazioni pubbliche organizzate dall'Amministrazione (sagre, feste, commemorazioni, eventi culturali e sportivi). Il nostro ruolo è di **supporto alla popolazione**, sempre nei limiti previsti dalla normativa sul volontariato di protezione civile.
 
