@@ -1,0 +1,31 @@
+{{- /* mappa-punto: mini-mappa Leaflet self-hosted di un singolo punto (es. la sede).
+       Privacy-first: niente Google Maps, solo tile OpenStreetMap + Leaflet self-hosted
+       (static/vendor/leaflet/). Sostituisce gli iframe Google che inviano dati a Google al view.
+       Uso: {{< mappa-punto lat="41.7075" lon="12.6895" zoom="16" label="Sede — Via Sicilia 13-15" >}} */ -}}
+{{- $lat := .Get "lat" -}}
+{{- $lon := .Get "lon" -}}
+{{- $zoom := .Get "zoom" | default "16" -}}
+{{- $label := .Get "label" | default "Sede del Gruppo" -}}
+{{- $leafletCSS := "vendor/leaflet/leaflet.css" | relURL -}}
+{{- $leafletJS  := "vendor/leaflet/leaflet.js"  | relURL -}}
+{{- $id := printf "mappa-punto-%s" (substr (md5 (printf "%s,%s" $lat $lon)) 0 8) -}}
+<link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">
+<style>
+.mappa-punto{height:380px;width:100%;border-radius:8px;border:2px solid #003366;box-shadow:0 4px 12px rgba(0,0,0,0.08);background:#eaeaea}
+@media (max-width:575px){.mappa-punto{height:300px}}
+.mappa-punto-credit{font-size:.8rem;color:#6c757d;margin:.4rem 0 0}
+</style>
+<div id="{{ $id }}" class="mappa-punto" role="application" aria-label="Mappa di {{ $label }} (OpenStreetMap)"></div>
+<p class="mappa-punto-credit">Mappa: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a> — Leaflet self-hosted. <a href="https://www.openstreetmap.org/?mlat={{ $lat }}&mlon={{ $lon }}#map={{ $zoom }}/{{ $lat }}/{{ $lon }}" target="_blank" rel="noopener noreferrer">Apri su OpenStreetMap</a></p>
+<script src="{{ $leafletJS }}" crossorigin=""></script>
+<script>
+(function(){
+  var el=document.getElementById({{ $id | jsonify | safeJS }}); if(!el||typeof L==='undefined')return;
+  var lat={{ $lat }}, lon={{ $lon }};
+  var m=L.map(el,{scrollWheelZoom:false}).setView([lat,lon],{{ $zoom }});
+  m.on('focus',function(){m.scrollWheelZoom.enable();});
+  m.on('blur',function(){m.scrollWheelZoom.disable();});
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap'}).addTo(m);
+  L.marker([lat,lon]).addTo(m).bindPopup({{ $label | jsonify | safeJS }}).openPopup();
+})();
+</script>
