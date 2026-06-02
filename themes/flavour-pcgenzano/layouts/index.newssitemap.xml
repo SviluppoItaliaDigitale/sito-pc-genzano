@@ -1,0 +1,20 @@
+{{- /* Sitemap Google News: SOLO articoli /comunicazioni/ pubblicati negli ultimi 2 giorni
+   (requisito Google News: niente articoli più vecchi di 48 ore). Gli articoli -facile (A2)
+   sono già esclusi da RegularPages via build.list:never. Da inviare in Search Console. */ -}}
+{{- $soglia := now.AddDate 0 0 -2 -}}
+{{- printf "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" | safeHTML }}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+{{- range (where (where .Site.RegularPages "Section" "comunicazioni") "Date" "ge" $soglia) }}
+  <url>
+    <loc>{{ .Permalink }}</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Protezione Civile Genzano di Roma</news:name>
+        <news:language>it</news:language>
+      </news:publication>
+      <news:publication_date>{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}</news:publication_date>
+      <news:title>{{ .Title | plainify | htmlEscape }}</news:title>
+    </news:news>
+  </url>
+{{- end }}
+</urlset>
