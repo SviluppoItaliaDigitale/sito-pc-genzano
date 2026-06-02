@@ -23,6 +23,14 @@
 {{- if or (not $src) (not $alt) -}}
   {{- errorf "shortcode foto: parametri 'src' e 'alt' sono obbligatori (chiamato in %s)" .Page.File.Path -}}
 {{- end -}}
+{{- /* width/height reali per riservare lo spazio ed evitare il layout shift (CLS, Core Web Vital).
+       Letti dal file statico con imageConfig, solo per formati raster esistenti (no SVG/mancanti). */ -}}
+{{- $w := 0 }}{{- $h := 0 -}}
+{{- $ext := lower (path.Ext $src) -}}
+{{- $statpath := printf "static%s" $src -}}
+{{- if and (in (slice ".webp" ".jpg" ".jpeg" ".png" ".gif") $ext) (fileExists $statpath) -}}
+  {{- with (imageConfig $statpath) -}}{{- $w = .Width }}{{- $h = .Height -}}{{- end -}}
+{{- end -}}
 <figure class="figure my-4 w-100 text-center">
   <a href="{{ $src | relURL }}"
      target="_blank"
@@ -32,7 +40,7 @@
     <img src="{{ $src | relURL }}"
          alt="{{ $alt }}"
          class="figure-img img-fluid rounded shadow-sm"
-         loading="lazy">
+         {{ if and (gt $w 0) (gt $h 0) }}width="{{ $w }}" height="{{ $h }}" {{ end }}loading="lazy">
   </a>
   {{- with $caption }}
   <figcaption class="figure-caption text-center mt-2">{{ . | markdownify }}</figcaption>
