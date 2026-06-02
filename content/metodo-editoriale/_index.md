@@ -10,6 +10,8 @@ Questa pagina spiega **come lavoriamo**. Vogliamo che ogni cittadino, ma anche o
 
 Il sito è curato dal **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**, articolazione del Comune di Genzano di Roma iscritta al RUNTS come Ente del Terzo Settore. Non siamo un'autorità di protezione civile: traduciamo in linguaggio chiaro le indicazioni delle autorità competenti e le adattiamo al nostro territorio, citando sempre la fonte.
 
+Il sito è ideato, realizzato e gestito da **Alessandro Cuollo** (nominativo radio "Alfa 19", indicativo radioamatoriale **IU0QVW**), in qualità di **Referente Web e Comunicazione Istituzionale** del Gruppo.
+
 ## Le nostre fonti, in ordine di priorità {#fonti}
 
 Quando le fonti dicono cose diverse, prevale quella di livello superiore.
