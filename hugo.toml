@@ -483,7 +483,7 @@ enableGitInfo = true
 
 # Impostazioni di output
 [outputs]
-home = ["HTML", "RSS", "JSON", "BUILDINFO"]
+home = ["HTML", "RSS", "JSON", "BUILDINFO", "NEWSSITEMAP"]
 
 # Formato output per /build-info.js — timestamp della build Hugo
 # usato dalle pagine statiche (giochi, quizpc, formazionepc, ecc.)
@@ -496,6 +496,15 @@ home = ["HTML", "RSS", "JSON", "BUILDINFO"]
   baseName = "build-info"
   isPlainText = true
   notAlternative = true
+
+# Sitemap Google News — solo articoli /comunicazioni/ degli ultimi 2 giorni
+# (requisito Google News). Da inviare in Search Console. Template: index.newssitemap.xml
+[outputFormats.NEWSSITEMAP]
+  mediaType = "application/xml"
+  baseName = "news-sitemap"
+  isPlainText = true
+  notAlternative = true
+  rel = "sitemap"
 
 # Sitemap
 [sitemap]
