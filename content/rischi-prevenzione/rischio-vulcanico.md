@@ -16,6 +16,8 @@ Il **Vulcano Laziale** dei **Colli Albani** è **quiescente**, non spento. Secon
 
 Questa pagina descrive i fenomeni concreti che il cittadino può incontrare — in particolare le **emissioni di anidride carbonica (CO₂)** — e cosa fare.
 
+{{< emergenza-ora >}}
+
 ## <i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Perché è rilevante sul nostro territorio {#perche-rilevante}
 Il **Vulcano Laziale** ha una storia eruttiva di oltre 600.000 anni. Le sue eruzioni hanno costruito tutto il paesaggio dei Castelli Romani: i rilievi del **Tuscolano-Artemisio**, le caldere di **Albano** e **Nemi** (oggi laghi), la **Faete**, i banchi di tufo su cui sorgono Genzano, Ariccia, Velletri.
 
