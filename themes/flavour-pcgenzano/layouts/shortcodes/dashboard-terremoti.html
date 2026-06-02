@@ -75,7 +75,7 @@
   (function(){
     if (typeof L === 'undefined') return;
     var FDSN = 'https://webservices.ingv.it/fdsnws/event/1/query';
-    var SCHEDA = {{ "cruscotto/terremoto/" | relURL | jsonify }};
+    var SCHEDA = {{ "cruscotto/terremoto/" | relURL | jsonify | safeJS }};
     var GENZANO = [41.7085, 12.6916];
     var win = 7, minmag = 1.5, zona = 'italia', eventi = [], markers = null, map = null, markerById = {};
     var BBOX = {
