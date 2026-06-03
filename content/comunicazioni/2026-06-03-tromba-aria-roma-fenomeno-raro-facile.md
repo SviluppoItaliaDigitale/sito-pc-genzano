@@ -35,6 +35,14 @@ Una **tromba d'aria** è una colonna di aria che **gira** molto veloce. Scende d
 
 C'è anche il **downburst**. È un vento forte che **scende** e va dritto. Non gira. Anche questo rompe gli alberi.
 
+{{< foto src="/images/2026-06-03-schema-tromba-aria.svg"
+         alt="Schema: una colonna di aria scende da una nuvola e diventa stretta come un imbuto. Due frecce curve mostrano che l'aria gira."
+         caption="La tromba d'aria: l'aria **gira** e scende fino a terra." >}}
+
+{{< foto src="/images/2026-06-03-schema-downburst.svg"
+         alt="Schema: frecce dritte scendono dalla nuvola fino a terra e poi si aprono a destra e a sinistra. L'aria non gira."
+         caption="Il downburst: l'aria **scende e si apre**. Non gira." >}}
+
 I due fenomeni sono diversi. Gli esperti studiano i danni e dicono quale è stato.
 
 ## Perché è raro a Roma

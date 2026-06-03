@@ -35,6 +35,14 @@ Nei racconti di giornata compaiono spesso due parole, usate come sinonimi. In re
 - La **tromba d'aria** (in inglese *tornado*) è una colonna d'aria **in rotazione** che scende da un grande temporale fino a toccare il suolo. Diventa visibile quando il vapore risucchiato condensa e forma il tipico **imbuto**.
 - Il **downburst** è una raffica di vento **discendente** che esce dalla base del temporale e si apre al suolo in linea retta, **senza ruotare**. Può superare i 100 km/h e abbattere alberi su un fronte ampio.
 
+{{< foto src="/images/2026-06-03-schema-tromba-aria.svg"
+         alt="Schema: una colonna d'aria scende da un cumulonembo restringendosi a imbuto fino al suolo; due frecce curve attorno all'imbuto indicano la rotazione dell'aria."
+         caption="La tromba d'aria: una colonna d'aria **in rotazione** che scende dal temporale fino al suolo." >}}
+
+{{< foto src="/images/2026-06-03-schema-downburst.svg"
+         alt="Schema: tre frecce dritte scendono dal cumulonembo verso il suolo e, toccata terra, si aprono verso l'esterno a destra e a sinistra, senza ruotare."
+         caption="Il downburst: aria che **scende e si apre** al suolo in linea retta, senza rotazione." >}}
+
 Entrambi sradicano alberi e scoperchiano tetti, ma lasciano "firme" diverse sul terreno. La **classificazione precisa** spetta agli enti tecnici e ai servizi meteorologici, che analizzano la direzione dei danni.
 
 Durante un temporale forte la pressione cala dove l'aria sale con violenza. Se il calo è marcato, si forma una piccola cella di bassa pressione che può generare venti circolari molto intensi: nei casi peggiori, la tromba d'aria.
