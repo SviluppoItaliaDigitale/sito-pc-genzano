@@ -44,6 +44,15 @@ Nel Lazio il numero da chiamare in caso di emergenza è il **112**. La centrale 
 
 </div>
 
+## 116117 — cure mediche non urgenti
+
+Per i problemi di salute che **non sono un'emergenza** puoi chiamare il **116117**, il numero europeo gratuito per le cure mediche non urgenti. È attivo **24 ore su 24**, è **multilingue** ed è già attivo per chi chiama da **Roma e provincia**, quindi anche da Genzano. Per le **emergenze** resta prioritario il **112**.
+
+- **Numero:** [116117](tel:116117) — gratuito da fisso e cellulare
+- **Per:** continuità assistenziale (ex guardia medica), consigli sanitari non urgenti, informazioni sui servizi sanitari regionali e guardia medica turistica
+- **Attivo:** tutti i giorni, 24 ore su 24, con assistenza multilingue
+- **Approfondimento:** [116117, il numero europeo per le cure mediche non urgenti](/comunicazioni/2026-06-03-116117-numero-europeo-cure-non-urgenti/)
+
 ## Recapiti del Gruppo di Protezione Civile
 
 Questi recapiti sono **per informazioni e richieste non urgenti**. In caso di emergenza, chiama sempre il **112**.
