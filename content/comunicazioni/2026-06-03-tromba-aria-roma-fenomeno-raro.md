@@ -10,6 +10,7 @@ image_alt: ""
 scadenza: ""
 area: "Roma e Castelli Romani"
 allegati: []
+versione_facile: "2026-06-03-tromba-aria-roma-fenomeno-raro-facile"
 social_citazione: "Le trombe d'aria non sono eccezionali in Italia, ma in una grande città come Roma sono meno frequenti e fanno più danni."
 social_punti:
   - "Il 3 giugno 2026 una tromba d'aria ha colpito Roma nord (Montesacro, Conca d'Oro, Prati Fiscali)."
