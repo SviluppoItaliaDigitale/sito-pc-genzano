@@ -28,7 +28,7 @@ Il Sindaco di Genzano di Roma **Carlo Zoccolotti** ha firmato l'**Ordinanza Sind
 
 Il **COC** è la struttura che, su mandato del Sindaco, dirige e coordina gli interventi di Protezione Civile. Si attiva quando un evento richiede di organizzare in modo unitario persone, mezzi e funzioni di supporto.
 
-L'Infiorata richiama ogni anno un **afflusso eccezionale di persone**. Una grande folla concentrata in poco spazio aumenta i rischi per la sicurezza. Per questo è classificata come evento a **rilevante impatto locale**. Il COC coordina la risposta, come previsto dal **Piano di Emergenza Comunale**.
+L'Infiorata richiama ogni anno un **afflusso eccezionale di persone**. Una grande folla concentrata in poco spazio aumenta i rischi per la sicurezza. Per questo il Comune la classifica come evento a **rilevante impatto locale**. Il COC coordina la risposta, come previsto dal **Piano di Emergenza Comunale**.
 
 ## Cosa prevede l'ordinanza n. 12 del 3 giugno 2026
 
@@ -56,7 +56,7 @@ Su attivazione del Comune, i volontari svolgono i compiti previsti dal Piano di 
 
 ## Cosa il volontariato NON può fare
 
-Il volontariato di Protezione Civile **non svolge la regolazione del traffico, i servizi di polizia stradale, né usa palette dirigitraffico**. Sono compiti esclusivi delle Forze dell'Ordine e della Polizia Locale, ai sensi degli articoli 11 e 12 del Codice della Strada (D.Lgs. 285/1992) e della [Circolare DPC del 6 agosto 2018](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/). La stessa ordinanza richiama questa circolare.
+Il volontariato di Protezione Civile **non svolge la regolazione del traffico, i servizi di polizia stradale, né usa palette dirigitraffico**. Sono compiti esclusivi delle Forze dell'Ordine e della Polizia Locale (artt. 11-12 D.Lgs. 285/1992 — Codice della Strada). Lo stabilisce la [Circolare DPC del 6 agosto 2018](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/), richiamata dalla stessa ordinanza.
 
 ## Programma dell'Infiorata e aggiornamenti
 
