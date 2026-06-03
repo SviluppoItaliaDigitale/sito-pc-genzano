@@ -425,7 +425,6 @@ wrapper una tipografia istituzionale curata che non influisce su homepage, liste
 |---|---|
 | Base | `font-size: 1.05rem`, `line-height: 1.75`, colore `#1a1a1a` (contrasto massimo) |
 | Primo paragrafo (`lede`) | `font-size: 1.15rem`, colore `#003366`, `font-weight: 500` |
-| Capolettera | Prima lettera del primo paragrafo: `3rem`, blu `#003366`, float left |
 | `<h2>` | Barra blu `3px` a sinistra, `margin-top: 2.5rem`, colore `#003366`, bold |
 | `<h3>` / `<h4>` | Colore `#003366`, peso 600, spaziatura ridotta |
 | `<ul>` / `<ol>` | `::marker` blu `#003366`, spaziatura voci `0.4rem` |
@@ -439,10 +438,9 @@ wrapper una tipografia istituzionale curata che non influisce su homepage, liste
 
 **Regole di override integrate:**
 
-- `@media (max-width: 768px)`: riduce il capolettera, comprime le spaziature degli H2, regola
-  la dimensione della `lede`.
+- `@media (max-width: 768px)`: comprime le spaziature degli H2, regola la dimensione della `lede`.
 - `@media (prefers-reduced-motion: reduce)`: disattiva la transizione sull'underline dei link.
-- `@media print`: azzera capolettera, ombre, gradienti e sfondi colorati. Mantiene la
+- `@media print`: azzera ombre, gradienti e sfondi colorati. Mantiene la
   gerarchia visiva in bianco e nero con bordi grigi e colori neutri — il risultato stampato è
   leggibile e sobrio.
 
@@ -452,7 +450,7 @@ wrapper una tipografia istituzionale curata che non influisce su homepage, liste
 - **Non introdurre stili inline** nel Markdown (tipo `<span style="color:...">`): il tema li
   sovrascriverà o li renderà incoerenti con la linea visiva.
 - **Non usare `<h1>` nel corpo**: il titolo pagina è già `<h1>`, il corpo parte da `<h2>`.
-- **Il primo paragrafo conta**: per sfruttare il rendering della *lede* e del capolettera,
+- **Il primo paragrafo conta**: per sfruttare il rendering della *lede*,
   fai in modo che il primo paragrafo sia un vero incipit di senso compiuto (almeno 2 frasi),
   non una singola parola o un'immagine.
 - **I `<blockquote>`** sono per **citazioni testuali** (dichiarazioni ufficiali, estratti di
