@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-06-03T01:02",
+  "aggiornato": "2026-06-03T02:00",
   "data_lunga": "mercoledì 3 giugno 2026",
-  "aggiornato_label": "mercoledì 3 giugno 2026, ore 01:02",
+  "aggiornato_label": "mercoledì 3 giugno 2026, ore 02:00",
   "alba": "05:36",
   "tramonto": "20:38",
   "corrente": {
-    "temp": 18.9,
-    "percepita": 19.9,
+    "temp": 18.7,
+    "percepita": 19.7,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
     "umidita": 90,
-    "vento": 10,
-    "raffiche": 38
+    "vento": 11,
+    "raffiche": 36
   },
   "giorni": [
     {
@@ -21,7 +21,7 @@
       "tmax": 23,
       "tmin": 18,
       "pioggia": 93,
-      "pioggia_mm": 4.9,
+      "pioggia_mm": 4.1,
       "raffiche": 58,
       "uv": 8,
       "uv_label": "molto alto"
@@ -47,8 +47,8 @@
       "pioggia": 25,
       "pioggia_mm": 0,
       "raffiche": 39,
-      "uv": 8,
-      "uv_label": "molto alto"
+      "uv": 7,
+      "uv_label": "alto"
     },
     {
       "label": "Sab 6",
