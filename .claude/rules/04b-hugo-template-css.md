@@ -151,7 +151,7 @@ Il template `themes/flavour-pcgenzano/layouts/_default/single.html` avvolge il c
 Cosa applica:
 - Base `font-size: 1.05rem`, `line-height: 1.75`, colore testo `#1a1a1a`.
 - **Lede** (primo paragrafo): `1.15rem`, colore `#003366`, peso 500.
-- **Capolettera** sulla prima lettera del primo paragrafo: `3rem`, blu, float left.
+- **Capolettera RIMOSSO (giugno 2026)**: il drop cap `::first-letter` floattava il primo glifo a `3rem` blu `#003366`. Su iniziali strette (I, J, L) o con virgolette/apostrofi iniziali l'asta blu si confondeva con la barra `border-left` degli H2 (stesso colore) e creava un vuoto che sembrava una lettera mancante. `::first-letter` non è condizionabile alla lettera in CSS → rimosso del tutto. L'attacco visivo resta affidato al **lede**. Non reintrodurre il blocco `::first-letter`.
 - **`<h2>`**: barra blu `3px` a sinistra, `margin-top: 2.5rem`, colore `#003366`.
 - **`<h3>` / `<h4>`**: colore `#003366`, peso 600, spaziatura ridotta.
 - **`<ul>` / `<ol>`**: `::marker` blu, spaziatura voci `0.4rem`.
@@ -163,15 +163,15 @@ Cosa applica:
 - **`<code>`** inline: sfondo `#f4f7fb`, colore blu.
 
 Override integrati:
-- `@media (max-width: 768px)`: riduce capolettera, spaziature H2 e dimensione lede.
+- `@media (max-width: 768px)`: riduce spaziature H2 e dimensione lede.
 - `@media (prefers-reduced-motion: reduce)`: disattiva transizioni sui link.
-- `@media print`: azzera capolettera, ombre, gradienti e sfondi; mantiene gerarchia in bianco e nero.
+- `@media print`: azzera ombre, gradienti e sfondi; mantiene gerarchia in bianco e nero.
 
 Regole operative:
 - La tipografia si applica automaticamente a qualsiasi articolo in `content/comunicazioni/` e a ogni pagina che usa `_default/single.html`.
 - Non introdurre stili inline nel Markdown (`<span style="color:...">`): il tema li sovrascriverebbe.
 - Non usare `<h1>` nel corpo: il titolo pagina è già `<h1>`, il corpo parte da `<h2>`.
-- Il primo paragrafo deve avere senso compiuto (min. 2 frasi) per sfruttare lede + capolettera.
+- Il primo paragrafo deve avere senso compiuto (min. 2 frasi) per sfruttare il lede.
 - Se serve modificare la tipografia, lavora sul blocco v7.2 esistente in `custom.css` — non duplicare.
 - Dettagli e tabella completa in `MANUALE-SITO.md` Parte 3.15.
 

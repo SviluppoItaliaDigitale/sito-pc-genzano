@@ -1814,16 +1814,13 @@ article:not(.card) .galleria img {
   line-height: 1.65;
 }
 
-/* Capolettera sul primo paragrafo (sobrio, non invasivo) */
-.article-body > p:first-of-type::first-letter {
-  float: left;
-  font-size: 3rem;
-  line-height: 1;
-  color: #003366;
-  font-weight: 700;
-  padding: 0.2rem 0.6rem 0 0;
-  margin-top: 0.1rem;
-}
+/* Capolettera RIMOSSO (giugno 2026): il drop cap su ::first-letter floattava
+   il primo glifo a 3rem blu #003366. Difetto intrinseco non condizionabile in
+   CSS: su iniziali strette (I, J, L) o con apostrofi/virgolette iniziali
+   l'asta blu si confondeva con la barra border-left degli H2 (stesso colore),
+   e la "L" + padding-right creava un vuoto che sembrava una lettera mancante.
+   L'attacco visivo dell'articolo resta affidato al lede (primo paragrafo
+   ingrandito in blu, sopra). */
 
 /* H2: barra blu a sinistra + respiro verticale generoso */
 .article-body h2 {
@@ -1978,7 +1975,7 @@ article:not(.card) .galleria img {
   font-size: 0.925em;
 }
 
-/* Mobile: riduci enfasi capolettera e spazi H2 */
+/* Mobile: riduci enfasi lede e spazi H2 */
 @media (max-width: 768px) {
   .article-body {
     font-size: 1rem;
@@ -1986,10 +1983,6 @@ article:not(.card) .galleria img {
   }
   .article-body > p:first-of-type {
     font-size: 1.08rem;
-  }
-  .article-body > p:first-of-type::first-letter {
-    font-size: 2.4rem;
-    padding: 0.15rem 0.45rem 0 0;
   }
   .article-body h2 {
     margin-top: 2rem;
@@ -2010,15 +2003,8 @@ article:not(.card) .galleria img {
   }
 }
 
-/* Stampa: rimuovi ombre, gradienti e capolettera (risparmio toner + chiarezza) */
+/* Stampa: rimuovi ombre e gradienti (risparmio toner + chiarezza) */
 @media print {
-  .article-body > p:first-of-type::first-letter {
-    float: none;
-    font-size: inherit;
-    color: inherit;
-    font-weight: inherit;
-    padding: 0;
-  }
   .article-body > p:first-of-type {
     font-size: 1rem;
     color: #000;
