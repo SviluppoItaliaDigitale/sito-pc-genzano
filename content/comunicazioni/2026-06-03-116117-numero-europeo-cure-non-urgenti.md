@@ -82,5 +82,5 @@ Come Gruppo Comunale di Protezione Civile diffondiamo questa informazione perch�
 
 **Fonti istituzionali:**
 
-- [Regione Lazio – Salute Lazio: il 116117](https://www.salutelazio.it/) — pagina ufficiale del Servizio Sanitario Regionale.
-- [Ministero della Salute – Numero europeo cure non urgenti 116117](https://www.salute.gov.it/) — scheda nazionale del servizio.
+- [Regione Lazio – Salute Lazio: il 116117](https://www.salutelazio.it/notizie-dalla-regione-lazio/-/asset_publisher/gzqRjLEc0ALr/content/id/192321254) — scheda ufficiale del Servizio Sanitario Regionale.
+- [Ministero della Salute – Numero europeo cure non urgenti 116117](https://www.salute.gov.it/new/it/tema/livelli-essenziali-di-assistenza/numero-europeo-cure-non-urgenti-116117/) — scheda nazionale del servizio.
