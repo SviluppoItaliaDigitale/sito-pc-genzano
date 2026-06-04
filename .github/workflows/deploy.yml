@@ -36,11 +36,23 @@ jobs:
           hugo-version: '0.154.5'
           extended: true
 
-      - name: "♿ Setup liblouis (braille) + segno (QR) + dipendenze Python"
+      - name: "♿ Setup liblouis (braille) + segno (QR) + Pillow/font (cover) + dipendenze Python"
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y python3-louis liblouis-data python3-yaml
-          pip install --break-system-packages segno
+          sudo apt-get install -y python3-louis liblouis-data python3-yaml fonts-liberation
+          pip install --break-system-packages segno pillow
+
+      - name: "🖼️ Genera cover tipografiche mancanti per gli articoli"
+        # Idempotente: genera la cover col titolo (gradiente blu + badge + fascia)
+        # e popola image:/image_alt: SOLO per articoli con image:"" o file mancante.
+        # Non sovrascrive mai una foto utente custom già impostata.
+        # Fail-safe per il SITO: garantisce che nessun articolo vada live col banner
+        # SVG di default invece della cover col titolo, anche se la sessione che lo
+        # ha scritto (mobile/cloud) ha saltato lo step locale e prima che
+        # scarica-foto-automatica.yml (che gira DOPO deploy.yml) faccia la sua passata.
+        # Storia: 04/06/2026 articolo "Tromba d'aria a Roma" andò live con image:""
+        # → banner default SVG, perché creato da altra sessione senza generare la cover.
+        run: python3 scripts/auto-cover-mancanti.py
 
       - name: "🔲 Genera QR code mancanti per gli articoli"
         # Idempotente: salta i QR già presenti in static/qr/.
