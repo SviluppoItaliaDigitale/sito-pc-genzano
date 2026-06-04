@@ -108,7 +108,7 @@ Il **Gruppo comunale di Genzano di Roma** può essere attivato dal 112 in caso d
 
 - Articolo: [Perdersi nei boschi dei Castelli](/comunicazioni/2026-05-21-perdersi-nei-boschi-castelli-romani/)
 - Articolo: [Escursioni estive — sicurezza in montagna](/comunicazioni/2026-05-30-escursioni-estive-sicurezza-montagna-castelli/)
-- Articolo: [Avvio campagna antincendio boschivo](/comunicazioni/2026-06-01-avvio-campagna-aib-lazio-2026/)
+- Articolo: [Avvio campagna antincendio boschivo](/rischi-prevenzione/rischio-incendio/)
 - [Parco Regionale dei Castelli Romani](https://www.parcocastelliromani.it/)
 - [CAI Lazio](https://www.cailazio.it/)
 - [Aeronautica Militare — Meteo](https://www.meteoam.it/)

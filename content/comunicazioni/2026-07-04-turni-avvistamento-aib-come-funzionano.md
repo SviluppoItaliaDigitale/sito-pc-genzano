@@ -145,7 +145,7 @@ Se sei cittadino interessato a diventare volontario, [contatta il Gruppo](/diven
 
 ## Per approfondire
 
-- Articolo: [Avvio campagna AIB Lazio 2026](/comunicazioni/2026-06-01-avvio-campagna-aib-lazio-2026/)
+- Articolo: [Avvio campagna AIB Lazio 2026](/rischi-prevenzione/rischio-incendio/)
 - Articolo: [Bilancio primo mese AIB](/comunicazioni/2026-06-30-bilancio-primo-mese-aib-2026/)
 - Articolo: [DPI del volontario PC](/comunicazioni/2026-06-17-dpi-volontari-cosa-sono-perche-importanti/)
 - Pagina: [Diventa volontario](/diventa-volontario/)

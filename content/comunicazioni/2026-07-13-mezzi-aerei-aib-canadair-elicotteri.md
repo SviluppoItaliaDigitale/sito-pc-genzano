@@ -155,7 +155,7 @@ La **flotta italiana** è stata recentemente rafforzata con acquisti di nuovi Ca
 
 ## Per approfondire
 
-- Articolo: [Avvio campagna AIB Lazio 2026](/comunicazioni/2026-06-01-avvio-campagna-aib-lazio-2026/)
+- Articolo: [Avvio campagna AIB Lazio 2026](/rischi-prevenzione/rischio-incendio/)
 - Articolo: [Turni avvistamento AIB](/comunicazioni/2026-07-04-turni-avvistamento-aib-come-funzionano/)
 - Articolo: [Corpo Forestale Carabinieri](/comunicazioni/2026-07-06-corpo-forestale-carabinieri-ruolo/)
 - [DPC — Rischio incendi](https://www.protezionecivile.gov.it/it/rischi/rischio-incendi)

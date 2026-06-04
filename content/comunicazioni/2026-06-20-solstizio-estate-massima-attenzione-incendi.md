@@ -132,7 +132,7 @@ Il Gruppo comunale si attiva in estate con:
 
 ## Per approfondire
 
-- Articolo: [Avvio campagna AIB Lazio 2026](/comunicazioni/2026-06-01-avvio-campagna-aib-lazio-2026/)
+- Articolo: [Avvio campagna AIB Lazio 2026](/rischi-prevenzione/rischio-incendio/)
 - Articolo: [Triangolo del fuoco](/comunicazioni/2026-04-13-triangolo-del-fuoco-prevenzione-incendi/)
 - Articolo: [Mozziconi e rischio incendi](/comunicazioni/2026-05-31-giornata-senza-tabacco-mozziconi-incendi/)
 - Pagina: [Rischio incendio boschivo](/rischi-prevenzione/rischio-incendio/)

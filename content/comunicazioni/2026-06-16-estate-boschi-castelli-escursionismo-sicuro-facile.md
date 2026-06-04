@@ -112,6 +112,6 @@ Il Gruppo Comunale di Genzano di Roma può aiutare nelle ricerche di persone dis
 
 - [Perdersi nei boschi dei Castelli](/comunicazioni/2026-05-21-perdersi-nei-boschi-castelli-romani/)
 - [Escursioni estive — sicurezza in montagna](/comunicazioni/2026-05-30-escursioni-estive-sicurezza-montagna-castelli/)
-- [Avvio campagna antincendio boschivo](/comunicazioni/2026-06-01-avvio-campagna-aib-lazio-2026/)
+- [Avvio campagna antincendio boschivo](/rischi-prevenzione/rischio-incendio/)
 - [Parco Regionale dei Castelli Romani](https://www.parcocastelliromani.it/)
 - [Meteo Aeronautica Militare](https://www.meteoam.it/)

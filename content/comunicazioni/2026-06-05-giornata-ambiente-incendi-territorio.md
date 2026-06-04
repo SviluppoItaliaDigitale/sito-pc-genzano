@@ -88,7 +88,7 @@ Non serve essere volontari per avere un impatto. La Giornata mondiale dell'ambie
 
 ## Per approfondire
 
-- Articolo: [Avvio campagna antincendio boschivo](/comunicazioni/2026-06-01-avvio-campagna-aib-lazio-2026/)
+- Articolo: [Avvio campagna antincendio boschivo](/rischi-prevenzione/rischio-incendio/)
 - Articolo: [Giornata della Terra](/comunicazioni/2026-04-22-giornata-della-terra-clima-eventi-estremi-castelli-romani/)
 - Pagina: [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/)
 - [UN — World Environment Day](https://www.worldenvironmentday.global/)
