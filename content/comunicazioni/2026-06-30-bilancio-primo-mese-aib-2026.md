@@ -116,7 +116,7 @@ La **prevenzione partecipativa** è uno degli strumenti più efficaci, perché r
 
 ## Per approfondire
 
-- Articolo: [Avvio campagna AIB Lazio 2026](/comunicazioni/2026-06-01-avvio-campagna-aib-lazio-2026/)
+- Articolo: [Avvio campagna AIB Lazio 2026](/rischi-prevenzione/rischio-incendio/)
 - Articolo: [Solstizio e massima attenzione incendi](/comunicazioni/2026-06-20-solstizio-estate-massima-attenzione-incendi/)
 - Articolo: [Triangolo del fuoco](/comunicazioni/2026-04-13-triangolo-del-fuoco-prevenzione-incendi/)
 - Pagina: [Rischio incendio boschivo](/rischi-prevenzione/rischio-incendio/)

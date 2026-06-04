@@ -193,7 +193,7 @@ In questi casi: **veterinario** immediato. Per animali su strada, **Polizia Loca
 ## Per approfondire
 
 - [Animali domestici in emergenza](/comunicazioni/2026-11-19-animali-domestici-emergenze/)
-- [Incendi boschivi](/comunicazioni/2026-06-01-avvio-campagna-aib-lazio-2026/)
+- [Incendi boschivi](/rischi-prevenzione/rischio-incendio/)
 - [Agricoltura e siccità](/comunicazioni/2026-07-18-siccita-gestione-risorsa-idrica/)
 
 In emergenza: **112**. Veterinario ASL: consultare sito ASL Roma 6.

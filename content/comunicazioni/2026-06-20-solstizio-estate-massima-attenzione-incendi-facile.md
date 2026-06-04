@@ -99,4 +99,4 @@ Le zone più pericolose sono:
 
 - [Rischio incendio boschivo](/rischi-prevenzione/rischio-incendio/)
 - [Triangolo del fuoco — come nasce un incendio](/comunicazioni/2026-04-13-triangolo-del-fuoco-prevenzione-incendi/)
-- [Campagna AIB Lazio 2026](/comunicazioni/2026-06-01-avvio-campagna-aib-lazio-2026/)
+- [Campagna AIB Lazio 2026](/rischi-prevenzione/rischio-incendio/)
