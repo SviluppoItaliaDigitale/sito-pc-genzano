@@ -5,8 +5,8 @@ description: "Il 3 giugno 2026 una tromba d'aria ha colpito Roma nord. Cos'è, c
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-06-03-tromba-aria-roma-fenomeno-raro.webp"
+image_alt: "Cover dell'articolo: Tromba d'aria a Roma: cos'è successo e perché è un fenomeno raro"
 scadenza: ""
 area: "Roma e Castelli Romani"
 allegati: []
