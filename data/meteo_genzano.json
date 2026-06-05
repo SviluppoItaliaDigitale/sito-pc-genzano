@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-06-05T17:02",
+  "aggiornato": "2026-06-05T18:02",
   "data_lunga": "venerdì 5 giugno 2026",
-  "aggiornato_label": "venerdì 5 giugno 2026, ore 17:02",
+  "aggiornato_label": "venerdì 5 giugno 2026, ore 18:02",
   "alba": "05:35",
   "tramonto": "20:40",
   "corrente": {
-    "temp": 22.4,
+    "temp": 21.7,
     "percepita": 22.6,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 63,
-    "vento": 10,
-    "raffiche": 28
+    "umidita": 68,
+    "vento": 6,
+    "raffiche": 22
   },
   "giorni": [
     {
@@ -20,7 +20,7 @@
       "cielo": "Coperto",
       "tmax": 23,
       "tmin": 15,
-      "pioggia": 5,
+      "pioggia": 23,
       "pioggia_mm": 0,
       "raffiche": 35,
       "uv": 8,
@@ -31,7 +31,7 @@
       "icona": "<g><g><ellipse cx=\"16.0\" cy=\"19.1\" rx=\"14.5\" ry=\"7.0\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"9.7\" cy=\"16.0\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.9\" cy=\"14.7\" r=\"5.6\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"11.9\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
       "cielo": "Coperto",
       "tmax": 24,
-      "tmin": 16,
+      "tmin": 17,
       "pioggia": 0,
       "pioggia_mm": 0,
       "raffiche": 40,
@@ -43,10 +43,10 @@
       "icona": "<g><g><ellipse cx=\"16.0\" cy=\"19.1\" rx=\"14.5\" ry=\"7.0\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"9.7\" cy=\"16.0\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.9\" cy=\"14.7\" r=\"5.6\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"11.9\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
       "cielo": "Coperto",
       "tmax": 27,
-      "tmin": 15,
+      "tmin": 16,
       "pioggia": 0,
       "pioggia_mm": 0,
-      "raffiche": 41,
+      "raffiche": 36,
       "uv": 8,
       "uv_label": "molto alto"
     },
@@ -58,7 +58,7 @@
       "tmin": 18,
       "pioggia": 0,
       "pioggia_mm": 0,
-      "raffiche": 45,
+      "raffiche": 38,
       "uv": 8,
       "uv_label": "molto alto"
     }
