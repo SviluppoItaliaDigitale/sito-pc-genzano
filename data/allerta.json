@@ -3,19 +3,5 @@
   "titolo": "NESSUNA ALLERTA",
   "descrizione": "Non sono previsti fenomeni significativi sul nostro territorio.",
   "ultimo_aggiornamento": "2026-05-30T00:01:16+02:00",
-  "ultimo_controllo": "2026-06-05T18:16:04+02:00",
-  "domani": {
-    "livello": "verde",
-    "titolo": "Previsto verde",
-    "rischi": [],
-    "data": "2026-06-06"
-  },
-  "rischio_incendi": {
-    "livello": "verde",
-    "livello_aib": "BASSO",
-    "titolo": "Pericolosità BASSA",
-    "zona_aib": 9,
-    "data": "2026-06-05",
-    "fonte": "Regione Lazio — Centro Funzionale (modello RISICOLazio + Fondazione CIMA)"
-  }
+  "ultimo_controllo": "2026-06-06T00:01:27+02:00"
 }
