@@ -839,6 +839,7 @@
       prompt: 'Cosa cerchi?',
       options: [
         { text: 'Domande frequenti (FAQ)', next: 'info_servizi_faq' },
+        { text: 'Dossier interattivi (racconti visivi)', next: 'info_servizi_dossier' },
         { text: 'Documenti scaricabili e modulistica', next: 'info_servizi_download' },
         { text: 'Materiali pronti (podcast, infografiche, presentazioni)', next: 'info_servizi_materiali_pronti' },
         { text: 'Podcast del Gruppo', next: 'info_servizi_podcast' },
@@ -848,6 +849,17 @@
         { text: 'Trasparenza — natura ETS, statuto, accesso civico', next: 'info_servizi_trasparenza' },
         { text: 'Feed RSS — ricevi le notizie nel tuo aggregatore', next: 'info_servizi_rss' },
         { text: 'Versione "Facile da leggere"', next: 'info_servizi_facile' }
+      ]
+    },
+    info_servizi_dossier: {
+      kind: 'answer',
+      title: 'Dossier interattivi',
+      body: [
+        'Racconti visivi da leggere scorrendo: immagini a tutto schermo, dati che si animano e mappe da esplorare con un tocco. Spiegano i rischi e il nostro territorio in modo chiaro e accessibile.',
+        'Tra i temi: la Terra vista dai satelliti, il vulcano dei Colli Albani sotto Genzano, le ondate di calore, le radio che salvano vite, i terremoti, le alluvioni e gli incendi.'
+      ],
+      links: [
+        { text: 'Apri i Dossier interattivi', url: '/dossier/' }
       ]
     },
     info_servizi_materiali_pronti: {
