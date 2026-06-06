@@ -7,7 +7,7 @@ aliases:
   - /sitiutili/
 toc: true
 tts: true
-dataUltimaRevisione: "2026-05-27"
+dataUltimaRevisione: "2026-06-06"
 ---
 
 Questa pagina raccoglie link a siti istituzionali, portali operativi, fonti tecniche e risorse educative. I link sono organizzati per tema, così puoi trovare più facilmente la fonte utile.
@@ -35,6 +35,7 @@ Questa pagina raccoglie link a siti istituzionali, portali operativi, fonti tecn
 ## Monitoraggio e dati operativi
 
 - [Meteo Aeronautica Militare](https://www.meteoam.it/it/home) — previsioni meteorologiche ufficiali.
+- [ItaliaMeteo — Agenzia Nazionale per la Meteorologia e Climatologia](https://www.agenziaitaliameteo.it/) — servizio meteo civile nazionale: modelli ad alta risoluzione e piattaforma dati.
 - [Centro Funzionale Regione Lazio](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti) — bollettini di allerta per il Lazio.
 - [Piattaforma Radar Nazionale](https://mappe.protezionecivile.gov.it/it/mappe-e-dashboard-rischi/piattaforma-radar/) — monitoraggio delle precipitazioni.
 - [AEGIS — Tempo reale Regione Lazio](https://temporeale.regione.lazio.it/aegis/map/map2d) — dati territoriali e operativi regionali.
@@ -77,6 +78,17 @@ Questa pagina raccoglie link a siti istituzionali, portali operativi, fonti tecn
 - [Where Are U](https://where.areu.lombardia.it/) — app collegata al 112 con invio della posizione e chiamata silenziosa. Leggi anche la [guida sul nostro sito](/comunicazioni/2026-04-27-app-where-are-u-112-localizzazione-emergenza/).
 - [YouPol](https://www.poliziadistato.it/) — app della Polizia di Stato per segnalare bullismo, droga, violenza domestica e altri reati. Leggi anche la [guida sul nostro sito](/comunicazioni/2026-04-27-app-youpol-polizia-stato-bullismo-violenza-droga/).
 
+## Salute e sanità pubblica
+
+- [Ministero della Salute](https://www.salute.gov.it/) — autorità sanitaria nazionale: Piano caldo, malattie infettive, campagne di prevenzione.
+- [Istituto Superiore di Sanità (ISS)](https://www.iss.it/) — ente tecnico-scientifico di sanità pubblica. Portali collegati: [EpiCentro](https://www.epicentro.iss.it/) (epidemiologia) e [ISSalute](https://www.issalute.it/) (informazione al cittadino, "falsi miti e bufale").
+- [ECDC — Centro europeo per la prevenzione e il controllo delle malattie](https://www.ecdc.europa.eu/) — sorveglianza europea delle malattie trasmissibili, comprese quelle da vettori (West Nile, Dengue).
+- [Istituto Zooprofilattico Sperimentale delle Venezie (IZSVe)](https://www.izsvenezie.it/) — riferimento italiano sulle malattie da vettori in chiave One Health (zanzare, West Nile).
+- [Dottore, ma è vero che…? — FNOMCeO](https://dottoremaeveroche.it/) — portale della Federazione degli Ordini dei Medici contro le bufale sanitarie.
+- [AIFA — Agenzia Italiana del Farmaco](https://www.aifa.gov.it/) — uso sicuro dei farmaci, conservazione e allerte.
+- [ASL Roma 6](https://www.aslroma6.it/) — azienda sanitaria competente per Genzano e i Castelli Romani (Ospedale dei Castelli, Dipartimento di Prevenzione).
+- [Centro Antiveleni (CAV)](https://www.centroantiveleni.org/) — consulenza tossicologica attiva 24 ore su 24 per avvelenamenti e intossicazioni; per i bambini c'è anche il CAV pediatrico dell'Ospedale Bambino Gesù di Roma. In caso di pericolo immediato chiama prima il 112.
+
 ## Enti operativi e di ricerca
 
 - [Corpo Nazionale dei Vigili del Fuoco](https://www.vigilfuoco.it/) — soccorso tecnico urgente.
@@ -87,6 +99,18 @@ Questa pagina raccoglie link a siti istituzionali, portali operativi, fonti tecn
 - [CNR-IRPI](https://www.irpi.cnr.it/) — studi su frane, alluvioni e dissesti.
 - [CNR-IGAG](https://www.igag.cnr.it/) — geologia, microzonazione sismica e geoingegneria.
 - [EENA — European Emergency Number Association](https://eena.org/) — rete europea sul Numero Unico 112.
+- [CIMA Research Foundation](https://www.cimafoundation.org/) — fondazione di ricerca, partner tecnico-scientifico del DPC per la previsione di alluvioni, incendi e siccità.
+- [CMCC — Centro Euro-Mediterraneo sui Cambiamenti Climatici](https://www.cmcc.it/) — principale centro italiano di ricerca sul clima e sugli scenari per il Mediterraneo.
+- [SNPA — Sistema Nazionale per la Protezione dell'Ambiente](https://www.snpambiente.it/) — rete nazionale di ISPRA e delle agenzie regionali ARPA.
+- [AUBAC — Autorità di Bacino Distrettuale dell'Appennino Centrale](https://www.aubac.it/) — pianificazione di bacino e rischio idraulico del distretto (bacino del Tevere, Genzano incluso): Piani di Assetto Idrogeologico (PAI).
+- [ReLUIS — Rete dei Laboratori Universitari di Ingegneria Sismica](https://www.reluis.it/) — riferimento scientifico del DPC per la sicurezza strutturale e antisismica degli edifici.
+- [EUCENTRE](https://www.eucentre.it/) — centro europeo di ricerca e formazione in ingegneria sismica (Pavia).
+- [OGS — Istituto Nazionale di Oceanografia e di Geofisica Sperimentale](https://www.ogs.it/) — geofisica e sismologia; sezione divulgativa "Conoscere i terremoti".
+- [ASI — Agenzia Spaziale Italiana](https://www.asi.it/) — osservazione satellitare della Terra (COSMO-SkyMed), utile per la mappatura rapida delle emergenze.
+- [DG ECHO — Protezione Civile e Aiuti Umanitari dell'Unione Europea](https://civil-protection-humanitarian-aid.ec.europa.eu/) — Meccanismo unionale di protezione civile, rescEU e coordinamento europeo delle emergenze (ERCC).
+- [UNDRR — Ufficio ONU per la Riduzione del Rischio di Disastri](https://www.undrr.org/) — Quadro di Sendai e governance internazionale del rischio.
+- [WMO — Organizzazione Meteorologica Mondiale](https://wmo.int/) — agenzia ONU di riferimento per meteorologia, clima e sistemi di allertamento.
+- [IFRC — Federazione Internazionale di Croce Rossa e Mezzaluna Rossa](https://www.ifrc.org/) — preparazione delle comunità e risposta ai disastri a livello internazionale.
 
 ## Linee guida e standard per la comunicazione
 
@@ -123,11 +147,23 @@ Le fonti seguenti sono utili per comunicazione pubblica, accessibilità e gestio
 
 - [Geopop](https://www.geopop.it/) — divulgazione scientifica indipendente con video, articoli e infografiche su scienze della Terra, fenomeni naturali, rischi geologici (terremoti, vulcani, frane, alluvioni), meteorologia e cambiamento climatico. Linguaggio accessibile a tutti, fonti citate, comunicazione visiva curata. Utile per approfondire i temi di Protezione Civile in chiave divulgativa, anche per scuole, famiglie e persone che si avvicinano per la prima volta a questi temi. **Non è un sito istituzionale**: in caso di allerta, emergenza o decisioni operative consulta sempre i bollettini e gli avvisi ufficiali del [Centro Funzionale della Regione Lazio](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti), del [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/) e del Comune di Genzano di Roma.
 
+Altri canali di divulgazione scientifica affidabile, utili per gli approfondimenti (non istituzionali: non usarli per allerte o decisioni operative):
+
+- [Stefano Solarino — sismologo INGV](https://www.youtube.com/@solarinosismologo) — divulgazione sui terremoti e l'autoprotezione, con taglio antibufala (no "previsione" dei terremoti).
+- [Dario Bressanini](https://www.youtube.com/@dariobressanini) — chimica e scienza dell'alimentazione; utile per smontare falsi miti su prodotti e sostanze.
+- [MedBunker — Salvo Di Grazia](https://www.youtube.com/@MedBunker) — medicina basata sulle evidenze e contrasto alla disinformazione sanitaria.
+- [Scientificast](https://www.scientificast.it/) — podcast e canale di divulgazione scientifica realizzato da ricercatori.
+
 ## Associazioni e coordinamenti di volontariato
 
 - [FEPIVOL — Protezione Civile](https://www.facebook.com/fepivol/) — coordinamento di volontariato PC del Lazio a cui aderisce il Gruppo.
 - [A.R.I. Sezione Castelli Romani](https://aricastelliromani.jimdofree.com/) — associazione radioamatori, partner per le radiocomunicazioni in emergenza.
 - [Portale Regionale del Volontariato](https://protezionecivile.regione.lazio.it/organizzazioni/frontend/web/#/login) — accesso riservato alle organizzazioni iscritte all'albo regionale.
+- [Croce Rossa Italiana](https://www.cri.it/) — soccorso sanitario, primo soccorso e assistenza alla popolazione; struttura operativa del Servizio Nazionale di Protezione Civile.
+- [ANPAS — Associazione Nazionale Pubbliche Assistenze](https://www.anpas.org/) — rete di volontariato di pubblica assistenza ed emergenza, co-promotrice di "Io non rischio".
+- [Confederazione Nazionale delle Misericordie d'Italia](https://www.misericordie.it/) — rete storica di volontariato di soccorso e assistenza.
+- [CNSAS — Corpo Nazionale Soccorso Alpino e Speleologico](https://www.cnsas.it/) — soccorso in montagna, ambienti impervi e grotte; utile per la sicurezza nelle escursioni ai Castelli Romani.
+- [CSVnet — Centri di Servizio per il Volontariato](https://www.csvnet.it/) — rete nazionale di supporto alle organizzazioni di volontariato e agli enti del Terzo settore.
 
 ## Risorse didattiche del Gruppo
 
