@@ -4,10 +4,10 @@
   "licenza": "CC BY 4.0",
   "periodo": {
     "dal": "2026-04-04",
-    "al": "2026-05-23"
+    "al": "2026-06-03"
   },
   "nota": "Dati PROVVISORI: censiti solo dall'adozione del nuovo gestionale, non coprono l'intero anno (mancano i mesi precedenti). Aggregati e anonimi, senza dati personali.",
-  "generato_il": "2026-05-24",
+  "generato_il": "2026-06-06",
   "dati": [
     {
       "tipologia": "Taglio pianta",
@@ -19,7 +19,7 @@
     },
     {
       "tipologia": "Incendio sterpaglie",
-      "numero_interventi": 3
+      "numero_interventi": 4
     },
     {
       "tipologia": "Alberi/Rami su suolo pubblico",
@@ -31,6 +31,10 @@
     },
     {
       "tipologia": "Manifestazione Giro d'italia",
+      "numero_interventi": 1
+    },
+    {
+      "tipologia": "Incendio boschivo interfaccia",
       "numero_interventi": 1
     }
   ]

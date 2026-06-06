@@ -1114,6 +1114,37 @@ article:not(.card) .galleria img {
   color: #001f3d !important;
   border-color: #ffeb6b !important;
 }
+/* Variante "Area Volontari": pulsante pieno bianco ad alto contrasto. Prima era
+   traslucido (rgba bianco .15) e si confondeva col fondo blu della barra: gli
+   utenti non lo trovavano. Ora è ben visibile, distinto dal giallo "Facile da
+   leggere", e mostra la label "Area Volontari" già da schermo piccolo (sm). */
+.btn-slim-header.btn-area-volontari {
+  background: #ffffff;
+  color: #003366;
+  border-color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.btn-slim-header.btn-area-volontari > * { color: #003366 !important; }
+.btn-slim-header.btn-area-volontari:hover,
+.btn-slim-header.btn-area-volontari:focus {
+  background: #e7f0fa;
+  color: #002244;
+  border-color: #e7f0fa;
+}
+/* Difesa: forza la zona destra della barra (Facile da leggere + Area Volontari
+   + social) a restare visibile e in linea, anche se una versione precedente del
+   CSS o un layout stretto tendessero a nasconderla/mandarla a capo. */
+.it-header-slim-wrapper-content {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+}
+.it-header-slim-right-zone {
+  display: flex !important;
+  align-items: center;
+  flex-wrap: nowrap;
+}
 .slim-header-divider {
   width: 1px;
   height: 16px;
