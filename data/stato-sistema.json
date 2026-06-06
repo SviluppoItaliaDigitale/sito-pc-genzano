@@ -1,26 +1,26 @@
 {
-  "aggiornato": "2026-06-05T08:56:19+00:00",
+  "aggiornato": "2026-06-06T08:07:04+00:00",
   "nota": "File aggiornato automaticamente dal workflow aggiorna-stato-sistema.yml. Stato dei workflow critici di manutenzione del sito.",
   "workflow": [
     {
       "nome": "Pubblicazione del sito",
       "file": "deploy.yml",
-      "stato": "in_progress",
-      "ultimo_run": "2026-06-05T08:52:52Z",
+      "stato": "success",
+      "ultimo_run": "2026-06-06T07:37:40Z",
       "descrizione": "Costruisce e pubblica il sito a ogni modifica approvata."
     },
     {
       "nome": "Controllo allerta meteo",
       "file": "check-allerta.yml",
       "stato": "success",
-      "ultimo_run": "2026-06-05T08:55:12Z",
+      "ultimo_run": "2026-06-06T08:05:13Z",
       "descrizione": "Verifica i bollettini della Regione Lazio e aggiorna lo stato di allerta."
     },
     {
       "nome": "Audit settimanale del sito",
       "file": "audit-sito.yml",
       "stato": "success",
-      "ultimo_run": "2026-06-05T02:03:48Z",
+      "ultimo_run": "2026-06-06T01:55:28Z",
       "descrizione": "Controlla contenuti, link, accessibilita e coerenza ogni lunedi."
     },
     {
