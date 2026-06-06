@@ -74,12 +74,63 @@ def add_shadow(shape):
         spPr.remove(old)
     el = spPr.makeelement(qn('a:effectLst'), {})
     sh = el.makeelement(qn('a:outerShdw'),
-                        {'blurRad': '50800', 'dist': '25400',
+                        {'blurRad': '69850', 'dist': '34290',
                          'dir': '5400000', 'rotWithShape': '0'})
     clr = sh.makeelement(qn('a:srgbClr'), {'val': '001A33'})
-    a = clr.makeelement(qn('a:alpha'), {'val': '42000'})
+    a = clr.makeelement(qn('a:alpha'), {'val': '46000'})
     clr.append(a); sh.append(clr); el.append(sh)
     spPr.append(el)
+
+
+def _hex(c):
+    return '%02X%02X%02X' % (c[0], c[1], c[2])
+
+
+def _darken(c, f=0.7):
+    return RGBColor(int(c[0] * f), int(c[1] * f), int(c[2] * f))
+
+
+def _lighten(c, f=1.15):
+    return RGBColor(min(255, int(c[0] * f)), min(255, int(c[1] * f)), min(255, int(c[2] * f)))
+
+
+def grad_fill(shape, c1, c2, ang=90):
+    """Sostituisce il riempimento dello shape con un gradiente lineare c1→c2.
+    ang in gradi (90 = verticale dall'alto, 0 = orizzontale da sinistra)."""
+    spPr = shape._element.spPr
+    for tag in ('a:solidFill', 'a:noFill', 'a:gradFill', 'a:pattFill', 'a:blipFill'):
+        e = spPr.find(qn(tag))
+        if e is not None:
+            spPr.remove(e)
+    g = spPr.makeelement(qn('a:gradFill'), {})
+    lst = g.makeelement(qn('a:gsLst'), {})
+    for pos, col in ((0, c1), (100000, c2)):
+        gs = g.makeelement(qn('a:gs'), {'pos': str(pos)})
+        clr = gs.makeelement(qn('a:srgbClr'), {'val': _hex(col)})
+        gs.append(clr)
+        lst.append(gs)
+    g.append(lst)
+    g.append(g.makeelement(qn('a:lin'), {'ang': str(int(ang * 60000)), 'scaled': '1'}))
+    ln = spPr.find(qn('a:ln'))
+    if ln is not None:
+        ln.addprevious(g)
+    else:
+        spPr.append(g)
+    return shape
+
+
+def grad_rect(slide, l, t, w, h, c1, c2, ang=90):
+    sp = slide.shapes.add_shape(MSO_SHAPE.RECTANGLE, l, t, w, h)
+    sp.fill.solid(); sp.fill.fore_color.rgb = c1
+    sp.line.fill.background(); sp.shadow.inherit = False
+    grad_fill(sp, c1, c2, ang)
+    return sp
+
+
+def _alpha(shape, pct):
+    clr = shape._element.spPr.find(qn('a:solidFill')).find(qn('a:srgbClr'))
+    clr.append(clr.makeelement(qn('a:alpha'), {'val': str(int(pct * 1000))}))
+    return shape
 
 
 def _norm(slide):
@@ -135,7 +186,9 @@ def footer(slide, n, dark=False, nav=True):
 
 def cover(title, subtitle, eyebrow="PROTEZIONE CIVILE — GENZANO DI ROMA"):
     s = prs.slides.add_slide(BLANK); _norm(s)
-    rect(s, 0, 0, SW, SH, PRIMARY)
+    grad_rect(s, 0, 0, SW, SH, PRIMARY_D, PRIMARY, ang=115)
+    _alpha(shp(s, MSO_SHAPE.OVAL, Inches(8.7), Inches(3.4), Inches(7.2), Inches(7.2), BLUE2), 14)
+    _alpha(shp(s, MSO_SHAPE.OVAL, Inches(10.7), Inches(-1.8), Inches(4.2), Inches(4.2), ACCENT), 9)
     rect(s, 0, 0, Inches(0.22), SH, ACCENT)
     s.shapes.add_picture(LOGO, Inches(1.0), Inches(0.6), height=Inches(1.25))
     tf = textbox(s, Inches(1.0), Inches(2.0), Inches(11.3), Inches(0.6))
@@ -150,7 +203,8 @@ def cover(title, subtitle, eyebrow="PROTEZIONE CIVILE — GENZANO DI ROMA"):
 
 def divider(chapter, num):
     s = prs.slides.add_slide(BLANK); _norm(s)
-    rect(s, 0, 0, SW, SH, PRIMARY_D)
+    grad_rect(s, 0, 0, SW, SH, RGBColor(0x00, 0x10, 0x21), PRIMARY, ang=120)
+    _alpha(shp(s, MSO_SHAPE.OVAL, Inches(-2.0), Inches(3.7), Inches(6.0), Inches(6.0), BLUE2), 16)
     logo_tr(s, height_in=0.95, top_in=0.55)
     rect(s, Inches(1.0), Inches(3.0), Inches(2.4), Pt(4), ACCENT)
     # Titolo confinato alla metà sinistra: il menu sezioni occupa la destra (x>=7).
@@ -197,11 +251,19 @@ def content(title, bullets, num, fonti=None):
 def base_slide(title, num):
     s = prs.slides.add_slide(BLANK); _norm(s)
     rect(s, 0, 0, SW, SH, WHITE)
-    rect(s, 0, 0, Inches(0.22), SH, PRIMARY)
+    hb = grad_rect(s, Inches(0.22), 0, SW - Inches(0.22), Inches(1.74), WHITE, RGBColor(0xEC, 0xF1, 0xF8), ang=90)
+    add_shadow(hb)
+    rect(s, Inches(0.75), Inches(1.74), Inches(11.83), Pt(0.9), RGBColor(0xDD, 0xE5, 0xEC))
+    grad_rect(s, 0, 0, Inches(0.22), SH, PRIMARY, BLUE2, ang=90)
     logo_tr(s, height_in=0.72, top_in=0.45)
-    tf = textbox(s, Inches(0.7), Inches(0.55), Inches(10.6), Inches(1.1))
-    setrun(tf.paragraphs[0].add_run(), title, 28, PRIMARY, bold=True)
-    rect(s, Inches(0.75), Inches(1.55), Inches(2.2), Pt(3), ACCENT)
+    chip = shp(s, MSO_SHAPE.ROUNDED_RECTANGLE, Inches(0.7), Inches(0.52), Inches(0.92), Inches(0.92), PRIMARY, shadow=True)
+    grad_fill(chip, BLUE2, PRIMARY_D, ang=120)
+    _ci = icon_png(_icon_for(title))
+    if _ci:
+        s.shapes.add_picture(_ci, Inches(0.94), Inches(0.76), height=Inches(0.44))
+    tf = textbox(s, Inches(1.82), Inches(0.5), Inches(9.5), Inches(0.98), anchor=MSO_ANCHOR.MIDDLE)
+    setrun(tf.paragraphs[0].add_run(), title, 27, PRIMARY, bold=True)
+    grad_rect(s, Inches(1.82), Inches(1.55), Inches(2.2), Pt(3.2), ACCENT, RGBColor(0xE0, 0x90, 0x10), ang=0)
     footer(s, num)
     return s
 
@@ -267,6 +329,9 @@ def icon_png(name, rgb=(255, 255, 255)):
 def _icon_for(title):
     t = title.lower()
     table = [
+        ("rischi e prevenzione", "exclamation-triangle-fill"),
+        ("estensione digitale", "diagram-3-fill"),
+        ("allerte", "cloud-lightning-rain-fill"),
         ("piattaforma", "people-fill"), ("principi", "compass"),
         ("conformità", "patch-check-fill"), ("architettura", "diagram-3-fill"),
         ("cosa fare", "signpost-2-fill"), ("modalità emergenza", "exclamation-octagon-fill"),
@@ -296,8 +361,9 @@ def _icon_for(title):
 def _card(s, xi, yi, wi, hi, idx, text, mode, icon=None):
     x, y, w, h = Inches(xi), Inches(yi), Inches(wi), Inches(hi)
     c = PALETTE[idx % len(PALETTE)]
-    shp(s, MSO_SHAPE.ROUNDED_RECTANGLE, x, y, w, h, RGBColor(0xF4, 0xF7, 0xFB),
-        line=RGBColor(0xD8, 0xDE, 0xE4), shadow=True)
+    grad_fill(shp(s, MSO_SHAPE.ROUNDED_RECTANGLE, x, y, w, h, RGBColor(0xF4, 0xF7, 0xFB),
+                  line=RGBColor(0xD8, 0xDE, 0xE4), shadow=True),
+              RGBColor(0xFF, 0xFF, 0xFF), RGBColor(0xEA, 0xF0, 0xF7), ang=90)
     if mode == 'v':
         bsz, bcx, bcy = 0.56, xi + 0.6, yi + hi / 2
         tb = textbox(s, Inches(xi + 1.18), y, Inches(wi - 1.35), h, anchor=MSO_ANCHOR.MIDDLE)
@@ -309,15 +375,14 @@ def _card(s, xi, yi, wi, hi, idx, text, mode, icon=None):
                      Inches(hi - 1.4), anchor=MSO_ANCHOR.TOP)
         p = tb.paragraphs[0]; p.alignment = PP_ALIGN.CENTER; p.line_spacing = 1.12
         setrun(p.add_run(), text, 14, DARK)
-    shp(s, MSO_SHAPE.OVAL, Inches(bcx - bsz / 2), Inches(bcy - bsz / 2),
-        Inches(bsz), Inches(bsz), c)
+    badge = shp(s, MSO_SHAPE.OVAL, Inches(bcx - bsz / 2), Inches(bcy - bsz / 2),
+                Inches(bsz), Inches(bsz), c)
+    grad_fill(badge, c, _darken(c, 0.6), ang=90)
     if icon:
         isz = bsz * 0.56
         s.shapes.add_picture(icon, Inches(bcx - isz / 2), Inches(bcy - isz / 2), height=Inches(isz))
     else:
-        bd2 = shp(s, MSO_SHAPE.OVAL, Inches(bcx - bsz / 2), Inches(bcy - bsz / 2),
-                  Inches(bsz), Inches(bsz), c)
-        put(bd2, [(str(idx + 1), 17, WHITE, True)])
+        put(badge, [(str(idx + 1), 17, WHITE, True)])
 
 
 def slide_funzioni(num):
@@ -333,9 +398,11 @@ def slide_funzioni(num):
     x0, w, gap, y, h = 0.85, 2.85, 0.18, 2.8, 3.05
     for i, (t, d, c, icn, rgb) in enumerate(cards):
         bxf = x0 + i * (w + gap); bx = Inches(bxf)
-        shp(s, MSO_SHAPE.ROUNDED_RECTANGLE, bx, Inches(y), Inches(w), Inches(h),
-            RGBColor(0xF4, 0xF7, 0xFB), line=RGBColor(0xD8, 0xDE, 0xE4))
-        shp(s, MSO_SHAPE.RECTANGLE, bx, Inches(y), Inches(w), Inches(0.14), c)
+        grad_fill(shp(s, MSO_SHAPE.ROUNDED_RECTANGLE, bx, Inches(y), Inches(w), Inches(h),
+                      RGBColor(0xF4, 0xF7, 0xFB), line=RGBColor(0xD8, 0xDE, 0xE4), shadow=True),
+                  RGBColor(0xFF, 0xFF, 0xFF), RGBColor(0xEA, 0xF0, 0xF7), ang=90)
+        grad_fill(shp(s, MSO_SHAPE.RECTANGLE, bx, Inches(y), Inches(w), Inches(0.14), c),
+                  _lighten(c, 1.1), _darken(c, 0.85), ang=0)
         ip = icon_png(icn, rgb=rgb)
         if ip:
             s.shapes.add_picture(ip, Inches(bxf + w / 2 - 0.42), Inches(y + 0.45), height=Inches(0.84))
@@ -389,6 +456,7 @@ def slide_cruscotto(num):
             Inches(0.62), Inches(0.36), ACCENT)
     cb = shp(s, MSO_SHAPE.ROUNDED_RECTANGLE, Inches(5.32), Inches(2.7), Inches(3.05), Inches(2.6),
              PRIMARY, shadow=True)
+    grad_fill(cb, BLUE2, PRIMARY_D, ang=120)
     put(cb, [("Cruscotto del territorio", 15, WHITE, True),
              ("Aggregazione privacy-first", 11, RGBColor(0xCF, 0xDD, 0xEC), False),
              ("Dati aperti (CC BY 4.0)", 11, RGBColor(0xCF, 0xDD, 0xEC), False)])
@@ -397,7 +465,8 @@ def slide_cruscotto(num):
           ("Arancione — elevata", ORANGE, WHITE), ("Rosso — massima", RED, WHITE)]
     ax, aw, ah, ay0, agp = Inches(9.35), Inches(3.3), 0.62, 2.4, 0.22
     for i, (t, c, tc) in enumerate(al):
-        b = shp(s, MSO_SHAPE.ROUNDED_RECTANGLE, ax, Inches(ay0 + i * (ah + agp)), aw, Inches(ah), c)
+        b = shp(s, MSO_SHAPE.ROUNDED_RECTANGLE, ax, Inches(ay0 + i * (ah + agp)), aw, Inches(ah), c, shadow=True)
+        grad_fill(b, _lighten(c, 1.12), _darken(c, 0.82), ang=90)
         put(b, [(t, 12, tc, True)])
     fn = textbox(s, Inches(0.85), Inches(6.25), Inches(11.6), Inches(0.5))
     setrun(fn.paragraphs[0].add_run(),
@@ -418,7 +487,8 @@ def slide_allerte(num):
             ("ROSSO", "Allerta massima — fenomeni molto intensi, rischio elevato", RED, WHITE)]
     x, w, h, y0, gp = Inches(0.85), Inches(11.6), 0.78, 2.55, 0.2
     for i, (lv, d, c, tc) in enumerate(bars):
-        b = shp(s, MSO_SHAPE.ROUNDED_RECTANGLE, x, Inches(y0 + i * (h + gp)), w, Inches(h), c)
+        b = shp(s, MSO_SHAPE.ROUNDED_RECTANGLE, x, Inches(y0 + i * (h + gp)), w, Inches(h), c, shadow=True)
+        grad_fill(b, _lighten(c, 1.12), _darken(c, 0.82), ang=90)
         tf = b.text_frame; tf.margin_left = Inches(0.3)
         p = tf.paragraphs[0]; p.alignment = PP_ALIGN.LEFT
         setrun(p.add_run(), lv + "    ", 16, tc, bold=True)
@@ -444,6 +514,7 @@ def slide_rischi(num):
         col, row = i % 4, i // 4
         b = shp(s, MSO_SHAPE.ROUNDED_RECTANGLE, Inches(x0 + col * (w + gap)),
                 Inches(y0 + row * (h + vg)), Inches(w), Inches(h), c, shadow=True)
+        grad_fill(b, _lighten(c, 1.16), _darken(c, 0.74), ang=90)
         put(b, [(t, 15, WHITE, True)])
     fn = textbox(s, Inches(0.85), Inches(6.35), Inches(11.6), Inches(0.4))
     setrun(fn.paragraphs[0].add_run(),
