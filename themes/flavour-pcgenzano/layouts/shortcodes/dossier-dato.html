@@ -1,0 +1,6 @@
+{{- $to := .Get "to" -}}
+{{- with .Get "da" }}{{ $to = sub now.Year (int .) }}{{ end -}}
+<div class="dossier-dato">
+  <div class="dossier-dato__num" data-to="{{ $to }}"{{ with .Get "dec" }} data-dec="{{ . }}"{{ end }}>0{{ with .Get "unita" }}<small>{{ . }}</small>{{ end }}</div>
+  <div class="dossier-dato__label">{{ .Get "label" | markdownify }}</div>
+</div>

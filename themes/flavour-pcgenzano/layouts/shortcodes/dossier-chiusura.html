@@ -1,0 +1,9 @@
+<section class="dossier-chiusura reveal" id="{{ .Get "id" | default "chiusura" }}">
+  {{ with .Get "titolo" }}<h2>{{ . | safeHTML }}</h2>{{ end }}
+  {{ with .Inner }}{{ . | markdownify }}{{ end }}
+  <div class="dossier-sep" aria-hidden="true"></div>
+  <div class="dossier-cta">
+    {{ with $.Get "cta1" }}<a class="is-primary" href="{{ ($.Get "cta1url") | strings.TrimPrefix "/" | relURL }}">{{ . }}</a>{{ end }}
+    {{ with $.Get "cta2" }}<a class="is-ghost" href="{{ ($.Get "cta2url") | strings.TrimPrefix "/" | relURL }}">{{ . }}</a>{{ end }}
+  </div>
+</section>

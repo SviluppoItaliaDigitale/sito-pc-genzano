@@ -1,0 +1,17 @@
+{{- $base := .Get "base" | strings.TrimPrefix "/" | relURL -}}
+{{- $top := .Get "top" | strings.TrimPrefix "/" | relURL -}}
+<section class="dossier-confronto-wrap reveal" id="{{ .Get "id" | default "confronto" }}">
+  <div class="dossier-confronto-head">
+    {{ with .Get "titolo" }}<h2>{{ . | safeHTML }}</h2>{{ end }}
+    {{ with .Get "testo" }}<p>{{ . | markdownify }}</p>{{ end }}
+  </div>
+  <div class="dossier-confronto"{{ with .Get "ratio" }} style="aspect-ratio:{{ . }}"{{ end }}>
+    <img src="{{ $base }}" alt="{{ .Get "baseAlt" }}" loading="lazy">
+    <img class="dossier-confronto__top" src="{{ $top }}" alt="{{ .Get "topAlt" }}" loading="lazy">
+    {{ with .Get "baseLab" }}<span class="dossier-confronto__lab is-left">{{ . }}</span>{{ end }}
+    {{ with .Get "topLab" }}<span class="dossier-confronto__lab is-right">{{ . }}</span>{{ end }}
+    <span class="dossier-confronto__handle" aria-hidden="true"></span>
+    <input type="range" min="0" max="100" value="50" aria-label="{{ .Get "ariaLab" | default "Trascina per confrontare le due immagini" }}">
+  </div>
+  {{ with .Get "cap" }}<p class="dossier-confronto-cap">{{ . | markdownify }}</p>{{ end }}
+</section>

@@ -398,3 +398,27 @@ Partial aggiunti con le iniziative della roadmap. Tutti auto-protettivi (renderi
 Layout di pagina aggiunti dalla roadmap (non partial, ma `layouts/<sezione>/`): `stato-sistema/list.html` (#25), `storia/list.html` (#8), `lis/list.html` (#10), `lanterna/list.html` (#4, standalone — NON usa `baseof.html`), `quiz-preparazione/list.html` (#7), `podcast/{list,single,rss.xml}` (#22), `articoli-da-ascoltare/list.html` (#22, ex `podcast/`), `allerta-stato/list.json` (#2, endpoint JSON puro).
 
 Script asset associati: `genera-qr-articoli.py`, `genera-indice-ricerca.sh`, `backup-documenti-aruba.py`. JS statici: `notifiche-allerta.js` (#2), `glossario-pagina.js` (#21), `quiz-preparazione.js` (#7), `static/giochi/assets/js/arena.js` (#11).
+
+## Dossier interattivi — sezione `/dossier/` + 9 shortcode `dossier-*`
+
+I **dossier interattivi** (`content/dossier/`, URL `/dossier/`) sono racconti visivi *scrollytelling* a tema scuro "spazio", **full-bleed** e accessibili (WCAG 2.2 AA). Sono un **"motore" riusabile**: l'impianto è scritto una volta, **ogni nuovo dossier è un singolo file Markdown** in `content/dossier/<slug>.md`. Guida operativa completa: `manuale/parte-39-dossier-interattivi.md`.
+
+**Architettura:** layout `layouts/dossier/single.html` (definisce `main`, carica `static/css/dossier.css`, rende barra di avanzamento + pallini dai `sezioni` del frontmatter + `{{ .Content }}` + sezione condivisione, poi `static/js/dossier.js`); landing `layouts/dossier/list.html` (griglia card, CSS `static/css/dossier-list.css`); box homepage `partials/dossier-home.html` (dossier più recente, CSS `static/css/dossier-home.css`, inserito in `index.html` modalità normale fra `cruscotto-home` e `services`). Il full-bleed si ottiene con `main:has(> .dossier){padding:0}` in `dossier.css`.
+
+**I 9 shortcode** (`layouts/shortcodes/dossier-*.html`):
+
+- `dossier-hero` — apertura a tutto schermo (`id`, `image`, `alt`, `eyebrow`, `title` con `<br>`, `sub`, `credito`).
+- `dossier-scena` — sezione con sfondo immagine + pannello in vetro; `align="left|right|top"` (con `top` immagine grande centrata); `id`/`image`/`alt`/`kicker`/`title`/`credito` + corpo Markdown. Il pannello ha classe `reveal` (comparsa al viewport).
+- `dossier-dati` + `dossier-dato` — numeri che si animano (count-up). `dossier-dato`: `to`/`unita`/`label`, oppure `da="ANNO"` per anni **dinamici** (`{{ sub now.Year (int ...) }}`) — evita dati che invecchiano.
+- `dossier-confronto` — slider prima/dopo (due immagini, cursore trascinabile, tastiera): `titolo`/`testo`/`base`/`baseAlt`/`baseLab`/`top`/`topAlt`/`topLab`/`ratio`/`cap`.
+- `dossier-hotspot` + `dossier-punto` — immagine grande con punti cliccabili (popover). `dossier-punto`: `x`/`y` (% sull'immagine) + `titolo` + corpo Markdown. I popover si **capovolgono** da soli (alto/basso/sinistra/destra, logica in `dossier.js`) per non uscire dallo schermo; i punti compaiono "a cascata" quando l'immagine entra (`.dossier-hotspot.is-revealed`).
+- `dossier-chiusura` — finale con titolo + testo + fino a 2 CTA (`cta1`/`cta1url`, `cta2`/`cta2url`).
+- `dossier-fonti` — crediti/fonti (Markdown).
+
+🔴 **Subpath GitHub Pages:** ogni immagine passa per `strings.TrimPrefix "/" | relURL` (vale per gli shortcode, per `dossier-home.html` e per `dossier/list.html`). Non usare `relURL` su path con leading slash: romperebbe su GitHub Pages.
+
+🔴 **Animazioni:** sono molte (Ken Burns, parallasse, ingresso direzionale dei pannelli, cascata dei punti hotspot, cielo stellato + nebulosa dietro le sezioni scure, stelle cadenti, anelli orbitanti, riflesso sui numeri, micro-interazioni). **Tutte** disattivate da `@media (prefers-reduced-motion: reduce)` **e** da `html.a11y-pause-anim` (toggle "Pausa animazioni" del toolbar). Il dossier resta leggibile e usabile senza animazioni (popover da tastiera Invio/Spazio/Esc, slider `input[type=range]` nativo). Sezioni CSS: `dossier.css` v1.0→v1.3.
+
+🔴 **Immagini:** solo con **licenza chiara** (NASA pubblico dominio, Copernicus/ESA CC BY, autori con CC) e **credito onesto** in `credito`/`cap`/`fonti`. Mai attribuire un'immagine al satellite sbagliato né spacciarla per un'altra. Asset in `static/images/dossier/` (WebP).
+
+**Frontmatter di un dossier:** `type: "dossier"`, `title`, `description`, `image` (cover per social/landing), `tts: false`, `indice: false`, `sezioni: [{ id, label }, ...]` (un punto per `id` di sezione, per la navigazione a pallini). **Menu:** voce "Dossier interattivi" → `/dossier/` sotto **Risorse** in `hugo.toml` **e** `static/app-shared/site-chrome.js` (tenere sincronizzati).

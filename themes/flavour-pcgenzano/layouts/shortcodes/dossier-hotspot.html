@@ -1,0 +1,11 @@
+{{- $img := .Get "image" | strings.TrimPrefix "/" | relURL -}}
+<section class="dossier-hotspot-wrap reveal" id="{{ .Get "id" | default "esplora" }}">
+  <div class="dossier-hotspot-head">
+    {{ with .Get "titolo" }}<h2>{{ . | safeHTML }}</h2>{{ end }}
+    {{ with .Get "testo" }}<p>{{ . | markdownify }}</p>{{ end }}
+  </div>
+  <div class="dossier-hotspot">
+    <img src="{{ $img }}" alt="{{ .Get "alt" }}" loading="lazy">
+    {{ .Inner }}
+  </div>
+</section>

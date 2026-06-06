@@ -1,0 +1,4 @@
+<section class="dossier-fonti"><div class="dossier-fonti__inner">
+  <h2>{{ .Get "titolo" | default "Fonti e crediti" }}</h2>
+  {{ .Inner | markdownify }}
+</div></section>

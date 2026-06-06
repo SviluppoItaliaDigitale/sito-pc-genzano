@@ -1,0 +1,52 @@
+/* ============================================================
+   DOSSIER — box homepage "Dossier interattivi".
+   Card immersiva a tema scuro con copertina del dossier più recente.
+   Caricata solo in homepage dal partial dossier-home.html.
+   ============================================================ */
+.dossier-home { margin: 2.5rem 0; }
+.dossier-home-card {
+  position: relative; display: block; min-height: 340px; border-radius: 18px; overflow: hidden;
+  text-decoration: none; color: #fff; isolation: isolate;
+  background-color: #0a1730; background-image: var(--dh-bg); background-size: cover; background-position: center;
+  box-shadow: 0 14px 40px rgba(0, 51, 102, .22);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.dossier-home-card:hover, .dossier-home-card:focus-visible { transform: translateY(-4px); box-shadow: 0 22px 56px rgba(0, 51, 102, .3); outline: none; }
+.dossier-home-card:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 3px; }
+.dossier-home-overlay {
+  position: absolute; inset: 0; z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(5, 8, 15, .92) 0%, rgba(5, 8, 15, .7) 42%, rgba(5, 8, 15, .15) 100%),
+    linear-gradient(0deg, rgba(5, 8, 15, .65), transparent 55%);
+}
+.dossier-home-body {
+  position: relative; z-index: 2; display: flex; flex-direction: column; gap: .7rem;
+  max-width: 620px; padding: clamp(1.6rem, 4vw, 2.8rem);
+}
+.dossier-home-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px; align-self: flex-start;
+  color: #ffbe2e; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: .8rem;
+}
+.dossier-home-tit { font-size: clamp(1.6rem, 3.6vw, 2.6rem); font-weight: 700; line-height: 1.1; letter-spacing: -.01em; }
+.dossier-home-desc { color: #d6e2f3; font-size: 1.02rem; line-height: 1.55; }
+.dossier-home-cta {
+  margin-top: .4rem; align-self: flex-start; display: inline-flex; align-items: center; gap: 8px;
+  background: #ffbe2e; color: #0a1730; font-weight: 700; padding: .65rem 1.3rem; border-radius: 28px;
+}
+.dossier-home-card:hover .dossier-home-cta i { transform: translateX(4px); }
+.dossier-home-cta i { transition: transform .2s ease; }
+.dossier-home-all {
+  display: inline-flex; align-items: center; gap: 7px; margin-top: .9rem;
+  color: #003366; font-weight: 600; text-decoration: none;
+}
+.dossier-home-all:hover { text-decoration: underline; }
+.dossier-home-all:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 3px; }
+
+@media (max-width: 575.98px) { .dossier-home-card { min-height: 300px; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .dossier-home-card, .dossier-home-cta i { transition: none !important; }
+  .dossier-home-card:hover { transform: none; }
+}
+html.a11y-pause-anim .dossier-home-card { transition: none !important; }
+@media print { .dossier-home { display: none !important; } }

@@ -700,6 +700,12 @@ content("Laboratorio meteo — esplorare i dati del clima", [
     "Ogni grafico ha la tabella dati, la stampa, il download (CSV e immagine) e un link condivisibile.",
 ], N(), fonti="ERA5 · Open-Meteo (CC BY 4.0) · Copernicus Climate Data Store")
 
+content("Dossier interattivi — racconti visivi", [
+    "Storie che si leggono scorrendo: immagini a tutto schermo, dati animati e mappe da esplorare.",
+    "Qualità da rivista digitale, ma interamente accessibile (WCAG 2.2 AA) e senza servizi di terzi.",
+    "Ogni pagina è condivisibile; il primo dossier racconta la Terra vista dai satelliti.",
+], N(), fonti="Immagini con licenza aperta: NASA · Copernicus / ESA")
+
 divider("Accessibilità e inclusione", N())
 
 content("Conformità WCAG 2.2 AA e barra strumenti", [

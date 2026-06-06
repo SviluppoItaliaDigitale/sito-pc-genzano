@@ -1,0 +1,27 @@
+{{/* Box homepage "Dossier interattivi" — presenta il dossier più recente con la
+     sua immagine di copertina a tutta larghezza (tema scuro "spazio"), CTA verso
+     il dossier + link a tutti i dossier. Si auto-nasconde se non ci sono dossier.
+     Accessibile: contrasto WCAG AA, focus visibile, rispetta prefers-reduced-motion.
+     CSS scoped: /css/dossier-home.css (caricato solo qui, in homepage). */}}
+{{ $dossiers := where site.RegularPages "Section" "dossier" }}
+{{ $latest := index ($dossiers.ByDate.Reverse) 0 }}
+{{ with $latest }}
+<section class="dossier-home" aria-labelledby="dossier-home-tit">
+  <div class="container">
+    <a class="dossier-home-card" href="{{ .RelPermalink }}"
+       {{ with .Params.image }}style="--dh-bg:url('{{ . | strings.TrimPrefix "/" | relURL }}')"{{ end }}>
+      <span class="dossier-home-overlay" aria-hidden="true"></span>
+      <span class="dossier-home-body">
+        <span class="dossier-home-eyebrow"><i class="bi bi-collection-play" aria-hidden="true"></i> Nuovo · Dossier interattivo</span>
+        <span class="dossier-home-tit" id="dossier-home-tit">{{ .Title }}</span>
+        <span class="dossier-home-desc">{{ .Description }}</span>
+        <span class="dossier-home-cta">Apri il dossier <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+      </span>
+    </a>
+    {{ if gt (len $dossiers) 1 }}
+    <a class="dossier-home-all" href="{{ "dossier/" | relURL }}">Vedi tutti i dossier interattivi <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+    {{ end }}
+  </div>
+</section>
+<link rel="stylesheet" href="{{ "css/dossier-home.css" | relURL }}">
+{{ end }}
