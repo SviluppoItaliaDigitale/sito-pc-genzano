@@ -40,7 +40,7 @@ Non scattano cartoline: misurano **temperature, fumo, umidità del suolo, livell
 {{< dossier-scena id="incendi" image="/images/dossier/incendi.webp" alt="La Sicilia vista dal satellite in una giornata di incendi: punti arancioni dei roghi e lunghi pennacchi di fumo che si allungano sul mare" align="right" kicker="Quando la Terra brucia" title="Vedere il fuoco<br>prima del fumo" credito="NASA MODIS · satellite Aqua · pubblico dominio" >}}
 I sensori termici dei satelliti individuano i **punti caldi** degli incendi anche dove nessuno è ancora arrivato. È il principio del sistema europeo **EFFIS**, che ogni giorno mappa roghi e aree bruciate in tutta Europa.
 
-Per i Castelli Romani, dove l'estate porta il rischio incendi, significa una cosa sola: **accorgersene prima**.
+Per i Castelli Romani, dove l'estate porta il [rischio incendi](/rischi-prevenzione/rischio-incendio/), significa una cosa sola: **accorgersene prima**.
 {{< /dossier-scena >}}
 
 {{< dossier-confronto id="incendi-vista" titolo="Cosa vede il satellite" testo="Trascina il cursore: a sinistra l'immagine reale della Sicilia, a destra ciò che il sistema di rilevamento mette in evidenza — focolai attivi e pennacchi di fumo." base="/images/dossier/incendi.webp" baseAlt="Immagine satellitare della Sicilia con incendi in corso" baseLab="Immagine satellitare" top="/images/dossier/incendi-annotato.webp" topAlt="La stessa immagine con i focolai cerchiati e il fumo etichettato" topLab="Rilevamento incendi" ratio="5 / 4" cap="Incendi in Sicilia, 22 settembre 2023 — NASA MODIS (satellite Aqua)." >}}
@@ -50,11 +50,11 @@ Per i Castelli Romani, dove l'estate porta il rischio incendi, significa una cos
 {{< dossier-scena id="aria" image="/images/dossier/atmosfera.webp" alt="L'orizzonte curvo della Terra visto dalla Stazione Spaziale: una sottile fascia azzurra di atmosfera separa il pianeta dal nero dello spazio, con la Luna sullo sfondo" align="left" kicker="L'aria che respiriamo" title="Un filo sottile" credito="NASA · Stazione Spaziale Internazionale · pubblico dominio" >}}
 Quella sottile linea azzurra è **tutta l'aria che abbiamo**. Dallo spazio i satelliti **Copernicus CAMS** ne misurano la qualità: polveri sahariane, ozono, particolato.
 
-Sono gli stessi dati che alimentano la scheda **qualità dell'aria** del nostro cruscotto — perché anche un cielo che sembra pulito, a volte, non lo è.
+Sono gli stessi dati che alimentano la scheda [**qualità dell'aria**](/cruscotto/) del nostro cruscotto — perché anche un cielo che sembra pulito, a volte, non lo è.
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="casa" image="/images/dossier/castelli-iss.webp" alt="I Colli Albani, Roma e il Tevere visti obliquamente dalla Stazione Spaziale: si riconoscono un lago di cratere scuro e la macchia urbana della città" align="right" kicker="Casa nostra" title="I Castelli Romani<br>da 400 km" credito="NASA · Stazione Spaziale Internazionale · pubblico dominio" >}}
-Anche il nostro territorio passa, ogni giorno, sotto questi occhi elettronici. I **Colli Albani** sono un grande **vulcano spento**: i laghi di **Albano** e **Nemi** riempiono due antichi crateri. Genzano si affaccia proprio sull'orlo di quello di Nemi.
+Anche il nostro territorio passa, ogni giorno, sotto questi occhi elettronici. I **Colli Albani** sono un grande **vulcano quiescente** — non spento, solo in pausa: i laghi di **Albano** e **Nemi** riempiono due antichi crateri. Genzano si affaccia proprio sull'orlo di quello di Nemi.
 
 Conoscere la forma del territorio — vista dall'alto — aiuta a capire **dove l'acqua scende e dove il fuoco corre**.
 {{< /dossier-scena >}}
@@ -81,7 +81,7 @@ I **due occhi del Vulcano Laziale**, fianco a fianco: a **sinistra** il **Lago d
 {{< dossier-scena id="iride" image="/images/dossier/roma-sat.webp" alt="Roma vista dall'alto da satellite a colori naturali: la macchia urbana della città circondata dalla campagna, immagine Copernicus Sentinel-2" align="right" kicker="I nuovissimi occhi italiani" title="IRIDE,<br>made in Italy" credito="Roma · Copernicus Sentinel-2 (Unione Europea) · CC BY" >}}
 Agli occhi europei se ne stanno aggiungendo di **tutti italiani**: **IRIDE**, una costellazione di oltre 60 satelliti voluta dal Governo con i fondi del **PNRR**, coordinata da **ESA** con il supporto dell'**ASI**.
 
-La sua **prima immagine**, il 5 marzo 2025, ha ritratto proprio **Roma e l'Italia centrale** a **2,66 metri** di dettaglio — circa tre volte più nitida del consueto. IRIDE nasce anche per la **protezione civile**: incendi, frane, alluvioni, monitoraggio del territorio. Sarà pienamente operativa nel **2026**. *(La foto reale di IRIDE è sul sito dell'ESA; qui Roma ripresa dal satellite Copernicus Sentinel-2.)*
+La sua **prima immagine**, il 5 marzo 2025, ha ritratto proprio **Roma e l'Italia centrale** a **2,66 metri** di dettaglio — circa tre volte più nitida dell'osservazione satellitare disponibile oggi in modo sistematico sull'Italia. IRIDE nasce anche per la **protezione civile**: incendi, frane, alluvioni, monitoraggio del territorio. La costellazione è in costruzione e sarà progressivamente operativa nel corso del decennio. *(La foto reale di IRIDE è sul sito dell'ESA; qui Roma ripresa dal satellite Copernicus Sentinel-2.)*
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="notte" image="/images/dossier/roma-notte.webp" alt="L'Italia centrale di notte vista dalla Stazione Spaziale: le luci delle città disegnano il territorio nel buio, con Roma come grande area luminosa" align="right" kicker="Quando cala il buio" title="I satelliti<br>non dormono" credito="NASA · Stazione Spaziale Internazionale (2013) · pubblico dominio" >}}
