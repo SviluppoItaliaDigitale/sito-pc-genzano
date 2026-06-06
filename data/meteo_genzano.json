@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-06-06T07:04",
+  "aggiornato": "2026-06-06T08:02",
   "data_lunga": "sabato 6 giugno 2026",
-  "aggiornato_label": "sabato 6 giugno 2026, ore 07:04",
+  "aggiornato_label": "sabato 6 giugno 2026, ore 08:02",
   "alba": "05:35",
   "tramonto": "20:40",
   "corrente": {
-    "temp": 17.9,
-    "percepita": 19.1,
+    "temp": 19.3,
+    "percepita": 19.6,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 82,
+    "umidita": 62,
     "vento": 2,
-    "raffiche": 17
+    "raffiche": 20
   },
   "giorni": [
     {
@@ -22,7 +22,7 @@
       "tmin": 17,
       "pioggia": 0,
       "pioggia_mm": 0,
-      "raffiche": 35,
+      "raffiche": 32,
       "uv": 7,
       "uv_label": "alto"
     },
