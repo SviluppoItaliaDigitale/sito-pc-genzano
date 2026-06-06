@@ -1,26 +1,22 @@
-{{/* Box homepage "Dossier interattivi" — presenta il dossier più recente con la
-     sua immagine di copertina a tutta larghezza (tema scuro "spazio"), CTA verso
-     il dossier + link a tutti i dossier. Si auto-nasconde se non ci sono dossier.
+{{/* Box homepage "Dossier interattivi" — grafica generica (tema spazio) che
+     rimanda all'HUB /dossier/ (non a un singolo dossier). Si auto-nasconde se
+     non c'e' ancora nessun dossier pubblicato.
      Accessibile: contrasto WCAG AA, focus visibile, rispetta prefers-reduced-motion.
      CSS scoped: /css/dossier-home.css (caricato solo qui, in homepage). */}}
 {{ $dossiers := where site.RegularPages "Section" "dossier" }}
-{{ $latest := index ($dossiers.ByDate.Reverse) 0 }}
-{{ with $latest }}
+{{ if gt (len $dossiers) 0 }}
 <section class="dossier-home" aria-labelledby="dossier-home-tit">
   <div class="container">
-    <a class="dossier-home-card" href="{{ .RelPermalink }}"
-       {{ with .Params.image }}style="--dh-bg:url('{{ . | strings.TrimPrefix "/" | relURL }}')"{{ end }}>
+    <a class="dossier-home-card" href="{{ "dossier/" | relURL }}"
+       style="--dh-bg:url('{{ "images/dossier/dossier-hub.webp" | relURL }}')">
       <span class="dossier-home-overlay" aria-hidden="true"></span>
       <span class="dossier-home-body">
-        <span class="dossier-home-eyebrow"><i class="bi bi-collection-play" aria-hidden="true"></i> Nuovo · Dossier interattivo</span>
-        <span class="dossier-home-tit" id="dossier-home-tit">{{ .Title }}</span>
-        <span class="dossier-home-desc">{{ .Description }}</span>
-        <span class="dossier-home-cta">Apri il dossier <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+        <span class="dossier-home-eyebrow"><i class="bi bi-collection-play" aria-hidden="true"></i> Racconti visivi · Protezione civile</span>
+        <span class="dossier-home-tit" id="dossier-home-tit">Dossier interattivi</span>
+        <span class="dossier-home-desc">Storie da leggere scorrendo, con immagini a tutto schermo, dati che si animano e mappe da esplorare. Per capire i rischi e il nostro territorio. Accessibili e senza servizi di terzi.</span>
+        <span class="dossier-home-cta">Esplora i dossier <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
       </span>
     </a>
-    {{ if gt (len $dossiers) 1 }}
-    <a class="dossier-home-all" href="{{ "dossier/" | relURL }}">Vedi tutti i dossier interattivi <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
-    {{ end }}
   </div>
 </section>
 <link rel="stylesheet" href="{{ "css/dossier-home.css" | relURL }}">
