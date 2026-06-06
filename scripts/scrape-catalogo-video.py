@@ -63,13 +63,33 @@ CANALI = {
         "url": "https://www.youtube.com/@INGVvulcani/videos",
         "tematico_pc": True,
     },
-    # Canali istituzionali che NON hanno canale YouTube ricco al
-    # 2026-05-19 (verificato con yt-dlp): ISPRA (handle 404), Vigili del
-    # Fuoco (channel does not have videos tab), Croce Rossa Italiana (2
-    # video soli), CNR (4 video soli). Pubblicano principalmente su
-    # altri canali (siti istituzionali, social, archivi). Skip per ora.
-    # Saranno reinseriti se si trova un handle pertinente o se cambia
-    # la loro policy editoriale di pubblicazione video.
+    "italiameteo": {
+        "nome": "ItaliaMeteo — Agenzia Nazionale per la Meteorologia e Climatologia",
+        "url": "https://www.youtube.com/@AgenziaItaliaMeteo/videos",
+        "tematico_pc": True,
+    },
+    "cima-foundation": {
+        "nome": "CIMA Research Foundation",
+        "url": "https://www.youtube.com/@CIMAfondazione/videos",
+        "tematico_pc": True,
+    },
+    "cnsas": {
+        "nome": "CNSAS — Corpo Nazionale Soccorso Alpino e Speleologico",
+        "url": "https://www.youtube.com/@CnsasCanaleUfficiale/videos",
+        "tematico_pc": True,
+    },
+    "solarino-sismologo": {
+        "nome": "Stefano Solarino — sismologo INGV (divulgazione sismica)",
+        "url": "https://www.youtube.com/@solarinosismologo/videos",
+        "tematico_pc": True,
+    },
+    # Canali istituzionali/di volontariato NON inseriti perché privi di
+    # un canale YouTube ricco con handle verificato: ISPRA (handle 404),
+    # Vigili del Fuoco (no videos tab), Croce Rossa Italiana (pochi
+    # video), CNR (pochi video), ANPAS e Misericordie (handle non
+    # verificato al 2026-06-06). Sono comunque linkati come fonti in
+    # content/siti-utili/_index.md. Reinserire qui se si verifica un
+    # handle con catalogo video pertinente.
     # Divulgativi qualificati (con filtro lessicale PC, come Geopop)
     "geopop": {
         "nome": "Geopop — divulgazione scientifica",
@@ -104,6 +124,16 @@ CANALI = {
     "rai-news": {
         "nome": "Rai News",
         "url": "https://www.youtube.com/@RaiNews/videos",
+        "tematico_pc": False,
+    },
+    "cmcc": {
+        "nome": "CMCC — Centro Euro-Mediterraneo sui Cambiamenti Climatici",
+        "url": "https://www.youtube.com/@CMCCvideo/videos",
+        "tematico_pc": False,
+    },
+    "dario-bressanini": {
+        "nome": "Dario Bressanini — chimica e scienza dell'alimentazione",
+        "url": "https://www.youtube.com/@dariobressanini/videos",
         "tematico_pc": False,
     },
     # SkyTG24 e TGCom24 erano stati aggiunti (2026-05-19), poi rimossi
