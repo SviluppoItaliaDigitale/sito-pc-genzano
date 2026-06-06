@@ -15,6 +15,6 @@ Sono inoltre **leggeri e rispettosi della privacy**: nessun servizio esterno, ne
 
 ## Un racconto della protezione civile, su misura del nostro territorio
 
-Pochi enti raccontano in forma interattiva temi **così specifici e locali** — il vulcano dei Castelli Romani, i nostri laghi di cratere, i rischi del territorio visti dallo spazio. Lo facciamo perché crediamo che capire il proprio territorio sia il primo gesto di prevenzione.
+Sono **ancora rari** i gruppi di volontariato di protezione civile che raccontano, in forma interattiva e pienamente accessibile, temi **così specifici e locali** del proprio territorio — il vulcano dei Castelli Romani, i nostri laghi di cratere, i rischi visti dallo spazio. Noi lo facciamo perché **capire il proprio territorio è il primo gesto di prevenzione**.
 
 Tutti i contenuti sono **gratuiti** e usano solo immagini con **licenza chiara**, sempre con il loro credito.
