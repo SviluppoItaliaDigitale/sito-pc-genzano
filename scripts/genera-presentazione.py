@@ -970,5 +970,19 @@ if _soffice:
                     os.path.dirname(out), out],
                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     print("PDF:", _pdf if os.path.exists(_pdf) else "(conversione PDF non riuscita)")
+    # Allinea automaticamente la dimensione mostrata nell'Area Download al peso
+    # reale del PDF, così l'etichetta non si disallinea più a ogni rigenerazione.
+    if os.path.exists(_pdf):
+        _label = ("%.1f" % (os.path.getsize(_pdf) / 1048576)).replace(".", ",")
+        _adl = os.path.join(REPO, "content/area-download/_index.md")
+        try:
+            _txt = open(_adl, encoding="utf-8").read()
+            _new = re.sub(r"(presentazione-struttura-sito\.pdf\).*?PDF · )[0-9.,]+( MB)",
+                          lambda m: m.group(1) + _label + m.group(2), _txt)
+            if _new != _txt:
+                open(_adl, "w", encoding="utf-8").write(_new)
+                print("Area download: dimensione PDF allineata →", _label, "MB")
+        except OSError as _e:
+            print("Avviso: dimensione in area-download non aggiornata:", _e)
 else:
     print("LibreOffice assente: converti manualmente il .pptx in PDF.")
