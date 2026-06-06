@@ -1152,24 +1152,31 @@ article:not(.card) .galleria img {
   margin: 0 0.5rem;
   vertical-align: middle;
 }
-/* ── SLIM HEADER — fix overflow orizzontale (29/05/2026) ──
-   Su desktop la barra istituzionale superiore mandava la zona destra
-   (Facile da leggere / Area Volontari / social) oltre il bordo a
-   larghezze 1280-1440px, generando scroll orizzontale su tutta la pagina.
-   Causa: .nav-mobile (link enti) con flex-grow alto comprimeva la
-   .it-header-slim-right-zone forzandola fuori dal contenitore.
-   Fix: consentire il wrap del wrapper e impedire che la zona destra
-   venga spinta fuori. Scoped allo slim header, nessuna nuova struttura. */
+/* ── SLIM HEADER — zona destra SEMPRE visibile a ogni risoluzione (06/06/2026) ──
+   Bug ricorrente: i bottoni "Facile da leggere" / "Area Volontari" sparivano a
+   certe larghezze. Causa: la versione precedente usava flex-wrap:wrap, che a
+   certe larghezze mandava la zona destra su una seconda riga fuori dalla barra
+   alta 48px (clip visivo / percezione "scomparsa"), oppure veniva compressa.
+   Fix definitivo, indipendente dalla larghezza: una sola riga (nowrap), la zona
+   destra NON si comprime mai (flex-shrink:0) e NON va a capo; a cedere spazio è
+   solo la zona enti istituzionali (.nav-mobile), che si restringe e tronca.
+   Così i bottoni restano visibili dai 320px agli schermi ultrawide. */
 .it-header-slim-wrapper-content {
-  flex-wrap: wrap;
-  row-gap: 0.25rem;
-}
-.it-header-slim-wrapper-content .it-header-slim-right-zone {
-  flex-shrink: 0;
-  margin-left: auto;
+  flex-wrap: nowrap;
+  column-gap: 0.25rem;
+  overflow: visible;
 }
 .it-header-slim-wrapper-content .nav-mobile {
   min-width: 0;
+  flex: 0 1 auto;
+  overflow: hidden;
+}
+.it-header-slim-wrapper-content .it-header-slim-right-zone {
+  flex: 0 0 auto;
+  flex-shrink: 0;
+  flex-wrap: nowrap;
+  margin-left: auto;
+  white-space: nowrap;
 }
 /* ── NAVBAR — fit delle 8 voci sui laptop (29/05/2026) ──
    Le 8 voci di primo livello (Home + 5 dropdown + Comunicazioni + Contatti)
