@@ -16,8 +16,11 @@ sezioni:
   - { id: "tendarossa", label: "La Tenda Rossa" }
   - { id: "krasin", label: "Il Krasin" }
   - { id: "andreadoria", label: "Andrea Doria" }
+  - { id: "apollo", label: "Apollo 13" }
   - { id: "satellite", label: "Dallo spazio" }
+  - { id: "messico", label: "Città del Messico" }
   - { id: "oggi", label: "Oggi" }
+  - { id: "timeline", label: "Un secolo" }
   - { id: "fine", label: "Le onde" }
 ---
 
@@ -62,16 +65,43 @@ La notte del 25 luglio 1956 il transatlantico italiano **Andrea Doria**, orgogli
 Stavolta la radio funzionò come doveva: l'**SOS** raggiunse subito le navi vicine, che accorsero in massa. Mentre la nave affondava lentamente, furono tratte in salvo **oltre 1.660 persone** — uno dei più grandi salvataggi in mare della storia. Quarant'anni dopo il Titanic, la lezione era stata imparata.
 {{< /dossier-scena >}}
 
+{{< dossier-scena id="apollo" image="/images/dossier/radio-apollo.webp" alt="La sala di controllo della missione a Houston durante l'emergenza dell'Apollo 13, con i controllori riuniti alle loro postazioni nel 1970" align="left" kicker="Aprile 1970" title="«Houston,<br>abbiamo un problema»" credito="Sala di controllo, Apollo 13, 1970 · NASA · pubblico dominio" >}}
+A 320.000 chilometri dalla Terra, un'esplosione mette fuori uso la navicella dell'**Apollo 13**. Nessun soccorso può raggiungere i tre astronauti: l'unico filo che li tiene in vita è la **radio**.
+
+Per giorni, da Houston, ingegneri e tecnici inventano una dopo l'altra le manovre per riportarli a casa e gliele dettano via radio. Tornarono tutti e tre vivi. Anche nello spazio vale la regola del mare: a salvare è il **collegamento**, e chi resta in ascolto.
+{{< /dossier-scena >}}
+
 {{< dossier-scena id="satellite" image="/images/dossier/radio-satellite.webp" alt="Illustrazione del sistema satellitare di ricerca e soccorso: un satellite in orbita riceve i segnali di emergenza da navi e aerei in difficoltà e li ritrasmette alle stazioni a terra" align="right" kicker="Dal 1982, dallo spazio" title="Un segnale<br>che arriva all'orbita" credito="Concetto del sistema satellitare di ricerca e soccorso · NASA/NOAA · pubblico dominio" >}}
 Oggi chi è in pericolo in mare, in montagna o nel deserto può attivare un piccolo **radiofaro di emergenza**. Il suo segnale non cerca una nave vicina: sale dritto a un **satellite**, che lo rilancia ai centri di soccorso con la posizione esatta.
 
 È il sistema internazionale **Cospas-Sarsat**, attivo dal 1982: ha contribuito a salvare **oltre 50.000 persone** in tutto il mondo. La radio di Marconi, oggi, parla anche con lo spazio.
 {{< /dossier-scena >}}
 
+{{< dossier-scena id="messico" image="/images/dossier/radio-messico.webp" alt="Un palazzo di più piani crollato su se stesso nel terremoto di Città del Messico del 1985, con i soccorritori sulle macerie e alcune persone in strada" align="right" kicker="Città del Messico, 1985" title="Quando il telefono tace,<br>parla la radio" credito="Terremoto di Città del Messico, 1985 · foto USGS · pubblico dominio" >}}
+Il terremoto del 1985 rase al suolo interi quartieri di Città del Messico e **distrusse la rete telefonica**. Per giorni, a tenere i collegamenti tra soccorritori, ospedali e famiglie furono i **radioamatori**, che non dipendevano dai cavi crollati.
+
+È la lezione che si ripete a ogni grande disastro nel mondo: quando le reti commerciali cadono, la radio resta l'**ultima voce** che funziona.
+{{< /dossier-scena >}}
+
 {{< dossier-scena id="oggi" image="/images/dossier/radio-oggi.webp" alt="Una moderna stazione radioamatoriale: ricetrasmettitori, computer con software di collegamento e mappa del mondo, tasti morse e cuffie su un bancone" align="left" kicker="Non è storia antica" title="Quando le reti cadono,<br>la radio resta" credito="Stazione radioamatoriale · foto Ptolusque · CC BY-SA 4.0" >}}
 Nei terremoti dell'**Aquila (2009)**, dell'**Emilia (2012)** e del **Centro Italia (2016)**, quando telefonini ed elettricità sono saltati, a tenere i collegamenti sono stati anche i **radioamatori**: una rete che non dipende da antenne commerciali né dalla corrente di casa.
 
 Per questo il nostro Gruppo cura le **radiocomunicazioni** e forma i propri operatori radio: perché in emergenza la radio è spesso **l'ultima linea che resta in piedi**.
+{{< /dossier-scena >}}
+
+{{< dossier-scena id="timeline" image="/images/dossier/radio-timeline.webp" alt="Un operatore radiotelegrafista al lavoro tra i suoi strumenti a bordo di una nave, in una fotografia dei primi del Novecento" align="top" kicker="Una catena lunga un secolo" title="Un secolo di onde<br>che salvano" credito="Operatore radio a bordo, inizio Novecento · Bain News Service · pubblico dominio" >}}
+Non sono casi isolati. Ogni generazione ha la sua storia di radio che strappa vite al silenzio:
+
+- **1899** — la nave-faro *East Goodwin*, speronata nella nebbia, chiede aiuto via radio: uno dei primissimi soccorsi senza fili.
+- **1912** — il piroscafo *Volturno* in fiamme nell'Atlantico: l'SOS richiama dieci navi, oltre **500 persone** salvate.
+- **1923** — nasce la parola «**Mayday**», la chiamata vocale di soccorso ancora oggi in uso.
+- **1976** — terremoto del *Friuli*: i radioamatori tengono i collegamenti fra i paesi isolati.
+- **1980** — terremoto in *Irpinia*: la mancanza di comunicazioni rallenta i soccorsi e spinge l'Italia a riformare la sua protezione civile.
+- **2004** — *maremoto* dell'Oceano Indiano: i radioamatori coordinano gli aiuti nelle isole tagliate fuori.
+- **2005** — uragano *Katrina*: quando tutto tace, restano le radio dei volontari.
+- **2010** — terremoto di *Haiti*: i collegamenti radio guidano i soccorsi internazionali.
+
+Cambiano gli anni e le tecnologie. Resta una cosa sola: qualcuno che **chiama**, e qualcuno che **ascolta**.
 {{< /dossier-scena >}}
 
 {{< dossier-chiusura id="fine" titolo="Le onde non si fermano mai" cta1="Le telecomunicazioni in emergenza" cta1url="/conoscere/telecomunicazioni-emergenza/" cta2="Diventa volontario" cta2url="/diventa-volontario/" >}}
