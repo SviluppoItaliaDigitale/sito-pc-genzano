@@ -401,7 +401,7 @@ def slide_cruscotto(num):
         put(b, [(t, 12, tc, True)])
     fn = textbox(s, Inches(0.85), Inches(6.25), Inches(11.6), Inches(0.5))
     setrun(fn.paragraphs[0].add_run(),
-           "Fonti: INGV · DPC · ItaliaMeteo · EUMETSAT · ECMWF · Copernicus · ARPA Lazio. Codici colore: Centro Funzionale Regionale del Lazio (ISO 22324).",
+           "Fonti: INGV · DPC · ItaliaMeteo · CIMA · EUMETSAT · ECMWF · Copernicus · ARPA Lazio. Codici colore: Centro Funzionale Regionale del Lazio (ISO 22324).",
            11, GREY, italic=True)
     return s
 
@@ -447,7 +447,7 @@ def slide_rischi(num):
         put(b, [(t, 15, WHITE, True)])
     fn = textbox(s, Inches(0.85), Inches(6.35), Inches(11.6), Inches(0.4))
     setrun(fn.paragraphs[0].add_run(),
-           "Fonti: DPC «Io non rischio» · INGV · ISPRA · CNR.", 11, GREY, italic=True)
+           "Fonti: DPC «Io non rischio» · INGV · ISPRA · CNR-IRPI · ReLUIS.", 11, GREY, italic=True)
     return s
 
 
@@ -678,7 +678,7 @@ content("Conoscere la Protezione Civile", [
     "La scienza del rischio e i Centri di competenza; la dimensione internazionale del sistema.",
     "Il catalogo dei rischi e il vulcanismo dei Colli Albani (Vulcano Laziale).",
     "Le telecomunicazioni in emergenza: capire come funziona la rete radio.",
-], N(), fonti="DPC · INGV · ISPRA · CNR")
+], N(), fonti="DPC · INGV · ISPRA · CNR-IRPI · CIMA · CMCC · ISS")
 
 content("FAQ e Glossario", [
     "Risposte alle domande frequenti dei cittadini.",
