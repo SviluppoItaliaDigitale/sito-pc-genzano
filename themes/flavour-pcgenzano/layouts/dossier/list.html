@@ -28,5 +28,5 @@
     </div>
   </div>
 </div>
-<link rel="stylesheet" href="{{ "css/dossier-list.css" | relURL }}">
+<link rel="stylesheet" href="{{ "css/dossier-list.css" | relURL }}?v={{ readFile "static/css/dossier-list.css" | hash.FNV32a }}">
 {{ end }}

@@ -555,3 +555,32 @@ html.a11y-pause-anim .dossier-hotspot .dossier-punto { opacity: 1; }
 html.a11y-pause-anim .dossier-hotspot.is-revealed .dossier-punto { animation: none !important; }
 html.a11y-pause-anim .dossier-scena__panel.reveal { filter: none !important; }
 html.a11y-pause-anim .dossier-dati__grid.is-in .dossier-dato__num { background: linear-gradient(120deg,var(--blue),var(--accent)); -webkit-background-clip: text; background-clip: text; }
+
+/* ===== v1.4 — timeline a elenco: testo a sinistra (richiesta utente) ===== */
+/* Solo i pannelli "align=top" che contengono un elenco (le timeline) vanno a
+   sinistra: le altre scene "top" con testo breve restano centrate. */
+.dossier-scena[data-align="top"] .dossier-scena__panel:has(ul) { text-align: left; }
+.dossier-scena[data-align="top"] .dossier-scena__panel:has(ul) h2 { text-align: left; }
+.dossier-scena[data-align="top"] .dossier-scena__panel ul {
+  margin: 1.3rem 0; padding-left: 1.25rem; list-style: none;
+}
+.dossier-scena[data-align="top"] .dossier-scena__panel li {
+  position: relative; padding-left: 1.3rem; margin-bottom: .7rem; color: var(--ink-soft);
+}
+.dossier-scena[data-align="top"] .dossier-scena__panel li::before {
+  content: ""; position: absolute; left: 0; top: .62em; width: 7px; height: 7px;
+  border-radius: 50%; background: var(--accent);
+}
+.dossier-scena[data-align="top"] .dossier-scena__panel li strong { color: var(--ink); }
+
+/* timeline: pannello più trasparente (si vede la foto dietro) + ombra sul testo
+   per non perdere leggibilità (richiesta utente) */
+.dossier-scena[data-align="top"] .dossier-scena__panel:has(ul) {
+  background: rgba(8, 18, 38, .40);
+  backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);
+}
+.dossier-scena[data-align="top"] .dossier-scena__panel:has(ul) li,
+.dossier-scena[data-align="top"] .dossier-scena__panel:has(ul) > p,
+.dossier-scena[data-align="top"] .dossier-scena__panel:has(ul) h2 {
+  text-shadow: 0 1px 7px rgba(0, 0, 0, .6);
+}
