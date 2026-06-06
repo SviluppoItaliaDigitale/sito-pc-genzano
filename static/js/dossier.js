@@ -28,6 +28,7 @@
 
   /* 2. Barra di avanzamento lettura --------------------------- */
   var bar = root.querySelector(".dossier-progress > span");
+  var backLink = root.querySelector(".dossier-back");
   /* 3. Navigazione a pallini (sezione attiva) ----------------- */
   var dots = Array.prototype.slice.call(root.querySelectorAll(".dossier-dots a"));
   var sections = dots.map(function (d) { return document.getElementById(d.getAttribute("href").slice(1)); });
@@ -40,6 +41,7 @@
       var st = window.pageYOffset || document.documentElement.scrollTop;
       var docH = document.documentElement.scrollHeight - window.innerHeight;
       if (bar) bar.style.width = (docH > 0 ? (st / docH) * 100 : 0) + "%";
+      if (backLink) backLink.classList.toggle("is-visible", st > window.innerHeight * 0.6);
 
       if (dots.length) {
         var mid = st + window.innerHeight * 0.4, active = 0;

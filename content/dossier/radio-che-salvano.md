@@ -26,7 +26,7 @@ sezioni:
 
 {{< dossier-hero id="inizio" image="/images/dossier/radio-titanic.webp" alt="Il transatlantico Titanic in navigazione in mare aperto nel 1912, con i suoi quattro fumaioli" eyebrow="Dossier · Le telecomunicazioni in emergenza" title="Radio<br>che salvano" sub="Dal Titanic alla Tenda Rossa, fino ai radioamatori di oggi: quando un'onda radio strappa vite al silenzio." credito="RMS Titanic, 1912 · foto F.G.O. Stuart · pubblico dominio" >}}
 
-{{< dossier-scena id="titanic" image="/images/dossier/radio-marconi.webp" alt="L'operatore radio del Titanic seduto di spalle nella sala Marconi, con le cuffie, circondato dall'apparato telegrafico senza fili" align="left" kicker="14 aprile 1912" title="Il Titanic<br>e il primo grande SOS" credito="Sala Marconi del Titanic · foto Francis Browne · pubblico dominio" >}}
+{{< dossier-scena id="titanic" image="/images/dossier/radio-marconi.webp" alt="L'operatore radio del Titanic seduto di spalle nella sala Marconi, con le cuffie, circondato dall'apparato telegrafico senza fili" align="top" kicker="14 aprile 1912" title="Il Titanic<br>e il primo grande SOS" credito="Sala Marconi del Titanic · foto Francis Browne · pubblico dominio" >}}
 Quando il Titanic urtò l'iceberg, due operatori radio — **Jack Phillips** e **Harold Bride** — restarono ai tasti a battere richieste di soccorso: prima il vecchio segnale **CQD**, poi il nuovo **SOS**.
 
 A oltre 90 chilometri di distanza la nave **Carpathia** ricevette quel messaggio, invertì la rotta e corse nella notte. Arrivò troppo tardi per molti, ma in tempo per **oltre 700 persone**. Senza la radio, non si sarebbe salvato nessuno.

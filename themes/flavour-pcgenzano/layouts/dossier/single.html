@@ -1,6 +1,7 @@
 {{ define "main" }}
 <link rel="stylesheet" href="{{ "css/dossier.css" | relURL }}?v={{ readFile "static/css/dossier.css" | hash.FNV32a }}">
 <article class="dossier">
+  <a class="dossier-back" href="{{ "dossier/" | relURL }}" aria-label="Torna a tutti i dossier"><i class="bi bi-arrow-left" aria-hidden="true"></i><span>Tutti i dossier</span></a>
   <div class="dossier-progress" aria-hidden="true"><span></span></div>
   {{ with .Params.sezioni }}
   <nav class="dossier-dots" aria-label="Sezioni del dossier">
@@ -21,6 +22,7 @@
       <button type="button" data-dossier-copy="{{ $u }}" aria-label="Copia il link"><i class="bi bi-link-45deg" aria-hidden="true"></i><span class="dossier-share__copied">Copiato!</span></button>
       <button type="button" data-dossier-share aria-label="Condividi con altre app"><i class="bi bi-three-dots" aria-hidden="true"></i></button>
     </div>
+    <a class="dossier-share__hub" href="{{ "dossier/" | relURL }}"><i class="bi bi-grid-3x3-gap-fill" aria-hidden="true"></i> Esplora tutti i dossier</a>
   </section>
 </article>
 <script src="{{ "js/dossier.js" | relURL }}?v={{ readFile "static/js/dossier.js" | hash.FNV32a }}" defer></script>

@@ -309,7 +309,7 @@ html.a11y-pause-anim .dossier-scrollcue span, html.a11y-pause-anim .dossier-punt
 /* Stampa -------------------------------------------------------- */
 @media print {
   .dossier { background: #fff; color: #000; }
-  .dossier-progress, .dossier-dots, .dossier-scrollcue, .dossier-confronto__handle, .dossier-confronto input, .dossier-share { display: none !important; }
+  .dossier-progress, .dossier-dots, .dossier-scrollcue, .dossier-confronto__handle, .dossier-confronto input, .dossier-share, .dossier-back { display: none !important; }
   .dossier-scena, .dossier-hero { min-height: auto; page-break-inside: avoid; }
 }
 
@@ -583,4 +583,49 @@ html.a11y-pause-anim .dossier-dati__grid.is-in .dossier-dato__num { background: 
 .dossier-scena[data-align="top"] .dossier-scena__panel:has(ul) > p,
 .dossier-scena[data-align="top"] .dossier-scena__panel:has(ul) h2 {
   text-shadow: 0 1px 7px rgba(0, 0, 0, .6);
+}
+
+/* ===== v1.5 — ritorno all'hub dei dossier (richiesta utente) ===== */
+
+/* Pillola flottante "Tutti i dossier": appare quando si scorre oltre l'eroe,
+   così non collide mai con la navbar del sito (che non è sticky). */
+.dossier-back {
+  position: fixed; top: 1rem; left: 1rem; z-index: 70;
+  display: inline-flex; align-items: center; gap: .45rem;
+  padding: .5rem .95rem; border-radius: 999px;
+  background: rgba(8, 18, 38, .74); color: #fff; text-decoration: none;
+  font-size: .92rem; font-weight: 600; line-height: 1;
+  border: 1px solid rgba(255, 255, 255, .28);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .35);
+  opacity: 0; visibility: hidden; transform: translateY(-12px);
+  pointer-events: none;
+  transition: opacity .3s ease, transform .3s ease, visibility .3s, background .2s;
+}
+.dossier-back.is-visible { opacity: 1; visibility: visible; transform: none; pointer-events: auto; }
+.dossier-back:hover, .dossier-back:focus-visible { background: rgba(8, 18, 38, .94); color: #fff; }
+.dossier-back:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; opacity: 1; visibility: visible; transform: none; pointer-events: auto; }
+.dossier-back .bi { font-size: 1.05em; }
+@media (max-width: 575.98px) {
+  .dossier-back { top: .6rem; left: .6rem; padding: .45rem .7rem; font-size: .82rem; }
+  .dossier-back span { display: none; }
+  .dossier-back .bi { font-size: 1.2em; }
+}
+
+/* Link "Esplora tutti i dossier" nel piè della condivisione (sempre accessibile) */
+.dossier-share__hub {
+  display: inline-flex; align-items: center; gap: .5rem;
+  margin-top: 1.8rem; padding: .7rem 1.4rem; border-radius: 999px;
+  background: rgba(255, 255, 255, .08); color: var(--ink); text-decoration: none;
+  font-weight: 600; border: 1px solid rgba(255, 255, 255, .18);
+  transition: background .2s, transform .2s, color .2s;
+}
+.dossier-share__hub:hover { background: var(--accent); color: #0a1730; transform: translateY(-2px); }
+.dossier-share__hub:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+html.a11y-pause-anim .dossier-back { transition: opacity .01s, visibility .01s; }
+html.a11y-pause-anim .dossier-share__hub { transition: none; }
+@media (prefers-reduced-motion: reduce) {
+  .dossier-back { transition: opacity .01s, visibility .01s; }
+  .dossier-share__hub { transition: none; }
 }
