@@ -1,6 +1,6 @@
 ---
 title: "Zanzara tigre e arbovirosi: prevenzione domestica"
-date: 2026-06-09T00:01:00+02:00
+date: 2026-06-09T00:04:00+02:00
 description: "Con l'arrivo del caldo torna il problema delle zanzare tigre e delle malattie che possono trasmettere. La prevenzione inizia a casa, giardino per giardino."
 badge: "Prevenzione"
 priorita: "normale"
@@ -62,6 +62,23 @@ Oltre a ridurre i ristagni:
 - **Spirali e fornelletti** possono aiutare in ambiente aperto ma non sostituiscono le altre misure.
 - **Aria condizionata**: le zanzare sono meno attive in ambienti freschi e secchi.
 
+## Come scegliere un repellente che funziona davvero
+
+Non tutti i prodotti "antizanzara" funzionano. In Europa i repellenti cutanei sono **prodotti biocidi**, regolati dal **Regolamento (UE) 528/2012**. L'**Agenzia europea per le sostanze chimiche (ECHA)** ne valuta e approva sicurezza ed efficacia.
+
+Leggi l'etichetta e cerca uno di questi **principi attivi approvati**:
+- **DEET** (dietiltoluamide) — il più studiato, efficacia elevata.
+- **Icaridina** (picaridina, KBR3023).
+- **IR3535**.
+- **Citriodiolo** (PMD), di origine vegetale.
+
+Pochi accorgimenti fanno la differenza:
+- Rispetta la **concentrazione** e i **tempi di riapplicazione** indicati sulla confezione.
+- Per **neonati, bambini piccoli e donne in gravidanza** alcuni principi attivi hanno limiti d'uso: chiedi al **pediatra** o al **medico**.
+- Diffida dei rimedi a **efficacia non dimostrata**: braccialetti, dispositivi a **ultrasuoni**, app. Anche molti prodotti "naturali" (citronella, geranio, lavanda) durano poco e proteggono meno.
+
+Compra il repellente **a inizio stagione**: sei già protetto alle prime punture, senza doverci pensare nel pieno dell'estate. Per le indicazioni sanitarie il riferimento restano il **Ministero della Salute** e l'**Istituto Superiore di Sanità**.
+
 ## I sintomi a cui fare attenzione
 
 Se nei **giorni dopo una puntura** compaiono:
@@ -99,5 +116,7 @@ La zanzara tigre è arrivata in Italia nel 1990 e in 30 anni ha colonizzato tutt
 - [Ministero della Salute — Piano arbovirosi](https://www.salute.gov.it/)
 - [ASL Roma 6](https://www.aslroma6.it/)
 - [ECDC — Vector-borne diseases](https://www.ecdc.europa.eu/)
+- [ECHA — Regolamento Biocidi UE: elenco delle sostanze attive approvate](https://echa.europa.eu/regulations/biocidal-products-regulation/approval-of-active-substances/list-of-approved-active-substances)
+- [Geopop — Quali antizanzare funzionano meglio (divulgazione scientifica)](https://www.geopop.it/quali-sono-gli-antizanzare-che-funzionano-meglio-tipologie-e-meccanismo-dazione/)
 
 Mezz'ora al mese per controllare giardino e balcone. È la differenza tra un'estate fastidiosa e un'estate sana per il quartiere.

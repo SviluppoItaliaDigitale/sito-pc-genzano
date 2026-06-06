@@ -62,7 +62,8 @@ Per questo è importante parlarne con i vicini. A Genzano di Roma alcuni condomi
 ## Come proteggerti dalle punture
 
 - Indossa **abiti a maniche lunghe** di colore chiaro di giorno.
-- Usa **repellenti** (per esempio DEET o icaridina). Leggi le istruzioni.
+- Usa **repellenti** sulla pelle. Vanno bene i prodotti con scritto **DEET**, **icaridina**, **IR3535** o **citriodiolo**: sono approvati e funzionano. Leggi le istruzioni.
+- **Comprali adesso**, a inizio estate: così sei già pronto. I **braccialetti** e gli apparecchi a **ultrasuoni** non funzionano.
 - Per i bambini piccoli, chiedi al pediatra quale repellente usare.
 - Metti **zanzariere** alle finestre e nelle culle.
 - Tieni l'**aria condizionata** accesa: le zanzare non amano il fresco.
