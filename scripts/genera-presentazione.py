@@ -30,17 +30,34 @@ if not os.path.exists(_TTF):
     _bi.flavor = None
     _bi.save(_TTF)
 
+# Titillium Web (font ufficiale AGID, lo stesso del portale): installa i TTF in
+# ~/.fonts convertendoli dai woff2 del repo, così LibreOffice li incorpora come
+# vettoriali nel PDF. Idempotente: salta se già presenti.
+import subprocess
+_FONTS_DIR = os.path.expanduser("~/.fonts")
+_TW_SRC = os.path.join(REPO, "static/vendor/bootstrap-italia/fonts/Titillium_Web")
+_tw_installed = False
+for _w, _dst in (("regular", "TitilliumWeb-regular.ttf"), ("700", "TitilliumWeb-700.ttf"),
+                 ("italic", "TitilliumWeb-italic.ttf")):
+    _dstp = os.path.join(_FONTS_DIR, _dst)
+    _srcp = os.path.join(_TW_SRC, "titillium-web-v10-latin-ext_latin-%s.woff2" % _w)
+    if not os.path.exists(_dstp) and os.path.exists(_srcp):
+        os.makedirs(_FONTS_DIR, exist_ok=True)
+        from fontTools.ttLib import TTFont as _TWFont
+        _t = _TWFont(_srcp); _t.flavor = None; _t.save(_dstp); _tw_installed = True
+if _tw_installed:
+    subprocess.run(["fc-cache", "-f", _FONTS_DIR], capture_output=True)
+
 PRIMARY = RGBColor(0x00, 0x33, 0x66)   # blu istituzionale
 PRIMARY_D = RGBColor(0x00, 0x1A, 0x33)
 ACCENT  = RGBColor(0xFF, 0xBE, 0x2E)   # giallo accento
 DARK    = RGBColor(0x1A, 0x1A, 0x1A)
 GREY    = RGBColor(0x5A, 0x6B, 0x7B)
 WHITE   = RGBColor(0xFF, 0xFF, 0xFF)
-# Liberation Sans: open source, equivalente metrico di Arial, sempre presente
-# su Linux (pacchetto fonts-liberation). Sostituisce Calibri (Microsoft, NON
-# installato sul sistema) che faceva fallback di LibreOffice → rasterizzava
-# il testo come immagine nei PDF prodotti (bug audit PDF maggio 2026).
-FONT = "Liberation Sans"
+# Titillium Web: font ufficiale AGID/Designers Italia, lo stesso del portale del
+# Gruppo (coerenza di brand). Installato dal blocco sopra come TTF vettoriale,
+# così LibreOffice non lo rasterizza nel PDF (il bug Calibri di maggio 2026).
+FONT = "Titillium Web"
 LOGO = os.path.join(REPO, "static/images/logo-pc-genzano.png")
 
 prs = Presentation()
@@ -231,12 +248,13 @@ def content(title, bullets, num, fonti=None):
         for i, b in enumerate(bullets):
             _card(s, 0.85, y0 + i * (h + gap), 11.6, h, i, b, 'v', icon=ic)
     elif n == 4:                            # griglia 2x2
-        w = 5.71; gap = 0.18; h = (bottom - top - gap) / 2
+        w = 5.71; gap = 0.18; vgap = 0.34; avail = bottom - top
+        h = min(2.02, (avail - vgap) / 2); y0 = top + (avail - (h * 2 + vgap)) / 2
         for i, b in enumerate(bullets):
-            _card(s, 0.85 + (i % 2) * (w + gap), top + (i // 2) * (h + gap), w, h, i, b, 'g', icon=ic)
+            _card(s, 0.85 + (i % 2) * (w + gap), y0 + (i // 2) * (h + vgap), w, h, i, b, 'g', icon=ic)
     else:                                   # 1-3 colonne affiancate, centrate
         gap = 0.2; w = (11.6 - (n - 1) * gap) / n
-        h = min(3.7, bottom - top); y = top + (bottom - top - h) / 2
+        h = min(2.95, bottom - top); y = top + (bottom - top - h) / 2
         for i, b in enumerate(bullets):
             _card(s, 0.85 + i * (w + gap), y, w, h, i, b, 'g', icon=ic)
     if fonti:
@@ -370,11 +388,12 @@ def _card(s, xi, yi, wi, hi, idx, text, mode, icon=None):
         p = tb.paragraphs[0]; p.alignment = PP_ALIGN.LEFT; p.line_spacing = 1.1
         setrun(p.add_run(), text, 15.5, DARK)
     else:
-        bsz, bcx, bcy = 0.66, xi + wi / 2, yi + 0.62
-        tb = textbox(s, Inches(xi + 0.2), Inches(yi + 1.2), Inches(wi - 0.4),
-                     Inches(hi - 1.4), anchor=MSO_ANCHOR.TOP)
-        p = tb.paragraphs[0]; p.alignment = PP_ALIGN.CENTER; p.line_spacing = 1.12
-        setrun(p.add_run(), text, 14, DARK)
+        bsz, bcx, bcy = 0.66, xi + wi / 2, yi + hi * 0.36
+        ty = yi + hi * 0.36 + bsz / 2 + 0.08
+        tb = textbox(s, Inches(xi + 0.25), Inches(ty), Inches(wi - 0.5),
+                     Inches(yi + hi - 0.15 - ty), anchor=MSO_ANCHOR.MIDDLE)
+        p = tb.paragraphs[0]; p.alignment = PP_ALIGN.CENTER; p.line_spacing = 1.18
+        setrun(p.add_run(), text, 15, DARK)
     badge = shp(s, MSO_SHAPE.OVAL, Inches(bcx - bsz / 2), Inches(bcy - bsz / 2),
                 Inches(bsz), Inches(bsz), c)
     grad_fill(badge, c, _darken(c, 0.6), ang=90)
