@@ -142,16 +142,28 @@ RedirectMatch 410 ^/areefiltrate\.html$
   Header always set Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; img-src 'self' data: blob: https:; font-src 'self' data: https://cdn.jsdelivr.net; connect-src 'self' https://raw.githubusercontent.com https://api.github.com https://*.openstreetmap.org https://*.tile.openstreetmap.org https://webservices.ingv.it https://*.ingv.it https://radar-api.protezionecivile.it https://*.protezionecivile.it https://api.open-meteo.com https://marine-api.open-meteo.com https://air-quality-api.open-meteo.com https://archive-api.open-meteo.com https://*.arpalazio.gov.it https://eccharts.ecmwf.int https://rapidmapping.emergency.copernicus.eu https://maps.mistralportal.it https://meteohub.agenziaitaliameteo.it https://gc.zgo.at https://apicuollo.goatcounter.com; frame-src https://embed.windy.com https://www.windy.com https://*.ingv.it https://terremoti.ingv.it https://www.youtube.com https://www.youtube-nocookie.com https://*.protezionecivile.gov.it https://*.regione.lazio.it https://mappe.protezionecivile.gov.it; frame-ancestors 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests"
 </IfModule>
 
-# Cache statica — asset immutabili
+# Cache — richiesta utente (06/06/2026): "ogni modifica online subito".
+# HTML/CSS/JS NON in cache (sempre rivalidati: ogni modifica appare subito,
+# con 304 se invariati → resta comunque veloce). Le immagini/PDF, pesanti e che
+# cambiano insieme al nome file, restano in cache a lungo per le prestazioni.
 <IfModule mod_expires.c>
   ExpiresActive On
-  ExpiresByType text/css "access plus 1 month"
-  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 0 seconds"
+  ExpiresByType application/javascript "access plus 0 seconds"
+  ExpiresByType text/javascript "access plus 0 seconds"
   ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/svg+xml "access plus 1 year"
   ExpiresByType image/x-icon "access plus 1 year"
   ExpiresByType application/pdf "access plus 1 month"
-  ExpiresByType text/html "access plus 10 minutes"
+</IfModule>
+<IfModule mod_headers.c>
+  # Forza la rivalidazione di pagine e codice a ogni visita
+  <FilesMatch "\.(html|css|js)$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
 </IfModule>
 
 # Compressione gzip

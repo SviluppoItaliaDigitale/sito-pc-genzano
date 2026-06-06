@@ -1,5 +1,5 @@
 {{ define "main" }}
-<link rel="stylesheet" href="{{ "css/dossier.css" | relURL }}">
+<link rel="stylesheet" href="{{ "css/dossier.css" | relURL }}?v={{ readFile "static/css/dossier.css" | hash.FNV32a }}">
 <article class="dossier">
   <div class="dossier-progress" aria-hidden="true"><span></span></div>
   {{ with .Params.sezioni }}
@@ -23,5 +23,5 @@
     </div>
   </section>
 </article>
-<script src="{{ "js/dossier.js" | relURL }}" defer></script>
+<script src="{{ "js/dossier.js" | relURL }}?v={{ readFile "static/js/dossier.js" | hash.FNV32a }}" defer></script>
 {{ end }}

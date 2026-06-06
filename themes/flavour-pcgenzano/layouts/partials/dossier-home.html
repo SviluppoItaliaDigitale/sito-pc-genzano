@@ -19,5 +19,5 @@
     </a>
   </div>
 </section>
-<link rel="stylesheet" href="{{ "css/dossier-home.css" | relURL }}">
+<link rel="stylesheet" href="{{ "css/dossier-home.css" | relURL }}?v={{ readFile "static/css/dossier-home.css" | hash.FNV32a }}">
 {{ end }}
