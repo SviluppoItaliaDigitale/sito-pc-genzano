@@ -22,18 +22,18 @@ sezioni:
 {{< dossier-scena id="spazio" image="/images/dossier/heat-europe.webp" alt="Mappa dell'Europa con le temperature dell'aria durante un'ondata di calore: Italia, Francia e Spagna colorate di rosso intenso su sfondo bianco" align="left" kicker="Il caldo si misura dall'alto" title="Quando il continente<br>diventa rosso" credito="NASA Earth Observatory (J. Stevens) · pubblico dominio" >}}
 Il caldo non si vede a occhio nudo, ma i satelliti lo **misurano**: temperatura del suolo, dell'aria, del mare. Quando l'Italia diventa **rossa** su queste mappe, è il segnale che un'ondata di calore è in arrivo.
 
-Sono gli stessi dati che alimentano i **bollettini del Ministero della Salute**, emessi ogni giorno d'estate per le città — **Roma compresa** — con un semaforo del rischio per la salute.
+Sono gli stessi dati che alimentano i **bollettini del Ministero della Salute**, emessi ogni giorno d'estate per le città — **Roma compresa** — con un semaforo del rischio per la salute. Lo stesso tipo di dati che mostriamo nel nostro [cruscotto del territorio](/cruscotto/).
 {{< /dossier-scena >}}
 
 {{< dossier-dati id="numeri" >}}
 {{< dossier-dato to="40" unita=" °C" label="Le temperature che l'estate può superare **anche a Genzano**" >}}
-{{< dossier-dato to="70" unita=" mila" label="Morti in più in Europa nell'estate **2003**, la più calda mai registrata" >}}
-{{< dossier-dato to="75" unita=" anni" label="Over: l'età **più esposta**, soprattutto per chi vive solo" >}}
+{{< dossier-dato to="70" unita=" mila +" label="Morti in più in Europa nell'estate **2003**, la più calda mai registrata" >}}
+{{< dossier-dato to="65" unita=" anni" label="Over: la fascia **più a rischio** di caldo, soprattutto chi vive solo" >}}
 {{< dossier-dato to="3" label="Il livello **massimo** del bollettino caldo del Ministero della Salute" >}}
 {{< /dossier-dati >}}
 
 {{< dossier-scena id="y2003" image="/images/dossier/heat-2003.webp" alt="Mappa dell'Europa che mostra l'anomalia di temperatura nell'estate 2003: vaste aree di Francia e Italia in rosso scuro, fino a oltre 10 gradi sopra la media" align="right" kicker="L'estate che cambiò tutto" title="2003: il caldo<br>fa più paura del freddo" credito="NASA · dati MODIS (R. Stöckli, R. Simmon) · pubblico dominio" >}}
-L'estate del **2003** fu la più calda mai registrata in Europa: le stime parlano di **circa 70.000 morti in più**, soprattutto **anziani soli** in città. Su questa mappa il rosso scuro segna dove la temperatura superò di **oltre 10 gradi** la media.
+L'estate del **2003** fu la più calda mai registrata in Europa: le stime parlano di **circa 70.000 morti in più**, soprattutto **anziani soli** in città. Con l'età il corpo percepisce meno la sete e suda di meno: si disidrata senza accorgersene. Su questa mappa il rosso scuro segna dove la temperatura superò di **oltre 10 gradi** la media.
 
 Da quella tragedia nacquero i **piani caldo**: oggi il Ministero della Salute sorveglia le città giorno per giorno. Il caldo è diventato un rischio che si **prevede e si previene**.
 {{< /dossier-scena >}}
