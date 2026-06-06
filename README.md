@@ -183,6 +183,14 @@ Sezione che spiega la protezione civile **come materia** (non come servizio oper
 
 Ogni fatto normativo è verificato su Normattiva; ogni pagina ha un disclaimer divulgativo e rimanda alle pagine operative. Scopribile anche dall'**assistente virtuale** (`/assistente/`, ramo "Conoscere la Protezione Civile") e dalla mappa del sito.
 
+### Dossier interattivi (`/dossier/`) — racconti visivi scrollytelling (giugno 2026)
+
+Racconti visivi immersivi: storie che si leggono scorrendo, con immagini a tutto schermo, dati che si animano, slider di confronto e mappe da esplorare con un tocco. Qualità da rivista digitale ma **interamente web-native, accessibile (WCAG 2.2 AA) e auto-ospitata** — niente Adobe, niente flipbook di terzi, niente cookie.
+
+È un **"motore" riusabile**: sezione Hugo `dossier` + layout `single`/`list` + 9 shortcode `dossier-*` (`dossier-hero`, `dossier-scena`, `dossier-dati`/`dossier-dato`, `dossier-confronto`, `dossier-hotspot`/`dossier-punto`, `dossier-chiusura`, `dossier-fonti`) + `static/css/dossier.css` + `static/js/dossier.js`. **Ogni nuovo dossier è un singolo file** in `content/dossier/<slug>.md`. Voce di menu sotto **Risorse** (`hugo.toml` + `site-chrome.js`), box in homepage con il dossier più recente. Tutte le animazioni rispettano `prefers-reduced-motion` e il toggle "Pausa animazioni" del toolbar. Immagini solo con licenza chiara (NASA PD, Copernicus/ESA CC BY) e credito onesto.
+
+Pilota: **"La Terra vista dallo spazio"** — i satelliti che osservano la Terra al servizio della protezione civile (Copernicus, EFFIS, Copernicus EMS, CAMS, i Castelli Romani dall'orbita, la costellazione italiana IRIDE). Guida operativa in `manuale/parte-39-dossier-interattivi.md`.
+
 ### File in `archetypes/` (template Hugo)
 
 | File | A cosa serve |

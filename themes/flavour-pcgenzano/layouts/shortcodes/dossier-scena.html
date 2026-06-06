@@ -1,0 +1,10 @@
+{{- $img := .Get "image" | strings.TrimPrefix "/" | relURL -}}
+<section class="dossier-scena" id="{{ .Get "id" }}" data-align="{{ .Get "align" | default "left" }}">
+  <div class="dossier-scena__bg" style="background-image:url('{{ $img }}')" role="img" aria-label="{{ .Get "alt" }}"></div>
+  <div class="dossier-scena__panel reveal">
+    {{- with .Get "kicker" }}<span class="dossier-scena__kicker">{{ . }}</span>{{ end -}}
+    {{- with .Get "title" }}<h2>{{ . | safeHTML }}</h2>{{ end -}}
+    {{ .Inner | markdownify }}
+  </div>
+  {{- with .Get "credito" }}<p class="dossier-scena__credit">{{ . }}</p>{{ end -}}
+</section>

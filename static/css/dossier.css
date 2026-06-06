@@ -1,0 +1,557 @@
+/* ============================================================
+   DOSSIER INTERATTIVI — sistema grafico immersivo v1.0
+   Riviste/dossier scrollytelling del sito PC Genzano.
+   Tema scuro "spazio", full-bleed, accessibile (WCAG 2.2 AA),
+   mobile-first. Rispetta prefers-reduced-motion e la classe
+   html.a11y-pause-anim del toolbar di accessibilità del sito.
+   ============================================================ */
+
+/* full-bleed: neutralizza eventuale padding del <main> del tema */
+main:has(> .dossier) { padding: 0; max-width: none; }
+
+.dossier {
+  --ink: #f4f8ff;
+  --ink-soft: #c3d3ea;
+  --accent: #ffbe2e;
+  --blue: #4ea3ff;
+  --panel: rgba(8, 18, 38, 0.74);
+  --panel-solid: #0a1730;
+  --space-0: #05080f;
+  --space-1: #0a1124;
+  --maxw: 1180px;
+  color: var(--ink);
+  background: var(--space-0);
+  font-family: "Titillium Web", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
+  line-height: 1.6;
+  overflow-x: clip;
+}
+.dossier * { box-sizing: border-box; }
+.dossier a { color: var(--accent); }
+
+/* Barra di avanzamento lettura ---------------------------------- */
+.dossier-progress {
+  position: fixed; inset: 0 0 auto 0; height: 4px; z-index: 1050;
+  background: transparent;
+}
+.dossier-progress > span {
+  display: block; height: 100%; width: 0;
+  background: linear-gradient(90deg, var(--blue), var(--accent));
+  box-shadow: 0 0 12px rgba(78, 163, 255, .6);
+}
+
+/* Navigazione a pallini (desktop) ------------------------------- */
+.dossier-dots {
+  position: fixed; right: 18px; top: 50%; transform: translateY(-50%);
+  z-index: 1040; display: flex; flex-direction: column; gap: 14px;
+}
+.dossier-dots a {
+  width: 13px; height: 13px; border-radius: 50%;
+  background: rgba(255, 255, 255, .28); border: 2px solid transparent;
+  transition: transform .2s, background .2s; position: relative;
+}
+.dossier-dots a.is-active { background: var(--accent); transform: scale(1.25); }
+.dossier-dots a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.dossier-dots a::after {
+  content: attr(data-label); position: absolute; right: 24px; top: 50%;
+  transform: translateY(-50%); white-space: nowrap; font-size: .78rem;
+  background: var(--panel-solid); color: var(--ink); padding: 4px 10px;
+  border-radius: 6px; opacity: 0; pointer-events: none; transition: opacity .2s;
+}
+.dossier-dots a:hover::after, .dossier-dots a:focus-visible::after { opacity: 1; }
+@media (max-width: 900px) { .dossier-dots { display: none; } }
+
+/* HERO ---------------------------------------------------------- */
+.dossier-hero {
+  position: relative; min-height: calc(100svh - 178px); display: flex; align-items: flex-end;
+  overflow: hidden; isolation: isolate;
+}
+@media (max-width: 992px) { .dossier-hero { min-height: calc(100svh - 130px); } }
+.dossier-hero__bg {
+  position: absolute; inset: -8% 0; background-size: cover; background-position: center;
+  z-index: -2; will-change: transform;
+}
+.dossier-hero::after {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: radial-gradient(120% 90% at 70% 20%, transparent 30%, rgba(5, 8, 15, .55) 75%, var(--space-0) 100%),
+              linear-gradient(0deg, var(--space-0) 2%, rgba(5, 8, 15, .2) 40%, transparent 70%);
+}
+.dossier-hero__inner { max-width: var(--maxw); margin: 0 auto; width: 100%; padding: 0 6vw 5.5vh; }
+.dossier-hero__eyebrow {
+  display: inline-flex; align-items: center; gap: 9px; letter-spacing: .14em;
+  text-transform: uppercase; font-weight: 700; font-size: .82rem; color: var(--accent);
+  margin-bottom: 1.1rem;
+}
+.dossier-hero__eyebrow::before {
+  content: ""; width: 34px; height: 2px; background: var(--accent);
+}
+.dossier-hero h1 {
+  font-size: clamp(2.6rem, 7vw, 5.4rem); line-height: 1.02; font-weight: 700;
+  margin: 0 0 1.1rem; letter-spacing: -.02em; text-wrap: balance;
+  text-shadow: 0 4px 40px rgba(0, 0, 0, .5);
+}
+.dossier-hero__sub {
+  font-size: clamp(1.05rem, 2.2vw, 1.5rem); color: var(--ink-soft);
+  max-width: 40ch; font-weight: 300;
+}
+.dossier-hero__credit {
+  position: absolute; right: 14px; bottom: 10px; z-index: 2;
+  font-size: .72rem; color: rgba(255, 255, 255, .6);
+  background: rgba(0, 0, 0, .35); padding: 3px 9px; border-radius: 5px;
+}
+.dossier-scrollcue {
+  position: absolute; left: 50%; bottom: 22px; transform: translateX(-50%); z-index: 2;
+  color: var(--ink-soft); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+}
+.dossier-scrollcue::after {
+  content: ""; width: 22px; height: 34px; border: 2px solid rgba(255, 255, 255, .55);
+  border-radius: 12px; position: relative;
+}
+.dossier-scrollcue span {
+  position: absolute; bottom: 8px; left: 50%; width: 4px; height: 8px; border-radius: 2px;
+  background: var(--accent); transform: translateX(-50%); animation: dossierScroll 1.6s ease-in-out infinite;
+}
+@keyframes dossierScroll { 0%, 100% { opacity: 0; transform: translate(-50%, -6px); } 50% { opacity: 1; transform: translate(-50%, 4px); } }
+
+/* SCENE (sezioni scrollytelling) -------------------------------- */
+.dossier-scena {
+  position: relative; min-height: 100svh; display: flex; align-items: center;
+  padding: 12vh 6vw; overflow: hidden; isolation: isolate;
+}
+.dossier-scena__bg {
+  position: absolute; inset: -6% 0; background-size: cover; background-position: center; z-index: -2;
+  will-change: transform;
+}
+.dossier-scena::after {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(90deg, rgba(5, 8, 15, .9) 0%, rgba(5, 8, 15, .55) 45%, rgba(5, 8, 15, .15) 100%);
+}
+.dossier-scena[data-align="right"]::after {
+  background: linear-gradient(270deg, rgba(5, 8, 15, .9) 0%, rgba(5, 8, 15, .55) 45%, rgba(5, 8, 15, .15) 100%);
+}
+/* testo in alto: l'immagine resta grande e i soggetti al centro/in basso restano visibili */
+.dossier-scena[data-align="top"] { align-items: flex-start; justify-content: center; }
+.dossier-scena[data-align="top"]::after {
+  background: linear-gradient(180deg, rgba(5, 8, 15, .92) 6%, rgba(5, 8, 15, .5) 38%, rgba(5, 8, 15, .12) 64%, transparent 100%);
+}
+.dossier-scena[data-align="top"] .dossier-scena__panel {
+  max-width: 860px; text-align: center; margin-top: 3vh;
+  border-left: none; border-top: 4px solid var(--accent);
+  background: rgba(8, 18, 38, .5);
+}
+.dossier-scena__panel {
+  max-width: 540px; width: 100%; background: var(--panel);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, .1); border-left: 4px solid var(--accent);
+  border-radius: 14px; padding: clamp(1.5rem, 3vw, 2.6rem);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .45);
+}
+.dossier-scena[data-align="right"] { justify-content: flex-end; }
+.dossier-scena__kicker {
+  color: var(--accent); font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  font-size: .78rem; margin-bottom: .7rem; display: block;
+}
+.dossier-scena__panel h2 {
+  font-size: clamp(1.7rem, 3.4vw, 2.7rem); line-height: 1.08; font-weight: 700;
+  margin: 0 0 1rem; letter-spacing: -.01em;
+}
+.dossier-scena__panel p { color: var(--ink-soft); margin: 0 0 1rem; font-size: 1.06rem; }
+.dossier-scena__panel p:last-child { margin-bottom: 0; }
+.dossier-scena__panel strong { color: var(--ink); }
+.dossier-scena__credit {
+  position: absolute; right: 12px; bottom: 10px; font-size: .7rem;
+  color: rgba(255, 255, 255, .55); background: rgba(0, 0, 0, .4);
+  padding: 3px 8px; border-radius: 5px; max-width: 60vw;
+}
+
+/* DATI / numeri animati ----------------------------------------- */
+.dossier-dati {
+  background: linear-gradient(180deg, var(--space-1), var(--space-0));
+  padding: clamp(3.5rem, 9vh, 7rem) 6vw; border-top: 1px solid rgba(255, 255, 255, .06);
+  border-bottom: 1px solid rgba(255, 255, 255, .06);
+}
+.dossier-dati__grid {
+  max-width: var(--maxw); margin: 0 auto; display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem;
+}
+.dossier-dato { text-align: center; }
+.dossier-dato__num {
+  font-size: clamp(2.8rem, 6vw, 4.4rem); font-weight: 700; line-height: 1;
+  background: linear-gradient(120deg, var(--blue), var(--accent));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.dossier-dato__num small { font-size: .42em; -webkit-text-fill-color: var(--ink-soft); margin-left: 4px; }
+.dossier-dato__label { color: var(--ink-soft); margin-top: .6rem; font-size: 1rem; max-width: 26ch; margin-inline: auto; }
+
+/* CONFRONTO (slider prima/dopo o satellite/annotato) ------------ */
+.dossier-confronto-wrap {
+  padding: clamp(3.5rem, 9vh, 7rem) 6vw; background: var(--space-0);
+}
+.dossier-confronto-head { max-width: var(--maxw); margin: 0 auto 1.8rem; text-align: center; }
+.dossier-confronto-head h2 { font-size: clamp(1.7rem, 3.4vw, 2.6rem); margin: 0 0 .6rem; }
+.dossier-confronto-head p { color: var(--ink-soft); margin: 0 auto; max-width: 56ch; }
+.dossier-confronto {
+  position: relative; max-width: 960px; margin: 0 auto; aspect-ratio: 16 / 10;
+  border-radius: 14px; overflow: hidden; box-shadow: 0 24px 60px rgba(0, 0, 0, .5);
+  --pos: 50%; touch-action: pan-y;
+}
+.dossier-confronto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; user-select: none; -webkit-user-drag: none; }
+.dossier-confronto__top { clip-path: inset(0 0 0 var(--pos)); }
+.dossier-confronto__lab {
+  position: absolute; top: 12px; z-index: 3; font-size: .8rem; font-weight: 600;
+  background: rgba(5, 8, 15, .72); color: var(--ink); padding: 5px 11px; border-radius: 20px;
+}
+.dossier-confronto__lab.is-left { left: 12px; }
+.dossier-confronto__lab.is-right { right: 12px; }
+.dossier-confronto__handle {
+  position: absolute; top: 0; bottom: 0; left: var(--pos); width: 3px; z-index: 4;
+  background: var(--accent); transform: translateX(-50%);
+}
+.dossier-confronto__handle::after {
+  content: "\2194"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: #0a1730;
+  display: grid; place-items: center; font-size: 1.3rem; font-weight: 700;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, .5);
+}
+.dossier-confronto input[type="range"] {
+  position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; z-index: 5;
+}
+.dossier-confronto input[type="range"]:focus-visible ~ .dossier-confronto__handle::after { outline: 3px solid #fff; outline-offset: 3px; }
+.dossier-confronto-cap { max-width: 960px; margin: .9rem auto 0; text-align: center; color: var(--ink-soft); font-size: .9rem; }
+
+/* HOTSPOT (immagine con punti cliccabili) ----------------------- */
+.dossier-hotspot-wrap { padding: clamp(3.5rem, 9vh, 7rem) 6vw; background: linear-gradient(180deg, var(--space-0), var(--space-1)); text-align: center; }
+.dossier-hotspot-head { max-width: var(--maxw); margin: 0 auto 1.8rem; text-align: center; }
+.dossier-hotspot-head h2 { font-size: clamp(1.7rem, 3.4vw, 2.6rem); margin: 0 0 .6rem; }
+.dossier-hotspot-head p { color: var(--ink-soft); margin: 0 auto; max-width: 56ch; }
+.dossier-hotspot {
+  position: relative; display: inline-block; vertical-align: top; max-width: 100%;
+  /* niente overflow:hidden qui: i popover devono poter uscire dai bordi dell'immagine */
+}
+.dossier-hotspot > img {
+  display: block; max-width: min(1600px, 96vw); max-height: 90vh; width: auto; height: auto;
+  border-radius: 14px; box-shadow: 0 24px 60px rgba(0, 0, 0, .5);
+}
+.dossier-punto {
+  position: absolute; width: 30px; height: 30px; border-radius: 50%; transform: translate(-50%, -50%);
+  background: var(--accent); border: 3px solid #fff; color: #0a1730; font-weight: 700;
+  cursor: pointer; z-index: 3; box-shadow: 0 0 0 0 rgba(255, 190, 46, .6); animation: dossierPulse 2.2s infinite;
+}
+@keyframes dossierPulse { 0% { box-shadow: 0 0 0 0 rgba(255, 190, 46, .55); } 70% { box-shadow: 0 0 0 16px rgba(255, 190, 46, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 190, 46, 0); } }
+.dossier-punto:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+.dossier-punto__pop {
+  position: absolute; bottom: 140%; left: 50%; transform: translateX(-50%);
+  width: max(220px, 60vw); max-width: 300px; background: var(--panel-solid); color: var(--ink);
+  border: 1px solid rgba(255, 255, 255, .14); border-radius: 10px; padding: 12px 14px;
+  font-weight: 400; font-size: .92rem; line-height: 1.45; text-align: left;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, .55); display: none; z-index: 5;
+}
+.dossier-punto[aria-expanded="true"] .dossier-punto__pop { display: block; }
+.dossier-punto[aria-expanded="true"] { z-index: 10; }
+.dossier-punto__pop-t { color: var(--accent); display: block; margin-bottom: 4px; font-weight: 700; }
+.dossier-punto__pop strong { color: var(--ink); }
+.dossier-punto__pop p { margin: 0; }
+
+/* CHIUSURA / CTA ------------------------------------------------ */
+.dossier-chiusura {
+  position: relative; padding: clamp(4rem, 12vh, 9rem) 6vw; text-align: center;
+  background: radial-gradient(120% 100% at 50% 0%, #0e2350, var(--space-0) 70%);
+}
+.dossier-chiusura h2 { font-size: clamp(1.9rem, 4vw, 3rem); margin: 0 auto 1rem; max-width: 18ch; }
+.dossier-chiusura p { color: var(--ink-soft); max-width: 56ch; margin: 0 auto; font-size: 1.1rem; }
+.dossier-sep { width: 90px; height: 3px; margin: 2.4rem auto; border-radius: 2px; background: linear-gradient(90deg, transparent, var(--accent), transparent); }
+.dossier-cta { display: flex; flex-wrap: wrap; gap: .9rem; justify-content: center; }
+.dossier-cta a {
+  display: inline-flex; align-items: center; gap: 8px; padding: .8rem 1.5rem; border-radius: 30px;
+  font-weight: 700; text-decoration: none; transition: transform .2s;
+}
+.dossier-cta a.is-primary { background: var(--accent); color: #0a1730; }
+.dossier-cta a.is-ghost { background: transparent; color: var(--ink); border: 2px solid rgba(255, 255, 255, .35); }
+.dossier-cta a:hover { transform: translateY(-2px); }
+.dossier-cta a:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+/* FONTI / crediti ----------------------------------------------- */
+.dossier-fonti {
+  background: var(--space-0); color: var(--ink-soft); padding: 3rem 6vw 4rem;
+  font-size: .86rem; border-top: 1px solid rgba(255, 255, 255, .08);
+}
+.dossier-fonti__inner { max-width: var(--maxw); margin: 0 auto; }
+.dossier-fonti h2 { font-size: 1rem; text-transform: uppercase; letter-spacing: .1em; color: var(--ink); margin: 0 0 1rem; }
+.dossier-fonti ul { list-style: none; padding: 0; margin: 0; display: grid; gap: .5rem; }
+.dossier-fonti li { padding-left: 1.1rem; position: relative; }
+.dossier-fonti li::before { content: "\2022"; color: var(--accent); position: absolute; left: 0; }
+
+/* Animazioni di comparsa ---------------------------------------- */
+.dossier .reveal { opacity: 0; transform: translateY(34px); transition: opacity .7s ease, transform .7s ease; }
+.dossier .reveal.is-in { opacity: 1; transform: none; }
+.dossier .reveal.d1 { transition-delay: .12s; }
+.dossier .reveal.d2 { transition-delay: .24s; }
+
+/* Riduzione movimento / pausa animazioni del toolbar a11y ------- */
+@media (prefers-reduced-motion: reduce) {
+  .dossier .reveal { opacity: 1; transform: none; transition: none; }
+  .dossier-hero__bg { will-change: auto; }
+  .dossier-scrollcue span, .dossier-punto { animation: none; }
+}
+html.a11y-pause-anim .dossier .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+html.a11y-pause-anim .dossier-scrollcue span, html.a11y-pause-anim .dossier-punto { animation: none !important; }
+
+/* Mobile -------------------------------------------------------- */
+@media (max-width: 700px) {
+  .dossier-scena { padding: 9vh 5vw; align-items: flex-end; }
+  .dossier-scena::after, .dossier-scena[data-align="right"]::after {
+    background: linear-gradient(0deg, rgba(5, 8, 15, .94) 8%, rgba(5, 8, 15, .55) 55%, rgba(5, 8, 15, .15) 100%);
+  }
+  .dossier-scena__panel { max-width: 100%; }
+  .dossier-hero__inner { padding-bottom: 12vh; }
+}
+
+/* Stampa -------------------------------------------------------- */
+@media print {
+  .dossier { background: #fff; color: #000; }
+  .dossier-progress, .dossier-dots, .dossier-scrollcue, .dossier-confronto__handle, .dossier-confronto input, .dossier-share { display: none !important; }
+  .dossier-scena, .dossier-hero { min-height: auto; page-break-inside: avoid; }
+}
+
+/* ===== v1.1 — più movimento, hotspot flip, condivisione ===== */
+
+/* Ken Burns lento sull'eroe */
+@keyframes dossierKenBurns { from { transform: scale(1.03); } to { transform: scale(1.13); } }
+.dossier-hero__bg { animation: dossierKenBurns 32s ease-out forwards; }
+
+/* micro-interazione sui numeri */
+.dossier-dato { transition: transform .25s ease; }
+.dossier-dato:hover { transform: translateY(-5px); }
+
+/* hotspot: popover capovolto verso il basso quando è troppo in alto */
+.dossier-punto.is-below .dossier-punto__pop { bottom: auto; top: 140%; }
+.dossier-punto.is-left-pop .dossier-punto__pop { left: auto; right: 0; transform: none; }
+.dossier-punto.is-right-pop .dossier-punto__pop { left: 0; right: auto; transform: none; }
+
+/* condivisione */
+.dossier-share { background: var(--space-0); text-align: center; padding: 0 6vw 3.6rem; }
+.dossier-share__t { color: var(--ink-soft); margin: 0 0 1rem; font-size: 1.05rem; }
+.dossier-share__row { display: inline-flex; gap: .7rem; flex-wrap: wrap; justify-content: center; }
+.dossier-share__row a, .dossier-share__row button {
+  width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center;
+  background: rgba(255, 255, 255, .08); color: var(--ink); border: 1px solid rgba(255, 255, 255, .14);
+  font-size: 1.3rem; cursor: pointer; text-decoration: none; position: relative;
+  transition: transform .2s, background .2s, color .2s;
+}
+.dossier-share__row a:hover, .dossier-share__row button:hover { transform: translateY(-3px); background: var(--accent); color: #0a1730; }
+.dossier-share__row a:focus-visible, .dossier-share__row button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.dossier-share__copied {
+  position: absolute; bottom: 122%; left: 50%; transform: translateX(-50%); background: var(--accent);
+  color: #0a1730; font-size: .74rem; font-weight: 700; padding: 3px 9px; border-radius: 6px;
+  white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity .2s;
+}
+.dossier-share__row button.is-copied .dossier-share__copied { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .dossier-hero__bg { animation: none; }
+  .dossier-scena__bg { transform: none !important; }
+}
+html.a11y-pause-anim .dossier-hero__bg { animation: none; }
+html.a11y-pause-anim .dossier-scena__bg { transform: none !important; }
+
+/* ===== v1.2 — TANTE animazioni (tutte disattivabili da reduced-motion / toolbar) ===== */
+
+@keyframes dossierFadeIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+@keyframes dossierHeroIn { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+@keyframes dossierTwinkle { from { opacity: .3; } to { opacity: .85; } }
+@keyframes dossierFloat { from { transform: translateY(0); } to { transform: translateY(-14px); } }
+@keyframes dossierHandlePulse { 0%,100% { box-shadow: 0 4px 18px rgba(0,0,0,.5); } 50% { box-shadow: 0 4px 18px rgba(0,0,0,.5), 0 0 0 10px rgba(255,190,46,.18); } }
+@keyframes dossierLineGlow { 0%,100% { opacity: .55; } 50% { opacity: 1; } }
+
+/* 1. Ingresso animato dell'eroe (al caricamento) */
+.dossier-hero__eyebrow { animation: dossierHeroIn .7s both .15s; }
+.dossier-hero h1 { animation: dossierHeroIn .85s both .3s; }
+.dossier-hero__sub { animation: dossierHeroIn .85s both .5s; }
+.dossier-hero__inner > .dossier-hero__eyebrow + h1 ~ * { animation: dossierHeroIn .85s both .5s; }
+
+/* 2. I pannelli entrano dal proprio lato */
+.dossier-scena[data-align="left"] .reveal:not(.is-in) { transform: translateX(-46px); }
+.dossier-scena[data-align="right"] .reveal:not(.is-in) { transform: translateX(46px); }
+.dossier-scena[data-align="top"] .reveal:not(.is-in) { transform: translateY(-30px); }
+
+/* 3. Stagger interno dei pannelli e dei numeri */
+.dossier-scena__panel.is-in > * { animation: dossierFadeIn .6s both; }
+.dossier-scena__panel.is-in > *:nth-child(2) { animation-delay: .12s; }
+.dossier-scena__panel.is-in > *:nth-child(3) { animation-delay: .24s; }
+.dossier-scena__panel.is-in > *:nth-child(4) { animation-delay: .36s; }
+.dossier-dati__grid.is-in .dossier-dato { animation: dossierFadeIn .6s both; }
+.dossier-dati__grid.is-in .dossier-dato:nth-child(2) { animation-delay: .12s; }
+.dossier-dati__grid.is-in .dossier-dato:nth-child(3) { animation-delay: .24s; }
+.dossier-dati__grid.is-in .dossier-dato:nth-child(4) { animation-delay: .36s; }
+
+/* 4. Cielo stellato che brilla dietro le sezioni scure */
+.dossier-dati, .dossier-chiusura, .dossier-hotspot-wrap, .dossier-confronto-wrap { position: relative; }
+.dossier-dati::before, .dossier-chiusura::before, .dossier-hotspot-wrap::before, .dossier-confronto-wrap::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 0;
+  background-image:
+    radial-gradient(1.5px 1.5px at 12% 18%, rgba(255,255,255,.8), transparent),
+    radial-gradient(1px 1px at 78% 24%, rgba(180,220,255,.7), transparent),
+    radial-gradient(1px 1px at 38% 66%, rgba(255,255,255,.6), transparent),
+    radial-gradient(2px 2px at 64% 78%, rgba(255,255,255,.55), transparent),
+    radial-gradient(1px 1px at 90% 58%, rgba(200,230,255,.7), transparent),
+    radial-gradient(1px 1px at 24% 88%, rgba(255,255,255,.6), transparent),
+    radial-gradient(1.5px 1.5px at 52% 12%, rgba(255,255,255,.6), transparent),
+    radial-gradient(1px 1px at 8% 52%, rgba(200,230,255,.6), transparent);
+  animation: dossierTwinkle 5s ease-in-out infinite alternate;
+}
+.dossier-dati > *, .dossier-chiusura > *, .dossier-hotspot-wrap > *, .dossier-confronto-wrap > * { position: relative; z-index: 1; }
+
+/* 5. Micro-interazioni */
+.dossier-confronto__handle::after { animation: dossierHandlePulse 2.4s ease-in-out infinite; }
+.dossier-progress > span { animation: dossierLineGlow 2.6s ease-in-out infinite; }
+.dossier-dots a:hover { transform: scale(1.35); background: var(--accent); }
+.dossier-scrollcue { animation: dossierFloat 1.8s ease-in-out infinite alternate; }
+.dossier-scena__kicker, .dossier-hero__eyebrow { will-change: opacity; }
+
+@media (prefers-reduced-motion: reduce) {
+  .dossier-hero__eyebrow, .dossier-hero h1, .dossier-hero__sub, .dossier-hero__inner > * ,
+  .dossier-scena__panel.is-in > *, .dossier-dati__grid.is-in .dossier-dato { animation: none !important; }
+  .dossier-scena .reveal:not(.is-in) { transform: translateY(20px) !important; }
+  .dossier-dati::before, .dossier-chiusura::before, .dossier-hotspot-wrap::before, .dossier-confronto-wrap::before { animation: none; opacity: .5; }
+  .dossier-confronto__handle::after, .dossier-progress > span, .dossier-scrollcue { animation: none; }
+}
+html.a11y-pause-anim .dossier-hero__eyebrow, html.a11y-pause-anim .dossier-hero h1, html.a11y-pause-anim .dossier-hero__sub,
+html.a11y-pause-anim .dossier-scena__panel.is-in > *, html.a11y-pause-anim .dossier-dati__grid.is-in .dossier-dato { animation: none !important; }
+html.a11y-pause-anim .dossier-dati::before, html.a11y-pause-anim .dossier-chiusura::before,
+html.a11y-pause-anim .dossier-hotspot-wrap::before, html.a11y-pause-anim .dossier-confronto-wrap::before { animation: none; }
+html.a11y-pause-anim .dossier-confronto__handle::after, html.a11y-pause-anim .dossier-progress > span, html.a11y-pause-anim .dossier-scrollcue { animation: none; }
+
+/* ===== v1.3 — molte più animazioni (tutte reduced-motion / a11y-pause-anim safe) ===== */
+
+@keyframes dossierNebula      { from { transform: translate3d(0,0,0) scale(1.05); } to { transform: translate3d(-3%,2%,0) scale(1.12); } }
+@keyframes dossierShoot       { 0% { transform: translate3d(0,0,0) rotate(18deg); opacity: 0; } 6% { opacity: 1; } 16% { opacity: 0; } 100% { transform: translate3d(-520px,180px,0) rotate(18deg); opacity: 0; } }
+@keyframes dossierOrbit       { to { transform: rotate(360deg); } }
+@keyframes dossierShimmer     { 0% { background-position: -180% 0; } 60%,100% { background-position: 180% 0; } }
+@keyframes dossierUnderline   { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes dossierPopIn       { from { transform: translate(-50%,-50%) scale(0); opacity: 0; } 70% { transform: translate(-50%,-50%) scale(1.18); } to { transform: translate(-50%,-50%) scale(1); opacity: 1; } }
+@keyframes dossierHaloBreath  { 0%,100% { opacity: .35; transform: scale(1); } 50% { opacity: .7; transform: scale(1.06); } }
+@keyframes dossierCueArrow    { 0%,100% { transform: translate(-50%,0); opacity: .4; } 50% { transform: translate(-50%,5px); opacity: 1; } }
+
+/* 1. Nebulosa che deriva lentamente dietro le sezioni scure (oltre alle stelle) */
+.dossier-dati::after, .dossier-chiusura::after, .dossier-hotspot-wrap::after, .dossier-confronto-wrap::after {
+  content: ""; position: absolute; inset: -10%; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(40% 55% at 22% 30%, rgba(78,163,255,.14), transparent 70%),
+    radial-gradient(45% 50% at 80% 70%, rgba(255,190,46,.10), transparent 70%),
+    radial-gradient(35% 45% at 60% 18%, rgba(120,90,255,.12), transparent 70%);
+  animation: dossierNebula 24s ease-in-out infinite alternate; mix-blend-mode: screen;
+}
+
+/* 2. Stelle cadenti occasionali sulle sezioni scure ampie */
+.dossier-dati > .dossier-shoot, .dossier-chiusura > .dossier-shoot { display: none; }
+.dossier-dati, .dossier-chiusura { }
+.dossier-dati::before, .dossier-chiusura::before { /* le stelle fisse restano (v1.2) */ }
+.dossier-shootstar {
+  position: absolute; top: 12%; right: 8%; width: 120px; height: 2px; z-index: 1; pointer-events: none;
+  background: linear-gradient(90deg, rgba(255,255,255,.9), transparent);
+  border-radius: 2px; opacity: 0; filter: drop-shadow(0 0 6px rgba(255,255,255,.7));
+  animation: dossierShoot 9s ease-in infinite; animation-delay: 3s;
+}
+.dossier-shootstar.s2 { top: 38%; right: 26%; width: 90px; animation-duration: 13s; animation-delay: 8s; }
+
+/* 3. Anello orbitante decorativo nella chiusura */
+.dossier-chiusura { overflow: hidden; }
+.dossier-chiusura .dossier-orbit {
+  position: absolute; inset: 50% auto auto 50%; width: 78vmin; height: 78vmin; margin: -39vmin 0 0 -39vmin;
+  border: 1px solid rgba(120,170,255,.16); border-radius: 50%; z-index: 0; pointer-events: none;
+  animation: dossierOrbit 60s linear infinite;
+}
+.dossier-chiusura .dossier-orbit::before {
+  content: ""; position: absolute; top: -5px; left: 50%; width: 10px; height: 10px; border-radius: 50%;
+  background: var(--accent); box-shadow: 0 0 14px var(--accent);
+}
+.dossier-chiusura .dossier-orbit.r2 { width: 54vmin; height: 54vmin; margin: -27vmin 0 0 -27vmin; animation-duration: 38s; animation-direction: reverse; border-color: rgba(255,190,46,.14); }
+
+/* 4. Riflesso che scorre sui numeri grandi */
+.dossier-dato__num { position: relative; }
+.dossier-dati__grid.is-in .dossier-dato__num {
+  background: linear-gradient(120deg, var(--blue) 0%, var(--accent) 45%, #fff 52%, var(--accent) 60%, var(--blue) 100%);
+  background-size: 220% 100%; -webkit-background-clip: text; background-clip: text;
+  animation: dossierShimmer 3.4s ease-in-out 1s infinite;
+}
+
+/* 5. Sottolineatura che cresce sotto i kicker quando il pannello entra */
+.dossier-scena__kicker { position: relative; padding-bottom: 6px; }
+.dossier-scena__kicker::after {
+  content: ""; position: absolute; left: 0; bottom: 0; height: 2px; width: 42px; background: var(--accent);
+  transform: scaleX(0); transform-origin: left;
+}
+.dossier-scena__panel.is-in .dossier-scena__kicker::after { animation: dossierUnderline .6s ease .25s forwards; }
+
+/* 6. I punti dell'hotspot compaiono "a cascata" quando l'immagine entra nel viewport */
+.dossier-hotspot .dossier-punto { opacity: 0; }
+.dossier-hotspot.is-revealed .dossier-punto { animation: dossierPopIn .55s cubic-bezier(.34,1.56,.64,1) both, dossierPulse 2.2s 1.2s infinite; }
+.dossier-hotspot.is-revealed .dossier-punto:nth-of-type(1) { animation-delay: .15s, 1.0s; }
+.dossier-hotspot.is-revealed .dossier-punto:nth-of-type(2) { animation-delay: .30s, 1.2s; }
+.dossier-hotspot.is-revealed .dossier-punto:nth-of-type(3) { animation-delay: .45s, 1.4s; }
+.dossier-hotspot.is-revealed .dossier-punto:nth-of-type(4) { animation-delay: .60s, 1.6s; }
+.dossier-hotspot.is-revealed .dossier-punto:nth-of-type(5) { animation-delay: .75s, 1.8s; }
+/* alone morbido attorno ai punti */
+.dossier-punto::before {
+  content: ""; position: absolute; inset: -10px; border-radius: 50%; z-index: -1;
+  background: radial-gradient(circle, rgba(255,190,46,.45), transparent 70%);
+  animation: dossierHaloBreath 3s ease-in-out infinite;
+}
+
+/* 7. Pannelli: leggera nitidezza all'ingresso (blur -> a fuoco) */
+.dossier-scena__panel.reveal { filter: blur(6px); transition: opacity .7s ease, transform .7s ease, filter .7s ease; }
+.dossier-scena__panel.reveal.is-in { filter: blur(0); }
+
+/* 8. Hover del pannello: sollevamento + bagliore del bordo */
+.dossier-scena__panel { transition: opacity .7s ease, transform .7s ease, filter .7s ease, box-shadow .3s ease, border-color .3s ease; }
+.dossier-scena__panel:hover { box-shadow: 0 28px 70px rgba(0,0,0,.5), -6px 0 24px -8px var(--accent); border-left-color: #fff; }
+
+/* 9. Pulsante CTA: lampo che attraversa al passaggio del mouse */
+.dossier-cta a { position: relative; overflow: hidden; }
+.dossier-cta a::after {
+  content: ""; position: absolute; top: 0; left: -120%; width: 60%; height: 100%; transform: skewX(-20deg);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.45), transparent); transition: left .6s ease;
+}
+.dossier-cta a:hover::after { left: 140%; }
+
+/* 10. Link delle fonti: sottolineatura animata */
+.dossier-fonti a { background-image: linear-gradient(var(--accent),var(--accent)); background-size: 0% 1.5px; background-position: 0 100%; background-repeat: no-repeat; transition: background-size .3s ease; text-decoration: none; }
+.dossier-fonti a:hover, .dossier-fonti a:focus-visible { background-size: 100% 1.5px; }
+
+/* 11. Freccia animata nello scroll-cue dell'eroe */
+.dossier-scrollcue::before {
+  content: "\2193"; position: absolute; left: 50%; bottom: -20px; transform: translateX(-50%);
+  font-size: .9rem; color: var(--accent); animation: dossierCueArrow 1.6s ease-in-out infinite;
+}
+
+/* 12. Pallino di navigazione attivo: alone pulsante */
+.dossier-dots a.is-active::before {
+  content: ""; position: absolute; inset: -6px; border-radius: 50%; border: 2px solid var(--accent);
+  animation: dossierHaloBreath 2.2s ease-in-out infinite;
+}
+
+/* 13. "Respiro" lentissimo degli sfondi scena (profondità anche da fermi) */
+@keyframes dossierBgBreath { 0%,100% { transform: scale(1.06); } 50% { transform: scale(1.10); } }
+.dossier-scena__bg { animation: dossierBgBreath 26s ease-in-out infinite; }
+
+/* spegnimento completo per accessibilità --------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .dossier-dati::after, .dossier-chiusura::after, .dossier-hotspot-wrap::after, .dossier-confronto-wrap::after,
+  .dossier-shootstar, .dossier-chiusura .dossier-orbit, .dossier-dati__grid.is-in .dossier-dato__num,
+  .dossier-scena__panel.is-in .dossier-scena__kicker::after, .dossier-punto::before,
+  .dossier-dots a.is-active::before, .dossier-scrollcue::before, .dossier-scena__bg { animation: none !important; }
+  .dossier-hotspot .dossier-punto { opacity: 1; }
+  .dossier-hotspot.is-revealed .dossier-punto { animation: none !important; }
+  .dossier-scena__panel.reveal { filter: none !important; }
+  .dossier-dati__grid.is-in .dossier-dato__num { background: linear-gradient(120deg,var(--blue),var(--accent)); -webkit-background-clip: text; background-clip: text; }
+}
+html.a11y-pause-anim .dossier-dati::after, html.a11y-pause-anim .dossier-chiusura::after,
+html.a11y-pause-anim .dossier-hotspot-wrap::after, html.a11y-pause-anim .dossier-confronto-wrap::after,
+html.a11y-pause-anim .dossier-shootstar, html.a11y-pause-anim .dossier-chiusura .dossier-orbit,
+html.a11y-pause-anim .dossier-dati__grid.is-in .dossier-dato__num, html.a11y-pause-anim .dossier-punto::before,
+html.a11y-pause-anim .dossier-dots a.is-active::before, html.a11y-pause-anim .dossier-scrollcue::before,
+html.a11y-pause-anim .dossier-scena__bg { animation: none !important; }
+html.a11y-pause-anim .dossier-hotspot .dossier-punto { opacity: 1; }
+html.a11y-pause-anim .dossier-hotspot.is-revealed .dossier-punto { animation: none !important; }
+html.a11y-pause-anim .dossier-scena__panel.reveal { filter: none !important; }
+html.a11y-pause-anim .dossier-dati__grid.is-in .dossier-dato__num { background: linear-gradient(120deg,var(--blue),var(--accent)); -webkit-background-clip: text; background-clip: text; }

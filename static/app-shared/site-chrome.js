@@ -155,6 +155,7 @@
                   '</a>' +
                   '<div class="dropdown-menu" aria-labelledby="navDropdown-risorse"><div class="link-list-wrapper"><ul class="link-list" role="menu">' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/conoscere/" role="menuitem"><span>Conoscere la Protezione Civile</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/dossier/" role="menuitem"><span>Dossier interattivi</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/faq/" role="menuitem"><span>FAQ</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/glossario/" role="menuitem"><span>Glossario</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/area-download/" role="menuitem"><span>Area Download</span></a></li>' +

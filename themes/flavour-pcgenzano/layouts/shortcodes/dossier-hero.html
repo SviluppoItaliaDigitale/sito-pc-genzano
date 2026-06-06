@@ -1,0 +1,11 @@
+{{- $img := .Get "image" | strings.TrimPrefix "/" | relURL -}}
+<header class="dossier-hero" id="{{ .Get "id" | default "inizio" }}">
+  <div class="dossier-hero__bg" style="background-image:url('{{ $img }}')" role="img" aria-label="{{ .Get "alt" }}"></div>
+  <div class="dossier-hero__inner">
+    {{- with .Get "eyebrow" }}<span class="dossier-hero__eyebrow">{{ . }}</span>{{ end -}}
+    <h1>{{ .Get "title" | safeHTML }}</h1>
+    {{- with .Get "sub" }}<p class="dossier-hero__sub">{{ . | safeHTML }}</p>{{ end -}}
+  </div>
+  {{- with .Get "credito" }}<p class="dossier-hero__credit">{{ . }}</p>{{ end -}}
+  <div class="dossier-scrollcue" aria-hidden="true">Scorri<span></span></div>
+</header>

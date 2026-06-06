@@ -1,0 +1,48 @@
+/* ============================================================
+   DOSSIER — landing /dossier/ : griglia di card immersive.
+   Stile coerente col sito (Bootstrap Italia), niente tema scuro.
+   ============================================================ */
+.dossier-list-grid {
+  display: grid; gap: 1.6rem; margin-top: 1.4rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.dossier-card {
+  display: flex; flex-direction: column; text-decoration: none; color: inherit;
+  background: #fff; border: 1px solid #d7e0ec; border-radius: 14px; overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 51, 102, .07);
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.dossier-card:hover, .dossier-card:focus-visible {
+  transform: translateY(-4px); box-shadow: 0 16px 38px rgba(0, 51, 102, .16);
+  border-color: #003366; outline: none;
+}
+.dossier-card:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 3px; }
+.dossier-card__media { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: #0a1730; }
+.dossier-card__media img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform .5s ease;
+}
+.dossier-card:hover .dossier-card__media img { transform: scale(1.06); }
+.dossier-card__tag {
+  position: absolute; left: 12px; bottom: 12px; z-index: 2;
+  background: rgba(5, 8, 15, .72); color: #fff; font-size: .76rem; font-weight: 600;
+  padding: 5px 11px; border-radius: 20px; display: inline-flex; align-items: center; gap: 6px;
+  backdrop-filter: blur(4px);
+}
+.dossier-card__media::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(0deg, rgba(5, 8, 15, .45), transparent 55%);
+}
+.dossier-card__body { padding: 1.1rem 1.2rem 1.3rem; display: flex; flex-direction: column; flex: 1; }
+.dossier-card__title { font-size: 1.25rem; line-height: 1.2; margin: 0 0 .5rem; color: #003366; }
+.dossier-card__desc { color: #44515f; font-size: .95rem; margin: 0 0 1rem; flex: 1; }
+.dossier-card__cta { font-weight: 700; color: #003366; display: inline-flex; align-items: center; gap: 7px; }
+.dossier-card:hover .dossier-card__cta i { transform: translateX(4px); }
+.dossier-card__cta i { transition: transform .2s ease; }
+
+@media (prefers-reduced-motion: reduce) {
+  .dossier-card, .dossier-card__media img, .dossier-card__cta i { transition: none !important; }
+  .dossier-card:hover { transform: none; }
+  .dossier-card:hover .dossier-card__media img { transform: none; }
+}
+html.a11y-pause-anim .dossier-card, html.a11y-pause-anim .dossier-card__media img { transition: none !important; }

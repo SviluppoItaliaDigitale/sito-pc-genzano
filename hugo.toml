@@ -309,6 +309,15 @@ enableGitInfo = true
   parent = "risorse"
   weight = 0
 
+# Dossier interattivi (giugno 2026): racconti visivi scrollytelling.
+# weight 0 come "Conoscere": il pareggio si risolve per nome, quindi la voce
+# compare subito dopo "Conoscere la Protezione Civile" senza rinumerare le altre.
+[[menus.main]]
+  name = "Dossier interattivi"
+  url = "/dossier/"
+  parent = "risorse"
+  weight = 0
+
 [[menus.main]]
   name = "FAQ"
   url = "/faq/"
