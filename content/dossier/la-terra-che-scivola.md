@@ -13,7 +13,6 @@ sezioni:
   - { id: "tipi-di-frana", label: "I tipi di frana" }
   - { id: "numeri", label: "I numeri" }
   - { id: "vajont", label: "Vajont 1963" }
-  - { id: "monte-toc", label: "Il Monte Toc" }
   - { id: "sarno", label: "Sarno 1998" }
   - { id: "oso", label: "Oso 2014" }
   - { id: "aberfan", label: "Aberfan 1966" }
@@ -43,12 +42,8 @@ Cambia tutto la velocità. I **crolli** di roccia e gli **scivolamenti** lascian
 Alle 22:39 del 9 ottobre 1963 circa **260 milioni di metri cubi di roccia** si staccarono dal **Monte Toc** e precipitarono nel bacino. L'onda d'acqua scavalcò il coronamento della diga di oltre **200 metri** e cancellò Longarone e altri abitati. Le vittime furono **1.917**, tra cui 487 bambini e ragazzi.
 
 Il punto, ancora oggi spesso frainteso: la **diga non cedette**. Restò in piedi, nonostante forze venti volte superiori a quelle di progetto. Fu una catastrofe geologica, non un crollo strutturale.
-{{< /dossier-scena >}}
 
-{{< dossier-scena id="monte-toc" image="/images/dossier/frane-monte-toc.webp" alt="Il fianco del Monte Toc segnato dalla cicatrice di frana, con l'accumulo di detriti rocciosi nel fondovalle del Vajont" align="right" kicker="La cicatrice del versante" title="I segnali<br>c'erano" credito="Foto: Frisia Orientalis · CC BY-SA 3.0, via Wikimedia Commons" >}}
-La frana lasciò sul fianco del Monte Toc una **cicatrice enorme**, visibile ancora oggi. Mostra la scala del fenomeno: un intero versante che scivola in pochi secondi.
-
-L'instabilità del versante era **nota da tempo**. Crepe, piccoli movimenti e studi geologici avevano segnalato il pericolo. È la lezione che attraversa tutte le frane: il versante parla, e i suoi segni vanno ascoltati prima che sia troppo tardi.
+L'instabilità del Monte Toc era **nota da tempo**: crepe, piccoli movimenti e studi geologici avevano segnalato il pericolo, e la frana lasciò sul versante una cicatrice enorme, visibile ancora oggi. È la lezione che attraversa tutte le frane: il versante parla, e i suoi segni vanno ascoltati prima che sia troppo tardi.
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="sarno" image="/images/dossier/frane-sarno.webp" alt="L'abitato di Sarno invaso dal fango dopo le colate del maggio 1998, con un fronte di detriti che attraversa le case fino al versante" align="top" kicker="5 maggio 1998 · Campania" title="Le colate<br>di fango" credito="Foto: Ciro Fusco · pubblico dominio in Italia, via Wikimedia Commons" >}}
@@ -100,7 +95,7 @@ Consulta la scheda sul **rischio idrogeologico** del nostro sito e tieni d'occhi
 {{< /dossier-chiusura >}}
 
 {{< dossier-fonti >}}
-- **Immagini:** detriti del Monte Toc, Vajont (Frisia Orientalis, CC BY-SA 3.0) · colata detritica a Dimaro (Dipartimento della Protezione Civile, CC BY 2.0) · diga del Vajont (Tor91, pubblico dominio) · cicatrice del Monte Toc (Frisia Orientalis, CC BY-SA 3.0) · Sarno 1998 (Ciro Fusco, pubblico dominio in Italia) · frana di Oso 2014 (Washington Army National Guard, pubblico dominio) · cumuli di scarto sopra Aberfan 1966 (Governo del Regno Unito, pubblico dominio) · terrazzamenti delle Cinque Terre (Tangopaso, pubblico dominio) · interferogramma radar (NASA/JPL-Caltech su dati ESA, pubblico dominio) · Lago di Nemi da Genzano (Deblu68, pubblico dominio). Via Wikimedia Commons.
+- **Immagini:** detriti del Monte Toc, Vajont (Frisia Orientalis, CC BY-SA 3.0) · colata detritica a Dimaro (Dipartimento della Protezione Civile, CC BY 2.0) · diga del Vajont (Tor91, pubblico dominio) · Sarno 1998 (Ciro Fusco, pubblico dominio in Italia) · frana di Oso 2014 (Washington Army National Guard, pubblico dominio) · cumuli di scarto sopra Aberfan 1966 (Governo del Regno Unito, pubblico dominio) · terrazzamenti delle Cinque Terre (Tangopaso, pubblico dominio) · interferogramma radar (NASA/JPL-Caltech su dati ESA, pubblico dominio) · Lago di Nemi da Genzano (Deblu68, pubblico dominio). Via Wikimedia Commons.
 - **Dati nazionali:** [ISPRA](https://www.isprambiente.gov.it/) — *Dissesto idrogeologico in Italia* (edizione 2024) · Inventario dei Fenomeni Franosi in Italia (IFFI) · piattaforma [IdroGEO](https://idrogeo.isprambiente.it/). **Studio globale:** Froude & Petley, *Global fatal landslide occurrence 2004-2016* ([NHESS, 2018](https://nhess.copernicus.org/articles/18/2161/2018/)). **Allerta frane:** [CNR-IRPI — SANF](https://www.irpi.cnr.it/en/product-service/sanf/). **Monitoraggio dallo spazio:** [Copernicus European Ground Motion Service](https://land.copernicus.eu/en/products/european-ground-motion-service). **Contesto locale:** [Parchi Lazio — Cratere e vulcaniti del Lago di Nemi](https://www.parchilazio.it/schede-32618-cratere_e_vulcaniti_del_lago_di_nemi).
 - **Sul nostro sito:** [Rischio idrogeologico: cosa fare](/rischi-prevenzione/rischio-idrogeologico/) · [Il rischio idrogeologico nel catalogo dei rischi](/conoscere/catalogo-dei-rischi/rischio-idrogeologico/) · [Allerte meteo](/allerte-meteo/) · [Strumenti in tempo reale](/cruscotto/) · [Piano di emergenza comunale](/piano-emergenza/).
 - Dossier a cura del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**. Guida divulgativa: in emergenza chiama il **112**.

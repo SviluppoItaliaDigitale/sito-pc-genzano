@@ -15,12 +15,9 @@ sezioni:
   - { id: "navi", label: "Le navi di Caligola" }
   - { id: "emissario", label: "L'antico emissario" }
   - { id: "albano", label: "Albano, il gemello" }
-  - { id: "livello", label: "Prima e dopo" }
   - { id: "frana", label: "Quando il fondo cedette" }
-  - { id: "oggi", label: "Cosa resta oggi" }
   - { id: "crater-lake", label: "Crater Lake" }
   - { id: "laacher", label: "Laacher See" }
-  - { id: "vulcano", label: "Un cratere vivo" }
   - { id: "numeri", label: "I numeri" }
   - { id: "fine", label: "Cosa ci insegna" }
 ---
@@ -42,7 +39,7 @@ L'acqua scese di cinque metri già nel 1929, poi di **oltre venti metri** entro 
 {{< dossier-scena id="navi" image="/images/dossier/nemi-navi.webp" alt="Foto storica dello scafo di una delle navi romane di Nemi emerso, con un uomo accanto che ne dà la scala enorme, montato su un castello di sostegno" align="top" kicker="37–41 d.C." title="Le navi<br>di Caligola" credito="Museo Nazionale Scienza e Tecnologia, Milano · pubblico dominio" >}}
 Erano due colossi galleggianti. La prima misurava **71 metri di lunghezza per 20 di larghezza**; la seconda **73 per 24 metri**: palazzi di lusso con mosaici e impianti idraulici, per un lago largo poco più di un chilometro.
 
-Caligola li volle per ostentare potere, non per navigare davvero. Per quasi duemila anni rimasero sul fondo, leggenda dei pescatori di Nemi, finché qualcuno decise di togliere l'acqua intorno a loro.
+Caligola li volle per ostentare potere, non per navigare davvero. Per quasi duemila anni rimasero sul fondo, leggenda dei pescatori di Nemi, finché qualcuno decise di togliere l'acqua intorno a loro. Custoditi dal **1936** nel Museo delle Navi Romane, andarono distrutti da un incendio nella notte tra il **31 maggio e il 1º giugno 1944**: oggi ne restano solo modelli in scala e gli oggetti più piccoli.
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="emissario" image="/images/dossier/nemi-emissario.webp" alt="Interno dell'antico emissario romano del Lago di Nemi: un lungo cunicolo sotterraneo scavato nella roccia, con il punto di fuga e una debole luce al centro" align="top" kicker="IV secolo a.C." title="L'antico<br>emissario romano" credito="Museo Nazionale Scienza e Tecnologia, Milano · pubblico dominio" >}}
@@ -57,18 +54,10 @@ Il cratere accanto custodisce un'opera ancora più antica. Il **Lago Albano** �
 Tito Livio lo lega all'assedio di Veio. Due crateri vicini, la stessa idea: tenere sotto controllo l'acqua di un bacino che non ha uno sbocco naturale. Gli stessi versanti, gli stessi problemi che riguardano Genzano.
 {{< /dossier-scena >}}
 
-{{< dossier-confronto id="livello" titolo="Lo stesso cratere, due volti" testo="Trascina il cursore: a sinistra il fondale scoperto durante il prosciugamento del 1928–1932, con lo scafo delle navi emerso dal fango; a destra il lago oggi, di nuovo pieno d'acqua. È ciò che significa **governare un livello** — e quanto può cambiare un cratere in poche stagioni." base="/images/dossier/nemi-prosciugamento.webp" baseAlt="Veduta aerea del fondale del Lago di Nemi prosciugato negli anni 1928–1932: lo scafo gigantesco di una nave romana emerge dal fango, con l'acqua residua sullo sfondo" baseLab="Lago abbassato · 1931" top="/images/dossier/nemi-lago.webp" topAlt="Il Lago di Nemi oggi, di nuovo pieno d'acqua, visto dall'alto del cratere boscoso" topLab="Lago oggi" ratio="16 / 10" cap="Lago di Nemi · fondale 1931 (Museo Nazionale Scienza e Tecnologia, Milano, pubblico dominio) e veduta odierna (Kleuske, CC BY-SA 3.0)." >}}
-
 {{< dossier-scena id="frana" image="/images/dossier/nemi-prosciugamento.webp" alt="Veduta aerea del fondale prosciugato del Lago di Nemi con lo scafo della nave romana emerso dal fango durante i lavori di svuotamento" align="top" kicker="21 agosto 1931" title="Quando il fondo<br>cedette" credito="Museo Nazionale Scienza e Tecnologia, Milano · pubblico dominio" >}}
 Abbassare il lago alleggerì la spinta dell'acqua contro le pareti del cratere. Il **21 agosto 1931** mezzo milione di metri cubi di fango eruttò dagli strati sotto il fondale: **circa trenta ettari sprofondarono**, danneggiando la seconda nave e fermando i lavori.
 
-Non fu un episodio isolato. Le **frane** registrate sui versanti, verso Nemi e Genzano, sono ricondotte allo **svuotamento rapido** del bacino. È una delle prime volte in cui sul nostro territorio si tocca con mano il legame tra **equilibrio delle acque e stabilità dei versanti**.
-{{< /dossier-scena >}}
-
-{{< dossier-scena id="oggi" image="/images/dossier/nemi-navi.webp" alt="Foto storica dell'alaggio di una delle navi romane di Nemi su un castello di legno, con un uomo accanto che ne dà la scala" align="top" kicker="1936 · 1944 · oggi" title="Cosa resta<br>oggi" credito="Museo Nazionale Scienza e Tecnologia, Milano · pubblico dominio" >}}
-Nel **1936** fu inaugurato sul lago il **Museo delle Navi Romane**, costruito per custodire i due relitti. Ma nella notte tra il **31 maggio e il 1º giugno 1944**, durante la guerra, un incendio le distrusse: si fusero persino i rivestimenti in piombo.
-
-Oggi restano modelli in scala e gli oggetti più piccoli, già portati a Roma. Le navi non ci sono più, ma l'esperienza del prosciugamento è entrata nella **memoria geologica** del cratere. La sismicità e i movimenti del suolo dei Colli Albani sono oggi seguiti dall'**INGV**.
+Non fu un episodio isolato. Le **frane** registrate sui versanti, verso Nemi e Genzano, sono ricondotte allo **svuotamento rapido** del bacino. È una delle prime volte in cui sul nostro territorio si tocca con mano il legame tra **equilibrio delle acque e stabilità dei versanti**: Nemi e Genzano sorgono su un vulcano **quiescente**, non estinto, e tra il **1989 e il 1990** i Colli Albani vissero una crisi sismica con scosse oltre magnitudo 4. Il rischio attuale non è la lava, ma i **gas**: l'anidride carbonica, più pesante dell'aria, può accumularsi in conche e locali interrati. Per questo l'**INGV** monitora i Colli Albani senza sosta; in presenza di odori anomali o malori, **chiama il 112**.
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="crater-lake" image="/images/dossier/nemi-crater-lake.webp" alt="Veduta aerea di Crater Lake, in Oregon: un lago di un azzurro intenso racchiuso nelle pareti innevate di una grande caldera vulcanica, con un'isola vicino alla riva sinistra" align="top" kicker="Oregon, Stati Uniti" title="Crater Lake:<br>il cratere che si riempie da solo" credito="Crater Lake · foto Zainubrazvi · CC BY-SA 3.0" >}}
@@ -81,12 +70,6 @@ Non ha né immissari né emissari: si alimenta solo di pioggia e neve, con acqua
 Nell'Eifel tedesco, il **Laacher See** è un lago di caldera la cui ultima eruzione risale a circa **13.000 anni fa**. Lungo la riva orientale gorgoglia ancora **anidride carbonica** dal fondo: segno che il vulcano dorme, ma respira.
 
 Nel **1164** alcuni monaci medievali scavarono una galleria di drenaggio per abbassarne il livello: la stessa soluzione degli emissari di Nemi e Albano, mille anni dopo e mille chilometri più a nord. La stessa idea torna ovunque ci sia un cratere da governare.
-{{< /dossier-scena >}}
-
-{{< dossier-scena id="vulcano" image="/images/dossier/nemi-lago.webp" alt="Il cratere del Lago di Nemi visto dall'alto, con le pareti boscose e l'acqua scura: la conca di un vulcano quiescente" align="top" kicker="Qui, sotto i nostri piedi" title="Un cratere non è mai<br>del tutto spento" credito="Lago di Nemi da Genzano · foto Kleuske · CC BY-SA 3.0" >}}
-Nemi e Genzano sorgono su un vulcano **quiescente**, non estinto. L'ultima eruzione risale a circa **36.000 anni fa**, ma tra il **1989 e il 1990** i Colli Albani vissero una crisi sismica con scosse oltre magnitudo 4, seguita da sollevamento del suolo ed emissioni di gas.
-
-Il rischio attuale non è la lava: sono i **gas**. L'anidride carbonica, più pesante dell'aria, può accumularsi in conche e locali interrati; l'idrogeno solforato ha l'odore di uova marce. Per questo l'**INGV** monitora i Colli Albani senza sosta. In presenza di odori anomali o malori, **chiama il 112**.
 {{< /dossier-scena >}}
 
 {{< dossier-dati id="numeri" >}}
