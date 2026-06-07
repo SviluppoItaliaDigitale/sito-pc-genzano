@@ -27,7 +27,7 @@ Genzano di Roma, pur trovandosi in area collinare, è soggetta a ondate di calor
 > 🎒 **Kit consigliato per questo rischio**: il [Kit "Casa 72 ore"](/rischi-prevenzione/kit-emergenza/#kit-casa) è utile per la sua scorta d'acqua (almeno 12 litri a persona) e i farmaci. In caso di blackout estivo prolungato — molto frequente quando i condizionatori sovraccaricano la rete — saper restare autonomi 3 giorni è cruciale soprattutto per anziani e persone con patologie croniche. Per il controllo periodico stampa la [Checklist A4 da frigorifero](/formazione/schede-stampabili/checklist-kit-emergenza/).
 
 ## <i class="bi bi-clipboard-check-fill text-primary me-2" aria-hidden="true"></i>Cosa fare PRIMA {#cosa-fare-prima}
-- Consulta le previsioni e i bollettini del [Ministero della Salute — Caldo e salute](https://www.salute.gov.it/portale/caldo/)
+- Consulta ogni giorno il **bollettino sulle ondate di calore** del [Ministero della Salute](https://www.salute.gov.it/portale/caldo/): puoi farlo anche dallo smartphone con l'app gratuita **Caldo e Salute** ([come funziona e dove scaricarla](/comunicazioni/2026-06-07-caldo-salute-app-bollettini/))
 - Assicurati di avere scorte d'acqua in casa
 - Verifica che ventilatori o condizionatori funzionino
 - Contatta i vicini anziani o le persone sole per verificare il loro stato
