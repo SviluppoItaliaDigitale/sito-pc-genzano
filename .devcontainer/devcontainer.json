@@ -1,0 +1,28 @@
+{
+  "name": "Sito Protezione Civile Genzano — ambiente di sviluppo",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": { "version": "lts" },
+    "ghcr.io/devcontainers/features/python:1": { "version": "3.12" },
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "forwardPorts": [1313, 1314],
+  "portsAttributes": {
+    "1313": { "label": "Anteprima sito (hugo server)" },
+    "1314": { "label": "Anteprima per la verifica grafica" }
+  },
+  "hostRequirements": {
+    "cpus": 8,
+    "memory": "16gb"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "budparr.language-hugo-vscode",
+        "ms-python.python",
+        "redhat.vscode-yaml"
+      ]
+    }
+  }
+}
