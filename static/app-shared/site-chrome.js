@@ -18,9 +18,9 @@
               '<nav aria-label="Navigazione enti istituzionali">' +
                 '<a class="it-opener d-lg-none" data-bs-toggle="collapse" href="#menu-enti" role="button" aria-expanded="false" aria-controls="menu-enti"><span>Enti istituzionali</span><svg class="icon icon-sm"><use href="' + SITE_URL + '/vendor/bootstrap-italia/svg/sprites.svg#it-expand"></use></svg></a>' +
                 '<div class="link-list-wrapper collapse" id="menu-enti"><ul class="link-list" role="list">' +
-                  '<li role="listitem"><a class="dropdown-item list-item" href="https://www.comune.genzanodiroma.roma.it/" target="_blank" rel="noopener noreferrer" aria-label="Sito del Comune di Genzano di Roma (si apre in una nuova finestra)"><strong>Comune di Genzano di Roma</strong></a></li>' +
-                  '<li role="listitem"><a class="dropdown-item list-item" href="https://www.protezionecivile.gov.it/it/" target="_blank" rel="noopener noreferrer">Dipartimento Nazionale Protezione Civile</a></li>' +
-                  '<li role="listitem"><a class="dropdown-item list-item" href="https://protezionecivile.regione.lazio.it/" target="_blank" rel="noopener noreferrer">Agenzia Regionale Protezione Civile Lazio</a></li>' +
+                  '<li role="listitem"><a class="dropdown-item list-item" href="https://www.comune.genzanodiroma.roma.it/" target="_blank" rel="noopener noreferrer" title="Comune di Genzano di Roma" aria-label="Sito del Comune di Genzano di Roma (si apre in una nuova finestra)"><strong>Genzano di Roma</strong></a></li>' +
+                  '<li role="listitem"><a class="dropdown-item list-item" href="https://www.protezionecivile.gov.it/it/" target="_blank" rel="noopener noreferrer" title="Dipartimento Nazionale della Protezione Civile" aria-label="Dipartimento Nazionale della Protezione Civile (si apre in una nuova finestra)">DPC</a></li>' +
+                  '<li role="listitem"><a class="dropdown-item list-item" href="https://protezionecivile.regione.lazio.it/" target="_blank" rel="noopener noreferrer" title="Agenzia Regionale di Protezione Civile del Lazio" aria-label="Agenzia Regionale di Protezione Civile del Lazio (si apre in una nuova finestra)">AR PC Lazio</a></li>' +
                 '</ul></div>' +
               '</nav>' +
             '</div>' +
