@@ -47,16 +47,21 @@ I volontari già operativi partecipano ad aggiornamenti ed esercitazioni periodi
 
 Il sito raccoglie materiali per docenti, studenti e famiglie. Sono disponibili kit per fasce d'età, schede stampabili, attività inclusive, giochi educativi, storie e percorsi pronti.
 
-### Percorsi rapidi per la scuola
+### Percorso guidato per scuole e famiglie
 
-- [Scuole: da dove cominciare](/formazione/scuole-da-dove-cominciare/) — scegli il tuo ruolo e raggiungi i materiali giusti.
-- [Checklist docente](/formazione/scuole-checklist-docente/) — prepara una lezione senza creare allarmismo.
-- [Percorsi didattici pronti](/formazione/percorsi-didattici/) — pacchetti con destinatari, durata, obiettivi e valutazione.
-- [Educazione civica](/formazione/educazione-civica/) — collegamento con i nuclei del D.M. 183/2024.
-- [Dirigenti e RSPP](/formazione/dirigenti-e-rspp/) — ruoli, limiti, responsabilità e PCTO.
-- [In famiglia dopo la lezione](/formazione/in-famiglia-dopo-la-lezione/) — azioni concrete per continuare a casa.
+Non sai da dove partire? Scegli la tua situazione: ogni scelta ti porta ai materiali già pronti.
 
-### Kit per fascia d'età
+<div class="consulta-rapida">
+{{< link-card url="/formazione/scuole-da-dove-cominciare/" icon="bi-signpost-2" titolo="Prima volta? Parti da qui" desc="Scegli il tuo ruolo e arriva subito ai materiali giusti." >}}
+{{< link-card url="/formazione/percorsi-didattici/" icon="bi-clock-history" titolo="Quanto tempo hai?" desc="Una lezione da un'ora, mezza giornata o un progetto: pacchetti con durata e obiettivi." >}}
+<a class="cr-card" href="#kit"><span class="cr-icon" aria-hidden="true"><i class="bi bi-mortarboard"></i></span><span class="cr-corpo"><span class="cr-titolo">Per fascia d'età</span><span class="cr-desc">Kit dedicati per infanzia, primaria, secondaria di primo e secondo grado.</span></span></a>
+{{< link-card url="/formazione/scuole-checklist-docente/" icon="bi-check2-square" titolo="Prepara la lezione" desc="Parole e tempi giusti per spiegare i rischi senza creare allarmismo." >}}
+{{< link-card url="/formazione/educazione-civica/" icon="bi-bank" titolo="Educazione civica" desc="Collega le attività ai nuclei dell'insegnamento di educazione civica (D.M. 183/2024)." >}}
+{{< link-card url="/formazione/dirigenti-e-rspp/" icon="bi-clipboard-check" titolo="Dirigenti e RSPP" desc="Ruoli, limiti, responsabilità e percorsi per le competenze trasversali (PCTO)." >}}
+{{< link-card url="/formazione/in-famiglia-dopo-la-lezione/" icon="bi-house-heart" titolo="A casa, in famiglia" desc="Azioni concrete per continuare a casa dopo la lezione." >}}
+</div>
+
+### Kit per fascia d'età {#kit}
 
 | Kit | Età | Contenuti principali |
 |---|---|---|

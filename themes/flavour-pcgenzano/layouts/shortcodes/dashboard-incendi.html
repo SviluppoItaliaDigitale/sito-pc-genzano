@@ -22,7 +22,7 @@
     <span><i style="background:#7a1500"></i> Aree bruciate recenti</span>
   </div>
   <noscript><div class="alert alert-warning mt-2" role="note">Per la mappa serve JavaScript. Dati incendi su <a href="https://forest-fire.emergency.copernicus.eu/" target="_blank" rel="noopener noreferrer">EFFIS</a>.</div></noscript>
-  <p class="small text-muted mt-2 mb-0">Focolai da satellite: <a href="https://forest-fire.emergency.copernicus.eu/" target="_blank" rel="noopener noreferrer">EFFIS — Copernicus Emergency Management Service</a> (sensori VIIRS/MODIS). Base: <a href="https://www.esri.com/" target="_blank" rel="noopener noreferrer">Esri World Imagery</a>. Dato indicativo, con possibili rilevazioni non confermate (riflessi, impianti industriali): per segnalare un incendio chiama il <a href="tel:112">112</a>.</p>
+  <p class="small text-muted mt-2 mb-0">{{ partial "fonte-badge.html" "ufficiale" }}Focolai da satellite: <a href="https://forest-fire.emergency.copernicus.eu/" target="_blank" rel="noopener noreferrer">EFFIS — Copernicus Emergency Management Service</a> (sensori VIIRS/MODIS). Base: <a href="https://www.esri.com/" target="_blank" rel="noopener noreferrer">Esri World Imagery</a>. Dato indicativo, con possibili rilevazioni non confermate (riflessi, impianti industriali): per segnalare un incendio chiama il <a href="tel:112">112</a>.</p>
 
   <script src="{{ $leafletJS }}" crossorigin=""></script>
   <script>

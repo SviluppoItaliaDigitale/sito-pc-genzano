@@ -38,7 +38,7 @@
     <p class="mb-2">{{ . }}</p>
     {{- end }}
     <p class="small text-muted mb-2">
-      <i class="bi bi-clock-history me-1" aria-hidden="true"></i>
+      {{ partial "fonte-badge.html" "ufficiale" }}<i class="bi bi-clock-history me-1" aria-hidden="true"></i>
       Verificato: <strong>{{ printf "%d %s %d, %02d:%02d" $t.Day (index $mesi (int $t.Month)) $t.Year $t.Hour $t.Minute }}</strong>
       · Fonte: <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Regionale Lazio</a>
     </p>
