@@ -1178,6 +1178,31 @@ article:not(.card) .galleria img {
   margin-left: auto;
   white-space: nowrap;
 }
+/* ── FIX 07/06/2026 — la zona enti resta ANCORATA A SINISTRA ──
+   Bug segnalato: la prima voce "Comune di Genzano di Roma" appariva tagliata
+   all'inizio ("…di Genzano di Roma"). Causa: con overflow:hidden la lista enti
+   risultava ancorata a destra, così a troncarsi era la PRIMA voce (la più
+   importante). Forziamo l'ancoraggio a sinistra: "Comune di Genzano di Roma"
+   resta sempre leggibile per intero; se manca spazio, a cedere è l'ultima voce
+   (Agenzia…), col taglio sul lato destro. */
+.it-header-slim-wrapper-content .nav-mobile,
+.it-header-slim-wrapper-content .nav-mobile > nav,
+.it-header-slim-wrapper-content .nav-mobile .link-list-wrapper,
+.it-header-slim-wrapper-content .nav-mobile .link-list {
+  justify-content: flex-start !important;
+  margin-left: 0 !important;
+  text-align: left;
+}
+.it-header-slim-wrapper-content .nav-mobile .link-list { padding-left: 0 !important; }
+/* Sui laptop (992-1499px) le tre voci enti + zona destra sono al limite: riduco
+   un filo padding e corpo dei link enti così entrano tutte senza troncare. */
+@media (min-width: 992px) and (max-width: 1499.98px) {
+  .it-header-slim-wrapper-content .nav-mobile .link-list a {
+    padding-left: .4rem !important;
+    padding-right: .4rem !important;
+    font-size: .88rem;
+  }
+}
 /* ── NAVBAR — fit delle 8 voci sui laptop (29/05/2026) ──
    Le 8 voci di primo livello (Home + 5 dropdown + Comunicazioni + Contatti)
    col padding nativo Bootstrap Italia (24px/lato) sommano ~1265px e
