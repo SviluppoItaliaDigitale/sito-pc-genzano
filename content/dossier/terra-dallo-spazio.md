@@ -78,7 +78,7 @@ I **due occhi del Vulcano Laziale**, fianco a fianco: a **sinistra** il **Lago d
 {{< dossier-dato to="5" unita=" giorni" label="Ogni quanto i satelliti **rivedono** il nostro territorio" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-scena id="iride" image="/images/dossier/roma-sat.webp" alt="Roma vista dall'alto da satellite a colori naturali: la macchia urbana della città circondata dalla campagna, immagine Copernicus Sentinel-2" align="right" kicker="I nuovissimi occhi italiani" title="IRIDE,<br>made in Italy" credito="Roma · Copernicus Sentinel-2 (Unione Europea) · CC BY" >}}
+{{< dossier-scena id="iride" image="/images/dossier/roma-sat.webp" alt="Roma vista dall'alto da satellite a colori naturali: la macchia urbana della città circondata dalla campagna, immagine Copernicus Sentinel-2" align="top" kicker="I nuovissimi occhi italiani" title="IRIDE,<br>made in Italy" credito="Roma · Copernicus Sentinel-2 (Unione Europea) · CC BY" >}}
 Agli occhi europei se ne stanno aggiungendo di **tutti italiani**: **IRIDE**, una costellazione di oltre 60 satelliti voluta dal Governo con i fondi del **PNRR**, coordinata da **ESA** con il supporto dell'**ASI**.
 
 La sua **prima immagine**, il 5 marzo 2025, ha ritratto proprio **Roma e l'Italia centrale** a **2,66 metri** di dettaglio — circa tre volte più nitida dell'osservazione satellitare disponibile oggi in modo sistematico sull'Italia. IRIDE nasce anche per la **protezione civile**: incendi, frane, alluvioni, monitoraggio del territorio. La costellazione è in costruzione e sarà progressivamente operativa nel corso del decennio. *(La foto reale di IRIDE è sul sito dell'ESA; qui Roma ripresa dal satellite Copernicus Sentinel-2.)*
