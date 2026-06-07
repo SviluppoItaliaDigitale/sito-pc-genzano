@@ -59,6 +59,7 @@ Non sai da dove partire? Scegli la tua situazione: ogni scelta ti porta ai mater
 {{< link-card url="/formazione/educazione-civica/" icon="bi-bank" titolo="Educazione civica" desc="Collega le attività ai nuclei dell'insegnamento di educazione civica (D.M. 183/2024)." >}}
 {{< link-card url="/formazione/dirigenti-e-rspp/" icon="bi-clipboard-check" titolo="Dirigenti e RSPP" desc="Ruoli, limiti, responsabilità e percorsi per le competenze trasversali (PCTO)." >}}
 {{< link-card url="/formazione/in-famiglia-dopo-la-lezione/" icon="bi-house-heart" titolo="A casa, in famiglia" desc="Azioni concrete per continuare a casa dopo la lezione." >}}
+{{< link-card url="/assistente/" icon="bi-chat-dots" titolo="Non sai cosa cercare?" desc="L'assistente guidato ti porta alla risposta giusta con poche domande." >}}
 </div>
 
 ### Kit per fascia d'età {#kit}

@@ -1194,6 +1194,24 @@ article:not(.card) .galleria img {
   text-align: left;
 }
 .it-header-slim-wrapper-content .nav-mobile .link-list { padding-left: 0 !important; }
+/* ── FIX mobile 07/06/2026 — tendina "Enti istituzionali" troncata ──
+   Sotto i 992px l'opener "Enti istituzionali" apre la lista in verticale.
+   L'overflow:hidden su .nav-mobile (serve al troncamento INLINE desktop)
+   clippava la voce più lunga e in grassetto: "Genzano di Roma" → "Genzano di I".
+   Su mobile la lista aperta deve essere a piena leggibilità: niente clip,
+   larghezza propria, voci su una riga intera. */
+@media (max-width: 991.98px) {
+  .it-header-slim-wrapper-content .nav-mobile { overflow: visible; }
+  .it-header-slim-wrapper-content .nav-mobile .link-list-wrapper {
+    width: auto;
+    min-width: 14rem;
+  }
+  .it-header-slim-wrapper-content .nav-mobile .link-list a.list-item {
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
+  }
+}
 /* Sui laptop (992-1499px) le tre voci enti + zona destra sono al limite: riduco
    un filo padding e corpo dei link enti così entrano tutte senza troncare. */
 @media (min-width: 992px) and (max-width: 1499.98px) {
