@@ -197,7 +197,7 @@ I 4 loghi ufficiali per le grafiche del Gruppo (cover articoli, slide social, sc
 
 | Locandina | Descrizione | Formato |
 |---|---|---|
-| [Diventa Volontario — Aiutaci ad aiutare](/manuali/locandine/locandina-diventa-volontario.pdf) | Locandina ufficiale di reclutamento. Affiggibile in negozi, scuole, parrocchie, condomini. Riporta sede, telefono, email e requisiti minimi. | PDF · 109 KB |
+| [Diventa Volontario — Aiutaci ad aiutare](/manuali/locandine/locandina-diventa-volontario.pdf) | Locandina ufficiale di reclutamento. Affiggibile in negozi, scuole, parrocchie, condomini. Riporta sede, telefono, email e requisiti minimi. | PDF · 105 KB |
 
 ## Materiali per le scuole
 
