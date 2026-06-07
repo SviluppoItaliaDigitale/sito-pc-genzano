@@ -1,0 +1,13 @@
+{{- /* Badge di provenienza per le schede del cruscotto e le cartine meteo.
+       Uso: {{ partial "fonte-badge.html" "ufficiale" }}  oppure  {{ partial "fonte-badge.html" "elaborazione" }}
+         ufficiale    = dato servito direttamente da un ente/servizio ufficiale
+                        (INGV, DPC, Centro Funzionale Lazio, ItaliaMeteo, ECMWF, EUMETSAT, Copernicus, NASA).
+         elaborazione = prodotto grafico/derivato realizzato dal Gruppo (es. cartine meteo) su dati aperti.
+       Riusa le classi .badge-fonte-istituzionale / -consultazione di custom.css (contrasto WCAG AA verificato).
+       NB: la clausola "dato indicativo / non sostituisce il bollettino" resta nel testo della scheda:
+       è ortogonale alla provenienza e vale per quasi tutte le schede. */ -}}
+{{- if eq . "elaborazione" -}}
+<span class="badge badge-fonte-consultazione fonte-badge"><i class="bi bi-pencil-square me-1" aria-hidden="true"></i>Elaborazione del Gruppo</span>
+{{- else -}}
+<span class="badge badge-fonte-istituzionale fonte-badge"><i class="bi bi-patch-check-fill me-1" aria-hidden="true"></i>Fonte ufficiale</span>
+{{- end -}}

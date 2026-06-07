@@ -12,7 +12,7 @@
     <div class="dash-kpi"><span class="dash-kpi-num" id="mare-dir">—</span><span class="dash-kpi-lab">Direzione onde</span></div>
   </div>
   <p class="small text-muted mt-2 mb-0" id="mare-stato-agg"></p>
-  <p class="small text-muted mt-1 mb-0">Dati: <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo Marine</a> (modelli onde). Dato indicativo; per la balneazione e gli avvisi costieri vedi le fonti ufficiali (Guardia Costiera, 1530).</p>
+  <p class="small text-muted mt-1 mb-0">{{ partial "fonte-badge.html" "ufficiale" }}Dati: <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo Marine</a> (modelli onde). Dato indicativo; per la balneazione e gli avvisi costieri vedi le fonti ufficiali (Guardia Costiera, 1530).</p>
   <script>
   (function(){
     var API='https://marine-api.open-meteo.com/v1/marine?latitude=41.43&longitude=12.62&timezone=Europe%2FRome&current=wave_height,wave_period,wave_direction';

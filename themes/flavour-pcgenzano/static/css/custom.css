@@ -2126,6 +2126,13 @@ article:not(.card) .galleria img {
   padding: 0.4rem 0.7rem;
   font-size: 0.8rem;
 }
+/* Badge di provenienza usato inline in testa alle righe "Fonte:/Dati:"
+   delle schede del cruscotto (partial fonte-badge.html). */
+.fonte-badge {
+  vertical-align: baseline;
+  margin-right: 0.45rem;
+  white-space: nowrap;
+}
 
 /* ================================================================
    Widget esterni click-to-load (Windy, INGV, futuri)

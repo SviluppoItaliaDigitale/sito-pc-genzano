@@ -64,7 +64,7 @@
     {{- end }}
     </div>
     <div class="meteo-gz-fonte">
-      Aggiornato {{ with .aggiornato_label }}{{ . }}{{ else }}{{ .data_lunga }}{{ end }} · Dati: {{ .fonte }} · dato indicativo, per le allerte vale il <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Lazio</a> · in emergenza chiama il <a href="tel:112">112</a>.
+      {{ partial "fonte-badge.html" "elaborazione" }}Aggiornato {{ with .aggiornato_label }}{{ . }}{{ else }}{{ .data_lunga }}{{ end }} · Dati: {{ .fonte }} · dato indicativo, per le allerte vale il <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Lazio</a> · in emergenza chiama il <a href="tel:112">112</a>.
     </div>
   </div>
 {{- else }}
