@@ -66,7 +66,7 @@ Ringraziamo la squadriglia per la visita e la curiosità. Aspettiamo di sapere c
 - [Diventa volontario](/diventa-volontario/) — come si entra nel Gruppo Comunale, requisiti e formazione
 - [Rischio incendi boschivi](/rischi-prevenzione/rischio-incendio/) — cosa fare prima, durante e dopo
 - [Kit di emergenza](/rischi-prevenzione/kit-emergenza/) — cosa tenere pronto in casa
-- [Kit per le scuole](/formazione/) — materiali di Educazione Civica per docenti e ragazzi
+- [Formazione e scuole](/formazione/) — materiali di Educazione Civica per docenti e ragazzi
 - [Chi siamo](/chi-siamo/) — storia e attività del Gruppo Comunale
 
 **Fonti istituzionali:**
