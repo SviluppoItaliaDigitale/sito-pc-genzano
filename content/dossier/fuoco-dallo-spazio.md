@@ -51,13 +51,13 @@ Tra giugno 2019 e marzo 2020 l'Australia bruciò come mai prima: le fiamme perco
 I satelliti seguirono il fumo mentre lasciava il continente e attraversava il Pacifico. Nessuna squadra a terra avrebbe potuto misurare un incendio così vasto: lo sguardo dall'alto sì. È la stessa tecnologia che ogni estate sorveglia anche i nostri boschi.
 {{< /dossier-scena >}}
 
-{{< dossier-scena id="canada-2023" image="/images/dossier/fuoco-canada-2023.webp" alt="Immagine satellitare MODIS: una densa coltre di fumo grigio-bruno degli incendi canadesi copre la regione dei Grandi Laghi nordamericani" align="right" kicker="Canada, 2023" title="Il fumo che<br>oscurò New York" credito="NASA · MODIS · pubblico dominio · 2023" >}}
+{{< dossier-scena id="canada-2023" image="/images/dossier/fuoco-canada-2023.webp" alt="Immagine satellitare MODIS: una densa coltre di fumo grigio-bruno degli incendi canadesi copre la regione dei Grandi Laghi nordamericani" align="left" kicker="Canada, 2023" title="Il fumo che<br>oscurò New York" credito="NASA · MODIS · pubblico dominio · 2023" >}}
 Nel 2023 il Canada visse la peggiore stagione di incendi della sua storia: tra **15 e 18 milioni di ettari** in fiamme, più del doppio del record precedente. Tra il 6 e l'8 giugno il fumo del Québec scese fino a **New York**, con lo smog peggiore in vent'anni.
 
 Il fumo non conosce confini: i satelliti lo tracciano per giorni, da un continente all'altro, e avvisano in anticipo le città lontane dal fuoco. Anche da noi le previsioni sulla qualità dell'aria nei giorni di incendio nascono dagli stessi dati dallo spazio.
 {{< /dossier-scena >}}
 
-{{< dossier-scena id="grecia-2023" image="/images/dossier/fuoco-grecia-2023.webp" alt="Immagine satellitare Sentinel-2 dell'isola di Rodi: una vasta area bruciata, in rosso-bruno, segna il centro dell'isola dopo gli incendi" align="left" kicker="Grecia, 2023" title="Rodi in fiamme,<br>turisti in salvo via mare" credito="Unione Europea · Copernicus Sentinel-2 · 2023" >}}
+{{< dossier-scena id="grecia-2023" image="/images/dossier/fuoco-grecia-2023.webp" alt="Immagine satellitare Sentinel-2 dell'isola di Rodi: una vasta area bruciata, in rosso-bruno, segna il centro dell'isola dopo gli incendi" align="right" kicker="Grecia, 2023" title="Rodi in fiamme,<br>turisti in salvo via mare" credito="Unione Europea · Copernicus Sentinel-2 · 2023" >}}
 Il 18 luglio 2023 un incendio sull'isola di **Rodi** costrinse a evacuare circa **19.000 persone**, molte via mare: la più grande operazione mai vista sull'isola. Nel solo mese di luglio la Grecia perse oltre 190.000 ettari di vegetazione.
 
 Il satellite **Sentinel-2** mostra la cicatrice rosso-bruna lasciata dal fuoco nel cuore dell'isola. Poche settimane dopo, l'incendio di Evros divenne il **più grande mai registrato nell'Unione Europea**: le mappe di Copernicus guidarono i soccorsi.

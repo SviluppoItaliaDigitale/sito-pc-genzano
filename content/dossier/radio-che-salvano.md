@@ -41,13 +41,13 @@ Non era la prima volta: già nel **1909**, quando il piroscafo **Republic** affo
 {{< dossier-dato to="1900" unita=" km" label="La distanza a cui fu **captato** l'SOS dei naufraghi di Nobile" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-scena id="californian" image="/images/dossier/radio-carpathia.webp" alt="Il transatlantico Carpathia, la nave che soccorse i naufraghi del Titanic, in una fotografia d'epoca" align="right" kicker="La lezione del Californian" title="Una radio salva<br>solo se qualcuno ascolta" credito="RMS Carpathia · fotografia d'epoca · pubblico dominio" >}}
+{{< dossier-scena id="californian" image="/images/dossier/radio-carpathia.webp" alt="Il transatlantico Carpathia, la nave che soccorse i naufraghi del Titanic, in una fotografia d'epoca" align="top" kicker="La lezione del Californian" title="Una radio salva<br>solo se qualcuno ascolta" credito="RMS Carpathia · fotografia d'epoca · pubblico dominio" >}}
 Quella notte un'altra nave, il **Californian**, era molto più vicina al Titanic. Ma il suo unico radiotelegrafista era andato a dormire e aveva **spento l'apparato**: nessuno sentì le chiamate.
 
 Da quella tragedia nacque una regola che vale ancora: l'**ascolto radio continuo**, 24 ore su 24 (Convenzione SOLAS, 1914). La tecnologia non basta — serve qualcuno che, dall'altra parte, stia **sempre in ascolto**.
 {{< /dossier-scena >}}
 
-{{< dossier-scena id="tendarossa" image="/images/dossier/radio-nobile.webp" alt="Umberto Nobile in cappotto e cappello davanti alla cabina del dirigibile Italia, con alcune persone intorno, in una foto del 1928" align="left" kicker="Tenda Rossa, 1928" title="L'SOS che nessun esperto<br>volle sentire" credito="Umberto Nobile davanti al dirigibile Italia, 1928 · pubblico dominio" >}}
+{{< dossier-scena id="tendarossa" image="/images/dossier/radio-nobile.webp" alt="Umberto Nobile in cappotto e cappello davanti alla cabina del dirigibile Italia, con alcune persone intorno, in una foto del 1928" align="right" kicker="Tenda Rossa, 1928" title="L'SOS che nessun esperto<br>volle sentire" credito="Umberto Nobile davanti al dirigibile Italia, 1928 · pubblico dominio" >}}
 Di ritorno dal Polo Nord, il dirigibile **Italia** di **Umberto Nobile** precipitò sul pack. I superstiti si rifugiarono in una tenda colorata di rosso e il loro radiotelegrafista, **Giuseppe Biagi**, lanciò l'SOS giorno e notte con una radio recuperata dai rottami.
 
 Per giorni la nave appoggio **non lo sentì**. A captarlo fu, a quasi **1900 chilometri**, un giovane **radioamatore** sovietico, **Nicolaj Schmidt**, con un apparecchio costruito da sé. Fu la sua segnalazione a far partire i soccorsi.
@@ -83,7 +83,7 @@ Il terremoto del 1985 rase al suolo interi quartieri di Città del Messico e **d
 È la lezione che si ripete a ogni grande disastro nel mondo: quando le reti commerciali cadono, la radio resta l'**ultima voce** che funziona.
 {{< /dossier-scena >}}
 
-{{< dossier-scena id="oggi" image="/images/dossier/radio-oggi.webp" alt="Una moderna stazione radioamatoriale: ricetrasmettitori, computer con software di collegamento e mappa del mondo, tasti morse e cuffie su un bancone" align="left" kicker="Non è storia antica" title="Quando le reti cadono,<br>la radio resta" credito="Stazione radioamatoriale · foto Ptolusque · CC BY-SA 4.0" >}}
+{{< dossier-scena id="oggi" image="/images/dossier/radio-oggi.webp" alt="Una moderna stazione radioamatoriale: ricetrasmettitori, computer con software di collegamento e mappa del mondo, tasti morse e cuffie su un bancone" align="right" kicker="Non è storia antica" title="Quando le reti cadono,<br>la radio resta" credito="Stazione radioamatoriale · foto Ptolusque · CC BY-SA 4.0" >}}
 Nei terremoti dell'**Aquila (2009)**, dell'**Emilia (2012)** e del **Centro Italia (2016)**, quando telefonini ed elettricità sono saltati, a tenere i collegamenti sono stati anche i **radioamatori**: una rete che non dipende da antenne commerciali né dalla corrente di casa.
 
 Per questo il nostro Gruppo cura le **[radiocomunicazioni](/conoscere/telecomunicazioni-emergenza/)** e forma i propri operatori radio: perché in emergenza la radio è spesso **l'ultima linea che resta in piedi**.
