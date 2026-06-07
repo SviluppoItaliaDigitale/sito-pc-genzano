@@ -7,10 +7,14 @@ sitemap:
   changefreq: monthly
 toc: true
 tts: true
-dataUltimaRevisione: "2026-05-21"
+dataUltimaRevisione: "2026-06-07"
 ---
 
 Le sigle della protezione civile possono sembrare difficili. Questo glossario le spiega in modo semplice, con esempi collegati al territorio quando utile.
+
+<div class="alert alert-info" role="note">
+<p class="mb-0"><i class="bi bi-book me-2" aria-hidden="true"></i><strong>Vuoi capire come funziona, non solo cosa significa?</strong> Il glossario dà la definizione breve. Per l'approfondimento vai a <a href="/conoscere/">Conoscere la Protezione Civile</a>, l'enciclopedia divulgativa del sito: il ciclo del rischio, il Servizio Nazionale, i rischi spiegati uno per uno. Diverse voci qui sotto hanno il rimando «Approfondisci».</p>
+</div>
 
 <div id="glossario-strumenti" class="glossario-strumenti"></div>
 <noscript>
@@ -28,12 +32,14 @@ Luogo sicuro dove la popolazione può radunarsi nelle prime fasi di un'emergenza
 
 ### AeDES
 Scheda tecnica usata dopo un terremoto da tecnici abilitati per valutare il danno e l'agibilità degli edifici. Serve a stabilire se un edificio può essere usato, se servono limitazioni o se è inagibile.
+*Approfondisci: [Dopo l'emergenza](/conoscere/le-quattro-fasi/dopo-l-emergenza/).*
 
 ### AGESCI {#agesci}
 Associazione Guide e Scout Cattolici Italiani. Il suo settore di protezione civile è iscritto all'elenco nazionale del volontariato presso il Dipartimento.
 
 ### AIB
 Antincendio Boschivo. Comprende prevenzione, avvistamento, contenimento e spegnimento degli incendi boschivi. Coinvolge Regioni, Vigili del Fuoco, Carabinieri Forestali e volontari formati.
+*Approfondisci: [Il rischio da incendi boschivi](/conoscere/catalogo-dei-rischi/rischio-incendio/).*
 
 ### Allerta
 Comunicazione preventiva emessa dalle autorità quando sono previsti fenomeni che possono causare criticità. Non indica per forza un'emergenza già in corso. I colori sono verde, giallo, arancione e rosso.
@@ -73,6 +79,7 @@ Basic Life Support Defibrillation. Il BLS unito all'uso del defibrillatore (DAE)
 
 ### Build back better {#build-back-better}
 Principio della ricostruzione dopo un disastro: non tornare com'era prima, ma ricostruire più sicuro e resiliente. È uno dei principi del Quadro di Sendai delle Nazioni Unite.
+*Approfondisci: [Dopo l'emergenza](/conoscere/le-quattro-fasi/dopo-l-emergenza/).*
 
 ### Bollettino di criticità idrogeologica e idraulica {#bollettino-di-criticita-idrogeologica-e-idraulica}
 Documento emesso dal Centro Funzionale Regionale. Indica il livello previsto di criticità per rischio idrogeologico, idraulico e temporali nelle diverse zone di allerta.
@@ -105,9 +112,11 @@ Corpo Nazionale Soccorso Alpino e Speleologico. Struttura del Club Alpino Italia
 
 ### COC — Centro Operativo Comunale
 Struttura che il Sindaco attiva per coordinare un'emergenza sul territorio comunale. Riunisce le funzioni necessarie, come tecnica, volontariato, sanità, assistenza alla popolazione, comunicazione e viabilità.
+*Approfondisci: [Il modello di intervento: dal COC alla DiComaC](/conoscere/le-quattro-fasi/modello-di-intervento/).*
 
 ### COI — Centro Operativo Intercomunale
 Struttura di coordinamento tra più Comuni, utile quando un'emergenza riguarda un territorio più ampio del singolo Comune.
+*Approfondisci: [Il modello di intervento: dal COC alla DiComaC](/conoscere/le-quattro-fasi/modello-di-intervento/).*
 
 ### Codice della protezione civile
 Decreto legislativo 2 gennaio 2018, n. 1. È il riferimento principale del Servizio nazionale di protezione civile. Definisce attività, competenze, ruoli e strumenti del sistema.
@@ -226,6 +235,7 @@ Istituto Superiore di Sanità. Ente pubblico di ricerca in materia di salute; in
 
 ### IT-alert
 Sistema nazionale di allarme pubblico. Invia messaggi ai telefoni presenti in un'area interessata da una grave emergenza. Non richiede app, registrazione o connessione internet.
+*Approfondisci: [Telecomunicazioni in emergenza](/conoscere/telecomunicazioni-emergenza/).*
 
 ## L
 
@@ -242,6 +252,7 @@ Misura l'energia rilasciata da un terremoto. Non indica da sola i danni, che dip
 
 ### Maremoto (tsunami) {#maremoto}
 Serie di onde marine provocate dallo spostamento improvviso di una grande massa d'acqua: terremoti sottomarini, frane o eruzioni. In Italia l'allertamento è gestito dal sistema SiAM (INGV, ISPRA, DPC).
+*Approfondisci: [Il rischio da maremoto](/conoscere/catalogo-dei-rischi/rischio-maremoto/).*
 
 ### MCS / Mercalli
 Scala che descrive gli effetti di un terremoto su persone, edifici e ambiente. È diversa dalla magnitudo, che misura l'energia del terremoto.
@@ -332,9 +343,11 @@ Evento sismico avvertito dalle persone o registrato dagli strumenti.
 
 ### Sendai, Quadro di {#sendai}
 Quadro di Sendai 2015-2030: l'accordo mondiale delle Nazioni Unite per ridurre i danni dei disastri. Indica priorità come conoscere il rischio, rafforzare la governance e ricostruire meglio (*build back better*).
+*Approfondisci: [La dimensione internazionale](/conoscere/dimensione-internazionale/).*
 
 ### Seveso (direttiva) {#seveso}
 Normativa europea che impone misure di sicurezza e piani di emergenza agli stabilimenti industriali che trattano grandi quantità di sostanze pericolose. Prende il nome dall'incidente industriale di Seveso del 1976. La versione vigente è la direttiva Seveso III (2012/18/UE), recepita in Italia con il decreto legislativo n. 105 del 2015.
+*Approfondisci: [Il rischio chimico-industriale](/conoscere/catalogo-dei-rischi/rischio-chimico-industriale/).*
 
 ### ShakeMap {#shakemap}
 Mappa che mostra l'intensità di scuotimento del terreno dopo un terremoto, calcolata in pochi minuti da INGV sulla base delle stazioni sismiche.
