@@ -154,7 +154,7 @@ enableGitInfo = true
   weight = 3
 
 [[menus.main]]
-  name = "Kit per le scuole"
+  name = "Formazione e scuole"
   url = "/formazione/"
   parent = "per-le-scuole"
   weight = 1
