@@ -15,6 +15,7 @@ sezioni:
   - { id: "modelli", label: "I modelli" }
   - { id: "italia", label: "L'Italia" }
   - { id: "resceu", label: "rescEU" }
+  - { id: "ercc", label: "L'ERCC" }
   - { id: "copernicus", label: "Occhi dallo spazio" }
   - { id: "calore", label: "Il caldo" }
   - { id: "blackout", label: "Interconnessi" }
@@ -82,6 +83,14 @@ Nell'estate del **2023** gli incendi divorarono **Rodi** e la Grecia continental
 A smistare richieste e offerte di aiuto, giorno e notte, è l'**ERCC** di Bruxelles, il centro europeo di coordinamento della risposta alle emergenze.
 {{< /dossier-scena >}}
 
+{{< dossier-scena id="ercc" image="/images/dossier/ercc-sala.webp" alt="Sala operativa dell'ERCC a Bruxelles: un'operatrice con il gilet «European Union» al telefono davanti a una parete di schermi con mappe e notiziari, in un open space di postazioni di lavoro" align="top" kicker="Bruxelles · attivo 24 ore su 24" title="Il cuore<br>del coordinamento" credito="Foto: © Unione Europea, 2022 (Pierre-Yves Jortay)" >}}
+Tutte le richieste e le offerte di aiuto passano da qui. L'**ERCC** — il Centro di coordinamento della risposta alle emergenze — è la sala operativa della Commissione europea a **Bruxelles**, attiva **24 ore su 24**, ogni giorno dell'anno.
+
+Quando un Paese chiede aiuto, dentro o fuori l'Unione, l'ERCC raccoglie le offerte degli Stati, organizza l'invio di squadre e mezzi e segue l'emergenza minuto per minuto. Monitora i rischi nel mondo, distribuisce le mappe satellitari di **Copernicus** e tiene in contatto le protezioni civili nazionali — Italia compresa.
+
+È il filo che trasforma tanti sistemi diversi in **una rete sola**.
+{{< /dossier-scena >}}
+
 {{< dossier-confronto id="copernicus" titolo="Valencia 2024: occhi condivisi dallo spazio" testo="Il **29 ottobre 2024** una **DANA** — una goccia fredda in quota — scaricò sulla provincia di **Valencia** la pioggia di un anno in poche ore: oltre **220 vittime**. Trascina il cursore: a sinistra la pianura prima, a destra l'acqua che l'ha sommersa. Le immagini vengono da **Copernicus**, il programma satellitare dell'Unione Europea. È lo stesso servizio che mappa i danni — entro poche ore, gratis e per **tutti** i Paesi, Italia compresa — quando colpisce un disastro. Nessuno Stato dovrebbe più affrontare un'emergenza al buio." base="/images/dossier/acqua-valencia-prima.webp" baseAlt="Immagine satellitare della pianura agricola a sud di Valencia prima dell'alluvione, con i campi coltivati ordinati" baseLab="26 ottobre 2024" top="/images/dossier/acqua-valencia-dopo.webp" topAlt="La stessa pianura a sud di Valencia dopo l'alluvione del 29 ottobre 2024: vaste superfici coperte dall'acqua e dal fango" topLab="31 ottobre 2024" ratio="16 / 10" cap="Sud di Valencia, alluvione del 29 ottobre 2024 · Unione Europea, Copernicus Sentinel-2 · CC BY." >}}
 
 {{< dossier-scena id="calore" image="/images/dossier/heat-2003.webp" alt="Mappa dell'Europa che mostra l'anomalia di temperatura nell'estate 2003: vaste aree di Francia e Italia in rosso scuro, fino a oltre dieci gradi sopra la media" align="top" kicker="L'estate che cambiò tutto" title="Imparare<br>insieme" credito="NASA · dati MODIS (R. Stöckli, R. Simmon) · pubblico dominio" >}}
@@ -116,7 +125,7 @@ In emergenza, qui da noi, il numero resta il **112**.
 {{< /dossier-chiusura >}}
 
 {{< dossier-fonti >}}
-- **Immagini:** Canadair antincendio (Albarubescens, CC BY-SA 4.0) · valle dell'Ahr dopo l'alluvione 2021 (GerritR, CC BY-SA 4.0) · mappa politica dell'Europa (FelixCountryBalls163, CC BY-SA 4.0) · casa isolata dall'alluvione in Emilia-Romagna 2023 (Cesare Barillà, CC BY-SA 4.0) · isola di Rodi dopo gli incendi 2023 (Unione Europea, Copernicus Sentinel-2) · pianura di Valencia prima e dopo l'alluvione 2024 (Unione Europea, Copernicus Sentinel-2) · anomalia termica europea 2003 (NASA Earth Observatory, R. Stöckli e R. Simmon, pubblico dominio) · blackout di Madrid 2025 (Danieltarrino, CC BY 4.0). Via Wikimedia Commons e Copernicus.
+- **Immagini:** Canadair antincendio (Albarubescens, CC BY-SA 4.0) · valle dell'Ahr dopo l'alluvione 2021 (GerritR, CC BY-SA 4.0) · mappa politica dell'Europa (FelixCountryBalls163, CC BY-SA 4.0) · casa isolata dall'alluvione in Emilia-Romagna 2023 (Cesare Barillà, CC BY-SA 4.0) · isola di Rodi dopo gli incendi 2023 (Unione Europea, Copernicus Sentinel-2) · pianura di Valencia prima e dopo l'alluvione 2024 (Unione Europea, Copernicus Sentinel-2) · anomalia termica europea 2003 (NASA Earth Observatory, R. Stöckli e R. Simmon, pubblico dominio) · blackout di Madrid 2025 (Danieltarrino, CC BY 4.0) · sala operativa dell'ERCC a Bruxelles (© Unione Europea, 2022, foto Pierre-Yves Jortay). Via Wikimedia Commons, Copernicus e Commissione europea.
 - **Fonti:** [Protezione Civile europea — Meccanismo unionale (UCPM)](https://civil-protection-humanitarian-aid.ec.europa.eu/what/civil-protection/eu-civil-protection-mechanism_en) · [rescEU](https://civil-protection-humanitarian-aid.ec.europa.eu/what/civil-protection/resceu_en) · [Dentro l'ERCC: la visita virtuale al centro di risposta dell'UE](https://civil-protection-humanitarian-aid.ec.europa.eu/news-stories/stories/inside-ercc-virtual-tour-eus-disaster-response-hub_en) · [Copernicus Emergency Management Service](https://emergency.copernicus.eu/) · [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/it/) · Codice della protezione civile (decreto legislativo 1 del 2018).
 - **Sul nostro sito:** [La dimensione internazionale](/conoscere/dimensione-internazionale/) · [Il Servizio Nazionale](/conoscere/servizio-nazionale/) · [Glossario](/glossario/) · [Diventa volontario](/diventa-volontario/).
 - Dossier a cura del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**. Guida divulgativa a scopo informativo: il Gruppo non parla a nome del Dipartimento né dell'Unione Europea. In emergenza chiama il **112**.
