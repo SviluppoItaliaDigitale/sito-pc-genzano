@@ -63,10 +63,13 @@ GitHub le ricorda.
 
 1. In basso ci sono le linguette **TERMINAL / PORTS / PROBLEMS…** → clicca
    **TERMINAL**.
-2. Clicca nel riquadro nero, scrivi e premi **Invio**:
+2. Clicca nel riquadro nero, scrivi e premi **Invio** (copia la riga **intera**):
    ```
-   hugo server
+   hugo server --baseURL "https://$CODESPACE_NAME-1313.app.github.dev" --appendPort=false
    ```
+   > 💡 Nel Codespace il sito si apre da un indirizzo speciale di GitHub. Questo
+   > comando lo dice a Hugo, così **le grafiche/CSS si vedono bene**. Con il solo
+   > `hugo server` la pagina uscirebbe senza stile.
 3. Compare un avviso con **"Open in Browser"** (oppure vai nella linguetta
    **PORTS** e clicca l'icona del mondo 🌐 accanto alla porta **1313**).
 4. Si apre il sito in una nuova scheda: ogni modifica a un file lo aggiorna da
@@ -127,6 +130,50 @@ apri il repo → tab **Codespaces** → crea/apri.
 | Firecrawl/Gemini non funzionano | Manca il segreto: torna alla **Parte A**, poi **Stop + riapri** il Codespace |
 | Il sito non si apre | Controlla che `hugo server` sia ancora in esecuzione nel primo terminale; usa la porta **1313** in **PORTS** |
 | Setup non finito / errori | Rilancia a mano: `bash .devcontainer/setup.sh` (è sicuro ripeterlo) |
+
+---
+
+## 🔄 Lavorare da più dispositivi (PC, telefono, tablet)
+
+**Concetto chiave:** c'è **un solo "computer" nel cloud** (il Codespace, acceso nei
+server di GitHub). Tutti i tuoi dispositivi sono solo **finestre** su quella stessa
+macchina. Spegnere una finestra **non** spegne il computer.
+
+### Aprirlo da un altro dispositivo
+Da PC, telefono o tablet: **github.com** → login → repo → **`<> Code`** →
+**Codespaces** → clicca quello esistente. Ritrovi **tutto com'era** (file, terminali,
+lavoro in corso). Sul telefono puoi anche usare l'**app GitHub** ufficiale → tab
+**Codespaces**.
+
+### Se spengo il PC o tolgo la connessione, il lavoro continua?
+**Sì**, perché gira sul cloud, non sul tuo dispositivo.
+- Chiudere il browser / spegnere il PC **non lo ferma subito**: un'operazione in
+  corso prosegue da sola sulla macchina cloud.
+- ⏱️ Se **nessuno si ricollega per ~30 minuti** (tempo modificabile), GitHub lo
+  mette **in pausa** da solo. Non resta acceso all'infinito.
+- 🎯 **Quando pubblichi:** dopo il `git push`, il deploy sul sito vero (Aruba) lo fa
+  **GitHub Actions**, un sistema *indipendente* dal Codespace. Quindi anche se chiudi
+  tutto subito dopo il push, **il sito va online lo stesso**.
+
+> Regola pratica: per un lavoro importante, aspetta di vedere "pushato" prima di
+> chiudere. Dopo il push puoi spegnere tutto: il resto va avanti da solo.
+
+### Usare Claude da Android — cosa funziona e cosa no
+
+| Strada | Va col tuo sito? |
+|---|---|
+| **App Claude per Android** (la chat normale) | ❌ No — solo conversazione, non apre i file né esegue comandi sul repo |
+| **Codespace dal browser del telefono** (Chrome → github.com → apri il Codespace → terminale → `claude`) | ✅ Sì — identico al PC |
+| **Claude Code sul web** (`claude.ai/code`) collegato al repo | ✅ Sì, ma gira in una **sua** macchina cloud separata (non è il Codespace) |
+
+La via più semplice: dal telefono apri il **Codespace nel browser** e usa il
+terminale lì. È sempre la stessa macchina cloud — Claude lavora identico che tu gli
+parli da Windows, Mac o Android.
+
+### ⚠️ Evitare di accavallare le modifiche
+Se lavori **sia dal PC sia dal Codespace**, prima di iniziare in un posto fai sempre
+**`git pull`** (o, dentro Claude, scrivi "aggiorna"). Così non si sovrappongono le
+modifiche fatte nell'altro ambiente.
 
 ---
 
