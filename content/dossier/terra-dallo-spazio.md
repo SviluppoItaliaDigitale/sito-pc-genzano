@@ -37,7 +37,7 @@ Non scattano cartoline: misurano **temperature, fumo, umidità del suolo, livell
 {{< dossier-dato to="0" unita=" €" label="Quanto costano i dati: sono **aperti e gratuiti** per tutti" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-scena id="incendi" image="/images/dossier/incendi.webp" alt="La Sicilia vista dal satellite in una giornata di incendi: punti arancioni dei roghi e lunghi pennacchi di fumo che si allungano sul mare" align="right" kicker="Quando la Terra brucia" title="Vedere il fuoco<br>prima del fumo" credito="NASA MODIS · satellite Aqua · pubblico dominio" >}}
+{{< dossier-scena id="incendi" image="/images/dossier/fuoco-modis.webp" alt="L'Italia meridionale vista dal satellite MODIS in una giornata di incendi: lungo le coste di Campania, Calabria, Puglia e Sicilia spiccano i punti rossi dei roghi attivi, con pennacchi di fumo che si allungano sul mare" align="right" kicker="Quando la Terra brucia" title="Vedere il fuoco<br>prima del fumo" credito="Jeff Schmaltz, MODIS Land Rapid Response Team, NASA GSFC · pubblico dominio" >}}
 I sensori termici dei satelliti individuano i **punti caldi** degli incendi anche dove nessuno è ancora arrivato. È il principio del sistema europeo **EFFIS**, che ogni giorno mappa roghi e aree bruciate in tutta Europa.
 
 Per i Castelli Romani, dove l'estate porta il [rischio incendi](/rischi-prevenzione/rischio-incendio/), significa una cosa sola: **accorgersene prima**.

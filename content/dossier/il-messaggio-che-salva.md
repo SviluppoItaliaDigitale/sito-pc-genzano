@@ -54,17 +54,17 @@ Ogni Paese ha il suo: **NL-Alert** nei Paesi Bassi (pioniere dal 2012), **FR-Ale
 
 {{< dossier-confronto id="indian-ocean" titolo="Oceano Indiano 2004: prima e dopo" testo="Il **26 dicembre 2004** lo tsunami dell'Oceano Indiano uccise **circa 230.000 persone** in 14 Paesi: l'onda impiegò ore a raggiungere alcune coste, ma **nessuno avvisò** — non esisteva alcun sistema di allerta. Trascina il cursore: a sinistra la devastazione, a destra la risposta del mondo. La tragedia spinse la **IOC-UNESCO** a creare nel 2005 il sistema di allerta per l'Oceano Indiano. La risposta sono le **boe DART** della NOAA, che misurano in mare aperto le minime variazioni del livello dell'acqua: dalla prima rete di 6 boe (2001) si è arrivati a oltre **60 stazioni** nel mondo. In Italia il **Centro Allerta Tsunami dell'INGV** (CAT-INGV), operativo dal **2017** e accreditato UNESCO per il Mediterraneo, integra sismometri e mareografi. Genzano è nei Castelli Romani, lontana dalla costa: il rischio maremoto **non riguarda** direttamente il territorio — lo raccontiamo come funzione del sistema-Paese." base="/images/dossier/allertamento-indian-ocean-2004-base.webp" baseAlt="Veduta aerea di un villaggio costiero di Sumatra ridotto in macerie dopo lo tsunami del 2004, con colline verdi sullo sfondo" baseLab="Senza allerta" top="/images/dossier/allertamento-indian-ocean-2004-top.webp" topAlt="Schema del sistema di rilevamento maremoti DART: una boa in superficie collegata a un sensore posato sul fondo dell'oceano" topLab="La risposta" ratio="16 / 10" cap="A sinistra: costa di Sumatra dopo lo tsunami del 2004 (U.S. Navy, pubblico dominio). A destra: schema del sistema DART (NOAA, pubblico dominio). Via Wikimedia Commons." >}}
 
-{{< dossier-hotspot id="codici-colore" image="/images/dossier/allertamento-codici-colore.webp" alt="Mappa muta dell'Italia divisa per regioni, in verde su sfondo nero, senza etichette" titolo="I colori dell'allerta meteo" testo="Le allerte meteo-idro usano una scala condivisa a livello nazionale ed europeo: quattro colori per quattro livelli di pericolosità. Tocca i punti per capire cosa significa ciascun livello." >}}
-{{< dossier-punto x="40" y="20" titolo="Verde · nessuna criticità" >}}
+{{< dossier-hotspot id="codici-colore" image="/images/dossier/allertamento-codici-colore.webp" alt="Scala dei quattro colori dell'allerta meteo: quattro bande verticali, verde, giallo, arancione e rosso" titolo="I colori dell'allerta meteo" testo="Le allerte meteo-idro usano una scala condivisa a livello nazionale ed europeo: quattro colori per quattro livelli di pericolosità. Tocca ogni colore per capire cosa significa." >}}
+{{< dossier-punto x="13" y="50" titolo="Verde · nessuna criticità" >}}
 Nessun fenomeno meteo-idro rilevante previsto. La situazione è ordinaria: si vive normalmente, restando comunque informati.
 {{< /dossier-punto >}}
-{{< dossier-punto x="63" y="45" titolo="Giallo · attenzione" >}}
+{{< dossier-punto x="38" y="50" titolo="Giallo · attenzione" >}}
 Fenomeni localizzati con possibili danni limitati: frane, allagamenti puntuali, piene di piccoli corsi d'acqua. Sui versanti dei Castelli anche una pioggia moderata può bastare.
 {{< /dossier-punto >}}
-{{< dossier-punto x="68" y="68" titolo="Arancione · pericolo" >}}
+{{< dossier-punto x="63" y="50" titolo="Arancione · pericolo" >}}
 Fenomeni più intensi e diffusi, pericolosità media: allagamenti estesi, frane, esondazioni. Si evitano spostamenti non necessari e zone a rischio.
 {{< /dossier-punto >}}
-{{< dossier-punto x="55" y="90" titolo="Rosso · pericolo elevato" >}}
+{{< dossier-punto x="88" y="50" titolo="Rosso · pericolo elevato" >}}
 Fenomeni molto intensi, pericolosità elevata per le persone e danni estesi. Si seguono solo le indicazioni delle autorità: in pericolo immediato si chiama il 112.
 {{< /dossier-punto >}}
 {{< /dossier-hotspot >}}
@@ -102,7 +102,7 @@ Un avviso è utile solo se qualcuno lo ascolta e sa cosa fare.
 {{< /dossier-chiusura >}}
 
 {{< dossier-fonti >}}
-- **Immagini:** volto illuminato dallo smartphone (Japanexperterna.se, CC BY-SA 2.0) · antenna di telefonia mobile (Cvmontuy, CC BY-SA 4.0) · messaggio di test IT-alert (0 Noctis 0, CC BY-SA 4.0) · mappa dell'Europa (FelixCountryBalls163, CC BY-SA 4.0) · costa di Sumatra 2004 (U.S. Navy / Philip A. McDaniel, pubblico dominio) · schema DART (NOAA, pubblico dominio) · mappa muta dell'Italia (Flanker / Yiyi, pubblico dominio) · Otsuchi 2011 (U.S. Navy / Alexander Tidd, pubblico dominio) · falso allarme Hawaii 2018 (pubblico dominio, solo testo) · persone con smartphone in stazione (Rawpixel.com, CC0 1.0) · stand «Io non rischio» (Dipartimento della Protezione Civile, CC BY 2.0). Via Wikimedia Commons.
+- **Immagini:** volto illuminato dallo smartphone (Japanexperterna.se, CC BY-SA 2.0) · antenna di telefonia mobile (Cvmontuy, CC BY-SA 4.0) · messaggio di test IT-alert (0 Noctis 0, CC BY-SA 4.0) · mappa dell'Europa (FelixCountryBalls163, CC BY-SA 4.0) · costa di Sumatra 2004 (U.S. Navy / Philip A. McDaniel, pubblico dominio) · schema DART (NOAA, pubblico dominio) · grafica dei colori dell'allerta (Gruppo Comunale Volontari PC Genzano) · Otsuchi 2011 (U.S. Navy / Alexander Tidd, pubblico dominio) · falso allarme Hawaii 2018 (pubblico dominio, solo testo) · persone con smartphone in stazione (Rawpixel.com, CC0 1.0) · stand «Io non rischio» (Dipartimento della Protezione Civile, CC BY 2.0). Via Wikimedia Commons.
 - **Fonti:** [Dipartimento della Protezione Civile — IT-alert](https://www.protezionecivile.gov.it/it/) · [Centro Funzionale Regionale del Lazio](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale) · [INGV — Centro Allerta Tsunami (CAT-INGV)](https://cat.ingv.it/it/) · [NOAA — sistema DART](https://www.ndbc.noaa.gov/dart/dart.shtml) · [Protezione Civile — Io non rischio](https://www.protezionecivile.gov.it/it/) · norma ISO 22329:2021.
 - **Sul nostro sito:** [Allerte meteo](/allerte-meteo/) · [Piano di emergenza comunale](/piano-emergenza/) · [Numeri utili](/numeri-utili/) · [Cruscotto in tempo reale](/cruscotto/).
 - Dossier a cura del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**. Guida divulgativa: in emergenza chiama il **112**.
