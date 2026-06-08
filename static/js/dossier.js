@@ -170,6 +170,24 @@
     });
   }
 
+  /* 12. Bagliore che segue il cursore sulle scene (desktop, gated) -------- */
+  if (window.matchMedia && window.matchMedia("(pointer: fine)").matches) {
+    root.querySelectorAll(".dossier-hero, .dossier-scena, .dossier-dati").forEach(function (sec) {
+      var glow = document.createElement("span");
+      glow.className = "dossier-cursorglow";
+      glow.setAttribute("aria-hidden", "true");
+      sec.appendChild(glow);
+      sec.addEventListener("pointermove", function (ev) {
+        if (animOff()) { glow.style.opacity = "0"; return; }
+        var r = sec.getBoundingClientRect();
+        glow.style.left = (ev.clientX - r.left) + "px";
+        glow.style.top = (ev.clientY - r.top) + "px";
+        glow.style.opacity = "1";
+      });
+      sec.addEventListener("pointerleave", function () { glow.style.opacity = "0"; });
+    });
+  }
+
   /* 11. Slider di confronto: piccola "spinta" automatica alla prima vista - */
   root.querySelectorAll(".dossier-confronto").forEach(function (c) {
     var range = c.querySelector('input[type="range"]');

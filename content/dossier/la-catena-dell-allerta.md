@@ -32,38 +32,38 @@ In Italia questo lavoro è dei **Centri Funzionali**: una rete che fa capo al Di
 Prevedere non vuol dire indovinare: vuol dire stimare, con metodo scientifico, **quanto è probabile** un fenomeno e **quanto può essere intenso**.
 {{< /dossier-scena >}}
 
-{{< dossier-dati id="bollettino" >}}
+{{< dossier-dati id="bollettino" image="/images/dossier/vento-ianos.webp" alt="Immagine satellitare di un ciclone mediterraneo" >}}
 {{< dossier-dato to="2" unita=" bollettini" label="Il Centro Funzionale pubblica ogni giorno il **bollettino di vigilanza** (cosa è previsto) e, quando serve, il **bollettino di criticità** (quali effetti sul territorio)" >}}
 {{< dossier-dato to="1" unita=" parola" label="La parola chiave è **criticità**: non conta solo «quanta pioggia», ma cosa quella pioggia può provocare su quel territorio (frane, allagamenti, piene)" >}}
 {{< dossier-dato to="24" unita=" h" label="L'allerta guarda di norma alle **24 ore** successive: il tempo che serve a Comuni e cittadini per prepararsi" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-dati id="colori" >}}
+{{< dossier-dati id="colori" image="/images/dossier/temporali-fulmini.webp" alt="Fulmini durante un temporale notturno, sfondo della scheda sui codici colore dell'allerta" >}}
 {{< dossier-dato to="4" unita=" colori" label="L'allerta si esprime in **quattro livelli di colore**, dal meno al più grave" >}}
 {{< dossier-dato to="1" unita=" · gialla" label="**Gialla**: criticità ordinaria. Possibili fenomeni localizzati: temporali, allagamenti puntuali, piccole frane" >}}
 {{< dossier-dato to="2" unita=" · arancione" label="**Arancione**: criticità moderata. Fenomeni diffusi e intensi, con possibili danni. Massima attenzione" >}}
 {{< dossier-dato to="3" unita=" · rossa" label="**Rossa**: criticità elevata. Fenomeni gravi e diffusi, rischio serio per le persone. Limita gli spostamenti" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-dati id="zone" >}}
+{{< dossier-dati id="zone" image="/images/dossier/genzano-nemi-giorno.webp" alt="Il territorio dei Castelli Romani visto dall'alto" >}}
 {{< dossier-dato to="1" unita=" zona" label="L'allerta non è «per Genzano»: è per **zona di allerta**. Il Lazio è diviso in zone idrogeologiche-idrauliche omogenee, e noi apparteniamo alla nostra" >}}
 {{< dossier-dato to="9" label="Per gli **incendi boschivi** Genzano è in **zona AIB 9** (Castelli Romani): in estate la Regione pubblica un bollettino dedicato di pericolosità" >}}
 {{< dossier-dato to="1" unita=" mappa" label="Sapere in quale zona sei serve a **leggere l'allerta giusta**: la stessa giornata può essere gialla da una parte e verde dall'altra" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-dati id="catena" >}}
+{{< dossier-dati id="catena" image="/images/dossier/italia-tendopoli-aquila.webp" alt="Campo della Protezione Civile dopo un terremoto" >}}
 {{< dossier-dato to="1" unita=" · DPC/CFR" label="**Dipartimento e Centro Funzionale** elaborano e diramano l'allerta" >}}
 {{< dossier-dato to="2" unita=" · Regione" label="La **Regione** la riceve e la trasmette a Prefetture, Province e Comuni" >}}
 {{< dossier-dato to="3" unita=" · Comune" label="Il **Comune** la riceve: da qui l'allerta diventa azione concreta sul territorio" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-dati id="sindaco" >}}
+{{< dossier-dati id="sindaco" image="/images/dossier/acqua-emilia-2023.webp" alt="Veduta aerea dell'alluvione in Emilia-Romagna del 2023" >}}
 {{< dossier-dato to="1" unita=" autorità" label="Il **Sindaco** è la prima autorità di protezione civile: valuta l'allerta e decide cosa attivare" >}}
 {{< dossier-dato to="3" unita=" mosse" label="Può **attivare il COC** (Centro Operativo Comunale), **informare la popolazione** e **allertare il Gruppo** di volontari" >}}
 {{< dossier-dato to="9" label="Nel COC le **funzioni di supporto** (Metodo Augustus) si mettono in moto: volontariato, sanità, logistica, viabilità, telecomunicazioni" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-dati id="itarlert" >}}
+{{< dossier-dati id="itarlert" image="/images/dossier/temporali-fulmini.webp" alt="Fulmini durante un temporale notturno" >}}
 {{< dossier-dato to="2023" label="Per le emergenze **gravi e imminenti** è arrivato **IT-alert**: un messaggio che suona su tutti i telefoni nell'area colpita, senza bisogno di iscriversi" >}}
 {{< dossier-dato to="1" unita=" canale" label="IT-alert si aggiunge ai canali ufficiali (sito, social, radio, altoparlanti): non li sostituisce, li rinforza nei momenti critici" >}}
 {{< dossier-dato to="0" unita="" label="Come funziona nel dettaglio te lo raccontiamo nel dossier «Il messaggio che salva»" >}}

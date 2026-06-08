@@ -1,1 +1,4 @@
-<section class="dossier-dati" id="{{ .Get "id" | default "numeri" }}"><div class="dossier-dati__grid reveal">{{ .Inner }}</div></section>
+{{- $img := .Get "image" -}}
+<section class="dossier-dati{{ if $img }} dossier-dati--img{{ end }}" id="{{ .Get "id" | default "numeri" }}">
+{{- if $img }}<div class="dossier-dati__bg" style="background-image:url('{{ $img | strings.TrimPrefix "/" | relURL }}')" role="img" aria-label="{{ .Get "alt" }}"></div>{{ end -}}
+<div class="dossier-dati__grid reveal">{{ .Inner }}</div></section>
