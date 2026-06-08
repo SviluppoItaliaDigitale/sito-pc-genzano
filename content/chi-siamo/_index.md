@@ -7,7 +7,7 @@ aliases:
   - /chisiamo.html
   - /chisiamo/
 tts: true
-dataUltimaRevisione: "2026-06-02"
+dataUltimaRevisione: "2026-06-08"
 ---
 <!-- cache-bust: 2026-05-29 forza re-upload FTP dopo aggiunta voce di menu globale "Conoscere la Protezione Civile" -->
 
@@ -33,9 +33,8 @@ dataUltimaRevisione: "2026-06-02"
 <div class="card-body">
 <h3 class="h6"><i class="bi bi-building text-primary me-2" aria-hidden="true"></i> Comune di Genzano di Roma</h3>
 <ul class="list-unstyled mb-0 small">
-<li class="mb-2"><strong>Sindaco:</strong> Carlo Zoccolotti</li>
-<li class="mb-2"><strong>Assessore alla Protezione Civile:</strong> Roberto Silvestrini</li>
-<li class="mb-2"><strong>Consigliere con delega alla Protezione Civile:</strong> Marcello Marianecci</li>
+<li class="mb-2"><strong>Sindaco:</strong> Fabio Papalia</li>
+<li class="mb-2"><strong>Assessore alla Protezione Civile:</strong> <em>in corso di nomina</em></li>
 <li><strong>Comandante Polizia Locale e Dirigente Protezione Civile:</strong> Monica Palladinelli</li>
 </ul>
 </div>
