@@ -31,7 +31,7 @@ sezioni:
 {{< dossier-dato to="0" label="I sistemi **permanenti** di protezione civile in Italia, prima degli anni Ottanta: ogni emergenza si affrontava da capo, caso per caso" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-scena id="friuli" image="/images/dossier/storia-friuli-1976.webp" alt="Chiesa in rovina dopo il terremoto del Friuli del 1976: l'abside affrescata resta in piedi tra cumuli di macerie, le pareti squarciate" align="right" kicker="Friuli · 6 maggio 1976" title="Il terremoto<br>e il riscatto" credito="Foto: Alberto Rizzi · pubblico dominio · chiesa di Ognissanti, Gemona" >}}
+{{< dossier-scena id="friuli" image="/images/dossier/storia-friuli-1976.webp" alt="Chiesa in rovina dopo il terremoto del Friuli del 1976: l'abside affrescata resta in piedi tra cumuli di macerie, le pareti squarciate" align="bottom" kicker="Friuli · 6 maggio 1976" title="Il terremoto<br>e il riscatto" credito="Foto: Alberto Rizzi · pubblico dominio · chiesa di Ognissanti, Gemona" >}}
 La sera del **6 maggio 1976** un terremoto di magnitudo 6,4 devasta il **Friuli**: quasi mille morti, decine di paesi rasi al suolo. Ma qui accade qualcosa di nuovo.
 
 Il Governo affida la guida dei soccorsi a un **commissario straordinario**, un giovane sottosegretario di nome **Giuseppe Zamberletti**. Per la prima volta c'è una regia unica, che coordina esercito, vigili del fuoco, Regione e volontari.
@@ -39,7 +39,7 @@ Il Governo affida la guida dei soccorsi a un **commissario straordinario**, un g
 La ricostruzione del Friuli — *«dov'era, com'era»*, gestita dalle comunità locali — diventa un modello studiato in tutto il mondo. Dalla tragedia nasce un'idea: i soccorsi si possono **organizzare prima**.
 {{< /dossier-scena >}}
 
-{{< dossier-scena id="irpinia" image="/images/dossier/storia-pertini.webp" alt="Fotografia in bianco e nero di Sandro Pertini in cappotto, accompagnato da militari e funzionari, mentre un corazziere fa il saluto" align="left" kicker="Irpinia · 23 novembre 1980" title="«Fate<br>presto»" credito="Foto: Sandro Pertini in una foto del 1972 · pubblico dominio" >}}
+{{< dossier-scena id="irpinia" image="/images/dossier/storia-pertini.webp" alt="Fotografia in bianco e nero di Sandro Pertini in cappotto, accompagnato da militari e funzionari, mentre un corazziere fa il saluto" align="right" kicker="Irpinia · 23 novembre 1980" title="«Fate<br>presto»" credito="Foto: Sandro Pertini in una foto del 1972 · pubblico dominio" >}}
 Il **23 novembre 1980** un terremoto di magnitudo 6,9 colpisce l'**Irpinia**: quasi tremila morti tra Campania e Basilicata. Ma per giorni, in molti paesi, non arriva nessuno.
 
 Il Presidente della Repubblica **Sandro Pertini** va sui luoghi e, in televisione, denuncia con parole durissime i ritardi dello Stato. *«Fate presto»* titola il quotidiano *Il Mattino*: due parole che diventano il simbolo di un Paese che non può più permettersi l'improvvisazione.
@@ -80,7 +80,7 @@ Oggi quel sistema si vede in azione a ogni emergenza. Dopo il terremoto dell'**A
 Nel maggio 2023, l'alluvione dell'**Emilia-Romagna** ha mosso colonne mobili di volontari e mezzi da tutte le regioni. È la dimostrazione di quanto è cresciuta la macchina nata dalle macerie del Vajont.
 {{< /dossier-scena >}}
 
-{{< dossier-scena id="volontariato" image="/images/dossier/acqua-emilia-2023.webp" alt="Veduta aerea di una casa di campagna rimasta isolata come un'isola in mezzo all'acqua marrone che ha sommerso la pianura dell'Emilia-Romagna" align="right" kicker="La forza del sistema" title="La rete<br>dei cittadini" credito="Foto: Cesare Barillà · CC BY-SA 4.0, via Wikimedia Commons · 2023" >}}
+{{< dossier-scena id="volontariato" image="/images/dossier/acqua-emilia-2023.webp" alt="Veduta aerea di una casa di campagna rimasta isolata come un'isola in mezzo all'acqua marrone che ha sommerso la pianura dell'Emilia-Romagna" align="bottom" kicker="La forza del sistema" title="La rete<br>dei cittadini" credito="Foto: Cesare Barillà · CC BY-SA 4.0, via Wikimedia Commons · 2023" >}}
 La vera novità italiana è il **volontariato organizzato**: centinaia di migliaia di cittadini formati e iscritti, pronti a partire. Dagli **angeli del fango** di Firenze 1966 fino ai gruppi comunali di oggi, è la rete civica che dà sostanza al sistema.
 
 Il **Gruppo Comunale Volontari di Genzano** è una di queste maglie: un pezzo della stessa storia cominciata a Longarone, in Friuli, in Irpinia. La protezione civile, in fondo, sono le persone preparate.
