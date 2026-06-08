@@ -6,10 +6,16 @@ badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-08-medicanes-cicloni-mediterranei-protezione-civile.webp"
-image_alt: "Cover dell'articolo: Medicanes: cosa sono"
+image_alt: "Cover dell'articolo: Medicanes: i cicloni mediterranei simili agli uragani"
 scadenza: ""
 area: "Mediterraneo"
 allegati: []
+social_citazione: "Per il cittadino resta una regola semplice: seguire le allerte ufficiali e adottare comportamenti prudenti."
+social_punti:
+  - "I medicanes sono cicloni mediterranei rari (0-3 l'anno) ma potenzialmente pericolosi."
+  - "Portano piogge intense, vento forte, mareggiate e criticità idrogeologiche."
+  - "In caso di maltempo intenso: consulta le allerte del Centro Funzionale Regionale e del Comune."
+  - "Chiama il 112 solo per emergenze reali."
 draft: false
 ---
 
@@ -165,7 +171,7 @@ Un evento intenso può richiedere:
 - monitoraggio del territorio;
 - informazione preventiva alla popolazione;
 - presidio di sottopassi e aree sensibili;
-- supporto alla viabilità;
+- informazione su percorsi e accessi alle aree sensibili;
 - assistenza a persone fragili;
 - coordinamento con Comune, Regione e strutture operative.
 
