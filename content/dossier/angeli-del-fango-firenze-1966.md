@@ -23,7 +23,7 @@ sezioni:
 {{< dossier-hero id="inizio" image="/images/dossier/firenze-1966-manoscritti.webp" alt="Un giovane volontario, in una foto in bianco e nero, immerge e lava in una vasca d'acqua un manoscritto incorniciato recuperato dal fango della Biblioteca Nazionale di Firenze" eyebrow="Firenze · 4 novembre 1966" title="Gli angeli<br>del fango" sub="Quando l'Arno sommerse Firenze, non arrivarono soldati né ordini dall'alto. Arrivarono migliaia di ragazzi, da tutta Italia e da tutto il mondo, a strappare libri e opere d'arte dal fango. Li chiamarono «angeli del fango». È lì che il volontariato italiano scoprì la sua forza." credito="Foto: UNESCO · Dominique Roger · CC BY-SA 3.0 IGO, via Wikimedia Commons" >}}
 
 {{< dossier-scena id="arno" image="/images/dossier/firenze-1966-toscana.webp" alt="Una piazza allagata durante l'alluvione del 1966: l'acqua fangosa sommerge le automobili davanti a una chiesa con cupola e campanile, una barca con persone sulla sinistra" align="left" kicker="4 novembre 1966" title="Quando l'Arno<br>sommerse tutto" credito="Foto: alluvione del novembre 1966 · pubblico dominio, via Wikimedia Commons" >}}
-All'alba del **4 novembre 1966**, dopo giorni di pioggia, l'**Arno** ruppe gli argini e invase Firenze. In alcuni punti l'acqua salì fino a **oltre quattro metri**, trascinando automobili, fango e **nafta** uscita dalle caldaie.
+All'alba del **4 novembre 1966**, dopo giorni di pioggia, l'**Arno** ruppe gli argini e invase Firenze. In alcune zone l'acqua salì fino a **quasi sei metri**; nel quartiere di Santa Croce, in via dei Neri, una targa ricorda il punto più alto raggiunto dalla piena: **4,92 metri**. L'acqua trascinava automobili, fango e **nafta** uscita dalle caldaie.
 
 Non fu solo Firenze: la stessa perturbazione mise sott'acqua mezza Toscana e, nello stesso giorno, Venezia. In tutta Italia si contarono circa **cento vittime**.
 
@@ -31,9 +31,9 @@ La città d'arte più famosa del mondo si svegliò ricoperta di melma. E si pose
 {{< /dossier-scena >}}
 
 {{< dossier-dati id="disastro" >}}
-{{< dossier-dato to="4" unita=" m +" label="L'altezza che l'acqua raggiunse in alcuni quartieri di Firenze, spazzando vie, botteghe e case" >}}
+{{< dossier-dato to="6" unita=" m" label="L'altezza massima raggiunta dall'acqua in alcune zone della città. A Santa Croce una targa segna il punto più alto: **4,92 metri**" >}}
 {{< dossier-dato to="35" label="Le **vittime** dell'alluvione: 17 a Firenze, 18 nella provincia. In tutta Italia furono circa cento" >}}
-{{< dossier-dato to="1000000" label="I volumi della **Biblioteca Nazionale** raggiunti dall'acqua e dal fango: una delle più grandi ferite mai inferte al patrimonio scritto" >}}
+{{< dossier-dato to="1" unita=" milione" label="I volumi della **Biblioteca Nazionale** raggiunti dall'acqua e dal fango: una delle più grandi ferite mai inferte al patrimonio scritto" >}}
 {{< /dossier-dati >}}
 
 {{< dossier-scena id="arte" image="/images/dossier/firenze-1966-cimabue.webp" alt="Il Crocifisso di Cimabue di Santa Croce: la grande croce dipinta su tavola, con ampie zone di colore perdute sul corpo del Cristo, segno del danno subito" align="bottom" kicker="Il simbolo della ferita" title="L'arte<br>ferita" credito="Foto: Sailko · pubblico dominio, via Wikimedia Commons · Museo dell'Opera di Santa Croce" >}}
@@ -43,7 +43,7 @@ Insieme a lui furono colpiti gli **Uffizi**, le chiese, gli archivi. Per la prim
 {{< /dossier-scena >}}
 
 {{< dossier-dati id="biblioteca" >}}
-{{< dossier-dato to="6" unita=" m" label="L'altezza che il fango raggiunse nei sotterranei della **Biblioteca Nazionale**, dove erano custodite le raccolte storiche" >}}
+{{< dossier-dato to="600" unita="mila t" label="Le tonnellate di **fango** che l'Arno lasciò sulla città ritirandosi il 6 novembre, soffocando strade, case e i magazzini dei libri" >}}
 {{< dossier-dato to="2" unita=" nemici" label="Acqua e **nafta**: il gasolio delle caldaie si mescolò al fango, rendendo il recupero dei libri ancora più difficile" >}}
 {{< dossier-dato to="0" unita="" label="I manuali pronti per un'emergenza del genere: tutto fu inventato sul momento, con tecniche di asciugatura improvvisate e poi studiate in tutto il mondo" >}}
 {{< /dossier-dati >}}
