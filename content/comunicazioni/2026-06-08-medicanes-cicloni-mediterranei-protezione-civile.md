@@ -5,8 +5,8 @@ description: "Scheda divulgativa sui medicanes e sulle fonti ufficiali da consul
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-06-08-medicanes-cicloni-mediterranei-protezione-civile.webp"
+image_alt: "Cover dell'articolo: Medicanes: cosa sono"
 scadenza: ""
 area: "Mediterraneo"
 allegati: []
