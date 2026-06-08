@@ -43,7 +43,7 @@ Poi c'è il **fuoco**. Ogni estate gli incendi corrono per settimane nei boschi 
 Anche l'Italia conosce gli incendi boschivi — e li combatte con la **flotta dei Canadair** dello Stato e con le squadre AIB. Ma negli Stati Uniti la scala è un'altra: campagne di mesi, migliaia di pompieri mobilitati da più Stati, aiuti internazionali. Due Paesi, due geografie del rischio.
 {{< /dossier-scena >}}
 
-{{< dossier-dati id="origini" >}}
+{{< dossier-dati id="origini" image="/images/dossier/usa-soccorso-alluvione.webp" alt="Soccorritori su una barca durante un'alluvione" >}}
 {{< dossier-dato to="1979" label="Nasce la **FEMA**, l'agenzia federale statunitense per la gestione delle emergenze, voluta dal presidente Carter" >}}
 {{< dossier-dato to="1992" label="La **legge 225**: l'Italia istituisce il **Servizio Nazionale della Protezione Civile**, dopo le grandi tragedie degli anni precedenti" >}}
 {{< dossier-dato to="2003" label="La FEMA entra nel **Dipartimento della Sicurezza interna** (DHS), nato dopo l'11 settembre 2001" >}}
@@ -64,7 +64,7 @@ Il modello americano è **federale e dall'alto**. La risposta parte dal livello 
 In prima linea scende spesso la **Guardia Nazionale**, la riserva militare degli Stati: mezzi pesanti, logistica, ordine pubblico. È un sistema potentissimo nelle grandi crisi, ma il cittadino comune vi entra soprattutto come persona da assistere, non come parte attiva della macchina.
 {{< /dossier-scena >}}
 
-{{< dossier-dati id="dichiarazione" >}}
+{{< dossier-dati id="dichiarazione" image="/images/dossier/usa-national-guard.webp" alt="Un militare della Guardia Nazionale durante un'alluvione" >}}
 {{< dossier-dato to="1988" label="Lo **Stafford Act**: negli USA il **Presidente** dichiara lo *«stato di disastro»* e apre i fondi federali gestiti dalla FEMA" >}}
 {{< dossier-dato to="2018" label="In Italia il **Consiglio dei Ministri** delibera lo **stato di emergenza** (Codice di protezione civile): si attivano poteri straordinari e il **Fondo per le emergenze nazionali**" >}}
 {{< dossier-dato to="2" unita=" vie" label="Due strade diverse per **sbloccare risorse**: una decisione del capo dell'esecutivo negli USA, una delibera collegiale del Governo in Italia" >}}
@@ -76,7 +76,7 @@ Il modello italiano è **sussidiario e dal basso**. La prima autorità di protez
 Non è una catena militare, ma una rete di responsabilità che parte dal livello più vicino al cittadino. Nel maggio 2023 l'alluvione dell'**Emilia-Romagna** ha messo in moto questa rete: colonne mobili di volontari e mezzi da tutte le regioni, coordinate dal sistema nazionale.
 {{< /dossier-scena >}}
 
-{{< dossier-dati id="comando" >}}
+{{< dossier-dati id="comando" image="/images/dossier/usa-nrcc-sala.webp" alt="Sala operativa con operatori ai computer" >}}
 {{< dossier-dato to="1" unita=" capo" label="Negli USA l'**Incident Commander**: una sola figura ha la responsabilità complessiva dell'intervento, con una linea di comando netta" >}}
 {{< dossier-dato to="4" unita=" livelli" label="In Italia una **catena territoriale**: dal **COC** comunale al **COM** intercomunale, al **CCS** provinciale, fino alla **DiCoMaC** nazionale nei grandi eventi" >}}
 {{< dossier-dato to="112" label="Il numero da chiamare in Italia. Negli Stati Uniti è il **911**: in entrambi i casi una sola chiamata, poi il sistema smista" >}}
@@ -108,14 +108,14 @@ Ogni funzione è un settore — con un **referente** che la tiene viva **in temp
 Il nome viene da una massima attribuita all'imperatore Augusto: *il valore della pianificazione diminuisce con l'aumentare della complessità degli eventi*. Tradotto: non piani rigidi, ma persone e funzioni pronte ad adattarsi.
 {{< /dossier-scena >}}
 
-{{< dossier-dati id="augustus-dati" >}}
+{{< dossier-dati id="augustus-dati" image="/images/dossier/italia-tendopoli-aquila.webp" alt="Campo della Protezione Civile dopo un terremoto" >}}
 {{< dossier-dato to="1997" label="L'anno del **Metodo Augustus**: pianificazione per **funzioni di supporto**, ispirata alla FEMA ma costruita sulla rete territoriale italiana" >}}
 {{< dossier-dato to="9" label="Le **funzioni di supporto** del Centro Operativo **Comunale** (COC), dal volontariato alla sanità, dalla logistica alle telecomunicazioni" >}}
 {{< dossier-dato to="14" label="Le **funzioni di supporto** a livello **provinciale**: ogni funzione ha un responsabile e un settore di competenza" >}}
 {{< dossier-dato to="5" label="Le **aree funzionali** dell'ICS americano. Due grammatiche diverse — per funzioni o per comando — verso lo stesso scopo: coordinare" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-dati id="forze" >}}
+{{< dossier-dati id="forze" image="/images/dossier/usa-red-cross.webp" alt="Rimorchio dell'American Red Cross davanti a un rifugio" >}}
 {{< dossier-dato to="2" unita="/3" label="Negli Stati Uniti circa **due pompieri su tre** sono **volontari**: i corpi dei vigili del fuoco sono in gran parte locali e comunali" >}}
 {{< dossier-dato to="1" unita=" Corpo" label="In Italia il soccorso tecnico urgente è del **Corpo Nazionale dei Vigili del Fuoco**, statale e professionale: un pilastro unico su tutto il territorio" >}}
 {{< dossier-dato to="2005" label="L'anno in cui la **Spagna** creò un'unità militare per le emergenze (UME): anche in Europa i modelli cambiano da Paese a Paese" >}}
@@ -129,25 +129,25 @@ Negli **Stati Uniti** la risposta è affidata soprattutto a **professionisti e m
 In **Italia** il volontariato è il **cuore** del sistema: centinaia di migliaia di volontari formati e iscritti, organizzati in gruppi comunali e associazioni come il **Gruppo Comunale di Genzano**. Pochi Paesi al mondo contano su una partecipazione civica così ampia e strutturata. È la nostra impronta.
 {{< /dossier-scena >}}
 
-{{< dossier-dati id="previsione" >}}
+{{< dossier-dati id="previsione" image="/images/dossier/usa-uragano-katrina.webp" alt="Immagine satellitare di un uragano" >}}
 {{< dossier-dato to="4" unita=" colori" label="In Italia l'allerta meteo-idro ha **quattro codici colore** (verde, giallo, arancione, rosso), emessi dai **Centri Funzionali** del sistema nazionale" >}}
 {{< dossier-dato to="1" unita=" rete" label="Negli USA il **National Weather Service** (parte della NOAA) e lo **Storm Prediction Center** seguono uragani e tornado e diramano *watch* e *warning*" >}}
 {{< dossier-dato to="2" unita=" parole" label="*Watch* e *warning*: «possibile» e «in corso». La stessa logica dei nostri **avviso** e **allerta**, con parole diverse" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-dati id="allertamento" >}}
+{{< dossier-dati id="allertamento" image="/images/dossier/acqua-emilia-2023.webp" alt="Veduta aerea dell'alluvione in Emilia-Romagna del 2023" >}}
 {{< dossier-dato to="2012" label="Negli USA diventano operativi i **Wireless Emergency Alerts**: messaggi di allarme inviati ai telefoni di un'area colpita tramite il sistema IPAWS della FEMA" >}}
 {{< dossier-dato to="2023" label="In Italia arriva **IT-alert**, il sistema nazionale di allarme pubblico: lo stesso principio, lo stesso standard tecnico internazionale (CAP)" >}}
 {{< dossier-dato to="911" label="Il numero unico di emergenza negli **Stati Uniti**. In **Italia** è il **112**, il Numero Unico Europeo" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-dati id="formazione" >}}
+{{< dossier-dati id="formazione" image="/images/dossier/fuoco-canadair.webp" alt="Un Canadair antincendio in volo radente" >}}
 {{< dossier-dato to="1981" label="Negli USA l'**Emergency Management Institute** (EMI), a Emmitsburg, forma da decenni chi gestisce le emergenze, con corsi gratuiti e online" >}}
 {{< dossier-dato to="1" unita=" per Regione" label="In Italia la formazione passa dalle **scuole e dai centri regionali** di protezione civile — nel Lazio la **SAFOR-PROCIV** — oltre ai corsi delle associazioni" >}}
 {{< dossier-dato to="9" label="Le **funzioni di supporto** italiane sono anche un programma di formazione: ogni referente impara a far funzionare il proprio settore prima dell'emergenza" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-dati id="cultura" >}}
+{{< dossier-dati id="cultura" image="/images/dossier/usa-incendi.webp" alt="Immagine satellitare di incendi sulla California" >}}
 {{< dossier-dato to="2003" label="Nasce **Ready.gov**, la campagna federale statunitense che insegna a preparare scorte di emergenza e un piano familiare" >}}
 {{< dossier-dato to="2011" label="In Italia parte **«Io non rischio»**, la campagna del Dipartimento portata nelle piazze proprio dai **volontari**" >}}
 {{< dossier-dato to="1" unita="°" label="In entrambi i Paesi la prima protezione civile è la stessa: un **cittadino informato e preparato**, prima ancora dei mezzi di soccorso" >}}

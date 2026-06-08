@@ -24,7 +24,7 @@ sezioni:
 
 {{< dossier-hero id="inizio" image="/images/dossier/storia-longarone-1963.webp" alt="Veduta aerea in bianco e nero della valle del Vajont dopo il disastro del 1963: una enorme distesa di fango e detriti ricopre il fondovalle dove sorgeva Longarone, con poche case superstiti sui bordi" eyebrow="Storia della Protezione Civile italiana" title="Dalle macerie,<br>un sistema" sub="La Protezione Civile italiana non è nata a tavolino. È nata dalle tragedie — il Vajont, il Friuli, l'Irpinia — e dalla rabbia di non essere stati pronti. È la storia di come un Paese imparò, a caro prezzo, a soccorrersi da solo." credito="Foto: US Army · pubblico dominio · Longarone, 1963" >}}
 
-{{< dossier-dati id="prima" >}}
+{{< dossier-dati id="prima" image="/images/dossier/storia-longarone-1963.webp" alt="La valle del Vajont devastata, 1963" >}}
 {{< dossier-dato to="1908" label="Il terremoto di **Messina e Reggio**: oltre ottantamila morti. I soccorsi arrivano dall'esercito e dalla Marina, ma in ordine sparso, senza un piano" >}}
 {{< dossier-dato to="1951" label="L'alluvione del **Polesine**: il Po rompe gli argini, centinaia di migliaia di sfollati. Ancora una volta si improvvisa" >}}
 {{< dossier-dato to="1963" label="Il **Vajont**: una frana nel bacino della diga genera un'onda che cancella Longarone. Quasi **duemila morti**" >}}
@@ -47,7 +47,7 @@ Il Presidente della Repubblica **Sandro Pertini** va sui luoghi e, in television
 Da quella vergogna nazionale arriva la spinta decisiva. L'Italia decide di dotarsi, una volta per tutte, di un sistema permanente.
 {{< /dossier-scena >}}
 
-{{< dossier-dati id="zamberletti" >}}
+{{< dossier-dati id="zamberletti" image="/images/dossier/storia-friuli-1976.webp" alt="Chiesa in rovina dopo il terremoto del Friuli del 1976" >}}
 {{< dossier-dato da="1933" unita="" label="**Giuseppe Zamberletti** (1933–2019), il «padre» della Protezione Civile italiana: commissario in Friuli, poi l'uomo che immaginò il sistema" >}}
 {{< dossier-dato to="1982" label="L'anno in cui Zamberletti diventa **Ministro per il coordinamento della protezione civile**: nasce il **Dipartimento**" >}}
 {{< dossier-dato to="2" unita=" idee" label="Le sue due intuizioni: **previsione e prevenzione** accanto al soccorso, e il **supporto tecnico-scientifico** alle decisioni politiche" >}}
@@ -61,14 +61,14 @@ Ma l'idea di Zamberletti è più ampia: la protezione civile non è solo dello S
 La macchina, da allora, non smette più di crescere e di affinarsi a ogni emergenza.
 {{< /dossier-scena >}}
 
-{{< dossier-dati id="leggi" >}}
+{{< dossier-dati id="leggi" image="/images/dossier/italia-tendopoli-aquila.webp" alt="Campo della Protezione Civile dopo il terremoto dell'Aquila" >}}
 {{< dossier-dato to="1982" label="Nasce il **Dipartimento della Protezione Civile**, presso la Presidenza del Consiglio" >}}
 {{< dossier-dato to="1992" label="La **legge 225**: viene istituito il **Servizio Nazionale della Protezione Civile**, una rete che coinvolge tutto il Paese" >}}
 {{< dossier-dato to="2001" label="La riforma che rafforza il ruolo delle **Regioni** e degli enti locali nel sistema" >}}
 {{< dossier-dato to="2018" label="Il **Codice della Protezione Civile** (decreto legislativo 1): tutte le regole in un testo unico" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-dati id="attivita" >}}
+{{< dossier-dati id="attivita" image="/images/dossier/acqua-emilia-2023.webp" alt="Veduta aerea dell'alluvione in Emilia-Romagna del 2023" >}}
 {{< dossier-dato to="4" unita=" attività" label="Il Codice fissa le attività del sistema: **previsione**, **prevenzione**, **gestione dell'emergenza**, **superamento dell'emergenza**" >}}
 {{< dossier-dato to="3" unita=" livelli" label="**Comune, Regione, Stato**: la responsabilità parte dal basso. Il **Sindaco** è la prima autorità di protezione civile" >}}
 {{< dossier-dato to="1" unita=" numero" label="In emergenza il riferimento per il cittadino è uno solo: il **112**, il Numero Unico Europeo" >}}

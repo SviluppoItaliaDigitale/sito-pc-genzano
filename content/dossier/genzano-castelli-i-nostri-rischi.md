@@ -34,7 +34,7 @@ I Castelli sono nati dal fuoco: i due laghi — **Nemi** e **Albano** — riempi
 Vivere qui significa conoscere questa doppia natura: la bellezza e il rischio nascono dalla stessa origine.
 {{< /dossier-scena >}}
 
-{{< dossier-dati id="distretto" >}}
+{{< dossier-dati id="distretto" image="/images/dossier/genzano-nemi-giorno.webp" alt="Il Lago di Nemi visto dall'alto dai Castelli" >}}
 {{< dossier-dato to="2" unita=" laghi" label="I laghi-cratere dei Castelli: **Albano** e **Nemi**, due occhi d'acqua dentro antichi crateri del vulcano" >}}
 {{< dossier-dato to="30" unita=" km" label="La distanza dei Colli Albani da **Roma**: un vulcano alle porte della capitale, studiato dall'INGV" >}}
 {{< dossier-dato to="900" unita=" m +" label="L'altezza delle cime del distretto vulcanico, che dominano la pianura romana" >}}
@@ -49,19 +49,19 @@ A sorvegliarlo è l'**Istituto Nazionale di Geofisica e Vulcanologia (INGV)**, c
 Il Lago Albano, il più profondo, custodisce parte di questa storia: i geologi ne studiano i gas e le acque profonde.
 {{< /dossier-scena >}}
 
-{{< dossier-dati id="gas" >}}
+{{< dossier-dati id="gas" image="/images/dossier/castelli-lago-albano.webp" alt="Il Lago Albano nel cratere dei Colli Albani" >}}
 {{< dossier-dato to="1989" label="Lo **sciame sismico** del 1989–1990 nei Colli Albani: oltre **tremila** piccole scosse, accompagnate da rilascio di gas dal sottosuolo" >}}
 {{< dossier-dato to="4" unita=" gas" label="I gas del distretto — anidride carbonica (CO₂), idrogeno solforato, e altri — che secondo la Protezione Civile sono il **pericolo naturale principale** dell'area" >}}
 {{< dossier-dato to="1" unita=" regola" label="In presenza di emissioni di gas, la regola è semplice: non sostare in **avvallamenti, cantine o pozzi** dove la CO₂, più pesante dell'aria, può accumularsi" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-dati id="sismico" >}}
+{{< dossier-dati id="sismico" image="/images/dossier/genzano-nemi-tramonto.webp" alt="Genzano e il Lago di Nemi al tramonto" >}}
 {{< dossier-dato to="2" unita=" origini" label="A Genzano la terra può tremare per due motivi: i **terremoti vulcanici locali** (di solito lievi) e i forti **terremoti dell'Appennino**, che qui arrivano attenuati ma si sentono" >}}
 {{< dossier-dato to="3" unita=" gesti" label="In caso di scossa: **riparati** sotto un tavolo robusto, **allontànati** da finestre e mobili alti, **esci** solo a scossa finita per le scale, mai con l'ascensore" >}}
 {{< dossier-dato to="112" label="A pericolo cessato, segnala crepe e danni; per il pericolo immediato chiama sempre il **112**" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-dati id="idrogeologico" >}}
+{{< dossier-dati id="idrogeologico" image="/images/dossier/vento-castelli-locale.webp" alt="Danni di un temporale in un paese dei Castelli" >}}
 {{< dossier-dato to="2" unita=" minuti" label="Sui **versanti ripidi** del cratere l'acqua di un temporale violento scende in pochi minuti: strade che diventano torrenti, sottopassi che si allagano" >}}
 {{< dossier-dato to="1" unita=" no" label="La regola che salva la vita: **mai** entrare in un sottopasso allagato né attraversare un guado in piena, a piedi o in auto" >}}
 {{< dossier-dato to="0" unita="" label="Quando piove forte, evita gli scantinati e i piani bassi vicino agli impluvi: l'acqua sceglie sempre la via più breve verso il basso" >}}
@@ -83,19 +83,19 @@ Quando è prevista un'**allerta meteo**, il Centro Funzionale della Regione Lazi
 Il vento e la pioggia non si possono fermare: ci si prepara prima, seguendo le allerte ufficiali.
 {{< /dossier-scena >}}
 
-{{< dossier-dati id="calore" >}}
+{{< dossier-dati id="calore" image="/images/dossier/siccita-castelli.webp" alt="Versante boscato e secco dei Castelli Romani d'estate" >}}
 {{< dossier-dato to="35" unita=" °C" label="Le **ondate di calore** estive: quando il termometro supera a lungo i 35 gradi, il rischio è soprattutto per anziani, malati cronici e bambini piccoli" >}}
 {{< dossier-dato to="3" unita=" gesti" label="**Bevi** acqua spesso, **stai** nelle ore fresche all'ombra o al chiuso, **controlla** i vicini anziani e soli: il caldo uccide in silenzio" >}}
 {{< dossier-dato to="1" unita=" bollettino" label="Il Ministero della Salute e la ASL pubblicano d'estate i **bollettini delle ondate di calore** città per città" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-dati id="eventi" >}}
+{{< dossier-dati id="eventi" image="/images/dossier/genzano-nemi-tramonto.webp" alt="Genzano di Roma al tramonto" >}}
 {{< dossier-dato to="1" unita=" evento" label="Genzano è famosa per l'**Infiorata** e per le sue feste: grandi eventi che richiamano folle in spazi stretti del centro storico" >}}
 {{< dossier-dato to="3" unita=" compiti" label="Durante gli eventi il Gruppo presidia **aree pedonali e punti di raccolta**, informa il pubblico e assiste le **persone fragili**, in supporto alle autorità" >}}
 {{< dossier-dato to="0" unita="" label="Il volontariato **non regola il traffico** né svolge servizi di polizia stradale: sono compiti esclusivi delle Forze dell'Ordine e della Polizia Locale" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-dati id="gruppo" >}}
+{{< dossier-dati id="gruppo" image="/images/dossier/genzano-nemi-giorno.webp" alt="Il territorio di Genzano e il Lago di Nemi" >}}
 {{< dossier-dato da="1981" unita="" label="Gli anni di servizio del **Gruppo Comunale Volontari di Protezione Civile di Genzano**, a fianco della comunità" >}}
 {{< dossier-dato to="4" unita=" attività" label="Quello che facciamo: **prevenzione**, **monitoraggio** del territorio, **assistenza** alla popolazione, **informazione** sui rischi" >}}
 {{< dossier-dato to="1" unita=" Sindaco" label="A Genzano la prima autorità di protezione civile è il **Sindaco**, che attiva il Gruppo tramite il Comune. I cittadini chiamano il **112**, mai direttamente i volontari" >}}

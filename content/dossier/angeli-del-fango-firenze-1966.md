@@ -30,7 +30,7 @@ Non fu solo Firenze: la stessa perturbazione mise sott'acqua mezza Toscana e, ne
 La città d'arte più famosa del mondo si svegliò ricoperta di melma. E si pose una domanda che vale ancora oggi: chi viene a salvarci?
 {{< /dossier-scena >}}
 
-{{< dossier-dati id="disastro" >}}
+{{< dossier-dati id="disastro" image="/images/dossier/firenze-1966-toscana.webp" alt="Una piazza allagata durante l'alluvione del 1966" >}}
 {{< dossier-dato to="6" unita=" m" label="L'altezza massima raggiunta dall'acqua in alcune zone della città. A Santa Croce una targa segna il punto più alto: **4,92 metri**" >}}
 {{< dossier-dato to="35" label="Le **vittime** dell'alluvione: 17 a Firenze, 18 nella provincia. In tutta Italia furono circa cento" >}}
 {{< dossier-dato to="1" unita=" milione" label="I volumi della **Biblioteca Nazionale** raggiunti dall'acqua e dal fango: una delle più grandi ferite mai inferte al patrimonio scritto" >}}
@@ -42,13 +42,13 @@ Firenze custodisce secoli di arte, e l'alluvione non risparmiò nulla. Il simbol
 Insieme a lui furono colpiti gli **Uffizi**, le chiese, gli archivi. Per la prima volta il mondo capì che un disastro naturale può cancellare non solo vite, ma anche la **memoria** di un popolo.
 {{< /dossier-scena >}}
 
-{{< dossier-dati id="biblioteca" >}}
+{{< dossier-dati id="biblioteca" image="/images/dossier/firenze-1966-manoscritti.webp" alt="Un volontario lava un manoscritto dopo l'alluvione di Firenze" >}}
 {{< dossier-dato to="600" unita="mila t" label="Le tonnellate di **fango** che l'Arno lasciò sulla città ritirandosi il 6 novembre, soffocando strade, case e i magazzini dei libri" >}}
 {{< dossier-dato to="2" unita=" nemici" label="Acqua e **nafta**: il gasolio delle caldaie si mescolò al fango, rendendo il recupero dei libri ancora più difficile" >}}
 {{< dossier-dato to="0" unita="" label="I manuali pronti per un'emergenza del genere: tutto fu inventato sul momento, con tecniche di asciugatura improvvisate e poi studiate in tutto il mondo" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-dati id="angeli" >}}
+{{< dossier-dati id="angeli" image="/images/dossier/firenze-1966-toscana.webp" alt="La città allagata dall'alluvione del 1966" >}}
 {{< dossier-dato to="1000" unita="+" label="I **giovani volontari** che accorsero a Firenze: studenti, ragazze e ragazzi arrivati da tutta Italia e dall'estero, senza che nessuno li chiamasse" >}}
 {{< dossier-dato to="1" unita=" nome" label="I giornali li ribattezzarono **«angeli del fango»**: catene umane nel fango oleoso per salvare libri, quadri, documenti" >}}
 {{< dossier-dato to="0" unita=" paga" label="Nessuno li pagava. Lavoravano per qualcosa che sentivano comune: la **cultura** e la **città** erano di tutti" >}}
@@ -62,7 +62,7 @@ Gli angeli del fango del 1966 erano **spontanei**: una generosità immensa, ma d
 Dagli angeli del fango ai gruppi comunali di oggi, il filo è lo stesso: i cittadini che si prendono cura della propria comunità.
 {{< /dossier-scena >}}
 
-{{< dossier-dati id="oggi" >}}
+{{< dossier-dati id="oggi" image="/images/dossier/firenze-1966-cimabue.webp" alt="Il Crocifisso di Cimabue di Santa Croce" >}}
 {{< dossier-dato to="1" unita=" regola" label="La lezione di Firenze: il volontariato salva, ma deve essere **organizzato**. Oggi i volontari sono formati, iscritti e coordinati — non improvvisati" >}}
 {{< dossier-dato da="1981" unita="" label="Gli anni di servizio del **Gruppo Comunale di Genzano**: angeli del fango di oggi, con la formazione e le regole che nel 1966 ancora non c'erano" >}}
 {{< dossier-dato to="112" label="In emergenza il cittadino chiama il **112**. Per dare una mano da volontario, invece, ci si prepara prima — in tempo di pace" >}}
