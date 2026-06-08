@@ -582,6 +582,90 @@ html.a11y-pause-anim .dossier-dati__grid.is-in .dossier-dato__num { background: 
   content: ""; position: absolute; left: 0; top: .62em; width: 7px; height: 7px;
   border-radius: 50%; background: var(--accent);
 }
+
+/* ===== v1.5 — animazioni "wow" extra (tutte gated più sotto) ============== */
+
+/* A. Eroe cinematografico: ingresso scaglionato + respiro luminoso del titolo */
+@keyframes dossierHeroRise { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
+@keyframes dossierTitleGlow {
+  0%, 100% { text-shadow: 0 3px 30px rgba(0,0,0,.55); }
+  50% { text-shadow: 0 3px 42px rgba(78,163,255,.5), 0 0 10px rgba(255,255,255,.28); }
+}
+.dossier-hero__eyebrow { animation: dossierHeroRise .9s ease .10s both; }
+.dossier-hero h1 { animation: dossierHeroRise 1s ease .25s both, dossierTitleGlow 5.5s ease-in-out 1.4s infinite; }
+.dossier-hero__sub { animation: dossierHeroRise .9s ease .45s both; }
+
+/* B. I numeri "atterrano" con un alone dorato quando entrano nel viewport */
+.dossier-dato__num { transition: filter .9s ease .25s; }
+.dossier-dati__grid.is-in .dossier-dato__num { filter: drop-shadow(0 0 16px rgba(255,190,46,.5)); }
+
+/* C. Pannello scena: micro-sollevamento al passaggio del mouse (solo desktop, dopo l'ingresso) */
+@media (hover: hover) and (pointer: fine) {
+  .dossier-scena__panel.is-in { transition: transform .35s ease, box-shadow .3s ease, border-color .3s ease; }
+  .dossier-scena__panel.is-in:hover { transform: translateY(-5px) scale(1.012); }
+}
+
+/* D. Barra di avanzamento: testa luminosa "a cometa" che scorre col progresso */
+.dossier-progress > span { position: relative; }
+.dossier-progress > span::after {
+  content: ""; position: absolute; right: -1px; top: 50%; transform: translateY(-50%);
+  width: 9px; height: 9px; border-radius: 50%; background: var(--accent);
+  box-shadow: 0 0 14px 3px rgba(255,190,46,.7);
+  animation: dossierCometPulse 1.8s ease-in-out infinite;
+}
+@keyframes dossierCometPulse {
+  0%, 100% { box-shadow: 0 0 12px 2px rgba(255,190,46,.6); }
+  50% { box-shadow: 0 0 20px 5px rgba(255,190,46,.9); }
+}
+
+/* spegnimento per accessibilità delle animazioni v1.5 --------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .dossier-hero__eyebrow, .dossier-hero h1, .dossier-hero__sub,
+  .dossier-progress > span::after { animation: none !important; }
+  .dossier-hero h1 { text-shadow: 0 3px 30px rgba(0,0,0,.55) !important; }
+  .dossier-dato__num, .dossier-scena__panel.is-in { transition: none !important; }
+  .dossier-dati__grid.is-in .dossier-dato__num { filter: none !important; }
+  .dossier-scena__panel.is-in:hover { transform: none !important; }
+}
+html.a11y-pause-anim .dossier-hero__eyebrow, html.a11y-pause-anim .dossier-hero h1,
+html.a11y-pause-anim .dossier-hero__sub, html.a11y-pause-anim .dossier-progress > span::after { animation: none !important; }
+html.a11y-pause-anim .dossier-hero h1 { text-shadow: 0 3px 30px rgba(0,0,0,.55) !important; }
+html.a11y-pause-anim .dossier-dato__num, html.a11y-pause-anim .dossier-scena__panel.is-in { transition: none !important; }
+html.a11y-pause-anim .dossier-dati__grid.is-in .dossier-dato__num { filter: none !important; }
+html.a11y-pause-anim .dossier-scena__panel.is-in:hover { transform: none !important; }
+
+/* ===== v1.6 — ancora più movimento (sempre gated più sotto) ============== */
+
+/* E. Anche l'immagine dell'eroe respira lentamente (profondità) */
+.dossier-hero__bg { animation: dossierBgBreath 30s ease-in-out infinite; }
+
+/* F. Le card dei numeri si sollevano e si accendono al passaggio del mouse */
+@media (hover: hover) and (pointer: fine) {
+  .dossier-dato { transition: transform .3s ease; }
+  .dossier-dato:hover { transform: translateY(-4px); }
+  .dossier-dato:hover .dossier-dato__num { filter: drop-shadow(0 0 20px rgba(255,190,46,.75)); }
+}
+
+/* G. I kicker (occhielli) delle scene pulsano piano di luce ambrata */
+@keyframes dossierKickerPulse { 0%, 100% { text-shadow: none; } 50% { text-shadow: 0 0 14px rgba(255,190,46,.6); } }
+.dossier-scena__kicker { animation: dossierKickerPulse 4s ease-in-out infinite; }
+
+/* H. I pulsanti finali "respirano" un alone che invita al clic */
+@keyframes dossierCtaGlow { 0%, 100% { box-shadow: 0 0 0 rgba(255,190,46,0); } 50% { box-shadow: 0 0 22px rgba(255,190,46,.4); } }
+.dossier-chiusura .dossier-cta a { animation: dossierCtaGlow 3s ease-in-out infinite; }
+
+/* spegnimento per accessibilità delle animazioni v1.6 --------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .dossier-hero__bg, .dossier-scena__kicker, .dossier-chiusura .dossier-cta a { animation: none !important; }
+  .dossier-dato { transition: none !important; }
+  .dossier-dato:hover { transform: none !important; }
+  .dossier-dato:hover .dossier-dato__num { filter: none !important; }
+}
+html.a11y-pause-anim .dossier-hero__bg, html.a11y-pause-anim .dossier-scena__kicker,
+html.a11y-pause-anim .dossier-chiusura .dossier-cta a { animation: none !important; }
+html.a11y-pause-anim .dossier-dato { transition: none !important; }
+html.a11y-pause-anim .dossier-dato:hover { transform: none !important; }
+html.a11y-pause-anim .dossier-dato:hover .dossier-dato__num { filter: none !important; }
 .dossier-scena[data-align="top"] .dossier-scena__panel li strong { color: var(--ink); }
 
 /* timeline: pannello più trasparente (si vede la foto dietro) + ombra sul testo
