@@ -139,6 +139,16 @@ main:has(> .dossier) { padding: 0; max-width: none; }
   border-left: none; border-top: 4px solid var(--accent);
   background: rgba(8, 18, 38, .5);
 }
+/* testo in basso: fascia larga e bassa, l'immagine resta grande e i soggetti in alto/al centro restano visibili */
+.dossier-scena[data-align="bottom"] { align-items: flex-end; justify-content: center; }
+.dossier-scena[data-align="bottom"]::after {
+  background: linear-gradient(0deg, rgba(5, 8, 15, .92) 6%, rgba(5, 8, 15, .52) 34%, rgba(5, 8, 15, .12) 62%, transparent 100%);
+}
+.dossier-scena[data-align="bottom"] .dossier-scena__panel {
+  max-width: min(1080px, 92vw); margin-bottom: 3vh; text-align: left;
+  border-left: none; border-top: 4px solid var(--accent);
+  background: rgba(8, 18, 38, .52);
+}
 .dossier-scena__panel {
   max-width: 540px; width: 100%; background: var(--panel);
   backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
@@ -373,6 +383,7 @@ html.a11y-pause-anim .dossier-scena__bg { transform: none !important; }
 .dossier-scena[data-align="left"] .reveal:not(.is-in) { transform: translateX(-46px); }
 .dossier-scena[data-align="right"] .reveal:not(.is-in) { transform: translateX(46px); }
 .dossier-scena[data-align="top"] .reveal:not(.is-in) { transform: translateY(-30px); }
+.dossier-scena[data-align="bottom"] .reveal:not(.is-in) { transform: translateY(30px); }
 
 /* 3. Stagger interno dei pannelli e dei numeri */
 .dossier-scena__panel.is-in > * { animation: dossierFadeIn .6s both; }

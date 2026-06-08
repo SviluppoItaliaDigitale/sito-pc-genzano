@@ -31,7 +31,7 @@ sezioni:
 
 {{< dossier-hero id="inizio" image="/images/dossier/usa-soccorso-alluvione.webp" alt="Soccorritori a bordo di una barca a fondo piatto con grande ventola posteriore avanzano lungo una strada allagata dall'acqua marrone, tra cartelli stradali e case sommerse" eyebrow="Dossier · Italia e Stati Uniti a confronto" title="Due scuole<br>di soccorso" sub="Stessa missione — salvare vite e ridurre i danni — ma due modi opposti di organizzarsi. Gli Stati Uniti puntano sullo Stato federale e su una catena di comando. L'Italia parte dal Comune e si regge su un volontariato vastissimo. Da dove nasce questa differenza, e cosa possono imparare l'uno dall'altro?" credito="Foto: FEMA · Patricia Brach · pubblico dominio · 2007" >}}
 
-{{< dossier-scena id="scala" image="/images/dossier/usa-uragano-katrina.webp" alt="Immagine satellitare di un grande uragano con l'occhio ben definito al centro, mentre si avvicina alla costa del Golfo del Messico" align="right" kicker="Stati Uniti · la dimensione del rischio" title="Disastri<br>su scala continentale" credito="Foto: NASA · MODIS, Jeff Schmaltz (Rapid Response Team) · pubblico dominio · 2005" >}}
+{{< dossier-scena id="scala" image="/images/dossier/usa-uragano-katrina.webp" alt="Immagine satellitare di un grande uragano con l'occhio ben definito al centro, mentre si avvicina alla costa del Golfo del Messico" align="left" kicker="Stati Uniti · la dimensione del rischio" title="Disastri<br>su scala continentale" credito="Foto: NASA · MODIS, Jeff Schmaltz (Rapid Response Team) · pubblico dominio · 2005" >}}
 Gli Stati Uniti affrontano eventi di dimensioni enormi. Gli **uragani** dell'Atlantico e del Golfo del Messico spazzano interi Stati: vento, pioggia, onde di tempesta che allagano le coste.
 
 Quando un disastro può colpire un'area grande come mezza Europa, serve una macchina capace di muovere uomini e mezzi da una costa all'altra in poche ore. È questa **scala** che ha spinto l'America a costruire un sistema fortemente centrato sullo **Stato federale**.
@@ -58,7 +58,7 @@ In **Italia** la spinta arriva dalle catastrofi: la diga del **Vajont** (1963), 
 Due Paesi, due tragedie fondatrici, due sistemi pensati per non farsi più trovare impreparati.
 {{< /dossier-scena >}}
 
-{{< dossier-scena id="governance" image="/images/dossier/usa-national-guard.webp" alt="Un militare della Guardia Nazionale, in uniforme mimetica, lavora accanto a una grande pala meccanica gialla su una strada bagnata durante la risposta a un'alluvione" align="left" kicker="Stati Uniti · modello federale" title="Lo Stato<br>scende in campo" credito="Foto: U.S. National Guard · Tech. Sgt. Jorge Intriago · pubblico dominio · 2015" >}}
+{{< dossier-scena id="governance" image="/images/dossier/usa-national-guard.webp" alt="Un militare della Guardia Nazionale, in uniforme mimetica, lavora accanto a una grande pala meccanica gialla su una strada bagnata durante la risposta a un'alluvione" align="right" kicker="Stati Uniti · modello federale" title="Lo Stato<br>scende in campo" credito="Foto: U.S. National Guard · Tech. Sgt. Jorge Intriago · pubblico dominio · 2015" >}}
 Il modello americano è **federale e dall'alto**. La risposta parte dal livello locale (la contea, lo Stato federato), ma quando l'evento supera le sue forze il **Governatore** chiede aiuto a Washington.
 
 In prima linea scende spesso la **Guardia Nazionale**, la riserva militare degli Stati: mezzi pesanti, logistica, ordine pubblico. È un sistema potentissimo nelle grandi crisi, ma il cittadino comune vi entra soprattutto come persona da assistere, non come parte attiva della macchina.
@@ -121,7 +121,7 @@ Il nome viene da una massima attribuita all'imperatore Augusto: *il valore della
 {{< dossier-dato to="2005" label="L'anno in cui la **Spagna** creò un'unità militare per le emergenze (UME): anche in Europa i modelli cambiano da Paese a Paese" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-scena id="volontariato" image="/images/dossier/usa-red-cross.webp" alt="Un rimorchio bianco con la grande scritta «American Red Cross — Disaster Relief» parcheggiato davanti all'ingresso di un edificio adibito a rifugio, con due persone che si avviano verso la porta" align="right" kicker="La differenza più grande" title="Chi scende<br>in campo" credito="Foto: FEMA · George Armstrong · pubblico dominio · 2012" >}}
+{{< dossier-scena id="volontariato" image="/images/dossier/usa-red-cross.webp" alt="Un rimorchio bianco con la grande scritta «American Red Cross — Disaster Relief» parcheggiato davanti all'ingresso di un edificio adibito a rifugio, con due persone che si avviano verso la porta" align="left" kicker="La differenza più grande" title="Chi scende<br>in campo" credito="Foto: FEMA · George Armstrong · pubblico dominio · 2012" >}}
 È qui che i due modelli si distinguono di più.
 
 Negli **Stati Uniti** la risposta è affidata soprattutto a **professionisti e militari**: vigili del fuoco, polizia, Guardia Nazionale, agenzie federali. I cittadini partecipano con i **CERT** — squadre di volontari di quartiere, dal 1985 — e con la **Croce Rossa americana**, ma restano una parte minore della macchina.

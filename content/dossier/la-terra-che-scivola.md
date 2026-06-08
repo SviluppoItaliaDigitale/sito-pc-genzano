@@ -58,7 +58,7 @@ Il 22 marzo 2014 un versante saturo collassò sulla comunità di Steelhead Haven
 Le piogge dei mesi precedenti erano state il **150-200%** della media. Il clima conta: precipitazioni più intense rendono i versanti più instabili, anche dove sembravano sicuri.
 {{< /dossier-scena >}}
 
-{{< dossier-scena id="aberfan" image="/images/dossier/frane-aberfan.webp" alt="Veduta aerea in bianco e nero dei cumuli di scarto di miniera sul versante sopra Aberfan, all'origine della frana del 1966, con il villaggio sulla sinistra" align="left" kicker="21 ottobre 1966 · Galles" title="Quando la frana<br>la facciamo noi" credito="Foto: Governo del Regno Unito · pubblico dominio, via Wikimedia Commons" >}}
+{{< dossier-scena id="aberfan" image="/images/dossier/frane-aberfan.webp" alt="Veduta aerea in bianco e nero dei cumuli di scarto di miniera sul versante sopra Aberfan, all'origine della frana del 1966, con il villaggio sulla sinistra" align="bottom" kicker="21 ottobre 1966 · Galles" title="Quando la frana<br>la facciamo noi" credito="Foto: Governo del Regno Unito · pubblico dominio, via Wikimedia Commons" >}}
 Il 21 ottobre 1966 ad **Aberfan** una discarica di scarti di carbone, satura di pioggia e posata sopra una sorgente, scivolò a valle come fango sulla scuola elementare Pantglas: **144 morti, di cui 116 bambini**.
 
 Le frane non sono solo natura. Depositi mal collocati, sbancamenti e suolo reso impermeabile creano rischio nuovo. È la lezione di Aberfan: un pericolo ignorato resta un pericolo, e portò a leggi più severe sulla sicurezza dei depositi.
