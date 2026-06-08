@@ -1,6 +1,6 @@
 ---
 title: "8 giugno: Giornata mondiale degli oceani e la lezione per i nostri laghi"
-date: 2026-06-08
+date: 2026-06-08T00:01:00+02:00
 description: "La Giornata mondiale degli oceani cade nel periodo in cui i laghi di Nemi e Albano tornano luoghi di balneazione. Cosa ci insegna il mare sul nostro territorio."
 badge: "Informazione"
 priorita: "normale"
