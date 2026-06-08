@@ -12,14 +12,7 @@ Il tema definisce due shortcode: `foto` (foto evento) e `pittogramma` (simboli).
          caption="Didascalia opzionale" >}}
 ```
 
-Produce `<figure>` con:
-- immagine cliccabile che apre a dimensione intera in nuova scheda
-- `aria-label` descrittivo sul link ("Apri a dimensione intera: {alt}")
-- `<figcaption>` opzionale che accetta markdown inline
-- `loading="lazy"` e responsive (Bootstrap Italia `img-fluid`)
-- Funziona senza JavaScript (progressive enhancement)
-
-`src` e `alt` sono **obbligatori**: la mancanza causa errore di build Hugo.
+Produce `<figure>` con: immagine cliccabile (apre a dimensione intera in nuova scheda) + `aria-label` sul link ("Apri a dimensione intera: {alt}"), `<figcaption>` opzionale (markdown inline), `loading="lazy"`, responsive (`img-fluid`), funziona senza JS. `src` e `alt` **obbligatori** (mancanza = errore build Hugo).
 
 ## Shortcode `pittogramma` (simboli ISO 7010 e ARASAAC)
 
@@ -47,22 +40,11 @@ Parametri:
 
 Produce `<img>` con `role="img"` e `loading="lazy"`, oppure `<figure>` con caption opzionale. CSS scoped in `custom.css` (sezione **PITTOGRAMMI v1.0**) con dimensioni fisse, override mobile (large/xlarge ridotti su <576px), mantenimento colori in stampa (i colori dei segnali ISO 7010 sono parte dell'informazione di sicurezza e non devono essere convertiti in scala di grigi).
 
-**Libreria disponibile** (simboli, 3.3 MB):
-- `static/pittogrammi/iso7010/*.svg` — 46 segnali standard (E* evacuazione, F* antincendio, W* avvertimento, M* obbligo, P* divieto). Vettoriali, scalabili senza perdita.
-- `static/pittogrammi/arasaac/*.png` — simboli (eventi/rischi, azioni autoprotezione, oggetti kit emergenza, persone, luoghi, segnali, veicoli, numeri utili). Bitmap 500px.
+**Libreria** (3.3 MB): `static/pittogrammi/iso7010/*.svg` — 46 segnali standard (E* evacuazione, F* antincendio, W* avvertimento, M* obbligo, P* divieto), vettoriali; `static/pittogrammi/arasaac/*.png` — simboli (rischi, autoprotezione, kit, persone, luoghi, veicoli, numeri utili), bitmap 500px. **Re-download**: `bash scripts/scarica-pittogrammi.sh` (idempotente, `--force` per tutto; rate-limit 1s su Wikimedia per evitare ban).
 
-**Re-download della libreria**: `bash scripts/scarica-pittogrammi.sh` (idempotente, scarica solo i mancanti; `--force` ri-scarica tutto). Lo script ha rate-limit 1s tra le richieste Wikimedia per evitare ban temporaneo.
+**Attribuzione (obbligatoria):** pagina `/attribuzioni-pittogrammi/` dal footer di tutte le pagine. ARASAAC è CC BY-NC-SA 4.0: le opere derivate (es. **schede stampabili PDF** dei kit) ereditano la stessa licenza. ISO 7010 da Wikimedia: PD-shape/CC0, attribuzione di cortesia.
 
-**Regole di attribuzione (obbligatorie):**
-- Pagina `/attribuzioni-pittogrammi/` linkata dal footer di tutte le pagine.
-- ARASAAC è CC BY-NC-SA 4.0: le opere derivate (ad esempio le **schede stampabili PDF** dei kit didattici) che includono pittogrammi ARASAAC ereditano la stessa licenza CC BY-NC-SA 4.0.
-- ISO 7010 da Wikimedia: prevalentemente PD-shape/CC0, attribuzione di cortesia su pagina dedicata.
-
-**Regole di uso editoriale:**
-- Non sostituire il testo con il solo pittogramma: il pittogramma è di **supporto** alla comprensione, mai sostituto. WCAG 1.4.5 (Images of Text) e principio di leggibilità per L2.
-- Usare un pittogramma per concetto chiave, non come "decorazione visiva" continua: la sovrabbondanza riduce l'efficacia comunicativa per gli utenti che ne hanno davvero bisogno.
-- Per segnali di sicurezza (ISO 7010 di tipo P/W/M/F): preferire i simboli standard a quelli ARASAAC quando si comunica un obbligo o un divieto formale.
-- Per situazioni narrative o didattiche destinate a bambini: preferire ARASAAC per il colore e il tratto più riconoscibile.
+**Uso editoriale:** il pittogramma è **supporto**, mai sostituto del testo (WCAG 1.4.5); uno per concetto chiave, non decorazione continua; ISO 7010 (P/W/M/F) per obblighi/divieti formali, ARASAAC per situazioni narrative/didattiche per bambini.
 
 ## Shortcode `cosa-non-fare` (box divieti per pagine rischio)
 
@@ -167,7 +149,7 @@ Tutte le tabelle Markdown del sito sono rese dal hook `themes/flavour-pcgenzano/
 </div>
 ```
 
-Tabelle landing già convertite con caption: `/contatti/` ("Quando contattarci"), `/numeri-utili/` (numeri emergenza), `/chi-siamo/` (consiglio direttivo, con `caption.visually-hidden` perché c'è già un card-header sopra). Per le altre 50+ tabelle Markdown del sito la caption non è necessaria: il `<th scope="col">` automatico è sufficiente per la conformità WCAG, perché ogni tabella è preceduta da un `<h2>` o `<h3>` che ne descrive il contenuto.
+Tabelle landing già convertite con caption: `/contatti/`, `/numeri-utili/`, `/chi-siamo/` (con `caption.visually-hidden` perché c'è già un card-header sopra). Per le altre 50+ tabelle la caption non serve: il `<th scope="col">` automatico basta per WCAG, perché ogni tabella è preceduta da un `<h2>`/`<h3>` che la descrive.
 
 CSS scoped sezione **TABLE CAPTION v1.0** in `custom.css`: italico blu istituzionale, allineato a sinistra; helper `.visually-hidden` per caption screen reader-only (nasconde visivamente ma resta accessibile).
 
@@ -216,27 +198,13 @@ Riga di icone in fondo a ogni articolo e a tutte le pagine che includono il part
 
 **Architettura privacy-first:**
 
-- **Solo link "share intent" HTML standard** (`https://wa.me/?text=...`, `https://t.me/share/url?url=...`, ecc.): nessun JavaScript SDK delle piattaforme social. Niente tracker, niente cookie di terze parti. Conforme **AGID** + **GDPR** senza necessità di consent banner aggiuntivo.
-- **Web Share API nativa** (`navigator.share()`) per il bottone "Altre app": apre il selettore di app del sistema operativo. Il bottone si auto-nasconde via JS se l'API non è disponibile (desktop senza supporto).
-- **Clipboard API** (`navigator.clipboard.writeText()`) per "Copia link", con fallback a `document.execCommand('copy')` per vecchi browser. Feedback visivo: classe `.copied` + icona check + aria-label "Link copiato negli appunti" per 2 secondi.
+- **Solo link "share intent" HTML standard** (`https://wa.me/?text=...`, `https://t.me/share/url?url=...`, ecc.): nessun SDK social, niente tracker/cookie di terzi. Conforme **AGID** + **GDPR** senza consent banner aggiuntivo.
+- **Web Share API** (`navigator.share()`) per "Altre app": apre il selettore di app dell'OS, auto-nascosto via JS se l'API manca (desktop).
+- **Clipboard API** (`navigator.clipboard.writeText()`) per "Copia link", fallback `document.execCommand('copy')`. Feedback: classe `.copied` + icona check + aria-label "Link copiato negli appunti" per 2s.
 
-**Bottoni in ordine** (HTML in `page-tools.html`):
+**Bottoni in ordine** (HTML in `page-tools.html`): WhatsApp (`bi-whatsapp`, hover `#25d366`), Telegram (`bi-telegram`, `#229ed9`), Facebook (`bi-facebook`, `#1877f2`), X (`bi-twitter-x`, `#000`), LinkedIn (`bi-linkedin`, `#0a66c2`), Email (`bi-envelope`, `mailto:?subject=...&body=...`), Copia link (`bi-link-45deg`, Clipboard API + feedback verde), Condividi nativo (`bi-three-dots`, Web Share API mobile, auto-nascosto su desktop).
 
-1. WhatsApp — `bi-whatsapp` — colore brand al hover (`#25d366`)
-2. Telegram — `bi-telegram` — colore brand al hover (`#229ed9`)
-3. Facebook — `bi-facebook` — colore brand al hover (`#1877f2`)
-4. X (Twitter) — `bi-twitter-x` — nero al hover (`#000`)
-5. LinkedIn — `bi-linkedin` — colore brand al hover (`#0a66c2`)
-6. Email — `bi-envelope` — `mailto:?subject=...&body=...`
-7. Copia link — `bi-link-45deg` — Clipboard API + feedback verde
-8. Condividi nativo — `bi-three-dots` — Web Share API mobile (auto-nascosto su desktop)
-
-**Accessibilità:**
-- Ogni `<a>` o `<button>` ha `aria-label` descrittivo (es. "Condividi su WhatsApp").
-- Testo nascosto per screen reader (`<span class="visually-hidden">WhatsApp</span>`) accanto all'icona — gli screen reader leggono entrambi.
-- `target="_blank" rel="noopener noreferrer"` sui link esterni.
-- Focus visibile con outline `#ffbe2e` (giallo PA) di 3px.
-- `prefers-reduced-motion`: disattiva l'animazione `translateY(-2px)` al hover.
+**Accessibilità:** `aria-label` descrittivo + testo `.visually-hidden` accanto all'icona per ogni bottone (screen reader leggono entrambi); `target="_blank" rel="noopener noreferrer"` sui link esterni; focus outline `#ffbe2e` 3px; `prefers-reduced-motion` disattiva l'hover lift `translateY(-2px)`.
 
 **Stampa:** la riga share è nascosta automaticamente da `@media print` (sia globale sia locale per ridondanza).
 
@@ -278,17 +246,11 @@ Se un domani serve aggiungere una **quarta azione** (ipotesi: "Numeri utili"), a
 
 ## Shortcode `pagina-emergenza-lite` (pagina `/emergenza/`)
 
-Contiene tutto il rendering della pagina `/emergenza/` (pagina **ultra-leggera** per banda debole o emergenze: 44 KB vs 64 KB della homepage). Usa `data/allerta.json` e `data/emergenza.json` letti al build. Zero widget esterni (Windy/Meteoam/IT-alert), CSS inline minimale (~3KB), niente Bootstrap né JS aggiuntivo. Usato solo dalla pagina `content/emergenza/_index.md`.
+Rende la pagina `/emergenza/` **ultra-leggera** (44 KB vs 64 KB homepage). Legge `data/allerta.json` + `data/emergenza.json` al build. Zero widget esterni, CSS inline ~3KB, niente Bootstrap né JS. Usato solo da `content/emergenza/_index.md`.
 
-**Contenuto in ordine di priorità:**
-1. Banner emergenza dinamico (se `data/emergenza.json` attiva).
-2. 112 grande con call-to-action `tel:112`.
-3. Stato allerta meteo dinamico colorato (legge `data/allerta.json` al build).
-4. 4 numeri essenziali.
-5. 6 azioni "cosa fare ora".
-6. 7 link rapidi al sito completo.
+**Contenuto in ordine di priorità:** (1) banner emergenza dinamico (se attiva), (2) 112 grande con `tel:112`, (3) stato allerta meteo colorato (build), (4) 4 numeri essenziali, (5) 6 azioni "cosa fare ora", (6) 7 link rapidi al sito.
 
-Aliases pagina: `/lite/`, `/emergenza-essenziale/`. Linkata dal footer di tutte le pagine. Caso d'uso: rete satura/lenta durante un'emergenza, dispositivi vecchi, consultazione rapida da mobile.
+Aliases: `/lite/`, `/emergenza-essenziale/`. Linkata dal footer. Caso d'uso: rete satura/lenta in emergenza, dispositivi vecchi, mobile.
 
 ## Partial `leggi-ad-alta-voce` (TTS Web Speech API)
 
@@ -305,7 +267,7 @@ Comportamento del partial:
 
 Stile in `custom.css` sezione **ARTICLE COVER v1.0**: testo piccolo (0.82rem), italic, allineato a destra, link blu istituzionale. Su mobile: text-align left, font 0.78rem. In stampa: colori convertiti in nero, link che si espande con URL completo (per la riproducibilità del documento stampato).
 
-**Quando viene popolato `image_credit`**: a maggio 2026 lo popolava automaticamente il workflow `scarica-foto-automatica.yml` per gli articoli con marker `# TODO-foto-wikipedia`. Dal 3 maggio 2026 il marker è bandito (CLAUDE.md punto 9): le foto da fonti ufficiali vanno inline nel corpo come `{{< foto >}}` con caption che cita autore + licenza, NON nel banner. Quindi `image_credit` resta usato solo per casi storici e per articoli che (eccezionalmente) hanno una foto utente custom come `image:` — sconsigliato. La cover tipografica generata da `auto-cover-mancanti.py` non popola `image_credit` (la cover è opera nostra).
+**Quando si popola `image_credit`**: solo casi storici (il marker `# TODO-foto-wikipedia` che lo popolava è bandito dal 3 maggio 2026, CLAUDE.md punto 9 — le foto da fonti ufficiali vanno inline come `{{< foto >}}` con caption autore+licenza, NON nel banner). La cover tipografica di `auto-cover-mancanti.py` non lo popola (è opera nostra).
 
 Esempio frontmatter completo:
 ```yaml
@@ -337,11 +299,10 @@ Quando aggiungi una nuova sezione paginata (es. `/news-tecniche/`), nel suo `sin
 Pagina interattiva che guida il cittadino con domande semplici fino a una risposta di autoprotezione. È un **albero decisionale deterministico in JavaScript puro** (nessun LLM, nessuna API runtime), coerente con il vincolo di sito statico Hugo e con la responsabilità istituzionale di non dare indicazioni generate in emergenza.
 
 - **Contenuto**: `content/assistente/_index.md` (solo frontmatter — `type: "assistente"`, `layout: "list"`).
-- **Logica e dati**: `themes/flavour-pcgenzano/layouts/assistente/list.html`. Oggetto `NODES` con percorsi (terremoto, incendio, gas, allerta meteo, allagamento, volontario, numeri utili, IT-alert) e circa 30 nodi totali. Struttura nodo: `{ kind: 'question'|'answer', title, prompt?, options?, body?, bullets?, emergency?, links? }`.
-- **Compatibilità subpath**: i link interni usano `window.SITO_BASEURL` (iniettato via `{{ "" | relURL }}`) per essere compatibili sia con Aruba (root) sia con GitHub Pages (subpath `/sito-pc-genzano/`).
-- **Accessibilità**: `aria-live="polite"` sul contenitore, focus management sul `<h2>` ad ogni render, navigazione tastiera nativa, banner rosso in cima con richiamo al 112, fallback `<noscript>` con link alle pagine istituzionali.
-- **Deep link**: lo stato è riflesso in `location.hash` (es. `/assistente/#terremoto_casa`) per condividere una risposta.
-- **Homepage**: card "Cosa devo fare?" in `data/quick_links.yaml` → `servizi[0]`.
+- **Logica/dati**: `themes/flavour-pcgenzano/layouts/assistente/list.html`. Oggetto `NODES` (~30 nodi: terremoto, incendio, gas, allerta meteo, allagamento, volontario, numeri utili, IT-alert). Nodo: `{ kind: 'question'|'answer', title, prompt?, options?, body?, bullets?, emergency?, links? }`.
+- **Subpath**: link interni via `window.SITO_BASEURL` (`{{ "" | relURL }}`) per Aruba + GitHub Pages.
+- **Accessibilità**: `aria-live="polite"`, focus sul `<h2>` ad ogni render, tastiera nativa, banner rosso 112, fallback `<noscript>`.
+- **Deep link**: stato in `location.hash` (es. `/assistente/#terremoto_casa`). **Homepage**: card "Cosa devo fare?" in `data/quick_links.yaml` → `servizi[0]`.
 
 **Per aggiungere un nuovo percorso**: aggiungere un nodo `question` collegato da `start.options`, poi le relative `answer` referenziate da `options[n].next`. Rispettare il criterio `emergency: true` solo per situazioni operative reali (coerenza con regola `06-protezione-civile-scientifica.md` sul tono di comunicazione del rischio). Ogni nodo `answer` può avere un `pittogramma` opzionale (es. `'arasaac/terremoto.png'`) renderizzato come `<figure>` accessibile sopra il corpo della risposta.
 
@@ -351,7 +312,7 @@ Pagina interattiva che guida il cittadino con domande semplici fino a una rispos
 
 **Schema attivi:** Organization+NGO, ContactPoint, WebSite (con SearchAction), BreadcrumbList, Article (per `/comunicazioni/`), Event (aggiuntivo per `badge: Evento` con location Place + organizer), FAQPage (per `/faq/` **e** per qualunque pagina con frontmatter `faq_schema: true`, vedi sotto), HowTo (per pagine `/rischi-prevenzione/*` con frontmatter `howto_prima` / `howto_durante` / `howto_dopo` — vedi sotto), WebPage (default), Question/Answer, HowToStep, ImageObject, PostalAddress, GeoCoordinates, City.
 
-**HowTo per pagine rischio — 8 pagine già coperte.** Da maggio 2026 le 8 pagine `/rischi-prevenzione/*` con struttura uniforme PRIMA/DURANTE/DOPO sono **tutte** coperte da markup `HowTo` (`rischio-sismico`, `rischio-idrogeologico`, `rischio-incendio`, `rischio-vulcanico`, `ondate-di-calore`, `blackout`, `vento-forte`, `temporali-intensi`). Il pattern è documentato qui per chi aggiungerà nuove pagine rischio in futuro. Il blocco HowTo si attiva aggiungendo nel frontmatter 3 campi stringa:
+**HowTo per pagine rischio — 8 pagine già coperte.** Da maggio 2026 le 8 pagine `/rischi-prevenzione/*` con struttura PRIMA/DURANTE/DOPO sono **tutte** coperte da `HowTo` (`rischio-sismico`, `rischio-idrogeologico`, `rischio-incendio`, `rischio-vulcanico`, `ondate-di-calore`, `blackout`, `vento-forte`, `temporali-intensi`). Per nuove pagine rischio, il blocco HowTo si attiva con 3 campi frontmatter:
 
 ```yaml
 howto_prima: "Riassunto in 1-3 frasi delle azioni preventive da fare prima dell'evento."
@@ -365,22 +326,20 @@ Il partial controlla `if and .Params.howto_prima .Params.howto_durante .Params.h
 
 ⚠️ **Sintassi obbligatoria `| jsonify | safeJS`** per ogni campo testuale dentro `<script type="application/ld+json">`. Hugo applica un **secondo escape JS contestuale** alle stringhe dentro `<script>`, e il solo `| jsonify` produce doppio escape (es. `name: "\"Foo\""`). Aggiungere `| safeJS` dopo `| jsonify` impedisce il secondo escape e produce JSON valido. Vale anche per gli apostrofi italiani (es. "L'unica difesa"). Testato con `validator.schema.org` post-fix del 12 maggio 2026.
 
-**FAQPage opt-in dagli accordion (oltre a `/faq/`).** Le pagine con FAQ in accordion `<details class="faq-item">` possono esporre lo schema **FAQPage** aggiungendo `faq_schema: true` nel frontmatter: il partial estrae con `findRESubmatch` la domanda (`<summary>`) e la risposta da ogni accordion e genera il JSON-LD (`| plainify | htmlUnescape | jsonify | safeJS`). È **opt-in** apposta, per non marcare come FAQ gli accordion usati per altri contenuti (es. moduli corso in `/formazione/percorsi-didattici/`). Attivo su `/allerte-meteo/` e `/area-volontari/`; la `/faq/` mantiene la sua lista FAQPage curata a mano.
+**FAQPage opt-in dagli accordion (oltre a `/faq/`).** Pagine con accordion `<details class="faq-item">` espongono **FAQPage** aggiungendo `faq_schema: true`: il partial estrae con `findRESubmatch` domanda (`<summary>`) + risposta e genera JSON-LD (`| plainify | htmlUnescape | jsonify | safeJS`). **Opt-in** apposta, per non marcare come FAQ accordion di altri contenuti (es. moduli corso). Attivo su `/allerte-meteo/` e `/area-volontari/`; `/faq/` ha la sua lista curata a mano.
 
-**Importante — vincolo di tipo Organization:** l'Organization è marcata come `["Organization", "NGO"]`, **NON** `GovernmentOrganization` né `EmergencyService`. Il Gruppo è associazione di volontariato OdV, non ente pubblico né servizio di emergenza chiamabile direttamente — usare quei tipi indurrebbe Google/assistenti vocali a presentare il Gruppo come servizio chiamabile, contraddicendo la regola "in emergenza chiama il 112".
-
-**Quando estendi gli schema**: prudenza su tipi che inducano confusione tra associazione di volontariato e ente pubblico/servizio di emergenza. Verifica con [Google Rich Results Test](https://search.google.com/test/rich-results) e [Schema.org validator](https://validator.schema.org/).
+**Importante — vincolo di tipo Organization:** marcata `["Organization", "NGO"]`, **NON** `GovernmentOrganization` né `EmergencyService`. Il Gruppo è OdV, non ente pubblico né servizio chiamabile: quei tipi indurrebbero Google/assistenti vocali a presentarlo come servizio chiamabile, contro la regola "in emergenza chiama il 112". Quando estendi gli schema, evita tipi che confondano OdV con ente pubblico/servizio di emergenza; verifica con [Google Rich Results Test](https://search.google.com/test/rich-results) e [Schema.org validator](https://validator.schema.org/).
 
 ## Partial `meta-social` (Open Graph + Twitter Card)
 
 Tutti i meta tag che controllano l'**anteprima** dei link quando vengono condivisi su WhatsApp, Telegram, Facebook, X, LinkedIn, Slack, ecc. sono in `themes/flavour-pcgenzano/layouts/partials/meta-social.html` (chiamato da `baseof.html`). Include:
 
-- **Open Graph base**: `og:title`, `og:description`, `og:type` (`article` per `.IsPage`, `website` per liste e pagine), `og:url`, `og:locale=it_IT`, `og:site_name`.
-- **Open Graph image avanzato**: `og:image`, `og:image:secure_url`, `og:image:type` (calcolato da estensione: `.webp`/`.png`/`.svg`/`.gif`/default `.jpg`), `og:image:width=1200`, `og:image:height=630`, `og:image:alt` (da `image_alt` o titolo).
-- **Article-specific** (solo `.IsPage`): `article:published_time` (ISO 8601), `article:modified_time`, `article:author`, `article:section` (dal badge), `article:tag` (range sui tags).
-- **Twitter Card**: `twitter:card=summary_large_image`, `twitter:title`, `twitter:description`, `twitter:image`, `twitter:image:alt`. Opzionale `twitter:site` se in `[params] twitterSite = "@..."` di `hugo.toml`.
+- **Open Graph base**: `og:title`, `og:description`, `og:type` (`article` per `.IsPage`, `website` altrove), `og:url`, `og:locale=it_IT`, `og:site_name`.
+- **OG image**: `og:image`, `og:image:secure_url`, `og:image:type` (da estensione: `.webp`/`.png`/`.svg`/`.gif`/default `.jpg`), `og:image:width=1200`, `og:image:height=630`, `og:image:alt` (da `image_alt` o titolo).
+- **Article** (solo `.IsPage`): `article:published_time`/`:modified_time` (ISO 8601), `:author`, `:section` (dal badge), `:tag` (sui tags).
+- **Twitter Card**: `twitter:card=summary_large_image`, `:title`, `:description`, `:image`, `:image:alt`. Opzionale `twitter:site` se in `[params] twitterSite` di `hugo.toml`.
 
-Default per pagine senza copertina: `static/images/og-default.png` 1200×630 nel tema.
+Default senza copertina: `static/images/og-default.png` 1200×630 nel tema.
 
 **Cache delle anteprime**: le piattaforme social cachano le anteprime (Facebook/X possono cachare per ore o giorni). Se modifichi la copertina di un articolo, l'anteprima si aggiorna **solo dopo che la piattaforma ricontrolla**. Per forzare il refresh: [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/) e [Twitter Card Validator](https://cards-dev.twitter.com/validator).
 
@@ -390,14 +349,9 @@ Partial aggiunti con le iniziative della roadmap. Tutti auto-protettivi (renderi
 
 - **`qr-articolo.html`** (idea #6) — bottone "Scarica QR" + `<dialog>` con il QR dell'articolo. Si attiva solo se esiste `static/qr/<slug>.png|svg` (generati da `scripts/genera-qr-articoli.py`). Incluso in `page-tools.html`. CSS § QR ARTICOLO v1.0.
 - **`ricerca-modal.html`** (idea #24) — modal di ricerca full-text Pagefind, apertura da icona navbar e da `Ctrl+K`. `pagefind-ui` caricato in lazy alla prima apertura. Incluso in `baseof.html`. Indice in `static/pagefind/` generato da `scripts/genera-indice-ricerca.sh`. CSS § RICERCA PAGEFIND v1.0. La pagina `/cerca/` (`layouts/cerca/list.html`) usa lo stesso motore.
-- **`lis-badge.html`** (idea #10) — badge "Disponibile in LIS" sulle pagine del sito. **Due modalità** (v2.0, maggio 2026):
-  - **Modalità preferita: `lis_section: "<famiglia>"`** nel frontmatter → mostra badge *"N video LIS disponibili"* che linka a `/lis/#<famiglia>` (anchor della sezione corrispondente sull'hub). Funziona con il registro `data/lis.yaml` v2.0 che cataloga 59 video LIS dei canali "Io non rischio" (DPC) e "Abili a Proteggere" (Cooperativa Europe Consulting) suddivisi in 10 famiglie tematiche. Privacy-first: niente embed YouTube, ogni video apre il canale del produttore in nuova scheda. Incluso in `_default/single.html`, `_default/list.html` e `rischi-prevenzione/single.html`. Famiglie attive: `rischio-sismico`, `rischio-vulcanico`, `rischio-idrogeologico`, `rischio-incendio`, `maremoto`, `allerte-meteo`, `gestione-emergenza`, `pianificazione`, `aree-emergenza`, `kit-emergenza`. Pagine target: `/rischi-prevenzione/rischio-{sismico,vulcanico,idrogeologico,incendio}/`, `/rischi-prevenzione/kit-emergenza/`, `/allerte-meteo/`, `/piano-emergenza/`, `/cartografia/`.
-  - **Modalità legacy: `lis_video: "<id>"`** → dialog popup con video self-hosted o link YouTube + trascrizione. Mantenuta per retrocompatibilità con eventuali video futuri prodotti in proprio. CSS § LIS v2.0.
-  - **Aggiornamento periodico**: workflow `.github/workflows/check-video-lis.yml` (cron settimanale lunedì 11:23 UTC) gira `scripts/check-nuovi-video-lis.py` che confronta i feed RSS/HTML dei 2 canali con `data/lis.yaml` e apre issue automatica se trova nuovi video LIS da integrare, con suggerimento famiglia tematica.
+- **`lis-badge.html`** (idea #10) — badge "Disponibile in LIS". **Due modalità** (v2.0): (1) **preferita `lis_section: "<famiglia>"`** → badge *"N video LIS disponibili"* che linka a `/lis/#<famiglia>`; usa il registro `data/lis.yaml` v2.0 (59 video LIS di "Io non rischio"/DPC + "Abili a Proteggere"/Europe Consulting in 10 famiglie); privacy-first (niente embed YouTube). Incluso in `_default/single.html`, `_default/list.html`, `rischi-prevenzione/single.html`. Famiglie: `rischio-{sismico,vulcanico,idrogeologico,incendio}`, `maremoto`, `allerte-meteo`, `gestione-emergenza`, `pianificazione`, `aree-emergenza`, `kit-emergenza`. (2) **legacy `lis_video: "<id>"`** → dialog popup video self-hosted/YouTube + trascrizione (retrocompat). CSS § LIS v2.0. **Aggiornamento**: workflow `check-video-lis.yml` (lun 11:23 UTC, `scripts/check-nuovi-video-lis.py`) apre issue sui nuovi video LIS con famiglia suggerita.
 
-Layout di pagina aggiunti dalla roadmap (non partial, ma `layouts/<sezione>/`): `stato-sistema/list.html` (#25), `storia/list.html` (#8), `lis/list.html` (#10), `lanterna/list.html` (#4, standalone — NON usa `baseof.html`), `quiz-preparazione/list.html` (#7), `podcast/{list,single,rss.xml}` (#22), `articoli-da-ascoltare/list.html` (#22, ex `podcast/`), `allerta-stato/list.json` (#2, endpoint JSON puro).
-
-Script asset associati: `genera-qr-articoli.py`, `genera-indice-ricerca.sh`, `backup-documenti-aruba.py`. JS statici: `notifiche-allerta.js` (#2), `glossario-pagina.js` (#21), `quiz-preparazione.js` (#7), `static/giochi/assets/js/arena.js` (#11).
+Layout di pagina della roadmap (`layouts/<sezione>/`): `stato-sistema/list.html` (#25), `storia/list.html` (#8), `lis/list.html` (#10), `lanterna/list.html` (#4, standalone — NON usa `baseof.html`), `quiz-preparazione/list.html` (#7), `podcast/{list,single,rss.xml}` (#22), `articoli-da-ascoltare/list.html` (#22, ex `podcast/`), `allerta-stato/list.json` (#2, endpoint JSON). Script: `genera-qr-articoli.py`, `genera-indice-ricerca.sh`, `backup-documenti-aruba.py`. JS: `notifiche-allerta.js` (#2), `glossario-pagina.js` (#21), `quiz-preparazione.js` (#7), `static/giochi/assets/js/arena.js` (#11).
 
 ## Dossier interattivi — sezione `/dossier/` + 9 shortcode `dossier-*`
 
