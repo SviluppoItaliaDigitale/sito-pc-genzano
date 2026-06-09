@@ -693,7 +693,10 @@ html.a11y-pause-anim .dossier-cursorglow { display: none !important; }
   content: ""; position: absolute; inset: 0;
   background: linear-gradient(180deg, rgba(5,8,15,.85), rgba(5,8,15,.72) 45%, rgba(5,8,15,.88));
 }
-.dossier-dati--img .dossier-dati__grid { position: relative; z-index: 1; }
+/* min-width:0 + width:100% — il grid è figlio flex di .dossier-dati--img:
+   senza questo erediterebbe min-width:auto e non collasserebbe a 1 colonna su
+   mobile (le colonne sforavano e venivano tagliate da overflow:hidden). */
+.dossier-dati--img .dossier-dati__grid { position: relative; z-index: 1; min-width: 0; width: 100%; }
 @media (prefers-reduced-motion: reduce) { .dossier-dati--img .dossier-dati__bg { animation: none !important; } }
 html.a11y-pause-anim .dossier-dati--img .dossier-dati__bg { animation: none !important; }
 .dossier-scena[data-align="top"] .dossier-scena__panel li strong { color: var(--ink); }
