@@ -19,6 +19,8 @@ social_punti:
 draft: false
 ---
 
+> 🚧 **Aggiornamento del 9 giugno 2026** — Via Nemorense è di nuovo **chiusa**, insieme a via De Sanctis, per i lavori di demolizione dei vecchi ponti. Leggi l'[avviso sulla nuova chiusura](/comunicazioni/2026-06-09-nemi-chiusura-via-nemorense-demolizione-ponti/).
+
 **Via Nemorense**, la strada che collega **Genzano di Roma** e **Nemi**, è stata **riaperta al traffico** nel **pomeriggio di venerdì 22 maggio 2026**. La circolazione è di nuovo possibile **nei due sensi di marcia**.
 
 La via era chiusa dal **15 aprile 2026** dopo il **cedimento di un costone** in territorio del Comune di Nemi, che aveva reso necessaria l'interdizione al traffico.
