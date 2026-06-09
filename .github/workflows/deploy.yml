@@ -92,6 +92,13 @@ jobs:
           local-dir: ./public/
           server-dir: /www.protezionecivilegenzano.it/
           dangerous-clean-slate: false
+          # Reset del sync-state per forzare un upload INTEGRALE (09/06/2026):
+          # lo stato FTP precedente era andato in drift e lasciava su Aruba
+          # pagine stantie (chi-siamo 20/4, allerte-meteo 13/5). Un nuovo
+          # state-name fa ri-caricare tutti i file, senza cancellare nulla
+          # (a differenza di dangerous-clean-slate). Da qui in poi gli upload
+          # tornano incrementali contro questo nuovo stato.
+          state-name: .ftp-deploy-sync-state-2026-06-09.json
           timeout: 60000
           log-level: verbose
           exclude: |
