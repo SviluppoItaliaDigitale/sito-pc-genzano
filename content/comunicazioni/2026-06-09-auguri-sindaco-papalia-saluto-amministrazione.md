@@ -26,10 +26,6 @@ Il Gruppo ringrazia il Sindaco uscente Carlo Zoccolotti per l'attenzione e la di
 
 Un ringraziamento particolare va per la vicinanza mostrata nel momento più difficile: la scomparsa del coordinatore **Enzo Massimi**. In quella fase la presenza istituzionale ha dato un segnale concreto di attenzione verso i volontari e verso il servizio reso alla comunità.
 
-{{< foto src="/images/2026-06-09-enzo-massimi-coordinatore.webp"
-         alt="Ritratto di Enzo Massimi, un uomo con occhiali e giacca a vento scura, all'aperto"
-         caption="Enzo Massimi, coordinatore del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
-
 In questi anni il Gruppo ha lavorato con l'Amministrazione su prevenzione, assistenza alla popolazione, supporto operativo e promozione della cultura di protezione civile.
 
 Il ringraziamento è rivolto anche all'Amministrazione comunale uscente per il lavoro svolto insieme e per il contributo al rafforzamento del sistema locale di protezione civile.
