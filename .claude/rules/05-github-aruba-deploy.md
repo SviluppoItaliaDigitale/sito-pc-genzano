@@ -215,6 +215,14 @@ Lo script `scripts/auto-cover-mancanti.py` agisce così:
 
 ### Strategia cache-bust raccomandata
 
+> 🔴 **Rimedio decisivo quando il drift è grave o ricorrente (reset del sync-state FTP).** Il cache-bust nei `_index.md` aiuta sui singoli file, ma se su Aruba convivono **più generazioni di build** (es. audit 9 giugno 2026: `/chi-siamo/` ferma al 20/4, `/allerte-meteo/` al 13/5 con allerta gialla inesistente) il problema è che il **sync-state** di `FTP-Deploy-Action` è andato in drift: l'azione "crede" che quei file siano già caricati e li salta per sempre. Il fix che li sana **tutti in un colpo** è cambiare il `state-name` nello step FTP di `deploy.yml`:
+>
+> ```yaml
+> state-name: .ftp-deploy-sync-state-AAAA-MM-GG.json   # nuovo nome → re-upload integrale
+> ```
+>
+> Non trovando lo stato vecchio, l'azione **ri-carica l'intero sito**, **senza cancellare** la cartella `/documenti/` gestita a mano (a differenza di `dangerous-clean-slate: true`, che la distruggerebbe). È auto-curante: lo stato nuovo viene scritto solo a fine upload completo, quindi se un deploy viene interrotto il successivo riprova l'integrale. Dopo la sanatoria gli upload tornano incrementali contro il nuovo stato. Usa questo metodo, non `dangerous-clean-slate`. Il check `audit-sito.yml § 43b` confronta il livello allerta home vs `/allerte-meteo/` e segnala proprio questo sintomo.
+
 Quando modifichi **un partial del chrome** (`navbar.html`, `footer.html`, `slim-header.html`, `utility-bar.html`, `baseof.html`), nello **stesso PR** aggiungi un commento cache-bust nei `_index.md` delle sezioni principali per forzare la rigenerazione "evidente" lato Hugo + il re-upload FTP:
 
 ```markdown

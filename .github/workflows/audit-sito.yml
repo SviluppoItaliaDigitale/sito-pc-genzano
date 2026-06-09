@@ -1252,6 +1252,33 @@ jobs:
           fi
 
           # ----------------------------------------------------------------
+          section "43b. Coerenza livello allerta: home vs /allerte-meteo/"
+          # Home e /allerte-meteo/ leggono LO STESSO data/allerta.json al build:
+          # la home lo rende come classe `allerta-bar-<livello>`, la pagina
+          # allerte-meteo come testo "Livello <Livello>" (shortcode
+          # allerta-stato-attuale). Se i due divergono, una delle due pagine è
+          # STANTIA su Aruba — ed è il sintomo peggiore possibile: un'allerta
+          # sbagliata mostrata al cittadino. Check di CONTENUTO, indipendente
+          # dai timestamp (scatta anche se Last-Modified inganna). Aggiunto dopo
+          # l'audit del 9 giugno 2026 (/allerte-meteo/ ferma al 13 maggio con
+          # allerta gialla inesistente mentre la home diceva nessuna allerta).
+          # Cache-bust via query param per scavalcare cache CDN intermedie.
+          CB="?audit=$(date -u +%s)"
+          home_body=$(curl -sL --max-time 10 -H "Cache-Control: no-cache" "https://www.protezionecivilegenzano.it/${CB}" 2>/dev/null)
+          meteo_body=$(curl -sL --max-time 10 -H "Cache-Control: no-cache" "https://www.protezionecivilegenzano.it/allerte-meteo/${CB}" 2>/dev/null)
+          home_lvl=$(echo "$home_body" | grep -oE 'allerta-bar-(verde|giallo|arancione|rosso)' | head -1 | sed 's/allerta-bar-//')
+          meteo_lvl=$(echo "$meteo_body" | grep -oE 'Livello (Verde|Giallo|Arancione|Rosso)' | head -1 | sed 's/Livello //' | tr '[:upper:]' '[:lower:]')
+          if [ -n "$home_lvl" ] && [ -n "$meteo_lvl" ]; then
+            if [ "$home_lvl" != "$meteo_lvl" ]; then
+              err "Livello allerta DIVERGENTE tra home (\`$home_lvl\`) e /allerte-meteo/ (\`$meteo_lvl\`): una delle due pagine è stantia su Aruba. È il sintomo peggiore (allerta sbagliata al cittadino). Forzare un redeploy integrale resettando lo \`state-name\` del deploy FTP — vedi rule 05-github-aruba-deploy.md § \"File stantii su Aruba\"."
+            else
+              ok "Livello allerta coerente tra home e /allerte-meteo/ (\`$home_lvl\`)."
+            fi
+          else
+            warn "Impossibile estrarre il livello allerta per il confronto (home: \`$home_lvl\`, allerte-meteo: \`$meteo_lvl\`) — markup cambiato o pagine irraggiungibili."
+          fi
+
+          # ----------------------------------------------------------------
           section "44. Lunghezza description articoli (≤160 caratteri)"
           # La description alimenta la meta description SEO e og:description.
           # Limite 160 caratteri (rule 02 § "Frontmatter obbligatorio").
