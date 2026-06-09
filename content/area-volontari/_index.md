@@ -34,7 +34,7 @@ Sulla piattaforma i volontari possono:
 - consultare il **calendario turni** e le attivazioni in corso;
 - ricevere **comunicazioni interne** del Capo Gruppo e dei referenti di squadra;
 - scaricare **modulistica operativa** (schede attivazione, verbali, registri radio);
-- aggiornare i **propri dati personali** e i **disponibilità** settimanali;
+- aggiornare i **propri dati personali** e le **disponibilità** settimanali;
 - consultare lo **storico delle attività** svolte.
 
 ## Piattaforma usata
