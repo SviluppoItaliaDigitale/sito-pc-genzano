@@ -9,8 +9,9 @@
 #   2. Hugo extended 0.154.5 — IDENTICO alla produzione
 #   3. Dipendenze Python degli script (pillow, segno, pyyaml, ecc.)
 #   4. Claude Code CLI
-#   5. ~100 skill globali (Everything Claude Code + Marketing) con le liste
-#      EXCLUDE/KEEP curate — stessa identica dotazione del PC
+#   5. ~120 skill globali (Everything Claude Code + Marketing + Document skills
+#      ufficiali Anthropic + last30days) con le liste EXCLUDE/KEEP curate —
+#      stessa identica dotazione del PC
 #   6. 5 agent globali ECC (gli agent pc-* sono già nel repo, project-scoped)
 #   7. MCP: firecrawl + playwright
 #
@@ -73,6 +74,14 @@ azzurro "Dipendenze Python — core"
 pip install --quiet --break-system-packages \
   pyyaml pillow segno beautifulsoup4 requests spylls python-pptx fonttools brotli
 ok "pyyaml, pillow, segno, beautifulsoup4, requests, spylls, python-pptx"
+
+# Dipendenze delle document skills ufficiali Anthropic (docx/xlsx/pptx/pdf).
+# python-pptx/pillow sono già sopra; qui le restanti. markitdown[pptx] = estrazione testo.
+azzurro "Dipendenze Python — document skills (docx/xlsx/pptx/pdf)"
+pip install --quiet --break-system-packages \
+  python-docx openpyxl pypdf pdfplumber pandas reportlab "markitdown[pptx]" defusedxml lxml \
+  && ok "python-docx, openpyxl, pypdf, pdfplumber, pandas, reportlab, markitdown, defusedxml, lxml" \
+  || nota "alcune dipendenze document-skills non installate (non bloccante)"
 
 azzurro "Dipendenze Python — meteo (opzionali, best-effort)"
 pip install --quiet --break-system-packages matplotlib numpy >/dev/null 2>&1 \
@@ -165,6 +174,31 @@ if [ -d "$MKT/skills" ]; then
   done
 fi
 ok "Skill marketing collegate: $mkt_n"
+
+# Document skills UFFICIALI ANTHROPIC (https://github.com/anthropics/skills):
+# file Office/PDF veri (verbali .docx, bilanci .xlsx con formule, deck .pptx,
+# moduli PDF) + skill-creator + le altre creative/tecniche. last30days
+# (https://github.com/mvanhorn/last30days-skill, MIT) = trend social ultimi 30gg.
+# Vedi memory reference_anthropic_skills_install.
+clona "https://github.com/anthropics/skills.git"         "anthropic-skills"
+clona "https://github.com/mvanhorn/last30days-skill.git" "last30days-skill"
+ANT="$SOURCES/anthropic-skills"
+L30="$SOURCES/last30days-skill"
+
+# Tutte le skill Anthropic TRANNE claude-api (esiste la built-in del harness,
+# con blocco TRIGGER, superiore: linkare l'Anthropic creerebbe un doppione).
+ANT_KEEP="docx xlsx pptx pdf skill-creator algorithmic-art brand-guidelines canvas-design doc-coauthoring frontend-design internal-comms mcp-builder slack-gif-creator theme-factory web-artifacts-builder webapp-testing"
+ant_n=0
+if [ -d "$ANT/skills" ]; then
+  for name in $ANT_KEEP; do
+    [ -d "$ANT/skills/$name" ] && ln -sfn "$ANT/skills/$name" "$SKILLS_DEST/$name" && ant_n=$((ant_n+1))
+  done
+fi
+ok "Skill Anthropic collegate: $ant_n"
+
+l30_n=0
+[ -d "$L30/skills/last30days" ] && ln -sfn "$L30/skills/last30days" "$SKILLS_DEST/last30days" && l30_n=1
+ok "Skill last30days collegata: $l30_n"
 
 # 5 agent globali ECC (gli agent pc-* del repo sono già project-scoped).
 ECC_AGENTS="a11y-architect python-reviewer seo-specialist security-reviewer silent-failure-hunter"
