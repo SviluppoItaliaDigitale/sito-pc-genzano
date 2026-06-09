@@ -7,7 +7,7 @@ priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-23-riapertura-via-nemorense-genzano-nemi.webp"
 image_alt: "Cover dell'articolo: Riaperta via Nemorense tra Genzano e Nemi, strada percorribile nei due sensi"
-scadenza: ""
+scadenza: "2026-06-09"
 area: "Genzano di Roma — Nemi"
 allegati: []
 social_citazione: "Via Nemorense, tra Genzano e Nemi, è di nuovo percorribile nei due sensi di marcia."
