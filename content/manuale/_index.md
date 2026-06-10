@@ -40,7 +40,7 @@ La struttura del manuale copre le competenze tecnico-professionali del **disaste
 
 ## Piano dell'opera {#piano-dell-opera}
 
-L'opera è organizzata in parti tematiche. I capitoli contrassegnati come <span class="badge-prep">in preparazione</span> sono in lavorazione e vengono pubblicati uno alla volta, ciascuno solo quando è completo e verificato — coerentemente con il principio «meglio nulla che qualcosa di incompleto».
+L'opera è organizzata in quattordici parti tematiche più le appendici. Tutti i capitoli sono pubblicati e consultabili. Il manuale resta un'**opera viva**: viene mantenuto allineato all'evoluzione delle norme e ampliato nel tempo, sempre nel rispetto del principio «meglio nulla che qualcosa di incompleto».
 
 ### Parte I · Fondamenti
 
@@ -66,7 +66,7 @@ Il commentario del **decreto legislativo 2 gennaio 2018, n. 1** — il testo che
 ### Parte IV · La scienza del rischio
 
 - [Il modello del rischio: pericolosità, vulnerabilità, esposizione](/manuale/41-modello-del-rischio/) — con la catena dal dato all'allerta e i Centri di competenza
-- Riduzione del rischio di disastri e il Quadro di Sendai <span class="badge-prep">in preparazione</span>
+- [La riduzione del rischio di disastri e il Quadro di Sendai](/manuale/42-riduzione-rischio-sendai/) — dalla gestione dei disastri alla gestione del rischio, le quattro priorità e i sette target globali
 
 ### Parte V · L'ordinamento e il modello di intervento
 
@@ -79,7 +79,16 @@ Il commentario del **decreto legislativo 2 gennaio 2018, n. 1** — il testo che
 ### Parte VII · Il catalogo dei rischi
 
 - [Il catalogo dei rischi: la famiglia di rischi della protezione civile](/manuale/71-catalogo-dei-rischi/) — classificazione e mappa del catalogo
-- I singoli rischi (sismico, vulcanico, idrogeologico, meteo-idrologico, incendi, maremoto, sanitario, chimico-industriale, nucleare-radiologico, idrico) <span class="badge-prep">in preparazione</span>
+- [Il rischio sismico: il terremoto](/manuale/711-rischio-sismico/)
+- [Il rischio vulcanico](/manuale/712-rischio-vulcanico/)
+- [Il rischio idrogeologico e idraulico: frane e alluvioni](/manuale/713-rischio-idrogeologico/)
+- [Il rischio meteo-idrologico: temporali, vento, neve, calore](/manuale/714-rischio-meteo-idrologico/)
+- [Il rischio incendi boschivi e di interfaccia](/manuale/715-rischio-incendio/)
+- [Il rischio maremoto (tsunami)](/manuale/716-rischio-maremoto/)
+- [Il rischio sanitario: epidemie, pandemie e maxiemergenze](/manuale/717-rischio-sanitario/)
+- [Il rischio chimico-industriale (Seveso)](/manuale/718-rischio-industriale/)
+- [Il rischio nucleare e radiologico](/manuale/719-rischio-nucleare-radiologico/)
+- [Il rischio idrico: la siccità e la scarsità d'acqua](/manuale/720-rischio-idrico-siccita/)
 
 ### Parte VIII · Pianificazione di emergenza, scenari e tecnologie
 
@@ -96,7 +105,7 @@ Il commentario del **decreto legislativo 2 gennaio 2018, n. 1** — il testo che
 ### Parte XI · Il fattore umano: comunicazione, psicologia, inclusione e leadership
 
 - [Il fattore umano: comunicazione, psicologia e inclusione](/manuale/111-fattore-umano/) — comunicazione di crisi (ISO 22329), primo soccorso psicologico, inclusione delle persone con disabilità
-- *Team building* e leadership nelle emergenze <span class="badge-prep">in preparazione</span>
+- [Team building e leadership nelle emergenze](/manuale/112-leadership-team-building/) — comando e controllo (ISO 22320), i principi dell'organizzazione, la leadership sotto stress, briefing e debriefing
 
 ### Parte XII · La dimensione internazionale e gli standard
 
@@ -112,7 +121,7 @@ Il commentario del **decreto legislativo 2 gennaio 2018, n. 1** — il testo che
 
 ### Appendici
 
-Glossario · Quadro normativo essenziale · Standard tecnici (ISO, UNI) · Numeri utili · Cronologia degli eventi · Bibliografia e fonti · Indice analitico. <span class="badge-prep">in preparazione</span>
+- [Appendici: glossario, norme, standard, numeri, cronologia](/manuale/150-appendici/) — glossario essenziale, quadro normativo, standard tecnici (ISO, UNI), numeri utili, cronologia degli eventi, bibliografia e indice per argomenti
 
 ---
 
