@@ -28,7 +28,11 @@ def _get(url, expect_json=False, expect_image=False, accept=(200,)):
             code = r.getcode()
             ctype = r.headers.get("Content-Type", "")
             lastmod = r.headers.get("Last-Modified", "")
-            raw = r.read(200000)  # basta un assaggio
+            # Quando serve il JSON va letto INTERO: il sample da 200 KB
+            # troncava la risposta delle osservazioni ItaliaMeteo (>200 KB)
+            # producendo il falso positivo "JSON non valido / Unterminated
+            # string" (issue #567, 10/06/2026). Cap difensivo a 20 MB.
+            raw = r.read(20_000_000) if expect_json else r.read(200000)
             if code not in accept:
                 return False, f"HTTP {code}", lastmod, None
             if expect_image and not ctype.startswith("image"):
