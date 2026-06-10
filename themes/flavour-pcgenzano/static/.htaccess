@@ -138,8 +138,14 @@ RedirectMatch 410 ^/areefiltrate\.html$
   # - form-action 'self': solo form interni (ricerca, contatti)
   # - base-uri 'self': anti-XSS via tag <base>
   # - object-src 'none': niente Flash/plugin obsoleti
-  # - upgrade-insecure-requests: forza HTTPS sui rare http:// residui
-  Header always set Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; img-src 'self' data: blob: https:; font-src 'self' data: https://cdn.jsdelivr.net; connect-src 'self' https://raw.githubusercontent.com https://api.github.com https://*.openstreetmap.org https://*.tile.openstreetmap.org https://webservices.ingv.it https://*.ingv.it https://radar-api.protezionecivile.it https://*.protezionecivile.it https://api.open-meteo.com https://marine-api.open-meteo.com https://air-quality-api.open-meteo.com https://archive-api.open-meteo.com https://*.arpalazio.gov.it https://eccharts.ecmwf.int https://rapidmapping.emergency.copernicus.eu https://maps.mistralportal.it https://meteohub.agenziaitaliameteo.it https://gc.zgo.at https://apicuollo.goatcounter.com; frame-src https://embed.windy.com https://www.windy.com https://*.ingv.it https://terremoti.ingv.it https://www.youtube.com https://www.youtube-nocookie.com https://*.protezionecivile.gov.it https://*.regione.lazio.it https://mappe.protezionecivile.gov.it; frame-ancestors 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests"
+  # NOTA (10/06/2026): rimossa "upgrade-insecure-requests" dal Report-Only.
+  # In modalità report-only il browser la IGNORA e logga un errore in
+  # console su OGNI pagina (Lighthouse Best Practices 89/100 site-wide).
+  # Il sito è già full-HTTPS (301 + HSTS, zero mixed content): la direttiva
+  # va reintrodotta SOLO quando la policy sarà promossa a enforcing
+  # (Content-Security-Policy senza -Report-Only), dopo uno smoke test
+  # Playwright del cruscotto e dei widget click-to-load.
+  Header always set Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; img-src 'self' data: blob: https:; font-src 'self' data: https://cdn.jsdelivr.net; connect-src 'self' https://raw.githubusercontent.com https://api.github.com https://*.openstreetmap.org https://*.tile.openstreetmap.org https://webservices.ingv.it https://*.ingv.it https://radar-api.protezionecivile.it https://*.protezionecivile.it https://api.open-meteo.com https://marine-api.open-meteo.com https://air-quality-api.open-meteo.com https://archive-api.open-meteo.com https://*.arpalazio.gov.it https://eccharts.ecmwf.int https://rapidmapping.emergency.copernicus.eu https://maps.mistralportal.it https://meteohub.agenziaitaliameteo.it https://gc.zgo.at https://apicuollo.goatcounter.com; frame-src https://embed.windy.com https://www.windy.com https://*.ingv.it https://terremoti.ingv.it https://www.youtube.com https://www.youtube-nocookie.com https://*.protezionecivile.gov.it https://*.regione.lazio.it https://mappe.protezionecivile.gov.it; frame-ancestors 'self'; form-action 'self'; base-uri 'self'; object-src 'none'"
 </IfModule>
 
 # Cache — richiesta utente (06/06/2026): "ogni modifica online subito".

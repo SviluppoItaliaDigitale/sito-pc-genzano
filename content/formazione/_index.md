@@ -126,3 +126,5 @@ Tutti gli articoli su formazione e scuole sono filtrabili nell'[archivio delle c
 - [Diventa volontario](/diventa-volontario/) — come entrare nel Gruppo
 
 <!-- cache-bust: 2026-05-29 forza re-upload FTP dopo aggiunta voce di menu globale "Conoscere la Protezione Civile" -->
+
+<!-- cache-bust: 2026-06-10 forza re-upload FTP per loghi footer WebP + cookie banner early-paint -->

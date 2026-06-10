@@ -134,3 +134,5 @@ Scegli la situazione più vicina a quella che stai vivendo. Troverai indicazioni
 - [Allerte meteo](/allerte-meteo/) — stato di allerta in corso
 - [Piano familiare](/piano-familiare/) — preparare il piano di emergenza in famiglia
 
+
+<!-- cache-bust: 2026-06-10 forza re-upload FTP per loghi footer WebP + cookie banner early-paint -->

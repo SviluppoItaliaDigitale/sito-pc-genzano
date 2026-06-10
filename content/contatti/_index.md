@@ -117,3 +117,5 @@ Segui i canali ufficiali per aggiornamenti, allerte e comunicazioni del Gruppo.
 - [Cosa fare adesso](/cosa-fare-adesso/) — azioni immediate per il cittadino
 - [Diventa volontario](/diventa-volontario/) — iscrizione, requisiti e formazione
 - [Mappa del sito](/mappa-sito/) — tutte le sezioni del sito
+
+<!-- cache-bust: 2026-06-10 forza re-upload FTP per loghi footer WebP + cookie banner early-paint -->

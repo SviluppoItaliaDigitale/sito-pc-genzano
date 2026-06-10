@@ -86,7 +86,12 @@
             <div class="row g-0">
               <div class="col-12 col-md-4">
                 <div class="notizia-img-wrapper">
-                  {{ with .Params.image }}<img src="{{ . | relURL }}" alt="{{ with $.Params.image_alt }}{{ . }}{{ else }}{{ $.Title }}{{ end }}" loading="lazy">
+                  {{- /* Cover decorativa nella card: il titolo è già nel link h3
+                        adiacente (pattern card W3C WAI). Con alt parlante ogni
+                        screen reader sentirebbe il titolo due volte; in più il
+                        vecchio $.Params.image_alt puntava alla pagina archivio,
+                        non all'articolo: 172 card con lo stesso alt. */ -}}
+                  {{ with .Params.image }}<img src="{{ . | relURL }}" alt="" aria-hidden="true" loading="lazy">
                   {{ else }}<img src="{{ "images/notizia-default.svg" | relURL }}" alt="" aria-hidden="true" loading="lazy">{{ end }}
                 </div>
               </div>
