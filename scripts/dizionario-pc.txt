@@ -345,3 +345,11 @@ place
 dirty
 bomb
 for
+
+# Aggiunte dossier 38-43 (2026-06-10)
+accelerometrica
+ondametriche
+radome
+risuccedere
+autorganizzazione
+genzanesi
