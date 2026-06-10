@@ -78,7 +78,8 @@ Il **decreto legislativo 9 aprile 2008, n. 81** applicato al volontariato di pro
 
 ### Parte VII · Il catalogo dei rischi
 
-Un capitolo per ogni famiglia di rischio: sismico, vulcanico, idrogeologico, meteo-idrologico, incendi, maremoto, sanitario, chimico-industriale, nucleare-radiologico, idrico, rischi emergenti. <span class="badge-prep">in preparazione</span>
+- [Il catalogo dei rischi: la famiglia di rischi della protezione civile](/manuale/71-catalogo-dei-rischi/) — classificazione e mappa del catalogo
+- I singoli rischi (sismico, vulcanico, idrogeologico, meteo-idrologico, incendi, maremoto, sanitario, chimico-industriale, nucleare-radiologico, idrico) <span class="badge-prep">in preparazione</span>
 
 ### Parte VIII · Pianificazione di emergenza, scenari e tecnologie
 
@@ -98,7 +99,7 @@ Comunicazione del rischio e gestione della disinformazione; sociologia e cultura
 
 ### Parte XII · La dimensione internazionale e gli standard
 
-Il Meccanismo unionale di protezione civile, rescEU e il Centro di coordinamento europeo; i moduli internazionali; la dottrina FEMA a confronto con il sistema italiano; le norme tecniche ISO e UNI della gestione delle emergenze e del disaster manager. <span class="badge-prep">in preparazione</span>
+- [Il Meccanismo unionale, rescEU e il Quadro di Sendai](/manuale/121-dimensione-internazionale/) — la rete europea e mondiale e gli standard ISO/UNI
 
 ### Parte XIII · Diritto, responsabilità ed etica
 
@@ -106,7 +107,7 @@ Aspetti legali connessi ai livelli di responsabilità; elementi di diritto ammin
 
 ### Parte XIV · Il territorio: Genzano di Roma e i Castelli Romani
 
-Il profilo di rischio del territorio, il vulcanismo dei Colli Albani e l'organizzazione locale di protezione civile. <span class="badge-prep">in preparazione</span>
+- [Genzano e i Castelli Romani: il Vulcano Laziale](/manuale/141-territorio-vulcano-laziale/) — il distretto vulcanico, i laghi-cratere, la quiescenza e il monitoraggio INGV, il profilo di rischio locale
 
 ### Appendici
 
