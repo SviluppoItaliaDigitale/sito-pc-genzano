@@ -105,3 +105,9 @@ Quarantacinque anni dopo, Vermicino è memoria collettiva. Per chi fa volontaria
 - [Cos'è la protezione civile in Italia: dall'Irpinia a Vermicino, la nascita di un sistema](/comunicazioni/2026-04-08-cosa-e-protezione-civile-italia-irpinia-vermicino-nascita/)
 - [Friuli 1976, cinquant'anni dopo: nascita della protezione civile italiana](/comunicazioni/2026-05-06-friuli-1976-cinquant-anni-protezione-civile/)
 - [Il supporto psicologico nelle emergenze](/comunicazioni/2026-10-10-psicologi-emergenza-trauma/)
+
+## Video di approfondimento
+
+Per capire la dinamica tecnica dell'incidente nel pozzo artesiano, la testata divulgativa **Geopop** ha realizzato una ricostruzione delle cause geologiche e meccaniche della tragedia.
+
+- [Geopop — Vermicino: la tragedia di Alfredino Rampi e l'incidente nel pozzo artesiano](https://youtu.be/-UTTwR_UvSg) (video, fonte divulgativa)
