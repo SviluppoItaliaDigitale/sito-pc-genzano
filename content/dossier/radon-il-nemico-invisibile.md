@@ -29,7 +29,7 @@ All'aperto si disperde ed è innocuo. Il problema nasce **al chiuso**: il gas ri
 Le indagini nazionali collocano il **Lazio tra le regioni con le concentrazioni medie più alte d'Italia**, proprio per la sua geologia vulcanica. Il radon non è un'emergenza che scatta: è un rischio silenzioso che abita con noi — finché non lo si misura.
 {{< /dossier-scena >}}
 
-{{< dossier-dati id="numeri" image="/images/dossier/vulcano-gas.webp" alt="Gas e zolfo a Tor Caldara" >}}
+{{< dossier-dati id="numeri" image="/images/dossier/vulcano-albano.webp" alt="Il Lago Albano dentro il suo cratere vulcanico" >}}
 {{< dossier-dato to="300" unita=" Bq/m³" label="Il **livello di riferimento** fissato dalla legge italiana (d.lgs. 101/2020) per abitazioni e luoghi di lavoro: sopra, bisogna intervenire" >}}
 {{< dossier-dato to="200" unita=" Bq/m³" label="Il livello per le **nuove costruzioni**: chi progetta oggi deve costruire case a prova di radon" >}}
 {{< dossier-dato to="2032" label="L'orizzonte del **Piano nazionale d'azione per il radon** (2023-2032), che impone alle Regioni di individuare le aree prioritarie" >}}

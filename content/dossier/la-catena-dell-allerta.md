@@ -39,7 +39,7 @@ Prevedere non vuol dire indovinare: vuol dire stimare, con metodo scientifico, *
 {{< dossier-dato to="24" unita=" h" label="L'allerta guarda di norma alle **24 ore** successive: il tempo che serve a Comuni e cittadini per prepararsi" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-dati id="colori" image="/images/dossier/temporali-fulmini.webp" alt="Fulmini durante un temporale notturno, sfondo della scheda sui codici colore dell'allerta" >}}
+{{< dossier-dati id="colori" image="/images/dossier/allertamento-codici-colore.webp" alt="Scala dei quattro colori dell'allerta meteo: quattro bande verticali, verde, giallo, arancione e rosso" >}}
 {{< dossier-dato to="4" unita=" colori" label="L'allerta si esprime in **quattro livelli di colore**, dal meno al più grave" >}}
 {{< dossier-dato to="1" unita=" · gialla" label="**Gialla**: criticità ordinaria. Possibili fenomeni localizzati: temporali, allagamenti puntuali, piccole frane" >}}
 {{< dossier-dato to="2" unita=" · arancione" label="**Arancione**: criticità moderata. Fenomeni diffusi e intensi, con possibili danni. Massima attenzione" >}}
@@ -64,7 +64,7 @@ Prevedere non vuol dire indovinare: vuol dire stimare, con metodo scientifico, *
 {{< dossier-dato to="9" label="Nel COC le **funzioni di supporto** (Metodo Augustus) si mettono in moto: volontariato, sanità, logistica, viabilità, telecomunicazioni" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-dati id="it-alert" image="/images/dossier/temporali-fulmini.webp" alt="Fulmini durante un temporale notturno" >}}
+{{< dossier-dati id="it-alert" image="/images/dossier/allertamento-eu-alert.webp" alt="Mappa politica dell'Europa con i confini dei Paesi, su sfondo azzurro" >}}
 {{< dossier-dato to="2023" label="Per le emergenze **gravi e imminenti** è arrivato **IT-alert**: un messaggio che suona su tutti i telefoni nell'area colpita, senza bisogno di iscriversi" >}}
 {{< dossier-dato to="1" unita=" canale" label="IT-alert si aggiunge ai canali ufficiali (sito, social, radio, altoparlanti): non li sostituisce, li rinforza nei momenti critici" >}}
 {{< dossier-dato to="0" unita="" label="Come funziona nel dettaglio te lo raccontiamo nel dossier «Il messaggio che salva»" >}}

@@ -22,13 +22,13 @@ sezioni:
 
 {{< dossier-hero id="inizio" image="/images/dossier/nucleare-chernobyl-nsc.webp" alt="L'enorme arco metallico argentato del New Safe Confinement che copre il reattore 4 di Chernobyl, visto dal piazzale della centrale" eyebrow="Dossier · Il rischio nucleare e radiologico" title="L'allarme che speriamo<br>di non sentire mai" sub="L'Italia non ha centrali nucleari in esercizio, ma il rischio radiologico non è zero: viene dalle centrali oltreconfine, dalle sorgenti smarrite, dai trasporti. È l'emergenza più rara di tutte — e una delle più pianificate." credito="Il New Safe Confinement sul reattore 4 di Chernobyl · foto Tim Porter, 2017 · CC BY-SA 4.0, via Wikimedia Commons" >}}
 
-{{< dossier-scena id="invisibile" image="/images/dossier/nucleare-krsko.webp" alt="La centrale nucleare di Krško, in Slovenia, vista da lontano oltre i campi coltivati: il contenimento cilindrico e i tralicci dell'alta tensione" align="right" kicker="Il nemico senza odore" title="Una radiazione<br>non si vede" credito="La centrale di Krško (Slovenia) · foto Andrej Jakobčič, 2019 · CC BY-SA 4.0, via Wikimedia Commons" >}}
+{{< dossier-scena id="invisibile" image="/images/dossier/nucleare-pripyat.webp" alt="La ruota panoramica arrugginita di Pripyat, abbandonata nella zona di esclusione di Chernobyl" align="right" kicker="Il nemico senza odore" title="Una radiazione<br>non si vede" credito="La ruota panoramica di Pripyat, zona di esclusione di Chernobyl · foto Adam Jones, 2016 · CC BY-SA 2.0, via Wikimedia Commons" >}}
 Le **radiazioni ionizzanti** non si vedono, non si sentono, non hanno odore: per accorgersene servono gli strumenti. È questo che rende il rischio radiologico diverso da tutti gli altri del catalogo — e spiega perché qui, più che altrove, **l'informazione è protezione**.
 
 Due parole bastano a capire tutto. L'**irraggiamento** è l'esposizione a una sorgente esterna: finisce quando ti allontani. La **contaminazione** è il materiale radioattivo che si deposita o entra nel corpo: ti segue finché non viene rimosso. Contro entrambi valgono tre difese semplici, le stesse dei manuali di radioprotezione: **tempo** (meno esposizione), **distanza** (più lontano), **schermo** (muri e riparo al chiuso).
 {{< /dossier-scena >}}
 
-{{< dossier-dati id="scala" image="/images/dossier/nucleare-chernobyl-nsc.webp" alt="L'arco del New Safe Confinement di Chernobyl" >}}
+{{< dossier-dati id="scala" image="/images/dossier/nucleare-krsko.webp" alt="La centrale di Krško oltre i campi coltivati" >}}
 {{< dossier-dato to="7" label="Il **livello massimo della scala INES**, che classifica gli eventi nucleari da 0 a 7: nella storia è stato raggiunto solo due volte" >}}
 {{< dossier-dato to="1986" label="**Chernobyl**, 26 aprile: il più grave incidente nucleare della storia. La nube radioattiva attraversò l'Europa, Italia compresa" >}}
 {{< dossier-dato to="2011" label="**Fukushima Daiichi**, 11 marzo: terremoto e maremoto innescano il secondo incidente di livello 7. La natura che scatena la tecnologia" >}}
@@ -69,7 +69,7 @@ Conoscile oggi, con calma, dalla [scheda operativa](/rischi-prevenzione/rischio-
 {{< /dossier-chiusura >}}
 
 {{< dossier-fonti >}}
-- **Immagini:** New Safe Confinement sul reattore 4 di Chernobyl (Tim Porter, 2017 · CC BY-SA 4.0) · esperti AIEA a Fukushima Daiichi (Greg Webb / IAEA Imagebank, 2013 · CC BY-SA 2.0) · centrale di Krško, Slovenia (Andrej Jakobčič, 2019 · CC BY-SA 4.0). Via Wikimedia Commons.
+- **Immagini:** New Safe Confinement sul reattore 4 di Chernobyl (Tim Porter, 2017 · CC BY-SA 4.0) · ruota panoramica di Pripyat (Adam Jones, 2016 · CC BY-SA 2.0) · esperti AIEA a Fukushima Daiichi (Greg Webb / IAEA Imagebank, 2013 · CC BY-SA 2.0) · centrale di Krško, Slovenia (Andrej Jakobčič, 2019 · CC BY-SA 4.0). Via Wikimedia Commons.
 - **Fonti:** [Dipartimento della Protezione Civile — rischio nucleare e radiologico](https://rischi.protezionecivile.gov.it/it/nucleare/) (piano nazionale, scenari, iodoprofilassi) · [ISIN — Ispettorato nazionale per la sicurezza nucleare e la radioprotezione](https://www.isinucleare.it/) · [Decreto legislativo 31 luglio 2020, n. 101 — Normattiva](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2020-07-31;101) (radioprotezione) · [IAEA — scala INES](https://www.iaea.org/resources/databases/international-nuclear-and-radiological-event-scale) · reti di monitoraggio della radioattività ambientale: ISPRA e ARPA.
 - **Sul nostro sito:** [Rischio nucleare e radiologico: cosa fare](/rischi-prevenzione/rischio-nucleare-radiologico/) · [Il capitolo del Manuale (7.9)](/manuale/719-rischio-nucleare-radiologico/) · [Dossier: Il messaggio che salva (IT-alert)](/dossier/il-messaggio-che-salva/) · [Dossier: Quando l'industria fa paura](/dossier/quando-l-industria-fa-paura/).
 - Dossier a cura del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**. Guida divulgativa: in emergenza chiama il **112**.

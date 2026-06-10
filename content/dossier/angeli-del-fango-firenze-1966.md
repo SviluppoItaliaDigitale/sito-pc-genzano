@@ -49,7 +49,7 @@ Insieme a lui furono colpiti gli **Uffizi**, le chiese, gli archivi. Per la prim
 {{< dossier-dato to="0" unita="" label="I manuali pronti per un'emergenza del genere: tutto fu inventato sul momento, con tecniche di asciugatura improvvisate e poi studiate in tutto il mondo" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-dati id="angeli" image="/images/dossier/firenze-1966-toscana.webp" alt="La città allagata dall'alluvione del 1966" >}}
+{{< dossier-dati id="angeli" image="/images/dossier/acqua-emilia-2023.webp" alt="La piana dell'Emilia-Romagna sommersa dall'alluvione del 2023, dove tornarono a spalare migliaia di volontari" >}}
 {{< dossier-dato to="1000" unita="+" label="I **giovani volontari** che accorsero a Firenze — oltre mille secondo le stime più caute, migliaia per le cronache: studenti arrivati da tutta Italia e dall'estero, senza che nessuno li chiamasse" >}}
 {{< dossier-dato to="1" unita=" nome" label="I giornali li ribattezzarono **«angeli del fango»**: catene umane nel fango oleoso per salvare libri, quadri, documenti" >}}
 {{< dossier-dato to="0" unita=" paga" label="Nessuno li pagava. Lavoravano per qualcosa che sentivano comune: la **cultura** e la **città** erano di tutti" >}}

@@ -29,7 +29,7 @@ Dentro questo mondo c'è di tutto: radioamatori che garantiscono le comunicazion
 E c'è una regola che il cittadino deve conoscere: il volontariato **non si attiva da solo**, né su chiamata diretta. Si muove dentro la catena di comando del [sistema](/dossier/la-catena-dell-allerta/) — su attivazione delle autorità. Per le emergenze c'è sempre e solo il **112**.
 {{< /dossier-scena >}}
 
-{{< dossier-dati id="numeri" image="/images/2026-05-20-squadra-genzano-corso-base-sala-operativa-lazio.webp" alt="Il gruppo dei volontari al corso base nella Sala Operativa regionale" >}}
+{{< dossier-dati id="numeri" image="/images/2026-05-31-infiorata-volontari-olly-scalinata.webp" alt="Quattro volontari del Gruppo, di spalle con la maglia di servizio, davanti alla scalinata dell'Infiorata di Genzano" >}}
 {{< dossier-dato to="1" unita=",3 mln+" label="I **volontari** iscritti nell'Elenco nazionale del Dipartimento: la più grande riserva civica organizzata d'Europa" >}}
 {{< dossier-dato to="5000" unita="+" label="Le **organizzazioni** di volontariato di protezione civile attive nel Paese, dai gruppi comunali alle grandi reti nazionali" >}}
 {{< dossier-dato to="1244" label="L'anno di nascita della **Misericordia di Firenze**: la radice del soccorso volontario italiano ha quasi otto secoli" >}}
@@ -43,7 +43,7 @@ La svolta moderna ha due date che questo sito racconta spesso: il **Friuli 1976*
 È la storia che abbiamo raccontato negli [Angeli del fango](/dossier/angeli-del-fango-firenze-1966/) e in [Dalle macerie, un sistema](/dossier/nascita-protezione-civile-italiana/).
 {{< /dossier-scena >}}
 
-{{< dossier-scena id="legge" image="/images/2026-05-20-squadra-genzano-corso-base-sala-operativa-lazio.webp" alt="I volontari del corso base nella Sala Operativa della Regione Lazio" align="top" kicker="Cosa dice la legge" title="Volontari,<br>non improvvisati" credito="Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma" >}}
+{{< dossier-scena id="legge" image="/images/2026-03-16-consegna-defibrillatori-regione-lazio.webp" alt="Volontari del Gruppo in divisa, con i defibrillatori appena consegnati, accanto alle autorità nella sala della Regione Lazio" align="top" kicker="Cosa dice la legge" title="Volontari,<br>non improvvisati" credito="Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma — consegna dei defibrillatori, Regione Lazio" >}}
 Il **Codice della protezione civile** dedica al volontariato un intero capo (articoli 31-42, [commentati nel nostro Manuale](/manuale/25-commentario-codice-capo-5/)). Tre pilastri:
 
 La **partecipazione**: il cittadino ha diritto di concorrere alla protezione civile, e lo Stato la promuove. L'**organizzazione**: si opera solo dentro organizzazioni iscritte all'**Elenco nazionale**, requisito per essere attivati e impiegati. Le **tutele**: per il volontario attivato valgono i benefici di legge — il **posto di lavoro conservato** e il rimborso al datore, la copertura assicurativa — e gli **standard di sicurezza** del decreto del 13 aprile 2011, che adatta al volontariato il Testo Unico (formazione, sorveglianza, dispositivi di protezione).

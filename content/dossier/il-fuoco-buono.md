@@ -21,7 +21,7 @@ sezioni:
 
 {{< dossier-hero id="inizio" image="/images/dossier/fuoco-prescritto.webp" alt="Fiamme basse e arancioni di un fuoco prescritto avanzano lentamente nel sottobosco, con il fumo che sale tra gli alberi rimasti intatti" eyebrow="Dossier · I rischi" title="Il fuoco<br>buono" sub="Accendere un incendio per impedirne uno: sembra una follia, è una scienza. Il fuoco prescritto è la tecnica che toglie al grande incendio il suo carburante — bruciandolo prima, poco, piano e nelle condizioni giuste." credito="Fuoco prescritto nella Cleveland National Forest, 2023 · foto Andrew Avitt / USDA Forest Service · pubblico dominio, via Wikimedia Commons" >}}
 
-{{< dossier-scena id="paradosso" image="/images/dossier/fuoco-prescritto.webp" alt="Il fronte basso del fuoco prescritto nel sottobosco, controllato dagli operatori" align="right" kicker="Il paradosso" title="Spegnere tutto<br>prepara il peggio" credito="Foto: Andrew Avitt / USDA Forest Service · pubblico dominio, via Wikimedia Commons" >}}
+{{< dossier-scena id="paradosso" image="/images/dossier/fuoco-prescritto-fronte.webp" alt="Il fronte di fiamma basso e ordinato del fuoco prescritto avanza tra i tronchi senza toccare le chiome" align="right" kicker="Il paradosso" title="Spegnere tutto<br>prepara il peggio" credito="Foto: Andrew Avitt / USDA Forest Service · pubblico dominio, via Wikimedia Commons" >}}
 Per un secolo la dottrina è stata una sola: **ogni fuoco va spento, subito**. Sembrava buon senso; era anche una trappola. Gli ecosistemi mediterranei convivono col fuoco da millenni — e quando il fuoco manca del tutto, il bosco **accumula combustibile**: sottobosco secco, rami morti, lettiera, anno dopo anno.
 
 Risultato: dove un tempo passava un incendio leggero che «puliva» e si fermava, oggi quel carico accumulato alimenta i **grandi incendi** — quelli che nessuna squadra può fermare, come abbiamo raccontato in [«Fuoco dallo spazio»](/dossier/fuoco-dallo-spazio/).
@@ -29,7 +29,7 @@ Risultato: dove un tempo passava un incendio leggero che «puliva» e si fermava
 Da questo paradosso nasce l'idea: se il combustibile in eccesso è il problema, **toglierlo col fuoco giusto** — poco, lento, programmato — è parte della soluzione. Non un incendio: il suo vaccino.
 {{< /dossier-scena >}}
 
-{{< dossier-dati id="numeri" image="/images/dossier/fuoco-prescritto.webp" alt="Fiamme controllate nel sottobosco" >}}
+{{< dossier-dati id="numeri" image="/images/dossier/fuoco-prescritto-notte.webp" alt="Le cataste bruciano controllate nella luce bassa del bosco" >}}
 {{< dossier-dato to="2000" label="La **legge quadro n. 353** sugli incendi boschivi: il telaio normativo italiano dentro cui le Regioni pianificano anche la prevenzione attiva" >}}
 {{< dossier-dato to="9" label="La **zona di allerta AIB** di Genzano (Castelli Romani): ogni estate il bollettino regionale ne valuta la pericolosità giorno per giorno" >}}
 {{< dossier-dato to="112" label="Il numero da chiamare se vedi fumo o fiamme: il fuoco buono lo accendono **solo i professionisti autorizzati** — sempre" >}}
@@ -49,7 +49,7 @@ In Italia il fuoco prescritto è arrivato con prudenza scientifica: **diverse Re
 Non è una bacchetta magica e non si applica ovunque: vicino alle case, su certi suoli o in certe stagioni il rischio non vale il beneficio. Ma il principio che porta è prezioso e vale anche per i Castelli: contro i grandi incendi **non basta spegnere meglio — bisogna avere meno da bruciare**. La pulizia dei terreni, le fasce attorno alle abitazioni, la gestione del verde sono la versione di tutti i giorni della stessa idea.
 {{< /dossier-scena >}}
 
-{{< dossier-scena id="regole" image="/images/dossier/fuoco-prescritto.webp" alt="Operazione di fuoco prescritto in sicurezza nella foresta nazionale" align="right" kicker="Attenzione" title="Il fai-da-te<br>è un reato (e un disastro)" credito="Foto: Andrew Avitt / USDA Forest Service · pubblico dominio, via Wikimedia Commons" >}}
+{{< dossier-scena id="regole" image="/images/dossier/fuoco-prescritto-fronte.webp" alt="Il fuoco prescritto resta basso e perimetrato: l'opposto di un abbruciamento fai-da-te sfuggito di mano" align="right" kicker="Attenzione" title="Il fai-da-te<br>è un reato (e un disastro)" credito="Foto: Andrew Avitt / USDA Forest Service · pubblico dominio, via Wikimedia Commons" >}}
 Una cosa il «fuoco buono» **non è**: un permesso di bruciare. L'abbruciamento fai-da-te di sterpaglie e residui è tra le prime cause degli incendi **colposi** in Italia — basta una raffica, e la "pulizia del campo" diventa un fronte di fiamma. Nei periodi a rischio è **vietato e sanzionato**; fuori da quei periodi va fatto solo secondo le regole comunali e regionali, con condizioni meteo sicure e mai senza presidio.
 
 Il fuoco prescritto è l'esatto contrario del fai-da-te: **squadre formate, piano scritto, autorizzazioni, meteo misurato**. Se vedi fumo o fiamme nel bosco non dare per scontato che «sapranno quello che fanno»: chiama il **112** e lascia che a decidere sia il sistema.

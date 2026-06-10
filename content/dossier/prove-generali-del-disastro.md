@@ -29,7 +29,7 @@ L'esercitazione serve esattamente a questo: trasformare il piano in **memoria de
 E c'è un secondo scopo, contro-intuitivo: **far emergere gli errori**. Un'esercitazione dove tutto fila liscio è un'esercitazione sprecata — il suo prodotto più prezioso è la lista di ciò che non ha funzionato.
 {{< /dossier-scena >}}
 
-{{< dossier-dati id="numeri" image="/images/dossier/esercitazioni-usar.webp" alt="Soccorritori al lavoro nello scenario di crollo simulato" >}}
+{{< dossier-dati id="numeri" image="/images/dossier/esercitazioni-usar-filippine.webp" alt="Istruttori e soccorritori al lavoro su un edificio simulato durante un addestramento congiunto nelle Filippine" >}}
 {{< dossier-dato to="2" unita=" famiglie" label="I tipi fondamentali: **per posti di comando** (si provano decisioni e comunicazioni) e **a scala reale** (si muovono uomini, mezzi e popolazione)" >}}
 {{< dossier-dato to="2024" label="L'esercitazione nazionale sui **Campi Flegrei**: prove di allontanamento con i cittadini veri, treni veri, tempi misurati" >}}
 {{< dossier-dato to="499" label="La **Rete Zamberletti**: la prova radio nazionale del volontariato a cui partecipiamo — quando cade tutto, la radio resta" >}}
@@ -64,7 +64,7 @@ Vale anche per te: il [piano familiare](/piano-familiare/) si **prova** — il p
 {{< /dossier-chiusura >}}
 
 {{< dossier-fonti >}}
-- **Immagini:** esercitazione su edificio simulato in crollo, Vibrant Response 2012 (Sgt. Terence Ewings / U.S. Army · pubblico dominio) · corso base in Sala Operativa regionale e squadra all'Infiorata (**foto del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**) · Macellum di Pozzuoli (Norbert Nagel · CC BY-SA 3.0). Via Wikimedia Commons.
+- **Immagini:** esercitazione su edificio simulato in crollo, Vibrant Response 2012 (Sgt. Terence Ewings / U.S. Army · pubblico dominio) · addestramento USAR congiunto nelle Filippine, Pacific Partnership 2025 (PO2 Jordan Jennings / U.S. Navy · pubblico dominio) · corso base in Sala Operativa regionale e squadra all'Infiorata (**foto del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**) · Macellum di Pozzuoli (Norbert Nagel · CC BY-SA 3.0). Via Wikimedia Commons.
 - **Fonti:** [Dipartimento della Protezione Civile — le esercitazioni](https://www.protezionecivile.gov.it/it/approfondimento/esercitazioni-di-protezione-civile/) (tipologie per posti di comando e a scala reale; esercitazioni nazionali Campi Flegrei) · [Meccanismo unionale di protezione civile — esercitazioni europee](https://civil-protection-humanitarian-aid.ec.europa.eu/what/civil-protection_en) · sulla prova radio nazionale del volontariato (Rete Zamberletti): le nostre [comunicazioni di servizio](/comunicazioni/).
 - **Sul nostro sito:** [Le quattro attività (Manuale, Parte VI)](/manuale/61-le-quattro-attivita/) · [Pianificazione e tecnologie (Manuale, Parte VIII)](/manuale/81-pianificazione-e-tecnologie/) · [Dossier: La terra che respira (Campi Flegrei)](/dossier/campi-flegrei-la-terra-che-respira/) · [Dossier: Radio che salvano](/dossier/radio-che-salvano/) · [Piano familiare](/piano-familiare/).
 - Dossier a cura del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**. Guida divulgativa: in emergenza chiama il **112**.
