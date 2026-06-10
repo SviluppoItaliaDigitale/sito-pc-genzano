@@ -2,6 +2,7 @@
 title: "I rischi di casa nostra"
 date: 2026-06-08T20:00:00+02:00
 type: "dossier"
+tema: "territorio"
 description: "Genzano di Roma e i Castelli Romani sorgono su un vulcano quiescente, tra due laghi-cratere. Il profilo dei rischi del nostro territorio: vulcanico, sismico, idrogeologico, incendi, meteo — e cosa fa il Gruppo."
 image: "/images/dossier/genzano-nemi-tramonto.webp"
 image_alt: "Genzano di Roma al tramonto sul bordo del cratere, con il Lago di Nemi sotto e il sole che cala dietro un pino"
@@ -51,7 +52,7 @@ Il Lago Albano, il più profondo, custodisce parte di questa storia: i geologi n
 
 {{< dossier-dati id="gas" image="/images/dossier/castelli-lago-albano.webp" alt="Il Lago Albano nel cratere dei Colli Albani" >}}
 {{< dossier-dato to="1989" label="Lo **sciame sismico** del 1989–1990 nei Colli Albani: oltre **tremila** piccole scosse, accompagnate da rilascio di gas dal sottosuolo" >}}
-{{< dossier-dato to="4" unita=" gas" label="I gas del distretto — anidride carbonica (CO₂), idrogeno solforato, e altri — che secondo la Protezione Civile sono il **pericolo naturale principale** dell'area" >}}
+{{< dossier-dato da="2000" label="Da oltre vent'anni l'INGV monitora i **gas del distretto** — anidride carbonica (CO₂) e idrogeno solforato — che per la Protezione Civile sono il **pericolo naturale principale** dell'area" >}}
 {{< dossier-dato to="1" unita=" regola" label="In presenza di emissioni di gas, la regola è semplice: non sostare in **avvallamenti, cantine o pozzi** dove la CO₂, più pesante dell'aria, può accumularsi" >}}
 {{< /dossier-dati >}}
 
@@ -61,7 +62,7 @@ Il Lago Albano, il più profondo, custodisce parte di questa storia: i geologi n
 {{< dossier-dato to="112" label="A pericolo cessato, segnala crepe e danni; per il pericolo immediato chiama sempre il **112**" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-dati id="idrogeologico" image="/images/dossier/vento-castelli-locale.webp" alt="Danni di un temporale in un paese dei Castelli" >}}
+{{< dossier-dati id="idrogeologico" image="/images/dossier/acqua-cratere.webp" alt="Il cratere di un lago vulcanico dei Castelli Romani visto dall'alto" >}}
 {{< dossier-dato to="2" unita=" minuti" label="Sui **versanti ripidi** del cratere l'acqua di un temporale violento scende in pochi minuti: strade che diventano torrenti, sottopassi che si allagano" >}}
 {{< dossier-dato to="1" unita=" no" label="La regola che salva la vita: **mai** entrare in un sottopasso allagato né attraversare un guado in piena, a piedi o in auto" >}}
 {{< dossier-dato to="0" unita="" label="Quando piove forte, evita gli scantinati e i piani bassi vicino agli impluvi: l'acqua sceglie sempre la via più breve verso il basso" >}}

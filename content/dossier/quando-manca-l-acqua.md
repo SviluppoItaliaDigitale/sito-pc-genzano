@@ -2,6 +2,7 @@
 title: "Quando manca l'acqua"
 date: 2026-06-07T09:11:00+02:00
 type: "dossier"
+tema: "rischi"
 description: "La siccità è il rischio più lento e più esteso: dal Po al Corno d'Africa, dal Lago Mead ai laghi dei Castelli Romani. Come si misura dallo spazio e come si previene."
 image: "/images/dossier/siccita-hero.webp"
 image_alt: "Immagine satellitare del lago Powell ridotto a sottili bracci d'acqua blu tra i canyon, con larghe fasce di roccia chiara lungo le rive prosciugate"
@@ -74,7 +75,7 @@ I satelliti gemelli **NASA GRACE** fanno qualcosa di sorprendente: **pesano l'ac
 {{< dossier-scena id="castelli" image="/images/dossier/siccita-castelli.webp" alt="Veduta del Lago Albano da Castel Gandolfo: il lago vulcanico azzurro circondato dai versanti boscosi dei Castelli Romani, con il Monte Cavo sullo sfondo" align="right" kicker="Qui, sotto Genzano" title="I laghi<br>di casa nostra" credito="Foto: Nicholas Gemini (Wikimedia Commons) · CC BY-SA 3.0" >}}
 Non serve andare lontano. I laghi vulcanici di **Albano** e **Nemi**, proprio sotto Genzano, si stanno **abbassando**. Tra il 1990 e il 2024 il Lago Albano ha perso circa **7,5 metri** di livello e il Lago di Nemi circa **2 metri**.
 
-A gennaio 2026 i due bacini hanno superato la soglia critica dei **7 metri** di abbassamento complessivo, con una perdita **stimata** di oltre **54 milioni di metri cubi** d'acqua (circa 41 ad Albano, 13 a Nemi, secondo il Comitato Tecnico-Scientifico). Sono i nostri laghi, ed è uno specchio locale di un fenomeno globale.
+A gennaio 2026 il Comitato Tecnico-Scientifico dei Castelli Romani ha dichiarato superata la **soglia critica**, con una perdita complessiva **stimata** in oltre **54 milioni di metri cubi** d'acqua (circa 41 ad Albano, 13 a Nemi). Sono i nostri laghi, ed è uno specchio locale di un fenomeno globale.
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="cause-locali" image="/images/dossier/siccita-cause-locali.webp" alt="Il borgo di Nemi arroccato sul bordo del cratere, immerso nei boschi dei Castelli Romani sopra il lago vulcanico" align="right" kicker="Le cause, senza esagerare" title="Non è solo<br>poca pioggia" credito="Foto: Deblu68 (Wikimedia Commons) · pubblico dominio" >}}
@@ -88,7 +89,7 @@ Genzano è all'interno: niente coste, niente cuneo salino. Non c'è da drammatiz
 {{< dossier-punto x="63" y="47" titolo="Corno d'Africa" >}}**Cinque** stagioni delle piogge fallite di fila (2020-2023): oltre 20 milioni di persone in insicurezza alimentare.{{< /dossier-punto >}}
 {{< dossier-punto x="18" y="30" titolo="Lago Mead · USA" >}}Il più grande invaso degli Stati Uniti al **minimo storico** nel 2022: circa il 27% della capacità.{{< /dossier-punto >}}
 {{< dossier-punto x="53" y="30" titolo="Sicilia · Italia" >}}Stato di **emergenza nazionale** nel maggio 2024: invasi a metà e oltre 2 milioni di persone con acqua razionata.{{< /dossier-punto >}}
-{{< dossier-punto x="54" y="27" titolo="Castelli Romani · casa nostra" >}}I laghi di Albano e Nemi più bassi di oltre **7 metri**: oltre 54 milioni di m³ d'acqua persi (stima).{{< /dossier-punto >}}
+{{< dossier-punto x="54" y="27" titolo="Castelli Romani · casa nostra" >}}Albano più basso di circa **7,5 metri** dal 1990, Nemi di circa 2: oltre 54 milioni di m³ d'acqua persi (stima).{{< /dossier-punto >}}
 {{< /dossier-hotspot >}}
 
 {{< dossier-chiusura id="fine" titolo="L'acqua si difende prima che manchi" cta1="Il rischio siccità: cosa sapere" cta1url="/conoscere/catalogo-dei-rischi/rischio-siccita/" cta2="Le allerte e il meteo di oggi" cta2url="/allerte-meteo/" >}}

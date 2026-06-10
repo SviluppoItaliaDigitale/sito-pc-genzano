@@ -2,6 +2,7 @@
 title: "Il vulcano che dorme sotto casa"
 date: 2026-06-06T10:00:00+02:00
 type: "dossier"
+tema: "territorio"
 description: "Dossier interattivo: i Castelli Romani sorgono su un vulcano quiescente. Dai laghi-cratere di Albano e Nemi ai grandi vulcani del mondo — Vesuvio, Campi Flegrei, Etna, Pinatubo — per capire cosa significa convivere con un gigante che dorme."
 image: "/images/dossier/vulcano-hero.webp"
 image_alt: "Genzano di Roma sull'orlo del cratere del Lago di Nemi, al tramonto"

@@ -2,6 +2,7 @@
 title: "Quando l'industria fa paura"
 date: 2026-06-07T09:14:00+02:00
 type: "dossier"
+tema: "rischi"
 description: "Seveso, Bhopal, Tianjin: i grandi incidenti industriali, le direttive europee nate da una tragedia e cosa fare in caso di nube tossica. Rischio chimico-industriale spiegato con onestà anche per i Castelli Romani."
 image: "/images/dossier/industriale-hero.webp"
 image_alt: "Una grande raffineria illuminata di notte, con file di impianti e luci che si riflettono nel buio"
@@ -26,13 +27,13 @@ sezioni:
 {{< dossier-scena id="seveso" image="/images/dossier/industriale-seveso-bosco-querce.webp" alt="Un parco verde con prato e alberi sotto un cielo sereno: il Bosco delle Querce, costruito sopra l'area bonificata di Seveso, con un pannello informativo lungo il sentiero" align="right" kicker="Seveso, 10 luglio 1976" title="La nube che<br>cambiò l'Europa" credito="Bosco delle Querce, Seveso · foto Massimiliano Mariani (DoppioM) · CC BY-SA 3.0" >}}
 Intorno alle **12:37** un reattore dello stabilimento **ICMESA** di Meda andò fuori controllo. Liberò una nube contenente **TCDD**, la diossina più tossica: una **stima** di 13-18 kg dispersi sulla Brianza.
 
-La contaminazione toccò una decina di comuni. Il territorio fu diviso in tre zone (A, B, R); **736 residenti** furono evacuati e circa **240 persone**, soprattutto bambini, svilupparono la cloracne. Non ci furono morti immediati, ma fu il più grave incidente industriale-ambientale d'Italia.
+La contaminazione toccò una decina di comuni. Il territorio fu diviso in tre zone (A, B, R); **736 residenti** furono evacuati e **193 persone**, in gran parte bambini, svilupparono la cloracne (casi accertati, ISS). Non ci furono morti immediati, ma fu il più grave incidente industriale-ambientale d'Italia.
 
 Oggi, sopra l'area più contaminata e bonificata, c'è questo parco: il **Bosco delle Querce**. La ferita si rimargina, ma servono decenni.
 {{< /dossier-scena >}}
 
 {{< dossier-dati id="numeri" >}}
-{{< dossier-dato to="971" label="Gli **stabilimenti a rischio di incidente rilevante** in Italia (DPC, dato attuale)" >}}
+{{< dossier-dato to="970" unita="~" label="Gli **stabilimenti a rischio di incidente rilevante** censiti in Italia (inventario ISPRA, 2025)" >}}
 {{< dossier-dato to="3" label="Gli **effetti possibili** di un incidente: incendio, esplosione, nube tossica" >}}
 {{< dossier-dato to="1982" label="L'anno della **prima direttiva Seveso** europea, nata dal disastro del 1976" >}}
 {{< dossier-dato to="112" label="Il **numero unico** da chiamare in emergenza: incendio, esplosione, nube" >}}

@@ -46,3 +46,56 @@
   .dossier-card:hover .dossier-card__media img { transform: none; }
 }
 html.a11y-pause-anim .dossier-card, html.a11y-pause-anim .dossier-card__media img { transition: none !important; }
+
+/* ============================================================
+   FILTRI PER TEMA v1.0 (10/06/2026) — pillole sopra la griglia.
+   Stesso pattern UX dei filtri dell'archivio /comunicazioni/,
+   ridisegnato per il tema scuro della landing dossier.
+   Contrasto: testo #e8edf5 su #1b2a41 = ~10:1 (WCAG AA ok);
+   attiva: #0b1526 su #ffbe2e = ~10.9:1.
+   ============================================================ */
+.dossier-filtri {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 0.75rem 0 0.35rem;
+}
+.dossier-pill {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: #1b2a41;
+  color: #e8edf5;
+  border-radius: 999px;
+  padding: 0.42rem 0.95rem;
+  font-size: 0.92rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.dossier-pill:hover { background: #24385a; transform: translateY(-1px); }
+.dossier-pill:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 2px; }
+.dossier-pill.is-active {
+  background: #ffbe2e;
+  border-color: #ffbe2e;
+  color: #0b1526;
+  font-weight: 700;
+}
+.dossier-pill__n {
+  display: inline-block;
+  margin-left: 0.35rem;
+  font-size: 0.8em;
+  opacity: 0.75;
+}
+.dossier-filtri-stato {
+  min-height: 1.2rem;
+  margin: 0 0 0.5rem;
+  font-size: 0.88rem;
+  color: rgba(232, 237, 245, 0.75);
+}
+@media (prefers-reduced-motion: reduce) {
+  .dossier-pill { transition: none; }
+  .dossier-pill:hover { transform: none; }
+}
+@media print {
+  .dossier-filtri, .dossier-filtri-stato { display: none; }
+}

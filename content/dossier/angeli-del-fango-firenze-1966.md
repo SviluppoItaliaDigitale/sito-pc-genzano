@@ -2,6 +2,7 @@
 title: "Gli angeli del fango"
 date: 2026-06-08T20:15:00+02:00
 type: "dossier"
+tema: "storia"
 description: "Firenze, 4 novembre 1966: l'Arno sommerge la città. Da tutto il mondo arrivano migliaia di giovani volontari — gli «angeli del fango» — a salvare libri e opere d'arte. La nascita del volontariato civico in Italia."
 image: "/images/dossier/firenze-1966-manoscritti.webp"
 image_alt: "Un giovane volontario lava nell'acqua un manoscritto recuperato dal fango dopo l'alluvione di Firenze del 1966"
@@ -20,7 +21,7 @@ sezioni:
   - { id: "fine", label: "Cosa resta" }
 ---
 
-{{< dossier-hero id="inizio" image="/images/dossier/firenze-1966-manoscritti.webp" alt="Un giovane volontario, in una foto in bianco e nero, immerge e lava in una vasca d'acqua un manoscritto incorniciato recuperato dal fango della Biblioteca Nazionale di Firenze" eyebrow="Firenze · 4 novembre 1966" title="Gli angeli<br>del fango" sub="Quando l'Arno sommerse Firenze, non arrivarono soldati né ordini dall'alto. Arrivarono migliaia di ragazzi, da tutta Italia e da tutto il mondo, a strappare libri e opere d'arte dal fango. Li chiamarono «angeli del fango». È lì che il volontariato italiano scoprì la sua forza." credito="Foto: UNESCO · Dominique Roger · CC BY-SA 3.0 IGO, via Wikimedia Commons" >}}
+{{< dossier-hero id="inizio" image="/images/dossier/firenze-1966-manoscritti.webp" alt="Un giovane volontario, in una foto in bianco e nero, immerge e lava in una vasca d'acqua un manoscritto incorniciato recuperato dal fango della Biblioteca Nazionale di Firenze" eyebrow="Firenze · 4 novembre 1966" title="Gli angeli<br>del fango" sub="Quando l'Arno sommerse Firenze, prima dei piani e degli ordini arrivarono migliaia di ragazzi, da tutta Italia e da tutto il mondo, a strappare libri e opere d'arte dal fango. Li chiamarono «angeli del fango». È lì che il volontariato italiano scoprì la sua forza." credito="Foto: UNESCO · Dominique Roger · CC BY-SA 3.0 IGO, via Wikimedia Commons" >}}
 
 {{< dossier-scena id="arno" image="/images/dossier/firenze-1966-toscana.webp" alt="Una piazza allagata durante l'alluvione del 1966: l'acqua fangosa sommerge le automobili davanti a una chiesa con cupola e campanile, una barca con persone sulla sinistra" align="left" kicker="4 novembre 1966" title="Quando l'Arno<br>sommerse tutto" credito="Foto: alluvione del novembre 1966 · pubblico dominio, via Wikimedia Commons" >}}
 All'alba del **4 novembre 1966**, dopo giorni di pioggia, l'**Arno** ruppe gli argini e invase Firenze. In alcune zone l'acqua salì fino a **quasi sei metri**; nel quartiere di Santa Croce, in via dei Neri, una targa ricorda il punto più alto raggiunto dalla piena: **4,92 metri**. L'acqua trascinava automobili, fango e **nafta** uscita dalle caldaie.
@@ -37,19 +38,19 @@ La città d'arte più famosa del mondo si svegliò ricoperta di melma. E si pose
 {{< /dossier-dati >}}
 
 {{< dossier-scena id="arte" image="/images/dossier/firenze-1966-cimabue.webp" alt="Il Crocifisso di Cimabue di Santa Croce: la grande croce dipinta su tavola, con ampie zone di colore perdute sul corpo del Cristo, segno del danno subito" align="bottom" kicker="Il simbolo della ferita" title="L'arte<br>ferita" credito="Foto: Sailko · pubblico dominio, via Wikimedia Commons · Museo dell'Opera di Santa Croce" >}}
-Firenze custodisce secoli di arte, e l'alluvione non risparmiò nulla. Il simbolo di quella perdita è il **Crocifisso di Cimabue**, capolavoro del Duecento conservato a **Santa Croce**: l'acqua e il fango ne cancellarono circa l'**ottanta per cento** della pittura. Restaurato con anni di lavoro, resta segnato per sempre.
+Firenze custodisce secoli di arte, e l'alluvione non risparmiò nulla. Il simbolo di quella perdita è il **Crocifisso di Cimabue**, capolavoro del Duecento conservato a **Santa Croce**: l'acqua e la nafta ne cancellarono **oltre il 60 per cento** della pittura, secondo l'Opera di Santa Croce. Restaurato con anni di lavoro, resta segnato per sempre.
 
 Insieme a lui furono colpiti gli **Uffizi**, le chiese, gli archivi. Per la prima volta il mondo capì che un disastro naturale può cancellare non solo vite, ma anche la **memoria** di un popolo.
 {{< /dossier-scena >}}
 
 {{< dossier-dati id="biblioteca" image="/images/dossier/firenze-1966-manoscritti.webp" alt="Un volontario lava un manoscritto dopo l'alluvione di Firenze" >}}
-{{< dossier-dato to="600" unita="mila t" label="Le tonnellate di **fango** che l'Arno lasciò sulla città ritirandosi il 6 novembre, soffocando strade, case e i magazzini dei libri" >}}
+{{< dossier-dato to="600" unita="mila t" label="Le tonnellate di **fango** che si stima l'Arno lasciò sulla città ritirandosi il 6 novembre, soffocando strade, case e i magazzini dei libri" >}}
 {{< dossier-dato to="2" unita=" nemici" label="Acqua e **nafta**: il gasolio delle caldaie si mescolò al fango, rendendo il recupero dei libri ancora più difficile" >}}
 {{< dossier-dato to="0" unita="" label="I manuali pronti per un'emergenza del genere: tutto fu inventato sul momento, con tecniche di asciugatura improvvisate e poi studiate in tutto il mondo" >}}
 {{< /dossier-dati >}}
 
 {{< dossier-dati id="angeli" image="/images/dossier/firenze-1966-toscana.webp" alt="La città allagata dall'alluvione del 1966" >}}
-{{< dossier-dato to="1000" unita="+" label="I **giovani volontari** che accorsero a Firenze: studenti, ragazze e ragazzi arrivati da tutta Italia e dall'estero, senza che nessuno li chiamasse" >}}
+{{< dossier-dato to="1000" unita="+" label="I **giovani volontari** che accorsero a Firenze — oltre mille secondo le stime più caute, migliaia per le cronache: studenti arrivati da tutta Italia e dall'estero, senza che nessuno li chiamasse" >}}
 {{< dossier-dato to="1" unita=" nome" label="I giornali li ribattezzarono **«angeli del fango»**: catene umane nel fango oleoso per salvare libri, quadri, documenti" >}}
 {{< dossier-dato to="0" unita=" paga" label="Nessuno li pagava. Lavoravano per qualcosa che sentivano comune: la **cultura** e la **città** erano di tutti" >}}
 {{< /dossier-dati >}}
@@ -78,7 +79,7 @@ Se anche tu vuoi essere un angelo del fango dei nostri tempi, comincia da qui: [
 
 {{< dossier-fonti >}}
 - **Immagini:** recupero di un manoscritto dopo l'alluvione di Firenze, 1966 (UNESCO — Dominique Roger, CC BY-SA 3.0 IGO) · piazza allagata durante l'alluvione del novembre 1966 (pubblico dominio) · Crocifisso di Cimabue, Santa Croce (Sailko, pubblico dominio) · alluvione in Emilia-Romagna, 2023 (Cesare Barillà, CC BY-SA 4.0). Via Wikimedia Commons.
-- **Fonti:** [Alluvione di Firenze del 1966 — Wikipedia](https://it.wikipedia.org/wiki/Alluvione_di_Firenze_del_4_novembre_1966) · [Biblioteca Nazionale Centrale di Firenze — L'alluvione del 1966](https://bncf.cultura.gov.it/biblioteca/lalluvione-del-1966/) · [CNR-IRPI — Le alluvioni del novembre 1966](https://polaris.irpi.cnr.it/novembre-1966/).
+- **Fonti:** [Alluvione di Firenze del 1966 — Wikipedia](https://it.wikipedia.org/wiki/Alluvione_di_Firenze_del_4_novembre_1966) · [Biblioteca Nazionale Centrale di Firenze — L'alluvione del 1966](https://bncf.cultura.gov.it/biblioteca/lalluvione-del-1966/) · [CNR-IRPI — Le alluvioni del novembre 1966](https://polaris.irpi.cnr.it/novembre-1966/) · [Opera di Santa Croce — Il Crocifisso di Cimabue](https://www.santacroceopera.it/) (entità del danno alla pittura).
 - **Sul nostro sito:** [Dalle macerie, un sistema (storia della PC)](/dossier/nascita-protezione-civile-italiana/) · [Troppa acqua (rischio idrogeologico)](/dossier/troppa-acqua/) · [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/) · [Diventa volontario](/diventa-volontario/).
 - Dossier a cura del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**. Guida divulgativa a scopo informativo. In emergenza chiama il **112**.
 {{< /dossier-fonti >}}

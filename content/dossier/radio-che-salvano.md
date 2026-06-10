@@ -2,6 +2,7 @@
 title: "Radio che salvano"
 date: 2026-06-06T12:00:00+02:00
 type: "dossier"
+tema: "sistema"
 description: "Dossier interattivo: dal Titanic alla Tenda Rossa di Nobile fino ai radioamatori di oggi, storie di onde radio che hanno strappato vite al silenzio. E perché la radio conta ancora in emergenza."
 image: "/images/dossier/radio-titanic.webp"
 image_alt: "Il transatlantico Titanic in navigazione nel 1912"
@@ -93,7 +94,7 @@ Per questo il nostro Gruppo cura le **[radiocomunicazioni](/conoscere/telecomuni
 Non sono casi isolati. Ogni generazione ha la sua storia di radio che strappa vite al silenzio:
 
 - **1899** — la nave-faro *East Goodwin*, speronata nella nebbia, chiede aiuto via radio: uno dei primissimi soccorsi senza fili.
-- **1912** — il piroscafo *Volturno* in fiamme nell'Atlantico: l'SOS richiama dieci navi, oltre **500 persone** salvate.
+- **1913** — il piroscafo *Volturno* in fiamme nell'Atlantico: l'SOS richiama undici navi, oltre **500 persone** salvate.
 - **1923** — nasce la parola «**Mayday**», la chiamata vocale di soccorso ancora oggi in uso.
 - **1976** — terremoto del *Friuli*: i radioamatori tengono i collegamenti fra i paesi isolati.
 - **1980** — terremoto in *Irpinia*: la mancanza di comunicazioni rallenta i soccorsi. Da lì l'Italia riforma la sua protezione civile.
@@ -110,7 +111,7 @@ Da un tasto morse sul Titanic a una radio nel ghiaccio artico, fino alle nostre 
 
 {{< dossier-fonti >}}
 - **Immagini:** RMS Titanic (foto F.G.O. Stuart) · sala Marconi del Titanic (foto Francis Browne) · RMS Carpathia · Umberto Nobile e il dirigibile Italia · Andrea Doria (foto Harry A. Trask) · concetto del sistema satellitare di ricerca e soccorso (NASA/NOAA) — tutte di **pubblico dominio** (Wikimedia Commons) · rompighiaccio Krasin oggi (foto A. Savin, Free Art License) · stazione radioamatoriale (foto Ptolusque, CC BY-SA 4.0).
-- **Contesto storico:** piroscafo Republic (1909); Titanic (1912) e Convenzione SOLAS (1914); dirigibile Italia di Umberto Nobile e soccorso del Krasin (1928); Andrea Doria (1956); sistema **Cospas-Sarsat** (dal 1982); impiego dei radioamatori nelle emergenze italiane (Protezione Civile, ARI — Associazione Radioamatori Italiani).
+- **Contesto storico:** piroscafo Republic (1909); Titanic (1912) e [Convenzione SOLAS](https://www.imo.org/en/About/Conventions/Pages/International-Convention-for-the-Safety-of-Life-at-Sea-(SOLAS),-1974.aspx) (1914, oggi gestita dall'IMO); piroscafo Volturno (1913); dirigibile Italia di Umberto Nobile e soccorso del Krasin (1928); Andrea Doria (1956); sistema [**Cospas-Sarsat**](https://www.cospas-sarsat.int/) (dal 1982); impiego dei radioamatori nelle emergenze italiane (Protezione Civile, [ARI — Associazione Radioamatori Italiani](https://www.ari.it/)).
 - **Sul nostro sito:** [Le telecomunicazioni in emergenza](/conoscere/telecomunicazioni-emergenza/) · [Diventa volontario](/diventa-volontario/) · [Chi siamo](/chi-siamo/).
 - Dossier a cura del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**. Guida divulgativa: in emergenza chiama il **112**.
 {{< /dossier-fonti >}}

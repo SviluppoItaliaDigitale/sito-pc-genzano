@@ -2,6 +2,7 @@
 title: "Caldo che uccide"
 date: 2026-06-06T11:00:00+02:00
 type: "dossier"
+tema: "rischi"
 description: "Dossier interattivo: le ondate di calore sono tra i rischi naturali più letali in Europa. Si vedono dallo spazio, colpiscono soprattutto gli anziani e si battono con pochi gesti."
 image: "/images/dossier/heat-hero.webp"
 image_alt: "Mappa della temperatura di terra e mare nel Mediterraneo durante un'ondata di calore: l'Italia tutta rossa, Roma a 45 gradi"
@@ -31,13 +32,13 @@ Sono gli stessi dati che alimentano i **bollettini del Ministero della Salute**,
 
 {{< dossier-dati id="numeri" >}}
 {{< dossier-dato to="40" unita=" °C" label="Le temperature che l'estate può superare **anche a Genzano**" >}}
-{{< dossier-dato to="70" unita=" mila +" label="Morti in più in Europa nell'estate **2003**, la più calda mai registrata" >}}
+{{< dossier-dato to="70" unita=" mila +" label="Morti in più in Europa nell'estate **2003**, la più calda mai registrata fino ad allora" >}}
 {{< dossier-dato to="65" unita=" anni" label="Over: la fascia **più a rischio** di caldo, soprattutto chi vive solo" >}}
 {{< dossier-dato to="3" label="Il livello **massimo** del bollettino caldo del Ministero della Salute" >}}
 {{< /dossier-dati >}}
 
 {{< dossier-scena id="y2003" image="/images/dossier/heat-2003.webp" alt="Mappa dell'Europa che mostra l'anomalia di temperatura nell'estate 2003: vaste aree di Francia e Italia in rosso scuro, fino a oltre 10 gradi sopra la media" align="right" kicker="L'estate che cambiò tutto" title="2003: il caldo<br>fa più paura del freddo" credito="NASA · dati MODIS (R. Stöckli, R. Simmon) · pubblico dominio" >}}
-L'estate del **2003** fu la più calda mai registrata in Europa: le stime parlano di **circa 70.000 morti in più**, soprattutto **anziani soli** in città. Con l'età il corpo percepisce meno la sete e suda di meno: si disidrata senza accorgersene. Su questa mappa il rosso scuro segna dove la temperatura superò di **oltre 10 gradi** la media.
+L'estate del **2003** fu la più calda registrata in Europa fino ad allora: le stime parlano di **circa 70.000 morti in più**, soprattutto **anziani soli** in città. Con l'età il corpo percepisce meno la sete e suda di meno: si disidrata senza accorgersene. Su questa mappa il rosso scuro segna dove la temperatura superò di **oltre 10 gradi** la media.
 
 Da quella tragedia nacquero i **piani caldo**: oggi il Ministero della Salute sorveglia le città giorno per giorno. Il caldo è diventato un rischio che si **prevede e si previene**.
 {{< /dossier-scena >}}
@@ -71,7 +72,7 @@ Genzano è diversa: è un comune collinare dei Castelli, a circa **435 metri**, 
 {{< dossier-scena id="piano-caldo" image="/images/dossier/heat-piano-caldo.webp" alt="Mappa dell'Europa colorata dall'arancione al rosso scuro che mostra l'anomalia della temperatura dell'aria in superficie nel 2022, con legenda da meno di 0 a oltre 2 gradi e loghi Unione Europea, Copernicus e Climate Change Service" align="top" kicker="Dal dato al bollettino" title="Prevedere<br>per proteggere" credito="© Unione Europea · Copernicus Climate Change Service · anomalia di temperatura 2022 · CC BY" >}}
 Dati come questi — qui l'anomalia di temperatura in Europa nel 2022 — alimentano i **bollettini caldo** del **Ministero della Salute**. Non è un bollettino: è la materia prima da cui nascono.
 
-Ogni estate, dal 25 maggio al 20 settembre, il Ministero pubblica un bollino del rischio per **27 città**, fra cui **Roma**, **Latina**, **Frosinone**, **Rieti** e **Viterbo**. Quattro livelli, da **0** (nessun rischio) a **3** (ondata di calore per più giorni).
+Ogni estate — per il 2026, dal 25 maggio al 20 settembre — il Ministero pubblica un bollino del rischio per **27 città**, fra cui **Roma**, **Latina**, **Frosinone**, **Rieti** e **Viterbo**. Quattro livelli, da **0** (nessun rischio) a **3** (ondata di calore per più giorni).
 
 Genzano non ha un bollino proprio: il bollino di Roma è un buon **riferimento d'area**, ma resta una stima cittadina, non una previsione puntuale per il paese. Per i consigli c'è il numero del Ministero **1500**; per le emergenze sempre il **112**.
 {{< /dossier-scena >}}

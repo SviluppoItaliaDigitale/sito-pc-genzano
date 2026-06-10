@@ -2,6 +2,7 @@
 title: "Quando la terra trema"
 date: 2026-06-06T13:00:00+02:00
 type: "dossier"
+tema: "rischi"
 description: "L'Italia è un paese sismico. Magnitudo ed effetti, i grandi terremoti della nostra storia da Messina 1908 a L'Aquila 2009, la sismicità dei Castelli Romani e cosa fare per proteggersi."
 image: "/images/dossier/sisma-hero.webp"
 image_alt: "Panorama del borgo di Genzano Vecchio, arroccato sulla collina con il campanile e le case affacciate sul versante"
@@ -62,13 +63,13 @@ I ritardi nei soccorsi fecero capire che serviva un sistema organizzato. Da quel
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="laquila-2009" image="/images/dossier/sisma-laquila-2009.webp" alt="Foto a colori: la facciata del Palazzo del Governo dell'Aquila dopo il terremoto del 2009, con il tetto crollato e macerie sopra il frontone su cui resta incisa la scritta «Palazzo del Governo»; a destra il braccio giallo di una gru" align="top" kicker="6 aprile 2009 · L'Aquila" title="Tre e trentadue<br>di notte" credito="Foto: Palazzo del Governo (Prefettura) dell'Aquila dopo il terremoto del 6 aprile 2009 · TheWiz83 · CC BY-SA 3.0, via Wikimedia Commons" >}}
-Il **6 aprile 2009**, alle 3:32 di notte, il terremoto dell'**Aquila** (magnitudo **Mw 6.1-6.3** secondo i diversi cataloghi) provocò **309 vittime** e circa 80.000 sfollati. Il centro storico, come la Prefettura nella foto, fu devastato.
+Il **6 aprile 2009**, alle 3:32 di notte, il terremoto dell'**Aquila** (magnitudo **Mw 6.1-6.3** secondo i diversi cataloghi) provocò **309 vittime** e circa 67.000 persone assistite fuori casa. Il centro storico, come la Prefettura nella foto, fu devastato.
 
 Ricordare questi eventi, con rispetto, serve a non considerare il terremoto un problema di altri. La prevenzione comincia dalla memoria.
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="centro-italia" image="/images/dossier/sisma-amatrice.webp" alt="Edifici crollati e cumuli di macerie ad Amatrice dopo il terremoto del Centro Italia del 2016, all'alba" align="top" kicker="2016 · Centro Italia" title="Una lunga<br>sequenza" credito="Amatrice 2016 · foto terremocentroitalia · CC BY 2.0" >}}
-Il **24 agosto 2016**, alle 3:36, una scossa di magnitudo **6.0** colpì **Amatrice** e Accumoli, causando quasi tutte le **circa 303 vittime** della sequenza. Il **30 ottobre 2016** seguì la scossa più forte, magnitudo **6.5**, vicino a Norcia.
+Il **24 agosto 2016**, alle 3:36, una scossa di magnitudo **6.0** colpì **Amatrice** e Accumoli, causando la quasi totalità delle **299 vittime** della sequenza. Il **30 ottobre 2016** seguì la scossa più forte, magnitudo **6.5**, vicino a Norcia.
 
 Le immagini di Amatrice sono diventate il simbolo di quanto un evento naturale possa cambiare per sempre una comunità. Ricordarle serve a non considerare il terremoto un problema lontano.
 {{< /dossier-scena >}}
@@ -80,7 +81,7 @@ Non vivremo i terremoti distruttivi di Messina o dell'Irpinia: sono eventi di un
 {{< /dossier-scena >}}
 
 {{< dossier-dati id="numeri" >}}
-{{< dossier-dato to="8101" label="I **comuni italiani** classificati in zona sismica: tutto il territorio" >}}
+{{< dossier-dato to="7896" label="I **comuni italiani**, tutti classificati in zona sismica: nessun territorio è a rischio zero (ISTAT 2025)" >}}
 {{< dossier-dato to="4" label="Le **zone sismiche** in cui è diviso il Paese" >}}
 {{< dossier-dato to="2" label="La **zona sismica** dei Castelli Romani (medio-alta)" >}}
 {{< dossier-dato da="1806" label="Gli **anni** dal terremoto storico che colpì Genzano" >}}

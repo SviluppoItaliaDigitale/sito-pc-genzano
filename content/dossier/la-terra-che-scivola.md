@@ -2,6 +2,7 @@
 title: "La terra che scivola"
 date: 2026-06-07T09:12:00+02:00
 type: "dossier"
+tema: "rischi"
 description: "Le frane, dal Vajont ai versanti dei Castelli Romani: come si muove la terra, i grandi casi del mondo, come si monitorano dallo spazio e cosa fare per difendersi."
 image: "/images/dossier/frane-hero.webp"
 image_alt: "Versante boscoso del Vajont con l'accumulo di detriti del Monte Toc; sulla destra la diga ancora integra tra le pareti della valle"
