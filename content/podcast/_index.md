@@ -42,3 +42,5 @@ Ogni episodio ha la **trascrizione completa** in pagina: per chi preferisce legg
 Oltre al podcast, sul sito trovi **infografiche, presentazioni e cover audio** per ogni tema di Protezione Civile. Tutti pubblicati con licenza CC BY-NC-SA 4.0, scaricabili per scuola, formazione e divulgazione.
 
 [**Vai a tutti i materiali pronti →**](/risorse-pronte/)
+
+<!-- cache-bust: 2026-06-10 forza re-upload FTP per loghi footer WebP + cookie banner early-paint -->

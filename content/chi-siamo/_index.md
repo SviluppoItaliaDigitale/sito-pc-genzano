@@ -245,3 +245,5 @@ Di seguito sono riportati alcuni eventi e calamità in cui il Gruppo ha partecip
 - [Formazione e scuole](/formazione/) — materiali didattici e percorsi formativi
 - [Piano di emergenza comunale](/piano-emergenza/) — ruoli, aree e procedure del Piano
 - [Metodo editoriale](/metodo-editoriale/) — come scriviamo, verifichiamo e aggiorniamo i contenuti
+
+<!-- cache-bust: 2026-06-10 forza re-upload FTP per loghi footer WebP + cookie banner early-paint -->

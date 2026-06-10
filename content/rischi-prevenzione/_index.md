@@ -114,3 +114,5 @@ Tutti gli articoli su rischi e prevenzione sono filtrabili nell'[archivio delle 
 - [Numeri utili](/numeri-utili/) — recapiti essenziali
 
 <!-- cache-bust: 2026-05-29 forza re-upload FTP dopo aggiunta voce di menu globale "Conoscere la Protezione Civile" -->
+
+<!-- cache-bust: 2026-06-10 forza re-upload FTP per loghi footer WebP + cookie banner early-paint -->

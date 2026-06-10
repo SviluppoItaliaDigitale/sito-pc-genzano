@@ -17,23 +17,27 @@
               Aderente al Coordinamento {{ .Site.Params.coordinamento }}
             </p>
             <div class="loghi-istituzionali d-flex align-items-center gap-3 flex-wrap mt-3" role="group" aria-label="Loghi istituzionali di appartenenza">
-              <img src="{{ "images/logo-snpc-volontariato.png" | relURL }}"
+              {{- /* Versioni footer ottimizzate (WebP 2x, ~7-17 KB l'una) dei PNG
+                     originali 400px che restano in static/images/ per stampa,
+                     deck e slide social. SNPC: 96x116 rispetta il ratio reale
+                     400x482 (con 96x112 Lighthouse segnalava aspect-ratio). */ -}}
+              <img src="{{ "images/logo-snpc-footer.webp" | relURL }}"
                    alt="Servizio Nazionale Protezione Civile — Volontariato"
-                   width="96" height="112"
+                   width="96" height="116" loading="lazy"
                    style="background:#fff; border-radius:6px; padding:3px;">
-              <img src="{{ "images/logo-pc-lazio.png" | relURL }}"
+              <img src="{{ "images/logo-pc-lazio-footer.webp" | relURL }}"
                    alt="Protezione Civile Regione Lazio"
-                   width="104" height="104"
+                   width="104" height="104" loading="lazy"
                    style="background:#fff; border-radius:50%; padding:3px;">
-              <img src="{{ "images/logo-fepivol.png" | relURL }}"
+              <img src="{{ "images/logo-fepivol-footer.webp" | relURL }}"
                    alt="Coordinamento FE.PI.VOL. — Federazione Pronto Intervento Volontariato ODV"
-                   width="104" height="104"
+                   width="104" height="104" loading="lazy"
                    style="background:#fff; border-radius:50%; padding:3px;">
             </div>
             <div class="esc-quality-label d-flex align-items-center gap-2 mt-3">
-              <img src="{{ "images/quality-label-esc.png" | relURL }}"
+              <img src="{{ "images/quality-label-esc-footer.webp" | relURL }}"
                    alt="Quality Label European Solidarity Corps"
-                   width="112" height="112"
+                   width="112" height="112" loading="lazy"
                    style="background:#fff; border-radius:50%; padding:3px; flex-shrink:0;">
               <span class="small" style="color:rgba(255,255,255,0.85); line-height:1.3;">
                 Quality Label<br>

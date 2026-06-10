@@ -245,3 +245,5 @@ Sì. Il volontariato è una scelta libera. Se in futuro non potrai più prosegui
 <a href="tel:+39069362600" class="btn btn-outline-primary btn-lg ms-2"><i class="bi bi-telephone me-2" aria-hidden="true"></i>Chiama la sede</a>
 </div>
 </div>
+
+<!-- cache-bust: 2026-06-10 forza re-upload FTP per loghi footer WebP + cookie banner early-paint -->

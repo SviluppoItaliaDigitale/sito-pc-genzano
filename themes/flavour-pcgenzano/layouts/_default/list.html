@@ -58,7 +58,10 @@
         <div class="row g-0">
           <div class="col-12 col-md-3">
             <div class="notizia-img-wrapper" style="height:100%;min-height:140px;">
-              {{ with .Params.image }}<img src="{{ . | relURL }}" alt="{{ $.Params.image_alt | default $.Title }}" loading="lazy">
+              {{- /* alt vuoto: cover decorativa, titolo già nel link adiacente
+                    (il vecchio $.Params.image_alt era il contesto della pagina
+                    lista, non dell'articolo). */ -}}
+              {{ with .Params.image }}<img src="{{ . | relURL }}" alt="" aria-hidden="true" loading="lazy">
               {{ else }}<img src="{{ "images/notizia-default.svg" | relURL }}" alt="" aria-hidden="true" loading="lazy">{{ end }}
             </div>
           </div>

@@ -7164,3 +7164,26 @@ html.a11y-pause-anim .cruscotto-home-card, html.a11y-pause-anim .cruscotto-home-
   .dash-sisma-tabella thead th { background: #fff; color: #000; border-bottom: 2px solid #000; }
   .dash-sisma-tabella tbody tr { cursor: default; }
 }
+
+/* ============================================================
+   PERFORMANCE ARCHIVIO v1.0 (10/06/2026)
+   L'archivio /comunicazioni/ rende TUTTE le card in una pagina
+   (DOM ~4.200 elementi) per i filtri client-side per badge/anno.
+   content-visibility: auto salta layout/paint delle card fuori
+   viewport (Lighthouse mobile segnava Performance fino a 55).
+   contain-intrinsic-size riserva l'altezza stimata della card
+   per non far saltare la scrollbar. Nessun impatto su filtri
+   (display:none continua a funzionare) ne' su Ctrl+F nei
+   browser moderni (content-visibility espone il testo nascosto
+   alla ricerca). Scoped SOLO all'archivio: homepage e liste
+   paginate hanno poche card e non ne hanno bisogno.
+   ============================================================ */
+.archivio-lista .card-notizia {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 180px;
+}
+@media (max-width: 767.98px) {
+  .archivio-lista .card-notizia {
+    contain-intrinsic-size: auto 420px; /* card impilata: foto sopra, testo sotto */
+  }
+}

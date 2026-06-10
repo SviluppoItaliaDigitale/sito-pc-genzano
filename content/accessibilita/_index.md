@@ -393,3 +393,5 @@ Ai sensi dell'art. 3-quinquies della Legge 9 gennaio 2004 n. 4, in caso di rispo
 - [Strumenti in tempo reale](/strumenti/) — servizi esterni e fonti di consultazione
 
 <!-- cache-bust: 2026-05-29 forza re-upload FTP dopo aggiunta voce di menu globale "Conoscere la Protezione Civile" -->
+
+<!-- cache-bust: 2026-06-10 forza re-upload FTP per loghi footer WebP + cookie banner early-paint -->

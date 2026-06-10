@@ -88,6 +88,11 @@
 </head>
 <body{{ if .IsHome }} class="home-page"{{ end }}>
   <a class="skip-to-content" href="#main-content">Vai al contenuto principale</a>
+  {{/* Cookie banner a INIZIO body (e non in fondo): è position:fixed, quindi
+       visivamente identico, ma viene dipinto nella prima ondata di rendering.
+       In fondo al DOM era l'elemento LCP con Render Delay ~6s su mobile
+       (Lighthouse 10/06/2026): il parser lo raggiungeva per ultimo. */}}
+  {{ partial "cookie-banner.html" . }}
   {{ partial "slim-header.html" . }}
   {{ partial "navbar.html" . }}
   {{/* Banner emergenza SITE-WIDE: quando data/emergenza.json ha attiva:true
@@ -108,7 +113,6 @@
   </main>
   {{ partial "utility-bar.html" . }}
   {{ partial "footer.html" . }}
-  {{ partial "cookie-banner.html" . }}
   {{ partial "language-selector.html" . }}
   {{ partial "ricerca-modal.html" . }}
   {{ partial "sos-112.html" . }}

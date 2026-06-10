@@ -14,7 +14,8 @@
         {{ range .Pages.ByDate.Reverse }}
         <a class="dossier-card" href="{{ .RelPermalink }}">
           <div class="dossier-card__media">
-            {{ with .Params.image }}<img src="{{ . | strings.TrimPrefix "/" | relURL }}" alt="{{ $.Title | default "Dossier interattivo" }}" loading="lazy">{{ end }}
+            {{- /* alt vuoto: la card-link ha già il titolo del dossier nel corpo */ -}}
+            {{ with .Params.image }}<img src="{{ . | strings.TrimPrefix "/" | relURL }}" alt="" aria-hidden="true" loading="lazy">{{ end }}
             <span class="dossier-card__tag"><i class="bi bi-collection-play" aria-hidden="true"></i> Dossier interattivo</span>
           </div>
           <div class="dossier-card__body">

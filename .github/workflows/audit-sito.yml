@@ -30,8 +30,9 @@ name: "🕵️ Audit settimanale sito"
 
 on:
   schedule:
-    # Ogni lunedi alle 09:00 UTC (dopo check-normativa-links delle 08:00,
-    # prima di check-links-sito delle 10:00)
+    # Ogni 6 ore (frequenza alzata da settimanale con PR #221).
+    # L'issue dei findings è UNICA e aggiornata in-place a ogni run
+    # (titolo stabile senza data): niente issue duplicate.
     - cron: '0 */6 * * *'
   workflow_dispatch:
 
@@ -178,7 +179,10 @@ jobs:
             err "hugo.toml: \`sede\` mancante."
           else
             ok "Sede istituzionale: \`$SEDE\`"
-            BAD_CAP=$(grep -rInE '\b000?[0-9]{2,4}\b.*Genzano' "$CONTENT_GLOB/" 2>/dev/null \
+            # (?<!#) esclude i colori hex: #003366 conteneva "0033xx" e
+            # flaggava ogni riga di stile inline che cita anche "Genzano"
+            # (falso positivo ricorrente fino al 10/06/2026).
+            BAD_CAP=$(grep -rInP '(?<!#)\b000?[0-9]{2,4}\b.*Genzano' "$CONTENT_GLOB/" 2>/dev/null \
               | grep -vE '00045' || true)
             if [ -n "$BAD_CAP" ]; then
               warn "Occorrenze di CAP diversi da 00045 accanto a 'Genzano':"
@@ -1372,7 +1376,14 @@ jobs:
             }
 
             const today = new Date().toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit', year: 'numeric' });
+            // Titolo STABILE senza data: l'issue dei findings è una sola e
+            // viene aggiornata in-place. Storia: col titolo datato e il cron
+            // ogni 6 ore si accumulavano 3-4 issue al giorno (11+ aperte al
+            // 10/06/2026), tutte con gli stessi findings.
+            const title = '[Automatico] Audit sito — findings aperti';
             const body = [
+              '_Ultimo controllo: ' + today + '. Il workflow gira ogni 6 ore e aggiorna questa issue in-place._',
+              '',
               report,
               '',
               '---',
@@ -1382,15 +1393,33 @@ jobs:
               '- ❌ = errore da correggere prima del prossimo deploy',
               '- ⚠️ = warning: valuta se è un falso positivo o se vale la pena sistemare',
               '',
-              'Dopo aver corretto, chiudi la issue citando il commit di fix.',
+              'Dopo aver corretto puoi chiudere la issue: il run successivo ne apre una nuova solo se restano findings.',
               '',
-              '*Issue generata automaticamente dal workflow `audit-sito.yml` (lun 09:00 UTC).*'
+              '*Issue generata automaticamente dal workflow `audit-sito.yml` (ogni 6 ore, issue unica aggiornata in-place).*'
             ].join('\n');
 
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'audit',
+              per_page: 100
+            });
+            const found = existing.data.find(function (i) { return i.title === title; });
+            if (found) {
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: found.number,
+                body: body
+              });
+              core.info('Issue #' + found.number + ' aggiornata in-place.');
+              return;
+            }
             await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: `[Automatico] Audit sito — ${today}`,
+              title: title,
               body: body,
               labels: ['audit', 'qualità-testi', 'manutenzione']
             });

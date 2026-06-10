@@ -129,3 +129,5 @@ Il Gruppo Comunale di Protezione Civile **non può essere attivato direttamente 
 - [Contatti e sede](/contatti/) — sede, telefono, email del Gruppo
 - [Assistente virtuale](/assistente/) — guida passo-passo all'autoprotezione
 - [Allerte meteo](/allerte-meteo/) — stato di allerta in corso
+
+<!-- cache-bust: 2026-06-10 forza re-upload FTP per loghi footer WebP + cookie banner early-paint -->
