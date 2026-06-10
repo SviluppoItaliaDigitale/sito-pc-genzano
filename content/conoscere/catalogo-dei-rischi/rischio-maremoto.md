@@ -66,6 +66,7 @@ Fonte: INGV — Centro Allerta Tsunami; ISPRA; DPC.
 
 ## Approfondimenti sul nostro sito
 
+- [Maremoto: cosa fare al mare](/rischi-prevenzione/maremoto/) — la pagina operativa con i comportamenti di autoprotezione.
 - [Tōhoku-Fukushima 2011: quando un maremoto innesca emergenze multiple](/comunicazioni/2026-03-11-tohoku-fukushima-2011-tsunami-emergenze-multiple/).
 - [Il rischio sismico in Italia](/conoscere/catalogo-dei-rischi/rischio-sismico/) — i terremoti, prima causa dei maremoti.
 - [Le quattro fasi della protezione civile](/conoscere/le-quattro-fasi/) — previsione, prevenzione, gestione, superamento.
