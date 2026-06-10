@@ -300,3 +300,48 @@ tsunamigenici
 controintuitiva
 iodoprofilassi
 frangigetto
+
+# Aggiunte sweep Manuale PC — capitoli 711-720, 42, 112, 150 (2026-06-10)
+# === Termini scientifici/tecnici (vulcanologia, idrogeologia, meteo, nucleare) ===
+lahar
+piroclasti
+zonazione
+geoingegneria
+duecentennale
+downburst
+becquerel
+sievert
+abbruciamenti
+# === Termini tecnici sanitari/emergenza ===
+maxiemergenza
+maxiemergenze
+# === Inglesi tecnici multi-disciplinari ===
+shelter
+governance
+early
+warning
+awareness
+command
+control
+resilience
+situational
+span
+incident
+broadcast
+cell
+continuity
+disaster
+debriefing
+# === Abbreviazioni e sigle minuscole ===
+lgs
+sez
+# === Aggettivi/sostantivi derivati validi ===
+perimetra
+perimetrate
+cronoprogramma
+unionale
+# === Inglesi-tecnici: sintagmi split (checker vede solo la singola parola) ===
+place
+dirty
+bomb
+for
