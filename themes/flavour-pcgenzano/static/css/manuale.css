@@ -1,0 +1,159 @@
+/* ============================================================================
+   MANUALE DI PROTEZIONE CIVILE — lettore accessibile (v1.0)
+   Caricato solo sulla sezione /manuale/ (condizionale in baseof.html).
+   Palette istituzionale: blu #003366, accento #ffbe2e. Tutto scoped .manuale-*.
+   ========================================================================== */
+
+:root { --man-blu:#003366; --man-blu-d:#001a33; --man-blu-2:#075985; --man-acc:#ffbe2e; }
+
+/* ── Copertina / frontespizio ──────────────────────────────────────────── */
+.manuale-cover{
+  position:relative; padding:3.2rem 0 2.6rem; margin-bottom:.5rem;
+  background:linear-gradient(135deg,var(--man-blu-d) 0%,var(--man-blu) 62%,#0a4a86 100%);
+  color:#fff; border-bottom:5px solid var(--man-acc); overflow:hidden;
+}
+.manuale-cover::before{ /* trama discreta tipo carta */
+  content:""; position:absolute; inset:0; pointer-events:none; opacity:.06;
+  background-image:repeating-linear-gradient(115deg,#fff 0 1px,transparent 1px 26px);
+}
+.manuale-cover .container{ position:relative; }
+.manuale-cover-eyebrow{ color:var(--man-acc); font-weight:700; letter-spacing:.06em;
+  text-transform:uppercase; font-size:.82rem; margin-bottom:.55rem; }
+.manuale-cover-title{ color:#fff; font-weight:800; line-height:1.1; font-size:clamp(1.9rem,4.4vw,3rem);
+  margin:0 0 .5rem; max-width:18ch; }
+.manuale-cover-sub{ color:#cfddec; font-size:clamp(1.05rem,2vw,1.32rem); max-width:48ch; margin:0 0 1.1rem; }
+.manuale-cover-meta{ display:flex; flex-wrap:wrap; gap:.4rem 1.4rem; margin-bottom:1.4rem;
+  font-size:.92rem; color:#bcd0e6; }
+.manuale-cover-meta i{ color:var(--man-acc); }
+.manuale-cover-actions{ display:flex; flex-wrap:wrap; gap:.7rem; }
+.manuale-cover .btn-light{ font-weight:700; color:var(--man-blu); }
+.manuale-cover .btn-outline-light{ font-weight:600; }
+
+/* ── Layout lettore: indice laterale + colonna testo ───────────────────── */
+.manuale-aside-desk{ position:sticky; top:1rem; max-height:calc(100vh - 2rem); overflow-y:auto;
+  padding-right:.4rem; }
+.manuale-aside-mobile{ background:#f4f7fb; border:1px solid #d8dee4; border-radius:8px;
+  padding:.4rem .7rem; margin-bottom:1.2rem; }
+.manuale-aside-mobile>summary{ font-weight:700; color:var(--man-blu); cursor:pointer; padding:.3rem 0;
+  list-style:none; }
+.manuale-aside-mobile>summary::-webkit-details-marker{ display:none; }
+
+/* indice (TOC) */
+.manuale-toc{ font-size:.93rem; }
+.manuale-toc-home{ display:block; font-weight:700; color:var(--man-blu); text-decoration:none;
+  padding:.45rem .6rem; border-radius:7px; background:#eaf1f9; border:1px solid #d8e2ee; }
+.manuale-toc-home.is-active{ background:var(--man-blu); color:#fff; }
+.manuale-toc-home:hover,.manuale-toc-home:focus{ background:#dce8f5; }
+.manuale-toc-home.is-active:hover{ background:var(--man-blu-2); color:#fff; }
+.manuale-toc-list{ list-style:none; margin:.7rem 0 0; padding:0; counter-reset:none; }
+.manuale-toc-parte{ font-size:.74rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase;
+  color:var(--man-blu-2); margin:1.05rem 0 .35rem; padding:0 .4rem .25rem;
+  border-bottom:1px solid #e2e9f1; }
+.manuale-toc-list>li.manuale-toc-parte:first-child{ margin-top:.2rem; }
+.manuale-toc-cap a{ display:flex; gap:.5rem; align-items:baseline; text-decoration:none;
+  color:#27384a; padding:.34rem .55rem; border-radius:6px; border-left:3px solid transparent;
+  line-height:1.3; }
+.manuale-toc-cap a:hover,.manuale-toc-cap a:focus{ background:#f1f5fa; color:var(--man-blu); }
+.manuale-toc-cap.is-active a{ background:#eaf1f9; color:var(--man-blu); font-weight:700;
+  border-left-color:var(--man-acc); }
+.manuale-toc-num{ flex:0 0 auto; font-weight:700; color:var(--man-blu-2); font-variant-numeric:tabular-nums;
+  font-size:.85em; min-width:1.6em; }
+.manuale-toc-cap.is-active .manuale-toc-num{ color:var(--man-blu); }
+
+/* ── Intestazione del capitolo ─────────────────────────────────────────── */
+.manuale-cap-header{ margin:.4rem 0 1.2rem; padding-bottom:1rem; border-bottom:2px solid #e7edf3; }
+.manuale-cap-parte{ font-size:.8rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase;
+  color:var(--man-blu-2); margin:0 0 .35rem; }
+.manuale-cap-titolo{ color:var(--man-blu); font-weight:800; line-height:1.15; margin:0; }
+.manuale-cap-num{ display:inline-block; background:var(--man-blu); color:#fff; font-size:.62em;
+  font-weight:700; padding:.12em .55em; border-radius:6px; vertical-align:.28em; margin-right:.55rem; }
+.manuale-cap-abstract{ font-size:1.08rem; color:#3a4a5b; line-height:1.55; margin:.85rem 0 0; max-width:62ch; }
+
+/* ── Corpo (eredita .article-body) ─────────────────────────────────────── */
+.manuale-body{ max-width:none; }
+.manuale-body h2{ scroll-margin-top:5rem; }
+
+/* Scheda commentario: un articolo del Codice sviscerato */
+.commento-articolo{ margin:2rem 0; border:1px solid #dce4ec; border-radius:10px; overflow:hidden;
+  box-shadow:0 2px 10px rgba(0,26,51,.05); }
+.commento-art-head{ background:linear-gradient(135deg,var(--man-blu) 0%,var(--man-blu-2) 100%);
+  color:#fff; padding:.7rem 1.1rem; }
+.commento-art-num{ font-weight:800; letter-spacing:.02em; }
+.commento-art-rubrica{ display:block; font-size:.95rem; font-weight:600; color:#dbe7f3; margin-top:.1rem; }
+.commento-art-deriva{ display:block; font-size:.78rem; color:#aac3dc; margin-top:.25rem; font-style:italic; }
+.commento-corpo{ padding:1rem 1.2rem 1.2rem; }
+.commento-testo{ background:#f6f8fb; border-left:4px solid var(--man-acc); border-radius:0 6px 6px 0;
+  padding:.85rem 1.1rem; margin:0 0 1.1rem; font-size:.97rem; line-height:1.6; color:#1f2b38; }
+.commento-testo-label{ display:block; font-size:.72rem; font-weight:700; text-transform:uppercase;
+  letter-spacing:.05em; color:var(--man-blu-2); margin-bottom:.4rem; }
+.commento-testo p{ margin:0 0 .55rem; }
+.commento-testo p:last-child{ margin-bottom:0; }
+.commento-spiega>h4{ color:var(--man-blu); font-size:1.02rem; font-weight:700; margin:1rem 0 .4rem; }
+.commento-spiega>h4:first-child{ margin-top:0; }
+.commento-rinvii{ margin-top:1rem; padding-top:.7rem; border-top:1px dashed #d6dee7; font-size:.9rem;
+  color:#48586a; }
+.commento-rinvii strong{ color:var(--man-blu); }
+
+/* Box "Fonti" di fine capitolo */
+.manuale-fonti{ margin-top:2.2rem; padding-top:1rem; border-top:2px solid #e7edf3; font-size:.92rem; }
+.manuale-fonti h2{ font-size:1.05rem !important; border:0 !important; padding:0 !important;
+  margin:0 0 .5rem !important; color:var(--man-blu); }
+.manuale-fonti ol,.manuale-fonti ul{ color:#3a4a5b; }
+.manuale-fonti li{ margin-bottom:.3rem; }
+
+/* Stato "in preparazione" nel piano dell'opera (frontespizio) */
+.manuale-front .stato-prep{ color:#7a879a; font-style:italic; }
+.manuale-front .badge-prep{ display:inline-block; font-size:.7rem; font-weight:700; text-transform:uppercase;
+  letter-spacing:.03em; color:#6b7785; background:#eef1f5; border:1px solid #dde3ea;
+  border-radius:20px; padding:.05rem .55rem; vertical-align:.1em; }
+
+/* ── Navigazione prec/succ ─────────────────────────────────────────────── */
+.manuale-prevnext{ display:flex; gap:1rem; margin:2.4rem 0 1rem; justify-content:space-between; }
+.manuale-prevnext-link{ flex:1 1 0; max-width:48%; display:flex; flex-direction:column; gap:.2rem;
+  text-decoration:none; border:1px solid #dce4ec; border-radius:9px; padding:.7rem .95rem;
+  background:#fff; transition:transform .15s,box-shadow .15s,border-color .15s; }
+.manuale-prevnext-link.next{ text-align:right; align-items:flex-end; margin-left:auto; }
+.manuale-prevnext-link:hover,.manuale-prevnext-link:focus{ transform:translateY(-2px);
+  box-shadow:0 6px 16px rgba(0,51,102,.1); border-color:var(--man-blu-2); }
+.manuale-prevnext-dir{ font-size:.78rem; font-weight:700; text-transform:uppercase; letter-spacing:.03em;
+  color:var(--man-blu-2); }
+.manuale-prevnext-tit{ color:var(--man-blu); font-weight:600; line-height:1.25; }
+
+@media (prefers-reduced-motion:reduce){
+  .manuale-prevnext-link{ transition:none; }
+}
+html.a11y-pause-anim .manuale-prevnext-link{ transition:none; }
+
+@media (max-width:991.98px){
+  .manuale-cover{ padding:2.2rem 0 1.8rem; }
+  .manuale-prevnext{ flex-direction:column; }
+  .manuale-prevnext-link,.manuale-prevnext-link.next{ max-width:100%; text-align:left; align-items:flex-start; }
+  .manuale-prevnext-link.next{ margin-left:0; }
+}
+
+/* ── Infobox accademici colorati (shortcode {{< box >}}) ───────────────── */
+.manuale-infobox{ margin:1.7rem 0; border:1px solid #dce4ec; border-left-width:5px; border-radius:9px;
+  background:#fff; overflow:hidden; box-shadow:0 1px 7px rgba(0,26,51,.05); }
+.manuale-infobox .infobox-head{ display:flex; align-items:center; gap:.5rem; font-weight:700;
+  font-size:.96rem; letter-spacing:.01em; padding:.55rem .95rem .5rem; }
+.manuale-infobox .infobox-head i{ font-size:1.1rem; }
+.manuale-infobox .infobox-body{ padding:.7rem .95rem .8rem; }
+.manuale-infobox .infobox-body>:first-child{ margin-top:0; }
+.manuale-infobox .infobox-body>:last-child{ margin-bottom:0; }
+.manuale-infobox .infobox-body p{ font-size:.98rem; line-height:1.6; }
+.box-def{ border-left-color:#003366; } .box-def .infobox-head{ color:#003366; background:#eef3f9; }
+.box-chiave{ border-left-color:#b45309; } .box-chiave .infobox-head{ color:#92400e; background:#fdf4e6; }
+.box-esempio{ border-left-color:#0e7490; } .box-esempio .infobox-head{ color:#0e7490; background:#e7f3f6; }
+.box-norma{ border-left-color:#075985; } .box-norma .infobox-head{ color:#075985; background:#eaf2f8; }
+.box-attenzione{ border-left-color:#c1121f; } .box-attenzione .infobox-head{ color:#a30f1a; background:#fdeced; }
+.box-approfondimento{ border-left-color:#15803d; } .box-approfondimento .infobox-head{ color:#15803d; background:#eaf6ee; }
+
+/* Citazione normativa in evidenza (blockquote nel corpo manuale) */
+.manuale-body blockquote{ position:relative; }
+.manuale-body blockquote::before{ content:"\201C"; position:absolute; top:-.3rem; left:.5rem;
+  font-family:Georgia,serif; font-size:2.4rem; color:#c7d6e6; line-height:1; }
+.manuale-body blockquote p{ padding-left:1.6rem; }
+
+@media print{
+  .manuale-aside,.manuale-prevnext,.manuale-cover-actions{ display:none !important; }
+}

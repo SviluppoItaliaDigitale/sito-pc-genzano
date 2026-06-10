@@ -1,0 +1,65 @@
+{{- /* Documento STANDALONE (nessun blocco {{ define }} → Hugo non applica baseof).
+       Concatena frontespizio + tutti i capitoli in ordine di lettura e li
+       impagina come libro con paged.js. È la fonte unica per il PDF scaricabile
+       (scripts/genera-manuale-pdf.py via headless Chrome).
+       Escluso dalle liste/nav (build.list: never), ma sempre renderizzato. */ -}}
+{{- $caps := sort (where .Site.RegularPages "Section" "manuale") "Weight" -}}
+{{- $front := .Site.GetPage "/manuale" -}}
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ $front.Params.sottotitolo | default $front.Title }} — Manuale di Protezione Civile</title>
+<link rel="stylesheet" href="{{ "css/manuale-print.css" | relURL }}">
+</head>
+<body class="manuale-print">
+
+{{/* ── Frontespizio ── */}}
+<section class="print-title-page">
+  <div class="print-title-eyebrow">Gruppo Comunale Volontari di Protezione Civile · Genzano di Roma</div>
+  <h1 class="print-title-main">{{ $front.Title }}</h1>
+  {{ with $front.Params.sottotitolo }}<p class="print-title-sub">{{ . }}</p>{{ end }}
+  <div class="print-title-rule"></div>
+  <p class="print-title-ed">{{ $front.Params.edizione | default "Edizione 2026" }}{{ with $front.Params.dataUltimaRevisione }} · aggiornato al {{ (time .) | time.Format ":date_long" }}{{ end }}</p>
+</section>
+
+{{/* ── Colophon / avvertenza ── */}}
+<section class="print-colophon">
+  <h2>Avvertenza</h2>
+  <p>Questo manuale è un'opera educativa curata dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. È redatto con metodo e apparato di fonti accademici, ma <strong>non</strong> costituisce dottrina ufficiale del Dipartimento della Protezione Civile né della Regione Lazio, e non sostituisce le norme e i provvedimenti delle autorità competenti. Ogni affermazione è ricondotta a fonti istituzionali verificabili, citate al termine di ciascun capitolo. In emergenza il riferimento resta sempre il numero unico <strong>112</strong>.</p>
+  <p><strong>Limiti dell'opera e segnalazione degli errori.</strong> Il manuale è redatto con la massima cura e con il costante riscontro delle fonti ufficiali. Nondimeno, in un'opera ampia e in continuo aggiornamento possono permanere imprecisioni, refusi o passaggi non più allineati a norme modificate nel frattempo: eventuali imperfezioni sono del tutto involontarie. In caso di difformità prevale sempre il testo ufficiale della fonte citata. Chi individua un errore è invitato a segnalarlo a segreteria@protezionecivilegenzano.it: ogni segnalazione viene verificata e, se fondata, corretta. Il Gruppo non risponde di decisioni assunte unicamente sulla base del manuale.</p>
+</section>
+
+{{/* ── Indice ── */}}
+<section class="print-toc">
+  <h2>Indice</h2>
+  {{ $curParte := "—" }}
+  <ol class="print-toc-list">
+  {{ range $caps }}
+    {{ $parte := .Params.parte | default "" }}
+    {{ if ne $parte $curParte }}{{ $curParte = $parte }}{{ with $parte }}<li class="print-toc-parte">{{ . }}</li>{{ end }}{{ end }}
+    <li class="print-toc-cap"><a href="#cap-{{ .File.ContentBaseName }}">{{ with .Params.capitolo }}<span class="print-toc-num">{{ . }}</span> {{ end }}{{ .Title }}</a></li>
+  {{ end }}
+  </ol>
+</section>
+
+{{/* ── Capitoli ── */}}
+{{ $curParte := "—" }}
+{{ range $caps }}
+  {{ $parte := .Params.parte | default "" }}
+  {{ if and (ne $parte $curParte) (ne $parte "") }}
+    {{ $curParte = $parte }}
+    <section class="print-parte-divider"><div class="print-parte-kicker">Parte</div><h1>{{ $parte }}</h1></section>
+  {{ end }}
+  <section class="print-cap" id="cap-{{ .File.ContentBaseName }}">
+    {{ with .Params.parte }}<p class="print-cap-parte">{{ . }}</p>{{ end }}
+    <h1 class="print-cap-title">{{ with .Params.capitolo }}<span class="print-cap-num">{{ . }} · </span>{{ end }}{{ .Title }}</h1>
+    {{ with .Params.description }}<p class="print-cap-abstract">{{ . }}</p>{{ end }}
+    <div class="print-cap-body">{{ .Content }}</div>
+  </section>
+{{ end }}
+
+<script src="{{ "vendor/pagedjs/paged.polyfill.min.js" | relURL }}"></script>
+</body>
+</html>

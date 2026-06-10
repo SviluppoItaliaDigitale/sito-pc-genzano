@@ -1,0 +1,63 @@
+name: Genera PDF del Manuale di Protezione Civile
+
+# Rigenera in automatico il PDF impaginato del Manuale (static/manuali/
+# manuale-protezione-civile.pdf) dalla STESSA fonte Hugo dei capitoli online,
+# ogni volta che cambia un capitolo, un layout o il CSS del manuale.
+# Coerente con CLAUDE.md § "Manuale di Protezione Civile — opera viva".
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/manuale/**'
+      - 'themes/flavour-pcgenzano/layouts/manuale/**'
+      - 'themes/flavour-pcgenzano/layouts/shortcodes/box.html'
+      - 'themes/flavour-pcgenzano/layouts/partials/manuale-toc.html'
+      - 'themes/flavour-pcgenzano/static/css/manuale-print.css'
+      - 'scripts/genera-manuale-pdf.py'
+      - '.github/workflows/genera-manuale-pdf.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: manuale-pdf
+  cancel-in-progress: true
+
+jobs:
+  pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Installa Hugo extended
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.154.5'
+          extended: true
+
+      - name: Dipendenze WeasyPrint (Pango/Cairo/gdk-pixbuf) + serif
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq \
+            libpango-1.0-0 libpangocairo-1.0-0 libpangoft2-1.0-0 \
+            libgdk-pixbuf-2.0-0 libcairo2 libffi-dev fonts-dejavu-core
+
+      - name: Installa WeasyPrint
+        run: pip install --quiet weasyprint
+
+      - name: Genera il PDF (Hugo + WeasyPrint, font Titillium dal repo)
+        run: python3 scripts/genera-manuale-pdf.py
+
+      - name: Commit del PDF se cambiato
+        run: |
+          if [ -n "$(git status --porcelain static/manuali/manuale-protezione-civile.pdf)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add static/manuali/manuale-protezione-civile.pdf
+            git commit -m "[skip-manuale-pdf] Rigenera PDF del Manuale di Protezione Civile"
+            git push
+          else
+            echo "PDF invariato: nessun commit."
+          fi

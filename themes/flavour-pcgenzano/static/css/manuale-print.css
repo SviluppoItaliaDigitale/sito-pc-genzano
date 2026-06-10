@@ -1,0 +1,120 @@
+/* ============================================================================
+   MANUALE DI PROTEZIONE CIVILE — foglio di stile per il PDF (paged.js)
+   Impaginazione "da libro": A4, testatine correnti, numeri di pagina,
+   frontespizio, pagine-divisore di Parte, corpo serif giustificato.
+   Renderizzato da scripts/genera-manuale-pdf.py via headless Chrome.
+   ========================================================================== */
+
+@page {
+  size: A4;
+  margin: 22mm 19mm 18mm 19mm;
+  @top-center  { content: string(captitle); font: italic 8.5pt Georgia, serif; color:#667; }
+  @bottom-center { content: counter(page); font: 9pt Georgia, serif; color:#445; }
+  @bottom-right { content: "Manuale di Protezione Civile"; font: 7.5pt Georgia, serif; color:#99a; }
+}
+@page :first { @top-center{content:none} @bottom-center{content:none} @bottom-right{content:none} }
+@page parte { @top-center{content:none} }
+
+html{ font-size:11pt; }
+body.manuale-print{
+  font-family:Georgia,"Times New Roman",serif; color:#1a1a1a; line-height:1.5;
+  text-align:justify; hyphens:auto; }
+.manuale-print h1,.manuale-print h2,.manuale-print h3,.manuale-print h4{
+  font-family:"Titillium Web",-apple-system,"Segoe UI",Roboto,sans-serif; color:#003366;
+  text-align:left; hyphens:none; line-height:1.2; }
+
+/* ── Frontespizio ──────────────────────────────────────────────────────── */
+.print-title-page{ display:flex; flex-direction:column; justify-content:center; min-height:88vh;
+  text-align:center; page-break-after:always; }
+.print-title-eyebrow{ font-family:"Titillium Web",sans-serif; text-transform:uppercase;
+  letter-spacing:.12em; font-size:9pt; color:#075985; margin-bottom:2.4rem; }
+.print-title-main{ font-size:30pt; color:#003366; margin:0 0 1rem; line-height:1.1; }
+.print-title-sub{ font-size:13pt; color:#3a4a5b; font-style:italic; max-width:30em; margin:0 auto 2rem; }
+.print-title-rule{ width:60mm; height:3px; background:#ffbe2e; margin:0 auto 2rem; }
+.print-title-ed{ font-size:10pt; color:#5a6b7b; }
+
+.print-colophon{ page-break-after:always; padding-top:30vh; }
+.print-colophon h2{ font-size:13pt; }
+.print-colophon p{ font-size:10pt; color:#333; }
+
+/* ── Indice ────────────────────────────────────────────────────────────── */
+.print-toc{ page-break-after:always; }
+.print-toc h2{ font-size:18pt; margin-bottom:1.2rem; }
+.print-toc-list{ list-style:none; margin:0; padding:0; }
+.print-toc-parte{ font-family:"Titillium Web",sans-serif; text-transform:uppercase; font-weight:700;
+  font-size:8.5pt; letter-spacing:.05em; color:#075985; margin:1rem 0 .35rem; }
+.print-toc-cap{ margin:.18rem 0; }
+.print-toc-cap a{ color:#1a1a1a; text-decoration:none; display:flex; }
+.print-toc-cap a::after{ content:target-counter(attr(href), page); margin-left:.5em;
+  font-variant-numeric:tabular-nums; color:#445; }
+.print-toc-cap a::before{ content:""; flex:1; order:1; margin:0 .4em; align-self:flex-end;
+  border-bottom:1px dotted #b9c4d0; height:.7em; }
+.print-toc-num{ font-weight:700; color:#075985; margin-right:.5em; }
+
+/* ── Pagine-divisore di Parte ──────────────────────────────────────────── */
+.print-parte-divider{ page:parte; page-break-before:right; page-break-after:always;
+  display:flex; flex-direction:column; justify-content:center; min-height:82vh; }
+.print-parte-divider .print-parte-kicker{ font-family:"Titillium Web",sans-serif; text-transform:uppercase;
+  letter-spacing:.14em; font-size:10pt; color:#ffbe2e; }
+.print-parte-divider h1{ font-size:26pt; border-left:5px solid #ffbe2e; padding-left:1rem; margin:.6rem 0 0; }
+
+/* ── Capitoli ──────────────────────────────────────────────────────────── */
+.print-cap{ page-break-before:always; }
+.print-cap-parte{ font-family:"Titillium Web",sans-serif; text-transform:uppercase; font-size:8pt;
+  letter-spacing:.05em; color:#075985; margin:0 0 .3rem; text-align:left; }
+.print-cap-title{ string-set:captitle content(text); font-size:21pt; margin:0 0 .4rem;
+  padding-bottom:.5rem; border-bottom:2px solid #e7edf3; }
+.print-cap-num{ color:#075985; }
+.print-cap-abstract{ font-size:10.5pt; color:#3a4a5b; font-style:italic; text-align:left; margin:0 0 1.2rem; }
+.print-cap-body h2{ font-size:14pt; margin:1.4rem 0 .5rem; break-after:avoid; }
+.print-cap-body h3{ font-size:11.5pt; margin:1rem 0 .35rem; break-after:avoid; }
+.print-cap-body h4{ font-size:10.5pt; margin:.8rem 0 .3rem; break-after:avoid; }
+.print-cap-body p{ margin:0 0 .6rem; orphans:2; widows:2; }
+.print-cap-body ul,.print-cap-body ol{ margin:.3rem 0 .8rem 1.2rem; }
+.print-cap-body li{ margin-bottom:.2rem; }
+.print-cap-body a{ color:#003366; text-decoration:none; }
+.print-cap-body blockquote{ border-left:3px solid #cbd7e6; background:#f6f8fb; margin:.8rem 0;
+  padding:.5rem .9rem; font-style:italic; }
+.print-cap-body table{ width:100%; border-collapse:collapse; font-size:9.5pt; margin:.8rem 0;
+  break-inside:avoid; }
+.print-cap-body th{ background:#003366; color:#fff; text-align:left; padding:.35rem .5rem; }
+.print-cap-body td{ border-bottom:1px solid #dce4ec; padding:.3rem .5rem; vertical-align:top; }
+
+/* Commentario articolo-per-articolo nel PDF */
+.print-cap-body .commento-articolo{ break-inside:avoid; border:1px solid #cbd7e6; border-radius:6px;
+  margin:1.1rem 0; overflow:hidden; }
+.print-cap-body .commento-art-head{ background:#003366; color:#fff; padding:.45rem .8rem; }
+.print-cap-body .commento-art-rubrica{ display:block; font-size:9.5pt; color:#dbe7f3; }
+.print-cap-body .commento-art-deriva{ display:block; font-size:8pt; color:#aac3dc; font-style:italic; }
+.print-cap-body .commento-corpo{ padding:.7rem .9rem; }
+.print-cap-body .commento-testo{ background:#f6f8fb; border-left:3px solid #ffbe2e; padding:.55rem .8rem;
+  margin:0 0 .8rem; font-size:9.7pt; text-align:left; }
+.print-cap-body .commento-testo-label{ display:block; font-family:"Titillium Web",sans-serif;
+  text-transform:uppercase; font-size:7pt; letter-spacing:.05em; color:#075985; margin-bottom:.3rem; }
+.print-cap-body .commento-spiega h4{ color:#003366; }
+.print-cap-body .commento-rinvii{ font-size:9pt; color:#48586a; border-top:1px dashed #d6dee7;
+  margin-top:.7rem; padding-top:.45rem; }
+
+/* Box "Fonti" */
+.print-cap-body .manuale-fonti{ break-inside:avoid; margin-top:1.4rem; padding-top:.7rem;
+  border-top:1.5px solid #e7edf3; font-size:9pt; color:#3a4a5b; }
+.print-cap-body .manuale-fonti h2{ font-size:11pt !important; color:#003366; margin:0 0 .4rem !important;
+  border:0 !important; padding:0 !important; }
+
+/* immagini/figure: non spezzare, ridimensionare */
+.print-cap-body img{ max-width:100%; height:auto; break-inside:avoid; }
+.print-cap-body figure{ break-inside:avoid; margin:1rem 0; text-align:center; }
+.print-cap-body figcaption{ font-size:8.5pt; color:#5a6b7b; font-style:italic; }
+
+/* Infobox accademici nel PDF */
+.print-cap-body .manuale-infobox{ break-inside:avoid; border:1px solid #dce4ec; border-left-width:4px;
+  border-radius:5px; margin:1rem 0; overflow:hidden; }
+.print-cap-body .manuale-infobox .infobox-head{ font-family:"Titillium Web",sans-serif; font-weight:700;
+  font-size:10pt; padding:.4rem .7rem .3rem; text-align:left; }
+.print-cap-body .manuale-infobox .infobox-body{ padding:.4rem .7rem .5rem; font-size:9.7pt; text-align:left; }
+.print-cap-body .box-def{ border-left-color:#003366; } .print-cap-body .box-def .infobox-head{ color:#003366; background:#eef3f9; }
+.print-cap-body .box-chiave{ border-left-color:#b45309; } .print-cap-body .box-chiave .infobox-head{ color:#92400e; background:#fdf4e6; }
+.print-cap-body .box-esempio{ border-left-color:#0e7490; } .print-cap-body .box-esempio .infobox-head{ color:#0e7490; background:#e7f3f6; }
+.print-cap-body .box-norma{ border-left-color:#075985; } .print-cap-body .box-norma .infobox-head{ color:#075985; background:#eaf2f8; }
+.print-cap-body .box-attenzione{ border-left-color:#c1121f; } .print-cap-body .box-attenzione .infobox-head{ color:#a30f1a; background:#fdeced; }
+.print-cap-body .box-approfondimento{ border-left-color:#15803d; } .print-cap-body .box-approfondimento .infobox-head{ color:#15803d; background:#eaf6ee; }
