@@ -54,9 +54,9 @@ Il commentario del **decreto legislativo 2 gennaio 2018, n. 1** — il testo che
 - [Commentario al Codice — Capo I: Finalità, attività e composizione (artt. 1–6)](/manuale/21-commentario-codice-capo-1/)
 - [Commentario al Codice — Capo II: Organizzazione del Servizio nazionale (artt. 7–15)](/manuale/22-commentario-codice-capo-2/)
 - [Commentario al Codice — Capo III: Previsione e prevenzione dei rischi (artt. 16–22)](/manuale/23-commentario-codice-capo-3/)
-- Capo IV — Gestione delle emergenze di rilievo nazionale (artt. 23–30) <span class="badge-prep">in preparazione</span>
-- Capo V — Partecipazione dei cittadini e volontariato (artt. 31–42) <span class="badge-prep">in preparazione</span>
-- Capi VI–VII — Misure finanziarie e norme finali (artt. 43–50) <span class="badge-prep">in preparazione</span>
+- [Commentario al Codice — Capo IV: Gestione delle emergenze di rilievo nazionale (artt. 23–30)](/manuale/24-commentario-codice-capo-4/)
+- [Commentario al Codice — Capo V: Partecipazione dei cittadini e volontariato (artt. 31–42)](/manuale/25-commentario-codice-capo-5/)
+- [Commentario al Codice — Capi VI–VII: Misure finanziarie e norme finali (artt. 43–50)](/manuale/26-commentario-codice-capo-6-7/)
 
 ### Parte III · Il Testo Unico sulla sicurezza e il volontario
 
