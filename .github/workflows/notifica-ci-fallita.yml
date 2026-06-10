@@ -1,0 +1,74 @@
+name: "🚨 Watchdog CI — segnala i workflow falliti"
+
+# Quando un workflow CRITICO fallisce su main, apre (o aggiorna) un'issue
+# GitHub con label automazione+urgente: così il fallimento NON passa inosservato
+# (GitHub notifica via email/app) e una sessione di manutenzione lo corregge.
+# Nasce il 10/6/2026 dopo che i fallimenti di "Aggiornamento Allerta Meteo"
+# (apt 404 su poppler-utils) sono stati scoperti solo per caso accedendo a GitHub.
+
+on:
+  workflow_run:
+    workflows:
+      - "⛈️ Aggiornamento Allerta Meteo"
+      - "🚀 Build e Deploy"
+      - "🚦 Smoke test post-deploy"
+      - "🗓️ Pubblicazione programmata articoli"
+    types: [completed]
+
+permissions:
+  issues: write
+  actions: read
+
+jobs:
+  segnala:
+    # solo fallimenti reali su main (non i branch di lavoro)
+    if: >-
+      ${{ github.event.workflow_run.conclusion == 'failure' &&
+          github.event.workflow_run.head_branch == 'main' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Apri o aggiorna l'issue di fallimento"
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          OWNER: ${{ github.repository_owner }}
+          WF_NAME: ${{ github.event.workflow_run.name }}
+          WF_URL: ${{ github.event.workflow_run.html_url }}
+          WF_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          set -euo pipefail
+          TITLE="🚨 Workflow fallito: ${WF_NAME}"
+          STAMP="$(date -u '+%Y-%m-%d %H:%M UTC')"
+          SHORT="${WF_SHA:0:8}"
+          # cerca un'issue aperta con questo titolo esatto (dedup, niente spam)
+          NUM="$(gh issue list --repo "$REPO" --state open --limit 100 \
+                   --json number,title -q '.[] | [.number, .title] | @tsv' \
+                 | grep -F "$TITLE" | head -1 | cut -f1 || true)"
+          if [ -n "$NUM" ]; then
+            gh issue comment "$NUM" --repo "$REPO" --body \
+              "🔁 Ancora fallito — run: ${WF_URL} (commit \`${SHORT}\`, ${STAMP})."
+            echo "Issue #$NUM aggiornata."
+          else
+            gh issue create --repo "$REPO" \
+              --title "$TITLE" \
+              --label "automazione,urgente" \
+              --body "Il workflow **${WF_NAME}** è fallito su \`main\`.
+
+          - **Run con il log:** ${WF_URL}
+          - **Commit:** \`${SHORT}\`
+          - **Rilevato:** ${STAMP}
+
+          **Cosa fare:** aprire il run, leggere lo step fallito e correggere; quando il workflow torna verde, chiudere questa issue. Se il fallimento è transitorio (rete/mirror), può bastare un nuovo run.
+
+          _Issue aperta automaticamente dal watchdog CI._"
+            # Assegna l'issue al proprietario per la notifica email diretta
+            # (non bloccante: se l'owner non è assegnabile, l'issue resta comunque
+            # creata e chi osserva il repo riceve ugualmente l'email).
+            NUM_NEW="$(gh issue list --repo "$REPO" --state open --limit 100 \
+                         --json number,title -q '.[] | [.number, .title] | @tsv' \
+                       | grep -F "$TITLE" | head -1 | cut -f1 || true)"
+            if [ -n "$NUM_NEW" ]; then
+              gh issue edit "$NUM_NEW" --repo "$REPO" --add-assignee "$OWNER" 2>/dev/null || true
+            fi
+            echo "Nuova issue creata per ${WF_NAME}."
+          fi

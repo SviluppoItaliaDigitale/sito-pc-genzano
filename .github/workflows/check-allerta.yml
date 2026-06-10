@@ -38,7 +38,15 @@ jobs:
         uses: actions/checkout@v5
 
       - name: "🛠️ Setup pdftotext (per fallback PDF Regione Lazio)"
-        run: which pdftotext || sudo apt-get install -y --no-install-recommends poppler-utils
+        # pdftotext serve SOLO al fallback PDF Regione Lazio (il percorso primario
+        # è il CSV opendatasicilia). `apt-get update` prima dell'install evita il
+        # 404 sul .deb stantio dell'immagine runner; se l'install fallisce comunque,
+        # il job prosegue (warning) anziché bloccare l'intera verifica allerta.
+        run: |
+          if command -v pdftotext >/dev/null 2>&1; then exit 0; fi
+          sudo apt-get update -qq || true
+          sudo apt-get install -y --no-install-recommends poppler-utils \
+            || echo "::warning::poppler-utils non installato: fallback PDF Regione Lazio disattivato per questo run (resta attivo il percorso CSV primario)."
 
       - name: "🔍 Verifica livello allerta DPC per Genzano di Roma"
         id: check
