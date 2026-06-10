@@ -61,7 +61,7 @@ Il commentario del **decreto legislativo 2 gennaio 2018, n. 1** — il testo che
 
 ### Parte III · Il Testo Unico sulla sicurezza e il volontario
 
-Il **decreto legislativo 9 aprile 2008, n. 81** applicato al volontariato di protezione civile, con il decreto interministeriale 13 aprile 2011: cosa significa «sicurezza» per chi opera in emergenza. <span class="badge-prep">in preparazione</span>
+- [La sicurezza del volontario: il Testo Unico (d.lgs. 81/2008)](/manuale/31-sicurezza-del-volontario/) — il volontario «lavoratore equiparato», il regime speciale del D.M. 13 aprile 2011 e le responsabilità dell'organizzazione
 
 ### Parte IV · La scienza del rischio
 
@@ -83,11 +83,11 @@ Il **decreto legislativo 9 aprile 2008, n. 81** applicato al volontariato di pro
 
 ### Parte VIII · Pianificazione di emergenza, scenari e tecnologie
 
-Metodo e contenuti dei piani di protezione civile; costruzione degli scenari; aree di emergenza; cartografia, sistemi informativi geografici e telerilevamento per il rilievo del danno; telecomunicazioni in emergenza; la pianificazione antincendio boschivo. <span class="badge-prep">in preparazione</span>
+- [La pianificazione di emergenza, gli scenari e le tecnologie](/manuale/81-pianificazione-e-tecnologie/) — il piano comunale, le aree di emergenza, le telecomunicazioni, GIS e telerilevamento
 
 ### Parte IX · Gestione operativa, logistica e continuità
 
-Modello di intervento e livelli di coordinamento; i centri di coordinamento; assistenza alla popolazione e gestione dei servizi essenziali; logistica dell'emergenza; volontariato (organizzazione e gestione); continuità operativa (business continuity, ISO 22301); *project management* e aspetti contabili e amministrativi dell'emergenza. <span class="badge-prep">in preparazione</span>
+- [Gestione operativa, logistica e continuità](/manuale/91-gestione-operativa-continuita/) — la logistica e la colonna mobile, la gestione del volontariato, la continuità operativa (ISO 22301) e gli aspetti amministrativi
 
 ### Parte X · Dopo l'evento: danni, fabbisogni e ricostruzione
 
@@ -95,7 +95,8 @@ Modello di intervento e livelli di coordinamento; i centri di coordinamento; ass
 
 ### Parte XI · Il fattore umano: comunicazione, psicologia, inclusione e leadership
 
-Comunicazione del rischio e gestione della disinformazione; sociologia e cultura dell'emergenza; aspetti psicologici e salute mentale; *team building* e leadership; inclusione delle persone con disabilità e con necessità specifiche. <span class="badge-prep">in preparazione</span>
+- [Il fattore umano: comunicazione, psicologia e inclusione](/manuale/111-fattore-umano/) — comunicazione di crisi (ISO 22329), primo soccorso psicologico, inclusione delle persone con disabilità
+- *Team building* e leadership nelle emergenze <span class="badge-prep">in preparazione</span>
 
 ### Parte XII · La dimensione internazionale e gli standard
 
@@ -103,7 +104,7 @@ Comunicazione del rischio e gestione della disinformazione; sociologia e cultura
 
 ### Parte XIII · Diritto, responsabilità ed etica
 
-Aspetti legali connessi ai livelli di responsabilità; elementi di diritto amministrativo; il servizio pubblico e lo stato di diritto; l'etica della gestione del rischio e delle emergenze. <span class="badge-prep">in preparazione</span>
+- [Diritto, responsabilità ed etica nelle emergenze](/manuale/131-diritto-responsabilita-etica/) — le ordinanze come atti amministrativi, i poteri straordinari dentro lo stato di diritto, le responsabilità e l'etica della gestione del rischio
 
 ### Parte XIV · Il territorio: Genzano di Roma e i Castelli Romani
 
