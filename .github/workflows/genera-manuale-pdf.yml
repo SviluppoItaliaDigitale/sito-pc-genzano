@@ -57,7 +57,15 @@ jobs:
             git config user.email "github-actions[bot]@users.noreply.github.com"
             git add static/manuali/manuale-protezione-civile.pdf
             git commit -m "[skip-manuale-pdf] Rigenera PDF del Manuale di Protezione Civile"
-            git push
+            # main può essere avanzato durante il run (deploy/bot): rebase + retry
+            # per evitare il fallimento da non-fast-forward sul push.
+            for try in 1 2 3 4; do
+              if git pull --rebase --autostash origin main && git push origin HEAD:main; then
+                echo "PDF pubblicato (tentativo $try)."; exit 0
+              fi
+              echo "Push fallito, ritento ($try)..."; sleep 6
+            done
+            echo "::warning::PDF rigenerato ma non pubblicato dopo 4 tentativi (main troppo attivo); verrà ripubblicato al prossimo cambio del manuale."
           else
             echo "PDF invariato: nessun commit."
           fi
