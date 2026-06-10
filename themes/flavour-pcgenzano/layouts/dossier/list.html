@@ -11,18 +11,24 @@
       <div class="list-intro-content">{{ .Content }}</div>
 
       {{- /* Filtri per tema (richiesta 10/06/2026: navigabilità con molti
-            dossier). I temi vengono dal frontmatter `tema:` di ogni dossier;
-            le etichette qui sotto sono l'unica mappa tema→nome leggibile.
+            dossier). Le pillole sono AUTOMATICHE: nascono da qualsiasi
+            valore `tema:` trovato nel frontmatter dei dossier — un tema
+            nuovo crea da solo la sua pillola al prossimo build. La mappa
+            qui sotto serve solo per le etichette curate; un tema non in
+            mappa riceve l'etichetta generata dal nome (humanize).
             Pattern coerente con i filtri dell'archivio /comunicazioni/. */ -}}
       {{- $temaLabels := dict "rischi" "Rischi e fenomeni" "sistema" "Il sistema" "storia" "Storia" "territorio" "Il nostro territorio" -}}
       {{- $pages := .Pages.ByDate.Reverse -}}
+      {{- /* conteggio per tema effettivo (stesso default delle card) */ -}}
+      {{- $counts := dict -}}
+      {{- range $pages -}}
+        {{- $t := .Params.tema | default "rischi" -}}
+        {{- $counts = merge $counts (dict $t (add (index $counts $t | default 0) 1)) -}}
+      {{- end -}}
       <div class="dossier-filtri" role="group" aria-label="Filtra i dossier per tema">
         <button type="button" class="dossier-pill is-active" data-tema="tutti" aria-pressed="true">Tutti <span class="dossier-pill__n">{{ len $pages }}</span></button>
-        {{- range $key, $label := $temaLabels -}}
-        {{- $n := len (where $pages "Params.tema" $key) -}}
-        {{- if gt $n 0 }}
-        <button type="button" class="dossier-pill" data-tema="{{ $key }}" aria-pressed="false">{{ $label }} <span class="dossier-pill__n">{{ $n }}</span></button>
-        {{- end -}}
+        {{- range $key, $n := $counts }}
+        <button type="button" class="dossier-pill" data-tema="{{ $key }}" aria-pressed="false">{{ index $temaLabels $key | default ($key | humanize) }} <span class="dossier-pill__n">{{ $n }}</span></button>
         {{- end }}
       </div>
       <p class="dossier-filtri-stato" aria-live="polite"></p>
@@ -33,7 +39,8 @@
           <div class="dossier-card__media">
             {{- /* alt vuoto: la card-link ha già il titolo del dossier nel corpo */ -}}
             {{ with .Params.image }}<img src="{{ . | strings.TrimPrefix "/" | relURL }}" alt="" aria-hidden="true" loading="lazy">{{ end }}
-            <span class="dossier-card__tag"><i class="bi bi-collection-play" aria-hidden="true"></i> {{ index $temaLabels (.Params.tema | default "rischi") | default "Dossier interattivo" }}</span>
+            {{- $t := .Params.tema | default "rischi" -}}
+            <span class="dossier-card__tag"><i class="bi bi-collection-play" aria-hidden="true"></i> {{ index $temaLabels $t | default ($t | humanize) }}</span>
           </div>
           <div class="dossier-card__body">
             <h2 class="dossier-card__title">{{ .Title }}</h2>
