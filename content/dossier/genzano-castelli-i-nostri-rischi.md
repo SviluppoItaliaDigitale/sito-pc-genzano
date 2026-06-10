@@ -35,7 +35,7 @@ I Castelli sono nati dal fuoco: i due laghi — **Nemi** e **Albano** — riempi
 Vivere qui significa conoscere questa doppia natura: la bellezza e il rischio nascono dalla stessa origine.
 {{< /dossier-scena >}}
 
-{{< dossier-dati id="distretto" image="/images/dossier/genzano-nemi-giorno.webp" alt="Il Lago di Nemi visto dall'alto dai Castelli" >}}
+{{< dossier-dati id="distretto" image="/images/dossier/castelli-sat.webp" alt="Vista satellitare dei Castelli Romani: i laghi di cratere di Albano e Nemi circondati dal bosco del vulcano e dai paesi" >}}
 {{< dossier-dato to="2" unita=" laghi" label="I laghi-cratere dei Castelli: **Albano** e **Nemi**, due occhi d'acqua dentro antichi crateri del vulcano" >}}
 {{< dossier-dato to="30" unita=" km" label="La distanza dei Colli Albani da **Roma**: un vulcano alle porte della capitale, studiato dall'INGV" >}}
 {{< dossier-dato to="900" unita=" m +" label="L'altezza delle cime del distretto vulcanico, che dominano la pianura romana" >}}
@@ -56,7 +56,7 @@ Il Lago Albano, il più profondo, custodisce parte di questa storia: i geologi n
 {{< dossier-dato to="1" unita=" regola" label="In presenza di emissioni di gas, la regola è semplice: non sostare in **avvallamenti, cantine o pozzi** dove la CO₂, più pesante dell'aria, può accumularsi" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-dati id="sismico" image="/images/dossier/genzano-nemi-tramonto.webp" alt="Genzano e il Lago di Nemi al tramonto" >}}
+{{< dossier-dati id="sismico" image="/images/dossier/castelli-iss.webp" alt="I Colli Albani, Roma e il Tevere visti dalla Stazione Spaziale, con il lago di cratere scuro in evidenza" >}}
 {{< dossier-dato to="2" unita=" origini" label="A Genzano la terra può tremare per due motivi: i **terremoti vulcanici locali** (di solito lievi) e i forti **terremoti dell'Appennino**, che qui arrivano attenuati ma si sentono" >}}
 {{< dossier-dato to="3" unita=" gesti" label="In caso di scossa: **riparati** sotto un tavolo robusto, **allontànati** da finestre e mobili alti, **esci** solo a scossa finita per le scale, mai con l'ascensore" >}}
 {{< dossier-dato to="112" label="A pericolo cessato, segnala crepe e danni; per il pericolo immediato chiama sempre il **112**" >}}
@@ -90,13 +90,13 @@ Il vento e la pioggia non si possono fermare: ci si prepara prima, seguendo le a
 {{< dossier-dato to="1" unita=" bollettino" label="Il Ministero della Salute e la ASL pubblicano d'estate i **bollettini delle ondate di calore** città per città" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-dati id="eventi" image="/images/dossier/genzano-nemi-tramonto.webp" alt="Genzano di Roma al tramonto" >}}
+{{< dossier-dati id="eventi" image="/images/dossier/vulcano-albano.webp" alt="Il Lago Albano visto da Monte Cavo, racchiuso dai versanti boscosi del cratere" >}}
 {{< dossier-dato to="1" unita=" evento" label="Genzano è famosa per l'**Infiorata** e per le sue feste: grandi eventi che richiamano folle in spazi stretti del centro storico" >}}
 {{< dossier-dato to="3" unita=" compiti" label="Durante gli eventi il Gruppo presidia **aree pedonali e punti di raccolta**, informa il pubblico e assiste le **persone fragili**, in supporto alle autorità" >}}
 {{< dossier-dato to="0" unita="" label="Il volontariato **non regola il traffico** né svolge servizi di polizia stradale: sono compiti esclusivi delle Forze dell'Ordine e della Polizia Locale" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-dati id="gruppo" image="/images/dossier/genzano-nemi-giorno.webp" alt="Il territorio di Genzano e il Lago di Nemi" >}}
+{{< dossier-dati id="gruppo" image="/images/2026-05-31-infiorata-squadra-volontari.webp" alt="La squadra dei volontari del Gruppo, sorridente in posa lungo la via dell'Infiorata di Genzano" >}}
 {{< dossier-dato da="1981" unita="" label="Gli anni di servizio del **Gruppo Comunale Volontari di Protezione Civile di Genzano**, a fianco della comunità" >}}
 {{< dossier-dato to="4" unita=" attività" label="Quello che facciamo: **prevenzione**, **monitoraggio** del territorio, **assistenza** alla popolazione, **informazione** sui rischi" >}}
 {{< dossier-dato to="1" unita=" Sindaco" label="A Genzano la prima autorità di protezione civile è il **Sindaco**, che attiva il Gruppo tramite il Comune. I cittadini chiamano il **112**, mai direttamente i volontari" >}}

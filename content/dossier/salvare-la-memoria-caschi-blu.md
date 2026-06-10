@@ -29,7 +29,7 @@ L'Italia lo capì nel fango di Firenze, nel 1966, davanti al [Crocifisso di Cima
 Non è un lusso da Paese ricco: è l'altra metà del concetto di **resilienza**. Le comunità si rialzano dove riconoscono sé stesse.
 {{< /dossier-scena >}}
 
-{{< dossier-dati id="numeri" image="/images/dossier/cultura-norcia-basilica.webp" alt="La facciata superstite della basilica di Norcia tra le macerie" >}}
+{{< dossier-dati id="numeri" image="/images/dossier/cultura-norcia-santagostino.webp" alt="I resti puntellati della chiesa di Sant'Agostino a Norcia dopo il sisma" >}}
 {{< dossier-dato to="1969" label="I Carabinieri istituiscono il **Comando Tutela Patrimonio Culturale**: il primo reparto specializzato al mondo, prima ancora della convenzione UNESCO del 1970" >}}
 {{< dossier-dato to="2016" label="Nasce la task force **«Unite4Heritage»**, i Caschi Blu della Cultura: l'Italia è il primo Paese a metterla a disposizione dell'UNESCO" >}}
 {{< dossier-dato to="30" unita=" ott" label="Norcia, 2016: la scossa di magnitudo 6.5 abbatte la **Basilica di San Benedetto**. Resta in piedi la facciata — e parte il più grande recupero d'arte in emergenza" >}}
@@ -43,7 +43,7 @@ Nelle settimane successive il cratere divenne il cantiere di recupero d'arte pi�
 Ogni pezzo schedato e fotografato: perché il secondo nemico del patrimonio in emergenza, dopo i crolli, sono gli **sciacalli**.
 {{< /dossier-scena >}}
 
-{{< dossier-scena id="caschi" image="/images/dossier/cultura-norcia-basilica.webp" alt="Le rovine della basilica simbolo del recupero del patrimonio in emergenza" align="left" kicker="Unite4Heritage" title="I Caschi Blu<br>della Cultura" credito="Foto: Sailko · CC BY 3.0, via Wikimedia Commons" >}}
+{{< dossier-scena id="caschi" image="/images/dossier/cultura-norcia-piazza.webp" alt="La piazza San Benedetto di Norcia con la statua al centro e gli edifici puntellati, negli anni dopo il sisma" align="left" kicker="Unite4Heritage" title="I Caschi Blu<br>della Cultura" credito="Norcia, piazza San Benedetto (2019) · foto Sailko · CC BY 3.0, via Wikimedia Commons" >}}
 Dal 2016 quel know-how ha una divisa e un nome: la task force **«Unite4Heritage»**, i **Caschi Blu della Cultura** — la prima al mondo, nata da un accordo Italia-UNESCO. Dentro ci sono i **Carabinieri del TPC** (il reparto per la tutela del patrimonio fondato nel **1969**, primo al mondo) e gli **esperti civili del Ministero della Cultura**: storici dell'arte, restauratori, archivisti.
 
 Intervengono dove il patrimonio è in pericolo — terremoti e alluvioni in Italia, crisi e conflitti all'estero — per mettere in sicurezza, censire i danni, contrastare il traffico illecito delle opere razziate e formare le forze locali.
@@ -66,7 +66,7 @@ Vale anche in piccolo, a Genzano come ovunque: conoscere il proprio patrimonio �
 {{< /dossier-chiusura >}}
 
 {{< dossier-fonti >}}
-- **Immagini:** rovine della Basilica di San Benedetto, Norcia (Sailko · CC BY 3.0) · Crocifisso di Cimabue (Sailko · pubblico dominio) · recupero dei manoscritti, Firenze 1966 (UNESCO/Dominique Roger · CC BY-SA 3.0 IGO). Via Wikimedia Commons.
+- **Immagini:** rovine della Basilica di San Benedetto, resti di Sant'Agostino e piazza San Benedetto a Norcia (Sailko · CC BY 3.0) · Crocifisso di Cimabue (Sailko · pubblico dominio) · recupero dei manoscritti, Firenze 1966 (UNESCO/Dominique Roger · CC BY-SA 3.0 IGO). Via Wikimedia Commons.
 - **Fonti:** [Carabinieri — Task Force Caschi Blu della Cultura](https://www.carabinieri.it/chi-siamo/oggi/organizzazione/mobile-e-speciale/comando-carabinieri-per-la-tutela-del-patrimonio-culturale/task-force-caschi-blu-della-cultura) (istituzione 2016, composizione TPC + esperti MiC) · [Ministero della Cultura — Unite4Heritage](https://cultura.gov.it/unite4heritage) (primo Paese a disposizione dell'UNESCO) · Comando Carabinieri TPC fondato nel 1969, primo reparto al mondo per la tutela del patrimonio · sisma del 30 ottobre 2016 (Mw 6.5) e recupero delle opere nel cratere: Dipartimento della Protezione Civile e MiC (depositi temporanei, tra cui Santo Chiodo di Spoleto).
 - **Sul nostro sito:** [Dossier: Gli angeli del fango](/dossier/angeli-del-fango-firenze-1966/) · [Dossier: Ricostruire meglio](/dossier/ricostruire-meglio-il-dopo/) · [Dossier: Quando la terra trema](/dossier/quando-la-terra-trema/) · [Il dopo-evento nel Manuale (Parte X)](/manuale/101-dopo-l-evento/).
 - Dossier a cura del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**. Guida divulgativa: in emergenza chiama il **112**.

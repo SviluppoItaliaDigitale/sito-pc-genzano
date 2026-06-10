@@ -29,7 +29,7 @@ Sono il più antico sistema di **comunicazione del rischio** della città: un me
 Per secoli Roma convisse così: il fiume dava il porto, i mulini, l'acqua — e ogni tanto si riprendeva la città. Fino all'anno in cui una piena cambiò la storia.
 {{< /dossier-scena >}}
 
-{{< dossier-dati id="numeri" image="/images/dossier/tevere-piena-2008.webp" alt="Il Tevere gonfio sotto le arcate di Ponte Sant'Angelo" >}}
+{{< dossier-dati id="numeri" image="/images/dossier/tevere-isola-tiberina.webp" alt="La piena del Tevere del 2008 all'Isola Tiberina, con l'acqua che copre le banchine" >}}
 {{< dossier-dato to="1598" label="L'anno della **piena record**: la più alta delle serie storiche dell'idrometro di Ripetta, quasi 20 metri" >}}
 {{< dossier-dato to="17" unita=",22 m" label="L'altezza a Ripetta della grande piena del **28 dicembre 1870**: Roma capitale d'Italia da tre mesi, sott'acqua" >}}
 {{< dossier-dato to="1876" label="L'anno in cui iniziano i lavori dei **muraglioni**: la più grande opera di difesa idraulica mai fatta in una capitale europea" >}}
@@ -43,7 +43,7 @@ Per il giovane Stato fu uno shock fondativo: non si poteva governare l'Italia da
 Vinse la linea degli argini: chiudere il Tevere tra alte muraglie di travertino. Una scelta che avrebbe salvato la città — cambiandole il volto per sempre.
 {{< /dossier-scena >}}
 
-{{< dossier-scena id="muraglioni" image="/images/dossier/tevere-piena-2008.webp" alt="L'acqua della piena del 2008 contenuta dalle alte sponde del Tevere a Ponte Sant'Angelo" align="top" kicker="1876-1926" title="I muraglioni:<br>la difesa che cambiò Roma" credito="Foto: Luciano · CC BY 2.0, via Wikimedia Commons" >}}
+{{< dossier-scena id="muraglioni" image="/images/dossier/tevere-ponte-sisto.webp" alt="La piena del 2008 a Ponte Sisto: l'acqua alta resta contenuta dentro gli alti muraglioni del lungotevere" align="top" kicker="1876-1926" title="I muraglioni:<br>la difesa che cambiò Roma" credito="Piena del Tevere a Ponte Sisto, 2008 · foto Luciano · CC BY 2.0, via Wikimedia Commons" >}}
 I lavori iniziarono nel **1876** e durarono mezzo secolo: chilometri di **muraglioni** alti circa 18 metri, i lungotevere alberati sopra, il fiume incassato sotto. Sparirono il porto di Ripetta, i mulini galleggianti, le case che si specchiavano nell'acqua: Roma **perse il suo fiume quotidiano e guadagnò la sicurezza**.
 
 Funzionano: dalle grandi piene del Novecento fino a quelle recenti, l'acqua è salita minacciosa **dentro** il canale dei muraglioni — come in questa foto del 2008, con la corrente che lambisce le arcate di Ponte Sant'Angelo — senza riprendersi la città.
@@ -66,7 +66,7 @@ Quando piove forte sui Castelli, ricorda che la nostra acqua scende verso quel f
 {{< /dossier-chiusura >}}
 
 {{< dossier-fonti >}}
-- **Immagini:** piena del Tevere a Ponte Sant'Angelo, 12 dicembre 2008 (Luciano · CC BY 2.0) · targhe delle piene su Santa Maria sopra Minerva (Peter1936F · CC BY-SA 4.0). Via Wikimedia Commons.
+- **Immagini:** piene del Tevere a Ponte Sant'Angelo e Ponte Sisto, 12 dicembre 2008 (Luciano · CC BY 2.0) · piena all'Isola Tiberina, 13 dicembre 2008 (Lalupa · CC BY-SA 3.0) · targhe delle piene su Santa Maria sopra Minerva (Peter1936F · CC BY-SA 4.0). Via Wikimedia Commons.
 - **Fonti:** serie storiche dell'**idrometro di Ripetta** (piena del 1598 massima storica; 28 dicembre 1870: 17,22 m) — riprese dalla letteratura dell'[Autorità di Bacino Distrettuale dell'Appennino Centrale](https://www.autoritadistrettoac.it/) e da [ISPRA](https://www.isprambiente.gov.it/) · sulla decisione post-1870 e i muraglioni (1876-primo Novecento): storiografia della Roma capitale, incluso il dibattito parlamentare con la proposta di Garibaldi · [Alluvioni del Tevere a Roma — Wikipedia](https://it.wikipedia.org/wiki/Alluvioni_del_Tevere_a_Roma) (quadro d'insieme e cronologia) · piena del dicembre 2008: cronache e dispositivi di Protezione Civile dell'epoca · Aniene, 5 gennaio 2026: [ANSA](https://www.ansa.it/sito/notizie/cronaca/2026/01/05/tevere-supera-i-7-metri-e-copre-le-banchine-laniene-esonda-vicino-roma_0b9363be-cf0a-4c9e-814c-3873b9d55674.html).
 - **Sul nostro sito:** [Dossier: Troppa acqua](/dossier/troppa-acqua/) · [Il rischio idrogeologico (Manuale, cap. 7.3)](/manuale/713-rischio-idrogeologico/) · [Dossier: La catena dell'allerta](/dossier/la-catena-dell-allerta/) · [Rischio idrogeologico: cosa fare](/rischi-prevenzione/rischio-idrogeologico/).
 - Dossier a cura del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**. Guida divulgativa: in emergenza chiama il **112**.

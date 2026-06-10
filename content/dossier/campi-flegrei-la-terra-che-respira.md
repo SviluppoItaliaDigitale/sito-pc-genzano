@@ -29,13 +29,13 @@ Significa una cosa sola: dopo l'epoca romana quel pavimento **scese sotto il liv
 È il **bradisismo**: dal greco, «movimento lento del suolo». Il respiro di una caldera che si gonfia e si sgonfia, legato ai fluidi e al magma in profondità. Ai Campi Flegrei non è un'anomalia: è la normalità geologica.
 {{< /dossier-scena >}}
 
-{{< dossier-dati id="numeri" image="/images/dossier/vulcano-flegrei.webp" alt="Vapori della Solfatara di Pozzuoli" >}}
+{{< dossier-dati id="numeri" image="/images/dossier/flegrei-monte-nuovo.webp" alt="Il cono boscoso del Monte Nuovo sul golfo di Pozzuoli" >}}
 {{< dossier-dato to="1538" label="L'ultima **eruzione** dei Campi Flegrei: in una settimana nacque una montagna nuova, chiamata appunto **Monte Nuovo**" >}}
 {{< dossier-dato to="1" unita=",8 m" label="Il **sollevamento del suolo** a Pozzuoli nella crisi bradisismica del 1982-84: quasi due metri in due anni" >}}
 {{< dossier-dato to="40" unita=" mila" label="Le persone **evacuate da Pozzuoli** nel 1983-84, quando gli sciami sismici resero inagibile il centro storico" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-scena id="crisi" image="/images/dossier/flegrei-macellum.webp" alt="Il sito archeologico del Macellum di Pozzuoli con le colonne segnate dai litodomi" align="right" kicker="1982-1984" title="La crisi che svuotò<br>Pozzuoli" credito="Foto: Norbert Nagel · CC BY-SA 3.0, via Wikimedia Commons" >}}
+{{< dossier-scena id="crisi" image="/images/dossier/flegrei-rione-terra.webp" alt="La rocca del Rione Terra vista dal porto di Pozzuoli, con le case color pastello a picco sul mare" align="right" kicker="1982-1984" title="La crisi che svuotò<br>Pozzuoli" credito="Il Rione Terra dal porto di Pozzuoli · foto Ra Boe, 2010 · CC BY-SA 3.0, via Wikimedia Commons" >}}
 Tra il 1982 e il 1984 la caldera si gonfiò di quasi **due metri**. Migliaia di scosse — piccole, superficiali, continue — resero inagibili interi quartieri: circa **40.000 persone** lasciarono Pozzuoli, e il quartiere del **Rione Terra**, già evacuato nel 1970, divenne il simbolo di una città che conviveva con il proprio vulcano.
 
 Poi, senza eruzione, il respiro si invertì: il suolo tornò lentamente ad abbassarsi. La crisi lasciò due eredità: una generazione di sfollati — e la consapevolezza che i Campi Flegrei andavano **sorvegliati come nessun altro luogo d'Italia**.
@@ -49,7 +49,7 @@ L'**INGV — Osservatorio Vesuviano** sorveglia la caldera con una delle reti pi
 Lo Stato ha risposto anche sul piano normativo: il **decreto-legge 140 del 2023** ha stanziato misure urgenti per il bradisismo — verifiche sull'edilizia, potenziamento del monitoraggio, esercitazioni ed evacuazioni di prova con la popolazione.
 {{< /dossier-scena >}}
 
-{{< dossier-scena id="allerta" image="/images/dossier/flegrei-macellum.webp" alt="Le colonne del Macellum di Pozzuoli viste dal piazzale" align="top" kicker="Verde, giallo, arancione, rosso" title="Cosa significa<br>«allerta gialla»" credito="Foto: Norbert Nagel · CC BY-SA 3.0, via Wikimedia Commons" >}}
+{{< dossier-scena id="allerta" image="/images/dossier/flegrei-rione-terra.webp" alt="Il Rione Terra di Pozzuoli a picco sul mare, simbolo della convivenza tra la città e la caldera" align="top" kicker="Verde, giallo, arancione, rosso" title="Cosa significa<br>«allerta gialla»" credito="Foto: Ra Boe, 2010 · CC BY-SA 3.0, via Wikimedia Commons" >}}
 Per i vulcani italiani esistono **quattro livelli di allerta** — verde, giallo, arancione, rosso — decisi dal Dipartimento della Protezione Civile sulla base delle valutazioni scientifiche dell'INGV. I Campi Flegrei sono in **livello giallo**, «attenzione», dal **2012**: parametri sopra la norma, sorveglianza rafforzata. Giallo **non** significa eruzione imminente: significa che la caldera è viva e va osservata di più.
 
 Per lo scenario peggiore esiste un **piano nazionale di evacuazione**: una **zona rossa** da allontanare preventivamente — circa mezzo milione di persone — e una **zona gialla** esposta alla ricaduta di cenere. Gemellaggi tra comuni e regioni, tempi e mezzi sono già scritti, e si provano con esercitazioni.
@@ -64,7 +64,7 @@ Vale per Pozzuoli e vale per i Castelli: conoscere il proprio territorio è la p
 {{< /dossier-chiusura >}}
 
 {{< dossier-fonti >}}
-- **Immagini:** fumarola della Solfatara di Pozzuoli (yiftah-s · CC BY-SA 3.0) · il Macellum di Pozzuoli, «Tempio di Serapide» (Norbert Nagel, 2013 · CC BY-SA 3.0). Via Wikimedia Commons.
+- **Immagini:** fumarola della Solfatara di Pozzuoli (yiftah-s · CC BY-SA 3.0) · il Macellum di Pozzuoli, «Tempio di Serapide» (Norbert Nagel, 2013 · CC BY-SA 3.0) · Monte Nuovo (Denghiù · pubblico dominio) · Rione Terra dal porto (Ra Boe, 2010 · CC BY-SA 3.0). Via Wikimedia Commons.
 - **Fonti:** [INGV — Osservatorio Vesuviano, bollettini di sorveglianza Campi Flegrei](https://www.ov.ingv.it/index.php/monitoraggio-e-infrastrutture/bollettini-tutti/bollett-mensili-cf) (sollevamento, sismicità) · [Dipartimento della Protezione Civile — Campi Flegrei](https://rischi.protezionecivile.gov.it/it/vulcanico/vulcani-italia/campi-flegrei/) (livelli di allerta, zona rossa e gialla, pianificazione) · [Decreto-legge 12 ottobre 2023, n. 140 — Normattiva](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legge:2023-10-12;140) (misure urgenti bradisismo) · la crisi 1982-84 (sollevamento ~1,8 m, ~40.000 evacuati) e l'eruzione del Monte Nuovo (1538) sono dati consolidati della letteratura INGV.
 - **Sul nostro sito:** [Dossier: Un vulcano sotto casa (Colli Albani)](/dossier/vulcano-sotto-casa/) · [Il rischio vulcanico (Manuale, cap. 7.2)](/manuale/712-rischio-vulcanico/) · [Rischio vulcanico: cosa fare](/rischi-prevenzione/rischio-vulcanico/) · [Dossier: Quando la terra trema](/dossier/quando-la-terra-trema/).
 - Dossier a cura del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**. Guida divulgativa: in emergenza chiama il **112**.

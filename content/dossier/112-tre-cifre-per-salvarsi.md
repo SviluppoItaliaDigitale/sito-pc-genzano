@@ -29,7 +29,7 @@ L'Europa decise di cambiare logica con la **decisione 91/396/CEE del 1991**: un 
 L'idea è semplice e profonda: **in emergenza non devi fare diagnosi**. Non devi decidere se serve l'ambulanza, i pompieri o la polizia. Devi solo comporre tre cifre: a smistare ci pensa il sistema.
 {{< /dossier-scena >}}
 
-{{< dossier-dati id="numeri" image="/images/2026-04-19-toscani-docenza-sala-operativa-lazio.webp" alt="I pannelli Emergenza 112 della Sala Operativa regionale" >}}
+{{< dossier-dati id="numeri" image="/images/dossier/112-telefono-disco.webp" alt="Un telefono nero a disco rotante degli anni del boom" >}}
 {{< dossier-dato to="1991" label="La **decisione europea** che istituisce il 112 come numero unico di emergenza per tutta l'Unione" >}}
 {{< dossier-dato to="2017" label="L'anno in cui il **NUE 112 arriva nel Lazio**: da allora, per il cittadino, l'unico numero da ricordare è uno" >}}
 {{< dossier-dato to="2018" label="Da marzo, ogni **auto nuova** omologata in UE ha l'eCall: in caso di incidente grave chiama il 112 da sola" >}}
@@ -49,7 +49,7 @@ L'ultimo capitolo lo scrive l'automobile. Dal **31 marzo 2018** ogni auto nuova 
 Dal centralino con le operatrici all'auto che chiama mentre tu non puoi: un secolo esatto di evoluzione, sempre con la stessa missione — **accorciare i minuti** tra l'emergenza e il soccorso. Perché nei soccorsi i minuti non sono tempo: sono probabilità di sopravvivenza.
 {{< /dossier-scena >}}
 
-{{< dossier-scena id="uso" image="/images/2026-04-19-toscani-docenza-sala-operativa-lazio.webp" alt="I pannelli rossi Emergenza 112 nell'aula della Sala Operativa" align="right" kicker="La parte tua" title="Usarlo bene<br>è metà del soccorso" credito="Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma" >}}
+{{< dossier-scena id="uso" image="/images/dossier/112-telefono-disco.webp" alt="Il telefono a disco rotante: comporre un numero richiedeva tempo, oggi tre cifre bastano" align="right" kicker="La parte tua" title="Usarlo bene<br>è metà del soccorso" credito="Telefono a disco W49 · foto Raimond Spekking · CC BY-SA 4.0, via Wikimedia Commons" >}}
 Il numero unico funziona se lo usiamo bene. Tre regole. **Chiama per le emergenze vere**: vita in pericolo, incendio, malore grave, reato in corso — ogni chiamata futile occupa la linea di chi sta morendo. **Rispondi alle domande** dell'operatore senza riagganciare: mentre parli, il soccorso è spesso già in viaggio; le domande non lo ritardano, lo guidano. **Non riagganciare mai per primo.**
 
 E per tutto ciò che è urgente ma non è un'emergenza? Per le segnalazioni di protezione civile non urgenti c'è la **Sala Operativa regionale (803 555)**; per il nostro Gruppo valgono i [contatti ordinari](/contatti/). Il volontariato, ricordalo, **non si attiva con una telefonata diretta**: si attiva attraverso il sistema. Il numero dell'emergenza resta uno.
@@ -62,7 +62,7 @@ E tienilo per quello che è: il numero dei momenti peggiori, da proteggere usand
 {{< /dossier-chiusura >}}
 
 {{< dossier-fonti >}}
-- **Immagini:** aula della Sala Operativa della Regione Lazio con la segnaletica Emergenza 112 (**foto del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**) · operatrici al centralino Bell System (National Archives and Records Administration · pubblico dominio, via Wikimedia Commons).
+- **Immagini:** aula della Sala Operativa della Regione Lazio con la segnaletica Emergenza 112 (**foto del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**) · operatrici al centralino Bell System (National Archives and Records Administration · pubblico dominio) · telefono a disco W49 (Raimond Spekking · CC BY-SA 4.0). Via Wikimedia Commons.
 - **Fonti:** [Decisione del Consiglio 91/396/CEE](https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:31991D0396) (istituzione del numero unico europeo) · [Regolamento (UE) 2015/758](https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32015R0758) (eCall obbligatorio sulle nuove omologazioni dal 31 marzo 2018) · [NUE 112 — il servizio e l'app Where Are U](https://www.areu.lombardia.it/web/home/app-where-are-u) · [EENA — European Emergency Number Association](https://eena.org/) (AML, accessibilità del 112) · per il Lazio: NUE 112 operativo dal 2017 (Regione Lazio).
 - **Sul nostro sito:** [Numeri utili](/numeri-utili/) · [Cosa fare adesso](/cosa-fare-adesso/) · [Dossier: Il messaggio che salva](/dossier/il-messaggio-che-salva/) · [Dossier: Radio che salvano](/dossier/radio-che-salvano/) · [L'assistente virtuale](/assistente/).
 - Dossier a cura del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**. Guida divulgativa: in emergenza chiama il **112**.

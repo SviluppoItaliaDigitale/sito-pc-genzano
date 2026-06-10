@@ -29,7 +29,7 @@ Dietro ogni segnalazione in macerie ci sono **anni di addestramento**: obbedienz
 In Italia le unità cinofile operano nei Vigili del Fuoco e nel **volontariato organizzato**: anche nelle aule dei corsi regionali, come si vede nella foto, il collega a quattro zampe è ormai una presenza normale.
 {{< /dossier-scena >}}
 
-{{< dossier-dati id="numeri" image="/images/dossier/animali-cane-soccorso.webp" alt="Il cane da soccorso accarezzato dal conduttore" >}}
+{{< dossier-dati id="numeri" image="/images/dossier/animali-cane-decontaminazione.webp" alt="Un cane da soccorso viene lavato e decontaminato dagli operatori dopo il turno di ricerca" >}}
 {{< dossier-dato to="2016" label="La **svolta di Amatrice**: dopo il sisma del Centro Italia, portare gli animali d'affezione nelle aree di accoglienza diventa prassi organizzata, non eccezione" >}}
 {{< dossier-dato to="3" unita=" giorni" label="Le **scorte minime** di cibo e acqua per l'animale nel kit di emergenza familiare: le stesse 72 ore che valgono per noi" >}}
 {{< dossier-dato to="1" unita=" microchip" label="L'**identità** che riporta a casa un animale smarrito nel caos di un'emergenza: microchip e anagrafe aggiornata" >}}
@@ -51,7 +51,7 @@ Aggiungi una foto recente dell'animale (per cercarlo se si perde) e il recapito 
 Come per gli umani, il principio è lo stesso: ciò che prepari **prima** è l'unica cosa su cui puoi contare **durante**.
 {{< /dossier-scena >}}
 
-{{< dossier-scena id="errori" image="/images/2026-05-20-squadra-genzano-corso-base-sala-operativa-lazio.webp" alt="Il labrador da soccorso in prima fila davanti alla squadra dei volontari" align="right" kicker="Cosa non fare" title="Gli errori<br>che costano cari" credito="Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma" >}}
+{{< dossier-scena id="errori" image="/images/dossier/animali-cane-decontaminazione.webp" alt="La cura del cane da soccorso dopo il lavoro: il lavaggio di decontaminazione da parte della squadra" align="right" kicker="Cosa non fare" title="Gli errori<br>che costano cari" credito="Decontaminazione di un cane da soccorso, esercitazione Vibrant Response 2014 · foto Sgt. John Healy / U.S. Army · pubblico dominio, via Wikimedia Commons" >}}
 Tre errori ricorrono in ogni emergenza. **Non liberare gli animali "perché si salvino da soli"**: un animale domestico libero nel caos è in pericolo e crea pericolo. **Non rientrare in zone evacuate** per recuperarli di tua iniziativa: segnala la loro presenza ai soccorritori — è una richiesta legittima e prevista, e i Vigili del Fuoco recuperano anche loro. **Non dimenticarli nel piano**: la decisione su come evacuare con un cane anziano o tre gatti non si prende con l'acqua alle caviglie.
 
 E un'avvertenza che vale anche fuori dall'emergenza: in caso di animale in difficoltà su strada o di pericolo, il numero resta il **112** — sapranno attivare chi serve, dal veterinario reperibile alle squadre specializzate.
@@ -64,7 +64,7 @@ Fallo oggi: [il kit a quattro zampe](/formazione/kit-calamita/) si prepara in un
 {{< /dossier-chiusura >}}
 
 {{< dossier-fonti >}}
-- **Immagini:** cane da soccorso col conduttore dopo la ricerca, esercitazione Vibrant Response 2014 (Sgt. John Healy / U.S. Army, via DVIDS · pubblico dominio) · il corso base nella Sala Operativa regionale con cane da soccorso (**foto del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**) · alluvione in Emilia-Romagna 2023 (Cesare Barillà · CC BY-SA 4.0). Via Wikimedia Commons.
+- **Immagini:** cane da soccorso col conduttore e decontaminazione dopo la ricerca, esercitazione Vibrant Response 2014 (Sgt. John Healy / U.S. Army, via DVIDS · pubblico dominio) · il corso base nella Sala Operativa regionale con cane da soccorso (**foto del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**) · alluvione in Emilia-Romagna 2023 (Cesare Barillà · CC BY-SA 4.0). Via Wikimedia Commons.
 - **Fonti:** [Dipartimento della Protezione Civile — consigli per gli animali domestici in emergenza](https://www.protezionecivile.gov.it/it/) · sulle unità cinofile: Corpo Nazionale dei Vigili del Fuoco e organizzazioni di volontariato specializzate iscritte all'Elenco nazionale · l'accoglienza degli animali d'affezione nelle aree di assistenza è prassi consolidata della pianificazione post-2016 (sisma Centro Italia) · evacuazioni di animali nell'alluvione dell'Emilia-Romagna 2023: cronache e reportistica regionale.
 - **Sul nostro sito:** [Kit per cani, gatti e altri animali](/formazione/kit-calamita/) · [Piano familiare](/piano-familiare/) · [Kit di emergenza](/rischi-prevenzione/kit-emergenza/) · [Dossier: L'esercito gentile](/dossier/l-esercito-gentile-volontariato/).
 - Dossier a cura del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**. Guida divulgativa: in emergenza chiama il **112**.
