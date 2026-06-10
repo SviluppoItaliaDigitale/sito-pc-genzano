@@ -44,6 +44,7 @@ permissions:
 jobs:
   audit:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - name: "📥 Checkout"
         uses: actions/checkout@v5
@@ -51,7 +52,7 @@ jobs:
       - name: "🔧 Setup Hugo"
         uses: peaceiris/actions-hugo@v3.2.1
         with:
-          hugo-version: "0.143.1"
+          hugo-version: "0.154.5"
           extended: true
 
       - name: "🏗️ Build sito (per smoke test rendering)"

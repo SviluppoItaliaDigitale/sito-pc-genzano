@@ -19,6 +19,7 @@ on:
 permissions:
   contents: write
   actions: write
+  issues: write
 
 concurrency:
   group: "aggiorna-stato-sistema"
@@ -94,6 +95,111 @@ jobs:
           echo "--- data/stato-sistema.json ---"
           cat data/stato-sistema.json
           python3 -c "import json; json.load(open('data/stato-sistema.json'))" && echo "JSON valido"
+
+      - name: "🩺 Controlli di salute giornalieri (watchdog universale)"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -uo pipefail
+          # ------------------------------------------------------------
+          # 1) WATCHDOG UNIVERSALE: workflow falliti nelle ultime 24h.
+          #    notifica-ci-fallita.yml copre solo 4 workflow critici in
+          #    tempo reale; questo scan giornaliero copre TUTTI gli altri.
+          #    Storia: 5 workflow del lunedì sono rimasti rossi per
+          #    settimane senza che nessuno se ne accorgesse (10/06/2026).
+          # ------------------------------------------------------------
+          PROBLEMI=""
+          FALLITI=$(gh run list --repo "$REPO" --status failure \
+                      --created "$(date -u -d '24 hours ago' +%Y-%m-%dT%H:%M:%S)Z..$(date -u +%Y-%m-%dT%H:%M:%S)Z" \
+                      --limit 100 --json name,workflowName,url \
+                      --jq '[.[] | .workflowName] | unique | .[]' 2>/dev/null || true)
+          if [ -n "$FALLITI" ]; then
+            PROBLEMI="${PROBLEMI}### Workflow con run falliti nelle ultime 24 ore\n\n"
+            while IFS= read -r wf; do
+              [ -z "$wf" ] && continue
+              PROBLEMI="${PROBLEMI}- **${wf}** — controllare il log nella tab Actions\n"
+            done <<< "$FALLITI"
+            PROBLEMI="${PROBLEMI}\n"
+          fi
+
+          # ------------------------------------------------------------
+          # 2) DEAD-MAN CHECK della catena cron-job.org → check-allerta.
+          #    Se cron-job.org smette di chiamare, check-allerta degrada
+          #    da ~288 a 24 run/giorno e la latenza allerta sale a ~1h
+          #    senza alcun errore visibile. Attesi ~24 run in 2h.
+          # ------------------------------------------------------------
+          RUN_2H=$(gh run list --repo "$REPO" --workflow=check-allerta.yml \
+                     --created "$(date -u -d '2 hours ago' +%Y-%m-%dT%H:%M:%S)Z..$(date -u +%Y-%m-%dT%H:%M:%S)Z" \
+                     --limit 100 --json databaseId --jq 'length' 2>/dev/null || echo 0)
+          if [ "${RUN_2H:-0}" -lt 10 ]; then
+            PROBLEMI="${PROBLEMI}### Catena allerta degradata\n\nSolo **${RUN_2H} run** di check-allerta nelle ultime 2 ore (attesi ~24 dal dispatch cron-job.org ogni 5 min). Verificare: stato di cron-job.org, validità del PAT (issue di controllo-scadenza-pat), raggiungibilità API GitHub.\n\n"
+          fi
+
+          # ------------------------------------------------------------
+          # 3) SCADENZA CERTIFICATO SSL del dominio di produzione.
+          #    Aruba di norma rinnova da sé, ma un rinnovo mancato su un
+          #    sito di protezione civile va saputo prima dei cittadini.
+          # ------------------------------------------------------------
+          FINE_CERT=$(echo | timeout 20 openssl s_client -servername www.protezionecivilegenzano.it \
+                        -connect www.protezionecivilegenzano.it:443 2>/dev/null \
+                      | openssl x509 -noout -enddate 2>/dev/null | cut -d= -f2 || true)
+          if [ -n "$FINE_CERT" ]; then
+            TS_CERT=$(date -u -d "$FINE_CERT" +%s 2>/dev/null || echo "")
+            if [ -n "$TS_CERT" ]; then
+              GIORNI=$(( (TS_CERT - $(date -u +%s)) / 86400 ))
+              echo "Certificato SSL: scade fra $GIORNI giorni ($FINE_CERT)"
+              if [ "$GIORNI" -lt 21 ]; then
+                PROBLEMI="${PROBLEMI}### Certificato SSL in scadenza\n\nIl certificato di www.protezionecivilegenzano.it scade fra **${GIORNI} giorni** (${FINE_CERT}). Verificare il rinnovo automatico sul pannello Aruba.\n\n"
+              fi
+            fi
+          else
+            echo "::warning::Impossibile leggere il certificato SSL (rete?)"
+          fi
+
+          # ------------------------------------------------------------
+          # 4) CRESCITA DEL REPO (podcast/presentazioni/pagefind in git).
+          #    Sopra 3 GB va pianificata la migrazione audio→Drive già
+          #    prevista, PRIMA che un limite GitHub blocchi un push
+          #    durante una pubblicazione urgente.
+          # ------------------------------------------------------------
+          SIZE_KB=$(gh api "repos/$REPO" --jq .size 2>/dev/null || echo 0)
+          SIZE_GB=$(( SIZE_KB / 1024 / 1024 ))
+          echo "Dimensione repo (API GitHub): ${SIZE_GB} GB (${SIZE_KB} KB)"
+          if [ "$SIZE_GB" -ge 3 ]; then
+            PROBLEMI="${PROBLEMI}### Repository oltre i 3 GB\n\nIl repo pesa **${SIZE_GB} GB**. Pianificare la migrazione dei podcast su Google Drive (decisione già prevista) e valutare di smettere di committare static/pagefind/ (rigenerabile in deploy).\n\n"
+          fi
+
+          # ------------------------------------------------------------
+          # Issue unica aggiornata in-place (titolo stabile).
+          # ------------------------------------------------------------
+          TITLE="🩺 Salute del sistema — controlli giornalieri"
+          if [ -z "$PROBLEMI" ]; then
+            echo "Tutti i controlli di salute OK."
+            # se esiste un'issue aperta e oggi è tutto OK, chiudila
+            NUM=$(gh issue list --repo "$REPO" --state open --limit 100 \
+                    --json number,title \
+                    --jq ".[] | select(.title == \"$TITLE\") | .number" | head -1 || true)
+            if [ -n "$NUM" ]; then
+              gh issue close "$NUM" --repo "$REPO" \
+                --comment "Controlli del $(date -u +%Y-%m-%d): tutto rientrato, nessun problema rilevato." || true
+            fi
+            exit 0
+          fi
+          BODY=$(printf "_Controlli del %s (aggiornati ogni giorno, issue unica in-place)._\n\n%b\n---\n_Issue del watchdog giornaliero in aggiorna-stato-sistema.yml. Si chiude da sola quando tutti i controlli tornano OK._" "$(date -u +%Y-%m-%d)" "$PROBLEMI")
+          NUM=$(gh issue list --repo "$REPO" --state open --limit 100 \
+                  --json number,title \
+                  --jq ".[] | select(.title == \"$TITLE\") | .number" | head -1 || true)
+          if [ -n "$NUM" ]; then
+            gh issue edit "$NUM" --repo "$REPO" --body "$BODY"
+            echo "Issue #$NUM aggiornata."
+          else
+            gh label create "salute-sistema" --color "B60205" \
+              --description "Controlli giornalieri di salute del sistema" 2>/dev/null || true
+            gh issue create --repo "$REPO" --title "$TITLE" --body "$BODY" \
+              --label automazione --label salute-sistema
+            echo "Issue di salute creata."
+          fi
 
       - name: "💾 Commit se cambiato + ri-trigger deploy"
         env:
