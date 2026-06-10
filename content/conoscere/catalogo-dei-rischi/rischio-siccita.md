@@ -60,6 +60,7 @@ Anche i comportamenti quotidiani contano. Ridurre gli sprechi domestici, segnala
 
 ## Approfondimenti sul nostro sito
 
+- [Siccità e crisi idrica: cosa fare](/rischi-prevenzione/siccita/) — la pagina operativa con i comportamenti di risparmio idrico e autoprotezione.
 - [Giornata mondiale dell'acqua: la rete idrica e la sua sicurezza](/comunicazioni/2026-03-22-giornata-mondiale-acqua-rete-idrica-sicurezza/).
 - [Il catalogo dei rischi](/conoscere/catalogo-dei-rischi/) — tutti i rischi spiegati come materia.
 - [Le quattro fasi della protezione civile](/conoscere/le-quattro-fasi/) — il ciclo del rischio.

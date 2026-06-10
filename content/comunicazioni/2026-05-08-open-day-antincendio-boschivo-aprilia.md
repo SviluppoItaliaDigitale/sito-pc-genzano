@@ -8,6 +8,7 @@ autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-08-open-day-antincendio-boschivo-aprilia.webp"
 image_alt: "Cover dell'articolo: I nostri volontari all'Open Day antincendio boschivo del 9 maggio ad Aprilia"
 scadenza: "2026-05-09"
+archiviato: true
 area: "Aprilia (LT)"
 allegati: []
 draft: false

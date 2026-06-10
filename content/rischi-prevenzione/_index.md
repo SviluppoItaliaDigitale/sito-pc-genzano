@@ -70,6 +70,10 @@ Consulta la scheda completa del rischio che ti interessa.
 | Incendio | Fumo, fiamme, incendio boschivo o urbano | [Rischio incendio](/rischi-prevenzione/rischio-incendio/) |
 | Caldo intenso | Ondate di calore, fragilità, bambini, anziani e animali | [Caldo e ondate di calore](/rischi-prevenzione/ondate-di-calore/) |
 | Blackout | Mancanza di corrente, dispositivi elettrici, sicurezza domestica | [Blackout](/rischi-prevenzione/blackout/) |
+| Siccità e crisi idrica | Ordinanze sull'uso dell'acqua, risparmio idrico, sospensioni dell'erogazione | [Siccità e crisi idrica](/rischi-prevenzione/siccita/) |
+| Maremoto | Cosa fare al mare se la terra trema o il mare si ritira | [Maremoto: cosa fare al mare](/rischi-prevenzione/maremoto/) |
+| Incidente chimico-industriale | Nube tossica, incidente con merci pericolose, riparo al chiuso | [Rischio chimico-industriale](/rischi-prevenzione/rischio-industriale/) |
+| Emergenza nucleare-radiologica | Riparo al chiuso, iodoprofilassi solo su indicazione ufficiale | [Rischio nucleare e radiologico](/rischi-prevenzione/rischio-nucleare-radiologico/) |
 | Evacuazione | Uscita rapida da casa o scuola, kit, aree di attesa | [Kit di emergenza ed evacuazione](/rischi-prevenzione/kit-emergenza/) |
 
 ## Kit di emergenza essenziale

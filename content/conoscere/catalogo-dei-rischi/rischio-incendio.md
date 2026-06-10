@@ -53,7 +53,7 @@ Significa che la prevenzione dei comportamenti è la prima difesa: ne parliamo a
 
 ## La campagna AIB e la previsione del pericolo
 
-In Italia l'attività di **lotta agli incendi boschivi (AIB)** si concentra nella **campagna estiva**, di norma da giugno a settembre, quando la vegetazione è più secca. È il periodo in cui il volontariato di protezione civile, insieme ai Vigili del Fuoco e alle squadre regionali, intensifica la sorveglianza del territorio. Il nostro Gruppo vi partecipa: lo raccontiamo nelle schede sull'[avvio della campagna AIB nel Lazio](/comunicazioni/2026-06-01-avvio-campagna-aib-lazio-2026/) e sulle [attrezzature e tecniche di attacco](/comunicazioni/2026-04-11-antincendio-boschivo-triangolo-fuoco-attrezzature-tecniche-attacco/).
+In Italia l'attività di **lotta agli incendi boschivi (AIB)** si concentra nella **campagna estiva**, di norma da giugno a settembre, quando la vegetazione è più secca. È il periodo in cui il volontariato di protezione civile, insieme ai Vigili del Fuoco e alle squadre regionali, intensifica la sorveglianza del territorio. Il nostro Gruppo vi partecipa: lo raccontiamo nelle schede sul [primo mese della campagna AIB 2026](/comunicazioni/2026-06-30-bilancio-primo-mese-aib-2026/) e sulle [attrezzature e tecniche di attacco](/comunicazioni/2026-04-11-antincendio-boschivo-triangolo-fuoco-attrezzature-tecniche-attacco/).
 
 Ogni giorno, durante la campagna, il **Centro Funzionale Regionale del Lazio** pubblica il **Bollettino di pericolosità da incendi boschivi**, elaborato con il modello previsionale **RISICO** sviluppato dalla **Fondazione CIMA**. Il bollettino stima il pericolo per ciascuna zona di allerta con quattro livelli — **basso, medio, moderato, elevato** —, ai quali il nostro sito associa i colori verde, giallo, arancione e rosso. Il territorio di **Genzano di Roma rientra nella zona AIB 9** (Castelli Romani). Il nostro sito riporta automaticamente il livello aggiornato nella barra di allerta della homepage e nel [Cruscotto del territorio](/cruscotto/).
 
@@ -76,7 +76,7 @@ Il volontariato di protezione civile, come il nostro Gruppo, contribuisce soprat
 
 - [Rischio incendio: cosa fare](/rischi-prevenzione/rischio-incendio/) — la pagina operativa con i comportamenti di autoprotezione.
 - [Il triangolo del fuoco e la prevenzione](/comunicazioni/2026-04-13-triangolo-del-fuoco-prevenzione-incendi/).
-- [Avvio della campagna AIB nel Lazio](/comunicazioni/2026-06-01-avvio-campagna-aib-lazio-2026/) e [attrezzature e tecniche di attacco](/comunicazioni/2026-04-11-antincendio-boschivo-triangolo-fuoco-attrezzature-tecniche-attacco/).
+- [Primo mese di campagna AIB: il punto al 30 giugno](/comunicazioni/2026-06-30-bilancio-primo-mese-aib-2026/) e [attrezzature e tecniche di attacco](/comunicazioni/2026-04-11-antincendio-boschivo-triangolo-fuoco-attrezzature-tecniche-attacco/).
 - [Le quattro fasi della protezione civile](/conoscere/le-quattro-fasi/) e il [Cruscotto del territorio](/cruscotto/).
 
 ## Per approfondire — fonti istituzionali
