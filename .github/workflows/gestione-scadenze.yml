@@ -36,7 +36,10 @@ jobs:
           COUNT_NO_ARCHIVED=0
 
           for f in content/comunicazioni/*.md; do
-            scad=$(grep -E "^scadenza:" "$f" 2>/dev/null | head -1 | sed 's/^scadenza:\s*"\?\([^"]*\)"\?\s*$/\1/' | tr -d '"')
+            # || true: _index.md non ha "scadenza:" e grep esce 1 → con la
+            # shell -e di default + pipefail il job moriva qui senza output
+            # (workflow rosso 4/4 run dalla nascita, audit del 10/06/2026).
+            scad=$(grep -E "^scadenza:" "$f" 2>/dev/null | head -1 | sed 's/^scadenza:\s*"\?\([^"]*\)"\?\s*$/\1/' | tr -d '"' || true)
             [ -z "$scad" ] && continue
             [ "$scad" = "" ] && continue
             # Confronto stringa lessicografico (AAAA-MM-GG)
@@ -86,6 +89,10 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -euo pipefail
+          # Label garantita (idempotente): senza, gh issue create fallisce
+          # con "could not add label" e il job muore (audit 10/06/2026).
+          gh label create "scadenze" --color "D93F0B" \
+            --description "Articoli con scadenza superata" 2>/dev/null || true
           TITLE="Articoli con scadenza superata: ${{ steps.sweep.outputs.no_archived }} da archiviare"
           EXISTING=$(gh issue list --label "automazione" --label "scadenze" --state open --json number --jq '.[0].number // empty')
           if [ -n "$EXISTING" ]; then

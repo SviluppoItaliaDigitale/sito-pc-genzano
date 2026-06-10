@@ -1,23 +1,27 @@
 # ============================================================
 # Workflow: Audit Accessibilità Automatico con Lighthouse
-# Si attiva dopo ogni deploy riuscito
+# Schedulato 2 volte al giorno (cambio del 10/06/2026): prima
+# girava dopo OGNI deploy (~20-40 run/giorno con i deploy meteo
+# coalescati), misurando sempre le stesse 3 pagine senza
+# informazione nuova. La verifica di propagazione di ogni
+# singolo deploy resta allo smoke-test post-deploy.
 # ============================================================
 name: "♿ Audit Accessibilità"
 
 on:
-  # Si attiva quando il workflow di deploy è completato
-  workflow_run:
-    workflows: ["🚀 Build e Deploy"]
-    types:
-      - completed
+  schedule:
+    - cron: '19 6,18 * * *'   # 2 volte al giorno, fuori dai picchi
 
   # Permette esecuzione manuale
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
+    timeout-minutes: 20
     steps:
       - name: "📥 Checkout"
         uses: actions/checkout@v5

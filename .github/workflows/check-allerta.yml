@@ -30,9 +30,17 @@ permissions:
   contents: write
   actions: write
 
+# Con 12 run/ora (cron-job.org ogni 5 min) due run possono sovrapporsi
+# sul commit/push. In coda, non cancellati: un run di allerta non si
+# uccide mai (potrebbe essere quello che rileva il cambio livello).
+concurrency:
+  group: check-allerta
+  cancel-in-progress: false
+
 jobs:
   check-allerta:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: "📥 Checkout"
         uses: actions/checkout@v5

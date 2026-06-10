@@ -48,6 +48,10 @@ jobs:
         run: |
           set -euo pipefail
           TITLE="Glossario: sigle ricorrenti non ancora coperte"
+          # Label garantita (idempotente): senza, gh issue create fallisce
+          # con "could not add label" e il job muore (audit 10/06/2026).
+          gh label create "glossario" --color "1D76DB" \
+            --description "Copertura glossario inline" 2>/dev/null || true
           EXISTING=$(gh issue list --label "automazione" --label "glossario" --state open --json number --jq '.[0].number // empty')
           if [ -n "$EXISTING" ]; then
             gh issue comment "$EXISTING" --body-file /tmp/issue-body.md
