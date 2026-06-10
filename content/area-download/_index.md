@@ -53,7 +53,7 @@ In questa sezione puoi consultare e scaricare documenti relativi all'attività d
 
 | Documento | Formato |
 |---|---|
-| [Il sito istituzionale: struttura e contenuti (presentazione)](/manuali/presentazione-struttura-sito.pdf) | PDF · 2,2 MB |
+| [Il sito istituzionale: struttura e contenuti (presentazione)](/manuali/presentazione-struttura-sito.pdf) | PDF · 2,4 MB |
 
 <p class="small text-muted mb-4">Slide di presentazione della struttura, dei contenuti, dell'accessibilità e delle fonti del portale del Gruppo Comunale, pensate per cittadini, scuole ed enti. Aggiornata a ogni evoluzione del sito.</p>
 

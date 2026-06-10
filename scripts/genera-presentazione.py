@@ -347,6 +347,15 @@ def icon_png(name, rgb=(255, 255, 255)):
 def _icon_for(title):
     t = title.lower()
     table = [
+        # sezioni aggiunte di recente (priorità sui match più generici sotto)
+        ("scatta un'allerta", "broadcast"),
+        ("lanterna", "lightbulb-fill"),
+        ("quanto sei preparato", "clipboard-check-fill"),
+        ("un minuto", "stopwatch-fill"),
+        ("addestramento", "cone-striped"),
+        ("enti e le scuole", "diagram-3-fill"),
+        ("materiali pronti", "collection-play-fill"),
+        ("metodo editoriale", "patch-check-fill"),
         ("rischi e prevenzione", "exclamation-triangle-fill"),
         ("estensione digitale", "diagram-3-fill"),
         ("allerte", "cloud-lightning-rain-fill"),
@@ -527,17 +536,19 @@ def slide_rischi(num):
     risks = [("Sismico", RGBColor(0xB4, 0x53, 0x09)), ("Idrogeologico", RGBColor(0x03, 0x69, 0xA1)),
              ("Incendi boschivi", RGBColor(0xC1, 0x12, 0x1F)), ("Ondate di calore", RGBColor(0xEA, 0x58, 0x0C)),
              ("Vento forte", RGBColor(0x0E, 0x74, 0x90)), ("Temporali intensi", RGBColor(0x43, 0x38, 0xCA)),
-             ("Blackout", RGBColor(0x47, 0x55, 0x69)), ("Vulcanico (Colli Albani)", RGBColor(0x7F, 0x1D, 0x1D))]
-    x0, w, gap, y0, h, vg = 0.85, 2.85, 0.18, 2.85, 1.45, 0.3
+             ("Blackout", RGBColor(0x47, 0x55, 0x69)), ("Vulcanico (Colli Albani)", RGBColor(0x7F, 0x1D, 0x1D)),
+             ("Maremoto", RGBColor(0x15, 0x6C, 0x88)), ("Chimico-industriale", RGBColor(0x6B, 0x46, 0x0F)),
+             ("Nucleare-radiologico", RGBColor(0x55, 0x53, 0x0A)), ("Siccità", RGBColor(0xA1, 0x62, 0x07))]
+    x0, w, gap, y0, h, vg = 0.85, 2.85, 0.18, 2.62, 1.10, 0.18
     for i, (t, c) in enumerate(risks):
         col, row = i % 4, i // 4
         b = shp(s, MSO_SHAPE.ROUNDED_RECTANGLE, Inches(x0 + col * (w + gap)),
                 Inches(y0 + row * (h + vg)), Inches(w), Inches(h), c, shadow=True)
         grad_fill(b, _lighten(c, 1.16), _darken(c, 0.74), ang=90)
-        put(b, [(t, 15, WHITE, True)])
-    fn = textbox(s, Inches(0.85), Inches(6.35), Inches(11.6), Inches(0.4))
+        put(b, [(t, 14, WHITE, True)])
+    fn = textbox(s, Inches(0.85), Inches(6.42), Inches(11.6), Inches(0.4))
     setrun(fn.paragraphs[0].add_run(),
-           "Fonti: DPC «Io non rischio» · INGV · ISPRA · CNR-IRPI · ReLUIS.", 11, GREY, italic=True)
+           "Fonti: DPC «Io non rischio» · INGV · ISPRA · CNR-IRPI · ReLUIS · Vigili del Fuoco.", 11, GREY, italic=True)
     return s
 
 
@@ -607,11 +618,23 @@ content("Cosa fare adesso e assistente guidato", [
 
 slide_allerte(N())
 
+content("Cosa succede quando scatta un'allerta", [
+    "Il percorso completo, in linguaggio semplice: dal bollettino nazionale fino al cittadino.",
+    "Chi decide il livello, chi attiva il Centro Operativo Comunale, chi comunica.",
+    "Cosa fare e cosa non aspettarsi dal volontariato: educazione civica per ridurre richieste improprie.",
+], N(), fonti="DPC · Centro Funzionale Regionale del Lazio")
+
 content("Modalità emergenza del sito", [
     "In emergenza il sito mostra un avviso ben visibile su ogni pagina.",
     "Pagina di emergenza ultraleggera per rete debole o congestionata.",
     "Informazioni essenziali e numeri utili messi in primo piano.",
     "Progettata per i momenti di reale criticità.",
+], N())
+
+content("Modalità Lanterna — strumenti per il buio", [
+    "Pagina ultraleggera pensata per poca batteria, rete debole e ore notturne.",
+    "Torcia, bussola e schermo sempre acceso, direttamente sul dispositivo.",
+    "Il numero 112 sempre a portata di mano.",
 ], N())
 
 slide_cruscotto(N())
@@ -642,6 +665,18 @@ content("Piano familiare di emergenza", [
     "Guida passo-passo per preparare il nucleo domestico.",
     "Versione compilabile e stampabile.",
     "Punti di ritrovo, contatti e kit essenziale.",
+], N())
+
+content("Quanto sei preparato — autovalutazione", [
+    "Quiz non giudicante: le domande si adattano alla tua situazione (solo o in famiglia, casa o appartamento, animali).",
+    "Alla fine, un profilo di preparazione e un piano d'azione su misura.",
+    "Nessuna risposta inviata o salvata online: tutto resta sul tuo dispositivo.",
+], N())
+
+content("Un minuto per proteggerti", [
+    "Sei micro-schede di autoprotezione: torcia, 112, punto di ritrovo, kit auto, terremoto per bambini, documenti.",
+    "Azioni concrete che si fanno in un minuto, una per volta, senza spese.",
+    "Stampabili in formato A5 per casa, sede, bacheche scolastiche e banchetti informativi.",
 ], N())
 
 content("Kit pronti per situazioni vulnerabili", [
@@ -758,6 +793,18 @@ content("Diventa volontario", [
     "Il valore del volontariato per la comunità.",
 ], N())
 
+content("Addestramento e buone pratiche", [
+    "L'addestramento è una pratica continua, non un evento occasionale.",
+    "Turni operativi, prove sui mezzi ed esercitazioni programmate con altri Gruppi e Coordinamenti.",
+    "Una vetrina educativa di come ci si prepara, non un diario operativo.",
+], N())
+
+content("Per gli enti e le scuole", [
+    "Pagina dedicata a scuole, enti e altri gruppi di protezione civile dei Castelli Romani.",
+    "Cultura del rischio nelle scuole di ogni ordine e grado, anche nell'Educazione Civica.",
+    "Collaborazione con il Comune e con la rete del volontariato del territorio.",
+], N())
+
 content("Affiliazioni e riconoscimenti europei", [
     "Quality Label del Corpo europeo di solidarietà (European Solidarity Corps) — Commissione europea.",
     "Codice di accreditamento dell'organizzazione: E10435833 (sempre accanto al logo, Reg. UE 2021/888).",
@@ -794,6 +841,12 @@ content("Area download", [
     "Un punto unico per atti, piani e materiali del Gruppo.",
 ], N())
 
+content("Materiali pronti da scaricare", [
+    "Podcast, infografiche, quiz e flashcard sui rischi del territorio.",
+    "Prodotti a partire da fonti istituzionali e verificati prima della pubblicazione.",
+    "Liberamente scaricabili e riutilizzabili per scuola, formazione e divulgazione.",
+], N(), fonti="DPC · INGV · ISPRA · Centro Funzionale Regionale del Lazio · ISO")
+
 content("Strumenti in tempo reale", [
     "Hub dei servizi di monitoraggio del territorio.",
     "Meteo, sismico, idrogeologico, incendi, qualità dell'aria, viabilità.",
@@ -810,6 +863,12 @@ content("Open data e stato del sito", [
     "Dati aperti riutilizzabili dalla cittadinanza.",
     "Pagina di trasparenza sullo stato tecnico del sito.",
     "Riuso libero, secondo il principio di trasparenza della PA.",
+], N())
+
+content("Metodo editoriale — come scriviamo e verifichiamo", [
+    "Fonti ufficiali sempre citate; ogni dato è verificabile da cittadini ed enti.",
+    "Controllo della vigenza delle norme e frequenza di aggiornamento dichiarata.",
+    "Correzioni tracciate: la trasparenza del metodo è parte della qualità.",
 ], N())
 
 content("Pagine legali e trasparenza", [
