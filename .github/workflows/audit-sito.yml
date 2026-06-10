@@ -1196,15 +1196,36 @@ jobs:
               for url in $SAMPLE_URLS; do
                 short=$(echo "$url" | sed 's|https://www.protezionecivilegenzano.it||')
 
+                # /emergenza/ è la pagina LITE: per design non ha chrome
+                # (niente navbar/footer/utility-bar, shortcode
+                # pagina-emergenza-lite) e si rigenera SOLO quando cambia
+                # data/allerta.json — non a ogni deploy. Quindi: niente
+                # marker chrome e finestra Last-Modified di 26h (deve
+                # comunque rinfrescarsi almeno ~4 volte/giorno con i commit
+                # ultimo_controllo di check-allerta). Fix falso positivo
+                # ricorrente del 10/06/2026.
+                IS_LITE=0
+                [ "$short" = "/emergenza/" ] && IS_LITE=1
+
                 # === (a) Last-Modified HTTP check ===
                 lm=$(curl -sI --max-time 10 -H "Cache-Control: no-cache" "$url" 2>/dev/null | grep -i "^last-modified:" | sed 's/last-modified: *//I' | tr -d '\r' | head -1)
                 if [ -n "$lm" ]; then
                   lm_epoch=$(date -u -d "$lm" +%s 2>/dev/null || echo "0")
                   if [ "$lm_epoch" -gt 0 ]; then
-                    delta=$((LATEST_DEPLOY_EPOCH - lm_epoch))
-                    if [ "$delta" -gt "$THRESHOLD" ]; then
-                      hrs=$((delta / 3600))
-                      STALE_PAGES="${STALE_PAGES}- \`$short\` Last-Modified \`$lm\` (~${hrs}h prima dell'ultimo deploy success). Probabile file stantio su Aruba.\n"
+                    if [ "$IS_LITE" = "1" ]; then
+                      # confronto con ADESSO (non con l'ultimo deploy): basta
+                      # che la pagina si sia rigenerata nelle ultime 26 ore
+                      delta=$((NOW_EPOCH - lm_epoch))
+                      if [ "$delta" -gt 93600 ]; then
+                        hrs=$((delta / 3600))
+                        STALE_PAGES="${STALE_PAGES}- \`$short\` (pagina lite) Last-Modified \`$lm\` (~${hrs}h fa: la pagina dovrebbe rigenerarsi a ogni commit di check-allerta, qualcosa è fermo).\n"
+                      fi
+                    else
+                      delta=$((LATEST_DEPLOY_EPOCH - lm_epoch))
+                      if [ "$delta" -gt "$THRESHOLD" ]; then
+                        hrs=$((delta / 3600))
+                        STALE_PAGES="${STALE_PAGES}- \`$short\` Last-Modified \`$lm\` (~${hrs}h prima dell'ultimo deploy success). Probabile file stantio su Aruba.\n"
+                      fi
                     fi
                   fi
                 fi
@@ -1213,7 +1234,8 @@ jobs:
                 body=$(curl -sL --max-time 10 -H "Cache-Control: no-cache" "$url" 2>/dev/null)
                 if [ -n "$body" ]; then
                   # 1. canonical-dropdown: deve esserci il dropdown "Per il Cittadino"
-                  if [ "$(echo "$body" | grep -c 'navDropdown-per-il-cittadino')" -lt 1 ]; then
+                  #    (skip sulla pagina lite: per design non ha la navbar)
+                  if [ "$IS_LITE" = "0" ] && [ "$(echo "$body" | grep -c 'navDropdown-per-il-cittadino')" -lt 1 ]; then
                     SEMANTIC_FAIL="${SEMANTIC_FAIL}- \`$short\` manca \`navDropdown-per-il-cittadino\` nel body (header canonico Hugo non renderizzato — refactoring menu del 10 maggio 2026 non riflesso).\n"
                   fi
                   # 2. giochi-legacy: NON deve esserci la voce menu flat "Giochi"
