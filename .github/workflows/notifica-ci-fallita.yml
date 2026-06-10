@@ -37,19 +37,32 @@ jobs:
           WF_SHA: ${{ github.event.workflow_run.head_sha }}
         run: |
           set -euo pipefail
+          # Retry sulle chiamate gh: il 10/06/2026 un 401 transitorio
+          # dell'API GitHub (lo stesso che aveva fatto fallire il deploy
+          # da segnalare) ha buttato giù ANCHE il watchdog — il guardiano
+          # non deve morire del male che sorveglia. 3 tentativi, pausa 30s.
+          ghr() {
+            local i
+            for i in 1 2 3; do
+              if gh "$@"; then return 0; fi
+              echo "gh fallito (tentativo $i/3), riprovo tra 30s..." >&2
+              sleep 30
+            done
+            return 1
+          }
           TITLE="🚨 Workflow fallito: ${WF_NAME}"
           STAMP="$(date -u '+%Y-%m-%d %H:%M UTC')"
           SHORT="${WF_SHA:0:8}"
           # cerca un'issue aperta con questo titolo esatto (dedup, niente spam)
-          NUM="$(gh issue list --repo "$REPO" --state open --limit 100 \
+          NUM="$(ghr issue list --repo "$REPO" --state open --limit 100 \
                    --json number,title -q '.[] | [.number, .title] | @tsv' \
                  | grep -F "$TITLE" | head -1 | cut -f1 || true)"
           if [ -n "$NUM" ]; then
-            gh issue comment "$NUM" --repo "$REPO" --body \
+            ghr issue comment "$NUM" --repo "$REPO" --body \
               "🔁 Ancora fallito — run: ${WF_URL} (commit \`${SHORT}\`, ${STAMP})."
             echo "Issue #$NUM aggiornata."
           else
-            gh issue create --repo "$REPO" \
+            ghr issue create --repo "$REPO" \
               --title "$TITLE" \
               --label "automazione,urgente" \
               --body "Il workflow **${WF_NAME}** è fallito su \`main\`.
@@ -64,7 +77,7 @@ jobs:
             # Assegna l'issue al proprietario per la notifica email diretta
             # (non bloccante: se l'owner non è assegnabile, l'issue resta comunque
             # creata e chi osserva il repo riceve ugualmente l'email).
-            NUM_NEW="$(gh issue list --repo "$REPO" --state open --limit 100 \
+            NUM_NEW="$(ghr issue list --repo "$REPO" --state open --limit 100 \
                          --json number,title -q '.[] | [.number, .title] | @tsv' \
                        | grep -F "$TITLE" | head -1 | cut -f1 || true)"
             if [ -n "$NUM_NEW" ]; then
