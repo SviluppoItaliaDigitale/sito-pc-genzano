@@ -49,6 +49,24 @@ Il dossier resta **interamente leggibile e navigabile** senza animazioni: i cont
 3. Immagini in `static/images/dossier/` (WebP). **Solo immagini con licenza chiara** (NASA pubblico dominio, Copernicus/ESA CC BY, autori con CC) e **credito onesto** in `credito`/`cap`/`fonti`. Mai attribuire al satellite sbagliato o spacciare un'immagine per un'altra.
 4. La voce compare da sola nella landing `/dossier/`; il dossier più recente compare nel box della homepage.
 
+## 39.4-bis Regole sulle immagini (cogenti)
+
+- **Licenza chiara e credito onesto** per ogni immagine: autore + licenza nel `credito=` della scena E nella riga "Immagini:" di `dossier-fonti`. Verifica SEMPRE la pagina del file su Commons prima dell'uso (mai fidarsi del solo filename).
+- **Mai la stessa immagine più di 2 volte nello stesso dossier** — e il secondo uso solo se giustificato (eco dell'hero in un blocco dati, o scena il cui soggetto È quell'immagine). Regola nata dal feedback utente del 10/06/2026 («foto duplicate e non è bello»). Preferire sempre un'immagine alternativa idonea: stessa serie Commons già verificata (stesso autore/licenza, scatto diverso), altra immagine del pool `static/images/dossier/`, o foto NOSTRE del Gruppo (attribuzione "Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma", da GUARDARE prima di scrivere alt/caption).
+- **Punti geografici solo su mappe in proiezione** (es. `siccita-mappa-mondo.webp`, Strebe CC BY-SA), MAI su foto di emisfero/satellitari oblique: i punti finirebbero su luoghi sbagliati (incidente hotspot temporali, fix 10/06/2026).
+- Verifica automatica anti-duplicati (da lanciare prima del commit di un dossier):
+
+```bash
+python3 - <<'EOF'
+import re, glob, collections
+for f in sorted(glob.glob("content/dossier/*.md")):
+    s = open(f, encoding="utf-8").read()
+    imgs = re.findall(r'image="([^"]+)"', s) + re.findall(r'\bbase="([^"]+)"', s) + re.findall(r'\btop="([^"]+)"', s)
+    over = {k.split("/")[-1]: v for k, v in collections.Counter(imgs).items() if v > 2}
+    if over: print(f.split("/")[-1], over)
+EOF
+```
+
 ## 39.5 Menu e homepage
 
 - Menu: voce **"Dossier interattivi" → `/dossier/`** nel dropdown **Risorse**, subito dopo "Conoscere la Protezione Civile". Va tenuta sincronizzata in `hugo.toml` **e** in `static/app-shared/site-chrome.js` (menu hard-coded delle pagine statiche).
