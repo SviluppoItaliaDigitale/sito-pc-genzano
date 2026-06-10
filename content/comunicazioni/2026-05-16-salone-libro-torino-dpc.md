@@ -8,6 +8,7 @@ autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-16-salone-libro-torino-dpc.webp"
 image_alt: "Cover dell'articolo: Salone del Libro 2026 — la Protezione Civile a Torino con 'Infiniti racconti, una sola storia'"
 scadenza: "2026-05-19"
+archiviato: true
 area: "Torino"
 allegati:
   - titolo: "Programma completo dei 12 talk al padiglione DPC del Salone del Libro 2026"

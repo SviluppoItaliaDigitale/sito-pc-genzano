@@ -1,7 +1,7 @@
 ---
 title: "Caldo e Salute: l'app per i bollettini sulle ondate di calore"
-date: 2026-06-07
-description: "Arriva l'estate: l'app gratuita Caldo e Salute mostra ogni giorno il livello di rischio per il caldo nella tua città, con i bollettini ufficiali del Ministero della Salute."
+date: 2026-06-07T00:01:00+02:00
+description: "L'app gratuita Caldo e Salute mostra ogni giorno il livello di rischio caldo nella tua città, con i bollettini ufficiali del Ministero della Salute."
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"

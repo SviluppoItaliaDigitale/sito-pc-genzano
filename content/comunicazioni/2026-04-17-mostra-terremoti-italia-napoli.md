@@ -8,6 +8,7 @@ autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-17-mostra-terremoti-italia-napoli.webp"
 image_alt: "Cover dell'articolo: La mostra «Terremoti d'Italia» fa tappa a Napoli: dal 20 aprile al 9 maggio"
 scadenza: 2026-05-09
+archiviato: true
 area: "Napoli"
 allegati: []
 draft: false

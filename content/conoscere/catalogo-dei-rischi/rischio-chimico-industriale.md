@@ -51,6 +51,7 @@ A differenza di altri rischi, qui la regola di autoprotezione può essere **cont
 
 ## Approfondimenti sul nostro sito
 
+- [Rischio chimico-industriale: cosa fare](/rischi-prevenzione/rischio-industriale/) — la pagina operativa con i comportamenti di autoprotezione.
 - [Rischio chimico-industriale: cosa devono sapere i cittadini](/comunicazioni/2026-05-24-rischio-chimico-industriale-cittadini/).
 - [Seveso 1976: cinquant'anni e la direttiva europea](/comunicazioni/2026-07-10-seveso-1976-cinquant-anni-direttiva-europea/).
 - [Le quattro fasi della protezione civile](/conoscere/le-quattro-fasi/) — previsione, prevenzione, gestione, superamento.

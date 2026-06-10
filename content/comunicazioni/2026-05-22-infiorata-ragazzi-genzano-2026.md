@@ -9,6 +9,7 @@ image: "/images/2026-05-22-infiorata-ragazzi-genzano-2026.webp"
 image_alt: "Cover dell'articolo: Infiorata dei Ragazzi 2026, il Gruppo a supporto dell'evento"
 area: "Genzano di Roma"
 scadenza: "2026-06-01"
+archiviato: true
 allegati:
   - titolo: "Ordinanza Polizia Locale n. 71 del 19 maggio 2026 — viabilità Infiorata dei Ragazzi"
     url: "/allegati/2026/ordinanza-71-2026-infiorata-ragazzi-viabilita.pdf"

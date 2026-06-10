@@ -9,6 +9,7 @@ image: "/images/2026-05-22-esposizione-grandi-mezzi-soccorso-marino.webp"
 image_alt: "Cover dell'articolo: esposizione dei grandi mezzi di soccorso a Marino, presente anche Genzano"
 area: "Marino (RM)"
 scadenza: "2026-05-25"
+archiviato: true
 allegati: []
 draft: false
 ---

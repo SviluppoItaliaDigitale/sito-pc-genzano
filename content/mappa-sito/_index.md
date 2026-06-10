@@ -223,6 +223,26 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Blackout</p>
   <p class="ms-card-desc">Interruzioni elettriche prolungate, comportamenti, riferimenti.</p>
 </a>
+<a class="ms-card ms-emerg" href="/rischi-prevenzione/siccita/">
+  <div class="ms-card-icon"><i class="bi bi-droplet"></i></div>
+  <p class="ms-card-title">Siccità e crisi idrica</p>
+  <p class="ms-card-desc">Risparmio idrico, ordinanze comunali, sospensioni dell'erogazione e falda dei Colli Albani.</p>
+</a>
+<a class="ms-card ms-emerg" href="/rischi-prevenzione/maremoto/">
+  <div class="ms-card-icon"><i class="bi bi-tsunami"></i></div>
+  <p class="ms-card-title">Maremoto: cosa fare al mare</p>
+  <p class="ms-card-desc">Segnali naturali, allontanamento dalla spiaggia, sistema di allertamento SiAM e IT-alert.</p>
+</a>
+<a class="ms-card ms-emerg" href="/rischi-prevenzione/rischio-industriale/">
+  <div class="ms-card-icon"><i class="bi bi-radioactive"></i></div>
+  <p class="ms-card-title">Rischio chimico-industriale</p>
+  <p class="ms-card-desc">Riparo al chiuso, incidenti con merci pericolose, normativa Seveso e segnali di allarme.</p>
+</a>
+<a class="ms-card ms-emerg" href="/rischi-prevenzione/rischio-nucleare-radiologico/">
+  <div class="ms-card-icon"><i class="bi bi-shield-exclamation"></i></div>
+  <p class="ms-card-title">Rischio nucleare e radiologico</p>
+  <p class="ms-card-desc">Riparo al chiuso, iodoprofilassi solo su indicazione ufficiale, Piano nazionale di emergenza.</p>
+</a>
 <a class="ms-card ms-emerg" href="/rischi-prevenzione/persone-necessita-specifiche/">
   <div class="ms-card-icon"><i class="bi bi-person-arms-up"></i></div>
   <p class="ms-card-title">Persone con esigenze specifiche</p>

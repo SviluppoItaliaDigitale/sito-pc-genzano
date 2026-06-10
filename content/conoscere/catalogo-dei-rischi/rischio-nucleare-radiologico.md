@@ -50,6 +50,7 @@ Come per il rischio chimico, la regola d'oro è **seguire le indicazioni delle a
 
 ## Approfondimenti sul nostro sito
 
+- [Rischio nucleare e radiologico: cosa fare](/rischi-prevenzione/rischio-nucleare-radiologico/) — la pagina operativa con i comportamenti di autoprotezione.
 - [Tōhoku-Fukushima 2011: quando un maremoto innesca emergenze multiple](/comunicazioni/2026-03-11-tohoku-fukushima-2011-tsunami-emergenze-multiple/).
 - [Il rischio chimico-industriale e la direttiva Seveso](/conoscere/catalogo-dei-rischi/rischio-chimico-industriale/) — l'altro grande rischio antropico.
 - [Le quattro fasi della protezione civile](/conoscere/le-quattro-fasi/).
