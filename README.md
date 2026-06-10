@@ -191,6 +191,18 @@ Racconti visivi immersivi: storie che si leggono scorrendo, con immagini a tutto
 
 Pilota: **"La Terra vista dallo spazio"** — i satelliti che osservano la Terra al servizio della protezione civile (Copernicus, EFFIS, Copernicus EMS, CAMS, i Castelli Romani dall'orbita, la costellazione italiana IRIDE). Guida operativa in `manuale/parte-39-dossier-interattivi.md`.
 
+### Manuale di Protezione Civile (`/manuale/`) — opera a impianto accademico (giugno 2026)
+
+Opera di riferimento sulla protezione civile, **online (lettore accessibile) + PDF impaginato** generati dalla stessa fonte Markdown. Voce di menu sotto **Risorse**. Copre tutte e 14 le Parti del piano dell'opera; al lancio (giugno 2026) include la **Parte I (Fondamenti)** e l'intero **Commentario del Codice della protezione civile (d.lgs. 1/2018), articolo per articolo, artt. 1–50** (testo vigente da Normattiva + spiegazione), più le Parti tematiche (scienza del rischio, modello d'intervento e **Metodo Augustus**, ciclo del rischio, catalogo rischi, pianificazione, logistica/continuità, post-evento, fattore umano, dimensione internazionale, diritto/etica, territorio/Vulcano Laziale). Regola cogente: **NO INVENZIONI** — ogni affermazione su fonte primaria verificata.
+
+- **Motore**: sezione Hugo `manuale` + layout `manuale/{list,single,stampa}.html` + partial `manuale-toc.html` + shortcode infobox **`{{< box >}}`** (def/chiave/esempio/norma/attenzione/approfondimento) + CSS `manuale.css` (reader) e `manuale-print.css` (PDF). **Ogni nuovo capitolo è un file** in `content/manuale/<NN-slug>.md` (ordine per `weight`, raggruppato per `parte`).
+- **PDF**: `scripts/genera-manuale-pdf.py` (WeasyPrint + paged.js vendorizzato in `static/vendor/pagedjs/`), rigenerato in automatico dal workflow `genera-manuale-pdf.yml` a ogni push su `content/manuale/**`.
+- **Opera viva**: regola di sincronizzazione obbligatoria in `CLAUDE.md` § "Manuale di Protezione Civile — opera viva". Testi normativi autentici cachati (non deployati) in `riferimenti-interni/commentario-testi-unici/`. Coesiste con `/conoscere/` (livello divulgativo).
+
+### Notifiche automatiche dei fallimenti CI (`notifica-ci-fallita.yml`) — watchdog (giugno 2026)
+
+Quando un workflow critico (allerta meteo, deploy, smoke-test, pubblicazione programmata) fallisce su `main`, un watchdog apre/aggiorna un'**issue GitHub** assegnata al proprietario → notifica **via email** (mai Telegram: il canale è quello pubblico dei cittadini). Nasce dopo che i fallimenti dell'allerta meteo (apt 404 su poppler) erano stati scoperti solo per caso accedendo a GitHub.
+
 ### File in `archetypes/` (template Hugo)
 
 | File | A cosa serve |

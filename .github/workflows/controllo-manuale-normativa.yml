@@ -1,0 +1,50 @@
+name: "⚖️ Controllo norme del Manuale"
+
+# OPERA VIVA — Una volta al mese estrae le norme citate nel Manuale di
+# Protezione Civile e apre/aggiorna un'issue con la CHECKLIST di verifica
+# vigenza. Promemoria per aggiornare i capitoli quando una norma cambia,
+# da verificare con l'agent pc-normative-verifier. Flag, NON riscrittura
+# automatica (NO INVENZIONI). Coerente con CLAUDE.md § "Manuale opera viva".
+
+on:
+  schedule:
+    - cron: "27 6 1 * *"   # 1° del mese, 06:27 UTC (scaglionato)
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: "Genera la checklist delle norme citate"
+        run: |
+          python3 scripts/check-manuale-normativa.py > /tmp/report.md
+          {
+            echo ""
+            echo "---"
+            echo "_Issue di promemoria generata automaticamente dal controllo mensile. Chiudere dopo la verifica._"
+          } >> /tmp/report.md
+          echo "Righe report: $(wc -l < /tmp/report.md)"
+
+      - name: "Apri o aggiorna l'issue di verifica"
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          TITLE="⚖️ Manuale di Protezione Civile — verifica vigenza norme citate"
+          NUM="$(gh issue list --repo "$REPO" --state open --limit 100 \
+                   --json number,title -q '.[] | [.number, .title] | @tsv' \
+                 | grep -F "$TITLE" | head -1 | cut -f1 || true)"
+          if [ -n "$NUM" ]; then
+            gh issue edit "$NUM" --repo "$REPO" --body-file /tmp/report.md
+            echo "Issue #$NUM aggiornata."
+          else
+            gh issue create --repo "$REPO" --title "$TITLE" \
+              --label automazione --body-file /tmp/report.md
+            echo "Nuova issue creata."
+          fi
