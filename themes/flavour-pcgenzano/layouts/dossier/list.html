@@ -10,13 +10,30 @@
     <div class="col-lg-9">
       <div class="list-intro-content">{{ .Content }}</div>
 
+      {{- /* Filtri per tema (richiesta 10/06/2026: navigabilità con molti
+            dossier). I temi vengono dal frontmatter `tema:` di ogni dossier;
+            le etichette qui sotto sono l'unica mappa tema→nome leggibile.
+            Pattern coerente con i filtri dell'archivio /comunicazioni/. */ -}}
+      {{- $temaLabels := dict "rischi" "Rischi e fenomeni" "sistema" "Il sistema" "storia" "Storia" "territorio" "Il nostro territorio" -}}
+      {{- $pages := .Pages.ByDate.Reverse -}}
+      <div class="dossier-filtri" role="group" aria-label="Filtra i dossier per tema">
+        <button type="button" class="dossier-pill is-active" data-tema="tutti" aria-pressed="true">Tutti <span class="dossier-pill__n">{{ len $pages }}</span></button>
+        {{- range $key, $label := $temaLabels -}}
+        {{- $n := len (where $pages "Params.tema" $key) -}}
+        {{- if gt $n 0 }}
+        <button type="button" class="dossier-pill" data-tema="{{ $key }}" aria-pressed="false">{{ $label }} <span class="dossier-pill__n">{{ $n }}</span></button>
+        {{- end -}}
+        {{- end }}
+      </div>
+      <p class="dossier-filtri-stato" aria-live="polite"></p>
+
       <div class="dossier-list-grid">
-        {{ range .Pages.ByDate.Reverse }}
-        <a class="dossier-card" href="{{ .RelPermalink }}">
+        {{ range $pages }}
+        <a class="dossier-card" href="{{ .RelPermalink }}" data-tema="{{ .Params.tema | default "rischi" }}">
           <div class="dossier-card__media">
             {{- /* alt vuoto: la card-link ha già il titolo del dossier nel corpo */ -}}
             {{ with .Params.image }}<img src="{{ . | strings.TrimPrefix "/" | relURL }}" alt="" aria-hidden="true" loading="lazy">{{ end }}
-            <span class="dossier-card__tag"><i class="bi bi-collection-play" aria-hidden="true"></i> Dossier interattivo</span>
+            <span class="dossier-card__tag"><i class="bi bi-collection-play" aria-hidden="true"></i> {{ index $temaLabels (.Params.tema | default "rischi") | default "Dossier interattivo" }}</span>
           </div>
           <div class="dossier-card__body">
             <h2 class="dossier-card__title">{{ .Title }}</h2>
@@ -29,5 +46,33 @@
     </div>
   </div>
 </div>
+<script>
+(function () {
+  var pills = document.querySelectorAll('.dossier-pill');
+  var cards = document.querySelectorAll('.dossier-card[data-tema]');
+  var stato = document.querySelector('.dossier-filtri-stato');
+  if (!pills.length || !cards.length) return;
+  pills.forEach(function (pill) {
+    pill.addEventListener('click', function () {
+      var tema = pill.getAttribute('data-tema');
+      pills.forEach(function (p) {
+        var on = p === pill;
+        p.classList.toggle('is-active', on);
+        p.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      var visibili = 0;
+      cards.forEach(function (c) {
+        var mostra = tema === 'tutti' || c.getAttribute('data-tema') === tema;
+        c.style.display = mostra ? '' : 'none';
+        if (mostra) visibili++;
+      });
+      if (stato) {
+        stato.textContent = tema === 'tutti' ? '' :
+          visibili + (visibili === 1 ? ' dossier nel tema ' : ' dossier nel tema ') + '«' + pill.textContent.replace(/\d+\s*$/, '').trim() + '»';
+      }
+    });
+  });
+})();
+</script>
 <link rel="stylesheet" href="{{ "css/dossier-list.css" | relURL }}?v={{ readFile "static/css/dossier-list.css" | hash.FNV32a }}">
 {{ end }}

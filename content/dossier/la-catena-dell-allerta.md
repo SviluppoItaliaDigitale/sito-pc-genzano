@@ -2,6 +2,7 @@
 title: "La catena dell'allerta"
 date: 2026-06-08T20:30:00+02:00
 type: "dossier"
+tema: "sistema"
 description: "Come un bollettino meteo diventa azione: dalla previsione del Centro Funzionale al codice colore, dal Sindaco al COC, fino al cittadino e ai volontari. Il viaggio di un'allerta, passo per passo."
 image: "/images/dossier/temporali-fulmini.webp"
 image_alt: "Fulmini che colpiscono l'orizzonte durante un temporale notturno"
@@ -16,7 +17,7 @@ sezioni:
   - { id: "zone", label: "Le zone" }
   - { id: "catena", label: "La catena" }
   - { id: "sindaco", label: "Il Sindaco" }
-  - { id: "itarlert", label: "IT-alert" }
+  - { id: "it-alert", label: "IT-alert" }
   - { id: "cittadino", label: "Cosa fai tu" }
   - { id: "gruppo", label: "Il Gruppo" }
   - { id: "fine", label: "Cosa resta" }
@@ -46,7 +47,7 @@ Prevedere non vuol dire indovinare: vuol dire stimare, con metodo scientifico, *
 {{< /dossier-dati >}}
 
 {{< dossier-dati id="zone" image="/images/dossier/genzano-nemi-giorno.webp" alt="Il territorio dei Castelli Romani visto dall'alto" >}}
-{{< dossier-dato to="1" unita=" zona" label="L'allerta non è «per Genzano»: è per **zona di allerta**. Il Lazio è diviso in zone idrogeologiche-idrauliche omogenee, e noi apparteniamo alla nostra" >}}
+{{< dossier-dato to="7" unita=" zone" label="L'allerta non è «per Genzano»: il Lazio è diviso in **sette zone di allerta**. Genzano è nella **Zona F — Bacini Costieri Sud** ([come leggere il bollettino](/comunicazioni/2026-05-07-zone-allerta-lazio-come-leggere-bollettino/))" >}}
 {{< dossier-dato to="9" label="Per gli **incendi boschivi** Genzano è in **zona AIB 9** (Castelli Romani): in estate la Regione pubblica un bollettino dedicato di pericolosità" >}}
 {{< dossier-dato to="1" unita=" mappa" label="Sapere in quale zona sei serve a **leggere l'allerta giusta**: la stessa giornata può essere gialla da una parte e verde dall'altra" >}}
 {{< /dossier-dati >}}
@@ -63,7 +64,7 @@ Prevedere non vuol dire indovinare: vuol dire stimare, con metodo scientifico, *
 {{< dossier-dato to="9" label="Nel COC le **funzioni di supporto** (Metodo Augustus) si mettono in moto: volontariato, sanità, logistica, viabilità, telecomunicazioni" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-dati id="itarlert" image="/images/dossier/temporali-fulmini.webp" alt="Fulmini durante un temporale notturno" >}}
+{{< dossier-dati id="it-alert" image="/images/dossier/temporali-fulmini.webp" alt="Fulmini durante un temporale notturno" >}}
 {{< dossier-dato to="2023" label="Per le emergenze **gravi e imminenti** è arrivato **IT-alert**: un messaggio che suona su tutti i telefoni nell'area colpita, senza bisogno di iscriversi" >}}
 {{< dossier-dato to="1" unita=" canale" label="IT-alert si aggiunge ai canali ufficiali (sito, social, radio, altoparlanti): non li sostituisce, li rinforza nei momenti critici" >}}
 {{< dossier-dato to="0" unita="" label="Come funziona nel dettaglio te lo raccontiamo nel dossier «Il messaggio che salva»" >}}

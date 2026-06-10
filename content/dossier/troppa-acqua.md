@@ -2,6 +2,7 @@
 title: "Troppa acqua"
 date: 2026-06-06T13:01:00+02:00
 type: "dossier"
+tema: "rischi"
 description: "Come l'acqua scende veloce sui versanti dei Castelli Romani, come i satelliti radar mappano un'alluvione anche in piena tempesta, e cosa fare prima, durante e dopo. Rischio idrogeologico e alluvioni a Genzano di Roma."
 image: "/images/dossier/acqua-hero.webp"
 image_alt: "Immagine radar Copernicus Sentinel-1 del Lazio: aree allagate lungo il fiume Aniene esondato nei pressi di Tivoli, gennaio 2026"
@@ -54,7 +55,7 @@ Le due immagini dal satellite, riprese nello stesso giorno a un anno di distanza
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="emilia-2023" image="/images/dossier/acqua-emilia-2023.webp" alt="Veduta aerea di una casa di campagna dell'Emilia-Romagna rimasta isolata come un'isola, con i suoi alberi e il giardino, in mezzo all'acqua marrone che ha sommerso tutta la pianura intorno" align="right" kicker="Emilia-Romagna · maggio 2023" title="Sei mesi di pioggia<br>in trentasei ore" credito="Cesare Barillà · CC BY-SA 4.0 · 2023" >}}
-A maggio 2023 caddero **circa 350 milioni di metri cubi d'acqua in 36 ore**. **Ventitré fiumi esondarono** e si contarono oltre **400 frane**. Le vittime furono 15, gli sfollati più di 50.000. La regione veniva da una siccità record: terreni secchi che assorbono poca acqua.
+A maggio 2023 caddero **circa 350 milioni di metri cubi d'acqua in 36 ore**. **Ventitré fiumi esondarono** e si contarono oltre **400 frane**. Le vittime dell'alluvione di maggio furono 15, gli sfollati più di 50.000. La regione veniva da una siccità record: terreni secchi che assorbono poca acqua.
 
 Dall'alto interi poderi diventarono isole nell'acqua. La Protezione Civile attivò **Copernicus EMS** (codice EMSR664) per mappare allagamenti e frane dal satellite. È la prova che il rischio alluvione riguarda anche l'Italia, casa per casa.
 {{< /dossier-scena >}}
@@ -68,7 +69,7 @@ Le dighe erano lesionate dal 1998 e non più manutenute dal 2002: un disastro an
 {{< dossier-scena id="casa" image="/images/dossier/acqua-cratere.webp" alt="Il Lago di Nemi e i suoi versanti boscosi visti da Genzano di Roma" align="top" kicker="Qui, a casa nostra" title="Genzano<br>e i suoi fossi" credito="Lago di Nemi da Genzano di Roma · foto Kleuske · CC BY-SA 3.0" >}}
 Non serve un ciclone tropicale. Anche da noi il forte maltempo ha già messo in difficoltà le zone basse del paese: nel **novembre 2014** piogge intense scaricarono in poche ore più acqua di quanta la rete di drenaggio riuscisse a smaltire, con **allagamenti** nella **Frazione Landi** e nella zona dell'**Olmo**.
 
-E non è storia vecchia: il **5 gennaio 2026** — durante l'alluvione del Lazio, la stessa mappata dal satellite in apertura — Genzano fu tra i centri più colpiti, con strade trasformate in torrenti e il **Gruppo Comunale** in azione sul territorio.
+E non è storia vecchia: il **5 gennaio 2026** — durante l'alluvione del Lazio, la stessa mappata dal satellite in apertura — l'**Aniene esondò** alle porte di Roma e gli allagamenti interessarono l'intera regione, Castelli Romani compresi. La pioggia che cade «troppa e tutta insieme» non è un ricordo: è cronaca.
 
 Per questo il rischio cresce in **autunno e primavera**, quando il terreno è più saturo, e per questo le **allerte gialle** del Centro Funzionale Regionale del Lazio non vanno mai sottovalutate: anche una pioggia moderata, sui nostri versanti, può bastare.
 {{< /dossier-scena >}}

@@ -2,6 +2,7 @@
 title: "L'Europa che si soccorre"
 date: 2026-06-07T21:30:00+02:00
 type: "dossier"
+tema: "sistema"
 description: "Come funzionano le protezioni civili d'Europa — Italia, Francia, Germania, Spagna, Regno Unito — e cosa le tiene insieme: Meccanismo unionale, ERCC, rescEU, Copernicus."
 image: "/images/dossier/allertamento-eu-alert.webp"
 image_alt: "Mappa politica dell'Europa con i confini dei Paesi, senza etichette"

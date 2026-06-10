@@ -2,6 +2,7 @@
 title: "Il fuoco visto dallo spazio"
 date: 2026-06-06T13:03:00+02:00
 type: "dossier"
+tema: "rischi"
 description: "I satelliti vedono i punti caldi degli incendi e le aree bruciate. Come funziona la campagna antincendio, perché i Castelli Romani sono Zona 9 e cosa fare per difendersi."
 image: "/images/dossier/fuoco-hero.webp"
 image_alt: "Immagine satellitare MODIS della NASA: incendi attivi lungo le coste del Mediterraneo, con punti caldi rossi e densi pennacchi di fumo"
@@ -42,11 +43,11 @@ Le posizioni degli incendi attivi vengono aggiornate **sei volte al giorno** ed 
 {{< dossier-scena id="bruciato" image="/images/dossier/fuoco-bruciato.webp" alt="Immagine del satellite Copernicus Sentinel-2 della Sardegna: una vasta cicatrice scura segna l'area bruciata dagli incendi nell'Oristanese del luglio 2021" align="top" kicker="Dopo le fiamme" title="La cicatrice<br>che resta sulla terra" credito="Unione Europea · Copernicus Sentinel-2 imagery · CC BY" >}}
 Quando il fuoco si spegne, il satellite **misura il danno**. I Sentinel-2 di Copernicus fotografano l'**area bruciata** — la *burn scar* — quella macchia scura che resta dove c'era il bosco.
 
-Questa è la Sardegna del luglio 2021: l'incendio dell'**Oristanese** costrinse centinaia di persone a lasciare le case e cancellò decine di migliaia di ettari di vegetazione. Mappare l'area bruciata serve a **pianificare il recupero** e a difendere il versante dalle frane che spesso seguono un incendio.
+Questa è la Sardegna del luglio 2021: l'incendio dell'**Oristanese** costrinse centinaia di persone a lasciare le case e cancellò **circa 13.000 ettari** di vegetazione (mappatura Copernicus EMSR523). Mappare l'area bruciata serve a **pianificare il recupero** e a difendere il versante dalle frane che spesso seguono un incendio.
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="australia-2019" image="/images/dossier/fuoco-australia-2019.webp" alt="Immagine satellitare della costa sud-orientale dell'Australia: una fila di punti rossi segnala gli incendi attivi e densi pennacchi di fumo si allungano sull'oceano" align="left" kicker="Australia, 2019-2020" title="La «Estate Nera»<br>vista dallo spazio" credito="NOAA Satellites · pubblico dominio · 2019" >}}
-Tra giugno 2019 e marzo 2020 l'Australia bruciò come mai prima: le fiamme percorsero **oltre 24 milioni di ettari**, una superficie più grande dell'intera Italia. Le vittime dirette furono 33; gli studi stimano altri **417 morti** legati all'aria irrespirabile.
+Tra giugno 2019 e marzo 2020 l'Australia bruciò come mai prima: le fiamme percorsero **oltre 24 milioni di ettari**: come bruciare quattro quinti dell'Italia. Le vittime dirette furono 33; gli studi stimano altri **417 morti** legati all'aria irrespirabile.
 
 I satelliti seguirono il fumo mentre lasciava il continente e attraversava il Pacifico. Nessuna squadra a terra avrebbe potuto misurare un incendio così vasto: lo sguardo dall'alto sì. È la stessa tecnologia che ogni estate sorveglia anche i nostri boschi.
 {{< /dossier-scena >}}
@@ -58,7 +59,7 @@ Il fumo non conosce confini: i satelliti lo tracciano per giorni, da un continen
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="grecia-2023" image="/images/dossier/fuoco-grecia-2023.webp" alt="Immagine satellitare Sentinel-2 dell'isola di Rodi: una vasta area bruciata, in rosso-bruno, segna il centro dell'isola dopo gli incendi" align="right" kicker="Grecia, 2023" title="Rodi in fiamme,<br>turisti in salvo via mare" credito="Unione Europea · Copernicus Sentinel-2 · 2023" >}}
-Il 18 luglio 2023 un incendio sull'isola di **Rodi** costrinse a evacuare circa **19.000 persone**, molte via mare: la più grande operazione mai vista sull'isola. Nel solo mese di luglio la Grecia perse oltre 190.000 ettari di vegetazione.
+Il 18 luglio 2023 un incendio sull'isola di **Rodi** costrinse a evacuare circa **19.000 persone**, molte via mare: la più grande operazione mai vista sull'isola. Nell'intera stagione 2023 la Grecia perse circa **175.000 ettari** di vegetazione (stime EFFIS), tra cui l'incendio dell'Evros, il più vasto mai registrato nell'Unione europea.
 
 Il satellite **Sentinel-2** mostra la cicatrice rosso-bruna lasciata dal fuoco nel cuore dell'isola. Poche settimane dopo, l'incendio di Evros divenne il **più grande mai registrato nell'Unione Europea**: le mappe di Copernicus guidarono i soccorsi.
 {{< /dossier-scena >}}

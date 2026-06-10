@@ -2,6 +2,7 @@
 title: "Neve e gelo"
 date: 2026-06-07T09:13:00+02:00
 type: "dossier"
+tema: "rischi"
 description: "Neve, gelo, valanghe e tempeste di ghiaccio: i grandi eventi del mondo, chi vigila in Italia e cosa fare. La neve rara sui Castelli Romani spiegata con onestà."
 image: "/images/dossier/neve-hero.webp"
 image_alt: "Le Alpi innevate viste dallo spazio: cime bianche, valli scure e banchi di nubi"
@@ -93,7 +94,7 @@ A Genzano la prevenzione è anche **sociale**: controlla i vicini anziani quando
 
 {{< dossier-fonti >}}
 - **Immagini:** Alpi dallo spazio (NASA Terra MODIS, 7 gennaio 2019, pubblico dominio) · nevicata "Bestia dall'Est" 2018 (Stephen Craven/Geograph, CC BY-SA 2.0) · Pantheon innevato 26 febbraio 2018 (Bradley Weber, CC BY 2.0) · Vittoriano con e senza neve (Barbaking, CC BY-SA 3.0; Fred Romero, CC BY 2.0) · Hotel Rigopiano (TVSEI, CC BY 3.0) · rami ghiacciati (U.S. Air Force, pubblico dominio) · mappa di rilievo dell'Italia (Eric Gaba e NordNordWest, CC BY-SA 3.0) · piazza innevata di notte (Andy Armstrong, CC BY-SA 2.0) · catene da neve (Oregon Department of Transportation, CC BY 2.0). Via Wikimedia Commons.
-- **Fonti:** [Dipartimento della Protezione Civile — rischio neve e gelo](https://rischi.protezionecivile.it/it/meteo-idro/allertamento/tabella-allerte-e-scenari-di-criticita/) · [Meteomont — Carabinieri](https://meteomont.carabinieri.it/) · [AINEVA — Scala europea del pericolo di valanghe](https://aineva.it/pubblicazioni/scala-europea-del-pericolo-di-valanghe/). Bilanci delle ondate di freddo del 2012 e del 2018 e dati su Rigopiano e sulla tempesta di ghiaccio del Quebec 1998 da fonti enciclopediche e giornalistiche: cifre da trattare come stime.
+- **Fonti:** [Dipartimento della Protezione Civile — rischio neve e gelo](https://rischi.protezionecivile.gov.it/it/meteo-idro/allertamento/tabella-allerte-e-scenari-di-criticita/) · [Meteomont — Carabinieri](https://meteomont.carabinieri.it/) · [AINEVA — Scala europea del pericolo di valanghe](https://aineva.it/pubblicazioni/scala-europea-del-pericolo-di-valanghe/). Bilanci delle ondate di freddo del 2012 e del 2018 e dati su Rigopiano e sulla tempesta di ghiaccio del Quebec 1998 da fonti enciclopediche e giornalistiche: cifre da trattare come stime.
 - **Sul nostro sito:** [Il rischio da neve e gelo](/conoscere/catalogo-dei-rischi/rischio-neve-gelo/) · [Allerte meteo](/allerte-meteo/) · [Numeri utili](/numeri-utili/) · [Piano di emergenza comunale](/piano-emergenza/).
 - Dossier a cura del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**. Guida divulgativa: in emergenza chiama il **112**.
 {{< /dossier-fonti >}}

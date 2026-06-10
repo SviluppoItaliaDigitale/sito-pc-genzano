@@ -2,6 +2,7 @@
 title: "Due scuole di soccorso"
 date: 2026-06-08T19:00:00+02:00
 type: "dossier"
+tema: "sistema"
 description: "Protezione civile a confronto: Italia e Stati Uniti. Federale e sussidiario, ICS e Metodo Augustus, FEMA e Servizio Nazionale, militari e volontari, dichiarazione di disastro, allertamento e cultura del rischio."
 image: "/images/dossier/usa-soccorso-alluvione.webp"
 image_alt: "Soccorritori su una barca a fondo piatto cercano residenti lungo una strada allagata"
@@ -20,6 +21,7 @@ sezioni:
   - { id: "comando", label: "Chi comanda" }
   - { id: "ics", label: "L'ICS" }
   - { id: "augustus", label: "Augustus" }
+  - { id: "augustus-dati", label: "Augustus in numeri" }
   - { id: "forze", label: "Le forze" }
   - { id: "volontariato", label: "Il volontariato" }
   - { id: "previsione", label: "Prevedere" }
@@ -137,7 +139,7 @@ In **Italia** il volontariato è il **cuore** del sistema: centinaia di migliaia
 
 {{< dossier-dati id="allertamento" image="/images/dossier/acqua-emilia-2023.webp" alt="Veduta aerea dell'alluvione in Emilia-Romagna del 2023" >}}
 {{< dossier-dato to="2012" label="Negli USA diventano operativi i **Wireless Emergency Alerts**: messaggi di allarme inviati ai telefoni di un'area colpita tramite il sistema IPAWS della FEMA" >}}
-{{< dossier-dato to="2023" label="In Italia arriva **IT-alert**, il sistema nazionale di allarme pubblico: lo stesso principio, lo stesso standard tecnico internazionale (CAP)" >}}
+{{< dossier-dato to="2024" label="**IT-alert**, testato nel 2023, è operativo dal febbraio 2024: lo stesso principio, lo stesso standard tecnico internazionale (CAP)" >}}
 {{< dossier-dato to="911" label="Il numero unico di emergenza negli **Stati Uniti**. In **Italia** è il **112**, il Numero Unico Europeo" >}}
 {{< /dossier-dati >}}
 
@@ -163,7 +165,7 @@ Quello che conta, ovunque, resta la prima protezione civile: **cittadini informa
 
 {{< dossier-fonti >}}
 - **Immagini:** soccorso in alluvione, Oklahoma 2007 (FEMA, Patricia Brach, pubblico dominio) · uragano sul Golfo del Messico, 2005 (NASA, MODIS — Jeff Schmaltz, Rapid Response Team, pubblico dominio) · incendi in California, 2018 (NASA, MODIS Rapid Response Team, pubblico dominio) · Canadair antincendio (Albarubescens, CC BY-SA 4.0) · Guardia Nazionale durante un'alluvione, South Carolina 2015 (U.S. National Guard, Tech. Sgt. Jorge Intriago, pubblico dominio) · alluvione in Emilia-Romagna, 2023 (Cesare Barillà, CC BY-SA 4.0) · sala operativa della FEMA, 2011 (FEMA, Aaron Skolnik, pubblico dominio) · campo della Protezione Civile a L'Aquila, 2009 (Trevi.zz, CC BY-SA 4.0) · rifugio American Red Cross, 2012 (FEMA, George Armstrong, pubblico dominio). Via Wikimedia Commons.
-- **Fonti:** [FEMA — History](https://www.fema.gov/about/history) · [Stafford Act](https://www.fema.gov/disaster/stafford-act) · [Incident Command System / NIMS](https://www.fema.gov/emergency-managers/nims) · [Community Emergency Response Team (CERT)](https://www.fema.gov/emergency-managers/individuals-communities/community-emergency-response-team) · [Wireless Emergency Alerts (FCC)](https://www.fcc.gov/consumers/guides/wireless-emergency-alerts) · [Ready.gov](https://www.ready.gov/) · [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/it/) · Metodo Augustus (Direttiva 11 maggio 1997) · Codice della protezione civile (decreto legislativo 1 del 2018).
+- **Fonti:** [FEMA — History](https://www.fema.gov/about/history) · [Stafford Act](https://www.fema.gov/disaster/stafford-act) · [Incident Command System / NIMS](https://www.fema.gov/emergency-managers/nims) · [Community Emergency Response Team (CERT)](https://www.fema.gov/emergency-managers/individuals-communities/community-emergency-response-team) · [Wireless Emergency Alerts (FCC)](https://www.fcc.gov/consumers/guides/wireless-emergency-alerts) · [Ready.gov](https://www.ready.gov/) · [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/it/) · Metodo Augustus (pubblicazione del Dipartimento, «DPC informa», 1997) · Codice della protezione civile (decreto legislativo 1 del 2018).
 - **Sul nostro sito:** [Il Servizio Nazionale](/conoscere/servizio-nazionale/) · [La dimensione internazionale](/conoscere/dimensione-internazionale/) · [L'Europa che si soccorre](/dossier/l-europa-che-si-soccorre/) · [Glossario](/glossario/) · [Diventa volontario](/diventa-volontario/).
 - Dossier a cura del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**. Guida divulgativa a scopo informativo: il Gruppo non parla a nome della FEMA né del Dipartimento della Protezione Civile. In emergenza chiama il **112**.
 {{< /dossier-fonti >}}

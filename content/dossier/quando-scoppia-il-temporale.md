@@ -2,6 +2,7 @@
 title: "Quando scoppia il temporale"
 date: 2026-06-07T09:21:00+02:00
 type: "dossier"
+tema: "rischi"
 description: "Dentro i temporali violenti: fulmini, grandine, downburst e alluvioni lampo. I casi del mondo e l'autoprotezione sui Castelli Romani, con la regola del 30/30."
 image: "/images/dossier/temporali-hero.webp"
 image_alt: "Imponente nube temporalesca a incudine domina il cielo sopra i palazzi di una città al tramonto"
@@ -46,7 +47,7 @@ Nelle immagini satellitari ha spesso una forma a **V**. Può scaricare quantità
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="marche-2022" image="/images/dossier/temporali-marche-2022.webp" alt="Vista satellitare dell'Italia con un'ampia coltre di nubi temporalesche bianche sul centro della penisola il 15 settembre 2022" align="top" kicker="Marche · 15 settembre 2022" title="Quattrocento millimetri<br>in sei ore" credito="Italia dal satellite, 15 settembre 2022 · NASA Worldview · pubblico dominio, via Wikimedia Commons" >}}
-Un temporale autorigenerante rimase fermo tra il Monte Catria e il Monte Cucco e scaricò **circa 400 mm di pioggia in 6 ore**, con punte di 90 mm in un'ora. I fiumi **Misa** e **Nevola** esondarono.
+Un temporale autorigenerante rimase fermo tra il Monte Catria e il Monte Cucco e scaricò **fino a 420 mm di pioggia in nove ore**, con punte di 90 mm in un'ora. I fiumi **Misa** e **Nevola** esondarono.
 
 Le vittime furono **12**, gli sfollati oltre 300. Bastarono pochi chilometri quadrati e poche ore. Anche i Castelli hanno fossi e impluvi che, in un temporale forte, si riempiono in minuti: il rischio da noi è proprio il **deflusso rapido**, non il grande fiume.
 {{< /dossier-scena >}}
@@ -81,17 +82,17 @@ Il **radar meteo** misura l'intensità della pioggia e il movimento delle celle.
 È anche il motivo per cui il temporale autorigenerante è così insidioso: è difficile prevedere **dove** si fermerà. Il **Centro Funzionale Regionale del Lazio** usa radar e soglie di pioggia per emettere le allerte sulle sue 7 zone, Castelli inclusi.
 {{< /dossier-scena >}}
 
-{{< dossier-hotspot id="hotspot" image="/images/dossier/temporali-hotspot.webp" alt="La Terra vista dallo spazio, con oceani blu, nubi bianche e i continenti di Africa e Antartide" titolo="Dove colpiscono di più" testo="I temporali violenti hanno le loro capitali. Tocca i punti per scoprire le hotspot del mondo e d'Italia — e dove si collocano, onestamente, i Castelli." >}}
-{{< dossier-punto x="28" y="40" titolo="Grandi Pianure (USA)" >}}
+{{< dossier-hotspot id="hotspot" image="/images/dossier/siccita-mappa-mondo.webp" alt="Mappa del mondo a colori con i continenti, su cui sono evidenziate le zone più colpite dai temporali violenti" titolo="Dove colpiscono di più" testo="I temporali violenti hanno le loro capitali. Tocca i punti per scoprire le hotspot del mondo e d'Italia — e dove si collocano, onestamente, i Castelli. *Mappa: Strebe · CC BY-SA 3.0, via Wikimedia Commons.*" >}}
+{{< dossier-punto x="22" y="29" titolo="Grandi Pianure (USA)" >}}
 La patria delle supercelle: qui nascono i tornado più violenti, la grandine record di **Vivian** (2010) e il fulmine più lungo del mondo (2020).
 {{< /dossier-punto >}}
-{{< dossier-punto x="33" y="78" titolo="Rio de la Plata (Sud America)" >}}
+{{< dossier-punto x="33" y="72" titolo="Rio de la Plata (Sud America)" >}}
 Tra Uruguay e Argentina si è registrato il fulmine più **duraturo** mai certificato: 17 secondi, nel 2020.
 {{< /dossier-punto >}}
-{{< dossier-punto x="52" y="22" titolo="Pianura Padana e Alpi" >}}
+{{< dossier-punto x="52" y="23" titolo="Pianura Padana e Alpi" >}}
 La hotspot europea: grandine gigante (Friuli 2023) e i tornado più forti d'Italia. Con il riscaldamento, gli studi prevedono fino a **+50%** di supercelle sulle Alpi.
 {{< /dossier-punto >}}
-{{< dossier-punto x="55" y="32" titolo="I Castelli Romani" >}}
+{{< dossier-punto x="54" y="27" titolo="I Castelli Romani" >}}
 Zona a convettività **moderata**, lontana dalle capitali della grandine gigante. Il rischio locale è il temporale forte ordinario: fulmini, downburst e pioggia breve e intensa sulle strade.
 {{< /dossier-punto >}}
 {{< /dossier-hotspot >}}
@@ -107,7 +108,7 @@ La lezione dei Castelli non è lo scenario padano. È il temporale **normale** c
 {{< /dossier-chiusura >}}
 
 {{< dossier-fonti >}}
-- **Immagini:** cumulonembo a incudine su città e con sommità a incudine (Marek Wikipedista, CC BY-SA 4.0) · sistema temporalesco dallo spazio (NOAA GOES-East, pubblico dominio) · Italia dal satellite 15 settembre 2022 (NASA Worldview, pubblico dominio) · chicco di grandine con righello (NOAA NSSL, pubblico dominio) · alberi abbattuti da downburst (Todd Shea, NOAA/NWS, pubblico dominio) · tornado illustrativo (Daphne Zaras, NOAA, pubblico dominio) · fulmini notturni (NOAA NSSL, pubblico dominio) · eco radar di supercella (NOAA NSSL, pubblico dominio) · Terra dallo spazio (NASA, Apollo 17, pubblico dominio) · pioggia sul vetro (Pongola, CC BY 4.0). Via Wikimedia Commons.
+- **Immagini:** cumulonembo a incudine su città e con sommità a incudine (Marek Wikipedista, CC BY-SA 4.0) · sistema temporalesco dallo spazio (NOAA GOES-East, pubblico dominio) · Italia dal satellite 15 settembre 2022 (NASA Worldview, pubblico dominio) · chicco di grandine con righello (NOAA NSSL, pubblico dominio) · alberi abbattuti da downburst (Todd Shea, NOAA/NWS, pubblico dominio) · tornado illustrativo (Daphne Zaras, NOAA, pubblico dominio) · fulmini notturni (NOAA NSSL, pubblico dominio) · eco radar di supercella (NOAA NSSL, pubblico dominio) · mappa del mondo (Strebe, CC BY-SA 3.0) · pioggia sul vetro (Pongola, CC BY 4.0). Via Wikimedia Commons.
 - **Fonti:** [Protezione Civile — Temporali e fulmini](https://www.protezionecivile.gov.it/it/approfondimento/temporali-e-fulmini/index.html) · [Aeronautica Militare — temporali autorigeneranti (V-shaped)](https://www.meteoam.it/it/temporali-autorigeneranti) · [CNR-IRPI — alluvione nelle Marche 2022](https://polaris.irpi.cnr.it/event/alluvione-nelle-marche/) · [NOAA — grandine record di Vivian, South Dakota](https://www.weather.gov/abr/vivianhailstone) · [World Meteorological Organization — record mondiali di fulmine (megaflash)](https://wmo.int/media/news/wmo-certifies-two-megaflash-lightning-records) · [Centro Funzionale Regionale del Lazio](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale).
 - **Sul nostro sito:** [Temporali intensi: cosa fare](/rischi-prevenzione/temporali-intensi/) · [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/) · [Allerte meteo](/allerte-meteo/) · [Strumenti in tempo reale](/cruscotto/).
 - Dossier a cura del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**. Guida divulgativa: in emergenza chiama il **112**.

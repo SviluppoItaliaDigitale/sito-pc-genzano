@@ -2,6 +2,7 @@
 title: "Dalle macerie, un sistema"
 date: 2026-06-08T19:30:00+02:00
 type: "dossier"
+tema: "storia"
 description: "La storia della Protezione Civile italiana: da Vajont, Friuli e Irpinia al «Fate presto» di Pertini, da Zamberletti alla legge 225 del 1992 e al Codice del 2018. Come l'Italia imparò a soccorrersi."
 image: "/images/dossier/storia-longarone-1963.webp"
 image_alt: "Veduta in bianco e nero della valle del Vajont devastata: una vasta lingua di fango e detriti dove sorgeva l'abitato di Longarone"
@@ -26,7 +27,7 @@ sezioni:
 
 {{< dossier-dati id="prima" image="/images/dossier/storia-longarone-1963.webp" alt="La valle del Vajont devastata, 1963" >}}
 {{< dossier-dato to="1908" label="Il terremoto di **Messina e Reggio**: oltre ottantamila morti. I soccorsi arrivano dall'esercito e dalla Marina, ma in ordine sparso, senza un piano" >}}
-{{< dossier-dato to="1951" label="L'alluvione del **Polesine**: il Po rompe gli argini, centinaia di migliaia di sfollati. Ancora una volta si improvvisa" >}}
+{{< dossier-dato to="1951" label="L'alluvione del **Polesine**: il Po rompe gli argini — circa cento vittime, centinaia di migliaia di sfollati. Ancora una volta si improvvisa" >}}
 {{< dossier-dato to="1963" label="Il **Vajont**: una frana nel bacino della diga genera un'onda che cancella Longarone. Quasi **duemila morti**" >}}
 {{< dossier-dato to="0" label="I sistemi **permanenti** di protezione civile in Italia, prima degli anni Ottanta: ogni emergenza si affrontava da capo, caso per caso" >}}
 {{< /dossier-dati >}}
@@ -39,7 +40,7 @@ Il Governo affida la guida dei soccorsi a un **commissario straordinario**, un g
 La ricostruzione del Friuli — *«dov'era, com'era»*, gestita dalle comunità locali — diventa un modello studiato in tutto il mondo. Dalla tragedia nasce un'idea: i soccorsi si possono **organizzare prima**.
 {{< /dossier-scena >}}
 
-{{< dossier-scena id="irpinia" image="/images/dossier/storia-pertini.webp" alt="Fotografia in bianco e nero di Sandro Pertini in cappotto, accompagnato da militari e funzionari, mentre un corazziere fa il saluto" align="right" kicker="Irpinia · 23 novembre 1980" title="«Fate<br>presto»" credito="Foto: Sandro Pertini in una foto del 1972 · pubblico dominio" >}}
+{{< dossier-scena id="irpinia" image="/images/dossier/storia-pertini.webp" alt="Fotografia in bianco e nero di Sandro Pertini in cappotto, accompagnato da militari e funzionari, mentre un corazziere fa il saluto" align="right" kicker="Irpinia · 23 novembre 1980" title="«Fate<br>presto»" credito="Sandro Pertini · foto d'archivio · pubblico dominio, via Wikimedia Commons" >}}
 Il **23 novembre 1980** un terremoto di magnitudo 6,9 colpisce l'**Irpinia**: quasi tremila morti tra Campania e Basilicata. Ma per giorni, in molti paesi, non arriva nessuno.
 
 Il Presidente della Repubblica **Sandro Pertini** va sui luoghi e, in televisione, denuncia con parole durissime i ritardi dello Stato. *«Fate presto»* titola il quotidiano *Il Mattino*: due parole che diventano il simbolo di un Paese che non può più permettersi l'improvvisazione.
@@ -48,7 +49,7 @@ Da quella vergogna nazionale arriva la spinta decisiva. L'Italia decide di dotar
 {{< /dossier-scena >}}
 
 {{< dossier-dati id="zamberletti" image="/images/dossier/storia-friuli-1976.webp" alt="Chiesa in rovina dopo il terremoto del Friuli del 1976" >}}
-{{< dossier-dato da="1933" unita="" label="**Giuseppe Zamberletti** (1933–2019), il «padre» della Protezione Civile italiana: commissario in Friuli, poi l'uomo che immaginò il sistema" >}}
+{{< dossier-dato to="1982" label="L'anno in cui **Giuseppe Zamberletti** (1933–2019), il «padre» della Protezione Civile, diventa il primo Ministro per il coordinamento della protezione civile" >}}
 {{< dossier-dato to="1982" label="L'anno in cui Zamberletti diventa **Ministro per il coordinamento della protezione civile**: nasce il **Dipartimento**" >}}
 {{< dossier-dato to="2" unita=" idee" label="Le sue due intuizioni: **previsione e prevenzione** accanto al soccorso, e il **supporto tecnico-scientifico** alle decisioni politiche" >}}
 {{< /dossier-dati >}}
@@ -86,7 +87,7 @@ La vera novità italiana è il **volontariato organizzato**: centinaia di miglia
 Il **Gruppo Comunale Volontari di Genzano** è una di queste maglie: un pezzo della stessa storia cominciata a Longarone, in Friuli, in Irpinia. La protezione civile, in fondo, sono le persone preparate.
 {{< /dossier-scena >}}
 
-{{< dossier-chiusura id="fine" titolo="Una storia che continua" cta1="L'Europa che si soccorre" cta1url="/dossier/l-europa-che-si-soccorre/" cta2="Due scuole di soccorso (Italia–USA)" cta2url="/dossier/italia-stati-uniti-due-scuole/" >}}
+{{< dossier-chiusura id="fine" titolo="Una storia che continua" cta1="L'Europa che si soccorre" cta1url="/dossier/l-europa-che-si-soccorre/" cta2="Diventa volontario" cta2url="/diventa-volontario/" >}}
 La Protezione Civile italiana è figlia delle sue tragedie. Ogni regola, ogni mezzo, ogni funzione è la risposta a un dolore che non si voleva ripetere. Dal Vajont al Codice del 2018, la lezione è sempre la stessa: **prepararsi prima** costa meno che piangere dopo.
 
 È una storia che continua a ogni allerta, a ogni esercitazione, a ogni nuovo volontario che si iscrive. E si intreccia con quella degli altri Paesi: il sistema italiano dialoga con l'**Europa** che si soccorre e si confronta con modelli diversi, come quello **statunitense**.
@@ -95,7 +96,7 @@ Qui da noi, quando serve davvero, il numero resta il **112**.
 {{< /dossier-chiusura >}}
 
 {{< dossier-fonti >}}
-- **Immagini:** valle del Vajont dopo il disastro, Longarone 1963 (US Army, pubblico dominio) · chiesa di Ognissanti di Gemona dopo il terremoto del Friuli, 1976 (Alberto Rizzi, pubblico dominio) · Sandro Pertini in una foto del 1972 (pubblico dominio) · Canadair antincendio (Albarubescens, CC BY-SA 4.0) · campo della Protezione Civile a L'Aquila, 2009 (Trevi.zz, CC BY-SA 4.0) · alluvione in Emilia-Romagna, 2023 (Cesare Barillà, CC BY-SA 4.0). Via Wikimedia Commons.
+- **Immagini:** valle del Vajont dopo il disastro, Longarone 1963 (US Army, pubblico dominio) · chiesa di Ognissanti di Gemona dopo il terremoto del Friuli, 1976 (Alberto Rizzi, pubblico dominio) · Sandro Pertini, foto d'archivio (pubblico dominio) · Canadair antincendio (Albarubescens, CC BY-SA 4.0) · campo della Protezione Civile a L'Aquila, 2009 (Trevi.zz, CC BY-SA 4.0) · alluvione in Emilia-Romagna, 2023 (Cesare Barillà, CC BY-SA 4.0). Via Wikimedia Commons.
 - **Fonti:** [Servizio Nazionale — La protezione civile nella storia](https://servizio-nazionale.protezionecivile.gov.it/it/storia/dal-1861-al-1991/) · [Legge n. 225 del 24 febbraio 1992](https://www.protezionecivile.gov.it/it/normativa/legge-n--225-del-24-febbraio-1992--istituzione-del-servizio-nazionale-della-protezione-civile/) · [La lezione di Zamberletti](https://www.protezionecivile.gov.it/it/notizia/la-protezione-civile-e-la-lezione-di-zamberletti-0/) · [Treccani — Giuseppe Zamberletti](https://www.treccani.it/enciclopedia/giuseppe-zamberletti/) · Codice della protezione civile (decreto legislativo 1 del 2018).
 - **Sul nostro sito:** [La nascita del Dipartimento della Protezione Civile](/comunicazioni/2026-04-29-nascita-dipartimento-protezione-civile-italia/) · [Il Servizio Nazionale](/conoscere/servizio-nazionale/) · [Diventa volontario](/diventa-volontario/) · [Glossario](/glossario/).
 - Dossier a cura del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**. Guida divulgativa a scopo informativo. In emergenza chiama il **112**.

@@ -2,6 +2,7 @@
 title: "Quando il mare si ritira"
 date: 2026-06-07T09:00:00+02:00
 type: "dossier"
+tema: "rischi"
 description: "Dossier interattivo sui maremoti: come nascono, i grandi tsunami del mondo, il sistema di allerta italiano e i segnali naturali che, sulla costa, salvano la vita."
 image: "/images/dossier/maremoto-hero.webp"
 image_alt: "Un grande fronte d'acqua schiumosa si solleva dietro le palme di un lungomare tropicale mentre le persone fuggono di corsa"
@@ -39,10 +40,10 @@ In mare aperto l'onda è bassa e corre velocissima. Sotto costa rallenta e si **
 {{< dossier-dato to="2017" label="Dal **2017** l'Italia ha un sistema di allerta maremoti: il **CAT-INGV**" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-scena id="y2004" image="/images/dossier/maremoto-sumatra-2004.webp" alt="Veduta aerea di un villaggio costiero distrutto e allagato dopo il tsunami, con edifici diroccati e detriti tra le case e colline verdi sullo sfondo" align="top" kicker="26 dicembre 2004 · Oceano Indiano" title="Il maremoto<br>più letale della storia" credito="Foto: Philip A. McDaniel / U.S. Navy, costa di Sumatra, 2 gennaio 2005 · pubblico dominio" >}}
+{{< dossier-scena id="y2004" image="/images/dossier/maremoto-sumatra-2004.webp" alt="Veduta aerea di un villaggio costiero distrutto e allagato dopo lo tsunami, con edifici diroccati e detriti tra le case e colline verdi sullo sfondo" align="top" kicker="26 dicembre 2004 · Oceano Indiano" title="Il maremoto<br>più letale della storia" credito="Foto: Philip A. McDaniel / U.S. Navy, costa di Sumatra, 2 gennaio 2005 · pubblico dominio" >}}
 Un terremoto di circa **Mw 9.1** (fino a 9.3 secondo alcuni studi) al largo di **Sumatra** generò onde che colpirono **14 Paesi**. Le vittime stimate furono **circa 227.000**.
 
-L'Indonesia, e in particolare la provincia di **Aceh**, fu la più colpita, con oltre 167.000 morti. L'onda attraversò l'oceano: raggiunse la costa africana dopo circa **undici ore**.
+L'Indonesia, e in particolare la provincia di **Aceh**, fu la più colpita, con oltre 167.000 morti. L'onda attraversò l'oceano: raggiunse la costa africana **ore dopo** (tra le sette e le undici, secondo i tratti di costa).
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="banda-aceh" image="/images/dossier/maremoto-banda-aceh.webp" alt="Una casa rimasta in piedi tra cumuli di detriti lungo una strada del centro di Banda Aceh, in Indonesia, dopo lo tsunami del 26 dicembre 2004" align="top" kicker="Banda Aceh, Sumatra" title="Cinquantun metri<br>di run-up" credito="Foto: Michael L. Bak / U.S. Department of Defense · pubblico dominio, via Wikimedia Commons" >}}
@@ -82,7 +83,7 @@ Ma il Mediterraneo è **piccolo**: l'onda può arrivare in **pochi minuti**. Spe
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="costa-lazio" image="/images/dossier/maremoto-costa-calma.webp" alt="Spiaggia sabbiosa del litorale pontino al tramonto, con il promontorio del Monte Circeo sullo sfondo a destra, mare calmo e cielo sereno" align="top" kicker="E noi dei Castelli?" title="Genzano è lontana dal mare.<br>Ma il mare è vicino a noi" credito="Spiaggia di Sabaudia con il Monte Circeo (Lazio). Foto: Egnoka · pubblico dominio" >}}
-Genzano di Roma sorge a circa **400 metri**, all'interno dei Castelli Romani: **non è esposta al rischio maremoto**. Sarebbe sbagliato dire il contrario.
+Genzano di Roma sorge a circa **435 metri**, all'interno dei Castelli Romani: **non è esposta al rischio maremoto**. Sarebbe sbagliato dire il contrario.
 
 Ma d'estate andiamo tutti al mare: sul litorale del Lazio — da Ostia a Sabaudia, al Circeo — e altrove in Italia. Conoscere i segnali serve **lì, in spiaggia**, dove un giorno può fare la differenza.
 {{< /dossier-scena >}}

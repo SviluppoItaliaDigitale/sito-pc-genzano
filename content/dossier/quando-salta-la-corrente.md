@@ -2,6 +2,7 @@
 title: "Quando salta la corrente"
 date: 2026-06-06T13:02:00+02:00
 type: "dossier"
+tema: "rischi"
 description: "Cosa succede davvero quando salta la corrente su vasta scala, dal grande blackout italiano del 2003 ai casi nel mondo, e come prepararsi in casa. Un racconto visivo della Protezione Civile di Genzano."
 image: "/images/dossier/blackout-hero.webp"
 image_alt: "L'Europa illuminata di notte vista dal satellite: la rete di luci delle città sul continente al buio"

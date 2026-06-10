@@ -2,6 +2,7 @@
 title: "Quando il vento fa paura"
 date: 2026-06-07T09:20:00+02:00
 type: "dossier"
+tema: "rischi"
 description: "Dossier interattivo sul vento forte: come nasce, i grandi cicloni del mondo, downburst e trombe d'aria, e il rischio reale dei Castelli Romani — gli alberi che cadono."
 image: "/images/dossier/vento-hero.webp"
 image_alt: "L'occhio di un grande uragano visto dall'alto: un vortice di nubi bianche attorno a un foro centrale che lascia intravedere il mare scuro"
@@ -39,14 +40,14 @@ Quando un ciclone profondo, un temporale intenso o una catena montuosa concentra
 {{< dossier-dato to="119" unita=" km/h" label="**Forza 12** — uragano: da qui in su, distruzione diffusa" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-scena id="ianos" image="/images/dossier/vento-ianos.webp" alt="Immagine satellitare del medicane Ianos: un vortice di nubi bianche sul Mar Ionio, con la Grecia e le isole verdeggianti sulla destra" align="right" kicker="17-20 settembre 2020 · Grecia" title="Ianos, l'uragano<br>del Mediterraneo" credito="Immagine satellitare del medicane Ianos sul Mar Ionio · 2020" >}}
-Nel settembre 2020 il **medicane Ianos** colpì la Grecia ionica con raffiche fino a **195 km/h** su Cefalonia e Zante. Quattro vittime, oltre 5.000 case danneggiate e una pioggia record di **644,7 mm** a Cefalonia.
+{{< dossier-scena id="ianos" image="/images/dossier/vento-ianos.webp" alt="Immagine satellitare del medicane Ianos: un vortice di nubi bianche sul Mar Ionio, con la Grecia e le isole verdeggianti sulla destra" align="right" kicker="17-20 settembre 2020 · Grecia" title="Ianos, l'uragano<br>del Mediterraneo" credito="Copernicus Sentinel-3 · ESA, 17 settembre 2020 · CC BY-SA 3.0 IGO, via Wikimedia Commons" >}}
+Nel settembre 2020 il **medicane Ianos** colpì la Grecia ionica con raffiche misurate oltre i **110 km/h** e stimate fino a circa 200 km/h su Cefalonia e Zante. Quattro vittime, migliaia di case danneggiate e piogge torrenziali, con accumuli di **diverse centinaia di millimetri** in poche ore.
 
 È considerato il **medicane più intenso** mai registrato nel Mediterraneo: la prova che fenomeni quasi-tropicali possono formarsi anche nel nostro mare, lo stesso che lambisce il litorale del Lazio.
 {{< /dossier-scena >}}
 
-{{< dossier-scena id="milton" image="/images/dossier/vento-milton.webp" alt="Immagine satellitare dell'uragano Milton: un'enorme spirale di nubi con l'occhio centrale ben definito, vista dall'orbita con la curvatura della Terra" align="top" kicker="7 ottobre 2024 · Golfo del Messico" title="Milton e la rapida<br>intensificazione" credito="Immagine satellitare dell'uragano Milton con l'occhio centrale ben definito · 2024" >}}
-Il 7 ottobre 2024 l'uragano **Milton** esplose fino a categoria 5: venti sostenuti di **285 km/h** e pressione minima di 897 mb. In 24 ore i venti aumentarono di circa 95 mph, più del doppio della soglia di rapida intensificazione. Causò **15 morti** diretti.
+{{< dossier-scena id="milton" image="/images/dossier/vento-milton.webp" alt="Immagine satellitare dell'uragano Milton: un'enorme spirale di nubi con l'occhio centrale ben definito, vista dall'orbita con la curvatura della Terra" align="top" kicker="7 ottobre 2024 · Golfo del Messico" title="Milton e la rapida<br>intensificazione" credito="Foto NASA dalla Stazione Spaziale Internazionale (serie ISS072-E), ottobre 2024 · pubblico dominio, via Wikimedia Commons" >}}
+Il 7 ottobre 2024 l'uragano **Milton** esplose fino a categoria 5: venti sostenuti di **285 km/h** e pressione minima di 897 mb. In 24 ore i venti aumentarono di circa **150 km/h**, più del doppio della soglia di rapida intensificazione. Causò **15 morti** diretti.
 
 Secondo gli studi di attribuzione climatica, la temperatura record del mare che lo alimentò fu resa **400-800 volte più probabile** dal cambiamento climatico. Il monitoraggio satellitare permise allerte che salvarono vite.
 {{< /dossier-scena >}}
@@ -57,13 +58,13 @@ Dalla **Stazione Spaziale Internazionale** un grande uragano appare come una spi
 È la stessa fisica del vento di casa nostra, ma su scala planetaria. Questa vista insegna a riconoscere la struttura dei sistemi che generano le raffiche più estreme, e ricorda quanto vale l'osservazione dallo spazio per le allerte.
 {{< /dossier-scena >}}
 
-{{< dossier-scena id="vaia" image="/images/dossier/vento-schianti.webp" alt="Veduta dall'alto di un bosco di abeti dopo la tempesta Vaia: ampie strisce di alberi schiantati e abbattuti tutti nella stessa direzione" align="top" kicker="26-30 ottobre 2018 · Nord-Est italiano" title="Vaia, 14 milioni<br>di alberi in tre giorni" credito="Distesa di abeti abbattuti dalla tempesta Vaia · 2018" >}}
+{{< dossier-scena id="vaia" image="/images/dossier/vento-schianti.webp" alt="Veduta dall'alto di un bosco di abeti dopo la tempesta Vaia: ampie strisce di alberi schiantati e abbattuti tutti nella stessa direzione" align="top" kicker="26-30 ottobre 2018 · Nord-Est italiano" title="Vaia, 14 milioni<br>di alberi in tre giorni" credito="Schianti di Vaia in Val dei Mocheni (Trentino) · foto Syrio · CC BY-SA 4.0, via Wikimedia Commons" >}}
 Tra il 26 e il 30 ottobre 2018 la tempesta **Vaia** investì il Nord-Est italiano con venti tra **100 e 200 km/h** per ore. Abbatté circa **14 milioni di alberi** su 41.000 ettari di foreste alpine.
 
 I danni superarono **1,7 miliardi di euro** nel solo Veneto. È il più grave evento di schianto forestale della storia italiana recente. Lo stesso meccanismo, in piccolo, abbatte rami e alberi nelle pinete e nei viali dei Castelli Romani.
 {{< /dossier-scena >}}
 
-{{< dossier-scena id="callum" image="/images/dossier/vento-callum.webp" alt="Immagine satellitare della tempesta Callum: un'estesa coltre di nubi a spirale sull'Oceano Atlantico, con le coste verdi di Irlanda e penisola iberica ai margini" align="top" kicker="11-12 ottobre 2018 · Atlantico" title="Callum, la tempesta<br>atlantica d'autunno" credito="Immagine satellitare di una tempesta atlantica sull'Oceano · 2018" >}}
+{{< dossier-scena id="callum" image="/images/dossier/vento-callum.webp" alt="Immagine satellitare della tempesta Callum: un'estesa coltre di nubi a spirale sull'Oceano Atlantico, con le coste verdi di Irlanda e penisola iberica ai margini" align="top" kicker="11-12 ottobre 2018 · Atlantico" title="Callum, la tempesta<br>atlantica d'autunno" credito="Tempesta Callum, 11 ottobre 2018 · NASA Worldview (VIIRS) · pubblico dominio, via Wikimedia Commons" >}}
 L'11 e 12 ottobre 2018 la tempesta **Callum** frustò Regno Unito e Irlanda con raffiche fino a circa **122 km/h** alle Isole Scilly e **124 km/h** in Irlanda. Lasciò circa **60.000 utenze** senza energia e causò 2 vittime indirette.
 
 È l'esempio classico del **windstorm europeo**: una bassa pressione atlantica porta vento forte e diffuso, più esteso che estremo puntuale. Diverso dall'uragano, ma capace di paralizzare un Paese intero.
@@ -101,8 +102,8 @@ I Castelli, ricchi di pinete e viali storici, vivono interventi ricorrenti di Pr
 {{< /dossier-chiusura >}}
 
 {{< dossier-fonti >}}
-- **Immagini:** uragano Florence dallo spazio, occhio (NASA, pubblico dominio) · cumulonembo (Simon Eugster, CC BY-SA 3.0) · medicane Ianos 2020 · uragano Milton 2024 · occhio di Florence dalla ISS (Alexander Gerst/NASA, pubblico dominio) · schianti della tempesta Vaia 2018 · tempesta Callum 2018 · tornado F5 di Moore 1999 (Mike Eilts/NSSL-NOAA, pubblico dominio) · favonio (FPIC, CC BY-SA 3.0) · mappa fisica d'Italia (Eric Gaba e NordNordWest, CC BY-SA 3.0) · danni da vento in un centro abitato (MeteoNetwork.it, CC BY-SA 4.0). Via Wikimedia Commons.
-- **Dati ed eventi:** [Met Office](https://www.metoffice.gov.uk/) (Callum 2018) · [NOAA](https://www.noaa.gov/) e centri uragani (Milton 2024, scala Beaufort) · tempesta Vaia (Triveneto, 2018) · medicane Ianos (Grecia, 2020) · downburst dei Castelli Romani (gennaio 2026). **Comportamenti di autoprotezione:** [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/) · [Centro Funzionale Regionale del Lazio](https://www.regione.lazio.it/).
+- **Immagini:** uragano Florence dallo spazio, occhio (NASA, pubblico dominio) · cumulonembo (Simon Eugster, CC BY-SA 3.0) · medicane Ianos 2020 (Copernicus Sentinel-3/ESA, CC BY-SA 3.0 IGO) · uragano Milton 2024 (NASA/ISS, pubblico dominio) · occhio di Florence dalla ISS (Alexander Gerst/NASA, pubblico dominio) · schianti della tempesta Vaia in Val dei Mocheni (Syrio, CC BY-SA 4.0) · tempesta Callum 2018 (NASA Worldview/VIIRS, pubblico dominio) · tornado F5 di Moore 1999 (Mike Eilts/NSSL-NOAA, pubblico dominio) · favonio (FPIC, CC BY-SA 3.0) · mappa fisica d'Italia (Eric Gaba e NordNordWest, CC BY-SA 3.0) · danni da vento in un centro abitato (MeteoNetwork.it, CC BY-SA 4.0). Via Wikimedia Commons.
+- **Dati ed eventi:** [Met Office](https://www.metoffice.gov.uk/) (Callum 2018) · [NOAA](https://www.noaa.gov/) e centri uragani (Milton 2024, scala Beaufort) · tempesta Vaia (Triveneto, 2018) · medicane Ianos (Grecia, 2020) · [downburst dei Castelli Romani, 4 gennaio 2026 — cronaca locale](https://www.castellinotizie.it/2026/01/04/marino-e-ciampino-travolte-dal-maltempo-non-una-tromba-daria-ma-un-downburst-pini-abbattuti-come-birilli/). **Comportamenti di autoprotezione:** [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/) · [Centro Funzionale Regionale del Lazio](https://www.regione.lazio.it/).
 - **Sul nostro sito:** [Vento forte: cosa fare](/rischi-prevenzione/vento-forte/) · [Allerte meteo](/allerte-meteo/) · [Strumenti in tempo reale](/cruscotto/) · [Temporali intensi](/rischi-prevenzione/temporali-intensi/) · [Rischio incendio](/rischi-prevenzione/rischio-incendio/).
 - Dossier a cura del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**. Guida divulgativa: in emergenza chiama il **112**.
 {{< /dossier-fonti >}}
