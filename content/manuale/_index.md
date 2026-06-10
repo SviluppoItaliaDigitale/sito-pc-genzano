@@ -64,8 +64,7 @@ Il **decreto legislativo 9 aprile 2008, n. 81** applicato al volontariato di pro
 
 ### Parte IV · La scienza del rischio
 
-- Il modello del rischio: pericolosità, vulnerabilità, esposizione <span class="badge-prep">in preparazione</span>
-- Dalla conoscenza scientifica all'allerta: i Centri di competenza <span class="badge-prep">in preparazione</span>
+- [Il modello del rischio: pericolosità, vulnerabilità, esposizione](/manuale/41-modello-del-rischio/) — con la catena dal dato all'allerta e i Centri di competenza
 - Riduzione del rischio di disastri e il Quadro di Sendai <span class="badge-prep">in preparazione</span>
 
 ### Parte V · L'ordinamento e il modello di intervento
