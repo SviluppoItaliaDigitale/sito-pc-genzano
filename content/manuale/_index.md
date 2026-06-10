@@ -44,8 +44,8 @@ L'opera è organizzata in parti tematiche. I capitoli contrassegnati come <span 
 ### Parte I · Fondamenti
 
 - [Capitolo 1 — Che cos'è la protezione civile](/manuale/01-che-cose-la-protezione-civile/)
-- Capitolo 2 — Storia della protezione civile in Italia <span class="badge-prep">in preparazione</span>
-- Capitolo 3 — Il quadro giuridico: dalla legge 225/1992 al Codice del 2018 <span class="badge-prep">in preparazione</span>
+- [Capitolo 2 — Storia della protezione civile in Italia](/manuale/02-storia-della-protezione-civile-in-italia/)
+- [Capitolo 3 — Il quadro giuridico: dalla Costituzione al Codice](/manuale/03-il-quadro-giuridico/)
 
 ### Parte II · Il Codice della protezione civile, articolo per articolo
 
