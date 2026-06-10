@@ -1,0 +1,68 @@
+{{ define "main" }}
+{{ $pages := sort (where .Site.RegularPages "Section" "manuale") "Weight" }}
+{{/* Capitolo precedente / successivo nell'ordine di lettura (per weight) */}}
+{{ $prev := false }}{{ $next := false }}
+{{ range $i, $p := $pages }}
+  {{ if eq $p.RelPermalink $.RelPermalink }}
+    {{ if gt $i 0 }}{{ $prev = index $pages (sub $i 1) }}{{ end }}
+    {{ if lt $i (sub (len $pages) 1) }}{{ $next = index $pages (add $i 1) }}{{ end }}
+  {{ end }}
+{{ end }}
+<div class="container-xxl manuale-wrap py-3">
+  <div class="row gx-xl-5 justify-content-center">
+
+    {{/* ── Indice laterale (desktop sticky · mobile accordion) ── */}}
+    <aside class="col-lg-3 manuale-aside d-print-none">
+      <details class="manuale-aside-mobile d-lg-none" open>
+        <summary><i class="bi bi-list-ul me-1" aria-hidden="true"></i> Indice del Manuale</summary>
+        {{ partial "manuale-toc.html" . }}
+      </details>
+      <div class="manuale-aside-desk d-none d-lg-block">{{ partial "manuale-toc.html" . }}</div>
+    </aside>
+
+    {{/* ── Corpo del capitolo ── */}}
+    <div class="col-lg-9 col-xl-8 manuale-col">
+      {{ partial "breadcrumb.html" . }}
+      <header class="manuale-cap-header">
+        {{ with .Params.parte }}<p class="manuale-cap-parte">{{ . }}</p>{{ end }}
+        <h1 class="manuale-cap-titolo">{{ with .Params.capitolo }}<span class="manuale-cap-num">{{ . }}</span>{{ end }}{{ .Title }}</h1>
+        {{ with .Params.description }}<p class="manuale-cap-abstract">{{ . }}</p>{{ end }}
+      </header>
+
+      {{/* Strumenti di lettura (tempo + ascolto), riusa i partial del sito */}}
+      {{ if and (ne .Params.tts false) (gt .WordCount 30) }}
+      <div class="strumenti-articolo strumenti-lettura d-print-none" role="region" aria-label="Strumenti di lettura del capitolo">
+        <div class="strumenti-articolo-body">
+          <span class="reading-time" title="Tempo di lettura stimato (200 parole al minuto)">
+            <i class="bi bi-clock me-1" aria-hidden="true"></i> ~{{ .ReadingTime }} min<span class="visually-hidden"> di lettura stimati</span>
+          </span>
+          {{ partial "leggi-ad-alta-voce.html" (dict "selector" ".manuale-body") }}
+        </div>
+      </div>
+      {{ end }}
+
+      <article class="article-body manuale-body">
+        {{ .Content }}
+      </article>
+
+      {{/* Navigazione capitolo precedente / successivo */}}
+      <nav class="manuale-prevnext d-print-none" aria-label="Navigazione tra i capitoli">
+        {{ with $prev }}
+        <a class="manuale-prevnext-link prev" href="{{ .RelPermalink }}" rel="prev">
+          <span class="manuale-prevnext-dir"><i class="bi bi-arrow-left" aria-hidden="true"></i> Precedente</span>
+          <span class="manuale-prevnext-tit">{{ .Title }}</span>
+        </a>
+        {{ else }}<span></span>{{ end }}
+        {{ with $next }}
+        <a class="manuale-prevnext-link next" href="{{ .RelPermalink }}" rel="next">
+          <span class="manuale-prevnext-dir">Successivo <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+          <span class="manuale-prevnext-tit">{{ .Title }}</span>
+        </a>
+        {{ end }}
+      </nav>
+
+      {{ partial "page-tools.html" . }}
+    </div>
+  </div>
+</div>
+{{ end }}

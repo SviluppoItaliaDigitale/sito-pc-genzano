@@ -44,6 +44,8 @@
   {{- $vA11yJs := readFile "themes/flavour-pcgenzano/static/js/a11y-toolbar.js" | hash.FNV32a -}}
   <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}?v={{ $vCustomCss }}">
   <link rel="stylesheet" href="{{ "css/a11y-toolbar.css" | relURL }}?v={{ $vA11yCss }}">
+  {{- if eq .Section "manuale" }}{{- $vManuale := readFile "themes/flavour-pcgenzano/static/css/manuale.css" | hash.FNV32a -}}
+  <link rel="stylesheet" href="{{ "css/manuale.css" | relURL }}?v={{ $vManuale }}">{{- end }}
   <link rel="canonical" href="{{ $canonicalURL }}">
   {{ partial "hreflang-tags.html" . }}
   {{/* Pre-rendering: applica subito le preferenze di accessibilità salvate

@@ -1,0 +1,32 @@
+{{/* ──────────────────────────────────────────────────────────────────────
+     Indice di navigazione del Manuale di Protezione Civile.
+     Elenca i capitoli (Kind=page della sezione "manuale"), ordinati per
+     `weight`, raggruppati per `parte`. La versione stampabile (build.list:
+     never) è esclusa automaticamente da .Site.RegularPages.
+     Riusato dal lettore (single) e dal frontespizio (list).
+     ────────────────────────────────────────────────────────────────────── */}}
+{{ $cur := . }}
+{{ $pages := sort (where .Site.RegularPages "Section" "manuale") "Weight" }}
+<nav class="manuale-toc" aria-label="Indice del Manuale di Protezione Civile">
+  <a class="manuale-toc-home{{ if .IsNode }} is-active{{ end }}" href="{{ "manuale/" | relURL }}"{{ if .IsNode }} aria-current="page"{{ end }}>
+    <i class="bi bi-journal-bookmark-fill" aria-hidden="true"></i>&nbsp; Frontespizio e indice
+  </a>
+  {{ $curParte := "—" }}
+  <ol class="manuale-toc-list">
+  {{ range $pages }}
+    {{ $p := . }}
+    {{ $parte := .Params.parte | default "" }}
+    {{ if ne $parte $curParte }}
+      {{ $curParte = $parte }}
+      {{ with $parte }}<li class="manuale-toc-parte" aria-hidden="false">{{ . }}</li>{{ end }}
+    {{ end }}
+    {{ $active := eq $cur.RelPermalink $p.RelPermalink }}
+    <li class="manuale-toc-cap{{ if $active }} is-active{{ end }}">
+      <a href="{{ $p.RelPermalink }}"{{ if $active }} aria-current="page"{{ end }}>
+        {{ with $p.Params.capitolo }}<span class="manuale-toc-num">{{ . }}</span>{{ end }}
+        <span class="manuale-toc-tit">{{ $p.Title }}</span>
+      </a>
+    </li>
+  {{ end }}
+  </ol>
+</nav>
