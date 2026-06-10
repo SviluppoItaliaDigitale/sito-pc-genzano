@@ -1,0 +1,46 @@
+{{ define "main" }}
+{{ $pdf := "manuali/manuale-protezione-civile.pdf" }}
+{{ $pdfExists := fileExists (printf "static/%s" $pdf) }}
+{{ $caps := sort (where .Site.RegularPages "Section" "manuale") "Weight" }}
+
+{{/* ── Copertina del Manuale ── */}}
+<div class="manuale-cover">
+  <div class="container">
+    <p class="manuale-cover-eyebrow">Gruppo Comunale Volontari di Protezione Civile · Genzano di Roma</p>
+    <h1 class="manuale-cover-title">{{ .Title }}</h1>
+    {{ with .Params.sottotitolo }}<p class="manuale-cover-sub">{{ . }}</p>{{ end }}
+    <div class="manuale-cover-meta">
+      {{ with .Params.edizione }}<span><i class="bi bi-bookmark-fill" aria-hidden="true"></i> {{ . }}</span>{{ end }}
+      <span><i class="bi bi-collection" aria-hidden="true"></i> {{ len $caps }} capitoli pubblicati</span>
+      {{ with .Params.dataUltimaRevisione }}<span><i class="bi bi-clock-history" aria-hidden="true"></i> aggiornato il {{ (time .) | time.Format ":date_long" }}</span>{{ end }}
+    </div>
+    <div class="manuale-cover-actions">
+      <a class="btn btn-light btn-lg manuale-cover-cta" href="#piano-dell-opera"><i class="bi bi-list-ol me-1" aria-hidden="true"></i> Vai all'indice</a>
+      {{ if $pdfExists }}<a class="btn btn-outline-light btn-lg" href="{{ $pdf | absURL }}" download><i class="bi bi-file-earmark-pdf me-1" aria-hidden="true"></i> Scarica il PDF</a>{{ end }}
+    </div>
+  </div>
+</div>
+
+<div class="container py-4">
+  <div class="row justify-content-center">
+    <div class="col-lg-9 col-xl-8">
+
+      {{/* Ascolto del frontespizio */}}
+      {{ if and (ne .Params.tts false) (gt .WordCount 30) }}
+      <div class="strumenti-articolo strumenti-lettura d-print-none" role="region" aria-label="Strumenti di lettura">
+        <div class="strumenti-articolo-body">
+          <span class="reading-time"><i class="bi bi-clock me-1" aria-hidden="true"></i> ~{{ .ReadingTime }} min</span>
+          {{ partial "leggi-ad-alta-voce.html" (dict "selector" ".manuale-body") }}
+        </div>
+      </div>
+      {{ end }}
+
+      <article class="article-body manuale-body manuale-front">
+        {{ .Content }}
+      </article>
+
+      {{ partial "page-tools.html" . }}
+    </div>
+  </div>
+</div>
+{{ end }}

@@ -194,6 +194,25 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 
 ---
 
+## Manuale di Protezione Civile — opera viva, sincronizzazione obbligatoria
+
+🔴 Il **Manuale di Protezione Civile** (`/manuale/`, sezione Hugo a impianto accademico: reader online + PDF) è un'**opera viva**. Regola cogente: **quando aggiorni una norma, un dato istituzionale o un contenuto che il manuale riprende, AGGIORNA nello stesso lavoro il capitolo o l'appendice corrispondente del manuale.** Un aggiornamento del sito che lascia il manuale disallineato è un lavoro incompleto.
+
+**Trigger di aggiornamento obbligatorio:**
+- Una **norma citata** nel manuale cambia / viene abrogata / sostituita (D.Lgs., L., DPCM, direttiva, **ISO/UNI**) → aggiorna il capitolo che la tratta (es. il commentario al Codice) e ricontrolla la vigenza con `pc-normative-verifier`. *(Caso reale 10/06/2026: UNI 11656:2016 ritirata e sostituita dalla 11656:2023 — citare sempre l'edizione vigente.)*
+- Un **contenuto del sito** che il manuale rielabora cambia (`/conoscere/`, `/rischi-prevenzione/`, `/normativa/`, `/standard-iso/`, glossario, numeri utili, eventi storici) → riallinea capitolo/appendice.
+- Un **dato istituzionale** cambia (recapiti, sede, affiliazioni, organizzazione) → aggiornalo dove il manuale lo riporta.
+
+**Meccanismi automatici (fanno parte dell'opera viva):**
+- **Fonte unica**: reader online e PDF nascono dallo stesso Markdown → modificando un capitolo si aggiornano entrambi.
+- **Appendici generate** dai dati del sito (glossario, normativa, ISO, numeri utili, eventi) → si riallineano da sole al build; non si toccano a mano.
+- **PDF**: rigenera con `~/.manuale-venv/bin/python scripts/genera-manuale-pdf.py` dopo ogni modifica ai capitoli; il workflow `genera-manuale-pdf.yml` lo rigenera in automatico a ogni push su `content/manuale/**` o sui layout/CSS del manuale.
+- **Watcher**: `normativa-watcher.yml` va esteso a `content/manuale/` perché apra una issue quando una norma citata nel manuale cambia (flag per la revisione umana, **non** riscrittura automatica → NO INVENZIONI).
+
+**NO INVENZIONI resta assoluto**: ogni affermazione e ogni aggiornamento è ricondotto a una **fonte primaria verificata**. Per il commentario dei testi unici si usa il **testo vigente** scaricato dalla fonte ufficiale (Normattiva via `curl`+`pandoc`; mai parafrasare una norma a memoria). Estratti autentici in `riferimenti-interni/commentario-testi-unici/` (non deployati). **Registro accademico = eccezione dichiarata al gate AGID**: NON invocare `pc-article-reviewer` sui capitoli del manuale (rigetterebbe la prosa accademica); vale un gate dedicato di fonti/citazioni/struttura. Decisioni e stato del progetto nella memory `project_manuale_protezione_civile`.
+
+---
+
 ## Auto-integrazione approfondimenti (video + link) — pre-autorizzata
 
 🟢 Istruzione permanente (20/05/2026): integra da sola gli **approfondimenti pertinenti** (video + link a siti della nostra lista) in articoli e pagine, senza OK caso per caso. Copre l'intero flusso fino a live.

@@ -309,6 +309,15 @@ enableGitInfo = true
   parent = "risorse"
   weight = 0
 
+# Manuale di Protezione Civile (giugno 2026): opera a impianto accademico
+# (reader online + PDF). È il livello "approfondito" che accompagna "Conoscere"
+# (divulgativo). weight 0 → resta nel cluster di testa del dropdown Risorse.
+[[menus.main]]
+  name = "Manuale di Protezione Civile"
+  url = "/manuale/"
+  parent = "risorse"
+  weight = 0
+
 # Dossier interattivi (giugno 2026): racconti visivi scrollytelling.
 # weight 0 come "Conoscere": il pareggio si risolve per nome, quindi la voce
 # compare subito dopo "Conoscere la Protezione Civile" senza rinumerare le altre.

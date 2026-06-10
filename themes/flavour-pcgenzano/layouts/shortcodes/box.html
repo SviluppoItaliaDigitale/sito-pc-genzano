@@ -1,0 +1,16 @@
+{{- /* Infobox colorato per il Manuale di Protezione Civile.
+       Uso: {{< box tipo="def|chiave|esempio|norma|attenzione|approfondimento" titolo="..." >}}
+            testo in **markdown**
+            {{< /box >}}
+       Stili in static/css/manuale.css (schermo) e manuale-print.css (PDF). */ -}}
+{{- $tipo := .Get "tipo" | default "def" -}}
+{{- $titoli := dict "def" "Definizione" "chiave" "Punto chiave" "esempio" "Esempio" "norma" "Nel Codice" "attenzione" "Attenzione" "approfondimento" "Per approfondire" -}}
+{{- $icone := dict "def" "bookmark-fill" "chiave" "key-fill" "esempio" "lightbulb-fill" "norma" "journal-text" "attenzione" "exclamation-triangle-fill" "approfondimento" "plus-circle-fill" -}}
+{{- $titolo := .Get "titolo" | default (index $titoli $tipo) -}}
+{{- $icona := index $icone $tipo | default "info-circle-fill" -}}
+<div class="manuale-infobox box-{{ $tipo }}" role="note">
+<div class="infobox-head"><i class="bi bi-{{ $icona }}" aria-hidden="true"></i><span>{{ $titolo }}</span></div>
+<div class="infobox-body">
+{{ .Inner | markdownify }}
+</div>
+</div>
