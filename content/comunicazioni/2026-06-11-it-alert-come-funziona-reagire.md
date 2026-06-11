@@ -1,6 +1,6 @@
 ---
 title: "IT-alert: come funziona e come reagire a un messaggio"
-date: 2026-06-11
+date: 2026-06-11T00:01:00+02:00
 description: "IT-alert è il sistema di allarme pubblico italiano. Come riconoscere un messaggio, cosa fare, perché non è un fake quando suona forte."
 badge: "Comunicazione"
 priorita: "normale"

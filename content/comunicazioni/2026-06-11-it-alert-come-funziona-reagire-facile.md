@@ -1,6 +1,6 @@
 ---
 title: "IT-alert: cosa è e cosa fare"
-date: 2026-06-11
+date: 2026-06-11T00:01:00+02:00
 draft: false
 description: "IT-alert avvisa il tuo telefono in caso di pericolo. Cosa fare quando suona."
 badge: "Comunicazione"
