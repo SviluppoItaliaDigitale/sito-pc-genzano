@@ -47,6 +47,7 @@ import os
 import re
 import ssl
 import sys
+import time
 import datetime
 import urllib.request
 import urllib.error
@@ -156,8 +157,21 @@ def _get(url, accept="application/json"):
         "User-Agent": USER_AGENT,
         "Accept": accept,
     })
-    with urllib.request.urlopen(req, timeout=TIMEOUT, context=_CTX) as r:
-        return r.read()
+    # Retry sugli errori di rete transitori dei runner CI (DNS, timeout, 5xx):
+    # 3 tentativi con attesa crescente. I 4xx non si ritentano (non transitori).
+    for tentativo in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=TIMEOUT, context=_CTX) as r:
+                return r.read()
+        except urllib.error.HTTPError as e:
+            if e.code < 500 or tentativo == 2:
+                raise
+        except (urllib.error.URLError, OSError):
+            if tentativo == 2:
+                raise
+        attesa = 15 * (tentativo + 1)
+        print(f"[retry] errore di rete, riprovo tra {attesa}s: {url[:90]}", file=sys.stderr)
+        time.sleep(attesa)
 
 
 def risolvi_immagine(slug, valid_time=None):

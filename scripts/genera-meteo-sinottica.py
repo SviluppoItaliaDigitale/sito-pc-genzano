@@ -26,7 +26,7 @@ Uso:
 
 Dipendenze: numpy, matplotlib, cartopy.
 """
-import json, os, sys, ssl, math, io, urllib.request, urllib.parse, datetime
+import json, os, sys, ssl, math, io, time, urllib.request, urllib.error, urllib.parse, datetime
 
 import numpy as np
 import matplotlib
@@ -114,8 +114,21 @@ def cornice_microtesto(img, year, band=15, fs=9, col=(140, 163, 186)):
 def _get(url):
     ctx = ssl.create_default_context()
     req = urllib.request.Request(url, headers={"User-Agent": "pc-genzano-meteo/1.0"})
-    with urllib.request.urlopen(req, timeout=60, context=ctx) as r:
-        return json.loads(r.read().decode("utf-8"))
+    # Retry sugli errori di rete transitori dei runner CI (DNS, timeout, 5xx):
+    # 3 tentativi con attesa crescente. I 4xx non si ritentano (non transitori).
+    for tentativo in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=60, context=ctx) as r:
+                return json.loads(r.read().decode("utf-8"))
+        except urllib.error.HTTPError as e:
+            if e.code < 500 or tentativo == 2:
+                raise
+        except (urllib.error.URLError, OSError):
+            if tentativo == 2:
+                raise
+        attesa = 15 * (tentativo + 1)
+        print(f"[retry] errore di rete, riprovo tra {attesa}s: {url[:90]}", file=sys.stderr)
+        time.sleep(attesa)
 
 
 def build_grid_coords():

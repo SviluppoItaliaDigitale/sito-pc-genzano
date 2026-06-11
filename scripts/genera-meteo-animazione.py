@@ -22,7 +22,7 @@ Uso:
 
 Idempotente: riscrive sempre l'output.
 """
-import json, math, os, sys, ssl, urllib.request, datetime, importlib.util
+import json, math, os, sys, datetime, importlib.util
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -59,11 +59,8 @@ LBL = {"Viterbo": (12.10, 42.42), "Rieti": (12.86, 42.40), "Roma": (12.50, 41.99
 
 
 # ----------------------------------------------------------- fetch Open-Meteo (orario)
-def _get(url):
-    ctx = ssl.create_default_context()
-    req = urllib.request.Request(url, headers={"User-Agent": "pc-genzano-meteo/1.0"})
-    with urllib.request.urlopen(req, timeout=30, context=ctx) as r:
-        return json.loads(r.read().decode("utf-8"))
+# Riusa il fetch della cartina statica (con retry sugli errori di rete transitori).
+_get = ml._get
 
 
 def fetch_hourly():
