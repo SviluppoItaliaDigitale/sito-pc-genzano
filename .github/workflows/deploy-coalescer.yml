@@ -17,7 +17,21 @@ on:
   schedule:
     # 2×/ora, orari espliciti scaglionati fuori dai quarti d'ora canonici
     # (memory: i cron espliciti battono i pattern */N su GitHub Actions).
+    # NB: lo scheduler GitHub può ritardare/saltare gli slot anche per ore
+    # (incidente 11/06/2026: 6 slot saltati, cartina meteo live ferma 5 ore).
+    # Il cron resta come fallback; il trigger puntuale è workflow_run qui sotto.
     - cron: "13,43 * * * *"
+  # Trigger puntuale e affidabile: appena un workflow di sfondo frequente
+  # completa (e ha eventualmente committato), il coalescer parte subito.
+  # workflow_run non subisce i ritardi dello scheduler; la catena è ancorata
+  # al trigger esterno cron-job.org che lancia i workflow meteo ogni ora.
+  # Il check HEAD-vs-ultimo-deploy sotto evita comunque deploy ridondanti.
+  workflow_run:
+    workflows:
+      - "🌤️ Cartina meteo Lazio + riquadro Genzano"
+      - "🗺️ Cartine meteo extra (animazione Lazio + sinottica Italia)"
+      - "🌍 Carte ECMWF OpenCharts (Meteo Europa)"
+    types: [completed]
   workflow_dispatch:
 
 permissions:

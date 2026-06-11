@@ -13,6 +13,8 @@ Eseguibile in locale (rete) o in CI. Stdlib pura, nessuna dipendenza.
 import datetime
 import json
 import sys
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from collections import defaultdict
@@ -42,8 +44,21 @@ def scarica():
     })
     url = f"{ARCHIVE}?{q}"
     print(f"GET {url}", file=sys.stderr)
-    with urllib.request.urlopen(url, timeout=120) as r:
-        return json.load(r)["daily"]
+    # Retry sugli errori di rete transitori dei runner CI (DNS, timeout, 5xx):
+    # 3 tentativi con attesa crescente. I 4xx non si ritentano (non transitori).
+    for tentativo in range(3):
+        try:
+            with urllib.request.urlopen(url, timeout=120) as r:
+                return json.load(r)["daily"]
+        except urllib.error.HTTPError as e:
+            if e.code < 500 or tentativo == 2:
+                raise
+        except (urllib.error.URLError, OSError):
+            if tentativo == 2:
+                raise
+        attesa = 15 * (tentativo + 1)
+        print(f"[retry] errore di rete, riprovo tra {attesa}s", file=sys.stderr)
+        time.sleep(attesa)
 
 
 def media(xs):

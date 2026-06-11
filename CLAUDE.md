@@ -352,7 +352,7 @@ Elenco completo in rule `09-regole-contenuti-qualita.md`. Vincoli più critici:
 ## Automazioni (GitHub Actions) e note operative
 
 Tabella completa workflow + note operative in rule `10-automazioni-github-actions.md`. Trigger rapidi:
-- `deploy.yml` a ogni push su `main`. **Priorità deploy (3 livelli, 31/05/2026):** allerta/`pubblica-programmata` immediati (`-f priority=urgent`), articoli (push merge) immediati e prioritari, aggiornamenti di sfondo (meteo/ECMWF/clima/video/stato/QR/pacchetti/indice) **coalescati** da `deploy-coalescer.yml` (1 deploy ogni ~30 min). Dettagli in rule 10 § "Modello di priorità del deploy".
+- `deploy.yml` a ogni push su `main`. **Priorità deploy (3 livelli, 31/05/2026):** allerta/`pubblica-programmata` immediati (`-f priority=urgent`), articoli (push merge) immediati e prioritari, aggiornamenti di sfondo (meteo/ECMWF/clima/video/stato/QR/pacchetti/indice) **coalescati** da `deploy-coalescer.yml` (`workflow_run` al completamento dei workflow meteo + cron ~30 min come fallback, dall'11/06/2026). Dettagli in rule 10 § "Modello di priorità del deploy".
 - `aggiorna-manuale.yml` (lunedì 06:00 UTC): monitora le fonti AGID/Designers Italia/DPC e apre issue quando cambiano — manuale e `.claude/rules/` vanno aggiornati in coppia (rule 02 § "Sincronizzazione automatica con gli aggiornamenti AGID").
 - Modalità emergenza: `data/emergenza.json` → `"attiva": true`.
 - Allerta meteo manuale: `data/allerta.json` → `livello: verde|giallo|arancione|rosso`.
