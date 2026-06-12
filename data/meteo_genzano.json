@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-06-12T03:02",
+  "aggiornato": "2026-06-12T03:37",
   "data_lunga": "venerdì 12 giugno 2026",
-  "aggiornato_label": "venerdì 12 giugno 2026, ore 03:02",
+  "aggiornato_label": "venerdì 12 giugno 2026, ore 03:37",
   "alba": "05:33",
   "tramonto": "20:44",
   "corrente": {
-    "temp": 17.0,
-    "percepita": 18.0,
+    "temp": 16.8,
+    "percepita": 17.8,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
     "umidita": 90,
     "vento": 5,
-    "raffiche": 21
+    "raffiche": 19
   },
   "giorni": [
     {
