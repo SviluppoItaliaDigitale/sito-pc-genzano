@@ -1,6 +1,6 @@
 ---
 title: "14 giugno: Giornata mondiale del donatore di sangue"
-date: 2026-06-14
+date: 2026-06-14T00:01:00+02:00
 description: "La Giornata del donatore è un pilastro della resilienza sanitaria del Paese. Perché il volontariato di donazione è cugino del volontariato di Protezione Civile."
 badge: "Volontariato"
 priorita: "normale"
