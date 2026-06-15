@@ -49,6 +49,8 @@ Sul nostro sito la barra in cima alla [homepage](/) mostra **il livello attuale*
 | 🟠 **Arancione** | Criticità moderata | Evita uscite non necessarie nella finestra di allerta. Metti in sicurezza balconi, garage, cantine. Controlla famigliari fragili. |
 | 🔴 **Rosso** | Criticità elevata | Resta in luogo sicuro. Segui solo fonti ufficiali. Non muoverti se non in evacuazione disposta dall'autorità. |
 
+Per il dettaglio sul **nostro territorio** — zone più delicate e azioni per ogni colore — vedi [Allerta meteo: cosa significa a Genzano, colore per colore](/allerte-meteo/cosa-significa-a-genzano/).
+
 {{< callout tipo="avviso" titolo="Gialla non significa «pericolo nullo»" >}}
 È prevista una criticità ordinaria: la maggior parte degli eventi non produce danni, ma alcuni possono. La prudenza è dovuta.
 {{< /callout >}}
