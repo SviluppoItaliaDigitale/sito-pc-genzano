@@ -86,7 +86,7 @@ enableGitInfo = true
   url = "/"
   weight = 1
 
-# --- Dropdown: Per il Cittadino (7 voci) ---
+# --- Dropdown: Per il Cittadino (9 voci) ---
 [[menus.main]]
   name = "Per il Cittadino"
   identifier = "per-il-cittadino"
@@ -138,11 +138,21 @@ enableGitInfo = true
   parent = "per-il-cittadino"
   weight = 7
 
+# Aggiunta giugno 2026: schede di preparazione all'emergenza per chi
+# gestisce un luogo o un gruppo di persone (negozio, condominio,
+# associazione, evento). Parallele ai kit-calamita (rivolti alle persone),
+# ma rivolte all'organizzazione-come-entità.
+[[menus.main]]
+  name = "Kit per le organizzazioni"
+  url = "/kit-organizzazioni/"
+  parent = "per-il-cittadino"
+  weight = 8
+
 [[menus.main]]
   name = "Cruscotto del territorio"
   url = "/cruscotto/"
   parent = "per-il-cittadino"
-  weight = 8
+  weight = 9
 
 # --- Dropdown: Per le scuole (7 voci didattiche) ---
 # (rinominato da "Educazione e Inclusione" a maggio 2026 — splittato per

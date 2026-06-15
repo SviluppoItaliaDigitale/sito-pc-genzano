@@ -75,7 +75,7 @@
                  * apre un'issue settimanale se trova drift.
                  */
                 '<li class="nav-item" role="none"><a class="nav-link" href="' + SITE_URL + '/" role="menuitem"><span>Home</span></a></li>' +
-                /* Dropdown: Per il Cittadino (7 voci, +Kit pronti maggio 2026) */
+                /* Dropdown: Per il Cittadino (9 voci, +Kit organizzazioni giugno 2026) */
                 '<li class="nav-item dropdown" role="none">' +
                   '<a class="nav-link dropdown-toggle" href="#" id="navDropdown-per-il-cittadino" role="menuitem" data-bs-toggle="dropdown" aria-expanded="false">' +
                     '<span>Per il Cittadino</span>' +
@@ -89,6 +89,7 @@
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/numeri-utili/" role="menuitem"><span>Numeri Utili</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/piano-familiare/" role="menuitem"><span>Piano Familiare</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/kit-calamita/" role="menuitem"><span>Kit pronti per situazioni vulnerabili</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/kit-organizzazioni/" role="menuitem"><span>Kit per le organizzazioni</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/cruscotto/" role="menuitem"><span>Cruscotto del territorio</span></a></li>' +
                   '</ul></div></div>' +
                 '</li>' +
