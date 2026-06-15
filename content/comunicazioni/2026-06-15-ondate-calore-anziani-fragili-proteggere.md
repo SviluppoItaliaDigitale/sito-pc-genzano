@@ -1,6 +1,6 @@
 ---
 title: "15 giugno: ondate di calore, proteggere anziani e persone fragili"
-date: 2026-06-15
+date: 2026-06-15T00:01:00+02:00
 description: "Le ondate di calore sono il rischio sanitario estivo più sottovalutato. Come aiutare anziani, malati cronici, bambini piccoli. Il ruolo della rete di vicinato."
 badge: "Prevenzione"
 priorita: "normale"
