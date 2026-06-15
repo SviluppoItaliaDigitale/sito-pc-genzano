@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-04-29-primo-soccorso-cinque-regole-base-facile"
 ---
 
 **Questo articolo non sostituisce un corso di primo soccorso.** Per assistere correttamente una persona in emergenza servono formazione, pratica e aggiornamento periodico. Quello che possiamo fare tutti, però, è conoscere **cinque regole di base** da applicare nei minuti che precedono l'arrivo del 112 e del soccorso sanitario. A volte questi minuti sono decisivi.

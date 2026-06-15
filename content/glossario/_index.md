@@ -112,6 +112,9 @@ Rilevazione tecnica dopo un evento, di norma con scheda AeDES per i terremoti, p
 Struttura regionale che analizza previsioni e dati di monitoraggio e pubblica i bollettini di criticità. Per il Lazio, Genzano di Roma rientra nella **Zona F — Bacini Costieri Sud**.
 *Approfondisci: [La scienza del rischio](/conoscere/scienza-del-rischio/).*
 
+### CMCC {#cmcc}
+Fondazione Centro euro-Mediterraneo sui Cambiamenti Climatici. Ente di ricerca italiano che studia il clima e i suoi rischi, con scenari utili anche per il territorio del Lazio.
+
 ### CNR {#cnr}
 Consiglio Nazionale delle Ricerche. Maggiore ente pubblico di ricerca italiano; per la protezione civile fornisce conoscenze scientifiche sui rischi naturali (frane via CNR-IRPI).
 *Approfondisci: [La scienza del rischio](/conoscere/scienza-del-rischio/).*
@@ -214,6 +217,14 @@ Federal Emergency Management Agency. È l'agenzia federale statunitense per la g
 ### FE.PI.VOL. {#fepivol}
 **Federazione Pronto Intervento Volontariato ODV**. Coordinamento regionale del volontariato di Protezione Civile del Lazio a cui aderisce il Gruppo Comunale di Genzano di Roma. Coordina le colonne mobili regionali nelle grandi emergenze.
 
+## G
+
+### GDPR {#gdpr}
+Regolamento generale sulla protezione dei dati (Regolamento UE 2016/679). Stabilisce come vanno trattati i dati personali dei cittadini, anche dalle pubbliche amministrazioni.
+
+### GIS {#gis}
+Sistema informativo geografico (Geographic Information System). Strumento informatico che raccoglie e analizza i dati legati al territorio: è la base delle mappe del rischio e della cartografia di protezione civile.
+
 ## H
 
 ### HACCP {#haccp}
@@ -246,6 +257,9 @@ Misura degli effetti di un terremoto su persone, edifici e ambiente, valutata os
 ### Io non rischio {#io-non-rischio}
 Campagna nazionale del Dipartimento e di ANPAS per la riduzione del rischio: ogni anno i volontari informano i cittadini in piazza su terremoti, alluvioni, incendi e maremoti.
 
+### IPCC {#ipcc}
+Gruppo intergovernativo sul cambiamento climatico (Intergovernmental Panel on Climate Change). Organismo scientifico dell'ONU che valuta lo stato delle conoscenze sul clima e sui suoi effetti.
+
 ### ISIN {#isin}
 Ispettorato nazionale per la sicurezza nucleare e la radioprotezione. È l'autorità che vigila su impianti, sorgenti e trasporti di materiale radioattivo in Italia. Istituito con il decreto legislativo n. 45 del 2014.
 *Approfondisci: [Il rischio nucleare e radiologico](/conoscere/catalogo-dei-rischi/rischio-nucleare-radiologico/).*
@@ -269,6 +283,9 @@ Legge 9 gennaio 2004, n. 4. Riguarda l'accessibilità degli strumenti informatic
 ### Legge Zamberletti
 Legge 24 febbraio 1992, n. 225. Ha istituito il Servizio nazionale della protezione civile. Oggi il riferimento principale è il D.Lgs. 1/2018.
 *Approfondisci: [Storia della protezione civile italiana](/conoscere/storia-della-protezione-civile/).*
+
+### LIS {#lis}
+Lingua dei segni italiana. È la lingua delle persone sorde in Italia, riconosciuta dallo Stato. Alcuni contenuti del sito sono disponibili anche con video in LIS.
 
 ## M
 
@@ -435,6 +452,9 @@ Testo Unico sulla Sicurezza sul Lavoro (D.Lgs. 81/2008). Obbliga ogni datore di 
 
 ### UCPM {#ucpm}
 Sigla di *Union Civil Protection Mechanism*: è il [Meccanismo europeo di protezione civile](#meccanismo-europeo).
+
+### UNDRR {#undrr}
+Ufficio delle Nazioni Unite per la riduzione del rischio di disastri (United Nations Office for Disaster Risk Reduction). Coordina a livello mondiale le strategie per ridurre i danni delle catastrofi, come il Quadro di Sendai.
 
 ### USR
 Ufficio Speciale Ricostruzione. Struttura tecnica che segue la ricostruzione dopo grandi emergenze.

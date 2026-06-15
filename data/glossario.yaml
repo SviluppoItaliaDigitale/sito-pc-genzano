@@ -830,3 +830,39 @@
     - "Istituto Nazionale per l'Assicurazione contro gli Infortuni sul Lavoro"
   definizione: "Istituto Nazionale per l'Assicurazione contro gli Infortuni sul Lavoro: ente pubblico che assicura i lavoratori contro infortuni e malattie professionali; copre anche i volontari di PC nelle attività autorizzate."
   link: "/glossario/#inail"
+- id: cmcc
+  termine: "CMCC"
+  varianti:
+    - "CMCC"
+  definizione: "Fondazione Centro euro-Mediterraneo sui Cambiamenti Climatici: ente di ricerca italiano che studia il clima e i rischi connessi."
+  link: "/glossario/#cmcc"
+- id: gdpr
+  termine: "GDPR"
+  varianti:
+    - "GDPR"
+  definizione: "Regolamento generale sulla protezione dei dati (UE 2016/679): stabilisce come trattare i dati personali dei cittadini, anche nella pubblica amministrazione."
+  link: "/glossario/#gdpr"
+- id: gis
+  termine: "GIS"
+  varianti:
+    - "GIS"
+  definizione: "Sistema informativo geografico: strumento che raccoglie e analizza i dati legati al territorio, alla base delle mappe del rischio e della cartografia di PC."
+  link: "/glossario/#gis"
+- id: ipcc
+  termine: "IPCC"
+  varianti:
+    - "IPCC"
+  definizione: "Gruppo intergovernativo ONU sul cambiamento climatico: valuta lo stato delle conoscenze scientifiche sul clima e sui suoi effetti."
+  link: "/glossario/#ipcc"
+- id: lis
+  termine: "LIS"
+  varianti:
+    - "LIS"
+  definizione: "Lingua dei segni italiana: la lingua delle persone sorde in Italia, riconosciuta dallo Stato. Alcuni contenuti del sito sono disponibili in LIS."
+  link: "/glossario/#lis"
+- id: undrr
+  termine: "UNDRR"
+  varianti:
+    - "UNDRR"
+  definizione: "Ufficio ONU per la riduzione del rischio di disastri: coordina a livello mondiale le strategie per ridurre i danni delle catastrofi (Quadro di Sendai)."
+  link: "/glossario/#undrr"
