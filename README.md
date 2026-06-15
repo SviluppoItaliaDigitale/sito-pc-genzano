@@ -99,6 +99,29 @@ Materiali **rilasciati gratuitamente**, liberi e riutilizzabili da altri Comuni/
 
 Specifiche complete in [`manuale/parte-20-kit-calamita-categorie-vulnerabili.md`](manuale/parte-20-kit-calamita-categorie-vulnerabili.md).
 
+### Kit per le organizzazioni (`/kit-organizzazioni/`)
+
+Famiglia di schede di preparazione all'emergenza (giugno 2026) rivolte all'**organizzazione-come-entità**, parallela ai Kit Calamità (che sono rivolti alle *persone*). Sul modello *Ready Business* (FEMA) e *Prepare* (UK), adattate ai Castelli Romani. Colma il punto "toolkit per organizzazioni" emerso da un audit esterno del sito.
+
+Hub `/kit-organizzazioni/` (auto-elenca le schede) + 4 schede AGID a struttura uniforme PRIMA/DURANTE/DOPO + `{{< cosa-non-fare >}}` + `{{< chi-chiamare >}}`:
+
+| Scheda | Target |
+|---|---|
+| Attività commerciali | negozi, bar, ristoranti: clienti+dipendenti, vie di fuga, kit, 4 scenari |
+| Condominio | amministratore+residenti: punto di raccolta, fragili ai piani, gas/ascensori |
+| Associazioni e sedi | referenti+volontari: piano interno, registro presenze, fragili |
+| Organizzatori di eventi | sicurezza dell'organizzatore + **gate Circolare DPC 6/8/2018** (nessuna viabilità al volontariato) |
+
+Voce di menu **"Kit per le organizzazioni"** sotto *Per il Cittadino* (`hugo.toml` + `site-chrome.js`), presente in mappa-sito e assistente virtuale.
+
+### Allerta meteo: cosa significa a Genzano (`/allerte-meteo/cosa-significa-a-genzano/`)
+
+Pagina (giugno 2026) che traduce ogni colore di allerta sul territorio reale: per ciascun livello (verde/giallo/arancione/rosso) una tabella con **cosa significa a Genzano**, **zone più delicate**, **cosa fai tu**, **cosa fa il Comune con il Gruppo**. Fonti dal sito (Zona di allerta F — Bacini Costieri Sud, morfologia cratere/lago di Nemi, `codici_colore.yaml`, logica COC); le aree puntuali rimandano a IdroGEO/ISPRA e PAI (NO INVENZIONI). Cross-link da `/allerte-meteo/` e `/cosa-succede-quando-scatta-allerta/`.
+
+### Guard anti-dato-stantio sullo stato allerta
+
+Lo shortcode `allerta-stato-attuale` (in `/allerte-meteo/` e `/cruscotto/`) mostra un avviso neutro se `ultimo_controllo` della fonte supera **12 ore**, invece di lasciar credere fresco uno stato (anche verde) potenzialmente fermo. Doppio livello: controllo a build-time (Hugo) + mini-script client-side che rivaluta sull'orologio del visitatore (HTML congelato a deploy bloccato).
+
 ### Feed RSS pubblici (`/feed-rss/`)
 
 Hugo genera **39 feed RSS** automaticamente, uno per sezione del sito (homepage, comunicazioni, allerte, rischi, formazione, glossario, standard ISO, ecc.). Tutti i feed sono live su Aruba (`https://www.protezionecivilegenzano.it/<sezione>/index.xml`) e auto-discoverable via `<link rel="alternate" type="application/rss+xml">` nell'`<head>` di ogni pagina.

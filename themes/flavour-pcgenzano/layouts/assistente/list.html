@@ -463,7 +463,8 @@
         { text: 'Rischi del territorio (sismico, idro, incendi)', next: 'info_cittadino_rischi' },
         { text: 'Cartografia operativa (aree di attesa)', next: 'info_cittadino_cartografia' },
         { text: 'Numeri utili (112 e altri)', next: 'info_cittadino_numeri' },
-        { text: 'Piano di emergenza familiare', next: 'info_cittadino_piano' }
+        { text: 'Piano di emergenza familiare', next: 'info_cittadino_piano' },
+        { text: 'Kit per le organizzazioni (negozi, condomìni, associazioni, eventi)', next: 'info_cittadino_organizzazioni' }
       ]
     },
     info_cittadino_cosa_fare: {
@@ -480,9 +481,22 @@
       title: 'Allerte meteo e codici colore',
       body: ['La Regione Lazio emette ogni giorno bollettini di allerta con livelli di colore: verde (nessuna), giallo (attenzione), arancione (elevata), rosso (massima). Lo stato attuale per Genzano è sempre visibile in cima alla homepage.'],
       links: [
+        { text: 'Cosa significa ogni colore a Genzano', url: '/allerte-meteo/cosa-significa-a-genzano/' },
         { text: 'Spiegazione codici colore', url: '/allerte-meteo/' },
         { text: 'Stato allerta attuale (homepage)', url: '/' },
         { text: 'Bollettino ufficiale Regione Lazio', url: 'https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti' }
+      ]
+    },
+    info_cittadino_organizzazioni: {
+      kind: 'answer',
+      title: 'Kit per le organizzazioni',
+      body: ['Se gestisci un negozio, un condominio, una sede di associazione o organizzi un evento, queste schede ti aiutano a preparare il tuo luogo e le persone all\'emergenza: piano, vie di fuga, kit, cosa fare per terremoto, incendio, allerta meteo e blackout.'],
+      links: [
+        { text: 'Hub Kit per le organizzazioni', url: '/kit-organizzazioni/' },
+        { text: 'Attività commerciali (negozi, bar, ristoranti)', url: '/kit-organizzazioni/attivita-commerciali/' },
+        { text: 'Condominio', url: '/kit-organizzazioni/condominio/' },
+        { text: 'Associazioni e sedi', url: '/kit-organizzazioni/associazioni-e-sedi/' },
+        { text: 'Organizzatori di eventi', url: '/kit-organizzazioni/organizzatori-di-eventi/' }
       ]
     },
     info_cittadino_rischi: {

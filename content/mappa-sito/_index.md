@@ -160,6 +160,12 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-desc">Codici colore, sistema di allertamento, widget Windy/Radar DPC/MeteoAM, fonti ufficiali.</p>
   <span class="ms-card-arrow">Apri →</span>
 </a>
+<a class="ms-card ms-emerg" href="/allerte-meteo/cosa-significa-a-genzano/">
+  <div class="ms-card-icon"><i class="bi bi-palette-fill"></i></div>
+  <p class="ms-card-title">Allerta: cosa significa a Genzano</p>
+  <p class="ms-card-desc">Colore per colore (verde/giallo/arancione/rosso): cosa significa sul territorio, zone più delicate, cosa fai tu, cosa fa il Comune con il Gruppo.</p>
+  <span class="ms-card-arrow">Apri →</span>
+</a>
 <a class="ms-card ms-emerg" href="/numeri-utili/">
   <div class="ms-card-icon"><i class="bi bi-telephone-fill"></i></div>
   <p class="ms-card-title">Numeri Utili</p>
@@ -537,6 +543,36 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <div class="ms-card-icon"><i class="bi bi-shield-shaded"></i></div>
   <p class="ms-card-title">Kit Volontari PC (auto-cura)</p>
   <p class="ms-card-desc">IFRC Caring + NCTSN STS + WHO mhGAP + ProQOL-5. Auto-valutazione, decompressione.</p>
+</a>
+</div>
+
+<div class="ms-section"><span class="ms-section-icon" style="background:#003366"><i class="bi bi-shop"></i></span><h2>Kit per le organizzazioni</h2></div>
+
+<div class="ms-grid">
+<a class="ms-card ms-tool" href="/kit-organizzazioni/">
+  <div class="ms-card-icon"><i class="bi bi-buildings-fill"></i></div>
+  <p class="ms-card-title">Hub Kit Organizzazioni</p>
+  <p class="ms-card-desc">Schede di preparazione all'emergenza per chi gestisce un luogo o un gruppo di persone. Modello Ready Business/Prepare adattato ai Castelli Romani.</p>
+</a>
+<a class="ms-card ms-tool" href="/kit-organizzazioni/attivita-commerciali/">
+  <div class="ms-card-icon"><i class="bi bi-shop"></i></div>
+  <p class="ms-card-title">Attività commerciali</p>
+  <p class="ms-card-desc">Negozi, bar, ristoranti: clienti e dipendenti, vie di fuga, kit, terremoto/incendio/allerta/blackout.</p>
+</a>
+<a class="ms-card ms-tool" href="/kit-organizzazioni/condominio/">
+  <div class="ms-card-icon"><i class="bi bi-building"></i></div>
+  <p class="ms-card-title">Condominio</p>
+  <p class="ms-card-desc">Amministratore e residenti: punto di raccolta, persone fragili ai piani, gas e ascensori.</p>
+</a>
+<a class="ms-card ms-tool" href="/kit-organizzazioni/associazioni-e-sedi/">
+  <div class="ms-card-icon"><i class="bi bi-people-fill"></i></div>
+  <p class="ms-card-title">Associazioni e sedi</p>
+  <p class="ms-card-desc">Referenti e volontari: piano interno, registro presenze, persone fragili.</p>
+</a>
+<a class="ms-card ms-tool" href="/kit-organizzazioni/organizzatori-di-eventi/">
+  <div class="ms-card-icon"><i class="bi bi-calendar-event-fill"></i></div>
+  <p class="ms-card-title">Organizzatori di eventi</p>
+  <p class="ms-card-desc">Sicurezza di sagre, feste e manifestazioni; cosa può e non può fare il volontariato di PC (Circolare DPC 6/8/2018).</p>
 </a>
 </div>
 

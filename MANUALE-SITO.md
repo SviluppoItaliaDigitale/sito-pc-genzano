@@ -94,6 +94,24 @@ Se non sai in quale Parte cercare:
 
 ## 📜 Changelog
 
+> **3.2 (2026-06-15) — Audit esterno: 3 interventi**
+> Recepiti i punti azionabili di un audit esterno del sito:
+> - **Guard anti-dato-stantio** sullo stato allerta: lo shortcode
+>   `allerta-stato-attuale` avvisa se `ultimo_controllo` della fonte supera
+>   12 ore (build-time Hugo + mini-script client-side per HTML congelato),
+>   invece di lasciar credere fresco uno stato anche verde.
+> - **Kit per le organizzazioni** (`/kit-organizzazioni/`): hub + 4 schede
+>   (attività commerciali, condominio, associazioni e sedi, organizzatori di
+>   eventi) sul modello Ready Business/Prepare. La scheda eventi rispetta il
+>   gate Circolare DPC 6/8/2018 (nessuna viabilità al volontariato). Voce di
+>   menu sotto *Per il Cittadino*, in mappa-sito e assistente.
+> - **Allerta: cosa significa a Genzano** (`/allerte-meteo/cosa-significa-a-genzano/`):
+>   per ogni colore, cosa significa sul territorio, zone più delicate, cosa fa
+>   il cittadino e cosa fa il Comune con il Gruppo. Fonti dal sito; aree
+>   puntuali rimandate a IdroGEO/PAI (NO INVENZIONI).
+> Dettagli nel `README.md` (sezioni dedicate). Resta da rigenerare a parte il
+> deck di presentazione (`scripts/genera-presentazione.py`, richiede LibreOffice).
+
 > **3.1 (2026-05-02) — Lettura accessibile per fasce deboli**
 > Cinque strumenti integrati per anziani, dislessici, italiano L2, bambini in
 > lettura lenta, persone in stress da emergenza:
