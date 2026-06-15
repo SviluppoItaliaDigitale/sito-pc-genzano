@@ -102,6 +102,10 @@ Il codice colore dipende dagli effetti attesi, non solo dalla quantità di piogg
 
 ## Significato dei codici colore
 
+{{< callout tipo="info" titolo="Cosa cambia colore per colore qui a Genzano" >}}
+Per ogni livello — verde, giallo, arancione, rosso — abbiamo preparato una scheda che spiega **cosa significa concretamente a Genzano**, quali zone sono più delicate e cosa fa il Comune con il Gruppo: [Allerta meteo: cosa significa a Genzano, colore per colore](/allerte-meteo/cosa-significa-a-genzano/).
+{{< /callout >}}
+
 {{< callout tipo="avviso" titolo="Verde non vuol dire rischio zero" >}}
 L'assenza di allerta significa che **non sono previsti fenomeni significativi**, non che il rischio sia nullo. La preparazione si fa **prima**, quando il cielo è sereno: tieni pronto il [kit di emergenza](/rischi-prevenzione/kit-emergenza/), conosci le aree di attesa del tuo quartiere e compila il [Piano Familiare](/piano-familiare/). Quando arriva l'allerta è troppo tardi per organizzarsi.
 {{< /callout >}}
