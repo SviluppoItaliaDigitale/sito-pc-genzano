@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-05-20-sciami-api-estate-recupero-genzano-facile"
 ---
 
 Maggio o giugno, una mattina qualunque a Genzano di Roma. Ti affacci al balcone e vedi, attaccata a un ramo di un albero del giardino, una **massa scura grande quanto un pallone da rugby**. Si muove. Vibra. Decine di migliaia di api si muovono in coordinazione attorno a un cuore comune. È uno **sciame**: una delle scene più ordinarie e meno comprese della primavera italiana.
