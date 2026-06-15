@@ -618,6 +618,12 @@ content("Cosa fare adesso e assistente guidato", [
 
 slide_allerte(N())
 
+content("Allerta meteo: cosa significa a Genzano", [
+    "Per ogni colore — verde, giallo, arancione, rosso — cosa cambia concretamente sul territorio.",
+    "Le zone più delicate, cosa fa il cittadino e cosa fa il Comune con il Gruppo.",
+    "Genzano rientra nella zona di allerta F — Bacini Costieri Sud.",
+], N(), fonti="Centro Funzionale Regionale del Lazio")
+
 content("Cosa succede quando scatta un'allerta", [
     "Il percorso completo, in linguaggio semplice: dal bollettino nazionale fino al cittadino.",
     "Chi decide il livello, chi attiva il Centro Operativo Comunale, chi comunica.",
@@ -684,6 +690,12 @@ content("Kit pronti per situazioni vulnerabili", [
     "Materiali stampabili pronti all'uso.",
     "Riferimenti a standard internazionali di assistenza umanitaria.",
 ], N(), fonti="IFRC · WHO · Sphere Handbook")
+
+content("Kit per le organizzazioni", [
+    "Schede per chi gestisce un luogo o un gruppo di persone: attività commerciali, condomìni, associazioni, organizzatori di eventi.",
+    "Struttura uniforme: cosa fare prima, durante e dopo terremoto, incendio, allerta meteo e blackout.",
+    "Per gli eventi pubblici, il ruolo del volontariato nei limiti delle regole vigenti: nessun compito di viabilità.",
+], N(), fonti="Codice della Strada artt. 11-12 · Circolare DPC 6/8/2018")
 
 content("Storia del territorio", [
     "Cronologia degli eventi rilevanti dei Castelli Romani.",
