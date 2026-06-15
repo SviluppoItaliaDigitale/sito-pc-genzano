@@ -8,6 +8,11 @@
 {{- $controllo := or $allerta.ultimo_controllo $allerta.ultimo_aggiornamento -}}
 {{- $t := time.AsTime $controllo -}}
 {{- $mesi := slice "" "gennaio" "febbraio" "marzo" "aprile" "maggio" "giugno" "luglio" "agosto" "settembre" "ottobre" "novembre" "dicembre" -}}
+{{- /* Guard anti-dato-stantio: se il controllo della fonte è più vecchio di 12 ore,
+       lo stato (anche "verde") potrebbe non rispecchiare il bollettino reale.
+       Soglia = doppio del ciclo di controllo (check-allerta ≈ ogni 6h). */ -}}
+{{- $sogliaSec := 43200 -}}
+{{- $staleBuild := ge (sub now.Unix $t.Unix) $sogliaSec -}}
 {{- $bg := "bg-success bg-opacity-10 border-success" -}}
 {{- $titoloCol := "text-success-emphasis" -}}
 {{- $icon := "bi-shield-check" -}}
@@ -37,6 +42,13 @@
     {{- with $allerta.descrizione }}
     <p class="mb-2">{{ . }}</p>
     {{- end }}
+    <div class="alert alert-warning d-flex align-items-start mb-3 py-2 px-3 small allerta-stantia"
+         role="note" data-controllo-unix="{{ $t.Unix }}" data-soglia-sec="{{ $sogliaSec }}"
+         {{ if not $staleBuild }}hidden{{ end }}>
+      <i class="bi bi-exclamation-triangle me-2 mt-1" aria-hidden="true"></i>
+      <span>Questo stato <strong>non è stato aggiornato di recente</strong>: potrebbe non rispecchiare il bollettino in vigore.
+      Controlla la situazione attuale sul <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">bollettino della Regione Lazio</a>.</span>
+    </div>
     <p class="small text-muted mb-2">
       {{ partial "fonte-badge.html" "ufficiale" }}<i class="bi bi-clock-history me-1" aria-hidden="true"></i>
       Verificato: <strong>{{ printf "%d %s %d, %02d:%02d" $t.Day (index $mesi (int $t.Month)) $t.Year $t.Hour $t.Minute }}</strong>
@@ -47,6 +59,18 @@
     </a>
   </div>
 </div>
+<script>
+/* Rivela l'avviso "dato stantio" anche su HTML congelato (deploy fermo),
+   valutando sull'orologio del visitatore. Idempotente, no dipendenze. */
+(function () {
+  document.querySelectorAll('.allerta-stantia[hidden]').forEach(function (el) {
+    var unix = parseInt(el.getAttribute('data-controllo-unix'), 10);
+    var soglia = parseInt(el.getAttribute('data-soglia-sec'), 10) || 43200;
+    if (!unix) return;
+    if ((Date.now() / 1000) - unix >= soglia) { el.hidden = false; }
+  });
+})();
+</script>
 {{- else -}}
 <div class="alert alert-secondary" role="note">
   <strong>Stato allerta non disponibile.</strong> Consulta direttamente il
