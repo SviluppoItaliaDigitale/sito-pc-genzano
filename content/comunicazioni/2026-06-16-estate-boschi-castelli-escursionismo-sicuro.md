@@ -1,6 +1,6 @@
 ---
 title: "Sicurezza nei boschi dei Castelli Romani in estate"
-date: 2026-06-16
+date: 2026-06-16T00:01:00+02:00
 description: "L'estate porta nei boschi dei Castelli migliaia di escursionisti. Alcuni principi per godersi il Parco senza trasformare una passeggiata in emergenza."
 badge: "Prevenzione"
 priorita: "normale"
