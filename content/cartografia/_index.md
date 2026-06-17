@@ -118,6 +118,9 @@ Sul territorio di Genzano di Roma sono installati **cartelli segnaletici** che i
 - [AEGIS — Mappa Tempo Reale Regione Lazio](https://temporeale.regione.lazio.it/aegis/map/map2d)
 - [Piattaforma Radar Nazionale](https://mappe.protezionecivile.gov.it/it/mappe-e-dashboard-rischi/piattaforma-radar/)
 - [Copernicus Emergency Management Service](https://mapping.emergency.copernicus.eu/)
+- [IdroGEO — frane e alluvioni d'Italia (ISPRA)](https://idrogeo.isprambiente.it/) — la mappa nazionale dell'ISPRA con le aree a pericolosità da frana e idraulica dei Piani di Assetto Idrogeologico (PAI).
+- [Carta Idrogeologica d'Italia 1:500.000 (ISPRA)](https://sinacloud.isprambiente.it/portal/apps/sites/#/idrogeologia/pages/cartaidrogeologica500k) — quadro nazionale degli acquiferi, dei complessi idrogeologici e delle sorgenti.
+- [Geoportale della Regione Lazio](https://geoportale.regione.lazio.it/) — cartografia tematica regionale.
 
 ## Vedi anche
 
