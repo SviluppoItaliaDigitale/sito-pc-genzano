@@ -14,6 +14,7 @@ allegati:
     url: "/area-download/normativa/Ordinanza_Sindacale_AIB_2026.pdf"
     dimensione: "183 KB"
 draft: false
+versione_facile: "2026-06-18-ordinanza-sindacale-incendi-boschivi-2026-facile"
 social_citazione: "Dal 17 giugno al 15 ottobre 2026 a Genzano è dichiarato lo stato di grave pericolosità per gli incendi boschivi."
 social_punti:
   - "Ordinanza Sindacale n. 14 del 17 giugno 2026: valida fino al 15 ottobre."
