@@ -17,6 +17,12 @@ versione_facile: "2026-08-18-siccita-lazio-risorsa-idrica-facile"
 
 L'estate 2026 conferma una tendenza ormai strutturale per il Lazio: **ridotta disponibilità idrica**, **siccità prolungata**, **pressione sul sistema acquedottistico**. Se da un lato la gestione della risorsa è competenza di gestori e autorità, dall'altro ogni famiglia può fare molto con comportamenti semplici.
 
+Non è un rischio astratto. Nell'estate del **2017** il **lago di Bracciano**, una delle riserve idriche di Roma, si abbassò così tanto da costringere allo stop dei prelievi per l'acquedotto: la sponda arretrò fino a 60 metri in pochi mesi.
+
+{{< foto src="/images/2026-08-18-lago-bracciano-siccita-sentinel2-2017.webp"
+         alt="Vista satellitare del lago di Bracciano, Lazio: grande specchio d'acqua blu scuro al centro, campagna circostante in verde e marrone, etichetta \"Bracciano Lake\" sovrapposta. In alto a destra due riquadri affiancati con le date \"31 May\" e \"13 August\" mostrano lo stesso tratto di sponda: nel riquadro di agosto la riva è visibilmente arretrata. In basso a sinistra un terzo riquadro mostra il dettaglio della fascia di terreno emerso. Barra scala da 5 km in basso a destra."
+         caption="Il lago di Bracciano ripreso dal satellite Copernicus Sentinel-2 nell'estate 2017: i riquadri confrontano la riva tra il 31 maggio e il 13 agosto e mostrano la sponda che arretra (fino a circa 60 metri). Immagine: *contains modified Copernicus Sentinel data (2017), processed by ESA*, [CC BY-SA 3.0 IGO](https://creativecommons.org/licenses/by-sa/3.0/igo/)." >}}
+
 ## Chi gestisce l'acqua nel Lazio
 
 - **Autorità di Bacino del Distretto dell'Appennino Centrale** per la pianificazione di bacino.
