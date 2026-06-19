@@ -53,6 +53,10 @@ Tra questi elementi ci sono:
 
 Questa definizione aiuta a evitare etichette generiche.
 
+{{< foto src="/images/2026-06-08-medicane-ianos-sentinel3-2020.webp"
+         alt="Medicane Ianos sul Mar Ionio il 17 settembre 2020: grande spirale di nubi bianche con un centro quasi sgombro, simile all'occhio di un ciclone; in alto a destra le coste della Grecia, in alto a sinistra il Sud Italia, in basso la costa nordafricana."
+         caption="Il medicane Ianos sul Mar Ionio il 17 settembre 2020, ripreso dal satellite Copernicus Sentinel-3: si riconoscono le bande nuvolose a spirale e il centro simile a un occhio. Immagine: *contains modified Copernicus Sentinel data 2020 / ESA*, [CC BY-SA 3.0 IGO](https://creativecommons.org/licenses/by-sa/3.0/igo/)." >}}
+
 Non basta vedere una perturbazione intensa per parlare di medicane.
 
 Serve una struttura precisa, riconoscibile e misurabile.
