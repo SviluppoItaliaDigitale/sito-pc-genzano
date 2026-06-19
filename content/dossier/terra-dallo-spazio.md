@@ -96,7 +96,7 @@ Tutto questo non resta nello spazio. Ogni immagine diventa un **dato**, ogni dat
 {{< /dossier-chiusura >}}
 
 {{< dossier-fonti >}}
-- **Immagini:** NASA (pubblico dominio) · Copernicus / ESA, dati Sentinel modificati (CC BY-SA 3.0 IGO) · alluvione del Mozambico: Pierre Markuse, dati Copernicus Sentinel (CC BY 2.0).
+- **Immagini:** NASA (pubblico dominio) · Copernicus / ESA, dati Sentinel modificati (CC BY-SA 3.0 IGO) · alluvione del Mozambico: Pierre Markuse, dati Copernicus Sentinel (CC BY 2.0) · Castelli Romani dal satellite (dati Copernicus Sentinel-2 / ESA · CC BY).
 - **Programmi citati:** [Copernicus](https://www.copernicus.eu/it) (Unione Europea) · [EFFIS](https://forest-fire.emergency.copernicus.eu/) (incendi boschivi) · [Copernicus EMS](https://emergency.copernicus.eu/) (gestione emergenze) · CAMS (qualità dell'aria).
 - **IRIDE** — la nuova costellazione italiana di osservazione della Terra, gestita da [ESA](https://www.esa.int/Space_in_Member_States/Italy/IRIDE_presentata_presso_il_Centro_ESA_ESRIN_la_prima_immagine) con il supporto dell'[ASI](https://www.asi.it/en/earth-science/iride/): la prima immagine (Roma e Italia centrale, 5 marzo 2025) e servizi per la protezione civile.
 - **Sul nostro sito:** [Cruscotto del territorio](/cruscotto/) · [Allerte meteo](/allerte-meteo/) · [Rischi e prevenzione](/rischi-prevenzione/).
