@@ -41,6 +41,10 @@ Tra le due forti scosse:
 
 Il 29 maggio, con la seconda scossa e nuove vittime, il sistema dovette riorganizzarsi **mentre ancora gestiva la prima emergenza**.
 
+{{< foto src="/images/2026-05-29-emilia-2012-shakemap-ingv.webp"
+         alt="Mappa dell'intensità macrosismica del terremoto dell'Emilia del 20 maggio 2012 (magnitudo 5.9): il Nord Italia con zone colorate concentriche, dal rosso e arancione nell'area epicentrale emiliana fino al verde e al blu allontanandosi; una stella indica l'epicentro e in basso una legenda mette in relazione i colori con il livello di scuotimento percepito e i danni." 
+         caption="La ShakeMap del terremoto dell'Emilia del 20 maggio 2012: i colori, dal rosso al blu, misurano lo scuotimento del suolo dall'epicentro verso l'esterno. Elaborazione: INGV, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)." >}}
+
 ## Cosa significa "resilienza comunitaria"
 
 La parola "resilienza" è usata spesso in modo generico. In contesto di Protezione Civile indica la **capacità di una comunità** di:
