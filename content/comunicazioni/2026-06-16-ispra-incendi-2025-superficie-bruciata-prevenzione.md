@@ -50,6 +50,10 @@ Il monitoraggio è già in corso per la stagione 2026. Dal **1° gennaio al 9 gi
 
 I numeri di ISPRA non nascono da stime sul campo, ma da **satelliti**. Il sistema europeo EFFIS e i satelliti del programma **Copernicus** osservano il territorio dall'alto e rilevano le aree percorse dal fuoco; ISPRA incrocia questi dati con la propria mappa degli ecosistemi forestali. È lo stesso tipo di osservazione che permette di seguire frane, alluvioni e deformazioni del suolo. Ne abbiamo parlato nell'articolo sui [satelliti radar Sentinel-1](/comunicazioni/2026-06-15-sentinel-1c-radar-deformazione-suolo/).
 
+{{< foto src="/images/2026-06-16-incendi-sicilia-sentinel2-2023.webp"
+         alt="Ripresa Sentinel-2 a falso colore dell'area di Palermo, in Sicilia, il 26 luglio 2023: la vegetazione appare in rosso intenso, le zone urbane e le superfici percorse dal fuoco in grigio e bruno, il mare in blu scuro; sono leggibili le etichette \"Palermo\" e \"Palermo Airport\"; alcune nuvole bianche sul bordo sinistro." 
+         caption="L'area di Palermo ripresa dal satellite Copernicus Sentinel-2 il 26 luglio 2023, in falso colore: la vegetazione è rossa, le aree percorse dal fuoco appaiono come chiazze scure. È così che EFFIS e Copernicus misurano la superficie bruciata. Immagine: *contains modified Copernicus Sentinel data 2023 / ESA*, [CC BY-SA 3.0 IGO](https://creativecommons.org/licenses/by-sa/3.0/igo/)." >}}
+
 ## Il messaggio: investire nella prevenzione
 
 Per la presidente di ISPRA e del Sistema Nazionale per la Protezione dell'Ambiente, **Maria Alessandra Gallone**, i dati del 2025 ricordano che *"gli incendi boschivi non sono soltanto un'emergenza ambientale, ma una sfida che riguarda la sicurezza dei territori, l'economia e la qualità della vita delle persone"*. Per questo, aggiunge, *"è necessario investire sempre di più nella prevenzione, nella conoscenza e nella capacità di intervenire tempestivamente"*, con *"una grande alleanza tra Stato, Regioni, enti locali, comunità scientifica, sistema della protezione civile, mondo agricolo e cittadini"*.
