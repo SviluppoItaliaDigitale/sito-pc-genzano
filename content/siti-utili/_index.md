@@ -71,6 +71,26 @@ Questa pagina raccoglie link a siti istituzionali, portali operativi, fonti tecn
 - [CMEMS — Mare](https://marine.copernicus.eu/) — temperature superficiali, onde, correnti, ondate di calore marine nel Mediterraneo.
 - [CLMS — Territorio](https://land.copernicus.eu/) — uso del suolo, vegetazione, ghiacciai, aree bruciate, siccità.
 
+## Immagini libere per documentare gli eventi
+
+Per illustrare articoli, schede e materiali didattici sul rischio esistono fonti che offrono **immagini gratuite e riutilizzabili**: foto satellitari, mappe scientifiche, osservazione della Terra. Vale una regola fissa: **cita sempre autore, fonte e licenza**, verifica le condizioni della singola immagine e, se la licenza non è chiara, non pubblicare.
+
+**Pubblico dominio (uso più libero, basta il credito di cortesia):**
+
+- [USGS EarthExplorer](https://earthexplorer.usgs.gov/) e [Landsat](https://landsat.gsfc.nasa.gov/) — immagini satellitari del Servizio geologico statunitense, in pubblico dominio. Credito: *"image courtesy of the U.S. Geological Survey"*.
+- [NASA Image and Video Library](https://images.nasa.gov/) — archivio ufficiale NASA, in genere non soggetto a copyright. Credito: *"NASA"*. Restano protetti il logo NASA e le persone identificabili.
+- [NASA Earth Observatory — Image of the Day](https://earthobservatory.nasa.gov/) — immagine del giorno con foto satellitari della Terra: incendi, alluvioni, clima, eventi estremi. Credito: *"NASA Earth Observatory"* più l'autore e lo strumento indicati.
+
+**Aperte con attribuzione (osservazione della Terra europea):**
+
+- [Copernicus Browser](https://browser.dataspace.copernicus.eu/) e galleria [EU Space](https://eu-space.europa.eu/explore-euspace/images) — immagini Sentinel del programma europeo Copernicus, libere con attribuzione. Credito: *"Copernicus Sentinel data [anno]"*, oppure *"contains modified Copernicus Sentinel data [anno]"* se rielaborate.
+- [ESA — Osservare la Terra](https://www.esa.int/Applications/Observing_the_Earth) — immagini dei satelliti europei. Solo *alcune* sono Creative Commons (CC BY-SA 3.0 IGO); le altre sono "libere per uso editoriale ed educativo" con credito *"© ESA"* e senza uso commerciale. Verifica la singola immagine.
+- [EUMETSAT](https://www.eumetsat.int/) — immagini meteo satellitari (Meteosat): sinottica, fenomeni intensi. Verifica i termini di riuso della singola immagine; credito *"© EUMETSAT"*.
+
+> ⚠️ **Attenzione alla "foto astronomica del giorno" (NASA APOD).** Le immagini di [apod.nasa.gov](https://apod.nasa.gov/) sono spesso opere di **astrofotografi che mantengono il diritto d'autore**: non sono liberamente riutilizzabili. Usa un'immagine APOD solo se la didascalia indica esplicitamente che è della NASA (pubblico dominio); altrimenti serve il permesso dell'autore.
+
+**Consiglio pratico:** quando la stessa immagine satellitare è disponibile anche su [Wikimedia Commons](https://commons.wikimedia.org/) con una licenza esplicita, conviene prenderla da lì: la pagina del file riporta per esteso autore e licenza, e l'attribuzione diventa semplice e sicura.
+
 ## App e servizi per il cittadino
 
 - [IT-alert](https://www.it-alert.it/it/) — sistema nazionale di allarme pubblico per gravi emergenze.
