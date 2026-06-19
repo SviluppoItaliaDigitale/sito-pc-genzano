@@ -29,6 +29,10 @@ Sentinel-1 è una coppia di satelliti **radar in banda C** del programma europeo
 
 La tecnica che interessa la protezione civile si chiama **interferometria SAR**. Si confrontano due immagini dello stesso luogo: una prima di un evento, una dopo. Se nel frattempo il terreno si è sollevato o abbassato, la differenza si misura in pochi centimetri, a volte in millimetri. Il risultato è una mappa di anelli colorati, le "frange": ogni frangia è un gradino di spostamento del suolo.
 
+{{< foto src="/images/2026-06-15-sentinel1-interferogramma-amatrice-2016.webp"
+         alt="Interferogramma radar Sentinel-1 del terremoto del Centro Italia del 24 agosto 2016: mappa a frange colorate della deformazione del suolo; nel riquadro ingrandito gli anelli concentrici attorno all'epicentro con stella gialla, con i nomi di Norcia, Accumoli, Amatrice e Bel Tronto leggibili sulla mappa."
+         caption="L'interferogramma Sentinel-1 del terremoto del Centro Italia del 24 agosto 2016, ottenuto da due passaggi radar (15 e 27 agosto): ogni anello colorato — la \"frangia\" — è un gradino di spostamento del suolo misurato dallo spazio. Immagine: *contains modified Copernicus Sentinel data (2016) / ESA / CNR-IREA*, [CC BY-SA 3.0 IGO](https://creativecommons.org/licenses/by-sa/3.0/igo/) — via [ESA](https://www.esa.int/)." >}}
+
 ## Perché due satelliti contano davvero
 
 Con un satellite solo, ogni punto della Terra passa sotto l'occhio del radar ogni **12 giorni**. Con due satelliti il tempo si dimezza: **6 giorni**. Non è un dettaglio: è la differenza tra scoprire un movimento del terreno in una settimana o in due. Quando una frana accelera o un vulcano si gonfia, **la frequenza delle misure è tutto**.
