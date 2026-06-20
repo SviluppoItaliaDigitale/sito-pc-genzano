@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-06-20T11:02",
+  "aggiornato": "2026-06-20T11:35",
   "data_lunga": "sabato 20 giugno 2026",
-  "aggiornato_label": "sabato 20 giugno 2026, ore 11:02",
+  "aggiornato_label": "sabato 20 giugno 2026, ore 11:35",
   "alba": "05:34",
   "tramonto": "20:47",
   "corrente": {
-    "temp": 29.4,
-    "percepita": 32.2,
+    "temp": 29.8,
+    "percepita": 32.8,
     "cielo": "Sereno",
     "icona": "<g><line x1=\"44.8\" y1=\"28.0\" x2=\"52.8\" y2=\"28.0\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"39.9\" y1=\"39.9\" x2=\"45.5\" y2=\"45.5\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"28.0\" y1=\"44.8\" x2=\"28.0\" y2=\"52.8\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"16.1\" y1=\"39.9\" x2=\"10.5\" y2=\"45.5\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"11.2\" y1=\"28.0\" x2=\"3.2\" y2=\"28.0\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"16.1\" y1=\"16.1\" x2=\"10.5\" y2=\"10.5\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"28.0\" y1=\"11.2\" x2=\"28.0\" y2=\"3.2\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"39.9\" y1=\"16.1\" x2=\"45.5\" y2=\"10.5\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><circle cx=\"28.0\" cy=\"28.0\" r=\"16.0\" fill=\"#f6a800\"/></g>",
-    "umidita": 49,
-    "vento": 9,
-    "raffiche": 25
+    "umidita": 48,
+    "vento": 10,
+    "raffiche": 27
   },
   "giorni": [
     {
@@ -44,7 +44,7 @@
       "cielo": "Rovesci",
       "tmax": 31,
       "tmin": 23,
-      "pioggia": 86,
+      "pioggia": 93,
       "pioggia_mm": 1.5,
       "raffiche": 26,
       "uv": 8,
@@ -56,7 +56,7 @@
       "cielo": "Rovesci",
       "tmax": 30,
       "tmin": 22,
-      "pioggia": 48,
+      "pioggia": 53,
       "pioggia_mm": 0.9,
       "raffiche": 35,
       "uv": 8,
