@@ -14,7 +14,7 @@ social_citazione: "Una serata di festa per la comunità si vive con serenità an
 social_punti:
   - "Saggio di danza al Parco Sforza Cesarini, sabato 20 giugno 2026, sera."
   - "Presidio di sicurezza, antincendio e primo soccorso per tutta la serata."
-  - "In campo Land Rover Defender 130 e autobotte antincendio."
+  - "In campo Land Rover Defender 130 e Mercedes Atego, mezzo polivalente."
   - "Per qualsiasi emergenza il numero è uno solo: 112."
 draft: false
 ---
@@ -35,11 +35,11 @@ Con il caldo dell'estate e la vegetazione secca, un evento serale all'aperto ric
 
 ## I mezzi in campo
 
-Per il servizio sono stati impiegati il **Land Rover Defender 130**, fuoristrada con modulo antincendio, e l'**autobotte antincendio** del Gruppo, posizionati ai lati dell'area insieme alla postazione dei volontari. I nomi e le dotazioni dei nostri automezzi sono consultabili nella pagina [Chi siamo](/chi-siamo/).
+Per il servizio sono stati impiegati il **Land Rover Defender 130**, fuoristrada con modulo antincendio, e il **Mercedes Atego**, mezzo polivalente con impianto antincendio, posizionati ai lati dell'area insieme alla postazione dei volontari. I nomi e le dotazioni dei nostri automezzi sono consultabili nella pagina [Chi siamo](/chi-siamo/).
 
 {{< foto src="/images/2026-06-20-parco-sforza-cesarini-postazione-mezzi.webp"
-         alt="Su un prato del parco: a sinistra il fuoristrada verde Land Rover Defender, al centro un gazebo con volontari seduti a un tavolo, a destra un'autobotte rossa con la scritta Protezione Civile."
-         caption="La postazione con il gazebo dei volontari, il fuoristrada e l'autobotte antincendio, pronti per la serata. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+         alt="Su un prato del parco: a sinistra il fuoristrada verde Land Rover Defender, al centro un gazebo con volontari seduti a un tavolo, a destra un mezzo antincendio rosso con la scritta Protezione Civile."
+         caption="La postazione con il gazebo dei volontari, il fuoristrada e il mezzo polivalente, pronti per la serata. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
 La presenza dei mezzi non è scenografica: garantisce che, in caso di necessità, l'intervento parta in pochi istanti, senza tempi di trasferimento.
 
