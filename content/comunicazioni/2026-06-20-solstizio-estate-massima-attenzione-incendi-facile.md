@@ -1,6 +1,6 @@
 ---
 title: "Estate: attenzione agli incendi nei boschi"
-date: 2026-06-20
+date: 2026-06-20T00:01:00+02:00
 description: "In estate il pericolo incendi è alto. Cosa fare e cosa non fare nei boschi."
 badge: "Prevenzione"
 priorita: "normale"
