@@ -1,6 +1,6 @@
 ---
 title: "20 giugno: solstizio d'estate e massima attenzione incendi"
-date: 2026-06-20
+date: 2026-06-20T00:01:00+02:00
 description: "Il solstizio d'estate segna l'inizio della fase critica per gli incendi boschivi. Cambiano temperatura, umidità, vento: un promemoria operativo."
 badge: "Prevenzione"
 priorita: "normale"
