@@ -9,13 +9,5 @@
     "titolo": "Previsto verde",
     "rischi": [],
     "data": "2026-06-24"
-  },
-  "rischio_incendi": {
-    "livello": "gialla",
-    "livello_aib": "MEDIO",
-    "titolo": "Pericolosità MEDIA",
-    "zona_aib": 9,
-    "data": "2026-06-23",
-    "fonte": "Regione Lazio — Centro Funzionale (modello RISICOLazio + Fondazione CIMA)"
   }
 }
