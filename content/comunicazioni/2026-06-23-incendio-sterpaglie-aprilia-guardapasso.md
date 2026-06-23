@@ -21,11 +21,11 @@ tts: true
 draft: false
 ---
 
-Un pomeriggio di lavoro intenso, lontano da casa ma accanto a tante mani amiche. Le nostre squadre sono state **tra le prime ad arrivare** sull'incendio di sterpaglie divampato ad Aprilia, in provincia di Latina, nella zona tra via Guardapasso, via Carroceto e via Enna. Abbiamo lavorato allo spegnimento e alla bonifica per diverse ore, insieme ai Vigili del Fuoco, alla Polizia Locale e agli altri gruppi di volontariato di protezione civile.
+Un pomeriggio di lavoro intenso, lontano da casa ma accanto a tante mani amiche. Nel pomeriggio di **ieri, lunedì 22 giugno 2026**, le nostre squadre sono state **tra le prime ad arrivare** sull'incendio di sterpaglie divampato ad Aprilia, in provincia di Latina, nella zona tra via Guardapasso, via Carroceto e via Enna. Abbiamo lavorato allo spegnimento e alla bonifica per diverse ore, insieme ai Vigili del Fuoco, alla Polizia Locale e agli altri gruppi di volontariato di protezione civile.
 
 ## Cosa è successo
 
-L'allarme è partito nel pomeriggio dalle segnalazioni dei residenti. Le fiamme hanno aggredito un'ampia area di sterpaglie e un campo incolto, con una densa colonna di fumo visibile a distanza.
+L'allarme è partito nel primo pomeriggio dalle segnalazioni dei residenti. Le fiamme hanno aggredito un'ampia area di sterpaglie e un campo incolto, con una densa colonna di fumo visibile a distanza.
 
 Sul posto sono accorsi i **Vigili del Fuoco** — con una squadra arrivata anche da Nemi — e diverse squadre di volontariato di protezione civile, tra cui le associazioni Alfa e ANC. Le squadre di volontari sono arrivate da Genzano e da Lanuvio. Le operazioni sono durate circa quattro ore.
 
