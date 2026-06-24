@@ -1,9 +1,15 @@
 {
-  "livello": "verde",
-  "titolo": "NESSUNA ALLERTA",
-  "descrizione": "Non sono previsti fenomeni significativi sul nostro territorio.",
-  "ultimo_aggiornamento": "2026-05-30T00:01:16+02:00",
-  "ultimo_controllo": "2026-06-24T14:02:02+02:00",
+  "livello": "gialla",
+  "titolo": "ALLERTA GIALLA — temporali",
+  "descrizione": "Ordinaria per rischio temporali, Zona F — Bacini Costieri Sud (Genzano). Bollettino DPC/Regione Lazio del 24 giugno 2026, validità 24 giugno 14:32–23:59.",
+  "ultimo_aggiornamento": "2026-06-24T16:41:47+02:00",
+  "ultimo_controllo": "2026-06-24T16:41:47+02:00",
+  "domani": {
+    "livello": "verde",
+    "titolo": "Previsto verde",
+    "rischi": [],
+    "data": "2026-06-25"
+  },
   "rischio_incendi": {
     "livello": "gialla",
     "livello_aib": "MEDIO",
