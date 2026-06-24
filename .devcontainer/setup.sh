@@ -93,11 +93,16 @@ pip install --quiet --break-system-packages cartopy >/dev/null 2>&1 \
 # 4. Claude Code CLI
 # -----------------------------------------------------------------------------
 azzurro "Claude Code CLI"
+export PATH="$HOME/.local/bin:$PATH"
 if command -v claude >/dev/null 2>&1; then
   ok "già installato ($(claude --version 2>/dev/null | head -1))"
+  # Porta all'ultima versione: senza questo il Codespace resta su una versione
+  # vecchia (postCreateCommand non rigira agli avvii, vedi postStartCommand).
+  claude update >/dev/null 2>&1 \
+    && ok "aggiornato ($(claude --version 2>/dev/null | head -1))" \
+    || nota "claude update non riuscito (non bloccante)"
 else
   curl -fsSL https://claude.ai/install.sh | bash >/dev/null 2>&1 || true
-  export PATH="$HOME/.local/bin:$PATH"
   command -v claude >/dev/null 2>&1 \
     && ok "installato ($(claude --version 2>/dev/null | head -1))" \
     || nota "installer non riuscito — riprova: curl -fsSL https://claude.ai/install.sh | bash"
