@@ -7,7 +7,7 @@ aliases:
   - /diventavolontario.html
   - /diventavolontario/
 tts: true
-dataUltimaRevisione: "2026-05-06"
+dataUltimaRevisione: "2026-06-25"
 risorse_tema: "kit-emergenza"
 ---
 <!-- cache-bust: 2026-05-29 forza re-upload FTP dopo aggiunta voce di menu globale "Conoscere la Protezione Civile" -->
@@ -41,6 +41,21 @@ Diventare volontario di Protezione Civile significa mettere tempo, competenze e 
 <i class="bi bi-file-earmark-pdf me-1" aria-hidden="true"></i> Scarica la locandina in PDF
 </a>
 </p>
+</div>
+</div>
+
+<div class="card border-primary mb-4 overflow-hidden">
+<div class="row g-0 align-items-center">
+<div class="col-md-6">
+<img src="/images/2026-campagna-lazio-banner-orizzontale.webp" alt="Banner della campagna «Non c'è Protezione Civile senza di te» della Regione Lazio: il gilet di un volontario, il pulsante «Diventa Volontario» e i loghi Protezione Civile e Regione Lazio." loading="lazy" class="img-fluid w-100">
+</div>
+<div class="col-md-6">
+<div class="card-body p-4">
+<h2 class="h4 text-primary mt-0">Aderiamo alla campagna della Regione Lazio</h2>
+<p>Il Gruppo partecipa alla campagna regionale <strong>«Non c'è Protezione Civile senza di te»</strong>, che invita i cittadini — soprattutto i più giovani — a entrare nel volontariato di Protezione Civile.</p>
+<p class="mb-0"><a href="/comunicazioni/2026-06-24-campagna-regione-lazio-diventa-volontario/" class="btn btn-outline-primary"><i class="bi bi-play-circle me-1" aria-hidden="true"></i> Scopri la campagna e guarda lo spot</a></p>
+</div>
+</div>
 </div>
 </div>
 
