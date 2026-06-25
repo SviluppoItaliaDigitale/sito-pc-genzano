@@ -154,6 +154,7 @@ Il riparo "abbassati, copriti, tieniti" va adattato: la regola è **proteggere l
 
 **Approfondimenti divulgativi**
 
+- [INGV Ambiente — «Dove va l'Italia?»](https://ingvambiente.com/2026/06/25/dove-va-litalia/) — perché l'Italia trema: il movimento delle placche e della microplacca Adriatica misurato col GPS, spiegato dai ricercatori dell'INGV.
 - [Geopop](https://www.geopop.it/) — come funzionano i terremoti, magnitudo e faglie. Non è una fonte istituzionale: in caso di evento segui sempre i canali ufficiali.
 
 {{< chi-chiamare >}}
