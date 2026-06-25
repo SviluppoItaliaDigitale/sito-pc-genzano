@@ -1,0 +1,18 @@
+{{/* ─────────────────────────────────────────────────────────────
+     STRISCIA STAGIONALE "CONSIGLI CALDO" (homepage)
+     Visibile automaticamente da GIUGNO a SETTEMBRE (gate su now.Month
+     al build; il sito rigenera ogni giorno → on/off stagionale auto).
+     Rimanda a /rischi-prevenzione/ondate-di-calore/ (consigli + infografica
+     Ministero della Salute). Per disattivarla: rimuovere la chiamata a
+     questo partial in layouts/index.html.
+     ───────────────────────────────────────────────────────────── */}}
+{{ $m := int (now.Format "1") }}
+{{ if and (ge $m 6) (le $m 9) }}
+<div class="caldo-strip" role="region" aria-label="Consigli per il caldo estivo">
+  <div class="container">
+    <i class="bi bi-thermometer-sun caldo-strip-icon" aria-hidden="true"></i>
+    <span class="caldo-strip-text"><strong>Caldo estivo:</strong> proteggi te stesso e le persone fragili. Leggi i 10 consigli del Ministero della Salute e cosa fare durante le ondate di calore.</span>
+    <a href="{{ "rischi-prevenzione/ondate-di-calore/" | relURL }}" class="caldo-strip-btn">Consigli sul caldo <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+  </div>
+</div>
+{{ end }}
