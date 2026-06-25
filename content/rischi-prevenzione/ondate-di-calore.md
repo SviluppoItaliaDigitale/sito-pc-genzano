@@ -1,7 +1,7 @@
 ---
 
 title: "Ondate di Calore"
-dataUltimaRevisione: "2026-05-21"
+dataUltimaRevisione: "2026-06-25"
 description: "Come proteggersi dal caldo estremo: consigli per anziani, bambini e persone fragili."
 tts: true
 weight: 6
@@ -14,6 +14,10 @@ howto_dopo: "Se qualcuno mostra sintomi di colpo di calore, chiama il 112 immedi
 Il caldo estremo prolungato mette a rischio la vita, soprattutto degli anziani, dei bambini piccoli e di chi ha patologie croniche. Ogni estate il Ministero della Salute attiva la sorveglianza sulle ondate di calore: seguire i bollettini ufficiali e adottare pochi comportamenti corretti può prevenire conseguenze gravi.
 
 {{< emergenza-ora >}}
+
+{{< foto src="/images/2026-ministero-salute-proteggiamoci-dal-caldo.webp"
+         alt="Infografica del Ministero della Salute «Proteggiamoci dal caldo 2026 — 10 consigli utili»: 1) uscire nelle ore più fresche; 2) proteggersi in casa e sui luoghi di lavoro; 3) bere almeno un litro e mezzo d'acqua al giorno; 4) seguire un'alimentazione corretta; 5) conservare correttamente gli alimenti; 6) indossare abiti di fibre naturali e traspiranti; 7) protezione dal caldo in auto; 8) fare esercizio fisico nelle ore più fresche; 9) proteggere anche gli animali domestici; 10) offrire assistenza alle persone a maggiore rischio. Numero di pubblica utilità 1500."
+         caption="«Proteggiamoci dal caldo 2026»: i 10 consigli del Ministero della Salute. Numero di pubblica utilità **1500**. Fonte: [Ministero della Salute](https://www.salute.gov.it/portale/caldo/)." >}}
 
 ## <i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Perché è rilevante sul nostro territorio {#perche-rilevante}
 Genzano di Roma, pur trovandosi in area collinare, è soggetta a ondate di calore intense da giugno ad agosto. Le temperature possono superare i 38-40°C. Gli effetti più gravi colpiscono anziani, bambini piccoli e persone con patologie croniche.
