@@ -1,6 +1,6 @@
 ---
 title: "La cartografia operativa del Piano Comunale di Protezione Civile"
-date: 2026-06-25
+date: 2026-06-25T00:01:00+02:00
 description: "Dietro ogni Piano comunale c'è una serie di carte tematiche che guidano le scelte in emergenza. Un viaggio nella cartografia di Protezione Civile."
 badge: "Informazione"
 priorita: "normale"
