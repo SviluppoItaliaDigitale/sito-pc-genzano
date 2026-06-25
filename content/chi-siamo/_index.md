@@ -34,7 +34,7 @@ dataUltimaRevisione: "2026-06-08"
 <h3 class="h6"><i class="bi bi-building text-primary me-2" aria-hidden="true"></i> Comune di Genzano di Roma</h3>
 <ul class="list-unstyled mb-0 small">
 <li class="mb-2"><strong>Sindaco:</strong> Fabio Papalia</li>
-<li class="mb-2"><strong>Assessore alla Protezione Civile:</strong> <em>in corso di nomina</em></li>
+<li class="mb-2"><strong>Assessore con delega alla Protezione Civile:</strong> Massimo Bevilacqua (Vicesindaco)</li>
 <li><strong>Comandante Polizia Locale e Dirigente Protezione Civile:</strong> Monica Palladinelli</li>
 </ul>
 </div>
