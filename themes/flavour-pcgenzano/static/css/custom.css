@@ -7236,3 +7236,58 @@ html.a11y-pause-anim .banner-volontariato .card:focus-within { transform: none; 
     font-style: italic;
   }
 }
+
+/* ===== STRISCIA CONSIGLI CALDO (homepage, stagionale) v1.0 =====
+   Striscia stagionale (giugno-settembre) che rimanda ai consigli sul caldo.
+   Tono ambra con testo scuro (contrasto WCAG: l'arancione vuole testo scuro). */
+.caldo-strip {
+  background: #ffe9b8;
+  border-top: 1px solid #f0c869;
+  border-bottom: 1px solid #f0c869;
+  border-left: 5px solid #fd7e14;
+  padding: 0.6rem 0;
+  color: #5a3e00;
+}
+.caldo-strip .container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.85rem;
+}
+.caldo-strip-icon {
+  font-size: 1.4rem;
+  color: #c2410c;
+  flex: 0 0 auto;
+}
+.caldo-strip-text {
+  flex: 1 1 auto;
+  min-width: 200px;
+  font-size: 0.98rem;
+  line-height: 1.4;
+}
+.caldo-strip-btn {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #003366;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.4rem 0.95rem;
+  border-radius: 6px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.caldo-strip-btn:hover,
+.caldo-strip-btn:focus {
+  background: #00244d;
+  color: #fff;
+  text-decoration: none;
+}
+.caldo-strip-btn:focus-visible {
+  outline: 3px solid #ffbe2e;
+  outline-offset: 2px;
+}
+@media print {
+  .caldo-strip { display: none; }
+}
