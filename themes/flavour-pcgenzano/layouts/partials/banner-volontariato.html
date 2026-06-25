@@ -1,0 +1,33 @@
+{{/* ─────────────────────────────────────────────────────────────
+     BANNER VOLONTARIATO (homepage, solo modalità ordinaria)
+     Rilancio della campagna Regione Lazio "Non c'è Protezione Civile
+     senza di te" — rimanda a /diventa-volontario/ (iscrizioni al Gruppo).
+     La grafica della campagna è materiale della Regione: si mostra
+     INTEGRA (no crop, no fascia del Gruppo). Per togliere il banner:
+     rimuovere la chiamata a questo partial in layouts/index.html.
+     ───────────────────────────────────────────────────────────── */}}
+<section class="banner-volontariato" aria-labelledby="banner-volontariato-title">
+  <div class="container py-4">
+    <div class="card border-primary shadow-sm overflow-hidden position-relative">
+      <div class="row g-0 align-items-center">
+        <div class="col-md-6">
+          <img src="{{ "images/2026-campagna-lazio-banner-orizzontale.webp" | relURL }}"
+               alt="" aria-hidden="true" loading="lazy"
+               class="img-fluid w-100 banner-volontariato-img">
+        </div>
+        <div class="col-md-6">
+          <div class="card-body p-4 text-center text-md-start">
+            <p class="banner-volontariato-eyebrow text-primary fw-semibold mb-1">
+              <i class="bi bi-megaphone-fill me-1" aria-hidden="true"></i> Campagna della Regione Lazio
+            </p>
+            <h2 id="banner-volontariato-title" class="h4 mb-2">«Non c'è Protezione Civile senza di te»</h2>
+            <p class="mb-3">Cerchiamo nuovi volontari, soprattutto giovani. Anche tu puoi entrare nel nostro Gruppo Comunale: l'iscrizione è gratuita e la formazione è inclusa.</p>
+            <a href="{{ "diventa-volontario/" | relURL }}" class="btn btn-primary btn-lg stretched-link">
+              <i class="bi bi-person-plus-fill me-1" aria-hidden="true"></i> Diventa volontario
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
