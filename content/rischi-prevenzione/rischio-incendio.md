@@ -87,6 +87,7 @@ Genzano di Roma è parzialmente compresa nel Parco Regionale dei Castelli Romani
 - [Corpo Nazionale dei Vigili del Fuoco](https://www.vigilfuoco.it/) — soccorso tecnico urgente
 - [Io non rischio — incendi boschivi](https://www.iononrischio.it/) — buone pratiche di prevenzione
 - [Parco Regionale dei Castelli Romani](https://www.parcocastelliromani.it/s/92003020580/) — tutela del territorio boschivo
+- [Situazione incendi boschivi in Europa (EFFIS — Copernicus / Centro Comune di Ricerca UE)](https://joint-research-centre.ec.europa.eu/projects-and-activities/natural-and-man-made-hazards/forest-fires/current-wildfire-situation-europe_en) — dati aggiornati e previsione del pericolo incendi a scala europea (in inglese)
 
 **Approfondimenti divulgativi**
 
