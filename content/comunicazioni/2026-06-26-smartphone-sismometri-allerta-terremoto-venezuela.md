@@ -24,6 +24,8 @@ Il 24 giugno 2026, in Venezuela, milioni di telefoni hanno vibrato quasi nello s
 
 Trenta secondi sembrano pochi. In un terremoto possono bastare per allontanarsi da una finestra, ripararsi sotto un tavolo o fermarsi prima di salire le scale.
 
+> ℹ️ **I dati su vittime e magnitudo provengono dalle prime cronache** del 24-25 giugno 2026 e sono **provvisori**: potranno essere aggiornati nei giorni successivi. Per il dato sismologico ufficiale fai riferimento a [INGV](https://terremoti.ingv.it/) e USGS.
+
 ## Non è una previsione: è una corsa contro le onde
 
 Attenzione a una parola che molti titoli hanno usato: «previsto». **I terremoti non si possono prevedere.** Nessuna tecnologia, oggi, sa dire dove e quando arriverà la prossima scossa. Lo confermano gli stessi scienziati.
