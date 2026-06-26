@@ -87,6 +87,7 @@ Genzano rientra nella **Zona di allerta F — Bacini Costieri Sud** del sistema 
 - [Allerte meteo](/allerte-meteo/) — bollettini e codici colore del Centro Funzionale Regione Lazio
 - [Cartografia del territorio](/cartografia/) — aree e zone di allerta
 - [Kit di emergenza](/rischi-prevenzione/kit-emergenza/) e [Piano di emergenza comunale](/piano-emergenza/)
+- [Scheda alluvione con i simboli (CAA, PDF)](/manuali/schede-caa/scheda-caa-alluvione.pdf) — cosa fare in caso di alluvione in Comunicazione Aumentativa Alternativa (DPC · Abili a Proteggere)
 
 **Fonti istituzionali**
 

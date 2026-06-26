@@ -394,6 +394,17 @@ dataUltimaRevisione: "2026-05-06"
 <p>Se c'è un'emergenza, non scrivere email. Chiama il <strong>112</strong>.</p>
 </div>
 
+<div class="facile-blocco" style="background: #fff4e6; border-color: #ff5000;">
+<h2 style="color: #003366;"><span class="icona" style="background: #ff5000;">📄</span> Schede con i simboli da scaricare</h2>
+<p>Sono schede che spiegano <strong>con i simboli</strong> cosa fare in un'emergenza. Le ha fatte la <strong>Protezione Civile</strong> con il progetto <strong>Abili a Proteggere</strong>.</p>
+<p>Puoi scaricarle e stamparle:</p>
+<ul>
+<li><a href="/manuali/schede-caa/scheda-caa-terremoto.pdf"><strong>Terremoto</strong> (PDF)</a></li>
+<li><a href="/manuali/schede-caa/scheda-caa-alluvione.pdf"><strong>Alluvione</strong> (PDF)</a></li>
+<li><a href="/manuali/schede-caa/scheda-caa-incendi-boschivi.pdf"><strong>Incendio nel bosco</strong> (PDF)</a></li>
+</ul>
+</div>
+
 <div class="facile-blocco" style="background: #e7f0fa; border-color: #003366;">
 <h2 style="color: #003366;"><span class="icona" style="background: #003366;">🎧</span> Vuoi ascoltare invece di leggere?</h2>
 <p>Sul sito trovi <strong>podcast audio</strong>, <strong>infografiche</strong> e <strong>presentazioni</strong> sui temi importanti: terremoto, alluvione, incendio, allerta meteo, kit di emergenza.</p>

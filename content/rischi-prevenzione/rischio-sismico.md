@@ -143,6 +143,7 @@ Il riparo "abbassati, copriti, tieniti" va adattato: la regola è **proteggere l
 - [Cartografia](/cartografia/) — aree di attesa e di emergenza
 - [Piano Familiare](/piano-familiare/) e [Glossario sismico in LIS](/lis/#rischio-sismico)
 - [Smartphone come sismometri: l'allerta sismica del Venezuela](/comunicazioni/2026-06-26-smartphone-sismometri-allerta-terremoto-venezuela/) — come funziona l'allerta precoce (e perché non è una previsione)
+- [Scheda terremoto con i simboli (CAA, PDF)](/manuali/schede-caa/scheda-caa-terremoto.pdf) — cosa fare in caso di terremoto in Comunicazione Aumentativa Alternativa (DPC · Abili a Proteggere)
 
 **Fonti istituzionali**
 
