@@ -92,6 +92,22 @@ Il Gruppo aderisce a sistemi europei, nazionali e regionali di volontariato e pr
 
 </div>
 
+## Accreditamenti
+
+<div class="row mb-5 affiliazioni-row">
+
+<div class="col-lg-4 col-md-6 mb-3">
+<div class="card h-100 shadow-sm border-start border-4" style="border-color:#ff5000!important;">
+<div class="card-body text-center">
+<img src="/images/logo-wikiprocessi-cima.svg" alt="Logo della piattaforma WikiProcessi di Fondazione CIMA" style="width:auto;height:60px;display:block;margin:0 auto 1rem;">
+<h3 class="h6 text-center"><i class="bi bi-journal-check text-primary me-2" aria-hidden="true"></i> WikiProcessi — Fondazione CIMA</h3>
+<p class="small text-start mb-0">Ente accreditato alla piattaforma <a href="https://wikiprocessi.cimafoundation.org/" target="_blank" rel="noopener noreferrer">WikiProcessi</a> di <strong>Fondazione CIMA</strong>, l'osservatorio — promosso con il Dipartimento della Protezione Civile — sulla responsabilità giuridica degli operatori di protezione civile.</p>
+</div>
+</div>
+</div>
+
+</div>
+
 ## La nostra storia
 
 <div class="row mb-4">
