@@ -142,6 +142,7 @@ Il riparo "abbassati, copriti, tieniti" va adattato: la regola è **proteggere l
 - [Rischio vulcanico (Colli Albani)](/rischi-prevenzione/rischio-vulcanico/) — contesto vulcano-tettonico del nostro territorio
 - [Cartografia](/cartografia/) — aree di attesa e di emergenza
 - [Piano Familiare](/piano-familiare/) e [Glossario sismico in LIS](/lis/#rischio-sismico)
+- [Smartphone come sismometri: l'allerta sismica del Venezuela](/comunicazioni/2026-06-26-smartphone-sismometri-allerta-terremoto-venezuela/) — come funziona l'allerta precoce (e perché non è una previsione)
 
 **Fonti istituzionali**
 
