@@ -4,7 +4,7 @@ description: "Dataset aperti delle attività del Gruppo Comunale Volontari di Pr
 layout: "single"
 toc: true
 tts: true
-dataUltimaRevisione: "2026-05-24"
+dataUltimaRevisione: "2026-06-28"
 ---
 
 Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** pubblica i dati delle proprie attività in **formato aperto** (CSV + JSON), riusabili da chiunque sotto **licenza Creative Commons BY 4.0** ai sensi del **D.Lgs. 36/2006** ("Codice di riutilizzo dell'informazione del settore pubblico") e della direttiva **(UE) 2019/1024** sui dati aperti.
@@ -23,6 +23,17 @@ I seguenti dataset sono pubblicati **ora**, con dati reali e verificati, in form
 > Il dataset **Aree di emergenza** è il riferimento per altri Comuni, enti e applicazioni di terzi: contiene le coordinate GPS, verificate sul campo, dei punti del Piano comunale (aree di attesa della popolazione e aree di ammassamento dei soccorritori).
 
 I file sono rigenerati automaticamente a partire dai dati strutturati del sito.
+
+### Feed allerta in tempo reale (CAP)
+
+Lo stato di allerta meteo per Genzano di Roma è pubblicato anche come **feed CAP** (*Common Alerting Protocol*), lo standard internazionale **OASIS** per i messaggi di allerta, leggibile dalle macchine e interoperabile:
+
+| Feed | Formato | Contenuto | Indirizzo |
+|---|---|---|---|
+| **Allerta meteo (CAP 1.2)** | XML | Livello di allerta odierno, pre-allerta per il giorno dopo, avvisi meteo avversi e rischio incendi boschivi, con area geografica e codici | [allerta-cap.xml](/allerta-cap.xml) |
+| **Stato allerta (sintetico)** | JSON | Livello, titolo, descrizione e timestamp dell'ultimo controllo | [allerta-stato.json](/allerta-stato/index.json) |
+
+Il feed CAP è generato automaticamente da `data/allerta.json` (a sua volta alimentato dai bollettini ufficiali del Centro Funzionale Regionale del Lazio) e resta stabile finché lo stato di allerta non cambia, così gli strumenti che lo consumano non ricevono allerte duplicate. Lo possono usare aggregatori, app di terzi, bot e altri enti per ripubblicare l'allerta senza dipendere dal nostro sito. **In emergenza il riferimento per il cittadino resta sempre il 112**: il feed è uno strumento tecnico, non un canale di soccorso.
 
 ### Statistiche operative del Gruppo (dati provvisori)
 
