@@ -403,6 +403,7 @@ dataUltimaRevisione: "2026-05-06"
 <li><a href="/manuali/schede-caa/scheda-caa-alluvione.pdf"><strong>Alluvione</strong> (PDF)</a></li>
 <li><a href="/manuali/schede-caa/scheda-caa-incendi-boschivi.pdf"><strong>Incendio nel bosco</strong> (PDF)</a></li>
 </ul>
+<p>Ci sono anche le <strong><a href="/tabelle-comunicazione/">tabelle di comunicazione</a></strong>: simboli da indicare con il dito per dire un bisogno o cosa succede. Si possono usare sullo schermo o stampare.</p>
 </div>
 
 <div class="facile-blocco" style="background: #e7f0fa; border-color: #003366;">

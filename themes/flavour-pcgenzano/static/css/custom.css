@@ -7291,3 +7291,68 @@ html.a11y-pause-anim .banner-volontariato .card:focus-within { transform: none; 
 @media print {
   .caldo-strip { display: none; }
 }
+
+/* ============================================================
+   TABELLE DI COMUNICAZIONE CAA v1.0
+   Griglia di pittogrammi ARASAAC + parola per la comunicazione
+   aumentativa alternativa in emergenza (afasia, disabilita'
+   cognitive, bisogni comunicativi complessi). Shortcode
+   caa-tabella / caa-voce. Stampabile A4.
+   ============================================================ */
+.caa-board {
+  margin: 1.5rem 0 2rem;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+.caa-board-title {
+  color: #003366;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border-left: 4px solid #003366;
+  padding-left: 0.6rem;
+  margin: 0 0 0.9rem;
+}
+.caa-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 0.75rem;
+}
+.caa-cell {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  border: 2px solid #003366;
+  border-radius: 10px;
+  background: #fff;
+  padding: 0.6rem 0.4rem;
+}
+.caa-cell-img {
+  width: 100%;
+  max-width: 110px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+.caa-cell-label {
+  margin-top: 0.4rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1a1a1a;
+}
+/* I pittogrammi CAA sono funzionali (sono il contenuto): restano visibili
+   anche con la preferenza "Nascondi immagini" del toolbar accessibilita'. */
+html.a11y-hide-images img.caa-cell-img { visibility: visible !important; }
+@media (max-width: 575.98px) {
+  .caa-grid { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 0.5rem; }
+  .caa-cell-label { font-size: 0.95rem; }
+}
+@media print {
+  .caa-grid { grid-template-columns: repeat(4, 1fr); gap: 0.4rem; }
+  .caa-cell { border-color: #000; }
+  .caa-cell-label { color: #000; }
+  .caa-board-title { color: #000; border-left-color: #000; }
+}

@@ -249,6 +249,12 @@ enableGitInfo = true
   parent = "accessibilita-supporti"
   weight = 3
 
+[[menus.main]]
+  name = "Tabelle di comunicazione (CAA)"
+  url = "/tabelle-comunicazione/"
+  parent = "accessibilita-supporti"
+  weight = 4
+
 # --- Dropdown: Volontariato ---
 [[menus.main]]
   name = "Volontariato"
