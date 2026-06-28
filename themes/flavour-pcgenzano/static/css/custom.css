@@ -7356,3 +7356,112 @@ html.a11y-hide-images img.caa-cell-img { visibility: visible !important; }
   .caa-cell-label { color: #000; }
   .caa-board-title { color: #000; border-left-color: #000; }
 }
+
+/* ============================================================
+   FACILE DA LEGGERE v1.0
+   Stili condivisi dei blocchi "facile da leggere" (linguaggio
+   semplice + simboli): pagina IT /facile-da-leggere/ e le sue
+   versioni multilingua (en/eo/ro/ar). Include override RTL per
+   l'arabo. La pagina IT ha gli stessi stili inline (storico):
+   qui vivono per le versioni tradotte e per usi futuri.
+   ============================================================ */
+.facile-blocco {
+  background: #fff;
+  border: 3px solid #003366;
+  border-radius: 14px;
+  padding: 1.2rem 1.4rem;
+  margin: 1.2rem 0;
+  font-size: 1.15rem;
+  line-height: 1.65;
+}
+.facile-blocco h2 {
+  color: #003366;
+  font-size: 1.5rem;
+  margin: 0 0 0.7rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.facile-blocco h2 .icona {
+  width: 2.4rem;
+  height: 2.4rem;
+  background: #003366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+.facile-blocco p { margin-bottom: 0.7rem; }
+.facile-blocco strong { color: #003366; }
+.facile-blocco a.tel-grande {
+  display: block;
+  text-align: center;
+  background: #dc3545;
+  color: #fff;
+  padding: 0.9rem;
+  border-radius: 12px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  margin: 0.5rem 0;
+}
+.facile-blocco a.tel-grande:hover,
+.facile-blocco a.tel-grande:focus {
+  background: #b02a37;
+  outline: 4px solid #ffbe2e;
+  outline-offset: 3px;
+}
+.facile-elenco {
+  list-style: none;
+  padding: 0;
+  margin: 0.7rem 0;
+}
+.facile-elenco li {
+  padding: 0.5rem 0 0.5rem 2.2rem;
+  position: relative;
+}
+.facile-elenco li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  background: #198754;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+.facile-elenco.no li::before {
+  content: "\2715";
+  background: #dc3545;
+}
+/* RTL (arabo): specchia padding e posizione del segno di lista */
+[dir="rtl"] .facile-elenco li { padding: 0.5rem 2.2rem 0.5rem 0; }
+[dir="rtl"] .facile-elenco li::before { left: auto; right: 0; }
+/* Barra di scelta lingua delle versioni facili */
+.facile-lang {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1.2rem 0;
+}
+.facile-lang a {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  border: 2px solid #003366;
+  border-radius: 999px;
+  background: #fff;
+  color: #003366;
+  text-decoration: none;
+  font-weight: 600;
+}
+.facile-lang a:hover,
+.facile-lang a:focus { background: #003366; color: #fff; outline: 3px solid #ffbe2e; outline-offset: 2px; }
+.facile-lang a[aria-current="page"] { background: #003366; color: #fff; }
