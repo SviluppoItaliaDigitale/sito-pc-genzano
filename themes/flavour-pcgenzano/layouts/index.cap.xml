@@ -1,0 +1,207 @@
+{{- /*
+  Feed CAP 1.2 (Common Alerting Protocol — OASIS) generato da data/allerta.json.
+  Standard machine-readable interoperabile (consumabile da aggregatori, app di
+  terzi, bot). Self-hosted, statico, privacy-first: nessuna dipendenza esterna.
+
+  Output: /allerta-cap.xml (output format CAP definito in hugo.toml).
+
+  STABILITA' (anti-spam ai consumatori): `identifier` e `sent` derivano dai
+  timestamp di CONTENUTO dell'allerta (ultimo_aggiornamento + date dei blocchi
+  avviso/incendi), NON dal momento della build. Cosi' il documento resta
+  byte-stabile tra i deploy finche' lo stato di allerta non cambia davvero, e i
+  consumatori non ricevono "nuove" allerte ad ogni rigenerazione oraria.
+
+  Modellazione: un <alert> con uno o piu' <info> (uno per pericolo concorrente).
+  - info principale: criticita' odierna (livello)            — sempre
+  - info "domani":   pre-allerta previsionale                — se livello >= gialla
+  - info avviso:     avviso meteo avverso (vento/neve/...)    — se presente
+  - info incendi:    rischio incendi boschivi AIB Zona 9      — se livello >= gialla e data valida
+*/ -}}
+{{- $a := .Site.Data.allerta -}}
+{{- $e := .Site.Data.emergenza -}}
+{{- $base := .Site.Params.productionBaseURL | default .Site.BaseURL -}}
+{{- $sender := .Site.Params.email | default "segreteria@protezionecivilegenzano.it" -}}
+{{- $senderName := .Site.Params.author -}}
+{{- $today := now.Format "2006-01-02" -}}
+{{- $attivi := slice "gialla" "arancione" "rossa" -}}
+{{- /* Mappe livello -> valori CAP */ -}}
+{{- $sevMap := dict "verde" "Minor" "gialla" "Moderate" "arancione" "Severe" "rossa" "Extreme" -}}
+{{- $urgMap := dict "verde" "Past" "gialla" "Expected" "arancione" "Expected" "rossa" "Immediate" -}}
+{{- $certMap := dict "verde" "Unlikely" "gialla" "Possible" "arancione" "Likely" "rossa" "Likely" -}}
+{{- $respMap := dict "verde" "AllClear" "gialla" "Monitor" "arancione" "Prepare" "rossa" "Prepare" -}}
+{{- /* Identifier composito: cambia se cambia un QUALSIASI campo di contenuto
+       mutabile (livello/tipo), non solo le date — i workflow possono cambiare
+       domani.livello / avviso_meteo.livello / rischio_incendi.livello_aib senza
+       toccare ultimo_aggiornamento. Così i consumatori che deduplicano per
+       identifier vedono sempre l'aggiornamento. */ -}}
+{{- $idparts := slice ($a.livello | default "verde") ($a.ultimo_aggiornamento | default "0") -}}
+{{- with $a.domani }}{{ $idparts = $idparts | append (printf "D-%s-%s" (.livello | default "") (.data | default "")) }}{{ end -}}
+{{- with $a.avviso_meteo }}{{ $idparts = $idparts | append (printf "A-%s-%s-%s" (.tipo | default "") (.livello | default "") (.validita_inizio | default .fonte_data | default "")) }}{{ end -}}
+{{- with $a.rischio_incendi }}{{ $idparts = $idparts | append (printf "F-%s-%s-%s" (.livello | default "") (.livello_aib | default "") (.data | default "")) }}{{ end -}}
+{{- $identifier := printf "PCGenzano-Allerta-%s" (delimit $idparts "_" | replaceRE "[^A-Za-z0-9:+._-]" "") -}}
+{{- $sent := $a.ultimo_aggiornamento | default (now.Format "2006-01-02T15:04:05Z07:00") -}}
+{{- printf "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" | safeHTML }}
+<alert xmlns="urn:oasis:names:tc:emergency:cap:1.2">
+  <identifier>{{ $identifier }}</identifier>
+  <sender>{{ $sender }}</sender>
+  <sent>{{ $sent }}</sent>
+  <status>Actual</status>
+  <msgType>Alert</msgType>
+  <source>{{ $senderName | transform.XMLEscape }}</source>
+  <scope>Public</scope>
+  <note>Feed generato automaticamente dal portale del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma a partire dai bollettini ufficiali del Centro Funzionale Regionale del Lazio e del Dipartimento della Protezione Civile. In caso di emergenza chiamare il 112.</note>
+  {{- /* ===================== INFO PRINCIPALE (oggi) ===================== */ -}}
+  {{- $lvl := $a.livello | default "verde" }}
+  <info>
+    <language>it-IT</language>
+    <category>Met</category>
+    <event>{{ $a.titolo | default "Stato allerta meteo" | transform.XMLEscape }}</event>
+    <responseType>{{ index $respMap $lvl | default "Monitor" }}</responseType>
+    <urgency>{{ index $urgMap $lvl | default "Unknown" }}</urgency>
+    <severity>{{ index $sevMap $lvl | default "Unknown" }}</severity>
+    <certainty>{{ index $certMap $lvl | default "Unknown" }}</certainty>
+    <eventCode>
+      <valueName>LivelloAllertaLazio</valueName>
+      <value>{{ $lvl }}</value>
+    </eventCode>
+    <effective>{{ $sent }}</effective>
+    <senderName>{{ $senderName | transform.XMLEscape }}</senderName>
+    <headline>{{ $a.titolo | default "Nessuna allerta" | transform.XMLEscape }}</headline>
+    <description>{{ $a.descrizione | default "Non sono previsti fenomeni significativi sul nostro territorio." | transform.XMLEscape }}</description>
+    {{- if in $attivi $lvl }}
+    <instruction>Presta attenzione ai bollettini ufficiali, evita le zone a rischio e segui le indicazioni delle autorita'. In caso di pericolo immediato chiama il 112.</instruction>
+    {{- end }}
+    <web>{{ $base }}allerte-meteo/</web>
+    <contact>{{ $sender }}</contact>
+    <area>
+      <areaDesc>Genzano di Roma (RM), Lazio</areaDesc>
+      <geocode>
+        <valueName>ISTAT</valueName>
+        <value>058043</value>
+      </geocode>
+      <geocode>
+        <valueName>ZonaAllertaLazio</valueName>
+        <value>F - Bacini Costieri Sud</value>
+      </geocode>
+      <circle>41.7068,12.6925 5.0</circle>
+    </area>
+  </info>
+  {{- /* ===================== INFO DOMANI (pre-allerta) ===================== */ -}}
+  {{- with $a.domani }}
+  {{- if and (in $attivi .livello) .titolo }}
+  {{- $dl := .livello }}
+  {{- $onset := (time.AsTime (printf "%sT00:00:00" .data) "Europe/Rome").Format "2006-01-02T15:04:05Z07:00" }}
+  {{- $exp := (time.AsTime (printf "%sT23:59:59" .data) "Europe/Rome").Format "2006-01-02T15:04:05Z07:00" }}
+  <info>
+    <language>it-IT</language>
+    <category>Met</category>
+    <event>Pre-allerta meteo (previsione per domani)</event>
+    <responseType>{{ index $respMap $dl | default "Monitor" }}</responseType>
+    <urgency>Future</urgency>
+    <severity>{{ index $sevMap $dl | default "Unknown" }}</severity>
+    <certainty>Possible</certainty>
+    <eventCode>
+      <valueName>LivelloAllertaLazio</valueName>
+      <value>{{ $dl }}</value>
+    </eventCode>
+    <onset>{{ $onset }}</onset>
+    <expires>{{ $exp }}</expires>
+    <senderName>{{ $senderName | transform.XMLEscape }}</senderName>
+    <headline>{{ .titolo | transform.XMLEscape }}</headline>
+    <description>Previsione per il {{ .data }}{{ with .rischi }} — {{ delimit . ", " | transform.XMLEscape }}{{ end }}.</description>
+    <web>{{ $base }}allerte-meteo/</web>
+    <area>
+      <areaDesc>Genzano di Roma (RM), Lazio</areaDesc>
+      <geocode>
+        <valueName>ISTAT</valueName>
+        <value>058043</value>
+      </geocode>
+      <circle>41.7068,12.6925 5.0</circle>
+    </area>
+  </info>
+  {{- end }}
+  {{- end }}
+  {{- /* ===================== INFO AVVISO METEO AVVERSO ===================== */ -}}
+  {{- with $a.avviso_meteo }}
+  {{- if .tipo }}
+  {{- $al := .livello | default "gialla" }}
+  <info>
+    <language>it-IT</language>
+    <category>Met</category>
+    <event>Avviso meteo: {{ .tipo | transform.XMLEscape }}</event>
+    <responseType>{{ index $respMap $al | default "Monitor" }}</responseType>
+    <urgency>Expected</urgency>
+    <severity>{{ index $sevMap $al | default "Moderate" }}</severity>
+    <certainty>Likely</certainty>
+    <eventCode>
+      <valueName>LivelloAllertaLazio</valueName>
+      <value>{{ $al }}</value>
+    </eventCode>
+    {{- /* Campi reali scritti da scripts/check-avvisi-meteo.py: validita_inizio /
+         validita_fine (ISO datetime, fuso Europe/Rome) + fonte_data. Niente `data`. */ -}}
+    {{- with .validita_inizio }}
+    <effective>{{ . }}</effective>
+    <onset>{{ . }}</onset>
+    {{- end }}
+    {{- with .validita_fine }}
+    <expires>{{ . }}</expires>
+    {{- end }}
+    <senderName>{{ $senderName | transform.XMLEscape }}</senderName>
+    <headline>Avviso per {{ .tipo | transform.XMLEscape }}</headline>
+    <description>{{ .descrizione | default (printf "Avviso meteo avverso per %s." .tipo) | transform.XMLEscape }}</description>
+    {{- with .url }}
+    <web>{{ . }}</web>
+    {{- else }}
+    <web>{{ $base }}allerte-meteo/</web>
+    {{- end }}
+    <area>
+      <areaDesc>Genzano di Roma (RM), Lazio</areaDesc>
+      <geocode>
+        <valueName>ISTAT</valueName>
+        <value>058043</value>
+      </geocode>
+      <circle>41.7068,12.6925 5.0</circle>
+    </area>
+  </info>
+  {{- end }}
+  {{- end }}
+  {{- /* ===================== INFO RISCHIO INCENDI (AIB Zona 9) ===================== */ -}}
+  {{- with $a.rischio_incendi }}
+  {{- if and (in $attivi .livello) (ge (.data | default "0") $today) }}
+  {{- $fl := .livello }}
+  {{- $onset := (time.AsTime (printf "%sT00:00:00" .data) "Europe/Rome").Format "2006-01-02T15:04:05Z07:00" }}
+  {{- $exp := (time.AsTime (printf "%sT23:59:59" .data) "Europe/Rome").Format "2006-01-02T15:04:05Z07:00" }}
+  <info>
+    <language>it-IT</language>
+    <category>Fire</category>
+    <event>Rischio incendi boschivi</event>
+    <responseType>{{ index $respMap $fl | default "Monitor" }}</responseType>
+    <urgency>Expected</urgency>
+    <severity>{{ index $sevMap $fl | default "Moderate" }}</severity>
+    <certainty>Likely</certainty>
+    <eventCode>
+      <valueName>PericolositaAIB</valueName>
+      <value>{{ .livello_aib | default $fl }}</value>
+    </eventCode>
+    <onset>{{ $onset }}</onset>
+    <expires>{{ $exp }}</expires>
+    <senderName>{{ $senderName | transform.XMLEscape }}</senderName>
+    <headline>{{ .titolo | default "Rischio incendi boschivi" | transform.XMLEscape }}</headline>
+    <description>Pericolosita' incendi boschivi {{ .livello_aib | default $fl }} per la Zona AIB {{ .zona_aib | default 9 }} (Castelli Romani), valida per il {{ .data }}. Non accendere fuochi, non abbandonare rifiuti o materiale infiammabile; per avvistamenti chiama il 112.</description>
+    <web>{{ $base }}rischi-prevenzione/rischio-incendio/</web>
+    <area>
+      <areaDesc>Genzano di Roma (RM) — Zona AIB 9 Castelli Romani</areaDesc>
+      <geocode>
+        <valueName>ISTAT</valueName>
+        <value>058043</value>
+      </geocode>
+      <geocode>
+        <valueName>ZonaAIB</valueName>
+        <value>9</value>
+      </geocode>
+      <circle>41.7068,12.6925 5.0</circle>
+    </area>
+  </info>
+  {{- end }}
+  {{- end }}
+</alert>

@@ -12,8 +12,16 @@ sitemap:
 dataUltimaRevisione: "2026-05-06"
 ---
 
+<nav class="facile-lang" aria-label="Lingua / Language">
+<a href="/facile-da-leggere/" hreflang="it" aria-current="page">Italiano</a>
+<a href="/facile-da-leggere/en/" hreflang="en" lang="en">English</a>
+<a href="/facile-da-leggere/eo/" hreflang="eo" lang="eo">Esperanto</a>
+<a href="/facile-da-leggere/ro/" hreflang="ro" lang="ro">Română</a>
+<a href="/facile-da-leggere/ar/" hreflang="ar" lang="ar">العربية</a>
+</nav>
+
 <div class="alert alert-success" role="note" style="font-size: 1.15rem; line-height: 1.6;">
-<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>Questa pagina usa parole semplici e frasi corte. È pensata per tutti, anche per chi ha difficoltà a leggere o conosce poco l'italiano.</p>
+<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>Questa pagina usa parole semplici e frasi corte. È pensata per tutti, anche per chi ha difficoltà a leggere o conosce poco l'italiano. Questa pagina è disponibile anche in <a href="/facile-da-leggere/en/">inglese</a>, <a href="/facile-da-leggere/eo/">esperanto</a>, <a href="/facile-da-leggere/ro/">rumeno</a> e <a href="/facile-da-leggere/ar/">arabo</a>.</p>
 </div>
 
 <style>
@@ -403,6 +411,7 @@ dataUltimaRevisione: "2026-05-06"
 <li><a href="/manuali/schede-caa/scheda-caa-alluvione.pdf"><strong>Alluvione</strong> (PDF)</a></li>
 <li><a href="/manuali/schede-caa/scheda-caa-incendi-boschivi.pdf"><strong>Incendio nel bosco</strong> (PDF)</a></li>
 </ul>
+<p>Ci sono anche le <strong><a href="/tabelle-comunicazione/">tabelle di comunicazione</a></strong>: simboli da indicare con il dito per dire un bisogno o cosa succede. Si possono usare sullo schermo o stampare.</p>
 </div>
 
 <div class="facile-blocco" style="background: #e7f0fa; border-color: #003366;">
