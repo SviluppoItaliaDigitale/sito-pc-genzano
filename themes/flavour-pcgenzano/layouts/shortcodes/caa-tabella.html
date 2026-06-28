@@ -1,0 +1,29 @@
+{{- /*
+  Shortcode: caa-tabella — tabella di Comunicazione Aumentativa Alternativa (CAA).
+  Wrapper di una griglia di {{< caa-voce >}}: pittogrammi ARASAAC + parole che una
+  persona con afasia, disabilita' cognitiva o bisogni comunicativi complessi puo'
+  indicare per comunicare in emergenza. Supporto, non sostituto del testo (WCAG 1.4.5).
+
+  Uso:
+    {{< caa-tabella titolo="Ho bisogno di" >}}
+    {{< caa-voce src="/pittogrammi/arasaac/acqua.png" parola="Acqua" >}}
+    {{< caa-voce src="/pittogrammi/arasaac/cibo.png" parola="Cibo" >}}
+    {{< /caa-tabella >}}
+
+  Parametri:
+    titolo (consigliato) intestazione della tabella
+    id     (opzionale)   ancora HTML; default: anchorize del titolo
+*/ -}}
+{{- $titolo := .Get "titolo" -}}
+{{- /* id SOLO se passato esplicitamente: la pagina mette gli anchor sugli H2
+     sovrastanti, quindi un id auto-derivato dal titolo creerebbe id duplicati
+     (es. la board "Chi mi aiuta" sotto "## Chi mi aiuta {#chi-mi-aiuta}"). */ -}}
+{{- $id := .Get "id" -}}
+<section class="caa-board"{{ with $id }} id="{{ . }}"{{ end }}{{ with $titolo }} aria-label="Tabella di comunicazione: {{ . }}"{{ end }}>
+  {{- with $titolo }}
+  <h3 class="caa-board-title">{{ . }}</h3>
+  {{- end }}
+  <div class="caa-grid">
+  {{ .Inner }}
+  </div>
+</section>

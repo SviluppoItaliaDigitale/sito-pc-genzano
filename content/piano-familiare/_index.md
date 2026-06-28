@@ -7,7 +7,7 @@ aliases:
   - /pianofamiliare.html
   - /pianofamiliare/
 toc: true
-dataUltimaRevisione: "2026-06-02"
+dataUltimaRevisione: "2026-06-28"
 risorse_tema: "kit-emergenza"
 ---
 Compila il modulo per creare un piano di emergenza da stampare e conservare in casa. **I dati restano sul tuo computer**: non vengono inviati al sito, non vengono salvati online e non vengono trasmessi al Gruppo.
@@ -161,8 +161,10 @@ Non inserire più dati personali o sanitari del necessario. Il piano stampato pu
 </div>
 <div class="d-flex flex-wrap gap-2 mb-4 piano-buttons">
 <button type="button" class="btn btn-success btn-lg" onclick="stampaPiano()"><i class="bi bi-printer me-2" aria-hidden="true"></i>Stampa / salva PDF</button>
+<button type="button" class="btn btn-outline-success btn-lg" onclick="salvaPianoOffline()"><i class="bi bi-download me-2" aria-hidden="true"></i>Salva piano offline (HTML)</button>
 <button type="button" class="btn btn-outline-primary btn-lg" onclick="document.getElementById('piano-output').classList.add('d-none');window.scrollTo({top:0,behavior:'smooth'})"><i class="bi bi-pencil me-2" aria-hidden="true"></i>Modifica</button>
 </div>
+<p class="small text-muted mb-4"><i class="bi bi-info-circle me-1" aria-hidden="true"></i><strong>Salva piano offline</strong> scarica un file <code>.html</code> con il tuo piano, i numeri di emergenza e la checklist: si apre dal telefono o dal computer <strong>anche senza connessione</strong> (utile in caso di blackout o rete satura). Il file resta solo sul tuo dispositivo.</p>
 </div>
 
 <div class="piano-screen-only">
@@ -372,6 +374,73 @@ function stampaPiano(){
   setTimeout(function(){
     if(document.body.classList.contains('piano-printing')) cleanup();
   },2000);
+}
+
+/* ----------------------------------------------------------------------
+   Salva piano OFFLINE — genera un file .html autoconsistente (solo testo,
+   nessuna immagine né risorsa esterna) con il piano + numeri di emergenza +
+   checklist. Si apre senza connessione (blackout / rete satura). Stesso
+   pattern Blob della funzione .ics. I dati restano sul dispositivo: nulla
+   viene inviato al sito (coerente con la privacy del generatore PEF).
+   ---------------------------------------------------------------------- */
+function salvaPianoOffline(){
+  /* assicura che il piano sia stato generato */
+  var corpo=document.getElementById('piano-contenuto');
+  if(!corpo||!corpo.innerHTML.trim()){ generaPiano(); corpo=document.getElementById('piano-contenuto'); }
+  var cognomeRaw=(document.getElementById('cognome').value||'').trim();
+  var dataOggi=new Date().toLocaleDateString('it-IT');
+  var slug=cognomeRaw.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'')||'familiare';
+
+  var css=''+
+    'body{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#1a1a1a;line-height:1.6;max-width:720px;margin:0 auto;padding:1.5rem;}'+
+    'h1{color:#003366;font-size:1.5rem;margin:0 0 .2rem;}'+
+    '.sub{color:#555;font-size:.9rem;margin:0;}'+
+    '.piano-section-title{font-size:1.1rem;color:#003366;border-bottom:2px solid #003366;padding-bottom:.25rem;margin:1.4rem 0 .5rem;}'+
+    '.piano-table{width:100%;border-collapse:collapse;margin-bottom:.5rem;}'+
+    '.piano-table td{padding:.4rem .6rem;border-bottom:1px solid #dee2e6;vertical-align:top;font-size:.95rem;}'+
+    '.piano-table td:first-child{width:40%;color:#555;}'+
+    '.numeri{background:#f0f4f8;border:1px solid #003366;border-radius:6px;padding:1rem;margin:1.4rem 0;text-align:center;}'+
+    '.numeri .n{font-size:1.6rem;font-weight:bold;color:#7f1d1d;}'+
+    'ul{padding-left:1.2rem;}li{margin:.3rem 0;}'+
+    '.nota{background:#fff8e1;border-left:4px solid #ffbe2e;padding:.8rem 1rem;border-radius:4px;font-size:.9rem;margin:1.4rem 0;}'+
+    '.noprint{margin:1.5rem 0;}button{font-size:1rem;padding:.5rem 1rem;background:#003366;color:#fff;border:0;border-radius:6px;cursor:pointer;}'+
+    '@media print{.noprint{display:none;}}';
+
+  var doc=''+
+    '<!DOCTYPE html><html lang="it"><head><meta charset="utf-8">'+
+    '<meta name="viewport" content="width=device-width, initial-scale=1">'+
+    '<title>Piano di emergenza familiare'+(cognomeRaw?(' — '+esc(cognomeRaw)):'')+'</title>'+
+    '<style>'+css+'<\/style></head><body>'+
+    '<h1>Piano di emergenza familiare</h1>'+
+    '<p class="sub">Protezione Civile Genzano di Roma — Gruppo Comunale Volontari</p>'+
+    '<p class="sub">Documento generato il '+esc(dataOggi)+'</p>'+
+    corpo.innerHTML+
+    '<div class="numeri"><div>Numeri di emergenza</div>'+
+    '<div class="n">112</div><div>Numero Unico Europeo per le emergenze</div>'+
+    '<div style="margin-top:.5rem"><strong>803 555</strong> — Sala Operativa Protezione Civile Lazio (segnalazioni non urgenti)</div></div>'+
+    '<h3 class="piano-section-title">Prima di uscire, solo se puoi farlo in sicurezza</h3>'+
+    '<ul><li>Chiudi il gas e l’acqua.</li><li>Stacca il quadro elettrico.</li>'+
+    '<li>Prendi documenti, farmaci indispensabili e chiavi.</li><li>Indossa scarpe chiuse e robuste.</li></ul>'+
+    '<h3 class="piano-section-title">Checklist essenziale</h3>'+
+    '<ul><li>&#9744; Punti di ritrovo concordati con tutta la famiglia.</li>'+
+    '<li>&#9744; Kit di emergenza pronto e aggiornato.</li>'+
+    '<li>&#9744; Contatto fuori città avvisato dell’esistenza del piano.</li>'+
+    '<li>&#9744; Rubinetti gas/acqua e quadro elettrico individuati.</li>'+
+    '<li>&#9744; Documenti, farmaci e chiavi pronti da prendere.</li>'+
+    '<li>&#9744; Numeri importanti salvati nei telefoni di tutti.</li></ul>'+
+    '<div class="nota">Questo file funziona <strong>senza connessione internet</strong>: conservalo sul telefono e sul computer. Rileggi e aggiorna il piano almeno una volta all’anno. In caso di emergenza chiama il <strong>112</strong>.</div>'+
+    '<div class="noprint"><button type="button" onclick="window.print()">Stampa questo piano</button></div>'+
+    '</body></html>';
+
+  var blob=new Blob([doc],{type:'text/html;charset=utf-8'});
+  var url=URL.createObjectURL(blob);
+  var a=document.createElement('a');
+  a.href=url;
+  a.download='piano-emergenza-'+slug+'.html';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  setTimeout(function(){URL.revokeObjectURL(url);},1000);
 }
 
 /* ----------------------------------------------------------------------

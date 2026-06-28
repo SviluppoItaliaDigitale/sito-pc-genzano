@@ -249,6 +249,12 @@ enableGitInfo = true
   parent = "accessibilita-supporti"
   weight = 3
 
+[[menus.main]]
+  name = "Tabelle di comunicazione (CAA)"
+  url = "/tabelle-comunicazione/"
+  parent = "accessibilita-supporti"
+  weight = 4
+
 # --- Dropdown: Volontariato ---
 [[menus.main]]
   name = "Volontariato"
@@ -517,7 +523,7 @@ enableGitInfo = true
 
 # Impostazioni di output
 [outputs]
-home = ["HTML", "RSS", "JSON", "BUILDINFO", "NEWSSITEMAP"]
+home = ["HTML", "RSS", "JSON", "BUILDINFO", "NEWSSITEMAP", "CAP"]
 
 # Formato output per /build-info.js — timestamp della build Hugo
 # usato dalle pagine statiche (giochi, quizpc, formazionepc, ecc.)
@@ -539,6 +545,16 @@ home = ["HTML", "RSS", "JSON", "BUILDINFO", "NEWSSITEMAP"]
   isPlainText = true
   notAlternative = true
   rel = "sitemap"
+
+# Feed CAP 1.2 (Common Alerting Protocol — OASIS) dell'allerta meteo.
+# Standard machine-readable interoperabile generato da data/allerta.json.
+# Template: themes/flavour-pcgenzano/layouts/index.cap.xml → /allerta-cap.xml
+[outputFormats.CAP]
+  mediaType = "application/xml"
+  baseName = "allerta-cap"
+  isPlainText = true
+  notAlternative = true
+  rel = "alternate"
 
 # Sitemap
 [sitemap]

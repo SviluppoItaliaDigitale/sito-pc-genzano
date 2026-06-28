@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Params.language | default .Site.LanguageCode }}" dir="ltr">
+<html lang="{{ .Params.language | default .Site.LanguageCode }}" dir="{{ .Params.dir | default (cond (in (slice "ar" "he" "fa" "ur") (.Params.language | default "it")) "rtl" "ltr") }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -84,6 +84,7 @@
   }catch(e){}})();
   </script>
   {{ with .OutputFormats.Get "RSS" }}<link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" href="{{ .Permalink }}">{{ end }}
+  {{ with .Site.Home.OutputFormats.Get "CAP" }}<link rel="alternate" type="application/cap+xml" title="Allerta meteo Genzano (feed CAP)" href="{{ .Permalink }}">{{ end }}
   {{ partial "structured-data.html" . }}
 </head>
 <body{{ if .IsHome }} class="home-page"{{ end }}>

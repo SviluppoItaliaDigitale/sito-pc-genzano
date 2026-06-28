@@ -1,0 +1,22 @@
+{{- /*
+  Shortcode: caa-voce — una cella di una tabella di Comunicazione Aumentativa
+  Alternativa (CAA): pittogramma ARASAAC + parola. Va usato dentro {{< caa-tabella >}}.
+
+  Uso:
+    {{< caa-voce src="/pittogrammi/arasaac/acqua.png" parola="Acqua" >}}
+
+  Parametri:
+    src    (obbligatorio) percorso del pittogramma in /pittogrammi/arasaac/...
+    parola (obbligatorio) la parola mostrata sotto il simbolo (anche alt text)
+*/ -}}
+{{- $src := .Get "src" -}}
+{{- $parola := .Get "parola" -}}
+{{- if or (not $src) (not $parola) -}}
+  {{- errorf "shortcode caa-voce: parametri 'src' e 'parola' obbligatori (chiamato in %s)" .Page.File.Path -}}
+{{- end -}}
+{{- /* Strippa leading '/' per compatibilita' subpath GitHub Pages (vedi render-link hook) */ -}}
+{{- $rel := strings.TrimPrefix "/" $src -}}
+<figure class="caa-cell">
+  <img src="{{ $rel | relURL }}" alt="{{ $parola }}" class="caa-cell-img" loading="lazy" decoding="async">
+  <figcaption class="caa-cell-label">{{ $parola }}</figcaption>
+</figure>

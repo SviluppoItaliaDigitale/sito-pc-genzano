@@ -439,6 +439,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Contenuti in LIS</p>
   <p class="ms-card-desc">I contenuti vitali sulla sicurezza in Lingua Italiana dei Segni, per le persone sorde segnanti. Video con sottotitoli e trascrizione completa.</p>
 </a>
+<a class="ms-card ms-edu" href="/tabelle-comunicazione/">
+  <div class="ms-card-icon"><i class="bi bi-grid-3x3-gap-fill"></i></div>
+  <p class="ms-card-title">Tabelle di comunicazione (CAA)</p>
+  <p class="ms-card-desc">Tabelle con simboli da indicare per comunicare in emergenza: per afasia, disabilità cognitive o chi non parla italiano. Da usare a schermo o stampare.</p>
+</a>
 <a class="ms-card ms-edu" href="/quiz-preparazione/">
   <div class="ms-card-icon"><i class="bi bi-clipboard-check"></i></div>
   <p class="ms-card-title">Quanto sei preparato?</p>
