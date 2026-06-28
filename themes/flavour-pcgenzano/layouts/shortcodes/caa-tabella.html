@@ -15,7 +15,10 @@
     id     (opzionale)   ancora HTML; default: anchorize del titolo
 */ -}}
 {{- $titolo := .Get "titolo" -}}
-{{- $id := .Get "id" | default (cond (ne $titolo "") (anchorize $titolo) "") -}}
+{{- /* id SOLO se passato esplicitamente: la pagina mette gli anchor sugli H2
+     sovrastanti, quindi un id auto-derivato dal titolo creerebbe id duplicati
+     (es. la board "Chi mi aiuta" sotto "## Chi mi aiuta {#chi-mi-aiuta}"). */ -}}
+{{- $id := .Get "id" -}}
 <section class="caa-board"{{ with $id }} id="{{ . }}"{{ end }}{{ with $titolo }} aria-label="Tabella di comunicazione: {{ . }}"{{ end }}>
   {{- with $titolo }}
   <h3 class="caa-board-title">{{ . }}</h3>

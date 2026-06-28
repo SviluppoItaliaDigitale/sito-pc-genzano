@@ -29,10 +29,15 @@
 {{- $urgMap := dict "verde" "Past" "gialla" "Expected" "arancione" "Expected" "rossa" "Immediate" -}}
 {{- $certMap := dict "verde" "Unlikely" "gialla" "Possible" "arancione" "Likely" "rossa" "Likely" -}}
 {{- $respMap := dict "verde" "AllClear" "gialla" "Monitor" "arancione" "Prepare" "rossa" "Prepare" -}}
-{{- /* Identifier composito: cambia se cambia un qualsiasi blocco di contenuto */ -}}
-{{- $idparts := slice ($a.ultimo_aggiornamento | default "0") -}}
-{{- with $a.avviso_meteo }}{{ with .data }}{{ $idparts = $idparts | append . }}{{ end }}{{ end -}}
-{{- with $a.rischio_incendi }}{{ with .data }}{{ $idparts = $idparts | append . }}{{ end }}{{ end -}}
+{{- /* Identifier composito: cambia se cambia un QUALSIASI campo di contenuto
+       mutabile (livello/tipo), non solo le date — i workflow possono cambiare
+       domani.livello / avviso_meteo.livello / rischio_incendi.livello_aib senza
+       toccare ultimo_aggiornamento. Così i consumatori che deduplicano per
+       identifier vedono sempre l'aggiornamento. */ -}}
+{{- $idparts := slice ($a.livello | default "verde") ($a.ultimo_aggiornamento | default "0") -}}
+{{- with $a.domani }}{{ $idparts = $idparts | append (printf "D-%s-%s" (.livello | default "") (.data | default "")) }}{{ end -}}
+{{- with $a.avviso_meteo }}{{ $idparts = $idparts | append (printf "A-%s-%s-%s" (.tipo | default "") (.livello | default "") (.validita_inizio | default .fonte_data | default "")) }}{{ end -}}
+{{- with $a.rischio_incendi }}{{ $idparts = $idparts | append (printf "F-%s-%s-%s" (.livello | default "") (.livello_aib | default "") (.data | default "")) }}{{ end -}}
 {{- $identifier := printf "PCGenzano-Allerta-%s" (delimit $idparts "_" | replaceRE "[^A-Za-z0-9:+._-]" "") -}}
 {{- $sent := $a.ultimo_aggiornamento | default (now.Format "2006-01-02T15:04:05Z07:00") -}}
 {{- printf "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" | safeHTML }}
@@ -132,8 +137,14 @@
       <valueName>LivelloAllertaLazio</valueName>
       <value>{{ $al }}</value>
     </eventCode>
-    {{- with .data }}
+    {{- /* Campi reali scritti da scripts/check-avvisi-meteo.py: validita_inizio /
+         validita_fine (ISO datetime, fuso Europe/Rome) + fonte_data. Niente `data`. */ -}}
+    {{- with .validita_inizio }}
     <effective>{{ . }}</effective>
+    <onset>{{ . }}</onset>
+    {{- end }}
+    {{- with .validita_fine }}
+    <expires>{{ . }}</expires>
     {{- end }}
     <senderName>{{ $senderName | transform.XMLEscape }}</senderName>
     <headline>Avviso per {{ .tipo | transform.XMLEscape }}</headline>
