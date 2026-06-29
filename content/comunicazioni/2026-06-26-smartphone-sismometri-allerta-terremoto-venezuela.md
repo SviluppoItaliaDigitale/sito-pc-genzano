@@ -63,6 +63,7 @@ Tutte le indicazioni, prima, durante e dopo, sono nella nostra pagina [Rischio s
 
 - [Rischio sismico](/rischi-prevenzione/rischio-sismico/) — cosa fare prima, durante e dopo un terremoto.
 - [IT-alert: come funziona e come reagire](/comunicazioni/2026-06-11-it-alert-come-funziona-reagire/) — il sistema italiano di allarme pubblico.
+- [Terremoto in Venezuela: come si attiva il soccorso internazionale](/comunicazioni/2026-06-26-terremoto-venezuela-soccorso-internazionale-italia/) — cosa fa l'Italia dopo lo stesso evento.
 
 **Fonti istituzionali**
 
