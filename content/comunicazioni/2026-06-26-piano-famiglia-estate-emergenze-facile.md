@@ -1,6 +1,6 @@
 ---
 title: "Il piano di famiglia per l'estate: cosa fare"
-date: 2026-06-26
+date: 2026-06-26T00:00:00+02:00
 description: "Come prepararsi con la famiglia per le emergenze estive. Semplice e rapido."
 badge: "Prevenzione"
 priorita: "normale"
