@@ -42,6 +42,10 @@ Il Comune di Genzano di Roma è classificato in **zona sismica 2B** (media sismi
 
 > 🤟 **In Lingua dei Segni**: cosa significa "magnitudo"? Il [Glossario in LIS sul rischio sismico](/lis/#rischio-sismico) spiega in Lingua Italiana dei Segni i termini chiave dei terremoti — magnitudo, epicentro, classificazione sismica, fenomeni precursori, reti di monitoraggio.
 
+{{< foto src="/images/terremoto-centro-italia-2016-shakemap-usgs.webp"
+         alt="ShakeMap USGS del terremoto del Centro Italia del 24 agosto 2016, M 6.2, con epicentro ad Accumoli (Rieti). La mappa mostra l'intensità sismica percepita sul territorio: colori dal verde (scossa leggera) all'arancione-rosso-viola (scossa molto forte) nell'area epicentrale di Amatrice e Accumoli. In basso la scala MMI con i valori di accelerazione e velocità del suolo."
+         caption="ShakeMap del terremoto del Centro Italia, 24 agosto 2016 (M 6.2, epicentro ad Accumoli). Fonte: USGS — pubblico dominio. [USGS ShakeMap, eventid us10006g7d](https://earthquake.usgs.gov/earthquakes/eventpage/us10006g7d/shakemap/intensity)." >}}
+
 ## <i class="bi bi-bar-chart-fill text-primary me-2" aria-hidden="true"></i>Il rischio sismico a Genzano in numeri {#in-numeri}
 Il **Dipartimento della Protezione Civile**, con la **Fondazione EUCENTRE** e il **Consorzio ReLUIS**, ha stimato il rischio sismico di ogni comune italiano nella piattaforma nazionale SicuroPiù. La stima è **probabilistica** e riferita a un orizzonte di **50 anni**: dice quanto è probabile subire danni, non prevede *quando* arriverà un terremoto. I dati di base vengono dall'INGV (pericolosità) e dal censimento ISTAT 2011 (popolazione ed edifici).
 
