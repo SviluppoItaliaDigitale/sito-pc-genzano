@@ -3,5 +3,13 @@
   "titolo": "NESSUNA ALLERTA",
   "descrizione": "Non sono previsti fenomeni significativi sul nostro territorio.",
   "ultimo_aggiornamento": "2026-06-25T00:01:53+02:00",
-  "ultimo_controllo": "2026-06-29T08:51:24+02:00"
+  "ultimo_controllo": "2026-06-29T08:51:24+02:00",
+  "rischio_incendi": {
+    "livello": "arancione",
+    "livello_aib": "MODERATO",
+    "titolo": "Pericolosità MODERATA",
+    "zona_aib": 9,
+    "data": "2026-06-29",
+    "fonte": "Regione Lazio — Centro Funzionale (modello RISICOLazio + Fondazione CIMA)"
+  }
 }
