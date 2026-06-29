@@ -21,6 +21,10 @@ I Castelli Romani dipendono in larga parte dalla **falda vulcanica dei Colli Alb
 
 Con il cambiamento climatico le estati diventano più calde e le piogge più irregolari: gli scenari del CMCC indicano per il Mediterraneo un aumento della frequenza delle siccità. Per la spiegazione scientifica del fenomeno leggi la pagina materia [Il rischio da deficit idrico](/conoscere/catalogo-dei-rischi/rischio-siccita/).
 
+{{< foto src="/images/2017-lago-bracciano-siccita-sentinel2-esa.webp"
+         alt="Immagine satellitare Sentinel-2 del Lago di Bracciano (Lazio): il lago circolare a forma di cratere vulcanico appare scuro al centro. In alto a destra due riquadri a confronto del 31 maggio e del 13 agosto 2017 mostrano la riva chiaramente arretrata nell'estate della crisi idrica."
+         caption="Lago di Bracciano (Lazio): confronto Copernicus Sentinel-2 tra maggio e agosto 2017. Le rive si ritirarono visibilmente durante la grave crisi idrica dell'estate 2017. Foto: European Space Agency (ESA) / [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Lake_Bracciano_recedes_ESA383220.jpg), licenza [CC BY-SA 3.0 IGO](https://creativecommons.org/licenses/by-sa/3.0/igo/)." >}}
+
 ## <i class="bi bi-eye-fill text-primary me-2" aria-hidden="true"></i>Segnali e situazioni tipiche {#segnali}
 
 - **Bollettini degli osservatori**: l'Autorità di Bacino dell'Appennino Centrale classifica la **severità idrica** in quattro livelli (normale, bassa, media, alta).
