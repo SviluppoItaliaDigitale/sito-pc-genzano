@@ -20,6 +20,10 @@ A Genzano di Roma la rete di distribuzione attraversa aree boschive e collinari.
 
 > 🎒 **Kit consigliato per questo rischio**: il [Kit "Casa 72 ore"](/rischi-prevenzione/kit-emergenza/#kit-casa) è pensato esattamente per questo. Acqua, alimenti che non richiedono cottura, torce, radio a pile, power bank: tutto quello che ti permette di stare autonomo per 3 giorni senza corrente. Per il controllo periodico stampa la [Checklist A4 da frigorifero](/formazione/schede-stampabili/checklist-kit-emergenza/).
 
+{{< foto src="/images/blackout-luci-notturne-nasa.webp"
+         alt="L'Italia e la Sicilia di notte viste dalla Stazione Spaziale Internazionale: le luci dorate delle città tracciano la forma della penisola e dell'isola sul buio del mare Tirreno e Adriatico, con una sottile fascia verde luminescente dell'atmosfera sullo sfondo."
+         caption="L'Italia di notte vista dalla ISS a circa 385 km di quota, ottobre 2013. Le luci delle città illuminano la penisola e la Sicilia: un blackout su vasta scala renderebbe visibile dall'orbita l'assenza di queste luci. Foto: Michael Hopkins / NASA, [iss037e018864](https://images.nasa.gov/details/iss037e018864), pubblico dominio." >}}
+
 ## <i class="bi bi-clipboard-check-fill text-primary me-2" aria-hidden="true"></i>Cosa fare PRIMA — Preparati {#cosa-fare-prima}
 - Tieni sempre a portata di mano una **torcia elettrica** con pile di scorta.
 - Disponi di una **radio a pile** per ricevere comunicazioni ufficiali.

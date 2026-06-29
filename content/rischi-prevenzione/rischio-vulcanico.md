@@ -34,6 +34,10 @@ I fenomeni che il cittadino può effettivamente incontrare oggi sono **due**:
 
 > **Riferimenti scientifici di base**: INGV — Osservatorio Vesuviano e Sezione di Roma 1; CNR-IGAG (Geologia Ambientale e Geoingegneria); ISPRA. Le mappe ufficiali della pericolosità vulcanica nazionale e i bollettini di sorveglianza si consultano sui portali istituzionali (vedi sezione "Fonti" in fondo alla pagina).
 
+{{< foto src="/images/colli-albani-lago-nemi-vulcanico.webp"
+         alt="Vista satellitare dalla Stazione Spaziale Internazionale del distretto vulcanico dei Colli Albani: si riconoscono i due laghi craterici del Lago Albano (in alto a destra, più grande) e del Lago di Nemi (al centro destra, più piccolo), immersi nei rilievi collinari e negli abitati dei Castelli Romani."
+         caption="Il distretto vulcanico dei Colli Albani visto dalla ISS a 400 km di quota (8 settembre 2017): i due laghi craterici, Lago Albano e Lago di Nemi, sono le caldere del sistema vulcanico quiescente su cui sorge Genzano di Roma. Foto: Earth Science and Remote Sensing Unit, NASA Johnson Space Center — pubblico dominio, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:ISS053-E-6940_-_View_of_Earth.jpg)." >}}
+
 ## <i class="bi bi-droplet-half text-primary me-2" aria-hidden="true"></i>Le emissioni di CO₂ — il fenomeno principale di interesse pratico {#emissioni-co2}
 L'**anidride carbonica (CO₂)** è un gas **incolore, inodore, più pesante dell'aria**. In concentrazioni elevate è **pericolosa** perché soffoca, sostituendo l'ossigeno respirabile. Negli spazi confinati o nelle depressioni del terreno (cantine, pozzi, scantinati, fossi, dossi naturali) la CO₂ può accumularsi a livelli letali per esseri umani e animali, anche se l'aria all'aperto immediatamente sopra è respirabile.
 

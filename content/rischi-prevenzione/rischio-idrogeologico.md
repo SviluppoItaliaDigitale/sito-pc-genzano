@@ -22,6 +22,10 @@ Genzano di Roma sorge sul bordo di un antico cratere vulcanico del **Vulcano Laz
 
 Genzano rientra nella **Zona di allerta F — Bacini Costieri Sud** del sistema regionale (vedi [Allerte meteo](/allerte-meteo/)).
 
+{{< foto src="/images/alluvione-fiume-reno-emiliaromagna-2009.webp"
+         alt="Fiume in piena con acque torbide che esondano sommergendo gli alberi della sponda sinistra e invadendo l'argine destro; sullo sfondo un centro abitato con edifici residenziali, capannoni industriali e una ciminiera; cielo grigio invernale; foto scattata da un ponte o argine rialzato"
+         caption="Il fiume Reno in piena durante l'alluvione del 21 gennaio 2009 in Emilia-Romagna, Italia. Foto: Sergio (Blackcat), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:2009-01-21_Alluvione_fiume_Reno_(Italia).jpg), pubblico dominio." >}}
+
 > 🔎 **Il tuo indirizzo è in area a pericolosità?** La pericolosità da frana e da alluvione è mappata parcella per parcella. Per verificare un indirizzo specifico consulta la piattaforma nazionale **[IdroGEO di ISPRA](https://idrogeo.isprambiente.it/)** (Inventario IFFI e mappe di pericolosità), il **Piano di Assetto Idrogeologico (PAI)** dell'autorità di bacino competente e la nostra [Cartografia del territorio](/cartografia/). La pericolosità indica dove un fenomeno può avvenire: è un dato di base, diverso dall'allerta in corso.
 
 ## <i class="bi bi-eye-fill text-primary me-2" aria-hidden="true"></i>Segnali e situazioni tipiche {#segnali}

@@ -21,6 +21,10 @@ Genzano di Roma si trova in un'area collinare esposta ai venti, in particolare d
 
 > 🎒 **Kit consigliato per questo rischio**: il [Kit "Casa 72 ore"](/rischi-prevenzione/kit-emergenza/#kit-casa) è quello giusto: durante un'allerta vento forte si resta al chiuso, e potrebbe esserci un blackout per la caduta di alberi sulle linee elettriche. Per il controllo periodico stampa la [Checklist A4 da frigorifero](/formazione/schede-stampabili/checklist-kit-emergenza/).
 
+{{< foto src="/images/2020-09-17-medicane-ianos-noaa-viirs.webp"
+         alt="Vista satellitare del Medicane Ianos sull'Ionio: vortice nuvoloso con occhio ben distinto al centro, mar blu scuro intorno, coste della Grecia visibili a nord-est."
+         caption="Il Medicane Ianos al picco di intensità sul Mar Ionio, 17 settembre 2020. Foto: satellite NOAA-20 VIIRS, NASA EOSDIS Worldview, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Ianos_2020-09-17_1140Z.jpg), dominio pubblico." >}}
+
 ## <i class="bi bi-clipboard-check-fill text-primary me-2" aria-hidden="true"></i>Cosa fare PRIMA {#cosa-fare-prima}
 - Verifica la stabilità di tende da sole, persiane, antenne e oggetti sui balconi.
 - Fissa o metti al riparo vasi, sedie e oggetti leggeri esposti al vento.
