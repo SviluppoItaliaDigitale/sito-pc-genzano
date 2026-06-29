@@ -19,6 +19,10 @@ L'incendio boschivo divampa in aree vegetate — boschi, macchia mediterranea, t
 ## <i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Perché è rilevante sul nostro territorio {#perche-rilevante}
 Genzano di Roma è parzialmente compresa nel Parco Regionale dei Castelli Romani, con ampie aree boschive e di macchia mediterranea. Il periodo di massimo rischio va da giugno a settembre: siccità prolungata e venti caldi possono trasformare una piccola fiamma in un incendio devastante. Il nostro Gruppo partecipa attivamente alle campagne antincendio boschivo (AIB).
 
+{{< foto src="/images/incendio-boschivo-monte-tuscolo-castelli-romani.webp"
+         alt="Incendio boschivo su versante collinare con vegetazione arborea: densa colonna di fumo grigio in ascesa e fiamme arancioni visibili al centro del rogo, con abitazioni rurali nel fondovalle dei Castelli Romani."
+         caption="Incendio boschivo su Monte Tuscolo (Castelli Romani), luglio 2007. Foto: Stef Mec, [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Incendio_castelli.jpg), licenza [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)." >}}
+
 ## <i class="bi bi-eye-fill text-primary me-2" aria-hidden="true"></i>Segnali e situazioni tipiche {#segnali}
 - Fumo denso visibile in aree boschive o di campagna
 - Odore forte di bruciato trasportato dal vento
