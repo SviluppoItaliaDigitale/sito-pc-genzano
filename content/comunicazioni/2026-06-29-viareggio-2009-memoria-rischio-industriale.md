@@ -34,7 +34,7 @@ L'incendio non rimase sui binari. Raggiunse le case vicine, alcune delle quali c
 
 Viareggio non è un terremoto né un'alluvione. È un **rischio industriale**: il pericolo legato alle sostanze pericolose, qui durante il **trasporto su rotaia**. Ogni giorno, sulle ferrovie e sulle strade italiane, viaggiano merci infiammabili, tossiche o esplosive.
 
-Il trasporto di queste sostanze segue regole severe: per la ferrovia il **RID** (Regolamento per il trasporto internazionale ferroviario di merci pericolose), per la strada l'**ADR** (Accordo europeo per il trasporto internazionale di merci pericolose su strada). Gli stabilimenti fissi che le detengono rientrano invece nella normativa **Seveso** (in Italia il D.Lgs. 105/2015). La protezione civile studia gli scenari di incidente, informa la popolazione e organizza i soccorsi.
+Il trasporto di queste sostanze segue regole severe: per la ferrovia il **RID** (Regolamento per il trasporto internazionale ferroviario di merci pericolose), per la strada l'**ADR** (Accordo europeo per il trasporto internazionale di merci pericolose su strada). Gli stabilimenti fissi che ne detengono quantità superiori alle soglie di legge rientrano invece nella normativa **Seveso** (in Italia il D.Lgs. 105/2015), come «stabilimenti a rischio di incidente rilevante». La protezione civile studia gli scenari di incidente, informa la popolazione e organizza i soccorsi.
 
 ## Le lezioni che restano
 
