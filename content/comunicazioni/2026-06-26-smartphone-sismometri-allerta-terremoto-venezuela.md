@@ -28,6 +28,8 @@ Trenta secondi sembrano pochi. In un terremoto possono bastare per allontanarsi 
          alt="Notifica del sistema di allerta sismica di Android in spagnolo: «Sismo cercano — Es posible que sientas temblores. Magnitud inicial estimada de 6.2 a aproximadamente 221.8 miles de distancia», ricevuta mercoledì 24 giugno alle 18:04"
          caption="La notifica «Sismo cercano» del sistema di allerta sismica di Android, come ricevuta sugli smartphone in Venezuela il 24 giugno 2026: avvisa che è possibile sentire scosse e indica la magnitudo iniziale stimata e la distanza approssimativa. Schermata del sistema di allerta sismica di Android." >}}
 
+Le immagini di videosorveglianza circolate dopo il sisma mostrano bene cosa significhino quei secondi. In un negozio, una persona è al bancone quando scatta l'allerta sul telefono. Capisce che sta tremando, lascia il posto e si mette al riparo. Quando arriva la scossa più forte, il locale è già vuoto. È esattamente il margine che il preavviso prova a regalare.
+
 ## Non è una previsione: è una corsa contro le onde
 
 Attenzione a una parola che molti titoli hanno usato: «previsto». **I terremoti non si possono prevedere.** Nessuna tecnologia, oggi, sa dire dove e quando arriverà la prossima scossa. Lo confermano gli stessi scienziati.
@@ -72,3 +74,4 @@ Tutte le indicazioni, prima, durante e dopo, sono nella nostra pagina [Rischio s
 
 - [INGV — Terremoti in tempo reale](https://terremoti.ingv.it/) — i dati sismologici ufficiali in Italia.
 - [Android Earthquake Alerts System — Google](https://www.android.com/earthquakes/) — come funziona il sistema di allerta sismica degli smartphone.
+- [USGS — Earthquake Early Warning (ShakeAlert)](https://www.usgs.gov/programs/earthquake-hazards/science/earthquake-early-warning-overview) — come l'allerta precoce «corre davanti» alle onde sismiche, spiegato dal servizio geologico statunitense (in inglese).
