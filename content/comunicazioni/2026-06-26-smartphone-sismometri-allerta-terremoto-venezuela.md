@@ -24,6 +24,10 @@ Il 24 giugno 2026, in Venezuela, milioni di telefoni hanno vibrato quasi nello s
 
 Trenta secondi sembrano pochi. In un terremoto possono bastare per allontanarsi da una finestra, ripararsi sotto un tavolo o fermarsi prima di salire le scale.
 
+{{< foto src="/images/2026-06-26-allerta-sismica-android-notifica.webp"
+         alt="Notifica del sistema di allerta sismica di Android in spagnolo: «Sismo cercano — Es posible que sientas temblores. Magnitud inicial estimada de 6.2 a aproximadamente 221.8 miles de distancia», ricevuta mercoledì 24 giugno alle 18:04"
+         caption="La notifica «Sismo cercano» del sistema di allerta sismica di Android, come ricevuta sugli smartphone in Venezuela il 24 giugno 2026: avvisa che è possibile sentire scosse e indica la magnitudo iniziale stimata e la distanza approssimativa. Schermata del sistema di allerta sismica di Android." >}}
+
 ## Non è una previsione: è una corsa contro le onde
 
 Attenzione a una parola che molti titoli hanno usato: «previsto». **I terremoti non si possono prevedere.** Nessuna tecnologia, oggi, sa dire dove e quando arriverà la prossima scossa. Lo confermano gli stessi scienziati.
