@@ -22,6 +22,10 @@ Il caldo estremo prolungato mette a rischio la vita, soprattutto degli anziani, 
 ## <i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Perché è rilevante sul nostro territorio {#perche-rilevante}
 Genzano di Roma, pur trovandosi in area collinare, è soggetta a ondate di calore intense da giugno ad agosto. Le temperature possono superare i 38-40°C. Gli effetti più gravi colpiscono anziani, bambini piccoli e persone con patologie croniche.
 
+{{< foto src="/images/ondata-calore-europa-nasa-lst-2019.webp"
+         alt="Griglia 2×2 di mappe termiche satellitari a falsi colori di quattro città europee: Roma (ore 06:45 del 27/06/2019, scala 17-26 °C), Madrid (07:29 del 27/06, scala 16-23 °C), Parigi (08:18 del 28/06, scala 17-23 °C) e Milano (07:31 del 27/06, scala 24-29 °C). I centri urbani e le superfici asfaltate appaiono in arancione e rosso (più caldi), le aree periferiche e boschive in blu e verde (più fresche)."
+         caption="Temperature superficiali rilevate dallo strumento ECOSTRESS sulla Stazione Spaziale Internazionale durante l'ondata di calore europea del 27-28 giugno 2019. I centri urbani — asfalto, edifici, infrastrutture — trattengono il calore anche nelle prime ore del mattino: Roma raggiunge 26 °C alle 06:45, Milano 29 °C alle 07:31. Fonte: [NASA/JPL-Caltech, Photojournal PIA23148](https://images.nasa.gov/details/PIA23148) — pubblico dominio." >}}
+
 ## <i class="bi bi-eye-fill text-primary me-2" aria-hidden="true"></i>Segnali da riconoscere {#segnali}
 - Temperatura corporea elevata, pelle calda e arrossata
 - Mal di testa intenso, vertigini, confusione

@@ -22,6 +22,10 @@ Il Mediterraneo è un mare sismicamente attivo: negli ultimi mille anni le coste
 
 Per chi vive ai Castelli Romani il rischio non riguarda la casa, ma le abitudini: spiagge di Anzio, Nettuno, Torvaianica e Ostia d'estate, vacanze sulle coste del Sud Italia o all'estero. Per la spiegazione scientifica del fenomeno leggi la pagina materia [Il rischio da maremoto nel Mediterraneo](/conoscere/catalogo-dei-rischi/rischio-maremoto/).
 
+{{< foto src="/images/2026-06-29-messina-1908-sicilia-danni-terremoto-maremoto.webp"
+         alt="Strada in Sicilia coperta di macerie con edifici gravemente danneggiati su entrambi i lati; alcuni lavoratori in abiti d'epoca del primo Novecento sgombrano i detriti. Fotografia in bianco e nero del 1909."
+         caption="Sgombero delle macerie in Sicilia dopo il terremoto e maremoto dello Stretto di Messina del 28 dicembre 1908, il più distruttivo della storia italiana. Foto: autore anonimo (1909), [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Clearing_away_the_ruins_on_route_to_Catania_-_Sicily_%28after_earthquake%29.jpg), Biblioteca del Congresso degli Stati Uniti — pubblico dominio." >}}
+
 ## <i class="bi bi-eye-fill text-primary me-2" aria-hidden="true"></i>Segnali da riconoscere {#segnali}
 
 L'allerta più rapida è quella **naturale**, che percepisci tu stesso:

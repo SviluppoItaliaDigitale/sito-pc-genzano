@@ -40,6 +40,10 @@ L'area dei Castelli Romani è soggetta a temporali convettivi intensi, specialme
 
 > 🎒 **Kit consigliato per questo rischio**: il [Kit "Casa 72 ore"](/rischi-prevenzione/kit-emergenza/#kit-casa) per restare autonomi se il temporale provoca blackout o allagamenti. Se viaggi spesso, tieni anche il [Kit "Auto"](/rischi-prevenzione/kit-emergenza/#kit-auto) nel bagagliaio: una cella temporalesca improvvisa può bloccarti in strada. Per il controllo periodico stampa la [Checklist A4 da frigorifero](/formazione/schede-stampabili/checklist-kit-emergenza/).
 
+{{< foto src="/images/2025-07-01-temporale-cumulonembo-iss-nasa.webp"
+         alt="Veduta notturna dall'orbita della Stazione Spaziale Internazionale: a sinistra la trama luminosa di una grande città, a destra un cumulonembo attivo con intenso bagliore blu-bianco da fulminazione interna"
+         caption="Cella temporalesca cumulonembo attiva fotografata dalla Stazione Spaziale Internazionale a circa 400 km di quota, sopra l'Italia settentrionale, 1 luglio 2025. Foto: Nichole Ayers / NASA — pubblico dominio — via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Earth_Observation_(iss073e0532039).jpg)." >}}
+
 ## <i class="bi bi-clipboard-check-fill text-primary me-2" aria-hidden="true"></i>Cosa fare PRIMA {#cosa-fare-prima}
 - Informati sulle previsioni meteo e sullo stato di allerta emesso dal Centro Funzionale Regionale Lazio.
 - Evita attività all'aperto durante le allerte per temporali.
