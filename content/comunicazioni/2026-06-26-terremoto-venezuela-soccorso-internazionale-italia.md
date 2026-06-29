@@ -16,13 +16,16 @@ social_punti:
   - "L'Italia, con Dipartimento della Protezione Civile e Ministero degli Esteri, invia un team avanzato e prepara un volo con sanitari e Vigili del Fuoco."
   - "È attivo anche Copernicus, il servizio satellitare europeo che mappa i danni dall'alto."
   - "I dati su vittime e magnitudo sono ancora provvisori: la fonte ufficiale è INGV/USGS."
-allegati: []
+allegati:
+  - titolo: "Rapporto rapido d'impatto PAGER (USGS) — terremoto M7.5 Venezuela"
+    url: "/allegati/2026/2026-06-26-venezuela-usgs-pager.pdf"
+    dimensione: "2,1 MB"
 draft: false
 ---
 
 Il 24 giugno 2026 forti terremoti hanno colpito il **Venezuela**. Il sistema di protezione civile europeo e internazionale ha risposto. Non è un automatismo: tutto parte da una **richiesta di aiuto** del Paese colpito.
 
-> ℹ️ I dati su vittime e magnitudo sono ancora **provvisori** e variano tra le fonti delle prime ore. Per il dato sismologico ufficiale fai riferimento a [INGV](https://terremoti.ingv.it/) e USGS.
+> ℹ️ I dati su vittime e magnitudo sono ancora **provvisori** e variano tra le fonti delle prime ore. Per i dati sismologici ufficiali consulta l'[Istituto Nazionale di Geofisica e Vulcanologia (INGV)](https://terremoti.ingv.it/) e lo United States Geological Survey (USGS).
 
 ## La richiesta e il Meccanismo europeo
 
@@ -34,11 +37,23 @@ Si è attivato anche **Copernicus**, il programma satellitare europeo. Il suo se
          alt="Mappa macrosismica di intensità USGS (ShakeMap) del terremoto M7.5 del 24 giugno 2026 nel nord Venezuela. L'epicentro è segnato da una stella nera sulla costa settentrionale, nell'area di Yumare, come indicato dal titolo cartografico in cima alla mappa. La scala cromatica mostra intensità forte-molto forte (arancione-rosso) nell'area epicentrale, degradante verso verde nelle zone più distanti. Città leggibili sulla mappa: Barquisimeto, Guanare, Calabozo, Barinas, San Fernando de Apure, Valle de La Pascua, El Tigre. In basso una tabella riepiloga la scala di scuotimento dalla classe 'Not felt' a 'Extreme' con i parametri PGA, PGV e intensità Mercalli Modificata."
          caption="ShakeMap del terremoto M7.5 del 24 giugno 2026 (SE di Yumare, Venezuela). Fonte: USGS — pubblico dominio." >}}
 
+## La stima rapida dell'impatto: l'allerta PAGER
+
+Subito dopo una scossa forte, il servizio **PAGER** dello **USGS** (l'istituto geologico degli Stati Uniti) calcola una stima rapida dell'impatto. Incrocia l'intensità dello scuotimento con la popolazione e gli edifici esposti, e produce un livello di allerta a colori.
+
+Per i terremoti del 24 giugno PAGER ha emesso un'**allerta rossa**, il grado più alto. Segnala un evento che con alta probabilità causa molte vittime e danni estesi, oltre la capacità di risposta del solo Paese colpito. È una delle informazioni che orientano la mobilitazione internazionale.
+
+{{< foto src="/images/2026-06-26-venezuela-pager-esposizione-usgs.webp"
+         alt="Mappa di esposizione PAGER dello USGS per i terremoti del 24 giugno 2026 nel nord del Venezuela. Le linee di contorno dell'intensità, contrassegnate dai numeri romani V, VI e VII, racchiudono l'area costiera più colpita attorno a Yumare e Valencia. Sulla mappa sono leggibili città come Maracaibo, Valencia, Barquisimeto, Guanare, Calabozo, San Fernando, Las Mercedes, Anaco ed El Tigre. I simboli indicano la popolazione esposta ai diversi livelli di scuotimento."
+         caption="Esposizione della popolazione allo scuotimento, servizio PAGER. Fonte: USGS — pubblico dominio." >}}
+
+La scheda completa con le stime di vittime e danni è scaricabile in fondo alla pagina (rapporto PAGER USGS, PDF).
+
 ## Cosa fa l'Italia
 
 Secondo il [comunicato del Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/it/comunicato-stampa/protezione-civile-partenza-team-avanzato-il-venezuela/) del 25 giugno, l'Italia risponde alla richiesta di soccorso internazionale.
 
-Il **Dipartimento della Protezione Civile** (DPC), insieme al **Ministero degli Affari Esteri e della Cooperazione Internazionale** (MAECI), ha predisposto la partenza di un **team avanzato**. Il team opera in raccordo con le autorità venezuelane. Prepara l'arrivo di un volo con operatori dei **Servizi Sanitari Regionali** e dei **Vigili del Fuoco**, coordinati dal DPC.
+Il **Dipartimento della Protezione Civile** (DPC) e il **Ministero degli Affari Esteri e della Cooperazione Internazionale** (MAECI) hanno predisposto la partenza di un **team avanzato**. Il team opera con le autorità venezuelane e prepara l'arrivo di un volo con operatori dei **Servizi Sanitari Regionali** e dei **Vigili del Fuoco**, coordinati dal DPC.
 
 ## Un sistema a più livelli
 
@@ -57,4 +72,6 @@ Il soccorso oltre confine funziona per tre livelli. Il **livello nazionale**: in
 
 - [Dipartimento della Protezione Civile — comunicato sul Venezuela](https://www.protezionecivile.gov.it/it/comunicato-stampa/protezione-civile-partenza-team-avanzato-il-venezuela/).
 - [Meccanismo unionale di protezione civile (UE)](https://civil-protection-humanitarian-aid.ec.europa.eu/what/civil-protection/eu-civil-protection-mechanism_en) — come l'Unione coordina gli aiuti.
+- [Copernicus EMS — attivazione EMSR884 «Earthquake in Venezuela»](https://mapping.emergency.copernicus.eu/activations/EMSR884/) — la mappatura satellitare rapida dei danni.
+- [USGS — scheda dell'evento M7.5 del 24 giugno 2026](https://earthquake.usgs.gov/earthquakes/eventpage/us6000t7zp/) — dati sismologici e stima d'impatto PAGER.
 - [INGV — Terremoti in tempo reale](https://terremoti.ingv.it/) — i dati sismologici ufficiali.
