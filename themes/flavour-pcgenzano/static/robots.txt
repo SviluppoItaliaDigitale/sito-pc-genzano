@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Sitemap: https://www.protezionecivilegenzano.it/sitemap.xml
+Sitemap: https://www.protezionecivilegenzano.it/news-sitemap.xml
 
 # Nota: le URL legacy del vecchio sito (*.html, /documenti/*, ecc.) NON
 # sono più bloccate da robots.txt. Il blocco impediva a Googlebot di
