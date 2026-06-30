@@ -4,26 +4,34 @@
   "licenza": "CC BY 4.0",
   "periodo": {
     "dal": "2026-04-04",
-    "al": "2026-06-03"
+    "al": "2026-06-29"
   },
   "nota": "Dati PROVVISORI: censiti solo dall'adozione del nuovo gestionale, non coprono l'intero anno (mancano i mesi precedenti). Aggregati e anonimi, senza dati personali.",
-  "generato_il": "2026-06-06",
+  "generato_il": "2026-06-30",
   "dati": [
     {
       "tipologia": "Taglio pianta",
-      "numero_interventi": 9
+      "numero_interventi": 12
+    },
+    {
+      "tipologia": "Antincendio",
+      "numero_interventi": 8
+    },
+    {
+      "tipologia": "Incendio sterpaglie",
+      "numero_interventi": 5
     },
     {
       "tipologia": "Servizio tecnico",
       "numero_interventi": 4
     },
     {
-      "tipologia": "Incendio sterpaglie",
+      "tipologia": "Alberi/Rami su suolo pubblico",
       "numero_interventi": 4
     },
     {
-      "tipologia": "Alberi/Rami su suolo pubblico",
-      "numero_interventi": 2
+      "tipologia": "Evento Locale",
+      "numero_interventi": 3
     },
     {
       "tipologia": "Oggetti su sede stradale",
@@ -35,6 +43,10 @@
     },
     {
       "tipologia": "Incendio boschivo interfaccia",
+      "numero_interventi": 1
+    },
+    {
+      "tipologia": "Ricerca persona",
       "numero_interventi": 1
     }
   ]
