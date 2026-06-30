@@ -1,8 +1,11 @@
 tipologia,numero_interventi
-Taglio pianta,9
+Taglio pianta,12
+Antincendio,8
+Incendio sterpaglie,5
 Servizio tecnico,4
-Incendio sterpaglie,4
-Alberi/Rami su suolo pubblico,2
+Alberi/Rami su suolo pubblico,4
+Evento Locale,3
 Oggetti su sede stradale,1
 Manifestazione Giro d'italia,1
 Incendio boschivo interfaccia,1
+Ricerca persona,1
