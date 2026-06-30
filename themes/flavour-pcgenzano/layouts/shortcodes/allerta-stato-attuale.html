@@ -42,7 +42,7 @@
     {{- with $allerta.descrizione }}
     <p class="mb-2">{{ . }}</p>
     {{- end }}
-    <div class="alert alert-warning d-flex align-items-start mb-3 py-2 px-3 small allerta-stantia"
+    <div class="d-flex align-items-start mb-3 py-2 px-3 small allerta-stantia bg-warning bg-opacity-10 border border-warning rounded"
          role="note" data-controllo-unix="{{ $t.Unix }}" data-soglia-sec="{{ $sogliaSec }}"
          {{ if not $staleBuild }}hidden{{ end }}>
       <i class="bi bi-exclamation-triangle me-2 mt-1" aria-hidden="true"></i>
