@@ -11,9 +11,9 @@ Il menu è definito in `hugo.toml` sotto `[[menus.main]]` e renderizzato in `the
 | Home | diretta | `/` |
 | Per il Cittadino ▾ | dropdown | Cosa Fare Adesso, Allerte Meteo, Rischi e Prevenzione, Cartografia, Numeri Utili, Piano Familiare, **Kit pronti per situazioni vulnerabili** (7 voci, riordino v3.4 maggio 2026: Storia → Risorse. Il Quiz "Quanto sei preparato?", prima qui, poi spostato a "Per le scuole", è stato infine **rimosso dal menu il 22/05/2026** perché fuori contesto: è un'autovalutazione del cittadino, ancorata come strumento dentro `/piano-familiare/`. Resta raggiungibile da URL, mappa-sito, ricerca) |
 | Per le scuole ▾ | dropdown | Formazione e scuole, Percorsi didattici pronti, Schede didattiche stampabili, Per i docenti — Ed. Civica, Storie e Racconti, Giochi della Sicurezza, Catalogo dei giochi, **Esperimenti e attività** (`/formazione/esperimenti/`, aggiunta 29/05/2026: 21 esperimenti scientifici/giochi per scuola e casa, copre tutto il catalogo dei rischi), **Laboratorio meteo** (`/laboratorio-meteo/`, aggiunta 31/05/2026: costruttore di grafici climatici interattivo — dati ERA5/Open-Meteo live + esempi pre-cotti sui Castelli) |
-| Accessibilità e Supporti ▾ | dropdown | Abili a Proteggere, Facile da Leggere, **Contenuti in LIS** |
+| Accessibilità e Supporti ▾ | dropdown | Abili a Proteggere, Facile da Leggere, **Tabelle di comunicazione (CAA)** (`/tabelle-comunicazione/`, aggiunta 28/06/2026: board ARASAAC stampabili per chi in emergenza non parla — shortcode `caa-tabella`/`caa-voce`), **Contenuti in LIS** |
 | Volontariato ▾ | dropdown | Diventa Volontario, Chi Siamo |
-| Risorse ▾ | dropdown | FAQ, Glossario, Area Download, Normativa, Strumenti in Tempo Reale, **Audio e podcast** |
+| Risorse ▾ | dropdown | FAQ, Glossario, Area Download, Normativa, Strumenti in Tempo Reale, **Audio e podcast**, **Conoscere la Protezione Civile** (`/conoscere/`, `weight=0` — collocata qui e non come voce di primo livello perché l'etichetta lunga sforava la navbar, regressione 29/05/2026), **Manuale di Protezione Civile** (`/manuale/`, `weight=0`, opera a impianto accademico — reader online + PDF) |
 | Comunicazioni | diretta | `/comunicazioni/` |
 | Contatti | diretta | `/contatti/` |
 
@@ -311,6 +311,13 @@ Le fiabe in `static/formazione/storie-e-racconti/*/` hanno un bottone "🔊 Asco
 - Script JS di redirect URL legacy (Joomla `*.html`) che si attiva solo se nessuna regola `.htaccess` server-side ha già intercettato l'URL
 
 **Importante**: NON c'è un override `layouts/404.html` nella root del progetto (è stato rimosso aprile 2026). Vince quello del tema. Se in futuro qualcuno crea `layouts/404.html`, scavalca il template del tema e l'utente non vede più questa pagina.
+
+## Banner homepage — striscia stagionale "caldo" + campagna volontariato (giugno 2026)
+
+Due partial inseriti in `layouts/index.html`, entrambi con copertura `@media print` (nascosti) e accessibilità AGID. Sono **componenti homepage condizionali**: prima di aggiungerne altri, valutare l'affollamento.
+
+- **`partials/banner-caldo.html`** — striscia stagionale "Consigli sul caldo". Chiamata alla riga ~159 di `index.html`, **prima** del bivio emergenza → compare sia in modalità ordinaria sia in emergenza. **Condizione stagionale decisa a build-time da Hugo** (non JS): `{{ $m := int (now.Format "1") }}{{ if and (ge $m 6) (le $m 9) }}` → renderizzata **solo da giugno a settembre** (il sito si rigenera ogni giorno, quindi l'on/off è automatico; fuori stagione l'HTML non è proprio emesso). Mostra icona `bi-thermometer-sun` + invito + bottone "Consigli sul caldo →" verso `/rischi-prevenzione/ondate-di-calore/`. Markup `.caldo-strip` (`role="region"` + `aria-label`); CSS sezione **STRISCIA CONSIGLI CALDO v1.0** in `custom.css` (ambra `#ffe9b8` su testo `#5a3e00`, bordo `#fd7e14`, focus `#ffbe2e`; nessuna animazione). Per disattivarla: rimuovere la chiamata al partial; per cambiare finestra: i limiti `(ge $m 6)`/`(le $m 9)`.
+- **`partials/banner-volontariato.html`** — banner campagna Regione Lazio *«Non c'è Protezione Civile senza di te»* (reclutamento volontari). Chiamata alla riga ~242, **dentro il ramo `{{ else }}`** → **solo modalità ordinaria** (mai in emergenza). **Permanente** (nessun gate su data/stagione). Card BI a due colonne: immagine `static/images/2026-campagna-lazio-banner-orizzontale.webp` (mostrata intera, `alt=""`+`aria-hidden` perché decorativa, il testo è nella card) + colonna testo con eyebrow "Campagna della Regione Lazio", titolo, e `.stretched-link` "Diventa volontario" verso `/diventa-volontario/`. Lo **spot video** `static/video/campagna-lazio-non-ce-pc-senza-di-te-15s.mp4` non è nel banner ma nell'articolo `content/comunicazioni/2026-06-24-campagna-regione-lazio-diventa-volontario.md` (classe `figure.video-campagna`). CSS sezione **BANNER VOLONTARIATO HOMEPAGE v1.0** (hover/focus lift disattivato da `prefers-reduced-motion` + `html.a11y-pause-anim`). Vedi memory [[project_campagna_lazio_non_ce_pc_senza_di_te]].
 
 ## Homepage enhancements v1.0 (aprile 2026)
 

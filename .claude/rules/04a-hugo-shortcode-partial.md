@@ -104,6 +104,22 @@ Quattro shortcode di contenuto, AGID/WCAG, applicabili a contenuto già esistent
 
 Utility correlate in `custom.css`: **`.pc-spinner`** (indicatore di caricamento, rispetta `prefers-reduced-motion` + `a11y-pause-anim`; cablato negli stati di caricamento del Laboratorio meteo) e **`.table-sticky`** (intestazione tabella sticky per tabelloni lunghi, `max-height:70vh`).
 
+## Shortcode CAA — `caa-tabella` / `caa-voce` (tabelle di Comunicazione Aumentativa Alternativa, giugno 2026)
+
+Due shortcode per le **tabelle di Comunicazione Aumentativa Alternativa (CAA)**: una griglia di pittogrammi ARASAAC + parola che una persona con **afasia, disabilità cognitiva, non parlante italiano, bambino o anziano in stress** può **indicare** per comunicare in emergenza quando non riesce a parlare. Supporto, mai sostituto del testo (WCAG 1.4.5). Usati nella pagina `/tabelle-comunicazione/` (`content/tabelle-comunicazione/_index.md`), voce di menu sotto **Accessibilità e Supporti**.
+
+- **`caa-tabella`** (wrapper, accetta inner): avvolge una griglia di `caa-voce`. Parametri: `titolo` (consigliato → `<h3 class="caa-board-title">` + `aria-label="Tabella di comunicazione: …"`), `id` (opzionale, ancora HTML — **usato solo se passato esplicitamente**, perché le ancore stanno già sugli H2 della pagina e un id auto-derivato creerebbe duplicati). Markup: `<section class="caa-board">` → `<div class="caa-grid">`.
+- **`caa-voce`** (cella, dentro `caa-tabella`): parametri **obbligatori** `src` (pittogramma in `/pittogrammi/arasaac/…`) e `parola` (testo sotto il simbolo **e** `alt`); se manca uno dei due, `errorf` blocca la build. Il leading `/` di `src` è strippato (`strings.TrimPrefix` + `relURL`) per il subpath GitHub Pages. Markup: `<figure class="caa-cell">` con `<img class="caa-cell-img" loading="lazy" decoding="async">` + `<figcaption class="caa-cell-label">`.
+
+```go-html-template
+{{< caa-tabella titolo="Ho bisogno di" >}}
+{{< caa-voce src="/pittogrammi/arasaac/acqua.png" parola="Acqua" >}}
+{{< caa-voce src="/pittogrammi/arasaac/cibo.png" parola="Cibo" >}}
+{{< /caa-tabella >}}
+```
+
+CSS sezione **TABELLE DI COMUNICAZIONE CAA v1.0** in `custom.css`: `.caa-grid` è CSS Grid responsive (`auto-fill, minmax(130px,1fr)`; 100px su mobile; 4 colonne in stampa), `.caa-board` ha `break-inside: avoid` (ogni tabella su una pagina A4), `.caa-cell` bordo 2px `#003366` + immagine `aspect-ratio 1/1 object-fit:contain`. 🔴 **Accessibilità**: i pittogrammi CAA **restano visibili anche con "Nascondi immagini"** del toolbar (`html.a11y-hide-images img.caa-cell-img { visibility: visible !important }`) perché qui sono **contenuto**, non decorazione. Attribuzione ARASAAC obbligatoria (CC BY-NC-SA 4.0, ereditata dalle tabelle stampate). Vedi `manuale/parte-40-comunicazione-emergenza-accessibile.md`.
+
 ## Shortcode `scheda-terremoto` (scheda dettaglio evento sismico)
 
 `themes/flavour-pcgenzano/layouts/shortcodes/scheda-terremoto.html` rende la **scheda di dettaglio di un singolo terremoto** sul modello della pagina evento di `terremoti.ingv.it`. Usato dalla pagina `content/cruscotto/terremoto.md` (URL `/cruscotto/terremoto/`), che riceve l'ID evento via **hash** (`#46107472`) o query (`?event=46107472`).
