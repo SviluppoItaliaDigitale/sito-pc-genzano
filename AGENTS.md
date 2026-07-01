@@ -411,7 +411,7 @@ python3 scripts/fix-ordering-articoli-stesso-giorno.py
 
 ## 7. Agenti specializzati esistenti (riferimento)
 
-In `.claude/agents/` ci sono **15 agenti custom** ottimizzati per Claude Code (al 18 maggio 2026). **ChatGPT/Codex ha il suo sistema di sub-agenti diverso** e non li può richiamare direttamente, ma può **emulare il loro lavoro** seguendo le specifiche descritte. Le specifiche complete (system prompt + workflow + esempi) sono in `manuale/parte-19-agenti-specializzati.md`.
+In `.claude/agents/` ci sono **16 agenti custom** ottimizzati per Claude Code (al 30 giugno 2026; il 16° è `pc-correttore-bozze`). **ChatGPT/Codex ha il suo sistema di sub-agenti diverso** e non li può richiamare direttamente, ma può **emulare il loro lavoro** seguendo le specifiche descritte. Le specifiche complete (system prompt + workflow + esempi) sono in `manuale/parte-19-agenti-specializzati.md`.
 
 | Agent | Trigger naturali | Cosa fa (sintesi) |
 |---|---|---|
