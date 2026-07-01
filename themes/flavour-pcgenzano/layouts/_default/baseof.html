@@ -7,6 +7,19 @@
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   <meta name="author" content="{{ .Site.Params.author }}">
   <meta name="theme-color" content="#003366">
+  {{/* Fingerprint di build (guardia anti-stale). Ogni pagina generata da
+       Hugo porta lo SHA + timestamp della build che l'ha prodotta, letti da
+       data/buildinfo.json (scritto in CI da deploy.yml; segnaposto "dev" in
+       locale). Il workflow verifica-deploy-aruba.yml campiona queste meta
+       sulle pagine live e rileva il "drift di generazioni" — il bug per cui
+       su Aruba convivevano pagine di build diverse (chi-siamo di aprile,
+       allerte-meteo di maggio, home di luglio). Se una pagina live non ha
+       affatto questa meta, è servita da una build precedente a questa
+       guardia → anch'essa un segnale di file stantio. */}}
+  {{- with site.Data.buildinfo }}
+  <meta name="pc-build-sha" content="{{ .sha }}">
+  <meta name="pc-build-time" content="{{ .time }}">
+  {{- end }}
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
   {{- $prodBase := .Site.Params.productionBaseURL | default .Site.BaseURL -}}

@@ -37,6 +37,25 @@ jobs:
           hugo-version: '0.154.5'
           extended: true
 
+      - name: "🔖 Scrivi il fingerprint di build (guardia anti-stale)"
+        # Ogni pagina generata da Hugo porterà <meta name="pc-build-sha"> con
+        # lo SHA di QUESTO deploy. verifica-deploy-aruba.yml lo campiona sulle
+        # pagine live e rileva il "drift di generazioni" (pagine di build
+        # diverse convivono su Aruba). Scritto PRIMA di entrambe le build
+        # (Aruba + GitHub Pages), non committato: è un artefatto di build.
+        run: |
+          set -euo pipefail
+          cat > data/buildinfo.json <<EOF
+          {
+            "sha": "${GITHUB_SHA:0:7}",
+            "sha_full": "${GITHUB_SHA}",
+            "ref": "${GITHUB_REF_NAME}",
+            "run_id": "${GITHUB_RUN_ID}",
+            "time": "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          }
+          EOF
+          python3 -c "import json; print(json.load(open('data/buildinfo.json'))['sha'])"
+
       - name: "♿ Setup liblouis (braille) + segno (QR) + Pillow/font (cover) + dipendenze Python"
         run: |
           sudo apt-get update -qq
@@ -99,7 +118,12 @@ jobs:
           # state-name fa ri-caricare tutti i file, senza cancellare nulla
           # (a differenza di dangerous-clean-slate). Da qui in poi gli upload
           # tornano incrementali contro questo nuovo stato.
-          state-name: .ftp-deploy-sync-state-2026-06-09.json
+          # Bump 2026-07-01: l'audit del 01/07 ha ritrovato drift (chi-siamo
+          # fermo al 20/04, allerte-meteo al 13/05 mentre la home era fresca).
+          # Nuovo state-name → re-upload integrale che sana il drift residuo;
+          # d'ora in poi la guardia verifica-deploy-aruba.yml intercetta il
+          # ripetersi del problema entro pochi minuti dal deploy.
+          state-name: .ftp-deploy-sync-state-2026-07-01.json
           timeout: 60000
           log-level: verbose
           exclude: |
