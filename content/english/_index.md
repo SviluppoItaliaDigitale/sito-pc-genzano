@@ -54,7 +54,7 @@ sitemap:
 
 ## Welcome
 
-The **Civil Protection Volunteers Group of Genzano di Roma** is a public service of the Municipality. We help citizens before, during and after emergencies — earthquakes, floods, wildfires, severe weather. Our work is **volunteer and free**.
+The **Civil Protection Volunteers Group of Genzano di Roma** is a public service of the Municipality. We help citizens before, during and after emergencies — earthquakes, floods, wildfires, severe weather. Our work is **voluntary and free of charge**.
 
 This page gives you **essential information** in English. The full website is in Italian (use your browser's translation feature for the rest).
 
@@ -89,7 +89,7 @@ This page gives you **essential information** in English. The full website is in
 <li>Do <strong>not</strong> use elevators</li>
 <li>Stay away from windows and bookcases</li>
 </ul>
-<p>After the shaking, exit calmly through stairs and reach the closest <strong>"Area di Attesa"</strong> (waiting area). See the <a href="/cartografia/">map of waiting areas</a>.</p>
+<p>After the shaking, exit calmly using the stairs and reach the closest <strong>"Area di Attesa"</strong> (waiting area). See the <a href="/cartografia/">map of waiting areas</a>.</p>
 </div>
 
 <div class="en-card">
@@ -110,7 +110,7 @@ This page gives you **essential information** in English. The full website is in
 <p>If you see smoke or flames:</p>
 <ul class="en-list">
 <li>Call <strong>112</strong> immediately</li>
-<li>Leave the building through stairs (never use elevators)</li>
+<li>Leave the building using the stairs (never use elevators)</li>
 <li>Close doors behind you (slows the fire spread)</li>
 <li>Stay low if there is smoke (cleaner air near the floor)</li>
 <li>Do <strong>not</strong> go back for belongings</li>
@@ -134,7 +134,7 @@ This page gives you **essential information** in English. The full website is in
 <h2>📦 Emergency kit at home</h2>
 <p>Keep a small backpack ready with:</p>
 <ul class="en-list">
-<li>Bottled water (3 liters per person)</li>
+<li>Water: 4 liters per person, per day, for 3 days (Ready.gov/FEMA)</li>
 <li>Long-life food (biscuits, energy bars)</li>
 <li>Flashlight with spare batteries</li>
 <li>Thermal blanket and whistle</li>
@@ -147,7 +147,7 @@ This page gives you **essential information** in English. The full website is in
 
 <div class="en-card">
 <h2>📱 IT-alert</h2>
-<p>Italy has a national alert system called <strong>IT-alert</strong>. In case of major emergency it sends a loud message directly to all phones in the affected area, even without app, internet, or signal from your provider. The message is in Italian and English. More info: <a href="https://www.it-alert.it/en/" target="_blank" rel="noopener noreferrer">it-alert.it</a>.</p>
+<p>Italy has a national alert system called <strong>IT-alert</strong>. In case of major emergency it sends a loud message directly to all phones in the affected area — no app or internet needed, your phone just needs to be on and within mobile network coverage. The message is in Italian and English. More info: <a href="https://www.it-alert.it/en/" target="_blank" rel="noopener noreferrer">it-alert.it</a>.</p>
 </div>
 
 <div class="en-card">
@@ -158,7 +158,7 @@ This page gives you **essential information** in English. The full website is in
 
 <div class="en-card">
 <h2>📚 Detailed pages in English</h2>
-<p>Beyond this overview, the following pages are translated in detail:</p>
+<p>Beyond this overview, the following pages are available in full in English:</p>
 <ul class="en-list">
 <li><a href="/english/numeri-utili/"><strong>Useful Numbers</strong></a></li>
 <li><a href="/english/cosa-fare-adesso/"><strong>What To Do Now</strong></a></li>
@@ -185,5 +185,5 @@ This page gives you **essential information** in English. The full website is in
 </div>
 
 <div class="alert alert-warning" role="note" style="margin-top: 2rem;">
-<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>This page is a basic summary. For complete information about Genzano-specific risks, please use a translation service (e.g. Google Translate) on the Italian pages of this website. Civil Protection officers can support you in person at our office.</p>
+<p class="mb-0"><i class="bi bi-info-circle me-2" aria-hidden="true"></i>This page is a basic summary. For complete information about Genzano-specific risks, please use a translation service (e.g. Google Translate) on the Italian pages of this website. Our volunteers can assist you in person at our office.</p>
 </div>
