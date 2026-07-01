@@ -1,0 +1,113 @@
+name: "🔁 Verifica allineamento Aruba (anti-stale)"
+
+# Guardia anti-stale. Dopo ogni deploy riuscito, campiona le pagine ad alto
+# traffico su Aruba e verifica che servano TUTTE la stessa build recente,
+# leggendo il fingerprint <meta name="pc-build-sha"> iniettato da deploy.yml.
+#
+# Rileva il bug ricorrente per cui il sync-state FTP salta alcuni file e su
+# Aruba convivono più "generazioni" del sito (audit 01/07/2026: chi-siamo di
+# aprile, allerte-meteo di maggio, home di luglio — con un semaforo allerta
+# stantio, che è la cosa più pericolosa su un sito di protezione civile).
+#
+# Su drift/staleness apre/aggiorna 1 ISSUE (label automazione + urgente) che
+# arriva via email al proprietario e si chiude da sola al rientro. NON manda
+# nulla su Telegram: quello è il canale PUBBLICO dei cittadini — gli alert
+# tecnici interni passano per le issue (stessa scelta di notifica-ci-fallita.yml).
+#
+# Rimedio quando scatta: bump del `state-name` in deploy.yml (re-upload
+# integrale, rule 05 § "reset del sync-state").
+
+on:
+  workflow_run:
+    workflows: ["🚀 Build e Deploy"]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      sha:
+        description: "SHA atteso (opzionale, solo informativo)"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: "verifica-deploy-aruba"
+  cancel-in-progress: false
+
+jobs:
+  verifica:
+    # Solo dopo un deploy RIUSCITO (o su richiesta manuale).
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v5
+
+      - name: "🔁 Campiona i fingerprint live su Aruba"
+        id: check
+        run: |
+          set -uo pipefail
+          EXPECTED="${{ github.event.workflow_run.head_sha }}"
+          EXPECTED="${EXPECTED:0:7}"
+          [ -z "$EXPECTED" ] && EXPECTED="${{ github.event.inputs.sha }}"
+          ARGS=""
+          [ -n "$EXPECTED" ] && ARGS="--sha $EXPECTED"
+          # Retry ampi: assorbono la propagazione FTP/cache subito dopo il deploy.
+          set +e
+          bash scripts/verifica-fingerprint-live.sh $ARGS --retries 8 --wait 75 --stale-hours 12 \
+            | tee /tmp/verifica.txt
+          echo "rc=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
+          set -e
+          {
+            echo "### Verifica allineamento Aruba"
+            echo '```'
+            cat /tmp/verifica.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: "🚨 Apri/aggiorna issue se c'è drift"
+        if: ${{ steps.check.outputs.rc != '0' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -uo pipefail
+          TITLE="🔁 Drift di deploy su Aruba — pagine stantie"
+          RUN_URL="https://github.com/$REPO/actions/runs/${{ github.run_id }}"
+          ESITO=$(sed 's/`/´/g' /tmp/verifica.txt | tail -60)
+          RIMEDIO='**Rimedio (rule 05 § reset del sync-state):** cambia lo `state-name` nello step FTP di `deploy.yml` con una nuova data (es. `.ftp-deploy-sync-state-AAAA-MM-GG.json`) e fai partire un deploy: forza un re-upload integrale senza cancellare la cartella `/documenti/`. Dopo il rientro, questa issue si chiude da sola al prossimo controllo verde.'
+          BODY=$(printf '_Rilevato il %s UTC dalla guardia anti-stale (verifica-deploy-aruba.yml). Issue unica, si chiude da sola al rientro._\n\nLe pagine campione su **www.protezionecivilegenzano.it** non servono tutte la stessa build recente: alcuni file sono rimasti stantii su Aruba (il sync-state FTP ha saltato dei file).\n\n%s\n\n**Esito del campionamento:**\n\n```\n%s\n```\n\n[Log completo del run](%s)\n' "$(date -u +%Y-%m-%d\ %H:%M)" "$RIMEDIO" "$ESITO" "$RUN_URL")
+          NUM=$(gh issue list --repo "$REPO" --state open --limit 100 \
+                  --json number,title \
+                  --jq ".[] | select(.title == \"$TITLE\") | .number" | head -1 || true)
+          if [ -n "$NUM" ]; then
+            gh issue edit "$NUM" --repo "$REPO" --body "$BODY"
+            echo "Issue #$NUM aggiornata."
+          else
+            gh label create "urgente" --color "B60205" --description "Da gestire subito" 2>/dev/null || true
+            gh issue create --repo "$REPO" --title "$TITLE" --body "$BODY" \
+              --label automazione --label urgente
+            echo "Issue di drift creata."
+          fi
+
+      - name: "✅ Chiudi l'issue se tutto è allineato"
+        if: ${{ steps.check.outputs.rc == '0' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          set -uo pipefail
+          TITLE="🔁 Drift di deploy su Aruba — pagine stantie"
+          NUM=$(gh issue list --repo "$REPO" --state open --limit 100 \
+                  --json number,title \
+                  --jq ".[] | select(.title == \"$TITLE\") | .number" | head -1 || true)
+          if [ -n "$NUM" ]; then
+            gh issue close "$NUM" --repo "$REPO" \
+              --comment "Verifica del $(date -u +%Y-%m-%d\ %H:%M) UTC: tutte le pagine campione servono la stessa build recente. Drift rientrato."
+            echo "Issue #$NUM chiusa."
+          else
+            echo "Nessun drift e nessuna issue aperta — tutto ok."
+          fi

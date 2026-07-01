@@ -88,6 +88,8 @@ jobs:
             printf ',\n'
             riga "Verifica dopo la pubblicazione" "smoke-test-post-deploy.yml" "Controlla che le pagine principali rispondano dopo ogni pubblicazione."
             printf ',\n'
+            riga "Allineamento delle pagine online" "verifica-deploy-aruba.yml" "Verifica che tutte le pagine online mostrino l'ultima versione pubblicata, senza pagine rimaste indietro."
+            printf ',\n'
             riga "Audit prestazioni e accessibilita" "lighthouse-audit.yml" "Misura velocita, accessibilita e SEO con Lighthouse dopo ogni pubblicazione."
             printf '\n  ]\n}\n'
           } > data/stato-sistema.json
