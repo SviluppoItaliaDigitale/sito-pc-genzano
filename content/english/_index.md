@@ -163,7 +163,13 @@ This page gives you **essential information** in English. The full website is in
 <li><a href="/english/numeri-utili/"><strong>Useful Numbers</strong></a></li>
 <li><a href="/english/cosa-fare-adesso/"><strong>What To Do Now</strong></a></li>
 <li><a href="/english/piano-familiare/"><strong>Family Emergency Plan</strong></a></li>
+<li><a href="/english/kit-calamita/"><strong>Disaster Kits for vulnerable people</strong></a> — overview (detailed printable cards are in Italian)</li>
 </ul>
+</div>
+
+<div class="en-card">
+<h2>🌍 For practitioners and institutions</h2>
+<p><a href="/english/about-this-practice/"><strong>About this practice</strong></a> — how we built an accessible-by-design, privacy-first disaster communication platform (a good-practice note for the disaster risk reduction community).</p>
 </div>
 
 <div class="en-card">

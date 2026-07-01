@@ -19,6 +19,8 @@ Questa pagina è il **catalogo informativo** dei giochi: per ognuno trovi una sc
 
 > Cerchi l'esperienza interattiva con badge e progressi? Vai all'**[Arena PC Genzano](/giochi/)**, il launcher dei giochi con classifica personale.
 
+> 🌍 **For English-speaking visitors:** these educational games have an **Italian-language interface**. For an overview of our work in English, see [About this practice](/english/about-this-practice/).
+
 ## Indice per fascia
 
 - [Giochi per la scuola dell'infanzia (3-6 anni)](#infanzia) — 10 giochi
