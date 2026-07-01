@@ -19,7 +19,7 @@ social_punti:
 draft: false
 ---
 
-Questa mattina i volontari del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** sono intervenuti in **via Roma**, a Genzano, dove un albero si è **spezzato alla base** ed è caduto su alcune **auto in sosta**.
+Questo pomeriggio i volontari del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** sono intervenuti in **via Roma**, a Genzano, dove un albero si è **spezzato alla base** ed è caduto su alcune **auto in sosta**.
 
 ## Cosa è successo
 
