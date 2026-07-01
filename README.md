@@ -226,6 +226,17 @@ Opera di riferimento sulla protezione civile, **online (lettore accessibile) + P
 
 Quando un workflow critico (allerta meteo, deploy, smoke-test, pubblicazione programmata) fallisce su `main`, un watchdog apre/aggiorna un'**issue GitHub** assegnata al proprietario → notifica **via email** (mai Telegram: il canale è quello pubblico dei cittadini). Nasce dopo che i fallimenti dell'allerta meteo (apt 404 su poppler) erano stati scoperti solo per caso accedendo a GitHub.
 
+### Comunicazione di emergenza accessibile e interoperabile (giugno 2026)
+
+Quattro novità per raggiungere chi ha bisogni comunicativi/linguistici in emergenza e per rendere l'allerta leggibile dalle macchine. Guida completa in [`manuale/parte-40-comunicazione-emergenza-accessibile.md`](manuale/parte-40-comunicazione-emergenza-accessibile.md).
+
+- **Feed CAP 1.2** (`/allerta-cap.xml`) — lo stato di allerta meteo in **Common Alerting Protocol** (standard OASIS), leggibile da app/aggregatori/bot. Output format Hugo da `data/allerta.json`, un `<info>` per pericolo (oggi/domani/avviso meteo/incendi AIB Zona 9), `identifier` byte-stabile per non generare allerte spurie a ogni rigenerazione oraria. Privacy-first, self-hosted.
+- **Tabelle di comunicazione CAA** (`/tabelle-comunicazione/`) — board di pittogrammi ARASAAC + parola che chi **non riesce a parlare** in emergenza (afasia, disabilità cognitive, non parlanti italiano, bambini, anziani) può **indicare**. Shortcode `caa-tabella`/`caa-voce`, stampabili A4, visibili anche con "Nascondi immagini" (sono contenuto). Voce di menu sotto "Accessibilità e Supporti".
+- **Piano familiare offline** (`/piano-familiare/`) — pulsante "Salva piano offline (HTML)": scarica un file HTML solo-testo autoconsistente, apribile **senza connessione** (blackout/rete satura). Generato sul dispositivo via Blob, nessun dato inviato al sito.
+- **Facile da leggere multilingua** (`/facile-da-leggere/`) — la pagina in linguaggio chiaro ora ha le versioni **inglese, esperanto, rumeno, arabo** (selettore lingua interno con `hreflang`).
+
+A queste si aggiunge la **news-sitemap Google News** (`/news-sitemap.xml`, articoli delle ultime 48h, dichiarata in `robots.txt`) per l'indicizzazione rapida delle notizie, e le **strisce homepage** stagionale "Consigli sul caldo" (giugno–settembre) e campagna Regione Lazio "Non c'è Protezione Civile senza di te" (`partials/banner-caldo.html` / `banner-volontariato.html`).
+
 ### File in `archetypes/` (template Hugo)
 
 | File | A cosa serve |
