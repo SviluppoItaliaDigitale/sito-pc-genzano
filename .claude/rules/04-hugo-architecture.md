@@ -102,6 +102,14 @@ Non modificare questa logica senza valutare l'impatto su entrambe le modalità.
 I file in `data/` sono la via principale per aggiornare contenuti senza toccare i template.
 Aggiorna i data files al posto di modificare i template quando possibile.
 
+### Output format custom (`hugo.toml [outputs] home`)
+
+Oltre a `HTML`/`RSS`/`JSON`, la **home page** genera tre output format custom (definiti in `[outputFormats.*]` di `hugo.toml`, template `index.<suffix>.xml` nel tema):
+
+- **`CAP`** → `/allerta-cap.xml` — feed **CAP 1.2** (Common Alerting Protocol, standard OASIS `urn:oasis:names:tc:emergency:cap:1.2`), machine-readable per aggregatori/app/bot. Template `index.cap.xml`, alimentato da `data/allerta.json`: un blocco `<info>` per pericolo concorrente (oggi sempre presente; domani/avviso meteo/incendi AIB Zona 9 solo se presenti nei rispettivi sotto-blocchi). L'`identifier` è **composito e byte-stabile** (derivato dai soli campi di contenuto mutabili, sanitizzato `replaceRE`): il documento non cambia tra i deploy orari finché lo stato allerta non cambia → niente "nuove" allerte spurie per i consumatori che deduplicano per `identifier`. `mediaType application/xml`, `baseName allerta-cap`, `rel alternate`, `notAlternative true`. Privacy-first (self-hosted, nessuna dipendenza esterna).
+- **`NEWSSITEMAP`** → `/news-sitemap.xml` — sitemap **Google News** (`xmlns:news=…/sitemap-news/0.9`). Template `index.newssitemap.xml`: include **solo** gli articoli `comunicazioni` con `Date` nelle ultime **48h** (`now.AddDate 0 0 -2`), come richiesto da Google News; i `-facile` (A2) sono già esclusi via `build.list:never`. Dichiarata in `static/robots.txt` accanto alla `sitemap.xml` standard.
+- **`BUILDINFO`** — endpoint di servizio con i metadati di build.
+
 ### Articoli (comunicazioni/)
 
 - Usa sempre l'archetype: `hugo new comunicazioni/AAAA-MM-GG-titolo.md`

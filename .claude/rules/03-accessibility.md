@@ -91,6 +91,14 @@ Il sito ha una **libreria di pittogrammi standardizzati** disponibile via shortc
 
 Documentazione completa: `MANUALE-SITO.md` Parte 3.16.
 
+## Comunicazione accessibile in emergenza — CAA, multilingua, PEF offline (giugno 2026)
+
+Tre interventi per raggiungere chi, in emergenza, ha bisogni comunicativi o linguistici specifici. Dettagli tecnici in `manuale/parte-40-comunicazione-emergenza-accessibile.md`; shortcode CAA in `04a-hugo-shortcode-partial.md`.
+
+- **Tabelle di comunicazione CAA** (`/tabelle-comunicazione/`) — board di **Comunicazione Aumentativa Alternativa**: griglie di pittogrammi ARASAAC + parola che una persona con **afasia, disabilità cognitiva, non parlante italiano, bambino o anziano in stress** può **indicare** quando non riesce a parlare. Shortcode `caa-tabella`/`caa-voce`. Sono **contenuto, non decorazione**: restano visibili anche con "Nascondi immagini" del toolbar (`html.a11y-hide-images img.caa-cell-img { visibility: visible !important }`). Stampabili A4 (`break-inside: avoid`). Attribuzione ARASAAC obbligatoria (CC BY-NC-SA 4.0, ereditata dalle tabelle stampate). Supporto, mai sostituto del testo (WCAG 1.4.5). Voce di menu sotto "Accessibilità e Supporti".
+- **Facile da leggere multilingua** (`/facile-da-leggere/`) — alla pagina IT (linguaggio chiaro + pittogrammi) si affiancano le traduzioni **inglese (`/en/`), esperanto (`/eo/`), rumeno (`/ro/`), arabo (`/ar/`)**. NON sono gestite dall'i18n di Hugo (`defaultContentLanguage = "it"`, nessun blocco `[languages.*]`): sono pagine di contenuto normali nella sezione `facile-da-leggere/` con frontmatter `language: "<codice>"`, raggiunte da un selettore lingua interno `<nav class="facile-lang">` con `hreflang`/`lang` corretti e `aria-current="page"` sull'italiano. Le traduzioni hanno `tts: false` (il TTS browser legge italiano).
+- **Piano familiare offline** (`/piano-familiare/`) — pulsante **"Salva piano offline (HTML)"** accanto a "Stampa/PDF": `salvaPianoOffline()` costruisce un file `.html` **autoconsistente e solo-testo** (CSS inline, nessuna immagine/risorsa esterna, numeri 112/803 555 + checklist) e lo scarica via pattern **Blob** (`createObjectURL` → `<a download>` → `revokeObjectURL`); valori utente escapati con `esc()`. Apribile **senza connessione** (blackout, rete satura). Non usa Service Worker: "offline" = file scaricato, non caching SW. Privacy-first (i dati restano sul dispositivo).
+
 ## Strumenti di Accessibilità (toolbar utente)
 
 Il sito ha un **toolbar di accessibilità** nativo, presente su tutte le pagine come bottone rotondo blu (FAB) in basso a sinistra. Apre un dialog con preferenze di lettura:
