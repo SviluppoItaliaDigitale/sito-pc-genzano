@@ -1,6 +1,6 @@
 ---
 title: "Luglio: storicamente il mese più caldo dell'anno"
-date: 2026-07-01
+date: 2026-07-01T00:01:00+02:00
 description: "Luglio è in media il mese più caldo dell'anno nel Lazio centrale. Cosa ci aspettiamo e come prepararsi alla stagione calda piena."
 badge: "Informazione"
 priorita: "normale"
