@@ -268,6 +268,12 @@ enableGitInfo = true
   weight = 1
 
 [[menus.main]]
+  name = "La campagna social"
+  url = "/campagna-volontari/"
+  parent = "volontariato"
+  weight = 2
+
+[[menus.main]]
   name = "Chi Siamo"
   url = "/chi-siamo/"
   parent = "volontariato"
