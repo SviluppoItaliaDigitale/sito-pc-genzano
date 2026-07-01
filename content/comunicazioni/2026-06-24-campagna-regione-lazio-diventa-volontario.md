@@ -66,6 +66,7 @@ Trovi tutti i dettagli, i requisiti e i contatti nella pagina [Diventa volontari
 
 **Sul nostro sito**
 
+- [La campagna social «Non c'è Protezione Civile senza di te»](/campagna-volontari/) — spot, caroselli, storie e video della campagna.
 - [Diventa volontario](/diventa-volontario/) — requisiti, formazione e come iscriverti.
 - [Chi siamo](/chi-siamo/) — chi siamo e cosa facciamo sul territorio.
 
