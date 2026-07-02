@@ -4,6 +4,8 @@ description: "Wie die Zivilschutz-Freiwilligen von Genzano di Roma eine datensch
 layout: "single"
 language: "de"
 hreflang:
+  - lang: "it"
+    url: "/modello-accessibile/"
   - lang: "en"
     url: "/english/about-this-practice/"
   - lang: "fr"
