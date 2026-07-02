@@ -25,6 +25,8 @@ dataUltimaRevisione: "2026-06-08"
 </div>
 </div>
 
+> 🌍 **Come lavoriamo:** scopri il nostro [modello di comunicazione accessibile a tutti](/modello-accessibile/) — un approccio replicabile, presentato anche alla comunità internazionale della protezione civile.
+
 ## Riferimenti istituzionali
 
 <div class="row mb-5">

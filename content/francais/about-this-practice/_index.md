@@ -4,6 +4,8 @@ description: "Les Volontaires de Protection civile de Genzano di Roma ont conçu
 layout: "single"
 language: "fr"
 hreflang:
+  - lang: "it"
+    url: "/modello-accessibile/"
   - lang: "en"
     url: "/english/about-this-practice/"
   - lang: "fr"
