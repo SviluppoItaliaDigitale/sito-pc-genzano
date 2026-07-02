@@ -1,15 +1,15 @@
 {
-  "aggiornato": "2026-07-02T07:09",
+  "aggiornato": "2026-07-02T08:02",
   "data_lunga": "giovedì 2 luglio 2026",
-  "aggiornato_label": "giovedì 2 luglio 2026, ore 07:09",
+  "aggiornato_label": "giovedì 2 luglio 2026, ore 08:02",
   "alba": "05:38",
   "tramonto": "20:47",
   "corrente": {
-    "temp": 23.4,
+    "temp": 23.7,
     "percepita": 25.4,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 83,
+    "umidita": 77,
     "vento": 13,
     "raffiche": 50
   },
@@ -21,10 +21,10 @@
       "tmax": 26,
       "tmin": 21,
       "pioggia": 93,
-      "pioggia_mm": 10.8,
-      "raffiche": 59,
-      "uv": 7,
-      "uv_label": "alto"
+      "pioggia_mm": 15.7,
+      "raffiche": 57,
+      "uv": 8,
+      "uv_label": "molto alto"
     },
     {
       "label": "Ven 3",
