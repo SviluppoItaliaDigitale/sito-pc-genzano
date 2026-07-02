@@ -4,6 +4,8 @@ description: "How the Civil Protection Volunteers of Genzano di Roma built a pri
 layout: "single"
 language: "en"
 hreflang:
+  - lang: "it"
+    url: "/modello-accessibile/"
   - lang: "en"
     url: "/english/about-this-practice/"
   - lang: "fr"
