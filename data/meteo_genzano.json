@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-07-02T11:02",
+  "aggiornato": "2026-07-02T11:30",
   "data_lunga": "giovedì 2 luglio 2026",
-  "aggiornato_label": "giovedì 2 luglio 2026, ore 11:02",
+  "aggiornato_label": "giovedì 2 luglio 2026, ore 11:30",
   "alba": "05:38",
   "tramonto": "20:47",
   "corrente": {
     "temp": 24.9,
-    "percepita": 26.7,
+    "percepita": 26.8,
     "cielo": "Rovesci",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"30.1\" rx=\"24.5\" ry=\"11.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"17.4\" cy=\"24.8\" r=\"10.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.4\" cy=\"22.5\" r=\"9.4\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"18.0\" r=\"10.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g><line x1=\"19.0\" y1=\"46.2\" x2=\"16.7\" y2=\"55.2\" stroke=\"#3a78c2\" stroke-width=\"4.4\" stroke-linecap=\"round\"/><line x1=\"28.0\" y1=\"46.2\" x2=\"25.7\" y2=\"55.2\" stroke=\"#3a78c2\" stroke-width=\"4.4\" stroke-linecap=\"round\"/><line x1=\"37.0\" y1=\"46.2\" x2=\"34.7\" y2=\"55.2\" stroke=\"#3a78c2\" stroke-width=\"4.4\" stroke-linecap=\"round\"/></g>",
     "umidita": 76,
-    "vento": 15,
-    "raffiche": 57
+    "vento": 14,
+    "raffiche": 56
   },
   "giorni": [
     {
@@ -32,7 +32,7 @@
       "cielo": "Coperto",
       "tmax": 29,
       "tmin": 20,
-      "pioggia": 18,
+      "pioggia": 15,
       "pioggia_mm": 0.1,
       "raffiche": 43,
       "uv": 8,
@@ -56,7 +56,7 @@
       "cielo": "Sereno",
       "tmax": 30,
       "tmin": 20,
-      "pioggia": 5,
+      "pioggia": 8,
       "pioggia_mm": 0,
       "raffiche": 47,
       "uv": 8,
