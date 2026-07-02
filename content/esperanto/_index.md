@@ -118,7 +118,7 @@ Tiu ĉi paĝo donas al vi la **esencajn informojn** en Esperanto. La kompleta re
 
 <div class="en-card">
 <h2>📱 IT-alert</h2>
-<p>Italio havas nacian alarmsistemon nomatan <strong>IT-alert</strong>. En kazo de granda urĝo ĝi sendas laŭtan mesaĝon rekte al ĉiuj telefonoj en la trafita areo, eĉ sen aplikaĵo, interreto aŭ signalo de via operatoro. La mesaĝo estas en la itala kaj angla. Pli da informoj: <a href="https://www.it-alert.it/it/" target="_blank" rel="noopener noreferrer">it-alert.it</a>.</p>
+<p>Italio havas nacian alarmsistemon nomatan <strong>IT-alert</strong>. En kazo de granda urĝo ĝi sendas laŭtan mesaĝon rekte al ĉiuj telefonoj en la trafita areo — sen aplikaĵo kaj sen interreto; la telefono nur devas esti ŝaltita kaj ene de la kovrado de la poŝtelefona reto. La mesaĝo estas en la itala kaj angla. Pli da informoj: <a href="https://www.it-alert.it/it/" target="_blank" rel="noopener noreferrer">it-alert.it</a>.</p>
 </div>
 
 <div class="en-card">
