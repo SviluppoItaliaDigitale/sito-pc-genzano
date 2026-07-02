@@ -3,6 +3,12 @@ title: "Disaster Kits for vulnerable people — Civil Protection Genzano di Roma
 description: "Printable A4 kits for people with special needs in an emergency: children, older people, care homes, disability, newborns, carers, life-saving therapies, pets."
 layout: "single"
 language: "en"
+hreflang:
+  - lang: "it"
+    url: "/formazione/kit-calamita/"
+  - lang: "en"
+    url: "/english/kit-calamita/"
+hreflang_xdefault: "/formazione/kit-calamita/"
 sitemap:
   priority: 0.5
   changefreq: yearly

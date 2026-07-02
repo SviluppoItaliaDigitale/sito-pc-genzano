@@ -3,6 +3,12 @@ title: "Kit Calamità — schede stampabili per emergenza"
 description: "Kit stampabili A4 per categorie vulnerabili: bambini, anziani, RSA, disabilità, neonati, caregiver, terapie salvavita, italiano L2, senza dimora, animali."
 layout: "single"
 toc: true
+hreflang:
+  - lang: "it"
+    url: "/formazione/kit-calamita/"
+  - lang: "en"
+    url: "/english/kit-calamita/"
+hreflang_xdefault: "/formazione/kit-calamita/"
 ---
 
 In una calamità — terremoto, alluvione, incendio, evacuazione o interruzione prolungata dei servizi — alcune persone possono avere bisogni particolari e necessitare di strumenti chiari, semplici e immediati.

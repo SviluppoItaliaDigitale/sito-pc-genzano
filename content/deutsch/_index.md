@@ -138,6 +138,11 @@ Diese Seite gibt Ihnen die **wesentlichen Informationen** auf Deutsch. Die volls
 </div>
 
 <div class="en-card">
+<h2>🌍 Für Fachleute und Institutionen</h2>
+<p><a href="/deutsch/about-this-practice/"><strong>Über diese Praxis</strong></a> — wie wir eine barrierefrei konzipierte, datenschutzfreundliche Plattform für Krisenkommunikation aufgebaut haben (ein Good-Practice-Hinweis für die Fachgemeinschaft der Katastrophenvorsorge).</p>
+</div>
+
+<div class="en-card">
 <h2>📞 Kontakte</h2>
 <p><strong>Kommunale Freiwilligengruppe Zivilschutz Genzano di Roma</strong></p>
 <ul class="en-list">
