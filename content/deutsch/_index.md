@@ -118,7 +118,7 @@ Diese Seite gibt Ihnen die **wesentlichen Informationen** auf Deutsch. Die volls
 
 <div class="en-card">
 <h2>📱 IT-alert</h2>
-<p>Italien verfügt über ein nationales Warnsystem namens <strong>IT-alert</strong>. Bei großen Notfällen sendet es eine laute Nachricht direkt an alle Telefone im betroffenen Gebiet, auch ohne App, Internet oder Signal Ihres Anbieters. Die Nachricht ist auf Italienisch und Englisch. Mehr Infos: <a href="https://www.it-alert.it/it/" target="_blank" rel="noopener noreferrer">it-alert.it</a>.</p>
+<p>Italien verfügt über ein nationales Warnsystem namens <strong>IT-alert</strong>. Bei großen Notfällen sendet es eine laute Nachricht direkt an alle Telefone im betroffenen Gebiet — ohne App und ohne Internet; das Telefon muss nur eingeschaltet und im Mobilfunknetz erreichbar sein. Die Nachricht ist auf Italienisch und Englisch. Mehr Infos: <a href="https://www.it-alert.it/it/" target="_blank" rel="noopener noreferrer">it-alert.it</a>.</p>
 </div>
 
 <div class="en-card">
