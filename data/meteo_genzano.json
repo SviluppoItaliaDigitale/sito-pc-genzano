@@ -1,16 +1,16 @@
 {
-  "aggiornato": "2026-07-02T08:02",
+  "aggiornato": "2026-07-02T09:02",
   "data_lunga": "giovedì 2 luglio 2026",
-  "aggiornato_label": "giovedì 2 luglio 2026, ore 08:02",
+  "aggiornato_label": "giovedì 2 luglio 2026, ore 09:02",
   "alba": "05:38",
   "tramonto": "20:47",
   "corrente": {
-    "temp": 23.7,
-    "percepita": 25.4,
+    "temp": 24.7,
+    "percepita": 26.4,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 77,
-    "vento": 13,
+    "umidita": 72,
+    "vento": 12,
     "raffiche": 50
   },
   "giorni": [
