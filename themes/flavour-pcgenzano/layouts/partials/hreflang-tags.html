@@ -28,7 +28,22 @@
 {{- /* Sezioni che hanno sempre versione tradotta (definite a mano per affidabilità) */ -}}
 {{- $sezioniTradotte := slice "" "numeri-utili" "piano-familiare" "cosa-fare-adesso" -}}
 
-{{- if in $sezioniTradotte $slug -}}
+{{- if .Params.hreflang -}}
+  {{- /* Ramo per-pagina (frontmatter-driven): pagine che esistono solo in un
+         sottoinsieme di lingue e/o con path non standard (es. one-pager en/fr/de,
+         kit-calamita en+it sotto /formazione/). Attivo SOLO se la pagina dichiara
+         `hreflang:` nel frontmatter → nessun impatto sulle altre pagine. Ogni voce:
+         { lang: "<codice>", url: "/percorso/" }. x-default = it se presente il
+         campo `hreflang_xdefault`, altrimenti la voce "en", altrimenti nessuno. */ -}}
+  {{- $xdefault := "" -}}
+  {{- range .Params.hreflang -}}
+    {{- $u := index . "url" | absURL -}}
+    <link rel="alternate" hreflang="{{ index . "lang" }}" href="{{ $u }}">
+    {{- if eq (index . "lang") "en" -}}{{ $xdefault = $u }}{{- end -}}
+  {{- end -}}
+  {{- with .Params.hreflang_xdefault -}}{{ $xdefault = . | absURL }}{{- end -}}
+  {{- with $xdefault -}}<link rel="alternate" hreflang="x-default" href="{{ . }}">{{- end -}}
+{{- else if in $sezioniTradotte $slug -}}
   {{- range $code, $folder := $langMap -}}
     {{- $altURL := "" -}}
     {{- if eq $folder "" -}}

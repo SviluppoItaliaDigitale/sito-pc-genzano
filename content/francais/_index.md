@@ -138,6 +138,11 @@ Cette page vous donne les **informations essentielles** en français. Le site co
 </div>
 
 <div class="en-card">
+<h2>🌍 Pour les professionnels et les institutions</h2>
+<p><a href="/francais/about-this-practice/"><strong>À propos de cette pratique</strong></a> — comment nous avons construit une plateforme de communication d'urgence accessible dès la conception et respectueuse de la vie privée (note de bonne pratique pour la communauté de la réduction des risques de catastrophe).</p>
+</div>
+
+<div class="en-card">
 <h2>📞 Contacts</h2>
 <p><strong>Groupe Communal des Volontaires de la Protection Civile de Genzano di Roma</strong></p>
 <ul class="en-list">

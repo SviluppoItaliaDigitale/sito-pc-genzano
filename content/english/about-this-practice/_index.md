@@ -3,6 +3,13 @@ title: "About this practice — Accessible-by-design disaster communication"
 description: "How the Civil Protection Volunteers of Genzano di Roma built a privacy-first, accessible-by-design public information platform for disaster risk reduction."
 layout: "single"
 language: "en"
+hreflang:
+  - lang: "en"
+    url: "/english/about-this-practice/"
+  - lang: "fr"
+    url: "/francais/about-this-practice/"
+  - lang: "de"
+    url: "/deutsch/about-this-practice/"
 sitemap:
   priority: 0.6
   changefreq: yearly
