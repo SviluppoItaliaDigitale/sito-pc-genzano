@@ -45,13 +45,17 @@ while [ $# -gt 0 ]; do
 done
 BASE="${BASE%/}"
 
-# Solo pagine RESE DA HUGO (le mini-app statiche sotto static/ non hanno la
-# meta di build: il loro chrome è iniettato lato client). Set = pagine ad alto
-# traffico + quelle storicamente andate stantie negli incidenti (rule 05 § 43).
+# Solo pagine RESE DA HUGO CON baseof.html (che inietta la meta pc-build-sha).
+# Set = pagine ad alto traffico + quelle storicamente andate stantie (rule 05 § 43).
+# ESCLUSE le pagine STANDALONE che NON usano baseof.html e quindi non possono
+# avere la meta di build (segnalarle sarebbe un falso positivo):
+#   /emergenza/ → layout emergenza/single.html standalone ultra-leggero (no baseof)
+#   /lanterna/  → standalone, non usa baseof
+# Anche le mini-app statiche sotto static/ sono escluse (chrome iniettato lato client).
 PAGES="/ /allerte-meteo/ /chi-siamo/ /numeri-utili/ /contatti/ \
        /cosa-fare-adesso/ /rischi-prevenzione/ /accessibilita/ \
        /diventa-volontario/ /area-download/ /formazione/ /comunicazioni/ \
-       /piano-emergenza/ /faq/ /glossario/ /emergenza/"
+       /piano-emergenza/ /faq/ /glossario/"
 
 # Estrae il valore di content="" dalla meta pc-build-sha / pc-build-time,
 # indipendente dall'ordine degli attributi (Hugo minify può riordinarli).
