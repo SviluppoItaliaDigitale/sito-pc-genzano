@@ -1,24 +1,24 @@
 {
-  "aggiornato": "2026-07-03T01:20",
+  "aggiornato": "2026-07-03T02:02",
   "data_lunga": "venerdì 3 luglio 2026",
-  "aggiornato_label": "venerdì 3 luglio 2026, ore 01:20",
+  "aggiornato_label": "venerdì 3 luglio 2026, ore 02:02",
   "alba": "05:39",
   "tramonto": "20:47",
   "corrente": {
     "temp": 20.9,
-    "percepita": 22.9,
+    "percepita": 22.4,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 84,
+    "umidita": 79,
     "vento": 7,
-    "raffiche": 22
+    "raffiche": 23
   },
   "giorni": [
     {
       "label": "Oggi",
       "icona": "<g><g><ellipse cx=\"16.0\" cy=\"19.1\" rx=\"14.5\" ry=\"7.0\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"9.7\" cy=\"16.0\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.9\" cy=\"14.7\" r=\"5.6\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"11.9\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
       "cielo": "Coperto",
-      "tmax": 30,
+      "tmax": 31,
       "tmin": 20,
       "pioggia": 10,
       "pioggia_mm": 0,
