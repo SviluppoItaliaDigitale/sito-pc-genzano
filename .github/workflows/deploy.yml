@@ -24,7 +24,16 @@ concurrency:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # 90 min (non 30): un upload FTP INTEGRALE su Aruba — quello forzato da un
+    # bump di `state-name`, che ri-carica l'intero sito (centinaia di file +
+    # ~577 immagini) — supera i 30 minuti. Col vecchio limite il job veniva
+    # ucciso PRIMA di salvare il sync-state → il deploy successivo ripartiva da
+    # capo con un altro upload integrale → altri 30 min → timeout → loop
+    # bloccato e sito congelato (incidente 03/07/2026: 12 deploy consecutivi
+    # non completati, articolo da calendario mai andato live). Con più tempo il
+    # primo upload integrale completa UNA volta, salva lo stato, e da lì i
+    # deploy tornano incrementali (~1-2 min, ben sotto i 30 min di prima).
+    timeout-minutes: 90
     steps:
       - name: "📥 Checkout"
         uses: actions/checkout@v5
