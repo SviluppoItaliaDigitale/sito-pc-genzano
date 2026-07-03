@@ -1,6 +1,6 @@
 ---
 title: "Viaggi estivi: kit di emergenza in auto e sicurezza stradale"
-date: 2026-07-03
+date: 2026-07-03T00:01:00+02:00
 description: "Luglio è il mese degli esodi estivi. Un kit di emergenza in auto e pochi controlli preventivi riducono i rischi del viaggio."
 badge: "Prevenzione"
 priorita: "normale"
