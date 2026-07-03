@@ -121,18 +121,24 @@ jobs:
           local-dir: ./public/
           server-dir: /www.protezionecivilegenzano.it/
           dangerous-clean-slate: false
-          # Reset del sync-state per forzare un upload INTEGRALE (09/06/2026):
-          # lo stato FTP precedente era andato in drift e lasciava su Aruba
-          # pagine stantie (chi-siamo 20/4, allerte-meteo 13/5). Un nuovo
-          # state-name fa ri-caricare tutti i file, senza cancellare nulla
-          # (a differenza di dangerous-clean-slate). Da qui in poi gli upload
-          # tornano incrementali contro questo nuovo stato.
-          # Bump 2026-07-01: l'audit del 01/07 ha ritrovato drift (chi-siamo
-          # fermo al 20/04, allerte-meteo al 13/05 mentre la home era fresca).
-          # Nuovo state-name → re-upload integrale che sana il drift residuo;
-          # d'ora in poi la guardia verifica-deploy-aruba.yml intercetta il
-          # ripetersi del problema entro pochi minuti dal deploy.
-          state-name: .ftp-deploy-sync-state-2026-07-01.json
+          # DEPLOY INCREMENTALE (ripristinato 03/07/2026): il deploy carica solo
+          # i file cambiati rispetto al sync-state salvato su Aruba, in ~1-2 min.
+          #
+          # 🔴 NON bumpare `state-name` per "sanare il drift": su questo sito NON
+          # funziona. Un bump forza il re-upload INTEGRALE di ~25.000 file (di cui
+          # migliaia di micro-file dell'indice Pagefind `pagefind/fragment/*`, ~5 KB
+          # l'uno): su FTP Aruba ogni file = una connessione dati completa (~0,3 s),
+          # quindi l'integrale supera 90 minuti e non completa. Il 03/07/2026 il
+          # bump al `...-2026-07-01.json` ha innescato un loop di upload integrali
+          # mai completati → sync-state mai salvato → sito congelato per l'intera
+          # giornata (12 deploy falliti, articolo da calendario mai andato live).
+          #
+          # Torniamo al sync-state pre-bump (09/06), che rispecchia un sito già
+          # caricato per intero: gli upload ripartono incrementali contro di esso.
+          # Per il drift di singole pagine usare un fix MIRATO (toccare il file
+          # perché cambi e venga re-caricato, o cancellarlo lato server), MAI un
+          # re-upload integrale. Rilevamento drift: verifica-deploy-aruba.yml.
+          state-name: .ftp-deploy-sync-state-2026-06-09.json
           timeout: 60000
           log-level: verbose
           exclude: |
