@@ -5,8 +5,8 @@ description: "La costellazione satellitare italiana IRIDE entra in servizio nel 
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-07-03-iride-costellazione-osservazione-terra-operativa.webp"
+image_alt: "Cover dell'articolo: IRIDE operativa nel 2026: i nuovi occhi italiani sul territorio"
 scadenza: ""
 area: ""
 allegati: []
