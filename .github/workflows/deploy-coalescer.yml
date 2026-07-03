@@ -54,6 +54,16 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           HEAD_SHA="$(git rev-parse HEAD)"
+          # Guardia anti-accavallamento: se c'è GIÀ un deploy in corso o in coda,
+          # NON lanciarne un altro. Senza questa guardia i deploy di sfondo si
+          # accavallano e — soprattutto durante un upload integrale lungo — si
+          # cancellano a catena, così nessuno completa (incidente 03/07/2026).
+          # Un deploy in corso porterà comunque live lo stato più recente di main.
+          ACTIVE="$(gh run list --workflow=deploy.yml --json status -q '[.[] | select(.status=="in_progress" or .status=="queued")] | length' 2>/dev/null || echo 0)"
+          if [ "${ACTIVE:-0}" -gt 0 ]; then
+            echo "→ C'è già un deploy attivo (in corso/in coda): skip per non accavallare."
+            exit 0
+          fi
           # headSha dell'ultimo run di deploy.yml (qualsiasi stato): se coincide
           # con HEAD, un deploy per questo commit è già partito/concluso → skip.
           LAST_SHA="$(gh run list --workflow=deploy.yml --limit=1 --json headSha -q '.[0].headSha' 2>/dev/null || echo "")"
