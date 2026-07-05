@@ -1,0 +1,70 @@
+# Matrice di stato del territorio — alimenta lo shortcode {{< matrice-territorio >}}
+# (pagina /stato-del-territorio/, concetto in /conoscere/oltre-il-ciclo/).
+#
+# Ogni riga: un rischio, la fase attuale del ciclo (previsione | prevenzione |
+# gestione | superamento), la situazione in una frase, la data dell'ultima
+# verifica redazionale e la fonte interna di riferimento.
+#
+# Le righe con `dinamico:` derivano fase e situazione dai dati live al build:
+#   - "allerta": data/allerta.json → livello criticità (verde/gialla/arancione/rossa).
+#     Se ≠ verde la fase diventa "previsione" e la situazione è il titolo dell'allerta.
+#   - "incendi": data/allerta.json blocco rischio_incendi (bollettino AIB Zona 9),
+#     se presente; altrimenti valgono i campi statici della riga.
+# Le righe statiche vanno riverificate e ridatate quando lo stato cambia.
+
+aggiornamento: "2026-07-05"
+
+righe:
+  - id: "meteo-idro"
+    rischio: "Meteo-idrogeologico e temporali"
+    icona: "bi-cloud-rain-heavy"
+    dinamico: "allerta"
+    stato_verde: "Sorveglianza ordinaria: il Centro Funzionale regionale emette bollettini quotidiani; nessuna criticità prevista."
+    fonte_label: "Allerte meteo"
+    fonte_url: "/allerte-meteo/"
+
+  - id: "incendi-boschivi"
+    rischio: "Incendi boschivi (AIB)"
+    icona: "bi-fire"
+    dinamico: "incendi"
+    fase: "prevenzione"
+    stato: "Prevenzione stagionale rafforzata: campagna AIB regionale in corso, turni di avvistamento del Gruppo attivi sul territorio."
+    verificato: "2026-07-05"
+    fonte_label: "Rischio incendi boschivi"
+    fonte_url: "/rischi-prevenzione/rischio-incendio/"
+
+  - id: "sismico"
+    rischio: "Sismico"
+    icona: "bi-activity"
+    fase: "prevenzione"
+    stato: "Prevenzione permanente: il momento di un terremoto non si può prevedere; si lavora su edifici, piani di emergenza e preparazione delle persone."
+    verificato: "2026-07-05"
+    fonte_label: "Rischio sismico"
+    fonte_url: "/rischi-prevenzione/rischio-sismico/"
+
+  - id: "vulcanico"
+    rischio: "Vulcanico (Colli Albani)"
+    icona: "bi-triangle"
+    fase: "prevenzione"
+    stato: "Prevenzione permanente: il Vulcano Laziale è quiescente e monitorato in continuo dall'INGV; nessun segnale anomalo comunicato."
+    verificato: "2026-07-05"
+    fonte_label: "Il vulcanismo dei Colli Albani"
+    fonte_url: "/conoscere/rischio-vulcanico-colli-albani/"
+
+  - id: "ondate-calore"
+    rischio: "Ondate di calore"
+    icona: "bi-thermometer-sun"
+    fase: "prevenzione"
+    stato: "Prevenzione stagionale: misure estive di protezione dal caldo attive (giugno–settembre), attenzione alle persone fragili."
+    verificato: "2026-07-05"
+    fonte_label: "Ondate di calore"
+    fonte_url: "/rischi-prevenzione/ondate-di-calore/"
+
+  - id: "blackout"
+    rischio: "Blackout e interruzione servizi"
+    icona: "bi-lightning-charge"
+    fase: "prevenzione"
+    stato: "Prevenzione permanente: preparazione delle famiglie e continuità dei servizi essenziali; nessuna interruzione in corso."
+    verificato: "2026-07-05"
+    fonte_label: "Blackout"
+    fonte_url: "/rischi-prevenzione/blackout/"

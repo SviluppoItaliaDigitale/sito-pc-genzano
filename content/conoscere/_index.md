@@ -40,7 +40,10 @@ Sono le quattro fasi del ciclo del rischio. Le trovi spiegate una per una nella 
 
 ## Le altre pagine di questa sezione
 
+- **[Oltre il ciclo: le fasi, le persone, la memoria](/conoscere/oltre-il-ciclo/)** — i limiti del modello a fasi e le sue tre estensioni, fino alla [matrice dello stato del territorio](/stato-del-territorio/).
 - **[Il catalogo dei rischi](/conoscere/catalogo-dei-rischi/)** — i rischi di cui si occupa la protezione civile, naturali e di origine umana: l'indice della materia, con il rimando alle pagine operative su cosa fare.
+- **[Clima e protezione civile: la fine dell'eccezione](/conoscere/clima-e-protezione-civile/)** — perché il cambiamento climatico trasforma l'emergenza da parentesi ad adattamento permanente.
+- **[Da piramide a rete](/conoscere/da-piramide-a-rete/)** — come è cambiato il comando nelle emergenze: sussidiarietà, coordinamento, il ruolo del Sindaco.
 - **[Il Servizio Nazionale](/conoscere/servizio-nazionale/)** — chi fa parte del sistema, chi fa cosa tra Stato, Regioni e Comuni, e il ruolo del Sindaco.
 - **[Telecomunicazioni in emergenza](/conoscere/telecomunicazioni-emergenza/)** — perché le reti radio sono insostituibili quando tutto il resto si interrompe, il ruolo dei radioamatori e il sistema IT-alert.
 - **[Il vulcanismo dei Colli Albani](/conoscere/rischio-vulcanico-colli-albani/)** — il Vulcano Laziale spiegato: storia eruttiva, i laghi di Albano e Nemi come crateri, le emissioni di gas e il monitoraggio dell'INGV.
@@ -56,11 +59,16 @@ Cerca il concetto che ti interessa e vai diritto alla pagina che lo spiega. Dove
 - **Catalogo dei rischi** — [Il catalogo dei rischi](/conoscere/catalogo-dei-rischi/)
 - **Centri di competenza** — [La scienza del rischio](/conoscere/scienza-del-rischio/)
 - **Ciclo del rischio (le quattro fasi)** — [Le quattro fasi](/conoscere/le-quattro-fasi/)
+- **Ciclo del rischio: limiti ed estensioni** — [Oltre il ciclo](/conoscere/oltre-il-ciclo/)
+- **Clima e adattamento** — [Clima e protezione civile](/conoscere/clima-e-protezione-civile/)
 - **COC e modello di intervento** — [Dal COC alla DiComaC](/conoscere/le-quattro-fasi/modello-di-intervento/)
 - **Dimensione internazionale (Meccanismo UE, rescEU, Sendai)** — [La dimensione internazionale](/conoscere/dimensione-internazionale/)
+- **Governance dell'emergenza (sussidiarietà, coordinamento)** — [Da piramide a rete](/conoscere/da-piramide-a-rete/)
 - **Incendi boschivi (AIB)** — [Il rischio da incendi boschivi](/conoscere/catalogo-dei-rischi/rischio-incendio/)
 - **IT-alert** — [Telecomunicazioni in emergenza](/conoscere/telecomunicazioni-emergenza/)
 - **Maremoto (tsunami)** — [Il rischio da maremoto](/conoscere/catalogo-dei-rischi/rischio-maremoto/)
+- **Matrice dello stato del territorio** — [Lo stato del territorio](/stato-del-territorio/)
+- **Memoria del rischio (la "quinta attività")** — [Oltre il ciclo](/conoscere/oltre-il-ciclo/)
 - **Modello del rischio (Pericolosità × Vulnerabilità × Esposizione)** — [La scienza del rischio](/conoscere/scienza-del-rischio/)
 - **Neve e gelo** — [Il rischio da neve e gelo](/conoscere/catalogo-dei-rischi/rischio-neve-gelo/)
 - **Nucleare e radiologico** — [Il rischio nucleare e radiologico](/conoscere/catalogo-dei-rischi/rischio-nucleare-radiologico/)

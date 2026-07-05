@@ -60,6 +60,18 @@ Per gli eventi di rilievo nazionale, il Consiglio dei ministri delibera lo **sta
 Il superamento non è solo «rimettere com'era prima». Un principio condiviso a livello internazionale — caposaldo del **Quadro di Sendai 2015-2030** dell'ONU — è il *build back better*: usare la ricostruzione per aumentare la resilienza, così che lo stesso evento, in futuro, faccia meno danni. È il punto in cui il ciclo del rischio si chiude e ricomincia, alimentando di nuovo previsione e prevenzione.
 {{< /box >}}
 
+## 6.5 Oltre il ciclo: i limiti del modello a fasi
+
+Il ciclo delle quattro attività è il fondamento normativo e didattico della materia, ma la letteratura scientifica ne ha da tempo evidenziato i limiti descrittivi. Neal (1997) ha mostrato che le fasi, osservate empiricamente, **non sono sequenziali né mutuamente esclusive**: si sovrappongono, hanno confini sfumati e vengono vissute in momenti diversi da gruppi sociali diversi. Il Quadro di Sendai 2015-2030 ha poi spostato l'asse della disciplina dalla gestione dei disastri alla **gestione del rischio**, che esiste in permanenza anche in assenza di eventi (cfr. § 4.2).
+
+Tre precisazioni discendono da questa critica e completano il modello:
+
+1. **Un ciclo per ciascun rischio.** Un territorio non è "in una fase": è in una fase *per ogni rischio*, e i cicli girano a velocità diverse. La fotografia corretta è una matrice rischi × fasi, con data di verifica e fonte per ogni stato.
+2. **Le fasi delle persone.** La preparazione è anche una proprietà degli individui: sullo stesso territorio convivono persone in stati di preparazione diversi (il nuovo arrivato, il caregiver, lo studente addestrato). Il compito del sistema è spostare la popolazione verso stati più alti, con ingressi informativi differenziati.
+3. **La memoria come attività.** Il Codice colloca la diffusione della conoscenza e della cultura di protezione civile nella prevenzione non strutturale (art. 2, comma 5), ma non nomina la trasmissione della memoria come attività autonoma. Senza istituzionalizzazione della memoria (archivi accessibili, dati storici aperti, educazione, segni sul territorio) il ciclo non si chiude: l'esperienza del superamento non alimenta la previsione successiva.
+
+La declinazione divulgativa di questo paragrafo è nella pagina [Oltre il ciclo](/conoscere/oltre-il-ciclo/); l'applicazione pratica della matrice è la pagina [Lo stato del territorio](/stato-del-territorio/).
+
 <div class="manuale-fonti">
 
 ## Fonti
@@ -67,5 +79,6 @@ Il superamento non è solo «rimettere com'era prima». Un principio condiviso a
 1. **Codice della protezione civile**, decreto legislativo 2 gennaio 2018, n. 1, artt. 2, 7, 10, 24, 25, 41 — [Normattiva](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1).
 2. Dipartimento della Protezione Civile, *La protezione civile in Italia. Testo per i docenti scolastici*, 2020.
 3. **Quadro di Sendai per la riduzione del rischio di disastri 2015-2030** (UNDRR) per il principio del *build back better*.
+4. D. M. Neal, *Reconsidering the Phases of Disaster*, «International Journal of Mass Emergencies and Disasters», 15(2), 1997, pp. 239-264.
 
 </div>

@@ -7460,3 +7460,40 @@ html.a11y-hide-images img.caa-cell-img { visibility: visible !important; }
 .facile-lang a:hover,
 .facile-lang a:focus { background: #003366; color: #fff; outline: 3px solid #ffbe2e; outline-offset: 2px; }
 .facile-lang a[aria-current="page"] { background: #003366; color: #fff; }
+
+/* ============================================================
+   MATRICE STATO DEL TERRITORIO v1.0
+   Pill di fase per lo shortcode {{< matrice-territorio >}}
+   (pagina /stato-del-territorio/). Testo colorato su fondo
+   bianco con bordo: tinte della palette badge ufficiale,
+   tutte con contrasto WCAG AA su bianco. L'informazione di
+   fase è sempre nel testo, mai solo nel colore.
+   ============================================================ */
+.matrice-territorio caption {
+  caption-side: top;
+  text-align: left;
+  font-style: italic;
+  color: #003366;
+  padding-bottom: .5rem;
+}
+.mt-fase {
+  display: inline-block;
+  padding: .15rem .65rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: .92rem;
+  background: #fff;
+  border: 1.5px solid currentColor;
+  white-space: nowrap;
+}
+.mt-fase-prevenzione { color: #15803d; }  /* verde palette Prevenzione */
+.mt-fase-previsione  { color: #b45309; }  /* ambra scuro palette Avviso */
+.mt-fase-gestione    { color: #7f1d1d; }  /* rosso scuro palette Emergenza */
+.mt-fase-superamento { color: #4338ca; }  /* indaco palette Aggiornamento */
+table.matrice-territorio th[scope="row"] { color: #003366; }
+@media (max-width: 576px) {
+  .mt-fase { white-space: normal; }
+}
+@media print {
+  .mt-fase { border: 1px solid #000; color: #000 !important; background: #fff; }
+}
