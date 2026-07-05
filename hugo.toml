@@ -418,27 +418,16 @@ enableGitInfo = true
   weight = 8
 
 # Menu footer — Link utili
-[[menus.footer]]
-  name = "Note Legali"
-  url = "/note-legali/"
-  weight = 1
-
-[[menus.footer]]
-  name = "Privacy"
-  url = "/privacy/"
-  weight = 2
-
-[[menus.footer]]
-  name = "Accessibilità"
-  url = "/accessibilita/"
-  weight = 3
+# Note Legali / Privacy / Accessibilità NON stanno qui: vivono solo nella
+# striscia "Informazioni legali" in fondo al footer (partial footer.html +
+# site-chrome.js). Rimossi dalla colonna "Link Utili" il 2026-07-05 dopo audit
+# che segnalava i 3 link legali duplicati (colonna + striscia).
 
 # Trasparenza editoriale (E-E-A-T): come scriviamo e verifichiamo i contenuti.
-# Accanto a Trasparenza/Accessibilità nella colonna "Link Utili".
 [[menus.footer]]
   name = "Metodo editoriale"
   url = "/metodo-editoriale/"
-  weight = 3
+  weight = 1
 
 # Spostata da "Risorse" a maggio 2026: la Trasparenza è obbligo istituzionale
 # di accountability — vive coerente accanto a Note Legali / Privacy /
@@ -446,17 +435,17 @@ enableGitInfo = true
 [[menus.footer]]
   name = "Trasparenza"
   url = "/trasparenza/"
-  weight = 4
+  weight = 2
 
 [[menus.footer]]
   name = "Siti Utili"
   url = "/siti-utili/"
-  weight = 5
+  weight = 3
 
 [[menus.footer]]
   name = "Mappa del Sito"
   url = "/mappa-sito/"
-  weight = 6
+  weight = 4
 
 # Spostato da "Risorse" a maggio 2026: cruscotto tecnico di trasparenza
 # sul funzionamento delle automazioni del sito. Coerente nel footer
@@ -464,17 +453,17 @@ enableGitInfo = true
 [[menus.footer]]
   name = "Stato del Sito"
   url = "/stato-sistema/"
-  weight = 7
+  weight = 5
 
 [[menus.footer]]
   name = "Open Data"
   url = "/open-data/"
-  weight = 8
+  weight = 6
 
 [[menus.footer]]
   name = "Feed RSS"
   url = "/feed-rss/"
-  weight = 9
+  weight = 7
 
 # Menu footer — Servizi
 [[menus.servizi]]

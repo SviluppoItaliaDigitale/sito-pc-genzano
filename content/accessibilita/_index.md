@@ -71,7 +71,7 @@ Le seguenti aree del sito **non sono pienamente accessibili** per i motivi indic
 
 - **URL**: <https://www.protezionecivilegenzano.it/>
 - **Editore**: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma.
-- **Tecnologie utilizzate**: Hugo 0.161+ (generatore statico), Bootstrap Italia 2.x (design system AGID/Designers Italia), HTML5, CSS3, JavaScript ES6 (Web Speech API per TTS, IntersectionObserver per lazy-load).
+- **Tecnologie utilizzate**: Hugo 0.154 (generatore di siti statici), Bootstrap Italia 2.x (design system AGID/Designers Italia), HTML5, CSS3, JavaScript ES6 (Web Speech API per TTS, IntersectionObserver per lazy-load).
 - **Hosting**: Aruba S.p.A. (HTTPS forzato, HSTS attivo, header di sicurezza X-Content-Type-Options/X-Frame-Options/Referrer-Policy/Permissions-Policy/HSTS).
 - **Compatibilità browser**: Chrome ≥ 88, Firefox ≥ 78, Safari ≥ 14, Edge ≥ 88, browser mobili moderni. Su browser legacy il sito resta utilizzabile con degradazione progressiva.
 - **Compatibilità tecnologie assistive**: testato con **NVDA** (Windows), **VoiceOver** (macOS/iOS), **TalkBack** (Android), screen reader integrati Chrome/Firefox.
