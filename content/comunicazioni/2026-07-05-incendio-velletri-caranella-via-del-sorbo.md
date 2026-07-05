@@ -5,8 +5,8 @@ description: "Attivati dalla Sala Operativa regionale, i volontari di Genzano so
 badge: "Attività"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: ""
-image_alt: ""
+image: "/images/2026-07-05-incendio-velletri-caranella-via-del-sorbo.webp"
+image_alt: "Cover dell'articolo: Incendio di vegetazione a Velletri: il Gruppo di Genzano in supporto ai Vigili del Fuoco"
 scadenza: ""
 area: "Velletri (RM)"
 allegati: []
