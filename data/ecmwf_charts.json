@@ -1,6 +1,6 @@
 {
-  "aggiornato": "2026-07-05T18:46",
-  "corsa": "domenica 5 luglio 2026, 06 UTC",
+  "aggiornato": "2026-07-06T00:42",
+  "corsa": "domenica 5 luglio 2026, 12 UTC",
   "passo_giorni": 3,
   "fonte": "ECMWF OpenCharts",
   "licenza": "CC BY 4.0",
@@ -13,7 +13,7 @@
       "icona": "bi-hurricane",
       "file": "/images/ecmwf/medium-mslp-wind850.webp",
       "valido": "mercoledì 8 luglio 2026, 00 UTC",
-      "passo": "+66h"
+      "passo": "+60h"
     },
     {
       "slug": "medium-2mt-wind30",
@@ -22,7 +22,7 @@
       "icona": "bi-thermometer-half",
       "file": "/images/ecmwf/medium-2mt-wind30.webp",
       "valido": "mercoledì 8 luglio 2026, 00 UTC",
-      "passo": "+66h"
+      "passo": "+60h"
     },
     {
       "slug": "medium-precipitation-type",
@@ -31,7 +31,7 @@
       "icona": "bi-cloud-rain-heavy",
       "file": "/images/ecmwf/medium-precipitation-type.webp",
       "valido": "mercoledì 8 luglio 2026, 00 UTC",
-      "passo": "+66h"
+      "passo": "+60h"
     },
     {
       "slug": "medium-cape-cin",
@@ -40,7 +40,7 @@
       "icona": "bi-cloud-lightning-rain",
       "file": "/images/ecmwf/medium-cape-cin.webp",
       "valido": "mercoledì 8 luglio 2026, 00 UTC",
-      "passo": "+66h"
+      "passo": "+60h"
     }
   ]
 }
