@@ -1,0 +1,68 @@
+{{- /*
+  Shortcode matrice-territorio — la "matrice di stato del territorio":
+  una tabella accessibile rischio × fase alimentata da data/stato_territorio.yaml.
+  Le righe `dinamico: "allerta"` / `dinamico: "incendi"` leggono data/allerta.json
+  al build, così la matrice riflette lo stato reale senza doppia manutenzione.
+  Concetto: /conoscere/oltre-il-ciclo/ § "Terza estensione".
+*/ -}}
+{{- $dati := site.Data.stato_territorio -}}
+{{- $allerta := site.Data.allerta -}}
+{{- $emergenza := site.Data.emergenza -}}
+{{- $fasi := dict "previsione" "Previsione" "prevenzione" "Prevenzione" "gestione" "Gestione dell'emergenza" "superamento" "Superamento" -}}
+{{- if $emergenza.attiva }}
+<div class="alert alert-danger" role="alert">
+  <strong>Modalità emergenza attiva.</strong> È in corso un evento: la fase prevalente del territorio è la <strong>gestione dell'emergenza</strong>. Segui le indicazioni in <a href="{{ "emergenza/" | relURL }}">pagina emergenza</a> e sui canali ufficiali.
+</div>
+{{- end }}
+<div class="table-responsive">
+<table class="table matrice-territorio">
+<caption>Stato del territorio di Genzano di Roma, rischio per rischio: fase attuale del ciclo di protezione civile, situazione, data di verifica e fonte.</caption>
+<thead>
+<tr>
+<th scope="col">Rischio</th>
+<th scope="col">Fase attuale</th>
+<th scope="col">Situazione</th>
+<th scope="col">Verificato</th>
+<th scope="col">Fonte</th>
+</tr>
+</thead>
+<tbody>
+{{- range $dati.righe }}
+{{- $faseKey := .fase | default "prevenzione" -}}
+{{- $faseLabel := index $fasi $faseKey -}}
+{{- $stato := .stato -}}
+{{- $verificato := .verificato -}}
+{{- if eq .dinamico "allerta" -}}
+  {{- $liv := $allerta.livello | default "verde" -}}
+  {{- if ne $liv "verde" -}}
+    {{- $faseKey = "previsione" -}}
+    {{- $faseLabel = printf "Previsione — allerta %s" $liv -}}
+    {{- $stato = $allerta.titolo -}}
+  {{- else -}}
+    {{- $faseKey = "prevenzione" -}}
+    {{- $faseLabel = "Prevenzione" -}}
+    {{- $stato = .stato_verde -}}
+  {{- end -}}
+  {{- with $allerta.ultimo_controllo }}{{ $verificato = dateFormat "02/01/2006" . }}{{ end -}}
+{{- else if eq .dinamico "incendi" -}}
+  {{- with $allerta.rischio_incendi -}}
+    {{- $livAib := .livello | default "" -}}
+    {{- if and $livAib (ne $livAib "verde") -}}
+      {{- $faseKey = "previsione" -}}
+      {{- $faseLabel = printf "Previsione — pericolosità %s" $livAib -}}
+      {{- with .descrizione }}{{ $stato = . }}{{ end -}}
+      {{- with .data }}{{ $verificato = . }}{{ end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end }}
+<tr>
+<th scope="row"><i class="bi {{ .icona }} me-1" aria-hidden="true"></i>{{ .rischio }}</th>
+<td><span class="mt-fase mt-fase-{{ $faseKey }}">{{ $faseLabel }}</span></td>
+<td>{{ $stato }}</td>
+<td>{{ if $verificato }}{{ if in $verificato "-" }}{{ dateFormat "02/01/2006" $verificato }}{{ else }}{{ $verificato }}{{ end }}{{ end }}</td>
+<td><a href="{{ .fonte_url | strings.TrimPrefix "/" | relURL }}">{{ .fonte_label }}</a></td>
+</tr>
+{{- end }}
+</tbody>
+</table>
+</div>
