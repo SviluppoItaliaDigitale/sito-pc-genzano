@@ -93,6 +93,12 @@ enableGitInfo = true
   weight = 2
 
 [[menus.main]]
+  name = "Da dove comincio?"
+  url = "/da-dove-comincio/"
+  parent = "per-il-cittadino"
+  weight = 0
+
+[[menus.main]]
   name = "Cosa Fare Adesso"
   url = "/cosa-fare-adesso/"
   parent = "per-il-cittadino"
@@ -153,6 +159,12 @@ enableGitInfo = true
   url = "/cruscotto/"
   parent = "per-il-cittadino"
   weight = 9
+
+[[menus.main]]
+  name = "Lo stato del territorio"
+  url = "/stato-del-territorio/"
+  parent = "per-il-cittadino"
+  weight = 10
 
 # --- Dropdown: Per le scuole (7 voci didattiche) ---
 # (rinominato da "Educazione e Inclusione" a maggio 2026 — splittato per

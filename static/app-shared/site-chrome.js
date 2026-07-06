@@ -82,6 +82,7 @@
                     '<svg class="icon icon-xs"><use href="' + SITE_URL + '/vendor/bootstrap-italia/svg/sprites.svg#it-expand"></use></svg>' +
                   '</a>' +
                   '<div class="dropdown-menu" aria-labelledby="navDropdown-per-il-cittadino"><div class="link-list-wrapper"><ul class="link-list" role="menu">' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/da-dove-comincio/" role="menuitem"><span>Da dove comincio?</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/cosa-fare-adesso/" role="menuitem"><span>Cosa Fare Adesso</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/allerte-meteo/" role="menuitem"><span>Allerte Meteo</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/rischi-prevenzione/" role="menuitem"><span>Rischi e Prevenzione</span></a></li>' +
@@ -91,6 +92,7 @@
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/kit-calamita/" role="menuitem"><span>Kit pronti per situazioni vulnerabili</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/kit-organizzazioni/" role="menuitem"><span>Kit per le organizzazioni</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/cruscotto/" role="menuitem"><span>Cruscotto del territorio</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/stato-del-territorio/" role="menuitem"><span>Lo stato del territorio</span></a></li>' +
                   '</ul></div></div>' +
                 '</li>' +
                 /* Dropdown: Per le scuole (6 voci didattiche, splittato da "Educazione e Inclusione" maggio 2026) */
