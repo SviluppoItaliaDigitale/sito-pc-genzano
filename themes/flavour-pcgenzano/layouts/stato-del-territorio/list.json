@@ -1,0 +1,59 @@
+{{- /* Endpoint JSON pubblico della Matrice di stato del territorio
+       (/stato-del-territorio/index.json). Espone data/stato_territorio.yaml
+       con la stessa logica dinamica dello shortcode matrice-territorio.html:
+       le righe "allerta"/"incendi" derivano fase e situazione da data/allerta.json
+       al build. Specifica aperta v1.0: /stato-del-territorio/specifica/. */ -}}
+{{- $d := .Site.Data.stato_territorio -}}
+{{- $a := .Site.Data.allerta -}}
+{{- $e := .Site.Data.emergenza -}}
+{{- $righe := slice -}}
+{{- range $d.righe -}}
+  {{- $fase := .fase | default "prevenzione" -}}
+  {{- $stato := .stato | default "" -}}
+  {{- $verificato := .verificato | default "" -}}
+  {{- $livello := "" -}}
+  {{- if eq .dinamico "allerta" -}}
+    {{- $liv := $a.livello | default "verde" -}}
+    {{- $livello = $liv -}}
+    {{- if ne $liv "verde" -}}
+      {{- $fase = "previsione" -}}
+      {{- $stato = $a.titolo | default "" -}}
+    {{- else -}}
+      {{- $fase = "prevenzione" -}}
+      {{- $stato = .stato_verde | default "" -}}
+    {{- end -}}
+    {{- with $a.ultimo_controllo }}{{ $verificato = . }}{{ end -}}
+  {{- else if eq .dinamico "incendi" -}}
+    {{- with $a.rischio_incendi -}}
+      {{- $livAib := .livello | default "" -}}
+      {{- if and $livAib (ne $livAib "verde") -}}
+        {{- $fase = "previsione" -}}
+        {{- $livello = $livAib -}}
+        {{- with .descrizione }}{{ $stato = . }}{{ end -}}
+        {{- with .data }}{{ $verificato = . }}{{ end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $righe = $righe | append (dict
+        "id" .id
+        "rischio" .rischio
+        "fase" $fase
+        "livello_allerta" $livello
+        "situazione" $stato
+        "verificato" $verificato
+        "dinamico" (.dinamico | default "")
+        "fonte" (dict "titolo" (.fonte_label | default "") "url" (.fonte_url | strings.TrimPrefix "/" | absURL))
+      ) -}}
+{{- end -}}
+{{- dict
+      "specifica" "matrice-stato-del-territorio"
+      "versione" "1.0"
+      "ente" "Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma"
+      "comune" "Genzano di Roma"
+      "licenza" "CC BY 4.0"
+      "documentazione" (absURL "stato-del-territorio/specifica/")
+      "emergenza_attiva" (and $e $e.attiva)
+      "aggiornamento_redazionale" ($d.aggiornamento | default "")
+      "generato" now
+      "righe" $righe
+   | jsonify (dict "indent" "  ") -}}

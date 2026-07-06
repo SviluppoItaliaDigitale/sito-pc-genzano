@@ -1,6 +1,9 @@
 ---
 title: "Lo stato del territorio"
 description: "La matrice dei rischi di Genzano di Roma: per ogni rischio la fase attuale del ciclo di protezione civile, la situazione, la data di verifica e la fonte."
+outputs:
+  - HTML
+  - JSON
 toc: true
 image: ""
 date: 2026-07-05
@@ -36,6 +39,14 @@ La colonna «Verificato» dice quando quello stato è stato controllato l'ultima
 - Le altre righe sono verificate dalla redazione e **ridatate a ogni controllo**: la data di verifica è parte dell'informazione.
 
 Se noti uno stato non aggiornato, segnalacelo dai [contatti](/contatti/): la trasparenza di questa pagina è la sua ragione d'essere.
+
+## Dati aperti e specifica
+
+La matrice non è solo una pagina: è un **formato aperto**.
+
+- **[Endpoint JSON](/stato-del-territorio/index.json)** — la matrice completa in formato machine-readable, rigenerata a ogni build (licenza CC BY 4.0).
+- **[La specifica aperta (v1.0)](/stato-del-territorio/specifica/)** — schema, regole di compilazione e istruzioni per adottarla in qualsiasi altro Comune.
+- **[Il registro dei disastri che non sono successi](/registro-prevenzione/)** — l'altra metà della trasparenza: gli esiti delle allerte gestite.
 
 ## Perché pubblichiamo questa pagina
 

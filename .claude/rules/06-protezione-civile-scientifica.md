@@ -233,3 +233,7 @@ Quando produci contenuti su questi temi, ragiona come se stessi consultando:
 - **Incendi boschivi**: esperto AIB + Regione Lazio
 - **Mappe e territorio**: GIS specialist + dati comunali
 - **Emergenze sanitarie**: autorità sanitarie competenti (ASL Roma 6)
+
+## Registro della prevenzione (eventi gestiti)
+
+Il sito pubblica il **Registro dei disastri che non sono successi** (`/registro-prevenzione/`, dati in `data/registro_prevenzione.yaml`, shortcode `registro-prevenzione`). Regola operativa: **a chiusura di ogni allerta** (ritorno a verde in `data/allerta.json`) la sessione aggiunge una voce al registro con tipo/zona/bollettino di origine, le **azioni realmente documentabili** (pubblicazione dell'allerta sui canali del sito, monitoraggio dei bollettini) e l'**esito con formulazione onesta**: *"Al termine della validità non risultano danni né interventi di soccorso documentati sui canali del Gruppo"* — mai "nessun danno in assoluto", mai toni celebrativi. **Se ci sono stati danni o interventi, si registrano quelli**, con link all'articolo che li documenta. Ogni voce riporta nei commenti YAML i commit di apertura/chiusura dell'allerta come fonte di verifica.
