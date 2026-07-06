@@ -91,6 +91,7 @@ indexnow
 opendyslexic
 #
 # === Termini tecnici / inglesi d'uso ===
+caregiver
 shakemap
 bradisismo
 telesismi
@@ -128,12 +129,23 @@ autoprotezione
 fotocopiabile
 memorizzabile
 rev
+ridatate
+riverificate
 #
 # === Parole inglesi minuscole d'uso (titoli di riviste/enti restano maiuscoli, già saltati) ===
 the
 of
 and
 hub
+feed
+homepage
+live
+back
+better
+build
+#
+# === Latino (titoli di opere storiche citate) ===
+abaci
 #
 # === Abbreviazioni d'uso ===
 min

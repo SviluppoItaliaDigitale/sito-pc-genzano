@@ -23,7 +23,7 @@ Da oggi il sito ha una sezione di approfondimento in più. È dedicata a una dom
 
 ## La novità principale: lo stato del territorio, rischio per rischio
 
-Un territorio non è mai "in una fase sola". Può essere in prevenzione permanente per il rischio sismico, in previsione per un'allerta meteo e in superamento per un evento del mese scorso — tutto nello stesso momento.
+Un territorio non è mai "in una fase sola". Può essere in prevenzione permanente per il rischio sismico, in previsione per un'allerta meteo e in superamento per un evento del mese scorso. Tutto nello stesso momento.
 
 Per questo pubblichiamo **[Lo stato del territorio](/stato-del-territorio/)**: una tabella che indica, per ciascun rischio di Genzano di Roma, la fase del ciclo di protezione civile in corso. Per ogni rischio trovi la situazione in una frase, la **data dell'ultima verifica** e la **fonte**. Le righe del meteo e degli incendi boschivi si aggiornano da sole con i dati del sistema di allertamento del sito. Le altre sono verificate e datate dalla redazione.
 
