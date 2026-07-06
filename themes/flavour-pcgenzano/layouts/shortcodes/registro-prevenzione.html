@@ -1,0 +1,51 @@
+{{- /*
+  Shortcode registro-prevenzione — il "Registro dei disastri che non sono
+  successi": tabella accessibile degli eventi con allerta gestiti sul
+  territorio, alimentata da data/registro_prevenzione.yaml.
+  Voci ordinate per data decrescente. Concetto: /conoscere/oltre-il-ciclo/
+  e dossier /dossier/il-disastro-che-non-e-successo/.
+  Pattern link interni con subpath GitHub Pages come matrice-territorio.html.
+*/ -}}
+{{- $dati := site.Data.registro_prevenzione -}}
+{{- with $dati.voci }}
+<div class="table-responsive">
+<table class="table registro-prevenzione">
+<caption>Registro degli eventi con allerta gestiti sul territorio di Genzano di Roma: data, tipo di evento, azioni di preparazione documentate, esito e fonti di verifica.</caption>
+<thead>
+<tr>
+<th scope="col">Data</th>
+<th scope="col">Evento</th>
+<th scope="col">Azioni di preparazione</th>
+<th scope="col">Esito</th>
+<th scope="col">Fonti</th>
+</tr>
+</thead>
+<tbody>
+{{- range sort . "data_evento" "desc" }}
+<tr>
+<th scope="row">{{ dateFormat "02/01/2006" .data_evento }}</th>
+<td>{{ .tipo }}{{ with .zona }}<br><small>{{ . }}</small>{{ end }}</td>
+<td>
+{{- with .azioni }}
+<ul class="mb-0">
+{{- range . }}
+<li>{{ . }}</li>
+{{- end }}
+</ul>
+{{- end }}
+</td>
+<td>{{ .esito }}</td>
+<td>
+<small>{{ .fonte_allerta }}{{ with .fonte_esito }} {{ . }}{{ end }}</small>
+{{- if .articolo }}
+<br><a href="{{ .articolo | strings.TrimPrefix "/" | relURL }}">{{ .articolo_titolo | default "Articolo collegato sul nostro sito" }}</a>
+{{- end }}
+</td>
+</tr>
+{{- end }}
+</tbody>
+</table>
+</div>
+{{- else }}
+<p>Il registro non contiene ancora voci: verrà aggiornato alla chiusura della prossima allerta.</p>
+{{- end }}
