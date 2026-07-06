@@ -1,0 +1,70 @@
+# Registro della prevenzione — alimenta lo shortcode {{< registro-prevenzione >}}
+# (pagina /registro-prevenzione/, concetto in /conoscere/oltre-il-ciclo/ e nel
+# dossier /dossier/il-disastro-che-non-e-successo/).
+#
+# Ogni voce documenta UN evento con allerta gestito sul territorio di Genzano:
+#   data_evento    giornata (o prima giornata) di validità dell'allerta (AAAA-MM-GG)
+#   tipo           tipo e livello dell'allerta (es. "Allerta gialla — temporali")
+#   zona           zona di allertamento, quando pertinente
+#   fonte_allerta  bollettino di origine, con data e finestra di validità
+#   azioni         azioni di preparazione REALMENTE documentabili (niente di più)
+#   esito          esito onesto: "non risultano danni documentati sui nostri
+#                  canali", MAI "nessun danno in assoluto". Se ci sono stati
+#                  danni o interventi, si scrivono quelli.
+#   fonte_esito    come sappiamo l'esito (storico allertamento + archivio articoli)
+#   articolo       (opzionale) path interno di un articolo collegato
+#   articolo_titolo (opzionale) titolo del link all'articolo
+#
+# REGOLA: solo voci verificabili. Ogni voce riporta nei commenti i commit del
+# repository (data/allerta.json) che documentano apertura e chiusura dell'allerta.
+
+voci:
+  # Apertura: commit 448a1ea9c (pre-allerta, 01/07 14:46) + 579baf94f (verde→gialla, 01/07 22:01)
+  # Chiusura: commit fc97e5929 (gialla→verde, 02/07 22:01)
+  - data_evento: "2026-07-02"
+    tipo: "Allerta gialla — temporali"
+    zona: "Zona F — Bacini Costieri Sud (Genzano)"
+    fonte_allerta: "Bollettino di criticità DPC/Regione Lazio del 1° luglio 2026, validità 2 luglio 00:00–23:59."
+    azioni:
+      - "Pubblicazione automatica dell'allerta sui canali del sito: barra in homepage, pagina Allerte meteo, pagina di emergenza essenziale e feed CAP."
+      - "Monitoraggio automatico dei bollettini DPC/Regione Lazio fino al rientro a verde, registrato nello storico del sito."
+    esito: "Nella giornata di validità (2 luglio) non risultano danni né interventi di soccorso documentati sui canali del Gruppo. Il pomeriggio del 1° luglio, prima dell'inizio della validità, i volontari erano intervenuti in via Roma per un albero caduto su auto in sosta: nessuna persona coinvolta."
+    fonte_esito: "Storico pubblico del sistema di allertamento del sito e archivio delle comunicazioni del Gruppo nel periodo di validità."
+    articolo: "/comunicazioni/2026-07-01-via-roma-rimozione-albero-caduto-auto/"
+    articolo_titolo: "Genzano, via Roma: rimosso un albero caduto su alcune auto in sosta"
+
+  # Apertura: commit 9907721c3 (verde→gialla, 24/06 14:41)
+  # Chiusura: commit c84a89db4 (gialla→verde, 24/06 22:02)
+  - data_evento: "2026-06-24"
+    tipo: "Allerta gialla — temporali"
+    zona: "Zona F — Bacini Costieri Sud (Genzano)"
+    fonte_allerta: "Bollettino di criticità DPC/Regione Lazio del 24 giugno 2026, validità 24 giugno 14:32–23:59."
+    azioni:
+      - "Pubblicazione automatica dell'allerta sui canali del sito: barra in homepage, pagina Allerte meteo, pagina di emergenza essenziale e feed CAP."
+      - "Monitoraggio automatico dei bollettini DPC/Regione Lazio fino al rientro a verde, registrato in serata lo stesso giorno."
+    esito: "Al termine della validità non risultano danni né interventi di soccorso documentati sui canali del Gruppo."
+    fonte_esito: "Storico pubblico del sistema di allertamento del sito e archivio delle comunicazioni del Gruppo nel periodo di validità."
+
+  # Apertura: commit 27802a94c (verde→gialla, 28/05 16:07); previsione gialla anche per il 29/05
+  # Chiusura: commit f112e3f72 (gialla→verde, 29/05 22:01)
+  - data_evento: "2026-05-28"
+    tipo: "Allerta gialla — temporali"
+    zona: "Zona F — Bacini Costieri Sud (Genzano)"
+    fonte_allerta: "Bollettino di criticità DPC/Regione Lazio del 28 maggio 2026, validità 28 maggio 14:21–23:59, con previsione gialla estesa al 29 maggio."
+    azioni:
+      - "Pubblicazione automatica dell'allerta sui canali del sito: barra in homepage, pagina Allerte meteo, pagina di emergenza essenziale e feed CAP."
+      - "Monitoraggio automatico dei bollettini DPC/Regione Lazio per due giornate, fino al rientro a verde nella serata del 29 maggio."
+    esito: "Al termine della validità non risultano danni né interventi di soccorso documentati sui canali del Gruppo."
+    fonte_esito: "Storico pubblico del sistema di allertamento del sito e archivio delle comunicazioni del Gruppo nel periodo di validità."
+
+  # Apertura: commit c038257c7 (verde→gialla, 14/05 22:01)
+  # Chiusura: commit 254ff0da9 (gialla→verde, 16/05 13:40)
+  - data_evento: "2026-05-15"
+    tipo: "Allerta gialla — temporali"
+    zona: "Zona F — Bacini Costieri Sud (Genzano)"
+    fonte_allerta: "Bollettino di criticità DPC/Regione Lazio del 14 maggio 2026, validità 15 maggio 00:00–23:59."
+    azioni:
+      - "Pubblicazione automatica dell'allerta sui canali del sito: barra in homepage, pagina Allerte meteo, pagina di emergenza essenziale e feed CAP."
+      - "Monitoraggio automatico dei bollettini DPC/Regione Lazio fino al rientro a verde, registrato il 16 maggio."
+    esito: "Al termine della validità non risultano danni né interventi di soccorso documentati sui canali del Gruppo."
+    fonte_esito: "Storico pubblico del sistema di allertamento del sito e archivio delle comunicazioni del Gruppo nel periodo di validità."
