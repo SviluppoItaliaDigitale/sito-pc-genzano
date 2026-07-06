@@ -82,7 +82,7 @@ Ogni passo indietro lungo la freccia è un passo avanti di civiltà: dal contare
 {{< dossier-scena id="esposizione" image="/images/dossier/maremoto-cartello.webp" alt="Cartello bilingue italiano-inglese «Pericolo maremoto / Tsunami hazard» su Stromboli: elenca i segnali di allarme e invita ad allontanarsi subito dalla zona costiera, con i loghi della Protezione Civile" align="right" kicker="La leva dell'esposizione" title="Un cartello<br>al posto di una lapide" credito="Cartello della Protezione Civile, Stromboli. Foto: Davide Mauro · CC BY-SA 4.0, via Wikimedia Commons" >}}
 A Messina, nel 1908, il maremoto colpì chi era fuggito dai crolli **verso il mare**: nessuno aveva mai detto loro che dopo una forte scossa la costa è il posto sbagliato. Oggi a Stromboli quel sapere sta scritto su un cartello: cosa osservare, dove andare, subito e verso l'alto.
 
-È la formula in azione sulla leva **E**: la pericolosità del vulcano non cambia, ma un'informazione data **prima** sposta le persone fuori dalla traiettoria dell'onda. Un cartello, una sirena, un messaggio [IT-alert](/dossier/il-messaggio-che-salva/), un'allerta letta e rispettata: strumenti poveri solo in apparenza.
+È la formula in azione sulla leva **E**: la pericolosità del vulcano non cambia, ma un'informazione data **prima** sposta le persone fuori dalla traiettoria dell'onda. Un cartello, una sirena, un messaggio [IT-alert](/dossier/il-messaggio-che-salva/) — il sistema nazionale che avvisa i cellulari nell'area colpita —, un'allerta letta e rispettata: strumenti poveri solo in apparenza.
 
 Ognuno di essi è il candidato a un disastro che non succederà — e di cui, proprio per questo, nessuno si accorgerà.
 {{< /dossier-scena >}}
