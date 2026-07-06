@@ -17,9 +17,15 @@ permissions:
 
 concurrency:
   group: "pages"
-  # I contenuti (push merge PR) e i dispatch non-background (allerta, manuale)
-  # PREEMPTANO un deploy in corso; il deploy "background" (coalescer) cede sempre.
-  cancel-in-progress: ${{ github.event_name != 'workflow_dispatch' || github.event.inputs.priority != 'background' }}
+  # Cancella un deploy IN CORSO solo per: (a) push di CONTENUTI reali (merge PR:
+  # messaggio SENZA marker [skip-*]) e (b) dispatch urgent (allerta/manuale).
+  # I push degli auto-commit di sfondo ([skip-meteo|qr|indice|ecmwf|clima|stato|
+  # foto-wiki|pacchetti|aggiorna-video|social|...]) e i dispatch background NON
+  # cancellano: si ACCODANO. Così un deploy di contenuti arriva sempre in fondo
+  # all'upload FTP. Prima ogni auto-commit push cancellava il deploy in corso e,
+  # con push fitti, nessun deploy completava (incidente 2-3/07/2026: 7h di deploy
+  # tutti cancellati, pagine nuove a 403 per cartella vuota da upload parziale).
+  cancel-in-progress: ${{ (github.event_name == 'push' && !contains(github.event.head_commit.message, '[skip-')) || (github.event_name == 'workflow_dispatch' && github.event.inputs.priority != 'background') }}
 
 jobs:
   build-and-deploy:
