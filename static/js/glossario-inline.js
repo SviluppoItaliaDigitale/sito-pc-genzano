@@ -35,6 +35,8 @@
 
   // Indice di lookup: variante normalizzata (lowercase) → voce
   var INDEX = Object.create(null);
+  // Forma canonica della variante (case originale), per il check sigle
+  var CANONICAL = Object.create(null);
   var allVariants = [];
   GLOSSARIO.forEach(function (voce) {
     if (!voce.id || !voce.varianti || !voce.definizione) return;
@@ -43,6 +45,7 @@
       var key = v.toLowerCase();
       if (!INDEX[key]) {
         INDEX[key] = voce;
+        CANONICAL[key] = v;
         allVariants.push(v);
       }
     });
@@ -164,6 +167,12 @@
       var key = matched.toLowerCase();
       var voce = INDEX[key];
       if (!voce) continue;
+      // Le varianti tutte-maiuscole sono SIGLE: matchano solo se nel testo
+      // sono scritte esattamente maiuscole. Senza questo check la regex
+      // case-insensitive aggancia parole comuni — es. «com'è» → COM,
+      // «coi» → COI (bug segnalato il 6/7/2026 su /registro-prevenzione/).
+      var canon = CANONICAL[key];
+      if (canon && /[A-Z]/.test(canon) && canon === canon.toUpperCase() && matched !== canon) continue;
       // Skip se id già consumato (prima occorrenza only)
       if (consumed[voce.id]) continue;
       // Lazy init fragment alla prima sostituzione utile
