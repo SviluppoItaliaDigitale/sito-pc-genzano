@@ -1,7 +1,7 @@
 {
-  "livello": "verde",
-  "titolo": "NESSUNA ALLERTA",
-  "descrizione": "Non sono previsti fenomeni significativi sul nostro territorio.",
-  "ultimo_aggiornamento": "2026-07-08T00:02:04+02:00",
-  "ultimo_controllo": "2026-07-08T00:02:04+02:00"
+  "livello": "gialla",
+  "titolo": "ALLERTA GIALLA — temporali",
+  "descrizione": "Ordinaria per rischio temporali, Zona F — Bacini Costieri Sud (Genzano). Bollettino DPC/Regione Lazio del 7 luglio 2026, validità 7 luglio 14:34–23:59.",
+  "ultimo_aggiornamento": "2026-07-08T04:02:03+02:00",
+  "ultimo_controllo": "2026-07-08T04:02:03+02:00"
 }
