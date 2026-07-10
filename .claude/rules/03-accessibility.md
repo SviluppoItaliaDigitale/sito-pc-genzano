@@ -180,6 +180,18 @@ Implementata in `_default/single.html` e `_default/list.html` con la stessa cond
 
 Niente da configurare per pagina: è automatica. Per disattivarla su un caso specifico, condivide la condizione del TTS — `tts: false` la nasconde insieme al bottone.
 
+## Barra avanzamento lettura (`barra-lettura`)
+
+Le pagine single con contenuto sostanziale (stessa condizione del tempo di lettura: `tts` non disattivato + `WordCount > 30`; template `_default/single.html` e `manuale/single.html`) hanno una **barra sottile blu istituzionale (4px, `#003366`) fissa in cima al viewport** che si riempie man mano che l'utente scorre il corpo dell'articolo (pattern di lettura mobile usato anche dal portale Salute Lazio, luglio 2026). Componenti: partial `barra-lettura.html` (riceve `selector` del contenuto da misurare: `.article-body` / `.manuale-body`) + `static/js/barra-lettura.js` + CSS sezione **BARRA AVANZAMENTO LETTURA v1.0** in `custom.css`.
+
+Vincoli di accessibilità rispettati by design:
+- **Informazione ridondante, mai unico veicolo**: la stima testuale "~N min" resta la fonte primaria; la barra è solo un rinforzo visivo.
+- `role="progressbar"` con `aria-valuenow` aggiornato **a passi del 5%** (niente flood di annunci agli screen reader).
+- **Nessuna animazione autonoma**: si muove solo con lo scroll dell'utente → nessun impatto su `prefers-reduced-motion` né sul toggle "Pausa animazioni".
+- `pointer-events: none` (mai intercetta tap/click), nascosta in stampa, z-index 1060 (sopra l'header, sotto skip-link e modal).
+- Varianti per i temi contrasto del toolbar: su `a11y-contrast-invert` e `a11y-contrast-yellow-black` il riempimento diventa `#ffbe2e` (il blu scuro sparirebbe sui fondi ribaltati).
+- Solo su **single.html** (articoli e capitoli): sulle list page la barra misurerebbe il solo intro e arriverebbe al 100% con la pagina ancora da scorrere (informazione fuorviante).
+
 ## Sillabazione automatica (`hyphens: auto`)
 
 Il corpo articolo (`.article-body` su single.html, `.list-intro-content` su list.html) ha sillabazione automatica attivata via CSS `hyphens: auto` con regole italiane (lingua dichiarata in `<html lang="it">`). Beneficio cognitivo per **dislessici e parlanti italiano L2**: meno parole lunghe spezzate brutalmente a fine riga, ritmo di lettura più uniforme.

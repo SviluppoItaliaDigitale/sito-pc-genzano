@@ -124,6 +124,15 @@
           {{ partial "scarica-trascrizione-pdf.html" . }}
         </div>
       </div>
+
+      {{/* ── BARRA AVANZAMENTO LETTURA ──
+           Barra blu fissa in cima al viewport che si riempie con lo
+           scorrimento del corpo dell'articolo. Stessa condizione del box
+           strumenti (contenuto sostanziale, no pagine blacklist): dove
+           c'e' il tempo di lettura c'e' anche l'avanzamento. Solo su
+           single.html: sulle list page la barra misurerebbe il solo
+           intro e arriverebbe al 100% con la pagina ancora da scorrere. */}}
+      {{ partial "barra-lettura.html" (dict "selector" ".article-body") }}
       {{ end }}
 
       {{/* Badge "Disponibile in LIS" — appare solo se la pagina ha
