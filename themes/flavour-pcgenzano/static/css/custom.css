@@ -7497,3 +7497,41 @@ table.matrice-territorio th[scope="row"] { color: #003366; }
 @media print {
   .mt-fase { border: 1px solid #000; color: #000 !important; background: #fff; }
 }
+
+/* ============================================================
+   BARRA AVANZAMENTO LETTURA (v1.0)
+   Barra sottile blu istituzionale fissa in cima al viewport che
+   si riempie con lo scorrimento del corpo dell'articolo (partial
+   barra-lettura.html + js/barra-lettura.js). Pattern di lettura
+   mobile usato anche dal portale Salute Lazio. L'informazione e'
+   ridondante: la stima "~N min" del box strumenti resta la fonte
+   primaria (mai solo-visuale). Nessuna animazione autonoma: il
+   movimento segue solo lo scroll dell'utente, quindi nessun
+   override necessario per prefers-reduced-motion o il toggle
+   "Pausa animazioni" del toolbar.
+   ============================================================ */
+.barra-lettura {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: transparent;   /* nessuna traccia visibile a 0% */
+  z-index: 1060;             /* sopra header (1050), sotto skip-link e modal */
+  pointer-events: none;      /* mai intercettare tap/click */
+}
+.barra-lettura-fill {
+  height: 100%;
+  width: 100%;
+  background: #003366;
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+/* Varianti contrasto del toolbar a11y: sui temi a sfondo scuro il blu
+   #003366 sparirebbe — coppia colore coerente per ciascun tema. */
+html.a11y-contrast-invert .barra-lettura-fill,
+html.a11y-contrast-yellow-black .barra-lettura-fill { background: #ffbe2e; }
+html.a11y-contrast-blue-cream .barra-lettura-fill { background: #003366; }
+@media print {
+  .barra-lettura { display: none !important; }
+}

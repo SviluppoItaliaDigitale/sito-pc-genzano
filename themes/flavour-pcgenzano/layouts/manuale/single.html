@@ -39,6 +39,9 @@
           {{ partial "leggi-ad-alta-voce.html" (dict "selector" ".manuale-body") }}
         </div>
       </div>
+      {{/* Barra di avanzamento lettura: stessa condizione del box strumenti.
+           Sui capitoli lunghi del Manuale e' dove rende di piu'. */}}
+      {{ partial "barra-lettura.html" (dict "selector" ".manuale-body") }}
       {{ end }}
 
       <article class="article-body manuale-body">

@@ -1,0 +1,27 @@
+{{/* ── BARRA AVANZAMENTO LETTURA v1.0 ──
+     Indicatore visivo di avanzamento della lettura: barra sottile blu
+     istituzionale fissa in cima al viewport che si riempie man mano che
+     l'utente scorre il corpo dell'articolo (pattern usato anche dal
+     portale Salute Lazio nella lettura mobile degli articoli).
+
+     Parametri (dict):
+       "selector" — selettore CSS del contenuto da misurare
+                    (".article-body" su single.html).
+
+     Accessibilità:
+     - role="progressbar" + aria-valuenow aggiornato dal JS a passi del
+       5% (niente flood di annunci per screen reader);
+     - informazione ridondante, mai unico veicolo: la stima testuale
+       "~N min" nel box "Leggi in altri modi" resta la fonte primaria;
+     - nessuna animazione autonoma: la barra si muove solo con lo scroll
+       dell'utente, quindi nessun impatto su prefers-reduced-motion né
+       sul toggle "Pausa animazioni" del toolbar;
+     - pointer-events: none (mai intercetta tap/click);
+     - nascosta in stampa (CSS sezione BARRA AVANZAMENTO LETTURA v1.0).
+     */}}
+<div class="barra-lettura d-print-none" data-target="{{ .selector | default ".article-body" }}">
+  <div class="barra-lettura-fill" role="progressbar"
+       aria-label="Avanzamento di lettura della pagina"
+       aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+</div>
+<script src="{{ "js/barra-lettura.js" | relURL }}" defer></script>
