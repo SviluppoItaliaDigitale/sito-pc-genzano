@@ -141,13 +141,13 @@ Con l'evoluzione della normativa sul Terzo Settore, alla fine del **2023** il Gr
 <tr><th scope="col">Ruolo</th><th scope="col">Nome</th></tr>
 </thead>
 <tbody>
-<tr><td><strong><i class="bi bi-star-fill text-warning me-1" aria-hidden="true"></i> Coordinatore</strong></td><td>Dario Iacoangeli</td></tr>
-<tr><td><strong>Vice coordinatore operativo</strong></td><td>Alessandro Cesaroni</td></tr>
-<tr><td><strong>Vice coordinatore operativo</strong></td><td>Tiziano Di Miceli</td></tr>
-<tr><td>Consigliere</td><td>Fabrizio Moghetti</td></tr>
-<tr><td>Consigliere</td><td>Federico Spinetti</td></tr>
-<tr><td>Consigliere</td><td>Alessandro Pantani</td></tr>
-<tr><td>Consigliere</td><td>Stefano Silvestrini</td></tr>
+<tr><td><strong><i class="bi bi-star-fill text-warning me-1" aria-hidden="true"></i> Coordinatore</strong></td><td><span class="avatar size-sm avatar-direttivo" aria-hidden="true">DI</span>Dario Iacoangeli</td></tr>
+<tr><td><strong>Vice coordinatore operativo</strong></td><td><span class="avatar size-sm avatar-direttivo" aria-hidden="true">AC</span>Alessandro Cesaroni</td></tr>
+<tr><td><strong>Vice coordinatore operativo</strong></td><td><span class="avatar size-sm avatar-direttivo" aria-hidden="true">TD</span>Tiziano Di Miceli</td></tr>
+<tr><td>Consigliere</td><td><span class="avatar size-sm avatar-direttivo" aria-hidden="true">FM</span>Fabrizio Moghetti</td></tr>
+<tr><td>Consigliere</td><td><span class="avatar size-sm avatar-direttivo" aria-hidden="true">FS</span>Federico Spinetti</td></tr>
+<tr><td>Consigliere</td><td><span class="avatar size-sm avatar-direttivo" aria-hidden="true">AP</span>Alessandro Pantani</td></tr>
+<tr><td>Consigliere</td><td><span class="avatar size-sm avatar-direttivo" aria-hidden="true">SS</span>Stefano Silvestrini</td></tr>
 </tbody>
 </table>
 </div>

@@ -114,7 +114,7 @@ Oltre a header/navbar/footer, `site-chrome.js` inietta sulle pagine statiche anc
 
 Implementazione: costanti `SOS_HTML` + `A11Y_HTML` + funzioni `wireSos()` / `injectA11yAndSos()`. Quest'ultima è **idempotente** (salta se la pagina ha già `#sos-button` o `#a11yToolbarOpen`), inietta i markup, carica `/css/a11y-toolbar.css` e `/js/a11y-toolbar.js` (che applica le preferenze salvate su `<html>` e fa il wireup del dialog appena iniettato). Gli stili SOS sono già in `custom.css` (caricato dalle pagine statiche). Possibile lieve FOUC sui contrasti perché manca l'early-script di `baseof.html` — accettato.
 
-**Vincolo di coerenza:** il markup di `SOS_HTML` e `A11Y_HTML` in `site-chrome.js` va tenuto allineato ai partial `sos-112.html` e `accessibility-toolbar.html`. Se modifichi i partial (nuovo controllo a11y, nuovo bottone nel modal SOS), replica in `site-chrome.js`. Stesso pattern del menu (duplicazione consapevole chrome Hugo ↔ statico).
+**Vincolo di coerenza:** il markup di `SOS_HTML`, `A11Y_HTML` e `BOTTOMNAV_HTML` (dal 10/07/2026) in `site-chrome.js` va tenuto allineato ai partial `sos-112.html`, `accessibility-toolbar.html` e `bottom-nav.html`. Se modifichi i partial (nuovo controllo a11y, nuovo bottone nel modal SOS), replica in `site-chrome.js`. Stesso pattern del menu (duplicazione consapevole chrome Hugo ↔ statico).
 
 ## Indice di pagina con scrollspy (site-wide, dal 31/05/2026)
 

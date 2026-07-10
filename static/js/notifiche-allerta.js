@@ -162,6 +162,7 @@
       Notification.requestPermission().then(function (perm) {
         if (perm === "granted") {
           st.enabled = true; salva(st); avviaPolling();
+          if (window.pcNotifica) pcNotifica("Notifiche di allerta attivate", "Riceverai un avviso dal browser quando cambia il livello di allerta.");
         }
         aggiorna();
       }).catch(function () { aggiorna(); });

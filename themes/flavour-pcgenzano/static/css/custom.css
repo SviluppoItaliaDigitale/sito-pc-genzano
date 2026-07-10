@@ -7545,3 +7545,100 @@ html.a11y-contrast-blue-cream .barra-lettura-fill { background: #003366; }
 @media print {
   .barra-lettura { display: none !important; }
 }
+
+/* ============================================================
+   COMPONENTI DESIGN SYSTEM — adozione luglio 2026 (audit catalogo
+   Bootstrap Italia 2.18.1). Blocchi: FORWARD v1.0, TORNA INDIETRO
+   v1.0, AVATAR DIRETTIVO v1.0, PC-TOAST v1.0, BOTTOM NAV v1.0.
+   ============================================================ */
+
+/* ── FORWARD v1.0 — freccia di avanzamento nel hero homepage ── */
+.hero-section .forward { color: #fff; line-height: 1; margin-top: 0.5rem; position: relative; z-index: 1; }
+.hero-section .forward:hover,
+.hero-section .forward:focus { color: #ffbe2e; }
+#dopo-hero { scroll-margin-top: 1rem; }
+@media print { .hero-section .forward { display: none !important; } }
+
+/* ── TORNA INDIETRO v1.0 — link alla sezione padre (pattern BI) ── */
+.torna-indietro { border-top: 1px solid #e3e7ea; padding-top: 1rem; }
+@media print { .torna-indietro { display: none !important; } }
+
+/* ── AVATAR DIRETTIVO v1.0 — iniziali (componente Avatar BI) nella
+      tabella del Consiglio direttivo su /chi-siamo/. Decorativo
+      (aria-hidden): il nome resta il contenuto informativo. ── */
+.avatar-direttivo {
+  background: #003366;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  vertical-align: middle;
+  margin-right: 0.55rem;
+}
+@media print { .avatar-direttivo { background: #fff; color: #000; border: 1px solid #000; } }
+
+/* ── PC-TOAST v1.0 — conferme in-page (componente Notifiche BI).
+      Il .notification del bundle è display:none di default: la
+      classe .pc-toast-visibile lo mostra fisso in basso a destra.
+      Nessuna animazione (nessun impatto prefers-reduced-motion). ── */
+.notification.pc-toast-visibile {
+  display: block;
+  bottom: 1rem;
+  right: 1rem;
+  left: auto;
+  max-width: 22rem;
+  border-radius: 8px;
+  z-index: 10002;              /* sopra i modal (sos-modal 10001) */
+}
+.notification .pc-toast-chiudi {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  background: none;
+  border: 0;
+  padding: 0.35rem;
+  line-height: 1;
+  color: #445566;
+  cursor: pointer;
+}
+.notification .pc-toast-chiudi:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 2px; }
+@media (max-width: 575.98px) {
+  .notification.pc-toast-visibile { left: 1rem; max-width: none; }
+}
+@media print { .notification.pc-toast-visibile { display: none !important; } }
+
+/* ── BOTTOM NAV v1.0 — barra azioni rapide mobile (componente
+      BottomNav BI, markup in partials/bottom-nav.html + speculare in
+      site-chrome.js). Visibile SOLO <992px, stessa soglia del SOS-112.
+      body.has-bottomnav rialza i pulsanti flottanti sopra la barra. ── */
+.bottom-nav { z-index: 1055; }             /* sopra il contenuto, sotto i FAB */
+.bottom-nav ul { border-top: 1px solid #e3e7ea; }
+.bottom-nav a { min-width: 56px; padding: 4px 6px; }  /* target ≥24px (WCAG 2.5.8) */
+.bottom-nav a.active,
+.bottom-nav a.active .it-ico { color: #003366; font-weight: 700; }
+.bottom-nav a:focus-visible { outline: 3px solid #ffbe2e; outline-offset: -3px; }
+@media (min-width: 992px) {
+  .bottom-nav { display: none; }
+}
+@media (max-width: 991.98px) {
+  body.has-bottomnav { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
+  .bottom-nav ul { height: calc(64px + env(safe-area-inset-bottom, 0px)); padding-bottom: env(safe-area-inset-bottom, 0px); }
+  /* pulsanti flottanti rialzati sopra la barra */
+  body.has-bottomnav .sos-button { bottom: calc(1.2rem + 64px + env(safe-area-inset-bottom, 0px)); }
+  body.has-bottomnav .back-to-top { bottom: calc(2rem + 64px + env(safe-area-inset-bottom, 0px)); }
+  body.has-bottomnav .a11y-fab { bottom: calc(2rem + 64px + env(safe-area-inset-bottom, 0px)); }
+  body.has-bottomnav .assistente-fab { bottom: calc(5.5rem + 64px + env(safe-area-inset-bottom, 0px)); }
+}
+@media (max-width: 575.98px) {
+  body.has-bottomnav .a11y-fab { bottom: calc(1.25rem + 64px + env(safe-area-inset-bottom, 0px)); }
+  body.has-bottomnav .assistente-fab { bottom: calc(5.25rem + 64px + env(safe-area-inset-bottom, 0px)); }
+}
+/* Varianti contrasto del toolbar a11y (coppie colore coerenti) */
+html.a11y-contrast-invert .bottom-nav ul { background: #000; border-top-color: #fff; }
+html.a11y-contrast-invert .bottom-nav a { color: #fff; }
+html.a11y-contrast-yellow-black .bottom-nav ul { background: #000; border-top-color: #ffbe2e; }
+html.a11y-contrast-yellow-black .bottom-nav a { color: #ffbe2e; }
+html.a11y-contrast-blue-cream .bottom-nav ul { background: #fdf6e3; border-top-color: #003366; }
+html.a11y-contrast-blue-cream .bottom-nav a,
+html.a11y-contrast-blue-cream .bottom-nav a.active { color: #003366; }
+@media print { .bottom-nav { display: none !important; } }

@@ -100,7 +100,10 @@
   {{ with .Site.Home.OutputFormats.Get "CAP" }}<link rel="alternate" type="application/cap+xml" title="Allerta meteo Genzano (feed CAP)" href="{{ .Permalink }}">{{ end }}
   {{ partial "structured-data.html" . }}
 </head>
-<body{{ if .IsHome }} class="home-page"{{ end }}>
+{{- /* has-bottomnav: attiva gli offset dei pulsanti flottanti sopra la
+     BottomNav mobile (CSS sezione BOTTOM NAV v1.0). Esclusa la pagina
+     lite /emergenza/ (stessa guardia della barra). */ -}}
+<body class="{{ if .IsHome }}home-page {{ end }}{{ if ne .Type "emergenza" }}has-bottomnav{{ end }}">
   <a class="skip-to-content" href="#main-content">Vai al contenuto principale</a>
   {{/* Cookie banner a INIZIO body (e non in fondo): è position:fixed, quindi
        visivamente identico, ma viene dipinto nella prima ondata di rendering.
@@ -127,6 +130,10 @@
   </main>
   {{ partial "utility-bar.html" . }}
   {{ partial "footer.html" . }}
+
+  {{/* BottomNav (Bootstrap Italia) — barra azioni rapide, solo <992px.
+       Esclusa dalla pagina lite /emergenza/ (deve restare ultraleggera). */}}
+  {{ if ne .Type "emergenza" }}{{ partial "bottom-nav.html" . }}{{ end }}
   {{ partial "language-selector.html" . }}
   {{ partial "ricerca-modal.html" . }}
   {{ partial "sos-112.html" . }}
@@ -136,10 +143,15 @@
     <i class="bi bi-arrow-up" aria-hidden="true"></i>
     <span class="back-to-top-label visually-hidden" data-default="Torna in cima alla pagina" data-toc="Torna all'indice">Torna in cima alla pagina</span>
   </button>
+  {{- /* video.js: runtime del Video Player BI, caricato SOLO sulle pagine
+       che usano lo shortcode video (flag Store). Deve precedere il bundle
+       BI, che aggancia window.videojs sugli elementi [data-bs-video]. */}}
+  {{ if .Store.Get "usaVideoPlayer" }}<script src="{{ "vendor/videojs/video.min.js" | relURL }}"></script>{{ end }}
   <script src="{{ "vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js" | relURL }}"></script>
   <script src="{{ "js/ext-widgets.js" | relURL }}" defer></script>
   <script src="{{ "js/a11y-toolbar.js" | relURL }}?v={{ $vA11yJs }}" defer></script>
   <script src="{{ "js/share.js" | relURL }}" defer></script>
+  <script src="{{ "js/pc-notifiche.js" | relURL }}" defer></script>
   <script src="{{ "js/galleria-auto.js" | relURL }}" defer></script>
   {{/* Notifiche browser per l'allerta meteo (idea #2). URL endpoint + pagina
        allerte iniettati per compatibilità subpath GitHub Pages. */}}
