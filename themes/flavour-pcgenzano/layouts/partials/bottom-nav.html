@@ -1,0 +1,23 @@
+{{/* ── BOTTOMNAV (componente BottomNav Bootstrap Italia) ──
+     Barra di navigazione fissa in basso, SOLO mobile/tablet (<992px, la
+     stessa soglia del bottone SOS-112): 4 azioni critiche per il cittadino
+     in emergenza da telefono. Markup del componente BI (classi .bottom-nav,
+     .it-ico, .bottom-nav-label dal bundle vendorizzato); icone Bootstrap
+     Icons come nel resto del sito. Stato attivo = sezione corrente
+     (aria-current="page").
+
+     Inclusa da baseof.html con guardia (ne .Type "emergenza"): la pagina
+     lite /emergenza/ resta ultraleggera. Su mobile i pulsanti flottanti
+     (SOS-112, Assistente, toolbar a11y, torna-su) sono rialzati sopra la
+     barra via body.has-bottomnav (CSS sezione BOTTOM NAV v1.0).
+     Speculare in static/app-shared/site-chrome.js per le pagine statiche
+     (vincolo di coerenza chrome, rule 04b). */}}
+{{- $sec := .Section -}}
+<nav class="bottom-nav d-print-none" aria-label="Navigazione rapida di emergenza">
+  <ul>
+    <li><a href="{{ "emergenza/" | relURL }}"{{ if eq $sec "emergenza" }} class="active" aria-current="page"{{ end }}><i class="it-ico bi bi-life-preserver" aria-hidden="true"></i><span class="bottom-nav-label">Emergenza</span></a></li>
+    <li><a href="{{ "allerte-meteo/" | relURL }}"{{ if eq $sec "allerte-meteo" }} class="active" aria-current="page"{{ end }}><i class="it-ico bi bi-cloud-lightning-rain" aria-hidden="true"></i><span class="bottom-nav-label">Allerte</span></a></li>
+    <li><a href="{{ "numeri-utili/" | relURL }}"{{ if eq $sec "numeri-utili" }} class="active" aria-current="page"{{ end }}><i class="it-ico bi bi-telephone" aria-hidden="true"></i><span class="bottom-nav-label">Numeri</span></a></li>
+    <li><a href="{{ "cerca/" | relURL }}"{{ if eq $sec "cerca" }} class="active" aria-current="page"{{ end }}><i class="it-ico bi bi-search" aria-hidden="true"></i><span class="bottom-nav-label">Cerca</span></a></li>
+  </ul>
+</nav>

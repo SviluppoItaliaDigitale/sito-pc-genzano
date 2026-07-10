@@ -425,6 +425,29 @@
     if (callBtn) callBtn.addEventListener('click', function () { setTimeout(closeModal, 800); });
   }
 
+  // BottomNav (Bootstrap Italia) — speculare a partials/bottom-nav.html
+  // (vincolo di coerenza chrome Hugo <-> statico, rule 04b). Barra azioni
+  // rapide fissa in basso, visibile solo <992px via CSS (custom.css
+  // sezione BOTTOM NAV v1.0). body.has-bottomnav rialza i FAB sopra la barra.
+  var BOTTOMNAV_HTML =
+    '<nav class="bottom-nav d-print-none" aria-label="Navigazione rapida di emergenza">' +
+      '<ul>' +
+        '<li><a href="' + SITE_URL + '/emergenza/"><i class="it-ico bi bi-life-preserver" aria-hidden="true"></i><span class="bottom-nav-label">Emergenza</span></a></li>' +
+        '<li><a href="' + SITE_URL + '/allerte-meteo/"><i class="it-ico bi bi-cloud-lightning-rain" aria-hidden="true"></i><span class="bottom-nav-label">Allerte</span></a></li>' +
+        '<li><a href="' + SITE_URL + '/numeri-utili/"><i class="it-ico bi bi-telephone" aria-hidden="true"></i><span class="bottom-nav-label">Numeri</span></a></li>' +
+        '<li><a href="' + SITE_URL + '/cerca/"><i class="it-ico bi bi-search" aria-hidden="true"></i><span class="bottom-nav-label">Cerca</span></a></li>' +
+      '</ul>' +
+    '</nav>';
+
+  function injectBottomNav() {
+    // Idempotente: se la pagina ha gia' la barra, non duplico.
+    if (document.querySelector('.bottom-nav')) return;
+    var wrap = document.createElement('div');
+    wrap.innerHTML = BOTTOMNAV_HTML;
+    while (wrap.firstChild) document.body.appendChild(wrap.firstChild);
+    document.body.classList.add('has-bottomnav');
+  }
+
   function injectA11yAndSos() {
     // Idempotente: se la pagina ha già SOS o toolbar (es. include propri), non duplico.
     if (document.getElementById('sos-button') || document.getElementById('a11yToolbarOpen')) return;
@@ -527,6 +550,8 @@
 
     // SOS 112 + toolbar accessibilità anche sulle pagine statiche (audit 2026-05-22).
     injectA11yAndSos();
+    // BottomNav mobile anche sulle pagine statiche (adozione catalogo BI, luglio 2026).
+    injectBottomNav();
   }
 
   function aggiungiPulsanteEsciGioco() {

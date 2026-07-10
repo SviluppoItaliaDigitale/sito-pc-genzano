@@ -34,15 +34,10 @@ L'iniziativa nasce all'interno del Sistema Regionale di Protezione Civile. Il su
 
 ## Guarda lo spot
 
-<figure class="video-campagna">
-<video controls preload="none" playsinline width="1280" height="720"
-       poster="/video/campagna-lazio-spot-poster.webp"
-       aria-label="Spot di 15 secondi della campagna «Non c'è Protezione Civile senza di te» della Regione Lazio">
-<source src="/video/campagna-lazio-non-ce-pc-senza-di-te-15s.mp4" type="video/mp4">
-Il tuo browser non supporta la riproduzione del video. <a href="/video/campagna-lazio-non-ce-pc-senza-di-te-15s.mp4">Scarica lo spot (MP4)</a>.
-</video>
-<figcaption>Lo spot di 15 secondi della campagna «Non c'è Protezione Civile senza di te». Video: Regione Lazio.</figcaption>
-</figure>
+{{< video src="/video/campagna-lazio-non-ce-pc-senza-di-te-15s.mp4"
+         poster="/video/campagna-lazio-spot-poster.webp"
+         titolo="Spot di 15 secondi della campagna «Non c'è Protezione Civile senza di te» della Regione Lazio"
+         caption="Lo spot di 15 secondi della campagna «Non c'è Protezione Civile senza di te». Video: Regione Lazio." >}}
 
 ## Cosa significa il messaggio
 
