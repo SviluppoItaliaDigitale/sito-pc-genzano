@@ -1,0 +1,69 @@
+name: Controllo Linee Guida RCP 2025 (IRC)
+
+# Confronto settimanale tra i capitoli PDF pubblicati sulla pagina ufficiale
+# IRC (ircouncil.it/linee-guida-rcp-2025) e la tabella dei PDF su
+# /formazione/primo-soccorso/. IRC rilascia le traduzioni progressivamente:
+# quando esce un capitolo nuovo (o un PDF viene ricaricato con URL diverso)
+# questo workflow apre un'issue per l'aggiornamento editoriale della tabella.
+# Non tocca il sito, non fa deploy: solo monitoraggio (NO INVENZIONI, la
+# riparazione la fa una sessione umana/Claude). Nasce il 10/07/2026 dopo che
+# il capitolo 5 (ALS) è stato scoperto per caso.
+#
+# Scaglionato lunedì 11:31 UTC (dopo check-video-lis 11:23, slot libero).
+
+on:
+  schedule:
+    - cron: '31 11 * * 1'
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  controllo-linee-guida:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Confronto pagina IRC ↔ tabella del sito
+        id: check
+        run: |
+          set +e
+          python3 scripts/check-linee-guida-irc.py > /tmp/lg-report.md
+          CODE=$?
+          set -e
+          echo "fails=$CODE" >> "$GITHUB_OUTPUT"
+          echo "----- report -----"
+          cat /tmp/lg-report.md
+
+      - name: Apri/aggiorna issue se ci sono capitoli da allineare
+        if: steps.check.outputs.fails != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TITLE="Linee Guida RCP 2025: ${{ steps.check.outputs.fails }} aggiornamento/i dalla pagina IRC"
+          {
+            echo ""
+            echo "_Issue generata da \`check-linee-guida-irc.yml\` (lunedì 11:31 UTC). Aggiornare la tabella di \`/formazione/primo-soccorso/\` e la nota sui capitoli in corso di rilascio; poi ricontrollare le schede figlie che citano i capitoli._"
+          } >> /tmp/lg-report.md
+          # Label garantita (idempotente): senza, gh issue create fallisce.
+          gh label create "primo-soccorso" --color "D93F0B" \
+            --description "Contenuti di primo soccorso (Linee Guida IRC)" 2>/dev/null || true
+          EXISTING=$(gh issue list --label "automazione" --label "primo-soccorso" --state open --json number --jq '.[0].number // empty')
+          if [ -n "$EXISTING" ]; then
+            gh issue edit "$EXISTING" --title "$TITLE"
+            gh issue comment "$EXISTING" --body-file /tmp/lg-report.md
+          else
+            gh issue create \
+              --title "$TITLE" \
+              --body-file /tmp/lg-report.md \
+              --label "automazione" \
+              --label "primo-soccorso"
+          fi
+
+      - name: Tabella allineata
+        if: steps.check.outputs.fails == '0'
+        run: echo "✓ Tabella Linee Guida RCP 2025 allineata alla pagina IRC."
