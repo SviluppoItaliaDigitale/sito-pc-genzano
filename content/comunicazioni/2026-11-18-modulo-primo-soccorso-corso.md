@@ -51,7 +51,7 @@ Il modulo è tenuto da **istruttori certificati**:
 Gli **istruttori esterni** garantiscono:
 
 - **certificazione** riconosciuta a livello nazionale;
-- **aggiornamento** su ultime linee guida (ERC 2021);
+- **aggiornamento** sulle ultime linee guida (ERC 2025);
 - **esperienza** operativa reale;
 - **materiale didattico** standardizzato;
 - **attestato** spendibile anche fuori dal Gruppo.
