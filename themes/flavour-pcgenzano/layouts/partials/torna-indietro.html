@@ -1,0 +1,13 @@
+{{/* ── TORNA INDIETRO (pattern "Torna indietro" Bootstrap Italia) ──
+     Link deterministico alla sezione padre, in fondo alle pagine single
+     NON di /comunicazioni/ (che hanno già "Torna a tutte le comunicazioni").
+     Deterministico (parent reale, non history.back()): chi arriva da un
+     motore di ricerca non viene rispedito fuori dal sito.
+     Escluso quando il padre è la home (il logo/breadcrumb bastano). */}}
+{{ if and .IsPage .Parent (not .Parent.IsHome) (ne .Section "comunicazioni") }}
+<nav class="torna-indietro d-print-none mt-4" aria-label="Torna alla sezione superiore">
+  <a href="{{ .Parent.RelPermalink }}" class="notizia-link">
+    <i class="bi bi-arrow-left me-1" aria-hidden="true"></i> Torna a {{ .Parent.Title }}
+  </a>
+</nav>
+{{ end }}

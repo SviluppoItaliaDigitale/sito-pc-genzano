@@ -146,6 +146,19 @@ CSS sezione **TABELLE DI COMUNICAZIONE CAA v1.0** in `custom.css`: `.caa-grid` �
 
 `themes/flavour-pcgenzano/layouts/partials/barra-lettura.html` + `static/js/barra-lettura.js` + CSS sezione **BARRA AVANZAMENTO LETTURA v1.0**: barra sottile blu istituzionale (4px, `#003366`) fissa in cima al viewport che si riempie con lo scorrimento del corpo dell'articolo (pattern Salute Lazio mobile). Il partial riceve `(dict "selector" ".article-body")` — il selettore del contenuto da misurare — ed è chiamato dentro il gate del box strumenti (`$ttsEnabled` + `WordCount > 30`) in `_default/single.html` (`.article-body`) e `manuale/single.html` (`.manuale-body`). **Solo template single**, mai list (misurerebbe il solo intro). JS: scroll listener passivo + rAF, `transform: scaleX` compositor-only, `aria-valuenow` a passi del 5%. Dettagli accessibilità in `03-accessibility.md` § "Barra avanzamento lettura".
 
+## Adozione catalogo Bootstrap Italia — luglio 2026 (audit componenti)
+
+Esito dell'audit sistematico del catalogo BI 2.18.1 (richiesta utente 10/07/2026). Componenti aggiunti:
+
+- **BottomNav** — partial `bottom-nav.html`, incluso da `baseof.html` (guardia `ne .Type "emergenza"`): barra azioni rapide fissa in basso SOLO <992px (stessa soglia del SOS-112) con Emergenza / Allerte / Numeri / Cerca, stato attivo per sezione. `body.has-bottomnav` (classe impostata in baseof) rialza i pulsanti flottanti (SOS, Assistente, a11y-fab, torna-su) sopra la barra. 🔴 **Speculare in `static/app-shared/site-chrome.js`** (`BOTTOMNAV_HTML` + `injectBottomNav()`): ogni modifica alle voci va replicata (vincolo chrome, rule 04b). CSS sezione **BOTTOM NAV v1.0** (varianti contrasto a11y incluse).
+- **Video Player** (`data-bs-video` + video.js) — shortcode `video` (`src` obbligatorio, `poster`/`titolo`/`caption` opzionali) per video locali self-hosted. Il runtime `static/vendor/videojs/video.min.js` (v8, vendorizzato da npm, licenza Apache-2.0 nel folder) è caricato da baseof SOLO sulle pagine che usano lo shortcode (flag `.Page.Store "usaVideoPlayer"`), PRIMA del bundle BI che aggancia `window.videojs`. Usato dai 2 video della campagna Regione Lazio.
+- **Forward** — freccia di avanzamento nel hero homepage (solo modalità ordinaria) verso l'ancora `#dopo-hero`. CSS sezione **FORWARD v1.0**.
+- **Torna indietro** — partial `torna-indietro.html` in fondo alle single (via `_default/single.html`, `rischi-prevenzione/single.html`, `pittogrammi/single.html`): link deterministico alla sezione padre (mai `history.back()`). Auto-protettivo: niente su comunicazioni (ha già il suo link) né su pagine figlie della home. CSS **TORNA INDIETRO v1.0**.
+- **Avatar** — iniziali (componente Avatar BI, `aria-hidden`) accanto ai nomi del Consiglio direttivo in `/chi-siamo/`. CSS **AVATAR DIRETTIVO v1.0**.
+- **Notifiche (toast)** — `static/js/pc-notifiche.js` espone `window.pcNotifica(titolo, testo, tipo)` (markup `.notification` BI, `role=alert`, chiusura X/ESC/8s, nessuna animazione). Agganciato a: salvataggio piano offline (`/piano-familiare/`) e attivazione notifiche allerta (`notifiche-allerta.js`). CSS **PC-TOAST v1.0**.
+
+**Esclusi con motivo** (decisione utente + audit): widget valutazione pagina e Rating (rifiutati dall'utente); Sections (duplicherebbe il sistema di sezioni custom della homepage); Chips (duplicato delle filter-pills); Tooltip (inaffidabili su touch); form/upload/transfer/datepicker (nessun backend); avatar/dimmer/overlay/affix/thumbnav/sidebar (pattern da portale applicativo).
+
 ## Render hook tabelle (`_markup/render-table.html`)
 
 Tutte le tabelle Markdown del sito sono rese dal hook `themes/flavour-pcgenzano/layouts/_default/_markup/render-table.html`. Comportamento:

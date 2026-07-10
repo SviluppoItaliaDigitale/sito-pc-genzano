@@ -441,6 +441,7 @@ function salvaPianoOffline(){
   a.click();
   document.body.removeChild(a);
   setTimeout(function(){URL.revokeObjectURL(url);},1000);
+  if(window.pcNotifica){pcNotifica('Piano salvato sul dispositivo','File HTML scaricato: si apre anche senza connessione.');}
 }
 
 /* ----------------------------------------------------------------------
