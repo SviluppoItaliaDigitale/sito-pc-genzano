@@ -142,6 +142,10 @@ CSS sezione **TABELLE DI COMUNICAZIONE CAA v1.0** in `custom.css`: `.caa-grid` �
 - **Escluse** (pagine-strumento): `cruscotto`, `laboratorio-meteo`, `cerca`, `emergenza`, `lanterna`, `mappa-sito`, `attribuzioni-pittogrammi` (più `comunicazioni` su list.html).
 - Sostituisce il vecchio TOC in `<details>` (rimosso da single.html/list.html). Mantiene `id="indice"` per il back-to-top contestuale.
 
+## Partial `barra-lettura` — barra di avanzamento lettura (luglio 2026)
+
+`themes/flavour-pcgenzano/layouts/partials/barra-lettura.html` + `static/js/barra-lettura.js` + CSS sezione **BARRA AVANZAMENTO LETTURA v1.0**: barra sottile blu istituzionale (4px, `#003366`) fissa in cima al viewport che si riempie con lo scorrimento del corpo dell'articolo (pattern Salute Lazio mobile). Il partial riceve `(dict "selector" ".article-body")` — il selettore del contenuto da misurare — ed è chiamato dentro il gate del box strumenti (`$ttsEnabled` + `WordCount > 30`) in `_default/single.html` (`.article-body`) e `manuale/single.html` (`.manuale-body`). **Solo template single**, mai list (misurerebbe il solo intro). JS: scroll listener passivo + rAF, `transform: scaleX` compositor-only, `aria-valuenow` a passi del 5%. Dettagli accessibilità in `03-accessibility.md` § "Barra avanzamento lettura".
+
 ## Render hook tabelle (`_markup/render-table.html`)
 
 Tutte le tabelle Markdown del sito sono rese dal hook `themes/flavour-pcgenzano/layouts/_default/_markup/render-table.html`. Comportamento:
