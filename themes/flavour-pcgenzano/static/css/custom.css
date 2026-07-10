@@ -526,9 +526,16 @@ table tr:hover { background: #e8f4fd; }
 .fade-in-up.visible { opacity: 1; transform: translateY(0); }
 
 /* ── FOOTER LINK ── */
+/* L'indirizzo email della colonna contatti è una stringa lunga senza punti
+   di wrap: a viewport medi traboccava sotto la colonna "Servizi" (rilevato
+   durante la verifica del gate axe, luglio 2026). */
+.it-footer-main a[href^="mailto:"] { overflow-wrap: anywhere; }
 .footer-list { list-style: none; padding: 0; margin: 0; }
-.footer-list li { margin-bottom: 0.4rem; }
-.footer-list .list-item { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.88rem; transition: color var(--pc-transition); }
+.footer-list li { margin-bottom: 0.15rem; }
+/* display+padding: area cliccabile ≥24px di altezza (WCAG 2.5.8 target-size,
+   gate axe: link alti 16px con vicini a meno di 24px). Il margin-bottom del
+   li scende a 0.15rem per compensare il padding e mantenere la densità. */
+.footer-list .list-item { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.88rem; transition: color var(--pc-transition); display: inline-block; padding: 0.3rem 0; }
 .footer-list .list-item:hover { color: #fff; }
 
 /* ── SEARCH ── */
@@ -6618,7 +6625,10 @@ html.a11y-pause-anim .consulta-rapida .cr-card:hover { transform: none; }
 .meteo-gz-g .t small { font-weight: 400; opacity: 0.8; }
 .meteo-gz-g .p { font-size: 0.74rem; opacity: 0.9; margin-top: 0.15rem; }
 .meteo-gz-g .r { font-size: 0.72rem; opacity: 0.82; margin-top: 0.1rem; }
-.meteo-gz-fonte { font-size: 0.76rem; opacity: 0.82; margin-top: 0.9rem; line-height: 1.45; }
+/* Niente opacity di gruppo: schiariva anche i badge fonte compositi
+   (0.82 × #b45309 su bianco = #c27235 → contrasto 3.65:1, FAIL WCAG 1.4.3
+   rilevato dal gate axe). Il tono discreto lo dà già il font piccolo. */
+.meteo-gz-fonte { font-size: 0.76rem; margin-top: 0.9rem; line-height: 1.45; }
 /* !important: batte .article-body a:not(.btn){color:#003366} che renderebbe i link
    blu scuro illeggibili sul fondo blu del riquadro */
 .meteo-gz-fonte a,
