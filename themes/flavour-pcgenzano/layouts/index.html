@@ -92,7 +92,12 @@
   {{ $avvisoVisibile = true }}
   {{ end }}
 {{ end }}
-<div id="avviso-meteo-bar" class="avviso-meteo-bar avviso-meteo-bar-{{ $avvisoLiv }}" role="alert" aria-label="Avviso meteo avverso"{{ if not $avvisoVisibile }} style="display:none"{{ end }}>
+{{- /* Emessa SOLO quando c'è un avviso attivo: la versione sempre-nel-DOM
+     nascosta via display:none mostrava il segnaposto "Avviso meteo: — allerta
+     verde" a browser testuali e modalità lettura (audit esterno 11/07/2026).
+     Nessun JS richiede l'elemento (aggiornamento solo a build). */}}
+{{ if $avvisoVisibile }}
+<div id="avviso-meteo-bar" class="avviso-meteo-bar avviso-meteo-bar-{{ $avvisoLiv }}" role="alert" aria-label="Avviso meteo avverso">
   <div class="container">
     <i class="bi bi-wind me-2" aria-hidden="true"></i>
     <strong>Avviso meteo:</strong>
@@ -102,6 +107,7 @@
     {{ if $avvisoUrl }}<a id="avviso-meteo-url" href="{{ $avvisoUrl }}" target="_blank" rel="noopener noreferrer" class="ms-2 avviso-meteo-link">PDF ufficiale <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>{{ end }}
   </div>
 </div>
+{{ end }}
 {{/* ── RISCHIO INCENDI BOSCHIVI (AIB) — solo se livello-oggi ≥ MEDIO (gialla) ── */}}
 {{ $incendiVisibile := false }}
 {{ $incendiLiv := "verde" }}
@@ -131,7 +137,10 @@
     {{ end }}
   {{ end }}
 {{ end }}
-<div id="incendi-bar" class="incendi-bar incendi-bar-{{ $incendiLiv }}" data-valido="{{ with $allerta.rischio_incendi }}{{ .data }}{{ end }}" role="alert" aria-label="Rischio incendi boschivi"{{ if not $incendiVisibile }} style="display:none"{{ end }}>
+{{- /* Come per l'avviso meteo: emessa solo se attiva (il JS data-valido
+     ha la guardia if(!b) return, tollera l'assenza). */}}
+{{ if $incendiVisibile }}
+<div id="incendi-bar" class="incendi-bar incendi-bar-{{ $incendiLiv }}" data-valido="{{ with $allerta.rischio_incendi }}{{ .data }}{{ end }}" role="alert" aria-label="Rischio incendi boschivi">
   <div class="container">
     <i class="bi bi-fire me-2" aria-hidden="true"></i>
     <strong>Rischio incendi boschivi:</strong>
@@ -142,6 +151,7 @@
     <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini/rischi-incendi" target="_blank" rel="noopener noreferrer" class="ms-2 incendi-link">Bollettino AIB <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
   </div>
 </div>
+{{ end }}
 <script>
 /* Guard lato browser: nasconde la barra rischio incendi se la sua data di
    validità è già passata, anche quando l'HTML statico non è stato rigenerato

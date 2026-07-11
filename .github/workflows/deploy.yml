@@ -113,6 +113,11 @@ jobs:
         run: python3 scripts/genera-pacchetti-schede.py
 
       - name: "🏗️ Build per Aruba"
+        # TZ Europe/Rome: gli orari mostrati al cittadino (utility-bar "Sito
+        # aggiornato alle...", banner caldo stagionale) escono in ora italiana
+        # invece che in UTC del runner (audit esterno 11/07/2026).
+        env:
+          TZ: Europe/Rome
         run: hugo --minify --baseURL "https://www.protezionecivilegenzano.it/"
 
       - name: "🔎 Estendi indice cerca con pagine HTML statiche (Aruba)"
@@ -151,6 +156,8 @@ jobs:
             **/documenti/**
 
       - name: "🏗️ Build per GitHub Pages"
+        env:
+          TZ: Europe/Rome
         run: hugo --minify --baseURL "https://sviluppoitaliadigitale.github.io/sito-pc-genzano/"
 
       - name: "🔎 Estendi indice cerca con pagine HTML statiche (GitHub Pages)"
