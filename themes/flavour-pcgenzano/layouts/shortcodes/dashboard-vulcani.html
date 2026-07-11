@@ -1,3 +1,4 @@
+{{ if not (.Page.Store.Get "pcCacheJs") }}{{ .Page.Store.Set "pcCacheJs" true }}<script src="{{ "js/pc-fetch-cache.js" | relURL }}"></script>{{ end }}
 {{/* Shortcode dashboard-vulcani — monitoraggio del Distretto Vulcanico dei Colli Albani,
      la caldera quiescente su cui sorge Genzano di Roma. Niente "stato vulcanico" inventato:
      mostriamo il parametro realmente monitorato dall'INGV per le caldere quiescenti, cioè la
@@ -33,6 +34,17 @@
         if(!r.ok) throw new Error('HTTP '+r.status);
         return r.text().then(function(t){ return t ? JSON.parse(t) : {features:[]}; });
       }).then(function(j){
+        mostra(j);
+        if(window.pcCache) pcCache.salva('vulcani', j);
+      }).catch(function(){
+        if(retry<3){ setTimeout(function(){ carica(retry+1); }, 4000); return; }
+        var c = window.pcCache && pcCache.leggi('vulcani', 48);
+        if(c){ try{ mostra(c.d); }catch(e){} document.getElementById('vulc-stato').textContent=pcCache.frase(c.t); }
+        else { document.getElementById('vulc-stato').textContent='Aggiornamento in corso…'; }
+        setTimeout(function(){ carica(0); }, 60000);
+      });
+    }
+    function mostra(j){
         var f=(j.features||[]).map(function(x){var p=x.properties,g=x.geometry.coordinates;return{time:p.time,mag:p.mag,depth:g[2]};}).filter(function(e){return typeof e.mag==='number';});
         var num=f.length, maxM=0, prof=[];
         f.forEach(function(e){ if(e.mag>maxM)maxM=e.mag; if(e.depth!=null)prof.push(e.depth); });
@@ -52,10 +64,6 @@
         document.getElementById('vulc-stato').textContent = num
           ? ('Aggiornato '+oraAgg)
           : ('Nessun terremoto negli ultimi 30 giorni nel distretto: la caldera è tranquilla. Aggiornato '+oraAgg);
-      }).catch(function(){
-        if(retry<3){ setTimeout(function(){ carica(retry+1); }, 4000); }
-        else { document.getElementById('vulc-stato').textContent='Aggiornamento in corso…'; setTimeout(function(){ carica(0); }, 60000); }
-      });
     }
     // lazy: fetch solo quando la scheda Vulcani diventa visibile
     function avvia(){ carica(); setInterval(carica, 600000); }

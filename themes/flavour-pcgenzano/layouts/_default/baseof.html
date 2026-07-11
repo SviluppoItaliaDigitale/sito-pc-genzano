@@ -20,8 +20,6 @@
   <meta name="pc-build-sha" content="{{ .sha }}">
   <meta name="pc-build-time" content="{{ .time }}">
   {{- end }}
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
   {{- $prodBase := .Site.Params.productionBaseURL | default .Site.BaseURL -}}
   {{- $basePath := (urls.Parse .Site.BaseURL).Path | default "/" -}}
   {{- $pagePath := strings.TrimPrefix $basePath .RelPermalink -}}
