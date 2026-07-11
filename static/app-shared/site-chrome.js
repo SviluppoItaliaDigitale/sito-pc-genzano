@@ -627,7 +627,7 @@
   if (!document.querySelector('script[data-goatcounter]')) {
     var gc = document.createElement('script');
     gc.async = true;
-    gc.src = '//gc.zgo.at/count.js';
+    gc.src = SITE_URL + '/vendor/goatcounter/count.js';  // self-hosted (speculare a baseof.html)
     gc.setAttribute('data-goatcounter', 'https://apicuollo.goatcounter.com/count');
     (document.body || document.documentElement).appendChild(gc);
   }
