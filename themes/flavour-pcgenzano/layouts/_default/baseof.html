@@ -174,7 +174,12 @@
   {{ block "scripts" . }}{{ end }}
   {{/* Statistiche anonime senza cookie — attive solo se params.goatcounter è valorizzato */}}
   {{ with site.Params.goatcounter }}
-  <script data-goatcounter="https://{{ . }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  {{- /* count.js self-hosted (ISC, static/vendor/goatcounter/): una
+       origine di terze parti in meno al caricamento pagina; il beacon
+       di conteggio continua ad andare a *.goatcounter.com (necessario,
+       niente backend nostro). Aggiornare il file da gc.zgo.at/count.js
+       in caso di problemi. */}}
+  <script data-goatcounter="https://{{ . }}.goatcounter.com/count" async src="{{ "vendor/goatcounter/count.js" | relURL }}"></script>
   {{ end }}
 </body>
 </html>
