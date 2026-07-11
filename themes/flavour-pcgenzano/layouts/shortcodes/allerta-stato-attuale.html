@@ -46,7 +46,11 @@
          role="note" data-controllo-unix="{{ $t.Unix }}" data-soglia-sec="{{ $sogliaSec }}"
          {{ if not $staleBuild }}hidden{{ end }}>
       <i class="bi bi-exclamation-triangle me-2 mt-1" aria-hidden="true"></i>
-      <span>Questo stato <strong>non è stato aggiornato di recente</strong>: potrebbe non rispecchiare il bollettino in vigore.
+      {{- /* Frase riformulata (audit esterno 11/07/2026): la versione "non è
+           stato aggiornato di recente" contraddiceva la riga "Verificato:"
+           adiacente. Ora il banner dichiara lo stesso fatto, con lo stesso
+           timestamp; il JS aggiunge le ore trascorse quando lo rivela. */}}
+      <span>L'ultima verifica automatica della fonte risale <strong>al {{ printf "%02d/%02d alle %02d:%02d" $t.Day (int $t.Month) $t.Hour $t.Minute }}<span class="allerta-stantia-ore"></span></strong>: lo stato mostrato potrebbe non rispecchiare il bollettino in vigore.
       Controlla la situazione attuale sul <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">bollettino della Regione Lazio</a>.</span>
     </div>
     <p class="small text-muted mb-2">
@@ -67,7 +71,12 @@
     var unix = parseInt(el.getAttribute('data-controllo-unix'), 10);
     var soglia = parseInt(el.getAttribute('data-soglia-sec'), 10) || 43200;
     if (!unix) return;
-    if ((Date.now() / 1000) - unix >= soglia) { el.hidden = false; }
+    if ((Date.now() / 1000) - unix >= soglia) {
+      var ore = Math.round(((Date.now() / 1000) - unix) / 3600);
+      var sp = el.querySelector('.allerta-stantia-ore');
+      if (sp && ore >= 1) sp.textContent = ' (circa ' + ore + (ore === 1 ? ' ora' : ' ore') + ' fa)';
+      el.hidden = false;
+    }
   });
 })();
 </script>
