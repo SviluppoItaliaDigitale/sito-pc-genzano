@@ -2,7 +2,7 @@
 title: "Note Legali"
 description: "Informazioni legali sul sito web della Protezione Civile di Genzano di Roma."
 layout: "single"
-dataUltimaRevisione: "2026-06-02"
+dataUltimaRevisione: "2026-07-11"
 ---
 
 ## Titolarità del sito
@@ -42,6 +42,16 @@ Le informazioni pubblicate sul sito hanno **finalità divulgativa, formativa e d
 - **In caso di pericolo immediato o emergenza in corso, chiama sempre il [112](tel:112) (Numero Unico Emergenze).**
 - **Per allerte meteo, ordinanze comunali e decisioni operative fanno fede esclusivamente le comunicazioni delle autorità competenti**: [Centro Funzionale Regionale del Lazio](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti), [Dipartimento Nazionale Protezione Civile](https://www.protezionecivile.gov.it/), Comune di Genzano di Roma, Prefettura.
 - Il Gruppo non risponde di eventuali errori, omissioni, ritardi di aggiornamento o disservizi tecnici del sito, né di danni derivanti dall'uso autonomo delle informazioni in assenza di verifica con le fonti ufficiali sopra indicate.
+
+## Segnalazione di vulnerabilità {#segnalazione-di-vulnerabilita}
+
+Se individui una **vulnerabilità di sicurezza** del sito (o dei suoi meccanismi automatici), ti chiediamo di segnalarcela in modo responsabile:
+
+- scrivi a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it) descrivendo il problema, i passi per riprodurlo e l'eventuale impatto;
+- **non divulgare pubblicamente** la vulnerabilità prima che sia stata corretta;
+- non accedere, modificare o cancellare dati che non ti appartengono e non degradare il servizio (niente attacchi di carico).
+
+Ci impegniamo a **confermare la ricezione entro 7 giorni** e a tenerti aggiornato fino alla correzione. Nei confronti di chi ricerca e segnala in **buona fede**, nel rispetto dei punti sopra, il Gruppo non intraprende azioni legali. Le coordinate di contatto in formato standard ([RFC 9116](https://www.rfc-editor.org/rfc/rfc9116)) sono pubblicate in [`/.well-known/security.txt`](/.well-known/security.txt).
 
 ## Link esterni
 

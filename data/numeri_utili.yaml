@@ -7,8 +7,8 @@ emergenza:
   principale: true
 - numero: 803 555
   nome: Sala Operativa Protezione Civile Lazio
-  descrizione: Numero verde per segnalazioni non urgenti e informazioni su emergenze
-    regionali
+  descrizione: Numero verde regionale per segnalazioni non urgenti. Per le emergenze
+    chiama sempre il 112
   icona: bi-shield-fill
   principale: true
 utili: []

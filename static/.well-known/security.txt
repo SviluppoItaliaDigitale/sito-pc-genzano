@@ -1,0 +1,8 @@
+# Politica di segnalazione delle vulnerabilità — RFC 9116
+# Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma
+# Rinnovare il campo Expires entro luglio 2027 (promemoria: audit-sito).
+Contact: mailto:segreteria@protezionecivilegenzano.it
+Expires: 2027-07-01T00:00:00.000Z
+Preferred-Languages: it, en
+Canonical: https://www.protezionecivilegenzano.it/.well-known/security.txt
+Policy: https://www.protezionecivilegenzano.it/note-legali/#segnalazione-di-vulnerabilita
