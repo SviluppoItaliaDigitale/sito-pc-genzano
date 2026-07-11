@@ -1,3 +1,4 @@
+{{ if not (.Page.Store.Get "pcCacheJs") }}{{ .Page.Store.Set "pcCacheJs" true }}<script src="{{ "js/pc-fetch-cache.js" | relURL }}"></script>{{ end }}
 {{/* Shortcode dashboard-mare — stato del mare / mareggiate sulla costa laziale.
      Fonte: Open-Meteo Marine API (CORS aperto) -> fetch dal browser, niente terzi.
      Punto di riferimento: largo di Anzio-Nettuno (la costa più vicina a Genzano,
@@ -19,8 +20,7 @@
     function cardinale(d){ if(d==null)return'n.d.'; var v=['N','NE','E','SE','S','SO','O','NO']; return v[Math.round(d/45)%8]; }
     function scala(h){ // scala Douglas semplificata
       if(h==null)return'n.d.'; if(h<0.1)return'Calmo'; if(h<0.5)return'Quasi calmo'; if(h<1.25)return'Poco mosso'; if(h<2.5)return'Mosso'; if(h<4)return'Molto mosso'; if(h<6)return'Agitato'; return'Molto agitato'; }
-    function carica(){
-      fetch(API).then(function(r){return r.json();}).then(function(j){
+    function mostra(j){
         var c=j.current||{};
         document.getElementById('mare-h').textContent=(c.wave_height==null?'n.d.':c.wave_height.toFixed(1));
         document.getElementById('mare-stato').textContent=scala(c.wave_height);
@@ -28,7 +28,17 @@
         document.getElementById('mare-dir').textContent=cardinale(c.wave_direction);
         var t=c.time?new Date(c.time):new Date();
         document.getElementById('mare-stato-agg').textContent='Aggiornato alle '+('0'+t.getHours()).slice(-2)+':'+('0'+t.getMinutes()).slice(-2);
-      }).catch(function(){ document.getElementById('mare-stato-agg').textContent='Aggiornamento in corso…'; setTimeout(carica, 60000); });
+    }
+    function carica(){
+      fetch(API).then(function(r){return r.json();}).then(function(j){
+        mostra(j);
+        if(window.pcCache) pcCache.salva('mare', j);
+      }).catch(function(){
+        var c = window.pcCache && pcCache.leggi('mare', 48);
+        if(c){ try{ mostra(c.d); }catch(e){} document.getElementById('mare-stato-agg').textContent=pcCache.frase(c.t); }
+        else { document.getElementById('mare-stato-agg').textContent='Aggiornamento in corso…'; }
+        setTimeout(carica, 60000);
+      });
     }
     // lazy: fetch solo quando la scheda Mare diventa visibile (nel cruscotto parte nascosta)
     function avvia(){ carica(); setInterval(carica, 1800000); }

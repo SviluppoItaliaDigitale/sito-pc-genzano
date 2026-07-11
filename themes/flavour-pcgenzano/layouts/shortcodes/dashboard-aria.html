@@ -1,3 +1,4 @@
+{{ if not (.Page.Store.Get "pcCacheJs") }}{{ .Page.Store.Set "pcCacheJs" true }}<script src="{{ "js/pc-fetch-cache.js" | relURL }}"></script>{{ end }}
 {{/* Shortcode dashboard-aria — qualità dell'aria e pollini a Genzano di Roma.
      Fonte: Open-Meteo Air Quality API (dati CAMS, licenza CC-BY, CORS aperto) -> fetch
      diretto dal browser, niente widget di terzi. Indicatori, nessuna mappa.
@@ -84,8 +85,7 @@
       return['#7f1d1d','Pessima'];
     }
     function set(id,v,suf){ var e=document.getElementById(id); if(e) e.textContent=(v==null?'n.d.':Math.round(v)+(suf||'')); }
-    function carica(){
-      fetch(API).then(function(r){return r.json();}).then(function(j){
+    function mostra(j){
         var c=j.current||{};
         var info=aqiInfo(c.european_aqi);
         var hero=document.getElementById('aria-hero');
@@ -97,7 +97,18 @@
         set('pol-grass',c.grass_pollen); set('pol-olive',c.olive_pollen); set('pol-ragweed',c.ragweed_pollen); set('pol-birch',c.birch_pollen);
         var t=c.time?new Date(c.time):new Date();
         document.getElementById('aria-stato').textContent='Aggiornato alle '+('0'+t.getHours()).slice(-2)+':'+('0'+t.getMinutes()).slice(-2);
-      }).catch(function(){ document.getElementById('aria-stato').textContent='Aggiornamento in corso…'; setTimeout(carica, 60000); });
+    }
+    function carica(){
+      fetch(API).then(function(r){return r.json();}).then(function(j){
+        mostra(j);
+        if(window.pcCache) pcCache.salva('aria', j);
+      }).catch(function(){
+        // fonte giù: mostra l'ultimo dato valido (max 48h) con etichetta onesta
+        var c = window.pcCache && pcCache.leggi('aria', 48);
+        if(c){ try{ mostra(c.d); }catch(e){} document.getElementById('aria-stato').textContent=pcCache.frase(c.t); }
+        else { document.getElementById('aria-stato').textContent='Aggiornamento in corso…'; }
+        setTimeout(carica, 60000);
+      });
     }
     // lazy: nel cruscotto la scheda parte nascosta -> niente fetch al load, solo quando si apre
     function avvia(){ carica(); setInterval(carica, 1800000); } // ogni 30 minuti

@@ -1,3 +1,4 @@
+{{ if not (.Page.Store.Get "pcCacheJs") }}{{ .Page.Store.Set "pcCacheJs" true }}<script src="{{ "js/pc-fetch-cache.js" | relURL }}"></script>{{ end }}
 {{/* Shortcode dashboard-terremoti — cruscotto sismico nativo (dati ufficiali INGV).
      Fonte: INGV FDSN event web service (https://webservices.ingv.it/fdsnws/event/1/query),
      GeoJSON, CORS aperto (Access-Control-Allow-Origin: *) -> fetch diretto dal browser,
@@ -282,10 +283,15 @@
         eventi=(j.features||[]).map(function(f){var p=f.properties||{},g=(f.geometry&&f.geometry.coordinates)||null;if(!g)return null;return {time:p.time,mag:p.mag,place:p.place||'',depth:Math.round(g[2]),lat:g[1],lon:g[0],id:p.eventId};}).filter(function(e){return e && typeof e.mag==='number' && isItaliano(e);});
         render();
         stato.textContent=(eventi.length?'Aggiornato':'Nessuna scossa · aggiornato')+' alle '+pad(new Date().getHours())+':'+pad(new Date().getMinutes());
+        if(window.pcCache) pcCache.salva('sisma:'+zona+':'+win+':'+minmag, eventi);
       }).catch(function(){
         // mai mostrare un messaggio allarmante: riprova in silenzio, poi con cadenza più lunga
-        if(retry<3){ setTimeout(function(){ carica(retry+1); }, 4000); }
-        else { stato.textContent='Aggiornamento in corso…'; setTimeout(function(){ carica(0); }, 60000); }
+        if(retry<3){ setTimeout(function(){ carica(retry+1); }, 4000); return; }
+        // INGV giù: ultimo elenco valido (max 48h) con etichetta onesta, poi continua a riprovare
+        var c = window.pcCache && pcCache.leggi('sisma:'+zona+':'+win+':'+minmag, 48);
+        if(c){ try{ eventi=c.d; render(); }catch(e){} stato.textContent=pcCache.frase(c.t); }
+        else { stato.textContent='Aggiornamento in corso…'; }
+        setTimeout(function(){ carica(0); }, 60000);
       });
     }
 

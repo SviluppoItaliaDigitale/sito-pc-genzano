@@ -1,3 +1,4 @@
+{{ if not (.Page.Store.Get "pcCacheJs") }}{{ .Page.Store.Set "pcCacheJs" true }}<script src="{{ "js/pc-fetch-cache.js" | relURL }}"></script>{{ end }}
 {{/* Shortcode dashboard-italiameteo-osservazioni — osservazioni in tempo reale
      delle stazioni al suolo ItaliaMeteo, dall'API pubblica MeteoHub
      /api/observations (solo stazioni con licenza CCBY_COMPLIANT, CORS abilitato).
@@ -120,6 +121,15 @@
       stato.textContent = 'Caricamento ' + cfg.label.toLowerCase() + '…';
       renderLegenda(cfg);
       fetch(apiUrl(cfg), { mode:'cors' }).then(function(r){ return r.json(); }).then(function(j){
+        mostra(j, cfg);
+        if(window.pcCache) pcCache.salva('dimo-'+current, j);
+      }).catch(function(){
+        var c = window.pcCache && pcCache.leggi('dimo-'+current, 48);
+        if(c){ try{ mostra(c.d, cfg); }catch(e){} stato.textContent = pcCache.frase(c.t); return; }
+        stato.textContent = 'Dati non disponibili in questo momento. Riprova tra poco.';
+      });
+    }
+    function mostra(j, cfg){
         puntiLayer.clearLayers();
         var data = (j && j.data) || [], n = 0, lastRef = '';
         for(var i=0;i<data.length;i++){
@@ -138,9 +148,6 @@
         var ora = lastRef ? (' · ultimo dato ore '+lastRef.slice(11,16)) : '';
         stato.textContent = n + ' stazioni' + ora;
         loaded = true;
-      }).catch(function(){
-        stato.textContent = 'Dati non disponibili in questo momento. Riprova tra poco.';
-      });
     }
 
     document.querySelectorAll('.dimo-filter[data-var]').forEach(function(btn){

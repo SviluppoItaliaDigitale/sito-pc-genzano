@@ -1,3 +1,4 @@
+{{ if not (.Page.Store.Get "pcCacheJs") }}{{ .Page.Store.Set "pcCacheJs" true }}<script src="{{ "js/pc-fetch-cache.js" | relURL }}"></script>{{ end }}
 {{/* Shortcode dashboard-ems — attivazioni Copernicus EMS Rapid Mapping in Europa.
      Fonte: API pubblica JSON rapidmapping.emergency.copernicus.eu (CORS aperto, niente
      API key). Mostra le ultime mappature di emergenza attivate dalle autorità nazionali
@@ -102,7 +103,10 @@
       fetch(API).then(function(r){return r.json();}).then(function(j){
         ATTIV=(j&&j.results)||[];
         rendi();
+        if(window.pcCache) pcCache.salva('ems', ATTIV);
       }).catch(function(){
+        var c = window.pcCache && pcCache.leggi('ems', 72);
+        if(c){ try{ ATTIV=c.d; rendi(); }catch(e){} stato.textContent=pcCache.frase(c.t); return; }
         lista.innerHTML='<div class="alert alert-warning" role="note">Caricamento attivazioni in corso… Se l\'errore persiste, consulta il <a href="https://rapidmapping.emergency.copernicus.eu/" target="_blank" rel="noopener noreferrer">portale EMS</a>.</div>';
         stato.textContent='Errore caricamento';
       });
