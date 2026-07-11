@@ -302,7 +302,7 @@ video:
     durata: ""
     note: "Videolezione divulgativa con interprete LIS in sovrimpressione."
 
-  # ─── RISCHIO INCENDI BOSCHIVI — 4 video ─────────────────────────────
+  # ─── RISCHIO INCENDI BOSCHIVI — 6 video ─────────────────────────────
   inr-incendi-cosa-sapere:
     titolo: "Io non rischio Incendi boschivi — Cosa sapere e cosa fare fin da subito"
     famiglia: "rischio-incendio"
@@ -331,6 +331,20 @@ video:
     youtube_url: "https://youtu.be/p0XiSkPbK0Y"
     durata: ""
     note: "Videolezione divulgativa con interprete LIS in sovrimpressione."
+
+  aap-campagna-aib-estiva:
+    titolo: "Glossario in LIS — Campagna antincendio boschivo estiva"
+    famiglia: "rischio-incendio"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/GVKQznWv4eE"
+    durata: "1 minuto e 37 secondi"
+
+  aap-catasto-aree-fuoco:
+    titolo: "Glossario in LIS — Catasto delle aree percorse dal fuoco"
+    famiglia: "rischio-incendio"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/L2ERjNeHlVo"
+    durata: "2 minuti e 6 secondi"
 
   # ─── MAREMOTO — 4 video ─────────────────────────────────────────────
   inr-maremoto-cosa-sapere:
@@ -391,7 +405,7 @@ video:
     youtube_url: "https://youtu.be/4WZ2LXGvHDU"
     durata: ""
 
-  # ─── GESTIONE EMERGENZA / SALE OPERATIVE — 9 video ──────────────────
+  # ─── GESTIONE EMERGENZA / SALE OPERATIVE — 11 video ──────────────────
   aap-coc:
     titolo: "Glossario in LIS — COC, Centro Operativo Comunale"
     famiglia: "gestione-emergenza"
@@ -461,6 +475,20 @@ video:
     fonte: "abili-a-proteggere"
     youtube_url: "https://youtu.be/B9IqdiEiM3o"
     durata: "1 minuto e 18 secondi"
+
+  aap-coemm:
+    titolo: "Glossario in LIS — COEMM, Centro operativo per le emergenze marittime"
+    famiglia: "gestione-emergenza"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/7rFFAhwEhFM"
+    durata: "1 minuto e 22 secondi"
+
+  aap-commissione-grandi-rischi:
+    titolo: "Glossario in LIS — Commissione nazionale per la previsione e prevenzione dei grandi rischi"
+    famiglia: "gestione-emergenza"
+    fonte: "abili-a-proteggere"
+    youtube_url: "https://youtu.be/JVAtydUSrc8"
+    durata: "1 minuto e 9 secondi"
 
   # ─── PIANIFICAZIONE — 3 video ───────────────────────────────────────
   aap-pianificazione:
