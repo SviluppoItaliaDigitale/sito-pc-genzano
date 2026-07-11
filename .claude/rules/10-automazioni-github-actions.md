@@ -4,7 +4,16 @@ Tutti i workflow di manutenzione girano **ogni lunedì** (primo giorno della set
 
 ## Lavorazione autonoma delle issue automatiche (Routine CCR, 11 luglio 2026)
 
-🟢 **Istruzione permanente dell'utente (11/07/2026):** le issue aperte dai workflow (`github-actions`) NON restano in attesa di lettura umana — vengono **lavorate e chiuse in autonomia**. Una **Routine Claude Code Remote** (trigger `trig_01FQSWqwUyWgrcWPXB3FSLMq`, cron giornaliero 12:00 UTC, sessione fresca a ogni run, notifiche push+email all'utente) esegue ogni giorno: triage delle issue aperte di github-actions → dedup dei report settimanali della stessa famiglia (si lavora il più recente, i vecchi si chiudono come superati) → lavorazione completa (max 5-6 issue/run, priorità `urgente`) fino a PR + merge + verifica deploy + chiusura issue col commit → per le issue che richiedono decisione umana (scelte editoriali ambigue, credenziali, contenuti sostanzialmente nuovi), commento con raccomandazione e issue lasciata aperta. Tutti i gate del repo restano vigenti (build, AGID, pertinenza, image:, no inventario). **Nasce** perché i video LIS segnalati dall'issue #601 del 22/06 sono stati scoperti "per caso" tre settimane dopo. Anche le sessioni interattive restano libere di lavorare le issue quando le incontrano (questa regola aggiunge il ramo automatico, non lo sostituisce).
+🟢 **Istruzione permanente dell'utente (11/07/2026):** le issue aperte dai workflow (`github-actions`) NON restano in attesa di lettura umana — l'obiettivo è **portare e mantenere a ZERO il backlog**. Una **Routine Claude Code Remote** (trigger `trig_01EL97B5vF55j3JAWGiNiNCM`, cron giornaliero 12:00 UTC, sessione fresca a ogni run, notifiche push+email all'utente) esegue ogni giorno:
+
+- triage delle issue aperte di github-actions (mai quelle create da umani o con label `tracking`/`enhancement`/`bug`/`pinned`/`urgente-permanente`);
+- **dedup** dei report settimanali della stessa famiglia (si lavora il più recente, i vecchi si chiudono come superati);
+- **Categoria A — manutenzione e integrazioni pre-autorizzate** (link rotti, documenti, refusi, archiviazioni scadenze, glossario, Linee Guida IRC, video LIS/approfondimenti, freschezza, segnalazioni rientrate): lavorazione **fino a live** (PR + merge + verifica deploy) e chiusura issue col commit. Tutti i gate del repo restano vigenti (build, AGID, pertinenza, `image:`, no inventario);
+- **Categoria B — pubblicazione di CONTENUTI NUOVI o scelte editoriali sostanziali** (nuovi articoli, versioni facili A2, riscritture rilevanti, cambi strutturali): il lavoro viene **preparato completo su branch con PR pronta ma NON mergiata** — l'utente dà l'OK finale ("pubblica la PR #N" o merge da GitHub); il run successivo chiude l'issue quando trova la PR mergiata;
+- decisioni non delegabili (credenziali, spese, enti terzi): solo commento con raccomandazione;
+- riepilogo conciso via notifica: chiuse / PR in attesa di OK / rimaste.
+
+**Nasce** perché i video LIS segnalati dall'issue #601 del 22/06 sono stati scoperti "per caso" tre settimane dopo. Le sessioni interattive restano libere di lavorare le issue quando le incontrano (questa regola aggiunge il ramo automatico, non lo sostituisce).
 
 ## Modello di priorità del deploy (31 maggio 2026)
 
