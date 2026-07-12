@@ -1,7 +1,7 @@
 ---
 title: "La nostra squadra in servizio alla Sala Operativa regionale della Protezione Civile"
 date: 2026-07-12T00:03:00+02:00
-description: "Quattro volontari del Gruppo hanno prestato servizio alla Sala Operativa della Protezione Civile della Regione Lazio, a supporto del sistema regionale."
+description: "La nostra squadra, con una volontaria di Albano Laziale, in servizio alla Sala Operativa della Protezione Civile della Regione Lazio tramite FEPIVOL."
 badge: "Attività"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -14,13 +14,14 @@ draft: false
 lis_section: "gestione-emergenza"
 social_citazione: "È un'attività meno visibile di un intervento in strada, ma altrettanto importante"
 social_punti:
-  - "Quattro volontari del Gruppo in turno alla Sala Operativa della PC Regione Lazio"
+  - "La nostra squadra in turno alla Sala Operativa della PC Regione Lazio, con una volontaria di Albano Laziale"
+  - "Il turno è richiesto tramite il Coordinamento FE.PI.VOL., a cui il Gruppo aderisce"
   - "La Sala Operativa regionale coordina le segnalazioni di protezione civile del Lazio"
   - "Numero verde 803 555 per le segnalazioni non urgenti; per le emergenze sempre il 112"
   - "Il servizio in sala è anche formazione: procedure, radio e coordinamento visti da dentro"
 ---
 
-Una squadra del nostro Gruppo ha prestato servizio presso la **Sala Operativa della Protezione Civile della Regione Lazio**, a Roma. Quattro volontari hanno affiancato la struttura regionale alle postazioni della sala: telefoni, cuffie e collegamenti radio, al servizio del territorio. È un'attività meno visibile di un intervento in strada, ma altrettanto importante. Dalla sala passano le segnalazioni e il coordinamento di tutto il sistema regionale di protezione civile.
+Una squadra del nostro Gruppo ha prestato servizio presso la **Sala Operativa della Protezione Civile della Regione Lazio**, a Roma. Con i nostri volontari c'era anche una volontaria di **Albano Laziale**: insieme hanno affiancato la struttura regionale alle postazioni della sala, tra telefoni, cuffie e collegamenti radio. È un'attività meno visibile di un intervento in strada, ma altrettanto importante. Dalla sala passano le segnalazioni e il coordinamento di tutto il sistema regionale di protezione civile.
 
 ## Cos'è la Sala Operativa regionale
 
@@ -36,11 +37,13 @@ Ricorda la regola di sempre: **per le emergenze si chiama il 112**, il Numero Un
 
 Il volontariato è una componente del Servizio nazionale della protezione civile (D.Lgs. 1/2018). I volontari dei gruppi comunali e delle organizzazioni del Lazio collaborano anche ai turni della Sala Operativa regionale. Lavorano accanto al personale della Regione.
 
-La nostra squadra ha lavorato alle postazioni operatore. I compiti: ricezione delle comunicazioni al telefono e in cuffia, ascolto radio, supporto alle attività della sala.
+Il turno viene richiesto tramite il **Coordinamento FE.PI.VOL.** (Federazione Pronto Intervento Volontariato ODV), a cui il nostro Gruppo aderisce. È la rete delle organizzazioni di volontariato di protezione civile del Lazio. Per questo in sala lavorano fianco a fianco volontari di Comuni diversi. Nel nostro turno: la squadra di Genzano e una volontaria di Albano Laziale.
+
+La squadra ha lavorato alle postazioni operatore. I compiti: ricezione delle comunicazioni al telefono e in cuffia, ascolto radio, supporto alle attività della sala.
 
 {{< foto src="/images/2026-07-12-sala-operativa-lazio-squadra.webp"
          alt="Quattro volontari sorridenti seduti alle postazioni operatore della sala, con cuffie, telefoni fissi e monitor; sulla parete di fondo il logo della Protezione Civile Regione Lazio"
-         caption="La nostra squadra alle postazioni della Sala Operativa regionale. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+         caption="La squadra alle postazioni della Sala Operativa regionale: i nostri volontari insieme a una volontaria di Albano Laziale. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
 Per il Gruppo è anche un investimento in competenze. Chi fa servizio in sala vede da dentro come nasce il coordinamento di un'emergenza. Impara le procedure, il linguaggio radio, il passaggio delle informazioni tra enti. Sono capacità che i volontari riportano a Genzano e mettono al servizio della comunità, nelle attività ordinarie e nelle emergenze.
 
@@ -53,7 +56,7 @@ Il servizio in Sala Operativa è una delle tante forme del volontariato di prote
 **Sul nostro sito:**
 
 - [Numeri utili](/numeri-utili/) — quale numero chiamare e in quali casi, dal 112 al numero verde regionale.
-- [Chi siamo](/chi-siamo/) — la storia, i mezzi e le attività del Gruppo Comunale.
+- [Chi siamo](/chi-siamo/) — la storia, i mezzi, le attività e le affiliazioni del Gruppo, incluso il Coordinamento FE.PI.VOL.
 - [Diventa volontario](/diventa-volontario/) — requisiti e passi per entrare nel Gruppo.
 
 **Fonti istituzionali:**
