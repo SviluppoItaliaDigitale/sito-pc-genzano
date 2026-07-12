@@ -1,6 +1,6 @@
 ---
 title: "Gemellaggi tra Gruppi di PC: la solidarietà tra territori"
-date: 2026-07-12
+date: 2026-07-12T00:01:00+02:00
 description: "Gemellaggi, colonne mobili, scambi: come un Gruppo di Protezione Civile costruisce una comunità nazionale che si sostiene nelle emergenze."
 badge: "Informazione"
 priorita: "normale"
