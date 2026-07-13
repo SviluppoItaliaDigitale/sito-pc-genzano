@@ -1,45 +1,51 @@
-
-
-
 #
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-# (parole tecniche/derivate assenti dal dizionario hunspell, non refusi)
-# === Abbreviazioni d'uso ===
-# === Abbreviazioni e sigle minuscole ===
-# === Aggettivi/sostantivi derivati validi ===
-# === Inglesi tecnici multi-disciplinari ===
-# === Inglesi-tecnici: sintagmi split (checker vede solo la singola parola) ===
-# === Jargon comunicazione/giornalismo/crisi (schede secondaria) ===
-# === Latino (titoli di opere storiche citate) ===
-# === Nomi propri / persone ===
-# === Parole inglesi minuscole d'uso (titoli di riviste/enti restano maiuscoli, già saltati) ===
-# === Parole italiane valide che hunspell it_IT non riconosce ===
-# === Sigle e marchi (minuscoli o misti) ===
-# === Termini PA/PC e neologismi d'uso ===
-# === Termini scientifici/tecnici (sismologia, vulcanologia, geologia, valanghe) ===
-# === Termini scientifici/tecnici (vulcanologia, idrogeologia, meteo, nucleare) ===
-# === Termini tecnici / inglesi d'uso ===
-# === Termini tecnici sanitari/emergenza ===
-# === Toponimi / territorio ===
-# Aggiungi qui SOLO parole davvero corrette segnalate come sospette.
-# Aggiunte dossier 38-43 (2026-06-10)
-# Aggiunte sweep Manuale PC — capitoli 711-720, 42, 112, 150 (2026-06-10)
-# Dizionario-allowlist del sito Protezione Civile Genzano
-# Lo script check-refusi.py salta già le sigle TUTTE MAIUSCOLE (DPC, NUE, ISO...).
-# Parole valide ma non presenti nel dizionario hunspell it_IT (nomi propri,
-# Termini italiani validi confermati nello sweep refusi completo del 23/05/2026
-# Una parola per riga, minuscolo. Le righe con # sono commenti.
-# sigle minuscole/miste, termini tecnici, parole inglesi d'uso comune).
+(2026-06-10)
+(DPC,
+(checker
+(minuscoli
+(nomi
+(parole
+(schede
+(sismologia,
+(titoli
+(vulcanologia,
+/
+112,
+150
+23/05/2026
+38-43
+42,
+711-720,
+===
+Abbreviazioni
+Aggettivi/sostantivi
+Aggiungi
+Aggiunte
+Civile
+Dizionario-allowlist
+Genzano
+ISO...).
+Inglesi
+Inglesi-tecnici:
+Jargon
+Latino
+Le
+Lo
+MAIUSCOLE
+Manuale
+NUE,
+Nomi
 Olly
+PA/PC
+PC
+Parole
+Protezione
+SOLO
+Sigle
+TUTTE
+Termini
+Toponimi
+Una
 abaci
 abbruciamenti
 accelerometrica
@@ -66,6 +72,7 @@ arasaac
 arborata
 ariccia
 artt
+assenti
 audit
 autoprotezione
 autoregolatori
@@ -93,6 +100,7 @@ build
 buozzi
 canadair
 capitignano
+capitoli
 cardoso
 caregiver
 casamicciola
@@ -104,11 +112,22 @@ cell
 certificativa
 cesarini
 cfr
+che
+check-refusi.py
 checklist
+chilolitrica
 ciaspole
 ciciliano
+citate)
 clasti
+come
 command
+commenti.
+completo
+comune).
+comunicazione/giornalismo/crisi
+con
+confermati
 confliggere
 contattabile
 contattabili
@@ -117,25 +136,35 @@ continuity
 controintuitiva
 control
 cordoncini
+corrette
 costumini
 cover
 cronoprogramma
 cuccìa
 cynthianum
+d'uso
+dal
+davvero
 debriefing
 defibrillabile
 deittica
 deittici
+del
+derivati
+di
 dirigitraffico
 dirty
 disaster
 dispensative
 distocico
+dizionario
+dossier
 downburst
 drone
 droni
 drop
 duecentennale
+e
 early
 edibili
 emilia
@@ -177,12 +206,14 @@ geoingegneria
 geolocalizzare
 geolocalizzato
 geolocalizzazione
+geologia,
 geopop
 geoportali
 georeferenziati
 geotecnica
 geotecnici
 giulivo
+già
 goatcounter
 gorkha
 governance
@@ -195,8 +226,11 @@ hold
 homepage
 hub
 hummus
+hunspell
+hunspell,
 identitario
 idrogeologi
+idrogeologia,
 inalabile
 incident
 indexnow
@@ -205,26 +239,35 @@ infioratori
 infioratrici
 infografica
 infografiche
+inglesi
 insaporitore
 involcan
 iodoprofilassi
 ipocentrale
 irpinia
 it-alert
+it_IT
+italiane
+italiani
 kit
+la
 lahar
 laziale
 lazio
+le
 lead
 lett
 lgs
 live
 livia
 lockdown
+ma
 macrocategorie
 maestre
 mainshock
+maiuscoli,
 malagnini
+marchi
 marino
 marmettola
 marsica
@@ -234,21 +277,33 @@ maxiemergenze
 mecheri
 memorizzabile
 memorizzabili
+meteo,
 microplacca
 microzonazione
 min
+minuscole
+minuscole/miste,
+minuscolo.
+misti)
 mld
 mln
 modigliana
 multabile
+multi-disciplinari
 multilinguistica
 multilivello
 namaste
+nel
+nello
 nemi
+neologismi
 nivologica
+non
 norcia
 notebooklm
 nowcasting
+nucleare)
+o
 of
 offline
 olivelli
@@ -257,15 +312,21 @@ olmata
 ondametriche
 online
 opendyslexic
+opere
 pagefind
 paleofrana
 paleofrane
 pappalardo
 paramassi
+parola
+parola)
+parole
 pelabili
+per
 perimetra
 perimetrata
 perimetrate
+persone
 phon
 piroclasti
 piroclastiti
@@ -278,35 +339,53 @@ ppm
 prebunking
 precipitativo
 preparedness
+presenti
 probiotici
+propri
+propri,
+qui
 radome
 raffrescamento
 reanalisi
 receiver
+refusi
+refusi)
 report
 resilience
+restano
 resurgente
 retroarco
 rev
 riacquisito
 richiudibile
 riconnessione
+riconosce
 ridatate
 rift
 rifting
+riga,
+righe
 rigopiano
 ripariale
 ripariali
 risuccedere
 ritagliabili
 riverificate
+riviste/enti
 romagna
 romani
 ruscellamenti
 saforprociv
+salta
+saltati)
 sanificabili
+sanitari/emergenza
 sarno
 sciadv
+scientifici/tecnici
+script
+secondaria)
+segnalate
 selci
 serrandine
 sez
@@ -318,14 +397,21 @@ siede
 siedi
 siedono
 sievert
+sigle
+singola
+sintagmi
 sismogenico
 sismometri
 sismotettonico
 sismovulcanici
+sito
 situational
 social
+solo
 sommativa
 sondini
+sono
+sospette.
 sottopagine
 sottopelo
 sottozone
@@ -336,16 +422,24 @@ span
 speditiva
 speditive
 spelluccamento
+split
 stazzema
+storiche
 stratovulcano
 stromboli
 subpliniana
 supervulcano
+sweep
 tappezzatura
+tecniche/derivate
+tecnici
+tecnici,
 tefra
 telesisma
 telesismi
 telonati
+termini
+territorio
 the
 tohoku
 tombinati
@@ -355,12 +449,17 @@ traversara
 tsunamigenici
 turnistica
 unionale
+valanghe)
 valanghive
 valanghivi
+valide
+validi
+vede
 versilia
 vesuviano
 vesuvio
 visso
+vulcanologia,
 warning
 washback
 webp
@@ -368,3 +467,4 @@ zamberletti
 zena
 zonazione
 équipe
+—
