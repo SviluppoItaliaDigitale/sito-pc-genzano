@@ -1,6 +1,6 @@
 ---
 title: "Canadair, elicotteri e mezzi aerei nell'antincendio boschivo"
-date: 2026-07-13
+date: 2026-07-13T00:01:00+02:00
 description: "I mezzi aerei sono spesso la differenza tra incendio contenuto e disastro. Come funziona la flotta italiana di antincendio boschivo e quando entra in azione."
 badge: "Informazione"
 priorita: "normale"
