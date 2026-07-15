@@ -227,9 +227,9 @@
             '<div class="col-lg-4 col-md-4 pb-2">' +
               '<h2 class="h4 text-white">Link Utili</h2>' +
               '<nav aria-label="Link utili nel footer"><ul class="footer-list" role="list">' +
-                '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/note-legali/" style="color:rgba(255,255,255,0.85);">Note Legali</a></li>' +
-                '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/privacy/" style="color:rgba(255,255,255,0.85);">Privacy</a></li>' +
-                '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/accessibilita/" style="color:rgba(255,255,255,0.85);">Accessibilit&agrave;</a></li>' +
+                /* Note Legali / Privacy / Accessibilità vivono SOLO nella
+                   striscia "Informazioni legali" più sotto (de-dup 15/07/2026,
+                   speculare a hugo.toml menus.footer). */
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/metodo-editoriale/" style="color:rgba(255,255,255,0.85);">Metodo editoriale</a></li>' +
                 /* Trasparenza + Stato del Sito spostati da "Risorse" a maggio 2026:
                    accountability istituzionale, coerenti nel footer accanto a
