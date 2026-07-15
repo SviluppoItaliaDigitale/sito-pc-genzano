@@ -100,43 +100,43 @@ enableGitInfo = true
   name = "Da dove comincio?"
   url = "/da-dove-comincio/"
   parent = "per-il-cittadino"
-  weight = 0
+  weight = 1
 
 [[menus.main]]
   name = "Cosa Fare Adesso"
   url = "/cosa-fare-adesso/"
   parent = "per-il-cittadino"
-  weight = 1
+  weight = 2
 
 [[menus.main]]
   name = "Allerte Meteo"
   url = "/allerte-meteo/"
   parent = "per-il-cittadino"
-  weight = 2
+  weight = 3
 
 [[menus.main]]
   name = "Rischi e Prevenzione"
   url = "/rischi-prevenzione/"
   parent = "per-il-cittadino"
-  weight = 3
+  weight = 4
 
 [[menus.main]]
   name = "Cartografia"
   url = "/cartografia/"
   parent = "per-il-cittadino"
-  weight = 4
+  weight = 5
 
 [[menus.main]]
   name = "Numeri Utili"
   url = "/numeri-utili/"
   parent = "per-il-cittadino"
-  weight = 5
+  weight = 6
 
 [[menus.main]]
   name = "Piano Familiare"
   url = "/piano-familiare/"
   parent = "per-il-cittadino"
-  weight = 6
+  weight = 7
 
 # Spostato da "Educazione e Inclusione" a maggio 2026: il Kit Calamità è
 # rivolto al cittadino in situazione di vulnerabilità (anziano in casa,
@@ -146,16 +146,6 @@ enableGitInfo = true
   name = "Kit pronti per situazioni vulnerabili"
   url = "/formazione/kit-calamita/"
   parent = "per-il-cittadino"
-  weight = 7
-
-# Aggiunta giugno 2026: schede di preparazione all'emergenza per chi
-# gestisce un luogo o un gruppo di persone (negozio, condominio,
-# associazione, evento). Parallele ai kit-calamita (rivolti alle persone),
-# ma rivolte all'organizzazione-come-entità.
-[[menus.main]]
-  name = "Kit per le organizzazioni"
-  url = "/kit-organizzazioni/"
-  parent = "per-il-cittadino"
   weight = 8
 
 [[menus.main]]
@@ -163,12 +153,6 @@ enableGitInfo = true
   url = "/cruscotto/"
   parent = "per-il-cittadino"
   weight = 9
-
-[[menus.main]]
-  name = "Lo stato del territorio"
-  url = "/stato-del-territorio/"
-  parent = "per-il-cittadino"
-  weight = 10
 
 # --- Dropdown: Per le scuole (7 voci didattiche) ---
 # (rinominato da "Educazione e Inclusione" a maggio 2026 — splittato per
@@ -287,7 +271,7 @@ enableGitInfo = true
   name = "La campagna social"
   url = "/campagna-volontari/"
   parent = "volontariato"
-  weight = 2
+  weight = 3
 
 [[menus.main]]
   name = "Chi Siamo"
@@ -299,13 +283,13 @@ enableGitInfo = true
   name = "Per gli enti e le scuole"
   url = "/per-gli-enti/"
   parent = "volontariato"
-  weight = 3
+  weight = 4
 
 [[menus.main]]
   name = "Il nostro patrono"
   url = "/san-pio-da-pietrelcina/"
   parent = "volontariato"
-  weight = 3
+  weight = 5
 
 # Aggiunto il 16/05/2026: hub addestramento e buone pratiche del Gruppo.
 # Racconta come ci alleniamo (turni operativi + esercitazioni programmate),
@@ -315,7 +299,7 @@ enableGitInfo = true
   name = "Addestramento e buone pratiche"
   url = "/esercitazioni/"
   parent = "volontariato"
-  weight = 4
+  weight = 6
 
 # --- Dropdown: Risorse (6 voci, riorganizzato maggio 2026) ---
 # Riorganizzazione maggio 2026: il dropdown era cresciuto a 13 voci, oltre
@@ -345,7 +329,7 @@ enableGitInfo = true
   name = "Conoscere la Protezione Civile"
   url = "/conoscere/"
   parent = "risorse"
-  weight = 0
+  weight = 1
 
 # Manuale di Protezione Civile (giugno 2026): opera a impianto accademico
 # (reader online + PDF). È il livello "approfondito" che accompagna "Conoscere"
@@ -354,7 +338,7 @@ enableGitInfo = true
   name = "Manuale di Protezione Civile"
   url = "/manuale/"
   parent = "risorse"
-  weight = 0
+  weight = 2
 
 # Dossier interattivi (giugno 2026): racconti visivi scrollytelling.
 # weight 0 come "Conoscere": il pareggio si risolve per nome, quindi la voce
@@ -363,37 +347,37 @@ enableGitInfo = true
   name = "Dossier interattivi"
   url = "/dossier/"
   parent = "risorse"
-  weight = 0
+  weight = 3
 
 [[menus.main]]
   name = "FAQ"
   url = "/faq/"
   parent = "risorse"
-  weight = 1
+  weight = 4
 
 [[menus.main]]
   name = "Glossario"
   url = "/glossario/"
   parent = "risorse"
-  weight = 2
+  weight = 5
 
 [[menus.main]]
   name = "Area Download"
   url = "/area-download/"
   parent = "risorse"
-  weight = 3
+  weight = 6
 
 [[menus.main]]
   name = "Normativa"
   url = "/normativa/"
   parent = "risorse"
-  weight = 4
+  weight = 7
 
 [[menus.main]]
   name = "Strumenti in Tempo Reale"
   url = "/strumenti/"
   parent = "risorse"
-  weight = 5
+  weight = 8
 
 # Pagina hub introdotta a maggio 2026: punto d'ingresso unico per i due
 # canali audio (Podcast con episodi MP3 + RSS, Articoli da ascoltare via
@@ -402,25 +386,7 @@ enableGitInfo = true
   name = "Audio e podcast"
   url = "/audio-e-podcast/"
   parent = "risorse"
-  weight = 6
-
-# Hub dei materiali multimediali pronti per download (podcast, infografiche,
-# presentazioni, quiz, flashcard) generati con NotebookLM e pubblicati con
-# licenza CC BY-NC-SA 4.0. Introdotto a maggio 2026.
-[[menus.main]]
-  name = "Materiali pronti"
-  url = "/risorse-pronte/"
-  parent = "risorse"
-  weight = 7
-
-# Spostato da "Per il Cittadino" a maggio 2026: la timeline storica
-# del territorio è strumento di consultazione/contesto narrativo, vive
-# meglio fra le risorse di approfondimento che fra le azioni operative.
-[[menus.main]]
-  name = "Storia del territorio"
-  url = "/storia/"
-  parent = "risorse"
-  weight = 8
+  weight = 9
 
 # --- Voci dirette ---
 [[menus.main]]

@@ -39,6 +39,8 @@ Razionale: voci flat erano troppe per mobile e per l'utente in emergenza. L'acco
 
 Risultato: Risorse a **6 voci** pulite (FAQ, Glossario, Area Download, Normativa, Strumenti in Tempo Reale, Audio e podcast), 5 dropdown di primo livello (invariati), footer a 8 voci nella sezione "Link Utili". Margine Miller: 1 voce di spazio libero per future aggiunte.
 
+**Riorganizzazione v3.5 (15 luglio 2026) — rientro nel 7±2 + fonte unica:** l'audit esterno del 15/07 ha rilevato dropdown risaliti a 11 voci. Interventi: **Per il Cittadino 11→9** ("Lo stato del territorio" → linkata da /cruscotto/ § "La lettura ragionata dei dati"; "Kit per le organizzazioni" → linkata dall'hub /formazione/kit-calamita/); **Risorse 11→9** ("Materiali pronti" → "Vedi anche" di /area-download/; "Storia del territorio" → "Approfondimenti" di /conoscere/). Pesi rinumerati senza pareggi in tutti i dropdown (l'ordine è deterministico e identico nei due chrome). Da questa data il menu di `site-chrome.js` è GENERATO da hugo.toml (vedi § "Fonte unica del menu").
+
 Il numero totale di voci di primo livello è 8 (Home + 5 dropdown + Comunicazioni + Contatti). Limite Miller superato di 1 voce, accettato perché compensato dalla coerenza interna dei dropdown.
 
 **Storia del riordino — v2 (aprile 2026, mantenuta in v3):** dopo audit precedente, le pagine accessibili (Abili a Proteggere, Facile da Leggere) erano raggiungibili solo in 3+ click. Le pagine di servizio (FAQ, Strumenti, Area Download, Normativa) erano solo in homepage o footer.
@@ -90,23 +92,20 @@ Il sito **non riporta numeri di inventario** dei materiali (schede stampabili, g
 - Hook `PostToolUse` in `.claude/settings.json` — rimosso.
 - Sezione `audit-sito.yml § 42` — rimossa con commento esplicativo.
 
-### Sincronizzazione obbligatoria `hugo.toml` ↔ `site-chrome.js`
+### Fonte unica del menu: `hugo.toml` genera anche `site-chrome.js` (dal 15/07/2026)
 
-Il menu Hugo (`hugo.toml [[menus.main]]` + `themes/flavour-pcgenzano/layouts/partials/navbar.html`) renderizza la navigazione **solo per le pagine generate da Hugo**. Tutte le pagine HTML statiche fuori da Hugo (`static/formazione/schede-stampabili/`, `static/abili-a-proteggere/`, `static/giochi/`, `static/quizpc/`, `static/formazionepc/`, `static/giochi-bambini/`, ecc. — circa 50+ pagine) iniettano header e footer da `static/app-shared/site-chrome.js`, che ha il menu **hardcoded in JavaScript** e **non si auto-sincronizza** con `hugo.toml`.
+Il menu Hugo (`hugo.toml [[menus.main]]` + `themes/flavour-pcgenzano/layouts/partials/navbar.html`) renderizza la navigazione **solo per le pagine generate da Hugo**. Le pagine HTML statiche fuori da Hugo (giochi, schede stampabili, abili-a-proteggere, quizpc, formazionepc, ecc.) iniettano il chrome da `static/app-shared/site-chrome.js`.
 
-**Ogni modifica al menu Hugo richiede un aggiornamento speculare in `site-chrome.js`.** Sezioni da tenere allineate:
-- Voci di primo livello (Home + 5 dropdown + Comunicazioni + Contatti).
-- Identificatori dei dropdown: `navDropdown-per-il-cittadino`, `navDropdown-per-le-scuole`, `navDropdown-accessibilita-supporti`, `navDropdown-volontariato`, `navDropdown-risorse`.
-- Sotto-voci di ogni dropdown e relativi URL.
+🟢 **Dal 15/07/2026 il menu di `site-chrome.js` NON si modifica più a mano**: il blocco tra i marker `/* MENU-AUTOGEN:START */ … /* MENU-AUTOGEN:END */` è **generato** da `scripts/genera-chrome-menu.py` a partire da `hugo.toml [[menus.main]]` (fonte unica — audit esterno 15/07/2026).
 
-**Why**: ad aprile 2026 il menu è stato riordinato (voci flat → voci con dropdown). L'aggiornamento Hugo è stato fatto, ma `site-chrome.js` è rimasto col menu vecchio per giorni: la home aveva voci con dropdown, le pagine statiche voci flat. L'utente ha scoperto il drift confrontando due screenshot. Riorganizzazione v3 di maggio 2026 ha aggiornato entrambi simultaneamente.
+**Flusso per modificare il menu:**
+1. Edita `hugo.toml [[menus.main]]` (unico posto). Mantieni i pesi **senza pareggi** (l'ordine a parità di weight degrada al confronto alfabetico e i due chrome potrebbero divergere).
+2. `python3 scripts/genera-chrome-menu.py` → rigenera il blocco in `site-chrome.js`.
+3. Committa entrambi i file.
 
-**Check automatico**: il workflow `audit-sito.yml` § 41 "Coerenza menu Hugo ↔ site-chrome.js" verifica ogni lunedì:
-- Tutti i dropdown dichiarati in `hugo.toml` (`identifier = "..."`) hanno l'`navDropdown-<id>` corrispondente in `site-chrome.js`.
-- Le voci dirette (Home, Comunicazioni, Contatti) sono presenti.
-- Nessun residuo obsoleto (es. `navDropdown-formazione` dopo il rename).
+**Guardie anti-drift:** `validate-pr.yml` job `menu-sync` esegue `genera-chrome-menu.py --check` e **fallisce la PR** se `site-chrome.js` non corrisponde a `hugo.toml`; `audit-sito.yml` § 41 resta come cintura settimanale. Il resto del chrome (footer "Link Utili", SOS, toolbar a11y, BottomNav) resta a duplicazione manuale consapevole: se ne modifichi i partial, replica in `site-chrome.js`.
 
-Se trova drift, apre un'issue di manutenzione. Ma **non aspettare l'issue**: allinea al momento della modifica al menu.
+**Storia**: fino a luglio 2026 il menu era hardcoded due volte e ad aprile 2026 rimase disallineato per giorni (drift scoperto dall'utente da screenshot). Il generatore elimina la doppia manutenzione.
 
 ### `site-chrome.js` inietta anche SOS 112 + toolbar accessibilità (dal 22/05/2026)
 

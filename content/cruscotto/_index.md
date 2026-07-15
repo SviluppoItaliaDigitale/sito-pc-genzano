@@ -165,6 +165,10 @@ Un'unica pagina per consultare i dati di rischio del territorio, da **fonti uffi
 })();
 </script>
 
+## La lettura ragionata dei dati
+
+I dati live di questa pagina dicono *cosa sta succedendo adesso*. Per il quadro d'insieme — rischio per rischio, con la fase attuale del ciclo di protezione civile e la fonte di ogni valutazione — consulta [Lo stato del territorio](/stato-del-territorio/).
+
 ## Le fonti del cruscotto
 
 - **Terremoti** — [INGV](https://terremoti.ingv.it/) (Istituto Nazionale di Geofisica e Vulcanologia), servizio FDSN open data, ultimi 7 giorni in Italia.
