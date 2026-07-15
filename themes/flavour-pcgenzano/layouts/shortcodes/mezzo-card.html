@@ -1,0 +1,32 @@
+{{- /*
+  Shortcode: mezzo-card
+  Card di un mezzo/attrezzatura del Gruppo per la griglia "Mezzi e
+  attrezzature principali" di /chi-siamo/. Sostituisce i blocchi HTML
+  Bootstrap ripetuti nel Markdown (audit esterno 15/07/2026, punto 7:
+  riduzione HTML grezzo nei contenuti).
+
+  Uso (dentro un wrapper <div class="row">, senza righe vuote tra le card):
+
+    {{< mezzo-card colore="danger" nome="Mercedes Actros"
+        descrizione="Autobotte con impianto antincendio da 14.000 litri." >}}
+
+  Parametri:
+  - nome        (obbligatorio) denominazione tecnica del mezzo
+                (verificata su /chi-siamo/ § "I nostri mezzi", rule 02)
+  - descrizione (obbligatorio) una frase breve sulla funzione
+  - icona       (opzionale) classe Bootstrap Icons, default "bi-truck"
+  - colore      (opzionale) colore utility BI dell'icona (primary/danger/
+                success/info/...), default "primary"
+  - corsivo     (opzionale) "true" per descrizione in corsivo
+                (mezzi "in allestimento")
+
+  Markup identico ai blocchi originali (card h-100 shadow-sm).
+*/ -}}
+{{- $nome := .Get "nome" -}}
+{{- $descrizione := .Get "descrizione" -}}
+{{- if not $nome }}{{ errorf "mezzo-card: parametro 'nome' obbligatorio (%s)" .Position }}{{ end -}}
+{{- if not $descrizione }}{{ errorf "mezzo-card: parametro 'descrizione' obbligatorio (%s)" .Position }}{{ end -}}
+{{- $icona := .Get "icona" | default "bi-truck" -}}
+{{- $colore := .Get "colore" | default "primary" -}}
+{{- $corsivo := eq (.Get "corsivo") "true" -}}
+<div class="col-lg-6 mb-3"><div class="card h-100 shadow-sm"><div class="card-body"><h3 class="h6"><i class="bi {{ $icona }} text-{{ $colore }} me-2" aria-hidden="true"></i> {{ $nome }}</h3><p class="small text-muted mb-0{{ if $corsivo }} fst-italic{{ end }}">{{ $descrizione }}</p></div></div></div>

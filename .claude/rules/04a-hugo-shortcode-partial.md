@@ -93,6 +93,19 @@ Card link visibile (icona + titolo + descrizione) per griglie di consultazione d
 - **Subpath GitHub Pages**: il template fa `.Get "url" | strings.TrimPrefix "/" | relURL` (stesso pattern del render-link hook), così i link funzionano sia su Aruba (root) sia su GitHub Pages (`/sito-pc-genzano/`). Scrivere `url` con leading slash.
 - Le card vanno avvolte in `<div class="consulta-rapida">` (raw HTML nel markdown), senza righe vuote tra gli shortcode. CSS scoped sezione **CARD CONSULTAZIONE RAPIDA v1.0** in `custom.css` (hover lift, focus visibile `#ffbe2e`, `prefers-reduced-motion` + `a11y-pause-anim`, stampa).
 
+## Shortcode card di /chi-siamo/ — `mezzo-card`, `affiliazione-card`, `card-istituzionale` (luglio 2026)
+
+Tre shortcode nati dall'**audit esterno del 15/07/2026, punto 7 "ridurre l'HTML grezzo nei contenuti Markdown"**: sostituiscono i blocchi HTML Bootstrap ripetuti (con `style=""` inline) di `content/chi-siamo/_index.md`. Producono lo **stesso markup Bootstrap Italia** dei blocchi originali; l'unico cambio è l'`<img>` dei loghi, che usa le utility `d-block mx-auto mb-3` + attributi `width`/`height` al posto dello style inline (resa identica). Si usano **dentro un wrapper `<div class="row ...">` raw, senza righe vuote tra le card** (stesso pattern di `link-card`).
+
+- **`mezzo-card`** (self-closing) — card mezzo/attrezzatura per la griglia "Mezzi e attrezzature principali". Parametri: `nome` e `descrizione` obbligatori; `icona` (default `bi-truck`), `colore` (utility BI dell'icona, default `primary`), `corsivo="true"` per i mezzi in allestimento. Il `nome` resta la fonte canonica delle denominazioni tecniche dei mezzi (rule 02 § "Nomi dei nostri mezzi").
+  ```go-html-template
+  {{</* mezzo-card colore="danger" nome="Mercedes Actros" descrizione="Autobotte con impianto antincendio da 14.000 litri e distribuzione di acqua potabile." */>}}
+  ```
+- **`affiliazione-card`** (con inner) — card con logo per "Affiliazioni e riconoscimenti" e "Accreditamenti". Parametri: `logo` (path con leading slash, subpath-safe via `strings.TrimPrefix "/" | relURL`), `alt`, `titolo` obbligatori; `icona` (default `bi-award`), `bordo` (`primary` default, oppure valore CSS es. `var(--pc-secondary)`, `#15803d`), `larghezza`/`altezza` del logo (default `96px`; `larghezza="auto"` per loghi non quadrati). L'inner contiene i paragrafi descrittivi (HTML/Markdown). 🔴 Vincolo Reg. (UE) 2021/888: nella card del Quality Label ESC il codice `E10435833` resta nel testo inner — lo shortcode migra solo il markup, mai i testi.
+- **`card-istituzionale`** (con inner) — card con barra colorata a sinistra (`border-start border-4`) per "Riferimenti istituzionali" (titolo `h6`, default) e "Settori operativi" (`classe="h5"`). Parametri: `titolo` e `icona` obbligatori; `classe` (`h6`|`h5`), `colore` (utility BI dell'icona, default `primary`), `bordo` (come sopra).
+
+⚠️ Nota implementativa: l'inner è reso con `.Page.RenderString (dict "display" "block")` e **non** con `markdownify`, perché `markdownify` fa l'unwrap del `<p>` quando l'inner è un solo paragrafo (perdendo i margini del paragrafo nella card). Nessuna CSS aggiunta: bordi e dimensioni variabili sono parametri emessi dal template, il centraggio logo usa utility BI esistenti.
+
 ## Componenti Bootstrap Italia — `callout`, `passi`, `timeline`, `galleria` (maggio 2026)
 
 Quattro shortcode di contenuto, AGID/WCAG, applicabili a contenuto già esistente per migliorarne lettura e orientamento.
