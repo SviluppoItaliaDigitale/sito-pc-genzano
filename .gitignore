@@ -44,3 +44,4 @@ gcpc-*_global_reports_*.xlsx
 
 # Playwright MCP scratch
 .playwright-mcp/
+static/pagefind/

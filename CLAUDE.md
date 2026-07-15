@@ -107,7 +107,7 @@ Articoli operativi: includi un **disclaimer normativo** con link alla [Circolare
 | **Cover banner** | Sempre (`genera-cover.py` + `image:`/`image_alt:`, REGOLA 1). |
 | **Foto utente** | Read → `applica-fascia-foto.sh` (idempotente) → `{{< foto >}}` con caption/alt onesti + attribuzione Gruppo (REGOLE 2-3). |
 | **Slide social** (`social_citazione` / `social_punti`) | Compilati DAL testo dell'articolo, **mai inventati**: `social_citazione` = una frase forte/chiave dell'articolo (tra virgolette); `social_punti` = 3-4 punti chiave (date, luoghi, azioni di autoprotezione, numeri utili). Alimentano le slide "citazione" e "In sintesi" del carosello social (`genera-immagini-social.py`). Ometto se l'articolo è troppo breve o privo di contenuto sintetizzabile (es. comunicato di una riga). |
-| **Altri automatismi** | Web check entità (REGOLA 4) · QR (`genera-qr-articoli.py`, doppia rete CI) · indice Pagefind se serve · spell-check (`check-refusi.py` + `dizionario-pc.txt`) · gate AGID (`pc-article-reviewer`) · commit+push+(se autorizzato)PR+merge. |
+| **Altri automatismi** | Web check entità (REGOLA 4) · QR (`genera-qr-articoli.py`, doppia rete CI) · indice Pagefind rigenerato in CI dal deploy (mai committato) · spell-check (`check-refusi.py` + `dizionario-pc.txt`) · gate AGID (`pc-article-reviewer`) · commit+push+(se autorizzato)PR+merge. |
 
 **NON decido:** materia prima (testo/foto/argomento), vincoli temporali espliciti, comandi di pubblicazione, genere alternativo non-AGID.
 
