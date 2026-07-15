@@ -1,0 +1,143 @@
+{{- /* ═══════════════════════════════════════════════════
+     BARRE DI STATO HOMEPAGE — allerta meteo oggi/domani,
+     avviso meteo avverso, rischio incendi boschivi (AIB).
+     Estratto da index.html il 15/07/2026 (audit esterno: il template
+     homepage superava 500 righe). La logica client (CSV DPC, guard
+     scadenza incendi) vive in static/js/home-allerta.js.
+     ═══════════════════════════════════════════════════ */}}
+{{/* ── BARRA ALLERTA METEO ── */}}
+{{ $allerta := .Site.Data.allerta }}
+{{ if $allerta }}
+{{ $controllo := or $allerta.ultimo_controllo $allerta.ultimo_aggiornamento }}
+<div id="allerta-bar" class="allerta-bar allerta-bar-{{ $allerta.livello }} allerta-bar-loading" role="alert" aria-label="Stato allerta meteo" data-aggiornamento="{{ $allerta.ultimo_aggiornamento }}" data-controllo="{{ $controllo }}">
+<noscript><style>.allerta-bar-loading{opacity:1!important}</style></noscript>
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-between align-items-center">
+      <div>
+        {{ if eq $allerta.livello "verde" }}<i id="allerta-icon" class="bi bi-shield-check me-2" aria-hidden="true"></i>
+        {{ else }}<i id="allerta-icon" class="bi bi-exclamation-triangle-fill me-2" aria-hidden="true"></i>{{ end }}
+        <strong id="allerta-titolo">{{ $allerta.titolo }}</strong>
+        <span id="allerta-desc" class="d-none d-md-inline ms-2">— {{ $allerta.descrizione }}</span>
+      </div>
+      <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer" class="btn btn-sm allerta-bar-btn ms-2 mt-1 mt-md-0">
+        Bollettino Ufficiale <i class="bi bi-box-arrow-up-right ms-1" aria-hidden="true"></i>
+      </a>
+    </div>
+    {{ $t := time.AsTime $controllo }}
+    {{ $mesi := slice "" "gennaio" "febbraio" "marzo" "aprile" "maggio" "giugno" "luglio" "agosto" "settembre" "ottobre" "novembre" "dicembre" }}
+    <div class="allerta-bar-meta">
+      <i class="bi bi-clock-history me-1" aria-hidden="true"></i>
+      Verificato: <span id="allerta-controllo">{{ printf "%d %s %d, %02d:%02d" $t.Day (index $mesi (int $t.Month)) $t.Year $t.Hour $t.Minute }}</span>
+      <span class="text-nowrap">· Fonte: <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Lazio</a></span>
+    </div>
+  </div>
+</div>
+{{/* ── PRE-ALLERTA DOMANI — visibile solo se livello-domani ≥ gialla.
+     Il div esce SEMPRE dal template (per consentire al JS client di
+     aggiornarlo dinamicamente anche se al build domani era verde), ma
+     parte con display:none quando non c'è pre-allerta da mostrare. */}}
+{{ $domaniLivelliVisibili := slice "gialla" "arancione" "rossa" }}
+{{ $domaniVisibile := false }}
+{{ $domaniLiv := "verde" }}
+{{ $domaniDataLeg := "" }}
+{{ $domaniTitolo := "" }}
+{{ $domaniRischi := "" }}
+{{ with $allerta.domani }}
+  {{ if in $domaniLivelliVisibili .livello }}
+    {{/* Difesa: blocco visibile SOLO se livello rilevante E titolo non vuoto.
+         Evita render "Previsto domani: — gialla" se dati popolati a metà. */}}
+    {{ if .titolo }}
+    {{ $domaniVisibile = true }}
+    {{ $domaniLiv = .livello }}
+    {{ $domaniTitolo = .titolo }}
+    {{ $domaniRischi = delimit .rischi ", " }}
+    {{ $td := time.AsTime .data }}
+    {{ $domaniDataLeg = printf "%d %s %d" $td.Day (index $mesi (int $td.Month)) $td.Year }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+<div id="allerta-bar-domani" class="allerta-bar-domani allerta-bar-domani-{{ $domaniLiv }}" role="status" aria-label="Pre-allerta meteo per domani"{{ if not $domaniVisibile }} style="display:none"{{ end }}>
+  <div class="container">
+    <i class="bi bi-calendar-event me-2" aria-hidden="true"></i>
+    <strong>Previsto domani{{ if $domaniDataLeg }} ({{ $domaniDataLeg }}){{ end }}:</strong>
+    <span id="allerta-domani-titolo">{{ $domaniTitolo }}</span>{{ if $domaniRischi }} <span class="text-nowrap">— {{ $domaniRischi }}</span>{{ end }}
+  </div>
+</div>
+{{/* ── AVVISO METEO AVVERSO (vento, neve, calore...) — solo se attivo ── */}}
+{{ $avvisoLiv := "verde" }}
+{{ $avvisoTipo := "" }}
+{{ $avvisoDescr := "" }}
+{{ $avvisoUrl := "" }}
+{{ $avvisoVisibile := false }}
+{{ with $allerta.avviso_meteo }}
+  {{/* Difesa: blocco visibile SOLO se tipo non vuoto.
+       Evita render "Avviso meteo: — allerta verde" se dati popolati a metà. */}}
+  {{ if .tipo }}
+  {{ $avvisoLiv = .livello }}
+  {{ $avvisoTipo = .tipo }}
+  {{ $avvisoDescr = .descrizione }}
+  {{ $avvisoUrl = .url }}
+  {{ $avvisoVisibile = true }}
+  {{ end }}
+{{ end }}
+{{- /* Emessa SOLO quando c'è un avviso attivo: la versione sempre-nel-DOM
+     nascosta via display:none mostrava il segnaposto "Avviso meteo: — allerta
+     verde" a browser testuali e modalità lettura (audit esterno 11/07/2026).
+     Nessun JS richiede l'elemento (aggiornamento solo a build). */}}
+{{ if $avvisoVisibile }}
+<div id="avviso-meteo-bar" class="avviso-meteo-bar avviso-meteo-bar-{{ $avvisoLiv }}" role="alert" aria-label="Avviso meteo avverso">
+  <div class="container">
+    <i class="bi bi-wind me-2" aria-hidden="true"></i>
+    <strong>Avviso meteo:</strong>
+    <span id="avviso-meteo-tipo">{{ $avvisoTipo }}</span>
+    <span id="avviso-meteo-livello" class="ms-1">— allerta {{ $avvisoLiv }}</span>
+    {{ if $avvisoDescr }}<span id="avviso-meteo-descr" class="d-none d-md-inline ms-2">({{ $avvisoDescr }})</span>{{ end }}
+    {{ if $avvisoUrl }}<a id="avviso-meteo-url" href="{{ $avvisoUrl }}" target="_blank" rel="noopener noreferrer" class="ms-2 avviso-meteo-link">PDF ufficiale <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>{{ end }}
+  </div>
+</div>
+{{ end }}
+{{/* ── RISCHIO INCENDI BOSCHIVI (AIB) — solo se livello-oggi ≥ MEDIO (gialla) ── */}}
+{{ $incendiVisibile := false }}
+{{ $incendiLiv := "verde" }}
+{{ $incendiTitolo := "" }}
+{{ $incendiAib := "" }}
+{{ $incendiZona := 0 }}
+{{ $incendiDomLiv := "" }}
+{{ $incendiDomAib := "" }}
+{{ $incendiDataLeg := "" }}
+{{/* Il bollettino AIB vale solo per la sua data: se è già passata (es. bollettino
+     di ieri non ancora rinnovato), la barra NON si mostra (scadenza per data). */}}
+{{ $oggiISO := now.Format "2006-01-02" }}
+{{ with $allerta.rischio_incendi }}
+  {{ if and (in (slice "gialla" "arancione" "rossa") .livello) (ge (string .data) $oggiISO) }}
+    {{ $incendiVisibile = true }}
+    {{ $incendiLiv = .livello }}
+    {{ $incendiTitolo = .titolo }}
+    {{ $incendiAib = .livello_aib }}
+    {{ $incendiZona = .zona_aib }}
+    {{ if .data }}
+      {{ $ti := time.AsTime .data }}
+      {{ $incendiDataLeg = printf "%d %s %d" $ti.Day (index $mesi (int $ti.Month)) $ti.Year }}
+    {{ end }}
+    {{ with .domani }}
+      {{ $incendiDomLiv = .livello }}
+      {{ $incendiDomAib = .livello_aib }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{- /* Come per l'avviso meteo: emessa solo se attiva (il JS data-valido
+     ha la guardia if(!b) return, tollera l'assenza). */}}
+{{ if $incendiVisibile }}
+<div id="incendi-bar" class="incendi-bar incendi-bar-{{ $incendiLiv }}" data-valido="{{ with $allerta.rischio_incendi }}{{ .data }}{{ end }}" role="alert" aria-label="Rischio incendi boschivi">
+  <div class="container">
+    <i class="bi bi-fire me-2" aria-hidden="true"></i>
+    <strong>Rischio incendi boschivi:</strong>
+    <span id="incendi-titolo" class="ms-1">{{ $incendiTitolo }}</span>
+    {{ if $incendiAib }}<span class="incendi-aib ms-2">(Zona AIB {{ $incendiZona }} — livello {{ $incendiAib }})</span>{{ end }}
+    {{ if $incendiDataLeg }}<span class="incendi-validita ms-2">· Valido per il {{ $incendiDataLeg }}</span>{{ end }}
+    {{ if $incendiDomAib }}<span class="incendi-domani d-none d-md-inline ms-2">· Domani: {{ $incendiDomAib }}</span>{{ end }}
+    <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini/rischi-incendi" target="_blank" rel="noopener noreferrer" class="ms-2 incendi-link">Bollettino AIB <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+  </div>
+</div>
+{{ end }}
+{{ end }}
