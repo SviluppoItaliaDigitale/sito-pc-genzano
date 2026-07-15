@@ -20,7 +20,7 @@ social_punti:
   - "Vedi fumo o fiamme? Chiama subito il 112"
 ---
 
-Oggi, lunedì 13 luglio 2026, una squadra del nostro Gruppo è stata attivata dalla **Sala Operativa regionale** per un **incendio di sterpaglie a Velletri**. L'intervento è durato **oltre sei ore**, a supporto dei **Vigili del Fuoco** e di altre organizzazioni di volontariato di protezione civile. È il secondo intervento del Gruppo a Velletri in poco più di una settimana, dopo [l'incendio di vegetazione del 5 luglio](/comunicazioni/2026-07-05-incendio-velletri-caranella-via-del-sorbo/).
+Lunedì 13 luglio 2026 una squadra del nostro Gruppo è stata attivata dalla **Sala Operativa regionale** per un **incendio di sterpaglie a Velletri**. L'intervento è durato **oltre sei ore**, a supporto dei **Vigili del Fuoco** e di altre organizzazioni di volontariato di protezione civile. È il secondo intervento del Gruppo a Velletri in poco più di una settimana, dopo [l'incendio di vegetazione del 5 luglio](/comunicazioni/2026-07-05-incendio-velletri-caranella-via-del-sorbo/).
 
 ## L'attivazione e i mezzi impiegati
 
