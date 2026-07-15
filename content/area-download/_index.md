@@ -238,6 +238,7 @@ Un **PDF accessibile** può essere letto da screen reader (NVDA, VoiceOver, Talk
 
 ## Vedi anche
 
+- [Materiali pronti](/risorse-pronte/) — podcast, infografiche, presentazioni e quiz scaricabili, divisi per tema
 - [Cartografia](/cartografia/) — mappe interattive del territorio
 - [Rischi e Prevenzione](/rischi-prevenzione/) — schede operative per ogni rischio
 - [Formazione](/formazione/) — kit didattici e schede stampabili

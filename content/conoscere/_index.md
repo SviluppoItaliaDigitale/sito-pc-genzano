@@ -92,6 +92,7 @@ Cerca il concetto che ti interessa e vai diritto alla pagina che lo spiega. Dove
 - [Glossario](/glossario/) — il significato delle sigle e dei termini tecnici.
 - [Rischi e prevenzione](/rischi-prevenzione/) — la parte operativa, rischio per rischio.
 - [Strumenti in tempo reale](/strumenti/) — radar, mappe e dati live.
+- [Storia del territorio](/storia/) — la linea del tempo degli eventi che hanno segnato Genzano e i Castelli Romani.
 
 ## Pubblicazioni istituzionali da consultare
 

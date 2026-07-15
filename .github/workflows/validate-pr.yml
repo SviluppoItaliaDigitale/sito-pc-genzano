@@ -43,6 +43,22 @@ jobs:
           echo "Pagine generate: $(find public -name '*.html' | wc -l)"
           echo "Dimensione public/: $(du -sh public | cut -f1)"
 
+  menu-sync:
+    name: "Coerenza menu hugo.toml ↔ site-chrome.js"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v5
+
+      - name: "🧭 Verifica che il menu di site-chrome.js sia generato da hugo.toml"
+        # Il blocco MENU-AUTOGEN di site-chrome.js è GENERATO da
+        # scripts/genera-chrome-menu.py a partire da hugo.toml [[menus.main]]
+        # (fonte unica del menu, audit 15/07/2026). Se qualcuno modifica il
+        # menu in hugo.toml senza rigenerare (o edita a mano il blocco),
+        # questo check fallisce PRIMA del merge — sostituisce l'attesa
+        # dell'issue settimanale di audit-sito.yml § 41.
+        run: python3 scripts/genera-chrome-menu.py --check
+
   yaml-syntax:
     name: "Sintassi YAML workflow"
     runs-on: ubuntu-latest
