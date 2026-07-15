@@ -52,6 +52,11 @@ jobs:
           hugo-version: '0.154.5'
           extended: true
 
+      - name: "⚙️ Setup Node.js (per npx pagefind)"
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
       - name: "🔖 Scrivi il fingerprint di build (guardia anti-stale)"
         # Ogni pagina generata da Hugo porterà <meta name="pc-build-sha"> con
         # lo SHA di QUESTO deploy. verifica-deploy-aruba.yml lo campiona sulle
@@ -120,6 +125,17 @@ jobs:
           TZ: Europe/Rome
         run: hugo --minify --baseURL "https://www.protezionecivilegenzano.it/"
 
+      - name: "🔎 Genera indice Pagefind (Aruba)"
+        # L'indice di ricerca full-text è un ARTEFATTO DI BUILD, non un file
+        # sorgente: dal 15/07/2026 NON è più committato in static/pagefind/
+        # (era arrivato a ~432 MB / ~18.000 file versionati, gonfiando repo,
+        # commit e checkout — audit esterno 15/07/2026). Viene generato qui,
+        # fresco a ogni deploy, direttamente in public/pagefind/: stessa URL
+        # pubblica /pagefind/, sempre allineato ai contenuti appena costruiti.
+        # Versione pinnata: allineata a PAGEFIND_VERSION in
+        # scripts/genera-indice-ricerca.sh (aggiornare in coppia).
+        run: npx -y pagefind@1.5.2 --site public
+
       - name: "🔎 Estendi indice cerca con pagine HTML statiche (Aruba)"
         run: python3 scripts/aggiungi-pagine-statiche-al-cerca.py
 
@@ -159,6 +175,9 @@ jobs:
         env:
           TZ: Europe/Rome
         run: hugo --minify --baseURL "https://sviluppoitaliadigitale.github.io/sito-pc-genzano/"
+
+      - name: "🔎 Genera indice Pagefind (GitHub Pages)"
+        run: npx -y pagefind@1.5.2 --site public
 
       - name: "🔎 Estendi indice cerca con pagine HTML statiche (GitHub Pages)"
         run: python3 scripts/aggiungi-pagine-statiche-al-cerca.py
