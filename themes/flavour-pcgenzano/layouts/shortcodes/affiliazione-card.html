@@ -1,0 +1,58 @@
+{{- /*
+  Shortcode: affiliazione-card
+  Card con logo per le sezioni "Affiliazioni e riconoscimenti" e
+  "Accreditamenti" di /chi-siamo/. Sostituisce i blocchi HTML Bootstrap
+  ripetuti nel Markdown (audit esterno 15/07/2026, punto 7: riduzione
+  HTML grezzo nei contenuti).
+
+  Uso (dentro un wrapper <div class="row mb-5 affiliazioni-row">,
+  senza righe vuote tra le card; l'inner contiene la descrizione):
+
+    {{< affiliazione-card logo="/images/quality-label-esc.png"
+        alt="Logo Quality Label European Solidarity Corps"
+        icona="bi-stars" titolo="Quality Label — European Solidarity Corps" >}}
+    <p class="small text-start mb-2">Testo descrittivo…</p>
+    {{< /affiliazione-card >}}
+
+  Parametri:
+  - logo      (obbligatorio) percorso del logo in static/ con leading slash
+              (subpath-safe: TrimPrefix "/" + relURL per GitHub Pages)
+  - alt       (obbligatorio) testo alternativo significativo (WCAG 1.1.1)
+  - titolo    (obbligatorio) titolo della card (h3.h6)
+  - icona     (opzionale) classe Bootstrap Icons accanto al titolo,
+              default "bi-award"
+  - bordo     (opzionale) colore del border-start: "primary" (default,
+              classe BI border-primary) oppure un valore CSS
+              (es. "var(--pc-secondary)", "#15803d")
+  - larghezza (opzionale) larghezza del logo, default "96px";
+              "auto" per loghi non quadrati con sola altezza fissa
+  - altezza   (opzionale) altezza del logo, default "96px"
+
+  ⚠️ Vincolo Reg. (UE) 2021/888 (rule 02): il logo Quality Label ESC va
+  SEMPRE accompagnato dal codice E10435833 nel testo della card — lo
+  shortcode migra solo il markup, il codice resta nel contenuto inner.
+
+  Markup identico ai blocchi originali; lo style inline del logo è
+  sostituito dalle utility BI equivalenti (d-block mx-auto mb-3 +
+  attributi width/height).
+*/ -}}
+{{- $logo := .Get "logo" -}}
+{{- $alt := .Get "alt" -}}
+{{- $titolo := .Get "titolo" -}}
+{{- if not $logo }}{{ errorf "affiliazione-card: parametro 'logo' obbligatorio (%s)" .Position }}{{ end -}}
+{{- if not $alt }}{{ errorf "affiliazione-card: parametro 'alt' obbligatorio (%s)" .Position }}{{ end -}}
+{{- if not $titolo }}{{ errorf "affiliazione-card: parametro 'titolo' obbligatorio (%s)" .Position }}{{ end -}}
+{{- $icona := .Get "icona" | default "bi-award" -}}
+{{- $bordo := .Get "bordo" | default "primary" -}}
+{{- $larghezza := .Get "larghezza" | default "96px" -}}
+{{- $altezza := .Get "altezza" | default "96px" -}}
+{{- $logoURL := $logo | strings.TrimPrefix "/" | relURL -}}
+<div class="col-lg-4 col-md-6 mb-3">
+<div class="card h-100 shadow-sm border-start{{ if eq $bordo "primary" }} border-primary{{ end }} border-4"{{ if ne $bordo "primary" }} style="border-color:{{ $bordo | safeCSS }}!important;"{{ end }}>
+<div class="card-body text-center">
+<img src="{{ $logoURL }}" alt="{{ $alt }}" class="d-block mx-auto mb-3"{{ if ne $larghezza "auto" }} width="{{ $larghezza | strings.TrimSuffix "px" }}"{{ end }} height="{{ $altezza | strings.TrimSuffix "px" }}">
+<h3 class="h6 text-center"><i class="bi {{ $icona }} text-primary me-2" aria-hidden="true"></i> {{ $titolo }}</h3>
+{{ .Inner | .Page.RenderString (dict "display" "block") }}
+</div>
+</div>
+</div>

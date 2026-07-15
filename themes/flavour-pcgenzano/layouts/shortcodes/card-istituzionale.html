@@ -1,0 +1,44 @@
+{{- /*
+  Shortcode: card-istituzionale
+  Card istituzionale con barra colorata a sinistra (border-start border-4)
+  per le sezioni "Riferimenti istituzionali" e "Settori operativi" di
+  /chi-siamo/. Sostituisce i blocchi HTML Bootstrap ripetuti nel Markdown
+  (audit esterno 15/07/2026, punto 7: riduzione HTML grezzo nei contenuti).
+
+  Uso (dentro un wrapper <div class="row mb-5">, senza righe vuote tra
+  le card; l'inner contiene il corpo della card):
+
+    {{< card-istituzionale classe="h5" icona="bi-fire" colore="danger"
+        bordo="#c1121f" titolo="Antincendio boschivo (AIB)" >}}
+    <p>Testo della card…</p>
+    {{< /card-istituzionale >}}
+
+  Parametri:
+  - titolo (obbligatorio) titolo della card (reso come <h3>)
+  - icona  (obbligatorio) classe Bootstrap Icons accanto al titolo
+  - classe (opzionale) classe tipografica del titolo: "h6" (default,
+           riferimenti istituzionali) o "h5" (settori operativi)
+  - colore (opzionale) colore utility BI dell'icona (primary/warning/
+           success/purple/danger/info/...), default "primary"
+  - bordo  (opzionale) colore del border-start: "primary" (default,
+           classe BI border-primary) oppure un valore CSS
+           (es. "var(--pc-secondary)", "#28a745")
+
+  Markup identico ai blocchi originali (col-md-6 mb-3 > card h-100
+  shadow-sm border-start border-4).
+*/ -}}
+{{- $titolo := .Get "titolo" -}}
+{{- $icona := .Get "icona" -}}
+{{- if not $titolo }}{{ errorf "card-istituzionale: parametro 'titolo' obbligatorio (%s)" .Position }}{{ end -}}
+{{- if not $icona }}{{ errorf "card-istituzionale: parametro 'icona' obbligatorio (%s)" .Position }}{{ end -}}
+{{- $classe := .Get "classe" | default "h6" -}}
+{{- $colore := .Get "colore" | default "primary" -}}
+{{- $bordo := .Get "bordo" | default "primary" -}}
+<div class="col-md-6 mb-3">
+<div class="card h-100 shadow-sm border-start{{ if eq $bordo "primary" }} border-primary{{ end }} border-4"{{ if ne $bordo "primary" }} style="border-color:{{ $bordo | safeCSS }}!important;"{{ end }}>
+<div class="card-body">
+<h3 class="{{ $classe }}"><i class="bi {{ $icona }} text-{{ $colore }} me-2" aria-hidden="true"></i> {{ $titolo }}</h3>
+{{ .Inner | .Page.RenderString (dict "display" "block") }}
+</div>
+</div>
+</div>
