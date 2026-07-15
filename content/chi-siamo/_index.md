@@ -7,7 +7,7 @@ aliases:
   - /chisiamo.html
   - /chisiamo/
 tts: true
-dataUltimaRevisione: "2026-06-08"
+dataUltimaRevisione: "2026-07-15"
 ---
 <!-- cache-bust: 2026-05-29 forza re-upload FTP dopo aggiunta voce di menu globale "Conoscere la Protezione Civile" -->
 
@@ -42,6 +42,8 @@ dataUltimaRevisione: "2026-06-08"
 <p class="small mb-0">Opera in coordinamento con il Sindaco, autorità locale di protezione civile, con il Comando di Polizia Locale, con la Sala Operativa Regionale Lazio e con il coordinamento FEPIVOL.</p>
 {{< /card-istituzionale >}}
 </div>
+
+<p class="small text-muted mb-5"><i class="bi bi-patch-check me-1" aria-hidden="true"></i> Nomi e incarichi verificati direttamente dal Gruppo il <strong>15 luglio 2026</strong> (in quanto articolazione del Comune, il Gruppo conosce di prima mano i propri referenti istituzionali). Prossima verifica prevista: <strong>ottobre 2026</strong>. Se noti un'informazione non aggiornata, <a href="mailto:segreteria@protezionecivilegenzano.it">segnalacela</a>.</p>
 
 ## Affiliazioni e riconoscimenti
 
