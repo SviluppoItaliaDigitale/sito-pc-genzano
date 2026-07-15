@@ -128,6 +128,10 @@ Quando i materiali vengono copiati, adattati o redistribuiti, è gradita una cit
 
 Le eventuali immagini o risorse di terze parti mantengono la propria licenza originaria.
 
+## Kit per chi gestisce un luogo o un gruppo
+
+Se invece di una persona devi preparare **un'organizzazione** — un negozio, un condominio, un'associazione, un evento — c'è una raccolta dedicata: i [Kit per le organizzazioni](/kit-organizzazioni/), con schede di preparazione all'emergenza parallele a questi kit.
+
 ## Aggiornamenti e nuovi kit
 
 I kit possono essere migliorati nel tempo. Per segnalare bisogni, proporre nuove schede o indicare imprecisioni, scrivi a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).

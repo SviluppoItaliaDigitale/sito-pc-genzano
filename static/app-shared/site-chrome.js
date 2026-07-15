@@ -68,14 +68,12 @@
               '<div class="overlay" style="display:none;"></div>' +
               '<div class="close-div"><button class="btn close-menu" type="button" aria-label="Chiudi il menu di navigazione"><span class="visually-hidden">Chiudi</span><svg class="icon"><use href="' + SITE_URL + '/vendor/bootstrap-italia/svg/sprites.svg#it-close-big"></use></svg></button></div>' +
               '<div class="menu-wrapper"><ul class="navbar-nav" role="menubar">' +
-                /*
-                 * IMPORTANTE: questo menu deve restare SEMPRE allineato a hugo.toml
-                 * sezione [[menus.main]] e a themes/flavour-pcgenzano/layouts/partials/navbar.html.
-                 * Il workflow audit-sito.yml § "Coerenza menu Hugo ↔ site-chrome.js"
-                 * apre un'issue settimanale se trova drift.
-                 */
+                /* MENU-AUTOGEN:START — blocco GENERATO da
+                   scripts/genera-chrome-menu.py a partire da hugo.toml
+                   [[menus.main]] (fonte unica del menu, audit 15/07/2026).
+                   NON modificare a mano: modifica hugo.toml e rilancia
+                   lo script. validate-pr.yml fallisce se c'e' drift. */
                 '<li class="nav-item" role="none"><a class="nav-link" href="' + SITE_URL + '/" role="menuitem"><span>Home</span></a></li>' +
-                /* Dropdown: Per il Cittadino (9 voci, +Kit organizzazioni giugno 2026) */
                 '<li class="nav-item dropdown" role="none">' +
                   '<a class="nav-link dropdown-toggle" href="#" id="navDropdown-per-il-cittadino" role="menuitem" data-bs-toggle="dropdown" aria-expanded="false">' +
                     '<span>Per il Cittadino</span>' +
@@ -90,12 +88,9 @@
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/numeri-utili/" role="menuitem"><span>Numeri Utili</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/piano-familiare/" role="menuitem"><span>Piano Familiare</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/kit-calamita/" role="menuitem"><span>Kit pronti per situazioni vulnerabili</span></a></li>' +
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/kit-organizzazioni/" role="menuitem"><span>Kit per le organizzazioni</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/cruscotto/" role="menuitem"><span>Cruscotto del territorio</span></a></li>' +
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/stato-del-territorio/" role="menuitem"><span>Lo stato del territorio</span></a></li>' +
                   '</ul></div></div>' +
                 '</li>' +
-                /* Dropdown: Per le scuole (6 voci didattiche, splittato da "Educazione e Inclusione" maggio 2026) */
                 '<li class="nav-item dropdown" role="none">' +
                   '<a class="nav-link dropdown-toggle" href="#" id="navDropdown-per-le-scuole" role="menuitem" data-bs-toggle="dropdown" aria-expanded="false">' +
                     '<span>Per le scuole</span>' +
@@ -105,20 +100,17 @@
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/" role="menuitem"><span>Formazione e scuole</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/percorsi-didattici/" role="menuitem"><span>Percorsi didattici pronti</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/schede-stampabili/" role="menuitem"><span>Schede didattiche stampabili</span></a></li>' +
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/educazione-civica/" role="menuitem"><span>Per i docenti — Ed. Civica</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/educazione-civica/" role="menuitem"><span>Per i docenti &#8212; Ed. Civica</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/storie-e-racconti/" role="menuitem"><span>Storie e Racconti</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/giochi/" role="menuitem"><span>Giochi della Sicurezza</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/catalogo-giochi/" role="menuitem"><span>Catalogo dei giochi</span></a></li>' +
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/esperimenti/" role="menuitem"><span>Esperimenti e attività</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/esperimenti/" role="menuitem"><span>Esperimenti e attivit&#224;</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/laboratorio-meteo/" role="menuitem"><span>Laboratorio meteo</span></a></li>' +
-                    /* Quiz "Quanto sei preparato?" rimosso dal menu il 22 maggio 2026:
-                       ancorato come strumento dentro /piano-familiare/ (autovalutazione del cittadino). */
                   '</ul></div></div>' +
                 '</li>' +
-                /* Dropdown: Accessibilità e Supporti (2 voci trasversali, nuovo maggio 2026) */
                 '<li class="nav-item dropdown" role="none">' +
                   '<a class="nav-link dropdown-toggle" href="#" id="navDropdown-accessibilita-supporti" role="menuitem" data-bs-toggle="dropdown" aria-expanded="false">' +
-                    '<span>Accessibilità e Supporti</span>' +
+                    '<span>Accessibilit&#224; e Supporti</span>' +
                     '<svg class="icon icon-xs"><use href="' + SITE_URL + '/vendor/bootstrap-italia/svg/sprites.svg#it-expand"></use></svg>' +
                   '</a>' +
                   '<div class="dropdown-menu" aria-labelledby="navDropdown-accessibilita-supporti"><div class="link-list-wrapper"><ul class="link-list" role="menu">' +
@@ -128,7 +120,6 @@
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/tabelle-comunicazione/" role="menuitem"><span>Tabelle di comunicazione (CAA)</span></a></li>' +
                   '</ul></div></div>' +
                 '</li>' +
-                /* Dropdown: Volontariato */
                 '<li class="nav-item dropdown" role="none">' +
                   '<a class="nav-link dropdown-toggle" href="#" id="navDropdown-volontariato" role="menuitem" data-bs-toggle="dropdown" aria-expanded="false">' +
                     '<span>Volontariato</span>' +
@@ -136,23 +127,13 @@
                   '</a>' +
                   '<div class="dropdown-menu" aria-labelledby="navDropdown-volontariato"><div class="link-list-wrapper"><ul class="link-list" role="menu">' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/diventa-volontario/" role="menuitem"><span>Diventa Volontario</span></a></li>' +
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/campagna-volontari/" role="menuitem"><span>La campagna social</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/chi-siamo/" role="menuitem"><span>Chi Siamo</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/campagna-volontari/" role="menuitem"><span>La campagna social</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/per-gli-enti/" role="menuitem"><span>Per gli enti e le scuole</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/san-pio-da-pietrelcina/" role="menuitem"><span>Il nostro patrono</span></a></li>' +
-                    /* Aggiunto 16/05/2026: hub addestramento del Gruppo (turni + esercitazioni) */
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/esercitazioni/" role="menuitem"><span>Addestramento e buone pratiche</span></a></li>' +
                   '</ul></div></div>' +
                 '</li>' +
-                /* Dropdown: Risorse (6 voci, riorganizzato maggio 2026):
-                   - Podcast + Articoli da ascoltare → hub "Audio e podcast"
-                   - Open Data + Stato del Sito → sezioni in /trasparenza/
-                   - Trasparenza + Stato del Sito → footer (accountability)
-                   - Mappa del Sito → solo footer (era duplicata)
-                   - Storia del territorio → "Per il Cittadino"
-                   - Standard ISO → sezione in /normativa/ (norme tecniche
-                     internazionali, completa la tassonomia nazionale/
-                     regionale/comunale; testo a pagamento iso.org/uni.com) */
                 '<li class="nav-item dropdown" role="none">' +
                   '<a class="nav-link dropdown-toggle" href="#" id="navDropdown-risorse" role="menuitem" data-bs-toggle="dropdown" aria-expanded="false">' +
                     '<span>Risorse</span>' +
@@ -168,13 +149,11 @@
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/normativa/" role="menuitem"><span>Normativa</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/strumenti/" role="menuitem"><span>Strumenti in Tempo Reale</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/audio-e-podcast/" role="menuitem"><span>Audio e podcast</span></a></li>' +
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/risorse-pronte/" role="menuitem"><span>Materiali pronti</span></a></li>' +
-                    /* Spostato da "Per il Cittadino" maggio 2026: timeline storica = consultazione narrativa, fra le risorse */
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/storia/" role="menuitem"><span>Storia del territorio</span></a></li>' +
                   '</ul></div></div>' +
                 '</li>' +
                 '<li class="nav-item" role="none"><a class="nav-link" href="' + SITE_URL + '/comunicazioni/" role="menuitem"><span>Comunicazioni</span></a></li>' +
                 '<li class="nav-item" role="none"><a class="nav-link" href="' + SITE_URL + '/contatti/" role="menuitem"><span>Contatti</span></a></li>' +
+                /* MENU-AUTOGEN:END */
               '</ul></div>' +
             '</div>' +
           '</nav>' +
