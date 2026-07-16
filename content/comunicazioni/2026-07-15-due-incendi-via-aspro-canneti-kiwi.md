@@ -1,14 +1,14 @@
 ---
-title: "Due incendi in un giorno: sterpaglie in via dell'Aspro a Genzano e canneti tra le coltivazioni di kiwi"
+title: "Due incendi in un giorno: sterpaglie in via dell'Aspro a Genzano e canneti a Lanuvio"
 date: 2026-07-15T00:02:00+02:00
-description: "Due incendi in un giorno: la mattina il Defender 130 su sterpaglie in fiamme, il pomeriggio anche l'autobotte Actros a supporto dei Vigili del Fuoco."
+description: "La mattina il Defender 130 sulle sterpaglie di via dell'Aspro a Genzano; il pomeriggio anche l'autobotte Actros a Lanuvio, con i Vigili del Fuoco."
 badge: "Attività"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-07-15-due-incendi-via-aspro-canneti-kiwi.webp"
-image_alt: "Cover dell'articolo: Due incendi in un giorno: sterpaglie in via dell'Aspro a Genzano e canneti tra le coltivazioni di kiwi"
+image_alt: "Cover dell'articolo: Due incendi in un giorno: sterpaglie in via dell'Aspro a Genzano e canneti a Lanuvio"
 scadenza: ""
-area: "Genzano di Roma"
+area: "Genzano di Roma e Lanuvio (RM)"
 allegati: []
 draft: false
 lis_section: "rischio-incendio"
@@ -16,11 +16,11 @@ social_citazione: "Le canne secche bruciano in fretta e con fiamme alte: il lavo
 social_punti:
   - "15 luglio 2026: due attivazioni per il Gruppo nella stessa giornata"
   - "Mattina: incendio di sterpaglie in via dell'Aspro a Genzano, un'ora e mezza di intervento con il Defender 130"
-  - "Pomeriggio: canneti in fiamme vicino a piantagioni di kiwi, oltre due ore e mezza a supporto dei Vigili del Fuoco"
+  - "Pomeriggio: canneti in fiamme a Lanuvio, vicino a piantagioni di kiwi: oltre due ore e mezza a supporto dei Vigili del Fuoco"
   - "Vedi fumo o fiamme? Chiama subito il 112"
 ---
 
-Mercoledì 15 luglio 2026 il nostro Gruppo è stato attivato **due volte nella stessa giornata** dalla **Sala Operativa regionale**, per due incendi di vegetazione distinti. La mattina le fiamme hanno interessato un terreno con sterpaglie in **via dell'Aspro, a Genzano di Roma**. Il pomeriggio la squadra è intervenuta su **diversi canneti a ridosso di piantagioni di kiwi**, a supporto dei **Vigili del Fuoco**. Siamo in piena [campagna antincendio boschivo](/comunicazioni/2026-06-14-campagna-aib-2026-adempimenti-operativi-regione-lazio/): il caldo e la vegetazione secca rendono il territorio vulnerabile.
+Mercoledì 15 luglio 2026 il nostro Gruppo è stato attivato **due volte nella stessa giornata** dalla **Sala Operativa regionale**, per due incendi di vegetazione distinti. La mattina le fiamme hanno interessato un terreno con sterpaglie in **via dell'Aspro, a Genzano di Roma**. Il pomeriggio la squadra è intervenuta **a Lanuvio**, su **diversi canneti a ridosso di piantagioni di kiwi**, a supporto dei **Vigili del Fuoco**. Siamo in piena [campagna antincendio boschivo](/comunicazioni/2026-06-14-campagna-aib-2026-adempimenti-operativi-regione-lazio/): il caldo e la vegetazione secca rendono il territorio vulnerabile.
 
 ## La mattina: sterpaglie in fiamme in via dell'Aspro
 
@@ -28,9 +28,9 @@ Su attivazione della Sala Operativa regionale, la squadra ha raggiunto **via del
 
 L'intervento è durato **circa un'ora e mezza**, tra spegnimento e bonifica finale. Nella bonifica si bagnano braci e ceneri finché il terreno non è freddo, per evitare che il fuoco riparta con il vento.
 
-## Il pomeriggio: canneti in fiamme vicino alle coltivazioni di kiwi
+## Il pomeriggio: canneti in fiamme a Lanuvio
 
-Nel pomeriggio la Sala Operativa ha attivato di nuovo il Gruppo. Questa volta la squadra si è mossa con **entrambi i mezzi antincendio**: il Defender 130 e l'**autobotte chilolitrica**, il **Mercedes Actros** con impianto antincendio da **14.000 litri**. L'autobotte garantisce la riserva d'acqua alle squadre impegnate nello spegnimento.
+Nel pomeriggio la Sala Operativa ha attivato di nuovo il Gruppo per un incendio **a Lanuvio**, nel comune confinante. Questa volta la squadra si è mossa con **entrambi i mezzi antincendio**: il Defender 130 e l'**autobotte chilolitrica**, il **Mercedes Actros** con impianto antincendio da **14.000 litri**. L'autobotte garantisce la riserva d'acqua alle squadre impegnate nello spegnimento.
 
 Sul posto i volontari si sono messi **a disposizione dei Vigili del Fuoco**, che dirigevano le operazioni. L'incendio interessava **diversi canneti** che lambivano numerose **piantagioni di kiwi**. Le canne secche bruciano in fretta e con fiamme alte: il lavoro delle squadre ha contribuito a proteggere le coltivazioni vicine. Le operazioni sono durate **oltre due ore e mezza**.
 
