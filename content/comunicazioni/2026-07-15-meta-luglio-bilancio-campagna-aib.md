@@ -1,6 +1,6 @@
 ---
 title: "Metà luglio: bilancio intermedio della campagna AIB"
-date: 2026-07-15
+date: 2026-07-15T00:01:00+02:00
 description: "A metà della campagna antincendio boschivo, è il momento di un bilancio intermedio. Cosa dicono i numeri, le tendenze meteo e l'organizzazione del sistema."
 badge: "Aggiornamento"
 priorita: "normale"
