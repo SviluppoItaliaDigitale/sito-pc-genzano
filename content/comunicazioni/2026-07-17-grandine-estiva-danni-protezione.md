@@ -1,6 +1,6 @@
 ---
 title: "Grandine estiva: riconoscerla, prevenirla, gestire i danni"
-date: 2026-07-17
+date: 2026-07-17T00:01:00+02:00
 description: "La grandine è una delle conseguenze più spettacolari e dannose dei temporali estivi. Come si forma, come proteggersi e cosa fare quando colpisce."
 badge: "Prevenzione"
 priorita: "normale"
