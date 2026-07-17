@@ -24,7 +24,7 @@ Venerdì 17 luglio 2026 una nostra squadra è intervenuta per un **incendio di v
 
 ## Quattro gruppi sullo stesso scenario
 
-Le fiamme hanno percorso un campo di **stoppie e vegetazione secca**, sollevando molto fumo. Le squadre hanno lavorato fianco a fianco con **naspi e lance**. Hanno steso le manichette tra le sterpaglie per raggiungere i punti ancora attivi.
+Le fiamme hanno percorso un campo di **stoppie e vegetazione secca**, sollevando molto fumo. La nostra squadra ha operato con il **Land Rover Defender 130**, il pickup 4x4 con modulo antincendio da 600 litri. Le squadre hanno lavorato fianco a fianco con **naspi e lance**. Hanno steso le manichette tra le sterpaglie per raggiungere i punti ancora attivi.
 
 Giornate come questa mostrano come funziona la campagna antincendio. La SOUP coordina dalla sala regionale e, quando un incendio richiede più forze, attiva le squadre dei comuni vicini. I gruppi comunali si conoscono, usano le stesse procedure e si integrano rapidamente sotto la direzione dei Vigili del Fuoco.
 
