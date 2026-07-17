@@ -1,6 +1,6 @@
 ---
 title: "La grandine: cosa è e cosa fare"
-date: 2026-07-17
+date: 2026-07-17T00:01:00+02:00
 draft: false
 description: "Cos'è la grandine, perché è pericolosa e cosa fare per proteggerti."
 badge: "Prevenzione"
