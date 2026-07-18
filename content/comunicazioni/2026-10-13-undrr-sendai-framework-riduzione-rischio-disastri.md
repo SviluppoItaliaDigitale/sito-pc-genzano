@@ -1,7 +1,7 @@
 ---
-title: "Sendai Framework e ONU: che cosa fa il mondo per la riduzione del rischio"
-date: 2026-10-13T00:02:00+02:00
-description: "Nella Giornata Internazionale ONU per la Riduzione del Rischio di Disastri, ripercorriamo il Sendai Framework, i suoi sette obiettivi."
+title: "13 ottobre, Giornata ONU per la riduzione dei disastri: il Sendai Framework e cosa facciamo a Genzano"
+date: 2026-10-13
+description: "Nella Giornata Internazionale ONU per la riduzione del rischio di disastri: il Sendai Framework, i suoi obiettivi e cosa può fare ogni comune e cittadino."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -67,6 +67,18 @@ L'Italia ha tradotto il Sendai Framework in:
 - **Piano Nazionale di Protezione Civile** e Piani Regionali / Comunali (come il nostro [Piano di Emergenza](/piano-emergenza/)).
 - **Casa Italia** e **PNRR**: programmi di investimento sulla resilienza degli edifici pubblici e sulla ricostruzione post-evento (Sismabonus, Superbonus per la riqualificazione energetica e sismica).
 - **Sistema di allertamento multirischio**: dal Centro Funzionale Centrale al Centro Funzionale Regionale del Lazio, fino a [IT-alert](https://www.it-alert.it/) per i messaggi di emergenza diretti alla popolazione.
+
+## Il ruolo di ogni comune
+
+Ogni Comune italiano, anche il più piccolo, contribuisce al Sendai Framework attraverso strumenti concreti:
+
+- il **Piano di Emergenza Comunale**;
+- i **sistemi di monitoraggio** del territorio;
+- la **formazione** del personale e dei cittadini;
+- il **volontariato di protezione civile**;
+- la **pianificazione urbanistica** attenta al rischio.
+
+Genzano non fa eccezione. Il lavoro del **Gruppo Comunale di Protezione Civile**, della **struttura comunale di PC** e della **Polizia Locale** è parte della risposta italiana agli obiettivi globali. Gli obiettivi di Sendai non si raggiungono solo nei vertici internazionali: si costruiscono nei territori, un comune alla volta.
 
 ## Cosa puoi fare tu
 
