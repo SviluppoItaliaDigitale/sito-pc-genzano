@@ -94,6 +94,6 @@ Nove anni dopo, Bondo è stato ricostruito. Il **bacino di laminazione** è stat
 
 ## Approfondimenti dal nostro archivio
 
-- [Vajont, 63 anni: memoria e prevenzione](/comunicazioni/2026-10-09-vajont-63-anni-memoria-prevenzione/)
+- [Vajont, 63 anni: memoria e prevenzione](/comunicazioni/2026-10-09-vajont-1963-tragedia-prevista/)
 - [Cambiamento climatico e protezione civile](/comunicazioni/2026-09-24-cambiamento-climatico-protezione-civile/)
 - [Val Pola 1987, frana e monitoraggio continuo](/comunicazioni/2026-07-28-val-pola-1987-frana-monitoraggio-continuo/)
