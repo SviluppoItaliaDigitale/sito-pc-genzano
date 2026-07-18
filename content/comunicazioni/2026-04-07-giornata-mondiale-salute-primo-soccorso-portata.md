@@ -85,7 +85,7 @@ I **defibrillatori automatici esterni** sono apparecchi **semplici e sicuri**. G
 
 La **Regione Lazio** ha fatto passi importanti nella diffusione dei DAE — ne abbiamo parlato in [un articolo dedicato](/comunicazioni/2026-03-16-defibrillatori-regione-lazio-protezione-civile/).
 
-**Chi può usare un DAE?** Chiunque. La legge italiana (230/2021 — "BLSD a tutti") ha esteso l'uso del defibrillatore a **ogni cittadino in caso di necessità**, anche senza formazione specifica.
+**Chi può usare un DAE?** Chiunque. La legge italiana (Legge 4 agosto 2021, n. 116) ha esteso l'uso del defibrillatore a **ogni cittadino in caso di necessità**, anche senza formazione specifica.
 
 ## Le emergenze pediatriche
 

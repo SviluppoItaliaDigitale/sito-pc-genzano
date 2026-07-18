@@ -168,7 +168,7 @@ I **Centri Antiviolenza** offrono:
 - **informazioni** obbligatorie alla vittima.
 
 ### Femminicidio come aggravante
-- **disciplina** specifica introdotta da **D.Lgs. 93/2013**;
+- **disciplina** specifica introdotta dal **D.L. 93/2013** (convertito con modificazioni dalla L. 119/2013);
 - **aumento** pene per violenza con aggravanti;
 - **misure** di protezione urgenti.
 

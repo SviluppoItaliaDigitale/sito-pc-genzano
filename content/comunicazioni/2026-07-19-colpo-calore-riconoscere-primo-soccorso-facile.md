@@ -142,7 +142,7 @@ Il Servizio di Emergenza Sanitario arriva in pochi minuti nelle zone urbane. In 
 ## Numeri utili
 
 - **112** — numero unico di emergenza (qualsiasi emergenza).
-- **800 55 60 60** — Numero Verde SOS Caldo (gratuito).
+- **1500** — Numero "Proteggiamoci dal caldo" del Ministero della Salute (gratuito).
 
 ## Per saperne di più
 

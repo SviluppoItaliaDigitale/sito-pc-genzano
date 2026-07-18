@@ -22,8 +22,8 @@ In questo articolo guardiamo cosa significa **prevenire i disastri a livello glo
 Il **Sendai Framework**, adottato il 18 marzo 2015 dalla Terza Conferenza Mondiale ONU sulla Riduzione del Rischio di Disastri, fissa **sette obiettivi globali** misurabili da raggiungere entro il **2030**:
 
 {{< foto src="/images/2026-10-13-undrr-sendai-framework-riduzione-rischio-disastri-fonte-wikipedia.webp"
-         alt="Foto storica: Sendai Framework e ONU: che cosa fa il mondo per la riduzione del rischio"
-         caption="Foto: Joowwww — Public domain — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Emblem_of_the_United_Nations.svg)." >}}
+         alt="Emblema delle Nazioni Unite: una mappa del globo terrestre vista dal Polo Nord, in oro su sfondo nero, racchiusa da due rami d'ulivo dorati intrecciati alla base"
+         caption="L'emblema delle Nazioni Unite, l'organizzazione che nel 2015 ha adottato il Sendai Framework durante la Terza Conferenza Mondiale sulla Riduzione del Rischio di Disastri. Foto: Joowwww — Public domain — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Emblem_of_the_United_Nations.svg)." >}}
 
 
 1. Ridurre la **mortalità globale** per disastri (target: -50% rispetto al periodo 2005-2015)

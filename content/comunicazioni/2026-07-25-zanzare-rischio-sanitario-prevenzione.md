@@ -59,13 +59,13 @@ Le specie **invasive** hanno alterato il quadro epidemiologico.
 
 ## I numeri in Italia
 
-Dati **ISS** recenti:
+Dati **ISS** (Istituto Superiore di Sanità):
 - **West Nile 2022**: oltre 600 casi in Italia.
 - **Dengue autoctono 2023-2024**: focolai documentati.
 - **Chikungunya 2017**: 379 casi nel Lazio.
 - **Zika**: casi importati in crescita.
 
-Il **Lazio** è tra le regioni colpite.
+Anche l'**estate 2026** è iniziata presto: a metà luglio le autorità sanitarie hanno confermato il **primo caso autoctono di West Nile nel Lazio**, in provincia di Latina, con gli interventi di disinfestazione previsti dal Piano nazionale arbovirosi. Il **Lazio** è tra le regioni storicamente più colpite. I dati aggiornati sono nel [bollettino periodico dell'ISS sulle arbovirosi](https://www.epicentro.iss.it/arbovirosi/bollettini).
 
 ## Perché aumentano i casi
 

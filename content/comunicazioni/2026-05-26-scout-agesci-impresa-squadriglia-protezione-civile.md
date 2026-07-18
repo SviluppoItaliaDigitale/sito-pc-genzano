@@ -25,7 +25,7 @@ Domenica mattina 24 maggio una squadriglia del **gruppo scout AGESCI di Genzano 
 ## Un'impresa scout sul tema della protezione civile
 
 {{< foto src="/images/2026-05-24-scout-agesci-visita-colonna-mobile.webp"
-         alt="Quattro persone in posa davanti a un grande autocarro bianco con la scritta \"Regione Lazio - Protezione Civile / Colonna Mobile - Volontariato\" e \"Città di Genzano di Roma\". A sinistra un adulto in maglia nera, al centro due ragazzi in maglia azzurra, a destra un adulto in polo scura con pantaloni operativi a bande rosse riflettenti."
+         alt="Cinque persone in posa davanti a un grande autocarro bianco con la scritta \"Regione Lazio - Protezione Civile / Colonna Mobile - Volontariato\" e \"Città di Genzano di Roma\". A sinistra un adulto con cappellino e maglia scura, poi un ragazzo scout in tenuta scura, due ragazzi in maglia azzurra, a destra un adulto in polo scura con pantaloni operativi a bande rosse riflettenti."
          caption="La squadriglia davanti al Mercedes Actros del Gruppo, autobotte antincendio da 14.000 litri della Regione Lazio. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
 L'**impresa di squadriglia** è il progetto autogestito della branca Esploratori e Guide (12-16 anni). I ragazzi lo ideano e lo portano avanti in piccolo gruppo, con il supporto dei loro capi. Il metodo è quello della tradizione scout: scegliere un tema, studiarlo, provarlo sul campo, restituirlo alla propria comunità.

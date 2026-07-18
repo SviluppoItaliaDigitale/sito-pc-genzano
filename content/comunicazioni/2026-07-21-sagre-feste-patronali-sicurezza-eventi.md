@@ -83,7 +83,8 @@ La **Protezione Civile comunale** partecipa a questi tavoli.
 ## Il ruolo della PC
 
 Durante un evento i volontari di PC svolgono:
-- **Controllo varchi** e flussi.
+- **Informazione e accoglienza** nei punti di accesso pedonale.
+- **Presidio** delle aree pedonali dedicate, dei punti di raccolta e delle vie di fuga.
 - **Assistenza** a persone in difficoltà.
 - **Collaborazione** con ambulanze per raggiungere feriti.
 - **Primi soccorsi** di base.
@@ -221,7 +222,9 @@ Molti volontari sono passati da sagre a grandi attivazioni nazionali.
 
 ## Per approfondire
 
-- Articolo: [Infiorata di Genzano 2026](/comunicazioni/2026-06-23-assistenza-sagre-grandi-eventi-locali/)
+- Articolo: [Infiorata 2026: il Sindaco attiva il Centro Operativo Comunale](/comunicazioni/2026-06-03-infiorata-2026-attivazione-coc/)
+- Articolo: [Assistenza a sagre e grandi eventi locali: cosa fa la PC](/comunicazioni/2026-06-23-assistenza-sagre-grandi-eventi-locali/)
+- Articolo: [Colpo di calore: riconoscerlo e intervenire subito](/comunicazioni/2026-07-19-colpo-calore-riconoscere-primo-soccorso/)
 - Articolo: [Esercitazioni PC a cosa servono](/comunicazioni/2026-07-09-esercitazioni-pc-a-cosa-servono/)
 - Articolo: [Chi siamo](/chi-siamo/)
 - [Ministero Interno — Circolare Gabrielli](https://www.interno.gov.it/)

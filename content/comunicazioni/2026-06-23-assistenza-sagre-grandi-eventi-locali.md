@@ -33,7 +33,7 @@ La presenza di squadre di PC **riduce il tempo di risposta** e supporta la gesti
 Dopo la tragedia di **Torino 2017** (piazza San Carlo, 3 giugno 2017) il Ministero dell'Interno ha emanato direttive precise sulla sicurezza dei grandi eventi:
 
 - **Circolare Gabrielli** (7 giugno 2017) — prima linea guida.
-- **Direttiva Morcone** (2018) — indicazioni aggiornate.
+- **Direttiva Morcone** (28 luglio 2017) — indicazioni aggiornate.
 - **Circolari prefettizie** locali — applicazioni territoriali.
 
 Ogni grande evento richiede un **Piano di Safety** presentato al Comune e condiviso con forze dell'ordine, VVF, ASL, PC.

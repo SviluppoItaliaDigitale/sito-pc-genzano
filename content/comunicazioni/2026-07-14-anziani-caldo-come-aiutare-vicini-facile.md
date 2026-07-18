@@ -111,7 +111,7 @@ Se non sai come aiutare, parla con i servizi sociali del Comune.
 
 ## Il numero verde del Ministero della Salute
 
-Ogni estate il Ministero della Salute attiva il numero verde **800 55 60 60**. Puoi chiamare gratis per avere informazioni sul caldo.
+Ogni estate il Ministero della Salute attiva il numero **1500**. Puoi chiamare gratis per avere informazioni sul caldo.
 
 ## Le associazioni
 

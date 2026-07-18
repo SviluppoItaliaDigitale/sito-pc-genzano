@@ -18,8 +18,8 @@ draft: false
 Sono passati **quarantacinque anni** da quei tre giorni. La sera del **10 giugno 1981**, in via Sant'Ireneo, **località Selvotta** lungo la **via di Vermicino** — territorio del Comune di **Frascati**, a pochi chilometri da Genzano di Roma — un bambino di **sei anni**, **Alfredo "Alfredino" Rampi**, scivolò in un **pozzo artesiano** lasciato aperto e profondo circa **80 metri**. Si fermò in un restringimento a circa **60 metri** di profondità.
 
 {{< foto src="/images/2026-evento-vermicino-1981-pozzo.webp"
-         alt="Il pozzo artesiano di Vermicino dove il 10 giugno 1981 precipitò il piccolo Alfredino Rampi"
-         caption="Vermicino (Frascati), giugno 1981. La diretta TV del soccorso ad Alfredino Rampi cambia per sempre il rapporto degli italiani con la macchina del soccorso. Da lì nasce, due anni dopo, il Ministero per la Protezione Civile." >}}
+         alt="Murale su un edificio residenziale che raffigura Alfredino Rampi da bambino, sorridente, in canottiera a righe: opera dell'artista Lucamaleonte nel quartiere Garbatella a Roma"
+         caption="Il murale dedicato ad Alfredino Rampi, opera dell'artista Lucamaleonte nel quartiere Garbatella di Roma (2022). Il 10 giugno 1981 il piccolo Alfredino cadde in un pozzo artesiano a Vermicino (Frascati): la diretta TV del soccorso cambiò per sempre il rapporto degli italiani con la macchina del soccorso. Da lì nasce, due anni dopo, il Ministero per la Protezione Civile." >}}
 
 Quello che seguì furono **tre giorni e tre notti** in cui l'Italia intera si fermò davanti al televisore. La RAI andò in **diretta unificata** per le ultime diciotto ore, una scelta editoriale che segnò la storia della televisione italiana. I soccorsi tentarono di tutto: scavi paralleli, sostegno con cinghie, calata di un sub-speleologo. Ma **Alfredino non si poteva raggiungere**.
 
@@ -53,7 +53,7 @@ Da quel trauma collettivo nacquero diverse cose:
 
 - **Il Centro Alfredo Rampi**, fondato pochi mesi dopo dai genitori del bambino, **Franca e Ferdinando Rampi**. È un'organizzazione che si occupa di **prevenzione del rischio ambientale** e di **psicologia dell'emergenza**. Ancora oggi è uno dei principali enti italiani di formazione su questi temi e collabora con il Dipartimento di Protezione Civile e con il sistema scolastico.
 
-- **L'accelerazione del progetto di protezione civile italiana**. La legge **938/1981** — **istitutiva del Ministero per il coordinamento della Protezione Civile** — fu approvata pochi mesi dopo Vermicino, nel novembre 1981. La pressione politica e l'opinione pubblica ricevettero da Vermicino una spinta decisiva. Ne abbiamo parlato anche nell'articolo sul Friuli 1976 e su Sarno 1998: ogni grande tragedia italiana di quegli anni ha aggiunto un mattone al sistema.
+- **L'accelerazione del progetto di protezione civile italiana**. Pochi mesi dopo Vermicino, nel **febbraio 1982**, **Giuseppe Zamberletti** fu nominato **Ministro per il coordinamento della Protezione Civile**: la pressione politica e l'opinione pubblica ricevettero da Vermicino una spinta decisiva verso un'autorità unica di coordinamento nazionale, poi consolidata dalla **legge 225/1992**. Ne abbiamo parlato anche nell'articolo sul Friuli 1976 e su Sarno 1998: ogni grande tragedia italiana di quegli anni ha aggiunto un mattone al sistema.
 
 - **Una nuova attenzione alla psicologia dell'emergenza**. Prima di Vermicino, in Italia, la "psicologia in emergenza" era una disciplina marginale. Dopo, divenne una specializzazione riconosciuta dal Consiglio Nazionale dell'Ordine degli Psicologi (CNOP), con linee guida specifiche, percorsi formativi e team operativi.
 

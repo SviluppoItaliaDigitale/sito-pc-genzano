@@ -22,7 +22,7 @@ Bilancio finale: **13 morti**, **decine di dispersi mai ritrovati** (i corpi fur
 Le precipitazioni iniziarono nel tardo pomeriggio del 18 giugno e si intensificarono fino al picco notturno tra le **2 e le 4 del mattino del 19**. La popolazione dormiva. Quando l'allarme arrivò, era già troppo tardi: le strade erano interrotte, le linee telefoniche cadute, i fiumi straripati.
 
 {{< foto src="/images/2026-06-19-versilia-1996-alluvione-cardoso-stazzema-fonte-wikipedia.webp"
-         alt="Foto storica: Versilia, 19 giugno 1996: la notte che cancellò Cardoso"
+         alt="Veduta odierna della frazione di Cardoso (Stazzema): una via del paese con case basse, auto parcheggiate e panni stesi, ai piedi dei versanti boscosi delle Alpi Apuane"
          caption="Foto: Sailko — CC BY 3.0 — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Cardoso,_veduta_01.JPG)." >}}
 
 

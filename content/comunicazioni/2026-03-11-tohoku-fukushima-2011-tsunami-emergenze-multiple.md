@@ -18,8 +18,8 @@ draft: false
 Erano le **14:46 di venerdì 11 marzo 2011** ora locale (le **6:46** in Italia). Al largo della costa nord-orientale del Giappone, nella regione del **Tōhoku**, una scossa di **magnitudo momento 9.0** — quinta più potente mai registrata nella storia sismologica — scosse l'arcipelago. Seguì uno tsunami con onde fino a 40 metri. Poi l'incidente nucleare di Fukushima Daiichi. Quindici anni dopo, è ancora il punto di riferimento mondiale per capire cosa significa un'emergenza multipla.
 
 {{< foto src="/images/2026-evento-tohoku-2011-fukushima.webp"
-         alt="La centrale nucleare di Fukushima Daiichi colpita dal maremoto dell'11 marzo 2011"
-         caption="Tōhoku, 11 marzo 2011. Magnitudo 9,1 e onda fino a 40 metri: 19.747 morti. La centrale di Fukushima Daiichi va in fusione. Una catena di emergenze multiple che ridefinisce il concetto di rischio composito." >}}
+         alt="Zona costiera del Tōhoku dopo lo tsunami dell'11 marzo 2011: edifici rasi al suolo, un palo elettrico piegato e una bicicletta abbandonata fra le macerie sparse sul terreno"
+         caption="Le macerie lasciate dallo tsunami sulla costa del Tōhoku, 11 marzo 2011. Magnitudo 9,1 e onda fino a 40 metri: 19.747 morti. Poche ore dopo, la centrale di Fukushima Daiichi entra in fusione. Una catena di emergenze multiple che ridefinisce il concetto di rischio composito." >}}
 
 Ma il terremoto, da solo, non sarebbe stato l'evento decisivo. Mezz'ora dopo, lo **tsunami** generato dal sisma raggiunse la costa con onde alte **fino a 40 metri** in alcuni punti. Travolse città, porti, autostrade, treni, scuole. Penetrò per **chilometri** nell'entroterra. La **Centrale nucleare di Fukushima Daiichi** — situata a 250 chilometri a nord-est di Tokyo — fu colpita da onde di **14 metri**, tre volte più alte della barriera di protezione progettata.
 

@@ -18,8 +18,8 @@ draft: false
 Sono passati **trentanove anni**. Alle **7:23 del mattino del 28 luglio 1987**, dopo settimane di piogge eccezionali sulla **Valtellina**, dal **Monte Zandila** in **Val Pola** si staccò una frana di dimensioni straordinarie. **40 milioni di metri cubi** di roccia, terra e vegetazione precipitarono in valle a velocità altissima. In pochi secondi furono cancellati gli abitati di **Sant'Antonio Morignone** e **Aquilone**, frazioni del Comune di **Valdisotto** (provincia di Sondrio).
 
 {{< foto src="/images/2026-evento-val-pola-1987-monte-zandila.webp"
-         alt="Il Monte Zandila prima della grande frana della Val Pola del 28 luglio 1987"
-         caption="Val Pola, 28 luglio 1987. 40 milioni di metri cubi di roccia precipitano nella valle: 27 morti. Da quell'evento si stabilisce in Italia la prassi del monitoraggio continuo dei versanti instabili." >}}
+         alt="Foto in bianco e nero: veduta dall'alto di un abitato di montagna dopo la frana della Val Pola, con alcune case travolte e semidistrutte dai detriti, altre danneggiate lungo il pendio, un ponte e una strada ancora percorribili sullo sfondo del versante franato"
+         caption="L'abitato colpito dalla frana della Val Pola, 28 luglio 1987. 40 milioni di metri cubi di roccia precipitarono in valle: 27 morti. Da quell'evento si stabilisce in Italia la prassi del monitoraggio continuo dei versanti instabili." >}}
 
 L'evento del 28 luglio fu **l'apice** di un'**alluvione** che da metà luglio aveva già messo in ginocchio l'intera Valtellina, con frane minori, allagamenti, crolli stradali, vittime sparse. Il bilancio finale di quella stagione drammatica fu di **53 vittime** in tutta la valle, di cui **29 nella sola frana del 28 luglio**: 27 abitanti dell'abitato di Aquilone non evacuato perché ritenuto fuori pericolo, e una squadra di operai impegnati sulla **Strada Statale 38**.
 

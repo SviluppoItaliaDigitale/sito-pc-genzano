@@ -16,8 +16,8 @@ draft: false
 Sono passati **cinquant'anni esatti**. Alle **ore 21:00 del 6 maggio 1976**, per cinquantanove interminabili secondi, una scossa di **magnitudo 6.4 della scala Richter** investì la media valle del Tagliamento. Il Friuli — un territorio fatto di paesi medievali, campanili in pietra, case di sasso a due piani — venne sconvolto in modo brutale. Quando alle 21:01 le luci si spensero per la rottura della rete elettrica, sotto le macerie c'erano già **989 morti** e oltre **45.000 senza tetto**.
 
 {{< foto src="/images/2026-04-23-friuli-1976-terremoto-gemona.webp"
-         alt="Macerie a Gemona del Friuli dopo il terremoto del 6 maggio 1976"
-         caption="Gemona del Friuli, maggio 1976. Magnitudo 6,5: mille morti, centomila senzatetto. Il commissario Zamberletti coordina la prima vera Protezione Civile italiana moderna." >}}
+         alt="Mappa ShakeMap USGS del terremoto del Friuli del 6 maggio 1976, magnitudo 6.5, con l'area di scuotimento più severo (in rosso) centrata sulle Alpi Carniche presso Gemona"
+         caption="Gemona del Friuli, maggio 1976. Magnitudo 6,5: mille morti, centomila senzatetto. Il commissario Zamberletti coordina la prima vera Protezione Civile italiana moderna. Mappa: USGS — Public domain." >}}
 
 I Comuni più colpiti furono quelli della media valle: **Gemona del Friuli, Venzone, Trasaghis, Bordano, Forgaria nel Friuli, Buja, Majano, Osoppo, Montenars**. Per molti di loro l'intensità Mercalli arrivò al **grado X**, distruzione quasi totale degli edifici. La gente del posto, che parla un suo dialetto antico, chiamò subito il sisma con un nome che faceva paura ai bambini: ***Orcolat***, l'orco delle leggende.
 
@@ -59,7 +59,7 @@ Secondo: **scelse la ricostruzione "dov'era, com'era"** ma con **norme antisismi
 
 La sequenza politica che ne seguì è altrettanto importante:
 
-- **1981** — Su iniziativa di Zamberletti viene istituito il **Ministero per il coordinamento della Protezione Civile**, con la legge 938/1981.
+- **1981** — Su iniziativa di Zamberletti viene istituito il **Ministero per il coordinamento della Protezione Civile**.
 - **1982** — Nasce il **Dipartimento della Protezione Civile** presso la Presidenza del Consiglio, organo operativo del nuovo sistema.
 - **1992** — La **legge 24 febbraio 1992, n. 225** istituisce ufficialmente il **Servizio Nazionale della Protezione Civile**: una rete che mette insieme Stato, Regioni, Comuni, vigili del fuoco, forze armate, volontariato organizzato. È la legge madre di tutto il sistema italiano.
 - **2018** — Il **Codice della Protezione Civile (D.Lgs. 1/2018)** riordina e modernizza la materia: è la cornice oggi in vigore.

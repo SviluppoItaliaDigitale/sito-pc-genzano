@@ -31,8 +31,8 @@ L'evento esteso causò anche una **valanga sull'Everest** che uccise 22 alpinist
 Il Nepal era uno dei Paesi più poveri dell'Asia, con istituzioni fragili. La risposta dello Stato fu rapidamente sovrastata dalla scala dell'evento. Si attivò la **macchina internazionale di soccorso** coordinata dal sistema **INSARAG** delle Nazioni Unite:
 
 {{< foto src="/images/2026-04-25-nepal-2015-gorkha-terremoto-kathmandu-durbar-square.webp"
-         alt="Kathmandu Durbar Square, sito UNESCO danneggiato dal terremoto del 2015"
-         caption="Kathmandu Durbar Square: i templi medievali del sito UNESCO furono gravemente danneggiati dal terremoto del 25 aprile 2015. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Basantapurpalace.JPG)." >}}
+         alt="Le torri a più piani del palazzo reale Hanuman Dhoka a Kathmandu Durbar Square, viste dal basso contro un cielo sereno"
+         caption="Kathmandu Durbar Square, il complesso di palazzi e templi medievali dichiarato sito UNESCO: alcune delle sue strutture furono gravemente danneggiate dal terremoto del 25 aprile 2015. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Basantapurpalace.JPG)." >}}
 
 
 - **Squadre USAR** da decine di Paesi (Cina, India, Stati Uniti, Israele, Turchia, Regno Unito, Germania, Francia, e l'**Italia** con i Vigili del Fuoco)
