@@ -57,7 +57,7 @@ Per questo Stava ha generato:
 In Italia, per il **rischio diga e bacino artificiale**, oggi esistono:
 
 - Il **Servizio Nazionale Dighe** del Ministero delle Infrastrutture, che vigila sulle dighe di rilevante interesse pubblico.
-- Le **Direttive del Servizio Nazionale di Protezione Civile** sulle dighe (DPCM 8 luglio 2014 e successive), che obbligano ogni gestore a predisporre **piani di emergenza** e **scenari di onda di piena** in caso di collasso.
+- Le **Direttive del Servizio Nazionale di Protezione Civile** sulle dighe (Direttiva del Presidente del Consiglio dei Ministri dell'8 luglio 2014 e successive), che obbligano ogni gestore a predisporre **piani di emergenza** e **scenari di onda di piena** in caso di collasso.
 - I **Piani di Emergenza Diga (PED)** — scenari operativi che ogni Comune a valle deve conoscere e integrare nel proprio Piano di Emergenza Comunale.
 - Sistemi di **monitoraggio strumentale continuo** di pendii e bacini critici (estensimetri, pendole rovesce, sismografi, accelerometri, GPS).
 
@@ -91,7 +91,7 @@ Quarant'anni dopo, **Stava è la lezione più dura della cultura del rischio in 
 - [Vigili del Fuoco — Memoria storica: il disastro in Val di Stava](https://www.vigilfuoco.it/chi-siamo/memoria-storica/notizie-storiche/il-disastro-val-di-stava)
 - [CNR-IRPI Polaris — Il disastro di Stava](https://polaris.irpi.cnr.it/il-disastro-di-stava/)
 - [Servizio Nazionale Dighe — Ministero delle Infrastrutture](https://www.mit.gov.it/)
-- [DPCM 8 luglio 2014 — Indirizzi operativi piani emergenza dighe](https://www.protezionecivile.gov.it/)
+- [Direttiva PCM 8 luglio 2014 — Indirizzi operativi piani emergenza dighe](https://www.protezionecivile.gov.it/)
 
 ## Approfondimenti dal nostro archivio
 
