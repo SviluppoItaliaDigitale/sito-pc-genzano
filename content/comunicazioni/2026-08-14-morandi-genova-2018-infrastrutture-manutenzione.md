@@ -18,8 +18,8 @@ draft: false
 Sono passati **otto anni**. Erano le **11:36 di martedì 14 agosto 2018**, vigilia di Ferragosto. Sotto un acquazzone temporalesco, una sezione di **250 metri** del **Viadotto Polcevera** — più conosciuto come **Ponte Morandi**, dal nome dell'ingegnere che lo progettò negli anni Sessanta — crollò improvvisamente a Genova insieme alla **pila 9** e ai **tiranti (stralli)** che la sostenevano.
 
 {{< foto src="/images/2026-evento-morandi-2018-genova-crollo.webp"
-         alt="Il moncone del ponte Morandi di Genova dopo il crollo del 14 agosto 2018"
-         caption="Genova, 14 agosto 2018. Il viadotto Polcevera (ponte Morandi) crolla durante un temporale: 43 morti. La tragedia apre il dibattito nazionale sulla manutenzione delle infrastrutture italiane." >}}
+         alt="Foto a colori del ponte Morandi di Genova ancora integro, con i suoi tre piloni bianchi a forma di A collegati dagli stralli d'acciaio, il traffico regolare di auto e camion sul piano stradale e il quartiere di Sampierdarena sotto la campata"
+         caption="Il viadotto Polcevera (ponte Morandi) di Genova prima del crollo del 14 agosto 2018, quando una sezione di 250 metri retta dalla pila 9 cedette durante un temporale: 43 morti. La tragedia apre il dibattito nazionale sulla manutenzione delle infrastrutture italiane." >}}
 
 Sotto, **43 persone** persero la vita: automobilisti in transito, camionisti, lavoratori dell'**isola ecologica AMIU** che si trovava sotto il ponte. Cinquecentosessantasei famiglie del **quartiere Sampierdarena** furono evacuate dalle case sotto il ponte, dichiarate temporaneamente non sicure. Per giorni i soccorritori scavarono fra le macerie sopra l'isola ecologica, fra gli alloggi popolari e fra le auto schiacciate.
 

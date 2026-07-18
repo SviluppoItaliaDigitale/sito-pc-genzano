@@ -22,8 +22,8 @@ Bilancio: **44 morti** in città, **22 dispersi**, **2.000 senzatetto**, **8.000
 Genova è città di torrenti e versanti scoscesi. La sua urbanizzazione storica si è sviluppata **a contatto con i corsi d'acqua**, in molti casi tombandoli sotto strade e piazze. Nel 1970 questa **vulnerabilità strutturale** si manifestò in tutta la sua portata:
 
 {{< foto src="/images/2026-10-07-genova-1970-alluvione-storica-piu-grave-fonte-wikipedia.webp"
-         alt="Foto storica: Genova, 7 ottobre 1970: l'alluvione storica più grave del Novecento ligure"
-         caption="Foto: (non specificato) — CC BY 2.5 — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Ponte_di_Sant%27Agata_5.jpg)." >}}
+         alt="Foto a colori del ponte di Sant'Agata a Genova, un antico ponte in pietra a più arcate sul greto asciutto di un torrente, con edifici color pastello e alberi sullo sfondo"
+         caption="Il ponte di Sant'Agata a Genova, sul percorso di uno dei torrenti che nella notte del 7 ottobre 1970 esondarono devastando la città: 44 morti, la più grave alluvione del Novecento ligure. Foto: (non specificato) — CC BY 2.5 — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Ponte_di_Sant%27Agata_5.jpg)." >}}
 
 
 - Il **Bisagno**, principale torrente della città, si gonfiò di acqua e detriti dai versanti deforestati a monte

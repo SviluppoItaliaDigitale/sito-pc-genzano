@@ -22,8 +22,8 @@ Bilancio: **6 morti**, fra cui **bambine e donne adulte** travolte dall'acqua in
 Genova, come molte città italiane (Roma, Napoli, Firenze, Torino), si è sviluppata nel corso dei secoli **coprendo torrenti e fossi** con tombinature, per ricavare strade, piazze, edifici. I rii continuano a esistere sotto l'asfalto, e in caso di **piogge intense** la loro **portata supera la capacità del tombamento**: l'acqua esce con violenza, allagando strade in pochi minuti.
 
 {{< foto src="/images/2026-11-04-genova-2011-alluvione-fereggiano-fonte-wikipedia.webp"
-         alt="Foto storica: Genova, 4 novembre 2011: l'alluvione del Fereggiano e la lezione dei rii tombati"
-         caption="Foto: MODIS Rapid Response Team at NASA GSFC. — Public domain — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Rolf_2011-11-08_1030Z.jpg)." >}}
+         alt="Immagine satellitare MODIS di un vasto sistema depressionario a spirale sul Mar Mediterraneo occidentale, tra le coste di Spagna, Francia e Nord Africa"
+         caption="Immagine satellitare NASA MODIS del sistema depressionario mediterraneo dei primi giorni di novembre 2011 (ciclone Rolf), lo stesso che portò le piogge intense sulla Liguria: il 4 novembre a Genova il Fereggiano esondò, 6 morti. Foto: MODIS Rapid Response Team at NASA GSFC — Public domain — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Rolf_2011-11-08_1030Z.jpg)." >}}
 
 
 Il **rio Fereggiano** è uno dei tanti rii tombati di Genova. Il 4 novembre 2011 la combinazione di pioggia eccezionale e di **manutenzione insufficiente** dei tombini fece sì che la portata in arrivo superasse la capacità del condotto. L'acqua esplose dai tombini in via Fereggiano e travolse le persone che camminavano sul marciapiede.
