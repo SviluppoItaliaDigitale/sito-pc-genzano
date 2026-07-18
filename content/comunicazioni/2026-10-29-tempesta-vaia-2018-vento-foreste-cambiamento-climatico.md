@@ -18,8 +18,8 @@ draft: false
 Sono passati **otto anni**. Fra il **27 e il 30 ottobre 2018**, una **tempesta atlantica** di rara intensità colpì il **nord-est dell'Italia** e parte dell'arco alpino. Le raffiche di **scirocco** caldo e umido salirono dal Mediterraneo lungo i versanti delle **Dolomiti**, accelerando per "**effetto canyon**" nelle valli strette. Negli ultimi due giorni le velocità del vento raggiunsero localmente i **200 chilometri orari**, valori che le foreste alpine italiane non avevano mai sperimentato in tempi storici.
 
 {{< foto src="/images/2026-evento-vaia-2018-foreste-devastate.webp"
-         alt="Foreste di abeti rossi schiantate dal vento della tempesta Vaia in Trentino-Alto Adige"
-         caption="Tempesta Vaia, 29 ottobre 2018. Raffiche fino a 200 km/h schiantano 14 milioni di alberi nelle Dolomiti. Il primo evento meteo in cui il cambiamento climatico diventa visibile a tutti gli italiani." >}}
+         alt="Immagine satellitare di un vasto vortice nuvoloso a spirale sul Mar Mediterraneo occidentale, tra le coste della Francia, della Spagna e del Nord Africa"
+         caption="Il vortice della tempesta atlantica che, tra il 27 e il 30 ottobre 2018, portò sulle Dolomiti raffiche fino a 200 km/h e schiantò 14 milioni di alberi: la tempesta Vaia, il primo evento meteo in cui il cambiamento climatico diventa visibile a tutti gli italiani." >}}
 
 Il risultato fu **biblico**. La tempesta venne battezzata **Vaia** dal Servizio Meteorologico tedesco. Quando si esaurì, sui versanti del Trentino, dell'Alto Adige, del Friuli-Venezia Giulia, del Veneto e di parte della Lombardia c'erano **14 milioni di alberi abbattuti**. Distesi a terra come stuzzicadenti, su un'area complessiva di **42.500 ettari di foresta** distrutti o gravemente danneggiati. Le fotografie aeree mostravano centinaia di chilometri quadrati di bosco rovesciato in un'unica direzione, allineato come dopo l'esplosione di un'arma nucleare.
 

@@ -22,8 +22,8 @@ A Ischia provocò **2 morti**, **42 feriti**, **2.600 sfollati**, decine di edif
 Tre fattori si combinarono:
 
 {{< foto src="/images/2026-08-21-ischia-2017-terremoto-isolano-fonte-wikipedia.webp"
-         alt="Foto storica: Ischia, 21 agosto 2017: il terremoto su un'isola, le case di tufo e la lezione del Casamicciola"
-         caption="Foto: Dipartimento Protezione Civile from Italia — CC BY 2.0 — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Terremoto_Ischia_2017_(26495643417).jpg)." >}}
+         alt="Foto a colori: una casa a Ischia con la facciata gialla profondamente lesionata dal terremoto, il tetto in parte crollato con le travi a vista, cumuli di macerie e nastro segnaletico bianco e rosso davanti all'ingresso, piante in vaso ancora al loro posto e una montagna sullo sfondo"
+         caption="Una casa danneggiata dal terremoto di Ischia del 21 agosto 2017. Foto: Dipartimento Protezione Civile from Italia — CC BY 2.0 — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Terremoto_Ischia_2017_(26495643417).jpg)." >}}
 
 
 1. **Profondità dell'ipocentro estremamente bassa.** Una scossa M 4 a 2 km di profondità arriva in superficie con energia molto vicina a quella della sorgente. Una M 4 a 30 km di profondità si attenua nel tragitto.

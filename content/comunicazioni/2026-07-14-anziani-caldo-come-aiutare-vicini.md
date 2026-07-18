@@ -108,7 +108,7 @@ Se conosci un anziano in difficoltà e non hai riferimenti familiari, **segnalaz
 ## Ministero della Salute e numero verde
 
 Il Ministero attiva ogni estate:
-- **Numero Verde SOS Caldo**: **800 55 60 60**.
+- **Numero di pubblica utilità 1500** "Proteggiamoci dal caldo" (Ministero della Salute).
 - **App "Il tempo della salute"**.
 - **Bollettini ondate di calore** per 27 città.
 - **Campagne informative** rivolte a famigliari di anziani.

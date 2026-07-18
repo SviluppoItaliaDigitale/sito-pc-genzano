@@ -36,8 +36,8 @@ I volontari genzanesi lasciarono le proprie famiglie, i propri lavori, la propri
 Arrivati a Fossa, i volontari trovarono uno scenario di desolazione. Le strade erano bloccate dai calcinacci, le abitazioni erano inagibili, la popolazione era raccolta in spazi di fortuna, stordita e disorientata.
 
 {{< foto src="/images/2026-04-06-anniversario-terremoto-abruzzo-2009-fossa-onna-aquila-2009.webp"
-         alt="Onna, frazione di L'Aquila distrutta dal terremoto del 6 aprile 2009"
-         caption="Onna (L'Aquila): la frazione fu rasa al suolo dal terremoto del 6 aprile 2009 con 40 vittime su 290 abitanti, una delle proporzioni più alte del sisma. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Onna_2011_by-RaBoe-058.jpg)." >}}
+         alt="Cartello stradale d'ingresso alla frazione di Onna, presso L'Aquila, lungo la strada di accesso al paese tra vegetazione e case"
+         caption="Onna (L'Aquila), oggi: la frazione fu rasa al suolo dal terremoto del 6 aprile 2009, con 40 vittime su 290 abitanti — una delle proporzioni più alte del sisma. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Onna_2011_by-RaBoe-058.jpg)." >}}
 
 
 Il lavoro fu immediato e metodico. Il gruppo si divise nei compiti con quella disciplina operativa che solo un addestramento costante può garantire:

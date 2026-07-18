@@ -20,8 +20,8 @@ L'estate 2026 conferma una tendenza ormai strutturale per il Lazio: **ridotta di
 Non è un rischio astratto. Nell'estate del **2017** il **lago di Bracciano**, una delle riserve idriche di Roma, si abbassò così tanto da costringere allo stop dei prelievi per l'acquedotto: la sponda arretrò fino a 60 metri in pochi mesi.
 
 {{< foto src="/images/2026-08-18-lago-bracciano-siccita-sentinel2-2017.webp"
-         alt="Vista satellitare del lago di Bracciano, Lazio: grande specchio d'acqua blu scuro al centro, campagna circostante in verde e marrone, etichetta \"Bracciano Lake\" sovrapposta. In alto a destra due riquadri affiancati con le date \"31 May\" e \"13 August\" mostrano lo stesso tratto di sponda: nel riquadro di agosto la riva è visibilmente arretrata. In basso a sinistra un terzo riquadro mostra il dettaglio della fascia di terreno emerso. Barra scala da 5 km in basso a destra."
-         caption="Il lago di Bracciano ripreso dal satellite Copernicus Sentinel-2 nell'estate 2017: i riquadri confrontano la riva tra il 31 maggio e il 13 agosto e mostrano la sponda che arretra (fino a circa 60 metri). Immagine: *contains modified Copernicus Sentinel data (2017), processed by ESA*, [CC BY-SA 3.0 IGO](https://creativecommons.org/licenses/by-sa/3.0/igo/)." >}}
+         alt="Vista satellitare del lago di Bracciano, Lazio: grande specchio d'acqua blu scuro al centro con l'etichetta \"Bracciano Lake\", campagna circostante in verde e marrone. Due punti numerati sulla sponda rimandano a due riquadri di confronto tra il 31 maggio e il 19 agosto, ciascuno con l'indicazione dell'arretramento della riva (\"35-55 meter retreat\" e \"35-60 meter retreat\"). Barra di scala da 3 km in basso a destra."
+         caption="Il lago di Bracciano ripreso dal satellite Copernicus Sentinel-2 nell'estate 2017: i riquadri confrontano la riva tra il 31 maggio e il 19 agosto e mostrano la sponda che arretra fino a circa 60 metri. Immagine: *contains modified Copernicus Sentinel data (2017), processed by ESA*, [CC BY-SA 3.0 IGO](https://creativecommons.org/licenses/by-sa/3.0/igo/)." >}}
 
 ## Chi gestisce l'acqua nel Lazio
 

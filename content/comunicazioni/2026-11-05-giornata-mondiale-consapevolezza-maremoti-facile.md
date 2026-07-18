@@ -5,8 +5,8 @@ description: "Il 5 novembre è la giornata mondiale sui maremoti. Ecco cosa fare
 badge: "Prevenzione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
-image: "/images/2026-11-05-giornata-mondiale-consapevolezza-maremoti.webp"
-image_alt: "Cover dell'articolo: 5 novembre, Giornata mondiale per la consapevolezza sui maremoti: cosa deve sapere chi va al mare"
+image: "/images/2026-11-05-giornata-mondiale-consapevolezza-maremoti-facile.webp"
+image_alt: "Cover dell'articolo: 5 novembre, giornata mondiale sui maremoti"
 scadenza: ""
 area: ""
 allegati: []

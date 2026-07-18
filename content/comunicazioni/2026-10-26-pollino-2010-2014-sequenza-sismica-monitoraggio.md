@@ -22,8 +22,8 @@ A differenza di altre sequenze italiane, il Pollino **non ha causato vittime dir
 Il Pollino è una zona sismicamente attiva ma con storia recente di scosse di magnitudo moderata. La sequenza 2010-2014 si manifestò con uno **sciame** di scosse di magnitudo prevalentemente bassa (M 2-3), con alcuni picchi superiori a M 4 e l'unico evento di rilievo a **M 5.0** del 25 ottobre 2012.
 
 {{< foto src="/images/2026-10-26-pollino-2010-2014-sequenza-sismica-monitoraggio-fonte-wikipedia.webp"
-         alt="Foto storica: Pollino 2010-2014: la sequenza sismica che ha cambiato il monitoraggio italiano"
-         caption="Foto: Alfredo D'Ambrosio — CC BY 3.0 — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Vette_del_Pollino.JPG)." >}}
+         alt="Foto a colori delle vette innevate del Massiccio del Pollino, creste rocciose scure con neve residua nelle vallecole, controluce al tramonto"
+         caption="Le vette del Massiccio del Pollino, la catena montuosa al confine tra Calabria e Basilicata interessata dalla sequenza sismica del 2010-2014. Foto: Alfredo D'Ambrosio — CC BY 3.0 — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Vette_del_Pollino.JPG)." >}}
 
 
 Le caratteristiche peculiari:

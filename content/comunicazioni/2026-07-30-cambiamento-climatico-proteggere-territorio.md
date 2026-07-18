@@ -63,7 +63,7 @@ Con il riscaldamento:
 - **Interfaccia urbano-rurale** più esposta.
 - **Emissioni di fumo** con impatto sanitario.
 
-Il 2017, 2021 e 2023 hanno mostrato **picchi** preoccupanti.
+Il 2017, 2021 e 2023 hanno mostrato **picchi** preoccupanti, e la campagna 2026 lo conferma sul nostro territorio. Già a luglio 2026 le nostre squadre sono state attivate più volte per incendi di vegetazione tra Genzano, Velletri e Lanuvio (ne parliamo nel [bilancio intermedio della campagna AIB](/comunicazioni/2026-07-15-meta-luglio-bilancio-campagna-aib/)).
 
 ## Come cambia il rischio sanitario
 

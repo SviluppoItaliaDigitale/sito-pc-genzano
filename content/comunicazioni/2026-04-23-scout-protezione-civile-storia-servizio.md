@@ -76,8 +76,8 @@ Il loro lavoro: assistere le persone, montare e gestire le tendopoli, fare servi
 Sarà lo stesso Zamberletti a riconoscere pubblicamente, alla fine dell'emergenza, l'**autonomia logistica** degli scout e il loro contributo educativo nei confronti dei più piccoli. Da quel riconoscimento nasce un'idea: il volontariato organizzato non è una riserva da chiamare in extremis. È una **componente strutturale** del sistema di Protezione Civile.
 
 {{< foto src="/images/2026-04-23-friuli-1976-terremoto-gemona.webp"
-         alt="Macerie a Gemona del Friuli dopo il terremoto del 6 maggio 1976"
-         caption="Friuli, maggio 1976: i comuni di Gemona, Venzone e Osoppo sono devastati dal sisma di magnitudo 6,5. Mille morti, centomila senzatetto. Nell'estate successiva 7.500 scout dell'AGESCI raggiungono i luoghi del terremoto, organizzando dalla base operativa di Udine i servizi nelle aree più remote." >}}
+         alt="Mappa ShakeMap USGS del terremoto del Friuli del 6 maggio 1976, magnitudo 6.5, con l'area di scuotimento più severo (in rosso) centrata sulle Alpi Carniche presso Gemona"
+         caption="Friuli, maggio 1976: i comuni di Gemona, Venzone e Osoppo sono devastati dal sisma di magnitudo 6,5. Mille morti, centomila senzatetto. Nell'estate successiva 7.500 scout dell'AGESCI raggiungono i luoghi del terremoto, organizzando dalla base operativa di Udine i servizi nelle aree più remote. Mappa: USGS — Public domain." >}}
 
 ## Irpinia 1980: nasce il Settore Protezione Civile AGESCI
 
@@ -149,7 +149,7 @@ In sei settimane, AGESCI Emilia-Romagna raccoglie **42.700 euro** di donazioni a
 
 {{< foto src="/images/2026-04-23-emilia-romagna-2023-scout.webp"
          alt="Immagine satellitare NASA dell'alluvione dell'Emilia-Romagna del maggio 2023"
-         caption="Maggio 2023: l'alluvione dell'Emilia-Romagna vista dal satellite Minerva (NASA). 17 vittime, 50.000 sfollati, oltre 8 miliardi di danni. AGESCI ha attivato la Segreteria Avanzata di Emergenza a Forlì, formando oltre mille volontari in due serate su YouTube. Foto: NASA — Public domain — via Wikimedia Commons." >}}
+         caption="Maggio 2023: il sistema nuvoloso che ha investito l'Emilia-Romagna durante l'alluvione, ripreso da satellite. 17 vittime, 50.000 sfollati, oltre 8 miliardi di danni. AGESCI ha attivato la Segreteria Avanzata di Emergenza a Forlì, formando oltre mille volontari in due serate su YouTube. Foto: NASA — Public domain — via Wikimedia Commons." >}}
 
 ## Formazione: il Corso Sicurezza e i percorsi specifici
 

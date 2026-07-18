@@ -18,8 +18,8 @@ draft: false
 Sono passati **quarantun anni**. Erano le **12:22 di venerdì 19 luglio 1985**. Una bella giornata estiva. La **Val di Stava**, in Trentino-Alto Adige, frazione del Comune di **Tesero** in provincia di Trento, era piena di villeggianti: alberghi al completo, campeggi, gente alle finestre.
 
 {{< foto src="/images/2026-evento-stava-1985-bacini-decantazione.webp"
-         alt="I bacini di decantazione di Prestavel sopra Stava prima del cedimento del 19 luglio 1985"
-         caption="Val di Stava, 19 luglio 1985. I bacini di decantazione della miniera di Prestavel cedono: 268 morti. Il disastro porta a una nuova normativa sulla sicurezza degli impianti minerari." >}}
+         alt="Foto a colori: la colata di fango della Val di Stava vista dall'alto del versante, con un albero sradicato e spogliato in primo piano, tronchi e detriti sparsi sulla distesa di fango grigio-marrone che riempie la valle; ai lati, il bosco di conifere rimasto intatto"
+         caption="La colata di fango della Val di Stava nei giorni successivi al 19 luglio 1985: i bacini di decantazione della miniera di Prestavel erano ceduti travolgendo l'abitato, 268 morti. Il disastro porta a una nuova normativa sulla sicurezza degli impianti minerari." >}}
 
 A monte dell'abitato, a circa due chilometri di distanza e quasi cinquecento metri più in alto, c'erano due **bacini di decantazione** della miniera di **Prestavel**: vasche artificiali nelle quali da decenni si depositavano i **fanghi di lavorazione della fluorite**, un minerale usato in siderurgia e nella produzione dell'alluminio. Le vasche erano costruite con argini in **terra ed acqua compattata**, una soluzione tecnica già nota per essere fragile.
 
@@ -57,7 +57,7 @@ Per questo Stava ha generato:
 In Italia, per il **rischio diga e bacino artificiale**, oggi esistono:
 
 - Il **Servizio Nazionale Dighe** del Ministero delle Infrastrutture, che vigila sulle dighe di rilevante interesse pubblico.
-- Le **Direttive del Servizio Nazionale di Protezione Civile** sulle dighe (DPCM 8 luglio 2014 e successive), che obbligano ogni gestore a predisporre **piani di emergenza** e **scenari di onda di piena** in caso di collasso.
+- Le **Direttive del Servizio Nazionale di Protezione Civile** sulle dighe (Direttiva del Presidente del Consiglio dei Ministri dell'8 luglio 2014 e successive), che obbligano ogni gestore a predisporre **piani di emergenza** e **scenari di onda di piena** in caso di collasso.
 - I **Piani di Emergenza Diga (PED)** — scenari operativi che ogni Comune a valle deve conoscere e integrare nel proprio Piano di Emergenza Comunale.
 - Sistemi di **monitoraggio strumentale continuo** di pendii e bacini critici (estensimetri, pendole rovesce, sismografi, accelerometri, GPS).
 
@@ -91,7 +91,7 @@ Quarant'anni dopo, **Stava è la lezione più dura della cultura del rischio in 
 - [Vigili del Fuoco — Memoria storica: il disastro in Val di Stava](https://www.vigilfuoco.it/chi-siamo/memoria-storica/notizie-storiche/il-disastro-val-di-stava)
 - [CNR-IRPI Polaris — Il disastro di Stava](https://polaris.irpi.cnr.it/il-disastro-di-stava/)
 - [Servizio Nazionale Dighe — Ministero delle Infrastrutture](https://www.mit.gov.it/)
-- [DPCM 8 luglio 2014 — Indirizzi operativi piani emergenza dighe](https://www.protezionecivile.gov.it/)
+- [Direttiva PCM 8 luglio 2014 — Indirizzi operativi piani emergenza dighe](https://www.protezionecivile.gov.it/)
 
 ## Approfondimenti dal nostro archivio
 

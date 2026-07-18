@@ -18,15 +18,19 @@ draft: false
 ## Il bilancio di luglio 2026
 
 Il mese ha visto sul nostro territorio:
-- **Ondate di calore** di media intensità.
+- **Ondate di calore** di media-alta intensità, con più giornate di disagio per le persone fragili.
 - **Alcuni temporali** localizzati con grandine in zone specifiche.
-- **Interventi AIB** contenuti ma continui.
+- **Interventi AIB ravvicinati tra il 5 e il 17 luglio**, a supporto dei Vigili del Fuoco:
+  - [5 luglio, Velletri](/comunicazioni/2026-07-05-incendio-velletri-caranella-via-del-sorbo/) — incendio di vegetazione.
+  - [13 luglio, Velletri](/comunicazioni/2026-07-13-attivazione-incendio-sterpaglie-velletri/) — oltre sei ore di intervento.
+  - [15 luglio, Genzano e Lanuvio](/comunicazioni/2026-07-15-due-incendi-via-aspro-canneti-kiwi/) — due incendi nella stessa giornata.
+  - [17 luglio, Velletri](/comunicazioni/2026-07-17-incendio-velletri-via-delle-noci/) — di nuovo a supporto dei Vigili del Fuoco.
 - **Sagre** ed eventi con presidio PC.
 - **Turni di avvistamento** regolari.
 - **Formazione** estiva del Gruppo.
 - **Attività informative** alla cittadinanza.
 
-Nel complesso, **un luglio in media** con il periodo di riferimento.
+Nel complesso, **un luglio più impegnativo della media** sul fronte incendi boschivi rispetto al primo mese di campagna (vedi il [bilancio intermedio di metà luglio](/comunicazioni/2026-07-15-meta-luglio-bilancio-campagna-aib/)). Le due settimane centrali del mese hanno visto un'intensificazione delle attivazioni, coerente con il caldo persistente.
 
 ## Il Lazio a fine luglio
 
@@ -43,14 +47,15 @@ Il sistema ha **tenuto** bene, con margini per migliorare.
 ## Il bilancio del Gruppo
 
 Il nostro Gruppo di Genzano di Roma a fine luglio 2026:
+- **Quattro giornate di attivazione per incendi di vegetazione** tra il 5 e il 17 luglio, a Genzano e nei Comuni limitrofi, a supporto dei Vigili del Fuoco.
 - **Turni** di avvistamento regolarmente coperti.
 - **Partecipazione** a eventi locali e sovracomunali.
 - **Formazione** continua dei volontari.
-- **Dotazione** mezzi verificata.
+- **Dotazione** mezzi verificata dopo l'uso intensivo di autobotte e vasca mobile.
 - **Coordinamento** con enti locali.
 - **Comunicazione** alla popolazione.
 
-I volontari hanno risposto con **disponibilità** e **professionalità**.
+I volontari hanno risposto con **disponibilità** e **professionalità**, anche in giornate di caldo intenso e turni lunghi.
 
 ## Perché agosto è critico
 

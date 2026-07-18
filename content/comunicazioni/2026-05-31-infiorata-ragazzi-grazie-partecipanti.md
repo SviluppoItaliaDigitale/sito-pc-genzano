@@ -28,7 +28,7 @@ Un'Infiorata bella non nasce da sola. La fanno **i ragazzi e le ragazze** che ha
 Un ringraziamento va anche al **Comune di Genzano di Roma**, alla **Polizia Locale** e a tutte le componenti del sistema di Protezione Civile. Insieme hanno garantito la sicurezza e l'ordine della giornata.
 
 {{< foto src="/images/2026-05-31-infiorata-squadra-volontari.webp"
-         alt="Undici volontari del Gruppo Comunale di Protezione Civile in posa sorridenti in una via del centro storico di Genzano di Roma, maglie blu navy con scritta e logo Protezione Civile, pantaloni rosso acceso"
+         alt="Dieci volontari del Gruppo Comunale di Protezione Civile in posa sorridenti in una via del centro storico di Genzano di Roma, maglie blu navy con scritta e logo Protezione Civile, pantaloni rosso acceso"
          caption="I volontari del Gruppo Comunale durante l'Infiorata dei Ragazzi 2026, nel centro storico di Genzano di Roma. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
 ## I nostri volontari in servizio
@@ -43,7 +43,7 @@ Durante le due giornate i volontari hanno garantito:
 Il volontariato di Protezione Civile **non regola il traffico** e non svolge servizi di polizia stradale: questi compiti spettano alle Forze dell'Ordine e alla Polizia Locale (D.Lgs. 285/1992, artt. 11-12; [Circolare DPC del 6 agosto 2018](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/)). In caso di emergenza il riferimento resta sempre il **112**.
 
 {{< foto src="/images/2026-05-31-infiorata-volontari-selfie.webp"
-         alt="Quattro volontari del Gruppo Comunale di Protezione Civile sorridenti in un selfie, maglie blu navy con logo PC, pantaloni rossi, in una via del centro di Genzano con edifici e una colonna sullo sfondo"
+         alt="Cinque volontari del Gruppo Comunale di Protezione Civile sorridenti in un selfie, maglie blu navy con logo PC, pantaloni rossi, in una via del centro di Genzano con edifici e una colonna sullo sfondo"
          caption="Una pausa tra i turni di servizio all'Infiorata dei Ragazzi 2026. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
 ## Sulle nostre maglie c'è Olly
@@ -55,7 +55,7 @@ Olly è **vicina al nostro Gruppo** e lo sostiene. Noi, a nostra volta, **portia
 Se vuoi conoscere il loro lavoro o dare una mano, il riferimento è il sito ufficiale **[ollyaps.org](https://ollyaps.org/)**.
 
 {{< foto src="/images/2026-05-31-infiorata-volontari-olly-scalinata.webp"
-         alt="Quattro volontari del Gruppo Comunale di spalle, maglie blu navy con scritta Protezione Civile e logo Olly sul dorso, pantaloni rosso-arancio, davanti alla scalinata monumentale e alla fontana nel centro di Genzano di Roma"
+         alt="Quattro volontari del Gruppo Comunale di spalle, maglie blu navy con scritta Protezione Civile e logo Olly sul dorso, pantaloni rosso-arancio, davanti a una fontana con colonna monumentale in una piazza del centro storico di Genzano di Roma"
          caption="Le nostre maglie portano il logo di Olly, l'associazione per l'epidermolisi bollosa che il Gruppo sostiene. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
 ## Sul nostro sito
