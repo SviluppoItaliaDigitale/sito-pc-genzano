@@ -90,6 +90,6 @@ Quarant'anni quasi dopo, la Valtellina è una valle che convive con la propria g
 
 ## Approfondimenti dal nostro archivio
 
-- [Vajont, 63 anni: memoria e prevenzione](/comunicazioni/2026-10-09-vajont-63-anni-memoria-prevenzione/)
+- [Vajont, 63 anni: memoria e prevenzione](/comunicazioni/2026-10-09-vajont-1963-tragedia-prevista/)
 - [Sarno 1998, frana e rischio idrogeologico](/comunicazioni/2026-05-05-sarno-frana-1998-rischio-idrogeologico-italia/)
 - [Val di Stava, 19 luglio 1985](/comunicazioni/2026-07-19-stava-1985-frana-bacini-decantazione/)

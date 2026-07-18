@@ -1,6 +1,6 @@
 ---
 title: "Ondate di freddo: come prepararsi e proteggere gli anziani"
-date: 2026-11-05
+date: 2026-11-05T00:01:00+02:00
 description: "Le ondate di freddo non sono solo disagio: sono un rischio concreto per salute, specialmente per anziani e persone fragili. Come prepararsi."
 badge: "Prevenzione"
 priorita: "normale"

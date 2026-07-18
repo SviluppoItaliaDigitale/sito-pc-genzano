@@ -100,5 +100,5 @@ Otto anni dopo, il messaggio del Morandi è semplice e duro: **l'invisibile va g
 
 ## Approfondimenti dal nostro archivio
 
-- [Vajont, 63 anni: memoria e prevenzione](/comunicazioni/2026-10-09-vajont-63-anni-memoria-prevenzione/)
+- [Vajont, 63 anni: memoria e prevenzione](/comunicazioni/2026-10-09-vajont-1963-tragedia-prevista/)
 - [Dighe e sicurezza, grandi opere](/comunicazioni/2026-10-07-dighe-sicurezza-grandi-opere/)
