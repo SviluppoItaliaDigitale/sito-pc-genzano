@@ -90,7 +90,7 @@ Per Genzano di Roma valgono i bollettini di **Roma**. Consultabili su [salute.go
 
 ## Numeri verdi sanitari
 
-Durante l'estate il Ministero della Salute attiva il **Numero Verde Caldo**: **800 55 60 60**, attivo dal lunedì al venerdì in orari definiti ogni anno. Fornisce informazioni e supporto soprattutto ad anziani soli.
+Durante l'estate il Ministero della Salute attiva il numero di pubblica utilità **1500 "Proteggiamoci dal caldo"**: gratuito, fornisce informazioni e consigli soprattutto ad anziani soli e caregiver. Non sostituisce il 112 per le emergenze.
 
 ## Sistema idrico ed energetico
 
