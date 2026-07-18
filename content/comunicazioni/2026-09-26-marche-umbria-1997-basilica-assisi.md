@@ -19,9 +19,9 @@ Alle **2:33 della notte del 26 settembre 1997**, una scossa di **magnitudo 5.7**
 
 La sequenza sismica del 1997 fu una delle più studiate della storia italiana. Le scosse si susseguirono per mesi, con epicentri spostati lungo l'Appennino umbro-marchigiano. Furono colpiti **300 comuni** in due regioni, con danni gravi a centri storici di valore monumentale altissimo: Foligno, Nocera Umbra, Camerino, Fabriano, e ovviamente **Assisi**.
 
-{{< foto src="/images/2026-09-26-marche-umbria-1997-basilica-assisi-fonte-wikipedia.webp"
-         alt="ShakeMap USGS del terremoto Umbria-Marche del 26 settembre 1997, magnitudo 6.0, profondità 6 km: mappa di intensità con epicentro segnato da una stella tra Foligno e Perugia, fasce colorate dal verde al giallo-arancio che si estendono su gran parte dell'Italia centrale, scala e reticolo di coordinate"
-         caption="ShakeMap USGS della scossa principale della sequenza sismica Umbria-Marche del 26 settembre 1997, che colpì duramente anche Assisi. Foto: USGS — Public domain — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:19970926_094026_umbria-marche_shakemap.jpg)." >}}
+{{< foto src="/images/2026-09-26-basilica-san-francesco-assisi-facciata.webp"
+         alt="Facciata della Basilica Superiore di San Francesco d'Assisi in stile gotico, in pietra bianca, con rosone centrale, portale a doppio arco e campanile romanico sulla sinistra; cielo azzurro terso e prato verde in primo piano"
+         caption="La facciata della Basilica Superiore di San Francesco d'Assisi, la cui volta crollò il 26 settembre 1997 durante un sopralluogo tecnico. Foto: Luca Aless — CC BY-SA 4.0 — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Assisi_-_Basilica_di_San_Francesco_02.jpg)." >}}
 
 
 Gli affreschi della Basilica Superiore — opere di Cimabue, Giotto, Pietro Lorenzetti, Simone Martini — furono in larga parte danneggiati. Migliaia di frammenti furono raccolti e archiviati per il restauro, durato anni.

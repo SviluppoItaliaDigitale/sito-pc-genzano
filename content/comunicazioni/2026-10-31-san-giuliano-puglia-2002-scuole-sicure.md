@@ -17,9 +17,9 @@ draft: false
 
 Sono passati **ventiquattro anni**. Erano le **11:32 del 31 ottobre 2002**, vigilia di Ognissanti, ultimo giorno di scuola della settimana per i bambini di **San Giuliano di Puglia**, piccolo Comune di **mille abitanti** della provincia di Campobasso, in **Molise**. Una scossa di **magnitudo 5.8** della scala Richter, con epicentro fra le province di Campobasso e Foggia, scosse il paese per circa venti secondi.
 
-{{< foto src="/images/2026-evento-san-giuliano-2002-scuola.webp"
-         alt="ShakeMap USGS del terremoto del 31 ottobre 2002 in Molise, magnitudo 5.9, epicentro presso Larino (Campobasso): mappa di intensità con epicentro segnato da una stella, fasce colorate dal verde al giallo-arancio concentrate sul basso Molise, tabella dei livelli di scuotimento e danno"
-         caption="ShakeMap USGS della scossa che il 31 ottobre 2002 colpì il basso Molise, epicentro vicino a San Giuliano di Puglia. Sotto le macerie della scuola Jovine morirono 27 bambini e una maestra. La tragedia porta in Italia all'aggiornamento della classificazione sismica e al piano nazionale per la sicurezza delle scuole." >}}
+{{< foto src="/images/2026-10-31-san-giuliano-parco-memoria.webp"
+         alt="Veduta notturna di San Giuliano di Puglia: sullo sfondo il borgo antico illuminato, in primo piano decine di piccole luci allineate su steli verticali che compongono il Parco della Memoria dedicato alle vittime del terremoto del 2002"
+         caption="Il Parco della Memoria di San Giuliano di Puglia, dedicato ai 27 bambini e alla maestra Carmela Ciniglio, vittime del crollo della scuola \"F. Jovine\" il 31 ottobre 2002. Foto: Daniela Picanza — CC BY-SA 4.0 — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Parco_della_Memoria_San_Giuliano_di_Puglia.jpg)." >}}
 
 In quei venti secondi, la **scuola elementare "Francesco Jovine"** di San Giuliano collassò sopra una sola classe: la **prima elementare**. Sotto le macerie morirono **27 bambini** — tutti i bambini della classe — e la loro maestra, **Carmela Ciniglio**. Sei alunni nati nel 1996 e venti compagni di classe nati nel 1996, una generazione intera di un piccolo paese, persi in pochi secondi. La scuola era stata costruita negli anni Cinquanta e poi sopraelevata di un piano negli anni Settanta, con tecniche e materiali che non avrebbero superato alcun controllo sismico moderno.
 
