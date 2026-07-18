@@ -234,7 +234,7 @@ Per volontari del nostro Gruppo:
 - **Formazione** continua.
 - **Attenzione** delle persone più esperte.
 
-Non c'è **stigma** nel chiedere supporto.
+Non c'è **stigma** nel chiedere supporto. Il tema non è astratto: la campagna antincendio boschivo di luglio ha già portato **più attivazioni ravvicinate** per le nostre squadre, tra caldo intenso e turni lunghi di bonifica. È proprio in periodi come questo che il debriefing e l'attenzione reciproca tra volontari contano di più.
 
 ## Il fattore genere
 
@@ -265,6 +265,7 @@ Le **nuove generazioni** portano cambiamento positivo.
 
 ## Per approfondire
 
+- Articolo: [Metà luglio: bilancio intermedio della campagna AIB](/comunicazioni/2026-07-15-meta-luglio-bilancio-campagna-aib/)
 - Articolo: [Esercitazioni PC](/comunicazioni/2026-07-09-esercitazioni-pc-a-cosa-servono/)
 - Articolo: [Gemellaggi PC](/comunicazioni/2026-07-12-gemellaggi-pc-solidarieta-territori/)
 - [SIPEM SoS](https://www.sipemsos.org/)

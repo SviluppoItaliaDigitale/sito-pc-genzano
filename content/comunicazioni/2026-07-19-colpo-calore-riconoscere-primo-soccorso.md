@@ -132,7 +132,7 @@ La prevenzione del colpo di calore si sintetizza in:
 
 In Italia la prevenzione del colpo di calore si basa su:
 - **Bollettini caldo** del Ministero della Salute.
-- **Numero Verde SOS Caldo** 800 55 60 60.
+- **Numero 1500 "Proteggiamoci dal caldo"** del Ministero della Salute.
 - **Piani comunali** di sorveglianza anziani.
 - **Servizi sociali** con interventi mirati.
 - **Medici di famiglia** come primi riferimenti.
@@ -205,6 +205,6 @@ Conoscere il **primo soccorso** è un dovere civile.
 - Articolo: [Casa sicura in estate](/comunicazioni/2026-07-05-casa-sicura-estate-ventilazione-refrigerio/)
 - [Ministero della Salute — Caldo](https://www.salute.gov.it/)
 - [Croce Rossa Italiana](https://www.cri.it/)
-- [Numero Verde SOS Caldo: 800 55 60 60](tel:800556060)
+- [Numero 1500 "Proteggiamoci dal caldo": chiama il 1500](tel:1500)
 
 Un colpo di calore ben riconosciuto si risolve con buona probabilità. Un colpo di calore **non riconosciuto** è un dramma. La differenza sta nella preparazione di ognuno di noi.
