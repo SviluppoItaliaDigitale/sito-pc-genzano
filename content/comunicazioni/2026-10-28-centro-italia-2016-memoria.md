@@ -112,6 +112,8 @@ Ricordare Amatrice, Norcia, Arquata non è retorica. È un investimento di **cul
 
 ## Per approfondire
 
+- [Amatrice, 24 agosto 2016: la prima scossa della sequenza](/comunicazioni/2026-08-24-amatrice-2016-centro-italia-decimo-anniversario/)
+- [Norcia, 30 ottobre 2016: la scossa più forte della sequenza](/comunicazioni/2026-10-30-norcia-2016-decimo-anniversario-sequenza-centro-italia/)
 - [Sismicità di Genzano](/comunicazioni/2026-10-06-sismicita-castelli-romani-zona-2b/)
 - [Vajont 1963](/comunicazioni/2026-10-09-vajont-1963-tragedia-prevista/)
 - [INGV — Centro Italia 2016](https://www.ingv.it/)

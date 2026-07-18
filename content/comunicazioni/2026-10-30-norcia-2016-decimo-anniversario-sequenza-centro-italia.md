@@ -67,6 +67,8 @@ Genzano si trova in **zona sismica 2B**, parte dello stesso sistema appenninico.
 
 ## Per saperne di più
 
+- [Amatrice, 24 agosto 2016: la prima scossa della sequenza](/comunicazioni/2026-08-24-amatrice-2016-centro-italia-decimo-anniversario/)
+- [Dieci anni dal sisma del Centro Italia: la memoria come prevenzione](/comunicazioni/2026-10-28-centro-italia-2016-memoria/)
 - [Sequenza sismica Centro Italia — Dipartimento Protezione Civile](https://www.protezionecivile.gov.it/it/approfondimento/terremoto-centro-italia-2016-2017)
 - [INGV — Terremoti Centro Italia](https://terremoticentroitalia.info/)
 - Voce Wikipedia: [Terremoto di Norcia del 30 ottobre 2016](https://it.wikipedia.org/wiki/Terremoto_di_Norcia_del_30_ottobre_2016)
