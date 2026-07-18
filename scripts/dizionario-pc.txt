@@ -470,3 +470,17 @@ zonazione
 équipe
 —
 pickup
+community
+digipeater
+gateway
+inReach
+iPhone
+mesh
+milliwatt
+packet
+source
+stack
+iOS
+marketplace
+powerbank
+OLED
