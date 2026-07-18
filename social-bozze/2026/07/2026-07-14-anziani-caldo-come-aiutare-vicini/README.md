@@ -1,8 +1,8 @@
-# Immagini e testi social per «Pi Day: numeri e statistiche dei rischi territoriali»
+# Immagini e testi social per «Aiutare un anziano vicino in caldo estremo: cosa fare»
 
-- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-03-14-pi-day-numeri-statistiche-rischio/
-- **Data**: 2026-03-14
-- **Badge**: Informazione
+- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-07-14-anziani-caldo-come-aiutare-vicini/
+- **Data**: 2026-07-14
+- **Badge**: Prevenzione
 
 ## Dove va ogni file (a prova di errore)
 

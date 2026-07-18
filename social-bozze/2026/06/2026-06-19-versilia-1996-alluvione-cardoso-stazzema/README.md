@@ -1,8 +1,8 @@
-# Immagini e testi social per «Pi Day: numeri e statistiche dei rischi territoriali»
+# Immagini e testi social per «Versilia, 19 giugno 1996: la notte che cancellò Cardoso»
 
-- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-03-14-pi-day-numeri-statistiche-rischio/
-- **Data**: 2026-03-14
-- **Badge**: Informazione
+- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-06-19-versilia-1996-alluvione-cardoso-stazzema/
+- **Data**: 2026-06-19
+- **Badge**: Comunicazione
 
 ## Dove va ogni file (a prova di errore)
 
@@ -11,7 +11,7 @@ Il numero del carosello è l'ordine di caricamento.
 
 | File | Dove si pubblica |
 |---|---|
-| `feed-carosello-1.jpg`, `feed-carosello-2.jpg` | FEED Instagram + Facebook — carosello: caricale **tutte, in ordine** (1080×1350) |
+| `feed-carosello-1.jpg`, `feed-carosello-2.jpg`, `feed-carosello-3.jpg`, `feed-carosello-4.jpg` | FEED Instagram + Facebook — carosello: caricale **tutte, in ordine** (1080×1350) |
 | `storia.jpg` | STORIE Instagram + Facebook — verticale, sparisce dopo 24h (1080×1920) |
 | `instagram.txt` | testo per Instagram |
 | `facebook.txt` | testo per Facebook (anteprima OG dall'URL) |
