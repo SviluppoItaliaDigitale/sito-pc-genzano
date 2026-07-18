@@ -1,0 +1,8 @@
+[INFORMAZIONE]Quando Internet e i telefoni non funzionano, le comunicazioni radio diventano essenziali.
+Il nostro nuovo articolo esplora le tecnologie che permettono di mantenere i contatti anche in emergenza:
+· **LoRa, Meshtastic, MeshCore, Reticulum**: reti mesh a basso costo per comunicazioni indipendenti.
+· Confronto con alternative storiche (APRS, Winlink) e satellitari.
+· Il ruolo cruciale di queste tecnologie per la Protezione Civile e l'autoprotezione.
+
+**Leggi sul sito:** [LoRa, Meshtastic e le altre reti mesh: comunicare quando Internet e telefoni non funzionano](https://www.protezionecivilegenzano.it/comunicazioni/2026-07-18-lora-meshtastic-meshcore-reti-mesh-emergenza/)
+#PCGenzano #Radiocomunicazioni #ProtezioneCivile #Genzano
