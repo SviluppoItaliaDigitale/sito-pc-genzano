@@ -1,0 +1,10 @@
+[INFORMAZIONE]Immaginate uno scenario in cui Internet e le linee telefoniche non funzionano a causa di un blackout esteso o un terremoto. Come si comunica?
+Il nostro nuovo articolo esplora le reti mesh a basso costo come LoRa, Meshtastic, MeshCore e Reticulum. Queste tecnologie permettono di stabilire canali di comunicazione indipendenti, cruciali in situazioni di emergenza.
+Approfondiamo il loro funzionamento, le confrontiamo con sistemi come APRS, Winlink e le comunicazioni satellitari, e spieghiamo il loro significato per la Protezione Civile.
+Un tema fondamentale per la resilienza delle comunità e la capacità operativa del nostro Gruppo.
+
+Link in bio.
+
+
+
+#PCGenzano #Genzano #ProtezioneCivile #Radiocomunicazioni #CastelliRomani
