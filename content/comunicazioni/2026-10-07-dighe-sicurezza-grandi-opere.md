@@ -95,6 +95,6 @@ Dal Vajont, la sicurezza delle dighe italiane è stata trasformata:
 
 - [Ministero Infrastrutture — Direzione Dighe](https://www.mit.gov.it/)
 - [Dipartimento di Protezione Civile — Rischio Diga](https://www.protezionecivile.gov.it/)
-- [Memoria Vajont — 9 ottobre](/comunicazioni/2026-10-09-vajont-63-anni-memoria-prevenzione/)
+- [Memoria Vajont — 9 ottobre](/comunicazioni/2026-10-09-vajont-1963-tragedia-prevista/)
 
 In emergenza: **112**.

@@ -95,6 +95,6 @@ Quarant'anni dopo, **Stava è la lezione più dura della cultura del rischio in 
 
 ## Approfondimenti dal nostro archivio
 
-- [Vajont, 63 anni: memoria e prevenzione](/comunicazioni/2026-10-09-vajont-63-anni-memoria-prevenzione/)
+- [Vajont, 63 anni: memoria e prevenzione](/comunicazioni/2026-10-09-vajont-1963-tragedia-prevista/)
 - [Dighe e sicurezza, grandi opere](/comunicazioni/2026-10-07-dighe-sicurezza-grandi-opere/)
 - [Sarno 1998, frana e rischio idrogeologico](/comunicazioni/2026-05-05-sarno-frana-1998-rischio-idrogeologico-italia/)
