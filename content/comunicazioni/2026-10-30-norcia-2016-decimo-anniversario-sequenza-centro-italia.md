@@ -34,9 +34,9 @@ La sequenza del Centro Italia (24 agosto 2016 — 18 gennaio 2017) ha colpito co
 - Oltre **70.000 scosse strumentali** registrate
 - Danni stimati in **oltre 23 miliardi di euro**
 
-{{< foto src="/images/2026-10-30-norcia-2016-decimo-anniversario-sequenza-centro-italia-fonte-wikipedia.webp"
-         alt="ShakeMap INGV del terremoto del 30 ottobre 2016, magnitudo 6.5, epicentro a 4 km da Norcia: mappa di intensità con epicentro segnato da una stella, fasce colorate dal verde al rosso intenso concentrate sull'Appennino centrale, tabella dei livelli di scuotimento e danno"
-         caption="ShakeMap INGV della scossa di magnitudo 6,5 del 30 ottobre 2016, epicentro a Norcia: la più forte registrata in Italia dal 1980. Foto: Istituto Nazionale di Geofisica e Vulcanologia and Centro Nazionale Terremoti — CC BY-SA 4.0 — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:30-10-2016_central_italy_ShakeMap.jpg)." >}}
+{{< foto src="/images/2026-10-30-norcia-chiesa-santagostino-rovine.webp"
+         alt="Rudere della chiesa di Sant'Agostino a Norcia dopo il terremoto: le mura sopravvissute sono puntellate da un'imponente struttura di tavole di legno incrociate e sovrastate da un'ampia tettoia di protezione su ponteggi metallici; auto parcheggiate sulla strada in primo piano"
+         caption="I resti della chiesa di Sant'Agostino a Norcia, messi in sicurezza con puntellature e tettoia provvisoria dopo il crollo parziale nella sequenza sismica del Centro Italia iniziata il 24 agosto 2016. Foto: Sailko — CC BY 3.0 — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Norcia,_resti_della_chiesa_di_sant%27agostino.jpg)." >}}
 
 
 E ha lasciato in eredità il **Sismabonus**, il Fondo per la ricostruzione, e l'esperienza più recente di gestione di emergenze sismiche complesse.
