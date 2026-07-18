@@ -212,5 +212,5 @@ Sul nostro sito:
 Fonti istituzionali:
 
 - [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/).
-- [Direttiva PCM 3 dicembre 2008 — Metodo Augustus](https://www.protezionecivile.gov.it/).
+- [Metodo Augustus — Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).
 - [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).
