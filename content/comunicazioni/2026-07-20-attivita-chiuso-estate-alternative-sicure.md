@@ -1,6 +1,6 @@
 ---
 title: "Attività al chiuso in estate: alternative sicure al caldo esterno"
-date: 2026-07-20
+date: 2026-07-20T00:01:00+02:00
 description: "Nelle ore più calde è saggio stare al riparo. Luoghi pubblici climatizzati, attività per bambini e anziani: una mappa delle alternative al caldo esterno."
 badge: "Informazione"
 priorita: "normale"
