@@ -7642,3 +7642,21 @@ html.a11y-contrast-blue-cream .bottom-nav ul { background: #fdf6e3; border-top-c
 html.a11y-contrast-blue-cream .bottom-nav a,
 html.a11y-contrast-blue-cream .bottom-nav a.active { color: #003366; }
 @media print { .bottom-nav { display: none !important; } }
+
+/* ============================================================
+   COOKIE BANNER — contrasto pulsante "OK, Ho capito" v1.0
+   Il banner ha fondo blu istituzionale (rgba(0,51,102,0.97)):
+   btn-outline-light renderizzava il testo in blu (#0066cc) invece
+   che bianco → contrasto 2.08:1 (FAIL WCAG 1.4.3). Forziamo testo e
+   bordo bianchi (≈12:1) e uno stato hover/focus leggibile.
+   ============================================================ */
+#cookie-banner #cookie-accept {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+#cookie-banner #cookie-accept:hover,
+#cookie-banner #cookie-accept:focus {
+  color: #003366;
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
