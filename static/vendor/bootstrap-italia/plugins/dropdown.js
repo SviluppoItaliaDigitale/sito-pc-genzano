@@ -259,10 +259,7 @@ class Dropdown extends BaseComponent {
     }
 
     // We need to trim the value because custom properties can also include spaces
-    // Pay attention: if you change $prefix in config.scss (default value "bsi-"),
-    // make sure that here you check for the same prefix when reading the custom
-    // property for the correct Popper's positioning.
-    const isEnd = getComputedStyle(this._menu).getPropertyValue('--bsi-dropdown-position').trim() === 'end';
+    const isEnd = getComputedStyle(this._menu).getPropertyValue('--bs-position').trim() === 'end';
 
     if (parentDropdown.classList.contains(CLASS_NAME_DROPUP)) {
       return isEnd ? PLACEMENT_TOPEND : PLACEMENT_TOP
