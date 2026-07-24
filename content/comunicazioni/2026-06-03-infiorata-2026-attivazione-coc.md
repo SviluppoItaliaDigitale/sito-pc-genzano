@@ -8,6 +8,7 @@ autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-03-infiorata-2026-attivazione-coc.webp"
 image_alt: "Cover dell'articolo: Infiorata 2026, il Sindaco attiva il Centro Operativo Comunale"
 scadenza: "2026-06-16"
+archiviato: true
 area: "Genzano di Roma"
 allegati:
   - titolo: "Ordinanza Sindacale n. 12 del 3 giugno 2026 — Attivazione C.O.C. Infiorata 2026"

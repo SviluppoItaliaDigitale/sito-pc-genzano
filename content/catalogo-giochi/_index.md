@@ -1,6 +1,6 @@
 ---
 title: "Catalogo dei giochi della sicurezza"
-description: "Catalogo informativo dei 33 giochi educativi gratuiti del Gruppo Comunale Volontari di PC Genzano di Roma. Una scheda per ogni gioco: fascia d'età, durata, obiettivo didattico, accessibilità."
+description: "Catalogo informativo dei giochi educativi gratuiti del Gruppo Comunale Volontari di PC Genzano di Roma. Una scheda per ogni gioco: fascia d'età, durata, obiettivo didattico, accessibilità."
 date: 2026-05-28
 draft: false
 layout: "list"
@@ -13,7 +13,7 @@ sitemap:
 dataUltimaRevisione: "2026-05-28"
 ---
 
-Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** mette a disposizione **33 giochi educativi gratuiti** sulla sicurezza e sulla protezione civile, divisi in tre fasce d'età: **infanzia (3-6 anni)**, **scuola primaria (6-11 anni)** e **ragazzi e adulti (11-19 anni e oltre)**.
+Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** mette a disposizione una raccolta di **giochi educativi gratuiti** sulla sicurezza e sulla protezione civile, divisi in tre fasce d'età: **infanzia (3-6 anni)**, **scuola primaria (6-11 anni)** e **ragazzi e adulti (11-19 anni e oltre)**.
 
 Questa pagina è il **catalogo informativo** dei giochi: per ognuno trovi una scheda con fascia d'età, durata stimata, obiettivo didattico, indicazioni di accessibilità e collegamenti alle pagine del sito per approfondire il tema. I giochi si aprono in una pagina dedicata e funzionano direttamente dal browser, senza account e senza scaricare nulla.
 
@@ -23,9 +23,9 @@ Questa pagina è il **catalogo informativo** dei giochi: per ognuno trovi una sc
 
 ## Indice per fascia
 
-- [Giochi per la scuola dell'infanzia (3-6 anni)](#infanzia) — 10 giochi
-- [Giochi per la scuola primaria (6-11 anni)](#primaria) — 13 giochi
-- [Giochi per ragazzi e adulti (11-19 anni e oltre)](#ragazzi) — 10 giochi
+- [Giochi per la scuola dell'infanzia (3-6 anni)](#infanzia)
+- [Giochi per la scuola primaria (6-11 anni)](#primaria)
+- [Giochi per ragazzi e adulti (11-19 anni e oltre)](#ragazzi)
 
 ## <span id="infanzia">Infanzia</span> (3-6 anni)
 

@@ -43,13 +43,13 @@ Questa distinzione spiega perché, anni dopo un terremoto, l'emergenza è formal
 
 ## Lezioni apprese e "ricostruire meglio"
 
-Ogni emergenza lascia **lezioni apprese**: cosa ha funzionato, cosa migliorare nei piani, nelle procedure, nella formazione. È il momento in cui il ciclo del rischio si chiude e ricomincia, alimentando di nuovo previsione e prevenzione. Il principio internazionale di riferimento è il **«ricostruire meglio»** (*build back better*) del Quadro di Sendai delle Nazioni Unite, che approfondiamo nella pagina [superamento](/conoscere/le-quattro-fasi/superamento/) e in [dimensione internazionale](/conoscere/dimensione-internazionale/): non tornare com'era prima, ma più sicuri di prima.
+Ogni emergenza lascia **lezioni apprese**: cosa ha funzionato, cosa migliorare nei piani, nelle procedure, nella formazione. È il momento in cui il ciclo del rischio si chiude e ricomincia, alimentando di nuovo previsione e prevenzione. Il principio internazionale di riferimento è il **«ricostruire meglio»** (*<span lang="en">build back better</span>*) del Quadro di Sendai delle Nazioni Unite, che approfondiamo nella pagina [superamento](/conoscere/le-quattro-fasi/superamento/) e in [dimensione internazionale](/conoscere/dimensione-internazionale/): non tornare com'era prima, ma più sicuri di prima.
 
 ## Approfondimenti sul nostro sito
 
 - [Superamento dell'emergenza](/conoscere/le-quattro-fasi/superamento/) — la fase di cui questa pagina è l'approfondimento.
 - [Le quattro fasi della protezione civile](/conoscere/le-quattro-fasi/) — la panoramica del ciclo.
-- [La dimensione internazionale](/conoscere/dimensione-internazionale/) — il Quadro di Sendai e il "build back better".
+- [La dimensione internazionale](/conoscere/dimensione-internazionale/) — il Quadro di Sendai e il "<span lang="en">build back better</span>".
 - [Normativa di protezione civile](/normativa/) — le norme di riferimento.
 
 ## Per approfondire — fonti istituzionali

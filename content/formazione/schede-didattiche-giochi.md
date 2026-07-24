@@ -12,7 +12,7 @@ aliases:
 dataUltimaRevisione: "2026-05-13"
 ---
 
-Il Gruppo Comunale di Protezione Civile mette a disposizione **33 giochi educativi** suddivisi per fascia di età (3-6, 6-11, 11-19 anni). Questa pagina è pensata per **docenti, dirigenti, RSPP, animatori, genitori che lavorano coi figli**: trovi le schede con gli obiettivi formativi, le competenze coperte, la durata e l'accessibilità di ciascun gioco.
+Il Gruppo Comunale di Protezione Civile mette a disposizione una raccolta di **giochi educativi** suddivisi per fascia di età (3-6, 6-11, 11-19 anni). Questa pagina è pensata per **docenti, dirigenti, RSPP, animatori, genitori che lavorano coi figli**: trovi le schede con gli obiettivi formativi, le competenze coperte, la durata e l'accessibilità di ciascun gioco.
 
 Per **giocare** vai direttamente all'[Arena PC Genzano](/giochi/). Per il **percorso didattico completo** vai a [Per le scuole](/scuole/).
 
@@ -41,7 +41,7 @@ I giochi sono allineati con:
 
 ## Giochi per la Scuola dell'Infanzia (3-6 anni)
 
-10 giochi a base visuale e narrativa. Tutti senza testo da leggere, navigabili a mouse, touch e tastiera.
+Giochi a base visuale e narrativa. Tutti senza testo da leggere, navigabili a mouse, touch e tastiera.
 
 | Gioco | Tema | Durata | Competenze | Completamento |
 |---|---|---|---|---|
@@ -60,7 +60,7 @@ I giochi sono allineati con:
 
 ## Giochi per la Scuola Primaria (6-11 anni)
 
-13 giochi che richiedono lettura e ragionamento. Adatti per attività in classe individuali o a gruppi.
+Giochi che richiedono lettura e ragionamento. Adatti per attività in classe individuali o a gruppi.
 
 | Gioco | Tema | Durata | Competenze | Completamento |
 |---|---|---|---|---|
@@ -82,7 +82,7 @@ I giochi sono allineati con:
 
 ## Giochi per la Secondaria (11-19 anni)
 
-11 giochi di livello più alto: ragionamento, gestione del tempo, decision making complesso, gioco di ruolo.
+Giochi di livello più alto: ragionamento, gestione del tempo, decision making complesso, gioco di ruolo.
 
 | Gioco | Tema | Durata | Competenze | Completamento |
 |---|---|---|---|---|

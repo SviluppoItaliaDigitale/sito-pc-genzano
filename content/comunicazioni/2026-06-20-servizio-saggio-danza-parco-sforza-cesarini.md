@@ -57,7 +57,7 @@ Un grazie a tutti i volontari che hanno dedicato la propria serata alla comunit�
 
 **Per approfondire**
 
-- Sul nostro sito: [Assistenza a sagre e grandi eventi locali](/comunicazioni/assistenza-sagre-grandi-eventi-locali/) · [I nostri mezzi e attrezzature](/chi-siamo/) · [Rischio incendio nei Castelli Romani](/rischi-prevenzione/rischio-incendio/)
+- Sul nostro sito: [Assistenza a sagre e grandi eventi locali](/comunicazioni/2026-06-23-assistenza-sagre-grandi-eventi-locali/) · [I nostri mezzi e attrezzature](/chi-siamo/) · [Rischio incendio nei Castelli Romani](/rischi-prevenzione/rischio-incendio/)
 - Vuoi dare una mano anche tu? Scopri come [diventare volontario](/diventa-volontario/).
 
 In caso di emergenza il numero da chiamare è uno solo: **112**. Per le segnalazioni non urgenti consulta i [numeri utili](/numeri-utili/).

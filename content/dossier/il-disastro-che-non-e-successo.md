@@ -90,7 +90,7 @@ Ognuno di essi è il candidato a un disastro che non succederà — e di cui, pr
 {{< dossier-scena id="vulnerabilita" image="/images/dossier/ricostruire-venzone.webp" alt="Il Duomo di Venzone oggi, ricostruito pietra su pietra dopo il terremoto del 1976" align="left" kicker="La leva della vulnerabilità" title="Venzone:<br>la pietra che ha imparato" credito="Il Duomo di Venzone, ricostruito dopo il 1976 · foto Sebi1 · pubblico dominio, via Wikimedia Commons" >}}
 Venzone fu rasa al suolo dal terremoto del Friuli nel 1976. Oggi è di nuovo in piedi, ricostruita **«dov'era, com'era»** — ma non *fragile* com'era: pietra su pietra numerata, con criteri antisismici che nel 1976 non esistevano.
 
-È la leva **V** della formula: lo stesso terremoto, sullo stesso paese, oggi troverebbe muri che rispondono diversamente. Il Quadro di Sendai chiama questo principio ***Build Back Better***, ricostruire meglio: ne raccontiamo la storia nel dossier [«Ricostruire meglio»](/dossier/ricostruire-meglio-il-dopo/) e nel [Manuale](/manuale/42-riduzione-rischio-sendai/).
+È la leva **V** della formula: lo stesso terremoto, sullo stesso paese, oggi troverebbe muri che rispondono diversamente. Il Quadro di Sendai chiama questo principio ***<span lang="en">Build Back Better</span>***, ricostruire meglio: ne raccontiamo la storia nel dossier [«Ricostruire meglio»](/dossier/ricostruire-meglio-il-dopo/) e nel [Manuale](/manuale/42-riduzione-rischio-sendai/).
 
 Ogni edificio adeguato, ogni argine rinforzato, ogni scuola verificata è un pezzo di disastro futuro **sottratto in anticipo** al conto delle vittime.
 {{< /dossier-scena >}}

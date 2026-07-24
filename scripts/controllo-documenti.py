@@ -239,7 +239,10 @@ def trova_link_documenti(text: str) -> set[str]:
     `.`/`-`, segno che siamo dentro un dominio tipo `sito.it/path`).
     """
     patterns = [
-        r"/manuali/[A-Za-z0-9_./-]+?\.pdf",
+        # Il leading slash è opzionale per catturare anche i path in stile
+        # Hugo relURL nei template (es. {{ $pdf := "manuali/....pdf" }}):
+        # il filtro prev_char sotto esclude comunque i domini esterni.
+        r"/?manuali/[A-Za-z0-9_./-]+?\.pdf",
         r"/allegati/[A-Za-z0-9_./-]+?\.pdf",
         r"/comunicati/[A-Za-z0-9_./-]+?\.pdf",
         r"/formazione/pacchetti/[A-Za-z0-9_./-]+?\.zip",
@@ -254,8 +257,11 @@ def trova_link_documenti(text: str) -> set[str]:
             if prev_char.isalnum() or prev_char in ".-":
                 continue
             link = m.group(0).rstrip("/")
-            # Esclusione: la cartella assets/ delle schede non è una scheda
-            if link.endswith("/schede-stampabili/assets"):
+            if not link.startswith("/"):
+                link = "/" + link
+            # Esclusioni: assets/ (asset condivisi) e pacchetti/ (bundle di
+            # stampa <fascia>.html, non schede con index.html) non sono schede
+            if link.endswith(("/schede-stampabili/assets", "/schede-stampabili/pacchetti")):
                 continue
             found.add(link)
     return found

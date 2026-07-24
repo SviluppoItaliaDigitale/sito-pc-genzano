@@ -7,8 +7,6 @@ type: "page"
 layout: "single"
 toc: false
 robots: "noindex, follow"
-aliases:
-  - /formazione/kit-calamita-animali/
 ---
 
 Il kit per animali domestici è stato unificato nella scheda già presente e più completa:

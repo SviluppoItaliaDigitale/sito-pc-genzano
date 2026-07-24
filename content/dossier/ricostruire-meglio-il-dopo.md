@@ -59,7 +59,7 @@ Non si ricostruiscono solo case. Dopo la tempesta **Vaia** (2018), con i suoi **
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="meglio" image="/images/dossier/acqua-emilia-2023.webp" alt="Casa di campagna isolata dall'acqua durante l'alluvione dell'Emilia-Romagna del 2023" align="top" kicker="La regola d'oro" title="Build Back Better:<br>meglio, non uguale" credito="Emilia-Romagna, 2023 · foto Cesare Barillà · CC BY-SA 4.0, via Wikimedia Commons" >}}
-Il Quadro di **Sendai** — l'accordo mondiale sulla riduzione del rischio che raccontiamo nel [Manuale](/manuale/42-riduzione-rischio-sendai/) — ha dato un nome a questa filosofia: ***Build Back Better***, ricostruire meglio. La ricostruzione non deve riportare il territorio com'era — cioè **vulnerabile come prima** — ma coglierla come occasione: case più sicure, fiumi con più spazio, scuole e ospedali che non crollano, boschi più resistenti.
+Il Quadro di **Sendai** — l'accordo mondiale sulla riduzione del rischio che raccontiamo nel [Manuale](/manuale/42-riduzione-rischio-sendai/) — ha dato un nome a questa filosofia: ***<span lang="en">Build Back Better</span>***, ricostruire meglio. La ricostruzione non deve riportare il territorio com'era — cioè **vulnerabile come prima** — ma coglierla come occasione: case più sicure, fiumi con più spazio, scuole e ospedali che non crollano, boschi più resistenti.
 
 È il criterio con cui giudicare ogni «dopo»: non solo *quanto in fretta* si ricostruisce, ma *quanto meglio*. Il Friuli lo fece d'istinto; oggi è scritto negli accordi internazionali e nelle regole della ricostruzione.
 
