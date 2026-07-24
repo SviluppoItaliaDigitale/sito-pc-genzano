@@ -42,6 +42,10 @@ SIGLE_BLACKLIST = {
     # date / numeri romani
     "MM", "DD", "YY", "YYYY", "I", "II", "III", "IV", "VI", "VII", "VIII", "IX",
     # ordinali italiani come "I°", "II°"
+    # tecnologie di uso comune che non meritano voce di glossario PC
+    "SMS", "MMS", "LED", "APP", "QR", "PIN", "SIM", "NFC",
+    # frammenti di sigle puntate già in glossario (DI.COMA.C. → "COMA")
+    "COMA",
 }
 
 # Pattern: parola maiuscola 3+ caratteri (sigla PC tipica)
@@ -59,12 +63,20 @@ def load_glossario(path: Path) -> set[str]:
     # Pattern: ## **SIGLA** o ## SIGLA o ### SIGLA
     sigle = set()
     for line in content.splitlines():
-        m = re.match(r"^#{2,3}\s+\**([A-Z][A-Z0-9\.\-\s]{2,40})\**\s*(?:—|–|-|:)?", line)
+        # Il char class include minuscole e "/" per catturare intere le
+        # intestazioni miste ("Copernicus EMS", "HF / VHF / UHF"): fino a
+        # lug 2026 si fermava alla prima minuscola e perdeva le sigle interne.
+        m = re.match(r"^#{2,3}\s+\**([A-Z][A-Za-z0-9\.\-/\s()]{2,60})\**\s*(?:—|–|-|:)?", line)
         if m:
             term = m.group(1).strip().rstrip(".").strip()
             # Estrai eventuali sigle dentro
             for s in SIGLA_REGEX.findall(term):
-                sigle.add(s.strip("."))
+                s = s.strip(".")
+                sigle.add(s)
+                # Le sigle puntate (FE.PI.VOL.) compaiono nei testi anche
+                # senza puntini (FEPIVOL): registra entrambe le forme.
+                if "." in s:
+                    sigle.add(s.replace(".", ""))
     return sigle
 
 
@@ -114,7 +126,10 @@ def main() -> int:
     missing_sorted = sorted(missing.items(), key=lambda x: -x[1])
 
     # Soglia: solo sigle usate ≥ 3 volte (per filtrare rumore)
-    significative = [(s, n) for s, n in missing_sorted if n >= 3]
+    # Soglia 10+ occorrenze: con ≥3 la lista superava le 250 voci, quasi
+    # tutte sigle citazionali che non meritano voce di glossario — issue
+    # illeggibile e mai azzerabile (alzata da 3 a 10 il 24/07/2026).
+    significative = [(s, n) for s, n in missing_sorted if n >= 10]
 
     if not significative:
         print("OK_NO_MISSING")

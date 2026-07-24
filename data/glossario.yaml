@@ -473,9 +473,10 @@
   termine: "OdV"
   varianti:
     - "OdV"
+    - "ODV"
     - "Organizzazione di Volontariato"
     - "Organizzazioni di Volontariato"
-  definizione: "Organizzazione di Volontariato: forma giuridica del Codice Terzo Settore (D.Lgs. 117/2017). Il Gruppo Comunale Volontari di PC Genzano è iscritto come OdV."
+  definizione: "Organizzazione di Volontariato: forma giuridica del Codice del Terzo Settore (D.Lgs. 117/2017) per gli enti basati sui volontari."
   link: "/glossario/#odv"
 
 - id: ets
@@ -866,3 +867,74 @@
     - "UNDRR"
   definizione: "Ufficio ONU per la riduzione del rischio di disastri: coordina a livello mondiale le strategie per ridurre i danni delle catastrofi (Quadro di Sendai)."
   link: "/glossario/#undrr"
+
+- id: agid
+  termine: "AGID"
+  varianti:
+    - "AGID"
+    - "Agenzia per l'Italia Digitale"
+  definizione: "Agenzia per l'Italia Digitale: struttura della Presidenza del Consiglio che detta le regole dei siti e dei servizi digitali della PA (design, accessibilità)."
+  link: "/glossario/#agid"
+
+- id: arasaac
+  termine: "ARASAAC"
+  varianti:
+    - "ARASAAC"
+  definizione: "Centro aragonese (Spagna) che pubblica pittogrammi liberi per la Comunicazione Aumentativa Alternativa: aiutano bambini e persone con disabilità cognitive."
+  link: "/glossario/#arasaac"
+
+- id: caa
+  termine: "CAA"
+  varianti:
+    - "CAA"
+    - "Comunicazione Aumentativa Alternativa"
+  definizione: "Comunicazione Aumentativa Alternativa: modi di comunicare con simboli e pittogrammi per chi non riesce a parlare. In emergenza la persona indica i simboli."
+  link: "/glossario/#caa"
+
+- id: iso
+  termine: "ISO"
+  varianti:
+    - "ISO"
+    - "International Organization for Standardization"
+  definizione: "International Organization for Standardization: organizzazione mondiale che pubblica norme tecniche volontarie, ad esempio su gestione delle emergenze e segnaletica."
+  link: "/glossario/#iso"
+
+- id: uni
+  termine: "UNI"
+  varianti:
+    - "UNI"
+    - "Ente Italiano di Normazione"
+  definizione: "Ente Italiano di Normazione: recepisce e pubblica in Italia le norme tecniche, comprese quelle internazionali (per esempio le UNI EN ISO)."
+  link: "/glossario/#uni"
+
+- id: rsa
+  termine: "RSA"
+  varianti:
+    - "RSA"
+    - "Residenza Sanitaria Assistenziale"
+  definizione: "Residenza Sanitaria Assistenziale: struttura che ospita anziani non autosufficienti. Nei piani di emergenza è una categoria vulnerabile con esigenze dedicate."
+  link: "/glossario/#rsa"
+
+- id: irc
+  termine: "IRC"
+  varianti:
+    - "IRC"
+    - "Italian Resuscitation Council"
+  definizione: "Italian Resuscitation Council: società scientifica italiana della rianimazione cardiopolmonare. Pubblica le linee guida per i corsi BLS e BLSD."
+  link: "/glossario/#irc"
+
+- id: wcag
+  termine: "WCAG"
+  varianti:
+    - "WCAG"
+    - "Web Content Accessibility Guidelines"
+  definizione: "Web Content Accessibility Guidelines: linee guida internazionali W3C per l'accessibilità dei contenuti web. Questo sito segue il livello AA della versione 2.2."
+  link: "/glossario/#wcag"
+
+- id: onu
+  termine: "ONU"
+  varianti:
+    - "ONU"
+    - "Organizzazione delle Nazioni Unite"
+  definizione: "Organizzazione delle Nazioni Unite: da essa dipendono l'UNDRR e il Quadro di Sendai per la riduzione del rischio di disastri."
+  link: "/glossario/#onu"
