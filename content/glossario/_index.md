@@ -7,7 +7,7 @@ sitemap:
   changefreq: monthly
 toc: true
 tts: true
-dataUltimaRevisione: "2026-06-07"
+dataUltimaRevisione: "2026-07-24"
 ---
 
 Le sigle della protezione civile possono sembrare difficili. Questo glossario le spiega in modo semplice, con esempi collegati al territorio quando utile.
@@ -37,6 +37,9 @@ Scheda tecnica usata dopo un terremoto da tecnici abilitati per valutare il dann
 ### AGESCI {#agesci}
 Associazione Guide e Scout Cattolici Italiani. Il suo settore di protezione civile è iscritto all'elenco nazionale del volontariato presso il Dipartimento.
 
+### AGID {#agid}
+Agenzia per l'Italia Digitale. Struttura della Presidenza del Consiglio dei Ministri che detta le regole dei siti e dei servizi digitali della PA: linee guida di design e accessibilità. Questo sito le segue.
+
 ### AIB
 Antincendio Boschivo. Comprende prevenzione, avvistamento, contenimento e spegnimento degli incendi boschivi. Coinvolge Regioni, Vigili del Fuoco, Carabinieri Forestali e volontari formati.
 *Approfondisci: [Il rischio da incendi boschivi](/conoscere/catalogo-dei-rischi/rischio-incendio/).*
@@ -50,6 +53,10 @@ Associazione Nazionale Pubbliche Assistenze. Rete nazionale di pubbliche assiste
 
 ### AR / Area di ricovero
 Area dove possono essere allestite tende, moduli o altre soluzioni per ospitare temporaneamente persone evacuate.
+
+### ARASAAC {#arasaac}
+Centro aragonese (Spagna) che pubblica pittogrammi liberi per la Comunicazione Aumentativa Alternativa (CAA). Il sito li usa per aiutare la comprensione di bambini e persone con disabilità cognitive.
+*Approfondisci: [Attribuzioni dei pittogrammi](/attribuzioni-pittogrammi/).*
 
 ### ARES 118 {#ares-118}
 <span id="ares"></span>
@@ -92,6 +99,10 @@ Movimento lento del suolo verso l'alto o verso il basso, collegato a fenomeni vu
 
 ## C
 
+### CAA {#caa}
+Comunicazione Aumentativa Alternativa. Modalità di comunicazione con simboli e pittogrammi per chi non riesce a parlare. In emergenza la persona indica i simboli per farsi capire.
+*Approfondisci: [Tabelle di comunicazione (CAA)](/tabelle-comunicazione/).*
+
 ### Capo Dipartimento {#capo-dipartimento}
 Massima autorità tecnico-operativa del Servizio nazionale, alle dipendenze della Presidenza del Consiglio. Coordina la risposta alle emergenze di rilievo nazionale.
 *Approfondisci: [Il Servizio Nazionale](/conoscere/servizio-nazionale/).*
@@ -118,6 +129,10 @@ Fondazione Centro euro-Mediterraneo sui Cambiamenti Climatici. Ente di ricerca i
 ### CNR {#cnr}
 Consiglio Nazionale delle Ricerche. Maggiore ente pubblico di ricerca italiano; per la protezione civile fornisce conoscenze scientifiche sui rischi naturali (frane via CNR-IRPI).
 *Approfondisci: [La scienza del rischio](/conoscere/scienza-del-rischio/).*
+
+### CNR-IRPI {#cnr-irpi}
+Istituto di Ricerca per la Protezione Idrogeologica del CNR. È l'autorità scientifica nazionale su frane e alluvioni: studia i fenomeni e supporta il sistema di protezione civile.
+*Approfondisci: [Il rischio idrogeologico](/conoscere/catalogo-dei-rischi/rischio-idrogeologico/).*
 
 ### CNSAS {#cnsas}
 Corpo Nazionale Soccorso Alpino e Speleologico. Struttura del Club Alpino Italiano (CAI) specializzata nel soccorso in montagna, in grotta e negli ambienti impervi. È una struttura operativa del Servizio nazionale di protezione civile.
@@ -166,6 +181,9 @@ Atto di indirizzo del Presidente del Consiglio. Per la protezione civile la più
 ### D.Lgs. 1/2018
 Vedi **Codice della protezione civile**.
 
+### D.M. (Decreto Ministeriale) {#dm}
+Decreto Ministeriale. Atto normativo emanato da un singolo ministro nelle materie di sua competenza. È diverso dal DPCM, firmato dal Presidente del Consiglio dei Ministri.
+
 ### DPC
 Dipartimento della Protezione Civile. Struttura della Presidenza del Consiglio dei Ministri che coordina il Servizio nazionale di protezione civile.
 
@@ -180,6 +198,10 @@ Documento di Valutazione dei Rischi. È previsto dalla normativa sulla sicurezza
 
 ## E
 
+### EFFIS {#effis}
+European Forest Fire Information System. Servizio del programma europeo Copernicus che mappa gli incendi boschivi in Europa. Alimenta anche la scheda Incendi del cruscotto di questo sito.
+*Approfondisci: [Il rischio da incendi boschivi](/conoscere/catalogo-dei-rischi/rischio-incendio/).*
+
 ### Emergenza
 Situazione in cui un evento è in corso o imminente e richiede interventi immediati. È diversa dall'allerta, che segnala una possibile criticità prevista.
 *Approfondisci: [Soccorso e gestione dell'emergenza](/conoscere/le-quattro-fasi/soccorso/).*
@@ -191,6 +213,9 @@ L'ipocentro è il punto in profondità dove si genera il terremoto; l'epicentro 
 ### ERCC {#ercc}
 Emergency Response Coordination Centre (Centro di coordinamento della risposta alle emergenze). Centro della Commissione europea che coordina 24 ore su 24 gli aiuti tra i Paesi durante le grandi emergenze, nell'ambito del Meccanismo unionale di protezione civile.
 *Approfondisci: [La dimensione internazionale](/conoscere/dimensione-internazionale/).*
+
+### ESA {#esa}
+Agenzia Spaziale Europea (European Space Agency). Con l'Unione Europea gestisce i satelliti Copernicus e Sentinel, usati anche per il monitoraggio del territorio e delle emergenze.
 
 ### Esercitazione
 Attività simulata usata per verificare piani, procedure, comunicazioni e capacità operative.
@@ -235,6 +260,9 @@ Bande di frequenza radio: HF a lunga portata (centinaia o migliaia di km), VHF e
 
 ## I
 
+### IARU {#iaru}
+International Amateur Radio Union. Federazione mondiale delle associazioni di radioamatori. Promuove anche le radiocomunicazioni di emergenza a supporto della protezione civile.
+
 ### IFFI
 Inventario dei Fenomeni Franosi in Italia. È una banca dati nazionale, gestita da ISPRA, che raccoglie informazioni sulle frane censite.
 *Approfondisci: [Il rischio idrogeologico](/conoscere/catalogo-dei-rischi/rischio-idrogeologico/).*
@@ -260,9 +288,16 @@ Campagna nazionale del Dipartimento e di ANPAS per la riduzione del rischio: ogn
 ### IPCC {#ipcc}
 Gruppo intergovernativo sul cambiamento climatico (Intergovernmental Panel on Climate Change). Organismo scientifico dell'ONU che valuta lo stato delle conoscenze sul clima e sui suoi effetti.
 
+### IRC {#irc}
+Italian Resuscitation Council. Società scientifica italiana della rianimazione cardiopolmonare: pubblica le linee guida di riferimento per i corsi BLS e BLSD.
+
 ### ISIN {#isin}
 Ispettorato nazionale per la sicurezza nucleare e la radioprotezione. È l'autorità che vigila su impianti, sorgenti e trasporti di materiale radioattivo in Italia. Istituito con il decreto legislativo n. 45 del 2014.
 *Approfondisci: [Il rischio nucleare e radiologico](/conoscere/catalogo-dei-rischi/rischio-nucleare-radiologico/).*
+
+### ISO {#iso}
+International Organization for Standardization. Organizzazione mondiale che pubblica norme tecniche volontarie. Il sito ne cita diverse, per esempio su gestione delle emergenze e segnaletica di sicurezza.
+*Approfondisci: [Standard ISO per la Protezione Civile](/standard-iso/).*
 
 ### ISPRA {#ispra}
 Istituto Superiore per la Protezione e la Ricerca Ambientale. Gestisce dati nazionali su frane, alluvioni, costa e suolo; pubblica la piattaforma IdroGEO.
@@ -270,6 +305,9 @@ Istituto Superiore per la Protezione e la Ricerca Ambientale. Gestisce dati nazi
 
 ### ISS {#iss}
 Istituto Superiore di Sanità. Ente pubblico di ricerca in materia di salute; in emergenza fornisce dati e raccomandazioni alle istituzioni sanitarie.
+
+### ISTAT {#istat}
+Istituto Nazionale di Statistica. Fonte ufficiale dei dati demografici italiani, usati anche nella pianificazione di protezione civile per conoscere la popolazione esposta.
 
 ### IT-alert
 Sistema nazionale di allarme pubblico. Invia messaggi ai telefoni presenti in un'area interessata da una grave emergenza. Non richiede app, registrazione o connessione internet.
@@ -315,6 +353,12 @@ Insieme di interventi che riducono gli effetti di un evento dannoso (argini, edi
 
 ## N
 
+### NASA {#nasa}
+Agenzia spaziale degli Stati Uniti (National Aeronautics and Space Administration). Pubblica immagini satellitari libere, usate anche su questo sito.
+
+### NOAA {#noaa}
+Agenzia federale degli Stati Uniti per gli oceani e l'atmosfera (National Oceanic and Atmospheric Administration). Studia meteo e uragani; pubblica immagini e dati liberi.
+
 ### NTC {#ntc}
 Norme Tecniche per le Costruzioni (aggiornate nel 2018). Fissano i requisiti antisismici e di sicurezza degli edifici e classificano l'Italia in zone sismiche.
 *Approfondisci: [Il rischio sismico](/conoscere/catalogo-dei-rischi/rischio-sismico/).*
@@ -324,14 +368,17 @@ Numero Unico Europeo di Emergenza. È il numero da chiamare per incendio, malore
 
 ## O
 
-### OdV {#odv}
+### OdV / ODV {#odv}
 Organizzazione di Volontariato. Forma giuridica del Codice del Terzo Settore (D.Lgs. 117/2017). Il Gruppo Comunale Volontari di PC Genzano, essendo un gruppo comunale (articolazione del Comune), è invece iscritto al RUNTS nella sezione «Altri Enti del Terzo Settore», non come OdV.
 
-### OMS {#oms}
-Organizzazione Mondiale della Sanità. Agenzia delle Nazioni Unite per la salute pubblica: pubblica linee guida su epidemie, ondate di calore e primo soccorso.
+### OMS / WHO {#oms}
+Organizzazione Mondiale della Sanità (in inglese World Health Organization, WHO). Agenzia delle Nazioni Unite per la salute pubblica: pubblica linee guida su epidemie, ondate di calore e primo soccorso.
 
 ### Ondata di calore {#ondata-di-calore}
 Periodo di almeno tre giorni con temperature molto sopra la media stagionale. Aumenta i ricoveri e la mortalità nelle persone fragili.
+
+### ONU {#onu}
+Organizzazione delle Nazioni Unite. Da essa dipendono l'[UNDRR](#undrr) e il [Quadro di Sendai](#sendai) per la riduzione del rischio di disastri.
 
 ## P
 
@@ -376,6 +423,10 @@ Capacità di una comunità di assorbire un evento avverso, riorganizzarsi e torn
 ### Rischio
 Il rischio dipende da tre fattori: pericolosità, esposizione e vulnerabilità. Ridurre il rischio significa conoscere i pericoli, diminuire la vulnerabilità e adottare comportamenti corretti.
 *Approfondisci: [La scienza del rischio](/conoscere/scienza-del-rischio/).*
+
+### RSA {#rsa}
+Residenza Sanitaria Assistenziale. Struttura che ospita anziani non autosufficienti. Nei piani di emergenza è una categoria vulnerabile: l'evacuazione richiede assistenza dedicata.
+*Approfondisci: [Kit Calamità per Strutture Sanitarie](/formazione/kit-calamita-strutture-sanitarie/).*
 
 ### RSPP
 Responsabile del Servizio di Prevenzione e Protezione. È una figura prevista dalla normativa sulla sicurezza nei luoghi di lavoro e nelle scuole.
@@ -456,6 +507,9 @@ Sigla di *Union Civil Protection Mechanism*: è il [Meccanismo europeo di protez
 ### UNDRR {#undrr}
 Ufficio delle Nazioni Unite per la riduzione del rischio di disastri (United Nations Office for Disaster Risk Reduction). Coordina a livello mondiale le strategie per ridurre i danni delle catastrofi, come il Quadro di Sendai.
 
+### UNI {#uni}
+Ente Italiano di Normazione. Recepisce e pubblica in Italia le norme tecniche, comprese quelle internazionali (per esempio le UNI EN ISO).
+
 ### USR
 Ufficio Speciale Ricostruzione. Struttura tecnica che segue la ricostruzione dopo grandi emergenze.
 *Approfondisci: [Dopo l'emergenza](/conoscere/le-quattro-fasi/dopo-l-emergenza/).*
@@ -466,6 +520,10 @@ Ufficio Speciale Ricostruzione. Struttura tecnica che segue la ricostruzione dop
 Vigili del Fuoco. Corpo nazionale specializzato nel soccorso tecnico urgente: incendi, incidenti, dissesti statici, ricerca persone e altri interventi. In emergenza chiama il **112**.
 
 ## W
+
+### WCAG {#wcag}
+Web Content Accessibility Guidelines. Linee guida internazionali del W3C per l'accessibilità dei contenuti web. Questo sito segue il livello AA della versione 2.2.
+*Approfondisci: [Accessibilità](/accessibilita/).*
 
 ### Where Are U {#where-are-u}
 App ufficiale del 112: invia automaticamente la tua posizione alla Centrale Unica quando chiami in emergenza. Gratuita per Android e iOS.
