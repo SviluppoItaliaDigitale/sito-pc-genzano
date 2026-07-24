@@ -790,7 +790,7 @@ Materiale integrativo per il docente che vuole offrire esempi **concreti, recent
 
 **Obiettivo**: collegare l'attualità alla vulcanologia, comprendere il **rischio vulcanico quiescente** (rilevante per i Colli Albani, il nostro territorio).
 
-**Materiali**: rapporti INGV-OV (Osservatorio Vesuviano), piano di emergenza Campi Flegrei del DPC.
+**Materiali**: rapporti INGV-OV (Osservatorio Vesuviano), piano di emergenza Campi Flegrei del DPC, playlist video ufficiale [Bradisismo Campi Flegrei 2024](https://www.youtube.com/playlist?list=PLaLgDI0rVT4AhRiJWDMRACf9kynNGmxnh) del Dipartimento della Protezione Civile.
 
 **Domande-guida**:
 - Cosa significa "bradisismo"?
