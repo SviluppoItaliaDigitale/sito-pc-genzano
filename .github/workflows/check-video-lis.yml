@@ -39,15 +39,16 @@ jobs:
           set -uo pipefail
           OUTPUT=$(python3 scripts/check-nuovi-video-lis.py 2>&1 || true)
           echo "$OUTPUT"
-          # First line is either OK_NO_NEW_VIDEOS or NEW_VIDEOS_FOUND
-          FIRST=$(echo "$OUTPUT" | head -1)
-          if [ "$FIRST" = "OK_NO_NEW_VIDEOS" ]; then
+          # Il marker OK_NO_NEW_VIDEOS/NEW_VIDEOS_FOUND è su stdout, ma OUTPUT
+          # include anche stderr (diagnostica canali): cercalo su tutta l'uscita,
+          # non sulla prima riga (bug fino a lug 2026: issue aperte con 0 video).
+          if echo "$OUTPUT" | grep -q "^OK_NO_NEW_VIDEOS$"; then
             echo "has_new=false" >> "$GITHUB_OUTPUT"
             echo "Nessun nuovo video LIS — niente da fare."
           else
             echo "has_new=true" >> "$GITHUB_OUTPUT"
             # Body issue: tutto tranne la prima riga marker
-            echo "$OUTPUT" | tail -n +2 > /tmp/issue-body.md
+            echo "$OUTPUT" | grep -v "^NEW_VIDEOS_FOUND$" > /tmp/issue-body.md
             echo "---" >> /tmp/issue-body.md
             echo "" >> /tmp/issue-body.md
             echo "## Come integrare" >> /tmp/issue-body.md
