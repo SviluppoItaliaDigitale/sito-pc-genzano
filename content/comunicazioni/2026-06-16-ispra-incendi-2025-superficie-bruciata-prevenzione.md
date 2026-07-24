@@ -1,7 +1,7 @@
 ---
 title: "Incendi boschivi: nel 2025 la superficie bruciata è quasi raddoppiata. ISPRA: investire nella prevenzione"
 date: 2026-06-16T00:02:00+02:00
-description: "Nel 2025 in Italia il fuoco ha percorso 965 km², quasi il doppio del 2024 (dati ISPRA-EFFIS). Sicilia, Calabria e Campania le più colpite. Il valore della prevenzione."
+description: "Nel 2025 in Italia il fuoco ha percorso 965 km², quasi il doppio del 2024 (dati ISPRA-EFFIS). Sicilia, Calabria e Campania le regioni più colpite."
 badge: "Informazione"
 priorita: normale
 autore: "Gruppo Comunale Volontari PC Genzano"

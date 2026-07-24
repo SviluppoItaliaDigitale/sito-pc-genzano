@@ -78,7 +78,7 @@ Basic Life Support (supporto vitale di base). Manovre di rianimazione di base �
 ### BLSD {#blsd}
 Basic Life Support Defibrillation. Il BLS unito all'uso del defibrillatore (DAE). È il livello base certificato per soccorrere un arresto cardiaco quando è disponibile un DAE.
 
-### Build back better {#build-back-better}
+### <span lang="en">Build back better</span> {#build-back-better}
 Principio della ricostruzione dopo un disastro: non tornare com'era prima, ma ricostruire più sicuro e resiliente. È uno dei principi del Quadro di Sendai delle Nazioni Unite.
 *Approfondisci: [Dopo l'emergenza](/conoscere/le-quattro-fasi/dopo-l-emergenza/).*
 
@@ -398,7 +398,7 @@ Evento sismico avvertito dalle persone o registrato dagli strumenti.
 *Approfondisci: [Il rischio sismico](/conoscere/catalogo-dei-rischi/rischio-sismico/).*
 
 ### Sendai, Quadro di {#sendai}
-Quadro di Sendai 2015-2030: l'accordo mondiale delle Nazioni Unite per ridurre i danni dei disastri. Indica priorità come conoscere il rischio, rafforzare la governance e ricostruire meglio (*build back better*).
+Quadro di Sendai 2015-2030: l'accordo mondiale delle Nazioni Unite per ridurre i danni dei disastri. Indica priorità come conoscere il rischio, rafforzare la governance e ricostruire meglio (*<span lang="en">build back better</span>*).
 *Approfondisci: [La dimensione internazionale](/conoscere/dimensione-internazionale/).*
 
 ### Seveso (direttiva) {#seveso}

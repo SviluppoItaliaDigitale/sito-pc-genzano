@@ -27,7 +27,7 @@ A scala mondiale il riferimento è l'**UNDRR** (Ufficio delle Nazioni Unite per 
 1. **comprendere** il rischio di disastri (pericolosità, vulnerabilità, esposizione);
 2. **rafforzare la governance** del rischio per gestirlo;
 3. **investire** nella riduzione del rischio per la resilienza;
-4. **migliorare la preparazione** per una risposta efficace e per «ricostruire meglio» (*build back better*).
+4. **migliorare la preparazione** per una risposta efficace e per «ricostruire meglio» (*<span lang="en">build back better</span>*).
 
 {{< box tipo="chiave" titolo="Dalla risposta alla riduzione del rischio" >}}
 Il filo che lega UCPM, rescEU e Sendai è lo stesso del manuale: non basta rispondere bene ai disastri, bisogna **ridurne il rischio** a monte. La cooperazione internazionale non sostituisce il livello locale — lo rafforza. Anche il Gruppo Comunale, nel suo piccolo, è un nodo di questa catena che va dal cittadino alle Nazioni Unite.

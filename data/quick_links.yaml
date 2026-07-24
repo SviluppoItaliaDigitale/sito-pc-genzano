@@ -48,6 +48,13 @@ cosa_fare:
 
 # Servizi per il cittadino
 servizi:
+  - titolo: "Da dove comincio?"
+    url: "/da-dove-comincio/"
+    icona: "bi-signpost-2"
+    classe_icona: "si-green"
+    descrizione: "L'ingresso giusto per la tua situazione: appena arrivato, caregiver, insegnante, famiglie e altro."
+    azione: "Trova il tuo ingresso"
+
   - titolo: "Cosa devo fare?"
     url: "/assistente/"
     icona: "bi-question-circle"
@@ -89,6 +96,13 @@ servizi:
     classe_icona: "si-purple"
     descrizione: "Meteo, terremoti, incendi, qualità aria da fonti ufficiali."
     azione: "Apri strumenti"
+
+  - titolo: "Lo stato del territorio"
+    url: "/stato-del-territorio/"
+    icona: "bi-clipboard-data"
+    classe_icona: "si-blue"
+    descrizione: "La matrice dei rischi: per ogni rischio la fase attuale, verificata e datata."
+    azione: "Vedi lo stato"
 
   - titolo: "Abili a Proteggere"
     url: "/abili-a-proteggere/"

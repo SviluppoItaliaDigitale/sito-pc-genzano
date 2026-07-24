@@ -43,7 +43,7 @@ Il Framework articola la strategia in **quattro priorità d'azione**:
 1. **Comprendere il rischio**: investire nella conoscenza scientifica, nei dati storici, nei sistemi di monitoraggio
 2. **Rafforzare la governance**: avere autorità di Protezione Civile chiare, coordinate, dotate di risorse
 3. **Investire nella resilienza**: ridurre la vulnerabilità delle infrastrutture, delle abitazioni, dei servizi essenziali
-4. **Migliorare la preparazione e il *build back better***: prepararsi alla risposta e ricostruire dopo le emergenze in modo più sicuro di come si era prima
+4. **Migliorare la preparazione e il *<span lang="en">build back better</span>***: prepararsi alla risposta e ricostruire dopo le emergenze in modo più sicuro di come si era prima
 
 ## Il rischio come prodotto, non come fenomeno
 

@@ -1,6 +1,6 @@
 ---
 title: "Primo soccorso estivo: colpi di calore, traumi, punture"
-date: 2026-06-29
+date: 2026-06-29T00:01:00+02:00
 description: "L'estate è la stagione di traumi, colpi di calore, punture di insetti. Cosa fare nei primi minuti prima dell'arrivo dei soccorsi."
 badge: "Prevenzione"
 priorita: "normale"
