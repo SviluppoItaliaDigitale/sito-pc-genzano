@@ -52,6 +52,8 @@ Il recupero e la distribuzione di alimenti a fini di solidarietà rientra nel "c
 - **Legge 147/2013** (art. 1 commi 236-237) — riconosce il valore sociale delle ONLUS che distribuiscono alimenti e dà loro il diritto di elaborare un proprio Manuale di corrette prassi igieniche.
 - **Legge 166/2016 "Legge Gadda"** — semplifica le procedure di donazione delle eccedenze alimentari.
 
+> **Nota di aggiornamento (luglio 2026).** Le tre leggi citate sono tutte vigenti. Il [Codice del Terzo settore (D.Lgs. 117/2017)](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2017-07-03;117) ha esteso agli **enti del Terzo settore (ETS)** le tutele che le leggi 155/2003 e 147/2013 riferivano alle ONLUS: dal periodo d'imposta 2026 la qualifica di ONLUS è superata e i riferimenti si intendono rivolti agli ETS.
+
 ## Cosa distingue il Manuale
 
 Il manuale introduce alcuni **strumenti operativi specifici per il mondo del volontariato**:
