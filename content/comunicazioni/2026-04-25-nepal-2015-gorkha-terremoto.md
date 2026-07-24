@@ -49,7 +49,7 @@ Il Nepal 2015 ha consolidato lezioni che valgono per tutti i Paesi sismici, Ital
 
 2. **Il patrimonio storico è elemento di rischio elevato.** Templi e monumenti UNESCO della valle di Kathmandu erano costruzioni in muratura non rinforzata, alcune di centinaia di anni. Il loro crollo ha causato vittime e ha cancellato pezzi di patrimonio culturale dell'umanità. La **conservazione del patrimonio storico include la sua sismoresistenza**: principio già adottato in Italia dopo Assisi 1997 e oggi consolidato.
 
-3. **Il *build back better* è una scelta politica.** La ricostruzione del Nepal è stata lenta e contestata. Alcune zone sono state ricostruite con criteri sismici migliorati, altre sono state lasciate al ripristino "come prima". Il **Sendai Framework** (vedi articolo del [13 ottobre](/comunicazioni/2026-10-13-undrr-sendai-framework-riduzione-rischio-disastri/)) raccomanda esplicitamente il principio del *build back better*: ricostruire più sicuro, non solo riparare.
+3. **Il *<span lang="en">build back better</span>* è una scelta politica.** La ricostruzione del Nepal è stata lenta e contestata. Alcune zone sono state ricostruite con criteri sismici migliorati, altre sono state lasciate al ripristino "come prima". Il **Sendai Framework** (vedi articolo del [13 ottobre](/comunicazioni/2026-10-13-undrr-sendai-framework-riduzione-rischio-disastri/)) raccomanda esplicitamente il principio del *<span lang="en">build back better</span>*: ricostruire più sicuro, non solo riparare.
 
 ## A Genzano di Roma
 

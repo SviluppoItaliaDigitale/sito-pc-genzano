@@ -1125,7 +1125,7 @@ Scrivere a **[segreteria@protezionecivilegenzano.it](mailto:segreteria@protezion
 
 ## Vedi anche
 
-- [Schede didattiche dei giochi](/formazione/schede-didattiche-giochi/) — catalogo dei 33 giochi con obiettivi, durata, competenze e accessibilità (per scegliere un gioco singolo)
+- [Schede didattiche dei giochi](/formazione/schede-didattiche-giochi/) — catalogo dei giochi con obiettivi, durata, competenze e accessibilità (per scegliere un gioco singolo)
 - [Per le scuole](/scuole/) — landing per docenti, dirigenti, genitori, studenti
 - [Educazione Civica](/formazione/educazione-civica/) — collegamenti normativi e calendario 33 ore
 - [Formazione](/formazione/) — hub completo dei materiali

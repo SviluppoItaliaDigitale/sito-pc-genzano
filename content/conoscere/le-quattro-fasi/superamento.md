@@ -34,7 +34,7 @@ Fonte: Dipartimento della Protezione Civile, [Scheda AeDES](https://www.protezio
 
 ## La ricostruzione e le lezioni apprese
 
-Il superamento non è solo «rimettere com'era prima». Un principio condiviso a livello internazionale è quello del **«ricostruire meglio»** (*build back better*): usare le fasi di recupero e ricostruzione dopo un disastro per aumentare la resilienza, così che lo stesso evento, in futuro, faccia meno danni. È uno dei capisaldi del **Quadro di Sendai per la riduzione del rischio di disastri 2015-2030** delle Nazioni Unite.
+Il superamento non è solo «rimettere com'era prima». Un principio condiviso a livello internazionale è quello del **«ricostruire meglio»** (*<span lang="en">build back better</span>*): usare le fasi di recupero e ricostruzione dopo un disastro per aumentare la resilienza, così che lo stesso evento, in futuro, faccia meno danni. È uno dei capisaldi del **Quadro di Sendai per la riduzione del rischio di disastri 2015-2030** delle Nazioni Unite.
 
 Da ogni emergenza si traggono anche **lezioni apprese**: cosa ha funzionato, cosa migliorare nei piani, nelle procedure e nella formazione. È il punto in cui il ciclo del rischio si chiude e ricomincia, alimentando di nuovo la previsione e la prevenzione.
 

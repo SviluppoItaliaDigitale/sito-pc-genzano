@@ -25,10 +25,10 @@ Sendai fissa **quattro priorità d'azione**:
 1. **comprendere il rischio di disastri** — conoscenza, dati, valutazione, educazione (è la base di tutto: non si riduce ciò che non si conosce);
 2. **rafforzare la governance del rischio** — istituzioni, norme, coordinamento a tutti i livelli;
 3. **investire nella riduzione del rischio per la resilienza** — risorse strutturali e non strutturali per ridurre vulnerabilità ed esposizione;
-4. **migliorare la preparazione per una risposta efficace** e per **«ricostruire meglio»** (*Build Back Better*) nella fase di recupero.
+4. **migliorare la preparazione per una risposta efficace** e per **«ricostruire meglio»** (*<span lang="en">Build Back Better</span>*) nella fase di recupero.
 
 {{< box tipo="chiave" titolo="«Ricostruire meglio» non è uno slogan" >}}
-Il principio del *Build Back Better* — ricostruire meglio — afferma che la fase di ricostruzione dopo un disastro non deve riportare il territorio com'era, cioè vulnerabile come prima, ma coglierla come occasione per **ridurre il rischio futuro**: edifici più sicuri, infrastrutture più resilienti, scelte urbanistiche più consapevoli. È il punto dove la riduzione del rischio (questa parte) e il «dopo l'evento» (Parte X) si saldano.
+Il principio del *<span lang="en">Build Back Better</span>* — ricostruire meglio — afferma che la fase di ricostruzione dopo un disastro non deve riportare il territorio com'era, cioè vulnerabile come prima, ma coglierla come occasione per **ridurre il rischio futuro**: edifici più sicuri, infrastrutture più resilienti, scelte urbanistiche più consapevoli. È il punto dove la riduzione del rischio (questa parte) e il «dopo l'evento» (Parte X) si saldano.
 {{< /box >}}
 
 ## 4.8 I sette target globali

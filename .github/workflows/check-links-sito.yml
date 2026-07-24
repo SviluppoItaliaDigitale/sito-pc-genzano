@@ -55,9 +55,12 @@ jobs:
           # --user-agent      identifichiamo chiaramente il nostro checker
           # --exclude         tel:/mailto:, anchor interni, GitHub Pages (evita self-loop)
           # --require-https   segnala link http:// (sicurezza)
-          # --base       risolve i path assoluti (/foo/bar/) contro la root del sito buildato.
+          # --root-dir   risolve i path assoluti (/foo/bar/) contro la root del sito buildato.
           #              Senza questo flag lychee non sa contro cosa risolvere /css/, /images/, ecc.
           #              e produce migliaia di falsi positivi "Cannot convert path to URI".
+          #              NOTA: fino a luglio 2026 si usava `--base public`, ma lychee ≥0.16
+          #              richiede per --base un URL completo o un path assoluto e per i path
+          #              locali root-relative il nuovo flag --root-dir (assoluto).
           args: >-
             --cache
             --max-cache-age 1d
@@ -68,7 +71,7 @@ jobs:
             --max-retries 3
             --retry-wait-time 5
             --user-agent "Mozilla/5.0 (compatible; PCGenzanoLinkChecker/1.0; +https://www.protezionecivilegenzano.it/)"
-            --base public
+            --root-dir "${{ github.workspace }}/public"
             --exclude "^tel:"
             --exclude "^mailto:"
             --exclude "^#"

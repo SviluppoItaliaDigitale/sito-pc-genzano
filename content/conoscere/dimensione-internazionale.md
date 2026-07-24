@@ -47,7 +47,7 @@ Sendai indica **quattro priorità** d'azione:
 1. **comprendere** il rischio di disastri (in tutte le sue dimensioni: pericolosità, vulnerabilità, esposizione);
 2. **rafforzare la governance** del rischio per gestirlo;
 3. **investire** nella riduzione del rischio per la resilienza;
-4. **migliorare la preparazione** per una risposta efficace e «**ricostruire meglio**» (*build back better*) nella ripresa.
+4. **migliorare la preparazione** per una risposta efficace e «**ricostruire meglio**» (*<span lang="en">build back better</span>*) nella ripresa.
 
 A queste si affiancano **sette obiettivi globali** misurabili al 2030, tra cui ridurre la mortalità da disastri, il numero di persone colpite, le perdite economiche e i danni alle infrastrutture, e aumentare i sistemi di allerta precoce. Approfondiamo il tema nella scheda [UNDRR e il Quadro di Sendai](/comunicazioni/2026-10-13-undrr-sendai-framework-riduzione-rischio-disastri/).
 

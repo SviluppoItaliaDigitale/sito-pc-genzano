@@ -1,7 +1,7 @@
 ---
 title: "Sentinel-1C: il nuovo radar europeo che misura il suolo che si muove"
 date: 2026-06-15T00:02:00+02:00
-description: "Il satellite Copernicus Sentinel-1C ha riportato a due la costellazione radar europea. Misura dallo spazio le deformazioni del terreno: terremoti, frane, vulcani."
+description: "Il satellite Copernicus Sentinel-1C riporta a due la costellazione radar europea: misura dallo spazio le deformazioni del suolo di terremoti, frane e vulcani."
 badge: "Informazione"
 priorita: normale
 autore: "Gruppo Comunale Volontari PC Genzano"

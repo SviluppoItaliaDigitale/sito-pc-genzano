@@ -57,7 +57,7 @@ Quando l'evento finisce, il lavoro non è concluso: la quarta fase, spesso la pi
 Per gli eventi di rilievo nazionale, il Consiglio dei ministri delibera lo **stato di emergenza** (art. 24) — che **non può superare i 12 mesi, prorogabili per non più di altri 12** — e ne discendono le **ordinanze di protezione civile** (art. 25). Dopo un terremoto, una delle attività centrali è capire quali edifici sono sicuri: si usano le **schede di agibilità** (AeDES, e la più rapida FAST), compilate da tecnici qualificati — funzione che il volontariato *non* sostituisce. La trattazione di danni, agibilità, PDNA e ricostruzione è nella Parte X.
 
 {{< box tipo="approfondimento" titolo="«Ricostruire meglio» (build back better)" >}}
-Il superamento non è solo «rimettere com'era prima». Un principio condiviso a livello internazionale — caposaldo del **Quadro di Sendai 2015-2030** dell'ONU — è il *build back better*: usare la ricostruzione per aumentare la resilienza, così che lo stesso evento, in futuro, faccia meno danni. È il punto in cui il ciclo del rischio si chiude e ricomincia, alimentando di nuovo previsione e prevenzione.
+Il superamento non è solo «rimettere com'era prima». Un principio condiviso a livello internazionale — caposaldo del **Quadro di Sendai 2015-2030** dell'ONU — è il *<span lang="en">build back better</span>*: usare la ricostruzione per aumentare la resilienza, così che lo stesso evento, in futuro, faccia meno danni. È il punto in cui il ciclo del rischio si chiude e ricomincia, alimentando di nuovo previsione e prevenzione.
 {{< /box >}}
 
 ## 6.5 Oltre il ciclo: i limiti del modello a fasi
@@ -78,7 +78,7 @@ La declinazione divulgativa di questo paragrafo è nella pagina [Oltre il ciclo]
 
 1. **Codice della protezione civile**, decreto legislativo 2 gennaio 2018, n. 1, artt. 2, 7, 10, 24, 25, 41 — [Normattiva](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1).
 2. Dipartimento della Protezione Civile, *La protezione civile in Italia. Testo per i docenti scolastici*, 2020.
-3. **Quadro di Sendai per la riduzione del rischio di disastri 2015-2030** (UNDRR) per il principio del *build back better*.
+3. **Quadro di Sendai per la riduzione del rischio di disastri 2015-2030** (UNDRR) per il principio del *<span lang="en">build back better</span>*.
 4. D. M. Neal, *Reconsidering the Phases of Disaster*, «International Journal of Mass Emergencies and Disasters», 15(2), 1997, pp. 239-264.
 
 </div>

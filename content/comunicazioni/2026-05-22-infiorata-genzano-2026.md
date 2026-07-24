@@ -8,6 +8,7 @@ autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-22-infiorata-genzano-2026.webp"
 image_alt: "Cover dell'articolo: Infiorata di Genzano 2026: cosa sapere prima di venire"
 scadenza: "2026-06-16"
+archiviato: true
 area: "Genzano di Roma"
 allegati: []
 draft: false
