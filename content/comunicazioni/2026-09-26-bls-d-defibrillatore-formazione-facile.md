@@ -36,14 +36,27 @@ In italiano: "sostegno di base alle funzioni vitali con defibrillazione".
 Un corso dura 4 o 5 ore.
 La può imparare chiunque.
 
+## Controlla che sia sicuro avvicinarti
+
+Prima di tutto guarda intorno a te.
+C'è traffico? Ci sono cavi elettrici scoperti, fuoco o altri pericoli?
+Se il posto non è sicuro, non avvicinarti. Chiama aiuto da lontano.
+
 ## Riconosci l'arresto cardiaco
 
-Controlla due cose.
+Se il posto è sicuro, controlla due cose.
 
 - La persona è cosciente? Scuotila piano e chiamala per nome.
-- La persona respira? Guarda il petto. Ascolta il respiro. Senti l'aria sulla guancia.
+- La persona respira normalmente? Guarda il petto. Ascolta il respiro. Senti l'aria sulla guancia.
 
-Se la persona non risponde e non respira bene, è in arresto cardiaco.
+Se la persona non risponde e non respira normalmente, è in arresto cardiaco.
+
+Attenzione. A volte la persona fa respiri strani.
+Sono rumorosi o irregolari, come un "boccheggiare".
+Questo si chiama **respiro agonico**.
+Non è un respiro normale.
+Se vedi questo, la persona è comunque in arresto cardiaco.
+Non aspettare. Chiama subito il 112 e inizia il massaggio.
 
 ## Chiama il 112
 
@@ -72,11 +85,11 @@ Non sei formato? Fai solo il massaggio. Va bene lo stesso.
 In molti luoghi pubblici c'è una colonnina gialla o rossa.
 Dentro c'è il **DAE**, il defibrillatore automatico esterno.
 
-- Apri la colonnina.
-- Segui la voce della macchina.
-- Metti le piastre come indicato.
-- Allontanati quando la macchina lo dice.
-- Premi il pulsante solo se la macchina te lo chiede.
+1. Apri la colonnina.
+2. Segui la voce della macchina.
+3. Metti le piastre come indicato.
+4. Allontanati quando la macchina lo dice.
+5. Premi il pulsante solo se la macchina te lo chiede.
 
 Il DAE è automatico. Controlla da solo il cuore della persona.
 Non fa la scarica se non serve.
