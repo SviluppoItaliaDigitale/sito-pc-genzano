@@ -18,6 +18,7 @@ social_punti:
   - "Bollettini ufficiali del Ministero della Salute, elaborati dal DEP Lazio per 27 città, Roma inclusa."
   - "Livello 3 = ondata di calore pericolosa per tutti; livello 2 = rischio per anziani e persone fragili."
   - "In caso di malore da caldo chiama subito il 112."
+versione_facile: "2026-06-07-caldo-salute-app-bollettini-facile"
 ---
 
 Le ondate di calore sono tra gli eventi naturali più letali in Europa. Colpiscono soprattutto **anziani, neonati e persone con malattie croniche**. A differenza di un terremoto, il caldo **si prevede**: ogni giorno un bollettino comunica il livello di rischio, città per città.
