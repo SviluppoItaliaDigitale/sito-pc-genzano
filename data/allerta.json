@@ -3,11 +3,5 @@
   "titolo": "NESSUNA ALLERTA",
   "descrizione": "Non sono previsti fenomeni significativi sul nostro territorio.",
   "ultimo_aggiornamento": "2026-07-22T16:06:22+02:00",
-  "ultimo_controllo": "2026-07-26T18:51:27+02:00",
-  "domani": {
-    "livello": "verde",
-    "titolo": "Previsto verde",
-    "rischi": [],
-    "data": "2026-07-27"
-  }
+  "ultimo_controllo": "2026-07-27T00:36:47+02:00"
 }
