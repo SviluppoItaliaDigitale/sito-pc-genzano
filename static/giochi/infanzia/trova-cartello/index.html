@@ -220,14 +220,29 @@
       estintore: { img: ISO  + 'estintore.svg',               sfondo: 'sfondo-vvf',    nome: 'l\'estintore per spegnere il fuoco',
                    perche: 'I cartelli rossi indicano gli strumenti antincendio: qui c\'è l\'estintore. Solo gli adulti lo usano.' },
       vvf:       { img: ISO  + 'telefono-antincendio.svg',    sfondo: 'sfondo-vvf',    nome: 'i vigili del fuoco',
-                   perche: 'Il telefono rosso ricorda di chiamare i pompieri: in Italia il numero è 1-1-2.' }
+                   perche: 'Il telefono rosso ricorda di chiamare i pompieri: in Italia il numero è 1-1-2.' },
+      allarme:   { img: ISO  + 'pulsante-allarme-antincendio.svg', sfondo: 'sfondo-vvf', nome: 'il pulsante dell\'allarme antincendio',
+                   perche: 'Il quadrato rosso indica il pulsante che fa suonare l\'allarme: si preme solo se c\'è un vero pericolo.' },
+      scala:     { img: ISO  + 'scala-antincendio.svg',       sfondo: 'sfondo-vvf',    nome: 'la scala antincendio',
+                   perche: 'Il cartello rosso indica la scala che si usa per l\'emergenza quando c\'è un incendio.' },
+      dae:       { img: ISO  + 'defibrillatore-dae.svg',      sfondo: 'sfondo-verde',  nome: 'il defibrillatore (DAE)',
+                   perche: 'Il cartello verde col cuore indica il defibrillatore: serve agli adulti per aiutare un cuore che si ferma.' },
+      barella:   { img: ISO  + 'barella.svg',                 sfondo: 'sfondo-verde',  nome: 'la barella per il soccorso',
+                   perche: 'Il cartello verde con la barella indica dove si trova la barella per trasportare chi si è fatto male.' },
+      telefono:  { img: ISO  + 'telefono-emergenza.svg',      sfondo: 'sfondo-verde',  nome: 'il telefono di emergenza',
+                   perche: 'I cartelli verdi indicano le cose che aiutano: da questo telefono si chiama aiuto.' },
+      caldo:     { img: ISO  + 'superficie-calda.svg',        sfondo: 'sfondo-giallo', nome: 'attenzione: superficie calda',
+                   perche: 'Il triangolo giallo avvisa che quella superficie scotta: non toccarla.' },
+      toccare:   { img: ISO  + 'vietato-toccare.svg',         sfondo: 'sfondo-rosso',  nome: 'vietato toccare',
+                   perche: 'Il cerchio rosso barrato dice di non toccare: può essere pericoloso.' },
+      giubbetto: { img: ISO  + 'alta-visibilita.svg',         sfondo: 'sfondo-blu',    nome: 'mettere il giubbetto ad alta visibilità',
+                   perche: 'Il cartello blu dice di mettere il giubbetto che si vede da lontano, come quello dei volontari.' }
     };
 
     // Pool di domande: ogni partita ne pesca 12 random, divise in 2 round
     // da 6 (no overlap fra round). I round sono comunque in ordine random
-    // per non essere prevedibili dopo la prima partita. Copre tutti e 16 i
-    // cartelli del CATALOGO (prima 4 erano inutilizzati: caduta, entrare,
-    // mangiare, guanti).
+    // per non essere prevedibili dopo la prima partita. Copre tutti e 24 i
+    // cartelli del CATALOGO (pool 2x rispetto alle 12 domande giocate).
     var POOL_DOMANDE = [
       { target: 'uscita',    testo: 'Tocca il cartello che indica dove si esce in emergenza.' },
       { target: 'fuoco',     testo: 'Tocca il cartello che avvisa del pericolo di incendio.' },
@@ -244,7 +259,15 @@
       { target: 'guanti',    testo: 'Tocca il cartello che dice di mettere i guanti per le mani.' },
       { target: 'caduta',    testo: 'Tocca il cartello che avvisa che potresti cadere.' },
       { target: 'entrare',   testo: 'Tocca il cartello che dice di non entrare.' },
-      { target: 'mangiare',  testo: 'Tocca il cartello che dice di non mangiare e di non bere.' }
+      { target: 'mangiare',  testo: 'Tocca il cartello che dice di non mangiare e di non bere.' },
+      { target: 'allarme',   testo: 'Tocca il cartello del pulsante che fa suonare l\'allarme.' },
+      { target: 'scala',     testo: 'Tocca il cartello della scala che si usa se c\'è un incendio.' },
+      { target: 'dae',       testo: 'Tocca il cartello verde con il cuore del defibrillatore.' },
+      { target: 'barella',   testo: 'Tocca il cartello della barella per chi si è fatto male.' },
+      { target: 'telefono',  testo: 'Tocca il cartello del telefono per chiamare aiuto.' },
+      { target: 'caldo',     testo: 'Tocca il cartello che avvisa che una cosa scotta.' },
+      { target: 'toccare',   testo: 'Tocca il cartello che dice di non toccare.' },
+      { target: 'giubbetto', testo: 'Tocca il cartello che dice di mettere il giubbetto che si vede da lontano.' }
     ];
     var ROUNDS = []; // popolato a inizio partita
 

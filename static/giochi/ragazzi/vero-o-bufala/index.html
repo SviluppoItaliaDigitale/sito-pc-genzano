@@ -313,7 +313,42 @@
         data: 'dato ufficiale — 18 ottobre 2026',
         testo: 'Nella giornata del 17 ottobre registrati 3 microeventi sismici di magnitudo compresa tra 1.5 e 2.1 a profondità 3-6 km nell’area vulcanica dei Colli Albani. Attività coerente con il normale sfondo del distretto.',
         ufficiale: true,
-        spiega: 'Dato tecnico INGV (l\'ente che monitora la sismicità in Italia): numeri precisi, contestualizzazione ("normale sfondo"), nessun allarme ingiustificato. I Colli Albani hanno microsismicità di fondo documentata.' }
+        spiega: 'Dato tecnico INGV (l\'ente che monitora la sismicità in Italia): numeri precisi, contestualizzazione ("normale sfondo"), nessun allarme ingiustificato. I Colli Albani hanno microsismicità di fondo documentata.' },
+      { canale: 'Comune di Genzano di Roma — sito istituzionale',
+        data: 'avviso — 3 novembre 2026',
+        testo: 'In previsione dell\'allerta arancione di domani, il Comune dispone la chiusura dei parchi pubblici dalle ore 8:00 e fino a cessata allerta. Ordinanza n. 141 pubblicata sul sito istituzionale.',
+        ufficiale: true,
+        spiega: 'Atto amministrativo tipico: misura precisa, orario, numero di ordinanza e pubblicazione sul sito istituzionale del Comune.' },
+      { canale: 'Post Facebook con migliaia di condivisioni',
+        data: 'pubblicato 2 ore fa',
+        testo: 'ATTENZIONE!! Il gasolio delle idrovore ha contaminato l\'acquedotto: NON BEVETE l\'acqua del rubinetto in TUTTA la provincia! Girate a tutti prima che lo nascondano!',
+        ufficiale: false,
+        spiega: 'Bufala tipica post-emergenza. I divieti di potabilità li emettono Comune e ASL con ordinanza, per vie e periodi precisi: mai "tutta la provincia" via social.',
+        segnali: [
+          'Maiuscole e doppi punti esclamativi',
+          'Nessuna fonte: chi lo dice? Quale analisi?',
+          'Teoria del complotto ("prima che lo nascondano")'
+        ] },
+      { canale: 'Dipartimento della Protezione Civile — canale ufficiale',
+        data: 'comunicato — 20 novembre 2026',
+        testo: 'Domani alle 12:00 test del sistema IT-alert in alcune aree della Regione Lazio: i cellulari presenti nella zona riceveranno un messaggio di prova con suono distintivo. Non è necessario fare nulla.',
+        ufficiale: true,
+        spiega: 'I test IT-alert sono annunciati in anticipo dai canali ufficiali, con data, ora e area. Il messaggio di prova non chiede azioni né contiene link.' },
+      { canale: 'Messaggio vocale WhatsApp inoltrato',
+        data: 'ricevuto stasera',
+        testo: 'Ragazzi, mi ha detto un vigile amico mio che sta arrivando una nube tossica da una fabbrica di Pomezia: chiudete le finestre e non uscite per nessun motivo! Fate girare!',
+        ufficiale: false,
+        spiega: 'Fonte anonima di seconda mano ("un amico che..."). Per un incidente industriale reale scatterebbero IT-alert e i canali ufficiali, con istruzioni precise su aree e comportamenti.',
+        segnali: [
+          'Fonte non verificabile di seconda mano',
+          'Invito a inoltrare ("fate girare")',
+          'Nessuna indicazione ufficiale su aree e durata'
+        ] },
+      { canale: 'ARPA Lazio — bollettino qualità dell\'aria',
+        data: 'bollettino — 9 dicembre 2026',
+        testo: 'Previsto per domani il superamento della soglia giornaliera di PM10 nell\'area dei Castelli Romani. Si raccomanda ai soggetti sensibili di limitare le attività prolungate all\'aperto.',
+        ufficiale: true,
+        spiega: 'Questa sì è ARPA Lazio: la qualità dell\'aria è la sua competenza (il monitoraggio sismico invece è dell\'INGV). Dato tecnico e raccomandazione proporzionata.' }
     ];
 
     var intro = document.getElementById('intro'),
@@ -338,7 +373,7 @@
       intro.classList.add('hide');
       endScreen.classList.add('hide');
       game.classList.remove('hide');
-      // Pool 19 notizie -> 12 random a partita. Diverse ad ogni gioco e mai
+      // Pool 24 notizie -> 12 random a partita. Diverse ad ogni gioco e mai
       // tutte uguali: il giocatore non puo' memorizzare le 19 in 2 partite.
       queue = shuffle(NOTIZIE.slice()).slice(0, 12);
       idx = 0; score = 0; uff = 0; buf = 0;

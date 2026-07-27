@@ -76,10 +76,10 @@
             <p>Sulla mappa vedi quattro zone schematiche di Genzano di Roma: <strong>centro storico</strong>, <strong>area del lago</strong> (Lago di Nemi nel cratere vulcanico), <strong>zona residenziale</strong>, <strong>parco/scuole</strong>.</p>
             <ol class="small">
               <li>Seleziona un elemento dalla lista in basso.</li>
-              <li>Clicca sulla mappa dove va posizionato.</li>
+              <li>Clicca sulla mappa dove va posizionato, oppure usa i pulsanti delle zone (funzionano anche da tastiera).</li>
               <li>Alla fine verifichi tutti i piazzamenti insieme.</li>
             </ol>
-            <p class="small">⚠️ <strong>Attenzione</strong>: tra gli 8 elementi possono comparire <strong>distrattori</strong> (concetti che non si applicano a Genzano, es. porto marittimo, centrale nucleare). Se li riconosci, sai che il piano comunale non li include.</p>
+            <p class="small">⚠️ <strong>Attenzione</strong>: tra gli 8 elementi possono comparire <strong>distrattori</strong> (concetti che non si applicano a Genzano, es. porto marittimo, centrale nucleare). Se li riconosci, mettili in «Non nel piano»: per loro è la risposta giusta.</p>
             <p class="small">Pool di 24 elementi: ogni partita ne pesca 8 random — la mappa è diversa ogni volta.</p>
             <p class="small text-muted"><em>Nota didattica: la mappa è una rappresentazione stilizzata. Per il piano reale consulta il Piano di Emergenza Comunale.</em></p>
             <button id="start" class="btn btn-primary btn-lg"><i class="bi bi-play-fill me-1"></i> Inizia</button>
@@ -87,7 +87,7 @@
 
           <div id="game" class="hide">
             <div class="clue-box">
-              <strong><i class="bi bi-info-circle me-1"></i> Obiettivo</strong>: posiziona tutti gli <strong id="totale-items">8</strong> elementi sulla mappa. Piazzati: <strong id="piazzati-n">0</strong>.
+              <strong><i class="bi bi-info-circle me-1"></i> Obiettivo</strong>: posiziona ogni elemento sulla mappa o in «Non nel piano» (elementi: <strong id="totale-items">8</strong>). Piazzati: <strong id="piazzati-n">0</strong>.
             </div>
 
             <div class="map-container" id="map">
@@ -114,6 +114,16 @@
 
             <p class="small mb-2">Seleziona un elemento e clicca sulla mappa:</p>
             <div id="item-pool" class="item-pool"></div>
+
+            <p class="small mb-1 mt-2">Oppure scegli la zona con i pulsanti. Se pensi che l'elemento non riguardi Genzano, usa «Non nel piano»:</p>
+            <div class="d-flex gap-2 flex-wrap" role="group" aria-label="Piazza l'elemento selezionato in una zona">
+              <button type="button" class="btn btn-outline-primary btn-sm zona-btn" data-zona="centro">Centro storico</button>
+              <button type="button" class="btn btn-outline-primary btn-sm zona-btn" data-zona="residenziale">Zona residenziale</button>
+              <button type="button" class="btn btn-outline-primary btn-sm zona-btn" data-zona="parco">Parco / Scuole</button>
+              <button type="button" class="btn btn-outline-primary btn-sm zona-btn" data-zona="lago">Lago / versanti</button>
+              <button type="button" class="btn btn-outline-danger btn-sm zona-btn" data-zona="nessuna"><i class="bi bi-slash-circle me-1" aria-hidden="true"></i>Non nel piano</button>
+            </div>
+            <div id="discard-list" class="small mt-2" aria-label="Elementi messi in Non nel piano"></div>
 
             <div class="d-flex gap-2 flex-wrap mt-3">
               <button id="verifica" class="btn btn-primary" disabled><i class="bi bi-check-circle me-1"></i> Verifica tutti</button>
@@ -235,6 +245,7 @@
       verifica.disabled = true;
       renderPool();
       mapEl.querySelectorAll('.map-marker').forEach(function(m){ m.remove(); });
+      discardList.innerHTML = '';
     }
 
     function renderPool(){
@@ -256,25 +267,66 @@
       });
     }
 
-    mapEl.addEventListener('click', function(e){
-      if (!active) return;
-      var rect = mapEl.getBoundingClientRect();
-      var xp = (e.clientX - rect.left) / rect.width;
-      var yp = (e.clientY - rect.top) / rect.height;
-      var x = xp * 400, y = yp * 300;
+    /* Punti rappresentativi al centro di ogni zona: usati dai pulsanti-zona
+       (percorso alternativo accessibile da tastiera). */
+    var ZONA_PUNTO = { centro: [100, 90], residenziale: [285, 85], parco: [110, 215], lago: [310, 215] };
+    var discardList = document.getElementById('discard-list');
+
+    function piazzaSuMappa(el, x, y){
+      var xp = x / 400, yp = y / 300;
       var marker = document.createElement('div');
       marker.className = 'map-marker';
-      marker.dataset.id = active.id;
+      marker.dataset.id = el.id;
       marker.style.left = (xp * 100) + '%';
       marker.style.top = (yp * 100) + '%';
-      marker.innerHTML = '<i class="bi ' + active.icon + '"></i>';
-      marker.title = active.label;
+      marker.innerHTML = '<i class="bi ' + el.icon + '"></i>';
+      marker.title = el.label;
       mapEl.appendChild(marker);
-      piazzamenti[active.id] = { x: x, y: y, el: active, marker: marker };
+      piazzamenti[el.id] = { x: x, y: y, el: el, marker: marker };
+      dopoPiazzamento();
+    }
+
+    /* "Non nel piano": la scelta giusta per i distrattori. Il badge e' un
+       bottone: ri-cliccarlo annulla lo scarto e rimette l'elemento nel pool. */
+    function scarta(el){
+      var badge = document.createElement('button');
+      badge.type = 'button';
+      badge.className = 'btn btn-outline-danger btn-sm me-1 mb-1';
+      badge.innerHTML = '<i class="bi ' + el.icon + ' me-1" aria-hidden="true"></i>' + el.label;
+      badge.setAttribute('aria-label', 'Rimuovi ' + el.label + ' da Non nel piano');
+      badge.addEventListener('click', function(){
+        delete piazzamenti[el.id];
+        badge.remove();
+        dopoPiazzamento();
+      });
+      discardList.appendChild(badge);
+      piazzamenti[el.id] = { scartato: true, el: el, badge: badge };
+      dopoPiazzamento();
+    }
+
+    function dopoPiazzamento(){
       active = null;
       piazzatiN.textContent = Object.keys(piazzamenti).length;
       renderPool();
-      if (Object.keys(piazzamenti).length === ELEMENTI.length) verifica.disabled = false;
+      verifica.disabled = Object.keys(piazzamenti).length !== ELEMENTI.length;
+    }
+
+    mapEl.addEventListener('click', function(e){
+      if (!active) return;
+      var rect = mapEl.getBoundingClientRect();
+      var x = ((e.clientX - rect.left) / rect.width) * 400;
+      var y = ((e.clientY - rect.top) / rect.height) * 300;
+      piazzaSuMappa(active, x, y);
+    });
+
+    document.querySelectorAll('.zona-btn').forEach(function(zb){
+      zb.addEventListener('click', function(){
+        if (!active) return;
+        var z = zb.dataset.zona;
+        if (z === 'nessuna'){ scarta(active); return; }
+        var pt = ZONA_PUNTO[z];
+        piazzaSuMappa(active, pt[0], pt[1]);
+      });
     });
 
     verifica.addEventListener('click', function(){
@@ -283,14 +335,21 @@
       ELEMENTI.forEach(function(el){
         var p = piazzamenti[el.id];
         if (!p) return;
-        // Distrattori: zona 'nessuna' = sempre sbagliato (non si piazza in nessuna
-        // parte di Genzano). Lo studente deve riconoscerli, non e' un errore di
-        // posizionamento ma di contesto territoriale.
-        var zonaCorretta = (el.zona !== 'nessuna') && ZONE[el.zona] && ZONE[el.zona].test(p.x, p.y);
-        p.marker.classList.add(zonaCorretta ? 'correct' : 'wrong');
-        var simbolo = zonaCorretta ? '✅' : (el.zona === 'nessuna' ? '⚠️' : '❌');
-        details += '<li>' + simbolo + ' <strong>' + el.label + '</strong>: ' + el.motivo + '</li>';
-        if (zonaCorretta) ok++;
+        // Distrattori (zona 'nessuna'): la risposta giusta e' scartarli in
+        // "Non nel piano". Elementi di zona scartati per errore = sbagliato.
+        var corretto;
+        if (p.scartato){
+          corretto = (el.zona === 'nessuna');
+          p.badge.classList.remove('btn-outline-danger');
+          p.badge.classList.add(corretto ? 'btn-success' : 'btn-danger');
+        } else {
+          corretto = (el.zona !== 'nessuna') && ZONE[el.zona] && ZONE[el.zona].test(p.x, p.y);
+          p.marker.classList.add(corretto ? 'correct' : 'wrong');
+        }
+        var nota = el.motivo;
+        if (!corretto && p.scartato) nota = 'Questo elemento serve al piano di Genzano, non andava scartato. ' + el.motivo;
+        details += '<li>' + (corretto ? '✅' : '❌') + ' <strong>' + el.label + '</strong>: ' + nota + '</li>';
+        if (corretto) ok++;
       });
       details += '</ul>';
       feedback.innerHTML = '<div class="alert alert-info">' + details + '</div>';
@@ -311,23 +370,22 @@
     function finish(ok){
       game.classList.add('hide');
       end.classList.remove('hide');
-      // Conta solo elementi zone-corretti come massimo possibile: i distrattori
-      // (zona 'nessuna') sono per definizione sbagliati se piazzati. Fanno parte
-      // del gameplay didattico, non penalizzano il punteggio.
-      var totZone = ELEMENTI.filter(function(el){ return el.zona !== 'nessuna'; }).length;
-      var totDistr = ELEMENTI.length - totZone;
+      // Il massimo e' l'intero set: anche i distrattori contano, la loro
+      // risposta giusta e' lo scarto in "Non nel piano".
+      var tot = ELEMENTI.length;
+      var totDistr = ELEMENTI.filter(function(el){ return el.zona === 'nessuna'; }).length;
       document.getElementById('final-ok').textContent = ok;
-      document.getElementById('final-tot').textContent = totZone;
+      document.getElementById('final-tot').textContent = tot;
       var msg;
-      var perc = totZone > 0 ? (ok / totZone) * 100 : 0;
+      var perc = tot > 0 ? (ok / tot) * 100 : 0;
       if (perc >= 90) msg = 'Eccellente! Hai una solida intuizione della pianificazione territoriale.';
       else if (perc >= 70) msg = 'Buon risultato. Ripassa le logiche di aree di accoglienza e vulnerabilità.';
       else msg = 'Rivedi il Piano di Emergenza Comunale e il principio delle aree di attesa/accoglienza.';
       if (totDistr > 0) {
-        msg += ' Tra gli elementi c\'erano ' + totDistr + ' distrattori (concetti che non si applicano a Genzano: leggi le note ⚠️ qui sopra).';
+        msg += ' Tra gli elementi c\'erano ' + totDistr + ' distrattori: la risposta giusta per loro era «Non nel piano».';
       }
       document.getElementById('final-msg').textContent = msg;
-      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('mappa-rischio', ok, totZone, '#end');
+      if (window.GiochiUtil) window.GiochiUtil.salvaEMostraAttestato('mappa-rischio', ok, tot, '#end');
     }
   })();
   </script>
