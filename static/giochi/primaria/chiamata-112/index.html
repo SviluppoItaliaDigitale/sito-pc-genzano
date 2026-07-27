@@ -552,7 +552,7 @@
       scenario = s;
       stepIdx = 0;
       score = 0;
-      maxScore = s.steps.length;
+      maxScore = s.steps.length * 3;
       seconds = 0;
       selectScreen.classList.add('hide');
       endScreen.classList.add('hide');
@@ -617,7 +617,7 @@
       optionsEl.querySelectorAll('button').forEach(function (b) { b.disabled = true; });
       btn.classList.add(opt.kind);
       addBubble('me', opt.text, 'La tua risposta');
-      if (opt.kind === 'ok') score++;
+      score += (opt.kind === 'ok' ? 3 : (opt.kind === 'meh' ? 1 : 0));
       hudScore.textContent = 'Punti: ' + score + ' / ' + maxScore;
       feedbackEl.className = 'feedback-box ' + opt.kind;
       var label = opt.kind === 'ok' ? 'Risposta giusta' : (opt.kind === 'ko' ? 'Risposta sbagliata' : 'Risposta poco utile');
@@ -644,7 +644,7 @@
       endMax.textContent = maxScore;
       var msg;
       if (score === maxScore) msg = 'Perfetto! Hai gestito la chiamata al 112 in modo impeccabile.';
-      else if (score >= maxScore - 1) msg = 'Ottimo! Quasi tutto giusto: ricordati come rispondere la prossima volta.';
+      else if (score >= maxScore - 3) msg = 'Ottimo! Quasi tutto giusto: ricordati come rispondere la prossima volta.';
       else if (score >= Math.ceil(maxScore / 2)) msg = 'Bravo. Qualche risposta si può migliorare: rigioca e prova un altro scenario.';
       else msg = 'Hai fatto pratica: non scoraggiarti. Rileggi i consigli e prova di nuovo.';
       endMsg.textContent = msg;

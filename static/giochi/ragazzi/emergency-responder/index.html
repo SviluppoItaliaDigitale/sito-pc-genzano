@@ -30,8 +30,14 @@
       cursor: pointer; font-weight: 500; transition: all .2s;
     }
     .choice-btn:hover, .choice-btn:focus {
-      background: var(--rag-arancio); color: var(--rag-blu); border-color: var(--rag-arancio); outline: none;
+      background: var(--rag-arancio); color: var(--rag-blu); border-color: var(--rag-arancio);
     }
+    .choice-btn:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 2px; }
+    .choice-fb {
+      background: rgba(255,190,46,0.14); border-left: 4px solid var(--rag-arancio);
+      color: #fff; padding: .8rem 1rem; border-radius: 8px; margin-top: .4rem;
+    }
+    .choice-fb p { margin: 0 0 .6rem; }
     .stats {
       display: flex; gap: 1rem; flex-wrap: wrap;
       background: rgba(0,0,0,0.3); padding: .7rem 1rem; border-radius: 8px;
@@ -118,63 +124,63 @@
         ora: '03:42',
         testo: 'Rispondi al telefono. La voce del coordinatore è concitata: «Attivazione! Scossa 4.8, epicentro sui Colli. Presentati al COC tra 30 minuti. Prima però: passaparola alla tua famiglia. Sono al sicuro?»',
         scelte: [
-          { testo: 'Controllo una stanza alla volta, senza accendere la luce se sento odore di gas.', next: 'famiglia_ok', delta: { sicurezza: 0, aiutate: 0 } },
-          { testo: 'Accendo tutte le luci e chiamo forte i nomi di tutti.', next: 'famiglia_ko', delta: { sicurezza: -2, aiutate: 0 } },
-          { testo: 'Corro in strada subito: i soccorsi prima di tutto.', next: 'strada_panico', delta: { sicurezza: -3, aiutate: 0 } }
+          { testo: 'Controllo una stanza alla volta, senza accendere la luce se sento odore di gas.', next: 'famiglia_ok', delta: { sicurezza: 0, aiutate: 0 }, fb: 'Giusto: dopo una scossa può esserci una fuga di gas. Niente interruttori né fiamme finché non hai verificato.' },
+          { testo: 'Accendo tutte le luci e chiamo forte i nomi di tutti.', next: 'famiglia_ko', delta: { sicurezza: -2, aiutate: 0 }, fb: 'Con una fuga di gas un interruttore può innescare una esplosione: prima si controlla, poi si usa la corrente.' },
+          { testo: 'Corro in strada subito: i soccorsi prima di tutto.', next: 'strada_panico', delta: { sicurezza: -3, aiutate: 0 }, fb: 'Prima vengono la sicurezza della tua famiglia e il tuo equipaggiamento: un volontario impreparato aiuta poco.' }
         ]
       },
       famiglia_ok: {
         ora: '03:50',
         testo: 'Tutti stanno bene. Prendi lo zaino di emergenza già pronto, cellulare, torcia, documenti. Esci con calma dopo aver spento i quadri elettrici. Che fai?',
         scelte: [
-          { testo: 'Vado al COC a piedi: le strade potrebbero avere detriti.', next: 'strada_piedi', delta: { sicurezza: 0, aiutate: 0 } },
-          { testo: 'Prendo l\'auto per fare prima.', next: 'strada_auto', delta: { sicurezza: -1, aiutate: 0 } }
+          { testo: 'Vado al COC a piedi: le strade potrebbero avere detriti.', next: 'strada_piedi', delta: { sicurezza: 0, aiutate: 0 }, fb: 'Scelta prudente: dopo un sisma le auto restano bloccate dai detriti e intasano i percorsi dei mezzi di soccorso.' },
+          { testo: 'Prendo l\'auto per fare prima.', next: 'strada_auto', delta: { sicurezza: -1, aiutate: 0 }, fb: 'Dopo un sisma le strade possono avere crolli e detriti: in auto rischi di bloccarti e di intralciare i soccorsi.' }
         ]
       },
       famiglia_ko: {
         ora: '03:50',
         testo: 'L\'accensione delle luci rischia se c\'è stata fuga di gas. Per fortuna in casa non ci sono perdite. La famiglia è in strada. Che fai?',
         scelte: [
-          { testo: 'Metto tutti in un punto sicuro lontano dall\'edificio e vado al COC a piedi.', next: 'strada_piedi', delta: { sicurezza: 1, aiutate: 0 } },
-          { testo: 'Corro al COC lasciandoli davanti al portone.', next: 'strada_auto', delta: { sicurezza: -2, aiutate: 0 } }
+          { testo: 'Metto tutti in un punto sicuro lontano dall\'edificio e vado al COC a piedi.', next: 'strada_piedi', delta: { sicurezza: 1, aiutate: 0 }, fb: 'Bene: punto di attesa lontano da cornicioni e facciate, poi al COC. La famiglia in sicurezza viene prima.' },
+          { testo: 'Corro al COC lasciandoli davanti al portone.', next: 'strada_auto', delta: { sicurezza: -2, aiutate: 0 }, fb: 'Davanti al portone sono esposti a caduta di cornicioni e tegole: il punto di attesa va scelto lontano dagli edifici.' }
         ]
       },
       strada_panico: {
         ora: '03:48',
         testo: 'In strada c\'è confusione. Qualcuno grida. Tu non hai con te torcia, documenti, zaino. Un signore anziano ti chiede di accompagnarlo alla farmacia.',
         scelte: [
-          { testo: 'Torno a casa a prendere zaino ed esco con la famiglia, poi aiuto il signore.', next: 'torna_indietro', delta: { sicurezza: 1, aiutate: 1 } },
-          { testo: 'Lo accompagno subito senza tornare a casa.', next: 'no_zaino', delta: { sicurezza: -1, aiutate: 1 } }
+          { testo: 'Torno a casa a prendere zaino ed esco con la famiglia, poi aiuto il signore.', next: 'torna_indietro', delta: { sicurezza: 1, aiutate: 1 }, fb: 'Recuperare equipaggiamento e mettere in sicurezza la famiglia ti rende poi davvero utile agli altri.' },
+          { testo: 'Lo accompagno subito senza tornare a casa.', next: 'no_zaino', delta: { sicurezza: -1, aiutate: 1 }, fb: 'Generoso, ma senza torcia, documenti e zaino sei meno efficace e più vulnerabile per tutto il turno.' }
         ]
       },
       torna_indietro: {
         ora: '04:00',
         testo: 'Buon compromesso: prendi lo zaino e riesci ad aiutare anche il signore anziano. Raggiungi il COC con 15 minuti di ritardo ma operativo.',
         scelte: [
-          { testo: 'Vai al COC e ti presenti.', next: 'arrivo_coc', delta: { sicurezza: 0, aiutate: 0 } }
+          { testo: 'Vai al COC e ti presenti.', next: 'arrivo_coc', delta: { sicurezza: 0, aiutate: 0 }, fb: 'Al COC ci si presenta equipaggiati e ci si mette a disposizione del responsabile: mai iniziative isolate.' }
         ]
       },
       no_zaino: {
         ora: '03:55',
         testo: 'Senza zaino ed equipaggiamento, al COC non sei utilizzabile per attività di presidio. Ti assegnano compiti di retrovia.',
         scelte: [
-          { testo: 'Accetto: organizzo le registrazioni di chi arriva al centro di accoglienza.', next: 'retrovia', delta: { sicurezza: 0, aiutate: 2 } }
+          { testo: 'Accetto: organizzo le registrazioni di chi arriva al centro di accoglienza.', next: 'retrovia', delta: { sicurezza: 0, aiutate: 2 }, fb: 'Anche la retrovia è essenziale: registrare chi arriva è parte della funzione di assistenza alla popolazione (F9).' }
         ]
       },
       strada_piedi: {
         ora: '04:12',
         testo: 'Arrivi al COC di Genzano. Il Responsabile ti dà scelta: pattuglia con un collega esperto in un quartiere, oppure supporto radio in sala.',
         scelte: [
-          { testo: 'Pattuglia sul territorio: rischioso ma utile.', next: 'pattuglia', delta: { sicurezza: -1, aiutate: 3 } },
-          { testo: 'Supporto radio in sala: gestisco le comunicazioni.', next: 'radio', delta: { sicurezza: 1, aiutate: 2 } }
+          { testo: 'Pattuglia sul territorio: rischioso ma utile.', next: 'pattuglia', delta: { sicurezza: -1, aiutate: 3 }, fb: 'La pattuglia serve, ma sempre in coppia con un esperto e secondo le procedure: mai da soli sul territorio.' },
+          { testo: 'Supporto radio in sala: gestisco le comunicazioni.', next: 'radio', delta: { sicurezza: 1, aiutate: 2 }, fb: 'La sala radio è il sistema nervoso del COC: comunicazioni ordinate significano soccorsi efficaci (funzione F8).' }
         ]
       },
       strada_auto: {
         ora: '04:05',
         testo: 'In via Appia trovi un\'auto che ha sbandato per un cornicione caduto. Niente feriti gravi ma strada bloccata.',
         scelte: [
-          { testo: 'Chiamo il 112 e aspetto i Vigili del Fuoco prima di toccare il mezzo.', next: 'arrivo_coc', delta: { sicurezza: 1, aiutate: 1 } },
-          { testo: 'Provo a spostare i detriti da solo per passare.', next: 'arrivo_coc', delta: { sicurezza: -2, aiutate: 0 } }
+          { testo: 'Chiamo il 112 e aspetto i Vigili del Fuoco prima di toccare il mezzo.', next: 'arrivo_coc', delta: { sicurezza: 1, aiutate: 1 }, fb: 'Giusto: la messa in sicurezza di veicoli e detriti spetta ai Vigili del Fuoco. Tu segnali e presidi.' },
+          { testo: 'Provo a spostare i detriti da solo per passare.', next: 'arrivo_coc', delta: { sicurezza: -2, aiutate: 0 }, fb: 'I detriti possono essere instabili o nascondere cavi elettrici: non si improvvisa, si segnala al 112.' }
         ]
       },
       arrivo_coc: {
@@ -183,9 +189,11 @@
         scelte: [
           { testo: 'Accolgo la chiamata seguendo la procedura COC: ascolto, prendo nota, attivo la squadra giusta.',
             nextRandom: ['arrivo_famiglia', 'arrivo_falso_allarme', 'arrivo_turista'],
-            delta: { sicurezza: 1, aiutate: 0 } },
+            delta: { sicurezza: 1, aiutate: 0 },
+            fb: 'La procedura (ascolto, nota scritta, attivazione della squadra giusta) evita errori e interventi doppi.' },
           { testo: 'Vado da solo sul posto a vedere la situazione, senza ascoltare la chiamata fino in fondo.',
-            next: 'finale_medio', delta: { sicurezza: -2, aiutate: 1 } }
+            next: 'finale_medio', delta: { sicurezza: -2, aiutate: 1 },
+            fb: 'Uscire da soli senza completare la chiamata lascia la sala scoperta e fa perdere informazioni preziose.' }
         ]
       },
       // Nodo storico: famiglia inagibile (era la versione fissa di arrivo_coc).
@@ -194,8 +202,8 @@
         ora: '04:35',
         testo: 'La chiamata è di una famiglia di 4 persone sotto choc, in una casa dichiarata inagibile. Servono squadra sanitaria + accoglienza.',
         scelte: [
-          { testo: 'Accompagno la squadra sanitaria e segnalo la famiglia all\'area di accoglienza.', next: 'finale_buono', delta: { sicurezza: 0, aiutate: 4 } },
-          { testo: 'Vado da solo a rassicurarli e li porto fuori senza attendere la squadra.', next: 'finale_medio', delta: { sicurezza: -2, aiutate: 2 } }
+          { testo: 'Accompagno la squadra sanitaria e segnalo la famiglia all\'area di accoglienza.', next: 'finale_buono', delta: { sicurezza: 0, aiutate: 4 }, fb: 'Corretto: squadra sanitaria più segnalazione all\'accoglienza. Le funzioni F2 e F9 lavorano insieme.' },
+          { testo: 'Vado da solo a rassicurarli e li porto fuori senza attendere la squadra.', next: 'finale_medio', delta: { sicurezza: -2, aiutate: 2 }, fb: 'Da solo in un edificio dichiarato inagibile ti metti in pericolo: servono la squadra e la verifica strutturale.' }
         ]
       },
       // Evento "shock" #1: chiamata duplicata = falso allarme. Educa al
@@ -205,8 +213,8 @@
         ora: '04:35',
         testo: 'La chiamata segnala "boato fortissimo" in via degli Olmi. Cinque minuti dopo arriva un\'altra chiamata: stessa via, stessa descrizione. F8 verifica: era un tuono di un temporale fuori zona, niente di legato al sisma. Cosa fai?',
         scelte: [
-          { testo: 'Annoto sul registro come "duplicato verificato — non sismico", senza inviare squadre. Risorse risparmiate per emergenze vere.', next: 'finale_buono', delta: { sicurezza: 1, aiutate: 2 } },
-          { testo: 'Mando comunque una squadra a controllare: meglio sicuri che dispiaciuti.', next: 'finale_medio', delta: { sicurezza: 0, aiutate: 0 } }
+          { testo: 'Annoto sul registro come "duplicato verificato — non sismico", senza inviare squadre. Risorse risparmiate per emergenze vere.', next: 'finale_buono', delta: { sicurezza: 1, aiutate: 2 }, fb: 'Verificare e annotare evita di sprecare squadre: in emergenza le risorse servono alle richieste reali.' },
+          { testo: 'Mando comunque una squadra a controllare: meglio sicuri che dispiaciuti.', next: 'finale_medio', delta: { sicurezza: 0, aiutate: 0 }, fb: 'Comprensibile, ma la verifica era già stata fatta da F8: mandare squadre su segnalazioni chiuse toglie risorse altrove.' }
         ]
       },
       // Evento "shock" #2: chiamata da turista in inglese. Educa alla
@@ -215,31 +223,31 @@
         ora: '04:38',
         testo: 'Una chiamata in inglese: una turista americana al B&B di via Italo Belardi è in panico, non sa come chiedere aiuto in italiano. Dice "earthquake, my room is shaking". Come gestisci?',
         scelte: [
-          { testo: 'Le spiego in inglese di stare sotto un tavolo robusto, lontano da finestre, e che il 112 ha operatori multilingue. Le passo il numero diretto.', next: 'finale_buono', delta: { sicurezza: 1, aiutate: 3 } },
-          { testo: 'Le dico in italiano "stia calma" e attacco perché non parlo inglese.', next: 'finale_medio', delta: { sicurezza: -1, aiutate: 0 } }
+          { testo: 'Le spiego in inglese di stare sotto un tavolo robusto, lontano da finestre, e che il 112 ha operatori multilingue. Le passo il numero diretto.', next: 'finale_buono', delta: { sicurezza: 1, aiutate: 3 }, fb: 'Il 112 NUE ha operatori multilingue: informare e rassicurare con istruzioni chiare è già assistenza.' },
+          { testo: 'Le dico in italiano "stia calma" e attacco perché non parlo inglese.', next: 'finale_medio', delta: { sicurezza: -1, aiutate: 0 }, fb: 'Chiudere la chiamata lascia una persona in panico senza aiuto: in emergenza nessuna richiesta si liquida.' }
         ]
       },
       pattuglia: {
         ora: '05:00',
         testo: 'In una via laterale scoprite un garage con finestre sfondate: una persona chiede aiuto all\'interno. Il collega esperto valuta la struttura.',
         scelte: [
-          { testo: 'Attendo il via libera strutturale e preparo il recupero secondo la procedura.', next: 'finale_buono', delta: { sicurezza: 1, aiutate: 4 } },
-          { testo: 'Entro subito: una vita vale più di una procedura.', next: 'finale_medio', delta: { sicurezza: -3, aiutate: 3 } }
+          { testo: 'Attendo il via libera strutturale e preparo il recupero secondo la procedura.', next: 'finale_buono', delta: { sicurezza: 1, aiutate: 4 }, fb: 'La valutazione strutturale prima di entrare è la regola: un soccorritore ferito non salva nessuno.' },
+          { testo: 'Entro subito: una vita vale più di una procedura.', next: 'finale_medio', delta: { sicurezza: -3, aiutate: 3 }, fb: 'L\'istinto è nobile, ma entrare senza verifica può trasformare un soccorritore in una seconda vittima.' }
         ]
       },
       radio: {
         ora: '05:00',
         testo: 'In radio arriva un messaggio confuso da una squadra esterna. Come lo gestisci?',
         scelte: [
-          { testo: 'Rispondo con la procedura ufficiale e chiedo di ripetere con formato standard.', next: 'finale_buono', delta: { sicurezza: 1, aiutate: 3 } },
-          { testo: 'Rispondo colloquialmente per fare prima.', next: 'finale_medio', delta: { sicurezza: 0, aiutate: 1 } }
+          { testo: 'Rispondo con la procedura ufficiale e chiedo di ripetere con formato standard.', next: 'finale_buono', delta: { sicurezza: 1, aiutate: 3 }, fb: 'Formato standard e richiesta di ripetere: così un messaggio confuso diventa un\'informazione utilizzabile.' },
+          { testo: 'Rispondo colloquialmente per fare prima.', next: 'finale_medio', delta: { sicurezza: 0, aiutate: 1 }, fb: 'Il linguaggio colloquiale in radio genera fraintendimenti proprio quando la precisione conta di più.' }
         ]
       },
       retrovia: {
         ora: '05:00',
         testo: 'Al centro di accoglienza del Palazzetto comunale registri 35 persone nelle prime 2 ore. Organizzi la distribuzione di pasti caldi con la squadra F9.',
         scelte: [
-          { testo: 'Finisco il turno come supporto F9.', next: 'finale_medio', delta: { sicurezza: 0, aiutate: 3 } }
+          { testo: 'Finisco il turno come supporto F9.', next: 'finale_medio', delta: { sicurezza: 0, aiutate: 3 }, fb: 'L\'assistenza alla popolazione (F9) è una delle funzioni fondamentali del Metodo Augustus.' }
         ]
       },
       finale_buono: {
@@ -303,7 +311,29 @@
           var dest = c.nextRandom && c.nextRandom.length
             ? c.nextRandom[Math.floor(Math.random() * c.nextRandom.length)]
             : c.next;
-          show(dest);
+          if (c.fb){
+            // Feedback didattico: spiega il perche' della scelta prima di proseguire
+            var btns = choicesEl.querySelectorAll('.choice-btn');
+            for (var i = 0; i < btns.length; i++) btns[i].disabled = true;
+            stSicurezza.textContent = sicurezza;
+            stAiutate.textContent = aiutate;
+            var box = document.createElement('div');
+            box.className = 'choice-fb';
+            box.setAttribute('role', 'status');
+            var pEl = document.createElement('p');
+            pEl.textContent = c.fb;
+            box.appendChild(pEl);
+            var go = document.createElement('button');
+            go.type = 'button';
+            go.className = 'btn btn-warning btn-sm';
+            go.innerHTML = 'Continua <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i>';
+            go.addEventListener('click', function(){ show(dest); });
+            box.appendChild(go);
+            choicesEl.appendChild(box);
+            go.focus();
+          } else {
+            show(dest);
+          }
         });
         choicesEl.appendChild(b);
       });
