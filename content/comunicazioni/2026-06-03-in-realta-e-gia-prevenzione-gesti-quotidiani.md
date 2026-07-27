@@ -17,6 +17,7 @@ social_punti:
   - "Salva il 112 in rubrica e insegnalo ai figli."
   - "Scegli un solo gesto da completare questa settimana: sei già a metà strada."
 allegati: []
+versione_facile: "2026-06-03-in-realta-e-gia-prevenzione-gesti-quotidiani-facile"
 draft: false
 ---
 La prevenzione sembra spesso una cosa complicata: piani, kit, corsi, esperti. Non è così. Molti gesti che fai ogni giorno **sono già prevenzione**, anche se non li chiami così.

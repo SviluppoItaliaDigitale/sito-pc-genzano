@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-06-07-caldo-salute-app-bollettini-facile"
 tts: true
 social_citazione: "Il caldo è un rischio che si prevede: ogni giorno un bollettino dice quanto è pericoloso, città per città."
 social_punti:
