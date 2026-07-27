@@ -485,3 +485,5 @@ marketplace
 powerbank
 OLED
 hoku
+rescEU
+sfalcia
