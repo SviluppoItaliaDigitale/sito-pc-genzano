@@ -89,7 +89,7 @@ La legge italiana (D.Lgs. 81/2008, il Testo Unico sulla sicurezza sul lavoro) ob
 
 ## Per saperne di più
 
-- [Ministero della Salute — Caldo](https://www.salute.gov.it/portale/caldo/)
+- [Ministero della Salute — Caldo](https://www.salute.gov.it/new/it/tema/ondate-di-calore)
 - [ISS, Istituto Superiore di Sanità — Caldo e salute](https://www.iss.it/)
 - [Agosto mese critico](/comunicazioni/2026-08-01-agosto-mese-critico-pc-preparazione/)
 

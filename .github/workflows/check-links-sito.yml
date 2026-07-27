@@ -54,6 +54,17 @@ jobs:
           # --retry-wait-time attesa tra retry (gestisce rate-limiting)
           # --user-agent      identifichiamo chiaramente il nostro checker
           # --exclude         tel:/mailto:, anchor interni, GitHub Pages (evita self-loop)
+          #                   + falsi positivi SSL/TLS del runner CI (verificati 27/07/2026,
+          #                   issue #737): form.agid.gov.it (CA store runner — link OBBLIGATORIO
+          #                   per la dichiarazione di accessibilità, mai rimuoverlo),
+          #                   aifa.gov.it e parcocastelliromani.it (catena intermedi incompleta
+          #                   lato server, i browser la risolvono via AIA), cnr.it (cifrari DHE
+          #                   legacy rifiutati da OpenSSL moderno, i browser usano ECDHE).
+          #                   Tutti e 4 servono regolarmente i contenuti ai browser reali.
+          #                   + /pagefind/: l'indice Pagefind è generato SOLO in deploy.yml
+          #                   (artefatto di build, mai committato — rule 10), quindi nella
+          #                   build di questo workflow /pagefind/pagefind-ui.css non esiste:
+          #                   falso positivo strutturale.
           # --require-https   segnala link http:// (sicurezza)
           # --root-dir   risolve i path assoluti (/foo/bar/) contro la root del sito buildato.
           #              Senza questo flag lychee non sa contro cosa risolvere /css/, /images/, ecc.
@@ -78,6 +89,11 @@ jobs:
             --exclude "github\.io/sito-pc-genzano"
             --exclude "localhost"
             --exclude "127\.0\.0\.1"
+            --exclude "^https://form\.agid\.gov\.it"
+            --exclude "^https://www\.aifa\.gov\.it"
+            --exclude "^https://www\.cnr\.it"
+            --exclude "^https://www\.parcocastelliromani\.it"
+            --exclude "/pagefind/"
             --exclude-path "public/vendor"
             --exclude-path "public/app-shared"
             public/**/*.html

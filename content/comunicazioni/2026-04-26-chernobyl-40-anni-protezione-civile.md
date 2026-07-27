@@ -88,7 +88,7 @@ Sul nostro sito:
 
 Fonti istituzionali:
 
-- [Dipartimento Protezione Civile — Rischio nucleare e radiologico](https://www.protezionecivile.gov.it/it/rischio/rischio-nucleare/).
+- [Dipartimento Protezione Civile — Rischio nucleare e radiologico](https://rischi.protezionecivile.gov.it/it/nucleare/).
 - [ISIN — Ispettorato Nazionale per la Sicurezza Nucleare e la Radioprotezione](https://www.isinucleare.it/).
 - [ISS — Sistema RESORAD](https://www.iss.it/).
 - [IAEA — The Chernobyl Accident](https://www.iaea.org/topics/chornobyl).

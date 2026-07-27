@@ -112,7 +112,7 @@ Sul nostro sito:
 
 Fonti istituzionali:
 
-- [Ministero della Salute — Influenza](https://www.salute.gov.it/portale/influenza/homeInfluenza.jsp)
+- [Ministero della Salute — Influenza](https://www.salute.gov.it/new/it/tema/influenza)
 - [ISS — Istituto Superiore di Sanità](https://www.iss.it/)
 - [ASL Roma 6](https://www.aslroma6.it/)
 

@@ -103,4 +103,4 @@ Fonti istituzionali:
 
 - [IT-alert — Sito ufficiale del Dipartimento della Protezione Civile](https://www.it-alert.it/it/)
 - [Direttiva UE 2018/1972 (Codice europeo comunicazioni elettroniche), articolo 110](https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32018L1972)
-- [DPCM 19 giugno 2022 — Istituzione di IT-alert](https://www.protezionecivile.gov.it/it/normativa/)
+- [DPCM 19 giugno 2022 — Istituzione di IT-alert](https://www.protezionecivile.gov.it/it/dipartimento/amministrazione-trasparente/provvedimenti-normativi/)

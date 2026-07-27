@@ -9,6 +9,7 @@ image: "/images/2026-06-03-in-realta-e-gia-prevenzione-gesti-quotidiani.webp"
 image_alt: "Cover dell'articolo: In realtà è già prevenzione: i piccoli gesti che ti tengono al sicuro"
 scadenza: ""
 area: "Genzano di Roma"
+versione_facile: "2026-06-03-in-realta-e-gia-prevenzione-gesti-quotidiani-facile"
 tts: true
 social_citazione: "Molti gesti che fai ogni giorno sono già prevenzione, anche se non li chiami così."
 social_punti:

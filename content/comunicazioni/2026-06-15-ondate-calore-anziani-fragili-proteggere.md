@@ -114,7 +114,7 @@ I volontari di PC in servizio estivo sono esposti. **Turni più brevi**, idrataz
 - Articolo: [Riconoscere i malori estivi](/comunicazioni/2026-05-27-riconoscere-malori-estivi-colpo-calore-ictus/)
 - Articolo: [Persone fragili — aiutare anziani e vicini](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/)
 - [Ministero della Salute — Caldo e salute](https://www.salute.gov.it/caldo)
-- [Bollettini ondate di calore](https://www.salute.gov.it/portale/caldo/dettaglioContenutiCaldo.jsp)
+- [Bollettini ondate di calore](https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0)
 - [ISS — Sorveglianza mortalità estiva](https://www.iss.it/)
 
 Un po' di attenzione settimanale a chi ci vive vicino, nelle prossime tre settimane, può cambiare la statistica dell'estate. Iniziamo oggi.

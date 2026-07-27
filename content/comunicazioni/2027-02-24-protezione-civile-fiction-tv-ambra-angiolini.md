@@ -72,7 +72,7 @@ Tutto il resto si impara dopo aver detto «sì». Se la fiction ti ha incuriosit
 
 ### Fonti istituzionali
 
-- [Dipartimento della Protezione Civile — Rischio Vulcanico](https://www.protezionecivile.gov.it/it/rischio/rischio-vulcanico/) — il quadro nazionale
+- [Dipartimento della Protezione Civile — Rischio Vulcanico](https://rischi.protezionecivile.gov.it/it/vulcanico/) — il quadro nazionale
 - [INGV — Osservatorio Etneo / Sezione Vulcanologia](https://www.ct.ingv.it/) — monitoraggio Stromboli, Etna, Vulcano
 - [Rai Play — «Sempre al tuo fianco»](https://www.raiplay.it/programmi/sempreatuofianco) — la serie in streaming
 

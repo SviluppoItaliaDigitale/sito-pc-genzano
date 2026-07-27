@@ -7,7 +7,7 @@ sitemap:
   changefreq: monthly
 toc: true
 tts: true
-dataUltimaRevisione: "2026-07-24"
+dataUltimaRevisione: "2026-07-27"
 ---
 
 Le sigle della protezione civile possono sembrare difficili. Questo glossario le spiega in modo semplice, con esempi collegati al territorio quando utile.
@@ -29,6 +29,10 @@ Se cerchi un termine che non trovi, scrivi a [segreteria@protezionecivilegenzano
 
 ### AA / Area di attesa
 Luogo sicuro dove la popolazione può radunarsi nelle prime fasi di un'emergenza, in attesa di informazioni e assistenza. A Genzano di Roma le aree di attesa sono indicate nella [Cartografia](/cartografia/).
+
+### ADR {#adr}
+Accordo europeo sul trasporto internazionale di merci pericolose su strada. Regola le autocisterne e i colli con targa arancione e codici numerici di pericolo. Per la ferrovia esiste l'equivalente RID.
+*Approfondisci: [Il rischio chimico-industriale](/conoscere/catalogo-dei-rischi/rischio-chimico-industriale/).*
 
 ### AeDES
 Scheda tecnica usata dopo un terremoto da tecnici abilitati per valutare il danno e l'agibilità degli edifici. Serve a stabilire se un edificio può essere usato, se servono limitazioni o se è inagibile.
@@ -74,10 +78,16 @@ Area destinata all'arrivo e all'organizzazione di uomini, mezzi e materiali invi
 ### ASL {#asl}
 Azienda Sanitaria Locale. Ente che eroga i servizi sanitari sul territorio; in emergenza coordina ospedali, emergenza sanitaria e medici di base.
 
+### ATO {#ato}
+Ambito Territoriale Ottimale. L'area su cui è organizzato il servizio idrico integrato (acquedotti, fognature, depurazione). Per Genzano di Roma il gestore è Acea ATO 2, anche per i guasti e le crisi idriche.
+
 ### Attivazione
 Richiesta formale di impiego dei volontari da parte dell'autorità competente. Solo l'attivazione formale consente l'applicazione dei benefici previsti dalla normativa, quando ricorrono le condizioni.
 
 ## B
+
+### BES {#bes}
+Bisogni Educativi Speciali. Indica gli alunni che hanno bisogno di attenzioni didattiche particolari, in modo temporaneo o permanente. I materiali per le scuole di questo sito prevedono versioni accessibili e semplificate.
 
 ### BLS {#bls}
 Basic Life Support (supporto vitale di base). Manovre di rianimazione di base — massaggio cardiaco e respirazione — per chi è in arresto cardiaco, fino all'arrivo dei soccorsi.
@@ -107,6 +117,10 @@ Comunicazione Aumentativa Alternativa. Modalità di comunicazione con simboli e 
 Massima autorità tecnico-operativa del Servizio nazionale, alle dipendenze della Presidenza del Consiglio. Coordina la risposta alle emergenze di rilievo nazionale.
 *Approfondisci: [Il Servizio Nazionale](/conoscere/servizio-nazionale/).*
 
+### CAT-INGV {#cat-ingv}
+Centro Allerta Tsunami dell'INGV. Dal 2017 sorveglia 24 ore su 24 i maremoti nel Mediterraneo, accreditato in ambito UNESCO. Fa parte del sistema di allertamento SiAM insieme a ISPRA e DPC.
+*Approfondisci: [Il rischio da maremoto](/conoscere/catalogo-dei-rischi/rischio-maremoto/).*
+
 ### CCS {#ccs}
 Centro Coordinamento Soccorsi. Centro provinciale dei soccorsi attivato dalla Prefettura: coordina forze dell'ordine, sanità, Vigili del Fuoco e volontariato.
 *Approfondisci: [Il modello di intervento](/conoscere/le-quattro-fasi/modello-di-intervento/).*
@@ -122,6 +136,13 @@ Rilevazione tecnica dopo un evento, di norma con scheda AeDES per i terremoti, p
 ### Centro Funzionale Regionale (CFR)
 Struttura regionale che analizza previsioni e dati di monitoraggio e pubblica i bollettini di criticità. Per il Lazio, Genzano di Roma rientra nella **Zona F — Bacini Costieri Sud**.
 *Approfondisci: [La scienza del rischio](/conoscere/scienza-del-rischio/).*
+
+### CIMA (Fondazione CIMA) {#cima}
+Centro Internazionale in Monitoraggio Ambientale. Ente di ricerca partner del Dipartimento della Protezione Civile: sviluppa i modelli di previsione di alluvioni e incendi boschivi e partecipa alla campagna «Io non rischio».
+
+### CLP {#clp}
+Regolamento europeo su classificazione, etichettatura e imballaggio delle sostanze chimiche (Regolamento CE 1272/2008). Definisce i pittogrammi di pericolo — rombi rossi e bianchi — stampati sulle confezioni dei prodotti.
+*Approfondisci: [Il rischio chimico-industriale](/conoscere/catalogo-dei-rischi/rischio-chimico-industriale/).*
 
 ### CMCC {#cmcc}
 Fondazione Centro euro-Mediterraneo sui Cambiamenti Climatici. Ente di ricerca italiano che studia il clima e i suoi rischi, con scenari utili anche per il territorio del Lazio.
@@ -193,10 +214,29 @@ Decreto del Presidente del Consiglio dei Ministri. Atto amministrativo usato, fr
 ### DPI {#dpi}
 Dispositivi di Protezione Individuale: caschi, guanti, scarpe antinfortunistiche, giubbotti ad alta visibilità che il volontario indossa in attivazione.
 
+### DPO {#dpo}
+Data Protection Officer, in italiano Responsabile della protezione dei dati (RPD). Figura prevista dal GDPR che vigila sul corretto trattamento dei dati personali in enti pubblici e aziende.
+
+### DSA {#dsa}
+Disturbi Specifici dell'Apprendimento, come dislessia, disgrafia e discalculia. Non dipendono dall'intelligenza. Questo sito offre strumenti di lettura dedicati: carattere ad alta leggibilità, lettura ad alta voce, versioni facili.
+*Approfondisci: [Accessibilità](/accessibilita/).*
+
+### DSEFIC {#dsefic}
+Dipartimento Solidarietà Emergenze della Federazione Italiana Cuochi. Cuochi volontari che gestiscono la ristorazione nelle cucine da campo e nelle aree di accoglienza. Ha curato il Manuale di Cucina in Emergenza, disponibile nell'[Area Download](/area-download/).
+
+### DSGA {#dsga}
+Direttore dei Servizi Generali e Amministrativi. Dirige la segreteria e i servizi amministrativi di una scuola; è coinvolto nelle procedure di sicurezza, evacuazione e nei rapporti con la protezione civile.
+
 ### DVR
 Documento di Valutazione dei Rischi. È previsto dalla normativa sulla sicurezza nei luoghi di lavoro. Nelle scuole è collegato anche alla pianificazione dell'emergenza e dell'evacuazione.
 
 ## E
+
+### ECMWF {#ecmwf}
+Centro europeo per le previsioni meteorologiche a medio termine (European Centre for Medium-Range Weather Forecasts). Elabora i modelli meteo di riferimento in Europa, usati anche dalle carte del [cruscotto](/cruscotto/) di questo sito.
+
+### EENA {#eena}
+European Emergency Number Association. Rete europea che promuove il numero unico di emergenza 112 e la sua accessibilità per tutti, comprese le persone con disabilità.
 
 ### EFFIS {#effis}
 European Forest Fire Information System. Servizio del programma europeo Copernicus che mappa gli incendi boschivi in Europa. Alimenta anche la scheda Incendi del cruscotto di questo sito.
@@ -236,6 +276,10 @@ Allontanamento ordinato da un'area a rischio verso un luogo più sicuro, secondo
 Frattura nella crosta terrestre lungo cui possono avvenire movimenti e terremoti.
 *Approfondisci: [Il rischio sismico](/conoscere/catalogo-dei-rischi/rischio-sismico/).*
 
+### FAST (scheda) {#fast}
+Scheda di verifica rapida dell'agibilità degli edifici dopo un terremoto (Fabbricati per l'Agibilità Sintetica post-Terremoto), introdotta dopo la sequenza sismica del Centro Italia del 2016. Per i casi dubbi si usa la scheda AeDES, più approfondita.
+*Approfondisci: [Dopo l'emergenza](/conoscere/le-quattro-fasi/dopo-l-emergenza/).*
+
 ### FEMA
 Federal Emergency Management Agency. È l'agenzia federale statunitense per la gestione delle emergenze.
 
@@ -249,6 +293,9 @@ Regolamento generale sulla protezione dei dati (Regolamento UE 2016/679). Stabil
 
 ### GIS {#gis}
 Sistema informativo geografico (Geographic Information System). Strumento informatico che raccoglie e analizza i dati legati al territorio: è la base delle mappe del rischio e della cartografia di protezione civile.
+
+### GPL {#gpl}
+Gas di Petrolio Liquefatto. Combustibile usato per auto, bombole e serbatoi domestici. In caso di fuga si accumula verso il basso, perché è più pesante dell'aria: non accendere fiamme né interruttori e aerare i locali.
 
 ## H
 
@@ -266,6 +313,9 @@ International Amateur Radio Union. Federazione mondiale delle associazioni di ra
 ### IFFI
 Inventario dei Fenomeni Franosi in Italia. È una banca dati nazionale, gestita da ISPRA, che raccoglie informazioni sulle frane censite.
 *Approfondisci: [Il rischio idrogeologico](/conoscere/catalogo-dei-rischi/rischio-idrogeologico/).*
+
+### IFRC {#ifrc}
+Federazione Internazionale delle Società di Croce Rossa e Mezzaluna Rossa (International Federation of Red Cross and Red Crescent Societies). Coordina le società nazionali nelle grandi emergenze umanitarie; le sue linee guida sono citate nei kit di questo sito.
 
 ### Incidente rilevante (stabilimenti RIR) {#incidente-rilevante}
 Evento (incendio, esplosione, rilascio di sostanze tossiche) che in uno stabilimento industriale può creare grave pericolo per persone e ambiente. Gli stabilimenti che superano le soglie di legge sono detti «a rischio di incidente rilevante» (RIR) e seguono la direttiva Seveso.
@@ -290,6 +340,9 @@ Gruppo intergovernativo sul cambiamento climatico (Intergovernmental Panel on Cl
 
 ### IRC {#irc}
 Italian Resuscitation Council. Società scientifica italiana della rianimazione cardiopolmonare: pubblica le linee guida di riferimento per i corsi BLS e BLSD.
+
+### IRIDE {#iride}
+Costellazione satellitare italiana per l'osservazione della Terra, finanziata dal PNRR e coordinata dall'Agenzia Spaziale Europea (ESA) con il supporto dell'ASI. Serve anche alla protezione civile: incendi, frane, alluvioni, monitoraggio del territorio.
 
 ### ISIN {#isin}
 Ispettorato nazionale per la sicurezza nucleare e la radioprotezione. È l'autorità che vigila su impianti, sorgenti e trasporti di materiale radioattivo in Italia. Istituito con il decreto legislativo n. 45 del 2014.
@@ -351,10 +404,23 @@ Studio che descrive, strada per strada, come il terreno risponde a un terremoto:
 Insieme di interventi che riducono gli effetti di un evento dannoso (argini, edifici antisismici). Distinta dalla prevenzione, che mira a evitare l'evento.
 *Approfondisci: [Prevenzione](/conoscere/le-quattro-fasi/prevenzione/).*
 
+### MODIS {#modis}
+Sensore a bordo dei satelliti NASA Terra e Aqua (Moderate Resolution Imaging Spectroradiometer). Riprende ogni giorno l'intera superficie terrestre: le sue immagini documentano incendi, alluvioni e uragani, anche in questo sito.
+
 ## N
 
 ### NASA {#nasa}
 Agenzia spaziale degli Stati Uniti (National Aeronautics and Space Administration). Pubblica immagini satellitari libere, usate anche su questo sito.
+
+### NATO {#nato}
+Organizzazione del Trattato del Nord Atlantico (North Atlantic Treaty Organization), alleanza difensiva di Paesi europei e nordamericani. Nelle radiocomunicazioni si usa il suo alfabeto fonetico (Alfa, Bravo, Charlie…) per scandire lettere e sigle senza errori.
+
+### NCS {#ncs}
+Net Control Station. La stazione radio che dirige una maglia di emergenza: nessuno trasmette senza la sua autorizzazione, salvo pericolo immediato per la vita.
+*Approfondisci: [Radiocomunicazioni di emergenza](/formazione/radiocomunicazioni-emergenza/).*
+
+### NCTSN {#nctsn}
+National Child Traumatic Stress Network. Rete statunitense di centri specializzati nello stress traumatico di bambini e adolescenti; le sue linee guida di primo soccorso psicologico per l'infanzia sono citate nei kit di questo sito.
 
 ### NOAA {#noaa}
 Agenzia federale degli Stati Uniti per gli oceani e l'atmosfera (National Oceanic and Atmospheric Administration). Studia meteo e uragani; pubblica immagini e dati liberi.
@@ -392,6 +458,9 @@ Presidenza del Consiglio dei Ministri. Il DPC è una sua struttura e da essa der
 ### PCTO
 Percorsi per le Competenze Trasversali e l'Orientamento. Sono attività formative per studenti della scuola secondaria di secondo grado. Possono essere svolti anche con organizzazioni di protezione civile, se ci sono progetto formativo, coperture e disponibilità operative.
 
+### PFA {#pfa}
+Psychological First Aid (Primo Soccorso Psicologico). Protocollo internazionale, raccomandato dall'OMS, di supporto alle persone colpite da un'emergenza: ascolto, protezione, bisogni pratici. Non è psicoterapia e non richiede di essere psicologi.
+
 ### PGRA {#pgra}
 Piano di Gestione del Rischio di Alluvioni. Recepisce la Direttiva europea Alluvioni (2007/60/CE) tramite il D.Lgs. 49/2010 e aggiorna ogni sei anni le mappe e le misure contro le alluvioni.
 *Approfondisci: [Il rischio idrogeologico](/conoscere/catalogo-dei-rischi/rischio-idrogeologico/).*
@@ -401,6 +470,13 @@ Documento che descrive rischi, aree di emergenza, procedure, ruoli e risorse del
 
 ### PMA
 Posto Medico Avanzato. Struttura sanitaria temporanea allestita vicino a un'emergenza per soccorso, triage e invio verso gli ospedali.
+
+### PNRR {#pnrr}
+Piano Nazionale di Ripresa e Resilienza. Programma di investimenti pubblici finanziato dall'Unione Europea. Sostiene anche opere di prevenzione del rischio, la sicurezza delle scuole e la costellazione satellitare IRIDE.
+
+### PTT {#ptt}
+Push-To-Talk. Il pulsante della radio che si tiene premuto per trasmettere: rilasciandolo si torna in ascolto. Non è possibile parlare e ricevere contemporaneamente.
+*Approfondisci: [Radiocomunicazioni di emergenza](/formazione/radiocomunicazioni-emergenza/).*
 
 ## Q
 
@@ -430,6 +506,10 @@ Residenza Sanitaria Assistenziale. Struttura che ospita anziani non autosufficie
 
 ### RSPP
 Responsabile del Servizio di Prevenzione e Protezione. È una figura prevista dalla normativa sulla sicurezza nei luoghi di lavoro e nelle scuole.
+
+### RUNTS {#runts}
+Registro Unico Nazionale del Terzo Settore. Registro pubblico degli enti del Terzo Settore, previsto dal D.Lgs. 117/2017. Il Gruppo Comunale di Genzano di Roma vi è iscritto nella sezione «Altri Enti del Terzo Settore».
+*Approfondisci: [Trasparenza](/trasparenza/).*
 
 ## S
 
@@ -493,6 +573,10 @@ Insieme di enti privati senza scopo di lucro che svolgono attività di interesse
 Classificazione delle emergenze (art. 7 del Codice della protezione civile): tipo A gestita dal Comune, tipo B dalla Regione, tipo C di rilievo nazionale.
 *Approfondisci: [Il Servizio Nazionale](/conoscere/servizio-nazionale/).*
 
+### TLC {#tlc}
+Telecomunicazioni. Nel volontariato di protezione civile indica il settore che garantisce i collegamenti radio tra le squadre sul campo, la sala operativa e gli altri enti, in attività ordinaria e in emergenza.
+*Approfondisci: [Radiocomunicazioni di emergenza](/formazione/radiocomunicazioni-emergenza/).*
+
 ### Triage {#triage}
 Valutazione rapida delle vittime in un'emergenza per stabilire l'ordine di soccorso in base alla gravità clinica, non all'ordine di arrivo.
 
@@ -507,8 +591,23 @@ Sigla di *Union Civil Protection Mechanism*: è il [Meccanismo europeo di protez
 ### UNDRR {#undrr}
 Ufficio delle Nazioni Unite per la riduzione del rischio di disastri (United Nations Office for Disaster Risk Reduction). Coordina a livello mondiale le strategie per ridurre i danni delle catastrofi, come il Quadro di Sendai.
 
+### UNESCO {#unesco}
+Organizzazione delle Nazioni Unite per l'Educazione, la Scienza e la Cultura. In ambito di protezione civile coordina i sistemi internazionali di allerta maremoto, come la rete NEAMTWS per il Mediterraneo.
+
+### UNHCR {#unhcr}
+Alto Commissariato delle Nazioni Unite per i Rifugiati (United Nations High Commissioner for Refugees). Agenzia ONU che protegge rifugiati e sfollati nelle crisi umanitarie; i suoi standard di comunicazione sono citati nei kit di questo sito.
+
 ### UNI {#uni}
 Ente Italiano di Normazione. Recepisce e pubblica in Italia le norme tecniche, comprese quelle internazionali (per esempio le UNI EN ISO).
+
+### UNICEF {#unicef}
+Fondo delle Nazioni Unite per l'Infanzia (United Nations Children's Fund). Agenzia ONU che tutela i diritti di bambini e adolescenti, anche nelle emergenze umanitarie e nelle missioni internazionali di protezione civile.
+
+### URP {#urp}
+Ufficio Relazioni con il Pubblico. Lo sportello di un ente pubblico che informa e orienta i cittadini su servizi e pratiche. Per le emergenze non si chiama l'URP: si chiama sempre il **112**.
+
+### USGS {#usgs}
+United States Geological Survey. Servizio geologico degli Stati Uniti: pubblica dati sismici e immagini liberi, come le ShakeMap dei terremoti, usati anche su questo sito.
 
 ### USR
 Ufficio Speciale Ricostruzione. Struttura tecnica che segue la ricostruzione dopo grandi emergenze.

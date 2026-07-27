@@ -105,9 +105,9 @@ Solo dopo il clic, il browser può ricevere risorse dal fornitore esterno e poss
 <tr><th scope="col">Servizio</th><th scope="col">Fornitore</th><th scope="col">Finalità</th><th scope="col">Pagine</th><th scope="col">Informativa</th></tr>
 </thead>
 <tbody>
-<tr><td>Windy.com</td><td>Windyty, SE</td><td>Mappa meteo interattiva.</td><td>Home, Allerte meteo, Strumenti.</td><td><a href="https://account.windy.com/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Windy</a></td></tr>
-<tr><td>INGV — Terremoti</td><td>Istituto Nazionale di Geofisica e Vulcanologia</td><td>Mappa e lista dei terremoti recenti.</td><td>Home, Rischio sismico, Strumenti.</td><td><a href="https://www.ingv.it/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy INGV</a></td></tr>
-<tr><td>Radar DPC</td><td>Dipartimento della Protezione Civile</td><td>Mosaico radar nazionale delle precipitazioni.</td><td>Allerte meteo, Strumenti.</td><td><a href="https://www.protezionecivile.gov.it/it/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy DPC</a></td></tr>
+<tr><td>Windy.com</td><td>Windyty, SE</td><td>Mappa meteo interattiva.</td><td>Home, Allerte meteo, Strumenti.</td><td><a href="https://account.windy.com/agreements/windy-privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Windy</a></td></tr>
+<tr><td>INGV — Terremoti</td><td>Istituto Nazionale di Geofisica e Vulcanologia</td><td>Mappa e lista dei terremoti recenti.</td><td>Home, Rischio sismico, Strumenti.</td><td><a href="https://www.ingv.it/privacy" target="_blank" rel="noopener noreferrer">Privacy INGV</a></td></tr>
+<tr><td>Radar DPC</td><td>Dipartimento della Protezione Civile</td><td>Mosaico radar nazionale delle precipitazioni.</td><td>Allerte meteo, Strumenti.</td><td><a href="https://www.protezionecivile.gov.it/it/approfondimento/privacy/" target="_blank" rel="noopener noreferrer">Privacy DPC</a></td></tr>
 <tr><td>Blitzortung / Lightning Maps</td><td>Rete volontaria internazionale</td><td>Mappa dei fulmini in tempo reale.</td><td>Temporali intensi, Strumenti.</td><td><a href="https://www.blitzortung.org/en/cover_your_area.php" target="_blank" rel="noopener noreferrer">Informazioni Blitzortung</a></td></tr>
 <tr><td>MeteoAM</td><td>Aeronautica Militare</td><td>Previsione meteo ufficiale per Genzano di Roma.</td><td>Allerte meteo, Strumenti.</td><td><a href="https://www.meteoam.it/it/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy MeteoAM</a></td></tr>
 </tbody>

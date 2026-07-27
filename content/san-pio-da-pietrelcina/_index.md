@@ -107,7 +107,7 @@ La partecipazione è sempre **libera e personale**: il volontariato di Protezion
 
 ## Per approfondire
 
-- Sito ufficiale del **Santuario di San Pio da Pietrelcina** a San Giovanni Rotondo: [santuariopadrepio.it](https://www.santuariopadrepio.it/)
+- Sito ufficiale del **Santuario di San Pio da Pietrelcina** a San Giovanni Rotondo: [conventosantuariopadrepio.it](https://www.conventosantuariopadrepio.it/)
 - **Casa Sollievo della Sofferenza**, ospedale fondato da Padre Pio: [operapadrepio.it](https://www.operapadrepio.it/)
 - **Dipartimento della Protezione Civile** — Volontariato di Protezione Civile: [protezionecivile.gov.it](https://www.protezionecivile.gov.it/)
 
