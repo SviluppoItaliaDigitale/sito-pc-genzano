@@ -179,7 +179,7 @@
         'Leggi categoria + suggerimento: dà l\'indizio principale.',
         'Conta le lettere: la lunghezza ti aiuta a restringere il campo.',
         'Le parole composte hanno uno spazio (es. PIANO FAMILIARE): trova prima una parola, poi l\'altra.',
-        'Pool ampliato: ora include anche parole sui Castelli Romani (NEMI, TUFO, CRATERE) e sulla comunicazione del rischio (IT-alert, Direttiva Mattarella).',
+        'Pool ampliato: ora include anche parole sui Castelli Romani (NEMI, TUFO, CRATERE) e sulla comunicazione del rischio (IT-alert, allertamento).',
         'Se sei bloccato, usa l\'aiuto.'
       ],
       teoria: [
@@ -243,7 +243,7 @@
         'Leggi le definizioni una a una: indicano il tema della parola.',
         'Inizia dalle più facili: le lettere che scrivi aiutano per le incrociate.',
         'Le parole sono coerenti con le pagine /rischi-prevenzione/ e /glossario/ del sito.',
-        'Negli schemi difficili compaiono concetti recenti: IT-alert, Direttiva Mattarella, codici colore.',
+        'Negli schemi difficili compaiono concetti recenti: IT-alert, fake news, codici colore.',
         'Se ti blocchi, usa il pulsante Aiuto (3 disponibili per puzzle).'
       ],
       teoria: [
@@ -452,7 +452,7 @@
       come: [
         'Alfabeto NATO: A=Alfa, B=Bravo, C=Charlie… per evitare confusione su nomi e numeri.',
         'Premi PTT, aspetta 1 secondo, parla, rilascia.',
-        'Formato: "Da [chi parla] a [chi chiama], [messaggio], cambio."',
+        'Formato: prima il nominativo di chi chiami, poi il tuo, poi il messaggio e "passo".',
         'Numeri si dicono cifra per cifra: 112 = "uno-uno-due", non "centododici".',
         'Quando hai finito: "passo" (aspetto risposta) o "chiudo" (fine comunicazione).'
       ],

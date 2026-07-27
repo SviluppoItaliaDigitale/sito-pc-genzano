@@ -166,7 +166,7 @@
   <script src="/giochi/assets/js/comune.js"></script>
   <script>
   (function(){
-    /* Risorse condivise tra i 3 scenari. I costi sono fissi: cio' che cambia
+    /* Risorse condivise tra i 4 scenari. I costi sono fissi: cio' che cambia
        e' il fabbisogno (popolazione, vincoli specifici) e il budget disponibile. */
     var RISORSE = [
       { id: 'brande-50', label: '50 brande base', costo: 30, posti: 50, icon: 'bi-layers-fill' },
@@ -364,7 +364,7 @@
       sopravBox.classList.remove('hide');
       targetPosti.textContent = scenario.popolazione;
       aggiornaDashboard();
-      // Auto-nasconde il box dopo 6 secondi (ma resta lo stato aggiornato)
+      // Auto-nasconde il box dopo 8 secondi (ma resta lo stato aggiornato)
       setTimeout(function(){ sopravBox.classList.add('hide'); }, 8000);
     }
 

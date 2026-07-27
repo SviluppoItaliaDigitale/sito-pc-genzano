@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const scenarios = [
     {
       id: 'casa', name: 'In Casa',
-      intro: 'Ogni casa ha pericoli quotidiani che durante un\'emergenza diventano piu\' grossi. Trovali tutti.',
+      intro: 'Ogni casa ha pericoli quotidiani che durante un\'emergenza diventano più grossi. Trovali tutti.',
       variations: [
         { image: 'img/scena-casa.svg', risks: [
           { id: 'presa_elettrica', name: 'Presa elettrica scoperta',
@@ -64,13 +64,13 @@ document.addEventListener('DOMContentLoaded', () => {
         ]},
         { image: 'img/scenariocasa2.svg', risks: [
           { id: 'lampadina', name: 'Lampadina che scotta',
-            explain: 'Una lampadina che scotta segna che e\' accesa: durante un blackout si spegne da sola. Con la luce assente, una torcia a pile e\' piu\' sicura delle candele.',
+            explain: 'Una lampadina che scotta segna che è accesa: durante un blackout si spegne da sola. Con la luce assente, una torcia a pile è più sicura delle candele.',
             top: 56.36, left: 84.67, size: 10 },
           { id: 'tavolo', name: 'Spigoli del tavolo',
-            explain: 'Durante una scossa metterti SOTTO il tavolo e non urtare lo spigolo. Resta li\' finche\' la scossa non finisce.',
+            explain: 'Durante una scossa metterti SOTTO il tavolo e non urtare lo spigolo. Resta lì finché la scossa non finisce.',
             top: 83.81, left: 57.37, size: 10 },
           { id: 'testata_letto', name: 'Testata del letto',
-            explain: 'Durante un terremoto, se sei a letto, copri la testa col cuscino e resta vicino alla testata: e\' una zona piu\' resistente del centro del letto.',
+            explain: 'Durante un terremoto, se sei a letto, resta a letto e proteggi la testa con il cuscino: alzarsi al buio tra oggetti caduti è più pericoloso.',
             top: 55.83, left: 26.16, size: 10 },
           { id: 'piedi_letto', name: 'Piedi del letto',
             explain: 'Mai mettere oggetti pesanti sopra l\'armadio o sopra la testata. In una scossa cadrebbero proprio dove dormi.',
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: 'cucina', name: 'In Cucina',
-      intro: 'La cucina ha gas e fuoco: e\' uno dei posti dove un piccolo incidente puo\' diventare un\'emergenza vera.',
+      intro: 'La cucina ha gas e fuoco: è uno dei posti dove un piccolo incidente può diventare un\'emergenza vera.',
       variations: [
         { image: 'img/scenariocucina1.svg', risks: [
           { id: 'forno_acceso', name: 'Fornelli e forno accesi',
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
             explain: 'Bicchieri e piatti negli scaffali con la scossa cadono e si rompono. Tieni le ante chiuse, e in zone sismiche metti delle chiusure di sicurezza.',
             top: 58.65, left: 79.53, size: 10 },
           { id: 'tappeto', name: 'Tappeto arricciato',
-            explain: 'In una fuga d\'emergenza un tappeto e\' un primo motivo di caduta. Toglilo prima dell\'allerta o bloccalo con strisce antiscivolo.',
+            explain: 'In una fuga d\'emergenza un tappeto è un primo motivo di caduta. Toglilo prima dell\'allerta o bloccalo con strisce antiscivolo.',
             top: 84.02, left: 62.51, size: 10 }
         ]},
         { image: 'img/scenariocucina2.svg', risks: [
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
             explain: 'In emergenza si esce di corsa: un tappeto arricciato fa cadere. Soprattutto a chi porta lo zaino di emergenza.',
             top: 84.47, left: 78.69, size: 10 },
           { id: 'cassettiere', name: 'Cassetti aperti',
-            explain: 'Quando trema, i cassetti aperti diventano proiettili. Il primo passo della prevenzione e\' tenere le cose chiuse e fissate.',
+            explain: 'Quando trema, i cassetti aperti diventano proiettili. Il primo passo della prevenzione è tenere le cose chiuse e fissate.',
             top: 62.49, left: 19.34, size: 10 },
           { id: 'barattoli', name: 'Barattoli sporgenti',
             explain: 'Vetri sugli scaffali alti = pericolo di taglio durante una scossa. In zona sismica: mensole basse, oggetti pesanti in basso.',
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: 'bagno', name: 'In Bagno',
-      intro: 'Il bagno ha acqua, elettricita\' e superfici scivolose: durante un\'emergenza serve estra cautela.',
+      intro: 'Il bagno ha acqua, elettricità e superfici scivolose: durante un\'emergenza serve estra cautela.',
       variations: [{ image: 'img/scenariobagno.svg', risks: [
         { id: 'tappeto_scivoloso', name: 'Tappetino scivoloso',
           explain: 'In una fuga d\'emergenza dalla doccia, un tappetino bagnato fa cadere. Antiscivolo sotto il tappeto o niente tappeto.',
@@ -131,8 +131,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 'spigoli', name: 'Spigoli sporgenti',
           explain: 'Durante un terremoto, evita di restare in piedi vicino agli spigoli del lavandino o della vasca. Meglio sedersi a terra in un angolo lontano da vetri.',
           top: 58.56, left: 40.81, size: 10 },
-        { id: 'oblo', name: 'Oblo\' della lavatrice',
-          explain: 'Durante un blackout l\'asciugatura si ferma: non aprire l\'oblo\' di colpo se ha acqua dentro, finisce sul pavimento e diventa scivoloso.',
+        { id: 'oblo', name: 'Oblò della lavatrice',
+          explain: 'Durante un blackout l\'asciugatura si ferma: non aprire l\'oblò di colpo se ha acqua dentro, finisce sul pavimento e diventa scivoloso.',
           top: 67.05, left: 16.58, size: 10 },
         { id: 'sgabello', name: 'Sgabello instabile',
           explain: 'In allerta sismica non lasciare sgabelli o oggetti altri instabili: cadrebbero alla prima scossa. Mensole alte e oggetti pesanti vanno fissati al muro.',
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
             explain: 'Se trema mentre dormi devi uscire dal letto: giochi a terra e Lego sono lo stesso problema dei tappeti. Riponili prima di dormire.',
             top: 82.12, left: 35.37, size: 10 },
           { id: 'lampadina', name: 'Lampada vicina al letto',
-            explain: 'Durante una scossa la lampada cade: se e\' sopra al letto puoi farti male. Spostala a terra o fissala.',
+            explain: 'Durante una scossa la lampada cade: se è sopra al letto puoi farti male. Spostala a terra o fissala.',
             top: 41.78, left: 6.54, size: 10 },
           { id: 'monitor', name: 'Monitor sul bordo',
             explain: 'Schermi e mensole alte cadono per primi. Fissali con strap o mettili a terra in zona sismica.',
@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
             explain: 'Strutture da gioco grandi vanno fissate al muro. In una scossa cadono di lato e bloccano la via di fuga.',
             top: 57.81, left: 82.21, size: 10 },
           { id: 'giochi', name: 'Giochi sparsi',
-            explain: 'In un\'evacuazione di notte la via dal letto alla porta deve essere libera. Riordinare prima di dormire e\' la prima regola.',
+            explain: 'In un\'evacuazione di notte la via dal letto alla porta deve essere libera. Riordinare prima di dormire è la prima regola.',
             top: 84.26, left: 21.03, size: 10 },
           { id: 'spigoli', name: 'Spigoli appuntiti',
             explain: 'In zone sismiche mobili spigolosi vicino al letto sono il primo problema. Cerca un posto sicuro lontano dagli angoli, sotto un tavolo robusto.',
@@ -181,13 +181,13 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: 'classe', name: 'In Classe',
-      intro: 'A scuola ci sono prove di evacuazione due volte all\'anno. Conoscere i rischi della classe ti rende piu\' veloce nella vera emergenza.',
+      intro: 'A scuola ci sono prove di evacuazione due volte all\'anno. Conoscere i rischi della classe ti rende più veloce nella vera emergenza.',
       variations: [{ image: 'img/scenarioclasse.svg', risks: [
         { id: 'spigoli', name: 'Banchi con spigoli',
-          explain: 'Durante una scossa sotto al banco coprendo la testa: il banco assorbe il colpo se cade qualcosa dall\'alto. Resta li\' finche\' la maestra dice di uscire.',
+          explain: 'Durante una scossa sotto al banco coprendo la testa: il banco assorbe il colpo se cade qualcosa dall\'alto. Resta lì finché la maestra dice di uscire.',
           top: 61.46, left: 39.35, size: 10 },
         { id: 'finestra', name: 'Finestra apribile',
-          explain: 'Mai uscire dalla finestra: si esce dalla porta con la fila. La finestra e\' un punto pericoloso durante un terremoto (vetri rotti) e va chiusa.',
+          explain: 'Mai uscire dalla finestra: si esce dalla porta con la fila. La finestra è un punto pericoloso durante un terremoto (vetri rotti) e va chiusa.',
           top: 47.76, left: 96.55, size: 10 },
         { id: 'spigolo', name: 'Spigolo del ripiano',
           explain: 'Mensole con libri sopra al banco = libri che cadono in scossa. Le scuole anti-sismiche hanno tutto fissato al muro con barre.',
@@ -217,13 +217,13 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: 'scuolabus', name: 'Sullo Scuolabus',
-      intro: 'In viaggio si applicano regole di sicurezza piu\' strette: l\'autista non puo\' fermarsi ovunque.',
+      intro: 'In viaggio si applicano regole di sicurezza più strette: l\'autista non può fermarsi ovunque.',
       variations: [{ image: 'img/scenarioscuolabus.svg', risks: [
         { id: 'autista', name: 'Disturbare l\'autista',
           explain: 'L\'autista in caso di terremoto deve fermarsi in posto sicuro (lontano da ponti, sottopassaggi, alberi alti). Non distrarlo, fagli sentire l\'avviso radio.',
           top: 43.65, left: 38.36, size: 10 },
         { id: 'inciampo', name: 'Scalini',
-          explain: 'In evacuazione del bus si scende uno alla volta, mai correndo: lo scalino e\' alto e si cade facile. Le maestre in fondo controllano.',
+          explain: 'In evacuazione del bus si scende uno alla volta, mai correndo: lo scalino è alto e si cade facile. Le maestre in fondo controllano.',
           top: 71.88, left: 50.01, size: 10 },
         { id: 'attraversamento', name: 'Attraversare la strada',
           explain: 'Dopo aver lasciato il bus: aspettare che riparta prima di attraversare. In caso di allerta meteo, l\'autista chiama il Comune e segue le istruzioni.',
@@ -307,7 +307,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Mostra spiegazione PC del rischio
       if (explainBox && risk.explain) {
-        explainTitle.textContent = `${risk.name} — perche conta per la PC`;
+        explainTitle.textContent = `${risk.name} — perché conta per la PC`;
         explainBody.textContent = risk.explain;
         explainBox.classList.remove('hide');
       }

@@ -39,7 +39,7 @@ sitemap:
 1. Leggi le definizioni una a una: indicano il tema della parola.
 2. Inizia dalle più facili: le lettere che scrivi aiutano per le incrociate.
 3. Le parole sono coerenti con le pagine /rischi-prevenzione/ e /glossario/ del sito.
-4. Negli schemi difficili compaiono concetti recenti: IT-alert, Direttiva Mattarella, codici colore.
+4. Negli schemi difficili compaiono concetti recenti: IT-alert, fake news, codici colore.
 5. Se ti blocchi, usa il pulsante Aiuto (3 disponibili per puzzle).
 
 ## Apri il gioco interattivo

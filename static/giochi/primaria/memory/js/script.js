@@ -208,7 +208,7 @@
       const fc = firstCard;
       window.GameCoach.hint(
         'Le carte si abbinano segnale ↔ comportamento. Cerca la coppia che si spiegano a vicenda.',
-        '/cartografia/'
+        '/pittogrammi/'
       );
     }
   }
@@ -229,7 +229,7 @@
     winStats.textContent = stats;
     if (window.GiochiUtil) {
       window.GiochiUtil.salvaEMostraAttestato(
-        'memory-primaria-' + livelloCorrente,
+        'memory-primaria',
         cfg.coppie, cfg.coppie,
         '#win-screen .win-box'
       );

@@ -39,7 +39,7 @@ sitemap:
 1. Leggi categoria + suggerimento: dà l'indizio principale.
 2. Conta le lettere: la lunghezza ti aiuta a restringere il campo.
 3. Le parole composte hanno uno spazio (es. PIANO FAMILIARE): trova prima una parola, poi l'altra.
-4. Pool ampliato: ora include anche parole sui Castelli Romani (NEMI, TUFO, CRATERE) e sulla comunicazione del rischio (IT-alert, Direttiva Mattarella).
+4. Pool ampliato: ora include anche parole sui Castelli Romani (NEMI, TUFO, CRATERE) e sulla comunicazione del rischio (IT-alert, allertamento).
 5. Se sei bloccato, usa l'aiuto.
 
 ## Apri il gioco interattivo
