@@ -103,4 +103,4 @@ Se hai un animale, prepara tutto **prima** dell'emergenza.
 ## Per saperne di più
 
 - [Il decreto sul sito del DPC](https://www.protezionecivile.gov.it/it/normativa/decreto-cd-n-167-del-21-gennaio-2026/) — testo e allegati in italiano normale.
-- [Anagrafe canina](https://www.salute.gov.it/portale/temi/p2_6.jsp?id=212) — Ministero della Salute.
+- [Anagrafe canina](https://www.salute.gov.it/anagcaninapublic_new/home.jsp) — Ministero della Salute.

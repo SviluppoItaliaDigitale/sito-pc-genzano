@@ -20,7 +20,7 @@ Le **ondate di calore** sono, da un punto di vista sanitario, il rischio meteoro
 
 Non è una "giornata calda". È una **sequenza di più giorni consecutivi** (tipicamente tre o più) in cui le temperature superano significativamente i valori medi stagionali, **anche di notte**. Il mancato raffrescamento notturno è il fattore più pericoloso: il corpo non riesce a recuperare, lo stress termico si accumula.
 
-Il [Ministero della Salute](https://www.salute.gov.it/portale/caldo/homeCaldo.jsp) pubblica ogni giorno, nel periodo estivo, il **bollettino sulle ondate di calore** per 27 città italiane. Il bollettino usa tre livelli:
+Il [Ministero della Salute](https://www.salute.gov.it/new/it/tema/ondate-di-calore) pubblica ogni giorno, nel periodo estivo, il **bollettino sulle ondate di calore** per 27 città italiane. Il bollettino usa tre livelli:
 
 | Livello | Significato |
 |---|---|
@@ -104,7 +104,7 @@ Sul nostro sito:
 
 Fonti istituzionali:
 
-- [Ministero della Salute — Caldo e salute](https://www.salute.gov.it/portale/caldo/homeCaldo.jsp).
+- [Ministero della Salute — Caldo e salute](https://www.salute.gov.it/new/it/tema/ondate-di-calore).
 - [Istituto Superiore di Sanità](https://www.iss.it/).
 - [Copernicus — Heat and health](https://climate.copernicus.eu/).
 - [WHO — Heat and health](https://www.who.int/news-room/fact-sheets/detail/climate-change-heat-and-health).

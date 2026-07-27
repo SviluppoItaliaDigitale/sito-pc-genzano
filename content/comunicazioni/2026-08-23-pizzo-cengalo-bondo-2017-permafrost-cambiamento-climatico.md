@@ -90,7 +90,7 @@ Nove anni dopo, Bondo è stato ricostruito. Il **bacino di laminazione** è stat
 - [Info Bondo — La frana del Pizzo Cengalo](https://cengalo.ch/2017/avvenimenti)
 - [SLF — Istituto svizzero per la ricerca su neve e valanghe](https://www.slf.ch/)
 - [ARPA Piemonte — Rischi naturali emergenti in alta montagna](https://www.arpa.piemonte.it/)
-- [Dipartimento di Protezione Civile — Rischio idrogeologico](https://www.protezionecivile.gov.it/it/rischio/rischio-idrogeologico/)
+- [Dipartimento di Protezione Civile — Rischio idrogeologico](https://rischi.protezionecivile.gov.it/it/meteo-idro-0/)
 
 ## Approfondimenti dal nostro archivio
 

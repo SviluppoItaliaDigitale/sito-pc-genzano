@@ -97,7 +97,7 @@ Ventiquattro anni dopo, San Giuliano resta una ferita aperta. Ma ogni scuola ita
 ## Per approfondire (fonti istituzionali)
 
 - [INGV Terremoti — Speciale San Giuliano di Puglia 2002](https://www.ingv.it/)
-- [Dipartimento di Protezione Civile — Rischio sismico](https://www.protezionecivile.gov.it/it/rischio/rischio-sismico/)
+- [Dipartimento di Protezione Civile — Rischio sismico](https://rischi.protezionecivile.gov.it/it/sismico/)
 - [OPCM 20 marzo 2003, n. 3274 — Normattiva](https://www.normattiva.it/)
 - [Norme Tecniche per le Costruzioni 2018 — Ministero delle Infrastrutture](https://www.mit.gov.it/)
 - [Mappa di Pericolosità Sismica Italia (INGV)](https://zonesismiche.mi.ingv.it/)

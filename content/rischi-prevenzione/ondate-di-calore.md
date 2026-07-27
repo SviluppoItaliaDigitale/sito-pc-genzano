@@ -17,7 +17,7 @@ Il caldo estremo prolungato mette a rischio la vita, soprattutto degli anziani, 
 
 {{< foto src="/images/2026-ministero-salute-proteggiamoci-dal-caldo.webp"
          alt="Infografica del Ministero della Salute «Proteggiamoci dal caldo 2026 — 10 consigli utili»: 1) uscire nelle ore più fresche; 2) proteggersi in casa e sui luoghi di lavoro; 3) bere almeno un litro e mezzo d'acqua al giorno; 4) seguire un'alimentazione corretta; 5) conservare correttamente gli alimenti; 6) indossare abiti di fibre naturali e traspiranti; 7) protezione dal caldo in auto; 8) fare esercizio fisico nelle ore più fresche; 9) proteggere anche gli animali domestici; 10) offrire assistenza alle persone a maggiore rischio. Numero di pubblica utilità 1500."
-         caption="«Proteggiamoci dal caldo 2026»: i 10 consigli del Ministero della Salute. Numero di pubblica utilità **1500**. Fonte: [Ministero della Salute](https://www.salute.gov.it/portale/caldo/)." >}}
+         caption="«Proteggiamoci dal caldo 2026»: i 10 consigli del Ministero della Salute. Numero di pubblica utilità **1500**. Fonte: [Ministero della Salute](https://www.salute.gov.it/new/it/tema/ondate-di-calore)." >}}
 
 ## <i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Perché è rilevante sul nostro territorio {#perche-rilevante}
 Genzano di Roma, pur trovandosi in area collinare, è soggetta a ondate di calore intense da giugno ad agosto. Le temperature possono superare i 38-40°C. Gli effetti più gravi colpiscono anziani, bambini piccoli e persone con patologie croniche.
@@ -35,7 +35,7 @@ Genzano di Roma, pur trovandosi in area collinare, è soggetta a ondate di calor
 > 🎒 **Kit consigliato per questo rischio**: il [Kit "Casa 72 ore"](/rischi-prevenzione/kit-emergenza/#kit-casa) è utile per la sua scorta d'acqua (almeno 12 litri a persona) e i farmaci. In caso di blackout estivo prolungato — molto frequente quando i condizionatori sovraccaricano la rete — saper restare autonomi 3 giorni è cruciale soprattutto per anziani e persone con patologie croniche. Per il controllo periodico stampa la [Checklist A4 da frigorifero](/formazione/schede-stampabili/checklist-kit-emergenza/).
 
 ## <i class="bi bi-clipboard-check-fill text-primary me-2" aria-hidden="true"></i>Cosa fare PRIMA {#cosa-fare-prima}
-- Consulta ogni giorno il **bollettino sulle ondate di calore** del [Ministero della Salute](https://www.salute.gov.it/portale/caldo/): puoi farlo anche dallo smartphone con l'app gratuita **Caldo e Salute** ([come funziona e dove scaricarla](/comunicazioni/2026-06-07-caldo-salute-app-bollettini/))
+- Consulta ogni giorno il **bollettino sulle ondate di calore** del [Ministero della Salute](https://www.salute.gov.it/new/it/tema/ondate-di-calore): puoi farlo anche dallo smartphone con l'app gratuita **Caldo e Salute** ([come funziona e dove scaricarla](/comunicazioni/2026-06-07-caldo-salute-app-bollettini/))
 - Assicurati di avere scorte d'acqua in casa
 - Verifica che ventilatori o condizionatori funzionino
 - Contatta i vicini anziani o le persone sole per verificare il loro stato
@@ -67,7 +67,7 @@ Genzano di Roma, pur trovandosi in area collinare, è soggetta a ondate di calor
 - **Lavoratori all'aperto**
 - **Persone senza dimora**
 
-Se conosci anziani o persone fragili nel tuo vicinato, chiamali o vai a trovarli nei giorni di calore intenso. Il [Piano Caldo nazionale del Ministero della Salute](https://www.salute.gov.it/portale/caldo/) raccomanda esplicitamente la rete di prossimità come misura di prevenzione.
+Se conosci anziani o persone fragili nel tuo vicinato, chiamali o vai a trovarli nei giorni di calore intenso. Il [Piano Caldo nazionale del Ministero della Salute](https://www.salute.gov.it/new/it/tema/ondate-di-calore) raccomanda esplicitamente la rete di prossimità come misura di prevenzione.
 
 ## <i class="bi bi-link-45deg text-primary me-2" aria-hidden="true"></i>Fonti e approfondimenti {#fonti}
 
@@ -80,7 +80,7 @@ Se conosci anziani o persone fragili nel tuo vicinato, chiamali o vai a trovarli
 
 **Fonti istituzionali**
 
-- [Ministero della Salute — Caldo e salute](https://www.salute.gov.it/portale/caldo/) — bollettini giornalieri sulle ondate di calore per le città (Roma inclusa)
+- [Ministero della Salute — Caldo e salute](https://www.salute.gov.it/new/it/tema/ondate-di-calore) — bollettini giornalieri sulle ondate di calore per le città (Roma inclusa)
 - [Istituto Superiore di Sanità (ISS)](https://www.iss.it/) — sorveglianza e raccomandazioni sulle ondate di calore
 - [ASL Roma 6](https://www.aslroma6.it/) — azienda sanitaria competente per Genzano di Roma
 - [Portale Rischi — Dipartimento della Protezione Civile](https://rischi.protezionecivile.gov.it/it/) — rischio sanitario e ondate di calore

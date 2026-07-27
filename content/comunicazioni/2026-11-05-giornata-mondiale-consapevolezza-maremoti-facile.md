@@ -63,6 +63,6 @@ L'avviso può arrivare anche con IT-alert. IT-alert è un messaggio che suona su
 
 **Fonti istituzionali:**
 
-- [Dipartimento della Protezione Civile — Rischio maremoto](https://www.protezionecivile.gov.it/it/rischio/rischio-maremoto/)
+- [Dipartimento della Protezione Civile — Rischio maremoto](https://rischi.protezionecivile.gov.it/it/maremoto-0/)
 - [INGV — Centro Allerta Tsunami](https://www.ingv.it/)
 - [UNDRR — World Tsunami Awareness Day](https://www.undrr.org/)

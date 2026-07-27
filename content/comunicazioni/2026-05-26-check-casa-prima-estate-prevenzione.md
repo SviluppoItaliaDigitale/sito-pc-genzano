@@ -114,6 +114,6 @@ Fonti istituzionali:
 
 - [Vigili del Fuoco](https://www.vigilfuoco.it/).
 - [ARERA — Autorità Reti e Ambiente](https://www.arera.it/).
-- [Ministero della Salute — Caldo e salute](https://www.salute.gov.it/portale/caldo/homeCaldo.jsp).
+- [Ministero della Salute — Caldo e salute](https://www.salute.gov.it/new/it/tema/ondate-di-calore).
 
 Una casa controllata protegge meglio quando serve. Un controllo fatto prima dell'estate riduce stress, danni e rischi per la famiglia.

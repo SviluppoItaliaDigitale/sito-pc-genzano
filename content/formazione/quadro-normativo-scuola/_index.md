@@ -107,7 +107,7 @@ La scelta finale sull'uso in classe spetta al docente e alla scuola, in coerenza
 - [Gazzetta Ufficiale](https://www.gazzettaufficiale.it/) — pubblicazione ufficiale delle norme.
 - [EUR-Lex](https://eur-lex.europa.eu/) — normativa europea.
 - [MIM — Educazione civica](https://www.istruzione.it/educazione_civica/norme.html) — norme e materiali ministeriali.
-- [Dipartimento della Protezione Civile — Normativa](https://www.protezionecivile.gov.it/it/normativa/) — norme di protezione civile.
+- [Dipartimento della Protezione Civile — Normativa](https://www.protezionecivile.gov.it/it/dipartimento/amministrazione-trasparente/provvedimenti-normativi/) — norme di protezione civile.
 - [AGID — Linee guida](https://www.agid.gov.it/it/linee-guida) — riferimenti per digitale e accessibilità.
 
 ## Vedi anche

@@ -27,7 +27,7 @@
     <h3 class="h5 mt-0"><i class="bi bi-cone-striped me-2" aria-hidden="true"></i>Mappa in costruzione</h3>
     <p class="mb-2">Stiamo raccogliendo le coordinate ufficiali con i soggetti competenti. La mappa si attiverà automaticamente quando saranno disponibili dati validati.</p>
     <p class="mb-2"><strong>Hai informazioni utili?</strong> Se conosci la posizione di un DAE accessibile al pubblico (farmacia, scuola, palestra, parrocchia, ufficio pubblico) o di un idrante antincendio operativo, scrivici a <a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a>. Ci coordineremo con ASL Roma 6 / 118 / VVF / Comune per la verifica.</p>
-    <p class="small mb-0">Riferimento per i DAE: registro nazionale <a href="https://dae.irc-com.it" target="_blank" rel="noopener noreferrer">IRC</a> (Italian Resuscitation Council) ai sensi della <strong>Legge 116/2021</strong>. Riferimento per gli idranti: Comando provinciale VVF Roma + Servizio Tecnico Comunale.</p>
+    <p class="small mb-0">Riferimento per i DAE: censimento nazionale promosso da <a href="https://www.ircouncil.it/" target="_blank" rel="noopener noreferrer">IRC</a> (Italian Resuscitation Council) ai sensi della <strong>Legge 116/2021</strong>. Riferimento per gli idranti: Comando provinciale VVF Roma + Servizio Tecnico Comunale.</p>
   </div>
 
   <p class="small text-muted mt-3 mb-0">In emergenza chiama sempre il <strong><a href="tel:112">112</a></strong> (NUE). Il DAE va recuperato solo se vicino entro 1-2 minuti; altrimenti continua le compressioni toraciche (BLS).</p>
@@ -67,7 +67,7 @@
     </div>
   </noscript>
 
-  <p class="small text-muted mt-2 mb-0">Mappa: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a> — libreria <a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer">Leaflet</a> 1.9.4 self-hosted. Dati DAE conformi <a href="https://dae.irc-com.it" target="_blank" rel="noopener noreferrer">registro IRC</a> (L. 116/2021). Idranti coordinati con Comando VVF Roma.</p>
+  <p class="small text-muted mt-2 mb-0">Mappa: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a> — libreria <a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer">Leaflet</a> 1.9.4 self-hosted. Dati DAE conformi ai criteri <a href="https://www.ircouncil.it/" target="_blank" rel="noopener noreferrer">IRC</a> (L. 116/2021). Idranti coordinati con Comando VVF Roma.</p>
 
   <script src="{{ $leafletJS }}" crossorigin=""></script>
   <script id="dati-territorio" type="application/json">{{ dict "idranti" $idranti "dae" $dae | jsonify | safeJS }}</script>

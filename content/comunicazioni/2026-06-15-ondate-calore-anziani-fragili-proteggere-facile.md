@@ -109,6 +109,6 @@ I volontari che lavorano fuori d'estate devono stare attenti. Turni più brevi. 
 ## Dove trovare altre informazioni
 
 - [Ministero della Salute — Caldo e salute](https://www.salute.gov.it/caldo)
-- [Bollettino giornaliero ondate di calore](https://www.salute.gov.it/portale/caldo/dettaglioContenutiCaldo.jsp)
+- [Bollettino giornaliero ondate di calore](https://www.salute.gov.it/new/it/tema/ondate-di-calore/bollettini-sulle-ondate-di-calore-0)
 - Articolo: [Ondate di calore — prepararsi all'estate](/comunicazioni/2026-05-04-ondate-di-calore-preparare-estate/)
 - Articolo: [Come aiutare anziani e vicini in emergenza](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/)

@@ -147,7 +147,7 @@ Fonti istituzionali:
 
 - [Italian Resuscitation Council (IRC)](https://www.ircouncil.it/) — Linee guida BLS-D.
 - [Croce Rossa Italiana](https://www.cri.it/) — corsi di primo soccorso.
-- [Ministero della Salute — Ondate di calore](https://www.salute.gov.it/portale/caldo/homeCaldo.jsp).
+- [Ministero della Salute — Ondate di calore](https://www.salute.gov.it/new/it/tema/ondate-di-calore).
 - [American Heart Association — FAST stroke](https://www.heart.org/) — riconoscimento ictus.
 
 Riconoscere un malore in tempo **può salvare una vita**. Non serve fare diagnosi: servono attenzione, prontezza e un numero — il **112**.

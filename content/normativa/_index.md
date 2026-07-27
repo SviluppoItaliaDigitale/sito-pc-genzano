@@ -77,7 +77,7 @@ Consulta sempre fonti ufficiali e aggiornate:
 
 - [Normattiva](https://www.normattiva.it/) — banca dati delle leggi italiane con testo vigente.
 - [Gazzetta Ufficiale](https://www.gazzettaufficiale.it/) — pubblicazione ufficiale degli atti normativi.
-- [Dipartimento della Protezione Civile — normativa](https://www.protezionecivile.gov.it/it/normativa/)
+- [Dipartimento della Protezione Civile — normativa](https://www.protezionecivile.gov.it/it/dipartimento/amministrazione-trasparente/provvedimenti-normativi/)
 - [Regione Lazio — Agenzia Regionale di Protezione Civile](https://protezionecivile.regione.lazio.it/)
 - [Consiglio Regionale del Lazio — banca dati delle leggi regionali](https://www.consiglio.regione.lazio.it/consiglio-regionale/?vw=leggiregionali)
 

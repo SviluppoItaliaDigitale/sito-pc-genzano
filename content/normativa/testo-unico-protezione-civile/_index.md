@@ -49,7 +49,7 @@ Abbiamo preparato una sintesi dedicata per ciascun Capo del Codice, con linguagg
 ## Fonti ufficiali
 
 - [Testo vigente del D.Lgs. 1/2018 su Normattiva](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1)
-- [Dipartimento della Protezione Civile — sezione Normativa](https://www.protezionecivile.gov.it/it/normativa/)
+- [Dipartimento della Protezione Civile — sezione Normativa](https://www.protezionecivile.gov.it/it/dipartimento/amministrazione-trasparente/provvedimenti-normativi/)
 - [Vademecum di Protezione Civile — Prefettura di Isernia (2024)](https://prefettura.interno.gov.it/sites/default/files/11/2024-09/vademecum_di_protezione_civile_0.pdf) — un'utile introduzione pratica al sistema
 
 ## Nota sulla natura del contenuto

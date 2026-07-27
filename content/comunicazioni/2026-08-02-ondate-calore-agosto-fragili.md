@@ -53,7 +53,7 @@ Le raccomandazioni del Ministero della Salute, della ASL Roma 6 e del Dipartimen
 
 ## Il bollettino calore
 
-Il Ministero della Salute pubblica ogni giorno un [bollettino ondate di calore](https://www.salute.gov.it/portale/caldo/) per 27 città italiane, Roma compresa. Il dato romano è rappresentativo anche per Genzano, con aggiustamenti dovuti all'altitudine (circa 2-3 °C in meno).
+Il Ministero della Salute pubblica ogni giorno un [bollettino ondate di calore](https://www.salute.gov.it/new/it/tema/ondate-di-calore) per 27 città italiane, Roma compresa. Il dato romano è rappresentativo anche per Genzano, con aggiustamenti dovuti all'altitudine (circa 2-3 °C in meno).
 
 ## Un appello al vicinato
 
@@ -61,7 +61,7 @@ Una persona anziana sola in casa, al terzo piano senza aria condizionata, durant
 
 ## Per approfondire
 
-- [Ministero della Salute — Caldo](https://www.salute.gov.it/portale/caldo/)
+- [Ministero della Salute — Caldo](https://www.salute.gov.it/new/it/tema/ondate-di-calore)
 - [Protezione Civile Lazio](https://protezionecivile.regione.lazio.it/)
 - [Agosto mese critico](/comunicazioni/2026-08-01-agosto-mese-critico-pc-preparazione/)
 

@@ -63,7 +63,7 @@ Per piena trasparenza tecnica sul funzionamento del sito istituzionale, è dispo
 
 Per **richieste di accesso a documenti** del Gruppo non già pubblicati su questo sito, applicabili ai sensi del **D.Lgs. 33/2013** (accesso civico generalizzato — FOIA italiano):
 
-- **Per atti del Comune**: rivolgersi al **Responsabile della Trasparenza del Comune di Genzano di Roma**, tramite il portale comunale *"Amministrazione Trasparente"* su <https://www.comune.genzanodiroma.rm.it/>.
+- **Per atti del Comune**: rivolgersi al **Responsabile della Trasparenza del Comune di Genzano di Roma**, tramite il portale comunale *"Amministrazione Trasparente"* su <https://www.comune.genzanodiroma.roma.it/>.
 - **Per richieste dirette al Gruppo**:
   - Email: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it)
   - Telefono: [+39 06 9362600](tel:+39069362600)

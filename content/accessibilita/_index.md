@@ -351,7 +351,7 @@ Per ogni widget esterno il sito offre anche **un link diretto al sito ufficiale 
 
 - Mappa meteo Windy → link a [windy.com centrato su Genzano di Roma](https://www.windy.com/41.692/12.693)
 - Mappa terremoti INGV → link a [terremoti.ingv.it](https://terremoti.ingv.it/)
-- Radar DPC → link al [portale Dipartimento di Protezione Civile](https://dpc-radar.ingv.it/)
+- Radar DPC → link al [portale Dipartimento di Protezione Civile](https://radar.protezionecivile.it/)
 
 La pagina [Strumenti in tempo reale](/strumenti/) elenca gli strumenti usati e distingue le **fonti istituzionali** (DPC, INGV, ARPA, MeteoAM) dagli **strumenti di consultazione** di terze parti.
 

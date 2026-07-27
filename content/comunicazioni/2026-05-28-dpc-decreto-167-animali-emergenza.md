@@ -91,4 +91,4 @@ Nei prossimi mesi pubblicheremo articoli di approfondimento dedicati: emergenze 
 - [L. 281/1991 — animali d'affezione e prevenzione del randagismo](https://www.normattiva.it).
 - [D.Lgs. 146/2001 — protezione degli animali negli allevamenti](https://www.normattiva.it).
 - [D.Lgs. 134/2022, 135/2022, 136/2022 — identificazione animali, sanità animale, fauna selvatica](https://www.normattiva.it).
-- [Ministero della Salute — Anagrafe canina e microchip](https://www.salute.gov.it/portale/temi/p2_6.jsp?id=212).
+- [Ministero della Salute — Anagrafe canina e microchip](https://www.salute.gov.it/anagcaninapublic_new/home.jsp).

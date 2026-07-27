@@ -938,3 +938,236 @@
     - "Organizzazione delle Nazioni Unite"
   definizione: "Organizzazione delle Nazioni Unite: da essa dipendono l'UNDRR e il Quadro di Sendai per la riduzione del rischio di disastri."
   link: "/glossario/#onu"
+
+# ============================================================
+# Aggiunte 2026-07-27 — issue #738 (audit copertura glossario)
+# Sigle ricorrenti verificate nel contesto d'uso reale del sito.
+# NB: le varianti TUTTE MAIUSCOLE matchano solo se maiuscole nel
+# testo (guardia anti "nato"/"cima"/"fast" in glossario-inline.js).
+# ============================================================
+
+- id: adr
+  termine: "ADR"
+  varianti:
+    - "ADR"
+  definizione: "Accordo europeo sul trasporto di merci pericolose su strada: regola le autocisterne e i colli con targa arancione e codici di pericolo."
+  link: "/glossario/#adr"
+
+- id: ato
+  termine: "ATO"
+  varianti:
+    - "ATO"
+    - "Ambito Territoriale Ottimale"
+  definizione: "Ambito Territoriale Ottimale: l'area su cui è organizzato il servizio idrico integrato. A Genzano il gestore è Acea ATO 2."
+  link: "/glossario/#ato"
+
+- id: bes
+  termine: "BES"
+  varianti:
+    - "BES"
+    - "Bisogni Educativi Speciali"
+  definizione: "Bisogni Educativi Speciali: alunni che hanno bisogno di attenzioni didattiche particolari. I materiali per le scuole del sito prevedono versioni accessibili."
+  link: "/glossario/#bes"
+
+- id: cat-ingv
+  termine: "CAT-INGV"
+  varianti:
+    - "CAT-INGV"
+    - "Centro Allerta Tsunami"
+  definizione: "Centro Allerta Tsunami dell'INGV: dal 2017 sorveglia i maremoti nel Mediterraneo. Fa parte del sistema di allertamento SiAM con ISPRA e DPC."
+  link: "/glossario/#cat-ingv"
+
+- id: cima
+  termine: "CIMA"
+  varianti:
+    - "Fondazione CIMA"
+    - "CIMA"
+  definizione: "Fondazione CIMA (Centro Internazionale in Monitoraggio Ambientale): ente di ricerca partner del DPC sui modelli di previsione di alluvioni e incendi boschivi."
+  link: "/glossario/#cima"
+
+- id: clp
+  termine: "CLP"
+  varianti:
+    - "CLP"
+    - "Regolamento CLP"
+  definizione: "Regolamento europeo su classificazione, etichettatura e imballaggio delle sostanze chimiche: definisce i pittogrammi di pericolo rossi e bianchi sulle confezioni."
+  link: "/glossario/#clp"
+
+- id: dpo
+  termine: "DPO"
+  varianti:
+    - "DPO"
+    - "Responsabile della protezione dei dati"
+  definizione: "Data Protection Officer (Responsabile della protezione dei dati, RPD): figura prevista dal GDPR che vigila sul corretto trattamento dei dati personali."
+  link: "/glossario/#dpo"
+
+- id: dsa
+  termine: "DSA"
+  varianti:
+    - "DSA"
+    - "Disturbi Specifici dell'Apprendimento"
+  definizione: "Disturbi Specifici dell'Apprendimento, come dislessia e discalculia. Il sito offre strumenti di lettura dedicati (font ad alta leggibilità, ascolto)."
+  link: "/glossario/#dsa"
+
+- id: dsefic
+  termine: "DSEFIC"
+  varianti:
+    - "DSEFIC"
+  definizione: "Dipartimento Solidarietà Emergenze della Federazione Italiana Cuochi: cuochi volontari che gestiscono le cucine da campo nelle emergenze."
+  link: "/glossario/#dsefic"
+
+- id: dsga
+  termine: "DSGA"
+  varianti:
+    - "DSGA"
+  definizione: "Direttore dei Servizi Generali e Amministrativi: dirige la segreteria di una scuola. È coinvolto nelle procedure di sicurezza ed evacuazione."
+  link: "/glossario/#dsga"
+
+- id: ecmwf
+  termine: "ECMWF"
+  varianti:
+    - "ECMWF"
+  definizione: "Centro europeo per le previsioni meteorologiche a medio termine: elabora i modelli meteo usati anche dalle carte del cruscotto di questo sito."
+  link: "/glossario/#ecmwf"
+
+- id: eena
+  termine: "EENA"
+  varianti:
+    - "EENA"
+    - "European Emergency Number Association"
+  definizione: "European Emergency Number Association: rete europea che promuove il numero unico di emergenza 112 e la sua accessibilità per tutti."
+  link: "/glossario/#eena"
+
+- id: fast
+  termine: "FAST"
+  varianti:
+    - "scheda FAST"
+    - "FAST"
+  definizione: "Scheda di verifica rapida dell'agibilità degli edifici dopo un terremoto, introdotta dopo il sisma del Centro Italia 2016. Per i casi dubbi si usa l'AeDES."
+  link: "/glossario/#fast"
+
+- id: gpl
+  termine: "GPL"
+  varianti:
+    - "GPL"
+  definizione: "Gas di Petrolio Liquefatto: combustibile di auto, bombole e serbatoi domestici. In caso di fuga si accumula in basso perché più pesante dell'aria."
+  link: "/glossario/#gpl"
+
+- id: ifrc
+  termine: "IFRC"
+  varianti:
+    - "IFRC"
+  definizione: "Federazione Internazionale delle Società di Croce Rossa e Mezzaluna Rossa: coordina le società nazionali nelle grandi emergenze umanitarie."
+  link: "/glossario/#ifrc"
+
+- id: iride
+  termine: "IRIDE"
+  varianti:
+    - "IRIDE"
+  definizione: "Costellazione satellitare italiana di osservazione della Terra, finanziata dal PNRR e coordinata dall'ESA con l'ASI. Serve anche alla protezione civile."
+  link: "/glossario/#iride"
+
+- id: modis
+  termine: "MODIS"
+  varianti:
+    - "MODIS"
+  definizione: "Sensore dei satelliti NASA Terra e Aqua: riprende ogni giorno l'intera superficie terrestre e documenta incendi, alluvioni e uragani."
+  link: "/glossario/#modis"
+
+- id: nato
+  termine: "NATO"
+  varianti:
+    - "NATO"
+  definizione: "Organizzazione del Trattato del Nord Atlantico. Nelle radiocomunicazioni si usa il suo alfabeto fonetico (Alfa, Bravo, Charlie) per scandire le lettere."
+  link: "/glossario/#nato"
+
+- id: ncs
+  termine: "NCS"
+  varianti:
+    - "NCS"
+    - "Net Control Station"
+  definizione: "Net Control Station: la stazione radio che dirige una maglia di emergenza. Nessuno trasmette senza la sua autorizzazione, salvo pericolo di vita."
+  link: "/glossario/#ncs"
+
+- id: nctsn
+  termine: "NCTSN"
+  varianti:
+    - "NCTSN"
+  definizione: "National Child Traumatic Stress Network: rete statunitense specializzata nello stress traumatico di bambini e adolescenti. Le sue linee guida sono citate nei kit del sito."
+  link: "/glossario/#nctsn"
+
+- id: pfa
+  termine: "PFA"
+  varianti:
+    - "PFA"
+    - "Psychological First Aid"
+    - "Primo Soccorso Psicologico"
+  definizione: "Psychological First Aid (Primo Soccorso Psicologico): protocollo internazionale OMS di supporto alle persone colpite da un'emergenza. Non è psicoterapia."
+  link: "/glossario/#pfa"
+
+- id: pnrr
+  termine: "PNRR"
+  varianti:
+    - "PNRR"
+    - "Piano Nazionale di Ripresa e Resilienza"
+  definizione: "Piano Nazionale di Ripresa e Resilienza: programma di investimenti finanziato dall'Unione Europea. Sostiene anche prevenzione e osservazione della Terra."
+  link: "/glossario/#pnrr"
+
+- id: ptt
+  termine: "PTT"
+  varianti:
+    - "PTT"
+    - "Push-To-Talk"
+  definizione: "Push-To-Talk: il pulsante della radio che si tiene premuto per trasmettere. Rilasciandolo si torna in ascolto: non si può parlare e ricevere insieme."
+  link: "/glossario/#ptt"
+
+- id: runts
+  termine: "RUNTS"
+  varianti:
+    - "RUNTS"
+    - "Registro Unico Nazionale del Terzo Settore"
+  definizione: "Registro Unico Nazionale del Terzo Settore: registro pubblico degli enti del Terzo Settore. Il Gruppo vi è iscritto come «Altri Enti del Terzo Settore»."
+  link: "/glossario/#runts"
+
+- id: tlc
+  termine: "TLC"
+  varianti:
+    - "TLC"
+  definizione: "Telecomunicazioni: nel volontariato di protezione civile è il settore che garantisce i collegamenti radio tra squadre, sala operativa ed enti."
+  link: "/glossario/#tlc"
+
+- id: unesco
+  termine: "UNESCO"
+  varianti:
+    - "UNESCO"
+  definizione: "Organizzazione delle Nazioni Unite per l'Educazione, la Scienza e la Cultura. Coordina anche i sistemi internazionali di allerta maremoto."
+  link: "/glossario/#unesco"
+
+- id: unhcr
+  termine: "UNHCR"
+  varianti:
+    - "UNHCR"
+  definizione: "Alto Commissariato delle Nazioni Unite per i Rifugiati: agenzia ONU che protegge rifugiati e sfollati nelle crisi umanitarie."
+  link: "/glossario/#unhcr"
+
+- id: unicef
+  termine: "UNICEF"
+  varianti:
+    - "UNICEF"
+  definizione: "Fondo delle Nazioni Unite per l'Infanzia: agenzia ONU che tutela i diritti di bambini e adolescenti, anche nelle emergenze umanitarie."
+  link: "/glossario/#unicef"
+
+- id: urp
+  termine: "URP"
+  varianti:
+    - "URP"
+    - "Ufficio Relazioni con il Pubblico"
+  definizione: "Ufficio Relazioni con il Pubblico: lo sportello di un ente pubblico che informa e orienta i cittadini. Per le emergenze si chiama sempre il 112."
+  link: "/glossario/#urp"
+
+- id: usgs
+  termine: "USGS"
+  varianti:
+    - "USGS"
+  definizione: "United States Geological Survey: servizio geologico degli Stati Uniti. Pubblica dati sismici e immagini liberi, come le ShakeMap dei terremoti."
+  link: "/glossario/#usgs"

@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-09-26-bls-d-defibrillatore-formazione-facile"
 ---
 
 In Italia ogni anno si verificano oltre **60.000 arresti cardiaci extra-ospedalieri**. La **sopravvivenza** di una persona colpita da arresto dipende dai **primi 3-5 minuti**. Un **massaggio cardiaco precoce** e l'uso di un **defibrillatore semiautomatico esterno (DAE)** possono **triplicare** le probabilità di sopravvivere. Imparare **BLS-D** è una delle competenze civiche più utili in assoluto.

@@ -13,9 +13,9 @@
 #      Richiesta del registro DAE attivi nei Comuni dei Castelli Romani
 #      con autorizzazione alla pubblicazione su sito istituzionale.
 #   2. ARES 118 Lazio — coordinamento regionale.
-#   3. IRC (Italian Resuscitation Council) — registro nazionale DAE
-#      consultabile su https://dae.irc-com.it (verificare API/export
-#      per import bulk).
+#   3. IRC (Italian Resuscitation Council) — https://www.ircouncil.it
+#      (il vecchio portale dae.irc-com.it non esiste più; l'applicazione
+#      nazionale prevista dalla L. 116/2021 non è ancora disponibile).
 #   4. Censimento diretto del Gruppo Comunale: chiediamo a scuole,
 #      farmacie, palestre, centri sportivi, parrocchie, supermercati,
 #      uffici pubblici di confermare presenza DAE + orari di accesso.

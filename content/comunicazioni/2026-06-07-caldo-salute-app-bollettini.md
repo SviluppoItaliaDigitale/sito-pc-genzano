@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-06-07-caldo-salute-app-bollettini-facile"
 tts: true
 social_citazione: "Il caldo è un rischio che si prevede: ogni giorno un bollettino dice quanto è pericoloso, città per città."
 social_punti:
@@ -49,7 +50,7 @@ Su **Android**, scarica l'app gratuita da Google Play:
 
 - [**Scarica «Caldo e Salute» su Google Play**](https://play.google.com/store/apps/details?id=net.deplazio.caldosalute25)
 
-Su **iOS o da computer**, gli stessi bollettini sono pubblicati ogni giorno sul sito del **Ministero della Salute** alla pagina [Caldo e salute](https://www.salute.gov.it/portale/caldo/) e sul sito del [DEP Lazio](https://www.deplazio.it/).
+Su **iOS o da computer**, gli stessi bollettini sono pubblicati ogni giorno sul sito del **Ministero della Salute** alla pagina [Caldo e salute](https://www.salute.gov.it/new/it/tema/ondate-di-calore) e sul sito del [DEP Lazio](https://www.deplazio.it/).
 
 ## Cosa fare quando il caldo aumenta
 
@@ -72,7 +73,7 @@ Il bollettino serve a **decidere in anticipo**. Quando sale il livello:
 
 **Fonti ufficiali:**
 
-- [Ministero della Salute — Caldo e salute](https://www.salute.gov.it/portale/caldo/)
+- [Ministero della Salute — Caldo e salute](https://www.salute.gov.it/new/it/tema/ondate-di-calore)
 - [DEP Lazio — Dipartimento di Epidemiologia SSR Lazio](https://www.deplazio.it/)
 - [ASL Roma 6](https://www.aslroma6.it/) (azienda sanitaria competente per Genzano)
 
