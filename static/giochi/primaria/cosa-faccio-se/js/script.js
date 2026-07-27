@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'terremoto', title: 'Terremoto a scuola', icon: '\uD83C\uDFEB',
             steps: [
                 {
-                    text: 'Sei in classe durante la lezione di italiano. All\'improvviso senti il pavimento tremare e i vetri vibrare. La scossa e forte. Cosa fai?',
+                    text: 'Sei in classe durante la lezione di italiano. All\'improvviso senti il pavimento tremare e i vetri vibrare. La scossa è forte. Cosa fai?',
                     choices: [
                         { text: 'Mi alzo e corro verso la porta per uscire', correct: false, tip: 'Durante la scossa non si corre! Le scale e i corridoi possono essere più pericolosi.' },
                         { text: 'Mi riparo sotto il banco e mi proteggo la testa con le braccia', correct: true, tip: 'Perfetto! Sotto il banco sei protetto dagli oggetti che possono cadere.' },
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     ]
                 },
                 {
-                    text: 'La scossa e finita. La maestra dice di prepararsi a uscire. Alcuni compagni vogliono prendere zaini e giubbotti. Cosa fai?',
+                    text: 'La scossa è finita. La maestra dice di prepararsi a uscire. Alcuni compagni vogliono prendere zaini e giubbotti. Cosa fai?',
                     choices: [
                         { text: 'Prendo il mio zaino, ci sono le mie cose importanti', correct: false, tip: 'Gli zaini rallentano la fila e possono far inciampare. La sicurezza viene prima delle cose!' },
                         { text: 'Mi metto in fila senza prendere niente e seguo la maestra', correct: true, tip: 'Giusto! In evacuazione si esce leggeri e ordinati.' }
@@ -35,15 +35,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 {
                     text: 'Siete in fila nel corridoio. Un compagno vuole prendere l\'ascensore perché ha paura delle scale. Cosa gli dici?',
                     choices: [
-                        { text: '"Hai ragione, l\'ascensore e più veloce"', correct: false, tip: 'L\'ascensore può bloccarsi dopo un terremoto. Non si usa mai!' },
+                        { text: '"Hai ragione, l\'ascensore è più veloce"', correct: false, tip: 'L\'ascensore può bloccarsi dopo un terremoto. Non si usa mai!' },
                         { text: '"No, dopo un terremoto si usano solo le scale. Vieni con noi!"', correct: true, tip: 'Bravo! L\'ascensore può restare bloccato. Le scale sono la via sicura.' }
                     ]
                 },
                 {
                     text: 'Siete arrivati al punto di raccolta nel cortile. La maestra fa l\'appello. Un compagno manca. Cosa fai?',
                     choices: [
-                        { text: 'Torno dentro a cercarlo', correct: false, tip: 'Non rientrare mai nell\'edificio! Dillo alla maestra, sara lei a coordinarsi con i soccorritori.' },
-                        { text: 'Lo dico subito alla maestra', correct: true, tip: 'Esatto! La maestra avvisera chi di dovere. Tu resta al punto di raccolta.' }
+                        { text: 'Torno dentro a cercarlo', correct: false, tip: 'Non rientrare mai nell\'edificio! Dillo alla maestra, sarà lei a coordinarsi con i soccorritori.' },
+                        { text: 'Lo dico subito alla maestra', correct: true, tip: 'Esatto! La maestra avviserà chi di dovere. Tu resta al punto di raccolta.' }
                     ]
                 }
             ],
@@ -55,16 +55,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 {
                     text: 'Sei al parco con gli amici. Il cielo diventa scuro all\'improvviso, senti un tuono in lontananza e il vento aumenta. Cosa fai?',
                     choices: [
-                        { text: 'Continuo a giocare, e solo un tuono lontano', correct: false, tip: 'I temporali possono arrivare molto in fretta. Meglio non aspettare!' },
+                        { text: 'Continuo a giocare, è solo un tuono lontano', correct: false, tip: 'I temporali possono arrivare molto in fretta. Meglio non aspettare!' },
                         { text: 'Mi metto sotto il grande albero per ripararmi', correct: false, tip: 'Mai sotto gli alberi durante un temporale! I fulmini colpiscono gli oggetti alti.' },
-                        { text: 'Chiedo ai miei amici di andare subito verso un edificio', correct: true, tip: 'Ottima scelta! Un edificio in muratura e il posto più sicuro.' }
+                        { text: 'Chiedo ai miei amici di andare subito verso un edificio', correct: true, tip: 'Ottima scelta! Un edificio in muratura è il posto più sicuro.' }
                     ]
                 },
                 {
                     text: 'State correndo verso casa, ma il temporale vi raggiunge. Piove fortissimo, ci sono fulmini. Vedete un gazebo in metallo e un bar con le porte aperte. Dove andate?',
                     choices: [
-                        { text: 'Sotto il gazebo in metallo, e più vicino', correct: false, tip: 'Le strutture metalliche attirano i fulmini. Meglio un edificio chiuso!' },
-                        { text: 'Dentro il bar, al riparo dalle intemperie', correct: true, tip: 'Perfetto! Un edificio chiuso e il riparo migliore durante un temporale.' }
+                        { text: 'Sotto il gazebo in metallo, è più vicino', correct: false, tip: 'Le strutture metalliche attirano i fulmini. Meglio un edificio chiuso!' },
+                        { text: 'Dentro il bar, al riparo dalle intemperie', correct: true, tip: 'Perfetto! Un edificio chiuso è il riparo migliore durante un temporale.' }
                     ]
                 },
                 {
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     ]
                 },
                 {
-                    text: 'Il temporale e passato, ma in strada ci sono rami caduti e pozzanghere grandi. Cosa fai per tornare a casa?',
+                    text: 'Il temporale è passato, ma in strada ci sono rami caduti e pozzanghere grandi. Cosa fai per tornare a casa?',
                     choices: [
                         { text: 'Cammino normalmente, tanto ha smesso di piovere', correct: false, tip: 'Dopo un temporale ci possono essere pericoli nascosti: rami instabili, cavi elettrici, buche sotto le pozzanghere.' },
                         { text: 'Cammino con attenzione, evito le pozzanghere e i rami a terra', correct: true, tip: 'Bravo! Dopo il temporale bisogna fare attenzione a quello che il vento e la pioggia hanno lasciato per strada.' }
@@ -95,24 +95,24 @@ document.addEventListener('DOMContentLoaded', () => {
                     ]
                 },
                 {
-                    text: 'La mamma ti dice di uscire di casa insieme. Il corridoio verso l\'uscita e pieno di fumo. Come ti muovi?',
+                    text: 'La mamma ti dice di uscire di casa insieme. Il corridoio verso l\'uscita è pieno di fumo. Come ti muovi?',
                     choices: [
-                        { text: 'Corro veloce attraverso il fumo per uscire prima possibile', correct: false, tip: 'Correndo respiri più fumo. Il fumo tossico e la causa principale dei problemi in un incendio!' },
-                        { text: 'Mi abbasso e cammino vicino al pavimento, coprendo naso e bocca', correct: true, tip: 'Perfetto! Il fumo sale verso l\'alto, vicino al pavimento l\'aria e più pulita.' }
+                        { text: 'Corro veloce attraverso il fumo per uscire prima possibile', correct: false, tip: 'Correndo respiri più fumo. Il fumo tossico è la causa principale dei problemi in un incendio!' },
+                        { text: 'Mi abbasso e cammino vicino al pavimento, coprendo naso e bocca', correct: true, tip: 'Perfetto! Il fumo sale verso l\'alto, vicino al pavimento l\'aria è più pulita.' }
                     ]
                 },
                 {
                     text: 'Siete usciti dal palazzo. La mamma chiama i soccorsi. Quale numero compone?',
                     choices: [
-                        { text: '118', correct: false, tip: 'Nel Lazio non si chiama più il 118 per le emergenze. L\'unico numero da chiamare e il 112!' },
-                        { text: '112', correct: true, tip: 'Esatto! Il 112 e l\'unico numero di emergenza nel Lazio. La centrale invia subito i Vigili del Fuoco.' }
+                        { text: '118', correct: false, tip: 'Nel Lazio non si chiama più il 118 per le emergenze. L\'unico numero da chiamare è il 112!' },
+                        { text: '112', correct: true, tip: 'Esatto! Il 112 è l\'unico numero di emergenza nel Lazio. La centrale invia subito i Vigili del Fuoco.' }
                     ]
                 },
                 {
                     text: 'Mentre aspettate i vigili del fuoco, ti viene in mente che hai lasciato il tablet in camera. Un vicino dice che può rientrare a prenderlo. Cosa dici?',
                     choices: [
-                        { text: '"Si grazie, e nella mia camera a destra!"', correct: false, tip: 'Non si rientra mai in un edificio con un incendio in corso! Nessun oggetto vale il rischio.' },
-                        { text: '"No, e pericoloso! Aspettiamo i vigili del fuoco"', correct: true, tip: 'Bravissimo! Nessun oggetto vale la vita. Solo i vigili del fuoco possono rientrare in sicurezza.' }
+                        { text: '"Sì grazie, è nella mia camera a destra!"', correct: false, tip: 'Non si rientra mai in un edificio con un incendio in corso! Nessun oggetto vale il rischio.' },
+                        { text: '"No, è pericoloso! Aspettiamo i vigili del fuoco"', correct: true, tip: 'Bravissimo! Nessun oggetto vale la vita. Solo i vigili del fuoco possono rientrare in sicurezza.' }
                     ]
                 }
             ],
@@ -122,16 +122,16 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'alluvione', title: 'Pioggia fortissima', icon: '\uD83C\uDF0A',
             steps: [
                 {
-                    text: 'E pomeriggio e piove molto forte da ore. La mamma guarda il telefono e dice che c\'e un\'allerta arancione per rischio alluvione. Cosa fai?',
+                    text: 'È pomeriggio e piove molto forte da ore. La mamma guarda il telefono e dice che c\'è un\'allerta arancione per rischio alluvione. Cosa fai?',
                     choices: [
                         { text: 'Niente, tanto siamo in casa', correct: false, tip: 'L\'allerta arancione non va ignorata! Bisogna prepararsi e seguire le indicazioni.' },
-                        { text: 'Chiedo alla mamma se dobbiamo salire ai piani alti e preparare le cose importanti', correct: true, tip: 'Ottimo! Con allerta arancione e bene prepararsi, salire ai piani alti e tenere pronti documenti e telefono.' }
+                        { text: 'Chiedo alla mamma se dobbiamo salire ai piani alti e preparare le cose importanti', correct: true, tip: 'Ottimo! Con allerta arancione è bene prepararsi, salire ai piani alti e tenere pronti documenti e telefono.' }
                     ]
                 },
                 {
                     text: 'Guardate dalla finestra: l\'acqua in strada sta salendo. Il papà vuole scendere in garage a spostare l\'auto. Cosa gli dici?',
                     choices: [
-                        { text: '"Vai, però sbrigati!"', correct: false, tip: 'Il garage e un piano interrato: l\'acqua lo riempie velocemente. E molto pericoloso scendere!' },
+                        { text: '"Vai, però sbrigati!"', correct: false, tip: 'Il garage è un piano interrato: l\'acqua lo riempie velocemente. È molto pericoloso scendere!' },
                         { text: '"No papà, non scendere! L\'auto si può sostituire, tu no!"', correct: true, tip: 'Giusto! Mai scendere in cantina o garage durante un\'alluvione. L\'acqua può intrappolarti.' }
                     ]
                 },
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     text: 'L\'acqua ha smesso di salire e sta scendendo piano. Un amico ti scrive che sta andando in bici a vedere la situazione in centro. Ti chiede di venire. Cosa fai?',
                     choices: [
                         { text: 'Lo raggiungo, sono curioso di vedere', correct: false, tip: 'Dopo un\'alluvione le strade possono essere pericolose: tombini aperti, fango, correnti residue. Non uscire!' },
-                        { text: 'Gli dico di restare a casa e aspettare che le autorita diano il via libera', correct: true, tip: 'Perfetto! Dopo l\'alluvione si esce solo quando le autorita confermano che e sicuro.' }
+                        { text: 'Gli dico di restare a casa e aspettare che le autorità diano il via libera', correct: true, tip: 'Perfetto! Dopo l\'alluvione si esce solo quando le autorità confermano che è sicuro.' }
                     ]
                 }
             ],
@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     text: 'La maestra dice di allontanarsi dal fumo. Il vento soffia dalla parte del fumo verso di voi. In che direzione vi muovete?',
                     choices: [
                         { text: 'Contro vento, verso la fonte del fumo', correct: false, tip: 'Mai andare contro il fumo! L’aria calda e i gas sono pericolosi.' },
-                        { text: 'Ci spostiamo sopravento o di lato, dove il vento ci dà le spalle', correct: true, tip: 'Bravo! Così il vento allontana il fumo da te, e le fiamme non avanzano nella tua direzione.' }
+                        { text: 'Ci allontaniamo subito dal fumo, spostandoci di lato rispetto alla direzione del vento', correct: true, tip: 'Bravo! Spostandoti di lato esci dal percorso del fumo e delle fiamme, che corrono nella direzione del vento.' }
                     ]
                 },
                 {
@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     ]
                 }
             ],
-            endMsg: 'Hai segnalato un possibile incendio boschivo come un volontario esperto! Ricorda: non avvicinarti, chiama il 112, spostati sopravento.'
+            endMsg: 'Hai segnalato un possibile incendio boschivo come un volontario esperto! Ricorda: non avvicinarti, chiama il 112, allontanati dal fumo.'
         },
         {
             id: 'blackout', title: 'Va via la corrente', icon: '\uD83D\uDCA1',
@@ -296,13 +296,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // dello scenario, prima di continuare a sbagliare.
     const PAUSA_PUNTI = {
       terremoto: ['Sotto un tavolo robusto', 'Lontano dalle finestre', 'Mai correre durante la scossa', 'Mai usare l\'ascensore'],
-      incendio: ['Esci subito senza tornare indietro', 'Mai usare l\'ascensore', 'Copri naso e bocca con un panno', 'Chiama il 112'],
-      alluvione: ['Sali ai piani alti', 'Mai entrare in cantina o garage', 'Mai attraversare sottopassi allagati', 'Chiudi acqua, gas, luce'],
-      temporale: ['Stai in casa, lontano da finestre', 'Niente cellulari sotto carica', 'Niente doccia o lavandino', 'Aspetta che passi'],
-      fuga_gas: ['Apri tutte le finestre', 'Chiudi il rubinetto del gas', 'Niente fiamme né interruttori', 'Esci e chiama il 112'],
-      smarrimento: ['Resta dove sei', 'Cerca un adulto in divisa', 'Non seguire sconosciuti', 'Memorizza nome e telefono di un adulto'],
-      bullismo: ['Parla con un adulto di fiducia', 'Non rispondere con violenza', 'Salva le prove (screenshot)', 'Chiedi aiuto: non sei solo'],
-      maltempo_scuola: ['Segui le indicazioni dei docenti', 'Resta nei corridoi sicuri', 'Mai aprire le finestre', 'Aspetta che passi']
+      fumo: ['Non aprire la porta da cui esce fumo', 'Avvisa subito un adulto', 'Abbassati e copri naso e bocca', 'Chiama il 112 e non rientrare mai'],
+      alluvione: ['Sali ai piani alti', 'Mai entrare in cantina o garage', 'Mai attraversare sottopassi allagati', 'Aspetta il via libera delle autorità'],
+      temporale: ['Cerca un edificio chiuso', 'Mai sotto alberi o strutture in metallo', 'Stai lontano dalle finestre', 'Dopo, attenzione a rami e pozzanghere'],
+      'incendio-bosco': ['Non avvicinarti mai al fumo', 'Avvisa subito un adulto: si chiama il 112', 'Osserva i cartelli per dire dove siete', 'Allontanati di lato rispetto al vento'],
+      blackout: ['Torce a batteria, mai candele', 'Apri il frigo il meno possibile', 'Mai fornelli a gas per scaldare casa', 'Al ritorno della corrente, un apparecchio alla volta'],
+      'neve-ghiaccio': ['Passi corti e mani libere sul ghiaccio', 'Auto solo se preparata (gomme da neve o catene)', 'Avvisa chi rischia di scivolare', 'Segui le indicazioni di scuola e Comune'],
+      'persona-smarrita': ['Coinvolgi subito gli adulti', 'Chiama il 112 con una descrizione precisa', 'Non lasciare da sola la persona confusa', 'Parla con calma e rassicura']
     };
 
     function renderScenarioList() {
@@ -314,7 +314,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const col = document.createElement('div');
             col.className = 'col-6 col-md-3';
             col.innerHTML = '<div class="scenario-card" role="button" tabindex="0" aria-label="' + sc.title + '"><span class="sc-icon">' + sc.icon + '</span><span class="sc-title">' + sc.title + '</span></div>';
-            col.querySelector('.scenario-card').addEventListener('click', () => startScenario(sc));
+            const card = col.querySelector('.scenario-card');
+            card.addEventListener('click', () => startScenario(sc));
+            card.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); startScenario(sc); } });
             scenarioList.appendChild(col);
         });
     }

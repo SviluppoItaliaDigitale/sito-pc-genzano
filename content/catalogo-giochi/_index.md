@@ -53,7 +53,7 @@ In emergenza, il numero da chiamare è uno solo: 1-1-2. **[Apri la scheda →](/
 
 ### [Il Rifugio di Tina](/catalogo-giochi/rifugio-tina/)
 
-In emergenza Tina cerca un riparo sicuro: aiutala!. **[Apri la scheda →](/catalogo-giochi/rifugio-tina/)** · [Gioca subito →](/giochi/infanzia/rifugio-tina/)
+In emergenza Tina cerca un riparo sicuro: aiutala! **[Apri la scheda →](/catalogo-giochi/rifugio-tina/)** · [Gioca subito →](/giochi/infanzia/rifugio-tina/)
 
 ### [I Suoni dell'Emergenza](/catalogo-giochi/suoni-emergenza/)
 
@@ -137,7 +137,7 @@ Tre famiglie distinte: CLP per le sostanze chimiche (diamante bianco/rosso), ADR
 
 ### [Codice Arancione](/catalogo-giochi/codice-arancione/)
 
-Sei al COC: allesti un'area di accoglienza con budget limitato. **[Apri la scheda →](/catalogo-giochi/codice-arancione/)** · [Gioca subito →](/giochi/ragazzi/codice-arancione/)
+Sei al COC: allestisci un'area di accoglienza con budget limitato. **[Apri la scheda →](/catalogo-giochi/codice-arancione/)** · [Gioca subito →](/giochi/ragazzi/codice-arancione/)
 
 ### [Emergency Responder](/catalogo-giochi/emergency-responder/)
 

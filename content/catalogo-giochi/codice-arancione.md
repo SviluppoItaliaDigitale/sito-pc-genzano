@@ -1,6 +1,6 @@
 ---
 title: "Gioco: Codice Arancione"
-description: "Scheda del gioco Codice Arancione (11-19 anni e oltre): sei al COC: allesti un'area di accoglienza con budget limitato."
+description: "Scheda del gioco Codice Arancione (11-19 anni e oltre): sei al COC: allestisci un'area di accoglienza con budget limitato."
 image: ""
 image_alt: ""
 date: 2026-05-28
@@ -32,7 +32,7 @@ sitemap:
 
 ## In una frase
 
-> Sei al COC: allesti un'area di accoglienza con budget limitato. 4 scenari random (frana, alluvione, sisma, AIB) con priorità diverse. Attenzione agli eventi sopravvenuti che cambiano la situazione.
+> Sei al COC: allestisci un'area di accoglienza con budget limitato. 4 scenari random (frana, alluvione, sisma, AIB) con priorità diverse. Attenzione agli eventi sopravvenuti che cambiano la situazione.
 
 ## Come si gioca
 

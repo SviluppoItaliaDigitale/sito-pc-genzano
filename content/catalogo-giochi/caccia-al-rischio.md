@@ -37,7 +37,7 @@ sitemap:
 ## Come si gioca
 
 1. Guarda bene tutta la scena, non solo il centro.
-2. Clicca sul pericolo: leggi la spiegazione "perche conta per la PC".
+2. Clicca sul pericolo: leggi la spiegazione "perché conta per la PC".
 3. Spigoli, tappeti e mobili instabili in casa = problema durante un terremoto.
 4. Fornelli e candele accese = rischio incendio se va via la luce.
 5. Finestre aperte = pericolo con vento forte o temporali.

@@ -21,16 +21,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 { left: 'Chiamata al 112', right: 'Gratis, senza credito, da qualsiasi telefono' },
                 { left: '112 in Europa', right: 'Stesso numero in tutti i Paesi europei' },
                 { left: 'Cosa dire al 112', right: 'Cosa succede, dove sei, chi ha bisogno di aiuto' },
-                { left: 'Chiamata per scherzo', right: 'E un reato e toglie aiuto a chi ne ha davvero bisogno' }
+                { left: 'Chiamata per scherzo', right: 'È un reato e toglie aiuto a chi ne ha davvero bisogno' }
             ]
         },
         {
             title: 'Codici colore allerta', icon: '\uD83D\uDEA6',
             pairs: [
                 { left: '\uD83D\uDFE2 Verde', right: 'Nessuna allerta, tutto tranquillo' },
-                { left: '\uD83D\uDFE1 Giallo', right: 'Criticita ordinaria, presta attenzione' },
-                { left: '\uD83D\uDFE0 Arancione', right: 'Criticita moderata, fenomeni intensi' },
-                { left: '\uD83D\uDD34 Rosso', right: 'Criticita elevata, rischio alto' }
+                { left: '\uD83D\uDFE1 Giallo', right: 'Criticità ordinaria, presta attenzione' },
+                { left: '\uD83D\uDFE0 Arancione', right: 'Criticità moderata, fenomeni intensi' },
+                { left: '\uD83D\uDD34 Rosso', right: 'Criticità elevata, rischio alto' }
             ]
         },
         {
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { left: '\u26A0\uFE0F Giallo triangolo', right: 'Avvertimento: pericolo generico' },
                 { left: '\uD83D\uDEAB Rosso con sbarra', right: 'Divieto: vietato fumare, vietato entrare' },
                 { left: '\uD83D\uDD35 Blu rotondo', right: 'Prescrizione: obbligo di DPI (casco, guanti)' },
-                { left: '\uD83C\uDDE8 Cassetta rossa', right: 'Punto di primo soccorso' }
+                { left: '\uD83D\uDFE9 Cassetta verde con croce bianca', right: 'Punto di primo soccorso' }
             ]
         },
         {
@@ -105,8 +105,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 { left: 'IT-alert', right: 'SMS d\'emergenza dal Governo a tutti i cellulari nella zona' },
                 { left: 'Fonti ufficiali', right: 'Comune, DPC, Centro Funzionale Regionale' },
                 { left: 'Fake news', right: 'Notizia falsa: verifica prima di credere e di inoltrare' },
-                { left: 'Direttiva Mattarella 2008', right: 'Regole nazionali sulla comunicazione del rischio' },
-                { left: 'Bollettino di criticita', right: 'Documento ufficiale con il codice colore di allerta' },
+                { left: 'Centro Funzionale Regionale', right: 'Emette i bollettini di allerta con i codici colore' },
+                { left: 'Bollettino di criticità', right: 'Documento ufficiale con il codice colore di allerta' },
                 { left: 'Non amplificare', right: 'Non condividere il post falso, neanche per smentirlo' }
             ]
         }
@@ -144,7 +144,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const col = document.createElement('div');
             col.className = 'col-6 col-md-3';
             col.innerHTML = '<div class="cat-card" role="button" tabindex="0"><span class="cat-icon">' + cat.icon + '</span><span class="cat-title">' + cat.title + '</span></div>';
-            col.querySelector('.cat-card').addEventListener('click', () => startCategory(cat));
+            const catCard = col.querySelector('.cat-card');
+            catCard.addEventListener('click', () => startCategory(cat));
+            catCard.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); startCategory(cat); } });
             categoryList.appendChild(col);
         });
     }
@@ -172,7 +174,10 @@ document.addEventListener('DOMContentLoaded', () => {
             el.textContent = item.text;
             el.dataset.id = item.id;
             el.dataset.side = 'left';
+            el.setAttribute('role', 'button');
+            el.setAttribute('tabindex', '0');
             el.addEventListener('click', () => selectItem(el, 'left'));
+            el.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectItem(el, 'left'); } });
             leftCol.appendChild(el);
         });
 
@@ -182,7 +187,10 @@ document.addEventListener('DOMContentLoaded', () => {
             el.textContent = item.text;
             el.dataset.id = item.id;
             el.dataset.side = 'right';
+            el.setAttribute('role', 'button');
+            el.setAttribute('tabindex', '0');
             el.addEventListener('click', () => selectItem(el, 'right'));
+            el.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectItem(el, 'right'); } });
             rightCol.appendChild(el);
         });
     }

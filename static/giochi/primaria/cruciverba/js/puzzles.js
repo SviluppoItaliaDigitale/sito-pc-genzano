@@ -50,7 +50,7 @@ window.CRUCIVERBA_PUZZLES = {
     // ── F2: Comb "Numero unico 112" ───────────────────────────────
     {
       id: 'facile-2',
-      rows: 11, cols: 7,
+      rows: 9, cols: 8,
       title: 'Schema "Chiamare 112"',
       words: [
         { n: 1, dir: 'D', row: 0, col: 0, answer: 'EMERGENZA',
@@ -89,7 +89,7 @@ window.CRUCIVERBA_PUZZLES = {
     // ── F3: Comb "Codici colore allerta" ─────────────────────────
     {
       id: 'facile-3',
-      rows: 9, cols: 8,
+      rows: 7, cols: 9,
       title: 'Schema "Codici colore allerta"',
       words: [
         { n: 1, dir: 'D', row: 0, col: 0, answer: 'ALLERTA',
@@ -153,18 +153,18 @@ window.CRUCIVERBA_PUZZLES = {
         { n: 6, dir: 'D', row: 0, col: 5, answer: 'NUMERI',
           clue: 'Nel Lazio quello unico per le emergenze è il 112',
           explain: 'Il 112 (Numero Unico Europeo) è attivo nel Lazio dal 2017: smista a 113, 115 e 118 secondo il caso.' },
-        { n: 7, dir: 'D', row: 0, col: 6, answer: 'INCENDIO',
+        { n: 7, dir: 'D', row: 0, col: 6, answer: 'ZONA',
+          clue: 'Genzano è nella ___ sismica 2B',
+          explain: 'L\'Italia è divisa in zone sismiche da 1 (più pericolosa) a 4: Genzano è in zona 2B, sismicità media.' },
+        { n: 8, dir: 'D', row: 0, col: 7, answer: 'INCENDIO',
           clue: 'Fuoco fuori controllo, in casa o nei boschi',
           explain: 'In casa: chiama 112, esci, mai usare l\'ascensore, copri naso e bocca con un panno bagnato se c\'è fumo.' },
-        { n: 8, dir: 'D', row: 0, col: 7, answer: 'OPERA',
+        { n: 9, dir: 'D', row: 0, col: 8, answer: 'OPERA',
           clue: 'Lavoro fatto, opera d\'arte o spettacolo',
           explain: 'Sul nostro territorio: il santuario della Madonna del Cielo è un\'opera storica da tutelare anche in emergenza.' },
-        { n: 9, dir: 'D', row: 0, col: 8, answer: 'NORMA',
+        { n: 10, dir: 'D', row: 0, col: 9, answer: 'NORMA',
           clue: 'Regola scritta che tutti devono rispettare',
           explain: 'La PC è regolata da norme precise: D.Lgs. 1/2018 (Codice PC) e Direttiva PCM 30 aprile 2021.' },
-        { n: 10, dir: 'D', row: 0, col: 9, answer: 'ELMO',
-          clue: 'Casco antico, anche dei soldati',
-          explain: 'I caschi moderni dei volontari proteggono da oggetti fino a 5 chili che cadono dall\'alto.' },
         { n: 11, dir: 'D', row: 0, col: 10, answer: 'ESCAVA',
           clue: 'Macchina che scava nel terreno (verbo)',
           explain: 'Le ruspe sono mezzi di Protezione Civile per liberare strade dopo frane o allagamenti.' }
@@ -272,8 +272,8 @@ window.CRUCIVERBA_PUZZLES = {
           clue: 'Suono confuso: come le voci che girano sui social in emergenza',
           explain: 'Il "rumore informativo" è il primo nemico in emergenza: tante voci, poche verificate.' },
         { n: 6, dir: 'A', row: 5, col: 0, answer: 'MARCO',
-          clue: 'Nome italiano comune (e cognome del Presidente Mattarella, autore della Direttiva 2008)',
-          explain: 'La Direttiva Mattarella 2008 fissa le linee guida sulla comunicazione del rischio in emergenza.' },
+          clue: 'Piazza San ___ di Venezia, simbolo dell\'acqua alta',
+          explain: 'Piazza San Marco a Venezia si allaga con l\'acqua alta: dal 2020 il sistema MOSE protegge la laguna durante le maree più alte.' },
         { n: 7, dir: 'A', row: 6, col: 0, answer: 'AVVISO',
           clue: 'Messaggio breve di attenzione su un pericolo',
           explain: 'L\'avviso meteo del CFR Lazio è disponibile su sito Regione e via app gratuita "Allerta Lazio".' },
