@@ -27,7 +27,7 @@ Il caldo non è come un terremoto. Il caldo **si prevede**. Ogni giorno c'è un 
 
 **Caldo e Salute** è un'app gratuita per il telefono. L'app mostra il **livello di rischio caldo** per i giorni prossimi.
 
-I dati vengono dal Ministero della Salute. Il Ministero della Salute si occupa della salute in Italia. Un altro ente lavora i dati: il **DEP Lazio**. DEP Lazio vuol dire Dipartimento di Epidemiologia della Regione Lazio.
+I dati vengono dal Ministero della Salute. Il Ministero della Salute si occupa della salute in Italia. Un altro ente lavora i dati: il **DEP Lazio**. DEP Lazio vuol dire Dipartimento di Epidemiologia del Servizio Sanitario Regionale del Lazio. Lavora con la ASL Roma 1.
 
 Il bollettino copre **27 città italiane**. Roma è tra queste città.
 
