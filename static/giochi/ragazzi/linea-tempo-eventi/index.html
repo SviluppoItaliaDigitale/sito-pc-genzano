@@ -220,6 +220,8 @@
       c.addEventListener('keydown', function(e){
         if (e.key !== 'Enter' && e.key !== ' ') return;
         e.preventDefault();
+        // Se la tessera e' gia' in uno slot, Enter/Spazio la riporta al pool
+        if (c.classList.contains('in-slot')) { riportaAlPool(c); c.focus(); return; }
         var slots = timeline.querySelectorAll('.timeline-slot:not(.filled)');
         if (slots.length === 0) return;
         collocaInSlot(c, slots[0]);

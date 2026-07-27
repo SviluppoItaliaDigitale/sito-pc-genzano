@@ -303,12 +303,12 @@
     'puzzle-scenari': {
       fascia: 'primaria',
       titolo: 'Consigli per Puzzle Scenari',
-      regola: 'Ricostruisci la scena per capire come si gestisce un\'emergenza.',
+      regola: 'Rimetti in ordine i passi di ogni scenario di emergenza: prima la sicurezza, poi le azioni, alla fine la verifica.',
       come: [
-        'Guarda i pezzi prima di muoverli.',
-        'Inizia dagli angoli e dai bordi.',
-        'I colori e le forme aiutano a unire i pezzi.',
-        'Quando finisci, leggi cosa rappresenta la scena.'
+        'Leggi tutti i passi prima di iniziare a ordinarli.',
+        'Chiediti: qual e\' la prima cosa per la sicurezza? Quella va in cima.',
+        'Usa le frecce su e giu\' per spostare i passi.',
+        'Alla fine controlla quali sequenze hai messo nell\'ordine giusto.'
       ],
       teoria: [
         { titolo: 'Rischi e prevenzione', url: '/rischi-prevenzione/' }
@@ -437,7 +437,7 @@
         'Versanti collinari del cratere: rischio frana e dissesto idrogeologico.',
         'Centro storico di Genzano: edifici antichi, sismico amplificato, vie di fuga strette.',
         'Caserme VVF e PMA: lungo strade primarie per accesso rapido dei mezzi.',
-        'Distrattori (porto, centrale nucleare, metro): non si applicano a Genzano. Riconoscili.'
+        'Distrattori (porto, centrale nucleare, metro): non si applicano a Genzano. Mettili in "Non nel piano".'
       ],
       teoria: [
         { titolo: 'Rischi e prevenzione', url: '/rischi-prevenzione/' },

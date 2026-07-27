@@ -101,7 +101,7 @@
           <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
             <div>
               <span class="rag-badge arancio"><i class="bi bi-exclamation-triangle-fill me-1"></i> ALLERTA ARANCIONE</span>
-              <span class="ms-2 small text-muted">Evento <strong id="ev-n">1</strong> di <strong id="ev-tot">10</strong> &middot; Ore <span id="ore">07:30</span></span>
+              <span class="ms-2 small text-muted">Evento <strong id="ev-n">1</strong> di <strong id="ev-tot">8</strong> &middot; Ore <span id="ore">07:30</span></span>
             </div>
             <div class="small">
               Corrette: <strong id="corrette" class="text-success">0</strong> &middot; Errate: <strong id="errate" class="text-danger">0</strong>
@@ -136,7 +136,7 @@
       <div id="end" class="rag-panel hide text-center">
         <div class="display-4 text-primary mb-2"><i class="bi bi-diagram-3-fill"></i></div>
         <h2>Turno concluso</h2>
-        <p class="lead">Risultato: <strong><span id="final-score">0</span></strong> su <strong><span id="final-max">10</span></strong> eventi gestiti correttamente.</p>
+        <p class="lead">Risultato: <strong><span id="final-score">0</span></strong> su <strong><span id="final-max">8</span></strong> eventi gestiti correttamente.</p>
         <p id="final-msg" class="text-muted"></p>
         <div class="attestato-inject my-3"></div>
         <div class="d-flex flex-wrap justify-content-center gap-2">
@@ -176,7 +176,13 @@
       { ora: '11:00', testo: 'La radio del volontario in ricognizione si scollega per un guasto. Bisogna ripristinare le comunicazioni.', corretta: 8, spiega: 'F8 gestisce le telecomunicazioni.' },
       { ora: '11:30', testo: 'Smottamento in via delle Sorgenti: possibili danni a due abitazioni. Serve rilievo tecnico.', corretta: 6, spiega: 'F6 gestisce il censimento danni e schede AeDES.' },
       { ora: '12:00', testo: 'Quattro famiglie chiedono accoglienza: palazzetto comunale attivato, servono pasti e brande.', corretta: 9, spiega: 'F9 gestisce assistenza alla popolazione e aree accoglienza.' },
-      { ora: '13:15', testo: 'Il Sindaco chiede l\'aggiornamento ufficiale con mappa dei presidi attivi per il briefing in Regione.', corretta: 1, spiega: 'F1 produce la cartografia e i quadri di sintesi.' }
+      { ora: '13:15', testo: 'Il Sindaco chiede l\'aggiornamento ufficiale con mappa dei presidi attivi per il briefing in Regione.', corretta: 1, spiega: 'F1 produce la cartografia e i quadri di sintesi.' },
+      { ora: '08:25', testo: 'Arrivano 40 brandine e coperte dal magazzino regionale: vanno scaricate e stoccate in attesa dell\'allestimento.', corretta: 4, spiega: 'F4 gestisce materiali e mezzi: ricezione, stoccaggio e distribuzione delle risorse.' },
+      { ora: '09:05', testo: 'La Polizia Locale chiede supporto per la chiusura di un tratto di strada allagato vicino al mercato.', corretta: 7, spiega: 'F7 coordina strutture operative e viabilità con Forze dell\'Ordine e Polizia Locale.' },
+      { ora: '10:05', testo: 'Una residente segnala che il padre, in ossigenoterapia domiciliare, è rimasto senza corrente: serve una soluzione sanitaria urgente.', corretta: 2, spiega: 'F2 gestisce sanità e assistenza sociale: i pazienti fragili hanno priorità.' },
+      { ora: '12:30', testo: 'Il gestore idrico comunica un guasto all\'acquedotto in zona alta: serve coordinare il servizio sostitutivo con autobotte.', corretta: 5, spiega: 'F5 coordina i servizi essenziali (acqua, luce, gas, telefono).' },
+      { ora: '13:40', testo: 'Le famiglie evacuate chiedono quando potranno rientrare nelle case: servono le verifiche di agibilità.', corretta: 6, spiega: 'F6 gestisce il censimento danni e le verifiche di agibilità (schede AeDES).' },
+      { ora: '14:00', testo: 'Altri 8 volontari di un\'associazione convenzionata si presentano al COC: vanno registrati e assegnati ai presidi.', corretta: 3, spiega: 'F3 coordina il volontariato: registrazione, turni e assegnazione dei compiti.' }
     ];
 
     var intro = document.getElementById('intro'),
