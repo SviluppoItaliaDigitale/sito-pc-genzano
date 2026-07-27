@@ -40,7 +40,7 @@ I boschi dei Castelli Romani sono un patrimonio naturale importante. Stagioni pi
 
 ### Ondate di calore
 
-I centri abitati, con il cemento e l'asfalto, trattengono il calore più delle aree verdi. Gli anziani e le persone fragili sono i più esposti. Durante le ondate di calore il Ministero della Salute pubblica un [bollettino quotidiano per 27 città italiane](https://www.salute.gov.it/portale/caldo/homeCaldo.jsp), con indicazioni per le fasce vulnerabili.
+I centri abitati, con il cemento e l'asfalto, trattengono il calore più delle aree verdi. Gli anziani e le persone fragili sono i più esposti. Durante le ondate di calore il Ministero della Salute pubblica un [bollettino quotidiano per 27 città italiane](https://www.salute.gov.it/new/it/tema/ondate-di-calore), con indicazioni per le fasce vulnerabili.
 
 ### Siccità e risorse idriche
 
@@ -88,6 +88,6 @@ Fonti istituzionali:
 - [Copernicus Climate Change Service](https://climate.copernicus.eu/).
 - [ISPRA — Clima e cambiamenti climatici](https://www.isprambiente.gov.it/it/attivita/clima).
 - [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).
-- [Ministero della Salute — Caldo e salute](https://www.salute.gov.it/portale/caldo/homeCaldo.jsp).
+- [Ministero della Salute — Caldo e salute](https://www.salute.gov.it/new/it/tema/ondate-di-calore).
 - [CMCC — Centro euro-Mediterraneo cambiamenti climatici](https://www.cmcc.it/).
 - [IPCC — Intergovernmental Panel on Climate Change](https://www.ipcc.ch/).

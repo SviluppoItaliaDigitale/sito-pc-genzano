@@ -94,7 +94,7 @@ Il **Bosco delle Querce**, parco naturale piantato proprio sopra l'area di massi
 ## Per approfondire (fonti istituzionali)
 
 - [ISPRA — Inventario degli stabilimenti a rischio di incidente rilevante](https://www.isprambiente.gov.it/it/attivita/controlli-e-ispezioni-ambientali/rir-rischio-di-incidente-rilevante)
-- [Dipartimento di Protezione Civile — Rischio industriale](https://www.protezionecivile.gov.it/it/rischio/rischio-industriale/)
+- [Dipartimento di Protezione Civile — Rischio industriale](https://rischi.protezionecivile.gov.it/it/industriale/)
 - [D.Lgs. 26 giugno 2015, n. 105 — Normattiva](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2015-06-26;105)
 - [Direttiva 2012/18/UE (Seveso III) — EUR-Lex](https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32012L0018)
 - [Bosco delle Querce — sito ufficiale](https://www.parcobosco.it/)

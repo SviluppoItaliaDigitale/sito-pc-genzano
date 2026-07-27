@@ -102,4 +102,4 @@ Durante la campagna estiva il nostro Gruppo opera nella **Zona AIB 9 — Castell
 
 **Fonti istituzionali:**
 
-- [Dipartimento della Protezione Civile — Rischio incendi boschivi](https://www.protezionecivile.gov.it/it/rischio/rischio-incendi-boschivi/)
+- [Dipartimento della Protezione Civile — Rischio incendi boschivi](https://rischi.protezionecivile.gov.it/it/incendi-boschivi-0/)

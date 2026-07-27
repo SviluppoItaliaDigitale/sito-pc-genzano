@@ -116,7 +116,7 @@ Per i comportamenti completi vedi la pagina dedicata: [Rischio Sismico — cosa 
 - [CNR-IGAG](https://www.igag.cnr.it/) — Istituto di Geologia Ambientale e Geoingegneria
 - [ISPRA — IdroGEO](https://idrogeo.isprambiente.it/) — mappa nazionale di pericolosità geologica
 - [ARPA Lazio](https://www.arpalazio.it/) — qualità dell'aria e monitoraggio ambientale regionale
-- [Dipartimento di Protezione Civile — Rischio vulcanico](https://www.protezionecivile.gov.it/it/rischio/rischio-vulcanico/) — quadro nazionale dei vulcani italiani
+- [Dipartimento di Protezione Civile — Rischio vulcanico](https://rischi.protezionecivile.gov.it/it/vulcanico/) — quadro nazionale dei vulcani italiani
 
 **Approfondimenti video**
 

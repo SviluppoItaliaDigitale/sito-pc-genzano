@@ -84,7 +84,7 @@ Vermicino, oggi, è una località di **Frascati** a pochi chilometri da Genzano.
 
 I Comuni dei Castelli Romani hanno svolto negli ultimi vent'anni un **lavoro sistematico di censimento e messa in sicurezza** dei pozzi abbandonati e dei vecchi cantieri. Il Comune di Genzano, nel proprio **Piano di Emergenza Comunale**, identifica i siti di rischio e prevede interventi di vigilanza ordinaria.
 
-Se conosci un pozzo aperto, una cisterna non chiusa, un cantiere non recintato sul nostro territorio, segnalalo al Comune ([protocollo@comune.genzanodiroma.rm.it](mailto:protocollo@comune.genzanodiroma.rm.it)) o alla **Polizia Locale**. Una segnalazione preventiva può salvare una vita.
+Se conosci un pozzo aperto, una cisterna non chiusa, un cantiere non recintato sul nostro territorio, segnalalo al Comune ([urp@comune.genzanodiroma.roma.it](mailto:urp@comune.genzanodiroma.roma.it)) o alla **Polizia Locale**. Una segnalazione preventiva può salvare una vita.
 
 ## In ricordo
 

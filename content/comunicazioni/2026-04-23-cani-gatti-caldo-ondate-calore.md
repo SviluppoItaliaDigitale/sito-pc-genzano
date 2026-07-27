@@ -108,6 +108,6 @@ Sul nostro sito:
 Fonti istituzionali:
 
 - [Ministero della Salute — Come proteggere dal caldo cani e gatti](https://www.salute.gov.it/new/it/tema/ondate-di-calore/come-proteggere-dal-caldo-cani-e-gatti/) (aggiornamento 21 maggio 2025).
-- [Ministero della Salute — Caldo e salute](https://www.salute.gov.it/portale/caldo/homeCaldo.jsp).
+- [Ministero della Salute — Caldo e salute](https://www.salute.gov.it/new/it/tema/ondate-di-calore).
 - [LAV — Lega Anti Vivisezione](https://www.lav.it/).
 - [ENPA — Ente Nazionale Protezione Animali](https://www.enpa.it/).

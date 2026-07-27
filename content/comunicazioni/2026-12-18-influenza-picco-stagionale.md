@@ -238,7 +238,7 @@ Sul nostro sito:
 
 Fonti istituzionali:
 
-- [Ministero della Salute — Influenza](https://www.salute.gov.it/portale/influenza/homeInfluenza.jsp).
+- [Ministero della Salute — Influenza](https://www.salute.gov.it/new/it/tema/influenza).
 - [Istituto Superiore di Sanità — InfluNet](https://www.iss.it/).
 - [WHO — Influenza](https://www.who.int/health-topics/influenza-seasonal).
 - [ASL Roma 6](https://www.aslroma6.it/).

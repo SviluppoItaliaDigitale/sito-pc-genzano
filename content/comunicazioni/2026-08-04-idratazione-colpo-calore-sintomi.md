@@ -80,7 +80,7 @@ I datori di lavoro devono rispettare il **D.Lgs. 81/2008** (Testo Unico sulla si
 
 ## Per approfondire
 
-- [Ministero della Salute — Caldo](https://www.salute.gov.it/portale/caldo/)
+- [Ministero della Salute — Caldo](https://www.salute.gov.it/new/it/tema/ondate-di-calore)
 - [ISS — Caldo e salute](https://www.iss.it/)
 - [Agosto mese critico](/comunicazioni/2026-08-01-agosto-mese-critico-pc-preparazione/)
 

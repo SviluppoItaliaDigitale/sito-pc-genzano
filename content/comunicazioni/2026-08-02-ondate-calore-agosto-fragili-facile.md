@@ -56,7 +56,7 @@ Alcune persone rischiano di più con il caldo:
 
 ## Il bollettino del caldo
 
-Ogni giorno il Ministero della Salute pubblica un [bollettino sul caldo](https://www.salute.gov.it/portale/caldo/). Puoi leggere le previsioni per Roma. A Genzano fa 2-3 gradi in meno rispetto a Roma, ma il rischio è lo stesso.
+Ogni giorno il Ministero della Salute pubblica un [bollettino sul caldo](https://www.salute.gov.it/new/it/tema/ondate-di-calore). Puoi leggere le previsioni per Roma. A Genzano fa 2-3 gradi in meno rispetto a Roma, ma il rischio è lo stesso.
 
 ## Aiuta il tuo vicino
 
