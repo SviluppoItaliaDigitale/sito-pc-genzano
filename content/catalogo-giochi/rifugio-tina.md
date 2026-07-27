@@ -1,6 +1,6 @@
 ---
 title: "Gioco: Il Rifugio di Tina"
-description: "Scheda del gioco Il Rifugio di Tina (3-6 anni): in emergenza Tina cerca un riparo sicuro: aiutala!."
+description: "Scheda del gioco Il Rifugio di Tina (3-6 anni): in emergenza Tina cerca un riparo sicuro: aiutala!"
 image: ""
 image_alt: ""
 date: 2026-05-28

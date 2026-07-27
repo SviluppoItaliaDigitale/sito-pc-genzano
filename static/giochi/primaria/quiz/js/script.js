@@ -849,14 +849,14 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             category: 'terremoto',
-            question: 'Cos’è il "triangolo della vita" che insegnano a scuola?',
+            question: 'Il "triangolo della vita" che gira su internet dice di NON ripararsi sotto il tavolo. Cosa raccomanda davvero la Protezione Civile?',
             answers: [
-                { text: 'Un gioco di società', correct: false },
-                { text: 'Lo spazio di riparo tra un mobile robusto e il pavimento', correct: true },
-                { text: 'Una figura geometrica in matematica', correct: false },
-                { text: 'Un simbolo sulla pagella', correct: false }
+                { text: 'Sdraiarsi accanto ai mobili invece che sotto il tavolo', correct: false },
+                { text: 'Ripararsi sotto un tavolo robusto o vicino a un muro portante', correct: true },
+                { text: 'Correre subito fuori durante la scossa', correct: false },
+                { text: 'Mettersi vicino alle finestre per uscire prima', correct: false }
             ],
-            explanation: 'In caso di crollo, accanto a un mobile robusto si forma uno spazio che può proteggerti. Vicino a un muro portante o sotto un tavolo robusto sei più al sicuro.'
+            explanation: 'Il "triangolo della vita" è una teoria screditata, non una regola di sicurezza. Le indicazioni ufficiali dicono: durante la scossa riparati sotto un tavolo robusto o vicino a un muro portante, lontano da finestre e mobili che possono cadere.'
         },
         {
             category: 'incendio',

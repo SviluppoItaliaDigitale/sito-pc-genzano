@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { w: 'TERREMOTO', cat: 'Rischio sismico', hint: 'La terra trema',
         explain: 'I Castelli Romani sono in zona sismica 2B (sismicità media). L\'INGV monitora 24/7 con sismografi.' },
       { w: 'INCENDIO', cat: 'Rischio AIB', hint: 'Fuoco fuori controllo nei boschi o in casa',
-        explain: 'Per gli incendi boschivi (AIB) chiama il 112: la centrale smista al 1515 (CFS) e all\'AIB regionale.' },
+        explain: 'Per gli incendi boschivi (AIB) chiama il 112: la centrale attiva i Vigili del Fuoco e le squadre AIB regionali.' },
       { w: 'ALLUVIONE', cat: 'Rischio idrogeologico', hint: 'Acqua che invade strade ed edifici',
         explain: 'In alluvione: sali ai piani alti, mai negli scantinati. Mai attraversare sottopassi allagati in macchina.' },
       { w: 'SICUREZZA', cat: 'Obiettivo PC', hint: 'Stare lontani dai pericoli',
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { w: 'IDROGEOLOGICO', cat: 'Rischio', hint: 'Acqua + terreno che frana',
         explain: 'Il rischio idrogeologico (frane + alluvioni) è il più diffuso in Italia. CNR-IRPI lo monitora con database storici dal 1900.' },
       { w: 'COMUNICAZIONE', cat: 'Informazione', hint: 'Avvisare e coordinare in emergenza',
-        explain: 'La comunicazione del rischio segue la Direttiva Mattarella 2008 e la Direttiva PCM 30/4/2021. Solo fonti ufficiali.' },
+        explain: 'In emergenza la comunicazione usa solo fonti ufficiali: Comune, Centro Funzionale Regionale, Dipartimento della Protezione Civile.' },
       { w: 'TEMPORALE', cat: 'Fenomeno meteo', hint: 'Tuoni, fulmini e pioggia intensa',
         explain: 'In temporale: dentro casa, lontano da finestre, doccia, oggetti elettrici. Niente telefono fisso.' },
       { w: 'BOSCHIVO', cat: 'Rischio AIB', hint: 'Incendio che colpisce i boschi',
@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { w: 'AUTOMEZZO', cat: 'Mezzo operativo', hint: 'Veicolo dei volontari',
         explain: 'Il Gruppo Comunale di Genzano ha automezzi 4x4 attrezzati per AIB e logistica, con marchio "Protezione Civile".' },
       { w: 'CARTOGRAFIA', cat: 'Mappe del territorio', hint: 'Disegno scientifico del territorio',
-        explain: 'La cartografia di rischio dei Castelli Romani è disponibile sulla Sit-IT del CNR-IRPI: livelli di pericolo per ogni sotto-area.' },
+        explain: 'La cartografia dei rischi è consultabile sulla piattaforma IdroGEO di ISPRA e sul Geoportale della Regione Lazio.' },
       { w: 'SICUREZZA SCOLASTICA', cat: 'Piano d\'emergenza', hint: 'Regole per evacuare le scuole',
         explain: 'Il Piano di Emergenza Scolastico è obbligatorio per ogni istituto: 2 prove di evacuazione l\'anno + addestramento docenti.' },
       { w: 'SISMOGRAFO', cat: 'Strumento scientifico', hint: 'Registra i movimenti della terra',
@@ -156,8 +156,8 @@ document.addEventListener('DOMContentLoaded', () => {
         explain: 'In Italia la fonte ufficiale meteo per la PC è il Centro Funzionale Regionale (CFR) di ogni Regione, integrato con Aeronautica.' },
       { w: 'IT ALERT', cat: 'Allarme pubblico', hint: 'Sistema italiano di SMS d\'emergenza dal Governo',
         explain: 'IT-alert è operativo dal 2024: invia un messaggio cell broadcast a tutti i cellulari nell\'area di pericolo, anche stranieri.' },
-      { w: 'DIRETTIVA MATTARELLA', cat: 'Norma 2008', hint: 'Linee guida sulla comunicazione del rischio',
-        explain: 'La Direttiva PCM del 2008 (firmata da Mattarella allora Vicepresidente del Consiglio) fissa gli indirizzi nazionali sulla comunicazione del rischio in emergenza.' }
+      { w: 'ALLERTAMENTO', cat: 'Sistema di allerta', hint: 'Il sistema che avvisa prima che arrivi il pericolo',
+        explain: 'Il sistema di allertamento nazionale segue la Direttiva PCM 27/02/2004: i Centri Funzionali emettono i bollettini con i codici colore.' }
     ]
   };
 

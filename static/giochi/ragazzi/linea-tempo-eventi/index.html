@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Linea del Tempo — Giochi Ragazzi</title>
-  <meta name="description" content="Ordina cronologicamente otto grandi eventi della protezione civile italiana: dal Vajont 1963 al Centro Italia 2016. Gioco didattico di memoria storica.">
+  <meta name="description" content="Ordina cronologicamente otto grandi eventi della protezione civile italiana: dal Vajont 1963 a IT-alert 2024. Gioco didattico di memoria storica.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
@@ -99,7 +99,7 @@
 
       <section id="intro" class="intro-card">
         <h2 class="h4 mb-3">La memoria serve alla prevenzione</h2>
-        <p>La storia italiana è segnata da disastri-evento che, pezzo dopo pezzo, hanno costruito il sistema nazionale di Protezione Civile: dal <strong>Vajont 1963</strong> al sistema <strong>IT-alert 2024</strong>. Ogni grande catastrofe ha portato a una norma o a una riforma: Sarno → PAI, L'Aquila → direttiva Mattarella, Centro Italia → consolidamento COC.</p>
+        <p>La storia italiana è segnata da disastri-evento che, pezzo dopo pezzo, hanno costruito il sistema nazionale di Protezione Civile: dal <strong>Vajont 1963</strong> al sistema <strong>IT-alert 2024</strong>. Ogni grande catastrofe ha portato a una norma o a una riforma: Sarno → PAI, L'Aquila → riforma della comunicazione del rischio, Centro Italia → consolidamento COC.</p>
         <p class="small text-muted"><i class="bi bi-mouse me-1"></i>Trascina le <strong>8 tessere evento</strong> nella striscia temporale, dal più antico al più recente. Quando tutte sono collocate, premi "Verifica".</p>
         <p class="small"><i class="bi bi-shuffle me-1"></i> <strong>Pool di 16 eventi</strong>: ad ogni partita ne pesca 8 random, la sequenza è diversa ogni volta.</p>
         <div class="d-flex flex-wrap gap-2">
@@ -153,22 +153,22 @@
        sistema IT-alert 2024. Include disastri-evento E norme che ne sono
        conseguenza: il giocatore vede il legame causa-effetto tra eventi e
        legislazione (spinta del Vajont -> riforme dighe; Sarno -> PAI; L'Aquila
-       -> direttiva Mattarella; Centro Italia -> consolidamento COC). */
+       -> riforma comunicazione del rischio; Centro Italia -> consolidamento COC). */
     var POOL_EVENTI = [
       { id:'vajont', anno:1963, titolo:'Disastro del Vajont', dett:'Frana nel bacino: 1910 vittime. Spinge la legislazione su sicurezza dighe e bacini.' },
       { id:'friuli', anno:1976, titolo:'Terremoto del Friuli', dett:'Magnitudo 6.5, 990 vittime. Nasce la "modalita\' Friuli" di ricostruzione decentrata.' },
       { id:'irpinia', anno:1980, titolo:'Terremoto Irpinia', dett:'Magnitudo 6.9, 2914 vittime. Spinta decisiva alla creazione del Dipartimento PC.' },
       { id:'dpc', anno:1982, titolo:'Nasce il DPC', dett:'Decreto Zamberletti: Ministro per il Coordinamento della Protezione Civile.' },
       { id:'seveso', anno:1982, titolo:'Direttiva Seveso CEE', dett:'Quadro europeo per il rischio industriale dopo l\'incidente di Seveso (1976).' },
-      { id:'legge225', anno:1992, titolo:'Legge 225/1992', dett:'Istituisce il Servizio Nazionale della Protezione Civile (architettura ancora vigente).' },
+      { id:'legge225', anno:1992, titolo:'Legge 225/1992', dett:'Istituisce il Servizio Nazionale della Protezione Civile (poi sostituita dal Codice PC del 2018).' },
       { id:'sarno', anno:1998, titolo:'Frana di Sarno', dett:'161 vittime. Conduce alla Legge 267/1998 e ai Piani di Assetto Idrogeologico (PAI).' },
-      { id:'mattarella', anno:2008, titolo:'Direttiva Mattarella', dett:'Indirizzi nazionali su comunicazione del rischio in emergenza.' },
+      { id:'direttiva2008', anno:2008, titolo:'Direttiva PCM 3/12/2008', dett:'Indirizzi operativi per la gestione delle emergenze: definisce il modello di coordinamento nazionale.' },
       { id:'laquila', anno:2009, titolo:'Terremoto de L\'Aquila', dett:'Magnitudo 6.3, 309 vittime. Caso "Commissione Grandi Rischi": riforma comunicazione del rischio.' },
       { id:'centroitalia', anno:2016, titolo:'Sisma Centro Italia', dett:'Amatrice, Norcia, Arquata: sequenza prolungata. Consolida il sistema COC/COM.' },
       { id:'codice', anno:2018, titolo:'Codice PC (D.Lgs 1/2018)', dett:'Riforma organica del Servizio Nazionale: razionalizza componenti e strutture operative.' },
       { id:'morandi', anno:2018, titolo:'Crollo Ponte Morandi', dett:'Genova, 43 vittime. Spinta a riforma manutenzione infrastrutture e norme di vigilanza.' },
-      { id:'vaia', anno:2018, titolo:'Tempesta Vaia', dett:'Vento estremo nel Triveneto: 8,5 milioni di alberi caduti, 14 vittime. Caso simbolo del clima estremo.' },
-      { id:'direttiva-pcm', anno:2021, titolo:'Direttiva PCM 30/4/2021', dett:'Linee guida sulla comunicazione del rischio e dell\'emergenza per il sistema PC.' },
+      { id:'vaia', anno:2018, titolo:'Tempesta Vaia', dett:'Vento estremo nel Triveneto: 8,5 milioni di metri cubi di alberi abbattuti, 14 vittime. Caso simbolo del clima estremo.' },
+      { id:'direttiva-pcm', anno:2021, titolo:'Direttiva PCM 30/4/2021', dett:'Indirizzi per la predisposizione dei piani di protezione civile ai diversi livelli territoriali.' },
       { id:'emilia', anno:2023, titolo:'Alluvione Emilia-Romagna', dett:'17 vittime, 23 fiumi esondati. Riforma protezione territoriale e gestione invasi.' },
       { id:'italert', anno:2024, titolo:'IT-alert operativo', dett:'Avvio del sistema nazionale di allarme pubblico via cell broadcast (segue sperimentazione 2023).' }
     ];
@@ -310,8 +310,9 @@
         if (oldReveal) oldReveal.remove();
         var rev = document.createElement('div');
         rev.className = 'evento-anno-reveal mt-1';
-        if (id === corretto.id){ score++; s.classList.add('correct'); rev.textContent = 'Anno: ' + corretto.anno + ' — Giusto!'; }
-        else { s.classList.add('wrong'); var tuo = EVENTI.filter(function(e){return e.id === id;})[0]; rev.textContent = 'Era: ' + tuo.anno + ' — Qui andava: ' + corretto.titolo + ' (' + corretto.anno + ')'; }
+        var tuo = EVENTI.filter(function(e){return e.id === id;})[0];
+        if (id === corretto.id || (tuo && tuo.anno === corretto.anno)){ score++; s.classList.add('correct'); rev.textContent = 'Anno: ' + tuo.anno + ' — Giusto!'; }
+        else { s.classList.add('wrong'); rev.textContent = 'Era: ' + tuo.anno + ' — Qui andava: ' + corretto.titolo + ' (' + corretto.anno + ')'; }
         card.appendChild(rev);
       });
       if (window.GameCoach) {

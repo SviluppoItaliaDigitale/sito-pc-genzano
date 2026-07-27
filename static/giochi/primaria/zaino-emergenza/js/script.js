@@ -93,9 +93,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const card = document.createElement('div');
             card.className = 'item-card';
             card.setAttribute('role', 'button');
+            card.setAttribute('tabindex', '0');
             card.setAttribute('aria-label', item.name);
             card.innerHTML = '<span class="item-icon">' + item.icon + '</span><span class="item-name">' + item.name + '</span>';
             card.addEventListener('click', () => pickItem(card, item));
+            card.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pickItem(card, item); } });
             itemsGrid.appendChild(card);
         });
     }

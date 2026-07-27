@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Scelte Difficili — Giochi Ragazzi</title>
-  <meta name="description" content="3 scenari di emergenza con scelte multiple. Le tue decisioni cambiano la storia. Per ragazzi 11-14 anni: terremoto a scuola, alluvione di notte, incendio nel bosco.">
+  <meta name="description" content="5 scenari di emergenza con scelte multiple. Le tue decisioni cambiano la storia. Per ragazzi 11-14 anni: dal terremoto a scuola al blackout esteso.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
@@ -98,7 +98,7 @@
           </ol>
         </nav>
         <h1>Scelte Difficili</h1>
-        <p class="lead">3 scenari di emergenza, le tue decisioni decidono come finisce. Cosa faresti tu?</p>
+        <p class="lead">5 scenari di emergenza, le tue decisioni decidono come finisce. Cosa faresti tu?</p>
       </div>
     </div>
 
@@ -106,7 +106,7 @@
 
       <section id="intro" class="intro-card">
         <h2 class="h4 mb-3">Come si gioca</h2>
-        <p>Sei al centro di un'emergenza. Ti vengono presentati <strong>3 scenari</strong> (terremoto a scuola, alluvione di notte, incendio nel bosco). In ciascuno fai <strong>3-4 scelte</strong> con conseguenze diverse. Alcune scelte salvano vite, altre le mettono a rischio: i punti riflettono la qualità delle tue decisioni.</p>
+        <p>Sei al centro di un'emergenza. Ti vengono presentati <strong>5 scenari</strong> (terremoto a scuola, alluvione di notte, sciame sismico ai Castelli, blackout esteso, incendio nel bosco). In ciascuno fai <strong>3-4 scelte</strong> con conseguenze diverse. Alcune scelte salvano vite, altre le mettono a rischio: i punti riflettono la qualità delle tue decisioni.</p>
         <p class="text-muted small">Non c'è una risposta sempre "giusta": le emergenze reali sono incerte. L'obiettivo è imparare il <strong>ragionamento</strong> giusto in situazioni di pressione.</p>
         <div class="d-flex flex-wrap gap-2">
           <button id="start-btn" class="btn btn-primary btn-lg"><i class="bi bi-play-fill me-1"></i> Inizia</button>
@@ -124,16 +124,16 @@
           <div class="scenario-meta"><span class="titolo-mini" id="scena-titolo">—</span></div>
           <div class="scenario-testo" id="scena-testo">—</div>
           <div class="azioni" id="azioni"></div>
-          <div class="esito-box hide" id="esito"></div>
+          <div class="esito-box hide" id="esito-scelta" aria-live="polite"></div>
           <div class="d-flex justify-content-end mt-3 hide" id="next-row">
             <button id="next-btn" class="btn btn-primary"><span id="next-label">Continua</span> <i class="bi bi-arrow-right ms-1"></i></button>
           </div>
         </div>
       </section>
 
-      <section id="results" class="hide">
+      <section id="results-screen" class="hide">
         <div class="intro-card">
-          <h2 class="h4 mb-3">Hai finito i 3 scenari!</h2>
+          <h2 class="h4 mb-3">Hai finito i 5 scenari!</h2>
           <div class="stat-row">
             <div class="stat-box"><div class="num" id="punti-fin">0</div><div class="lbl">Punti totali / max <span id="punti-max">30</span></div></div>
             <div class="stat-box"><div class="num" id="livello">—</div><div class="lbl">Valutazione</div></div>
@@ -244,7 +244,7 @@
             testo: 'Dopo 48h le repliche si sono ridotte. Sui social girano video di "tecnici amatoriali" che dicono "sta arrivando il Big One a Roma!". Tu sei al COC come supporto. Cosa fai?',
             scelte: [
               { txt: 'Rilancio i video con un commento "verifichiamo" per correttezza', pt: 0, esito: 'sbagliato', fb: 'GRAVE. Hai amplificato la fake news. La regola del DPC è <strong>"non amplificare", mai citare il post falso</strong>. Risposta solo con fonte ufficiale, senza riferimento all\'originale.' },
-              { txt: 'Mi limito a indicare le fonti ufficiali (INGV, DPC) sui canali del Comune e ignoro i video', pt: 3, esito: 'ottimo', fb: 'PERFETTO. La PC <strong>contrasta le fake news producendo informazione verificata</strong>, non rispondendo direttamente alle bufale. Direttiva Mattarella 2008.' },
+              { txt: 'Mi limito a indicare le fonti ufficiali (INGV, DPC) sui canali del Comune e ignoro i video', pt: 3, esito: 'ottimo', fb: 'PERFETTO. La PC <strong>contrasta le fake news producendo informazione verificata</strong>, non rispondendo direttamente alle bufale.' },
               { txt: 'Contesto i video commentando uno per uno', pt: 0, esito: 'sbagliato', fb: 'CONTROPRODUCENTE. Discutere amplifica. Ogni commento moltiplica la visibilità del post falso. Mai entrare nella conversazione.' }
             ]
           }
@@ -274,7 +274,7 @@
             scelte: [
               { txt: 'Resto a casa: i miei genitori non sanno dove sono', pt: 0, esito: 'sbagliato', fb: 'INSUFFICIENTE. Non hai modo di comunicare e fa freddo. <strong>Vai al palazzetto</strong> con tuo fratello: là chiamerai i genitori e starai al caldo.' },
               { txt: 'Andiamo al palazzetto, lasciando un biglietto e con la coperta termica', pt: 3, esito: 'ottimo', fb: 'PERFETTO. <strong>Comunicare al Comune</strong> dov\'è la famiglia è esattamente perché esistono le aree di accoglienza. Il biglietto a casa permette ai genitori di trovarti.' },
-              { txt: 'Provo da solo a riavviare il quadro elettrico in cantina', pt: 0, esito: 'sbagliato', fb: 'PERICOLOSISSIMO. Mai toccare il quadro elettrico in blackout: potrebbe esserci tensione di ritorno. <strong>Solo il tecnico Acea</strong> ripristina la rete.' }
+              { txt: 'Provo da solo a riavviare il quadro elettrico in cantina', pt: 0, esito: 'sbagliato', fb: 'PERICOLOSISSIMO. Mai toccare il quadro elettrico in blackout: potrebbe esserci tensione di ritorno. <strong>Solo i tecnici del gestore elettrico</strong> ripristinano la rete.' }
             ]
           }
         ]
@@ -312,9 +312,9 @@
 
     // Shuffle helper
     function shuffleArr(a){ for (let i = a.length - 1; i > 0; i--){ const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
-    // Pool 5 scenari originali + 2 nuovi (sciame sismico, blackout). A inizio
-    // partita ne pesca 5 random e ne shuffla l'ordine: il giocatore non puo'
-    // memorizzare la sequenza dopo 1 partita.
+    // Pool di 5 scenari (3 originali + sciame sismico + blackout). A inizio
+    // partita l'ordine viene mescolato: il giocatore non puo' memorizzare
+    // la sequenza dopo 1 partita.
     let SCENARI_PARTITA = SCENARI.slice();
 
     let scenarioIdx = 0, decisioneIdx = 0, totale = 0, sceltaCorrente = null;
@@ -322,15 +322,14 @@
 
     const intro = document.getElementById('intro');
     const game = document.getElementById('game');
-    const results = document.getElementById('results');
+    const results = document.getElementById('results-screen');
 
     document.getElementById('start-btn').addEventListener('click', start);
     document.getElementById('restart-btn').addEventListener('click', start);
     document.getElementById('next-btn').addEventListener('click', avanti);
 
     function start() {
-      // Pesca 5 scenari random dal pool di 7 (5 originali + 2 nuovi:
-      // sciame sismico Castelli, blackout esteso) e mescola l'ordine.
+      // Gioca tutti e 5 gli scenari del pool in ordine mescolato.
       // Le decisioni interne ad ogni scenario restano nell'ordine narrativo
       // perche' la loro sequenza ha senso (decisione 1 prepara decisione 2).
       SCENARI_PARTITA = shuffleArr(SCENARI.slice()).slice(0, 5);
@@ -368,7 +367,7 @@
         b.addEventListener('click', () => onScelta(b, sc2));
         az.appendChild(b);
       });
-      document.getElementById('esito').classList.add('hide');
+      document.getElementById('esito-scelta').classList.add('hide');
       document.getElementById('next-row').classList.add('hide');
     }
 
@@ -380,7 +379,7 @@
       btn.style.borderColor = btn.style.background;
       totale += scelta.pt;
       storia.push({ scenario: SCENARI_PARTITA[scenarioIdx].titolo, esito: scelta.esito, pt: scelta.pt });
-      const e = document.getElementById('esito');
+      const e = document.getElementById('esito-scelta');
       e.className = 'esito-box ' + scelta.esito;
       e.innerHTML = '<span class="badge-pt">+' + scelta.pt + ' pt</span>' + scelta.fb;
       e.classList.remove('hide');
@@ -417,10 +416,11 @@
     function showResults() {
       game.classList.add('hide');
       results.classList.remove('hide');
-      const totDec = SCENARI.reduce((a, s) => a + s.decisioni.length, 0);
+      const totDec = SCENARI_PARTITA.reduce((a, s) => a + s.decisioni.length, 0);
       const max = totDec * 3;
       document.getElementById('punti-fin').textContent = totale;
       document.getElementById('punti-max').textContent = max;
+      if (window.GiochiPC) window.GiochiPC.salvaRisultato('scelte-difficili', totale, max);
       let liv;
       if (totale >= max * 0.85) liv = 'Eccellente';
       else if (totale >= max * 0.65) liv = 'Buono';
@@ -437,6 +437,7 @@
     }
   })();
   </script>
+  <script src="/giochi/assets/js/progressione.js"></script>
   <script src="/giochi/assets/js/attestato.js"></script>
   <script src="/giochi/assets/js/attestato-inclusivo.js"></script>
 
