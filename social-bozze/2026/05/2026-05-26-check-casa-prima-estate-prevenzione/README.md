@@ -1,7 +1,7 @@
-# Immagini e testi social per «Proteggere cani e gatti dal caldo: le 10 regole del Ministero della Salute»
+# Immagini e testi social per «Check-list casa prima dell'estate: cosa verificare»
 
-- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-04-23-cani-gatti-caldo-ondate-calore/
-- **Data**: 2026-04-23
+- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-05-26-check-casa-prima-estate-prevenzione/
+- **Data**: 2026-05-26
 - **Badge**: Prevenzione
 
 ## Dove va ogni file (a prova di errore)

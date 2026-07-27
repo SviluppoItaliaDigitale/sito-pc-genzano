@@ -1,7 +1,7 @@
-# Immagini e testi social per «Proteggere cani e gatti dal caldo: le 10 regole del Ministero della Salute»
+# Immagini e testi social per «In realtà è già prevenzione: i piccoli gesti che ti tengono al sicuro»
 
-- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-04-23-cani-gatti-caldo-ondate-calore/
-- **Data**: 2026-04-23
+- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-06-03-in-realta-e-gia-prevenzione-gesti-quotidiani/
+- **Data**: 2026-06-03
 - **Badge**: Prevenzione
 
 ## Dove va ogni file (a prova di errore)
@@ -11,7 +11,7 @@ Il numero del carosello è l'ordine di caricamento.
 
 | File | Dove si pubblica |
 |---|---|
-| `feed-carosello-1.jpg`, `feed-carosello-2.jpg` | FEED Instagram + Facebook — carosello: caricale **tutte, in ordine** (1080×1350) |
+| `feed-carosello-1.jpg`, `feed-carosello-2.jpg`, `feed-carosello-3.jpg`, `feed-carosello-4.jpg` | FEED Instagram + Facebook — carosello: caricale **tutte, in ordine** (1080×1350) |
 | `storia.jpg` | STORIE Instagram + Facebook — verticale, sparisce dopo 24h (1080×1920) |
 | `instagram.txt` | testo per Instagram |
 | `facebook.txt` | testo per Facebook (anteprima OG dall'URL) |
