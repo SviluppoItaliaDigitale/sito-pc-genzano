@@ -147,6 +147,6 @@ Con l'articolo 42 si chiude il Capo V. Restano gli strumenti finanziari e le nor
 
 1. **Codice della protezione civile**, decreto legislativo 2 gennaio 2018, n. 1, Capo V, artt. 31–42 — testo vigente, [Normattiva](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1).
 2. **Decreto legislativo 3 luglio 2017, n. 117** (Codice del Terzo settore), art. 4, comma 2, per i Gruppi comunali.
-3. **D.P.R. 8 febbraio 2001, n. 194** (regolamento sulla partecipazione del volontariato) per i benefici e le modalità di intervento.
+3. **D.P.R. 8 febbraio 2001, n. 194** (regolamento sulla partecipazione del volontariato), **abrogato dal 6 febbraio 2018 dal decreto legislativo 1/2018**: la sua disciplina su benefici e modalità di intervento è oggi confluita negli artt. 39-41 del Codice, richiamati sopra. Citato qui solo come genealogia storica della norma vigente.
 
 </div>
