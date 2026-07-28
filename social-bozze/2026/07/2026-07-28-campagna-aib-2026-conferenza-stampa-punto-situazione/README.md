@@ -1,8 +1,8 @@
-# Immagini e testi social per «Allagamenti urbani: cosa fare se l'acqua entra in casa»
+# Immagini e testi social per «Campagna AIB 2026, il punto della Regione Lazio: incendi in calo e 230 organizzazioni in campo»
 
-- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-05-02-allagamenti-urbani-cosa-fare-acqua-casa/
-- **Data**: 2026-05-02
-- **Badge**: Prevenzione
+- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-07-28-campagna-aib-2026-conferenza-stampa-punto-situazione/
+- **Data**: 2026-07-28
+- **Badge**: Aggiornamento
 
 ## Dove va ogni file (a prova di errore)
 
@@ -11,7 +11,7 @@ Il numero del carosello è l'ordine di caricamento.
 
 | File | Dove si pubblica |
 |---|---|
-| `feed-carosello-1.jpg`, `feed-carosello-2.jpg` | FEED Instagram + Facebook — carosello: caricale **tutte, in ordine** (1080×1350) |
+| `feed-carosello-1.jpg`, `feed-carosello-2.jpg`, `feed-carosello-3.jpg`, `feed-carosello-4.jpg` | FEED Instagram + Facebook — carosello: caricale **tutte, in ordine** (1080×1350) |
 | `storia.jpg` | STORIE Instagram + Facebook — verticale, sparisce dopo 24h (1080×1920) |
 | `instagram.txt` | testo per Instagram |
 | `facebook.txt` | testo per Facebook (anteprima OG dall'URL) |
