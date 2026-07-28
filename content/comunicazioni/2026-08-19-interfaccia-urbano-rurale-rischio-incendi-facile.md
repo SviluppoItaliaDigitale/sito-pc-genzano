@@ -74,6 +74,6 @@ Il Comune tiene un registro degli incendi. Questo registro si chiama **catasto d
 ## Per saperne di più
 
 - [Rischio incendi ad agosto](/comunicazioni/2026-08-03-rischio-incendi-agosto-picco/)
-- [Regione Lazio — Anti Incendi Boschivi](https://www.regione.lazio.it/cittadini/protezione-civile)
+- [Regione Lazio — Anti Incendi Boschivi](https://protezionecivile.regione.lazio.it)
 
 In emergenza chiama il **112**.

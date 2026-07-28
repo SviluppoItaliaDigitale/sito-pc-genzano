@@ -173,7 +173,7 @@ Sul nostro sito:
 
 Fonti istituzionali:
 
-- [Centro Funzionale Regionale Lazio](https://www.regione.lazio.it/cittadini/protezione-civile).
+- [Centro Funzionale Regionale Lazio](https://protezionecivile.regione.lazio.it).
 - [Servizio Meteorologico dell'Aeronautica](https://www.meteoam.it/).
 - [Dipartimento Protezione Civile](https://www.protezionecivile.gov.it/).
 

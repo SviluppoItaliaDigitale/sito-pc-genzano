@@ -176,7 +176,7 @@ Fonti istituzionali:
 
 - [Vigili del Fuoco](https://www.vigilfuoco.it/).
 - [Carabinieri Forestali](https://www.carabinieri.it/).
-- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/cittadini/protezione-civile).
+- [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it).
 - [Dipartimento Protezione Civile — Rischio incendi](https://rischi.protezionecivile.gov.it/it/incendi-boschivi-0/).
 
 Esercitarsi è rispettare chi domani avrà bisogno del nostro intervento.

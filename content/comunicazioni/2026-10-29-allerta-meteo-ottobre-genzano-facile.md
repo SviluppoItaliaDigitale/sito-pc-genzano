@@ -80,7 +80,7 @@ Per segnalazioni non urgenti: **803 555** (Sala Operativa Protezione Civile Lazi
 
 ## Dove trovare aggiornamenti
 
-- Sito ufficiale Regione Lazio: https://www.regione.lazio.it/cittadini/protezione-civile
+- Sito ufficiale Regione Lazio: https://protezionecivile.regione.lazio.it
 - Canali social del Gruppo Volontari di Genzano.
 
 Il Gruppo pubblicherà aggiornamenti se la situazione cambia.

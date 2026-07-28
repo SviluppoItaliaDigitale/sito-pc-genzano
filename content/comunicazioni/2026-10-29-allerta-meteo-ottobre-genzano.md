@@ -80,7 +80,7 @@ Per richieste di informazione (non emergenza), seguire i canali ufficiali del Gr
 
 Il bollettino è consultabile:
 
-- **Centro Funzionale Regionale Lazio**: https://www.regione.lazio.it/cittadini/protezione-civile;
+- **Centro Funzionale Regionale Lazio**: https://protezionecivile.regione.lazio.it;
 - **App** Regione Lazio Protezione Civile;
 - **Sito** Dipartimento Protezione Civile nazionale;
 - **Canali social** ufficiali del Gruppo.

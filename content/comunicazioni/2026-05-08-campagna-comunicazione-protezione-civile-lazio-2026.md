@@ -103,7 +103,7 @@ Sul nostro sito:
 
 Fonti istituzionali:
 
-- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/cittadini/protezione-civile).
+- [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it).
 - [Io non rischio — campagna DPC](https://www.iononrischio.it/).
 - [Dipartimento Protezione Civile — Campi Scuola "Anch'io sono la Protezione Civile"](https://www.protezionecivile.gov.it/).
 - [L.R. Lazio 2/2014 — Sistema integrato di Protezione Civile](https://www.regione.lazio.it/).

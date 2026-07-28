@@ -44,4 +44,4 @@ Sul nostro sito:
 Fonti istituzionali:
 
 - [Comune di Nemi](https://www.comune.nemi.rm.it/).
-- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/cittadini/protezione-civile).
+- [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it).

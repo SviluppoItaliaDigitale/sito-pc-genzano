@@ -68,7 +68,7 @@ Le previsioni di temporali nei Castelli sono emesse da:
 
 ## Per approfondire
 
-- [Centro Funzionale Regionale Lazio](https://www.regione.lazio.it/cittadini/protezione-civile/centro-funzionale)
+- [Centro Funzionale Regionale Lazio](https://protezionecivile.regione.lazio.it/centro-funzionale-regionale)
 - [Codici colore allerta](/allerte-meteo/)
 - [Agosto mese critico](/comunicazioni/2026-08-01-agosto-mese-critico-pc-preparazione/)
 

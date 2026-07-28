@@ -70,7 +70,7 @@ I Comuni hanno l'obbligo di tenere un **catasto degli incendi boschivi** (L. 353
 ## Per approfondire
 
 - [Rischio incendi ad agosto](/comunicazioni/2026-08-03-rischio-incendi-agosto-picco/)
-- [Regione Lazio — Anti Incendi Boschivi](https://www.regione.lazio.it/cittadini/protezione-civile)
+- [Regione Lazio — Anti Incendi Boschivi](https://protezionecivile.regione.lazio.it)
 - [Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/)
 
 In emergenza: **112**.

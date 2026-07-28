@@ -107,7 +107,7 @@ Fonti istituzionali:
 
 - [Io Non Rischio — Alluvione](https://iononrischio.protezionecivile.it/alluvione/).
 - [ISPRA — Dissesto idrogeologico](https://www.isprambiente.gov.it/it/attivita/suolo-e-territorio/dissesto-idrogeologico).
-- [Regione Lazio — Centro Funzionale](https://www.regione.lazio.it/cittadini/protezione-civile).
+- [Regione Lazio — Centro Funzionale](https://protezionecivile.regione.lazio.it).
 - [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).
 
 Un allagamento urbano non è una catastrofe se si mantiene la lucidità. Le regole sono poche, chiare e funzionano: **non entrare nell'acqua**, **non attraversare con l'auto**, **sali ai piani alti**, **ascolta i canali ufficiali**.

@@ -244,7 +244,7 @@ Il formato più richiesto dai docenti. Affronta un tema in modo strutturato e la
 
 - **Terremoto + Piano famiglia** (2 ore, primaria IV-V e sec I) — Lezione 1 del [Percorso 3](#percorso-3) (DROP-COVER-HOLD ON) + Lezione 1 del [Percorso 4](#percorso-4) (introduzione al piano familiare). Cosa fare e dove ritrovarsi.
 - **Allerta meteo + IT-alert** (2 ore, sec I) — Ora 1 del [Percorso 2](#percorso-2) (codici colore) + Ora 2 del [Percorso 5](#percorso-5) (IT-alert e Cell Broadcast). Come arrivano le informazioni e come distinguerle dal phishing.
-- **Incendi boschivi (campagna AIB estiva)** (2 ore, primaria-sec, da svolgere fra giugno e settembre) — i Castelli Romani sono **Zona AIB 9** del Lazio. Comportamenti corretti in passeggiata e in casa, ruolo del 112, riferimento al [Bollettino di pericolosità incendi](https://www.regione.lazio.it/cittadini/protezione-civile/bollettini/rischi-incendi) del **Centro Funzionale Regionale Lazio**.
+- **Incendi boschivi (campagna AIB estiva)** (2 ore, primaria-sec, da svolgere fra giugno e settembre) — i Castelli Romani sono **Zona AIB 9** del Lazio. Comportamenti corretti in passeggiata e in casa, ruolo del 112, riferimento al [Bollettino di pericolosità incendi](https://protezionecivile.regione.lazio.it/bollettini/rischi-incendi) del **Centro Funzionale Regionale Lazio**.
 - **Ondate di calore e salute** (2 ore, primaria-sec, da svolgere fra giugno e agosto) — autoprotezione, anziani fragili, riconoscere un colpo di calore. Riferimenti: [Piano nazionale prevenzione caldo](https://www.salute.gov.it/new/it/tema/ondate-di-calore) del **Ministero della Salute** e [WHO Heat-Health Action Plans](https://www.who.int/europe/news-room/fact-sheets/item/heat-and-health). Adatto come "lezione di servizio" prima della pausa estiva.
 
 ### Se vuoi fare un progetto completo {#tempo-progetto}
@@ -654,7 +654,7 @@ Rubrica fascia, indicatori 1 (autoprotezione), 3 (conoscenza del territorio), 4 
 | Ora | Attività | Materiali |
 |---|---|---|
 | 1 | L'ecosistema boschivo dei Castelli e la sua vulnerabilità estiva. Il triangolo del fuoco | Pagina [Rischio incendio](/rischi-prevenzione/rischio-incendio/) + articolo [Antincendio boschivo — Triangolo del fuoco](/comunicazioni/2026-04-11-antincendio-boschivo-triangolo-fuoco-attrezzature-tecniche-attacco/) |
-| 2 | Comportamenti corretti, prevenzione, divieti penali. Lettura del bollettino AIB del giorno | [Bollettino di pericolosità incendi del CFR Lazio](https://www.regione.lazio.it/cittadini/protezione-civile/bollettini/rischi-incendi) + pagina [Stato del sistema — Rischio incendi](/stato-sistema/) |
+| 2 | Comportamenti corretti, prevenzione, divieti penali. Lettura del bollettino AIB del giorno | [Bollettino di pericolosità incendi del CFR Lazio](https://protezionecivile.regione.lazio.it/bollettini/rischi-incendi) + pagina [Stato del sistema — Rischio incendi](/stato-sistema/) |
 | 3 | Filiera dello spegnimento: chi fa cosa, dal 112 al Canadair. Testimonianza di un volontario AIB del Gruppo | Articolo [Mezzi aerei AIB — Canadair ed elicotteri](/comunicazioni/2026-07-13-mezzi-aerei-aib-canadair-elicotteri/) + intervento in classe (facoltativo) |
 
 <details class="faq-item percorso-dettagli">

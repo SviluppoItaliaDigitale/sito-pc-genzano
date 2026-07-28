@@ -71,6 +71,6 @@ Sul nostro sito:
 
 Fonti istituzionali:
 
-- [Centro Funzionale Regionale Lazio](https://www.regione.lazio.it/cittadini/protezione-civile): bollettini quotidiani di criticità.
+- [Centro Funzionale Regionale Lazio](https://protezionecivile.regione.lazio.it): bollettini quotidiani di criticità.
 - [Pagina ufficiale ISO 22324](https://www.iso.org/search.html?q=ISO+22324): per il testo della norma (a pagamento) consulta [iso.org](https://www.iso.org/) o il [catalogo UNI](https://store.uni.com/).
 - [WCAG 2.2 — 1.4.1 Use of Color](https://www.w3.org/TR/WCAG22/#use-of-color): criterio internazionale di accessibilità citato sopra.

@@ -204,7 +204,7 @@ Dotazione dettagliata: vedi [Capitolo 2 — Check-list 4](/formazione/manuale-ca
 | Comune di Genzano di Roma — centralino | (da verificare presso Ufficio PC) |
 | Ufficio Protezione Civile Comunale | (da verificare) |
 | Prefettura di Roma — Sala Operativa | (da verificare presso Ufficio PC) |
-| Agenzia Regionale Protezione Civile Lazio | (portale [regione.lazio.it](https://www.regione.lazio.it/cittadini/protezione-civile)) |
+| Agenzia Regionale Protezione Civile Lazio | (portale [regione.lazio.it](https://protezionecivile.regione.lazio.it)) |
 
 **Avvertenza**: verifica periodicamente con il Responsabile del Gruppo che i numeri siano **aggiornati** prima di partire in missione.
 

@@ -57,7 +57,7 @@ Sul nostro sito:
 Fonti istituzionali:
 
 - [Comune di Nemi](https://www.comune.nemi.rm.it/).
-- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/cittadini/protezione-civile).
+- [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it).
 - [ISPRA — Dissesto idrogeologico](https://www.isprambiente.gov.it/it/attivita/suolo-e-territorio/dissesto-idrogeologico).
 
 La collaborazione tra Polizia Locale e Gruppo di Protezione Civile è uno strumento ordinario del sistema comunale per gestire situazioni che richiedono risorse aggiuntive sul territorio.
