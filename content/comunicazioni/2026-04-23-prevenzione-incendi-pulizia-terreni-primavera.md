@@ -101,7 +101,7 @@ Fonti istituzionali:
 
 - [Vigili del Fuoco](https://www.vigilfuoco.it/).
 - [Carabinieri Forestali](https://www.carabinieri.it/) — competenti su incendi boschivi.
-- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/cittadini/protezione-civile).
+- [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it).
 - [Dipartimento Protezione Civile — Rischio incendi](https://rischi.protezionecivile.gov.it/it/incendi-boschivi-0/).
 
 La sicurezza dei nostri boschi e dei nostri paesi comincia da un gesto banale: un terreno pulito, a primavera. È un piccolo lavoro che, moltiplicato per tutti i proprietari, riduce in modo enorme il rischio collettivo.

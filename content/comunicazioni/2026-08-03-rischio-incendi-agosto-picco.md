@@ -61,7 +61,7 @@ Durante la campagna AIB il Gruppo Comunale Volontari di Protezione Civile di Gen
 
 ## Per approfondire
 
-- [Regione Lazio — Anti Incendi Boschivi](https://www.regione.lazio.it/cittadini/protezione-civile)
+- [Regione Lazio — Anti Incendi Boschivi](https://protezionecivile.regione.lazio.it)
 - [Vigili del Fuoco — prevenzione incendi](https://www.vigilfuoco.it/)
 - [Ondate di calore e incendi](/comunicazioni/2026-08-02-ondate-calore-agosto-fragili/)
 

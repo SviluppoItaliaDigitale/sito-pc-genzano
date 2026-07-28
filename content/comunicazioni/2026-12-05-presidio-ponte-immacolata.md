@@ -166,6 +166,6 @@ Sul nostro sito:
 Fonti istituzionali:
 
 - [Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/).
-- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/cittadini/protezione-civile).
+- [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it).
 
 In emergenza: **112**.
