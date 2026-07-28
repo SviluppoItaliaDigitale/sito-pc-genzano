@@ -58,7 +58,7 @@ Sul nostro sito:
 Fonti istituzionali:
 
 - [Vigili del Fuoco](https://www.vigilfuoco.it/).
-- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/cittadini/protezione-civile).
+- [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it).
 - [Comune di Albano Laziale](https://www.comune.albanolaziale.rm.it/).
 
 Ogni attivazione è l'occasione per rafforzare la collaborazione tra gli enti del sistema e confermare il ruolo operativo del volontariato organizzato.

@@ -193,7 +193,7 @@ Il **codice Q** è composto da circa 200 codici. Nelle comunicazioni radio di em
 |---|---|
 | **Centro Operativo Comunale (COC)** | Presso Ufficio Protezione Civile del Comune di Genzano |
 | **Canali radio Gruppo Comunale** | Da verificare con il Responsabile radiocomunicazioni prima dell'attivazione |
-| **Canali Regione Lazio** | Coordinati dall'Agenzia Regionale di Protezione Civile — vedi portale [regione.lazio.it](https://www.regione.lazio.it/cittadini/protezione-civile) |
+| **Canali Regione Lazio** | Coordinati dall'Agenzia Regionale di Protezione Civile — vedi portale [regione.lazio.it](https://protezionecivile.regione.lazio.it) |
 | **Sala Operativa Regionale Lazio (SOUR)** | Raggiungibile via ponte radio regionale e in fonia |
 | **NUE 112** | Unico numero di emergenza per il cittadino — **non** passa dalla radio di gruppo |
 
