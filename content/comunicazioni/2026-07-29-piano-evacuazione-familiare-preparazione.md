@@ -1,6 +1,6 @@
 ---
 title: "Piano di evacuazione familiare: preparare la propria casa"
-date: 2026-07-29
+date: 2026-07-29T00:01:00+02:00
 description: "In caso di emergenza ogni famiglia dovrebbe avere un piano chiaro. Come prepararlo, coinvolgendo tutti i membri, passo dopo passo."
 badge: "Prevenzione"
 priorita: "normale"
