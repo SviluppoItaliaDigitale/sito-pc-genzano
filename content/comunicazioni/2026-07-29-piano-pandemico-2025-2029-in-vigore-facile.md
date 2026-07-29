@@ -25,15 +25,15 @@ L'Italia ha un nuovo piano contro le pandemie. Una pandemia è una malattia che 
 
 Il piano è un documento dello Stato. Dice cosa fare se arriva una nuova pandemia. Vale per 5 anni: dal 2025 al 2029.
 
-Lo Stato e le Regioni lo hanno approvato il 30 aprile 2026. Il testo completo è sulla Gazzetta Ufficiale. La Gazzetta Ufficiale è il giornale dove lo Stato pubblica le sue regole.
+Lo Stato e le Regioni lo hanno approvato il 30 aprile 2026. Il testo completo è sulla Gazzetta Ufficiale. La Gazzetta Ufficiale è il giornale dello Stato. Lì lo Stato pubblica le sue regole.
 
 ## Cosa c'è di nuovo
 
-Il piano vecchio parlava solo dell'influenza. Il piano nuovo copre tutti i virus respiratori pericolosi. I virus respiratori colpiscono naso, gola e polmoni.
+Il piano vecchio parlava solo dell'influenza. Il piano nuovo copre tutti i germi respiratori pericolosi. Sono i germi che possono causare una pandemia. Si trasmettono con il respiro.
 
 Il piano dice come:
 
-- controllare i virus che circolano;
+- controllare i germi che circolano;
 - dare l'allarme in fretta;
 - preparare ospedali e laboratori;
 - informare le persone in modo chiaro.
