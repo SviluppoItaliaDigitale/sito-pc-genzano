@@ -5,7 +5,7 @@ weight: 717
 parte: "Parte VII · Il catalogo dei rischi"
 capitolo: "7"
 tts: true
-date: 2026-06-10
+date: 2026-07-29
 ---
 
 Il rischio sanitario entra nel campo della protezione civile quando un evento di natura sanitaria supera la capacità di risposta ordinaria del sistema delle cure e richiede un coordinamento straordinario. Comprende due famiglie distinte: le **maxiemergenze sanitarie** (molti feriti in poco tempo) e le **emergenze di sanità pubblica** (epidemie e pandemie). La pandemia di **COVID-19** ha mostrato, su scala mai vista, quanto questo rischio sia reale e quanto il confine fra sanità e protezione civile sia poroso.
@@ -27,23 +27,26 @@ Un'**epidemia** è la diffusione rapida di una malattia in una popolazione; quan
 - il **Ministero della Salute** coordina la risposta nazionale e i piani pandemici;
 - sul piano internazionale, l'**Organizzazione Mondiale della Sanità (OMS)** applica il **Regolamento Sanitario Internazionale (2005)** e può dichiarare un'**emergenza di sanità pubblica di rilevanza internazionale (PHEIC)**; il **Centro Europeo per la Prevenzione e il Controllo delle Malattie (ECDC)** sorveglia il quadro europeo.
 
+Lo strumento nazionale di preparazione è oggi il **Piano strategico operativo di preparazione e risposta ad una pandemia da patogeni a trasmissione respiratoria a maggiore potenziale pandemico 2025-2029**, approvato con Accordo in sede di Conferenza Stato-Regioni del 30 aprile 2026 (Rep. atti n. 50/CSR) e pubblicato nella *Gazzetta Ufficiale* n. 136 del 15 giugno 2026 (Supplemento Ordinario n. 25). Rispetto al precedente piano pandemico influenzale (PanFlu 2021-2023), esso segna un cambio di impianto: adotta un **approccio multi-patogeno** — non più circoscritto alla sola influenza, ma esteso a tutti i patogeni a trasmissione respiratoria a maggiore potenziale pandemico — e una **durata quinquennale**, con un metodo flessibile adattabile a scenari epidemiologici diversi per trasmissibilità, gravità e impatto sui servizi sanitari. Le Regioni e le Province autonome sono tenute a recepirlo con proprio atto entro novanta giorni.
+
 {{< box tipo="chiave" titolo="La lezione del COVID-19" >}}
 Il 31 gennaio 2020 il Consiglio dei Ministri dichiarò lo **stato di emergenza nazionale** per il rischio sanitario connesso alla diffusione del COVID-19: il Servizio nazionale di protezione civile fu attivato a supporto del sistema sanitario, con il Capo del Dipartimento come coordinatore della risposta e, in seguito, un Commissario straordinario. È l'esempio più chiaro del **principio di sussidiarietà**: quando un evento supera la risposta ordinaria, si attiva la macchina straordinaria della protezione civile. La pandemia ha lasciato in eredità la necessità di piani aggiornati, scorte strategiche e una comunicazione del rischio capace di reggere l'incertezza.
 {{< /box >}}
 
 ## 7.7.3 Prevenzione: preparazione e «One Health»
 
-La prevenzione del rischio sanitario è soprattutto **preparazione**: piani pandemici aggiornati, scorte di dispositivi, esercitazioni, formazione del personale, sistemi informativi di sorveglianza. Si afferma inoltre l'approccio **«One Health»**, che lega la salute umana a quella animale e dell'ambiente — riconoscendo che molte malattie emergenti hanno origine nel rapporto fra uomo, fauna ed ecosistemi alterati, anche dal cambiamento climatico. Per le persone fragili nelle emergenze, anche sanitarie, si veda la scheda [Persone con necessità specifiche](/rischi-prevenzione/persone-necessita-specifiche/).
+La prevenzione del rischio sanitario è soprattutto **preparazione**: piani pandemici aggiornati, scorte di dispositivi, esercitazioni, formazione del personale, sistemi informativi di sorveglianza. Il Piano 2025-2029 traduce questa impostazione in linee operative concrete — rafforzamento dei dipartimenti di prevenzione e dei laboratori, sistema integrato di sorveglianza dei patogeni respiratori, allerta rapida e comunicazione del rischio proporzionata agli scenari — sostenute da un finanziamento pluriennale dedicato. Si afferma inoltre l'approccio **«One Health»**, che lega la salute umana a quella animale e dell'ambiente — riconoscendo che molte malattie emergenti hanno origine nel rapporto fra uomo, fauna ed ecosistemi alterati, anche dal cambiamento climatico. Per le persone fragili nelle emergenze, anche sanitarie, si veda la scheda [Persone con necessità specifiche](/rischi-prevenzione/persone-necessita-specifiche/).
 
 <div class="manuale-fonti">
 
 ## Fonti
 
 1. **Ministero della Salute** — coordinamento delle emergenze di sanità pubblica e piani pandemici.
-2. **Istituto Superiore di Sanità (ISS)** — sorveglianza epidemiologica.
-3. **Organizzazione Mondiale della Sanità (OMS)** — Regolamento Sanitario Internazionale (2005); **ECDC** per il quadro europeo.
-4. **Dichiarazione dello stato di emergenza** per il rischio sanitario COVID-19, deliberazione del Consiglio dei Ministri del 31 gennaio 2020.
-5. **ARES 118 / sistema di emergenza-urgenza** — soccorso sanitario e maxiemergenze.
-6. Codice della protezione civile, d.lgs. 1/2018, art. 7 (tipologia degli eventi) e art. 16 — [Normattiva](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1).
+2. **Piano strategico operativo di preparazione e risposta ad una pandemia da patogeni a trasmissione respiratoria a maggiore potenziale pandemico 2025-2029** — Accordo Stato-Regioni del 30 aprile 2026 (Rep. atti n. 50/CSR), *Gazzetta Ufficiale* n. 136 del 15 giugno 2026, S.O. n. 25 — [testo in Gazzetta Ufficiale](https://www.gazzettaufficiale.it/eli/id/2026/06/15/26A02859/sg).
+3. **Istituto Superiore di Sanità (ISS)** — sorveglianza epidemiologica.
+4. **Organizzazione Mondiale della Sanità (OMS)** — Regolamento Sanitario Internazionale (2005); **ECDC** per il quadro europeo.
+5. **Dichiarazione dello stato di emergenza** per il rischio sanitario COVID-19, deliberazione del Consiglio dei Ministri del 31 gennaio 2020.
+6. **ARES 118 / sistema di emergenza-urgenza** — soccorso sanitario e maxiemergenze.
+7. Codice della protezione civile, d.lgs. 1/2018, art. 7 (tipologia degli eventi) e art. 16 — [Normattiva](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1).
 
 </div>
