@@ -1,6 +1,6 @@
 ---
 title: "Agosto si apre: il mese più critico per la Protezione Civile"
-date: 2026-08-01
+date: 2026-08-01T00:01:00+02:00
 description: "Agosto è il mese più impegnativo per la Protezione Civile italiana. Un promemoria su rischi, responsabilità e preparazione per i cittadini di Genzano di Roma."
 badge: "Prevenzione"
 priorita: "normale"
