@@ -73,12 +73,12 @@ Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma collabora s
 
 Conoscere il manuale Caritas-Banco Alimentare è utile a ogni volontario che manipola alimenti destinati alla popolazione. La logica è la stessa del [Manuale FIC](/comunicazioni/2024-10-06-manuale-cucina-emergenza-fic-presentazione/): i riferimenti normativi coincidono e le buone prassi sono complementari.
 
-## Nei prossimi articoli
+## Gli approfondimenti pubblicati
 
-Nelle prossime settimane pubblicheremo approfondimenti dedicati ai capitoli operativi del manuale:
+Ai capitoli operativi del manuale abbiamo dedicato due approfondimenti:
 
-- le **buone pratiche igieniche** e la **formazione del personale** (capitoli 7 e 8);
-- il **semaforo di attenzione** (capitolo 9) — come classificare gli alimenti da recuperare.
+- [Le buone prassi igieniche e l'HACCP semplificato per le organizzazioni caritative](/comunicazioni/2025-09-15-organizzazioni-caritative-haccp-buone-prassi-igieniche/) (capitoli 7 e 8);
+- [Il semaforo di attenzione: come classificare gli alimenti da recuperare](/comunicazioni/2026-03-18-semaforo-attenzione-alimenti-recupero-solidarieta/) (capitolo 9).
 
 ## Riferimenti
 
