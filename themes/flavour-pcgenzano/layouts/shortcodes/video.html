@@ -6,17 +6,21 @@
      che usano questo shortcode (flag .Page.Store "usaVideoPlayer").
 
      Parametri:
-       src     (obbligatorio) — percorso MP4 in /static (es. /video/spot.mp4)
-       poster  (opzionale)    — immagine di anteprima
-       titolo  (opzionale)    — aria-label del player
-       caption (opzionale)    — didascalia <figcaption> (markdown inline)
+       src       (obbligatorio) — percorso MP4 in /static (es. /video/spot.mp4)
+       poster    (opzionale)    — immagine di anteprima
+       titolo    (opzionale)    — aria-label del player
+       caption   (opzionale)    — didascalia <figcaption> (markdown inline)
+       verticale (opzionale)    — "true" per video 9:16 (reel): attributi
+                                  720×1280 + classe .video-verticale che
+                                  riduce la larghezza massima del riquadro
   */ -}}
 {{- $src := .Get "src" -}}
 {{- if not $src }}{{ errorf "shortcode video: parametro src obbligatorio (%s)" .Position }}{{ end -}}
+{{- $verticale := eq (.Get "verticale") "true" -}}
 {{- .Page.Store.Set "usaVideoPlayer" true -}}
-<figure class="video-campagna video-locale">
+<figure class="video-campagna video-locale{{ if $verticale }} video-verticale{{ end }}">
   <video class="video-js" data-bs-video controls preload="none" playsinline
-         width="1280" height="720"
+         {{ if $verticale }}width="720" height="1280"{{ else }}width="1280" height="720"{{ end }}
          {{- with .Get "poster" }} poster="{{ . | strings.TrimPrefix "/" | relURL }}"{{ end }}
          {{- with .Get "titolo" }} aria-label="{{ . }}"{{ end }}>
     <source src="{{ $src | strings.TrimPrefix "/" | relURL }}" type="video/mp4">
