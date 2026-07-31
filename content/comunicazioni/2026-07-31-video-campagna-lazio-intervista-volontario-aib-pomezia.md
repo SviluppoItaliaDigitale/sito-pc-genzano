@@ -10,7 +10,7 @@ image_alt: "Cover dell'articolo: Il nostro volontario nel video della Regione La
 scadenza: ""
 area: "Pomezia (RM)"
 lis_section: "rischio-incendio"
-social_citazione: "Un mondo bellissimo: te ne innamori e non riesci a farne a meno."
+social_citazione: "Diventa volontario: non c'è Protezione Civile senza di te."
 social_punti:
   - "Un volontario del nostro Gruppo è il protagonista del nuovo video della campagna «Non c'è Protezione Civile senza di te»."
   - "Il video è girato sul campo, durante un intervento antincendio boschivo nel territorio di Pomezia."
@@ -45,7 +45,13 @@ Nelle immagini compaiono anche volontari di altre organizzazioni impegnate nell'
 
 Nell'intervista il nostro volontario ricorda che «la maggior parte degli incendi che stiamo affrontando purtroppo sono di mano dolosa» e che questi eventi «mettono a repentaglio la vita dei volontari». Per questo, spiega, l'antincendio boschivo «è un lavoro importante» da fare «con cognizione di causa». Prima dell'impiego operativo vengono sempre la formazione, i dispositivi di protezione e il coordinamento.
 
-Poi la parte più personale: il volontariato di protezione civile è «un mondo bellissimo: te ne innamori e non riesci a farne a meno». Il video si chiude con l'invito della campagna regionale: **diventa volontario, non c'è Protezione Civile senza di te**.
+Poi la parte più personale: il volontariato di protezione civile è «un mondo bellissimo: te ne innamori e non riesci a farne a meno».
+
+L'intervista si chiude con la frase che dà il senso a tutto il video. La pronuncia il nostro volontario, a pochi passi dalla vegetazione appena bruciata:
+
+> **«Diventa volontario: non c'è Protezione Civile senza di te.»**
+
+È lo slogan della campagna regionale. Detto lì, da chi l'incendio lo ha appena affrontato, smette di essere uno slogan e diventa un invito personale.
 
 ## Se vedi un incendio, chiama il 112
 
