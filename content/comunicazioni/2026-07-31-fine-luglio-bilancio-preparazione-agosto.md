@@ -20,7 +20,7 @@ draft: false
 Il mese ha visto sul nostro territorio:
 - **Ondate di calore** di media-alta intensità, con più giornate di disagio per le persone fragili.
 - **Alcuni temporali** localizzati con grandine in zone specifiche.
-- **Interventi AIB ravvicinati tra il 5 e il 17 luglio**, a supporto dei Vigili del Fuoco:
+- **Interventi AIB per l'intero mese**, a supporto dei Vigili del Fuoco, con attivazioni proseguite senza interruzioni fino agli ultimi giorni di luglio. Tra i più significativi:
   - [5 luglio, Velletri](/comunicazioni/2026-07-05-incendio-velletri-caranella-via-del-sorbo/) — incendio di vegetazione.
   - [13 luglio, Velletri](/comunicazioni/2026-07-13-attivazione-incendio-sterpaglie-velletri/) — oltre sei ore di intervento.
   - [15 luglio, Genzano e Lanuvio](/comunicazioni/2026-07-15-due-incendi-via-aspro-canneti-kiwi/) — due incendi nella stessa giornata.
@@ -30,7 +30,7 @@ Il mese ha visto sul nostro territorio:
 - **Formazione** estiva del Gruppo.
 - **Attività informative** alla cittadinanza.
 
-Nel complesso, **un luglio più impegnativo della media** sul fronte incendi boschivi rispetto al primo mese di campagna (vedi il [bilancio intermedio di metà luglio](/comunicazioni/2026-07-15-meta-luglio-bilancio-campagna-aib/)). Le due settimane centrali del mese hanno visto un'intensificazione delle attivazioni, coerente con il caldo persistente.
+Nel complesso, **un luglio più impegnativo della media** sul fronte incendi boschivi rispetto al primo mese di campagna (vedi il [bilancio intermedio di metà luglio](/comunicazioni/2026-07-15-meta-luglio-bilancio-campagna-aib/)). Dalla prima decade in poi le attivazioni si sono intensificate e sono proseguite fino a fine mese, coerentemente con il caldo persistente.
 
 ## Il Lazio a fine luglio
 
@@ -47,13 +47,15 @@ Il sistema ha **tenuto** bene, con margini per migliorare.
 ## Il bilancio del Gruppo
 
 Il nostro Gruppo di Genzano di Roma a fine luglio 2026:
-- **Quattro giornate di attivazione per incendi di vegetazione** tra il 5 e il 17 luglio, a Genzano e nei Comuni limitrofi, a supporto dei Vigili del Fuoco.
+- **Attivazioni per incendi di vegetazione lungo tutto il mese**, a Genzano e nei Comuni limitrofi, a supporto dei Vigili del Fuoco.
 - **Turni** di avvistamento regolarmente coperti.
 - **Partecipazione** a eventi locali e sovracomunali.
 - **Formazione** continua dei volontari.
 - **Dotazione** mezzi verificata dopo l'uso intensivo di autobotte e vasca mobile.
 - **Coordinamento** con enti locali.
 - **Comunicazione** alla popolazione.
+
+I numeri complessivi dal 4 aprile 2026, data di adozione del registro operativo digitale, aggiornati al 30 luglio: **74 interventi registrati**, di cui 61 con automezzo, per **oltre 200 ore di intervento** e **2.556 chilometri percorsi** con 7 automezzi. Hanno preso parte alle attività **28 volontari**, per **272 presenze complessive**. I dati sono aggregati e non contengono nomi né altri dati personali: sono pubblicati in formato aperto nella pagina [Open Data](/open-data/) e si aggiornano a ogni nuovo export del gestionale.
 
 I volontari hanno risposto con **disponibilità** e **professionalità**, anche in giornate di caldo intenso e turni lunghi.
 
@@ -276,6 +278,7 @@ Una sintesi di quanto si sente ripetere da chi coordina le sale operative: ad ag
 - Articolo: [Luglio mese più caldo](/comunicazioni/2026-07-01-luglio-mese-piu-caldo-statistico/)
 - Articolo: [Sagre e feste estive](/comunicazioni/2026-07-21-sagre-feste-patronali-sicurezza-eventi/)
 - Articolo: [Colpo di calore primo soccorso](/comunicazioni/2026-07-19-colpo-calore-riconoscere-primo-soccorso/)
+- [Open Data del Gruppo](/open-data/) — le statistiche aggregate degli interventi in formato aperto
 - [Protezione Civile Lazio](https://protezionecivile.regione.lazio.it/)
 - [Comune di Genzano](https://www.comune.genzanodiroma.roma.it/)
 
