@@ -52,7 +52,7 @@ Diventare volontario di Protezione Civile significa mettere tempo, competenze e 
 <div class="col-md-6">
 <div class="card-body p-4">
 <h2 class="h4 text-primary mt-0">Aderiamo alla campagna della Regione Lazio</h2>
-<p>Il Gruppo partecipa alla campagna regionale <strong>«Non c'è Protezione Civile senza di te»</strong>, che invita i cittadini — soprattutto i più giovani — a entrare nel volontariato di Protezione Civile.</p>
+<p>Il Gruppo partecipa alla campagna regionale <strong>«Non c'è Protezione Civile senza di te»</strong>, che invita i cittadini — soprattutto i più giovani — a entrare nel volontariato di Protezione Civile. Nel <a href="/comunicazioni/2026-07-31-video-campagna-lazio-intervista-volontario-aib-pomezia/">video più recente della campagna</a> il protagonista è un volontario del nostro Gruppo, intervistato durante un intervento antincendio boschivo.</p>
 <p class="mb-0"><a href="/campagna-volontari/" class="btn btn-primary"><i class="bi bi-collection-play me-1" aria-hidden="true"></i> Guarda tutti i materiali della campagna</a> <a href="/comunicazioni/2026-06-24-campagna-regione-lazio-diventa-volontario/" class="btn btn-outline-primary"><i class="bi bi-play-circle me-1" aria-hidden="true"></i> Leggi l'articolo</a></p>
 </div>
 </div>
