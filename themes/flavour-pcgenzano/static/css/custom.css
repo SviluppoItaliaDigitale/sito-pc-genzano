@@ -7234,6 +7234,16 @@ html.a11y-pause-anim .banner-volontariato .card:focus-within { transform: none; 
   box-shadow: 0 0.25rem 0.75rem rgba(0, 51, 102, 0.18);
   background: #000;
 }
+/* Variante per video verticali 9:16 (reel): riquadro più stretto,
+   il player video.js segue le proporzioni dagli attributi width/height. */
+.article-body figure.video-campagna.video-verticale {
+  max-width: 400px;
+}
+.article-body figure.video-campagna.video-verticale .video-js {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 9 / 16;
+}
 @media print {
   figure.video-campagna video { display: none; }
   figure.video-campagna::after {
