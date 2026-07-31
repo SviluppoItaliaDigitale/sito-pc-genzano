@@ -1,6 +1,6 @@
 ---
 title: "Incendi boschivi, il punto ISPRA: in Italia oltre 1.000 grandi roghi e 741 km² bruciati dall'inizio dell'anno"
-date: 2026-08-01
+date: 2026-08-01T00:02:00+02:00
 description: "I dati ISPRA aggiornati al 28 luglio: Italia tra i Paesi europei più colpiti, con Sicilia, Calabria e Puglia in testa. Colpiti anche Gran Paradiso e Pollino."
 badge: "Informazione"
 priorita: "normale"
