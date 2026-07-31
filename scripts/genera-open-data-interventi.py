@@ -193,7 +193,9 @@ def main():
                "al": max(date).isoformat() if date else None}
     per_label = ""
     if date:
-        per_label = f"dal {min(date).day} {MESI_NOME[min(date).month]} {min(date).year}"
+        d0, d1 = min(date), max(date)
+        per_label = (f"dal {d0.day} {MESI_NOME[d0.month]} {d0.year} "
+                     f"al {d1.day} {MESI_NOME[d1.month]} {d1.year}")
 
     # tipologie: si usa "Tipologia evento" (vocabolario controllato a menu) dove
     # compilato; dove è vuoto ("-") si ripiega sul "Motivo", che gli operatori

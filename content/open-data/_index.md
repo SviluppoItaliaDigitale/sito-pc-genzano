@@ -4,7 +4,7 @@ description: "Dataset aperti delle attività del Gruppo Comunale Volontari di Pr
 layout: "single"
 toc: true
 tts: true
-dataUltimaRevisione: "2026-06-28"
+dataUltimaRevisione: "2026-07-31"
 ---
 
 Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** pubblica i dati delle proprie attività in **formato aperto** (CSV + JSON), riusabili da chiunque sotto **licenza Creative Commons BY 4.0** ai sensi del **D.Lgs. 36/2006** ("Codice di riutilizzo dell'informazione del settore pubblico") e della direttiva **(UE) 2019/1024** sui dati aperti.
@@ -49,7 +49,7 @@ Il feed CAP è generato automaticamente da `data/allerta.json` (a sua volta alim
 
 {{< grafico-csv file="static/open-data/automezzi-impiegati.csv" tipo="barre" titolo="Automezzi impiegati (numero di interventi per mezzo)" unita="interventi" >}}
 
-Periodo coperto: **dal 4 aprile 2026**. I dati sono **generati automaticamente** dall'export del gestionale, che **resta riservato e non viene pubblicato** perché contiene dati personali: il sito ne espone solo i numeri aggregati.
+Il periodo coperto e la data di aggiornamento sono indicati nel riquadro in cima alle statistiche e nel campo `periodo` di ogni dataset. I dati sono **generati automaticamente** dall'export del gestionale, che **resta riservato e non viene pubblicato** perché contiene dati personali: il sito ne espone solo i numeri aggregati.
 
 **Scarica i dati grezzi:**
 

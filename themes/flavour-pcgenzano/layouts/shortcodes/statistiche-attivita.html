@@ -8,6 +8,18 @@
   (dict "tit" "Interventi" "file" "static/open-data/statistiche-interventi.csv")
   (dict "tit" "Volontari" "file" "static/open-data/statistiche-volontari.csv")
 }}
+{{/* Data di aggiornamento letta al build dal JSON generato (fonte unica):
+     periodo.al = ultimo giorno coperto dai dati, generato_il = data export.
+     Niente date scritte a mano in pagina (anti-drift). */}}
+{{ $meta := "static/open-data/statistiche-interventi.json" }}
+{{ if fileExists $meta }}
+  {{ $j := os.ReadFile $meta | transform.Unmarshal }}
+  {{ with $j.periodo.al }}
+<div class="alert alert-light" role="note">
+  📅 Dati aggiornati al <strong>{{ time.AsTime . | time.Format ":date_long" }}</strong>{{ with $j.generato_il }} (ultimo export del gestionale elaborato il {{ time.AsTime . | time.Format ":date_long" }}){{ end }}.
+</div>
+  {{ end }}
+{{ end }}
 <div class="table-responsive">
 <table>
 <caption>Statistiche operative del Gruppo — dati provvisori, aggregati e anonimi</caption>
