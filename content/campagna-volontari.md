@@ -19,6 +19,18 @@ La rilanciamo sui nostri canali social con contenuti pensati per far capire, in 
          titolo="Spot di 15 secondi della campagna «Non c'è Protezione Civile senza di te» della Regione Lazio"
          caption="Lo spot di 15 secondi della campagna. Video: Regione Lazio." >}}
 
+## Il nostro volontario, dal fronte del fuoco
+
+Il video più recente della campagna è girato durante un intervento antincendio boschivo a Pomezia. Il protagonista è un volontario del nostro Gruppo: racconta l'attivazione, il lavoro dei moduli antincendio e chiude con l'invito della campagna, detto da chi l'incendio lo ha appena affrontato.
+
+{{< video src="/video/campagna-lazio-intervista-volontario-aib-pomezia.mp4"
+         poster="/video/campagna-lazio-intervista-aib-poster.webp"
+         titolo="Video della campagna «Non c'è Protezione Civile senza di te»: intervista a un volontario del nostro Gruppo durante un intervento antincendio boschivo a Pomezia"
+         verticale="true"
+         caption="L'intervista al nostro volontario durante l'intervento antincendio boschivo a Pomezia. Video: Regione Lazio, pubblicato dal presidente Francesco Rocca." >}}
+
+La storia completa è nell'articolo [Il nostro volontario nel video della Regione Lazio](/comunicazioni/2026-07-31-video-campagna-lazio-intervista-volontario-aib-pomezia/).
+
 ## Cosa fa davvero un volontario
 
 Un carosello per spiegare che la Protezione Civile non interviene solo nelle grandi emergenze: protegge ogni giorno persone e territori, assiste chi ha bisogno, presidia le aree dedicate durante gli eventi e informa la popolazione.
