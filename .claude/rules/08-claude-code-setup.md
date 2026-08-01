@@ -45,7 +45,7 @@ Questo file documenta come configurare l'ambiente di Claude Code per lavorare su
 | **Cassazione SentenzeWeb** (`italgiure.giustizia.it`) | Timeout 30s (HTTP 408) | Sito raggiungibile ma lento; aumentare `timeout: 60000` nel JSON request o retry |
 | **Comune Genzano** (`www.comune.genzanodiroma.rm.it`) | DNS resolution failed | Dominio davvero non risponde — sito offline o cambio URL |
 | **USR Lazio** (`www.lazio.istruzione.it`) | ECONNREFUSED | Server offline; cercare endpoint alternativo |
-| **protezionecivile.regione.lazio.it** | ECONNREFUSED | Sotto-sito offline; usare `www.regione.lazio.it` |
+| ~~protezionecivile.regione.lazio.it~~ | ~~ECONNREFUSED~~ | 🟢 **AGGIORNAMENTO 01/08/2026**: è il **nuovo portale ufficiale** della PC regionale (301 → `www.regione.lazio.it/protezione-civile`, HTTP 200); il vecchio path `/cittadini/protezione-civile` dà 404. Sweep URL fatto a luglio 2026 (PR #753 e correlate): i contenuti del sito usano il nuovo dominio, NON "correggerli" al contrario |
 
 **Comando Firecrawl via MCP (sessione Claude Code):**
 
@@ -380,7 +380,7 @@ Estensione della whitelist con 25 ulteriori siti istituzionali testati e funzion
 | **Parco Castelli Romani** (`www.parcocastelliromani.it`) | SSL CA error | ❓ Non testato post-Firecrawl, probabilmente OK come gli altri SSL CA |
 | **Comune Genzano** (`www.comune.genzanodiroma.rm.it`) | ECONNREFUSED | ❌ DNS resolution failed anche via Firecrawl — sito offline o cambio URL |
 | **USR Lazio** (`www.lazio.istruzione.it`) | ECONNREFUSED | ❌ Server offline; cercare endpoint alternativo |
-| **protezionecivile.regione.lazio.it** | ECONNREFUSED | ❌ Sotto-sito offline; usare `www.regione.lazio.it` |
+| ~~protezionecivile.regione.lazio.it~~ | ~~ECONNREFUSED~~ | 🟢 Dal luglio 2026 è il **nuovo portale ufficiale** PC regionale (vedi nota nella tabella sopra) |
 
 **Pattern interpretativi:**
 - **SPA JS** (DPC, EUR-Lex, DG ECHO): risolto da Firecrawl che renderizza Chromium headless lato server.
