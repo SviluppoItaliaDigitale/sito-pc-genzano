@@ -17,6 +17,7 @@ Questo kit propone schede semplici e stampabili per preparare in anticipo inform
 | [Guida operatori](/formazione/kit-calamita-disabilita-adulti/00-guida-operatori.html) | **Leggere prima.** Indicazioni pratiche per disabilità motoria, sensoriale, cognitiva, comunicativa o psichica; cosa fare e cosa evitare nel primo contatto. |
 | [Carta d'identità di emergenza](/formazione/kit-calamita-disabilita-adulti/01-carta-identita-disabilita.html) | Per raccogliere anagrafica, contatti, ausili, farmaci, allergie, bisogni comunicativi e indicazioni utili ai soccorritori. |
 | [Checklist evacuazione personale](/formazione/kit-calamita-disabilita-adulti/02-checklist-evacuazione.html) | Per preparare in anticipo borsa, documenti, ausili, farmaci, batterie, caricabatterie, contatti e indicazioni di trasporto. Da controllare periodicamente. |
+| [Carta CAA dei bisogni](/formazione/kit-calamita-disabilita-adulti/03-bisogni-caa.html) | Per comunicare bisogni essenziali indicando pittogrammi quando parlare è difficile: aiuto, acqua, cibo, medicina, famiglia, sì, no e altri. Con nota d'uso per caregiver e soccorritori. |
 
 ## Riferimenti utili
 

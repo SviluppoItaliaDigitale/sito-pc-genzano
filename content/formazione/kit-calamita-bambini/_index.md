@@ -49,6 +49,7 @@ Queste schede sono **pronte da stampare in formato A4** e possono essere usate d
 | 18 | [Diario delle emozioni quotidiano](/formazione/kit-calamita-bambini/18-diario-emozioni.html) | Per scegliere una faccina, scrivere o disegnare come è andata la giornata. |
 | 19 | [Disegna chi ti ha aiutato oggi](/formazione/kit-calamita-bambini/19-disegna-chi-ti-ha-aiutato.html) | Per riconoscere persone di aiuto: familiari, volontari, insegnanti, amici. |
 | 20 | [Carta CAA — dimmelo con un pittogramma](/formazione/kit-calamita-bambini/20-carta-caa-comunicazione.html) | Per comunicare bisogni essenziali con immagini: fame, sete, paura, bagno, dolore, aiuto. |
+| 47 | [Colora il Canadair antincendio](/formazione/kit-calamita-bambini/47-colora-canadair.html) | Per conoscere il Canadair, l’aereo che raccoglie l’acqua nei laghi e la sgancia sugli incendi boschivi. |
 
 ### Schede per fascia 9-11 anni
 

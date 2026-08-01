@@ -20,7 +20,7 @@ Le schede sono **pronte da stampare in formato A4**, utilizzabili da volontari d
 |---|---|---|---|
 | 0 | [Guida operatori](/formazione/kit-calamita-anziani/00-guida-operatori-anziani.html) | Volontari PC, operatori, familiari | **Leggere prima di iniziare**. Contiene indicazioni pratiche su approccio rispettoso, comunicazione, farmaci, orientamento, segnali di attenzione e coinvolgimento della rete di supporto. |
 
-### 10 schede per anziani — pubblicate
+### Schede per anziani — pubblicate
 
 | # | Scheda | Funzione operativa |
 |---|---|---|
@@ -34,6 +34,7 @@ Le schede sono **pronte da stampare in formato A4**, utilizzabili da volontari d
 | 8 | [Cruciverba della memoria](/formazione/kit-calamita-anziani/08-cruciverba-memoria.html) | 8 parole con riferimenti culturali familiari e quotidiani. |
 | 9 | [Sudoku 6×6 caratteri grandi](/formazione/kit-calamita-anziani/09-sudoku.html) | Sudoku semplificato con soluzione. Caratteri grandi per maggiore leggibilità. |
 | 10 | [Lettera ai miei nipoti](/formazione/kit-calamita-anziani/10-lettera-nipoti.html) | Per lasciare un pensiero, un ricordo o un messaggio affettuoso alla famiglia. |
+| 11 | [Checklist borsa di emergenza 72 ore](/formazione/kit-calamita-anziani/11-borsa-emergenza-72h.html) | Per preparare in anticipo la borsa pronta: farmaci, documenti, occhiali e apparecchi di riserva, acqua, torcia, radio a pile, coperta, ausili e contatti scritti a mano. Con caselle grandi da spuntare. |
 
 ## Come usarle in pratica
 
