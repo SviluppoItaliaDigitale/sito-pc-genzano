@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Comunicare con i simboli in emergenza (CAA) — Scuola Primaria</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Primaria. Tabella di Comunicazione Aumentativa Alternativa con 12 pittogrammi ARASAAC da indicare quando in emergenza non si riesce a parlare.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    /* Griglia CAA: 12 celle indicabili, bordo blu istituzionale */
+    .caa-griglia {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.55rem;
+      margin: 0.6rem 0 0.8rem 0;
+    }
+    .caa-cella {
+      border: 2px solid #003366;
+      border-radius: 8px;
+      background: #fff;
+      padding: 0.45rem 0.3rem 0.35rem 0.3rem;
+      text-align: center;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .caa-cella img {
+      display: block;
+      width: 100%;
+      max-width: 82px;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      margin: 0 auto 0.25rem auto;
+    }
+    .caa-cella .caa-parola {
+      display: block;
+      font-weight: 700;
+      color: #003366;
+      font-size: 0.95rem;
+      line-height: 1.2;
+    }
+    .caa-attribuzione {
+      font-size: 0.72rem;
+      color: #495057;
+      line-height: 1.45;
+      border-top: 1px solid #dee2e6;
+      padding-top: 0.35rem;
+      margin-top: 0.5rem;
+    }
+    @media (max-width: 600px) {
+      .caa-griglia { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media print {
+      .scheda-page { page-break-after: always; break-after: page; }
+      .scheda-page:last-of-type { page-break-after: auto; break-after: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">← Torna alle schede</a>
+    <span class="scheda-titolo">Comunicare con i simboli (CAA) — Primaria</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <!-- ══════════════ PAGINA 1 — La tabella di comunicazione ══════════════ -->
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Comunicare con i simboli in emergenza (CAA)</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria · Tabella da ritagliare e conservare</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 6-11 anni, famiglie</span>
+      <span><strong>Durata:</strong> 30 min</span>
+      <span><strong>Discipline:</strong> Educazione civica, Italiano, Inclusione</span>
+    </div>
+
+    <div class="scheda-messaggio-chiave">
+      <strong>Messaggio chiave:</strong> in emergenza, a volte le parole non escono: per la paura,
+      perché non si conosce bene l'italiano, o perché parlare è difficile. Con questa tabella basta
+      <strong>indicare un simbolo con il dito</strong> per farsi capire.
+    </div>
+
+    <p class="scheda-intro">
+      Questa è una <strong>tabella di Comunicazione Aumentativa Alternativa (CAA)</strong>: una griglia di
+      simboli con la parola scritta sotto. Chi non riesce a parlare la usa così: <strong>indica il simbolo</strong>
+      di quello che vuole dire, e chi lo aiuta lo legge ad alta voce. Funziona anche al contrario: un adulto
+      può indicare i simboli per fare una domanda («Hai <em>fame</em>? Hai <em>freddo</em>?»).
+    </p>
+
+    <h2 class="scheda-h2">👉 La mia tabella: indico quello che voglio dire</h2>
+
+    <div class="caa-griglia">
+      <div class="caa-cella">
+        <img src="/pittogrammi/arasaac/aiuto.png" alt="Pittogramma: persona che chiede aiuto alzando la mano">
+        <span class="caa-parola">Aiuto</span>
+      </div>
+      <div class="caa-cella">
+        <img src="/pittogrammi/arasaac/si.png" alt="Pittogramma: segno per dire sì">
+        <span class="caa-parola">Sì</span>
+      </div>
+      <div class="caa-cella">
+        <img src="/pittogrammi/arasaac/no.png" alt="Pittogramma: segno per dire no">
+        <span class="caa-parola">No</span>
+      </div>
+      <div class="caa-cella">
+        <img src="/pittogrammi/arasaac/acqua.png" alt="Pittogramma: acqua">
+        <span class="caa-parola">Acqua</span>
+      </div>
+      <div class="caa-cella">
+        <img src="/pittogrammi/arasaac/cibo.png" alt="Pittogramma: cibo">
+        <span class="caa-parola">Cibo</span>
+      </div>
+      <div class="caa-cella">
+        <img src="/pittogrammi/arasaac/medicina.png" alt="Pittogramma: medicina">
+        <span class="caa-parola">Medicina</span>
+      </div>
+      <div class="caa-cella">
+        <img src="/pittogrammi/arasaac/famiglia.png" alt="Pittogramma: famiglia">
+        <span class="caa-parola">Famiglia</span>
+      </div>
+      <div class="caa-cella">
+        <img src="/pittogrammi/arasaac/casa.png" alt="Pittogramma: casa">
+        <span class="caa-parola">Casa</span>
+      </div>
+      <div class="caa-cella">
+        <img src="/pittogrammi/arasaac/caldo.png" alt="Pittogramma: persona accaldata, ho caldo">
+        <span class="caa-parola">Ho caldo</span>
+      </div>
+      <div class="caa-cella">
+        <img src="/pittogrammi/arasaac/coperta.png" alt="Pittogramma: coperta, per dire ho freddo">
+        <span class="caa-parola">Ho freddo</span>
+      </div>
+      <div class="caa-cella">
+        <img src="/pittogrammi/arasaac/telefono.png" alt="Pittogramma: telefono">
+        <span class="caa-parola">Telefono</span>
+      </div>
+      <div class="caa-cella">
+        <img src="/pittogrammi/arasaac/112.png" alt="Pittogramma: numero di emergenza 112">
+        <span class="caa-parola">Chiama il 112</span>
+      </div>
+    </div>
+
+    <ul class="scheda-elenco">
+      <li><strong>Indica</strong> il simbolo con il dito: non serve parlare.</li>
+      <li>Puoi indicare <strong>più simboli in fila</strong>: «Aiuto» + «Famiglia» = «aiutami a trovare la mia famiglia».</li>
+      <li>Chi ti aiuta può <strong>farti domande</strong> indicando i simboli: tu rispondi con «Sì» o «No».</li>
+    </ul>
+
+    <div class="caa-attribuzione">
+      <strong>Pittogrammi:</strong> ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao,
+      licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Comunicare con i simboli (CAA)" · Primaria · pagina 1 di 2 · rev. 01 · agosto 2026</span>
+    </footer>
+
+  </article>
+
+  <!-- ══════════════ PAGINA 2 — Attività e guida per il docente ══════════════ -->
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">CAA in emergenza — attività e guida per il docente</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria · pagina 2 di 2</div>
+      </div>
+    </header>
+
+    <h2 class="scheda-h2">🖍️ Attività 1 — Colora i simboli che useresti se…</h2>
+    <p style="font-size: 0.92rem; margin: 0 0 0.4rem 0;">
+      Torna alla tabella della pagina 1. Per ogni situazione, <strong>colora il bordo</strong> dei simboli
+      che indicheresti (puoi usare un colore diverso per ogni situazione).
+    </p>
+    <ol class="scheda-elenco">
+      <li>🟦 <strong>Blu:</strong> hai tanta sete dopo essere uscito da scuola per una prova di evacuazione.</li>
+      <li>🟩 <strong>Verde:</strong> sei al punto di raccolta ma non vedi la tua famiglia.</li>
+      <li>🟨 <strong>Giallo:</strong> un tuo compagno si sente male e serve un adulto subito.</li>
+      <li>🟥 <strong>Rosso:</strong> fa molto freddo e vorresti qualcosa per coprirti.</li>
+    </ol>
+
+    <h2 class="scheda-h2">✏️ Attività 2 — Abbina la frase al simbolo</h2>
+    <p style="font-size: 0.92rem; margin: 0 0 0.4rem 0;">
+      Scrivi accanto a ogni frase la parola del simbolo giusto della tabella.
+    </p>
+    <div class="scheda-cs-domanda">
+      <p>1. «Ho bisogno di bere.» → ______________________</p>
+      <p>2. «Voglio sapere dove sono i miei genitori.» → ______________________</p>
+      <p>3. «Serve un soccorso urgente: bisogna telefonare al numero di emergenza.» → ______________________</p>
+      <p>4. «Devo prendere la mia pastiglia di ogni giorno.» → ______________________</p>
+    </div>
+
+    <h2 class="scheda-h2">👩‍🏫 Per il docente — che cos'è la CAA e come usarla in classe</h2>
+    <ul class="scheda-elenco">
+      <li>La <strong>Comunicazione Aumentativa Alternativa (CAA)</strong> è un insieme di strumenti — qui una tabella
+        di pittogrammi — che <strong>affianca</strong> la parola, senza mai sostituire il testo o la voce. Aiuta alunni con
+        disabilità comunicative, bambini che non parlano ancora bene l'italiano e chiunque sia bloccato dallo stress.</li>
+      <li>In emergenza la CAA serve a <strong>tutti</strong>: la paura può togliere la parola anche a chi di solito parla benissimo.</li>
+      <li><strong>Come introdurla:</strong> mostrare la tabella, nominare ogni simbolo ad alta voce, poi giocare a
+        «comunica senza parlare» a coppie (uno indica, l'altro interpreta e verifica con «Sì/No»).</li>
+      <li><strong>Dove tenerla:</strong> una copia plastificata nella cassetta di emergenza della classe e una nel
+        diario o nello zaino, insieme al piano familiare.</li>
+      <li>Sul nostro sito trovi tabelle CAA più complete e stampabili: <a href="/tabelle-comunicazione/">Tabelle di comunicazione (CAA)</a>.</li>
+    </ul>
+
+    <div class="soluzione-capovolta">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;">
+        <strong>Attività 1</strong> (risposte attese): 1) Acqua · 2) Famiglia (+ Aiuto) · 3) Aiuto + Chiama il 112 · 4) Ho freddo.<br>
+        <strong>Attività 2:</strong> 1) Acqua · 2) Famiglia · 3) Chiama il 112 · 4) Medicina.
+      </p>
+    </div>
+
+    <div class="scheda-nota-locale">
+      <strong>Approfondimenti per Genzano:</strong>
+      <a href="/tabelle-comunicazione/">Tabelle di comunicazione CAA</a> ·
+      <a href="/facile-da-leggere/">Facile da leggere</a> ·
+      <a href="/attribuzioni-pittogrammi/">Attribuzioni pittogrammi</a> ·
+      <a href="/piano-familiare/">Piano Familiare</a>.
+    </div>
+
+    <h2 class="scheda-h2">📚 Fonti</h2>
+    <ul class="scheda-elenco" style="font-size: 0.85rem;">
+      <li>ARASAAC — Centro Aragonese per la Comunicazione Aumentativa Alternativa (arasaac.org).</li>
+      <li>Dipartimento della Protezione Civile — comunicazione accessibile in emergenza.</li>
+      <li>Sito Protezione Civile Genzano di Roma — sezione Tabelle di comunicazione (CAA).</li>
+    </ul>
+
+    <div class="caa-attribuzione">
+      <strong>Pittogrammi:</strong> ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao,
+      licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Comunicare con i simboli (CAA)" · Primaria · pagina 2 di 2 · rev. 01 · agosto 2026</span>
+    </footer>
+
+  </article>
+
+</body>
+</html>
