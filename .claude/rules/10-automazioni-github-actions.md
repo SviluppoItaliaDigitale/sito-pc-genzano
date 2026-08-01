@@ -39,9 +39,9 @@ Gestione: https://claude.ai/code/routines/trig_01RESwx5eFP4SuTpF1iCFY4j. Le sess
 3. **Refusi** + coerenza numeri di emergenza (112 / 803 555 / 1530).
 4. **Qualità strutturale**: banda affiliazioni in stampa (ESC + E10435833, `.scheda::after` di `kit-calamita-shared/print.css`), soluzioni giochi capovolte, template `.carta-id-*`, WCAG di base, attribuzione ARASAAC.
 5. **Freschezza dei dati** (recapiti, edizioni, link; contenuti sanitari solo da fonti istituzionali).
-6. **Ampliamento mirato**: max 1-2 materiali/settimana solo su buchi reali della matrice categorie × materiali.
+6. **Ampliamento mirato**: max 1-2 materiali/settimana solo su buchi reali della matrice categorie × materiali. 🔴 I materiali **nuovi** seguono la **Categoria B** (§ "Lavorazione autonoma delle issue automatiche"): PR preparata completa ma **NON mergiata** — trattandosi di indicazioni sanitarie/per persone vulnerabili, il merge attende l'OK esplicito dell'utente.
 7. **Coerenza ecosistema**: hub, mappa-sito, assistente (sotto-albero `kc_*`), pacchetti.
-8. **Pubblicazione con build pulita** fino a live; se non c'è nulla da fare lo dichiara.
+8. **Pubblicazione con build pulita**: le correzioni di **manutenzione** (Categoria A) vanno fino a live; gli **ampliamenti** restano in PR come da punto 6. Se non c'è nulla da fare lo dichiara.
 
 Gestione: https://claude.ai/code/routines/trig_013VgcKgHzKYkUrJeeDP7EX5.
 
