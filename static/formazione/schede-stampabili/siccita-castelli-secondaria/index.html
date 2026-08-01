@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: La siccità ai Castelli Romani — leggere i dati (Secondaria I)</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Secondaria I. La siccità ai Castelli Romani spiegata con i dati climatici reali di Genzano (pioggia annua e giorni molto caldi, rianalisi ERA5): lettura della tabella, medie, scarti e discussione sul risparmio idrico.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .nozione-box { background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.88rem; line-height: 1.55; }
+    .nozione-box .titolo-n { font-weight: 700; color: var(--scheda-blu); margin-bottom: 0.2rem; font-size: 0.93rem; }
+    .nozione-box .fonte { font-style: italic; color: #495057; font-size: 0.78rem; }
+    .glossario-mini { display: grid; grid-template-columns: auto 1fr; gap: 0.25rem 0.7rem; margin: 0.35rem 0; font-size: 0.85rem; line-height: 1.45; padding: 0.55rem 0.85rem; background: #fff; border: 1.5px solid var(--scheda-bordo); border-radius: 6px; }
+    .glossario-mini dt { font-weight: 700; color: var(--scheda-blu); white-space: nowrap; }
+    .glossario-mini dd { margin: 0; }
+    .dati-tabella { width: 100%; border-collapse: collapse; margin: 0.4rem 0; font-size: 0.88rem; }
+    .dati-tabella th, .dati-tabella td { border: 1.5px solid var(--scheda-bordo); padding: 0.32rem 0.55rem; text-align: left; }
+    .dati-tabella th { background: var(--scheda-blu); color: #fff; font-weight: 700; font-size: 0.82rem; }
+    .dati-tabella td.num { text-align: right; font-family: "Courier New", monospace; font-weight: 600; }
+    .dati-tabella tbody tr:nth-child(even) { background: #f4f7fb; }
+    .dati-tabella caption { caption-side: bottom; font-size: 0.76rem; font-style: italic; color: #495057; text-align: left; padding-top: 0.25rem; }
+    .domanda-card { padding: 0.5rem 0.7rem; background: #fff; border: 1.5px solid var(--scheda-bordo); border-radius: 6px; margin-bottom: 0.35rem; font-size: 0.9rem; }
+    .domanda-card .num-q { width: 1.4rem; height: 1.4rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.78rem; margin-right: 0.35rem; }
+    .righe { display: grid; gap: 0.3rem; padding-left: 1.9rem; margin-top: 0.25rem; }
+    .righe .r { border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.3rem; }
+    .calcolo { background: #f4f7fb; border-left: 3px solid var(--scheda-blu); padding: 0.4rem 0.6rem; border-radius: 0 4px 4px 0; font-size: 0.8rem; color: #ced4da; font-style: italic; min-height: 2.6rem; margin: 0.3rem 0 0 1.9rem; }
+    .calcolo::before { content: "Spazio per il calcolo:"; }
+    .lab-box { background: #e7f5ec; border: 1.5px solid #198754; border-radius: 8px; padding: 0.6rem 0.85rem; margin: 0.5rem 0; font-size: 0.88rem; line-height: 1.5; }
+    .lab-box .titolo-l { font-weight: 700; color: #0f5132; margin-bottom: 0.2rem; font-size: 0.93rem; }
+    .istruzioni-prof { margin-top: 0.7rem; padding: 0.5rem 0.85rem; background: #fff8e6; border-left: 4px solid var(--scheda-oro); border-radius: 0 6px 6px 0; font-size: 0.79rem; color: #664d03; line-height: 1.45; }
+    .scheda-h2 { font-size: 1rem; margin: 0.6rem 0 0.25rem; }
+  </style>
+</head>
+<body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
+    <span class="scheda-titolo">La siccità ai Castelli Romani — Secondaria I</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">La siccità ai Castelli Romani: leggere i dati</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Secondaria di primo grado (11-13 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 11-13 anni</span>
+      <span><strong>Obiettivo:</strong> leggere una serie di dati climatici reali, calcolare media e scarto, discutere il risparmio idrico</span>
+      <span><strong>Discipline:</strong> matematica, scienze, geografia, ed. civica</span>
+    </div>
+
+    <p class="scheda-intro">
+      La <strong>siccità</strong> è un rischio diverso dagli altri: non arriva con un boato, ma si costruisce in <strong>mesi</strong> di pioggia scarsa. Per accorgersene bisogna saper <strong>leggere i dati</strong>. In questa scheda usi numeri veri: la pioggia caduta ogni anno a <strong>Genzano di Roma</strong> e i giorni in cui la temperatura massima ha raggiunto almeno 35 °C, ricavati dalla rianalisi climatica <strong>ERA5</strong>. Gli stessi dati che trovi, in forma di grafico, nel <strong>Laboratorio meteo</strong> del nostro sito.
+    </p>
+
+    <h2 class="scheda-h2">💧 Cos'è la siccità (e perché ne esistono due "tipi")</h2>
+    <div class="nozione-box">
+      <div class="titolo-n">Siccità meteorologica e siccità idrologica</div>
+      Si parla di <strong>siccità meteorologica</strong> quando, per un periodo prolungato, le <strong>precipitazioni sono molto inferiori alla media</strong> della zona. Se la scarsità dura a lungo, cala anche l'acqua "immagazzinata" nel territorio: si abbassano le <strong>falde</strong> sotterranee, i fiumi e i laghi. Questa è la <strong>siccità idrologica</strong>, quella che si trasforma in <strong>crisi idrica</strong> per persone, agricoltura ed ecosistemi. È un rischio <em>cumulativo</em>: non c'è un singolo "evento" da datare, ma un peggioramento graduale — per questo si sorveglia con il monitoraggio continuo di piogge, temperature, falde e portate dei fiumi.
+      <div class="fonte">Fonti: DPC; ISPRA; Autorità di Bacino Distrettuale dell'Appennino Centrale.</div>
+    </div>
+
+    <div class="nozione-box">
+      <div class="titolo-n">Perché riguarda i Castelli Romani</div>
+      I Castelli Romani dipendono in larga parte dalla <strong>falda vulcanica dei Colli Albani</strong>, alimentata <strong>solo dalle piogge</strong>: anni di precipitazioni scarse e prelievi elevati ne abbassano il livello, come mostra anche il calo storico dei laghi di <strong>Albano</strong> e di <strong>Nemi</strong>. Le crisi idriche del <strong>2017</strong> e degli anni successivi hanno interessato anche il Lazio, con misure di contenimento dei consumi. In più, in Italia le reti idriche disperdono in media circa il <strong>30%</strong> dell'acqua immessa: la falda si ricarica in <strong>anni</strong>, non in giorni, quindi ogni spreco pesa a lungo.
+      <div class="fonte">Fonti: pagina "Siccità e crisi idrica" del nostro sito; ISPRA; CMCC.</div>
+    </div>
+
+    <h2 class="scheda-h2">📊 I dati veri di Genzano (2016-2025)</h2>
+    <table class="dati-tabella">
+      <caption>Dati: rianalisi ERA5 via Open-Meteo (CC BY 4.0), allineata al Copernicus Climate Data Store. Valori interi, trascritti dagli open data del sito (pioggia in millimetri; 1 mm = 1 litro per metro quadrato).</caption>
+      <thead>
+        <tr><th>Anno</th><th>Pioggia totale (mm)</th><th>Giorni con massima ≥ 35 °C</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>2016</td><td class="num">982</td><td class="num">0</td></tr>
+        <tr><td>2017</td><td class="num">908</td><td class="num">5</td></tr>
+        <tr><td>2018</td><td class="num">1530</td><td class="num">0</td></tr>
+        <tr><td>2019</td><td class="num">1317</td><td class="num">0</td></tr>
+        <tr><td>2020</td><td class="num">1178</td><td class="num">2</td></tr>
+        <tr><td>2021</td><td class="num">1174</td><td class="num">0</td></tr>
+        <tr><td>2022</td><td class="num">962</td><td class="num">2</td></tr>
+        <tr><td>2023</td><td class="num">1162</td><td class="num">2</td></tr>
+        <tr><td>2024</td><td class="num">1078</td><td class="num">2</td></tr>
+        <tr><td>2025</td><td class="num">1206</td><td class="num">0</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size: 0.82rem; color: #495057; margin: 0.15rem 0 0.4rem; font-style: italic;">
+      Come si legge: ogni riga è un anno. La seconda colonna dice quanta pioggia è caduta in tutto l'anno; la terza conta le giornate "molto calde". Un anno con poca pioggia <em>e</em> molte giornate calde mette sotto stress la falda due volte: entra meno acqua e se ne consuma di più.
+    </p>
+
+    <h2 class="scheda-h2">📖 Glossario dei dati</h2>
+    <dl class="glossario-mini">
+      <dt>Serie storica</dt><dd>lo stesso dato misurato anno dopo anno. Serve a vedere le tendenze, non il singolo anno.</dd>
+      <dt>Media</dt><dd>somma dei valori divisa per quanti sono. Dice il valore "tipico" di un periodo.</dd>
+      <dt>Scarto dalla media</dt><dd>differenza fra un valore e la media (con segno + o −). Dice se un anno è stato sopra o sotto il "tipico".</dd>
+      <dt>Rianalisi ERA5</dt><dd>ricostruzione scientifica del clima passato, punto per punto sul territorio, prodotta dal programma europeo Copernicus.</dd>
+      <dt>mm di pioggia</dt><dd>millimetri: 1 mm = 1 litro d'acqua caduto su 1 metro quadrato.</dd>
+    </dl>
+
+    <h2 class="scheda-h2">✏️ Esercizi — al lavoro sui dati</h2>
+
+    <div class="domanda-card">
+      <span class="num-q">1</span><strong>Guarda la colonna della pioggia. Qual è stato l'anno più piovoso e quale il meno piovoso del decennio? Calcola la differenza in mm fra i due.</strong>
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
+      <div class="calcolo"></div>
+    </div>
+
+    <div class="domanda-card">
+      <span class="num-q">2</span><strong>Calcola la media della pioggia dei tre anni 2016, 2017 e 2018. Poi calcola lo scarto dalla media di ciascuno dei tre anni (valore − media, con segno). Che cosa noti sommando i tre scarti?</strong>
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
+      <div class="calcolo"></div>
+    </div>
+
+    <div class="domanda-card">
+      <span class="num-q">3</span><strong>Sfida: calcola la media della pioggia dell'intero decennio 2016-2025 (arrotonda al mm). Quanti e quali anni sono stati SOTTO la media?</strong>
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
+      <div class="calcolo"></div>
+    </div>
+
+    <div class="domanda-card">
+      <span class="num-q">4</span><strong>Ora la colonna dei giorni molto caldi. Quale anno ne ha avuti di più? Quanti giorni ≥ 35 °C ci sono stati in totale nel decennio? Nota qualcosa di particolare sull'anno "campione" dei giorni caldi: com'era la sua pioggia rispetto agli altri anni?</strong>
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <span class="num-q">5</span><strong>Discussione in classe (senza soluzione unica): un anno con poca pioggia e tante giornate calde mette in difficoltà la falda dei Castelli. Quali gesti concreti di risparmio idrico possiamo fare a casa e a scuola? Scrivi almeno 3 proposte e confrontale con i compagni.</strong>
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="lab-box">
+      <div class="titolo-l">🌐 Costruisci il tuo grafico nel Laboratorio meteo</div>
+      Questi numeri diventano grafici interattivi nel <strong>Laboratorio meteo</strong> del nostro sito: <strong>protezionecivilegenzano.it/laboratorio-meteo/</strong>. Trovi gli esempi pronti "La pioggia anno per anno" e "Le giornate molto calde", e puoi costruire da solo un grafico nuovo con i dati climatici live: scegli le variabili, confronta gli anni e verifica i risultati di questi esercizi.
+    </div>
+
+    <div class="soluzione-capovolta">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0 0 2mm;"><strong>(1)</strong> Anno più piovoso: <strong>2018</strong> con 1530 mm; meno piovoso: <strong>2017</strong> con 908 mm. Differenza: 1530 − 908 = <strong>622 mm</strong>.</p>
+      <p style="margin: 0 0 2mm;"><strong>(2)</strong> Media 2016-2018: (982 + 908 + 1530) : 3 = 3420 : 3 = <strong>1140 mm</strong>. Scarti: 2016 → 982 − 1140 = <strong>−158 mm</strong>; 2017 → 908 − 1140 = <strong>−232 mm</strong>; 2018 → 1530 − 1140 = <strong>+390 mm</strong>. La somma dei tre scarti fa <strong>zero</strong> (−158 − 232 + 390 = 0): è una proprietà della media.</p>
+      <p style="margin: 0 0 2mm;"><strong>(3)</strong> Somma del decennio: 11.497 mm; media: 11.497 : 10 = 1149,7 ≈ <strong>1150 mm</strong>. Anni sotto la media: <strong>4</strong> — 2016 (982), 2017 (908), 2022 (962) e 2024 (1078).</p>
+      <p style="margin: 0;"><strong>(4)</strong> L'anno con più giorni molto caldi è il <strong>2017</strong> (5 giorni). Totale del decennio: 5 + 2 + 2 + 2 + 2 = <strong>13 giorni</strong>. Particolarità: il 2017 è anche l'anno <strong>meno piovoso</strong> del decennio (908 mm) — non a caso il 2017 fu un anno di crisi idrica anche nel Lazio.</p>
+    </div>
+
+    <div class="istruzioni-prof">
+      <strong>Per il/la prof · Note didattiche:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li><strong>Origine dei dati</strong>: open data del sito (<em>/open-data/clima-pioggia-annuale-genzano.json</em> e <em>/open-data/clima-giorni-molto-caldi-genzano.json</em>), rianalisi ERA5 via Open-Meteo (CC BY 4.0). La serie completa parte dal 2005: nella serie 2005-2025 <em>tutti</em> i giorni ≥ 35 °C cadono dal 2017 in poi — ottimo spunto per parlare di tendenza al riscaldamento senza allarmismo.</li>
+        <li><strong>Domanda 5</strong> (aperta): spunti dalla pagina del sito "Siccità e crisi idrica" — riparare i rubinetti che gocciolano, doccia breve invece della vasca, riduttori di flusso, lavatrice/lavastoviglie a pieno carico, chiudere il rubinetto mentre ci si lava i denti, riusare l'acqua di lavaggio delle verdure per le piante, segnalare le perdite in strada al gestore.</li>
+        <li><strong>Attenzione metodologica</strong>: un decennio è una finestra breve; la singola annata non "dimostra" il cambiamento climatico. Il ragionamento corretto è sulle <em>tendenze</em> di serie lunghe (rimandare al Laboratorio meteo per la serie completa dal 2005).</li>
+        <li><strong>Estensione</strong>: pagine del sito <a href="/rischi-prevenzione/siccita/">Siccità e crisi idrica</a> e <a href="/conoscere/catalogo-dei-rischi/rischio-siccita/">Il rischio da deficit idrico</a>; scheda <a href="/formazione/schede-stampabili/statistica-rischi-secondaria/">Statistica dei rischi</a> per altri esercizi sui dati.</li>
+        <li><strong>Riferimenti curricolari</strong>: Indicazioni Nazionali 2012 — Matematica (dati e previsioni), Scienze, Geografia. Legge 92/2019. D.M. 183/2024 — Sostenibilità (Agenda 2030, Goal 6 e 13).</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "La siccità ai Castelli Romani" · Secondaria I · matematica/scienze/geografia · rev. 2026-08</span>
+    </footer>
+  </article>
+</body>
+</html>

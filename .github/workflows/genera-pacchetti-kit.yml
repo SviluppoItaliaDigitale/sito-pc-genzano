@@ -64,7 +64,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add static/formazione/pacchetti/
+          # Anche i kit .md: lo script riallinea la dimensione dichiarata "(~N KB/MB)"
+          git add static/formazione/pacchetti/ content/formazione/kit-scuola-*.md
           if git diff --staged --quiet; then
             echo "Nessuna modifica ai pacchetti. Skip commit."
             echo "modificato=false" >> $GITHUB_OUTPUT

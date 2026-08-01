@@ -15,6 +15,21 @@ Tutti i workflow di manutenzione girano **ogni lunedì** (primo giorno della set
 
 **Nasce** perché i video LIS segnalati dall'issue #601 del 22/06 sono stati scoperti "per caso" tre settimane dopo. Le sessioni interattive restano libere di lavorare le issue quando le incontrano (questa regola aggiunge il ramo automatico, non lo sostituisce).
 
+## Routine "Cura schede didattiche scuole" (Routine CCR, 1 agosto 2026)
+
+🟢 **Routine settimanale dedicata alle schede didattiche stampabili** (trigger `trig_01RESwx5eFP4SuTpF1iCFY4j`, cron lunedì 05:00 UTC ≈ 07:00 italiane, sessione fresca a ogni run, notifiche push+email). Richiesta esplicita dell'utente del 01/08/2026: *"un agente che settimanalmente deve assolutamente fare ciò che ti ho chiesto: aggiornare, sistemare, ampliare le schede didattiche in maniera impeccabile"*. Mandato in 8 punti:
+
+1. **Simmetria kit ↔ schede** (rule 02 § "Coerenza kit didattici"): nessuna scheda orfana, nessun link a schede inesistenti.
+2. **Refusi** (`scripts/check-refusi.py` sul perimetro schede).
+3. **Vigenza normativa** delle citazioni nelle schede — con **divieto assoluto di inventare estremi normativi** (NO INVENZIONI; verifica su Normattiva/fonti primarie, in dubbio formulazione prudente).
+4. **Qualità strutturale**: soluzioni degli esercizi col pattern `.soluzione-capovolta` (mai in chiaro sullo stesso foglio), banda affiliazioni in stampa su ogni scheda (vincolo ESC/E10435833, Reg. UE 2021/888), accessibilità WCAG (h1, alt, lang).
+5. **Freschezza dei dati** citati (livelli di allerta, dati climatici, riferimenti a bollettini).
+6. **Ampliamento mirato**: max 1-2 schede nuove a settimana e solo su buchi reali della matrice fasce × temi.
+7. **Rigenerazione pacchetti ZIP** (`scripts/genera-pacchetti-kit.py` — aggiorna da solo anche la dimensione dichiarata nei kit).
+8. **Pubblicazione con build pulita** fino a live; se non c'è nulla da fare **lo dichiara senza inventare lavoro**.
+
+Gestione: https://claude.ai/code/routines/trig_01RESwx5eFP4SuTpF1iCFY4j. Le sessioni interattive restano libere di lavorare sulle schede; la routine è la rete di manutenzione continua.
+
 ## Modello di priorità del deploy (31 maggio 2026)
 
 🔴 I deploy seguono **3 livelli di priorità** per dare precedenza a sicurezza e contenuti rispetto agli aggiornamenti di sfondo (frequenti). `deploy.yml` ha l'input `workflow_dispatch.inputs.priority` (default `urgent`) e una `concurrency` condizionale: `cancel-in-progress: ${{ github.event_name != 'workflow_dispatch' || github.event.inputs.priority != 'background' }}`. Significato: i deploy di contenuto (push merge PR) e i dispatch non-`background` (allerta, manuale) **preemptano** un deploy in corso; il deploy `background` (coalescer) **cede sempre**. Ogni deploy fa `checkout` di HEAD, quindi un deploy preemptato non perde nulla: il successivo ricarica tutto.
