@@ -26,7 +26,7 @@ Le schede sono ispirate a riferimenti su grave marginalità, inclusione, servizi
 - FIO.PSD — Federazione Italiana Organismi per le Persone Senza Dimora
 - Ministero del Lavoro e delle Politiche Sociali — linee di indirizzo sul contrasto alla grave emarginazione adulta
 - Sphere Standards — non discriminazione e inclusione
-- DPR 223/1989, art. 2 — residenza per persone senza fissa dimora
+- L. 1228/1954, art. 2 (come modificato dalla L. 94/2009) — residenza delle persone senza fissa dimora nel comune di domicilio
 - Servizi sociali comunali, servizi sanitari territoriali e reti locali di accoglienza
 
 Per segnalare bisogni: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
