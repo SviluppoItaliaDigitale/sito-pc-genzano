@@ -17,6 +17,7 @@ Questo kit raccoglie schede semplici e stampabili per preparare in anticipo info
 | [Guida operatori](/formazione/kit-calamita-caregiver-familiari/00-guida-operatori.html) | **Leggere prima.** Ruolo del caregiver, carico assistenziale, tipi di assistenza, comunicazione e attivazione della rete di supporto. |
 | [Carta d'identità della persona assistita](/formazione/kit-calamita-caregiver-familiari/01-carta-identita-assistito.html) | Per raccogliere anagrafica, condizione, ausili, terapie, riferimenti sanitari, contatti e bisogni essenziali. |
 | [Piano di emergenza per persona allettata](/formazione/kit-calamita-caregiver-familiari/02-piano-emergenza-allettato.html) | Per preparare azioni prima dell'emergenza, decisioni in caso di evacuazione, continuità assistenziale e cura del caregiver stesso. |
+| [Checklist materiale 72 ore della persona assistita](/formazione/kit-calamita-caregiver-familiari/03-checklist-materiale-72h.html) | Per tenere pronto il materiale essenziale: farmaci con schema orari, presidi, ausili, documentazione sanitaria, alimentazione speciale, igiene a letto, batterie dei dispositivi medici e contatti scritti. |
 
 ## Riferimenti utili
 
