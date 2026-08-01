@@ -33,6 +33,20 @@ from collections import defaultdict
 
 CHANNEL_DPC = "UC4fru33Tzpu0UhCIHChiNFA"  # Dipartimento Protezione Civile (PCM)
 
+# Video/playlist DPC già valutati editorialmente nelle issue precedenti:
+# integrati nel sito oppure giudicati non pertinenti (gate "approfondimento
+# pertinente o niente"). Vanno esclusi dai run successivi, altrimenti lo
+# stesso suggerimento riappare in ogni issue bi-settimanale (successo con le
+# issue #569/#647/#755). Dopo ogni valutazione aggiungere qui l'ID.
+DENY_IDS = {
+    "PLaLgDI0rVT4AhRiJWDMRACf9kynNGmxnh",  # playlist "Bradisismo Campi Flegrei 2024" — integrata nel kit scuola secondaria I grado (issue #647)
+    "PLaLgDI0rVT4AKsJQC7KEuyESHYHY14i9_",  # playlist Convegno "Guardare indietro per andare avanti" — non pertinente (issue #647/#755)
+    "phdJuX1lA10",  # "Tenere la linea", evento in memoria di Luca Spoletini — non pertinente (issue #647/#755)
+    "3kA8XEf2u6I",  # EXE PO 2026, Nucleo Tecnico Nazionale — integrato nell'articolo EXE PO 2026 (issue #755)
+    "yPBNi9QoXa0",  # EXE PO 2026, attività esercitative — integrato nell'articolo EXE PO 2026 (issue #755)
+    "M2_qoahQ-0A",  # EXE PO 2026, modulo di pompaggio — integrato nell'articolo EXE PO 2026 (issue #755)
+}
+
 HEADERS = {
     "Cookie": "CONSENT=YES+cb.20210328-17-p0.it+FX+000",
     "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) Chrome/124.0.0.0 Safari/537.36",
@@ -285,7 +299,7 @@ def main() -> int:
     videos = fetch_dpc_recent_videos()
     print(f"  trovati {len(videos)} video", file=sys.stderr)
 
-    dpc_items = playlists + videos
+    dpc_items = [i for i in playlists + videos if i["id"] not in DENY_IDS]
 
     print("Scansiono content del sito…", file=sys.stderr)
     site_index = scan_site_content(repo_root)

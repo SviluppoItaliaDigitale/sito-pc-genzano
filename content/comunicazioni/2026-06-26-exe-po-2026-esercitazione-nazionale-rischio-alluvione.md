@@ -57,3 +57,9 @@ Il rischio idrogeologico, del resto, riguarda da vicino anche i Castelli Romani.
 
 - [Dipartimento della Protezione Civile — EXE PO 2026](https://www.protezionecivile.gov.it/it/sezione-con-anticipazioni/exe-po-2026/) — la pagina ufficiale dell'esercitazione.
 - [IT-alert](https://www.it-alert.it/) — il sistema nazionale di allarme pubblico.
+
+**Video del Dipartimento della Protezione Civile**
+
+- [Le attività esercitative in programma – Esercitazione EXE PO 2026](https://youtu.be/yPBNi9QoXa0)
+- [Attivazione e operatività del Nucleo Tecnico Nazionale – Esercitazione EXE PO 2026](https://youtu.be/3kA8XEf2u6I)
+- [Test di un modulo ad elevata capacità di pompaggio – Esercitazione EXE PO 2026](https://youtu.be/M2_qoahQ-0A)
