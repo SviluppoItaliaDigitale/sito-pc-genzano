@@ -30,6 +30,21 @@ Tutti i workflow di manutenzione girano **ogni lunedì** (primo giorno della set
 
 Gestione: https://claude.ai/code/routines/trig_01RESwx5eFP4SuTpF1iCFY4j. Le sessioni interattive restano libere di lavorare sulle schede; la routine è la rete di manutenzione continua.
 
+## Routine "Cura kit calamità categorie vulnerabili" (Routine CCR, 1 agosto 2026)
+
+🟢 **Routine settimanale dedicata ai Kit Calamità** (trigger `trig_013VgcKgHzKYkUrJeeDP7EX5`, cron martedì 05:00 UTC ≈ 07:00 italiane — giorno diverso dalla routine schede per distribuire il carico —, sessione fresca a ogni run, notifiche push+email). Richiesta esplicita dell'utente del 01/08/2026: *"la stessa cosa va fatta con i vari Kit: aggiornati, modificati, ampliati, includendo anche un nuovo agente che li controlli nelle loro normative"*. Perimetro: pagine `content/formazione/kit-calamita*` + schede A4 `static/formazione/kit-calamita-*/` (12 categorie). Mandato in 8 punti, speculare a quello delle schede ma con **priorità alla vigenza normativa**:
+
+1. **Vigenza normativa (priorità)**: censimento e verifica su fonti primarie di norme (D.Lgs./L./D.M./DPCM) e standard internazionali (NCTSN PFA, IFRC, WHO, Sphere, ISO/UNI) citati nei kit — con divieto assoluto di inventare estremi normativi (NO INVENZIONI).
+2. **Simmetria hub ↔ kit ↔ schede**: nessuna scheda orfana, nessun link a materiali inesistenti.
+3. **Refusi** + coerenza numeri di emergenza (112 / 803 555 / 1530).
+4. **Qualità strutturale**: banda affiliazioni in stampa (ESC + E10435833, `.scheda::after` di `kit-calamita-shared/print.css`), soluzioni giochi capovolte, template `.carta-id-*`, WCAG di base, attribuzione ARASAAC.
+5. **Freschezza dei dati** (recapiti, edizioni, link; contenuti sanitari solo da fonti istituzionali).
+6. **Ampliamento mirato**: max 1-2 materiali/settimana solo su buchi reali della matrice categorie × materiali.
+7. **Coerenza ecosistema**: hub, mappa-sito, assistente (sotto-albero `kc_*`), pacchetti.
+8. **Pubblicazione con build pulita** fino a live; se non c'è nulla da fare lo dichiara.
+
+Gestione: https://claude.ai/code/routines/trig_013VgcKgHzKYkUrJeeDP7EX5.
+
 ## Modello di priorità del deploy (31 maggio 2026)
 
 🔴 I deploy seguono **3 livelli di priorità** per dare precedenza a sicurezza e contenuti rispetto agli aggiornamenti di sfondo (frequenti). `deploy.yml` ha l'input `workflow_dispatch.inputs.priority` (default `urgent`) e una `concurrency` condizionale: `cancel-in-progress: ${{ github.event_name != 'workflow_dispatch' || github.event.inputs.priority != 'background' }}`. Significato: i deploy di contenuto (push merge PR) e i dispatch non-`background` (allerta, manuale) **preemptano** un deploy in corso; il deploy `background` (coalescer) **cede sempre**. Ogni deploy fa `checkout` di HEAD, quindi un deploy preemptato non perde nulla: il successivo ricarica tutto.
