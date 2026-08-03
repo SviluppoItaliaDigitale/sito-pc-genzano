@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-08-03T11:05",
+  "aggiornato": "2026-08-03T12:02",
   "data_lunga": "lunedì 3 agosto 2026",
-  "aggiornato_label": "lunedì 3 agosto 2026, ore 11:05",
+  "aggiornato_label": "lunedì 3 agosto 2026, ore 12:02",
   "alba": "06:05",
   "tramonto": "20:25",
   "corrente": {
-    "temp": 30.4,
-    "percepita": 34.6,
+    "temp": 31.6,
+    "percepita": 36.5,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
     "umidita": 57,
-    "vento": 8,
-    "raffiche": 21
+    "vento": 10,
+    "raffiche": 27
   },
   "giorni": [
     {
@@ -20,9 +20,9 @@
       "cielo": "Coperto",
       "tmax": 33,
       "tmin": 24,
-      "pioggia": 35,
-      "pioggia_mm": 0,
-      "raffiche": 37,
+      "pioggia": 38,
+      "pioggia_mm": 0.1,
+      "raffiche": 36,
       "uv": 8,
       "uv_label": "molto alto"
     },
@@ -32,7 +32,7 @@
       "cielo": "Coperto",
       "tmax": 33,
       "tmin": 24,
-      "pioggia": 5,
+      "pioggia": 0,
       "pioggia_mm": 0,
       "raffiche": 46,
       "uv": 8,
@@ -42,23 +42,23 @@
       "label": "Mer 5",
       "icona": "<g><g><ellipse cx=\"16.0\" cy=\"19.1\" rx=\"14.5\" ry=\"7.0\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"9.7\" cy=\"16.0\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.9\" cy=\"14.7\" r=\"5.6\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"11.9\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
       "cielo": "Coperto",
-      "tmax": 33,
-      "tmin": 24,
-      "pioggia": 10,
+      "tmax": 31,
+      "tmin": 23,
+      "pioggia": 8,
       "pioggia_mm": 0,
-      "raffiche": 42,
+      "raffiche": 44,
       "uv": 7,
       "uv_label": "alto"
     },
     {
       "label": "Gio 6",
-      "icona": "<g><line x1=\"25.5\" y1=\"16.0\" x2=\"30.0\" y2=\"16.0\" stroke=\"#f6a800\" stroke-width=\"2.9\" stroke-linecap=\"round\"/><line x1=\"22.7\" y1=\"22.7\" x2=\"25.9\" y2=\"25.9\" stroke=\"#f6a800\" stroke-width=\"2.9\" stroke-linecap=\"round\"/><line x1=\"16.0\" y1=\"25.5\" x2=\"16.0\" y2=\"30.0\" stroke=\"#f6a800\" stroke-width=\"2.9\" stroke-linecap=\"round\"/><line x1=\"9.3\" y1=\"22.7\" x2=\"6.1\" y2=\"25.9\" stroke=\"#f6a800\" stroke-width=\"2.9\" stroke-linecap=\"round\"/><line x1=\"6.5\" y1=\"16.0\" x2=\"2.0\" y2=\"16.0\" stroke=\"#f6a800\" stroke-width=\"2.9\" stroke-linecap=\"round\"/><line x1=\"9.3\" y1=\"9.3\" x2=\"6.1\" y2=\"6.1\" stroke=\"#f6a800\" stroke-width=\"2.9\" stroke-linecap=\"round\"/><line x1=\"16.0\" y1=\"6.5\" x2=\"16.0\" y2=\"2.0\" stroke=\"#f6a800\" stroke-width=\"2.9\" stroke-linecap=\"round\"/><line x1=\"22.7\" y1=\"9.3\" x2=\"25.9\" y2=\"6.1\" stroke=\"#f6a800\" stroke-width=\"2.9\" stroke-linecap=\"round\"/><circle cx=\"16.0\" cy=\"16.0\" r=\"9.0\" fill=\"#f6a800\"/></g>",
-      "cielo": "Sereno",
-      "tmax": 34,
+      "icona": "<g><line x1=\"5.2\" y1=\"14.2\" x2=\"26.8\" y2=\"14.2\" stroke=\"#9aa7b4\" stroke-width=\"2.7\" stroke-linecap=\"round\"/><line x1=\"5.2\" y1=\"18.2\" x2=\"26.8\" y2=\"18.2\" stroke=\"#9aa7b4\" stroke-width=\"2.7\" stroke-linecap=\"round\"/><line x1=\"5.2\" y1=\"22.3\" x2=\"26.8\" y2=\"22.3\" stroke=\"#9aa7b4\" stroke-width=\"2.7\" stroke-linecap=\"round\"/></g>",
+      "cielo": "Nebbia",
+      "tmax": 33,
       "tmin": 23,
-      "pioggia": 20,
+      "pioggia": 15,
       "pioggia_mm": 0,
-      "raffiche": 42,
+      "raffiche": 41,
       "uv": 8,
       "uv_label": "molto alto"
     }
