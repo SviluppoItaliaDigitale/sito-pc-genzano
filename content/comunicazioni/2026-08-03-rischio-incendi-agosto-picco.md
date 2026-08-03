@@ -1,6 +1,6 @@
 ---
 title: "Incendi boschivi: agosto è il mese del picco"
-date: 2026-08-03
+date: 2026-08-03T00:01:00+02:00
 description: "Nei Castelli Romani agosto è il mese di massima pericolosità per gli incendi boschivi. Cause, comportamenti corretti e il numero da chiamare."
 badge: "Prevenzione"
 priorita: "normale"
