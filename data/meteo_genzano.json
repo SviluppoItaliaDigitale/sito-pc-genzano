@@ -1,28 +1,28 @@
 {
-  "aggiornato": "2026-08-03T13:40",
+  "aggiornato": "2026-08-03T14:02",
   "data_lunga": "lunedì 3 agosto 2026",
-  "aggiornato_label": "lunedì 3 agosto 2026, ore 13:40",
+  "aggiornato_label": "lunedì 3 agosto 2026, ore 14:02",
   "alba": "06:05",
   "tramonto": "20:25",
   "corrente": {
-    "temp": 32.6,
-    "percepita": 37.0,
+    "temp": 32.5,
+    "percepita": 37.1,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
     "umidita": 52,
-    "vento": 13,
-    "raffiche": 34
+    "vento": 9,
+    "raffiche": 33
   },
   "giorni": [
     {
       "label": "Oggi",
       "icona": "<g><g><ellipse cx=\"16.0\" cy=\"19.1\" rx=\"14.5\" ry=\"7.0\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"9.7\" cy=\"16.0\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.9\" cy=\"14.7\" r=\"5.6\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"11.9\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
       "cielo": "Coperto",
-      "tmax": 33,
+      "tmax": 32,
       "tmin": 24,
       "pioggia": 38,
       "pioggia_mm": 0.1,
-      "raffiche": 36,
+      "raffiche": 33,
       "uv": 8,
       "uv_label": "molto alto"
     },
@@ -30,11 +30,11 @@
       "label": "Mar 4",
       "icona": "<g><g><ellipse cx=\"16.0\" cy=\"19.1\" rx=\"14.5\" ry=\"7.0\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"9.7\" cy=\"16.0\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.9\" cy=\"14.7\" r=\"5.6\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"11.9\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
       "cielo": "Coperto",
-      "tmax": 33,
+      "tmax": 34,
       "tmin": 24,
       "pioggia": 0,
       "pioggia_mm": 0,
-      "raffiche": 46,
+      "raffiche": 48,
       "uv": 8,
       "uv_label": "molto alto"
     },
