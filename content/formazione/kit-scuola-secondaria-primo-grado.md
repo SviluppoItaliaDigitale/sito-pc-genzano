@@ -10,7 +10,7 @@ Questo kit è pensato per i docenti della **scuola secondaria di primo grado** c
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e si prestano all'uso nelle ore di scienze, geografia, educazione civica e tecnologia.
 
-> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-primo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-primo-grado.zip) (~219 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-primo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-primo-grado.zip) (~222 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
 ---
 
@@ -499,6 +499,7 @@ Schede pronte per la stampa specifiche per la scuola secondaria di primo grado:
 - 👉 [**Blackout e servizi essenziali**](/formazione/schede-stampabili/blackout-servizi-essenziali-secondaria/) — disagio, urgenza ed emergenza: piano familiare in caso di interruzione di luce, telefono o acqua. box "Prima/Durante/Comunicazioni/Quando chiamare", attività domestiche, mini quiz. *(ed. civica, tecnologia)*
 - 👉 [**Leggere il bollettino ondate di calore**](/formazione/schede-stampabili/ondate-calore-secondaria/) — il bollettino del Ministero della Salute: livelli 0-1-2-3, come si legge, comportamenti per sé e per le persone fragili, con esercizio su un bollettino di esempio. *(scienze, ed. civica)*
 - 👉 [**Monossido di carbonio**](/formazione/schede-stampabili/monossido-carbonio-secondaria/) — il pericolo invisibile in case, garage e locali chiusi: prevenzione, usi vietati di barbecue/bracieri, segnali sospetti e azione sicura. Caccia al rischio in casa e mini quiz. *(scienze, tecnologia)*
+- 👉 [**Maremoto: la fisica e i comportamenti**](/formazione/schede-stampabili/maremoto-comportamenti-secondaria/) — come si genera un maremoto (velocità dell'onda in mare aperto e in costa), il Sistema di Allertamento SiAM, i tre segnali naturali e i comportamenti di autoprotezione. Mini verifica e soluzioni. *(scienze, geografia, ed. civica)*
 - 👉 [**IT-alert e comunicazioni ufficiali**](/formazione/schede-stampabili/it-alert-comunicazioni-secondaria/) — capire il sistema nazionale di allarme pubblico: anatomia di un messaggio (rischio/area/tempo/azione/fonte), esempio realistico, risposta in 140 caratteri, mini quiz. *(ed. civica, cittadinanza digitale, italiano)*
 - 👉 [**Notizie false in emergenza**](/formazione/schede-stampabili/fake-news-emergenza-secondaria/) — riconoscere e fermare la disinformazione: regola dei 3 controlli (fonte/data/conferma), checklist "prima di condividere", classifica delle notizie a gruppi e mini quiz. *(ed. civica digitale, italiano)*
 
