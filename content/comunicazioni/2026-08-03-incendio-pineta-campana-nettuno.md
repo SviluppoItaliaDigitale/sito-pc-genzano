@@ -20,21 +20,21 @@ social_punti:
   - "Gli incendi si segnalano al 112: nel Lazio è l'unico numero da chiamare."
 ---
 
-Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** è intervenuto per due giorni consecutivi sul vasto incendio della **pineta della Campana** a **Nettuno**, lungo **via della Selciatella**. È accaduto **sabato 1 e domenica 2 agosto 2026**. In entrambe le giornate l'attivazione è arrivata dalla **Sala Operativa Unificata Permanente (SOUP)** della Regione Lazio, che coordina la campagna antincendio boschivo regionale.
+Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** è intervenuto sul vasto incendio della **pineta della Campana** a **Nettuno**. Ha operato per due giorni consecutivi, **sabato 1 e domenica 2 agosto 2026**, lungo **via della Selciatella**. In entrambe le giornate l'attivazione è arrivata dalla **Sala Operativa Unificata Permanente (SOUP)** della Regione Lazio. È la sala che coordina la campagna antincendio boschivo regionale.
 
 ## L'incendio: circa 60 ettari di pineta percorsi dal fuoco
 
-Le fiamme si sono sviluppate nel pomeriggio di **venerdì 31 luglio** e, spinte dal vento, hanno percorso in poche ore gran parte della pineta. Secondo le ricostruzioni della stampa locale, il fuoco ha interessato [circa 60 ettari di bosco](https://ilgranchio.it/2026/08/01/incendio-alla-pineta-della-campana-a-nettuno-almeno-sessanta-ettari-distrutti-delle-fiamme/): una delle aree verdi più estese e conosciute del litorale a sud di Roma.
+Le fiamme si sono sviluppate nel pomeriggio di **venerdì 31 luglio**. Spinte dal vento, in poche ore hanno percorso gran parte della pineta. Secondo le ricostruzioni della stampa locale, il fuoco ha interessato [circa 60 ettari di bosco](https://ilgranchio.it/2026/08/01/incendio-alla-pineta-della-campana-a-nettuno-almeno-sessanta-ettari-distrutti-delle-fiamme/). È una delle aree verdi più estese e conosciute del litorale a sud di Roma.
 
-Due fattori hanno reso l'incendio particolarmente difficile da domare. Da un paio d'anni i pini della Campana sono **indeboliti dalla cocciniglia**, un parassita che li ha in gran parte disseccati. La grande quantità di **legno morto e materiale vegetale secco** accumulata al suolo ha alimentato le fiamme e favorito le riprese del fuoco anche a distanza di ore.
+Secondo le [cronache locali](https://ilgranchio.it/2026/07/31/in-fiamme-la-pineta-della-campana-a-nettuno-chiusa-al-traffico-via-della-selciatella/), da un paio d'anni i pini della Campana erano **indeboliti dalla cocciniglia**, un parassita che li ha in gran parte disseccati. Nel Lazio la **cocciniglia tartaruga del pino** (*Toumeyella parvicornis*) è ormai diffusa nelle province di Roma e Latina, come documenta il [Servizio Fitosanitario della Regione Lazio](https://www.regione.lazio.it/cittadini/agricoltura/avversita-piante/toumeyella-parvicornis). Il legno morto e il materiale secco accumulati al suolo hanno alimentato le fiamme. Hanno anche favorito le riprese del fuoco a distanza di ore.
 
-Sull'incendio hanno operato i **Vigili del Fuoco**, con il supporto di un **Canadair** che si è rifornito in mare, e numerosi **gruppi e associazioni di protezione civile** del territorio. Le autorità hanno chiuso temporaneamente via della Selciatella per consentire le operazioni. Il sindaco di Nettuno non ha escluso l'**origine dolosa** del rogo, su cui sono in corso gli accertamenti.
+Sull'incendio hanno operato i **Vigili del Fuoco** e numerosi **gruppi e associazioni di protezione civile** del territorio. Un **Canadair** ha sostenuto le squadre a terra, rifornendosi in mare. Le autorità hanno chiuso temporaneamente via della Selciatella per consentire le operazioni. Il sindaco di Nettuno non ha escluso l'**origine dolosa** del rogo, su cui sono in corso gli accertamenti.
 
 ## Sabato 1 agosto: quasi otto ore sul fronte del fuoco
 
-La SOUP ha attivato il Gruppo alle **12:18 di sabato 1 agosto**. Una squadra di **quattro volontari** è partita dalla sede con l'**autobotte Mercedes Actros**, che dispone di un impianto antincendio da 14.000 litri. È arrivata sul posto poco dopo le 13:00.
+La SOUP ha attivato il Gruppo alle **12:18 di sabato 1 agosto**. Una squadra di **quattro volontari** è partita dalla sede con l'**autobotte Mercedes Actros**. Il mezzo dispone di un impianto antincendio da 14.000 litri. La squadra è arrivata sul posto poco dopo le 13:00.
 
-Il fronte assegnato era quello **adiacente al camping di via della Selciatella**, uno dei punti più delicati dell'incendio. I volontari hanno operato agli ordini del **Direttore delle Operazioni di Spegnimento (DOS)**, la figura tecnica che sul posto coordina squadre a terra e mezzi aerei. Il DOS ha congedato la squadra in serata, al termine del turno: il rientro in sede è avvenuto dopo le 20:00, con quasi **otto ore complessive di impegno**.
+Il fronte assegnato era quello **adiacente al camping di via della Selciatella**, uno dei punti più delicati dell'incendio. I volontari hanno operato agli ordini del **Direttore delle Operazioni di Spegnimento (DOS)**. È la figura tecnica che sul posto coordina squadre a terra e mezzi aerei. Il DOS ha congedato la squadra in serata, al termine del turno. Il rientro in sede è avvenuto dopo le 20:00, con quasi **otto ore complessive di impegno**.
 
 ## Domenica 2 agosto: supporto ai Vigili del Fuoco contro le riattivazioni
 
@@ -44,7 +44,7 @@ Per questo **domenica 2 agosto alle 16:43** la SOUP ha richiesto di nuovo l'auto
 
 ## Perché la bonifica conta quanto lo spegnimento
 
-Su un incendio boschivo il lavoro non finisce quando le fiamme visibili si spengono. Tronchi, radici e cumuli di materiale secco possono **restare caldi per giorni**: basta un colpo di vento per far ripartire il fuoco. La **bonifica** — bagnare a fondo il terreno e presidiare i punti critici — è la fase che evita di dover ricominciare da capo. È esattamente ciò che è successo alla Campana tra l'1 e il 2 agosto, e il motivo per cui la SOUP ha richiamato le squadre sul posto.
+Su un incendio boschivo il lavoro non finisce quando le fiamme visibili si spengono. Tronchi, radici e cumuli di materiale secco possono **restare caldi per giorni**: basta un colpo di vento per far ripartire il fuoco. La **bonifica** — bagnare a fondo il terreno e presidiare i punti critici — è la fase che evita di dover ricominciare da capo. È quanto successo alla Campana tra l'1 e il 2 agosto. Per questo la SOUP ha richiamato le squadre sul posto.
 
 ## Attenzione al fuoco: come comportarsi
 
