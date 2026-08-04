@@ -54,9 +54,16 @@
     // elaborazione: la data odierna e quella di ieri restituiscono sistematicamente
     // 404 (verificato 04/08/2026). Richiediamo quindi il mosaico di 2 giorni fa,
     // l'ultimo disponibile con certezza, e lo dichiariamo onestamente in etichetta.
+    // Calcolata UNA SOLA VOLTA al caricamento (non ad ogni click) e sempre in UTC
+    // per URL ed etichetta: altrimenti, a cavallo della mezzanotte italiana o con
+    // la scheda rimasta aperta da un giorno all'altro, l'etichetta (formattata in
+    // ora locale al momento del click) potrebbe indicare una data diversa da
+    // quella davvero richiesta nell'URL della tile (fissata al caricamento).
     var GIBS_LAG_GIORNI = 2;
-    function dataGibs(){ var d=new Date(); d.setUTCDate(d.getUTCDate()-GIBS_LAG_GIORNI); return d; }
-    function oggi(){ return dataGibs().toISOString().slice(0,10); }
+    var _dataGibs = new Date();
+    _dataGibs.setUTCDate(_dataGibs.getUTCDate() - GIBS_LAG_GIORNI);
+    var GIBS_DATA_ISO = _dataGibs.toISOString().slice(0,10);
+    var GIBS_DATA_LABEL = _dataGibs.toLocaleDateString('it-IT',{day:'2-digit',month:'long',timeZone:'UTC'});
 
     var WMS='https://view.eumetsat.int/geoserver/wms';
     // MTG (Meteosat di nuova generazione) GeoColour: ~1 km, ogni 10 min,
@@ -73,7 +80,7 @@
       version:'1.3.0', time:isoZ(slotUTC()), opacity:1, maxZoom:9,
       attribution:'© EUMETSAT'
     });
-    var gibs=L.tileLayer('https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_CorrectedReflectance_TrueColor/default/'+oggi()+'/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg',{
+    var gibs=L.tileLayer('https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_CorrectedReflectance_TrueColor/default/'+GIBS_DATA_ISO+'/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg',{
       maxNativeZoom:8, maxZoom:9, opacity:1, attribution:'Imagery © NASA EOSDIS GIBS'
     });
 
@@ -93,7 +100,7 @@
         stato.textContent='Alta risoluzione (500 m) delle '+ora+' · visibile, solo di giorno';
       } else {
         gibs.addTo(map); confini.addTo(map);
-        stato.textContent='Immagine del '+dataGibs().toLocaleDateString('it-IT',{day:'2-digit',month:'long'});
+        stato.textContent='Immagine del '+GIBS_DATA_LABEL;
       }
       stella.addTo(map);
     }
