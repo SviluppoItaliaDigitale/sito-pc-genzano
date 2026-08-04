@@ -30,9 +30,11 @@ Nel 2026 in Europa sono già bruciati tanti ettari di bosco. Più della media de
 
 ## E a Genzano di Roma?
 
-Genzano di Roma è in una zona a rischio incendi. Si chiama **Zona AIB 9**.
+Genzano di Roma è in una zona a rischio incendi.
 
-Per sapere il livello di rischio di oggi, guarda la pagina [Allerte meteo](/allerte-meteo/) del nostro sito.
+Si chiama **Zona AIB 9**. AIB vuol dire Antincendio Boschivo.
+
+Per il livello di rischio di oggi, guarda [Allerte meteo](/allerte-meteo/). È una pagina del nostro sito.
 
 ## Come prevenire un incendio
 
@@ -45,13 +47,13 @@ La maggior parte degli incendi nasce da un errore delle persone. Puoi aiutare co
 
 ## Cosa fare se vedi un incendio
 
-1. **Chiama subito il 112.**
+1. **Chiama subito il 112.** È il numero unico per le emergenze.
 2. **Di' dove sei.** Il posto più preciso possibile.
 3. **Allontanati** dal fuoco e dal fumo.
 4. **Segui** le indicazioni dei soccorritori.
 
 ## Per approfondire
 
-Se vuoi leggere l'articolo completo con tutti i dati, vai alla [versione completa](/comunicazioni/2026-06-25-incendi-boschivi-pericolo-italia-dati-effis/).
+Vuoi leggere l'articolo completo, con tutti i dati? Vai alla [versione completa](/comunicazioni/2026-06-25-incendi-boschivi-pericolo-italia-dati-effis/).
 
-Per sapere cosa fare prima, durante e dopo un incendio, leggi [Rischio incendio](/rischi-prevenzione/rischio-incendio/).
+Vuoi sapere cosa fare prima, durante e dopo un incendio? Leggi [Rischio incendio](/rischi-prevenzione/rischio-incendio/).
