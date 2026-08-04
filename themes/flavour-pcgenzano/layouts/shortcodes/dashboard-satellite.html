@@ -2,10 +2,13 @@
      Due fonti, entrambe pubbliche e senza chiave:
      - EUMETSAT (Meteosat) RGB colori naturali, slot ogni 15 min (vero quasi-realtime
        delle nuvole) via WMS view.eumetsat.int, layer msg_fes:rgb_natural;
-     - NASA GIBS true-color VIIRS del giorno (alta definizione del suolo) via WMTS.
+     - NASA GIBS true-color VIIRS (alta definizione del suolo) via WMTS.
      Le tile sono <img>: nessuna chiave, nessun workflow, niente terzi in iframe.
      Leaflet self-hosted. Onestà: l'immagine satellitare "live" è quella Meteosat
-     (15 min di latenza tipica); GIBS è il mosaico true-color più recente del giorno. */}}
+     (15 min di latenza tipica); il mosaico "best" di GIBS ha invece ~2 giorni di
+     latenza di elaborazione (la data odierna e quella di ieri danno sistematicamente
+     404, verificato 04/08/2026), quindi richiediamo e dichiariamo sempre la data di
+     2 giorni fa anziché "oggi". */}}
 {{ $leafletCSS := "vendor/leaflet/leaflet.css" | relURL }}
 {{ $leafletJS  := "vendor/leaflet/leaflet.js"  | relURL }}
 
@@ -15,7 +18,7 @@
   <div class="dash-sisma-toolbar" role="group" aria-label="Tipo e risoluzione dell'immagine satellitare">
     <button type="button" class="dash-pill" data-sat="geocolour" aria-pressed="true"><i class="bi bi-cloud" aria-hidden="true"></i> Nuvole · colore (1&nbsp;km)</button>
     <button type="button" class="dash-pill" data-sat="hrfi" aria-pressed="false"><i class="bi bi-zoom-in" aria-hidden="true"></i> Alta risoluzione (500&nbsp;m)</button>
-    <button type="button" class="dash-pill" data-sat="gibs" aria-pressed="false"><i class="bi bi-globe-europe-africa" aria-hidden="true"></i> Suolo del giorno (NASA)</button>
+    <button type="button" class="dash-pill" data-sat="gibs" aria-pressed="false"><i class="bi bi-globe-europe-africa" aria-hidden="true"></i> Suolo (NASA)</button>
     <span class="dash-sisma-stato" id="sat-stato" aria-live="polite"></span>
   </div>
   <div class="dash-incendi-box">
@@ -24,7 +27,7 @@
   <noscript><div class="alert alert-warning mt-2" role="note">Per la mappa serve JavaScript.</div></noscript>
   <p class="small text-muted mt-2 mb-0" id="sat-fonte">
     {{ partial "fonte-badge.html" "ufficiale" }}Nuvole in tempo reale: <a href="https://www.eumetsat.int/" target="_blank" rel="noopener noreferrer">EUMETSAT</a> (Meteosat di nuova generazione, aggiornamento ogni 10&nbsp;minuti). <strong>Colore (1&nbsp;km)</strong>: GeoColour, giorno e notte. <strong>Alta risoluzione (500&nbsp;m)</strong>: canale visibile, in bianco e nero e solo di giorno.
-    Suolo del giorno: <a href="https://worldview.earthdata.nasa.gov/" target="_blank" rel="noopener noreferrer">NASA GIBS</a> (true-color VIIRS).
+    <strong>Suolo</strong>: <a href="https://worldview.earthdata.nasa.gov/" target="_blank" rel="noopener noreferrer">NASA GIBS</a> (true-color VIIRS, mosaico più recente disponibile: in genere di 2 giorni fa).
     Dato indicativo: per le previsioni vedi la scheda <strong>Meteo</strong>, in emergenza chiama il <a href="tel:112">112</a>.
   </p>
 
@@ -47,7 +50,13 @@
       return d;
     }
     function isoZ(d){ return d.toISOString().slice(0,19)+'Z'; }
-    function oggi(){ return new Date().toISOString().slice(0,10); }
+    // Il mosaico "best" VIIRS true-color di NASA GIBS ha ~2 giorni di latenza di
+    // elaborazione: la data odierna e quella di ieri restituiscono sistematicamente
+    // 404 (verificato 04/08/2026). Richiediamo quindi il mosaico di 2 giorni fa,
+    // l'ultimo disponibile con certezza, e lo dichiariamo onestamente in etichetta.
+    var GIBS_LAG_GIORNI = 2;
+    function dataGibs(){ var d=new Date(); d.setUTCDate(d.getUTCDate()-GIBS_LAG_GIORNI); return d; }
+    function oggi(){ return dataGibs().toISOString().slice(0,10); }
 
     var WMS='https://view.eumetsat.int/geoserver/wms';
     // MTG (Meteosat di nuova generazione) GeoColour: ~1 km, ogni 10 min,
@@ -84,7 +93,7 @@
         stato.textContent='Alta risoluzione (500 m) delle '+ora+' · visibile, solo di giorno';
       } else {
         gibs.addTo(map); confini.addTo(map);
-        stato.textContent='Immagine del '+new Date().toLocaleDateString('it-IT',{day:'2-digit',month:'long'});
+        stato.textContent='Immagine del '+dataGibs().toLocaleDateString('it-IT',{day:'2-digit',month:'long'});
       }
       stella.addTo(map);
     }
