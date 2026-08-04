@@ -1,16 +1,16 @@
 {
-  "aggiornato": "2026-08-04T23:02",
+  "aggiornato": "2026-08-04T23:24",
   "data_lunga": "martedì 4 agosto 2026",
-  "aggiornato_label": "martedì 4 agosto 2026, ore 23:02",
+  "aggiornato_label": "martedì 4 agosto 2026, ore 23:24",
   "alba": "06:06",
   "tramonto": "20:24",
   "corrente": {
     "temp": 25.0,
-    "percepita": 28.5,
+    "percepita": 28.3,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
     "umidita": 77,
-    "vento": 5,
+    "vento": 6,
     "raffiche": 18
   },
   "giorni": [
@@ -32,7 +32,7 @@
       "cielo": "Coperto",
       "tmax": 32,
       "tmin": 24,
-      "pioggia": 8,
+      "pioggia": 5,
       "pioggia_mm": 0,
       "raffiche": 42,
       "uv": 8,
@@ -56,7 +56,7 @@
       "cielo": "Nebbia",
       "tmax": 32,
       "tmin": 23,
-      "pioggia": 9,
+      "pioggia": 8,
       "pioggia_mm": 0,
       "raffiche": 41,
       "uv": 8,
