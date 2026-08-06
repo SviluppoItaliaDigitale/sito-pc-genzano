@@ -971,12 +971,22 @@ jobs:
           check_critical() {
             local url="$1"
             local label="$2"
-            local code
-            code=$(curl -o /dev/null -s -w "%{http_code}" --max-time 15 \
-                   --user-agent "Mozilla/5.0 (compatible; PCGenzanoAuditBot/1.0)" "$url" 2>/dev/null)
-            if [ "$code" -lt 200 ] || [ "$code" -ge 400 ]; then
-              CRITICAL_LINKS_FAILED="${CRITICAL_LINKS_FAILED}- **$label** ($code): \`$url\`\n"
-            fi
+            local code attempt
+            # Retry con backoff: alcuni portali istituzionali (es. Normattiva)
+            # rifiutano in modo intermittente le richieste dai runner CI
+            # (rate-limit/WAF) restituendo codice 000 (nessuna connessione),
+            # pur essendo il link valido per un utente reale. 3 tentativi
+            # (0s/8s/16s) evitano falsi positivi transitori senza nascondere
+            # un guasto reale e persistente.
+            for attempt in 1 2 3; do
+              code=$(curl -o /dev/null -s -w "%{http_code}" --max-time 15 \
+                     --user-agent "Mozilla/5.0 (compatible; PCGenzanoAuditBot/1.0)" "$url" 2>/dev/null)
+              if [ "$code" -ge 200 ] && [ "$code" -lt 400 ]; then
+                return
+              fi
+              [ "$attempt" -lt 3 ] && sleep $((attempt * 8))
+            done
+            CRITICAL_LINKS_FAILED="${CRITICAL_LINKS_FAILED}- **$label** ($code): \`$url\`\n"
           }
 
           # Portali normativi (citati in /area-download/, articoli normativa)
