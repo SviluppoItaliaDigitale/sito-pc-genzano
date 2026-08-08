@@ -1,26 +1,26 @@
 {
-  "aggiornato": "2026-08-07T06:48:41+00:00",
+  "aggiornato": "2026-08-08T06:07:21+00:00",
   "nota": "File aggiornato automaticamente dal workflow aggiorna-stato-sistema.yml. Stato dei workflow critici di manutenzione del sito.",
   "workflow": [
     {
       "nome": "Pubblicazione del sito",
       "file": "deploy.yml",
-      "stato": "success",
-      "ultimo_run": "2026-08-07T05:23:08Z",
+      "stato": "in_progress",
+      "ultimo_run": "2026-08-08T05:57:11Z",
       "descrizione": "Costruisce e pubblica il sito a ogni modifica approvata."
     },
     {
       "nome": "Controllo allerta meteo",
       "file": "check-allerta.yml",
       "stato": "success",
-      "ultimo_run": "2026-08-07T06:45:31Z",
+      "ultimo_run": "2026-08-08T06:05:21Z",
       "descrizione": "Verifica i bollettini della Regione Lazio e aggiorna lo stato di allerta."
     },
     {
       "nome": "Audit settimanale del sito",
       "file": "audit-sito.yml",
       "stato": "success",
-      "ultimo_run": "2026-08-07T01:58:17Z",
+      "ultimo_run": "2026-08-08T00:41:16Z",
       "descrizione": "Controlla contenuti, link, accessibilita e coerenza ogni lunedi."
     },
     {
@@ -41,7 +41,7 @@
       "nome": "Audit prestazioni e accessibilita",
       "file": "lighthouse-audit.yml",
       "stato": "success",
-      "ultimo_run": "2026-08-07T00:16:29Z",
+      "ultimo_run": "2026-08-07T19:17:14Z",
       "descrizione": "Misura velocita, accessibilita e SEO con Lighthouse dopo ogni pubblicazione."
     }
   ]
