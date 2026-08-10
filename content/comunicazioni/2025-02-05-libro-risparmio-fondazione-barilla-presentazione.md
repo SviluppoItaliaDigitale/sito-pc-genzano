@@ -13,14 +13,20 @@ allegati:
   - titolo: "Il Libro del Risparmio — 120 azioni contro lo spreco alimentare (Fondazione Barilla)"
     url: "/manuali/FondazioneBarilla_Libro_del_Risparmio.pdf"
     dimensione: "27,3 MB"
+social_citazione: "Lo spreco alimentare domestico vale fino a 500 euro l'anno per famiglia."
+social_punti:
+  - "Giornata nazionale di prevenzione dello spreco alimentare: 5 febbraio"
+  - "Il Libro del Risparmio: 120 azioni pratiche contro lo spreco, dentro e fuori casa"
+  - "Risparmio possibile: fino a 500 euro l'anno per famiglia"
+  - "Manuale gratuito scaricabile in allegato e nell'Area Download"
 draft: false
 ---
 
-In occasione della **Giornata nazionale di prevenzione dello spreco alimentare** (5 febbraio) la Fondazione Barilla ha presentato a Milano il **Libro del Risparmio — 120 azioni contro lo spreco alimentare per risparmiare dentro e fuori casa**. Il volume è disponibile gratuitamente ed è allegato a questo articolo.
+Il 5 febbraio è la **Giornata nazionale di prevenzione dello spreco alimentare**. In questa occasione la Fondazione Barilla ha presentato a Milano il **Libro del Risparmio**. Sono 120 azioni contro lo spreco alimentare, per risparmiare dentro e fuori casa. Il volume è gratuito ed è allegato a questo articolo.
 
 ## Perché parlarne anche su un sito di Protezione Civile
 
-La prevenzione non riguarda solo il rischio sismico, idrogeologico o incendi. Riguarda anche i comportamenti quotidiani che rendono la popolazione più resiliente: sapere conservare il cibo, pianificare la spesa, ridurre gli scarti è parte di una **cultura della preparazione** che in emergenza fa la differenza. La stessa logica che guida l'uso consapevole dell'acqua o dell'energia.
+La prevenzione non riguarda solo il rischio sismico, idrogeologico o incendi. Riguarda anche i comportamenti quotidiani che rendono la popolazione più resiliente. Sapere conservare il cibo, pianificare la spesa, ridurre gli scarti è parte di una **cultura della preparazione** che, in emergenza, fa la differenza. La stessa logica che guida l'uso consapevole dell'acqua o dell'energia.
 
 Lo spreco alimentare non è un problema solo economico. Secondo i dati della Fondazione Barilla, **le perdite lungo la filiera generano fino al 10% delle emissioni globali di gas serra**. **Un terzo del cibo prodotto nel mondo viene sprecato**: oltre un miliardo di tonnellate all'anno. Dimezzare lo spreco entro il 2030 è l'Obiettivo di Sviluppo Sostenibile ONU n. 12.3.
 
@@ -33,11 +39,11 @@ L'evento "Chi non spreca ci guadagna" si è svolto a Milano, moderato dalla gior
 - **Marta Antonelli**, Direttrice della Ricerca di Fondazione Barilla
 - **Riccardo Valentini**, professore di Ecologia (Università della Tuscia) e premio Nobel per la Pace con l'IPCC
 
-Il libro è il risultato di una **collaborazione scientifica** con la dottoressa **Claudia Giordano** e l'**Università di Bologna**, e raccoglie in modo divulgativo le evidenze della letteratura nazionale e internazionale sul tema.
+Il libro è il risultato di una **collaborazione scientifica** con la dottoressa **Claudia Giordano** e l'**Università di Bologna**. Raccoglie in modo divulgativo le evidenze della letteratura nazionale e internazionale sul tema.
 
 ## 500 euro l'anno di risparmio per una famiglia
 
-Uno degli elementi più concreti del volume è l'analisi economica. Secondo lo studio coordinato dall'Università di Bologna, **lo spreco alimentare domestico vale fino a 500 euro l'anno per famiglia** — una cifra paragonabile a quanto una famiglia spende per la spesa in un mese. Piccoli gesti quotidiani — conservare meglio, pianificare la spesa, riusare gli avanzi — sono **alla portata di tutti** e hanno un effetto immediato sul portafoglio.
+Uno degli elementi più concreti del volume è l'analisi economica. Secondo lo studio coordinato dall'Università di Bologna, **lo spreco alimentare domestico vale fino a 500 euro l'anno per famiglia**. È una cifra paragonabile a quanto una famiglia spende per la spesa in un mese. Piccoli gesti quotidiani — conservare meglio, pianificare la spesa, riusare gli avanzi — sono **alla portata di tutti** e hanno un effetto immediato sul portafoglio.
 
 ## Come è organizzato il libro
 
@@ -49,13 +55,17 @@ Il volume si articola in cinque capitoli tematici, uno per ciascun momento della
 4. **Nuovi acquisti** — come pianificare la spesa ed evitare acquisti superflui.
 5. **Fuori casa** — buone pratiche al ristorante, in ufficio, alle feste e nella spesa con i bambini.
 
-Nelle prossime settimane pubblicheremo articoli tematici che riprendono i consigli principali di ciascun capitolo. Nel frattempo il manuale completo è **allegato a questo articolo** ed è disponibile anche nella pagina [Area Download](/area-download/).
+Il Gruppo ha pubblicato articoli tematici con i consigli principali di ogni capitolo: [conservare gli alimenti in casa](/comunicazioni/2025-06-10-conservazione-alimenti-casa-spreco/), [cucinare a zero spreco e recuperare gli avanzi](/comunicazioni/2025-10-16-cucina-zero-spreco-avanzi-recupero/) e [fare la spesa ed evitare lo spreco fuori casa](/comunicazioni/2026-02-05-nuovi-acquisti-fuori-casa-bambini-spreco/). Il manuale completo resta **allegato a questo articolo** ed è disponibile anche nella pagina [Area Download](/area-download/).
 
 ## Collegamento con il nostro Gruppo
 
-Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma aderisce alla **Federazione Provinciale del Volontariato di Protezione Civile di Roma (FEPIVOL)**. La promozione di buone pratiche di sostenibilità alimentare rientra nelle attività di informazione al cittadino che il volontariato di Protezione Civile svolge nel tempo ordinario — in complemento alle attività di prevenzione dei rischi naturali.
+Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma aderisce al **coordinamento regionale FEPIVOL** (Federazione Pronto Intervento Volontariato del Lazio). La promozione di buone pratiche di sostenibilità alimentare rientra nelle attività di informazione al cittadino che il volontariato di Protezione Civile svolge nel tempo ordinario — in complemento alle attività di prevenzione dei rischi naturali.
 
 ## Riferimenti
+
+**Sul nostro sito:** [Il semaforo di attenzione degli alimenti: come classificare ciò che si recupera per solidarietà](/comunicazioni/2026-03-18-semaforo-attenzione-alimenti-recupero-solidarieta/), sulla stessa Legge Gadda citata qui sotto.
+
+**Fonti:**
 
 - Fondazione Barilla, *Il Libro del Risparmio*, in collaborazione con Università di Bologna (ricerca coordinata da C. Giordano).
 - Obiettivo di Sviluppo Sostenibile ONU 12.3 — dimezzare lo spreco alimentare pro capite entro il 2030.
