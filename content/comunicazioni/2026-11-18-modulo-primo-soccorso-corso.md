@@ -10,10 +10,16 @@ image_alt: "Istruttore dimostra manovra di rianimazione su manichino durante cor
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
+social_citazione: "Saper riconoscere l'emergenza e agire nei primi minuti può salvare una vita."
+social_punti:
+  - "Weekend con due giornate: sabato teoria, domenica pratica"
+  - "Istruttori certificati ANPAS, Croce Rossa Italiana e Misericordie"
+  - "Attestato BLS-D valido 2 anni, da aggiornare con retraining"
+  - "In emergenza chiama sempre il 112"
 draft: false
 ---
 
-Nel weekend parte il **modulo di primo soccorso** del corso base per nuovi volontari del Gruppo Comunale di Protezione Civile di Genzano di Roma. Un modulo **essenziale** per la formazione del volontario e tenuto da **istruttori esterni certificati**.
+Nel weekend parte il **modulo di primo soccorso** del corso base per nuovi volontari del Gruppo Comunale di Protezione Civile di Genzano di Roma. Un modulo **essenziale** per la formazione del volontario, tenuto da **istruttori esterni certificati**.
 
 ## Il programma del modulo
 
@@ -51,7 +57,7 @@ Il modulo è tenuto da **istruttori certificati**:
 Gli **istruttori esterni** garantiscono:
 
 - **certificazione** riconosciuta a livello nazionale;
-- **aggiornamento** sulle ultime linee guida (ERC 2025);
+- **aggiornamento** sulle linee guida ERC più recenti;
 - **esperienza** operativa reale;
 - **materiale didattico** standardizzato;
 - **attestato** spendibile anche fuori dal Gruppo.
@@ -63,11 +69,11 @@ Un **volontario di Protezione Civile** può trovarsi in situazioni dove:
 - **persone** coinvolte in incidenti necessitano primo intervento;
 - **118** è in arrivo ma serve **agire subito**;
 - **anziani** colpiti da malore improvviso;
-- **bambini** coinvolti in giocate con conseguenze;
+- **bambini** feriti durante il gioco;
 - **colleghi** feriti durante operazioni;
 - **pubblico** di manifestazioni con eventi imprevisti.
 
-Saper **riconoscere** e **intervenire nei primi 3-5 minuti** può salvare una vita.
+Saper **riconoscere** l'emergenza e **agire nei primi minuti** può salvare una vita.
 
 ## Le competenze acquisite
 
@@ -158,7 +164,7 @@ Il modulo è utile non solo per il servizio volontario, ma per:
 
 ## Una raccomandazione
 
-Chi pensa che "tanto il 112 arriva sempre in tempo" sbaglia. Il tempo di arrivo di un'ambulanza **varia molto**: dipende da traffico, distanza, disponibilità dei mezzi in quel momento e, in zone rurali o isolate, dalla maggiore distanza dal presidio più vicino. Il **cervello**, in assenza di ossigeno, può subire danni già dopo pochi minuti. Chi è **presente** e **formato** può fare la differenza, nel tempo in cui i soccorsi sono ancora in arrivo.
+Chi pensa che "tanto il 112 arriva sempre in tempo" sbaglia. Il tempo di arrivo di un'ambulanza **varia molto**: dipende da traffico, distanza e disponibilità dei mezzi nel momento della chiamata. In zone rurali o isolate può allungarsi ulteriormente, per la maggiore distanza dal presidio più vicino. Il **cervello**, in assenza di ossigeno, può subire danni già dopo pochi minuti. Chi è **presente** e **formato** può fare la differenza, nel tempo in cui i soccorsi sono ancora in arrivo.
 
 ## Per approfondire
 
