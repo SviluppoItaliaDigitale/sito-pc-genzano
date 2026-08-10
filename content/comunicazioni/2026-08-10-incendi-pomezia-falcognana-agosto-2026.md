@@ -21,15 +21,15 @@ social_punti:
 draft: false
 ---
 
-Nella prima decade di agosto la Sala Operativa Unificata Permanente della Regione Lazio ha attivato due volte il nostro Gruppo su incendi di vegetazione fuori dal territorio comunale. Il 6 agosto a Pomezia, il 9 agosto in via della Falcognana. In tutto oltre dieci ore di lavoro, i mezzi antincendio del Gruppo e la vasca mobile montata a supporto dell'elicottero regionale.
+Nella prima decade di agosto la sala operativa regionale antincendio ha attivato due volte il nostro Gruppo. In entrambi i casi si trattava di incendi di vegetazione fuori dal territorio comunale. Il 6 agosto siamo intervenuti a Pomezia, il 9 agosto in via della Falcognana. In tutto sono state oltre dieci ore di lavoro. Sul campo sono andati i mezzi antincendio del Gruppo e la vasca mobile per il rifornimento dell'elicottero regionale.
 
-Raccontiamo come sono andate, perché conoscere il lavoro sul campo aiuta a capire cosa succede quando dal finestrino si vede una colonna di fumo.
+Raccontiamo come sono andate. Capire cosa accade dietro una colonna di fumo aiuta anche a sapere come comportarsi.
 
 ## Chi ci manda e perché usciamo dal Comune
 
-Durante la campagna antincendio boschivo il Gruppo non decide da sé dove andare. Le squadre vengono attivate dalla **SOUP**, la sala operativa regionale che coordina avvistamenti, mezzi aerei e squadre di terra in tutto il Lazio. Quando l'incendio supera le capacità delle squadre più vicine, la sala chiama i gruppi disponibili anche a decine di chilometri di distanza.
+Durante la campagna antincendio boschivo il Gruppo non decide da sé dove andare. La **SOUP**, la sala operativa regionale, coordina avvistamenti, mezzi aerei e squadre di terra in tutto il Lazio. È lei a decidere dove mandare i volontari. Quando l'incendio supera le forze delle squadre più vicine, chiama i gruppi disponibili anche a decine di chilometri.
 
-Per questo capita spesso di operare fuori Genzano. È il funzionamento normale del Servizio nazionale della protezione civile, che abbiamo raccontato in [Cosa fa la PC quando un'emergenza supera i confini comunali](/comunicazioni/2026-07-07-protezione-civile-sconfinamenti-provinciali/).
+Per questo capita spesso di operare fuori Genzano. È il funzionamento normale del Servizio nazionale della protezione civile. Lo abbiamo raccontato in [Cosa fa la PC quando un'emergenza supera i confini comunali](/comunicazioni/2026-07-07-protezione-civile-sconfinamenti-provinciali/).
 
 {{< foto src="/images/2026-08-09-falcognana-vasca-mezzi-campo.webp"
          alt="Campo di stoppie con, a sinistra, un autocarro antincendio rosso con la scritta Protezione Civile Città di Genzano di Roma; al centro alcuni volontari montano una vasca in telo rosso e bianco su un telo di base verde; a destra un autocarro bianco con la scritta Regione Lazio Protezione Civile Colonna Mobile Volontariato."
@@ -47,7 +47,7 @@ Le indicazioni di base per chi abita o coltiva in una fascia di interfaccia sono
 
 **Domenica 9 agosto** la segnalazione parte da un cittadino che vede una colonna di fumo importante. La SOUP attiva il Gruppo alle 14.31 per una verifica; la squadra parte alle 14.52 e arriva sul posto alle 15.08. L'intervento si chiude alle 20.30, dopo quasi sei ore.
 
-Il bilancio riportato nel rapporto è di **circa dieci ettari percorsi dal fuoco**. Sul fronte principale sono intervenuti i mezzi aerei, mentre a terra hanno operato i Vigili del Fuoco e diversi gruppi di volontariato di protezione civile.
+Il bilancio riportato nel rapporto è di **circa dieci ettari percorsi dal fuoco**. Sul fronte principale sono intervenuti i mezzi aerei. A terra hanno operato i Vigili del Fuoco e diversi gruppi di volontariato di protezione civile.
 
 {{< video src="/video/2026-08-09-falcognana-elicottero-lancio.mp4"
           poster="/video/2026-08-09-falcognana-elicottero-poster.webp"
@@ -59,7 +59,7 @@ L'elicottero preleva l'acqua con una **benna** appesa a un cavo: cicli brevi, ca
 
 ## La vasca mobile: rifornire l'elicottero dove non c'è acqua
 
-L'agro intorno a via della Falcognana è fatto di campi mietuti e fossi asciutti. Ad agosto i punti d'acqua a cui attingere sono pochi. Per questo il Gruppo ha portato sul posto la **vasca mobile**, una piscina smontabile che si riempie con le autobotti e permette all'elicottero di ricaricare la benna a pochi minuti dal fronte, invece di allontanarsi fino al lago o al mare.
+L'agro intorno a via della Falcognana è fatto di campi mietuti e fossi asciutti. Ad agosto i punti d'acqua a cui attingere sono pochi. Per questo il Gruppo ha portato sul posto la **vasca mobile**. È una piscina smontabile che si riempie con le autobotti. Serve all'elicottero per ricaricare la benna a pochi minuti dal fronte, senza allontanarsi fino al lago o al mare.
 
 Il montaggio richiede una squadra affiatata e pochi minuti: si stende il telo di base, si distende il telo della vasca, si compone il telaio tubolare, si alza la struttura e si aggancia il bordo. Le fotografie qui sotto seguono le fasi, dalle 16.55 alle 17.01 del 9 agosto.
 
@@ -97,7 +97,7 @@ Quando la colonna di fumo si abbassa, il lavoro non è finito. Comincia la **bon
 
 ## Non eravamo soli
 
-Su fronti di queste dimensioni nessun gruppo lavora da solo. In via della Falcognana hanno operato squadre di più Comuni, tra cui il [Gruppo Comunale Volontari di Protezione Civile della Città di Albano Laziale](https://www.protezionecivilealbano.org/), oltre ai Vigili del Fuoco e ai mezzi aerei.
+Su fronti di queste dimensioni nessun gruppo lavora da solo. In via della Falcognana hanno operato squadre di più Comuni, insieme ai Vigili del Fuoco e ai mezzi aerei. Tra queste c'era il [Gruppo Comunale Volontari di Protezione Civile della Città di Albano Laziale](https://www.protezionecivilealbano.org/).
 
 {{< foto src="/images/2026-08-09-falcognana-squadra-volontari.webp"
          alt="Un volontario in maglietta blu in primo piano; alle sue spalle la squadra schierata accanto alla vasca montata, l'autocarro antincendio rosso, un pick-up bianco e l'autobotte bianca."
@@ -105,7 +105,7 @@ Su fronti di queste dimensioni nessun gruppo lavora da solo. In via della Falcog
 
 {{< foto src="/images/2026-08-09-falcognana-squadre-fine-intervento.webp"
          alt="Foto di gruppo dei volontari in un campo mietuto; a sinistra un pick-up con la scritta Protezione Civile Città di Albano Laziale, al centro l'autocarro antincendio rosso, a destra un altro pick-up con modulo antincendio; sullo sfondo un rudere romano."
-         caption="Ore 17.35: i volontari dei diversi gruppi a fine intervento. Sullo sfondo uno dei ruderi che punteggiano l'agro romano. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+         caption="Ore 17.35: i volontari dei diversi gruppi riuniti sul campo, a lavoro ancora in corso. Sullo sfondo uno dei ruderi che punteggiano l'agro romano. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
 ## Cosa può fare chi vede del fumo
 
