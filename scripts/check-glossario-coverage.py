@@ -77,6 +77,13 @@ def load_glossario(path: Path) -> set[str]:
                 # senza puntini (FEPIVOL): registra entrambe le forme.
                 if "." in s:
                     sigle.add(s.replace(".", ""))
+            # SIGLA_REGEX richiede un solo carattere prima di ogni punto
+            # (es. "D.P.R.") e non cattura le sigle puntate a più lettere
+            # per segmento (es. "FE.PI.VOL."). Fallback: se l'intera
+            # intestazione è nella forma SEGM.SEGM.SEGM, registra anche la
+            # forma senza punti.
+            if re.fullmatch(r"[A-Z]+(?:\.[A-Z]+)+", term):
+                sigle.add(term.replace(".", ""))
     return sigle
 
 

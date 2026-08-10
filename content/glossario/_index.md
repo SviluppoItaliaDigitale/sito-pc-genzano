@@ -7,7 +7,7 @@ sitemap:
   changefreq: monthly
 toc: true
 tts: true
-dataUltimaRevisione: "2026-07-27"
+dataUltimaRevisione: "2026-08-10"
 ---
 
 Le sigle della protezione civile possono sembrare difficili. Questo glossario le spiega in modo semplice, con esempi collegati al territorio quando utile.
@@ -194,8 +194,16 @@ Centro Operativo Regionale (sala operativa regionale). Per il Lazio attiva i COC
 ### Copernicus EMS
 Servizio europeo di gestione delle emergenze. Fornisce mappe satellitari e prodotti cartografici a supporto di grandi emergenze, come alluvioni, incendi e terremoti.
 
+### COVID-19 {#covid-19}
+Malattia respiratoria causata dal coronavirus SARS-CoV-2. La pandemia dichiarata il 31 gennaio 2020 ha attivato per la prima volta su scala nazionale il Servizio di protezione civile per un'emergenza sanitaria, con il Capo del Dipartimento come coordinatore della risposta.
+*Approfondisci: [Il rischio sanitario (Manuale, cap. 7.17)](/manuale/717-rischio-sanitario/).*
+
 ### CRI {#cri}
 Croce Rossa Italiana. Associazione di pubblica utilità, oggi ente del Terzo Settore, componente operativa del Servizio nazionale di protezione civile.
+
+### CSV {#csv}
+Comma-Separated Values: formato di file di testo con valori separati da virgola, apribile con qualsiasi foglio elettronico. Il Gruppo pubblica i propri dati di attività in questo formato nella sezione Open Data.
+*Approfondisci: [Open Data](/open-data/).*
 
 ## D
 
@@ -233,6 +241,9 @@ Dispositivi di Protezione Individuale: caschi, guanti, scarpe antinfortunistiche
 
 ### DPO {#dpo}
 Data Protection Officer, in italiano Responsabile della protezione dei dati (RPD). Figura prevista dal GDPR che vigila sul corretto trattamento dei dati personali in enti pubblici e aziende.
+
+### D.P.R. {#dpr}
+Decreto del Presidente della Repubblica. Atto normativo firmato dal Presidente della Repubblica, distinto dal DPCM (firmato dal Presidente del Consiglio). Diversi regolamenti tecnici citati sul sito — dalla manutenzione delle caldaie alla prevenzione incendi — sono D.P.R.
 
 ### DSA {#dsa}
 Disturbi Specifici dell'Apprendimento, come dislessia, disgrafia e discalculia. Non dipendono dall'intelligenza. Questo sito offre strumenti di lettura dedicati: carattere ad alta leggibilità, lettura ad alta voce, versioni facili.
@@ -653,6 +664,10 @@ Testo Unico sulla Sicurezza sul Lavoro (D.Lgs. 81/2008). Obbliga ogni datore di 
 
 ### UCPM {#ucpm}
 Sigla di *Union Civil Protection Mechanism*: è il [Meccanismo europeo di protezione civile](#meccanismo-europeo).
+
+### UHT {#uht}
+Ultra High Temperature: trattamento a temperatura ultra alta che rende un alimento (tipicamente latte o succhi) conservabile a lungo senza frigorifero, prima dell'apertura. Utile nelle scorte alimentari di emergenza.
+*Approfondisci: [Kit di emergenza](/rischi-prevenzione/kit-emergenza/).*
 
 ### UNDRR {#undrr}
 Ufficio delle Nazioni Unite per la riduzione del rischio di disastri (United Nations Office for Disaster Risk Reduction). Coordina a livello mondiale le strategie per ridurre i danni delle catastrofi, come il Quadro di Sendai.

@@ -1171,3 +1171,33 @@
     - "USGS"
   definizione: "United States Geological Survey: servizio geologico degli Stati Uniti. Pubblica dati sismici e immagini liberi, come le ShakeMap dei terremoti."
   link: "/glossario/#usgs"
+
+- id: covid-19
+  termine: "COVID-19"
+  varianti:
+    - "COVID-19"
+    - "COVID"
+  definizione: "Malattia respiratoria da coronavirus SARS-CoV-2. La pandemia del 2020 ha attivato per la prima volta su scala nazionale il Servizio di protezione civile per un'emergenza sanitaria."
+  link: "/glossario/#covid-19"
+
+- id: csv
+  termine: "CSV"
+  varianti:
+    - "CSV"
+  definizione: "Comma-Separated Values: formato di file di testo con valori separati da virgola, apribile con qualsiasi foglio elettronico. Usato per i dati aperti del Gruppo."
+  link: "/glossario/#csv"
+
+- id: dpr
+  termine: "D.P.R."
+  varianti:
+    - "D.P.R."
+    - "DPR"
+  definizione: "Decreto del Presidente della Repubblica: atto normativo firmato dal Presidente della Repubblica, distinto dal DPCM firmato dal Presidente del Consiglio."
+  link: "/glossario/#dpr"
+
+- id: uht
+  termine: "UHT"
+  varianti:
+    - "UHT"
+  definizione: "Ultra High Temperature: trattamento che rende un alimento (latte, succhi) conservabile a lungo senza frigorifero prima dell'apertura. Utile nelle scorte di emergenza."
+  link: "/glossario/#uht"
