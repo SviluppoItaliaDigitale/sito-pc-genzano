@@ -1,10 +1,11 @@
 # Brief per rifare i disegni di due schede dell'infanzia
 
 Documento di lavoro interno (cartella non deployata). Serve a chi rifà i disegni: un illustratore,
-oppure un'AI generativa di immagini. Le due schede sono state **ritirate dall'indice e dal kit
-dell'infanzia l'11 agosto 2026** perché insegnano a bambini di 3-6 anni comportamenti che a
-quell'età non devono compiere. Le pagine restano online con un avviso; rientrano in catalogo
-quando i disegni sono rifatti.
+oppure un'AI generativa di immagini. Le due schede sono state **ritirate dal sito l'11 agosto 2026** perché insegnano a bambini di 3-6
+anni comportamenti che a quell'età non devono compiere. Le due pagine ora **reindirizzano
+silenziosamente all'indice delle schede**: nessun avviso pubblico, nessuna ammissione di errore
+sul sito. Il disegno vecchio resta nel repository come riferimento per chi rifà il lavoro.
+Rientrano in catalogo quando i disegni sono rifatti.
 
 ## Il principio che governa tutto il rifacimento
 
@@ -97,9 +98,10 @@ non farle scrivere all'AI dentro l'immagine (esce quasi sempre sbagliata in ital
 
 1. Sostituire `scheda-completa.png` nelle due cartelle
    (`static/formazione/schede-stampabili/pronto-soccorso-infanzia/` e `…/sicurezza-in-casa-infanzia/`).
-2. Aggiornare l'attributo `alt` nell'`index.html` descrivendo **fedelmente** le nuove vignette
-   (l'alt vecchio descrive i disegni da buttare) e, per la prima scheda, cambiare titolo e `<title>`.
-3. Togliere il riquadro di avviso «Scheda ritirata dal catalogo».
-4. Rimettere la card nell'indice `static/formazione/schede-stampabili/index.html` (sezione Infanzia)
+2. Ripristinare l'`index.html` della scheda: oggi contiene un **redirect** all'indice. Le versioni
+   originali sono recuperabili dalla storia di git (commit precedenti all'11/08/2026). Va poi
+   riscritto l'attributo `alt` descrivendo **fedelmente** le nuove vignette — quello vecchio
+   descrive i disegni buttati — e, per la prima scheda, cambiati titolo e `<title>`.
+3. Rimettere la card nell'indice `static/formazione/schede-stampabili/index.html` (sezione Infanzia)
    e la voce nel kit `content/formazione/kit-scuola-infanzia.md`.
-5. Rigenerare i pacchetti (`python3 scripts/genera-pacchetti-schede.py`) e pubblicare.
+4. Rigenerare i pacchetti (`python3 scripts/genera-pacchetti-schede.py`) e pubblicare.
