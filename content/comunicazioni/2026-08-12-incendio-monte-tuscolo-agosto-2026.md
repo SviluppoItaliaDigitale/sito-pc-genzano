@@ -18,7 +18,7 @@ social_punti:
   - "11 agosto 2026: vasto incendio sul Monte Tuscolo, nel territorio di Grottaferrata."
   - "Il Gruppo di Genzano attivato dalla SOUP nel primo pomeriggio e rientrato a notte fonda: circa nove ore di lavoro."
   - "In campo autobotte e modulo antincendio, insieme a Vigili del Fuoco, Canadair, elicotteri e squadre di più Comuni."
-  - "Un volontario ha riportato una lieve ustione ed è stato medicato sul posto dal 118."
+  - "Un volontario ha riportato una scottatura, medicata sul posto dal 118: sta bene."
 ---
 
 Nel pomeriggio di **martedì 11 agosto 2026** un vasto incendio ha percorso i versanti del **Monte Tuscolo**, nel territorio di **Grottaferrata**, a ridosso dell'area archeologica dell'antica Tusculum. Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** è stato attivato dalla **SOUP**, la sala operativa regionale antincendio. Ha lavorato sul posto fino a tarda notte: **circa nove ore** in tutto.
@@ -57,15 +57,17 @@ Quando il fuoco corre su un versante che ha case ai piedi, la priorità cambia. 
 
 Il commissario del **Parco regionale dei Castelli Romani**, Marco De Carolis, intervenuto sul posto, ha parlato di **origine dolosa** dell'incendio. Ha sottolineato anche il rischio per il patrimonio archeologico dell'area.
 
-## Un volontario medicato sul posto
+## La sicurezza degli operatori
 
-Durante le operazioni **un volontario del Gruppo ha riportato una lieve ustione**. È stato medicato direttamente sul posto dal personale sanitario del **118 di Frascati**, senza necessità di trasporto in ospedale.
+Durante le operazioni un volontario del Gruppo ha riportato una **scottatura**. È stato assistito subito dal personale sanitario del **118 di Frascati**, presente sul posto, e medicato lì. **Sta bene.**
 
 {{< foto src="/images/2026-08-11-tuscolo-dpi-volontario.webp"
          alt="Primo piano di un volontario con casco rosso, occhiali protettivi sollevati sulla fronte, occhiali da sole a lenti arancioni e semimaschera respiratoria blu con due filtri; sulla divisa rossa e blu è cucita la scritta Volontariato."
          caption="I dispositivi di protezione individuale in ambiente di fumo: casco, occhiali e semimaschera con filtri. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
-È un promemoria di quanto sia concreto il rischio in questo tipo di interventi. Calore radiante, braci, rami che cedono e fumo denso sono pericoli reali. I **dispositivi di protezione individuale** e il rispetto delle procedure restano la prima difesa di chi lavora sul fronte, non un adempimento formale.
+Su un fronte esteso come quello del Tuscolo, con raffiche di vento che spostano le fiamme in pochi secondi, un episodio del genere può capitare anche con l'equipaggiamento completo indosso. Ed è proprio l'equipaggiamento a fare la differenza: casco, occhiali, guanti, indumenti ignifughi e semimaschera con filtri sono il motivo per cui la giornata si è chiusa con una medicazione sul posto e nient'altro.
+
+Vale la pena dirlo a chi sta pensando di avvicinarsi al volontariato di protezione civile: **nessuno viene mandato sul fronte impreparato o da solo**. Si comincia dai corsi di formazione, si opera sempre in squadra e sotto il coordinamento di chi dirige le operazioni di spegnimento, con i dispositivi di protezione forniti dal Gruppo. E l'assistenza sanitaria fa parte del dispositivo di soccorso, come si è visto anche in questa occasione.
 
 ## La notte: il fronte che non si spegne al tramonto
 
