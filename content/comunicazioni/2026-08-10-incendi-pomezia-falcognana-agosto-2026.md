@@ -48,9 +48,6 @@ Il rapporto di intervento lo classifica come **incendio di interfaccia**. È il 
 {{< foto src="/images/2026-08-06-pomezia-volontario-manichetta-mezzo.webp"
          alt="Un volontario in divisa rossa e blu con casco rosso impugna la manichetta accanto al fianco posteriore di un mezzo antincendio rosso; sullo sfondo un altro operatore in maglietta Antincendio davanti a un focolaio e al fumo."
          caption="La linea di manichetta stesa dal mezzo antincendio verso il fronte del fuoco." >}}
-{{< foto src="/images/2026-08-06-pomezia-vegetazione-fumo.webp"
-         alt="Alberi e arbusti anneriti immersi nel fumo, con il terreno bruciato in primo piano e la vegetazione ancora fumante sullo sfondo."
-         caption="Il fumo che resta sospeso tra gli alberi dopo il passaggio del fronte." >}}
 {{< foto src="/images/2026-08-06-pomezia-area-percorsa-fuoco.webp"
          alt="Un boschetto di eucalipti con il terreno completamente annerito dal passaggio del fuoco; in lontananza alcuni mezzi e un residuo di fumo, cielo sereno."
          caption="Il terreno percorso dalle fiamme sotto gli eucalipti, a fuoco ormai passato." >}}
