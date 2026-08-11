@@ -169,7 +169,7 @@ Sono occasioni per **riflettere** e imparare.
 ## La cittadinanza digitale
 
 Nella **scuola digitale** nuovi temi:
-- **App IT-alert** (spiegare cosa è).
+- **IT-alert**, il sistema nazionale di allarme pubblico (spiegare che non è un'app: il messaggio arriva da solo sui telefoni della zona interessata).
 - **Notizie false** in emergenza.
 - **Comunicazione** responsabile.
 - **Verifica** delle fonti.

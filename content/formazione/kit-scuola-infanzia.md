@@ -309,7 +309,6 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 
 - 👉 [**I pericoli naturali**](/formazione/schede-stampabili/pericoli-naturali-infanzia/) — panoramica dei sei rischi principali: terremoto, alluvione, frana, temporale, eruzione vulcanica, incendio boschivo.
 - 👉 [**Allerta e comunicazioni**](/formazione/schede-stampabili/allerta-comunicazioni-infanzia/) — ascoltare le allerte, ricevere informazioni dai canali ufficiali, parlare in famiglia, conoscere le vie di fuga, preparare lo zaino, chiamare il 112.
-- 👉 [**La sicurezza in casa**](/formazione/schede-stampabili/sicurezza-in-casa-infanzia/) — rilevatore di fumo, apparecchi elettrici, fornelli e gas, finestre, ordine, piano di evacuazione.
 - 👉 [**Il mio zainetto di emergenza**](/formazione/schede-stampabili/zainetto-emergenza-infanzia/) — kit personale del bambino: acqua, torcia, fischietto, copertina, numeri utili, peluche rassicurante.
 
 *Cosa faccio se… (emergenze specifiche)*:
@@ -317,7 +316,6 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 - 👉 [**Cosa faccio se mi perdo?**](/formazione/schede-stampabili/se-mi-perdo-infanzia/) — fermarsi, cercare un adulto in divisa, dire nome e cognome, restare in un posto sicuro, chiamare aiuto, aspettare i soccorsi.
 - 👉 [**Cosa faccio se sento odore di gas?**](/formazione/schede-stampabili/odore-gas-infanzia/) — non accendere luci, aprire le finestre con un adulto, uscire all'aperto, niente fiamme, chiamare il 112.
 - 👉 [**Cosa faccio se fa molto caldo?**](/formazione/schede-stampabili/ondata-calore-infanzia/) — bere acqua, stare all'ombra, cappellino, non correre sotto il sole, aiutare i nonni, cercare un posto fresco.
-- 👉 [**Pronto soccorso**](/formazione/schede-stampabili/pronto-soccorso-infanzia/) — valutare, chiamare il 112, controllare coscienza e respiro, pulire e coprire la ferita, rassicurare, attendere i soccorsi.
 
 *A scuola*:
 

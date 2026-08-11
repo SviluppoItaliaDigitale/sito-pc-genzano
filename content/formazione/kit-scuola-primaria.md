@@ -62,7 +62,7 @@ Il riferimento normativo che lega la scuola al Sistema nazionale di Protezione C
 | **Scienze** | Fenomeni geologici, meteorologici, ecosistemi, stati della materia (acqua, fuoco) |
 | **Ed. fisica** | Controllo del corpo, gestione emotiva, evacuazione in sicurezza |
 | **Arte e immagine** | Cartelli di sicurezza, mappe del rischio, simbologia istituzionale |
-| **Tecnologia** | Strumenti di monitoraggio, app IT-alert, radio in emergenza |
+| **Tecnologia** | Strumenti di monitoraggio, IT-alert (sistema nazionale di allarme pubblico, non è un'app), radio in emergenza |
 | **Ed. civica** | 33 ore annuali, tema della sicurezza e della cittadinanza digitale |
 
 ### Durata consigliata e tabella del percorso

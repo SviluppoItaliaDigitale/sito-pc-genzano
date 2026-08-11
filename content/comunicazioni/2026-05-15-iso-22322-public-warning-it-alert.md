@@ -52,15 +52,15 @@ Caratteristiche di IT-alert in linea con ISO 22322:
 
 - **Geolocalizzato**: solo i telefoni nell'area effettivamente esposta ricevono il messaggio. Non si bombarda l'intera Italia per un'alluvione locale.
 - **Multilingue**: italiano e inglese di base, con possibilità di altre lingue per zone turistiche.
-- **Integrato con i sistemi regionali**: i dati delle allerte meteo, sismiche e dei rischi industriali confluiscono nel sistema nazionale.
+- **Integrato con il sistema nazionale**: l'attivazione passa dal Dipartimento della Protezione Civile e dalle autorità competenti per lo scenario, secondo procedure definite.
 - **Accessibile**: il messaggio testuale è leggibile anche da chi non sente, e contiene istruzioni chiare in lingua naturale.
 
-Per quali rischi viene attivato? Eventi gravi e imminenti: maremoto, collasso di una grande diga, incidente in stabilimento Seveso a rischio incidente rilevante, attività vulcaniche, eventi meteo eccezionali. Per le allerte ordinarie (pioggia gialla, vento forte) restano i canali tradizionali (siti istituzionali, app DPC, social, bollettini regionali).
+Per quali rischi viene attivato? Il sistema è **operativo dal 13 febbraio 2024** per quattro tipologie di emergenza: incidente nucleare o emergenza radiologica; incidente rilevante in stabilimento industriale; collasso di una grande diga; attività vulcanica ai Campi Flegrei, al Vesuvio e all'isola di Vulcano. Restano invece in **fase sperimentale**, con soli messaggi di test, il maremoto generato da sisma, l'attività vulcanica dello Stromboli e le precipitazioni intense. **IT-alert non invia le allerte meteo**: per pioggia, vento e temporali valgono i canali del sistema di allertamento (bollettini del Centro Funzionale Regionale, siti istituzionali, avvisi del Comune).
 
 ## Cosa fare quando arriva un'allerta IT-alert
 
 1. **Leggere fino in fondo** il messaggio: contiene il tipo di evento, l'area, la finestra temporale, le istruzioni operative.
-2. **Verificare la fonte ufficiale** se possibile (sito DPC, sito Regione Lazio, app IT-alert ufficiale).
+2. **Verificare la fonte ufficiale** se possibile (sito DPC, sito ufficiale it-alert.gov.it, sito Regione Lazio).
 3. **Non chiamare il 112** per chiedere informazioni: la Centrale Unica deve restare libera per le emergenze reali.
 4. **Seguire le istruzioni** date dal messaggio (allontanarsi da una zona, chiudere finestre, raggiungere un piano alto, ecc.).
 5. **Avvisare familiari** che non hanno ricevuto il messaggio (anziani senza smartphone, persone con telefono spento).

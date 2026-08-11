@@ -80,7 +80,7 @@ In Italia, durante le crisi maggiori, queste regole si traducono in strumenti co
 
 - Le **riunioni informative quotidiane** del Dipartimento di Protezione Civile nelle emergenze prolungate (esempio: le riunioni informative serali del Capo Dipartimento durante la sequenza sismica del Centro Italia 2016).
 - Il **portale ufficiale** [protezionecivile.gov.it](https://www.protezionecivile.gov.it/) e i canali social istituzionali verificati.
-- Il sistema **IT-alert**: invia notifiche dirette ai cellulari nelle aree colpite, senza app, anche con SIM straniera. Attivo dal 2023.
+- Il sistema **IT-alert**: invia notifiche dirette ai cellulari nelle aree colpite, senza app, anche con SIM straniera. Operativo dal 13 febbraio 2024, dopo i test regionali del 2022-2023.
 - I **canali ufficiali** di Prefettura, Comune e Sindaco per le comunicazioni locali.
 
 Per il cittadino la regola è semplice: **in emergenza segui solo i canali ufficiali**. Non condividere notizie non verificate sui social. Non rilanciare messaggi vocali WhatsApp di "fonte certa". Aspetta che parli chi ha l'**autorità** per farlo.

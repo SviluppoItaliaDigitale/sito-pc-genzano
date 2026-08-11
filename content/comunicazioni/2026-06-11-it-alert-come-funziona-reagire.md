@@ -56,16 +56,20 @@ Se ricevi un messaggio che dice "allerta IT-alert, clicca qui" o "invia 100 euro
 
 ## Per quali emergenze si usa
 
-Il decreto del 7 febbraio 2023 stabilisce i casi in cui IT-alert può essere attivato:
+Il decreto del 7 febbraio 2023 stabilisce i casi in cui IT-alert può essere attivato. Dal **13 febbraio 2024** il sistema è **operativo** per quattro tipologie di emergenza:
 
-- **Maremoti** conseguenti a terremoto.
-- **Crolli di grandi dighe**.
-- **Attività vulcanica** (Campi Flegrei, Vesuvio, Ischia, Etna, Stromboli, Vulcano).
-- **Incidenti nucleari** o radiologici.
-- **Eventi con sostanze chimiche** pericolose.
-- **Precipitazioni intense** (in fase di sperimentazione).
+- **Incidenti nucleari** o emergenze radiologiche.
+- **Incidenti rilevanti** in stabilimento industriale.
+- **Collasso di grandi dighe**.
+- **Attività vulcanica** ai Campi Flegrei, al Vesuvio e all'isola di Vulcano.
 
-Il sistema **non sostituisce** le allerte meteo ordinarie, che continuano a essere diffuse via canali regionali e sito PC. IT-alert è per **eventi eccezionali**.
+Restano invece in **fase sperimentale**, con soli messaggi di test:
+
+- **Maremoti** generati da terremoto.
+- **Attività vulcanica** dello Stromboli.
+- **Precipitazioni intense**.
+
+Il sistema **non fornisce indicazioni sulle condizioni meteorologiche**: le allerte gialle, arancioni e rosse continuano a essere diffuse dal sistema di allertamento (bollettini del Centro Funzionale Regionale, canali della Regione e del Comune). IT-alert è per **eventi eccezionali**.
 
 ## Test periodici
 

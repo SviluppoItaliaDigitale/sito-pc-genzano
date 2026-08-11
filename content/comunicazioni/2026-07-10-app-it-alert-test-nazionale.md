@@ -14,7 +14,7 @@ versione_facile: "2026-07-10-app-it-alert-test-nazionale-facile"
 draft: false
 ---
 
-**IT-alert** è il sistema italiano di allarme pubblico che invia messaggi di allerta agli smartphone presenti in una zona specifica. Attivato nel 2023, è entrato gradualmente nell'uso operativo del **Dipartimento della Protezione Civile**. I **test** regionali e nazionali servono a collaudare il sistema e ad abituare la popolazione al suono e al contenuto dei messaggi.
+**IT-alert** è il sistema italiano di allarme pubblico che invia messaggi di allerta agli smartphone presenti in una zona specifica. Dopo i test regionali del 2022-2023, è **operativo dal 13 febbraio 2024** presso il **Dipartimento della Protezione Civile**. I **test** regionali e nazionali servono a collaudare il sistema e ad abituare la popolazione al suono e al contenuto dei messaggi.
 
 ## Come funziona IT-alert
 
@@ -92,7 +92,7 @@ IT-alert è **automaticamente attivo** sulla maggior parte degli smartphone mode
 ### iPhone
 - **Impostazioni** → Notifiche → **Avvisi governativi** (scroll in basso).
 - **Attiva**: "Avvisi pubblici di emergenza".
-- Sistema riconosciuto automaticamente come "IT-alert" dal 2023.
+- Sistema riconosciuto automaticamente come "IT-alert" nelle versioni recenti di iOS.
 
 ### Se non lo ricevi
 - **Aggiorna** il sistema operativo.

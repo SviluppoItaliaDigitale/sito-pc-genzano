@@ -117,7 +117,7 @@ Se abiti vicino al bosco o al Parco dei Castelli:
 - Metti nella borsa: documenti, medicine, animali domestici.
 - Sai dove andare con i vicini in caso di evacuazione.
 
-Per sapere cosa succede, usa l'app IT-alert. È l'app ufficiale del governo italiano per le emergenze.
+Per le emergenze molto gravi c'è IT-alert. IT-alert non è un'app. È il sistema di allarme dello Stato. Il messaggio arriva da solo sul telefono. Non devi scaricare niente.
 
 ## Se c'è un temporale forte
 
