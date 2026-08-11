@@ -1,0 +1,11 @@
+[COMUNICAZIONE]
+Il sistema nazionale **IT-alert** è operativo dal 13 febbraio 2024 per comunicare con la popolazione in caso di emergenza.
+
+Ecco alcuni punti chiave:
+— IT-alert invia messaggi di allerta agli smartphone in una zona specifica.
+— Si basa sulla tecnologia *cell broadcast*: non è un'app da scaricare e non usa il tuo numero di telefono.
+— I test servono a collaudare il sistema e ad abituare tutti al suono e al messaggio.
+
+Per saperne di più su come funzionano i test e cosa fare al ricevimento del messaggio, leggi sul sito: **[Leggi sul sito](https://www.protezionecivilegenzano.it/comunicazioni/2026-07-10-app-it-alert-nazionale/)**
+
+#PCGenzano #Genzano #ProtezioneCivile
