@@ -39,16 +39,15 @@ Per questo capita spesso di operare fuori Genzano. È il funzionamento normale d
 
 Il primo intervento è del **giovedì 6 agosto**, in via di Spregamore, a Pomezia. L'attivazione è delle 13.26; i volontari sono rientrati alle 17.57, dopo quattro ore e mezza di lavoro. Sul posto hanno operato anche i Vigili del Fuoco, la Polizia locale e altri gruppi di protezione civile.
 
-{{< foto src="/images/2026-08-06-pomezia-spegnimento-fronte-fiamme.webp"
-         alt="Un operatore in maglietta nera con la scritta Antincendio e pantaloni rossi dirige un getto d'acqua verso alcune fiamme basse nella macchia; a terra la manichetta e il suolo già annerito, sullo sfondo alti eucalipti."
-         caption="Il getto d'acqua sulle fiamme che corrono nella macchia bassa, ai piedi degli eucalipti. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
-
 Il rapporto di intervento lo classifica come **incendio di interfaccia**. È il caso più delicato: il fuoco corre nella vegetazione ma si trova a ridosso di case, capannoni, strade e recinzioni. La priorità non è più solo spegnere, è impedire che le fiamme raggiungano ciò che sta al margine. Le squadre lavorano allora sul perimetro, bagnano le fasce di rispetto e presidiano i punti dove il fuoco potrebbe saltare.
 
 {{< galleria titolo="L'intervento del 6 agosto a Pomezia" >}}
+{{< foto src="/images/2026-08-06-pomezia-spegnimento-fronte-fiamme.webp"
+         alt="Un operatore in maglietta nera con la scritta Antincendio e pantaloni rossi dirige un getto d'acqua verso alcune fiamme basse nella macchia; a terra la manichetta e il suolo già annerito, sullo sfondo alti eucalipti."
+         caption="Il getto d'acqua sulle fiamme che corrono nella macchia bassa, ai piedi degli eucalipti. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 {{< foto src="/images/2026-08-06-pomezia-volontario-manichetta-mezzo.webp"
          alt="Un volontario in divisa rossa e blu con casco rosso impugna la manichetta accanto al fianco posteriore di un mezzo antincendio rosso; sullo sfondo un altro operatore in maglietta Antincendio davanti a un focolaio e al fumo."
-         caption="La linea di manichetta stesa dal mezzo antincendio verso il fronte del fuoco. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+         caption="La linea di manichetta stesa dal mezzo antincendio verso il fronte del fuoco." >}}
 {{< foto src="/images/2026-08-06-pomezia-vegetazione-fumo.webp"
          alt="Alberi e arbusti anneriti immersi nel fumo, con il terreno bruciato in primo piano e la vegetazione ancora fumante sullo sfondo."
          caption="Il fumo che resta sospeso tra gli alberi dopo il passaggio del fronte." >}}
