@@ -1,8 +1,8 @@
-# Immagini e testi social per «Come dovrebbe funzionare un sistema di allerta pubblica: ISO 22322 e IT-alert»
+# Immagini e testi social per «Protezione Civile e scuola: educare ai rischi fin da piccoli»
 
-- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-05-15-iso-22322-public-warning-it-alert/
-- **Data**: 2026-05-15
-- **Badge**: Formazione
+- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-07-26-pc-scuola-educazione-rischi-bambini/
+- **Data**: 2026-07-26
+- **Badge**: Informazione
 
 ## Dove va ogni file (a prova di errore)
 

@@ -1,8 +1,8 @@
-# Immagini e testi social per «Come dovrebbe funzionare un sistema di allerta pubblica: ISO 22322 e IT-alert»
+# Immagini e testi social per «Il piano di famiglia per l'estate: cosa preparare»
 
-- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-05-15-iso-22322-public-warning-it-alert/
-- **Data**: 2026-05-15
-- **Badge**: Formazione
+- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-06-26-piano-famiglia-estate-emergenze/
+- **Data**: 2026-06-26
+- **Badge**: Prevenzione
 
 ## Dove va ogni file (a prova di errore)
 
