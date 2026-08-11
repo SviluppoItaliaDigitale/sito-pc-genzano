@@ -16,16 +16,16 @@ tts: true
 social_citazione: "Al calare del buio i mezzi aerei non volano più: il lavoro resta tutto alle squadre di terra."
 social_punti:
   - "11 agosto 2026: vasto incendio sul Monte Tuscolo, nel territorio di Grottaferrata."
-  - "Il Gruppo di Genzano attivato dalla SOUP alle 14.48, rientrato a mezzanotte meno dieci: nove ore di lavoro."
+  - "Il Gruppo di Genzano attivato dalla SOUP nel primo pomeriggio e rientrato a notte fonda: circa nove ore di lavoro."
   - "In campo autobotte e modulo antincendio, insieme a Vigili del Fuoco, Canadair, elicotteri e squadre di più Comuni."
   - "Un volontario ha riportato una lieve ustione ed è stato medicato sul posto dal 118."
 ---
 
-Nel pomeriggio di **martedì 11 agosto 2026** un vasto incendio ha percorso i versanti del **Monte Tuscolo**, nel territorio di **Grottaferrata**, a ridosso dell'area archeologica dell'antica Tusculum. Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** è stato attivato dalla **SOUP**, la sala operativa regionale antincendio. Ha lavorato sul posto fino a tarda notte: **nove ore e due minuti** in tutto.
+Nel pomeriggio di **martedì 11 agosto 2026** un vasto incendio ha percorso i versanti del **Monte Tuscolo**, nel territorio di **Grottaferrata**, a ridosso dell'area archeologica dell'antica Tusculum. Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** è stato attivato dalla **SOUP**, la sala operativa regionale antincendio. Ha lavorato sul posto fino a tarda notte: **circa nove ore** in tutto.
 
-## L'intervento: dalle 14.48 a mezzanotte meno dieci
+## L'intervento: dal primo pomeriggio a notte fonda
 
-L'attivazione arriva alle **14.48**. La squadra parte dalla sede alle **15.04** e arriva sul posto alle **15.35**. Da lì il lavoro non si ferma fino a sera: i volontari sono liberi in rientro alle **23.23** e l'intervento si chiude alle **23.50**.
+L'attivazione arriva **poco prima delle 15**. La squadra parte dalla sede nel giro di un quarto d'ora e arriva sul posto **verso le 15.30**. Da lì il lavoro non si ferma fino a sera: i volontari sono liberi in rientro **poco prima delle 23.30** e l'intervento si chiude **poco prima di mezzanotte**.
 
 Sul Tuscolo il Gruppo ha portato l'**autobotte** e un **modulo antincendio**, con una squadra di volontari che si è alternata sul fronte e nella bonifica.
 
@@ -75,7 +75,7 @@ Al calare del buio i mezzi aerei non volano più e il lavoro resta tutto alle sq
          alt="Scena notturna: una linea di fiamme arancioni percorre il pendio a sinistra, mentre a destra i lampeggianti blu di un fuoristrada illuminano il fumo e due operatori in piedi accanto al mezzo."
          caption="Il fronte attivo dopo il tramonto, con le squadre schierate lungo la linea di contenimento." >}}
 
-Il lavoro notturno serve a **contenere** e a **bonificare**. Si presidiano i punti dove il fuoco potrebbe riprendere, si bagnano ceppaie e materiale che cova sotto la cenere. È la ragione per cui un'attivazione delle 14.48 si chiude a mezzanotte meno dieci.
+Il lavoro notturno serve a **contenere** e a **bonificare**. Si presidiano i punti dove il fuoco potrebbe riprendere, si bagnano ceppaie e materiale che cova sotto la cenere. È la ragione per cui un'attivazione di metà pomeriggio si chiude a notte fonda.
 
 {{< foto src="/images/2026-08-11-tuscolo-querce-fumo.webp"
          alt="Querce e arbusti anneriti immersi in una foschia di fumo, con il terreno bruciato in primo piano e i rilievi che si intravedono in lontananza."

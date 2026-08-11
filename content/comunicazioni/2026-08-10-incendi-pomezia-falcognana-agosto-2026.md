@@ -37,7 +37,7 @@ Per questo capita spesso di operare fuori Genzano. È il funzionamento normale d
 
 ## 6 agosto: incendio di interfaccia a Pomezia
 
-Il primo intervento è del **giovedì 6 agosto**, in via di Spregamore, a Pomezia. L'attivazione è delle 13.26; i volontari sono rientrati alle 17.57, dopo quattro ore e mezza di lavoro. Sul posto hanno operato anche i Vigili del Fuoco, la Polizia locale e altri gruppi di protezione civile.
+Il primo intervento è del **giovedì 6 agosto**, in via di Spregamore, a Pomezia. L'attivazione arriva nel primo pomeriggio e i volontari rientrano in serata, dopo circa quattro ore e mezza di lavoro. Sul posto hanno operato anche i Vigili del Fuoco, la Polizia locale e altri gruppi di protezione civile.
 
 Il rapporto di intervento lo classifica come **incendio di interfaccia**. È il caso più delicato: il fuoco corre nella vegetazione ma si trova a ridosso di case, capannoni, strade e recinzioni. La priorità non è più solo spegnere, è impedire che le fiamme raggiungano ciò che sta al margine. Le squadre lavorano allora sul perimetro, bagnano le fasce di rispetto e presidiano i punti dove il fuoco potrebbe saltare.
 
@@ -60,7 +60,7 @@ Le indicazioni di base per chi abita o coltiva in una fascia di interfaccia sono
 
 ## 9 agosto: dieci ettari in via della Falcognana
 
-**Domenica 9 agosto** la segnalazione parte da un cittadino che vede una colonna di fumo importante. La SOUP attiva il Gruppo alle 14.31 per una verifica; la squadra parte alle 14.52 e arriva sul posto alle 15.08. L'intervento si chiude alle 20.30, dopo quasi sei ore.
+**Domenica 9 agosto** la segnalazione parte da un cittadino che vede una colonna di fumo importante. La SOUP attiva il Gruppo verso le 14.30 per una verifica; la squadra arriva sul posto poco dopo le 15. L'intervento si chiude verso le 20.30, dopo quasi sei ore.
 
 Il bilancio riportato nel rapporto è di **circa dieci ettari percorsi dal fuoco**. Sul fronte principale sono intervenuti i mezzi aerei. A terra hanno operato i Vigili del Fuoco e diversi gruppi di volontariato di protezione civile.
 
@@ -108,7 +108,7 @@ Quando la colonna di fumo si abbassa, il lavoro non è finito. Comincia la **bon
           titolo="Un volontario bagna con la manichetta la vegetazione bruciata lungo una recinzione"
           caption="La bonifica lungo una recinzione di campagna: il volontario raffredda il terreno annerito e le siepi ai margini. Video senza audio. Fonte: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
-È la fase più lunga e la meno visibile. Spiega perché un intervento iniziato alle 14.31 si chiude alle 20.30.
+È la fase più lunga e la meno visibile. Spiega perché un intervento iniziato a metà pomeriggio si chiude in serata.
 
 ## Non eravamo soli
 
