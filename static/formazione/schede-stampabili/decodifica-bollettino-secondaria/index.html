@@ -53,6 +53,11 @@
     .col-giallo { background: #fff3cd; }
     .col-arancione { background: #ffd9a8; }
     .col-rosso { background: #f8d7da; }
+    /* Soluzione capovolta (ruotata 180°) — pattern kit-calamita, regola progetto:
+       l'alunno non legge la soluzione a colpo d'occhio; l'adulto gira il foglio. */
+    .soluzione-capovolta { margin: 1rem 0 0; padding: 0.5rem 0.8rem; border: 1.5px dashed var(--scheda-bordo); border-radius: 6px; background: #fafbfc; transform: rotate(180deg); transform-origin: center center; font-size: 0.85rem; line-height: 1.5; page-break-inside: avoid; }
+    .soluzione-capovolta .titolo { display: block; font-weight: 700; color: var(--scheda-blu); margin-bottom: 0.2rem; }
+    @media print { .soluzione-capovolta { background: transparent; border-width: 1px; } }
   </style>
 </head>
 <body>
@@ -181,8 +186,8 @@ secondo quanto previsto dal piano di emergenza.</div>
       <div class="bol-risposta"></div>
     </div>
 
-    <div style="margin-top: 1rem; padding: 0.6rem 0.8rem; background: #d1e7dd; border-radius: 8px; border-left: 4px solid var(--scheda-verde); font-size: 0.85rem;">
-      <strong style="color: var(--scheda-verde);">Per il docente — soluzioni di riferimento</strong>:
+    <div class="soluzione-capovolta">
+      <span class="titolo">🔑 Per il docente — soluzioni di riferimento — gira il foglio sottosopra per leggere</span>
       1) Centro Funzionale Regionale Lazio (Agenzia regionale di protezione civile).
       2) Zona D — Bacini Costieri Sud / Lazio Meridionale (territorio dei bacini idrografici minori).
       3) Idrogeologico, temporali e criticità generale: arancione. Idraulico: giallo.

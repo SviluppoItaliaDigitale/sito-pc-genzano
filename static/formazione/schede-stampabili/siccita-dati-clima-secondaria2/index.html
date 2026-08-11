@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Siccità e dati del clima locale — Secondaria di secondo grado</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Secondaria di secondo grado. La siccità come rischio che cresce: analisi guidata della serie di pioggia annua di Genzano (ERA5/Open-Meteo), deficit idrico, siccità meteorologica e idrologica.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="../assets/scheda-print.css">
+  <style>
+    .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
+    .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
+    .sez-titolo h2 { font-size: 1.05rem; color: var(--scheda-blu); margin: 0; }
+    .testo-info { padding: 0.7rem 0.95rem; background: #f4f7fb; border-left: 4px solid var(--scheda-blu); border-radius: 0 8px 8px 0; margin: 0.5rem 0; font-size: 0.92rem; line-height: 1.55; }
+    .testo-info p { margin: 0 0 0.4rem 0; }
+    .testo-info p:last-child { margin-bottom: 0; }
+    .testo-info strong { color: var(--scheda-blu); }
+    .dati-tabella { width: 100%; border-collapse: collapse; margin: 0.4rem 0; font-size: 0.86rem; }
+    .dati-tabella caption { caption-side: top; text-align: left; font-size: 0.8rem; font-style: italic; color: #495057; padding-bottom: 0.25rem; }
+    .dati-tabella th, .dati-tabella td { border: 1.5px solid var(--scheda-bordo); padding: 0.4rem 0.55rem; vertical-align: top; }
+    .dati-tabella th { background: var(--scheda-blu); color: #fff; font-weight: 700; }
+    .dati-tabella td.num { text-align: right; font-family: "Courier New", monospace; font-weight: 700; }
+    .dati-tabella tbody tr:nth-child(even) { background: #f4f7fb; }
+    .grafico-vuoto { background: #f4f7fb; border: 2px dashed var(--scheda-blu); border-radius: 8px; padding: 0.5rem; margin: 0.4rem 0; min-height: 7rem; display: flex; align-items: center; justify-content: center; color: #ced4da; font-style: italic; font-size: 0.85rem; }
+    .domanda-card { padding: 0.55rem 0.75rem; background: #fff; border: 1.5px solid var(--scheda-bordo); border-radius: 6px; margin: 0.4rem 0; }
+    .domanda-card .header { display: flex; gap: 0.5rem; margin-bottom: 0.3rem; }
+    .domanda-card .num-q { width: 1.6rem; height: 1.6rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
+    .domanda-card .testo { font-size: 0.9rem; line-height: 1.4; flex: 1; }
+    .domanda-card .testo strong { color: var(--scheda-blu); }
+    .domanda-card .righe { display: grid; gap: 0.4rem; padding-left: 2rem; margin-top: 0.3rem; }
+    .domanda-card .righe .r { border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.4rem; }
+    .istruzioni-docente { margin-top: 0.8rem; padding: 0.55rem 0.85rem; background: #fff8e6; border-left: 4px solid var(--scheda-oro); border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45; }
+  </style>
+</head>
+<body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">← Torna alle schede</a>
+    <span class="scheda-titolo">Siccità e dati del clima — Secondaria II</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">La siccità e i dati del clima locale</h1>
+        <div class="scheda-sottotitolo">Leggere una serie climatica reale — Secondaria di Secondo Grado (14-19 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 14-19 anni</span>
+      <span><strong>Obiettivo:</strong> analizzare una serie di dati climatici reali e collegarla al rischio siccità</span>
+      <span><strong>Discipline:</strong> scienze della Terra, geografia, statistica, ed. civica</span>
+    </div>
+
+    <p class="scheda-intro">
+      La <strong>siccità</strong> è un rischio lento: non arriva con un boato, ma con mesi di piogge scarse,
+      falde che si abbassano e ordinanze che limitano l'uso dell'acqua. I <strong>Castelli Romani</strong> dipendono
+      in larga parte dalla <strong>falda vulcanica dei Colli Albani</strong>, alimentata solo dalle piogge: il calo
+      storico dei livelli dei laghi di <strong>Albano</strong> e di <strong>Nemi</strong> e la crisi idrica del
+      <strong>2017</strong> nel Lazio lo raccontano. Gli scenari del <strong>CMCC</strong> indicano per il
+      Mediterraneo siccità più frequenti. In questa scheda non ti chiediamo di crederci sulla parola: analizzerai
+      <strong>tu</strong> una serie di dati reali di pioggia misurata sul nostro territorio.
+    </p>
+
+    <h2 class="scheda-h2">📖 Glossario del rischio idrico</h2>
+    <dl style="display: grid; grid-template-columns: auto 1fr; gap: 0.25rem 0.7rem; margin: 0.35rem 0; font-size: 0.84rem; line-height: 1.45; padding: 0.55rem 0.85rem; background: #fff; border: 1.5px solid var(--scheda-bordo); border-radius: 6px;">
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Deficit idrico</dt><dd style="margin: 0;">differenza negativa tra l'acqua disponibile (piogge, falde, invasi) e quella necessaria a usi civili, agricoli e ambientali in un periodo dato.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Siccità meteorologica</dt><dd style="margin: 0;">periodo con precipitazioni significativamente inferiori alla media climatica della zona. È la prima ad arrivare: si misura sui dati di pioggia.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Siccità idrologica</dt><dd style="margin: 0;">effetto ritardato della precedente sui corpi idrici: fiumi, laghi, sorgenti e falde in calo. Può persistere anche quando torna a piovere: la falda si ricarica in anni, non in giorni.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Severità idrica</dt><dd style="margin: 0;">classificazione usata dagli Osservatori distrettuali (per il Lazio: Autorità di Bacino dell'Appennino Centrale) su <strong>4 livelli</strong>: normale, bassa, media, alta.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Ordinanza comunale</dt><dd style="margin: 0;">atto del Sindaco che in crisi idrica limita gli usi non essenziali dell'acqua potabile: divieti tipici su irrigazione di giardini, lavaggio di auto e cortili, riempimento di piscine private.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Rianalisi ERA5</dt><dd style="margin: 0;">ricostruzione del clima passato (dal 1940 a oggi) prodotta dal programma europeo Copernicus combinando osservazioni e modelli. È la fonte dei dati di questa scheda.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Dispersione di rete</dt><dd style="margin: 0;">acqua persa dalle tubature prima di arrivare ai rubinetti: in Italia in media circa il <strong>30%</strong> dell'acqua immessa. Ridurla è la misura strutturale più efficace.</dd>
+    </dl>
+
+    <div class="sez-titolo"><span class="num">1</span><h2>I dati: pioggia annua a Genzano</h2></div>
+    <div class="testo-info">
+      <p>La tabella riporta il <strong>totale annuale di precipitazione</strong> a Genzano di Roma nell'ultimo
+      decennio, estratto dal dataset aperto del sito (serie completa 2005-2025). Alcuni anni sono <strong>n.d.</strong>
+      (non disponibili): nelle serie reali capita, e un'analisi onesta lo dichiara invece di inventare i valori.</p>
+      <p><strong>Fonte: rianalisi ERA5/Open-Meteo (CC BY 4.0) via Laboratorio meteo del sito</strong> — puoi
+      esplorare e riprodurre il grafico interattivo su <strong>protezionecivilegenzano.it/laboratorio-meteo/</strong>
+      e scaricare il dataset da <strong>/open-data/</strong> (file <em>clima-pioggia-annuale-genzano.json</em>).</p>
+    </div>
+    <table class="dati-tabella">
+      <caption>Pioggia annua a Genzano di Roma, 2016-2025 (mm). Fonte: ERA5/Open-Meteo via Laboratorio meteo del sito.</caption>
+      <thead>
+        <tr><th scope="col">Anno</th><th scope="col">Pioggia annua (mm)</th><th scope="col">Anno</th><th scope="col">Pioggia annua (mm)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>2016</td><td class="num">982</td><td>2021</td><td class="num">1168</td></tr>
+        <tr><td>2017</td><td class="num">908</td><td>2022</td><td class="num">962</td></tr>
+        <tr><td>2018</td><td class="num">1530</td><td>2023</td><td class="num">979</td></tr>
+        <tr><td>2019</td><td class="num">1317</td><td>2024</td><td class="num">922</td></tr>
+        <tr><td>2020</td><td class="num">n.d.</td><td>2025</td><td class="num">846</td></tr>
+      </tbody>
+    </table>
+
+    <div class="sez-titolo"><span class="num">2</span><h2>Analisi guidata della serie</h2></div>
+    <div class="testo-info">
+      <p>Lavora sulla tabella, con calcolatrice o foglio di calcolo:</p>
+      <p>• <strong>a)</strong> Calcola la <strong>media</strong> dei 9 valori disponibili (escludi il n.d.).<br>
+      • <strong>b)</strong> Individua l'anno <strong>più piovoso</strong> e quello <strong>più secco</strong> del decennio e calcola la loro differenza.<br>
+      • <strong>c)</strong> Conta quanti anni stanno <strong>sotto i 1.000 mm</strong>. In quale parte del decennio si concentrano?<br>
+      • <strong>d)</strong> Il <strong>2017</strong> — l'anno della crisi idrica nel Lazio — dove si colloca nella serie?</p>
+    </div>
+    <div class="grafico-vuoto">[ Spazio per il grafico a barre — asse X: anni 2016-2025, asse Y: pioggia annua in mm. Lascia vuota la barra del 2020 (n.d.) e traccia una linea orizzontale sulla media calcolata ]</div>
+
+    <div class="sez-titolo"><span class="num">3</span><h2>Dal dato al rischio: cosa fa il sistema</h2></div>
+    <div class="testo-info">
+      <p>Un anno secco produce prima la siccità <strong>meteorologica</strong>, poi — con mesi o anni di ritardo —
+      quella <strong>idrologica</strong>: sorgenti e fontanili in secca, livelli dei laghi visibilmente bassi.
+      Gli <strong>Osservatori permanenti sugli utilizzi idrici</strong> delle Autorità di bacino distrettuali
+      (per il Lazio: Appennino Centrale) monitorano la situazione e classificano la severità idrica su 4 livelli;
+      i Comuni possono emettere <strong>ordinanze di risparmio</strong>; il gestore idrico può ridurre la pressione
+      o sospendere l'erogazione a fasce orarie. La misura più efficace resta strutturale: riparare le reti che in
+      Italia disperdono in media circa il 30% dell'acqua immessa.</p>
+    </div>
+
+    <div class="sez-titolo"><span class="num">4</span><h2>Domande</h2></div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">1</span><span class="testo">Riporta i risultati dell'analisi guidata (media, anno più piovoso e più secco, anni sotto i 1.000 mm) e descrivi in 3-4 righe cosa suggerisce la serie sull'ultimo quadriennio 2022-2025.</span></div>
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">2</span><span class="testo">Spiega la differenza tra <strong>siccità meteorologica</strong> e <strong>siccità idrologica</strong>. Perché la seconda può continuare anche quando ricomincia a piovere?</span></div>
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">3</span><span class="testo">Il totale annuo non dice tutto: due anni con la stessa pioggia possono avere effetti diversissimi. Quale altra informazione ti servirebbe per valutare davvero il rischio siccità? (Suggerimento: <em>quando</em> piove, e <em>come</em>.)</span></div>
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">4</span><span class="testo">Un anno della serie è n.d. Perché in un'analisi scientifica è corretto dichiarare il dato mancante invece di stimarlo «a occhio»? Che effetto avrebbe sul calcolo della media includerlo come zero?</span></div>
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">5</span><span class="testo">Durante una crisi idrica il Sindaco emette un'ordinanza di risparmio. Elenca 3 divieti tipici e spiega perché rispettarli non è una formalità.</span></div>
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <div class="header"><span class="num-q">6</span><span class="testo">Vai su <strong>protezionecivilegenzano.it/laboratorio-meteo/</strong>: riproduci il grafico della pioggia annua e costruiscine un secondo a tua scelta (es. giorni molto caldi). I due grafici raccontano la stessa storia? Argomenta in 4-5 righe.</span></div>
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="istruzioni-docente">
+      <strong>Per il/la docente · Tracce e risultati attesi:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li><strong>Analisi guidata</strong>: media dei 9 valori disponibili ≈ <strong>1.068 mm</strong>; massimo <strong>2018 (1.530 mm)</strong>, minimo <strong>2025 (846 mm)</strong>, differenza 684 mm; <strong>6 anni su 9</strong> sotto i 1.000 mm, con l'intero quadriennio <strong>2022-2025</strong> sotto soglia; il 2017 (908 mm) è tra gli anni più secchi della serie, coerente con la crisi idrica del Lazio di quell'anno.</li>
+        <li><strong>(2)</strong> meteorologica = deficit di pioggia rispetto alla media; idrologica = effetto ritardato su falde, sorgenti e laghi. La falda vulcanica dei Colli Albani si ricarica in anni, non in giorni.</li>
+        <li><strong>(3)</strong> distribuzione stagionale e intensità: piogge concentrate in pochi eventi violenti scorrono via (run-off) e non ricaricano la falda; contano anche temperatura ed evapotraspirazione.</li>
+        <li><strong>(4)</strong> onestà del dato: includere il n.d. come zero abbasserebbe artificiosamente la media (da ≈1.068 a ≈961 mm su 10 valori), falsando la conclusione.</li>
+        <li><strong>(5)</strong> divieti tipici: irrigazione di giardini, lavaggio di auto e cortili, riempimento di piscine private. L'acqua risparmiata serve agli usi potabili di tutti.</li>
+        <li><strong>Percorso sul sito</strong>: pagina operativa <a href="/rischi-prevenzione/siccita/">Siccità e crisi idrica</a>; il Laboratorio meteo (<a href="/laboratorio-meteo/">/laboratorio-meteo/</a>) e i dataset aperti (<a href="/open-data/">/open-data/</a>).</li>
+        <li><strong>Riferimenti istituzionali</strong>: <a href="https://www.isprambiente.gov.it/" target="_blank" rel="noopener">ISPRA</a> (risorse idriche e siccità), <a href="https://www.cnr.it/" target="_blank" rel="noopener">CNR</a> (ricerca su clima e acque), Osservatori distrettuali delle Autorità di bacino — per il Lazio l'<a href="https://www.autoritadistrettoappenninocentrale.it/" target="_blank" rel="noopener">Autorità di Bacino dell'Appennino Centrale</a>.</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Siccità e dati del clima locale" · Secondaria II grado · Rev. 01 – Agosto 2026</span>
+    </footer>
+  </article>
+</body>
+</html>

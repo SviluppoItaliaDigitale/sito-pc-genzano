@@ -20,7 +20,7 @@ allegati: []
 draft: false
 ---
 
-Lunedì 27 luglio la Regione Lazio ha presentato la **Campagna antincendio boschivo (AIB) 2026** e il punto sulle attività svolte. La conferenza stampa si è tenuta nella sede della Protezione Civile regionale. Sono intervenuti il presidente della Regione **Francesco Rocca** e l'assessore con delega alla Protezione Civile **Pasquale Ciacciarelli**. Erano presenti anche il presidente della XII Commissione Nazareno Neri, il generale dei Carabinieri forestali Gianpiero Andreatta, il dirigente dell'ufficio soccorso pubblico della Direzione regionale dei Vigili del Fuoco Nicola Ciannelli e il presidente del Comitato Tecnico Consultivo del volontariato Enrico Lorenzetti. In questo articolo riportiamo i dati presentati dalla Regione.
+Lunedì 27 luglio la Regione Lazio ha presentato la **Campagna antincendio boschivo (AIB) 2026** e il punto sulle attività svolte. La conferenza stampa si è tenuta nella sede della Protezione Civile regionale. Sono intervenuti il presidente della Regione **Francesco Rocca** e l'assessore con delega alla Protezione Civile **Pasquale Ciacciarelli**. Erano presenti anche il presidente della XII Commissione Nazareno Neri, il generale dei Carabinieri forestali Gianpiero Andreatta, il dirigente dell'ufficio soccorso pubblico della Direzione regionale dei Vigili del Fuoco Nicola Ciannelli e il presidente del Comitato Tecnico Consultivo del volontariato Enrico Lorenzetti. Questo articolo riprende i dati del comunicato della Regione [«Presentata la Campagna Antincendio Boschivo 2026»](https://www.regione.lazio.it/notizie/presentata-la-campagna-antincendio-boschivo-2026) del 28 luglio.
 
 ## Il dispositivo della campagna 2026
 
@@ -32,6 +32,12 @@ La campagna è attiva dal **15 giugno al 15 ottobre**. Il sistema regionale può
 - l'**accordo annuale con i Vigili del Fuoco** — Direzione regionale Lazio, finanziato con 3,1 milioni di euro: 14 partenze "boschive" estive e 16 Direttori delle Operazioni di Spegnimento (DOS) distribuiti sul territorio;
 - la **convenzione con i Carabinieri forestali** (CUFAA), del valore di 300.000 euro, per il controllo del territorio e lo scambio informativo;
 - il concorso della **flotta aerea dello Stato** (Canadair ed elicotteri nazionali), attivabile tramite il Centro Operativo Aereo Unificato del Dipartimento della Protezione Civile.
+
+Le convenzioni impegnano i volontari al soccorso, all'assistenza alla popolazione e alla diffusione della cultura di protezione civile. Impegnano anche alla lotta attiva agli **incendi boschivi e di interfaccia**: quelli che minacciano case, strade e attività vicine al bosco.
+
+Le 14 partenze "boschive" dei Vigili del Fuoco sono attive solo d'estate. Rinforzano la risposta nei periodi di maggiore afflusso di chiamate al 112. I 16 DOS coordinano sul posto le squadre a terra e i mezzi aerei.
+
+La convenzione con i Carabinieri forestali (CUFAA — **Comando Unità Forestali, Ambientali e Agroalimentari**) è sottoscritta tra il Ministero dell'Agricoltura, della Sovranità Alimentare e delle Foreste e la Regione Lazio. La base giuridica è l'[articolo 13, comma 5 del D.Lgs. 177/2016](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2016-08-19;177).
 
 Il ruolo centrale resta quello del **volontariato**: prevenzione attiva, avvistamento precoce e lotta attiva nel periodo di massimo rischio.
 
@@ -76,6 +82,7 @@ Sul nostro sito:
 
 Fonti istituzionali:
 
+- [Presentata la Campagna Antincendio Boschivo 2026 — Regione Lazio, 28 luglio 2026](https://www.regione.lazio.it/notizie/presentata-la-campagna-antincendio-boschivo-2026)
 - [Protezione Civile della Regione Lazio](https://protezionecivile.regione.lazio.it/)
 - [Bollettino di pericolosità incendi boschivi — Regione Lazio](https://protezionecivile.regione.lazio.it/bollettini/rischi-incendi)
 - [Dipartimento della Protezione Civile — Incendi boschivi](https://rischi.protezionecivile.gov.it/it/incendi-boschivi-0/)
