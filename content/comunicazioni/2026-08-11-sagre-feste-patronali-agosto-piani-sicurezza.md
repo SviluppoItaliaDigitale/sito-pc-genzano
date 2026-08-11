@@ -1,6 +1,6 @@
 ---
 title: "Sagre e feste patronali di agosto: cosa c'è dietro alla sicurezza"
-date: 2026-08-11
+date: 2026-08-11T00:01:00+02:00
 description: "Agosto è il mese delle sagre nei Castelli. Ecco come si organizza la sicurezza di un evento pubblico e quale è il ruolo della Protezione Civile."
 badge: "Informazione"
 priorita: "normale"
