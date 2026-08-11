@@ -55,9 +55,11 @@ L'allerta gialla dice che il tempo può cambiare. I fenomeni non sono gravi. Ma 
 
 - Sito della Regione Lazio — Protezione Civile.
 - Sito del Comune di Genzano di Roma e canali del Gruppo.
-- App IT-Alert (l'app ufficiale del Governo italiano per le emergenze).
+- Avvisi del Comune e del Sindaco.
 - Radio e televisione regionali.
 - Bollettini del Centro Funzionale Regionale Lazio.
+
+IT-alert non è un'app. È il sistema di allarme dello Stato. Il messaggio arriva da solo sul telefono. Ma IT-alert non manda le allerte meteo. Serve per altre emergenze molto gravi. Per la pioggia e il vento segui i bollettini.
 
 ## In caso di emergenza
 

@@ -88,7 +88,7 @@ Se si prevede ondata di calore:
 ## Piano in caso di incendio vicino a casa
 
 Se vivi vicino al Parco dei Castelli o a zone boscate:
-- **Identifica** fonti di informazione (protezione civile, sindaco, app IT-alert).
+- **Identifica** fonti di informazione (protezione civile, sindaco, canali istituzionali).
 - **Conosci** più vie di uscita dalla zona.
 - **Pianifica** cosa portare via in 5 minuti (documenti, farmaci, animali).
 - **Prepara kit evacuazione** leggero ma completo.

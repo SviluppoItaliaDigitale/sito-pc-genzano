@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pacchetto stampa: Scuola Secondaria di I grado (11-13 anni) — 32 schede A4</title>
-  <meta name="description" content="Stampa in un click tutte le 32 schede stampabili della Scuola Secondaria di I grado (11-13 anni). Pacchetto auto-aggiornato dal sito istituzionale.">
+  <title>Pacchetto stampa: Scuola Secondaria di I grado (11-13 anni) — 36 schede A4</title>
+  <meta name="description" content="Stampa in un click tutte le 36 schede stampabili della Scuola Secondaria di I grado (11-13 anni). Pacchetto auto-aggiornato dal sito istituzionale.">
   <meta name="robots" content="noindex,follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
@@ -232,6 +232,11 @@
     .col-giallo { background: #fff3cd; }
     .col-arancione { background: #ffd9a8; }
     .col-rosso { background: #f8d7da; }
+    /* Soluzione capovolta (ruotata 180°) — pattern kit-calamita, regola progetto:
+       l'alunno non legge la soluzione a colpo d'occhio; l'adulto gira il foglio. */
+    .soluzione-capovolta { margin: 1rem 0 0; padding: 0.5rem 0.8rem; border: 1.5px dashed var(--scheda-bordo); border-radius: 6px; background: #fafbfc; transform: rotate(180deg); transform-origin: center center; font-size: 0.85rem; line-height: 1.5; page-break-inside: avoid; }
+    .soluzione-capovolta .titolo { display: block; font-weight: 700; color: var(--scheda-blu); margin-bottom: 0.2rem; }
+    @media print { .soluzione-capovolta { background: transparent; border-width: 1px; } }
   
 
 /* === stili scheda 3 === */
@@ -325,6 +330,67 @@
 
 /* === stili scheda 5 === */
 
+    .bol-box {
+      background: #fff3cd;
+      border: 2px solid var(--scheda-oro);
+      border-radius: 10px;
+      padding: 1rem;
+      margin: 0.6rem 0 1rem 0;
+      font-family: monospace;
+      font-size: 0.92rem;
+      line-height: 1.5;
+      white-space: pre-wrap;
+    }
+    .bol-esempio-etichetta {
+      display: inline-block;
+      background: var(--scheda-oro);
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      margin-bottom: 0.4rem;
+    }
+    .bol-domanda {
+      margin-bottom: 0.9rem;
+      padding-left: 1rem;
+      border-left: 3px solid var(--scheda-blu);
+    }
+    .bol-domanda h3 {
+      font-size: 0.98rem;
+      color: var(--scheda-blu);
+      margin: 0 0 0.35rem 0;
+    }
+    .bol-risposta {
+      border: 1.5px solid var(--scheda-bordo);
+      border-radius: 6px;
+      padding: 0.4rem 0.6rem;
+      min-height: 2.2rem;
+      background: #fcfcfc;
+      margin-top: 0.3rem;
+    }
+    .livelli-tabella {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      margin: 0.5rem 0;
+    }
+    .livelli-tabella th, .livelli-tabella td {
+      border: 1.5px solid var(--scheda-bordo);
+      padding: 0.4rem 0.6rem;
+      vertical-align: top;
+    }
+    .livelli-tabella th { background: #f0f4f8; color: var(--scheda-blu); text-align: left; }
+    .liv-0 { background: #d1e7dd; }
+    .liv-1 { background: #fff3cd; }
+    .liv-2 { background: #ffd9a8; }
+    .liv-3 { background: #f8d7da; }
+  
+
+/* === stili scheda 6 === */
+
     .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
     .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
     .sez-titolo h2 { font-size: 1.05rem; color: var(--scheda-blu); margin: 0; }
@@ -380,7 +446,7 @@
     }
   
 
-/* === stili scheda 6 === */
+/* === stili scheda 7 === */
 
     .consegna-box {
       background: #eaf2fb; border-left: 4px solid var(--scheda-blu);
@@ -445,7 +511,7 @@
     }
   
 
-/* === stili scheda 7 === */
+/* === stili scheda 8 === */
 
     .tema-box {
       background: #003366; color: #fff;
@@ -502,7 +568,7 @@
     .istruzioni-maestra strong { color: #664d03; }
   
 
-/* === stili scheda 8 === */
+/* === stili scheda 9 === */
 
     .articolo-block {
       padding: 0.7rem 0.9rem; background: #fff;
@@ -555,7 +621,7 @@
     }
   
 
-/* === stili scheda 9 === */
+/* === stili scheda 10 === */
 
     .vulcano-svg { width: 100%; max-width: 480px; margin: 0.5rem auto; display: block; }
 
@@ -607,7 +673,33 @@
     }
   
 
-/* === stili scheda 10 === */
+/* === stili scheda 11 === */
+
+    .nozione-box { background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.88rem; line-height: 1.55; }
+    .nozione-box .titolo-n { font-weight: 700; color: var(--scheda-blu); margin-bottom: 0.2rem; font-size: 0.93rem; }
+    .nozione-box .fonte { font-style: italic; color: #495057; font-size: 0.78rem; }
+    .glossario-mini { display: grid; grid-template-columns: auto 1fr; gap: 0.25rem 0.7rem; margin: 0.35rem 0; font-size: 0.85rem; line-height: 1.45; padding: 0.55rem 0.85rem; background: #fff; border: 1.5px solid var(--scheda-bordo); border-radius: 6px; }
+    .glossario-mini dt { font-weight: 700; color: var(--scheda-blu); white-space: nowrap; }
+    .glossario-mini dd { margin: 0; }
+    .dati-tabella { width: 100%; border-collapse: collapse; margin: 0.4rem 0; font-size: 0.88rem; }
+    .dati-tabella th, .dati-tabella td { border: 1.5px solid var(--scheda-bordo); padding: 0.32rem 0.55rem; text-align: left; }
+    .dati-tabella th { background: var(--scheda-blu); color: #fff; font-weight: 700; font-size: 0.82rem; }
+    .dati-tabella td.num { text-align: right; font-family: "Courier New", monospace; font-weight: 600; }
+    .dati-tabella tbody tr:nth-child(even) { background: #f4f7fb; }
+    .dati-tabella caption { caption-side: bottom; font-size: 0.76rem; font-style: italic; color: #495057; text-align: left; padding-top: 0.25rem; }
+    .domanda-card { padding: 0.5rem 0.7rem; background: #fff; border: 1.5px solid var(--scheda-bordo); border-radius: 6px; margin-bottom: 0.35rem; font-size: 0.9rem; }
+    .domanda-card .num-q { width: 1.4rem; height: 1.4rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.78rem; margin-right: 0.35rem; }
+    .righe { display: grid; gap: 0.3rem; padding-left: 1.9rem; margin-top: 0.25rem; }
+    .righe .r { border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.3rem; }
+    .calcolo { background: #f4f7fb; border-left: 3px solid var(--scheda-blu); padding: 0.4rem 0.6rem; border-radius: 0 4px 4px 0; font-size: 0.8rem; color: #ced4da; font-style: italic; min-height: 2.6rem; margin: 0.3rem 0 0 1.9rem; }
+    .calcolo::before { content: "Spazio per il calcolo:"; }
+    .lab-box { background: #e7f5ec; border: 1.5px solid #198754; border-radius: 8px; padding: 0.6rem 0.85rem; margin: 0.5rem 0; font-size: 0.88rem; line-height: 1.5; }
+    .lab-box .titolo-l { font-weight: 700; color: #0f5132; margin-bottom: 0.2rem; font-size: 0.93rem; }
+    .istruzioni-prof { margin-top: 0.7rem; padding: 0.5rem 0.85rem; background: #fff8e6; border-left: 4px solid var(--scheda-oro); border-radius: 0 6px 6px 0; font-size: 0.79rem; color: #664d03; line-height: 1.45; }
+    .scheda-h2 { font-size: 1rem; margin: 0.6rem 0 0.25rem; }
+  
+
+/* === stili scheda 12 === */
 
     .articolo-box {
       background: #f4f7fb; border: 1.5px solid var(--scheda-bordo);
@@ -674,7 +766,7 @@
     }
   
 
-/* === stili scheda 11 === */
+/* === stili scheda 13 === */
 
     .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
     .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
@@ -804,7 +896,7 @@
     .istruzioni-maestra strong { color: #664d03; }
   
 
-/* === stili scheda 12 === */
+/* === stili scheda 14 === */
 
     .timeline-box { background: #f4f7fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.3rem 0; }
     .timeline-box .data { font-weight: 700; color: var(--scheda-blu); font-size: 0.88rem; margin-bottom: 0.15rem; }
@@ -836,7 +928,7 @@
     @media (max-width: 580px) { .due-colonne { grid-template-columns: 1fr; } }
   
 
-/* === stili scheda 13 === */
+/* === stili scheda 15 === */
 
     .pf-tabella { width: 100%; border-collapse: collapse; margin-bottom: 0.6rem; font-size: 0.88rem; }
     .pf-tabella th, .pf-tabella td { border: 1.5px solid var(--scheda-bordo); padding: 0.45rem 0.6rem; text-align: left; }
@@ -852,7 +944,7 @@
     }
   
 
-/* === stili scheda 14 === */
+/* === stili scheda 16 === */
 
     .crucibox {
       display: grid; grid-template-columns: repeat(13, 1.65rem);
@@ -880,7 +972,7 @@
     @media (max-width: 580px) { .definizioni { grid-template-columns: 1fr; } .crucibox { grid-template-columns: repeat(13, 1.3rem); } .crucibox .cella { width: 1.3rem; height: 1.3rem; font-size: 0.55rem; } }
   
 
-/* === stili scheda 15 === */
+/* === stili scheda 17 === */
 
     .pianta-box { border: 2.5px solid var(--scheda-blu); border-radius: 8px; padding: 0.5rem; background: #f8fafc; margin: 0.5rem 0; }
     .pianta-svg { width: 100%; max-width: 100%; height: auto; }
@@ -909,7 +1001,7 @@
     }
   
 
-/* === stili scheda 16 === */
+/* === stili scheda 18 === */
 
     .due-colonne { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin: 0.5rem 0; }
     .colonna-box { padding: 0.7rem 0.9rem; border-radius: 6px; border: 1.5px solid; }
@@ -945,7 +1037,7 @@
     @media (max-width: 580px) { .due-colonne { grid-template-columns: 1fr; } }
   
 
-/* === stili scheda 17 === */
+/* === stili scheda 19 === */
 
     .timeline-box { background: #f4f7fb; border-left: 4px solid var(--scheda-blu); padding: 0.7rem 0.9rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; }
     .timeline-box .data { font-weight: 700; color: var(--scheda-blu); font-size: 0.92rem; margin-bottom: 0.2rem; }
@@ -966,7 +1058,7 @@
     @media (max-width: 580px) { .due-colonne { grid-template-columns: 1fr; } }
   
 
-/* === stili scheda 18 === */
+/* === stili scheda 20 === */
 
     .timeline-box { background: #f4f7fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.3rem 0; }
     .timeline-box .data { font-weight: 700; color: var(--scheda-blu); font-size: 0.88rem; margin-bottom: 0.15rem; }
@@ -994,7 +1086,7 @@
     @media (max-width: 580px) { .due-colonne { grid-template-columns: 1fr; } }
   
 
-/* === stili scheda 19 === */
+/* === stili scheda 21 === */
 
     .vulcano-card { padding: 0.7rem 0.9rem; background: #f4f7fb; border-left: 4px solid var(--scheda-blu); border-radius: 0 8px 8px 0; margin: 0.4rem 0; }
     .vulcano-card .nome { font-weight: 700; color: var(--scheda-blu); font-size: 1rem; margin-bottom: 0.3rem; }
@@ -1014,23 +1106,87 @@
     .istruzioni-prof { margin-top: 0.8rem; padding: 0.55rem 0.85rem; background: #fff8e6; border-left: 4px solid var(--scheda-oro); border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45; }
     @media (max-width: 580px) { .due-colonne { grid-template-columns: 1fr; } }
   
+
+/* === stili scheda 22 === */
+
+    .timeline-box { background: #f4f7fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.3rem 0; }
+    .timeline-box .data { font-weight: 700; color: var(--scheda-blu); font-size: 0.88rem; margin-bottom: 0.15rem; }
+    .timeline-box .corpo { font-size: 0.88rem; line-height: 1.5; }
+    .nozione-box { background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.88rem; line-height: 1.55; }
+    .nozione-box .titolo-n { font-weight: 700; color: var(--scheda-blu); margin-bottom: 0.2rem; font-size: 0.93rem; }
+    .nozione-box .fonte { font-style: italic; color: #495057; font-size: 0.78rem; }
+    .glossario-mini { display: grid; grid-template-columns: auto 1fr; gap: 0.25rem 0.7rem; margin: 0.35rem 0; font-size: 0.85rem; line-height: 1.45; padding: 0.55rem 0.85rem; background: #fff; border: 1.5px solid var(--scheda-bordo); border-radius: 6px; }
+    .glossario-mini dt { font-weight: 700; color: var(--scheda-blu); white-space: nowrap; }
+    .glossario-mini dd { margin: 0; }
+    .due-colonne { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; margin: 0.4rem 0; }
+    .colonna-box { padding: 0.55rem 0.8rem; border-radius: 6px; border: 1.5px solid var(--scheda-bordo); }
+    .colonna-box.ok { background: #e8f5e9; border-color: #2e7d32; }
+    .colonna-box.no { background: #fde8ea; border-color: #c1121f; }
+    .colonna-box .titolo-c { font-weight: 700; margin-bottom: 0.3rem; font-size: 0.9rem; }
+    .colonna-box.ok .titolo-c { color: #1b5e20; }
+    .colonna-box.no .titolo-c { color: #842029; }
+    .colonna-box ul { margin: 0; padding-left: 1.1rem; font-size: 0.84rem; line-height: 1.45; }
+    .domanda-card { padding: 0.5rem 0.7rem; background: #fff; border: 1.5px solid var(--scheda-bordo); border-radius: 6px; margin-bottom: 0.35rem; font-size: 0.9rem; }
+    .domanda-card .num-q { width: 1.4rem; height: 1.4rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.78rem; margin-right: 0.35rem; }
+    .righe { display: grid; gap: 0.3rem; padding-left: 1.9rem; margin-top: 0.25rem; }
+    .righe .r { border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.3rem; }
+    .vf-tab { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 0.35rem 0; }
+    .vf-tab th, .vf-tab td { border: 1.5px solid var(--scheda-bordo); padding: 0.35rem 0.5rem; text-align: left; }
+    .vf-tab th { background: var(--scheda-blu); color: #fff; font-weight: 700; font-size: 0.82rem; }
+    .vf-tab td.vf { text-align: center; width: 3rem; font-weight: 700; color: var(--scheda-blu); }
+    .istruzioni-prof { margin-top: 0.7rem; padding: 0.5rem 0.85rem; background: #fff8e6; border-left: 4px solid var(--scheda-oro); border-radius: 0 6px 6px 0; font-size: 0.79rem; color: #664d03; line-height: 1.45; }
+    .scheda-h2 { font-size: 1rem; margin: 0.6rem 0 0.25rem; }
+    @media (max-width: 580px) { .due-colonne { grid-template-columns: 1fr; } }
+  
+
+/* === stili scheda 23 === */
+
+    .timeline-box { background: #f4f7fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.3rem 0; }
+    .timeline-box .data { font-weight: 700; color: var(--scheda-blu); font-size: 0.88rem; margin-bottom: 0.15rem; }
+    .timeline-box .corpo { font-size: 0.88rem; line-height: 1.5; }
+    .nozione-box { background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.88rem; line-height: 1.55; }
+    .nozione-box .titolo-n { font-weight: 700; color: var(--scheda-blu); margin-bottom: 0.2rem; font-size: 0.93rem; }
+    .nozione-box .fonte { font-style: italic; color: #495057; font-size: 0.78rem; }
+    .glossario-mini { display: grid; grid-template-columns: auto 1fr; gap: 0.25rem 0.7rem; margin: 0.35rem 0; font-size: 0.85rem; line-height: 1.45; padding: 0.55rem 0.85rem; background: #fff; border: 1.5px solid var(--scheda-bordo); border-radius: 6px; }
+    .glossario-mini dt { font-weight: 700; color: var(--scheda-blu); white-space: nowrap; }
+    .glossario-mini dd { margin: 0; }
+    .due-colonne { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; margin: 0.4rem 0; }
+    .colonna-box { padding: 0.55rem 0.8rem; border-radius: 6px; border: 1.5px solid var(--scheda-bordo); }
+    .colonna-box.ok { background: #e8f5e9; border-color: #2e7d32; }
+    .colonna-box.no { background: #fde8ea; border-color: #c1121f; }
+    .colonna-box .titolo-c { font-weight: 700; margin-bottom: 0.3rem; font-size: 0.9rem; }
+    .colonna-box.ok .titolo-c { color: #1b5e20; }
+    .colonna-box.no .titolo-c { color: #842029; }
+    .colonna-box ul { margin: 0; padding-left: 1.1rem; font-size: 0.84rem; line-height: 1.45; }
+    .domanda-card { padding: 0.5rem 0.7rem; background: #fff; border: 1.5px solid var(--scheda-bordo); border-radius: 6px; margin-bottom: 0.35rem; font-size: 0.9rem; }
+    .domanda-card .num-q { width: 1.4rem; height: 1.4rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.78rem; margin-right: 0.35rem; }
+    .righe { display: grid; gap: 0.3rem; padding-left: 1.9rem; margin-top: 0.25rem; }
+    .righe .r { border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.3rem; }
+    .collega-tab { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 0.35rem 0; }
+    .collega-tab th, .collega-tab td { border: 1.5px solid var(--scheda-bordo); padding: 0.35rem 0.5rem; text-align: left; vertical-align: top; }
+    .collega-tab th { background: var(--scheda-blu); color: #fff; font-weight: 700; font-size: 0.82rem; }
+    .collega-tab td.freccia { text-align: center; width: 3.2rem; color: var(--scheda-grigio); }
+    .istruzioni-prof { margin-top: 0.7rem; padding: 0.5rem 0.85rem; background: #fff8e6; border-left: 4px solid var(--scheda-oro); border-radius: 0 6px 6px 0; font-size: 0.79rem; color: #664d03; line-height: 1.45; }
+    .scheda-h2 { font-size: 1rem; margin: 0.6rem 0 0.25rem; }
+    @media (max-width: 580px) { .due-colonne { grid-template-columns: 1fr; } }
+  
   </style>
 </head>
 <body>
 
   <header class="pacchetto-toolbar no-print" role="banner">
     <a href="/formazione/schede-stampabili/" aria-label="Torna alla hub delle schede stampabili">← Torna alle schede</a>
-    <span class="pacchetto-titolo">Pacchetto stampa: Scuola Secondaria di I grado · 32 schede A4</span>
-    <button type="button" onclick="window.print()" aria-label="Apri la finestra di stampa per tutte le 32 schede di Scuola Secondaria di I grado">
-      🖨️ Stampa tutto (32 fogli A4)
+    <span class="pacchetto-titolo">Pacchetto stampa: Scuola Secondaria di I grado · 36 schede A4</span>
+    <button type="button" onclick="window.print()" aria-label="Apri la finestra di stampa per tutte le 36 schede di Scuola Secondaria di I grado">
+      🖨️ Stampa tutto (36 fogli A4)
     </button>
   </header>
 
   <section class="pacchetto-intro no-print" aria-labelledby="pacchetto-intro-h1">
     <h1 id="pacchetto-intro-h1">Pacchetto stampa — Scuola Secondaria di I grado</h1>
     <p>
-      Questo pacchetto contiene <strong>32 schede stampabili</strong> della Scuola Secondaria di I grado (11-13 anni),
-      per un totale di <strong>32 fogli A4</strong>.
+      Questo pacchetto contiene <strong>36 schede stampabili</strong> della Scuola Secondaria di I grado (11-13 anni),
+      per un totale di <strong>36 fogli A4</strong>.
       Premi <strong>"Stampa tutto"</strong> in alto (oppure <kbd>Ctrl+P</kbd> su Windows/Linux, <kbd>Cmd+P</kbd> su Mac)
       per aprire la finestra di stampa. Per archiviare in digitale scegli <em>"Salva come PDF"</em> come stampante.
     </p>
@@ -1047,15 +1203,16 @@
   </section>
 
   <nav class="pacchetto-toc no-print" aria-label="Indice del pacchetto">
-    <h2>Indice — 32 schede in questo pacchetto</h2>
+    <h2>Indice — 36 schede in questo pacchetto</h2>
     <ol>
       <li><a href="#scheda-rubrica-valutativa-secondaria">Rubrica valutativa Educazione Civica — Secondaria I</a></li>
       <li><a href="#scheda-decodifica-bollettino-secondaria">Decodifica del Bollettino di Allerta</a></li>
       <li><a href="#scheda-mappa-rischi-secondaria">La Mappa dei Rischi del Mio Territorio</a></li>
       <li><a href="#scheda-audit-piano-secondaria">Audit del Piano di Emergenza Scolastico</a></li>
       <li><a href="#scheda-blackout-servizi-essenziali-secondaria">Blackout e servizi essenziali</a></li>
-      <li><a href="#scheda-ondate-calore-primaria">Ondate di calore</a></li>
+      <li><a href="#scheda-ondate-calore-secondaria">Leggere il bollettino ondate di calore</a></li>
       <li><a href="#scheda-monossido-carbonio-secondaria">Monossido di carbonio</a></li>
+      <li><a href="#scheda-maremoto-comportamenti-secondaria">Maremoto: la fisica e i comportamenti</a></li>
       <li><a href="#scheda-it-alert-comunicazioni-secondaria">IT-alert e comunicazioni ufficiali</a></li>
       <li><a href="#scheda-fake-news-emergenza-secondaria">Notizie false in emergenza</a></li>
       <li><a href="#scheda-statistica-rischi-secondaria">La statistica dei rischi italiani</a></li>
@@ -1063,6 +1220,7 @@
       <li><a href="#scheda-debate-strutturato-secondaria">Debate strutturato — Costruire dove il rischio è alto</a></li>
       <li><a href="#scheda-costituzione-pc-secondaria">La Costituzione e la Protezione Civile</a></li>
       <li><a href="#scheda-vulcanologia-castelli-secondaria">Vulcanologia dei Castelli Romani</a></li>
+      <li><a href="#scheda-siccita-castelli-secondaria">La siccità ai Castelli Romani: leggere i dati</a></li>
       <li><a href="#scheda-cronaca-recente-secondaria">Analisi di un articolo di cronaca — Ischia 2022</a></li>
       <li><a href="#scheda-articolo-stampa-social-secondaria">Scrivere di emergenze: articolo, comunicato stampa, post social</a></li>
       <li><a href="#scheda-caso-amatrice-secondaria">Caso Amatrice — Centro Italia 2016</a></li>
@@ -1081,6 +1239,8 @@
       <li><a href="#scheda-caso-rigopiano-secondaria">Caso Rigopiano — valanga del 18 gennaio 2017</a></li>
       <li><a href="#scheda-caso-vulcani-italia-secondaria">I vulcani d'Italia</a></li>
       <li><a href="#scheda-caso-campi-flegrei-secondaria">I Campi Flegrei — il vulcano che dorme accanto a Napoli</a></li>
+      <li><a href="#scheda-caso-san-giuliano-secondaria">Caso San Giuliano di Puglia — 31 ottobre 2002</a></li>
+      <li><a href="#scheda-caso-vermicino-secondaria">Caso Vermicino — 10-13 giugno 1981</a></li>
     </ol>
   </nav>
 
@@ -1256,12 +1416,12 @@
     <h2 class="scheda-h2">📖 Glossario operativo</h2>
     <dl style="display: grid; grid-template-columns: auto 1fr; gap: 0.25rem 0.7rem; margin: 0.35rem 0; font-size: 0.85rem; line-height: 1.45; padding: 0.55rem 0.85rem; background: #fff; border: 1.5px solid var(--scheda-bordo); border-radius: 6px;">
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">CFR</dt><dd style="margin: 0;">Centro Funzionale Regionale. Lazio: a Roma, presso Regione Lazio.</dd>
-      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Zona di Allerta</dt><dd style="margin: 0;">porzione di territorio omogenea per caratteristiche meteo-idrologiche. Lazio: 7 zone (A-G). Genzano: Zona F (Bacino Tevere — Roma).</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Zona di Allerta</dt><dd style="margin: 0;">porzione di territorio omogenea per caratteristiche meteo-idrologiche. Lazio: 7 zone (A-G). Genzano: Zona F (Bacini Costieri Sud).</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Soglia idro-pluviometrica</dt><dd style="margin: 0;">valore di pioggia oltre cui scattano allerte (es. 60 mm/24h per criticità arancione idrogeologica).</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Pluviometro / Radar meteo</dt><dd style="margin: 0;">strumenti di misura: pluviometro = quantità pioggia in un punto (mm/h); radar = piogge in tempo reale su area.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">COC</dt><dd style="margin: 0;">Centro Operativo Comunale. Si attiva quando il Sindaco riceve un'allerta arancione/rossa o un'emergenza in corso.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Codici colore (giallo/arancione/rosso)</dt><dd style="margin: 0;">criticità ordinaria / moderata / elevata. Standard Direttiva PCM 27/2/2004.</dd>
-      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">IT-alert</dt><dd style="margin: 0;">cell broadcast su tutti i cellulari della zona allertata. Attivo da 2023, integra il bollettino con messaggio diretto al cittadino.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">IT-alert</dt><dd style="margin: 0;">cell broadcast su tutti i cellulari della zona interessata (nessuna app da scaricare). Operativo dal 13 febbraio 2024, dopo i test regionali 2022-2023. Non riguarda le allerte meteo: è previsto per emergenze come incidente nucleare, incidente industriale rilevante, collasso di grandi dighe, attività vulcanica.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Direttiva PCM 27/2/2004</dt><dd style="margin: 0;">"Indirizzi operativi per la gestione organizzativa del sistema di allertamento nazionale". Quadro normativo della procedura di allerta.</dd>
     </dl>
 
@@ -1272,7 +1432,7 @@
 <strong>Bollettino di criticità</strong> — emissione: 14:00 del 12/03/2026
 Validità: dalle 00:00 alle 24:00 del 13/03/2026
 
-Zona di allerta D — <strong>Bacini Costieri Sud — Lazio Meridionale</strong>
+Zona di allerta F — <strong>Bacini Costieri Sud</strong>
 (comprende anche il Comune di Genzano di Roma)
 
 Rischio idrogeologico ........... <strong>ARANCIONE</strong>
@@ -1342,10 +1502,10 @@ secondo quanto previsto dal piano di emergenza.</div>
       <div class="bol-risposta"></div>
     </div>
 
-    <div style="margin-top: 1rem; padding: 0.6rem 0.8rem; background: #d1e7dd; border-radius: 8px; border-left: 4px solid var(--scheda-verde); font-size: 0.85rem;">
-      <strong style="color: var(--scheda-verde);">Per il docente — soluzioni di riferimento</strong>:
+    <div class="soluzione-capovolta">
+      <span class="titolo">🔑 Per il docente — soluzioni di riferimento — gira il foglio sottosopra per leggere</span>
       1) Centro Funzionale Regionale Lazio (Agenzia regionale di protezione civile).
-      2) Zona D — Bacini Costieri Sud / Lazio Meridionale (territorio dei bacini idrografici minori).
+      2) Zona F — Bacini Costieri Sud (il nome indica i bacini idrografici che sfociano lungo la costa del Lazio meridionale).
       3) Idrogeologico, temporali e criticità generale: arancione. Idraulico: giallo.
       4) La criticità generale è il <strong>massimo</strong> dei singoli rischi — l'allerta finale corrisponde al livello più alto.
       5) Si stanno per innescare <strong>piccole frane</strong> sui pendii ripidi (acclivi).
@@ -1375,7 +1535,7 @@ secondo quanto previsto dal piano di emergenza.</div>
 
     <div class="scheda-meta">
       <span><strong>Destinatari:</strong> 11-14 anni</span>
-      <span><strong>Durata:</strong> 90 min in classe + ricerca a casa</span>
+      <span><strong>Durata:</strong> 2 ore in classe + ~3 ore di ricerca a casa</span>
       <span><strong>Discipline:</strong> Geografia, Scienze, Ed. civica</span>
     </div>
 
@@ -1497,7 +1657,7 @@ secondo quanto previsto dal piano di emergenza.</div>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">RSPP</dt><dd style="margin: 0;">Responsabile Servizio Prevenzione Protezione. Tecnico (interno o esterno) con compiti di consulenza al Dirigente Scolastico sulla sicurezza.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">DVR</dt><dd style="margin: 0;">Documento di Valutazione dei Rischi (D.Lgs. 81/2008 art. 28). Obbligatorio per ogni datore di lavoro. Aggiornato ad ogni cambio significativo.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">D.Lgs. 81/2008</dt><dd style="margin: 0;">Testo Unico Sicurezza sul Lavoro. Art. 18 e 43-46: obbligo del piano di emergenza ed evacuazione, designazione addetti antincendio e primo soccorso.</dd>
-      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">D.M. 26/8/1992</dt><dd style="margin: 0;">"Norme di prevenzione incendi per l'edilizia scolastica" — vie di fuga, larghezza minima, segnaletica, prove di evacuazione almeno 2/anno.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">D.M. 26/8/1992</dt><dd style="margin: 0;">"Norme di prevenzione incendi per l'edilizia scolastica" — vie di fuga, larghezza minima, segnaletica, prove di evacuazione almeno 2/anno. Resta applicabile alle scuole esistenti; per nuove costruzioni e ristrutturazioni vale la RTV V.7 del Codice di prevenzione incendi (D.M. 7 agosto 2017 e s.m.i.).</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Squadra di emergenza</dt><dd style="margin: 0;">addetti antincendio (corso 8/16h secondo rischio) + addetti primo soccorso (corso 12/16h DM 388/2003). Identificati nominativamente nel piano.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Prova di evacuazione</dt><dd style="margin: 0;">simulazione realistica almeno semestrale. Tempo accettabile: 3-5 min per scuola tipica. Registrata e analizzata per migliorare il piano.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Punto di raccolta</dt><dd style="margin: 0;">area esterna sicura dove ci si riunisce dopo l'evacuazione. Segnalato con cartello UNI EN ISO 7010-E007.</dd>
@@ -1687,8 +1847,9 @@ secondo quanto previsto dal piano di emergenza.</div>
       </ul>
     </div>
 
-    <div class="scheda-soluzioni">
-      <strong>Soluzioni:</strong> 1B, 2B, 3B.
+    <div class="soluzione-capovolta">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;"><strong>Soluzioni:</strong> 1B, 2B, 3B.</p>
     </div>
 
     <h2 class="scheda-h2">🎯 Compito operativo</h2>
@@ -1724,169 +1885,169 @@ secondo quanto previsto dal piano di emergenza.</div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
-      <span>Scheda "Blackout e servizi essenziali" · Secondaria · rev. 2026-04</span>
+      <span>Scheda "Blackout e servizi essenziali" · Secondaria · rev. 2026-08</span>
     </footer>
 
   </article>
 </section>
 
-<section id="scheda-ondate-calore-primaria" class="pacchetto-scheda" aria-label="Scheda: Ondate di calore">
+<section id="scheda-ondate-calore-secondaria" class="pacchetto-scheda" aria-label="Scheda: Leggere il bollettino ondate di calore">
   <article class="scheda-page">
 
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
         <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
-        <h1 class="scheda-titolo-principale">Ondate di calore</h1>
-        <div class="scheda-sottotitolo">Scheda fotocopiabile — Primaria (classi 4-5) e Secondaria I grado · 9-14 anni</div>
+        <h1 class="scheda-titolo-principale scheda-h1">Leggere il bollettino ondate di calore</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Secondaria di Primo Grado · 11-14 anni</div>
       </div>
     </header>
 
     <div class="scheda-meta">
-      <span><strong>Destinatari:</strong> 9-14 anni, famiglie</span>
-      <span><strong>Durata:</strong> 40 min</span>
-      <span><strong>Modalità:</strong> classe + lavoro a casa</span>
-      <span><strong>Discipline:</strong> Scienze, Educazione civica, Educazione alla salute</span>
+      <span><strong>Destinatari:</strong> 11-14 anni, famiglie</span>
+      <span><strong>Durata:</strong> 45 min</span>
+      <span><strong>Modalità:</strong> individuale o coppia</span>
+      <span><strong>Discipline:</strong> Scienze, Geografia, Educazione civica</span>
     </div>
 
     <div class="scheda-messaggio-chiave">
-      <strong>Messaggio chiave:</strong> il caldo diventa pericoloso quando temperatura, umidità e
-      durata dell'evento superano la capacità del corpo di raffreddarsi. Le persone fragili possono
-      peggiorare rapidamente, soprattutto se vivono <strong>sole</strong>.
+      <strong>Messaggio chiave:</strong> il caldo estremo è un rischio sanitario prevedibile.
+      Il Ministero della Salute pubblica ogni estate un <strong>bollettino sulle ondate di calore</strong>:
+      chi sa leggerlo può proteggere sé stesso e le persone fragili <strong>prima</strong> che il caldo diventi pericoloso.
     </div>
 
     <p class="scheda-intro">
-      Imparare a proteggersi e a proteggere chi ci sta vicino — anziani, bambini piccoli, donne in gravidanza, persone con malattie croniche, chi lavora o fa sport all'aperto — è un atto di <em>cura</em> e di <em>cittadinanza</em>. In Italia ogni estate le <strong>ondate di calore</strong> causano un eccesso di mortalità (più morti rispetto ai mesi non caldi): nel 2022 stimati ~18.000 decessi in eccesso in Europa per il caldo, di cui ~5.000 in Italia (ISTAT+ISS).
+      In estate il <strong>Ministero della Salute</strong> attiva un sistema nazionale di previsione e allarme
+      per le ondate di calore (in inglese <em>Heat Health Watch Warning</em>, HHWW). Ogni giorno, per le principali
+      città italiane, viene pubblicato sul sito <strong>salute.gov.it</strong> un bollettino con un <strong>livello di
+      rischio da 0 a 3</strong> per oggi e per i giorni successivi. Per noi che viviamo ai Castelli Romani la città di
+      riferimento è <strong>Roma</strong>: è la città monitorata più vicina e con condizioni climatiche simili alle nostre.
+      In questa scheda impari a decodificare il bollettino e ad agire di conseguenza.
     </p>
 
+    <h2 class="scheda-h2">🔬 Come nasce il bollettino</h2>
     <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.88rem; line-height: 1.55;">
-      <div style="font-weight: 700; color: var(--scheda-blu); margin-bottom: 0.2rem; font-size: 0.93rem;">🌡️ Perché il caldo estremo è pericoloso</div>
-      Il nostro corpo mantiene una temperatura costante intorno a <strong>36,5-37 °C</strong>. Quando fa molto caldo all'esterno, il corpo si raffredda <strong>sudando</strong>: il sudore evaporando porta via calore. Ma se l'aria è già <em>umida</em> (estate italiana), il sudore non evapora bene e il corpo non riesce a raffreddarsi. Risultato: <strong>colpo di calore</strong> (temperatura interna &gt; 40 °C), molto pericoloso soprattutto per anziani, neonati e malati. Il Ministero della Salute pubblica ogni estate le previsioni di <strong>livello calore</strong> (1-3) per 27 città italiane: vanno controllate da chi si occupa di persone fragili.
-      <br><em>Fonte: Ministero della Salute — Sistema HHWW; ISS; OMS.</em>
+      <div style="font-weight: 700; color: var(--scheda-blu); margin-bottom: 0.2rem; font-size: 0.93rem;">Non conta solo la temperatura</div>
+      Il sistema HHWW non guarda solo il termometro: incrocia <strong>temperatura</strong>, <strong>umidità</strong> e altre
+      condizioni meteorologiche con i dati storici sugli effetti del caldo sulla salute in ciascuna città.
+      Per questo lo stesso valore di temperatura può produrre livelli diversi in città diverse: 34 °C con aria molto umida
+      possono essere più pericolosi di 36 °C con aria secca, perché il sudore non evapora e il corpo non riesce a raffreddarsi.
+      Il bollettino è quindi una <strong>previsione di rischio per la salute</strong>, non una semplice previsione del tempo.
+      <div style="font-style: italic; color: #495057; font-size: 0.76rem; margin-top: 0.3rem;">Fonte: Ministero della Salute — Piano caldo, sistema HHWW; Istituto Superiore di Sanità.</div>
     </div>
 
-    <h2 class="scheda-h2">🎯 Obiettivi di apprendimento</h2>
-    <ul class="scheda-elenco">
-      <li>Capire perché caldo e umidità possono diventare un <strong>rischio sanitario</strong>.</li>
-      <li>Riconoscere chi è più <strong>vulnerabile</strong>.</li>
-      <li>Applicare comportamenti semplici: idratazione, ombra, abiti leggeri, orari corretti.</li>
-      <li>Aiutare <strong>senza esporsi</strong>: telefonare, segnalare, controllare in sicurezza.</li>
-    </ul>
+    <h2 class="scheda-h2">🌡️ I livelli di rischio (riferimento)</h2>
+    <table class="livelli-tabella">
+      <tr><th style="width: 14%;">Livello</th><th style="width: 30%;">Cosa significa</th><th>Cosa fare</th></tr>
+      <tr class="liv-0"><td><strong>0</strong></td><td>Condizioni meteo <strong>non a rischio</strong> per la salute.</td><td>Nessuna misura particolare. Buone abitudini di sempre: acqua, ombra nelle ore centrali.</td></tr>
+      <tr class="liv-1"><td><strong>1</strong></td><td><strong>Pre-allerta</strong>: condizioni che possono precedere un livello 2.</td><td>Informati sui bollettini dei giorni successivi. Prepara casa e abitudini (acqua, tende, orari).</td></tr>
+      <tr class="liv-2"><td><strong>2</strong></td><td>Temperature elevate: <strong>rischio per le persone fragili</strong> (anziani, bambini molto piccoli, malati cronici).</td><td>Applica i comportamenti di protezione; controlla come stanno le persone fragili che conosci.</td></tr>
+      <tr class="liv-3"><td><strong>3</strong></td><td><strong>Ondata di calore</strong>: condizioni a rischio che durano <strong>3 o più giorni consecutivi</strong>. Possibili effetti anche su persone sane e attive.</td><td>Massima attenzione per tutti: niente sport e sforzi nelle ore calde, idratazione costante, rete di aiuto ai fragili.</td></tr>
+    </table>
 
-    <h2 class="scheda-h2">✅ Comportamenti corretti</h2>
+    <h2 class="scheda-h2">📖 Glossario operativo</h2>
+    <dl style="display: grid; grid-template-columns: auto 1fr; gap: 0.25rem 0.7rem; margin: 0.35rem 0; font-size: 0.85rem; line-height: 1.45; padding: 0.55rem 0.85rem; background: #fff; border: 1.5px solid var(--scheda-bordo); border-radius: 6px;">
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Ondata di calore</dt><dd style="margin: 0;">periodo prolungato (giorni) di temperature molto elevate, spesso con alta umidità, che impedisce al corpo di recuperare — soprattutto di notte.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Sistema HHWW</dt><dd style="margin: 0;">Heat Health Watch Warning: sistema di previsione e allarme del Ministero della Salute, città per città, dedicato agli effetti del caldo sulla salute.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Città di riferimento</dt><dd style="margin: 0;">il bollettino copre le principali città italiane, Roma inclusa. Per i comuni vicini (come Genzano) si usa la città monitorata più vicina: <strong>Roma</strong>.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Persone fragili</dt><dd style="margin: 0;">anziani (soprattutto se soli), bambini molto piccoli, persone con malattie croniche (cuore, respirazione, diabete), chi lavora all'aperto.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Colpo di calore</dt><dd style="margin: 0;">emergenza sanitaria: la temperatura interna del corpo sale troppo. Segnali: confusione, pelle calda e arrossata, malessere forte. In caso di pericolo: <strong>112</strong>.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">1500</dt><dd style="margin: 0;">numero di pubblica utilità del Ministero della Salute, attivo durante l'estate per informazioni sul caldo (non è un numero di emergenza).</dd>
+    </dl>
 
+    <h2 class="scheda-h2">📋 Il bollettino da decodificare</h2>
+
+    <div class="bol-box"><span class="bol-esempio-etichetta">⚠️ ESEMPIO DIDATTICO — NON È UN BOLLETTINO REALE</span>
+<strong>Ministero della Salute — Bollettino ondate di calore</strong>
+Città: <strong>ROMA</strong> — emissione: ore 11:00 di martedì 21 luglio
+
+Oggi (21 luglio) ............... livello <strong>2</strong>
+Domani (22 luglio) ............. livello <strong>3</strong>
+Dopodomani (23 luglio) ......... livello <strong>3</strong>
+
+Condizioni previste: temperature massime in ulteriore aumento,
+elevata umidità, scarso raffrescamento notturno.
+Si raccomanda particolare attenzione alle persone anziane,
+ai bambini molto piccoli e alle persone con malattie croniche.</div>
+
+    <h2 class="scheda-h2">✏️ Esercizio: rispondi alle domande</h2>
+
+    <div class="bol-domanda">
+      <h3>1. Chi pubblica il bollettino sulle ondate di calore e dove lo puoi consultare?</h3>
+      <div class="bol-risposta"></div>
+    </div>
+
+    <div class="bol-domanda">
+      <h3>2. Perché per Genzano e i Castelli Romani si guarda il bollettino di Roma?</h3>
+      <div class="bol-risposta"></div>
+    </div>
+
+    <div class="bol-domanda">
+      <h3>3. Nel bollettino di esempio, che livello è previsto per domani? Cosa lo distingue dal livello di oggi?</h3>
+      <div class="bol-risposta"></div>
+      <div class="bol-risposta"></div>
+    </div>
+
+    <div class="bol-domanda">
+      <h3>4. Il livello 3 indica un'«ondata di calore». Quanto devono durare le condizioni a rischio? Chi può subirne gli effetti?</h3>
+      <div class="bol-risposta"></div>
+    </div>
+
+    <div class="bol-domanda">
+      <h3>5. La nonna di un tuo compagno vive da sola. Con il bollettino di esempio, scrivi 3 azioni concrete che la famiglia può fare per lei nei prossimi due giorni.</h3>
+      <div class="bol-risposta"></div>
+      <div class="bol-risposta"></div>
+      <div class="bol-risposta"></div>
+    </div>
+
+    <div class="bol-domanda">
+      <h3>6. Domani hai allenamento di calcio alle 15:00 all'aperto. Cosa proponi all'allenatore, e perché?</h3>
+      <div class="bol-risposta"></div>
+      <div class="bol-risposta"></div>
+    </div>
+
+    <h2 class="scheda-h2">✅ Comportamenti: per te e per chi è fragile</h2>
     <div class="scheda-comportamenti">
       <div class="scheda-card">
-        <h3>Ore calde</h3>
-        <p>Evita esposizione diretta e sforzi nelle <strong>ore centrali</strong> della giornata. Programma uscite, spesa e attività fisica nelle <strong>ore più fresche</strong>.</p>
+        <h3>Per te</h3>
+        <p>Bevi acqua spesso, anche senza sete. Evita sport e sforzi nelle <strong>ore più calde</strong>. Indossa abiti leggeri e chiari, usa il cappello. Preferisci luoghi freschi e ombreggiati.</p>
       </div>
       <div class="scheda-card">
-        <h3>Acqua e alimenti</h3>
-        <p><strong>Bevi spesso acqua</strong>, mangia leggero, usa frutta e verdura. <strong>Evita</strong> alcol e bevande molto zuccherate o con troppa caffeina.</p>
-      </div>
-      <div class="scheda-card">
-        <h3>Casa</h3>
-        <p>Usa <strong>tende o persiane</strong> nelle ore di sole. Ventila quando l'aria esterna è più fresca. Non puntare il ventilatore <strong>direttamente</strong> sul corpo per ore.</p>
-      </div>
-      <div class="scheda-card">
-        <h3>Mai in auto</h3>
-        <p><strong>Non lasciare mai</strong> bambini, anziani o animali in auto, neanche per pochi minuti. L'abitacolo può diventare rapidamente pericoloso.</p>
+        <h3>Per le persone fragili</h3>
+        <p>Nei giorni di livello 2 e 3 <strong>telefona o passa a trovare</strong> nonni e vicini anziani, soprattutto se soli. Ricorda loro di bere e di tenere fresca la casa. Se una persona sta molto male (confusione, malore), un adulto chiama subito il <strong>112</strong>.</p>
       </div>
     </div>
 
-    <h2 class="scheda-h2">🚦 Il semaforo del caldo</h2>
-    <p style="font-size: 0.92rem; margin: 0 0 0.4rem 0;">
-      Un piccolo strumento per ascoltarsi: come ti senti?
-    </p>
-    <div class="scheda-semaforo">
-      <div class="scheda-sem scheda-sem-verde">
-        <strong>VERDE</strong>
-        Sto bene. Continuo, ricordando di bere e stare all'ombra.
-      </div>
-      <div class="scheda-sem scheda-sem-giallo">
-        <strong>GIALLO</strong>
-        Mi sento stanco o ho mal di testa. Mi fermo, bevo, mi metto al fresco.
-      </div>
-      <div class="scheda-sem scheda-sem-rosso">
-        <strong>ROSSO</strong>
-        Sto male: confusione, sensazione di svenire. Chiedo aiuto a un adulto; in caso di pericolo, <strong>112</strong>.
-      </div>
+    <div class="soluzione-capovolta">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;">
+        <strong>1)</strong> Il Ministero della Salute; si consulta sul sito salute.gov.it (sezione ondate di calore), dove sono pubblicati i bollettini per le principali città italiane.
+        <strong>2)</strong> Perché Genzano non è tra le città monitorate: Roma è la città di riferimento più vicina, con condizioni climatiche simili.
+        <strong>3)</strong> Domani è previsto livello 3 (ondata di calore); oggi è livello 2, cioè rischio soprattutto per le persone fragili, mentre il livello 3 può avere effetti anche su persone sane e attive.
+        <strong>4)</strong> Condizioni a rischio per 3 o più giorni consecutivi; possono risentirne anche le persone sane e attive, oltre alle persone fragili.
+        <strong>5)</strong> Esempi: telefonarle mattina e sera per sapere come sta; ricordarle di bere e di chiudere le tapparelle nelle ore di sole; fare la spesa al posto suo per evitarle di uscire nelle ore calde; verificare che il ventilatore funzioni.
+        <strong>6)</strong> Proporre di spostare l'allenamento nelle ore più fresche (mattina presto o sera) o al chiuso: con livello 3 lo sforzo fisico nelle ore centrali è sconsigliato anche per persone sane.
+      </p>
     </div>
-
-    <h2 class="scheda-h2">✏️ Attività didattica</h2>
-    <ol class="scheda-elenco">
-      <li><strong>Compila il "semaforo del caldo"</strong> sopra: scrivi a margine di ogni colore due esempi vissuti tu o in famiglia.</li>
-      <li><strong>Mini-rubrica delle persone fragili.</strong> In famiglia o nel vicinato, fai una piccola lista di persone da chiamare nei giorni di caldo (nome, numero, chi le aiuta).</li>
-      <li><strong>Cartello per casa.</strong> Prepara un foglio da appendere in cucina con la frase: «<em>Acqua, ombra, pause, mai soli nelle ore calde</em>».</li>
-    </ol>
-
-    <h2 class="scheda-h2">📋 Mini verifica</h2>
-
-    <div class="scheda-quiz">
-      <h3>1. Durante un'ondata di calore è meglio uscire:</h3>
-      <ul>
-        <li>A) Tra le 11 e le 18</li>
-        <li>B) Nelle ore più fresche</li>
-        <li>C) Solo se si indossa una giacca pesante</li>
-      </ul>
-    </div>
-
-    <div class="scheda-quiz">
-      <h3>2. Quale bevanda è più adatta?</h3>
-      <ul>
-        <li>A) Acqua</li>
-        <li>B) Alcolici</li>
-        <li>C) Bibite energetiche in grande quantità</li>
-      </ul>
-    </div>
-
-    <div class="scheda-quiz">
-      <h3>3. Se un anziano solo non risponde al telefono in una giornata di allerta caldo:</h3>
-      <ul>
-        <li>A) Ignoro la cosa</li>
-        <li>B) Avviso familiari o servizi competenti se c'è preoccupazione</li>
-        <li>C) Diffondo un post allarmistico</li>
-      </ul>
-    </div>
-
-    <div class="scheda-soluzioni">
-      <strong>Soluzioni:</strong> 1B, 2A, 3B.
-    </div>
-
-    <h2 class="scheda-h2">🎯 Compito operativo</h2>
-    <p style="font-size: 0.92rem;">
-      Entro <strong>24 ore</strong>, ogni partecipante sceglie <strong>una sola azione concreta</strong>:
-      scrivere su carta i numeri utili da tenere accanto al telefono, parlare con un nonno o un vicino,
-      preparare la borraccia da portare a scuola, mettere un cartello per ricordarsi di bere.
-      L'obiettivo è <strong>trasformare la conoscenza in comportamento</strong>.
-    </p>
-
-    <h2 class="scheda-h2">👩‍🏫 Promemoria per docenti, educatori e volontari</h2>
-    <ul class="scheda-elenco">
-      <li>Usa esempi locali, ma <strong>senza creare allarmismo</strong>.</li>
-      <li>Chiarisci la differenza tra <em>informazione preventiva</em> e <em>gestione dell'emergenza reale</em>.</li>
-      <li>Ricorda che il <strong>112</strong> va chiamato solo per pericolo immediato o soccorso urgente.</li>
-      <li>Collega sempre la scheda al <strong>Piano Comunale</strong>, ai <strong>canali ufficiali</strong> e ai <strong>numeri utili</strong>.</li>
-    </ul>
 
     <div class="scheda-nota-locale">
       <strong>Approfondimenti per Genzano:</strong>
+      <a href="/rischi-prevenzione/ondate-di-calore/">Pagina rischio Ondate di calore</a> ·
       <a href="/allerte-meteo/">Allerte Meteo</a> ·
       <a href="/numeri-utili/">Numeri Utili</a> ·
-      <a href="/rischi-prevenzione/ondate-calore/">Pagina rischio Ondate di calore</a> ·
       <a href="/piano-familiare/">Piano Familiare</a>.
     </div>
 
     <h2 class="scheda-h2">📚 Fonti</h2>
     <ul class="scheda-elenco" style="font-size: 0.85rem;">
-      <li>Dipartimento della Protezione Civile — <em>In caso di ondate di calore</em>.</li>
-      <li>Ministero della Salute — bollettini e raccomandazioni sulle ondate di calore.</li>
-      <li>Sito Protezione Civile Genzano di Roma — strumenti meteo e numeri utili.</li>
+      <li>Ministero della Salute — bollettini sulle ondate di calore e Piano caldo (salute.gov.it).</li>
+      <li>Istituto Superiore di Sanità (ISS) — sorveglianza e raccomandazioni sulle ondate di calore.</li>
+      <li>Sito Protezione Civile Genzano di Roma — rischi e prevenzione, numeri utili.</li>
     </ul>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
-      <span>Scheda "Ondate di calore" · Primaria 4-5 / Secondaria I grado · rev. 2026-04</span>
+      <span>Scheda "Leggere il bollettino ondate di calore" · Secondaria I grado · Rev. 01 - Agosto 2026</span>
     </footer>
 
   </article>
@@ -2005,8 +2166,9 @@ secondo quanto previsto dal piano di emergenza.</div>
       </ul>
     </div>
 
-    <div class="scheda-soluzioni">
-      <strong>Soluzioni:</strong> 1B, 2B, 3B.
+    <div class="soluzione-capovolta">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;"><strong>Soluzioni:</strong> 1B, 2B, 3B.</p>
     </div>
 
     <h2 class="scheda-h2">🎯 Compito operativo</h2>
@@ -2043,7 +2205,146 @@ secondo quanto previsto dal piano di emergenza.</div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
-      <span>Scheda "Monossido di carbonio" · Secondaria · rev. 2026-04</span>
+      <span>Scheda "Monossido di carbonio" · Secondaria · rev. 2026-08</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-maremoto-comportamenti-secondaria" class="pacchetto-scheda" aria-label="Scheda: Maremoto: la fisica e i comportamenti">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Maremoto: la fisica e i comportamenti</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Secondaria di Primo e Secondo Grado · 11-19 anni</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 11-19 anni, famiglie</span>
+      <span><strong>Durata:</strong> 45 min</span>
+      <span><strong>Discipline:</strong> Scienze, Geografia, Educazione civica</span>
+    </div>
+
+    <div class="scheda-messaggio-chiave">
+      <strong>Messaggio chiave:</strong> un maremoto (tsunami) può arrivare in pochi minuti da un forte
+      terremoto sulla costa o vicino ad essa. Chi riconosce i segnali naturali non aspetta un avviso
+      ufficiale: <strong>si allontana subito dalla costa</strong> e sale <strong>a piedi</strong> in un
+      punto alto.
+    </div>
+
+    <p class="scheda-intro">
+      Genzano di Roma non è un comune costiero, ma il litorale laziale è a mezz'ora d'auto e in vacanza tutti frequentiamo spiagge italiane o straniere. Il Mediterraneo è un mare sismicamente attivo: nell'ultimo millennio le coste italiane sono state colpite da decine di maremoti, alcuni distruttivi come quello dello Stretto di Messina del 1908. Capire come si genera il fenomeno e quali comportamenti adottare può salvare la vita.
+    </p>
+
+    <h2 class="scheda-h2">🔬 Come si genera un maremoto</h2>
+    <div class="scheda-fact-box">
+      <h3>La fisica in tre passaggi</h3>
+      <dl>
+        <dt>1. La causa</dt>
+        <dd>Quasi sempre un forte terremoto con epicentro sul fondale marino o vicino alla costa, che sposta verticalmente una grande massa d'acqua. Anche frane sottomarine o eruzioni vulcaniche costiere possono generarlo.</dd>
+        <dt>2. La propagazione</dt>
+        <dd>In mare aperto, dove il fondale è profondo (4.000-5.000 m), l'onda viaggia a <strong>700-800 km/h</strong> — la velocità di un aereo di linea — ma è alta pochi centimetri e passa quasi inosservata (fonte: INGV — Centro Allerta Tsunami).</dd>
+        <dt>3. L'arrivo in costa</dt>
+        <dd>Vicino alla riva il fondale risale: la velocità dell'onda scende a <strong>30-50 km/h</strong>, ma l'energia non sparisce — si trasforma in <strong>altezza</strong>. L'onda rallenta, si accorcia e cresce, fino a raggiungere la costa con forza distruttiva.</dd>
+      </dl>
+    </div>
+
+    <h2 class="scheda-h2">📡 Allerta naturale e allerta ufficiale</h2>
+    <p style="font-size: 0.92rem; margin: 0 0 0.5rem 0;">
+      L'allerta più rapida è quella che <strong>percepisci tu stesso</strong>. Bastano una scossa forte sulla costa, il mare che si ritira all'improvviso oppure un rumore anomalo e crescente dal mare: <strong>uno solo</strong> di questi tre segnali basta per allontanarsi, senza aspettare altro.
+    </p>
+    <p style="font-size: 0.92rem; margin: 0 0 0.6rem 0;">
+      A questa si affianca l'allerta ufficiale: il <strong>SiAM</strong> (Sistema di Allertamento nazionale per i Maremoti, gestito da INGV, ISPRA e Dipartimento della Protezione Civile) diffonde i messaggi di allerta ai Comuni costieri, che avvisano la popolazione con i propri sistemi (sirene, altoparlanti, canali ufficiali). Per il maremoto l'invio tramite <strong>IT-alert</strong>, il sistema nazionale di allarme pubblico, è ancora in <strong>fase sperimentale</strong>: al momento vengono diffusi solo messaggi di test. L'allerta naturale resta comunque la più veloce: un messaggio ufficiale può arrivare dopo che l'onda si è già formata.
+    </p>
+
+    <h2 class="scheda-h2">✅ Cosa faccio</h2>
+    <div class="scheda-comportamenti">
+      <div class="scheda-card">
+        <h3>Mi allontano dalla costa, a piedi</h3>
+        <p>Lascio subito spiaggia e lungomare e raggiungo un punto alto (collina, edificio solido a più piani). Non uso l'auto: le strade costiere si bloccano in pochi minuti.</p>
+      </div>
+      <div class="scheda-card">
+        <h3>Non vado a guardare</h3>
+        <p>Non mi avvicino mai al mare per vedere o fotografare l'onda: a 30-50 km/h è molto più veloce di una persona che corre.</p>
+      </div>
+      <div class="scheda-card">
+        <h3>Resto in alto e ascolto i canali ufficiali</h3>
+        <p>Dopo la prima onda possono arrivarne altre, anche più grandi, a distanza di minuti od ore. Torno solo quando Protezione Civile, Capitaneria di Porto o Comune comunicano il cessato allarme.</p>
+      </div>
+      <div class="scheda-card">
+        <h3>Aiuto chi è in difficoltà, senza fermarmi</h3>
+        <p>Se posso, avviso chi mi è vicino (bambini, anziani, persone con disabilità) mentre mi allontano, senza mai tornare verso la zona pericolosa.</p>
+      </div>
+    </div>
+
+    <h2 class="scheda-h2">📞 I numeri da ricordare</h2>
+    <ul class="scheda-elenco">
+      <li><strong>112</strong> — Numero Unico di Emergenza: per feriti, dispersi o pericolo immediato.</li>
+      <li><strong>1530</strong> — Guardia Costiera: per le emergenze in mare.</li>
+    </ul>
+
+    <h2 class="scheda-h2">📋 Mini verifica</h2>
+
+    <div class="scheda-quiz">
+      <h3>1. In mare aperto, dove il fondale è profondo, l'onda di un maremoto:</h3>
+      <ul>
+        <li>A) È altissima e visibile da subito</li>
+        <li>B) È veloce ma alta pochi centimetri, quasi impercettibile</li>
+        <li>C) Non si muove finché non arriva in costa</li>
+      </ul>
+    </div>
+
+    <div class="scheda-quiz">
+      <h3>2. Vicino alla costa, rispetto al mare aperto, un'onda di maremoto:</h3>
+      <ul>
+        <li>A) Rallenta e cresce in altezza</li>
+        <li>B) Accelera e si abbassa</li>
+        <li>C) Scompare</li>
+      </ul>
+    </div>
+
+    <div class="scheda-quiz">
+      <h3>3. Se sei in spiaggia e il mare si ritira all'improvviso in modo insolito, cosa fai?</h3>
+      <ul>
+        <li>A) Vado a vedere cosa c'è scoperto sulla sabbia</li>
+        <li>B) Mi allontano subito dalla costa verso un punto alto, a piedi</li>
+        <li>C) Aspetto un messaggio ufficiale prima di muovermi</li>
+      </ul>
+    </div>
+
+    <div class="soluzione-capovolta">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;"><strong>Soluzioni:</strong> 1B, 2A, 3B.</p>
+    </div>
+
+    <h2 class="scheda-h2">🎯 Attività di approfondimento</h2>
+    <p style="font-size: 0.92rem;">
+      Cerca la cronologia del terremoto e maremoto dello Stretto di Messina del 28 dicembre 1908 (scheda
+      <a href="/formazione/schede-stampabili/caso-messina-secondaria/">"Il terremoto di Messina"</a> di questo catalogo) e individua: dove si è generato il maremoto, quanto tempo ha impiegato a raggiungere la costa, quali comportamenti avrebbero potuto salvare più vite con le conoscenze di oggi.
+    </p>
+
+    <div class="scheda-nota-locale">
+      <strong>Approfondimenti sul nostro sito:</strong>
+      <a href="/rischi-prevenzione/maremoto/">Maremoto: cosa fare al mare</a> ·
+      <a href="/rischi-prevenzione/rischio-sismico/">Rischio sismico</a> ·
+      <a href="/numeri-utili/">Numeri Utili</a> ·
+      <a href="/piano-familiare/">Piano Familiare</a>.
+    </div>
+
+    <h2 class="scheda-h2">📚 Fonti</h2>
+    <ul class="scheda-elenco" style="font-size: 0.85rem;">
+      <li>INGV — Centro Allerta Tsunami (CAT): dinamica e velocità di propagazione dei maremoti (cat.ingv.it).</li>
+      <li>Dipartimento della Protezione Civile — campagna «Io non rischio» maremoto (rischi.protezionecivile.gov.it).</li>
+      <li>ISPRA — monitoraggio del livello del mare (isprambiente.gov.it).</li>
+    </ul>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Maremoto: la fisica e i comportamenti" · Secondaria · rev. 2026-08</span>
     </footer>
 
   </article>
@@ -2090,7 +2391,7 @@ secondo quanto previsto dal piano di emergenza.</div>
     <dl style="display: grid; grid-template-columns: auto 1fr; gap: 0.25rem 0.7rem; margin: 0.35rem 0; font-size: 0.85rem; line-height: 1.45; padding: 0.55rem 0.85rem; background: #fff; border: 1.5px solid var(--scheda-bordo); border-radius: 6px;">
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Cell-broadcast</dt><dd style="margin: 0;">tecnologia di invio messaggi a tutti i terminali agganciati a una cella radio. Anonimo, geolocalizzato, indipendente da contratto.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">EU-Alert / WEA</dt><dd style="margin: 0;">EU-Alert europeo (Regolamento EECC 2018/1972) — Wireless Emergency Alert USA. Sistemi analoghi a IT-alert nei rispettivi paesi.</dd>
-      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Categorie IT-alert</dt><dd style="margin: 0;">6 scenari da Direttiva PCM 2023: maremoto, collasso diga, attività vulcanica Vesuvio, attività vulcanica Campi Flegrei, incidente nucleare/radiazioni, incidente chimico industriale (Seveso).</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Categorie IT-alert</dt><dd style="margin: 0;"><strong>Operativi</strong>: incidente nucleare o emergenza radiologica; incidente rilevante in stabilimento industriale; collasso di grande diga; attività vulcanica ai Campi Flegrei, al Vesuvio e all'isola di Vulcano. <strong>Ancora sperimentali</strong> (solo messaggi di test): maremoto generato da sisma; attività vulcanica dello Stromboli; precipitazioni intense. IT-alert <strong>non invia le allerte meteo</strong>: per pioggia, vento e temporali valgono i bollettini del sistema di allertamento.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Test regionali</dt><dd style="margin: 0;">2022-2023: prova in tutte le regioni con calendario pubblico. Cittadini avvisati prima. Permette di familiarizzare con il segnale e identificare bug.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Approfondimento ufficiale</dt><dd style="margin: 0;">sito DPC <em>it-alert.it</em>: spiega categorie, suono distintivo, immagini standard, come reagire. Pagina ufficiale anche multilingua.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Suono distintivo</dt><dd style="margin: 0;">sequenza acustica unica IT-alert (8 toni discendenti + scampanio). Designed da DPC per essere riconoscibile anche con vibrazione attiva.</dd>
@@ -2129,14 +2430,14 @@ secondo quanto previsto dal piano di emergenza.</div>
 
     <h2 class="scheda-h2">📱 Come è fatto un messaggio IT-alert</h2>
     <p style="font-size: 0.92rem; margin: 0 0 0.4rem 0;">
-      Esempio realistico (suono distintivo + vibrazione del telefono che bypassano la modalità silenziosa):
+      Esempio costruito su uno degli scenari <strong>operativi</strong> del sistema, l'incidente rilevante in stabilimento industriale (suono distintivo + vibrazione del telefono che bypassano la modalità silenziosa). Il messaggio è <strong>simulato a fini didattici</strong>: non si riferisce a un evento reale.
     </p>
-    <div style="background: #fff3cd; border: 2px solid #d4a72c; border-radius: 10px; padding: 0.85rem 1rem; margin: 0.4rem 0 1rem 0; font-family: monospace; font-size: 0.9rem; line-height: 1.55; white-space: pre-wrap; color: #664d03;"><strong>IT-alert — Avviso pubblico</strong>
-Tipo evento: rischio idrogeologico
-Area: Comune di Genzano di Roma e dintorni
-Validità: oggi, dalle 18:00 alle 24:00
-Azione: NON percorrere sottopassaggi e zone a ridosso dei fossi.
-Rifugiarsi ai piani alti se l'acqua entra in casa.
+    <div style="background: #fff3cd; border: 2px solid #d4a72c; border-radius: 10px; padding: 0.85rem 1rem; margin: 0.4rem 0 1rem 0; font-family: monospace; font-size: 0.9rem; line-height: 1.55; white-space: pre-wrap; color: #664d03;"><strong>IT-alert — Avviso pubblico (messaggio simulato)</strong>
+Tipo evento: incidente rilevante in stabilimento industriale
+Area: zona industriale e aree limitrofe
+Validità: evento in corso, dalle ore 18:00
+Azione: RESTA al chiuso. Chiudi porte e finestre.
+Spegni impianti di aerazione e condizionamento.
 Aggiornamenti: protezionecivile.gov.it
 e canali ufficiali del Comune.</div>
 
@@ -2151,7 +2452,7 @@ e canali ufficiali del Comune.</div>
       <tbody>
         <tr>
           <td><strong>Rischio</strong></td>
-          <td>Tipo di evento (idrogeologico, sismico, industriale...)</td>
+          <td>Tipo di evento (nucleare o radiologico, industriale, collasso di diga, attività vulcanica)</td>
           <td>Per capire come comportarti</td>
         </tr>
         <tr>
@@ -2181,7 +2482,8 @@ e canali ufficiali del Comune.</div>
     <ol class="scheda-elenco">
       <li><strong>Analizza il messaggio simulato</strong> qui sopra: evidenzia con 5 colori diversi rischio, area, tempo, azione, fonte.</li>
       <li><strong>Risposta in 140 caratteri.</strong> Scrivi il messaggio che invieresti alla famiglia: niente panico, solo le azioni concrete da fare nei prossimi 30 minuti.</li>
-      <li><strong>Collegamento al territorio.</strong> Scegli un rischio del nostro territorio (allagamento, vento forte, incendio boschivo) e progetta un breve IT-alert per quello scenario, rispettando i 5 elementi della tabella.</li>
+      <li><strong>Collegamento al territorio.</strong> Scegli un rischio del nostro territorio (allagamento, vento forte, incendio boschivo) e progetta l'<strong>avviso del Comune</strong> alla popolazione, rispettando i 5 elementi della tabella. Attenzione: per questi rischi <strong>non</strong> si usa IT-alert, che non invia allerte meteo.</li>
+      <li><strong>Confronto fra canali.</strong> Riscrivi lo stesso contenuto come messaggio IT-alert immaginando invece uno scenario <strong>operativo</strong> del sistema (per esempio un incidente rilevante in stabilimento industriale). Cosa cambia nel testo, nell'area e nel tempo? Perché i due canali non sono intercambiabili?</li>
     </ol>
 
     <h2 class="scheda-h2">📋 Mini verifica</h2>
@@ -2213,8 +2515,9 @@ e canali ufficiali del Comune.</div>
       </ul>
     </div>
 
-    <div class="scheda-soluzioni">
-      <strong>Soluzioni:</strong> 1A, 2B, 3B.
+    <div class="soluzione-capovolta">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;"><strong>Soluzioni:</strong> 1A, 2B, 3B.</p>
     </div>
 
     <h2 class="scheda-h2">🎯 Compito operativo</h2>
@@ -2251,7 +2554,7 @@ e canali ufficiali del Comune.</div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
-      <span>Scheda "IT-alert e comunicazioni ufficiali" · Secondaria · rev. 2026-04</span>
+      <span>Scheda "IT-alert e comunicazioni ufficiali" · Secondaria · rev. 2026-08</span>
     </footer>
 
   </article>
@@ -2382,8 +2685,9 @@ e canali ufficiali del Comune.</div>
       </ul>
     </div>
 
-    <div class="scheda-soluzioni">
-      <strong>Soluzioni:</strong> 1B, 2B, 3B.
+    <div class="soluzione-capovolta">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;"><strong>Soluzioni:</strong> 1B, 2B, 3B.</p>
     </div>
 
     <h2 class="scheda-h2">🎯 Compito operativo</h2>
@@ -2421,7 +2725,7 @@ e canali ufficiali del Comune.</div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
-      <span>Scheda "Notizie false in emergenza" · Secondaria · rev. 2026-04</span>
+      <span>Scheda "Notizie false in emergenza" · Secondaria · rev. 2026-08</span>
     </footer>
 
   </article>
@@ -2514,12 +2818,16 @@ e canali ufficiali del Comune.</div>
     </div>
 
     <div class="istruzioni-maestra">
-      <strong>Per la maestra/maestro · Soluzioni:</strong>
+      <strong>Per la maestra/maestro · Note didattiche:</strong>
       <ul style="margin:0.3rem 0 0 1rem; padding:0;">
-        <li>1) Idrogeologico (94%) · 2) 7.900 × 0,44 ≈ <strong>3.476 comuni</strong> · 3) 22÷59 ≈ <strong>37,3%</strong> · 4) ~3 milioni perché i pochi comuni vulcanici (Vesuvio, Etna, Campi Flegrei) sono molto popolosi (Napoli e dintorni) · 5) un comune può essere esposto a <strong>più rischi contemporaneamente</strong> (es. Genzano: idrogeologico + sismico + incendi).</li>
         <li><strong>Discipline trasversali</strong>: matematica (percentuali, conversioni), geografia (territorio italiano), ed. civica (responsabilità dello Stato nella prevenzione).</li>
         <li><strong>Approfondimento</strong>: scaricare i dati aggiornati dal portale <a href="https://idrogeo.isprambiente.it/" target="_blank" rel="noopener">IdroGEO ISPRA</a>. Per il sismico, mappa INGV.</li>
       </ul>
+    </div>
+
+    <div class="soluzione-capovolta" style="margin-top: 5mm;">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;">1) Idrogeologico (94%) · 2) 7.900 × 0,44 ≈ <strong>3.476 comuni</strong> · 3) 22÷59 ≈ <strong>37,3%</strong> · 4) ~3 milioni perché i pochi comuni vulcanici (Vesuvio, Etna, Campi Flegrei) sono molto popolosi (Napoli e dintorni) · 5) un comune può essere esposto a <strong>più rischi contemporaneamente</strong> (es. Genzano: idrogeologico + sismico + incendi).</p>
     </div>
 
     <footer class="scheda-footer">
@@ -2990,6 +3298,133 @@ e canali ufficiali del Comune.</div>
   </article>
 </section>
 
+<section id="scheda-siccita-castelli-secondaria" class="pacchetto-scheda" aria-label="Scheda: La siccità ai Castelli Romani: leggere i dati">
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">La siccità ai Castelli Romani: leggere i dati</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Secondaria di primo grado (11-13 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 11-13 anni</span>
+      <span><strong>Obiettivo:</strong> leggere una serie di dati climatici reali, calcolare media e scarto, discutere il risparmio idrico</span>
+      <span><strong>Discipline:</strong> matematica, scienze, geografia, ed. civica</span>
+    </div>
+
+    <p class="scheda-intro">
+      La <strong>siccità</strong> è un rischio diverso dagli altri: non arriva con un boato, ma si costruisce in <strong>mesi</strong> di pioggia scarsa. Per accorgersene bisogna saper <strong>leggere i dati</strong>. In questa scheda usi numeri veri: la pioggia caduta ogni anno a <strong>Genzano di Roma</strong> e i giorni in cui la temperatura massima ha raggiunto almeno 35 °C, ricavati dalla rianalisi climatica <strong>ERA5</strong>. Gli stessi dati che trovi, in forma di grafico, nel <strong>Laboratorio meteo</strong> del nostro sito.
+    </p>
+
+    <h2 class="scheda-h2">💧 Cos'è la siccità (e perché ne esistono due "tipi")</h2>
+    <div class="nozione-box">
+      <div class="titolo-n">Siccità meteorologica e siccità idrologica</div>
+      Si parla di <strong>siccità meteorologica</strong> quando, per un periodo prolungato, le <strong>precipitazioni sono molto inferiori alla media</strong> della zona. Se la scarsità dura a lungo, cala anche l'acqua "immagazzinata" nel territorio: si abbassano le <strong>falde</strong> sotterranee, i fiumi e i laghi. Questa è la <strong>siccità idrologica</strong>, quella che si trasforma in <strong>crisi idrica</strong> per persone, agricoltura ed ecosistemi. È un rischio <em>cumulativo</em>: non c'è un singolo "evento" da datare, ma un peggioramento graduale — per questo si sorveglia con il monitoraggio continuo di piogge, temperature, falde e portate dei fiumi.
+      <div class="fonte">Fonti: DPC; ISPRA; Autorità di Bacino Distrettuale dell'Appennino Centrale.</div>
+    </div>
+
+    <div class="nozione-box">
+      <div class="titolo-n">Perché riguarda i Castelli Romani</div>
+      I Castelli Romani dipendono in larga parte dalla <strong>falda vulcanica dei Colli Albani</strong>, alimentata <strong>solo dalle piogge</strong>: anni di precipitazioni scarse e prelievi elevati ne abbassano il livello, come mostra anche il calo storico dei laghi di <strong>Albano</strong> e di <strong>Nemi</strong>. Le crisi idriche del <strong>2017</strong> e degli anni successivi hanno interessato anche il Lazio, con misure di contenimento dei consumi. In più, in Italia le reti idriche disperdono in media circa il <strong>30%</strong> dell'acqua immessa: la falda si ricarica in <strong>anni</strong>, non in giorni, quindi ogni spreco pesa a lungo.
+      <div class="fonte">Fonti: pagina "Siccità e crisi idrica" del nostro sito; ISPRA; CMCC.</div>
+    </div>
+
+    <h2 class="scheda-h2">📊 I dati veri di Genzano (2016-2025)</h2>
+    <table class="dati-tabella">
+      <caption>Dati: rianalisi ERA5 via Open-Meteo (CC BY 4.0), allineata al Copernicus Climate Data Store. Valori interi, trascritti dagli open data del sito (pioggia in millimetri; 1 mm = 1 litro per metro quadrato).</caption>
+      <thead>
+        <tr><th>Anno</th><th>Pioggia totale (mm)</th><th>Giorni con massima ≥ 35 °C</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>2016</td><td class="num">982</td><td class="num">0</td></tr>
+        <tr><td>2017</td><td class="num">908</td><td class="num">5</td></tr>
+        <tr><td>2018</td><td class="num">1530</td><td class="num">0</td></tr>
+        <tr><td>2019</td><td class="num">1317</td><td class="num">0</td></tr>
+        <tr><td>2020</td><td class="num">1178</td><td class="num">2</td></tr>
+        <tr><td>2021</td><td class="num">1174</td><td class="num">0</td></tr>
+        <tr><td>2022</td><td class="num">962</td><td class="num">2</td></tr>
+        <tr><td>2023</td><td class="num">1162</td><td class="num">2</td></tr>
+        <tr><td>2024</td><td class="num">1078</td><td class="num">2</td></tr>
+        <tr><td>2025</td><td class="num">1206</td><td class="num">0</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size: 0.82rem; color: #495057; margin: 0.15rem 0 0.4rem; font-style: italic;">
+      Come si legge: ogni riga è un anno. La seconda colonna dice quanta pioggia è caduta in tutto l'anno; la terza conta le giornate "molto calde". Un anno con poca pioggia <em>e</em> molte giornate calde mette sotto stress la falda due volte: entra meno acqua e se ne consuma di più.
+    </p>
+
+    <h2 class="scheda-h2">📖 Glossario dei dati</h2>
+    <dl class="glossario-mini">
+      <dt>Serie storica</dt><dd>lo stesso dato misurato anno dopo anno. Serve a vedere le tendenze, non il singolo anno.</dd>
+      <dt>Media</dt><dd>somma dei valori divisa per quanti sono. Dice il valore "tipico" di un periodo.</dd>
+      <dt>Scarto dalla media</dt><dd>differenza fra un valore e la media (con segno + o −). Dice se un anno è stato sopra o sotto il "tipico".</dd>
+      <dt>Rianalisi ERA5</dt><dd>ricostruzione scientifica del clima passato, punto per punto sul territorio, prodotta dal programma europeo Copernicus.</dd>
+      <dt>mm di pioggia</dt><dd>millimetri: 1 mm = 1 litro d'acqua caduto su 1 metro quadrato.</dd>
+    </dl>
+
+    <h2 class="scheda-h2">✏️ Esercizi — al lavoro sui dati</h2>
+
+    <div class="domanda-card">
+      <span class="num-q">1</span><strong>Guarda la colonna della pioggia. Qual è stato l'anno più piovoso e quale il meno piovoso del decennio? Calcola la differenza in mm fra i due.</strong>
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
+      <div class="calcolo"></div>
+    </div>
+
+    <div class="domanda-card">
+      <span class="num-q">2</span><strong>Calcola la media della pioggia dei tre anni 2016, 2017 e 2018. Poi calcola lo scarto dalla media di ciascuno dei tre anni (valore − media, con segno). Che cosa noti sommando i tre scarti?</strong>
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
+      <div class="calcolo"></div>
+    </div>
+
+    <div class="domanda-card">
+      <span class="num-q">3</span><strong>Sfida: calcola la media della pioggia dell'intero decennio 2016-2025 (arrotonda al mm). Quanti e quali anni sono stati SOTTO la media?</strong>
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
+      <div class="calcolo"></div>
+    </div>
+
+    <div class="domanda-card">
+      <span class="num-q">4</span><strong>Ora la colonna dei giorni molto caldi. Quale anno ne ha avuti di più? Quanti giorni ≥ 35 °C ci sono stati in totale nel decennio? Nota qualcosa di particolare sull'anno "campione" dei giorni caldi: com'era la sua pioggia rispetto agli altri anni?</strong>
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <span class="num-q">5</span><strong>Discussione in classe (senza soluzione unica): un anno con poca pioggia e tante giornate calde mette in difficoltà la falda dei Castelli. Quali gesti concreti di risparmio idrico possiamo fare a casa e a scuola? Scrivi almeno 3 proposte e confrontale con i compagni.</strong>
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="lab-box">
+      <div class="titolo-l">🌐 Costruisci il tuo grafico nel Laboratorio meteo</div>
+      Questi numeri diventano grafici interattivi nel <strong>Laboratorio meteo</strong> del nostro sito: <strong>protezionecivilegenzano.it/laboratorio-meteo/</strong>. Trovi gli esempi pronti "La pioggia anno per anno" e "Le giornate molto calde", e puoi costruire da solo un grafico nuovo con i dati climatici live: scegli le variabili, confronta gli anni e verifica i risultati di questi esercizi.
+    </div>
+
+    <div class="soluzione-capovolta">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0 0 2mm;"><strong>(1)</strong> Anno più piovoso: <strong>2018</strong> con 1530 mm; meno piovoso: <strong>2017</strong> con 908 mm. Differenza: 1530 − 908 = <strong>622 mm</strong>.</p>
+      <p style="margin: 0 0 2mm;"><strong>(2)</strong> Media 2016-2018: (982 + 908 + 1530) : 3 = 3420 : 3 = <strong>1140 mm</strong>. Scarti: 2016 → 982 − 1140 = <strong>−158 mm</strong>; 2017 → 908 − 1140 = <strong>−232 mm</strong>; 2018 → 1530 − 1140 = <strong>+390 mm</strong>. La somma dei tre scarti fa <strong>zero</strong> (−158 − 232 + 390 = 0): è una proprietà della media.</p>
+      <p style="margin: 0 0 2mm;"><strong>(3)</strong> Somma del decennio: 11.497 mm; media: 11.497 : 10 = 1149,7 ≈ <strong>1150 mm</strong>. Anni sotto la media: <strong>4</strong> — 2016 (982), 2017 (908), 2022 (962) e 2024 (1078).</p>
+      <p style="margin: 0;"><strong>(4)</strong> L'anno con più giorni molto caldi è il <strong>2017</strong> (5 giorni). Totale del decennio: 5 + 2 + 2 + 2 + 2 = <strong>13 giorni</strong>. Particolarità: il 2017 è anche l'anno <strong>meno piovoso</strong> del decennio (908 mm) — non a caso il 2017 fu un anno di crisi idrica anche nel Lazio.</p>
+    </div>
+
+    <div class="istruzioni-prof">
+      <strong>Per il/la prof · Note didattiche:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li><strong>Origine dei dati</strong>: open data del sito (<em>/open-data/clima-pioggia-annuale-genzano.json</em> e <em>/open-data/clima-giorni-molto-caldi-genzano.json</em>), rianalisi ERA5 via Open-Meteo (CC BY 4.0). La serie completa parte dal 2005: nella serie 2005-2025 <em>tutti</em> i giorni ≥ 35 °C cadono dal 2017 in poi — ottimo spunto per parlare di tendenza al riscaldamento senza allarmismo.</li>
+        <li><strong>Domanda 5</strong> (aperta): spunti dalla pagina del sito "Siccità e crisi idrica" — riparare i rubinetti che gocciolano, doccia breve invece della vasca, riduttori di flusso, lavatrice/lavastoviglie a pieno carico, chiudere il rubinetto mentre ci si lava i denti, riusare l'acqua di lavaggio delle verdure per le piante, segnalare le perdite in strada al gestore.</li>
+        <li><strong>Attenzione metodologica</strong>: un decennio è una finestra breve; la singola annata non "dimostra" il cambiamento climatico. Il ragionamento corretto è sulle <em>tendenze</em> di serie lunghe (rimandare al Laboratorio meteo per la serie completa dal 2005).</li>
+        <li><strong>Estensione</strong>: pagine del sito <a href="/rischi-prevenzione/siccita/">Siccità e crisi idrica</a> e <a href="/conoscere/catalogo-dei-rischi/rischio-siccita/">Il rischio da deficit idrico</a>; scheda <a href="/formazione/schede-stampabili/statistica-rischi-secondaria/">Statistica dei rischi</a> per altri esercizi sui dati.</li>
+        <li><strong>Riferimenti curricolari</strong>: Indicazioni Nazionali 2012 — Matematica (dati e previsioni), Scienze, Geografia. Legge 92/2019. D.M. 183/2024 — Sostenibilità (Agenda 2030, Goal 6 e 13).</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "La siccità ai Castelli Romani" · Secondaria I · matematica/scienze/geografia · rev. 2026-08</span>
+    </footer>
+  </article>
+</section>
+
 <section id="scheda-cronaca-recente-secondaria" class="pacchetto-scheda" aria-label="Scheda: Analisi di un articolo di cronaca — Ischia 2022">
   <article class="scheda-page">
     <header class="scheda-header">
@@ -3225,7 +3660,7 @@ e canali ufficiali del Comune.</div>
         <div class="corpo">
           <div class="titolo-art">Esercitazione alla Belardi: 350 alunni evacuati in quattro minuti</div>
           <p>Sabato 12 aprile alle ore 10:00 la scuola "Italo Belardi" di Genzano di Roma ha effettuato un'esercitazione di evacuazione coordinata con il Gruppo Volontari di Protezione Civile comunale. In quattro minuti tutti gli alunni e i docenti hanno raggiunto il punto di raccolta nel piazzale antistante.</p>
-          <p>L'iniziativa, prevista dal Piano di Emergenza dell'istituto ai sensi del D.M. 26/08/1992, simulava la risposta a un evento sismico. «Un risultato positivo — ha commentato la Dirigente — ma continueremo ad allenarci».</p>
+          <p>L'iniziativa, prevista dal Piano di Emergenza dell'istituto ai sensi del D.M. 26/08/1992 (norma applicabile alle scuole esistenti; per le nuove costruzioni vale la RTV V.7 del Codice di prevenzione incendi), simulava la risposta a un evento sismico. «Un risultato positivo — ha commentato la Dirigente — ma continueremo ad allenarci».</p>
         </div>
       </div>
 
@@ -3384,7 +3819,7 @@ e canali ufficiali del Comune.</div>
       <dt>DPC</dt><dd>Dipartimento della Protezione Civile (D.Lgs. 1/2018): coordina le emergenze nazionali.</dd>
       <dt>AeDES</dt><dd>scheda con cui un tecnico verifica se un edificio danneggiato è agibile, parzialmente agibile o inagibile.</dd>
       <dt>SAE</dt><dd>Soluzione Abitativa d'Emergenza: casetta provvisoria assegnata agli sfollati in attesa della ricostruzione.</dd>
-      <dt>IT-alert</dt><dd>sistema italiano di messaggi d'emergenza inviati ai cellulari di una zona colpita. Attivo dal 2023.</dd>
+      <dt>IT-alert</dt><dd>sistema italiano di messaggi d'emergenza inviati ai cellulari di una zona colpita, senza bisogno di alcuna app. Operativo dal 13 febbraio 2024, dopo i test regionali del 2022-2023.</dd>
     </dl>
 
     <h2 class="scheda-h2">📅 Cronologia dell'evento</h2>
@@ -3411,7 +3846,7 @@ e canali ufficiali del Comune.</div>
 
     <div class="timeline-box">
       <div class="data">2017-2025</div>
-      <div class="corpo">Ricostruzione lenta. Nascono nuovi strumenti: <strong>IT-alert</strong> (2023), revisione delle Norme Tecniche per le Costruzioni (NTC 2018), <em>casa Italia</em> per la prevenzione.</div>
+      <div class="corpo">Ricostruzione lenta. Nascono nuovi strumenti: <strong>IT-alert</strong> (test 2022-2023, operativo dal 13 febbraio 2024), revisione delle Norme Tecniche per le Costruzioni (NTC 2018), <em>casa Italia</em> per la prevenzione.</div>
     </div>
 
     <h2 class="scheda-h2">📊 Terremoti italiani a confronto</h2>
@@ -3447,7 +3882,7 @@ e canali ufficiali del Comune.</div>
           <li>Patrimonio edilizio storico non adeguato alle norme antisismiche.</li>
           <li>Ricostruzione lentissima (a 9 anni molti centri sono ancora cantieri).</li>
           <li>Burocrazia complessa per gli sfollati (pratiche, moduli, ritardi).</li>
-          <li>Nessun allerta veloce ai cellulari (IT-alert arriverà solo nel 2023).</li>
+          <li>Nessun allerta veloce ai cellulari (IT-alert sarà operativo solo dal 13 febbraio 2024).</li>
         </ul>
       </div>
     </div>
@@ -3487,7 +3922,7 @@ e canali ufficiali del Comune.</div>
     <div class="istruzioni-prof">
       <strong>Per il/la prof · Note didattiche:</strong>
       <ul style="margin:0.3rem 0 0 1rem; padding:0;">
-        <li><strong>Risposte attese:</strong> <strong>(1)</strong> profondità 4-9 km → onde sismiche arrivano in superficie con poca attenuazione; magnitudo non misura il danno ma l'energia. <strong>(2)</strong> Friuli aveva edifici diffusi più recenti e dopo il 1976 furono introdotte normative antisismiche che hanno protetto le ricostruzioni successive; Amatrice aveva centro storico medievale non adeguato. <strong>(3)</strong> scheda di rilievo dei danni post-sisma compilata da tecnici per dichiarare un edificio agibile/inagibile. <strong>(4)</strong> valanga + sisma + neve abbondante: i soccorsi non sono arrivati in tempo. Rischio multiplo = più pericoli che si combinano. <strong>(5)</strong> messaggio di emergenza ai cellulari di una zona; nato perché ad Amatrice 2016 non c'era nessun sistema rapido; attivo dal 2023. <strong>(6)</strong> kit emergenza, piano familiare, conoscere le aree di attesa, sapere come comportarsi durante la scossa (triangolo della vita NO, "drop-cover-hold on" SÌ).</li>
+        <li><strong>Risposte attese:</strong> <strong>(1)</strong> profondità 4-9 km → onde sismiche arrivano in superficie con poca attenuazione; magnitudo non misura il danno ma l'energia. <strong>(2)</strong> le magnitudo non sono identiche (Friuli Mw 6.4, Amatrice Mw 6.0: sulla scala logaritmica la differenza di energia è già rilevante), ma soprattutto — come dice la nota sotto la tabella — «la differenza la fa il costruito» e quante persone si trovano dentro quegli edifici al momento della scossa. In entrambi i casi il patrimonio edilizio non era adeguato alle scosse (ad Amatrice il centro storico, vedi colonna «non ha funzionato»), ma ad Amatrice fu colpita un'area di piccoli borghi montani; conta poi l'andamento della sequenza: le scosse più forti di ottobre (fino a Mw 6.5) non fecero vittime perché i centri già danneggiati erano stati evacuati in via preventiva (colonna «ha funzionato»). Da discutere in classe anche l'ora: ad Amatrice la scossa arrivò alle 3:36 di notte, con le persone in casa. <em>Attenzione all'anacronismo</em>: le norme antisismiche moderne sono successive al 1976, quindi non possono spiegare le vittime del Friuli. <strong>(3)</strong> scheda di rilievo dei danni post-sisma compilata da tecnici per dichiarare un edificio agibile/inagibile. <strong>(4)</strong> valanga + sisma + neve abbondante: i soccorsi non sono arrivati in tempo. Rischio multiplo = più pericoli che si combinano. <strong>(5)</strong> messaggio di emergenza ai cellulari di una zona, senza app da scaricare; nato perché ad Amatrice 2016 non c'era nessun sistema rapido; test regionali 2022-2023, operativo dal 13 febbraio 2024. <strong>(6)</strong> kit emergenza, piano familiare, conoscere le aree di attesa, sapere come comportarsi durante la scossa (triangolo della vita NO, "drop-cover-hold on" SÌ).</li>
         <li><strong>Approfondimenti scientifici</strong>: mappa di pericolosità sismica ZS9 INGV; <a href="https://www.ingv.it">ingv.it</a>; <a href="https://emidius.mi.ingv.it">emidius.mi.ingv.it</a> (catalogo storico CPTI15).</li>
         <li><strong>Sensibilità</strong>: argomento recente. Verificare la classe per familiari coinvolti. Approccio costruttivo (cosa abbiamo imparato), non emotivo.</li>
         <li><strong>Estensione</strong>: confronto con <a href="/formazione/schede-stampabili/caso-amatrice-primaria/">Primaria</a> e <a href="/formazione/schede-stampabili/caso-amatrice-secondaria2/">Secondaria II</a>. Approfondimento <a href="/formazione/schede-stampabili/caso-rigopiano-secondaria/">Caso Rigopiano</a> per il rischio multiplo.</li>
@@ -3535,7 +3970,7 @@ e canali ufficiali del Comune.</div>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Piano familiare</dt><dd style="margin: 0;">documento scritto che la famiglia tiene aggiornato per sapere cosa fare in emergenza. Strumento riconosciuto dal DPC.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Punto di raccolta</dt><dd style="margin: 0;">luogo concordato dove la famiglia si riunisce se non può tornare a casa. Sempre 2: uno vicino (parco), uno lontano (casa di un parente in un quartiere diverso).</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Contatto fuori area</dt><dd style="margin: 0;">parente o amico in altra città. In emergenza locale le linee telefoniche locali si intasano: spesso "esce" più facile chiamare lontano che vicino.</dd>
-      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">IT-alert</dt><dd style="margin: 0;">sistema italiano (2023) di messaggi cell-broadcast in emergenza. Indipendente dalla rubrica: arriva a tutti i cellulari della zona.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">IT-alert</dt><dd style="margin: 0;">sistema italiano di messaggi cell-broadcast in emergenza, operativo dal 13 febbraio 2024. Non è un'app: è indipendente dalla rubrica e arriva a tutti i cellulari della zona. Non riguarda le allerte meteo.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Persone fragili</dt><dd style="margin: 0;">anziani non autosufficienti, persone con disabilità, terapie salvavita (dialisi, insulina, ossigeno). Hanno bisogni specifici da considerare nel piano.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Kit 72 ore</dt><dd style="margin: 0;">scorte (acqua, cibo, farmaci, torcia, radio) per 3 giorni di autonomia. Standard internazionale (IFRC, FEMA USA, DPC).</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Resilienza</dt><dd style="margin: 0;">capacità di una famiglia/comunità di assorbire un impatto e ripartire. Si costruisce <em>prima</em> dell'emergenza.</dd>
@@ -3717,13 +4152,17 @@ e canali ufficiali del Comune.</div>
     </div>
 
     <div class="istruzioni-prof">
-      <strong>Per il/la prof · Soluzioni:</strong>
+      <strong>Per il/la prof · Note didattiche:</strong>
       <ul style="margin:0.3rem 0 0 1rem; padding:0;">
-        <li><strong>Orizzontali:</strong> 1=NUE, 2=ITALERT, 3=Regionale, 4=Replica, 5=Comunale, 6=2021, 7=Mitigazione, 8=Sismografo.</li>
-        <li><strong>Verticali:</strong> 1=DPC, 2=Direttive, 3=PAI, 4=Epicentro, 5=Antincendio, 6=Valanga, 7=Rischio, 8=DLgs.</li>
         <li>Nota: lo schema visivo è indicativo. Per uso reale, sostituire con cruciverba puntuale generato con stampino o software (es. Crossword Compiler) usando il glossario del sito come fonte.</li>
         <li><strong>Estensione</strong>: collegare con <a href="/formazione/schede-stampabili/cruciverba-primaria/">Cruciverba (Primaria)</a> per livello base e con <a href="/formazione/schede-stampabili/cruciverba-secondaria2/">Glossario commentato (Secondaria II)</a> per la versione approfondita.</li>
       </ul>
+    </div>
+
+    <div class="soluzione-capovolta" style="margin-top: 6mm;">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;"><strong>Orizzontali</strong>: 1=NUE, 2=ITALERT, 3=Regionale, 4=Replica, 5=Comunale, 6=2021, 7=Mitigazione, 8=Sismografo.<br>
+      <strong>Verticali</strong>: 1=DPC, 2=Direttive, 3=PAI, 4=Epicentro, 5=Antincendio, 6=Valanga, 7=Rischio, 8=DLgs.</p>
     </div>
 
     <footer class="scheda-footer">
@@ -3757,7 +4196,7 @@ e canali ufficiali del Comune.</div>
     <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.88rem; line-height: 1.55;">
       <div style="font-weight: 700; color: var(--scheda-blu); margin-bottom: 0.2rem; font-size: 0.93rem;">🚪 La regola dei "moduli di larghezza"</div>
       Per dimensionare le vie di esodo, la norma usa il concetto di <strong>modulo</strong>: 1 modulo = 0,60 m di larghezza (la larghezza media di una persona). Ogni modulo lascia passare <strong>60 persone in 1 minuto</strong> (questo è il <em>flusso teorico</em>). Esempio: una porta larga 1,80 m = 3 moduli → 180 persone/min. Più alto è il numero di occupanti, più larghe devono essere le uscite. In più: la <strong>distanza massima</strong> da percorrere per raggiungere un'uscita è 40 m (in caso di basso rischio). Per scuole con rischio medio: ≤30 m. Almeno <strong>2 vie indipendenti</strong> per ogni piano.
-      <br><em>Fonte: D.M. 3/8/2015 "Codice di prevenzione incendi"; D.M. 26/8/1992 "Norme prevenzione incendi edilizia scolastica".</em>
+      <br><em>Fonte: D.M. 3/8/2015 "Codice di prevenzione incendi"; D.M. 26/8/1992 "Norme prevenzione incendi edilizia scolastica" (applicabile alle scuole esistenti; per nuove costruzioni e ristrutturazioni vale la RTV V.7 del Codice, D.M. 7 agosto 2017 e s.m.i.).</em>
     </div>
 
     <h2 class="scheda-h2">📐 Pianta della scuola di esempio</h2>
@@ -3855,18 +4294,23 @@ e canali ufficiali del Comune.</div>
     </div>
 
     <div class="istruzioni-prof">
-      <strong>Per il/la prof · Soluzioni:</strong>
+      <strong>Per il/la prof · Note didattiche:</strong>
       <ul style="margin:0.3rem 0 0 1rem; padding:0;">
-        <li>(1) Alunni: 22+24+22+25+20+22+80+22 = 237; +10 insegnanti +3 personale = <strong>250 persone</strong>.</li>
-        <li>(2) Uscita 1: 2 × 50 = <strong>100 persone/min</strong>.</li>
-        <li>(3) Uscita 2: 1.5 × 50 = <strong>75 persone/min</strong>.</li>
-        <li>(4) Totale: 100 + 75 = <strong>175 persone/min</strong>.</li>
-        <li>(5) Tempo: 250 ÷ 175 = 1.43 → <strong>2 minuti</strong> (arrotondato per eccesso, considerando che il flusso non è istantaneo).</li>
-        <li>(6) Tempo: 35 m ÷ 0.5 m/s = <strong>70 secondi</strong> = 1 min 10 s.</li>
-        <li>(7) Sì, ce la fa entro 5 min. Migliorie possibili: aumentare larghezza uscita 2, aggiungere segnaletica luminosa, fare più esercitazioni.</li>
         <li>I valori sono semplificati. La norma reale considera anche pre-movimento, code, ostacoli, persone con mobilità ridotta.</li>
         <li><strong>Estensione</strong>: collegare con <a href="/formazione/schede-stampabili/labirinto-evacuazione-primaria/">Vie di fuga scuola (Primaria)</a> e <a href="/formazione/schede-stampabili/labirinto-evacuazione-secondaria2/">Progetto piano evacuazione (Sec II)</a>.</li>
       </ul>
+    </div>
+
+    <div class="soluzione-capovolta" style="margin-top: 6mm;">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;">
+      (1) Alunni: 22+24+22+25+20+22+80+22 = 237; +10 insegnanti +3 personale = <strong>250 persone</strong> ·
+      (2) Uscita 1: 2 × 50 = <strong>100 persone/min</strong> ·
+      (3) Uscita 2: 1.5 × 50 = <strong>75 persone/min</strong> ·
+      (4) Totale: 100 + 75 = <strong>175 persone/min</strong> ·
+      (5) 250 ÷ 175 = 1.43 → <strong>2 minuti</strong> (arrotondato per eccesso, il flusso non è istantaneo) ·
+      (6) 35 m ÷ 0.5 m/s = <strong>70 secondi</strong> = 1 min 10 s ·
+      (7) Sì, ce la fa entro 5 min. Migliorie possibili: aumentare larghezza uscita 2, aggiungere segnaletica luminosa, fare più esercitazioni.</p>
     </div>
 
     <footer class="scheda-footer">
@@ -4060,7 +4504,7 @@ e canali ufficiali del Comune.</div>
 
     <div class="timeline-box">
       <div class="data">6 maggio 1976 — ore 21:00</div>
-      <div class="corpo">Scossa di <strong>magnitudo 6.5</strong>. Epicentro a Gemona del Friuli. <strong>989 vittime</strong>, 80 paesi distrutti. Tra i più colpiti: Gemona, Venzone, Buia, Osoppo. È la prima emergenza in Italia con copertura televisiva intensa.</div>
+      <div class="corpo">Scossa di <strong>magnitudo momento Mw 6.4</strong> (6.5 nella vecchia scala Richter). Epicentro a Gemona del Friuli. <strong>989 vittime</strong>, 80 paesi distrutti. Tra i più colpiti: Gemona, Venzone, Buia, Osoppo. È la prima emergenza in Italia con copertura televisiva intensa.</div>
     </div>
 
     <div class="timeline-box">
@@ -4163,7 +4607,7 @@ e canali ufficiali del Comune.</div>
     <div class="istruzioni-prof">
       <strong>Per il/la prof · Note didattiche:</strong>
       <ul style="margin:0.3rem 0 0 1rem; padding:0;">
-        <li><strong>Risposte attese (1)</strong>: ricostruire stesso luogo + identità urbana ma con sicurezza antisismica · <strong>(2)</strong> ministro per gli interventi nel Friuli, padre della PC italiana moderna · <strong>(3)</strong> velocità (9 anni) + qualità + decisione locale + identità preservata · <strong>(4)</strong> Legge 225/1992 — Servizio Nazionale PC · <strong>(5)</strong> argomentativa: confronto con Belice, Irpinia, Aquila, Amatrice · <strong>(6)</strong> argomentativa: identità = piazze, chiese, vicinato, riti, paesaggio.</li>
+        <li><strong>Risposte attese (1)</strong>: faglia inversa = zona in compressione, i due blocchi si avvicinano e uno scavalca l'altro risalendo lungo il piano inclinato (Friuli e Alpi orientali, spinta della microplacca adriatica); faglia normale = zona in distensione, i due lati si allontanano e un blocco sprofonda rispetto all'altro (Appennino) · <strong>(1b)</strong> ricostruire stesso luogo + identità urbana ma con sicurezza antisismica; anastilosi = rimontaggio con le pietre originali catalogate, applicato al Duomo di Venzone · <strong>(2)</strong> ministro per gli interventi nel Friuli, padre della PC italiana moderna · <strong>(3)</strong> velocità (9 anni) + qualità + decisione locale + identità preservata · <strong>(4)</strong> Legge 225/1992 — Servizio Nazionale PC · <strong>(5)</strong> il più veloce è il Friuli 1976 (~9 anni), i più lenti i casi a gestione centralizzata Belice 1968 e Irpinia 1980 (20-30 anni); motivo: in Friuli le decisioni furono prese in loco con i Sindaci e con l'autonomia dello Statuto speciale, altrove pesarono accentramento e burocrazia · <strong>(6)</strong> argomentativa: identità = piazze, chiese, vicinato, riti, paesaggio.</li>
         <li><strong>Estensione</strong>: confrontare con <a href="/formazione/schede-stampabili/caso-friuli-primaria/">Primaria</a> e <a href="/formazione/schede-stampabili/caso-friuli-secondaria2/">Sec II</a>.</li>
         <li><strong>Riferimenti curricolari</strong>: Indicazioni Nazionali 2012 — Storia, Geografia, Cittadinanza. Legge 92/2019. D.M. 183/2024 — Costituzione (organizzazione PC) + Sostenibilità.</li>
       </ul>
@@ -4381,7 +4825,7 @@ e canali ufficiali del Comune.</div>
 
     <div class="timeline-box">
       <div class="data">2017-oggi</div>
-      <div class="corpo">Ricostruzione lenta del centro storico. Nasce <strong>IT-alert</strong> (2023). L'Aquila diventa laboratorio nazionale di buone pratiche antisismiche.</div>
+      <div class="corpo">Ricostruzione lenta del centro storico. Nasce <strong>IT-alert</strong> (test dal 2023, operativo dal 13 febbraio 2024). L'Aquila diventa laboratorio nazionale di buone pratiche antisismiche.</div>
     </div>
 
     <h2 class="scheda-h2">⚖️ Cosa ha funzionato e cosa no</h2>
@@ -4624,7 +5068,7 @@ e canali ufficiali del Comune.</div>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">CAT-INGV</dt><dd style="margin: 0;">Centro Allerta Tsunami (attivo da 2017): emette allerta in 8 minuti dal terremoto. Tre livelli: Information / Advisory / Watch.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Scala Mercalli (MCS)</dt><dd style="margin: 0;">misura gli <em>effetti</em> del sisma sul territorio (I-XII). Messina 1908: XI (rovina quasi totale). Diversa da magnitudo (Mw, misura energia).</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">R.D. 193/1909</dt><dd style="margin: 0;">Regio Decreto: prima normativa antisismica italiana, varata appena 18 giorni dopo Messina. Classifica i Comuni e fissa criteri costruttivi.</dd>
-      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">SI-AM / IT-alert tsunami</dt><dd style="margin: 0;">Sistema di Allertamento nazionale tsunami DPC-INGV-ISPRA. Allerta tramite IT-alert cellulari, sirene comunali, app.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">SI-AM / IT-alert tsunami</dt><dd style="margin: 0;">Sistema di Allertamento nazionale tsunami DPC-INGV-ISPRA. Allerta ai Comuni costieri, sirene comunali, canali ufficiali. L'invio via IT-alert per il maremoto è ancora in fase sperimentale (solo messaggi di test).</dd>
     </dl>
 
     <h2 class="scheda-h2">📅 Cronologia dell'evento</h2>
@@ -4885,7 +5329,7 @@ e canali ufficiali del Comune.</div>
     <h2 class="scheda-h2">🔬 Il meccanismo: colate rapide di fango</h2>
     <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.88rem; line-height: 1.55;">
       <div style="font-weight: 700; color: var(--scheda-blu); margin-bottom: 0.2rem; font-size: 0.93rem;">Depositi piroclastici sui Monti di Sarno</div>
-      I Monti di Sarno hanno un substrato calcareo coperto da uno strato (1-3 m) di <strong>depositi piroclastici</strong>: ceneri e pomici emesse dal Vesuvio nelle eruzioni storiche (in particolare 79 d.C. e 1631). Questi materiali sono porosi e altamente <strong>colludibili</strong>: quando saturi d'acqua perdono coesione. Tra il 4 e il 5 maggio 1998 piovvero <strong>180 mm in 24 ore</strong> (precipitazione di ritorno secolare). Il fronte di saturazione raggiunse il limite calcaree/piroclastiti: lo strato di pomice scivolò sulla roccia di base, generando <strong>oltre 100 colate rapide</strong> con velocità fino a <strong>50 km/h</strong>. Tipologia: <em>debris flow</em> ad alta concentrazione solida.
+      I Monti di Sarno hanno un substrato calcareo coperto da uno strato (1-3 m) di <strong>depositi piroclastici</strong>: ceneri e pomici emesse dal Vesuvio nelle eruzioni storiche (in particolare 79 d.C. e 1631). Questi materiali sono porosi e altamente <strong>collassabili</strong>: quando saturi d'acqua perdono coesione. Tra il 4 e il 5 maggio 1998 piovvero <strong>180 mm in 24 ore</strong> (precipitazione di ritorno secolare). Il fronte di saturazione raggiunse il limite calcaree/piroclastiti: lo strato di pomice scivolò sulla roccia di base, generando <strong>oltre 100 colate rapide</strong> con velocità fino a <strong>50 km/h</strong>. Tipologia: <em>debris flow</em> ad alta concentrazione solida.
       <div style="font-style: italic; color: #495057; font-size: 0.76rem; margin-top: 0.3rem;">Fonte: CNR-IRPI; Autorità di Bacino Distrettuale dell'Appennino Meridionale; ISPRA-IFFI.</div>
     </div>
 
@@ -5033,7 +5477,7 @@ e canali ufficiali del Comune.</div>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Cella temporalesca stazionaria</dt><dd style="margin: 0;">temporale che resta sopra la stessa zona per ore (rigenerazione retrograda). Scarica enormi quantità d'acqua su un'area piccola.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">CFR (Centro Funzionale Regionale)</dt><dd style="margin: 0;">struttura regionale di sorveglianza meteo-idro. Emette i bollettini di criticità con i 4 colori. Lazio: Roma.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Codice colore allerta</dt><dd style="margin: 0;">verde (no fenomeni) / giallo (ordinaria) / arancione (moderata) / rosso (elevata). Standard nazionale dalla Direttiva PCM 27/2/2004.</dd>
-      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">IT-alert</dt><dd style="margin: 0;">sistema di messaggi cell-broadcast d'emergenza (2023). Lo riceve chiunque sia nella zona allertata, anche turisti.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">IT-alert</dt><dd style="margin: 0;">sistema di messaggi cell-broadcast d'emergenza, operativo dal 13 febbraio 2024 (test regionali 2022-2023). Lo riceve chiunque sia nella zona interessata, anche i turisti, senza scaricare app. Non copre le allerte meteo.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Tempo di ritorno</dt><dd style="margin: 0;">intervallo medio fra eventi di uguale intensità. T100 = ogni 100 anni in media; non significa "mai prima di 100".</dd>
     </dl>
 
@@ -5056,7 +5500,7 @@ e canali ufficiali del Comune.</div>
 
     <div class="timeline-box">
       <div class="data">2016 — codici colore standard</div>
-      <div class="corpo">Una direttiva nazionale armonizza i codici colore in tutta Italia: <strong>verde</strong> (nessuna criticità), <strong>giallo</strong> (criticità ordinaria), <strong>arancione</strong> (criticità moderata), <strong>rosso</strong> (criticità elevata). Disponibili sul sito DPC e su <strong>IT-alert</strong>.</div>
+      <div class="corpo">Una direttiva nazionale armonizza i codici colore in tutta Italia: <strong>verde</strong> (nessuna criticità), <strong>giallo</strong> (criticità ordinaria), <strong>arancione</strong> (criticità moderata), <strong>rosso</strong> (criticità elevata). Disponibili sul sito del DPC, sui siti delle Regioni e sui canali dei Comuni.</div>
     </div>
 
     <h2 class="scheda-h2">⚖️ Cosa ha funzionato e cosa no</h2>
@@ -5068,7 +5512,7 @@ e canali ufficiali del Comune.</div>
           <li>Centri Funzionali Regionali operativi in tutte le regioni.</li>
           <li>Codici colore standard nazionali (livelli, comprensibili da tutti).</li>
           <li>App e siti web con allerta in tempo reale.</li>
-          <li>IT-alert (dal 2023): allerta che arriva direttamente sui cellulari.</li>
+          <li>IT-alert (operativo dal 13 febbraio 2024): messaggio d'emergenza che arriva direttamente sui cellulari, senza scaricare app. Non riguarda però le allerte meteo.</li>
         </ul>
       </div>
       <div class="colonna-box no">
@@ -5117,7 +5561,7 @@ e canali ufficiali del Comune.</div>
     <div class="istruzioni-prof">
       <strong>Per il/la prof · Note didattiche:</strong>
       <ul style="margin:0.3rem 0 0 1rem; padding:0;">
-        <li><strong>Risposte attese (1)</strong>: alluvione che si verifica in poche ore con piogge molto intense; più rapida e meno prevedibile · <strong>(2)</strong> centro tecnico di ogni regione che ogni giorno emette il bollettino di allerta · <strong>(3)</strong> verde (nessuna criticità), giallo (ordinaria), arancione (moderata), rosso (elevata) · <strong>(4)</strong> sistema di allerta tramite cellulare; in funzione dal 2023; arriva a tutti, anche a chi non consulta il bollettino · <strong>(5)</strong> bacino piccolo, terreni saturi, pendenza forte → l'acqua arriva in fretta · <strong>(6)</strong> argomentativa: stare in casa, tenersi pronti a salire ai piani alti, non andare in sotterranei, evitare di guidare.</li>
+        <li><strong>Risposte attese (1)</strong>: alluvione che si verifica in poche ore con piogge molto intense; più rapida e meno prevedibile · <strong>(2)</strong> centro tecnico di ogni regione che ogni giorno emette il bollettino di allerta · <strong>(3)</strong> verde (nessuna criticità), giallo (ordinaria), arancione (moderata), rosso (elevata) · <strong>(4)</strong> sistema nazionale di allarme pubblico via cellulare, senza app da scaricare; in funzione dal 13 febbraio 2024; arriva a tutti i telefoni nella zona interessata, ma solo per emergenze gravi (nucleare, industriale rilevante, dighe, vulcani): per il meteo restano i bollettini · <strong>(5)</strong> bacino piccolo, terreni saturi, pendenza forte → l'acqua arriva in fretta · <strong>(6)</strong> argomentativa: stare in casa, tenersi pronti a salire ai piani alti, non andare in sotterranei, evitare di guidare.</li>
         <li><strong>Estensione</strong>: confrontare con <a href="/formazione/schede-stampabili/caso-versilia-primaria/">Primaria</a> e <a href="/formazione/schede-stampabili/caso-versilia-secondaria2/">Sec II</a>. Esercitazione: visitare il sito allertasimul.it e simulare un'allerta.</li>
         <li><strong>Riferimenti curricolari</strong>: Indicazioni Nazionali 2012 — Scienze, Geografia, Cittadinanza. Legge 92/2019. D.M. 183/2024 — Sostenibilità (Goal 13 azione climatica).</li>
       </ul>
@@ -5430,7 +5874,7 @@ e canali ufficiali del Comune.</div>
     <h2 class="scheda-h2">🔬 Il meccanismo: caldera resurgente e bradisismo</h2>
     <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.88rem; line-height: 1.55;">
       <div style="font-weight: 700; color: var(--scheda-blu); margin-bottom: 0.2rem; font-size: 0.93rem;">Magma, fluidi idrotermali e crosta in deformazione</div>
-      Sotto i Campi Flegrei, a <strong>3-5 km di profondità</strong>, c'è una camera magmatica residua. Sopra, a <strong>1-2 km</strong>, un grande <strong>sistema idrotermale</strong>: rocce permeabili sature di acqua salata calda. Il <strong>bradisismo</strong> è il movimento verticale lento del suolo dovuto a (a) immissione di magma profondo che spinge dal basso; (b) pressurizzazione del sistema idrotermale (vapore e CO₂ che si espandono). Dal 2005 ad oggi: <strong>~130 cm di sollevamento totale</strong>, accelerazione recente (~1,5 cm/mese nel 2024). Migliaia di scosse sismiche di bassa magnitudo (max Mw 4.4, 27/09/2023): tipiche di "<strong>VT</strong>" (volcano-tectonic) e "<strong>LP</strong>" (long-period, fluidi). Non significano eruzione imminente, ma vanno sorvegliate.
+      Sotto i Campi Flegrei, a <strong>3-5 km di profondità</strong>, c'è una camera magmatica residua. Sopra, a <strong>1-2 km</strong>, un grande <strong>sistema idrotermale</strong>: rocce permeabili sature di acqua salata calda. Il <strong>bradisismo</strong> è il movimento verticale lento del suolo dovuto a (a) immissione di magma profondo che spinge dal basso; (b) pressurizzazione del sistema idrotermale (vapore e CO₂ che si espandono). Dal 2005 ad oggi: <strong>~130 cm di sollevamento totale</strong>, accelerazione recente (~1,5 cm/mese nel 2024). Migliaia di scosse sismiche di bassa magnitudo, con eventi più forti occasionali (Md 4.4 il 20 maggio 2024; Md 4.7 il 31 luglio 2026, la più forte della fase attuale — dati INGV): tipiche di "<strong>VT</strong>" (volcano-tectonic) e "<strong>LP</strong>" (long-period, fluidi). Non significano eruzione imminente, ma vanno sorvegliate.
       <div style="font-style: italic; color: #495057; font-size: 0.76rem; margin-top: 0.3rem;">Fonte: INGV-OV — Osservatorio Vesuviano; DPC — Piano Nazionale Campi Flegrei (2015, aggiornato 2024).</div>
     </div>
 
@@ -5441,7 +5885,7 @@ e canali ufficiali del Comune.</div>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">VEI</dt><dd style="margin: 0;">Volcanic Explosivity Index (0-8). Campi Flegrei: max storico VEI 7 (Ignimbrite Campana, super-eruzione).</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Sistema idrotermale</dt><dd style="margin: 0;">acqua e gas caldi in rocce permeabili sopra la camera magmatica. A Pozzuoli: temperature 150-250°C a 1-2 km.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">VT / LP earthquake</dt><dd style="margin: 0;">terremoti vulcano-tettonici (fratturazione roccia) vs Long-Period (vibrazione fluidi). Importanti per capire cosa si muove sotto.</dd>
-      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Livelli di allerta DPC</dt><dd style="margin: 0;">Base / Attenzione / Preallarme / Allarme. Campi Flegrei dal 2012: livello <em>giallo Attenzione</em>.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Livelli di allerta DPC</dt><dd style="margin: 0;">Base / Attenzione / Preallarme / Allarme. Il livello viene aggiornato dal Dipartimento della Protezione Civile: verifica quello attuale su protezionecivile.gov.it. Alla stesura di questa scheda (agosto 2026) era <em>giallo Attenzione</em>, dichiarato nel 2012.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Zona rossa</dt><dd style="margin: 0;">~500.000 persone in 7 comuni che, in caso di Allarme, dovrebbero essere evacuate preventivamente per gemellaggio con altre Regioni.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">L. 100/2012</dt><dd style="margin: 0;">recepisce le linee guida per la pianificazione di emergenza vulcanica (Campi Flegrei + Vesuvio).</dd>
     </dl>
@@ -5470,7 +5914,7 @@ e canali ufficiali del Comune.</div>
 
     <div class="timeline-box">
       <div class="data">2005-oggi — bradisismo in corso</div>
-      <div class="corpo">Nuova fase di sollevamento (cm/anno). Aumento della sismicità. Il livello d'allerta passa da verde a <strong>giallo</strong> nel 2012. La popolazione vive accuratamente informata.</div>
+      <div class="corpo">Nuova fase di sollevamento (cm/anno). Aumento della sismicità: a fine luglio 2026 uno sciame ha raggiunto magnitudo Md 4.7, la scossa più forte della fase attuale (dati INGV). Il livello d'allerta passa da verde a <strong>giallo</strong> nel 2012. La popolazione vive accuratamente informata.</div>
     </div>
 
     <h2 class="scheda-h2">⚖️ Cosa è in atto: monitoraggio + piano</h2>
@@ -5514,7 +5958,7 @@ e canali ufficiali del Comune.</div>
     </div>
 
     <div class="domanda-card">
-      <span class="num-q">4</span><strong>Quali livelli di allerta usa l'INGV per i vulcani? Quale livello hanno oggi i Campi Flegrei?</strong>
+      <span class="num-q">4</span><strong>Quali livelli di allerta usa l'INGV per i vulcani? Quale livello hanno oggi i Campi Flegrei? Dove lo verifichi?</strong>
       <div class="righe"><span class="r"></span><span class="r"></span></div>
     </div>
 
@@ -5532,7 +5976,7 @@ e canali ufficiali del Comune.</div>
       <strong>Per il/la prof · Note didattiche:</strong>
       <ul style="margin:0.3rem 0 0 1rem; padding:0;">
         <li><strong>Sensibilità</strong>: tema vivo nella cronaca recente. Tono rassicurante: monitoraggio italiano è all'avanguardia. La paura non aiuta; conoscenza e piano sì.</li>
-        <li><strong>Risposte attese (1)</strong>: vasta depressione vulcanica formata dal collasso del tetto della camera magmatica · <strong>(2)</strong> nacque il "Monte Nuovo", ultima eruzione storica · <strong>(3)</strong> sollevamento/abbassamento del terreno; ~1,7 m nel 1984 a Pozzuoli · <strong>(4)</strong> verde/giallo/arancione/rosso; oggi giallo (dal 2012) · <strong>(5)</strong> area di evacuazione preventiva di 7 Comuni: ~500.000 persone · <strong>(6)</strong> argomentativa: conoscere piano, partecipare alle esercitazioni, ascoltare INGV.</li>
+        <li><strong>Risposte attese (1)</strong>: vasta depressione vulcanica formata dal collasso del tetto della camera magmatica · <strong>(2)</strong> nacque il "Monte Nuovo", ultima eruzione storica · <strong>(3)</strong> sollevamento/abbassamento del terreno; ~1,7 m nel 1984 a Pozzuoli · <strong>(4)</strong> verde/giallo/arancione/rosso; si verifica sul sito del Dipartimento della Protezione Civile — alla stesura della scheda (agosto 2026): giallo, dal 2012 · <strong>(5)</strong> area di evacuazione preventiva di 7 Comuni: ~500.000 persone · <strong>(6)</strong> argomentativa: conoscere piano, partecipare alle esercitazioni, ascoltare INGV.</li>
         <li><strong>Estensione</strong>: confrontare con <a href="/formazione/schede-stampabili/caso-campi-flegrei-primaria/">Primaria</a> e <a href="/formazione/schede-stampabili/caso-campi-flegrei-secondaria2/">Sec II</a>. Visita virtuale: ingv.it/Pianodemergenzanazionale.</li>
         <li><strong>Riferimenti curricolari</strong>: Indicazioni Nazionali 2012 — Scienze, Geografia, Cittadinanza. Legge 92/2019. D.M. 183/2024 — Sostenibilità + Cittadinanza scientifica.</li>
       </ul>
@@ -5541,6 +5985,308 @@ e canali ufficiali del Comune.</div>
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
       <span>Scheda "Campi Flegrei" · Secondaria I · scienze/geografia · rev. 2026</span>
+    </footer>
+  </article>
+</section>
+
+<section id="scheda-caso-san-giuliano-secondaria" class="pacchetto-scheda" aria-label="Scheda: Caso San Giuliano di Puglia — 31 ottobre 2002">
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Caso San Giuliano di Puglia — 31 ottobre 2002</h1>
+        <div class="scheda-sottotitolo">La sicurezza delle scuole — Scheda fotocopiabile, Secondaria di primo grado (11-13 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 11-13 anni</span>
+      <span><strong>Obiettivo:</strong> capire perché oggi le scuole italiane si controllano e si costruiscono antisismiche</span>
+      <span><strong>Discipline:</strong> scienze, storia, geografia, ed. civica</span>
+    </div>
+
+    <p class="scheda-intro">
+      Alle <strong>11:32 del 31 ottobre 2002</strong>, vigilia di Ognissanti, una scossa di magnitudo <strong>5.8</strong> colpì il <strong>Molise</strong>. Fu una scossa di forza <em>moderata</em>: in una zona con edifici antisismici avrebbe fatto pochi danni. A <strong>San Giuliano di Puglia</strong>, un paese di circa mille abitanti in provincia di Campobasso, crollò invece la <strong>scuola elementare «Francesco Jovine»</strong>. Sotto le macerie morirono <strong>27 bambini</strong> di prima elementare e la loro maestra, <strong>Carmela Ciniglio</strong>. Le scuole di altri paesi colpiti dallo stesso terremoto ressero: il problema non era il terremoto in sé, era <em>quel</em> edificio. Da quella tragedia è cambiato per sempre il modo in cui l'Italia guarda alla <strong>sicurezza delle scuole</strong>.
+    </p>
+
+    <h2 class="scheda-h2">🔬 Perché è crollata proprio la scuola?</h2>
+    <div class="nozione-box">
+      <div class="titolo-n">Un edificio fragile, non un terremoto "fortissimo"</div>
+      La scuola Jovine aveva il piano terra in <strong>muratura di pietrame</strong>, un modo di costruire tradizionale che resiste poco alle scosse. Decenni dopo la costruzione era stato aggiunto <strong>un piano in più</strong> (una <em>sopraelevazione</em>) senza adeguare la struttura sottostante: più peso sopra, stessa resistenza sotto. Quando arrivarono le onde sismiche, il piano superiore schiacciò quello inferiore in pochi secondi. E c'è un altro fatto importante: all'epoca il Molise <strong>non era nemmeno classificato come zona sismica</strong>, quindi nessuna legge obbligava a costruire lì in modo antisismico.
+      <div class="fonte">Fonti: INGV; perizie del processo di Larino; DPC — rischio sismico.</div>
+    </div>
+
+    <h2 class="scheda-h2">📖 Glossario operativo</h2>
+    <dl class="glossario-mini">
+      <dt>Magnitudo (Mw)</dt><dd>misura dell'energia liberata da un terremoto. 5.8 è una scossa moderata: i danni dipendono soprattutto da <em>come sono costruiti</em> gli edifici.</dd>
+      <dt>Sopraelevazione</dt><dd>aggiunta di un piano a un edificio esistente. Se non si rinforza la struttura sotto, il peso in più diventa un pericolo in caso di scossa.</dd>
+      <dt>Muratura di pietrame</dt><dd>muri fatti di pietre e malta povera, tipici degli edifici antichi. Resistono poco alle scosse.</dd>
+      <dt>Classificazione sismica</dt><dd>divisione del territorio in zone (da 1 = alta sismicità a 4 = bassa). Dice quanto "antisismico" deve essere ogni nuovo edificio.</dd>
+      <dt>OPCM 3274/2003</dt><dd>Ordinanza del Presidente del Consiglio dei Ministri, marzo 2003: la risposta a San Giuliano. Tutta l'Italia diventa classificata sismicamente.</dd>
+      <dt>Verifica di vulnerabilità</dt><dd>controllo tecnico che dice quanto un edificio resisterebbe a un terremoto. Obbligatorio per scuole ed edifici strategici.</dd>
+      <dt>Zona 2B</dt><dd>la classe sismica di Genzano di Roma: sismicità media, obbligo di costruzioni antisismiche.</dd>
+    </dl>
+
+    <h2 class="scheda-h2">📅 Cronologia dell'evento</h2>
+
+    <div class="timeline-box">
+      <div class="data">31 ottobre 2002 — ore 11:32</div>
+      <div class="corpo">Scossa di magnitudo <strong>5.8</strong> con epicentro fra le province di Campobasso e Foggia. A San Giuliano di Puglia crolla la scuola «F. Jovine» sopra la classe di prima elementare. Il bilancio complessivo è di <strong>30 vittime</strong>: 27 bambini, la maestra Carmela Ciniglio e 2 persone fuori dalla scuola.</div>
+    </div>
+
+    <div class="timeline-box">
+      <div class="data">31 ottobre - 1 novembre 2002</div>
+      <div class="corpo">Arrivano Vigili del Fuoco, 118, Croce Rossa, Forze dell'ordine, volontari di protezione civile e squadre specializzate nel soccorso fra le macerie. Alcuni bambini vengono estratti vivi. Il <strong>1° novembre</strong> una forte replica (magnitudo 5.7) costringe a evacuare tutto il paese: gli abitanti vengono ospitati in tendopoli e poi in moduli abitativi.</div>
+    </div>
+
+    <div class="timeline-box">
+      <div class="data">20 marzo 2003</div>
+      <div class="corpo">Pochi mesi dopo esce l'<strong>OPCM 3274/2003</strong>: nuova classificazione sismica di <strong>tutto</strong> il territorio italiano in 4 zone. <strong>Nessun Comune è più "non sismico"</strong>. Scatta l'obbligo di verificare la sicurezza sismica delle scuole e degli edifici strategici (ospedali, caserme, sale operative).</div>
+    </div>
+
+    <div class="timeline-box">
+      <div class="data">Gli anni successivi</div>
+      <div class="corpo">Il processo (Tribunale di Larino) si conclude con condanne per tecnici e amministratori. Arrivano le moderne <strong>Norme Tecniche per le Costruzioni</strong> (2008, poi 2018) e gli incentivi per rendere più sicuri gli edifici esistenti. A San Giuliano la nuova scuola — antisismica per progetto — viene intitolata alle vittime; un <strong>Parco della Memoria</strong> ricorda i 27 bambini e la maestra. Oggi il <strong>22 novembre</strong> si celebra la <strong>Giornata nazionale per la sicurezza nelle scuole</strong>, istituita dalla legge 107/2015.</div>
+    </div>
+
+    <h2 class="scheda-h2">⚖️ Cosa non andava e cosa è cambiato</h2>
+    <div class="due-colonne">
+      <div class="colonna-box no">
+        <div class="titolo-c">❌ Prima (cosa non andava)</div>
+        <ul>
+          <li>Il Molise non era classificato come zona sismica: nessun obbligo antisismico.</li>
+          <li>La scuola era stata sopraelevata senza rinforzare la struttura.</li>
+          <li>Nessuna verifica tecnica dell'edificio dopo i lavori.</li>
+          <li>Le scuole non erano considerate edifici da controllare con priorità.</li>
+        </ul>
+      </div>
+      <div class="colonna-box ok">
+        <div class="titolo-c">✅ Dopo (cosa è cambiato)</div>
+        <ul>
+          <li>OPCM 3274/2003: tutta l'Italia classificata sismicamente (4 zone).</li>
+          <li>Obbligo di verifica di vulnerabilità sismica per scuole ed edifici strategici.</li>
+          <li>Norme Tecniche per le Costruzioni moderne (NTC 2008 e 2018).</li>
+          <li>Incentivi (Sismabonus) per migliorare gli edifici esistenti.</li>
+          <li>Giornata nazionale per la sicurezza nelle scuole (22 novembre).</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="scheda-h2">✏️ Esercizio 1 — Vero o falso?</h2>
+    <table class="vf-tab">
+      <thead>
+        <tr><th>Affermazione</th><th>V</th><th>F</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>a) Nel 2002 il Molise era classificato come zona sismica.</td><td class="vf">◻</td><td class="vf">◻</td></tr>
+        <tr><td>b) La scuola Jovine crollò perché il terremoto fu uno dei più forti mai registrati in Italia.</td><td class="vf">◻</td><td class="vf">◻</td></tr>
+        <tr><td>c) Dopo l'OPCM 3274/2003 nessun Comune italiano è più "non sismico".</td><td class="vf">◻</td><td class="vf">◻</td></tr>
+        <tr><td>d) Le scuole sono fra gli edifici per cui è obbligatoria la verifica di vulnerabilità sismica.</td><td class="vf">◻</td><td class="vf">◻</td></tr>
+        <tr><td>e) Le scuole degli altri paesi colpiti dallo stesso terremoto crollarono tutte.</td><td class="vf">◻</td><td class="vf">◻</td></tr>
+      </tbody>
+    </table>
+
+    <h2 class="scheda-h2">✏️ Esercizio 2 — Domande di comprensione</h2>
+
+    <div class="domanda-card">
+      <span class="num-q">1</span><strong>La scossa del 31 ottobre 2002 era di magnitudo 5.8, cioè moderata. Perché allora la scuola di San Giuliano è crollata? Indica i due problemi principali dell'edificio.</strong>
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <span class="num-q">2</span><strong>Cosa introdusse l'OPCM 3274 del 2003? Perché si può dire che è la "risposta" a San Giuliano?</strong>
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <span class="num-q">3</span><strong>Perché oggi le scuole si controllano? Spiega con parole tue cos'è la "verifica di vulnerabilità sismica" e perché le scuole hanno la priorità.</strong>
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <span class="num-q">4</span><strong>Domanda-guida per la discussione in classe: la tua scuola fa le prove di evacuazione? Conosci il punto di raccolta? Cosa potresti chiedere ai tuoi insegnanti o al Dirigente sulla sicurezza del vostro edificio?</strong>
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <span class="num-q">5</span><strong>Genzano di Roma è in zona sismica 2B. Cosa significa per le costruzioni nuove del nostro Comune, comprese le scuole?</strong>
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="soluzione-capovolta">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0 0 2mm;"><strong>Esercizio 1 — Vero o falso:</strong> a) <strong>Falso</strong> (il Molise non era classificato zona sismica) · b) <strong>Falso</strong> (magnitudo 5.8 è moderata: il problema era l'edificio) · c) <strong>Vero</strong> · d) <strong>Vero</strong> · e) <strong>Falso</strong> (altre scuole della zona ressero: crollò quella di San Giuliano).</p>
+      <p style="margin: 0;"><strong>Esercizio 2, domande con risposta univoca:</strong> <strong>(1)</strong> muratura di pietrame poco resistente + sopraelevazione di un piano senza rinforzare la struttura sottostante. <strong>(2)</strong> la classificazione sismica di tutto il territorio italiano in 4 zone e l'obbligo di verifica sismica per scuole ed edifici strategici; è la "risposta" perché elimina le zone "non sismiche" come era considerato il Molise. <strong>(5)</strong> ogni nuova costruzione, comprese le scuole, deve rispettare gli standard antisismici previsti per la zona 2 (sismicità media).</p>
+    </div>
+
+    <div class="istruzioni-prof">
+      <strong>Per il/la prof · Note didattiche:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li><strong>Sensibilità</strong>: la tragedia riguarda bambini e una maestra. Evitare il sensazionalismo: il focus è la memoria e ciò che è cambiato dopo (approccio costruttivo). Verificare prima se in classe ci sono situazioni familiari sensibili.</li>
+        <li><strong>Domande 3-4</strong> (aperte): risposte attese — la verifica dice quanto un edificio resisterebbe a una scossa; le scuole hanno priorità perché ospitano la fascia più giovane della popolazione; la prova di evacuazione e il punto di raccolta sono parte del piano di emergenza scolastico.</li>
+        <li><strong>Estensione</strong>: versione per triennio superiore in <a href="/formazione/schede-stampabili/caso-san-giuliano-secondaria2/">Secondaria II</a>. Confronto con <a href="/formazione/schede-stampabili/caso-amatrice-secondaria/">Caso Amatrice</a> (stesso principio: il danno dipende dal costruito). Sul sito: articolo "San Giuliano di Puglia 2002" nella sezione Comunicazioni e pagina <a href="/rischi-prevenzione/rischio-sismico/">Rischio sismico</a>.</li>
+        <li><strong>Riferimenti curricolari</strong>: Indicazioni Nazionali 2012 — Scienze, Storia, Geografia, Cittadinanza. Legge 92/2019. D.M. 183/2024 — Costituzione (diritto alla scuola sicura).</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Caso San Giuliano di Puglia 2002" · Secondaria I · scienze/storia/ed. civica · rev. 2026-08</span>
+    </footer>
+  </article>
+</section>
+
+<section id="scheda-caso-vermicino-secondaria" class="pacchetto-scheda" aria-label="Scheda: Caso Vermicino — 10-13 giugno 1981">
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Caso Vermicino — 10-13 giugno 1981</h1>
+        <div class="scheda-sottotitolo">La nascita della Protezione Civile moderna — Scheda fotocopiabile, Secondaria di primo grado (11-13 anni)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 11-13 anni</span>
+      <span><strong>Obiettivo:</strong> capire come da una tragedia è nato il sistema di soccorso coordinato che abbiamo oggi</span>
+      <span><strong>Discipline:</strong> storia, ed. civica, italiano</span>
+    </div>
+
+    <p class="scheda-intro">
+      La sera del <strong>10 giugno 1981</strong>, verso le 19:30, <strong>Alfredino Rampi</strong>, un bambino di sei anni, cade in un <strong>pozzo artesiano</strong> largo circa 30 centimetri e profondo circa 80 metri a <strong>Vermicino</strong>, una frazione di Frascati, nella campagna vicino ai Castelli Romani. Il pozzo era abusivo: nessun cartello, nessuna copertura. Per quasi tre giorni l'Italia intera segue i soccorsi in <strong>diretta televisiva</strong>. Nonostante gli sforzi di tantissime persone, Alfredino non si salva. Il Paese scopre, davanti alla TV, che <strong>non esiste un sistema nazionale di soccorso coordinato</strong>. Da quella tragedia parte la riforma che porterà alla <strong>Protezione Civile italiana moderna</strong>. Studiare Vermicino non significa rivivere il dolore: significa capire cosa l'Italia ha imparato e costruito dopo.
+    </p>
+
+    <h2 class="scheda-h2">🔍 Il problema: tanta volontà, nessun coordinamento</h2>
+    <div class="nozione-box">
+      <div class="titolo-n">Perché i soccorsi non funzionarono</div>
+      A Vermicino arrivarono in tanti: Vigili del Fuoco, Carabinieri, speleologi, volontari spontanei, semplici cittadini. Ma <strong>nessuno aveva il comando unico</strong> delle operazioni: ognuno agiva per conto proprio, le decisioni si accavallavano, gli strumenti non erano adatti (le trivelle non erano pensate per un salvataggio del genere). Si tentò di calare un tubo nel pozzo, di scavare un pozzo parallelo, ma i tentativi fallirono uno dopo l'altro. La lezione fu chiara: in emergenza <strong>la buona volontà non basta</strong>. Servono organizzazione, una catena di comando chiara e volontari <em>formati e inquadrati</em> in un sistema.
+      <div class="fonte">Fonti: DPC — storia della Protezione Civile; Centro Alfredo Rampi.</div>
+    </div>
+
+    <h2 class="scheda-h2">📖 Glossario operativo</h2>
+    <dl class="glossario-mini">
+      <dt>Pozzo artesiano</dt><dd>pozzo stretto e profondo scavato per prendere acqua dal sottosuolo. Quello di Vermicino era abusivo: non autorizzato, non segnalato, lasciato aperto.</dd>
+      <dt>Coordinamento</dt><dd>organizzare persone e mezzi sotto una guida unica, con ruoli chiari. È il cuore della Protezione Civile moderna.</dd>
+      <dt>Volontariato organizzato</dt><dd>volontari formati, assicurati e inquadrati in gruppi riconosciuti (come il nostro Gruppo Comunale). Il contrario del volontario "spontaneo" che agisce da solo.</dd>
+      <dt>Ministro per la PC</dt><dd>nel febbraio 1982 Giuseppe Zamberletti diventa Ministro per il coordinamento della Protezione Civile: per la prima volta un'autorità unica nazionale.</dd>
+      <dt>L. 225/1992</dt><dd>legge che istituisce il Servizio Nazionale della Protezione Civile: Stato, Regioni, Comuni e volontariato lavorano come un unico sistema.</dd>
+      <dt>D.Lgs. 1/2018</dt><dd>il Codice della Protezione Civile oggi in vigore: raccoglie e aggiorna tutte le regole del sistema.</dd>
+      <dt>CNSAS</dt><dd>Corpo Nazionale Soccorso Alpino e Speleologico: soccorritori specializzati in montagna, grotte e cavità. Oggi è una componente operativa del Servizio Nazionale.</dd>
+    </dl>
+
+    <h2 class="scheda-h2">📅 Cronologia</h2>
+
+    <div class="timeline-box">
+      <div class="data">10 giugno 1981 — ore 19:30 circa</div>
+      <div class="corpo">Alfredino Rampi, 6 anni, cade nel pozzo a Vermicino (Frascati). La sua voce arriva in superficie: i soccorritori gli parlano e cercano di raggiungerlo.</div>
+    </div>
+
+    <div class="timeline-box">
+      <div class="data">10-12 giugno 1981</div>
+      <div class="corpo">Si tenta di tutto: calare un tubo nel pozzo, scavare un pozzo parallelo, far scendere volontari magrissimi nella cavità. La diretta della Rai dura circa <strong>18 ore consecutive</strong>: al picco la seguono <strong>oltre 21 milioni di telespettatori</strong>. Sul posto arriva anche il Presidente della Repubblica <strong>Sandro Pertini</strong>.</div>
+    </div>
+
+    <div class="timeline-box">
+      <div class="data">13 giugno 1981</div>
+      <div class="corpo">Nella notte Alfredino muore nel pozzo. L'Italia intera è sotto shock: non solo per la tragedia, ma per il <strong>caos dei soccorsi</strong> visto in diretta.</div>
+    </div>
+
+    <div class="timeline-box">
+      <div class="data">1981-1982 — la svolta</div>
+      <div class="corpo">I genitori di Alfredino, <strong>Franca e Ferdinando Rampi</strong>, fondano il <strong>Centro Alfredo Rampi</strong>, che ancora oggi si occupa di educazione al rischio nelle scuole e di psicologia dell'emergenza. Nel <strong>febbraio 1982</strong> <strong>Giuseppe Zamberletti</strong> viene nominato <strong>Ministro per il coordinamento della Protezione Civile</strong>.</div>
+    </div>
+
+    <div class="timeline-box">
+      <div class="data">1992 — oggi</div>
+      <div class="corpo">La <strong>legge 225/1992</strong> istituisce il <strong>Servizio Nazionale della Protezione Civile</strong>. Oggi le regole sono nel <strong>Codice di Protezione Civile (D.Lgs. 1/2018)</strong>: comando unico, volontariato organizzato e formato, il Sindaco come autorità di protezione civile sul territorio comunale. Anche il nostro Gruppo Comunale di Genzano è figlio di questo sistema.</div>
+    </div>
+
+    <h2 class="scheda-h2">⚖️ Prima e dopo Vermicino</h2>
+    <div class="due-colonne">
+      <div class="colonna-box no">
+        <div class="titolo-c">❌ Prima (cosa non andava)</div>
+        <ul>
+          <li>Nessun sistema nazionale di soccorso coordinato.</li>
+          <li>Catena di comando improvvisata sul momento.</li>
+          <li>Volontari generosi ma non formati né organizzati.</li>
+          <li>Pozzi abusivi aperti e non segnalati nelle campagne.</li>
+        </ul>
+      </div>
+      <div class="colonna-box ok">
+        <div class="titolo-c">✅ Dopo (cosa è cambiato)</div>
+        <ul>
+          <li>1982: un Ministro per il coordinamento della PC (Zamberletti).</li>
+          <li>1992: la L. 225 istituisce il Servizio Nazionale della PC.</li>
+          <li>Volontariato organizzato: gruppi formati, assicurati, coordinati.</li>
+          <li>Soccorso speleologico specializzato (CNSAS) per pozzi e cavità.</li>
+          <li>Obbligo di chiudere e segnalare i pozzi.</li>
+          <li>Centro Alfredo Rampi: educazione al rischio nelle scuole.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="scheda-h2">✏️ Esercizio 1 — Collega causa e conseguenza</h2>
+    <p style="font-size: 0.85rem; margin: 0.2rem 0 0.3rem;">Scrivi nella colonna di destra la lettera della conseguenza giusta: <strong>A</strong> = nasce il volontariato organizzato e formato · <strong>B</strong> = obbligo di chiudere e segnalare i pozzi · <strong>C</strong> = nasce un'autorità unica nazionale di coordinamento · <strong>D</strong> = nasce il Centro Alfredo Rampi per l'educazione al rischio.</p>
+    <table class="collega-tab">
+      <thead>
+        <tr><th>Problema visto a Vermicino</th><th>Risposta</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1. Un pozzo abusivo, aperto e non segnalato, in mezzo alla campagna.</td><td class="freccia">____</td></tr>
+        <tr><td>2. Tanti soccorritori, ma nessuno con il comando delle operazioni.</td><td class="freccia">____</td></tr>
+        <tr><td>3. Volontari coraggiosi ma senza formazione né organizzazione.</td><td class="freccia">____</td></tr>
+        <tr><td>4. I bambini non sapevano riconoscere i pericoli intorno a loro.</td><td class="freccia">____</td></tr>
+      </tbody>
+    </table>
+
+    <h2 class="scheda-h2">✏️ Esercizio 2 — Domande di comprensione e riflessione</h2>
+
+    <div class="domanda-card">
+      <span class="num-q">1</span><strong>Dove e quando avvenne la tragedia di Vermicino? Perché possiamo dire che accadde "vicino a casa nostra"?</strong>
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <span class="num-q">2</span><strong>Cosa scoprì l'Italia guardando la diretta TV? Qual era il problema principale dei soccorsi?</strong>
+      <div class="righe"><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <span class="num-q">3</span><strong>Metti in ordine cronologico queste tre tappe e scrivi l'anno di ciascuna: legge istitutiva del Servizio Nazionale della PC · tragedia di Vermicino · nomina di Zamberletti a Ministro per il coordinamento della PC.</strong>
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <span class="num-q">4</span><strong>Qual è la differenza fra un volontario "spontaneo" e il volontariato organizzato di protezione civile? Perché il secondo è più utile in emergenza?</strong>
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="domanda-card">
+      <span class="num-q">5</span><strong>Riflessione: i genitori di Alfredino trasformarono il loro dolore in un progetto per insegnare ai bambini a riconoscere i pericoli. Secondo te, perché l'educazione al rischio nelle scuole è un modo per onorare la memoria di Alfredino? (4-6 righe)</strong>
+      <div class="righe"><span class="r"></span><span class="r"></span><span class="r"></span><span class="r"></span></div>
+    </div>
+
+    <div class="soluzione-capovolta">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0 0 2mm;"><strong>Esercizio 1:</strong> 1 → <strong>B</strong> · 2 → <strong>C</strong> · 3 → <strong>A</strong> · 4 → <strong>D</strong>.</p>
+      <p style="margin: 0;"><strong>Esercizio 2, domande con risposta univoca:</strong> <strong>(1)</strong> a Vermicino, frazione di Frascati, dal 10 al 13 giugno 1981; è campagna vicina ai Castelli Romani, quindi al nostro territorio. <strong>(2)</strong> che non esisteva un sistema nazionale di soccorso coordinato: tanti soccorritori, nessun comando unico. <strong>(3)</strong> tragedia di Vermicino (1981) → Zamberletti Ministro per il coordinamento della PC (1982) → legge 225 istitutiva del Servizio Nazionale (1992). <strong>(4)</strong> lo spontaneo agisce da solo, senza formazione né coordinamento; il volontariato organizzato è formato, assicurato e inserito in una catena di comando: in emergenza sa cosa fare e non intralcia i soccorsi.</p>
+    </div>
+
+    <div class="istruzioni-prof">
+      <strong>Per il/la prof · Note didattiche:</strong>
+      <ul style="margin:0.3rem 0 0 1rem; padding:0;">
+        <li><strong>Sensibilità</strong>: la vicenda riguarda la morte di un bambino dell'età dei fratelli minori degli alunni. Tono sobrio, niente dettagli morbosi: il centro della scheda è ciò che l'Italia ha costruito dopo (memoria che diventa impegno civico).</li>
+        <li><strong>Domanda 5</strong> (aperta): valorizzare le risposte che collegano memoria → prevenzione → educazione; il Centro Alfredo Rampi collabora ancora oggi con il Dipartimento della Protezione Civile e con le scuole.</li>
+        <li><strong>Estensione</strong>: versione per il triennio superiore in <a href="/formazione/schede-stampabili/caso-vermicino-secondaria2/">Secondaria II</a> (analisi sistemica, ruolo dei media, etica del soccorso). Sul sito: articolo "Vermicino 1981" nella sezione Comunicazioni e pagina <a href="/diventa-volontario/">Diventa volontario</a> per il tema del volontariato organizzato.</li>
+        <li><strong>Riferimenti curricolari</strong>: Indicazioni Nazionali 2012 — Storia, Cittadinanza. Legge 92/2019. D.M. 183/2024 — Costituzione (solidarietà, volontariato, art. 118).</li>
+      </ul>
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Caso Vermicino 1981" · Secondaria I · storia/ed. civica/italiano · rev. 2026-08</span>
     </footer>
   </article>
 </section>

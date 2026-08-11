@@ -57,7 +57,7 @@
     <dl style="display: grid; grid-template-columns: auto 1fr; gap: 0.25rem 0.7rem; margin: 0.35rem 0; font-size: 0.85rem; line-height: 1.45; padding: 0.55rem 0.85rem; background: #fff; border: 1.5px solid var(--scheda-bordo); border-radius: 6px;">
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Cell-broadcast</dt><dd style="margin: 0;">tecnologia di invio messaggi a tutti i terminali agganciati a una cella radio. Anonimo, geolocalizzato, indipendente da contratto.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">EU-Alert / WEA</dt><dd style="margin: 0;">EU-Alert europeo (Regolamento EECC 2018/1972) — Wireless Emergency Alert USA. Sistemi analoghi a IT-alert nei rispettivi paesi.</dd>
-      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Categorie IT-alert</dt><dd style="margin: 0;">6 scenari da Direttiva PCM 2023: maremoto, collasso diga, attività vulcanica Vesuvio, attività vulcanica Campi Flegrei, incidente nucleare/radiazioni, incidente chimico industriale (Seveso).</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Categorie IT-alert</dt><dd style="margin: 0;"><strong>Operativi</strong>: incidente nucleare o emergenza radiologica; incidente rilevante in stabilimento industriale; collasso di grande diga; attività vulcanica ai Campi Flegrei, al Vesuvio e all'isola di Vulcano. <strong>Ancora sperimentali</strong> (solo messaggi di test): maremoto generato da sisma; attività vulcanica dello Stromboli; precipitazioni intense. IT-alert <strong>non invia le allerte meteo</strong>: per pioggia, vento e temporali valgono i bollettini del sistema di allertamento.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Test regionali</dt><dd style="margin: 0;">2022-2023: prova in tutte le regioni con calendario pubblico. Cittadini avvisati prima. Permette di familiarizzare con il segnale e identificare bug.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Approfondimento ufficiale</dt><dd style="margin: 0;">sito DPC <em>it-alert.it</em>: spiega categorie, suono distintivo, immagini standard, come reagire. Pagina ufficiale anche multilingua.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Suono distintivo</dt><dd style="margin: 0;">sequenza acustica unica IT-alert (8 toni discendenti + scampanio). Designed da DPC per essere riconoscibile anche con vibrazione attiva.</dd>
@@ -96,14 +96,14 @@
 
     <h2 class="scheda-h2">📱 Come è fatto un messaggio IT-alert</h2>
     <p style="font-size: 0.92rem; margin: 0 0 0.4rem 0;">
-      Esempio realistico (suono distintivo + vibrazione del telefono che bypassano la modalità silenziosa):
+      Esempio costruito su uno degli scenari <strong>operativi</strong> del sistema, l'incidente rilevante in stabilimento industriale (suono distintivo + vibrazione del telefono che bypassano la modalità silenziosa). Il messaggio è <strong>simulato a fini didattici</strong>: non si riferisce a un evento reale.
     </p>
-    <div style="background: #fff3cd; border: 2px solid #d4a72c; border-radius: 10px; padding: 0.85rem 1rem; margin: 0.4rem 0 1rem 0; font-family: monospace; font-size: 0.9rem; line-height: 1.55; white-space: pre-wrap; color: #664d03;"><strong>IT-alert — Avviso pubblico</strong>
-Tipo evento: rischio idrogeologico
-Area: Comune di Genzano di Roma e dintorni
-Validità: oggi, dalle 18:00 alle 24:00
-Azione: NON percorrere sottopassaggi e zone a ridosso dei fossi.
-Rifugiarsi ai piani alti se l'acqua entra in casa.
+    <div style="background: #fff3cd; border: 2px solid #d4a72c; border-radius: 10px; padding: 0.85rem 1rem; margin: 0.4rem 0 1rem 0; font-family: monospace; font-size: 0.9rem; line-height: 1.55; white-space: pre-wrap; color: #664d03;"><strong>IT-alert — Avviso pubblico (messaggio simulato)</strong>
+Tipo evento: incidente rilevante in stabilimento industriale
+Area: zona industriale e aree limitrofe
+Validità: evento in corso, dalle ore 18:00
+Azione: RESTA al chiuso. Chiudi porte e finestre.
+Spegni impianti di aerazione e condizionamento.
 Aggiornamenti: protezionecivile.gov.it
 e canali ufficiali del Comune.</div>
 
@@ -118,7 +118,7 @@ e canali ufficiali del Comune.</div>
       <tbody>
         <tr>
           <td><strong>Rischio</strong></td>
-          <td>Tipo di evento (idrogeologico, sismico, industriale...)</td>
+          <td>Tipo di evento (nucleare o radiologico, industriale, collasso di diga, attività vulcanica)</td>
           <td>Per capire come comportarti</td>
         </tr>
         <tr>
@@ -148,7 +148,8 @@ e canali ufficiali del Comune.</div>
     <ol class="scheda-elenco">
       <li><strong>Analizza il messaggio simulato</strong> qui sopra: evidenzia con 5 colori diversi rischio, area, tempo, azione, fonte.</li>
       <li><strong>Risposta in 140 caratteri.</strong> Scrivi il messaggio che invieresti alla famiglia: niente panico, solo le azioni concrete da fare nei prossimi 30 minuti.</li>
-      <li><strong>Collegamento al territorio.</strong> Scegli un rischio del nostro territorio (allagamento, vento forte, incendio boschivo) e progetta un breve IT-alert per quello scenario, rispettando i 5 elementi della tabella.</li>
+      <li><strong>Collegamento al territorio.</strong> Scegli un rischio del nostro territorio (allagamento, vento forte, incendio boschivo) e progetta l'<strong>avviso del Comune</strong> alla popolazione, rispettando i 5 elementi della tabella. Attenzione: per questi rischi <strong>non</strong> si usa IT-alert, che non invia allerte meteo.</li>
+      <li><strong>Confronto fra canali.</strong> Riscrivi lo stesso contenuto come messaggio IT-alert immaginando invece uno scenario <strong>operativo</strong> del sistema (per esempio un incidente rilevante in stabilimento industriale). Cosa cambia nel testo, nell'area e nel tempo? Perché i due canali non sono intercambiabili?</li>
     </ol>
 
     <h2 class="scheda-h2">📋 Mini verifica</h2>

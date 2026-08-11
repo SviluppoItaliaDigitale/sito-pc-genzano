@@ -50,7 +50,7 @@ Durante la transizione stagionale:
 
 - **monitorare** i bollettini meteo della Regione e ARPA Lazio;
 - **preparare** l'autunno con manutenzione di grondaie e fossi;
-- **tenere aggiornata** l'app IT-Alert e le impostazioni del cellulare per ricevere notifiche;
+- **verificare** che il cellulare riceva le notifiche di emergenza: IT-alert, il sistema nazionale di allarme pubblico, non richiede alcuna app, ma non riguarda le allerte meteo;
 - **liberare** terrazzi e balconi da vasi o mobili leggeri in caso di vento forte annunciato;
 - **evitare** di trovarsi in aree boschive durante temporali annunciati (rischio fulmini).
 

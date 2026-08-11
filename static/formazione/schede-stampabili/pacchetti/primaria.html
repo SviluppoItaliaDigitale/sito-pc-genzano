@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pacchetto stampa: Scuola Primaria (6-11 anni) — 44 schede A4</title>
-  <meta name="description" content="Stampa in un click tutte le 44 schede stampabili della Scuola Primaria (6-11 anni). Pacchetto auto-aggiornato dal sito istituzionale.">
+  <title>Pacchetto stampa: Scuola Primaria (6-11 anni) — 51 schede A4</title>
+  <meta name="description" content="Stampa in un click tutte le 51 schede stampabili della Scuola Primaria (6-11 anni). Pacchetto auto-aggiornato dal sito istituzionale.">
   <meta name="robots" content="noindex,follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
@@ -458,6 +458,238 @@
 
 /* === stili scheda 5 === */
 
+    /* Griglia CAA: 12 celle indicabili, bordo blu istituzionale */
+    .caa-griglia {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.55rem;
+      margin: 0.6rem 0 0.8rem 0;
+    }
+    .caa-cella {
+      border: 2px solid #003366;
+      border-radius: 8px;
+      background: #fff;
+      padding: 0.45rem 0.3rem 0.35rem 0.3rem;
+      text-align: center;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .caa-cella img {
+      display: block;
+      width: 100%;
+      max-width: 82px;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      margin: 0 auto 0.25rem auto;
+    }
+    .caa-cella .caa-parola {
+      display: block;
+      font-weight: 700;
+      color: #003366;
+      font-size: 0.95rem;
+      line-height: 1.2;
+    }
+    .caa-attribuzione {
+      font-size: 0.72rem;
+      color: #495057;
+      line-height: 1.45;
+      border-top: 1px solid #dee2e6;
+      padding-top: 0.35rem;
+      margin-top: 0.5rem;
+    }
+    @media (max-width: 600px) {
+      .caa-griglia { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media print {
+      .scheda-page { page-break-after: always; break-after: page; }
+      .scheda-page:last-of-type { page-break-after: auto; break-after: auto; }
+    }
+  
+
+/* === stili scheda 6 === */
+
+    /* Finto schermo di telefono con il messaggio IT-alert */
+    .italert-telefono {
+      max-width: 330px;
+      margin: 0.6rem auto;
+      border: 3px solid #212529;
+      border-radius: 18px;
+      background: #fff;
+      padding: 0.7rem 0.9rem;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .italert-telefono .itl-banda {
+      background: #003366;
+      color: #fff;
+      border-radius: 8px;
+      padding: 0.35rem 0.6rem;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-align: center;
+      letter-spacing: 0.04em;
+    }
+    .italert-telefono .itl-testo {
+      font-size: 0.85rem;
+      line-height: 1.5;
+      margin: 0.5rem 0 0.2rem 0;
+      color: #212529;
+    }
+  
+
+/* === stili scheda 7 === */
+
+    /* I tre segnali del maremoto */
+    .mare-segnali {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.6rem;
+      margin: 0.5rem 0 0.8rem 0;
+    }
+    .mare-segnale {
+      border: 2px solid #0369a1;
+      border-radius: 10px;
+      background: #eaf5fb;
+      padding: 0.6rem 0.7rem;
+      text-align: center;
+      font-size: 0.88rem;
+      line-height: 1.4;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .mare-segnale strong {
+      display: block;
+      color: #075985;
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+    .mare-segnale .mare-emoji {
+      display: block;
+      font-size: 1.6rem;
+      margin-bottom: 0.2rem;
+    }
+    @media (max-width: 600px) { .mare-segnali { grid-template-columns: 1fr; } }
+  
+
+/* === stili scheda 8 === */
+
+    /* Le 3 tappe del viaggio */
+    .bus-tappe {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.6rem;
+      margin: 0.5rem 0 0.8rem 0;
+    }
+    .bus-tappa {
+      border: 2px solid #003366;
+      border-radius: 10px;
+      background: #f0f4f8;
+      padding: 0.6rem 0.75rem;
+      font-size: 0.86rem;
+      line-height: 1.45;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+    .bus-tappa strong {
+      display: block;
+      color: #003366;
+      font-size: 0.98rem;
+      margin-bottom: 0.3rem;
+      text-align: center;
+    }
+    .bus-tappa ul { margin: 0; padding-left: 1.1rem; }
+    .bus-tappa li { margin: 0.15rem 0; }
+    @media (max-width: 600px) { .bus-tappe { grid-template-columns: 1fr; } }
+  
+
+/* === stili scheda 9 === */
+
+    .blp-vf {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      margin: 0.4rem 0 0.8rem 0;
+    }
+    .blp-vf td {
+      border: 1.5px solid var(--scheda-bordo);
+      padding: 0.45rem 0.6rem;
+      vertical-align: middle;
+    }
+    .blp-vf .blp-vf-cella {
+      width: 3.2rem;
+      text-align: center;
+      font-weight: 700;
+      color: var(--scheda-blu);
+    }
+    .blp-completa {
+      font-size: 0.95rem;
+      line-height: 2.1;
+      margin: 0.3rem 0 0.8rem 0;
+      padding-left: 1.4rem;
+    }
+    .blp-completa .blp-spazio {
+      display: inline-block;
+      min-width: 7rem;
+      border-bottom: 1.5px solid var(--scheda-bordo);
+      vertical-align: bottom;
+    }
+    .blp-kit {
+      columns: 2;
+      column-gap: 1.5rem;
+      font-size: 0.92rem;
+      line-height: 1.7;
+      margin: 0.3rem 0 0.8rem 0;
+      padding-left: 1.4rem;
+      list-style: none;
+    }
+    .blp-kit li::before { content: "☐ "; color: var(--scheda-blu); font-size: 1.05rem; }
+    @media (max-width: 600px) { .blp-kit { columns: 1; } }
+  
+
+/* === stili scheda 10 === */
+
+    .vfp-vf {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      margin: 0.4rem 0 0.8rem 0;
+    }
+    .vfp-vf td {
+      border: 1.5px solid var(--scheda-bordo);
+      padding: 0.45rem 0.6rem;
+      vertical-align: middle;
+    }
+    .vfp-vf .vfp-vf-cella {
+      width: 3.2rem;
+      text-align: center;
+      font-weight: 700;
+      color: var(--scheda-blu);
+    }
+  
+
+/* === stili scheda 11 === */
+
+    .tip-vf {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      margin: 0.4rem 0 0.8rem 0;
+    }
+    .tip-vf td {
+      border: 1.5px solid var(--scheda-bordo);
+      padding: 0.45rem 0.6rem;
+      vertical-align: middle;
+    }
+    .tip-vf .tip-vf-cella {
+      width: 3.2rem;
+      text-align: center;
+      font-weight: 700;
+      color: var(--scheda-blu);
+    }
+  
+
+/* === stili scheda 12 === */
+
     .sezione-titolo {
       display: flex;
       align-items: baseline;
@@ -630,7 +862,7 @@
     .istruzioni-maestra strong { color: #664d03; }
   
 
-/* === stili scheda 6 === */
+/* === stili scheda 13 === */
 
     .sezione-titolo {
       display: flex;
@@ -770,7 +1002,7 @@
     .istruzioni-maestra li { margin: 0.15rem 0; }
   
 
-/* === stili scheda 7 === */
+/* === stili scheda 14 === */
 
     .frase-blocco {
       margin: 0.5rem 0 0.85rem 0;
@@ -850,7 +1082,7 @@
     .istruzioni-maestra strong { color: #664d03; }
   
 
-/* === stili scheda 8 === */
+/* === stili scheda 15 === */
 
     .rs-blocco {
       display: flex;
@@ -885,7 +1117,7 @@
     }
   
 
-/* === stili scheda 9 === */
+/* === stili scheda 16 === */
 
     .sezione-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 1rem 0 0.5rem 0; }
     .sezione-titolo .num {
@@ -918,7 +1150,7 @@
     .mm-cella .vuoto { display: inline-block; min-width: 1.6rem; border-bottom: 2px solid var(--scheda-bordo); height: 1.6rem; }
   
 
-/* === stili scheda 10 === */
+/* === stili scheda 17 === */
 
     .di-griglia {
       display: grid;
@@ -946,7 +1178,7 @@
     .di-iniziale b { color: var(--scheda-blu); font-size: 0.95rem; }
   
 
-/* === stili scheda 11 === */
+/* === stili scheda 18 === */
 
     .pf-item { margin: 0.7rem 0; }
     .pf-emo-titolo { display: flex; align-items: center; gap: 0.5rem; font-weight: 700; color: var(--scheda-blu); font-size: 0.95rem; margin-bottom: 0.3rem; }
@@ -962,7 +1194,7 @@
     .pf-libera .pf-riga { margin-top: 0.5rem; }
   
 
-/* === stili scheda 12 === */
+/* === stili scheda 19 === */
 
     .cs-blocco { padding: 0.5rem 0.7rem; border: 1.5px solid var(--scheda-bordo); border-radius: 8px; margin: 0.55rem 0; }
     .cs-modello { display: flex; align-items: center; gap: 0.7rem; }
@@ -981,7 +1213,7 @@
     }
   
 
-/* === stili scheda 13 === */
+/* === stili scheda 20 === */
 
     .cf-blocco { padding: 0.5rem 0.7rem; border: 1.5px solid var(--scheda-bordo); border-radius: 8px; margin: 0.6rem 0; }
     .cf-modello { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.2rem; }
@@ -999,7 +1231,7 @@
     }
   
 
-/* === stili scheda 14 === */
+/* === stili scheda 21 === */
 
     .dt-item { display: flex; align-items: flex-start; gap: 0.7rem; margin: 0.7rem 0; }
     .dt-num {
@@ -1022,7 +1254,7 @@
     .dt-aiuto strong { color: #664d03; }
   
 
-/* === stili scheda 15 === */
+/* === stili scheda 22 === */
 
     .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
     .sez-titolo .num {
@@ -1094,7 +1326,7 @@
     }
   
 
-/* === stili scheda 16 === */
+/* === stili scheda 23 === */
 
     .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
     .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
@@ -1146,7 +1378,7 @@
     .istruzioni-maestra strong { color: #664d03; }
   
 
-/* === stili scheda 17 === */
+/* === stili scheda 24 === */
 
     .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
     .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
@@ -1220,7 +1452,7 @@
     }
   
 
-/* === stili scheda 18 === */
+/* === stili scheda 25 === */
 
     .mappa-svg {
       width: 100%; max-width: 600px;
@@ -1266,7 +1498,7 @@
     }
   
 
-/* === stili scheda 19 === */
+/* === stili scheda 26 === */
 
     .racconto-box {
       background: #f4f7fb; border-left: 4px solid var(--scheda-blu);
@@ -1319,7 +1551,7 @@
     }
   
 
-/* === stili scheda 20 === */
+/* === stili scheda 27 === */
 
     .frasi-griglia { display: grid; gap: 0.45rem; margin: 0.5rem 0; }
     .frase-card {
@@ -1369,7 +1601,7 @@
     }
   
 
-/* === stili scheda 21 === */
+/* === stili scheda 28 === */
 
     .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
     .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
@@ -1433,7 +1665,7 @@
     .istruzioni-maestra strong { color: #664d03; }
   
 
-/* === stili scheda 22 === */
+/* === stili scheda 29 === */
 
     .problema-card {
       padding: 0.7rem 0.85rem; background: #fff;
@@ -1488,7 +1720,7 @@
     }
   
 
-/* === stili scheda 23 === */
+/* === stili scheda 30 === */
 
     .mappa-italia { width: 100%; max-width: 360px; height: auto; margin: 0.4rem auto; display: block; }
     .legenda-zone {
@@ -1546,7 +1778,7 @@
     }
   
 
-/* === stili scheda 24 === */
+/* === stili scheda 31 === */
 
     .articolo-card {
       padding: 0.7rem 0.85rem; background: #fff;
@@ -1609,7 +1841,7 @@
     }
   
 
-/* === stili scheda 25 === */
+/* === stili scheda 32 === */
 
     .testo-box {
       background: #f4f7fb; border-left: 4px solid var(--scheda-blu);
@@ -1653,7 +1885,7 @@
     }
   
 
-/* === stili scheda 26 === */
+/* === stili scheda 33 === */
 
     .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
     .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
@@ -1723,7 +1955,7 @@
     .suggerimenti-box li { margin: 0.15rem 0; line-height: 1.4; }
   
 
-/* === stili scheda 27 === */
+/* === stili scheda 34 === */
 
     .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
     .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
@@ -1839,7 +2071,7 @@
     }
   
 
-/* === stili scheda 28 === */
+/* === stili scheda 35 === */
 
     .dialogo-box {
       background: #f4f7fb; border-left: 4px solid var(--scheda-blu);
@@ -1873,7 +2105,7 @@
     }
   
 
-/* === stili scheda 29 === */
+/* === stili scheda 36 === */
 
     .quattro-colori { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; margin: 0.5rem 0; }
     .col-card {
@@ -1908,7 +2140,7 @@
     @media (max-width: 580px) { .quattro-colori { grid-template-columns: 1fr; } }
   
 
-/* === stili scheda 30 === */
+/* === stili scheda 37 === */
 
     .scuola-mappa {
       border: 2.5px solid var(--scheda-blu); border-radius: 8px;
@@ -1937,7 +2169,7 @@
     .pf-checkbox { display: inline-block; width: 1.1rem; height: 1.1rem; border: 2px solid var(--scheda-bordo); border-radius: 3px; vertical-align: middle; margin-right: 0.35rem; }
   
 
-/* === stili scheda 31 === */
+/* === stili scheda 38 === */
 
     .timeline-box { background: #f4f7fb; border-left: 4px solid var(--scheda-blu); padding: 0.7rem 0.9rem; border-radius: 0 8px 8px 0; margin: 0.5rem 0; }
     .timeline-box .data { font-weight: 700; color: var(--scheda-blu); font-size: 0.95rem; margin-bottom: 0.3rem; }
@@ -1949,7 +2181,7 @@
     .istruzioni-maestra { margin-top: 0.8rem; padding: 0.55rem 0.85rem; background: #fff8e6; border-left: 4px solid var(--scheda-oro); border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45; }
   
 
-/* === stili scheda 32 === */
+/* === stili scheda 39 === */
 
     .timeline-box { background: #f4f7fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.35rem 0; }
     .timeline-box .data { font-weight: 700; color: var(--scheda-blu); font-size: 0.9rem; margin-bottom: 0.2rem; }
@@ -1972,7 +2204,7 @@
     .scheda-h2 { font-size: 1.02rem; margin: 0.7rem 0 0.3rem; }
   
 
-/* === stili scheda 33 === */
+/* === stili scheda 40 === */
 
     .timeline-box { background: #f4f7fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.35rem 0; }
     .timeline-box .data { font-weight: 700; color: var(--scheda-blu); font-size: 0.9rem; margin-bottom: 0.2rem; }
@@ -1994,7 +2226,7 @@
     .scheda-h2 { font-size: 1.02rem; margin: 0.7rem 0 0.3rem; }
   
 
-/* === stili scheda 34 === */
+/* === stili scheda 41 === */
 
     .timeline-box { background: #f4f7fb; border-left: 4px solid var(--scheda-blu); padding: 0.7rem 0.9rem; border-radius: 0 8px 8px 0; margin: 0.5rem 0; }
     .timeline-box .data { font-weight: 700; color: var(--scheda-blu); font-size: 0.95rem; margin-bottom: 0.3rem; }
@@ -2014,17 +2246,17 @@
 
   <header class="pacchetto-toolbar no-print" role="banner">
     <a href="/formazione/schede-stampabili/" aria-label="Torna alla hub delle schede stampabili">← Torna alle schede</a>
-    <span class="pacchetto-titolo">Pacchetto stampa: Scuola Primaria · 44 schede A4</span>
-    <button type="button" onclick="window.print()" aria-label="Apri la finestra di stampa per tutte le 44 schede di Scuola Primaria">
-      🖨️ Stampa tutto (44 fogli A4)
+    <span class="pacchetto-titolo">Pacchetto stampa: Scuola Primaria · 51 schede A4</span>
+    <button type="button" onclick="window.print()" aria-label="Apri la finestra di stampa per tutte le 51 schede di Scuola Primaria">
+      🖨️ Stampa tutto (52 fogli A4)
     </button>
   </header>
 
   <section class="pacchetto-intro no-print" aria-labelledby="pacchetto-intro-h1">
     <h1 id="pacchetto-intro-h1">Pacchetto stampa — Scuola Primaria</h1>
     <p>
-      Questo pacchetto contiene <strong>44 schede stampabili</strong> della Scuola Primaria (6-11 anni),
-      per un totale di <strong>44 fogli A4</strong>.
+      Questo pacchetto contiene <strong>51 schede stampabili</strong> della Scuola Primaria (6-11 anni),
+      per un totale di <strong>52 fogli A4</strong>.
       Premi <strong>"Stampa tutto"</strong> in alto (oppure <kbd>Ctrl+P</kbd> su Windows/Linux, <kbd>Cmd+P</kbd> su Mac)
       per aprire la finestra di stampa. Per archiviare in digitale scegli <em>"Salva come PDF"</em> come stampante.
     </p>
@@ -2041,7 +2273,7 @@
   </section>
 
   <nav class="pacchetto-toc no-print" aria-label="Indice del pacchetto">
-    <h2>Indice — 44 schede in questo pacchetto</h2>
+    <h2>Indice — 51 schede in questo pacchetto</h2>
     <ol>
       <li><a href="#scheda-rubrica-valutativa-primaria">Rubrica valutativa Educazione Civica — Scuola Primaria</a></li>
       <li><a href="#scheda-triangolo-fuoco-primaria">Il triangolo del fuoco — esperimenti</a></li>
@@ -2049,6 +2281,13 @@
       <li><a href="#scheda-cruciverba-primaria">Cruciverba della Sicurezza</a></li>
       <li><a href="#scheda-piano-familiare-primaria">Piano di Emergenza Familiare</a></li>
       <li><a href="#scheda-ondate-calore-primaria">Ondate di calore</a></li>
+      <li><a href="#scheda-tabella-caa-emergenza-primaria">Comunicare con i simboli in emergenza (CAA)</a> <span class="toc-meta">· 2 fogli</span></li>
+      <li><a href="#scheda-it-alert-primaria">IT-alert: il messaggio che ti avvisa del pericolo</a></li>
+      <li><a href="#scheda-maremoto-comportamenti-primaria">Maremoto: cosa faccio se sono al mare</a></li>
+      <li><a href="#scheda-sicurezza-scuolabus-primaria">In sicurezza sullo scuolabus</a></li>
+      <li><a href="#scheda-blackout-primaria">Blackout: la casa senza corrente</a></li>
+      <li><a href="#scheda-vento-forte-primaria">Vento forte: cosa faccio</a></li>
+      <li><a href="#scheda-temporali-intensi-primaria">Temporali intensi: cosa faccio</a></li>
       <li><a href="#scheda-sillabe-protezione-civile-primaria">Sillabe della Protezione Civile</a></li>
       <li><a href="#scheda-completa-parola-primaria">Completa la parola</a></li>
       <li><a href="#scheda-copia-frase-primaria">Copia la frase — Le parole della sicurezza</a></li>
@@ -2429,15 +2668,19 @@
     </p>
 
     <div class="istruzioni-maestra">
-      <strong>Per la maestra/maestro · Soluzioni e note didattiche</strong>
+      <strong>Per la maestra/maestro · Note didattiche</strong>
       <ul style="margin:0.3rem 0 0 1rem; padding:0;">
-        <li><strong>Quiz V/F:</strong> 1) V · 2) F (dura solo pochi secondi, finché c'è ossigeno) · 3) F · 4) V · 5) F (basta toglierne <em>uno</em>) · 6) F (la corrente d'aria allontana i gas caldi e abbassa la temperatura attorno allo stoppino: in pratica togli il calore, non l'ossigeno) · 7) F (mai da soli) · 8) V.</li>
-        <li><strong>Domanda di ragionamento:</strong> chiudendo la porta la mamma <em>limita l'ossigeno</em> (elemento n. 2) che arriva al fuoco e <em>contiene il combustibile</em> (mobili e tende del salotto, elemento n. 1) lontano dalle fiamme. Risposta corretta accettata: ossigeno o combustibile o entrambi.</li>
         <li><strong>Discussione orale dopo gli esperimenti:</strong> chiedere ai bambini di pensare a casi quotidiani (camino spento con la cenere = togli ossigeno; barbecue spento con coperchio = togli ossigeno; legna messa al riparo dalla pioggia = proteggi il combustibile per quando serve).</li>
         <li><strong>Per i più curiosi (V classe):</strong> il modello moderno è il <em>tetraedro</em> del fuoco, che aggiunge un 4° elemento: la "reazione a catena" dei gas che bruciano. Si introduce solo se la classe ha già lavorato sul concetto di reazione chimica.</li>
         <li><strong>Collegamenti:</strong> scheda <a href="/formazione/schede-stampabili/triangolo-fuoco-infanzia/">triangolo-fuoco-infanzia</a> per la versione semplificata 4-6 anni; scheda <a href="/formazione/schede-stampabili/leggi-rispondi-pompiere-primaria/">leggi-rispondi-pompiere-primaria</a> per la comprensione del testo collegata; modulo 4 (incendio boschivo) del <a href="/formazione/kit-scuola-primaria/">kit Primaria</a> per il rischio reale del territorio.</li>
         <li><strong>Riferimento curricolare:</strong> Indicazioni Nazionali 2012 — Scienze Primaria classe IV-V (esplorare ed osservare, fenomeni della materia, sicurezza). L. 92/2019 art. 3 lett. h (formazione di base in materia di Protezione Civile).</li>
       </ul>
+    </div>
+
+    <div class="soluzione-capovolta" style="margin-top: 5mm;">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;"><strong>Quiz V/F</strong>: 1) V · 2) F (dura solo pochi secondi, finché c'è ossigeno) · 3) F · 4) V · 5) F (basta toglierne <em>uno</em>) · 6) F (la corrente d'aria allontana i gas caldi e abbassa la temperatura attorno allo stoppino: in pratica togli il calore, non l'ossigeno) · 7) F (mai da soli) · 8) V.<br>
+      <strong>Domanda di ragionamento</strong>: chiudendo la porta la mamma <em>limita l'ossigeno</em> (elemento n. 2) che arriva al fuoco e <em>contiene il combustibile</em> (mobili e tende del salotto, elemento n. 1) lontano dalle fiamme. Risposta corretta accettata: ossigeno o combustibile o entrambi.</p>
     </div>
 
     <footer class="scheda-footer">
@@ -2800,14 +3043,14 @@
           <li>Strumento per spegnere piccoli incendi: ____________.</li>
           <li>Sistema nazionale che invia messaggi al cellulare in emergenza: __ - ______ .</li>
         </ol>
-        <p style="margin-top: 0.5rem;"><em>Risposte: 112 · emergenza · estintore · IT-alert.</em></p>
       </div>
     </div>
 
-    <div style="margin-top: 0.8rem; padding: 0.6rem 0.8rem; background: #d1e7dd; border-radius: 8px; border-left: 4px solid var(--scheda-verde); font-size: 0.85rem;">
-      <strong style="color: var(--scheda-verde);">Soluzioni cruciverba</strong>:
-      1) ALLERTA · 2) A · 3) SISMA · 4) E · 5) SCALE · 6) RADAR · 7) EMERGENZA · 8) VOLONTARIO.
-      Lettere verticali in ordine: <strong>SICUREZZA</strong>.
+    <div class="soluzione-capovolta" style="margin-top: 6mm;">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;"><strong>Cruciverba</strong>: 1) ALLERTA · 2) A · 3) SISMA · 4) E · 5) SCALE · 6) RADAR · 7) EMERGENZA · 8) VOLONTARIO.
+      Lettere verticali in ordine: <strong>SICUREZZA</strong>.<br>
+      <strong>Domande di servizio</strong>: 112 · emergenza · estintore · IT-alert.</p>
     </div>
 
     <footer class="scheda-footer">
@@ -3045,8 +3288,9 @@
       </ul>
     </div>
 
-    <div class="scheda-soluzioni">
-      <strong>Soluzioni:</strong> 1B, 2A, 3B.
+    <div class="soluzione-capovolta">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;"><strong>Soluzioni:</strong> 1B, 2A, 3B.</p>
     </div>
 
     <h2 class="scheda-h2">🎯 Compito operativo</h2>
@@ -3082,7 +3326,973 @@
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
-      <span>Scheda "Ondate di calore" · Primaria 4-5 / Secondaria I grado · rev. 2026-04</span>
+      <span>Scheda "Ondate di calore" · Primaria 4-5 / Secondaria I grado · rev. 2026-08</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-tabella-caa-emergenza-primaria" class="pacchetto-scheda" aria-label="Scheda: Comunicare con i simboli in emergenza (CAA)">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Comunicare con i simboli in emergenza (CAA)</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria · Tabella da ritagliare e conservare</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 6-11 anni, famiglie</span>
+      <span><strong>Durata:</strong> 30 min</span>
+      <span><strong>Discipline:</strong> Educazione civica, Italiano, Inclusione</span>
+      <span><strong>Stampa:</strong> 2 fogli A4 (foglio 1 per l'alunno, foglio 2 per il docente)</span>
+    </div>
+
+    <div class="scheda-messaggio-chiave">
+      <strong>Messaggio chiave:</strong> in emergenza, a volte le parole non escono: per la paura,
+      perché non si conosce bene l'italiano, o perché parlare è difficile. Con questa tabella basta
+      <strong>indicare un simbolo con il dito</strong> per farsi capire.
+    </div>
+
+    <p class="scheda-intro">
+      Questa è una <strong>tabella di Comunicazione Aumentativa Alternativa (CAA)</strong>: una griglia di
+      simboli con la parola scritta sotto. Chi non riesce a parlare la usa così: <strong>indica il simbolo</strong>
+      di quello che vuole dire, e chi lo aiuta lo legge ad alta voce. Funziona anche al contrario: un adulto
+      può indicare i simboli per fare una domanda («Hai <em>fame</em>? Hai <em>freddo</em>?»).
+    </p>
+
+    <h2 class="scheda-h2">👉 La mia tabella: indico quello che voglio dire</h2>
+
+    <div class="caa-griglia">
+      <div class="caa-cella">
+        <img src="/pittogrammi/arasaac/aiuto.png" alt="Pittogramma: persona che chiede aiuto alzando la mano">
+        <span class="caa-parola">Aiuto</span>
+      </div>
+      <div class="caa-cella">
+        <img src="/pittogrammi/arasaac/si.png" alt="Pittogramma: segno per dire sì">
+        <span class="caa-parola">Sì</span>
+      </div>
+      <div class="caa-cella">
+        <img src="/pittogrammi/arasaac/no.png" alt="Pittogramma: segno per dire no">
+        <span class="caa-parola">No</span>
+      </div>
+      <div class="caa-cella">
+        <img src="/pittogrammi/arasaac/acqua.png" alt="Pittogramma: acqua">
+        <span class="caa-parola">Acqua</span>
+      </div>
+      <div class="caa-cella">
+        <img src="/pittogrammi/arasaac/cibo.png" alt="Pittogramma: cibo">
+        <span class="caa-parola">Cibo</span>
+      </div>
+      <div class="caa-cella">
+        <img src="/pittogrammi/arasaac/medicina.png" alt="Pittogramma: medicina">
+        <span class="caa-parola">Medicina</span>
+      </div>
+      <div class="caa-cella">
+        <img src="/pittogrammi/arasaac/famiglia.png" alt="Pittogramma: famiglia">
+        <span class="caa-parola">Famiglia</span>
+      </div>
+      <div class="caa-cella">
+        <img src="/pittogrammi/arasaac/casa.png" alt="Pittogramma: casa">
+        <span class="caa-parola">Casa</span>
+      </div>
+      <div class="caa-cella">
+        <img src="/pittogrammi/arasaac/caldo.png" alt="Pittogramma: persona accaldata, ho caldo">
+        <span class="caa-parola">Ho caldo</span>
+      </div>
+      <div class="caa-cella">
+        <img src="/pittogrammi/arasaac/coperta.png" alt="Pittogramma: coperta, per dire ho freddo">
+        <span class="caa-parola">Ho freddo</span>
+      </div>
+      <div class="caa-cella">
+        <img src="/pittogrammi/arasaac/telefono.png" alt="Pittogramma: telefono">
+        <span class="caa-parola">Telefono</span>
+      </div>
+      <div class="caa-cella">
+        <img src="/pittogrammi/arasaac/112.png" alt="Pittogramma: numero di emergenza 112">
+        <span class="caa-parola">Chiama il 112</span>
+      </div>
+    </div>
+
+    <ul class="scheda-elenco">
+      <li><strong>Indica</strong> il simbolo con il dito: non serve parlare.</li>
+      <li>Puoi indicare <strong>più simboli in fila</strong>: «Aiuto» + «Famiglia» = «aiutami a trovare la mia famiglia».</li>
+      <li>Chi ti aiuta può <strong>farti domande</strong> indicando i simboli: tu rispondi con «Sì» o «No».</li>
+    </ul>
+
+    <div class="caa-attribuzione">
+      <strong>Pittogrammi:</strong> ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao,
+      licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Comunicare con i simboli (CAA)" · Primaria · pagina 1 di 2 · rev. 01 · agosto 2026</span>
+    </footer>
+
+  </article>
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">CAA in emergenza — attività e guida per il docente</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria · pagina 2 di 2</div>
+      </div>
+    </header>
+
+    <h2 class="scheda-h2">🖍️ Attività 1 — Colora i simboli che useresti se…</h2>
+    <p style="font-size: 0.92rem; margin: 0 0 0.4rem 0;">
+      Torna alla tabella della pagina 1. Per ogni situazione, <strong>colora il bordo</strong> dei simboli
+      che indicheresti (puoi usare un colore diverso per ogni situazione).
+    </p>
+    <ol class="scheda-elenco">
+      <li>🟦 <strong>Blu:</strong> hai tanta sete dopo essere uscito da scuola per una prova di evacuazione.</li>
+      <li>🟩 <strong>Verde:</strong> sei al punto di raccolta ma non vedi la tua famiglia.</li>
+      <li>🟨 <strong>Giallo:</strong> un tuo compagno si sente male e serve un adulto subito.</li>
+      <li>🟥 <strong>Rosso:</strong> fa molto freddo e vorresti qualcosa per coprirti.</li>
+    </ol>
+
+    <h2 class="scheda-h2">✏️ Attività 2 — Abbina la frase al simbolo</h2>
+    <p style="font-size: 0.92rem; margin: 0 0 0.4rem 0;">
+      Scrivi accanto a ogni frase la parola del simbolo giusto della tabella.
+    </p>
+    <div class="scheda-cs-domanda">
+      <p>1. «Ho bisogno di bere.» → ______________________</p>
+      <p>2. «Voglio sapere dove sono i miei genitori.» → ______________________</p>
+      <p>3. «Serve un soccorso urgente: bisogna telefonare al numero di emergenza.» → ______________________</p>
+      <p>4. «Devo prendere la mia pastiglia di ogni giorno.» → ______________________</p>
+    </div>
+
+    <h2 class="scheda-h2">👩‍🏫 Per il docente — che cos'è la CAA e come usarla in classe</h2>
+    <ul class="scheda-elenco">
+      <li>La <strong>Comunicazione Aumentativa Alternativa (CAA)</strong> è un insieme di strumenti — qui una tabella
+        di pittogrammi — che <strong>affianca</strong> la parola, senza mai sostituire il testo o la voce. Aiuta alunni con
+        disabilità comunicative, bambini che non parlano ancora bene l'italiano e chiunque sia bloccato dallo stress.</li>
+      <li>In emergenza la CAA serve a <strong>tutti</strong>: la paura può togliere la parola anche a chi di solito parla benissimo.</li>
+      <li><strong>Come introdurla:</strong> mostrare la tabella, nominare ogni simbolo ad alta voce, poi giocare a
+        «comunica senza parlare» a coppie (uno indica, l'altro interpreta e verifica con «Sì/No»).</li>
+      <li><strong>Dove tenerla:</strong> una copia plastificata nella cassetta di emergenza della classe e una nel
+        diario o nello zaino, insieme al piano familiare.</li>
+      <li>Sul nostro sito trovi tabelle CAA più complete e stampabili: <a href="/tabelle-comunicazione/">Tabelle di comunicazione (CAA)</a>.</li>
+    </ul>
+
+    <div class="soluzione-capovolta">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;">
+        <strong>Attività 1</strong> (risposte attese): 1) Acqua · 2) Famiglia (+ Aiuto) · 3) Aiuto + Chiama il 112 · 4) Ho freddo.<br>
+        <strong>Attività 2:</strong> 1) Acqua · 2) Famiglia · 3) Chiama il 112 · 4) Medicina.
+      </p>
+    </div>
+
+    <div class="scheda-nota-locale">
+      <strong>Approfondimenti per Genzano:</strong>
+      <a href="/tabelle-comunicazione/">Tabelle di comunicazione CAA</a> ·
+      <a href="/facile-da-leggere/">Facile da leggere</a> ·
+      <a href="/attribuzioni-pittogrammi/">Attribuzioni pittogrammi</a> ·
+      <a href="/piano-familiare/">Piano Familiare</a>.
+    </div>
+
+    <h2 class="scheda-h2">📚 Fonti</h2>
+    <ul class="scheda-elenco" style="font-size: 0.85rem;">
+      <li>ARASAAC — Centro Aragonese per la Comunicazione Aumentativa Alternativa (arasaac.org).</li>
+      <li>Dipartimento della Protezione Civile — comunicazione accessibile in emergenza.</li>
+      <li>Sito Protezione Civile Genzano di Roma — sezione Tabelle di comunicazione (CAA).</li>
+    </ul>
+
+    <div class="caa-attribuzione">
+      <strong>Pittogrammi:</strong> ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao,
+      licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Comunicare con i simboli (CAA)" · Primaria · pagina 2 di 2 · rev. 01 · agosto 2026</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-it-alert-primaria" class="pacchetto-scheda" aria-label="Scheda: IT-alert: il messaggio che ti avvisa del pericolo">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">IT-alert: il messaggio che ti avvisa del pericolo</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria (classi 3ª-5ª)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 8-11 anni, famiglie</span>
+      <span><strong>Durata:</strong> 30 min</span>
+      <span><strong>Discipline:</strong> Educazione civica, Tecnologia</span>
+    </div>
+
+    <div class="scheda-messaggio-chiave">
+      <strong>Messaggio chiave:</strong> IT-alert è un suono forte e un messaggio che compare sul telefono
+      quando c'è una grave emergenza nella tua zona. Non è un gioco e non fa paura: serve ad
+      <strong>avvisarti in tempo</strong>. La cosa giusta da fare è <strong>leggere</strong> e ascoltare i grandi.
+    </div>
+
+    <p class="scheda-intro">
+      <strong>IT-alert</strong> è il sistema di <strong>allarme pubblico</strong> dello Stato italiano, gestito dal
+      Dipartimento della Protezione Civile. Quando in una zona sta succedendo (o sta per succedere) una
+      <strong>grave emergenza</strong>, tutti i telefoni accesi in quella zona ricevono lo stesso messaggio,
+      con un <strong>suono forte e diverso</strong> dalle notifiche normali. Arriva da solo: non serve
+      un'app, non serve registrarsi e non costa nulla.
+    </p>
+
+    <h2 class="scheda-h2">📱 Come lo riconosco</h2>
+
+    <div class="italert-telefono" role="img" aria-label="Disegno di uno schermo di telefono con un messaggio IT-alert di esempio">
+      <div class="itl-banda">🔊 IT-ALERT</div>
+      <p class="itl-testo">
+        Questo è un messaggio della Protezione Civile. Riguarda la zona in cui ti trovi.
+        Leggi con attenzione e segui le indicazioni delle autorità.
+      </p>
+    </div>
+
+    <ul class="scheda-elenco">
+      <li>Il suono è <strong>forte e insolito</strong>: non è la suoneria e non è una notifica normale.</li>
+      <li>Il messaggio compare <strong>sullo schermo</strong> e spiega cosa sta succedendo.</li>
+      <li>Arriva <strong>a tutti i telefoni della zona</strong> nello stesso momento: anche a quelli di mamma, papà e dei vicini.</li>
+    </ul>
+
+    <h2 class="scheda-h2">✅ Cosa faccio quando arriva</h2>
+    <div class="scheda-comportamenti">
+      <div class="scheda-card">
+        <h3>1. Resto calmo</h3>
+        <p>Il suono è forte apposta, per farsi notare. Respira: il messaggio serve a <strong>proteggerti</strong>.</p>
+      </div>
+      <div class="scheda-card">
+        <h3>2. Leggo il messaggio</h3>
+        <p>Leggilo <strong>fino in fondo</strong>, insieme a un adulto se puoi. Dice cosa succede e cosa fare.</p>
+      </div>
+      <div class="scheda-card">
+        <h3>3. Avviso i grandi</h3>
+        <p>Di' subito a un adulto vicino: «È arrivato un IT-alert». Poi <strong>seguite insieme le indicazioni</strong>.</p>
+      </div>
+      <div class="scheda-card">
+        <h3>4. Non richiamo</h3>
+        <p>Non serve rispondere al messaggio e <strong>non si chiama il 112 per curiosità</strong>: il 112 va chiamato solo se qualcuno è in pericolo.</p>
+      </div>
+    </div>
+
+    <h2 class="scheda-h2">🗓️ Quando viene usato</h2>
+    <ul class="scheda-elenco">
+      <li>Per <strong>gravi emergenze</strong> che riguardano la popolazione di una zona.</li>
+      <li>Per i <strong>test</strong>: ogni tanto la Protezione Civile prova il sistema. In quel caso il messaggio dice chiaramente che è <strong>solo un test</strong> e non devi fare nulla.</li>
+      <li>Non viene usato per le cose di tutti i giorni: se arriva, va sempre letto con attenzione.</li>
+    </ul>
+
+    <h2 class="scheda-h2">✏️ Esercizio 1 — Vero o falso?</h2>
+    <div class="scheda-cs-domanda">
+      <p>1. IT-alert arriva solo a chi ha scaricato un'app speciale. <strong>V / F</strong></p>
+      <p>2. Il suono di IT-alert è uguale a quello delle notifiche normali. <strong>V / F</strong></p>
+      <p>3. Quando arriva un IT-alert, la prima cosa da fare è leggere il messaggio. <strong>V / F</strong></p>
+      <p>4. Se arriva un IT-alert, chiamo subito il 112 per chiedere informazioni. <strong>V / F</strong></p>
+      <p>5. A volte IT-alert viene usato per fare un test, e il messaggio lo dice chiaramente. <strong>V / F</strong></p>
+    </div>
+
+    <h2 class="scheda-h2">✏️ Esercizio 2 — Riordina i passi</h2>
+    <p style="font-size: 0.92rem; margin: 0 0 0.4rem 0;">
+      Scrivi i numeri da 1 a 4 nell'ordine giusto delle azioni da fare quando arriva un IT-alert.
+    </p>
+    <div class="scheda-cs-domanda">
+      <p>___ Avviso un adulto vicino a me.</p>
+      <p>___ Sento un suono forte e diverso dal solito.</p>
+      <p>___ Seguiamo insieme le indicazioni del messaggio.</p>
+      <p>___ Leggo il messaggio fino in fondo.</p>
+    </div>
+
+    <div class="soluzione-capovolta">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;">
+        <strong>Esercizio 1:</strong> 1 F (arriva a tutti i telefoni, senza app) · 2 F (è un suono forte e insolito) ·
+        3 V · 4 F (il 112 si chiama solo se qualcuno è in pericolo) · 5 V.<br>
+        <strong>Esercizio 2</strong> (ordine): sento il suono (1) → leggo il messaggio (2) → avviso un adulto (3) → seguiamo le indicazioni (4).
+      </p>
+    </div>
+
+    <div class="scheda-nota-locale">
+      <strong>Approfondimenti per Genzano:</strong>
+      <a href="/allerte-meteo/">Allerte Meteo</a> ·
+      <a href="/cosa-fare-adesso/">Cosa fare adesso</a> ·
+      <a href="/numeri-utili/">Numeri Utili</a> ·
+      <a href="/piano-familiare/">Piano Familiare</a>.
+    </div>
+
+    <h2 class="scheda-h2">📚 Fonti</h2>
+    <ul class="scheda-elenco" style="font-size: 0.85rem;">
+      <li>IT-alert — sito ufficiale del sistema di allarme pubblico (it-alert.it).</li>
+      <li>Dipartimento della Protezione Civile (protezionecivile.gov.it).</li>
+    </ul>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "IT-alert" · Primaria 3ª-5ª · rev. 01 · agosto 2026</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-maremoto-comportamenti-primaria" class="pacchetto-scheda" aria-label="Scheda: Maremoto: cosa faccio se sono al mare">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Maremoto: cosa faccio se sono al mare</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria (classi 3ª-5ª)</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 8-11 anni, famiglie</span>
+      <span><strong>Durata:</strong> 40 min</span>
+      <span><strong>Discipline:</strong> Scienze, Geografia, Educazione civica</span>
+    </div>
+
+    <div class="scheda-messaggio-chiave">
+      <strong>Messaggio chiave:</strong> se sei in spiaggia e senti un forte terremoto, o vedi il mare
+      ritirarsi in modo strano, non aspettare nessun avviso: <strong>allontanati subito dalla costa</strong>
+      e raggiungi <strong>a piedi</strong> un posto in alto.
+    </div>
+
+    <p class="scheda-intro">
+      Il <strong>maremoto</strong> (chiamato anche <em>tsunami</em>) è una serie di onde del mare molto veloci,
+      provocate quasi sempre da un forte terremoto sotto il mare o vicino alla costa. Anche in Italia può
+      succedere: per questo la Protezione Civile, con la campagna «<strong>Io non rischio</strong>», insegna a
+      riconoscere i segnali e a mettersi in salvo. Genzano non è sul mare, ma al mare ci andiamo tutti:
+      in vacanza queste regole possono servire davvero.
+    </p>
+
+    <h2 class="scheda-h2">👀 I tre segnali che la natura ti manda</h2>
+    <div class="mare-segnali">
+      <div class="mare-segnale">
+        <span class="mare-emoji" aria-hidden="true">🌍</span>
+        <strong>Forte terremoto</strong>
+        Senti una scossa forte o lunga mentre sei vicino alla costa.
+      </div>
+      <div class="mare-segnale">
+        <span class="mare-emoji" aria-hidden="true">🌊</span>
+        <strong>Il mare si ritira</strong>
+        L'acqua si abbassa in modo insolito e rapido, scoprendo la spiaggia.
+      </div>
+      <div class="mare-segnale">
+        <span class="mare-emoji" aria-hidden="true">👂</span>
+        <strong>Rumore che cresce</strong>
+        Arriva dal mare un rumore forte e strano, come un treno che si avvicina.
+      </div>
+    </div>
+    <p style="font-size: 0.92rem; margin: 0 0 0.5rem 0;">
+      Basta <strong>uno solo</strong> di questi segnali: non aspettare gli altri e non aspettare un avviso.
+    </p>
+
+    <h2 class="scheda-h2">✅ Cosa faccio</h2>
+    <div class="scheda-comportamenti">
+      <div class="scheda-card">
+        <h3>Mi allontano dalla costa</h3>
+        <p>Lascia subito la spiaggia e le zone vicino all'acqua. Avvisa chi ti sta accanto, senza gridare nel panico.</p>
+      </div>
+      <div class="scheda-card">
+        <h3>Salgo in alto, a piedi</h3>
+        <p>Raggiungi <strong>a piedi</strong> il punto alto più vicino: una salita, una collina, i piani alti di un edificio solido.</p>
+      </div>
+      <div class="scheda-card">
+        <h3>Non vado a guardare</h3>
+        <p>Non avvicinarti mai al mare per vedere l'onda: è <strong>molto più veloce</strong> di te.</p>
+      </div>
+      <div class="scheda-card">
+        <h3>Resto in alto e ascolto</h3>
+        <p>Dopo la prima onda <strong>possono arrivarne altre</strong>, anche più grandi. Torna verso il mare solo quando le autorità dicono che il pericolo è finito.</p>
+      </div>
+    </div>
+
+    <h2 class="scheda-h2">📞 I numeri da ricordare</h2>
+    <ul class="scheda-elenco">
+      <li><strong>112</strong> — Numero Unico di Emergenza: se qualcuno è in pericolo, lo chiama un adulto (o tu, se sei solo).</li>
+      <li><strong>1530</strong> — Guardia Costiera: per le emergenze in mare (una barca in difficoltà, una persona in acqua).</li>
+    </ul>
+
+    <h2 class="scheda-h2">✏️ Esercizio 1 — Vero o falso?</h2>
+    <div class="scheda-cs-domanda">
+      <p>1. Se il mare si ritira all'improvviso, vado a raccogliere le conchiglie sulla sabbia scoperta. <strong>V / F</strong></p>
+      <p>2. Per mettermi in salvo devo raggiungere un punto alto, a piedi. <strong>V / F</strong></p>
+      <p>3. Dopo la prima onda il pericolo è sicuramente finito. <strong>V / F</strong></p>
+      <p>4. Un forte terremoto vicino alla costa può essere il segnale di un maremoto in arrivo. <strong>V / F</strong></p>
+    </div>
+
+    <h2 class="scheda-h2">✏️ Esercizio 2 — Scegli la risposta giusta</h2>
+    <div class="scheda-quiz">
+      <h3>Sei in spiaggia e senti una scossa di terremoto forte e lunga. Cosa fai?</h3>
+      <ul>
+        <li>A) Resto sotto l'ombrellone e aspetto notizie</li>
+        <li>B) Mi allontano subito dalla costa e salgo in un punto alto, a piedi</li>
+        <li>C) Corro verso il mare per vedere se arriva l'onda</li>
+      </ul>
+    </div>
+    <div class="scheda-quiz">
+      <h3>Chi si chiama per un'emergenza in mare?</h3>
+      <ul>
+        <li>A) La Guardia Costiera al 1530 (o il 112)</li>
+        <li>B) Un amico</li>
+        <li>C) Nessuno, si aspetta</li>
+      </ul>
+    </div>
+
+    <div class="soluzione-capovolta">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;">
+        <strong>Esercizio 1:</strong> 1 F (il mare che si ritira è un segnale di pericolo: allontanati) ·
+        2 V · 3 F (possono arrivare altre onde, anche più grandi) · 4 V.<br>
+        <strong>Esercizio 2:</strong> 1 B · 2 A.
+      </p>
+    </div>
+
+    <div class="scheda-nota-locale">
+      <strong>Approfondimenti sul nostro sito:</strong>
+      <a href="/rischi-prevenzione/">Rischi e Prevenzione</a> ·
+      <a href="/rischi-prevenzione/rischio-sismico/">Rischio sismico</a> ·
+      <a href="/numeri-utili/">Numeri Utili</a> ·
+      <a href="/piano-familiare/">Piano Familiare</a>.
+    </div>
+
+    <h2 class="scheda-h2">📚 Fonti</h2>
+    <ul class="scheda-elenco" style="font-size: 0.85rem;">
+      <li>Dipartimento della Protezione Civile — campagna «Io non rischio» maremoto (iononrischio.protezionecivile.it).</li>
+      <li>INGV — Istituto Nazionale di Geofisica e Vulcanologia (ingv.it).</li>
+    </ul>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Maremoto" · Primaria 3ª-5ª · rev. 01 · agosto 2026</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-sicurezza-scuolabus-primaria" class="pacchetto-scheda" aria-label="Scheda: In sicurezza sullo scuolabus">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">In sicurezza sullo scuolabus</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 6-11 anni, famiglie</span>
+      <span><strong>Durata:</strong> 30 min</span>
+      <span><strong>Discipline:</strong> Educazione civica, Educazione stradale</span>
+    </div>
+
+    <div class="scheda-messaggio-chiave">
+      <strong>Messaggio chiave:</strong> sullo scuolabus la regola più importante è una sola:
+      <strong>resta seduto, mantieni la calma e ascolta l'autista</strong>. È l'adulto responsabile
+      a bordo e sa cosa fare, anche in emergenza.
+    </div>
+
+    <p class="scheda-intro">
+      Lo scuolabus porta ogni giorno tanti bambini a scuola e a casa, e quasi sempre il viaggio è
+      tranquillo. Le buone abitudini di ogni giorno, però, rendono più sicuro anche qualsiasi
+      imprevisto: un temporale forte, una frenata improvvisa, una strada bloccata. Ecco le regole
+      per ogni momento del viaggio.
+    </p>
+
+    <h2 class="scheda-h2">🚌 Le regole del viaggio, tappa per tappa</h2>
+    <div class="bus-tappe">
+      <div class="bus-tappa">
+        <strong>🚏 Alla fermata</strong>
+        <ul>
+          <li>Arriva con calma e aspetta <strong>fermo</strong>, lontano dal bordo della strada.</li>
+          <li>Avvicinati solo quando il bus è <strong>fermo</strong> con le porte aperte.</li>
+          <li>Sali <strong>uno alla volta</strong>, senza spingere.</li>
+        </ul>
+      </div>
+      <div class="bus-tappa">
+        <strong>💺 A bordo</strong>
+        <ul>
+          <li>Resta <strong>seduto</strong> per tutto il viaggio. Se il sedile ha la cintura, tienila <strong>allacciata</strong>.</li>
+          <li>Tieni lo zaino sulle ginocchia o dove indica l'autista, <strong>mai nel corridoio</strong>.</li>
+          <li><strong>Non distrarre</strong> chi guida e non gridare.</li>
+        </ul>
+      </div>
+      <div class="bus-tappa">
+        <strong>🚶 Alla discesa</strong>
+        <ul>
+          <li>Scendi con calma, uno alla volta, <strong>solo alla tua fermata</strong>.</li>
+          <li><strong>Non attraversare</strong> davanti o dietro il bus: gli altri guidatori non ti vedono.</li>
+          <li>Aspetta che il bus <strong>riparta</strong>, poi attraversa sulle <strong>strisce</strong>.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="scheda-h2">🚨 Se c'è un'emergenza durante il viaggio</h2>
+    <ul class="scheda-elenco">
+      <li><strong>Ascolta l'autista</strong> (e l'accompagnatore, se c'è): dà istruzioni semplici e sa cosa fare.</li>
+      <li>Resta <strong>seduto e calmo</strong>: non alzarti e non correre verso le porte.</li>
+      <li>Se bisogna scendere, si scende <strong>in fila, senza correre</strong>, e si resta tutti insieme nel punto sicuro.</li>
+      <li><strong>Non tornare indietro</strong> a prendere lo zaino o gli oggetti: prima le persone.</li>
+      <li>Se serve aiuto, è l'autista che chiama il <strong>112</strong>. Non chiamare i genitori per primo: prima si ascolta l'adulto responsabile.</li>
+    </ul>
+
+    <h2 class="scheda-h2">✏️ Esercizio 1 — Vero o falso?</h2>
+    <div class="scheda-cs-domanda">
+      <p>1. Alla fermata aspetto fermo, lontano dal bordo della strada. <strong>V / F</strong></p>
+      <p>2. Se il mio sedile ha la cintura, la tengo allacciata per tutto il viaggio. <strong>V / F</strong></p>
+      <p>3. Appena scendo, attraverso di corsa davanti al bus per fare prima. <strong>V / F</strong></p>
+      <p>4. In emergenza, torno indietro a prendere lo zaino prima di scendere. <strong>V / F</strong></p>
+      <p>5. In emergenza la prima cosa da fare è ascoltare l'autista. <strong>V / F</strong></p>
+    </div>
+
+    <h2 class="scheda-h2">✏️ Esercizio 2 — Riordina i passi della discesa sicura</h2>
+    <p style="font-size: 0.92rem; margin: 0 0 0.4rem 0;">
+      Scrivi i numeri da 1 a 4 nell'ordine giusto.
+    </p>
+    <div class="scheda-cs-domanda">
+      <p>___ Attraverso sulle strisce pedonali.</p>
+      <p>___ Scendo con calma, uno alla volta, alla mia fermata.</p>
+      <p>___ Aspetto che lo scuolabus riparta e la strada sia libera.</p>
+      <p>___ Mi allontano dal bus e resto sul marciapiede.</p>
+    </div>
+
+    <div class="soluzione-capovolta">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;">
+        <strong>Esercizio 1:</strong> 1 V · 2 V · 3 F (mai attraversare davanti o dietro il bus: aspetta che riparta e usa le strisce) ·
+        4 F (non si torna indietro per gli oggetti) · 5 V.<br>
+        <strong>Esercizio 2</strong> (ordine): scendo con calma (1) → mi allontano e resto sul marciapiede (2) →
+        aspetto che il bus riparta (3) → attraverso sulle strisce (4).
+      </p>
+    </div>
+
+    <div class="scheda-nota-locale">
+      <strong>Approfondimenti per Genzano:</strong>
+      <a href="/rischi-prevenzione/sicurezza-scuolabus/">Sicurezza sullo scuolabus (pagina completa)</a> ·
+      <a href="/rischi-prevenzione/scuole-genzano-rischi-locali/">Scuole di Genzano e rischi locali</a> ·
+      <a href="/piano-familiare/">Piano Familiare</a> ·
+      <a href="/numeri-utili/">Numeri Utili</a>.
+    </div>
+
+    <h2 class="scheda-h2">📚 Fonti</h2>
+    <ul class="scheda-elenco" style="font-size: 0.85rem;">
+      <li>Dipartimento della Protezione Civile — norme di comportamento e campagna «Io non rischio».</li>
+      <li>Ministero dell'Istruzione e del Merito — sicurezza nelle scuole (mim.gov.it).</li>
+      <li>Sito Protezione Civile Genzano di Roma — pagina «Sicurezza sullo scuolabus».</li>
+    </ul>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "In sicurezza sullo scuolabus" · Primaria · rev. 01 · agosto 2026</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-blackout-primaria" class="pacchetto-scheda" aria-label="Scheda: Blackout: la casa senza corrente">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale scheda-h1">Blackout: la casa senza corrente</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria (classi 3-5) · 8-11 anni</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 8-11 anni, famiglie</span>
+      <span><strong>Durata:</strong> 40 min</span>
+      <span><strong>Modalità:</strong> classe + lavoro a casa</span>
+      <span><strong>Discipline:</strong> Scienze, Tecnologia, Educazione civica</span>
+    </div>
+
+    <div class="scheda-messaggio-chiave">
+      <strong>Messaggio chiave:</strong> il blackout è un'interruzione della corrente elettrica.
+      Di solito dura poco e non è pericoloso, <strong>se sai cosa fare</strong>: torcia al posto delle candele,
+      frigo chiuso, ascensore da evitare, calma e pazienza.
+    </div>
+
+    <p class="scheda-intro">
+      A Genzano e ai Castelli Romani i fili della corrente attraversano boschi e colline: durante un temporale
+      o una giornata di vento forte, un albero o un ramo che cade può interrompere la linea. Per questo da noi
+      i blackout capitano soprattutto con il <strong>maltempo</strong>. Niente panico: con poche mosse giuste
+      la tua famiglia è pronta.
+    </p>
+
+    <h2 class="scheda-h2">✅ Cosa faccio se va via la corrente</h2>
+
+    <div class="scheda-comportamenti">
+      <div class="scheda-card">
+        <h3>Luce sicura</h3>
+        <p>Prendi la <strong>torcia elettrica</strong> del kit di emergenza. <strong>Niente candele</strong>: la fiamma può causare un incendio.</p>
+      </div>
+      <div class="scheda-card">
+        <h3>Frigo e freezer chiusi</h3>
+        <p><strong>Non aprire</strong> frigorifero e congelatore se non serve davvero: se restano chiusi, il cibo si conserva per molte ore.</p>
+      </div>
+      <div class="scheda-card">
+        <h3>Elettrodomestici</h3>
+        <p>Aiuta i grandi a <strong>staccare le spine</strong> di TV e computer: quando la corrente torna, uno sbalzo può rovinarli. Lasciate accesa una sola lampada: quando si riaccende, la corrente è tornata.</p>
+      </div>
+      <div class="scheda-card">
+        <h3>Ascensore no</h3>
+        <p>Durante un blackout <strong>usa le scale</strong>: l'ascensore può fermarsi tra un piano e l'altro. Se qualcuno resta bloccato, si preme il pulsante di allarme e si aspettano i soccorsi.</p>
+      </div>
+    </div>
+
+    <ul class="scheda-elenco">
+      <li>Ascolta le notizie con una <strong>radio a pile</strong>: funziona anche senza corrente.</li>
+      <li>Il telefono si usa poco, per <strong>risparmiare la batteria</strong>.</li>
+      <li>Il <strong>112 si chiama solo per un pericolo vero</strong> (incendio, persona bloccata, qualcuno che sta male), non per chiedere quando torna la luce. Di solito chiama un adulto; se sei solo davanti a un pericolo vero, chiama tu.</li>
+    </ul>
+
+    <h2 class="scheda-h2">🎒 Il kit della famiglia</h2>
+    <p style="font-size: 0.92rem; margin: 0 0 0.3rem 0;">
+      Queste cose vanno preparate <strong>prima</strong>, tutte in un posto che tutta la famiglia conosce.
+      Spunta quelle che avete già a casa:
+    </p>
+    <ul class="blp-kit">
+      <li>Torcia elettrica con pile di scorta</li>
+      <li>Radio a pile</li>
+      <li>Power bank carico</li>
+      <li>Acqua in bottiglia</li>
+      <li>Cibi che non vanno cucinati</li>
+      <li>Numeri utili scritti su carta</li>
+    </ul>
+
+    <h2 class="scheda-h2">✏️ Esercizio 1 — Vero o falso?</h2>
+    <p style="font-size: 0.9rem; margin: 0 0 0.2rem 0;">Scrivi <strong>V</strong> (vero) o <strong>F</strong> (falso) nella casella.</p>
+    <table class="blp-vf">
+      <tr><td class="blp-vf-cella"></td><td>1. Durante un blackout è meglio fare luce con le candele.</td></tr>
+      <tr><td class="blp-vf-cella"></td><td>2. Se il frigorifero resta chiuso, il cibo si conserva per molte ore.</td></tr>
+      <tr><td class="blp-vf-cella"></td><td>3. Durante un blackout conviene usare le scale invece dell'ascensore.</td></tr>
+      <tr><td class="blp-vf-cella"></td><td>4. Il 112 si chiama per chiedere quando torna la corrente.</td></tr>
+      <tr><td class="blp-vf-cella"></td><td>5. La radio a pile funziona anche senza corrente elettrica.</td></tr>
+      <tr><td class="blp-vf-cella"></td><td>6. Conviene staccare le spine di TV e computer durante il blackout.</td></tr>
+    </table>
+
+    <h2 class="scheda-h2">✏️ Esercizio 2 — Completa la frase</h2>
+    <ol class="blp-completa">
+      <li>Per fare luce in sicurezza uso la <span class="blp-spazio"></span>, non le candele.</li>
+      <li>Tengo <span class="blp-spazio"></span> il frigorifero, così il cibo resta fresco.</li>
+      <li>Per scendere al piano terra uso le <span class="blp-spazio"></span>, non l'ascensore.</li>
+      <li>I grandi chiamano il <span class="blp-spazio"></span> solo se c'è un pericolo vero.</li>
+    </ol>
+
+    <div class="soluzione-capovolta">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;">
+        <strong>Esercizio 1:</strong> 1 F (torcia, non candele) · 2 V · 3 V · 4 F (il 112 è solo per i pericoli veri) · 5 V · 6 V.<br>
+        <strong>Esercizio 2:</strong> 1) torcia · 2) chiuso · 3) scale · 4) 112.
+      </p>
+    </div>
+
+    <div class="scheda-nota-locale">
+      <strong>Approfondimenti per Genzano:</strong>
+      <a href="/rischi-prevenzione/blackout/">Pagina rischio Blackout</a> ·
+      <a href="/rischi-prevenzione/kit-emergenza/">Kit di emergenza "Casa 72 ore"</a> ·
+      <a href="/numeri-utili/">Numeri Utili</a> ·
+      <a href="/piano-familiare/">Piano Familiare</a>.
+    </div>
+
+    <h2 class="scheda-h2">📚 Fonti</h2>
+    <ul class="scheda-elenco" style="font-size: 0.85rem;">
+      <li>Dipartimento della Protezione Civile — indicazioni di autoprotezione per i rischi tecnologici.</li>
+      <li>Sito Protezione Civile Genzano di Roma — pagina rischio Blackout e kit di emergenza.</li>
+      <li>Numero Unico di Emergenza 112 — solo per emergenze reali.</li>
+    </ul>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Blackout: la casa senza corrente" · Primaria 3-5 · Rev. 02 - Agosto 2026</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-vento-forte-primaria" class="pacchetto-scheda" aria-label="Scheda: Vento forte: cosa faccio">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale scheda-h1">Vento forte: cosa faccio</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria (classi 3-5) · 8-11 anni</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 8-11 anni, famiglie</span>
+      <span><strong>Durata:</strong> 40 min</span>
+      <span><strong>Modalità:</strong> classe + lavoro a casa</span>
+      <span><strong>Discipline:</strong> Scienze, Geografia, Educazione civica</span>
+    </div>
+
+    <div class="scheda-messaggio-chiave">
+      <strong>Messaggio chiave:</strong> il vento forte non si vede, ma fa cadere rami, tegole e vasi.
+      La regola d'oro è semplice: <strong>lontano dagli alberi e dalle cose che possono cadere</strong>,
+      dentro casa lontano dalle finestre.
+    </div>
+
+    <p class="scheda-intro">
+      Genzano è su una collina dei <strong>Castelli Romani</strong>: quando arriva una perturbazione, il vento
+      qui soffia più forte che in pianura. Le nostre strade e i nostri parchi hanno tanti <strong>alberi grandi
+      e antichi</strong>: sono bellissimi, ma con le raffiche possono perdere rami. Per questo il vento forte è
+      uno dei rischi più frequenti del nostro territorio. Quando è previsto vento pericoloso, il
+      <strong>Centro Funzionale Regionale del Lazio</strong> — l'ufficio della Regione che controlla il meteo —
+      pubblica un <strong>avviso</strong>: il Comune e la Protezione Civile lo fanno conoscere a tutti.
+    </p>
+
+    <h2 class="scheda-h2">✅ Cosa faccio nelle giornate di vento forte</h2>
+
+    <div class="scheda-comportamenti">
+      <div class="scheda-card">
+        <h3>Fuori</h3>
+        <p>Sto <strong>lontano da alberi, impalcature e cornicioni</strong>: rami, attrezzi e tegole possono cadere. Non mi fermo sotto le cose che il vento può buttare giù.</p>
+      </div>
+      <div class="scheda-card">
+        <h3>A casa</h3>
+        <p>Resto dentro e sto <strong>lontano dalle finestre e dalle vetrate</strong>. Durante le raffiche <strong>non gioco in giardino o sul balcone</strong>. Porte e finestre restano chiuse.</p>
+      </div>
+      <div class="scheda-card">
+        <h3>Prima del vento</h3>
+        <p>Aiuto i grandi a <strong>mettere al riparo</strong> vasi, giochi, sedie e tutto quello che il vento può far volare dal balcone o dal giardino.</p>
+      </div>
+      <div class="scheda-card">
+        <h3>A scuola</h3>
+        <p>Sto <strong>lontano dalle finestre</strong> e ascolto le indicazioni delle maestre e dei maestri. In cortile si esce solo quando gli adulti dicono che si può.</p>
+      </div>
+    </div>
+
+    <h2 class="scheda-h2">🔎 E dopo il vento?</h2>
+    <ul class="scheda-elenco">
+      <li>Se vedo un <strong>ramo spezzato che pende</strong>, un albero inclinato o una tegola caduta, <strong>non mi avvicino</strong> e lo dico subito a un adulto.</li>
+      <li><strong>Non tocco mai i fili elettrici caduti</strong> a terra: sono pericolosissimi.</li>
+      <li>A chiamare il <strong>112</strong> è di solito un adulto, e solo per i <strong>pericoli concreti</strong>: un albero caduto sulla strada, un filo elettrico a terra, una persona ferita. Se sono solo davanti a un pericolo vero, chiamo io: dico il mio nome, dove sono e cosa è successo.</li>
+    </ul>
+
+    <h2 class="scheda-h2">✏️ Esercizio 1 — Scegli la risposta giusta</h2>
+
+    <div class="scheda-quiz">
+      <h3>1. C'è un'allerta per vento forte e sei per strada. Dove NON devi fermarti?</h3>
+      <ul>
+        <li>A) In una piazza aperta, lontano dagli edifici</li>
+        <li>B) Sotto un grande albero</li>
+        <li>C) Dentro un negozio</li>
+      </ul>
+    </div>
+
+    <div class="scheda-quiz">
+      <h3>2. Sei a casa e il vento fischia forte. Cosa fai?</h3>
+      <ul>
+        <li>A) Esco sul balcone a guardare</li>
+        <li>B) Mi metto vicino alla finestra per vedere meglio</li>
+        <li>C) Resto dentro, lontano da finestre e vetrate</li>
+      </ul>
+    </div>
+
+    <div class="scheda-quiz">
+      <h3>3. Dopo il vento vedi un ramo grosso che pende da un albero sul marciapiede. Cosa fai?</h3>
+      <ul>
+        <li>A) Provo a tirarlo giù io, così non cade in testa a nessuno</li>
+        <li>B) Non mi avvicino e lo dico subito a un adulto</li>
+        <li>C) Ci passo sotto veloce veloce</li>
+      </ul>
+    </div>
+
+    <h2 class="scheda-h2">✏️ Esercizio 2 — Vero o falso?</h2>
+    <p style="font-size: 0.9rem; margin: 0 0 0.2rem 0;">Scrivi <strong>V</strong> (vero) o <strong>F</strong> (falso) nella casella.</p>
+    <table class="vfp-vf">
+      <tr><td class="vfp-vf-cella"></td><td>1. Prima del vento forte aiuto a mettere al riparo i vasi e i giochi del balcone.</td></tr>
+      <tr><td class="vfp-vf-cella"></td><td>2. I fili elettrici caduti a terra si possono toccare, tanto la corrente è staccata.</td></tr>
+      <tr><td class="vfp-vf-cella"></td><td>3. Gli avvisi per il vento forte nel Lazio li pubblica il Centro Funzionale Regionale.</td></tr>
+      <tr><td class="vfp-vf-cella"></td><td>4. Il 112 si chiama solo per i pericoli concreti, mai per gioco.</td></tr>
+    </table>
+
+    <div class="soluzione-capovolta">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;">
+        <strong>Esercizio 1:</strong> 1 B (mai sotto gli alberi: i rami possono cadere) · 2 C · 3 B (mai avvicinarsi a rami pericolanti: lo dico subito a un adulto, oppure chiamo io il 112 se sono solo davanti a un pericolo vero).<br>
+        <strong>Esercizio 2:</strong> 1 V · 2 F (mai toccare i fili caduti: possono essere ancora in tensione) · 3 V · 4 V.
+      </p>
+    </div>
+
+    <div class="scheda-nota-locale">
+      <strong>Approfondimenti per Genzano:</strong>
+      <a href="/rischi-prevenzione/vento-forte/">Pagina rischio Vento forte</a> ·
+      <a href="/allerte-meteo/">Allerte Meteo</a> ·
+      <a href="/rischi-prevenzione/kit-emergenza/">Kit di emergenza</a> ·
+      <a href="/numeri-utili/">Numeri Utili</a>.
+    </div>
+
+    <h2 class="scheda-h2">📚 Fonti</h2>
+    <ul class="scheda-elenco" style="font-size: 0.85rem;">
+      <li>Centro Funzionale Regionale del Lazio — bollettini e avvisi di condizioni meteorologiche avverse.</li>
+      <li>Dipartimento della Protezione Civile — indicazioni di autoprotezione per il rischio meteo.</li>
+      <li>Sito Protezione Civile Genzano di Roma — pagina rischio Vento forte e allerte meteo.</li>
+    </ul>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Vento forte: cosa faccio" · Primaria 3-5 · Rev. 02 - Agosto 2026</span>
+    </footer>
+
+  </article>
+</section>
+
+<section id="scheda-temporali-intensi-primaria" class="pacchetto-scheda" aria-label="Scheda: Temporali intensi: cosa faccio">
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale scheda-h1">Temporali intensi: cosa faccio</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria (classi 3-5) · 8-11 anni</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 8-11 anni, famiglie</span>
+      <span><strong>Durata:</strong> 40 min</span>
+      <span><strong>Modalità:</strong> classe + lavoro a casa</span>
+      <span><strong>Discipline:</strong> Scienze, Geografia, Educazione civica</span>
+    </div>
+
+    <div class="scheda-messaggio-chiave">
+      <strong>Messaggio chiave:</strong> un temporale forte si forma in pochi minuti e porta pioggia intensa,
+      fulmini, grandine e raffiche improvvise. La regola d'oro è semplice:
+      <strong>al riparo dentro un edificio</strong>, lontano da alberi, fili elettrici e finestre.
+    </div>
+
+    <p class="scheda-intro">
+      Genzano è sui <strong>Castelli Romani</strong>, una zona di colline vicino a due laghi vulcanici:
+      qui, soprattutto tra <strong>maggio e ottobre</strong>, si formano spesso <strong>temporali forti e
+      improvvisi</strong>, chiamati anche "temporali di calore". In pochi minuti il cielo si scurisce e arrivano
+      pioggia intensa, lampi e tuoni, a volte anche grandine. Quando è previsto un temporale pericoloso, il
+      <strong>Centro Funzionale Regionale del Lazio</strong> — l'ufficio della Regione che controlla il meteo —
+      pubblica un <strong>avviso</strong>: il Comune e la Protezione Civile lo fanno conoscere a tutti.
+    </p>
+
+    <h2 class="scheda-h2">✅ Cosa faccio durante un temporale forte</h2>
+
+    <div class="scheda-comportamenti">
+      <div class="scheda-card">
+        <h3>Fuori</h3>
+        <p>Entro subito in un <strong>edificio solido</strong> o in auto con i finestrini chiusi. Mi tengo
+        <strong>lontano da alberi isolati, pali e recinzioni di metallo</strong>: i fulmini colpiscono le cose
+        più alte e appuntite.</p>
+      </div>
+      <div class="scheda-card">
+        <h3>A casa</h3>
+        <p><strong>Prima che arrivi il temporale</strong> aiuto i grandi a staccare gli apparecchi elettrici non
+        indispensabili. Quando i lampi sono già vicini, sto <strong>lontano da finestre e porte finestre</strong>
+        e <strong>non tocco fili, prese o il telefono con il filo</strong> attaccato al muro.</p>
+      </div>
+      <div class="scheda-card">
+        <h3>In auto</h3>
+        <p>Se sono in auto con un adulto, ci fermiamo in un posto sicuro <strong>lontano da alberi e corsi
+        d'acqua</strong>. Non attraversiamo mai una strada allagata, nemmeno in macchina.</p>
+      </div>
+      <div class="scheda-card">
+        <h3>A scuola</h3>
+        <p>Resto <strong>dentro l'aula, lontano dalle finestre</strong>, e ascolto le indicazioni delle maestre
+        e dei maestri. In cortile non si esce finché il temporale non è passato.</p>
+      </div>
+    </div>
+
+    <h2 class="scheda-h2">🔎 E dopo il temporale?</h2>
+    <ul class="scheda-elenco">
+      <li>Se vedo un <strong>cavo elettrico caduto</strong> a terra, <strong>non mi avvicino</strong> e lo dico
+      subito a un adulto.</li>
+      <li><strong>Non entro mai in una cantina o un garage allagati</strong>: dentro l'acqua possono esserci
+      impianti elettrici pericolosi.</li>
+      <li>A chiamare il <strong>112</strong> è di solito un adulto, e solo per i <strong>pericoli concreti</strong>:
+      un cavo elettrico a terra, una strada allagata, una persona in difficoltà. Se sono solo davanti a un
+      pericolo vero, chiamo io: dico il mio nome, dove sono e cosa è successo.</li>
+    </ul>
+
+    <h2 class="scheda-h2">✏️ Esercizio 1 — Scegli la risposta giusta</h2>
+
+    <div class="scheda-quiz">
+      <h3>1. Sei in un parco e sta per arrivare un temporale con lampi. Cosa fai?</h3>
+      <ul>
+        <li>A) Mi riparo sotto un grande albero isolato</li>
+        <li>B) Entro subito in un edificio o in auto</li>
+        <li>C) Aspetto in mezzo al prato che passi</li>
+      </ul>
+    </div>
+
+    <div class="scheda-quiz">
+      <h3>2. Durante i lampi, sei a casa e vuoi telefonare a un amico. Cosa fai?</h3>
+      <ul>
+        <li>A) Uso il telefono con il filo attaccato al muro</li>
+        <li>B) Aspetto che il temporale sia passato</li>
+        <li>C) Esco sul balcone per sentire meglio</li>
+      </ul>
+    </div>
+
+    <div class="scheda-quiz">
+      <h3>3. Dopo il temporale trovi un cavo elettrico caduto sul marciapiede. Cosa fai?</h3>
+      <ul>
+        <li>A) Lo sposto con un bastone di legno</li>
+        <li>B) Non mi avvicino e lo dico subito a un adulto</li>
+        <li>C) Ci passo vicino veloce veloce</li>
+      </ul>
+    </div>
+
+    <h2 class="scheda-h2">✏️ Esercizio 2 — Vero o falso?</h2>
+    <p style="font-size: 0.9rem; margin: 0 0 0.2rem 0;">Scrivi <strong>V</strong> (vero) o <strong>F</strong> (falso) nella casella.</p>
+    <table class="tip-vf">
+      <tr><td class="tip-vf-cella"></td><td>1. I temporali forti ai Castelli Romani arrivano soprattutto tra maggio e ottobre.</td></tr>
+      <tr><td class="tip-vf-cella"></td><td>2. Durante i lampi è meglio ripararsi sotto un albero grande e isolato.</td></tr>
+      <tr><td class="tip-vf-cella"></td><td>3. Dopo un temporale non si deve mai entrare in una cantina allagata.</td></tr>
+      <tr><td class="tip-vf-cella"></td><td>4. Il 112 si chiama solo per i pericoli concreti, mai per gioco.</td></tr>
+    </table>
+
+    <div class="soluzione-capovolta">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;">
+        <strong>Esercizio 1:</strong> 1 B (mai sotto un albero isolato: attira i fulmini) · 2 B (mai il telefono
+        con filo durante i lampi) · 3 B (mai avvicinarsi a un cavo caduto: lo dico subito a un adulto, oppure
+        chiamo io il 112 se sono solo davanti a un pericolo vero).<br>
+        <strong>Esercizio 2:</strong> 1 V · 2 F (l'albero isolato è pericoloso, attira i fulmini) · 3 V · 4 V.
+      </p>
+    </div>
+
+    <div class="scheda-nota-locale">
+      <strong>Approfondimenti per Genzano:</strong>
+      <a href="/rischi-prevenzione/temporali-intensi/">Pagina rischio Temporali intensi</a> ·
+      <a href="/allerte-meteo/">Allerte Meteo</a> ·
+      <a href="/rischi-prevenzione/kit-emergenza/">Kit di emergenza</a> ·
+      <a href="/numeri-utili/">Numeri Utili</a>.
+    </div>
+
+    <h2 class="scheda-h2">📚 Fonti</h2>
+    <ul class="scheda-elenco" style="font-size: 0.85rem;">
+      <li>Centro Funzionale Regionale del Lazio — bollettini e avvisi di condizioni meteorologiche avverse.</li>
+      <li>Dipartimento della Protezione Civile — indicazioni di autoprotezione per il rischio meteo-idro.</li>
+      <li>Sito Protezione Civile Genzano di Roma — pagina rischio Temporali intensi e allerte meteo.</li>
+    </ul>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Temporali intensi: cosa faccio" · Primaria 3-5 · Rev. 01 - Agosto 2026</span>
     </footer>
 
   </article>
@@ -3230,9 +4440,13 @@
     <div class="istruzioni-maestra">
       <strong>Per la maestra/maestro:</strong> la regola di base presentata qui è
       "ogni sillaba ha una vocale". È volutamente semplificata per la 1ª: i casi
-      dei dittonghi (IU di AIUTO, IE di POMPIERE) sono affrontati come blocco
-      unico. Le sillabe corrette di riferimento sono: CA-SCO, RA-DIO, SI-RE-NA,
-      A-IU-TO, POM-PIE-RE, VO-LON-TA-RIO, MAP-PA, FUO-CO, U-SCI-TA, TOR-CIA, ZAI-NO, SCUO-LA.
+      dei dittonghi (IU di AIUTO, IE di POMPIERE) sono affrontati come blocco unico.
+    </div>
+
+    <div class="soluzione-capovolta" style="margin-top: 5mm;">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;">Le sillabe corrette di riferimento sono: CA-SCO, RA-DIO, SI-RE-NA,
+      A-IU-TO, POM-PIE-RE, VO-LON-TA-RIO, MAP-PA, FUO-CO, U-SCI-TA, TOR-CIA, ZAI-NO, SCUO-LA.</p>
     </div>
 
     <footer class="scheda-footer">
@@ -3366,10 +4580,14 @@
     <div class="istruzioni-maestra">
       <strong>Per la maestra/maestro:</strong>
       <ul>
-        <li><strong>Sezione 1 — Soluzioni:</strong> CASCO, SIRENA, FUOCO, RADIO, MAPPA, USCITA, TORCIA, OSPEDALE, ZAINO, AIUTO. Le lettere mancanti sono: A, R, F, I, M, U, O, O, Z, I.</li>
-        <li><strong>Sezione 2 — Soluzioni accettabili:</strong> 112, POMPIERE (o VIGILE DEL FUOCO), VOLONTARIO, PIOGGIA (o ACQUA).</li>
         <li><strong>Estensione orale:</strong> dopo la scheda, ogni alunno legge ad alta voce due parole completate, scandendo bene le sillabe.</li>
       </ul>
+    </div>
+
+    <div class="soluzione-capovolta" style="margin-top: 5mm;">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;"><strong>Sezione 1</strong>: CASCO, SIRENA, FUOCO, RADIO, MAPPA, USCITA, TORCIA, OSPEDALE, ZAINO, AIUTO. Le lettere mancanti sono: A, R, F, I, M, U, O, O, Z, I.<br>
+      <strong>Sezione 2 — soluzioni accettabili</strong>: 112, POMPIERE (o VIGILE DEL FUOCO), VOLONTARIO, PIOGGIA (o ACQUA).</p>
     </div>
 
     <footer class="scheda-footer">
@@ -3394,7 +4612,7 @@
 
     <div class="scheda-meta">
       <span><strong>Destinatari:</strong> 6-7 anni</span>
-      <span><strong>Obiettivo:</strong> ricopiare frasi in stampatello e fissare le regole</strong></span>
+      <span><strong>Obiettivo:</strong> ricopiare frasi in stampatello e fissare le regole</span>
       <span><strong>Servono:</strong> matita</span>
     </div>
 
@@ -3636,12 +4854,16 @@
     </p>
 
     <div class="scheda-docente">
-      <strong>Per la maestra/maestro — soluzioni:</strong>
+      <strong>Per la maestra/maestro — note didattiche:</strong>
       <ul style="margin: 0.3rem 0 0 1rem; padding: 0;">
-        <li><strong>Sezione 1:</strong> C–c, A–a, P–p, R–r, M–m, Z–z.</li>
-        <li><strong>Sezione 2:</strong> S→s, O→o, T→t, U→u, F→f, I→i, N→n, G→g.</li>
         <li><strong>Estensione orale:</strong> mostrare che alcune minuscole somigliano molto alla maiuscola (C/c, O/o, S/s, U/u, Z/z), altre cambiano forma (A/a, R/r, G/g): far notare le differenze.</li>
       </ul>
+    </div>
+
+    <div class="soluzione-capovolta" style="margin-top: 5mm;">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;"><strong>Sezione 1</strong>: C–c, A–a, P–p, R–r, M–m, Z–z.
+      <strong>Sezione 2</strong>: S→s, O→o, T→t, U→u, F→f, I→i, N→n, G→g.</p>
     </div>
 
     <footer class="scheda-footer">
@@ -4141,13 +5363,17 @@
     </div>
 
     <div class="istruzioni-maestra">
-      <strong>Per la maestra/maestro · Soluzioni:</strong>
+      <strong>Per la maestra/maestro · Note didattiche:</strong>
       <ul style="margin:0.3rem 0 0 1rem; padding:0;">
-        <li>Sezione 2: cielo sereno=1 · pioggia moderata=2 · temporali forti=3 · strade allagate=4.</li>
-        <li>Sezione 3: livelli 1=verde, 2=giallo, 3=arancione, 4=rosso.</li>
-        <li>Sezione 4: F · V · V.</li>
         <li><strong>Approfondimento</strong>: il bollettino reale è pubblicato ogni giorno dal Centro Funzionale Regionale Lazio. La pagina <a href="/allerte-meteo/">/allerte-meteo/</a> mostra il livello attivo per Genzano in tempo reale.</li>
       </ul>
+    </div>
+
+    <div class="soluzione-capovolta" style="margin-top: 5mm;">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;"><strong>Sezione 2</strong>: cielo sereno=1 · pioggia moderata=2 · temporali forti=3 · strade allagate=4.
+      <strong>Sezione 3</strong>: livelli 1=verde, 2=giallo, 3=arancione, 4=rosso.
+      <strong>Sezione 4</strong>: F · V · V.</p>
     </div>
 
     <footer class="scheda-footer">
@@ -4240,13 +5466,17 @@
     </div>
 
     <div class="istruzioni-maestra">
-      <strong>Per la maestra/maestro · Soluzioni:</strong>
+      <strong>Per la maestra/maestro · Note didattiche:</strong>
       <ul style="margin:0.3rem 0 0 1rem; padding:0;">
-        <li>Sezione 3: 1) pluviometro · 2) anemometro · 3) termometro · 4) barometro.</li>
         <li><strong>Esperienza concreta</strong>: costruire un pluviometro casalingo con una bottiglia tagliata e un righello. Misurare la pioggia per una settimana e fare la media. La Protezione Civile della Regione Lazio fa la stessa cosa con strumenti più precisi.</li>
         <li><strong>Approfondimento</strong>: dove va il dato? Al <strong>Centro Funzionale Regionale Lazio</strong>, che lo confronta con altri rilevamenti e decide il colore del bollettino di allerta meteo.</li>
         <li>Collegamento con la scheda <a href="/formazione/schede-stampabili/codici-allerta-numeri-primaria/">Codici di allerta meteo</a> per chiudere il cerchio.</li>
       </ul>
+    </div>
+
+    <div class="soluzione-capovolta" style="margin-top: 5mm;">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;"><strong>Sezione 3</strong>: 1) pluviometro · 2) anemometro · 3) termometro · 4) barometro.</p>
     </div>
 
     <footer class="scheda-footer">
@@ -4419,7 +5649,7 @@
 
     <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.9rem; line-height: 1.55;">
       <div style="font-weight: 700; color: var(--scheda-blu); margin-bottom: 0.2rem;">🚒 Cosa fanno i pompieri</div>
-      I <strong>vigili del fuoco</strong> (VVF) sono un Corpo dello Stato italiano (Ministero dell'Interno). Spengono incendi, ma fanno molto altro: salvano persone in incidenti d'auto, soccorrono chi è in pericolo, intervengono nei terremoti e nelle alluvioni, salvano animali in difficoltà. Per diventare vigile del fuoco serve passare un concorso pubblico ed essere allenati: si fanno corsi di nuoto, di arrampicata, di guida dei mezzi speciali. Il numero per chiamarli è il <strong>112</strong>, oppure direttamente <strong>115</strong>. Il loro motto è "<em>flammas domamus, donamus corda</em>" ("domiamo le fiamme, doniamo il cuore").
+      I <strong>vigili del fuoco</strong> (VVF) sono un Corpo dello Stato italiano (Ministero dell'Interno). Spengono incendi, ma fanno molto altro: salvano persone in incidenti d'auto, soccorrono chi è in pericolo, intervengono nei terremoti e nelle alluvioni, salvano animali in difficoltà. Per diventare vigile del fuoco serve passare un concorso pubblico ed essere allenati: si fanno corsi di nuoto, di arrampicata, di guida dei mezzi speciali. Il numero da chiamare è sempre e solo il <strong>112</strong>, il Numero Unico di Emergenza: quando racconti cosa sta succedendo, la centrale unica manda sul posto i vigili del fuoco. Il loro motto è "<em>flammas domamus, donamus corda</em>" ("domiamo le fiamme, doniamo il cuore").
       <br><em>Fonte: Corpo Nazionale dei Vigili del Fuoco.</em>
     </div>
 
@@ -4523,7 +5753,7 @@
 
     <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.9rem; line-height: 1.55;">
       <div style="font-weight: 700; color: var(--scheda-blu); margin-bottom: 0.2rem;">📞 La catena dell'allerta</div>
-      Quando arriva un'allerta arancione o rossa, le cose succedono in <strong>una sequenza precisa</strong>: <strong>(1)</strong> Il <strong>Centro Funzionale Regionale</strong> emette il bollettino di criticità → <strong>(2)</strong> Lo invia al <strong>Sindaco</strong> e alla <strong>Prefettura</strong> → <strong>(3)</strong> Il Sindaco attiva il <strong>COC</strong> (Centro Operativo Comunale) e chiama i <strong>volontari di PC</strong> del Gruppo Comunale → <strong>(4)</strong> Si decide se <strong>chiudere scuole, parchi, eventi</strong> → <strong>(5)</strong> Arriva <strong>IT-alert</strong> sui cellulari della zona → <strong>(6)</strong> I volontari pattugliano i punti a rischio (cantine, ponti, sottopassi). Tutto in poche ore.
+      Quando arriva un'allerta arancione o rossa, le cose succedono in <strong>una sequenza precisa</strong>: <strong>(1)</strong> Il <strong>Centro Funzionale Regionale</strong> emette il bollettino di criticità → <strong>(2)</strong> Lo invia al <strong>Sindaco</strong> e alla <strong>Prefettura</strong> → <strong>(3)</strong> Il Sindaco attiva il <strong>COC</strong> (Centro Operativo Comunale) e chiama i <strong>volontari di PC</strong> del Gruppo Comunale → <strong>(4)</strong> Si decide se <strong>chiudere scuole, parchi, eventi</strong> → <strong>(5)</strong> Il <strong>Comune avvisa i cittadini</strong> con i suoi canali ufficiali (sito, social, altoparlanti) → <strong>(6)</strong> I volontari pattugliano i punti a rischio (cantine, ponti, sottopassi). Tutto in poche ore.
     </div>
 
     <div class="frasi-griglia">
@@ -4535,7 +5765,7 @@
       <div class="frase-card">
         <span class="num-vuoto" aria-hidden="true">?</span>
         <span class="lettera">B</span>
-        <span class="testo">Sui telefoni arriva il <strong>messaggio IT-alert</strong> con le istruzioni per la popolazione.</span>
+        <span class="testo">Il <strong>Comune manda un avviso</strong> con le istruzioni per la popolazione (sito, social, altoparlanti).</span>
       </div>
       <div class="frase-card">
         <span class="num-vuoto" aria-hidden="true">?</span>
@@ -4586,14 +5816,18 @@
     </div>
 
     <div class="istruzioni-maestra">
-      <strong>Per la maestra/maestro · Soluzioni:</strong>
+      <strong>Per la maestra/maestro · Note didattiche:</strong>
       <ul style="margin:0.3rem 0 0 1rem; padding:0;">
-        <li><strong>Sequenza corretta</strong>: <strong>D → A → F → C → B → E</strong>.<br>
-        (1: bollettino Regione · 2: apertura COC · 3: volontari controllano · 4: inizia la pioggia · 5: IT-alert · 6: chiusura COC).</li>
-        <li><strong>Variante</strong> ammessa: B (IT-alert) può precedere C (la pioggia) oppure essere contemporaneo. Accettare entrambe le posizioni se motivate.</li>
-        <li><strong>Domanda extra</strong>: il <strong>Centro Funzionale Regionale Lazio</strong> (l'ufficio della Regione che monitora il meteo) decide il colore. Accettare anche risposte tipo "la Regione" o "la Protezione Civile della Regione".</li>
         <li><strong>Approfondimento</strong>: collegare con la scheda <a href="/formazione/schede-stampabili/codici-allerta-numeri-primaria/">codici-allerta-numeri-primaria</a> e con la pagina <a href="/allerte-meteo/">/allerte-meteo/</a> dove l'allerta attuale è visibile in tempo reale.</li>
       </ul>
+    </div>
+
+    <div class="soluzione-capovolta" style="margin-top: 5mm;">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;"><strong>Sequenza corretta</strong>: <strong>D → A → F → C → B → E</strong>
+      (1: bollettino Regione · 2: apertura COC · 3: volontari controllano · 4: inizia la pioggia · 5: avviso del Comune · 6: chiusura COC).
+      <strong>Variante ammessa</strong>: B (avviso del Comune) può precedere C (la pioggia) oppure essere contemporaneo — accettare entrambe le posizioni se motivate.<br>
+      <strong>Domanda extra</strong>: il <strong>Centro Funzionale Regionale Lazio</strong> (l'ufficio della Regione che monitora il meteo) decide il colore. Accettare anche risposte tipo "la Regione" o "la Protezione Civile della Regione".</p>
     </div>
 
     <footer class="scheda-footer">
@@ -4708,13 +5942,17 @@
     </div>
 
     <div class="istruzioni-maestra">
-      <strong>Per la maestra/maestro · Soluzioni:</strong>
+      <strong>Per la maestra/maestro · Note didattiche:</strong>
       <ul style="margin:0.3rem 0 0 1rem; padding:0;">
-        <li>Sezione 1: A-1963 · B-1976 · C-1980 · D-1998 · E-2009 · F-2016.</li>
-        <li>Sezione 2 (cronologico): A → B → C → D → E → F.</li>
-        <li>Sezione 3: Irpinia → Dipartimento PC · Vajont → norme idrogeologico · Amatrice → IT-alert.</li>
         <li><strong>Approfondimento</strong>: collegare con la scheda <a href="/formazione/schede-stampabili/caso-amatrice-secondaria2/">Caso Amatrice</a> della secondaria di secondo grado per il dettaglio tecnico.</li>
       </ul>
+    </div>
+
+    <div class="soluzione-capovolta" style="margin-top: 5mm;">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;"><strong>Sezione 1</strong>: A-1963 · B-1976 · C-1980 · D-1998 · E-2009 · F-2016.
+      <strong>Sezione 2</strong> (cronologico): A → B → C → D → E → F.
+      <strong>Sezione 3</strong>: Irpinia → Dipartimento PC · Vajont → norme idrogeologico · Amatrice → IT-alert.</p>
     </div>
 
     <footer class="scheda-footer">
@@ -4837,12 +6075,16 @@
     </div>
 
     <div class="istruzioni-maestra">
-      <strong>Per la maestra/maestro · Soluzioni:</strong>
+      <strong>Per la maestra/maestro · Note didattiche:</strong>
       <ul style="margin:0.3rem 0 0 1rem; padding:0;">
-        <li>1) 15+22 = <strong>37 mm</strong> · 2) 4×25 + 3×22 = 100+66 = <strong>166 alunni</strong> · 3) 4×2 = <strong>8 bottiglie</strong> · 4) 40÷5 = <strong>8 volontari</strong> · 5) 800÷100 = <strong>8 minuti</strong> · 6) 32×32 = <strong>1.024 volte</strong>.</li>
         <li><strong>Differenziazione</strong>: per la 3ª, omettere il problema 6 (magnitudo). Per la 5ª, aggiungere il calcolo della percentuale di rischio (avanzato).</li>
         <li><strong>Aggancio reale</strong>: il problema 1 può essere fatto con dati veri scaricati dal <a href="/allerte-meteo/">bollettino allerta meteo</a>.</li>
       </ul>
+    </div>
+
+    <div class="soluzione-capovolta" style="margin-top: 5mm;">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;">1) 15+22 = <strong>37 mm</strong> · 2) 4×25 + 3×22 = 100+66 = <strong>166 alunni</strong> · 3) 4×2 = <strong>8 bottiglie</strong> · 4) 40÷5 = <strong>8 volontari</strong> · 5) 800÷100 = <strong>8 minuti</strong> · 6) 32×32 = <strong>1.024 volte</strong>.</p>
     </div>
 
     <footer class="scheda-footer">
@@ -4959,13 +6201,17 @@
     </div>
 
     <div class="istruzioni-maestra">
-      <strong>Per la maestra/maestro · Soluzioni:</strong>
+      <strong>Per la maestra/maestro · Note didattiche:</strong>
       <ul style="margin:0.3rem 0 0 1rem; padding:0;">
-        <li><strong>Sez 1</strong>: Friuli-Z1 · Sardegna-Z4 · Lazio-Z3 (Genzano è Z2-3 al confine) · Calabria-Z1.</li>
-        <li><strong>Sez 2 risp 1</strong>: Sardegna · <strong>2</strong>: zona 2-3 (sismicità media) · <strong>3</strong>: la Sardegna sta su una placca diversa, lontana dal "scontro" tra le placche euroasiatica e africana.</li>
         <li><strong>Approfondimento</strong>: scaricare la mappa ufficiale INGV su <a href="https://emidius.mi.ingv.it/CPTI/" target="_blank" rel="noopener">emidius.mi.ingv.it</a>. Per la 5ª, introdurre i concetti di placca e di faglia.</li>
         <li>Collegamento con la scheda <a href="/formazione/schede-stampabili/eventi-pc-italiani-primaria/">Eventi PC italiani</a>: notare che gli eventi sismici raccontati sono tutti in zone 1-2.</li>
       </ul>
+    </div>
+
+    <div class="soluzione-capovolta" style="margin-top: 5mm;">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;"><strong>Sezione 1</strong>: Friuli-Z1 · Sardegna-Z4 · Lazio-Z3 (Genzano è Z2-3 al confine) · Calabria-Z1.<br>
+      <strong>Sezione 2</strong> — risposta 1: Sardegna · 2: zona 2-3 (sismicità media) · 3: la Sardegna sta su una placca diversa, lontana dal "scontro" tra le placche euroasiatica e africana.</p>
     </div>
 
     <footer class="scheda-footer">
@@ -5115,7 +6361,7 @@
     <div class="testo-box">
       <div class="titolo">📖 Il terremoto di Amatrice — un evento che ha cambiato l'Italia</div>
       <div class="corpo">
-        <p><span class="par-num">1</span>La notte del <strong>24 agosto 2016</strong>, alle <strong>3:36</strong> del mattino, un terremoto molto forte ha colpito il Centro Italia. La scossa è stata di <strong>magnitudo 6.0</strong>: un valore che indica un terremoto di forza grande. L'epicentro, cioè il punto da cui partiva la scossa, era vicino al paese di <strong>Accumoli</strong>, in provincia di Rieti.</p>
+        <p><span class="par-num">1</span>La notte del <strong>24 agosto 2016</strong>, alle <strong>3:36</strong> del mattino, un terremoto molto forte ha colpito il Centro Italia. La scossa è stata di <strong>magnitudo 6.0</strong>: un valore che indica un terremoto di forza grande. L'<strong>epicentro</strong>, cioè il punto sulla superficie della Terra che si trova proprio sopra il luogo in profondità da cui è partita la scossa, era vicino al paese di <strong>Accumoli</strong>, in provincia di Rieti.</p>
 
         <p><span class="par-num">2</span>Il terremoto ha colpito <strong>quattro regioni</strong>: il Lazio, l'Umbria, le Marche e l'Abruzzo. Il paese più danneggiato è stato <strong>Amatrice</strong>, dove gran parte delle case sono crollate. Nei giorni successivi sono arrivate <strong>repliche</strong>, cioè altre scosse, alcune anche molto forti. Una scossa di magnitudo 6.5 il 30 ottobre è stata la più grande in Italia dal 1980.</p>
 
@@ -5174,7 +6420,7 @@
     <div class="istruzioni-maestra">
       <strong>Per la maestra/maestro · Soluzioni:</strong>
       <ul style="margin:0.3rem 0 0 1rem; padding:0;">
-        <li>1) 24 agosto 2016, ore 3:36 · 2) magnitudo 6.0 · 3) il punto da cui parte la scossa · 4) 4 (Lazio, Umbria, Marche, Abruzzo) · 5) altre scosse dopo la principale · 6) vigili del fuoco, medici, volontari PC · 7) un sistema che manda messaggi di emergenza ai telefoni · 8) risposta libera (riflessione personale, valorizzare la sincerità).</li>
+        <li>1) 24 agosto 2016, ore 3:36 · 2) magnitudo 6.0 · 3) il punto sulla superficie della Terra che sta proprio sopra il luogo in profondità da cui è partita la scossa · 4) 4 (Lazio, Umbria, Marche, Abruzzo) · 5) altre scosse dopo la principale · 6) vigili del fuoco, medici, volontari PC · 7) un sistema che manda messaggi di emergenza ai telefoni · 8) risposta libera (riflessione personale, valorizzare la sincerità).</li>
         <li><strong>Sensibilità</strong>: l'argomento è serio. Se in classe ci sono alunni che hanno vissuto eventi simili, attenzione e rispetto. Per la 4ª, leggere insieme; per la 5ª, lettura individuale silenziosa.</li>
         <li><strong>Estensione</strong>: collegare con la scheda <a href="/formazione/schede-stampabili/eventi-pc-italiani-primaria/">Eventi PC italiani</a> e con <a href="/formazione/schede-stampabili/caso-amatrice-secondaria2/">Caso Amatrice</a> (secondaria) per la versione approfondita.</li>
       </ul>
@@ -5210,7 +6456,7 @@
 
     <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.9rem; line-height: 1.55;">
       <div style="font-weight: 700; color: var(--scheda-blu); margin-bottom: 0.2rem;">🤝 Chi è un volontario di Protezione Civile</div>
-      Un volontario di PC è un cittadino che <strong>scegli di aiutare</strong> gli altri in caso di emergenza, senza essere pagato. In Italia ci sono <strong>oltre 360.000 volontari</strong> di PC iscritti negli Elenchi Regionali. Possono essere giovani, adulti, pensionati. Devono <strong>seguire dei corsi</strong> (formazione di base 12-16 ore + corsi specialistici come radio, sanitario, antincendio). Hanno una <strong>tessera</strong>, una <strong>divisa</strong> con il loro nome e quello del Gruppo, e <strong>materiali di sicurezza</strong> (elmetto, gilet riflettente, scarpe robuste). Quando si attivano, sono tutelati dalla <strong>legge 1/2018</strong>: rimborso al datore di lavoro, copertura assicurativa, gratuità della formazione.
+      Un volontario di PC è un cittadino che <strong>sceglie di aiutare</strong> gli altri in caso di emergenza, senza essere pagato. Ci sono <strong>centinaia di migliaia di volontari</strong> di PC in tutta Italia, iscritti negli Elenchi Regionali (fonte: Dipartimento della Protezione Civile). Possono essere giovani, adulti, pensionati. Devono <strong>seguire dei corsi</strong> (formazione di base 12-16 ore + corsi specialistici come radio, sanitario, antincendio). Hanno una <strong>tessera</strong>, una <strong>divisa</strong> con il loro nome e quello del Gruppo, e <strong>materiali di sicurezza</strong> (elmetto, gilet riflettente, scarpe robuste). Quando si attivano, sono tutelati dal <strong>decreto legislativo 1/2018 (Codice della Protezione Civile)</strong>: rimborso al datore di lavoro, copertura assicurativa, gratuità della formazione.
       <br><em>Fonte: DPC — Sezione volontariato; D.Lgs. 1/2018 artt. 32-36.</em>
     </div>
 
@@ -5599,7 +6845,7 @@
     </p>
 
     <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.5rem 0; font-size: 0.9rem; line-height: 1.55;">
-      <strong style="color: var(--scheda-blu);">🌦️ Come nasce un bollettino di allerta</strong> — Ogni giorno, alle 13:00, esce il <strong>Bollettino di Criticità</strong>. Lo scrivono i meteorologi del <strong>Centro Funzionale Regionale (CFR)</strong> guardando i dati di pioggia, vento, neve e fiumi delle prossime 24 ore. Lo standard nazionale (Direttiva PCM 27/2/2004) prevede <strong>4 colori per 7 tipi di rischio</strong> (idrogeologico, idraulico, temporali, vento, neve, calore, valanghe). Ogni Comune appartiene a una <strong>Zona di Allerta</strong>: Genzano è in <strong>Zona F</strong> (Bacino Tevere — Roma). Quando l'allerta è arancione o rossa, il Sindaco può chiudere scuole e parchi, e l'<strong>IT-alert</strong> arriva sui cellulari di tutta la zona.
+      <strong style="color: var(--scheda-blu);">🌦️ Come nasce un bollettino di allerta</strong> — Ogni giorno, alle 13:00, esce il <strong>Bollettino di Criticità</strong>. Lo scrivono i meteorologi del <strong>Centro Funzionale Regionale (CFR)</strong> guardando i dati di pioggia, vento, neve e fiumi delle prossime 24 ore. Lo standard nazionale (Direttiva PCM 27/2/2004) prevede <strong>4 colori per 7 tipi di rischio</strong> (idrogeologico, idraulico, temporali, vento, neve, calore, valanghe). Ogni Comune appartiene a una <strong>Zona di Allerta</strong>: Genzano è in <strong>Zona F</strong> (Bacini Costieri Sud). Quando l'allerta è arancione o rossa, il Sindaco può chiudere scuole e parchi e avvisa i cittadini con i <strong>canali ufficiali del Comune</strong> (sito, social, altoparlanti) insieme al Gruppo di Protezione Civile.
       <br><em>Fonte: Centro Funzionale Regionale Lazio; DPC.</em>
     </div>
 
@@ -5646,12 +6892,16 @@
     </table>
 
     <div class="istruzioni-maestra">
-      <strong>Per la maestra/maestro · Soluzioni:</strong>
+      <strong>Per la maestra/maestro · Note didattiche:</strong>
       <ul style="margin:0.3rem 0 0 1rem; padding:0;">
-        <li>Abbinamenti: 1=V, 2=R, 3=G, 4=R, 5=V, 6=A.</li>
-        <li>Risposte attese ai colori: 🟢 attività normali; 🟡 attento al cielo, sentire le previsioni; 🟠 limitare le uscite, niente attività all'aperto; 🔴 stare in casa, seguire le indicazioni del Comune.</li>
         <li><strong>Estensione</strong>: collegare con la scheda <a href="/formazione/schede-stampabili/decodifica-bollettino-secondaria/">Decodifica bollettino (Secondaria I)</a> per la lettura di un bollettino reale.</li>
       </ul>
+    </div>
+
+    <div class="soluzione-capovolta" style="margin-top: 5mm;">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;"><strong>Abbinamenti</strong>: 1=V, 2=R, 3=G, 4=R, 5=V, 6=A.<br>
+      <strong>Risposte attese ai colori</strong>: 🟢 attività normali; 🟡 attento al cielo, sentire le previsioni; 🟠 limitare le uscite, niente attività all'aperto; 🔴 stare in casa, seguire le indicazioni del Comune.</p>
     </div>
 
     <footer class="scheda-footer">
@@ -5693,8 +6943,8 @@
     <p style="margin-bottom: 0.4rem; font-size: 0.9rem;">Usa questi simboli (colora con i pennarelli):</p>
     <div class="legend-row">
       <div class="item"><span class="icon-l uscita">🚪</span>Uscita di emergenza</div>
-      <div class="item"><span class="icon-l via">→</span>Via di fuga (frecce)</div>
-      <div class="item"><span class="icon-l raccolta">⚪</span>Punto di raccolta esterno</div>
+      <div class="item"><span class="icon-l via">→</span>Via di fuga: <strong>1</strong> = linea continua (principale), <strong>2</strong> = linea tratteggiata (emergenza)</div>
+      <div class="item"><span class="icon-l raccolta">⚪</span>Punto di raccolta esterno = cerchio con la <strong>R</strong></div>
       <div class="item"><span class="icon-l pericolo">🔥</span>Pericolo (cucina, gas, ecc.)</div>
     </div>
 
@@ -5750,17 +7000,17 @@
     <h2 class="scheda-h2">✏️ Compila</h2>
     <ol style="font-size: 0.92rem; line-height: 1.6; padding-left: 1.4rem;">
       <li>Disegna nella mappa il <strong>tuo banco</strong> nella tua aula (un quadrato).</li>
-      <li>Traccia con un pennarello <strong>verde</strong> la via di fuga PRINCIPALE (quella che usi tutti i giorni per uscire da scuola).</li>
-      <li>Traccia con un pennarello <strong>arancione</strong> la via di fuga di EMERGENZA (quella che usi se la principale è bloccata).</li>
-      <li>Segna con un cerchio blu il <strong>punto di raccolta</strong> fuori dalla scuola dove la tua classe si ferma.</li>
+      <li>Traccia la via di fuga PRINCIPALE (quella che usi tutti i giorni per uscire da scuola) con una <strong>linea continua</strong> e scrivici accanto il numero <strong>1</strong>. Se hai un pennarello verde, usa il verde.</li>
+      <li>Traccia la via di fuga di EMERGENZA (quella che usi se la principale è bloccata) con una <strong>linea tratteggiata</strong> e scrivici accanto il numero <strong>2</strong>. Se hai un pennarello arancione, usa l'arancione.</li>
+      <li>Segna il <strong>punto di raccolta</strong> fuori dalla scuola, dove la tua classe si ferma, con un <strong>cerchio</strong> e scrivici dentro la lettera <strong>R</strong> (di "raccolta"). Se hai un pennarello blu, usa il blu.</li>
       <li>Disegna un'icona di <strong>pericolo</strong> 🔥 nella cucina della mensa.</li>
     </ol>
 
     <h2 class="scheda-h2">📋 Verifica con la maestra</h2>
     <div style="font-size: 0.9rem; line-height: 1.65;">
       <div><span class="pf-checkbox"></span>Ho disegnato il mio banco</div>
-      <div><span class="pf-checkbox"></span>Ho colorato 2 vie di fuga (verde e arancione)</div>
-      <div><span class="pf-checkbox"></span>Ho segnato il punto di raccolta</div>
+      <div><span class="pf-checkbox"></span>Ho tracciato le 2 vie di fuga: la <strong>1</strong> con linea continua, la <strong>2</strong> tratteggiata</div>
+      <div><span class="pf-checkbox"></span>Ho segnato il punto di raccolta con il cerchio e la <strong>R</strong></div>
       <div><span class="pf-checkbox"></span>So <strong>il nome del compagno</strong> a cui dare la mano in fila</div>
       <div><span class="pf-checkbox"></span>So che <strong>NON si usa l'ascensore</strong> per uscire</div>
       <div><span class="pf-checkbox"></span>So che dopo l'uscita <strong>resto in fila al punto di raccolta</strong> finché la maestra fa l'appello</div>
@@ -5770,6 +7020,7 @@
       <strong>Per la maestra/maestro · Note operative:</strong>
       <ul style="margin:0.3rem 0 0 1rem; padding:0;">
         <li>Idealmente, fare l'attività dopo aver percorso fisicamente le due vie di fuga della scuola con la classe (es. dopo la prova evacuazione semestrale prevista dal D.M. 26 agosto 1992).</li>
+        <li><strong>Nota normativa</strong>: il D.M. 26 agosto 1992 è la norma storica di prevenzione incendi per l'edilizia scolastica. Per la parte di gestione dell'emergenza (piano di emergenza, prove di evacuazione, formazione degli addetti) è oggi affiancato dal <strong>D.M. 2 settembre 2021</strong> — il cosiddetto "decreto GSA", Gestione della Sicurezza Antincendio, in GU n. 237 del 4/10/2021. Da non confondere con il D.M. 3 settembre 2021 ("minicodice", GU n. 259 del 29/10/2021), che riguarda invece i criteri generali di progettazione, realizzazione ed esercizio della sicurezza antincendio.</li>
         <li>Se possibile, sostituire la pianta-tipo della scheda con la <strong>planimetria reale</strong> della scuola fornita dal Responsabile del Servizio di Prevenzione e Protezione (RSPP).</li>
         <li>Far disegnare il punto di raccolta REALE della propria scuola (di solito un cortile, un parcheggio, una piazza adiacente).</li>
         <li><strong>Estensione</strong>: collegare con la versione <a href="/formazione/schede-stampabili/labirinto-evacuazione-secondaria/">Calcolo tempi (Sec I)</a> e con la <a href="/formazione/schede-stampabili/labirinto-uscita/">Labirinto uscita (Infanzia)</a>.</li>
@@ -5812,7 +7063,7 @@
 
     <h2 class="scheda-h2">📖 Le parole nuove</h2>
     <dl style="display: grid; grid-template-columns: auto 1fr; gap: 0.3rem 0.7rem; margin: 0.4rem 0; font-size: 0.88rem; line-height: 1.45; padding: 0.55rem 0.85rem; background: #fff; border: 1.5px solid var(--scheda-bordo); border-radius: 6px;">
-      <dt style="font-weight: 700; color: var(--scheda-blu);">Magnitudo</dt><dd style="margin: 0;">numero che dice quanto è forte la scossa. Friuli: 6,5.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu);">Magnitudo</dt><dd style="margin: 0;">numero che dice quanto è forte la scossa. Friuli: 6,4.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu);">Antisismico</dt><dd style="margin: 0;">costruito per resistere meglio alle scosse.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu);">Tendopoli</dt><dd style="margin: 0;">campo di tende dove la gente vive dopo un'emergenza.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu);">Ricostruzione</dt><dd style="margin: 0;">il lavoro di rimettere in piedi case, chiese, scuole dopo un disastro.</dd>
@@ -5822,7 +7073,7 @@
 
     <div class="timeline-box">
       <div class="data">6 maggio 1976 — sera</div>
-      <div class="corpo">Una scossa di magnitudo 6,5 colpisce il Friuli. La gente fugge in strada. Tanti paesi (Gemona, Venzone, Buia) vengono gravemente danneggiati. È il peggior terremoto in Italia da molti anni.</div>
+      <div class="corpo">Una scossa di magnitudo 6,4 colpisce il Friuli. La gente fugge in strada. Tanti paesi (Gemona, Venzone, Buia) vengono gravemente danneggiati. È il peggior terremoto in Italia da molti anni.</div>
     </div>
 
     <div class="timeline-box">
@@ -5893,7 +7144,7 @@
     <div class="istruzioni-maestra">
       <strong>Per la maestra/maestro · Soluzioni e note didattiche:</strong>
       <ul style="margin:0.3rem 0 0 1rem; padding:0;">
-        <li><strong>Risposte:</strong> 1) maggio 1976 · 2) ricostruire ogni paese nello stesso posto e con lo stesso aspetto di prima, ma più sicuro · 3) campi di tende dove la gente vive temporaneamente dopo un'emergenza · 4) la Protezione Civile italiana moderna · 5) per resistere meglio alle scosse e proteggere chi ci abita.</li>
+        <li><strong>Risposte:</strong> 1) maggio 1976 · 2) ricostruire ogni paese nello stesso posto e con lo stesso aspetto di prima, ma più sicuro · 3) è andata meglio in Friuli (1976): ricostruzione veloce e ben fatta, oggi studiata come modello; è andata peggio in Irpinia (1980): ricostruzione lenta e con molti problemi, alcuni paesi mai del tutto ricostruiti (anche a L'Aquila, nel 2009, il centro storico è rimasto vuoto per anni) · 4) la Protezione Civile italiana moderna · 5) per resistere meglio alle scosse e proteggere chi ci abita.</li>
         <li><strong>Sensibilità</strong>: l'argomento è doloroso ma "positivo nella ricostruzione". Insistere sul lieto fine: il Friuli oggi sta bene.</li>
         <li><strong>Estensione</strong>: collegare con <a href="/formazione/schede-stampabili/caso-friuli-secondaria/">Caso Friuli (Sec I)</a> e <a href="/formazione/schede-stampabili/caso-friuli-secondaria2/">Caso Friuli (Sec II)</a> per la versione approfondita. Discipline: italiano (testo storico), storia, geografia (Friuli), ed. civica (solidarietà).</li>
         <li><strong>Riferimenti curricolari</strong>: Indicazioni Nazionali 2012 — Storia (uso delle fonti), Geografia, Cittadinanza. Legge 92/2019 — Educazione civica trasversale.</li>
@@ -6001,7 +7252,7 @@
     <div class="istruzioni-maestra">
       <strong>Per la maestra/maestro · Soluzioni e note didattiche:</strong>
       <ul style="margin:0.3rem 0 0 1rem; padding:0;">
-        <li><strong>Risposte:</strong> 1) 23 novembre 1980 · 2) Campania (e parte della Basilicata) · 3) il Ministro che ha fondato la Protezione Civile italiana moderna · 4) il Servizio Nazionale di Protezione Civile · 5) risposta libera, valorizzare risposta organizzata in emergenza, aiuto a chi non può aiutarsi da solo.</li>
+        <li><strong>Risposte:</strong> 1) 23 novembre 1980 · 2) Campania (e parte della Basilicata) · 3) disse in TV «Fate presto!»; sono parole famose perché denunciavano il ritardo dei soccorsi (nei paesi isolati arrivarono dopo 2-3 giorni) e da quella protesta nacque l'idea di una squadra unica nazionale, la Protezione Civile · 4) Giuseppe Zamberletti: nel 1981-1982 il governo lo nominò "Ministro per gli interventi straordinari" e fu lui a iniziare a costruire la Protezione Civile italiana moderna · 5) risposta libera, valorizzare risposta organizzata in emergenza, aiuto a chi non può aiutarsi da solo.</li>
         <li><strong>Sensibilità</strong>: focus sul "lieto fine istituzionale" — la nascita della PC. Evitare il dettaglio delle vittime, evidenziare la lezione storica positiva.</li>
         <li><strong>Estensione</strong>: collegare con <a href="/formazione/schede-stampabili/caso-irpinia-secondaria/">Caso Irpinia (Sec I)</a> e <a href="/formazione/schede-stampabili/caso-irpinia-secondaria2/">Caso Irpinia (Sec II)</a>. Articolo del sito: <a href="/comunicazioni/2025-11-23-irpinia-1980-anniversario-nascita-protezione-civile/">23 novembre 1980 — anniversario</a>.</li>
         <li><strong>Riferimenti curricolari</strong>: Indicazioni Nazionali 2012 — Storia, Cittadinanza. Legge 92/2019. D.M. 183/2024 — Costituzione (organizzazione della Repubblica) + Cittadinanza solidale.</li>
@@ -6187,7 +7438,7 @@
 
     <div class="timeline-box">
       <div class="data">2017-oggi</div>
-      <div class="corpo">Inizia la <strong>ricostruzione</strong>, lenta ma in corso. I ristoranti d'Italia preparano la <em>pasta all'amatriciana</em> per raccogliere fondi. Vengono costruite scuole nuove e antisismiche.</div>
+      <div class="corpo">Inizia la <strong>ricostruzione</strong>, lenta ma in corso (al 2026). I ristoranti d'Italia preparano la <em>pasta all'amatriciana</em> per raccogliere fondi. Vengono costruite scuole nuove e antisismiche.</div>
     </div>
 
     <h2 class="scheda-h2">📊 Tre terremoti italiani a confronto</h2>
@@ -6202,7 +7453,7 @@
       </tbody>
     </table>
     <p style="font-size: 0.82rem; color: #495057; margin: 0.2rem 0 0.6rem; font-style: italic;">
-      Stessa zona del mondo (Appennino), magnitudi vicine, vittime molto diverse: dipende anche da <em>come</em> sono costruite le case.
+      Stessa zona del mondo (Appennino), magnitudo vicine, vittime molto diverse: dipende anche da <em>come</em> sono costruite le case.
     </p>
 
     <h2 class="scheda-h2">✏️ Rispondi alle domande</h2>
@@ -6489,7 +7740,7 @@
 
     <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.6rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.5rem 0; font-size: 0.9rem; line-height: 1.55;">
       <div style="font-weight: 700; color: var(--scheda-blu); margin-bottom: 0.25rem;">🌊 Cos'è un maremoto (tsunami)</div>
-      Un <strong>maremoto</strong> è un'onda lunga del mare provocata da un grande terremoto sottomarino. Sembra strano ma funziona così: quando il fondo del mare si muove di colpo (per la scossa), tutta l'acqua sopra si sposta. Si forma un'onda che viaggia veloce per centinaia di chilometri. Quando arriva vicino alla riva, l'onda si <strong>alza tantissimo</strong>: a Messina nel 1908 arrivò un'onda di <strong>10-13 metri</strong>. Oggi in Italia c'è un sistema di allerta tsunami (<strong>CAT-INGV</strong>) che avvisa i sindaci e con IT-alert anche i cellulari.
+      Un <strong>maremoto</strong> è un'onda lunga del mare provocata da un grande terremoto sottomarino. Sembra strano ma funziona così: quando il fondo del mare si muove di colpo (per la scossa), tutta l'acqua sopra si sposta. Si forma un'onda che viaggia veloce per centinaia di chilometri. Quando arriva vicino alla riva, l'onda si <strong>alza tantissimo</strong>: a Messina nel 1908 arrivò un'onda di <strong>10-13 metri</strong>. Oggi in Italia c'è un sistema di allerta tsunami (<strong>CAT-INGV</strong>) che avvisa i sindaci dei Comuni sul mare, che poi allertano le persone con sirene e altoparlanti. L'avviso sui cellulari con IT-alert, per il maremoto, è ancora una prova: per ora arrivano solo messaggi di test.
       <br><em>Fonte: INGV — Centro Allerta Tsunami; ISPRA.</em>
     </div>
 
@@ -7069,12 +8320,17 @@
 
     <div class="timeline-box">
       <div class="data">Anni 2000-oggi — bradisismo</div>
-      <div class="corpo">In quella zona il terreno si <strong>alza e si abbassa lentamente</strong>: è un fenomeno chiamato "bradisismo". Gli scienziati lo studiano per capire cosa sta succedendo sotto.</div>
+      <div class="corpo">In quella zona il terreno si <strong>alza e si abbassa lentamente</strong>: è un fenomeno chiamato "bradisismo". A volte ci sono gruppi di piccole scosse: a fine luglio 2026 la più forte ha avuto magnitudo 4.7 (misurata dall'INGV). Gli scienziati lo studiano per capire cosa sta succedendo sotto.</div>
+    </div>
+
+    <div class="timeline-box">
+      <div class="data">30 luglio – 1° agosto 2026 — sciame sismico</div>
+      <div class="corpo">In tre giorni gli strumenti dell'INGV registrano <strong>66 piccole scosse</strong>. La più forte (31 luglio 2026, magnitudo 4.7) è la più potente misurata in questa zona almeno dal 2000. Gli scienziati seguono tutto, giorno e notte.</div>
     </div>
 
     <div class="timeline-box">
       <div class="data">Oggi</div>
-      <div class="corpo">L'<strong>INGV</strong> (Istituto di Geofisica e Vulcanologia) ha tantissimi sensori in zona: misurano scosse, gas, temperatura. Esiste un <strong>piano di evacuazione</strong> per ogni paese: sanno tutti cosa fare se l'allerta dovesse alzarsi.</div>
+      <div class="corpo">L'<strong>INGV</strong> (Istituto di Geofisica e Vulcanologia) ha tantissimi sensori in zona: misurano scosse, gas, temperatura. Esiste un <strong>piano di evacuazione</strong> per ogni paese: sanno tutti cosa fare se l'allerta dovesse alzarsi. Verifica sempre il livello di allerta aggiornato sui siti di INGV e del Dipartimento della Protezione Civile.</div>
     </div>
 
     <h2 class="scheda-h2">💡 Cosa abbiamo imparato</h2>
