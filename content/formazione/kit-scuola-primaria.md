@@ -492,6 +492,12 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 - 👉 [**Cruciverba della Sicurezza**](/formazione/schede-stampabili/cruciverba-primaria/) — 14 definizioni sulle parole-chiave della Protezione Civile, con soluzioni per il docente.
 - 👉 [**Piano di Emergenza Familiare**](/formazione/schede-stampabili/piano-familiare-primaria/) — l'alunno compila con la famiglia il piano di casa: contatti, punti di raccolta, kit, percorso di evacuazione.
 - 👉 [**Ondate di calore**](/formazione/schede-stampabili/ondate-calore-primaria/) — proteggere bambini, anziani, lavoratori all'aperto e animali domestici: box "Ore calde / Acqua e alimenti / Casa / Mai in auto", semaforo del caldo, mini-rubrica delle persone fragili e mini quiz. *(classi 4-5, valida anche per Secondaria I grado)*
+- 👉 [**Perché squilla forte il telefono? IT-alert**](/formazione/schede-stampabili/it-alert-primaria/) — il messaggio di IT-alert spiegato ai bambini: cos'è, come si riconosce e cosa si fa quando arriva, senza spaventarsi. *(ed. civica, tecnologia)*
+- 👉 [**Maremoto — Se sono al mare**](/formazione/schede-stampabili/maremoto-se-sono-al-mare-primaria/) — i segnali naturali (scossa, mare che si ritira, rumore insolito) e la regola d'oro: allontanarsi subito verso un punto alto. Da fare prima delle vacanze. *(scienze, ed. civica)*
+- 👉 [**Vento forte: dove NON ripararsi**](/formazione/schede-stampabili/vento-alberi-primaria/) — mai sotto alberi, impalcature e cartelloni: cosa fare a piedi e in auto, con esercizio vero/falso e soluzione capovolta. *(ed. civica, scienze, geografia)*
+- 👉 [**Il kit blackout di famiglia**](/formazione/schede-stampabili/blackout-kit-famiglia-primaria/) — checklist illustrata per quando manca la corrente (torcia, radio a pile, acqua, power bank, numeri utili su carta) e le regole su candele e ascensore. Da completare a casa. *(ed. civica, scienze, tecnologia)*
+- 👉 [**Sicuri sullo scuolabus**](/formazione/schede-stampabili/scuolabus-sicurezza-primaria/) — attesa alla fermata, salita e discesa, cintura allacciata e cosa fare in emergenza a bordo, con esercizio vero/falso. *(ed. civica, ed. stradale)*
+- 👉 [**In emergenza indico ciò che mi serve (CAA)**](/formazione/schede-stampabili/caa-indico-cio-che-serve-primaria/) — tabella di Comunicazione Aumentativa Alternativa con pittogrammi ARASAAC: chi non riesce a parlare indica col dito ciò che gli serve. Da tenere nello zaino o nel kit di emergenza. *(ed. civica, inclusione)*
 
 **Schede di letto-scrittura** a tema Protezione Civile per le classi 1ª-2ª (6-7 anni):
 

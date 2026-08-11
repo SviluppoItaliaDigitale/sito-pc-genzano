@@ -498,6 +498,7 @@ Schede pronte per la stampa specifiche per la scuola secondaria di primo grado:
 - 👉 [**Audit del Piano di Emergenza Scolastico**](/formazione/schede-stampabili/audit-piano-secondaria/) — compito di realtà: la classe analizza il piano di emergenza della scuola in 4 fasi (documenti, sopralluogo, intervista, sintesi). Output: report al Dirigente.
 - 👉 [**Blackout e servizi essenziali**](/formazione/schede-stampabili/blackout-servizi-essenziali-secondaria/) — disagio, urgenza ed emergenza: piano familiare in caso di interruzione di luce, telefono o acqua. box "Prima/Durante/Comunicazioni/Quando chiamare", attività domestiche, mini quiz. *(ed. civica, tecnologia)*
 - 👉 [**Ondate di calore**](/formazione/schede-stampabili/ondate-calore-primaria/) — rischio sanitario del caldo: persone vulnerabili, comportamenti corretti, semaforo del caldo (verde/giallo/rosso) e mini quiz. *(scienze, ed. civica, valida anche per Primaria 4-5)*
+- 👉 [**Leggere il bollettino delle ondate di calore**](/formazione/schede-stampabili/ondate-calore-secondaria/) — i livelli 0-3 del bollettino del Ministero della Salute, l'isola di calore urbana e le persone più fragili. Esercizio di pianificazione di una giornata con livello 3. *(scienze, geografia, ed. civica)*
 - 👉 [**Monossido di carbonio**](/formazione/schede-stampabili/monossido-carbonio-secondaria/) — il pericolo invisibile in case, garage e locali chiusi: prevenzione, usi vietati di barbecue/bracieri, segnali sospetti e azione sicura. Caccia al rischio in casa e mini quiz. *(scienze, tecnologia)*
 - 👉 [**IT-alert e comunicazioni ufficiali**](/formazione/schede-stampabili/it-alert-comunicazioni-secondaria/) — capire il sistema nazionale di allarme pubblico: anatomia di un messaggio (rischio/area/tempo/azione/fonte), esempio realistico, risposta in 140 caratteri, mini quiz. *(ed. civica, cittadinanza digitale, italiano)*
 - 👉 [**Notizie false in emergenza**](/formazione/schede-stampabili/fake-news-emergenza-secondaria/) — riconoscere e fermare la disinformazione: regola dei 3 controlli (fonte/data/conferma), checklist "prima di condividere", classifica delle notizie a gruppi e mini quiz. *(ed. civica digitale, italiano)*
@@ -534,6 +535,8 @@ Schede pronte per la stampa specifiche per la scuola secondaria di primo grado:
 - 👉 [**Caso Rigopiano 2017**](/formazione/schede-stampabili/caso-rigopiano-secondaria/) — rischio multiplo concomitante: sisma + neve + viabilità chiusa, responsabilità del Sindaco. *(scienze/ed. civica)*
 - 👉 [**I vulcani d'Italia**](/formazione/schede-stampabili/caso-vulcani-italia-secondaria/) — Etna, Stromboli, Vesuvio, Campi Flegrei, Vulcano: monitoraggio INGV, piani di evacuazione. *(scienze/geografia)*
 - 👉 [**I Campi Flegrei**](/formazione/schede-stampabili/caso-campi-flegrei-secondaria/) — caldera, bradisismo, monitoraggio INGV-OV, piano di evacuazione 500.000 persone. *(scienze/geografia/ed. civica)*
+- 👉 [**Caso San Giuliano di Puglia 2002**](/formazione/schede-stampabili/caso-san-giuliano-secondaria/) — il terremoto del Molise del 31 ottobre 2002 e il crollo della scuola: perché gli edifici scolastici devono essere sicuri. *(scienze/ed. civica)*
+- 👉 [**Caso Vermicino 1981**](/formazione/schede-stampabili/caso-vermicino-secondaria/) — perché da quella emergenza è nata la Protezione Civile italiana moderna. *(storia/ed. civica)*
 
 ---
 

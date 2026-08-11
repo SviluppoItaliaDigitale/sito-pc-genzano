@@ -260,6 +260,7 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 - 👉 [**Il Labirinto dell'Uscita**](/formazione/schede-stampabili/labirinto-uscita/) — il bambino traccia con la matita il percorso sicuro evitando gli ostacoli.
 - 👉 [**La Tartaruga Saggia**](/formazione/schede-stampabili/tartaruga-saggia-infanzia/) — Tina spiega 4 comportamenti di autoprotezione, il bambino li ricostruisce.
 - 👉 [**Trova le Coppie**](/formazione/schede-stampabili/trova-coppie-infanzia/) — accoppia oggetti e situazioni della sicurezza.
+- 👉 [**La casa al buio**](/formazione/schede-stampabili/blackout-casa-buia-infanzia/) — cosa facciamo se va via la corrente: stiamo con un adulto, usiamo la torcia e non le candele, teniamo chiuso il frigorifero. Attività da cerchiare e torcia da colorare.
 
 **Schede di letto-scrittura** a tema Protezione Civile per il pre-grafismo e il riconoscimento delle prime parole (5-6 anni):
 
