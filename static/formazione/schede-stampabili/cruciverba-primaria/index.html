@@ -55,6 +55,11 @@
       margin-bottom: 0.3rem;
       line-height: 1.35;
     }
+    /* Soluzione capovolta (ruotata 180°) — pattern kit-calamita, regola progetto:
+       l'alunno non legge la soluzione a colpo d'occhio; l'adulto gira il foglio. */
+    .soluzione-capovolta { margin: 1rem 0 0; padding: 0.5rem 0.8rem; border: 1.5px dashed var(--scheda-bordo); border-radius: 6px; background: #fafbfc; transform: rotate(180deg); transform-origin: center center; font-size: 0.85rem; line-height: 1.5; page-break-inside: avoid; }
+    .soluzione-capovolta .titolo { display: block; font-weight: 700; color: var(--scheda-blu); margin-bottom: 0.2rem; }
+    @media print { .soluzione-capovolta { background: transparent; border-width: 1px; } }
   </style>
 </head>
 <body>
@@ -262,9 +267,9 @@
         <h3>Orizzontali ➡️</h3>
         <ol>
           <li>Stato di attenzione per pioggia o vento forte (7 lettere).</li>
-          <li>Si lasciano dietro nel sangue (1 lettera).</li>
+          <li>La prima lettera dell'alfabeto (1 lettera).</li>
           <li>Sinonimo di terremoto (5 lettere).</li>
-          <li>Pronome personale terza persona (1 lettera).</li>
+          <li>Unisce due parole: pane ___ marmellata (1 lettera).</li>
           <li>Si usano per evacuare ai piani: meglio dell'ascensore (5 lettere).</li>
           <li>Strumento per misurare la pioggia in arrivo (5 lettere).</li>
           <li>Situazione di pericolo grave: si chiama il 112 (9 lettere).</li>
@@ -279,12 +284,12 @@
           <li>Strumento per spegnere piccoli incendi: ____________.</li>
           <li>Sistema nazionale che invia messaggi al cellulare in emergenza: __ - ______ .</li>
         </ol>
-        <p style="margin-top: 0.5rem;"><em>Risposte: 112 · emergenza · estintore · IT-alert.</em></p>
+        <div class="soluzione-capovolta"><span class="titolo">🔑 Risposte — gira il foglio sottosopra per leggere</span>112 · emergenza · estintore · IT-alert.</div>
       </div>
     </div>
 
-    <div style="margin-top: 0.8rem; padding: 0.6rem 0.8rem; background: #d1e7dd; border-radius: 8px; border-left: 4px solid var(--scheda-verde); font-size: 0.85rem;">
-      <strong style="color: var(--scheda-verde);">Soluzioni cruciverba</strong>:
+    <div class="soluzione-capovolta">
+      <span class="titolo">🔑 Soluzioni cruciverba — gira il foglio sottosopra per leggere</span>
       1) ALLERTA · 2) A · 3) SISMA · 4) E · 5) SCALE · 6) RADAR · 7) EMERGENZA · 8) VOLONTARIO.
       Lettere verticali in ordine: <strong>SICUREZZA</strong>.
     </div>

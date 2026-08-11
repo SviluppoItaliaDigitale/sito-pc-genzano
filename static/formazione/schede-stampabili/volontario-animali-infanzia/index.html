@@ -10,12 +10,13 @@
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
   <style>
     body { margin: 0; padding: 0; background: #f4f7fb; }
-    .scheda-immagine-wrapper { max-width: 900px; margin: 1rem auto; padding: 0 1rem; }
-    .scheda-immagine-wrapper img { width: 100%; height: auto; display: block; box-shadow: 0 4px 20px rgba(0,0,0,0.12); border-radius: 4px; }
+    .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+    .scheda-immagine-wrapper { max-width: 900px; min-height: auto; margin: 1rem auto; padding: 1rem; }
+    .scheda-immagine-wrapper img { width: 100%; height: auto; display: block; border-radius: 4px; }
     @media print {
       body { background: #fff; }
       .scheda-immagine-wrapper { max-width: 100%; margin: 0; padding: 0; }
-      .scheda-immagine-wrapper img { box-shadow: none; border-radius: 0; width: 100%; height: auto; max-height: 100vh; object-fit: contain; }
+      .scheda-immagine-wrapper img { border-radius: 0; width: 100%; height: auto; max-height: 260mm; object-fit: contain; }
       @page { size: A4 portrait; margin: 8mm; }
     }
   </style>
@@ -27,7 +28,8 @@
     <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
   </div>
 
-  <main class="scheda-immagine-wrapper">
+  <main class="scheda-immagine-wrapper scheda-page">
+    <h1 class="visually-hidden">Da colorare: Il volontario e gli animali — Infanzia</h1>
     <img src="scheda-completa.png"
          alt="Scheda da colorare: il volontario e gli animali. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo 'Il volontario e gli animali'. Sottotitolo 'Colora i disegni e scopri come aiutare gli animali in sicurezza'. Sei vignette numerate: 1) volontario PC accovacciato accarezza un cane spaventato, 'Aiuta un cane spaventato'; 2) volontario PC offre una ciotola d'acqua a un gatto, 'Porta acqua a un gatto'; 3) bambino fermo davanti a un cane sconosciuto con segno di mano fermati, 'Non tocco animali sconosciuti da solo'; 4) bambino indica e parla alla mamma, 'Avviso subito un adulto'; 5) bambino al telefono con fumetto 112, 'Se serve, chiamo il 112'; 6) volontario PC trasporta un trasportino con un cane dentro verso una casa, 'Il volontario mette l'animale al sicuro'. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
   </main>

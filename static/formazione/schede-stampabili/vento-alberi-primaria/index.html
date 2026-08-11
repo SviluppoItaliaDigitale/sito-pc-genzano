@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Vento forte, dove NON ripararsi — Scuola Primaria</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Primaria (6-10 anni). Con il vento forte non ci si ripara mai sotto alberi, impalcature e cartelloni. Cosa fare a piedi e in auto, esercizio vero/falso con soluzione capovolta.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    /* Griglia "posti NO" */
+    .posti-no {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.6rem;
+      margin: 0.5rem 0 0.8rem;
+    }
+    .posto-no {
+      border: 2px solid var(--scheda-rosso);
+      border-radius: 10px;
+      background: #fff5f5;
+      padding: 0.55rem 0.6rem;
+      text-align: center;
+      page-break-inside: avoid;
+    }
+    .posto-no .emo {
+      font-size: 2rem;
+      display: block;
+      line-height: 1.2;
+      margin-bottom: 0.2rem;
+    }
+    .posto-no .nome {
+      font-weight: 700;
+      color: var(--scheda-rosso);
+      font-size: 0.95rem;
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+    .posto-no .perche {
+      font-size: 0.82rem;
+      line-height: 1.35;
+      color: #212529;
+    }
+
+    /* Cosa fare: due colonne a piedi / in auto */
+    .vento-fare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.7rem;
+      margin: 0.5rem 0 0.8rem;
+    }
+    .vento-fare .fare-card {
+      border: 1.5px solid var(--scheda-bordo);
+      border-radius: 10px;
+      background: #fcfcfc;
+      padding: 0.55rem 0.75rem;
+      page-break-inside: avoid;
+    }
+    .vento-fare .fare-card h3 {
+      margin: 0 0 0.3rem;
+      font-size: 1rem;
+      color: var(--scheda-blu);
+    }
+    .vento-fare .fare-card ul {
+      margin: 0;
+      padding-left: 1.1rem;
+      font-size: 0.9rem;
+      line-height: 1.45;
+    }
+    .vento-fare .fare-card li { margin: 0.15rem 0; }
+
+    /* Quiz vero/falso */
+    .quiz-vf {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.4rem 0 0.5rem;
+      font-size: 0.92rem;
+    }
+    .quiz-vf th, .quiz-vf td {
+      border: 1.5px solid var(--scheda-bordo);
+      padding: 0.4rem 0.55rem;
+    }
+    .quiz-vf th {
+      background: #f0f4f8;
+      color: var(--scheda-blu);
+      text-align: left;
+      font-weight: 700;
+    }
+    .quiz-vf td.vf {
+      width: 8%;
+      text-align: center;
+    }
+    .quiz-vf .casella {
+      display: inline-block;
+      width: 1.2rem;
+      height: 1.2rem;
+      border: 2px solid var(--scheda-bordo);
+      border-radius: 3px;
+      vertical-align: middle;
+    }
+
+    /* Soluzione capovolta 180° (pattern kit-calamita) */
+    .soluzione-capovolta {
+      margin: 0.7rem 0 0;
+      padding: 0.45rem 0.7rem;
+      border: 1.5px dashed var(--scheda-bordo);
+      border-radius: 6px;
+      background: #fafbfc;
+      transform: rotate(180deg);
+      transform-origin: center center;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      page-break-inside: avoid;
+    }
+    .soluzione-capovolta .titolo {
+      font-weight: 700;
+      color: var(--scheda-blu);
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+
+    @media (max-width: 600px) {
+      .posti-no, .vento-fare { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">← Torna alle schede</a>
+    <span class="scheda-titolo">Vento forte: dove NON ripararsi — Primaria</span>
+    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
+  </div>
+
+  <article class="scheda-page">
+
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Vento forte: dove NON ripararsi</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria · 6-10 anni</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Destinatari:</strong> 6-10 anni, famiglie</span>
+      <span><strong>Durata:</strong> 30 min</span>
+      <span><strong>Discipline:</strong> Educazione civica, Scienze, Geografia</span>
+    </div>
+
+    <div class="scheda-messaggio-chiave">
+      <strong>Messaggio chiave:</strong> con il vento forte il pericolo non è il vento in sé,
+      ma <strong>quello che il vento fa cadere</strong>: rami, tegole, cartelli, vasi.
+      Per questo il posto sicuro è <strong>dentro un edificio</strong>, non "sotto qualcosa".
+    </div>
+
+    <p class="scheda-intro">
+      Il vento forte colpisce spesso i Castelli Romani, soprattutto in autunno e in inverno.
+      Genzano è su una collina esposta ai venti e ha tante <strong>alberature storiche</strong>
+      lungo le strade e nei parchi: con le raffiche, rami e alberi possono cadere, specie se il
+      terreno è inzuppato dalla pioggia. Impariamo dove <strong>non</strong> fermarsi mai.
+    </p>
+
+    <h2 class="scheda-h2">⛔ I posti dove NON ripararsi mai</h2>
+    <div class="posti-no">
+      <div class="posto-no">
+        <span class="emo" aria-hidden="true">🌳</span>
+        <span class="nome">Sotto gli alberi</span>
+        <span class="perche">Rami e alberi interi possono spezzarsi e cadere all'improvviso.</span>
+      </div>
+      <div class="posto-no">
+        <span class="emo" aria-hidden="true">🏗️</span>
+        <span class="nome">Sotto le impalcature</span>
+        <span class="perche">Teli, tavole e tubi dei cantieri possono staccarsi e volare via.</span>
+      </div>
+      <div class="posto-no">
+        <span class="emo" aria-hidden="true">🪧</span>
+        <span class="nome">Sotto i cartelloni</span>
+        <span class="perche">Cartelli e insegne offrono al vento una grande superficie: possono ribaltarsi.</span>
+      </div>
+    </div>
+    <p style="font-size: 0.9rem; margin: 0 0 0.5rem;">
+      Attenzione anche a <strong>pali della luce, cornicioni e strutture sospese</strong>: mai sostare lì sotto.
+    </p>
+
+    <h2 class="scheda-h2">✅ Cosa fare invece</h2>
+    <div class="vento-fare">
+      <div class="fare-card">
+        <h3>🚶 Se sei a piedi</h3>
+        <ul>
+          <li>Allontanati da alberi, pali, impalcature e cartelloni.</li>
+          <li>Entra in un <strong>edificio solido</strong> (casa, scuola, negozio) e resta lontano da finestre e vetrate.</li>
+          <li>Se sei a casa, resta dentro con porte e finestre chiuse.</li>
+        </ul>
+      </div>
+      <div class="fare-card">
+        <h3>🚗 Se sei in auto (con un adulto)</h3>
+        <ul>
+          <li>Chi guida <strong>rallenta</strong> e sta attento agli oggetti trasportati dal vento.</li>
+          <li>Si evitano le <strong>strade alberate</strong>.</li>
+          <li>Non si parcheggia <strong>sotto gli alberi</strong> durante l'allerta.</li>
+        </ul>
+      </div>
+    </div>
+
+    <p style="font-size: 0.92rem; margin: 0.2rem 0 0.5rem;">
+      <strong>E dopo il vento?</strong> Se vedi un albero caduto sulla strada o un cavo elettrico
+      a terra, <strong>non toccare niente</strong> e di' a un adulto di segnalarlo al <strong>112</strong>,
+      l'unico numero di emergenza.
+    </p>
+
+    <h2 class="scheda-h2">✏️ Quiz vero o falso</h2>
+    <table class="quiz-vf">
+      <tr>
+        <th scope="col">Affermazione</th>
+        <th scope="col" class="vf">V</th>
+        <th scope="col" class="vf">F</th>
+      </tr>
+      <tr>
+        <td>1. Se piove e c'è vento forte, mi riparo sotto un grande albero.</td>
+        <td class="vf"><span class="casella" aria-hidden="true"></span></td>
+        <td class="vf"><span class="casella" aria-hidden="true"></span></td>
+      </tr>
+      <tr>
+        <td>2. Il posto più sicuro con il vento forte è dentro un edificio solido.</td>
+        <td class="vf"><span class="casella" aria-hidden="true"></span></td>
+        <td class="vf"><span class="casella" aria-hidden="true"></span></td>
+      </tr>
+      <tr>
+        <td>3. In casa sto vicino alla finestra per guardare il vento.</td>
+        <td class="vf"><span class="casella" aria-hidden="true"></span></td>
+        <td class="vf"><span class="casella" aria-hidden="true"></span></td>
+      </tr>
+      <tr>
+        <td>4. In auto è meglio evitare le strade alberate.</td>
+        <td class="vf"><span class="casella" aria-hidden="true"></span></td>
+        <td class="vf"><span class="casella" aria-hidden="true"></span></td>
+      </tr>
+      <tr>
+        <td>5. Se un cavo elettrico è caduto a terra, lo sposto io per liberare la strada.</td>
+        <td class="vf"><span class="casella" aria-hidden="true"></span></td>
+        <td class="vf"><span class="casella" aria-hidden="true"></span></td>
+      </tr>
+      <tr>
+        <td>6. Uscire "solo per curiosità" durante le raffiche più intense è una cattiva idea.</td>
+        <td class="vf"><span class="casella" aria-hidden="true"></span></td>
+        <td class="vf"><span class="casella" aria-hidden="true"></span></td>
+      </tr>
+    </table>
+
+    <div class="soluzione-capovolta">
+      <span class="titolo">🔑 Soluzioni — gira il foglio sottosopra per leggere</span>
+      1 Falso (mai sotto gli alberi) · 2 Vero · 3 Falso (lontano da finestre e vetrate) ·
+      4 Vero · 5 Falso (non si tocca: un adulto chiama il 112) · 6 Vero.
+    </div>
+
+    <div class="scheda-nota-locale">
+      <strong>Approfondimenti per Genzano:</strong>
+      <a href="/rischi-prevenzione/vento-forte/">Pagina rischio Vento Forte</a> ·
+      <a href="/allerte-meteo/">Allerte Meteo</a> ·
+      <a href="/numeri-utili/">Numeri Utili</a>.
+    </div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "Vento forte: dove NON ripararsi" · Primaria 6-10 anni · Rev. 01 – Agosto 2026</span>
+    </footer>
+
+  </article>
+
+</body>
+</html>

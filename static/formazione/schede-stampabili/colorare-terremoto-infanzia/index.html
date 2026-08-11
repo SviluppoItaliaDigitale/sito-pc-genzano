@@ -10,12 +10,13 @@
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
   <style>
     body { margin: 0; padding: 0; background: #f4f7fb; }
-    .scheda-immagine-wrapper { max-width: 900px; margin: 1rem auto; padding: 0 1rem; }
-    .scheda-immagine-wrapper img { width: 100%; height: auto; display: block; box-shadow: 0 4px 20px rgba(0,0,0,0.12); border-radius: 4px; }
+    .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+    .scheda-immagine-wrapper { max-width: 900px; min-height: auto; margin: 1rem auto; padding: 1rem; }
+    .scheda-immagine-wrapper img { width: 100%; height: auto; display: block; border-radius: 4px; }
     @media print {
       body { background: #fff; }
       .scheda-immagine-wrapper { max-width: 100%; margin: 0; padding: 0; }
-      .scheda-immagine-wrapper img { box-shadow: none; border-radius: 0; width: 100%; height: auto; max-height: 100vh; object-fit: contain; }
+      .scheda-immagine-wrapper img { border-radius: 0; width: 100%; height: auto; max-height: 260mm; object-fit: contain; }
       @page { size: A4 portrait; margin: 8mm; }
     }
   </style>
@@ -27,7 +28,8 @@
     <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
   </div>
 
-  <main class="scheda-immagine-wrapper">
+  <main class="scheda-immagine-wrapper scheda-page">
+    <h1 class="visually-hidden">Da colorare: Cosa faccio quando trema la terra? — Infanzia</h1>
     <img src="scheda-completa.png"
          alt="Scheda da colorare: cosa faccio quando trema la terra. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo 'Cosa faccio quando trema la terra?'. Sei vignette numerate: 1) bambino accovacciato sotto a un tavolo con le mani sulla testa; 2) bambino in piedi con le mani sulla testa; 3) tartaruga kawaii sorridente nel suo guscio; 4) maestra cammina davanti a tre bambini che si tengono per mano in fila; 5) cartello di divieto sopra un ascensore con porte chiuse; 6) maestra con tre bambini accanto al cartello 'Punto di raccolta'. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
   </main>
