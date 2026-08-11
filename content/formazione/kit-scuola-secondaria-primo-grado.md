@@ -10,7 +10,7 @@ Questo kit è pensato per i docenti della **scuola secondaria di primo grado** c
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e si prestano all'uso nelle ore di scienze, geografia, educazione civica e tecnologia.
 
-> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-primo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-primo-grado.zip) (~138 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-primo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-primo-grado.zip) (~223 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
 ---
 
@@ -497,9 +497,9 @@ Schede pronte per la stampa specifiche per la scuola secondaria di primo grado:
 - 👉 [**Mappa dei rischi del quartiere**](/formazione/schede-stampabili/mappa-rischi-secondaria/) — indagine territoriale: lo studente consulta INGV, ISPRA, DPC, EFFIS e disegna la mappa dei rischi del proprio quartiere. domande di analisi.
 - 👉 [**Audit del Piano di Emergenza Scolastico**](/formazione/schede-stampabili/audit-piano-secondaria/) — compito di realtà: la classe analizza il piano di emergenza della scuola in 4 fasi (documenti, sopralluogo, intervista, sintesi). Output: report al Dirigente.
 - 👉 [**Blackout e servizi essenziali**](/formazione/schede-stampabili/blackout-servizi-essenziali-secondaria/) — disagio, urgenza ed emergenza: piano familiare in caso di interruzione di luce, telefono o acqua. box "Prima/Durante/Comunicazioni/Quando chiamare", attività domestiche, mini quiz. *(ed. civica, tecnologia)*
-- 👉 [**Ondate di calore**](/formazione/schede-stampabili/ondate-calore-primaria/) — rischio sanitario del caldo: persone vulnerabili, comportamenti corretti, semaforo del caldo (verde/giallo/rosso) e mini quiz. *(scienze, ed. civica, valida anche per Primaria 4-5)*
-- 👉 [**Leggere il bollettino delle ondate di calore**](/formazione/schede-stampabili/ondate-calore-secondaria/) — i livelli 0-3 del bollettino del Ministero della Salute, l'isola di calore urbana e le persone più fragili. Esercizio di pianificazione di una giornata con livello 3. *(scienze, geografia, ed. civica)*
+- 👉 [**Leggere il bollettino ondate di calore**](/formazione/schede-stampabili/ondate-calore-secondaria/) — il bollettino del Ministero della Salute: livelli 0-1-2-3, come si legge, comportamenti per sé e per le persone fragili, con esercizio su un bollettino di esempio. *(scienze, ed. civica)*
 - 👉 [**Monossido di carbonio**](/formazione/schede-stampabili/monossido-carbonio-secondaria/) — il pericolo invisibile in case, garage e locali chiusi: prevenzione, usi vietati di barbecue/bracieri, segnali sospetti e azione sicura. Caccia al rischio in casa e mini quiz. *(scienze, tecnologia)*
+- 👉 [**Maremoto: la fisica e i comportamenti**](/formazione/schede-stampabili/maremoto-comportamenti-secondaria/) — come si genera un maremoto (velocità dell'onda in mare aperto e in costa), il Sistema di Allertamento SiAM, i tre segnali naturali e i comportamenti di autoprotezione. Mini verifica e soluzioni. *(scienze, geografia, ed. civica)*
 - 👉 [**IT-alert e comunicazioni ufficiali**](/formazione/schede-stampabili/it-alert-comunicazioni-secondaria/) — capire il sistema nazionale di allarme pubblico: anatomia di un messaggio (rischio/area/tempo/azione/fonte), esempio realistico, risposta in 140 caratteri, mini quiz. *(ed. civica, cittadinanza digitale, italiano)*
 - 👉 [**Notizie false in emergenza**](/formazione/schede-stampabili/fake-news-emergenza-secondaria/) — riconoscere e fermare la disinformazione: regola dei 3 controlli (fonte/data/conferma), checklist "prima di condividere", classifica delle notizie a gruppi e mini quiz. *(ed. civica digitale, italiano)*
 
@@ -510,6 +510,7 @@ Schede pronte per la stampa specifiche per la scuola secondaria di primo grado:
 - 👉 [**Debate strutturato sui Rischi**](/formazione/schede-stampabili/debate-strutturato-secondaria/) — debate scolastico in 5 fasi su un tema PC (vietare costruzioni in zona sismica). Griglia di valutazione. *(ed. civica)*
 - 👉 [**Costituzione e PC — Analisi**](/formazione/schede-stampabili/costituzione-pc-secondaria/) — articoli 32, 117, 118 con testo originale + glossario costituzionale + domande di approfondimento. *(ed. civica)*
 - 👉 [**Vulcanologia dei Castelli Romani**](/formazione/schede-stampabili/vulcanologia-castelli-secondaria/) — il Vulcano Laziale: caldera, fumarole, monitoraggio INGV. Schema della caldera con i due laghi. *(scienze)*
+- 👉 [**La siccità ai Castelli Romani — leggere i dati**](/formazione/schede-stampabili/siccita-castelli-secondaria/) — i dati climatici reali di Genzano (pioggia annua e giorni molto caldi, rianalisi ERA5): media, scarti e lettura delle serie, con aggancio al [Laboratorio meteo](/laboratorio-meteo/) del sito. *(matematica, scienze, geografia)*
 - 👉 [**Cronaca Recente — Ischia 2022**](/formazione/schede-stampabili/cronaca-recente-secondaria/) — articolo di cronaca su frana di Casamicciola. Analisi 5W + domande critiche. *(italiano)*
 - 👉 [**Articolo, Comunicato Stampa e Post Social**](/formazione/schede-stampabili/articolo-stampa-social-secondaria/) — piramide rovesciata + 5W+1H. Lo stesso evento PC in 3 formati (articolo, comunicato stampa, post Instagram) con esempio modello e hashtag strategici. *(italiano, giornalismo)*
 
@@ -535,8 +536,8 @@ Schede pronte per la stampa specifiche per la scuola secondaria di primo grado:
 - 👉 [**Caso Rigopiano 2017**](/formazione/schede-stampabili/caso-rigopiano-secondaria/) — rischio multiplo concomitante: sisma + neve + viabilità chiusa, responsabilità del Sindaco. *(scienze/ed. civica)*
 - 👉 [**I vulcani d'Italia**](/formazione/schede-stampabili/caso-vulcani-italia-secondaria/) — Etna, Stromboli, Vesuvio, Campi Flegrei, Vulcano: monitoraggio INGV, piani di evacuazione. *(scienze/geografia)*
 - 👉 [**I Campi Flegrei**](/formazione/schede-stampabili/caso-campi-flegrei-secondaria/) — caldera, bradisismo, monitoraggio INGV-OV, piano di evacuazione 500.000 persone. *(scienze/geografia/ed. civica)*
-- 👉 [**Caso San Giuliano di Puglia 2002**](/formazione/schede-stampabili/caso-san-giuliano-secondaria/) — il terremoto del Molise del 31 ottobre 2002 e il crollo della scuola: perché gli edifici scolastici devono essere sicuri. *(scienze/ed. civica)*
-- 👉 [**Caso Vermicino 1981**](/formazione/schede-stampabili/caso-vermicino-secondaria/) — perché da quella emergenza è nata la Protezione Civile italiana moderna. *(storia/ed. civica)*
+- 👉 [**Caso San Giuliano di Puglia 2002**](/formazione/schede-stampabili/caso-san-giuliano-secondaria/) — il crollo della scuola Jovine e la sicurezza delle scuole: classificazione sismica (OPCM 3274/2003), Giornata nazionale della sicurezza nelle scuole. *(storia/ed. civica)*
+- 👉 [**Caso Vermicino 1981**](/formazione/schede-stampabili/caso-vermicino-secondaria/) — la vicenda di Alfredino Rampi e la nascita della Protezione Civile moderna: dal caos dei soccorsi alla L. 225/1992, fino al D.Lgs. 1/2018. *(storia/ed. civica)*
 
 ---
 

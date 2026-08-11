@@ -321,6 +321,29 @@ https://www.protezionecivilegenzano.it/
 '''
 
 
+def formatta_dimensione(size_kb: int) -> str:
+    """~134 KB sotto il MB, ~17,3 MB sopra (virgola decimale italiana)."""
+    if size_kb < 1024:
+        return f"~{size_kb} KB"
+    mb = size_kb / 1024
+    return "~" + f"{mb:.1f}".replace(".", ",") + " MB"
+
+
+def aggiorna_dimensione_dichiarata(md_path: Path, zip_name: str, size_kb: int) -> None:
+    """Riallinea la dimensione "(~N KB/MB)" dichiarata nel blockquote del kit
+    alla dimensione reale dello ZIP appena prodotto. Le dimensioni scritte a
+    mano vanno in drift a ogni rigenerazione (caso reale: dichiarati 106 KB,
+    reali 17,3 MB): la fonte di verità è lo ZIP, il testo si aggiorna da qui."""
+    testo = md_path.read_text(encoding="utf-8")
+    pattern = re.compile(
+        r"(\(/formazione/pacchetti/" + re.escape(zip_name) + r"\)\s*)\(~[\d.,]+\s*[KM]B\)"
+    )
+    nuovo, n = pattern.subn(r"\1(" + formatta_dimensione(size_kb) + ")", testo)
+    if n and nuovo != testo:
+        md_path.write_text(nuovo, encoding="utf-8")
+        print(f"  → aggiornata dimensione dichiarata in {md_path.name}: {formatta_dimensione(size_kb)}")
+
+
 def costruisci_pacchetto(slug: str, md_filename: str) -> tuple[int, int, list[str]]:
     """Ritorna (n_schede_incluse, dimensione_kb, lista_schede_mancanti)."""
     md_path = CONTENT_BASE / md_filename
@@ -345,9 +368,19 @@ def costruisci_pacchetto(slug: str, md_filename: str) -> tuple[int, int, list[st
         (tmp / "assets").mkdir()
         css_src = SCHEDE_BASE / "assets" / "scheda-print.css"
         if css_src.exists():
-            shutil.copy(css_src, tmp / "assets" / "scheda-print.css")
+            css_testo = css_src.read_text(encoding="utf-8").replace(
+                "/images/footer-print-affiliazioni.png",
+                "footer-print-affiliazioni.png",
+            )
+            (tmp / "assets" / "scheda-print.css").write_text(css_testo, encoding="utf-8")
         else:
             print(f"  ⚠ CSS non trovato: {css_src}", file=sys.stderr)
+        # La banda affiliazioni (Quality Label ESC + E10435833, Reg. UE 2021/888)
+        # deve stamparsi anche dal pacchetto offline: l'immagine viaggia nello ZIP
+        # e i riferimenti assoluti vengono riscritti relativi (vedi patch sotto).
+        banda_src = ROOT / "static" / "images" / "footer-print-affiliazioni.png"
+        if banda_src.exists():
+            shutil.copy(banda_src, tmp / "assets" / "footer-print-affiliazioni.png")
 
         # schede
         (tmp / "schede").mkdir()
@@ -361,6 +394,23 @@ def costruisci_pacchetto(slug: str, md_filename: str) -> tuple[int, int, list[st
             dst_dir.mkdir(parents=True, exist_ok=True)
             html = src_html.read_text(encoding="utf-8")
             html_patched = patch_html_paths(html)
+            # Banda affiliazioni referenziata inline (schede immagine-only)
+            html_patched = html_patched.replace(
+                "/images/footer-print-affiliazioni.png",
+                "../../assets/footer-print-affiliazioni.png",
+            )
+            # Pittogrammi ARASAAC / ISO 7010: copiati nello ZIP e riscritti relativi
+            for pitto in set(re.findall(r"/pittogrammi/([\w/.-]+\.(?:png|svg))", html_patched)):
+                pitto_src = ROOT / "static" / "pittogrammi" / pitto
+                if pitto_src.exists():
+                    pitto_dst = tmp / "assets" / "pittogrammi" / pitto
+                    pitto_dst.parent.mkdir(parents=True, exist_ok=True)
+                    if not pitto_dst.exists():
+                        shutil.copy(pitto_src, pitto_dst)
+                    html_patched = html_patched.replace(
+                        "/pittogrammi/" + pitto,
+                        "../../assets/pittogrammi/" + pitto,
+                    )
             (dst_dir / "index.html").write_text(html_patched, encoding="utf-8")
             # copia eventuali asset locali (immagini, css, js, json) accanto alla scheda
             for asset in src_dir.iterdir():
@@ -393,6 +443,7 @@ def costruisci_pacchetto(slug: str, md_filename: str) -> tuple[int, int, list[st
 
         size_kb = zip_path.stat().st_size // 1024
         print(f"  → {zip_path.relative_to(ROOT)} ({size_kb} KB, {len(schede_dati)} schede)")
+        aggiorna_dimensione_dichiarata(md_path, zip_path.name, size_kb)
         if schede_mancanti:
             print(f"  ⚠ Linkate ma MANCANTI nel filesystem: {schede_mancanti}", file=sys.stderr)
         return (len(schede_dati), size_kb, schede_mancanti)

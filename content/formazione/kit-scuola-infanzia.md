@@ -10,7 +10,7 @@ Questo kit è pensato per gli insegnanti della **scuola dell'infanzia** che desi
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma per le attività di divulgazione nelle scuole del territorio.
 
-> 📦 **Scarica il pacchetto offline** — [`kit-scuola-infanzia.zip`](/formazione/pacchetti/kit-scuola-infanzia.zip) (~106 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-infanzia.zip`](/formazione/pacchetti/kit-scuola-infanzia.zip) (~16,7 MB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
 > ⚠️ **Avvertenza pedagogica — non spaventare i bambini.** Le attività di questo kit **non devono mai generare paura**. I bambini di 3-6 anni hanno una percezione del rischio molto diversa da quella dell'adulto: parlare di terremoti, incendi o allagamenti in modo enfatico o con immagini drammatiche può produrre **ansia, incubi, regressioni**. La regola è opposta: presentare i comportamenti corretti come **un gioco rassicurante** (la tartaruga che si ripara, il numero 112 come "amico che arriva"), proporzionato all'età, sempre concluso con la rassicurazione che **gli adulti sono lì per proteggerli**. Niente video reali di disastri, niente cronaca, niente racconto di vittime. Per la dimensione emotiva si rimanda alla pagina [Psicologia dell'emergenza](/formazione/psicologia-emergenza/).
 
@@ -260,7 +260,6 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 - 👉 [**Il Labirinto dell'Uscita**](/formazione/schede-stampabili/labirinto-uscita/) — il bambino traccia con la matita il percorso sicuro evitando gli ostacoli.
 - 👉 [**La Tartaruga Saggia**](/formazione/schede-stampabili/tartaruga-saggia-infanzia/) — Tina spiega 4 comportamenti di autoprotezione, il bambino li ricostruisce.
 - 👉 [**Trova le Coppie**](/formazione/schede-stampabili/trova-coppie-infanzia/) — accoppia oggetti e situazioni della sicurezza.
-- 👉 [**La casa al buio**](/formazione/schede-stampabili/blackout-casa-buia-infanzia/) — cosa facciamo se va via la corrente: stiamo con un adulto, usiamo la torcia e non le candele, teniamo chiuso il frigorifero. Attività da cerchiare e torcia da colorare.
 
 **Schede di letto-scrittura** a tema Protezione Civile per il pre-grafismo e il riconoscimento delle prime parole (5-6 anni):
 
@@ -330,6 +329,7 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 - 👉 [**Aiuto e solidarietà**](/formazione/schede-stampabili/aiuto-solidarieta-infanzia/) — i valori del volontariato: gentilezza, cura, ascolto, lavoro di squadra, comunicazione rispettosa, solidarietà come gesto d'amore.
 - 👉 [**Volontariato e ambiente**](/formazione/schede-stampabili/volontariato-ambiente-infanzia/) — raccogliere rifiuti, piantare alberi, raccolta differenziata, non sprecare l'acqua, lavorare insieme, proteggere il pianeta.
 - 👉 [**I nodi che salvano**](/formazione/schede-stampabili/nodi-che-salvano-infanzia/) — fare un nodo semplice in 6 passi: corda resistente, anello, passare l'estremità, stringere, nodo finito, usare il nodo per aiutare.
+- 👉 [**Quando va via la luce**](/formazione/schede-stampabili/blackout-infanzia/) — il blackout senza paura del buio: la torcia (non le candele), stare con un adulto, aspettare insieme che torni la luce. Con pittogrammi ARASAAC.
 
 
 Queste schede sono pensate per essere **fotocopiate in bianco e nero** e consegnate ai bambini come attività di rinforzo individuale o di piccolo gruppo. Il disegno è sempre accompagnato da una breve consegna che la maestra legge ad alta voce.

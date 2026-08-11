@@ -624,3 +624,46 @@ table.scheda-tabella th {
     font-size: 1.25rem;
   }
 }
+
+/* ================================================================
+   SOLUZIONE CAPOVOLTA v1.0 — soluzione degli esercizi ruotata di 180°
+   sullo stesso foglio (l'alunno non la legge a colpo d'occhio, il
+   docente sì girando il foglio). Stesso pattern dei kit calamità
+   (kit-calamita-shared/print.css); vietato <details> in stampa.
+   ================================================================ */
+.soluzione-capovolta {
+  margin: 12mm 0 0;
+  padding: 4mm 5mm;
+  border: 1.5px dashed #adb5bd;
+  border-radius: 4px;
+  background: #fafbfc;
+  transform: rotate(180deg);
+  transform-origin: center center;
+  font-size: 10pt;
+  line-height: 1.5;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+.soluzione-capovolta strong { color: #003366; }
+.soluzione-capovolta .titolo {
+  font-weight: 700;
+  color: #003366;
+  font-size: 10pt;
+  margin-bottom: 2mm;
+  display: block;
+}
+.soluzione-capovolta pre {
+  font-family: monospace;
+  font-size: 11pt;
+  background: #fff;
+  padding: 2mm;
+  border: 1px solid #ccc;
+  margin: 2mm 0;
+  line-height: 1.5;
+}
+@media print {
+  .soluzione-capovolta {
+    background: transparent;
+    border-width: 1px;
+  }
+}

@@ -1,6 +1,6 @@
 ---
 title: "Idratazione e colpo di calore: riconoscere i sintomi in tempo"
-date: 2026-08-04
+date: 2026-08-04T00:01:00+02:00
 description: "Bere correttamente d'estate non è solo questione di comodità: è prevenzione. Come idratarsi bene e come riconoscere un colpo di calore che richiede il 112."
 badge: "Prevenzione"
 priorita: "normale"

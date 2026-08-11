@@ -3,120 +3,76 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Scheda stampabile: Leggere il bollettino delle ondate di calore — Scuola Secondaria I grado</title>
-  <meta name="description" content="Scheda fotocopiabile per la Scuola Secondaria di primo grado (11-13 anni). Come si legge il bollettino ondate di calore del Ministero della Salute (livelli 0-3), cos'è l'isola di calore urbana, chi è più fragile e perché, esercizio di pianificazione di una giornata con livello 3.">
+  <title>Scheda stampabile: Leggere il bollettino ondate di calore — Scuola Secondaria I grado</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Secondaria di primo grado. Come si legge il bollettino sulle ondate di calore del Ministero della Salute: livelli 0-1-2-3, città monitorate, comportamenti per sé e per le persone fragili. Con esercizio su un bollettino di esempio e soluzioni capovolte.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
   <style>
-    /* Tabella dei livelli del bollettino */
+    .bol-box {
+      background: #fff3cd;
+      border: 2px solid var(--scheda-oro);
+      border-radius: 10px;
+      padding: 1rem;
+      margin: 0.6rem 0 1rem 0;
+      font-family: monospace;
+      font-size: 0.92rem;
+      line-height: 1.5;
+      white-space: pre-wrap;
+    }
+    .bol-esempio-etichetta {
+      display: inline-block;
+      background: var(--scheda-oro);
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      margin-bottom: 0.4rem;
+    }
+    .bol-domanda {
+      margin-bottom: 0.9rem;
+      padding-left: 1rem;
+      border-left: 3px solid var(--scheda-blu);
+    }
+    .bol-domanda h3 {
+      font-size: 0.98rem;
+      color: var(--scheda-blu);
+      margin: 0 0 0.35rem 0;
+    }
+    .bol-risposta {
+      border: 1.5px solid var(--scheda-bordo);
+      border-radius: 6px;
+      padding: 0.4rem 0.6rem;
+      min-height: 2.2rem;
+      background: #fcfcfc;
+      margin-top: 0.3rem;
+    }
     .livelli-tabella {
       width: 100%;
       border-collapse: collapse;
-      margin: 0.4rem 0 0.8rem;
       font-size: 0.88rem;
+      margin: 0.5rem 0;
     }
     .livelli-tabella th, .livelli-tabella td {
       border: 1.5px solid var(--scheda-bordo);
-      padding: 0.4rem 0.55rem;
+      padding: 0.4rem 0.6rem;
       vertical-align: top;
-      text-align: left;
     }
-    .livelli-tabella th {
-      background: #f0f4f8;
-      color: var(--scheda-blu);
-    }
-    .livelli-tabella .liv {
-      white-space: nowrap;
-      font-weight: 700;
-      text-align: center;
-      width: 16%;
-    }
-    .liv-0 { background: #d1e7dd; color: #0f5132; }
-    .liv-1 { background: #fff3cd; color: #664d03; }
-    .liv-2 { background: #ffe5d0; color: #7a3803; }
-    .liv-3 { background: #f8d7da; color: #842029; }
-
-    /* Esercizio pianificazione giornata */
-    .pianifica-tabella {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 0.4rem 0 0.6rem;
-      font-size: 0.9rem;
-    }
-    .pianifica-tabella th, .pianifica-tabella td {
-      border: 1.5px solid var(--scheda-bordo);
-      padding: 0.4rem 0.55rem;
-      text-align: left;
-    }
-    .pianifica-tabella th {
-      background: #f0f4f8;
-      color: var(--scheda-blu);
-    }
-    .pianifica-tabella td.riga-scrivi {
-      height: 1.9rem;
-    }
-    .pianifica-tabella .fascia {
-      white-space: nowrap;
-      font-weight: 700;
-      color: var(--scheda-blu);
-      width: 22%;
-    }
-
-    /* Box fragilità */
-    .fragili-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.6rem;
-      margin: 0.5rem 0 0.8rem;
-    }
-    .fragili-card {
-      background: #fcfcfc;
-      border: 1.5px solid var(--scheda-bordo);
-      border-radius: 8px;
-      padding: 0.55rem 0.7rem;
-      font-size: 0.88rem;
-      line-height: 1.45;
-    }
-    .fragili-card h3 {
-      margin: 0 0 0.25rem;
-      font-size: 0.95rem;
-      color: var(--scheda-blu);
-    }
-    @media (max-width: 600px) {
-      .fragili-grid { grid-template-columns: 1fr; }
-    }
-  
-    /* Soluzione capovolta 180°: l'alunno non legge la soluzione a colpo d'occhio;
-       l'adulto gira il foglio. */
-    .soluzione-capovolta {
-      margin: 1rem 0 0;
-      padding: 0.5rem 0.8rem;
-      border: 1.5px dashed var(--scheda-bordo);
-      border-radius: 6px;
-      background: #fafbfc;
-      transform: rotate(180deg);
-      transform-origin: center center;
-      font-size: 0.85rem;
-      line-height: 1.5;
-      page-break-inside: avoid;
-    }
-    .soluzione-capovolta .titolo {
-      display: block;
-      font-weight: 700;
-      color: var(--scheda-blu);
-      margin-bottom: 0.2rem;
-    }
-    @media print {
-      .soluzione-capovolta { background: transparent; border-width: 1px; }
-    }
+    .livelli-tabella th { background: #f0f4f8; color: var(--scheda-blu); text-align: left; }
+    .liv-0 { background: #d1e7dd; }
+    .liv-1 { background: #fff3cd; }
+    .liv-2 { background: #ffd9a8; }
+    .liv-3 { background: #f8d7da; }
   </style>
 </head>
 <body>
 
   <div class="scheda-toolbar no-print">
     <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">← Torna alle schede</a>
-    <span class="scheda-titolo">Bollettino ondate di calore — Secondaria I grado</span>
+    <span class="scheda-titolo">Leggere il bollettino ondate di calore — Secondaria I grado</span>
     <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
   </div>
 
@@ -126,177 +82,137 @@
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
         <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
-        <h1 class="scheda-titolo-principale">Leggere il bollettino delle ondate di calore</h1>
-        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Secondaria di Primo Grado · 11-13 anni · pagina 1 di 2</div>
+        <h1 class="scheda-titolo-principale scheda-h1">Leggere il bollettino ondate di calore</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Secondaria di Primo Grado · 11-14 anni</div>
       </div>
     </header>
 
     <div class="scheda-meta">
-      <span><strong>Destinatari:</strong> 11-13 anni, famiglie</span>
-      <span><strong>Durata:</strong> 50 min</span>
-      <span><strong>Modalità:</strong> classe + esercizio individuale</span>
+      <span><strong>Destinatari:</strong> 11-14 anni, famiglie</span>
+      <span><strong>Durata:</strong> 45 min</span>
+      <span><strong>Modalità:</strong> individuale o coppia</span>
       <span><strong>Discipline:</strong> Scienze, Geografia, Educazione civica</span>
     </div>
 
     <div class="scheda-messaggio-chiave">
-      <strong>Messaggio chiave:</strong> il caldo pericoloso si può <strong>prevedere</strong>.
-      Il Ministero della Salute pubblica ogni estate un <strong>bollettino</strong> che assegna
-      alle principali città italiane un livello da <strong>0 a 3</strong>. Saperlo leggere permette
-      di organizzare la giornata e di proteggere le persone più fragili.
+      <strong>Messaggio chiave:</strong> il caldo estremo è un rischio sanitario prevedibile.
+      Il Ministero della Salute pubblica ogni estate un <strong>bollettino sulle ondate di calore</strong>:
+      chi sa leggerlo può proteggere sé stesso e le persone fragili <strong>prima</strong> che il caldo diventi pericoloso.
     </div>
 
     <p class="scheda-intro">
-      Un'<strong>ondata di calore</strong> non è una semplice giornata calda: è un periodo di
-      temperature molto elevate, spesso con alta umidità, che dura <strong>più giorni consecutivi</strong>.
-      In queste condizioni il corpo fatica a raffreddarsi sudando e chi è più fragile può stare male.
-      Anche a Genzano di Roma, pur in area collinare, le temperature estive possono superare i
-      <strong>38-40&nbsp;°C</strong>.
+      In estate il <strong>Ministero della Salute</strong> attiva un sistema nazionale di previsione e allarme
+      per le ondate di calore (in inglese <em>Heat Health Watch Warning</em>, HHWW). Ogni giorno, per le principali
+      città italiane, viene pubblicato sul sito <strong>salute.gov.it</strong> un bollettino con un <strong>livello di
+      rischio da 0 a 3</strong> per oggi e per i giorni successivi. Per noi che viviamo ai Castelli Romani la città di
+      riferimento è <strong>Roma</strong>: è la città monitorata più vicina e con condizioni climatiche simili alle nostre.
+      In questa scheda impari a decodificare il bollettino e ad agire di conseguenza.
     </p>
 
-    <h2 class="scheda-h2">📄 Il bollettino del Ministero della Salute: i livelli 0-3</h2>
-    <p style="font-size: 0.9rem; margin: 0 0 0.35rem;">
-      Da maggio a settembre il Ministero della Salute pubblica ogni giorno le previsioni di rischio
-      caldo per le principali città italiane (per noi la città di riferimento è <strong>Roma</strong>).
-      Si consultano sul sito <strong>salute.gov.it</strong> o con l'app gratuita <strong>Caldo e Salute</strong>.
-    </p>
-
-    <table class="livelli-tabella">
-      <caption class="visually-hidden" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);">I quattro livelli di rischio del bollettino ondate di calore del Ministero della Salute</caption>
-      <tr>
-        <th scope="col">Livello</th>
-        <th scope="col">Cosa significa</th>
-        <th scope="col">Cosa faccio</th>
-      </tr>
-      <tr>
-        <td class="liv liv-0">Livello 0</td>
-        <td>Condizioni meteo che <strong>non</strong> rappresentano un rischio per la salute della popolazione.</td>
-        <td>Vita normale, con le solite attenzioni estive (acqua, ombra).</td>
-      </tr>
-      <tr>
-        <td class="liv liv-1">Livello 1</td>
-        <td><strong>Pre-allerta:</strong> condizioni che possono precedere un aumento del rischio nei giorni successivi.</td>
-        <td>Mi informo: ricontrollo il bollettino domani.</td>
-      </tr>
-      <tr>
-        <td class="liv liv-2">Livello 2</td>
-        <td>Temperature elevate che sono un <strong>rischio per le persone fragili</strong> (anziani, bambini piccoli, malati cronici).</td>
-        <td>Attivo le attenzioni: controllo nonni e vicini fragili, riduco le uscite nelle ore calde.</td>
-      </tr>
-      <tr>
-        <td class="liv liv-3">Livello 3</td>
-        <td><strong>Ondata di calore:</strong> condizioni a rischio elevato che durano <strong>3 o più giorni consecutivi</strong>. Possibili effetti anche su persone sane e attive.</td>
-        <td>Riorganizzo la giornata (esercizio a pagina 2), massima attenzione ai fragili.</td>
-      </tr>
-    </table>
-
-    <h2 class="scheda-h2">🏙️ Cos'è l'isola di calore urbana</h2>
-    <p style="font-size: 0.92rem; line-height: 1.55; margin: 0 0 0.4rem;">
-      Le città sono più calde delle campagne che le circondano: asfalto, edifici e infrastrutture
-      assorbono il calore di giorno e lo <strong>trattengono anche di notte</strong>. Questo fenomeno
-      si chiama <strong>isola di calore urbana</strong>. Durante l'ondata di calore europea del giugno
-      2019, i sensori della NASA sulla Stazione Spaziale Internazionale hanno misurato le temperature
-      superficiali delle città: a <strong>Roma il centro urbano segnava già 26&nbsp;°C alle 6:45 del mattino</strong>,
-      mentre le aree verdi intorno erano più fresche. Ecco perché nelle ore calde parchi e zone
-      alberate sono un rifugio migliore delle strade asfaltate.
-      <br><em style="font-size: 0.85rem;">Fonte: NASA/JPL-Caltech, strumento ECOSTRESS, ondata di calore del 27-28 giugno 2019.</em>
-    </p>
-
-    <h2 class="scheda-h2">🧓 Chi è più fragile e perché</h2>
-    <div class="fragili-grid">
-      <div class="fragili-card">
-        <h3>Anziani (soprattutto se soli)</h3>
-        Con l'età il corpo regola peggio la temperatura e lo stimolo della sete diminuisce:
-        si rischia di bere troppo poco senza accorgersene. Chi vive solo non ha nessuno che
-        noti i primi segnali di malessere.
-      </div>
-      <div class="fragili-card">
-        <h3>Bambini piccoli</h3>
-        Nei primi anni di vita il sistema di regolazione della temperatura non è ancora maturo
-        e il corpo si disidrata più in fretta. Mai lasciare bambini (o animali) in auto al sole,
-        nemmeno per pochi minuti.
-      </div>
-      <div class="fragili-card">
-        <h3>Persone con malattie croniche</h3>
-        Malattie cardiovascolari, respiratorie e diabete rendono più difficile sopportare il caldo;
-        alcuni farmaci vanno conservati al fresco e alcune terapie richiedono attenzioni in più.
-      </div>
-      <div class="fragili-card">
-        <h3>Lavoratori all'aperto e senza dimora</h3>
-        Chi lavora al sole (cantieri, agricoltura) e chi non ha una casa fresca dove ripararsi
-        è esposto per molte ore di seguito, senza possibilità di pause al fresco.
-      </div>
+    <h2 class="scheda-h2">🔬 Come nasce il bollettino</h2>
+    <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.88rem; line-height: 1.55;">
+      <div style="font-weight: 700; color: var(--scheda-blu); margin-bottom: 0.2rem; font-size: 0.93rem;">Non conta solo la temperatura</div>
+      Il sistema HHWW non guarda solo il termometro: incrocia <strong>temperatura</strong>, <strong>umidità</strong> e altre
+      condizioni meteorologiche con i dati storici sugli effetti del caldo sulla salute in ciascuna città.
+      Per questo lo stesso valore di temperatura può produrre livelli diversi in città diverse: 34 °C con aria molto umida
+      possono essere più pericolosi di 36 °C con aria secca, perché il sudore non evapora e il corpo non riesce a raffreddarsi.
+      Il bollettino è quindi una <strong>previsione di rischio per la salute</strong>, non una semplice previsione del tempo.
+      <div style="font-style: italic; color: #495057; font-size: 0.76rem; margin-top: 0.3rem;">Fonte: Ministero della Salute — Piano caldo, sistema HHWW; Istituto Superiore di Sanità.</div>
     </div>
 
-    <footer class="scheda-footer">
-      <span class="scheda-site">protezionecivilegenzano.it</span>
-      <span>Scheda "Leggere il bollettino delle ondate di calore" · Secondaria I grado · Rev. 01 – Agosto 2026</span>
-    </footer>
+    <h2 class="scheda-h2">🌡️ I livelli di rischio (riferimento)</h2>
+    <table class="livelli-tabella">
+      <tr><th style="width: 14%;">Livello</th><th style="width: 30%;">Cosa significa</th><th>Cosa fare</th></tr>
+      <tr class="liv-0"><td><strong>0</strong></td><td>Condizioni meteo <strong>non a rischio</strong> per la salute.</td><td>Nessuna misura particolare. Buone abitudini di sempre: acqua, ombra nelle ore centrali.</td></tr>
+      <tr class="liv-1"><td><strong>1</strong></td><td><strong>Pre-allerta</strong>: condizioni che possono precedere un livello 2.</td><td>Informati sui bollettini dei giorni successivi. Prepara casa e abitudini (acqua, tende, orari).</td></tr>
+      <tr class="liv-2"><td><strong>2</strong></td><td>Temperature elevate: <strong>rischio per le persone fragili</strong> (anziani, bambini molto piccoli, malati cronici).</td><td>Applica i comportamenti di protezione; controlla come stanno le persone fragili che conosci.</td></tr>
+      <tr class="liv-3"><td><strong>3</strong></td><td><strong>Ondata di calore</strong>: condizioni a rischio che durano <strong>3 o più giorni consecutivi</strong>. Possibili effetti anche su persone sane e attive.</td><td>Massima attenzione per tutti: niente sport e sforzi nelle ore calde, idratazione costante, rete di aiuto ai fragili.</td></tr>
+    </table>
 
-  </article>
+    <h2 class="scheda-h2">📖 Glossario operativo</h2>
+    <dl style="display: grid; grid-template-columns: auto 1fr; gap: 0.25rem 0.7rem; margin: 0.35rem 0; font-size: 0.85rem; line-height: 1.45; padding: 0.55rem 0.85rem; background: #fff; border: 1.5px solid var(--scheda-bordo); border-radius: 6px;">
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Ondata di calore</dt><dd style="margin: 0;">periodo prolungato (giorni) di temperature molto elevate, spesso con alta umidità, che impedisce al corpo di recuperare — soprattutto di notte.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Sistema HHWW</dt><dd style="margin: 0;">Heat Health Watch Warning: sistema di previsione e allarme del Ministero della Salute, città per città, dedicato agli effetti del caldo sulla salute.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Città di riferimento</dt><dd style="margin: 0;">il bollettino copre le principali città italiane, Roma inclusa. Per i comuni vicini (come Genzano) si usa la città monitorata più vicina: <strong>Roma</strong>.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Persone fragili</dt><dd style="margin: 0;">anziani (soprattutto se soli), bambini molto piccoli, persone con malattie croniche (cuore, respirazione, diabete), chi lavora all'aperto.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">Colpo di calore</dt><dd style="margin: 0;">emergenza sanitaria: la temperatura interna del corpo sale troppo. Segnali: confusione, pelle calda e arrossata, malessere forte. In caso di pericolo: <strong>112</strong>.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu); white-space: nowrap;">1500</dt><dd style="margin: 0;">numero di pubblica utilità del Ministero della Salute, attivo durante l'estate per informazioni sul caldo (non è un numero di emergenza).</dd>
+    </dl>
 
-  <article class="scheda-page">
+    <h2 class="scheda-h2">📋 Il bollettino da decodificare</h2>
 
-    <header class="scheda-header">
-      <div class="scheda-logo" aria-hidden="true">PC</div>
-      <div class="scheda-intestazione">
-        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
-        <h1 class="scheda-titolo-principale">Leggere il bollettino delle ondate di calore</h1>
-        <div class="scheda-sottotitolo">Scuola Secondaria di Primo Grado · 11-13 anni · pagina 2 di 2</div>
-      </div>
-    </header>
+    <div class="bol-box"><span class="bol-esempio-etichetta">⚠️ ESEMPIO DIDATTICO — NON È UN BOLLETTINO REALE</span>
+<strong>Ministero della Salute — Bollettino ondate di calore</strong>
+Città: <strong>ROMA</strong> — emissione: ore 11:00 di martedì 21 luglio
 
-    <h2 class="scheda-h2">✅ I comportamenti che proteggono</h2>
+Oggi (21 luglio) ............... livello <strong>2</strong>
+Domani (22 luglio) ............. livello <strong>3</strong>
+Dopodomani (23 luglio) ......... livello <strong>3</strong>
+
+Condizioni previste: temperature massime in ulteriore aumento,
+elevata umidità, scarso raffrescamento notturno.
+Si raccomanda particolare attenzione alle persone anziane,
+ai bambini molto piccoli e alle persone con malattie croniche.</div>
+
+    <h2 class="scheda-h2">✏️ Esercizio: rispondi alle domande</h2>
+
+    <div class="bol-domanda">
+      <h3>1. Chi pubblica il bollettino sulle ondate di calore e dove lo puoi consultare?</h3>
+      <div class="bol-risposta"></div>
+    </div>
+
+    <div class="bol-domanda">
+      <h3>2. Perché per Genzano e i Castelli Romani si guarda il bollettino di Roma?</h3>
+      <div class="bol-risposta"></div>
+    </div>
+
+    <div class="bol-domanda">
+      <h3>3. Nel bollettino di esempio, che livello è previsto per domani? Cosa lo distingue dal livello di oggi?</h3>
+      <div class="bol-risposta"></div>
+      <div class="bol-risposta"></div>
+    </div>
+
+    <div class="bol-domanda">
+      <h3>4. Il livello 3 indica un'«ondata di calore». Quanto devono durare le condizioni a rischio? Chi può subirne gli effetti?</h3>
+      <div class="bol-risposta"></div>
+    </div>
+
+    <div class="bol-domanda">
+      <h3>5. La nonna di un tuo compagno vive da sola. Con il bollettino di esempio, scrivi 3 azioni concrete che la famiglia può fare per lei nei prossimi due giorni.</h3>
+      <div class="bol-risposta"></div>
+      <div class="bol-risposta"></div>
+      <div class="bol-risposta"></div>
+    </div>
+
+    <div class="bol-domanda">
+      <h3>6. Domani hai allenamento di calcio alle 15:00 all'aperto. Cosa proponi all'allenatore, e perché?</h3>
+      <div class="bol-risposta"></div>
+      <div class="bol-risposta"></div>
+    </div>
+
+    <h2 class="scheda-h2">✅ Comportamenti: per te e per chi è fragile</h2>
     <div class="scheda-comportamenti">
       <div class="scheda-card">
-        <h3>Acqua e pasti</h3>
-        <p><strong>Bevi molta acqua anche se non senti sete</strong>; evita alcolici e bevande zuccherate. Fai pasti leggeri con frutta e verdura. Non bere bevande gelate in grandi quantità a stomaco pieno.</p>
+        <h3>Per te</h3>
+        <p>Bevi acqua spesso, anche senza sete. Evita sport e sforzi nelle <strong>ore più calde</strong>. Indossa abiti leggeri e chiari, usa il cappello. Preferisci luoghi freschi e ombreggiati.</p>
       </div>
       <div class="scheda-card">
-        <h3>Orari e abbigliamento</h3>
-        <p>Non uscire e non fare sport nelle <strong>ore più calde (11-17)</strong>. Indossa abiti leggeri, chiari e in tessuti naturali; usa cappello e occhiali da sole.</p>
-      </div>
-      <div class="scheda-card">
-        <h3>Casa</h3>
-        <p>Abbassa le tapparelle nelle ore di sole diretto e rinfresca gli ambienti. Controlla che ventilatori o condizionatori funzionino <strong>prima</strong> dei giorni più caldi.</p>
-      </div>
-      <div class="scheda-card">
-        <h3>Gli altri</h3>
-        <p>Chiama o vai a trovare <strong>nonni, vicini anziani e persone sole</strong> nei giorni di caldo intenso: la rete di prossimità è una misura di prevenzione raccomandata dal Piano Caldo nazionale.</p>
+        <h3>Per le persone fragili</h3>
+        <p>Nei giorni di livello 2 e 3 <strong>telefona o passa a trovare</strong> nonni e vicini anziani, soprattutto se soli. Ricorda loro di bere e di tenere fresca la casa. Se una persona sta molto male (confusione, malore), un adulto chiama subito il <strong>112</strong>.</p>
       </div>
     </div>
 
-    <h2 class="scheda-h2">✏️ Esercizio — Pianifica la giornata con livello 3</h2>
-    <p style="font-size: 0.92rem; margin: 0 0 0.35rem;">
-      È sabato, il bollettino per Roma segna <strong>livello 3</strong> da tre giorni. Avevi in
-      programma: allenamento di calcio, compiti, spesa con un genitore e una telefonata alla nonna
-      che vive da sola. <strong>Riorganizza la giornata</strong>: scrivi in ogni fascia oraria cosa
-      fai e perché, usando la tabella dei livelli e i comportamenti qui sopra.
-    </p>
-    <table class="pianifica-tabella">
-      <tr>
-        <th scope="col">Fascia oraria</th>
-        <th scope="col">Cosa faccio e perché</th>
-      </tr>
-      <tr><td class="fascia">Mattina presto (7-10)</td><td class="riga-scrivi"></td></tr>
-      <tr><td class="fascia">Ore centrali (11-17)</td><td class="riga-scrivi"></td></tr>
-      <tr><td class="fascia">Sera (dopo le 18)</td><td class="riga-scrivi"></td></tr>
-    </table>
-    <div class="scheda-soluzioni soluzione-capovolta">
-      <span class="titolo">🔑 Traccia — gira il foglio sottosopra per leggere</span>
-      <strong>Traccia per il confronto in classe:</strong> attività fisica e spesa nelle ore più
-      fresche (mattina presto o sera); nelle ore centrali restare al fresco, bere spesso, fare i
-      compiti con le tapparelle abbassate; la telefonata alla nonna va fatta <strong>comunque</strong>,
-      in qualsiasi momento — è la cosa più importante della lista.
+    <div class="soluzione-capovolta">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;">
+        <strong>1)</strong> Il Ministero della Salute; si consulta sul sito salute.gov.it (sezione ondate di calore), dove sono pubblicati i bollettini per le principali città italiane.
+        <strong>2)</strong> Perché Genzano non è tra le città monitorate: Roma è la città di riferimento più vicina, con condizioni climatiche simili.
+        <strong>3)</strong> Domani è previsto livello 3 (ondata di calore); oggi è livello 2, cioè rischio soprattutto per le persone fragili, mentre il livello 3 può avere effetti anche su persone sane e attive.
+        <strong>4)</strong> Condizioni a rischio per 3 o più giorni consecutivi; possono risentirne anche le persone sane e attive, oltre alle persone fragili.
+        <strong>5)</strong> Esempi: telefonarle mattina e sera per sapere come sta; ricordarle di bere e di chiudere le tapparelle nelle ore di sole; fare la spesa al posto suo per evitarle di uscire nelle ore calde; verificare che il ventilatore funzioni.
+        <strong>6)</strong> Proporre di spostare l'allenamento nelle ore più fresche (mattina presto o sera) o al chiuso: con livello 3 lo sforzo fisico nelle ore centrali è sconsigliato anche per persone sane.
+      </p>
     </div>
-
-    <h2 class="scheda-h2">🚨 Se qualcuno sta male</h2>
-    <p style="font-size: 0.92rem; margin: 0 0 0.5rem;">
-      I segnali del malessere da caldo: pelle calda e arrossata, mal di testa intenso, vertigini,
-      confusione, nausea, crampi. Nei casi più gravi (colpo di calore) si può perdere conoscenza.
-      Se una persona mostra questi sintomi gravi, <strong>chiama subito il 112</strong> — l'unico
-      numero di emergenza — e, in attesa dei soccorsi, portala in un luogo fresco, falla sdraiare
-      con le gambe sollevate e applicale panni umidi su fronte e collo.
-    </p>
 
     <div class="scheda-nota-locale">
       <strong>Approfondimenti per Genzano:</strong>
@@ -308,15 +224,14 @@
 
     <h2 class="scheda-h2">📚 Fonti</h2>
     <ul class="scheda-elenco" style="font-size: 0.85rem;">
-      <li>Ministero della Salute — bollettini sulle ondate di calore e Piano Caldo nazionale (salute.gov.it, app "Caldo e Salute").</li>
+      <li>Ministero della Salute — bollettini sulle ondate di calore e Piano caldo (salute.gov.it).</li>
       <li>Istituto Superiore di Sanità (ISS) — sorveglianza e raccomandazioni sulle ondate di calore.</li>
-      <li>NASA/JPL-Caltech — temperature superficiali urbane, strumento ECOSTRESS (giugno 2019).</li>
-      <li>Sito Protezione Civile Genzano di Roma — pagina rischio "Ondate di Calore".</li>
+      <li>Sito Protezione Civile Genzano di Roma — rischi e prevenzione, numeri utili.</li>
     </ul>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
-      <span>Scheda "Leggere il bollettino delle ondate di calore" · Secondaria I grado · Rev. 01 – Agosto 2026</span>
+      <span>Scheda "Leggere il bollettino ondate di calore" · Secondaria I grado · Rev. 01 - Agosto 2026</span>
     </footer>
 
   </article>

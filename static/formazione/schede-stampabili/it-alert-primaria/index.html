@@ -3,82 +3,38 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Scheda stampabile: Perché squilla forte il telefono? IT-alert — Scuola Primaria</title>
-  <meta name="description" content="Scheda fotocopiabile per la Scuola Primaria. IT-alert spiegato ai bambini: cos'è il messaggio della Protezione Civile, come si riconosce e cosa fare quando arriva, senza paura.">
+  <title>Scheda stampabile: IT-alert, il messaggio che ti avvisa del pericolo — Scuola Primaria</title>
+  <meta name="description" content="Scheda fotocopiabile per la Scuola Primaria. Che cos'è IT-alert, il sistema nazionale di allarme pubblico: come riconoscere il messaggio e cosa fare quando arriva.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
   <style>
-    .ita-card {
-      border: 2.5px solid var(--scheda-blu);
-      border-radius: 10px;
+    /* Finto schermo di telefono con il messaggio IT-alert */
+    .italert-telefono {
+      max-width: 330px;
+      margin: 0.6rem auto;
+      border: 3px solid #212529;
+      border-radius: 18px;
       background: #fff;
-      padding: 0.6rem 0.8rem;
-      margin: 0.45rem 0;
-      font-size: 0.92rem;
-      line-height: 1.55;
-    }
-    .ita-card .ita-titolo {
-      font-weight: 700;
-      color: var(--scheda-blu);
-      display: block;
-      margin-bottom: 0.2rem;
-    }
-    .ita-telefono {
-      background: #fff3cd;
-      border: 2px solid #d4a72c;
-      border-radius: 10px;
       padding: 0.7rem 0.9rem;
-      margin: 0.5rem 0;
-      font-size: 0.92rem;
-      line-height: 1.55;
-      color: #664d03;
+      page-break-inside: avoid;
+      break-inside: avoid;
     }
-    .ita-collega {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      gap: 0.35rem 0.8rem;
-      align-items: center;
-      margin: 0.5rem 0;
-    }
-    .ita-collega .sx, .ita-collega .dx {
-      border: 2px solid var(--scheda-bordo);
+    .italert-telefono .itl-banda {
+      background: #003366;
+      color: #fff;
       border-radius: 8px;
-      background: #fff;
-      padding: 0.45rem 0.6rem;
-      font-size: 0.88rem;
-      line-height: 1.4;
+      padding: 0.35rem 0.6rem;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-align: center;
+      letter-spacing: 0.04em;
     }
-    .ita-collega .sx { border-color: var(--scheda-blu); }
-    .ita-collega .punto {
-      width: 0.9rem; height: 0.9rem;
-      border: 2.5px solid var(--scheda-blu);
-      border-radius: 50%;
-      justify-self: center;
-    }
-  
-    /* Soluzione capovolta 180°: l'alunno non legge la soluzione a colpo d'occhio;
-       l'adulto gira il foglio. */
-    .soluzione-capovolta {
-      margin: 1rem 0 0;
-      padding: 0.5rem 0.8rem;
-      border: 1.5px dashed var(--scheda-bordo);
-      border-radius: 6px;
-      background: #fafbfc;
-      transform: rotate(180deg);
-      transform-origin: center center;
+    .italert-telefono .itl-testo {
       font-size: 0.85rem;
       line-height: 1.5;
-      page-break-inside: avoid;
-    }
-    .soluzione-capovolta .titolo {
-      display: block;
-      font-weight: 700;
-      color: var(--scheda-blu);
-      margin-bottom: 0.2rem;
-    }
-    @media print {
-      .soluzione-capovolta { background: transparent; border-width: 1px; }
+      margin: 0.5rem 0 0.2rem 0;
+      color: #212529;
     }
   </style>
 </head>
@@ -86,7 +42,7 @@
 
   <div class="scheda-toolbar no-print">
     <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">← Torna alle schede</a>
-    <span class="scheda-titolo">Perché squilla forte il telefono? — Primaria</span>
+    <span class="scheda-titolo">IT-alert — Primaria</span>
     <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
   </div>
 
@@ -96,74 +52,120 @@
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
         <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
-        <h1 class="scheda-titolo-principale">Perché squilla forte il telefono? IT-alert</h1>
-        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria (6-10 anni)</div>
+        <h1 class="scheda-titolo-principale">IT-alert: il messaggio che ti avvisa del pericolo</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola Primaria (classi 3ª-5ª)</div>
       </div>
     </header>
 
     <div class="scheda-meta">
-      <span><strong>Destinatari:</strong> 6-10 anni</span>
-      <span><strong>Obiettivo:</strong> riconoscere IT-alert e non spaventarsi</span>
-      <span><strong>Discipline:</strong> educazione civica, tecnologia</span>
+      <span><strong>Destinatari:</strong> 8-11 anni, famiglie</span>
+      <span><strong>Durata:</strong> 30 min</span>
+      <span><strong>Discipline:</strong> Educazione civica, Tecnologia</span>
+    </div>
+
+    <div class="scheda-messaggio-chiave">
+      <strong>Messaggio chiave:</strong> IT-alert è un suono forte e un messaggio che compare sul telefono
+      quando c'è una grave emergenza nella tua zona. Non è un gioco e non fa paura: serve ad
+      <strong>avvisarti in tempo</strong>. La cosa giusta da fare è <strong>leggere</strong> e ascoltare i grandi.
     </div>
 
     <p class="scheda-intro">
-      A volte tutti i telefoni di una zona suonano <strong>forte, tutti insieme</strong>, con un suono strano che non hai mai sentito. Non è un guasto e non è uno scherzo: è <strong>IT-alert</strong>, un messaggio che la <strong>Protezione Civile</strong> manda ai telefoni quando c'è un'emergenza grave in quella zona. Serve ad avvisare le persone <strong>in fretta</strong>, per dire loro cosa fare. Niente paura: chi lo riceve è più al sicuro, perché sa cosa succede.
+      <strong>IT-alert</strong> è il sistema di <strong>allarme pubblico</strong> dello Stato italiano, gestito dal
+      Dipartimento della Protezione Civile. Quando in una zona sta succedendo (o sta per succedere) una
+      <strong>grave emergenza</strong>, tutti i telefoni accesi in quella zona ricevono lo stesso messaggio,
+      con un <strong>suono forte e diverso</strong> dalle notifiche normali. Arriva da solo: non serve
+      un'app, non serve registrarsi e non costa nulla.
     </p>
 
-    <h2 class="scheda-h2">🔔 Come lo riconosco?</h2>
-    <div class="ita-card">
-      <span class="ita-titolo">1. Il suono è diverso</span>
-      IT-alert ha un <strong>suono speciale</strong>, diverso da quello dei messaggi normali: forte e insistente, spesso con la vibrazione. Suona anche se il telefono è in silenzioso.
-    </div>
-    <div class="ita-card">
-      <span class="ita-titolo">2. Sullo schermo compare un messaggio</span>
-      Il messaggio dice <strong>cosa sta succedendo</strong>, <strong>dove</strong> e <strong>cosa fare</strong>. Per farlo sparire bisogna toccare lo schermo: così si è sicuri che qualcuno l'abbia letto.
-    </div>
-    <div class="ita-card">
-      <span class="ita-titolo">3. Non è come le notifiche normali</span>
-      I messaggi dei giochi e delle chat arrivano <strong>solo a te</strong>. IT-alert invece arriva <strong>a tutti i telefoni presenti nella zona</strong> dell'emergenza, anche a quelli dei turisti. Non serve nessuna app: arriva da solo.
+    <h2 class="scheda-h2">📱 Come lo riconosco</h2>
+
+    <div class="italert-telefono" role="img" aria-label="Disegno di uno schermo di telefono con un messaggio IT-alert di esempio">
+      <div class="itl-banda">🔊 IT-ALERT</div>
+      <p class="itl-testo">
+        Questo è un messaggio della Protezione Civile. Riguarda la zona in cui ti trovi.
+        Leggi con attenzione e segui le indicazioni delle autorità.
+      </p>
     </div>
 
-    <h2 class="scheda-h2">🧒 Cosa faccio se arriva?</h2>
-    <div class="ita-telefono">
-      <strong>1. Sto calmo:</strong> il messaggio serve ad aiutare, non a spaventare.<br>
-      <strong>2. Lo leggo con un adulto:</strong> mamma, papà, la maestra o un altro grande.<br>
-      <strong>3. Seguiamo le istruzioni scritte nel messaggio:</strong> le hanno preparate le persone che si occupano delle emergenze.<br>
-      <strong>4. Non chiamo il 112 per curiosità:</strong> il 112 si chiama solo se c'è un vero pericolo e serve aiuto.
+    <ul class="scheda-elenco">
+      <li>Il suono è <strong>forte e insolito</strong>: non è la suoneria e non è una notifica normale.</li>
+      <li>Il messaggio compare <strong>sullo schermo</strong> e spiega cosa sta succedendo.</li>
+      <li>Arriva <strong>a tutti i telefoni della zona</strong> nello stesso momento: anche a quelli di mamma, papà e dei vicini.</li>
+    </ul>
+
+    <h2 class="scheda-h2">✅ Cosa faccio quando arriva</h2>
+    <div class="scheda-comportamenti">
+      <div class="scheda-card">
+        <h3>1. Resto calmo</h3>
+        <p>Il suono è forte apposta, per farsi notare. Respira: il messaggio serve a <strong>proteggerti</strong>.</p>
+      </div>
+      <div class="scheda-card">
+        <h3>2. Leggo il messaggio</h3>
+        <p>Leggilo <strong>fino in fondo</strong>, insieme a un adulto se puoi. Dice cosa succede e cosa fare.</p>
+      </div>
+      <div class="scheda-card">
+        <h3>3. Avviso i grandi</h3>
+        <p>Di' subito a un adulto vicino: «È arrivato un IT-alert». Poi <strong>seguite insieme le indicazioni</strong>.</p>
+      </div>
+      <div class="scheda-card">
+        <h3>4. Non richiamo</h3>
+        <p>Non serve rispondere al messaggio e <strong>non si chiama il 112 per curiosità</strong>: il 112 va chiamato solo se qualcuno è in pericolo.</p>
+      </div>
     </div>
 
-    <h2 class="scheda-h2">✏️ Esercizio — Collega la situazione all'azione giusta</h2>
-    <p style="font-size: 0.88rem; margin: 0 0 0.3rem 0;">Unisci con una linea ogni situazione (a sinistra) all'azione giusta (a destra).</p>
-    <div class="ita-collega">
-      <div class="sx"><strong>A.</strong> Il telefono di papà suona fortissimo con un suono mai sentito e compare la scritta "IT-alert".</div>
-      <span class="punto" aria-hidden="true"></span>
-      <div class="dx"><strong>1.</strong> Posso guardarla dopo: non è un'emergenza.</div>
-      <div class="sx"><strong>B.</strong> Arriva la notifica di un videogioco.</div>
-      <span class="punto" aria-hidden="true"></span>
-      <div class="dx"><strong>2.</strong> Lo leggo con un adulto e seguiamo le istruzioni.</div>
-      <div class="sx"><strong>C.</strong> Il messaggio IT-alert dice di restare in casa.</div>
-      <span class="punto" aria-hidden="true"></span>
-      <div class="dx"><strong>3.</strong> Restiamo in casa e aspettiamo notizie dai canali ufficiali.</div>
-      <div class="sx"><strong>D.</strong> Un compagno dice che IT-alert è uno scherzo.</div>
-      <span class="punto" aria-hidden="true"></span>
-      <div class="dx"><strong>4.</strong> Gli spiego che è un messaggio vero della Protezione Civile.</div>
+    <h2 class="scheda-h2">🗓️ Quando viene usato</h2>
+    <ul class="scheda-elenco">
+      <li>Per <strong>gravi emergenze</strong> che riguardano la popolazione di una zona.</li>
+      <li>Per i <strong>test</strong>: ogni tanto la Protezione Civile prova il sistema. In quel caso il messaggio dice chiaramente che è <strong>solo un test</strong> e non devi fare nulla.</li>
+      <li>Non viene usato per le cose di tutti i giorni: se arriva, va sempre letto con attenzione.</li>
+    </ul>
+
+    <h2 class="scheda-h2">✏️ Esercizio 1 — Vero o falso?</h2>
+    <div class="scheda-cs-domanda">
+      <p>1. IT-alert arriva solo a chi ha scaricato un'app speciale. <strong>V / F</strong></p>
+      <p>2. Il suono di IT-alert è uguale a quello delle notifiche normali. <strong>V / F</strong></p>
+      <p>3. Quando arriva un IT-alert, la prima cosa da fare è leggere il messaggio. <strong>V / F</strong></p>
+      <p>4. Se arriva un IT-alert, chiamo subito il 112 per chiedere informazioni. <strong>V / F</strong></p>
+      <p>5. A volte IT-alert viene usato per fare un test, e il messaggio lo dice chiaramente. <strong>V / F</strong></p>
     </div>
+
+    <h2 class="scheda-h2">✏️ Esercizio 2 — Riordina i passi</h2>
+    <p style="font-size: 0.92rem; margin: 0 0 0.4rem 0;">
+      Scrivi i numeri da 1 a 4 nell'ordine giusto delle azioni da fare quando arriva un IT-alert.
+    </p>
+    <div class="scheda-cs-domanda">
+      <p>___ Avviso un adulto vicino a me.</p>
+      <p>___ Sento un suono forte e diverso dal solito.</p>
+      <p>___ Seguiamo insieme le indicazioni del messaggio.</p>
+      <p>___ Leggo il messaggio fino in fondo.</p>
+    </div>
+
     <div class="soluzione-capovolta">
-      <span class="titolo">🔑 Soluzioni — gira il foglio sottosopra per leggere</span>
-      A-2, B-1, C-3, D-4.
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;">
+        <strong>Esercizio 1:</strong> 1 F (arriva a tutti i telefoni, senza app) · 2 F (è un suono forte e insolito) ·
+        3 V · 4 F (il 112 si chiama solo se qualcuno è in pericolo) · 5 V.<br>
+        <strong>Esercizio 2</strong> (ordine): sento il suono (1) → leggo il messaggio (2) → avviso un adulto (3) → seguiamo le indicazioni (4).
+      </p>
+    </div>
+
+    <div class="scheda-nota-locale">
+      <strong>Approfondimenti per Genzano:</strong>
+      <a href="/allerte-meteo/">Allerte Meteo</a> ·
+      <a href="/cosa-fare-adesso/">Cosa fare adesso</a> ·
+      <a href="/numeri-utili/">Numeri Utili</a> ·
+      <a href="/piano-familiare/">Piano Familiare</a>.
     </div>
 
     <h2 class="scheda-h2">📚 Fonti</h2>
     <ul class="scheda-elenco" style="font-size: 0.85rem;">
-      <li>IT-alert — informazioni ufficiali sul sistema di allarme pubblico (it-alert.gov.it).</li>
-      <li>Dipartimento della Protezione Civile.</li>
-      <li>Sito Protezione Civile Genzano di Roma — Allerte Meteo, Numeri Utili.</li>
+      <li>IT-alert — sito ufficiale del sistema di allarme pubblico (it-alert.it).</li>
+      <li>Dipartimento della Protezione Civile (protezionecivile.gov.it).</li>
     </ul>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
-      <span>Scheda "Perché squilla forte il telefono? IT-alert" · Primaria · Rev. 01 – Agosto 2026</span>
+      <span>Scheda "IT-alert" · Primaria 3ª-5ª · rev. 01 · agosto 2026</span>
     </footer>
 
   </article>

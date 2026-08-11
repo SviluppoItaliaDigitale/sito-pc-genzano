@@ -18,6 +18,7 @@ social_punti:
   - "Non bruciare residui, non gettare mozziconi, non accendere fuochi vicino ai boschi. Per un incendio chiama il 112."
 allegati: []
 draft: false
+versione_facile: "2026-06-25-incendi-boschivi-pericolo-italia-dati-effis-facile"
 ---
 
 **EFFIS** — il sistema europeo di informazione sugli incendi boschivi del Centro Comune di Ricerca (JRC) della Commissione europea — segnala forte pericolo incendi su gran parte dell'Italia per la settimana tra il **24 giugno e il 1° luglio 2026**. Non è un'allerta ufficiale: quella la emette il Centro Funzionale della Regione Lazio. È però un segnale utile per alzare l'attenzione, in piena stagione degli incendi.

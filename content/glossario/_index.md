@@ -7,7 +7,7 @@ sitemap:
   changefreq: monthly
 toc: true
 tts: true
-dataUltimaRevisione: "2026-07-27"
+dataUltimaRevisione: "2026-08-10"
 ---
 
 Le sigle della protezione civile possono sembrare difficili. Questo glossario le spiega in modo semplice, con esempi collegati al territorio quando utile.
@@ -51,6 +51,9 @@ Antincendio Boschivo. Comprende prevenzione, avvistamento, contenimento e spegni
 ### Allerta
 Comunicazione preventiva emessa dalle autorità quando sono previsti fenomeni che possono causare criticità. Non indica per forza un'emergenza già in corso. I colori sono verde, giallo, arancione e rosso.
 *Approfondisci: [La scienza del rischio](/conoscere/scienza-del-rischio/).*
+
+### ANAS {#anas}
+Società del gruppo FS Italiane che gestisce le strade e le autostrade statali italiane (l'acronimo storico deriva dall'ex Azienda Nazionale Autonoma delle Strade). Interviene su viabilità e infrastrutture stradali coinvolte in eventi ed emergenze.
 
 ### ANPAS {#anpas}
 Associazione Nazionale Pubbliche Assistenze. Rete nazionale di pubbliche assistenze sanitarie e di protezione civile, partner storica del Dipartimento.
@@ -112,6 +115,13 @@ Movimento lento del suolo verso l'alto o verso il basso, collegato a fenomeni vu
 ### CAA {#caa}
 Comunicazione Aumentativa Alternativa. Modalità di comunicazione con simboli e pittogrammi per chi non riesce a parlare. In emergenza la persona indica i simboli per farsi capire.
 *Approfondisci: [Tabelle di comunicazione (CAA)](/tabelle-comunicazione/).*
+
+### CAI {#cai}
+Club Alpino Italiano. Struttura di riferimento per l'alpinismo e l'escursionismo; il suo Corpo Nazionale Soccorso Alpino e Speleologico (CNSAS) è una struttura operativa del Servizio nazionale di protezione civile.
+
+### CAP {#cap}
+Common Alerting Protocol. Standard internazionale con cui questo sito pubblica le proprie allerte in formato leggibile dalle macchine (feed [`/allerta-cap.xml`](/allerta-cap.xml)), oltre che nelle pagine per il cittadino. Non va confuso con il CAP come codice di avviamento postale.
+*Approfondisci: [Open Data](/open-data/).*
 
 ### Capo Dipartimento {#capo-dipartimento}
 Massima autorità tecnico-operativa del Servizio nazionale, alle dipendenze della Presidenza del Consiglio. Coordina la risposta alle emergenze di rilievo nazionale.
@@ -184,13 +194,24 @@ Centro Operativo Regionale (sala operativa regionale). Per il Lazio attiva i COC
 ### Copernicus EMS
 Servizio europeo di gestione delle emergenze. Fornisce mappe satellitari e prodotti cartografici a supporto di grandi emergenze, come alluvioni, incendi e terremoti.
 
+### COVID-19 {#covid-19}
+Malattia respiratoria causata dal coronavirus SARS-CoV-2. La pandemia dichiarata il 31 gennaio 2020 ha attivato per la prima volta su scala nazionale il Servizio di protezione civile per un'emergenza sanitaria, con il Capo del Dipartimento come coordinatore della risposta.
+*Approfondisci: [Il rischio sanitario (Manuale, cap. 7.17)](/manuale/717-rischio-sanitario/).*
+
 ### CRI {#cri}
 Croce Rossa Italiana. Associazione di pubblica utilità, oggi ente del Terzo Settore, componente operativa del Servizio nazionale di protezione civile.
+
+### CSV {#csv}
+Comma-Separated Values: formato di file di testo con valori separati da virgola, apribile con qualsiasi foglio elettronico. Il Gruppo pubblica i propri dati di attività in questo formato nella sezione Open Data.
+*Approfondisci: [Open Data](/open-data/).*
 
 ## D
 
 ### DAE {#dae}
 Defibrillatore Automatico Esterno. Apparecchio salvavita che riconosce un arresto cardiaco e somministra una scarica per riavviare il battito. Usabile anche da chi non è personale sanitario.
+
+### DEP {#dep}
+Dipartimento di Epidemiologia del Lazio (ASL Roma 1). Ente di sanità pubblica che pubblica studi e linee guida su rischi sanitari come le ondate di calore, citati anche dagli articoli di questo sito.
 
 ### DICOMAC
 Direzione di Comando e Controllo. Struttura di coordinamento nazionale attivata nelle emergenze di rilievo nazionale.
@@ -205,6 +226,10 @@ Vedi **Codice della protezione civile**.
 ### D.M. (Decreto Ministeriale) {#dm}
 Decreto Ministeriale. Atto normativo emanato da un singolo ministro nelle materie di sua competenza. È diverso dal DPCM, firmato dal Presidente del Consiglio dei Ministri.
 
+### DOS {#dos}
+Direttore delle Operazioni di Spegnimento. Tecnico che dirige sul posto le squadre e i mezzi aerei durante lo spegnimento di un incendio boschivo (AIB).
+*Approfondisci: [Il rischio da incendi boschivi](/conoscere/catalogo-dei-rischi/rischio-incendio/).*
+
 ### DPC
 Dipartimento della Protezione Civile. Struttura della Presidenza del Consiglio dei Ministri che coordina il Servizio nazionale di protezione civile.
 
@@ -216,6 +241,9 @@ Dispositivi di Protezione Individuale: caschi, guanti, scarpe antinfortunistiche
 
 ### DPO {#dpo}
 Data Protection Officer, in italiano Responsabile della protezione dei dati (RPD). Figura prevista dal GDPR che vigila sul corretto trattamento dei dati personali in enti pubblici e aziende.
+
+### D.P.R. {#dpr}
+Decreto del Presidente della Repubblica. Atto normativo firmato dal Presidente della Repubblica, distinto dal DPCM (firmato dal Presidente del Consiglio). Diversi regolamenti tecnici citati sul sito — dalla manutenzione delle caldaie alla prevenzione incendi — sono D.P.R.
 
 ### DSA {#dsa}
 Disturbi Specifici dell'Apprendimento, come dislessia, disgrafia e discalculia. Non dipendono dall'intelligenza. Questo sito offre strumenti di lettura dedicati: carattere ad alta leggibilità, lettura ad alta voce, versioni facili.
@@ -231,6 +259,13 @@ Direttore dei Servizi Generali e Amministrativi. Dirige la segreteria e i serviz
 Documento di Valutazione dei Rischi. È previsto dalla normativa sulla sicurezza nei luoghi di lavoro. Nelle scuole è collegato anche alla pianificazione dell'emergenza e dell'evacuazione.
 
 ## E
+
+### ECDC {#ecdc}
+Centro europeo per la prevenzione e il controllo delle malattie (European Centre for Disease Prevention and Control). Agenzia dell'Unione Europea che sorveglia le minacce sanitarie transfrontaliere, rilevante per il rischio sanitario.
+
+### ECHO {#echo}
+Direzione Generale per la Protezione Civile e le Operazioni di Aiuto Umanitario Europee della Commissione Europea (DG ECHO). Finanzia gli aiuti umanitari e coordina, insieme all'ERCC, il Meccanismo unionale di protezione civile.
+*Approfondisci: [La dimensione internazionale](/conoscere/dimensione-internazionale/).*
 
 ### ECMWF {#ecmwf}
 Centro europeo per le previsioni meteorologiche a medio termine (European Centre for Medium-Range Weather Forecasts). Elabora i modelli meteo di riferimento in Europa, usati anche dalle carte del [cruscotto](/cruscotto/) di questo sito.
@@ -285,6 +320,9 @@ Federal Emergency Management Agency. È l'agenzia federale statunitense per la g
 
 ### FE.PI.VOL. {#fepivol}
 **Federazione Pronto Intervento Volontariato ODV**. Coordinamento regionale del volontariato di Protezione Civile del Lazio a cui aderisce il Gruppo Comunale di Genzano di Roma. Coordina le colonne mobili regionali nelle grandi emergenze.
+
+### FIC {#fic}
+Federazione Italiana Cuochi. Ha presentato il Manuale di Cucina in Emergenza, curato con il suo Dipartimento Solidarietà Emergenze (DSEFIC), disponibile nell'[Area Download](/area-download/).
 
 ## G
 
@@ -368,6 +406,10 @@ Sistema nazionale di allarme pubblico. Invia messaggi ai telefoni presenti in un
 
 ## L
 
+### L.R. Lazio 2/2014 {#lr-lazio-2-2014}
+Legge regionale 26 febbraio 2014, n. 2. Disciplina il sistema integrato regionale di protezione civile del Lazio, di cui fa parte il volontariato comunale.
+*Approfondisci: [Normativa](/normativa/).*
+
 ### Legge Stanca
 Legge 9 gennaio 2004, n. 4. Riguarda l'accessibilità degli strumenti informatici e dei siti web pubblici.
 
@@ -388,6 +430,9 @@ Misura l'energia rilasciata da un terremoto. Non indica da sola i danni, che dip
 Serie di onde marine provocate dallo spostamento improvviso di una grande massa d'acqua: terremoti sottomarini, frane o eruzioni. In Italia l'allertamento è gestito dal sistema SiAM (INGV, ISPRA, DPC).
 *Approfondisci: [Il rischio da maremoto](/conoscere/catalogo-dei-rischi/rischio-maremoto/).*
 
+### MASE {#mase}
+Ministero dell'Ambiente e della Sicurezza Energetica. Fra le sue competenze il Piano Nazionale di Adattamento ai Cambiamenti Climatici (PNACC) e i rischi industriali.
+
 ### MCS / Mercalli
 Scala che descrive gli effetti di un terremoto su persone, edifici e ambiente. È diversa dalla magnitudo, che misura l'energia del terremoto.
 *Approfondisci: [Il rischio sismico](/conoscere/catalogo-dei-rischi/rischio-sismico/).*
@@ -399,6 +444,9 @@ Il sistema con cui i Paesi dell'Unione Europea si aiutano nelle grandi emergenze
 ### Microzonazione sismica {#microzonazione-sismica}
 Studio che descrive, strada per strada, come il terreno risponde a un terremoto: alcune zone amplificano la scossa più di altre. Guida la pianificazione comunale e le norme di costruzione.
 *Approfondisci: [Il rischio sismico](/conoscere/catalogo-dei-rischi/rischio-sismico/).*
+
+### MIM {#mim}
+Ministero dell'Istruzione e del Merito. Definisce le norme scolastiche su sicurezza, evacuazione ed Educazione Civica applicate anche nei percorsi didattici di questo sito.
 
 ### Mitigazione {#mitigazione}
 Insieme di interventi che riducono gli effetti di un evento dannoso (argini, edifici antisismici). Distinta dalla prevenzione, che mira a evitare l'evento.
@@ -458,6 +506,13 @@ Presidenza del Consiglio dei Ministri. Il DPC è una sua struttura e da essa der
 ### PCTO
 Percorsi per le Competenze Trasversali e l'Orientamento. Sono attività formative per studenti della scuola secondaria di secondo grado. Possono essere svolti anche con organizzazioni di protezione civile, se ci sono progetto formativo, coperture e disponibilità operative.
 
+### PEE {#pee}
+Piano di Emergenza Esterno. Redatto dal Prefetto per gli stabilimenti a rischio di incidente rilevante (Seveso): definisce le misure di protezione per il territorio e la popolazione circostanti.
+*Approfondisci: [Il rischio industriale](/rischi-prevenzione/rischio-industriale/).*
+
+### PEI {#pei}
+Piano Educativo Individualizzato. Documento previsto dal D.Lgs. 66/2017 per gli alunni con disabilità: nella pianificazione dell'emergenza scolastica definisce anche le procedure di evacuazione su misura.
+
 ### PFA {#pfa}
 Psychological First Aid (Primo Soccorso Psicologico). Protocollo internazionale, raccomandato dall'OMS, di supporto alle persone colpite da un'emergenza: ascolto, protezione, bisogni pratici. Non è psicoterapia e non richiede di essere psicologi.
 
@@ -468,8 +523,16 @@ Piano di Gestione del Rischio di Alluvioni. Recepisce la Direttiva europea Alluv
 ### Piano comunale di protezione civile {#piano-di-emergenza-comunale}
 Documento che descrive rischi, aree di emergenza, procedure, ruoli e risorse del Comune. Per Genzano consulta il [Piano di emergenza](/piano-emergenza/) e la [Cartografia](/cartografia/).
 
+### PLS {#pls}
+Posizione Laterale di Sicurezza. Posizione di primo soccorso in cui va messa una persona incosciente che respira, per tenere libere le vie aeree in attesa dei soccorsi.
+*Approfondisci: [Primo soccorso](/formazione/primo-soccorso/).*
+
 ### PMA
 Posto Medico Avanzato. Struttura sanitaria temporanea allestita vicino a un'emergenza per soccorso, triage e invio verso gli ospedali.
+
+### PNACC {#pnacc}
+Piano Nazionale di Adattamento ai Cambiamenti Climatici. Individua le misure con cui l'Italia si adatta agli effetti del clima che cambia, comprese ondate di calore e siccità.
+*Approfondisci: [Clima e protezione civile](/conoscere/clima-e-protezione-civile/).*
 
 ### PNRR {#pnrr}
 Piano Nazionale di Ripresa e Resilienza. Programma di investimenti pubblici finanziato dall'Unione Europea. Sostiene anche opere di prevenzione del rischio, la sicurezza delle scuole e la costellazione satellitare IRIDE.
@@ -488,6 +551,10 @@ Detto di un vulcano che non ha eruzioni in corso, ma non è considerato spento. 
 
 ### RCP {#rcp}
 Rianimazione Cardio-Polmonare. Tecnica d'emergenza che combina compressioni toraciche e respiri di soccorso per chi ha avuto un arresto cardiaco.
+
+### REI {#rei}
+Resistenza al fuoco di una struttura o di un elemento edilizio (porta, parete): R = stabilità, E = tenuta ai fumi e alle fiamme, I = isolamento termico. Il numero che segue (es. REI 60) indica i minuti di resistenza garantiti.
+*Approfondisci: [Il rischio da incendio](/conoscere/catalogo-dei-rischi/rischio-incendio/).*
 
 ### rescEU {#resceu}
 La riserva europea di mezzi per le emergenze (per esempio aerei antincendio, scorte mediche), parte del Meccanismo europeo di protezione civile. Interviene quando le risorse di un Paese non bastano.
@@ -517,8 +584,15 @@ Registro Unico Nazionale del Terzo Settore. Registro pubblico degli enti del Ter
 Soluzioni Abitative d'Emergenza. Sono moduli abitativi temporanei usati dopo grandi emergenze per ospitare persone che non possono rientrare in casa.
 *Approfondisci: [Dopo l'emergenza](/conoscere/le-quattro-fasi/dopo-l-emergenza/).*
 
+### SAFOR-PROCIV {#safor-prociv}
+Scuola di Alta Formazione di Protezione Civile della Regione Lazio. Forma i volontari regionali, anche con il corso base obbligatorio per l'iscrizione all'elenco territoriale.
+
 ### Sala Operativa Protezione Civile Lazio {#sala-operativa-protezione-civile-lazio}
 Sala operativa regionale (numero verde 803 555) per segnalazioni non urgenti. Per le emergenze si chiama il **112**.
+
+### SAR {#sar}
+Sigla con due significati nella protezione civile. **Search And Rescue** (ricerca e soccorso): l'insieme delle attività per trovare e mettere in salvo persone disperse o in pericolo. **Synthetic Aperture Radar** (radar ad apertura sintetica): tecnologia satellitare che rileva variazioni del terreno, usata anche per monitorare gli effetti dei terremoti dallo spazio.
+*Approfondisci: [Il rischio sismico](/conoscere/catalogo-dei-rischi/rischio-sismico/).*
 
 ### Sciame sismico {#sciame-sismico}
 Sequenza di molte scosse di magnitudo simile in un'area ristretta, in giorni o settimane. Non indica necessariamente un terremoto maggiore in arrivo.
@@ -556,6 +630,9 @@ Figura nominata nelle ordinanze di emergenza per realizzare interventi specifici
 Sala Operativa Unificata Permanente. Sala regionale antincendio boschivo, attiva 24 ore su 24 nei mesi a rischio: coordina avvistamenti, mezzi aerei e squadre AIB.
 *Approfondisci: [Il rischio da incendi boschivi](/conoscere/catalogo-dei-rischi/rischio-incendio/).*
 
+### SOUR {#sour}
+Sala Operativa Unificata Regionale del Lazio. Sala operativa attiva 24 ore su 24 che coordina le emergenze a livello regionale; da non confondere con la SOUP, dedicata agli incendi boschivi.
+
 ### Stato di emergenza {#stato-di-emergenza}
 Atto del Consiglio dei Ministri (art. 24 del Codice della protezione civile) che dichiara un'emergenza di rilievo nazionale: sblocca poteri straordinari e ordinanze.
 *Approfondisci: [Dopo l'emergenza](/conoscere/le-quattro-fasi/dopo-l-emergenza/).*
@@ -587,6 +664,10 @@ Testo Unico sulla Sicurezza sul Lavoro (D.Lgs. 81/2008). Obbliga ogni datore di 
 
 ### UCPM {#ucpm}
 Sigla di *Union Civil Protection Mechanism*: è il [Meccanismo europeo di protezione civile](#meccanismo-europeo).
+
+### UHT {#uht}
+Ultra High Temperature: trattamento a temperatura ultra alta che rende un alimento (tipicamente latte o succhi) conservabile a lungo senza frigorifero, prima dell'apertura. Utile nelle scorte alimentari di emergenza.
+*Approfondisci: [Kit di emergenza](/rischi-prevenzione/kit-emergenza/).*
 
 ### UNDRR {#undrr}
 Ufficio delle Nazioni Unite per la riduzione del rischio di disastri (United Nations Office for Disaster Risk Reduction). Coordina a livello mondiale le strategie per ridurre i danni delle catastrofi, come il Quadro di Sendai.
