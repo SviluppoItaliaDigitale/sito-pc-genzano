@@ -41,6 +41,21 @@ Il primo intervento è del **giovedì 6 agosto**, in via di Spregamore, a Pomezi
 
 Il rapporto di intervento lo classifica come **incendio di interfaccia**. È il caso più delicato: il fuoco corre nella vegetazione ma si trova a ridosso di case, capannoni, strade e recinzioni. La priorità non è più solo spegnere, è impedire che le fiamme raggiungano ciò che sta al margine. Le squadre lavorano allora sul perimetro, bagnano le fasce di rispetto e presidiano i punti dove il fuoco potrebbe saltare.
 
+{{< galleria titolo="L'intervento del 6 agosto a Pomezia" >}}
+{{< foto src="/images/2026-08-06-pomezia-spegnimento-fronte-fiamme.webp"
+         alt="Un operatore in maglietta nera con la scritta Antincendio e pantaloni rossi dirige un getto d'acqua verso alcune fiamme basse nella macchia; a terra la manichetta e il suolo già annerito, sullo sfondo alti eucalipti."
+         caption="Il getto d'acqua sulle fiamme che corrono nella macchia bassa, ai piedi degli eucalipti. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< foto src="/images/2026-08-06-pomezia-volontario-manichetta-mezzo.webp"
+         alt="Un volontario in divisa rossa e blu con casco rosso impugna la manichetta accanto al fianco posteriore di un mezzo antincendio rosso; sullo sfondo un altro operatore in maglietta Antincendio davanti a un focolaio e al fumo."
+         caption="La linea di manichetta stesa dal mezzo antincendio verso il fronte del fuoco." >}}
+{{< foto src="/images/2026-08-06-pomezia-area-percorsa-fuoco.webp"
+         alt="Un boschetto di eucalipti con il terreno completamente annerito dal passaggio del fuoco; in lontananza alcuni mezzi e un residuo di fumo, cielo sereno."
+         caption="Il terreno percorso dalle fiamme sotto gli eucalipti, a fuoco ormai passato." >}}
+{{< foto src="/images/2026-08-06-pomezia-tronchi-bonifica.webp"
+         alt="Tronchi tagliati di fresco, con il taglio ancora chiaro, appoggiati sul terreno bruciato accanto a una ceppaia carbonizzata; sullo sfondo il fumo che si alza oltre gli alberi."
+         caption="Tronchi tagliati sul terreno annerito. Il legname grosso trattiene il calore a lungo: è uno dei punti da bagnare in bonifica." >}}
+{{< /galleria >}}
+
 Le indicazioni di base per chi abita o coltiva in una fascia di interfaccia sono nella pagina [Rischio incendio](/rischi-prevenzione/rischio-incendio/).
 
 ## 9 agosto: dieci ettari in via della Falcognana
