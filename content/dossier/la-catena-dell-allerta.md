@@ -65,7 +65,7 @@ Prevedere non vuol dire indovinare: vuol dire stimare, con metodo scientifico, *
 {{< /dossier-dati >}}
 
 {{< dossier-dati id="it-alert" image="/images/dossier/allertamento-eu-alert.webp" alt="Mappa politica dell'Europa con i confini dei Paesi, su sfondo azzurro" >}}
-{{< dossier-dato to="2023" label="Per le emergenze **gravi e imminenti** è arrivato **IT-alert**: un messaggio che suona su tutti i telefoni nell'area colpita, senza bisogno di iscriversi" >}}
+{{< dossier-dato to="2024" label="Dal 13 febbraio 2024, per alcune emergenze **gravi e imminenti** (non per il meteo), è operativo **IT-alert**: un messaggio che suona su tutti i telefoni nell'area interessata, senza iscriversi e senza scaricare app" >}}
 {{< dossier-dato to="1" unita=" canale" label="IT-alert si aggiunge ai canali ufficiali (sito, social, radio, altoparlanti): non li sostituisce, li rinforza nei momenti critici" >}}
 {{< dossier-dato to="0" unita="" label="Come funziona nel dettaglio te lo raccontiamo nel dossier «Il messaggio che salva»" >}}
 {{< /dossier-dati >}}

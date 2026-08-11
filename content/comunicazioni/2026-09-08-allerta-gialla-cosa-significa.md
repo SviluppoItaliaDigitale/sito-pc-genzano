@@ -55,9 +55,11 @@ L'allerta si riferisce sempre a un **rischio specifico** (idrogeologico, idrauli
 
 - sito della **Regione Lazio — Protezione Civile**;
 - sito del **Comune di Genzano di Roma** e canali del Gruppo;
-- **app IT-Alert** e sistemi ufficiali;
+- **avvisi del Comune e del Sindaco** sui canali istituzionali;
 - **radio** e TV regionali;
 - bollettini del **Centro Funzionale Regionale**.
+
+**IT-alert non serve per le allerte meteo.** È il sistema nazionale di allarme pubblico (non è un'app: il messaggio arriva da solo sui telefoni della zona). Riguarda emergenze diverse, come incidenti nucleari o industriali rilevanti, collasso di grandi dighe e attività vulcanica. Per pioggia, vento e temporali restano validi i bollettini del sistema di allertamento.
 
 ## Per approfondire
 
