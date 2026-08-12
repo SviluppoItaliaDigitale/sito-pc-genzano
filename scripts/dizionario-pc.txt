@@ -784,3 +784,7 @@ coronavirus
 gasping
 semimaschera
 flare
+safety
+security
+science
+crowd
