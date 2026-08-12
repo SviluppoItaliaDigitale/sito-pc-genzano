@@ -16,16 +16,16 @@ tts: true
 social_citazione: "Un incendio a bordo binario non è mai solo un incendio: ferma i treni, e ogni ora di stop è un problema per migliaia di persone."
 social_punti:
   - "12 agosto 2026: incendio di sterpaglie in via della Siderurgia, a Pomezia, lungo la linea ferroviaria."
-  - "Il Gruppo di Genzano attivato dalla SOUP: partenza alle 14.48, rientro dopo le 18.30. Quasi quattro ore di lavoro."
+  - "Il Gruppo di Genzano attivato dalla SOUP nel primo pomeriggio e rientrato in serata: quasi quattro ore di lavoro."
   - "In campo autobotte e pickup antincendio, insieme a Vigili del Fuoco, Polizia Locale, Carabinieri, Polizia e ai gruppi di Ariccia e Albano Laziale."
   - "Nelle stesse ore la circolazione dei treni tra Pomezia e Campoleone è rimasta sospesa."
 ---
 
 Nel pomeriggio di **mercoledì 12 agosto 2026** un incendio di sterpaglie si è sviluppato in **via della Siderurgia, a Pomezia**, lungo la fascia di vegetazione che costeggia la linea ferroviaria. Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** è stato attivato dalla **SOUP**, la sala operativa regionale antincendio, e ha lavorato sul posto per **quasi quattro ore**.
 
-## L'intervento, ora per ora
+## Come si è svolto l'intervento
 
-La squadra parte dalla sede **alle 14.48** e arriva sul posto **alle 15.04**. Da lì il lavoro prosegue senza interruzioni: i volontari sono **liberi in rientro alle 18.34** e l'intervento si chiude **alle 18.46**. In tutto **tre ore e 58 minuti**.
+La squadra parte dalla sede **poco prima delle 15** e arriva sul posto pochi minuti dopo. Da lì il lavoro prosegue senza interruzioni: i volontari sono **liberi in rientro dopo le 18.30** e l'intervento si chiude **verso le 19**. In tutto **quasi quattro ore**.
 
 Sul posto il Gruppo ha portato l'**autobotte antincendio** e un **pickup con modulo antincendio**, con una squadra di **sei volontari** impegnata sul fronte e nella bonifica.
 
@@ -47,9 +47,9 @@ Il fuoco ha percorso la vegetazione a ridosso dell'infrastruttura ferroviaria: e
 
 Un incendio in quella posizione non minaccia solo la vegetazione. Il fumo riduce la visibilità dei macchinisti, il calore può danneggiare cavi e apparati di segnalamento e le squadre non possono operare in sicurezza vicino ai binari finché i treni circolano.
 
-Per questo la circolazione viene fermata. Secondo gli aggiornamenti di **RFI** ripresi dalla stampa, alle **14.10** sulla linea **Roma-Formia** erano già segnalati rallentamenti, ritardi fino a 30 minuti, limitazioni e cancellazioni.
+Per questo la circolazione viene fermata. Secondo gli aggiornamenti di **RFI** ripresi dalla stampa, già nel **primo pomeriggio** sulla linea **Roma-Formia** si registravano rallentamenti, ritardi fino a mezz'ora, limitazioni e cancellazioni.
 
-Poco dopo le **15** la circolazione è stata **sospesa fra Pomezia e Campoleone**. Alle 16.45 i treni erano ancora fermi. Per i viaggiatori è stato attivato un servizio di **bus sostitutivi**.
+Poco dopo le **15** la circolazione è stata **sospesa fra Pomezia e Campoleone**, e a metà pomeriggio i treni erano ancora fermi. Per i viaggiatori è stato attivato un servizio di **bus sostitutivi**.
 
 ## Chi ha lavorato insieme a noi
 
