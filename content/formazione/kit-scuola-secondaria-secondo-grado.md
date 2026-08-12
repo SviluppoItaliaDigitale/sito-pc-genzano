@@ -1045,7 +1045,7 @@ Ogni template include: obiettivi, competenze attese, durata, struttura del prodo
 - *Prodotto*: 15 post Instagram + 5 reel di 60 secondi + 1 evento di lancio.
 - *Temi*: zaino d'emergenza, piano familiare, 112, IT-alert, aree di attesa.
 - *Durata*: 30 ore PCTO.
-- *Valutazione*: reach e engagement reali, correttezza informativa, estetica coerente con il design institutionale PA.
+- *Valutazione*: reach e engagement reali, correttezza informativa, estetica coerente con il design istituzionale PA.
 - *Output*: profili social della scuola e del Gruppo.
 
 **Template C — Ricerca "Il rischio nel mio quartiere"**
