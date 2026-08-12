@@ -71,5 +71,6 @@ Non serve essere esperti: serve tempo, impegno e voglia di aiutare. Il Gruppo fo
 {{< dossier-fonti >}}
 - **Contenuti:** [Chi siamo](/chi-siamo/) — storia, direttivo, mezzi e settori operativi del Gruppo · [Diventa volontario](/diventa-volontario/) · [Rischi e prevenzione](/rischi-prevenzione/).
 - **Immagini:** foto d'archivio e di attività del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**.
+- **Sul nostro sito:** [L'esercito gentile](/dossier/l-esercito-gentile-volontariato/) · [Prove generali del disastro](/dossier/prove-generali-del-disastro/) · [I rischi di casa nostra](/dossier/genzano-castelli-i-nostri-rischi/) · [Chi siamo](/chi-siamo/) · [Diventa volontario](/diventa-volontario/).
 - Dossier a cura del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**.
 {{< /dossier-fonti >}}
