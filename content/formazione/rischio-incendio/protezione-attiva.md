@@ -71,9 +71,9 @@ Regole operative:
 - **Due operatori**: disporsi **sfalsati di 90°** per coprire direzioni diverse senza ostacolarsi
 - Mantieni una **via di fuga alle tue spalle**
 
-### Dimensionamento e posizionamento (D.M. 10 marzo 1998)
+### Dimensionamento e posizionamento
 
-Quantità e capacità calibrati su:
+I criteri storici vengono dal D.M. 10 marzo 1998, oggi sostituito dai D.M. 1° e 2 settembre 2021: la tabella resta un riferimento orientativo diffuso negli edifici esistenti. Quantità e capacità calibrati su:
 
 - numero di piani (almeno un estintore per piano)
 - superficie in pianta
@@ -209,15 +209,15 @@ Sistema di **pittogrammi normalizzati** per orientare in condizioni di emergenza
 Regole:
 
 - **Segnaletica fotoluminescente** sulle vie di esodo (resta visibile al buio)
-- **Illuminazione di sicurezza** con autonomia minima (DM 10/3/1998: almeno 30 minuti)
+- **Illuminazione di sicurezza** con autonomia adeguata al tempo di esodo (il criterio storico del D.M. 10/3/1998 indicava almeno 30 minuti)
 - **Nessun arredo** deve oscurare la segnaletica
 
 ## Registro dei controlli antincendio
 
-Documento obbligatorio (D.M. 10 marzo 1998, art. 5; D.M. 1° settembre 2021) da tenere aggiornato con:
+Documento obbligatorio (oggi disciplinato dal D.M. 1° settembre 2021; in origine D.M. 10 marzo 1998, art. 5) da tenere aggiornato con:
 
 - Controlli periodici sugli impianti (estintori, idranti, sprinkler, rilevatori, allarme)
-- Prove di evacuazione (almeno **due volte all'anno** — D.M. 10/3/1998)
+- Prove di evacuazione (nelle scuole almeno **due volte per anno scolastico** — D.M. 26 agosto 1992)
 - Interventi di manutenzione straordinaria
 - Modifiche alle misure di prevenzione
 
