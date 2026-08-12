@@ -29,6 +29,18 @@ La squadra parte dalla sede **alle 14.48** e arriva sul posto **alle 15.04**. Da
 
 Sul posto il Gruppo ha portato l'**autobotte antincendio** e un **pickup con modulo antincendio**, con una squadra di **sei volontari** impegnata sul fronte e nella bonifica.
 
+{{< galleria titolo="L'intervento in via della Siderurgia" >}}
+{{< foto src="/images/2026-08-12-pomezia-bonifica-controluce.webp" alt="Un operatore bagna con la lancia il terreno bruciato tra gli alberi anneriti; sullo sfondo la massicciata e i binari della ferrovia." caption="La bonifica del terreno percorso dal fuoco, a pochi metri dai binari." >}}
+{{< foto src="/images/2026-08-12-pomezia-squadre-al-lavoro.webp" alt="Un operatore con maglietta antincendio dirige il getto d'acqua sul terreno; accanto un volontario in tuta rossa della Protezione Civile di Genzano di Roma e un vigile del fuoco con casco." caption="Volontari e Vigili del Fuoco sullo stesso fronte, lungo la recinzione a bordo della sede ferroviaria." >}}
+{{< foto src="/images/2026-08-12-pomezia-vvf-e-volontari.webp" alt="Gruppo di operatori di spalle tra gli alberi bruciati: volontari di Protezione Civile in tuta rossa e vigili del fuoco, mentre un operatore bagna il terreno." caption="Il lavoro sul posto è stato condiviso tra più squadre: ognuna con i propri compiti, sotto un coordinamento unico." >}}
+{{< foto src="/images/2026-08-12-pomezia-binari-terreno-percorso.webp" alt="Tronchi anneriti e terreno coperto di cenere chiara; sullo sfondo i binari della ferrovia e un nastro segnaletico rosso e bianco." caption="Il fuoco è arrivato fino al limite della sede ferroviaria: qui il terreno è già stato percorso dalle fiamme." >}}
+{{< foto src="/images/2026-08-12-pomezia-area-percorsa-fumante.webp" alt="Area percorsa dal fuoco ancora fumante, con arbusti carbonizzati e alberi con le chiome bruciate; dietro il guard rail e la linea ferroviaria." caption="Il fumo che resta dopo il passaggio del fronte: sono i punti dove serve tornare a bagnare." >}}
+{{< foto src="/images/2026-08-12-pomezia-mezzi-sul-posto.webp" alt="Il retro di un'autobotte rossa della Protezione Civile e, più avanti, un fuoristrada verde con lampeggiante blu, su terreno bruciato sotto un traliccio dell'alta tensione." caption="I mezzi antincendio posizionati sul terreno percorso dal fuoco." >}}
+{{< foto src="/images/2026-08-12-pomezia-autobotte-gruppo.webp" alt="Autobotte rossa con la scritta Protezione Civile e lo stemma sulla portiera, ferma su un campo con tracce di bruciato; sullo sfondo capannoni industriali e una torre idrica." caption="L'autobotte del Gruppo in posizione, ai margini della zona industriale." >}}
+{{< /galleria >}}
+
+Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma.
+
 ## Perché un incendio a bordo binario è un problema serio
 
 Il fuoco ha percorso la vegetazione a ridosso dell'infrastruttura ferroviaria: erba secca, arbusti e alberature basse. In una giornata di agosto, con temperature alte e terreno arido, è il combustibile peggiore.
