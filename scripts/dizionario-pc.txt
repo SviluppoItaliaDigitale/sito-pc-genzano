@@ -788,3 +788,5 @@ safety
 security
 science
 crowd
+terremotocentroitalia
+termocamera
