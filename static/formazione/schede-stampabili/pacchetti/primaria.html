@@ -374,8 +374,8 @@
 
     .cv-griglia {
       display: grid;
-      grid-template-columns: repeat(13, 30px);
-      grid-template-rows: repeat(11, 30px);
+      grid-template-columns: repeat(11, 30px);
+      grid-template-rows: repeat(9, 30px);
       gap: 0;
       margin: 0.8rem auto;
       width: fit-content;
@@ -391,6 +391,7 @@
       color: #6c757d;
     }
     .cv-cell.black { background: #495057; border-color: #495057; }
+    .cv-cell.tema { background: #fff3cd; border-color: #b45309; }
     .cv-cell .cv-num {
       position: absolute;
       top: 1px;
@@ -2851,173 +2852,125 @@
     </p>
 
     <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.5rem 0.8rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.88rem; line-height: 1.5;">
-      <strong style="color: var(--scheda-blu);">🧩 Tutte le parole di questo cruciverba sono di Protezione Civile.</strong> Mentre le scopri, impari il "vocabolario" della sicurezza: <em>allerta, terremoto, volontario, soccorso, vigili, ambulanza, mappa, kit, raccolta, 112, emergenza, evacuazione</em>. Le definizioni sono semplici ma scritte come quelle dei <em>cruciverba degli adulti</em>: leggile bene e prova a indovinare!
+      <strong style="color: var(--scheda-blu);">🧩 Tutte le parole di questo cruciverba sono di Protezione Civile.</strong> Mentre le scopri, impari il "vocabolario" della sicurezza: <em>sisma, kit, scale, aiuto, radar, emergenza, zaino, piazza, volontario</em>. Le definizioni sono semplici ma scritte come quelle dei <em>cruciverba degli adulti</em>: leggile bene e prova a indovinare! Le caselle color oro segnano la colonna della parola-tema: quando le riempi tutte, leggila dall'alto in basso.
     </div>
 
-    <div class="cv-griglia" role="grid" aria-label="Griglia cruciverba 13 colonne per 11 righe">
-      <!-- Riga 1: 1 ALLERTA orizzontale (7 lettere) -->
-      <div class="cv-cell"><span class="cv-num">1</span></div>
-      <div class="cv-cell"></div>
-      <div class="cv-cell"></div>
-      <div class="cv-cell"></div>
-      <div class="cv-cell"></div>
-      <div class="cv-cell"></div>
-      <div class="cv-cell"></div>
+    <div class="cv-griglia" role="grid" aria-label="Griglia cruciverba 11 colonne per 9 righe">
+      <!-- Riga 1: 1 SISMA orizzontale (5 lettere), colonna 7 = tema -->
       <div class="cv-cell black"></div>
       <div class="cv-cell black"></div>
       <div class="cv-cell black"></div>
       <div class="cv-cell black"></div>
       <div class="cv-cell black"></div>
       <div class="cv-cell black"></div>
+      <div class="cv-cell tema"><span class="cv-num">1</span></div>
+      <div class="cv-cell"></div>
+      <div class="cv-cell"></div>
+      <div class="cv-cell"></div>
+      <div class="cv-cell"></div>
 
-      <!-- Riga 2 -->
+      <!-- Riga 2: 2 KIT orizzontale (3 lettere) -->
+      <div class="cv-cell black"></div>
+      <div class="cv-cell black"></div>
+      <div class="cv-cell black"></div>
       <div class="cv-cell black"></div>
       <div class="cv-cell black"></div>
       <div class="cv-cell"><span class="cv-num">2</span></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
+      <div class="cv-cell tema"></div>
+      <div class="cv-cell"></div>
       <div class="cv-cell black"></div>
       <div class="cv-cell black"></div>
       <div class="cv-cell black"></div>
 
-      <!-- Riga 3: SISMA -->
+      <!-- Riga 3: 3 SCALE orizzontale (5 lettere) -->
       <div class="cv-cell black"></div>
       <div class="cv-cell black"></div>
-      <div class="cv-cell"></div>
+      <div class="cv-cell black"></div>
+      <div class="cv-cell black"></div>
       <div class="cv-cell black"></div>
       <div class="cv-cell"><span class="cv-num">3</span></div>
+      <div class="cv-cell tema"></div>
       <div class="cv-cell"></div>
       <div class="cv-cell"></div>
       <div class="cv-cell"></div>
-      <div class="cv-cell"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
       <div class="cv-cell black"></div>
 
-      <!-- Riga 4 -->
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell"></div>
+      <!-- Riga 4: 4 AIUTO orizzontale (5 lettere) -->
       <div class="cv-cell black"></div>
       <div class="cv-cell black"></div>
       <div class="cv-cell black"></div>
       <div class="cv-cell black"></div>
       <div class="cv-cell"><span class="cv-num">4</span></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
+      <div class="cv-cell"></div>
+      <div class="cv-cell tema"></div>
+      <div class="cv-cell"></div>
+      <div class="cv-cell"></div>
       <div class="cv-cell black"></div>
       <div class="cv-cell black"></div>
 
-      <!-- Riga 5: 5 SCALE -->
-      <div class="cv-cell"><span class="cv-num">5</span></div>
+      <!-- Riga 5: 5 RADAR orizzontale (5 lettere) -->
+      <div class="cv-cell black"></div>
+      <div class="cv-cell black"></div>
+      <div class="cv-cell black"></div>
+      <div class="cv-cell black"></div>
+      <div class="cv-cell black"></div>
+      <div class="cv-cell black"></div>
+      <div class="cv-cell tema"><span class="cv-num">5</span></div>
       <div class="cv-cell"></div>
       <div class="cv-cell"></div>
       <div class="cv-cell"></div>
       <div class="cv-cell"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
 
-      <!-- Riga 6 -->
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-
-      <!-- Riga 7: 6 RADAR -->
+      <!-- Riga 6: 6 EMERGENZA orizzontale (9 lettere) -->
       <div class="cv-cell black"></div>
       <div class="cv-cell"><span class="cv-num">6</span></div>
       <div class="cv-cell"></div>
       <div class="cv-cell"></div>
       <div class="cv-cell"></div>
       <div class="cv-cell"></div>
-      <div class="cv-cell black"></div>
+      <div class="cv-cell tema"></div>
       <div class="cv-cell"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
+      <div class="cv-cell"></div>
+      <div class="cv-cell"></div>
       <div class="cv-cell black"></div>
 
-      <!-- Riga 8 -->
+      <!-- Riga 7: 7 ZAINO orizzontale (5 lettere) -->
       <div class="cv-cell black"></div>
       <div class="cv-cell black"></div>
       <div class="cv-cell black"></div>
       <div class="cv-cell black"></div>
       <div class="cv-cell black"></div>
       <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
+      <div class="cv-cell tema"><span class="cv-num">7</span></div>
       <div class="cv-cell"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
+      <div class="cv-cell"></div>
+      <div class="cv-cell"></div>
+      <div class="cv-cell"></div>
 
-      <!-- Riga 9: 7 EMERGENZA -->
-      <div class="cv-cell"><span class="cv-num">7</span></div>
-      <div class="cv-cell"></div>
-      <div class="cv-cell"></div>
-      <div class="cv-cell"></div>
-      <div class="cv-cell"></div>
-      <div class="cv-cell"></div>
-      <div class="cv-cell"></div>
-      <div class="cv-cell"></div>
-      <div class="cv-cell"></div>
-      <div class="cv-cell"></div>
+      <!-- Riga 8: 8 PIAZZA orizzontale (6 lettere) -->
       <div class="cv-cell black"></div>
       <div class="cv-cell black"></div>
       <div class="cv-cell black"></div>
-
-      <!-- Riga 10 -->
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-      <div class="cv-cell black"></div>
-
-      <!-- Riga 11: 8 VOLONTARIO -->
       <div class="cv-cell"><span class="cv-num">8</span></div>
       <div class="cv-cell"></div>
       <div class="cv-cell"></div>
-      <div class="cv-cell"></div>
-      <div class="cv-cell"></div>
-      <div class="cv-cell"></div>
-      <div class="cv-cell"></div>
-      <div class="cv-cell"></div>
-      <div class="cv-cell"></div>
+      <div class="cv-cell tema"></div>
       <div class="cv-cell"></div>
       <div class="cv-cell"></div>
       <div class="cv-cell black"></div>
+      <div class="cv-cell black"></div>
+
+      <!-- Riga 9: 9 VOLONTARIO orizzontale (10 lettere) -->
+      <div class="cv-cell"><span class="cv-num">9</span></div>
+      <div class="cv-cell"></div>
+      <div class="cv-cell"></div>
+      <div class="cv-cell"></div>
+      <div class="cv-cell"></div>
+      <div class="cv-cell"></div>
+      <div class="cv-cell tema"></div>
+      <div class="cv-cell"></div>
+      <div class="cv-cell"></div>
+      <div class="cv-cell"></div>
       <div class="cv-cell black"></div>
     </div>
 
@@ -3025,14 +2978,19 @@
       <div>
         <h3>Orizzontali ➡️</h3>
         <ol>
-          <li>Stato di attenzione per pioggia o vento forte (7 lettere).</li>
-          <li>Si lasciano dietro nel sangue (1 lettera).</li>
           <li>Sinonimo di terremoto (5 lettere).</li>
-          <li>Pronome personale terza persona (1 lettera).</li>
+          <li>Zaino con l'occorrente per l'emergenza, in inglese (3 lettere).</li>
           <li>Si usano per evacuare ai piani: meglio dell'ascensore (5 lettere).</li>
-          <li>Strumento per misurare la pioggia in arrivo (5 lettere).</li>
+          <li>Lo grido quando ho bisogno che qualcuno mi soccorra (5 lettere).</li>
+          <li>Strumento che vede la pioggia in arrivo anche a distanza (5 lettere).</li>
           <li>Situazione di pericolo grave: si chiama il 112 (9 lettere).</li>
-          <li>Persona che aiuta gratuitamente in protezione civile (10 lettere).</li>
+          <li>Borsa con le cose di prima necessità, sempre pronta vicino alla porta (5 lettere).</li>
+          <li>Luogo di incontro del paese, spesso è anche punto di raccolta (6 lettere).</li>
+          <li>Persona che aiuta gratuitamente in Protezione Civile (10 lettere).</li>
+        </ol>
+        <h3 style="margin-top:0.6rem;">Verticale ⬇️</h3>
+        <ol>
+          <li value="1">La parola che leggi scendendo lungo la colonna color oro: è il tema di tutto il cruciverba (9 lettere).</li>
         </ol>
       </div>
       <div>
@@ -3048,8 +3006,8 @@
 
     <div class="soluzione-capovolta" style="margin-top: 6mm;">
       <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
-      <p style="margin: 0;"><strong>Cruciverba</strong>: 1) ALLERTA · 2) A · 3) SISMA · 4) E · 5) SCALE · 6) RADAR · 7) EMERGENZA · 8) VOLONTARIO.
-      Lettere verticali in ordine: <strong>SICUREZZA</strong>.<br>
+      <p style="margin: 0;"><strong>Cruciverba orizzontali</strong>: 1) SISMA · 2) KIT · 3) SCALE · 4) AIUTO · 5) RADAR · 6) EMERGENZA · 7) ZAINO · 8) PIAZZA · 9) VOLONTARIO.<br>
+      <strong>Verticale (colonna color oro, dall'alto in basso)</strong>: <strong>SICUREZZA</strong>.<br>
       <strong>Domande di servizio</strong>: 112 · emergenza · estintore · IT-alert.</p>
     </div>
 
@@ -3080,7 +3038,7 @@
     </div>
 
     <p class="scheda-intro">
-      Questo è <strong>il piano di emergenza della tua famiglia</strong>: un foglio che vi aiuta a sapere cosa fare se succede qualcosa di grave (terremoto, alluvione, incendio, blackout lungo). Compilalo <strong>insieme ai tuoi genitori</strong>: ognuno ha un ruolo e tu sei importante per la sicurezza di tutti. Il Dipartimento della Protezione Civile lo raccomanda a tutte le famiglie italiane nelle campagne "<strong>Io non rischio</strong>" e "<strong>IT-alert</strong>".
+      Questo è <strong>il piano di emergenza della tua famiglia</strong>: un foglio che vi aiuta a sapere cosa fare se succede qualcosa di grave (terremoto, alluvione, incendio, blackout lungo). Compilalo <strong>insieme ai tuoi genitori</strong>: ognuno ha un ruolo e tu sei importante per la sicurezza di tutti. Il Dipartimento della Protezione Civile lo raccomanda a tutte le famiglie italiane nella campagna "<strong>Io non rischio</strong>". Sul cellulare dei tuoi genitori, per alcune emergenze (terremoti forti, maremoti, eruzioni vulcaniche) può arrivare anche un messaggio <strong>IT-alert</strong>: non copre invece le allerte meteo, per cui il canale resta il sito della Regione Lazio.
     </p>
 
     <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.5rem 0; font-size: 0.88rem; line-height: 1.55;">
@@ -3108,7 +3066,7 @@
       <tr><td>Zio o zia di fiducia</td><td></td></tr>
       <tr><td>Vicino di casa che può aiutare</td><td></td></tr>
       <tr><td>Pediatra</td><td></td></tr>
-      <tr><td>Comune di Genzano (centralino)</td><td>06 93711</td></tr>
+      <tr><td>Comune di Genzano (centralino)</td><td>06 937111</td></tr>
     </table>
 
     <h2 class="scheda-h2">3. Punti di ritrovo</h2>
@@ -3313,7 +3271,7 @@
       <strong>Approfondimenti per Genzano:</strong>
       <a href="/allerte-meteo/">Allerte Meteo</a> ·
       <a href="/numeri-utili/">Numeri Utili</a> ·
-      <a href="/rischi-prevenzione/ondate-calore/">Pagina rischio Ondate di calore</a> ·
+      <a href="/rischi-prevenzione/ondate-di-calore/">Pagina rischio Ondate di calore</a> ·
       <a href="/piano-familiare/">Piano Familiare</a>.
     </div>
 
@@ -3587,7 +3545,8 @@
 
     <h2 class="scheda-h2">🗓️ Quando viene usato</h2>
     <ul class="scheda-elenco">
-      <li>Per <strong>gravi emergenze</strong> che riguardano la popolazione di una zona.</li>
+      <li>Per pochi tipi di <strong>grave emergenza</strong>: terremoti forti, maremoti (tsunami), eruzioni vulcaniche e alcuni altri scenari ancora in prova.</li>
+      <li><strong>Non</strong> per le allerte meteo (pioggia forte, vento, temporali, caldo): quelle si controllano sul sito della Regione Lazio e su <a href="/allerte-meteo/">/allerte-meteo/</a>, non arrivano con IT-alert.</li>
       <li>Per i <strong>test</strong>: ogni tanto la Protezione Civile prova il sistema. In quel caso il messaggio dice chiaramente che è <strong>solo un test</strong> e non devi fare nulla.</li>
       <li>Non viene usato per le cose di tutti i giorni: se arriva, va sempre letto con attenzione.</li>
     </ul>
@@ -4915,12 +4874,15 @@
     </div>
 
     <div class="scheda-docente">
-      <strong>Per la maestra/maestro — soluzioni:</strong>
+      <strong>Per la maestra/maestro:</strong>
       <ul style="margin: 0.3rem 0 0 1rem; padding: 0;">
-        <li>POMPIERE (o VIGILE DEL FUOCO), AMBULANZA, CASCO, BUSSOLA, ZAINO, TORCIA, MAPPA, RADIO, OSPEDALE.</li>
-        <li>Il numero da scrivere è <strong>112</strong>.</li>
         <li>Si può svolgere come <strong>dettato</strong> (l'insegnante legge la parola, l'alunno la scrive) o in autonomia guardando solo l'immagine e l'iniziale.</li>
       </ul>
+    </div>
+
+    <div class="soluzione-capovolta" style="margin-top: 6mm;">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;">POMPIERE (o VIGILE DEL FUOCO), AMBULANZA, CASCO, BUSSOLA, ZAINO, TORCIA, MAPPA, RADIO, OSPEDALE. Il numero da scrivere è <strong>112</strong>.</p>
     </div>
 
     <footer class="scheda-footer">
@@ -4990,12 +4952,16 @@
     </div>
 
     <div class="scheda-docente">
-      <strong>Per la maestra/maestro — soluzioni:</strong>
+      <strong>Per la maestra/maestro:</strong>
       <ul style="margin: 0.3rem 0 0 1rem; padding: 0;">
-        <li><strong>1.</strong> Chiamo il 112. &nbsp; <strong>2.</strong> Metto il casco. &nbsp; <strong>3.</strong> Seguo la maestra. &nbsp; <strong>4.</strong> Non uso l'ascensore. &nbsp; <strong>5.</strong> Resto calmo.</li>
         <li>Far notare le due regole della frase scritta: <strong>maiuscola</strong> all'inizio e <strong>punto</strong> alla fine.</li>
         <li>Le frasi sono regole vere di autoprotezione: dopo la scrittura, commentarle insieme (perché non si usa l'ascensore? perché si segue chi guida l'evacuazione?).</li>
       </ul>
+    </div>
+
+    <div class="soluzione-capovolta" style="margin-top: 6mm;">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;"><strong>1.</strong> Chiamo il 112. &nbsp; <strong>2.</strong> Metto il casco. &nbsp; <strong>3.</strong> Seguo la maestra. &nbsp; <strong>4.</strong> Non uso l'ascensore. &nbsp; <strong>5.</strong> Resto calmo.</p>
     </div>
 
     <footer class="scheda-footer">
@@ -5422,7 +5388,7 @@
       <span class="c icona" aria-hidden="true">🌡️</span><span class="c nome">Termometro</span><span class="c">la temperatura dell'aria (caldo/freddo)</span><span class="c unita">°C</span>
       <span class="c icona" aria-hidden="true">🌧️</span><span class="c nome">Pluviometro</span><span class="c">quanta pioggia è caduta</span><span class="c unita">mm</span>
       <span class="c icona" aria-hidden="true">💨</span><span class="c nome">Anemometro</span><span class="c">la velocità del vento</span><span class="c unita">km/h</span>
-      <span class="c icona" aria-hidden="true">🧭</span><span class="c nome">Barometro</span><span class="c">la pressione dell'aria (bel tempo o brutto)</span><span class="c unita">hPa</span>
+      <span class="c icona" aria-hidden="true">🎚️</span><span class="c nome">Barometro</span><span class="c">la pressione dell'aria (bel tempo o brutto)</span><span class="c unita">hPa</span>
       <span class="c icona" aria-hidden="true">💧</span><span class="c nome">Igrometro</span><span class="c">l'umidità dell'aria (quanto è "pesante")</span><span class="c unita">%</span>
     </div>
 
@@ -5619,10 +5585,14 @@
     <div class="istruzioni-maestra">
       <strong>Per la maestra/maestro:</strong>
       <ul style="margin:0.3rem 0 0 1rem; padding:0;">
-        <li><strong>Soluzioni domande</strong>: 1) area di attesa nel parco · 2) ospedale per le emergenze gravi, farmacia per le medicine · 3) dall'idrante (numero 5).</li>
         <li><strong>Estensione di realtà</strong>: dopo questa scheda, far disegnare ai bambini la mappa <strong>vera</strong> del proprio quartiere a Genzano, segnando casa, scuola e l'area di attesa più vicina (verificabile sulla <a href="/cartografia/">cartografia operativa</a> del Comune).</li>
         <li><strong>La bussola</strong> in alto a destra mostra il nord. Collegare con la scheda <a href="/formazione/schede-stampabili/punti-cardinali-infanzia/">punti-cardinali-infanzia</a>.</li>
       </ul>
+    </div>
+
+    <div class="soluzione-capovolta" style="margin-top: 6mm;">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;"><strong>Soluzioni domande</strong>: 1) area di attesa nel parco · 2) ospedale per le emergenze gravi, farmacia per le medicine · 3) dall'idrante (numero 5).</p>
     </div>
 
     <footer class="scheda-footer">
@@ -5655,7 +5625,7 @@
 
     <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.9rem; line-height: 1.55;">
       <div style="font-weight: 700; color: var(--scheda-blu); margin-bottom: 0.2rem;">🚒 Cosa fanno i pompieri</div>
-      I <strong>vigili del fuoco</strong> (VVF) sono un Corpo dello Stato italiano (Ministero dell'Interno). Spengono incendi, ma fanno molto altro: salvano persone in incidenti d'auto, soccorrono chi è in pericolo, intervengono nei terremoti e nelle alluvioni, salvano animali in difficoltà. Per diventare vigile del fuoco serve passare un concorso pubblico ed essere allenati: si fanno corsi di nuoto, di arrampicata, di guida dei mezzi speciali. Il numero da chiamare è sempre e solo il <strong>112</strong>, il Numero Unico di Emergenza: quando racconti cosa sta succedendo, la centrale unica manda sul posto i vigili del fuoco. Il loro motto è "<em>flammas domamus, donamus corda</em>" ("domiamo le fiamme, doniamo il cuore").
+      I <strong>vigili del fuoco</strong> (VVF) sono un Corpo dello Stato italiano (Ministero dell'Interno). Spengono incendi, ma fanno molto altro: salvano persone in incidenti d'auto, soccorrono chi è in pericolo, intervengono nei terremoti e nelle alluvioni, salvano animali in difficoltà. Per diventare vigile del fuoco serve passare un concorso pubblico ed essere allenati: si fanno corsi di nuoto, di arrampicata, di guida dei mezzi speciali. Il numero da chiamare è sempre e solo il <strong>112</strong>, il Numero Unico di Emergenza: quando racconti cosa sta succedendo, la centrale unica manda sul posto i vigili del fuoco. Il loro motto ufficiale è "<em>Flammas Domamus Donamus Corda</em>" ("domiamo le fiamme, doniamo i cuori").
       <br><em>Fonte: Corpo Nazionale dei Vigili del Fuoco.</em>
     </div>
 
@@ -5765,7 +5735,7 @@
 
     <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.9rem; line-height: 1.55;">
       <div style="font-weight: 700; color: var(--scheda-blu); margin-bottom: 0.2rem;">📞 La catena dell'allerta</div>
-      Quando arriva un'allerta arancione o rossa, le cose succedono in <strong>una sequenza precisa</strong>: <strong>(1)</strong> Il <strong>Centro Funzionale Regionale</strong> emette il bollettino di criticità → <strong>(2)</strong> Lo invia al <strong>Sindaco</strong> e alla <strong>Prefettura</strong> → <strong>(3)</strong> Il Sindaco attiva il <strong>COC</strong> (Centro Operativo Comunale) e chiama i <strong>volontari di PC</strong> del Gruppo Comunale → <strong>(4)</strong> Si decide se <strong>chiudere scuole, parchi, eventi</strong> → <strong>(5)</strong> Il <strong>Comune avvisa i cittadini</strong> con i suoi canali ufficiali (sito, social, altoparlanti) → <strong>(6)</strong> I volontari pattugliano i punti a rischio (cantine, ponti, sottopassi). Tutto in poche ore.
+      Quando arriva un'allerta arancione o rossa, le cose succedono in <strong>una sequenza precisa</strong>: <strong>(1)</strong> Il <strong>Centro Funzionale Regionale</strong> emette il bollettino di criticità → <strong>(2)</strong> Lo invia al <strong>Sindaco</strong> e alla <strong>Prefettura</strong> → <strong>(3)</strong> Il Sindaco attiva il <strong>COC</strong> (Centro Operativo Comunale) e chiama i <strong>volontari di PC</strong> del Gruppo Comunale → <strong>(4)</strong> Si decide se <strong>chiudere scuole, parchi, eventi</strong> → <strong>(5)</strong> I volontari pattugliano subito i punti a rischio (cantine, ponti, sottopassi), come misura di prevenzione → <strong>(6)</strong> Il <strong>Comune avvisa i cittadini</strong> con i suoi canali ufficiali (sito, social, altoparlanti). Tutto in poche ore.
     </div>
 
     <div class="frasi-griglia">
@@ -5916,7 +5886,7 @@
       </div>
       <div class="evento-card">
         <span class="lettera" aria-hidden="true">F</span>
-        <div class="descrizione"><strong>Terremoto di Amatrice e Centro Italia</strong> — il sisma colpisce 4 regioni. Si introduce il sistema <strong>IT-alert</strong> per avvisare la popolazione.</div>
+        <div class="descrizione"><strong>Terremoto di Amatrice e Centro Italia</strong> — il sisma colpisce 4 regioni. Anni dopo nasce anche <strong>IT-alert</strong>, il sistema che avvisa i telefoni per terremoti, maremoti ed eruzioni (non per il meteo).</div>
         <span class="anno-vuoto" aria-hidden="true">_____</span>
       </div>
     </div>
@@ -5957,6 +5927,7 @@
       <strong>Per la maestra/maestro · Note didattiche:</strong>
       <ul style="margin:0.3rem 0 0 1rem; padding:0;">
         <li><strong>Approfondimento</strong>: collegare con la scheda <a href="/formazione/schede-stampabili/caso-amatrice-secondaria2/">Caso Amatrice</a> della secondaria di secondo grado per il dettaglio tecnico.</li>
+        <li><strong>Precisazione su IT-alert</strong>: copre solo terremoti forti, maremoti, eruzioni vulcaniche e alcuni scenari ancora in prova — non le allerte meteo, per cui resta il sito della Regione Lazio.</li>
       </ul>
     </div>
 
@@ -6124,7 +6095,7 @@
     </div>
 
     <p class="scheda-intro">
-      L'Italia è un Paese <strong>sismico</strong>: il terreno trema perché due grandi "pezzi" della crosta terrestre (le <strong>placche</strong>) si scontrano sotto di noi (la placca africana spinge contro quella euroasiatica). Ma non tutta l'Italia trema allo stesso modo: per questo l'<strong>INGV</strong> (Istituto Nazionale di Geofisica e Vulcanologia) ha diviso il territorio in <strong>4 zone sismiche</strong>. Genzano è in zona 2B.
+      L'Italia è un Paese <strong>sismico</strong>: il terreno trema perché due grandi "pezzi" della crosta terrestre (le <strong>placche</strong>) si scontrano sotto di noi (la placca africana spinge contro quella euroasiatica). Ma non tutta l'Italia trema allo stesso modo: per questo l'<strong>INGV</strong> (Istituto Nazionale di Geofisica e Vulcanologia) ha diviso il territorio in <strong>4 zone sismiche</strong>. Genzano è al confine fra la zona 2 e la zona 3.
     </p>
 
     <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.9rem; line-height: 1.55;">
@@ -6331,11 +6302,15 @@
     <div class="istruzioni-maestra">
       <strong>Per la maestra/maestro:</strong>
       <ul style="margin:0.3rem 0 0 1rem; padding:0;">
-        <li><strong>Soluzioni Sez 1</strong>: 32 → diritto alla salute · 117 → Stato e Regioni · 118 → volontari.</li>
         <li><strong>Tono</strong>: la riflessione personale non si valuta in voti — si valorizza la sincerità della risposta. Eventuali "no, non mi piacerebbe" sono accettabili e legittimi.</li>
         <li><strong>Approfondimento</strong>: collegare con il <strong>D.Lgs. 1/2018</strong> (Codice della Protezione Civile, art. 18 sulla scuola). Il Codice è la "legge ordinaria" che attua i principi costituzionali.</li>
         <li><strong>Compito creativo</strong>: dopo la scheda, gli alunni possono scrivere la loro mini-Costituzione di classe (3-5 articoli) sul tema della protezione reciproca.</li>
       </ul>
+    </div>
+
+    <div class="soluzione-capovolta" style="margin-top: 6mm;">
+      <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
+      <p style="margin: 0;"><strong>Sezione 1</strong>: 32 → diritto alla salute · 117 → Stato e Regioni · 118 → volontari.</p>
     </div>
 
     <footer class="scheda-footer">
@@ -6379,7 +6354,7 @@
 
         <p><span class="par-num">3</span>Subito dopo la scossa, sono arrivati i soccorsi. <strong>Vigili del fuoco</strong>, <strong>medici</strong>, <strong>volontari di Protezione Civile</strong> da tutta Italia. Si sono organizzati i campi base per dormire in sicurezza, le mense per dare da mangiare a tutti, le tende per gli sfollati. Anche il <strong>Gruppo di Genzano</strong> ha mandato volontari.</p>
 
-        <p><span class="par-num">4</span>Da questo evento sono nati nuovi strumenti per proteggere il futuro. Si è capito che bisognava <strong>avvisare la popolazione</strong> più velocemente: per questo è stato creato <strong>IT-alert</strong>, un sistema che manda un messaggio di emergenza su tutti i telefoni di una zona. Oggi se a Genzano arrivasse un'emergenza, riceveresti il messaggio sul telefono dei tuoi genitori in pochi secondi.</p>
+        <p><span class="par-num">4</span>Da questo evento sono nati nuovi strumenti per proteggere il futuro. Si è capito che bisognava <strong>avvisare la popolazione</strong> più velocemente: oggi esiste <strong>IT-alert</strong>, un sistema che manda un messaggio sui telefoni di una zona per pochi tipi di grave emergenza: terremoti forti, maremoti, eruzioni vulcaniche e alcuni scenari ancora in prova. Non copre invece le allerte meteo (pioggia forte, vento, temporali): per quelle il canale è sempre il sito della Regione Lazio.</p>
       </div>
     </div>
 
@@ -6440,7 +6415,7 @@
     <div class="soluzione-capovolta" style="margin-top: 6mm;">
       <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
       <ul style="margin:0.3rem 0 0 1rem; padding:0;">
-        <li>1) 24 agosto 2016, ore 3:36 · 2) magnitudo 6.0 · 3) il punto sulla superficie della Terra che sta proprio sopra il luogo in profondità da cui è partita la scossa · 4) 4 (Lazio, Umbria, Marche, Abruzzo) · 5) altre scosse dopo la principale · 6) vigili del fuoco, medici, volontari PC · 7) un sistema che manda messaggi di emergenza ai telefoni · 8) risposta libera (riflessione personale, valorizzare la sincerità).</li>
+        <li>1) 24 agosto 2016, ore 3:36 · 2) magnitudo 6.0 · 3) il punto sulla superficie della Terra che sta proprio sopra il luogo in profondità da cui è partita la scossa · 4) 4 (Lazio, Umbria, Marche, Abruzzo) · 5) altre scosse dopo la principale · 6) vigili del fuoco, medici, volontari PC · 7) un sistema che manda messaggi sui telefoni di una zona, ma solo per pochi tipi di grave emergenza (terremoti, maremoti, eruzioni), non per le allerte meteo · 8) risposta libera (riflessione personale, valorizzare la sincerità).</li>
       </ul>
     </div>
 
@@ -6667,7 +6642,7 @@
 
     <div class="social-card">
       <div class="testata-social">
-        <span class="ico" aria-hidden="true"><i class="bi bi-camera-fill" style="display:none;"></i>📷</span>
+        <span class="ico" aria-hidden="true">📷</span>
         <span class="nome">@protezionecivilegenzano</span>
       </div>
       <div class="foto-placeholder">[ Spazio per la foto ]</div>
@@ -7277,7 +7252,7 @@
       <strong>Per la maestra/maestro · Note didattiche:</strong>
       <ul style="margin:0.3rem 0 0 1rem; padding:0;">
         <li><strong>Sensibilità</strong>: focus sul "lieto fine istituzionale" — la nascita della PC. Evitare il dettaglio delle vittime, evidenziare la lezione storica positiva.</li>
-        <li><strong>Estensione</strong>: collegare con <a href="/formazione/schede-stampabili/caso-irpinia-secondaria/">Caso Irpinia (Sec I)</a> e <a href="/formazione/schede-stampabili/caso-irpinia-secondaria2/">Caso Irpinia (Sec II)</a>. Articolo del sito: <a href="/comunicazioni/2025-11-23-irpinia-1980-anniversario-nascita-protezione-civile/">23 novembre 1980 — anniversario</a>.</li>
+        <li><strong>Estensione</strong>: collegare con <a href="/formazione/schede-stampabili/caso-irpinia-secondaria/">Caso Irpinia (Sec I)</a> e <a href="/formazione/schede-stampabili/caso-irpinia-secondaria2/">Caso Irpinia (Sec II)</a>. Articolo del sito: <a href="/comunicazioni/2026-11-23-irpinia-1980-anniversario-46/">23 novembre 1980 — anniversario</a>.</li>
         <li><strong>Riferimenti curricolari</strong>: Indicazioni Nazionali 2012 — Storia, Cittadinanza. Legge 92/2019. D.M. 183/2024 — Costituzione (organizzazione della Repubblica) + Cittadinanza solidale.</li>
       </ul>
     </div>
@@ -7587,7 +7562,7 @@
 
     <div class="timeline-box">
       <div class="data">Prima del 1963</div>
-      <div class="corpo">Una geologa, <strong>Tina Merlin</strong>, e altri scienziati avvertono: "il Monte Toc è instabile, può cadere". Ma le loro voci non vengono ascoltate fino in fondo.</div>
+      <div class="corpo">Una giornalista, <strong>Tina Merlin</strong>, e altri scienziati avvertono: "il Monte Toc è instabile, può cadere". Ma le loro voci non vengono ascoltate fino in fondo.</div>
     </div>
 
     <div class="timeline-box">
@@ -8029,7 +8004,7 @@
     <h2 class="scheda-h2">📖 Le parole nuove</h2>
     <dl style="display: grid; grid-template-columns: auto 1fr; gap: 0.3rem 0.7rem; margin: 0.4rem 0; font-size: 0.88rem; line-height: 1.45; padding: 0.55rem 0.85rem; background: #fff; border: 1.5px solid var(--scheda-bordo); border-radius: 6px;">
       <dt style="font-weight: 700; color: var(--scheda-blu);">Colata rapida</dt><dd style="margin: 0;">frana di fango molto veloce, tipica delle zone con ceneri vulcaniche.</dd>
-      <dt style="font-weight: 700; color: var(--scheda-blu);">Pizzolana</dt><dd style="margin: 0;">terra fatta di cenere vulcanica del Vesuvio. Diventa pericolosa quando è troppo bagnata.</dd>
+      <dt style="font-weight: 700; color: var(--scheda-blu);">Pozzolana</dt><dd style="margin: 0;">terra fatta di cenere vulcanica del Vesuvio. Diventa pericolosa quando è troppo bagnata.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu);">Allerta gialla / arancione / rossa</dt><dd style="margin: 0;">livelli di pericolo per pioggia e frane, decisi dal Centro Funzionale Regionale.</dd>
       <dt style="font-weight: 700; color: var(--scheda-blu);">PAI</dt><dd style="margin: 0;">Piano di Assetto Idrogeologico: mappa di tutti i posti d'Italia a rischio frana e alluvione. Nato dopo Sarno.</dd>
     </dl>
