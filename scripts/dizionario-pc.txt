@@ -789,3 +789,5 @@ security
 science
 crowd
 abbruciamento
+terremotocentroitalia
+termocamera
