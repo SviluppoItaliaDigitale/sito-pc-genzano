@@ -19,6 +19,43 @@
 # repository (data/allerta.json) che documentano apertura e chiusura dell'allerta.
 
 voci:
+  # Apertura: commit f6ba326ba (verde→gialla, 10/08 13:17)
+  # Chiusura: commit 86cb21676 (gialla→verde, 10/08 22:01)
+  - data_evento: "2026-08-10"
+    tipo: "Allerta gialla — temporali"
+    zona: "Zona F — Bacini Costieri Sud (Genzano)"
+    fonte_allerta: "Bollettino di criticità DPC/Regione Lazio del 10 agosto 2026, validità 10 agosto 14:23–23:59."
+    azioni:
+      - "Pubblicazione automatica dell'allerta sui canali del sito: barra in homepage, pagina Allerte meteo, pagina di emergenza essenziale e feed CAP."
+      - "Monitoraggio automatico dei bollettini DPC/Regione Lazio fino al rientro a verde, registrato in serata lo stesso giorno."
+    esito: "Al termine della validità non risultano danni né interventi di soccorso documentati sui canali del Gruppo."
+    fonte_esito: "Storico pubblico del sistema di allertamento del sito e archivio delle comunicazioni del Gruppo nel periodo di validità."
+
+  # Apertura: commit a6c739bed (pre-allerta, 21/07 14:03) + ee87677c6 (verde→gialla, 21/07 22:02)
+  # Chiusura: commit abe7a248b (gialla→verde, 22/07 14:06)
+  - data_evento: "2026-07-22"
+    tipo: "Allerta gialla — temporali"
+    zona: "Zona F — Bacini Costieri Sud (Genzano)"
+    fonte_allerta: "Bollettino di criticità DPC/Regione Lazio del 21 luglio 2026, validità 22 luglio 00:00–23:59."
+    azioni:
+      - "Pubblicazione automatica dell'allerta sui canali del sito: barra in homepage, pagina Allerte meteo, pagina di emergenza essenziale e feed CAP."
+      - "Monitoraggio automatico dei bollettini DPC/Regione Lazio fino al rientro a verde, registrato nel pomeriggio del 22 luglio."
+    esito: "Al termine della validità non risultano danni né interventi di soccorso documentati sui canali del Gruppo."
+    fonte_esito: "Storico pubblico del sistema di allertamento del sito e archivio delle comunicazioni del Gruppo nel periodo di validità."
+
+  # Apertura: commit d49bc38c8 (pre-allerta, 06/07 15:41) + 7c2f7a4fa (verde→gialla, 06/07 22:02)
+  # Chiusura: commit 70d586dbf (gialla→verde, 08/07 02:06). Lo storico registra
+  # alcune oscillazioni tecniche del livello al cambio di giornata fra il 7 e l'8 luglio.
+  - data_evento: "2026-07-07"
+    tipo: "Allerta gialla — temporali"
+    zona: "Zona F — Bacini Costieri Sud (Genzano)"
+    fonte_allerta: "Bollettino di criticità DPC/Regione Lazio del 6 luglio 2026, validità 7 luglio 00:00–23:59."
+    azioni:
+      - "Pubblicazione automatica dell'allerta sui canali del sito: barra in homepage, pagina Allerte meteo, pagina di emergenza essenziale e feed CAP."
+      - "Monitoraggio automatico dei bollettini DPC/Regione Lazio fino al rientro a verde, registrato nella notte fra il 7 e l'8 luglio."
+    esito: "Al termine della validità non risultano danni né interventi di soccorso documentati sui canali del Gruppo."
+    fonte_esito: "Storico pubblico del sistema di allertamento del sito e archivio delle comunicazioni del Gruppo nel periodo di validità."
+
   # Apertura: commit 448a1ea9c (pre-allerta, 01/07 14:46) + 579baf94f (verde→gialla, 01/07 22:01)
   # Chiusura: commit fc97e5929 (gialla→verde, 02/07 22:01)
   - data_evento: "2026-07-02"
