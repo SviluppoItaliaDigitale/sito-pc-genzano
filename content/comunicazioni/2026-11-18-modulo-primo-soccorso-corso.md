@@ -17,6 +17,7 @@ social_punti:
   - "Attestato BLS-D valido 2 anni, da aggiornare con retraining"
   - "In emergenza chiama sempre il 112"
 draft: false
+versione_facile: "2026-11-18-modulo-primo-soccorso-corso-facile"
 ---
 
 Nel weekend parte il **modulo di primo soccorso** del corso base per nuovi volontari del Gruppo Comunale di Protezione Civile di Genzano di Roma. Un modulo **essenziale** per la formazione del volontario, tenuto da **istruttori esterni certificati**.
