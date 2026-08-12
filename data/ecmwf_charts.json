@@ -1,6 +1,6 @@
 {
-  "aggiornato": "2026-08-11T06:54",
-  "corsa": "lunedì 10 agosto 2026, 18 UTC",
+  "aggiornato": "2026-08-12T07:19",
+  "corsa": "martedì 11 agosto 2026, 18 UTC",
   "passo_giorni": 3,
   "fonte": "ECMWF OpenCharts",
   "licenza": "CC BY 4.0",
@@ -12,7 +12,7 @@
       "descr": "Pressione al livello del mare e vento a 850 hPa: la classica carta sinottica con cicloni, anticicloni e flusso delle correnti.",
       "icona": "bi-hurricane",
       "file": "/images/ecmwf/medium-mslp-wind850.webp",
-      "valido": "venerdì 14 agosto 2026, 00 UTC",
+      "valido": "sabato 15 agosto 2026, 00 UTC",
       "passo": "+78h"
     },
     {
@@ -21,7 +21,7 @@
       "descr": "Temperatura a 2 metri dal suolo e vento a 30 metri: caldo, freddo e ventilazione previsti sull'Europa.",
       "icona": "bi-thermometer-half",
       "file": "/images/ecmwf/medium-2mt-wind30.webp",
-      "valido": "venerdì 14 agosto 2026, 00 UTC",
+      "valido": "sabato 15 agosto 2026, 00 UTC",
       "passo": "+78h"
     },
     {
@@ -30,7 +30,7 @@
       "descr": "Tipo e intensità di precipitazione prevista (pioggia, neve, gelicidio): dove e quando è atteso il maltempo.",
       "icona": "bi-cloud-rain-heavy",
       "file": "/images/ecmwf/medium-precipitation-type.webp",
-      "valido": "venerdì 14 agosto 2026, 00 UTC",
+      "valido": "sabato 15 agosto 2026, 00 UTC",
       "passo": "+78h"
     },
     {
@@ -39,7 +39,7 @@
       "descr": "Energia potenziale convettiva (CAPE) e inibizione (CIN): indicatori del rischio di temporali forti e fenomeni convettivi.",
       "icona": "bi-cloud-lightning-rain",
       "file": "/images/ecmwf/medium-cape-cin.webp",
-      "valido": "venerdì 14 agosto 2026, 00 UTC",
+      "valido": "sabato 15 agosto 2026, 00 UTC",
       "passo": "+78h"
     }
   ]

@@ -32,7 +32,7 @@ Sull'incendio hanno operato i **Vigili del Fuoco** e numerosi **gruppi e associa
 
 ## Sabato 1 agosto: quasi otto ore sul fronte del fuoco
 
-La SOUP ha attivato il Gruppo alle **12:18 di sabato 1 agosto**. Una squadra di **quattro volontari** è partita dalla sede con l'**autobotte Mercedes Actros**. Il mezzo dispone di un impianto antincendio da 14.000 litri. La squadra è arrivata sul posto poco dopo le 13:00.
+La SOUP ha attivato il Gruppo **poco dopo mezzogiorno di sabato 1 agosto**. Una squadra di **quattro volontari** è partita dalla sede con l'**autobotte Mercedes Actros**. Il mezzo dispone di un impianto antincendio da 14.000 litri. La squadra è arrivata sul posto poco dopo le 13:00.
 
 Il fronte assegnato era quello **adiacente al camping di via della Selciatella**, uno dei punti più delicati dell'incendio. I volontari hanno operato agli ordini del **Direttore delle Operazioni di Spegnimento (DOS)**. È la figura tecnica che sul posto coordina squadre a terra e mezzi aerei. Il DOS ha congedato la squadra in serata, al termine del turno. Il rientro in sede è avvenuto dopo le 20:00, con quasi **otto ore complessive di impegno**.
 
@@ -40,7 +40,7 @@ Il fronte assegnato era quello **adiacente al camping di via della Selciatella**
 
 Come spesso accade sugli incendi di grandi dimensioni, nei giorni successivi il fuoco ha continuato a **covare sotto la superficie**, con riattivazioni che hanno richiesto nuovi interventi anche dei mezzi aerei.
 
-Per questo **domenica 2 agosto alle 16:43** la SOUP ha richiesto di nuovo l'autobotte del Gruppo. Una seconda squadra di **quattro volontari** ha raggiunto via della Selciatella in mezz'ora. Ha operato **a supporto dei Vigili del Fuoco** ancora impegnati sul posto, rifornendo d'acqua le squadre e contribuendo alla bonifica dei focolai. L'intervento si è concluso in serata, dopo **oltre quattro ore**.
+Per questo, nel **tardo pomeriggio di domenica 2 agosto**, la SOUP ha richiesto di nuovo l'autobotte del Gruppo. Una seconda squadra di **quattro volontari** ha raggiunto via della Selciatella in mezz'ora. Ha operato **a supporto dei Vigili del Fuoco** ancora impegnati sul posto, rifornendo d'acqua le squadre e contribuendo alla bonifica dei focolai. L'intervento si è concluso in serata, dopo **oltre quattro ore**.
 
 ## Perché la bonifica conta quanto lo spegnimento
 

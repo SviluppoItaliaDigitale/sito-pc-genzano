@@ -37,15 +37,30 @@ Per questo capita spesso di operare fuori Genzano. È il funzionamento normale d
 
 ## 6 agosto: incendio di interfaccia a Pomezia
 
-Il primo intervento è del **giovedì 6 agosto**, in via di Spregamore, a Pomezia. L'attivazione è delle 13.26; i volontari sono rientrati alle 17.57, dopo quattro ore e mezza di lavoro. Sul posto hanno operato anche i Vigili del Fuoco, la Polizia locale e altri gruppi di protezione civile.
+Il primo intervento è del **giovedì 6 agosto**, in via di Spregamore, a Pomezia. L'attivazione arriva nel primo pomeriggio e i volontari rientrano in serata, dopo circa quattro ore e mezza di lavoro. Sul posto hanno operato anche i Vigili del Fuoco, la Polizia locale e altri gruppi di protezione civile.
 
 Il rapporto di intervento lo classifica come **incendio di interfaccia**. È il caso più delicato: il fuoco corre nella vegetazione ma si trova a ridosso di case, capannoni, strade e recinzioni. La priorità non è più solo spegnere, è impedire che le fiamme raggiungano ciò che sta al margine. Le squadre lavorano allora sul perimetro, bagnano le fasce di rispetto e presidiano i punti dove il fuoco potrebbe saltare.
+
+{{< galleria titolo="L'intervento del 6 agosto a Pomezia" >}}
+{{< foto src="/images/2026-08-06-pomezia-spegnimento-fronte-fiamme.webp"
+         alt="Un operatore in maglietta nera con la scritta Antincendio e pantaloni rossi dirige un getto d'acqua verso alcune fiamme basse nella macchia; a terra la manichetta e il suolo già annerito, sullo sfondo alti eucalipti."
+         caption="Il getto d'acqua sulle fiamme che corrono nella macchia bassa, ai piedi degli eucalipti. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< foto src="/images/2026-08-06-pomezia-volontario-manichetta-mezzo.webp"
+         alt="Un volontario in divisa rossa e blu con casco rosso impugna la manichetta accanto al fianco posteriore di un mezzo antincendio rosso; sullo sfondo un altro operatore in maglietta Antincendio davanti a un focolaio e al fumo."
+         caption="La linea di manichetta stesa dal mezzo antincendio verso il fronte del fuoco." >}}
+{{< foto src="/images/2026-08-06-pomezia-area-percorsa-fuoco.webp"
+         alt="Un boschetto di eucalipti con il terreno completamente annerito dal passaggio del fuoco; in lontananza alcuni mezzi e un residuo di fumo, cielo sereno."
+         caption="Il terreno percorso dalle fiamme sotto gli eucalipti, a fuoco ormai passato." >}}
+{{< foto src="/images/2026-08-06-pomezia-tronchi-bonifica.webp"
+         alt="Tronchi tagliati di fresco, con il taglio ancora chiaro, appoggiati sul terreno bruciato accanto a una ceppaia carbonizzata; sullo sfondo il fumo che si alza oltre gli alberi."
+         caption="Tronchi tagliati sul terreno annerito. Il legname grosso trattiene il calore a lungo: è uno dei punti da bagnare in bonifica." >}}
+{{< /galleria >}}
 
 Le indicazioni di base per chi abita o coltiva in una fascia di interfaccia sono nella pagina [Rischio incendio](/rischi-prevenzione/rischio-incendio/).
 
 ## 9 agosto: dieci ettari in via della Falcognana
 
-**Domenica 9 agosto** la segnalazione parte da un cittadino che vede una colonna di fumo importante. La SOUP attiva il Gruppo alle 14.31 per una verifica; la squadra parte alle 14.52 e arriva sul posto alle 15.08. L'intervento si chiude alle 20.30, dopo quasi sei ore.
+**Domenica 9 agosto** la segnalazione parte da un cittadino che vede una colonna di fumo importante. La SOUP attiva il Gruppo verso le 14.30 per una verifica; la squadra arriva sul posto poco dopo le 15. L'intervento si chiude verso le 20.30, dopo quasi sei ore.
 
 Il bilancio riportato nel rapporto è di **circa dieci ettari percorsi dal fuoco**. Sul fronte principale sono intervenuti i mezzi aerei. A terra hanno operato i Vigili del Fuoco e diversi gruppi di volontariato di protezione civile.
 
@@ -93,7 +108,7 @@ Quando la colonna di fumo si abbassa, il lavoro non è finito. Comincia la **bon
           titolo="Un volontario bagna con la manichetta la vegetazione bruciata lungo una recinzione"
           caption="La bonifica lungo una recinzione di campagna: il volontario raffredda il terreno annerito e le siepi ai margini. Video senza audio. Fonte: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
-È la fase più lunga e la meno visibile. Spiega perché un intervento iniziato alle 14.31 si chiude alle 20.30.
+È la fase più lunga e la meno visibile. Spiega perché un intervento iniziato a metà pomeriggio si chiude in serata.
 
 ## Non eravamo soli
 
