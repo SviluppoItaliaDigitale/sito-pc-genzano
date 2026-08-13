@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-08-13T19:08",
+  "aggiornato": "2026-08-13T20:03",
   "data_lunga": "giovedì 13 agosto 2026",
-  "aggiornato_label": "giovedì 13 agosto 2026, ore 19:08",
+  "aggiornato_label": "giovedì 13 agosto 2026, ore 20:03",
   "alba": "06:15",
   "tramonto": "20:12",
   "corrente": {
-    "temp": 31.1,
-    "percepita": 32.1,
+    "temp": 29.4,
+    "percepita": 31.5,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 40,
-    "vento": 7,
-    "raffiche": 22
+    "umidita": 50,
+    "vento": 5,
+    "raffiche": 19
   },
   "giorni": [
     {
@@ -34,7 +34,7 @@
       "tmin": 24,
       "pioggia": 10,
       "pioggia_mm": 0,
-      "raffiche": 38,
+      "raffiche": 36,
       "uv": 7,
       "uv_label": "alto"
     },
