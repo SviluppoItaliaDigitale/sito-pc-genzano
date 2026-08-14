@@ -401,31 +401,13 @@ def salva_bozze(slug: str, bozze: dict, art: dict, dry_run: bool = False) -> Pat
         contenuto = bozze.get(piattaforma, "")
         if not contenuto:
             continue
-        # Aggiungi riferimento immagini Instagram se generate
-        suffix = ""
-        if piattaforma == "instagram":
-            # Le immagini sono nella stessa cartella delle bozze (out_dir),
-            # comodo da scaricare insieme via mobile. Formato JPG perché
-            # Instagram non accetta WebP per upload (web e app mobile).
-            img_post_singola = out_dir / "feed-post.jpg"
-            carousel = sorted(out_dir.glob("feed-carosello-*.jpg"))
-            img_story = out_dir / "storia.jpg"
-
-            righe_img = []
-            if img_post_singola.exists():
-                righe_img.append(f"📷 FEED (post singolo, 1080x1350): {img_post_singola.name}")
-            elif carousel:
-                righe_img.append(f"📷 FEED (carosello, {len(carousel)} immagini 1080x1350, "
-                                 f"caricale in questo ordine):")
-                for i, c in enumerate(carousel, 1):
-                    righe_img.append(f"   {i}. {c.name}")
-            if img_story.exists():
-                righe_img.append(f"📷 STORIA (verticale 1080x1920, 24h): {img_story.name}")
-            if righe_img:
-                suffix = "\n\n---\n" + "\n".join(righe_img) + "\n"
-        (out_dir / f"{piattaforma}.txt").write_text(
-            contenuto + suffix, encoding="utf-8"
-        )
+        # I .txt contengono SOLO il testo da pubblicare: si copiano e si
+        # incollano così come sono. Le istruzioni su quale immagine va nel feed
+        # e quale nella storia stanno nel README.md della cartella, scritto da
+        # genera-immagini-social.py. Fino ad agosto 2026 l'elenco dei file
+        # immagine veniva accodato a instagram.txt: finiva nel testo copiato e
+        # rischiava di essere pubblicato insieme al post.
+        (out_dir / f"{piattaforma}.txt").write_text(contenuto, encoding="utf-8")
 
     # Il README.md della cartella lo scrive scripts/genera-immagini-social.py
     # (unico proprietario: conosce le immagini create e gira anche nel batch).
