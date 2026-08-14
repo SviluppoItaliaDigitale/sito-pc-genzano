@@ -58,7 +58,7 @@ Per un celiaco anche una piccola quantità di glutine fa male. Serve una zona se
 
 ## Il semaforo alimentare
 
-Il Manuale di Cucina in Emergenza del DSEFIC-FIC (Dipartimento di Sicurezza Alimentare della Federazione Italiana Cuochi) usa 3 colori per guidare chi lavora in cucina.
+Il Manuale di Cucina in Emergenza del DSEFIC-FIC (Dipartimento Solidarietà Emergenze della Federazione Italiana Cuochi) usa 3 colori per guidare chi lavora in cucina.
 
 - **Rosso**: questo cibo è vietato. Non usarlo.
 - **Arancione**: questo cibo va usato con attenzione. Solo in certe condizioni.

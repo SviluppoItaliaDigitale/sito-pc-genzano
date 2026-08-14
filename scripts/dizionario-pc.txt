@@ -791,3 +791,5 @@ crowd
 abbruciamento
 terremotocentroitalia
 termocamera
+porzionare
+executive
