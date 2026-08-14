@@ -504,7 +504,14 @@ def main() -> int:
             continue
 
         out_dir = SOCIAL_BOZZE / slug_to_path(art["slug"])
-        if out_dir.exists() and not args.force and not args.dry_run:
+        # Si salta solo se i TESTI ci sono già, non se esiste la cartella: le
+        # immagini (genera-immagini-social.py) possono essere state generate
+        # prima, e in quel caso i testi vanno comunque prodotti.
+        testi_presenti = all(
+            (out_dir / f"{piattaforma}.txt").exists()
+            for piattaforma in ("x", "facebook", "instagram", "telegram")
+        )
+        if testi_presenti and not args.force and not args.dry_run:
             stampa_info(f"  - GIÀ PRESENTE (usa --force per ri-generare): {art['slug']}")
             saltati += 1
             continue
