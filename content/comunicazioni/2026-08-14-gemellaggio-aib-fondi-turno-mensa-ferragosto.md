@@ -39,7 +39,7 @@ Il campo lavora a rotazione. Ogni gruppo copre alcuni giorni, poi consegna il se
 
 {{< foto src="/images/2026-08-14-fondi-mensa-gemellaggio-aib-squadra.webp"
          alt="Dieci persone in piedi una accanto all'altra sotto un tendone bianco: alcune indossano divise scure di protezione civile con bande rifrangenti arancioni e bianche sui pantaloni, alcune polo nere con lo stemma FE.P.I.VOL., alcune guanti monouso; due portano cappelli a tesa larga. Alle spalle un banner del Coordinamento Regionale FE.P.I.VOL., tavoli da lavoro in acciaio e confezioni di bottiglie d'acqua. Sullo sfondo, a destra, un'altra persona sistema degli scatoloni."
-         caption="La squadra sotto il tendone della mensa del campo di Fondi, davanti al banner del Coordinamento FE.PI.VOL. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+         caption="La squadra sotto il tendone della mensa del campo di Fondi, davanti al banner del coordinamento regionale. Foto: Coordinamento FE.PI.VOL." >}}
 
 Il turno di Ferragosto è tra i più difficili da coprire. Cade in pieno periodo di ferie. Cade anche in uno dei momenti di maggiore pericolosità per gli incendi boschivi. La campagna AIB regionale è attiva dal 15 giugno al 15 ottobre. Non conosce giorni di festa.
 
