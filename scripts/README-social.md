@@ -80,8 +80,11 @@ Output:
 bash scripts/genera-social.sh --all
 ```
 
-Salta automaticamente gli articoli che hanno già le bozze (usa `--force` per
-sovrascrivere).
+Salta automaticamente gli articoli che hanno già **i quattro testi**
+(`x.txt`, `facebook.txt`, `instagram.txt`, `telegram.txt`); usa `--force` per
+sovrascriverli. Una cartella che contiene solo le immagini — perché sono state
+generate prima con `genera-immagini-social.py` — **non** blocca la generazione
+dei testi.
 
 ### Solo dopo una data
 
