@@ -1,0 +1,19 @@
+{{/* Preconnect alle fonti dati live — solo sulle pagine-strumento che
+     fanno fetch a runtime (agosto 2026). Anticipa DNS + TCP + TLS verso
+     gli host delle schede dati: su mobile taglia 100-300 ms per scheda.
+     Scoped per sezione (mai site-wide: ogni preconnect apre una
+     connessione reale, sprecarla su pagine che non la usano è un costo).
+     `crossorigin` perché i fetch sono richieste CORS anonime: senza
+     l'attributo il browser aprirebbe una connessione non riusabile.
+     Gli host devono restare un sottoinsieme della connect-src della CSP
+     (.htaccess, rule 05). */}}
+{{- if eq .Section "cruscotto" }}
+<link rel="preconnect" href="https://webservices.ingv.it" crossorigin>
+<link rel="preconnect" href="https://api.open-meteo.com" crossorigin>
+<link rel="preconnect" href="https://marine-api.open-meteo.com" crossorigin>
+<link rel="preconnect" href="https://air-quality-api.open-meteo.com" crossorigin>
+<link rel="preconnect" href="https://meteohub.agenziaitaliameteo.it" crossorigin>
+<link rel="preconnect" href="https://radar-api.protezionecivile.it" crossorigin>
+{{- else if eq .Section "laboratorio-meteo" }}
+<link rel="preconnect" href="https://archive-api.open-meteo.com" crossorigin>
+{{- end }}

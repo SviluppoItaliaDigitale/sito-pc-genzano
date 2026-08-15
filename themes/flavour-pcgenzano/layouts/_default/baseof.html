@@ -41,6 +41,7 @@
   <link rel="icon" type="image/x-icon" href="{{ "images/favicon.ico" | relURL }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ "images/favicon.png" | relURL }}">
   <link rel="search" type="application/opensearchdescription+xml" title="Cerca su protezionecivilegenzano.it" href="{{ "opensearch.xml" | relURL }}">
+  {{ partial "preconnect-dati.html" . }}
   <link rel="stylesheet" href="{{ "vendor/bootstrap-italia/css/bootstrap-italia.min.css" | relURL }}">
   <link rel="stylesheet" href="{{ "vendor/bootstrap-icons/bootstrap-icons.min.css" | relURL }}">
   {{/* Cache-buster v=<hash contenuto>: Aruba serve i CSS/JS critici con
