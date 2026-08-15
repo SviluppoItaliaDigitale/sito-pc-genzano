@@ -39,6 +39,14 @@ jobs:
             exit 1
           fi
 
+      - name: "🧾 Valida JSON-LD (paternità/licenza inclusa)"
+        # Gate sui dati strutturati: ogni blocco ld+json del campione deve
+        # essere JSON parsabile e ogni pagina deve avere il blocco di
+        # paternità di jsonld-copyright.html (copyrightHolder). Protegge
+        # dall'incidente del doppio escape (12/05/2026) e da regressioni
+        # del livello di tutela IP (agosto 2026).
+        run: python3 scripts/check-jsonld.py public
+
       - name: "📊 Statistiche build"
         run: |
           echo "Pagine generate: $(find public -name '*.html' | wc -l)"

@@ -1,0 +1,31 @@
+# Dependabot — aggiornamento delle GitHub Actions (15/08/2026).
+# Complemento necessario al pinning a commit SHA (rule 10 § "Hardening
+# trasversale"): le action di terze parti sono puntate a SHA immutabili,
+# quindi senza questo meccanismo i pin invecchierebbero senza mai ricevere
+# le patch di sicurezza upstream. Dependabot aggiorna lo SHA preservando
+# il commento di versione, e ogni sua PR passa dai gate standard
+# (validate-pr + pa11y bloccante) prima del merge — il merge resta umano.
+#
+# Solo ecosistema github-actions: il sito è Hugo statico senza package.json
+# né requirements.txt versionati (le dipendenze Python/npm dei workflow sono
+# installate ad hoc negli step, fuori dal perimetro Dependabot).
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:30"
+      timezone: "Europe/Rome"
+    labels:
+      - "manutenzione"
+      - "automazione"
+    commit-message:
+      prefix: "ci"
+    # Un'unica PR settimanale cumulativa invece di una per action:
+    # meno rumore, un solo giro di gate.
+    groups:
+      github-actions:
+        patterns:
+          - "*"

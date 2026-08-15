@@ -4,9 +4,12 @@ Aggiunta a maggio 2026. Il sito dichiara markup strutturato **Schema.org** in fo
 
 ## 28.1 Architettura
 
-**Un solo partial centrale**: `themes/flavour-pcgenzano/layouts/partials/structured-data.html` (~350 righe). Chiamato da `_default/baseof.html` su **ogni** pagina. Genera markup JSON-LD context-aware: il tipo dipende dalla sezione e dal frontmatter della pagina.
+**Due partial complementari**, entrambi chiamati da `_default/baseof.html` su **ogni** pagina (aggiornamento 15/08/2026 — tutela proprietà intellettuale):
 
-Nessun partial separato per tipo. Pattern unico, mantenibile.
+- `themes/flavour-pcgenzano/layouts/partials/structured-data.html` — gli schema "di contesto": Organization+NGO e WebSite (homepage), Event (articoli con badge Evento), FAQPage, HowTo, BreadcrumbList.
+- `themes/flavour-pcgenzano/layouts/partials/jsonld-copyright.html` — la **fonte unica dell'entità di pagina**: `Article` per le pagine con data reale (comunicazioni, capitoli del manuale, dossier), `WebPage` per statiche/sezioni/home. Include **paternità e licenza** (`author` + `copyrightHolder` = Organization del Gruppo, `license` CC BY 4.0 con override frontmatter `license:` / `license: none`), `inLanguage` (it-IT o il `language:` delle pagine tradotte) e — sul ramo Article — **`speakable`** (h1 + primo paragrafo, per gli assistenti vocali). I vecchi blocchi Article/WebPage di structured-data.html sono stati ritirati per non duplicare le entità nei validatori.
+
+Guardia in CI: lo step `scripts/check-jsonld.py` di `validate-pr.yml` verifica su un campione di pagine della build che ogni blocco `ld+json` sia parsabile e che il blocco di paternità sia presente.
 
 ## 28.2 Tipi Schema.org attivi sul sito
 
@@ -15,12 +18,12 @@ Nessun partial separato per tipo. Pattern unico, mantenibile.
 | `Organization` + `NGO` | Homepage | `.IsHome` |
 | `ContactPoint`, `PostalAddress`, `GeoCoordinates`, `City` | Annidati in `Organization` | Sempre (homepage) |
 | `WebSite` + `SearchAction` | Homepage | `.IsHome` |
-| `Article` | ~104 articoli `/comunicazioni/` | `.Section == "comunicazioni"` e `.IsPage` |
-| `Event` | 4 articoli con `badge: "Evento"` | `eq .Params.badge "Evento"` (annidato in Article) |
+| `Article` (con paternità, licenza, `speakable`) | Pagine con data reale (comunicazioni, manuale, dossier) | `jsonld-copyright.html`: `.IsPage` e `.Date` non zero |
+| `Event` | Articoli con `badge: "Evento"` | `eq .Params.badge "Evento"` (structured-data.html) |
 | `FAQPage` + `Question`/`Answer` | `/faq/` | `$isFAQ` (10 Q&A serializzate dal frontmatter) |
 | `HowTo` + `HowToStep` | 8 pagine `/rischi-prevenzione/*` | `if and .Params.howto_prima .Params.howto_durante .Params.howto_dopo` |
-| `BreadcrumbList` + `ListItem` | 283 pagine | `not .IsHome` |
-| `WebPage` | Tutto il resto | Default fallback |
+| `BreadcrumbList` + `ListItem` | Tutte le pagine non-home | `not .IsHome` |
+| `WebPage` (con paternità e licenza) | Tutto il resto, homepage inclusa | `jsonld-copyright.html`: default |
 | `ImageObject` | Annidato in `Article` | Quando l'articolo ha `image:` |
 
 ## 28.3 Vincolo di principio — Organization+NGO, non GovernmentOrganization
