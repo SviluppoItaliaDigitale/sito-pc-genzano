@@ -45,7 +45,11 @@
   {{ with .Params.image }}"image": {{ . | absURL | jsonify | safeJS }},
   {{ end }}"datePublished": "{{ .Date.Format "2006-01-02" }}",
   {{ if not .Lastmod.IsZero }}"dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
-  {{ end }}"publisher": {
+  {{ end }}"speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": ["h1", ".article-body p:first-of-type"]
+  },
+  "publisher": {
     "@type": "Organization",
     "name": {{ .Site.Title | jsonify | safeJS }},
     "logo": {

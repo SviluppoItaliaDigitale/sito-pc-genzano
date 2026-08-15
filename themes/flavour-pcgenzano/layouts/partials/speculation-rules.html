@@ -1,0 +1,15 @@
+{{/* Speculation Rules API — prefetch delle pagine critiche di emergenza
+     dalla homepage (agosto 2026). Progressive enhancement puro: i browser
+     che non supportano l'API ignorano il blocco; nessun impatto su chi non
+     naviga. Le pagine scelte sono quelle che il cittadino apre per prime
+     in una situazione di rischio: la navigazione diventa quasi istantanea
+     anche su rete mobile lenta. Solo prefetch (mai prerender: più pesante
+     e può eseguire JS di pagine non ancora visitate). Incluso da
+     baseof.html solo su .IsHome. */}}
+{{- /* NB: dentro <script type="speculationrules"> Hugo applica l'escaping
+     HTML (non è un contesto JS: safeJS non basta) — il JSON va emesso
+     intero con safeHTML. */ -}}
+{{- $urls := slice ("cosa-fare-adesso/" | relURL) ("numeri-utili/" | relURL) ("emergenza/" | relURL) ("allerte-meteo/" | relURL) -}}
+<script type="speculationrules">
+{{ dict "prefetch" (slice (dict "urls" $urls)) | jsonify | safeHTML }}
+</script>

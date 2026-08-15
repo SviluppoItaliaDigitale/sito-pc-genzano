@@ -459,6 +459,19 @@
     }
   }
 
+  function injectCopyAttribution() {
+    // Attribuzione automatica al copia (tutela proprietà intellettuale,
+    // agosto 2026): stesso script delle pagine Hugo (copy-attribution.js,
+    // caricato da baseof.html). Su copia >120 caratteri appende la fonte
+    // con URL e licenza CC BY 4.0; non tocca input/textarea/pre/code né
+    // i pulsanti "Copia link" (Clipboard API). Idempotente.
+    if (document.querySelector('script[data-copy-attribution]')) return;
+    var sc = document.createElement('script');
+    sc.src = SITE_URL + '/js/copy-attribution.js';
+    sc.setAttribute('data-copy-attribution', '1');
+    document.body.appendChild(sc);
+  }
+
   function injectChrome() {
     var main = document.querySelector('main') || document.getElementById('main-content');
     if (!main) return;
@@ -531,6 +544,8 @@
     injectA11yAndSos();
     // BottomNav mobile anche sulle pagine statiche (adozione catalogo BI, luglio 2026).
     injectBottomNav();
+    // Attribuzione automatica al copia anche sulle pagine statiche (agosto 2026).
+    injectCopyAttribution();
   }
 
   function aggiungiPulsanteEsciGioco() {
