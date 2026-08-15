@@ -391,6 +391,7 @@ Due componenti che riflettono e rafforzano la licenza dichiarata in `/note-legal
 
 - **`partials/speculation-rules.html`** — blocco `<script type="speculationrules">` incluso da `baseof.html` **solo su `.IsHome`**: prefetch delle 4 pagine critiche di emergenza (cosa-fare-adesso, numeri-utili, emergenza, allerte-meteo). Progressive enhancement puro (browser senza supporto lo ignorano); **solo prefetch, mai prerender**. URL via `relURL | jsonify | safeJS` (subpath GitHub Pages).
 - **`static/opensearch.xml`** — descrittore OpenSearch della ricerca interna (template `/cerca/?q={searchTerms}`), dichiarato in `baseof.html` con `<link rel="search">`. La pagina `/cerca/` (`layouts/cerca/list.html`) legge `?q=` e lancia `ui.triggerSearch(q)` — stesso flusso usato dal form della pagina 404.
+- **`partials/preconnect-dati.html`** — `<link rel="preconnect" crossorigin>` verso gli host dei fetch dati, **scoped per sezione** (`cruscotto`: INGV FDSN, Open-Meteo forecast/marine/air, MeteoHub, radar DPC; `laboratorio-meteo`: Open-Meteo archive). Incluso da `baseof.html`. 🔴 Gli host devono restare un sottoinsieme della `connect-src` della CSP (rule 05); mai site-wide (ogni preconnect apre una connessione reale).
 - **`static/.well-known/tdmrep.json`** — TDM Reservation Protocol (W3C / Direttiva UE 2019/790 art. 4): **dichiarazione di policy, non divieto** — mining consentito nei termini di `/note-legali/` (CC BY 4.0, attribuzione). Speculare agli header `TDM-Reservation`/`TDM-Policy` in `.htaccess` (rule 05).
 
 ## Partial `meta-social` (Open Graph + Twitter Card)
