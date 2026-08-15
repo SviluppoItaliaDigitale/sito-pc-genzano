@@ -24,18 +24,22 @@ import sys
 
 BUILD_DIR = sys.argv[1] if len(sys.argv) > 1 else "public"
 
-# Campione: home, pagina statica, FAQ (FAQPage), articoli (Article, i 2
-# più recenti), manuale (Article accademico), traduzione (inLanguage).
+# Copertura: TUTTE le pagine articolo (così i rami condizionali come
+# Event per badge "Evento" sono sempre esercitati — rilievo review PR
+# #838) + campione di pagine chiave per gli altri tipi: home
+# (Organization/WebSite), statica, FAQ (FAQPage), pagina rischio
+# (HowTo), manuale (Article accademico), traduzione (inLanguage).
 # /lanterna/ è esclusa by design (standalone, non usa baseof.html).
+# Validare tutto costa pochi secondi: nessun campionamento sugli articoli.
 def campione():
     pagine = [
         f"{BUILD_DIR}/index.html",
         f"{BUILD_DIR}/chi-siamo/index.html",
         f"{BUILD_DIR}/faq/index.html",
+        f"{BUILD_DIR}/rischi-prevenzione/rischio-sismico/index.html",
         f"{BUILD_DIR}/facile-da-leggere/en/index.html",
     ]
-    articoli = sorted(glob.glob(f"{BUILD_DIR}/comunicazioni/2*/index.html"))
-    pagine += articoli[-2:]
+    pagine += sorted(glob.glob(f"{BUILD_DIR}/comunicazioni/2*/index.html"))
     manuale = sorted(glob.glob(f"{BUILD_DIR}/manuale/0*/index.html"))
     pagine += manuale[:1]
     return pagine
