@@ -88,7 +88,7 @@ Header always set Permissions-Policy "geolocation=(self), microphone=(), camera=
 
 **Licenza e TDM negli header (15/08/2026):** `.htaccess` emette `Link: rel="license"` CC BY 4.0 su tutte le risorse (variante CC BY-NC-SA 4.0 per `/pittogrammi/arasaac/` via `SetEnvIf`) + `TDM-Reservation: 1`/`TDM-Policy` (dichiarazione di policy → `/note-legali/`, non divieto), speculari a `static/.well-known/tdmrep.json`. Dettagli in rule 04a § "Partial `speculation-rules` + OpenSearch + TDMRep".
 
-**CSP promossa a enforcing (15/08/2026):** l'header è ora `Content-Security-Policy` attivo (era Report-Only dal 10/05) con `upgrade-insecure-requests` reintrodotta. 🔴 Quando si aggiunge una nuova fonte dati al cruscotto o un nuovo widget, aggiornare anche `connect-src`/`frame-src` della policy: dimenticarlo produce una scheda vuota solo su Aruba (GitHub Pages non invia header). Dopo ogni modifica alla CSP: smoke test post-deploy su `/cruscotto/`.
+**CSP promossa a enforcing (15/08/2026):** l'header è ora `Content-Security-Policy` attivo (era Report-Only dal 10/05) con `upgrade-insecure-requests` reintrodotta. **Stretta dello stesso giorno:** rimosso `cdn.jsdelivr.net` da `script-src`/`style-src`/`font-src` (tutto è vendorizzato self-hosted, verifica meccanica: zero riferimenti nel repo) — se in futuro si reintroduce un asset da CDN, va prima riaggiunto alla policy. 🔴 Quando si aggiunge una nuova fonte dati al cruscotto o un nuovo widget, aggiornare anche `connect-src`/`frame-src` della policy: dimenticarlo produce una scheda vuota solo su Aruba (GitHub Pages non invia header). Dopo ogni modifica alla CSP: smoke test post-deploy su `/cruscotto/`.
 
 ## Workflow GitHub Actions — qualità YAML
 
