@@ -97,6 +97,7 @@
   {{ with .OutputFormats.Get "RSS" }}<link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" href="{{ .Permalink }}">{{ end }}
   {{ with .Site.Home.OutputFormats.Get "CAP" }}<link rel="alternate" type="application/cap+xml" title="Allerta meteo Genzano (feed CAP)" href="{{ .Permalink }}">{{ end }}
   {{ partial "structured-data.html" . }}
+  {{ partial "jsonld-copyright.html" . }}
 </head>
 {{- /* has-bottomnav: attiva gli offset dei pulsanti flottanti sopra la
      BottomNav mobile (CSS sezione BOTTOM NAV v1.0). Esclusa la pagina
@@ -149,6 +150,7 @@
   <script src="{{ "js/ext-widgets.js" | relURL }}" defer></script>
   <script src="{{ "js/a11y-toolbar.js" | relURL }}?v={{ $vA11yJs }}" defer></script>
   <script src="{{ "js/share.js" | relURL }}" defer></script>
+  <script src="{{ "js/copy-attribution.js" | relURL }}" defer></script>
   <script src="{{ "js/pc-notifiche.js" | relURL }}" defer></script>
   <script src="{{ "js/galleria-auto.js" | relURL }}" defer></script>
   {{/* Notifiche browser per l'allerta meteo (idea #2). URL endpoint + pagina
