@@ -58,6 +58,8 @@ Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma continua la
 - **coordinamento** con il Comune;
 - **comunicazione** sulla base delle fonti ufficiali.
 
+Nei giorni di Ferragosto una squadra è stata fuori dal territorio comunale. Ha coperto il turno alla mensa del campo del gemellaggio antincendio boschivo della Regione Lazio, a Fondi (LT). Lo abbiamo raccontato nell'articolo [Gemellaggio AIB di Fondi: i volontari di Genzano in turno alla mensa del campo](/comunicazioni/2026-08-14-gemellaggio-aib-fondi-turno-mensa-ferragosto/).
+
 ## Un pensiero ai colleghi
 
 Ad agosto, altre regioni italiane possono trovarsi in piena emergenza: incendi in Sardegna, Calabria, Sicilia; ondate di calore al Sud; temporali violenti al Centro-Nord. Ai colleghi volontari di tutta Italia, che stanno fronteggiando situazioni più gravi delle nostre, va il pensiero solidale del Gruppo di Genzano.
@@ -65,6 +67,7 @@ Ad agosto, altre regioni italiane possono trovarsi in piena emergenza: incendi i
 ## Per approfondire
 
 - [Ferragosto 2026](/comunicazioni/2026-08-15-ferragosto-2026-comunicazione-cittadini/)
+- [Il turno alla mensa del gemellaggio AIB di Fondi](/comunicazioni/2026-08-14-gemellaggio-aib-fondi-turno-mensa-ferragosto/)
 - [Agosto mese critico](/comunicazioni/2026-08-01-agosto-mese-critico-pc-preparazione/)
 - [Rischio incendi ad agosto](/comunicazioni/2026-08-03-rischio-incendi-agosto-picco/)
 
