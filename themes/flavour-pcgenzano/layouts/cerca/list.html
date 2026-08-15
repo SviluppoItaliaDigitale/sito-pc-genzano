@@ -56,7 +56,7 @@
   (function () {
     "use strict";
     if (typeof PagefindUI === "undefined") return;
-    new PagefindUI({
+    var ui = new PagefindUI({
       element: "#pcg-ricerca-page",
       bundlePath: "{{ $bundle }}",
       showSubResults: true,
@@ -78,6 +78,13 @@
         searching: "Ricerca di [SEARCH_TERM]…"
       }
     });
+    // Ricerca diretta da URL: /cerca/?q=termine — usata dal form della
+    // pagina 404, da OpenSearch (static/opensearch.xml) e da link esterni.
+    // PagefindUI non legge da solo la query string.
+    try {
+      var q = new URLSearchParams(location.search).get("q");
+      if (q && ui && typeof ui.triggerSearch === "function") ui.triggerSearch(q);
+    } catch (e) { /* browser senza URLSearchParams: resta la ricerca manuale */ }
   })();
 </script>
 {{ end }}

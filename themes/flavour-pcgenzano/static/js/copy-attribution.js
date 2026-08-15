@@ -41,6 +41,28 @@
             .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
 
+  // Licenza effettiva della pagina, letta dal JSON-LD di paternità
+  // (jsonld-copyright.html). Rispetta gli override del frontmatter:
+  // `license: <url>` → etichetta con quell'URL; `license: none` →
+  // nessun campo license nel blocco → niente attribuzione al copia
+  // (il "salvo diversa indicazione" di /note-legali/). Sulle pagine
+  // statiche senza JSON-LD vale il default CC BY 4.0 del sito.
+  function licenzaPagina() {
+    var def = { url: LICENZA_URL, label: LICENZA };
+    try {
+      var blocchi = document.querySelectorAll('script[type="application/ld+json"]');
+      for (var i = 0; i < blocchi.length; i++) {
+        var d = JSON.parse(blocchi[i].textContent);
+        if (d && d.copyrightHolder) {
+          if (!d.license) return null;
+          if (d.license === LICENZA_URL) return def;
+          return { url: String(d.license), label: 'licenza: ' + String(d.license) };
+        }
+      }
+    } catch (e) { /* JSON-LD illeggibile → default del sito */ }
+    return def;
+  }
+
   document.addEventListener('copy', function (event) {
     try {
       var sel = window.getSelection ? window.getSelection() : null;
@@ -60,17 +82,25 @@
       // identifica contenuti come /cruscotto/terremoto/#<id>).
       var url = location.origin + location.pathname + location.hash;
 
+      var lic = licenzaPagina();
+      if (!lic) return; // license: none → la pagina non dichiara CC BY
+
       var blocco = '\n\n—\n' + FONTE + '\n' +
-                   url + ' — ' + LICENZA;
+                   url + ' — ' + lic.label;
 
       // Versione HTML della selezione originale, se ricostruibile.
       var html = '';
+      var conArasaac = false;
       try {
         var contenitore = document.createElement('div');
         for (var i = 0; i < sel.rangeCount; i++) {
           contenitore.appendChild(sel.getRangeAt(i).cloneContents());
         }
         html = contenitore.innerHTML;
+        // La selezione HTML può trasportare pittogrammi ARASAAC (immagini),
+        // che NON sono CC BY 4.0 ma CC BY-NC-SA 4.0: la licenza va dichiarata
+        // correttamente (il text/plain non è interessato: niente immagini).
+        conArasaac = !!contenitore.querySelector('img[src*="/pittogrammi/arasaac/"]');
       } catch (errHtml) {
         html = '';
       }
@@ -82,7 +112,13 @@
         try {
           var fonteHtml = '<p>—<br>' + escapeHtml(FONTE) + '<br>' +
                           '<a href="' + escapeHtml(url) + '">' + escapeHtml(url) + '</a>' +
-                          ' — <a href="' + LICENZA_URL + '">' + escapeHtml(LICENZA) + '</a></p>';
+                          ' — <a href="' + escapeHtml(lic.url) + '">' + escapeHtml(lic.label) + '</a>';
+          if (conArasaac) {
+            fonteHtml += '<br>Pittogrammi ARASAAC: autore Sergio Palao, proprietà del Governo di Aragona, ' +
+                         '<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">licenza CC BY-NC-SA 4.0</a> — ' +
+                         '<a href="https://www.protezionecivilegenzano.it/attribuzioni-pittogrammi/">attribuzioni</a>';
+          }
+          fonteHtml += '</p>';
           event.clipboardData.setData('text/html', html + fonteHtml);
         } catch (errSet) { /* la versione text/plain è già in clipboard */ }
       }

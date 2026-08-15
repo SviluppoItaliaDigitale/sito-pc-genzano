@@ -40,6 +40,7 @@
   {{ partial "meta-social.html" . }}
   <link rel="icon" type="image/x-icon" href="{{ "images/favicon.ico" | relURL }}">
   <link rel="icon" type="image/png" sizes="32x32" href="{{ "images/favicon.png" | relURL }}">
+  <link rel="search" type="application/opensearchdescription+xml" title="Cerca su protezionecivilegenzano.it" href="{{ "opensearch.xml" | relURL }}">
   <link rel="stylesheet" href="{{ "vendor/bootstrap-italia/css/bootstrap-italia.min.css" | relURL }}">
   <link rel="stylesheet" href="{{ "vendor/bootstrap-icons/bootstrap-icons.min.css" | relURL }}">
   {{/* Cache-buster v=<hash contenuto>: Aruba serve i CSS/JS critici con
@@ -98,6 +99,7 @@
   {{ with .Site.Home.OutputFormats.Get "CAP" }}<link rel="alternate" type="application/cap+xml" title="Allerta meteo Genzano (feed CAP)" href="{{ .Permalink }}">{{ end }}
   {{ partial "structured-data.html" . }}
   {{ partial "jsonld-copyright.html" . }}
+  {{ if .IsHome }}{{ partial "speculation-rules.html" . }}{{ end }}
 </head>
 {{- /* has-bottomnav: attiva gli offset dei pulsanti flottanti sopra la
      BottomNav mobile (CSS sezione BOTTOM NAV v1.0). Esclusa la pagina
