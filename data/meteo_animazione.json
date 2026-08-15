@@ -1,9 +1,9 @@
 {
-  "aggiornato": "2026-08-15T05:10",
+  "aggiornato": "2026-08-15T10:50",
   "frame": 12,
   "passo_ore": 6,
   "durata_s": 24,
   "fonte": "Open-Meteo (modelli ECMWF)",
-  "span_da": "2026-08-15T06:00",
-  "span_a": "2026-08-18T00:00"
+  "span_da": "2026-08-15T12:00",
+  "span_a": "2026-08-18T06:00"
 }
