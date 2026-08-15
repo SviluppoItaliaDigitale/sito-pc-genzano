@@ -38,6 +38,7 @@ concurrency:
 jobs:
   notifica:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: "📥 Checkout (con cronologia per il diff)"
         uses: actions/checkout@v5

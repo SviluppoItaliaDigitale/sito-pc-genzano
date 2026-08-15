@@ -211,7 +211,7 @@ Lo script `scripts/auto-cover-mancanti.py` agisce così:
 
 ## File stantii su Aruba — strategia cache-bust dopo modifiche al chrome
 
-⚠️ **Problema noto del deploy FTP** (`dangerous-clean-slate: false`): l'azione `SamKirkland/FTP-Deploy-Action@v4.3.5` configurata in `deploy.yml` carica **solo i file modificati** rispetto a quelli già su Aruba (confronto per dimensione + timestamp). Conseguenza: se Hugo rigenera un HTML ma il contenuto rispetto al file su Aruba è bytewise identico (raro ma possibile), il file non viene ricaricato.
+⚠️ **Problema noto del deploy FTP** (`dangerous-clean-slate: false`): l'azione `SamKirkland/FTP-Deploy-Action` v4.4.0 (pinnata a commit SHA in `deploy.yml` dal 15/08/2026 — hardening supply-chain: le action di terze parti che maneggiano segreti sono puntate allo SHA immutabile, non al tag mutabile; per aggiornarle si cambia SHA + commento versione) configurata in `deploy.yml` carica **solo i file modificati** rispetto a quelli già su Aruba (confronto per dimensione + timestamp). Conseguenza: se Hugo rigenera un HTML ma il contenuto rispetto al file su Aruba è bytewise identico (raro ma possibile), il file non viene ricaricato.
 
 **Caso patologico più frequente — refactoring del chrome** (`partials/navbar.html`, `partials/footer.html`, `partials/utility-bar.html`, `partials/slim-header.html`, `_default/baseof.html`): tutti gli HTML del sito hanno il chrome cambiato → Hugo li rigenera → FTP dovrebbe caricarli tutti. **Ma** se in quel periodo ci sono **deploy falliti consecutivi** (build error), gli HTML restano stantii su Aruba per ore o giorni. Quando il deploy si sblocca, alcuni file potrebbero non essere ri-caricati (timestamp identico, contenuto leggermente diverso → FTP li ignora).
 

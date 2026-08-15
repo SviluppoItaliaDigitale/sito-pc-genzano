@@ -16,6 +16,7 @@ jobs:
   hugo-build:
     name: "Build Hugo (Aruba target)"
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: "📥 Checkout"
         uses: actions/checkout@v5
@@ -23,7 +24,7 @@ jobs:
           fetch-depth: 0
 
       - name: "⚙️ Setup Hugo"
-        uses: peaceiris/actions-hugo@v3.2.1
+        uses: peaceiris/actions-hugo@2752ce1d29631191ea3f27c23495fa06139a5b78 # v3.2.1
         with:
           hugo-version: '0.154.5'
           extended: true
@@ -46,6 +47,7 @@ jobs:
   menu-sync:
     name: "Coerenza menu hugo.toml ↔ site-chrome.js"
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: "📥 Checkout"
         uses: actions/checkout@v5
@@ -62,6 +64,7 @@ jobs:
   yaml-syntax:
     name: "Sintassi YAML workflow"
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: "📥 Checkout"
         uses: actions/checkout@v5
@@ -77,6 +80,7 @@ jobs:
   frontmatter-validity:
     name: "Frontmatter articoli modificati"
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: "📥 Checkout"
         uses: actions/checkout@v5

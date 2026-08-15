@@ -26,6 +26,7 @@ jobs:
       ${{ github.event.workflow_run.conclusion == 'failure' &&
           github.event.workflow_run.head_branch == 'main' }}
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: "Apri o aggiorna l'issue di fallimento"
         env:
