@@ -2,7 +2,7 @@
 title: "Note Legali"
 description: "Informazioni legali sul sito web della Protezione Civile di Genzano di Roma."
 layout: "single"
-dataUltimaRevisione: "2026-07-11"
+dataUltimaRevisione: "2026-08-15"
 ---
 
 ## Titolarità del sito
@@ -34,6 +34,14 @@ Le licenze variano a seconda del tipo di materiale. Controlla sempre l'indicazio
 | Materiali di terzi (foto, loghi, documenti di enti esterni) | **Licenza del titolare originale** | Valgono le condizioni indicate dalla fonte citata. |
 
 Se una scuola, un'associazione o un altro Comune vuole riutilizzare un materiale e ha dubbi sulla licenza applicabile, può [contattarci](/contatti/).
+
+### Estrazione di testo e dati (text and data mining) {#text-and-data-mining}
+
+Ai sensi dell'articolo 4 della [Direttiva (UE) 2019/790](https://eur-lex.europa.eu/eli/dir/2019/790/oj?locale=it) sul diritto d'autore nel mercato unico digitale, il Gruppo dichiara la propria policy sull'**estrazione di testo e dati** (text and data mining, TDM), anche a fini di addestramento di sistemi di intelligenza artificiale:
+
+- il TDM sui contenuti di questo sito è **consentito nei termini della licenza dichiarata** per ciascun materiale (vedi tabella sopra): per i testi del sito, CC BY 4.0 con **attribuzione obbligatoria** al "Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma";
+- la riserva è espressa anche in **formato leggibile dalle macchine**: header HTTP `TDM-Reservation` e `TDM-Policy` su ogni risorsa, file [`/.well-known/tdmrep.json`](/.well-known/tdmrep.json) (protocollo TDMRep), header `Link: rel="license"` e dati strutturati JSON-LD con licenza su ogni pagina;
+- i materiali con licenza propria (pittogrammi ARASAAC, contenuti di terzi) restano soggetti alle **rispettive condizioni**.
 
 ## Responsabilità e limiti d'uso
 
