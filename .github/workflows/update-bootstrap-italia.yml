@@ -21,6 +21,7 @@ permissions:
 jobs:
   check-and-update:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       # Passo 1: Scarica il codice
       - name: "📥 Checkout del repository"
