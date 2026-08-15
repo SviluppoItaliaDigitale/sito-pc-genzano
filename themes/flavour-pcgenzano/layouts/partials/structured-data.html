@@ -98,30 +98,9 @@
 </script>
 {{ else if eq .Section "comunicazioni" }}
 {{ if .IsPage }}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "{{ .Title }}",
-  "description": "{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}",
-  {{ with .Params.image }}"image": "{{ . | absURL }}",
-  {{ end }}"datePublished": "{{ .Date.Format "2006-01-02" }}",
-  "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
-  "author": {
-    "@type": "Organization",
-    "name": "{{ .Site.Title }}"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "{{ .Site.Title }}",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "{{ printf "%simages/logo-pc-genzano.png" $prodBase }}"
-    }
-  },
-  "mainEntityOfPage": "{{ $prodURL }}"
-}
-</script>
+{{/* Il blocco Article degli articoli è emesso da jsonld-copyright.html
+     (fonte unica dell'entità di pagina, con paternità + licenza CC BY 4.0):
+     qui restano solo gli schema aggiuntivi come Event. */}}
 {{/* Event aggiuntivo per articoli con badge "Evento" (sagre, esercitazioni,
      "Io non rischio", giornate dedicate) — aiuta Google Search a mostrare
      box evento nei risultati. */}}
@@ -252,20 +231,8 @@
 }
 </script>
 {{ else }}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "{{ .Title }}",
-  "description": "{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}",
-  "url": "{{ $prodURL }}",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "{{ .Site.Title }}",
-    "url": "{{ $prodBase }}"
-  }
-}
-</script>
+{{/* Il blocco WebPage generico è emesso da jsonld-copyright.html
+     (fonte unica dell'entità di pagina, con paternità + licenza). */}}
 {{ end }}
 {{/* FAQPage automatico: pagine NON-/faq/ con accordion <details class="faq-item">.
      Estrae domanda (<summary>) e risposta e genera JSON-LD FAQPage, utile per
