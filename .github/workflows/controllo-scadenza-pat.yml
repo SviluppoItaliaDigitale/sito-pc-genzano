@@ -27,6 +27,7 @@ permissions:
 jobs:
   check-pat-expiration:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: "🔍 Verifica scadenza PAT"
         id: check

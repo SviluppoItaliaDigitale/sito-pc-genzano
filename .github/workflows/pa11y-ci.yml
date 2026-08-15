@@ -26,12 +26,13 @@ jobs:
   pa11y:
     name: "WCAG 2.2 AA (axe) su pagine chiave"
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - name: "📥 Checkout"
         uses: actions/checkout@v5
 
       - name: "⚙️ Setup Hugo"
-        uses: peaceiris/actions-hugo@v3.2.1
+        uses: peaceiris/actions-hugo@2752ce1d29631191ea3f27c23495fa06139a5b78 # v3.2.1
         with:
           hugo-version: '0.154.5'
           extended: true
@@ -58,7 +59,9 @@ jobs:
           done
 
       - name: "♿ Gate axe-core (fallisce solo su violazioni; incomplete informativi)"
-        continue-on-error: true
+        # BLOCCANTE dal 15/08/2026: rollout report-only concluso (29/05→15/08,
+        # 0 violazioni confermate su tutte le pagine campione per l'intero
+        # periodo). Una violazione WCAG confermata ora fa fallire la PR.
         run: |
           set +e
           node scripts/axe-gate.js 2>&1 | tee axe-report.txt
@@ -75,7 +78,9 @@ jobs:
           exit $code
 
       - name: "💬 Pubblica il report come commento sulla PR"
-        if: github.event_name == 'pull_request'
+        # always(): col gate ora bloccante il report va pubblicato SOPRATTUTTO
+        # quando il gate fallisce (altrimenti la PR è rossa senza spiegazione).
+        if: always() && github.event_name == 'pull_request'
         continue-on-error: true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

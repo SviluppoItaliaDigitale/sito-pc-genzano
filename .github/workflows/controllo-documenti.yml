@@ -30,6 +30,7 @@ concurrency:
 jobs:
   controllo:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: "📥 Checkout"
         uses: actions/checkout@v5
@@ -61,7 +62,7 @@ jobs:
 
       - name: "🚨 Apri issue se ci sono problemi bloccanti"
         if: steps.controllo.outputs.exit_code != '0'
-        uses: peter-evans/create-issue-from-file@v5
+        uses: peter-evans/create-issue-from-file@e8ef132d6df98ed982188e460ebb3b5d4ef3a9cd # v5
         with:
           title: "[Automatico] Controllo settimanale documenti — problemi rilevati"
           content-filepath: ./controllo-documenti-report.md
