@@ -453,6 +453,9 @@ Quando una sessione Claude Code lavora dopo di te, può subito invocare le skill
   - `hugo --minify` deve completare senza errori.
   - YAML workflow modificati: `python3 -c "import yaml; yaml.safe_load(open('.github/workflows/<file>.yml'))"`.
   - Frontmatter articoli: nessun `draft: true` in produzione, formato data corretto, nessun marker `# TODO-foto-*`.
+  - Se hai toccato template/partial che emettono JSON-LD: `python3 scripts/check-jsonld.py public` (lo stesso gate gira in `validate-pr.yml`: blocchi `ld+json` parsabili + blocco di paternità `copyrightHolder` presente su ogni pagina).
+- **Gate sulle PR (dal 15/08/2026):** oltre al build, le PR passano il gate **pa11y/axe BLOCCANTE** (una violazione WCAG confermata = PR rossa; gli *incomplete* sono informativi) e il gate **JSON-LD** su tutte le pagine articolo.
+- **Workflow: convenzioni cogenti (15/08/2026):** ogni job ha `timeout-minutes` esplicito; le action di **terze parti** vanno pinnate a commit SHA (`uses: owner/action@<sha> # vX.Y.Z` — i tag sono mutabili e i workflow maneggiano i segreti FTP/Telegram/Gemini); **Dependabot** aggiorna i pin con PR settimanale, il merge resta umano.
 - **Mai `git push --force` su `main`.** Su feature branch ok solo se sai cosa stai facendo.
 - **Hook pre-commit:** rispetta i hook esistenti, non bypassare con `--no-verify`.
 
@@ -484,6 +487,9 @@ Sintesi dei divieti dalle rules:
 - ❌ Cambiare `Permissions-Policy: geolocation=(self)` in `()` su `.htaccess` (rompe la mappa cartografia).
 - ❌ Citare 115/118/1515 come numeri di emergenza nel Lazio: solo **112** (NUE).
 - ❌ Tipo Schema.org `GovernmentOrganization` o `EmergencyService` (siamo OdV, non ente pubblico).
+- ❌ Reintrodurre blocchi `Article`/`WebPage` in `structured-data.html`: la **fonte unica** dell'entità di pagina è `jsonld-copyright.html` (paternità + licenza CC BY 4.0 + `speakable`; override frontmatter `license:` / `license: none`).
+- ❌ Aggiungere una fonte dati al cruscotto o un widget **senza aggiornare `connect-src`/`frame-src` della CSP** in `.htaccess`: la policy è **ENFORCING** dal 15/08/2026 — il sintomo è una scheda vuota solo su Aruba (GitHub Pages non invia header). Vedi rule 05.
+- ❌ Action di terze parti su tag mutabile o job senza `timeout-minutes` nei workflow nuovi.
 - ❌ Overlay commerciali di accessibilità (AccessiBe, UserWay, EquallyAI): il W3C-WAI li sconsiglia.
 - ❌ Push diretto su `main` senza PR + merge esplicito.
 - ❌ `gh pr merge` automatico fuori dai casi previsti (regola 3.2 sopra).
