@@ -81,9 +81,19 @@ I metodi principali sono tre:
 - **Soffocamento**: consiste nel ridurre o separare il comburente, quindi l'ossigeno, dal materiale che brucia. Alcuni estintori e alcuni sistemi di copertura del focolaio lavorano in questo modo.
 - **Allontanamento del combustibile**: consiste nel rimuovere o isolare ciò che alimenta il fuoco, evitando che l'incendio trovi nuovo materiale da consumare.
 
-Nella pratica antincendio moderna si parla anche di **inibizione chimica**, cioè di agenti che interrompono la reazione di combustione. Tuttavia, per spiegare in modo semplice e immediato il fenomeno, il triangolo del fuoco resta ancora oggi uno strumento didattico molto efficace.
-
 È importante ricordare che non tutti gli incendi si affrontano allo stesso modo. Usare il mezzo sbagliato può peggiorare la situazione. Per questo, davanti a un principio di incendio, bisogna mantenere lucidità, valutare il rischio reale e non improvvisare.
+
+---
+
+## Dal triangolo al tetraedro: il quarto elemento
+
+*Aggiornamento di agosto 2026.* La ricerca sulla combustione ha aggiunto al modello classico un quarto elemento: la **reazione chimica a catena**. Durante la combustione la fiamma produce particelle molto reattive, i radicali liberi, che a loro volta alimentano la fiamma. È un ciclo che si autosostiene.
+
+Con questo quarto lato il triangolo diventa **tetraedro del fuoco**, una piramide a quattro facce. Il principio non cambia: togli una faccia qualsiasi e il fuoco si spegne.
+
+Perché serviva un modello nuovo? Perché il triangolo non riusciva a spiegare alcuni spegnimenti. Le **polveri estinguenti** e gli **aerosol** non raffreddano quasi nulla e non tolgono ossigeno. **Spezzano la reazione a catena**, catturando i radicali. È il meccanismo dell'**inibizione chimica**, lo stesso che fa funzionare le moderne sfere estinguenti. Ne parliamo in dettaglio nell'articolo [sulle nuove tecniche di spegnimento](/comunicazioni/2026-08-16-tecniche-moderne-spegnimento-incendi/) e nel dossier interattivo [«L'acqua non basta»](/dossier/l-acqua-non-basta/).
+
+Per la vita quotidiana e la prevenzione, il triangolo resta lo strumento didattico più semplice ed efficace. I comportamenti che contano agiscono sui tre lati classici. Il tetraedro serve a chi vuole capire anche **come lavorano gli estinguenti chimici**.
 
 ---
 
@@ -133,6 +143,8 @@ Per chi opera nel volontariato di protezione civile, nella scuola, nelle associa
 
 Sul nostro sito:
 
+- [Oltre la manichetta: le nuove tecniche per spegnere gli incendi](/comunicazioni/2026-08-16-tecniche-moderne-spegnimento-incendi/).
+- [Dossier interattivo: L'acqua non basta](/dossier/l-acqua-non-basta/).
 - [Rischio incendio boschivo — pagina operativa](/rischi-prevenzione/rischio-incendio/).
 - [Prevenzione incendi: pulizia dei terreni a primavera](/comunicazioni/2026-04-23-prevenzione-incendi-pulizia-terreni-primavera/).
 - [Esercitazione antincendio boschivo](/comunicazioni/2026-04-15-esercitazione-antincendio-boschivo-preparazione/).
