@@ -25,7 +25,7 @@ Per secoli spegnere un incendio ha voluto dire una cosa sola: portare acqua sul 
 
 ## Come si spegne un fuoco: i quattro lati del problema
 
-Ogni tecnica di spegnimento attacca uno dei quattro elementi che tengono viva una fiamma: il **combustibile**, l'**ossigeno**, il **calore** e la **reazione chimica a catena** che li lega. Togline uno e il fuoco muore. L'acqua raffredda; la schiuma separa il combustibile dall'aria; le polveri e gli aerosol interrompono la reazione chimica. Le tecnologie che seguono sono modi nuovi di fare una di queste quattro cose, meglio o più in fretta di prima.
+Ogni tecnica di spegnimento attacca uno dei quattro elementi che tengono viva una fiamma: il **combustibile**, l'**ossigeno**, il **calore** e la **reazione chimica a catena** che li lega. È il **tetraedro del fuoco**, l'evoluzione del più noto [triangolo del fuoco](/comunicazioni/2026-04-13-triangolo-del-fuoco-prevenzione-incendi/): ai tre lati classici la ricerca ha aggiunto il quarto, necessario per spiegare come agiscono polveri e aerosol. Togline uno e il fuoco muore. L'acqua raffredda; la schiuma separa il combustibile dall'aria; le polveri e gli aerosol interrompono la reazione chimica. Le tecnologie che seguono sono modi nuovi di fare una di queste quattro cose, meglio o più in fretta di prima.
 
 ## La sfera estinguente: l'estintore che si lancia
 

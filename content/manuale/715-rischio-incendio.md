@@ -12,7 +12,7 @@ L'incendio boschivo è un rischio in larghissima parte **di origine umana**, e q
 
 ## 7.5.1 Come nasce e si propaga il fuoco
 
-La combustione richiede tre elementi insieme — il **triangolo del fuoco**: il **combustibile** (vegetazione secca, lettiera, sterpaglia), il **comburente** (l'ossigeno dell'aria) e l'**innesco** (una fonte di calore). La propagazione è governata da tre fattori ambientali:
+La combustione richiede tre elementi insieme — il **triangolo del fuoco**: il **combustibile** (vegetazione secca, lettiera, sterpaglia), il **comburente** (l'ossigeno dell'aria) e l'**innesco** (una fonte di calore). La modellistica moderna vi aggiunge un quarto elemento, la **reazione chimica a catena** sostenuta dai radicali liberi della fiamma (**tetraedro del fuoco**): è il lato su cui agiscono per inibizione gli estinguenti chimici, come polveri e aerosol. La propagazione è governata da tre fattori ambientali:
 
 - la **vegetazione** (tipo, quantità e umidità del combustibile);
 - la **meteorologia** (temperatura, umidità dell'aria, soprattutto il **vento**, che spinge il fronte e proietta faville lontano);

@@ -47,6 +47,8 @@ Togliere uno solo dei tre lati del triangolo ferma l'incendio. È il principio d
 
 Capire il triangolo significa capire perché ogni attrezzo dell'AIB esiste: non è un'invenzione moderna, è una risposta chimica a un problema chimico.
 
+*Nota (agosto 2026):* la modellistica moderna aggiunge un quarto elemento, la **reazione chimica a catena**, trasformando il triangolo in **tetraedro del fuoco**. È il lato su cui agiscono gli estinguenti chimici, come polveri e aerosol. Spengono per inibizione della catena, non per raffreddamento o soffocamento. Approfondimento: [le nuove tecniche di spegnimento](/comunicazioni/2026-08-16-tecniche-moderne-spegnimento-incendi/) e il dossier interattivo [«L'acqua non basta»](/dossier/l-acqua-non-basta/).
+
 ---
 
 ## Le fasi della combustione
