@@ -1,6 +1,6 @@
 ---
 title: "Radiocomunicazioni in emergenza: quando le onde radio salvano vite"
-date: 2026-08-22
+date: 2026-08-22T00:01:00+02:00
 description: "Le reti radio VHF, UHF, HF restano strategiche in emergenza, soprattutto quando i cellulari non bastano. Il ruolo dei radioamatori nella Protezione Civile."
 badge: "Radiocomunicazioni"
 priorita: "normale"
