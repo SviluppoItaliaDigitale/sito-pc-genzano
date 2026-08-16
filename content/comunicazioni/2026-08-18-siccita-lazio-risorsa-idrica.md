@@ -1,6 +1,6 @@
 ---
 title: "Siccità nel Lazio: come viene gestita e cosa può fare il cittadino"
-date: 2026-08-18
+date: 2026-08-18T00:01:00+02:00
 description: "Agosto è il mese in cui la siccità estiva tocca i suoi picchi. Come viene gestita la risorsa idrica e cosa può fare ogni famiglia."
 badge: "Prevenzione"
 priorita: "normale"
