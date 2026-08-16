@@ -1,6 +1,6 @@
 ---
 title: "Diventare volontari di Protezione Civile: il corso di reclutamento in autunno"
-date: 2026-08-20
+date: 2026-08-20T00:01:00+02:00
 description: "A settembre riapriranno le iscrizioni ai corsi base del Gruppo Comunale Volontari di Protezione Civile. Chi può partecipare e cosa aspettarsi."
 badge: "Volontariato"
 priorita: "normale"
