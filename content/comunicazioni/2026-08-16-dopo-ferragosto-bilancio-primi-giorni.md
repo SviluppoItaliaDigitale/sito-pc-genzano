@@ -1,6 +1,6 @@
 ---
 title: "Dopo Ferragosto: il bilancio dei giorni caldi e cosa aspettarsi"
-date: 2026-08-16
+date: 2026-08-16T00:01:00+02:00
 description: "La prima settimana di agosto è passata. Il bilancio operativo, le tendenze meteo e il quadro del territorio nelle prossime due settimane."
 badge: "Aggiornamento"
 priorita: "normale"
