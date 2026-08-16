@@ -121,7 +121,15 @@ Ora usa il **Google Chrome di sistema** (`/usr/bin/google-chrome-stable`, Chrome
 
 ## Sandbox CLOUD vs sandbox LOCALE — non sono la stessa cosa
 
-⚠️ **Distinzione critica scoperta il 9 maggio 2026** (test diretto sui domini di rete dalla sessione cloud):
+🟢 **AGGIORNAMENTO 16/08/2026 — le sessioni cloud con agent proxy SCARICANO da Wikimedia.** Verifica sul campo (articolo "Oltre la manichetta" + dossier "L'acqua non basta", pubblicati con 6 foto Commons scaricate interamente da una sessione cloud): l'ambiente **Claude Code Remote gestito** (container con variabile `HTTPS_PROXY` e CA bundle in `/root/.ccr/`) instrada l'HTTPS in uscita attraverso un **agent proxy** e NON applica la vecchia whitelist `host_not_allowed` documentata sotto. Da questo ambiente funzionano sia l'**API di ricerca di Commons** (`commons.wikimedia.org/w/api.php`) sia il **download dei file** (`Special:FilePath` e `upload.wikimedia.org`). Tre accorgimenti obbligatori:
+
+1. **User-Agent identificativo** su ogni `curl` (es. `-A "PCGenzanoBot/1.0 (https://www.protezionecivilegenzano.it/)"`): senza UA Wikimedia risponde 429.
+2. **Rate limit severo**: aspettarsi comunque molti **429** anche con UA. Retry con backoff lungo (20-25 s tra i tentativi, 10-15 s tra un file e l'altro): con 3-5 tentativi per file i download passano.
+3. **Thumbnail solo a larghezze standard** su `upload.wikimedia.org` (es. `1920px-`): larghezze arbitrarie possono dare 400. In alternativa usare `Special:FilePath/<File>?width=1800`.
+
+Restano validi tutti i gate editoriali: Read multimodale di ogni foto prima di alt/caption, licenza libera verificata via `extmetadata` (LicenseShortName + Artist), fascia blu con `applica-fascia-foto.sh` (Pillow installabile al volo con `pip install pillow`; i font Liberation sono già nel container). **Testata solo Wikimedia/Commons**: NASA/USGS/NOAA/stock non sono state riprovate da questo ambiente — verificarle alla prima occasione prima di darle per scontate. La tabella e i limiti qui sotto restano validi per le **vecchie sessioni cloud senza agent proxy** (se ancora incontrate) e come contesto storico.
+
+⚠️ **Distinzione critica scoperta il 9 maggio 2026** (test diretto sui domini di rete dalla sessione cloud dell'epoca, senza agent proxy):
 
 Tutto quanto descritto sopra (file `.claude/settings.local.json` + tabella delle 7 fonti foto) **vale solo per la sandbox LOCALE** — quella di Claude Code CLI eseguito sul PC dell'utente. Le sessioni di Claude Code **CLOUD** (mobile, web, agent GitHub-integrato) hanno una whitelist di rete **completamente diversa**, gestita lato Anthropic, **non modificabile dall'utente**, indipendente dal `.claude/settings.local.json` (che è in `.gitignore` e quindi non viene letto in cloud).
 
@@ -135,14 +143,16 @@ Tutto quanto descritto sopra (file `.claude/settings.local.json` + tabella delle
 | `registry.npmjs.org` | ✅ 200 | `npm install` funziona |
 | `archive.ubuntu.com` | ✅ 200 | `apt update` funziona (ma serve sudo) |
 | `api.github.com` | ❌ 403 | bloccato — usare i tool MCP `mcp__github__*` |
-| **TUTTE le 14 sorgenti foto** (Wikimedia, NASA, USGS, NOAA, Pexels, Pixabay, Unsplash) | ❌ 403 `host_not_allowed` | **non scaricabili dalla sessione cloud** |
+| **TUTTE le 14 sorgenti foto** (Wikimedia, NASA, USGS, NOAA, Pexels, Pixabay, Unsplash) | ❌ 403 `host_not_allowed` | **superato per Wikimedia** negli ambienti CCR con agent proxy (vedi aggiornamento 16/08/2026 in testa alla sezione); le altre fonti restano da ritestare |
 | `deb.debian.org` | ❌ 403 | bloccato |
 
 ### Conseguenza operativa
 
-Le foto inline `{{< foto >}}` da fonti esterne (Wikimedia/NASA/USGS/NOAA/stock) **non possono essere scaricate dalle sessioni cloud**. La procedura `pc-image-fixer` (WebFetch + curl + applica-fascia) funziona **solo** dal Claude Code CLI sul PC dell'utente con `.claude/settings.local.json` configurato.
+Nelle **vecchie sessioni cloud senza agent proxy** le foto inline `{{< foto >}}` da fonti esterne (Wikimedia/NASA/USGS/NOAA/stock) non potevano essere scaricate e la procedura `pc-image-fixer` (WebFetch + curl + applica-fascia) funzionava solo dal Claude Code CLI sul PC dell'utente. **Negli ambienti Claude Code Remote con agent proxy il flusso funziona anche in cloud, almeno per Wikimedia** (aggiornamento 16/08/2026 in testa alla sezione): prima di rinunciare alle foto da una sessione cloud, testare il download con UA + backoff.
 
-Tre flussi praticabili:
+Quattro flussi praticabili:
+
+0. **Cloud CCR con agent proxy (dal 16/08/2026)**: ricerca via API Commons → download con UA + backoff → `pip install pillow` → `applica-fascia-foto.sh` → Read multimodale → shortcode `{{< foto >}}`. Collaudato end-to-end.
 
 1. **Locale (PC)**: l'utente apre Claude Code CLI sul PC → l'agent `pc-image-fixer` fa tutto. Sandbox sbloccata via `.claude/settings.local.json`.
 2. **Cloud + utente che fornisce la foto**: l'utente carica/incolla un file immagine già scaricato → la sessione cloud lo legge dal filesystem temporaneo, applica fascia blu (Pillow è installabile via pip che è whitelistato), inserisce shortcode. Niente download esterno richiesto.
@@ -164,7 +174,7 @@ Tre flussi praticabili:
 
 ### Cosa NON fare
 
-- **Non promettere all'utente cloud-side che si possono scaricare foto da fonti esterne** in questa sessione: causa frustrazione (è successo il 9 maggio 2026 con l'articolo Giornata dell'Europa, da cui questa sezione).
+- **Non promettere all'utente cloud-side che si possono scaricare foto da fonti esterne prima di aver testato il download nella sessione corrente**: negli ambienti CCR con agent proxy Wikimedia funziona (16/08/2026), nelle vecchie sandbox cloud no (9 maggio 2026, articolo Giornata dell'Europa). Un test da 5 secondi (`curl` con UA su un file di Commons) evita promesse a vuoto in entrambe le direzioni.
 - **Non aggiungere domini di sorgenti foto a `.claude/settings.local.json` come "fix per il cloud"**: il file non viene letto in cloud, resta utile solo in locale.
 
 ---
