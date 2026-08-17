@@ -47,7 +47,7 @@ jobs:
     timeout-minutes: 30
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
 
       - name: "🔧 Setup Hugo"
         uses: peaceiris/actions-hugo@2752ce1d29631191ea3f27c23495fa06139a5b78 # v3.2.1
@@ -1391,7 +1391,7 @@ jobs:
         # Adesso lo step audit termina sempre 0, ma always() resta come
         # safety-net se qualcuno re-introduce un exit 1.
         if: ${{ always() && steps.audit.outputs.found_issues == 'true' }}
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
             // Legge il report direttamente dal file. Storia: prima si usava
