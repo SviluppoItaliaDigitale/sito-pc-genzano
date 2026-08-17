@@ -1,6 +1,6 @@
 ---
 title: "Buon Ferragosto 2026: la Protezione Civile accanto alla cittadinanza"
-date: 2026-08-15
+date: 2026-08-15T00:01:00+02:00
 description: "Il messaggio del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma per il Ferragosto 2026."
 badge: "Comunicazione"
 priorita: "normale"

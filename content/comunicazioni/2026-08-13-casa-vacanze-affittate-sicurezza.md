@@ -1,6 +1,6 @@
 ---
 title: "Case vacanze affittate: cosa controllare al momento dell'arrivo"
-date: 2026-08-13
+date: 2026-08-13T00:01:00+02:00
 description: "Affittare un appartamento per le ferie è diffuso. Alcune verifiche di sicurezza, da fare appena arrivati, possono fare la differenza."
 badge: "Prevenzione"
 priorita: "normale"

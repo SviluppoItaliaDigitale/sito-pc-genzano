@@ -791,6 +791,9 @@ crowd
 abbruciamento
 terremotocentroitalia
 termocamera
+svettatore
+riaccensioni
+riaccensione
 porzionare
 executive
 
