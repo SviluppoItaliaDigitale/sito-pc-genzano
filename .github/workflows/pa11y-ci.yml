@@ -29,7 +29,7 @@ jobs:
     timeout-minutes: 30
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
 
       - name: "⚙️ Setup Hugo"
         uses: peaceiris/actions-hugo@2752ce1d29631191ea3f27c23495fa06139a5b78 # v3.2.1
@@ -41,7 +41,7 @@ jobs:
         run: hugo --minify --baseURL "http://127.0.0.1:8080/"
 
       - name: "⚙️ Setup Node"
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: '20'
 

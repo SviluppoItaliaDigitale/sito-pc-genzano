@@ -19,7 +19,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
@@ -58,7 +58,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
 
       - name: "🧭 Verifica che il menu di site-chrome.js sia generato da hugo.toml"
         # Il blocco MENU-AUTOGEN di site-chrome.js è GENERATO da
@@ -75,7 +75,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
 
       - name: "🔬 Valida YAML di .github/workflows/"
         run: |
@@ -91,7 +91,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
