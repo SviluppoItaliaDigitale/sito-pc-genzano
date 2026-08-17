@@ -8,6 +8,7 @@ autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-15-ferragosto-2026-comunicazione-cittadini.webp"
 image_alt: "Panorama di Genzano di Roma al tramonto nel giorno di Ferragosto"
 scadenza: "2026-08-16"
+archiviato: true
 area: "Genzano di Roma"
 allegati: []
 draft: false

@@ -8,6 +8,7 @@ autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-14-vigilia-ferragosto-stato-allerta.webp"
 image_alt: "Vista serale di una piazza di Genzano illuminata nella vigilia di Ferragosto"
 scadenza: "2026-08-16"
+archiviato: true
 area: "Genzano di Roma"
 allegati: []
 draft: false

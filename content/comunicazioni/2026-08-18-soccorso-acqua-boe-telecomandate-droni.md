@@ -28,13 +28,13 @@ C'è una regola che ogni soccorritore acquatico impara il primo giorno: **chi so
          alt="Una boa di salvataggio torpedo rossa in plastica, con maniglie laterali, cima bianca e tracolla nera, fotografata su un fondo blu."
          caption="La boa torpedo classica del soccorso acquatico: il bagnino la porta a nuoto fino alla persona in difficoltà. Le nuove boe a motore fanno lo stesso viaggio da sole, radiocomandate da riva. Foto: Alien65, CC BY 2.5, via Wikimedia Commons." >}}
 
-La novità più visibile — presente anche al REAS, il salone internazionale dell'emergenza di Montichiari — è la **boa di salvataggio telecomandata**: un galleggiante a forma di U con due piccoli idrogetti elettrici, che il soccorritore guida da riva con un radiocomando. Raggiunge la persona in difficoltà **fino a diverse centinaia di metri** di distanza, molto più in fretta di un nuotatore; chi sta annegando vi si aggrappa e viene riportato a riva, oppure sostenuto a galla in attesa dei soccorsi.
+La novità più visibile — presente anche al REAS, il salone internazionale dell'emergenza di Montichiari — è la **boa di salvataggio telecomandata**. È un galleggiante a forma di U con due piccoli idrogetti elettrici, che il soccorritore guida da riva con un radiocomando. Raggiunge la persona in difficoltà **fino a diverse centinaia di metri** di distanza, molto più in fretta di un nuotatore. Chi sta annegando vi si aggrappa e viene riportato a riva, oppure resta sostenuto a galla in attesa dei soccorsi.
 
 I vantaggi sono evidenti: **nessun soccorritore in acqua** nelle condizioni peggiori (correnti, acqua fredda, panico della vittima — che è uno dei pericoli maggiori per chi soccorre a nuoto) e tempi di intervento ridotti.
 
 ## I droni: occhi in cielo e galleggianti sganciabili
 
-Accanto alle boe lavorano i **droni**: quelli aerei individuano dall'alto la persona in difficoltà — che dalla riva spesso non si vede più — e possono **sganciare un galleggiante autogonfiabile** in attesa dei soccorritori; quelli **acquatici** navigano in superficie come piccoli mezzi radiocomandati. In Italia ci lavorano anche realtà del volontariato: un drone acquatico è nato dalla collaborazione tra una sezione della **Società Nazionale di Salvamento** e un'azienda romana specializzata in tecnologie per il soccorso in acqua.
+Accanto alle boe lavorano i **droni**: quelli aerei individuano dall'alto la persona in difficoltà — che dalla riva spesso non si vede più — e possono **sganciare un galleggiante autogonfiabile** in attesa dei soccorritori. Quelli **acquatici**, invece, navigano in superficie come piccoli mezzi radiocomandati. In Italia ci lavorano anche realtà del volontariato: un drone acquatico è nato dalla collaborazione tra una sezione della **Società Nazionale di Salvamento** e un'azienda romana specializzata in tecnologie per il soccorso in acqua.
 
 ## La sagoma rosa sulla spiaggia: l'innovazione più semplice
 
@@ -42,7 +42,7 @@ Accanto alle boe lavorano i **droni**: quelli aerei individuano dall'alto la per
          alt="Una boa di salvataggio rosa acceso agganciata a un palo con un cartello verde di istruzioni che riporta i pittogrammi d'uso e l'indicazione di chiamare il 112; dietro, cielo azzurro e vegetazione di duna."
          caption="Una postazione di boa di salvataggio pubblica del programma sudafricano Pink Rescue Buoy: il cartello spiega l'uso e ricorda di chiamare prima i soccorsi — anche lì il numero è il 112. Foto: Brandonctnwiki, CC BY-SA 4.0, via Wikimedia Commons." >}}
 
-Non tutta l'innovazione è elettronica. Una delle idee più efficaci degli ultimi anni è la **boa di salvataggio pubblica**: postazioni fisse su spiagge e rive, con un galleggiante dal colore acceso che **chiunque** può staccare e lanciare a chi è in difficoltà — senza entrare in acqua. Il programma sudafricano delle *Pink Rescue Buoys*, nato dall'istituto nazionale di salvataggio NSRI, ha documentato decine di vite salvate così. È la stessa filosofia dei DAE nelle piazze: mettere lo strumento giusto dove serve, alla portata di tutti.
+Non tutta l'innovazione è elettronica. Una delle idee più efficaci degli ultimi anni è la **boa di salvataggio pubblica**: postazioni fisse su spiagge e rive, con un galleggiante dal colore acceso. **Chiunque** può staccarlo e lanciarlo a chi è in difficoltà, senza entrare in acqua. Il programma sudafricano delle *Pink Rescue Buoys*, nato dall'istituto nazionale di salvataggio NSRI, ha documentato decine di vite salvate così. È la stessa filosofia dei DAE nelle piazze: mettere lo strumento giusto dove serve, alla portata di tutti.
 
 ## E ai nostri laghi?
 
