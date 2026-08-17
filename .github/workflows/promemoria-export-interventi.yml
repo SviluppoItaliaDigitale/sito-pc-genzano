@@ -1,0 +1,82 @@
+name: "📊 Promemoria export interventi (open data)"
+
+# Gli open data degli interventi (static/open-data/statistiche-interventi.json
+# e correlati) si aggiornano SOLO manualmente: serve scaricare l'export
+# cumulativo dal gestionale (login umano, non automatizzabile in CI) e
+# rilanciare scripts/genera-open-data-interventi.py. Senza un promemoria i
+# dati restano indietro di settimane (ad agosto 2026: fermi al 30/07 con
+# 22 interventi non censiti scoperti solo il 17/08).
+#
+# Questo workflow controlla ogni lunedì l'età del dataset: se il campo
+# periodo.al è più vecchio di 21 giorni apre/aggiorna una issue con la
+# procedura completa (export → script → articoli giornate scoperte).
+# La issue si chiude da sola al rientro (dataset di nuovo fresco).
+
+on:
+  schedule:
+    - cron: '37 7 * * 1'   # lunedì 07:37 UTC, fuori dai picchi degli altri cron
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: promemoria-export-interventi
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: "📅 Controlla l'età del dataset"
+        id: eta
+        run: |
+          AL=$(python3 -c "import json; print(json.load(open('static/open-data/statistiche-interventi.json'))['periodo']['al'] or '')")
+          TS=$(date -u -d "$AL" +%s 2>/dev/null || echo "")
+          [ -n "$TS" ] && GIORNI=$(( ($(date -u +%s) - TS) / 86400 )) || GIORNI=999
+          echo "al=$AL" >> "$GITHUB_OUTPUT"
+          echo "giorni=$GIORNI" >> "$GITHUB_OUTPUT"
+          echo "Dataset aggiornato al: $AL ($GIORNI giorni fa)"
+
+      - name: "📣 Apri/aggiorna issue se i dati sono vecchi"
+        if: ${{ steps.eta.outputs.giorni > 21 }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          AL: ${{ steps.eta.outputs.al }}
+          GIORNI: ${{ steps.eta.outputs.giorni }}
+        run: |
+          TITLE="📊 Open data interventi da aggiornare (export del gestionale)"
+          BODY=$(cat <<EOF
+          Gli open data degli interventi sono fermi al **$AL** ($GIORNI giorni fa, soglia: 21).
+
+          **Procedura (ripetibile, ~mezz'ora con Claude Code):**
+          1. Scarica l'export cumulativo dal gestionale (file \`gcpc-genzano-di-roma_global_reports_*.xlsx\`) in \`~/Scrivania\`.
+          2. Lancia \`python3 scripts/genera-open-data-interventi.py\` (prende da solo l'export più recente; ricalcola i dataset aggregati e anonimi in \`static/open-data/\`).
+          3. In sessione Claude Code: **un articolo per ogni giornata di intervento non ancora raccontata**, retrodatato alla data reale (orari arrotondati, niente nomi/targhe per privacy, fonti giornalistiche a supporto, gate \`pc-article-reviewer\`). Le giornate già coperte da articoli esistenti non si duplicano.
+          4. Build pulita → PR → merge → verifica deploy.
+          5. Il file .xlsx NON va committato (contiene nomi dei volontari). Questa issue si chiude da sola al prossimo controllo, quando il dataset risulta fresco.
+
+          _Issue aperta automaticamente da \`promemoria-export-interventi.yml\` (lunedì 07:37 UTC)._
+          EOF
+          )
+          N=$(gh issue list --state open --search "in:title \"Open data interventi da aggiornare\"" --json number --jq '.[0].number // empty')
+          if [ -n "$N" ]; then
+            gh issue comment "$N" --body "Ancora da aggiornare: dataset fermo al **$AL** ($GIORNI giorni)."
+          else
+            gh issue create --title "$TITLE" --body "$BODY" --label "automazione"
+          fi
+
+      - name: "✅ Chiudi la issue se il dataset è fresco"
+        if: ${{ steps.eta.outputs.giorni <= 21 }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          AL: ${{ steps.eta.outputs.al }}
+        run: |
+          N=$(gh issue list --state open --search "in:title \"Open data interventi da aggiornare\"" --json number --jq '.[0].number // empty')
+          if [ -n "$N" ]; then
+            gh issue close "$N" --comment "Dataset aggiornato al **$AL**: promemoria rientrato."
+          fi

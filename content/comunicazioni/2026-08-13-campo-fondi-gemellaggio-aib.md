@@ -33,6 +33,8 @@ I numeri dell'edizione 2026 danno la misura dell'operazione: **circa 1.981 volon
 
 Un campo che ospita ogni settimana decine di volontari in arrivo da centinaia di chilometri funziona solo se qualcuno lo fa funzionare: accoglienza dei nuovi arrivati, supporto logistico, movimentazione di materiali e attrezzature, collegamenti con la sala operativa. È il lavoro — meno visibile di una manichetta puntata sulle fiamme, ma altrettanto necessario — che la nostra squadra ha condiviso con gli altri gruppi impegnati nell'assistenza.
 
+Parte centrale dell'impegno è stato il **servizio mensa** del campo, che raccontiamo in dettaglio negli articoli dedicati: il [turno alla mensa e il subentro](/comunicazioni/2026-08-14-gemellaggio-aib-fondi-turno-mensa-ferragosto/), il [pranzo di Ferragosto con i cuochi dell'emergenza](/comunicazioni/2026-08-16-ferragosto-mensa-fondi-pranzo-campo/) e l'[ultimo cambio turno, col testimone passato ad Ariccia](/comunicazioni/2026-08-17-gemellaggio-aib-fondi-ultimo-cambio-turno/).
+
 Per il Gruppo è stata anche un'occasione di scambio: lavorare fianco a fianco con volontari di altre regioni, con procedure e attrezzature diverse, è una delle forme di addestramento più concrete che esistano.
 
 ## Un sistema che si muove insieme
