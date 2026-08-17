@@ -24,7 +24,7 @@ jobs:
     timeout-minutes: 30
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
 
       - name: "🔧 Setup Hugo"
         uses: peaceiris/actions-hugo@2752ce1d29631191ea3f27c23495fa06139a5b78 # v3.2.1
@@ -36,7 +36,7 @@ jobs:
         run: hugo --minify --baseURL "https://www.protezionecivilegenzano.it/"
 
       - name: "💾 Restore cache lychee"
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: .lycheecache
           key: cache-lychee-${{ github.sha }}
@@ -103,7 +103,7 @@ jobs:
 
       - name: "🚨 Apri issue se link rotti"
         if: steps.lychee.outputs.exit_code != 0
-        uses: peter-evans/create-issue-from-file@e8ef132d6df98ed982188e460ebb3b5d4ef3a9cd # v5
+        uses: peter-evans/create-issue-from-file@fca9117c27cdc29c6c4db3b86c48e4115a786710 # v6.0.0
         with:
           title: "[Automatico] Link rotti sul sito"
           content-filepath: ./lychee-report.md

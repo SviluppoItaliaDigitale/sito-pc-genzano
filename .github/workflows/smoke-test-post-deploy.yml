@@ -31,7 +31,7 @@ jobs:
     timeout-minutes: 20
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
 
       - name: "⏳ Attendi propagazione FTP Aruba"
         # Il deploy.yml termina dopo l'upload FTP, ma Aruba può servire
@@ -57,7 +57,7 @@ jobs:
 
       - name: "🚨 Gestisci issue se smoke test fallisce (con dedup)"
         if: failure() && steps.smoke.outputs.exit_code != '0'
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
             const today = new Date().toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit', year: 'numeric' });
@@ -144,7 +144,7 @@ jobs:
 
       - name: "✅ Auto-chiudi issue smoke-test aperte se test torna success"
         if: success() && steps.smoke.outputs.exit_code == '0'
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
             const today = new Date().toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit', year: 'numeric' });

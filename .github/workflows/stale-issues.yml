@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/stale@v9
+      - uses: actions/stale@v11
         with:
           # ===== ISSUE =====
           days-before-issue-stale: 14
