@@ -16,6 +16,7 @@ jobs:
   hugo-build:
     name: "Build Hugo (Aruba target)"
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: "📥 Checkout"
         uses: actions/checkout@v5
@@ -23,7 +24,7 @@ jobs:
           fetch-depth: 0
 
       - name: "⚙️ Setup Hugo"
-        uses: peaceiris/actions-hugo@v3.2.1
+        uses: peaceiris/actions-hugo@2752ce1d29631191ea3f27c23495fa06139a5b78 # v3.2.1
         with:
           hugo-version: '0.154.5'
           extended: true
@@ -38,6 +39,14 @@ jobs:
             exit 1
           fi
 
+      - name: "🧾 Valida JSON-LD (paternità/licenza inclusa)"
+        # Gate sui dati strutturati: ogni blocco ld+json del campione deve
+        # essere JSON parsabile e ogni pagina deve avere il blocco di
+        # paternità di jsonld-copyright.html (copyrightHolder). Protegge
+        # dall'incidente del doppio escape (12/05/2026) e da regressioni
+        # del livello di tutela IP (agosto 2026).
+        run: python3 scripts/check-jsonld.py public
+
       - name: "📊 Statistiche build"
         run: |
           echo "Pagine generate: $(find public -name '*.html' | wc -l)"
@@ -46,6 +55,7 @@ jobs:
   menu-sync:
     name: "Coerenza menu hugo.toml ↔ site-chrome.js"
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: "📥 Checkout"
         uses: actions/checkout@v5
@@ -62,6 +72,7 @@ jobs:
   yaml-syntax:
     name: "Sintassi YAML workflow"
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: "📥 Checkout"
         uses: actions/checkout@v5
@@ -77,6 +88,7 @@ jobs:
   frontmatter-validity:
     name: "Frontmatter articoli modificati"
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: "📥 Checkout"
         uses: actions/checkout@v5

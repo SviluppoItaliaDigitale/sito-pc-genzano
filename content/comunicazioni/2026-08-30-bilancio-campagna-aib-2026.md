@@ -35,7 +35,8 @@ Il Gruppo Comunale ha:
 - mantenuto attivo il **servizio di avvistamento** nei giorni di massima pericolosità;
 - collaborato con il **Centro Operativo Regionale (COR) della Regione Lazio** e le strutture provinciali;
 - partecipato a interventi di **spegnimento e bonifica** su segnalazione del sistema 112 e del COR;
-- collaborato con **Vigili del Fuoco**, **Carabinieri Forestali**, **Parco Castelli Romani**, Gruppi dei Comuni limitrofi.
+- collaborato con **Vigili del Fuoco**, **Carabinieri Forestali**, **Parco Castelli Romani**, Gruppi dei Comuni limitrofi;
+- coperto un turno alla **mensa del campo del gemellaggio AIB di Fondi (LT)**, nei giorni di Ferragosto, a supporto delle squadre impegnate nel sud pontino ([l'articolo](/comunicazioni/2026-08-14-gemellaggio-aib-fondi-turno-mensa-ferragosto/)).
 
 *(I dati puntuali — numero di attivazioni, ore volontariato, interventi congiunti — saranno pubblicati nel rapporto annuale del Gruppo.)*
 

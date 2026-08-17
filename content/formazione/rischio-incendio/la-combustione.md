@@ -35,6 +35,8 @@ Se manca anche **uno solo** dei tre elementi, l'incendio si spegne. Su questo pr
 
 Nello spegnimento reale si usa quasi sempre una **combinazione** di queste azioni.
 
+L'azione chimica merita una nota: il triangolo, da solo, non la spiega. Per questo la modellistica antincendio moderna aggiunge un quarto elemento — la **reazione chimica a catena** sostenuta dai radicali liberi prodotti dalla fiamma — trasformando il triangolo in **tetraedro del fuoco**. Le sostanze anticatalitiche (polveri, aerosol condensati, gli storici halon) spengono proprio interrompendo questa catena: non raffreddano né soffocano, tolgono il quarto lato. Per un approfondimento divulgativo vedi [le nuove tecniche di spegnimento](/comunicazioni/2026-08-16-tecniche-moderne-spegnimento-incendi/).
+
 ## I combustibili
 
 ### Solidi

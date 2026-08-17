@@ -86,6 +86,10 @@ Header always set Permissions-Policy "geolocation=(self), microphone=(), camera=
 
 **ATTENZIONE:** non sostituire `geolocation=(self)` con `geolocation=()`. La forma `()` (lista vuota di origini) **disabilita la Geolocation API anche per il sito stesso**, e il browser blocca silenziosamente `navigator.geolocation.getCurrentPosition()` mostrando un errore "Geolocation has been disabled in this document by permissions policy". Questo è successo una volta in produzione e ha rotto il bottone della mappa cartografia. Se aggiungi nuove API (es. `payment`, `usb`), aggiungile in coda al valore con `(self)` o `()` esplicito.
 
+**Licenza e TDM negli header (15/08/2026):** `.htaccess` emette `Link: rel="license"` CC BY 4.0 su tutte le risorse (variante CC BY-NC-SA 4.0 per `/pittogrammi/arasaac/` via `SetEnvIf`) + `TDM-Reservation: 1`/`TDM-Policy` (dichiarazione di policy → `/note-legali/`, non divieto), speculari a `static/.well-known/tdmrep.json`. Dettagli in rule 04a § "Partial `speculation-rules` + OpenSearch + TDMRep".
+
+**CSP promossa a enforcing (15/08/2026):** l'header è ora `Content-Security-Policy` attivo (era Report-Only dal 10/05) con `upgrade-insecure-requests` reintrodotta. **Stretta dello stesso giorno:** rimosso `cdn.jsdelivr.net` da `script-src`/`style-src`/`font-src` (tutto è vendorizzato self-hosted, verifica meccanica: zero riferimenti nel repo) — se in futuro si reintroduce un asset da CDN, va prima riaggiunto alla policy. 🔴 Quando si aggiunge una nuova fonte dati al cruscotto o un nuovo widget, aggiornare anche `connect-src`/`frame-src` della policy: dimenticarlo produce una scheda vuota solo su Aruba (GitHub Pages non invia header). Dopo ogni modifica alla CSP: smoke test post-deploy su `/cruscotto/`.
+
 ## Workflow GitHub Actions — qualità YAML
 
 I file in `.github/workflows/*.yml` sono validati da GitHub al momento del push. Se la validazione fallisce il run viene marcato "completed failure" con 0 job eseguiti, ma **nessuna issue viene aperta** e il problema può passare inosservato per settimane.
@@ -207,7 +211,7 @@ Lo script `scripts/auto-cover-mancanti.py` agisce così:
 
 ## File stantii su Aruba — strategia cache-bust dopo modifiche al chrome
 
-⚠️ **Problema noto del deploy FTP** (`dangerous-clean-slate: false`): l'azione `SamKirkland/FTP-Deploy-Action@v4.3.5` configurata in `deploy.yml` carica **solo i file modificati** rispetto a quelli già su Aruba (confronto per dimensione + timestamp). Conseguenza: se Hugo rigenera un HTML ma il contenuto rispetto al file su Aruba è bytewise identico (raro ma possibile), il file non viene ricaricato.
+⚠️ **Problema noto del deploy FTP** (`dangerous-clean-slate: false`): l'azione `SamKirkland/FTP-Deploy-Action` v4.4.0 (pinnata a commit SHA in `deploy.yml` dal 15/08/2026 — hardening supply-chain: le action di terze parti che maneggiano segreti sono puntate allo SHA immutabile, non al tag mutabile; per aggiornarle si cambia SHA + commento versione) configurata in `deploy.yml` carica **solo i file modificati** rispetto a quelli già su Aruba (confronto per dimensione + timestamp). Conseguenza: se Hugo rigenera un HTML ma il contenuto rispetto al file su Aruba è bytewise identico (raro ma possibile), il file non viene ricaricato.
 
 **Caso patologico più frequente — refactoring del chrome** (`partials/navbar.html`, `partials/footer.html`, `partials/utility-bar.html`, `partials/slim-header.html`, `_default/baseof.html`): tutti gli HTML del sito hanno il chrome cambiato → Hugo li rigenera → FTP dovrebbe caricarli tutti. **Ma** se in quel periodo ci sono **deploy falliti consecutivi** (build error), gli HTML restano stantii su Aruba per ore o giorni. Quando il deploy si sblocca, alcuni file potrebbero non essere ri-caricati (timestamp identico, contenuto leggermente diverso → FTP li ignora).
 

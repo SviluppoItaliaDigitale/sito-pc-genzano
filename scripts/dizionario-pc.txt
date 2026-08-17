@@ -794,3 +794,19 @@ termocamera
 svettatore
 riaccensioni
 riaccensione
+porzionare
+executive
+
+# Falsi positivi verificati — routine cura schede 17/08/2026
+macrosismica
+conv
+kwe
+lænd
+sla
+tju
+væk
+intrappolamento
+dyne
+agentivo
+buddy
+linkate

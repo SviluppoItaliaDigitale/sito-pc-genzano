@@ -1,6 +1,6 @@
 ---
 title: "Controesodo: viabilità e sicurezza nei rientri dalle vacanze"
-date: 2026-08-17
+date: 2026-08-17T00:01:00+02:00
 description: "Dopo il Ferragosto iniziano i primi rientri. Consigli pratici per affrontare viaggi lunghi in sicurezza."
 badge: "Prevenzione"
 priorita: "normale"

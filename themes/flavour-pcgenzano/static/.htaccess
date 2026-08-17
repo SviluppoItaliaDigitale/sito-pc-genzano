@@ -116,12 +116,29 @@ RedirectMatch 410 ^/areefiltrate\.html$
   # Aggiunto 2026-05-06 dopo audit security ChatGPT.
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
 
-  # Content-Security-Policy in MODALITÀ REPORT-ONLY (10 maggio 2026):
-  # il browser valuta la policy MA non blocca niente — registra solo
-  # le violazioni nella console DevTools. Periodo di test: 1-2 settimane.
-  # Se non emergono regressioni reali sui widget click-to-load (Windy,
-  # INGV) né sulla mappa cartografia (OpenStreetMap), si converte
-  # l'header a Content-Security-Policy attivo (senza -Report-Only).
+  # Licenza machine-readable a livello HTTP (15 agosto 2026): completa il
+  # JSON-LD di jsonld-copyright.html coprendo anche le risorse non-HTML
+  # (immagini WebP, PDF, download) servite da Aruba. I pittogrammi ARASAAC
+  # hanno licenza propria CC BY-NC-SA 4.0 (vedi /attribuzioni-pittogrammi/):
+  # header dedicato su quella cartella, mai CC BY.
+  SetEnvIf Request_URI "^/pittogrammi/arasaac/" ARASAAC_ASSET
+  Header always set Link "<https://creativecommons.org/licenses/by/4.0/>; rel=\"license\"" env=!ARASAAC_ASSET
+  Header always set Link "<https://creativecommons.org/licenses/by-nc-sa/4.0/>; rel=\"license\"" env=ARASAAC_ASSET
+
+  # TDM Reservation Protocol (W3C TDMRep / Direttiva UE 2019/790 art. 4):
+  # DICHIARAZIONE DI POLICY, non divieto — coerente con la scelta open del
+  # sito (CC BY 4.0 + llms.txt): il text-and-data-mining è consentito nei
+  # termini della licenza dichiarata in /note-legali/ (attribuzione
+  # obbligatoria). Speculare a /.well-known/tdmrep.json.
+  Header always set TDM-Reservation "1"
+  Header always set TDM-Policy "https://www.protezionecivilegenzano.it/note-legali/"
+
+  # Content-Security-Policy ENFORCING (promossa il 15 agosto 2026, dopo
+  # 3 mesi di Report-Only dal 10 maggio senza regressioni segnalate sui
+  # widget click-to-load, sulla mappa cartografia e sul cruscotto).
+  # Come da nota di promozione: reintrodotta "upgrade-insecure-requests"
+  # (in Report-Only il browser la ignorava e sporcava la console).
+  # Verifica post-deploy: smoke test sul cruscotto e sulle pagine widget.
   #
   # Direttive:
   # - default-src 'self': fallback per tutte le risorse non specificate
@@ -129,7 +146,9 @@ RedirectMatch 410 ^/areefiltrate\.html$
   #   Bootstrap Italia + Leaflet. Migrazione a nonces in futuro è
   #   possibile ma richiede modifiche a tutti i template
   # - style-src 'unsafe-inline': inline styles dagli shortcode + BS-Italia
-  # - cdn.jsdelivr.net: Bootstrap Icons CSS
+  # - cdn.jsdelivr.net RIMOSSO (15/08/2026): Bootstrap Icons è vendorizzato
+  #   dal repo e nessun file carica più nulla da CDN esterni (verifica
+  #   meccanica su template + static). script/style/font ora solo 'self'.
   # - img-src https: data: blob:: foto inline da Wikipedia/NASA/ecc. +
   #   data URI per loghi inline + blob URI per upload utente
   # - connect-src raw.githubusercontent.com: fetch CSV DPC opendatasicilia
@@ -138,14 +157,9 @@ RedirectMatch 410 ^/areefiltrate\.html$
   # - form-action 'self': solo form interni (ricerca, contatti)
   # - base-uri 'self': anti-XSS via tag <base>
   # - object-src 'none': niente Flash/plugin obsoleti
-  # NOTA (10/06/2026): rimossa "upgrade-insecure-requests" dal Report-Only.
-  # In modalità report-only il browser la IGNORA e logga un errore in
-  # console su OGNI pagina (Lighthouse Best Practices 89/100 site-wide).
-  # Il sito è già full-HTTPS (301 + HSTS, zero mixed content): la direttiva
-  # va reintrodotta SOLO quando la policy sarà promossa a enforcing
-  # (Content-Security-Policy senza -Report-Only), dopo uno smoke test
-  # Playwright del cruscotto e dei widget click-to-load.
-  Header always set Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; img-src 'self' data: blob: https:; font-src 'self' data: https://cdn.jsdelivr.net; connect-src 'self' https://raw.githubusercontent.com https://api.github.com https://*.openstreetmap.org https://*.tile.openstreetmap.org https://webservices.ingv.it https://*.ingv.it https://radar-api.protezionecivile.it https://*.protezionecivile.it https://api.open-meteo.com https://marine-api.open-meteo.com https://air-quality-api.open-meteo.com https://archive-api.open-meteo.com https://*.arpalazio.gov.it https://eccharts.ecmwf.int https://rapidmapping.emergency.copernicus.eu https://maps.mistralportal.it https://meteohub.agenziaitaliameteo.it https://gc.zgo.at https://apicuollo.goatcounter.com; frame-src https://embed.windy.com https://www.windy.com https://*.ingv.it https://terremoti.ingv.it https://www.youtube.com https://www.youtube-nocookie.com https://*.protezionecivile.gov.it https://*.regione.lazio.it https://mappe.protezionecivile.gov.it; frame-ancestors 'self'; form-action 'self'; base-uri 'self'; object-src 'none'"
+  # - upgrade-insecure-requests: riscrive in https eventuali sotto-risorse
+  #   http residue (il sito è già full-HTTPS: 301 + HSTS)
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' data:; connect-src 'self' https://raw.githubusercontent.com https://api.github.com https://*.openstreetmap.org https://*.tile.openstreetmap.org https://webservices.ingv.it https://*.ingv.it https://radar-api.protezionecivile.it https://*.protezionecivile.it https://api.open-meteo.com https://marine-api.open-meteo.com https://air-quality-api.open-meteo.com https://archive-api.open-meteo.com https://*.arpalazio.gov.it https://eccharts.ecmwf.int https://rapidmapping.emergency.copernicus.eu https://maps.mistralportal.it https://meteohub.agenziaitaliameteo.it https://gc.zgo.at https://apicuollo.goatcounter.com; frame-src https://embed.windy.com https://www.windy.com https://*.ingv.it https://terremoti.ingv.it https://www.youtube.com https://www.youtube-nocookie.com https://*.protezionecivile.gov.it https://*.regione.lazio.it https://mappe.protezionecivile.gov.it; frame-ancestors 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests"
 </IfModule>
 
 # Cache — richiesta utente (06/06/2026): "ogni modifica online subito".

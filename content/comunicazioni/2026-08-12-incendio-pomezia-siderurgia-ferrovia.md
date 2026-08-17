@@ -1,14 +1,14 @@
 ---
 title: "Incendio lungo la ferrovia a Pomezia: quattro ore dei volontari di Genzano"
 date: 2026-08-12T00:04:00+02:00
-description: "Il 12 agosto 2026 la SOUP ha attivato il Gruppo su un incendio di sterpaglie in via della Siderurgia, a bordo dei binari. Quattro ore di lavoro."
+description: "Il 12 agosto 2026 due attivazioni della SOUP: incendio a bordo dei binari a Pomezia e bonifica di un canneto alla Falcognana. Quasi sei ore di lavoro."
 badge: "Attività"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-08-12-incendio-pomezia-siderurgia-ferrovia.webp"
 image_alt: "Cover dell'articolo: Incendio lungo la ferrovia a Pomezia: quattro ore dei volontari di Genzano"
 scadenza: ""
-area: "Pomezia (RM)"
+area: "Pomezia (RM) e Roma"
 allegati: []
 draft: false
 lis_section: "rischio-incendio"
@@ -16,16 +16,17 @@ tts: true
 social_citazione: "Un incendio a bordo binario non è mai solo un incendio: ferma i treni, e ogni ora di stop è un problema per migliaia di persone."
 social_punti:
   - "12 agosto 2026: incendio di sterpaglie in via della Siderurgia, a Pomezia, lungo la linea ferroviaria."
-  - "Il Gruppo di Genzano attivato dalla SOUP: partenza alle 14.48, rientro dopo le 18.30. Quasi quattro ore di lavoro."
+  - "Il Gruppo di Genzano attivato dalla SOUP nel primo pomeriggio e rientrato in serata: quasi quattro ore di lavoro."
   - "In campo autobotte e pickup antincendio, insieme a Vigili del Fuoco, Polizia Locale, Carabinieri, Polizia e ai gruppi di Ariccia e Albano Laziale."
   - "Nelle stesse ore la circolazione dei treni tra Pomezia e Campoleone è rimasta sospesa."
+  - "In serata una seconda chiamata per la bonifica di un canneto in via della Falcognana, a Roma: quasi sei ore di lavoro in tutto."
 ---
 
-Nel pomeriggio di **mercoledì 12 agosto 2026** un incendio di sterpaglie si è sviluppato in **via della Siderurgia, a Pomezia**, lungo la fascia di vegetazione che costeggia la linea ferroviaria. Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** è stato attivato dalla **SOUP**, la sala operativa regionale antincendio, e ha lavorato sul posto per **quasi quattro ore**.
+Nel pomeriggio di **mercoledì 12 agosto 2026** un incendio di sterpaglie si è sviluppato in **via della Siderurgia, a Pomezia**, lungo la fascia di vegetazione che costeggia la linea ferroviaria. Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** è stato attivato dalla **SOUP**, la sala operativa regionale antincendio, e ha lavorato sul posto per **quasi quattro ore**. In serata è arrivata una seconda chiamata, per la bonifica di un canneto in via della Falcognana, a Roma.
 
-## L'intervento, ora per ora
+## Come si è svolto l'intervento
 
-La squadra parte dalla sede **alle 14.48** e arriva sul posto **alle 15.04**. Da lì il lavoro prosegue senza interruzioni: i volontari sono **liberi in rientro alle 18.34** e l'intervento si chiude **alle 18.46**. In tutto **tre ore e 58 minuti**.
+La squadra parte dalla sede **poco prima delle 15** e arriva sul posto pochi minuti dopo. Da lì il lavoro prosegue senza interruzioni: i volontari sono **liberi in rientro dopo le 18.30** e l'intervento si chiude **verso le 19**. In tutto **quasi quattro ore**.
 
 Sul posto il Gruppo ha portato l'**autobotte antincendio** e un **pickup con modulo antincendio**, con una squadra di **sei volontari** impegnata sul fronte e nella bonifica.
 
@@ -47,9 +48,9 @@ Il fuoco ha percorso la vegetazione a ridosso dell'infrastruttura ferroviaria: e
 
 Un incendio in quella posizione non minaccia solo la vegetazione. Il fumo riduce la visibilità dei macchinisti, il calore può danneggiare cavi e apparati di segnalamento e le squadre non possono operare in sicurezza vicino ai binari finché i treni circolano.
 
-Per questo la circolazione viene fermata. Secondo gli aggiornamenti di **RFI** ripresi dalla stampa, alle **14.10** sulla linea **Roma-Formia** erano già segnalati rallentamenti, ritardi fino a 30 minuti, limitazioni e cancellazioni.
+Per questo la circolazione viene fermata. Secondo gli aggiornamenti di **RFI** ripresi dalla stampa, già nel **primo pomeriggio** sulla linea **Roma-Formia** si registravano rallentamenti, ritardi fino a mezz'ora, limitazioni e cancellazioni.
 
-Poco dopo le **15** la circolazione è stata **sospesa fra Pomezia e Campoleone**. Alle 16.45 i treni erano ancora fermi. Per i viaggiatori è stato attivato un servizio di **bus sostitutivi**.
+Poco dopo le **15** la circolazione è stata **sospesa fra Pomezia e Campoleone**, e a metà pomeriggio i treni erano ancora fermi. Per i viaggiatori è stato attivato un servizio di **bus sostitutivi**.
 
 ## Chi ha lavorato insieme a noi
 
@@ -67,6 +68,16 @@ I **droni** non servono a spegnere: servono a **vedere**. Dall'alto si individua
 Delle quasi quattro ore di intervento, la fase più lunga non è stata lo spegnimento delle fiamme, ma la **bonifica**: bagnare a fondo il terreno percorso dal fuoco, rivoltare la lettiera, spegnere le braci nei ceppi e alla base dei tronchi.
 
 È il lavoro meno visibile e il più necessario. Una brace lasciata sotto la cenere, con il vento del pomeriggio, può far ripartire il fronte a distanza di ore, in un punto dove non c'è più nessuno a sorvegliare. Un incendio è chiuso quando il terreno è freddo, non quando la fiamma si abbassa.
+
+## La stessa sera, una seconda chiamata
+
+L'intervento di Pomezia si chiude verso le 19. Pochi minuti dopo arriva una **seconda attivazione della SOUP**: la squadra riparte con l'autobotte e il pickup verso **via della Falcognana**, a Roma, dove il fuoco ha interessato un **canneto**. I volontari arrivano sul posto verso le 19.45, lavorano alla bonifica e sono liberi in rientro poco dopo le 20. L'intervento si chiude **verso le 20.30**: **poco meno di due ore**.
+
+La bonifica di un canneto è un lavoro paziente. Le canne bruciano in fretta e in superficie il fronte sembra spento, ma il calore resta a lungo nella lettiera fitta e alla base dei fusti. Basta il vento della sera perché una brace rimasta sotto rimetta in piedi la fiamma. Per questo si bagna a fondo il terreno e non ci si ferma alla vegetazione in vista.
+
+È la stessa strada dove, il 9 agosto, [il fuoco aveva percorso dieci ettari](/comunicazioni/2026-08-10-incendi-pomezia-falcognana-agosto-2026/).
+
+Sommando le due uscite, la giornata dei volontari si è chiusa con **quasi sei ore** di lavoro.
 
 ## Cosa può fare chi vede un incendio
 
