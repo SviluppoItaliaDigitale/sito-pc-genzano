@@ -21,13 +21,13 @@ social_punti:
   - "La campagna regionale schiera oltre 700 mezzi e 7 elicotteri."
 ---
 
-Da **giovedì 13** a **domenica 16 agosto 2026** una squadra del Gruppo — nove volontari alternatisi nei quattro giorni, con il **Fiat Doblò** e il **pickup EVO Cross 4** — ha prestato **attività di assistenza presso il campo base di Fondi**, in provincia di Latina, uno dei punti nevralgici della campagna antincendio boschivo della Regione Lazio.
+Da **giovedì 13** a **domenica 16 agosto 2026** una squadra del Gruppo — nove volontari alternatisi nei quattro giorni, con il **Fiat Doblò** e il **pickup EVO Cross 4** — ha prestato **attività di assistenza presso il campo base di Fondi**, in provincia di Latina. Il campo è uno dei punti nevralgici della campagna antincendio boschivo della Regione Lazio.
 
 ## Cos'è il campo di Fondi
 
-Nell'ambito della campagna AIB 2026 la Regione Lazio ha riorganizzato a **Fondi** un campo base attivo **dal 5 luglio al 18 agosto**, cuore del cosiddetto **gemellaggio**: l'accoglienza di colonne di volontari di protezione civile provenienti da altre regioni — Emilia-Romagna, Piemonte, Lombardia — e da organizzazioni nazionali, che si alternano per rinforzare il dispositivo antincendio del Lazio meridionale nelle settimane di massimo rischio.
+Nell'ambito della campagna AIB 2026 la Regione Lazio ha riorganizzato a **Fondi** un campo base attivo **dal 5 luglio al 18 agosto**, cuore del cosiddetto **gemellaggio**. Qui arrivano colonne di volontari di protezione civile provenienti da altre regioni — Emilia-Romagna, Piemonte, Lombardia — e da organizzazioni nazionali. Le squadre si alternano per rinforzare il dispositivo antincendio del Lazio meridionale nelle settimane di massimo rischio.
 
-I numeri dell'edizione 2026 danno la misura dell'operazione: **circa 1.981 volontari** coinvolti complessivamente, di cui **circa 1.800 provenienti da altre regioni e organizzazioni**, dentro una campagna regionale che schiera **oltre 700 mezzi dedicati** e **7 elicotteri** ([Regione Lazio](https://protezionecivile.regione.lazio.it/), [NewTuscia](https://www.newtuscia.it/2026/07/27/campagna-antincendio-boschivo-2026-della-regione-lazio/)).
+I numeri dell'edizione 2026 danno la misura dell'operazione: **circa 1.981 volontari** coinvolti complessivamente, di cui **circa 1.800 provenienti da altre regioni e organizzazioni**. La campagna regionale schiera **oltre 700 mezzi dedicati** e **7 elicotteri** ([Regione Lazio](https://protezionecivile.regione.lazio.it/), [NewTuscia](https://www.newtuscia.it/2026/07/27/campagna-antincendio-boschivo-2026-della-regione-lazio/)).
 
 ## Cosa significa "assistenza al campo"
 
