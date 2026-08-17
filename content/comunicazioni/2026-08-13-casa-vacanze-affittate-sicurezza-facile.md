@@ -1,6 +1,6 @@
 ---
 title: "Casa in affitto per le vacanze: cosa guardare quando arrivi"
-date: 2026-08-13
+date: 2026-08-13T00:01:00+02:00
 description: "Sei in una casa in affitto? Controlla subito 5 cose. Così sei più al sicuro."
 badge: "Prevenzione"
 priorita: "normale"
