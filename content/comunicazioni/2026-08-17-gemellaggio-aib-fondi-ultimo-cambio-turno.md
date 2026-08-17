@@ -59,6 +59,7 @@ I comportamenti da tenere prima, durante e dopo un incendio sono nella pagina [R
 
 **Sul nostro sito:**
 
+- [Quattro giorni al campo base di Fondi](/comunicazioni/2026-08-13-campo-fondi-gemellaggio-aib/) — la panoramica del turno del Gruppo e i numeri del gemellaggio.
 - [Gemellaggio AIB di Fondi: il turno alla mensa](/comunicazioni/2026-08-14-gemellaggio-aib-fondi-turno-mensa-ferragosto/) — il subentro del 14 agosto e i numeri del presidio.
 - [Ferragosto alla mensa di Fondi](/comunicazioni/2026-08-16-ferragosto-mensa-fondi-pranzo-campo/) — il pranzo del 15 agosto con i cuochi dell'emergenza.
 - [Come si organizza una cucina da campo](/comunicazioni/2026-01-20-cucina-campo-zone-protocollo-operativo/) — zone, temperature e protocollo operativo.

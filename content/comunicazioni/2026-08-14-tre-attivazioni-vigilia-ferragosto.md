@@ -1,6 +1,6 @@
 ---
 title: "Tre attivazioni alla vigilia di Ferragosto: Porta Medaglia, Pomezia e Ardea"
-date: 2026-08-14T00:03:00+02:00
+date: 2026-08-14T00:05:00+02:00
 description: "Il 14 agosto 2026 le squadre del Gruppo sono intervenute su tre incendi di sterpaglie: via di Porta Medaglia, la ferrovia di Pomezia e Ardea."
 badge: "Attività"
 priorita: "normale"

@@ -28,6 +28,15 @@ DATE_RE = re.compile(
     re.MULTILINE,
 )
 
+# Match `date:` COMPLETA di orario (caso B già applicato). Serve a rilevare le
+# COLLISIONI: due sessioni parallele possono assegnare lo stesso T00:0X allo
+# stesso giorno (successo il 17/08/2026 con due articoli del 16/08 entrambi a
+# T00:02). Un giorno con timestamp duplicati va rinumerato per intero.
+DATETIME_RE = re.compile(
+    r'^(date:\s*)["\']?(\d{4}-\d{2}-\d{2})T(\d{2}:\d{2}:\d{2})[+-]\d{2}:\d{2}["\']?\s*$',
+    re.MULTILINE,
+)
+
 
 def get_first_commit_unix(file_path: Path) -> int:
     """Unix timestamp del primo commit che ha aggiunto il file. 0 se untracked."""
@@ -64,6 +73,7 @@ def slot_orari(n: int) -> list[str]:
 def process():
     md_files = sorted(CONTENT.glob("*.md"))
     by_date: dict[str, list[Path]] = defaultdict(list)
+    by_datetime: dict[str, list[tuple[Path, str]]] = defaultdict(list)
     for md in md_files:
         text = md.read_text(encoding="utf-8")
         # Escludi le versioni "italiano semplice" (build.list: never): sono
@@ -76,9 +86,25 @@ def process():
         m = DATE_RE.search(text)
         if m:
             by_date[m.group(2)].append(md)
+            continue
+        # date già con orario: partecipano solo al rilevamento collisioni
+        mt = DATETIME_RE.search(text)
+        if mt:
+            by_datetime[mt.group(2)].append((md, mt.group(3)))
 
-    # solo le date con 2+ articoli
+    # Da processare: (a) giorni con 2+ articoli di cui almeno uno solo-data
+    #                (comportamento storico);
+    #                (b) giorni con orari GIÀ assegnati ma DUPLICATI
+    #                (collisione fra sessioni parallele) → rinumerati per intero.
     multi_day = {d: files for d, files in by_date.items() if len(files) >= 2}
+    for d, timed in by_datetime.items():
+        orari_visti = [t for _, t in timed]
+        giorno_files = [f for f, _ in timed] + by_date.get(d, [])
+        if len(set(orari_visti)) < len(orari_visti) and len(giorno_files) >= 2:
+            multi_day[d] = giorno_files
+        elif by_date.get(d) and len(giorno_files) >= 2:
+            # giorno misto (alcuni con orario, alcuni senza): rinumera tutto
+            multi_day[d] = giorno_files
 
     total_articles = sum(len(f) for f in multi_day.values())
     print(f"Giornate con 2+ articoli: {len(multi_day)}")
@@ -102,6 +128,8 @@ def process():
             text = f.read_text(encoding="utf-8")
             new_value = f"{date_str}T{orario}+02:00"
             new_text = DATE_RE.sub(rf'\g<1>{new_value}', text, count=1)
+            if new_text == text:  # il file aveva già un orario: riassegna
+                new_text = DATETIME_RE.sub(rf'\g<1>{new_value}', text, count=1)
             if new_text != text:
                 f.write_text(new_text, encoding="utf-8")
                 files_changed += 1

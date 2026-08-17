@@ -65,6 +65,7 @@ Per il cittadino la regola non cambia, in vacanza come a casa:
 **Sul nostro sito:**
 
 - [Gemellaggio AIB di Fondi: il turno alla mensa](/comunicazioni/2026-08-14-gemellaggio-aib-fondi-turno-mensa-ferragosto/) — il cambio di consegne e i numeri del presidio.
+- [Quattro giorni al campo base di Fondi](/comunicazioni/2026-08-13-campo-fondi-gemellaggio-aib/) — la panoramica del turno del Gruppo e i numeri del gemellaggio.
 - [Come si organizza una cucina da campo](/comunicazioni/2026-01-20-cucina-campo-zone-protocollo-operativo/) — zone, temperature e protocollo operativo.
 - [Campagna AIB 2026, il punto della Regione Lazio](/comunicazioni/2026-07-28-campagna-aib-2026-conferenza-stampa-punto-situazione/) — il dispositivo regionale.
 - [Rischio incendio](/rischi-prevenzione/rischio-incendio/) — che cosa fare prima, durante e dopo.
