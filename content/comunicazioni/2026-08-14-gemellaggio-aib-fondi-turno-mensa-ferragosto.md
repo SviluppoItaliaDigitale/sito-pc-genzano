@@ -74,6 +74,7 @@ Le regole di comportamento per l'estate sono raccolte nella pagina [Rischio ince
 
 **Sul nostro sito:**
 
+- [Quattro giorni al campo base di Fondi](/comunicazioni/2026-08-13-campo-fondi-gemellaggio-aib/) — la panoramica del turno del Gruppo e i numeri del gemellaggio.
 - [Campagna AIB 2026, il punto della Regione Lazio](/comunicazioni/2026-07-28-campagna-aib-2026-conferenza-stampa-punto-situazione/) — il dispositivo regionale e i dati della campagna.
 - [Campagna antincendio boschivo 2026](/comunicazioni/2026-06-08-campagna-antincendio-boschivo-2026/) — l'avvio della stagione e la Zona AIB 9 dei Castelli Romani.
 - [Come si organizza una cucina da campo](/comunicazioni/2026-01-20-cucina-campo-zone-protocollo-operativo/) — zone, temperature e protocollo operativo.

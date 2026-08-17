@@ -1,6 +1,6 @@
 ---
 title: "Cinque interventi in un giorno: la domenica di fuoco del 16 agosto"
-date: 2026-08-16T00:02:00+02:00
+date: 2026-08-16T00:05:00+02:00
 description: "Il 16 agosto 2026 le squadre del Gruppo hanno lavorato quasi dieci ore su cinque incendi: Ariccia, Falcognana, Genzano, Pomezia e il Tuscolo."
 badge: "Attività"
 priorita: "normale"
