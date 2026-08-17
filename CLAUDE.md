@@ -205,6 +205,7 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 
 **Meccanismi automatici (fanno parte dell'opera viva):**
 - **Fonte unica**: reader online e PDF nascono dallo stesso Markdown → modificando un capitolo si aggiornano entrambi.
+- **Data "aggiornato il" automatica (dal 17/08/2026)**: la data di ultima revisione mostrata su `/manuale/` e sul frontespizio del PDF è il **`.Lastmod` git più recente tra frontespizio e capitoli**, calcolato a build dal partial `manuale-ultima-revisione.html` — niente campo manuale da aggiornare (il vecchio `dataUltimaRevisione` in `_index.md` era rimasto fermo al 10/06 con capitoli aggiornati fino al 16/08 ed è stato rimosso). Richiede checkout `fetch-depth: 0` (già in `deploy.yml` e `genera-manuale-pdf.yml`).
 - **Appendici generate** dai dati del sito (glossario, normativa, ISO, numeri utili, eventi) → si riallineano da sole al build; non si toccano a mano.
 - **PDF**: rigenera con `~/.manuale-venv/bin/python scripts/genera-manuale-pdf.py` dopo ogni modifica ai capitoli; il workflow `genera-manuale-pdf.yml` lo rigenera in automatico a ogni push su `content/manuale/**` o sui layout/CSS del manuale.
 - **Watcher**: `normativa-watcher.yml` va esteso a `content/manuale/` perché apra una issue quando una norma citata nel manuale cambia (flag per la revisione umana, **non** riscrittura automatica → NO INVENZIONI).

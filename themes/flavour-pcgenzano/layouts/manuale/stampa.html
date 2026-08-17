@@ -21,7 +21,7 @@
   <h1 class="print-title-main">{{ $front.Title }}</h1>
   {{ with $front.Params.sottotitolo }}<p class="print-title-sub">{{ . }}</p>{{ end }}
   <div class="print-title-rule"></div>
-  <p class="print-title-ed">{{ $front.Params.edizione | default "Edizione 2026" }}{{ with $front.Params.dataUltimaRevisione }} · aggiornato al {{ (time .) | time.Format ":date_long" }}{{ end }}</p>
+  <p class="print-title-ed">{{ $front.Params.edizione | default "Edizione 2026" }} · aggiornato al {{ (partial "manuale-ultima-revisione.html" $front) | time.Format ":date_long" }}</p>
 </section>
 
 {{/* ── Colophon / avvertenza ── */}}

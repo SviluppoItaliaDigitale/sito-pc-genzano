@@ -1,0 +1,11 @@
+{{- /* Ritorna la data di ultima revisione del Manuale: il .Lastmod più recente
+       (da git, enableGitInfo=true + lastmod=[":git",...]) tra il frontespizio
+       e tutti i capitoli della sezione manuale. Sostituisce il campo manuale
+       dataUltimaRevisione, rimasto stantio (fermo al 10/06/2026 con capitoli
+       aggiornati fino al 16/08/2026). Contesto atteso: la pagina /manuale/.
+       Richiede checkout con history completa in CI (fetch-depth: 0). */ -}}
+{{- $ultima := .Lastmod -}}
+{{- range where .Site.RegularPages "Section" "manuale" -}}
+  {{- if .Lastmod.After $ultima -}}{{- $ultima = .Lastmod -}}{{- end -}}
+{{- end -}}
+{{- return $ultima -}}
