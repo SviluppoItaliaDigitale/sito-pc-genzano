@@ -7,7 +7,7 @@ sitemap:
   changefreq: monthly
 toc: true
 tts: true
-dataUltimaRevisione: "2026-08-10"
+dataUltimaRevisione: "2026-08-17"
 ---
 
 Le sigle della protezione civile possono sembrare difficili. Questo glossario le spiega in modo semplice, con esempi collegati al territorio quando utile.
@@ -516,6 +516,9 @@ Piano Educativo Individualizzato. Documento previsto dal D.Lgs. 66/2017 per gli 
 ### PFA {#pfa}
 Psychological First Aid (Primo Soccorso Psicologico). Protocollo internazionale, raccomandato dall'OMS, di supporto alle persone colpite da un'emergenza: ascolto, protezione, bisogni pratici. Non è psicoterapia e non richiede di essere psicologi.
 
+### PFAS {#pfas}
+Sostanze perfluoroalchiliche, chiamate anche «inquinanti eterni» perché non si degradano e si accumulano in acqua, suolo e organismi viventi. Erano usate nelle schiume antincendio (AFFF) per la loro efficacia contro gli incendi di idrocarburi; il regolamento (UE) 2025/1988 ne vieta progressivamente l'uso in questi prodotti.
+
 ### PGRA {#pgra}
 Piano di Gestione del Rischio di Alluvioni. Recepisce la Direttiva europea Alluvioni (2007/60/CE) tramite il D.Lgs. 49/2010 e aggiorna ogni sei anni le mappe e le misure contro le alluvioni.
 *Approfondisci: [Il rischio idrogeologico](/conoscere/catalogo-dei-rischi/rischio-idrogeologico/).*
@@ -625,6 +628,9 @@ Servizio Nazionale della Protezione Civile. L'insieme di Stato, Regioni, Comuni,
 ### Soggetto Attuatore {#soggetto-attuatore}
 Figura nominata nelle ordinanze di emergenza per realizzare interventi specifici (es. la ricostruzione post-sisma). Risponde al Commissario.
 *Approfondisci: [Dopo l'emergenza](/conoscere/le-quattro-fasi/dopo-l-emergenza/).*
+
+### SOS {#sos}
+Segnale internazionale di richiesta di soccorso, nato in radiotelegrafia perché facile da trasmettere e riconoscere in codice Morse (tre punti, tre linee, tre punti). È diventato il simbolo universale dell'emergenza. In Italia il numero da chiamare resta sempre il **112**.
 
 ### SOUP {#soup}
 Sala Operativa Unificata Permanente. Sala regionale antincendio boschivo, attiva 24 ore su 24 nei mesi a rischio: coordina avvistamenti, mezzi aerei e squadre AIB.
