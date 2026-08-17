@@ -10,7 +10,7 @@ Questo kit è pensato per gli insegnanti della **scuola primaria** che desideran
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e sono adatti a bambini dai 6 agli 11 anni, con attività differenziate per le classi iniziali (I-II) e per le classi finali (III-IV-V).
 
-> 📦 **Scarica il pacchetto offline** — [`kit-scuola-primaria.zip`](/formazione/pacchetti/kit-scuola-primaria.zip) (~448 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-primaria.zip`](/formazione/pacchetti/kit-scuola-primaria.zip) (~455 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
 > ⚠️ **Avvertenza pedagogica — proporzionare l'argomento all'età.** Le attività di questo kit affrontano rischi reali (terremoto, alluvione, incendio, blackout, eventi storici) ma **non devono generare paura o ansia**. Il docente è chiamato a presentare i fenomeni in modo **concreto, rassicurante, agentivo**: l'attenzione è sui *comportamenti corretti che il bambino può fare* (preparare lo zaino, conoscere il punto di raccolta, chiamare il 112), non sull'enfasi del danno. I casi studio delle maxi-emergenze italiane sono adattati per la fascia 9-11 anni con focus su lieto fine, ricostruzione, solidarietà — **mai con immagini di vittime o cronaca cruda**. Se nella classe ci sono bambini reduci da eventi traumatici familiari (lutti, evacuazioni, terremoti recenti), valutare con cautela e raccordarsi con il dirigente scolastico, lo psicologo scolastico e con la pagina [Psicologia dell'emergenza](/formazione/psicologia-emergenza/).
 
@@ -231,6 +231,8 @@ Portate in classe un esempio di bollettino di allerta meteo (scaricabile dal sit
 - Per quale rischio? (pioggia, vento, neve...)
 - Quanto dura?
 
+> 👉 **Scheda stampabile dedicata**: [Alluvioni e frane: cosa faccio — Primaria](/formazione/schede-stampabili/rischio-idrogeologico-primaria/) — riepilogo dei comportamenti in casa, fuori e in auto, con quiz a scelta multipla, vero/falso e soluzioni capovolte per il docente.
+
 ---
 
 ## Modulo 4 — L'incendio boschivo
@@ -261,6 +263,8 @@ Il territorio dei Castelli Romani è ricco di vegetazione e comprende un Parco R
 3. **Allontanati** dalla zona in direzione opposta al vento e al fumo
 4. **Non provare** a spegnere il fuoco da solo
 5. Se il fumo è denso, copriti naso e bocca con un panno umido e stai il più basso possibile
+
+> 👉 **Scheda stampabile dedicata**: [Incendio boschivo: cosa faccio — Primaria](/formazione/schede-stampabili/incendio-boschivo-primaria/) — riepilogo dei comportamenti in caso di incendio boschivo, con quiz a scelta multipla, vero/falso e soluzioni capovolte per il docente.
 
 ### Il triangolo del fuoco (classi III-IV-V)
 
@@ -499,6 +503,8 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 - 👉 [**Blackout: la casa senza corrente**](/formazione/schede-stampabili/blackout-primaria/) — torcia pronta nel kit, frigo chiuso, niente candele, ascensore da evitare, radio a pile per le notizie. *(ed. civica, tecnologia)*
 - 👉 [**Vento forte: cosa faccio**](/formazione/schede-stampabili/vento-forte-primaria/) — il rischio più frequente ai Castelli Romani: lontano da alberi e impalcature, oggetti in sicurezza, dopo il vento segnalare i pericoli ai grandi. *(scienze, ed. civica)*
 - 👉 [**Temporali intensi: cosa faccio**](/formazione/schede-stampabili/temporali-intensi-primaria/) — al riparo dentro un edificio, lontano da alberi e fili elettrici, niente telefono con filo durante i fulmini. Con quiz, vero/falso e soluzioni capovolte. *(scienze, ed. civica)*
+- 👉 [**Alluvioni e frane: cosa faccio**](/formazione/schede-stampabili/rischio-idrogeologico-primaria/) — cosa fare in caso di alluvione o frana ai Castelli Romani: piani alti, mai in cantina, mai attraversare strade allagate. Con quiz, vero/falso e soluzioni capovolte. *(scienze, geografia, ed. civica)*
+- 👉 [**Incendio boschivo: cosa faccio**](/formazione/schede-stampabili/incendio-boschivo-primaria/) — chiamare il 112, non accendere fuochi nel bosco, allontanarsi in direzione opposta al fumo. Con quiz, vero/falso e soluzioni capovolte. *(scienze, geografia, ed. civica)*
 
 **Schede di letto-scrittura** a tema Protezione Civile per le classi 1ª-2ª (6-7 anni):
 
