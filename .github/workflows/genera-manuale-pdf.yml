@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
         with:
           # History completa: la data "aggiornato al" del frontespizio è il
           # Lastmod git dei capitoli (partial manuale-ultima-revisione.html)

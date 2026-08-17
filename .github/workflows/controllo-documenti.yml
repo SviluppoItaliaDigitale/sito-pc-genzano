@@ -33,12 +33,12 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7
         with:
           fetch-depth: 1
 
       - name: "🐍 Setup Python"
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.11"
 
@@ -62,7 +62,7 @@ jobs:
 
       - name: "🚨 Apri issue se ci sono problemi bloccanti"
         if: steps.controllo.outputs.exit_code != '0'
-        uses: peter-evans/create-issue-from-file@e8ef132d6df98ed982188e460ebb3b5d4ef3a9cd # v5
+        uses: peter-evans/create-issue-from-file@fca9117c27cdc29c6c4db3b86c48e4115a786710 # v6.0.0
         with:
           title: "[Automatico] Controllo settimanale documenti — problemi rilevati"
           content-filepath: ./controllo-documenti-report.md
