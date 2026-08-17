@@ -3,7 +3,6 @@ title: "Manuale di Protezione Civile"
 sottotitolo: "Fondamenti, ordinamento e gestione delle emergenze. Con il commentario, articolo per articolo, del Codice della protezione civile."
 description: "Manuale di protezione civile a impianto accademico: teoria del rischio, ordinamento del Servizio nazionale, gestione delle emergenze, commentario dei testi unici. Online e in PDF."
 edizione: "Edizione 2026 · opera in continuo aggiornamento"
-dataUltimaRevisione: "2026-06-10"
 tts: true
 indice: false
 ---
