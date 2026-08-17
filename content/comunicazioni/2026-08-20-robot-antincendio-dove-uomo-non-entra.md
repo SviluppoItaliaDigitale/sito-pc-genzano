@@ -21,7 +21,7 @@ social_punti:
   - "Non sostituiscono i vigili del fuoco: estendono ciò che possono fare."
 ---
 
-La sera del 15 aprile 2019, mentre la guglia di **Notre-Dame** crollava tra le fiamme, i pompieri di Parigi presero una decisione: dentro la navata, sotto una volta che poteva cedere da un momento all'altro, un essere umano non poteva più stare. Al suo posto entrò **Colossus**, un robot cingolato radiocomandato, che per ore raffreddò le pareti dall'interno con il suo idrante, contribuendo a salvare le torri. È l'immagine che ha fatto conoscere al mondo una categoria di macchine di cui si parla ancora poco: i **robot antincendio**.
+La sera del 15 aprile 2019, mentre la guglia di **Notre-Dame** crollava tra le fiamme, i pompieri di Parigi presero una decisione. Dentro la navata, sotto una volta che poteva cedere da un momento all'altro, un essere umano non poteva più stare. Al suo posto entrò **Colossus**, un robot cingolato radiocomandato, che per ore raffreddò le pareti dall'interno con il suo idrante, contribuendo a salvare le torri. È l'immagine che ha fatto conoscere al mondo una categoria di macchine di cui si parla ancora poco: i **robot antincendio**.
 
 ## Cosa fa un robot antincendio
 
@@ -41,7 +41,7 @@ Gli scenari tipici sono quelli che fermano le squadre umane:
          alt="Un robot antincendio cingolato rosso, compatto e senza cabina, con una grande turbina cilindrica montata sopra il telaio; alle sue spalle un'autopompa rossa dei vigili del fuoco."
          caption="Un robot antincendio LUF 60 accanto all'autopompa che lo trasporta: niente cabina, solo cingoli, pompa e turbina, guidati a distanza con un radiocomando. Foto: Stefan-Xp, CC BY-SA 3.0, via Wikimedia Commons." >}}
 
-Uno dei più diffusi nei corpi europei è il **LUF 60**, un cingolato austriaco che combina due delle tecniche raccontate nel nostro articolo sulle [nuove tecniche di spegnimento](/comunicazioni/2026-08-16-tecniche-moderne-spegnimento-incendi/): una **turbina** che proietta acqua nebulizzata a decine di metri e una potente **ventilazione** che spinge fumo e calore fuori da tunnel e sotterranei, aprendo la strada alle squadre. Il suo erede francese Colossus aggiunge moduli intercambiabili: barella per evacuare feriti, braccio per trasportare materiali, sensori.
+Uno dei più diffusi nei corpi europei è il **LUF 60**, un cingolato austriaco che combina due delle tecniche raccontate nel nostro articolo sulle [nuove tecniche di spegnimento](/comunicazioni/2026-08-16-tecniche-moderne-spegnimento-incendi/). Una **turbina** proietta acqua nebulizzata a decine di metri. Una potente **ventilazione** spinge fumo e calore fuori da tunnel e sotterranei, aprendo la strada alle squadre. Il suo erede francese Colossus aggiunge moduli intercambiabili: barella per evacuare feriti, braccio per trasportare materiali, sensori.
 
 {{< foto src="/images/2026-08-20-robot-luf60-cannone-acqua.webp"
          alt="Primo piano della bocca della turbina di un modulo antincendio: una corona di centinaia di piccoli ugelli nebulizzatori circonda la ventola a pale gialle, con al centro un ugello a lancia."
@@ -55,7 +55,7 @@ La tentazione di raccontarli come «pompieri robot» è forte, ma sarebbe sbagli
 
 ## E in Italia?
 
-I robot sono in dotazione ai **Vigili del Fuoco** — che li hanno impiegati, tra l'altro, in incendi industriali e in scenari con rischio crollo — e si vedono ogni anno al REAS, il salone dell'emergenza di Montichiari, accanto ai loro cugini per la ricerca tra le macerie. Per il volontariato di protezione civile restano macchine fuori scala: il nostro contributo, in quegli scenari, è il supporto logistico e l'assistenza alla popolazione, dentro la catena di comando.
+I robot sono in dotazione ai **Vigili del Fuoco**, che li hanno impiegati, tra l'altro, in incendi industriali e in scenari con rischio crollo. Si vedono ogni anno al REAS, il salone dell'emergenza di Montichiari, accanto ai loro cugini per la ricerca tra le macerie. Per il volontariato di protezione civile restano macchine fuori scala: il nostro contributo, in quegli scenari, è il supporto logistico e l'assistenza alla popolazione, dentro la catena di comando.
 
 Il Gruppo Comunale non può essere attivato direttamente dai cittadini: interviene su richiesta della SOUP regionale, del Comune o della catena di comando della protezione civile. Per un'emergenza in corso il riferimento resta il **112**.
 
