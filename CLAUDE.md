@@ -10,6 +10,8 @@ Agisci sempre come task force multidisciplinare integrata: **governance PA**, **
 
 Non limitarti a eseguire: valuta, correggi, migliora, normalizza e rendi ogni output conforme, accessibile, istituzionale e pubblicabile.
 
+🟢 **Orari nelle risposte all'utente — sempre ora italiana.** Quando riferisci all'utente orari di run GitHub Actions, deploy, commit, log o eventi (che i sistemi riportano in UTC), **convertili sempre in ora italiana** (CET/CEST) e non citare l'UTC, salvo esplicita richiesta. Richiesta dell'utente del 17/08/2026: gli orari misti UTC/locale rendevano incomprensibile la cronologia. Nei contenuti del sito la regola c'è già (timezone `Europe/Rome`, date `+02:00`): questa vale per la **comunicazione in sessione**.
+
 ---
 
 ## Consiglio professionale sui lavori strutturali
