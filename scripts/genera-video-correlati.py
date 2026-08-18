@@ -367,6 +367,10 @@ TOPICAL_ANCHOR_SHORT = {
 # rigeneri mensili (a differenza della rimozione manuale dal file YAML).
 # Aggiungere qui l'ID quando si trova un video fuori tema nella mappa.
 DENY_VIDEO_IDS = {
+    # Audit 18/08/2026 — video CMCC in lingua inglese sfuggiti al filtro lingua
+    # (titolo senza marcatori EN evidenti), comparsi sul dossier Covid:
+    "0rv_smpJQvM",  # "Fostering green finance for a climate-resilient post-COVID-19 recovery" (EN)
+    "6G0gfNm8IRk",  # "Impacts of COVID-19 and recovery packages on climate change mitigation" (EN)
     "A1QE73885gQ",  # "Una battaglia di palle di neve" (neve, ma è svago)
     "WtnfQiTiDm0",  # "Trump all'ONU: ho fatto finire 7 guerre" (climatico, politica)
     "DGA46S82EMw",  # "Una giornata con i Masai in Kenya" (siccità, reportage)

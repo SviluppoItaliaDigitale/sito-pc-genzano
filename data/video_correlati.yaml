@@ -5,8 +5,8 @@
 # Usato dal partial Hugo `video-correlati.html` per renderizzare la
 # sezione 'Approfondimenti video' in fondo agli articoli pertinenti.
 #
-# Pagine coperte: 257 / Video unici usati: 240 /
-# Link totali: 916 (max 5 per pagina,
+# Pagine coperte: 266 / Video unici usati: 246 /
+# Link totali: 948 (max 5 per pagina,
 # soglia score >= 2.0).
 
 canali:
@@ -1460,7 +1460,7 @@ pagine:
       overlap:
       - esercitazione
       - tecnico
-      score: 2.4
+      score: 2.8
       titolo: Attivazione e operatività del Nucleo Tecnico Nazionale – Esercitazione EXE PO 2026
       url: https://youtu.be/3kA8XEf2u6I
   comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza:
@@ -3571,6 +3571,71 @@ pagine:
       score: 2.6
       titolo: Io non rischio Incendi Boschivi – Domande e risposte
       url: https://youtu.be/pvk-P_5WBBw
+  comunicazioni/2026-06-25-incendi-boschivi-pericolo-italia-dati-effis-facile:
+    title: 'Rischio incendi alto in Italia: versione facile da leggere'
+    url: /comunicazioni/2026-06-25-incendi-boschivi-pericolo-italia-dati-effis-facile/
+    video:
+    - anchored:
+      - boschivo
+      canale: io-non-rischio
+      id: 9tYSNBQY7OY
+      is_lis: true
+      overlap:
+      - boschivo
+      - incendio
+      - rischio
+      - subito
+      score: 2.6
+      titolo: Io non rischio Incendi Boschivi – Cosa sapere e cosa fare fin da subito
+      url: https://youtu.be/9tYSNBQY7OY
+    - anchored:
+      - boschivo
+      canale: dpc-gov
+      id: 4UBxxIfaGL4
+      is_lis: false
+      overlap:
+      - boschivo
+      - incendio
+      - rischio
+      score: 2.4
+      titolo: Spot 2006 sul rischio incendi boschivi
+      url: https://youtu.be/4UBxxIfaGL4
+    - anchored:
+      - boschivo
+      canale: dpc-gov
+      id: 53yYyLsFW3Q
+      is_lis: false
+      overlap:
+      - boschivo
+      - incendio
+      - rischio
+      score: 2.4
+      titolo: Spot 2012 sul rischio incendi boschivi
+      url: https://youtu.be/53yYyLsFW3Q
+    - anchored:
+      - boschivo
+      canale: io-non-rischio
+      id: pvk-P_5WBBw
+      is_lis: true
+      overlap:
+      - boschivo
+      - incendio
+      - rischio
+      score: 2.4
+      titolo: Io non rischio Incendi Boschivi – Domande e risposte
+      url: https://youtu.be/pvk-P_5WBBw
+    - anchored:
+      - boschivo
+      canale: io-non-rischio
+      id: qxQJQEjzRwc
+      is_lis: true
+      overlap:
+      - boschivo
+      - incendio
+      - rischio
+      score: 2.4
+      titolo: Io non rischio Incendi boschivi - Cosa fare per evitare, se avvisti, se sei coinvolto in un incendio
+      url: https://youtu.be/qxQJQEjzRwc
   comunicazioni/2026-06-26-exe-po-2026-esercitazione-nazionale-rischio-alluvione:
     title: 'EXE PO 2026: la grande esercitazione nazionale di protezione civile sul rischio alluvione'
     url: /comunicazioni/2026-06-26-exe-po-2026-esercitazione-nazionale-rischio-alluvione/
@@ -3582,10 +3647,14 @@ pagine:
       id: M2_qoahQ-0A
       is_lis: false
       overlap:
+      - capacità
+      - elevata
       - esercitazione
       - exe
+      - modulo
+      - pompaggio
       - test
-      score: 8.8
+      score: 12.8
       titolo: Test di un modulo ad elevata capacità di pompaggio – Esercitazione EXE PO 2026
       url: https://youtu.be/M2_qoahQ-0A
     - anchored:
@@ -3597,7 +3666,10 @@ pagine:
       overlap:
       - esercitazione
       - exe
-      score: 7.8
+      - nucleo
+      - operatività
+      - tecnico
+      score: 10.8
       titolo: Attivazione e operatività del Nucleo Tecnico Nazionale – Esercitazione EXE PO 2026
       url: https://youtu.be/3kA8XEf2u6I
     - anchored:
@@ -3607,9 +3679,11 @@ pagine:
       id: yPBNi9QoXa0
       is_lis: false
       overlap:
+      - esercitative
       - esercitazione
       - exe
-      score: 7.8
+      - programma
+      score: 9.8
       titolo: Le attività esercitative in programma – Esercitazione EXE PO 2026
       url: https://youtu.be/yPBNi9QoXa0
     - anchored:
@@ -5024,6 +5098,194 @@ pagine:
       score: 2.0
       titolo: Animazione spazio temporale sequenza sismica in Italia Centrale
       url: https://youtu.be/bIM2mW9y_Ik
+  comunicazioni/2026-08-10-incendio-rocca-di-papa-via-dei-principi:
+    title: 'Incendio boschivo a Rocca di Papa: il Gruppo in via dei Principi fino a sera'
+    url: /comunicazioni/2026-08-10-incendio-rocca-di-papa-via-dei-principi/
+    video:
+    - anchored:
+      - boschivo
+      canale: abili-a-proteggere
+      id: GVKQznWv4eE
+      is_lis: true
+      overlap:
+      - antincendio
+      - boschivo
+      - campagna
+      score: 3.4
+      titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
+      url: https://youtu.be/GVKQznWv4eE
+    - anchored:
+      - boschivo
+      canale: io-non-rischio
+      id: 9tYSNBQY7OY
+      is_lis: true
+      overlap:
+      - boschivo
+      - incendio
+      - rischio
+      - subito
+      score: 2.8
+      titolo: Io non rischio Incendi Boschivi – Cosa sapere e cosa fare fin da subito
+      url: https://youtu.be/9tYSNBQY7OY
+    - anchored:
+      - boschivo
+      canale: dpc-gov
+      id: 4UBxxIfaGL4
+      is_lis: false
+      overlap:
+      - boschivo
+      - incendio
+      - rischio
+      score: 2.6
+      titolo: Spot 2006 sul rischio incendi boschivi
+      url: https://youtu.be/4UBxxIfaGL4
+    - anchored:
+      - boschivo
+      canale: dpc-gov
+      id: 53yYyLsFW3Q
+      is_lis: false
+      overlap:
+      - boschivo
+      - incendio
+      - rischio
+      score: 2.6
+      titolo: Spot 2012 sul rischio incendi boschivi
+      url: https://youtu.be/53yYyLsFW3Q
+    - anchored:
+      - boschivo
+      canale: io-non-rischio
+      id: pvk-P_5WBBw
+      is_lis: true
+      overlap:
+      - boschivo
+      - incendio
+      - rischio
+      score: 2.6
+      titolo: Io non rischio Incendi Boschivi – Domande e risposte
+      url: https://youtu.be/pvk-P_5WBBw
+  comunicazioni/2026-08-11-terremoti-colombia-italia-profondita-magnitudo:
+    title: 'Magnitudo 7.4 in Colombia e 4.7 ai Campi Flegrei: perché la profondità cambia tutto'
+    url: /comunicazioni/2026-08-11-terremoti-colombia-italia-profondita-magnitudo/
+    video:
+    - anchored:
+      - dicono
+      - magnitudo
+      canale: solarino-sismologo
+      id: 0ZIMo5GmkTM
+      is_lis: false
+      overlap:
+      - dicono
+      - magnitudo
+      - terremoto
+      score: 8.4
+      titolo: Terremoti di magnitudo 4 non sono forti. Lo dicono Mercalli e una convenzione tra scienziati
+      url: https://youtu.be/0ZIMo5GmkTM
+    - anchored:
+      - magnitudo
+      canale: geopop
+      id: fB9CFe5-yR8
+      is_lis: false
+      overlap:
+      - geologico
+      - magnitudo
+      - scossa
+      score: 8.0
+      titolo: 'L''ULTIMA SCOSSA A COSENZA: Magnitudo 4.4 - SPIEGAZIONE DEL CONTESTO GEOLOGICO'
+      url: https://youtu.be/fB9CFe5-yR8
+    - anchored:
+      - magnitudo
+      canale: solarino-sismologo
+      id: nNyb1ch50Ms
+      is_lis: false
+      overlap:
+      - magnitudo
+      - sola
+      - terremoto
+      score: 7.4
+      titolo: Terremoti in pillole 16. Una sola magnitudo non basta!
+      url: https://youtu.be/nNyb1ch50Ms
+    - anchored:
+      - magnitudo
+      canale: solarino-sismologo
+      id: uOeqEtkG4Go
+      is_lis: false
+      overlap:
+      - intensità
+      - magnitudo
+      - terremoto
+      score: 7.4
+      titolo: La "forza" del terremoto. Intensità e magnitudo.
+      url: https://youtu.be/uOeqEtkG4Go
+    - anchored:
+      - magnitudo
+      canale: solarino-sismologo
+      id: KXzZ5LJvsX8
+      is_lis: false
+      overlap:
+      - intensità
+      - magnitudo
+      score: 7.0
+      titolo: La differenza tra magnitudo ed intensità...spiegata con una radio
+      url: https://youtu.be/KXzZ5LJvsX8
+  comunicazioni/2026-08-13-campo-fondi-gemellaggio-aib:
+    title: Quattro giorni al campo base di Fondi, nel cuore del gemellaggio antincendio
+    url: /comunicazioni/2026-08-13-campo-fondi-gemellaggio-aib/
+    video:
+    - anchored:
+      - antincendio
+      - campagna
+      canale: abili-a-proteggere
+      id: GVKQznWv4eE
+      is_lis: true
+      overlap:
+      - antincendio
+      - boschivo
+      - campagna
+      score: 4.4
+      titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
+      url: https://youtu.be/GVKQznWv4eE
+    - anchored:
+      - antincendio
+      - campagna
+      canale: cmcc
+      id: qhaxcNNmi-E
+      is_lis: false
+      overlap:
+      - antincendio
+      - boschivo
+      - campagna
+      score: 4.4
+      titolo: 'Campagna antincendio boschivo: lo spot del progetto OFIDIA2'
+      url: https://youtu.be/qhaxcNNmi-E
+  comunicazioni/2026-08-14-gemellaggio-aib-fondi-turno-mensa-ferragosto:
+    title: 'Gemellaggio AIB di Fondi: i volontari di Genzano in turno alla mensa del campo'
+    url: /comunicazioni/2026-08-14-gemellaggio-aib-fondi-turno-mensa-ferragosto/
+    video:
+    - anchored:
+      - antincendio
+      - boschivo
+      canale: abili-a-proteggere
+      id: GVKQznWv4eE
+      is_lis: true
+      overlap:
+      - antincendio
+      - boschivo
+      - campagna
+      score: 3.4
+      titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
+      url: https://youtu.be/GVKQznWv4eE
+    - anchored:
+      - boschivo
+      canale: dpc-gov
+      id: FPLoljB20QA
+      is_lis: false
+      overlap:
+      - boschivo
+      - incendio
+      - situazione
+      score: 2.4
+      titolo: 'Incendi boschivi Sardegna: Curcio fa il punto della situazione'
+      url: https://youtu.be/FPLoljB20QA
   comunicazioni/2026-08-14-morandi-genova-2018-infrastrutture-manutenzione:
     title: 'Ponte Morandi, 14 agosto 2018: il crollo che ha riscritto la cultura della manutenzione delle infrastrutture in
       Italia'
@@ -5097,6 +5359,22 @@ pagine:
       score: 12.0
       titolo: Terremoto a seguito della demolizione del ponte Morandi
       url: https://youtu.be/D6L92HN1xYE
+  comunicazioni/2026-08-15-ferragosto-incendio-marino-valle-dei-preti:
+    title: 'Un Ferragosto col mezzo antincendio: sterpaglie e canneto in fiamme a Marino'
+    url: /comunicazioni/2026-08-15-ferragosto-incendio-marino-valle-dei-preti/
+    video:
+    - anchored:
+      - antincendio
+      canale: abili-a-proteggere
+      id: GVKQznWv4eE
+      is_lis: true
+      overlap:
+      - antincendio
+      - boschivo
+      - campagna
+      score: 3.4
+      titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
+      url: https://youtu.be/GVKQznWv4eE
   comunicazioni/2026-08-18-siccita-lazio-risorsa-idrica:
     title: 'Siccità nel Lazio: come viene gestita e cosa può fare il cittadino'
     url: /comunicazioni/2026-08-18-siccita-lazio-risorsa-idrica/
@@ -5188,6 +5466,31 @@ pagine:
       score: 6.0
       titolo: Cos'è il cuneo salino? Sintesi sull'emergenza siccità in Italia e la crisi idrica del Po
       url: https://youtu.be/xbkBI9oAO9w
+  comunicazioni/2026-08-18-soccorso-acqua-boe-telecomandate-droni:
+    title: 'Il soccorso in acqua cambia: boe telecomandate, droni e sagome rosa'
+    url: /comunicazioni/2026-08-18-soccorso-acqua-boe-telecomandate-droni/
+    video:
+    - anchored:
+      - salvataggio
+      canale: cnsas
+      id: fT1uI9f8Zoc
+      is_lis: false
+      overlap:
+      - salvataggio
+      - soccorso
+      score: 2.6
+      titolo: 'Soccorso Alpino: salvataggio con elicottero AW 169 di due bambini dal treno guasto'
+      url: https://youtu.be/fT1uI9f8Zoc
+    - anchored:
+      - salvataggio
+      canale: dpc-gov
+      id: k90I_coJTsA
+      is_lis: false
+      overlap:
+      - salvataggio
+      score: 2.0
+      titolo: Operazioni di salvataggio animali – Frana Niscemi 2026
+      url: https://youtu.be/k90I_coJTsA
   comunicazioni/2026-08-21-ischia-2017-terremoto-isolano:
     title: 'Ischia, 21 agosto 2017: il terremoto su un''isola, le case di tufo e la lezione del Casamicciola'
     url: /comunicazioni/2026-08-21-ischia-2017-terremoto-isolano/
@@ -6903,6 +7206,18 @@ pagine:
       score: 2.0
       titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
       url: https://youtu.be/jy4kGt-eFWg
+    - anchored:
+      - esercitazione
+      canale: ingv-terremoti
+      id: qKfP_mrgJdc
+      is_lis: false
+      overlap:
+      - area
+      - esercitazione
+      - rischio
+      score: 2.0
+      titolo: NEAMWave 2023 - Esercitazione per rischio tsunami nell'area Euro-Mediterranea. INGV-Alessandro Amato
+      url: https://youtu.be/qKfP_mrgJdc
   comunicazioni/2026-11-19-animali-domestici-emergenze:
     title: 'Animali domestici in emergenza: piani, kit, responsabilità'
     url: /comunicazioni/2026-11-19-animali-domestici-emergenze/
@@ -7387,7 +7702,7 @@ pagine:
       - attenzione
       - rischio
       - vulcano
-      score: 6.8
+      score: 7.2
       titolo: Io non rischio Vulcano  - Cosa fare in attenzione, preallarme e allarme
       url: https://youtu.be/7MRMK51szxE
     - anchored:
@@ -8301,14 +8616,14 @@ pagine:
     - anchored:
       - climatici
       canale: geopop
-      id: eweTbEP6AE0
+      id: o0pokoiDquY
       is_lis: false
       overlap:
       - climatici
-      - dice
+      - riscaldamento
       score: 3.0
-      titolo: Cosa dice l'ultimo preoccupante rapporto ONU sui cambiamenti climatici
-      url: https://youtu.be/eweTbEP6AE0
+      titolo: Il riscaldamento globale di oggi è diverso dai cambiamenti climatici del passato, ecco i motivi
+      url: https://youtu.be/o0pokoiDquY
   dossier/il-disastro-che-non-e-successo:
     title: Il disastro che non è successo
     url: /dossier/il-disastro-che-non-e-successo/
@@ -8409,6 +8724,42 @@ pagine:
       score: 2.6
       titolo: 'Glossario in LIS: COC - Centro Operativo Comunale'
       url: https://youtu.be/Q9JaOMzqd1w
+  dossier/la-tempesta-solare:
+    title: La tempesta solare
+    url: /dossier/la-tempesta-solare/
+    video:
+    - anchored:
+      - solare
+      - tempesta
+      canale: link4universe
+      id: dbtYw22YtLU
+      is_lis: false
+      overlap:
+      - solare
+      - tempesta
+      score: 12.0
+      titolo: Il Titanic "affondato" da una tempesta solare ?
+      url: https://youtu.be/dbtYw22YtLU
+    - anchored:
+      - tempesta
+      canale: geopop
+      id: cmEzpKqaTEU
+      is_lis: false
+      overlap:
+      - tempesta
+      score: 6.0
+      titolo: 14 milioni di alberi abbattuti e 3 miliardi di euro di danni, analizziamo la Tempesta Vaia del 2018
+      url: https://youtu.be/cmEzpKqaTEU
+    - anchored:
+      - tempesta
+      canale: link4universe
+      id: Z51K4zh0APg
+      is_lis: false
+      overlap:
+      - tempesta
+      score: 6.0
+      titolo: Una Super-Tempesta di Meteore in Arrivo?
+      url: https://youtu.be/Z51K4zh0APg
   dossier/la-terra-che-scivola:
     title: La terra che scivola
     url: /dossier/la-terra-che-scivola/
@@ -8765,6 +9116,63 @@ pagine:
       score: 3.6
       titolo: Simulatore di Tsunami - Cosa accade se un'onda di tsunami di circa 50 cm impatta una persona adulta
       url: https://youtu.be/fuNiJ-yold8
+  dossier/quando-il-mondo-si-ferma:
+    title: Quando il mondo si ferma
+    url: /dossier/quando-il-mondo-si-ferma/
+    video:
+    - anchored:
+      - covid
+      - succede
+      canale: cicap
+      id: sJeuNpw8jMs
+      is_lis: false
+      overlap:
+      - covid
+      - succede
+      score: 4.0
+      titolo: Cosa succede dopo la prima dose del vaccino per il Covid-19?
+      url: https://youtu.be/sJeuNpw8jMs
+    - anchored:
+      - covid
+      canale: wired-italia
+      id: zf91CMDOSDI
+      is_lis: false
+      overlap:
+      - covid
+      - pandemia
+      score: 3.0
+      titolo: Covid-19, i numeri ci aiutano davvero a capire la pandemia? | Wired Answers | Wired Italia
+      url: https://youtu.be/zf91CMDOSDI
+    - anchored:
+      - covid
+      canale: cicap
+      id: xlYfAa97Fng
+      is_lis: false
+      overlap:
+      - covid
+      score: 2.0
+      titolo: 'Natália Pasternak: "La disinformazione al potere: il caso Covid in Brasile"'
+      url: https://youtu.be/xlYfAa97Fng
+    - anchored:
+      - covid
+      canale: cnsas
+      id: 24yclZnGU6Q
+      is_lis: false
+      overlap:
+      - covid
+      score: 2.0
+      titolo: 'Covid-19: la sicurezza durante un intervento speleologico'
+      url: https://youtu.be/24yclZnGU6Q
+    - anchored:
+      - covid
+      canale: cnsas
+      id: 2_cShXyI5xE
+      is_lis: false
+      overlap:
+      - covid
+      score: 2.0
+      titolo: 'Covid-19: intervento in forra (prima parte), il protocollo del Soccorso Alpino e Speleologico'
+      url: https://youtu.be/2_cShXyI5xE
   dossier/quando-il-vento-fa-paura:
     title: Quando il vento fa paura
     url: /dossier/quando-il-vento-fa-paura/
@@ -9341,6 +9749,18 @@ pagine:
       score: 2.0
       titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
       url: https://youtu.be/jy4kGt-eFWg
+    - anchored:
+      - esercitazione
+      canale: ingv-terremoti
+      id: qKfP_mrgJdc
+      is_lis: false
+      overlap:
+      - area
+      - esercitazione
+      - rischio
+      score: 2.0
+      titolo: NEAMWave 2023 - Esercitazione per rischio tsunami nell'area Euro-Mediterranea. INGV-Alessandro Amato
+      url: https://youtu.be/qKfP_mrgJdc
   facile-da-leggere:
     title: Facile da leggere
     url: /facile-da-leggere/
