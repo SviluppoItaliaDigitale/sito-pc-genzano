@@ -41,66 +41,86 @@ jobs:
           echo "version=$CURRENT_VERSION" >> $GITHUB_OUTPUT
           echo "📌 Versione attuale: $CURRENT_VERSION"
 
-      # Passo 3: Controlla l'ultima versione STABILE disponibile su GitHub.
+      # Passo 3: Controlla sia l'ultima release STABILE sia l'ultima release
+      # in ASSOLUTO su GitHub (le teniamo distinte, vedi passi successivi).
       # NOTA (18/08/2026): non usiamo /releases/latest — quell'endpoint segue
       # il flag "latest" impostato dal maintainer di italia/bootstrap-italia,
       # che può puntare a una prerelease (è il caso di v3.0.0-beta.4 ad
       # agosto 2026, e di v3.0.0-beta.2 il 20/07/2026 quando l'auto-update
       # applicò per errore quella beta rompendo menu/header sul sito live).
-      # Interroghiamo /releases e prendiamo la release più recente con
-      # prerelease=false e draft=false, a prescindere dal flag "latest".
-      - name: "🌐 Controlla ultima versione stabile su GitHub"
-        id: latest
+      # Interroghiamo /releases (ordinata dalla più recente) e ricaviamo:
+      #   - "stable"  → la release più recente con prerelease=false, usata
+      #                 per l'aggiornamento automatico sicuro.
+      #   - "overall" → la release più recente in assoluto (anche se
+      #                 prerelease), usata SOLO per segnalare all'utente che
+      #                 esiste una nuova beta/rc da valutare a mano — senza
+      #                 questo confronto separato, una nuova prerelease
+      #                 successiva all'ultima stabile installata passerebbe
+      #                 inosservata (trovato in review su questa stessa PR).
+      - name: "🌐 Controlla ultima release stabile e ultima in assoluto"
+        id: releases
         run: |
-          LATEST=$(curl -s "https://api.github.com/repos/italia/bootstrap-italia/releases?per_page=20" \
-            | jq -r '[.[] | select(.prerelease == false and .draft == false)][0].tag_name // empty' \
-            | sed -E 's/^v//')
-          if [ -z "$LATEST" ]; then
+          JSON=$(curl -s "https://api.github.com/repos/italia/bootstrap-italia/releases?per_page=20")
+
+          STABLE=$(echo "$JSON" | jq -r '[.[] | select(.prerelease == false and .draft == false)][0].tag_name // empty' | sed -E 's/^v//')
+          if [ -z "$STABLE" ]; then
             echo "❌ ERRORE: impossibile determinare l'ultima release stabile da /releases"
             exit 1
           fi
-          echo "version=$LATEST" >> $GITHUB_OUTPUT
-          echo "🆕 Ultima versione stabile disponibile: $LATEST"
 
-      # Passo 3b: Gate di sicurezza — mai auto-applicare major o prerelease.
+          OVERALL_TAG=$(echo "$JSON" | jq -r '[.[] | select(.draft == false)][0].tag_name // empty')
+          OVERALL=$(echo "$OVERALL_TAG" | sed -E 's/^v//')
+          OVERALL_PRERELEASE=$(echo "$JSON" | jq -r '[.[] | select(.draft == false)][0].prerelease // false')
+          if [ -z "$OVERALL" ]; then
+            # Fallback difensivo: se per qualche motivo non troviamo la più
+            # recente in assoluto, usiamo la stabile (nessuna prerelease da segnalare).
+            OVERALL="$STABLE"
+            OVERALL_PRERELEASE="false"
+          fi
+
+          echo "stable=$STABLE" >> $GITHUB_OUTPUT
+          echo "overall=$OVERALL" >> $GITHUB_OUTPUT
+          echo "overall_prerelease=$OVERALL_PRERELEASE" >> $GITHUB_OUTPUT
+          echo "🆕 Ultima release stabile: $STABLE"
+          echo "🆕 Ultima release in assoluto: $OVERALL (prerelease: $OVERALL_PRERELEASE)"
+
+      # Passo 3b: Gate di sicurezza per l'aggiornamento STABILE — mai
+      # auto-applicare un salto di major, nemmeno stabile.
       # Storia: il 20/07/2026 questo workflow ha applicato in automatico la
       # v3.0.0-beta.2 (release marcata "latest" su GitHub) sopra un tema
       # costruito per la v2: sprite icone spostato (menu hamburger sparito
-      # site-wide) e CSS incompatibile (header rotto). Un salto di major — a
-      # maggior ragione una beta — richiede migrazione pianificata e verifica
-      # visiva umana: qui si apre un'issue e NON si aggiorna.
-      - name: "🛡️ Valuta se l'aggiornamento è sicuro (stessa major, no prerelease)"
+      # site-wide) e CSS incompatibile (header rotto). Un salto di major
+      # richiede migrazione pianificata e verifica visiva umana: qui si apre
+      # un'issue e NON si aggiorna.
+      - name: "🛡️ Valuta se l'aggiornamento stabile è sicuro (stessa major)"
         id: gate
-        if: steps.current.outputs.version != steps.latest.outputs.version
+        if: steps.current.outputs.version != steps.releases.outputs.stable
         run: |
           CURRENT="${{ steps.current.outputs.version }}"
-          LATEST="${{ steps.latest.outputs.version }}"
+          STABLE="${{ steps.releases.outputs.stable }}"
           CURRENT_MAJOR="${CURRENT%%.*}"
-          LATEST_MAJOR="${LATEST%%.*}"
+          STABLE_MAJOR="${STABLE%%.*}"
           SAFE="true"
           MOTIVO=""
-          case "$LATEST" in
-            *-*) SAFE="false"; MOTIVO="la v$LATEST è una prerelease (alpha/beta/rc)";;
-          esac
-          if [ "$SAFE" = "true" ] && [ "$CURRENT_MAJOR" != "$LATEST_MAJOR" ]; then
+          if [ "$CURRENT_MAJOR" != "$STABLE_MAJOR" ]; then
             SAFE="false"
-            MOTIVO="la v$LATEST è una nuova major (da v$CURRENT_MAJOR a v$LATEST_MAJOR): possibili breaking change su markup, classi CSS e percorsi asset"
+            MOTIVO="la v$STABLE stabile è una nuova major (da v$CURRENT_MAJOR a v$STABLE_MAJOR): possibili breaking change su markup, classi CSS e percorsi asset"
           fi
           echo "safe=$SAFE" >> $GITHUB_OUTPUT
           echo "motivo=$MOTIVO" >> $GITHUB_OUTPUT
           if [ "$SAFE" = "true" ]; then
-            echo "✅ Aggiornamento sicuro (stessa major, release stabile): procedo."
+            echo "✅ Aggiornamento stabile sicuro (stessa major): procedo."
           else
-            echo "🛑 Aggiornamento NON automatico: $MOTIVO"
+            echo "🛑 Aggiornamento stabile NON automatico: $MOTIVO"
           fi
 
-      # Passo 3c: se l'aggiornamento non è sicuro, apri/aggiorna un'issue per la revisione umana
-      - name: "📣 Apri issue per aggiornamento manuale (major/prerelease)"
-        if: steps.current.outputs.version != steps.latest.outputs.version && steps.gate.outputs.safe != 'true'
+      # Passo 3c: se l'aggiornamento stabile non è sicuro (salto di major), apri/aggiorna un'issue per la revisione umana
+      - name: "📣 Apri issue per major stabile non sicura"
+        if: steps.current.outputs.version != steps.releases.outputs.stable && steps.gate.outputs.safe != 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          TITOLO="⬆️ Bootstrap Italia v${{ steps.latest.outputs.version }} disponibile — richiede migrazione manuale"
+          TITOLO="⬆️ Bootstrap Italia v${{ steps.releases.outputs.stable }} disponibile — richiede migrazione manuale"
           ESISTENTE=$(gh issue list --state open --search "$TITOLO in:title" --json number --jq '.[0].number' || echo "")
           if [ -n "$ESISTENTE" ] && [ "$ESISTENTE" != "null" ]; then
             echo "Issue #$ESISTENTE già aperta, nessun duplicato."
@@ -109,19 +129,45 @@ jobs:
           gh issue create \
             --title "$TITOLO" \
             --label "automazione,manutenzione" \
-            --body "È disponibile **Bootstrap Italia v${{ steps.latest.outputs.version }}** (installata: v${{ steps.current.outputs.version }}), ma l'aggiornamento automatico è stato **bloccato dal gate di sicurezza**: ${{ steps.gate.outputs.motivo }}.
+            --body "È disponibile **Bootstrap Italia v${{ steps.releases.outputs.stable }}** stabile (installata: v${{ steps.current.outputs.version }}), ma l'aggiornamento automatico è stato **bloccato dal gate di sicurezza**: ${{ steps.gate.outputs.motivo }}.
 
-          Un salto di major (o una prerelease) può cambiare markup, classi CSS e percorsi degli asset (es. \`svg/sprites.svg\`) e va migrato a mano con verifica visiva (header, menu hamburger mobile, footer, componenti) prima del deploy.
+          Un salto di major può cambiare markup, classi CSS e percorsi degli asset (es. \`svg/sprites.svg\`) e va migrato a mano con verifica visiva (header, menu hamburger mobile, footer, componenti) prima del deploy.
 
-          Release: https://github.com/italia/bootstrap-italia/releases/tag/v${{ steps.latest.outputs.version }}
+          Release: https://github.com/italia/bootstrap-italia/releases/tag/v${{ steps.releases.outputs.stable }}
 
           _Contesto storico: il 20/07/2026 l'auto-update alla v3.0.0-beta.2 ha rotto il menu di navigazione e l'header su tutto il sito live (rollback nella PR di fix del 21/07/2026)._"
 
-      # Passo 4: Confronta e aggiorna se necessario
-      - name: "⬆️ Aggiorna Bootstrap Italia"
-        if: steps.current.outputs.version != steps.latest.outputs.version && steps.gate.outputs.safe == 'true'
+      # Passo 3d: segnalazione INDIPENDENTE di una prerelease più recente
+      # dell'ultima stabile (es. una nuova beta v3 mentre siamo già
+      # aggiornati alla v2.x stabile più recente). Non blocca né condiziona
+      # l'aggiornamento stabile dei passi precedenti: è solo awareness.
+      - name: "📣 Segnala nuova prerelease per revisione manuale"
+        if: steps.releases.outputs.overall_prerelease == 'true' && steps.releases.outputs.overall != steps.releases.outputs.stable
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          NEW_VERSION="${{ steps.latest.outputs.version }}"
+          TITOLO="⬆️ Bootstrap Italia v${{ steps.releases.outputs.overall }} disponibile — richiede migrazione manuale"
+          ESISTENTE=$(gh issue list --state open --search "$TITOLO in:title" --json number --jq '.[0].number' || echo "")
+          if [ -n "$ESISTENTE" ] && [ "$ESISTENTE" != "null" ]; then
+            echo "Issue #$ESISTENTE già aperta, nessun duplicato."
+            exit 0
+          fi
+          gh issue create \
+            --title "$TITOLO" \
+            --label "automazione,manutenzione" \
+            --body "È disponibile **Bootstrap Italia v${{ steps.releases.outputs.overall }}** (installata: v${{ steps.current.outputs.version }}; ultima stabile: v${{ steps.releases.outputs.stable }}), ma è una **prerelease** (alpha/beta/rc) e non viene mai applicata automaticamente.
+
+          Un salto di major (o una prerelease) può cambiare markup, classi CSS e percorsi degli asset (es. \`svg/sprites.svg\`) e va migrato a mano con verifica visiva (header, menu hamburger mobile, footer, componenti) prima del deploy.
+
+          Release: https://github.com/italia/bootstrap-italia/releases/tag/v${{ steps.releases.outputs.overall }}
+
+          _Contesto storico: il 20/07/2026 l'auto-update alla v3.0.0-beta.2 ha rotto il menu di navigazione e l'header su tutto il sito live (rollback nella PR di fix del 21/07/2026)._"
+
+      # Passo 4: Applica l'aggiornamento stabile se necessario e sicuro
+      - name: "⬆️ Aggiorna Bootstrap Italia"
+        if: steps.current.outputs.version != steps.releases.outputs.stable && steps.gate.outputs.safe == 'true'
+        run: |
+          NEW_VERSION="${{ steps.releases.outputs.stable }}"
           echo "============================================"
           echo "🔄 AGGIORNAMENTO IN CORSO"
           echo "   Da: ${{ steps.current.outputs.version }}"
@@ -171,14 +217,14 @@ jobs:
 
       # Passo 5: Committa e pusha le modifiche
       - name: "📤 Commit e Push aggiornamento"
-        if: steps.current.outputs.version != steps.latest.outputs.version && steps.gate.outputs.safe == 'true'
+        if: steps.current.outputs.version != steps.releases.outputs.stable && steps.gate.outputs.safe == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "GitHub Actions Bot"
           git add -A
-          git commit -m "⬆️ Aggiorna Bootstrap Italia da v${{ steps.current.outputs.version }} a v${{ steps.latest.outputs.version }}" \
+          git commit -m "⬆️ Aggiorna Bootstrap Italia da v${{ steps.current.outputs.version }} a v${{ steps.releases.outputs.stable }}" \
                      -m "Aggiornamento automatico eseguito da GitHub Actions." \
-                     -m "Release: https://github.com/italia/bootstrap-italia/releases/tag/v${{ steps.latest.outputs.version }}"
+                     -m "Release: https://github.com/italia/bootstrap-italia/releases/tag/v${{ steps.releases.outputs.stable }}"
           # Retry+rebase per evitare conflitti di concorrenza con altri workflow
           for tentativo in 1 2 3; do
             if git push 2>&1; then break; fi
@@ -187,11 +233,11 @@ jobs:
             if [ "$tentativo" = "3" ]; then echo "Push fallito dopo 3 tentativi"; exit 1; fi
           done
 
-      # Passo 6: Nessun aggiornamento necessario
-      - name: "✅ Nessun aggiornamento necessario"
-        if: steps.current.outputs.version == steps.latest.outputs.version
+      # Passo 6: Nessun aggiornamento stabile necessario
+      - name: "✅ Nessun aggiornamento stabile necessario"
+        if: steps.current.outputs.version == steps.releases.outputs.stable
         run: |
-          echo "✅ Bootstrap Italia è già aggiornato alla versione ${{ steps.current.outputs.version }}"
+          echo "✅ Bootstrap Italia è già aggiornato alla versione stabile ${{ steps.current.outputs.version }}"
           echo "   Nessuna azione necessaria."
 
       # Passo 7: Crea un "Summary" visibile nel tab Actions
@@ -203,13 +249,17 @@ jobs:
           echo "| Informazione | Valore |" >> $GITHUB_STEP_SUMMARY
           echo "|---|---|" >> $GITHUB_STEP_SUMMARY
           echo "| Versione installata | \`v${{ steps.current.outputs.version }}\` |" >> $GITHUB_STEP_SUMMARY
-          echo "| Ultima versione disponibile | \`v${{ steps.latest.outputs.version }}\` |" >> $GITHUB_STEP_SUMMARY
-          if [ "${{ steps.current.outputs.version }}" == "${{ steps.latest.outputs.version }}" ]; then
-            echo "| **Azione** | Nessun aggiornamento necessario |" >> $GITHUB_STEP_SUMMARY
+          echo "| Ultima release stabile | \`v${{ steps.releases.outputs.stable }}\` |" >> $GITHUB_STEP_SUMMARY
+          echo "| Ultima release in assoluto | \`v${{ steps.releases.outputs.overall }}\` (prerelease: \`${{ steps.releases.outputs.overall_prerelease }}\`) |" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.current.outputs.version }}" == "${{ steps.releases.outputs.stable }}" ]; then
+            echo "| **Azione (stabile)** | Nessun aggiornamento necessario |" >> $GITHUB_STEP_SUMMARY
           elif [ "${{ steps.gate.outputs.safe }}" == "true" ]; then
-            echo "| **Azione** | ✅ **Aggiornato!** |" >> $GITHUB_STEP_SUMMARY
+            echo "| **Azione (stabile)** | ✅ **Aggiornato!** |" >> $GITHUB_STEP_SUMMARY
           else
-            echo "| **Azione** | 🛑 **Bloccato dal gate di sicurezza** (major/prerelease) — aperta issue per migrazione manuale |" >> $GITHUB_STEP_SUMMARY
+            echo "| **Azione (stabile)** | 🛑 **Bloccato dal gate di sicurezza** (major) — aperta issue per migrazione manuale |" >> $GITHUB_STEP_SUMMARY
+          fi
+          if [ "${{ steps.releases.outputs.overall_prerelease }}" == "true" ] && [ "${{ steps.releases.outputs.overall }}" != "${{ steps.releases.outputs.stable }}" ]; then
+            echo "| **Prerelease più recente** | 🔔 v${{ steps.releases.outputs.overall }} segnalata per revisione manuale |" >> $GITHUB_STEP_SUMMARY
           fi
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "📅 Prossimo controllo: lunedì prossimo alle 08:00" >> $GITHUB_STEP_SUMMARY
