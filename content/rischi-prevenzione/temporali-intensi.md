@@ -90,5 +90,6 @@ L'area dei Castelli Romani è soggetta a temporali convettivi intensi, specialme
 **Approfondimenti divulgativi**
 
 - [Geopop](https://www.geopop.it/) — come si formano temporali, fulmini e grandine. Non è una fonte istituzionale: in caso di allerta consulta sempre i bollettini ufficiali.
+- [Geopop — Cosa fare in caso di fulmini e dove sono pericolosi: le linee guida della Protezione Civile, in casa e all'aperto](https://www.geopop.it/cosa-fare-in-caso-di-fulmini-e-dove-sono-pericolosi-linee-guida-della-protezione-civile-in-casa-e-allaperto/) — spiegazione divulgativa dei comportamenti di autoprotezione dai fulmini, basata sulle indicazioni ufficiali del Dipartimento della Protezione Civile.
 
 {{< chi-chiamare >}}
