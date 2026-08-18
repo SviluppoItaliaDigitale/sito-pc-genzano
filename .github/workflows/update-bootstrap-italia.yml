@@ -41,13 +41,26 @@ jobs:
           echo "version=$CURRENT_VERSION" >> $GITHUB_OUTPUT
           echo "📌 Versione attuale: $CURRENT_VERSION"
 
-      # Passo 3: Controlla l'ultima versione disponibile su GitHub
-      - name: "🌐 Controlla ultima versione su GitHub"
+      # Passo 3: Controlla l'ultima versione STABILE disponibile su GitHub.
+      # NOTA (18/08/2026): non usiamo /releases/latest — quell'endpoint segue
+      # il flag "latest" impostato dal maintainer di italia/bootstrap-italia,
+      # che può puntare a una prerelease (è il caso di v3.0.0-beta.4 ad
+      # agosto 2026, e di v3.0.0-beta.2 il 20/07/2026 quando l'auto-update
+      # applicò per errore quella beta rompendo menu/header sul sito live).
+      # Interroghiamo /releases e prendiamo la release più recente con
+      # prerelease=false e draft=false, a prescindere dal flag "latest".
+      - name: "🌐 Controlla ultima versione stabile su GitHub"
         id: latest
         run: |
-          LATEST=$(curl -s https://api.github.com/repos/italia/bootstrap-italia/releases/latest | grep '"tag_name"' | sed -E 's/.*"v([^"]+)".*/\1/')
+          LATEST=$(curl -s "https://api.github.com/repos/italia/bootstrap-italia/releases?per_page=20" \
+            | jq -r '[.[] | select(.prerelease == false and .draft == false)][0].tag_name // empty' \
+            | sed -E 's/^v//')
+          if [ -z "$LATEST" ]; then
+            echo "❌ ERRORE: impossibile determinare l'ultima release stabile da /releases"
+            exit 1
+          fi
           echo "version=$LATEST" >> $GITHUB_OUTPUT
-          echo "🆕 Ultima versione disponibile: $LATEST"
+          echo "🆕 Ultima versione stabile disponibile: $LATEST"
 
       # Passo 3b: Gate di sicurezza — mai auto-applicare major o prerelease.
       # Storia: il 20/07/2026 questo workflow ha applicato in automatico la
