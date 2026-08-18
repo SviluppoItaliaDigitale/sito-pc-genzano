@@ -107,5 +107,6 @@ In Italia ci sono circa **1,5 milioni di fulmini all'anno**; i decessi per fulmi
 - Pagina: [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/)
 - [Centro Funzionale Regionale Lazio](https://protezionecivile.regione.lazio.it/)
 - [Aeronautica Militare — Meteo](https://www.meteoam.it/)
+- Divulgativo: [Geopop — Cosa fare in caso di fulmini e dove sono pericolosi: le linee guida della Protezione Civile](https://www.geopop.it/cosa-fare-in-caso-di-fulmini-e-dove-sono-pericolosi-linee-guida-della-protezione-civile-in-casa-e-allaperto/)
 
 I temporali estivi passano in fretta. Ma nelle due ore in cui passano, servono comportamenti giusti. Impararli una volta, usarli a vita.
