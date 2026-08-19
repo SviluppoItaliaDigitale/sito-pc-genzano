@@ -336,6 +336,35 @@ Vale per **tutti i contesti** in cui Claude Code lavora: CLI desktop sul PC, app
 
 **Per batch di revisione ≥5 articoli**: applicare il checkpoint pre-batch (`.claude/rules/07-proattivita-coerenza.md`), ottenere conferma esplicita, lavorare in serie con commit a tappe (≈30-50 articoli per commit) per mantenere la cronologia git navigabile.
 
+### 2.24 — Umanizzazione della scrittura (prosa naturale, senza tic da IA)
+
+Regola introdotta il 19 agosto 2026, speculare a `.claude/rules/02-content-design-pa.md` § "Umanizzazione della scrittura" (regola di coerenza manuale ↔ rules: i due file dicono la stessa cosa). Fonti: la pagina [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) del WikiProject AI Cleanup, che cataloga i pattern statistici ricorrenti nei testi prodotti dai modelli linguistici, e le linee guida di prompting di Anthropic (istruzioni positive + esempi rappresentativi dello stile desiderato).
+
+**Subordinazione ad AGID.** Questa regola è un livello di rifinitura *sotto* le regole AGID di questa Parte 2, mai una deroga. Se un consiglio stilistico confligge con una regola AGID, WCAG o di comunicazione del rischio, vince la regola. Restano ferme in particolare: frasi sotto le ~20 parole (§ 2.3), bullet uniformi con punto fermo (§ 2.17), struttura fissa delle pagine rischio, struttura a 6 punti dei post di crisi.
+
+**Obiettivo**: prosa editoriale italiana concreta e specifica, con ritmo naturale entro il registro breve. Non è una direttiva "inganna gli AI detector" (strumenti inaffidabili, come avverte la stessa pagina Wikipedia): è una direttiva di qualità.
+
+**I 10 tic da evitare:**
+
+1. Copule semplici, non perifrasi: «è», non «rappresenta / costituisce / si configura come / funge da / si pone come / vanta» in serie.
+2. Niente grappoli di lessico da IA: «cruciale», «fondamentale», «significativo», «panorama», «testimonianza», «dinamico», «un ruolo chiave»… Il segnale è la **densità** (3+ nello stesso testo), non la singola parola.
+3. Non attribuire importanza a tutto: niente «momento fondamentale» / «svolta significativa» / «a testimonianza di» su fatti ordinari. Il fatto si racconta con nomi, date, luoghi, numeri.
+4. Niente pseudoanalisi decorative al gerundio: «evidenziando così…», «sottolineando l'importanza…», «contribuendo a…», «riflettendo un più ampio…». Se l'analisi serve, ha una fonte; altrimenti si taglia.
+5. Niente consenso inventato: «secondo molti esperti», «gli osservatori ritengono», «ampiamente riconosciuto» solo con fonte reale citata (principio NO INVENZIONI).
+6. Parallelismi negativi col contagocce: «non solo X, ma anche Y» / «non è X, è Y» al massimo una volta per articolo, e solo se il contrasto è reale.
+7. Spezzare la regola del tre: niente terne automatiche di aggettivi («chiaro, efficace e accessibile»). Si elencano le cose che servono: due, quattro, una.
+8. Niente conclusioni prefabbricate: «in conclusione», «in sintesi», «guardando al futuro», «nonostante le sfide» come chiusa automatica. Un articolo può finire sul suo ultimo fatto utile.
+9. Struttura al servizio del contenuto: non ogni articolo è una mini-presentazione con intro + 3 sezioni + elenco + considerazioni finali. H2, liste, grassetti ed emoji solo con funzione (la struttura fissa delle pagine rischio non si tocca).
+10. Niente frasi da assistente virtuale nel contenuto: «Ecco una panoramica…», «Speriamo sia utile», «Non esitate a…».
+
+**Le due regole positive:** (a) variare il ritmo entro il registro breve — frasi brevissime alternate a frasi medie, mai sequenze di periodi identici; (b) privilegiare il concreto — il dettaglio specifico e pertinente (la via, il modello del mezzo, l'orario reale) è ciò che rende il testo credibile e che la prosa generica «leviga via».
+
+**Italiano impeccabile, sempre.** Umanizzare non autorizza sciatterie: grammatica, ortografia, punteggiatura e accenti restano perfetti. In caso di dubbio fa fede la Treccani (in subordine l'Accademia della Crusca). Spell-check `scripts/check-refusi.py` obbligatorio sui file toccati.
+
+**Eccezioni:** versioni facili `-facile.md` (le frasi corte e ripetitive lì sono intenzionali), pagine rischio e contenuti operativi di emergenza, registri di genere su richiesta esplicita, testi legali/tecnici.
+
+**In revisione**: metodo conservativo del § 2.23 — solo i tic reali, giudizio caso per caso (un «diritto fondamentale» non è un tic), mai sostituzioni cieche via `sed`, mai toccare `image:`. Il check è integrato nel gate `pc-article-reviewer` (checklist § 10) e, per le AI esterne, in `AGENTS.md` § "Umanizzazione della scrittura".
+
 ---
 
 _[Indice manuale](README.md)_

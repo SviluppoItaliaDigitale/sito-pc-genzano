@@ -43,7 +43,7 @@ MeshCore distingue anche i ruoli dei nodi: il dispositivo personale, il **ripeti
 
 **Reticulum** è un progetto ancora diverso: non un firmware per radio LoRa, ma un **intero stack di rete crittografico** costruito da zero, open source. È pensato per funzionare **in condizioni estreme** — bassissima larghezza di banda, latenze altissime, infrastrutture distrutte. La cifratura end-to-end non è un'aggiunta: è il fondamento del progetto.
 
-La sua forza è l'**indipendenza dal mezzo trasmissivo**: la stessa rete può viaggiare su radio LoRa (tramite i ricetrasmettitori aperti *RNode*), packet radio amatoriale, WiFi o qualunque collegamento disponibile, cucendo insieme pezzi di rete diversi. È lo strumento più potente e più di nicchia dei tre: richiede più competenza, ma rappresenta la frontiera della resilienza.
+La sua forza è l'**indipendenza dal mezzo trasmissivo**: la stessa rete può viaggiare su radio LoRa (tramite i ricetrasmettitori aperti *RNode*), packet radio amatoriale, WiFi o qualunque collegamento disponibile, cucendo insieme pezzi di rete diversi. È lo strumento più potente e più di nicchia dei tre: richiede più competenza, ma è la frontiera della resilienza.
 
 ## LoRaWAN: stessa radio, un altro scopo
 

@@ -130,7 +130,7 @@ Nelle notti più fredde:
 - **volontariato** distribuisce coperte e pasti caldi;
 - **numero** verde dedicato (consultare sito comunale).
 
-Se vedete persona senza dimora in difficoltà, **chiamare il 112**: non è disturbo, è **dovere civile**.
+Se vedete una persona senza dimora in difficoltà, **chiamare il 112**: la segnalazione è un **dovere civile**.
 
 ## In sintesi
 

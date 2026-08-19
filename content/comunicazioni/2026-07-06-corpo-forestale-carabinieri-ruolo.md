@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Fino al **2016** il **Corpo Forestale dello Stato** era un corpo di polizia autonomo. Nel **2017**, con il D.Lgs. 177/2016, è confluito nell'**Arma dei Carabinieri** ed è diventato il **Comando Unità per la Tutela Forestale, Ambientale e Agroalimentare**. Oggi svolge un ruolo centrale nella protezione del territorio e nelle indagini sugli incendi boschivi, molto importanti anche per i Castelli Romani.
+Fino al **2016** il **Corpo Forestale dello Stato** era un corpo di polizia autonomo. Nel **2017**, con il D.Lgs. 177/2016, è confluito nell'**Arma dei Carabinieri** ed è diventato il **Comando Unità per la Tutela Forestale, Ambientale e Agroalimentare**. Oggi si occupa di protezione del territorio e di indagini sugli incendi boschivi, che riguardano da vicino anche i Castelli Romani.
 
 ## La riforma del 2017
 
@@ -66,7 +66,7 @@ Ogni anno il Corpo Forestale indaga su migliaia di incendi e contribuisce alla p
 - **Rimboschimenti** e interventi di salvaguardia.
 
 ### Carabinieri Tutela Biodiversità e Parchi
-Gestiscono **130 riserve naturali** dello Stato (un patrimonio di grande valore nazionale).
+Gestiscono **130 riserve naturali** dello Stato.
 
 ## Il Corpo Forestale e i Castelli Romani
 
@@ -77,7 +77,7 @@ Nel territorio dei Castelli:
 - **Controlli** su abusivismo e reati ambientali.
 - **Supporto** al sistema AIB in stagione.
 
-Molti **incendi** nei Castelli hanno visto indagini efficaci con identificazione dei responsabili. Questo è un **deterrente importante**: l'incendiario doloso sa di essere ricercato.
+Molti **incendi** nei Castelli hanno visto indagini efficaci con identificazione dei responsabili. Questo è un **deterrente**: l'incendiario doloso sa di essere ricercato.
 
 ## Il lavoro investigativo
 
@@ -138,4 +138,4 @@ Il rispetto reciproco delle competenze è la regola.
 - [Parco Regionale Castelli Romani](https://www.parcocastelliromani.it/)
 - [Ministero dell'Interno](https://www.interno.gov.it/)
 
-Il Corpo Forestale è cambiato, ma resta una risorsa fondamentale per la protezione del territorio. Conoscerne ruolo e competenze aiuta a valorizzarne il lavoro quotidiano.
+Il Corpo Forestale è cambiato, ma continua a proteggere il territorio. Conoscerne ruolo e competenze aiuta a valorizzarne il lavoro quotidiano.

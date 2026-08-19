@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Il **corso base di Protezione Civile** avviato il **23 ottobre** si avvia verso la conclusione. Gli ultimi incontri sono dedicati al **ripasso**, all'**approfondimento** dei temi più complessi e alla **preparazione** dell'esame finale. Un momento importante per i volontari che stanno per entrare in servizio attivo.
+Il **corso base di Protezione Civile** avviato il **23 ottobre** si avvia verso la conclusione. Gli ultimi incontri sono dedicati al **ripasso**, all'**approfondimento** dei temi più complessi e alla **preparazione** dell'esame finale. Per i corsisti è il passaggio che precede l'ingresso in servizio attivo.
 
 ## Il percorso svolto
 
@@ -97,7 +97,7 @@ Un volontario formato:
 - **rappresenta** l'istituzione con dignità;
 - **aiuta** a costruire fiducia nel sistema di PC.
 
-La **formazione** non è burocrazia: è **garanzia** che chi interviene sappia cosa fare.
+La **formazione** è la **garanzia** che chi interviene sappia cosa fare.
 
 ## Ai corsisti
 

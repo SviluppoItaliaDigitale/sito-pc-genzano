@@ -58,7 +58,7 @@ Il trasporto di queste sostanze segue regole severe: per la ferrovia il **RID** 
 
 ## Ricordare è prevenire
 
-A Viareggio, ogni 29 giugno, la città si ferma per ricordare. La memoria delle vittime non è solo un dovere civile: è anche prevenzione. Capire come e perché è accaduto aiuta a far sì che non accada di nuovo. È lo stesso motivo per cui, come volontari, studiamo gli eventi del passato: per essere più pronti domani.
+A Viareggio, ogni 29 giugno, la città si ferma per ricordare. La memoria delle vittime è un dovere civile, ed è anche prevenzione. Capire come e perché è accaduto aiuta a far sì che non accada di nuovo. È lo stesso motivo per cui, come volontari, studiamo gli eventi del passato: per essere più pronti domani.
 
 ## Per approfondire
 

@@ -36,7 +36,7 @@ Con un piano:
 
 Un piano efficace è:
 - **Semplice** e memorizzabile.
-- **Coinvolgente** tutti i membri.
+- **Condiviso** con tutti i membri.
 - **Praticato** periodicamente.
 - **Aggiornato** ai cambiamenti.
 - **Adattato** alla casa specifica.

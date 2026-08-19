@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-In estate, quando un incendio boschivo raggiunge dimensioni rilevanti, la differenza tra **contenimento** e **disastro** può essere un Canadair. I **mezzi aerei** del sistema antincendio italiano sono un patrimonio operativo cruciale. Vale la pena conoscere come funzionano, chi li coordina, quando entrano in azione.
+In estate, quando un incendio boschivo raggiunge dimensioni rilevanti, la differenza tra **contenimento** e **disastro** può essere un Canadair. I **mezzi aerei** del sistema antincendio italiano sono un patrimonio operativo. Vale la pena conoscere come funzionano, chi li coordina, quando entrano in azione.
 
 ## La flotta italiana
 

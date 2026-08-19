@@ -28,20 +28,20 @@ Può sembrare distante dal nostro lavoro quotidiano. Ma la **Protezione Civile**
 
 Il servizio di volontariato di Protezione Civile è, nel suo piccolo, una forma di **presidio democratico**: cittadini liberi che, senza obbligo, scelgono di prendersi cura della comunità. Senza distinzioni di origine, religione, opinione politica.
 
-## La memoria non è solo ricordo
+## La memoria è più del ricordo
 
-Il Giorno della Memoria non è un'occasione commemorativa. È un atto **attivo** di consapevolezza. Fare memoria significa:
+Il Giorno della Memoria è più di un'occasione commemorativa: è un atto **attivo** di consapevolezza. Fare memoria significa:
 
 - **Sapere cosa è successo**, nei dettagli, non solo per slogan.
 - **Riconoscere i meccanismi**: come si arriva, passo dopo passo, alla disumanizzazione dell'altro.
 - **Difendere oggi**, con piccoli gesti quotidiani, la dignità di ogni persona.
 - **Trasmettere alle nuove generazioni** conoscenza e vigilanza.
 
-Primo Levi, sopravvissuto ad Auschwitz, scriveva: *"È accaduto, quindi può accadere di nuovo"*. La memoria è **antidoto**, non nostalgia.
+Primo Levi, sopravvissuto ad Auschwitz, scriveva: *"È accaduto, quindi può accadere di nuovo"*. La memoria è **antidoto**.
 
 ## Il ruolo del volontariato civico
 
-I gruppi di Protezione Civile, come il nostro, sono fatti di **persone diverse**: uomini e donne di ogni età, professione, provenienza. Ciò che ci unisce è la **scelta del servizio**, non l'uniformità.
+I gruppi di Protezione Civile, come il nostro, sono fatti di **persone diverse**: uomini e donne di ogni età, professione, provenienza. Ciò che ci unisce è la **scelta del servizio**.
 
 Un volontariato inclusivo — dove ciascuno trova spazio per le proprie competenze e sensibilità — è di per sé un esercizio di **democrazia attiva**. Ogni esercitazione, ogni attivazione, ogni ora di formazione è un piccolo mattone di quella **cittadinanza attiva** che si costruisce insieme.
 
@@ -49,7 +49,7 @@ Un volontariato inclusivo — dove ciascuno trova spazio per le proprie competen
 
 Anche Genzano di Roma, come molte città italiane, ha **memorie** legate al periodo 1943-1945: rastrellamenti, bombardamenti, lutti familiari, gesti di resistenza silenziosa. Non serve aver vissuto quegli anni per sentirli parte della propria storia: **le tracce restano** nei nomi delle vie, nei monumenti, negli archivi comunali, nelle storie familiari tramandate.
 
-Conoscere il proprio territorio — anche la sua storia difficile — è parte di ciò che rende una comunità **resiliente**. Non solo resiliente di fronte ai terremoti e alle alluvioni, ma anche di fronte alle crisi sociali, alle divisioni, alla paura dell'altro.
+Conoscere il proprio territorio — anche la sua storia difficile — è parte di ciò che rende una comunità **resiliente**. Una resilienza che vale davanti ai terremoti e alle alluvioni come davanti alle crisi sociali, alle divisioni, alla paura dell'altro.
 
 ## Un esercizio di memoria attiva
 
@@ -61,7 +61,7 @@ Il 27 gennaio può essere un giorno per:
 - **Guardare un documentario** con i figli, adattato all'età.
 - **Visitare Auschwitz**, Risiera di San Sabba, Fosse Ardeatine — se si ha l'occasione, prima o poi nella vita.
 
-Non serve cercare grandi gesti. Serve **non distogliere lo sguardo**.
+Non servono grandi gesti: basta **non distogliere lo sguardo**.
 
 ## Le pietre d'inciampo
 
@@ -73,7 +73,7 @@ Non è una targa maestosa. È un **sasso nel pavimento**. Ma costringe a fermars
 
 La Protezione Civile parla di rischi naturali, emergenze, comportamenti pratici. Ma un sito istituzionale **della comunità** non può tacere sul **27 gennaio**.
 
-Un'Italia senza memoria è un'Italia più fragile, non solo di fronte ai terremoti. E ogni volontario di Protezione Civile, ogni cittadino attivo, porta dentro di sé una forma semplice e robusta di memoria: **io ci sono, per gli altri, oggi**.
+Un'Italia senza memoria è un'Italia più fragile, davanti ai terremoti e a ogni altra prova. E ogni volontario di Protezione Civile, ogni cittadino attivo, porta dentro di sé una forma semplice e robusta di memoria: **io ci sono, per gli altri, oggi**.
 
 È esattamente il contrario di quello che il razzismo insegna.
 

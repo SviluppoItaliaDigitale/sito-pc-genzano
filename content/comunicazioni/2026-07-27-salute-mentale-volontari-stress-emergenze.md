@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Essere **volontario di Protezione Civile** significa esporsi a esperienze che possono lasciare **impronte psicologiche** profonde: incidenti, persone in difficoltà, scene di sofferenza, operazioni in condizioni estreme. La **salute mentale del volontario** non è un tema secondario: è parte integrante della preparazione professionale. Ignorarla significa compromettere persone preziose.
+Essere **volontario di Protezione Civile** significa esporsi a esperienze che possono lasciare **impronte psicologiche** profonde: incidenti, persone in difficoltà, scene di sofferenza, operazioni in condizioni estreme. La **salute mentale del volontario** è parte integrante della preparazione professionale. Ignorarla significa compromettere persone preziose.
 
 ## Il peso emotivo del volontariato
 
@@ -76,7 +76,7 @@ Dopo ogni operazione significativa:
 - **Supporto** reciproco.
 - **Identificazione** di persone a rischio.
 
-Il **debriefing** è **parte integrante** dell'operatività, non un optional.
+Il **debriefing** fa parte a pieno titolo dell'operatività.
 
 ## Critical Incident Stress Management (CISM)
 
@@ -109,7 +109,7 @@ Per situazioni più complesse:
 - **Gruppi** terapeutici.
 - **Farmacoterapia** quando necessaria.
 
-Non c'è **vergogna** nel chiedere aiuto: è professionalità.
+Chiedere aiuto è segno di **professionalità**.
 
 ## La cultura del "non è niente"
 

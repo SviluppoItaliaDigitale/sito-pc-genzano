@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Alle **11:56 ora locale del 25 aprile 2015** una scossa di **magnitudo 7.8** colpì la valle di Kathmandu, in Nepal. L'epicentro era nel distretto di **Gorkha**, a circa 80 chilometri dalla capitale. Profondità ipocentrale: 8 chilometri, molto superficiale.Il bilancio: **circa 9.000 morti**, **oltre 22.000 feriti**, **3,5 milioni di sfollati**. Distrutti **migliaia di edifici** in Kathmandu e nei distretti rurali, gravemente danneggiati i **siti UNESCO** della valle (templi e monumenti hindu e buddisti, alcuni vecchi di secoli).
+Alle **11:56 ora locale del 25 aprile 2015** una scossa di **magnitudo 7.8** colpì la valle di Kathmandu, in Nepal. L'epicentro era nel distretto di **Gorkha**, a circa 80 chilometri dalla capitale. Profondità ipocentrale: 8 chilometri, molto superficiale. Il bilancio: **circa 9.000 morti**, **oltre 22.000 feriti**, **3,5 milioni di sfollati**. Distrutti **migliaia di edifici** in Kathmandu e nei distretti rurali, gravemente danneggiati i **siti UNESCO** della valle (templi e monumenti hindu e buddisti, alcuni vecchi di secoli).
 
 ## Una sequenza lunga
 

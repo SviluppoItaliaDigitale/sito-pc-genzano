@@ -27,7 +27,7 @@ Il **23 aprile** è la festa di **San Giorgio**, patrono dello scoutismo. Robert
 
 ## Estote Parati: una pedagogia del "essere pronti"
 
-Il motto degli scout — *"Estote parati"*, "Siate pronti" — non è uno slogan. Baden-Powell lo definiva una **triplice preparazione**:
+Baden-Powell definiva il motto degli scout — *"Estote parati"*, "Siate pronti" — una **triplice preparazione**:
 
 - di **mente**, perché il volontario sappia **decidere bene** in pochi secondi
 - di **corpo**, perché abbia la **resistenza fisica** di reggere giorni di servizio
@@ -49,7 +49,7 @@ Un ragazzo o una ragazza che cresce in un gruppo scout impara, anno dopo anno, u
 | **Service** (servizio extra) | Cultura del **dono** del proprio tempo, senza compenso |
 | **Resistenza fisica e mentale** | Turni lunghi, sonno scarso, freddo, fango |
 
-Il **lavoro di squadriglia** — la "pattuglia" di sei-otto ragazzi che si auto-organizza con un capo eletto — è una scuola di **lavoro di squadra in autonomia**. È esattamente la cellula operativa che serve in un campo di accoglienza o in un'area di attesa.
+Il **lavoro di squadriglia** — la "pattuglia" di sei-otto ragazzi che si auto-organizza con un capo eletto — è una scuola di **lavoro di squadra in autonomia**. È la cellula operativa che serve in un campo di accoglienza o in un'area di attesa.
 
 ## Firenze 1966: gli "angeli del fango" e i ragazzi del Bargellini
 
@@ -73,7 +73,7 @@ In quell'estate del 1976, **7.500 scout dell'AGESCI** raggiungono il Friuli. Pi�
 
 Il loro lavoro: assistere le persone, montare e gestire le tendopoli, fare servizio mensa, gestire i magazzini, distribuire i materiali. Soprattutto, **animare i bambini e i ragazzi** sopravvissuti al sisma, restituendo loro un pezzo di normalità nel mezzo della catastrofe.
 
-Sarà lo stesso Zamberletti a riconoscere pubblicamente, alla fine dell'emergenza, l'**autonomia logistica** degli scout e il loro contributo educativo nei confronti dei più piccoli. Da quel riconoscimento nasce un'idea: il volontariato organizzato non è una riserva da chiamare in extremis. È una **componente strutturale** del sistema di Protezione Civile.
+Sarà lo stesso Zamberletti a riconoscere pubblicamente, alla fine dell'emergenza, l'**autonomia logistica** degli scout e il loro contributo educativo nei confronti dei più piccoli. Da quel riconoscimento nasce un'idea: il volontariato organizzato è una **componente strutturale** del sistema di Protezione Civile, non una riserva da chiamare in extremis.
 
 {{< foto src="/images/2026-04-23-friuli-1976-terremoto-gemona.webp"
          alt="Mappa ShakeMap USGS del terremoto del Friuli del 6 maggio 1976, magnitudo 6.5, con l'area di scuotimento più severo (in rosso) centrata sulle Alpi Carniche presso Gemona"
@@ -155,7 +155,7 @@ In sei settimane, AGESCI Emilia-Romagna raccoglie **42.700 euro** di donazioni a
 
 Operare in emergenza, oggi, richiede **formazione obbligatoria**. Il **D.Lgs. 81/2008** sulla sicurezza sul lavoro impone a tutti i volontari di Protezione Civile un percorso strutturato. AGESCI ha sviluppato:
 
-- il **Corso Sicurezza per volontari di Protezione Civile**, frequenza obbligatoria per chi intervenire in emergenza;
+- il **Corso Sicurezza per volontari di Protezione Civile**, frequenza obbligatoria per chi interviene in emergenza;
 - il **Corso Emergenza Alluvione (CEA)**, attivato in occasione dell'Emilia-Romagna 2023 ma ormai consolidato come modulo specialistico;
 - il **Percorso Sicurezza** descritto nel **Protocollo Operativo** del Settore PC, che definisce ruoli, attivazione, dotazioni individuali, catena di comando.
 
@@ -167,13 +167,13 @@ Dal **2007**, il **Dipartimento della Protezione Civile** organizza, in collabor
 
 L'edizione **2024** ha portato il totale dei giovani formati a **circa ottantamila** dalla nascita del progetto. Nel 2025, per i 15 anni dell'iniziativa, **oltre 340 campi scuola** distribuiti su tutto il territorio nazionale accolgono **più di seimila ragazzi e ragazze**. I partecipanti incontrano Forze di Polizia, Vigili del Fuoco, 118, Croce Rossa, Comuni, Regioni e, naturalmente, i volontari delle associazioni scout.
 
-I temi: primo soccorso, orientamento, educazione civica, sostenibilità ambientale, conoscenza del Piano Comunale di Emergenza. Non è un caso che molti **divulgatori scout** del Settore PC siano fra gli educatori dei campi scuola: gli scout sanno **fare scuola di emergenza ai loro coetanei** perché lo fanno da sempre.
+I temi: primo soccorso, orientamento, educazione civica, sostenibilità ambientale, conoscenza del Piano Comunale di Emergenza. Molti **divulgatori scout** del Settore PC sono fra gli educatori dei campi scuola: gli scout sanno **fare scuola di emergenza ai loro coetanei** perché lo fanno da sempre.
 
 ## Cosa significa per Genzano di Roma
 
 Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** è un gruppo comunale di protezione civile, articolazione del Comune di Genzano di Roma (iscritto al RUNTS come Ente del Terzo Settore), autonomo e distinto rispetto alle associazioni scout. Ma **una parte significativa dei nostri volontari attivi proviene dal mondo scout locale**, in particolare dai gruppi **AGESCI Genzano 1** e **AGESCI Genzano 2**. Sono presenti sul territorio da decenni e hanno formato generazioni di ragazzi e ragazze del nostro Comune. L'esperienza scout — la disciplina, l'autonomia, il lavoro di squadra, il senso del servizio — è una **base solida** da cui parte chi sceglie di unirsi a noi.
 
-Non è un caso: chi è cresciuto con la **squadriglia**, la **route**, il **campo estivo**, l'idea che servire la comunità sia parte naturale dell'essere cittadini, ritrova nel volontariato di Protezione Civile una continuità coerente del proprio percorso. Più che un cambio, è un passaggio di testimone: dalla formazione personale alla **responsabilità operativa** verso il territorio in cui si vive.
+Chi è cresciuto con la **squadriglia**, la **route**, il **campo estivo**, l'idea che servire la comunità sia parte naturale dell'essere cittadini, ritrova nel volontariato di Protezione Civile una continuità coerente del proprio percorso. Più che un cambio, è un passaggio di testimone: dalla formazione personale alla **responsabilità operativa** verso il territorio in cui si vive.
 
 In caso di emergenza locale (un'ondata di calore, un incendio boschivo, un evento meteo estremo), la collaborazione fra il Gruppo PC e i gruppi AGESCI Genzano 1 e Genzano 2 è un canale di **prossimità reale**. Il Piano di Emergenza Comunale può attivarla con poco preavviso.
 

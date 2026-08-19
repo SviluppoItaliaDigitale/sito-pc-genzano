@@ -40,7 +40,7 @@ Le specie **invasive** hanno alterato il quadro epidemiologico.
 - **Origine**: tropicale, ora casi autoctoni in Italia.
 - **Sintomi**: febbre alta, dolori muscolari e articolari, eritema.
 - **Forme gravi**: rare ma esistenti.
-- **Prevenzione**: vaccino per viaggiatori a rischio, nessuno uso generale.
+- **Prevenzione**: vaccino per viaggiatori a rischio, nessun uso generale.
 
 ### Chikungunya
 - **Vettore**: zanzara tigre.
@@ -205,7 +205,7 @@ A Roma e dintorni sono presenti:
 - **Policlinici** universitari con infettivologia.
 - **Ospedali** ASL con reparti dedicati.
 
-L'Italia ha **rete** ben strutturata.
+L'Italia ha una **rete** ben strutturata.
 
 ## Il futuro prossimo
 

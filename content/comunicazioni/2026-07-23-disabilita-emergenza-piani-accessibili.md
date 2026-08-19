@@ -112,7 +112,7 @@ Procedure specifiche:
 - **Veicoli** di trasporto accessibili.
 - **Assistenti** personali sempre con la persona.
 
-La **formazione** del personale è essenziale.
+Queste manovre richiedono personale **formato**.
 
 ## Evacuazione con disabilità sensoriali
 
@@ -162,7 +162,7 @@ In crisi:
 - **Farmaci** essenziali da non interrompere.
 - **Contatto** con CSM (Centro di Salute Mentale).
 
-L'attenzione **specifica** è fondamentale.
+Serve un'attenzione **specifica**.
 
 ## Formazione degli operatori
 
@@ -196,7 +196,7 @@ Quando si chiama il 112:
 - **Persone che non possono parlare**: si può chiamare e restare in silenzio; l'operatore riconosce la chiamata muta come potenziale emergenza.
 - **Persone straniere**: il servizio è multilingue.
 
-L'**accessibilità** del 112 è in progresso.
+L'**accessibilità** del 112 sta migliorando.
 
 ## Il cittadino comune
 
@@ -228,7 +228,7 @@ La **Convenzione ONU** e la **Strategia Europea sulla Disabilità** 2021-2030 ch
 - **Formazione** inclusiva.
 - **Valutazione** continua.
 
-L'Italia sta **progressivamente** implementando.
+L'Italia si sta **progressivamente** adeguando.
 
 ## Per approfondire
 
