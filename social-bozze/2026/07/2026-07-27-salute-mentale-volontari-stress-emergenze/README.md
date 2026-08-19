@@ -1,7 +1,7 @@
-# Immagini e testi social per «Previsioni meteo e bollettini di allerta: come funziona il sistema»
+# Immagini e testi social per «Salute mentale dei volontari: gestire lo stress delle emergenze»
 
-- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-04-20-previsioni-meteo-bollettini-come-funzionano/
-- **Data**: 2026-04-20
+- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-07-27-salute-mentale-volontari-stress-emergenze/
+- **Data**: 2026-07-27
 - **Badge**: Informazione
 
 ## Dove va ogni file (a prova di errore)
