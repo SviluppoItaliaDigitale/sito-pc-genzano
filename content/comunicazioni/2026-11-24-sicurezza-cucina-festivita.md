@@ -58,7 +58,7 @@ La **cucina** è il luogo **più pericoloso** della casa. Durante le feste — *
 - **evitare** accavallamenti di operazioni critiche.
 
 ### Fornelli e forno
-- **non lasciare** mai incustoditi olii in pentola;
+- **non lasciare** mai incustoditi oli in pentola;
 - **non lasciare** mai padelle vuote sui fuochi accesi;
 - **coperchi** a portata per soffocare eventuali fiamme;
 - **controllare** il forno periodicamente;
