@@ -375,14 +375,61 @@ def _mask_preserve_lines(text: str, pattern: str, flags=0) -> str:
     return re.sub(pattern, repl, text, flags=flags)
 
 
+_JS_LITERAL_RE = re.compile(
+    r"'(?:[^'\\\n]|\\.)*'"      # '...'
+    r"|\"(?:[^\"\\\n]|\\.)*\""  # "..."
+    r"|`(?:[^`\\]|\\.)*`",       # `...` (anche multi-riga)
+    re.S,
+)
+
+
+def _mask_js_keep_prose(code: str) -> str:
+    """Maschera il codice JS ma CONSERVA i letterali che sono prosa italiana.
+
+    WHY (review Codex su PR #876): nei giochi il testo per l'utente vive
+    dentro stringhe JavaScript (domande, feedback: «può innescare una
+    esplosione»). Mascherare l'intero <script> lasciava quel testo fuori
+    da ogni controllo. Qui il codice diventa spazi, ma i letterali che
+    "sembrano frasi" (due parole di fila, niente caratteri da codice)
+    restano e passano per le regole. Gli apostrofi escapati \' diventano
+    apostrofi veri (offset preservati: 2 char -> 2 char).
+    """
+    code = _mask_preserve_lines(code, r"/\*.*?\*/", re.S)   # commenti /* */
+    code = _mask_preserve_lines(code, r"//[^\n]*")            # commenti //
+    out = []
+    pos = 0
+    for m in _JS_LITERAL_RE.finditer(code):
+        out.append("".join(ch if ch == "\n" else " " for ch in code[pos:m.start()]))
+        lit = m.group(0)
+        inner = lit[1:-1]
+        norm = inner.replace("\\'", "' ").replace('\\"', '" ')
+        e_prosa = (
+            re.search(r"[A-Za-zà-ùÀ-Ù]{2,}\s+[A-Za-zà-ùÀ-Ù]{2,}", norm)
+            and not re.search(r"[<>{}=;\\]|\$\{", norm)
+        )
+        if e_prosa:
+            out.append(" " + norm + " ")
+        else:
+            out.append("".join(ch if ch == "\n" else " " for ch in lit))
+        pos = m.end()
+    out.append("".join(ch if ch == "\n" else " " for ch in code[pos:]))
+    return "".join(out)
+
+
 def _mask_html(text: str) -> str:
     """Maschera di un file HTML: resta solo il testo visibile, riga per riga.
 
-    Ordine: blocchi <script>/<style> (via il codice JS/CSS), commenti,
-    tag (anche multi-riga), entità, URL. Tutto sostituito con spazi
-    preservando i newline, così i numeri di riga dei findings sono giusti.
+    Ordine: blocchi <style> (via il CSS), <script> (via il codice ma NON i
+    letterali di prosa — vedi _mask_js_keep_prose), commenti, tag (anche
+    multi-riga), entità, URL. Tutto sostituito con spazi preservando i
+    newline, così i numeri di riga dei findings sono giusti.
     """
-    t = _mask_preserve_lines(text, r"<(script|style)[^>]*>.*?</\1>", re.I | re.S)
+    def _script_repl(m):
+        apertura = "".join(ch if ch == "\n" else " " for ch in m.group(1))
+        chiusura = "".join(ch if ch == "\n" else " " for ch in m.group(3))
+        return apertura + _mask_js_keep_prose(m.group(2)) + chiusura
+    t = re.sub(r"(<script[^>]*>)(.*?)(</script>)", _script_repl, text, flags=re.I | re.S)
+    t = _mask_preserve_lines(t, r"<style[^>]*>.*?</style>", re.I | re.S)
     t = _mask_preserve_lines(t, r"<!--.*?-->", re.S)
     t = _mask_preserve_lines(t, r"<[^>]*>", re.S)      # tag, anche spezzati su piu' righe
     def _apos(m):  # scrive l'apostrofo al posto del 1° carattere dell'entita'
