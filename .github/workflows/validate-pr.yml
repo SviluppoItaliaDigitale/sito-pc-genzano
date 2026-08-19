@@ -147,10 +147,23 @@ jobs:
         # WHY (19/08/2026): tre errori di italiano sono andati live superando i
         # controlli, perché audit-grammatica-italiana.py girava SOLO in
         # audit-sito.yml (ogni 6h, dopo la pubblicazione) e check-refusi.py è uno
-        # spell-check di parola singola. Qui il controllo diventa un gate di PR:
-        # le violazioni ERR (accenti, apostrofi, spaziature, elisioni) bloccano
-        # PRIMA del merge. Gli errori che richiedono lettura (articolo mancante,
-        # accordi) restano in carico all'agent pc-revisore-linguistico.
+        # spell-check di parola singola. Qui il controllo diventa un gate di PR.
+        #
+        # Cosa BLOCCA:
+        #  - findings ERR dell'audit grammaticale (accenti, apostrofi, spaziature,
+        #    elisioni) sui file modificati;
+        #  - parole sospette NUOVE, cioè non già presenti sul branch base: sono
+        #    quasi sempre refusi introdotti da questa PR.
+        # Cosa NON blocca (per scelta, documentata):
+        #  - parole sospette già presenti sul base branch: sono in stragrande
+        #    maggioranza termini tecnici e inglesi legittimi (73 sul sito ad
+        #    agosto 2026). Vanno in allowlist scripts/dizionario-pc.txt, non
+        #    bloccano una PR che non le ha introdotte.
+        #  - findings WARN (doppio spazio, parola ripetuta): spesso voluti
+        #    (allineamenti di schede, figure retoriche). Restano informativi.
+        # Gli errori che richiedono una LETTURA (articolo mancante, accordi,
+        # reggenze) non sono intercettabili qui: se ne occupa l'agent
+        # pc-revisore-linguistico, gate obbligato prima del commit.
         run: |
           set -euo pipefail
           BASE="${{ github.event.pull_request.base.sha }}"
@@ -159,29 +172,45 @@ jobs:
             echo "Nessun contenuto modificato: niente da controllare."; exit 0
           fi
           echo "File modificati:"; cat /tmp/changed.txt
+          fail=0
+
+          echo "::group::Grammatica e tipografia (sui file modificati)"
+          # Lo script accetta i file come argomenti: audita ESATTAMENTE questi,
+          # senza dipendere dalla sua enumerazione interna.
+          xargs -a /tmp/changed.txt python3 scripts/audit-grammatica-italiana.py > /tmp/gram.txt 2>&1 || true
+          cat /tmp/gram.txt
+          echo "::endgroup::"
+
+          if awk '/^## ❌ ERR/{f=1;next} /^## ⚠️/{f=0} f' /tmp/gram.txt | grep -q '^- `'; then
+            echo "::error::Errori di italiano bloccanti nei file modificati (sezione ERR)"
+            awk '/^## ❌ ERR/{f=1;next} /^## ⚠️/{f=0} f' /tmp/gram.txt | grep '^- `' | head -20
+            fail=1
+          fi
 
           echo "::group::Refusi (hunspell)"
-          xargs -a /tmp/changed.txt python3 scripts/check-refusi.py || true
+          xargs -a /tmp/changed.txt python3 scripts/check-refusi.py > /tmp/refusi.txt 2>&1 || true
+          cat /tmp/refusi.txt
           echo "::endgroup::"
 
-          echo "::group::Grammatica e tipografia"
-          python3 scripts/audit-grammatica-italiana.py > /tmp/gram.txt 2>&1 || true
-          echo "::endgroup::"
-
-          # Blocca solo sugli ERR che toccano i file di questa PR.
-          fail=0
-          while read -r f; do
-            [ -n "$f" ] || continue
-            if awk '/^## ❌ ERR/,/^## ⚠️/' /tmp/gram.txt | grep -q -- "$f"; then
-              echo "::error file=$f::Errore di italiano (vedi audit grammaticale)"
-              awk '/^## ❌ ERR/,/^## ⚠️/' /tmp/gram.txt | grep -- "$f" | head -5
-              fail=1
-            fi
-          done < /tmp/changed.txt
+          # Parole sospette NUOVE = non presenti sul branch base -> refuso introdotto qui.
+          git grep -h '' "$BASE" -- 'content/**/*.md' > /tmp/base.txt 2>/dev/null || true
+          grep -oE '^ +- [A-Za-zÀ-ÿ]+' /tmp/refusi.txt | sed 's/^ *- //' | sort -u > /tmp/words.txt || true
+          nuove=""
+          while read -r w; do
+            [ -n "$w" ] || continue
+            if ! grep -qiw -- "$w" /tmp/base.txt; then nuove="$nuove $w"; fi
+          done < /tmp/words.txt
+          if [ -n "$nuove" ]; then
+            echo "::error::Parole sospette NUOVE introdotte da questa PR:$nuove"
+            echo "Se sono termini corretti, aggiungile a scripts/dizionario-pc.txt"
+            fail=1
+          fi
 
           if [ "$fail" = "1" ]; then
             echo ""
-            echo "Riproduci in locale:  python3 scripts/audit-grammatica-italiana.py"
+            echo "Riproduci in locale:"
+            echo "  xargs -a <lista> python3 scripts/audit-grammatica-italiana.py"
+            echo "  xargs -a <lista> python3 scripts/check-refusi.py"
             exit 1
           fi
           echo "✅ Nessun errore di italiano bloccante sui file modificati."

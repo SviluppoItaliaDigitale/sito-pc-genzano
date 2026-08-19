@@ -274,7 +274,7 @@ RULES = [
     ),
     rule(
         "ELISIONE_MANCANTE",
-        "WARN",
+        "ERR",
         r"\b([Uu]na|[Nn]ella|[Dd]ella|[Dd]alla|[Aa]lla|[Ss]ulla)\s+([aeiouàèéìòù][a-zà-ù]{2,})",
         "Manca l'elisione davanti a vocale (es. « una emergenza » -> « un'emergenza »).",
         suggest="Elidere: un', nell', dell', dall', all', sull', quell', quest'",
@@ -283,7 +283,11 @@ RULES = [
         # NON si elide davanti a: i/u semiconsonantiche (una iena, una uova);
         # preposizioni e avverbi (« una alla volta », « una ad una »);
         # « uno » cardinale (« una a una »).
-        exclude=r"\s+(i[aeou]|u[aeio]|alla|allo|alle|agli|ad|anche|ancora|inoltre|oppure)\b",
+        # BUG corretto 19/08/2026: il \b finale valeva per TUTTO il gruppo e
+        # impediva il match su "ionosfera"/"iodoprofilassi" (dopo "io" c'è una
+        # consonante), che venivano segnalate a torto. Le i/u semiconsonantiche
+        # ora hanno un ramo proprio senza \b.
+        exclude=r"\s+(i[aeou]|u[aeio])|\s+(alla|allo|alle|agli|ad|anche|ancora|inoltre|oppure|accanto|ogni|altra|altro|una)\b",
     ),
 ]
 
@@ -307,16 +311,26 @@ def is_skippable_line(line: str, in_code_fence: bool) -> bool:
 
 
 # ----------------------------------------------------------------
-def find_articles() -> Iterator[Path]:
-    """Ritorna i Markdown da auditare."""
-    # Articoli pubblici
-    yield from sorted(CONTENT.glob("comunicazioni/*.md"))
-    # Pagine istituzionali (_index.md di ogni sezione)
-    yield from sorted(CONTENT.glob("*/_index.md"))
-    # Pagine di formazione (sotto-sezioni)
-    yield from sorted(CONTENT.glob("formazione/*.md"))
-    # Pagine rischi-prevenzione
-    yield from sorted(CONTENT.glob("rischi-prevenzione/*.md"))
+def find_articles(only: list[str] | None = None) -> Iterator[Path]:
+    """Ritorna i Markdown da auditare.
+
+    Senza argomenti: TUTTI i .md sotto content/ (ricorsivo). Fino al
+    19/08/2026 la funzione elencava solo 4 glob non ricorsivi e lasciava
+    scoperti ~300 file annidati (es. content/formazione/manuale-campo/*.md):
+    una PR che ne modificava uno passava il gate senza essere controllata.
+
+    Con `only`: solo i file indicati (usato dal gate di PR per auditare
+    esattamente i file modificati).
+    """
+    if only:
+        for f in only:
+            pth = Path(f)
+            if not pth.is_absolute():
+                pth = ROOT / f
+            if pth.suffix == ".md" and pth.exists():
+                yield pth
+        return
+    yield from sorted(CONTENT.rglob("*.md"))
 
 
 def line_index_to_friendly(text: str, idx: int) -> tuple[int, int, str]:
@@ -335,6 +349,14 @@ def line_index_to_friendly(text: str, idx: int) -> tuple[int, int, str]:
         end = min(len(snippet), rel_idx + 80)
         snippet = ("..." if start > 0 else "") + snippet[start:end] + ("..." if end < len(snippet) else "")
     return line_no, col, snippet
+
+
+def _rel(path: Path) -> str:
+    """Path relativo alla root del repo; assoluto se il file sta fuori."""
+    try:
+        return str(path.relative_to(ROOT))
+    except ValueError:
+        return str(path)
 
 
 def audit_file(path: Path) -> list[dict]:
@@ -397,11 +419,11 @@ def audit_file(path: Path) -> list[dict]:
             suggested = suggested[0].upper() + suggested[1:]
         line_no, col, snippet = line_index_to_friendly(text, m.start() + body_offset)
         findings.append({
-            "file": str(path.relative_to(ROOT)),
+            "file": _rel(path),
             "line": line_no,
             "col": col,
             "code": "ACCENTO_MANCANTE",
-            "severity": "WARN",
+            "severity": "ERR",
             "match": word,
             "suggest": suggested,
             "snippet": snippet,
@@ -414,9 +436,19 @@ def audit_file(path: Path) -> list[dict]:
     # positivi (incidente 19/08/2026: 40+ segnalazioni fasulle su <abbr>, <a>).
     righe_non_prosa = set()
     for i, riga in enumerate(text.split("\n"), start=1):
-        if re.search(r"<[a-zA-Z/!]", riga) or "|" in riga or "`" in riga \
-           or "{{" in riga or "](" in riga or "http" in riga \
-           or re.search(r"[=;{}]|\w\(", riga):
+        # Riga di codice o markup: qui la mascheratura crea spazi artificiali.
+        # NB: il punto e virgola da solo NON basta a squalificare una riga —
+        # in italiano separa legittimamente gli elementi di un elenco.
+        e_codice = bool(
+            re.search(r"<[a-zA-Z/!]", riga)          # tag HTML
+            or "`" in riga                            # code span
+            or "{{" in riga                           # shortcode Hugo
+            or "](" in riga or "http" in riga         # link markdown / URL
+            or riga.lstrip().startswith("|")          # tabella
+            or re.search(r"(^|\s)(var|let|const|function|return|if)\s", riga)
+            or re.search(r"[=<>]=|=>|\)\s*[;{]|;\s*$|\w\.\w+\(", riga)
+        )
+        if e_codice:
             righe_non_prosa.add(i)
 
     # Applica le altre regole
@@ -430,7 +462,7 @@ def audit_file(path: Path) -> list[dict]:
             if r.get("prose_only") and line_no in righe_non_prosa:
                 continue
             findings.append({
-                "file": str(path.relative_to(ROOT)),
+                "file": _rel(path),
                 "line": line_no,
                 "col": col,
                 "code": r["code"],
@@ -447,7 +479,7 @@ def audit_file(path: Path) -> list[dict]:
 def main() -> int:
     all_findings: list[dict] = []
     files_count = 0
-    for path in find_articles():
+    for path in find_articles(sys.argv[1:]):
         files_count += 1
         all_findings.extend(audit_file(path))
 

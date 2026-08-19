@@ -436,11 +436,12 @@ python3 scripts/fix-ordering-articoli-stesso-giorno.py
 
 ## 7. Agenti specializzati esistenti (riferimento)
 
-In `.claude/agents/` ci sono **16 agenti custom** ottimizzati per Claude Code (al 30 giugno 2026; il 16° è `pc-correttore-bozze`). **ChatGPT/Codex ha il suo sistema di sub-agenti diverso** e non li può richiamare direttamente, ma può **emulare il loro lavoro** seguendo le specifiche descritte. Le specifiche complete (system prompt + workflow + esempi) sono in `manuale/parte-19-agenti-specializzati.md`.
+In `.claude/agents/` ci sono **17 agenti custom** ottimizzati per Claude Code (al 19 agosto 2026; il 17° è `pc-revisore-linguistico`). **ChatGPT/Codex ha il suo sistema di sub-agenti diverso** e non li può richiamare direttamente, ma può **emulare il loro lavoro** seguendo le specifiche descritte. Le specifiche complete (system prompt + workflow + esempi) sono in `manuale/parte-19-agenti-specializzati.md`.
 
 | Agent | Trigger naturali | Cosa fa (sintesi) |
 |---|---|---|
 | `pc-article-reviewer` | "rivedi questo articolo", "controlla il frontmatter", "va bene per pubblicare?" | Gate AGID obbligato pre-commit: frontmatter, badge, data, link interni, convenzioni foto, qualità ChatGPT 9.5/10 |
+| `pc-revisore-linguistico` | gate linguistico obbligato richiamato da pc-article-reviewer su ogni articolo | Esegue i due correttori deterministici (`check-refusi.py` refusi di parola + `audit-grammatica-italiana.py` accenti/apostrofi/spazi/elisioni), poi la **lettura sintattica** per ciò che nessuna regex vede: articoli mancanti («ha rete» → «ha una rete»), accordi di genere/numero, concordanze verbali a distanza, reggenze delle preposizioni. Autorità linguistica: Treccani, in subordine Crusca |
 | `pc-photo-caption-verifier` | gate visivo richiamato da pc-article-reviewer quando l'articolo ha `{{< foto >}}` | Read multimodale di ogni foto, verifica che alt/caption descrivano ciò che si vede, attribuzione corretta, web-check entità citate |
 | `pc-accessibility-auditor` | "audit accessibilità", "controlla WCAG" | Audit contenuti markdown WCAG 2.2 AA (alt, heading, link, sigle, lingua, contrasto) — complementare a Lighthouse |
 | `pc-content-freshness` | "ci sono articoli vecchi?", "scadenze passate" | Sweep articoli con `scadenza:` superata, identifica articoli > 18 mesi con dati obsoleti |
