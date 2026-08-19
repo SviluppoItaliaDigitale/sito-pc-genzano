@@ -79,7 +79,7 @@ Genzano di Roma si trova nella **Zona di allerta F — Bacini Costieri Sud** (cl
 
 ## 4. Cosa significano i codici colore
 
-I colori non descrivono la pioggia, ma gli **effetti attesi al suolo**.
+I colori descrivono gli **effetti attesi al suolo**, non la pioggia in sé.
 
 | Colore | Significato |
 |---|---|

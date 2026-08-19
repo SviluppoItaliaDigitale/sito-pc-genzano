@@ -18,7 +18,7 @@ Nel giorno di **Ferragosto**, il Gruppo Comunale Volontari di Protezione Civile 
 
 ## Il senso della festa
 
-**Ferragosto** è festa antica, nata come *Feriae Augusti* di riposo per i lavoratori agricoli e divenuta nel corso dei secoli sintesi di cultura popolare e di spiritualità cristiana. Oggi, accanto al significato religioso, conserva il carattere di festa collettiva e di pausa estiva. In una società che cambia rapidamente, è anche momento di riflessione sul senso della comunità, della solidarietà, del reciproco sostegno.
+**Ferragosto** è festa antica, nata come *Feriae Augusti* di riposo per i lavoratori agricoli e divenuta nel corso dei secoli sintesi di cultura popolare e di spiritualità cristiana. Oggi, accanto al significato religioso, conserva il carattere di festa collettiva e di pausa estiva. È anche un momento di riflessione sul senso della comunità e del reciproco sostegno.
 
 ## Un grazie agli operatori del soccorso
 

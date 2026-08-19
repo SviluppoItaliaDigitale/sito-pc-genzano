@@ -46,7 +46,7 @@ Il 13 ottobre 2022, durante la 460ª prova di sintonia, il Capo del Dipartimento
 
 ## Le prove di sintonia: quasi cinquecento mesi senza interruzione
 
-Dal 1985, ogni mese — di norma l'ultimo giovedì — si svolge una prova di collegamento radio tra le Prefetture italiane. Si chiamano **prove di sintonia** e rappresentano una delle esercitazioni più longeve e costanti dell'intero sistema di protezione civile italiano.
+Dal 1985, ogni mese — di norma l'ultimo giovedì — si svolge una prova di collegamento radio tra le Prefetture italiane. Si chiamano **prove di sintonia** e sono una delle esercitazioni più longeve e costanti dell'intero sistema di protezione civile italiano.
 
 Il meccanismo è collaudato. Ogni sera di esercitazione, circa quaranta delle oltre cento Prefetture presenti sul territorio nazionale si collegano in HF sulle bande degli 80 o dei 40 metri, in funzione delle condizioni di propagazione ionosferica del momento. Le chiamate sono coordinate da tre stazioni **capo maglia**: le Prefetture di **Varese**, **Siena** e **Reggio Calabria**, distribuite geograficamente per garantire la copertura dell'intero territorio.
 
@@ -58,11 +58,11 @@ A rispondere alle chiamate non sono soltanto le Prefetture. Partecipano stabilme
 - una **unità navale della Marina Militare**, diversa di volta in volta;
 - un radioamatore dalla **Repubblica di San Marino**.
 
-Il coinvolgimento della Marina Militare è un elemento distintivo e di grande valore operativo. Ad ogni prova mensile partecipa una nave militare, che trasmette un radiogramma diretto al Dipartimento della Protezione Civile. Negli anni si sono alternate diverse unità: dalla fregata "Mimbelli" al pattugliatore "Sirio", dalla portaerei "Cavour" alla fregata "Carabiniere". Ogni nave rappresenta un nodo mobile della rete, capace di operare da qualsiasi punto del Mediterraneo.
+Il coinvolgimento della Marina Militare è un elemento distintivo. Ad ogni prova mensile partecipa una nave militare, che trasmette un radiogramma diretto al Dipartimento della Protezione Civile. Negli anni si sono alternate diverse unità: dalla fregata "Mimbelli" al pattugliatore "Sirio", dalla portaerei "Cavour" alla fregata "Carabiniere". Ogni nave rappresenta un nodo mobile della rete, capace di operare da qualsiasi punto del Mediterraneo.
 
-Le prove non sono un mero esercizio formale. Servono a verificare tre aspetti fondamentali: l'**efficienza degli apparati e delle antenne** installate nelle Prefetture, l'**addestramento degli operatori** radioamatori e lo **studio delle condizioni ionosferiche** per ottimizzare i collegamenti in scenari reali di emergenza.
+Le prove non sono un mero esercizio formale. Servono a verificare tre aspetti: l'**efficienza degli apparati e delle antenne** installate nelle Prefetture, l'**addestramento degli operatori** radioamatori e lo **studio delle condizioni ionosferiche** per ottimizzare i collegamenti in scenari reali di emergenza.
 
-Ad aprile 2026, la Rete Zamberletti è prossima al traguardo della **500ª prova di sintonia**, prevista per maggio 2026 a Varese, la città da cui oltre quarant'anni fa partirono i primi collegamenti. Un traguardo che coincide con l'ulteriore evoluzione della rete: l'inserimento diretto dei Vigili del Fuoco sulla frequenza riservata alla Rete Zamberletti, rafforzando l'integrazione tra il sistema radioamatoriale e le strutture istituzionali.
+Ad aprile 2026, la Rete Zamberletti è prossima al traguardo della **500ª prova di sintonia**, prevista per maggio 2026 a Varese, la città da cui oltre quarant'anni fa partirono i primi collegamenti. Un traguardo che coincide con l'ulteriore evoluzione della rete: l'inserimento diretto dei Vigili del Fuoco sulla frequenza riservata alla Rete Zamberletti.
 
 ---
 
@@ -82,7 +82,7 @@ Le due bande si completano: l'HF collega Roma con le Prefetture su scala naziona
 
 I radioamatori non sostituiscono i sistemi di telecomunicazione professionali delle istituzioni. Li integrano, li affiancano e, nei momenti più critici, li suppliscono. Nel 2009 il terremoto dell'Aquila interruppe le comunicazioni. Nel 2016 il sisma di Amatrice isolò interi borghi. Nel 2023 l'alluvione in Emilia-Romagna compromise le reti cellulari. In tutti questi casi i radioamatori furono tra i primi a ristabilire un filo di comunicazione tra il territorio colpito e le strutture di coordinamento.
 
-L'ARI gestisce in autonomia le stazioni radio installate nelle Prefetture. I radioamatori volontari, inquadrati nell'organizzazione ARI-RE (Radiocomunicazioni di Emergenza), sono formati per operare in condizioni di stress, con procedure standardizzate, modulistica dedicata e una disciplina operativa che trasforma il diletto radioamatoriale in un servizio pubblico di altissimo valore.
+L'ARI gestisce in autonomia le stazioni radio installate nelle Prefetture. I radioamatori volontari, inquadrati nell'organizzazione ARI-RE (Radiocomunicazioni di Emergenza), sono formati per operare in condizioni di stress, con procedure standardizzate, modulistica dedicata e una disciplina operativa che trasforma il diletto radioamatoriale in un servizio pubblico.
 
 Ogni radioamatore con la propria patente e il proprio nominativo è potenzialmente un nodo della rete di emergenza. Ogni stazione — fissa, veicolare o portatile — può diventare un punto di contatto tra un territorio isolato e il resto del Paese.
 
@@ -92,7 +92,7 @@ Ogni radioamatore con la propria patente e il proprio nominativo è potenzialmen
 
 Le frequenze della Rete Zamberletti sono poche, chiare e operative: **3.645 kHz LSB** come frequenza primaria sugli 80 metri, **6.990 kHz LSB** come riserva sui 40 metri. Per il coordinamento locale nell'area di Roma, la **145,275 MHz FM** in VHF e la **433,425 MHz FM** in UHF.
 
-Dietro questi numeri c'è un sistema che funziona da oltre quarant'anni, testato ogni mese, sostenuto dal volontariato e riconosciuto dalle istituzioni. Un sistema che non ha bisogno di fibra ottica, di antenne 5G, di server farm. Ha bisogno soltanto di persone competenti, di apparati affidabili e della ionosfera.
+Dietro questi numeri c'è un sistema che funziona da oltre quarant'anni, testato ogni mese, sostenuto dal volontariato e riconosciuto dalle istituzioni. Un sistema che fa a meno di fibra ottica, antenne 5G e server farm: bastano persone competenti, apparati affidabili e la ionosfera.
 
 > *"Le radiocomunicazioni di emergenza non sono l'ultima risorsa. Sono la prima certezza."*
 
