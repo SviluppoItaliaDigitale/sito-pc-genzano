@@ -55,7 +55,7 @@ Tre lezioni per la Protezione Civile contemporanea:
 
 ## A Genzano di Roma
 
-Genzano non è in territorio montano e il rischio valanghivo non ci riguarda. Ma il principio della **multi-rischiosità** vale anche da noi: una giornata di allerta meteo arancione può cumularsi con problemi di traffico, blackout, eventi locali. Il [Piano Familiare](/piano-familiare/) serve esattamente a essere pronti per scenari combinati, non solo per quello "ideale".
+Genzano non è in territorio montano e il rischio valanghivo non ci riguarda. Ma il principio della **multi-rischiosità** vale anche da noi: una giornata di allerta meteo arancione può cumularsi con problemi di traffico, blackout, eventi locali. Il [Piano Familiare](/piano-familiare/) serve esattamente a essere pronti per gli scenari combinati, oltre che per quello "ideale".
 
 ## Sul nostro sito
 

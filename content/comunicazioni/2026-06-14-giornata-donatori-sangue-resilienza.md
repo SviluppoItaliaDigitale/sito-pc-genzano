@@ -46,7 +46,7 @@ Un'unità di sangue può salvare **1-3 vite**, a seconda degli emocomponenti der
 - **Incidenti stradali** gravi.
 - **Terremoti e alluvioni** con molti feriti.
 - **Ondate di calore** con aumento di patologie acute.
-- **Emergenze sanitarie pubbliche** (il Covid ha mostrato quanto sia cruciale il plasma iperimmune).
+- **Emergenze sanitarie pubbliche** (il Covid ha mostrato quanto serva il plasma iperimmune).
 - **Conflitti armati**.
 
 Dopo il **terremoto dell'Aquila 2009**, tante persone cercarono di donare, ma il sistema era già pronto grazie alla rete ordinaria. La **lezione**: donare **prima** dell'emergenza fa la differenza.
@@ -93,7 +93,7 @@ Inoltre, nei piani di emergenza il Gruppo può:
 - **Gratuito**: per legge in Italia la donazione non è retribuita (per evitare distorsioni).
 - **Un giorno di riposo**: chi lavora ha diritto a una giornata di riposo retribuita per ogni donazione.
 
-## Conclusione
+## Perché il sistema regge
 
 Il sangue non si produce in laboratorio. Non ci sono riserve strategiche "infinite". Il sistema funziona **perché ogni anno centinaia di migliaia di persone** entrano in un centro prelievi e donano il proprio tempo e il proprio sangue.
 

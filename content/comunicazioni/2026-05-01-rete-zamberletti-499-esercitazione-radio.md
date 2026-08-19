@@ -46,7 +46,7 @@ L'occasione ha segnato anche l'ingresso ufficiale nella rete del **Centro TLC Si
 
 Le radiocomunicazioni di emergenza sono una **infrastruttura silenziosa ma essenziale**. Quando un terremoto, un'alluvione o un blackout interrompono le comunicazioni ordinarie, la possibilità di mantenere i collegamenti fra Prefetture, Sale Operative e soccorritori dipende proprio da reti come la Zamberletti.
 
-Il lavoro dei radioamatori volontari, dei Centri TLC dei Vigili del Fuoco e degli operatori delle Prefetture rappresenta un presidio tecnico continuo, che si attiva nelle emergenze ma si allena tutto l'anno.
+Il lavoro dei radioamatori volontari, dei Centri TLC dei Vigili del Fuoco e degli operatori delle Prefetture è un presidio tecnico continuo, che si attiva nelle emergenze ma si allena tutto l'anno.
 
 ## Per approfondire
 

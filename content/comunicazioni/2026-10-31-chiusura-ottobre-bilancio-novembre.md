@@ -39,7 +39,7 @@ Chi non è riuscito a iscriversi può **contattare il Gruppo** per informazioni 
 
 ## Attività di sensibilizzazione
 
-La partecipazione a **Io Non Rischio** ha visto il coinvolgimento di **centinaia** di cittadini e famiglie. Le **schede informative** distribuite su rischio idrogeologico, sismico e AIB rappresentano un **investimento** concreto sulla preparazione collettiva.
+La partecipazione a **Io Non Rischio** ha visto il coinvolgimento di **centinaia** di cittadini e famiglie. Le **schede informative** distribuite su rischio idrogeologico, sismico e AIB sono un **investimento** concreto sulla preparazione collettiva.
 
 ## Monitoraggio territorio
 
@@ -115,7 +115,7 @@ Per informazioni:
 
 ## Un grazie finale
 
-Chiudiamo ottobre con un **grazie** a chi lavora silenziosamente nel sistema di Protezione Civile italiano: volontari, tecnici, funzionari, cittadini consapevoli. Ogni contributo, grande o piccolo, costituisce la **resilienza** collettiva di un territorio.
+Chiudiamo ottobre con un **grazie** a chi lavora silenziosamente nel sistema di Protezione Civile italiano: volontari, tecnici, funzionari, cittadini consapevoli. Ogni contributo, grande o piccolo, costruisce la **resilienza** collettiva di un territorio.
 
 ## Per approfondire
 

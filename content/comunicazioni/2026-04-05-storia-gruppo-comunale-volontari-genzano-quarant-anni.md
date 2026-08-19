@@ -146,7 +146,7 @@ Nell'**estate 2024** arriva l'ultimo mezzo in ordine di tempo, fornito dalla **R
 - **verricello** per il recupero di veicoli o persone in difficoltà
 - predisposizione per **modulo antincendio** (installazione prevista successivamente)
 
-Il mezzo rappresenta l'evoluzione del pickup da territorio: manovrabile, versatile, adatto sia agli interventi AIB che alle attività di ricognizione sul territorio comunale.
+Il mezzo è l'evoluzione del pickup da territorio: manovrabile, versatile, adatto sia agli interventi AIB che alle attività di ricognizione sul territorio comunale.
 
 ---
 

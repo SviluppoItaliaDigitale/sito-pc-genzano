@@ -53,7 +53,7 @@ Le due città furono ricostruite secondo i criteri della legge del 1909: **edifi
 Il governo Giolitti istituì un **Comitato Reale di Soccorso** per coordinare aiuti e ricostruzione. Era **provvisorio**, ma fu il primo modello di **agenzia pubblica di emergenza** in Italia. Da quel modello, attraverso decenni di evoluzione, sarebbe nato — molto più tardi — il **Dipartimento di Protezione Civile (1982)**.
 
 **4. La generazione "del terremoto".**
-Una **intera generazione** di italiani crebbe con la memoria di Messina come **icona della catastrofe**. Le **fotografie** del lungomare distrutto, che vedete nella immagine di questo articolo, divennero parte della cultura collettiva. Gli **scrittori** (Pirandello, Pascoli, D'Annunzio), gli **artisti**, i **politici** elaborarono il significato dell'evento. La **risposta privata** italiana — collette nazionali, viaggi di volontari, accoglienza degli orfani — fu massiccia.
+Una **intera generazione** di italiani crebbe con la memoria di Messina come **icona della catastrofe**. Le **fotografie** del lungomare distrutto, che vedete nell'immagine di questo articolo, divennero parte della cultura collettiva. Gli **scrittori** (Pirandello, Pascoli, D'Annunzio), gli **artisti**, i **politici** elaborarono il significato dell'evento. La **risposta privata** italiana — collette nazionali, viaggi di volontari, accoglienza degli orfani — fu massiccia.
 
 ## Cosa abbiamo costruito da allora
 

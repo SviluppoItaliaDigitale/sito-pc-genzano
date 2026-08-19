@@ -19,7 +19,7 @@ draft: false
 
 A tutti i cittadini di **Genzano di Roma** e a chi ci legge:
 
-**Buone feste**. Che questo Natale sia per voi tempo di **incontro**, **affetti**, **serenità**. Che le tavole siano piene di **presenze amate**, non solo di cibo. Che le case siano **luoghi caldi** non solo nella temperatura ma nel **clima emotivo**.
+**Buone feste**. Che questo Natale sia per voi tempo di **incontro**, **affetti**, **serenità**. Che le tavole siano piene di **presenze amate**, non solo di cibo. Che le case siano **luoghi caldi** nella temperatura e nel **clima emotivo**.
 
 ## A chi è lontano
 
