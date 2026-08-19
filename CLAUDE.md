@@ -256,7 +256,7 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 
 ## Agenti specializzati (`.claude/agents/`)
 
-16 agenti custom da usare PROATTIVAMENTE quando la conversazione fa match con la loro `description` (l'utente scrive in italiano naturale, fai tu il match e attiva da solo):
+17 agenti custom da usare PROATTIVAMENTE quando la conversazione fa match con la loro `description` (l'utente scrive in italiano naturale, fai tu il match e attiva da solo):
 
 | Agent | Trigger naturali |
 |---|---|
@@ -275,6 +275,7 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 | `pc-print-card-qa` | "controlla le schede stampabili", "QA kit calamità" |
 | `pc-site-auditor` | "audit del sito", "incongruenze?", "pro e contro" |
 | `pc-notebooklm-publisher` | "pubblica output NotebookLM per il tema X" |
+| `pc-revisore-linguistico` | 🔴 gate linguistico obbligato richiamato da `pc-article-reviewer`: script deterministici (refusi + grammatica) **e** lettura sintattica per articoli mancanti, accordi, preposizioni. Riferimento Treccani |
 | `pc-correttore-bozze` | "controlla i refusi", "rileggi per refusi" — anche schede statiche HTML (`static/formazione/`, `static/giochi/`) |
 
 Specifiche + workflow combinati in `manuale/parte-19-agenti-specializzati.md`. Aggiungendo/modificando un agent, aggiorna la Parte 19 e questa tabella.

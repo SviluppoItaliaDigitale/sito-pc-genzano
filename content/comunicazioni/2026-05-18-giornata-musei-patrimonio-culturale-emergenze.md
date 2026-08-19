@@ -40,7 +40,7 @@ In caso di evento che colpisca beni culturali, lavorano insieme diverse istituzi
 - **Istituto Centrale per il Restauro (ICR)** e altri istituti tecnici.
 - **Volontariato specializzato** (alcuni gruppi hanno formazioni specifiche).
 
-Esiste una **[Unità di Crisi del MIC](https://www.beniculturali.it/)** (Ministero della Cultura) che coordina l'intervento quando c'è una emergenza nazionale.
+Esiste una **[Unità di Crisi del MIC](https://www.beniculturali.it/)** (Ministero della Cultura) che coordina l'intervento quando c'è un'emergenza nazionale.
 
 ## Le fasi dell'intervento
 

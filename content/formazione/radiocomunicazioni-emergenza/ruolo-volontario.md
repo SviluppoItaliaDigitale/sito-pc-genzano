@@ -173,7 +173,7 @@ Per l'uso delle radio amatoriali in servizio di protezione civile si applica:
 
 - **D.Lgs. 1° agosto 2003, n. 259** — *Codice delle comunicazioni elettroniche* (e s.m.i.)
 - **Decreto 12 agosto 2002** del Ministero delle Comunicazioni — Patente di operatore di stazione di radioamatore
-- **Delibera AGCOM 68/21/CONS** e normativa MiSE/MIMIT successiva sulla autorizzazione generale
+- **Delibera AGCOM 68/21/CONS** e normativa MiSE/MIMIT successiva sull'autorizzazione generale
 
 L'autorizzazione generale per radioamatori consente **sperimentazione e addestramento personale**, nonché **attività di pubblica utilità** in occasione di calamità (art. 2, c. 3 del decreto 2002) — senza necessità di ulteriori autorizzazioni se l'attività è in raccordo con l'autorità di protezione civile.
 

@@ -113,7 +113,7 @@ Il Codice è ancora la legge in vigore. Le sue **direttive attuative** continuan
 
 ## Cosa significa per noi, qui a Genzano di Roma
 
-Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma esiste perché esiste questo Sistema. Non siamo una emanazione del Comune in senso stretto: siamo una **componente del Servizio Nazionale di Protezione Civile** ai sensi del D.Lgs. 1/2018. Il nostro Sindaco è autorità locale di protezione civile ai sensi dell'**articolo 12** del Codice. La nostra catena di comando passa per il **Centro Operativo Comunale** quando viene attivato, sale al **Centro Funzionale Regionale del Lazio** per le allerte meteo, raggiunge il **Dipartimento** per gli eventi di rilievo nazionale.
+Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma esiste perché esiste questo Sistema. Non siamo un'emanazione del Comune in senso stretto: siamo una **componente del Servizio Nazionale di Protezione Civile** ai sensi del D.Lgs. 1/2018. Il nostro Sindaco è autorità locale di protezione civile ai sensi dell'**articolo 12** del Codice. La nostra catena di comando passa per il **Centro Operativo Comunale** quando viene attivato, sale al **Centro Funzionale Regionale del Lazio** per le allerte meteo, raggiunge il **Dipartimento** per gli eventi di rilievo nazionale.
 
 E quando un nostro volontario scende in piazza, indossa una divisa **riconosciuta dalla Repubblica**. Quell'uniforme è il punto di arrivo di un percorso lungo quarant'anni che inizia con un signore in cravatta in piedi tra le macerie di Sant'Angelo dei Lombardi, una mattina fredda di novembre del 1980.
 
