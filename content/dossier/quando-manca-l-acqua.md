@@ -60,7 +60,7 @@ La siccità non è solo nei deserti lontani. Nel **febbraio 2024** la Regione Si
 Le riserve negli invasi sono crollate a circa **metà** della media dell'anno prima. Circa **2,35 milioni** di siciliani hanno subito riduzioni nell'erogazione dell'acqua. Le piogge annue sono scese a poco più di **500 mm**, contro una media di circa 665. È successo qui, vicino a noi.
 {{< /dossier-scena >}}
 
-{{< dossier-scena id="mediterraneo" image="/images/dossier/siccita-mediterraneo.webp" alt="Mappa della Penisola Iberica con ampie zone marroni che indicano vegetazione molto più rada della media primaverile a causa della siccità" align="top" kicker="Il Mediterraneo" title="Un mare<br>che si aridisce" credito="NASA Earth Observatory · Allison Nussbaum, dati MODIS (Terra) · pubblico dominio" >}}
+{{< dossier-scena id="mediterraneo" image="/images/dossier/siccita-mediterraneo.webp" alt="Mappa della Penisola Iberica con ampie zone marroni che indicano vegetazione molto più rada della media primaverile a causa della siccità" align="top" kicker="Il Mediterraneo" title="Un mare<br>che si inaridisce" credito="NASA Earth Observatory · Allison Nussbaum, dati MODIS (Terra) · pubblico dominio" >}}
 Il **Mediterraneo** è un *hotspot* del cambiamento climatico riconosciuto dall'IPCC: la temperatura sale circa il **20% più in fretta** della media globale. Le piogge calano in tutte le stagioni e il suolo si aridisce, soprattutto d'estate.
 
 Significa estati più lunghe e secche e una siccità destinata ad **aumentare**. È la cornice che lega le grandi siccità del mondo al trend del nostro territorio: il Lazio e i Castelli sono dentro questo mare.

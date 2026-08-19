@@ -14,7 +14,7 @@ versione_facile: "2026-05-29-iso-22395-persone-vulnerabili-facile"
 draft: false
 ---
 
-In un'emergenza, una "popolazione" non è un'astrazione uniforme: è un mosaico di persone con storie, bisogni e capacità diverse. Una sirena udita bene da un cittadino in piena salute resta inudita per chi ha una disabilità uditiva. Un'evacuazione veloce per un giovane è impossibile per un anziano allettato. Un messaggio in italiano scritto è incomprensibile per chi parla solo arabo o ucraino.
+In un'emergenza, una "popolazione" non è un'astrazione uniforme: è un mosaico di persone con storie, bisogni e capacità diverse. Una sirena udita bene da un cittadino in piena salute resta inudibile per chi ha una disabilità uditiva. Un'evacuazione veloce per un giovane è impossibile per un anziano allettato. Un messaggio in italiano scritto è incomprensibile per chi parla solo arabo o ucraino.
 
 Lo standard internazionale **ISO 22395 — Inclusive support of vulnerable groups** (pubblicato nel 2018) spiega come una società davvero resiliente non lascia indietro nessuno. È il riferimento internazionale che ispira i nostri **[Kit Calamità per situazioni vulnerabili](/formazione/kit-calamita/)**.
 

@@ -60,7 +60,7 @@ Genzano non è attraversata da grandi flussi autostradali ma:
 - **orari** non di punta (partenze all'alba o tardi sera meno congestionate);
 - **alternative** preparate (strade secondarie);
 - **carburante** pieno prima dell'autostrada;
-- **bagnoasciugatura** prima della partenza.
+- **bagno** per tutti prima della partenza.
 
 ### Veicolo
 - **pneumatici** invernali (obbligatori dal 15 novembre);
