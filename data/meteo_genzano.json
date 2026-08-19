@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-08-19T22:42",
+  "aggiornato": "2026-08-19T23:36",
   "data_lunga": "mercoledì 19 agosto 2026",
-  "aggiornato_label": "mercoledì 19 agosto 2026, ore 22:42",
+  "aggiornato_label": "mercoledì 19 agosto 2026, ore 23:36",
   "alba": "06:21",
   "tramonto": "20:03",
   "corrente": {
-    "temp": 23.9,
-    "percepita": 28.5,
+    "temp": 23.6,
+    "percepita": 28.0,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
     "umidita": 89,
     "vento": 2,
-    "raffiche": 9
+    "raffiche": 7
   },
   "giorni": [
     {
@@ -32,7 +32,7 @@
       "cielo": "Coperto",
       "tmax": 30,
       "tmin": 22,
-      "pioggia": 3,
+      "pioggia": 0,
       "pioggia_mm": 0,
       "raffiche": 50,
       "uv": 7,
@@ -44,7 +44,7 @@
       "cielo": "Temporale con grandine",
       "tmax": 27,
       "tmin": 22,
-      "pioggia": 81,
+      "pioggia": 73,
       "pioggia_mm": 11.9,
       "raffiche": 75,
       "uv": 6,
@@ -56,7 +56,7 @@
       "cielo": "Coperto",
       "tmax": 30,
       "tmin": 22,
-      "pioggia": 11,
+      "pioggia": 27,
       "pioggia_mm": 0,
       "raffiche": 32,
       "uv": 7,
