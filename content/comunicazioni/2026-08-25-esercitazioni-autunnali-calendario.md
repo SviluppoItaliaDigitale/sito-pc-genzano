@@ -41,9 +41,9 @@ La **Regione Lazio** promuove annualmente esercitazioni regionali che coinvolgon
 
 Il calendario del Gruppo prevede, di norma:
 
-- **una esercitazione interna** mensile (radio, montaggio, primo soccorso a rotazione);
-- **una esercitazione congiunta** semestrale con altri enti locali;
-- **una esercitazione regionale** annuale, su convocazione della Regione;
+- **un'esercitazione interna** mensile (radio, montaggio, primo soccorso a rotazione);
+- **un'esercitazione congiunta** semestrale con altri enti locali;
+- **un'esercitazione regionale** annuale, su convocazione della Regione;
 - **un'esercitazione di cartografia** in primavera.
 
 Le date puntuali sono pubblicate sul sito e sui canali social del Gruppo man mano che vengono definite.
