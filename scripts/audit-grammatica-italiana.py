@@ -2,7 +2,8 @@
 """
 Audit grammaticale / ortografico italiano per i contenuti del sito Hugo.
 
-Cosa controlla (per ogni file Markdown in content/):
+Cosa controlla (tutti i .md di content/ + gli HTML statici di
+static/formazione/ e static/giochi/ — schede stampabili e giochi):
 
   REGOLE ATTIVE (ognuna corrisponde a un `rule(...)` nella lista RULES):
    1. Accenti mancanti su parole non ambigue: perche -> perché, piu -> più,
@@ -112,7 +113,6 @@ ACCENTI_OBBLIGATORI = {
     "quantita": "quantità",
     "universita": "università",
     "comunita": "comunità",
-    "necessita": "necessità",
     "responsabilita": "responsabilità",
     "attivita": "attività",
     "specialita": "specialità",
@@ -179,6 +179,7 @@ RULES = [
         r"\bun\s+po\b(?![''’])",
         "« un po » senza apostrofo — corretto: « un po' » (troncamento di « poco »).",
         suggest="un po'",
+        ignore_case=True,
     ),
     rule(
         "QUAL_E_APOSTROFO",
@@ -296,7 +297,7 @@ RULES = [
         # impediva il match su "ionosfera"/"iodoprofilassi" (dopo "io" c'è una
         # consonante), che venivano segnalate a torto. Le i/u semiconsonantiche
         # ora hanno un ramo proprio senza \b.
-        exclude=r"\s+(i[aeou]|u[aeio])|\s+(alla|allo|alle|agli|ad|anche|ancora|inoltre|oppure|accanto|ogni|altra|altro|una)\b",
+        exclude=r"\s+(i[aeou]|u[aeio])|\s+(alla|allo|alle|agli|ad|anche|ancora|inoltre|oppure|accanto|ogni|altra|altro|una|aveva|avevano|era|erano|ha|hanno|è)\b",
     ),
 ]
 
@@ -336,10 +337,17 @@ def find_articles(only: list[str] | None = None) -> Iterator[Path]:
             pth = Path(f)
             if not pth.is_absolute():
                 pth = ROOT / f
-            if pth.suffix == ".md" and pth.exists():
+            if pth.suffix in (".md", ".html", ".htm") and pth.exists():
                 yield pth
         return
     yield from sorted(CONTENT.rglob("*.md"))
+    # Schede stampabili e giochi: contenuto in HTML statico, fuori da content/.
+    # WHY (19/08/2026): erano il punto cieco grammaticale — 372 file che
+    # finiscono STAMPATI nelle scuole non passavano da nessun controllo di
+    # accenti/apostrofi/elisioni (solo dallo spell-check di parola singola).
+    # Lo stesso punto cieco da cui era passato «cuoperti» → «copriti».
+    yield from sorted((ROOT / "static" / "formazione").rglob("*.html"))
+    yield from sorted((ROOT / "static" / "giochi").rglob("*.html"))
 
 
 def line_index_to_friendly(text: str, idx: int) -> tuple[int, int, str]:
@@ -360,12 +368,88 @@ def line_index_to_friendly(text: str, idx: int) -> tuple[int, int, str]:
     return line_no, col, snippet
 
 
+def _mask_preserve_lines(text: str, pattern: str, flags=0) -> str:
+    """Sostituisce i match con spazi mantenendo i newline (offset stabili)."""
+    def repl(m):
+        return "".join(ch if ch == "\n" else " " for ch in m.group(0))
+    return re.sub(pattern, repl, text, flags=flags)
+
+
+def _mask_html(text: str) -> str:
+    """Maschera di un file HTML: resta solo il testo visibile, riga per riga.
+
+    Ordine: blocchi <script>/<style> (via il codice JS/CSS), commenti,
+    tag (anche multi-riga), entità, URL. Tutto sostituito con spazi
+    preservando i newline, così i numeri di riga dei findings sono giusti.
+    """
+    t = _mask_preserve_lines(text, r"<(script|style)[^>]*>.*?</\1>", re.I | re.S)
+    t = _mask_preserve_lines(t, r"<!--.*?-->", re.S)
+    t = _mask_preserve_lines(t, r"<[^>]*>", re.S)      # tag, anche spezzati su piu' righe
+    def _apos(m):  # scrive l'apostrofo al posto del 1° carattere dell'entita'
+        return "'" + " " * (len(m.group(0)) - 1)
+    t = re.sub(r"&(?:#x27|#39|apos|rsquo|#8217);", _apos, t)
+    t = _mask_preserve_lines(t, r"&[a-zA-Z#0-9]+;")
+    t = _mask_preserve_lines(t, r"https?://\S+")
+    return t
+
+
 def _rel(path: Path) -> str:
     """Path relativo alla root del repo; assoluto se il file sta fuori."""
     try:
         return str(path.relative_to(ROOT))
     except ValueError:
         return str(path)
+
+
+def _audit_html(path: Path, text: str) -> list[dict]:
+    """Audita il testo visibile di un file HTML statico (schede, giochi).
+
+    Differenze rispetto ai Markdown, motivate:
+    - la mascheratura sostituisce tag/JS/CSS con SPAZI: le regole che scattano
+      sulla PRESENZA di spazi (DOPPIO_SPAZIO, SPAZIO_PRIMA_PUNTEGGIATURA)
+      qui darebbero solo falsi positivi da markup e sono saltate — tanto in
+      HTML gli spazi multipli collassano comunque alla resa;
+    - restano attive le regole sull'ASSENZA di spazio e su parole/accenti/
+      apostrofi/elisioni, che la mascheratura non puo' falsare (inserisce
+      spazi, non li toglie).
+    """
+    findings = []
+    masked = _mask_html(text)
+
+    for m in ACCENTI_RE.finditer(masked):
+        word = m.group(1)
+        suggested = ACCENTI_OBBLIGATORI.get(word.lower())
+        if not suggested:
+            continue
+        if word[0].isupper():
+            suggested = suggested[0].upper() + suggested[1:]
+        line_no, col, snippet = line_index_to_friendly(text, m.start())
+        findings.append({
+            "file": _rel(path), "line": line_no, "col": col,
+            "code": "ACCENTO_MANCANTE", "severity": "ERR",
+            "match": word, "suggest": suggested, "snippet": snippet,
+            "msg": f"« {word} » senza accento — corretto: « {suggested} ».",
+        })
+
+    SALTA_SU_HTML = {"DOPPIO_SPAZIO", "SPAZIO_PRIMA_PUNTEGGIATURA"}
+    for r in RULES:
+        if r["code"] in SALTA_SU_HTML:
+            continue
+        for m in r["pattern"].finditer(masked):
+            matched = m.group(0)
+            if r["exclude"] and r["exclude"].search(matched):
+                continue
+            # Alfabetieri: il tracciamento «I I I» ripete lettere singole apposta.
+            if r["code"] == "PAROLA_RIPETUTA" and len(m.group(1)) == 1:
+                continue
+            line_no, col, snippet = line_index_to_friendly(text, m.start())
+            findings.append({
+                "file": _rel(path), "line": line_no, "col": col,
+                "code": r["code"], "severity": r["severity"],
+                "match": matched.strip(), "suggest": r.get("suggest"),
+                "snippet": snippet, "msg": r["desc"],
+            })
+    return findings
 
 
 def audit_file(path: Path) -> list[dict]:
@@ -386,6 +470,12 @@ def audit_file(path: Path) -> list[dict]:
     m_lang = re.search(r"^language:\s*[\"']?([a-z]{2})", text, re.M)
     if m_lang and m_lang.group(1) != "it":
         return []
+    # Pagine HTML con lang esplicito non italiano (es. traduzioni statiche).
+    if path.suffix in (".html", ".htm"):
+        m_html_lang = re.search(r"<html[^>]*\blang=[\"']?([a-z]{2})", text, re.I)
+        if m_html_lang and m_html_lang.group(1) != "it":
+            return []
+        return _audit_html(path, text)
 
     # Salta il frontmatter YAML iniziale (delimitato da ---).
     body_start = 0

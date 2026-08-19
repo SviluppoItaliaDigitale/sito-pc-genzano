@@ -105,7 +105,7 @@ Non dimentichiamo che:
 
 Chi vive in campagna o ha un orto:
 - **Tenere** sempre una zona d'ombra nel pollaio.
-- **Rinnovare** spesso l'acqua nelle abbeveratoie.
+- **Rinnovare** spesso l'acqua negli abbeveratoi.
 - **Nebulizzare** acqua sulla lettiera.
 - **Garantire** ventilazione naturale o meccanica.
 - **Osservare** le galline: accovacciate con ali aperte sono in stress da caldo.

@@ -92,7 +92,7 @@ Si consumano **13-22 litri di acqua al giorno** considerando bere, cucina, igien
 
 Se devi usare **acqua di fonte locale** (pozzo, fontana, fiume):
 
-- **filtro** portatile con pori ≤ 0,3 micron — rimuove batteri e Giardia ma clogga presto
+- **filtro** portatile con pori ≤ 0,3 micron — rimuove batteri e Giardia ma si intasa presto
 - **pastiglie** di purificazione (es. Halazone, Micropur) — modificano sapore ma sono affidabili
 - **candeggina** senza profumo (per uso militare): 1/8 di cucchiaino in 1 gallone d'acqua, agitare, aspettare 30 minuti; se l'odore di cloro persiste leggermente, è potabile
 - **bollitura** 5 minuti minimo — uccide tutto tranne particolato, dà sapore piatto (recuperabile travasando ripetutamente)

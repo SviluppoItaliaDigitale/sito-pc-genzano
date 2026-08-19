@@ -19,7 +19,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v7
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -58,7 +58,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v7
+        uses: actions/checkout@v4
 
       - name: "🧭 Verifica che il menu di site-chrome.js sia generato da hugo.toml"
         # Il blocco MENU-AUTOGEN di site-chrome.js è GENERATO da
@@ -75,7 +75,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v7
+        uses: actions/checkout@v4
 
       - name: "🔬 Valida YAML di .github/workflows/"
         run: |
@@ -91,7 +91,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v7
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -149,6 +149,8 @@ jobs:
         # audit-sito.yml (ogni 6h, dopo la pubblicazione) e check-refusi.py è uno
         # spell-check di parola singola. Qui il controllo diventa un gate di PR.
         #
+        # Perimetro: content/**/*.md + schede/giochi HTML statici (il punto
+        # cieco grammaticale chiuso il 19/08/2026).
         # Cosa BLOCCA:
         #  - findings ERR dell'audit grammaticale (accenti, apostrofi, spaziature,
         #    elisioni) sui file modificati;
@@ -167,7 +169,8 @@ jobs:
         run: |
           set -euo pipefail
           BASE="${{ github.event.pull_request.base.sha }}"
-          git diff --name-only "$BASE"...HEAD -- 'content/**/*.md' > /tmp/changed.txt || true
+          git diff --name-only "$BASE"...HEAD -- 'content/**/*.md' \
+            'static/formazione/**/*.html' 'static/giochi/**/*.html' > /tmp/changed.txt || true
           if [ ! -s /tmp/changed.txt ]; then
             echo "Nessun contenuto modificato: niente da controllare."; exit 0
           fi
