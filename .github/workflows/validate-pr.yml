@@ -126,3 +126,62 @@ jobs:
           PY
           done
           exit $fail
+
+  italiano:
+    name: "Italiano — refusi e grammatica"
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: "🔤 Setup dizionario italiano"
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq hunspell-it
+          pip install --quiet spylls
+
+      - name: "📝 Controllo lingua sui file modificati"
+        # WHY (19/08/2026): tre errori di italiano sono andati live superando i
+        # controlli, perché audit-grammatica-italiana.py girava SOLO in
+        # audit-sito.yml (ogni 6h, dopo la pubblicazione) e check-refusi.py è uno
+        # spell-check di parola singola. Qui il controllo diventa un gate di PR:
+        # le violazioni ERR (accenti, apostrofi, spaziature, elisioni) bloccano
+        # PRIMA del merge. Gli errori che richiedono lettura (articolo mancante,
+        # accordi) restano in carico all'agent pc-revisore-linguistico.
+        run: |
+          set -euo pipefail
+          BASE="${{ github.event.pull_request.base.sha }}"
+          git diff --name-only "$BASE"...HEAD -- 'content/**/*.md' > /tmp/changed.txt || true
+          if [ ! -s /tmp/changed.txt ]; then
+            echo "Nessun contenuto modificato: niente da controllare."; exit 0
+          fi
+          echo "File modificati:"; cat /tmp/changed.txt
+
+          echo "::group::Refusi (hunspell)"
+          xargs -a /tmp/changed.txt python3 scripts/check-refusi.py || true
+          echo "::endgroup::"
+
+          echo "::group::Grammatica e tipografia"
+          python3 scripts/audit-grammatica-italiana.py > /tmp/gram.txt 2>&1 || true
+          echo "::endgroup::"
+
+          # Blocca solo sugli ERR che toccano i file di questa PR.
+          fail=0
+          while read -r f; do
+            [ -n "$f" ] || continue
+            if awk '/^## ❌ ERR/,/^## ⚠️/' /tmp/gram.txt | grep -q -- "$f"; then
+              echo "::error file=$f::Errore di italiano (vedi audit grammaticale)"
+              awk '/^## ❌ ERR/,/^## ⚠️/' /tmp/gram.txt | grep -- "$f" | head -5
+              fail=1
+            fi
+          done < /tmp/changed.txt
+
+          if [ "$fail" = "1" ]; then
+            echo ""
+            echo "Riproduci in locale:  python3 scripts/audit-grammatica-italiana.py"
+            exit 1
+          fi
+          echo "✅ Nessun errore di italiano bloccante sui file modificati."

@@ -45,7 +45,7 @@ Haiti 2010 ha consolidato due principi della Protezione Civile internazionale:
 
 ## Una memoria scomoda
 
-A oltre 15 anni dal terremoto, Haiti non si è ancora ripresa completamente. Le cause sono molteplici: corruzione politica, dipendenza dagli aiuti, epidemia di colera scoppiata mesi dopo — le ricerche hanno poi confermato il collegamento con contaminazioni accidentali da reflui delle truppe ONU — e una instabilità politica che ha generato nuove crisi.
+A oltre 15 anni dal terremoto, Haiti non si è ancora ripresa completamente. Le cause sono molteplici: corruzione politica, dipendenza dagli aiuti, epidemia di colera scoppiata mesi dopo — le ricerche hanno poi confermato il collegamento con contaminazioni accidentali da reflui delle truppe ONU — e un'instabilità politica che ha generato nuove crisi.
 
 È una lezione anche per noi: **un'emergenza non finisce con la fase acuta**. La fase di **ricostruzione e ripristino** dura anni o decenni e richiede competenze, finanziamenti, governance solida. Senza di questi, l'aiuto internazionale rischia di non lasciare traccia.
 
