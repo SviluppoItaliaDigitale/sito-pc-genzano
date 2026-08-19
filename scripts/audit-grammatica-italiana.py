@@ -16,9 +16,12 @@ Cosa controlla (per ogni file Markdown in content/):
    8. "famigli" errato
    9. "ecc..." ridondante
   10. Spazio mancante dopo la punteggiatura ("superficiale.Il")   [19/08/2026]
-  11. Doppio spazio nel testo                                      [19/08/2026]
+  11. Doppio spazio FRA DUE PAROLE (non negli allineamenti)        [19/08/2026]
   12. Spazio prima della punteggiatura                             [19/08/2026]
-  13. Parola ripetuta ("il il", "è è")                             [19/08/2026]
+  13. Parola GRAMMATICALE ripetuta sulla stessa riga ("il il")     [19/08/2026]
+      NB: il raddoppiamento di nomi e aggettivi è italiano legittimo
+      ("piccola piccola", "Natrix natrix", "Giro giro tondo") e non si
+      segnala; i refusi veri raddoppiano articoli e preposizioni.
   14. Elisione mancante ("una emergenza" -> "un'emergenza")        [19/08/2026]
 
   FUORI PERIMETRO (saltati apposta):
@@ -250,7 +253,7 @@ RULES = [
     rule(
         "DOPPIO_SPAZIO",
         "WARN",
-        r"(?<=\S)  +(?=\S)",
+        r"(?<=[a-zà-ù,;:])  +(?=[A-Za-zà-ù])",  # solo fra parole, non negli allineamenti
         "Doppio spazio in mezzo al testo.",
         suggest="Lasciare un solo spazio",
         prose_only=True,
@@ -266,10 +269,16 @@ RULES = [
     rule(
         "PAROLA_RIPETUTA",
         "WARN",
-        r"\b([a-zà-ù]{2,}|[èé])\s+\1\b",  # include la copula « è è »
+        # Solo parole grammaticali e solo sulla STESSA riga ([ \t], non \s):
+        # il raddoppiamento di nomi e aggettivi è italiano legittimo
+        # («piccola piccola», «Natrix natrix»), quello di articoli e
+        # preposizioni è sempre un refuso.
+        r"(?<!zero )(?<!uno )(?<!due )(?<!tre )(?<!sei )(?<!otto )(?<!nove )(?<!sette )(?<!quattro )(?<!cinque )"
+        r"\b(il|lo|la|i|gli|le|un|uno|una|di|da|in|con|su|per|tra|fra|del|dello|della|dei|degli|delle"
+        r"|dal|dalla|al|allo|alla|ai|agli|alle|nel|nello|nella|nei|negli|nelle|sul|sulla|sui|sugli|sulle"
+        r"|che|non|si|ci|vi|ne|ha|ho|hai|hanno|essere|sono|era|erano)[ \t]+\1\b",
         "Parola ripetuta due volte di seguito.",
         suggest="Eliminare la ripetizione",
-        exclude=r"\b(via|caso|mano|passo|poco|piano|solo|pian|man|anno|giorno|colpo|pezzo)\b",
         ignore_case=True,
     ),
     rule(
@@ -402,7 +411,7 @@ def audit_file(path: Path) -> list[dict]:
         s, e = m.start(), m.end()
         masked = masked[:s] + (" " * (e - s)) + masked[e:]
     # Maschera tag HTML (preserve sostanziale del testo)
-    for m in re.finditer(r"<[^>]+>", masked):
+    for m in re.finditer(r"<[^>\n]+>", masked):  # niente match multi-riga
         s, e = m.start(), m.end()
         masked = masked[:s] + (" " * (e - s)) + masked[e:]
     # Maschera attributi tipo alt="..." e caption="..." dentro shortcode
