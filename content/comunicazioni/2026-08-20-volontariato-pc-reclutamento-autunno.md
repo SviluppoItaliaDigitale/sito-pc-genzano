@@ -1,7 +1,7 @@
 ---
-title: "Diventare volontari di Protezione Civile: il corso di reclutamento in autunno"
+title: "Diventare volontari di Protezione Civile: iscrizioni sempre aperte ai corsi base"
 date: 2026-08-20T00:01:00+02:00
-description: "A settembre riapriranno le iscrizioni ai corsi base del Gruppo Comunale Volontari di Protezione Civile. Chi può partecipare e cosa aspettarsi."
+description: "Le iscrizioni ai corsi base del Gruppo Comunale Volontari di Protezione Civile sono sempre aperte. Chi può partecipare e cosa aspettarsi."
 badge: "Volontariato"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-L'esperienza di un mese di agosto a pieno regime operativo conferma una verità semplice: **il sistema di Protezione Civile italiano si regge sul volontariato**. In autunno il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma apre le iscrizioni al corso base. Un'occasione per chi vuole mettere a servizio del proprio territorio competenze, tempo, buona volontà.
+L'esperienza di un mese di agosto a pieno regime operativo conferma una verità semplice: **il sistema di Protezione Civile italiano si regge sul volontariato**. Le iscrizioni al corso base del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma sono **aperte tutto l'anno**. Un'occasione per chi vuole mettere al servizio del proprio territorio competenze, tempo, buona volontà.
 
 ## Chi può diventare volontario
 
@@ -65,9 +65,9 @@ Il volontario di PC, quando attivato formalmente dall'autorità di PC, ha diritt
 
 La struttura operativa del Gruppo è **senza compensi personali**: il lavoro è volontario, ma il sistema garantisce le tutele previste dalla legge.
 
-## Le date del corso
+## Quando si svolgono i corsi
 
-Le iscrizioni al corso base 2026 apriranno a **settembre**. I contatti e le modalità saranno pubblicati sul sito e sui social ufficiali del Gruppo. Per segnalare interesse in anticipo, consultare la pagina [Diventa volontario](/diventa-volontario/).
+Le iscrizioni sono **sempre aperte**, in ogni periodo dell'anno: non esiste una finestra unica per candidarsi. I corsi vengono organizzati in base alle disponibilità dei formatori e dei nuovi iscritti. Le date si concordano di volta in volta, così ogni edizione parte quando c'è un gruppo pronto a seguirla. Per iscriversi o chiedere informazioni, consultare la pagina [Diventa volontario](/diventa-volontario/) o i contatti del Gruppo.
 
 ## Per approfondire
 

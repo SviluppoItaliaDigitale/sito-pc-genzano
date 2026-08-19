@@ -35,7 +35,7 @@ A partire dalla **seconda metà di settembre**, il Gruppo avvia i primi contatti
 - **organizzare** visite al Gruppo e giornate formative.
 
 ### 4. Formazione volontari
-A settembre si apre la **nuova stagione di formazione**: corso base per nuovi volontari, aggiornamenti per i già iscritti (primo soccorso, BLS-D, radio, cartografia, AIB).
+A settembre riprende a pieno ritmo la **formazione**: corsi base per nuovi volontari e aggiornamenti per i già iscritti (primo soccorso, BLS-D, radio, cartografia, AIB). Le iscrizioni ai corsi restano **aperte tutto l'anno**: le edizioni si organizzano in base alle disponibilità di formatori e nuovi iscritti.
 
 ### 5. Preparazione alla stagione idrogeologica
 Settembre è un mese di transizione: il Gruppo rivede il Piano di Emergenza locale con l'Amministrazione, aggiorna le mappe dei punti critici, verifica le attrezzature per il rischio idrogeologico.
@@ -54,12 +54,12 @@ Il sito e i canali social del Gruppo aggiornano in tempo reale le attività oper
 
 ## Un invito
 
-Settembre è un mese in cui molti cittadini si "riconnettono" con la vita comunitaria dopo l'estate. È il momento giusto per **iscriversi al corso base** del Gruppo, per **informarsi** sulle attività di PC, per **partecipare** a incontri pubblici. Ogni nuovo volontario è una risorsa per l'intera comunità.
+Settembre è un mese in cui molti cittadini si "riconnettono" con la vita comunitaria dopo l'estate. È un buon momento per **iscriversi al corso base** del Gruppo — le iscrizioni sono comunque aperte tutto l'anno — per **informarsi** sulle attività di PC, per **partecipare** a incontri pubblici. Ogni nuovo volontario è una risorsa per l'intera comunità.
 
 ## Per approfondire
 
 - [Diventare volontari](/diventa-volontario/)
-- [Volontariato — reclutamento autunno 2026](/comunicazioni/2026-08-20-volontariato-pc-reclutamento-autunno/)
+- [Diventare volontari: iscrizioni sempre aperte ai corsi base](/comunicazioni/2026-08-20-volontariato-pc-reclutamento-autunno/)
 - [Calendario esercitazioni autunnali](/comunicazioni/2026-08-25-esercitazioni-autunnali-calendario/)
 - [Social Media Policy](/social-media-policy/)
 
