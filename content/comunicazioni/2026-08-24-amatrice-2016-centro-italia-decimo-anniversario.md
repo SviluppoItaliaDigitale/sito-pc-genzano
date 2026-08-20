@@ -28,7 +28,7 @@ Quella notte di fine agosto, in piena stagione turistica, la zona era affollata 
          caption="Mappa di intensità macrosismica della prima scossa della sequenza Centro Italia 2016 (M 6.0 alle 01:36 UTC del 24 agosto, ipocentro 8.1 km, ID INGV 7073641). L'area arancione e rossa mostra l'intensità VII-IX MCS che colpì Amatrice, Accumoli e Arquata del Tronto, mentre l'area gialla raggiunse Roma. Mappa: INGV / Centro Nazionale Terremoti — CC BY 4.0 — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:2016_central_italy_earthquake.jpg)." >}}
 
 
-I primi soccorsi arrivarono nel giro di un'ora dal Comando provinciale dei Vigili del Fuoco di Rieti e dalle colonne mobili regionali. La **rete del volontariato di Protezione Civile** fu attivata in poche ore, con il sistema delle colonne mobili regionali coordinate dal Dipartimento. Anche il nostro **Gruppo del Lazio** fece parte della macchina dei soccorsi.
+I primi soccorsi arrivarono nel giro di un'ora dal Comando provinciale dei Vigili del Fuoco di Rieti e dalle colonne mobili regionali. La **rete del volontariato di Protezione Civile** fu attivata in poche ore, con il sistema delle colonne mobili regionali coordinate dal Dipartimento. Anche il nostro **Gruppo Comunale**, con la colonna mobile della Regione Lazio, fece parte della macchina dei soccorsi.
 
 ## Cosa ci insegna oggi
 

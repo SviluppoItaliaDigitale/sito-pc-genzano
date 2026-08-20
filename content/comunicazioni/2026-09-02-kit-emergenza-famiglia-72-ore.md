@@ -65,7 +65,7 @@ Gli studi sulle emergenze mostrano che, nei primi giorni dopo un evento di grand
 
 - **coperta** o peluche preferito (forte valore psicologico);
 - **pannolini** e latte in polvere se neonati;
-- **libri** o piccoli giochi per tenere calmo.
+- **libri** o piccoli giochi per tenerli calmi.
 
 ### Per gli animali
 
@@ -77,7 +77,7 @@ Gli studi sulle emergenze mostrano che, nei primi giorni dopo un evento di grand
 ## Come conservarlo
 
 - in uno **zaino** robusto, sempre nello stesso posto;
-- vicino a **porta di casa** o in **auto** se più pratico;
+- vicino alla **porta di casa** o in **auto** se più pratico;
 - **verificato** una volta l'anno (pile, farmaci, scadenze);
 - **conosciuto da tutti** i familiari.
 
