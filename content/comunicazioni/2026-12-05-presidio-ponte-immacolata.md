@@ -36,7 +36,7 @@ La **presenza** della PC garantisce **pronta risposta** a segnalazioni ed emerge
 
 ### Personale
 - **volontari** del gruppo comunale;
-- **nuovi volontari** in affiancamento (ultima settimana corso base);
+- **nuovi volontari** in affiancamento, in percorso formativo con i colleghi esperti;
 - **coordinamento** con Polizia Locale, Carabinieri, Protezione Civile Regionale.
 
 ## Cosa facciamo

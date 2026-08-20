@@ -1,7 +1,7 @@
 ---
 title: "Metà ottobre: aggiornamento operativo del Gruppo"
 date: 2026-10-15T00:01:00+02:00
-description: "A metà ottobre, un aggiornamento sulle attività in corso: corso base avviato, giornata aperta, esercitazioni, rischio idrogeologico."
+description: "A metà ottobre, un aggiornamento sulle attività in corso: formazione, giornata aperta, esercitazioni, rischio idrogeologico."
 badge: "Aggiornamento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -15,15 +15,9 @@ draft: false
 
 A metà ottobre, il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma pubblica un aggiornamento sulle attività in corso. Un modo per restare in contatto con i cittadini e raccontare, con trasparenza, come si lavora nei **mesi più operativi dell'anno**.
 
-## Corso base 2026: avvio imminente
+## Corso base: iscrizioni sempre aperte
 
-Le iscrizioni al corso base sono aperte fino al **31 ottobre**. Il corso partirà nella seconda metà del mese con:
-
-- **10 lezioni** teoriche serali;
-- **3 giornate** pratiche;
-- **1 esercitazione** finale.
-
-Tema centrale: il **sistema di Protezione Civile**, i **rischi del territorio**, le **procedure operative** base.
+Le iscrizioni al corso base sono aperte **tutto l'anno**, senza scadenze. Le edizioni si organizzano in base alle disponibilità dei formatori e dei nuovi iscritti, anche per una sola persona. Temi centrali: il **sistema di Protezione Civile**, i **rischi del territorio**, le **procedure operative** base.
 
 Per iscriversi vedi la [pagina dedicata](/comunicazioni/2026-09-07-corso-base-volontari-apertura-iscrizioni/).
 
@@ -74,7 +68,6 @@ Attività condivise con:
 
 Per il mese di novembre sono già in pianificazione:
 
-- **prima lezione** del corso base;
 - **lezioni nelle scuole** secondo calendario dei dirigenti;
 - **giornata dedicata** alla **sicurezza domestica**;
 - **esercitazione inter-comunale**;
@@ -93,11 +86,11 @@ Il volontariato di PC non è per pochi. È un **impegno civico** che si compone 
 - **lavoro di squadra** (nessuno opera in solitaria);
 - **riconoscimento** pubblico del proprio contributo alla comunità.
 
-Per chi sta valutando di iscriversi: **questo è il momento giusto**.
+Per chi sta valutando di iscriversi: **ogni momento è quello giusto**, le iscrizioni non chiudono mai.
 
 ## Per approfondire
 
-- [Corso base volontari — iscrizioni](/comunicazioni/2026-09-07-corso-base-volontari-apertura-iscrizioni/)
+- [Come funziona il corso base](/comunicazioni/2026-09-07-corso-base-volontari-apertura-iscrizioni/)
 - [Diventa volontario](/diventa-volontario/)
 - [Chi siamo](/chi-siamo/)
 
