@@ -144,7 +144,7 @@ Non si diventa volontari per:
 
 ## Come iscriversi
 
-Per il **corso base** (riapertura iscrizioni prossime edizioni):
+Per il **corso base** (iscrizioni sempre aperte, in ogni periodo dell'anno):
 
 - **contattare** il Gruppo (pagina Contatti);
 - **compilare** domanda di iscrizione;

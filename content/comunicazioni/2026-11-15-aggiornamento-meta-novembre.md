@@ -1,7 +1,7 @@
 ---
 title: "Metà novembre: aggiornamento operativo del Gruppo"
 date: 2026-11-15
-description: "A metà novembre, un aggiornamento sulle attività in corso: corso base in svolgimento, esercitazioni, monitoraggio meteo, prospettive dicembre."
+description: "A metà novembre, un aggiornamento sulle attività in corso: formazione, esercitazioni, monitoraggio meteo, prospettive dicembre."
 badge: "Aggiornamento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -15,17 +15,9 @@ draft: false
 
 A **metà novembre**, il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma pubblica il consueto aggiornamento operativo. Un modo per restare in contatto con i cittadini e raccontare, con trasparenza, lo stato delle attività.
 
-## Corso base in svolgimento
+## Corso base: iscrizioni sempre aperte
 
-Le **lezioni** del corso base 2026 procedono secondo calendario:
-
-- **iscritti**: hanno iniziato il percorso formativo;
-- **lezioni teoriche**: 4 già svolte sulle 10 previste;
-- **giornate pratiche**: 1 effettuata;
-- **modulo** primo soccorso: programmato per fine novembre;
-- **esercitazione finale**: pianificata per inizio dicembre.
-
-I **partecipanti** mostrano interesse e buona frequenza. Un **ringraziamento** alle famiglie che sostengono l'impegno dei nuovi volontari.
+Le **iscrizioni al corso base** per diventare volontari restano aperte tutto l'anno, senza scadenze. Le edizioni si organizzano in base alle disponibilità dei formatori e dei nuovi iscritti, anche per una sola persona. Chi vuole iniziare il percorso può contattare il Gruppo in qualsiasi momento: i dettagli sono nella [pagina dedicata](/comunicazioni/2026-09-07-corso-base-volontari-apertura-iscrizioni/).
 
 ## Esercitazione radio
 
@@ -78,15 +70,13 @@ Continuano le **lezioni** nelle scuole del territorio:
 - **Polizia Locale** — supporto a manifestazioni;
 - **Scuole** — programma Settimana PC;
 - **Parco Regionale Castelli Romani** — monitoraggio condiviso;
-- **Gruppi comunali limitrofi** — esercitazioni e protocolli;
-- **Croce Rossa** — modulo primo soccorso del corso base.
+- **Gruppi comunali limitrofi** — esercitazioni e protocolli.
 
 ## Prospettive seconda metà novembre
 
 ### Formazione
-- **modulo primo soccorso** (16-17 e 23-24 novembre);
-- **modulo sicurezza lavoro** (18 novembre);
-- **aggiornamento volontari esperti** su BLS-D (14-15 novembre, concluso).
+- **aggiornamenti interni** dei volontari in servizio, secondo le disponibilità;
+- **iscrizioni al corso base** sempre aperte per chi vuole entrare nel Gruppo.
 
 ### Attività operative
 - **monitoraggio** meteo (autunno-inverno);
@@ -102,7 +92,7 @@ Continuano le **lezioni** nelle scuole del territorio:
 ## Numeri del Gruppo
 
 - **volontari attivi**: sopra i **40** in servizio;
-- **nuovi iscritti**: in formazione al corso base;
+- **nuovi iscritti**: percorsi formativi concordati in base alle disponibilità;
 - **ore di servizio** nel 2026: oltre **4.500**;
 - **uscite**: circa **90** dall'inizio dell'anno;
 - **emergenze**: **0** di scala maggiore (fortunatamente).
@@ -111,8 +101,6 @@ Continuano le **lezioni** nelle scuole del territorio:
 
 Per il mese di dicembre sono già pianificati:
 
-- **esercitazione finale** del corso base;
-- **chiusura** del percorso e consegna tessere;
 - **campagna** "**Natale sicuro**" con contenuti mirati;
 - **manutenzione** invernale di mezzi e attrezzature;
 - **bilancio** annuale del Gruppo;

@@ -121,7 +121,7 @@ A Genzano: l'**ordinanza** sindacale pre-Capodanno sarà pubblicata a breve.
 ## PC a dicembre
 
 ### Attività previste
-- **esame** finale corso base (data da fissare);
+- **iscrizioni al corso base** sempre aperte, avvio concordato con i nuovi iscritti;
 - **reperibilità** continua;
 - **presidio** eventi locali (mercatini, Immacolata, Natale, Capodanno);
 - **monitoraggio** meteo intensificato;

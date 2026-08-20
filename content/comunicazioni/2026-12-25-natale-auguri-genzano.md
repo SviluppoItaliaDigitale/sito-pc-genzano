@@ -62,7 +62,7 @@ Per **emergenze**: sempre e solo **112**.
 Il **2026** che sta per chiudersi è stato per il nostro gruppo un anno di:
 
 - **presenza** costante sul territorio;
-- **formazione** (corso base concluso l'11 dicembre);
+- **formazione** (corso base sempre aperto ai nuovi iscritti);
 - **informazione** continua ai cittadini;
 - **collaborazione** con istituzioni;
 - **crescita** del gruppo.
