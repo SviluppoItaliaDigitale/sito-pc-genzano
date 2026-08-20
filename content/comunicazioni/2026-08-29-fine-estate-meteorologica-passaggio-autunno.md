@@ -39,7 +39,7 @@ Le **prime piogge autunnali** su terreno secco sono spesso le più pericolose: l
 - **allagamenti urbani** dove il sistema di drenaggio è saturo o ostruito.
 
 ### Rischio vento
-A settembre e ottobre **aumentano i fronti atlantici**: le raffiche di vento, unite alla fragilità dei rami secchi da periodo siccitoso, possono causare cadute di alberi.
+A settembre e ottobre **aumentano i fronti atlantici**: le raffiche di vento, unite alla fragilità dei rami secchi da un periodo siccitoso, possono causare cadute di alberi.
 
 ### Rischio temporali
 I temporali di fine estate sono spesso **molto intensi** per il contrasto tra aria calda al suolo e correnti fredde in quota.

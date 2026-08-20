@@ -17,7 +17,7 @@ Quando una rete cellulare cade — per sovraccarico, blackout, guasto alle anten
 
 ## Perché le radio restano indispensabili
 
-Il **terremoto de L'Aquila (2009)**, **l'alluvione di Genova (2011)**, il **terremoto di Amatrice (2016)** hanno mostrato che, in emergenza, le reti cellulari possono saturare o cadere. In quei casi:
+Il **terremoto dell'Aquila (2009)**, **l'alluvione di Genova (2011)**, il **terremoto di Amatrice (2016)** hanno mostrato che, in emergenza, le reti cellulari possono saturare o cadere. In quei casi:
 
 - **rete radio VHF/UHF** fra volontari, sale operative, distaccamenti dei VVF;
 - **rete HF** per collegamenti a lunga distanza (tra regioni, tra sale operative nazionali);

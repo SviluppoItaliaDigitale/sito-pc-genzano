@@ -21,7 +21,7 @@ Sono passati **nove anni** da quel 23 agosto 2017. Alle prime luci del mattino, 
          alt="Foto a colori di creste rocciose innevate delle Alpi Retiche, con pareti scure e nevai residui sotto un cielo azzurro terso"
          caption="Le Alpi Retiche al confine tra Svizzera e Italia: dalla parete nordorientale del Pizzo Cengalo, il 23 agosto 2017, si staccarono 3 milioni di metri cubi di roccia che travolsero il villaggio di Bondo, in Val Bregaglia. Otto escursionisti dispersi, mai ritrovati. Lo scioglimento del permafrost diventa un fattore di rischio nuovo nelle Alpi." >}}
 
-Il bilancio fu di **otto vittime**: escursionisti che stavano risalendo i sentieri della Val Bondasca verso le capanne alpine. Il villaggio di Bondo, sebbene parzialmente protetto da un'opera di contenimento costruita anni prima (un **bacino di laminazione**), fu raggiunto dal fango e dai detriti: distrutti **14 edifici** in Val Bondasca, danneggiati **quattro edifici** a Bondo, sommerso il **ponte cantonale**. I danni furono stimati **oltre 50 milioni di franchi**.
+Il bilancio fu di **otto vittime**: escursionisti che stavano risalendo i sentieri della Val Bondasca verso le capanne alpine. Il villaggio di Bondo, sebbene parzialmente protetto da un'opera di contenimento costruita anni prima (un **bacino di laminazione**), fu raggiunto dal fango e dai detriti: distrutti **14 edifici** in Val Bondasca, danneggiati **quattro edifici** a Bondo, sommerso il **ponte cantonale**. I danni furono stimati **in oltre 50 milioni di franchi**.
 
 La frana del Pizzo Cengalo non è "italiana" in senso stretto — è in territorio svizzero. Ma la lezione che porta riguarda direttamente anche la **protezione civile italiana** dell'arco alpino. Il **cambiamento climatico** sta scongelando il **permafrost** di alta quota. Questo sta innescando una nuova generazione di **frane catastrofiche** in zone storicamente considerate stabili.
 
@@ -37,7 +37,7 @@ Il 21 agosto 2017 — due giorni prima del crollo principale — un evento di **
 
 Nonostante questo, la mattina del 23 agosto, **otto escursionisti** si trovavano sui sentieri della valle — alcuni in violazione dei divieti, altri probabilmente non informati delle ordinanze di chiusura. Quando la frana principale si staccò, alle **9:30 circa**, furono travolti tutti.
 
-L'**onda di detrito** percorse i 12 chilometri della valle in pochi minuti, attenuata progressivamente dal bacino di laminazione costruito anni prima a monte di Bondo. Senza quel bacino, la distruzione del villaggio sarebbe stata **totale**: lo si capì subito, e da quell'esperienza è partito il dibattito su **adeguamento dimensionale** delle opere di protezione alpina.
+L'**onda di detrito** percorse i 12 chilometri della valle in pochi minuti, attenuata progressivamente dal bacino di laminazione costruito anni prima a monte di Bondo. Senza quel bacino, la distruzione del villaggio sarebbe stata **totale**: lo si capì subito, e da quell'esperienza è partito il dibattito sull'**adeguamento dimensionale** delle opere di protezione alpina.
 
 ## La lezione: il permafrost si scioglie e cambia il rischio alpino
 
@@ -56,7 +56,7 @@ Per il sistema di **protezione civile delle aree alpine**, questo significa:
 
 ## Cosa abbiamo costruito da allora
 
-In **Svizzera**, dopo il Pizzo Cengalo, la rete **PERMOS** (Permafrost Monitoring Switzerland), attiva dal 2000 con la più lunga serie storica di misurazioni del permafrost di montagna al mondo, è stata ulteriormente potenziata. La **CONFEDERAZIONE SVIZZERA** ha investito risorse significative nella **ridefinizione delle mappe di pericolosità** dell'arco alpino svizzero.
+In **Svizzera**, dopo il Pizzo Cengalo, la rete **PERMOS** (Permafrost Monitoring Switzerland), attiva dal 2000 con la più lunga serie storica di misurazioni del permafrost di montagna al mondo, è stata ulteriormente potenziata. La **Confederazione Svizzera** ha investito risorse significative nella **ridefinizione delle mappe di pericolosità** dell'arco alpino svizzero.
 
 In **Italia**, l'**ARPA Valle d'Aosta**, l'**ARPA Piemonte**, l'**ARPA Lombardia** e la **Provincia Autonoma di Bolzano** mantengono reti di monitoraggio del permafrost con stazioni dedicate (sondaggi termici, sensori in roccia, monitoraggio satellitare). Il **Comitato Glaciologico Italiano** e il **CNR-IRPI** sono i principali centri di ricerca nazionali.
 
