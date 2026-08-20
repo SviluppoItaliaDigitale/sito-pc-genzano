@@ -3,5 +3,13 @@
   "titolo": "NESSUNA ALLERTA",
   "descrizione": "Non sono previsti fenomeni significativi sul nostro territorio.",
   "ultimo_aggiornamento": "2026-08-18T00:02:17+02:00",
-  "ultimo_controllo": "2026-08-20T22:06:50+02:00"
+  "ultimo_controllo": "2026-08-20T22:11:35+02:00",
+  "domani": {
+    "livello": "gialla",
+    "titolo": "Previsto giallo",
+    "rischi": [
+      "temporali"
+    ],
+    "data": "2026-08-21"
+  }
 }
