@@ -42,11 +42,10 @@ Durante il 2026 il Gruppo ha assicurato presenza in:
 ## Formazione
 
 ### Corso base
-- **avvio**: 23 ottobre 2026;
-- **conclusione esame**: 11 dicembre 2026;
-- **nuovi volontari** preparati all'ingresso operativo;
+- **iscrizioni** sempre aperte, in ogni periodo dell'anno;
+- **percorsi formativi** concordati con i nuovi iscritti, in base alle disponibilità dei formatori;
 - **modulistica** normativa e procedurale;
-- **affiancamento** post-esame in corso.
+- **affiancamento** dei nuovi volontari con i colleghi esperti.
 
 ### Formazione specialistica
 - **aggiornamento** BLSD per volontari attivi;
@@ -114,7 +113,7 @@ Durante il 2026:
 ### Volontari
 - **iscritti** al Gruppo: crescita nel 2026;
 - **attivi** operativamente: turnazioni stabili;
-- **in formazione**: nuovi entrati via corso base;
+- **in formazione**: percorsi concordati in base alle disponibilità;
 - **fasce d'età**: 18-75 anni (diversificazione preziosa);
 - **prevalenza**: adulti attivi e pensionati;
 - **nuove** adesioni femminili incoraggianti.
@@ -174,9 +173,8 @@ Non tutto è andato come sperato:
 - **burocrazia** amministrativa da ottimizzare.
 
 ### Priorità 2027
-- **campagna** reclutamento giovani;
-- **nuovo** corso base in primavera 2027;
-- **verifica** e eventuale sostituzione mezzi;
+- **campagna** reclutamento giovani (iscrizioni al corso base sempre aperte);
+- **verifica** ed eventuale sostituzione mezzi;
 - **formazione specialistica** (GPS, droni, cartografia avanzata);
 - **consolidamento** presenza social;
 - **dialogo** costante con cittadini.
@@ -240,7 +238,7 @@ Se oggi pensi "potrei contribuire anch'io", **contattaci**. Nel **2027** ci sara
 Sul nostro sito:
 
 - [Chiusura novembre](/comunicazioni/2026-11-30-chiusura-novembre-bilancio-dicembre/).
-- [Esame corso base](/comunicazioni/2026-12-11-esame-corso-base/).
+- [Come funziona il corso base](/comunicazioni/2026-09-07-corso-base-volontari-apertura-iscrizioni/).
 - [Storia del Gruppo Comunale](/comunicazioni/2026-04-05-storia-gruppo-comunale-volontari-genzano-quarant-anni/).
 - [Prospettive 2027: nuovo anno](/comunicazioni/2026-12-29-prospettive-2027-nuovo-anno/).
 - [Chi siamo](/chi-siamo/).

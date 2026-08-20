@@ -1,19 +1,23 @@
 ---
-title: "Apertura iscrizioni al corso base per volontari di Protezione Civile"
+title: "Come funziona il corso base per diventare volontari di Protezione Civile"
 date: 2026-09-07
-description: "Sono aperte le iscrizioni al nuovo corso base del Gruppo Comunale Volontari di PC di Genzano di Roma. Programma, requisiti, modalità di iscrizione."
+description: "Le iscrizioni al corso base del Gruppo di Genzano sono sempre aperte. Requisiti, programma e come si organizza il percorso formativo."
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-07-corso-base-volontari-apertura-iscrizioni.webp"
 image_alt: "Aula di formazione con partecipanti in divisa da volontari di Protezione Civile durante una lezione teorica"
-scadenza: "2026-10-31"
+scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
 ---
 
-Sono aperte le **iscrizioni al nuovo corso base** per diventare **Volontario di Protezione Civile** nel Gruppo Comunale di Genzano di Roma. Il percorso è obbligatorio per chi vuole entrare nel Gruppo. È gratuito, si svolge in orario serale e prefestivo, e si conclude con un'abilitazione operativa riconosciuta dalla Regione Lazio.
+Le **iscrizioni al corso base** per diventare **Volontario di Protezione Civile** nel Gruppo Comunale di Genzano di Roma sono **sempre aperte**, in ogni periodo dell'anno. Il percorso è obbligatorio per chi vuole entrare nel Gruppo. È gratuito e si svolge in orario serale e prefestivo.
+
+## Quando si attiva il corso
+
+Non esiste una finestra di iscrizione né un'edizione a calendario fisso. Il corso si organizza **in base alle disponibilità dei formatori e dei nuovi iscritti**: le date si concordano di volta in volta con chi partecipa. Si attiva **anche per una sola persona**. Chi si iscrive oggi viene ricontattato per definire insieme il percorso.
 
 ## A chi è rivolto
 
@@ -42,13 +46,9 @@ Le lezioni coprono i temi fondamentali:
 
 Al termine è previsto un **test di verifica** e un **colloquio** con i responsabili del Gruppo.
 
-## Le lezioni
+## Come si svolge
 
-- **10 lezioni** teoriche serali (2 ore ciascuna);
-- **3 giornate** pratiche in orario pomeridiano o prefestivo;
-- **1 esercitazione finale** sul campo;
-- sede: **sede del Gruppo** o aule comunali secondo disponibilità;
-- **calendario**: da metà ottobre a fine gennaio.
+Il corso dura mediamente **40 ore**, distribuite tra lezioni teoriche serali, giornate pratiche in orario pomeridiano o prefestivo e un'**esercitazione finale** sul campo. La sede è quella del Gruppo o un'aula comunale, secondo disponibilità. Il **calendario si definisce con i partecipanti**, senza date prestabilite.
 
 ## Costo
 
@@ -59,9 +59,9 @@ Il corso è **completamente gratuito**. Il Gruppo fornisce materiale didattico e
 1. Compilare il **modulo di iscrizione** disponibile nella pagina [Diventa volontario](/diventa-volontario/);
 2. Consegnare il modulo in **sede del Gruppo** durante gli orari di apertura;
 3. Allegare **copia del documento** di identità e **certificato medico** di idoneità (può essere prodotto anche successivamente);
-4. Attendere la **conferma** di ammissione.
+4. Attendere il **ricontatto** del Gruppo per concordare l'avvio del percorso.
 
-**Termine di iscrizione**: 31 ottobre 2026.
+Ci si può iscrivere **in qualsiasi momento dell'anno**.
 
 ## Dopo il corso
 
@@ -86,7 +86,7 @@ Il volontariato di PC è:
 ## Per approfondire
 
 - [Pagina Diventa volontario](/diventa-volontario/)
-- [Volontariato — reclutamento autunno 2026](/comunicazioni/2026-08-20-volontariato-pc-reclutamento-autunno/)
+- [Diventare volontari: iscrizioni sempre aperte ai corsi base](/comunicazioni/2026-08-20-volontariato-pc-reclutamento-autunno/)
 - [Il sistema di Protezione Civile](/chi-siamo/)
 
 In emergenza: **112**.

@@ -140,7 +140,7 @@ Se sei una donna che vive a Genzano e dintorni, e hai pensato di fare volontaria
 
 - **contatta** il Gruppo;
 - **partecipa** a una giornata aperta;
-- **iscriviti** al prossimo corso base;
+- **iscriviti** al corso base, sempre aperto;
 - **unisciti** a una squadra che ti metterà alla prova e ti valorizzerà.
 
 Il volontariato di PC è un **servizio pubblico**. E il servizio pubblico è di tutti, e per tutti.

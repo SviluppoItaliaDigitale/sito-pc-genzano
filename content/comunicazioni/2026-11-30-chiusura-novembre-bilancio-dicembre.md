@@ -18,10 +18,9 @@ Si chiude **novembre 2026**, un mese denso di attività per il **Gruppo Comunale
 ## Le attività svolte
 
 ### Formazione
-- **corso base** entrato nella fase conclusiva;
 - **esercitazione** radio inter-comunale del 7 novembre;
-- **modulo** primo soccorso in aula;
-- **aggiornamenti** interni per volontari attivi.
+- **aggiornamenti** interni per volontari attivi;
+- **iscrizioni al corso base** sempre aperte (le edizioni si concordano con i nuovi iscritti).
 
 ### Prevenzione e informazione
 - campagne informative su **ondate di freddo**, **qualità dell'aria**, **nebbia in strada**, **impianti elettrici**, **cadute degli anziani**;
@@ -46,8 +45,8 @@ Si chiude **novembre 2026**, un mese denso di attività per il **Gruppo Comunale
 ### Volontari attivi
 - **iscritti**: numero aggiornato sul sito istituzionale;
 - **operativi**: disponibili per attivazioni;
-- **in formazione**: corso base in chiusura;
-- **nuove adesioni** in arrivo post-esame.
+- **in formazione**: percorsi concordati in base alle disponibilità;
+- **nuove adesioni**: benvenute in ogni momento dell'anno.
 
 ### Ore di servizio
 In novembre, il gruppo ha accumulato **diverse centinaia** di ore di volontariato tra:
@@ -81,7 +80,6 @@ I numeri esatti saranno pubblicati nel **bilancio annuale** di dicembre.
 - **inizio 2027**: nuovo anno e preparazione calendario annuale.
 
 ### Eventi previsti
-- **esame finale** corso base;
 - **esercitazione** territoriale (data da confermare);
 - **incontri** con scuole;
 - **presidio** eventi natalizi locali;
@@ -133,7 +131,7 @@ Un ringraziamento particolare a:
 ### Iscrizione al gruppo
 - **email**: info@protezionecivilegenzano.it;
 - **sede**: contattare per appuntamento;
-- **corso base**: prossima edizione primavera 2027.
+- **corso base**: iscrizioni sempre aperte, avvio concordato con i nuovi iscritti.
 
 ### Seguici
 - **sito**: [protezionecivilegenzano.it](/);

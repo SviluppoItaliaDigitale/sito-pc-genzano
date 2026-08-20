@@ -33,12 +33,11 @@ Un Gruppo che **non pianifica** rischia di:
 
 ## Formazione 2027
 
-### Corso base primaverile
-- **avvio previsto**: aprile 2027;
-- **durata**: 8-10 settimane;
-- **iscrizioni**: febbraio-marzo 2027;
-- **esame finale**: giugno 2027;
-- **obiettivo**: 15-20 nuovi volontari preparati.
+### Corso base
+- **iscrizioni**: sempre aperte, in ogni periodo dell'anno;
+- **avvio**: concordato con i nuovi iscritti, in base alle disponibilità dei formatori;
+- **attivazione**: anche per una sola persona;
+- **obiettivo**: nuovi volontari preparati all'ingresso operativo.
 
 ### Aggiornamenti specialistici
 - **BLSD** annuale per tutti gli operativi;
@@ -204,8 +203,8 @@ Non basta **rispondere** alle emergenze: serve **prevenirle** attraverso:
 ### Primo quadrimestre
 - **gennaio**: pianificazione, auguri, ripartenza;
 - **febbraio**: campagna reclutamento;
-- **marzo**: iscrizioni corso base, ricorrenze sismiche;
-- **aprile**: apertura corso base, Pasqua.
+- **marzo**: ricorrenze sismiche;
+- **aprile**: Pasqua, preparazione stagione AIB.
 
 ### Secondo quadrimestre
 - **maggio**: esercitazioni, eventi primaverili;

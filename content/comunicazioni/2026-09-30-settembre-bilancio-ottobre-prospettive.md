@@ -19,7 +19,7 @@ Settembre si chiude con il sistema di Protezione Civile **pienamente operativo**
 
 - **1° settembre**: apertura dell'autunno meteorologico, rientro dalle ferie estive;
 - **ripresa attività scolastiche** e prime **prove di evacuazione**;
-- **apertura iscrizioni** al **corso base** per nuovi volontari;
+- **nuove candidature** al corso base per volontari (iscrizioni sempre aperte);
 - **giornate di aggiornamento** dei volontari in servizio;
 - **revisione** di mezzi e attrezzature;
 - **ricognizione** di punti critici del territorio in vista della stagione idrogeologica;
@@ -44,7 +44,7 @@ Molti territori organizzano una **settimana dedicata** (data variabile per Regio
 Da ottobre partono i primi cicli di **lezioni nelle scuole** di Genzano di Roma, in coordinamento con i dirigenti scolastici.
 
 ### Corso base volontari
-Le **iscrizioni al corso base** restano aperte fino al 31 ottobre. Il corso inizia nella seconda metà del mese.
+Le **iscrizioni al corso base** sono aperte tutto l'anno. Le edizioni si organizzano in base alle disponibilità dei formatori e dei nuovi iscritti, anche per una sola persona.
 
 ### Manutenzione e ascolto del territorio
 Ottobre è il mese giusto per:
@@ -69,11 +69,11 @@ Il calendario editoriale è definito in coordinamento con il Comune di Genzano e
 
 A tutti i volontari, ai familiari, ai cittadini che seguono il Gruppo: grazie per il supporto. L'autunno porta con sé sfide nuove. La Protezione Civile funziona se è **conosciuta**, **sostenuta**, **partecipata**.
 
-Per chi volesse entrare attivamente: le **iscrizioni al corso base** sono aperte. Settembre è stato un mese di ripresa. Ottobre sarà un mese di azione.
+Per chi volesse entrare attivamente: le **iscrizioni al corso base** sono sempre aperte, in ogni periodo dell'anno. Settembre è stato un mese di ripresa. Ottobre sarà un mese di azione.
 
 ## Per approfondire
 
-- [Corso base volontari — iscrizioni](/comunicazioni/2026-09-07-corso-base-volontari-apertura-iscrizioni/)
+- [Come funziona il corso base](/comunicazioni/2026-09-07-corso-base-volontari-apertura-iscrizioni/)
 - [Calendario esercitazioni autunnali](/comunicazioni/2026-08-25-esercitazioni-autunnali-calendario/)
 - [Rischi e prevenzione](/rischi-prevenzione/)
 
