@@ -20,7 +20,6 @@ Siamo a **metà dicembre 2026**. Mancano **10 giorni** al Natale e **16** a Capo
 ### Attività svolte
 - **avvio** inverno meteorologico (1 dicembre);
 - **presidio** ponte dell'Immacolata (5-8 dicembre);
-- **esame finale** corso base (11 dicembre);
 - **articoli** informativi pubblicati su vari temi stagionali;
 - **coordinamento** con Comune per ordinanze natalizie.
 
@@ -98,8 +97,7 @@ Stiamo pubblicando **tantissimi articoli** questo 2026:
 - **presidi** nelle festività.
 
 ### Formazione
-- **corso base** completato (esame 11 dicembre);
-- **nuovi volontari** in entrata;
+- **iscrizioni al corso base** sempre aperte, percorsi concordati con i nuovi iscritti;
 - **esercitazioni** periodiche;
 - **aggiornamenti** BLSD;
 - **radio** test e allenamenti.

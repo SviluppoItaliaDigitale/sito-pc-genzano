@@ -188,7 +188,7 @@ Un esempio completo: la targa **AB 745 XY** diventa *"Alfa Bravo sette quattro c
 
 ## Un ultimo consiglio: prova la radio prima dell'emergenza
 
-Le prove radio (*"BASE OPERATIVA DA BRAVO 1, PER PROVA RADIO"*) non sono una perdita di tempo: sono l'unico modo per scoprire in tranquillità che la batteria è scarica, che l'antenna è allentata o che il volume è troppo basso. **La radio si impara usandola**, e il momento per imparare non è durante un'emergenza.
+Le prove radio (*"BASE OPERATIVA DA BRAVO 1, PER PROVA RADIO"*) sono l'unico modo per scoprire in tranquillità che la batteria è scarica, che l'antenna è allentata o che il volume è troppo basso. **La radio si impara usandola**, e il momento per imparare non è durante un'emergenza.
 
 Il Gruppo Comunale organizza prove radio periodiche con tutti i volontari iscritti, coordinate con il referente comunicazioni. Chi non partecipa regolarmente alle prove rischia di trovarsi impreparato quando la radio diventa davvero *fondamentale*.
 

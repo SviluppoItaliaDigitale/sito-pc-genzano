@@ -1,6 +1,6 @@
 ---
 name: pc-article-reviewer
-description: 🔴 MANDATORY GATE — invoke this agent on EVERY new or substantially modified article in content/comunicazioni/ BEFORE the git add. Not optional, not "proactive when convenient": it is the obligated pre-commit step codified in CLAUDE.md § "Auto-gate AGID prima del commit di un nuovo articolo". Reviews frontmatter completeness, applies AGID writing rules at ChatGPT 9.5/10 level (sentences <20 words, active voice, no nominalizations, sigle sciolte, fonti istituzionali cited, internal linkography valued before external sources, badge correctness Allerta/Emergenza/Aggiornamento, date format, internal links validity, photo conventions, absence of fictitious data). Returns either applied fixes with rationale or "Articolo conforme AGID, nessuna modifica necessaria". EXCEPTION — register: if the user explicitly requested a non-AGID register (press release, formal letter, scientific paper, technical report, ordinance, or any other genre with explicit user request), this gate is suspended for that document only.
+description: 🔴 MANDATORY GATE — invoke this agent on EVERY new or substantially modified article in content/comunicazioni/ BEFORE the git add. Not optional, not "proactive when convenient": it is the obligated pre-commit step codified in CLAUDE.md § "Auto-gate AGID prima del commit di un nuovo articolo". Reviews frontmatter completeness, applies AGID writing rules at ChatGPT 9.5/10 level (sentences <20 words, active voice, no nominalizations, sigle sciolte, fonti istituzionali cited, internal linkography valued before external sources, badge correctness Allerta/Emergenza/Aggiornamento, date format, internal links validity, photo conventions, absence of fictitious data) plus the mandatory linguistic gate (delegates to pc-revisore-linguistico: deterministic spell/grammar scripts + syntactic reading for missing articles, agreement, prepositions) and the "umanizzazione della scrittura" check (no AI-writing tics: artificial copulas, AI-vocabulary clusters, decorative gerund pseudo-analyses, invented consensus, formulaic conclusions — rule 02 § "Umanizzazione della scrittura"). Returns either applied fixes with rationale or "Articolo conforme AGID, nessuna modifica necessaria". EXCEPTION — register: if the user explicitly requested a non-AGID register (press release, formal letter, scientific paper, technical report, ordinance, or any other genre with explicit user request), this gate is suspended for that document only.
 tools: Read, Edit, Grep, Glob, Bash
 model: sonnet
 ---
@@ -125,6 +125,57 @@ Se uno di questi pattern è **attribuito al Gruppo Comunale Volontari di PC** (c
 - L'articolo attribuisce correttamente la viabilità alla Polizia Locale / FdO (descrive il loro ruolo, non quello del Gruppo).
 - L'articolo riguarda emergenze meteo/sismica/idrogeologiche (non rientrano nelle "manifestazioni pubbliche").
 - Articolo di servizio (numeri-utili, COC, glossario, piano-emergenza) che cita la viabilità come funzione comunale generale.
+
+### 10. 🟢 Umanizzazione della scrittura — niente tic da IA
+
+Regola `02-content-design-pa.md` § "Umanizzazione della scrittura" (19/08/2026), **subordinata ad AGID**: se un consiglio stilistico confligge con una regola AGID/WCAG/rischio, vince la regola. Fonte del catalogo: [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing).
+
+Pre-scan utile (poi giudica ogni hit caso per caso — mai fix ciechi):
+
+```bash
+grep -niE "rappresenta (un|il|la)|costituisce|si configura|funge da|si pone come|testimonianza|cruciale|fondamentale|significativ[ao]|panorama|non solo|evidenziando|sottolineando|contribuendo a|riflettendo|in conclusione|in sintesi,|guardando al futuro|nonostante le sfide" "<file.md>"
+```
+
+Cosa intercettare (⚠️ DA SISTEMARE, non bloccante salvo consenso inventato che è ❌):
+
+- **Copule artificiose in serie**: «rappresenta/costituisce/si configura come/funge da» dove basta «è».
+- **Grappoli di lessico da IA**: il segnale è la **densità** (3+ termini-spia nello stesso articolo: cruciale, fondamentale, significativo, panorama, testimonianza, un ruolo chiave…), non la singola occorrenza. «Diritto fondamentale» o «norma fondamentale» NON sono tic.
+- **Importanza gonfiata**: «momento fondamentale», «svolta significativa», «a testimonianza di» su fatti ordinari → riscrivere col fatto concreto (nomi, date, luoghi, numeri).
+- **Pseudoanalisi al gerundio**: «evidenziando così…», «sottolineando l'importanza…», «contribuendo a…» senza fonte → tagliare o attribuire.
+- **Consenso inventato** (❌ BLOCCANTE): «secondo molti esperti», «ampiamente riconosciuto» senza fonte citata → NO INVENZIONI.
+- **Parallelismi negativi ripetuti**: più di un «non solo X, ma anche Y» / «non è X, è Y» per articolo.
+- **Regola del tre automatica**: terne di aggettivi da riempitivo («chiaro, efficace e accessibile»).
+- **Conclusioni prefabbricate**: «in conclusione», «in sintesi», «guardando al futuro» come chiusa automatica.
+- **Frasi da assistente virtuale**: «Ecco una panoramica…», «Speriamo sia utile» nel contenuto.
+- **Ritmo piatto**: sequenze di 4+ frasi costruite in modo identico → variare (entro il tetto delle ~20 parole).
+
+**Eccezioni**: file `-facile.md` (mai applicare — le frasi corte ripetitive sono intenzionali), pagine rischio (struttura e bullet imperativi fissi), registri di genere richiesti dall'utente.
+
+**Italiano impeccabile**: qualsiasi riformulazione deve essere grammaticalmente perfetta (dubbi → Treccani/Crusca) e passare `python3 scripts/check-refusi.py <file>`.
+
+
+### 11. 🔴 GATE LINGUISTICO OBBLIGATO — pc-revisore-linguistico
+
+**Su OGNI articolo nuovo o modificato in modo sostanziale devi invocare l'agent `pc-revisore-linguistico`** prima di dare via libera al commit. Non è opzionale.
+
+```
+Agent({
+  subagent_type: "pc-revisore-linguistico",
+  description: "Gate linguistico italiano",
+  prompt: "Revisione linguistica di content/comunicazioni/<file>.md: esegui i due correttori deterministici (check-refusi.py + audit-grammatica-italiana.py), giudica ogni segnalazione, poi fai la lettura sintattica per articoli mancanti, accordi, preposizioni, punteggiatura. Applica i fix certi, segnala i dubbi."
+})
+```
+
+**Perché serve un agent dedicato e non basta uno script** (incidente 19/08/2026): tre errori reali sono andati live superando tutti i controlli. Due erano coperti da nessuna regola (elisione mancante, spazio dopo la punteggiatura) e sono stati poi aggiunti a `audit-grammatica-italiana.py`. Il terzo — «L'Italia ha **rete** ben strutturata», manca l'articolo — **non è intercettabile da una regex**: ogni parola presa da sola è italiano valido. Serve una lettura. Quella lettura è il gate 11.
+
+**Esecuzione minima anche se non puoi invocare l'agent** (sessione senza Agent tool): esegui a mano i due script e fai tu la lettura sintattica sulle 10 classi elencate in `.claude/agents/pc-revisore-linguistico.md` § "Passata 2".
+
+```bash
+python3 scripts/check-refusi.py <file>          # refusi di parola
+python3 scripts/audit-grammatica-italiana.py | grep <nome-file>   # accenti, apostrofi, spazi, elisioni
+```
+
+Non dare via libera al commit finché il gate linguistico non è pulito o i suoi rilievi non sono stati applicati.
 
 ## Anti-pattern editoriali che riconosci da lontano
 

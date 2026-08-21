@@ -38,7 +38,7 @@ Il Gruppo Comunale ha:
 - collaborato con **Vigili del Fuoco**, **Carabinieri Forestali**, **Parco Castelli Romani**, Gruppi dei Comuni limitrofi;
 - coperto un turno alla **mensa del campo del gemellaggio AIB di Fondi (LT)**, nei giorni di Ferragosto, a supporto delle squadre impegnate nel sud pontino ([l'articolo](/comunicazioni/2026-08-14-gemellaggio-aib-fondi-turno-mensa-ferragosto/)).
 
-*(I dati puntuali — numero di attivazioni, ore volontariato, interventi congiunti — saranno pubblicati nel rapporto annuale del Gruppo.)*
+*(I dati puntuali — numero di attivazioni, ore di volontariato, interventi congiunti — saranno pubblicati nel rapporto annuale del Gruppo.)*
 
 ## Cosa abbiamo imparato
 

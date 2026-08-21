@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Il **Piano Comunale di Protezione Civile** non è solo un documento testuale. Il suo cuore operativo è costituito da **carte tematiche** che visualizzano i rischi, le aree di emergenza, le vie di accesso. Senza questa **cartografia**, un piano è astratto. Con essa, diventa uno strumento effettivamente utilizzabile.
+Il **Piano Comunale di Protezione Civile** non è solo un documento testuale. Il suo cuore operativo sono le **carte tematiche** che visualizzano i rischi, le aree di emergenza, le vie di accesso. Senza questa **cartografia**, un piano è astratto. Con essa, diventa uno strumento effettivamente utilizzabile.
 
 ## Cos'è la cartografia di PC
 

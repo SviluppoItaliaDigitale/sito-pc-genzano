@@ -183,7 +183,7 @@ Se hai un vicino, parente, amico anziano solo, attenzione a:
 ### Cadute
 - **112** per serie;
 - **113** ormai sostituito dal 112;
-- **guardiamedica** per interventi non urgenti;
+- **guardia medica** per interventi non urgenti;
 - **familiari** immediatamente avvisati.
 
 ### Perdita di coscienza

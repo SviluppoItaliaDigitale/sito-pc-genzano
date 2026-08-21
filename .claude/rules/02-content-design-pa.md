@@ -316,6 +316,47 @@ La regola completa è in `CLAUDE.md` § "Auto-gate AGID prima del commit di un n
 
 **Eccezione — registro non-AGID solo su richiesta esplicita dell'utente.** Se l'utente chiede un registro diverso (comunicato stampa, lettera istituzionale, paper, relazione tecnica, memoria, bando, delibera, ordinanza, scheda accademica, **o altro genere esplicito**), sospendi il gate per quel documento e applica le **convenzioni di genere** (piramide rovesciata + 5W per il comunicato; intestazione + protocollo per la lettera; IMRaD per il paper; ecc.). Vale solo per quel documento; il prossimo articolo ricade nel gate standard. **L'eccezione la decide l'utente, non tu.**
 
+## Umanizzazione della scrittura — prosa naturale, senza tic da IA
+
+🟢 **Regola introdotta il 19/08/2026** (richiesta utente). Fonti verificate: [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) (WikiProject AI Cleanup — catalogo dei pattern statistici ricorrenti nei testi LLM) + linee guida Anthropic sul prompting (istruzioni positive + esempi rappresentativi). Vale per **ogni testo destinato al sito**: articoli, pagine, caption, testi social, schede.
+
+**Clausola di subordinazione (leggila per prima):** questa regola è **gerarchicamente subordinata ad AGID** (ordine priorità di `01-governance-pa.md`: l'eleganza stilistica è ultima). Se un consiglio di questa sezione confligge con una regola AGID, WCAG o di comunicazione del rischio (rules 02/03/06), **vince sempre la regola AGID/WCAG/rischio**. In particolare restano ferme: frasi tendenzialmente sotto le 20 parole, bullet uniformi con punto fermo (Designers Italia), struttura fissa delle pagine `/rischi-prevenzione/*` (WCAG 3.2.3), struttura 6 punti dei post di crisi (ISO 22329).
+
+**Obiettivo (formulazione positiva, alla Anthropic):** scrivere autentica prosa editoriale italiana — concreta, specifica, aderente ai fatti, con ritmo naturale *entro* il registro breve AGID. NON è una direttiva "batti gli AI detector" (inaffidabili per ammissione della stessa pagina Wikipedia: sono indizi statistici, non prove): è una direttiva di qualità della prosa.
+
+### I 10 tic da evitare (adattamento italiano del catalogo Wikipedia)
+
+1. **Copule semplici, non perifrasi.** «È», «sono», «ha» quando bastano. Vietato sostituirle sistematicamente con «rappresenta», «costituisce», «si configura come», «funge da», «si pone come», «vanta». (Wikipedia documenta un calo >10% di is/are nei testi LLM.)
+2. **Niente grappoli di lessico da IA.** Il segnale non è la singola parola ma la **densità**: «cruciale», «fondamentale», «significativo», «robusto», «dinamico», «panorama», «testimonianza», «vibrante», «ricco patrimonio», «un ruolo chiave». Una di queste ogni tanto è italiano normale; tre nello stesso articolo sono un tic. Lista **viva**: il lessico-spia cambia col tempo, aggiorna per densità non per blacklist.
+3. **Non attribuire importanza a tutto.** Vietate le formule «un momento fondamentale», «una svolta significativa», «a testimonianza di», «segna un passo importante» applicate a fatti ordinari. Racconta il fatto con nomi, date, luoghi e numeri: il peso lo valuta il lettore.
+4. **Niente pseudoanalisi decorative.** Dopo un fatto, niente appendici al gerundio non attribuite: «evidenziando così…», «sottolineando l'importanza di…», «contribuendo a…», «riflettendo un più ampio…», «rafforzando il legame…». Se l'analisi è vera e serve, ha una fonte citata; altrimenti si taglia.
+5. **Niente consenso inventato.** «Secondo molti esperti», «gli osservatori ritengono», «ampiamente riconosciuto», «secondo diversi studi» **solo** con fonte reale citata e linkata. Coerente col principio NO INVENZIONI e con la regola "fonti istituzionali sempre citate" (§ Livello qualitativo, punto 3).
+6. **Non abusare dei parallelismi negativi.** «Non solo X, ma anche Y», «non è X, è Y», «non semplicemente…, bensì…»: costruzioni corrette in italiano, ma al massimo **una per articolo**, e solo se il contrasto è reale.
+7. **Spezzare la regola del tre.** Le terne automatiche di aggettivi o sostantivi («chiaro, efficace e accessibile»; «innovazione, sicurezza e sostenibilità») sono un pattern LLM catalogato. Elenca due cose, o quattro, o una sola: quante ne servono davvero.
+8. **Niente conclusioni prefabbricate.** «In conclusione», «in sintesi», «nel complesso», «guardando al futuro», «nonostante le sfide» come attacco dell'ultimo paragrafo: vietati come automatismo. Un articolo di servizio può chiudersi sul suo ultimo fatto utile (numeri, link, prossimo appuntamento).
+9. **Struttura al servizio del contenuto, non viceversa.** Non trasformare ogni articolo in mini-presentazione (intro + 3 sezioni + elenco + considerazioni finali). Gli H2 servono quando il testo è lungo e l'orientamento ne beneficia; le liste «solo quando servono davvero» (già in § Regole di struttura). Grassetti, emoji e separatori solo con funzione. NB: la struttura fissa delle pagine rischio e dei post di crisi **non** è in discussione (vedi clausola di subordinazione).
+10. **Niente frasi da assistente virtuale nel contenuto.** «Ecco una panoramica…», «Speriamo che queste informazioni siano utili», «Non esitate a…»: catalogate da Wikipedia come comunicazione da chatbot finita impropriamente nel testo. Mai nel contenuto pubblicato.
+
+### Ritmo e concretezza (le due regole positive)
+
+- **Varia il ritmo entro il registro breve**: alterna frasi brevissime (5-8 parole) e frasi medie (15-20 parole); evita sequenze di periodi tutti costruiti allo stesso modo e paragrafi tutti della stessa lunghezza. Il limite AGID delle ~20 parole resta il tetto.
+- **Privilegia il concreto**: nomi propri, date estese, luoghi, quantità, circostanze specifiche del territorio. Il dettaglio insolito e pertinente (il nome della via, il modello del mezzo verificato in `/chi-siamo/`, l'orario reale) è ciò che una prosa generica «leviga via» — ed è ciò che rende il testo credibile.
+
+### Correttezza dell'italiano — vincolo assoluto
+
+Umanizzare **non** significa introdurre sciatterie: grammatica, ortografia, punteggiatura e accenti restano impeccabili (siamo un riferimento nazionale). In caso di dubbio su una forma, fa fede l'uso registrato dalle **fonti normative della lingua** (vocabolario ed enciclopedia **Treccani**, in subordine Accademia della Crusca — raggiungibile via Firecrawl, rule 08). Lo spell-check `scripts/check-refusi.py` resta obbligatorio sui file toccati.
+
+### Eccezioni esplicite (dove questa regola NON si applica)
+
+- **Versioni facili `<slug>-facile.md` (A2 CEFR)**: frasi corte, ripetitive e uniformi sono lì **intenzionali** (rule 02 § "Versione italiano semplice"). Non "umanizzarle".
+- **Pagine `/rischi-prevenzione/*` e contenuti operativi di emergenza**: struttura fissa e bullet imperativi uniformi prevalgono (rule 06).
+- **Registri di genere su richiesta utente** (comunicato, lettera, paper…): valgono le convenzioni del genere.
+- **Testi legali/tecnici** (privacy, note legali, frontmatter, dati): fuori perimetro.
+
+### Come si applica in revisione
+
+Stesso metodo conservativo del § "Livello qualitativo": leggere il file intero, correggere **solo i tic reali** (una singola occorrenza di «fondamentale» in «diritto fondamentale» NON è un tic: giudizio caso per caso, mai sostituzioni cieche via sed), mai toccare `image:`, dichiarare "nessuna modifica necessaria" quando è vero. Il check fa parte del gate `pc-article-reviewer` (§ 10 della sua checklist) e vale per Claude Code **e per le AI esterne** (vedi `AGENTS.md` § "Umanizzazione della scrittura").
+
 ## Frontmatter obbligatorio per gli articoli (comunicazioni/)
 
 Ogni articolo deve avere tutti i campi previsti dall'archetipo:

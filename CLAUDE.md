@@ -80,6 +80,14 @@ L'utente lavora **multi-device** (CLI desktop su `main`, push = deploy; mobile/c
 
 ---
 
+## Umanizzazione della scrittura — prosa naturale, senza tic da IA
+
+🟢 **Dal 19/08/2026, per ogni testo destinato al sito** (articoli, pagine, caption, social): scrivi autentica prosa editoriale italiana — concreta, specifica, con ritmo variato entro il registro breve AGID — evitando i tic statistici degli LLM catalogati da [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing). Sintesi dei divieti: perifrasi al posto di «è» («rappresenta/costituisce/si configura come»), grappoli di lessico da IA («cruciale/fondamentale/significativo/panorama/testimonianza» — conta la densità, non la singola parola), importanza gonfiata su fatti ordinari, pseudoanalisi al gerundio («evidenziando così…», «sottolineando…»), consenso inventato senza fonte (bloccante), più di un «non solo X, ma anche Y» per articolo, terne-riempitivo di aggettivi, conclusioni prefabbricate («in conclusione», «guardando al futuro»), frasi da assistente virtuale nel contenuto.
+
+**Subordinata ad AGID**: in conflitto vince sempre la regola AGID/WCAG/rischio. **Eccezioni**: versioni `-facile.md` (A2, mai umanizzarle), pagine rischio (strutture fisse), registri di genere richiesti. **Italiano impeccabile sempre** (riferimento nazionale: dubbi → Treccani/Crusca; `check-refusi.py` sui file toccati). Il check è integrato in `pc-article-reviewer` § 10; per le AI esterne è in `AGENTS.md` § 3.5. Versione completa: rule `02-content-design-pa.md` § "Umanizzazione della scrittura" + `manuale/parte-02` § 2.24.
+
+---
+
 ## Gate di legalità — Circolare DPC 6/8/2018 (manifestazioni pubbliche)
 
 🔴 Per ogni articolo che descrive cosa fa il Gruppo durante un **evento pubblico** (sagra, festa patronale, Infiorata, commemorazione, manifestazione sportiva, concerto, cerimonia, processione, mercatino, incidente stradale esteso):
@@ -248,7 +256,7 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 
 ## Agenti specializzati (`.claude/agents/`)
 
-16 agenti custom da usare PROATTIVAMENTE quando la conversazione fa match con la loro `description` (l'utente scrive in italiano naturale, fai tu il match e attiva da solo):
+17 agenti custom da usare PROATTIVAMENTE quando la conversazione fa match con la loro `description` (l'utente scrive in italiano naturale, fai tu il match e attiva da solo):
 
 | Agent | Trigger naturali |
 |---|---|
@@ -267,6 +275,7 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 | `pc-print-card-qa` | "controlla le schede stampabili", "QA kit calamità" |
 | `pc-site-auditor` | "audit del sito", "incongruenze?", "pro e contro" |
 | `pc-notebooklm-publisher` | "pubblica output NotebookLM per il tema X" |
+| `pc-revisore-linguistico` | 🔴 gate linguistico obbligato richiamato da `pc-article-reviewer`: script deterministici (refusi + grammatica) **e** lettura sintattica per articoli mancanti, accordi, preposizioni. Riferimento Treccani |
 | `pc-correttore-bozze` | "controlla i refusi", "rileggi per refusi" — anche schede statiche HTML (`static/formazione/`, `static/giochi/`) |
 
 Specifiche + workflow combinati in `manuale/parte-19-agenti-specializzati.md`. Aggiungendo/modificando un agent, aggiorna la Parte 19 e questa tabella.

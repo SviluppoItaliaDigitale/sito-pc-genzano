@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Oggi, **sabato 7 novembre**, si svolge un'importante **esercitazione radio** che coinvolge i Gruppi Comunali di Protezione Civile dei **Castelli Romani**. Una prova congiunta che **testa** la capacità di comunicazione in scenari di emergenza, anche in assenza delle infrastrutture ordinarie.
+Oggi, **sabato 7 novembre**, si svolge un'**esercitazione radio** che coinvolge i Gruppi Comunali di Protezione Civile dei **Castelli Romani**. Una prova congiunta che **testa** la capacità di comunicazione in scenari di emergenza, anche in assenza delle infrastrutture ordinarie.
 
 ## Obiettivi dell'esercitazione
 
@@ -73,7 +73,7 @@ La radio rimane **l'unica opzione** affidabile in questi scenari.
 
 ## Il ruolo della radio in emergenza
 
-Durante le grandi emergenze italiane (L'Aquila 2009, Amatrice 2016, Emilia 2012, Emilia-Romagna 2023), la **radio** ha svolto un ruolo cruciale perché:
+Durante le grandi emergenze italiane (L'Aquila 2009, Amatrice 2016, Emilia 2012, Emilia-Romagna 2023), la **radio** è stata decisiva perché:
 
 - **non dipende** dalla rete cellulare;
 - **non dipende** dalla connessione internet;

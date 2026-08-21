@@ -206,6 +206,31 @@ Solo dopo la passata pulita procedi al commit. Vale anche per un singolo articol
 
 **Why esiste questa regola:** il 9 maggio 2026 sono usciti **43 articoli rivisti retroattivamente** in 8 PR consecutive (2024 + 2025 + Q1 2026 + 2027 calendarizzati) per ripianare il debito accumulato dalle sessioni che redigevano senza gate. Specifiche complete in `CLAUDE.md` § *"Auto-gate AGID prima del commit di un nuovo articolo"* e in `.claude/rules/02-content-design-pa.md` § *"Auto-gate AGID prima del commit"*. Per i comunicati stampa vedi `manuale/parte-12-comunicati-stampa-tempo-ordinario-e-tempo-emergenziale.md`.
 
+### 3.5 Umanizzazione della scrittura — niente tic da IA (dal 19/08/2026)
+
+🟢 **Parte integrante del gate 3.4, vale per OGNI testo destinato al sito** (articoli, pagine, caption, testi social). Fonte del catalogo: [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) (WikiProject AI Cleanup). Versione completa in `.claude/rules/02-content-design-pa.md` § "Umanizzazione della scrittura" e `manuale/parte-02` § 2.24 — leggi quelle sezioni solo se il task lo richiede, questa sintesi basta per scrivere.
+
+**Subordinazione**: la regola è un livello di rifinitura SOTTO AGID. In conflitto vince sempre AGID/WCAG/comunicazione del rischio (frasi <20 parole, bullet uniformi, strutture fisse restano).
+
+**Obiettivo positivo**: prosa editoriale italiana concreta e specifica — nomi, date, luoghi, numeri, dettagli reali del territorio — con ritmo variato entro il registro breve. NON è "batti gli AI detector" (inaffidabili): è qualità della prosa.
+
+**I 10 tic vietati:**
+
+1. Perifrasi al posto delle copule: «rappresenta / costituisce / si configura come / funge da / si pone come» dove basta «è».
+2. Grappoli di lessico da IA (il segnale è la **densità**, 3+ nello stesso testo): «cruciale», «fondamentale», «significativo», «panorama», «testimonianza», «dinamico», «un ruolo chiave».
+3. Importanza gonfiata su fatti ordinari: «momento fondamentale», «svolta significativa», «a testimonianza di».
+4. Pseudoanalisi decorative al gerundio: «evidenziando così…», «sottolineando l'importanza…», «contribuendo a…», «riflettendo un più ampio…».
+5. Consenso inventato (BLOCCANTE): «secondo molti esperti», «ampiamente riconosciuto» senza fonte reale citata.
+6. Parallelismi negativi ripetuti: max un «non solo X, ma anche Y» / «non è X, è Y» per articolo.
+7. Regola del tre automatica: niente terne-riempitivo di aggettivi («chiaro, efficace e accessibile»).
+8. Conclusioni prefabbricate: «in conclusione», «in sintesi», «guardando al futuro», «nonostante le sfide» come chiusa automatica.
+9. Struttura da mini-presentazione imposta a ogni testo (intro + 3 sezioni + elenco + considerazioni finali); H2/liste/grassetti solo con funzione.
+10. Frasi da assistente virtuale nel contenuto: «Ecco una panoramica…», «Speriamo sia utile», «Non esitate a…».
+
+**Eccezioni**: file `-facile.md` (A2: le frasi corte ripetitive sono intenzionali — NON umanizzare), pagine `/rischi-prevenzione/*` e contenuti operativi (strutture fisse), registri di genere richiesti dall'utente.
+
+**Italiano impeccabile, sempre**: il sito è un riferimento nazionale. Grammatica, ortografia, punteggiatura e accenti perfetti; in caso di dubbio fa fede la **Treccani** (in subordine la Crusca). In revisione: giudizio caso per caso («diritto fondamentale» non è un tic), mai sostituzioni cieche, mai toccare `image:`.
+
 ---
 
 ## 4. Le 16 invarianti del progetto (sintesi da CLAUDE.md)
@@ -411,11 +436,12 @@ python3 scripts/fix-ordering-articoli-stesso-giorno.py
 
 ## 7. Agenti specializzati esistenti (riferimento)
 
-In `.claude/agents/` ci sono **16 agenti custom** ottimizzati per Claude Code (al 30 giugno 2026; il 16° è `pc-correttore-bozze`). **ChatGPT/Codex ha il suo sistema di sub-agenti diverso** e non li può richiamare direttamente, ma può **emulare il loro lavoro** seguendo le specifiche descritte. Le specifiche complete (system prompt + workflow + esempi) sono in `manuale/parte-19-agenti-specializzati.md`.
+In `.claude/agents/` ci sono **17 agenti custom** ottimizzati per Claude Code (al 19 agosto 2026; il 17° è `pc-revisore-linguistico`). **ChatGPT/Codex ha il suo sistema di sub-agenti diverso** e non li può richiamare direttamente, ma può **emulare il loro lavoro** seguendo le specifiche descritte. Le specifiche complete (system prompt + workflow + esempi) sono in `manuale/parte-19-agenti-specializzati.md`.
 
 | Agent | Trigger naturali | Cosa fa (sintesi) |
 |---|---|---|
 | `pc-article-reviewer` | "rivedi questo articolo", "controlla il frontmatter", "va bene per pubblicare?" | Gate AGID obbligato pre-commit: frontmatter, badge, data, link interni, convenzioni foto, qualità ChatGPT 9.5/10 |
+| `pc-revisore-linguistico` | gate linguistico obbligato richiamato da pc-article-reviewer su ogni articolo | Esegue i due correttori deterministici (`check-refusi.py` refusi di parola + `audit-grammatica-italiana.py` accenti/apostrofi/spazi/elisioni), poi la **lettura sintattica** per ciò che nessuna regex vede: articoli mancanti («ha rete» → «ha una rete»), accordi di genere/numero, concordanze verbali a distanza, reggenze delle preposizioni. Autorità linguistica: Treccani, in subordine Crusca |
 | `pc-photo-caption-verifier` | gate visivo richiamato da pc-article-reviewer quando l'articolo ha `{{< foto >}}` | Read multimodale di ogni foto, verifica che alt/caption descrivano ciò che si vede, attribuzione corretta, web-check entità citate |
 | `pc-accessibility-auditor` | "audit accessibilità", "controlla WCAG" | Audit contenuti markdown WCAG 2.2 AA (alt, heading, link, sigle, lingua, contrasto) — complementare a Lighthouse |
 | `pc-content-freshness` | "ci sono articoli vecchi?", "scadenze passate" | Sweep articoli con `scadenza:` superata, identifica articoli > 18 mesi con dati obsoleti |

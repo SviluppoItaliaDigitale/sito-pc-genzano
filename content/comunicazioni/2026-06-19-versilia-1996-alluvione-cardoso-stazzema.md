@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Tra il **18 e il 19 giugno 1996** un sistema temporalesco di intensità eccezionale si scaricò sui versanti delle Alpi Apuane, sopra la **Versilia toscana**. Furono registrati **fino a 470 millimetri di pioggia in poche ore** sulla zona di **Cardoso di Stazzema**, **Pietrasanta**, **Forte dei Marmi** e dintorni.Il torrente **Vezza** straripò. Le frane si staccarono dai versanti delle Apuane, spazzando via interi nuclei abitati. **Cardoso**, frazione del comune di Stazzema, fu **letteralmente cancellata** dall'onda di fango e detriti.
+Tra il **18 e il 19 giugno 1996** un sistema temporalesco di intensità eccezionale si scaricò sui versanti delle Alpi Apuane, sopra la **Versilia toscana**. Furono registrati **fino a 470 millimetri di pioggia in poche ore** sulla zona di **Cardoso di Stazzema**, **Pietrasanta**, **Forte dei Marmi** e dintorni. Il torrente **Vezza** straripò. Le frane si staccarono dai versanti delle Apuane, spazzando via interi nuclei abitati. **Cardoso**, frazione del comune di Stazzema, fu **letteralmente cancellata** dall'onda di fango e detriti.
 
 Bilancio finale: **13 morti**, **decine di dispersi mai ritrovati** (i corpi furono probabilmente trascinati al mare dalle colate), oltre **mille senzatetto**, danni stimati in **circa 250 miliardi di lire** dell'epoca.
 

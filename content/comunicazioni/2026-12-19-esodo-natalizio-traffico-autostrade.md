@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Il **weekend 19-21 dicembre 2026** rappresenta il **picco dell'esodo natalizio**. Milioni di italiani si spostano verso le **famiglie d'origine** (spesso al sud) o verso **località di vacanza** (montagna per sciare, mare in paesi caldi). Attenzione alla guida.
+Il **weekend 19-21 dicembre 2026** è il **picco dell'esodo natalizio**. Milioni di italiani si spostano verso le **famiglie d'origine** (spesso al sud) o verso **località di vacanza** (montagna per sciare, mare in paesi caldi). Attenzione alla guida.
 
 ## Il contesto
 
@@ -60,7 +60,7 @@ Genzano non è attraversata da grandi flussi autostradali ma:
 - **orari** non di punta (partenze all'alba o tardi sera meno congestionate);
 - **alternative** preparate (strade secondarie);
 - **carburante** pieno prima dell'autostrada;
-- **bagnoasciugatura** prima della partenza.
+- **bagno** per tutti prima della partenza.
 
 ### Veicolo
 - **pneumatici** invernali (obbligatori dal 15 novembre);

@@ -16,7 +16,7 @@ versione_facile: "2026-04-13-piano-emergenza-familiare-citazione-abili-a-protegg
 
 **Il Piano di Emergenza Familiare digitale del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma ha ottenuto una citazione importante.** Il portale [Abili a proteggere](https://www.abiliaproteggere.net/2026/04/13/genzano-di-roma-piano-di-emergenza-familiare-digitale-e-inclusivo/) è realizzato in collaborazione con il Dipartimento della Protezione Civile della Presidenza del Consiglio dei Ministri. Ha dedicato un articolo al nostro strumento, descrivendone le caratteristiche e l'approccio inclusivo.
 
-Per un gruppo di volontari comunali, vedersi riconosciuti da una delle voci più autorevoli del panorama nazionale in materia di protezione civile e inclusione è motivo di grande orgoglio e di responsabilità.
+Per un gruppo di volontari comunali, vedersi riconosciuti da una delle voci nazionali più autorevoli in materia di protezione civile e inclusione è motivo di grande orgoglio e di responsabilità.
 
 ---
 
@@ -32,7 +32,7 @@ Essere citati in questo contesto significa che il lavoro svolto a Genzano di Rom
 
 Il Piano di Emergenza Familiare è uno strumento che ogni nucleo familiare dovrebbe avere. Risponde a una domanda semplice ma decisiva: **cosa farebbe la mia famiglia se accadesse un'emergenza adesso?**
 
-In pochi minuti, attraverso il nostro portale, ogni cittadino può compilare un piano personalizzato che individua tre elementi fondamentali:
+In pochi minuti, attraverso il nostro portale, ogni cittadino può compilare un piano personalizzato che individua tre elementi:
 
 - **Dove trovarsi**: i punti di ritrovo concordati dalla famiglia, vicino e lontano da casa, consultando la cartografia delle aree di attesa del Comune.
 - **Chi chiamare**: un contatto di riferimento fuori città, che possa fare da ponte nelle comunicazioni se le linee locali sono sovraccariche.

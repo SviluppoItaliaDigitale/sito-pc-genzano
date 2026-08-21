@@ -103,7 +103,7 @@ Siamo nella **settimana tra le feste**. Dal **27 al 31 dicembre**. Giorni tradiz
 - **no** giudizio severo;
 - **realistico** sia sul positivo che sul negativo;
 - **concreto** (cosa ho FATTO, non solo pensato);
-- **condividibile** con partner, amici, terapista se ci si ha.
+- **condivisibile** con partner, amici, terapeuta se lo si ha.
 
 ### Domande utili
 - **cosa ho realizzato**?
@@ -235,7 +235,7 @@ Questa settimana **sospesa** è **preziosa**:
 - **accetta** il rallentamento;
 - **invita** alla riflessione.
 
-**Usala** come meglio credi. Riposarsi è legittimo. Progettare è utile. Ricordare è fecondo. Essere con chi si ama è tutto.
+**Usala** come meglio credi: riposarsi è legittimo, progettare è utile, ricordare è fecondo. Essere con chi si ama è tutto.
 
 ## Per approfondire
 

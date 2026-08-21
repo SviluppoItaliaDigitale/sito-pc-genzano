@@ -1,7 +1,7 @@
 ---
 title: "Chiusura di ottobre: bilancio del mese e prospettive novembre"
 date: 2026-10-31T00:01:00+02:00
-description: "Si chiude ottobre con un bilancio delle attività del Gruppo: iscrizioni chiuse al corso base, Io Non Rischio, lezioni nelle scuole."
+description: "Si chiude ottobre con un bilancio delle attività del Gruppo: formazione, Io Non Rischio, lezioni nelle scuole."
 badge: "Aggiornamento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -26,20 +26,19 @@ Nel mese di ottobre il Gruppo ha svolto:
 - **5 lezioni** nelle scuole primarie e secondarie;
 - **1 giornata aperta** presso la sede;
 - **1 campagna** Io Non Rischio in piazza;
-- **1 corso** base avviato (prima lezione);
 - **0 emergenze** gravi (monitoraggio costante).
 
 Il numero di **visite** al sito è in crescita costante; la cittadinanza risponde positivamente ai contenuti informativi.
 
-## Corso base: iscrizioni chiuse
+## Corso base: iscrizioni sempre aperte
 
-Le **iscrizioni** al corso base si sono chiuse oggi **31 ottobre**. Grazie a tutti coloro che hanno scelto di **investire** nel volontariato di Protezione Civile. Il corso proseguirà per tutto novembre e dicembre, con lezioni e attività pratiche.
+Le **iscrizioni** al corso base restano aperte **tutto l'anno**, senza scadenze. Grazie a tutti coloro che hanno scelto di **investire** nel volontariato di Protezione Civile. Le edizioni si organizzano in base alle disponibilità dei formatori e dei nuovi iscritti, anche per una sola persona.
 
-Chi non è riuscito a iscriversi può **contattare il Gruppo** per informazioni sulle prossime edizioni.
+Chi vuole iscriversi può **contattare il Gruppo** in qualsiasi momento.
 
 ## Attività di sensibilizzazione
 
-La partecipazione a **Io Non Rischio** ha visto il coinvolgimento di **centinaia** di cittadini e famiglie. Le **schede informative** distribuite su rischio idrogeologico, sismico e AIB rappresentano un **investimento** concreto sulla preparazione collettiva.
+La partecipazione a **Io Non Rischio** ha visto il coinvolgimento di **centinaia** di cittadini e famiglie. Le **schede informative** distribuite su rischio idrogeologico, sismico e AIB sono un **investimento** concreto sulla preparazione collettiva.
 
 ## Monitoraggio territorio
 
@@ -65,10 +64,9 @@ Un **ringraziamento** alle Dirigenze Scolastiche che hanno aperto le porte al Gr
 
 ## Prospettive di novembre
 
-### Corso base
-- **10 lezioni teoriche** serali;
-- **3 giornate** pratiche (weekend);
-- **modulo** primo soccorso con istruttori esterni.
+### Formazione
+- **iscrizioni al corso base** sempre aperte, avvio concordato con i nuovi iscritti;
+- **aggiornamenti** per i volontari in servizio.
 
 ### Attività operative
 - **esercitazione inter-comunale** (data da confermare);
@@ -115,12 +113,12 @@ Per informazioni:
 
 ## Un grazie finale
 
-Chiudiamo ottobre con un **grazie** a chi lavora silenziosamente nel sistema di Protezione Civile italiano: volontari, tecnici, funzionari, cittadini consapevoli. Ogni contributo, grande o piccolo, costituisce la **resilienza** collettiva di un territorio.
+Chiudiamo ottobre con un **grazie** a chi lavora silenziosamente nel sistema di Protezione Civile italiano: volontari, tecnici, funzionari, cittadini consapevoli. Ogni contributo, grande o piccolo, costruisce la **resilienza** collettiva di un territorio.
 
 ## Per approfondire
 
 - [Aggiornamento metà ottobre](/comunicazioni/2026-10-15-aggiornamento-operativo-meta-ottobre/)
-- [Corso base — iscrizioni](/comunicazioni/2026-09-07-corso-base-volontari-apertura-iscrizioni/)
+- [Come funziona il corso base](/comunicazioni/2026-09-07-corso-base-volontari-apertura-iscrizioni/)
 - [Chi siamo](/chi-siamo/)
 
 In emergenza: **112**.

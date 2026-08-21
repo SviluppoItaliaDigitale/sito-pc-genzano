@@ -66,13 +66,21 @@ def strip_markdown(t):
     t = re.sub(r"(?s)^---\n.*?\n---\n", "", t)        # frontmatter YAML
     t = re.sub(r"\S+@\S+", " ", t)                      # email
     t = re.sub(r"\b[\w.-]+\.(?:it|com|org|net|gov|eu|edu|info)\b", " ", t)  # domini nudi
+    # Marcatori di enfasi RIMOSSI per fusione (non per sostituzione con spazio):
+    # «**P**ull» / «tec**nologico**» devono tornare «Pull» / «tecnologico»,
+    # altrimenti il tokenizzatore vede frammenti («ull», «nologico») e li
+    # segnala come refusi (falsi positivi da grassetto mnemonico, 19/08/2026).
     t = re.sub(r"(?s)```.*?```", " ", t)               # blocchi codice
     t = re.sub(r"`[^`]*`", " ", t)                      # codice inline
     t = re.sub(r"(?s)\{\{[<%].*?[%>]\}\}", " ", t)      # shortcode Hugo
+    t = re.sub(r"\{#[\w-]+\}", " ", t)                 # ancore heading {#perche-rilevante}
     t = re.sub(r"!\[[^\]]*\]\([^)]*\)", " ", t)         # immagini
     t = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", t)      # link → solo testo
+    t = re.sub(r"(?is)<(script|style)[^>]*>.*?</\1>", " ", t)  # blocchi JS/CSS interi
     t = re.sub(r"<[^>]+>", " ", t)                      # tag HTML inline
+    t = re.sub(r"&[a-zA-Z#0-9]+;", " ", t)              # entità HTML (&nbsp; ecc.)
     t = re.sub(r"https?://\S+", " ", t)                 # URL
+    t = re.sub(r"[*_]{1,3}", "", t)                     # enfasi: fusione, non spazio
     return t
 
 def strip_html(t):
@@ -112,6 +120,12 @@ def main():
         if not os.path.isfile(f):
             continue
         raw = open(f, encoding="utf-8", errors="ignore").read()
+        # Pagine tradotte (language: != it) e sezioni multilingua: fuori
+        # perimetro del dizionario italiano (stessa regola dell'audit
+        # grammaticale). Le versioni -facile restano: sono italiano A2.
+        m_lang = re.search(r"^language:\s*[\"']?([a-z]{2})", raw, re.M)
+        if m_lang and m_lang.group(1) != "it":
+            continue
         text = strip_html(raw) if f.endswith((".html", ".htm")) else strip_markdown(raw)
         suspects = {}
         for w in iter_words(text):

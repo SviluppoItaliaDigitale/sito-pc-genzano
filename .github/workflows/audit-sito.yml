@@ -1303,8 +1303,8 @@ jobs:
           CB="?audit=$(date -u +%s)"
           home_body=$(curl -sL --max-time 10 -H "Cache-Control: no-cache" "https://www.protezionecivilegenzano.it/${CB}" 2>/dev/null)
           meteo_body=$(curl -sL --max-time 10 -H "Cache-Control: no-cache" "https://www.protezionecivilegenzano.it/allerte-meteo/${CB}" 2>/dev/null)
-          home_lvl=$(echo "$home_body" | grep -oE 'allerta-bar-(verde|giallo|arancione|rosso)' | head -1 | sed 's/allerta-bar-//')
-          meteo_lvl=$(echo "$meteo_body" | grep -oE 'Livello (Verde|Giallo|Arancione|Rosso)' | head -1 | sed 's/Livello //' | tr '[:upper:]' '[:lower:]')
+          home_lvl=$(echo "$home_body" | grep -oE 'allerta-bar-(verde|gialla|arancione|rossa)' | head -1 | sed 's/allerta-bar-//')
+          meteo_lvl=$(echo "$meteo_body" | grep -oiE 'Livello (Verde|Gialla|Arancione|Rossa)' | head -1 | sed 's/Livello //' | tr '[:upper:]' '[:lower:]')
           if [ -n "$home_lvl" ] && [ -n "$meteo_lvl" ]; then
             if [ "$home_lvl" != "$meteo_lvl" ]; then
               err "Livello allerta DIVERGENTE tra home (\`$home_lvl\`) e /allerte-meteo/ (\`$meteo_lvl\`): una delle due pagine è stantia su Aruba. È il sintomo peggiore (allerta sbagliata al cittadino). Forzare un redeploy integrale resettando lo \`state-name\` del deploy FTP — vedi rule 05-github-aruba-deploy.md § \"File stantii su Aruba\"."
