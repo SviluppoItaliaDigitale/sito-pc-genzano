@@ -22,6 +22,7 @@ PC, usando solo:
 1.bis [Agenti specializzati (frasi naturali)](#1bis-agenti-specializzati-frasi-naturali)
 1.ter [Stesura testi con ChatGPT/Gemini (workflow ibrido)](#1ter-stesura-testi-con-chatgptgemini-workflow-ibrido)
 1.quater [Lavorare dal telefono collegandoti al PC (Remote Control e SSH+tmux)](#1quater-lavorare-dal-telefono-collegandoti-al-pc-remote-control-e-sshtmux)
+1.quinquies [Parità desktop ↔ mobile](#1quinquies-parità-desktop--mobile-cosa-è-identico-cosa-configurare-cosa-resta-solo-pc)
 2. [Pubblicare un articolo nuovo da mobile](#2-pubblicare-un-articolo-nuovo-da-mobile)
 3. [Aggiungere foto a un articolo](#3-aggiungere-foto-a-un-articolo)
 4. [Ottenere le bozze social per gli articoli](#4-ottenere-le-bozze-social-per-gli-articoli)
@@ -248,6 +249,19 @@ whoami              # il tuo nome utente
 
 In pratica: **Remote Control** per dare indicazioni al volo dall'app; **SSH+tmux** per le sessioni lunghe che non vuoi perdere. Per le sole modifiche semplici (articoli, allerta, emergenza, social) resta validissimo anche il workflow GitHub web delle sezioni 2-8, che non richiede il PC acceso.
 
+## 1.quinquies Parità desktop ↔ mobile: cosa è identico, cosa configurare, cosa resta solo-PC
+
+Le funzionalità del sito viaggiano su **tre livelli** (aggiornato 21/08/2026):
+
+**A) Identico ovunque senza fare nulla — vive nel repo.** CLAUDE.md, le rules `.claude/rules/`, i **16 agenti** `.claude/agents/` (gate AGID, gate foto, revisore linguistico, ecc.), gli script `scripts/`, i manuali. Ogni sessione — CLI desktop, app mobile, cloud — li carica dal repo all'avvio: il "cervello editoriale" è già multi-device. Anche le automazioni pesanti (cover, QR, braille, bozze social, deploy) girano in **GitHub Actions**, non sul tuo dispositivo. Ricorda solo il **CHECK SESSIONE** (sezione 0): una sessione mobile aperta prima di un aggiornamento delle rules va chiusa e riaperta.
+
+**B) Attivabile in cloud con una configurazione una tantum.**
+- **Firecrawl MCP** (lettura siti SPA/anti-bot: DPC, EUR-Lex, Senato…): dal 21/08/2026 è definito a livello di **progetto** in `.mcp.json` (root del repo), quindi esiste anche nelle sessioni cloud. Per attivarlo serve la variabile d'ambiente `FIRECRAWL_API_KEY` nell'**ambiente cloud del repo**: su `claude.ai/code` → impostazioni dell'ambiente (environment) del repository → variabili d'ambiente/segreti → aggiungi `FIRECRAWL_API_KEY` (stesso valore che hai nel `~/.bashrc` del PC). Alla prima sessione ti verrà chiesto di approvare il server MCP di progetto: approva.
+- **`GEMINI_API_KEY`**: serve solo se vuoi generare le bozze social **dentro** la sessione invece che via CI (la CI ha già il suo GitHub Secret e fa da sola). Si aggiunge nello stesso pannello.
+- **Foto Wikimedia dal cloud**: già attive (agent proxy, vedi Caso B della sezione 3).
+
+**C) Resta solo sul PC (per natura, non per dimenticanza).** Le ~100 **skill globali** di `~/.claude/skills/` (gestite centralmente sul PC — in cloud non servono per il lavoro editoriale: i gate sono negli agenti di repo), **Playwright** sul Chrome di sistema (verifica visiva pre-commit), **MinerU** (OCR PDF ostici, 5,7 GB), **LibreOffice** per l'export PDF del deck, la sandbox foto completa (NASA/USGS/NOAA/stock) e le **memory locali** di Claude Code (ciò che deve valere ovunque va promosso nelle rules, come già facciamo). Per usare **tutto questo dal telefono** la strada è la sezione **1.quater**: Remote Control o SSH+tmux verso il PC acceso — lì il telefono pilota letteralmente l'ambiente desktop, parità al 100%.
+
 ---
 
 ## 2. Pubblicare un articolo nuovo da mobile
@@ -344,11 +358,12 @@ informativi/dottrinali — non si è obbligati ad avere foto.
 
 ### Caso B — Vuoi una foto inline gratuita (Wikipedia/NASA/USGS/NOAA/stock)
 
-> ⚠️ **Vincolo della sandbox cloud (testato 2026-05-09)**: le sessioni Claude Code da mobile/web/agent GitHub-integrato hanno la **rete verso Wikimedia, NASA, USGS, NOAA, Pexels, Pixabay, Unsplash bloccata** (`HTTP 403 host_not_allowed`). L'agent `pc-image-fixer` può scaricare foto solo da **Claude Code CLI sul PC** dell'utente, dove la sandbox locale è sbloccata via `.claude/settings.local.json`. Specifiche complete in `.claude/rules/08-claude-code-setup.md` § "Sandbox CLOUD vs sandbox LOCALE".
+> 🟢 **Aggiornamento 16/08/2026 — il cloud scarica da Wikimedia.** Le sessioni Claude Code Remote gestite (quelle dell'app/web) passano da un **agent proxy** e scaricano da **Wikimedia Commons** (API di ricerca + file), con tre accorgimenti obbligatori: User-Agent identificativo, retry con backoff lungo per i 429, thumbnail a larghezze standard. Il vecchio blocco `403 host_not_allowed` (testato 2026-05-09) riguardava le sessioni cloud senza agent proxy. **NASA/USGS/NOAA/stock non sono ancora state riverificate dal cloud**: prima di prometterle, la sessione fa un test di download da 5 secondi. Specifiche complete in `.claude/rules/08-claude-code-setup.md` § "Sandbox CLOUD vs sandbox LOCALE".
 >
-> Da mobile due strade:
-> - **Aspetti di tornare al PC** e lì lanci Claude Code CLI con la richiesta in linguaggio naturale (vedi sotto).
-> - **Carichi tu la foto** già su GitHub web in `static/images/` (vedi Caso C); allora la sessione cloud può applicare la fascia blu (Pillow installabile via pip che è whitelistato) e inserire lo shortcode senza dover scaricare nulla da fonti esterne.
+> Da mobile quindi tre strade:
+> - **Chiedi direttamente alla sessione cloud** una foto da Wikimedia: l'agent `pc-image-fixer` cerca, scarica (UA + backoff), applica la fascia blu (Pillow via pip) e inserisce lo shortcode. Collaudato end-to-end il 16/08/2026.
+> - **Carichi tu la foto** già su GitHub web in `static/images/` (vedi Caso C); la sessione cloud applica fascia blu e shortcode senza scaricare nulla.
+> - **Per le altre fonti** (NASA/USGS/NOAA/stock), se il test di download fallisce: torni al PC con Claude Code CLI (sandbox locale sbloccata via `.claude/settings.local.json`).
 
 **Da Claude Code CLI sul PC** lo strumento giusto è **chiedere a Claude in italiano naturale**.
 L'agent `pc-image-fixer` (Parte 19) cerca, sceglie, scarica, applica fascia
