@@ -1,7 +1,7 @@
 {
-  "aggiornato": "2026-08-21T06:02",
+  "aggiornato": "2026-08-21T06:51",
   "data_lunga": "venerdì 21 agosto 2026",
-  "aggiornato_label": "venerdì 21 agosto 2026, ore 06:02",
+  "aggiornato_label": "venerdì 21 agosto 2026, ore 06:51",
   "alba": "06:23",
   "tramonto": "20:00",
   "corrente": {
@@ -9,9 +9,9 @@
     "percepita": 26.4,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 86,
-    "vento": 13,
-    "raffiche": 44
+    "umidita": 84,
+    "vento": 12,
+    "raffiche": 45
   },
   "giorni": [
     {
