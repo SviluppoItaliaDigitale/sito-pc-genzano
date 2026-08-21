@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-08-21T16:49",
+  "aggiornato": "2026-08-21T17:02",
   "data_lunga": "venerdì 21 agosto 2026",
-  "aggiornato_label": "venerdì 21 agosto 2026, ore 16:49",
+  "aggiornato_label": "venerdì 21 agosto 2026, ore 17:02",
   "alba": "06:23",
   "tramonto": "20:00",
   "corrente": {
-    "temp": 25.5,
-    "percepita": 27.9,
+    "temp": 25.0,
+    "percepita": 27.5,
     "cielo": "Temporale",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"30.1\" rx=\"24.5\" ry=\"11.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"17.4\" cy=\"24.8\" r=\"10.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.4\" cy=\"22.5\" r=\"9.4\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"18.0\" r=\"10.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g><polygon points=\"26.4,42.4 36.0,42.4 28.8,58.4 32.8,45.6 24.8,45.6\" fill=\"#f6a800\"/></g>",
-    "umidita": 80,
-    "vento": 16,
-    "raffiche": 69
+    "umidita": 81,
+    "vento": 15,
+    "raffiche": 67
   },
   "giorni": [
     {
