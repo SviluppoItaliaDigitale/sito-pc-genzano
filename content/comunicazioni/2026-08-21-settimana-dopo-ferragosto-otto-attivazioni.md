@@ -61,6 +61,8 @@ Giovedì mattina la **Polizia Locale** richiede un intervento per **rami pericol
 
 Nel primo pomeriggio la SOUP chiama il Gruppo a **Velletri, in via dei Cavalli**, per un **incendio di sterpaglie**: un supporto breve con pickup e autobotte accanto a Vigili del Fuoco, Carabinieri e altri volontari. Poco dopo, nuova attivazione sulla **Falcognana**, un fronte che quest'estate [è già bruciato più volte](/comunicazioni/2026-08-10-incendi-pomezia-falcognana-agosto-2026/): un **vasto incendio di sterpaglie** impegna l'autobotte Atego e la squadra fino a sera, per **quasi cinque ore**, con Polizia Locale, Vigili del Fuoco e altri gruppi sul posto.
 
+Le cronache locali confermano la giornata difficile. Per [RomaToday](https://www.romatoday.it/cronaca/incendi-roma-oggi-20-agosto-2026.html) via Falcognana è stata «la situazione più critica in città», con interventi anche a Velletri e Ciampino. [Castelli Notizie](https://www.castellinotizie.it/2026/08/20/incendio-via-falcognana-marino-ettari-fiamme/) documenta ettari di sterpaglie e alberi in fumo, con le abitazioni rimaste illese a sera.
+
 {{< galleria titolo="Le foto dalle giornate di mercoledì e giovedì" >}}
 {{< foto src="/images/2026-08-20-incendi-mezzo-aib-scarpata.webp"
          alt="Il mezzo antincendio rosso del Gruppo, con la scritta Città di Genzano di Roma — Protezione Civile e il vano pompa aperto, fermo su una strada sterrata ai piedi di una scarpata annerita dal fuoco; una manichetta rossa risale il pendio verso i volontari al lavoro in alto."
