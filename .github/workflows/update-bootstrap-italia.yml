@@ -57,12 +57,22 @@ jobs:
       #                 questo confronto separato, una nuova prerelease
       #                 successiva all'ultima stabile installata passerebbe
       #                 inosservata (trovato in review su questa stessa PR).
+      # NOTA (23/08/2026): il flag "prerelease" del JSON GitHub non basta da
+      # solo. Il 04/08/2026 il maintainer di italia/bootstrap-italia ha
+      # pubblicato v3.0.0-beta.4 SENZA spuntare "This is a pre-release":
+      # l'API la restituisce con prerelease=false, sopra la vera patch
+      # stabile v2.18.3 (pubblicata lo stesso giorno). Senza un secondo
+      # filtro, quel refuso upstream avrebbe bloccato per sempre il
+      # rilevamento di patch stabili reali (major-gate sempre attivo sulla
+      # beta, v2.18.3 mai raggiunta). Aggiungiamo quindi un filtro
+      # difensivo sul TAG NAME (alpha|beta|rc|pre|dev), indipendente dal
+      # flag upstream.
       - name: "🌐 Controlla ultima release stabile e ultima in assoluto"
         id: releases
         run: |
           JSON=$(curl -s "https://api.github.com/repos/italia/bootstrap-italia/releases?per_page=20")
 
-          STABLE=$(echo "$JSON" | jq -r '[.[] | select(.prerelease == false and .draft == false)][0].tag_name // empty' | sed -E 's/^v//')
+          STABLE=$(echo "$JSON" | jq -r '[.[] | select(.prerelease == false and .draft == false and ((.tag_name | test("(?i)-(alpha|beta|rc|pre|dev)")) | not))][0].tag_name // empty' | sed -E 's/^v//')
           if [ -z "$STABLE" ]; then
             echo "❌ ERRORE: impossibile determinare l'ultima release stabile da /releases"
             exit 1
