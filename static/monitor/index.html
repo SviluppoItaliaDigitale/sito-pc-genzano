@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monitor PC — Castelli Romani</title>
+<meta name="description" content="Monitor sperimentale in stile sala situazioni: allerta per zone del Lazio, radar DPC, sismi INGV, meteo, aria e mare per Genzano di Roma e i Castelli Romani. Fonti ufficiali, dati indicativi.">
+<link rel="stylesheet" href="../vendor/leaflet/leaflet.css">
+<style>
+/* Font self-hostati (SIL OFL 1.1, vedi fonts/LICENZE.txt) — la CSP del sito non consente Google Fonts */
+@font-face{font-family:'Chakra Petch';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/chakra-petch-400.woff2) format('woff2')}
+@font-face{font-family:'Chakra Petch';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/chakra-petch-600.woff2) format('woff2')}
+@font-face{font-family:'Chakra Petch';font-style:normal;font-weight:700;font-display:swap;src:url(fonts/chakra-petch-700.woff2) format('woff2')}
+@font-face{font-family:'Share Tech Mono';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/share-tech-mono-400.woff2) format('woff2')}
+:root{
+  --bg:#04070b; --panel:#0a1119; --panel2:#0d1520; --line:#12212e;
+  --grn:#35e08c; --gia:#ffd60a; --ara:#ff8c1a; --red:#ff3b30; --cyn:#37c7ff;
+  --tx:#c9dcd2; --dim:#5d7a6e;
+  --mono:'Share Tech Mono',monospace; --disp:'Chakra Petch',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{background:var(--bg);color:var(--tx);font-family:var(--disp);overflow:hidden;font-size:13px}
+body.blackout #lmap{filter:brightness(.55) saturate(.7)}
+
+#hdr{position:fixed;inset:0 0 auto 0;height:46px;display:flex;align-items:center;gap:10px;
+  padding:0 12px;background:linear-gradient(180deg,#0b141d,#070d13);border-bottom:1px solid var(--line);z-index:1100}
+#hdr .logo{font-weight:700;letter-spacing:.12em;font-size:14px;color:#eaf6ef;white-space:nowrap}
+#hdr .logo b{color:var(--cyn)}
+#hdr .logo small{color:var(--dim);font-size:9px;letter-spacing:.18em;display:block;line-height:1}
+.pill{font-family:var(--mono);font-size:11px;border:1px solid var(--line);border-radius:3px;
+  padding:3px 8px;background:#081018;white-space:nowrap}
+.pill b{color:var(--grn)}
+#zonaPill.l1 b{color:var(--gia)} #zonaPill.l2 b{color:var(--ara)} #zonaPill.l3 b{color:var(--red)}
+#zonaPill.l1,#zonaPill.l2,#zonaPill.l3{animation:blink 2.2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.55}}
+#blackBtn{margin-left:auto;cursor:pointer;font-family:var(--mono);font-size:11px;letter-spacing:.12em;
+  color:var(--grn);border:1px solid rgba(53,224,140,.5);border-radius:3px;padding:4px 10px;background:#06110c}
+#blackBtn.on{color:#ffd9d7;border-color:rgba(255,59,48,.6);background:#170808}
+#clock{font-family:var(--mono);color:var(--grn);font-size:12px}
+
+#nav{position:fixed;top:46px;left:0;right:0;height:30px;display:flex;gap:2px;align-items:stretch;
+  background:#060b10;border-bottom:1px solid var(--line);z-index:1100;overflow-x:auto;scrollbar-width:none}
+#nav::-webkit-scrollbar{display:none}
+#nav button{flex:0 0 auto;background:none;border:none;border-right:1px solid var(--line);color:var(--dim);
+  font-family:var(--disp);font-size:11px;letter-spacing:.08em;padding:0 12px;cursor:pointer;white-space:nowrap}
+#nav button .ic{margin-right:5px}
+#nav button.act{color:#eaf6ef;background:linear-gradient(180deg,#0f1b26,#0a141d);box-shadow:inset 0 -2px 0 var(--cyn)}
+#nav button:hover{color:var(--tx)}
+#nav .sep{flex:0 0 1px;background:var(--line);margin:4px 4px}
+
+#map{position:fixed;top:76px;left:0;right:min(380px,42vw);bottom:26px}
+#lmap{position:absolute;inset:0;background:#04070b}
+.leaflet-container{font-family:var(--mono)}
+.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#0d1520;color:var(--tx);
+  border:1px solid var(--line);border-radius:3px;font-family:var(--mono);font-size:11px}
+.leaflet-popup-content b{color:#eaf6ef}
+.stella svg{filter:drop-shadow(0 0 4px rgba(255,209,102,.7))}
+#srcTag{position:absolute;top:8px;left:52px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;
+  color:var(--dim);border:1px dashed var(--line);padding:3px 8px;background:rgba(4,7,11,.85);z-index:1000;max-width:60%}
+#radarLbl{position:absolute;bottom:34px;left:10px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;
+  color:var(--cyn);background:rgba(4,7,11,.85);padding:3px 8px;border:1px solid var(--line);z-index:1000;display:none}
+#dayTgl{position:absolute;top:8px;right:10px;display:flex;z-index:1000}
+#dayTgl button{font-family:var(--mono);font-size:10px;letter-spacing:.15em;padding:4px 12px;cursor:pointer;
+  background:#081018;color:var(--dim);border:1px solid var(--line)}
+#dayTgl button.act{color:#04070b;background:var(--cyn);border-color:var(--cyn);font-weight:700}
+#legend{position:absolute;bottom:8px;left:10px;display:flex;gap:10px;font-family:var(--mono);font-size:10px;
+  color:var(--dim);background:rgba(4,7,11,.85);padding:4px 8px;border:1px solid var(--line);z-index:1000;flex-wrap:wrap}
+#legend i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px;vertical-align:-1px}
+
+#side{position:fixed;top:76px;right:0;bottom:26px;width:min(380px,42vw);background:var(--panel);
+  border-left:1px solid var(--line);display:flex;flex-direction:column;z-index:1050}
+#sideHd{display:flex;align-items:center;gap:8px;padding:9px 12px;border-bottom:1px solid var(--line);background:var(--panel2)}
+#sideHd h2{font-size:12px;letter-spacing:.14em;color:#eaf6ef;font-weight:600}
+#sideHd .dot{width:7px;height:7px;border-radius:50%;background:var(--grn);animation:blink 1.6s infinite;flex:0 0 auto}
+#feed{flex:1;overflow-y:auto;padding:10px 10px 20px;scrollbar-width:thin;scrollbar-color:#1a2c3b transparent}
+#feed a{color:var(--cyn)}
+
+.stato{border:1px solid var(--sc,var(--line));background:var(--panel2);margin-bottom:9px;padding:9px 11px}
+.stato h3{font-size:13px;color:var(--sc,#eaf6ef);font-weight:700;letter-spacing:.06em;margin-bottom:3px}
+.stato p{font-size:11.5px;line-height:1.45}
+.stato .src{font-family:var(--mono);font-size:9px;color:var(--dim);letter-spacing:.1em;display:block;margin-top:5px}
+.stato.emg{animation:blink 1.5s infinite}
+
+.zone{border:1px solid var(--line);background:var(--panel2);margin-bottom:9px;padding:8px 10px 10px}
+.zone.mine{border-color:rgba(55,199,255,.55);box-shadow:0 0 12px rgba(55,199,255,.12)}
+.zone h3{font-size:12.5px;color:#eaf6ef;font-weight:600;margin-bottom:2px;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.zone h3 .tag{font-family:var(--mono);font-size:8.5px;letter-spacing:.15em;color:#04070b;background:var(--cyn);padding:1px 6px;border-radius:2px}
+.zone .com{font-family:var(--mono);font-size:9px;color:var(--dim);margin-bottom:7px;line-height:1.4}
+.dayRow{display:flex;align-items:center;gap:6px;margin-top:5px}
+.dayRow .dl{flex:0 0 52px;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;color:var(--dim)}
+.chip{flex:1;text-align:center;font-family:var(--mono);font-size:9px;letter-spacing:.05em;padding:4px 2px;
+  border:1px solid var(--l,#1c3040);color:var(--l,#5d7a6e);background:#0a1826;border-radius:2px}
+.chip.l0{--l:#35e08c} .chip.l1{--l:#ffd60a} .chip.l2{--l:#ff8c1a} .chip.l3{--l:#ff3b30}
+.chip.l1,.chip.l2,.chip.l3{background:color-mix(in srgb,var(--l) 12%,#0a1826);font-weight:700}
+
+.qk{border:1px solid var(--line);background:var(--panel2);margin-bottom:9px;display:flex;animation:pop .35s ease}
+@keyframes pop{from{transform:translateY(-6px);opacity:0}to{transform:none;opacity:1}}
+.qk .mag{flex:0 0 58px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  border-right:1px solid var(--line);font-family:var(--mono)}
+.qk .mag b{font-size:19px;line-height:1;color:var(--mc)}
+.qk .mag small{font-size:8px;letter-spacing:.2em;color:var(--dim);margin-top:3px}
+.qk .bd{flex:1;padding:7px 10px}
+.qk .bd b{font-size:12.5px;color:#f2f7f4;font-weight:600;display:block}
+.qk .kv{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10px;color:var(--dim);margin-top:3px}
+.qk .kv span:last-child{color:var(--tx)}
+.qk.hot{border-color:var(--mc)}
+
+.wx{border:1px solid var(--line);background:var(--panel2);margin-bottom:9px;padding:9px 10px}
+.wx h3{font-size:11px;letter-spacing:.12em;color:#eaf6ef;font-weight:600;margin-bottom:7px;
+  display:flex;justify-content:space-between;gap:8px}
+.wx h3 span{font-family:var(--mono);font-size:9.5px;color:var(--dim);font-weight:400}
+.wx p{font-size:11.5px;line-height:1.5}
+.wxNow{display:flex;gap:14px;align-items:baseline;font-family:var(--mono)}
+.wxNow b{font-size:26px;color:#f2f7f4;font-weight:400}
+.wxNow div{font-size:10.5px;color:var(--dim);line-height:1.6}
+.wxNow div span{color:var(--tx)}
+#rainCv{width:100%;height:74px;display:block;margin-top:4px}
+.wxDays{display:flex;gap:6px}
+.wxDays div{flex:1;text-align:center;border:1px solid var(--line);padding:6px 2px;font-family:var(--mono);font-size:10px}
+.wxDays b{display:block;color:#f2f7f4;font-size:12px;margin:2px 0}
+.wxDays small{color:var(--dim);font-size:9px}
+.wxDays .pr{color:var(--cyn)}
+.svgMap{width:100%;border:1px solid var(--line);background:#fff;display:block}
+
+.kgrid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.kpi{border:1px solid var(--line);background:#0a1826;padding:7px 9px;font-family:var(--mono)}
+.kpi small{display:block;font-size:8.5px;letter-spacing:.12em;color:var(--dim)}
+.kpi b{font-size:15px;color:var(--kc,#f2f7f4);font-weight:400}
+.kpi em{font-style:normal;font-size:9px;color:var(--dim);margin-left:3px}
+
+.ems{border:1px solid var(--line);border-left:3px solid var(--ec,var(--dim));background:var(--panel2);margin-bottom:9px;padding:7px 10px}
+.ems b{font-size:12px;color:#f2f7f4;font-weight:600;display:block}
+.ems .kv{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10px;color:var(--dim);margin-top:3px}
+.ems .kv span:last-child{color:var(--tx)}
+.ems .cat{font-family:var(--mono);font-size:9px;letter-spacing:.12em;color:var(--ec,var(--tx))}
+
+.err{border:1px solid rgba(255,59,48,.5);background:#120a0c;padding:10px;margin-bottom:9px;
+  font-family:var(--mono);font-size:11px;color:#ffb3ae;line-height:1.5}
+.note{font-family:var(--mono);font-size:9.5px;color:var(--dim);line-height:1.5;padding:8px 2px;border-top:1px solid var(--line);margin-top:6px}
+.skel{height:64px;border:1px solid var(--line);background:linear-gradient(90deg,#0d1520 25%,#101a27 50%,#0d1520 75%);
+  background-size:200% 100%;animation:sh 1.2s infinite;margin-bottom:9px}
+@keyframes sh{to{background-position:-200% 0}}
+
+#tick{position:fixed;bottom:0;left:0;right:0;height:26px;background:#060b10;border-top:1px solid var(--line);
+  display:flex;align-items:center;z-index:1100;overflow:hidden}
+#tick .lbl{flex:0 0 auto;font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--grn);
+  padding:0 10px;border-right:1px solid var(--line);background:#081018;height:100%;display:flex;align-items:center}
+#tickTxt{white-space:nowrap;font-family:var(--mono);font-size:11px;color:var(--tx);padding-left:100%;
+  animation:scrollT 55s linear infinite}
+@keyframes scrollT{to{transform:translateX(-100%)}}
+
+#sideTgl{display:none}
+@media(max-width:720px){
+  #map{right:0}
+  #side{width:min(88vw,340px);transform:translateX(100%);transition:transform .3s;box-shadow:-8px 0 30px #000}
+  #side.open{transform:none}
+  #sideTgl{display:block;position:fixed;right:10px;top:84px;z-index:1060;background:var(--panel2);
+    border:1px solid var(--line);color:var(--tx);font-family:var(--mono);font-size:11px;padding:6px 10px;cursor:pointer}
+  #hdr .hideS{display:none}
+  #dayTgl{top:auto;bottom:40px;right:10px}
+  #srcTag{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.15s!important}
+  #tickTxt{animation:none;padding-left:10px}
+}
+button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="logo">MONITOR <b>PC</b> · CASTELLI<small>PC GENZANO · SPERIMENTALE</small></div>
+  <span class="pill" id="zonaPill">ZONA F: <b id="zonaLvl">…</b></span>
+  <span class="pill hideS">SISMI 7GG: <b id="qkN">…</b></span>
+  <span class="pill hideS">PIOGGIA 24H: <b id="rainN">…</b></span>
+  <button id="blackBtn" aria-pressed="false">◉ OSCURITÀ</button>
+  <span id="clock">--:--:--</span>
+</header>
+
+<nav id="nav" aria-label="Pannelli e livelli mappa">
+  <button data-v="all" class="act"><span class="ic">▲</span>ALLERTA</button>
+  <button data-v="sis"><span class="ic">◈</span>SISMICO</button>
+  <button data-v="met"><span class="ic">≋</span>METEO</button>
+  <button data-v="amb"><span class="ic">✿</span>ARIA·MARE</button>
+  <button data-v="ems"><span class="ic">⚑</span>EMERGENZE UE</button>
+  <span class="sep"></span>
+  <button data-l="zone" class="act"><span class="ic">◱</span>ZONE</button>
+  <button data-l="radar"><span class="ic">◉</span>RADAR</button>
+  <button data-l="qk" class="act"><span class="ic">●</span>SISMI</button>
+  <button data-l="sat"><span class="ic">✦</span>SATELLITE</button>
+  <button data-l="fire"><span class="ic">▵</span>FUOCHI</button>
+</nav>
+
+<main id="map">
+  <div id="lmap"></div>
+  <span id="srcTag">DPC · INGV · COPERNICUS · OPEN-METEO — STRUMENTO SPERIMENTALE, DATI INDICATIVI</span>
+  <span id="radarLbl">RADAR DPC: —</span>
+  <div id="dayTgl" role="group" aria-label="Giorno bollettino">
+    <button data-d="today" class="act">OGGI</button><button data-d="tomorrow">DOMANI</button>
+  </div>
+  <div id="legend">
+    <span><i style="background:var(--grn)"></i>NESSUNA</span>
+    <span><i style="background:var(--gia)"></i>GIALLA</span>
+    <span><i style="background:var(--ara)"></i>ARANCIONE</span>
+    <span><i style="background:var(--red)"></i>ROSSA</span>
+    <span><i style="background:var(--cyn);border-radius:0"></i>SISMA</span>
+  </div>
+</main>
+
+<button id="sideTgl" aria-controls="side">☰ PANNELLO</button>
+
+<aside id="side">
+  <div id="sideHd"><span class="dot"></span><h2 id="sideTitle">ALLERTA — LAZIO</h2>
+    <span style="margin-left:auto;font-family:var(--mono);font-size:10px;color:var(--grn)">● LIVE</span></div>
+  <div id="feed" role="log" aria-live="polite"><div class="skel"></div><div class="skel"></div><div class="skel"></div></div>
+</aside>
+
+<footer id="tick">
+  <span class="lbl">TEMPO REALE</span>
+  <div style="flex:1;overflow:hidden"><div id="tickTxt">CARICAMENTO FEED UFFICIALI…</div></div>
+</footer>
+
+<script src="../vendor/leaflet/leaflet.js"></script>
+<script src="../js/pc-fetch-cache.js"></script>
+<script>
+"use strict";
+/* =================================================================
+   MONITOR PC — CASTELLI ROMANI (v3, integrato col cruscotto del sito)
+   Strumento sperimentale del Gruppo Comunale Volontari di Protezione
+   Civile di Genzano di Roma. Fonti: pipeline allerta del sito
+   (allerta-stato/index.json, same-origin) · DPC (bollettino criticità
+   + radar WMTS, CC BY-SA) · INGV FDSN · Copernicus EMS Rapid Mapping
+   (snapshot self-hosted: l'API non espone più il CORS) · EFFIS ·
+   NASA GIBS · Open-Meteo (previsioni, aria/pollini, mare).
+   Asset self-hostati (Leaflet del sito + font locali): la CSP del
+   dominio non consente CDN esterne. Percorsi relativi ("../…") così
+   la pagina funziona sia su Aruba (root) sia su GitHub Pages (subpath).
+   ================================================================= */
+const GENZANO={lat:41.7085,lon:12.6916};
+const BASE="../"; // root del sito rispetto a /monitor/
+const REPO="pcm-dpc/DPC-Bollettini-Criticita-Idrogeologica-Idraulica";
+const RAW=`https://raw.githubusercontent.com/${REPO}/master/files/`;
+const LAZIO=["Bacini Costieri Sud","Bacini di Roma","Bacini Costieri Nord","Bacino Medio Tevere","Appennino di Rieti","Aniene","Bacino del Liri"];
+const MYZONE="Bacini Costieri Sud"; // Zona F (DGR Lazio 865/2019) — include Genzano di Roma
+const LVL_TXT=["NESSUNA ALLERTA","ALLERTA GIALLA","ALLERTA ARANCIONE","ALLERTA ROSSA"];
+const LVL_COL=["#35e08c","#ffd60a","#ff8c1a","#ff3b30"];
+const RISKS=[["Per rischio idraulico","IDRAULICO"],["Per rischio idrogeologico","IDROGEO"],["Per rischio temporali","TEMPORALI"]];
+const EMS_IT={Wildfire:"Incendio",Flood:"Alluvione",Storm:"Tempesta",Earthquake:"Terremoto",
+  "Volcanic activity":"Attività vulcanica",Landslide:"Frana",Other:"Altro"};
+const EMS_COL={Wildfire:"#ff8c1a",Flood:"#37c7ff",Storm:"#b48cff",Earthquake:"#ffd60a",
+  "Volcanic activity":"#ff3b30",Landslide:"#c99e6b",Other:"#5d7a6e"};
+
+const S={view:"all",day:"today",black:false,
+  layers:{zone:true,radar:false,qk:true,sat:false,fire:false},
+  boll:null,bollVecchio:null,zones:{today:null,tomorrow:null},sito:null,
+  quakes:[],wx:null,aria:null,mare:null,ems:[],emsSnap:null,errs:{}};
+const $=s=>document.querySelector(s);
+const pad=n=>String(n).padStart(2,"0");
+const now=()=>{const d=new Date();return pad(d.getHours())+":"+pad(d.getMinutes())+":"+pad(d.getSeconds())};
+const lvlOf=t=>/ROSSA/.test(t)?3:/ARANCIONE/.test(t)?2:/GIALLA/.test(t)?1:0;
+const havKm=(a,b)=>{const R=6371,d=Math.PI/180,
+  x=(b.lat-a.lat)*d,y=(b.lon-a.lon)*d,
+  h=Math.sin(x/2)**2+Math.cos(a.lat*d)*Math.cos(b.lat*d)*Math.sin(y/2)**2;
+  return 2*R*Math.asin(Math.sqrt(h))};
+async function jget(u,ms=15000){
+  const c=new AbortController();const t=setTimeout(()=>c.abort(),ms);
+  try{const r=await fetch(u,{signal:c.signal});
+    if(!r.ok)throw new Error("HTTP "+r.status);
+    return await r.json();
+  }finally{clearTimeout(t)}
+}
+
+/* ---------------- mappa Leaflet (stack del cruscotto) ---------------- */
+const map=L.map("lmap",{center:[42,12.5],zoom:6,zoomControl:true,attributionControl:true});
+map.attributionControl.setPrefix(false);
+L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",{subdomains:"abcd",maxZoom:12,
+  attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/attributions">CARTO</a>'}).addTo(map);
+map.createPane("zonePane");  map.getPane("zonePane").style.zIndex=350;
+map.createPane("radarPane"); map.getPane("radarPane").style.zIndex=420;
+map.createPane("qkPane");    map.getPane("qkPane").style.zIndex=450;
+
+// stella di Genzano — stesso divIcon del cruscotto del sito
+L.marker([GENZANO.lat,GENZANO.lon],{keyboard:true,icon:L.divIcon({className:"stella",
+  html:'<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M13 1l3.4 7.6L24 9.3l-5.8 5 1.8 7.9L13 18.4 5.9 22.2l1.8-7.9L2 9.3l7.6-.7z" fill="#ffd166" stroke="#0b1622" stroke-width="1.4"/></svg>',
+  iconSize:[26,26],iconAnchor:[13,13]})}).bindPopup("<b>Genzano di Roma</b><br>Zona di allerta F — Bacini Costieri Sud").addTo(map);
+
+// RADAR DPC — stesso metodo del cruscotto (WMTS geowebcache; il TIME è ignorato
+// dal servizio, quindi si mostra l'ultimo fotogramma con l'orario reale dall'API)
+const RADAR_WMTS="https://radar-geowebcache.protezionecivile.it/service/wmts";
+const radarUrl=()=>RADAR_WMTS+"?Service=WMTS&Request=GetTile&Version=1.0.0&Layer=radar:sri&Style=&Format=image/png"+
+  "&TileMatrixSet=EPSG:900913&TileMatrix=EPSG:900913:{z}&TileRow={y}&TileCol={x}&cache="+Math.floor(Date.now()/3e5);
+let radarLayer=L.tileLayer(radarUrl(),{pane:"radarPane",opacity:.78,maxZoom:11,maxNativeZoom:9,
+  bounds:L.latLngBounds([35,4.44],[47.92,20.56]),attribution:"Radar-DPC © Dipartimento Protezione Civile (CC BY-SA)"});
+async function radarStamp(){
+  try{const d=await jget("https://radar-api.protezionecivile.it/findLastProductByType?type=SRI");
+    const ms=d.time||(d.lastProducts&&d.lastProducts[0]&&d.lastProducts[0].time);
+    const t=new Date(ms||Date.now());
+    $("#radarLbl").textContent="RADAR DPC (SRI): "+pad(t.getHours())+":"+pad(t.getMinutes());
+  }catch(e){$("#radarLbl").textContent="RADAR DPC: orario n/d";}
+}
+function radarRefresh(){ if(S.layers.radar){radarLayer.setUrl(radarUrl());radarStamp();} }
+setInterval(radarRefresh,5*60e3);
+
+// SATELLITE — NASA GIBS VIIRS true color (come il cruscotto), giorno precedente
+const gDate=()=>{const d=new Date(Date.now()-864e5);return d.toISOString().slice(0,10)};
+const satLayer=L.tileLayer("https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_CorrectedReflectance_TrueColor/default/"+gDate()+"/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg",
+  {maxNativeZoom:8,maxZoom:9,opacity:1,attribution:"Imagery © NASA EOSDIS GIBS"});
+
+// FUOCHI — EFFIS hotspot (stessi layer del cruscotto)
+const fireLayer=L.tileLayer.wms("https://maps.effis.emergency.copernicus.eu/effis",
+  {layers:"viirs.hs,modis.hs",format:"image/png",transparent:true,version:"1.3.0",opacity:.95,
+   attribution:"EFFIS — Copernicus EMS"});
+
+let zoneLayer=null, qkLayer=L.layerGroup([]);
+qkLayer.addTo(map);
+
+function applyLayers(){
+  const on=(lay,flag)=>{ if(flag&&!map.hasLayer(lay))map.addLayer(lay);
+                         if(!flag&&map.hasLayer(lay))map.removeLayer(lay); };
+  on(radarLayer,S.layers.radar); on(satLayer,S.layers.sat); on(fireLayer,S.layers.fire);
+  on(qkLayer,S.layers.qk);
+  if(zoneLayer)on(zoneLayer,S.layers.zone);
+  $("#radarLbl").style.display=S.layers.radar?"block":"none";
+  if(S.layers.radar)radarStamp();
+}
+
+/* ---------------- topojson minimale → GeoJSON ---------------- */
+function topoDecode(topo){
+  const tr=topo.transform, sc=tr.scale, tl=tr.translate;
+  const arcs=topo.arcs.map(arc=>{let x=0,y=0;return arc.map(p=>{
+    x+=p[0];y+=p[1];return [x*sc[0]+tl[0], y*sc[1]+tl[1]];})});
+  const ring=idx=>{let out=[];
+    for(const i of idx){const a=i<0?arcs[~i].slice().reverse():arcs[i];
+      out=out.length?out.concat(a.slice(1)):out.concat(a);}
+    return out};
+  const obj=Object.values(topo.objects)[0];
+  return obj.geometries.map(g=>({
+    type:"Feature",properties:g.properties,
+    geometry:{type:"MultiPolygon",
+      coordinates:(g.type==="Polygon"?[g.arcs]:g.arcs).map(poly=>poly.map(ring))}
+  }));
+}
+const zoneMax=p=>Math.max(...RISKS.map(([k])=>lvlOf(p[k]||"")));
+function buildZoneLayer(){
+  const feats=S.zones[S.day]; if(!feats)return;
+  if(zoneLayer)map.removeLayer(zoneLayer);
+  zoneLayer=L.geoJSON({type:"FeatureCollection",features:feats},{pane:"zonePane",
+    style:f=>{const l=zoneMax(f.properties),mine=f.properties["Nome zona"]===MYZONE;
+      return {color:mine?"#37c7ff":"#04070b",weight:mine?1.8:.6,
+        fillColor:LVL_COL[l],fillOpacity:l?[0,.4,.48,.55][l]:.10}},
+    onEachFeature:(f,ly)=>{const p=f.properties;
+      ly.bindPopup(`<b>${p["Nome zona"]}</b><br>`+
+        RISKS.map(([k,s])=>s+": "+LVL_TXT[lvlOf(p[k]||"")]).join("<br>"));}
+  });
+  if(S.layers.zone)zoneLayer.addTo(map);
+}
+
+/* ---------------- allerta: pipeline del sito + DPC ---------------- */
+async function loadSito(){
+  try{ // same-origin: la pagina vive sul sito, il JSON è della pipeline check-allerta
+    S.sito=await jget(BASE+"allerta-stato/index.json",8000);
+    delete S.errs.sito;
+  }catch(e){S.sito=null;}
+  updZona(); if(S.view==="all")render(); tickUpd();
+}
+async function findStamp(){
+  const q=new URL(location.href).searchParams.get("stamp"); if(q)return q;
+  const cm=await jget(`https://api.github.com/repos/${REPO}/commits?per_page=8`);
+  for(const c of cm){
+    const det=await jget(`https://api.github.com/repos/${REPO}/commits/${c.sha}`);
+    for(const f of det.files||[]){
+      const m=f.filename.match(/(\d{8}_\d{4})/); if(m)return m[1];
+    }
+  }
+  throw new Error("bollettino non individuato");
+}
+async function loadDPC(){
+  try{
+    const stamp=await findStamp();
+    const [boll,tToday,tTom]=await Promise.all([
+      jget(RAW+stamp+".json"),
+      jget(RAW+"topojson/"+stamp+"_today.json",25000),
+      jget(RAW+"topojson/"+stamp+"_tomorrow.json",25000),
+    ]);
+    S.boll={name:boll.name,stamp};
+    S.zones.today=topoDecode(tToday);
+    S.zones.tomorrow=topoDecode(tTom);
+    S.bollVecchio=null;
+    // "ultimo dato valido": stesso principio delle schede del cruscotto.
+    // Serve soprattutto quando api.github.com esaurisce il rate limit (60/h per IP).
+    if(window.pcCache)pcCache.salva("monitor-dpc",{boll:S.boll,today:S.zones.today,tomorrow:S.zones.tomorrow});
+    buildZoneLayer(); delete S.errs.dpc;
+  }catch(e){
+    const c=window.pcCache&&pcCache.leggi("monitor-dpc",36);
+    if(c&&c.d&&c.d.today){
+      S.boll=c.d.boll; S.zones.today=c.d.today; S.zones.tomorrow=c.d.tomorrow;
+      S.bollVecchio=c.t; buildZoneLayer(); delete S.errs.dpc;
+    } else S.errs.dpc="Bollettino DPC non raggiungibile ("+e.message+").";
+  }
+  updZona(); if(S.view==="all")render(); tickUpd();
+}
+function laz(day){
+  const zz=S.zones[day]; if(!zz)return null;
+  const m=new Map(zz.filter(z=>LAZIO.includes(z.properties["Nome zona"])).map(z=>[z.properties["Nome zona"],z.properties]));
+  return LAZIO.map(n=>({n,p:m.get(n)})).filter(z=>z.p);
+}
+function updZona(){
+  const pill=$("#zonaPill"),v=$("#zonaLvl");
+  if(S.sito){ // fonte primaria: pipeline del sito
+    const l={verde:0,giallo:1,gialla:1,arancione:2,rosso:3,rossa:3}[String(S.sito.livello).toLowerCase()]??0;
+    v.textContent=S.sito.emergenza_attiva?"EMERGENZA":["VERDE","GIALLA","ARANCIONE","ROSSA"][l];
+    pill.className="pill l"+(S.sito.emergenza_attiva?3:l); return;
+  }
+  const t=laz("today"),d=laz("tomorrow");
+  if(!t){v.textContent="N/D";return}
+  const my=t.find(z=>z.n===MYZONE),myD=d&&d.find(z=>z.n===MYZONE);
+  const lv=Math.max(my?zoneMax(my.p):0, myD?zoneMax(myD.p):0);
+  v.textContent=["VERDE","GIALLA","ARANCIONE","ROSSA"][lv];
+  pill.className="pill l"+lv;
+}
+
+/* ---------------- INGV ---------------- */
+const magCol=m=>m>=4.5?"#ff3b30":m>=3.5?"#ff8c1a":m>=2?"#ffd60a":"#35e08c";
+async function loadINGV(){
+  const iso=d=>d.toISOString().slice(0,19);
+  const d14=new Date(Date.now()-14*864e5), d7=new Date(Date.now()-7*864e5);
+  try{
+    const [loc,nat]=await Promise.all([
+      jget(`https://webservices.ingv.it/fdsnws/event/1/query?format=geojson&starttime=${iso(d14)}&lat=${GENZANO.lat}&lon=${GENZANO.lon}&maxradiuskm=120&orderby=time&limit=60`),
+      jget(`https://webservices.ingv.it/fdsnws/event/1/query?format=geojson&starttime=${iso(d7)}&minmag=3&orderby=time&limit=60`),
+    ]);
+    const seen=new Set(); S.quakes=[];
+    for(const f of [...loc.features,...nat.features]){
+      const p=f.properties; if(seen.has(p.eventId))continue; seen.add(p.eventId);
+      const [lon,lat,dep]=f.geometry.coordinates;
+      S.quakes.push({id:p.eventId,mag:p.mag,place:p.place,time:p.time,lat,lon,dep,
+        km:Math.round(havKm(GENZANO,{lat,lon})),col:magCol(p.mag),
+        local:havKm(GENZANO,{lat,lon})<=120});
+    }
+    S.quakes.sort((a,b)=>b.time.localeCompare(a.time));
+    $("#qkN").textContent=S.quakes.filter(q=>Date.parse(q.time)>Date.now()-7*864e5).length;
+    qkLayer.clearLayers();
+    for(const q of S.quakes){
+      L.circleMarker([q.lat,q.lon],{pane:"qkPane",radius:Math.max(3,q.mag*2),
+        color:q.col,weight:1.4,fillColor:q.col,fillOpacity:.35})
+       .bindPopup(`<b>M ${q.mag.toFixed(1)} — ${q.place||""}</b><br>${fmtT(q.time)} · prof. ${q.dep!=null?q.dep.toFixed(0):"?"} km<br>${q.km} km da Genzano`)
+       .addTo(qkLayer);
+    }
+    delete S.errs.ingv;
+  }catch(e){S.errs.ingv="Servizio INGV non raggiungibile ("+e.message+").";$("#qkN").textContent="N/D";}
+  if(S.view==="sis")render(); tickUpd();
+}
+
+/* ---------------- Open-Meteo: previsioni + aria/pollini + mare ---------------- */
+async function loadWX(){
+  try{
+    S.wx=await jget(`https://api.open-meteo.com/v1/forecast?latitude=${GENZANO.lat}&longitude=${GENZANO.lon}`+
+      `&current=temperature_2m,apparent_temperature,wind_speed_10m,wind_gusts_10m,precipitation,weather_code`+
+      `&hourly=precipitation,precipitation_probability,wind_gusts_10m,temperature_2m`+
+      `&daily=precipitation_sum,precipitation_probability_max,temperature_2m_max,temperature_2m_min,wind_gusts_10m_max`+
+      `&forecast_days=4&timezone=Europe%2FRome`);
+    const h=S.wx.hourly, i0=Math.max(0,h.time.findIndex(t=>Date.parse(t)>=Date.now()-36e5));
+    const r24=h.precipitation.slice(i0,i0+24).reduce((a,b)=>a+b,0);
+    $("#rainN").textContent=r24.toFixed(1)+" mm";
+    delete S.errs.wx;
+  }catch(e){S.errs.wx="Open-Meteo non raggiungibile ("+e.message+").";$("#rainN").textContent="N/D";}
+  if(S.view==="met")render(); tickUpd();
+}
+async function loadAmb(){ // stessi endpoint e coordinate del cruscotto del sito
+  try{
+    S.aria=(await jget("https://air-quality-api.open-meteo.com/v1/air-quality?latitude=41.7085&longitude=12.6916&timezone=Europe%2FRome&current=european_aqi,pm10,pm2_5,ozone,nitrogen_dioxide,grass_pollen,olive_pollen,ragweed_pollen,birch_pollen")).current;
+    delete S.errs.aria;
+  }catch(e){S.errs.aria="Qualità dell'aria non raggiungibile.";}
+  try{
+    S.mare=(await jget("https://marine-api.open-meteo.com/v1/marine?latitude=41.43&longitude=12.62&timezone=Europe%2FRome&current=wave_height,wave_period,wave_direction")).current;
+    delete S.errs.mare;
+  }catch(e){S.errs.mare="Dati marini non raggiungibili.";}
+  if(S.view==="amb")render(); tickUpd();
+}
+
+/* ---------------- Copernicus EMS Rapid Mapping ----------------
+   L'API pubblica non espone più le intestazioni CORS (verificato 24/08/2026),
+   quindi da browser la lettura diretta fallisce. Fonte primaria: snapshot
+   self-hosted rigenerato a ogni deploy del sito (open-data/ems-attivazioni.json);
+   fallback: API diretta (se il CORS tornasse); ultimo fallback: link al portale. */
+async function loadEMS(){
+  let ok=false;
+  try{
+    const r=await fetch(BASE+"open-data/ems-attivazioni.json",{cache:"no-cache"});
+    if(r.ok){
+      const d=await r.json();
+      S.ems=(d.results||[]).filter(a=>!a.closed).slice(0,20);
+      const lm=r.headers.get("last-modified");
+      S.emsSnap=lm?new Date(lm):null;
+      ok=true; delete S.errs.ems;
+    }
+  }catch(e){}
+  if(!ok){
+    try{
+      const d=await jget("https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/?limit=50");
+      S.ems=(d.results||[]).filter(a=>!a.closed).slice(0,20);
+      S.emsSnap=null; ok=true; delete S.errs.ems;
+    }catch(e){S.errs.ems="EMS_LINK";}
+  }
+  if(S.view==="ems")render(); tickUpd();
+}
+
+/* ---------------- pannelli ---------------- */
+const feed=$("#feed"),title=$("#sideTitle");
+const esc=s=>String(s??"").replace(/[<>&"]/g,c=>({"<":"&lt;",">":"&gt;","&":"&amp;",'"':"&quot;"}[c]));
+// aggiunge la Z (UTC) solo se il timestamp non dichiara già un fuso:
+// i tempi INGV/EMS sono UTC senza suffisso, quelli del sito hanno +02:00
+const fmtT=iso=>{const s=String(iso);
+  const d=new Date(/(Z|[+-]\d\d:?\d\d)$/.test(s)?s:s+"Z");
+  return d.toLocaleString("it-IT",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"})};
+function errCard(msg){const e=document.createElement("div");e.className="err";e.textContent="⚠ "+msg;return e}
+function noteEl(extra){
+  const n=document.createElement("div");n.className="note";
+  n.innerHTML=`Strumento sperimentale del Gruppo, dati indicativi. Fanno fede il
+  <a href="${BASE}cruscotto/">Cruscotto del territorio</a>,
+  il <a href="https://mappe.protezionecivile.gov.it/it/mappe-e-dashboards-rischi/bollettino-di-criticita/" target="_blank" rel="noopener">bollettino DPC</a>
+  e <a href="https://terremoti.ingv.it/" target="_blank" rel="noopener">INGV</a>.
+  In emergenza chiama il <a href="tel:112">112</a>. ${extra||""}
+  ${S.boll?`<br>Bollettino caricato: ${esc(S.boll.name)}.`:""}`;
+  return n;
+}
+function statoCard(){
+  if(!S.sito)return null;
+  const l={verde:0,gialla:1,giallo:1,arancione:2,rossa:3,rosso:3}[String(S.sito.livello).toLowerCase()]??0;
+  const el=document.createElement("div");
+  el.className="stato"+(S.sito.emergenza_attiva?" emg":"");
+  el.style.setProperty("--sc",S.sito.emergenza_attiva?"#ff3b30":LVL_COL[l]);
+  el.innerHTML=`<h3>${esc(S.sito.emergenza_attiva?("EMERGENZA: "+S.sito.emergenza_titolo):S.sito.titolo)}</h3>
+    <p>${esc(S.sito.descrizione)}</p>
+    <span class="src">FONTE: PROTEZIONECIVILEGENZANO.IT · AGG. ${fmtT(S.sito.ultimo_aggiornamento).toUpperCase()}</span>`;
+  return el;
+}
+function viewAll(){
+  title.textContent="ALLERTA — LAZIO";
+  feed.innerHTML="";
+  const sc=statoCard(); if(sc)feed.appendChild(sc);
+  if(S.errs.dpc)feed.appendChild(errCard(S.errs.dpc));
+  if(S.bollVecchio&&window.pcCache)feed.appendChild(errCard(pcCache.frase(S.bollVecchio)));
+  const t=laz("today"),d=laz("tomorrow");
+  if(!t&&!S.errs.dpc){feed.insertAdjacentHTML("beforeend",'<div class="skel"></div><div class="skel"></div>');return}
+  if(t)for(const z of t){
+    const zd=d&&d.find(x=>x.n===z.n);
+    const el=document.createElement("div");
+    el.className="zone"+(z.n===MYZONE?" mine":"");
+    const row=(lbl,p)=>!p?"":`<div class="dayRow"><span class="dl">${lbl}</span>`+
+      RISKS.map(([k,short])=>{const l=lvlOf(p[k]||"");
+        return `<span class="chip l${l}" title="${esc(p[k]||"")}">${short}</span>`}).join("")+`</div>`;
+    el.innerHTML=`<h3>${esc(z.n)}${z.n===MYZONE?'<span class="tag">ZONA F — LA TUA ZONA</span>':""}</h3>
+      ${z.n===MYZONE?`<div class="com">Include Genzano di Roma (DGR Lazio 865/2019)</div>`:""}
+      ${row("OGGI",z.p)}${row("DOMANI",zd&&zd.p)}`;
+    feed.appendChild(el);
+  }
+  feed.appendChild(noteEl());
+}
+function viewSis(){
+  title.textContent="SISMICO — RETE INGV";
+  feed.innerHTML="";
+  if(S.errs.ingv)feed.appendChild(errCard(S.errs.ingv));
+  if(!S.quakes.length&&!S.errs.ingv){feed.innerHTML='<div class="skel"></div><div class="skel"></div>';return}
+  for(const q of S.quakes.slice(0,25)){
+    const el=document.createElement("div");
+    el.className="qk"+(q.mag>=3.5||q.local&&q.mag>=2?" hot":"");
+    el.style.setProperty("--mc",q.col);
+    el.innerHTML=`<div class="mag"><b>${q.mag.toFixed(1)}</b><small>M${q.local?" · LOC":""}</small></div>
+      <div class="bd"><b>${esc(q.place||"—")}</b>
+      <div class="kv"><span>Distanza da Genzano:</span><span>${q.km} km</span></div>
+      <div class="kv"><span>Profondità · Ora:</span><span>${q.dep!=null?q.dep.toFixed(0):"?"} km · ${fmtT(q.time)}</span></div></div>`;
+    feed.appendChild(el);
+  }
+  feed.appendChild(noteEl());
+}
+function viewMet(){
+  title.textContent="METEO — GENZANO / CASTELLI";
+  feed.innerHTML="";
+  if(S.errs.wx)feed.appendChild(errCard(S.errs.wx));
+  if(!S.wx){if(!S.errs.wx)feed.innerHTML='<div class="skel"></div><div class="skel"></div>';return}
+  const c=S.wx.current;
+  feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>CONDIZIONI ATTUALI<span>AGG. ${now()}</span></h3>
+    <div class="wxNow"><b>${c.temperature_2m.toFixed(0)}°</b>
+    <div>Percepita: <span>${c.apparent_temperature.toFixed(0)}°C</span><br>
+    Vento: <span>${c.wind_speed_10m.toFixed(0)} km/h</span> · Raffiche: <span>${c.wind_gusts_10m.toFixed(0)} km/h</span><br>
+    Precipitazione in atto: <span>${c.precipitation.toFixed(1)} mm/h</span></div></div></div>
+    <div class="wx"><h3>PIOGGIA PROSSIME 24 ORE<span>mm/h · prob.%</span></h3><canvas id="rainCv"></canvas></div>`);
+  drawRain();
+  const dl=S.wx.daily;
+  feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>PROSSIMI GIORNI</h3><div class="wxDays">`+
+    dl.time.map((t,i)=>{const g=new Date(t).toLocaleDateString("it-IT",{weekday:"short"});
+      return `<div><small>${g.toUpperCase()}</small><b>${dl.temperature_2m_min[i].toFixed(0)}–${dl.temperature_2m_max[i].toFixed(0)}°</b>
+      <small class="pr">${dl.precipitation_sum[i].toFixed(1)} mm</small><br><small>raff. ${dl.wind_gusts_10m_max[i].toFixed(0)}</small></div>`}).join("")+`</div></div>
+    <div class="wx"><h3>CARTINA METEO LAZIO<span>DAL SITO · AUTO-GENERATA</span></h3>
+    <a href="${BASE}cruscotto/">
+    <img class="svgMap" src="${BASE}images/meteo-lazio.svg?v=${Math.floor(Date.now()/6e5)}"
+      alt="Cartina meteo del Lazio generata dal sito PC Genzano" loading="lazy"></a></div>`);
+  feed.appendChild(noteEl());
+}
+function drawRain(){
+  const c=$("#rainCv"); if(!c||!S.wx)return;
+  const x=c.getContext("2d"); const DPR=Math.min(devicePixelRatio||1,2);
+  const w=c.clientWidth,h=74;
+  c.width=w*DPR;c.height=h*DPR;x.setTransform(DPR,0,0,DPR,0,0);
+  const hh=S.wx.hourly, i0=Math.max(0,hh.time.findIndex(t=>Date.parse(t)>=Date.now()-36e5));
+  const P=hh.precipitation.slice(i0,i0+24), PR=hh.precipitation_probability.slice(i0,i0+24);
+  const max=Math.max(1,...P), bw=w/24;
+  x.strokeStyle="rgba(18,33,46,.8)";x.beginPath();x.moveTo(0,h-14);x.lineTo(w,h-14);x.stroke();
+  for(let i=0;i<24;i++){
+    const bh=(P[i]/max)*(h-24);
+    x.fillStyle="rgba(55,199,255,.75)";
+    x.fillRect(i*bw+1,h-14-bh,bw-2,Math.max(bh,P[i]>0?2:0));
+    x.fillStyle="rgba(93,122,110,.55)";
+    x.fillRect(i*bw+1,h-14-((PR[i]||0)/100)*(h-24),bw-2,1);
+    if(i%6===0){x.fillStyle="#5d7a6e";x.font="8px 'Share Tech Mono'";
+      x.fillText(new Date(hh.time[i0+i]).getHours()+":00",i*bw+1,h-3);}
+  }
+}
+const aqiTxt=v=>v==null?["N/D","#5d7a6e"]:v<=20?["OTTIMA","#35e08c"]:v<=40?["BUONA","#8fd35a"]:
+  v<=60?["MODERATA","#ffd60a"]:v<=80?["SCARSA","#ff8c1a"]:["PESSIMA","#ff3b30"];
+const polTxt=v=>v==null?["N/D","#5d7a6e"]:v<10?["BASSI","#35e08c"]:v<50?["MEDI","#ffd60a"]:["ALTI","#ff8c1a"];
+function viewAmb(){
+  title.textContent="ARIA · POLLINI · MARE";
+  feed.innerHTML="";
+  if(S.errs.aria)feed.appendChild(errCard(S.errs.aria));
+  if(S.aria){
+    const a=S.aria,[t,col]=aqiTxt(a.european_aqi);
+    feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>QUALITÀ DELL'ARIA — GENZANO<span>CAMS / OPEN-METEO</span></h3>
+      <div class="kgrid">
+      <div class="kpi" style="--kc:${col}"><small>INDICE EU (EAQI)</small><b>${a.european_aqi??"—"}</b><em>${t}</em></div>
+      <div class="kpi"><small>PM2.5</small><b>${a.pm2_5?.toFixed(0)??"—"}</b><em>µg/m³</em></div>
+      <div class="kpi"><small>PM10</small><b>${a.pm10?.toFixed(0)??"—"}</b><em>µg/m³</em></div>
+      <div class="kpi"><small>OZONO O₃</small><b>${a.ozone?.toFixed(0)??"—"}</b><em>µg/m³</em></div>
+      </div></div>`);
+    const pol=[["GRAMINACEE",a.grass_pollen],["OLIVO",a.olive_pollen],["AMBROSIA",a.ragweed_pollen],["BETULLA",a.birch_pollen]];
+    feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>POLLINI<span>grani/m³</span></h3><div class="kgrid">`+
+      pol.map(([n,v])=>{const [t,c]=polTxt(v);
+        return `<div class="kpi" style="--kc:${c}"><small>${n}</small><b>${v!=null?v.toFixed(0):"—"}</b><em>${t}</em></div>`}).join("")+`</div></div>`);
+  }
+  if(S.errs.mare)feed.appendChild(errCard(S.errs.mare));
+  if(S.mare){
+    const m=S.mare, dir=["N","NE","E","SE","S","SO","O","NO"][Math.round((m.wave_direction%360)/45)%8];
+    feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>MARE — LITORALE ROMANO SUD<span>ONDA AL LARGO</span></h3>
+      <div class="kgrid">
+      <div class="kpi" style="--kc:#37c7ff"><small>ALTEZZA ONDA</small><b>${m.wave_height?.toFixed(1)??"—"}</b><em>m</em></div>
+      <div class="kpi"><small>PERIODO</small><b>${m.wave_period?.toFixed(0)??"—"}</b><em>s</em></div>
+      <div class="kpi"><small>DIREZIONE</small><b>${dir}</b><em>${m.wave_direction?.toFixed(0)??"—"}°</em></div>
+      </div></div>`);
+  }
+  if(!S.aria&&!S.mare&&!S.errs.aria&&!S.errs.mare)feed.innerHTML='<div class="skel"></div><div class="skel"></div>';
+  feed.appendChild(noteEl("Dati aria/pollini: modello CAMS Copernicus via Open-Meteo — indicativi."));
+}
+function viewEms(){
+  title.textContent="EMERGENZE UE — COPERNICUS EMS";
+  feed.innerHTML="";
+  if(S.errs.ems==="EMS_LINK"){
+    const el=document.createElement("div");el.className="wx";
+    el.innerHTML=`<h3>FEED NON DISPONIBILE</h3>
+      <p>L'elenco delle attivazioni non è al momento leggibile (né dallo snapshot del sito
+      né dall'API, che non espone più le intestazioni CORS). Le attivazioni aperte restano
+      consultabili sul <a href="https://rapidmapping.emergency.copernicus.eu/" target="_blank" rel="noopener">portale
+      Copernicus EMS</a> e nel <a href="${BASE}cruscotto/">Cruscotto del territorio</a>.</p>`;
+    feed.appendChild(el);
+  } else if(S.errs.ems)feed.appendChild(errCard(S.errs.ems));
+  if(!S.ems.length&&!S.errs.ems){feed.innerHTML='<div class="skel"></div><div class="skel"></div>';return}
+  for(const a of S.ems){
+    const col=EMS_COL[a.category]||EMS_COL.Other;
+    const el=document.createElement("div");el.className="ems";el.style.setProperty("--ec",col);
+    el.innerHTML=`<span class="cat">${esc((EMS_IT[a.category]||a.category||"").toUpperCase())} · ${esc(a.code)}</span>
+      <b>${esc(a.name)}</b>
+      <div class="kv"><span>${esc((a.countries||[]).join(", "))}</span><span>${fmtT(a.activationTime)}</span></div>
+      <div class="kv"><span>Aree d'interesse · prodotti:</span><span>${a.n_aois??"—"} · ${a.n_products??"—"}</span></div>`;
+    feed.appendChild(el);
+  }
+  const snapNote=S.emsSnap?`Snapshot self-hosted aggiornato all'ultimo deploy del sito (${fmtT(S.emsSnap.toISOString())}).`:"";
+  feed.appendChild(noteEl('Attivazioni aperte del servizio <a href="https://rapidmapping.emergency.copernicus.eu/" target="_blank" rel="noopener">Rapid Mapping</a>. '+snapNote));
+}
+function render(){({all:viewAll,sis:viewSis,met:viewMet,amb:viewAmb,ems:viewEms})[S.view]();}
+
+/* ---------------- ticker ---------------- */
+function tickUpd(){
+  const parts=[];
+  if(S.sito)parts.push("SITO PC GENZANO · "+S.sito.titolo.toUpperCase());
+  if(S.boll)parts.push("DPC · "+S.boll.name.toUpperCase());
+  const t=laz("today");
+  if(t){const my=t.find(z=>z.n===MYZONE),d=laz("tomorrow"),myD=d&&d.find(z=>z.n===MYZONE);
+    if(my)parts.push("ZONA F OGGI: "+LVL_TXT[zoneMax(my.p)]+(myD?" · DOMANI: "+LVL_TXT[zoneMax(myD.p)]:""));
+    const att=t.filter(z=>zoneMax(z.p)>0).map(z=>z.n);
+    if(att.length)parts.push("ZONE LAZIO IN ALLERTA OGGI: "+att.join(", ").toUpperCase());
+  }
+  const q=S.quakes[0];
+  if(q)parts.push(`ULTIMO EVENTO INGV: M${q.mag.toFixed(1)} ${(q.place||"").toUpperCase()} (${q.km} KM)`);
+  if(S.wx)parts.push("PIOGGIA PREVISTA 24H: "+$("#rainN").textContent);
+  if(S.aria&&S.aria.european_aqi!=null)parts.push("ARIA EAQI: "+S.aria.european_aqi+" ("+aqiTxt(S.aria.european_aqi)[0]+")");
+  if(S.mare&&S.mare.wave_height!=null)parts.push("ONDA AL LARGO: "+S.mare.wave_height.toFixed(1)+" M");
+  if(S.ems.length)parts.push("ATTIVAZIONI COPERNICUS EMS APERTE: "+S.ems.length);
+  for(const k in S.errs)if(S.errs[k]!=="EMS_LINK")parts.push("⚠ "+S.errs[k].toUpperCase());
+  parts.push("STRUMENTO SPERIMENTALE, DATI INDICATIVI — IN EMERGENZA CHIAMA IL 112");
+  $("#tickTxt").textContent=parts.join("   ···   ")+"   ···   ";
+}
+
+/* ---------------- interazioni ---------------- */
+$("#nav").addEventListener("click",e=>{
+  const b=e.target.closest("button");if(!b)return;
+  if(b.dataset.v){S.view=b.dataset.v;
+    document.querySelectorAll("#nav [data-v]").forEach(x=>x.classList.toggle("act",x===b));
+    render(); if(innerWidth<=720)$("#side").classList.add("open");}
+  else if(b.dataset.l){S.layers[b.dataset.l]=!S.layers[b.dataset.l];
+    b.classList.toggle("act",S.layers[b.dataset.l]); applyLayers();}
+});
+$("#dayTgl").addEventListener("click",e=>{
+  const b=e.target.closest("button");if(!b)return;
+  S.day=b.dataset.d;
+  document.querySelectorAll("#dayTgl button").forEach(x=>x.classList.toggle("act",x===b));
+  buildZoneLayer();
+});
+$("#blackBtn").addEventListener("click",()=>{
+  S.black=!S.black;document.body.classList.toggle("blackout",S.black);
+  const b=$("#blackBtn");b.classList.toggle("on",S.black);
+  b.textContent=S.black?"◉ OSCURITÀ ON":"◉ OSCURITÀ";b.setAttribute("aria-pressed",S.black);
+});
+$("#sideTgl").addEventListener("click",()=>$("#side").classList.toggle("open"));
+
+/* ---------------- avvio ---------------- */
+render();
+setInterval(()=>$("#clock").textContent=now(),1000);
+loadSito(); loadDPC(); loadINGV(); loadWX(); loadAmb(); loadEMS();
+setInterval(loadINGV,5*60e3);
+setInterval(loadWX,30*60e3);
+setInterval(loadAmb,30*60e3);
+setInterval(loadEMS,15*60e3);
+setInterval(loadSito,10*60e3);
+setInterval(loadDPC,60*60e3);
+</script>
+<noscript><p style="padding:80px 20px;font-family:monospace">Questo monitor richiede JavaScript. Consulta il <a href="../cruscotto/">Cruscotto del territorio</a>, il bollettino su mappe.protezionecivile.gov.it e terremoti.ingv.it. In emergenza chiama il 112.</p></noscript>
+</body>
+</html>
