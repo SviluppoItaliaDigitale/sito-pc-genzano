@@ -4,7 +4,7 @@
 
 Il sito della PA deve rispettare almeno WCAG 2.2 livello AA.
 Il riferimento normativo è la Legge Stanca (L. 4/2004) e il D.Lgs. 106/2018.
-La dichiarazione di accessibilità è obbligatoria per i siti della PA.
+La dichiarazione di accessibilità è obbligatoria per i siti della PA e va compilata/aggiornata ogni anno **entro il 23 settembre** tramite `form.agid.gov.it`; gli **obiettivi di accessibilità** vanno pubblicati **entro il 31 marzo** di ogni anno (fonte: pagina AGID "Accessibilità e usabilità", verificata 24/08/2026 — portale AGID ristrutturato, nuovo URL `agid.gov.it/it/ambiti-intervento/accessibilita-usabilita`). AGID è inoltre Autorità di vigilanza sull'accessibilità dei servizi digitali ai sensi del **D.Lgs. 82/2022** (che recepisce l'**European Accessibility Act**, Direttiva UE 2019/882): riguarda principalmente operatori privati con fatturato rilevante, non modifica gli obblighi di dichiarazione L. 4/2004 che valgono per il nostro sito.
 
 ## Checklist obbligatoria per ogni intervento
 
