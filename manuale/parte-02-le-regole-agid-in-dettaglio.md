@@ -274,6 +274,8 @@ Non:
 > Ai sensi dell'art. 3, comma 1, lettera c) della Legge 9 gennaio 2004, n. 4 e ss.mm.ii.,
 > in combinato disposto con il D.Lgs. 106/2018...
 
+**Quadro normativo aggiornato (verifica 24/08/2026).** Il portale AGID sull'accessibilità è stato ristrutturato (nuovo URL `agid.gov.it/it/ambiti-intervento/accessibilita-usabilita`, il vecchio `/it/design-servizi/accessibilita` reindirizza). Il riferimento resta la **Legge Stanca (L. 4/2004)** + **D.Lgs. 106/2018** per la dichiarazione di accessibilità dei siti PA — da compilare/aggiornare **entro il 23 settembre** di ogni anno, con **obiettivi di accessibilità** pubblicati **entro il 31 marzo**, sempre tramite `form.agid.gov.it`. AGID è anche Autorità di vigilanza sull'accessibilità digitale ai sensi del **D.Lgs. 82/2022** (recepimento dell'European Accessibility Act, Direttiva UE 2019/882): riguarda soprattutto operatori privati di grandi dimensioni, non introduce nuovi obblighi per la dichiarazione del nostro sito.
+
 ### 2.20 — Linguaggio inclusivo
 
 - Evita il maschile "neutro" quando puoi: "le persone" > "gli uomini"; "chi si iscrive" >
