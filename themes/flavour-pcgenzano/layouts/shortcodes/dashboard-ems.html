@@ -34,6 +34,7 @@
 
   <script>
   (function(){
+    var SNAPSHOT={{ "open-data/ems-attivazioni.json" | relURL | jsonify }};
     var API='https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/?limit=50';
     var lista=document.getElementById('dash-ems-lista');
     var stato=document.getElementById('ems-stato');
@@ -99,16 +100,28 @@
       stato.textContent=arr.length+' attivazion'+(arr.length===1?'e':'i')+(arr.length>15?' (mostrate le 15 più recenti)':'');
     }
 
+    function usa(j){
+      ATTIV=(j&&j.results)||[];
+      rendi();
+      if(window.pcCache) pcCache.salva('ems', ATTIV);
+    }
+    function daCacheOErrore(){
+      var c = window.pcCache && pcCache.leggi('ems', 72);
+      if(c){ try{ ATTIV=c.d; rendi(); }catch(e){} stato.textContent=pcCache.frase(c.t); return; }
+      lista.innerHTML='<div class="alert alert-warning" role="note">Elenco non disponibile al momento: consulta il <a href="https://rapidmapping.emergency.copernicus.eu/" target="_blank" rel="noopener noreferrer">portale EMS Rapid Mapping</a>.</div>';
+      stato.textContent='Elenco non disponibile';
+    }
     function carica(){
-      fetch(API).then(function(r){return r.json();}).then(function(j){
-        ATTIV=(j&&j.results)||[];
-        rendi();
-        if(window.pcCache) pcCache.salva('ems', ATTIV);
-      }).catch(function(){
-        var c = window.pcCache && pcCache.leggi('ems', 72);
-        if(c){ try{ ATTIV=c.d; rendi(); }catch(e){} stato.textContent=pcCache.frase(c.t); return; }
-        lista.innerHTML='<div class="alert alert-warning" role="note">Caricamento attivazioni in corso… Se l\'errore persiste, consulta il <a href="https://rapidmapping.emergency.copernicus.eu/" target="_blank" rel="noopener noreferrer">portale EMS</a>.</div>';
-        stato.textContent='Errore caricamento';
+      // Fonte primaria: SNAPSHOT self-hosted rigenerato a ogni deploy.
+      // L'API pubblica risponde 200 ma NON espone Access-Control-Allow-Origin
+      // (verificato 24/08/2026): da browser la fetch diretta è bloccata e la
+      // scheda falliva in silenzio. Il fallback all'API resta per il giorno in
+      // cui il CORS tornasse disponibile.
+      fetch(SNAPSHOT,{cache:'no-cache'}).then(function(r){
+        if(!r.ok) throw new Error('snapshot HTTP '+r.status);
+        return r.json();
+      }).then(usa).catch(function(){
+        fetch(API).then(function(r){return r.json();}).then(usa).catch(daCacheOErrore);
       });
     }
 

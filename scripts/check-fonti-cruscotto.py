@@ -100,7 +100,12 @@ def chk_cams_eu():
 
 
 def chk_ems_rapid():
-    # Copernicus EMS Rapid Mapping public JSON API (CORS abilitato, no auth).
+    # Copernicus EMS Rapid Mapping public JSON API (no auth).
+    # NB: dal 24/08/2026 l'API NON espone piu' Access-Control-Allow-Origin, quindi il
+    # browser non puo' leggerla: la scheda del cruscotto usa lo snapshot self-hosted
+    # static/open-data/ems-attivazioni.json, rigenerato lato server da deploy.yml
+    # (scripts/genera-ems-attivazioni.py). Questo check verifica la fonte a monte:
+    # se cade, lo snapshot smette di aggiornarsi (i dati restano, ma invecchiano).
     url = "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/?limit=1"
     ok, det, _, j = _get(url, expect_json=True)
     if ok and isinstance(j, dict) and "results" in j:
