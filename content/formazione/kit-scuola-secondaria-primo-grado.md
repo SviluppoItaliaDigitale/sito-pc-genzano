@@ -10,7 +10,7 @@ Questo kit è pensato per i docenti della **scuola secondaria di primo grado** c
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e si prestano all'uso nelle ore di scienze, geografia, educazione civica e tecnologia.
 
-> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-primo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-primo-grado.zip) (~225 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-primo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-primo-grado.zip) (~229 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
 ---
 
@@ -497,6 +497,7 @@ Schede pronte per la stampa specifiche per la scuola secondaria di primo grado:
 - 👉 [**Mappa dei rischi del quartiere**](/formazione/schede-stampabili/mappa-rischi-secondaria/) — indagine territoriale: lo studente consulta INGV, ISPRA, DPC, EFFIS e disegna la mappa dei rischi del proprio quartiere. domande di analisi.
 - 👉 [**Audit del Piano di Emergenza Scolastico**](/formazione/schede-stampabili/audit-piano-secondaria/) — compito di realtà: la classe analizza il piano di emergenza della scuola in 4 fasi (documenti, sopralluogo, intervista, sintesi). Output: report al Dirigente.
 - 👉 [**Blackout e servizi essenziali**](/formazione/schede-stampabili/blackout-servizi-essenziali-secondaria/) — disagio, urgenza ed emergenza: piano familiare in caso di interruzione di luce, telefono o acqua. box "Prima/Durante/Comunicazioni/Quando chiamare", attività domestiche, mini quiz. *(ed. civica, tecnologia)*
+- 👉 [**Rischio chimico-industriale**](/formazione/schede-stampabili/rischio-industriale-secondaria/) — perché davanti a una nube o un odore chimico anomalo la regola è "al contrario": riparo al chiuso invece di fuga. Normativa Seveso, pannelli arancioni, attività di confronto tra regole e mini quiz. *(scienze, ed. civica)*
 - 👉 [**Leggere il bollettino ondate di calore**](/formazione/schede-stampabili/ondate-calore-secondaria/) — il bollettino del Ministero della Salute: livelli 0-1-2-3, come si legge, comportamenti per sé e per le persone fragili, con esercizio su un bollettino di esempio. *(scienze, ed. civica)*
 - 👉 [**Monossido di carbonio**](/formazione/schede-stampabili/monossido-carbonio-secondaria/) — il pericolo invisibile in case, garage e locali chiusi: prevenzione, usi vietati di barbecue/bracieri, segnali sospetti e azione sicura. Caccia al rischio in casa e mini quiz. *(scienze, tecnologia)*
 - 👉 [**Maremoto: la fisica e i comportamenti**](/formazione/schede-stampabili/maremoto-comportamenti-secondaria/) — come si genera un maremoto (velocità dell'onda in mare aperto e in costa), il Sistema di Allertamento SiAM, i tre segnali naturali e i comportamenti di autoprotezione. Mini verifica e soluzioni. *(scienze, geografia, ed. civica)*
