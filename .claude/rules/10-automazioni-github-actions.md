@@ -123,3 +123,13 @@ I workflow di **sfondo committano soltanto** (niente più `gh workflow run deplo
 - **Draft posts**: set `draft: true` in front matter. They appear locally with `hugo server -D` but are not published. **Regola progetto**: niente articoli in `draft: true` — solo immediato (`date` passata) o calendarizzato (`date` futura).
 - **CI deploy**: pushing to `main` triggers `.github/workflows/deploy.yml` which builds twice (once per baseURL) and deploys via FTP to Aruba and via GitHub Pages API. Monitor at the Actions tab.
 - **FTP credentials** are stored as GitHub secrets (`FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`).
+
+## Snapshot Copernicus EMS — la scheda del cruscotto non legge più l'API dal browser (24/08/2026)
+
+🔴 L'API pubblica `rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/` risponde **200 ma senza header `Access-Control-Allow-Origin`**: dal browser la fetch è bloccata dalla same-origin policy. La scheda `dashboard-ems.html` del cruscotto falliva **in silenzio** (mostrando "Errore caricamento" o l'ultimo dato in `pc-fetch-cache`).
+
+**Soluzione adottata:** il server non ha il vincolo CORS, quindi lo scarico avviene in CI. `scripts/genera-ems-attivazioni.py` gira come step pre-build di `deploy.yml` e salva `static/open-data/ems-attivazioni.json` (schema identico all'API + blocco `_snapshot` con orario e fonte). La scheda legge **prima lo snapshot same-origin**, poi tenta l'API come fallback (se il CORS tornasse), infine `pc-fetch-cache`. Lo script è fail-safe: se l'API è giù **lascia invariato lo snapshot ed esce 0** — mai un deploy rotto per una fonte terza, mai dati azzerati.
+
+`check-fonti-cruscotto.py` continua a pingare l'API a monte: se cade, lo snapshot smette di aggiornarsi (i dati restano, ma invecchiano).
+
+**Regola generale:** prima di aggiungere al cruscotto una fonte dati letta dal browser, **verifica che esponga il CORS** (`curl -sI -H "Origin: https://www.protezionecivilegenzano.it" <url> | grep -i access-control`). Se non lo espone, la strada è lo snapshot self-hosted generato in CI, non la fetch diretta.

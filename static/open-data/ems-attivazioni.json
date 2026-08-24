@@ -1,0 +1,814 @@
+{
+ "_snapshot": {
+  "fonte": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/",
+  "generato": "2026-08-24T21:46:00+00:00",
+  "licenza": "Copernicus Emergency Management Service — dati pubblici",
+  "nota": "Copia locale: l'API non espone CORS, il browser non può leggerla direttamente."
+ },
+ "count": 50,
+ "results": [
+  {
+   "activationTime": "2026-08-22T15:45:00",
+   "category": "Flood",
+   "centroid": "POINT (22.205348517547684 56.87281291182868)",
+   "closed": false,
+   "code": "EMSR926",
+   "countries": [
+    "Latvia",
+    "Lithuania"
+   ],
+   "eventTime": "2026-08-21T21:00:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-08-24T20:43:54.641917",
+   "n_aois": 4,
+   "n_products": 9,
+   "name": "Flood in Latvia and Lithuania"
+  },
+  {
+   "activationTime": "2026-08-21T19:57:00",
+   "category": "Wildfire",
+   "centroid": "POINT (-0.501254009851049 39.77763469360275)",
+   "closed": true,
+   "code": "EMSR925",
+   "countries": [
+    "Spain"
+   ],
+   "eventTime": "2026-08-20T10:08:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-08-24T13:03:44.621486",
+   "n_aois": 1,
+   "n_products": 1,
+   "name": "Wildfire in Segorbe, Spain"
+  },
+  {
+   "activationTime": "2026-08-16T08:46:00",
+   "category": "Wildfire",
+   "centroid": "POINT (13.030094533170308 46.40913427141007)",
+   "closed": false,
+   "code": "EMSR924",
+   "countries": [
+    "Italy"
+   ],
+   "eventTime": "2026-08-13T22:00:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-08-24T16:51:34.312955",
+   "n_aois": 1,
+   "n_products": 3,
+   "name": "Wildfire in Friuli, Italy"
+  },
+  {
+   "activationTime": "2026-08-15T17:57:00",
+   "category": "Wildfire",
+   "centroid": "POINT (24.473423718902048 38.88160034017423)",
+   "closed": true,
+   "code": "EMSR923",
+   "countries": [
+    "Greece"
+   ],
+   "eventTime": "2026-08-15T10:50:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-08-19T12:53:17.901174",
+   "n_aois": 1,
+   "n_products": 3,
+   "name": "Wildfire In Skyros, Greece"
+  },
+  {
+   "activationTime": "2026-08-15T15:36:00",
+   "category": "Wildfire",
+   "centroid": "POINT (18.90526453608507 42.53850346175422)",
+   "closed": false,
+   "code": "EMSR922",
+   "countries": [
+    "Montenegro"
+   ],
+   "eventTime": "2026-08-14T22:00:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-08-24T20:33:57.068704",
+   "n_aois": 2,
+   "n_products": 11,
+   "name": "Wildfire in Montenegro"
+  },
+  {
+   "activationTime": "2026-08-15T08:52:00",
+   "category": "Wildfire",
+   "centroid": "POINT (-0.693036057514768 42.47825244999649)",
+   "closed": true,
+   "code": "EMSR921",
+   "countries": [
+    "Spain"
+   ],
+   "eventTime": "2026-08-10T10:08:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-08-19T16:24:29.595456",
+   "n_aois": 1,
+   "n_products": 4,
+   "name": "Wildfire in Aragon, Spain"
+  },
+  {
+   "activationTime": "2026-08-14T09:37:00",
+   "category": "Wildfire",
+   "centroid": "POINT (6.376188560649222 50.75359532631122)",
+   "closed": false,
+   "code": "EMSR920",
+   "countries": [
+    "Germany"
+   ],
+   "eventTime": "2026-08-13T12:55:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-08-24T14:34:41.719173",
+   "n_aois": 3,
+   "n_products": 8,
+   "name": "Wildfire in Huertgen Forest, Germany and Belgium"
+  },
+  {
+   "activationTime": "2026-08-13T15:53:00",
+   "category": "Wildfire",
+   "centroid": "POINT (23.439132100669074 40.01889964976502)",
+   "closed": true,
+   "code": "EMSR918",
+   "countries": [
+    "Greece"
+   ],
+   "eventTime": "2026-08-13T09:00:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-08-17T10:22:33.836103",
+   "n_aois": 1,
+   "n_products": 2,
+   "name": "Wildfire in Central Macedonia, Greece"
+  },
+  {
+   "activationTime": "2026-08-12T11:51:00",
+   "category": "Wildfire",
+   "centroid": "POINT (20.076490164518113 41.67240457910263)",
+   "closed": true,
+   "code": "EMSR917",
+   "countries": [
+    "Albania"
+   ],
+   "eventTime": "2026-08-11T12:00:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-08-21T12:47:20.092499",
+   "n_aois": 2,
+   "n_products": 9,
+   "name": "Wildfire in Lura National Park, Albania"
+  },
+  {
+   "activationTime": "2026-08-10T17:13:00",
+   "category": "Earthquake",
+   "centroid": "POINT (-76.25745949698948 3.873912990109663)",
+   "closed": true,
+   "code": "EMSR916",
+   "countries": [
+    "Colombia"
+   ],
+   "eventTime": "2026-08-10T12:30:00",
+   "gdacsId": "EQ1557236",
+   "lastUpdate": "2026-08-17T09:59:55.234251",
+   "n_aois": 7,
+   "n_products": 8,
+   "name": "Earthquake in Colombia"
+  },
+  {
+   "activationTime": "2026-08-10T07:38:00",
+   "category": "Wildfire",
+   "centroid": "POINT (20.175944339073325 40.92481764445288)",
+   "closed": true,
+   "code": "EMSR915",
+   "countries": [
+    "Albania"
+   ],
+   "eventTime": "2026-08-05T06:00:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-08-18T07:52:52.650900",
+   "n_aois": 1,
+   "n_products": 6,
+   "name": "Wildfire in Mallakaster municipality, Albania"
+  },
+  {
+   "activationTime": "2026-08-08T20:22:00",
+   "category": "Wildfire",
+   "centroid": "POINT (21.16667230811224 44.737865616308824)",
+   "closed": false,
+   "code": "EMSR914",
+   "countries": [
+    "Serbia"
+   ],
+   "eventTime": "2026-08-02T10:00:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-08-24T15:58:30.848746",
+   "n_aois": 3,
+   "n_products": 32,
+   "name": "Wildfire in Serbia"
+  },
+  {
+   "activationTime": "2026-08-07T19:47:00",
+   "category": "Wildfire",
+   "centroid": "POINT (-6.692874380324164 37.47971065538817)",
+   "closed": true,
+   "code": "EMSR913",
+   "countries": [
+    "Spain"
+   ],
+   "eventTime": "2026-08-06T10:00:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-08-18T09:16:36.078493",
+   "n_aois": 1,
+   "n_products": 9,
+   "name": "Wildfire in Huelva, Spain"
+  },
+  {
+   "activationTime": "2026-08-05T08:36:00",
+   "category": "Volcanic activity",
+   "centroid": "POINT (-90.90488258150785 14.467714085412526)",
+   "closed": true,
+   "code": "EMSR912",
+   "countries": [
+    "Guatemala"
+   ],
+   "eventTime": "2026-08-02T23:00:00",
+   "gdacsId": "VO1000145",
+   "lastUpdate": "2026-08-17T15:43:51.377130",
+   "n_aois": 2,
+   "n_products": 3,
+   "name": "Volcano eruption in Guatemala"
+  },
+  {
+   "activationTime": "2026-08-01T17:02:00",
+   "category": "Wildfire",
+   "centroid": "POINT (21.958470699810395 38.26311997185178)",
+   "closed": true,
+   "code": "EMSR910",
+   "countries": [
+    "Greece"
+   ],
+   "eventTime": "2026-07-31T14:05:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-08-06T08:44:25.768470",
+   "n_aois": 1,
+   "n_products": 2,
+   "name": "Wildfire in Achaia, Greece"
+  },
+  {
+   "activationTime": "2026-07-31T13:25:00",
+   "category": "Wildfire",
+   "centroid": "POINT (23.159833654764686 38.20481424356466)",
+   "closed": true,
+   "code": "EMSR909",
+   "countries": [
+    "Greece"
+   ],
+   "eventTime": "2026-07-31T03:35:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-08-13T12:50:41.188719",
+   "n_aois": 1,
+   "n_products": 7,
+   "name": "Wildfires in Viotia, Greece"
+  },
+  {
+   "activationTime": "2026-07-30T10:51:00",
+   "category": "Wildfire",
+   "centroid": "POINT (-6.29 41.375)",
+   "closed": true,
+   "code": "EMSR908",
+   "countries": [
+    "Spain",
+    "Portugal"
+   ],
+   "eventTime": "2026-07-28T23:07:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-08-04T15:25:26.757111",
+   "n_aois": 1,
+   "n_products": 2,
+   "name": "Wildfires in Castilla y Leon, Spain and Norte, Portugal"
+  },
+  {
+   "activationTime": "2026-07-30T08:05:00",
+   "category": "Wildfire",
+   "centroid": "POINT (24.609232916421227 35.16898034979032)",
+   "closed": true,
+   "code": "EMSR907",
+   "countries": [
+    "Greece"
+   ],
+   "eventTime": "2026-07-29T10:25:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-08-04T13:08:38.157467",
+   "n_aois": 1,
+   "n_products": 2,
+   "name": "Wildfires in Crete Island, Greece"
+  },
+  {
+   "activationTime": "2026-07-27T13:28:00",
+   "category": "Wildfire",
+   "centroid": "POINT (-6.192692307692316 42.664615384615374)",
+   "closed": true,
+   "code": "EMSR906",
+   "countries": [
+    "Spain"
+   ],
+   "eventTime": "2026-07-22T03:00:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-07-31T07:56:44.423595",
+   "n_aois": 2,
+   "n_products": 2,
+   "name": "Wildfires in Province of Leon, Spain"
+  },
+  {
+   "activationTime": "2026-07-26T00:05:00",
+   "category": "Wildfire",
+   "centroid": "POINT (-0.296232827511763 39.90811806367239)",
+   "closed": true,
+   "code": "EMSR905",
+   "countries": [
+    "Spain"
+   ],
+   "eventTime": "2026-07-25T10:07:00",
+   "gdacsId": "WF1029794",
+   "lastUpdate": "2026-08-04T13:54:50.092009",
+   "n_aois": 1,
+   "n_products": 6,
+   "name": "Wildfires in Plana Baixa, Spain"
+  },
+  {
+   "activationTime": "2026-07-24T20:55:00",
+   "category": "Wildfire",
+   "centroid": "POINT (-3.433390314103714 57.08335605705591)",
+   "closed": true,
+   "code": "EMSR904",
+   "countries": [
+    "United Kingdom"
+   ],
+   "eventTime": "2026-07-24T17:06:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-08-12T07:34:39.200956",
+   "n_aois": 1,
+   "n_products": 3,
+   "name": "Wildfire in Aviemore, United Kingdom"
+  },
+  {
+   "activationTime": "2026-07-24T15:15:00",
+   "category": "Wildfire",
+   "centroid": "POINT (8.484220889267773 36.260994941859906)",
+   "closed": true,
+   "code": "EMSR903",
+   "countries": [
+    "Tunisia"
+   ],
+   "eventTime": "2026-07-24T14:15:00",
+   "gdacsId": "WF1029649",
+   "lastUpdate": "2026-08-21T09:54:16.830897",
+   "n_aois": 1,
+   "n_products": 2,
+   "name": "Wildfire in Le Kef and Beja Governorates, Tunisia"
+  },
+  {
+   "activationTime": "2026-07-24T02:42:00",
+   "category": "Wildfire",
+   "centroid": "POINT (-1.124132 44.409217)",
+   "closed": true,
+   "code": "EMSR902",
+   "countries": [
+    "France"
+   ],
+   "eventTime": "2026-07-23T14:00:00",
+   "gdacsId": "WF1029730",
+   "lastUpdate": "2026-07-31T08:38:08.859176",
+   "n_aois": 1,
+   "n_products": 3,
+   "name": "Wildfire in Biscarrosse, France"
+  },
+  {
+   "activationTime": "2026-07-23T19:16:00",
+   "category": "Wildfire",
+   "centroid": "POINT (6.948453277542661 49.54527245112298)",
+   "closed": true,
+   "code": "EMSR901",
+   "countries": [
+    "Germany"
+   ],
+   "eventTime": "2026-07-23T15:30:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-07-28T09:10:56.952459",
+   "n_aois": 1,
+   "n_products": 1,
+   "name": "Wildfire in Primstal, Germany"
+  },
+  {
+   "activationTime": "2026-07-23T09:48:00",
+   "category": "Wildfire",
+   "centroid": "POINT (-3.988098825546593 41.06426265912402)",
+   "closed": true,
+   "code": "EMSR900",
+   "countries": [
+    "Spain"
+   ],
+   "eventTime": "2026-07-20T01:07:00",
+   "gdacsId": "WF1029643",
+   "lastUpdate": "2026-08-18T06:38:15.999237",
+   "n_aois": 7,
+   "n_products": 19,
+   "name": "Wildfire in Central Spain"
+  },
+  {
+   "activationTime": "2026-07-22T18:54:00",
+   "category": "Wildfire",
+   "centroid": "POINT (-1.031652 44.895835)",
+   "closed": true,
+   "code": "EMSR899",
+   "countries": [
+    "France"
+   ],
+   "eventTime": "2026-07-22T18:00:00",
+   "gdacsId": "WF1029628",
+   "lastUpdate": "2026-08-12T08:15:58.521607",
+   "n_aois": 1,
+   "n_products": 5,
+   "name": "Wildfire in Saumos, France"
+  },
+  {
+   "activationTime": "2026-07-20T13:26:00",
+   "category": "Wildfire",
+   "centroid": "POINT (-3.017758737992368 41.228732509866255)",
+   "closed": true,
+   "code": "EMSR898",
+   "countries": [
+    "Spain"
+   ],
+   "eventTime": "2026-07-19T22:00:00",
+   "gdacsId": "WF1029540",
+   "lastUpdate": "2026-07-30T14:57:35.000072",
+   "n_aois": 2,
+   "n_products": 8,
+   "name": "Wildfire in La Mierla, Spain"
+  },
+  {
+   "activationTime": "2026-07-17T14:51:00",
+   "category": "Wildfire",
+   "centroid": "POINT (-1.941467888874516 53.51017111839306)",
+   "closed": true,
+   "code": "EMSR897",
+   "countries": [
+    "United Kingdom"
+   ],
+   "eventTime": "2026-07-16T23:00:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-07-22T17:08:03.092584",
+   "n_aois": 1,
+   "n_products": 2,
+   "name": "Wildfire in Tintwistle, United Kingdom"
+  },
+  {
+   "activationTime": "2026-07-16T16:13:00",
+   "category": "Wildfire",
+   "centroid": "POINT (-1.051718116961308 42.30663951333529)",
+   "closed": true,
+   "code": "EMSR896",
+   "countries": [
+    "Spain"
+   ],
+   "eventTime": "2026-07-15T13:25:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-07-21T11:13:34.681171",
+   "n_aois": 1,
+   "n_products": 5,
+   "name": "Wildfire in Aragon, Spain"
+  },
+  {
+   "activationTime": "2026-07-15T11:00:00",
+   "category": "Wildfire",
+   "centroid": "POINT (-3.675288 57.142632)",
+   "closed": true,
+   "code": "EMSR895",
+   "countries": [
+    "United Kingdom"
+   ],
+   "eventTime": "2026-07-15T11:00:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-07-21T14:16:53.385231",
+   "n_aois": 1,
+   "n_products": 1,
+   "name": "Wildfire in Glenmore, United Kingdom"
+  },
+  {
+   "activationTime": "2026-07-13T13:22:00",
+   "category": "Wildfire",
+   "centroid": "POINT (2.588891694482279 48.38944183034708)",
+   "closed": true,
+   "code": "EMSR894",
+   "countries": [
+    "France"
+   ],
+   "eventTime": "2026-07-12T15:00:00",
+   "gdacsId": "WF1029489",
+   "lastUpdate": "2026-07-21T11:08:03.323590",
+   "n_aois": 1,
+   "n_products": 5,
+   "name": "Wildfire in Fontainebleau, France"
+  },
+  {
+   "activationTime": "2026-07-11T19:23:00",
+   "category": "Wildfire",
+   "centroid": "POINT (16.84044873040292 42.93185783418306)",
+   "closed": true,
+   "code": "EMSR893",
+   "countries": [
+    "Croatia"
+   ],
+   "eventTime": "2026-07-11T18:30:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-08-03T09:20:04",
+   "n_aois": 1,
+   "n_products": 1,
+   "name": "Wildfire in Island of Korcula, Croatia"
+  },
+  {
+   "activationTime": "2026-07-10T10:25:00",
+   "category": "Wildfire",
+   "centroid": "POINT (-1.960596 37.17526)",
+   "closed": true,
+   "code": "EMSR892",
+   "countries": [
+    "Spain"
+   ],
+   "eventTime": "2026-07-09T14:25:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-07-14T09:05:04.837612",
+   "n_aois": 1,
+   "n_products": 3,
+   "name": "Wildfire in Andalusia, Spain"
+  },
+  {
+   "activationTime": "2026-07-07T09:23:00",
+   "category": "Wildfire",
+   "centroid": "POINT (5.338182141082767 44.7019978646399)",
+   "closed": true,
+   "code": "EMSR890",
+   "countries": [
+    "France"
+   ],
+   "eventTime": "2026-07-07T09:00:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-07-13T11:47:24.803610",
+   "n_aois": 1,
+   "n_products": 6,
+   "name": "Wildfire in Diois, France"
+  },
+  {
+   "activationTime": "2026-07-07T08:51:00",
+   "category": "Wildfire",
+   "centroid": "POINT (2.571680685496551 42.66001373333111)",
+   "closed": true,
+   "code": "EMSR889",
+   "countries": [
+    "France"
+   ],
+   "eventTime": "2026-07-05T08:25:00",
+   "gdacsId": "WF1029331",
+   "lastUpdate": "2026-07-13T07:35:56.596232",
+   "n_aois": 1,
+   "n_products": 2,
+   "name": "Wildfire in Pyrenees Regional Park, France"
+  },
+  {
+   "activationTime": "2026-07-03T16:38:00",
+   "category": "Wildfire",
+   "centroid": "POINT (3.02689832031625 41.85008701143381)",
+   "closed": true,
+   "code": "EMSR888",
+   "countries": [
+    "Spain"
+   ],
+   "eventTime": "2026-07-03T07:16:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-07-08T20:15:56.831788",
+   "n_aois": 1,
+   "n_products": 4,
+   "name": "Wildfires in Les Gavarres, Spain"
+  },
+  {
+   "activationTime": "2026-07-03T11:17:00",
+   "category": "Wildfire",
+   "centroid": "POINT (-6.494080932059824 42.64167229370756)",
+   "closed": true,
+   "code": "EMSR887",
+   "countries": [
+    "Spain"
+   ],
+   "eventTime": "2026-06-24T19:17:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-07-07T12:49:05.179330",
+   "n_aois": 1,
+   "n_products": 2,
+   "name": "Wildfire in Congosto, Spain"
+  },
+  {
+   "activationTime": "2026-06-27T15:51:00",
+   "category": "Wildfire",
+   "centroid": "POINT (7.826469502837607 49.829754729741964)",
+   "closed": true,
+   "code": "EMSR886",
+   "countries": [
+    "Germany"
+   ],
+   "eventTime": "2026-06-27T15:00:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-07-01T13:13:44.879338",
+   "n_aois": 1,
+   "n_products": 2,
+   "name": "Wildfire in Rhineland-Palatinate, Germany"
+  },
+  {
+   "activationTime": "2026-06-25T22:29:00",
+   "category": "Wildfire",
+   "centroid": "POINT (0.326735391845018 41.96833064771739)",
+   "closed": true,
+   "code": "EMSR885",
+   "countries": [
+    "Spain"
+   ],
+   "eventTime": "2026-06-25T13:10:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-07-17T07:27:45.392558",
+   "n_aois": 1,
+   "n_products": 1,
+   "name": "Wildfire in Aragon, Spain"
+  },
+  {
+   "activationTime": "2026-06-25T03:51:00",
+   "category": "Earthquake",
+   "centroid": "POINT (-67.80859040143667 10.277062692317687)",
+   "closed": true,
+   "code": "EMSR884",
+   "countries": [
+    "Venezuela"
+   ],
+   "eventTime": "2026-06-24T16:04:00",
+   "gdacsId": "EQ1548377",
+   "lastUpdate": "2026-07-10T10:16:32.408229",
+   "n_aois": 13,
+   "n_products": 21,
+   "name": "Earthquake in Venezuela"
+  },
+  {
+   "activationTime": "2026-06-16T09:08:00",
+   "category": "Wildfire",
+   "centroid": "POINT (-53.405181229110894 67.12146752394848)",
+   "closed": true,
+   "code": "EMSR883",
+   "countries": [
+    "Greenland",
+    "Denmark"
+   ],
+   "eventTime": "2026-06-15T22:00:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-06-30T09:44:15",
+   "n_aois": 1,
+   "n_products": 2,
+   "name": "Wildfire in Greenland"
+  },
+  {
+   "activationTime": "2026-06-11T09:34:00",
+   "category": "Earthquake",
+   "centroid": "POINT (125.06572282904199 6.018410631258506)",
+   "closed": true,
+   "code": "EMSR882",
+   "countries": [
+    "Philippines"
+   ],
+   "eventTime": "2026-06-06T22:00:00",
+   "gdacsId": "EQ1545533",
+   "lastUpdate": "2026-06-19T14:07:50.933000",
+   "n_aois": 4,
+   "n_products": 4,
+   "name": "Earthquake in the southern Philippines"
+  },
+  {
+   "activationTime": "2026-06-10T12:32:00",
+   "category": "Wildfire",
+   "centroid": "POINT (-7.039483327844973 37.46153506272564)",
+   "closed": true,
+   "code": "EMSR881",
+   "countries": [
+    "Spain"
+   ],
+   "eventTime": "2026-06-08T11:30:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-06-22T12:10:26.379350",
+   "n_aois": 1,
+   "n_products": 3,
+   "name": "Forest fire in Huelva, Spain"
+  },
+  {
+   "activationTime": "2026-05-28T19:29:00",
+   "category": "Wildfire",
+   "centroid": "POINT (20.690457191974083 53.14217770427738)",
+   "closed": true,
+   "code": "EMSR878",
+   "countries": [
+    "Poland"
+   ],
+   "eventTime": "2026-05-27T22:00:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-06-08T10:13:27.904826",
+   "n_aois": 1,
+   "n_products": 1,
+   "name": "Wildfire in Mazovia, Poland"
+  },
+  {
+   "activationTime": "2026-05-26T14:32:00",
+   "category": "Other",
+   "centroid": "POINT (17.093001327819394 47.91828989150362)",
+   "closed": true,
+   "code": "EMSR877",
+   "countries": [
+    "Austria"
+   ],
+   "eventTime": "2026-06-11T12:00:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-06-16T13:40:32.152008",
+   "n_aois": 1,
+   "n_products": 6,
+   "name": "Public Event in Burgenland, Austria"
+  },
+  {
+   "activationTime": "2026-05-05T13:57:00",
+   "category": "Wildfire",
+   "centroid": "POINT (12.654802 47.691686)",
+   "closed": true,
+   "code": "EMSR875",
+   "countries": [
+    "Germany"
+   ],
+   "eventTime": "2026-05-03T10:00:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-05-12T09:26:12.980601",
+   "n_aois": 1,
+   "n_products": 2,
+   "name": "Wildfire in Bavaria, Germany"
+  },
+  {
+   "activationTime": "2026-05-02T07:55:00",
+   "category": "Wildfire",
+   "centroid": "POINT (7.7622 50.8811)",
+   "closed": true,
+   "code": "EMSR874",
+   "countries": [
+    "Germany"
+   ],
+   "eventTime": "2026-05-01T14:45:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-05-04T16:36:52.552579",
+   "n_aois": 1,
+   "n_products": 1,
+   "name": "Wildfire in Rhineland-Palatinate, Germany"
+  },
+  {
+   "activationTime": "2026-05-01T07:59:00",
+   "category": "Wildfire",
+   "centroid": "POINT (10.486995751526113 43.76988485902923)",
+   "closed": true,
+   "code": "EMSR873",
+   "countries": [
+    "Italy"
+   ],
+   "eventTime": "2026-04-28T22:00:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-05-05T13:50:30.098672",
+   "n_aois": 1,
+   "n_products": 2,
+   "name": "Wildfire in Tuscany, Italy"
+  },
+  {
+   "activationTime": "2026-04-21T14:34:00",
+   "category": "Storm",
+   "centroid": "POINT (151.75069008400766 7.375840981096835)",
+   "closed": true,
+   "code": "EMSR872",
+   "countries": [
+    "Micronesia"
+   ],
+   "eventTime": "2026-04-08T22:00:00",
+   "gdacsId": "TC1001270",
+   "lastUpdate": "2026-05-19T10:47:37.650194",
+   "n_aois": 19,
+   "n_products": 18,
+   "name": "Tropical Cyclone Sinlaku in Micronesia"
+  },
+  {
+   "activationTime": "2026-04-01T15:16:00",
+   "category": "Flood",
+   "centroid": "POINT (14.938764359319357 41.899617109537935)",
+   "closed": true,
+   "code": "EMSR871",
+   "countries": [
+    "Italy"
+   ],
+   "eventTime": "2026-03-31T15:00:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-04-14T07:32:28.491219",
+   "n_aois": 6,
+   "n_products": 15,
+   "name": "Flood in Abruzzo, Molise and Basilicata regions, Italy"
+  }
+ ]
+}
