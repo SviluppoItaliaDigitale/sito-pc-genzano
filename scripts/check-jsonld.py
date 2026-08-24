@@ -49,6 +49,12 @@ RX_LDJSON = re.compile(
     r'<script type="?application/ld\+json"?>(.*?)</script>', re.S
 )
 
+# Pagine generate da Hugo per un `aliases:` del frontmatter: un semplice
+# stub HTML con meta-refresh verso la pagina reale (rule 05, mai eliminare
+# un URL pubblicato senza redirect). Non hanno né possono avere JSON-LD:
+# il contenuto/paternità vive solo sulla pagina di destinazione.
+RX_ALIAS_STUB = re.compile(r'<meta http-equiv="?refresh"?', re.I)
+
 def main():
     errori = 0
     for pagina in campione():
@@ -57,6 +63,10 @@ def main():
         except OSError as e:
             print(f"[FAIL] {pagina}: pagina attesa nel campione ma assente ({e})")
             errori += 1
+            continue
+        rel = pagina.replace(BUILD_DIR, "") or "/"
+        if RX_ALIAS_STUB.search(html):
+            print(f"[skip] {rel}  (stub di redirect da aliases:, nessun JSON-LD atteso)")
             continue
         blocchi = RX_LDJSON.findall(html)
         problemi = []
@@ -76,7 +86,6 @@ def main():
                 "manca il blocco di paternità (copyrightHolder) — "
                 "regressione di jsonld-copyright.html"
             )
-        rel = pagina.replace(BUILD_DIR, "") or "/"
         if problemi:
             errori += 1
             print(f"[FAIL] {rel}")
