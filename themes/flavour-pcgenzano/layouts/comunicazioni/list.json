@@ -1,0 +1,16 @@
+{{- /* Endpoint JSON leggero delle ultime notizie: /comunicazioni/index.json.
+       Usato dalla barra notizie della Sala situazioni (/monitor/), che lo
+       interroga in same-origin ogni 5 minuti. Solo gli ultimi 20 articoli,
+       campi minimi (~3 KB): title, url relativo, date, badge.
+       Le versioni facili A2 sono già escluse da .RegularPages (build.list: never). */ -}}
+{{- $articoli := first 20 .RegularPages -}}
+{{- $out := slice -}}
+{{- range $articoli -}}
+  {{- $out = $out | append (dict
+        "title" .Title
+        "url" .RelPermalink
+        "date" (.Date.Format "2006-01-02")
+        "badge" (.Params.badge | default "")
+     ) -}}
+{{- end -}}
+{{- dict "generato" now "articoli" $out | jsonify (dict "indent" " ") -}}
