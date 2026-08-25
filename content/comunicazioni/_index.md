@@ -6,6 +6,10 @@ aliases:
 sitemap:
   priority: 0.8
   changefreq: daily
+outputs:
+  - html
+  - rss
+  - json
 ---
 
 In questa pagina trovi l'**archivio completo degli articoli** pubblicati dal Gruppo: avvisi, comunicati, resoconti delle attività, materiali di prevenzione e aggiornamenti operativi. L'archivio è filtrabile per categoria e per anno e ordinato dal più recente al più datato.
