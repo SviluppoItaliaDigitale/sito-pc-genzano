@@ -61,6 +61,26 @@ Giovedì mattina la **Polizia Locale** richiede un intervento per **rami pericol
 
 Nel primo pomeriggio la SOUP chiama il Gruppo a **Velletri, in via dei Cavalli**, per un **incendio di sterpaglie**: un supporto breve con pickup e autobotte accanto a Vigili del Fuoco, Carabinieri e altri volontari. Poco dopo, nuova attivazione sulla **Falcognana**, un fronte che quest'estate [è già bruciato più volte](/comunicazioni/2026-08-10-incendi-pomezia-falcognana-agosto-2026/): un **vasto incendio di sterpaglie** impegna l'autobotte Atego e la squadra fino a sera, per **quasi cinque ore**, con Polizia Locale, Vigili del Fuoco e altri gruppi sul posto.
 
+Le cronache locali confermano la giornata difficile. Per [RomaToday](https://www.romatoday.it/cronaca/incendi-roma-oggi-20-agosto-2026.html) via Falcognana è stata «la situazione più critica in città», con interventi anche a Velletri e Ciampino. [Castelli Notizie](https://www.castellinotizie.it/2026/08/20/incendio-via-falcognana-marino-ettari-fiamme/) documenta ettari di sterpaglie e alberi in fumo, con le abitazioni rimaste illese a sera.
+
+{{< galleria titolo="Le foto dalle giornate di mercoledì e giovedì" >}}
+{{< foto src="/images/2026-08-20-incendi-mezzo-aib-scarpata.webp"
+         alt="Il mezzo antincendio rosso del Gruppo, con la scritta Città di Genzano di Roma — Protezione Civile e il vano pompa aperto, fermo su una strada sterrata ai piedi di una scarpata annerita dal fuoco; una manichetta rossa risale il pendio verso i volontari al lavoro in alto."
+         caption="Il mezzo antincendio del Gruppo alla base della scarpata: le manichette risalgono il pendio fino ai volontari in bonifica. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< foto src="/images/2026-08-20-incendi-autobotte-versante.webp"
+         alt="Il retro di un'autobotte con la motopompa, ferma accanto a un versante bruciato che ancora fuma; due volontari lavorano sul pendio annerito tra le manichette stese a terra."
+         caption="L'appoggio dell'autobotte a bordo strada: dal mezzo partono le linee d'acqua per la bonifica del versante. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< foto src="/images/2026-08-20-incendi-bonifica-tramonto.webp"
+         alt="Un volontario ripreso di spalle dirige il getto d'acqua su un grosso tronco annerito che fuma ancora, in un'area bruciata al tramonto; sullo sfondo una collina percorsa dal fuoco."
+         caption="Bonifica fino a sera: il getto d'acqua spegne i tronchi che continuano a fumare. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< foto src="/images/2026-08-20-incendi-bonifica-rocce.webp"
+         alt="Due volontari in tuta da intervento tra rocce e terreno anneriti: quello in primo piano, con casco e occhiali protettivi, sposta un grosso ramo bruciato; l'altro è seduto più indietro, accanto a un muro di pietre."
+         caption="La bonifica a mano tra le rocce: spostare i rami bruciati serve a scoprire le braci nascoste e spegnerle. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< foto src="/images/2026-08-20-incendi-squadra-aib-attrezzi.webp"
+         alt="Due volontari della squadra antincendio boschivo del Gruppo, di spalle con la maglietta della squadra, osservano l'area che ancora fuma: uno regge una motosega, l'altro un rastrello antincendio."
+         caption="Motosega e rastrello antincendio: il presidio della squadra AIB del Gruppo mentre l'area continua a fumare. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< /galleria >}}
+
 ## Venerdì 21 — dodici ore di autocarro per chiudere Fondi
 
 L'ultima attivazione della settimana non riguarda il fuoco ma la **logistica**. Dopo la chiusura della [Mensa del Gemellaggio AIB](/comunicazioni/2026-08-19-mensa-gemellaggio-fondi-bilancio-finale/), venerdì 21 agosto una squadra del Gruppo è partita **prima dell'alba** con l'**autocarro Iveco Stralis** e il **Fiat Doblò** per lo spostamento dei **container del campo** tra **Fondi, Formia e Aprilia**. Rientro nel tardo pomeriggio, dopo **dodici ore** di servizio: il pezzo finale, silenzioso, di un'operazione durata tutta l'estate.

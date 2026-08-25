@@ -57,12 +57,22 @@ jobs:
       #                 questo confronto separato, una nuova prerelease
       #                 successiva all'ultima stabile installata passerebbe
       #                 inosservata (trovato in review su questa stessa PR).
+      # NOTA (23/08/2026): il flag "prerelease" del JSON GitHub non basta da
+      # solo. Il 04/08/2026 il maintainer di italia/bootstrap-italia ha
+      # pubblicato v3.0.0-beta.4 SENZA spuntare "This is a pre-release":
+      # l'API la restituisce con prerelease=false, sopra la vera patch
+      # stabile v2.18.3 (pubblicata lo stesso giorno). Senza un secondo
+      # filtro, quel refuso upstream avrebbe bloccato per sempre il
+      # rilevamento di patch stabili reali (major-gate sempre attivo sulla
+      # beta, v2.18.3 mai raggiunta). Aggiungiamo quindi un filtro
+      # difensivo sul TAG NAME (alpha|beta|rc|pre|dev), indipendente dal
+      # flag upstream.
       - name: "🌐 Controlla ultima release stabile e ultima in assoluto"
         id: releases
         run: |
           JSON=$(curl -s "https://api.github.com/repos/italia/bootstrap-italia/releases?per_page=20")
 
-          STABLE=$(echo "$JSON" | jq -r '[.[] | select(.prerelease == false and .draft == false)][0].tag_name // empty' | sed -E 's/^v//')
+          STABLE=$(echo "$JSON" | jq -r '[.[] | select(.prerelease == false and .draft == false and ((.tag_name | test("(?i)-(alpha|beta|rc|pre|dev)")) | not))][0].tag_name // empty' | sed -E 's/^v//')
           if [ -z "$STABLE" ]; then
             echo "❌ ERRORE: impossibile determinare l'ultima release stabile da /releases"
             exit 1
@@ -192,13 +202,35 @@ jobs:
           mkdir -p static/vendor/bootstrap-italia
           unzip -o /tmp/bootstrap-italia.zip -d static/vendor/bootstrap-italia/
 
-          # Se l'archivio crea una sottocartella, spostiamo il contenuto
+          # Se l'archivio crea una sottocartella-WRAPPER (pattern tipico dei tarball
+          # npm "package/..."), spostiamo il contenuto. Sicurezza (24/08/2026, dopo
+          # incidente issue #899/#903): flatten SOLO se la cartella estratta contiene
+          # UN SOLO elemento di primo livello totale (file+dir) ed è una directory.
+          # La vecchia euristica prendeva "il primo risultato di `find | head -1`"
+          # anche quando il pacchetto aveva GIÀ la struttura corretta a più cartelle
+          # (css/, js/, svg/, fonts/, ...): `find` non garantisce ordine alfabetico,
+          # quindi poteva scegliere una sottocartella legittima come "svg/" e
+          # appiattirla nella root — è esattamente quello che ha rotto tutte le
+          # icone SVG del sito nell'update v2.18.1→v2.18.3 (sprites.svg spostato
+          # da svg/sprites.svg a sprites.svg, commit 5d5ef6d).
+          TOPLEVEL_COUNT=$(find static/vendor/bootstrap-italia -mindepth 1 -maxdepth 1 | wc -l)
           SUBDIR=$(find static/vendor/bootstrap-italia -mindepth 1 -maxdepth 1 -type d | head -1)
-          if [ -n "$SUBDIR" ] && [ "$SUBDIR" != "static/vendor/bootstrap-italia" ]; then
-            echo "📁 Rilevata sottocartella: $SUBDIR — sposto contenuto..."
+          if [ "$TOPLEVEL_COUNT" -eq 1 ] && [ -n "$SUBDIR" ] && [ "$SUBDIR" != "static/vendor/bootstrap-italia" ]; then
+            echo "📁 Rilevata sottocartella-wrapper unica: $SUBDIR — sposto contenuto..."
             mv "$SUBDIR"/* static/vendor/bootstrap-italia/ 2>/dev/null || true
             mv "$SUBDIR"/.* static/vendor/bootstrap-italia/ 2>/dev/null || true
             rmdir "$SUBDIR" 2>/dev/null || true
+          else
+            echo "📁 Struttura del pacchetto già corretta (elementi di primo livello: $TOPLEVEL_COUNT) — nessun flatten."
+          fi
+
+          # Guardia esplicita: lo sprite SVG deve restare in svg/sprites.svg (path
+          # referenziato da tutti i template del tema — navbar, slim-header,
+          # callout, emergenza-ora — e da site-chrome.js).
+          if [ ! -f static/vendor/bootstrap-italia/svg/sprites.svg ]; then
+            echo "❌ ERRORE: static/vendor/bootstrap-italia/svg/sprites.svg mancante dopo l'estrazione!"
+            find static/vendor/bootstrap-italia -iname "sprites.svg"
+            exit 1
           fi
 
           # Aggiorna il file di versione

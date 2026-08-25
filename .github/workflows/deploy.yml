@@ -102,6 +102,15 @@ jobs:
         # perché lo script non era in CI e nessuno l'aveva lanciato manualmente.
         run: python3 scripts/genera-qr-articoli.py
 
+      - name: "⚑ Aggiorna snapshot attivazioni Copernicus EMS"
+        # L'API Rapid Mapping risponde 200 ma NON espone Access-Control-Allow-Origin
+        # (verificato 24/08/2026): da browser la scheda EMS del cruscotto veniva
+        # bloccata dalla same-origin policy e falliva in silenzio. Il server non ha
+        # questo limite: scarichiamo qui e serviamo la copia in same-origin da
+        # static/open-data/ems-attivazioni.json. Se l'API è giù lo script lascia
+        # invariato lo snapshot ed esce 0 (mai un deploy rotto per una fonte terza).
+        run: python3 scripts/genera-ems-attivazioni.py
+
       - name: "📖 Genera versioni Braille (.brf) per gli articoli /comunicazioni/"
         # Specifiche: manuale/parte-24-output-braille-articoli.md
         # Output in static/braille/comunicazioni/<slug>.brf (ASCII puro, BRF/ICEB).
