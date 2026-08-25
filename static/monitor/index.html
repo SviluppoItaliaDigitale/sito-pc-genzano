@@ -60,6 +60,8 @@ body.blackout #lmap{filter:brightness(.55) saturate(.7)}
   color:var(--cyn);border:1px solid rgba(55,199,255,.5);border-radius:3px;padding:6px 12px;background:#06121a;margin:4px 6px 2px 0}
 .wbtn.on{color:#04070b;background:var(--cyn);font-weight:700}
 .wbtn.danger{color:#ffb3ae;border-color:rgba(255,59,48,.5);background:#170808}
+.wgrp{margin-bottom:7px}
+.wglbl{display:block;font-family:var(--mono);font-size:8.5px;letter-spacing:.16em;color:var(--dim);margin-bottom:2px}
 .leaflet-container{font-family:var(--mono)}
 .leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#0d1520;color:var(--tx);
   border:1px solid var(--line);border-radius:3px;font-family:var(--mono);font-size:11px}
@@ -69,6 +71,13 @@ body.blackout #lmap{filter:brightness(.55) saturate(.7)}
   color:var(--dim);border:1px dashed var(--line);padding:3px 8px;background:rgba(4,7,11,.85);z-index:1000;max-width:60%}
 #radarLbl{position:absolute;bottom:34px;left:10px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;
   color:var(--cyn);background:rgba(4,7,11,.85);padding:3px 8px;border:1px solid var(--line);z-index:1000;display:none}
+#prevCtl{position:absolute;top:44px;right:10px;z-index:1000;display:flex;flex-direction:column;gap:4px;
+  background:rgba(4,7,11,.88);border:1px solid var(--line);padding:6px 8px;max-width:200px}
+#prevCtl .pcLbl{font-family:var(--mono);font-size:8.5px;letter-spacing:.16em;color:var(--dim)}
+#prevCtl select{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--tx);
+  background:#081018;border:1px solid var(--line);border-radius:3px;padding:3px 4px;max-width:184px}
+#prevCtl select:focus-visible{outline:2px solid var(--cyn);outline-offset:1px}
+#prevLeg{max-width:184px;background:#fff;border:1px solid var(--line)}
 #dayTgl{position:absolute;top:8px;right:10px;display:flex;z-index:1000}
 #dayTgl button{font-family:var(--mono);font-size:10px;letter-spacing:.15em;padding:4px 12px;cursor:pointer;
   background:#081018;color:var(--dim);border:1px solid var(--line)}
@@ -167,9 +176,12 @@ body.blackout #lmap{filter:brightness(.55) saturate(.7)}
   display:flex;align-items:center;z-index:1100;overflow:hidden}
 #tick .lbl{flex:0 0 auto;font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--grn);
   padding:0 10px;border-right:1px solid var(--line);background:#081018;height:100%;display:flex;align-items:center}
-#tickTxt{white-space:nowrap;font-family:var(--mono);font-size:11px;color:var(--tx);padding-left:100%;
-  animation:scrollT 55s linear infinite}
-@keyframes scrollT{to{transform:translateX(-100%)}}
+/* Ticker continuo senza stacco: due copie identiche affiancate, il wrapper
+   trasla di -50% e riparte — il punto di loop è invisibile. Velocità costante:
+   la durata è proporzionale alla lunghezza del testo. */
+#tickWrap{display:flex;white-space:nowrap;width:max-content;font-family:var(--mono);font-size:11px;
+  color:var(--tx);animation:scrollT 60s linear infinite}
+@keyframes scrollT{to{transform:translateX(-50%)}}
 
 #sideTgl{display:none}
 @media(max-width:720px){
@@ -180,11 +192,13 @@ body.blackout #lmap{filter:brightness(.55) saturate(.7)}
     border:1px solid var(--line);color:var(--tx);font-family:var(--mono);font-size:11px;padding:6px 10px;cursor:pointer}
   #hdr .hideS{display:none}
   #dayTgl{top:auto;bottom:40px;right:10px}
+  #prevCtl{top:auto;bottom:78px;right:10px;max-width:170px}
+  #prevLeg{max-width:154px}
   #srcTag{display:none}
 }
 @media(prefers-reduced-motion:reduce){
   *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.15s!important}
-  #tickTxt{animation:none;padding-left:10px}
+  #tickWrap{animation:none;padding-left:10px}
 }
 button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
 </style>
@@ -217,8 +231,6 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
   <button data-l="qk" class="act"><span class="ic">●</span>SISMI</button>
   <button data-l="sat"><span class="ic">✦</span>SATELLITE</button>
   <button data-l="fire"><span class="ic">▵</span>FUOCHI</button>
-  <button data-l="wtemp"><span class="ic">◧</span>T° PREV</button>
-  <button data-l="wwind"><span class="ic">➤</span>VENTO PREV</button>
 </nav>
 
 <main id="map">
@@ -228,6 +240,29 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
   <span id="radarLbl">RADAR DPC: —</span>
   <div id="dayTgl" role="group" aria-label="Giorno bollettino">
     <button data-d="today" class="act">OGGI</button><button data-d="tomorrow">DOMANI</button>
+  </div>
+  <div id="prevCtl" role="group" aria-label="Livelli previsionali ICON-2I sulla mappa">
+    <span class="pcLbl">PREVISIONI ICON-2I</span>
+    <select id="prevLayer" aria-label="Campo previsionale da mostrare sulla mappa">
+      <option value="">SPENTO</option>
+      <option value="meteohub:t2m-t2m">TEMPERATURA 2 M</option>
+      <option value="meteohub:prec3-tp">PRECIPITAZIONE 3H</option>
+      <option value="meteohub:snow3-snow">NEVE 3H</option>
+      <option value="meteohub:wind-vmax_10m">RAFFICHE VENTO</option>
+      <option value="meteohub:cloud-tcc">NUVOLOSITÀ</option>
+      <option value="meteohub:humidity-r">UMIDITÀ</option>
+      <option value="meteohub:pressure-pmsl">PRESSIONE</option>
+      <option value="meteohub:zerot-hzerocl">ZERO TERMICO</option>
+    </select>
+    <select id="prevTime" aria-label="Orizzonte temporale della previsione">
+      <option value="">ADESSO</option>
+      <option value="6">+6 ORE</option>
+      <option value="12">+12 ORE</option>
+      <option value="24">+24 ORE</option>
+      <option value="36">+36 ORE</option>
+      <option value="48">+48 ORE</option>
+    </select>
+    <img id="prevLeg" alt="Legenda del campo previsionale selezionato" hidden>
   </div>
   <div id="legend">
     <span><i style="background:var(--grn)"></i>NESSUNA</span>
@@ -258,7 +293,7 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
 
 <footer id="tick">
   <span class="lbl">TEMPO REALE</span>
-  <div style="flex:1;overflow:hidden"><div id="tickTxt">CARICAMENTO FEED UFFICIALI…</div></div>
+  <div style="flex:1;overflow:hidden"><div id="tickWrap"><span id="tickTxt">CARICAMENTO FEED UFFICIALI…   ···   </span><span id="tickTxt2" aria-hidden="true"></span></div></div>
 </footer>
 
 <script src="../vendor/leaflet/leaflet.js"></script>
@@ -292,7 +327,7 @@ const EMS_COL={Wildfire:"#ff8c1a",Flood:"#37c7ff",Storm:"#b48cff",Earthquake:"#f
   "Volcanic activity":"#ff3b30",Landslide:"#c99e6b",Other:"#5d7a6e"};
 
 const S={view:"all",day:"today",black:false,
-  layers:{zone:true,radar:false,qk:true,sat:false,fire:false,wtemp:false,wwind:false},
+  layers:{zone:true,radar:false,qk:true,sat:false,fire:false},
   boll:null,bollVecchio:null,zones:{today:null,tomorrow:null},sito:null,
   quakes:[],wx:null,wxT:0,aria:null,mare:null,ems:[],emsSnap:null,
   obs:null,obsBusy:false,last:{},lastFull:0,errs:{}};
@@ -353,13 +388,30 @@ const fireLayer=L.tileLayer.wms("https://maps.effis.emergency.copernicus.eu/effi
   {layers:"viirs.hs,modis.hs",format:"image/png",transparent:true,version:"1.3.0",opacity:.95,
    attribution:"EFFIS — Copernicus EMS"});
 
-// PREVISIONI ICON-2I — WMS ItaliaMeteo/MeteoHub (CC BY 4.0), stessi layer del
-// cruscotto. Raster sotto le zone di allerta (pane 340) per non coprirle.
+// PREVISIONI ICON-2I — WMS ItaliaMeteo/MeteoHub (CC BY 4.0), stessi campi del
+// cruscotto: 8 layer × orizzonte fino a +48h, selezionati dal controllo
+// #prevCtl sulla mappa. Raster sotto le zone di allerta (pane 340).
 map.createPane("wxPane"); map.getPane("wxPane").style.zIndex=340;
-const mkWms=lay=>L.tileLayer.wms("https://maps.mistralportal.it/wms",
-  {pane:"wxPane",layers:lay,format:"image/png",transparent:true,version:"1.1.1",
+const WMS_IM="https://maps.mistralportal.it/wms";
+const prevWms=L.tileLayer.wms(WMS_IM,
+  {pane:"wxPane",layers:"meteohub:t2m-t2m",format:"image/png",transparent:true,version:"1.1.1",
    opacity:.55,maxZoom:11,attribution:"Agenzia ItaliaMeteo — modello ICON-2I (CC BY 4.0)"});
-const wtempLayer=mkWms("meteohub:t2m-t2m"), wwindLayer=mkWms("meteohub:wind-vmax_10m");
+function applyPrev(){
+  const lay=$("#prevLayer").value, off=$("#prevTime").value, leg=$("#prevLeg");
+  if(!lay){
+    if(map.hasLayer(prevWms))map.removeLayer(prevWms);
+    leg.hidden=true; return;
+  }
+  const p={layers:lay};
+  if(off){const d=new Date();d.setUTCMinutes(0,0,0);d.setUTCHours(d.getUTCHours()+parseInt(off,10));p.time=d.toISOString();}
+  else p.time=null;
+  prevWms.setParams(p);
+  if(!map.hasLayer(prevWms))map.addLayer(prevWms);
+  leg.src=WMS_IM+"?service=WMS&request=GetLegendGraphic&format=image/png&version=1.1.1&layer="+encodeURIComponent(lay);
+  leg.hidden=false;
+}
+$("#prevLayer").addEventListener("change",applyPrev);
+$("#prevTime").addEventListener("change",applyPrev);
 
 let zoneLayer=null, qkLayer=L.layerGroup([]);
 qkLayer.addTo(map);
@@ -368,7 +420,6 @@ function applyLayers(){
   const on=(lay,flag)=>{ if(flag&&!map.hasLayer(lay))map.addLayer(lay);
                          if(!flag&&map.hasLayer(lay))map.removeLayer(lay); };
   on(radarLayer,S.layers.radar); on(satLayer,S.layers.sat); on(fireLayer,S.layers.fire);
-  on(wtempLayer,S.layers.wtemp); on(wwindLayer,S.layers.wwind);
   on(qkLayer,S.layers.qk);
   if(zoneLayer)on(zoneLayer,S.layers.zone);
   $("#radarLbl").style.display=S.layers.radar?"block":"none";
@@ -407,9 +458,29 @@ function buildZoneLayer(){
 }
 
 /* ---------------- allerta: pipeline del sito + DPC ---------------- */
+// Avviso acustico da sala: doppio bip quando cambia lo stato di allerta
+// mentre il monitor è aperto (livello, emergenza o avviso meteo). WebAudio
+// senza asset; i browser lo consentono dopo la prima interazione dell'operatore.
+function beep(){
+  try{
+    const a=new (window.AudioContext||window.webkitAudioContext)();
+    [0,.45].forEach(t=>{
+      const o=a.createOscillator(),g=a.createGain();
+      o.connect(g);g.connect(a.destination);
+      o.frequency.value=880;
+      g.gain.setValueAtTime(.0001,a.currentTime+t);
+      g.gain.exponentialRampToValueAtTime(.35,a.currentTime+t+.02);
+      g.gain.exponentialRampToValueAtTime(.0001,a.currentTime+t+.3);
+      o.start(a.currentTime+t);o.stop(a.currentTime+t+.32);
+    });
+  }catch(e){}
+}
 async function loadSito(){
   try{ // same-origin: la pagina vive sul sito, il JSON è della pipeline check-allerta
     S.sito=await jget(BASE+"allerta-stato/index.json",8000);
+    const key=[S.sito.livello,S.sito.emergenza_attiva,(S.sito.avviso_meteo||{}).tipo,(S.sito.avviso_meteo||{}).livello].join("|");
+    if(S.sitoKey&&key!==S.sitoKey)beep(); // cambio di stato mentre il monitor è acceso
+    S.sitoKey=key;
     delete S.errs.sito;
   }catch(e){S.sito=null;}
   updZona(); if(S.view==="all")render(); tickUpd();
@@ -830,11 +901,25 @@ function viewMap(){
    Iframe di terze parti (embed.windy.com, già in whitelist frame-src della CSP):
    caricato SOLO su richiesta esplicita (click-to-load, stesso pattern di
    /allerte-meteo/ — privacy-first + WCAG 3.2.5 Change on Request). */
-S.windy={on:false,ov:"radar"};
-const WINDY_OV=[["radar","RADAR"],["wind","VENTO"],["rain","PIOGGIA"],["temp","TEMPERATURA"]];
-const windyUrl=ov=>"https://embed.windy.com/embed2.html?lat=41.6919&lon=12.6928&detailLat=41.6919&detailLon=12.6928"+
-  "&width=100%25&height=100%25&zoom=8&level=surface&overlay="+ov+"&product=ecmwf&menu=&message=&marker=true"+
-  "&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1";
+S.windy={on:false,ov:"radar",lvl:"surface",prod:"ecmwf",zoom:8,detail:false};
+// Overlay Windy raggruppati per uso operativo (id ufficiali degli URL windy.com)
+const WINDY_GRP=[
+  ["OSSERVATO",[["radar","RADAR"],["satellite","SATELLITE"]]],
+  ["PIOGGIA E TEMPORALI",[["rain","PIOGGIA"],["rainAccu","ACCUMULO"],["ptype","TIPO PREC."],["thunder","FULMINI"],["cape","CAPE"]]],
+  ["VENTO",[["wind","VENTO"],["gust","RAFFICHE"]]],
+  ["ATMOSFERA",[["temp","TEMPERATURA"],["rh","UMIDITÀ"],["clouds","NUVOLE"],["fog","NEBBIA"],["pressure","PRESSIONE"]]],
+  ["MARE",[["waves","ONDE"],["sst","TEMP. MARE"]]],
+];
+const WINDY_LVL_OK=new Set(["wind","temp","rh"]); // overlay che supportano la quota
+const WINDY_LVLS=[["surface","SUPERFICIE"],["850h","850 hPa"],["700h","700 hPa"],["500h","500 hPa"]];
+const WINDY_PRODS=[["ecmwf","ECMWF"],["gfs","GFS"],["iconEu","ICON-EU"]];
+const WINDY_ZOOMS=[["11","GENZANO"],["9","CASTELLI"],["8","LAZIO"],["6","ITALIA"]];
+const windyUrl=()=>{const w=S.windy;
+  return "https://embed.windy.com/embed2.html?lat=41.6919&lon=12.6928&detailLat=41.6919&detailLon=12.6928"+
+  "&width=100%25&height=100%25&zoom="+w.zoom+"&level="+(WINDY_LVL_OK.has(w.ov)?w.lvl:"surface")+
+  "&overlay="+w.ov+"&product="+w.prod+"&menu=&message=&marker=true&calendar=now&pressure=&type=map"+
+  "&location=coordinates&detail="+(w.detail?"true":"")+"&metricWind=default&metricTemp=default&radarRange=-1"};
+const windyReload=()=>{$("#windyFrame").src=windyUrl()};
 function windySync(){
   $("#windyWrap").style.display=(S.view==="wnd"&&S.windy.on)?"block":"none";
 }
@@ -844,34 +929,44 @@ function viewWnd(){
   if(!S.windy.on){
     const el=document.createElement("div");el.className="wx";
     el.innerHTML=`<h3>MAPPA METEO WINDY<span>CLICK-TO-LOAD</span></h3>
-      <p>Mappa meteo interattiva centrata su Genzano di Roma (previsioni ECMWF: radar,
-      vento, pioggia, temperatura). Per visualizzarla devi caricare i contenuti forniti da
-      <b>Windy.com</b>: il browser riceverà risorse dal loro server e potrebbe essere
-      impostato qualche cookie tecnico di terze parti.</p>
-      <button class="wbtn" id="windyLoad">⚡ CARICA LA MAPPA WINDY</button>
+      <p>Console meteo interattiva centrata su Genzano di Roma: radar, satellite, fulmini,
+      raffiche, CAPE, onde e altri livelli, su 3 modelli previsionali. Per visualizzarla devi
+      caricare i contenuti forniti da <b>Windy.com</b>: il browser riceverà risorse dal loro
+      server e potrebbe essere impostato qualche cookie tecnico di terze parti.</p>
+      <button class="wbtn" id="windyLoad">⚡ CARICA LA CONSOLE WINDY</button>
       <p style="margin-top:6px"><a href="https://www.windy.com/?41.691,12.692,9" target="_blank" rel="noopener">In alternativa apri windy.com in una nuova scheda</a>.</p>`;
     feed.appendChild(el);
     el.querySelector("#windyLoad").addEventListener("click",()=>{
-      S.windy.on=true;
-      $("#windyFrame").src=windyUrl(S.windy.ov);
-      windySync(); render();
+      S.windy.on=true; windyReload(); windySync(); render();
     });
   }else{
+    const w=S.windy;
+    const btns=(items,attr,cur)=>items.map(([k,l])=>
+      `<button class="wbtn${String(cur)===String(k)?" on":""}" data-${attr}="${k}" aria-pressed="${String(cur)===String(k)}">${l}</button>`).join("");
     const el=document.createElement("div");el.className="wx";
-    el.innerHTML=`<h3>LIVELLO WINDY<span>ECMWF</span></h3><div id="windyOv">`+
-      WINDY_OV.map(([k,l])=>`<button class="wbtn${S.windy.ov===k?" on":""}" data-ov="${k}" aria-pressed="${S.windy.ov===k}">${l}</button>`).join("")+
-      `</div><p style="margin-top:8px"><button class="wbtn danger" id="windyOff">✕ RIMUOVI IL WIDGET</button></p>
-      <p style="margin-top:6px;font-size:10.5px;color:var(--dim)">La mappa occupa l'area principale.
-      Cambia vista dal menu in alto per tornare alla mappa del monitor: il widget resta pronto qui.</p>`;
+    el.innerHTML=`<h3>CONSOLE WINDY<span>${w.prod.toUpperCase()}</span></h3><div id="windyCtl">`+
+      WINDY_GRP.map(([g,items])=>`<div class="wgrp"><span class="wglbl">${g}</span>${btns(items,"ov",w.ov)}</div>`).join("")+
+      (WINDY_LVL_OK.has(w.ov)?`<div class="wgrp"><span class="wglbl">QUOTA</span>${btns(WINDY_LVLS,"lvl",w.lvl)}</div>`:"")+
+      `<div class="wgrp"><span class="wglbl">MODELLO</span>${btns(WINDY_PRODS,"prod",w.prod)}</div>
+       <div class="wgrp"><span class="wglbl">INQUADRATURA</span>${btns(WINDY_ZOOMS,"zoom",w.zoom)}</div>
+       <div class="wgrp"><span class="wglbl">STRUMENTI</span>
+         <button class="wbtn${w.detail?" on":""}" data-det="1" aria-pressed="${w.detail}">METEOGRAMMA GENZANO</button>
+         <button class="wbtn danger" id="windyOff">✕ RIMUOVI</button></div>
+      </div>
+      <p style="margin-top:6px;font-size:10.5px;color:var(--dim)">La console occupa l'area principale.
+      Cambia vista dal menu in alto per tornare alla mappa del monitor: il widget resta pronto qui.
+      Dentro la mappa: rotella per lo zoom, barra in basso per scorrere le ore di previsione.</p>`;
     feed.appendChild(el);
-    el.querySelector("#windyOv").addEventListener("click",e=>{
-      const b=e.target.closest("[data-ov]");if(!b)return;
-      S.windy.ov=b.dataset.ov;
-      $("#windyFrame").src=windyUrl(S.windy.ov);
-      render();
-    });
-    el.querySelector("#windyOff").addEventListener("click",()=>{
-      S.windy.on=false;$("#windyFrame").src="";windySync();render();
+    el.querySelector("#windyCtl").addEventListener("click",e=>{
+      const b=e.target.closest("button");if(!b)return;
+      if(b.id==="windyOff"){S.windy.on=false;$("#windyFrame").src="";windySync();render();return;}
+      if(b.dataset.ov)w.ov=b.dataset.ov;
+      else if(b.dataset.lvl)w.lvl=b.dataset.lvl;
+      else if(b.dataset.prod)w.prod=b.dataset.prod;
+      else if(b.dataset.zoom)w.zoom=b.dataset.zoom;
+      else if(b.dataset.det)w.detail=!w.detail;
+      else return;
+      windyReload(); render();
     });
   }
   feed.appendChild(noteEl('Widget esterno <a href="https://www.windy.com/" target="_blank" rel="noopener">Windy.com</a>, caricato solo su tua richiesta.'));
@@ -963,7 +1058,12 @@ function tickUpd(){
   if(S.ems.length)parts.push("ATTIVAZIONI COPERNICUS EMS APERTE: "+S.ems.length);
   for(const k in S.errs)if(S.errs[k]!=="EMS_LINK")parts.push("⚠ "+S.errs[k].toUpperCase());
   parts.push("STRUMENTO SPERIMENTALE, DATI INDICATIVI — IN EMERGENZA CHIAMA IL 112");
-  $("#tickTxt").textContent=parts.join("   ···   ")+"   ···   ";
+  const txt=parts.join("   ···   ")+"   ···   ";
+  if(txt===S.tickCache)return; // testo invariato: non riavviare l'animazione
+  S.tickCache=txt;
+  $("#tickTxt").textContent=txt; $("#tickTxt2").textContent=txt;
+  // velocità costante ~14 caratteri/secondo qualunque sia la lunghezza
+  $("#tickWrap").style.animationDuration=Math.max(30,Math.round(txt.length/14))+"s";
 }
 
 /* ---------------- interazioni ---------------- */
@@ -1009,15 +1109,8 @@ $("#nav").addEventListener("click",e=>{
   const b=e.target.closest("button");if(!b)return;
   if(b.dataset.v){setView(b.dataset.v);
     if(innerWidth<=720)$("#side").classList.add("open");}
-  else if(b.dataset.l){
-    const l=b.dataset.l, turnOn=!S.layers[l];
-    // T° PREV e VENTO PREV sono raster quasi opachi: mutuamente esclusivi
-    if(turnOn&&(l==="wtemp"||l==="wwind")){
-      const other=l==="wtemp"?"wwind":"wtemp";
-      if(S.layers[other]){S.layers[other]=false;
-        const ob=document.querySelector(`#nav [data-l="${other}"]`);if(ob)ob.classList.remove("act");}
-    }
-    S.layers[l]=turnOn; b.classList.toggle("act",turnOn); applyLayers();}
+  else if(b.dataset.l){S.layers[b.dataset.l]=!S.layers[b.dataset.l];
+    b.classList.toggle("act",S.layers[b.dataset.l]); applyLayers();}
 });
 $("#dayTgl").addEventListener("click",e=>{
   const b=e.target.closest("button");if(!b)return;
@@ -1057,6 +1150,15 @@ fsBtn.addEventListener("click",()=>{
 // Al ritorno sulla scheda (monitor lasciato aperto): refresh se i dati sono vecchi
 document.addEventListener("visibilitychange",()=>{
   if(!document.hidden&&Date.now()-(S.lastFull||0)>4*60e3)refreshAll(false);
+});
+
+// Scorciatoie da tastiera per la sala: 1-7 cambiano vista, R accende/spegne il radar
+document.addEventListener("keydown",e=>{
+  if(e.altKey||e.ctrlKey||e.metaKey)return;
+  if(e.target&&e.target.matches&&e.target.matches("input,select,textarea"))return;
+  const order=["all","sis","met","map","wnd","amb","ems"];
+  if(e.key>="1"&&e.key<="7")setView(order[+e.key-1]);
+  else if(e.key==="r"||e.key==="R"){const b=document.querySelector('#nav [data-l="radar"]');if(b)b.click();}
 });
 
 /* ---------------- avvio ---------------- */
