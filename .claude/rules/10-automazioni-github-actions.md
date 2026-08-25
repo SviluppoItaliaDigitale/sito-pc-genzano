@@ -132,4 +132,6 @@ I workflow di **sfondo committano soltanto** (niente più `gh workflow run deplo
 
 `check-fonti-cruscotto.py` continua a pingare l'API a monte: se cade, lo snapshot smette di aggiornarsi (i dati restano, ma invecchiano).
 
+**Stesso pattern per le allerte globali GDACS (25/08/2026):** `scripts/genera-gdacs-eventi.py` gira come step pre-build di `deploy.yml` e salva `static/open-data/gdacs-eventi.json` (eventi correnti GDACS con livello green/orange/red), letto same-origin dalla Sala situazioni `/monitor/` (pannello EMERGENZE — UE e Mondo). Fail-safe identico: API giù = snapshot invariato, exit 0. Fonte a monte pingata da `check-fonti-cruscotto.py` (check "Allerte globali — GDACS").
+
 **Regola generale:** prima di aggiungere al cruscotto una fonte dati letta dal browser, **verifica che esponga il CORS** (`curl -sI -H "Origin: https://www.protezionecivilegenzano.it" <url> | grep -i access-control`). Se non lo espone, la strada è lo snapshot self-hosted generato in CI, non la fetch diretta.

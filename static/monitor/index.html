@@ -74,6 +74,16 @@ body.blackout #lmap{filter:brightness(.55) saturate(.7)}
 #blitzLbl{position:absolute;bottom:60px;left:10px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;
   color:var(--gia);background:rgba(4,7,11,.85);padding:3px 8px;border:1px solid var(--line);z-index:1000;display:none}
 #cycBtn.on{color:var(--cyn);border-color:rgba(55,199,255,.6)}
+#mesBtn{position:absolute;top:84px;left:10px;z-index:1000;cursor:pointer;font-family:var(--mono);
+  font-size:10px;letter-spacing:.12em;color:var(--dim);background:#081018;border:1px solid var(--line);padding:5px 9px}
+#mesBtn.act{color:#04070b;background:var(--cyn);border-color:var(--cyn);font-weight:700}
+#coordBox{position:absolute;bottom:86px;left:10px;font-family:var(--mono);font-size:10px;letter-spacing:.08em;
+  color:var(--dim);background:rgba(4,7,11,.85);padding:3px 8px;border:1px solid var(--line);z-index:1000}
+#coordBox.ok{color:#04070b;background:var(--grn)}
+.mesTip{font-family:var(--mono)!important;background:#0d1520!important;color:#eaf6ef!important;
+  border:1px solid var(--cyn)!important;border-radius:3px!important;font-size:11px!important}
+.mesTip::before{display:none!important}
+@media(max-width:720px){#coordBox,#mesBtn{display:none}}
 #prevCtl{position:absolute;top:44px;right:10px;z-index:1000;display:flex;flex-direction:column;gap:4px;
   background:rgba(4,7,11,.88);border:1px solid var(--line);padding:6px 8px;max-width:200px}
 #prevCtl .pcLbl{font-family:var(--mono);font-size:8.5px;letter-spacing:.16em;color:var(--dim)}
@@ -228,7 +238,7 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
   <button data-v="map"><span class="ic">▤</span>CARTE</button>
   <button data-v="wnd"><span class="ic">☈</span>WINDY</button>
   <button data-v="amb"><span class="ic">✿</span>ARIA·MARE</button>
-  <button data-v="ems"><span class="ic">⚑</span>EMERGENZE UE</button>
+  <button data-v="ems"><span class="ic">⚑</span>EMERGENZE</button>
   <button data-v="log"><span class="ic">✎</span>REGISTRO</button>
   <span class="sep"></span>
   <button data-l="zone" class="act"><span class="ic">◱</span>ZONE</button>
@@ -246,6 +256,8 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
   <span id="srcTag">DPC · INGV · ITALIAMETEO · COPERNICUS · OPEN-METEO · BLITZORTUNG — STRUMENTO SPERIMENTALE, DATI INDICATIVI</span>
   <span id="radarLbl">RADAR DPC: —</span>
   <span id="blitzLbl">FULMINI: —</span>
+  <button id="mesBtn" aria-pressed="false" title="Misura distanze e raggi sulla mappa: primo clic fissa il centro, secondo clic congela, terzo cancella. ESC esce.">✚ MISURA</button>
+  <span id="coordBox" title="Clic sulla mappa per copiare le coordinate">LAT — · LON —</span>
   <div id="dayTgl" role="group" aria-label="Giorno bollettino">
     <button data-d="today" class="act">OGGI</button><button data-d="tomorrow">DOMANI</button>
   </div>
@@ -339,7 +351,7 @@ const S={view:"all",day:"today",black:false,
   boll:null,bollVecchio:null,zones:{today:null,tomorrow:null},sito:null,
   quakes:[],wx:null,wxT:0,aria:null,mare:null,ems:[],emsSnap:null,
   obs:null,obsBusy:false,last:{},lastFull:0,errs:{},
-  strikes:[],cycle:false,qkSeen:null,logArr:[]};
+  strikes:[],cycle:false,qkSeen:null,logArr:[],gdacs:[],gdacsSnap:null};
 try{S.logArr=JSON.parse(localStorage.getItem("pcgz-monitor-log")||"[]")||[]}catch(e){S.logArr=[]}
 const $=s=>document.querySelector(s);
 const pad=n=>String(n).padStart(2,"0");
@@ -478,8 +490,57 @@ function applyPrev(){
   leg.src=WMS_IM+"?service=WMS&request=GetLegendGraphic&format=image/png&version=1.1.1&layer="+encodeURIComponent(lay);
   leg.hidden=false;
 }
-$("#prevLayer").addEventListener("change",applyPrev);
-$("#prevTime").addEventListener("change",applyPrev);
+$("#prevLayer").addEventListener("change",()=>{applyPrev();saveCfg();});
+$("#prevTime").addEventListener("change",()=>{applyPrev();saveCfg();});
+
+/* ---------------- MISURA — distanze e raggi d'azione sulla mappa ----------------
+   Per pianificare: raggio di evacuazione, distanza di una squadra da un punto.
+   1° clic fissa il centro, il movimento disegna linea + cerchio con distanza
+   in km, 2° clic congela, 3° clic (o ESC / ripremere MISURA) cancella. */
+const mesLayer=L.layerGroup().addTo(map);
+const mes={on:false,start:null,line:null,circle:null,tip:null,frozen:false};
+function mesClear(){mesLayer.clearLayers();
+  if(mes.tip){map.removeLayer(mes.tip);mes.tip=null;}
+  mes.start=null;mes.line=null;mes.circle=null;mes.frozen=false;}
+function mesToggle(force){
+  mes.on=force!==undefined?force:!mes.on;
+  $("#mesBtn").classList.toggle("act",mes.on);
+  $("#mesBtn").setAttribute("aria-pressed",mes.on);
+  $("#lmap").style.cursor=mes.on?"crosshair":"";
+  if(!mes.on)mesClear();
+}
+$("#mesBtn").addEventListener("click",()=>mesToggle());
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&mes.on)mesToggle(false);});
+map.on("click",e=>{
+  if(!mes.on){ // fuori misura: clic = copia coordinate (per radio/rubrica)
+    const c=e.latlng.lat.toFixed(4)+", "+e.latlng.lng.toFixed(4);
+    if(navigator.clipboard)navigator.clipboard.writeText(c).then(()=>{
+      const b=$("#coordBox");b.classList.add("ok");b.textContent="COPIATE: "+c;
+      setTimeout(()=>b.classList.remove("ok"),1600);
+    }).catch(()=>{});
+    return;
+  }
+  if(mes.frozen){mesClear();mes.frozen=false;}
+  if(!mes.start){
+    mes.start=e.latlng;
+    mes.circle=L.circle(mes.start,{radius:0,color:"#37c7ff",weight:1.2,fillColor:"#37c7ff",fillOpacity:.06}).addTo(mesLayer);
+    mes.line=L.polyline([mes.start,mes.start],{color:"#37c7ff",weight:2,dashArray:"5 4"}).addTo(mesLayer);
+  }else{
+    mes.frozen=true;mes.start=null; // congela il disegno; il prossimo clic riparte
+  }
+});
+map.on("mousemove",e=>{
+  const b=$("#coordBox");
+  if(!b.classList.contains("ok"))b.textContent="LAT "+e.latlng.lat.toFixed(4)+" · LON "+e.latlng.lng.toFixed(4);
+  if(!mes.on||!mes.start)return;
+  const d=map.distance(mes.start,e.latlng);
+  mes.line.setLatLngs([mes.start,e.latlng]);
+  mes.circle.setRadius(d);
+  const txt=(d>=1000?(d/1000).toFixed(2)+" km":Math.round(d)+" m")+" (raggio)";
+  if(!mes.tip)mes.tip=L.tooltip({permanent:true,direction:"top",className:"mesTip",offset:[0,-8]})
+    .setLatLng(e.latlng).setContent(txt).addTo(map);
+  else mes.tip.setLatLng(e.latlng).setContent(txt);
+});
 
 let zoneLayer=null, qkLayer=L.layerGroup([]);
 qkLayer.addTo(map);
@@ -558,7 +619,7 @@ async function loadSito(){
         (S.sito.emergenza_attiva?" · EMERGENZA ATTIVA":"")+
         (av.tipo?" · avviso meteo "+av.tipo+" ("+(av.livello||"n/d")+")":""),true);
     }
-    S.sitoKey=key;
+    S.sitoKey=key; S.last.sito=Date.now();
     delete S.errs.sito;
   }catch(e){S.sito=null;}
   updZona(); if(S.view==="all")render(); tickUpd();
@@ -590,6 +651,7 @@ async function loadDPC(){
     // "ultimo dato valido": stesso principio delle schede del cruscotto.
     // Serve soprattutto quando api.github.com esaurisce il rate limit (60/h per IP).
     if(window.pcCache)pcCache.salva("monitor-dpc",{boll:S.boll,today:S.zones.today,tomorrow:S.zones.tomorrow});
+    S.last.dpcOk=Date.now();
     buildZoneLayer(); delete S.errs.dpc;
   }catch(e){
     const c=window.pcCache&&pcCache.leggi("monitor-dpc",36);
@@ -639,11 +701,15 @@ async function loadINGV(){
         local:havKm(GENZANO,{lat,lon})<=120});
     }
     S.quakes.sort((a,b)=>b.time.localeCompare(a.time));
-    // registro automatico: nuovi eventi locali M>=2 (mai al primo caricamento)
+    // registro automatico: nuovi eventi locali M>=2 (mai al primo caricamento);
+    // da M>=3 anche il segnale acustico di sala
     if(S.qkSeen)for(const q of S.quakes)
-      if(!S.qkSeen.has(q.id)&&q.local&&q.mag>=2)
+      if(!S.qkSeen.has(q.id)&&q.local&&q.mag>=2){
         logAdd("Evento sismico INGV M"+q.mag.toFixed(1)+" "+(q.place||"")+" ("+q.km+" km da Genzano)",true);
+        if(q.mag>=3)beep();
+      }
     S.qkSeen=new Set(S.quakes.map(q=>q.id));
+    S.last.ingv=Date.now();
     $("#qkN").textContent=S.quakes.filter(q=>Date.parse(q.time)>Date.now()-7*864e5).length;
     qkLayer.clearLayers();
     for(const q of S.quakes){
@@ -669,7 +735,7 @@ async function loadWX(){
       `&hourly=precipitation,precipitation_probability,wind_gusts_10m,temperature_2m`+
       `&daily=precipitation_sum,precipitation_probability_max,temperature_2m_max,temperature_2m_min,wind_gusts_10m_max`+
       `&forecast_days=4&timezone=Europe%2FRome`);
-    S.wxT=Date.now();
+    S.wxT=Date.now(); S.last.wx=S.wxT;
     const h=S.wx.hourly, i0=Math.max(0,h.time.findIndex(t=>Date.parse(t)>=Date.now()-36e5));
     const r24=h.precipitation.slice(i0,i0+24).reduce((a,b)=>a+b,0);
     $("#rainN").textContent=r24.toFixed(1)+" mm";
@@ -740,6 +806,7 @@ async function loadObs(){
 async function loadAmb(){ // stessi endpoint e coordinate del cruscotto del sito
   try{
     S.aria=(await jget("https://air-quality-api.open-meteo.com/v1/air-quality?latitude=41.7085&longitude=12.6916&timezone=Europe%2FRome&current=european_aqi,pm10,pm2_5,ozone,nitrogen_dioxide,grass_pollen,olive_pollen,ragweed_pollen,birch_pollen")).current;
+    S.last.amb=Date.now();
     delete S.errs.aria;
   }catch(e){S.errs.aria="Qualità dell'aria non raggiungibile.";}
   try{
@@ -773,6 +840,26 @@ async function loadEMS(){
       S.emsSnap=null; ok=true; delete S.errs.ems;
     }catch(e){S.errs.ems="EMS_LINK";}
   }
+  if(ok)S.last.ems=Date.now();
+  if(S.view==="ems")render(); tickUpd();
+}
+
+/* ---------------- GDACS — allerte disastri a scala mondiale ----------------
+   Snapshot self-hosted (open-data/gdacs-eventi.json, rigenerato a ogni deploy
+   da scripts/genera-gdacs-eventi.py): l'API GDACS non è leggibile dal browser. */
+const GDACS_TIPO={EQ:"Terremoto",TC:"Ciclone tropicale",FL:"Alluvione",WF:"Incendio boschivo",
+  VO:"Eruzione vulcanica",DR:"Siccità",TS:"Maremoto"};
+const GDACS_COL={green:"#35e08c",orange:"#ff8c1a",red:"#ff3b30"};
+async function loadGdacs(){
+  try{
+    const d=await jget(BASE+"open-data/gdacs-eventi.json",10000);
+    const evs=(d.events||[]).slice();
+    const rank={red:0,orange:1,green:2};
+    evs.sort((a,b)=>(rank[String(a.alertlevel).toLowerCase()]??3)-(rank[String(b.alertlevel).toLowerCase()]??3)
+      ||String(b.datemodified||b.fromdate||"").localeCompare(String(a.datemodified||a.fromdate||"")));
+    S.gdacs=evs; S.gdacsSnap=d._snapshot&&d._snapshot.generato||null;
+    S.last.gdacs=Date.now(); delete S.errs.gdacs;
+  }catch(e){S.errs.gdacs="Allerte GDACS non disponibili.";}
   if(S.view==="ems")render(); tickUpd();
 }
 
@@ -831,6 +918,23 @@ function extraCards(){
   }
   return out;
 }
+// Quadro di freschezza dei dati (pratica standard delle sale operative:
+// sapere QUANDO è arrivato l'ultimo dato di ogni fonte, a colpo d'occhio)
+function fontiCard(){
+  const righe=[["ALLERTA SITO",S.last.sito],["BOLLETTINO DPC",S.last.dpcOk],["SISMI INGV",S.last.ingv],
+    ["METEO",S.last.wx],["ARIA/MARE",S.last.amb],["EMS UE",S.last.ems],["GDACS",S.last.gdacs],
+    ["STAZIONI",S.obs&&S.obs.t]];
+  const el=document.createElement("div");el.className="wx";
+  el.innerHTML=`<h3>STATO FONTI<span>ULTIMO DATO RICEVUTO</span></h3><div class="kgrid">`+
+    righe.map(([n,t])=>{
+      let v="—",c="#5d7a6e";
+      if(t){const m=Math.round((Date.now()-t)/6e4);
+        v=m<1?"ADESSO":m+" MIN FA";
+        c=m<12?"#35e08c":m<70?"#ffd60a":"#ff8c1a";}
+      return `<div class="kpi" style="--kc:${c}"><small>${n}</small><b style="font-size:12px">${v}</b></div>`;
+    }).join("")+`</div></div>`;
+  return el;
+}
 function viewAll(){
   title.textContent="ALLERTA — LAZIO";
   feed.innerHTML="";
@@ -852,6 +956,7 @@ function viewAll(){
       ${row("OGGI",z.p)}${row("DOMANI",zd&&zd.p)}`;
     feed.appendChild(el);
   }
+  feed.appendChild(fontiCard());
   feed.appendChild(noteEl());
 }
 function viewSis(){
@@ -1055,7 +1160,7 @@ function viewWnd(){
       else if(b.dataset.zoom)w.zoom=b.dataset.zoom;
       else if(b.dataset.det)w.detail=!w.detail;
       else return;
-      windyReload(); render();
+      windyReload(); render(); saveCfg();
     });
   }
   feed.appendChild(noteEl('Widget esterno <a href="https://www.windy.com/" target="_blank" rel="noopener">Windy.com</a>, caricato solo su tua richiesta.'));
@@ -1160,7 +1265,7 @@ function viewAmb(){
   feed.appendChild(noteEl("Dati aria/pollini: modello CAMS Copernicus via Open-Meteo — indicativi."));
 }
 function viewEms(){
-  title.textContent="EMERGENZE UE — COPERNICUS EMS";
+  title.textContent="EMERGENZE — UE E MONDO";
   feed.innerHTML="";
   if(S.errs.ems==="EMS_LINK"){
     const el=document.createElement("div");el.className="wx";
@@ -1171,7 +1276,7 @@ function viewEms(){
       Copernicus EMS</a> e nel <a href="${BASE}cruscotto/">Cruscotto del territorio</a>.</p>`;
     feed.appendChild(el);
   } else if(S.errs.ems)feed.appendChild(errCard(S.errs.ems));
-  if(!S.ems.length&&!S.errs.ems){feed.innerHTML='<div class="skel"></div><div class="skel"></div>';return}
+  if(!S.ems.length&&!S.errs.ems&&!(S.gdacs&&S.gdacs.length)){feed.innerHTML='<div class="skel"></div><div class="skel"></div>';return}
   for(const a of S.ems){
     const col=EMS_COL[a.category]||EMS_COL.Other;
     const el=document.createElement("div");el.className="ems";el.style.setProperty("--ec",col);
@@ -1181,8 +1286,22 @@ function viewEms(){
       <div class="kv"><span>Aree d'interesse · prodotti:</span><span>${a.n_aois??"—"} · ${a.n_products??"—"}</span></div>`;
     feed.appendChild(el);
   }
-  const snapNote=S.emsSnap?`Snapshot self-hosted aggiornato all'ultimo deploy del sito (${fmtT(S.emsSnap.toISOString())}).`:"";
-  feed.appendChild(noteEl('Attivazioni aperte del servizio <a href="https://rapidmapping.emergency.copernicus.eu/" target="_blank" rel="noopener">Rapid Mapping</a>. '+snapNote));
+  // ---- MONDO: allerte GDACS (dallo snapshot self-hosted) ----
+  if(S.errs.gdacs)feed.appendChild(errCard(S.errs.gdacs));
+  if(S.gdacs&&S.gdacs.length){
+    feed.insertAdjacentHTML("beforeend",`<div class="wx" style="margin-top:4px"><h3>MONDO — ALLERTE GDACS<span>ONU / COMMISSIONE EUROPEA</span></h3></div>`);
+    for(const g of S.gdacs.slice(0,15)){
+      const lv=String(g.alertlevel||"").toLowerCase(), col=GDACS_COL[lv]||"#5d7a6e";
+      const el=document.createElement("div");el.className="ems";el.style.setProperty("--ec",col);
+      el.innerHTML=`<span class="cat" style="--ec:${col}">${esc((GDACS_TIPO[g.eventtype]||g.eventtype||"").toUpperCase())} · ALLERTA ${esc(lv.toUpperCase())}</span>
+        <b>${esc(g.eventname||g.name||"—")}</b>
+        <div class="kv"><span>${esc(g.country||"—")}</span><span>${g.fromdate?fmtT(g.fromdate):""}</span></div>
+        ${g.severitytext?`<div class="kv"><span>Severità:</span><span>${esc(g.severitytext)}</span></div>`:""}`;
+      feed.appendChild(el);
+    }
+  }
+  const snapNote=S.emsSnap?`Snapshot EMS aggiornato all'ultimo deploy (${fmtT(S.emsSnap.toISOString())}).`:"";
+  feed.appendChild(noteEl('Attivazioni <a href="https://rapidmapping.emergency.copernicus.eu/" target="_blank" rel="noopener">Copernicus EMS Rapid Mapping</a> e allerte globali <a href="https://www.gdacs.org/" target="_blank" rel="noopener">GDACS</a> (dati pubblici, copie self-hosted rigenerate a ogni deploy). '+snapNote));
 }
 function render(){({all:viewAll,sis:viewSis,met:viewMet,map:viewMap,wnd:viewWnd,amb:viewAmb,ems:viewEms,log:viewLog})[S.view]();windySync();}
 
@@ -1211,6 +1330,8 @@ function tickUpd(){
   if(S.aria&&S.aria.european_aqi!=null)parts.push("ARIA EAQI: "+S.aria.european_aqi+" ("+aqiTxt(S.aria.european_aqi)[0]+")");
   if(S.mare&&S.mare.wave_height!=null)parts.push("ONDA AL LARGO: "+S.mare.wave_height.toFixed(1)+" M");
   if(S.ems.length)parts.push("ATTIVAZIONI COPERNICUS EMS APERTE: "+S.ems.length);
+  const gOR=S.gdacs.filter(g=>["orange","red"].includes(String(g.alertlevel).toLowerCase())).length;
+  if(gOR)parts.push("GDACS MONDO: "+gOR+" ALLERTE ORANGE/RED");
   for(const k in S.errs)if(S.errs[k]!=="EMS_LINK")parts.push("⚠ "+S.errs[k].toUpperCase());
   parts.push("STRUMENTO SPERIMENTALE, DATI INDICATIVI — IN EMERGENZA CHIAMA IL 112");
   const txt=parts.join("   ···   ")+"   ···   ";
@@ -1232,7 +1353,7 @@ function setView(v,fromHash){
   S.view=v;
   document.querySelectorAll("#nav [data-v]").forEach(x=>x.classList.toggle("act",x.dataset.v===v));
   if(!fromHash)history.replaceState(null,"","#"+VIEW_SLUG[v]);
-  render();
+  render(); if(typeof saveCfg==="function")saveCfg();
 }
 window.addEventListener("hashchange",()=>{
   const v=SLUG_VIEW[location.hash.replace("#","")];
@@ -1265,7 +1386,7 @@ $("#nav").addEventListener("click",e=>{
   if(b.dataset.v){setView(b.dataset.v);
     if(innerWidth<=720)$("#side").classList.add("open");}
   else if(b.dataset.l){S.layers[b.dataset.l]=!S.layers[b.dataset.l];
-    b.classList.toggle("act",S.layers[b.dataset.l]); applyLayers();}
+    b.classList.toggle("act",S.layers[b.dataset.l]); applyLayers(); saveCfg();}
 });
 $("#dayTgl").addEventListener("click",e=>{
   const b=e.target.closest("button");if(!b)return;
@@ -1283,7 +1404,7 @@ $("#sideTgl").addEventListener("click",()=>$("#side").classList.toggle("open"));
 // ⟳ AGGIORNA — forza il refresh immediato di tutte le fonti
 function refreshAll(man){
   S.lastFull=Date.now();
-  loadSito(); loadINGV(); loadWX(); loadAmb(); loadEMS();
+  loadSito(); loadINGV(); loadWX(); loadAmb(); loadEMS(); loadGdacs();
   if(S.obs||S.view==="met")loadObs();
   if(S.layers.radar)radarRefresh();
   // il bollettino DPC cambia poche volte al giorno e api.github.com ha rate
@@ -1331,9 +1452,35 @@ $("#cycBtn").addEventListener("click",()=>{
   },45e3);
 });
 
+/* ---------------- configurazione persistente della postazione ----------------
+   Layer mappa, previsioni ICON-2I e impostazioni Windy (non l'accensione del
+   widget: quella resta una scelta esplicita, click-to-load) sopravvivono al
+   riavvio del PC di sala. Solo localStorage, nessun dato inviato altrove. */
+function saveCfg(){
+  try{localStorage.setItem("pcgz-monitor-cfg",JSON.stringify({
+    layers:S.layers,prevLayer:$("#prevLayer").value,prevTime:$("#prevTime").value,
+    windy:{ov:S.windy.ov,lvl:S.windy.lvl,prod:S.windy.prod,zoom:S.windy.zoom,detail:S.windy.detail},
+    view:S.view}))}catch(e){}
+}
+(function restoreCfg(){
+  let c=null;
+  try{c=JSON.parse(localStorage.getItem("pcgz-monitor-cfg")||"null")}catch(e){}
+  if(!c)return;
+  if(c.layers)for(const k in S.layers)if(typeof c.layers[k]==="boolean"){
+    S.layers[k]=c.layers[k];
+    const b=document.querySelector(`#nav [data-l="${k}"]`);if(b)b.classList.toggle("act",S.layers[k]);
+  }
+  if(c.prevLayer!==undefined)$("#prevLayer").value=c.prevLayer;
+  if(c.prevTime!==undefined)$("#prevTime").value=c.prevTime;
+  if(c.windy)Object.assign(S.windy,{ov:c.windy.ov||S.windy.ov,lvl:c.windy.lvl||S.windy.lvl,
+    prod:c.windy.prod||S.windy.prod,zoom:c.windy.zoom||S.windy.zoom,detail:!!c.windy.detail});
+  applyLayers(); applyPrev();
+  if(!location.hash&&c.view&&VIEW_SLUG[c.view])S.view=c.view;
+})();
+
 /* ---------------- avvio ---------------- */
 const initV=SLUG_VIEW[location.hash.replace("#","")];
-if(initV)setView(initV,true);else render();
+if(initV)setView(initV,true);else setView(S.view,true);
 let curDay="";
 setInterval(()=>{
   $("#clock").textContent=now();
@@ -1343,7 +1490,8 @@ setInterval(()=>{
       {weekday:"long",day:"numeric",month:"long",year:"numeric"}).toUpperCase();}
 },1000);
 S.lastFull=Date.now();
-loadSito(); loadDPC(); loadINGV(); loadWX(); loadAmb(); loadEMS();
+loadSito(); loadDPC(); loadINGV(); loadWX(); loadAmb(); loadEMS(); loadGdacs();
+setInterval(loadGdacs,30*60e3);
 setInterval(loadINGV,5*60e3);
 setInterval(loadWX,5*60e3);            // quasi tempo reale: current a passo 15 min
 setInterval(loadAmb,30*60e3);

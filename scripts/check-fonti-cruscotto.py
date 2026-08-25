@@ -113,6 +113,17 @@ def chk_ems_rapid():
     return False, det if not ok else "Risposta JSON inattesa (manca 'results')"
 
 
+def chk_gdacs():
+    # GDACS (allerte disastri globali) — fonte a monte dello snapshot
+    # static/open-data/gdacs-eventi.json rigenerato da deploy.yml
+    # (scripts/genera-gdacs-eventi.py), letto dalla Sala situazioni /monitor/.
+    url = "https://www.gdacs.org/gdacsapi/api/events/geteventlist/EVENTS4APP"
+    ok, det, _, j = _get(url, expect_json=True)
+    if ok and isinstance(j, dict) and isinstance(j.get("features"), list):
+        return True, f"{det} · {len(j['features'])} eventi correnti"
+    return False, det if not ok else "Risposta JSON inattesa (manca 'features')"
+
+
 def chk_gibs():
     # Il mosaico "best" VIIRS true-color ha ~2 giorni di latenza di elaborazione:
     # la data odierna e quella di ieri restituiscono sistematicamente 404 (verificato
@@ -171,6 +182,7 @@ SORGENTI = [
     ("Qualità aria regionale — ARPA Lazio", "Aria e pollini", chk_arpa),
     ("Aria Europa — Copernicus CAMS (WMS ECMWF)", "Aria Europa (CAMS)", chk_cams_eu),
     ("Emergenze EU — Copernicus EMS Rapid Mapping", "Emergenze EU (EMS)", chk_ems_rapid),
+    ("Allerte globali — GDACS", "Sala situazioni (GDACS)", chk_gdacs),
     ("Previsioni — ItaliaMeteo (ICON-2I)", "Previsioni ItaliaMeteo", lambda: chk_wms_getmap("meteohub:t2m-t2m", "https://maps.mistralportal.it/wms")),
     ("Mare onde — ItaliaMeteo (WW3)", "Mare ItaliaMeteo", lambda: chk_wms_getmap("meteohub:ww3_hs-hs", "https://maps.mistralportal.it/wms")),
     ("Radar SRI — ItaliaMeteo", "Radar ItaliaMeteo", lambda: chk_wms_getmap("meteohub:radar-sri", "https://maps.mistralportal.it/wms")),

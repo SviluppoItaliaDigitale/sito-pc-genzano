@@ -111,6 +111,13 @@ jobs:
         # invariato lo snapshot ed esce 0 (mai un deploy rotto per una fonte terza).
         run: python3 scripts/genera-ems-attivazioni.py
 
+      - name: "🌍 Snapshot allerte globali GDACS (per la Sala situazioni)"
+        # Stesso pattern dello snapshot EMS: l'API GDACS non è leggibile dal
+        # browser (CORS), la copia locale static/open-data/gdacs-eventi.json
+        # è servita same-origin a /monitor/. Fail-safe: API giù = snapshot
+        # invariato, exit 0.
+        run: python3 scripts/genera-gdacs-eventi.py
+
       - name: "📖 Genera versioni Braille (.brf) per gli articoli /comunicazioni/"
         # Specifiche: manuale/parte-24-output-braille-articoli.md
         # Output in static/braille/comunicazioni/<slug>.brf (ASCII puro, BRF/ICEB).
