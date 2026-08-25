@@ -12,5 +12,8 @@
       "ultimo_controllo" ($a.ultimo_controllo | default "")
       "emergenza_attiva" (and $e $e.attiva)
       "emergenza_titolo" (cond (and $e $e.attiva) ($e.titolo | default "") "")
+      "domani" ($a.domani | default (dict))
+      "avviso_meteo" ($a.avviso_meteo | default (dict))
+      "rischio_incendi" ($a.rischio_incendi | default (dict))
       "generato" now
    | jsonify (dict "indent" "  ") -}}
