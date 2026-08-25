@@ -118,6 +118,14 @@ jobs:
         # invariato, exit 0.
         run: python3 scripts/genera-gdacs-eventi.py
 
+      - name: "📰 Snapshot notizie agenzie (barra NOTIZIE della Sala situazioni)"
+        # ANSA + Adnkronos via RSS pubblici (titolo + link + fonte, con
+        # attribuzione): i feed non espongono CORS, la copia locale
+        # static/open-data/notizie-agenzie.json è letta same-origin da
+        # /monitor/. Fail-safe per feed e globale: tutto giù = snapshot
+        # invariato, exit 0.
+        run: python3 scripts/genera-notizie-agenzie.py
+
       - name: "📖 Genera versioni Braille (.brf) per gli articoli /comunicazioni/"
         # Specifiche: manuale/parte-24-output-braille-articoli.md
         # Output in static/braille/comunicazioni/<slug>.brf (ASCII puro, BRF/ICEB).
