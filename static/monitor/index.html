@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Monitor PC — Castelli Romani</title>
-<meta name="description" content="Monitor sperimentale in stile sala situazioni: allerta per zone del Lazio, radar DPC, sismi INGV, meteo, aria e mare per Genzano di Roma e i Castelli Romani. Fonti ufficiali, dati indicativi.">
+<title>Sala situazioni — Protezione Civile Genzano di Roma</title>
+<meta name="description" content="Sala situazioni sperimentale della Protezione Civile di Genzano di Roma: allerta per zone del Lazio, radar DPC, sismi INGV, meteo quasi in tempo reale con osservazioni delle stazioni ItaliaMeteo, aria e mare. Fonti ufficiali, dati indicativi.">
 <link rel="stylesheet" href="../vendor/leaflet/leaflet.css">
 <style>
 /* Font self-hostati (SIL OFL 1.1, vedi fonts/LICENZE.txt) — la CSP del sito non consente Google Fonts */
@@ -34,10 +34,13 @@ body.blackout #lmap{filter:brightness(.55) saturate(.7)}
 #zonaPill.l1 b{color:var(--gia)} #zonaPill.l2 b{color:var(--ara)} #zonaPill.l3 b{color:var(--red)}
 #zonaPill.l1,#zonaPill.l2,#zonaPill.l3{animation:blink 2.2s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.55}}
-#blackBtn{margin-left:auto;cursor:pointer;font-family:var(--mono);font-size:11px;letter-spacing:.12em;
+.hbtn{cursor:pointer;font-family:var(--mono);font-size:11px;letter-spacing:.12em;
   color:var(--grn);border:1px solid rgba(53,224,140,.5);border-radius:3px;padding:4px 10px;background:#06110c}
+#refBtn{margin-left:auto}
+#refBtn.busy{color:var(--cyn);border-color:rgba(55,199,255,.6)}
 #blackBtn.on{color:#ffd9d7;border-color:rgba(255,59,48,.6);background:#170808}
-#clock{font-family:var(--mono);color:var(--grn);font-size:12px}
+#clock{font-family:var(--mono);color:var(--grn);font-size:12px;white-space:nowrap}
+#dateTxt{font-family:var(--mono);color:var(--dim);font-size:11px;letter-spacing:.08em;white-space:nowrap}
 
 #nav{position:fixed;top:46px;left:0;right:0;height:30px;display:flex;gap:2px;align-items:stretch;
   background:#060b10;border-bottom:1px solid var(--line);z-index:1100;overflow-x:auto;scrollbar-width:none}
@@ -51,6 +54,12 @@ body.blackout #lmap{filter:brightness(.55) saturate(.7)}
 
 #map{position:fixed;top:76px;left:0;right:min(380px,42vw);bottom:26px}
 #lmap{position:absolute;inset:0;background:#04070b}
+#windyWrap{position:absolute;inset:0;display:none;z-index:1001;background:#04070b}
+#windyWrap iframe{width:100%;height:100%;border:0}
+.wbtn{display:inline-block;cursor:pointer;font-family:var(--mono);font-size:11px;letter-spacing:.1em;
+  color:var(--cyn);border:1px solid rgba(55,199,255,.5);border-radius:3px;padding:6px 12px;background:#06121a;margin:4px 6px 2px 0}
+.wbtn.on{color:#04070b;background:var(--cyn);font-weight:700}
+.wbtn.danger{color:#ffb3ae;border-color:rgba(255,59,48,.5);background:#170808}
 .leaflet-container{font-family:var(--mono)}
 .leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#0d1520;color:var(--tx);
   border:1px solid var(--line);border-radius:3px;font-family:var(--mono);font-size:11px}
@@ -75,6 +84,13 @@ body.blackout #lmap{filter:brightness(.55) saturate(.7)}
 #sideHd .dot{width:7px;height:7px;border-radius:50%;background:var(--grn);animation:blink 1.6s infinite;flex:0 0 auto}
 #feed{flex:1;overflow-y:auto;padding:10px 10px 20px;scrollbar-width:thin;scrollbar-color:#1a2c3b transparent}
 #feed a{color:var(--cyn)}
+#shareBar{display:flex;flex-wrap:wrap;gap:4px;align-items:center;padding:6px 10px;
+  border-top:1px solid var(--line);background:var(--panel2)}
+#shareBar .shLbl{font-family:var(--mono);font-size:9px;letter-spacing:.15em;color:var(--dim);margin-right:2px}
+#shareBar button{cursor:pointer;font-family:var(--mono);font-size:9px;letter-spacing:.08em;
+  color:var(--cyn);border:1px solid rgba(55,199,255,.35);border-radius:3px;padding:3px 7px;background:#06121a}
+#shareBar button:hover{color:#eaf6ef;border-color:var(--cyn)}
+#shareBar button.ok{color:#04070b;background:var(--grn);border-color:var(--grn);font-weight:700}
 
 .stato{border:1px solid var(--sc,var(--line));background:var(--panel2);margin-bottom:9px;padding:9px 11px}
 .stato h3{font-size:13px;color:var(--sc,#eaf6ef);font-weight:700;letter-spacing:.06em;margin-bottom:3px}
@@ -122,6 +138,11 @@ body.blackout #lmap{filter:brightness(.55) saturate(.7)}
 .wxDays small{color:var(--dim);font-size:9px}
 .wxDays .pr{color:var(--cyn)}
 .svgMap{width:100%;border:1px solid var(--line);background:#fff;display:block}
+.obsRow{display:flex;justify-content:space-between;gap:8px;font-family:var(--mono);font-size:10.5px;
+  padding:3px 0;border-bottom:1px dashed var(--line)}
+.obsRow:last-of-type{border-bottom:none}
+.obsRow .on{color:#eaf6ef;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.obsRow em{font-style:normal;color:var(--dim);font-size:9px}
 
 .kgrid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
 .kpi{border:1px solid var(--line);background:#0a1826;padding:7px 9px;font-family:var(--mono)}
@@ -171,11 +192,14 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
 <body>
 
 <header id="hdr">
-  <div class="logo">MONITOR <b>PC</b> · CASTELLI<small>PC GENZANO · SPERIMENTALE</small></div>
+  <div class="logo">SALA <b>SITUAZIONI</b><small>PROTEZIONE CIVILE GENZANO DI ROMA · SPERIMENTALE</small></div>
   <span class="pill" id="zonaPill">ZONA F: <b id="zonaLvl">…</b></span>
   <span class="pill hideS">SISMI 7GG: <b id="qkN">…</b></span>
   <span class="pill hideS">PIOGGIA 24H: <b id="rainN">…</b></span>
-  <button id="blackBtn" aria-pressed="false">◉ OSCURITÀ</button>
+  <button id="refBtn" class="hbtn" title="Aggiorna adesso tutti i dati">⟳ AGGIORNA</button>
+  <button id="fsBtn" class="hbtn hideS" aria-label="Schermo intero" title="Schermo intero">⛶</button>
+  <button id="blackBtn" class="hbtn hideS" aria-pressed="false">◉ OSCURITÀ</button>
+  <span id="dateTxt" class="hideS">—</span>
   <span id="clock">--:--:--</span>
 </header>
 
@@ -183,6 +207,8 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
   <button data-v="all" class="act"><span class="ic">▲</span>ALLERTA</button>
   <button data-v="sis"><span class="ic">◈</span>SISMICO</button>
   <button data-v="met"><span class="ic">≋</span>METEO</button>
+  <button data-v="map"><span class="ic">▤</span>CARTE</button>
+  <button data-v="wnd"><span class="ic">☈</span>WINDY</button>
   <button data-v="amb"><span class="ic">✿</span>ARIA·MARE</button>
   <button data-v="ems"><span class="ic">⚑</span>EMERGENZE UE</button>
   <span class="sep"></span>
@@ -191,11 +217,14 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
   <button data-l="qk" class="act"><span class="ic">●</span>SISMI</button>
   <button data-l="sat"><span class="ic">✦</span>SATELLITE</button>
   <button data-l="fire"><span class="ic">▵</span>FUOCHI</button>
+  <button data-l="wtemp"><span class="ic">◧</span>T° PREV</button>
+  <button data-l="wwind"><span class="ic">➤</span>VENTO PREV</button>
 </nav>
 
 <main id="map">
   <div id="lmap"></div>
-  <span id="srcTag">DPC · INGV · COPERNICUS · OPEN-METEO — STRUMENTO SPERIMENTALE, DATI INDICATIVI</span>
+  <div id="windyWrap"><iframe id="windyFrame" title="Mappa meteo interattiva Windy centrata su Genzano di Roma" loading="lazy"></iframe></div>
+  <span id="srcTag">DPC · INGV · ITALIAMETEO · COPERNICUS · OPEN-METEO — STRUMENTO SPERIMENTALE, DATI INDICATIVI</span>
   <span id="radarLbl">RADAR DPC: —</span>
   <div id="dayTgl" role="group" aria-label="Giorno bollettino">
     <button data-d="today" class="act">OGGI</button><button data-d="tomorrow">DOMANI</button>
@@ -215,6 +244,16 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
   <div id="sideHd"><span class="dot"></span><h2 id="sideTitle">ALLERTA — LAZIO</h2>
     <span style="margin-left:auto;font-family:var(--mono);font-size:10px;color:var(--grn)">● LIVE</span></div>
   <div id="feed" role="log" aria-live="polite"><div class="skel"></div><div class="skel"></div><div class="skel"></div></div>
+  <div id="shareBar" aria-label="Condividi questa schermata">
+    <span class="shLbl">CONDIVIDI:</span>
+    <button data-sh="wa" aria-label="Condividi su WhatsApp">WHATSAPP</button>
+    <button data-sh="tg" aria-label="Condividi su Telegram">TELEGRAM</button>
+    <button data-sh="x" aria-label="Condividi su X">X</button>
+    <button data-sh="fb" aria-label="Condividi su Facebook">FACEBOOK</button>
+    <button data-sh="mail" aria-label="Condividi via email">EMAIL</button>
+    <button data-sh="copy" aria-label="Copia il link di questa schermata">COPIA LINK</button>
+    <button data-sh="native" aria-label="Condividi con altre app" hidden>ALTRO…</button>
+  </div>
 </aside>
 
 <footer id="tick">
@@ -253,9 +292,10 @@ const EMS_COL={Wildfire:"#ff8c1a",Flood:"#37c7ff",Storm:"#b48cff",Earthquake:"#f
   "Volcanic activity":"#ff3b30",Landslide:"#c99e6b",Other:"#5d7a6e"};
 
 const S={view:"all",day:"today",black:false,
-  layers:{zone:true,radar:false,qk:true,sat:false,fire:false},
+  layers:{zone:true,radar:false,qk:true,sat:false,fire:false,wtemp:false,wwind:false},
   boll:null,bollVecchio:null,zones:{today:null,tomorrow:null},sito:null,
-  quakes:[],wx:null,aria:null,mare:null,ems:[],emsSnap:null,errs:{}};
+  quakes:[],wx:null,wxT:0,aria:null,mare:null,ems:[],emsSnap:null,
+  obs:null,obsBusy:false,last:{},lastFull:0,errs:{}};
 const $=s=>document.querySelector(s);
 const pad=n=>String(n).padStart(2,"0");
 const now=()=>{const d=new Date();return pad(d.getHours())+":"+pad(d.getMinutes())+":"+pad(d.getSeconds())};
@@ -313,6 +353,14 @@ const fireLayer=L.tileLayer.wms("https://maps.effis.emergency.copernicus.eu/effi
   {layers:"viirs.hs,modis.hs",format:"image/png",transparent:true,version:"1.3.0",opacity:.95,
    attribution:"EFFIS — Copernicus EMS"});
 
+// PREVISIONI ICON-2I — WMS ItaliaMeteo/MeteoHub (CC BY 4.0), stessi layer del
+// cruscotto. Raster sotto le zone di allerta (pane 340) per non coprirle.
+map.createPane("wxPane"); map.getPane("wxPane").style.zIndex=340;
+const mkWms=lay=>L.tileLayer.wms("https://maps.mistralportal.it/wms",
+  {pane:"wxPane",layers:lay,format:"image/png",transparent:true,version:"1.1.1",
+   opacity:.55,maxZoom:11,attribution:"Agenzia ItaliaMeteo — modello ICON-2I (CC BY 4.0)"});
+const wtempLayer=mkWms("meteohub:t2m-t2m"), wwindLayer=mkWms("meteohub:wind-vmax_10m");
+
 let zoneLayer=null, qkLayer=L.layerGroup([]);
 qkLayer.addTo(map);
 
@@ -320,6 +368,7 @@ function applyLayers(){
   const on=(lay,flag)=>{ if(flag&&!map.hasLayer(lay))map.addLayer(lay);
                          if(!flag&&map.hasLayer(lay))map.removeLayer(lay); };
   on(radarLayer,S.layers.radar); on(satLayer,S.layers.sat); on(fireLayer,S.layers.fire);
+  on(wtempLayer,S.layers.wtemp); on(wwindLayer,S.layers.wwind);
   on(qkLayer,S.layers.qk);
   if(zoneLayer)on(zoneLayer,S.layers.zone);
   $("#radarLbl").style.display=S.layers.radar?"block":"none";
@@ -377,6 +426,7 @@ async function findStamp(){
   throw new Error("bollettino non individuato");
 }
 async function loadDPC(){
+  S.last.dpc=Date.now();
   try{
     const stamp=await findStamp();
     const [boll,tToday,tTom]=await Promise.all([
@@ -453,19 +503,84 @@ async function loadINGV(){
   if(S.view==="sis")render(); tickUpd();
 }
 
-/* ---------------- Open-Meteo: previsioni + aria/pollini + mare ---------------- */
+/* ---------------- Open-Meteo: previsioni + aria/pollini + mare ----------------
+   Quasi tempo reale: il campo "current" ha risoluzione 15 minuti, quindi il
+   polling ogni 5 minuti intercetta ogni aggiornamento del modello appena esce.
+   minutely_15 = nowcast pioggia a passo 15 minuti (prossime 3 ore). */
 async function loadWX(){
   try{
     S.wx=await jget(`https://api.open-meteo.com/v1/forecast?latitude=${GENZANO.lat}&longitude=${GENZANO.lon}`+
       `&current=temperature_2m,apparent_temperature,wind_speed_10m,wind_gusts_10m,precipitation,weather_code`+
+      `&minutely_15=precipitation&forecast_minutely_15=16`+
       `&hourly=precipitation,precipitation_probability,wind_gusts_10m,temperature_2m`+
       `&daily=precipitation_sum,precipitation_probability_max,temperature_2m_max,temperature_2m_min,wind_gusts_10m_max`+
       `&forecast_days=4&timezone=Europe%2FRome`);
+    S.wxT=Date.now();
     const h=S.wx.hourly, i0=Math.max(0,h.time.findIndex(t=>Date.parse(t)>=Date.now()-36e5));
     const r24=h.precipitation.slice(i0,i0+24).reduce((a,b)=>a+b,0);
     $("#rainN").textContent=r24.toFixed(1)+" mm";
     delete S.errs.wx;
   }catch(e){S.errs.wx="Open-Meteo non raggiungibile ("+e.message+").";$("#rainN").textContent="N/D";}
+  if(S.view==="met")render(); tickUpd();
+}
+
+/* ---------------- Osservazioni stazioni al suolo — ItaliaMeteo/MeteoHub ----------------
+   Misure REALI (non modello): temperatura e pioggia 1 h dalle stazioni con
+   licenza aperta (CC BY 4.0), stessa API della scheda del cruscotto. Il bbox
+   limita la risposta ai Castelli/litorale; in ogni caso filtriamo per distanza
+   da Genzano lato client. Caricamento pigro (prima apertura pannello METEO). */
+const OBS_API="https://meteohub.agenziaitaliameteo.it/api/observations";
+const OBS_BBOX="&latmin=41.30&latmax=42.10&lonmin=12.20&lonmax=13.15";
+function obsReftime(){
+  const end=new Date();end.setUTCMinutes(59,0,0);
+  const start=new Date(end.getTime()-3*36e5);start.setUTCMinutes(0,0,0);
+  const f=d=>d.getUTCFullYear()+"-"+pad(d.getUTCMonth()+1)+"-"+pad(d.getUTCDate())+"%20"+pad(d.getUTCHours())+":"+pad(d.getUTCMinutes());
+  return "reftime:%20%3E="+f(start)+",%3C="+f(end);
+}
+function obsParse(j){
+  const out=new Map();
+  for(const it of (j&&j.data)||[]){
+    const st=it.stat;
+    if(!st||typeof st.lat!=="number"||typeof st.lon!=="number")continue;
+    if(!it.prod||!it.prod[0]||!it.prod[0].val||!it.prod[0].val[0])continue;
+    const v=it.prod[0].val[0];if(typeof v.val!=="number")continue;
+    let nome=st.net||"Stazione";
+    if(st.details)for(const d of st.details)if(d.var==="B01019"){nome=d.val;break}
+    out.set(st.lat.toFixed(3)+","+st.lon.toFixed(3),
+      {nome,lat:st.lat,lon:st.lon,val:v.val,ref:v.ref||""});
+  }
+  return out;
+}
+async function loadObs(){
+  if(S.obsBusy)return; S.obsBusy=true;
+  try{
+    const ref=obsReftime();
+    const [jt,jp]=await Promise.all([
+      jget(OBS_API+"?q="+ref+";product:B12101;license:CCBY_COMPLIANT;timerange:254,0,0;level:103,2000,0,0"+
+        "&reliabilityCheck=true&last=true"+OBS_BBOX+"&ts="+Date.now(),25000),
+      jget(OBS_API+"?q="+ref+";product:B13011;license:CCBY_COMPLIANT;timerange:1,0,3600;level:1,0,0,0"+
+        "&reliabilityCheck=true&last=true"+OBS_BBOX+"&ts="+Date.now(),25000),
+    ]);
+    const temp=obsParse(jt), rain=obsParse(jp), merged=new Map();
+    for(const [k,s] of temp)merged.set(k,{...s,temp:s.val-273.15,rain:null});
+    for(const [k,s] of rain){
+      if(merged.has(k))merged.get(k).rain=s.val;
+      else merged.set(k,{...s,temp:null,rain:s.val});
+    }
+    const list=[...merged.values()]
+      .map(s=>({...s,km:Math.round(havKm(GENZANO,s))}))
+      .filter(s=>s.km<=45)
+      .sort((a,b)=>a.km-b.km).slice(0,8);
+    if(!list.length)throw new Error("nessuna stazione nel raggio");
+    S.obs={list,t:Date.now()};
+    if(window.pcCache)pcCache.salva("monitor-obs",S.obs);
+    delete S.errs.obs;
+  }catch(e){
+    const c=window.pcCache&&pcCache.leggi("monitor-obs",6);
+    if(c&&c.d&&c.d.list){S.obs=c.d;S.obs.vecchio=c.t;delete S.errs.obs;}
+    else S.errs.obs="Stazioni ItaliaMeteo non raggiungibili.";
+  }
+  S.obsBusy=false;
   if(S.view==="met")render(); tickUpd();
 }
 async function loadAmb(){ // stessi endpoint e coordinate del cruscotto del sito
@@ -537,10 +652,36 @@ function statoCard(){
     <span class="src">FONTE: PROTEZIONECIVILEGENZANO.IT · AGG. ${fmtT(S.sito.ultimo_aggiornamento).toUpperCase()}</span>`;
   return el;
 }
+const lvlNum=s=>({verde:0,giallo:1,gialla:1,arancione:2,rosso:3,rossa:3}[String(s||"").toLowerCase()]??0);
+function extraCards(){
+  const out=[];
+  const av=S.sito&&S.sito.avviso_meteo;
+  if(av&&av.tipo){
+    const l=lvlNum(av.livello);
+    const el=document.createElement("div");el.className="stato";
+    el.style.setProperty("--sc",LVL_COL[l]);
+    el.innerHTML=`<h3>AVVISO METEO: ${esc(String(av.tipo).toUpperCase())}</h3>
+      <p>${esc(av.descrizione||("Avviso di condizioni meteorologiche avverse ("+av.tipo+"), livello "+(av.livello||"n/d")+"."))}</p>
+      <span class="src">FONTE: CENTRO FUNZIONALE REGIONE LAZIO${av.validita_fine?" · VALIDO FINO AL "+fmtT(av.validita_fine).toUpperCase():""}</span>`;
+    out.push(el);
+  }
+  const ri=S.sito&&S.sito.rischio_incendi;
+  if(ri&&ri.livello){
+    const l=lvlNum(ri.livello);
+    const el=document.createElement("div");el.className="stato";
+    el.style.setProperty("--sc",LVL_COL[l]);
+    el.innerHTML=`<h3>RISCHIO INCENDI BOSCHIVI — ZONA 9</h3>
+      <p>${esc(ri.titolo||"Bollettino di pericolosità da incendi boschivi")} — oggi: <b style="color:${LVL_COL[l]}">${esc(String(ri.livello_aib||ri.livello).toUpperCase())}</b>${ri.domani&&ri.domani.livello?` · domani: ${esc(String(ri.domani.livello_aib||ri.domani.livello).toUpperCase())}`:""}</p>
+      <span class="src">FONTE: ${esc(ri.fonte||"REGIONE LAZIO — CENTRO FUNZIONALE")}${ri.data?" · BOLLETTINO DEL "+esc(ri.data):""}</span>`;
+    out.push(el);
+  }
+  return out;
+}
 function viewAll(){
   title.textContent="ALLERTA — LAZIO";
   feed.innerHTML="";
   const sc=statoCard(); if(sc)feed.appendChild(sc);
+  for(const el of extraCards())feed.appendChild(el);
   if(S.errs.dpc)feed.appendChild(errCard(S.errs.dpc));
   if(S.bollVecchio&&window.pcCache)feed.appendChild(errCard(pcCache.frase(S.bollVecchio)));
   const t=laz("today"),d=laz("tomorrow");
@@ -576,18 +717,36 @@ function viewSis(){
   }
   feed.appendChild(noteEl());
 }
+const hm=ms=>{const d=new Date(ms);return pad(d.getHours())+":"+pad(d.getMinutes())};
 function viewMet(){
   title.textContent="METEO — GENZANO / CASTELLI";
   feed.innerHTML="";
+  if(!S.obs&&!S.errs.obs&&!S.obsBusy)loadObs(); // caricamento pigro stazioni
   if(S.errs.wx)feed.appendChild(errCard(S.errs.wx));
   if(!S.wx){if(!S.errs.wx)feed.innerHTML='<div class="skel"></div><div class="skel"></div>';return}
   const c=S.wx.current;
-  feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>CONDIZIONI ATTUALI<span>AGG. ${now()}</span></h3>
+  feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>CONDIZIONI ATTUALI<span>DATO ${hm(Date.parse(S.wx.current.time)||S.wxT)} · AGG. OGNI 5 MIN</span></h3>
     <div class="wxNow"><b>${c.temperature_2m.toFixed(0)}°</b>
     <div>Percepita: <span>${c.apparent_temperature.toFixed(0)}°C</span><br>
     Vento: <span>${c.wind_speed_10m.toFixed(0)} km/h</span> · Raffiche: <span>${c.wind_gusts_10m.toFixed(0)} km/h</span><br>
-    Precipitazione in atto: <span>${c.precipitation.toFixed(1)} mm/h</span></div></div></div>
-    <div class="wx"><h3>PIOGGIA PROSSIME 24 ORE<span>mm/h · prob.%</span></h3><canvas id="rainCv"></canvas></div>`);
+    Precipitazione in atto: <span>${c.precipitation.toFixed(1)} mm/h</span></div></div></div>`);
+  if(S.wx.minutely_15&&S.wx.minutely_15.time&&S.wx.minutely_15.time.length){
+    feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>NOWCAST PIOGGIA — 3 ORE<span>modello, passo 15 min</span></h3><canvas id="nowCv"></canvas></div>`);
+    drawNow();
+  }
+  // stazioni al suolo — misure reali ItaliaMeteo
+  if(S.errs.obs)feed.appendChild(errCard(S.errs.obs));
+  if(S.obs&&S.obs.list){
+    const rows=S.obs.list.map(s=>
+      `<div class="obsRow"><span class="on">${esc(s.nome)} <em>${s.km} km</em></span>`+
+      `<span>${s.temp!=null?s.temp.toFixed(1)+"°C":"—"} · ${s.rain!=null?s.rain.toFixed(1)+" mm/1h":"—"}`+
+      `${s.ref?` <em>${esc(String(s.ref).slice(11,16))}</em>`:""}</span></div>`).join("");
+    const vecchio=S.obs.vecchio&&window.pcCache?`<p style="color:#ffb3ae;font-size:10px;margin-top:4px">${esc(pcCache.frase(S.obs.vecchio))}</p>`:"";
+    feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>STAZIONI AL SUOLO<span>ITALIAMETEO · MISURE REALI</span></h3>${rows}${vecchio}</div>`);
+  }else if(S.obsBusy){
+    feed.insertAdjacentHTML("beforeend",'<div class="skel" style="height:40px"></div>');
+  }
+  feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>PIOGGIA PROSSIME 24 ORE<span>mm/h · prob.%</span></h3><canvas id="rainCv"></canvas></div>`);
   drawRain();
   const dl=S.wx.daily;
   feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>PROSSIMI GIORNI</h3><div class="wxDays">`+
@@ -598,7 +757,26 @@ function viewMet(){
     <a href="${BASE}cruscotto/">
     <img class="svgMap" src="${BASE}images/meteo-lazio.svg?v=${Math.floor(Date.now()/6e5)}"
       alt="Cartina meteo del Lazio generata dal sito PC Genzano" loading="lazy"></a></div>`);
-  feed.appendChild(noteEl());
+  feed.appendChild(noteEl('Osservazioni stazioni: Agenzia ItaliaMeteo (CC BY 4.0), solo stazioni a licenza aperta.'));
+}
+function drawNow(){
+  const c=$("#nowCv"); if(!c||!S.wx||!S.wx.minutely_15)return;
+  const x=c.getContext("2d"); const DPR=Math.min(devicePixelRatio||1,2);
+  const w=c.clientWidth,h=64;
+  c.width=w*DPR;c.height=h*DPR;x.setTransform(DPR,0,0,DPR,0,0);
+  const mm=S.wx.minutely_15;
+  const i0=Math.max(0,mm.time.findIndex(t=>Date.parse(t)>=Date.now()-9e5));
+  const P=mm.precipitation.slice(i0,i0+12), N=P.length||1;
+  const max=Math.max(.5,...P), bw=w/N;
+  x.strokeStyle="rgba(18,33,46,.8)";x.beginPath();x.moveTo(0,h-14);x.lineTo(w,h-14);x.stroke();
+  for(let i=0;i<N;i++){
+    const bh=(P[i]/max)*(h-24);
+    x.fillStyle=P[i]>0?"rgba(55,199,255,.85)":"rgba(55,199,255,.18)";
+    x.fillRect(i*bw+1,h-14-Math.max(bh,2),bw-2,Math.max(bh,2));
+    if(i%4===0){x.fillStyle="#5d7a6e";x.font="8px 'Share Tech Mono'";
+      const t=new Date(mm.time[i0+i]);
+      x.fillText(pad(t.getHours())+":"+pad(t.getMinutes()),i*bw+1,h-3);}
+  }
 }
 function drawRain(){
   const c=$("#rainCv"); if(!c||!S.wx)return;
@@ -618,6 +796,85 @@ function drawRain(){
     if(i%6===0){x.fillStyle="#5d7a6e";x.font="8px 'Share Tech Mono'";
       x.fillText(new Date(hh.time[i0+i]).getHours()+":00",i*bw+1,h-3);}
   }
+}
+/* CARTE — tutte le cartine auto-generate del sito (stesse del cruscotto).
+   Le carte ECMWF riportano data di validità e corsa stampate nell'immagine. */
+const CARTE=[
+  {src:"images/meteo-lazio.svg",t:"CARTINA LAZIO — ADESSO",s:"AUTO-GENERATA OGNI ORA",
+   alt:"Cartina meteo del Lazio con riquadro su Genzano, generata dal sito"},
+  {src:"images/meteo-lazio-animata.svg",t:"ANIMAZIONE LAZIO — PROSSIME ORE",s:"AUTO-GENERATA 4 VOLTE AL GIORNO",
+   alt:"Animazione della previsione meteo sul Lazio nelle prossime ore"},
+  {src:"images/meteo-sinottica-italia.webp",t:"SINOTTICA ITALIA",s:"AUTO-GENERATA 4 VOLTE AL GIORNO",
+   alt:"Carta sinottica meteo dell'Italia generata dal sito"},
+  {src:"images/ecmwf/medium-mslp-wind850.webp",t:"ECMWF — PRESSIONE E VENTO",s:"OPENCHARTS · CC BY 4.0",
+   alt:"Carta ECMWF: pressione al livello del mare e vento a 850 hPa sull'Europa"},
+  {src:"images/ecmwf/medium-2mt-wind30.webp",t:"ECMWF — TEMPERATURA E VENTO",s:"OPENCHARTS · CC BY 4.0",
+   alt:"Carta ECMWF: temperatura a 2 metri e vento sull'Europa"},
+  {src:"images/ecmwf/medium-precipitation-type.webp",t:"ECMWF — TIPO DI PRECIPITAZIONE",s:"OPENCHARTS · CC BY 4.0",
+   alt:"Carta ECMWF: tipo di precipitazione previsto sull'Europa"},
+  {src:"images/ecmwf/medium-cape-cin.webp",t:"ECMWF — ENERGIA TEMPORALESCA (CAPE)",s:"OPENCHARTS · CC BY 4.0",
+   alt:"Carta ECMWF: energia disponibile per i temporali (CAPE e CIN) sull'Europa"},
+];
+function viewMap(){
+  title.textContent="CARTE METEO — LAZIO · ITALIA · EUROPA";
+  feed.innerHTML="";
+  const v=Math.floor(Date.now()/6e5);
+  for(const c of CARTE){
+    feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>${c.t}<span>${c.s}</span></h3>
+      <a href="${BASE}${c.src}?v=${v}" target="_blank" rel="noopener" title="Apri la carta a dimensione intera in una nuova scheda">
+      <img class="svgMap" src="${BASE}${c.src}?v=${v}" alt="${c.alt}" loading="lazy"></a></div>`);
+  }
+  feed.appendChild(noteEl('Carte auto-generate dal sito (Open-Meteo, CC BY 4.0) e carte <a href="https://charts.ecmwf.int/" target="_blank" rel="noopener">ECMWF OpenCharts</a> (CC BY 4.0) auto-ospitate: corsa e validità sono stampate su ogni carta. Clic per aprirle a dimensione intera.'));
+}
+/* ---------------- WINDY — mappa interattiva a tutta pagina ----------------
+   Iframe di terze parti (embed.windy.com, già in whitelist frame-src della CSP):
+   caricato SOLO su richiesta esplicita (click-to-load, stesso pattern di
+   /allerte-meteo/ — privacy-first + WCAG 3.2.5 Change on Request). */
+S.windy={on:false,ov:"radar"};
+const WINDY_OV=[["radar","RADAR"],["wind","VENTO"],["rain","PIOGGIA"],["temp","TEMPERATURA"]];
+const windyUrl=ov=>"https://embed.windy.com/embed2.html?lat=41.6919&lon=12.6928&detailLat=41.6919&detailLon=12.6928"+
+  "&width=100%25&height=100%25&zoom=8&level=surface&overlay="+ov+"&product=ecmwf&menu=&message=&marker=true"+
+  "&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=-1";
+function windySync(){
+  $("#windyWrap").style.display=(S.view==="wnd"&&S.windy.on)?"block":"none";
+}
+function viewWnd(){
+  title.textContent="WINDY — MAPPA INTERATTIVA";
+  feed.innerHTML="";
+  if(!S.windy.on){
+    const el=document.createElement("div");el.className="wx";
+    el.innerHTML=`<h3>MAPPA METEO WINDY<span>CLICK-TO-LOAD</span></h3>
+      <p>Mappa meteo interattiva centrata su Genzano di Roma (previsioni ECMWF: radar,
+      vento, pioggia, temperatura). Per visualizzarla devi caricare i contenuti forniti da
+      <b>Windy.com</b>: il browser riceverà risorse dal loro server e potrebbe essere
+      impostato qualche cookie tecnico di terze parti.</p>
+      <button class="wbtn" id="windyLoad">⚡ CARICA LA MAPPA WINDY</button>
+      <p style="margin-top:6px"><a href="https://www.windy.com/?41.691,12.692,9" target="_blank" rel="noopener">In alternativa apri windy.com in una nuova scheda</a>.</p>`;
+    feed.appendChild(el);
+    el.querySelector("#windyLoad").addEventListener("click",()=>{
+      S.windy.on=true;
+      $("#windyFrame").src=windyUrl(S.windy.ov);
+      windySync(); render();
+    });
+  }else{
+    const el=document.createElement("div");el.className="wx";
+    el.innerHTML=`<h3>LIVELLO WINDY<span>ECMWF</span></h3><div id="windyOv">`+
+      WINDY_OV.map(([k,l])=>`<button class="wbtn${S.windy.ov===k?" on":""}" data-ov="${k}" aria-pressed="${S.windy.ov===k}">${l}</button>`).join("")+
+      `</div><p style="margin-top:8px"><button class="wbtn danger" id="windyOff">✕ RIMUOVI IL WIDGET</button></p>
+      <p style="margin-top:6px;font-size:10.5px;color:var(--dim)">La mappa occupa l'area principale.
+      Cambia vista dal menu in alto per tornare alla mappa del monitor: il widget resta pronto qui.</p>`;
+    feed.appendChild(el);
+    el.querySelector("#windyOv").addEventListener("click",e=>{
+      const b=e.target.closest("[data-ov]");if(!b)return;
+      S.windy.ov=b.dataset.ov;
+      $("#windyFrame").src=windyUrl(S.windy.ov);
+      render();
+    });
+    el.querySelector("#windyOff").addEventListener("click",()=>{
+      S.windy.on=false;$("#windyFrame").src="";windySync();render();
+    });
+  }
+  feed.appendChild(noteEl('Widget esterno <a href="https://www.windy.com/" target="_blank" rel="noopener">Windy.com</a>, caricato solo su tua richiesta.'));
 }
 const aqiTxt=v=>v==null?["N/D","#5d7a6e"]:v<=20?["OTTIMA","#35e08c"]:v<=40?["BUONA","#8fd35a"]:
   v<=60?["MODERATA","#ffd60a"]:v<=80?["SCARSA","#ff8c1a"]:["PESSIMA","#ff3b30"];
@@ -678,7 +935,7 @@ function viewEms(){
   const snapNote=S.emsSnap?`Snapshot self-hosted aggiornato all'ultimo deploy del sito (${fmtT(S.emsSnap.toISOString())}).`:"";
   feed.appendChild(noteEl('Attivazioni aperte del servizio <a href="https://rapidmapping.emergency.copernicus.eu/" target="_blank" rel="noopener">Rapid Mapping</a>. '+snapNote));
 }
-function render(){({all:viewAll,sis:viewSis,met:viewMet,amb:viewAmb,ems:viewEms})[S.view]();}
+function render(){({all:viewAll,sis:viewSis,met:viewMet,map:viewMap,wnd:viewWnd,amb:viewAmb,ems:viewEms})[S.view]();windySync();}
 
 /* ---------------- ticker ---------------- */
 function tickUpd(){
@@ -693,7 +950,14 @@ function tickUpd(){
   }
   const q=S.quakes[0];
   if(q)parts.push(`ULTIMO EVENTO INGV: M${q.mag.toFixed(1)} ${(q.place||"").toUpperCase()} (${q.km} KM)`);
+  if(S.sito&&S.sito.avviso_meteo&&S.sito.avviso_meteo.tipo)
+    parts.push("AVVISO METEO CFR LAZIO: "+String(S.sito.avviso_meteo.tipo).toUpperCase()+" ("+String(S.sito.avviso_meteo.livello||"").toUpperCase()+")");
+  if(S.sito&&S.sito.rischio_incendi&&S.sito.rischio_incendi.livello)
+    parts.push("RISCHIO INCENDI ZONA 9: "+String(S.sito.rischio_incendi.livello_aib||S.sito.rischio_incendi.livello).toUpperCase());
   if(S.wx)parts.push("PIOGGIA PREVISTA 24H: "+$("#rainN").textContent);
+  if(S.wx&&S.wx.current)parts.push("METEO GENZANO ORA: "+S.wx.current.temperature_2m.toFixed(0)+"°C · VENTO "+S.wx.current.wind_speed_10m.toFixed(0)+" KM/H");
+  if(S.obs&&S.obs.list&&S.obs.list.length&&S.obs.list[0].temp!=null)
+    parts.push("STAZIONE PIÙ VICINA ("+S.obs.list[0].nome.toUpperCase()+", "+S.obs.list[0].km+" KM): "+S.obs.list[0].temp.toFixed(1)+"°C");
   if(S.aria&&S.aria.european_aqi!=null)parts.push("ARIA EAQI: "+S.aria.european_aqi+" ("+aqiTxt(S.aria.european_aqi)[0]+")");
   if(S.mare&&S.mare.wave_height!=null)parts.push("ONDA AL LARGO: "+S.mare.wave_height.toFixed(1)+" M");
   if(S.ems.length)parts.push("ATTIVAZIONI COPERNICUS EMS APERTE: "+S.ems.length);
@@ -703,13 +967,57 @@ function tickUpd(){
 }
 
 /* ---------------- interazioni ---------------- */
+/* Deep-link e condivisione delle schermate: ogni vista ha un hash proprio
+   (#allerta, #sismico, #meteo, #carte, #windy, #aria-mare, #emergenze-ue),
+   così il link condiviso apre direttamente quella schermata. */
+const VIEW_SLUG={all:"allerta",sis:"sismico",met:"meteo",map:"carte",wnd:"windy",amb:"aria-mare",ems:"emergenze-ue"};
+const SLUG_VIEW=Object.fromEntries(Object.entries(VIEW_SLUG).map(([k,v])=>[v,k]));
+function setView(v,fromHash){
+  if(!VIEW_SLUG[v])return;
+  S.view=v;
+  document.querySelectorAll("#nav [data-v]").forEach(x=>x.classList.toggle("act",x.dataset.v===v));
+  if(!fromHash)history.replaceState(null,"","#"+VIEW_SLUG[v]);
+  render();
+}
+window.addEventListener("hashchange",()=>{
+  const v=SLUG_VIEW[location.hash.replace("#","")];
+  if(v&&v!==S.view)setView(v,true);
+});
+const shareURL=()=>location.origin+location.pathname+"#"+VIEW_SLUG[S.view];
+const shareTxt=()=>"Sala situazioni PC Genzano — "+$("#sideTitle").textContent;
+$("#shareBar").addEventListener("click",e=>{
+  const b=e.target.closest("button[data-sh]");if(!b)return;
+  const u=shareURL(),t=shareTxt(),eu=encodeURIComponent(u),et=encodeURIComponent(t);
+  const open=h=>window.open(h,"_blank","noopener");
+  switch(b.dataset.sh){
+    case "wa":open("https://wa.me/?text="+encodeURIComponent(t+" — "+u));break;
+    case "tg":open("https://t.me/share/url?url="+eu+"&text="+et);break;
+    case "x":open("https://twitter.com/intent/tweet?text="+et+"&url="+eu);break;
+    case "fb":open("https://www.facebook.com/sharer/sharer.php?u="+eu);break;
+    case "mail":location.href="mailto:?subject="+et+"&body="+encodeURIComponent(t+"\n"+u);break;
+    case "copy":
+      (navigator.clipboard?navigator.clipboard.writeText(u):Promise.reject()).then(()=>{
+        b.classList.add("ok");b.textContent="COPIATO ✓";b.setAttribute("aria-label","Link copiato negli appunti");
+        setTimeout(()=>{b.classList.remove("ok");b.textContent="COPIA LINK";b.setAttribute("aria-label","Copia il link di questa schermata");},2000);
+      }).catch(()=>{prompt("Copia il link:",u)});break;
+    case "native":if(navigator.share)navigator.share({title:t,text:t,url:u}).catch(()=>{});break;
+  }
+});
+if(navigator.share)$('#shareBar [data-sh="native"]').hidden=false;
+
 $("#nav").addEventListener("click",e=>{
   const b=e.target.closest("button");if(!b)return;
-  if(b.dataset.v){S.view=b.dataset.v;
-    document.querySelectorAll("#nav [data-v]").forEach(x=>x.classList.toggle("act",x===b));
-    render(); if(innerWidth<=720)$("#side").classList.add("open");}
-  else if(b.dataset.l){S.layers[b.dataset.l]=!S.layers[b.dataset.l];
-    b.classList.toggle("act",S.layers[b.dataset.l]); applyLayers();}
+  if(b.dataset.v){setView(b.dataset.v);
+    if(innerWidth<=720)$("#side").classList.add("open");}
+  else if(b.dataset.l){
+    const l=b.dataset.l, turnOn=!S.layers[l];
+    // T° PREV e VENTO PREV sono raster quasi opachi: mutuamente esclusivi
+    if(turnOn&&(l==="wtemp"||l==="wwind")){
+      const other=l==="wtemp"?"wwind":"wtemp";
+      if(S.layers[other]){S.layers[other]=false;
+        const ob=document.querySelector(`#nav [data-l="${other}"]`);if(ob)ob.classList.remove("act");}
+    }
+    S.layers[l]=turnOn; b.classList.toggle("act",turnOn); applyLayers();}
 });
 $("#dayTgl").addEventListener("click",e=>{
   const b=e.target.closest("button");if(!b)return;
@@ -724,16 +1032,53 @@ $("#blackBtn").addEventListener("click",()=>{
 });
 $("#sideTgl").addEventListener("click",()=>$("#side").classList.toggle("open"));
 
+// ⟳ AGGIORNA — forza il refresh immediato di tutte le fonti
+function refreshAll(man){
+  S.lastFull=Date.now();
+  loadSito(); loadINGV(); loadWX(); loadAmb(); loadEMS();
+  if(S.obs||S.view==="met")loadObs();
+  if(S.layers.radar)radarRefresh();
+  // il bollettino DPC cambia poche volte al giorno e api.github.com ha rate
+  // limit 60/h: lo si ricarica solo se l'ultimo tentativo ha più di 10 minuti
+  if(Date.now()-(S.last.dpc||0)>10*60e3)loadDPC();
+  if(man){const b=$("#refBtn");b.classList.add("busy");b.textContent="⟳ AGGIORNO…";
+    setTimeout(()=>{b.classList.remove("busy");b.textContent="⟳ AGGIORNA";},2500);}
+}
+$("#refBtn").addEventListener("click",()=>refreshAll(true));
+
+// Schermo intero (uso da TV in sede) — nascosto dove l'API non c'è (iPhone)
+const fsBtn=$("#fsBtn");
+if(!document.documentElement.requestFullscreen)fsBtn.style.display="none";
+fsBtn.addEventListener("click",()=>{
+  if(document.fullscreenElement)document.exitFullscreen();
+  else document.documentElement.requestFullscreen();
+});
+
+// Al ritorno sulla scheda (monitor lasciato aperto): refresh se i dati sono vecchi
+document.addEventListener("visibilitychange",()=>{
+  if(!document.hidden&&Date.now()-(S.lastFull||0)>4*60e3)refreshAll(false);
+});
+
 /* ---------------- avvio ---------------- */
-render();
-setInterval(()=>$("#clock").textContent=now(),1000);
+const initV=SLUG_VIEW[location.hash.replace("#","")];
+if(initV)setView(initV,true);else render();
+let curDay="";
+setInterval(()=>{
+  $("#clock").textContent=now();
+  const d=new Date(), key=d.toDateString();
+  if(key!==curDay){curDay=key; // la data si aggiorna da sola alla mezzanotte
+    $("#dateTxt").textContent=d.toLocaleDateString("it-IT",
+      {weekday:"long",day:"numeric",month:"long",year:"numeric"}).toUpperCase();}
+},1000);
+S.lastFull=Date.now();
 loadSito(); loadDPC(); loadINGV(); loadWX(); loadAmb(); loadEMS();
 setInterval(loadINGV,5*60e3);
-setInterval(loadWX,30*60e3);
+setInterval(loadWX,5*60e3);            // quasi tempo reale: current a passo 15 min
 setInterval(loadAmb,30*60e3);
 setInterval(loadEMS,15*60e3);
 setInterval(loadSito,10*60e3);
 setInterval(loadDPC,60*60e3);
+setInterval(()=>{if(S.obs)loadObs()},15*60e3); // stazioni: solo dopo il primo uso
 </script>
 <noscript><p style="padding:80px 20px;font-family:monospace">Questo monitor richiede JavaScript. Consulta il <a href="../cruscotto/">Cruscotto del territorio</a>, il bollettino su mappe.protezionecivile.gov.it e terremoti.ingv.it. In emergenza chiama il 112.</p></noscript>
 </body>

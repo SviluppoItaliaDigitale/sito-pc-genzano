@@ -1,8 +1,11 @@
 {{- /* Card link per griglie di consultazione (es. hub /rischi-prevenzione/).
        Uso: {{< link-card url="/percorso/" icon="bi-bus-front" titolo="Titolo" desc="Descrizione" >}}
-       url passato senza leading slash a relURL per compatibilità subpath GitHub Pages. */ -}}
+       url passato senza leading slash a relURL per compatibilità subpath GitHub Pages.
+       Param opzionale nuova="true": apre in nuova scheda (target=_blank) con
+       segnalazione accessibile (icona + testo per screen reader, WCAG/rule 03). */ -}}
 {{- $url := .Get "url" | strings.TrimPrefix "/" | relURL -}}
-<a class="cr-card" href="{{ $url }}">
+{{- $nuova := eq (.Get "nuova") "true" -}}
+<a class="cr-card" href="{{ $url }}"{{ if $nuova }} target="_blank" rel="noopener noreferrer"{{ end }}>
   <span class="cr-icon" aria-hidden="true"><i class="bi {{ .Get "icon" }}"></i></span>
-  <span class="cr-corpo"><span class="cr-titolo">{{ .Get "titolo" }}</span><span class="cr-desc">{{ .Get "desc" }}</span></span>
+  <span class="cr-corpo"><span class="cr-titolo">{{ .Get "titolo" }}{{ if $nuova }} <i class="bi bi-box-arrow-up-right" aria-hidden="true" style="font-size:.8em"></i><span class="visually-hidden">(si apre in una nuova scheda)</span>{{ end }}</span><span class="cr-desc">{{ .Get "desc" }}</span></span>
 </a>
