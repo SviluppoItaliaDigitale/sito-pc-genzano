@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-08-26T13:40",
+  "aggiornato": "2026-08-26T14:03",
   "data_lunga": "mercoledì 26 agosto 2026",
-  "aggiornato_label": "mercoledì 26 agosto 2026, ore 13:40",
+  "aggiornato_label": "mercoledì 26 agosto 2026, ore 14:03",
   "alba": "06:29",
   "tramonto": "19:53",
   "corrente": {
-    "temp": 32.4,
-    "percepita": 34.8,
+    "temp": 32.1,
+    "percepita": 34.4,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 42,
-    "vento": 13,
-    "raffiche": 30
+    "umidita": 46,
+    "vento": 15,
+    "raffiche": 35
   },
   "giorni": [
     {
@@ -22,7 +22,7 @@
       "tmin": 21,
       "pioggia": 0,
       "pioggia_mm": 0,
-      "raffiche": 37,
+      "raffiche": 36,
       "uv": 7,
       "uv_label": "alto"
     },
@@ -30,11 +30,11 @@
       "label": "Gio 27",
       "icona": "<g><g><ellipse cx=\"16.0\" cy=\"19.1\" rx=\"14.5\" ry=\"7.0\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"9.7\" cy=\"16.0\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.9\" cy=\"14.7\" r=\"5.6\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"11.9\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
       "cielo": "Coperto",
-      "tmax": 36,
+      "tmax": 35,
       "tmin": 23,
       "pioggia": 3,
       "pioggia_mm": 0,
-      "raffiche": 48,
+      "raffiche": 42,
       "uv": 7,
       "uv_label": "alto"
     },
