@@ -410,6 +410,13 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
    ================================================================= */
 const GENZANO={lat:41.7085,lon:12.6916};
 const BASE="../"; // root del sito rispetto a /monitor/
+// Snapshot freschi SENZA aspettare il deploy: il workflow aggiorna-dati-sala
+// committa i JSON ogni 15 minuti e raw.githubusercontent.com (CORS aperto,
+// già in CSP) li serve al commit. Fallback: la copia deployata sul sito.
+const RAW_SITO="https://raw.githubusercontent.com/SviluppoItaliaDigitale/sito-pc-genzano/main/static/open-data/";
+async function jgetSnap(file,ms){
+  try{return await jget(RAW_SITO+file,ms)}catch(e){return await jget(BASE+"open-data/"+file,ms)}
+}
 const REPO="pcm-dpc/DPC-Bollettini-Criticita-Idrogeologica-Idraulica";
 const RAW=`https://raw.githubusercontent.com/${REPO}/master/files/`;
 const LAZIO=["Bacini Costieri Sud","Bacini di Roma","Bacini Costieri Nord","Bacino Medio Tevere","Appennino di Rieti","Aniene","Bacino del Liri"];
@@ -907,7 +914,13 @@ async function loadAmb(){ // stessi endpoint e coordinate del cruscotto del sito
    fallback: API diretta (se il CORS tornasse); ultimo fallback: link al portale. */
 async function loadEMS(){
   let ok=false;
-  try{
+  try{ // 1) snapshot dal repo (fresco al commit del workflow, niente attesa deploy)
+    const d=await jget(RAW_SITO+"ems-attivazioni.json",10000);
+    S.ems=(d.results||[]).filter(a=>!a.closed).slice(0,20);
+    S.emsSnap=d._snapshot&&d._snapshot.generato?new Date(d._snapshot.generato):null;
+    ok=true; delete S.errs.ems;
+  }catch(e){}
+  if(!ok)try{ // 2) copia deployata sul sito
     const r=await fetch(BASE+"open-data/ems-attivazioni.json",{cache:"no-cache"});
     if(r.ok){
       const d=await r.json();
@@ -937,7 +950,7 @@ const GDACS_TIPO={EQ:"Terremoto",TC:"Ciclone tropicale",FL:"Alluvione",WF:"Incen
 const GDACS_COL={green:"#35e08c",orange:"#ff8c1a",red:"#ff3b30"};
 async function loadGdacs(){
   try{
-    const d=await jget(BASE+"open-data/gdacs-eventi.json",10000);
+    const d=await jgetSnap("gdacs-eventi.json",10000);
     const evs=(d.events||[]).slice();
     const rank={red:0,orange:1,green:2};
     evs.sort((a,b)=>(rank[String(a.alertlevel).toLowerCase()]??3)-(rank[String(b.alertlevel).toLowerCase()]??3)
@@ -1523,7 +1536,7 @@ function viewEms(){
       feed.appendChild(el);
     }
   }
-  const snapNote=S.emsSnap?`Snapshot EMS aggiornato all'ultimo deploy (${fmtT(S.emsSnap.toISOString())}).`:"";
+  const snapNote=S.emsSnap?`Snapshot EMS del ${fmtT(S.emsSnap.toISOString())} (rigenerato ogni 15 minuti).`:"";
   feed.appendChild(noteEl('Attivazioni <a href="https://rapidmapping.emergency.copernicus.eu/" target="_blank" rel="noopener">Copernicus EMS Rapid Mapping</a> e allerte globali <a href="https://www.gdacs.org/" target="_blank" rel="noopener">GDACS</a> (dati pubblici, copie self-hosted rigenerate a ogni deploy). '+snapNote));
 }
 function render(){({all:viewAll,sis:viewSis,met:viewMet,map:viewMap,wnd:viewWnd,amb:viewAmb,ems:viewEms,log:viewLog})[S.view]();windySync();}
@@ -1535,7 +1548,7 @@ function render(){({all:viewAll,sis:viewSis,met:viewMet,map:viewMap,wnd:viewWnd,
    Titoli cliccabili (nuova scheda), barra in pausa al passaggio del mouse. */
 async function loadNews(){
   try{
-    const d=await jget(BASE+"open-data/notizie-agenzie.json",10000);
+    const d=await jgetSnap("notizie-agenzie.json",10000);
     if(d&&Array.isArray(d.notizie)&&d.notizie.length){S.news=d.notizie;newsUpd();}
   }catch(e){/* la barra conserva l'ultimo contenuto valido */}
 }
@@ -1778,7 +1791,7 @@ loadUsgs(); loadEonet();
 setInterval(loadUsgs,2*60e3);          // USGS aggiorna il feed ogni minuto
 setInterval(loadEonet,15*60e3);
 setInterval(loadGdacs,15*60e3);
-setInterval(loadNews,5*60e3);
+setInterval(loadNews,3*60e3);          // snapshot committato ogni 15 min, letto da raw GitHub
 setInterval(loadINGV,5*60e3);
 setInterval(loadWX,5*60e3);            // quasi tempo reale: current a passo 15 min
 setInterval(loadAmb,30*60e3);
