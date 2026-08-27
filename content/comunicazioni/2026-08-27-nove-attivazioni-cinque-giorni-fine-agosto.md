@@ -24,7 +24,7 @@ Tra sabato 22 e mercoledì 26 agosto il Gruppo è uscito **nove volte**. Nessuna
 
 ## Alberi, rami e oggetti sospesi: cinque interventi
 
-La settimana della piattaforma comincia **sabato 22 agosto** in **via Vittorio Veneto**: rami pericolanti da tagliare, sette volontari al lavoro per circa due ore con il [Nissan Cabstar](/chi-siamo/#mezzi-e-attrezzature-principali) e il pickup Land Rover Defender 130.
+La settimana comincia **sabato 22 agosto** in **via Vittorio Veneto**, chiudendo un conto rimasto aperto: [al sopralluogo di giovedì 20](/comunicazioni/2026-08-21-settimana-dopo-ferragosto-otto-attivazioni/) i rami pericolanti erano risultati raggiungibili solo con la piattaforma aerea, allora non disponibile. Con il [Nissan Cabstar](/chi-siamo/#mezzi-e-attrezzature-principali) e il pickup Land Rover Defender 130, sette volontari completano il taglio in circa due ore.
 
 **Lunedì 24**, nel tardo pomeriggio, la Polizia Locale segnala un **albero di piccole dimensioni caduto in via Napoli**: la squadra lo rimuove in una quarantina di minuti. **Martedì 25**, in **via Chatillon**, il bersaglio è più curioso: una **cassetta di plastica rimasta sospesa tra i pali della luce**, a sei metri d'altezza. Il cestello sale, la cassetta scende.
 
@@ -50,7 +50,7 @@ La settimana della piattaforma comincia **sabato 22 agosto** in **via Vittorio V
 
 ## Tre colonne di fumo da verificare
 
-L'estate AIB non è ancora finita, e le tre uscite antincendio della settimana lo confermano. **Domenica 23**, nel tardo pomeriggio, un cittadino segnala una **colonna di fumo** visibile dalla zona della Torretta: il pickup esce per la verifica e individua l'origine in **via Trapani, ad Albano Laziale**; la [SOUP regionale](/glossario/#soup) viene avvisata. **Lunedì 24**, in serata, è la stessa SOUP ad attivare il Gruppo per **sterpaglie in fiamme a Santa Palomba**, nel territorio di Pomezia: il Defender fa la verifica con il Mercedes Atego — impianto AIB da 6.000 litri — pronto in sede. **Martedì 25**, poco prima di pranzo, altra colonna di fumo in **via della Falcognana**: escono l'Atego e il pickup, sette volontari impegnati per circa un'ora.
+L'estate AIB non è ancora finita, e le tre uscite antincendio della settimana lo confermano. **Domenica 23**, nel tardo pomeriggio, un cittadino segnala una **colonna di fumo** visibile dalla zona della Torretta: il pickup esce per la verifica e individua l'origine in **via Trapani, ad Albano Laziale**; la [SOUP regionale](/glossario/#soup) viene avvisata. **Lunedì 24**, in serata, è la stessa SOUP ad attivare il Gruppo per **sterpaglie in fiamme a Santa Palomba**, nel territorio di Pomezia: il Defender fa la verifica con il Mercedes Atego — impianto AIB da 6.000 litri — pronto in sede. **Martedì 25**, poco prima di pranzo, altra colonna di fumo in **via della Falcognana** — un fronte che [quest'estate ha già bruciato più volte](/comunicazioni/2026-08-10-incendi-pomezia-falcognana-agosto-2026/): escono l'Atego e il pickup, sette volontari impegnati per circa un'ora.
 
 È il meccanismo che raccontiamo spesso: la segnalazione parte dal **112** o arriva alla SOUP, la verifica rapida evita che un principio diventi un incendio. Come comportarsi quando si avvista del fumo lo trovi nella [pagina del rischio incendio](/rischi-prevenzione/rischio-incendio/).
 
