@@ -16,12 +16,12 @@ lis_section: "rischio-idrogeologico"
 social_citazione: "Il segnale registrato dai sismografi non era un terremoto: era la montagna che veniva giù."
 social_punti:
   - "Il 26 agosto il crollo di un ghiacciaio al confine Nepal-Tibet ha generato una valanga di roccia e ghiaccio, poi una colata detritica lungo la valle del Bhote Koshi."
-  - "Bilancio provvisorio: almeno 157 vittime accertate e oltre 400 dispersi, tra cui molti pellegrini diretti al monte Kailash."
+  - "Bilancio provvisorio: almeno 160 vittime e quasi 600 dispersi tra i due versanti, tra cui molti pellegrini diretti al monte Kailash."
   - "Stesso meccanismo di Chamoli 2021 in India e, sulle Alpi, del Pizzo Cengalo nel 2017: il clima che cambia rende instabili ghiaccio e permafrost."
   - "La lezione che vale anche in Italia: monitoraggio dei versanti e sistemi di allertamento salvano vite."
 ---
 
-La mattina di **mercoledì 26 agosto**, al confine tra il Nepal e la regione autonoma cinese del Tibet, un **ghiacciaio è crollato** in alta quota. La massa di roccia e ghiaccio si è trasformata in una **colata detritica**: un fiume di fango, detriti e acqua. Ha percorso la valle del **Bhote Koshi**, travolgendo il valico di frontiera di **Gyirong**, almeno **due centrali idroelettriche** e gli insediamenti lungo il fondovalle. Il bilancio, ancora provvisorio mentre scriviamo, è di **almeno 157 vittime accertate** e **403 dispersi**.
+La mattina di **mercoledì 26 agosto**, al confine tra il Nepal e la regione autonoma cinese del Tibet, un **ghiacciaio è crollato** in alta quota. La massa di roccia e ghiaccio si è trasformata in una **colata detritica**: un fiume di fango, detriti e acqua. Ha percorso la valle del **Bhote Koshi**, travolgendo il valico di frontiera di **Gyirong**, almeno **due centrali idroelettriche** e gli insediamenti lungo il fondovalle. Il bilancio, ancora provvisorio mentre scriviamo, è di **almeno 160 vittime** e di **quasi 600 dispersi** tra i due versanti del confine.
 
 ## Che cosa è successo
 
@@ -37,7 +37,13 @@ Chi si trovava sul fondovalle — villaggi, cantieri, il posto di frontiera — 
 
 ## I numeri, con prudenza
 
-Nelle prime 24 ore le agenzie internazionali hanno riferito **almeno 157 morti accertati** e **403 dispersi**, di cui **341 cittadini stranieri**. Tra loro **133 pellegrini indiani** diretti al **monte Kailash**, meta sacra per l'induismo, oltre a decine di cittadini statunitensi, australiani, britannici e canadesi. Il Landslide Blog stima le vittime complessive **attorno alle 400**, e considera probabile che il conto salga. Sono numeri da leggere per quello che sono: **bilanci provvisori di un'area remota**. Le comunicazioni sono interrotte e l'accesso via terra è distrutto.
+Sul versante nepalese, la polizia ha recuperato finora **157 corpi** e parla di **almeno 160 vittime accertate**. I dispersi sono **403**, di cui **341 cittadini stranieri**. Tra loro **133 pellegrini indiani** diretti al **monte Kailash**, meta sacra per l'induismo, oltre a decine di cittadini statunitensi, australiani, britannici e canadesi. Sul versante tibetano, i media di Stato cinesi riportano altri **265 dispersi**. Sommando le due sponde del confine, il totale sfiora **quota 600**. Il Landslide Blog stima le vittime complessive **attorno alle 400**, e considera probabile che il conto salga. Sono numeri da leggere per quello che sono: **bilanci provvisori di un'area remota**. Le comunicazioni sono interrotte e l'accesso via terra è distrutto.
+
+## Le immagini e gli italiani nell'area
+
+Le telecamere di sorveglianza del valico hanno ripreso gli ultimi istanti prima dell'arrivo del fronte. Nei video si vedono persone che corrono via dal piazzale della frontiera, mentre l'ondata di acqua e detriti — le testate l'hanno paragonata a uno tsunami — travolge autobus, camion ed edifici. I filmati verificati sono consultabili su [Sky TG24](https://tg24.sky.it/mondo/video/2026/08/26/alluvione-nepal-tibet-frana-1119971) e [Open](https://www.open.online/2026/08/26/nepal-fuga-persone-prima-travolte-alluvione-video/). Non li ripubblichiamo: appartengono alle testate e agli autori originali.
+
+C'è anche un dato che riguarda l'Italia. Secondo la Farnesina, nell'area tra Nepal e Tibet risultano registrati **circa 90 connazionali**. Due turisti italiani presenti nella zona colpita **sono stati evacuati incolumi** con la loro guida. Chi viaggia in zone remote può registrare il proprio itinerario sul portale [Dove siamo nel mondo](https://www.dovesiamonelmondo.it/) dell'Unità di crisi: è pensato proprio per situazioni come questa.
 
 ## Le analogie: quando la montagna ghiacciata cede
 
@@ -77,3 +83,4 @@ Alle comunità del Nepal e del Tibet, ai familiari delle vittime e dei dispersi,
 - [The Landslide Blog — AGU/EOS, analisi dell'evento del 26 agosto](https://eos.org/thelandslideblog/26-august-2026-nepal-and-tibet)
 - [GDACS — Global Disaster Alert and Coordination System](https://www.gdacs.org/)
 - [USGS — United States Geological Survey](https://earthquake.usgs.gov/)
+- [Sky TG24 — il punto sull'evento e i connazionali](https://tg24.sky.it/mondo/2026/08/26/frana-nepal-tibet)
