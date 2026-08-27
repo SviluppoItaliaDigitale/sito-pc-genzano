@@ -87,6 +87,22 @@ body.blackout #lmap{filter:brightness(.55) saturate(.7)}
   color:var(--cyn);background:rgba(4,7,11,.85);padding:3px 8px;border:1px solid var(--line);z-index:1000;display:none}
 #blitzLbl{position:absolute;bottom:60px;left:10px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;
   color:var(--gia);background:rgba(4,7,11,.85);padding:3px 8px;border:1px solid var(--line);z-index:1000;display:none}
+#worldLbl{position:absolute;bottom:34px;right:10px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;
+  color:var(--tx);background:rgba(4,7,11,.85);padding:3px 8px;border:1px solid var(--line);z-index:1000;display:none;max-width:60%}
+/* Pallini eventi mondo (GDACS/EMS): punto pieno + anelli concentrici che si
+   espandono, colorati per livello di allerta — stile sala situazioni. I verdi
+   restano fermi (quiete); pulsano solo orange/red e le attivazioni EMS. */
+.gd-dot{--c:#35e08c;position:relative}
+.gd-dot i{position:absolute;inset:4px;border-radius:50%;background:var(--c);box-shadow:0 0 6px var(--c)}
+.gd-dot::before,.gd-dot::after{content:"";position:absolute;inset:0;border-radius:50%;
+  border:1.5px solid var(--c);animation:gdPing 2.6s ease-out infinite}
+.gd-dot::after{animation-delay:1.3s}
+@keyframes gdPing{0%{transform:scale(.85);opacity:.9}100%{transform:scale(3.4);opacity:0}}
+.gd-dot.orange{--c:#ff8c1a}
+.gd-dot.red{--c:#ff3b30}
+.gd-dot.red::before,.gd-dot.red::after{animation-duration:1.6s}
+.gd-dot.ems{--c:#37c7ff}
+.gd-dot.quiet::before,.gd-dot.quiet::after{display:none}
 #cycBtn.on{color:var(--cyn);border-color:rgba(55,199,255,.6)}
 #mesBtn{position:absolute;top:84px;left:10px;z-index:1000;cursor:pointer;font-family:var(--mono);
   font-size:10px;letter-spacing:.12em;color:var(--dim);background:#081018;border:1px solid var(--line);padding:5px 9px}
@@ -308,6 +324,7 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
   <span id="srcTag">DPC · INGV · ITALIAMETEO · COPERNICUS · OPEN-METEO · BLITZORTUNG — STRUMENTO SPERIMENTALE, DATI INDICATIVI</span>
   <span id="radarLbl">RADAR DPC: —</span>
   <span id="blitzLbl">FULMINI: —</span>
+  <span id="worldLbl">MONDO — GDACS: ● VERDE · ● ARANCIO · ● ROSSO (anelli = allerta attiva) · ● EMS COPERNICUS. CLIC SUI PUNTI PER LA SCHEDA</span>
   <button id="mesBtn" aria-pressed="false" title="Misura distanze e raggi sulla mappa: primo clic fissa il centro, secondo clic congela, terzo cancella. ESC esce.">✚ MISURA</button>
   <span id="coordBox" title="Clic sulla mappa per copiare le coordinate">LAT — · LON —</span>
   <div id="dayTgl" role="group" aria-label="Giorno bollettino">
@@ -429,7 +446,7 @@ async function jget(u,ms=15000){
 /* ---------------- mappa Leaflet (stack del cruscotto) ---------------- */
 const map=L.map("lmap",{center:[42,12.5],zoom:6,zoomControl:true,attributionControl:true});
 map.attributionControl.setPrefix(false);
-L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",{subdomains:"abcd",maxZoom:12,
+const baseTile=L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",{subdomains:"abcd",maxZoom:12,
   attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/attributions">CARTO</a>'}).addTo(map);
 map.createPane("zonePane");  map.getPane("zonePane").style.zIndex=350;
 map.createPane("radarPane"); map.getPane("radarPane").style.zIndex=420;
@@ -898,6 +915,7 @@ async function loadEMS(){
     }catch(e){S.errs.ems="EMS_LINK";}
   }
   if(ok)S.last.ems=Date.now();
+  if(map.hasLayer(worldLayer))buildWorld();
   if(S.view==="ems")render(); tickUpd();
 }
 
@@ -917,7 +935,72 @@ async function loadGdacs(){
     S.gdacs=evs; S.gdacsSnap=d._snapshot&&d._snapshot.generato||null;
     S.last.gdacs=Date.now(); delete S.errs.gdacs;
   }catch(e){S.errs.gdacs="Allerte GDACS non disponibili.";}
+  if(map.hasLayer(worldLayer))buildWorld();
   if(S.view==="ems")render(); tickUpd();
+}
+
+/* ---------------- MAPPA MONDO — pallini pulsanti stile sala situazioni ----------------
+   Nel pannello EMERGENZE la mappa si allarga al planisfero: ogni evento GDACS
+   è un punto colorato per livello di allerta con anelli concentrici in
+   espansione (i verdi restano fermi); le attivazioni Copernicus EMS pulsano
+   in ciano. Uscendo dal pannello la mappa torna dov'era. */
+const worldLayer=L.layerGroup([]);
+let worldPrev=null;
+// Planisfero vettoriale self-hosted (Natural Earth, pubblico dominio): in
+// modalità mondo sostituisce le tile CARTO, che a zoom planetario richiedono
+// una API key (watermark). Continenti scuri su fondo scuro: zero tile esterne.
+map.createPane("worldGeoPane"); map.getPane("worldGeoPane").style.zIndex=200;
+let worldGeo=null,worldGeoBusy=false;
+async function ensureWorldGeo(){
+  if(worldGeo||worldGeoBusy)return;
+  worldGeoBusy=true;
+  try{
+    const d=await jget(BASE+"open-data/world-countries.geo.json",20000);
+    worldGeo=L.geoJSON(d,{pane:"worldGeoPane",
+      style:{color:"#1c3040",weight:.7,fillColor:"#0d1826",fillOpacity:1},
+      attribution:"Confini: Natural Earth (pubblico dominio)"});
+    if(map.hasLayer(worldLayer))worldGeo.addTo(map); // modalità mondo già attiva
+  }catch(e){}
+  worldGeoBusy=false;
+}
+const gdDot=(cls,size)=>L.divIcon({className:"gd-dot "+cls,html:"<i></i>",iconSize:[size,size],iconAnchor:[size/2,size/2]});
+function buildWorld(){
+  worldLayer.clearLayers();
+  for(const g of S.gdacs){
+    if(typeof g.lat!=="number"||typeof g.lon!=="number")continue;
+    const lv=String(g.alertlevel||"").toLowerCase();
+    const cls=lv==="red"?"red":lv==="orange"?"orange":"quiet";
+    L.marker([g.lat,g.lon],{icon:gdDot(cls,lv==="red"?18:14),keyboard:false,zIndexOffset:lv==="red"?200:lv==="orange"?100:0})
+      .bindPopup(`<b>${esc(GDACS_TIPO[g.eventtype]||g.eventtype||"")} — ${esc(g.eventname||g.name||"")}</b><br>`+
+        `Allerta ${esc(lv.toUpperCase())} · ${esc(g.country||"—")}${g.severitytext?`<br>${esc(g.severitytext)}`:""}<br>${g.fromdate?fmtT(g.fromdate):""}`+
+        `<br><a href="https://www.gdacs.org/report.aspx?eventid=${encodeURIComponent(g.eventid)}&eventtype=${encodeURIComponent(g.eventtype||"")}" target="_blank" rel="noopener">Scheda GDACS</a>`)
+      .addTo(worldLayer);
+  }
+  for(const a of S.ems){
+    const mt=/POINT \(([-\d.]+) ([-\d.]+)\)/.exec(a.centroid||"");
+    if(!mt)continue;
+    L.marker([+mt[2],+mt[1]],{icon:gdDot("ems",14),keyboard:false,zIndexOffset:150})
+      .bindPopup(`<b>${esc(EMS_IT[a.category]||a.category||"")} — ${esc(a.code)}</b><br>${esc((a.countries||[]).join(", "))}<br>`+
+        `<a href="https://rapidmapping.emergency.copernicus.eu/${encodeURIComponent(a.code)}" target="_blank" rel="noopener">Attivazione Copernicus EMS</a>`)
+      .addTo(worldLayer);
+  }
+}
+function worldMode(on){
+  const active=map.hasLayer(worldLayer);
+  if(on&&!active){
+    worldPrev={c:map.getCenter(),z:map.getZoom()};
+    buildWorld(); worldLayer.addTo(map);
+    if(map.hasLayer(baseTile))map.removeLayer(baseTile); // niente tile a zoom mondo
+    if(worldGeo)worldGeo.addTo(map); else ensureWorldGeo();
+    map.setView([24,10],2);
+    $("#worldLbl").style.display="block";
+  }else if(!on&&active){
+    map.removeLayer(worldLayer);
+    if(worldGeo&&map.hasLayer(worldGeo))map.removeLayer(worldGeo);
+    if(!map.hasLayer(baseTile))baseTile.addTo(map);
+    if(worldPrev){map.setView(worldPrev.c,worldPrev.z);worldPrev=null;}
+    $("#worldLbl").style.display="none";
+  }
 }
 
 /* ---------------- pannelli ---------------- */
@@ -1434,6 +1517,7 @@ function setView(v,fromHash){
   S.view=v;
   document.querySelectorAll("#nav [data-v]").forEach(x=>x.classList.toggle("act",x.dataset.v===v));
   if(!fromHash)history.replaceState(null,"","#"+VIEW_SLUG[v]);
+  worldMode(v==="ems");
   render(); if(typeof saveCfg==="function")saveCfg();
 }
 window.addEventListener("hashchange",()=>{
