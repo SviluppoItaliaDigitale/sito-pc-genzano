@@ -1,15 +1,17 @@
 # Snapshot self-hosted della Sala situazioni (/monitor/), rigenerati ogni
-# 30 minuti: notizie agenzie (ANSA/Adnkronos), allerte globali GDACS e
-# attivazioni Copernicus EMS. Queste fonti non espongono CORS ai browser:
-# la pagina legge le copie same-origin in static/open-data/.
+# 15 minuti: notizie agenzie (ANSA/Adnkronos), allerte globali GDACS e
+# attivazioni Copernicus EMS. Queste fonti non espongono CORS ai browser.
 # Gli script sono fail-safe (fonte giù = file invariato, exit 0) e committano
-# solo se i dati cambiano davvero. Il deploy lo raccoglie deploy-coalescer.yml
-# (cron ai minuti 13 e 43): freschezza effettiva sul sito ~30-40 minuti.
+# solo se i dati cambiano davvero.
+# FRESCHEZZA: la Sala situazioni legge questi JSON PRIMA da
+# raw.githubusercontent.com (CORS aperto, già in CSP) — disponibili al
+# commit, SENZA aspettare il deploy — con fallback sulla copia del sito.
+# Freschezza effettiva ~15-20 minuti (cron 15 + cache CDN raw ~5).
 name: "🖥️ Dati Sala situazioni (notizie + GDACS + EMS)"
 
 on:
   schedule:
-    - cron: "7,37 * * * *"
+    - cron: "3,18,33,48 * * * *"
   workflow_dispatch:
 
 concurrency:
