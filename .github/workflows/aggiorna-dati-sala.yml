@@ -1,0 +1,49 @@
+# Snapshot self-hosted della Sala situazioni (/monitor/), rigenerati ogni
+# 30 minuti: notizie agenzie (ANSA/Adnkronos), allerte globali GDACS e
+# attivazioni Copernicus EMS. Queste fonti non espongono CORS ai browser:
+# la pagina legge le copie same-origin in static/open-data/.
+# Gli script sono fail-safe (fonte giù = file invariato, exit 0) e committano
+# solo se i dati cambiano davvero. Il deploy lo raccoglie deploy-coalescer.yml
+# (cron ai minuti 13 e 43): freschezza effettiva sul sito ~30-40 minuti.
+name: "🖥️ Dati Sala situazioni (notizie + GDACS + EMS)"
+
+on:
+  schedule:
+    - cron: "7,37 * * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: aggiorna-dati-sala
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  aggiorna:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: "📰🌍 Rigenera gli snapshot (fail-safe per fonte)"
+        run: |
+          python3 scripts/genera-notizie-agenzie.py
+          python3 scripts/genera-gdacs-eventi.py
+          python3 scripts/genera-ems-attivazioni.py
+
+      - name: "💾 Commit solo se i dati sono cambiati"
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add static/open-data/notizie-agenzie.json \
+                  static/open-data/gdacs-eventi.json \
+                  static/open-data/ems-attivazioni.json
+          if git diff --cached --quiet; then
+            echo "Snapshot invariati: nessun commit."
+            exit 0
+          fi
+          git commit -m "[skip-dati-sala] Snapshot sala situazioni: notizie + GDACS + EMS"
+          # anti non-fast-forward: altri workflow committano di frequente
+          git pull --rebase origin main
+          git push
