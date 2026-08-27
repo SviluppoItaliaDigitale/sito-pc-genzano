@@ -7017,6 +7017,37 @@ html.a11y-pause-anim .lab-esempio-card:hover { transform: none; }
   .cruscotto-home-card:hover, .cruscotto-home-card:focus-visible { transform: none; }
 }
 html.a11y-pause-anim .cruscotto-home-card, html.a11y-pause-anim .cruscotto-home-cta i { transition: none; }
+
+/* Richiamo Sala situazioni sotto la card del cruscotto: barra scura in stile
+   monitor operativo. Contrasti WCAG AA: #eaf2fb e #7fd4ff su #071018 > 7:1. */
+.cruscotto-home-monitor {
+  display: flex; align-items: center; gap: .9rem; margin-top: .8rem;
+  background: #071018; color: #eaf2fb; border: 1px solid #1c3040;
+  border-radius: 10px; padding: .75rem 1.1rem; text-decoration: none;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.cruscotto-home-monitor:hover, .cruscotto-home-monitor:focus-visible {
+  color: #fff; transform: translateY(-2px); box-shadow: 0 4px 14px rgba(0,20,40,.35);
+  border-color: #37c7ff;
+}
+.cruscotto-home-monitor:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 3px; }
+.chm-icon { flex: 0 0 auto; font-size: 1.6rem; line-height: 1; color: #37c7ff; }
+.chm-testo { flex: 1 1 auto; font-size: .95rem; line-height: 1.45; }
+.chm-testo strong { color: #fff; }
+.chm-badge { display: inline-block; font-size: .7rem; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; color: #7fd4ff; border: 1px solid #2b5a75; border-radius: 999px;
+  padding: .05rem .5rem; margin-left: .3rem; vertical-align: middle; }
+.chm-cta { flex: 0 0 auto; display: inline-flex; align-items: center; gap: .4rem;
+  font-size: .85rem; font-weight: 700; color: #7fd4ff; white-space: nowrap; }
+@media (max-width: 768px) {
+  .cruscotto-home-monitor { flex-direction: column; align-items: flex-start; gap: .5rem; }
+  .chm-cta { align-self: flex-end; }
+}
+@media (prefers-reduced-motion: reduce) { .cruscotto-home-monitor { transition: none; }
+  .cruscotto-home-monitor:hover, .cruscotto-home-monitor:focus-visible { transform: none; } }
+html.a11y-pause-anim .cruscotto-home-monitor { transition: none; }
+html.a11y-pause-anim .cruscotto-home-monitor:hover { transform: none; }
+
 @media print { .cruscotto-home { display: none; } }
 
 /* ===========================================================================
