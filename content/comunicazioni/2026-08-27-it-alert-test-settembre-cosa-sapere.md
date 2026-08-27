@@ -1,6 +1,6 @@
 ---
 title: "IT-Alert: cosa è, come funziona, come reagire al prossimo test"
-date: 2026-08-27
+date: 2026-08-27T00:01:00+02:00
 description: "IT-Alert è il sistema nazionale di allarme pubblico via cellulare. Come riconoscerlo, cosa fare al suono, perché è importante."
 badge: "Informazione"
 priorita: "normale"
