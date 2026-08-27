@@ -92,7 +92,7 @@ body.blackout #lmap{filter:brightness(.55) saturate(.7)}
 /* Pallini eventi mondo (GDACS/EMS): punto pieno + anelli concentrici che si
    espandono, colorati per livello di allerta — stile sala situazioni. I verdi
    restano fermi (quiete); pulsano solo orange/red e le attivazioni EMS. */
-.gd-dot{--c:#35e08c;position:relative}
+.gd-dot{--c:#35e08c;position:absolute} /* absolute: NON sovrascrivere il positioning dei marker Leaflet */
 .gd-dot i{position:absolute;inset:4px;border-radius:50%;background:var(--c);box-shadow:0 0 6px var(--c)}
 .gd-dot::before,.gd-dot::after{content:"";position:absolute;inset:0;border-radius:50%;
   border:1.5px solid var(--c);animation:gdPing 2.6s ease-out infinite}
@@ -102,6 +102,7 @@ body.blackout #lmap{filter:brightness(.55) saturate(.7)}
 .gd-dot.red{--c:#ff3b30}
 .gd-dot.red::before,.gd-dot.red::after{animation-duration:1.6s}
 .gd-dot.ems{--c:#37c7ff}
+.gd-dot.yellow{--c:#ffd60a}
 .gd-dot.quiet::before,.gd-dot.quiet::after{display:none}
 #cycBtn.on{color:var(--cyn);border-color:rgba(55,199,255,.6)}
 #mesBtn{position:absolute;top:84px;left:10px;z-index:1000;cursor:pointer;font-family:var(--mono);
@@ -324,7 +325,7 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
   <span id="srcTag">DPC · INGV · ITALIAMETEO · COPERNICUS · OPEN-METEO · BLITZORTUNG — STRUMENTO SPERIMENTALE, DATI INDICATIVI</span>
   <span id="radarLbl">RADAR DPC: —</span>
   <span id="blitzLbl">FULMINI: —</span>
-  <span id="worldLbl">MONDO — GDACS: ● VERDE · ● ARANCIO · ● ROSSO (anelli = allerta attiva) · ● EMS COPERNICUS. CLIC SUI PUNTI PER LA SCHEDA</span>
+  <span id="worldLbl">MONDO — GDACS: VERDE/ARANCIO/ROSSO (anelli = allerta) · CIANO = EMS COPERNICUS · SISMI INGV 7GG: GIALLO M4+ / ARANCIO M5+ / ROSSO M6+. CLIC SUI PUNTI PER LA SCHEDA</span>
   <button id="mesBtn" aria-pressed="false" title="Misura distanze e raggi sulla mappa: primo clic fissa il centro, secondo clic congela, terzo cancella. ESC esce.">✚ MISURA</button>
   <span id="coordBox" title="Clic sulla mappa per copiare le coordinate">LAT — · LON —</span>
   <div id="dayTgl" role="group" aria-label="Giorno bollettino">
@@ -784,6 +785,7 @@ async function loadINGV(){
       }
     S.qkSeen=new Set(S.quakes.map(q=>q.id));
     S.last.ingv=Date.now();
+    if(map.hasLayer(worldLayer))buildWorld();
     $("#qkN").textContent=S.quakes.filter(q=>Date.parse(q.time)>Date.now()-7*864e5).length;
     qkLayer.clearLayers();
     for(const q of S.quakes){
@@ -984,21 +986,36 @@ function buildWorld(){
         `<a href="https://rapidmapping.emergency.copernicus.eu/${encodeURIComponent(a.code)}" target="_blank" rel="noopener">Attivazione Copernicus EMS</a>`)
       .addTo(worldLayer);
   }
+  // sismi INGV degli ultimi 7 giorni, stessa estetica: colore per magnitudo
+  // (giallo M4+, arancio M5+, rosso M6+ con anelli); sotto M5 restano quieti
+  for(const q of S.quakes){
+    if(q.mag==null||q.mag<4)continue;
+    const cls=q.mag>=6?"red":q.mag>=5?"orange":"yellow quiet";
+    L.marker([q.lat,q.lon],{icon:gdDot(cls,q.mag>=6?18:14),keyboard:false,zIndexOffset:q.mag>=6?180:80})
+      .bindPopup(`<b>Sisma M ${q.mag.toFixed(1)} — ${esc(q.place||"")}</b><br>`+
+        `${fmtT(q.time)} · prof. ${q.dep!=null?q.dep.toFixed(0):"?"} km · ${q.km} km da Genzano<br>`+
+        `<a href="${BASE}cruscotto/terremoto/#${encodeURIComponent(q.id)}">Scheda evento (dati INGV)</a>`)
+      .addTo(worldLayer);
+  }
 }
 function worldMode(on){
   const active=map.hasLayer(worldLayer);
   if(on&&!active){
     worldPrev={c:map.getCenter(),z:map.getZoom()};
-    buildWorld(); worldLayer.addTo(map);
     if(map.hasLayer(baseTile))map.removeLayer(baseTile); // niente tile a zoom mondo
+    if(map.hasLayer(qkLayer))map.removeLayer(qkLayer);   // i sismi qui sono nel layer mondo
+    // vista SENZA animazione e PRIMA di aggiungere i marker: i marker inseriti
+    // durante l'animazione di zoom restano in posizioni sbagliate (quirk Leaflet)
+    map.setView([24,10],2,{animate:false});
+    buildWorld(); worldLayer.addTo(map);
     if(worldGeo)worldGeo.addTo(map); else ensureWorldGeo();
-    map.setView([24,10],2);
     $("#worldLbl").style.display="block";
   }else if(!on&&active){
     map.removeLayer(worldLayer);
     if(worldGeo&&map.hasLayer(worldGeo))map.removeLayer(worldGeo);
     if(!map.hasLayer(baseTile))baseTile.addTo(map);
-    if(worldPrev){map.setView(worldPrev.c,worldPrev.z);worldPrev=null;}
+    if(S.layers.qk&&!map.hasLayer(qkLayer))qkLayer.addTo(map);
+    if(worldPrev){map.setView(worldPrev.c,worldPrev.z,{animate:false});worldPrev=null;}
     $("#worldLbl").style.display="none";
   }
 }
