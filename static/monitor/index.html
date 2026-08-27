@@ -103,6 +103,7 @@ body.blackout #lmap{filter:brightness(.55) saturate(.7)}
 .gd-dot.red::before,.gd-dot.red::after{animation-duration:1.6s}
 .gd-dot.ems{--c:#37c7ff}
 .gd-dot.yellow{--c:#ffd60a}
+.gd-dot.vol{--c:#e879f9}
 .gd-dot.quiet::before,.gd-dot.quiet::after{display:none}
 #cycBtn.on{color:var(--cyn);border-color:rgba(55,199,255,.6)}
 #mesBtn{position:absolute;top:84px;left:10px;z-index:1000;cursor:pointer;font-family:var(--mono);
@@ -322,10 +323,10 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
 <main id="map">
   <div id="lmap"></div>
   <div id="windyWrap"><iframe id="windyFrame" title="Mappa meteo interattiva Windy centrata su Genzano di Roma" loading="lazy"></iframe></div>
-  <span id="srcTag">DPC · INGV · ITALIAMETEO · COPERNICUS · OPEN-METEO · BLITZORTUNG — STRUMENTO SPERIMENTALE, DATI INDICATIVI</span>
+  <span id="srcTag">DPC · INGV · USGS · NASA · ITALIAMETEO · COPERNICUS · OPEN-METEO · BLITZORTUNG — STRUMENTO SPERIMENTALE, DATI INDICATIVI</span>
   <span id="radarLbl">RADAR DPC: —</span>
   <span id="blitzLbl">FULMINI: —</span>
-  <span id="worldLbl">MONDO — GDACS: VERDE/ARANCIO/ROSSO (anelli = allerta) · CIANO = EMS COPERNICUS · SISMI INGV 7GG: GIALLO M4+ / ARANCIO M5+ / ROSSO M6+. CLIC SUI PUNTI PER LA SCHEDA</span>
+  <span id="worldLbl">MONDO — GDACS: VERDE/ARANCIO/ROSSO (anelli = allerta) · CIANO = EMS COPERNICUS · SISMI INGV+USGS 7GG: GIALLO M4+ / ARANCIO M5+ / ROSSO M6+ · MAGENTA = VULCANI ATTIVI (NASA). CLIC SUI PUNTI PER LA SCHEDA</span>
   <button id="mesBtn" aria-pressed="false" title="Misura distanze e raggi sulla mappa: primo clic fissa il centro, secondo clic congela, terzo cancella. ESC esce.">✚ MISURA</button>
   <span id="coordBox" title="Clic sulla mappa per copiare le coordinate">LAT — · LON —</span>
   <div id="dayTgl" role="group" aria-label="Giorno bollettino">
@@ -426,7 +427,8 @@ const S={view:"all",day:"today",black:false,
   boll:null,bollVecchio:null,zones:{today:null,tomorrow:null},sito:null,
   quakes:[],wx:null,wxT:0,aria:null,mare:null,ems:[],emsSnap:null,
   obs:null,obsBusy:false,last:{},lastFull:0,errs:{},
-  strikes:[],cycle:false,qkSeen:null,logArr:[],gdacs:[],gdacsSnap:null,news:[],newsCache:""};
+  strikes:[],cycle:false,qkSeen:null,logArr:[],gdacs:[],gdacsSnap:null,news:[],newsCache:"",
+  usgs:[],eonet:[]};
 try{S.logArr=JSON.parse(localStorage.getItem("pcgz-monitor-log")||"[]")||[]}catch(e){S.logArr=[]}
 const $=s=>document.querySelector(s);
 const pad=n=>String(n).padStart(2,"0");
@@ -793,6 +795,12 @@ async function loadINGV(){
         color:q.col,weight:1.4,fillColor:q.col,fillOpacity:.35})
        .bindPopup(`<b>M ${q.mag.toFixed(1)} — ${q.place||""}</b><br>${fmtT(q.time)} · prof. ${q.dep!=null?q.dep.toFixed(0):"?"} km<br>${q.km} km da Genzano`)
        .addTo(qkLayer);
+      // eventi delle ultime 6 ore: anelli pulsanti anche sulla mappa Italia
+      if(Date.now()-Date.parse(q.time)<6*36e5){
+        const cls=q.mag>=4?"red":q.mag>=3?"orange":"yellow";
+        L.marker([q.lat,q.lon],{icon:gdDot(cls,14),keyboard:false,interactive:false})
+          .addTo(qkLayer);
+      }
     }
     delete S.errs.ingv;
   }catch(e){S.errs.ingv="Servizio INGV non raggiungibile ("+e.message+").";$("#qkN").textContent="N/D";}
@@ -941,6 +949,41 @@ async function loadGdacs(){
   if(S.view==="ems")render(); tickUpd();
 }
 
+/* ---------------- USGS — sismi mondiali quasi in tempo reale ----------------
+   Feed pubblico M4.5+ degli ultimi 7 giorni (CORS aperto), aggiornato da USGS
+   ogni minuto: lo interroghiamo ogni 2. Dedup contro INGV e GDACS in buildWorld. */
+async function loadUsgs(){
+  try{
+    const d=await jget("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson",15000);
+    S.usgs=(d.features||[]).map(f=>({
+      mag:f.properties.mag,place:f.properties.place,t:f.properties.time,
+      url:f.properties.url,
+      lon:f.geometry.coordinates[0],lat:f.geometry.coordinates[1],
+      dep:f.geometry.coordinates[2]})).filter(q=>typeof q.lat==="number"&&q.mag!=null);
+    S.last.usgs=Date.now(); delete S.errs.usgs;
+  }catch(e){S.errs.usgs="Feed sismico mondiale USGS non raggiungibile.";}
+  if(map.hasLayer(worldLayer))buildWorld();
+  tickUpd();
+}
+
+/* ---------------- NASA EONET — vulcani attivi nel mondo ----------------
+   Earth Observatory Natural Event Tracker (CORS aperto): eventi vulcanici
+   con stato "open", coordinate dell'ultima geometria disponibile. */
+async function loadEonet(){
+  try{
+    const d=await jget("https://eonet.gsfc.nasa.gov/api/v3/events?status=open&category=volcanoes&limit=60",15000);
+    S.eonet=(d.events||[]).map(e=>{
+      const g=(e.geometry||[]).slice(-1)[0]||{};
+      const c=g.coordinates||[];
+      return {id:e.id,title:e.title,date:g.date,lon:c[0],lat:c[1],
+        srcUrl:(e.sources&&e.sources[0]&&e.sources[0].url)||""};
+    }).filter(v=>typeof v.lat==="number");
+    S.last.eonet=Date.now(); delete S.errs.eonet;
+  }catch(e){S.errs.eonet="Vulcani attivi NASA EONET non raggiungibili.";}
+  if(map.hasLayer(worldLayer))buildWorld();
+  tickUpd();
+}
+
 /* ---------------- MAPPA MONDO — pallini pulsanti stile sala situazioni ----------------
    Nel pannello EMERGENZE la mappa si allarga al planisfero: ogni evento GDACS
    è un punto colorato per livello di allerta con anelli concentrici in
@@ -995,6 +1038,28 @@ function buildWorld(){
       .bindPopup(`<b>Sisma M ${q.mag.toFixed(1)} — ${esc(q.place||"")}</b><br>`+
         `${fmtT(q.time)} · prof. ${q.dep!=null?q.dep.toFixed(0):"?"} km · ${q.km} km da Genzano<br>`+
         `<a href="${BASE}cruscotto/terremoto/#${encodeURIComponent(q.id)}">Scheda evento (dati INGV)</a>`)
+      .addTo(worldLayer);
+  }
+  // sismi mondiali USGS M4.5+ (feed aggiornato al minuto). Dedup: si saltano
+  // gli eventi già rappresentati da INGV o da un'allerta terremoto GDACS
+  const vicino=(la,lo,arr,getLa,getLo)=>arr.some(x=>Math.abs(getLa(x)-la)<.6&&Math.abs(getLo(x)-lo)<.6);
+  const gdacsEq=S.gdacs.filter(g=>g.eventtype==="EQ"&&typeof g.lat==="number");
+  for(const q of S.usgs){
+    if(vicino(q.lat,q.lon,S.quakes.filter(x=>x.mag>=4),x=>x.lat,x=>x.lon))continue;
+    if(vicino(q.lat,q.lon,gdacsEq,x=>x.lat,x=>x.lon))continue;
+    const cls=q.mag>=6?"red":q.mag>=5?"orange":"yellow quiet";
+    L.marker([q.lat,q.lon],{icon:gdDot(cls,q.mag>=6?18:14),keyboard:false,zIndexOffset:q.mag>=6?170:70})
+      .bindPopup(`<b>Sisma M ${q.mag.toFixed(1)} — ${esc(q.place||"")}</b><br>`+
+        `${fmtT(new Date(q.t).toISOString())} · prof. ${q.dep!=null?q.dep.toFixed(0):"?"} km<br>`+
+        `<a href="${esc(q.url)}" target="_blank" rel="noopener">Scheda USGS</a>`)
+      .addTo(worldLayer);
+  }
+  // vulcani attivi NASA EONET: magenta, sempre pulsanti (eventi aperti)
+  for(const v of S.eonet){
+    L.marker([v.lat,v.lon],{icon:gdDot("vol",14),keyboard:false,zIndexOffset:120})
+      .bindPopup(`<b>Vulcano attivo — ${esc(v.title)}</b><br>`+
+        `${v.date?fmtT(v.date):""} · Fonte: NASA EONET`+
+        (v.srcUrl?`<br><a href="${esc(v.srcUrl)}" target="_blank" rel="noopener">Scheda dell'evento</a>`:""))
       .addTo(worldLayer);
   }
 }
@@ -1079,7 +1144,8 @@ function extraCards(){
 // sapere QUANDO è arrivato l'ultimo dato di ogni fonte, a colpo d'occhio)
 function fontiCard(){
   const righe=[["ALLERTA SITO",S.last.sito],["BOLLETTINO DPC",S.last.dpcOk],["SISMI INGV",S.last.ingv],
-    ["METEO",S.last.wx],["ARIA/MARE",S.last.amb],["EMS UE",S.last.ems],["GDACS",S.last.gdacs],
+    ["SISMI MONDO USGS",S.last.usgs],["METEO",S.last.wx],["ARIA/MARE",S.last.amb],
+    ["EMS UE",S.last.ems],["GDACS",S.last.gdacs],["VULCANI NASA",S.last.eonet],
     ["STAZIONI",S.obs&&S.obs.t]];
   const el=document.createElement("div");el.className="wx";
   el.innerHTML=`<h3>STATO FONTI<span>ULTIMO DATO RICEVUTO</span></h3><div class="kgrid">`+
@@ -1513,6 +1579,9 @@ function tickUpd(){
   if(S.ems.length)parts.push("ATTIVAZIONI COPERNICUS EMS APERTE: "+S.ems.length);
   const gOR=S.gdacs.filter(g=>["orange","red"].includes(String(g.alertlevel).toLowerCase())).length;
   if(gOR)parts.push("GDACS MONDO: "+gOR+" ALLERTE ORANGE/RED");
+  if(S.usgs.length){const u=S.usgs.reduce((a,b)=>a.t>b.t?a:b);
+    parts.push("ULTIMO SISMA NEL MONDO (USGS): M"+u.mag.toFixed(1)+" "+String(u.place||"").toUpperCase());}
+  if(S.eonet.length)parts.push("VULCANI ATTIVI NEL MONDO: "+S.eonet.length+" (NASA EONET)");
   for(const k in S.errs)if(S.errs[k]!=="EMS_LINK")parts.push("⚠ "+S.errs[k].toUpperCase());
   parts.push("STRUMENTO SPERIMENTALE, DATI INDICATIVI — IN EMERGENZA CHIAMA IL 112");
   const txt=parts.join("   ···   ")+"   ···   ";
@@ -1616,6 +1685,7 @@ navArrUpd(); setTimeout(navArrUpd,1200); // ricontrollo dopo il caricamento dei 
 function refreshAll(man){
   S.lastFull=Date.now();
   loadSito(); loadINGV(); loadWX(); loadAmb(); loadEMS(); loadGdacs(); loadNews();
+  loadUsgs(); loadEonet();
   if(S.obs||S.view==="met")loadObs();
   if(S.layers.radar)radarRefresh();
   // il bollettino DPC cambia poche volte al giorno e api.github.com ha rate
@@ -1704,13 +1774,16 @@ setInterval(()=>{
 },1000);
 S.lastFull=Date.now();
 loadSito(); loadDPC(); loadINGV(); loadWX(); loadAmb(); loadEMS(); loadGdacs(); loadNews();
-setInterval(loadGdacs,30*60e3);
+loadUsgs(); loadEonet();
+setInterval(loadUsgs,2*60e3);          // USGS aggiorna il feed ogni minuto
+setInterval(loadEonet,15*60e3);
+setInterval(loadGdacs,15*60e3);
 setInterval(loadNews,5*60e3);
 setInterval(loadINGV,5*60e3);
 setInterval(loadWX,5*60e3);            // quasi tempo reale: current a passo 15 min
 setInterval(loadAmb,30*60e3);
 setInterval(loadEMS,15*60e3);
-setInterval(loadSito,10*60e3);
+setInterval(loadSito,5*60e3);
 setInterval(loadDPC,60*60e3);
 setInterval(()=>{if(S.obs)loadObs()},15*60e3); // stazioni: solo dopo il primo uso
 </script>
