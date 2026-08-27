@@ -1,12 +1,28 @@
 {
  "_snapshot": {
   "fonte": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/",
-  "generato": "2026-08-24T21:46:00+00:00",
+  "generato": "2026-08-27T15:32:48+00:00",
   "licenza": "Copernicus Emergency Management Service — dati pubblici",
   "nota": "Copia locale: l'API non espone CORS, il browser non può leggerla direttamente."
  },
  "count": 50,
  "results": [
+  {
+   "activationTime": "2026-08-26T09:53:00",
+   "category": "Flood",
+   "centroid": "POINT (85.35376299877846 28.212231792029492)",
+   "closed": false,
+   "code": "EMSR927",
+   "countries": [
+    "Nepal"
+   ],
+   "eventTime": "2026-08-25T22:00:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-08-27T10:53:51.304195",
+   "n_aois": 2,
+   "n_products": 0,
+   "name": "Flood in Nepal"
+  },
   {
    "activationTime": "2026-08-22T15:45:00",
    "category": "Flood",
@@ -44,16 +60,16 @@
    "activationTime": "2026-08-16T08:46:00",
    "category": "Wildfire",
    "centroid": "POINT (13.030094533170308 46.40913427141007)",
-   "closed": false,
+   "closed": true,
    "code": "EMSR924",
    "countries": [
     "Italy"
    ],
    "eventTime": "2026-08-13T22:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-08-24T16:51:34.312955",
+   "lastUpdate": "2026-08-27T11:18:13.300153",
    "n_aois": 1,
-   "n_products": 3,
+   "n_products": 4,
    "name": "Wildfire in Friuli, Italy"
   },
   {
@@ -83,9 +99,9 @@
    ],
    "eventTime": "2026-08-14T22:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-08-24T20:33:57.068704",
+   "lastUpdate": "2026-08-27T13:30:27.155875",
    "n_aois": 2,
-   "n_products": 11,
+   "n_products": 12,
    "name": "Wildfire in Montenegro"
   },
   {
@@ -115,7 +131,7 @@
    ],
    "eventTime": "2026-08-13T12:55:00",
    "gdacsId": null,
-   "lastUpdate": "2026-08-24T14:34:41.719173",
+   "lastUpdate": "2026-08-26T15:32:16.038139",
    "n_aois": 3,
    "n_products": 8,
    "name": "Wildfire in Huertgen Forest, Germany and Belgium"
@@ -195,9 +211,9 @@
    ],
    "eventTime": "2026-08-02T10:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-08-24T15:58:30.848746",
+   "lastUpdate": "2026-08-27T11:03:44.122330",
    "n_aois": 3,
-   "n_products": 32,
+   "n_products": 34,
    "name": "Wildfire in Serbia"
   },
   {
@@ -259,7 +275,7 @@
    ],
    "eventTime": "2026-07-31T03:35:00",
    "gdacsId": null,
-   "lastUpdate": "2026-08-13T12:50:41.188719",
+   "lastUpdate": "2026-08-27T12:09:26.630863",
    "n_aois": 1,
    "n_products": 7,
    "name": "Wildfires in Viotia, Greece"
@@ -292,7 +308,7 @@
    ],
    "eventTime": "2026-07-29T10:25:00",
    "gdacsId": null,
-   "lastUpdate": "2026-08-04T13:08:38.157467",
+   "lastUpdate": "2026-08-27T11:43:15.121475",
    "n_aois": 1,
    "n_products": 2,
    "name": "Wildfires in Crete Island, Greece"
@@ -404,7 +420,7 @@
    ],
    "eventTime": "2026-07-20T01:07:00",
    "gdacsId": "WF1029643",
-   "lastUpdate": "2026-08-18T06:38:15.999237",
+   "lastUpdate": "2026-08-27T11:42:19.965718",
    "n_aois": 7,
    "n_products": 19,
    "name": "Wildfire in Central Spain"
@@ -468,7 +484,7 @@
    ],
    "eventTime": "2026-07-15T13:25:00",
    "gdacsId": null,
-   "lastUpdate": "2026-07-21T11:13:34.681171",
+   "lastUpdate": "2026-08-27T11:41:27.718643",
    "n_aois": 1,
    "n_products": 5,
    "name": "Wildfire in Aragon, Spain"
@@ -500,7 +516,7 @@
    ],
    "eventTime": "2026-07-12T15:00:00",
    "gdacsId": "WF1029489",
-   "lastUpdate": "2026-07-21T11:08:03.323590",
+   "lastUpdate": "2026-08-27T11:40:42.224688",
    "n_aois": 1,
    "n_products": 5,
    "name": "Wildfire in Fontainebleau, France"
@@ -548,7 +564,7 @@
    ],
    "eventTime": "2026-07-07T09:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-07-13T11:47:24.803610",
+   "lastUpdate": "2026-08-27T11:40:11.627951",
    "n_aois": 1,
    "n_products": 6,
    "name": "Wildfire in Diois, France"
@@ -596,7 +612,7 @@
    ],
    "eventTime": "2026-06-24T19:17:00",
    "gdacsId": null,
-   "lastUpdate": "2026-07-07T12:49:05.179330",
+   "lastUpdate": "2026-08-27T11:37:44.362398",
    "n_aois": 1,
    "n_products": 2,
    "name": "Wildfire in Congosto, Spain"
@@ -793,22 +809,6 @@
    "n_aois": 19,
    "n_products": 18,
    "name": "Tropical Cyclone Sinlaku in Micronesia"
-  },
-  {
-   "activationTime": "2026-04-01T15:16:00",
-   "category": "Flood",
-   "centroid": "POINT (14.938764359319357 41.899617109537935)",
-   "closed": true,
-   "code": "EMSR871",
-   "countries": [
-    "Italy"
-   ],
-   "eventTime": "2026-03-31T15:00:00",
-   "gdacsId": null,
-   "lastUpdate": "2026-04-14T07:32:28.491219",
-   "n_aois": 6,
-   "n_products": 15,
-   "name": "Flood in Abruzzo, Molise and Basilicata regions, Italy"
   }
  ]
 }
