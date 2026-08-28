@@ -7701,3 +7701,13 @@ html.a11y-contrast-blue-cream .bottom-nav a.active { color: #003366; }
   background-color: #ffffff;
   border-color: #ffffff;
 }
+
+/* ============================================================
+   MAPPE — BASE SCURA OSM v1.0 (28/08/2026)
+   CARTO ha iniziato a marchiare le tile anonime ("API KEY
+   REQUIRED"): tutte le mappe del sito sono passate alle tile
+   OpenStreetMap standard. Le basi scure (radar DPC, ItaliaMeteo,
+   mare) si ottengono invertendo le tile via CSS: la classe è
+   assegnata al layer Leaflet con l'opzione className.
+   ============================================================ */
+.osm-scura { filter: invert(1) hue-rotate(180deg) brightness(.85) contrast(.9) saturate(.35); }

@@ -22,6 +22,9 @@
 html,body{height:100%}
 body{background:var(--bg);color:var(--tx);font-family:var(--disp);overflow:hidden;font-size:13px}
 body.blackout #lmap{filter:brightness(.55) saturate(.7)}
+/* Base scura senza CARTO (che ora marchia le tile anonime "API KEY REQUIRED"):
+   tile OpenStreetMap standard invertite via CSS — stessa estetica, zero chiavi */
+.osm-scura{filter:invert(1) hue-rotate(180deg) brightness(.85) contrast(.9) saturate(.35)}
 
 #hdr{position:fixed;inset:0 0 auto 0;height:46px;display:flex;align-items:center;gap:10px;
   padding:0 12px;background:linear-gradient(180deg,#0b141d,#070d13);border-bottom:1px solid var(--line);z-index:1100}
@@ -456,8 +459,8 @@ async function jget(u,ms=15000){
 /* ---------------- mappa Leaflet (stack del cruscotto) ---------------- */
 const map=L.map("lmap",{center:[42,12.5],zoom:6,zoomControl:true,attributionControl:true});
 map.attributionControl.setPrefix(false);
-const baseTile=L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",{subdomains:"abcd",maxZoom:12,
-  attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/attributions">CARTO</a>'}).addTo(map);
+const baseTile=L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png",{className:"osm-scura",maxZoom:12,
+  attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
 map.createPane("zonePane");  map.getPane("zonePane").style.zIndex=350;
 map.createPane("radarPane"); map.getPane("radarPane").style.zIndex=420;
 map.createPane("qkPane");    map.getPane("qkPane").style.zIndex=450;

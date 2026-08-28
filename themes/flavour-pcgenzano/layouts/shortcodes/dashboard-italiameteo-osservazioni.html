@@ -54,7 +54,7 @@
     </div>
   </noscript>
 
-  <p class="small text-muted mt-2 mb-0">{{ partial "fonte-badge.html" "ufficiale" }}<i class="bi bi-info-circle" aria-hidden="true"></i> Dati delle stazioni al suolo (ultimo dato disponibile, aggiornamento orario). Mappa completa su <a href="https://meteohub.agenziaitaliameteo.it/app/maps/observations" target="_blank" rel="noopener noreferrer">MeteoHub</a>. Fonte: <strong>Agenzia nazionale per la meteorologia e climatologia «ItaliaMeteo»</strong>, solo stazioni a licenza <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> — base <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap</a> / <a href="https://carto.com/attributions" target="_blank" rel="noopener noreferrer">© CARTO</a>. In emergenza chiama il <a href="tel:112">112</a>.</p>
+  <p class="small text-muted mt-2 mb-0">{{ partial "fonte-badge.html" "ufficiale" }}<i class="bi bi-info-circle" aria-hidden="true"></i> Dati delle stazioni al suolo (ultimo dato disponibile, aggiornamento orario). Mappa completa su <a href="https://meteohub.agenziaitaliameteo.it/app/maps/observations" target="_blank" rel="noopener noreferrer">MeteoHub</a>. Fonte: <strong>Agenzia nazionale per la meteorologia e climatologia «ItaliaMeteo»</strong>, solo stazioni a licenza <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> — base <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap</a>. In emergenza chiama il <a href="tel:112">112</a>.</p>
 
   <script src="{{ $leafletJS }}" crossorigin=""></script>
   <script>
@@ -85,8 +85,8 @@
       map = L.map('dimo-mappa', { center: [42.0, 12.5], zoom: 6, scrollWheelZoom: false, preferCanvas: true });
       map.on('focus', function(){ map.scrollWheelZoom.enable(); });
       map.on('blur',  function(){ map.scrollWheelZoom.disable(); });
-      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-        subdomains:'abcd', maxZoom:12, attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/attributions">CARTO</a>' }).addTo(map);
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        subdomains:'abcd', maxZoom:12, attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>' }).addTo(map);
       L.marker(GENZANO, { keyboard:true, icon: L.divIcon({ className:'dimo-stella',
         html:'<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M13 1l3.4 7.6L24 9.3l-5.8 5 1.8 7.9L13 18.4 5.9 22.2l1.8-7.9L2 9.3l7.6-.7z" fill="#ffd166" stroke="#0b1622" stroke-width="1.4"/></svg>',
         iconSize:[26,26], iconAnchor:[13,13] }) }).bindPopup('<strong>Genzano di Roma</strong>').addTo(map);

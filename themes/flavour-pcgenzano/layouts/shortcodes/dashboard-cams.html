@@ -45,8 +45,9 @@
     map.on('focus',function(){map.scrollWheelZoom.enable();});
     map.on('blur', function(){map.scrollWheelZoom.disable();});
 
-    var base=L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png',{subdomains:'abcd',maxZoom:8,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © CARTO'}).addTo(map);
-    var confini=L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png',{subdomains:'abcd',maxZoom:8,opacity:0.9,pane:'markerPane'});
+    var base=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{subdomains:'abcd',maxZoom:8,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © CARTO'}).addTo(map);
+    var confini=L.geoJSON(null,{pane:'markerPane',style:{color:'#ffffff',weight:1,opacity:0.75,fillOpacity:0},attribution:'Confini: Natural Earth'});
+    fetch('{{ "open-data/world-countries.geo.json" | relURL }}').then(function(r){return r.json();}).then(function(g){confini.addData(g);}).catch(function(){});
 
     var WMS='https://eccharts.ecmwf.int/wms/?token=public';
     var inq='pm2p5', hh=0, layer=null;

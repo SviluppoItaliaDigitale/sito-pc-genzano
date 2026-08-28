@@ -32,7 +32,7 @@
     var map=L.map('dash-incendi-mappa',{center:[42,12.5],zoom:6,scrollWheelZoom:false});
     map.on('focus',function(){map.scrollWheelZoom.enable();}); map.on('blur',function(){map.scrollWheelZoom.disable();});
     var sat=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:17,attribution:'Tiles © Esri — Maxar, Earthstar Geographics'});
-    var chiara=L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{subdomains:'abcd',maxZoom:12,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © CARTO'});
+    var chiara=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{subdomains:'abcd',maxZoom:12,attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © CARTO'});
     sat.addTo(map);
     var fuoco=L.tileLayer.wms('https://maps.effis.emergency.copernicus.eu/effis',{layers:'viirs.hs,modis.hs',format:'image/png',transparent:true,version:'1.3.0',opacity:0.95,attribution:'EFFIS — Copernicus EMS'});
     fuoco.addTo(map);
