@@ -49,7 +49,7 @@ L'allerta si riferisce sempre a un **rischio specifico** (idrogeologico, idrauli
 - **ignorare** l'allerta perché "è solo gialla";
 - **andare in panico**: il livello giallo non giustifica chiusure di massa;
 - **affidarsi** a fonti non istituzionali (canali social non ufficiali);
-- **sottovalutare** aree fragili (vicino fiumi, versanti, aree boscate).
+- **sottovalutare** aree fragili (vicino a fiumi, versanti, aree boscate).
 
 ## Come seguire le allerte
 
