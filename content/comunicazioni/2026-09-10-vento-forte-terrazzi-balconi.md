@@ -34,7 +34,7 @@ In un bollettino di allerta della Regione Lazio si parla di **vento forte** quan
 
 - **vasi** grandi: spostarli contro il muro, a terra;
 - **vasi piccoli**: portarli all'interno;
-- **sedie e tavolini leggeri**: piegarli, assicurarli o rientrarli;
+- **sedie e tavolini leggeri**: piegarli, assicurarli o ritirarli;
 - **ombrelloni**: chiudere e fissare a terra o rientrare completamente;
 - **teli parasole** e tende: ritirarle;
 - **corde del bucato**: togliere i panni e assicurare la corda;

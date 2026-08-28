@@ -37,7 +37,7 @@ Più è forte la corrente ascensionale, più grande è il chicco. Temporali seve
 - **pannelli solari** e **fotovoltaici**: crepe, perdita di efficienza;
 - **finestre**: vetri incrinati;
 - **agricoltura**: vigneti, ortaggi, frutta distrutti in pochi minuti;
-- **persone**: lesioni cutanee, commozione cerebrale se colpiti in testa.
+- **persone**: lesioni cutanee, commozione cerebrale se colpite in testa.
 
 ## Cosa fare durante una grandinata
 
@@ -77,7 +77,7 @@ Il sistema di PC interviene quando:
 - una grandinata causa **danni diffusi** su scala comunale;
 - c'è necessità di **censimento** urgente degli edifici colpiti;
 - servono **coperture temporanee** (teloni, transenne) su strutture danneggiate;
-- si deve supportare la **viabilità** con rami caduti o strade allagate.
+- si deve supportare la **viabilità** in presenza di rami caduti o strade allagate.
 
 ## Per approfondire
 
