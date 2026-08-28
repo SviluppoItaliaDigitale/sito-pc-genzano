@@ -51,7 +51,7 @@ Se ti viene chiesto **«quali sono le 4 regole operative non negoziabili di ques
 
 **Queste quattro regole sono comportamentali e operative**, non principi astratti. Sono nate da incidenti specifici (batch foto stock di aprile 2026 su 74 articoli; 50+ commit accumulati di maggio 2026 mai pubblicati; 43 articoli AGID rivisti retroattivamente il 9 maggio 2026 perché il gate non era esplicito). Non rispondere genericamente con "AGID + accessibilità + verità operativa": **quelle sono i principi di governance**, non i 4 vincoli operativi non negoziabili.
 
-Alle 4 regole si affiancano due **istruzioni permanenti** più recenti, anch'esse non negoziabili: l'**umanizzazione della scrittura** (§ 3.5, dal 19/08/2026) e il **divieto di riferimenti all'IA negli output** — commit, PR e contenuti inclusi (§ 3.6, dal 28/08/2026).
+Alle 4 regole si affiancano tre **istruzioni permanenti** più recenti, anch'esse non negoziabili: l'**umanizzazione della scrittura** (§ 3.5, dal 19/08/2026), il **divieto di riferimenti all'IA negli output** — commit, PR e contenuti inclusi (§ 3.6, dal 28/08/2026) — e le **fonti giornalistiche sempre parafrasate e menzionate solo in fondo** (§ 3.7, dal 28/08/2026).
 
 ---
 
@@ -236,6 +236,10 @@ Solo dopo la passata pulita procedi al commit. Vale anche per un singolo articol
 ### 3.6 Nessun riferimento all'IA negli output (dal 28/08/2026)
 
 🔴 Istruzione permanente dell'utente: **nessun output prodotto** (contenuti del sito, documenti, grafiche, messaggi di commit, PR, commenti GitHub, social) deve contenere riferimenti all'uso di intelligenza artificiale o strumenti automatici. Niente trailer `Co-Authored-By`, niente footer "Generated with ...", niente firme o note del genere — anche se la piattaforma dell'agente le aggiunge di default: **ometterle**. Eccezione: i file di governance interna non pubblicati (CLAUDE.md, `.claude/`, questo AGENTS.md, manuale operativo). Versione completa in `CLAUDE.md` § "Nessun riferimento all'IA in ciò che si produce".
+
+### 3.7 Fonti giornalistiche: parafrasi sempre, testate solo in fondo (dal 28/08/2026)
+
+🔴 Quando un articolo riprende informazioni dalla stampa: **parafrasare sempre con parole proprie** (mai frasi copiate, mai virgolettati attribuiti a testate), nel corpo **solo i fatti** che le fonti interne non hanno (attribuzione generica "secondo le cronache locali" se serve), e le **testate menzionate solo in fondo** tra le fonti di "Per approfondire", con link. Versione completa in `.claude/rules/02-content-design-pa.md` § "Fonti giornalistiche negli articoli".
 
 ---
 
