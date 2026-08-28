@@ -1,6 +1,6 @@
 ---
 title: "Pulisci fossi, grondaie e tombini: eviti l'allagamento"
-date: 2026-08-28
+date: 2026-08-28T00:01:00+02:00
 description: "Prima dell'autunno, pulisci fossi, tombini e grondaie. Così eviti gli allagamenti."
 badge: "Prevenzione"
 priorita: "normale"
