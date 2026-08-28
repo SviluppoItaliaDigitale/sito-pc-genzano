@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Le **iscrizioni al corso base** per diventare **Volontario di Protezione Civile** nel Gruppo Comunale di Genzano di Roma sono **sempre aperte**, in ogni periodo dell'anno. Il percorso è obbligatorio per chi vuole entrare nel Gruppo. È gratuito e si svolge in orario serale e prefestivo.
+Le **iscrizioni al corso base** per diventare **volontario di Protezione Civile** nel Gruppo Comunale di Genzano di Roma sono **sempre aperte**, in ogni periodo dell'anno. Il percorso è obbligatorio per chi vuole entrare nel Gruppo. È gratuito e si svolge in orario serale e prefestivo.
 
 ## Quando si attiva il corso
 
@@ -26,7 +26,7 @@ Il corso è aperto a tutti i cittadini che:
 - hanno **compiuto 18 anni**;
 - sono in **buona salute** (idoneità psico-fisica da attestare);
 - dispongono di alcune **ore settimanali** di tempo da dedicare all'associazione;
-- vivono a **Genzano** o in **Comuni limitrofi** raggiungibili in emergenza.
+- vivono a **Genzano** o in **comuni limitrofi** raggiungibili in emergenza.
 
 Non sono richiesti titoli specifici. Sono ben accetti **profili eterogenei**: muratori, insegnanti, sanitari, radioamatori, esperti IT, cuochi, geometri, casalinghe, pensionati attivi.
 
