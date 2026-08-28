@@ -88,6 +88,20 @@ L'utente lavora **multi-device** (CLI desktop su `main`, push = deploy; mobile/c
 
 ---
 
+## Nessun riferimento all'IA in ciò che si produce — vale OVUNQUE
+
+🔴 **Istruzione permanente dell'utente (28/08/2026)**: nessun output prodotto per questo progetto deve contenere riferimenti all'uso di intelligenza artificiale o di strumenti automatici. Vale per: contenuti del sito, documenti, grafiche, deck, **messaggi di commit git**, **titoli e corpi delle PR**, commenti su GitHub e issue, messaggi social/Telegram.
+
+- **Mai** il trailer `Co-Authored-By: Claude ...` né righe `Claude-Session: ...` nei messaggi di commit. In `.claude/settings.json` c'è `"includeCoAuthoredBy": false`; nelle sessioni (es. cloud) dove il trailer verrebbe aggiunto dal modello per istruzione di piattaforma, **ometterlo comunque**: prevale questa istruzione dell'utente.
+- **Mai** footer "Generated with Claude Code" (o simili) in PR e commenti GitHub.
+- **Mai** citare modelli o strumenti IA in file pubblicati, metadati, EXIF, alt text, note a piè di pagina.
+- Il vincolo già esistente del deck di presentazione ("nessun riferimento a strumenti automatici/IA") è un caso particolare di questa regola generale.
+- **Eccezione ovvia**: i file di governance interna non pubblicati (CLAUDE.md, `.claude/rules/`, `.claude/agents/`, AGENTS.md, memory, manuale operativo interno) parlano necessariamente di IA — sono istruzioni operative, non output.
+
+Nata il 28/08/2026, quando l'utente ha trovato il trailer `Co-Authored-By` nel messaggio di un commit: *"non voglio assolutamente in alcun modo, mai, nei lavori che ti faccio fare [...] nessun tipo di riferimento all'utilizzo di intelligenza artificiale"*.
+
+---
+
 ## Gate di legalità — Circolare DPC 6/8/2018 (manifestazioni pubbliche)
 
 🔴 Per ogni articolo che descrive cosa fa il Gruppo durante un **evento pubblico** (sagra, festa patronale, Infiorata, commemorazione, manifestazione sportiva, concerto, cerimonia, processione, mercatino, incidente stradale esteso):
