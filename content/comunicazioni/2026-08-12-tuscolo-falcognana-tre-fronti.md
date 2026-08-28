@@ -37,7 +37,7 @@ Su un versante boscato e ripido come quello del Tuscolo la bonifica non è una f
 
 Chiuso il fronte di Pomezia, **poco prima delle 19** è arrivata la terza chiamata: ancora la zona della **Falcognana**, sulla via Ardeatina, dove il Gruppo era già intervenuto [il 9 agosto](/comunicazioni/2026-08-10-incendi-pomezia-falcognana-agosto-2026/). Una squadra di sette volontari ha operato per **quasi due ore** con il **mezzo polivalente antincendio Mercedes Atego** e il **Land Rover Defender 130** con modulo da 600 litri, rientrando **poco dopo le 20.30**.
 
-In quei giorni l'area tra Falcognana, Divino Amore e Castel di Leva è stata percorsa più volte dal fuoco: la sera dell'11 agosto le fiamme si erano avvicinate ad abitazioni e a un deposito di carburanti, con la chiusura temporanea dell'Ardeatina ([Abitare a Roma](https://abitarearoma.it/rogo-sulla-via-ardeatina-il-fuoco-arriva-vicino-alle-abitazioni-paura-al-divino-amore/)). Le riaccensioni sarebbero proseguite ancora per giorni.
+In quei giorni l'area tra Falcognana, Divino Amore e Castel di Leva è stata percorsa più volte dal fuoco: la sera dell'11 agosto le fiamme si erano avvicinate ad abitazioni e a un deposito di carburanti, con la chiusura temporanea dell'Ardeatina. Le riaccensioni sarebbero proseguite ancora per giorni.
 
 ## Perché tante riaccensioni nello stesso posto
 
