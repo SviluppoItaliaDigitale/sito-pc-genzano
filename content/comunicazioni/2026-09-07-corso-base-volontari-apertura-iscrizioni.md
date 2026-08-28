@@ -57,7 +57,7 @@ Il corso è **completamente gratuito**. Il Gruppo fornisce materiale didattico e
 ## Come iscriversi
 
 1. Compilare il **modulo di iscrizione** disponibile nella pagina [Diventa volontario](/diventa-volontario/);
-2. Consegnare il modulo in **sede del Gruppo** durante gli orari di apertura;
+2. Consegnare il modulo nella **sede del Gruppo** durante gli orari di apertura;
 3. Allegare **copia del documento** di identità e **certificato medico** di idoneità (può essere prodotto anche successivamente);
 4. Attendere il **ricontatto** del Gruppo per concordare l'avvio del percorso.
 
