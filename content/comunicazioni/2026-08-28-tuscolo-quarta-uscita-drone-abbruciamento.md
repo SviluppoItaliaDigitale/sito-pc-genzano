@@ -15,25 +15,25 @@ tts: true
 lis_section: "rischio-incendio"
 social_citazione: "Per la quarta volta in un mese le squadre sono salite sul Tuscolo: cinque ore di lavoro tra una baracca, le sterpaglie e un'automobile."
 social_punti:
-  - "Giovedì 27 agosto, ore 18: la SOUP regionale attiva il Gruppo per un incendio sul Tuscolo. Rientro alle 23:10."
+  - "Giovedì 27 agosto, verso le 18: la SOUP regionale attiva il Gruppo per un incendio sul Tuscolo. Rientro in tarda serata."
   - "In zona Molara le fiamme hanno raggiunto strutture agricole e un'automobile; i residenti hanno udito esplosioni, forse causate da bombole di gas."
   - "Al mattino il drone del Gruppo aveva verificato un abbruciamento di frasca in via del Lavoro: nel periodo di massima pericolosità è vietato."
   - "Se vedi fumo o fiamme chiama subito il 112: nel Lazio è l'unico numero per le emergenze."
 ---
 
-Giovedì 27 agosto 2026 le squadre del Gruppo sono uscite due volte. Al mattino una verifica rapida con il drone in **via del Lavoro**, per un fumo segnalato da un cittadino. La sera la chiamata più impegnativa: la [Sala Operativa Unificata Permanente (SOUP)](/glossario/#soup) regionale ha attivato il Gruppo per un **incendio alle pendici del Tuscolo**, in zona Molara. Cinque ore di lavoro, rientro alle 23:10. È la **quarta uscita in un mese** su quella montagna.
+Giovedì 27 agosto 2026 le squadre del Gruppo sono uscite due volte. Al mattino una verifica rapida con il drone in **via del Lavoro**, per un fumo segnalato da un cittadino. La sera la chiamata più impegnativa: la [Sala Operativa Unificata Permanente (SOUP)](/glossario/#soup) regionale ha attivato il Gruppo per un **incendio alle pendici del Tuscolo**, in zona Molara. Cinque ore di lavoro, rientro in tarda serata. È la **quarta uscita in un mese** su quella montagna.
 
 ## La mattina: un fumo da verificare in via del Lavoro
 
-Alle 9:44 arriva la segnalazione di un cittadino: fumo in via del Lavoro. La squadra esce con il [Land Rover Defender 130](/chi-siamo/#mezzi-e-attrezzature-principali) e fa alzare il **drone** per guardare l'origine dall'alto senza avvicinarsi alla fonte. Il sorvolo chiarisce il quadro: non un principio di incendio, ma un **abbruciamento di frasca**, cioè residui di potatura bruciati in un terreno. Sul posto interviene la Polizia Locale per gli accertamenti di competenza. In poco più di un'ora la verifica è chiusa.
+Poco prima delle 10 arriva la segnalazione di un cittadino: fumo in via del Lavoro. La squadra esce con il [Land Rover Defender 130](/chi-siamo/#mezzi-e-attrezzature-principali) e fa alzare il **drone** per guardare l'origine dall'alto senza avvicinarsi alla fonte. Il sorvolo chiarisce il quadro: non un principio di incendio, ma un **abbruciamento di frasca**, cioè residui di potatura bruciati in un terreno. Sul posto interviene la Polizia Locale per gli accertamenti di competenza. In poco più di un'ora la verifica è chiusa.
 
 Un dettaglio non secondario: siamo ancora nel **periodo di massima pericolosità per gli incendi boschivi** dichiarato dalla Regione Lazio, dal 15 giugno al 30 settembre. In queste settimane bruciare residui vegetali è **vietato**: una fiamma "controllata" può sfuggire in pochi secondi e trasformarsi in un incendio di vegetazione, come quello che [il 24 agosto ha impegnato le squadre a Santa Palomba](/comunicazioni/2026-08-27-nove-attivazioni-cinque-giorni-fine-agosto/). Chi deve smaltire le potature le conferisce nei centri di raccolta, senza accenderle.
 
 ## La sera: il Tuscolo torna a bruciare
 
-Alle 18:04 la SOUP attiva il Gruppo per un incendio in **zona Molara**, alle pendici del Tuscolo, nel territorio di Grottaferrata. Partite dalle sterpaglie, le fiamme hanno raggiunto alcune **strutture agricole** — un capanno degli attrezzi e una legnaia, secondo la cronaca di [Castelli Notizie](https://www.castellinotizie.it/2026/08/27/grottaferrata-incendio-in-zona-molara-fiamme-tra-le-sterpaglie-coinvolte-alcune-strutture-udite-esplosioni/) — e, dal nostro registro, anche un'**automobile**. I residenti hanno udito **esplosioni**, forse causate da bombole di gas raggiunte dal fuoco. La colonna di fumo era visibile a chilometri di distanza: le segnalazioni dei cittadini sono arrivate da più punti dei Castelli.
+Verso le 18 la SOUP attiva il Gruppo per un incendio in **zona Molara**, alle pendici del Tuscolo, nel territorio di Grottaferrata. Partite dalle sterpaglie, le fiamme hanno raggiunto alcune **strutture agricole** — un capanno degli attrezzi e una legnaia, secondo la cronaca di [Castelli Notizie](https://www.castellinotizie.it/2026/08/27/grottaferrata-incendio-in-zona-molara-fiamme-tra-le-sterpaglie-coinvolte-alcune-strutture-udite-esplosioni/) — e, dal nostro registro, anche un'**automobile**. I residenti hanno udito **esplosioni**, forse causate da bombole di gas raggiunte dal fuoco. La colonna di fumo era visibile a chilometri di distanza: le segnalazioni dei cittadini sono arrivate da più punti dei Castelli.
 
-Da Genzano escono il **Mercedes Atego**, con l'impianto antincendio da 6.000 litri, e il Defender con il modulo da 600 litri. Sul posto lavorano i **Vigili del Fuoco** del distaccamento di Marino, i Carabinieri e la Polizia Locale. Con loro i volontari di protezione civile di Grottaferrata, Rocca di Papa e Genzano. Lo spegnimento e la bonifica impegnano le squadre fino alle 23:10.
+Da Genzano escono il **Mercedes Atego**, con l'impianto antincendio da 6.000 litri, e il Defender con il modulo da 600 litri. Sul posto lavorano i **Vigili del Fuoco** del distaccamento di Marino, i Carabinieri e la Polizia Locale. Con loro i volontari di protezione civile di Grottaferrata, Rocca di Papa e Genzano. Lo spegnimento e la bonifica impegnano le squadre fin oltre le 23.
 
 ## Un'estate di fuoco su quella montagna
 
