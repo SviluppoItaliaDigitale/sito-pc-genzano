@@ -48,7 +48,7 @@ Verso le 17 l'area è in sicurezza. Restano i segni: arbusti carbonizzati, un ta
 
 Alle 17, chiusa la prima attivazione, le squadre ripartono senza rientrare in sede. La destinazione è Tor de' Cenci, al confine sud di Roma: qui le fiamme risalgono la scarpata che costeggia la via Pontina, all'altezza dello svincolo per il Grande Raccordo Anulare e Spinaceto. Il fumo attraversa la carreggiata e riduce la visibilità; la manichetta viene stesa da una corsia all'altra per raggiungere il fronte di fuoco.
 
-Sul posto lavorano anche i **Vigili del Fuoco**. Lo spegnimento e la bonifica impegnano le squadre fino a sera, verso le 20:30. Con i due incendi di oggi, agosto si chiude com'era cominciato: [una catena di attivazioni antincendio quasi quotidiana](/comunicazioni/2026-08-27-nove-attivazioni-cinque-giorni-fine-agosto/), l'ultima delle quali [ieri sera sul Tuscolo](/comunicazioni/2026-08-28-tuscolo-quarta-uscita-drone-abbruciamento/).
+Sul posto lavorano anche i **Vigili del Fuoco**. Lo spegnimento e la bonifica impegnano le squadre fino a sera, verso le 20:30. Con i due incendi di oggi, agosto si avvia alla conclusione com'era cominciato: [una catena di attivazioni antincendio quasi quotidiana](/comunicazioni/2026-08-27-nove-attivazioni-cinque-giorni-fine-agosto/), l'ultima delle quali [ieri sera sul Tuscolo](/comunicazioni/2026-08-28-tuscolo-quarta-uscita-drone-abbruciamento/).
 
 {{< galleria titolo="L'intervento a Tor de' Cenci" >}}
 {{< foto src="/images/2026-08-28-tor-de-cenci-pontina-vvf.webp"
