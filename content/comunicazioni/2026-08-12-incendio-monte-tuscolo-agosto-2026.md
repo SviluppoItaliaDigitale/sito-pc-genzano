@@ -37,7 +37,7 @@ Un versante boscato e ripido è tra gli scenari più faticosi per le squadre a t
 
 ## Un fronte che ha minacciato case e area archeologica
 
-L'incendio si è sviluppato intorno alle 15 lungo **via del Tuscolo** e ha assunto rapidamente grandi dimensioni, con una colonna di fumo visibile da chilometri. Secondo le cronache locali sono intervenuti i **Vigili del Fuoco** di Frascati e un **Canadair**; nelle ore successive sono arrivati anche gli **elicotteri**. Sul posto hanno operato pure le squadre di protezione civile di più Comuni dei Castelli e i **Guardiaparco** ([Castelli Notizie](https://www.castellinotizie.it/2026/08/11/vasto-incendio-al-tuscolo-vigili-del-fuoco-protezione-civile-e-canadair-in-azione-grottaferrata/), [Il Mamilio](https://www.ilmamilio.it/online/notizie/incendio-sul-monte-tuscolo,-da-ore-al-lavoro-uomini-e-mezzi-protezione-civile,-vigili-del-fuoco-e-guardiaparco.html)).
+L'incendio si è sviluppato intorno alle 15 lungo **via del Tuscolo** e ha assunto rapidamente grandi dimensioni, con una colonna di fumo visibile da chilometri. Secondo le cronache locali sono intervenuti i **Vigili del Fuoco** di Frascati e un **Canadair**; nelle ore successive sono arrivati anche gli **elicotteri**. Sul posto hanno operato pure le squadre di protezione civile di più Comuni dei Castelli e i **Guardiaparco**.
 
 {{< video src="/video/2026-08-11-tuscolo-elicottero-benna.mp4"
           poster="/video/2026-08-11-tuscolo-elicottero-benna-poster.webp"

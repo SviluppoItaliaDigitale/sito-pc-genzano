@@ -20,7 +20,7 @@ social_punti:
   - "Per unirti a noi: 06 9362600 o segreteria@protezionecivilegenzano.it."
 ---
 
-Il **vicesindaco di Genzano di Roma, Massimo Bevilacqua**, ha rivolto un ringraziamento pubblico ai volontari del nostro Gruppo per il lavoro svolto nelle settimane più dure dell'estate. Lo riporta [Castelli Notizie](https://www.castellinotizie.it/2026/08/17/genzano-il-vicesindaco-massimo-bevilacqua-ringrazia-la-protezione-civile-i-volontari-sempre-in-prima-linea-un-orgoglio-per-la-citta/) in un articolo pubblicato il 17 agosto 2026.
+Il **vicesindaco di Genzano di Roma, Massimo Bevilacqua**, ha rivolto un ringraziamento pubblico ai volontari del nostro Gruppo per il lavoro svolto nelle settimane più dure dell'estate. Lo riportano le cronache locali del 17 agosto 2026.
 
 > «Voglio rivolgere un ringraziamento sincero a tutti i volontari del Gruppo Comunale di Protezione Civile di Genzano. In queste giornate di caldo intenso li vediamo ancora una volta in prima linea, pronti a intervenire per la salvaguardia del nostro territorio ma anche a partire, quando viene richiesto, per sostenere altre comunità che hanno bisogno del loro aiuto.»
 

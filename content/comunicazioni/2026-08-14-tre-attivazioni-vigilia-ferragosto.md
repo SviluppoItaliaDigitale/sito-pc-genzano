@@ -21,7 +21,7 @@ social_punti:
   - "Gli incendi si segnalano al 112: nel Lazio è l'unico numero da chiamare."
 ---
 
-Nella giornata di **venerdì 14 agosto 2026**, vigilia di Ferragosto, la **SOUP** regionale ha attivato le squadre del Gruppo **tre volte in poco più di cinque ore**, su tre incendi di sterpaglie tra Roma sud e il litorale. È stata una giornata di fuoco in tutta l'area romana, con interventi delle squadre antincendio su più quadranti della città ([RomaToday](https://www.romatoday.it/cronaca/incendi-roma-oggi-14-agosto-2026.html)).
+Nella giornata di **venerdì 14 agosto 2026**, vigilia di Ferragosto, la **SOUP** regionale ha attivato le squadre del Gruppo **tre volte in poco più di cinque ore**, su tre incendi di sterpaglie tra Roma sud e il litorale. È stata una giornata di fuoco in tutta l'area romana, con interventi delle squadre antincendio su più quadranti della città.
 
 ## Mezzogiorno: via di Porta Medaglia
 

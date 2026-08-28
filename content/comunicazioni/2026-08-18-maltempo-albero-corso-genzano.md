@@ -22,7 +22,7 @@ social_punti:
 
 Nella serata di **lunedì 17 agosto 2026**, **verso le 22**, un fronte temporalesco ha attraversato i Castelli Romani con **raffiche di vento improvvise e violente**. Sul **corso principale di Genzano**, ancora animato dalla serata estiva, il vento ha abbattuto un **albero sul marciapiede**. La pianta ha colpito l'ingresso di un esercizio commerciale. **Nessun ferito**: le persone presenti hanno trovato riparo nei locali della zona.
 
-Le squadre del Gruppo sono intervenute per la **messa in sicurezza dell'area** e la **rimozione della pianta**. Secondo le cronache locali, Vigili del Fuoco e volontari di protezione civile sono intervenuti su più punti dei Castelli. Gli interventi hanno riguardato rami spezzati e altri alberi caduti ([Castelli Notizie](https://www.castellinotizie.it/2026/08/18/maltempo-paura-a-genzano-nella-serata-di-lunedi-17-agosto-caduto-un-albero-aul-corso/)).
+Le squadre del Gruppo sono intervenute per la **messa in sicurezza dell'area** e la **rimozione della pianta**. Secondo le cronache locali, Vigili del Fuoco e volontari di protezione civile sono intervenuti su più punti dei Castelli. Gli interventi hanno riguardato rami spezzati e altri alberi caduti.
 
 ## Un evento annunciato dai bollettini
 

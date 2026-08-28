@@ -61,7 +61,7 @@ Giovedì mattina la **Polizia Locale** richiede un intervento per **rami pericol
 
 Nel primo pomeriggio la SOUP chiama il Gruppo a **Velletri, in via dei Cavalli**, per un **incendio di sterpaglie**: un supporto breve con pickup e autobotte accanto a Vigili del Fuoco, Carabinieri e altri volontari. Poco dopo, nuova attivazione sulla **Falcognana**, un fronte che quest'estate [è già bruciato più volte](/comunicazioni/2026-08-10-incendi-pomezia-falcognana-agosto-2026/): un **vasto incendio di sterpaglie** impegna l'autobotte Atego e la squadra fino a sera, per **quasi cinque ore**, con Polizia Locale, Vigili del Fuoco e altri gruppi sul posto.
 
-Le cronache locali confermano la giornata difficile. Per [RomaToday](https://www.romatoday.it/cronaca/incendi-roma-oggi-20-agosto-2026.html) via Falcognana è stata «la situazione più critica in città», con interventi anche a Velletri e Ciampino. [Castelli Notizie](https://www.castellinotizie.it/2026/08/20/incendio-via-falcognana-marino-ettari-fiamme/) documenta ettari di sterpaglie e alberi in fumo, con le abitazioni rimaste illese a sera.
+Le cronache locali confermano la giornata difficile: via Falcognana è stata tra le situazioni più critiche dell'area romana, con interventi anche a Velletri e Ciampino. A fine giornata il bilancio parla di ettari di sterpaglie e alberi in fumo, con le abitazioni rimaste illese.
 
 {{< galleria titolo="Le foto dalle giornate di mercoledì e giovedì" >}}
 {{< foto src="/images/2026-08-20-incendi-mezzo-aib-scarpata.webp"
@@ -90,3 +90,10 @@ L'ultima attivazione della settimana non riguarda il fuoco ma la **logistica**. 
 Con queste attivazioni salgono a **105 gli interventi registrati dal Gruppo dal 4 aprile**, per oltre **370 ore di lavoro** complessive: i numeri aggregati e anonimi sono pubblicati e aggiornati nella sezione [Open Data](/open-data/) del sito. La campagna antincendio boschivo resta in pieno svolgimento: la vegetazione è secca e le aree già percorse dal fuoco possono riaccendersi con poco.
 
 Se vedi fumo o fiamme, **chiama subito il 112**, l'unico numero per le emergenze nel Lazio, indicando Comune, strada e un punto di riferimento visibile. I comportamenti di autoprotezione sono nella nostra pagina sul [rischio incendio](/rischi-prevenzione/rischio-incendio/).
+
+## Per approfondire
+
+**Le cronache locali**
+
+- [RomaToday — Incendi a Roma, la giornata del 20 agosto](https://www.romatoday.it/cronaca/incendi-roma-oggi-20-agosto-2026.html)
+- [Castelli Notizie — Incendio in via Falcognana: ettari di sterpaglie e alberi in fumo](https://www.castellinotizie.it/2026/08/20/incendio-via-falcognana-marino-ettari-fiamme/)

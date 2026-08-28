@@ -21,7 +21,7 @@ social_punti:
   - "Gli incendi si segnalano al 112: nel Lazio è l'unico numero da chiamare."
 ---
 
-**Domenica 16 agosto 2026** è stata la giornata più intensa dell'estate per le squadre del Gruppo: **cinque attivazioni** della **SOUP** regionale una dietro l'altra, dalla tarda mattinata fino a sera, per **quasi dieci ore complessive** di lavoro. Una domenica di roghi in tutta l'area dei Castelli e di Roma sud, con riaccensioni nelle zone che bruciavano ormai da giorni ([Il Mamilio](https://www.ilmamilio.it/wp/2026/08/incendi-domenica-di-roghi-anche-ai-castelli-romani-ancora-fiamme-sul-tuscolo/), [Abitare a Roma](https://abitarearoma.it/roma-nella-morsa-degli-incendi-nuovo-fronte-di-fuoco-tra-falcognana-e-divino-amore/)).
+**Domenica 16 agosto 2026** è stata la giornata più intensa dell'estate per le squadre del Gruppo: **cinque attivazioni** della **SOUP** regionale una dietro l'altra, dalla tarda mattinata fino a sera, per **quasi dieci ore complessive** di lavoro. Una domenica di roghi in tutta l'area dei Castelli e di Roma sud, con riaccensioni nelle zone che bruciavano ormai da giorni.
 
 ## La giornata, fronte per fronte
 

@@ -31,7 +31,7 @@ Su un versante boscato il lavoro delle squadre di terra è fatto di poche cose r
 
 ## Una risposta di sistema, non di un solo Gruppo
 
-Sull'incendio di via dei Principi hanno operato più componenti del sistema regionale. Secondo le cronache locali, la SOUP ha attivato anche la protezione civile di **Monte Compatri**, impegnata a supporto della **vasca regionale di rifornimento idrico** allestita in località Molara, dove ha fatto la spola l'**elicottero regionale** impegnato sull'incendio ([Il Mamilio](https://www.ilmamilio.it/wp/2026/08/rocca-di-papa-incendio-boschivo-nel-pomeriggio-nellarea-di-via-dei-principi/)).
+Sull'incendio di via dei Principi hanno operato più componenti del sistema regionale. Secondo le cronache locali, la SOUP ha attivato anche la protezione civile di **Monte Compatri**, impegnata a supporto della **vasca regionale di rifornimento idrico** allestita in località Molara, dove ha fatto la spola l'**elicottero regionale** impegnato sull'incendio.
 
 È il funzionamento normale della campagna antincendio: la sala operativa regionale compone la risposta pezzo per pezzo, chiamando da ogni Comune il mezzo o la squadra che serve in quel momento. Ne abbiamo parlato in [Cosa fa la PC quando un'emergenza supera i confini comunali](/comunicazioni/2026-07-07-protezione-civile-sconfinamenti-provinciali/).
 
