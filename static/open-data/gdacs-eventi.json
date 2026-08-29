@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://www.gdacs.org/gdacsapi/api/events/geteventlist/EVENTS4APP",
-  "generato": "2026-08-29T15:32:21+00:00",
+  "generato": "2026-08-29T18:49:06+00:00",
   "licenza": "GDACS — Global Disaster Alert and Coordination System (dati pubblici UE/ONU)",
   "nota": "Copia locale per lettura same-origin dalla Sala situazioni."
  },
@@ -9,22 +9,39 @@
  "events": [
   {
    "alertlevel": "Green",
-   "country": "South Of Alaska",
-   "datemodified": "2026-08-29T15:27:47",
-   "description": "Earthquake in South Of Alaska",
+   "country": "Japan",
+   "datemodified": "2026-08-29T16:14:03",
+   "description": "Earthquake in Japan",
+   "episodeid": 1729978,
+   "eventid": 1562491,
+   "eventtype": "EQ",
+   "fromdate": "2026-08-29T15:17:06",
+   "iso3": "JPN",
+   "lat": 35.8029,
+   "lon": 140.9937,
+   "name": "Earthquake in Japan",
+   "severitytext": "Magnitude 4.7M, Depth:34.783km",
+   "todate": "2026-08-29T15:17:06"
+  },
+  {
+   "alertlevel": "Green",
+   "country": "United States",
+   "datemodified": "2026-08-29T17:36:51",
+   "description": "Earthquake in United States",
    "episodeid": 1729969,
    "eventid": 1562489,
    "eventtype": "EQ",
    "fromdate": "2026-08-29T15:16:55",
+   "iso3": "USA",
    "lat": 54.788,
    "lon": -156.924,
-   "name": "Earthquake in South Of Alaska",
+   "name": "Earthquake in United States",
    "severitytext": "Magnitude 4.8M, Depth:5.7km",
    "todate": "2026-08-29T15:16:55"
   },
   {
    "alertlevel": "Green",
-   "datemodified": "2026-08-29T14:49:49",
+   "datemodified": "2026-08-29T16:16:43",
    "description": "Tropical Cyclone KARINA-26",
    "episodeid": 8,
    "eventid": 1001314,
@@ -39,7 +56,7 @@
   },
   {
    "alertlevel": "Green",
-   "datemodified": "2026-08-29T14:51:40",
+   "datemodified": "2026-08-29T16:46:30",
    "description": "Tropical Cyclone LOWELL-26",
    "episodeid": 8,
    "eventid": 1001315,
@@ -55,7 +72,7 @@
   {
    "alertlevel": "Green",
    "country": "United States Minor Outlying Islands",
-   "datemodified": "2026-08-29T14:46:45",
+   "datemodified": "2026-08-29T18:31:49",
    "description": "Tropical Cyclone BANG-LANG-26",
    "episodeid": 14,
    "eventid": 1001311,
@@ -71,7 +88,7 @@
   },
   {
    "alertlevel": "Green",
-   "datemodified": "2026-08-29T15:18:21",
+   "datemodified": "2026-08-29T18:47:06",
    "description": "Tropical Cyclone ETAU-26",
    "episodeid": 11,
    "eventid": 1001312,
@@ -261,23 +278,23 @@
   {
    "alertlevel": "Green",
    "country": "Indonesia",
-   "datemodified": "2026-08-29T11:58:34",
+   "datemodified": "2026-08-29T15:57:06",
    "description": "Forest fires in Indonesia",
-   "episodeid": 7,
+   "episodeid": 8,
    "eventid": 1031254,
    "eventtype": "WF",
    "fromdate": "2026-08-14T00:00:00",
    "iso3": "IDN",
-   "lat": -2.6844,
-   "lon": 112.856,
+   "lat": -2.6862,
+   "lon": 112.8593,
    "name": "Forest fires in Indonesia",
-   "severitytext": "Green impact for forestfire in 5926 ha",
+   "severitytext": "Green impact for forestfire in 6374 ha",
    "todate": "2026-08-29T00:00:00"
   },
   {
    "alertlevel": "Green",
    "country": "Angola",
-   "datemodified": "2026-08-29T11:56:33",
+   "datemodified": "2026-08-29T15:53:22",
    "description": "Forest fires in Angola",
    "episodeid": 17,
    "eventid": 1030835,
@@ -293,7 +310,7 @@
   {
    "alertlevel": "Green",
    "country": "Brazil",
-   "datemodified": "2026-08-29T11:55:45",
+   "datemodified": "2026-08-29T15:55:17",
    "description": "Forest fires in Brazil",
    "episodeid": 26,
    "eventid": 1030882,
@@ -309,7 +326,7 @@
   {
    "alertlevel": "Green",
    "country": "Brazil",
-   "datemodified": "2026-08-29T11:55:15",
+   "datemodified": "2026-08-29T15:54:34",
    "description": "Forest fires in Brazil",
    "episodeid": 2,
    "eventid": 1031309,
@@ -325,7 +342,7 @@
   {
    "alertlevel": "Green",
    "country": "Angola",
-   "datemodified": "2026-08-29T11:50:46",
+   "datemodified": "2026-08-29T15:48:54",
    "description": "Forest fires in Angola",
    "episodeid": 13,
    "eventid": 1030901,
@@ -341,7 +358,7 @@
   {
    "alertlevel": "Green",
    "country": "Russian Federation",
-   "datemodified": "2026-08-29T11:53:32",
+   "datemodified": "2026-08-29T15:45:39",
    "description": "Forest fires in Russian Federation",
    "episodeid": 20,
    "eventid": 1031028,
@@ -357,7 +374,7 @@
   {
    "alertlevel": "Green",
    "country": "Brazil",
-   "datemodified": "2026-08-29T11:53:17",
+   "datemodified": "2026-08-29T15:51:37",
    "description": "Forest fires in Brazil",
    "episodeid": 15,
    "eventid": 1031039,
@@ -373,7 +390,7 @@
   {
    "alertlevel": "Green",
    "country": "Russian Federation",
-   "datemodified": "2026-08-29T11:49:41",
+   "datemodified": "2026-08-29T15:47:53",
    "description": "Forest fires in Russian Federation",
    "episodeid": 21,
    "eventid": 1031050,
@@ -389,7 +406,7 @@
   {
    "alertlevel": "Green",
    "country": "Brazil",
-   "datemodified": "2026-08-29T11:53:05",
+   "datemodified": "2026-08-29T15:51:28",
    "description": "Forest fires in Brazil",
    "episodeid": 15,
    "eventid": 1031093,
@@ -405,7 +422,7 @@
   {
    "alertlevel": "Green",
    "country": "Angola",
-   "datemodified": "2026-08-29T11:50:55",
+   "datemodified": "2026-08-29T15:49:03",
    "description": "Forest fires in Angola",
    "episodeid": 9,
    "eventid": 1031138,
@@ -421,7 +438,7 @@
   {
    "alertlevel": "Green",
    "country": "United States",
-   "datemodified": "2026-08-29T11:52:09",
+   "datemodified": "2026-08-29T15:50:17",
    "description": "Forest fires in United States",
    "episodeid": 10,
    "eventid": 1031216,
@@ -437,7 +454,7 @@
   {
    "alertlevel": "Green",
    "country": "Russian Federation",
-   "datemodified": "2026-08-29T11:52:37",
+   "datemodified": "2026-08-29T15:50:56",
    "description": "Forest fires in Russian Federation",
    "episodeid": 1,
    "eventid": 1031318,
@@ -453,7 +470,7 @@
   {
    "alertlevel": "Green",
    "country": "Brazil",
-   "datemodified": "2026-08-29T11:40:06",
+   "datemodified": "2026-08-29T15:38:16",
    "description": "Forest fires in Brazil",
    "episodeid": 26,
    "eventid": 1030870,
@@ -469,7 +486,7 @@
   {
    "alertlevel": "Green",
    "country": "Brazil",
-   "datemodified": "2026-08-29T11:43:14",
+   "datemodified": "2026-08-29T15:41:20",
    "description": "Forest fires in Brazil",
    "episodeid": 15,
    "eventid": 1031107,
@@ -485,7 +502,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-08-29T11:45:34",
+   "datemodified": "2026-08-29T15:41:27",
    "description": "Forest fires in Australia",
    "episodeid": 7,
    "eventid": 1031209,
@@ -501,7 +518,7 @@
   {
    "alertlevel": "Green",
    "country": "Russian Federation",
-   "datemodified": "2026-08-29T11:42:55",
+   "datemodified": "2026-08-29T15:40:59",
    "description": "Forest fires in Russian Federation",
    "episodeid": 3,
    "eventid": 1031259,
@@ -517,7 +534,7 @@
   {
    "alertlevel": "Green",
    "country": "Montenegro",
-   "datemodified": "2026-08-29T11:46:04",
+   "datemodified": "2026-08-29T15:43:52",
    "description": "Forest fires in Montenegro",
    "episodeid": 3,
    "eventid": 1031300,
@@ -581,7 +598,7 @@
   {
    "alertlevel": "Green",
    "country": "Russian Federation",
-   "datemodified": "2026-08-29T11:34:53",
+   "datemodified": "2026-08-29T15:32:51",
    "description": "Forest fires in Russian Federation",
    "episodeid": 6,
    "eventid": 1031258,
@@ -597,7 +614,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-08-29T11:35:35",
+   "datemodified": "2026-08-29T15:34:30",
    "description": "Forest fires in Australia",
    "episodeid": 4,
    "eventid": 1031268,
@@ -613,7 +630,7 @@
   {
    "alertlevel": "Green",
    "country": "Brazil",
-   "datemodified": "2026-08-29T11:35:25",
+   "datemodified": "2026-08-29T15:33:27",
    "description": "Forest fires in Brazil",
    "episodeid": 2,
    "eventid": 1031307,
@@ -1585,22 +1602,6 @@
    "name": "Forest fires in Australia",
    "severitytext": "Green impact for forestfire in 5872 ha",
    "todate": "2026-08-29T00:00:00"
-  },
-  {
-   "alertlevel": "Green",
-   "country": "Greece",
-   "datemodified": "2026-08-29T02:13:49",
-   "description": "Earthquake in Greece",
-   "episodeid": 1729872,
-   "eventid": 1562394,
-   "eventtype": "EQ",
-   "fromdate": "2026-08-28T23:55:58",
-   "iso3": "GRC",
-   "lat": 37.422,
-   "lon": 22.7096,
-   "name": "Earthquake in Greece",
-   "severitytext": "Magnitude 4.5M, Depth:89.639km",
-   "todate": "2026-08-28T23:55:58"
   }
  ]
 }
