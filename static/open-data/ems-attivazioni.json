@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/",
-  "generato": "2026-08-29T10:54:23+00:00",
+  "generato": "2026-08-29T15:32:22+00:00",
   "licenza": "Copernicus Emergency Management Service — dati pubblici",
   "nota": "Copia locale: l'API non espone CORS, il browser non può leggerla direttamente."
  },
@@ -99,7 +99,7 @@
    ],
    "eventTime": "2026-08-14T22:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-08-29T10:48:50.057106",
+   "lastUpdate": "2026-08-29T14:57:52.251365",
    "n_aois": 5,
    "n_products": 17,
    "name": "Wildfire in Montenegro"
