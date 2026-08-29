@@ -5,16 +5,58 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-08-29T21:21:02+00:00",
+  "generato": "2026-08-29T23:31:42+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
+   "data": "2026-08-29T22:20:46+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Gas, Ue rischia inverno al gelo per scorte ai minimi ma l'Italia è virtuosa",
+   "url": "https://www.adnkronos.com/economia/gas-scorte-inverno-europa-italia_GNiS3VAKL5AfSEMOBwIEn"
+  },
+  {
+   "data": "2026-08-29T22:20:18+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "La violenta esplosione in una palazzina a Cassino, morto uno dei feriti",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/30/la-violenta-esplosione-in-una-palazzina-a-cassino-morto-uno-dei-feriti_312e2651-45ad-4f8f-85d5-6892bc41af06.html"
+  },
+  {
+   "data": "2026-08-29T22:19:56+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Rivolta in carcere a Siracusa, agenti si lanciano dal tetto per sfuggire alle pietre",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/30/rivolta-in-carcere-a-siracusa-agenti-si-lanciano-dal-tetto-per-sfuggire-alle_59f33796-97f6-4121-a8ac-84d484f3b8f5.html"
+  },
+  {
+   "data": "2026-08-29T22:19:46+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Casa, in arrivo l'affitto dimezzato per genitori separati",
+   "url": "https://www.adnkronos.com/economia/affitto-dimezzato-fondo-genitori-separati_tdgtoIKElk5cXzPjJ14ML"
+  },
+  {
+   "data": "2026-08-29T22:16:28+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "#AccadeOggi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/30/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
+  },
+  {
+   "data": "2026-08-29T22:08:29+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Di Battista ricoverato a Cuba, messaggio di Travaglio: \"Forza ragazzo\"",
+   "url": "https://www.adnkronos.com/politica/alesandro-di-battista-ricoverato-cuba-mesasggio-travaglio_2NbKXHF4j4z4HdAP3kPqS3"
+  },
+  {
    "data": "2026-08-29T21:10:05+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Ranucci contesta formalmente la rimozione da Report, 'è illegittima'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/ranucci-contesta-formalmente-la-rimozione-da-report-e-illegittima_da014448-5c66-4b58-845d-35cdcea97548.html"
+  },
+  {
+   "data": "2026-08-29T21:07:34+00:00",
+   "fonte": "ANSA",
+   "titolo": "Di Battista in ospedale lucido risponde alle domande dei medici",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/08/29/di-battista-in-ospedale-lucido-risponde-alle-domande-dei-medici_97ec2496-cf44-4da9-83da-8df05bbe6eaf.html"
   },
   {
    "data": "2026-08-29T21:02:14+00:00",
@@ -65,12 +107,6 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/garlasco-la-procura-di-pavia-dispone-altre-due-consulenze-su-andrea-sempio_7f6e132e-5dbc-4154-93b5-6d9931d3ff91.html"
   },
   {
-   "data": "2026-08-29T20:38:44+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Rivolta in carcere Siracusa, agenti si lanciano dal tetto per sfuggire a pietre",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/rivolta-in-carcere-siracusa-agenti-si-lanciano-dal-tetto-per-sfuggire-a-pietre_59f33796-97f6-4121-a8ac-84d484f3b8f5.html"
-  },
-  {
    "data": "2026-08-29T20:35:52+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Trovata in casa una donna carbonizzata, fermata la figlia",
@@ -81,12 +117,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Donna uccisa a coltellate in Friuli, fermato il compagno",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/donna-uccisa-a-coltellate-in-friuli-fermato-il-compagno_8a91db96-5fbe-4e91-acd1-07f362c53aef.html"
-  },
-  {
-   "data": "2026-08-29T20:24:41+00:00",
-   "fonte": "ANSA",
-   "titolo": "Di Battista in ospedale lucido risponde alle domande dei medici",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/08/29/di-battista-in-ospedale-lucido-risponde-alle-domande-dei-medici_97ec2496-cf44-4da9-83da-8df05bbe6eaf.html"
   },
   {
    "data": "2026-08-29T20:19:55+00:00",
@@ -159,36 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Cremona in ginocchio per il maltempo, Mattarella telefona al sindaco",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/cremona-in-ginocchio-per-il-maltempo-matterella-telefona-al-sindaco_3555cb29-4091-4045-be28-97246b751cc4.html"
-  },
-  {
-   "data": "2026-08-29T19:01:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "SuperEnalotto, estrazione e numeri vincenti di oggi 29 agosto 2026",
-   "url": "https://www.adnkronos.com/cronaca/superenalottto-estrazione-combinazione-vincente-jackpot-numeri-fortunati_1lQho4StqbYFgt8y0S4AGF"
-  },
-  {
-   "data": "2026-08-29T19:00:48+00:00",
-   "fonte": "ANSA",
-   "titolo": "Islanda al voto sui negoziati Ue, esito incerto",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/29/islanda-al-voto-sui-negoziati-ue-esito-incerto_7ec4daa5-0eb3-4d22-bcfb-a4537a24af40.html"
-  },
-  {
-   "data": "2026-08-29T18:59:12+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trump: 'Maxi accordo storico con il Venezuela sul petrolio'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/29/trump-maxi-accordo-storico-con-il-venezuela-sul-petrolio_69a22f3f-7a57-4b3c-a5bb-7d0c1e7c56d4.html"
-  },
-  {
-   "data": "2026-08-29T18:58:46+00:00",
-   "fonte": "ANSA",
-   "titolo": "Raid russo su un deposito di munizioni vicino Kiev, 37 morti",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/29/raid-russo-su-un-deposito-di-munizioni-vicino-kiev-37-morti_f41d6704-c18f-48dd-abc3-345b774c2bd8.html"
-  },
-  {
-   "data": "2026-08-29T18:46:23+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Udine, donna uccisa a coltellate: fermato il marito",
-   "url": "https://www.adnkronos.com/cronaca/donna-uccisa-coltellate-udine-fermato-marito_5jPNcjyHvZrSJPOqr2SGmp"
   }
  ]
 }
