@@ -1,6 +1,6 @@
 ---
 title: "Fine dell'estate meteorologica: cosa cambia nel rischio"
-date: 2026-08-29
+date: 2026-08-29T00:01:00+02:00
 description: "Il 31 agosto finisce l'estate meteorologica. Cambia il quadro dei rischi: meno caldo, ma più temporali, vento, rischio idraulico."
 badge: "Informazione"
 priorita: "normale"
