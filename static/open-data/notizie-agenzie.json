@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-08-29T15:32:18+00:00",
+  "generato": "2026-08-29T18:49:04+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-08-29T15:21:39+00:00",
+   "data": "2026-08-29T18:40:43+00:00",
    "fonte": "ANSA",
-   "titolo": "Benzina, corredo scolastico e alimentari: rientro salato dalle vacanze",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/08/29/benzina-corredo-scolastico-e-alimentari-un-rientro-dalle-vacanze-con-rincari_8813e929-b795-4fb3-9e5c-ee4017adb2f3.html"
+   "titolo": "Per la prima volta il Papa in processione sul lago di Albano",
+   "url": "https://www.ansa.it/vaticano/notizie/2026/08/29/per-la-prima-volta-il-papa-in-processione-sul-lago-di-albano_b020970a-dbb2-463d-82eb-d0e9447b4399.html"
   },
   {
-   "data": "2026-08-29T15:18:35+00:00",
+   "data": "2026-08-29T18:40:21+00:00",
    "fonte": "ANSA",
-   "titolo": "++ Caduta per Pogacar, si ritira dalla Vuelta ++",
-   "url": "https://www.ansa.it/sito/notizie/flash/2026/08/29/-caduta-per-pogacar-si-ritira-dalla-vuelta-_7b3523c3-b86b-4a64-ad33-aca674c7d7dc.html"
+   "titolo": "La Fiorentina cade in casa nel giorno della festa, il Frosinone si impone 3-0 CRONACA e FOTO",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/08/29/la-fiorentina-cade-in-casa-nel-giorno-della-festa-il-frosinone-si-impone-3-0-cronaca_b69a0e5a-7095-4887-8a95-81de733963a3.html"
   },
   {
-   "data": "2026-08-29T14:59:34+00:00",
+   "data": "2026-08-29T18:39:17+00:00",
    "fonte": "ANSA",
-   "titolo": "I funerali di Tania Terrin, il parroco nell'omelia: 'La prima responsabile è la politica'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/una-bara-bianca-per-tania-terrin-il-feretro-accolto-dalla-madre_9814a051-f220-4ca3-bac0-504af01b2f73.html"
+   "titolo": "Ranucci via da Report, ma il caso è ancora aperto: la polemica è politica",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/08/29/polemica-politica-sulladdio-di-ranucci-a-report-lunirai-attacca-gravi-le-sue-parole_f359eb83-612c-4ea1-b186-08af925563b6.html"
   },
   {
-   "data": "2026-08-29T14:52:06+00:00",
+   "data": "2026-08-29T18:33:51+00:00",
+   "fonte": "ANSA",
+   "titolo": "Alessandro Di Battista ricoverato a Cuba dopo un malore, è grave. Ha ripreso conoscenza, è in trasferimento a L'Avana",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/08/29/alessandro-di-battista-ricoverato-a-cuba-dopo-un-malore-e-grave.-ha-ripreso-conoscenza-e-in-trasferimento_97ec2496-cf44-4da9-83da-8df05bbe6eaf.html"
+  },
+  {
+   "data": "2026-08-29T18:27:29+00:00",
+   "fonte": "ANSA",
+   "titolo": "Cremona in ginocchio per il maltempo, Mattarella telefona al sindaco",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/cremona-in-ginocchio-per-il-maltempo-matterella-telefona-al-sindaco_3555cb29-4091-4045-be28-97246b751cc4.html"
+  },
+  {
+   "data": "2026-08-29T18:25:57+00:00",
+   "fonte": "ANSA",
+   "titolo": "Trump: 'Maxi accordo storico con il Venezuela sul petrolio'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/29/trump-maxi-accordo-storico-con-il-venezuela-sul-petrolio_69a22f3f-7a57-4b3c-a5bb-7d0c1e7c56d4.html"
+  },
+  {
+   "data": "2026-08-29T18:25:36+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'ultimo saluto a Tania Terrin: 'Responsabile è la politica'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/lultimo-saluto-a-tania-terrin-responsabile-e-la-politica_9814a051-f220-4ca3-bac0-504af01b2f73.html"
+  },
+  {
+   "data": "2026-08-29T18:23:00+00:00",
+   "fonte": "ANSA",
+   "titolo": "Raid russo su un deposito di munizioni vicino Kiev, 37 morti",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/29/raid-russo-su-un-deposito-di-munizioni-vicino-kiev-37-morti_f41d6704-c18f-48dd-abc3-345b774c2bd8.html"
+  },
+  {
+   "data": "2026-08-29T18:22:36+00:00",
+   "fonte": "ANSA",
+   "titolo": "Luca Barachini e Patrizia Marziale dispersi nel viaggio dei loro sogni in Nepal",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/luca-barachini-e-patrizia-marziale-dispersi-nel-viaggio-dei-loro-sogni_71d8618d-7be1-4926-ae83-c12ca6d9c93a.html"
+  },
+  {
+   "data": "2026-08-29T18:20:41+00:00",
+   "fonte": "ANSA",
+   "titolo": "Alluvione tra Tibet e Nepal. Sale il bilancio dei morti, 5 miliardi per la ricostruzione",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/29/alluvione-tra-tibet-e-nepal-almeno-626-morti-e-2.426-dispersi.-fino_21decbe0-6feb-4ce1-b601-1d0cf4a17f85.html"
+  },
+  {
+   "data": "2026-08-29T18:15:02+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Dolomiti, alpinista 73enne muore dopo un volo di 20 metri",
+   "url": "https://www.adnkronos.com/cronaca/alpinista-muore-cadendo-dolomiti_4q2lGf9tewhwPJKS4IxBqd"
+  },
+  {
+   "data": "2026-08-29T18:14:24+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "++ Donna uccisa a coltellate in Friuli, fermato il compagno ++",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/-donna-uccisa-a-coltellate-in-friuli-fermato-il-compagno-_2c0c01b9-1f55-443f-8f23-cd858127a7e5.html"
+  },
+  {
+   "data": "2026-08-29T18:04:24+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Chiusa la Porta Santa della 732/ma Perdonanza all'Aquila",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/chiusa-la-porta-santa-della-732ma-perdonanza-allaquila_d3192153-6a5a-46c7-ba23-c7243ef218a0.html"
+  },
+  {
+   "data": "2026-08-29T18:01:48+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "In Abruzzo l'addio all'alpinista morto a novembre sulle vette del Nepal",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/in-abruzzo-laddio-allalpinista-morto-a-novembre-sulle-vette-del-nepal_c93f920a-c13d-444f-bb11-7d369e969dcd.html"
+  },
+  {
+   "data": "2026-08-29T18:01:20+00:00",
+   "fonte": "ANSA",
+   "titolo": "Giochi del Mediterraneo, boom di visite al MArTA per l'Atleta di Taranto",
+   "url": "https://www.ansa.it/puglia/notizie/speciali/xx_giochi_del_mediterraneo_taranto_2026/2026/08/29/giochi-del-mediterraneo-boom-di-visite-al-marta-per-latleta-di-taranto_673f809a-eabc-4d78-911c-3477324d13e0.html"
+  },
+  {
+   "data": "2026-08-29T17:56:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serie A, oggi Juve-Parma 0-0 - Diretta",
+   "url": "https://www.adnkronos.com/sport/diretta-juve-parma-oggi-serie-a-live-risultato-aggiornamenti_52dedU8rY17MkmMe13ddhH"
+  },
+  {
+   "data": "2026-08-29T17:54:40+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Rientrati in Italia i due turisti bresciani: 'Ora pensiamo a chi è in Nepal'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/rientrati-in-italia-i-due-turisti-bresciani-ora-pensiamo-a-chi-e-in-nepal_47acc0c6-3924-4302-ac4c-efec7dd48849.html"
+  },
+  {
+   "data": "2026-08-29T17:18:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Alessandro Di Battista, malore per l'ex deputato M5S: tutto quello che sappiamo",
+   "url": "https://www.adnkronos.com/politica/alessandro-di-battista-ricoverato-malore-cuba-trasferimento-avana_5HLNbjLjlSpmXqQ2YijkzR"
+  },
+  {
+   "data": "2026-08-29T17:08:18+00:00",
    "fonte": "ANSA",
    "titolo": "Bimbo salvo su un albero in Nepal, ritrova la madre grazie a una reporter",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/29/bimbo-salvo-su-un-albero-in-nepal-ritrova-la-madre-grazie-a-una-reporter_3d294b81-f721-4eda-9752-b14ba587cc11.html"
   },
   {
-   "data": "2026-08-29T14:50:17+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Strage di Brandizzo, Comune e 'Sicurezza e Lavoro' si costituiranno parte civile",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/strage-di-brandizzo-comune-e-sicurezza-e-lavoro-si-costituiranno-parte-civile_be1fc494-ed6e-41b0-9477-aa2ad9a3e121.html"
+   "data": "2026-08-29T17:04:35+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il sogno proibito di Hegseth, la corsa alla Casa Bianca",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/29/il-sogno-proibito-di-hegseth-la-corsa-alla-casa-bianca_1b1e01bc-599b-4a74-9dba-6b5108a54ec2.html"
   },
   {
-   "data": "2026-08-29T14:41:40+00:00",
+   "data": "2026-08-29T16:36:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "È morto Franco Fontana, chi era il fotografo maestro del colore: aveva 92 anni",
-   "url": "https://www.adnkronos.com/cultura/franco-fontana-morto-fotografo-chi-era_64cyetDwUhtO36V3DzALD7"
+   "titolo": "Trump posta esercito di 'Donald Ducks', le papere armate a difesa del Lago America",
+   "url": "https://www.adnkronos.com/internazionale/esteri/trump-esercito-donald-ducks-papere-armate-lago-america_5dXd7XsSd8jX1CNl0XrCqb"
   },
   {
-   "data": "2026-08-29T14:39:35+00:00",
+   "data": "2026-08-29T16:34:23+00:00",
    "fonte": "ANSA",
-   "titolo": "Sarah Ferguson torna nel Regno Unito dopo lo scandalo Epstein",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/29/media-sarah-ferguson-torna-nel-regno-unito-dopo-lo-scandalo-epstein_56d23c62-5f07-4b34-b166-f5e76971a89e.html"
+   "titolo": "Caduta per Pogacar, si ritira dalla Vuelta. Mondiale a rischio",
+   "url": "https://www.ansa.it/sito/notizie/sport/ciclismo/2026/08/29/caduta-per-pogacar-si-ritira-dalla-vuelta_03f89bbc-14cd-4f41-9cf3-a6b45b40ca48.html"
   },
   {
-   "data": "2026-08-29T14:34:52+00:00",
-   "fonte": "ANSA",
-   "titolo": "Bimbo in coma in Egitto, gara di solidarietà per riportarlo a Brandizzo",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/bimbo-in-coma-in-egitto-gara-di-solidarieta-per-riportarlo-a-brandizzo_9dcc7f1f-f73a-4d91-87cc-384aa6ef99d9.html"
+   "data": "2026-08-29T16:22:34+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Nepal",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/nepal_e045f671-18f5-471a-bf8a-449a965683e3.html"
   },
   {
-   "data": "2026-08-29T14:33:47+00:00",
+   "data": "2026-08-29T16:14:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Trovato senza vita nel Po il 16enne che si era allontanato da casa",
+   "url": "https://www.adnkronos.com/cronaca/trovato-senza-vita-nel-po-16enne-che-si-era-allontanato-da-casa_2dt0VkOlU8KWHgAuDCwrpH"
+  },
+  {
+   "data": "2026-08-29T16:11:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serie A, Fiorentina-Frosinone 0-3: serata da incubo per Grosso. Berardi lancia il Sassuolo, Monza-Udinese 2-3",
+   "url": "https://www.adnkronos.com/sport/diretta-serie-a-oggi-sassuolo-torino-fiorentina-frosinone-monza-udinese-live-risultati_5xdXSKTBhwFkxk4XWJj7wh"
+  },
+  {
+   "data": "2026-08-29T15:41:14+00:00",
    "fonte": "ANSA",
+   "titolo": "Weekend con tregua dal caldo torrido al Centro-Nord, ma ancora 38-40 gradi al Sud",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/weekend-con-tregua-dal-caldo-torrido-al-centro-nord-ma-ancora-38-40-gradi_0bb0ef0a-c62f-406b-b444-d804285ecbdf.html"
+  },
+  {
+   "data": "2026-08-29T15:35:21+00:00",
+   "fonte": "ANSA CRONACA",
    "titolo": "Morto a Modena Franco Fontana, maestro della fotografia e del colore",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/morto-a-modena-franco-fontana-maestro-della-fotografia-e-del-colore_75956d56-aea8-4f9a-87c6-d3405e32c219.html"
   },
   {
-   "data": "2026-08-29T14:30:31+00:00",
-   "fonte": "ANSA",
-   "titolo": "Da Fano alla Lapponia in auto a 83 anni, l'avventura di Olga Mancurti",
-   "url": "https://www.ansa.it/marche/notizie/2026/08/29/da-fano-alla-lapponia-in-auto-a-83-anni-lavventura-di-olga-mancurti_99ede620-95ce-4cb3-8e3d-358347d513e3.html"
-  },
-  {
-   "data": "2026-08-29T14:28:50+00:00",
-   "fonte": "ANSA",
-   "titolo": "Alessandro Di Battista ricoverato a Cuba in gravi condizioni, 'forte mal di testa e malore'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/08/29/alessandro-di-battista-ricoverato-a-cuba-in-gravi-condizioni-forte-mal-di-testa-e-malore_97ec2496-cf44-4da9-83da-8df05bbe6eaf.html"
-  },
-  {
-   "data": "2026-08-29T14:21:50+00:00",
-   "fonte": "ANSA",
-   "titolo": "Polemica politica sull'addio di Ranucci a Report, l'Unirai attacca: 'Gravi le sue parole'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/08/29/polemica-politica-sulladdio-di-ranucci-a-report-lunirai-attacca-gravi-le-sue-parole_f359eb83-612c-4ea1-b186-08af925563b6.html"
-  },
-  {
-   "data": "2026-08-29T14:14:47+00:00",
-   "fonte": "ANSA",
-   "titolo": "Alluvione tra Tibet e Nepal, si aggrava il bilancio: 675 morti. Soccorsi difficili",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/29/alluvione-tra-tibet-e-nepal-almeno-626-morti-e-2.426-dispersi.-fino_21decbe0-6feb-4ce1-b601-1d0cf4a17f85.html"
-  },
-  {
-   "data": "2026-08-29T14:08:00+00:00",
+   "data": "2026-08-29T15:34:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Nepal, Patrizia Marziale e Luca Barachini i turisti italo-svizzeri dispersi. Il post social: \"Chiedimi se sono felice\"",
-   "url": "https://www.adnkronos.com/cronaca/patrizia-marziale-luca-barachini-turisti-italo-svizzeri-dispersi-nepal_1BTkcaThVwh04EsjdCPX2T"
+   "titolo": "Clamoroso alla Vuelta, Pogacar cade e si ritira",
+   "url": "https://www.adnkronos.com/sport/pogacar-cade-vuelta-tappa-8-ritira-cosa-e-successo-video_7mTmZ4QYUsus60dpLdNgtT"
   },
   {
-   "data": "2026-08-29T14:06:48+00:00",
+   "data": "2026-08-29T15:33:26+00:00",
    "fonte": "ANSA",
-   "titolo": "Rientrati in Italia i due turisti bresciani. Tra i dispersi Luca Barachini e la moglie Patrizia Marziale",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/rientrati-in-italia-dal-nepal-i-due-turisti-bresciani-rimasti-bloccati_47acc0c6-3924-4302-ac4c-efec7dd48849.html"
+   "titolo": "Paga la messa in piega 46 euro e ne vince 100.000 con la lotteria degli scontrini",
+   "url": "https://www.ansa.it/toscana/notizie/2026/08/29/paga-la-messa-in-piega-46-euro-e-ne-vince-100.000-con-lotteria-scontrini_e27e2e1c-cc1a-4d64-9c7c-4c6a924b4075.html"
   },
   {
-   "data": "2026-08-29T14:04:40+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "America's Cup, Grael: \"A Napoli bella sfida\". Chieffi: \"Luna Rossa? New Zealand squadra da battere\"",
-   "url": "https://www.adnkronos.com/sport/americas-cup-grael-a-napoli-bella-sfida-chieffi-luna-rossa-new-zealand-squadra-da-battere_73oVmm763H1sr4lmT4Cghn"
-  },
-  {
-   "data": "2026-08-29T13:59:00+00:00",
+   "data": "2026-08-29T15:32:01+00:00",
    "fonte": "ANSA",
-   "titolo": "Haakon VIII di Norvegia terrà un discorso in memoria del padre",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/29/il-nuovo-re-haakon-viii-di-norvegia-terra-un-discorso-in-memoria-del-padre_7cdabbe6-6d1d-4e36-8391-7edeaa2cf035.html"
-  },
-  {
-   "data": "2026-08-29T13:41:03+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trump: 'Con il Venezuela il più grande accordo sul petrolio della storia'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/29/trump-con-il-venezuela-il-piu-grande-accordo-sul-petrolio-della-storia_69a22f3f-7a57-4b3c-a5bb-7d0c1e7c56d4.html"
-  },
-  {
-   "data": "2026-08-29T13:41:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Di Battista ricoverato a Cuba, le reazioni. Da Crosetto a Mannoia: \"Forza Ale\"",
-   "url": "https://www.adnkronos.com/politica/di-battista-come-sta-ricoverato-cuba-reazioni-politici_7HVIGGmwT0VF8kj21xG7s3"
-  },
-  {
-   "data": "2026-08-29T13:38:05+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Oggi i funerali di Tania Terrin, lutto regionale in Veneto",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/oggi-i-funerali-di-tania-terrin-lutto-regionale-in-veneto_0b0ebaad-7ea8-433a-996f-3896e56a2b6d.html"
-  },
-  {
-   "data": "2026-08-29T13:35:33+00:00",
-   "fonte": "ANSA",
-   "titolo": "MotoGp: Aragon, Marc Marquez vince la gara sprint, terza l'Aprilia di Bezzecchi",
-   "url": "https://www.ansa.it/sito/notizie/sport/moto/2026/08/29/motogp-aragon-marc-marquez-vince-la-gara-sprint-terza-laprilia-di-bezzecchi_9fdbc8d0-655e-4b39-8adf-9eec0d01111c.html"
-  },
-  {
-   "data": "2026-08-29T13:30:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Gp Aragon, Marc Marquez vince gara sprint: ordine di arrivo e classifica aggiornata",
-   "url": "https://www.adnkronos.com/sport/gp-aragon-marc-marquez-vince-gara-sprint-ordine-arrivo-come-cambia-classifica-piloti_7EqET6LHHaDcvgBAGyxOmN"
-  },
-  {
-   "data": "2026-08-29T13:28:15+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Alpini e militari Usa abbelliscono i portici di Monte Berico a Vicenza",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/alpini-e-militari-usa-abbelliscono-i-portici-di-monte-berico-a-vicenza_6742546c-32d6-411e-9594-d3b110a56835.html"
-  },
-  {
-   "data": "2026-08-29T13:20:38+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Maltempo, la Lombardia chiede lo stato di emergenza anche per Cremona",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/maltempo-la-lombardia-chiede-lo-stato-di-emergenza-anche-per-cremona_a7d13f4a-e76c-4b84-aa29-9afaa68439c3.html"
-  },
-  {
-   "data": "2026-08-29T13:18:21+00:00",
-   "fonte": "ANSA",
-   "titolo": "Cremona dopo la tromba d'aria, danni a 10 chiese e 10mila auto",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/cremona-dopo-la-tromba-daria-danni-a-10-chiese-e-10mila-auto_3555cb29-4091-4045-be28-97246b751cc4.html"
-  },
-  {
-   "data": "2026-08-29T13:17:33+00:00",
-   "fonte": "ANSA",
-   "titolo": "Maltempo in Lombardia, Brescia: chicchi di grandine come palline da tennis",
-   "url": "https://www.ansa.it/sito/videogallery/italia/2026/08/29/maltempo-in-lombardia-brescia-chicchi-di-grandine-come-palline-da-tennis_e1838230-7da0-4943-b879-4f912e0d375a.html"
-  },
-  {
-   "data": "2026-08-29T13:01:15+00:00",
-   "fonte": "ANSA",
-   "titolo": "Strage a Kiev, 37 morti in un raid russo su un magazzino",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/29/strage-a-kiev-37-morti-in-raid-russo-su-un-magazzino_f41d6704-c18f-48dd-abc3-345b774c2bd8.html"
-  },
-  {
-   "data": "2026-08-29T13:00:03+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Aurora Ramazzotti cambia (di nuovo) casa a Milano: \"Spese insostenibili\"",
-   "url": "https://www.adnkronos.com/spettacoli/aurora-ramazzotti-trasloco-casa-milano-spese-insostenibili_sSVYz5BflvDtSFmZ6Mc4v"
-  },
-  {
-   "data": "2026-08-29T12:40:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Di Battista, il 'Dibba' duro e puro: dal grillismo al Parlamento in opposizione permanente",
-   "url": "https://www.adnkronos.com/politica/alessandro-di-battista-ritratto_2ZCwibruSVcWK7MtToRmJL"
-  },
-  {
-   "data": "2026-08-29T12:23:58+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Coldiretti Veneto, nel Veronese danni per decine di milioni",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/coldiretti-veneto-nel-veronese-danni-per-decine-di-milioni_b31148b5-459a-4380-9503-166d48cf7d07.html"
+   "titolo": "Benzina, corredo scolastico e alimentari: rientro salato dalle vacanze",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/08/29/benzina-corredo-scolastico-e-alimentari-un-rientro-dalle-vacanze-con-rincari_8813e929-b795-4fb3-9e5c-ee4017adb2f3.html"
   }
  ]
 }
