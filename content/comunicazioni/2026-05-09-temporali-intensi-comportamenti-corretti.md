@@ -14,6 +14,8 @@ allegati: []
 draft: false
 ---
 
+> ℹ️ Su questo tema la guida di riferimento, più completa, è **[Temporali estivi nei Castelli Romani: come riconoscerli e cosa fare](/comunicazioni/2026-06-13-temporali-estivi-castelli-romani/)**.
+
 Un temporale intenso può passare dal cielo sereno al nubifragio in quindici minuti. Fulmini, grandine, raffiche di vento: ciascuno di questi fenomeni può mettere in pericolo persone e cose. Questa pagina raccoglie i comportamenti corretti per chi si trova in casa, all'aperto o in auto.
 
 ## Come si forma un temporale
