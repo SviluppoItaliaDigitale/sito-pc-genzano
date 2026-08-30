@@ -1,0 +1,15 @@
+{{/* ═══════════════════════════════════════════════════
+     BANNER CONTENUTO D'ARCHIVIO — mostrato in cima agli articoli con
+     `archiviato: true` nel frontmatter (audit contenuti 30/08/2026).
+     L'articolo resta online al suo URL per la memoria del Gruppo, ma
+     il lettore capisce subito che si riferisce a un evento o avviso
+     concluso. Il flag `archiviato` era già usato dagli script di
+     freschezza (check-freshness.py); da oggi ha anche questa resa
+     visiva ed esclude l'articolo dai correlati. Alert Bootstrap
+     Italia standard, nessuna CSS nuova. */}}
+{{ if .Params.archiviato }}
+<div class="alert alert-light border" role="note">
+  <i class="bi bi-archive me-2" aria-hidden="true"></i>
+  <strong>Contenuto d'archivio.</strong> Questo articolo si riferisce a un evento o a un avviso ormai concluso e resta online per documentazione. Per le informazioni aggiornate consulta le <a href="{{ "comunicazioni/" | relURL }}">ultime comunicazioni</a>.
+</div>
+{{ end }}
