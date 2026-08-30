@@ -33,7 +33,28 @@
     <div class="col-lg-8">
       {{ .Content }}
 
+      {{- /* Canali editoriali (30/08/2026): "gruppo" = avvisi e attività
+           del Gruppo sul territorio; "approfondimenti" = magazine
+           (prevenzione, conoscenza, formazione). Derivati dal badge con
+           override frontmatter `canale:` — vedi partial canale-articolo. */ -}}
+      {{- $countGruppo := 0 -}}
+      {{- $countApprof := 0 -}}
+      {{- range $pages -}}
+        {{- if eq (partial "canale-articolo.html" .) "gruppo" -}}{{- $countGruppo = add $countGruppo 1 -}}{{- else -}}{{- $countApprof = add $countApprof 1 -}}{{- end -}}
+      {{- end -}}
       <div class="filter-bar mb-4" role="region" aria-label="Filtri per categoria">
+        <p class="filter-label mb-2"><i class="bi bi-collection" aria-hidden="true"></i> Mostra:</p>
+        <div class="filter-pills d-flex flex-wrap gap-2 mb-3" role="group" aria-label="Canale">
+          <button type="button" class="filter-pill filter-pill-canale active" data-canale="all" aria-pressed="true">
+            Tutto <span class="filter-count">({{ len $pages }})</span>
+          </button>
+          <button type="button" class="filter-pill filter-pill-canale" data-canale="gruppo" aria-pressed="false">
+            Il Gruppo e il territorio <span class="filter-count">({{ $countGruppo }})</span>
+          </button>
+          <button type="button" class="filter-pill filter-pill-canale" data-canale="approfondimenti" aria-pressed="false">
+            Approfondimenti <span class="filter-count">({{ $countApprof }})</span>
+          </button>
+        </div>
         <p class="filter-label mb-2"><i class="bi bi-funnel" aria-hidden="true"></i> Filtra per categoria:</p>
         <div class="filter-pills d-flex flex-wrap gap-2" role="group" aria-label="Categorie">
           <button type="button" class="filter-pill active" data-filter="all" aria-pressed="true">
@@ -82,7 +103,7 @@
           {{ range .Pages }}
           {{- $badgeLower := .Params.badge | lower -}}
           {{- $annoArt := "" -}}{{ if .Date }}{{ $annoArt = .Date.Format "2006" }}{{ end -}}
-          <article class="card card-notizia mb-3" data-badge="{{ $badgeLower }}" data-anno="{{ $annoArt }}">
+          <article class="card card-notizia mb-3" data-badge="{{ $badgeLower }}" data-anno="{{ $annoArt }}" data-canale="{{ partial "canale-articolo.html" . }}">
             <div class="row g-0">
               <div class="col-12 col-md-4">
                 <div class="notizia-img-wrapper">
@@ -196,31 +217,41 @@
 <script>
 (function(){
   const pillsCat = document.querySelectorAll('[data-filter]');
-  const pillsAnno = document.querySelectorAll('[data-anno]');
-  const cards = document.querySelectorAll('[data-badge]');
+  // Solo i BOTTONI: le card articolo hanno anch'esse data-anno/data-canale
+  // e un selettore generico [data-anno] gli attaccherebbe il listener di
+  // filtro (bug corretto il 30/08/2026 insieme all'introduzione dei canali).
+  const pillsAnno = document.querySelectorAll('button[data-anno]');
+  const pillsCanale = document.querySelectorAll('button[data-canale]');
+  const cards = document.querySelectorAll('article[data-badge]');
   const monthSections = document.querySelectorAll('.archivio-mese');
   const noResults = document.getElementById('filter-no-results');
 
-  // Stato filtri combinato (categoria AND anno)
-  const stato = { categoria: 'all', anno: 'all' };
+  // Stato filtri combinato (canale AND categoria AND anno)
+  const stato = { canale: 'all', categoria: 'all', anno: 'all' };
 
   function apply(){
     let visible = 0;
     cards.forEach(function(c){
+      const matchCanale = stato.canale === 'all' || c.dataset.canale === stato.canale;
       const matchCat = stato.categoria === 'all' || c.dataset.badge === stato.categoria;
       const matchAnno = stato.anno === 'all' || c.dataset.anno === stato.anno;
-      const match = matchCat && matchAnno;
+      const match = matchCanale && matchCat && matchAnno;
       c.style.display = match ? '' : 'none';
       if(match) visible++;
     });
     // Hide empty month sections
     monthSections.forEach(function(s){
-      const visibleInSection = s.querySelectorAll('[data-badge]:not([style*="none"])');
+      const visibleInSection = s.querySelectorAll('article[data-badge]:not([style*="none"])');
       s.style.display = visibleInSection.length ? '' : 'none';
     });
     noResults.classList.toggle('d-none', visible > 0);
     // Sync pill stato (sia top sia sidebar)
-    document.querySelectorAll('.filter-pill:not(.filter-pill-anno)').forEach(function(p){
+    document.querySelectorAll('.filter-pill-canale').forEach(function(p){
+      const active = p.dataset.canale === stato.canale;
+      p.classList.toggle('active', active);
+      p.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+    document.querySelectorAll('.filter-pill:not(.filter-pill-anno):not(.filter-pill-canale)').forEach(function(p){
       const active = p.dataset.filter === stato.categoria;
       p.classList.toggle('active', active);
       p.setAttribute('aria-pressed', active ? 'true' : 'false');
@@ -232,6 +263,16 @@
     });
   }
 
+  pillsCanale.forEach(function(p){
+    p.addEventListener('click', function(){
+      stato.canale = p.dataset.canale;
+      // Cambio canale = ripartenza pulita sulla categoria: evita il
+      // combinato "canale operativo + categoria del magazine" che
+      // produrrebbe zero risultati poco leggibili.
+      stato.categoria = 'all';
+      apply();
+    });
+  });
   pillsCat.forEach(function(p){
     p.addEventListener('click', function(){
       stato.categoria = p.dataset.filter;
@@ -245,13 +286,21 @@
     });
   });
 
-  // Hash deep-link: #cat=allerta o #anno=2026 o entrambi
-  const hash = location.hash || '';
-  const mCat = hash.match(/cat=([a-z]+)/);
-  const mAnno = hash.match(/anno=(\d{4}|all)/);
-  if (mCat) stato.categoria = mCat[1];
-  if (mAnno) stato.anno = mAnno[1];
-  if (mCat || mAnno) apply();
+  // Hash deep-link: #canale=gruppo o #cat=allerta o #anno=2026, combinabili.
+  // Anche su hashchange: un link con hash cliccato mentre si è già
+  // sull'archivio non ricarica la pagina.
+  function applyHash(){
+    const hash = location.hash || '';
+    const mCanale = hash.match(/canale=(gruppo|approfondimenti|all)/);
+    const mCat = hash.match(/cat=([a-z]+)/);
+    const mAnno = hash.match(/anno=(\d{4}|all)/);
+    if (mCanale) stato.canale = mCanale[1];
+    if (mCat) stato.categoria = mCat[1];
+    if (mAnno) stato.anno = mAnno[1];
+    if (mCanale || mCat || mAnno) apply();
+  }
+  window.addEventListener('hashchange', applyHash);
+  applyHash();
 })();
 </script>
 {{ end }}
