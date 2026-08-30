@@ -71,6 +71,18 @@
         <h2 id="stato-workflow-h" class="stato-panel-title"><i class="bi bi-gear-wide-connected me-2" aria-hidden="true"></i>Automazioni di manutenzione</h2>
         <p class="stato-panel-desc">Controlli automatici che tengono il sito aggiornato, accessibile e senza errori. Verde = ultimo controllo riuscito.</p>
         {{- with $stato }}
+        {{- /* Fail-safe di freschezza (audit 30/08/2026): un cruscotto di
+             stato deve essere più affidabile del sito che monitora. Se lo
+             snapshot delle automazioni ha più di 48 ore (il workflow che lo
+             aggiorna gira ogni giorno), i badge sotto non vanno letti come
+             attuali: lo si dichiara. La pagina è ricostruita a ogni deploy,
+             quindi il confronto a build-time resta significativo. */ -}}
+        {{- $etaSnapshot := now.Sub (time.AsTime .aggiornato) -}}
+        {{- if gt $etaSnapshot.Hours 48.0 }}
+        <div class="alert alert-warning" role="status">
+          <strong>Dati di monitoraggio non aggiornati.</strong> L'ultima rilevazione automatica risale a più di 48 ore fa: gli stati mostrati sotto potrebbero non riflettere la situazione attuale.
+        </div>
+        {{- end }}
         <ul class="stato-workflow-list">
           {{- range .workflow -}}
           {{- $s := .stato -}}

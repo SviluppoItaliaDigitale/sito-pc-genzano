@@ -6,6 +6,17 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# Canonicalizza le richieste esplicite di /index.html (root e sottocartelle)
+# sulla cartella con slash finale: /index.html → /, /chi-siamo/index.html →
+# /chi-siamo/. Evita l'URL duplicato segnalato dall'audit del 30/08/2026
+# (la pagina del Comune linka ancora l'indirizzo vecchio con /index.html).
+# Il RewriteCond su THE_REQUEST limita il 301 alle richieste arrivate DAL
+# CLIENT: le subrequest interne di DirectoryIndex non lo attraversano,
+# quindi niente loop. Target assoluto https per il 301 in un solo hop
+# (stessa convenzione dei redirect qui sotto).
+RewriteCond %{THE_REQUEST} \s/+(.+/)?index\.html[?\s]
+RewriteRule ^(.*/)?index\.html$ https://www.protezionecivilegenzano.it/$1 [R=301,L]
+
 # Pagine vecchie → nuove.
 # I target sono URL ASSOLUTE https://www.protezionecivilegenzano.it/ — così il
 # 301 va in UN SOLO hop alla versione HTTPS canonica, indipendentemente
