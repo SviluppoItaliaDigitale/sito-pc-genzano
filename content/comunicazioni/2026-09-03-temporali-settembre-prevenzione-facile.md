@@ -19,6 +19,8 @@ build:
   publishResources: true
 ---
 
+> ℹ️ C'è una guida più completa su questo tema. La trovi qui: **[Temporali estivi: cosa fare](/comunicazioni/2026-06-13-temporali-estivi-castelli-romani-facile/)**.
+
 A settembre ci sono spesso temporali forti. Il Lazio e i Castelli Romani sono zone a rischio. Questa pagina spiega come riconoscere un temporale e cosa fare.
 
 ## Come capire che arriva un temporale

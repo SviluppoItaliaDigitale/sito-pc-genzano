@@ -19,6 +19,8 @@ build:
 tts: true
 ---
 
+> ℹ️ C'è una guida più completa su questo tema. La trovi qui: **[Temporali estivi: cosa fare](/comunicazioni/2026-06-13-temporali-estivi-castelli-romani-facile/)**.
+
 Un temporale è pericoloso. Puoi fare cose semplici per stare al sicuro.
 
 ## Segnali di arrivo

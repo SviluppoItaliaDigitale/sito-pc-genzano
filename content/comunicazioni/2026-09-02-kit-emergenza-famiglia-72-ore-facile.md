@@ -19,6 +19,8 @@ build:
   publishResources: true
 ---
 
+> ℹ️ C'è una guida più completa su questo tema. La trovi qui: **[Lo zaino di emergenza: cosa mettere dentro](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica-facile/)**.
+
 La Protezione Civile consiglia a ogni famiglia di avere uno **zaino di emergenza**. Lo zaino deve avere tutto il necessario per **72 ore** (3 giorni). Dopo un terremoto o un'alluvione i soccorsi possono tardare. Con lo zaino pronto sei al sicuro.
 
 ## Perché 72 ore
