@@ -261,6 +261,7 @@
       p.classList.toggle('active', active);
       p.setAttribute('aria-pressed', active ? 'true' : 'false');
     });
+    return visible;
   }
 
   pillsCanale.forEach(function(p){
@@ -276,7 +277,14 @@
   pillsCat.forEach(function(p){
     p.addEventListener('click', function(){
       stato.categoria = p.dataset.filter;
-      apply();
+      // Simmetrico al reset canale→categoria: se la categoria scelta non
+      // ha articoli nel canale attivo (le pill categoria dichiarano i
+      // conteggi complessivi), il canale torna a "Tutto" invece di
+      // mostrare zero risultati (review PR #935).
+      if (apply() === 0 && stato.canale !== 'all') {
+        stato.canale = 'all';
+        apply();
+      }
     });
   });
   pillsAnno.forEach(function(p){
