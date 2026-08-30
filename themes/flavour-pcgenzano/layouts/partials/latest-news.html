@@ -9,10 +9,20 @@
      Hugo sort è stabile: articoli con stessa Date mantengono l'ordine Lastmod. */}}
 {{ $byLastmod := sort $filtered ".Lastmod" "desc" }}
 {{ $recentNews := sort $byLastmod ".Date" "desc" }}
+{{/* Separazione dei canali (30/08/2026): qui compare SOLO il canale
+     operativo "Il Gruppo e il territorio" (avvisi, attività, vita del
+     Gruppo). Gli articoli divulgativi hanno la loro striscia dedicata
+     in homepage (partial approfondimenti-home.html) e la scheda
+     "Approfondimenti" nell'archivio: chi apre il sito durante
+     un'emergenza deve vedere il segnale operativo, non il magazine. */}}
+{{ $operative := slice }}
+{{ range $recentNews }}{{ if eq (partial "canale-articolo.html" .) "gruppo" }}{{ $operative = $operative | append . }}{{ end }}{{ end }}
+{{ $recentNews = $operative }}
 {{ if $recentNews }}
 <section class="notizie-section fade-in-up" aria-labelledby="notizie-heading">
   <div class="container">
-    <h2 id="notizie-heading" class="section-title"><span class="live-dot" aria-hidden="true"></span>Notizie in Evidenza</h2>
+    <h2 id="notizie-heading" class="section-title"><span class="live-dot" aria-hidden="true"></span>Il Gruppo e il territorio</h2>
+    <p class="text-muted mb-4">Avvisi, interventi e attività del Gruppo Comunale a Genzano di Roma e nei Castelli Romani.</p>
     <div class="row">
       {{/* Notizia principale */}}
       {{ with index $recentNews 0 }}

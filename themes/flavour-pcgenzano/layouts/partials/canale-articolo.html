@@ -1,0 +1,27 @@
+{{- /* ═══════════════════════════════════════════════════
+     CANALE EDITORIALE DI UN ARTICOLO — restituisce la stringa
+     "gruppo" (operativo/locale: avvisi, attività, vita del Gruppo)
+     oppure "approfondimenti" (magazine: prevenzione, conoscenza,
+     formazione). Introdotto il 30/08/2026 (separazione dei canali,
+     audit esterno): il 69% dell'archivio è divulgativo e non deve
+     competere in evidenza con gli avvisi operativi.
+
+     Default derivato dal badge — NESSUNA modifica retroattiva sui
+     ~480 articoli esistenti:
+       Informazione, Prevenzione, Formazione  → approfondimenti
+       tutti gli altri badge                  → gruppo
+     Override per singolo articolo con `canale: "gruppo"` oppure
+     `canale: "approfondimenti"` nel frontmatter (facoltativo, solo
+     dove il default sbaglia). Un valore non riconosciuto ricade nel
+     default: mai un canale vuoto.
+
+     Uso: {{ $canale := partial "canale-articolo.html" . }}
+     Consumatori: latest-news.html, approfondimenti-home.html,
+     comunicazioni/list.html. */ -}}
+{{- $canale := "" -}}
+{{- with .Params.canale -}}{{- $canale = . | lower -}}{{- end -}}
+{{- if not (in (slice "gruppo" "approfondimenti") $canale) -}}
+  {{- $magazine := slice "Informazione" "Prevenzione" "Formazione" -}}
+  {{- $canale = cond (in $magazine (.Params.badge | default "")) "approfondimenti" "gruppo" -}}
+{{- end -}}
+{{- return $canale -}}
