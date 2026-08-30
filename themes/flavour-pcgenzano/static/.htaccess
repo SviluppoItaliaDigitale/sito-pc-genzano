@@ -1,8 +1,20 @@
 # Redirect vecchio sito → nuovo sito
 RewriteEngine On
 
-# Forza HTTPS — PRIMA di ogni altro redirect, così nessuna richiesta http
-# può generare un hop intermedio insicuro verso le pagine nuove.
+# Canonicalizza le richieste esplicite di /index.html (root e sottocartelle)
+# sulla cartella con slash finale: /index.html → /, /chi-siamo/index.html →
+# /chi-siamo/. Evita l'URL duplicato segnalato dall'audit del 30/08/2026
+# (la pagina del Comune linka ancora l'indirizzo vecchio con /index.html).
+# Il RewriteCond su THE_REQUEST limita il 301 alle richieste arrivate DAL
+# CLIENT: le subrequest interne di DirectoryIndex non lo attraversano,
+# quindi niente loop. Va PRIMA del catch-all HTTPS: il target è già la URL
+# https canonica, così anche http://…/index.html arriva a destinazione in
+# UN SOLO hop (col catch-all prima sarebbero due redirect).
+RewriteCond %{THE_REQUEST} \s/+(.+/)?index\.html[?\s]
+RewriteRule ^(.*/)?index\.html$ https://www.protezionecivilegenzano.it/$1 [R=301,L]
+
+# Forza HTTPS su tutto il resto — così nessuna richiesta http può generare
+# un hop intermedio insicuro verso le pagine nuove.
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 

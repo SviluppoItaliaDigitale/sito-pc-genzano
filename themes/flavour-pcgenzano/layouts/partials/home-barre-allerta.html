@@ -56,12 +56,19 @@
     {{ end }}
   {{ end }}
 {{ end }}
+{{- /* Quando non c'è pre-allerta il div resta nel DOM (il JS client lo
+     riusa e ne ricostruisce l'intero innerHTML) ma esce VUOTO: la versione
+     con il segnaposto "Previsto domani:" nascosto solo via display:none
+     era letta dai browser testuali e dai fetcher senza CSS come fascia
+     vuota (stesso difetto già corretto sull'avviso meteo l'11/07/2026). */}}
 <div id="allerta-bar-domani" class="allerta-bar-domani allerta-bar-domani-{{ $domaniLiv }}" role="status" aria-label="Pre-allerta meteo per domani"{{ if not $domaniVisibile }} style="display:none"{{ end }}>
+  {{- if $domaniVisibile }}
   <div class="container">
     <i class="bi bi-calendar-event me-2" aria-hidden="true"></i>
     <strong>Previsto domani{{ if $domaniDataLeg }} ({{ $domaniDataLeg }}){{ end }}:</strong>
     <span id="allerta-domani-titolo">{{ $domaniTitolo }}</span>{{ if $domaniRischi }} <span class="text-nowrap">— {{ $domaniRischi }}</span>{{ end }}
   </div>
+  {{- end }}
 </div>
 {{/* ── AVVISO METEO AVVERSO (vento, neve, calore...) — solo se attivo ── */}}
 {{ $avvisoLiv := "verde" }}

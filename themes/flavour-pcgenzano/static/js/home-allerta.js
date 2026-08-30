@@ -91,6 +91,26 @@
     return 0;
   }
 
+  /* Fail-safe di freschezza (audit 30/08/2026): quando la verifica live
+     sul bollettino DPC fallisce, la barra resta com'era al build. Se
+     l'ultimo controllo noto (data-controllo) ha più di 6 ore, lo stato
+     NON deve continuare a sembrare attuale: la riga "Verificato" diventa
+     un avviso esplicito che rimanda alla fonte ufficiale (rule 06 — mai
+     spacciare per attuale un dato che non lo è). Con dato più fresco di
+     6 ore non fa nulla: il timestamp già mostrato è onesto. */
+  function segnalaDatoNonRecente(bar) {
+    var iso = bar.getAttribute('data-controllo');
+    if (!iso) return;
+    var t = new Date(iso);
+    if (isNaN(t.getTime())) return;
+    if (Date.now() - t.getTime() < 6 * 60 * 60 * 1000) return;
+    var ck = document.getElementById('allerta-controllo');
+    if (!ck) return;
+    var mesi = ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre'];
+    var pad = function (x) { return x < 10 ? '0' + x : '' + x; };
+    ck.textContent = t.getDate() + ' ' + mesi[t.getMonth()] + ' ' + t.getFullYear() + ', ' + pad(t.getHours()) + ':' + pad(t.getMinutes()) + ' — dato non recente, consulta il bollettino del Centro Funzionale';
+  }
+
   function checkAllertaDPC() {
     var bar = document.getElementById('allerta-bar');
     if (!bar) return;
@@ -131,6 +151,7 @@
 
         if (bollettini.length === 0) {
           bar.classList.remove('allerta-bar-loading');
+          segnalaDatoNonRecente(bar);
           return;
         }
 
@@ -239,7 +260,10 @@
 
         bar.classList.remove('allerta-bar-loading');
       })
-      .catch(function () { bar.classList.remove('allerta-bar-loading'); });
+      .catch(function () {
+        bar.classList.remove('allerta-bar-loading');
+        segnalaDatoNonRecente(bar);
+      });
   }
 
   checkAllertaDPC();
