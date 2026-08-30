@@ -1,8 +1,8 @@
-# Immagini e testi social per «Auguri di Buone Feste dal Gruppo»
+# Immagini e testi social per «Ondate di calore di agosto: come proteggere anziani, bambini e persone fragili»
 
-- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2024-12-20-auguri-2025/
-- **Data**: 2024-12-20
-- **Badge**: Comunicazione
+- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-08-02-ondate-calore-agosto-fragili/
+- **Data**: 2026-08-02
+- **Badge**: Prevenzione
 
 ## Dove va ogni file (a prova di errore)
 
