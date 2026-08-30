@@ -5,11 +5,89 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-08-30T19:59:49+00:00",
+  "generato": "2026-08-30T22:33:50+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-08-30T22:11:21+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Allerta incendi in Sicilia, case minacciate e residenti in fuga",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/30/ancora-incendi-nellarea-di-taormina-abitazioni-minacciate_a95c7dba-0368-4f41-89d6-73880b93193d.html"
+  },
+  {
+   "data": "2026-08-30T22:04:56+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "\"Usa non possono prolungare la guerra contro l'Iran\", i vertici militari gelano il Pentagono",
+   "url": "https://www.adnkronos.com/internazionale/esteri/iran-usa-stop-guerra-trump_DNx2EKxuz2Tx1MA5lVWzZ"
+  },
+  {
+   "data": "2026-08-30T21:48:21+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Como espunga il Maradona, Inter Milan Juve e Lazio in testa",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/08/30/il-como-espunga-il-maradona-inter-milan-juve-e-lazio-in-testa_68dcb63b-4c9d-401d-a01a-8e952754cac2.html"
+  },
+  {
+   "data": "2026-08-30T21:40:35+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Una neonata salvata con un trapianto dopo uno screening precoce previsto in Puglia",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/30/una-neonata-salvata-con-un-trapianto-dopo-uno-screening-precoce-previsto_f652cd0d-7cef-44ef-91a0-98a774edda8c.html"
+  },
+  {
+   "data": "2026-08-30T21:22:36+00:00",
+   "fonte": "ANSA",
+   "titolo": "MotoGp: Marc Marquez su Ducati trionfa ad Aragon e riapre il Mondiale, terza l'Aprilia di Bezzecchi",
+   "url": "https://www.ansa.it/sito/notizie/sport/moto/2026/08/30/motogp-marc-marquez-su-ducati-trionfa-ad-aragon-e-riapre-il-mondiale-terza-laprilia_59e866ae-69b9-4839-a680-536aa33e67fa.html"
+  },
+  {
+   "data": "2026-08-30T20:57:40+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "\"Spostati, idiota\": insulti e spinte sulle vetta a 3000 metri",
+   "url": "https://www.adnkronos.com/internazionale/esteri/austria-montagna-rissa-video_330eak7qRoMZ5wfX7N7FUr"
+  },
+  {
+   "data": "2026-08-30T20:36:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Napoli, boss Raffaele Afeltra ucciso a colpi di pistola nella sua auto",
+   "url": "https://www.adnkronos.com/cronaca/boss-camorra-raffaele-afeltra-ucciso-dinamica-omicidio_1IWWo291aQQz2USa0Tpe7b"
+  },
+  {
+   "data": "2026-08-30T20:20:15+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "\"Trump non ha nulla contro Meloni\", parla l'ambasciatore americano Fertitta",
+   "url": "https://www.adnkronos.com/internazionale/esteri/trump-meloni-nato-ambasciatore-fertitta_3muBue0UOAh3N4YbbZAcL3"
+  },
+  {
+   "data": "2026-08-30T20:16:28+00:00",
+   "fonte": "ANSA",
+   "titolo": "Spari a un rave party in Svizzera, morta una 22enne italiana",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/30/spari-a-un-rave-party-in-svizzera-morta-una-22enne-italiana-feriti-altri_a2d2e659-4e75-4cbd-bce5-a4e6e297fc33.html"
+  },
+  {
+   "data": "2026-08-30T20:05:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Iran, 2 morti in un attacco Usa contro isola di Larak. Pasdaran: \"Ci vendicheremo\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/iran-usa-attacco-isola-larak_6qfjfatW2qY24hRkvDMWxL"
+  },
+  {
+   "data": "2026-08-30T20:03:43+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Omicidio nel Napoletano, uomo ucciso a colpi d'arma da fuoco",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/30/omicidio-nel-napoletano-uomo-ucciso-a-colpi-darma-da-fuoco_cc907a4a-14f3-4d4a-9850-7f6bf06db43d.html"
+  },
+  {
+   "data": "2026-08-30T20:03:03+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Juventus, Vicario incanta e la Serie A... sfotte Di Gregorio",
+   "url": "https://www.adnkronos.com/sport/vicario-serie-a-di-gregorio-juventus-parma_4rzovG3Z26B1a6Jtg0iHDV"
+  },
+  {
+   "data": "2026-08-30T19:52:28+00:00",
+   "fonte": "ANSA",
+   "titolo": "Axios, gli Usa hanno attaccato lanciatori iraniani sull'isola di Larak",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/30/axios-gli-usa-hanno-attaccato-lanciatori-iraniani-sullisola-di-larak_d6d9581a-b7ae-4731-b009-3307af788336.html"
+  },
   {
    "data": "2026-08-30T19:49:44+00:00",
    "fonte": "ANSA",
@@ -21,12 +99,6 @@
    "fonte": "ANSA",
    "titolo": "Il collier milionario rubato a Vienna, il museo nella bufera",
    "url": "https://www.ansa.it/sito/notizie/mondo/africa/2026/08/30/il-collier-milionario-rubato-a-vienna-il-museo-nella-bufera_5d1f5436-c797-4b7f-bde3-4b267e3736da.html"
-  },
-  {
-   "data": "2026-08-30T19:45:10+00:00",
-   "fonte": "ANSA",
-   "titolo": "Serie A: in campo Lazio-Genoa 1-0 DIRETTA e FOTO",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/08/30/serie-a-in-campo-lazio-genoa-1-0-diretta-e-foto_4446927f-0552-4ab6-a702-2aeafac55ce7.html"
   },
   {
    "data": "2026-08-30T19:31:54+00:00",
@@ -45,12 +117,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Tardelli contro Cannavaro e Totti: \"Difendono Infantino e un Mondiale truccato\"",
    "url": "https://www.adnkronos.com/sport/mondiale-truccato-infantino-tardelli-cannavaro-totti_3aEfa8LHKRFZpaP2xwyh1R"
-  },
-  {
-   "data": "2026-08-30T19:23:54+00:00",
-   "fonte": "ANSA",
-   "titolo": "Serie A: in campo Cagliari-Inter 0-1 DIRETTA e FOTO",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/08/30/serie-a-in-campo-cagliari-inter-0-1-diretta-e-foto_6eae30e2-232d-4b2f-a3ea-e82f30241ec1.html"
   },
   {
    "data": "2026-08-30T19:20:57+00:00",
@@ -75,12 +141,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Brandizzo, commemorati i 5 operai morti nell'anniversario della strage ferroviaria",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/30/brandizzo-commemorati-i-5-operai-morti-nellanniversario-della-strage-ferroviaria_9d400f30-ae59-4e90-a63a-44c7caccf9c9.html"
-  },
-  {
-   "data": "2026-08-30T18:49:14+00:00",
-   "fonte": "ANSA",
-   "titolo": "Spari a un rave party in Svizzera, morta una 22enne italiana",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/30/spari-a-un-rave-party-in-svizzera-morta-una-22enne-italiana-feriti-altri_a2d2e659-4e75-4cbd-bce5-a4e6e297fc33.html"
   },
   {
    "data": "2026-08-30T18:47:18+00:00",
@@ -129,66 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Cremona prova a rialzarsi, prosegue la conta dei danni",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/30/cremona-prova-a-rialzarsi-prosegue-la-conta-dei-danni_36edb9c4-d008-4b77-bb18-39f88eec2b0d.html"
-  },
-  {
-   "data": "2026-08-30T18:10:01+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Dramma in spiaggia nel Viterbese, affoga il compagno di Francesca Neri",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/30/dramma-in-spiaggia-nel-viterbese-affoga-il-compagno-di-francesca-neri_10fd03f9-e669-4d4e-80c7-87dca55602c6.html"
-  },
-  {
-   "data": "2026-08-30T18:04:42+00:00",
-   "fonte": "ANSA",
-   "titolo": "Alessandro Di Battista ricoverato è ancora grave, medici del Gemelli verso Cuba",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/08/30/alessandro-di-battista-ricoverato-medici-del-gemelli-verso-cuba_f010ae59-c324-40bb-a41d-89abef927aa2.html"
-  },
-  {
-   "data": "2026-08-30T18:04:18+00:00",
-   "fonte": "ANSA",
-   "titolo": "Lidia Poet, la prima avvocata ora indaga su Rai1",
-   "url": "https://www.ansa.it/sito/notizie/cultura/serietv/2026/08/30/lidia-poet-la-prima-avvocata-ora-indaga-su-rai1_58942010-a3f4-4518-96c6-0d76ddaab9f7.html"
-  },
-  {
-   "data": "2026-08-30T18:00:11+00:00",
-   "fonte": "ANSA",
-   "titolo": "La Russia promette 'raid massicci' a siti energetici ucraini",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/30/la-russia-promette-raid-massicci-a-siti-energetici-ucraini-_0fb21c76-957d-4ed2-9eb8-3f4be41e7a3a.html"
-  },
-  {
-   "data": "2026-08-30T17:58:29+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Bloccati tra le fiamme in Abruzzo, recuperati soccorritori e militari",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/30/bloccati-tra-le-fiamme-in-abruzzo-recuperati-soccorritori-e-militari_3f3faa84-8ee4-4e70-8ea0-1621b4907e06.html"
-  },
-  {
-   "data": "2026-08-30T17:54:44+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Oltre 1.400 spazzacamini pronti al raduno internazionale nel Verbano",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/30/oltre-1.400-spazzacamini-pronti-al-raduno-internazionale-nel-verbano_b9284432-4db6-4b17-9b3e-732143a70914.html"
-  },
-  {
-   "data": "2026-08-30T17:53:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Serie A, Lazio-Genoa 1-0 - Diretta",
-   "url": "https://www.adnkronos.com/sport/diretta-lazio-genoa-oggi-serie-a-risultato-live_5u6H4vlpYzIgVZwMTyzdxJ"
-  },
-  {
-   "data": "2026-08-30T17:51:50+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Maria Spinelli, la passione per la techno e il sogno in Svizzera",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/30/maria-la-passione-per-la-techno-e-il-sogno-in-svizzera_4ad54132-5890-4a65-909a-5ddc5ee1b1ce.html"
-  },
-  {
-   "data": "2026-08-30T17:48:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Serie A, Cagliari-Inter 0-1 - Diretta",
-   "url": "https://www.adnkronos.com/sport/diretta-cagliari-inter-oggi-serie-a-risultato-live_1wfsZQ9SZuG2L90S1BE7cj"
-  },
-  {
-   "data": "2026-08-30T17:41:05+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "#AccadeOggi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/30/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
   }
  ]
 }
