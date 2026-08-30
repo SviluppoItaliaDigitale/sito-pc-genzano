@@ -397,6 +397,23 @@ Ogni articolo deve avere tutti i campi previsti dall'archetipo:
 
 Queste tinte sono applicate in `custom.css` in due gruppi coordinati: le classi `.notizia-categoria.<categoria>` (badge nelle card) e i selettori `.filter-pill[data-filter="<categoria>"]` (pulsanti filtro nell'archivio). Qualsiasi modifica alla palette va replicata in **entrambi** i gruppi per mantenere la coerenza visiva.
 
+### Canali editoriali dell'archivio — "Il Gruppo e il territorio" vs "Approfondimenti" (dal 30/08/2026)
+
+L'archivio `/comunicazioni/` e la homepage separano due **canali** di lettura (esito dell'audit esterno del 30/08/2026: il 69% dell'archivio è divulgativo e non deve competere in evidenza con gli avvisi operativi):
+
+| Canale | Contenuto | Badge che ci ricadono di default |
+|---|---|---|
+| **Il Gruppo e il territorio** (`gruppo`) | Avvisi, interventi, attività e vita del Gruppo a Genzano e nei Castelli | Allerta, Emergenza, Avviso, Aggiornamento, Attività, Esercitazione, Volontariato, Evento, Comunicazione, Radiocomunicazioni |
+| **Approfondimenti** (`approfondimenti`) | Magazine: prevenzione, conoscenza, formazione, cultura di PC | Informazione, Prevenzione, Formazione |
+
+**Regole operative:**
+
+1. Il canale è **derivato automaticamente dal badge** dal partial `themes/flavour-pcgenzano/layouts/partials/canale-articolo.html`: di norma **non si scrive nulla** nel frontmatter e nessun articolo esistente va modificato.
+2. **Override** solo dove il default sbaglia: `canale: "gruppo"` o `canale: "approfondimenti"` nel frontmatter del singolo articolo (es. un'`Informazione` che è in realtà un avviso di servizio locale → `gruppo`; un'`Attività` che è un reportage divulgativo → `approfondimenti`). Valori non riconosciuti ricadono nel default.
+3. **Superfici**: homepage — sezione "Il Gruppo e il territorio" (solo canale operativo, partial `latest-news.html`) + striscia "Approfondimenti" (ultime 3 uscite magazine, partial `approfondimenti-home.html`); archivio — pill di canale sopra i filtri per categoria (deep-link `#canale=gruppo` / `#canale=approfondimenti`).
+4. **Gli URL non cambiano mai**: la separazione è di sola presentazione. Niente sezioni Hugo nuove, niente spostamenti di file (QR, braille, social e sitemap restano validi; Aruba non ha redirect automatici, rule 05).
+5. Se si aggiunge un **nuovo badge**, assegnarlo esplicitamente a un canale nella slice `$magazine` del partial (o lasciarlo cadere nel canale operativo, che è il default).
+
 **Criterio d'uso `Allerta` vs `Emergenza`:** i due badge non sono sinonimi e hanno colori distinti perché coprono fasi diverse del ciclo del rischio (previsione vs evento in corso). I criteri operativi e gli esempi sono definiti in `.claude/rules/06-protezione-civile-scientifica.md`, sezione "Quando usare il badge 'Allerta' e quando 'Emergenza'". Non scegliere tra i due per varietà editoriale: il badge `Emergenza` è intenzionalmente raro.
 - `priorita`: normale | urgente
 - `autore`: "Gruppo Comunale Volontari PC Genzano" (default)

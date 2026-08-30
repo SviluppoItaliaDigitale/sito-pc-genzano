@@ -123,6 +123,7 @@ Articoli operativi: includi un **disclaimer normativo** con link alla [Circolare
 | Campo | Logica di default |
 |---|---|
 | **Badge** | Cascata: `Allerta`(previsto)→`Emergenza`(in corso)→`Aggiornamento`(concluso)→`Esercitazione`→`Attività`(intervento Gruppo)→`Formazione`→`Volontariato`→`Radiocomunicazioni`→`Prevenzione`→`Evento`→`Avviso`→`Informazione`→`Comunicazione`(fallback). Prevalgono i badge operativi. |
+| **Canale** (dal 30/08/2026) | **Derivato dal badge, di norma NON si scrive nel frontmatter**: `Informazione`/`Prevenzione`/`Formazione` → canale "Approfondimenti" (magazine); tutti gli altri badge → canale "Il Gruppo e il territorio" (operativo, in evidenza homepage). Override `canale: "gruppo"`\|`"approfondimenti"` solo se il default sbaglia (es. un'`Informazione` di servizio locale → `gruppo`). Logica nel partial `canale-articolo.html`; dettagli in rule 02 § "Canali editoriali dell'archivio". |
 | **Versione facile A2** (`<slug>-facile.md`) | Sì se badge `Allerta`/`Emergenza`/`Prevenzione`, o norme dense (D.Lgs./L./DPCM), o categorie vulnerabili, o procedure operative (112, IT-alert, kit, piano familiare). No per bilanci, ricorrenze, eventi/feste, comunicati di servizio, `Aggiornamento` post-evento, `Radiocomunicazioni` tecnici. |
 | **`area`** | "Genzano di Roma" default; cambio se l'articolo è altrove (es. Giro Formia → "Formia (LT)"); vuoto se nazionale/generico. |
 | **`scadenza`** | Vuoto, salvo bandi/eventi/allerte con scadenza intrinseca. |

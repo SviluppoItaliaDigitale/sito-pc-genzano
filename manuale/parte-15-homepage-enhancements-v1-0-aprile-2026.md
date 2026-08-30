@@ -7,7 +7,9 @@ Quattro micro-miglioramenti grafici applicati alla **sola homepage** (scoped via
 `@media print` e il toolbar di accessibilità "pausa animazioni". Funzionano in modo
 identico su desktop e su mobile (nessuna `@media (hover: hover)` o esclusione touch).
 
-### 15.1 Live dot pulse blu accanto a "Notizie in Evidenza"
+### 15.1 Live dot pulse blu accanto al titolo delle notizie operative
+
+> Nota 30/08/2026: la sezione si intitola "Il Gruppo e il territorio" (separazione dei canali editoriali; era "Notizie in Evidenza"). Il live dot è invariato.
 
 Piccolo cerchio blu istituzionale (`#003366`) accanto al titolo della sezione notizie,
 con animazione `livePulse` 2.5s che produce un'onda di box-shadow espansiva — pattern

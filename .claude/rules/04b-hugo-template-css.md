@@ -322,7 +322,7 @@ Due partial inseriti in `layouts/index.html`, entrambi con copertura `@media pri
 
 Quattro micro-miglioramenti grafici sulla **sola homepage** (scoped via `body.home-page`), tutti AGID-compliant, con copertura `prefers-reduced-motion` + `@media print` + toolbar a11y "pausa animazioni" + mobile (nessuna esclusione touch).
 
-1. **Live dot pulse** (`.live-dot` + `@keyframes livePulse`) — cerchio blu `#003366` accanto al titolo "Notizie in Evidenza", box-shadow espansiva 2.5s (pattern `sosPulse` in chiave informativa). Markup `<span class="live-dot" aria-hidden="true"></span>` in `partials/latest-news.html`.
+1. **Live dot pulse** (`.live-dot` + `@keyframes livePulse`) — cerchio blu `#003366` accanto al titolo della sezione notizie operative in homepage ("Il Gruppo e il territorio", ex "Notizie in Evidenza" fino al 30/08/2026), box-shadow espansiva 2.5s (pattern `sosPulse` in chiave informativa). Markup `<span class="live-dot" aria-hidden="true"></span>` in `partials/latest-news.html`.
 
 2. **Reveal-on-scroll** (`.reveal-on-scroll.is-revealed` + `js/homepage-reveal.js`) — IntersectionObserver stdlib su `.quick-action-card`, `.card-servizio`, `.card-notizia-hero`, `section .card.border-danger`, `.stat-hero-item`, `.card-numero-utile`. Card con `opacity 0→1 + translateY(15px→0)` al viewport (threshold 0.15, rootMargin -50px). Auto-disable se reduced-motion o IntersectionObserver assente. `defer` solo per `.IsHome`.
 
