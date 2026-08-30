@@ -5,16 +5,118 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-08-29T23:31:42+00:00",
+  "generato": "2026-08-30T07:27:41+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-08-29T22:20:46+00:00",
+   "data": "2026-08-30T07:22:54+00:00",
+   "fonte": "ANSA",
+   "titolo": "Nuova frana in Tibet, i soccorritori trasferiti in una zona sicura",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/30/nepal-il-bilancio-sale-a-734-morti-e-2.498-dispersi_093cc2c7-ab78-4167-8d35-49e8d7ad92ea.html"
+  },
+  {
+   "data": "2026-08-30T07:22:13+00:00",
+   "fonte": "ANSA",
+   "titolo": "Spari vicino a un rave in Svizzera, 'un morto e 5 feriti'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/30/spari-vicino-a-un-rave-in-svizzera-diverse-vittime_a2d2e659-4e75-4cbd-bce5-a4e6e297fc33.html"
+  },
+  {
+   "data": "2026-08-30T07:18:39+00:00",
+   "fonte": "ANSA",
+   "titolo": "Impatta con l'auto contro muro, giovane muore nel Beneventano",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/30/impatta-con-lauto-contro-muro-giovane-muore-nel-beneventano_0cc6054d-5fb2-4883-a81b-39872fe3e2ce.html"
+  },
+  {
+   "data": "2026-08-30T06:56:52+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Gas, Ue rischia inverno al gelo per scorte ai minimi ma l'Italia è virtuosa",
-   "url": "https://www.adnkronos.com/economia/gas-scorte-inverno-europa-italia_GNiS3VAKL5AfSEMOBwIEn"
+   "titolo": "Caldo estremo non lascia il Centro-Sud, ancora afa e temperature anomale",
+   "url": "https://www.adnkronos.com/cronaca/caldo-record-maltempo-meteo-previsioni-oggi-30-agosto_1wzjezlXMN6eWn47m0Tgxv"
+  },
+  {
+   "data": "2026-08-30T06:52:30+00:00",
+   "fonte": "ANSA",
+   "titolo": "Referendum in Islanda: 'no' in vantaggio mentre lo spoglio volge al termine",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/30/referendum-in-islanda-testa-a-testa-ma-ora-e-in-vantaggio-il-no_01bc8e51-e900-4a8b-91da-006fe77caa7f.html"
+  },
+  {
+   "data": "2026-08-30T06:23:19+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Dal 1 settembre al via le lezioni per Medicina, Odontoiatria e Veterinaria",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/30/dal-1-settembre-al-via-le-lezioni-per-medicina-odontoiatria-e-veterinaria_2ba96c63-eca4-4581-a64a-d166c9edbb26.html"
+  },
+  {
+   "data": "2026-08-30T06:13:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Svizzera, sparatoria durante un rave all'ippodromo di Aarau: un morto e 5 feriti",
+   "url": "https://www.adnkronos.com/internazionale/esteri/svizzera-sparatoria-rave-aarau-news_1xqwHrYgX8OekXhrmw2nMV"
+  },
+  {
+   "data": "2026-08-30T06:10:33+00:00",
+   "fonte": "ANSA",
+   "titolo": "'Il capo della Cia ha proposto a Mosca un incontro Trump-Putin-Zelensky'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/30/capo-della-cia-ha-proposto-a-mosca-incontro-trump-putin-zelensky_0fb21c76-957d-4ed2-9eb8-3f4be41e7a3a.html"
+  },
+  {
+   "data": "2026-08-30T05:59:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Referendum sull'Ue in Islanda, 'No' verso la vittoria: avanti con il 51,8% dei voti",
+   "url": "https://www.adnkronos.com/internazionale/esteri/islanda-referendum-unione-europea-spoglio-risultati_7r43IygORcmREWf9CfjxZ3"
+  },
+  {
+   "data": "2026-08-30T05:31:53+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serie A, oggi Lazio-Genoa: orario, probabili formazioni e dove vederla",
+   "url": "https://www.adnkronos.com/sport/lazio-genoa-oggi-serie-a-orario-probabili-formazioni-dove-vederla-tv-streaming_2lmuldIwM3Xc4n5Aibdckl"
+  },
+  {
+   "data": "2026-08-30T05:31:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Alluvione in Nepal, nuova frana crea lago artificiale: soccorritori costretti a evacuare",
+   "url": "https://www.adnkronos.com/internazionale/esteri/alluvione-nepal-tibet-news-oggi-30-agosto_5ep9FK2MVn6EmDVJWCpKvR"
+  },
+  {
+   "data": "2026-08-30T05:23:10+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina-Russia, il nuovo piano di Putin: operazioni di terra contro Kiev e Chernihiv",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-putin-piano-attacco-kiev_5NA1P25AKEUaETmzYc43aL"
+  },
+  {
+   "data": "2026-08-30T05:16:36+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serie A, oggi Napoli-Como: orario, probabili formazioni e dove vederla",
+   "url": "https://www.adnkronos.com/sport/napoli-como-oggi-serie-a-orario-probabili-formazioni-dove-vederla-tv-streaming_2ngqsYfHfEK5GibiiYmeUd"
+  },
+  {
+   "data": "2026-08-30T05:11:34+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Vuelta di Spagna, oggi nona tappa: orario, percorso e dove vederla",
+   "url": "https://www.adnkronos.com/sport/vuelta-spagna-oggi-tappa-9-orario-percorso-dove-vederla-tv-streaming_1HwqL1jsl73QBfICd92OLr"
+  },
+  {
+   "data": "2026-08-30T05:09:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serie A, oggi Cagliari-Inter: orario, probabili formazioni e dove vederla",
+   "url": "https://www.adnkronos.com/sport/serie-a-oggi-cagliari-inter-orario-probabili-formazioni-dove-vederla-tv-streaming_7aSmQEJ5Cerr6iNQHnfUvH"
+  },
+  {
+   "data": "2026-08-30T05:07:06+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Migranti, media in Spagna: Italia pronta a prorogare i controlli alle frontiere",
+   "url": "https://www.adnkronos.com/internazionale/esteri/crisi-ceuta-italia-controlli-schengen_25DI2UZLE4pdCH5QZ7BCAJ"
+  },
+  {
+   "data": "2026-08-30T05:01:33+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Us Open, si comincia: da Paolini a Djokovic, i match di oggi e dove vederli in chiaro",
+   "url": "https://www.adnkronos.com/sport/us-open-oggi-prima-giornata-djokovic-paolini-match-orari-dove-vederli-tv-streaming_7izkDOqe2RrOAOpZprhTx3"
+  },
+  {
+   "data": "2026-08-30T04:59:22+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "MotoGp, oggi si corre ad Aragon: orario, griglia di partenza e dove vedere il Gran Premio",
+   "url": "https://www.adnkronos.com/sport/motogp-oggi-gp-aragon-orario-griglia-partenza-dove-vederlo-tv-chiaro-streaming_5crEW9tN3NHsgNIevM4xYp"
   },
   {
    "data": "2026-08-29T22:20:18+00:00",
@@ -29,22 +131,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/30/rivolta-in-carcere-a-siracusa-agenti-si-lanciano-dal-tetto-per-sfuggire-alle_59f33796-97f6-4121-a8ac-84d484f3b8f5.html"
   },
   {
-   "data": "2026-08-29T22:19:46+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Casa, in arrivo l'affitto dimezzato per genitori separati",
-   "url": "https://www.adnkronos.com/economia/affitto-dimezzato-fondo-genitori-separati_tdgtoIKElk5cXzPjJ14ML"
-  },
-  {
    "data": "2026-08-29T22:16:28+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "#AccadeOggi",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/30/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
-  },
-  {
-   "data": "2026-08-29T22:08:29+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Di Battista ricoverato a Cuba, messaggio di Travaglio: \"Forza ragazzo\"",
-   "url": "https://www.adnkronos.com/politica/alesandro-di-battista-ricoverato-cuba-mesasggio-travaglio_2NbKXHF4j4z4HdAP3kPqS3"
   },
   {
    "data": "2026-08-29T21:10:05+00:00",
@@ -63,12 +153,6 @@
    "fonte": "ANSA",
    "titolo": "La Juventus batte il Parma, fa due su due ed è in vetta col Milan",
    "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/08/29/la-juventus-batte-il-parma-fa-due-su-due-ed-e-in-vetta-col-milan_aea865f4-79ba-4e5b-9f3b-7e5e3984e411.html"
-  },
-  {
-   "data": "2026-08-29T20:54:29+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Juve-Parma, fallo in area su Keita e mancato rigore ai gialloblù? Cos'è successo",
-   "url": "https://www.adnkronos.com/sport/juve-parma-rigore-non-dato-gialloblu-proteste-cosa-e-successo_7koqK4q5JzUhfcRUOeWr7T"
   },
   {
    "data": "2026-08-29T20:53:20+00:00",
@@ -105,90 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Garlasco, la Procura di Pavia dispone altre due consulenze su Andrea Sempio",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/garlasco-la-procura-di-pavia-dispone-altre-due-consulenze-su-andrea-sempio_7f6e132e-5dbc-4154-93b5-6d9931d3ff91.html"
-  },
-  {
-   "data": "2026-08-29T20:35:52+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Trovata in casa una donna carbonizzata, fermata la figlia",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/corpo-carbonizzato-di-una-donna-in-casa-fermata-la-figlia-_274da364-d986-415d-9fd1-84829acbdcc4.html"
-  },
-  {
-   "data": "2026-08-29T20:34:13+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Donna uccisa a coltellate in Friuli, fermato il compagno",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/donna-uccisa-a-coltellate-in-friuli-fermato-il-compagno_8a91db96-5fbe-4e91-acd1-07f362c53aef.html"
-  },
-  {
-   "data": "2026-08-29T20:19:55+00:00",
-   "fonte": "ANSA",
-   "titolo": "Sale il bilancio dei morti in Nepal, 5 miliardi per la ricostruzione",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/29/sale-il-bilancio-dei-morti-in-nepal-5-miliardi-per-la-ricostruzione_971afa6b-0b96-46ac-8709-35c237114221.html"
-  },
-  {
-   "data": "2026-08-29T20:17:39+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sarah Ferguson torna nel Regno Unito dopo lo scandalo Epstein",
-   "url": "https://www.adnkronos.com/internazionale/esteri/sarah-ferguson-regno-unito-scandalo-epstein_2Vccu6vILq5CZ9CwyXp5Aj"
-  },
-  {
-   "data": "2026-08-29T19:48:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ranucci, il giornalista contesta formalmente la rimozione da Report: \"E' illegittima\"",
-   "url": "https://www.adnkronos.com/politica/ranucci-report-lettera-rai-rimozione_2E8mVxmixd4NuywUjRYndj"
-  },
-  {
-   "data": "2026-08-29T19:44:13+00:00",
-   "fonte": "ANSA",
-   "titolo": "Docenti sotto stress da rientro: lo spiega la voce 'Burn-out' nella nuova rubrica Treccani",
-   "url": "https://www.ansa.it/canale_legalita_scuola/speciali/back-to-school/2026/08/29/docenti-sotto-stress-da-rientro-lo-spiega-burn-out-nella-nuova-rubrica_49f95ca8-8d95-41f8-90a5-15f5cf0651e7.html"
-  },
-  {
-   "data": "2026-08-29T19:38:30+00:00",
-   "fonte": "ANSA",
-   "titolo": "Giochi del Mediterraneo: da judo e triathlon i due trionfi azzurri di giornata",
-   "url": "https://www.ansa.it/puglia/notizie/speciali/xx_giochi_del_mediterraneo_taranto_2026/2026/08/29/giochi-del-mediterraneo-da-judo-e-triathlon-i-due-trionfi-azurri-di-giornata_6c4648c6-5e96-4fd3-9d11-65c237030bea.html"
-  },
-  {
-   "data": "2026-08-29T19:36:07+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Bimbo in coma in Egitto, gara di solidarietà per riportarlo a Brandizzo",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/bimbo-in-coma-in-egitto-gara-di-solidarieta-per-riportarlo-a-brandizzo_9dcc7f1f-f73a-4d91-87cc-384aa6ef99d9.html"
-  },
-  {
-   "data": "2026-08-29T19:33:20+00:00",
-   "fonte": "ANSA",
-   "titolo": "Pogacar cade e si ritira, la Vuelta perde il suo padrone",
-   "url": "https://www.ansa.it/sito/notizie/sport/ciclismo/2026/08/29/pogacar-cade-e-si-ritira-la-vuelta-perde-il-suo-padrone_03f89bbc-14cd-4f41-9cf3-a6b45b40ca48.html"
-  },
-  {
-   "data": "2026-08-29T19:25:20+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Da Fano alla Lapponia in auto a 83 anni, la storia di Olga Mancurti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/da-fano-alla-lapponia-in-auto-a-83-anni-la-storia-di-olga-mancurti_f73aa7d3-419d-446b-92eb-0d62ea85995d.html"
-  },
-  {
-   "data": "2026-08-29T19:24:51+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "'Se vuoi raccogliere devi pagare', due arresti per estorsione nel Foggiano",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/se-vuoi-raccogliere-devi-pagare-due-arresti-per-estorsione-nel-foggiano_252be159-597b-45e4-93fe-5cd4405dc9fe.html"
-  },
-  {
-   "data": "2026-08-29T19:24:24+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "In Abruzzo l'addio all'alpinista morto a novembre sulle vette del Nepal",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/in-abruzzo-laddio-allalpinista-morto-a-novembre-sulle-vette-del-nepal_c93f920a-c13d-444f-bb11-7d369e969dcd.html"
-  },
-  {
-   "data": "2026-08-29T19:05:33+00:00",
-   "fonte": "ANSA",
-   "titolo": "Luca Barachini e Patrizia Marziale dispersi nel viaggio dei loro sogni in Nepal",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/luca-barachini-e-patrizia-marziale-dispersi-nel-viaggio-dei-loro-sogni_71d8618d-7be1-4926-ae83-c12ca6d9c93a.html"
-  },
-  {
-   "data": "2026-08-29T19:02:44+00:00",
-   "fonte": "ANSA",
-   "titolo": "Cremona in ginocchio per il maltempo, Mattarella telefona al sindaco",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/29/cremona-in-ginocchio-per-il-maltempo-matterella-telefona-al-sindaco_3555cb29-4091-4045-be28-97246b751cc4.html"
   }
  ]
 }
