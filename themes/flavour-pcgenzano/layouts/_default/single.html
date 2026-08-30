@@ -74,6 +74,9 @@
       {{ end }}
       {{ end }}
 
+      {{/* ── BANNER CONTENUTO D'ARCHIVIO (archiviato: true) ── */}}
+      {{ partial "banner-archiviato.html" . }}
+
       {{/* ── BANNER VERSIONE FACILE DA LEGGERE (Punto 16 roadmap) ──
            Mostra link alla versione facile/standard se il frontmatter
            contiene `versione_facile` o `versione_facile_di`.

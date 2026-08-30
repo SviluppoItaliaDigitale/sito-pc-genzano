@@ -14,6 +14,8 @@ draft: false
 versione_facile: "2026-08-05-temporali-pomeridiani-castelli-romani-facile"
 ---
 
+> ℹ️ Su questo tema la guida di riferimento, più completa, è **[Temporali estivi nei Castelli Romani: come riconoscerli e cosa fare](/comunicazioni/2026-06-13-temporali-estivi-castelli-romani/)**.
+
 L'estate nei **Castelli Romani** porta con sé, accanto al caldo persistente, il rischio di **temporali pomeridiani improvvisi**. Sono fenomeni tipici delle zone collinari: l'aria calda risale lungo i versanti, condensa in cumulonembi e può scaricare in poche decine di minuti piogge violente, grandine, raffiche di vento e fulmini. Riconoscerli in anticipo aiuta a proteggersi.
 
 ## Perché i Castelli sono esposti

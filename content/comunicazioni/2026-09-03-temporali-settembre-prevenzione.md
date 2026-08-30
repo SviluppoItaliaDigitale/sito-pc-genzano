@@ -14,6 +14,8 @@ versione_facile: "2026-09-03-temporali-settembre-prevenzione-facile"
 draft: false
 ---
 
+> ℹ️ Su questo tema la guida di riferimento, più completa, è **[Temporali estivi nei Castelli Romani: come riconoscerli e cosa fare](/comunicazioni/2026-06-13-temporali-estivi-castelli-romani/)**.
+
 A settembre, con il Mediterraneo ancora caldo e le prime correnti fredde in quota, si sviluppano frequentemente **temporali intensi** sul Lazio e sui Castelli Romani. Fulmini, grandine, raffiche di vento, precipitazioni concentrate possono causare danni significativi. Riconoscerli per tempo e sapere come comportarsi è la prima difesa.
 
 ## Come si forma un temporale di settembre

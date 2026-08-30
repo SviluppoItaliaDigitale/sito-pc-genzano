@@ -8,6 +8,7 @@ autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-04-01-assemblea-dei-volontari.webp"
 image_alt: "Copertina dell'articolo: Assemblea dei Volontari"
 scadenza: ""
+archiviato: true
 area: "Sede operativa, Genzano di Roma"
 allegati: []
 draft: false

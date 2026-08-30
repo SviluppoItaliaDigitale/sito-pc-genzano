@@ -19,6 +19,8 @@ build:
   publishResources: true
 ---
 
+> ℹ️ C'è una guida più completa su questo tema. La trovi qui: **[IT-alert: cosa fare quando arriva il messaggio](/comunicazioni/2026-07-10-app-it-alert-test-nazionale-facile/)**.
+
 IT-alert è il sistema nazionale di allarme pubblico. Lo gestisce la Protezione Civile italiana. Manda messaggi ai telefoni in caso di pericolo grave.
 
 ## Cosa è IT-alert
