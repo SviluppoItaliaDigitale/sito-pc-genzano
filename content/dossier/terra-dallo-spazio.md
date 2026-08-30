@@ -13,6 +13,7 @@ sezioni:
   - { id: "inizio", label: "Apertura" }
   - { id: "occhi", label: "Gli occhi sul pianeta" }
   - { id: "numeri", label: "I numeri" }
+  - { id: "meteo", label: "I geostazionari" }
   - { id: "incendi", label: "Incendi" }
   - { id: "acqua", label: "Alluvioni" }
   - { id: "aria", label: "L'aria" }
@@ -37,6 +38,14 @@ Non scattano cartoline: misurano **temperature, fumo, umidità del suolo, livell
 {{< dossier-dato da="2014" unita=" anni" label="Copernicus osserva senza sosta, **dal 2014**" >}}
 {{< dossier-dato to="0" unita=" €" label="Quanto costano i dati: sono **aperti e gratuiti** per tutti" >}}
 {{< /dossier-dati >}}
+
+{{< dossier-scena id="meteo" image="/images/dossier/mtg-satellite-meteo.webp" alt="Rappresentazione di un satellite Meteosat di terza generazione in orbita sopra la Terra: corpo scuro a forma di parallelepipedo, due pannelli solari aperti ai lati e il pianeta illuminato sulla destra" align="right" kicker="Fermi sopra l'Europa" title="Chi guarda le nubi<br>senza mai voltarsi" credito="ESA / Mlabspace · CC BY-SA 3.0 IGO, via Wikimedia Commons" >}}
+I satelliti Copernicus girano intorno alla Terra e rivedono lo stesso punto ogni pochi giorni. Per i temporali non basta. Serve qualcuno che stia **fermo sopra l'Europa** e non la perda mai di vista.
+
+Lo fanno i **geostazionari**, a 36.000 chilometri sopra l'equatore: ruotano con il pianeta, quindi vedono sempre la stessa faccia. Sono i **Meteosat**, gestiti da EUMETSAT con i satelliti costruiti dall'ESA. L'ultimo, **MTG-I2**, è partito da Kourou il 27 agosto 2026.
+
+A regime, uno di loro scansiona l'Europa **ogni due minuti e mezzo**. E per la prima volta un satellite meteorologico europeo porta uno strumento che **sorveglia i fulmini** in continuo: il segnale che un temporale si sta organizzando, prima ancora che scarichi la pioggia. È [il satellite che vede i fulmini](/comunicazioni/2026-08-31-mtg-i2-satellite-fulmini-europa/).
+{{< /dossier-scena >}}
 
 {{< dossier-scena id="incendi" image="/images/dossier/fuoco-modis.webp" alt="L'Italia meridionale vista dal satellite MODIS in una giornata di incendi: lungo le coste di Campania, Calabria, Puglia e Sicilia spiccano i punti rossi dei roghi attivi, con pennacchi di fumo che si allungano sul mare" align="right" kicker="Quando la Terra brucia" title="Vedere il fuoco<br>prima del fumo" credito="Jeff Schmaltz, MODIS Land Rapid Response Team, NASA GSFC · pubblico dominio" >}}
 I sensori termici dei satelliti individuano i **punti caldi** degli incendi anche dove nessuno è ancora arrivato. È il principio del sistema europeo **EFFIS**, che ogni giorno mappa roghi e aree bruciate in tutta Europa.
@@ -96,9 +105,9 @@ Tutto questo non resta nello spazio. Ogni immagine diventa un **dato**, ogni dat
 {{< /dossier-chiusura >}}
 
 {{< dossier-fonti >}}
-- **Immagini:** NASA (pubblico dominio) · Copernicus / ESA, dati Sentinel modificati (CC BY-SA 3.0 IGO) · alluvione del Mozambico: Pierre Markuse, dati Copernicus Sentinel (CC BY 2.0) · Castelli Romani dal satellite (dati Copernicus Sentinel-2 / ESA · CC BY).
+- **Immagini:** NASA (pubblico dominio) · Copernicus / ESA, dati Sentinel modificati (CC BY-SA 3.0 IGO) · satellite Meteosat di terza generazione: ESA / Mlabspace (CC BY-SA 3.0 IGO) · alluvione del Mozambico: Pierre Markuse, dati Copernicus Sentinel (CC BY 2.0) · Castelli Romani dal satellite (dati Copernicus Sentinel-2 / ESA · CC BY).
 - **Programmi citati:** [Copernicus](https://www.copernicus.eu/it) (Unione Europea) · [EFFIS](https://forest-fire.emergency.copernicus.eu/) (incendi boschivi) · [Copernicus EMS](https://emergency.copernicus.eu/) (gestione emergenze) · CAMS (qualità dell'aria).
 - **IRIDE** — la nuova costellazione italiana di osservazione della Terra, gestita da [ESA](https://www.esa.int/Space_in_Member_States/Italy/IRIDE_presentata_presso_il_Centro_ESA_ESRIN_la_prima_immagine) con il supporto dell'[ASI](https://www.asi.it/en/earth-science/iride/): la prima immagine (Roma e Italia centrale, 5 marzo 2025) e servizi per la protezione civile.
-- **Sul nostro sito:** [Il terremoto visto dallo spazio](/dossier/terremoto-visto-dallo-spazio/) · [Il fuoco visto dallo spazio](/dossier/fuoco-dallo-spazio/) · [I sensi dello Stato](/dossier/i-sensi-dello-stato/) · [IRIDE operativa nel 2026](/comunicazioni/2026-07-03-iride-costellazione-osservazione-terra-operativa/) · [Cruscotto del territorio](/cruscotto/) · [Allerte meteo](/allerte-meteo/) · [Rischi e prevenzione](/rischi-prevenzione/).
+- **Sul nostro sito:** [Il terremoto visto dallo spazio](/dossier/terremoto-visto-dallo-spazio/) · [Il fuoco visto dallo spazio](/dossier/fuoco-dallo-spazio/) · [I sensi dello Stato](/dossier/i-sensi-dello-stato/) · [IRIDE operativa nel 2026](/comunicazioni/2026-07-03-iride-costellazione-osservazione-terra-operativa/) · [Il satellite che vede i fulmini: MTG-I2](/comunicazioni/2026-08-31-mtg-i2-satellite-fulmini-europa/) · [Cruscotto del territorio](/cruscotto/) · [Allerte meteo](/allerte-meteo/) · [Rischi e prevenzione](/rischi-prevenzione/).
 - Dossier a cura del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**.
 {{< /dossier-fonti >}}
