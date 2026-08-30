@@ -1,6 +1,6 @@
 ---
 title: "Settembre 2026: l'agenda della Protezione Civile di Genzano di Roma"
-date: 2026-08-31
+date: 2026-08-31T00:01:00+02:00
 description: "Con la fine di agosto, ecco le attività previste per settembre 2026: esercitazioni, formazione, scuole, incontri pubblici."
 badge: "Aggiornamento"
 priorita: "normale"
