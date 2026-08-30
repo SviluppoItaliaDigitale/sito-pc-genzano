@@ -1,47 +1,47 @@
 {
-  "aggiornato": "2026-08-29T11:45:40+00:00",
+  "aggiornato": "2026-08-30T10:37:08+00:00",
   "nota": "File aggiornato automaticamente dal workflow aggiorna-stato-sistema.yml. Stato dei workflow critici di manutenzione del sito.",
   "workflow": [
     {
       "nome": "Pubblicazione del sito",
       "file": "deploy.yml",
       "stato": "success",
-      "ultimo_run": "2026-08-29T11:05:13Z",
+      "ultimo_run": "2026-08-30T09:30:43Z",
       "descrizione": "Costruisce e pubblica il sito a ogni modifica approvata."
     },
     {
       "nome": "Controllo allerta meteo",
       "file": "check-allerta.yml",
-      "stato": "in_progress",
-      "ultimo_run": "2026-08-29T11:45:37Z",
+      "stato": "success",
+      "ultimo_run": "2026-08-30T10:35:29Z",
       "descrizione": "Verifica i bollettini della Regione Lazio e aggiorna lo stato di allerta."
     },
     {
       "nome": "Audit settimanale del sito",
       "file": "audit-sito.yml",
       "stato": "success",
-      "ultimo_run": "2026-08-29T01:13:34Z",
+      "ultimo_run": "2026-08-30T01:59:41Z",
       "descrizione": "Controlla contenuti, link, accessibilita e coerenza ogni lunedi."
     },
     {
       "nome": "Verifica dopo la pubblicazione",
       "file": "smoke-test-post-deploy.yml",
       "stato": "success",
-      "ultimo_run": "2026-08-28T21:56:35Z",
+      "ultimo_run": "2026-08-29T23:38:56Z",
       "descrizione": "Controlla che le pagine principali rispondano dopo ogni pubblicazione."
     },
     {
       "nome": "Allineamento delle pagine online",
       "file": "verifica-deploy-aruba.yml",
       "stato": "success",
-      "ultimo_run": "2026-08-28T21:56:35Z",
+      "ultimo_run": "2026-08-29T23:38:56Z",
       "descrizione": "Verifica che tutte le pagine online mostrino l'ultima versione pubblicata, senza pagine rimaste indietro."
     },
     {
       "nome": "Audit prestazioni e accessibilita",
       "file": "lighthouse-audit.yml",
       "stato": "success",
-      "ultimo_run": "2026-08-28T18:45:24Z",
+      "ultimo_run": "2026-08-29T20:57:00Z",
       "descrizione": "Misura velocita, accessibilita e SEO con Lighthouse dopo ogni pubblicazione."
     }
   ]
