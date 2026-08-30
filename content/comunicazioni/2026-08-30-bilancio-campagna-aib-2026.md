@@ -1,6 +1,6 @@
 ---
 title: "Campagna antincendio boschivo 2026: un bilancio di fine estate"
-date: 2026-08-30
+date: 2026-08-30T00:01:00+02:00
 description: "A fine agosto, un bilancio operativo della campagna antincendio boschivo: attivazioni, roghi spenti, volontari impegnati, prospettive per settembre."
 badge: "Aggiornamento"
 priorita: "normale"
