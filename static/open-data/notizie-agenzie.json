@@ -5,11 +5,17 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-08-30T22:33:50+00:00",
+  "generato": "2026-08-31T00:48:33+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-08-30T22:36:36+00:00",
+   "fonte": "ANSA",
+   "titolo": "Gli Usa attaccano lanciatori iraniani a Larak. Missili di Teheran su basi americane in Giordania",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/31/gli-usa-attaccano-lanciatori-iraniani-a-larak.-missili-di-teheran-su-basi-americane_d6d9581a-b7ae-4731-b009-3307af788336.html"
+  },
   {
    "data": "2026-08-30T22:11:21+00:00",
    "fonte": "ANSA CRONACA",
@@ -81,12 +87,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Juventus, Vicario incanta e la Serie A... sfotte Di Gregorio",
    "url": "https://www.adnkronos.com/sport/vicario-serie-a-di-gregorio-juventus-parma_4rzovG3Z26B1a6Jtg0iHDV"
-  },
-  {
-   "data": "2026-08-30T19:52:28+00:00",
-   "fonte": "ANSA",
-   "titolo": "Axios, gli Usa hanno attaccato lanciatori iraniani sull'isola di Larak",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/30/axios-gli-usa-hanno-attaccato-lanciatori-iraniani-sullisola-di-larak_d6d9581a-b7ae-4731-b009-3307af788336.html"
   },
   {
    "data": "2026-08-30T19:49:44+00:00",
