@@ -221,7 +221,7 @@ Dopo i tre script, lo step di commit:
 28. **Riferimenti incrociati** in `CLAUDE.md` verso `MANUALE-SITO.md`, `PIANO-EDITORIALE.md`, workflow `aggiorna-manuale.yml`.
 29. **Pagine `_index.md` istituzionali** (19 pagine obbligatorie: privacy, note-legali, accessibilità, social-media-policy, contatti, ecc.).
 30. **Shortcode `foto`** presente in `themes/.../shortcodes/` e documentato in `MANUALE-SITO.md` e `rule 02`.
-31. **Script `scripts/export-contesto-ai.sh`** presente ed eseguibile (`chmod +x`).
+31. **Script `scripts/export-contesto-progetto.sh`** presente ed eseguibile (`chmod +x`).
 32. **`dataUltimaRevisione`** sulle 4 pagine legali in formato `AAAA-MM-GG` tra virgolette.
 
 #### Audit aggiuntivo (sezioni 33-37)

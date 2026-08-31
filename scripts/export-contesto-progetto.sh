@@ -1,21 +1,21 @@
 #!/bin/bash
 # ══════════════════════════════════════════════════════════════════════════════
-#   export-contesto-ai.sh
+#   export-contesto-progetto.sh
 #   Genera un file unico con la documentazione del sito, pronto da incollare
 #   in qualsiasi AI esterna (ChatGPT, Gemini, Claude web) per continuare la
 #   gestione senza perdere contesto.
 #
 #   Uso:
-#     bash scripts/export-contesto-ai.sh           → versione FULL
+#     bash scripts/export-contesto-progetto.sh           → versione FULL
 #                                                    (~810 KB, ~200k token)
-#                                                    output: CONTESTO-AI.md
+#                                                    output: CONTESTO-PROGETTO.md
 #                                                    Per Gemini paste, Claude
 #                                                    web paste, o ChatGPT
 #                                                    attach (drag-drop).
 #
-#     bash scripts/export-contesto-ai.sh --slim    → versione SLIM
+#     bash scripts/export-contesto-progetto.sh --slim    → versione SLIM
 #                                                    (~250 KB, ~64k token)
-#                                                    output: CONTESTO-AI-slim.md
+#                                                    output: CONTESTO-PROGETTO-slim.md
 #                                                    Per ChatGPT Plus paste.
 #                                                    Include solo le regole
 #                                                    editoriali (01,02,03,06,07)
@@ -41,10 +41,10 @@ PROJECT_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$PROJECT_ROOT"
 
 if [ $SLIM_MODE -eq 1 ]; then
-    OUTPUT="CONTESTO-AI-slim.md"
+    OUTPUT="CONTESTO-PROGETTO-slim.md"
     MODE_LABEL="SLIM (regole editoriali essenziali)"
 else
-    OUTPUT="CONTESTO-AI.md"
+    OUTPUT="CONTESTO-PROGETTO.md"
     MODE_LABEL="FULL (tutta la documentazione)"
 fi
 DATA_NOW="$(date '+%Y-%m-%d %H:%M:%S %Z')"
@@ -53,9 +53,9 @@ GIT_BRANCH="$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo 'sconosciuto')
 
 # ── Intestazione ─────────────────────────────────────────────────────────────
 cat > "$OUTPUT" <<EOF
-# CONTESTO-AI — Sito Protezione Civile Genzano di Roma
+# CONTESTO-PROGETTO — Sito Protezione Civile Genzano di Roma
 
-> **File generato automaticamente da \`scripts/export-contesto-ai.sh\`.**
+> **File generato automaticamente da \`scripts/export-contesto-progetto.sh\`.**
 > Non modificare manualmente: rigenera con lo script.
 
 **Generato il:** $DATA_NOW
@@ -289,7 +289,7 @@ LINES=$(wc -l < "$OUTPUT" | tr -d ' ')
     echo "Per rigenerare questo file con lo stato attuale del repository:"
     echo ""
     echo "\`\`\`bash"
-    echo "bash scripts/export-contesto-ai.sh"
+    echo "bash scripts/export-contesto-progetto.sh"
     echo "\`\`\`"
 } >> "$OUTPUT"
 

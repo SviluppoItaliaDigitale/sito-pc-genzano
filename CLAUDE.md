@@ -232,7 +232,7 @@ Articoli operativi: includi un **disclaimer normativo** con link alla [Circolare
 - **Mai inserire lo stesso logo due volte** nella stessa grafica.
 - **Mai inserire un 5° logo** (PC Lazio, Comune, Croce Rossa, ANPAS, VVF, INGV, ecc.): quei loghi sono di enti coordinatori/operatori del Sistema PC e vanno citati nei contenuti testuali o nel footer site-wide del sito, MAI nella grafica istituzionale del Gruppo.
 
-**Vale anche per grafiche realizzate con AI esterne** (ChatGPT, Gemini, Midjourney, Canva, Adobe Express, DALL-E, ecc.): includere sempre nel prompt la regola "esattamente 4 loghi, mai doppioni, mai 5° logo, ESC sempre con codice E10435833" + fornire i 4 file dal repo. Specifiche complete + pattern brief da incollare alle AI esterne in `.claude/rules/02-content-design-pa.md § "Composizione standard"` (auto-incluso in `CONTESTO-AI.md` rigenerato).
+**Vale anche per grafiche realizzate con AI esterne** (ChatGPT, Gemini, Midjourney, Canva, Adobe Express, DALL-E, ecc.): includere sempre nel prompt la regola "esattamente 4 loghi, mai doppioni, mai 5° logo, ESC sempre con codice E10435833" + fornire i 4 file dal repo. Specifiche complete + pattern brief da incollare alle AI esterne in `.claude/rules/02-content-design-pa.md § "Composizione standard"` (auto-incluso in `CONTESTO-PROGETTO.md` rigenerato).
 
 Le grafiche già aggiornate seguono questo schema: cover articoli, slide social, schede A4, deck, /chi-siamo/ § Affiliazioni. Footer site-wide del sito: blocco chrome del portale (non grafica isolata), ha 4 loghi con PC Lazio come ente territoriale al posto della firma PC Genzano (che è già nel banner top del sito, mai duplicato nel footer).
 
@@ -318,7 +318,7 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 | `pc-social-publisher` | "rivedi le bozze social", "immagini Instagram" |
 | `pc-print-card-qa` | "controlla le schede stampabili", "QA kit calamità" |
 | `pc-site-auditor` | "audit del sito", "incongruenze?", "pro e contro" |
-| `pc-notebooklm-publisher` | "pubblica output NotebookLM per il tema X" |
+| `pc-materiali-publisher` | "pubblica output NotebookLM per il tema X" |
 | `pc-revisore-linguistico` | 🔴 gate linguistico obbligato richiamato da `pc-article-reviewer`: script deterministici (refusi + grammatica) **e** lettura sintattica per articoli mancanti, accordi, preposizioni. Riferimento Treccani |
 | `pc-correttore-bozze` | "controlla i refusi", "rileggi per refusi" — anche schede statiche HTML (`static/formazione/`, `static/giochi/`) |
 
@@ -367,7 +367,7 @@ Specifiche + workflow combinati in `manuale/parte-19-agenti-specializzati.md`. A
 
 Sito statico del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**, Hugo + tema custom `flavour-pcgenzano` (Bootstrap Italia 2.x). Deploy a ogni push su `main` via GitHub Actions: **Aruba** (`https://www.protezionecivilegenzano.it/`, FTP) + **GitHub Pages** (`https://sviluppoitaliadigitale.github.io/sito-pc-genzano/`).
 
-Architettura completa: rule `04`-`04c`. Manuali nella root: `MANUALE-SITO.md` (indice, split in `manuale/parte-NN-*.md`), `MANUALE-MOBILE.md` (workflow mobile/cloud), `PIANO-EDITORIALE.md` (fonti + calendario), `README.md`, `CONTESTO-AI.md` (export per altre AI).
+Architettura completa: rule `04`-`04c`. Manuali nella root: `MANUALE-SITO.md` (indice, split in `manuale/parte-NN-*.md`), `MANUALE-MOBILE.md` (workflow mobile/cloud), `PIANO-EDITORIALE.md` (fonti + calendario), `README.md`, `CONTESTO-PROGETTO.md` (export per altre AI).
 
 ## Comandi principali
 
@@ -377,7 +377,7 @@ hugo --minify                  # build GitHub Pages
 hugo --minify --baseURL "https://www.protezionecivilegenzano.it/"   # build Aruba
 git add . && git commit -m "..." && git push    # pubblica (CI deploy)
 bash ~/gestione-sito.sh        # script gestione contenuti/emergenze/allerte
-bash scripts/export-contesto-ai.sh              # → CONTESTO-AI.md per altra AI
+bash scripts/export-contesto-progetto.sh              # → CONTESTO-PROGETTO.md per altra AI
 bash scripts/applica-fascia-foto.sh <src> <out-senza-ext>   # fascia blu → static/images/<out>.webp
 bash scripts/scarica-pittogrammi.sh [--force]   # libreria ISO 7010 + ARASAAC
 bash scripts/foto-da-{wikipedia,nasa,usgs}.sh ...           # foto da fonti libere

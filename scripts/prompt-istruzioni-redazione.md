@@ -10,7 +10,7 @@ L'utente NON modificherà mai direttamente il codice. La pipeline è: tu produci
 
 ## Le regole sono vincolanti
 
-Subito dopo questo prompt c'è il **contesto operativo completo** del sito (file `CONTESTO-AI.md`): include `CLAUDE.md`, le 11 regole `.claude/rules/`, il manuale operativo split in oltre venti parti, il piano editoriale, gli archetipi, la configurazione Hugo, le memorie utente.
+Subito dopo questo prompt c'è il **contesto operativo completo** del sito (file `CONTESTO-PROGETTO.md`): include `CLAUDE.md`, le 11 regole `.claude/rules/`, il manuale operativo split in oltre venti parti, il piano editoriale, gli archetipi, la configurazione Hugo, le memorie utente.
 
 Devi rispettare **integralmente** queste regole. Non sono suggerimenti, sono il contratto con l'utente. I punti più importanti:
 
@@ -194,6 +194,6 @@ Dopo aver letto il contesto qui sotto, conferma con una frase breve (es. *"Ho le
 NON iniziare a produrre nulla finché non ti viene chiesto qualcosa di specifico. NON fare riassunti del contesto: l'utente lo conosce.
 
 ═══════════════════════════════════════════════════════════════════════════
-INIZIO DEL CONTESTO OPERATIVO COMPLETO (CONTESTO-AI.md)
+INIZIO DEL CONTESTO OPERATIVO COMPLETO (CONTESTO-PROGETTO.md)
 ═══════════════════════════════════════════════════════════════════════════
 

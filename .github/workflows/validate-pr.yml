@@ -6,7 +6,7 @@ on:
     paths-ignore:
       - 'manuale/**'
       - 'riferimenti-interni/**'
-      - 'CONTESTO-AI.md'
+      - 'CONTESTO-PROGETTO.md'
       - 'social-bozze/**'
 
 permissions:

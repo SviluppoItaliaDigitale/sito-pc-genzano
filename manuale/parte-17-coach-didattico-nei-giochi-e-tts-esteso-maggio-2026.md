@@ -129,4 +129,4 @@ il Chief Digital Officer del Gruppo.*
 
 _[Indice manuale](README.md)_
 
-[← Parte 16 — Bozze social: gestione quota Gemini API](parte-16-bozze-social-gestione-quota-gemini-api.md) · [↑ Indice](README.md)
+[← Parte 16 — Bozze social: gestione quota Gemini API](parte-16-bozze-social-gestione-quota-api.md) · [↑ Indice](README.md)

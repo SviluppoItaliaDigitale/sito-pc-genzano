@@ -38,7 +38,7 @@ Quiz e flashcard sono temporaneamente esclusi: NotebookLM li condivide solo come
 ```
 ~/Scrivania/
 ├── GUIDA-NOTEBOOKLM-PC-GENZANO.md       ← guida didattica completa
-├── notebooklm-pacchetti/                ← 📥 INPUT: cosa caricare in NotebookLM
+├── materiali-pacchetti/                ← 📥 INPUT: cosa caricare in NotebookLM
 │   ├── 00-LEGGIMI.md
 │   ├── rischio-sismico/
 │   │   ├── 00-INDICE.md                 ← passi 1-4 della procedura
@@ -51,7 +51,7 @@ Quiz e flashcard sono temporaneamente esclusi: NotebookLM li condivide solo come
 │   ├── rischio-incendio/...
 │   ├── allerta-meteo/...
 │   └── kit-emergenza/...
-└── notebooklm-output/                   ← 📤 OUTPUT: dove trascini i file scaricati
+└── materiali-output/                   ← 📤 OUTPUT: dove trascini i file scaricati
     ├── 00-LEGGIMI.md
     ├── rischio-sismico/                 ← (vuoto finché non lavori sul tema)
     ├── rischio-idrogeologico/
@@ -60,7 +60,7 @@ Quiz e flashcard sono temporaneamente esclusi: NotebookLM li condivide solo come
     └── kit-emergenza/
 ```
 
-I file dei pacchetti sono generati da `scripts/prepara-pacchetto-notebooklm.py`. La drop zone resta vuota finché l'utente non vi trascina i file scaricati da NotebookLM.
+I file dei pacchetti sono generati da `scripts/prepara-pacchetto-materiali.py`. La drop zone resta vuota finché l'utente non vi trascina i file scaricati da NotebookLM.
 
 ### Nel repo
 
@@ -81,8 +81,8 @@ sito-pc-genzano/
 │   ├── risorse-pronte/list.html           ← hub layout con chip indice
 │   └── partials/materiali-correlati.html  ← cross-link auto su pagine rischio
 └── scripts/
-    ├── prepara-pacchetto-notebooklm.py    ← genera pacchetti su Desktop
-    └── pubblica-notebooklm-output.py      ← pubblica drop zone sul sito
+    ├── prepara-pacchetto-materiali.py    ← genera pacchetti su Desktop
+    └── pubblica-materiali-multimediali.py      ← pubblica drop zone sul sito
 ```
 
 ---
@@ -92,10 +92,10 @@ sito-pc-genzano/
 ### Passo 1 — Lancia il preparatore (una sola volta o quando aggiungi temi)
 
 ```bash
-python3 scripts/prepara-pacchetto-notebooklm.py
+python3 scripts/prepara-pacchetto-materiali.py
 ```
 
-Genera tutti i pacchetti per i 5 temi su `~/Scrivania/notebooklm-pacchetti/`. Idempotente: rilancia ogni volta che hai modificato lo script o vuoi aggiornare i prompt.
+Genera tutti i pacchetti per i 5 temi su `~/Scrivania/materiali-pacchetti/`. Idempotente: rilancia ogni volta che hai modificato lo script o vuoi aggiornare i prompt.
 
 ### Passo 2 — Apri NotebookLM e crea il notebook
 
@@ -139,12 +139,12 @@ Ogni generazione richiede 1-5 minuti. **Scarica tutti i file** nella cartella Do
 
 ### Passo 6 — Trascina i file nella drop zone
 
-Sposta tutti i file scaricati in `~/Scrivania/notebooklm-output/<tema>/`. **Non rinominare nulla**: lo script li classifica automaticamente per estensione.
+Sposta tutti i file scaricati in `~/Scrivania/materiali-output/<tema>/`. **Non rinominare nulla**: lo script li classifica automaticamente per estensione.
 
 Esempio drop zone dopo trascinamento:
 
 ```
-~/Scrivania/notebooklm-output/kit-emergenza/
+~/Scrivania/materiali-output/kit-emergenza/
 ├── La_protezione_civile_inizia_dal_frigorifero.m4a    (38 MB)
 ├── unnamed.png                                         (4 MB)
 ├── Resilience_Operational_Blueprint.pptx               (21 MB)
@@ -157,13 +157,13 @@ Esempio drop zone dopo trascinamento:
 
 Esempi: *"Pubblica gli output di NotebookLM per il tema rischio-sismico"*, *"Pronti i file per allerta-meteo"*, *"Pubblica kit-emergenza"*.
 
-L'agent [`pc-notebooklm-publisher`](../.claude/agents/pc-notebooklm-publisher.md) prende il comando, lancia lo script, verifica, committa, pusha.
+L'agent [`pc-materiali-publisher`](../.claude/agents/pc-materiali-publisher.md) prende il comando, lancia lo script, verifica, committa, pusha.
 
 ### Passo 8 — Cosa succede in automatico
 
 Claude esegue:
 
-1. `python3 scripts/pubblica-notebooklm-output.py <tema>`
+1. `python3 scripts/pubblica-materiali-multimediali.py <tema>`
 2. I file vengono **classificati per estensione** (M4A → podcast, PNG → infografica, PPTX → presentazione, PDF → presentazione-pdf)
 3. Vengono **rinominati** in formato canonico: `<data>-<tema>-<tipo>.<ext>` (es. `2026-05-16-kit-emergenza-podcast.m4a`)
 4. Vengono **copiati** nelle cartelle giuste: `static/podcast/episodi/`, `static/infografiche/`, `static/presentazioni/`
@@ -199,7 +199,7 @@ Per aggiungere un sesto tema (es. `rischio-vulcanico`):
 
 ### 1. Aggiorna lo script preparatore
 
-Edita `scripts/prepara-pacchetto-notebooklm.py`:
+Edita `scripts/prepara-pacchetto-materiali.py`:
 
 ```python
 TEMI = {
@@ -249,16 +249,16 @@ temi:
 ### 3. Crea la cartella drop zone
 
 ```bash
-mkdir -p ~/Scrivania/notebooklm-output/rischio-vulcanico
+mkdir -p ~/Scrivania/materiali-output/rischio-vulcanico
 ```
 
 ### 4. Rigenera i pacchetti
 
 ```bash
-python3 scripts/prepara-pacchetto-notebooklm.py
+python3 scripts/prepara-pacchetto-materiali.py
 ```
 
-Lo script crea automaticamente la cartella `notebooklm-pacchetti/rischio-vulcanico/` con tutti i file pronti.
+Lo script crea automaticamente la cartella `materiali-pacchetti/rischio-vulcanico/` con tutti i file pronti.
 
 ### 5. (Opzionale) Aggiungi alias in `materiali-correlati.html`
 
@@ -281,7 +281,7 @@ Quando vuoi rifare un podcast/infografica perché le fonti sono cambiate o vuoi 
 
 1. **Apri lo stesso notebook NotebookLM esistente** (non crearlo nuovo). Aggiorna le fonti (rimuovi vecchie, carica nuove).
 2. Genera nuovamente i 3 output (Overview audio + Infografica + Presentazione).
-3. Trascina i nuovi file nella drop zone `~/Scrivania/notebooklm-output/<tema>/`. **I file vecchi della drop zone non importa se ci sono, ma è più pulito svuotare prima**.
+3. Trascina i nuovi file nella drop zone `~/Scrivania/materiali-output/<tema>/`. **I file vecchi della drop zone non importa se ci sono, ma è più pulito svuotare prima**.
 4. Scrivi a Claude *"ripubblica gli output di NotebookLM per X"*.
 
 Claude:
@@ -322,8 +322,8 @@ I materiali generati con NotebookLM **non hanno restrizioni Google** sui contenu
 
 ## 30.9 Riferimenti
 
-- Script: `scripts/prepara-pacchetto-notebooklm.py`, `scripts/pubblica-notebooklm-output.py`
-- Agent: [`.claude/agents/pc-notebooklm-publisher.md`](../.claude/agents/pc-notebooklm-publisher.md)
+- Script: `scripts/prepara-pacchetto-materiali.py`, `scripts/pubblica-materiali-multimediali.py`
+- Agent: [`.claude/agents/pc-materiali-publisher.md`](../.claude/agents/pc-materiali-publisher.md)
 - Layout hub: `themes/flavour-pcgenzano/layouts/risorse-pronte/list.html`
 - Partial cross-link: `themes/flavour-pcgenzano/layouts/partials/materiali-correlati.html`
 - Pagina pubblica: <https://www.protezionecivilegenzano.it/risorse-pronte/>

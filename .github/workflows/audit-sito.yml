@@ -801,14 +801,14 @@ jobs:
           fi
 
           # ----------------------------------------------------------------
-          section "31. Script export-contesto-ai presente ed eseguibile"
-          EXPORT_SCRIPT="scripts/export-contesto-ai.sh"
+          section "31. Script export contesto progetto presente ed eseguibile"
+          EXPORT_SCRIPT="scripts/export-contesto-progetto.sh"
           if [ ! -f "$EXPORT_SCRIPT" ]; then
             err "Script \`$EXPORT_SCRIPT\` mancante."
           elif [ ! -x "$EXPORT_SCRIPT" ]; then
             err "Script \`$EXPORT_SCRIPT\` non eseguibile (manca chmod +x)."
           else
-            ok "Script export-contesto-ai presente e eseguibile."
+            ok "Script export contesto progetto presente e eseguibile."
           fi
 
           # ----------------------------------------------------------------
