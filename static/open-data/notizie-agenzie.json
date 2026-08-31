@@ -5,28 +5,124 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-08-31T00:48:33+00:00",
+  "generato": "2026-08-31T06:17:54+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-08-30T22:36:36+00:00",
+   "data": "2026-08-31T06:04:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Alluvione lampo travolge il Grand Canyon: 1 morto e 15 escursionisti dispersi",
+   "url": "https://www.adnkronos.com/internazionale/esteri/grand-canyon-alluvione-lampo-morti-dispersi_6PGSjpxHHaH9Smx8p1LVlb"
+  },
+  {
+   "data": "2026-08-31T06:02:28+00:00",
    "fonte": "ANSA",
-   "titolo": "Gli Usa attaccano lanciatori iraniani a Larak. Missili di Teheran su basi americane in Giordania",
+   "titolo": "Spari a un rave party in Svizzera, morta una 22enne italiana",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/30/spari-a-un-rave-party-in-svizzera-morta-una-22enne-italiana-feriti-altri_a2d2e659-4e75-4cbd-bce5-a4e6e297fc33.html"
+  },
+  {
+   "data": "2026-08-31T06:01:42+00:00",
+   "fonte": "ANSA",
+   "titolo": "Franceschini: 'Convivo con il Parkinson, è stata una botta tremenda'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/08/31/franceschini-convivo-con-il-parkinson-e-stata-una-botta-tremenda_35b3837a-34ec-4555-acf3-8401e6ede204.html"
+  },
+  {
+   "data": "2026-08-31T05:41:09+00:00",
+   "fonte": "ANSA",
+   "titolo": "PRIME PAGINE | Maria, la passione per la techno e il sogno in Svizzera",
+   "url": "https://www.ansa.it/sito/podcast/ansa_voice_daily/2026/08/31/prime-pagine-maria-la-passione-per-la-techno-e-il-sogno-in-svizzera_5f1e79d9-7744-4928-9132-f8638f10975c.html"
+  },
+  {
+   "data": "2026-08-31T05:32:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Alluvione in Nepal, oltre 900 morti. 933 lavoratori intrappolati in tunnel di sistemi idroelettrici",
+   "url": "https://www.adnkronos.com/internazionale/esteri/alluvione-nepal-morti-lavoratori-intrappolati-tunnel_2VZArqW5aXQAzCmMBGgnSd"
+  },
+  {
+   "data": "2026-08-31T05:24:49+00:00",
+   "fonte": "ANSA",
+   "titolo": "Tornando i raid Usa in Iran, 'superpetroliera urta una mina e prende fuoco a Hormuz'",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/31/gli-usa-attaccano-lanciatori-iraniani-a-larak.-missili-di-teheran-su-basi-americane_d6d9581a-b7ae-4731-b009-3307af788336.html"
+  },
+  {
+   "data": "2026-08-31T05:10:56+00:00",
+   "fonte": "ANSA",
+   "titolo": "In Italia aumentano le morti per overdose, +7,8% in un anno",
+   "url": "https://www.ansa.it/canale_saluteebenessere/notizie/sanita/2026/08/28/in-italia-morti-per-overdose-in-crescita-78-in-un-anno_f44ecbcf-94f4-43bb-bc2c-0aa895ecc3de.html"
+  },
+  {
+   "data": "2026-08-31T05:08:30+00:00",
+   "fonte": "ANSA",
+   "titolo": "Lanciato il telescopio Roman, puntato sui segreti dell'universo",
+   "url": "https://www.ansa.it/canale_scienza/notizie/spazio_astronomia/2026/08/30/la-nasa-lancia-il-telescopio-roman-per-la-mappatura-del-cosmo_67021446-2b30-408e-86a0-df3a65f0fcd8.html"
+  },
+  {
+   "data": "2026-08-31T05:07:57+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Alessandro Di Battista ricoverato a Cuba: l'attesa dei medici dal Gemelli e il primo post Instagram, cosa sappiamo",
+   "url": "https://www.adnkronos.com/internazionale/esteri/alessandro-di-battista-aggiornamenti-sulle-condizioni_2GMBNUKijLVphGN2uxjBI9"
+  },
+  {
+   "data": "2026-08-31T04:40:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Franceschini: \"Ho il morbo di Parkinson, ci convivo dal 2020\"",
+   "url": "https://www.adnkronos.com/politica/franceschini-parkinson-malattia-intervista_63HXZ4P94arDxVqKeI78Rd"
+  },
+  {
+   "data": "2026-08-31T04:27:23+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Europei di pallavolo, oggi Italia-Bulgaria: orario e dove vederla in tv (in chiaro)",
+   "url": "https://www.adnkronos.com/sport/italia-bulgaria-oggi-ottavi-europei-pallavolo-femminile-orario-dove-vederla-tv-in-chiaro_2iQW4GBsZqBSfvFMVJxkSp"
+  },
+  {
+   "data": "2026-08-31T04:26:55+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serie A, oggi Lecce-Roma: orario, probabili formazioni e dove vederla in tv",
+   "url": "https://www.adnkronos.com/sport/lecce-roma-oggi-serie-a-orario-dove-vederla-tv-probabili-formazioni_1ruwgdxT7n85QfXm9eLqcd"
+  },
+  {
+   "data": "2026-08-31T04:26:13+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "US Open, oggi Alcaraz-Safiullin: orario, precedenti e dove vederla in tv (in chiaro)",
+   "url": "https://www.adnkronos.com/sport/alcaraz-safiullin-oggi-us-open-2026-orario-dove-vederla-tv_5hDpuQVewkyW8CNJ8OhrrV"
+  },
+  {
+   "data": "2026-08-31T04:25:45+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "US Open, oggi Berrettini-Wawrinka: orario, precedenti e dove vederla in tv (in chiaro)",
+   "url": "https://www.adnkronos.com/sport/berrettini-wawrinka-oggi-us-open-orario-dove-vederla-tv-in-chiaro_2KC0R4ne5lrGThJey0jhpd"
+  },
+  {
+   "data": "2026-08-31T04:25:07+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "US Open, seconda giornata: da Alcaraz a Berrettini, programma e dove vederli in tv",
+   "url": "https://www.adnkronos.com/sport/us-open-oggi-chi-gioca-alcaraz-berrettini-programma-dove-vederli-tv_6feEU7uMidmRlVlgQZMloj"
+  },
+  {
+   "data": "2026-08-31T04:24:32+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Italia-Spagna, oggi scade lo stop a Schengen. Ceuta ancora in crisi",
+   "url": "https://www.adnkronos.com/internazionale/esteri/italia-proroga-sospensione-schengen-analisi-oggi-scadenza_1Tj5I5ckerGEKM8h75nSIf"
+  },
+  {
+   "data": "2026-08-31T04:18:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Usa, primo raid contro Iran dopo un mese. Missili e droni di Teheran contro Giordania e Emirati",
+   "url": "https://www.adnkronos.com/internazionale/esteri/iran-usa-guerra-news-oggi-31-agosto_4JErfAIkJYBpGQGCaOekNJ"
+  },
+  {
+   "data": "2026-08-31T04:07:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "US Open, Djokovic eliminato: super sorpresa al primo turno",
+   "url": "https://www.adnkronos.com/sport/djokovic-eliminato-us-open-navone_1aCQgVWQ3MHF8cyknYhYNB"
   },
   {
    "data": "2026-08-30T22:11:21+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Allerta incendi in Sicilia, case minacciate e residenti in fuga",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/30/ancora-incendi-nellarea-di-taormina-abitazioni-minacciate_a95c7dba-0368-4f41-89d6-73880b93193d.html"
-  },
-  {
-   "data": "2026-08-30T22:04:56+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "\"Usa non possono prolungare la guerra contro l'Iran\", i vertici militari gelano il Pentagono",
-   "url": "https://www.adnkronos.com/internazionale/esteri/iran-usa-stop-guerra-trump_DNx2EKxuz2Tx1MA5lVWzZ"
   },
   {
    "data": "2026-08-30T21:48:21+00:00",
@@ -41,52 +137,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/30/una-neonata-salvata-con-un-trapianto-dopo-uno-screening-precoce-previsto_f652cd0d-7cef-44ef-91a0-98a774edda8c.html"
   },
   {
-   "data": "2026-08-30T21:22:36+00:00",
-   "fonte": "ANSA",
-   "titolo": "MotoGp: Marc Marquez su Ducati trionfa ad Aragon e riapre il Mondiale, terza l'Aprilia di Bezzecchi",
-   "url": "https://www.ansa.it/sito/notizie/sport/moto/2026/08/30/motogp-marc-marquez-su-ducati-trionfa-ad-aragon-e-riapre-il-mondiale-terza-laprilia_59e866ae-69b9-4839-a680-536aa33e67fa.html"
-  },
-  {
-   "data": "2026-08-30T20:57:40+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "\"Spostati, idiota\": insulti e spinte sulle vetta a 3000 metri",
-   "url": "https://www.adnkronos.com/internazionale/esteri/austria-montagna-rissa-video_330eak7qRoMZ5wfX7N7FUr"
-  },
-  {
-   "data": "2026-08-30T20:36:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Napoli, boss Raffaele Afeltra ucciso a colpi di pistola nella sua auto",
-   "url": "https://www.adnkronos.com/cronaca/boss-camorra-raffaele-afeltra-ucciso-dinamica-omicidio_1IWWo291aQQz2USa0Tpe7b"
-  },
-  {
-   "data": "2026-08-30T20:20:15+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "\"Trump non ha nulla contro Meloni\", parla l'ambasciatore americano Fertitta",
-   "url": "https://www.adnkronos.com/internazionale/esteri/trump-meloni-nato-ambasciatore-fertitta_3muBue0UOAh3N4YbbZAcL3"
-  },
-  {
-   "data": "2026-08-30T20:16:28+00:00",
-   "fonte": "ANSA",
-   "titolo": "Spari a un rave party in Svizzera, morta una 22enne italiana",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/30/spari-a-un-rave-party-in-svizzera-morta-una-22enne-italiana-feriti-altri_a2d2e659-4e75-4cbd-bce5-a4e6e297fc33.html"
-  },
-  {
-   "data": "2026-08-30T20:05:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Iran, 2 morti in un attacco Usa contro isola di Larak. Pasdaran: \"Ci vendicheremo\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/iran-usa-attacco-isola-larak_6qfjfatW2qY24hRkvDMWxL"
-  },
-  {
    "data": "2026-08-30T20:03:43+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Omicidio nel Napoletano, uomo ucciso a colpi d'arma da fuoco",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/30/omicidio-nel-napoletano-uomo-ucciso-a-colpi-darma-da-fuoco_cc907a4a-14f3-4d4a-9850-7f6bf06db43d.html"
-  },
-  {
-   "data": "2026-08-30T20:03:03+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Juventus, Vicario incanta e la Serie A... sfotte Di Gregorio",
-   "url": "https://www.adnkronos.com/sport/vicario-serie-a-di-gregorio-juventus-parma_4rzovG3Z26B1a6Jtg0iHDV"
   },
   {
    "data": "2026-08-30T19:49:44+00:00",
@@ -105,18 +159,6 @@
    "fonte": "ANSA",
    "titolo": "'Togliti il foulard, fai schifo', ma la consigliera Roberta Vallacchi è in cura per un tumore",
    "url": "https://www.ansa.it/donne/notizie/2026/08/30/togliti-il-foulard-fai-schifo-ma-la-consigliera-roberta-vallacchi-e-in-cura-per-un-tumore_da6cff17-a81f-4092-87ad-6963b2524d59.html"
-  },
-  {
-   "data": "2026-08-30T19:30:33+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Lazio, infortunio per Rovella: si ferma con il Genoa",
-   "url": "https://www.adnkronos.com/sport/infortunio-rovella-cose-successo-lazio-genoa-come-sta-quando-torna_2UXzNFmYn01vm0pRMOFoDt"
-  },
-  {
-   "data": "2026-08-30T19:24:18+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Tardelli contro Cannavaro e Totti: \"Difendono Infantino e un Mondiale truccato\"",
-   "url": "https://www.adnkronos.com/sport/mondiale-truccato-infantino-tardelli-cannavaro-totti_3aEfa8LHKRFZpaP2xwyh1R"
   },
   {
    "data": "2026-08-30T19:20:57+00:00",
@@ -147,48 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Un morto e cinque intossicati dal monossido in una baita, la vittima è un volontario",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/30/un-morto-e-cinque-intossicati-dal-monossido-in-una-baita-la-vittima-e-un-volontario_23f08a36-b736-4d3d-88d2-7c490bb9a8ff.html"
-  },
-  {
-   "data": "2026-08-30T18:46:29+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Monossido carbonio in baita pastori, la vittima è un volontario di Milano",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/30/monossido-carbonio-in-baita-pastori-la-vittima-e-un-volontario-di-milano_824f6795-b018-4233-89c8-0a16348dc717.html"
-  },
-  {
-   "data": "2026-08-30T18:46:02+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "++ Monossido carbonio in baita di pastori, un morto e cinque intossicati ++",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/30/monossido-carbonio-in-baita-di-pastori-un-morto-e-cinque-intossicati_db330f1d-c230-44f6-be3f-5f618037edee.html"
-  },
-  {
-   "data": "2026-08-30T18:45:06+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Napoli-Como, gol annullato a Lobotka e Allegri protesta",
-   "url": "https://www.adnkronos.com/sport/gol-annullato-lobotka-giusto-fuorigioco-cose-successo-napoli-como_4TKHePLbhhgNCFbfm8TE2z"
-  },
-  {
-   "data": "2026-08-30T18:44:26+00:00",
-   "fonte": "ANSA",
-   "titolo": "Un traghetto affonda al largo di Cipro: 8 morti e 17 dispersi. Arrestati comandante ed equipaggio",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/30/un-traghetto-affonda-al-largo-di-cipro-8-morti-e-17-dispersi.-arrestati-comandante-ed-equipaggio_f0c2bdf9-1180-4b26-b5e8-09ed14dbe584.html"
-  },
-  {
-   "data": "2026-08-30T18:38:33+00:00",
-   "fonte": "ANSA",
-   "titolo": "Fa evacuare gli studenti prima dell'inondazione in Nepal, un preside salva 900 alunni",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/30/fa-evacuare-studenti-prima-dellinondazione-preside-nepalese-salva-900-alunni_1dab1cf6-1fe0-411e-b7bb-b145e2a90a64.html"
-  },
-  {
-   "data": "2026-08-30T18:35:29+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Napoli, tifosi furiosi con Allegri: \"Troppo presto per dimettersi?\"",
-   "url": "https://www.adnkronos.com/sport/napoli-como-furia-tifosi-allegri_2vBmAKFHPl2slFb5CgObAP"
-  },
-  {
-   "data": "2026-08-30T18:14:19+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Cremona prova a rialzarsi, prosegue la conta dei danni",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/30/cremona-prova-a-rialzarsi-prosegue-la-conta-dei-danni_36edb9c4-d008-4b77-bb18-39f88eec2b0d.html"
   }
  ]
 }
