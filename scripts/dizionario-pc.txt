@@ -1483,6 +1483,7 @@ ragchew
 rain
 rambling
 ransomware
+rasterizza
 rasterizzati
 rasterizzato
 rastro

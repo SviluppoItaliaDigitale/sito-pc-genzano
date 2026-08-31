@@ -266,7 +266,7 @@ def pubblica_tema(tema_slug: str, dry_run: bool = False) -> int:
             podcast_md = f"""---
 title: "Podcast: {tema_info['titolo']}"
 date: {oggi}
-description: "Episodio podcast generato con NotebookLM sulla base delle fonti istituzionali del sito (CC BY-NC-SA 4.0). Ascoltabile online o scaricabile per ascolto offline."
+description: "Episodio podcast del Gruppo Comunale di Protezione Civile di Genzano di Roma, sulla base delle fonti istituzionali del sito (CC BY-NC-SA 4.0). Ascoltabile online o scaricabile per ascolto offline."
 episodio: {num_episodio}
 audio: "{audio_url}"
 {f'durata: "{d}"' if d else ''}
@@ -275,7 +275,7 @@ draft: false
 
 Episodio del podcast del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, sul tema **{tema_info['titolo']}**.
 
-Il podcast è generato automaticamente con [NotebookLM](https://notebooklm.google.com) partendo dalle fonti istituzionali raccolte dal sito (Dipartimento di Protezione Civile, INGV, ISPRA, Centro Funzionale Regionale Lazio, standard ISO). I contenuti sono sempre verificati prima della pubblicazione.
+Il podcast è redatto dal Gruppo partendo dalle fonti istituzionali raccolte dal sito (Dipartimento di Protezione Civile, INGV, ISPRA, Centro Funzionale Regionale Lazio, standard ISO) ed è letto da una **voce sintetica**. I contenuti sono sempre verificati prima della pubblicazione.
 
 ## Come ascoltare
 
