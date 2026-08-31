@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-08-31T06:17:54+00:00",
+  "generato": "2026-08-31T14:02:01+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-08-31T06:04:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Alluvione lampo travolge il Grand Canyon: 1 morto e 15 escursionisti dispersi",
-   "url": "https://www.adnkronos.com/internazionale/esteri/grand-canyon-alluvione-lampo-morti-dispersi_6PGSjpxHHaH9Smx8p1LVlb"
-  },
-  {
-   "data": "2026-08-31T06:02:28+00:00",
+   "data": "2026-08-31T13:59:21+00:00",
    "fonte": "ANSA",
-   "titolo": "Spari a un rave party in Svizzera, morta una 22enne italiana",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/30/spari-a-un-rave-party-in-svizzera-morta-una-22enne-italiana-feriti-altri_a2d2e659-4e75-4cbd-bce5-a4e6e297fc33.html"
+   "titolo": "Mostra del cinema di Venezia: in corsa un quintetto italiano, tra amore, fantasmi e orrore",
+   "url": "https://www.ansa.it/sito/notizie/cultura/2026/08/31/al-lido-di-venezia-in-corsa-un-quintetto-italiano-tra-amore-fantasmi-e-orrore_3f43ce0b-3d50-4441-a27e-0bb64043e6f0.html"
   },
   {
-   "data": "2026-08-31T06:01:42+00:00",
+   "data": "2026-08-31T13:52:39+00:00",
    "fonte": "ANSA",
-   "titolo": "Franceschini: 'Convivo con il Parkinson, è stata una botta tremenda'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/08/31/franceschini-convivo-con-il-parkinson-e-stata-una-botta-tremenda_35b3837a-34ec-4555-acf3-8401e6ede204.html"
+   "titolo": "Sparatoria ad un rave in Svizzera, arrestato svizzero di 43 anni",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/31/sparatoria-ad-un-rave-in-svizzera-arrestato-svizzero-di-43-anni_5fe7028e-9a75-411a-87ac-aeb4eae3fd7e.html"
   },
   {
-   "data": "2026-08-31T05:41:09+00:00",
+   "data": "2026-08-31T13:51:17+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Alcaraz, il nuovo look fa 'innamorare' New York: \"Non ti tagliare i capelli\"",
+   "url": "https://www.adnkronos.com/sport/alcaraz-capelli-tifosa-innamorata-us-open-2026_6PxZqiuto362BGVfjvng6N"
+  },
+  {
+   "data": "2026-08-31T13:51:09+00:00",
    "fonte": "ANSA",
-   "titolo": "PRIME PAGINE | Maria, la passione per la techno e il sogno in Svizzera",
-   "url": "https://www.ansa.it/sito/podcast/ansa_voice_daily/2026/08/31/prime-pagine-maria-la-passione-per-la-techno-e-il-sogno-in-svizzera_5f1e79d9-7744-4928-9132-f8638f10975c.html"
+   "titolo": "Corriere muore per un malore durante la consegna, oggi gli scadeva il contratto",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/31/corriere-muore-per-un-malore-durante-la-consegna-oggi-gli-scadeva-il-contratto_b603e5ca-12e1-4b35-8dba-6231698cb1f4.html"
   },
   {
-   "data": "2026-08-31T05:32:00+00:00",
+   "data": "2026-08-31T13:45:14+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Alluvione in Nepal, oltre 900 morti. 933 lavoratori intrappolati in tunnel di sistemi idroelettrici",
-   "url": "https://www.adnkronos.com/internazionale/esteri/alluvione-nepal-morti-lavoratori-intrappolati-tunnel_2VZArqW5aXQAzCmMBGgnSd"
+   "titolo": "Perde il controllo sul bagnato e si schianta con la Ferrari da 300mila euro: lui illeso, l'auto a pezzi",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ferrari-296-distrutta-incidente_6KfBaeQTsn4zO560eUFP4f"
   },
   {
-   "data": "2026-08-31T05:24:49+00:00",
+   "data": "2026-08-31T13:43:10+00:00",
    "fonte": "ANSA",
-   "titolo": "Tornando i raid Usa in Iran, 'superpetroliera urta una mina e prende fuoco a Hormuz'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/31/gli-usa-attaccano-lanciatori-iraniani-a-larak.-missili-di-teheran-su-basi-americane_d6d9581a-b7ae-4731-b009-3307af788336.html"
+   "titolo": "Tornano i raid Usa in Iran, attacco su Larak. Teheran attacca basi americane. Trump: \"Risponderemo duramente\"",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/31/tornano-i-raid-usa-in-iran-attacco-su-larak.-teheran-prende-di-mira-le-basi_d6d9581a-b7ae-4731-b009-3307af788336.html"
   },
   {
-   "data": "2026-08-31T05:10:56+00:00",
+   "data": "2026-08-31T13:39:58+00:00",
    "fonte": "ANSA",
-   "titolo": "In Italia aumentano le morti per overdose, +7,8% in un anno",
-   "url": "https://www.ansa.it/canale_saluteebenessere/notizie/sanita/2026/08/28/in-italia-morti-per-overdose-in-crescita-78-in-un-anno_f44ecbcf-94f4-43bb-bc2c-0aa895ecc3de.html"
+   "titolo": "Giochi del Mediterraneo: oro nel sollevamento pesi per l'azzurro Massada",
+   "url": "https://www.ansa.it/puglia/notizie/speciali/xx_giochi_del_mediterraneo_taranto_2026/2026/08/31/giochi-del-mediterraneo-oro-nel-sollevamento-pesi-per-lazzurro-massada_0e71ff79-9343-452e-976b-ad5c1cbbaaee.html"
   },
   {
-   "data": "2026-08-31T05:08:30+00:00",
+   "data": "2026-08-31T13:33:55+00:00",
    "fonte": "ANSA",
-   "titolo": "Lanciato il telescopio Roman, puntato sui segreti dell'universo",
-   "url": "https://www.ansa.it/canale_scienza/notizie/spazio_astronomia/2026/08/30/la-nasa-lancia-il-telescopio-roman-per-la-mappatura-del-cosmo_67021446-2b30-408e-86a0-df3a65f0fcd8.html"
+   "titolo": "Padre, madre e figlia di 5 anni trovati morti a Roma. Ipotesi omicidio-suicidio",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/31/padre-madre-e-figlia-di-5-anni-trovati-morti-a-roma.-ipotesi-omicidio-suicidio_8c68f9ce-53c9-47b6-bb89-fb425a5b2c06.html"
   },
   {
-   "data": "2026-08-31T05:07:57+00:00",
+   "data": "2026-08-31T13:30:42+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Alessandro Di Battista ricoverato a Cuba: l'attesa dei medici dal Gemelli e il primo post Instagram, cosa sappiamo",
-   "url": "https://www.adnkronos.com/internazionale/esteri/alessandro-di-battista-aggiornamenti-sulle-condizioni_2GMBNUKijLVphGN2uxjBI9"
+   "titolo": "Terremoto nel Palermitano, la scossa di magnitudo 3.3 vicino a Petralia Sottana",
+   "url": "https://www.adnkronos.com/cronaca/terremoto-oggi-palermo-petralia-sottana_2Hj6fWn1sKLyYqFNNgxoCv"
   },
   {
-   "data": "2026-08-31T04:40:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Franceschini: \"Ho il morbo di Parkinson, ci convivo dal 2020\"",
-   "url": "https://www.adnkronos.com/politica/franceschini-parkinson-malattia-intervista_63HXZ4P94arDxVqKeI78Rd"
-  },
-  {
-   "data": "2026-08-31T04:27:23+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Europei di pallavolo, oggi Italia-Bulgaria: orario e dove vederla in tv (in chiaro)",
-   "url": "https://www.adnkronos.com/sport/italia-bulgaria-oggi-ottavi-europei-pallavolo-femminile-orario-dove-vederla-tv-in-chiaro_2iQW4GBsZqBSfvFMVJxkSp"
-  },
-  {
-   "data": "2026-08-31T04:26:55+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Serie A, oggi Lecce-Roma: orario, probabili formazioni e dove vederla in tv",
-   "url": "https://www.adnkronos.com/sport/lecce-roma-oggi-serie-a-orario-dove-vederla-tv-probabili-formazioni_1ruwgdxT7n85QfXm9eLqcd"
-  },
-  {
-   "data": "2026-08-31T04:26:13+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "US Open, oggi Alcaraz-Safiullin: orario, precedenti e dove vederla in tv (in chiaro)",
-   "url": "https://www.adnkronos.com/sport/alcaraz-safiullin-oggi-us-open-2026-orario-dove-vederla-tv_5hDpuQVewkyW8CNJ8OhrrV"
-  },
-  {
-   "data": "2026-08-31T04:25:45+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "US Open, oggi Berrettini-Wawrinka: orario, precedenti e dove vederla in tv (in chiaro)",
-   "url": "https://www.adnkronos.com/sport/berrettini-wawrinka-oggi-us-open-orario-dove-vederla-tv-in-chiaro_2KC0R4ne5lrGThJey0jhpd"
-  },
-  {
-   "data": "2026-08-31T04:25:07+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "US Open, seconda giornata: da Alcaraz a Berrettini, programma e dove vederli in tv",
-   "url": "https://www.adnkronos.com/sport/us-open-oggi-chi-gioca-alcaraz-berrettini-programma-dove-vederli-tv_6feEU7uMidmRlVlgQZMloj"
-  },
-  {
-   "data": "2026-08-31T04:24:32+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Italia-Spagna, oggi scade lo stop a Schengen. Ceuta ancora in crisi",
-   "url": "https://www.adnkronos.com/internazionale/esteri/italia-proroga-sospensione-schengen-analisi-oggi-scadenza_1Tj5I5ckerGEKM8h75nSIf"
-  },
-  {
-   "data": "2026-08-31T04:18:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Usa, primo raid contro Iran dopo un mese. Missili e droni di Teheran contro Giordania e Emirati",
-   "url": "https://www.adnkronos.com/internazionale/esteri/iran-usa-guerra-news-oggi-31-agosto_4JErfAIkJYBpGQGCaOekNJ"
-  },
-  {
-   "data": "2026-08-31T04:07:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "US Open, Djokovic eliminato: super sorpresa al primo turno",
-   "url": "https://www.adnkronos.com/sport/djokovic-eliminato-us-open-navone_1aCQgVWQ3MHF8cyknYhYNB"
-  },
-  {
-   "data": "2026-08-30T22:11:21+00:00",
+   "data": "2026-08-31T13:29:06+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Allerta incendi in Sicilia, case minacciate e residenti in fuga",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/30/ancora-incendi-nellarea-di-taormina-abitazioni-minacciate_a95c7dba-0368-4f41-89d6-73880b93193d.html"
+   "titolo": "Rilasciato l'italiano fermato per la morte della compagna in Andalusia. 'È un caso di suicidio'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/31/rilasciato-litaliano-fermato-per-la-morte-della-compagna-in-andalusia.-e-un-caso-di-suicidio_e611461f-464c-48f3-bdbd-9349da630f0a.html"
   },
   {
-   "data": "2026-08-30T21:48:21+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il Como espunga il Maradona, Inter Milan Juve e Lazio in testa",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/08/30/il-como-espunga-il-maradona-inter-milan-juve-e-lazio-in-testa_68dcb63b-4c9d-401d-a01a-8e952754cac2.html"
+   "data": "2026-08-31T13:23:35+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Mostra del Cinema di Venezia: dall’aula al grande schermo, in arrivo le scuole italiane",
+   "url": "https://www.adnkronos.com/spettacoli/mostra-del-cinema-di-venezia-dallaula-al-grande-schermo-in-arrivo-le-scuole-italiane_F35CedUL2rtRzjae1E98D"
   },
   {
-   "data": "2026-08-30T21:40:35+00:00",
+   "data": "2026-08-31T13:23:23+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Frank Matano è diventato papà: \"Tanto grato di averti nella mia vita\"",
+   "url": "https://www.adnkronos.com/spettacoli/frank-matano-papa-e-nato-figlio-marcello-compagna-chi-e-ylenia-azzurretti_716R6IvtjDoeqgDjeqINQL"
+  },
+  {
+   "data": "2026-08-31T13:15:08+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Tommaso Paradiso ha il Toscana virus: \"Mi ha punto un pappatacio\"",
+   "url": "https://www.adnkronos.com/spettacoli/tommaso-paradiso-toscana-virus-punto-da-pappatacio-cosa-e_2D6nEXpL6cKuaSGR1PlaqL"
+  },
+  {
+   "data": "2026-08-31T13:15:07+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Una neonata salvata con un trapianto dopo uno screening precoce previsto in Puglia",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/30/una-neonata-salvata-con-un-trapianto-dopo-uno-screening-precoce-previsto_f652cd0d-7cef-44ef-91a0-98a774edda8c.html"
+   "titolo": "Precipita sul Cervino, morto alpinista",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/31/precipita-sul-cervino-morto-alpinista_97423ddc-eb15-41e3-844f-48f57cf35525.html"
   },
   {
-   "data": "2026-08-30T20:03:43+00:00",
+   "data": "2026-08-31T13:12:33+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Omicidio nel Napoletano, uomo ucciso a colpi d'arma da fuoco",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/30/omicidio-nel-napoletano-uomo-ucciso-a-colpi-darma-da-fuoco_cc907a4a-14f3-4d4a-9850-7f6bf06db43d.html"
+   "titolo": "Max Laudadio aggredito nella sua abitazione in provincia di Varese",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/31/max-laudadio-aggredito-nella-sua-abitazione-in-provincia-di-varese_aeb56a6e-de93-49e8-8267-ce84bef86795.html"
   },
   {
-   "data": "2026-08-30T19:49:44+00:00",
+   "data": "2026-08-31T13:11:14+00:00",
    "fonte": "ANSA",
-   "titolo": "'Il Pentagono azionista nella joint venture petrolifera con Caracas'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/30/il-pentagono-azionista-nella-joint-venture-petrolifera-con-caracas_0b73344d-3f9d-4dee-89b9-62b3b06a9198.html"
+   "titolo": "Dall'Argentina al Sudafrica, Intercultura lancia i nuovi programmi",
+   "url": "https://www.ansa.it/canale_legalita_scuola/notizie/mim/2026/08/31/dallargentina-al-sudafrica-intercultura-lancia-i-nuovi-programmi_41771c8c-3f9d-4772-9487-f6a52ac71d16.html"
   },
   {
-   "data": "2026-08-30T19:48:13+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il collier milionario rubato a Vienna, il museo nella bufera",
-   "url": "https://www.ansa.it/sito/notizie/mondo/africa/2026/08/30/il-collier-milionario-rubato-a-vienna-il-museo-nella-bufera_5d1f5436-c797-4b7f-bde3-4b267e3736da.html"
-  },
-  {
-   "data": "2026-08-30T19:31:54+00:00",
-   "fonte": "ANSA",
-   "titolo": "'Togliti il foulard, fai schifo', ma la consigliera Roberta Vallacchi è in cura per un tumore",
-   "url": "https://www.ansa.it/donne/notizie/2026/08/30/togliti-il-foulard-fai-schifo-ma-la-consigliera-roberta-vallacchi-e-in-cura-per-un-tumore_da6cff17-a81f-4092-87ad-6963b2524d59.html"
-  },
-  {
-   "data": "2026-08-30T19:20:57+00:00",
+   "data": "2026-08-31T13:08:42+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Donna uccisa a coltellate in Friuli, il marito non risponde agli inquirenti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/30/donna-uccisa-a-coltellate-in-friuli-il-marito-non-risponde-agli-inquirenti_65531b4b-2b2f-4dee-b642-f957d13cabbe.html"
+   "titolo": "Rubano il tabernacolo di una chiesa dopo averlo smurato dall'altare maggiore",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/31/rubano-il-tabernacolo-di-una-chiesa-dopo-averlo-smurato-dallaltare-maggiore_73e00be5-6147-444a-a91b-a72b434fc11c.html"
   },
   {
-   "data": "2026-08-30T19:16:16+00:00",
+   "data": "2026-08-31T13:01:04+00:00",
    "fonte": "ANSA",
-   "titolo": "L'Islanda dice 'no' alla Ue, il 52,8% boccia il referendum",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/30/lislanda-dice-no-alla-ue-il-528-boccia-il-referendum_01bc8e51-e900-4a8b-91da-006fe77caa7f.html"
+   "titolo": "Il morbo di Parkinson, come diagnosticarlo e come si manifesta",
+   "url": "https://www.ansa.it/canale_saluteebenessere/notizie/sanita/2026/08/31/il-parkinson-la-malattia-neurodegenerativa-in-piu-rapida-crescita_65129a73-1474-4344-8db7-7312053c283b.html"
   },
   {
-   "data": "2026-08-30T19:15:13+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Bimba di 5 mesi rapita da una casa famiglia, nel 2025 portati via i fratelli",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/30/bimba-di-5-mesi-rapita-da-casa-famiglia-nel-casertano_91c76926-abba-4b9b-907e-a7de91e627b5.html"
+   "data": "2026-08-31T12:49:10+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Italia sempre più vuota e con meno famiglie con figli: la previsione dell'Istat per il 2050",
+   "url": "https://www.adnkronos.com/cronaca/popolazione-istat-famiglie-senza-figli-allarme-demografico_6epwjg7Vl4eXoFgMoci433"
   },
   {
-   "data": "2026-08-30T19:13:33+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Brandizzo, commemorati i 5 operai morti nell'anniversario della strage ferroviaria",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/30/brandizzo-commemorati-i-5-operai-morti-nellanniversario-della-strage-ferroviaria_9d400f30-ae59-4e90-a63a-44c7caccf9c9.html"
+   "data": "2026-08-31T12:44:59+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Di Battista ricoverato a Cuba, Scanzi: \"Piango da due giorni\". E ringrazia Meloni",
+   "url": "https://www.adnkronos.com/politica/alessandro-di-battista-ricoverato-cuba-scanzi-messaggio_10UqzgQagnueU6e202Uk8H"
   },
   {
-   "data": "2026-08-30T18:47:18+00:00",
+   "data": "2026-08-31T12:36:04+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Noemi Bocchi compie 38 anni, la dedica di Francesco Totti: \"Ti amo\"",
+   "url": "https://www.adnkronos.com/spettacoli/noemi-bocchi-compleanno-francesco-totti-instagram_wrwgQz73woMxYJP6hiBIf"
+  },
+  {
+   "data": "2026-08-31T12:32:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Spari a Roma: trovati morti in casa a Pietralata padre, madre e figlia disabile. Ipotesi omicidio-suicidio",
+   "url": "https://www.adnkronos.com/cronaca/spari-roma-omicidio-suicidio-pietralata-morti-padre-madre-figlia_3Sli7C6al9LaZWSflIJlKd"
+  },
+  {
+   "data": "2026-08-31T12:21:20+00:00",
    "fonte": "ANSA",
-   "titolo": "Un morto e cinque intossicati dal monossido in una baita, la vittima è un volontario",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/30/un-morto-e-cinque-intossicati-dal-monossido-in-una-baita-la-vittima-e-un-volontario_23f08a36-b736-4d3d-88d2-7c490bb9a8ff.html"
+   "titolo": "Arrivati a Cuba la compagna di Alessandro Di Battista e i medici del Gemelli",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/08/31/arrivati-allavana-la-compagna-di-di-battista-e-i-medici-del-gemelli_88a95efc-5ce7-4071-8fac-212ad2b2ed5b.html"
+  },
+  {
+   "data": "2026-08-31T12:14:46+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Scambio di embrioni al San Raffaele, dopo lo stop riapre il laboratorio",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/31/scambio-di-embrioni-al-san-raffaele-dopo-lo-stop-riapre-il-laboratorio_6dda7217-f801-4923-b053-36bb8ac4ec0d.html"
+  },
+  {
+   "data": "2026-08-31T12:12:25+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina, Putin: \"Se la Russia non conquista il Donbass mi impiccano\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-escalation-putin_6Z4fHX4KnxgFf9A9GLUr1z"
+  },
+  {
+   "data": "2026-08-31T12:09:09+00:00",
+   "fonte": "ANSA",
+   "titolo": "#ioleggoperché, si aprono le iscrizioni per i nidi di tutta Italia",
+   "url": "https://www.ansa.it/sito/notizie/cultura/libri/ragazzi/2026/08/31/ioleggoperche-si-aprono-le-iscrizioni-per-i-nidi-di-tutta-italia_27412fdf-187d-45ea-baa9-70f7e57097d5.html"
+  },
+  {
+   "data": "2026-08-31T12:05:52+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Lutto a Cuneo, morto il sindacalista Alex Ammendolia: aveva 38 anni, è stato punto da un insetto",
+   "url": "https://www.adnkronos.com/cronaca/alex-ammendolia-sindacalista-morto-puntura-insetto_5YPBo2po2lgTRDLyQllKJT"
+  },
+  {
+   "data": "2026-08-31T12:02:26+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Dall'Argentina al Sudafrica, Intercultura lancia i nuovi programmi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/31/dallargentina-al-sudafrica-intercultura-lancia-i-nuovi-programmi_efb0d47f-ac53-41cc-bbe7-e833fd2fc3cd.html"
+  },
+  {
+   "data": "2026-08-31T11:58:52+00:00",
+   "fonte": "ANSA",
+   "titolo": "Dario Franceschini: \"Convivo con il Parkinson, è stata una botta tremenda\"",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/08/31/dario-franceschini-convivo-con-il-parkinson-e-stata-una-botta-tremenda_35b3837a-34ec-4555-acf3-8401e6ede204.html"
+  },
+  {
+   "data": "2026-08-31T11:58:11+00:00",
+   "fonte": "ANSA",
+   "titolo": "New York Post: 'I casi di cancro dell'11 settembre aumentati del 1.700% in 10 anni'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/08/31/new-york-post-i-casi-di-cancro-dell119-aumentati-del-1.700-in-10-anni_fe40958f-1001-421e-999b-613818a68306.html"
   }
  ]
 }
