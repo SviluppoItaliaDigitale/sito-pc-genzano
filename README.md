@@ -20,11 +20,11 @@ Questo repository contiene diversi file Markdown con ruoli diversi. Non vanno el
 |---|---|---|
 | [`README.md`](README.md) | Panoramica del progetto, guida ai file, comandi principali. | Primo file da leggere. |
 | [`MANUALE-SITO.md`](MANUALE-SITO.md) | **Indice del manuale operativo** (v3.0). Da maggio 2026 il manuale è split per Parti nella cartella [`manuale/`](manuale/) (1 file = 1 Parte). Questo file resta come indice/redirect. | Per orientarti fra le Parti. La singola Parte è poi in `manuale/parte-NN-*.md`. |
-| [`manuale/`](manuale/) | **Manuale operativo split** (1 file per Parte): procedura articoli, regole AGID, immagini fascia blu, social, comunicati stampa, configurazione Claude Code, coach giochi + TTS, lettura accessibile. | Quando devi scrivere un articolo, gestire emergenza, configurare workflow ecc. Apri il file della Parte specifica. |
-| [`MANUALE-MOBILE.md`](MANUALE-MOBILE.md) | **Workflow mobile-first** — guida per pubblicare articoli, modificare il sito, attivare emergenza, pubblicare sui social usando solo app Claude Android + GitHub web mobile. Niente PC. | Quando gestisci il sito dal telefono. |
+| [`manuale/`](manuale/) | **Manuale operativo split** (1 file per Parte): procedura articoli, regole AGID, immagini fascia blu, social, comunicati stampa, configurazione dell'ambiente di sviluppo, coach giochi + TTS, lettura accessibile. | Quando devi scrivere un articolo, gestire emergenza, configurare workflow ecc. Apri il file della Parte specifica. |
+| [`MANUALE-MOBILE.md`](MANUALE-MOBILE.md) | **Workflow mobile-first** — guida per pubblicare articoli, modificare il sito, attivare emergenza, pubblicare sui social dal telefono, con GitHub web mobile. Niente PC. | Quando gestisci il sito dal telefono. |
 | [`PIANO-EDITORIALE.md`](PIANO-EDITORIALE.md) | Fonti ufficiali da monitorare (DPC, INGV, ISPRA, Regione Lazio, ASL, Parco Castelli), calendario redazionale mensile e biblioteca di 250+ titoli evergreen. Obiettivo: tendere a un articolo al giorno (300-365/anno), minimo sostenibile 3-4 a settimana. | Quando devi proporre nuovi contenuti o cerchi ispirazione sulle fonti. |
-| [`CLAUDE.md`](CLAUDE.md) | Istruzioni operative per Claude Code (o altra AI) — mandato, priorità, regole di qualità e sicurezza. Importa automaticamente le 11 regole in `.claude/rules/`. Include la tabella dei **16 agent custom `pc-*`** e la politica delle **~100 skill globali Claude Code** invocate col tool `Skill`. | Lettura automatica per ogni sessione AI. Va aggiornato solo se cambia la governance. |
-| [`AGENTS.md`](AGENTS.md) | Versione "OpenAI-native" delle stesse regole di `CLAUDE.md` — istruzioni operative per ChatGPT/Codex/Custom GPT che lavorano direttamente sul repo via GitHub Connector. Stessi vincoli, stesso linguaggio, stessa governance. | Solo se usi ChatGPT (Custom GPT o agente OpenAI) come AI alternativa a Claude Code. |
+| [`CLAUDE.md`](CLAUDE.md) | Istruzioni operative per l'assistente di redazione — mandato, priorità, regole di qualità e sicurezza. Importa automaticamente le 11 regole in `.claude/rules/`. Include la tabella dei **16 agent custom `pc-*`** e la politica delle skill invocate col tool `Skill`. | Lettura automatica a ogni sessione di lavoro. Va aggiornato solo se cambia la governance. |
+| [`AGENTS.md`](AGENTS.md) | Le stesse regole di `CLAUDE.md` in una variante per assistenti che lavorano direttamente sul repository via GitHub Connector. Stessi vincoli, stesso linguaggio, stessa governance. | Solo se usi un assistente diverso da quello abituale. |
 
 ### File in `.claude/rules/` (governance di dettaglio)
 
@@ -42,7 +42,7 @@ Questi 8 file sono importati automaticamente da `CLAUDE.md` e definiscono le reg
 | [`05-github-aruba-deploy.md`](.claude/rules/05-github-aruba-deploy.md) | Deploy CI/CD su Aruba e GitHub Pages, rollback, header HTTP, workflow scarica-foto-automatica, divieti. |
 | [`06-protezione-civile-scientifica.md`](.claude/rules/06-protezione-civile-scientifica.md) | Codici colore allerte, rischi territoriali, numeri emergenza (NUE 112), comunicazione del rischio, gerarchia fonti. |
 | [`07-proattivita-coerenza.md`](.claude/rules/07-proattivita-coerenza.md) | Verifica proattiva di pattern simili dopo ogni fix: completare il fix sul tutto, non solo dove richiesto. |
-| [`08-claude-code-setup.md`](.claude/rules/08-claude-code-setup.md) | Setup ambiente Claude Code: sandbox `.claude/settings.local.json` per sblocco domini foto (7 fonti: Wikipedia, NASA, USGS, NOAA + Pexels, Pixabay, Unsplash). |
+| [`08-claude-code-setup.md`](.claude/rules/08-claude-code-setup.md) | Setup dell'ambiente di sviluppo: sandbox `.claude/settings.local.json` per sblocco domini foto (7 fonti: Wikipedia, NASA, USGS, NOAA + Pexels, Pixabay, Unsplash). |
 
 ### Storie e Racconti per le scuole (`/formazione/storie-e-racconti/`)
 
@@ -180,14 +180,14 @@ Blocco di 13 iniziative dalla roadmap di evoluzione del sito (libreria prompt in
 - **#6 QR articoli** + **Open Data** reinserita (`/open-data/`).
 - Più: agent `pc-site-auditor`, workflow `backup-documenti-aruba.yml`, fix pipeline Telegram allerta.
 
-### Materiali pronti (`/risorse-pronte/`) — pipeline NotebookLM (maggio 2026)
+### Materiali pronti (`/risorse-pronte/`) — pipeline dei materiali multimediali (maggio 2026)
 
 Hub pubblico in `/risorse-pronte/` che raccoglie podcast, infografiche e presentazioni divisi per tema (allerta meteo, kit emergenza, rischio sismico, idrogeologico, incendio). Tutti i materiali sono pubblicati con licenza **CC BY-NC-SA 4.0**, liberamente scaricabili e condivisibili per scuola, formazione e divulgazione.
 
-I materiali sono generati con [Google NotebookLM](https://notebooklm.google.com) partendo dalle fonti istituzionali del sito (DPC, INGV, ISPRA, CFR Lazio, standard ISO). Workflow:
+I materiali sono prodotti a partire dalle fonti istituzionali del sito (DPC, INGV, ISPRA, CFR Lazio, standard ISO). Workflow:
 
 1. `scripts/prepara-pacchetto-materiali.py` → genera pacchetti pronti in `~/Scrivania/materiali-pacchetti/<tema>/` con fonti aggregate + prompt copia-incolla.
-2. L'utente carica le fonti in NotebookLM e genera podcast/infografica/presentazione (~30 min/tema).
+2. Si caricano le fonti nello strumento di produzione e si generano podcast/infografica/presentazione (~30 min/tema).
 3. L'utente trascina i file scaricati in `~/Scrivania/materiali-output/<tema>/` con qualunque nome.
 4. `scripts/pubblica-materiali-multimediali.py <tema>` → classifica per estensione, rinomina canonicamente, copia in `static/podcast/episodi/`, `static/infografiche/`, `static/presentazioni/`, aggiunge voci a `data/risorse_pronte.yaml`, crea `content/podcast/<slug>.md` per il feed RSS iTunes.
 5. Cross-link automatico: il partial `materiali-correlati.html` mostra "Materiali pronti su questo tema" in fondo alle pagine rischio/sezione tematica corrispondente.
@@ -263,7 +263,7 @@ sito-pc-genzano/
 │                                 immagini, social, comunicati, deploy, ecc.)
 ├── MANUALE-MOBILE.md           ← workflow mobile-first (app + GitHub web)
 ├── PIANO-EDITORIALE.md         ← fonti e calendario redazionale
-├── CLAUDE.md                   ← istruzioni per AI (importa .claude/rules/)
+├── CLAUDE.md                   ← istruzioni di governance (importa .claude/rules/)
 ├── hugo.toml                   ← configurazione Hugo
 │
 ├── .claude/rules/              ← 11 regole di governance (01-08, 04 split a/b/c)
@@ -300,7 +300,7 @@ sito-pc-genzano/
 │   ├── applica-fascia-foto.{py,sh} ← applica fascia blu istituzionale a foto
 │   ├── audit-grammatica-italiana.py ← audit testuale italiano (40 sez. workflow)
 │   ├── fix-grammatica-italiana.py  ← fix automatici sicuri (apostrofi, accenti)
-│   ├── genera-social.{py,sh}       ← bozze X/FB/IG/Telegram via Gemini API
+│   ├── genera-social.{py,sh}       ← bozze X/FB/IG/Telegram (vedi GEMINI_API_KEY)
 │   ├── genera-immagini-social.py   ← immagini Instagram (post + carosello + story)
 │   ├── foto-da-wikipedia.sh        ← download foto da Wikipedia + fascia blu
 │   ├── foto-da-nasa.sh             ← idem da NASA Image Library
@@ -310,7 +310,7 @@ sito-pc-genzano/
 │   ├── scarica-pittogrammi.sh      ← libreria pittogrammi ISO 7010+ARASAAC
 │   ├── smoke-test-live.sh          ← smoke test post-deploy (chiamato da CI)
 │   ├── hash-fonte-agid.py          ← hashing testuale fonti AGID per drift detection
-│   └── export-contesto-progetto.sh       ← genera CONTESTO-PROGETTO.md per altre AI
+│   └── export-contesto-progetto.sh       ← genera CONTESTO-PROGETTO.md per altri strumenti
 │
 ├── static/                     ← asset statici (deployati al pubblico)
 │   ├── images/                 ← copertine articoli + foto evento
@@ -327,7 +327,7 @@ sito-pc-genzano/
 │   ├── .htaccess               ← redirect 301/410 + header sicurezza Aruba
 │   └── robots.txt              ← regole indicizzazione (sincronizzato col tema)
 │
-├── social-bozze/               ← bozze testuali AI per i social (NON deployata)
+├── social-bozze/               ← bozze testuali per i social (NON deployata)
 │   └── <slug>/                 ← per ogni articolo: x.txt, facebook.txt,
 │                                  instagram.txt, telegram.txt + README
 │
@@ -379,7 +379,7 @@ python3 scripts/auto-cover-mancanti.py
 git add . && git commit -m "..." && git push
 ```
 
-> 🤖 **Se redigi con Claude Code (CLI/mobile/cloud/agent):** il workflow ha un **gate AGID obbligato** prima del `git add` — Claude invoca automaticamente l'agent `pc-article-reviewer` sul file appena scritto e applica i fix di linguaggio AGID livello ChatGPT 9.5/10 (frasi <20 parole, voce attiva, sigle sciolte, fonti istituzionali, badge corretto). Eccezione: se chiedi esplicitamente un comunicato stampa, una lettera istituzionale, un paper scientifico o **qualsiasi altro documento in registro non-AGID**, il gate è sospeso e Claude applica le convenzioni di genere. Specifiche in `CLAUDE.md` § *"Auto-gate AGID prima del commit di un nuovo articolo"*.
+> 🤖 **Se redigi con l'assistente (CLI/mobile/cloud/agent):** il workflow ha un **gate AGID obbligato** prima del `git add` — viene invocato automaticamente l'agent `pc-article-reviewer` sul file appena scritto e applica i fix di linguaggio AGID livello ChatGPT 9.5/10 (frasi <20 parole, voce attiva, sigle sciolte, fonti istituzionali, badge corretto). Eccezione: se chiedi esplicitamente un comunicato stampa, una lettera istituzionale, un paper scientifico o **qualsiasi altro documento in registro non-AGID**, il gate è sospeso e Claude applica le convenzioni di genere. Specifiche in `CLAUDE.md` § *"Auto-gate AGID prima del commit di un nuovo articolo"*.
 
 ### Foto
 
@@ -390,7 +390,7 @@ git add . && git commit -m "..." && git push
 python3 scripts/auto-cover-mancanti.py
 
 # Per inserire una foto INLINE nel corpo articolo (Wikipedia/NASA/foto utente):
-# chiedi a Claude in italiano (es. "trovami una foto gratuita per X" oppure
+# chiedi in italiano all'assistente (es. "trovami una foto gratuita per X" oppure
 # "ecco una foto, mettila nell'articolo Y") — l'agent pc-image-fixer fa
 # WebFetch (per fonti web) + applica fascia blu + shortcode {{< foto >}}
 # inline nel corpo. NON usare il marker # TODO-foto-* nel frontmatter
@@ -492,18 +492,18 @@ python3 scripts/fix-grammatica-italiana.py --apply    # applica
 # Script interattivo di gestione (menu per articoli, emergenza, allerta)
 bash ~/gestione-sito.sh
 
-# Export contesto completo per altra AI (ChatGPT, Gemini, Claude web)
+# Export del contesto completo per un altro strumento o un'altra sessione
 bash scripts/export-contesto-progetto.sh
 # → Genera CONTESTO-PROGETTO.md nella root con TUTTA la documentazione del sito
-#   in un unico file, pronto da copia-incollare in qualsiasi altra AI per
+#   in un unico file, pronto da copia-incollare in qualsiasi altro strumento per
 #   avere continuità di gestione senza perdere nulla.
 ```
 
 ---
 
-## Continuità su altra AI o altra sessione
+## Continuità su un altro strumento o un'altra sessione
 
-Per lavorare sul sito con un'AI diversa (ChatGPT, Gemini, Claude web) o in una
+Per lavorare sul sito con uno strumento diverso da quello abituale o in una
 nuova sessione dove non si ha accesso automatico ai file del repo, esiste uno
 **script di export** che raccoglie tutta la documentazione in un singolo file:
 
@@ -516,10 +516,10 @@ Produce `CONTESTO-PROGETTO.md` (~300 KB) contenente:
 - Manuale operativo completo (indice `MANUALE-SITO.md` + file `manuale/parte-NN.md`) + `MANUALE-MOBILE.md`
 - Piano editoriale (fonti + calendario + biblioteca evergreen)
 - Archetype articoli, configurazione Hugo, shortcode (`foto`, `pittogramma`, `cosa-non-fare`, `chi-chiamare`)
-- Memorie utente (feedback durevoli salvati da Claude Code)
+- Memorie utente (feedback durevoli raccolti nelle sessioni di lavoro)
 
 Basta copiare il contenuto di `CONTESTO-PROGETTO.md` e incollarlo come primo messaggio
-nell'altra AI per avere continuità operativa senza perdere contesto.
+nell'altro strumento per avere continuità operativa senza perdere contesto.
 
 Il file è `.gitignore`d perché si rigenera on-demand dallo stato corrente del repo.
 
@@ -577,19 +577,19 @@ Specifiche complete in [CLAUDE.md](CLAUDE.md) e nelle 11 regole `.claude/rules/`
 9. Verifica con `hugo server` in locale.
 10. Esegui la checklist pre-pubblicazione (Parte 5).
 11. `git add . && git commit -m "Nuovo articolo: titolo" && git push`.
-12. Al push automaticamente: deploy + bozze social generate (Gemini API) + immagini feed/storia (Pillow, Titillium Web). Risultato **tutto insieme** in `social-bozze/<slug>/` (4 .txt + `feed-*.jpg` + `storia.jpg`) entro 5–10 minuti.
+12. Al push automaticamente: deploy + bozze social generate + immagini feed/storia (Pillow, Titillium Web). Risultato **tutto insieme** in `social-bozze/<slug>/` (4 .txt + `feed-*.jpg` + `storia.jpg`) entro 5–10 minuti.
 13. Controlla il deploy nella tab Actions.
 
 ---
 
 ## Pubblicare da mobile (senza PC)
 
-Workflow completo in [`MANUALE-MOBILE.md`](MANUALE-MOBILE.md): app **Claude Android** + **GitHub web mobile**. Niente PC, niente git clone.
+Workflow completo in [`MANUALE-MOBILE.md`](MANUALE-MOBILE.md): **assistente da telefono** + **GitHub web mobile**. Niente PC, niente git clone.
 
 In sintesi:
 - L'articolo si scrive direttamente su GitHub web (modifica un file in `content/comunicazioni/` o crearne uno nuovo).
 - Banner: lasciare `image: ""` vuoto, la cover tipografica viene generata automaticamente al deploy.
-- Per inserire una foto inline nel corpo: chiedi a Claude (app Android) di trovartene una gratuita pertinente — l'agent `pc-image-fixer` cerca su Wikipedia/NASA/USGS, scarica, applica fascia blu, e inserisce shortcode `{{< foto >}}` nel corpo. **Non usare** il marker `# TODO-foto-*` nel frontmatter (bandito dopo incidente 3 maggio 2026).
+- Per inserire una foto inline nel corpo: chiedi all'assistente dal telefono di trovartene una gratuita pertinente — l'agent `pc-image-fixer` cerca su Wikipedia/NASA/USGS, scarica, applica fascia blu, e inserisce shortcode `{{< foto >}}` nel corpo. **Non usare** il marker `# TODO-foto-*` nel frontmatter (bandito dopo incidente 3 maggio 2026).
 - Bozze social e immagini Instagram vengono generate automaticamente al push.
 
 ---
