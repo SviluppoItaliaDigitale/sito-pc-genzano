@@ -4,12 +4,12 @@ description: "Podcast, infografiche, quiz e flashcard sui rischi del territorio.
 layout: "list"
 tts: true
 toc: true
-dataUltimaRevisione: "2026-05-18"
+dataUltimaRevisione: "2026-08-31"
 ---
 
 In questa pagina trovi **materiali multimediali pronti da scaricare e condividere**, organizzati per tema di Protezione Civile.
 
-Sono prodotti partendo da fonti istituzionali (Dipartimento di Protezione Civile, INGV, ISPRA, Centro Funzionale Regionale Lazio, standard ISO) con l'aiuto dell'intelligenza artificiale di Google (NotebookLM), e sempre verificati prima della pubblicazione.
+Sono redatti dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma partendo da fonti istituzionali (Dipartimento di Protezione Civile, INGV, ISPRA, Centro Funzionale Regionale Lazio, standard ISO), e sempre verificati prima della pubblicazione.
 
 ## Cosa puoi fare con questi materiali
 
