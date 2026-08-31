@@ -12,7 +12,7 @@
 
 ### NON fare questo (blocca le sessioni cloud)
 
-- ❌ **Non leggere `CONTESTO-AI.md`** in apertura di sessione: è un export auto-generato di tutta la documentazione (oltre 1 MB) costruito per l'incollaggio una-tantum in altre AI, non per il caricamento via GitHub connector.
+- ❌ **Non leggere `CONTESTO-PROGETTO.md`** in apertura di sessione: è un export auto-generato di tutta la documentazione (oltre 1 MB) costruito per l'incollaggio una-tantum in altre AI, non per il caricamento via GitHub connector.
 - ❌ **Non leggere tutte le `.claude/rules/0*.md` upfront**: sono 11 file, oltre 200 KB cumulativi. Il GitHub connector di OpenAI fa N tool call sequenziali che timeoutano o esauriscono contesto, e l'agent finisce in *"Sto pensando"* indefinito o restituisce *"Something went wrong while generating the response"*.
 - ❌ **Non leggere tutto `manuale/parte-NN-*.md` upfront**: sono 21+ file di manuale operativo, stessa logica.
 - ❌ **Non leggere tutti gli articoli di `content/comunicazioni/`** upfront per «conoscere il sito»: sono 400+ file Markdown, sicuro overflow.
@@ -33,7 +33,7 @@ Se stai operando come **Claude Code** sul PC dell'utente: il sistema carica già
 
 Se stai operando come **ChatGPT/Codex via GitHub connector**: hai solo questo `AGENTS.md` (caricato dal connector all'avvio). Tutto il resto è on-demand.
 
-**Storia della regola:** esiste perché il 9 maggio 2026 una sessione ChatGPT-cloud è entrata in *"Sto pensando"* per ore dopo che l'utente ha detto *"ovviamente leggi tutta la manualistica!"* — il connector ha provato a caricare CONTESTO-AI.md + 11 rules + 21 parti del manuale + AGENTS.md insieme, ha timeoutato, ha bloccato la sessione. Per evitare il pattern: leggere on-demand, non upfront.
+**Storia della regola:** esiste perché il 9 maggio 2026 una sessione ChatGPT-cloud è entrata in *"Sto pensando"* per ore dopo che l'utente ha detto *"ovviamente leggi tutta la manualistica!"* — il connector ha provato a caricare CONTESTO-PROGETTO.md + 11 rules + 21 parti del manuale + AGENTS.md insieme, ha timeoutato, ha bloccato la sessione. Per evitare il pattern: leggere on-demand, non upfront.
 
 ---
 
@@ -420,7 +420,7 @@ hugo --minify --baseURL "https://www.protezionecivilegenzano.it/"        # Aruba
 git add . && git commit -m "..." && git push
 
 # Export contesto completo per altre AI
-bash scripts/export-contesto-ai.sh    # produce CONTESTO-AI.md
+bash scripts/export-contesto-progetto.sh    # produce CONTESTO-PROGETTO.md
 
 # Applica fascia blu istituzionale a una foto
 bash scripts/applica-fascia-foto.sh <file-sorgente> <nome-output-senza-ext>
@@ -465,7 +465,7 @@ In `.claude/agents/` ci sono **17 agenti custom** ottimizzati per Claude Code (a
 | `pc-social-publisher` | "rivedi le bozze social", "controlla immagini Instagram" | Rivede tono, accessibilità, hashtag, struttura crisi ISO 22329 + CWA, valida immagini IG (1080×1080 post, 1080×1920 story). Mai pubblica |
 | `pc-print-card-qa` | "controlla le schede stampabili", "i puzzle sono giocabili?" | QA strutturale HTML + verifica giocabilità puzzle (labirinto BFS, word search, sudoku risolvibile, cruciverba celle ok) |
 | `pc-site-auditor` | "fammi un audit del sito", "controlla tutto" | Audit whole-site read-only: Hugo build, link interni (distingue rotti vs futuri), ordering, frontmatter, anti-pattern, coerenza cross-file |
-| `pc-notebooklm-publisher` | "pubblica gli output di NotebookLM per il tema X" | Pipeline pubblicazione automatica materiali NotebookLM su `/risorse-pronte/` (podcast, infografiche, presentazioni) |
+| `pc-materiali-publisher` | "pubblica gli output di NotebookLM per il tema X" | Pipeline pubblicazione automatica materiali NotebookLM su `/risorse-pronte/` (podcast, infografiche, presentazioni) |
 
 Quando l'utente fa una richiesta che corrisponde al trigger di uno di questi agenti, **applica i criteri descritti** anche se non puoi richiamare il sub-agent specifico.
 
@@ -555,7 +555,7 @@ Documentazione aggiuntiva nella root:
 - `MANUALE-MOBILE.md` (workflow editoriale da mobile/cloud)
 - `PIANO-EDITORIALE.md` (fonti ufficiali + calendario)
 - `README.md` (overview pubblica)
-- `CONTESTO-AI.md` (export auto-generato per altre AI)
+- `CONTESTO-PROGETTO.md` (export auto-generato per altre AI)
 
 ---
 
@@ -564,7 +564,7 @@ Documentazione aggiuntiva nella root:
 Queste note nascono per evitare attriti tipici quando ChatGPT/Codex opera su questo repo:
 
 - **Non duplicare CLAUDE.md.** Quel file è autoritativo per Claude Code; AGENTS.md è autoritativo per te. Se trovi divergenze, segnalale all'utente — non risolverle in autonomia.
-- **Custom GPT con knowledge file:** se l'utente ha configurato un Custom GPT redattore con `CONTESTO-AI.md` come knowledge, ricordagli che `CONTESTO-AI.md` va rigenerato periodicamente con `bash scripts/export-contesto-ai.sh` per restare allineato col repo.
+- **Custom GPT con knowledge file:** se l'utente ha configurato un Custom GPT redattore con `CONTESTO-PROGETTO.md` come knowledge, ricordagli che `CONTESTO-PROGETTO.md` va rigenerato periodicamente con `bash scripts/export-contesto-progetto.sh` per restare allineato col repo.
 - **GitHub Connector / Codex agent mode:** quando operi via integrazione GitHub di OpenAI hai accesso al repo come questa sessione Claude. Si applicano gli stessi vincoli sui branch (vedi sezione 8) e sui merge.
 - **Code Interpreter:** utile per analisi dati che NON modificano il repo (es. stats sui badge, distribuzione articoli per mese, trend). Per modifiche al repo usa l'integrazione GitHub, non Code Interpreter.
 - **Vision:** quando l'utente carica foto da inserire in un articolo, applica i criteri di `pc-image-fixer` (fascia blu, WebP 1200px ≤200 KB, alt text WCAG, foto inline mai nel banner). Se non puoi eseguire `applica-fascia-foto.sh` direttamente, descrivi all'utente il comando esatto da lanciare in locale.

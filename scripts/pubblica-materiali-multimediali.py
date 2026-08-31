@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-pubblica-notebooklm-output.py — Legge la drop zone con gli output di
+pubblica-materiali-multimediali.py — Legge la drop zone con gli output di
 NotebookLM scaricati dall'utente e li pubblica sul sito.
 
 Workflow per l'utente:
-  1. Apre NotebookLM con il pacchetto pronto in ~/Scrivania/notebooklm-pacchetti/<tema>/
+  1. Apre NotebookLM con il pacchetto pronto in ~/Scrivania/materiali-pacchetti/<tema>/
   2. Genera podcast / infografica / presentazione / quiz / flashcard
-  3. Scarica i file e li trascina in ~/Scrivania/notebooklm-output/<tema>/
+  3. Scarica i file e li trascina in ~/Scrivania/materiali-output/<tema>/
      con nomi standard: podcast.mp3, infografica.png, presentazione.pptx,
      quiz.txt o quiz.json, flashcard.pdf
   4. Lancia questo script:
-       python3 scripts/pubblica-notebooklm-output.py rischio-sismico
+       python3 scripts/pubblica-materiali-multimediali.py rischio-sismico
 
 Cosa fa lo script:
   - Sposta i file in static/ con naming canonico
@@ -41,7 +41,23 @@ except ImportError:
     sys.exit(1)
 
 HOME = Path.home()
-OUTPUT_DIR = HOME / "Scrivania" / "notebooklm-output"
+
+
+def _cartella_scrivania(nome_nuovo, nome_storico):
+    """Percorso della cartella sulla Scrivania.
+
+    Usa il nome nuovo; se sul disco esiste ancora solo quello storico, tiene
+    quello, cosi' le cartelle gia' presenti continuano a funzionare senza che
+    l'utente debba rinominarle a mano (31/08/2026).
+    """
+    nuova = HOME / "Scrivania" / nome_nuovo
+    storica = HOME / "Scrivania" / nome_storico
+    if not nuova.exists() and storica.exists():
+        return storica
+    return nuova
+
+
+OUTPUT_DIR = _cartella_scrivania("materiali-output", "notebooklm-output")
 REPO_ROOT = Path(__file__).resolve().parent.parent
 STATIC = REPO_ROOT / "static"
 DATA_FILE = REPO_ROOT / "data" / "risorse_pronte.yaml"

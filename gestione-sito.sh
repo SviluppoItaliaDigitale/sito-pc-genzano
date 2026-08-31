@@ -775,8 +775,8 @@ EOF
   echo ""
   cd "$SITO_DIR"
 
-  if [ ! -x "scripts/export-contesto-ai.sh" ]; then
-    echo -e "${RED}Errore: scripts/export-contesto-ai.sh non trovato.${NC}"
+  if [ ! -x "scripts/export-contesto-progetto.sh" ]; then
+    echo -e "${RED}Errore: scripts/export-contesto-progetto.sh non trovato.${NC}"
     read -p "INVIO..."; exec bash "$0"
   fi
 
@@ -836,11 +836,11 @@ EOF
   echo "Generazione contesto in corso..."
 
   if [ "$MODE" = "slim" ]; then
-    bash scripts/export-contesto-ai.sh --slim > /dev/null 2>&1
-    SOURCE_FILE="CONTESTO-AI-slim.md"
+    bash scripts/export-contesto-progetto.sh --slim > /dev/null 2>&1
+    SOURCE_FILE="CONTESTO-PROGETTO-slim.md"
   else
-    bash scripts/export-contesto-ai.sh > /dev/null 2>&1
-    SOURCE_FILE="CONTESTO-AI.md"
+    bash scripts/export-contesto-progetto.sh > /dev/null 2>&1
+    SOURCE_FILE="CONTESTO-PROGETTO.md"
   fi
 
   if [ ! -f "$SOURCE_FILE" ]; then
@@ -849,8 +849,8 @@ EOF
   fi
 
   COMBINED="/tmp/pcgenzano-contesto-per-ai.md"
-  if [ -f "scripts/prompt-istruzioni-ai.md" ]; then
-    cat "scripts/prompt-istruzioni-ai.md" "$SOURCE_FILE" > "$COMBINED"
+  if [ -f "scripts/prompt-istruzioni-redazione.md" ]; then
+    cat "scripts/prompt-istruzioni-redazione.md" "$SOURCE_FILE" > "$COMBINED"
   else
     cp "$SOURCE_FILE" "$COMBINED"
   fi
@@ -867,7 +867,7 @@ EOF
   if [ "$AI_NOME" = "ChatGPT" ]; then
     echo ""
     echo -e "${CYAN}Genero anche versione FULL per allegato (drag-drop in chat)...${NC}"
-    bash scripts/export-contesto-ai.sh > /dev/null 2>&1
+    bash scripts/export-contesto-progetto.sh > /dev/null 2>&1
 
     if [ -d "$HOME/Scrivania" ]; then
       FULL_DEST="$HOME/Scrivania/contesto-pc-genzano-completo.md"
@@ -877,7 +877,7 @@ EOF
       FULL_DEST="$HOME/contesto-pc-genzano-completo.md"
     fi
 
-    cat "scripts/prompt-istruzioni-ai.md" "CONTESTO-AI.md" > "$FULL_DEST" 2>/dev/null
+    cat "scripts/prompt-istruzioni-redazione.md" "CONTESTO-PROGETTO.md" > "$FULL_DEST" 2>/dev/null
     if [ -f "$FULL_DEST" ]; then
       KB_FULL=$(du -k "$FULL_DEST" 2>/dev/null | cut -f1)
       echo -e "${GREEN}✓ Versione FULL su: $FULL_DEST${NC}"

@@ -21,9 +21,9 @@ package-lock.json
 # Claude Code (impostazioni locali)
 .claude/settings.local.json
 
-# Contesto AI generato on-demand (rigenerabile con scripts/export-contesto-ai.sh)
-CONTESTO-AI.md
-CONTESTO-AI-slim.md
+# Contesto AI generato on-demand (rigenerabile con scripts/export-contesto-progetto.sh)
+CONTESTO-PROGETTO.md
+CONTESTO-PROGETTO-slim.md
 __pycache__/
 
 # Report runtime degli script di controllo (rigenerato ad ogni esecuzione)
