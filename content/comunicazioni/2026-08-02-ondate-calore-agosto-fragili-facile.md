@@ -19,6 +19,8 @@ build:
   publishResources: true
 ---
 
+> ℹ️ C'è una guida più completa su questo tema. La trovi qui: **[Caldo e anziani: come proteggerli](/comunicazioni/2026-06-15-ondate-calore-anziani-fragili-proteggere-facile/)**.
+
 Il caldo forte in estate può essere molto pericoloso. Può uccidere le persone più deboli. A Genzano di Roma, ad agosto, fa molto caldo. Spesso si superano i 35 gradi per tanti giorni di fila.
 
 ## Chi è in pericolo
