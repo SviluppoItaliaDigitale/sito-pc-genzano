@@ -19,6 +19,8 @@ build:
   publishResources: true
 ---
 
+> ℹ️ C'è una guida più completa su questo tema. La trovi qui: **[Temporali estivi: cosa fare](/comunicazioni/2026-06-13-temporali-estivi-castelli-romani-facile/)**.
+
 Ad agosto ai Castelli Romani ci sono spesso temporali forti nel pomeriggio. Arrivano in poco tempo. Possono portare pioggia forte, grandine, vento e fulmini.
 
 ## Perché succede
