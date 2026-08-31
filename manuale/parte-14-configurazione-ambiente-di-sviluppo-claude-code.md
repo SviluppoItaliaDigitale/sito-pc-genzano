@@ -288,7 +288,7 @@ Da maggio 2026, il menu di gestione (voce **25**) include un meccanismo automati
 
 **Perché più AI invece di una.** Ogni LLM ha una sua "voce". ChatGPT è particolarmente forte nella stesura narrativa lunga e nella riformulazione. Gemini è ottimo per riassunti tecnici e citazioni normative, e ha la finestra di contesto più ampia (2M token). Claude è preciso sulle regole strutturate e sui dettagli del repo (frontmatter, shortcode, link, CSS scoped). Usarli **in catena** dà la qualità migliore: una scrive, l'altra rifinisce, l'utente sceglie cosa tenere.
 
-**Il limite di contesto cambia tutto.** Il file `CONTESTO-AI.md` con tutta la documentazione del sito è ~810 KB / ~200.000 token. Non tutte le AI lo accettano in paste:
+**Il limite di contesto cambia tutto.** Il file `CONTESTO-PROGETTO.md` con tutta la documentazione del sito è ~810 KB / ~200.000 token. Non tutte le AI lo accettano in paste:
 
 | AI | Contesto max | Strategia voce 25 |
 |---|---|---|
@@ -296,7 +296,7 @@ Da maggio 2026, il menu di gestione (voce **25**) include un meccanismo automati
 | **ChatGPT Plus** (GPT-4o) | 128k token | SLIM via paste (~64k token) **OPPURE** FULL come allegato drag-drop (RAG interno) |
 | **Claude web Pro** | 200k token | FULL via paste |
 
-**Versione SLIM (modalità `--slim` di `export-contesto-ai.sh`).** Generata su misura per ChatGPT Plus paste. Contiene solo le regole **editoriali** (01-governance, 02-content-design, 03-accessibility, 06-protezione-civile, 07-proattività) + README + CLAUDE.md + PIANO-EDITORIALE + memorie utente + `prompt-istruzioni-ai.md`. Esclude le regole **tecniche** (04*/05/08 — Hugo template, deploy CI, sandbox locale) che non servono a un'AI per scrivere testi. Stessa efficienza per la scrittura, ~250 KB / ~64.000 token.
+**Versione SLIM (modalità `--slim` di `export-contesto-progetto.sh`).** Generata su misura per ChatGPT Plus paste. Contiene solo le regole **editoriali** (01-governance, 02-content-design, 03-accessibility, 06-protezione-civile, 07-proattività) + README + CLAUDE.md + PIANO-EDITORIALE + memorie utente + `prompt-istruzioni-redazione.md`. Esclude le regole **tecniche** (04*/05/08 — Hugo template, deploy CI, sandbox locale) che non servono a un'AI per scrivere testi. Stessa efficienza per la scrittura, ~250 KB / ~64.000 token.
 
 **Il flusso operativo (zero errori se segui i passi):**
 
@@ -318,16 +318,16 @@ Da maggio 2026, il menu di gestione (voce **25**) include un meccanismo automati
    - **Per rifinirlo con calma prima**: voce **5 — Crea bozza**, incolli il testo, e lo pubblichi quando è pronto con la voce **7 — Pubblica bozza**.
    - **Per rifinitura tecnica** (foto inline, link, audit pre-push): voce **24 — Avvia Claude Code**, e dici *"ho appena scritto questo articolo con [AI esterna], fai i controlli e pubblica"*. Claude legge il file, applica le rules del repo nel dettaglio, committa e pusha.
 
-**Il file `scripts/prompt-istruzioni-ai.md`.** È il "system prompt" che vincola l'AI esterna. Definisce: il ruolo (assistente editoriale del Gruppo, non sviluppatore), le regole AGID obbligatorie, il formato del frontmatter, la palette dei badge, il divieto foto stock generiche, il numero 112 come unico riferimento per il cittadino, il divieto di inventare URL/numeri/persone, la struttura ISO 22329 per post di crisi sui social, il formato dei 4 testi social. Quando aggiorni le rules del progetto, ricontrolla anche questo file: deve restare allineato.
+**Il file `scripts/prompt-istruzioni-redazione.md`.** È il "system prompt" che vincola l'AI esterna. Definisce: il ruolo (assistente editoriale del Gruppo, non sviluppatore), le regole AGID obbligatorie, il formato del frontmatter, la palette dei badge, il divieto foto stock generiche, il numero 112 come unico riferimento per il cittadino, il divieto di inventare URL/numeri/persone, la struttura ISO 22329 per post di crisi sui social, il formato dei 4 testi social. Quando aggiorni le rules del progetto, ricontrolla anche questo file: deve restare allineato.
 
 **File temporanei prodotti dalla voce 25:**
-- `CONTESTO-AI.md` o `CONTESTO-AI-slim.md` nella root del repo (entrambi in `.gitignore`).
+- `CONTESTO-PROGETTO.md` o `CONTESTO-PROGETTO-slim.md` nella root del repo (entrambi in `.gitignore`).
 - `/tmp/pcgenzano-contesto-per-ai.md` (combinato `prompt + contesto`, va negli appunti).
 - `~/Scrivania/contesto-pc-genzano-completo.md` (solo se scegli ChatGPT, per drag-drop).
 
 **Sovrascrittura silenziosa dei file Scrivania.** Il file `contesto-pc-genzano-completo.md` ha **sempre lo stesso nome** ed è **sovrascritto silenziosamente** ad ogni rilancio della voce 25 con scelta ChatGPT. Niente accumulo di file vecchi sulla Scrivania, niente confusione su quale sia l'ultima versione. Se vuoi conservare una versione specifica (per riproducibilità), rinominala manualmente prima di rilanciare.
 
-**Workflow multi-device (mobile/cloud → desktop).** Se modifichi rules, manuale o `prompt-istruzioni-ai.md` da una sessione Claude mobile o cloud, le modifiche finiscono su GitHub al merge. La voce 25 desktop, **prima** di rigenerare il contesto, esegue automaticamente `git pull --ff-only` per recuperare quelle modifiche. Quindi il file Scrivania riflette sempre lo stato di GitHub, non lo stato locale del PC che potrebbe essere indietro.
+**Workflow multi-device (mobile/cloud → desktop).** Se modifichi rules, manuale o `prompt-istruzioni-redazione.md` da una sessione Claude mobile o cloud, le modifiche finiscono su GitHub al merge. La voce 25 desktop, **prima** di rigenerare il contesto, esegue automaticamente `git pull --ff-only` per recuperare quelle modifiche. Quindi il file Scrivania riflette sempre lo stato di GitHub, non lo stato locale del PC che potrebbe essere indietro.
 
 Se il `git pull` fallisce (modifiche locali non committate, conflitti reali divergenti), lo script ti avvisa con un warning giallo ma procede comunque con il contenuto locale: non perdi mai lavoro, decidi tu se risolvere il conflitto e rilanciare oppure usare il contesto stantio.
 

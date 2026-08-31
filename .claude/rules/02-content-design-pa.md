@@ -69,7 +69,7 @@ Ogni testo deve aiutare l'utente a capire cosa sta leggendo, cosa deve fare e do
 
 > *Vincolo loghi (cogente): la grafica deve riportare ESATTAMENTE 4 loghi (1) PC Genzano in alto come firma; (2) Quality Label ESC + codice E10435833 accanto, (3) Coordinamento FE.PI.VOL., (4) SNPC Volontariato nel footer come blocco affiliazioni. Mai doppioni. Mai 5° logo. Mai logo ESC senza codice E10435833. File ufficiali: \[allegare i 4 PNG dal repo\].*
 
-Vedi `CONTESTO-AI.md` / `CONTESTO-AI-slim.md` per il prompt completo da incollare alle AI esterne (rigenera con `bash scripts/export-contesto-ai.sh` dopo qualsiasi modifica a CLAUDE.md o `.claude/rules/`).
+Vedi `CONTESTO-PROGETTO.md` / `CONTESTO-PROGETTO-slim.md` per il prompt completo da incollare alle AI esterne (rigenera con `bash scripts/export-contesto-progetto.sh` dopo qualsiasi modifica a CLAUDE.md o `.claude/rules/`).
 
 **Why:** richiesta utente del 27 maggio 2026 + verifica retroattiva che footer Hugo + site-chrome.js già hanno il blocco dal 18 maggio. La regola codifica il vincolo legale UE per impedire grafiche future che mostrino il logo Quality Label senza codice (sarebbero non conformi al Reg. UE 2021/888).
 
