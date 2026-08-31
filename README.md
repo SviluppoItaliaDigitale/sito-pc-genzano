@@ -186,10 +186,10 @@ Hub pubblico in `/risorse-pronte/` che raccoglie podcast, infografiche e present
 
 I materiali sono generati con [Google NotebookLM](https://notebooklm.google.com) partendo dalle fonti istituzionali del sito (DPC, INGV, ISPRA, CFR Lazio, standard ISO). Workflow:
 
-1. `scripts/prepara-pacchetto-notebooklm.py` → genera pacchetti pronti in `~/Scrivania/notebooklm-pacchetti/<tema>/` con fonti aggregate + prompt copia-incolla.
+1. `scripts/prepara-pacchetto-materiali.py` → genera pacchetti pronti in `~/Scrivania/materiali-pacchetti/<tema>/` con fonti aggregate + prompt copia-incolla.
 2. L'utente carica le fonti in NotebookLM e genera podcast/infografica/presentazione (~30 min/tema).
-3. L'utente trascina i file scaricati in `~/Scrivania/notebooklm-output/<tema>/` con qualunque nome.
-4. `scripts/pubblica-notebooklm-output.py <tema>` → classifica per estensione, rinomina canonicamente, copia in `static/podcast/episodi/`, `static/infografiche/`, `static/presentazioni/`, aggiunge voci a `data/risorse_pronte.yaml`, crea `content/podcast/<slug>.md` per il feed RSS iTunes.
+3. L'utente trascina i file scaricati in `~/Scrivania/materiali-output/<tema>/` con qualunque nome.
+4. `scripts/pubblica-materiali-multimediali.py <tema>` → classifica per estensione, rinomina canonicamente, copia in `static/podcast/episodi/`, `static/infografiche/`, `static/presentazioni/`, aggiunge voci a `data/risorse_pronte.yaml`, crea `content/podcast/<slug>.md` per il feed RSS iTunes.
 5. Cross-link automatico: il partial `materiali-correlati.html` mostra "Materiali pronti su questo tema" in fondo alle pagine rischio/sezione tematica corrispondente.
 
 Architettura di dettaglio nella tabella "Architettura — riferimenti rapidi" di [`CLAUDE.md`](CLAUDE.md) e nelle rules `.claude/rules/04a` / `04b`. Riepilogo operativo in [`manuale/parte-29-iniziative-roadmap.md`](manuale/parte-29-iniziative-roadmap.md).
@@ -310,7 +310,7 @@ sito-pc-genzano/
 │   ├── scarica-pittogrammi.sh      ← libreria pittogrammi ISO 7010+ARASAAC
 │   ├── smoke-test-live.sh          ← smoke test post-deploy (chiamato da CI)
 │   ├── hash-fonte-agid.py          ← hashing testuale fonti AGID per drift detection
-│   └── export-contesto-ai.sh       ← genera CONTESTO-AI.md per altre AI
+│   └── export-contesto-progetto.sh       ← genera CONTESTO-PROGETTO.md per altre AI
 │
 ├── static/                     ← asset statici (deployati al pubblico)
 │   ├── images/                 ← copertine articoli + foto evento
@@ -493,8 +493,8 @@ python3 scripts/fix-grammatica-italiana.py --apply    # applica
 bash ~/gestione-sito.sh
 
 # Export contesto completo per altra AI (ChatGPT, Gemini, Claude web)
-bash scripts/export-contesto-ai.sh
-# → Genera CONTESTO-AI.md nella root con TUTTA la documentazione del sito
+bash scripts/export-contesto-progetto.sh
+# → Genera CONTESTO-PROGETTO.md nella root con TUTTA la documentazione del sito
 #   in un unico file, pronto da copia-incollare in qualsiasi altra AI per
 #   avere continuità di gestione senza perdere nulla.
 ```
@@ -508,17 +508,17 @@ nuova sessione dove non si ha accesso automatico ai file del repo, esiste uno
 **script di export** che raccoglie tutta la documentazione in un singolo file:
 
 ```bash
-bash scripts/export-contesto-ai.sh
+bash scripts/export-contesto-progetto.sh
 ```
 
-Produce `CONTESTO-AI.md` (~300 KB) contenente:
+Produce `CONTESTO-PROGETTO.md` (~300 KB) contenente:
 - README, CLAUDE.md, 11 regole di governance (`.claude/rules/01-08` con 04a/b/c)
 - Manuale operativo completo (indice `MANUALE-SITO.md` + file `manuale/parte-NN.md`) + `MANUALE-MOBILE.md`
 - Piano editoriale (fonti + calendario + biblioteca evergreen)
 - Archetype articoli, configurazione Hugo, shortcode (`foto`, `pittogramma`, `cosa-non-fare`, `chi-chiamare`)
 - Memorie utente (feedback durevoli salvati da Claude Code)
 
-Basta copiare il contenuto di `CONTESTO-AI.md` e incollarlo come primo messaggio
+Basta copiare il contenuto di `CONTESTO-PROGETTO.md` e incollarlo come primo messaggio
 nell'altra AI per avere continuità operativa senza perdere contesto.
 
 Il file è `.gitignore`d perché si rigenera on-demand dallo stato corrente del repo.

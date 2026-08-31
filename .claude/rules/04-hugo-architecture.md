@@ -71,8 +71,8 @@ sito-pc-genzano/
 │   │                                # resta per riferimento storico ma il suo
 │   │                                # output non va più applicato. Per foto
 │   │                                # inline usare l'agent pc-image-fixer.
-│   └── export-contesto-ai.sh        # Export di tutta la documentazione in
-│                                    # un unico CONTESTO-AI.md per altra AI
+│   └── export-contesto-progetto.sh        # Export di tutta la documentazione in
+│                                    # un unico CONTESTO-PROGETTO.md per altra AI
 ├── .claude/rules/           # Regole di governance (questo file)
 └── CLAUDE.md                # Istruzioni per Claude Code
 ```

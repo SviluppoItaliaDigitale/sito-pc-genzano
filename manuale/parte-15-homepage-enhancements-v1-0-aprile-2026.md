@@ -99,4 +99,4 @@ selettori CSS da `body.home-page` al nuovo class.
 
 _[Indice manuale](README.md)_
 
-[← Parte 14 — Configurazione ambiente di sviluppo (Claude Code)](parte-14-configurazione-ambiente-di-sviluppo-claude-code.md) · [↑ Indice](README.md) · [Parte 16 — Bozze social: gestione quota Gemini API →](parte-16-bozze-social-gestione-quota-gemini-api.md)
+[← Parte 14 — Configurazione ambiente di sviluppo (Claude Code)](parte-14-configurazione-ambiente-di-sviluppo-claude-code.md) · [↑ Indice](README.md) · [Parte 16 — Bozze social: gestione quota Gemini API →](parte-16-bozze-social-gestione-quota-api.md)

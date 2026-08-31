@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-prepara-pacchetto-notebooklm.py — Genera pacchetti pronti per NotebookLM.
+prepara-pacchetto-materiali.py — Genera pacchetti pronti per NotebookLM.
 
 Per ogni tema chiave del sito (rischio sismico, idrogeologico, AIB, allerta
-meteo, kit emergenza) produce in ~/Scrivania/notebooklm-pacchetti/<tema>/
+meteo, kit emergenza) produce in ~/Scrivania/materiali-pacchetti/<tema>/
 una serie di file Markdown con:
   - 00-INDICE.md         → cosa fare passo per passo
   - 01-fonti.md          → lista URL del sito + fonti istituzionali da caricare
@@ -15,12 +15,12 @@ una serie di file Markdown con:
   - 06-prompt-flashcard.md
 
 L'utente apre la cartella del tema, copia-incolla nel notebook NotebookLM,
-genera, scarica i file e li lascia in ~/Scrivania/notebooklm-output/<tema>/.
+genera, scarica i file e li lascia in ~/Scrivania/materiali-output/<tema>/.
 
 Uso:
-    python3 scripts/prepara-pacchetto-notebooklm.py
-    python3 scripts/prepara-pacchetto-notebooklm.py --tema rischio-sismico
-    python3 scripts/prepara-pacchetto-notebooklm.py --aggiungi <slug> "Titolo"
+    python3 scripts/prepara-pacchetto-materiali.py
+    python3 scripts/prepara-pacchetto-materiali.py --tema rischio-sismico
+    python3 scripts/prepara-pacchetto-materiali.py --aggiungi <slug> "Titolo"
 
 Idempotente: rigenera tutti i file sovrascrivendoli (i prompt sono "fonte di
 verità" qui, non in cartella). Se l'utente personalizza un prompt, lo deve
@@ -35,8 +35,24 @@ from textwrap import dedent
 
 HOME = Path.home()
 REPO_ROOT = Path(__file__).resolve().parent.parent
-PACCHETTI_DIR = HOME / "Scrivania" / "notebooklm-pacchetti"
-OUTPUT_DIR = HOME / "Scrivania" / "notebooklm-output"
+
+
+def _cartella_scrivania(nome_nuovo, nome_storico):
+    """Percorso della cartella sulla Scrivania.
+
+    Usa il nome nuovo; se sul disco esiste ancora solo quello storico, tiene
+    quello, cosi' le cartelle gia' presenti continuano a funzionare senza che
+    l'utente debba rinominarle a mano (31/08/2026).
+    """
+    nuova = HOME / "Scrivania" / nome_nuovo
+    storica = HOME / "Scrivania" / nome_storico
+    if not nuova.exists() and storica.exists():
+        return storica
+    return nuova
+
+
+PACCHETTI_DIR = _cartella_scrivania("materiali-pacchetti", "notebooklm-pacchetti")
+OUTPUT_DIR = _cartella_scrivania("materiali-output", "notebooklm-output")
 SITO_BASE = "https://www.protezionecivilegenzano.it"
 
 # Keyword matching per individuare gli articoli del sito pertinenti a un tema.
@@ -987,7 +1003,7 @@ def indice_md(tema_slug: str, tema_data: dict) -> str:
 
         ## Dove lasciare i file scaricati
 
-        Crea una cartella sul Desktop chiamata `notebooklm-output`
+        Crea una cartella sul Desktop chiamata `materiali-output`
         (se non esiste già: io te la creo automaticamente con questo
         pacchetto). Dentro, c'è la sottocartella `{tema_slug}/`.
 
@@ -1232,7 +1248,7 @@ def scrivi_readme_top() -> None:
         1. Scegli un tema (es. `rischio-sismico/`)
         2. Apri `00-INDICE.md` di quel tema: ti dice cosa fare in 4 passi
         3. Genera i 5 output in NotebookLM (~30 minuti totali)
-        4. Trascina i file scaricati in `~/Scrivania/notebooklm-output/<tema>/`
+        4. Trascina i file scaricati in `~/Scrivania/materiali-output/<tema>/`
         5. Scrivi a Claude: "Pubblica gli output NotebookLM di <tema>"
         6. In 5 minuti i materiali sono live su <https://www.protezionecivilegenzano.it/risorse-pronte/>
 
@@ -1256,7 +1272,7 @@ def scrivi_readme_top() -> None:
 
         > "Aggiungi un pacchetto NotebookLM per il tema X"
 
-        Claude lancia `python3 scripts/prepara-pacchetto-notebooklm.py
+        Claude lancia `python3 scripts/prepara-pacchetto-materiali.py
         --aggiungi X` e ti crea il pacchetto in pochi secondi.
     """)
     (PACCHETTI_DIR / "00-LEGGIMI.md").write_text(readme, encoding="utf-8")
@@ -1275,7 +1291,7 @@ def scrivi_readme_output() -> None:
         Esempio per il tema "rischio-sismico":
 
         ```
-        notebooklm-output/rischio-sismico/
+        materiali-output/rischio-sismico/
             ├── podcast.mp3              (15-30 MB, dura 20-25 min)
             ├── infografica.png          (1080×1080, ~500 KB)
             ├── presentazione.pptx       (5-15 MB)
