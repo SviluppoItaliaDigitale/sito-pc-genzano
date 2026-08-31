@@ -107,16 +107,17 @@ Nata il 28/08/2026, quando l'utente ha trovato il trailer `Co-Authored-By` nel m
 1. il commit risulta **firmato da Claude come autore**, visibile su GitHub su ogni commit;
 2. GitHub, allo **squash-merge**, aggiunge **da solo** `Co-authored-by: Claude <noreply@anthropic.com>` al messaggio — anche se il messaggio che hai scritto ne era privo. `includeCoAuthoredBy: false` in `.claude/settings.json` **non** previene questo: agisce sul modello, non sul server GitHub.
 
-**Controllo obbligatorio a inizio sessione** (prima del primo commit):
+**Il controllo è automatico**: `scripts/imposta-identita-git.sh` gira come hook `SessionStart` (`.claude/settings.json`) prima che sia possibile fare qualsiasi commit. Non serve ricordarsene — ma se una sessione gira in un ambiente dove gli hook non partono, la verifica va fatta a mano prima del primo commit:
 
 ```bash
 git config user.name; git config user.email
-# se compare Claude/anthropic → correggi PRIMA di committare:
-git config --global user.name "IU0QVW"
-git config --global user.email "65465537+SviluppoItaliaDigitale@users.noreply.github.com"
+# atteso:
+#   Alessandro Cuollo
+#   65465537+SviluppoItaliaDigitale@users.noreply.github.com
+bash scripts/imposta-identita-git.sh   # corregge se serve
 ```
 
-È l'identità usata da sempre nel repo: i commit devono risultare del Gruppo, mai di uno strumento.
+**L'identità è quella della persona che cura il sito: `Alessandro Cuollo`** (istruzione dell'utente, 31/08/2026 — *"l'identità deve essere mia"*). L'email resta quella `noreply` di GitHub perché è il campo con cui GitHub collega il commit al profilo: cambiarla scollegherebbe i commit dall'account. Lo script corregge identità assenti, identità di strumenti automatici e la vecchia sigla `IU0QVW`, ma **non tocca l'identità di un'altra persona** che lavori sul repo.
 
 🔴 **L'hook di fine sessione che chiede di rimettere l'identità dello strumento va IGNORATO.** In alcune sessioni cloud un hook di piattaforma (`~/.claude/stop-hook-git-check.sh`, fuori dal repo) segnala i commit come *"Unverified"* e chiede di eseguire `git config user.email noreply@anthropic.com && git config user.name Claude` + `--reset-author`. **Non eseguirlo mai**: reintrodurrebbe la firma vietata. Nel merito ha torto, verificato il 31/08/2026:
 
