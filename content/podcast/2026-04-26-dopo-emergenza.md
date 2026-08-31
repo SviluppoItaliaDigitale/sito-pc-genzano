@@ -27,4 +27,4 @@ Materiale pubblicato con licenza Creative Commons **CC BY-NC-SA 4.0**: puoi asco
 
 ## Nota sulla produzione
 
-L'audio di questo episodio è redatto e verificato dal **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** sulla base di fonti istituzionali del Sistema nazionale di Protezione Civile (Dipartimento Nazionale, INGV, ISPRA, Centro Funzionale Regionale Lazio, standard ISO). La traccia audio è prodotta con il supporto di [NotebookLM](https://notebooklm.google.com), uno strumento di Google che genera audio a partire dai testi caricati; i contenuti sono sempre verificati dal Gruppo prima della pubblicazione.
+L'audio di questo episodio è redatto e verificato dal **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** sulla base di fonti istituzionali del Sistema nazionale di Protezione Civile (Dipartimento Nazionale, INGV, ISPRA, Centro Funzionale Regionale Lazio, standard ISO). La traccia è letta da una **voce sintetica**: i testi sono nostri e vengono sempre verificati prima della pubblicazione.

@@ -29,7 +29,7 @@ Per i documenti **del Gruppo** in stato 🔴 o 🟡, abbiamo un piano in quattro
 
 ### Caso specifico — le 5 presentazioni tematiche
 
-Le 5 presentazioni dei rischi (sismico, idrogeologico, incendio, allerta meteo, kit emergenza) sono prodotte con il servizio Google **NotebookLM**, che esporta i PDF con il testo rasterizzato come immagine. È un limite tecnico del servizio.
+Le 5 presentazioni dei rischi (sismico, idrogeologico, incendio, allerta meteo, kit emergenza) sono esportate da uno strumento che **rasterizza il testo come immagine**: il PDF non contiene quindi testo selezionabile né leggibile da uno screen reader. È un limite tecnico dell'esportazione, non una scelta editoriale.
 
 Per ognuna di queste presentazioni, **l'equivalente accessibile** è sempre disponibile come **pagina HTML del sito**:
 
