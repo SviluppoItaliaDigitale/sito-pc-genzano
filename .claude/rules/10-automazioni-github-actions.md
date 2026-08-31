@@ -57,6 +57,25 @@ Gestione: https://claude.ai/code/routines/trig_013VgcKgHzKYkUrJeeDP7EX5.
 | 🟦 **Contenuti** | merge PR articoli (evento `push`) | **Immediato**, preempta i deploy di sfondo. |
 | ⬜ **Sfondo** | `deploy-coalescer.yml` (`workflow_run` sui workflow meteo + cron `13,43 * * * *` come fallback) → `-f priority=background` | **Un solo deploy** che raccoglie tutti i commit dati non urgenti, lanciato appena un workflow di sfondo completa. Cede ad allerta/contenuti. |
 
+### 🔴 Un merge per volta: non incatenare i merge (31/08/2026)
+
+**Dopo un merge su `main`, aspetta che `deploy.yml` finisca prima di mergiare il successivo.** Se hai più modifiche pronte, **raggruppale in una sola PR** invece di mergiarne una dietro l'altra.
+
+Il motivo è la preemption descritta qui sopra: ogni merge di contenuto **annulla il deploy in corso**. Se i merge si susseguono a distanza di pochi minuti, ogni run viene ucciso **a metà del caricamento FTP**, che è incrementale e dura 15-20 minuti. Il risultato è un sito servito a pezzi: pagine di build diverse contemporaneamente, e pagine ferme a una versione **precedente alla correzione** che credevi pubblicata.
+
+⚠️ Sfumatura importante rispetto alla frase «un deploy preemptato non perde nulla» qui sopra: è vero che il deploy successivo **ricostruisce** tutto da HEAD, ma l'**upload FTP** riparte dal confronto coi file già sul server e non è istantaneo. Finché un deploy non arriva in fondo senza essere interrotto, lo stato live resta misto.
+
+**Verifica prima di dichiarare che una modifica è live** (l'impronta di build è in ogni pagina):
+
+```bash
+curl -sSL "https://www.protezionecivilegenzano.it/<pagina>/?cb=$RANDOM" \
+  | grep -o 'pc-build-sha content=[^ >]*'
+# deve corrispondere al commit corrente di main; se pagine diverse danno SHA
+# diversi, il deploy non è ancora arrivato in fondo: aspetta, non forzare.
+```
+
+**Storia:** il 31/08/2026 cinque PR mergiate in venti minuti hanno prodotto tre deploy annullati di fila (run 4307, 4308, 4309). Il sito è rimasto con quattro build diverse in linea e `/risorse-pronte/` ferma a due ore prima, con ancora visibile il testo che la PR aveva corretto. Nessun intervento è servito: è bastato **smettere di mergiare** e lasciare che un deploy chiudesse. Prima di applicare il rimedio dei file stantii (rule 05), verifica sempre che non sia semplicemente questo.
+
 I workflow di **sfondo committano soltanto** (niente più `gh workflow run deploy.yml`): cartine meteo (`meteo-lazio`, `meteo-cartine-extra`), `ecmwf-charts`, `clima-castelli`, `aggiorna-video-correlati`, `aggiorna-stato-sistema`, `genera-qr-articoli`, `genera-pacchetti-kit` (QR/braille/pacchetti sono comunque rigenerati inline da `deploy.yml`; l'indice Pagefind dal 15/07/2026 è SOLO un artefatto di build generato da `deploy.yml`, mai committato). Il loro deploy lo fa il coalescer. Eccezioni che restano a deploy immediato `background` (deployano subito ma non preemptano): `scarica-foto-automatica` (cover banner, no rischio banner rotto) e `comprimi-podcast` (manuale). **Nasce 31/05/2026** dopo deploy-storm + articoli in coda dietro ai deploy meteo.
 
 | Workflow | Frequenza | Scopo |
