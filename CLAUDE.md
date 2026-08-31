@@ -98,7 +98,25 @@ L'utente lavora **multi-device** (CLI desktop su `main`, push = deploy; mobile/c
 - Il vincolo già esistente del deck di presentazione ("nessun riferimento a strumenti automatici/IA") è un caso particolare di questa regola generale.
 - **Eccezione ovvia**: i file di governance interna non pubblicati (CLAUDE.md, `.claude/rules/`, `.claude/agents/`, AGENTS.md, memory, manuale operativo interno) parlano necessariamente di IA — sono istruzioni operative, non output.
 
-Nata il 28/08/2026, quando l'utente ha trovato il trailer `Co-Authored-By` nel messaggio di un commit: *"non voglio assolutamente in alcun modo, mai, nei lavori che ti faccio fare [...] nessun tipo di riferimento all'utilizzo di intelligenza artificiale"*.
+Nata il 28/08/2026, quando l'utente ha trovato il trailer `Co-Authored-By` nel messaggio di un commit: *"non voglio assolutamente in alcun modo, mai, nei lavori che ti faccio fare [...] nessun tipo di riferimento all'utilizzo di intelligenza artificiale"*. Ribadita il 31/08/2026 in forma categorica: *"NON VOGLIO MAI IN NESSUN MODO CHE VENGA SCRITTO ESPRESSAMENTE O INTESO IN QUALCHE MODO CHE IL SITO È FATTO DA UNA INTELLIGENZA ARTIFICIALE"*.
+
+### 🔴 Identità git — la vera falla (31/08/2026)
+
+**Prima di qualunque `git commit`, in QUALSIASI sessione, verifica l'identità git.** Non basta non scrivere il trailer: se l'**autore** del commit è `Claude <noreply@anthropic.com>` (default di alcuni container cloud), succedono due cose, entrambe vietate:
+
+1. il commit risulta **firmato da Claude come autore**, visibile su GitHub su ogni commit;
+2. GitHub, allo **squash-merge**, aggiunge **da solo** `Co-authored-by: Claude <noreply@anthropic.com>` al messaggio — anche se il messaggio che hai scritto ne era privo. `includeCoAuthoredBy: false` in `.claude/settings.json` **non** previene questo: agisce sul modello, non sul server GitHub.
+
+**Controllo obbligatorio a inizio sessione** (prima del primo commit):
+
+```bash
+git config user.name; git config user.email
+# se compare Claude/anthropic → correggi PRIMA di committare:
+git config --global user.name "IU0QVW"
+git config --global user.email "65465537+SviluppoItaliaDigitale@users.noreply.github.com"
+```
+
+È l'identità usata da sempre nel repo: i commit devono risultare del Gruppo, mai di uno strumento. **Storia:** il 31/08/2026 il commit `b0297df` è arrivato su `main` firmato Claude e col trailer aggiunto da GitHub; è stato ripulito con amend + rebase dei commit bot sovrastanti + force-push (contenuto identico, soli metadati riscritti).
 
 ---
 
