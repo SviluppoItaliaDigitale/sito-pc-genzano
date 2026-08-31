@@ -32,10 +32,10 @@ Il volontariato di donazione è **cugino** del volontariato di Protezione Civile
 
 ## Il fabbisogno nazionale
 
-Il **Centro Nazionale Sangue** pubblica ogni anno un report sullo stato del sistema. Dati sintetici:
+Il **Centro Nazionale Sangue** pubblica ogni anno i dati sullo stato del sistema ([dati 2025, comunicato del 16 gennaio 2026](https://www.centronazionalesangue.it/plasma-nuovo-record-nel-2025-raccolte-quasi-920-tonnellate/)):
 
 - Circa **1,7 milioni di donatori** attivi in Italia.
-- Le **donazioni sono diminuite** negli ultimi anni per fattori demografici e post-pandemici.
+- La raccolta di **plasma** ha toccato nel 2025 il record di quasi **920 tonnellate**; la raccolta di globuli rossi è in equilibrio, ma il fabbisogno di farmaci plasmaderivati continua a crescere.
 - In alcune Regioni e stagioni si registrano **carenze** critiche.
 - Sangue e plasma sono necessari per: **traumi gravi, parti complicati, interventi chirurgici, pazienti oncologici, talassemici, emofilici, ustionati**.
 

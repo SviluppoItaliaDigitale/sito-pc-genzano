@@ -335,7 +335,11 @@ Due partial standardizzati che `_default/single.html` chiama automaticamente per
 
 1. **`partials/articolo-navigazione.html`** — riga «Articolo più recente / Articolo precedente» basata su `.PrevInSection` / `.NextInSection`. Niente parametri: si attiva su qualsiasi pagina `.IsPage` con un `.Section` >= 2 articoli. Riusabile su nuove sezioni archivio future.
 
-2. **`partials/articoli-correlati.html`** — sezione «Leggi anche» con card di articoli con stesso `badge` dell'articolo corrente, ordinate per data decrescente. Esclude l'articolo corrente. Mostra immagine cover + data + titolo + descrizione.
+2. **`partials/articoli-correlati.html`** — sezione «Leggi anche» con card di articoli con stesso `badge` dell'articolo corrente, ordinate per data decrescente. Esclude l'articolo corrente, le versioni facili e i contenuti d'archivio (`archiviato: true`). Mostra immagine cover + data + titolo + descrizione.
+
+## Partial `banner-archiviato` (contenuti d'archivio, dal 30/08/2026)
+
+`partials/banner-archiviato.html`, incluso da `_default/single.html` prima del toggle versione facile: sugli articoli con **`archiviato: true`** nel frontmatter mostra un alert sobrio *"Contenuto d'archivio"* che chiarisce al lettore che l'articolo si riferisce a un evento o avviso concluso e resta online per documentazione (link alle ultime comunicazioni). Il flag `archiviato` era già usato dagli script di freschezza (`check-freshness.py`, rule 10); da questa data ha anche resa visiva ed esclude l'articolo dai correlati. Si usa per **annunci di servizio scaduti** (eventi conclusi, corsi chiusi, avvisi superati), **mai** per i resoconti di attività/interventi del Gruppo, che sono memoria storica e restano articoli normali. Alert Bootstrap Italia standard, nessuna CSS dedicata.
 
 CSS in `custom.css` (sezioni "ARTICOLO PREV/NEXT v1.0" e "ARTICOLI CORRELATI v1.0"):
 - Hover lift `translateY(-2px)`, ombra blu istituzionale

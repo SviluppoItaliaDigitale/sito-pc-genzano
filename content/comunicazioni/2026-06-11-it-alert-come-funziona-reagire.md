@@ -14,6 +14,8 @@ versione_facile: "2026-06-11-it-alert-come-funziona-reagire-facile"
 draft: false
 ---
 
+> ℹ️ Su questo tema la guida di riferimento, più completa, è **[IT-alert: come si preparano i test e cosa fare al ricevimento](/comunicazioni/2026-07-10-app-it-alert-test-nazionale/)**.
+
 **IT-alert** è il sistema pubblico di **allarme nazionale** del Dipartimento della Protezione Civile. Invia messaggi a tutti i telefoni cellulari presenti in un'area geografica a rischio, in caso di emergenze gravi e imminenti. Il sistema è operativo a pieno regime dal **2024** dopo una lunga fase di test.
 
 ## Perché esiste
