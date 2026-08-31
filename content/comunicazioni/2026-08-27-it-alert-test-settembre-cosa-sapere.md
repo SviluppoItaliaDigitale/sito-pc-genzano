@@ -14,6 +14,8 @@ versione_facile: "2026-08-27-it-alert-test-settembre-cosa-sapere-facile"
 draft: false
 ---
 
+> ℹ️ Su questo tema la guida di riferimento, più completa, è **[IT-alert: come si preparano i test e cosa fare al ricevimento](/comunicazioni/2026-07-10-app-it-alert-test-nazionale/)**.
+
 **IT-Alert** è il sistema nazionale di allarme pubblico che invia, tramite cellulari, messaggi di allerta immediata alla popolazione presente in una specifica area geografica. Sviluppato dal **Dipartimento della Protezione Civile** e testato a partire dal 2023, è oggi operativo per diversi scenari di emergenza. A settembre sono previsti nuovi test regionali: vale la pena sapere cosa è e come comportarsi.
 
 ## Come funziona

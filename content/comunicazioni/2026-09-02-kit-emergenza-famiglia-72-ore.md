@@ -14,6 +14,8 @@ versione_facile: "2026-09-02-kit-emergenza-famiglia-72-ore-facile"
 draft: false
 ---
 
+> ℹ️ Su questo tema la guida di riferimento, più completa, è **[Il kit di emergenza domestico: cosa mettere e dove tenerlo](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/)**.
+
 Il **Dipartimento della Protezione Civile** consiglia a ogni famiglia di tenere pronto un **kit di emergenza**. Deve coprire autonomamente le **prime 72 ore**, quando i soccorsi potrebbero non essere ancora arrivati in modo capillare. Non è una raccomandazione allarmistica, è **buona educazione civile**: come lo zaino di primo soccorso in auto.
 
 ## Perché 72 ore

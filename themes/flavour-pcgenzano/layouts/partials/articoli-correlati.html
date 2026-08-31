@@ -16,7 +16,10 @@
        hanno `versione_facile_di` nel frontmatter e devono essere
        raggiungibili solo dall'articolo madre. */}}
   {{- range where (where (where .Site.RegularPages "Section" "comunicazioni") "Params.badge" "==" $badgeAttuale) "Params.versione_facile_di" nil -}}
-    {{- if ne .RelPermalink $self -}}
+    {{- /* Escludi anche i contenuti d'archivio (archiviato: true, eventi
+         e avvisi conclusi): restano online ma non vanno riproposti come
+         "Leggi anche" — audit contenuti 30/08/2026. */ -}}
+    {{- if and (ne .RelPermalink $self) (not .Params.archiviato) -}}
       {{- $correlati = $correlati | append . -}}
     {{- end -}}
   {{- end -}}

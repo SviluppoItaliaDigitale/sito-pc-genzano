@@ -13,6 +13,8 @@ allegati: []
 draft: false
 ---
 
+> ℹ️ Su questo tema la guida di riferimento, più completa, è **[Sagre e feste patronali: sicurezza dei grandi eventi estivi](/comunicazioni/2026-07-21-sagre-feste-patronali-sicurezza-eventi/)**.
+
 Nei paesi dei Castelli Romani agosto coincide con il **calendario delle sagre e delle feste patronali**. Sono occasioni di aggregazione, di promozione del territorio, di recupero di tradizioni locali. Dietro a ogni evento aperto al pubblico c'è una **filiera di sicurezza** che molti cittadini non conoscono e che vale la pena raccontare.
 
 ## La normativa di riferimento
