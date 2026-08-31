@@ -47,6 +47,8 @@ Non limitarti a eseguire: valuta, correggi, migliora, normalizza e rendi ogni ou
 
 **Eccezione unica — build rotta** (Hugo fallisce, file corrotto, YAML invalido): fermati prima del merge, segnala il blocker, fixa, riparti. Build pulita e rules rispettate = vai diritto fino al merge.
 
+🔴 **Un merge per volta.** Se hai più modifiche pronte, raggruppale in **una sola PR**; se sono già separate, aspetta che `deploy.yml` chiuda prima di mergiare la successiva. Ogni merge annulla il deploy in corso a metà caricamento FTP, e il sito resta servito a pezzi (pagine di build diverse, alcune ferme a prima della correzione). Dettagli, verifica dell'impronta di build e storia dell'incidente del 31/08/2026 in rule 10 § "Un merge per volta".
+
 **Domande di stato** («Pubblicate?», «Hai pubblicato?», «È live?», «Sono su main?», «Si vede online?») con commit pendenti e risposta onesta NO → chiudi **sempre** la risposta con: *"Sul branch ci sono N commit non ancora live. Vuoi che apra PR + merge su main + verifica deploy?"*. Un «vai/sì/ok/procedi» a questa offerta attiva la sequenza completa.
 
 ---
