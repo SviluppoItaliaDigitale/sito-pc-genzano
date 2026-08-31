@@ -35,17 +35,24 @@ set -u
 
 git rev-parse --is-inside-work-tree >/dev/null 2>&1 || exit 0
 
-# Identita' canonica del repository: la stessa usata da sempre nei commit.
-NOME_OK="IU0QVW"
+# Identita' canonica del repository: il nome della persona che cura il sito.
+# L'email resta quella `noreply` di GitHub: e' il campo con cui GitHub collega
+# il commit al profilo, quindi cambiarla scollegherebbe i commit dall'account.
+NOME_OK="Alessandro Cuollo"
 EMAIL_OK="65465537+SviluppoItaliaDigitale@users.noreply.github.com"
 
 NOME_ORA="$(git config user.name 2>/dev/null || true)"
 EMAIL_ORA="$(git config user.email 2>/dev/null || true)"
 
-# Vietate: identita' vuote o riconducibili a uno strumento automatico.
+# Da correggere in tre casi:
+#   a) identita' assente;
+#   b) identita' riconducibile a uno strumento automatico;
+#   c) stessa email dell'account del repo ma nome diverso (allinea le sigle
+#      storiche al nome della persona, senza toccare l'identita' di altri).
 da_correggere=0
 [ -z "$NOME_ORA" ] || [ -z "$EMAIL_ORA" ] && da_correggere=1
 printf '%s %s' "$NOME_ORA" "$EMAIL_ORA" | grep -qiE 'claude|anthropic|\bbot\b|assistant' && da_correggere=1
+[ "$EMAIL_ORA" = "$EMAIL_OK" ] && [ "$NOME_ORA" != "$NOME_OK" ] && da_correggere=1
 
 [ "$da_correggere" -eq 0 ] && exit 0
 
