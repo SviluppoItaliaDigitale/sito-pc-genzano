@@ -105,7 +105,7 @@ Una società resiliente non si misura su quanto sa proteggere i cittadini in pie
 Sul nostro sito:
 
 - [ISO 22395 — Persone vulnerabili](/standard-iso/iso-22395/): scheda interna con titolo, ambito e contestualizzazione italiana.
-- [Kit Calamità per situazioni vulnerabili](/formazione/kit-calamita/): hub dei 12 kit operativi.
+- [Kit Calamità per situazioni vulnerabili](/formazione/kit-calamita/): hub dei kit operativi per categoria vulnerabile.
 - [Facile da leggere](/facile-da-leggere/).
 - [Standard ISO per la Protezione Civile](/standard-iso/): hub di tutti gli standard rilevanti.
 - [Persone fragili: aiutare i vicini in emergenza](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/).

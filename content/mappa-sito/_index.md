@@ -487,7 +487,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 <a class="ms-card ms-emerg" href="/formazione/kit-calamita/">
   <div class="ms-card-icon"><i class="bi bi-grid-3x3-gap-fill"></i></div>
   <p class="ms-card-title">Hub Kit Calamità</p>
-  <p class="ms-card-desc">Cruscotto di 12 kit operativi: scegli la tua situazione e arrivi alle schede pronte. Standard NCTSN, IFRC, WHO, Sphere, FEANTSA, UNHCR, IOM, IFE, MISP, WSAVA, Eurocarers.</p>
+  <p class="ms-card-desc">Cruscotto dei kit operativi per categorie vulnerabili: scegli la tua situazione e arrivi alle schede pronte. Standard NCTSN, IFRC, WHO, Sphere, FEANTSA, UNHCR, IOM, IFE, MISP, WSAVA, Eurocarers.</p>
 </a>
 <a class="ms-card ms-emerg" href="/formazione/kit-calamita-bambini/">
   <div class="ms-card-icon"><i class="bi bi-emoji-smile"></i></div>
