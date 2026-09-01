@@ -688,6 +688,7 @@ frigobag
 from
 fronteggiabili
 fukushima
+fulminometro
 functional
 fungaioli
 fòcs
@@ -720,6 +721,7 @@ geotecnici
 gestazionale
 gestazionali
 gesture
+gigabit
 gigawatt
 giolittiana
 giubbino
@@ -991,6 +993,7 @@ maìk
 mecheri
 medical
 medicanes
+megabit
 megaflash
 meltdown
 memorizzabile
@@ -1396,6 +1399,7 @@ sbancamenti
 scam
 scar
 scarrabili
+scatterometro
 sciadv
 science
 scientifici/tecnici

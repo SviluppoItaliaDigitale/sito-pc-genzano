@@ -43,11 +43,31 @@ Il fulmine non è solo uno spettacolo. È il segno che dentro la nuvola c'è tur
 
 Per questo l'osservazione continua dei fulmini alimenta il *nowcasting*, cioè la previsione a brevissimo termine, quella che copre le prossime ore e non i prossimi giorni. È anche una delle ragioni per cui lo strumento interessa alla sicurezza del volo. Per noi, sul territorio, si traduce in una cosa sola: avvisi che possono arrivare prima.
 
+## Il fulminometro è nato a Firenze
+
+Il Lightning Imager è stato progettato, costruito e collaudato da **Leonardo** nello stabilimento di **Campi Bisenzio**, alle porte di Firenze. Lo commissionò Thales Alenia Space nel 2012 per conto dell'ESA. Ci sono voluti nove anni di lavoro. Il gruppo è stato coordinato da Carlo Simoncelli, con Guia Pastorini alla guida sul fronte ingegneristico.
+
+La difficoltà principale non era vedere un fulmine. Era distinguerlo da tutto il resto. Il Sole che si riflette sul mare, una città illuminata di notte, la sabbia chiara di un deserto: sono tutte sorgenti di luce. Possono coprire un lampo che dura pochi decimi di millisecondo. Gli ingegneri hanno risposto con filtri ottici, che oscurano la luce di contorno. Le schede elettroniche, invece, ricalibrano da sole la luminosità in base allo scenario osservato.
+
+Poi c'è il problema opposto: i dati sono troppi. Lo strumento raccoglie circa **48 gigabit al secondo**, ma a terra ne arrivano **30 megabit**. La selezione avviene a bordo: quello che non è riconducibile a un fulmine viene scartato prima della trasmissione. Le stazioni riceventi trattano così solo l'informazione utile.
+
+Lo strumento pesa 130 chili e riconosce fulmini che durano fino a **0,6 millisecondi**. Ne serve un esemplare per ciascuno dei quattro satelliti MTG-I dedicati alle immagini: dopo il primo, gli altri escono dallo stesso stabilimento toscano.
+
+Il contributo italiano al programma non finisce qui. Leonardo fornisce sensori d'assetto stellare e pannelli fotovoltaici a tutti e sei i satelliti. Telespazio segue il segmento di terra e i servizi di lancio e messa in orbita per parte della costellazione.
+
 ## Come funziona la costellazione
 
 Il sistema completo prevede **sei satelliti**: quattro per le immagini e due per il sondaggio dell'atmosfera, per oltre vent'anni di servizio. MTG-I2 completa la prima famiglia. A regime, due satelliti lavorano in coppia: uno scansiona **Europa e Africa ogni 10 minuti**, l'altro la **sola Europa ogni 2,5 minuti**. Il ciclo rapido è pensato proprio per i fenomeni che evolvono in fretta.
 
-Il satellite pesa 3.800 chili, di cui due tonnellate di propellente, e lavora in orbita geostazionaria a **36.000 chilometri** sopra l'equatore. La vita di progetto è di almeno 8 anni e mezzo. Nel suo insieme, il sistema produrrà oltre **cinquanta volte** i dati della generazione precedente. Il satellite è stato costruito sotto la guida di Thales Alenia Space, con OHB System e l'italiana Leonardo fra i partner principali. Il controllo della missione è a EUMETSAT, in Germania.
+Il satellite pesa 3.800 chili, di cui due tonnellate di propellente, e lavora in orbita geostazionaria a **36.000 chilometri** sopra l'equatore. La vita di progetto è di almeno 8 anni e mezzo. Nel suo insieme, il sistema produrrà oltre **cinquanta volte** i dati della generazione precedente. Il satellite è stato costruito sotto la guida di Thales Alenia Space, con OHB System fra i partner principali. Il controllo della missione è a EUMETSAT, in Germania.
+
+## Quando lo vedremo lavorare
+
+Il satellite è in orbita, ma non è ancora al lavoro. Prima serve il **collaudo**: le verifiche sugli strumenti e sul segmento di terra che riceve ed elabora i dati. L'ESA indica che il servizio arriverà **nel 2027**, quando EUMETSAT avrà completato la messa in servizio. Al termine del collaudo MTG-I2 cambierà anche nome: diventerà **Meteosat-14**.
+
+Nel frattempo l'Europa non resta senza occhi. Il primo satellite della nuova generazione, **Meteosat-12**, è in orbita dal dicembre 2022. Oggi è il satellite operativo principale: manda l'immagine dell'intero disco terrestre ogni dieci minuti. A luglio 2025 si è aggiunto **MTG-S1**, che diventerà **Meteosat-13** al termine del collaudo: è il primo dei due *sounder*.
+
+Il sounder fa un mestiere diverso dall'imager. Non fotografa le nubi: misura i **profili verticali di temperatura e umidità** dell'atmosfera, con un dettaglio prima non disponibile. Sono i dati che entrano nei modelli di previsione a qualche giorno, mentre l'imager serve soprattutto alle prossime ore. Con MTG-I2 la prima famiglia è al completo.
 
 ## Quando lo vedremo lavorare
 
@@ -85,6 +105,7 @@ Un satellite nuovo non toglie nulla alle abitudini che salvano la giornata duran
 - [Allerte meteo: come leggere i codici colore](/allerte-meteo/)
 - [Temporali intensi: cosa fare prima, durante e dopo](/rischi-prevenzione/temporali-intensi/)
 - [Come funzionano previsioni e bollettini](/comunicazioni/2026-04-20-previsioni-meteo-bollettini-come-funzionano/)
+- [I satelliti polari europei e il bollettino di domani](/comunicazioni/2026-09-01-metop-sg-satelliti-polari-previsioni/)
 - [Il cruscotto dei dati in tempo reale](/cruscotto/)
 - [Dossier — La Terra vista dallo spazio](/dossier/terra-dallo-spazio/)
 - [Dossier — Quando scoppia il temporale](/dossier/quando-scoppia-il-temporale/)
@@ -96,3 +117,5 @@ Un satellite nuovo non toglie nulla alle abitudini che salvano la giornata duran
 - [ESA — Lightning Imager](https://www.esa.int/Applications/Observing_the_Earth/Meteorological_missions/meteosat_third_generation/Lightning_Imager)
 - [ESA — Scheda tecnica MTG-I (PDF)](https://esamultimedia.esa.int/docs/EarthObservation/MTG-I_factsheet_260401.pdf)
 - [EUMETSAT — la serie Meteosat](https://www.eumetsat.int/our-satellites/meteosat-series)
+- [EUMETSAT — gli strumenti di Meteosat di terza generazione](https://www.eumetsat.int/meteosat-third-generation-instruments)
+- [Leonardo — Il Lightning Imager a bordo di Meteosat Third Generation](https://space.leonardo.com/it/focus-detail/-/detail/lightning-imager-leonardo-mtg)
