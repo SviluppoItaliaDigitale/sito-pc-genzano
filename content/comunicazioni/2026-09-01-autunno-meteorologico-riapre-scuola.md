@@ -1,6 +1,6 @@
 ---
 title: "1° settembre: inizia l'autunno meteorologico, riapre l'anno scolastico"
-date: 2026-09-01
+date: 2026-09-01T00:01:00+02:00
 description: "Con il 1° settembre si apre la stagione autunnale dal punto di vista meteo e riprendono le attività scolastiche."
 badge: "Informazione"
 priorita: "normale"

@@ -4,14 +4,14 @@
   "licenza": "CC BY 4.0",
   "periodo": {
     "dal": "2026-04-04",
-    "al": "2026-08-30"
+    "al": "2026-08-31"
   },
   "nota": "Dati PROVVISORI: censiti solo dall'adozione del nuovo gestionale, non coprono l'intero anno (mancano i mesi precedenti). Aggregati e anonimi, senza dati personali.",
-  "generato_il": "2026-08-30",
+  "generato_il": "2026-09-01",
   "dati": [
     {
       "tipologia": "Antincendio",
-      "numero_interventi": 63
+      "numero_interventi": 66
     },
     {
       "tipologia": "Alberi/Rami su suolo pubblico",
