@@ -51,6 +51,9 @@ Quattro uscite in un pomeriggio. Il 1° settembre 2026 le squadre del Gruppo Com
 {{< foto src="/images/2026-09-01-incendi-mezzi-strada-vvf.webp"
          alt="Mezzi schierati sulla carreggiata: il pickup dei Vigili del Fuoco in primo piano e l'autobotte del Gruppo con un volontario sul tetto in azione"
          caption="Mezzi affiancati sulla stessa strada: si lavora insieme, ciascuno con i propri compiti. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< foto src="/images/2026-09-01-incendi-monitore-getto-vvf-schierati.webp"
+         alt="Due volontari in divisa rossa sul tetto dell'autobotte del Gruppo, uno dei quali manovra il monitore da cui parte un lungo getto d'acqua; sotto, sulla carreggiata, un operatore dei Vigili del Fuoco governa una manichetta, accanto a un pickup dei Vigili del Fuoco e ad altri mezzi schierati lungo la strada"
+         caption="Il monitore in azione dal tetto dell'autobotte, mentre a terra i Vigili del Fuoco lavorano con le manichette accanto ai mezzi schierati sulla strada. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 {{< foto src="/images/2026-09-01-incendi-atego-squadra-bordo-strada.webp"
          alt="Autobotte rossa della Protezione Civile ferma sulla carreggiata con il lampeggiante blu sul tetto; sul ciglio tre volontari, uno dei quali bagna con la lancia una fascia di vegetazione bruciata sotto gli eucalipti, fra il fumo attraversato dai raggi del sole"
          caption="La squadra sul ciglio della strada, con l'autobotte a poca distanza: si lavora dal bordo, senza entrare nel fronte. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
