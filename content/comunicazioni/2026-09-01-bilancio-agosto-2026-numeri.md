@@ -57,6 +57,14 @@ L'autobotte **Mercedes Actros da 14.000 litri** è andata invece a supporto dei 
           titolo="Un elicottero antincendio in volo stazionario cala il secchiello nella vasca mobile per caricare acqua"
           caption="Il rifornimento dell'elicottero: il secchiello scende nella vasca mobile, alimentata a terra dall'autobotte, così il mezzo aereo non deve allontanarsi dal fronte. Video senza audio. Fonte: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
+Caricata la benna, l'elicottero riparte verso il fronte. Il ciclo si ripete finché c'è luce: i mezzi aerei non volano di notte.
+
+{{< video src="/video/2026-08-31-velletri-benna-carica.mp4"
+          poster="/video/2026-08-31-velletri-benna-carica-poster.webp"
+          verticale="true"
+          titolo="L'elicottero si alza con la benna rossa piena d'acqua appesa al cavo, accanto alla fiancata dell'autobotte"
+          caption="La benna piena lascia il punto d'acqua e torna sul fronte. Video senza audio. Fonte: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+
 
 {{< galleria titolo="L'ultima attivazione di agosto, a Velletri" >}}
 {{< foto src="/images/2026-08-31-velletri-actros-atego-elicottero.webp"
