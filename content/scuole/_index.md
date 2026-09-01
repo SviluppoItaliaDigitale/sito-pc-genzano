@@ -10,7 +10,7 @@ sitemap:
 aliases:
   - /per-le-scuole/
   - /scuola/
-dataUltimaRevisione: "2026-05-13"
+dataUltimaRevisione: "2026-09-01"
 ---
 
 Il Gruppo Comunale di Protezione Civile di Genzano di Roma offre **materiali didattici gratuiti** per tutte le età. Scegli il tuo percorso qui sotto: arrivi ai contenuti giusti in due click.
