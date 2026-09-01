@@ -29,7 +29,7 @@ Delle 52 attivazioni, **37 hanno riguardato incendi di vegetazione**: sterpaglie
 
 Il confronto con luglio dice quanto pesa il caldo di agosto sul lavoro delle squadre: allora gli incendi erano 21 su 34 attivazioni. In un mese le uscite per incendio sono quasi raddoppiate.
 
-La giornata più intensa è stata **domenica 16 agosto**: cinque attivazioni in un solo giorno. Ci sono poi cinque giornate da tre uscite ciascuna, il 12, il 14, il 20, il 24 e il 29.
+La giornata più intensa è stata **domenica 16 agosto**: cinque attivazioni in un solo giorno. Ci sono poi sei giornate da tre uscite ciascuna, il 12, il 14, il 20, il 24, il 29 e il 31.
 
 ## Il territorio non finisce a Genzano
 
