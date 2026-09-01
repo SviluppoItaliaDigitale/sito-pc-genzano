@@ -13,7 +13,7 @@ allegati: []
 draft: false
 tts: true
 lis_section: "rischio-incendio"
-social_citazione: "Settembre è ancora campagna antincendio: la vegetazione è secca da tre mesi e basta poco per ripartire."
+social_citazione: "Settembre non è fuori stagione: la campagna antincendio boschivo nel Lazio arriva fino all'autunno."
 social_punti:
   - "Il 1° settembre 2026 le squadre del Gruppo sono uscite quattro volte per incendi, dal primo al tardo pomeriggio."
   - "Vegetazione lungo strada, canneto e terreni incolti fra Aprilia e Latina; nel tardo pomeriggio un incendio di rifiuti in una proprietà privata abbandonata."
@@ -85,7 +85,8 @@ Con queste quattro uscite salgono a **130 gli interventi registrati dal 4 aprile
 - **Dai riferimenti utili**: strada, chilometro, un edificio riconoscibile, la direzione del fumo.
 - **Non accendere fuochi** per sterpaglie o residui di potatura: in campagna antincendio è vietato. Basta poco perché diventi un incendio vero.
 - **Non buttare mozziconi** dal finestrino. È così che parte gran parte degli incendi di bordo strada.
-- **Se sei vicino alle fiamme**, allontanati subito in direzione opposta al fumo e al fuoco. Se non puoi allontanarti, chiuditi in casa e sigilla porte, finestre e prese d'aria.
+- **Se sei vicino alle fiamme**, allontanati subito in direzione opposta al fumo e al fuoco, e segui le indicazioni delle squadre di soccorso.
+- **Se invece è la tua casa a essere minacciata** e non puoi allontanarti in sicurezza, entra in casa e chiudi porte, finestre, persiane e prese d'aria.
 - **Non entrare nell'area già percorsa dal fuoco**: restano braci sotto la cenere e alberi instabili. La bonifica non è un lavoro da fare per conto proprio.
 
 ## Per approfondire
