@@ -13,7 +13,7 @@ allegati: []
 draft: false
 tts: true
 lis_section: "rischio-incendio"
-social_citazione: "Settembre è ancora campagna antincendio: la vegetazione è secca da tre mesi e basta poco per ripartire."
+social_citazione: "Settembre non è fuori stagione: la campagna antincendio boschivo nel Lazio arriva fino all'autunno."
 social_punti:
   - "Il 1° settembre 2026 le squadre del Gruppo sono uscite quattro volte per incendi, dal primo al tardo pomeriggio."
   - "Vegetazione lungo strada, canneto e terreni incolti fra Aprilia e Latina; nel tardo pomeriggio un incendio di rifiuti in una proprietà privata abbandonata."
@@ -33,7 +33,7 @@ Quattro uscite in un pomeriggio. Il 1° settembre 2026 le squadre del Gruppo Com
 
 **Nel tardo pomeriggio, l'ultima.** Chiamano i Vigili del Fuoco per un incendio di rifiuti in una proprietà privata abbandonata. Sul posto arrivano anche Carabinieri, Polizia, Polizia Locale e altri Gruppi di Protezione Civile. Basta un'ora scarsa per chiuderlo.
 
-## Il pomeriggio in cinque immagini
+## Il pomeriggio in immagini
 
 {{< galleria >}}
 {{< foto src="/images/2026-09-01-incendi-bordo-strada-eucalipti.webp"
@@ -51,6 +51,18 @@ Quattro uscite in un pomeriggio. Il 1° settembre 2026 le squadre del Gruppo Com
 {{< foto src="/images/2026-09-01-incendi-mezzi-strada-vvf.webp"
          alt="Mezzi schierati sulla carreggiata: il pickup dei Vigili del Fuoco in primo piano e l'autobotte del Gruppo con un volontario sul tetto in azione"
          caption="Mezzi affiancati sulla stessa strada: si lavora insieme, ciascuno con i propri compiti. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< foto src="/images/2026-09-01-incendi-atego-squadra-bordo-strada.webp"
+         alt="Autobotte rossa della Protezione Civile ferma sulla carreggiata con il lampeggiante blu sul tetto; sul ciglio tre volontari, uno dei quali bagna con la lancia una fascia di vegetazione bruciata sotto gli eucalipti, fra il fumo attraversato dai raggi del sole"
+         caption="La squadra sul ciglio della strada, con l'autobotte a poca distanza: si lavora dal bordo, senza entrare nel fronte. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< foto src="/images/2026-09-01-incendi-bonifica-lancia-eucalipti.webp"
+         alt="Un volontario in pantaloni rossi da intervento bagna con la lancia il sottobosco annerito ai piedi degli eucalipti; accanto a lui la cabina dell'autobotte e l'asfalto bagnato dall'acqua di scarico"
+         caption="La bonifica sotto gli eucalipti: acqua sul terreno finché il fumo non si spegne. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< foto src="/images/2026-09-01-incendi-versante-fumo-abitato.webp"
+         alt="Versante collinare con ampie porzioni annerite e più colonne di fumo che salgono dalla vegetazione; in primo piano i tetti delle case, un lampione e un cancello in ferro battuto"
+         caption="Il fronte dell'incendio sul versante, visto dall'abitato sottostante: il fumo sale sopra i tetti delle case in primo piano. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< foto src="/images/2026-09-01-incendi-versante-bruciato-case.webp"
+         alt="Ampia porzione di versante montuoso percorsa dal fuoco, grigia e annerita, con più pennacchi di fumo; sotto, le abitazioni di un quartiere residenziale e la carreggiata di una strada"
+         caption="Quanto terreno ha percorso il fuoco si legge dal colore del versante. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 {{< /galleria >}}
 
 ## Perché il lavoro non finisce quando finisce la fiamma
@@ -61,7 +73,7 @@ Per questo si bagna a lungo terreno che sembra già spento, si rivolta la cenere
 
 ## Perché in questi giorni succede così spesso
 
-La campagna antincendio boschivo nel Lazio copre l'estate e arriva fino all'autunno. **Settembre non è fuori stagione.** La vegetazione ha alle spalle tre mesi senza pioggia significativa. Il combustibile è al minimo di umidità, e ai margini delle strade basta pochissimo.
+La campagna antincendio boschivo nel Lazio copre l'estate e arriva fino all'autunno. **Settembre non è fuori stagione.** Dopo i mesi caldi la vegetazione erbacea è secca, e ai margini delle strade basta poco per innescare un fronte. Quanto sia rischiosa una singola giornata lo dice il [bollettino di pericolosità per gli incendi boschivi](https://protezionecivile.regione.lazio.it/bollettini/rischi-incendi) del Centro Funzionale Regionale, che classifica ogni giorno la nostra zona.
 
 Genzano ricade nella [Zona di allerta 9 — Castelli Romani](/rischi-prevenzione/rischio-incendio/) della Regione Lazio. Le attivazioni arrivano dalla **SOUP**, la Sala Operativa Unica Permanente regionale, che smista le squadre anche fuori dal territorio comunale. È il motivo per cui in un pomeriggio ci si può trovare sulla Cisternense e poco dopo a Latina.
 
@@ -73,7 +85,9 @@ Con queste quattro uscite salgono a **130 gli interventi registrati dal 4 aprile
 - **Dai riferimenti utili**: strada, chilometro, un edificio riconoscibile, la direzione del fumo.
 - **Non accendere fuochi** per sterpaglie o residui di potatura: in campagna antincendio è vietato. Basta poco perché diventi un incendio vero.
 - **Non buttare mozziconi** dal finestrino. È così che parte gran parte degli incendi di bordo strada.
-- **Se sei vicino alle fiamme**, allontanati controvento, verso una zona già bruciata o priva di vegetazione. Mai verso l'alto o dove il fuoco può correre.
+- **Se sei vicino alle fiamme**, allontanati subito in direzione opposta al fumo e al fuoco, e segui le indicazioni delle squadre di soccorso.
+- **Se invece è la tua casa a essere minacciata** e non puoi allontanarti in sicurezza, entra in casa e chiudi porte, finestre, persiane e prese d'aria.
+- **Non entrare nell'area già percorsa dal fuoco**: restano braci sotto la cenere e alberi instabili. La bonifica non è un lavoro da fare per conto proprio.
 
 ## Per approfondire
 
