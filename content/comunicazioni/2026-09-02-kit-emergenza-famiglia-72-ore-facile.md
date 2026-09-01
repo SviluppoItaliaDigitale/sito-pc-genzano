@@ -1,6 +1,6 @@
 ---
 title: "Il kit di emergenza: cosa mettere nello zaino"
-date: 2026-09-02
+date: 2026-09-02T00:01:00+02:00
 description: "Cosa mettere nello zaino di emergenza per la famiglia. Scorte per 72 ore."
 badge: "Prevenzione"
 priorita: "normale"

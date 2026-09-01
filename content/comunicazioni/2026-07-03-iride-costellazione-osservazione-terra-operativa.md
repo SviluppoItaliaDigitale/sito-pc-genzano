@@ -44,6 +44,10 @@ Dietro i satelliti c'è un'infrastruttura di terra che riceve e trasforma i dati
 
 Il PNRR fissa il **completamento del programma entro il 2026**. Nel corso dell'anno la costellazione entra progressivamente in servizio, con lanci successivi. Dopo i satelliti della sotto-costellazione Eaglet II nella prima parte dell'anno, il **23 giugno 2026** altri sette satelliti della sotto-costellazione HEO sono partiti con un razzo Falcon 9 dalla base di Vandenberg, in California.
 
+Il **1° luglio 2026** l'ASI ha annunciato l'avvio della **fase operativa**. Da quella data si è aperto il **Marketplace di IRIDE**, la piattaforma dove consultare il catalogo delle immagini. Da lì si possono anche chiedere nuove acquisizioni e accedere ai servizi geospaziali. Comincia così anche il passaggio graduale del sistema dall'ESA all'ASI, che è proprietaria dell'infrastruttura.
+
+L'accesso è per gradi. La prima fase è riservata agli **utenti istituzionali italiani**, che consultano dati e prodotti gratuitamente secondo la data policy del programma. In un secondo momento il sistema si aprirà a utenti internazionali e imprese.
+
 Man mano che i satelliti raggiungono l'orbita, cresce la frequenza con cui il sistema "rivede" ogni punto del territorio: più passaggi significano aggiornamenti più rapidi in caso di evento.
 
 ## Perché serve alla protezione civile
@@ -70,8 +74,10 @@ E in ogni emergenza, il numero da chiamare resta sempre il **112**.
 - [Sentinel-1C: il radar che misura come si muove il suolo](/comunicazioni/2026-06-15-sentinel-1c-radar-deformazione-suolo/) — l'osservazione europea per frane e cedimenti.
 - [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/) e [Rischio incendio](/rischi-prevenzione/rischio-incendio/) — cosa fare sul nostro territorio.
 - [Il cruscotto del territorio](/cruscotto/) — i dati ambientali in tempo reale.
+- [Quattrocento immagini in ventiquattro ore: i satelliti italiani dentro un'emergenza](/comunicazioni/2026-09-02-cosmo-skymed-frana-niscemi-satelliti-emergenza/) — COSMO-SkyMed e la frana di Niscemi.
 
 **Fonti istituzionali**
 
 - [ESA — IRIDE](https://www.esa.int/Space_in_Member_States/Italy/IRIDE_presentata_presso_il_Centro_ESA_ESRIN_la_prima_immagine) (Agenzia Spaziale Europea).
 - [ASI — IRIDE](https://www.asi.it/scienze-della-terra/iride/) (Agenzia Spaziale Italiana).
+- [ASI — IRIDE entra in operazione](https://www.asi.it/2026/07/iride-entra-in-operazione/) (1° luglio 2026).
