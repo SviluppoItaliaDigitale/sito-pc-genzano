@@ -1038,6 +1038,13 @@
   definizione: "European Emergency Number Association: rete europea che promuove il numero unico di emergenza 112 e la sua accessibilità per tutti."
   link: "/glossario/#eena"
 
+- id: eumetsat
+  termine: "EUMETSAT"
+  varianti:
+    - "EUMETSAT"
+  definizione: "Organizzazione europea per lo sfruttamento dei satelliti meteorologici: gestisce i satelliti Meteosat e MetOp che alimentano la scheda Satellite del cruscotto di questo sito."
+  link: "/glossario/#eumetsat"
+
 - id: fast
   termine: "FAST"
   varianti:
