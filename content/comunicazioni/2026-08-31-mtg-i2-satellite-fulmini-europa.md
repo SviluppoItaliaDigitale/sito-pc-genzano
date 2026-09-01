@@ -51,9 +51,9 @@ Il satellite pesa 3.800 chili, di cui due tonnellate di propellente, e lavora in
 
 ## Quando lo vedremo lavorare
 
-Il satellite è in orbita, ma non è ancora al lavoro. Prima serve il **collaudo**: mesi di verifiche sugli strumenti e sul segmento di terra che riceve ed elabora i dati. L'ESA indica che il servizio arriverà **nel 2027**, quando EUMETSAT avrà completato la messa in servizio. Al termine del collaudo MTG-I2 cambierà anche nome: diventerà **Meteosat-14**.
+Il satellite è in orbita, ma non è ancora al lavoro. Prima serve il **collaudo**: le verifiche sugli strumenti e sul segmento di terra che riceve ed elabora i dati. L'ESA indica che il servizio arriverà **nel 2027**, quando EUMETSAT avrà completato la messa in servizio. Al termine del collaudo MTG-I2 cambierà anche nome: diventerà **Meteosat-14**.
 
-Nel frattempo l'Europa non resta senza occhi. Il primo satellite della nuova generazione, **Meteosat-12**, è in orbita dal dicembre 2022 ed è oggi il satellite operativo principale: manda l'immagine dell'intero disco terrestre ogni dieci minuti. A luglio 2025 si è aggiunto **Meteosat-13**, il primo dei due *sounder*.
+Nel frattempo l'Europa non resta senza occhi. Il primo satellite della nuova generazione, **Meteosat-12**, è in orbita dal dicembre 2022 ed è oggi il satellite operativo principale: manda l'immagine dell'intero disco terrestre ogni dieci minuti. A luglio 2025 si è aggiunto **MTG-S1**, che diventerà **Meteosat-13** al termine del collaudo: è il primo dei due *sounder*.
 
 Il sounder fa un mestiere diverso dall'imager. Non fotografa le nubi: misura i **profili verticali di temperatura e umidità** dell'atmosfera, con un dettaglio prima non disponibile. Sono i dati che entrano nei modelli di previsione a qualche giorno, mentre l'imager serve soprattutto alle prossime ore. Con MTG-I2 la prima famiglia è al completo.
 
