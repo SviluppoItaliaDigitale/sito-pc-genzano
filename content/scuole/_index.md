@@ -91,6 +91,6 @@ Scrivi a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezioneciv
 ## Sezioni complete
 
 - [Formazione e scuole — hub completo](/formazione/) — tutti i materiali organizzati per tema
-- [Kit Calamità per situazioni vulnerabili](/formazione/kit-calamita/) — 12 kit operativi
+- [Kit Calamità per situazioni vulnerabili](/formazione/kit-calamita/) — un kit per ogni categoria vulnerabile
 - [Giochi della sicurezza](/giochi/) — quiz, memory, percorsi
 - [Storie e racconti](/formazione/storie-e-racconti/) — fiabe per fascia d'età
