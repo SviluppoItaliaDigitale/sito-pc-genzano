@@ -29,7 +29,7 @@ Delle 52 attivazioni, **37 hanno riguardato incendi di vegetazione**: sterpaglie
 
 Il confronto con luglio dice quanto pesa il caldo di agosto sul lavoro delle squadre: allora gli incendi erano 21 su 34 attivazioni. In un mese le uscite per incendio sono quasi raddoppiate.
 
-La giornata più intensa è stata **domenica 16 agosto**: cinque attivazioni in un solo giorno. Ci sono poi cinque giornate da tre uscite ciascuna, il 12, il 14, il 20, il 24 e il 29.
+La giornata più intensa è stata **domenica 16 agosto**: cinque attivazioni in un solo giorno. Ci sono poi sei giornate da tre uscite ciascuna, il 12, il 14, il 20, il 24, il 29 e il 31.
 
 ## Il territorio non finisce a Genzano
 
@@ -37,49 +37,11 @@ Un Gruppo comunale non lavora solo dentro i confini del proprio Comune. Quando l
 
 I chilometri comprendono anche le trasferte a **Fondi**, dove per settimane il Gruppo ha gestito i turni di mensa del campo di gemellaggio AIB del Coordinamento FE.PI.VOL.: da sole valgono circa un terzo del totale mensile.
 
-## L'ultimo giorno: tre uscite e l'elicottero
+## L'ultimo giorno
 
-Il 31 agosto è stato il mese in miniatura. Tre attivazioni: due bonifiche ad **Albano Laziale**, in via Colle Nasone e in via Massimetta, e un intervento lungo a **Velletri**, in zona Cinque Archi.
+Il 31 agosto è stato il mese in miniatura: **tre attivazioni**, due bonifiche ad Albano Laziale e un intervento di oltre sette ore a Velletri, con l'autobotte impegnata a rifornire d'acqua l'elicottero regionale.
 
-A Velletri le squadre sono rimaste in campo **oltre sette ore**, dal primo pomeriggio a notte. Il Land Rover Defender 130 e il Mercedes Atego hanno lavorato in via Passo dei Coresi su colture e sterpaglie.
-
-{{< video src="/video/2026-08-31-velletri-fronte-fiamme.mp4"
-          poster="/video/2026-08-31-velletri-fronte-fiamme-poster.webp"
-          verticale="true"
-          titolo="Il fronte di fiamme avanza nella vegetazione secca sollevando una densa colonna di fumo"
-          caption="Le fiamme corrono lungo il margine del campo, con il fumo che si alza sopra la vegetazione già secca. Video senza audio. Fonte: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
-
-L'autobotte **Mercedes Actros da 14.000 litri** è andata invece a supporto dei mezzi aerei della Regione Lazio. Con la **vasca mobile** l'elicottero carica acqua senza allontanarsi dal fronte. Sono bruciati diversi ettari.
-
-{{< video src="/video/2026-08-31-velletri-elicottero-vasca-rifornimento.mp4"
-          poster="/video/2026-08-31-velletri-elicottero-vasca-poster.webp"
-          verticale="true"
-          titolo="Un elicottero antincendio in volo stazionario cala il secchiello nella vasca mobile per caricare acqua"
-          caption="Il rifornimento dell'elicottero: il secchiello scende nella vasca mobile, alimentata a terra dall'autobotte, così il mezzo aereo non deve allontanarsi dal fronte. Video senza audio. Fonte: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
-
-Caricata la benna, l'elicottero riparte verso il fronte. Il ciclo si ripete finché c'è luce: i mezzi aerei non volano di notte.
-
-{{< video src="/video/2026-08-31-velletri-benna-carica.mp4"
-          poster="/video/2026-08-31-velletri-benna-carica-poster.webp"
-          verticale="true"
-          titolo="L'elicottero si alza con la benna rossa piena d'acqua appesa al cavo, accanto alla fiancata dell'autobotte"
-          caption="La benna piena lascia il punto d'acqua e torna sul fronte. Video senza audio. Fonte: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
-
-
-{{< galleria titolo="L'ultima attivazione di agosto, a Velletri" >}}
-{{< foto src="/images/2026-08-31-velletri-actros-atego-elicottero.webp"
-         alt="Due autocarri Mercedes affiancati visti di fronte: a sinistra l'autobotte bianca con la scritta Regione Lazio Protezione Civile, a destra il mezzo rosso con la scritta Città di Genzano di Roma Protezione Civile; nel varco fra le due cabine, in cielo, un elicottero in volo"
-         caption="I due mezzi del Gruppo schierati al punto di rifornimento, con l'elicottero in avvicinamento. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
-{{< foto src="/images/2026-08-31-velletri-elicottero-vasca.webp"
-         alt="L'autobotte bianca Mercedes Actros ferma su una strada sterrata accanto a un casale; sopra di essa un elicottero antincendio in volo stazionario con il cavo calato verso il basso, e un volontario che si allontana lungo la carraia bagnata"
-         caption="L'elicottero regionale in volo stazionario sopra il punto d'acqua: il rifornimento avviene senza lasciare la zona dell'incendio. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
-{{< foto src="/images/2026-08-31-velletri-rifornimento-notturno.webp"
-         alt="Quattro mezzi di protezione civile con i lampeggianti accesi fermi sotto la pensilina illuminata di un distributore di carburante, di notte: un autocarro rosso, l'autobotte bianca, un pickup bianco e un fuoristrada verde, con due volontari accanto"
-         caption="Il rifornimento a notte fonda, al rientro dall'intervento. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
-{{< foto src="/images/2026-08-31-velletri-mezzi-notte.webp"
-         alt="La stessa scena notturna al distributore ripresa più da lontano: i quattro mezzi allineati sotto la pensilina, i lampeggianti blu accesi e un volontario in piedi accanto al fuoristrada"
-         caption="Mezzi e squadre prima del rientro in sede. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
-{{< /galleria >}}
+La cronaca della giornata, con le foto e i video dell'intervento, è nell'articolo dedicato: [Tre attivazioni in un giorno: le bonifiche ad Albano e sette ore a Velletri](/comunicazioni/2026-08-31-tre-attivazioni-albano-velletri/).
 
 ## Cosa dicono questi numeri
 
@@ -100,6 +62,7 @@ E dicono, infine, una cosa che riguarda chi legge: **la maggior parte di questi 
 
 **Sul nostro sito:**
 
+- [Tre attivazioni in un giorno: Albano e Velletri, 31 agosto](/comunicazioni/2026-08-31-tre-attivazioni-albano-velletri/)
 - [Campagna antincendio boschivo 2026: un bilancio di fine estate](/comunicazioni/2026-08-30-bilancio-campagna-aib-2026/)
 - [Ulivi e canneto in fiamme a Campoleone](/comunicazioni/2026-08-30-incendio-campoleone-ulivi-abitazioni/)
 - [Si spengono i fornelli di Fondi: il bilancio del gemellaggio](/comunicazioni/2026-08-19-mensa-gemellaggio-fondi-bilancio-finale/)
