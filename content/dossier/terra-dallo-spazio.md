@@ -44,7 +44,7 @@ I satelliti Copernicus girano intorno alla Terra e rivedono lo stesso punto ogni
 
 Lo fanno i **geostazionari**, a 36.000 chilometri sopra l'equatore: ruotano con il pianeta, quindi vedono sempre la stessa faccia. Sono i **Meteosat**, gestiti da EUMETSAT con i satelliti costruiti dall'ESA. L'ultimo, **MTG-I2**, è partito da Kourou il 27 agosto 2026.
 
-A regime, uno di loro scansiona l'Europa **ogni due minuti e mezzo**. E per la prima volta un satellite meteorologico europeo porta uno strumento che **sorveglia i fulmini** in continuo: il segnale che un temporale si sta organizzando, prima ancora che scarichi la pioggia. È [il satellite che vede i fulmini](/comunicazioni/2026-08-31-mtg-i2-satellite-fulmini-europa/).
+Oggi il servizio è affidato a **Meteosat-12**, in orbita dal 2022. Manda l'immagine dell'intero disco terrestre ogni dieci minuti. Quando anche MTG-I2 avrà finito il collaudo, nel 2027, uno dei due scansionerà l'Europa **ogni due minuti e mezzo**. E per la prima volta un satellite meteorologico europeo porta uno strumento che **sorveglia i fulmini** in continuo: il segnale che un temporale si sta organizzando, prima ancora che scarichi la pioggia. È [il satellite che vede i fulmini](/comunicazioni/2026-08-31-mtg-i2-satellite-fulmini-europa/).
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="incendi" image="/images/dossier/fuoco-modis.webp" alt="L'Italia meridionale vista dal satellite MODIS in una giornata di incendi: lungo le coste di Campania, Calabria, Puglia e Sicilia spiccano i punti rossi dei roghi attivi, con pennacchi di fumo che si allungano sul mare" align="right" kicker="Quando la Terra brucia" title="Vedere il fuoco<br>prima del fumo" credito="Jeff Schmaltz, MODIS Land Rapid Response Team, NASA GSFC · pubblico dominio" >}}

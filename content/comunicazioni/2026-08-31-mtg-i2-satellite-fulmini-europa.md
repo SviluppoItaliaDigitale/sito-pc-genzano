@@ -49,6 +49,14 @@ Il sistema completo prevede **sei satelliti**: quattro per le immagini e due per
 
 Il satellite pesa 3.800 chili, di cui due tonnellate di propellente, e lavora in orbita geostazionaria a **36.000 chilometri** sopra l'equatore. La vita di progetto è di almeno 8 anni e mezzo. Nel suo insieme, il sistema produrrà oltre **cinquanta volte** i dati della generazione precedente. Il satellite è stato costruito sotto la guida di Thales Alenia Space, con OHB System e l'italiana Leonardo fra i partner principali. Il controllo della missione è a EUMETSAT, in Germania.
 
+## Quando lo vedremo lavorare
+
+Il satellite è in orbita, ma non è ancora al lavoro. Prima serve il **collaudo**: le verifiche sugli strumenti e sul segmento di terra che riceve ed elabora i dati. L'ESA indica che il servizio arriverà **nel 2027**, quando EUMETSAT avrà completato la messa in servizio. Al termine del collaudo MTG-I2 cambierà anche nome: diventerà **Meteosat-14**.
+
+Nel frattempo l'Europa non resta senza occhi. Il primo satellite della nuova generazione, **Meteosat-12**, è in orbita dal dicembre 2022. Oggi è il satellite operativo principale: manda l'immagine dell'intero disco terrestre ogni dieci minuti. A luglio 2025 si è aggiunto **MTG-S1**, che diventerà **Meteosat-13** al termine del collaudo: è il primo dei due *sounder*.
+
+Il sounder fa un mestiere diverso dall'imager. Non fotografa le nubi: misura i **profili verticali di temperatura e umidità** dell'atmosfera, con un dettaglio prima non disponibile. Sono i dati che entrano nei modelli di previsione a qualche giorno, mentre l'imager serve soprattutto alle prossime ore. Con MTG-I2 la prima famiglia è al completo.
+
 ## Dallo spazio alla sala operativa
 
 Fra il satellite e il cittadino c'è una [catena lunga](/dossier/la-catena-dell-allerta/):
@@ -87,4 +95,4 @@ Un satellite nuovo non toglie nulla alle abitudini che salvano la giornata duran
 - [ESA — Meteosat Third Generation](https://www.esa.int/Applications/Observing_the_Earth/Meteorological_missions/meteosat_third_generation)
 - [ESA — Lightning Imager](https://www.esa.int/Applications/Observing_the_Earth/Meteorological_missions/meteosat_third_generation/Lightning_Imager)
 - [ESA — Scheda tecnica MTG-I (PDF)](https://esamultimedia.esa.int/docs/EarthObservation/MTG-I_factsheet_260401.pdf)
-- [EUMETSAT](https://www.eumetsat.int/)
+- [EUMETSAT — la serie Meteosat](https://www.eumetsat.int/our-satellites/meteosat-series)
