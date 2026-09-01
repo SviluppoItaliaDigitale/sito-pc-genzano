@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/",
-  "generato": "2026-09-01T07:50:45+00:00",
+  "generato": "2026-09-01T13:12:45+00:00",
   "licenza": "Copernicus Emergency Management Service — dati pubblici",
   "nota": "Copia locale: l'API non espone CORS, il browser non può leggerla direttamente."
  },
@@ -18,7 +18,7 @@
    ],
    "eventTime": "2026-08-25T22:00:00",
    "gdacsId": "FL1104124",
-   "lastUpdate": "2026-09-01T07:48:02.028592",
+   "lastUpdate": "2026-09-01T12:00:29.972267",
    "n_aois": 4,
    "n_products": 4,
    "name": "Flood in Nepal"
@@ -99,7 +99,7 @@
    ],
    "eventTime": "2026-08-14T22:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-08-31T22:40:14.356140",
+   "lastUpdate": "2026-09-01T13:09:19.581420",
    "n_aois": 5,
    "n_products": 26,
    "name": "Wildfire in Montenegro"
@@ -211,7 +211,7 @@
    ],
    "eventTime": "2026-08-02T10:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-08-31T22:04:05.739280",
+   "lastUpdate": "2026-09-01T10:50:03.375027",
    "n_aois": 4,
    "n_products": 40,
    "name": "Wildfire in Serbia"
