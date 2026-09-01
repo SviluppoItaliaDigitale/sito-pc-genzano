@@ -61,7 +61,7 @@ Per questo si bagna a lungo terreno che sembra già spento, si rivolta la cenere
 
 ## Perché in questi giorni succede così spesso
 
-La campagna antincendio boschivo nel Lazio copre l'estate e arriva fino all'autunno. **Settembre non è fuori stagione.** La vegetazione ha alle spalle tre mesi senza pioggia significativa. Il combustibile è al minimo di umidità, e ai margini delle strade basta pochissimo.
+La campagna antincendio boschivo nel Lazio copre l'estate e arriva fino all'autunno. **Settembre non è fuori stagione.** Dopo i mesi caldi la vegetazione erbacea è secca, e ai margini delle strade basta poco per innescare un fronte. Quanto sia rischiosa una singola giornata lo dice il [bollettino di pericolosità per gli incendi boschivi](https://protezionecivile.regione.lazio.it/bollettini/rischi-incendi) del Centro Funzionale Regionale, che classifica ogni giorno la nostra zona.
 
 Genzano ricade nella [Zona di allerta 9 — Castelli Romani](/rischi-prevenzione/rischio-incendio/) della Regione Lazio. Le attivazioni arrivano dalla **SOUP**, la Sala Operativa Unica Permanente regionale, che smista le squadre anche fuori dal territorio comunale. È il motivo per cui in un pomeriggio ci si può trovare sulla Cisternense e poco dopo a Latina.
 
@@ -73,7 +73,8 @@ Con queste quattro uscite salgono a **130 gli interventi registrati dal 4 aprile
 - **Dai riferimenti utili**: strada, chilometro, un edificio riconoscibile, la direzione del fumo.
 - **Non accendere fuochi** per sterpaglie o residui di potatura: in campagna antincendio è vietato. Basta poco perché diventi un incendio vero.
 - **Non buttare mozziconi** dal finestrino. È così che parte gran parte degli incendi di bordo strada.
-- **Se sei vicino alle fiamme**, allontanati controvento, verso una zona già bruciata o priva di vegetazione. Mai verso l'alto o dove il fuoco può correre.
+- **Se sei vicino alle fiamme**, allontanati subito in direzione opposta al fumo e al fuoco. Se non puoi allontanarti, chiuditi in casa e sigilla porte, finestre e prese d'aria.
+- **Non entrare nell'area già percorsa dal fuoco**: restano braci sotto la cenere e alberi instabili. La bonifica non è un lavoro da fare per conto proprio.
 
 ## Per approfondire
 
