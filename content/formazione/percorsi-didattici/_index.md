@@ -1061,7 +1061,7 @@ Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-val
 | Ora | Attività | Materiali |
 |---|---|---|
 | 1 | La PC che include tutti. Convenzione ONU 2006, Sendai Framework, DiDRR | Articolo [UNDRR Sendai Framework — Riduzione del rischio disastri](/comunicazioni/2026-10-13-undrr-sendai-framework-riduzione-rischio-disastri/) + articolo [ISO 22395 — Persone vulnerabili](/comunicazioni/2026-05-29-iso-22395-persone-vulnerabili/) |
-| 2 | Categorie con bisogni specifici: disabilità sensoriali, motorie, cognitive, anziani, bambini, italiano L2. Tour dei Kit Calamità | Pagina [Persone con necessità specifiche](/rischi-prevenzione/persone-necessita-specifiche/) + sezione [Kit Calamità](/formazione/kit-calamita/) (panoramica dei 12 kit) |
+| 2 | Categorie con bisogni specifici: disabilità sensoriali, motorie, cognitive, anziani, bambini, italiano L2. Tour dei Kit Calamità | Pagina [Persone con necessità specifiche](/rischi-prevenzione/persone-necessita-specifiche/) + sezione [Kit Calamità](/formazione/kit-calamita/) (panoramica per categoria vulnerabile) |
 | 3 | Comunicazione accessibile: Facile da Leggere, pittogrammi ARASAAC, LIS, italiano L2 | Pagina [Facile da Leggere](/facile-da-leggere/) + pagina [LIS](/lis/) + articolo [Autismo ed emergenze inclusive](/comunicazioni/2026-04-02-consapevolezza-autismo-emergenze-inclusive/) |
 
 <details class="faq-item percorso-dettagli">
