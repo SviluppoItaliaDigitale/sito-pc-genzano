@@ -6,7 +6,7 @@ badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-12-contrasto-sfruttamento-minorile-emergenza-umanitaria-facile.webp"
-image_alt: "Mano di bambino tiene una matita colorata sopra un quaderno aperto"
+image_alt: "Cover dell'articolo: 12 giugno, la giornata contro il lavoro dei bambini"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
@@ -21,7 +21,7 @@ build:
 
 ## Cos'è il 12 giugno
 
-Il 12 giugno è la **Giornata mondiale contro il lavoro minorile**. La organizza l'OIL, l'Organizzazione Internazionale del Lavoro. Ogni anno nel mondo lavorano oltre **160 milioni di bambini**. Il lavoro fa male alla loro salute. Il lavoro toglie loro la scuola.
+Il 12 giugno è la **Giornata mondiale contro il lavoro minorile**. La organizza l'OIL, l'Organizzazione Internazionale del Lavoro. Ogni anno nel mondo lavorano quasi **138 milioni di bambini**. Il lavoro fa male alla loro salute. Il lavoro toglie loro la scuola.
 
 ## Perché ne parla la Protezione Civile
 
@@ -36,10 +36,10 @@ La Protezione Civile italiana lavora anche fuori dall'Italia. È stata in Ucrain
 
 ## I numeri nel mondo
 
-- Nel mondo ci sono circa **160 milioni** di bambini lavoratori.
+- Nel mondo ci sono quasi **138 milioni** di bambini lavoratori (dato 2024).
 - Hanno tra i 5 e i 17 anni.
-- 7 bambini su 10 lavorano nei campi.
-- 1 bambino su 2 fa un lavoro pericoloso.
+- 6 bambini su 10 lavorano nei campi.
+- Quasi 4 bambini su 10 fanno un lavoro pericoloso.
 - Anche in Italia esiste il lavoro minorile. È un fenomeno piccolo ma reale.
 
 ## Cosa significa "lavoro minorile"
@@ -52,11 +52,12 @@ Non tutti i lavori dei bambini sono un problema:
 
 ## Le regole in Italia
 
-In Italia un bambino può iniziare a lavorare solo a **15 anni**. Ci sono poche eccezioni. La scuola è obbligatoria fino a **16 anni**.
+In Italia un bambino può iniziare a lavorare solo a **16 anni**. Prima dei 16 anni sono ammessi solo pochi casi speciali. Per esempio l'alternanza scuola-lavoro. La scuola è obbligatoria fino a **16 anni**.
 
-Se vedi un bambino sfruttato, chiama:
+Se vedi un bambino in pericolo immediato, chiama subito il **112**. È il numero unico delle emergenze.
 
-- il **112**, il numero unico delle emergenze;
+Se non c'è un pericolo immediato, ma vuoi segnalare una situazione, chiama:
+
 - il **114**, il numero gratuito per l'emergenza infanzia;
 - le **Forze dell'ordine** o i **Servizi sociali** del tuo Comune.
 
@@ -64,7 +65,7 @@ Se vedi un bambino sfruttato, chiama:
 
 Un bambino a scuola è un bambino protetto. La scuola tiene lontano il bambino dal rischio di sfruttamento.
 
-A Genzano di Roma quasi tutti i bambini vanno a scuola. Alcune famiglie hanno difficoltà. I Servizi sociali del Comune e la ASL Roma 6 seguono questi casi.
+A Genzano di Roma quasi tutti i bambini vanno a scuola. Alcune famiglie hanno difficoltà. I Servizi sociali del Comune seguono questi casi. Anche l'Azienda sanitaria locale (ASL) Roma 6 li segue.
 
 ## Cosa può fare un volontario
 
@@ -82,7 +83,7 @@ Ricorda: **il bambino non ha mai colpa**. La colpa è sempre degli adulti.
 - **Informati** su fonti sicure: UNICEF, Save the Children, OIL.
 - **Sostieni** le associazioni che proteggono i bambini.
 - **Parla** con i tuoi figli dei loro diritti.
-- **Segnala** ciò che ti sembra strano: un bambino in strada in orario di scuola, un bambino che lavora, un bambino trascurato.
+- **Segnala** ciò che ti sembra strano. Un bambino in strada in orario di scuola. Un bambino che lavora. Un bambino trascurato.
 
 ## Per saperne di più
 
