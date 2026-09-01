@@ -33,7 +33,7 @@ Quattro uscite in un pomeriggio. Il 1° settembre 2026 le squadre del Gruppo Com
 
 **Nel tardo pomeriggio, l'ultima.** Chiamano i Vigili del Fuoco per un incendio di rifiuti in una proprietà privata abbandonata. Sul posto arrivano anche Carabinieri, Polizia, Polizia Locale e altri Gruppi di Protezione Civile. Basta un'ora scarsa per chiuderlo.
 
-## Il pomeriggio in cinque immagini
+## Il pomeriggio in immagini
 
 {{< galleria >}}
 {{< foto src="/images/2026-09-01-incendi-bordo-strada-eucalipti.webp"
@@ -51,6 +51,18 @@ Quattro uscite in un pomeriggio. Il 1° settembre 2026 le squadre del Gruppo Com
 {{< foto src="/images/2026-09-01-incendi-mezzi-strada-vvf.webp"
          alt="Mezzi schierati sulla carreggiata: il pickup dei Vigili del Fuoco in primo piano e l'autobotte del Gruppo con un volontario sul tetto in azione"
          caption="Mezzi affiancati sulla stessa strada: si lavora insieme, ciascuno con i propri compiti. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< foto src="/images/2026-09-01-incendi-atego-squadra-bordo-strada.webp"
+         alt="Autobotte rossa della Protezione Civile ferma sulla carreggiata con il lampeggiante blu sul tetto; sul ciglio tre volontari, uno dei quali bagna con la lancia una fascia di vegetazione bruciata sotto gli eucalipti, fra il fumo attraversato dai raggi del sole"
+         caption="La squadra sul ciglio della strada, con l'autobotte a poca distanza: si lavora dal bordo, senza entrare nel fronte. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< foto src="/images/2026-09-01-incendi-bonifica-lancia-eucalipti.webp"
+         alt="Un volontario in pantaloni rossi da intervento bagna con la lancia il sottobosco annerito ai piedi degli eucalipti; accanto a lui la cabina dell'autobotte e l'asfalto bagnato dall'acqua di scarico"
+         caption="La bonifica sotto gli eucalipti: acqua sul terreno finché il fumo non si spegne. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< foto src="/images/2026-09-01-incendi-versante-fumo-abitato.webp"
+         alt="Versante collinare con ampie porzioni annerite e più colonne di fumo che salgono dalla vegetazione; in primo piano i tetti delle case, un lampione e un cancello in ferro battuto"
+         caption="Il fronte dell'incendio sul versante, visto dall'abitato sottostante: il fumo sale sopra i tetti delle case in primo piano. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+{{< foto src="/images/2026-09-01-incendi-versante-bruciato-case.webp"
+         alt="Ampia porzione di versante montuoso percorsa dal fuoco, grigia e annerita, con più pennacchi di fumo; sotto, le abitazioni di un quartiere residenziale e la carreggiata di una strada"
+         caption="Quanto terreno ha percorso il fuoco si legge dal colore del versante. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 {{< /galleria >}}
 
 ## Perché il lavoro non finisce quando finisce la fiamma
