@@ -1,0 +1,66 @@
+{{- /*
+  Feed RSS 2.0 del sito — override del template incorporato di Hugo.
+
+  Perché esiste (audit 01/09/2026): il feed della home includeva TUTTE le
+  pagine del sito (541 voci, 861 KB) e le pagine senza `date` nel
+  frontmatter (schede rischio, kit organizzazioni…) uscivano con
+  <pubDate> "01 Jan 0001", data non valida per gli aggregatori.
+
+  Regole:
+  - home (/index.xml): solo gli articoli della sezione comunicazioni
+    (le notizie sono l'unico flusso che ha senso seguire da un lettore RSS;
+    i feed di sezione restano invariati per chi vuole una sezione specifica);
+  - ogni feed limitato alle 50 voci più recenti;
+  - <pubDate> emesso solo con una data reale: `date` del frontmatter,
+    altrimenti l'ultima modifica git (.Lastmod, enableGitInfo), altrimenti
+    omesso (pubDate è opzionale nella specifica RSS 2.0).
+*/ -}}
+{{- $limit := 50 -}}
+{{- $pages := slice -}}
+{{- if .IsHome -}}
+  {{- $pages = where site.RegularPages "Section" "comunicazioni" -}}
+{{- else if .IsSection -}}
+  {{- $pages = .RegularPages -}}
+{{- else -}}
+  {{- $pages = .Pages -}}
+{{- end -}}
+{{- $pages = $pages | first $limit -}}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ if eq .Title site.Title }}{{ site.Title }}{{ else }}{{ with .Title }}{{ . }} on {{ end }}{{ site.Title }}{{ end }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>Recent content {{ if ne .Title site.Title }}{{ with .Title }}in {{ . }} {{ end }}{{ end }}on {{ site.Title }}</description>
+    <generator>Hugo -- {{ hugo.Version }}</generator>
+    <language>{{ site.Language.LanguageCode }}</language>
+    {{- with site.Copyright }}
+    <copyright>{{ . }}</copyright>
+    {{- end }}
+    {{- with $pages }}
+    {{- with (index . 0) }}
+    {{- $d := .Date }}{{ if $d.IsZero }}{{ $d = .Lastmod }}{{ end }}
+    {{- if not $d.IsZero }}
+    <lastBuildDate>{{ $d.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
+    {{- end }}
+    {{- end }}
+    {{- end }}
+    {{- with .OutputFormats.Get "RSS" }}
+    {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
+    {{- end }}
+    {{- range $pages }}
+    <item>
+      <title>{{ .Title }}</title>
+      <link>{{ .Permalink }}</link>
+      {{- $d := .Date }}{{ if $d.IsZero }}{{ $d = .Lastmod }}{{ end }}
+      {{- if not $d.IsZero }}
+      <pubDate>{{ $d.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+      {{- end }}
+      {{- with .Params.autore }}
+      <author>{{ . }}</author>
+      {{- end }}
+      <guid>{{ .Permalink }}</guid>
+      <description>{{ .Summary | html }}</description>
+    </item>
+    {{- end }}
+  </channel>
+</rss>
