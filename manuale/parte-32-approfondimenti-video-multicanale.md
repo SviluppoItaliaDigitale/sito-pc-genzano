@@ -239,6 +239,15 @@ Per i canali divulgativi, sostituisci keyword generiche con forme contestualizza
 
 Dopo ogni fix: `python3 scripts/genera-video-correlati.py` → verifica il diff → commit. Il fix si propaga automaticamente ai rigeneri mensili successivi.
 
+**Opzione E — curatela per singola pagina: `DENY_PAGE_VIDEO` e `FORCE_MATCHES` (dal 01/09/2026)**
+
+Due casi che nessuna delle opzioni sopra copre:
+
+- un video è pertinente su alcune pagine ma **fuori tema su una sola** (es. il video sulla tempesta Vaia comparso sul dossier della tempesta *solare*; la scossa dei Campi Flegrei sull'anniversario di Norcia). Non va in `DENY_VIDEO_IDS` (lo toglierebbe ovunque): si aggiunge la coppia `("chiave-pagina", "ID")` a `DENY_PAGE_VIDEO`;
+- un video è **chiaramente pertinente** al soggetto di una pagina ma l'IDF non lo aggancia perché le parole non coincidono (es. *"Terremoto a Milano rilevato da Google"* per l'articolo sugli smartphone-sismometri; *"L'incidente ferroviario di Viareggio"* per l'anniversario di Viareggio 2009). Si aggiunge `"chiave-pagina": ["ID", …]` a `FORCE_MATCHES`: il video va in testa alla lista della pagina con `score: 10.0` e `curato: true`, e la pagina viene creata anche se l'algoritmo non le aveva trovato nulla.
+
+La chiave pagina è quella di `data/video_correlati.yaml` (`comunicazioni/<slug>`, `rischi-prevenzione/<slug>`, `manuale/<slug>`…). Entrambe le liste vivono nel generatore e sono applicate da `apply_curation()` in coda al cross-match, quindi **persistono ai rigeneri mensili**. Gate invariato: si forza solo un video che tratta il soggetto della pagina (verificato leggendo l'articolo), mai per "riempire". Nota: i dossier (`/dossier/`) hanno un layout proprio senza la sezione video, quindi forzare un video su un dossier non produce nulla.
+
 ---
 
 ## 32.9 Soglie editoriali (`--min-score`, `--max-per-page`)

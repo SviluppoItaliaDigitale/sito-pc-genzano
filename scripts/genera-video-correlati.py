@@ -92,6 +92,7 @@ SKIP_PAGE_PATTERNS = [
     r"^/?audio-e-podcast/?$",
     r"^/?lis/?$",       # è la pagina hub LIS, ha già tutto
     r"^/?assistente/?$",
+    r"^/?cruscotto/?$",      # pagina-strumento a dati live: niente "Approfondimenti video"
     r"^/?english/", r"^/?francais/", r"^/?deutsch/", r"^/?espanol/",
     r"^/?portugues/", r"^/?romana/", r"^/?esperanto/",  # traduzioni
     r"^/?formazione/?$",  # hub formazione (ne ha già molti link nei kit)
@@ -390,7 +391,156 @@ DENY_VIDEO_IDS = {
     "RdomcSSu6PY",  # "Come lo sport elimina ogni disabilità" (sport, non emergenza)
     "it9NrBPZB0Y",  # "Le protesi supertech" (tech, non emergenza)
     "SPG1k8nnCeY",  # "La nuova Diga foranea di Genova" (frangiflutti, non alluvione/diga-disastro)
+    # Audit Geopop 01/09/2026 — video divulgativi senza contenuto di PC:
+    "84LU4UUU_2c",  # "La prima funicolare d'Italia fu costruita sul Vesuvio" (trasporti)
+    "BzItiC5kzfk",  # "Monte Taranaki: il vulcano visto dallo spazio ha la forma di un cerchio" (curiosità)
+    "DpALnPyfFm4",  # "Olympus Mons, mega vulcani su Marte" (planetologia)
+    "W3C02y8A8LY",  # "Fusione nucleare, a che punto è la ricerca? ITER" (energia, non rischio radiologico)
+    "xo0yPCPZcb8",  # CICAP "Fusione nucleare: facciamo chiarezza" (energia, non rischio radiologico)
+    "-TOGq4pkZiM",  # "Navi rompighiaccio a propulsione nucleare" (trasporti)
+    "l4RqFtMYvjo",  # "Cos'è la valigetta nucleare" (geopolitica)
+    "_OYMeOYJJFs",  # "Terremoto in Italia - 9 scosse in 20 minuti nell'Adriatico" (cronaca datata)
+    "WI0S15ShvsM",  # "Cosa fa un geologo?" (orientamento professionale)
 }
+
+
+# ---------------------------------------------------------------------------
+# CURATELA EDITORIALE (audit Geopop 01/09/2026)
+#
+# Due liste che il cross-match algoritmico NON può dedurre da solo e che
+# persistono ai rigeneri mensili (vale la regola "i fix vanno nel generatore,
+# mai solo nel YAML"):
+#
+# - FORCE_MATCHES: abbinamenti pagina → video verificati a mano (video
+#   pertinente al SOGGETTO della pagina, sfuggito all'IDF perché le parole
+#   chiave non coincidono: es. "Terremoto a Milano rilevato da Google" per
+#   l'articolo sugli smartphone-sismometri). Vengono messi in testa alla
+#   lista della pagina con score 10 e `curato: true`; la pagina viene creata
+#   anche se l'algoritmo non le aveva trovato nulla.
+# - DENY_PAGE_VIDEO: falsi positivi di una SINGOLA pagina (il video è
+#   pertinente altrove, quindi non va in DENY_VIDEO_IDS): es. il video sulla
+#   tempesta Vaia sul dossier della tempesta SOLARE.
+#
+# Chiavi pagina = stesse di data/video_correlati.yaml (build_key):
+# "comunicazioni/<slug>", "rischi-prevenzione/<slug>", "manuale/<slug>"…
+# ---------------------------------------------------------------------------
+FORCE_MATCHES = {
+    # Sismico
+    "comunicazioni/2027-02-06-turchia-siria-2023-terremoto-cooperazione-italiana": [
+        "pjoN6F-nchA",  # Geopop — Perché il terremoto in Turchia e Siria è stato così devastante?
+    ],
+    "comunicazioni/2026-06-26-smartphone-sismometri-allerta-terremoto-venezuela": [
+        "fJsKkMR4EIM",  # Geopop — Terremoto a Milano rilevato da Google: come funziona il sistema
+    ],
+    "comunicazioni/2026-10-06-sismicita-castelli-romani-zona-2b": [
+        "gw33yaQUXb0",  # Geopop — Dalla mappa dei terremoti: in che zone si verificano gli eventi sismici
+    ],
+    # Vulcanico / Campi Flegrei
+    "comunicazioni/2026-05-22-campi-flegrei-radici-sistema-magmatico": [
+        "r4AgouD-gV8",  # Geopop — Anidride carbonica ai Campi Flegrei: cosa succede e possibili rischi
+        "MvPO-DsgJtQ",  # Geopop — Terremoto ai Campi Flegrei sentito a Napoli: il meccanismo geologico
+    ],
+    "rischi-prevenzione/rischio-vulcanico": [
+        "HjhnA7sC1OU",  # Geopop — Piano di evacuazione dei Campi Flegrei e Vesuvio: intervista a chi li progetta
+    ],
+    # Industriale
+    "comunicazioni/2026-10-20-rischio-industriale-seveso": [
+        "6WMacaxW-ck",  # Geopop — Esplosione al deposito Eni di Calenzano: le possibili cause
+        "CZ-o14lvcJw",  # Geopop — Incendio in un'azienda a Cavenago: il monitoraggio dell'aria dei tecnici
+    ],
+    "comunicazioni/2026-06-29-viareggio-2009-memoria-rischio-industriale": [
+        "tnVy7Bl35Wg",  # Geopop — L'incidente ferroviario di Viareggio: ricostruzione 3D e cause
+    ],
+    # Idraulico / clima
+    "comunicazioni/2026-09-15-rischio-idraulico-urbano-genzano": [
+        "QiLt_8rwC-s",  # Geopop — Il tunnel sotterraneo di Tokyo (G-Cans) contro le inondazioni
+    ],
+    "comunicazioni/2026-09-15-alluvione-marche-2022-bombe-acqua-cambiamento-climatico": [
+        "za7qd7dFF0k",  # Geopop — Ondata di caldo e alluvioni: perché i due fenomeni sono collegati
+    ],
+    # Siccità
+    "rischi-prevenzione/siccita": [
+        "PvY7kRxwOGI",  # Geopop — Dissalare l'acqua di mare contro la crisi idrica: pro e contro
+    ],
+    "comunicazioni/2026-07-18-siccita-gestione-risorsa-idrica": ["PvY7kRxwOGI"],
+    "comunicazioni/2026-08-18-siccita-lazio-risorsa-idrica": ["PvY7kRxwOGI"],
+    "manuale/720-rischio-idrico-siccita": ["PvY7kRxwOGI"],
+}
+
+DENY_PAGE_VIDEO = {
+    # Tempesta SOLARE ≠ tempesta Vaia (vento)
+    ("dossier/la-tempesta-solare", "cmEzpKqaTEU"),
+    # Sciame di Santorini: pertinente solo per il Pollino (sequenza sismica)
+    ("rischi-prevenzione/rischio-sismico", "v2VFX_ZIWr8"),
+    ("comunicazioni/2026-06-15-sentinel-1c-radar-deformazione-suolo", "v2VFX_ZIWr8"),
+    # Scossa M3.9 Campi Flegrei: pertinente solo sulle pagine flegree
+    ("comunicazioni/2026-04-25-nepal-2015-gorkha-terremoto", "ROlhXYtdP_w"),
+    ("comunicazioni/2026-05-22-studio-ingv-fluidi-sequenza-sismica-2016", "ROlhXYtdP_w"),
+    ("comunicazioni/2026-06-26-smartphone-sismometri-allerta-terremoto-venezuela", "ROlhXYtdP_w"),
+    ("comunicazioni/2026-10-30-norcia-2016-decimo-anniversario-sequenza-centro-italia", "ROlhXYtdP_w"),
+    # Sciame in Adriatico 2022: pertinente solo per Marche 2016 (stessa area)
+    ("comunicazioni/2026-05-06-friuli-1976-cinquant-anni-protezione-civile", "ssHdkhrAvz0"),
+    ("comunicazioni/2026-06-26-smartphone-sismometri-allerta-terremoto-venezuela", "ssHdkhrAvz0"),
+    ("comunicazioni/2026-12-28-messina-reggio-calabria-1908-soccorso-moderno", "ssHdkhrAvz0"),
+    # Diga romana in Spagna: non c'entra con la tragedia del Vajont
+    ("comunicazioni/2026-10-09-vajont-1963-tragedia-prevista", "ts9vqg-I7f4"),
+    # Frana di Sarno sugli articoli satellitari (Sentinel, IRIDE): fuori soggetto
+    ("comunicazioni/2026-06-15-sentinel-1c-radar-deformazione-suolo", "fpeEmFI5G8s"),
+    ("comunicazioni/2026-07-03-iride-costellazione-osservazione-terra-operativa", "fpeEmFI5G8s"),
+    # Articolo sull'INCENDIO del Parco del Vesuvio: i video sul rischio vulcanico sono fuori tema
+    ("comunicazioni/2025-08-16-volontari-in-allerta", "xwXlvUH1sa0"),
+    ("comunicazioni/2025-08-16-volontari-in-allerta", "KG8xHth3n_8"),
+    ("comunicazioni/2025-08-16-volontari-in-allerta", "2tC0fE5ZgNo"),
+    # Radon: il confronto Etna/Vesuvio non c'entra
+    ("dossier/radon-il-nemico-invisibile", "KG8xHth3n_8"),
+    # Direttiva Seveso (rischio industriale) ≠ fiume Seveso (esondazione a Milano)
+    ("comunicazioni/2026-10-20-rischio-industriale-seveso", "Zh_2N7Wulus"),
+}
+
+
+def apply_curation(results: dict, videos_by_id: dict, page_meta: dict,
+                   max_per_page: int) -> tuple[int, int]:
+    """Applica DENY_PAGE_VIDEO e FORCE_MATCHES ai risultati del cross-match.
+
+    - results: {page_key: {"title","url","video":[...]}} (modificato in place)
+    - videos_by_id: {youtube_id: voce del catalogo}
+    - page_meta: {page_key: {"title","url"}} per creare pagine assenti
+    Ritorna (n_rimossi, n_forzati).
+    """
+    removed = 0
+    for key, vid in DENY_PAGE_VIDEO:
+        r = results.get(key)
+        if not r:
+            continue
+        before = len(r["video"])
+        r["video"] = [v for v in r["video"] if v["id"] != vid]
+        removed += before - len(r["video"])
+        if not r["video"]:
+            del results[key]
+    forced = 0
+    for key, ids in FORCE_MATCHES.items():
+        meta = page_meta.get(key)
+        if meta is None:
+            print(f"  [curatela] pagina non trovata, salto: {key}", file=sys.stderr)
+            continue
+        r = results.setdefault(key, {"title": meta["title"], "url": meta["url"], "video": []})
+        existing = {v["id"] for v in r["video"]}
+        head = []
+        for vid in ids:
+            v = videos_by_id.get(vid)
+            if v is None:
+                print(f"  [curatela] video non in catalogo, salto: {vid}", file=sys.stderr)
+                continue
+            if vid in existing:
+                continue
+            head.append({
+                "id": v["id"], "titolo": v["titolo"], "url": v["url"],
+                "canale": v.get("canale", ""), "score": 10.0,
+                "overlap": [], "anchored": [], "is_lis": False, "curato": True,
+            })
+            forced += 1
+        r["video"] = (head + r["video"])[:max_per_page]
+    return removed, forced
 
 
 # Termini PC ma TROPPO astratti per ancorare da soli: agganciano qualsiasi
@@ -768,6 +918,12 @@ def main() -> int:
                 "url": page["url"],
                 "video": top,
             }
+
+    # Curatela editoriale (abbinamenti forzati + falsi positivi per pagina)
+    videos_by_id = {v["id"]: v for v in videos.values()}
+    page_meta = {p["key"]: {"title": p["title"], "url": p["url"]} for p in pages}
+    n_removed, n_forced = apply_curation(results, videos_by_id, page_meta, args.max_per_page)
+    print(f"Curatela: {n_removed} abbinamenti rimossi, {n_forced} forzati", file=sys.stderr)
 
     # Stats
     n_pages_with_video = len(results)

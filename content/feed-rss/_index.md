@@ -27,7 +27,7 @@ Puoi usare:
 
 | Argomento | URL del feed |
 |---|---|
-| **Tutto il sito** | [`https://www.protezionecivilegenzano.it/index.xml`](https://www.protezionecivilegenzano.it/index.xml) |
+| **Ultime notizie del sito** (le 50 comunicazioni più recenti) | [`https://www.protezionecivilegenzano.it/index.xml`](https://www.protezionecivilegenzano.it/index.xml) |
 | **Comunicazioni e notizie** | [`https://www.protezionecivilegenzano.it/comunicazioni/index.xml`](https://www.protezionecivilegenzano.it/comunicazioni/index.xml) |
 | **Allerte meteo** | [`https://www.protezionecivilegenzano.it/allerte-meteo/index.xml`](https://www.protezionecivilegenzano.it/allerte-meteo/index.xml) |
 | **Rischi e prevenzione** | [`https://www.protezionecivilegenzano.it/rischi-prevenzione/index.xml`](https://www.protezionecivilegenzano.it/rischi-prevenzione/index.xml) |

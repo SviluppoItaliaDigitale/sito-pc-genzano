@@ -112,8 +112,14 @@
        In fondo al DOM era l'elemento LCP con Render Delay ~6s su mobile
        (Lighthouse 10/06/2026): il parser lo raggiungeva per ultimo. */}}
   {{ partial "cookie-banner.html" . }}
-  {{ partial "slim-header.html" . }}
-  {{ partial "navbar.html" . }}
+  {{/* <header> = landmark "banner" unico che racchiude slim header + navbar
+       (brand, ricerca, menu). Prima solo la barra slim aveva role="banner" e
+       logo/testo brand/zona ricerca restavano fuori da ogni landmark (rilievo
+       axe "region", audit 01/09/2026). Speculare in static/app-shared/site-chrome.js. */}}
+  <header class="site-header">
+    {{ partial "slim-header.html" . }}
+    {{ partial "navbar.html" . }}
+  </header>
   {{/* Banner emergenza SITE-WIDE: quando data/emergenza.json ha attiva:true
        compare su OGNI pagina (non solo homepage), così chi atterra su una
        pagina interna durante un'emergenza vede comunque l'avviso. Escluse:

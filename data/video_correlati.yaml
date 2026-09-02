@@ -5,8 +5,8 @@
 # Usato dal partial Hugo `video-correlati.html` per renderizzare la
 # sezione 'Approfondimenti video' in fondo agli articoli pertinenti.
 #
-# Pagine coperte: 288 / Video unici usati: 251 /
-# Link totali: 970 (max 5 per pagina,
+# Pagine coperte: 290 / Video unici usati: 250 /
+# Link totali: 939 (max 5 per pagina,
 # soglia score >= 2.0).
 
 canali:
@@ -337,50 +337,6 @@ pagine:
       score: 4.4
       titolo: Fumo, fiamme, l'azione dei Canadair cercano di spegnere l'incendio sul Parco Vesuvio
       url: https://youtu.be/Hgpj5Mjg0tY
-    - anchored:
-      - vesuvio
-      canale: geopop
-      id: xwXlvUH1sa0
-      is_lis: false
-      overlap:
-      - pronto
-      - vesuvio
-      score: 3.0
-      titolo: Vesuvio - piano d'evacuazione pronto? Non è quello che dice la protezione civile. Facciamo chiarezza
-      url: https://youtu.be/xwXlvUH1sa0
-    - anchored:
-      - vesuvio
-      canale: geopop
-      id: KG8xHth3n_8
-      is_lis: false
-      overlap:
-      - prevenzione
-      - rischio
-      - vesuvio
-      score: 2.4
-      titolo: '▶️ETNA vs VESUVIO: terremoti e #prevenzione del rischio vulcanico e sismico *Parte 2* |GeologiaPOP🌍'
-      url: https://youtu.be/KG8xHth3n_8
-    - anchored:
-      - vesuvio
-      canale: geopop
-      id: 2tC0fE5ZgNo
-      is_lis: false
-      overlap:
-      - rischio
-      - vesuvio
-      score: 2.2
-      titolo: '▶️ETNA, VESUVIO, TERREMOTI: CONSIDERAZIONI SUL RISCHIO - *PARTE-1* |GeologiaPOP🌍'
-      url: https://youtu.be/2tC0fE5ZgNo
-    - anchored:
-      - vesuvio
-      canale: geopop
-      id: 84LU4UUU_2c
-      is_lis: false
-      overlap:
-      - vesuvio
-      score: 2.0
-      titolo: 'La prima funicolare d''Italia fu costruita sul Vesuvio: ecco come funziona questo mezzo di trasporto'
-      url: https://youtu.be/84LU4UUU_2c
   comunicazioni/2026-01-31-neve-castelli-romani-organizzazione:
     title: 'Neve nei Castelli Romani: come ci organizziamo'
     url: /comunicazioni/2026-01-31-neve-castelli-romani-organizzazione/
@@ -1208,18 +1164,6 @@ pagine:
       url: https://youtu.be/amf33JBTSQY
     - anchored:
       - scossa
-      canale: geopop
-      id: ROlhXYtdP_w
-      is_lis: false
-      overlap:
-      - forte
-      - scossa
-      - terremoto
-      score: 3.2
-      titolo: Tanti terremoti ai Campi Flegrei, cosa succede e perché la scossa di M3.9 si è sentita così forte
-      url: https://youtu.be/ROlhXYtdP_w
-    - anchored:
-      - scossa
       canale: dpc-gov
       id: 0--y1oKrz-4
       is_lis: false
@@ -1307,18 +1251,6 @@ pagine:
     title: 'Terremoto: cosa fare durante la scossa e nei minuti successivi'
     url: /comunicazioni/2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa/
     video:
-    - anchored:
-      - scossa
-      canale: geopop
-      id: _OYMeOYJJFs
-      is_lis: false
-      overlap:
-      - minuti
-      - scossa
-      - terremoto
-      score: 7.2
-      titolo: Terremoto in Italia - 9 scosse in 20 minuti nell'Adriatico
-      url: https://youtu.be/_OYMeOYJJFs
     - anchored:
       - scossa
       canale: dpc-gov
@@ -1617,18 +1549,6 @@ pagine:
     title: 'Friuli 1976, cinquant''anni dopo: il terremoto che ha fatto nascere la protezione civile italiana'
     url: /comunicazioni/2026-05-06-friuli-1976-cinquant-anni-protezione-civile/
     video:
-    - anchored:
-      - scossa
-      canale: geopop
-      id: ssHdkhrAvz0
-      is_lis: false
-      overlap:
-      - scossa
-      - successo
-      - terremoto
-      score: 3.6
-      titolo: Terremoti in Adriatico - 100 scosse in 3 giorni. Cosa è successo? La spiegazione geologica completa
-      url: https://youtu.be/ssHdkhrAvz0
     - anchored:
       - magnitudo
       canale: ingv-terremoti
@@ -1999,6 +1919,24 @@ pagine:
     title: Campi Flegrei, una nuova immagine svela le radici profonde del magma fino a 50 km
     url: /comunicazioni/2026-05-22-campi-flegrei-radici-sistema-magmatico/
     video:
+    - anchored: []
+      canale: geopop
+      curato: true
+      id: r4AgouD-gV8
+      is_lis: false
+      overlap: []
+      score: 10.0
+      titolo: 'Anidride Carbonica ai Campi Flegrei, cosa sta succedendo e possibili rischi: facciamo chiarezza'
+      url: https://youtu.be/r4AgouD-gV8
+    - anchored: []
+      canale: geopop
+      curato: true
+      id: MvPO-DsgJtQ
+      is_lis: false
+      overlap: []
+      score: 10.0
+      titolo: Terremoto ai Campi Flegrei sentito a Napoli - vi spiego il meccanismo geologico che sta alla base
+      url: https://youtu.be/MvPO-DsgJtQ
     - anchored:
       - magma
       canale: geopop
@@ -2013,18 +1951,6 @@ pagine:
     title: Terremoti, uno studio INGV svela il ruolo dei fluidi nella sequenza del Centro Italia 2016
     url: /comunicazioni/2026-05-22-studio-ingv-fluidi-sequenza-sismica-2016/
     video:
-    - anchored:
-      - scossa
-      canale: geopop
-      id: ROlhXYtdP_w
-      is_lis: false
-      overlap:
-      - forte
-      - scossa
-      - terremoto
-      score: 3.2
-      titolo: Tanti terremoti ai Campi Flegrei, cosa succede e perché la scossa di M3.9 si è sentita così forte
-      url: https://youtu.be/ROlhXYtdP_w
     - anchored:
       - scossa
       canale: dpc-gov
@@ -2965,30 +2891,6 @@ pagine:
     url: /comunicazioni/2026-06-15-sentinel-1c-radar-deformazione-suolo/
     video:
     - anchored:
-      - spazio
-      - vulcano
-      canale: geopop
-      id: BzItiC5kzfk
-      is_lis: false
-      overlap:
-      - spazio
-      - vulcano
-      score: 4.0
-      titolo: 'Monte Taranaki: perché il vulcano visto dalla spazio ha la forma perfetta di un cerchio'
-      url: https://youtu.be/BzItiC5kzfk
-    - anchored:
-      - frana
-      - vulcano
-      canale: geopop
-      id: WI0S15ShvsM
-      is_lis: false
-      overlap:
-      - frana
-      - vulcano
-      score: 4.0
-      titolo: COSA FA UN GEOLOGO? NON SOLO FRANE, VULCANI ...
-      url: https://youtu.be/WI0S15ShvsM
-    - anchored:
       - frana
       canale: geopop
       id: Lu7IXn90TBQ
@@ -3001,30 +2903,6 @@ pagine:
       score: 3.8
       titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
       url: https://youtu.be/Lu7IXn90TBQ
-    - anchored:
-      - frana
-      canale: geopop
-      id: fpeEmFI5G8s
-      is_lis: false
-      overlap:
-      - alluvione
-      - cause
-      - frana
-      score: 3.6
-      titolo: Alluvione di Sarno del 5 maggio 1998, le cause della frana e la ricostruzione della tragedia
-      url: https://youtu.be/fpeEmFI5G8s
-    - anchored:
-      - vulcano
-      canale: geopop
-      id: v2VFX_ZIWr8
-      is_lis: false
-      overlap:
-      - scossa
-      - terremoto
-      - vulcano
-      score: 3.4
-      titolo: Perché tante scosse di terremoto a Santorini? L'analisi geologica e le caratteristiche del vulcano
-      url: https://youtu.be/v2VFX_ZIWr8
   comunicazioni/2026-06-16-ispra-incendi-2025-superficie-bruciata-prevenzione:
     title: 'Incendi boschivi: nel 2025 la superficie bruciata è quasi raddoppiata. ISPRA: investire nella prevenzione'
     url: /comunicazioni/2026-06-16-ispra-incendi-2025-superficie-bruciata-prevenzione/
@@ -3688,30 +3566,15 @@ pagine:
     title: 'Trenta secondi che contano: come gli smartphone hanno allertato il Venezuela prima del terremoto'
     url: /comunicazioni/2026-06-26-smartphone-sismometri-allerta-terremoto-venezuela/
     video:
-    - anchored:
-      - scossa
+    - anchored: []
       canale: geopop
-      id: ssHdkhrAvz0
+      curato: true
+      id: fJsKkMR4EIM
       is_lis: false
-      overlap:
-      - scossa
-      - successo
-      - terremoto
-      score: 3.6
-      titolo: Terremoti in Adriatico - 100 scosse in 3 giorni. Cosa è successo? La spiegazione geologica completa
-      url: https://youtu.be/ssHdkhrAvz0
-    - anchored:
-      - scossa
-      canale: geopop
-      id: ROlhXYtdP_w
-      is_lis: false
-      overlap:
-      - forte
-      - scossa
-      - terremoto
-      score: 3.2
-      titolo: Tanti terremoti ai Campi Flegrei, cosa succede e perché la scossa di M3.9 si è sentita così forte
-      url: https://youtu.be/ROlhXYtdP_w
+      overlap: []
+      score: 10.0
+      titolo: 'TERREMOTO A MILANO rilevato da Google: ecco come funziona il sistema'
+      url: https://youtu.be/fJsKkMR4EIM
     - anchored:
       - scossa
       canale: dpc-gov
@@ -3772,6 +3635,19 @@ pagine:
       score: 6.6
       titolo: 'Verso una maggiore resilienza delle città transfrontaliere al rischio alluvioni: il progetto ADAPT'
       url: https://youtu.be/k0X5nx6BRmc
+  comunicazioni/2026-06-29-viareggio-2009-memoria-rischio-industriale:
+    title: 'Viareggio, 29 giugno 2009: la memoria e le lezioni sul rischio industriale'
+    url: /comunicazioni/2026-06-29-viareggio-2009-memoria-rischio-industriale/
+    video:
+    - anchored: []
+      canale: geopop
+      curato: true
+      id: tnVy7Bl35Wg
+      is_lis: false
+      overlap: []
+      score: 10.0
+      titolo: Raccontiamo l'incidente ferroviario di Viareggio e le sue cause grazie ad una ricostruzione in 3D
+      url: https://youtu.be/tnVy7Bl35Wg
   comunicazioni/2026-06-30-bilancio-primo-mese-aib-2026:
     title: 'Primo mese di campagna AIB: il punto al 30 giugno'
     url: /comunicazioni/2026-06-30-bilancio-primo-mese-aib-2026/
@@ -3808,18 +3684,6 @@ pagine:
     title: 'IRIDE operativa nel 2026: i nuovi occhi italiani sul territorio'
     url: /comunicazioni/2026-07-03-iride-costellazione-osservazione-terra-operativa/
     video:
-    - anchored:
-      - alluvione
-      - frana
-      canale: geopop
-      id: fpeEmFI5G8s
-      is_lis: false
-      overlap:
-      - alluvione
-      - frana
-      score: 3.2
-      titolo: Alluvione di Sarno del 5 maggio 1998, le cause della frana e la ricostruzione della tragedia
-      url: https://youtu.be/fpeEmFI5G8s
     - anchored:
       - frana
       canale: dpc-gov
@@ -4063,18 +3927,6 @@ pagine:
       titolo: 'Eruzione a La Palma, il vulcano Cumbre Vieja si è risvegliato: ecco cosa sta succedendo alle Canarie'
       url: https://youtu.be/1GPN7izi7uc
     - anchored:
-      - spazio
-      - vulcano
-      canale: geopop
-      id: BzItiC5kzfk
-      is_lis: false
-      overlap:
-      - spazio
-      - vulcano
-      score: 8.0
-      titolo: 'Monte Taranaki: perché il vulcano visto dalla spazio ha la forma perfetta di un cerchio'
-      url: https://youtu.be/BzItiC5kzfk
-    - anchored:
       - eruzione
       - vulcano
       canale: geopop
@@ -4317,6 +4169,15 @@ pagine:
     title: 'Siccità estiva: gestire la risorsa idrica come cittadini'
     url: /comunicazioni/2026-07-18-siccita-gestione-risorsa-idrica/
     video:
+    - anchored: []
+      canale: geopop
+      curato: true
+      id: PvY7kRxwOGI
+      is_lis: false
+      overlap: []
+      score: 10.0
+      titolo: Dissalare l'acqua di mare può essere una soluzione alla crisi idrica? Pro e contro dei dissalatori
+      url: https://youtu.be/PvY7kRxwOGI
     - anchored:
       - idrica
       - siccità
@@ -5345,6 +5206,15 @@ pagine:
     title: 'Siccità nel Lazio: come viene gestita e cosa può fare il cittadino'
     url: /comunicazioni/2026-08-18-siccita-lazio-risorsa-idrica/
     video:
+    - anchored: []
+      canale: geopop
+      curato: true
+      id: PvY7kRxwOGI
+      is_lis: false
+      overlap: []
+      score: 10.0
+      titolo: Dissalare l'acqua di mare può essere una soluzione alla crisi idrica? Pro e contro dei dissalatori
+      url: https://youtu.be/PvY7kRxwOGI
     - anchored:
       - idrica
       - siccità
@@ -6209,6 +6079,15 @@ pagine:
     title: 'Alluvione delle Marche, 15-16 settembre 2022: la notte delle bombe d''acqua sui Monti del Catria'
     url: /comunicazioni/2026-09-15-alluvione-marche-2022-bombe-acqua-cambiamento-climatico/
     video:
+    - anchored: []
+      canale: geopop
+      curato: true
+      id: za7qd7dFF0k
+      is_lis: false
+      overlap: []
+      score: 10.0
+      titolo: 'Ondata di caldo e alluvioni: perché i due fenomeni sono collegati'
+      url: https://youtu.be/za7qd7dFF0k
     - anchored:
       - marche
       canale: abili-a-proteggere
@@ -6231,6 +6110,19 @@ pagine:
       score: 2.2
       titolo: Io non rischio Alluvione – Cosa fare durante un’allerta, durante e dopo un’alluvione
       url: https://youtu.be/DbGSeVbDLCg
+  comunicazioni/2026-09-15-rischio-idraulico-urbano-genzano:
+    title: 'Rischio idraulico urbano a Genzano di Roma: conoscere i punti critici'
+    url: /comunicazioni/2026-09-15-rischio-idraulico-urbano-genzano/
+    video:
+    - anchored: []
+      canale: geopop
+      curato: true
+      id: QiLt_8rwC-s
+      is_lis: false
+      overlap: []
+      score: 10.0
+      titolo: Il gigantesco tunnel sotterraneo di Tokyo, come funziona il G-Cans Project contro le inondazioni
+      url: https://youtu.be/QiLt_8rwC-s
   comunicazioni/2026-09-16-esercitazione-nazionale-pc-settembre:
     title: 'Le grandi esercitazioni nazionali: a cosa servono davvero'
     url: /comunicazioni/2026-09-16-esercitazione-nazionale-pc-settembre/
@@ -6408,6 +6300,19 @@ pagine:
       score: 6.2
       titolo: Intervista a David Piccinini - Direttore Generale servizio protezione civile regione Marche
       url: https://youtu.be/jJpZO_erLUQ
+  comunicazioni/2026-10-06-sismicita-castelli-romani-zona-2b:
+    title: 'Sismicità dei Castelli Romani: perché siamo in zona 2B'
+    url: /comunicazioni/2026-10-06-sismicita-castelli-romani-zona-2b/
+    video:
+    - anchored: []
+      canale: geopop
+      curato: true
+      id: gw33yaQUXb0
+      is_lis: false
+      overlap: []
+      score: 10.0
+      titolo: Vi spiego dalla mappa dei terremoti in che zone si verificano maggiormente gli eventi sismici
+      url: https://youtu.be/gw33yaQUXb0
   comunicazioni/2026-10-07-dighe-sicurezza-grandi-opere:
     title: 'Dighe e grandi opere: la sicurezza del sistema italiano'
     url: /comunicazioni/2026-10-07-dighe-sicurezza-grandi-opere/
@@ -6477,16 +6382,6 @@ pagine:
       score: 13.0
       titolo: 'Il disastro del Vajont: l’analisi geologica e la ricostruzione della tragedia del 9 ottobre 1963'
       url: https://youtu.be/xUtCwhN8-pQ
-    - anchored:
-      - diga
-      canale: geopop
-      id: ts9vqg-I7f4
-      is_lis: false
-      overlap:
-      - diga
-      score: 2.0
-      titolo: 'Una diga romana di 2mila anni fa ha salvato una città dall’alluvione in Spagna: ecco come funziona'
-      url: https://youtu.be/ts9vqg-I7f4
   comunicazioni/2026-10-15-aggiornamento-operativo-meta-ottobre:
     title: 'Metà ottobre: aggiornamento operativo del Gruppo'
     url: /comunicazioni/2026-10-15-aggiornamento-operativo-meta-ottobre/
@@ -6630,16 +6525,24 @@ pagine:
     title: 'Rischio industriale: la direttiva Seveso e i piani di emergenza'
     url: /comunicazioni/2026-10-20-rischio-industriale-seveso/
     video:
-    - anchored:
-      - seveso
-      canale: rai-news
-      id: Zh_2N7Wulus
+    - anchored: []
+      canale: geopop
+      curato: true
+      id: 6WMacaxW-ck
       is_lis: false
-      overlap:
-      - seveso
-      score: 6.0
-      titolo: 'L''acqua invade le cantine e le case: l''esondazione del Seveso, ondata di maltempo'
-      url: https://youtu.be/Zh_2N7Wulus
+      overlap: []
+      score: 10.0
+      titolo: 'Esplosione al deposito Eni di Calenzano: le possibili cause del disastro'
+      url: https://youtu.be/6WMacaxW-ck
+    - anchored: []
+      canale: geopop
+      curato: true
+      id: CZ-o14lvcJw
+      is_lis: false
+      overlap: []
+      score: 10.0
+      titolo: 'Incendio in un''azienda a Cavenago di Brianza: come funziona il monitoraggio dell''aria dei tecnici'
+      url: https://youtu.be/CZ-o14lvcJw
   comunicazioni/2026-10-24-giornata-onu-risparmio-energetico-emergenze:
     title: 'Risparmio energetico e resilienza: come l''energia incide sulle emergenze'
     url: /comunicazioni/2026-10-24-giornata-onu-risparmio-energetico-emergenze/
@@ -6932,18 +6835,6 @@ pagine:
     title: 'Norcia, 30 ottobre 2016: la scossa più forte d''Italia degli ultimi 30 anni'
     url: /comunicazioni/2026-10-30-norcia-2016-decimo-anniversario-sequenza-centro-italia/
     video:
-    - anchored:
-      - forte
-      - scossa
-      canale: geopop
-      id: ROlhXYtdP_w
-      is_lis: false
-      overlap:
-      - forte
-      - scossa
-      score: 7.8
-      titolo: Tanti terremoti ai Campi Flegrei, cosa succede e perché la scossa di M3.9 si è sentita così forte
-      url: https://youtu.be/ROlhXYtdP_w
     - anchored:
       - scossa
       canale: dpc-gov
@@ -7622,18 +7513,6 @@ pagine:
       titolo: Finale Emilia, i danni dopo la scossa del 20 maggio – Terremoto Emilia
       url: https://youtu.be/4-r2rPCOEPM
     - anchored:
-      - scossa
-      canale: geopop
-      id: ssHdkhrAvz0
-      is_lis: false
-      overlap:
-      - scossa
-      - successo
-      - terremoto
-      score: 3.6
-      titolo: Terremoti in Adriatico - 100 scosse in 3 giorni. Cosa è successo? La spiegazione geologica completa
-      url: https://youtu.be/ssHdkhrAvz0
-    - anchored:
       - magnitudo
       canale: ingv-terremoti
       id: 2ZVvY4ufdYM
@@ -7736,6 +7615,15 @@ pagine:
     title: 'Turchia-Siria, 6 febbraio 2023: il più grande dispiegamento internazionale italiano dopo Haiti'
     url: /comunicazioni/2027-02-06-turchia-siria-2023-terremoto-cooperazione-italiana/
     video:
+    - anchored: []
+      canale: geopop
+      curato: true
+      id: pjoN6F-nchA
+      is_lis: false
+      overlap: []
+      score: 10.0
+      titolo: Perché il terremoto in Turchia e Siria è stato così devastante? L'analisi geologica e ingegneristica
+      url: https://youtu.be/pjoN6F-nchA
     - anchored:
       - magnitudo
       canale: ingv-terremoti
@@ -7785,17 +7673,6 @@ pagine:
       score: 2.2
       titolo: San Carlo, i danni dopo la scossa del 20 maggio – Terremoto Emilia
       url: https://youtu.be/0--y1oKrz-4
-    - anchored:
-      - scossa
-      canale: dpc-gov
-      id: KjQSuaVrjlY
-      is_lis: false
-      overlap:
-      - scossa
-      - terremoto
-      score: 2.2
-      titolo: Mirandola, i danni dopo la scossa del 29 maggio – Terremoto Emilia
-      url: https://youtu.be/KjQSuaVrjlY
   comunicazioni/2027-02-24-protezione-civile-fiction-tv-ambra-angiolini:
     title: '«Sempre al tuo fianco»: la fiction Rai sul rischio Vulcani con Ambra Angiolini'
     url: /comunicazioni/2027-02-24-protezione-civile-fiction-tv-ambra-angiolini/
@@ -8110,17 +7987,6 @@ pagine:
     - anchored:
       - nucleare
       canale: geopop
-      id: W3C02y8A8LY
-      is_lis: false
-      overlap:
-      - nucleare
-      - ricerca
-      score: 7.0
-      titolo: Fusione nucleare, a che punto è la ricerca? L'eccellenza del progetto ITER
-      url: https://youtu.be/W3C02y8A8LY
-    - anchored:
-      - nucleare
-      canale: geopop
       id: yoTTJ9BJYIM
       is_lis: false
       overlap:
@@ -8151,16 +8017,6 @@ pagine:
       score: 6.2
       titolo: 'Come sopravvivere a un''esplosione nucleare: guida tecnica per salvarsi da un attacco (ipotetico)'
       url: https://youtu.be/VNWX06NkitE
-    - anchored:
-      - nucleare
-      canale: cicap
-      id: xo0yPCPZcb8
-      is_lis: false
-      overlap:
-      - nucleare
-      score: 6.0
-      titolo: 'Fusione nucleare: facciamo chiarezza - con Piero Martin'
-      url: https://youtu.be/xo0yPCPZcb8
   conoscere/catalogo-dei-rischi/rischio-sanitario:
     title: 'Il rischio sanitario: emergenze, epidemie e pandemie'
     url: /conoscere/catalogo-dei-rischi/rischio-sanitario/
@@ -8418,65 +8274,6 @@ pagine:
       score: 2.0
       titolo: La Protezione Civile racconta il podcast DPC - Dove Parliamo di Clima con Filippo Thiery
       url: https://youtu.be/NukrIN8jnE4
-  cruscotto:
-    title: Cruscotto del territorio
-    url: /cruscotto/
-    video:
-    - anchored:
-      - vulcano
-      canale: ingv-vulcani
-      id: CzG0MUZxlec
-      is_lis: false
-      overlap:
-      - activity
-      - vulcano
-      score: 3.0
-      titolo: Attività fumarolica a Vulcano, 3 ottobre 2021 - Fumarolic activity at Vulcano, 3 October 2021
-      url: https://youtu.be/CzG0MUZxlec
-    - anchored:
-      - vulcano
-      canale: geopop
-      id: DpALnPyfFm4
-      is_lis: false
-      overlap:
-      - terremoto
-      - vulcano
-      score: 2.4
-      titolo: Olympus Mons, mega vulcani su Marte e terremoti marziani - Geologia di Marte, Parte 2
-      url: https://youtu.be/DpALnPyfFm4
-    - anchored:
-      - vulcano
-      canale: geopop
-      id: v2VFX_ZIWr8
-      is_lis: false
-      overlap:
-      - terremoto
-      - vulcano
-      score: 2.4
-      titolo: Perché tante scosse di terremoto a Santorini? L'analisi geologica e le caratteristiche del vulcano
-      url: https://youtu.be/v2VFX_ZIWr8
-    - anchored:
-      - vulcano
-      canale: dpc-gov
-      id: 5Cds6O7BFp4
-      is_lis: false
-      overlap:
-      - sotto
-      - vulcano
-      score: 2.2
-      titolo: Marco Rossari a partire da "Sotto il Vulcano" di Malcolm Lowry – SalTo24
-      url: https://youtu.be/5Cds6O7BFp4
-    - anchored:
-      - vulcano
-      canale: dpc-gov
-      id: _AYUUv69F3U
-      is_lis: false
-      overlap:
-      - rischio
-      - vulcano
-      score: 2.2
-      titolo: L'esercitazione nazionale di protezione civile sul rischio vulcanico – Esercitazione VULCANO 2022
-      url: https://youtu.be/_AYUUv69F3U
   cruscotto/terremoto:
     title: Scheda terremoto
     url: /cruscotto/terremoto/
@@ -8642,18 +8439,6 @@ pagine:
       titolo: L'esercitazione nazionale di protezione civile sul rischio vulcanico – Esercitazione VULCANO 2022
       url: https://youtu.be/_AYUUv69F3U
     - anchored:
-      - vulcano
-      canale: geopop
-      id: BzItiC5kzfk
-      is_lis: false
-      overlap:
-      - monte
-      - visto
-      - vulcano
-      score: 4.0
-      titolo: 'Monte Taranaki: perché il vulcano visto dalla spazio ha la forma perfetta di un cerchio'
-      url: https://youtu.be/BzItiC5kzfk
-    - anchored:
       - sismico
       - vulcanico
       canale: geopop
@@ -8797,17 +8582,6 @@ pagine:
       url: https://youtu.be/_AYUUv69F3U
     - anchored:
       - vulcano
-      canale: geopop
-      id: BzItiC5kzfk
-      is_lis: false
-      overlap:
-      - visto
-      - vulcano
-      score: 3.0
-      titolo: 'Monte Taranaki: perché il vulcano visto dalla spazio ha la forma perfetta di un cerchio'
-      url: https://youtu.be/BzItiC5kzfk
-    - anchored:
-      - vulcano
       canale: ingv-vulcani
       id: INA4xLTBDK4
       is_lis: false
@@ -8859,16 +8633,6 @@ pagine:
     title: La tempesta solare
     url: /dossier/la-tempesta-solare/
     video:
-    - anchored:
-      - tempesta
-      canale: geopop
-      id: cmEzpKqaTEU
-      is_lis: false
-      overlap:
-      - tempesta
-      score: 6.0
-      titolo: 14 milioni di alberi abbattuti e 3 miliardi di euro di danni, analizziamo la Tempesta Vaia del 2018
-      url: https://youtu.be/cmEzpKqaTEU
     - anchored:
       - tempesta
       canale: link4universe
@@ -9131,17 +8895,6 @@ pagine:
       score: 3.0
       titolo: '"La lezione di Fukushima": Margherita Fronte al XII Convegno Nazionale del Cicap'
       url: https://youtu.be/Xw_qqKMOEnQ
-    - anchored:
-      - nucleare
-      canale: geopop
-      id: -TOGq4pkZiM
-      is_lis: false
-      overlap:
-      - nucleare
-      - servono
-      score: 3.0
-      titolo: 'Navi rompighiaccio a propulsione nucleare: come funzionano e a cosa servono'
-      url: https://youtu.be/-TOGq4pkZiM
   dossier/prove-generali-del-disastro:
     title: Prove generali del disastro
     url: /dossier/prove-generali-del-disastro/
@@ -9545,18 +9298,6 @@ pagine:
       score: 2.6
       titolo: Scoprire la vita aliena esplorando laghi vulcanici estremi sulla Terra
       url: https://youtu.be/0fTelCqyoAU
-    - anchored:
-      - vulcanico
-      canale: geopop
-      id: KG8xHth3n_8
-      is_lis: false
-      overlap:
-      - rischio
-      - terremoto
-      - vulcanico
-      score: 2.4
-      titolo: '▶️ETNA vs VESUVIO: terremoti e #prevenzione del rischio vulcanico e sismico *Parte 2* |GeologiaPOP🌍'
-      url: https://youtu.be/KG8xHth3n_8
   dossier/ricostruire-meglio-il-dopo:
     title: 'Ricostruire meglio: il dopo che nessuno racconta'
     url: /dossier/ricostruire-meglio-il-dopo/
@@ -9799,19 +9540,6 @@ pagine:
       score: 10.0
       titolo: Campi Flegrei - Nel sonno del vulcano
       url: https://youtu.be/doJOni-e2BE
-    - anchored:
-      - vulcano
-      canale: geopop
-      id: BzItiC5kzfk
-      is_lis: false
-      overlap:
-      - forma
-      - monte
-      - visto
-      - vulcano
-      score: 9.0
-      titolo: 'Monte Taranaki: perché il vulcano visto dalla spazio ha la forma perfetta di un cerchio'
-      url: https://youtu.be/BzItiC5kzfk
     - anchored:
       - vulcano
       canale: geopop
@@ -11120,52 +10848,19 @@ pagine:
       score: 7.0
       titolo: 'Come sopravvivere a un''esplosione nucleare: guida tecnica per salvarsi da un attacco (ipotetico)'
       url: https://youtu.be/VNWX06NkitE
-    - anchored:
-      - nucleare
-      canale: geopop
-      id: W3C02y8A8LY
-      is_lis: false
-      overlap:
-      - nucleare
-      - ricerca
-      score: 7.0
-      titolo: Fusione nucleare, a che punto è la ricerca? L'eccellenza del progetto ITER
-      url: https://youtu.be/W3C02y8A8LY
-    - anchored:
-      - nucleare
-      canale: geopop
-      id: l4RqFtMYvjo
-      is_lis: false
-      overlap:
-      - dell
-      - nucleare
-      score: 6.2
-      titolo: Cos’è la valigetta nucleare e come funziona il lancio dell'atomica negli USA e nella Russia di Putin
-      url: https://youtu.be/l4RqFtMYvjo
-    - anchored:
-      - nucleare
-      canale: cicap
-      id: xo0yPCPZcb8
-      is_lis: false
-      overlap:
-      - nucleare
-      score: 6.0
-      titolo: 'Fusione nucleare: facciamo chiarezza - con Piero Martin'
-      url: https://youtu.be/xo0yPCPZcb8
-    - anchored:
-      - nucleare
-      canale: geopop
-      id: -TOGq4pkZiM
-      is_lis: false
-      overlap:
-      - nucleare
-      score: 6.0
-      titolo: 'Navi rompighiaccio a propulsione nucleare: come funzionano e a cosa servono'
-      url: https://youtu.be/-TOGq4pkZiM
   manuale/720-rischio-idrico-siccita:
     title: 'Il rischio idrico: la siccità e la scarsità d''acqua'
     url: /manuale/720-rischio-idrico-siccita/
     video:
+    - anchored: []
+      canale: geopop
+      curato: true
+      id: PvY7kRxwOGI
+      is_lis: false
+      overlap: []
+      score: 10.0
+      titolo: Dissalare l'acqua di mare può essere una soluzione alla crisi idrica? Pro e contro dei dissalatori
+      url: https://youtu.be/PvY7kRxwOGI
     - anchored:
       - crisi
       - idrica
@@ -11210,19 +10905,6 @@ pagine:
       score: 6.0
       titolo: 'Kit siccità: gestori di strutture turistiche IT'
       url: https://youtu.be/d3PnplO-uGI
-    - anchored:
-      - cambiamento
-      - climatico
-      canale: cima-foundation
-      id: sDYhbU-74JA
-      is_lis: false
-      overlap:
-      - cambiamento
-      - climatico
-      - scenari
-      score: 5.0
-      titolo: Dal nowcasting agli scenari di cambiamento climatico
-      url: https://youtu.be/sDYhbU-74JA
   pittogrammi:
     title: Catalogo dei pittogrammi del sito
     url: /pittogrammi/
@@ -11518,17 +11200,6 @@ pagine:
       url: https://youtu.be/fpeEmFI5G8s
     - anchored:
       - frana
-      canale: geopop
-      id: WI0S15ShvsM
-      is_lis: false
-      overlap:
-      - frana
-      - vulcano
-      score: 3.0
-      titolo: COSA FA UN GEOLOGO? NON SOLO FRANE, VULCANI ...
-      url: https://youtu.be/WI0S15ShvsM
-    - anchored:
-      - frana
       canale: dpc-gov
       id: 6eeYoCoFn5M
       is_lis: false
@@ -11634,48 +11305,6 @@ pagine:
     - anchored:
       - nucleare
       canale: geopop
-      id: W3C02y8A8LY
-      is_lis: false
-      overlap:
-      - nucleare
-      - ricerca
-      score: 7.0
-      titolo: Fusione nucleare, a che punto è la ricerca? L'eccellenza del progetto ITER
-      url: https://youtu.be/W3C02y8A8LY
-    - anchored:
-      - nucleare
-      canale: geopop
-      id: l4RqFtMYvjo
-      is_lis: false
-      overlap:
-      - dell
-      - nucleare
-      score: 6.2
-      titolo: Cos’è la valigetta nucleare e come funziona il lancio dell'atomica negli USA e nella Russia di Putin
-      url: https://youtu.be/l4RqFtMYvjo
-    - anchored:
-      - nucleare
-      canale: cicap
-      id: xo0yPCPZcb8
-      is_lis: false
-      overlap:
-      - nucleare
-      score: 6.0
-      titolo: 'Fusione nucleare: facciamo chiarezza - con Piero Martin'
-      url: https://youtu.be/xo0yPCPZcb8
-    - anchored:
-      - nucleare
-      canale: geopop
-      id: -TOGq4pkZiM
-      is_lis: false
-      overlap:
-      - nucleare
-      score: 6.0
-      titolo: 'Navi rompighiaccio a propulsione nucleare: come funzionano e a cosa servono'
-      url: https://youtu.be/-TOGq4pkZiM
-    - anchored:
-      - nucleare
-      canale: geopop
       id: VNWX06NkitE
       is_lis: false
       overlap:
@@ -11687,18 +11316,6 @@ pagine:
     title: 'Rischio Sismico: Cosa Fare'
     url: /rischi-prevenzione/rischio-sismico/
     video:
-    - anchored:
-      - scossa
-      canale: geopop
-      id: v2VFX_ZIWr8
-      is_lis: false
-      overlap:
-      - scossa
-      - terremoto
-      - vulcano
-      score: 3.4
-      titolo: Perché tante scosse di terremoto a Santorini? L'analisi geologica e le caratteristiche del vulcano
-      url: https://youtu.be/v2VFX_ZIWr8
     - anchored:
       - scossa
       canale: dpc-gov
@@ -11747,6 +11364,15 @@ pagine:
     title: 'Rischio Vulcanico (Colli Albani): Cosa Fare'
     url: /rischi-prevenzione/rischio-vulcanico/
     video:
+    - anchored: []
+      canale: geopop
+      curato: true
+      id: HjhnA7sC1OU
+      is_lis: false
+      overlap: []
+      score: 10.0
+      titolo: PIANO DI EVACUAZIONE DEI CAMPI FLEGREI E VESUVIO - Intervista a chi li progetta
+      url: https://youtu.be/HjhnA7sC1OU
     - anchored:
       - vulcanico
       - vulcano
@@ -11797,21 +11423,19 @@ pagine:
       score: 7.2
       titolo: I fenomeni vulcanici
       url: https://youtu.be/Q9CVtJ3VUHQ
-    - anchored:
-      - vulcanico
-      canale: dpc-gov
-      id: f1yJjfoUsv4
-      is_lis: false
-      overlap:
-      - eruzioni
-      - vulcanico
-      score: 7.0
-      titolo: 'Eruzioni vulcaniche e bradisismo: la risposta di protezione civile – Bradisismo Campi Flegrei 2024'
-      url: https://youtu.be/f1yJjfoUsv4
   rischi-prevenzione/siccita:
     title: 'Siccità e Crisi Idrica: Cosa Fare'
     url: /rischi-prevenzione/siccita/
     video:
+    - anchored: []
+      canale: geopop
+      curato: true
+      id: PvY7kRxwOGI
+      is_lis: false
+      overlap: []
+      score: 10.0
+      titolo: Dissalare l'acqua di mare può essere una soluzione alla crisi idrica? Pro e contro dei dissalatori
+      url: https://youtu.be/PvY7kRxwOGI
     - anchored:
       - crisi
       - idrica
