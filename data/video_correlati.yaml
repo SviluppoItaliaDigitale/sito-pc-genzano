@@ -5,8 +5,8 @@
 # Usato dal partial Hugo `video-correlati.html` per renderizzare la
 # sezione 'Approfondimenti video' in fondo agli articoli pertinenti.
 #
-# Pagine coperte: 291 / Video unici usati: 251 /
-# Link totali: 940 (max 5 per pagina,
+# Pagine coperte: 290 / Video unici usati: 251 /
+# Link totali: 942 (max 5 per pagina,
 # soglia score >= 2.0).
 
 canali:
@@ -24,7 +24,7 @@ canali:
     nome: CIMA Research Foundation
     tematico_pc: true
     url: https://www.youtube.com/@CIMAfondazione/videos
-    video_count: 89
+    video_count: 94
   cmcc:
     nome: CMCC — Centro Euro-Mediterraneo sui Cambiamenti Climatici
     tematico_pc: false
@@ -34,22 +34,22 @@ canali:
     nome: CNSAS — Corpo Nazionale Soccorso Alpino e Speleologico
     tematico_pc: true
     url: https://www.youtube.com/@CnsasCanaleUfficiale/videos
-    video_count: 56
+    video_count: 58
   dario-bressanini:
     nome: Dario Bressanini — chimica e scienza dell'alimentazione
     tematico_pc: false
     url: https://www.youtube.com/@dariobressanini/videos
-    video_count: 137
+    video_count: 143
   dpc-gov:
     nome: Dipartimento della Protezione Civile (PCM)
     tematico_pc: true
     url: https://www.youtube.com/@DPCgov/videos
-    video_count: 390
+    video_count: 391
   geopop:
     nome: Geopop — divulgazione scientifica
     tematico_pc: false
     url: https://www.youtube.com/@geopop/videos
-    video_count: 1314
+    video_count: 1323
   ingv-terremoti:
     nome: INGV — Istituto Nazionale di Geofisica e Vulcanologia
     tematico_pc: true
@@ -74,12 +74,12 @@ canali:
     nome: Link4Universe — Adrian Fartade
     tematico_pc: false
     url: https://www.youtube.com/@link4universe/videos
-    video_count: 1217
+    video_count: 1232
   natgeo-italia:
     nome: National Geographic Italia
     tematico_pc: false
     url: https://www.youtube.com/@natgeoit/videos
-    video_count: 634
+    video_count: 644
   rai-cultura:
     nome: Rai Cultura (documentari)
     tematico_pc: false
@@ -89,17 +89,17 @@ canali:
     nome: Rai News
     tematico_pc: false
     url: https://www.youtube.com/@RaiNews/videos
-    video_count: 1778
+    video_count: 1787
   solarino-sismologo:
     nome: Stefano Solarino — sismologo INGV (divulgazione sismica)
     tematico_pc: true
     url: https://www.youtube.com/@solarinosismologo/videos
-    video_count: 116
+    video_count: 119
   wired-italia:
     nome: Wired Italia
     tematico_pc: false
     url: https://www.youtube.com/@WiredItalia/videos
-    video_count: 799
+    video_count: 802
 pagine:
   cartografia:
     title: Cartografia operativa del Piano di emergenza
@@ -199,23 +199,9 @@ pagine:
       - antincendio
       - boschivo
       - campagna
-      score: 9.6
+      score: 5.4
       titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
       url: https://youtu.be/GVKQznWv4eE
-    - anchored:
-      - antincendio
-      - boschivo
-      - campagna
-      canale: cmcc
-      id: qhaxcNNmi-E
-      is_lis: false
-      overlap:
-      - antincendio
-      - boschivo
-      - campagna
-      score: 9.6
-      titolo: 'Campagna antincendio boschivo: lo spot del progetto OFIDIA2'
-      url: https://youtu.be/qhaxcNNmi-E
     - anchored:
       - boschivo
       canale: io-non-rischio
@@ -254,6 +240,18 @@ pagine:
       score: 2.4
       titolo: Spot 2006 sul rischio incendi boschivi
       url: https://youtu.be/4UBxxIfaGL4
+    - anchored:
+      - boschivo
+      canale: dpc-gov
+      id: 53yYyLsFW3Q
+      is_lis: false
+      overlap:
+      - boschivo
+      - incendio
+      - rischio
+      score: 2.4
+      titolo: Spot 2012 sul rischio incendi boschivi
+      url: https://youtu.be/53yYyLsFW3Q
   comunicazioni/2025-06-15-campagna-aib-facile:
     title: 'Attenzione: rischio incendio boschivo dal 15 giugno'
     url: /comunicazioni/2025-06-15-campagna-aib-facile/
@@ -273,18 +271,6 @@ pagine:
       url: https://youtu.be/qxQJQEjzRwc
     - anchored:
       - boschivo
-      canale: abili-a-proteggere
-      id: GVKQznWv4eE
-      is_lis: true
-      overlap:
-      - antincendio
-      - boschivo
-      - campagna
-      score: 3.4
-      titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
-      url: https://youtu.be/GVKQznWv4eE
-    - anchored:
-      - boschivo
       canale: io-non-rischio
       id: 9tYSNBQY7OY
       is_lis: true
@@ -296,6 +282,18 @@ pagine:
       score: 3.2
       titolo: Io non rischio Incendi Boschivi – Cosa sapere e cosa fare fin da subito
       url: https://youtu.be/9tYSNBQY7OY
+    - anchored:
+      - boschivo
+      canale: abili-a-proteggere
+      id: GVKQznWv4eE
+      is_lis: true
+      overlap:
+      - antincendio
+      - boschivo
+      - campagna
+      score: 3.0
+      titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
+      url: https://youtu.be/GVKQznWv4eE
     - anchored:
       - boschivo
       canale: dpc-gov
@@ -388,16 +386,6 @@ pagine:
       score: 4.2
       titolo: 'Sicuri in Montagna - Scalare l''acqua: affrontare le cascate di ghiaccio in sicurezza'
       url: https://youtu.be/9UvB3YmhwtA
-    - anchored:
-      - montagna
-      canale: cnsas
-      id: -mLtpjwaJVQ
-      is_lis: false
-      overlap:
-      - montagna
-      score: 2.0
-      titolo: Sicuri in Montagna - Come chiamare i soccorsi in ambiente impervio
-      url: https://youtu.be/-mLtpjwaJVQ
   comunicazioni/2026-01-31-neve-castelli-romani-organizzazione-facile:
     title: 'Neve ai Castelli Romani: cosa fare'
     url: /comunicazioni/2026-01-31-neve-castelli-romani-organizzazione-facile/
@@ -786,7 +774,7 @@ pagine:
       - boschivo
       - campagna
       - estiva
-      score: 5.6
+      score: 5.2
       titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
       url: https://youtu.be/GVKQznWv4eE
     - anchored:
@@ -1247,54 +1235,6 @@ pagine:
       score: 9.0
       titolo: La ricostruzione del disastro di Chernobyl, come e perché si è arrivati all'esplosione del reattore
       url: https://youtu.be/4G-cqJy_6_o
-  comunicazioni/2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa:
-    title: 'Terremoto: cosa fare durante la scossa e nei minuti successivi'
-    url: /comunicazioni/2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa/
-    video:
-    - anchored:
-      - scossa
-      canale: dpc-gov
-      id: 0--y1oKrz-4
-      is_lis: false
-      overlap:
-      - scossa
-      - terremoto
-      score: 6.6
-      titolo: San Carlo, i danni dopo la scossa del 20 maggio – Terremoto Emilia
-      url: https://youtu.be/0--y1oKrz-4
-    - anchored:
-      - scossa
-      canale: dpc-gov
-      id: 4-r2rPCOEPM
-      is_lis: false
-      overlap:
-      - scossa
-      - terremoto
-      score: 6.6
-      titolo: Finale Emilia, i danni dopo la scossa del 20 maggio – Terremoto Emilia
-      url: https://youtu.be/4-r2rPCOEPM
-    - anchored:
-      - scossa
-      canale: dpc-gov
-      id: KjQSuaVrjlY
-      is_lis: false
-      overlap:
-      - scossa
-      - terremoto
-      score: 6.6
-      titolo: Mirandola, i danni dopo la scossa del 29 maggio – Terremoto Emilia
-      url: https://youtu.be/KjQSuaVrjlY
-    - anchored:
-      - scossa
-      canale: dpc-gov
-      id: beYhBfj9LoE
-      is_lis: false
-      overlap:
-      - scossa
-      - terremoto
-      score: 6.6
-      titolo: Sant'Agostino, i danni dopo la scossa del 20 maggio – Terremoto Emilia
-      url: https://youtu.be/beYhBfj9LoE
   comunicazioni/2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa-facile:
     title: 'Terremoto: cosa fare durante e dopo la scossa'
     url: /comunicazioni/2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa-facile/
@@ -2261,6 +2201,20 @@ pagine:
       url: https://youtu.be/7NKVJqnbt8c
     - anchored:
       - montagna
+      - sentiero
+      - sicuri
+      canale: cnsas
+      id: JEhyPLmVrEc
+      is_lis: false
+      overlap:
+      - montagna
+      - sentiero
+      - sicuri
+      score: 10.0
+      titolo: 'Sicuri sul Sentiero 2022 - Quando il Paese fa rete: montagna e sicurezza'
+      url: https://youtu.be/JEhyPLmVrEc
+    - anchored:
+      - montagna
       - sicuri
       canale: cnsas
       id: ka1TVa3ZAUw
@@ -2287,19 +2241,6 @@ pagine:
       score: 9.2
       titolo: 'Sicuri in Montagna - Freeride: free... Ma con delle regole'
       url: https://youtu.be/YMfRmwyiQv4
-    - anchored:
-      - montagna
-      - sicuri
-      canale: cnsas
-      id: IWz8cJyJWsQ
-      is_lis: false
-      overlap:
-      - montagna
-      - salita
-      - sicuri
-      score: 9.0
-      titolo: 'Sicuri in Montagna: scialpinismo, la salita'
-      url: https://youtu.be/IWz8cJyJWsQ
   comunicazioni/2026-05-30-escursioni-estive-sicurezza-montagna-castelli-facile:
     title: 'Escursioni in montagna: come stare al sicuro'
     url: /comunicazioni/2026-05-30-escursioni-estive-sicurezza-montagna-castelli-facile/
@@ -2616,23 +2557,9 @@ pagine:
       - boschivo
       - campagna
       - estiva
-      score: 10.6
+      score: 6.4
       titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
       url: https://youtu.be/GVKQznWv4eE
-    - anchored:
-      - antincendio
-      - boschivo
-      - campagna
-      canale: cmcc
-      id: qhaxcNNmi-E
-      is_lis: false
-      overlap:
-      - antincendio
-      - boschivo
-      - campagna
-      score: 9.6
-      titolo: 'Campagna antincendio boschivo: lo spot del progetto OFIDIA2'
-      url: https://youtu.be/qhaxcNNmi-E
     - anchored:
       - boschivo
       canale: dpc-gov
@@ -2669,6 +2596,18 @@ pagine:
       score: 2.2
       titolo: Io non rischio Incendi Boschivi – Cosa sapere e cosa fare fin da subito
       url: https://youtu.be/9tYSNBQY7OY
+    - anchored:
+      - boschivo
+      canale: io-non-rischio
+      id: pvk-P_5WBBw
+      is_lis: true
+      overlap:
+      - boschivo
+      - incendio
+      - rischio
+      score: 2.2
+      titolo: Io non rischio Incendi Boschivi – Domande e risposte
+      url: https://youtu.be/pvk-P_5WBBw
   comunicazioni/2026-06-08-medicanes-cicloni-mediterranei-protezione-civile:
     title: 'Medicanes: i cicloni mediterranei simili agli uragani'
     url: /comunicazioni/2026-06-08-medicanes-cicloni-mediterranei-protezione-civile/
@@ -2831,23 +2770,9 @@ pagine:
       - boschivo
       - campagna
       - estiva
-      score: 6.6
+      score: 5.8
       titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
       url: https://youtu.be/GVKQznWv4eE
-    - anchored:
-      - antincendio
-      - boschivo
-      - campagna
-      canale: cmcc
-      id: qhaxcNNmi-E
-      is_lis: false
-      overlap:
-      - antincendio
-      - boschivo
-      - campagna
-      score: 5.6
-      titolo: 'Campagna antincendio boschivo: lo spot del progetto OFIDIA2'
-      url: https://youtu.be/qhaxcNNmi-E
     - anchored:
       - boschivo
       canale: io-non-rischio
@@ -3133,7 +3058,7 @@ pagine:
       - antincendio
       - boschivo
       - campagna
-      score: 2.8
+      score: 2.4
       titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
       url: https://youtu.be/GVKQznWv4eE
   comunicazioni/2026-06-20-solstizio-estate-massima-attenzione-incendi:
@@ -3663,23 +3588,9 @@ pagine:
       - antincendio
       - boschivo
       - campagna
-      score: 8.4
+      score: 4.2
       titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
       url: https://youtu.be/GVKQznWv4eE
-    - anchored:
-      - antincendio
-      - boschivo
-      - campagna
-      canale: cmcc
-      id: qhaxcNNmi-E
-      is_lis: false
-      overlap:
-      - antincendio
-      - boschivo
-      - campagna
-      score: 8.4
-      titolo: 'Campagna antincendio boschivo: lo spot del progetto OFIDIA2'
-      url: https://youtu.be/qhaxcNNmi-E
   comunicazioni/2026-07-03-iride-costellazione-osservazione-terra-operativa:
     title: 'IRIDE operativa nel 2026: i nuovi occhi italiani sul territorio'
     url: /comunicazioni/2026-07-03-iride-costellazione-osservazione-terra-operativa/
@@ -3978,7 +3889,7 @@ pagine:
       - antincendio
       - boschivo
       - campagna
-      score: 4.6
+      score: 4.2
       titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
       url: https://youtu.be/GVKQznWv4eE
     - anchored:
@@ -4032,23 +3943,9 @@ pagine:
       - antincendio
       - boschivo
       - campagna
-      score: 8.4
+      score: 4.2
       titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
       url: https://youtu.be/GVKQznWv4eE
-    - anchored:
-      - antincendio
-      - boschivo
-      - campagna
-      canale: cmcc
-      id: qhaxcNNmi-E
-      is_lis: false
-      overlap:
-      - antincendio
-      - boschivo
-      - campagna
-      score: 8.4
-      titolo: 'Campagna antincendio boschivo: lo spot del progetto OFIDIA2'
-      url: https://youtu.be/qhaxcNNmi-E
   comunicazioni/2026-07-17-grandine-estiva-danni-protezione:
     title: 'Grandine estiva: riconoscerla, prevenirla, gestire i danni'
     url: /comunicazioni/2026-07-17-grandine-estiva-danni-protezione/
@@ -4474,18 +4371,6 @@ pagine:
     video:
     - anchored:
       - boschivo
-      canale: abili-a-proteggere
-      id: GVKQznWv4eE
-      is_lis: true
-      overlap:
-      - antincendio
-      - boschivo
-      - campagna
-      score: 3.4
-      titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
-      url: https://youtu.be/GVKQznWv4eE
-    - anchored:
-      - boschivo
       canale: dpc-gov
       id: FPLoljB20QA
       is_lis: false
@@ -4496,6 +4381,18 @@ pagine:
       score: 3.4
       titolo: 'Incendi boschivi Sardegna: Curcio fa il punto della situazione'
       url: https://youtu.be/FPLoljB20QA
+    - anchored:
+      - boschivo
+      canale: abili-a-proteggere
+      id: GVKQznWv4eE
+      is_lis: true
+      overlap:
+      - antincendio
+      - boschivo
+      - campagna
+      score: 3.0
+      titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
+      url: https://youtu.be/GVKQznWv4eE
     - anchored:
       - boschivo
       canale: dpc-gov
@@ -4629,7 +4526,7 @@ pagine:
       - antincendio
       - boschivo
       - campagna
-      score: 3.4
+      score: 3.0
       titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
       url: https://youtu.be/GVKQznWv4eE
   comunicazioni/2026-08-01-incendi-boschivi-dati-ispra-italia-europa:
@@ -4645,7 +4542,7 @@ pagine:
       - antincendio
       - boschivo
       - campagna
-      score: 3.4
+      score: 3.0
       titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
       url: https://youtu.be/GVKQznWv4eE
     - anchored:
@@ -4710,7 +4607,7 @@ pagine:
       - antincendio
       - boschivo
       - campagna
-      score: 3.4
+      score: 3.0
       titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
       url: https://youtu.be/GVKQznWv4eE
     - anchored:
@@ -4777,17 +4674,6 @@ pagine:
       url: https://youtu.be/9tYSNBQY7OY
     - anchored:
       - boschivo
-      canale: abili-a-proteggere
-      id: GVKQznWv4eE
-      is_lis: true
-      overlap:
-      - boschivo
-      - campagna
-      score: 2.8
-      titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
-      url: https://youtu.be/GVKQznWv4eE
-    - anchored:
-      - boschivo
       canale: dpc-gov
       id: 4UBxxIfaGL4
       is_lis: false
@@ -4822,6 +4708,18 @@ pagine:
       score: 2.8
       titolo: Io non rischio Incendi Boschivi – Domande e risposte
       url: https://youtu.be/pvk-P_5WBBw
+    - anchored:
+      - boschivo
+      canale: io-non-rischio
+      id: qxQJQEjzRwc
+      is_lis: true
+      overlap:
+      - boschivo
+      - incendio
+      - rischio
+      score: 2.8
+      titolo: Io non rischio Incendi boschivi - Cosa fare per evitare, se avvisti, se sei coinvolto in un incendio
+      url: https://youtu.be/qxQJQEjzRwc
   comunicazioni/2026-08-05-temporali-pomeridiani-castelli-romani:
     title: 'Temporali pomeridiani nei Castelli Romani: cosa attendersi ad agosto'
     url: /comunicazioni/2026-08-05-temporali-pomeridiani-castelli-romani/
@@ -4939,7 +4837,7 @@ pagine:
       - antincendio
       - boschivo
       - campagna
-      score: 3.4
+      score: 3.0
       titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
       url: https://youtu.be/GVKQznWv4eE
     - anchored:
@@ -5068,22 +4966,9 @@ pagine:
       - antincendio
       - boschivo
       - campagna
-      score: 4.4
+      score: 3.6
       titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
       url: https://youtu.be/GVKQznWv4eE
-    - anchored:
-      - antincendio
-      - campagna
-      canale: cmcc
-      id: qhaxcNNmi-E
-      is_lis: false
-      overlap:
-      - antincendio
-      - boschivo
-      - campagna
-      score: 4.4
-      titolo: 'Campagna antincendio boschivo: lo spot del progetto OFIDIA2'
-      url: https://youtu.be/qhaxcNNmi-E
   comunicazioni/2026-08-14-gemellaggio-aib-fondi-turno-mensa-ferragosto:
     title: 'Gemellaggio AIB di Fondi: i volontari di Genzano in turno alla mensa del campo'
     url: /comunicazioni/2026-08-14-gemellaggio-aib-fondi-turno-mensa-ferragosto/
@@ -5098,7 +4983,7 @@ pagine:
       - antincendio
       - boschivo
       - campagna
-      score: 3.4
+      score: 3.0
       titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
       url: https://youtu.be/GVKQznWv4eE
     - anchored:
@@ -5199,7 +5084,7 @@ pagine:
       - antincendio
       - boschivo
       - campagna
-      score: 3.4
+      score: 3.0
       titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
       url: https://youtu.be/GVKQznWv4eE
   comunicazioni/2026-08-18-siccita-lazio-risorsa-idrica:
@@ -5618,7 +5503,7 @@ pagine:
       - antincendio
       - campagna
       - estiva
-      score: 3.2
+      score: 2.8
       titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
       url: https://youtu.be/GVKQznWv4eE
   comunicazioni/2026-08-28-tuscolo-quarta-uscita-drone-abbruciamento:
@@ -5711,23 +5596,9 @@ pagine:
       - antincendio
       - boschivo
       - campagna
-      score: 9.6
+      score: 5.4
       titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
       url: https://youtu.be/GVKQznWv4eE
-    - anchored:
-      - antincendio
-      - boschivo
-      - campagna
-      canale: cmcc
-      id: qhaxcNNmi-E
-      is_lis: false
-      overlap:
-      - antincendio
-      - boschivo
-      - campagna
-      score: 9.6
-      titolo: 'Campagna antincendio boschivo: lo spot del progetto OFIDIA2'
-      url: https://youtu.be/qhaxcNNmi-E
     - anchored:
       - boschivo
       canale: dpc-gov
@@ -5764,6 +5635,18 @@ pagine:
       score: 2.2
       titolo: Io non rischio Incendi Boschivi – Cosa sapere e cosa fare fin da subito
       url: https://youtu.be/9tYSNBQY7OY
+    - anchored:
+      - boschivo
+      canale: io-non-rischio
+      id: pvk-P_5WBBw
+      is_lis: true
+      overlap:
+      - boschivo
+      - incendio
+      - rischio
+      score: 2.2
+      titolo: Io non rischio Incendi Boschivi – Domande e risposte
+      url: https://youtu.be/pvk-P_5WBBw
   comunicazioni/2026-08-31-chiusura-agosto-settembre-agenda:
     title: 'Settembre 2026: l''agenda della Protezione Civile di Genzano di Roma'
     url: /comunicazioni/2026-08-31-chiusura-agosto-settembre-agenda/
@@ -7840,21 +7723,9 @@ pagine:
       - boschivo
       - campagna
       - estiva
-      score: 5.8
+      score: 5.0
       titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
       url: https://youtu.be/GVKQznWv4eE
-    - anchored:
-      - boschivo
-      - campagna
-      canale: cmcc
-      id: qhaxcNNmi-E
-      is_lis: false
-      overlap:
-      - boschivo
-      - campagna
-      score: 3.8
-      titolo: 'Campagna antincendio boschivo: lo spot del progetto OFIDIA2'
-      url: https://youtu.be/qhaxcNNmi-E
     - anchored:
       - boschivo
       canale: dpc-gov
@@ -7892,6 +7763,18 @@ pagine:
       score: 3.0
       titolo: Spot 2006 sul rischio incendi boschivi
       url: https://youtu.be/4UBxxIfaGL4
+    - anchored:
+      - boschivo
+      canale: dpc-gov
+      id: 53yYyLsFW3Q
+      is_lis: false
+      overlap:
+      - boschivo
+      - incendio
+      - rischio
+      score: 3.0
+      titolo: Spot 2012 sul rischio incendi boschivi
+      url: https://youtu.be/53yYyLsFW3Q
   conoscere/catalogo-dei-rischi/rischio-maremoto:
     title: Il rischio da maremoto (tsunami) nel Mediterraneo
     url: /conoscere/catalogo-dei-rischi/rischio-maremoto/
@@ -8010,17 +7893,6 @@ pagine:
       url: https://youtu.be/yoTTJ9BJYIM
     - anchored:
       - nucleare
-      canale: rai-news
-      id: 8EA8swJodJs
-      is_lis: false
-      overlap:
-      - dagli
-      - nucleare
-      score: 7.0
-      titolo: La storia del nucleare in Iran, dagli anni '50 a oggi
-      url: https://youtu.be/8EA8swJodJs
-    - anchored:
-      - nucleare
       canale: geopop
       id: VNWX06NkitE
       is_lis: false
@@ -8030,6 +7902,36 @@ pagine:
       score: 6.2
       titolo: 'Come sopravvivere a un''esplosione nucleare: guida tecnica per salvarsi da un attacco (ipotetico)'
       url: https://youtu.be/VNWX06NkitE
+    - anchored:
+      - nucleare
+      canale: geopop
+      id: gMJqtGZ9MmU
+      is_lis: false
+      overlap:
+      - nucleare
+      score: 6.0
+      titolo: 'Bunker antiatomici: come sono costruiti e come resistono a un''esplosione nucleare?'
+      url: https://youtu.be/gMJqtGZ9MmU
+    - anchored:
+      - nucleare
+      canale: geopop
+      id: ogsZv_kQVZ4
+      is_lis: false
+      overlap:
+      - nucleare
+      score: 6.0
+      titolo: 'Chernobyl 35 anni dopo: come il disastro nucleare ha cambiato oggi la nostra concezione del nucleare'
+      url: https://youtu.be/ogsZv_kQVZ4
+    - anchored:
+      - nucleare
+      canale: wired-italia
+      id: _rMxsOBvXVY
+      is_lis: false
+      overlap:
+      - nucleare
+      score: 6.0
+      titolo: Uno storico del nucleare risponde alle domande sulla guerra nucleare | Tech Support | Wired Italia
+      url: https://youtu.be/_rMxsOBvXVY
   conoscere/catalogo-dei-rischi/rischio-sanitario:
     title: 'Il rischio sanitario: emergenze, epidemie e pandemie'
     url: /conoscere/catalogo-dei-rischi/rischio-sanitario/
@@ -8418,22 +8320,9 @@ pagine:
       - antincendio
       - boschivo
       - campagna
-      score: 3.8
+      score: 3.0
       titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
       url: https://youtu.be/GVKQznWv4eE
-    - anchored:
-      - antincendio
-      - campagna
-      canale: cmcc
-      id: qhaxcNNmi-E
-      is_lis: false
-      overlap:
-      - antincendio
-      - boschivo
-      - campagna
-      score: 3.8
-      titolo: 'Campagna antincendio boschivo: lo spot del progetto OFIDIA2'
-      url: https://youtu.be/qhaxcNNmi-E
   dossier/genzano-castelli-i-nostri-rischi:
     title: I rischi di casa nostra
     url: /dossier/genzano-castelli-i-nostri-rischi/
@@ -8908,6 +8797,17 @@ pagine:
       score: 3.0
       titolo: '"La lezione di Fukushima": Margherita Fronte al XII Convegno Nazionale del Cicap'
       url: https://youtu.be/Xw_qqKMOEnQ
+    - anchored:
+      - chernobyl
+      canale: geopop
+      id: 4G-cqJy_6_o
+      is_lis: false
+      overlap:
+      - chernobyl
+      - reattore
+      score: 3.0
+      titolo: La ricostruzione del disastro di Chernobyl, come e perché si è arrivati all'esplosione del reattore
+      url: https://youtu.be/4G-cqJy_6_o
   dossier/prove-generali-del-disastro:
     title: Prove generali del disastro
     url: /dossier/prove-generali-del-disastro/
@@ -10646,22 +10546,9 @@ pagine:
       - antincendio
       - boschivo
       - campagna
-      score: 4.4
+      score: 3.6
       titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
       url: https://youtu.be/GVKQznWv4eE
-    - anchored:
-      - boschivo
-      - campagna
-      canale: cmcc
-      id: qhaxcNNmi-E
-      is_lis: false
-      overlap:
-      - antincendio
-      - boschivo
-      - campagna
-      score: 4.4
-      titolo: 'Campagna antincendio boschivo: lo spot del progetto OFIDIA2'
-      url: https://youtu.be/qhaxcNNmi-E
     - anchored:
       - boschivo
       canale: dpc-gov
@@ -10698,6 +10585,18 @@ pagine:
       score: 3.0
       titolo: Io non rischio Incendi Boschivi – Cosa sapere e cosa fare fin da subito
       url: https://youtu.be/9tYSNBQY7OY
+    - anchored:
+      - boschivo
+      canale: io-non-rischio
+      id: pvk-P_5WBBw
+      is_lis: true
+      overlap:
+      - boschivo
+      - incendio
+      - rischio
+      score: 3.0
+      titolo: Io non rischio Incendi Boschivi – Domande e risposte
+      url: https://youtu.be/pvk-P_5WBBw
   manuale/716-rischio-maremoto:
     title: Il rischio maremoto (tsunami)
     url: /manuale/716-rischio-maremoto/
@@ -10861,6 +10760,46 @@ pagine:
       score: 7.0
       titolo: 'Come sopravvivere a un''esplosione nucleare: guida tecnica per salvarsi da un attacco (ipotetico)'
       url: https://youtu.be/VNWX06NkitE
+    - anchored:
+      - nucleare
+      canale: geopop
+      id: gMJqtGZ9MmU
+      is_lis: false
+      overlap:
+      - nucleare
+      score: 6.0
+      titolo: 'Bunker antiatomici: come sono costruiti e come resistono a un''esplosione nucleare?'
+      url: https://youtu.be/gMJqtGZ9MmU
+    - anchored:
+      - nucleare
+      canale: geopop
+      id: ogsZv_kQVZ4
+      is_lis: false
+      overlap:
+      - nucleare
+      score: 6.0
+      titolo: 'Chernobyl 35 anni dopo: come il disastro nucleare ha cambiato oggi la nostra concezione del nucleare'
+      url: https://youtu.be/ogsZv_kQVZ4
+    - anchored:
+      - nucleare
+      canale: geopop
+      id: yoTTJ9BJYIM
+      is_lis: false
+      overlap:
+      - nucleare
+      score: 6.0
+      titolo: Il disastro nucleare di Fukushima - molto diverso da Chernobyl
+      url: https://youtu.be/yoTTJ9BJYIM
+    - anchored:
+      - nucleare
+      canale: wired-italia
+      id: _rMxsOBvXVY
+      is_lis: false
+      overlap:
+      - nucleare
+      score: 6.0
+      titolo: Uno storico del nucleare risponde alle domande sulla guerra nucleare | Tech Support | Wired Italia
+      url: https://youtu.be/_rMxsOBvXVY
   manuale/720-rischio-idrico-siccita:
     title: 'Il rischio idrico: la siccità e la scarsità d''acqua'
     url: /manuale/720-rischio-idrico-siccita/
@@ -11233,6 +11172,16 @@ pagine:
       score: 2.6
       titolo: Il Capo Dipartimento fa il punto sulle attività in corso – Frana Niscemi 2026
       url: https://youtu.be/9olWlF0VMDM
+    - anchored:
+      - frana
+      canale: cima-foundation
+      id: gsBgcnO6qfc
+      is_lis: false
+      overlap:
+      - frana
+      score: 2.0
+      titolo: Frana di Arenzano 2016
+      url: https://youtu.be/gsBgcnO6qfc
   rischi-prevenzione/rischio-incendio:
     title: Rischio Incendi Boschivi
     url: /rischi-prevenzione/rischio-incendio/
@@ -11246,7 +11195,7 @@ pagine:
       - antincendio
       - boschivo
       - campagna
-      score: 3.4
+      score: 3.0
       titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
       url: https://youtu.be/GVKQznWv4eE
     - anchored:
@@ -11325,6 +11274,46 @@ pagine:
       score: 6.0
       titolo: 'Come sopravvivere a un''esplosione nucleare: guida tecnica per salvarsi da un attacco (ipotetico)'
       url: https://youtu.be/VNWX06NkitE
+    - anchored:
+      - nucleare
+      canale: geopop
+      id: gMJqtGZ9MmU
+      is_lis: false
+      overlap:
+      - nucleare
+      score: 6.0
+      titolo: 'Bunker antiatomici: come sono costruiti e come resistono a un''esplosione nucleare?'
+      url: https://youtu.be/gMJqtGZ9MmU
+    - anchored:
+      - nucleare
+      canale: geopop
+      id: ogsZv_kQVZ4
+      is_lis: false
+      overlap:
+      - nucleare
+      score: 6.0
+      titolo: 'Chernobyl 35 anni dopo: come il disastro nucleare ha cambiato oggi la nostra concezione del nucleare'
+      url: https://youtu.be/ogsZv_kQVZ4
+    - anchored:
+      - nucleare
+      canale: geopop
+      id: yoTTJ9BJYIM
+      is_lis: false
+      overlap:
+      - nucleare
+      score: 6.0
+      titolo: Il disastro nucleare di Fukushima - molto diverso da Chernobyl
+      url: https://youtu.be/yoTTJ9BJYIM
+    - anchored:
+      - nucleare
+      canale: wired-italia
+      id: _rMxsOBvXVY
+      is_lis: false
+      overlap:
+      - nucleare
+      score: 6.0
+      titolo: Uno storico del nucleare risponde alle domande sulla guerra nucleare | Tech Support | Wired Italia
+      url: https://youtu.be/_rMxsOBvXVY
   rischi-prevenzione/rischio-sismico:
     title: 'Rischio Sismico: Cosa Fare'
     url: /rischi-prevenzione/rischio-sismico/
