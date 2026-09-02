@@ -1,7 +1,7 @@
 ---
 title: "Ulivi e canneto in fiamme a Campoleone, con il fuoco vicino alle case"
 date: 2026-08-30T00:02:00+02:00
-description: "Domenica 30 agosto, poco dopo le 13, l'attivazione per un incendio a Campoleone: bruciate decine di ulivi, fiamme a ridosso delle abitazioni."
+description: "Domenica 30 agosto, poco dopo le 13, l'attivazione per un incendio a Campoleone: bruciati sterpaglie, canneto e decine di ulivi, fiamme a ridosso delle case."
 badge: "Attività"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -21,7 +21,7 @@ social_punti:
   - "Sul posto anche i Vigili del Fuoco, l'ALFA di Aprilia e la Protezione Civile di Lanuvio. Se vedi fumo o fiamme chiama subito il 112."
 ---
 
-Domenica 30 agosto 2026, poco dopo le 13, la **Sala Operativa regionale** ha attivato il Gruppo per un incendio in **via di Campoleone**, nei pressi della stazione ferroviaria. Il fuoco è partito da un campo di erba secca e ha risalito un canneto. È arrivato a poche decine di metri dalle abitazioni. Sono bruciate **decine di ulivi**. Le squadre hanno lavorato con i **Vigili del Fuoco**, con l'**ALFA** (Associazione Volontari Protezione Civile Aprilia) e con la **Protezione Civile di Lanuvio**.
+Domenica 30 agosto 2026, poco dopo le 13, la **Sala Operativa regionale** ha attivato il Gruppo per un incendio in **via di Campoleone**, nei pressi della stazione ferroviaria. Il fuoco è partito dalle **sterpaglie** di un campo di erba secca, ha risalito un **canneto** e ha raggiunto un uliveto. È arrivato a poche decine di metri dalle abitazioni. Sono bruciate **decine di ulivi**. Le foto mostrano solo una parte dell'area percorsa dal fuoco. Le squadre hanno lavorato con i **Vigili del Fuoco**, con l'**ALFA** (Associazione Volontari Protezione Civile Aprilia) e con la **Protezione Civile di Lanuvio**.
 
 ## Il fronte vicino alle case
 

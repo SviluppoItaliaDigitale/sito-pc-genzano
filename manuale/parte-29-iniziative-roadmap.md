@@ -61,6 +61,7 @@ L'hub `/giochi/` è ora un **launcher** con tutti i giochi a colpo d'occhio, bad
 
 - **QR articoli**: ogni articolo ha un bottone "Scarica QR" (in `page-tools`). I QR stanno in `static/qr/`, rigenerati da `scripts/genera-qr-articoli.py` (vedi **Parte 1, Passo 1.13-bis**). Da maggio 2026 il workflow `deploy.yml` include uno step idempotente che genera i QR mancanti al volo: chi pubblica da mobile senza lanciare lo script non perde più il bottone "Scarica QR".
 - **Open Data**: la pagina `/open-data/` (dataset delle attività del Gruppo in CSV/JSON, CC BY 4.0) è stata reinserita nel dropdown Risorse.
+  - **Come si aggiornano i dataset degli interventi.** Si esporta il registro dal gestionale (login umano) e si lancia uno dei due script, a seconda dell'export: `scripts/genera-open-data-interventi.py` se l'export è **cumulativo** (parte dal 4 aprile 2026: ricalcola tutto), `scripts/aggiorna-open-data-delta.py` se è **parziale** (filtrato a un periodo: aggiunge ai totali pubblicati solo gli interventi nuovi). Mai rigenerare da un export parziale: cancellerebbe i mesi precedenti. Se il delta trova volontari che compaiono solo nelle righe nuove si ferma e chiede quanti sono davvero al primo intervento (`--volontari-nuovi N`). Dettagli in `.claude/rules/10-automazioni-github-actions.md` § "Open data interventi — export parziale". Il file `.xlsx` non si committa mai.
 
 ## 29.13 Manutenzione collaterale
 
