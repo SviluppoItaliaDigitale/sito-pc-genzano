@@ -119,7 +119,7 @@ body:not(.chrome-loaded) > .app-content {
   border-radius: 8px;
   padding: 1rem 1.5rem;
   font-size: 0.82rem;
-  color: #6c757d;
+  color: #5c636a; /* 5.8:1 su #f8f9fa — WCAG 1.4.3 (il #6c757d dava 4.45:1, audit 01/09/2026) */
   margin-top: 2rem;
 }
 .app-disclaimer strong {
