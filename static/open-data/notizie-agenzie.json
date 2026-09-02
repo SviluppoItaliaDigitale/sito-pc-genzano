@@ -5,11 +5,23 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-01T22:37:43+00:00",
+  "generato": "2026-09-02T00:33:30+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-01T23:40:22+00:00",
+   "fonte": "ANSA",
+   "titolo": "Di Battista: 'Mi sento meglio, parto da Cuba questo venerdì'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/02/di-battista-mi-sento-meglio-parto-da-cuba-questo-venerdi_523d6f03-14e5-430d-bfec-eca59ef1ed5b.html"
+  },
+  {
+   "data": "2026-09-01T22:39:47+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "US Open, Musetti e Bellucci al secondo turno",
+   "url": "https://www.adnkronos.com/sport/us-open-musetti-risultati-primo-turno_3gL0B03AFWbDdyezPhpmKD"
+  },
   {
    "data": "2026-09-01T22:19:44+00:00",
    "fonte": "ANSA",
@@ -107,12 +119,6 @@
    "url": "https://www.adnkronos.com/cronaca/monviso-frana-rifugio-sella_2e4lR9YR6ROr3GF6kECGBT"
   },
   {
-   "data": "2026-09-01T19:54:20+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Fuga contromano in autostrada, bloccata dalla polizia dopo 40 minuti",
-   "url": "https://www.adnkronos.com/cronaca/a1-autostrada-contromano-donna-cannabis_31YfD9u5qC77e1BY5KKG5t"
-  },
-  {
    "data": "2026-09-01T19:49:43+00:00",
    "fonte": "ANSA",
    "titolo": "Mario Calabresi pronto a candidarsi a Milano, 'voglio percorrere una strada nuova'",
@@ -183,12 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Parte Venezia 83. Apre Ink di Boyle, Leone a Clooney",
    "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/01/mostra-del-cinema-parte-venezia-83.-apre-ink-di-boyle-leone_2ce120a7-8bca-4f66-b3d0-1ace48a46123.html"
-  },
-  {
-   "data": "2026-09-01T18:18:03+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Tragedia alle cascate della Brusia, morto in acqua un 35enne",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/01/tragedia-alle-cascate-della-brusia-morto-in-acqua-un-35enne_6355d175-358b-4c77-a03b-acb622f38061.html"
   }
  ]
 }
