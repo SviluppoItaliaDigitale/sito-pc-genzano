@@ -42,7 +42,7 @@ Più è forte la corrente ascensionale, più grande è il chicco. Temporali seve
 ## Cosa fare durante una grandinata
 
 ### All'aperto
-- **rifugiarsi** subito sotto un riparo solido (non tettoia sottile o sotto alberi);
+- **rifugiarsi** subito sotto un riparo solido (non sotto una tettoia sottile né sotto gli alberi);
 - **proteggere** la testa con uno zaino, casco, mani se non c'è nient'altro;
 - **se in auto**, fermarsi in luogo sicuro lontano da alberi o pali.
 
