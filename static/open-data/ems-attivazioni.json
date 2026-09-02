@@ -1,12 +1,28 @@
 {
  "_snapshot": {
   "fonte": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/",
-  "generato": "2026-09-02T04:59:49+00:00",
+  "generato": "2026-09-02T09:23:44+00:00",
   "licenza": "Copernicus Emergency Management Service — dati pubblici",
   "nota": "Copia locale: l'API non espone CORS, il browser non può leggerla direttamente."
  },
  "count": 50,
  "results": [
+  {
+   "activationTime": "2026-09-02T08:00:00",
+   "category": "Storm",
+   "centroid": "POINT (10.08183610452019 45.164037169774694)",
+   "closed": false,
+   "code": "EMSR928",
+   "countries": [
+    "Italy"
+   ],
+   "eventTime": "2026-08-28T15:00:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-09-02T09:06:25.408273",
+   "n_aois": 0,
+   "n_products": 0,
+   "name": "Storm in Emilia Romagna, Italy"
+  },
   {
    "activationTime": "2026-08-26T09:53:00",
    "category": "Flood",
@@ -18,7 +34,7 @@
    ],
    "eventTime": "2026-08-25T22:00:00",
    "gdacsId": "FL1104124",
-   "lastUpdate": "2026-09-02T03:19:34.079297",
+   "lastUpdate": "2026-09-02T07:52:24.154510",
    "n_aois": 6,
    "n_products": 5,
    "name": "Flood in Nepal"
@@ -131,7 +147,7 @@
    ],
    "eventTime": "2026-08-13T12:55:00",
    "gdacsId": null,
-   "lastUpdate": "2026-08-31T07:17:08.428948",
+   "lastUpdate": "2026-09-02T07:28:32.393846",
    "n_aois": 3,
    "n_products": 10,
    "name": "Wildfire in Huertgen Forest, Germany and Belgium"
@@ -793,22 +809,6 @@
    "n_aois": 1,
    "n_products": 2,
    "name": "Wildfire in Tuscany, Italy"
-  },
-  {
-   "activationTime": "2026-04-21T14:34:00",
-   "category": "Storm",
-   "centroid": "POINT (151.75069008400766 7.375840981096835)",
-   "closed": true,
-   "code": "EMSR872",
-   "countries": [
-    "Micronesia"
-   ],
-   "eventTime": "2026-04-08T22:00:00",
-   "gdacsId": "TC1001270",
-   "lastUpdate": "2026-05-19T10:47:37.650194",
-   "n_aois": 19,
-   "n_products": 18,
-   "name": "Tropical Cyclone Sinlaku in Micronesia"
   }
  ]
 }
