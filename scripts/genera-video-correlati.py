@@ -401,6 +401,14 @@ DENY_VIDEO_IDS = {
     "l4RqFtMYvjo",  # "Cos'è la valigetta nucleare" (geopolitica)
     "_OYMeOYJJFs",  # "Terremoto in Italia - 9 scosse in 20 minuti nell'Adriatico" (cronaca datata)
     "WI0S15ShvsM",  # "Cosa fa un geologo?" (orientamento professionale)
+    # Primo giro dei feed RSS settimanali (02/09/2026):
+    "adkGcJt0P6s",  # "Uranio: la risorsa chiave per la fissione nucleare" (economia mineraria)
+    "o9AKgqvEI4E",  # "Fusione nucleare USA, perché sono tutti così eccitati" (ricerca energetica)
+    "nrnpCGMiEQU",  # Solarino "Il temporale provoca un black out, subito risolto" (aneddoto, agganciava 7 pagine su temporali/fulmini)
+    "9olXT9ucTKk",  # Link4Universe "Lancio missione di SALVATAGGIO spaziale per il telescopio Swift" (spazio, non soccorso)
+    "58YdCsnjopE",  # Link4Universe "Dragonfly - Drone nucleare nei cieli di Titano" (sonda spaziale, non rischio radiologico)
+    "JHV2yok0r2I",  # Link4Universe "Dragonfly: andremo su Titano con un drone nucleare" (idem)
+    "8EA8swJodJs",  # rai-news "La storia del nucleare in Iran" (geopolitica, non rischio radiologico)
 }
 
 
@@ -499,6 +507,20 @@ DENY_PAGE_VIDEO = {
     ("dossier/radon-il-nemico-invisibile", "KG8xHth3n_8"),
     # Direttiva Seveso (rischio industriale) ≠ fiume Seveso (esondazione a Milano)
     ("comunicazioni/2026-10-20-rischio-industriale-seveso", "Zh_2N7Wulus"),
+    # Primo giro dei feed RSS settimanali (02/09/2026)
+    ("comunicazioni/2026-07-12-etiopia-magma-satelliti-monitoraggio-vulcani", "r8OySuD_Fi8"),  # esperimento didattico "vulcano di Anita" su articolo satellitare
+    ("dossier/genzano-castelli-i-nostri-rischi", "r8OySuD_Fi8"),
+    ("comunicazioni/2026-06-15-sentinel-1c-radar-deformazione-suolo", "Mep1CHoxbIk"),  # "Come funzionano i vulcani?" su articolo radar satellitare
+    ("dossier/il-lago-che-si-abbasso", "AfJMiAw2UnI"),  # parossismo Etna sul dossier dei laghi
+    ("dossier/vulcano-sotto-casa", "o5oUgB5U1RM"),  # volo spettacolare sull'Etna (cronaca)
+    ("comunicazioni/2026-01-31-neve-castelli-romani-organizzazione", "JEhyPLmVrEc"),  # sicurezza in montagna sull'organizzazione neve
+    ("comunicazioni/2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa", "cRTmbi7MFSo"),  # danni Emilia 2012 su articolo di comportamento
+    ("comunicazioni/2025-08-16-volontari-in-allerta", "HjhnA7sC1OU"),  # piano evacuazione Flegrei/Vesuvio su articolo dell'INCENDIO del Vesuvio
+    ("comunicazioni/2026-06-15-sentinel-1c-radar-deformazione-suolo", "_AYUUv69F3U"),  # esercitazione vulcanica su articolo radar satellitare
+    ("comunicazioni/2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa", "0--y1oKrz-4"),  # DPC "San Carlo, i danni dopo la scossa del 20…" danni Emilia 2012 su articolo di comportamento
+    ("comunicazioni/2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa", "4-r2rPCOEPM"),  # DPC "Finale Emilia, i danni dopo la scossa de…" danni Emilia 2012 su articolo di comportamento
+    ("comunicazioni/2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa", "KjQSuaVrjlY"),  # DPC "Mirandola, i danni dopo la scossa del 29…" danni Emilia 2012 su articolo di comportamento
+    ("comunicazioni/2026-04-27-terremoto-cosa-fare-durante-dopo-la-scossa", "beYhBfj9LoE"),  # DPC "Sant'Agostino, i danni dopo la scossa de…" danni Emilia 2012 su articolo di comportamento
 }
 
 
