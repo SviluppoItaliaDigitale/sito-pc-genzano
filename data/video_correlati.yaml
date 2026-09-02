@@ -5,8 +5,8 @@
 # Usato dal partial Hugo `video-correlati.html` per renderizzare la
 # sezione 'Approfondimenti video' in fondo agli articoli pertinenti.
 #
-# Pagine coperte: 290 / Video unici usati: 250 /
-# Link totali: 939 (max 5 per pagina,
+# Pagine coperte: 291 / Video unici usati: 251 /
+# Link totali: 940 (max 5 per pagina,
 # soglia score >= 2.0).
 
 canali:
@@ -5592,6 +5592,19 @@ pagine:
       score: 2.0
       titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
       url: https://youtu.be/jy4kGt-eFWg
+  comunicazioni/2026-08-27-nepal-tibet-colata-detritica-bhote-koshi:
+    title: 'Nepal e Tibet, il ghiacciaio che crolla e la valle spazzata: cosa è successo e cosa insegna'
+    url: /comunicazioni/2026-08-27-nepal-tibet-colata-detritica-bhote-koshi/
+    video:
+    - anchored: []
+      canale: geopop
+      curato: true
+      id: SBzCu3Ej4cw
+      is_lis: false
+      overlap: []
+      score: 10.0
+      titolo: 'Cosa è successo in Nepal: la ricostruzione dei possibili scenari, dal ghiacciaio all’alluvione'
+      url: https://youtu.be/SBzCu3Ej4cw
   comunicazioni/2026-08-28-incendi-ardea-tor-de-cenci-pontina:
     title: 'Due incendi in un pomeriggio: da Ardea a Tor de'' Cenci, con il fumo sulla Pontina'
     url: /comunicazioni/2026-08-28-incendi-ardea-tor-de-cenci-pontina/

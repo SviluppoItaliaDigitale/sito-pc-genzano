@@ -451,6 +451,10 @@ FORCE_MATCHES = {
     "comunicazioni/2026-06-29-viareggio-2009-memoria-rischio-industriale": [
         "tnVy7Bl35Wg",  # Geopop — L'incidente ferroviario di Viareggio: ricostruzione 3D e cause
     ],
+    # Idrogeologico / glaciale
+    "comunicazioni/2026-08-27-nepal-tibet-colata-detritica-bhote-koshi": [
+        "SBzCu3Ej4cw",  # Geopop — Cosa è successo in Nepal: dal ghiacciaio all'alluvione (01/09/2026)
+    ],
     # Idraulico / clima
     "comunicazioni/2026-09-15-rischio-idraulico-urbano-genzano": [
         "QiLt_8rwC-s",  # Geopop — Il tunnel sotterraneo di Tokyo (G-Cans) contro le inondazioni

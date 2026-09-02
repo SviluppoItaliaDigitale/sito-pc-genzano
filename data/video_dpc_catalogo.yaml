@@ -3,7 +3,7 @@
 # Aggiornato periodicamente; usato da scripts/genera-video-correlati.py
 # per il cross-match con i contenuti del sito.
 #
-# Totale: 8716 video (18 canali).
+# Totale: 8717 video (18 canali).
 
 canali:
   abili-a-proteggere:
@@ -45,7 +45,7 @@ canali:
     nome: Geopop — divulgazione scientifica
     tematico_pc: false
     url: https://www.youtube.com/@geopop/videos
-    video_count: 1314
+    video_count: 1315
   ingv-terremoti:
     nome: INGV — Istituto Nazionale di Geofisica e Vulcanologia
     tematico_pc: true
@@ -14927,6 +14927,11 @@ video:
     id: SByw68bdytQ
     titolo: 'A largo di Ravenna c’è il primo impianto in Italia di cattura e stoccaggio CO2: ci siamo andati'
     url: https://youtu.be/SByw68bdytQ
+  geopop-SBzCu3Ej4cw:
+    canale: geopop
+    id: SBzCu3Ej4cw
+    titolo: 'Cosa è successo in Nepal: la ricostruzione dei possibili scenari, dal ghiacciaio all’alluvione'
+    url: https://youtu.be/SBzCu3Ej4cw
   geopop-SHEbzDzrB4c:
     canale: geopop
     id: SHEbzDzrB4c

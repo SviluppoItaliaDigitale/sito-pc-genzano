@@ -13,7 +13,9 @@
   - ogni feed limitato alle 50 voci più recenti;
   - <pubDate> emesso solo con una data reale: `date` del frontmatter,
     altrimenti l'ultima modifica git (.Lastmod, enableGitInfo), altrimenti
-    omesso (pubDate è opzionale nella specifica RSS 2.0).
+    omesso (pubDate è opzionale nella specifica RSS 2.0);
+  - niente <author>: in RSS 2.0 è un indirizzo email, non un nome; il campo
+    `autore` del frontmatter è un nome e lo renderebbe non valido.
 */ -}}
 {{- $limit := 50 -}}
 {{- $pages := slice -}}
@@ -36,14 +38,10 @@
     {{- with site.Copyright }}
     <copyright>{{ . }}</copyright>
     {{- end }}
-    {{- with $pages }}
-    {{- with (index . 0) }}
-    {{- $d := .Date }}{{ if $d.IsZero }}{{ $d = .Lastmod }}{{ end }}
-    {{- if not $d.IsZero }}
-    <lastBuildDate>{{ $d.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
-    {{- end }}
-    {{- end }}
-    {{- end }}
+    {{- /* lastBuildDate = momento della build: il feed cambia anche quando
+         un articolo già pubblicato viene modificato, e i lettori RSS usano
+         questa data per capire se il documento è cambiato (review 02/09/2026) */}}
+    <lastBuildDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
     {{- with .OutputFormats.Get "RSS" }}
     {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{- end }}
@@ -54,9 +52,6 @@
       {{- $d := .Date }}{{ if $d.IsZero }}{{ $d = .Lastmod }}{{ end }}
       {{- if not $d.IsZero }}
       <pubDate>{{ $d.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
-      {{- end }}
-      {{- with .Params.autore }}
-      <author>{{ . }}</author>
       {{- end }}
       <guid>{{ .Permalink }}</guid>
       <description>{{ .Summary | html }}</description>
