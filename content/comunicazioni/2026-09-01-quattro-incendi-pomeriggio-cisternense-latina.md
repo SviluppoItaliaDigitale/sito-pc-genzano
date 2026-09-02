@@ -16,7 +16,7 @@ lis_section: "rischio-incendio"
 social_citazione: "Settembre non è fuori stagione: la campagna antincendio boschivo nel Lazio arriva fino all'autunno."
 social_punti:
   - "Il 1° settembre 2026 le squadre del Gruppo sono uscite quattro volte per incendi, dal primo al tardo pomeriggio."
-  - "Vegetazione lungo strada, canneto e terreni incolti fra Aprilia e Latina; nel tardo pomeriggio un incendio di rifiuti in una proprietà privata abbandonata."
+  - "Vegetazione lungo strada, canneto e terreni incolti fra Aprilia e Latina; verso le 17 un incendio di rifiuti in un casale abbandonato a Latina."
   - "Attivazioni della SOUP regionale e dei Vigili del Fuoco, con Polizia Locale, Carabinieri, Carabinieri Forestali e altri Gruppi comunali sul posto."
   - "Se vedi fumo o fiamme chiama subito il 112: è l'unico numero da comporre."
 ---
@@ -31,7 +31,7 @@ Quattro uscite in un pomeriggio. Il 1° settembre 2026 le squadre del Gruppo Com
 
 **Verso le 15 e mezza, a Latina.** L'intervento più lungo: oltre due ore in via Monfalcone, su un incendio che dagli sterpi sale alle chiome degli alberi. Oltre ai Vigili del Fuoco, sono presenti Carabinieri, Carabinieri Forestali, Polizia, Polizia Locale e altri Gruppi di Protezione Civile.
 
-**Nel tardo pomeriggio, l'ultima.** Chiamano i Vigili del Fuoco per un incendio di rifiuti in una proprietà privata abbandonata. Sul posto arrivano anche Carabinieri, Polizia, Polizia Locale e altri Gruppi di Protezione Civile. Basta un'ora scarsa per chiuderlo.
+**Verso le 17, l'ultima, a Latina.** Chiamano i Vigili del Fuoco per un incendio di rifiuti in un casale abbandonato. Sul posto arrivano anche Carabinieri, Polizia, Polizia Locale e altri Gruppi di Protezione Civile. Basta un'ora scarsa per chiuderlo.
 
 ## Il pomeriggio in immagini
 
