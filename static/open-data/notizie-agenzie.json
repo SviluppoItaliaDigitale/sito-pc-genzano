@@ -5,11 +5,23 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-02T00:33:30+00:00",
+  "generato": "2026-09-02T04:59:46+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-02T04:47:53+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Dopo le vacanze gonfiore e intestino 'bloccato'? Gli esperti sfatano il mito detox e spiegano cosa fare ﻿",
+   "url": "https://www.adnkronos.com/salute/dieta-detox-dopo-vacanze-inutile-ecco-perche_3JzDllxlFauIqSmMC6CBCj"
+  },
+  {
+   "data": "2026-09-02T04:46:29+00:00",
+   "fonte": "ANSA",
+   "titolo": "Nuovi raid Usa in Iran, '11 morti'. Teheran risponde a Erbil e in Bahrein",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/01/nuovi-raid-usa-su-hormuz.-teheran-annuncia-rappresaglia-decisiva_31283740-20ee-47fd-beca-69d7232a9fa2.html"
+  },
   {
    "data": "2026-09-01T23:40:22+00:00",
    "fonte": "ANSA",
@@ -21,12 +33,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "US Open, Musetti e Bellucci al secondo turno",
    "url": "https://www.adnkronos.com/sport/us-open-musetti-risultati-primo-turno_3gL0B03AFWbDdyezPhpmKD"
-  },
-  {
-   "data": "2026-09-01T22:19:44+00:00",
-   "fonte": "ANSA",
-   "titolo": "Nuovi raid Usa su Hormuz. Colpita anche una festa di nozze, quattro morti e 50 feriti",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/01/nuovi-raid-usa-su-hormuz.-teheran-annuncia-rappresaglia-decisiva_31283740-20ee-47fd-beca-69d7232a9fa2.html"
   },
   {
    "data": "2026-09-01T22:11:44+00:00",
@@ -111,12 +117,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Orecchie di coniglio o polmone di cavallo? Lo snack 'choc' per i cani nel cuore di Cortina",
    "url": "https://www.adnkronos.com/cronaca/cani-cibo-orecchie-coniglio-cortina_rfF7DkJcgQ2TlMAfbjAiD"
-  },
-  {
-   "data": "2026-09-01T20:27:04+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Frana si stacca dal Monviso, verifiche su persone coinvolte",
-   "url": "https://www.adnkronos.com/cronaca/monviso-frana-rifugio-sella_2e4lR9YR6ROr3GF6kECGBT"
   },
   {
    "data": "2026-09-01T19:49:43+00:00",
