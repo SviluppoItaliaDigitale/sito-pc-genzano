@@ -297,6 +297,18 @@ La scelta editoriale attuale (`2.0 / 5`) bilancia 90% di copertura del sito con 
 
 ---
 
+## 32.13 Aggiornamento settimanale dal feed RSS dei canali (dal 02/09/2026)
+
+La scansione completa con yt-dlp (§ 32.1) gira solo il 1° del mese: un video pubblicato il giorno dopo restava fuori dal cross-match per quasi un mese. Caso reale: il video Geopop *«Cosa è successo in Nepal: la ricostruzione dei possibili scenari, dal ghiacciaio all'alluvione»* è uscito il 1° settembre 2026 poche ore dopo la scansione, mentre l'articolo sul Bhote Koshi del 27 agosto era senza video.
+
+**Cosa fa il workflow `aggiorna-video-feed.yml`** (lunedì 10:23 UTC, anche manuale):
+
+1. `scripts/aggiorna-catalogo-video-feed.py` legge il feed Atom ufficiale di YouTube (`https://www.youtube.com/feeds/videos.xml?channel_id=UC…`) di ciascuno dei 18 canali monitorati: ultimi ~15 video per canale, nessuna API key, nessun yt-dlp, solo stdlib + PyYAML.
+2. Aggiunge al catalogo `data/video_dpc_catalogo.yaml` **solo i video nuovi**, con lo stesso formato e le stesse chiavi (`<canale>-<id>`) della scansione mensile, e aggiorna `video_count` e il totale nell'intestazione. La scansione mensile resta la fonte completa e riallinea tutto.
+3. Rigenera la mappa con `genera-video-correlati.py` (stessi filtri lessicali, stesso gate tematico, stessa curatela `FORCE_MATCHES`/`DENY_*`), verifica la build Hugo e committa `[skip-video-feed]` solo se cambia qualcosa. Deploy coalescato.
+
+**Manutenzione.** Gli ID canale stanno nel dict `CHANNEL_IDS` dello script (risolti dal campo `externalId` della pagina del canale). Quando aggiungi un canale a `CANALI` (§ 32.7), aggiungi anche il suo ID qui: in mancanza lo script prova a risolverlo al volo dalla pagina dell'handle e lo segnala nel log, ma il parsing HTML di YouTube è meno stabile del feed. Fail-safe: un feed non raggiungibile fa saltare solo quel canale; lo script esce sempre 0 e non tocca il file se non c'è nulla da aggiungere. In locale: `python3 scripts/aggiorna-catalogo-video-feed.py --dry-run` mostra i video nuovi senza scrivere.
+
 ## 32.12 Riferimenti incrociati
 
 - **Workflow GitHub Actions**: `.github/workflows/aggiorna-video-correlati.yml`
