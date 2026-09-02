@@ -5,22 +5,112 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-02T20:01:13+00:00",
+  "generato": "2026-09-02T22:31:39+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
+   "data": "2026-09-02T22:04:16+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Russia e guerra ibrida, Tajani: \"Italia non è al riparo dalle minacce\". L'allarme sulle elezioni: \"Rischio condizionamenti\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/russia-guerra-ibrida-italia-elezioni_4jdIGt5f9oexQJeWXrrBNy"
+  },
+  {
+   "data": "2026-09-02T22:03:01+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Meteo, afa allenta la presa: venerdì zero bollini rossi e 12 città in giallo",
+   "url": "https://www.adnkronos.com/cronaca/caldo-italia-bollettini-venerdi_4H2ZYMq65vdmoDzc36fitS"
+  },
+  {
+   "data": "2026-09-02T22:02:22+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Il marchio di Trump alla conquista del mondo, dal Golfo d'America allo Stretto di Hormuz",
+   "url": "https://www.adnkronos.com/internazionale/esteri/trump-hormuz-marchio-presidente-usa_3DRYChz4r7R7qOmZEbBMVS"
+  },
+  {
+   "data": "2026-09-02T21:51:44+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Us Open, finisce il sogno di Guerrieri: De Minaur liquida l'azzurro in tre set e avanza al secondo turno",
+   "url": "https://www.adnkronos.com/sport/us-open-finisce-favola-guerrieri-eliminato-de-minaur-primo-turno_3ZurzaSDZsd08BaWQ3qOjX"
+  },
+  {
+   "data": "2026-09-02T21:37:48+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Fabregas, Dimarco, Malen e... Tutti i premiati del Gran Gala del calcio Aic 2026",
+   "url": "https://www.adnkronos.com/sport/gran-gala-calcio-aic-2026-premiati-malen-dimarco-fabregas_7iNlVXY8ncsSdOAWz3tnSB"
+  },
+  {
+   "data": "2026-09-02T21:27:17+00:00",
+   "fonte": "ANSA",
+   "titolo": "Vannacci: 'Siamo l'interlocutore naturale dell'alleanza di centrodestra'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/02/vannacci-siamo-linterlocutore-naturale-dellalleanza-di-centrodestra_a335e72c-0836-42bc-9d1c-ef5b4da28932.html"
+  },
+  {
+   "data": "2026-09-02T21:08:44+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "McTominay: \"Sto bene, quello al cuore non è un problema. Torno presto\"",
+   "url": "https://www.adnkronos.com/sport/napoli-mctominay-opera-cuore-ecco-quando-tornero-campo_3MNO8oeMVT474zqNFPwOIZ"
+  },
+  {
+   "data": "2026-09-02T21:03:59+00:00",
+   "fonte": "ANSA",
+   "titolo": "++ Vannacci, 'siamo l'interlocutore naturale dell'alleanza di centrodestra' ++",
+   "url": "https://www.ansa.it/sito/notizie/flash/2026/09/02/-vannacci-siamo-linterlocutore-naturale-dellalleanza-di-centrodestra-_a9b82c5a-d8e2-47ea-b7df-7085e15fbc30.html"
+  },
+  {
+   "data": "2026-09-02T20:58:27+00:00",
+   "fonte": "ANSA",
+   "titolo": "Venezia83: si apre il festival, George Clooney mattatore",
+   "url": "https://www.ansa.it/sito/photogallery/spettacolo/2026/09/02/venezia83-si-apre-il-festival-george-clooney-mattatore_845b4021-b31e-4bd7-9458-196223c3b1a7.html"
+  },
+  {
+   "data": "2026-09-02T20:40:31+00:00",
+   "fonte": "ANSA",
+   "titolo": "Europei di volley: l'Italia soffre con la Svezia, ma è in semifinale",
+   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/02/europei-di-volley-litalia-soffre-con-la-svezia-ma-e-in-semifinale_954b07fe-7ae3-4c56-841a-b3ad4f404adf.html"
+  },
+  {
+   "data": "2026-09-02T20:38:14+00:00",
+   "fonte": "ANSA",
+   "titolo": "Due sospettati per Lipsia: 'Uno con il visto italiano' e i danesi denunciano sabotaggi russi",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/02/il-sospettato-bielorusso-per-lattacco-a-lipsia-aveva-il-visto-italiano_c58fa686-d9a5-41d4-9c67-52c0b3ea5bb0.html"
+  },
+  {
+   "data": "2026-09-02T20:37:51+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Gp Monza, Leclerc dj alla festa Ferrari: il risultato è un disastro",
+   "url": "https://www.adnkronos.com/sport/gp-monza-disastro-leclerc-consolle-charles-dj-flop_11uVHYQmz0p0BeokTxv82F"
+  },
+  {
+   "data": "2026-09-02T20:34:27+00:00",
+   "fonte": "ANSA",
+   "titolo": "George Clooney Leone d'Oro alla Carriera: 'Nessuno ride o piange in lingue diverse'",
+   "url": "https://www.ansa.it/sito/notizie/cultura/cinema/2026/09/02/george-clooney-leone-doro-alla-carriera-nessuno-ride-o-piange-in-lingue_ee4cd039-5c58-4f0e-80de-134818231c39.html"
+  },
+  {
+   "data": "2026-09-02T20:32:21+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "\"Insulti e offese per le previsioni meteo\", lo sfogo di Giuliacci a E' sempre Cartabianca",
+   "url": "https://www.adnkronos.com/cronaca/meteo-giuliacci-previsioni-insulti_3nUyxf6dBEsY7aqQBCbuxv"
+  },
+  {
+   "data": "2026-09-02T20:15:00+00:00",
+   "fonte": "ANSA",
+   "titolo": "Si riapre il dialogo sul futuro di Report, Presutti si sfila",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/02/report-giulia-presutti-faccio-un-passo-indietro-rinuncio-alla-conduzione_2d069cda-7b90-4b41-b725-b2f3c00a7fc3.html"
+  },
+  {
+   "data": "2026-09-02T20:06:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Report, Giulia Presutti rinuncia alla conduzione: \"Lascio per amore del programma\"",
+   "url": "https://www.adnkronos.com/politica/report-presutti-conduzione-rinuncia_4kEKjbkmN2hLEuZj67k0nr"
+  },
+  {
    "data": "2026-09-02T19:58:01+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Tromba d'aria a Policoro: il sindaco 'un disastro, danni per milioni di euro'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/02/tromba-daria-a-policoro-il-sindaco-un-disastro-danni-per-milioni-di-euro_1629cb91-94a9-4648-8a29-78f4eee19bc1.html"
-  },
-  {
-   "data": "2026-09-02T19:52:17+00:00",
-   "fonte": "ANSA",
-   "titolo": "Report, Giulia Presutti: \"Faccio un passo indietro, rinuncio alla conduzione\"",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/02/report-giulia-presutti-faccio-un-passo-indietro-rinuncio-alla-conduzione_2d069cda-7b90-4b41-b725-b2f3c00a7fc3.html"
   },
   {
    "data": "2026-09-02T19:49:50+00:00",
@@ -99,96 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Si schianta con la Porsche a Miami, muore un abruzzese di 32 anni",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/02/si-schianta-con-la-porsche-a-miami-muore-un-abruzzese-di-32-anni_0295b6c6-4a6e-449a-be38-4ac6541c915c.html"
-  },
-  {
-   "data": "2026-09-02T19:23:55+00:00",
-   "fonte": "ANSA",
-   "titolo": "Malta: assolto il presunto mandante dell'omicidio di Daphne Caruana Galizia",
-   "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/09/02/malta-assolto-il-presunto-mandante-dellomicidio-di-daphne-caruana-galizia-_4c652135-473a-4a26-a243-45ea3111101f.html"
-  },
-  {
-   "data": "2026-09-02T19:15:42+00:00",
-   "fonte": "ANSA",
-   "titolo": "Eurovolley: 3-1 alla Svezia, le azzurre sono in semifinale",
-   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/02/eurovolley-3-1-alla-svezia-le-azzurre-sono-in-semifinale_954b07fe-7ae3-4c56-841a-b3ad4f404adf.html"
-  },
-  {
-   "data": "2026-09-02T19:15:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Europei pallavolo, è super Italia: Svezia ko e azzurre in semifinale",
-   "url": "https://www.adnkronos.com/sport/europei-pallavolo-super-italia-svezia-battuta-azzurre-semifinale_5KSPPxbopIWg0U1Aw65hVP"
-  },
-  {
-   "data": "2026-09-02T19:14:04+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ferrovie, sciopero dei treni del 7 e 8 settembre",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/02/ferrovie-sciopero-dei-treni-del-7-e-8-settembre_a5e94309-0027-4169-9d15-6c1dd21425fb.html"
-  },
-  {
-   "data": "2026-09-02T19:12:52+00:00",
-   "fonte": "ANSA",
-   "titolo": "George Clooney Leone d'Oro alla Carriera: 'Nessuno ride o piange in lingue diverse'",
-   "url": "https://www.ansa.it/sito/notizie/cultura/cinema/2026/09/02/george-clooney-leone-doro-alla-carriera-nessuno-ride-o-piange-in-lingue_ee4cd039-5c58-4f0e-80de-134818231c39.html"
-  },
-  {
-   "data": "2026-09-02T19:05:32+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Due indagati per la morte del giovane volontario nella baita di pastori",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/02/due-indagati-per-la-morte-del-giovane-volontario-nella-baita-di-pastori_18724491-50bc-42ad-adf2-ace764d2f829.html"
-  },
-  {
-   "data": "2026-09-02T19:05:24+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Furgone investe e uccide ciclista nella zona di Cividale del Friuli",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/02/furgone-investe-e-uccide-ciclista-nella-zona-di-cividale-del-friuli_1443473a-d176-41a5-9936-631fd8690440.html"
-  },
-  {
-   "data": "2026-09-02T19:04:53+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Campi flegrei: a Pozzuoli 4217 sfollati, 59 nuclei rientrati in casa",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/02/campi-flegrei-a-pozzuoli-4217-sfollati-59-nuclei-rientrati-in-casa_7a29bab1-8467-4893-bcde-02e62810e1a1.html"
-  },
-  {
-   "data": "2026-09-02T19:04:48+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Blitz anti-caporalato dei carabinieri nella Piana di Sibari, 20 fermi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/02/blitz-anti-caporalato-dei-carabinieri-nella-piana-di-sibari-20-fermi_661892f0-2f10-4b2f-b0e0-cacb6fa70b83.html"
-  },
-  {
-   "data": "2026-09-02T18:58:41+00:00",
-   "fonte": "ANSA",
-   "titolo": "Due sospetti per l'attacco di Lipsia, 'uno aveva il visto italiano'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/02/il-sospettato-bielorusso-per-lattacco-a-lipsia-aveva-il-visto-italiano_c58fa686-d9a5-41d4-9c67-52c0b3ea5bb0.html"
-  },
-  {
-   "data": "2026-09-02T18:57:40+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "#AccadeOggi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/02/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
-  },
-  {
-   "data": "2026-09-02T18:40:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "A L'Aquila Palazzo Farinosi Branconi torna protagonista della vita culturale",
-   "url": "https://www.adnkronos.com/economia/a-laquila-palazzo-farinosi-branconi-torna-protagonista-della-vita-culturale_3wOFmOLwhhOeH7xaUHXwHX"
-  },
-  {
-   "data": "2026-09-02T18:39:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Mostra di Venezia, Clooney riceve il Leone d'oro alla carriera: \"L'arte non ferma le guerre ma è antidoto contro la paura\"",
-   "url": "https://www.adnkronos.com/spettacoli/mostra-venezia-clooney-leone-carriera_3DKM26VUNnoT0vJBijZAHX"
-  },
-  {
-   "data": "2026-09-02T18:38:04+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Cultura, Bianchi (Bper): \"Restituiamo a L’Aquila Palazzo Farinosi Branconi\"",
-   "url": "https://www.adnkronos.com/economia/cultura-bianchi-bper-restituiamo-a-laquila-palazzo-farinosi-branconi_5UnPFq121DRsxVH9RYsreJ"
-  },
-  {
-   "data": "2026-09-02T18:31:25+00:00",
-   "fonte": "ANSA",
-   "titolo": "Onu, 'riscaldamento globale sopra 1,5°C nei prossimi anni'",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/02/onu-riscaldamento-globale-sopra-15c-nei-prossimi-anni_a4b889bd-bbd8-4e91-ad1a-1340b6844c2e.html"
   }
  ]
 }
