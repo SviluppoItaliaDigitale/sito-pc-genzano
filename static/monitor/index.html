@@ -72,7 +72,20 @@ body.blackout #lmap{filter:brightness(.55) saturate(.7)}
 #map{position:fixed;top:76px;left:0;right:min(380px,42vw);bottom:52px}
 #lmap{position:absolute;inset:0;background:#04070b}
 #windyWrap,#radioWrap{position:absolute;inset:0;display:none;z-index:1001;background:#04070b}
-#windyWrap iframe,#radioWrap iframe{width:100%;height:100%;border:0}
+#windyWrap iframe{width:100%;height:100%;border:0}
+#radioWrap{flex-direction:column}
+#rxBar{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;padding:6px 10px;background:#0a1119;border-bottom:1px solid var(--line);font-family:var(--mono)}
+.rxVfo b{font-size:22px;color:#f2f7f4;font-weight:400;letter-spacing:.04em} .rxVfo span{margin-left:8px;font-size:10px;color:var(--cyn);letter-spacing:.14em}
+.rxMeter{display:flex;align-items:center;gap:6px;font-size:9px;letter-spacing:.14em;color:var(--dim)}
+.rxMeterBar{width:110px;height:8px;border:1px solid var(--line);background:#081018} .rxMeterBar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#35e08c,#ffd60a,#ff3b30)}
+.rxMeter em{font-style:normal;color:var(--tx);min-width:52px}
+.rxCtl{display:flex;align-items:center;gap:6px;font-size:9px;letter-spacing:.14em;color:var(--dim)} .rxCtl input{width:90px;accent-color:#37c7ff}
+.rxZoom{display:flex;align-items:center;gap:4px} #rxZoomLbl{font-size:10px;color:var(--tx);min-width:28px;text-align:center}
+#rxBar .wbtn{margin:0;padding:4px 8px}
+#rxStatus{flex:1 1 220px;font-size:10px;color:var(--grn);letter-spacing:.06em;text-align:right} #rxStatus.err{color:#ffb3ae}
+#rxScope{flex:1;min-height:0;display:flex;flex-direction:column;background:#04070b}
+#rxScope canvas{width:100%;display:block;cursor:crosshair} #rxSpec{border-bottom:1px solid var(--line)}
+@media(max-width:720px){#rxBar{gap:4px 8px;padding:4px 6px}.rxVfo b{font-size:18px}.rxCtl input{width:70px}#rxStatus{text-align:left;flex-basis:100%}}
 /* Vista RADIO — frontalino di sintonia nel pannello laterale */
 #nav button.rxon::after{content:" ●";color:var(--grn);font-size:9px}
 .vfo{border:1px solid var(--line);background:#081018;padding:8px 10px;font-family:var(--mono);display:flex;flex-direction:column;gap:2px}
@@ -356,7 +369,19 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
 <main id="map">
   <div id="lmap"></div>
   <div id="windyWrap"><iframe id="windyFrame" title="Mappa meteo interattiva Windy centrata su Genzano di Roma" loading="lazy"></iframe></div>
-  <div id="radioWrap"><iframe id="radioFrame" title="Ricevitore SDR OpenWebRX+: spettro, waterfall e audio delle bande radioamatoriali" loading="lazy" allow="autoplay"></iframe></div>
+  <div id="radioWrap">
+    <div id="rxBar">
+      <div class="rxVfo"><b id="rxFreq">—</b><span id="rxMode"></span></div>
+      <div class="rxMeter" title="Intensità del segnale ricevuto (S-meter)"><span>S-METER</span><div class="rxMeterBar" aria-hidden="true"><i id="rxSm"></i></div><em id="rxSmDb"></em></div>
+      <label class="rxCtl" for="rxVol">VOLUME <input id="rxVol" type="range" min="0" max="100" value="70"></label>
+      <button id="rxMute" class="wbtn" aria-pressed="false">🔊 AUDIO</button>
+      <label class="rxCtl" for="rxSql">SQUELCH <input id="rxSql" type="range" min="-150" max="-20" value="-150"></label>
+      <div class="rxZoom" role="group" aria-label="Zoom dello spettro"><button class="wbtn" data-z="out" aria-label="Riduci lo zoom">−</button><span id="rxZoomLbl">1×</span><button class="wbtn" data-z="in" aria-label="Aumenta lo zoom">+</button></div>
+      <button id="rxReconn" class="wbtn" title="Ricollega il ricevitore">↻ RICOLLEGA</button>
+      <span id="rxStatus" role="status" aria-live="polite">—</span>
+    </div>
+    <div id="rxScope" role="img" aria-label="Spettro in alto e waterfall in basso del ricevitore SDR: clic per sintonizzare, rotella per lo zoom"><canvas id="rxSpec"></canvas><canvas id="rxWf"></canvas></div>
+  </div>
   <span id="srcTag">DPC · INGV · USGS · NASA · ITALIAMETEO · COPERNICUS · OPEN-METEO · BLITZORTUNG · SDR IZ0FKE — STRUMENTO SPERIMENTALE, DATI INDICATIVI</span>
   <span id="radarLbl">RADAR DPC: —</span>
   <span id="blitzLbl">FULMINI: —</span>
@@ -1683,7 +1708,7 @@ const radioAltRx=hz=>Object.values(RADIO_RX).find(rx=>rx.id!==S.radio.rx&&radioP
 function radioSetRx(id){ // cambio ricevitore: origine diversa, l'iframe si ricarica
   if(!RADIO_RX[id]||id===S.radio.rx)return;
   S.radio.rx=id; S.radio.live=null;
-  if(S.radio.on){$("#radioFrame").src=radioUrl(); radioLive();}
+  if(S.radio.on){reOpen(); radioLive();}
   render(); saveCfg();
 }
 const fmtHz=hz=>hz<30e6?(hz/1e3).toLocaleString("it-IT",{maximumFractionDigits:2})+" kHz"
@@ -1692,14 +1717,235 @@ const fmtKhz=k=>k<30000?k.toLocaleString("it-IT",{maximumFractionDigits:2})+" kH
   :(k/1e3).toLocaleString("it-IT",{minimumFractionDigits:3,maximumFractionDigits:5})+" MHz";
 const radioHm=t=>{const d=new Date(t);return pad(d.getHours())+":"+pad(d.getMinutes())};
 const radioUrl=()=>radioRx().tune(Math.round(S.radio.hz),S.radio.mod,S.radio.sec);
+/* ---------------- Motore radio: client del server OpenWebRX+ nella pagina ----------------
+   Niente iframe: la Sala parla direttamente col ricevitore via WebSocket, con lo
+   stesso protocollo del suo client web (handshake testuale, messaggi JSON
+   config/profiles/modes/smeter, frame binari col primo byte = tipo: 1 spettro
+   FFT, 2 audio; FFT e audio compressi IMA ADPCM, l'audio con parole "SYNC" +
+   stato del codec). Così il pannello sceglie da solo il profilo SDR che copre la
+   frequenza (selectprofile) e sintonizza il DSP (dspcontrol); spettro e
+   waterfall sono disegnati qui su canvas, l'audio suona nella pagina.
+   Implementazione originale. SOLO ASCOLTO: il protocollo non ha trasmissione. */
+function PcAdpcm(){this.reset()}
+PcAdpcm.IDX=[-1,-1,-1,-1,2,4,6,8,-1,-1,-1,-1,2,4,6,8];
+PcAdpcm.STEP=[7,8,9,10,11,12,13,14,16,17,19,21,23,25,28,31,34,37,41,45,50,55,60,66,73,80,88,97,107,118,130,143,157,173,190,209,230,253,279,307,337,371,408,449,494,544,598,658,724,796,876,963,1060,1166,1282,1411,1552,1707,1878,2066,2272,2499,2749,3024,3327,3660,4026,4428,4871,5358,5894,6484,7132,7845,8630,9493,10442,11487,12635,13899,15289,16818,18500,20350,22385,24623,27086,29794,32767];
+PcAdpcm.prototype.reset=function(){this.si=0;this.pred=0;this.step=0;this.phase=0;this.sync=0;this.hdr=new Uint8Array(4);this.hi=0;this.cnt=0};
+PcAdpcm.prototype.nib=function(n){
+  this.si=Math.min(88,Math.max(0,this.si+PcAdpcm.IDX[n]));
+  let d=this.step>>3;if(n&1)d+=this.step>>2;if(n&2)d+=this.step>>1;if(n&4)d+=this.step;if(n&8)d=-d;
+  this.pred=Math.min(32767,Math.max(-32768,this.pred+d));
+  this.step=PcAdpcm.STEP[this.si];return this.pred;
+};
+PcAdpcm.prototype.decode=function(u8){ // flusso senza sincronismo (spettro): un frame = uno stato
+  const out=new Int16Array(u8.length*2);
+  for(let i=0;i<u8.length;i++){out[i*2]=this.nib(u8[i]&15);out[i*2+1]=this.nib(u8[i]>>4);}
+  return out;
+};
+PcAdpcm.prototype.decodeSync=function(u8){ // flusso audio: "SYNC" + indice/predittore + 1001 byte di campioni
+  const out=new Int16Array(u8.length*2);let o=0;
+  for(let i=0;i<u8.length;i++){const b=u8[i];
+    if(this.phase===0){ if(b!=="SYNC".charCodeAt(this.sync++))this.sync=0; if(this.sync===4){this.hi=0;this.phase=1;} }
+    else if(this.phase===1){ this.hdr[this.hi++]=b; if(this.hi===4){const st=new Int16Array(this.hdr.buffer);this.si=st[0];this.pred=st[1];this.cnt=1000;this.phase=2;} }
+    else { out[o++]=this.nib(b&15);out[o++]=this.nib(b>>4); if(this.cnt--===0){this.sync=0;this.phase=0;} }
+  }
+  return out.subarray(0,o);
+};
+const RE={ws:null,rxId:null,cfg:{},profiles:[],modes:{},started:false,pending:null,lastSel:0,selTimer:null,
+  fftc:new PcAdpcm(),audc:new PcAdpcm(),ac:null,gain:null,proc:null,q:[],qLen:0,outRate:12000,factor:4,vol:0.7,muted:false,
+  fft:null,fftT:0,lv:[-88,-20],autoN:0,zoom:1,sm:null,status:"",clients:null,books:[],dirty:false,raf:0,err:""};
+const RE_BP={nfm:[-4000,4000],am:[-4000,4000],lsb:[-2750,-150],usb:[150,2750],cw:[700,900]};
+const reNorm=s=>String(s||"").toLowerCase().replace(/[^a-z0-9]/g,"");
+const reWsUrl=rx=>window.PCGZ_RADIO_WS_OVERRIDE||rx.url.replace(/^http/,"ws").replace(/\/?$/,"/")+"ws/";
+const reSend=o=>{if(RE.ws&&RE.ws.readyState===1)RE.ws.send(JSON.stringify(o))};
+function reStatus(t,err){RE.status=t;RE.err=err?t:"";const el=$("#rxStatus");if(el){el.textContent=t;el.classList.toggle("err",!!err);}}
+function reProfCov(p){ // copertura [da,a] di un profilo del ricevitore, dai dati di status.json o imparata dai config
+  if(p.c&&p.bw)return [p.c-p.bw/2,p.c+p.bw/2];
+  const n=reNorm(p.name),rx=radioRx();
+  const k=rx.profili.find(x=>{const m=reNorm(x[0]);return m&&(n.endsWith(m)||n.includes(m))});
+  return k?[k[1]-k[2]/2,k[1]+k[2]/2]:null;
+}
+function reProfFor(hz){return RE.profiles.find(p=>{const c=reProfCov(p);return c&&hz>=c[0]&&hz<=c[1]})||null}
+function reOpen(){
+  reClose(); const rx=radioRx(); RE.rxId=rx.id; RE.cfg={}; RE.profiles=[]; RE.started=false; RE.pending=null; RE.fft=null; RE.sm=null; RE.books=[];
+  reAudioInit();
+  let ws; try{ws=new WebSocket(reWsUrl(rx))}catch(e){reStatus("Collegamento non riuscito: "+e.message,true);return;}
+  RE.ws=ws; ws.binaryType="arraybuffer"; reStatus("Collegamento a "+rx.nome+"…");
+  ws.onopen=()=>{ws.send("SERVER DE CLIENT client=openwebrx.js type=receiver");
+    reSend({type:"connectionproperties",params:{output_rate:RE.outRate,hd_output_rate:48000}});reStatus("Collegato, attendo il ricevitore…");};
+  ws.onmessage=e=>{if(typeof e.data==="string")reOnText(e.data);else reOnBin(e.data)};
+  ws.onerror=()=>reStatus("Errore di collegamento col ricevitore",true);
+  ws.onclose=ev=>{if(RE.ws!==ws)return;RE.ws=null;RE.started=false;
+    if(S.radio.on)reStatus("Collegamento chiuso"+(ev.reason?" ("+ev.reason+")":"")+" — premi RICOLLEGA",true);};
+  reScopeInit();
+}
+function reClose(){
+  if(RE.selTimer){clearTimeout(RE.selTimer);RE.selTimer=null;}
+  if(RE.ws){const w=RE.ws;RE.ws=null;try{w.onclose=null;w.close()}catch(e){}}
+  RE.started=false;RE.pending=null;
+  if(RE.proc){try{RE.proc.disconnect()}catch(e){}RE.proc=null;}
+  if(RE.ac){try{RE.ac.close()}catch(e){}RE.ac=null;RE.gain=null;}
+  RE.q=[];RE.qLen=0;if(RE.raf){cancelAnimationFrame(RE.raf);RE.raf=0;}
+  if(RE.ro){try{RE.ro.disconnect()}catch(e){}RE.ro=null;}
+}
+function reOnText(s){
+  if(s.startsWith("CLIENT DE SERVER"))return;
+  let j;try{j=JSON.parse(s)}catch(e){return}
+  switch(j.type){
+    case "config":{const c=j.value||{};for(const k in c)if(c[k]!==null&&c[k]!==undefined)RE.cfg[k]=c[k];
+      if(c.center_freq&&c.samp_rate){ // profilo pronto: imparo la copertura e applico la sintonia
+        const p=RE.profiles.find(x=>x.id===RE.cfg.sdr_id+"|"+RE.cfg.profile_id);if(p){p.c=c.center_freq;p.bw=c.samp_rate;}
+        if(c.waterfall_levels)RE.lv=[c.waterfall_levels.min,c.waterfall_levels.max];
+        RE.fft=null;RE.started=false;reApply();}
+      break;}
+    case "profiles":RE.profiles=(j.value||[]).map(p=>({id:p.id,name:p.name}));reStatusLine();if(RE.pending!==null)reApply();break;
+    case "modes":(j.value||[]).forEach(m=>{if(m.modulation&&m.bandpass)RE.modes[m.modulation]=[m.bandpass.low_cut,m.bandpass.high_cut]});break;
+    case "smeter":{const v=+j.value;RE.sm=v>0?10*Math.log10(v):-120;reMeter();break;}
+    case "clients":RE.clients=j.value;reStatusLine();break;
+    case "bookmarks":RE.books=(j.value||[]).filter(b=>b.frequency&&b.name);break;
+    case "sdr_error":case "demodulator_error":reStatus(String(j.value),true);break;
+  }
+}
+function reApply(){ // porta il ricevitore sulla frequenza del pannello, cambiando profilo se serve
+  const hz=Math.round(S.radio.hz),c=RE.cfg;
+  if(!RE.ws||RE.ws.readyState!==1)return;
+  const inProf=c.center_freq&&c.samp_rate&&Math.abs(hz-c.center_freq)<=c.samp_rate/2;
+  if(!inProf){
+    const p=reProfFor(hz);
+    if(!p){if(RE.profiles.length)reStatus("Frequenza fuori dai profili di "+radioRx().nome,true);RE.pending=hz;return;}
+    const cur=c.sdr_id+"|"+c.profile_id;
+    if(p.id!==cur){RE.pending=hz;const wait=Math.max(0,3000-(Date.now()-RE.lastSel)); // il server bandisce chi cambia profilo di continuo
+      if(RE.selTimer)clearTimeout(RE.selTimer);
+      RE.selTimer=setTimeout(()=>{RE.selTimer=null;RE.lastSel=Date.now();reStatus("Cambio profilo: "+p.name+"…");reSend({type:"selectprofile",params:{profile:p.id}});},wait);
+      return;}
+    RE.pending=hz;return; // profilo giusto già richiesto: aspetto la config
+  }
+  RE.pending=null;
+  const mod=S.radio.mod,bp=RE.modes[mod]||RE_BP[mod]||RE_BP.nfm;
+  const params={low_cut:bp[0],high_cut:bp[1],offset_freq:hz-c.center_freq,mod:mod,squelch_level:+($("#rxSql")?$("#rxSql").value:-150)};
+  if(S.radio.sec)params.secondary_mod=S.radio.sec;
+  reSend({type:"dspcontrol",params:params});
+  if(!RE.started){RE.started=true;reSend({type:"dspcontrol",action:"start"});}
+  reStatusLine();reDirty();
+}
+function reTune(){if(S.radio.on&&RE.ws)reApply();}
+function reStatusLine(){
+  const c=RE.cfg,p=RE.profiles.find(x=>x.id===c.sdr_id+"|"+c.profile_id);
+  if(!c.center_freq)return;
+  reStatus((p?p.name.replace(/^[^\w#]+/,"").trim():"profilo")+" · "+(c.samp_rate/1e6).toLocaleString("it-IT",{maximumFractionDigits:2})+" MHz di larghezza"+(RE.clients!=null?" · "+RE.clients+" in ascolto":"")+" · audio "+Math.round(RE.outRate/1e3)+" kHz");
+  const f=$("#rxFreq"),m=$("#rxMode");if(f)f.textContent=fmtHz(S.radio.hz);if(m)m.textContent=S.radio.mod.toUpperCase()+(S.radio.sec?" · "+S.radio.sec.toUpperCase():"");
+}
+/* --- audio: ADPCM → PCM → ricampionamento → ScriptProcessor (nessun file esterno, CSP 'self') --- */
+function reAudioInit(){
+  try{RE.ac=new (window.AudioContext||window.webkitAudioContext)();}catch(e){RE.ac=null;return;}
+  const sr=RE.ac.sampleRate;let i=1,r=0;while(true){const o=Math.floor(sr/i);if(o<8000){break}if(o<=12000){r=o;break}i++;}
+  RE.outRate=r||12000;RE.factor=r?i:4;
+  RE.gain=RE.ac.createGain();RE.gain.gain.value=RE.muted?0:RE.vol;RE.gain.connect(RE.ac.destination);
+  RE.proc=RE.ac.createScriptProcessor(4096,0,1);
+  RE.proc.onaudioprocess=ev=>{const out=ev.outputBuffer.getChannelData(0);let n=0;
+    while(n<out.length&&RE.q.length){const b=RE.q[0];const take=Math.min(b.length,out.length-n);out.set(b.subarray(0,take),n);n+=take;
+      if(take===b.length)RE.q.shift();else RE.q[0]=b.subarray(take);RE.qLen-=take;}
+    for(;n<out.length;n++)out[n]=0;};
+  RE.proc.connect(RE.gain);
+  if(RE.ac.state==="suspended")RE.ac.resume().catch(()=>{});
+}
+function reAudioPush(u8){
+  if(!RE.ac)return;const pcm=RE.audc.decodeSync(u8);if(!pcm.length)return;
+  const f=RE.factor,out=new Float32Array(pcm.length*f);let prev=RE.lastPcm||0;
+  for(let i=0;i<pcm.length;i++){const cur=pcm[i]/32768;for(let k=0;k<f;k++)out[i*f+k]=prev+(cur-prev)*(k+1)/f;prev=cur;}
+  RE.lastPcm=prev;
+  if(RE.qLen>RE.ac.sampleRate*1.5){RE.q=[];RE.qLen=0;} // buffer troppo pieno: scarto, la latenza non cresce
+  RE.q.push(out);RE.qLen+=out.length;
+}
+/* --- spettro e waterfall --- */
+function reOnBin(buf){
+  const t=new Uint8Array(buf,0,1)[0],u8=new Uint8Array(buf,1);
+  if(t===1){RE.fftc.reset();const i16=RE.fftc.decode(u8);const n=RE.cfg.fft_size||2048;
+    if(!RE.fft||RE.fft.length!==n)RE.fft=new Float32Array(n);
+    for(let i=0;i<n;i++)RE.fft[i]=(i16[i+10]||0)/100; RE.fftT=Date.now();
+    if(++RE.autoN%5===0)reAutoLevels(); reDirty(true);}
+  else if(t===2)reAudioPush(u8);
+}
+const RE_LUT=(()=>{const st=[[0,0,20],[0,0,120],[0,120,220],[0,220,120],[255,230,0],[255,60,0],[255,255,255]],pos=[0,.2,.4,.6,.75,.9,1],l=new Uint8Array(256*3);
+  for(let i=0;i<256;i++){const t=i/255;let k=0;while(k<pos.length-2&&t>pos[k+1])k++;const u=(t-pos[k])/(pos[k+1]-pos[k]);
+    for(let c=0;c<3;c++)l[i*3+c]=Math.round(st[k][c]+(st[k+1][c]-st[k][c])*u);}return l})();
+function reAutoLevels(){ // livelli automatici: percentili dello spettro corrente, smorzati
+  const a=Array.from(RE.fft).sort((x,y)=>x-y),lo=a[Math.floor(a.length*.1)],hi=a[Math.floor(a.length*.995)];
+  if(!isFinite(lo)||!isFinite(hi))return;RE.lv=[RE.lv[0]*.8+(lo-10)*.2,RE.lv[1]*.8+(hi+3)*.2];
+}
+function reWin(){ // finestra visibile [f0,f1] in Hz: tutto il profilo, o zoom centrato sulla sintonia
+  const c=RE.cfg;if(!c.center_freq||!c.samp_rate)return null;
+  const lo=c.center_freq-c.samp_rate/2,hi=c.center_freq+c.samp_rate/2,span=c.samp_rate/RE.zoom;
+  let f0=Math.round(S.radio.hz)-span/2;f0=Math.max(lo,Math.min(hi-span,f0));return [f0,f0+span,lo,hi];
+}
+function reScopeInit(){
+  const sc=$("#rxScope");if(!sc||RE.ro)return;
+  RE.ro=new ResizeObserver(()=>reResize());RE.ro.observe(sc);reResize();
+  const wf=$("#rxWf"),sp=$("#rxSpec");
+  const click=e=>{const w=reWin();if(!w)return;const r=e.currentTarget.getBoundingClientRect();const f=w[0]+(e.clientX-r.left)/r.width*(w[1]-w[0]);
+    radioTune(Math.round(f/100)*100,S.radio.mod,S.radio.sec);};
+  wf.addEventListener("click",click);sp.addEventListener("click",click);
+  const wheel=e=>{e.preventDefault();reZoom(e.deltaY<0?"in":"out");};
+  wf.addEventListener("wheel",wheel,{passive:false});sp.addEventListener("wheel",wheel,{passive:false});
+}
+function reResize(){const sc=$("#rxScope");if(!sc)return;const dpr=Math.min(2,window.devicePixelRatio||1),w=sc.clientWidth,h=sc.clientHeight;
+  if(w<10||h<20)return; // area nascosta (vista diversa): niente canvas a dimensione zero
+  const sh=Math.max(60,Math.round(h*.3)),wh=Math.max(60,h-sh);
+  [["#rxSpec",sh],["#rxWf",wh]].forEach(([id,hh])=>{const cv=$(id);cv.width=Math.round(w*dpr);cv.height=Math.round(hh*dpr);cv.style.height=hh+"px";});
+  reDirty(true);
+}
+function reZoom(dir){const z=[1,2,4,8,16,32],i=z.indexOf(RE.zoom);RE.zoom=z[Math.max(0,Math.min(z.length-1,i+(dir==="in"?1:-1)))];const l=$("#rxZoomLbl");if(l)l.textContent=RE.zoom+"×";reDirty(true);}
+function reDirty(line){if(line)RE.newLine=true;if(!RE.raf)RE.raf=requestAnimationFrame(()=>{RE.raf=0;reDraw();});}
+function reDraw(){
+  const w=reWin(),sp=$("#rxSpec"),wf=$("#rxWf");if(!w||!sp||!wf||sp.width<2||wf.height<2)return;
+  const W=sp.width,n=RE.fft?RE.fft.length:0,c=RE.cfg,binHz=c.samp_rate/(n||1);
+  const col=new Float32Array(W);let has=false;
+  if(n){has=true;const b0=(w[0]-w[2])/binHz,b1=(w[1]-w[2])/binHz;
+    for(let x=0;x<W;x++){const s=Math.floor(b0+(b1-b0)*x/W),e=Math.max(s+1,Math.floor(b0+(b1-b0)*(x+1)/W));let m=-1e9;
+      for(let i=s;i<e&&i<n;i++)if(RE.fft[i]>m)m=RE.fft[i];col[x]=m>-1e8?m:RE.lv[0];}}
+  // waterfall: scorre di una riga, nuova riga in alto
+  if(has&&RE.newLine){RE.newLine=false;const ctx=wf.getContext("2d"),rh=Math.max(3,Math.round(2*(W/sp.clientWidth)));
+    ctx.drawImage(wf,0,0,W,wf.height-rh,0,rh,W,wf.height-rh);
+    const row=ctx.createImageData(W,rh),d=row.data,lo=RE.lv[0],hi=RE.lv[1];
+    for(let x=0;x<W;x++){let t=(col[x]-lo)/(hi-lo);t=t<0?0:t>1?1:t;const k=Math.round(t*255)*3;
+      for(let y=0;y<rh;y++){const o=(y*W+x)*4;d[o]=RE_LUT[k];d[o+1]=RE_LUT[k+1];d[o+2]=RE_LUT[k+2];d[o+3]=255;}}
+    const tx=Math.round((Math.round(S.radio.hz)-w[0])/(w[1]-w[0])*W); // traccia rossa della sintonia nel waterfall
+    if(tx>=0&&tx<W)for(let y=0;y<rh;y++){const o=(y*W+tx)*4;d[o]=255;d[o+1]=59;d[o+2]=48;}
+    ctx.putImageData(row,0,0);}
+  // spettro + scala + banda passante + sintonia
+  const ctx=sp.getContext("2d"),H=sp.height;ctx.clearRect(0,0,W,H);
+  ctx.fillStyle="#04070b";ctx.fillRect(0,0,W,H);
+  const fx=f=>(f-w[0])/(w[1]-w[0])*W,hz=Math.round(S.radio.hz),bp=RE.modes[S.radio.mod]||RE_BP[S.radio.mod]||RE_BP.nfm;
+  ctx.fillStyle="rgba(55,199,255,.16)";ctx.fillRect(fx(hz+bp[0]),0,Math.max(1,fx(hz+bp[1])-fx(hz+bp[0])),H);
+  if(has){const lo=RE.lv[0]-5,hi=RE.lv[1]+5;ctx.beginPath();ctx.moveTo(0,H);
+    for(let x=0;x<W;x++){let t=(col[x]-lo)/(hi-lo);t=t<0?0:t>1?1:t;ctx.lineTo(x,H-t*(H-22));}
+    ctx.lineTo(W,H);ctx.closePath();ctx.fillStyle="rgba(53,224,140,.25)";ctx.fill();ctx.strokeStyle="#35e08c";ctx.lineWidth=1;ctx.stroke();}
+  // scala delle frequenze
+  const span=w[1]-w[0],step=[1e3,2e3,5e3,1e4,2e4,5e4,1e5,2e5,5e5,1e6].find(s=>span/s<=12)||2e6,dpr=W/sp.clientWidth;
+  ctx.font=(10*dpr)+"px 'Share Tech Mono',monospace";ctx.fillStyle="#5d7a6e";ctx.strokeStyle="#12212e";ctx.textAlign="center";
+  for(let f=Math.ceil(w[0]/step)*step;f<=w[1];f+=step){const x=fx(f);ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();
+    ctx.fillText((f/1e6).toLocaleString("it-IT",{minimumFractionDigits:3,maximumFractionDigits:4}),x,12*dpr);}
+  ctx.textAlign="right";ctx.fillText("MHz",W-4*dpr,24*dpr);ctx.textAlign="center";
+  // segnalibri del ricevitore nella finestra
+  ctx.fillStyle="#ffd60a";ctx.font=(9*dpr)+"px 'Share Tech Mono',monospace";
+  RE.books.filter(b=>b.frequency>=w[0]&&b.frequency<=w[1]).slice(0,40).forEach(b=>{const x=fx(b.frequency);ctx.fillRect(x,H-6*dpr,1,6*dpr);ctx.fillText(String(b.name).slice(0,14),x,H-8*dpr);});
+  // riga di sintonia
+  const x=fx(hz);ctx.strokeStyle="#ff3b30";ctx.lineWidth=Math.max(1,dpr);ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();
+}
+function reMeter(){const sm=$("#rxSm"),db=$("#rxSmDb");if(!sm||RE.sm==null)return;const t=Math.max(0,Math.min(1,(RE.sm+110)/80));sm.style.width=Math.round(t*100)+"%";db.textContent=Math.round(RE.sm)+" dB";}
+function reWireBar(){ // controlli della barra del ricevitore (una volta sola)
+  const bar=$("#rxBar");if(!bar||bar.dataset.wired)return;bar.dataset.wired="1";
+  $("#rxVol").addEventListener("input",e=>{RE.vol=e.target.value/100;if(RE.gain&&!RE.muted)RE.gain.gain.value=RE.vol;});
+  $("#rxMute").addEventListener("click",e=>{RE.muted=!RE.muted;if(RE.gain)RE.gain.gain.value=RE.muted?0:RE.vol;e.currentTarget.setAttribute("aria-pressed",RE.muted);e.currentTarget.textContent=RE.muted?"🔇 MUTO":"🔊 AUDIO";});
+  $("#rxSql").addEventListener("change",e=>{reSend({type:"dspcontrol",params:{squelch_level:+e.target.value}});});
+  bar.querySelectorAll("[data-z]").forEach(b=>b.addEventListener("click",()=>reZoom(b.dataset.z)));
+  $("#rxReconn").addEventListener("click",()=>{if(S.radio.on)reOpen();});
+}
+window.addEventListener("pagehide",reClose);
 function radioSync(){
-  $("#radioWrap").style.display=(S.view==="rad"&&S.radio.on)?"block":"none";
+  $("#radioWrap").style.display=(S.view==="rad"&&S.radio.on)?"flex":"none";
   const b=document.querySelector('#nav [data-v="rad"]');if(b)b.classList.toggle("rxon",S.radio.on);
 }
-function radioNav(){ // sintonia senza ricaricare: se cambia solo l'hash, il browser
-  // esegue una navigazione di frammento e il ricevitore riceve "hashchange"
-  if(S.radio.on)$("#radioFrame").src=radioUrl();
-}
+function radioNav(){reTune();} // il motore radio applica la sintonia (e cambia profilo se serve)
 const radioVfoTxt=()=>{const r=S.radio,b=radioBanda(r.hz);
   return r.mod.toUpperCase()+(r.sec?" · "+r.sec.toUpperCase():"")+(b?" · "+b.n:"")};
 function radioTune(hz,mod,sec,band){
@@ -1729,7 +1975,7 @@ function viewRad(){
   if(!r.on){
     const el=document.createElement("div");el.className="wx";
     el.innerHTML=`<h3>ASCOLTO DELLE BANDE RADIOAMATORIALI<span>CLICK-TO-LOAD</span></h3>
-      <p>Ricevitore SDR via web con <b>spettro e waterfall</b>: onde corte, 6 m, 2 m, 70 cm,
+      <p>Ricevitore SDR via web con <b>spettro, waterfall e audio nella pagina</b>: onde corte, 6 m, 2 m, 70 cm,
       CB e satellite QO-100 dalla stazione di <b>${esc(rx.nome)}</b> a ${esc(rx.luogo)}
       (software ${esc(rx.sw)}); in alternativa il ricevitore di I6IQX a Bucchianico (CH) per
       80 m, 160 m, 60 m, 17 m, 12 m e PMR446. Per usarli devi caricare i contenuti del loro server:
@@ -1741,7 +1987,7 @@ function viewRad(){
       <p style="margin-top:6px"><a href="${esc(rx.url)}" target="_blank" rel="noopener">In alternativa apri il ricevitore in una nuova scheda</a>.</p>`;
     feed.appendChild(el);
     el.querySelector("#radioLoad").addEventListener("click",()=>{
-      r.on=true; $("#radioFrame").src=radioUrl(); radioSync(); radioLive(); render();
+      r.on=true; radioSync(); reWireBar(); reOpen(); radioLive(); render();
     });
   }else{
     radioLive();
@@ -1749,7 +1995,7 @@ function viewRad(){
     const vfo=document.createElement("div");vfo.className="wx";
     vfo.innerHTML=`<h3>SINTONIA<span>${esc(rx.sw)} · ${esc((r.live&&r.live.nome)||rx.nome)}</span></h3>
       <div class="vfo" aria-live="polite"><b>${esc(fmtHz(r.hz))}</b><span>${esc(radioVfoTxt())}</span></div>
-      ${prof?`<div class="rstep ok"><b>PROFILO DEL RICEVITORE: ${esc(prof[0])}</b><span>Se il ricevitore mostra un altro profilo, selezionalo dal menu in alto a sinistra dello spettro: la sintonia impostata qui si applica da sola.</span></div>`
+      ${prof?`<div class="rstep ok"><b>PROFILO SDR: ${esc(prof[0])}</b><span>Selezione automatica: il ricevitore passa da solo al profilo che copre la frequenza (qualche secondo se cambia antenna).</span></div>`
       :(alt=radioAltRx(r.hz))?`<div class="rstep alt"><b>NON COPERTA DA ${esc(rx.nome.toUpperCase())} · DISPONIBILE SU ${esc(alt.nome.toUpperCase())}</b><span>Il ricevitore di ${esc(alt.nome)} a ${esc(alt.luogo)} ha un profilo per questa gamma. <button class="wbtn" data-rx="${alt.id}">PASSA A ${esc(alt.nome.toUpperCase())}</button></span></div>`
       :`<div class="rstep no"><b>FREQUENZA FUORI DAI PROFILI DEI RICEVITORI</b><span>Nessuna antenna/SDR dei ricevitori incorporabili copre questa gamma: scegli una banda coperta (contrassegno ●) oppure prova i ricevitori esterni elencati sotto.</span></div>`}
       <div class="wgrp" style="margin-top:8px"><span class="wglbl">SINTONIA MANUALE</span>
@@ -1774,7 +2020,7 @@ function viewRad(){
       vfo.querySelector(".vfo span").textContent=radioVfoTxt();});
     vfo.querySelector("#radioTab").addEventListener("click",()=>window.open(radioUrl(),"_blank","noopener"));
     const altBtn=vfo.querySelector("button[data-rx]");if(altBtn)altBtn.addEventListener("click",()=>radioSetRx(altBtn.dataset.rx));
-    vfo.querySelector("#radioOff").addEventListener("click",()=>{r.on=false;$("#radioFrame").src="";radioSync();render();});
+    vfo.querySelector("#radioOff").addEventListener("click",()=>{r.on=false;reClose();radioSync();render();});
 
     // bande: gruppi HF/VHF/UHF/uso libero, limiti da…a…, copertura del ricevitore
     const bl=document.createElement("div");bl.className="wx";
@@ -1825,10 +2071,10 @@ function viewRad(){
       · ${esc(rx.note)} · profili: ${rx.profili.map(p=>esc(p[0])).join(", ")}.</p>
       <p style="margin-top:6px;font-size:10.5px">Altri ricevitori della zona, solo in nuova scheda (siti senza https):
       ${RADIO_LINK.map(l=>`<a href="${esc(l.tune(Math.round(r.hz),r.mod))}" target="_blank" rel="noopener">${esc(l.nome)}</a> (${esc(l.sw)}: ${esc(l.cosa)})`).join(" · ")}.</p>
-      <p style="margin-top:6px;font-size:10.5px;color:var(--dim)">Lo spettro occupa l'area principale: rotella per lo zoom,
-      clic sul waterfall per spostare la sintonia fine, pulsanti del ricevitore per modo, squelch e volume.
-      L'audio continua anche cambiando vista dal menu in alto; per fermarlo usa ✕ CHIUDI RICEVITORE.
-      Ricevitore condiviso con altri ascoltatori (posti limitati): se non si collega, riprova più tardi.</p>`;
+      <p style="margin-top:6px;font-size:10.5px;color:var(--dim)">Spettro e waterfall occupano l'area principale:
+      clic sullo spettro o sul waterfall per sintonizzare, rotella o pulsanti +/− per lo zoom; volume, audio e squelch
+      nella barra in alto. L'audio continua anche cambiando vista dal menu; per fermarlo usa ✕ CHIUDI RICEVITORE.
+      Ricevitore condiviso con altri ascoltatori (posti limitati): se non si collega, premi ↻ RICOLLEGA o riprova più tardi.</p>`;
     feed.appendChild(rs);
     rs.querySelector("#radioRxSel").addEventListener("click",e=>{const b=e.target.closest("button[data-rx]");if(b)radioSetRx(b.dataset.rx);});
   }
