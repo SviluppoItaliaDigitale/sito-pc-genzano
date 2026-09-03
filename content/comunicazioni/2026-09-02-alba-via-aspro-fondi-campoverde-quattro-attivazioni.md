@@ -43,6 +43,20 @@ Alle otto e mezza parte una seconda squadra, in direzione opposta: l'**autocarro
 
 **Poco dopo le 16**, senza rientrare, arriva la seconda chiamata nella stessa zona: canneto e sterpaglie fra l'uscita Campoverde sud e la strada statale 148 Pontina. L'Atego resta in azione con i Vigili del Fuoco e una squadra del Gruppo comunale di Aprilia. Da Genzano parte il pickup **EVO Cross 4** per il **cambio del personale**: dopo dieci ore di turno, chi era uscito all'alba lascia il posto a una squadra fresca. Rientro poco prima delle 19.
 
+## La bonifica in immagini
+
+{{< foto src="/images/2026-09-02-campoverde-canneto-manichetta-atego.webp"
+         alt="Due volontari dirigono il getto della manichetta sul canneto fumante: il primo con casco rosso e tuta rossa e blu con la scritta Protezione Civile Genzano di Roma, il secondo con maglietta scura Protezione Civile e pantaloni rossi; a destra il retro del Mercedes Atego con il naspo, il lampeggiante blu e la scritta Protezione Civile"
+         caption="Il getto della manichetta sul canneto ancora fumante, con il Mercedes Atego fermo sull'asfalto a pochi metri. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+
+{{< foto src="/images/2026-09-02-campoverde-canneto-bonifica-bordo-strada.webp"
+         alt="Visti da accanto alla fiancata rossa del mezzo, due volontari sul ciglio della strada: uno bagna con la manichetta il terreno annerito ai piedi del canneto, da cui sale il fumo; sullo sfondo i segnali di curva e il limite dei 50 all'ora"
+         caption="La bonifica lungo il ciglio: si bagna il terreno annerito ai piedi delle canne, dove il fumo continua a salire. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+
+{{< foto src="/images/2026-09-02-campoverde-strada-fascia-bruciata.webp"
+         alt="Strada di campagna con una fascia di terreno bruciato lungo il bordo destro e il canneto oltre; una manichetta rossa attraversa l'asfalto, il fumo si alza in lontananza e alcune auto sono ferme in fondo"
+         caption="La fascia percorsa dal fuoco corre lungo il bordo della strada, fra l'asfalto e il canneto. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+
 ## Perché una bonifica dura ore
 
 In entrambe le chiamate di Campoverde le fiamme visibili erano già state abbattute. Il lavoro lungo è quello che viene dopo: bagnare a fondo il terreno, rivoltare la cenere, controllare che nessuna brace riparta con il vento. Un canneto è pieno di cavità e di materiale secco che cova sotto la superficie. Lasciarlo a metà significa tornare il giorno dopo.
