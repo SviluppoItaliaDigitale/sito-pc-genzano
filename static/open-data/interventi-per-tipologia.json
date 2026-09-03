@@ -4,15 +4,15 @@
   "licenza": "CC BY 4.0",
   "periodo": {
     "dal": "2026-04-04",
-    "al": "2026-09-01",
-    "ultimo_numero": "130/2026"
+    "al": "2026-09-02",
+    "ultimo_numero": "134/2026"
   },
   "nota": "Dati PROVVISORI: censiti solo dall'adozione del nuovo gestionale, non coprono l'intero anno (mancano i mesi precedenti). Aggregati e anonimi, senza dati personali.",
-  "generato_il": "2026-09-01",
+  "generato_il": "2026-09-03",
   "dati": [
     {
       "tipologia": "Antincendio",
-      "numero_interventi": 70
+      "numero_interventi": 73
     },
     {
       "tipologia": "Alberi/Rami su suolo pubblico",
@@ -40,7 +40,7 @@
     },
     {
       "tipologia": "Attività Coordinamento",
-      "numero_interventi": 2
+      "numero_interventi": 3
     },
     {
       "tipologia": "Manifestazione Giro d'italia",
