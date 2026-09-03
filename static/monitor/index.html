@@ -1709,7 +1709,10 @@ function radioTune(hz,mod,sec,band){
   radioNav(); render(); saveCfg();
 }
 async function radioLive(){ // nome, versione e profili reali del ricevitore (CORS aperto)
-  const rx=radioRx();if(!rx.status||S.radio.live)return;
+  const rx=radioRx(),lv=S.radio.live;
+  // dopo un errore (I6IQX non espone il CORS; interruzioni temporanee) si riprova al più ogni 60 s
+  if(!rx.status||(lv&&(!lv.err||Date.now()-lv.t<60e3)))return;
+  S.radio.live={busy:true,err:true,t:Date.now()};
   try{const d=await jget(rx.status,10000);
     const prof=[];(d.sdrs||[]).forEach(s=>(s.profiles||[]).forEach(p=>{
       if(p.center_freq&&p.sample_rate)prof.push([String(p.name||s.name||"").trim(),+p.center_freq,+p.sample_rate])}));
@@ -1717,7 +1720,7 @@ async function radioLive(){ // nome, versione e profili reali del ricevitore (CO
     S.radio.live={nome:(d.receiver&&d.receiver.name)||rx.nome,luogo:(d.receiver&&d.receiver.location)||rx.luogo,
       ver:d.version||"",n:prof.length,t:Date.now()};
     if(S.view==="rad")render();
-  }catch(e){S.radio.live={err:true,t:Date.now()}}
+  }catch(e){S.radio.live={err:true,t:Date.now()};if(S.view==="rad")render();}
 }
 function viewRad(){
   title.textContent="RADIO — ASCOLTO SDR";
@@ -1741,6 +1744,7 @@ function viewRad(){
       r.on=true; $("#radioFrame").src=radioUrl(); radioSync(); radioLive(); render();
     });
   }else{
+    radioLive();
     const prof=radioProf(r.hz),band=radioBanda(r.hz);let alt=null;
     const vfo=document.createElement("div");vfo.className="wx";
     vfo.innerHTML=`<h3>SINTONIA<span>${esc(rx.sw)} · ${esc((r.live&&r.live.nome)||rx.nome)}</span></h3>
@@ -1815,7 +1819,7 @@ function viewRad(){
     // ricevitore e stato
     const rs=document.createElement("div");rs.className="wx";
     const lv=r.live;
-    rs.innerHTML=`<h3>RICEVITORE<span>${lv&&!lv.err?"STATUS LETTO "+radioHm(lv.t):lv?"PROFILI INCORPORATI":"LETTURA STATUS…"}</span></h3>
+    rs.innerHTML=`<h3>RICEVITORE<span>${lv&&!lv.err?"STATUS LETTO "+radioHm(lv.t):lv&&lv.busy?"LETTURA STATUS…":"STATUS NON LETTO · PROFILI INCORPORATI"}</span></h3>
       <div class="wgrp" id="radioRxSel">${Object.values(RADIO_RX).map(x=>`<button class="wbtn${x.id===rx.id?" on":""}" data-rx="${x.id}" aria-pressed="${x.id===rx.id}">${esc(x.nome.toUpperCase())} · ${esc(x.luogo.toUpperCase())}</button>`).join("")}</div>
       <p><b>${esc((lv&&lv.nome)||rx.nome)}</b> · ${esc((lv&&lv.luogo)||rx.luogo)} · ${esc(rx.sw)}${lv&&lv.ver?" "+esc(lv.ver):""}
       · ${esc(rx.note)} · profili: ${rx.profili.map(p=>esc(p[0])).join(", ")}.</p>
@@ -1842,7 +1846,8 @@ function viewRad(){
     Senza patente si può <b>ascoltare</b> anche il traffico DMR dal browser con
     <a href="https://hose.brandmeister.network/" target="_blank" rel="noopener">BrandMeister Hoseline</a>.</p>
     <p style="margin-top:6px">Senza patente si può trasmettere solo con apparati di <b>libero uso</b>:
-    <b>PMR446</b> e <b>CB 27 MHz</b> (art. 105 del Codice; canale 9 per le chiamate di soccorso). Le frequenze operative del Gruppo,
+    <b>PMR446</b> (0,5 W), <b>CB 27 MHz</b> (canale 9 per le chiamate di soccorso) e <b>LPD 433</b> (10 mW),
+    secondo l'art. 105 del Codice e il Piano nazionale di ripartizione delle frequenze. Le frequenze operative del Gruppo,
     assegnate al Comune dal Ministero, non sono radioamatoriali e non compaiono in questo elenco.</p>
     <p style="margin-top:6px;font-size:10.5px;color:var(--dim)">Approfondimenti sul sito:
     <a href="${BASE}conoscere/telecomunicazioni-emergenza/">telecomunicazioni in emergenza</a> ·
