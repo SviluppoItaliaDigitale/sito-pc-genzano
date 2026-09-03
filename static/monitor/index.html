@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sala situazioni — Protezione Civile Genzano di Roma</title>
-<meta name="description" content="Sala situazioni sperimentale della Protezione Civile di Genzano di Roma: allerta per zone del Lazio, radar DPC, sismi INGV, meteo quasi in tempo reale con osservazioni delle stazioni ItaliaMeteo, aria e mare. Fonti ufficiali, dati indicativi.">
+<meta name="description" content="Sala situazioni sperimentale della Protezione Civile di Genzano di Roma: allerta per zone del Lazio, radar DPC, sismi INGV, meteo quasi in tempo reale con osservazioni delle stazioni ItaliaMeteo, aria e mare, ascolto delle bande radioamatoriali via SDR con spettro e waterfall. Fonti ufficiali, dati indicativi.">
 <link rel="stylesheet" href="../vendor/leaflet/leaflet.css">
 <style>
 /* Font self-hostati (SIL OFL 1.1, vedi fonts/LICENZE.txt) — la CSP del sito non consente Google Fonts */
@@ -71,8 +71,37 @@ body.blackout #lmap{filter:brightness(.55) saturate(.7)}
 
 #map{position:fixed;top:76px;left:0;right:min(380px,42vw);bottom:52px}
 #lmap{position:absolute;inset:0;background:#04070b}
-#windyWrap{position:absolute;inset:0;display:none;z-index:1001;background:#04070b}
-#windyWrap iframe{width:100%;height:100%;border:0}
+#windyWrap,#radioWrap{position:absolute;inset:0;display:none;z-index:1001;background:#04070b}
+#windyWrap iframe,#radioWrap iframe{width:100%;height:100%;border:0}
+/* Vista RADIO — frontalino di sintonia nel pannello laterale */
+#nav button.rxon::after{content:" ●";color:var(--grn);font-size:9px}
+.vfo{border:1px solid var(--line);background:#081018;padding:8px 10px;font-family:var(--mono);display:flex;flex-direction:column;gap:2px}
+.vfo b{font-size:24px;font-weight:400;color:#f2f7f4;letter-spacing:.04em;line-height:1.1}
+.vfo span{font-size:10px;letter-spacing:.14em;color:var(--cyn)}
+.rstep{margin-top:7px;padding:6px 9px;border:1px solid var(--line);border-left:3px solid var(--sc,var(--dim));background:var(--panel2);font-size:10.5px;line-height:1.45}
+.rstep b{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;color:var(--sc,#eaf6ef);margin-bottom:2px}
+.rstep.ok{--sc:#35e08c} .rstep.no{--sc:#ff8c1a} .rstep.alt{--sc:#37c7ff}
+.rstep .wbtn{margin:5px 0 0}
+.rman{display:flex;flex-wrap:wrap;gap:4px 6px;align-items:end}
+.rman label{flex:1 1 100%;margin-bottom:0}
+.rinp,.rsel{font-family:var(--mono);font-size:12px;color:var(--tx);background:#081018;border:1px solid var(--line);border-radius:3px;padding:5px 7px}
+.rinp{flex:1 1 130px;min-width:0} .rsel{flex:0 0 auto}
+.rinp:focus-visible,.rsel:focus-visible{outline:2px solid var(--cyn);outline-offset:1px}
+.rinp[aria-invalid="true"]{border-color:var(--red)}
+.rman .wbtn{margin:0}
+.bnd,.pre{display:block;width:100%;text-align:left;cursor:pointer;background:#0a1826;border:1px solid var(--line);color:var(--tx);padding:6px 9px;margin-top:4px;font-family:var(--disp)}
+.bnd{display:grid;grid-template-columns:1fr auto;gap:1px 8px;align-items:baseline}
+.bnd:hover,.pre:hover{border-color:rgba(55,199,255,.5)}
+.bnd.on,.pre.on{border-color:var(--cyn);box-shadow:inset 3px 0 0 var(--cyn)}
+.bnd:not(.cov){color:var(--dim)}
+.bnd .bn{font-size:12px;font-weight:600;color:#eaf6ef} .bnd:not(.cov) .bn{color:var(--dim)}
+.bnd .br{font-family:var(--mono);font-size:10.5px;color:var(--cyn);white-space:nowrap;text-align:right}
+.bnd .bi{grid-column:1/-1;font-family:var(--mono);font-size:9px;color:var(--dim);margin-top:1px;line-height:1.4}
+.pre{display:grid;grid-template-columns:auto 1fr auto;gap:2px 8px;align-items:center}
+.pre .pf{font-family:var(--mono);font-size:12px;color:#f2f7f4;white-space:nowrap}
+.pre .pf em{font-style:normal;font-size:9px;color:var(--dim);margin-left:4px}
+.pre .pl{font-size:10.5px;line-height:1.3}
+.pre .pc{font-family:var(--mono);font-size:8.5px;letter-spacing:.12em;color:var(--cc,var(--dim));border:1px solid var(--cc,var(--line));padding:1px 5px;border-radius:2px;white-space:nowrap}
 .wbtn{display:inline-block;cursor:pointer;font-family:var(--mono);font-size:11px;letter-spacing:.1em;
   color:var(--cyn);border:1px solid rgba(55,199,255,.5);border-radius:3px;padding:6px 12px;background:#06121a;margin:4px 6px 2px 0}
 .wbtn.on{color:#04070b;background:var(--cyn);font-weight:700}
@@ -308,6 +337,7 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
   <button data-v="met"><span class="ic">≋</span>METEO</button>
   <button data-v="map"><span class="ic">▤</span>CARTE</button>
   <button data-v="wnd"><span class="ic">☈</span>WINDY</button>
+  <button data-v="rad" title="Ascolto delle bande radioamatoriali via SDR (spettro e waterfall)"><span class="ic">⌁</span>RADIO</button>
   <button data-v="amb"><span class="ic">✿</span>ARIA·MARE</button>
   <button data-v="ems"><span class="ic">⚑</span>EMERGENZE</button>
   <button data-v="log"><span class="ic">✎</span>REGISTRO</button>
@@ -326,7 +356,8 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
 <main id="map">
   <div id="lmap"></div>
   <div id="windyWrap"><iframe id="windyFrame" title="Mappa meteo interattiva Windy centrata su Genzano di Roma" loading="lazy"></iframe></div>
-  <span id="srcTag">DPC · INGV · USGS · NASA · ITALIAMETEO · COPERNICUS · OPEN-METEO · BLITZORTUNG — STRUMENTO SPERIMENTALE, DATI INDICATIVI</span>
+  <div id="radioWrap"><iframe id="radioFrame" title="Ricevitore SDR OpenWebRX+: spettro, waterfall e audio delle bande radioamatoriali" loading="lazy" allow="autoplay"></iframe></div>
+  <span id="srcTag">DPC · INGV · USGS · NASA · ITALIAMETEO · COPERNICUS · OPEN-METEO · BLITZORTUNG · SDR IZ0FKE — STRUMENTO SPERIMENTALE, DATI INDICATIVI</span>
   <span id="radarLbl">RADAR DPC: —</span>
   <span id="blitzLbl">FULMINI: —</span>
   <span id="worldLbl">MONDO — GDACS: VERDE/ARANCIO/ROSSO (anelli = allerta) · CIANO = EMS COPERNICUS · SISMI INGV+USGS 7GG: GIALLO M4+ / ARANCIO M5+ / ROSSO M6+ · MAGENTA = VULCANI ATTIVI (NASA). CLIC SUI PUNTI PER LA SCHEDA</span>
@@ -406,7 +437,8 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
    (allerta-stato/index.json, same-origin) · DPC (bollettino criticità
    + radar WMTS, CC BY-SA) · INGV FDSN · Copernicus EMS Rapid Mapping
    (snapshot self-hosted: l'API non espone più il CORS) · EFFIS ·
-   NASA GIBS · Open-Meteo (previsioni, aria/pollini, mare).
+   NASA GIBS · Open-Meteo (previsioni, aria/pollini, mare) · SDR OpenWebRX+
+   di IZ0FKE (ascolto radio, click-to-load).
    Asset self-hostati (Leaflet del sito + font locali): la CSP del
    dominio non consente CDN esterne. Percorsi relativi ("../…") così
    la pagina funziona sia su Aruba (root) sia su GitHub Pages (subpath).
@@ -1542,7 +1574,290 @@ function viewEms(){
   const snapNote=S.emsSnap?`Snapshot EMS del ${fmtT(S.emsSnap.toISOString())} (rigenerato ogni 15 minuti).`:"";
   feed.appendChild(noteEl('Attivazioni <a href="https://rapidmapping.emergency.copernicus.eu/" target="_blank" rel="noopener">Copernicus EMS Rapid Mapping</a> e allerte globali <a href="https://www.gdacs.org/" target="_blank" rel="noopener">GDACS</a> (dati pubblici, copie self-hosted rigenerate a ogni deploy). '+snapNote));
 }
-function render(){({all:viewAll,sis:viewSis,met:viewMet,map:viewMap,wnd:viewWnd,amb:viewAmb,ems:viewEms,log:viewLog})[S.view]();windySync();}
+/* ---------------- RADIO — ascolto SDR delle bande radioamatoriali ----------------
+   Ricevitore web OpenWebRX+ di IZ0FKE (Roma, https://sdr.noantri.org/): spettro,
+   waterfall e audio nell'area principale, come la console Windy (click-to-load:
+   il server di terzi viene contattato solo su richiesta esplicita). Il pannello
+   laterale è il "frontalino": bande HF/VHF/UHF con i limiti da…a…, frequenze
+   notevoli e sintonia manuale. La frequenza viene passata al ricevitore
+   nell'hash dell'URL (#freq=Hz,mod=modo): cambiando solo l'hash il ricevitore
+   la applica senza ricaricarsi (audio continuo). OpenWebRX+ accetta l'hash solo
+   se la frequenza cade nel profilo SDR attivo e non ha un parametro URL per il
+   profilo: un nuovo client riceve il primo dispositivo (qui il 2 m), per le
+   altre bande l'operatore sceglie il profilo dal menu del ricevitore e la
+   sintonia impostata qui si applica da sola al cambio profilo.
+   SOLO ASCOLTO: nessuna trasmissione avviene da questa pagina. */
+S.radio={on:false,rx:"noantri",hz:145500000,mod:"nfm",sec:"",grp:"VHF",band:"2m",live:null};
+const RADIO_RX={
+  noantri:{id:"noantri",nome:"IZ0FKE",luogo:"Roma",sw:"OpenWebRX+",url:"https://sdr.noantri.org/",
+    status:"https://sdr.noantri.org/status.json",
+    // profili SDR letti da status.json il 3 settembre 2026 (aggiornati a runtime se il fetch riesce)
+    profili:[["VHF 145 Mhz",145300000,2500000],["HF 10m",28300000,3000000],["HF 15m",21460000,1536000],
+      ["HF 30m",10345000,1536000],["HF 40m",7200000,1536000],["HF 20m",14640000,1536000],["HF 6m",50500000,1024000],
+      ["UHF 430 Mhz",431000000,2048000],["SAT Q0100 26E",10489700000,1024000],["UHF 432Mhz",433000000,2000000]],
+    tune:(hz,mod,sec)=>"https://sdr.noantri.org/#freq="+hz+",mod="+mod+(sec?",secondary_mod="+sec:""),
+    note:"9 SDR in parallelo (profili indipendenti), 32 posti"},
+  i6iqx:{id:"i6iqx",nome:"I6IQX",luogo:"Bucchianico (CH)",sw:"OpenWebRX+",url:"https://sdr-plus.i6iqx.it/",
+    status:"https://sdr-plus.i6iqx.it/status.json", // senza CORS: di norma resta la copia incorporata
+    // profili SDR letti da status.json il 3 settembre 2026
+    profili:[["70cm",433000000,2048000],["2m",145000000,2048000],["PMR",446100000,250000],["LPD",433950000,2001999],
+      ["20m",14150000,768000],["30m",10125000,768000],["40m",7100000,384000],["80m",3650000,384000],["15m",21200000,768000],
+      ["12m",24900000,768000],["10m",28300000,768000],["6m",50250000,768000],["17m",18100000,768000],["60m",5100000,768000],["160m",1800000,768000]],
+    tune:(hz,mod,sec)=>"https://sdr-plus.i6iqx.it/#freq="+hz+",mod="+mod+(sec?",secondary_mod="+sec:""),
+    note:"1 SDR HF + 1 SDR VHF/UHF: il profilo attivo è condiviso con gli altri ascoltatori, 10 posti"}
+};
+// Ricevitori solo http (non incorporabili in una pagina https): si aprono in una nuova scheda
+const RADIO_LINK=[
+  {nome:"IU0REG — Roma",sw:"OpenWebRX+",url:"http://romasdr.ddns.net:8073/",cosa:"2 m, 70 cm con ripetitori, PMR446, LPD, HF 160–10 m, banda aerea e marittima",
+    tune:(hz,mod)=>"http://romasdr.ddns.net:8073/#freq="+hz+",mod="+mod},
+  {nome:"Roma4 WebSDR — Fara in Sabina (RI)",sw:"WebSDR",url:"http://roma4.ddns.net/",cosa:"40 m, 20 m, CB/10 m",
+    tune:(hz,mod)=>"http://roma4.ddns.net/?tune="+(hz/1e3)+({nfm:"fm",cw:"cw",am:"am",lsb:"lsb",usb:"usb"}[mod]||"usb")},
+];
+const RADIO_GRP=[["HF","HF · ONDE CORTE"],["VHF","VHF"],["UHF","UHF · SATELLITE"],["LIB","USO LIBERO"]];
+// Bande in kHz (IARU Regione 1 + Piano nazionale di ripartizione delle frequenze, D.M. 31/08/2022);
+// fon = segmento fonia; it = statuto in Italia (primaria/secondaria) e note
+const RADIO_BANDE=[
+  {id:"160m",g:"HF",n:"160 m",da:1830,a:1850,fon:[1843,1850],mod:"lsb",it:"primaria in Italia (IARU R1: 1.810–2.000 kHz)"},
+  {id:"80m",g:"HF",n:"80 m",da:3500,a:3800,fon:[3600,3800],mod:"lsb",it:"secondaria"},
+  {id:"60m",g:"HF",n:"60 m",da:5351.5,a:5366.5,fon:[5354,5366],mod:"usb",it:"secondaria, 15 W e.i.r.p."},
+  {id:"40m",g:"HF",n:"40 m",da:7000,a:7200,fon:[7053,7200],mod:"lsb",it:"primaria"},
+  {id:"30m",g:"HF",n:"30 m",da:10100,a:10150,fon:null,mod:"cw",it:"secondaria, solo CW e modi digitali stretti (niente fonia)"},
+  {id:"20m",g:"HF",n:"20 m",da:14000,a:14350,fon:[14112,14350],mod:"usb",it:"primaria"},
+  {id:"17m",g:"HF",n:"17 m",da:18068,a:18168,fon:[18120,18168],mod:"usb",it:"primaria"},
+  {id:"15m",g:"HF",n:"15 m",da:21000,a:21450,fon:[21151,21450],mod:"usb",it:"primaria"},
+  {id:"12m",g:"HF",n:"12 m",da:24890,a:24990,fon:[24940,24990],mod:"usb",it:"primaria"},
+  {id:"10m",g:"HF",n:"10 m",da:28000,a:29700,fon:[28320,29700],mod:"usb",it:"primaria · FM simplex 29.100–29.200, ripetitori 29.620–29.700"},
+  {id:"6m",g:"VHF",n:"6 m",da:50000,a:52000,fon:[50100,50300],mod:"usb",it:"secondaria · FM simplex 51.410–51.590 kHz"},
+  {id:"2m",g:"VHF",n:"2 m",da:144000,a:146000,fon:[145206,145562.5],mod:"nfm",it:"primaria · SSB 144.150–144.400 · ripetitori in uscita 145.575–145.7935 · 145.8–146 solo satellite"},
+  {id:"70cm",g:"UHF",n:"70 cm",da:430000,a:440000,fon:[433400,433575],mod:"nfm",it:"secondaria (430–434 e 436–438), primaria 435–436 (satellite); 434–435 e 438–440 non attribuite in Italia · SSB 432.100–432.400"},
+  {id:"23cm",g:"UHF",n:"23 cm",da:1240000,a:1300000,fon:[1297494,1297981],mod:"nfm",it:"secondaria (1240–1245 e 1270–1298) · SSB 1.296.150–1.296.800"},
+  {id:"qo100",g:"UHF",n:"QO-100 (satellite)",da:10489500,a:10490000,fon:[10489650,10489850],mod:"usb",it:"downlink 10 GHz del transponder NB di Es'hail-2 (AMSAT-DL), geostazionario"},
+  {id:"cb",g:"LIB",n:"CB 27 MHz",da:26965,a:27405,fon:[26965,27405],mod:"am",it:"banda cittadina, 40 canali AM/FM/SSB · libero uso senza patente"},
+  {id:"lpd",g:"LIB",n:"LPD 433",da:433050,a:434790,fon:[433050,434790],mod:"nfm",it:"69 canali, 10 mW · libero uso senza patente · dentro i 70 cm"},
+  {id:"pmr",g:"LIB",n:"PMR446",da:446000,a:446200,fon:[446000,446200],mod:"nfm",it:"16 canali da 446,00625 MHz, 0,5 W e.r.p. · libero uso senza patente"},
+];
+// Frequenze notevoli (kHz). c = categoria: emg emergenza · call chiamata · pc protezione civile ·
+// dig digitale · sat satellite · lib uso libero. sec = decoder OpenWebRX (secondary_mod).
+const RADIO_PRESET=[
+  {b:"80m",k:3760,m:"lsb",c:"emg",l:"Centro di attività emergenza IARU R1 — 80 m"},
+  {b:"80m",k:3645,m:"lsb",c:"pc",l:"Rete Zamberletti F.1 (prove tra le Prefetture)"},
+  {b:"40m",k:7110,m:"lsb",c:"emg",l:"Centro di attività emergenza IARU R1 — 40 m"},
+  {b:"40m",k:6990,m:"lsb",c:"pc",l:"Rete Zamberletti F.2 (riserva)"},
+  {b:"40m",k:7074,m:"usb",s:"ft8",c:"dig",l:"FT8 — 40 m (decoder nel ricevitore)"},
+  {b:"20m",k:14300,m:"usb",c:"emg",l:"Centro di attività emergenza IARU R1 — 20 m"},
+  {b:"20m",k:14074,m:"usb",s:"ft8",c:"dig",l:"FT8 — 20 m (decoder nel ricevitore)"},
+  {b:"17m",k:18160,m:"usb",c:"emg",l:"Centro di attività emergenza IARU R1 — 17 m"},
+  {b:"15m",k:21360,m:"usb",c:"emg",l:"Centro di attività emergenza IARU R1 — 15 m"},
+  {b:"10m",k:28360,m:"usb",c:"call",l:"Centro di attività SSB QRP — 10 m"},
+  {b:"10m",k:29600,m:"nfm",c:"call",l:"Chiamata FM — 10 m"},
+  {b:"6m",k:50150,m:"usb",c:"call",l:"Centro di attività SSB — 6 m"},
+  {b:"6m",k:51510,m:"nfm",c:"call",l:"Chiamata FM — 6 m"},
+  {b:"2m",k:145500,m:"nfm",c:"call",l:"Chiamata FM — 2 m (S20)"},
+  {b:"2m",k:144300,m:"usb",c:"call",l:"Chiamata SSB — 2 m"},
+  {b:"2m",k:145275,m:"nfm",c:"pc",l:"Rete di emergenza metropolitana di Roma (ARI) — VHF"},
+  {b:"2m",k:144800,m:"nfm",s:"packet",c:"dig",l:"APRS — posizioni e telemetria (decoder nel ricevitore)"},
+  {b:"2m",k:145800,m:"nfm",c:"sat",l:"ISS — voce (downlink, ARISS)"},
+  {b:"2m",k:145825,m:"nfm",s:"packet",c:"sat",l:"ISS — packet APRS (downlink)"},
+  {b:"70cm",k:433500,m:"nfm",c:"call",l:"Chiamata FM — 70 cm"},
+  {b:"70cm",k:432200,m:"usb",c:"call",l:"Chiamata SSB — 70 cm"},
+  {b:"70cm",k:432425,m:"nfm",c:"pc",l:"Rete di emergenza metropolitana di Roma (ARI) — UHF"},
+  {b:"70cm",k:437550,m:"nfm",c:"sat",l:"ISS — immagini SSTV (downlink, ARISS)"},
+  {b:"70cm",k:437800,m:"nfm",c:"sat",l:"ISS — ripetitore cross-band (downlink, ARISS)"},
+  {b:"qo100",k:10489750,m:"usb",c:"sat",l:"QO-100 — beacon centrale PSK"},
+  {b:"qo100",k:10489860,m:"usb",c:"emg",l:"QO-100 — frequenza di emergenza"},
+  {b:"cb",k:27065,m:"am",c:"lib",l:"CB canale 9 — soccorso e assistenza stradale"},
+  {b:"cb",k:27185,m:"am",c:"lib",l:"CB canale 19 — chiamata"},
+  {b:"lpd",k:433075,m:"nfm",c:"lib",l:"LPD canale 1"},
+  {b:"pmr",k:446006.25,m:"nfm",c:"lib",l:"PMR446 canale 1"},
+  {b:"pmr",k:446093.75,m:"nfm",c:"lib",l:"PMR446 canale 8"},
+];
+const RADIO_CAT={emg:["EMERGENZA","#ff3b30"],call:["CHIAMATA","#37c7ff"],pc:["PROT. CIVILE","#ffd60a"],
+  dig:["DIGITALE","#b48cff"],sat:["SATELLITE","#e879f9"],lib:["USO LIBERO","#35e08c"]};
+const RADIO_MODI=[["lsb","LSB"],["usb","USB"],["am","AM"],["nfm","FM"],["cw","CW"]];
+const radioRx=()=>RADIO_RX[S.radio.rx]||RADIO_RX.noantri;
+// profilo SDR del ricevitore che contiene la frequenza (stessa regola del client OpenWebRX)
+const radioProf=(hz,rx)=>(rx||radioRx()).profili.find(p=>Math.abs(hz-p[1])<=p[2]/2)||null;
+const radioBanda=hz=>RADIO_BANDE.find(b=>hz>=b.da*1e3&&hz<=b.a*1e3)||null;
+const radioCovBand=(b,rx)=>!!(radioProf((b.da+b.a)/2*1e3,rx)||radioProf(b.da*1e3,rx)||radioProf(b.a*1e3,rx));
+const radioAltRx=hz=>Object.values(RADIO_RX).find(rx=>rx.id!==S.radio.rx&&radioProf(hz,rx))||null;
+function radioSetRx(id){ // cambio ricevitore: origine diversa, l'iframe si ricarica
+  if(!RADIO_RX[id]||id===S.radio.rx)return;
+  S.radio.rx=id; S.radio.live=null;
+  if(S.radio.on){$("#radioFrame").src=radioUrl(); radioLive();}
+  render(); saveCfg();
+}
+const fmtHz=hz=>hz<30e6?(hz/1e3).toLocaleString("it-IT",{maximumFractionDigits:2})+" kHz"
+  :(hz/1e6).toLocaleString("it-IT",{minimumFractionDigits:3,maximumFractionDigits:5})+" MHz";
+const fmtKhz=k=>k<30000?k.toLocaleString("it-IT",{maximumFractionDigits:2})+" kHz"
+  :(k/1e3).toLocaleString("it-IT",{minimumFractionDigits:3,maximumFractionDigits:5})+" MHz";
+const radioHm=t=>{const d=new Date(t);return pad(d.getHours())+":"+pad(d.getMinutes())};
+const radioUrl=()=>radioRx().tune(Math.round(S.radio.hz),S.radio.mod,S.radio.sec);
+function radioSync(){
+  $("#radioWrap").style.display=(S.view==="rad"&&S.radio.on)?"block":"none";
+  const b=document.querySelector('#nav [data-v="rad"]');if(b)b.classList.toggle("rxon",S.radio.on);
+}
+function radioNav(){ // sintonia senza ricaricare: se cambia solo l'hash, il browser
+  // esegue una navigazione di frammento e il ricevitore riceve "hashchange"
+  if(S.radio.on)$("#radioFrame").src=radioUrl();
+}
+const radioVfoTxt=()=>{const r=S.radio,b=radioBanda(r.hz);
+  return r.mod.toUpperCase()+(r.sec?" · "+r.sec.toUpperCase():"")+(b?" · "+b.n:"")};
+function radioTune(hz,mod,sec,band){
+  S.radio.hz=hz; if(mod)S.radio.mod=mod; S.radio.sec=sec||"";
+  const b=band?RADIO_BANDE.find(x=>x.id===band):radioBanda(hz);
+  if(b){S.radio.band=b.id;S.radio.grp=b.g;}
+  radioNav(); render(); saveCfg();
+}
+async function radioLive(){ // nome, versione e profili reali del ricevitore (CORS aperto)
+  const rx=radioRx(),lv=S.radio.live;
+  // dopo un errore (I6IQX non espone il CORS; interruzioni temporanee) si riprova al più ogni 60 s
+  if(!rx.status||(lv&&(!lv.err||Date.now()-lv.t<60e3)))return;
+  S.radio.live={busy:true,err:true,t:Date.now()};
+  try{const d=await jget(rx.status,10000);
+    const prof=[];(d.sdrs||[]).forEach(s=>(s.profiles||[]).forEach(p=>{
+      if(p.center_freq&&p.sample_rate)prof.push([String(p.name||s.name||"").trim(),+p.center_freq,+p.sample_rate])}));
+    if(prof.length)rx.profili=prof;
+    S.radio.live={nome:(d.receiver&&d.receiver.name)||rx.nome,luogo:(d.receiver&&d.receiver.location)||rx.luogo,
+      ver:d.version||"",n:prof.length,t:Date.now()};
+    if(S.view==="rad")render();
+  }catch(e){S.radio.live={err:true,t:Date.now()};if(S.view==="rad")render();}
+}
+function viewRad(){
+  title.textContent="RADIO — ASCOLTO SDR";
+  feed.innerHTML="";
+  const rx=radioRx(),r=S.radio;
+  if(!r.on){
+    const el=document.createElement("div");el.className="wx";
+    el.innerHTML=`<h3>ASCOLTO DELLE BANDE RADIOAMATORIALI<span>CLICK-TO-LOAD</span></h3>
+      <p>Ricevitore SDR via web con <b>spettro e waterfall</b>: onde corte, 6 m, 2 m, 70 cm,
+      CB e satellite QO-100 dalla stazione di <b>${esc(rx.nome)}</b> a ${esc(rx.luogo)}
+      (software ${esc(rx.sw)}); in alternativa il ricevitore di I6IQX a Bucchianico (CH) per
+      80 m, 160 m, 60 m, 17 m, 12 m e PMR446. Per usarli devi caricare i contenuti del loro server:
+      il browser apre un collegamento audio con quel sito, esterno al nostro.</p>
+      <p style="margin-top:6px"><b>Solo ascolto.</b> Da questa pagina non si trasmette. L'ascolto
+      delle bande radioamatoriali è libero (art. 134, comma 4, del Codice delle comunicazioni
+      elettroniche); per trasmettere servono patente e nominativo.</p>
+      <button class="wbtn" id="radioLoad">⚡ CARICA IL RICEVITORE SDR</button>
+      <p style="margin-top:6px"><a href="${esc(rx.url)}" target="_blank" rel="noopener">In alternativa apri il ricevitore in una nuova scheda</a>.</p>`;
+    feed.appendChild(el);
+    el.querySelector("#radioLoad").addEventListener("click",()=>{
+      r.on=true; $("#radioFrame").src=radioUrl(); radioSync(); radioLive(); render();
+    });
+  }else{
+    radioLive();
+    const prof=radioProf(r.hz),band=radioBanda(r.hz);let alt=null;
+    const vfo=document.createElement("div");vfo.className="wx";
+    vfo.innerHTML=`<h3>SINTONIA<span>${esc(rx.sw)} · ${esc((r.live&&r.live.nome)||rx.nome)}</span></h3>
+      <div class="vfo" aria-live="polite"><b>${esc(fmtHz(r.hz))}</b><span>${esc(radioVfoTxt())}</span></div>
+      ${prof?`<div class="rstep ok"><b>PROFILO DEL RICEVITORE: ${esc(prof[0])}</b><span>Se il ricevitore mostra un altro profilo, selezionalo dal menu in alto a sinistra dello spettro: la sintonia impostata qui si applica da sola.</span></div>`
+      :(alt=radioAltRx(r.hz))?`<div class="rstep alt"><b>NON COPERTA DA ${esc(rx.nome.toUpperCase())} · DISPONIBILE SU ${esc(alt.nome.toUpperCase())}</b><span>Il ricevitore di ${esc(alt.nome)} a ${esc(alt.luogo)} ha un profilo per questa gamma. <button class="wbtn" data-rx="${alt.id}">PASSA A ${esc(alt.nome.toUpperCase())}</button></span></div>`
+      :`<div class="rstep no"><b>FREQUENZA FUORI DAI PROFILI DEI RICEVITORI</b><span>Nessuna antenna/SDR dei ricevitori incorporabili copre questa gamma: scegli una banda coperta (contrassegno ●) oppure prova i ricevitori esterni elencati sotto.</span></div>`}
+      <div class="wgrp" style="margin-top:8px"><span class="wglbl">SINTONIA MANUALE</span>
+        <div class="rman"><label class="wglbl" for="radioIn">FREQUENZA (kHz, oppure MHz con la virgola)</label>
+        <input id="radioIn" class="rinp" inputmode="decimal" placeholder="es. 7110 · 145,500 · 433,5" autocomplete="off">
+        <label class="wglbl" for="radioMod">MODO</label>
+        <select id="radioMod" class="rsel" aria-label="Modo di ricezione">${RADIO_MODI.map(([k,l])=>`<option value="${k}"${r.mod===k?" selected":""}>${l}</option>`).join("")}</select>
+        <button class="wbtn" id="radioGo">SINTONIZZA</button></div></div>
+      <div class="wgrp"><button class="wbtn" id="radioTab" aria-label="Apri il ricevitore in una nuova scheda, già sintonizzato">⇱ NUOVA SCHEDA</button>
+        <button class="wbtn danger" id="radioOff">✕ CHIUDI RICEVITORE</button></div>`;
+    feed.appendChild(vfo);
+    const inp=vfo.querySelector("#radioIn");
+    const go=()=>{
+      let v=parseFloat(String(inp.value).replace(/\s/g,"").replace(",","."));
+      if(!isFinite(v)||v<=0){inp.setAttribute("aria-invalid","true");inp.focus();return;}
+      const hz=Math.round(v<1000?v*1e6:v*1e3); // < 1000 → MHz, altrimenti kHz
+      radioTune(hz,vfo.querySelector("#radioMod").value,"");
+    };
+    vfo.querySelector("#radioGo").addEventListener("click",go);
+    inp.addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();go();}});
+    vfo.querySelector("#radioMod").addEventListener("change",e=>{r.mod=e.target.value;r.sec="";radioNav();saveCfg();
+      vfo.querySelector(".vfo span").textContent=radioVfoTxt();});
+    vfo.querySelector("#radioTab").addEventListener("click",()=>window.open(radioUrl(),"_blank","noopener"));
+    const altBtn=vfo.querySelector("button[data-rx]");if(altBtn)altBtn.addEventListener("click",()=>radioSetRx(altBtn.dataset.rx));
+    vfo.querySelector("#radioOff").addEventListener("click",()=>{r.on=false;$("#radioFrame").src="";radioSync();render();});
+
+    // bande: gruppi HF/VHF/UHF/uso libero, limiti da…a…, copertura del ricevitore
+    const bl=document.createElement("div");bl.className="wx";
+    bl.innerHTML=`<h3>BANDE<span>DA … A … · ● = COPERTA DAL RICEVITORE</span></h3>
+      <div class="wgrp" id="radioGrp">${RADIO_GRP.map(([k,l])=>`<button class="wbtn${r.grp===k?" on":""}" data-grp="${k}" aria-pressed="${r.grp===k}">${l}</button>`).join("")}</div>
+      <div id="radioBands">${RADIO_BANDE.filter(b=>b.g===r.grp).map(b=>{
+        const cov=radioCovBand(b,rx),other=cov?null:Object.values(RADIO_RX).find(x=>x.id!==rx.id&&radioCovBand(b,x));
+        return `<button class="bnd${r.band===b.id?" on":""}${cov?" cov":""}" data-band="${b.id}" aria-pressed="${r.band===b.id}" title="${cov?"Coperta dal ricevitore "+esc(rx.nome):other?"Coperta dal ricevitore "+esc(other.nome)+", non da "+esc(rx.nome):"Non coperta dai ricevitori incorporabili"}">
+          <span class="bn">${cov?"● ":"○ "}${esc(b.n)}</span><span class="br">${esc(fmtKhz(b.da))} – ${esc(fmtKhz(b.a))}</span>
+          <span class="bi">${b.fon?"fonia "+esc(fmtKhz(b.fon[0]))+" – "+esc(fmtKhz(b.fon[1])):"nessun segmento fonia"} · ${esc(b.it)}${other?" · <b>coperta da "+esc(other.nome)+"</b>":""}</span></button>`}).join("")}</div>`;
+    feed.appendChild(bl);
+    bl.querySelector("#radioGrp").addEventListener("click",e=>{
+      const b=e.target.closest("button[data-grp]");if(!b)return;
+      r.grp=b.dataset.grp; const fb=RADIO_BANDE.find(x=>x.g===r.grp); if(fb)r.band=fb.id; render(); saveCfg();
+    });
+    bl.querySelector("#radioBands").addEventListener("click",e=>{
+      const b=e.target.closest("button[data-band]");if(!b)return;
+      const bd=RADIO_BANDE.find(x=>x.id===b.dataset.band);if(!bd)return;
+      // primo preset della banda, altrimenti centro del segmento fonia (o della banda)
+      const p=RADIO_PRESET.find(x=>x.b===bd.id);
+      if(p)radioTune(Math.round(p.k*1e3),p.m,p.s||"",bd.id);
+      else{const seg=bd.fon||[bd.da,bd.a];radioTune(Math.round((seg[0]+seg[1])/2*1e3),bd.mod,"",bd.id);}
+    });
+
+    // frequenze notevoli della banda scelta
+    const pr=RADIO_PRESET.filter(p=>p.b===r.band);
+    if(pr.length){
+      const pl=document.createElement("div");pl.className="wx";
+      const bd=RADIO_BANDE.find(x=>x.id===r.band);
+      pl.innerHTML=`<h3>FREQUENZE NOTEVOLI — ${esc(bd?bd.n.toUpperCase():"")}<span>CLIC PER SINTONIZZARE</span></h3>`+
+        pr.map(p=>{const cat=RADIO_CAT[p.c]||["",""],hz=Math.round(p.k*1e3),cov=!!radioProf(hz),cur=Math.abs(hz-r.hz)<1;
+          return `<button class="pre${cur?" on":""}" data-k="${p.k}" data-m="${p.m}" data-s="${p.s||""}" aria-pressed="${cur}" ${cov?"":'title="Non coperta da questo ricevitore"'}>
+            <span class="pf">${esc(fmtKhz(p.k))}<em>${p.m.toUpperCase()}${p.s?"+"+p.s.toUpperCase():""}</em></span>
+            <span class="pl">${esc(p.l)}</span><span class="pc" style="--cc:${cat[1]}">${cat[0]}${cov?"":" · ○"}</span></button>`}).join("");
+      feed.appendChild(pl);
+      pl.addEventListener("click",e=>{
+        const b=e.target.closest("button[data-k]");if(!b)return;
+        radioTune(Math.round(+b.dataset.k*1e3),b.dataset.m,b.dataset.s,r.band);
+      });
+    }
+
+    // ricevitore e stato
+    const rs=document.createElement("div");rs.className="wx";
+    const lv=r.live;
+    rs.innerHTML=`<h3>RICEVITORE<span>${lv&&!lv.err?"STATUS LETTO "+radioHm(lv.t):lv&&lv.busy?"LETTURA STATUS…":"STATUS NON LETTO · PROFILI INCORPORATI"}</span></h3>
+      <div class="wgrp" id="radioRxSel">${Object.values(RADIO_RX).map(x=>`<button class="wbtn${x.id===rx.id?" on":""}" data-rx="${x.id}" aria-pressed="${x.id===rx.id}">${esc(x.nome.toUpperCase())} · ${esc(x.luogo.toUpperCase())}</button>`).join("")}</div>
+      <p><b>${esc((lv&&lv.nome)||rx.nome)}</b> · ${esc((lv&&lv.luogo)||rx.luogo)} · ${esc(rx.sw)}${lv&&lv.ver?" "+esc(lv.ver):""}
+      · ${esc(rx.note)} · profili: ${rx.profili.map(p=>esc(p[0])).join(", ")}.</p>
+      <p style="margin-top:6px;font-size:10.5px">Altri ricevitori della zona, solo in nuova scheda (siti senza https):
+      ${RADIO_LINK.map(l=>`<a href="${esc(l.tune(Math.round(r.hz),r.mod))}" target="_blank" rel="noopener">${esc(l.nome)}</a> (${esc(l.sw)}: ${esc(l.cosa)})`).join(" · ")}.</p>
+      <p style="margin-top:6px;font-size:10.5px;color:var(--dim)">Lo spettro occupa l'area principale: rotella per lo zoom,
+      clic sul waterfall per spostare la sintonia fine, pulsanti del ricevitore per modo, squelch e volume.
+      L'audio continua anche cambiando vista dal menu in alto; per fermarlo usa ✕ CHIUDI RICEVITORE.
+      Ricevitore condiviso con altri ascoltatori (posti limitati): se non si collega, riprova più tardi.</p>`;
+    feed.appendChild(rs);
+    rs.querySelector("#radioRxSel").addEventListener("click",e=>{const b=e.target.closest("button[data-rx]");if(b)radioSetRx(b.dataset.rx);});
+  }
+  // trasmettere: cosa serve, cosa è libero, strumenti via internet
+  const tx=document.createElement("div");tx.className="wx";
+  tx.innerHTML=`<h3>E PER TRASMETTERE?<span>SOLO CON PATENTE E NOMINATIVO</span></h3>
+    <p>Questa pagina <b>riceve soltanto</b>: l'ascolto delle bande radioamatoriali è libero per tutti
+    (art. 134, comma 4, del Codice delle comunicazioni elettroniche, D.Lgs. 259/2003). Trasmettere
+    richiede l'<b>autorizzazione generale</b>, la <b>patente di operatore</b> e il <b>nominativo</b>
+    rilasciati dal Ministero delle Imprese e del Made in Italy (art. 134 e Allegato 26 del Codice).</p>
+    <p style="margin-top:6px">Chi ha il nominativo può collegarsi anche via internet, con i propri apparati e software:
+    <a href="https://www.echolink.org/" target="_blank" rel="noopener">EchoLink</a> (accesso solo dopo la verifica della licenza),
+    <a href="https://www.pa7lim.nl/peanut/" target="_blank" rel="noopener">Peanut</a> (reti D-STAR, Fusion, DMR e M17; codice di accesso riservato ai radioamatori),
+    <a href="https://play.google.com/store/apps/details?id=com.on7off.tciremote" target="_blank" rel="noopener">TCI Remote</a> (controllo da smartphone della propria stazione SDR, con spettro e PTT).
+    Senza patente si può <b>ascoltare</b> anche il traffico DMR dal browser con
+    <a href="https://hose.brandmeister.network/" target="_blank" rel="noopener">BrandMeister Hoseline</a>.</p>
+    <p style="margin-top:6px">Senza patente si può trasmettere solo con apparati di <b>libero uso</b>:
+    <b>PMR446</b> (0,5 W), <b>CB 27 MHz</b> (canale 9 per le chiamate di soccorso) e <b>LPD 433</b> (10 mW),
+    secondo l'art. 105 del Codice e il Piano nazionale di ripartizione delle frequenze. Le frequenze operative del Gruppo,
+    assegnate al Comune dal Ministero, non sono radioamatoriali e non compaiono in questo elenco.</p>
+    <p style="margin-top:6px;font-size:10.5px;color:var(--dim)">Approfondimenti sul sito:
+    <a href="${BASE}conoscere/telecomunicazioni-emergenza/">telecomunicazioni in emergenza</a> ·
+    <a href="${BASE}comunicazioni/2026-04-13-frequenze-radio-emergenza-radioamatori-protezione-civile-1/">frequenze della Rete Zamberletti</a> ·
+    <a href="${BASE}comunicazioni/2026-05-02-rete-emergenza-metropolitana-roma-radioamatori/">rete di emergenza metropolitana di Roma</a> ·
+    <a href="${BASE}comunicazioni/2026-04-14-radio-protezione-civile-dieci-errori-volontario/">dieci errori del volontario in radio</a>.</p>`;
+  feed.appendChild(tx);
+  feed.appendChild(noteEl('Ricevitori esterni <a href="https://sdr.noantri.org/" target="_blank" rel="noopener">OpenWebRX+ di IZ0FKE</a> e <a href="https://sdr-plus.i6iqx.it/" target="_blank" rel="noopener">OpenWebRX+ di I6IQX</a>, caricati solo su tua richiesta; limiti di banda da <a href="https://www.iaru-r1.org/on-the-air/band-plans/" target="_blank" rel="noopener">IARU Regione 1</a> e dal Piano nazionale di ripartizione delle frequenze (MIMIT); canali PMR446/CB/LPD di libero uso. Le frequenze di rete sono quelle pubblicate dalle rispettive organizzazioni.'));
+}
+function render(){({all:viewAll,sis:viewSis,met:viewMet,map:viewMap,wnd:viewWnd,rad:viewRad,amb:viewAmb,ems:viewEms,log:viewLog})[S.view]();windySync();radioSync();}
 
 /* ---------------- barra NOTIZIE — agenzie di stampa (Italia e mondo) ----------------
    ANSA + Adnkronos dallo snapshot self-hosted open-data/notizie-agenzie.json
@@ -1610,9 +1925,9 @@ function tickUpd(){
 
 /* ---------------- interazioni ---------------- */
 /* Deep-link e condivisione delle schermate: ogni vista ha un hash proprio
-   (#allerta, #sismico, #meteo, #carte, #windy, #aria-mare, #emergenze-ue),
+   (#allerta, #sismico, #meteo, #carte, #windy, #radio, #aria-mare, #emergenze-ue),
    così il link condiviso apre direttamente quella schermata. */
-const VIEW_SLUG={all:"allerta",sis:"sismico",met:"meteo",map:"carte",wnd:"windy",amb:"aria-mare",ems:"emergenze-ue",log:"registro"};
+const VIEW_SLUG={all:"allerta",sis:"sismico",met:"meteo",map:"carte",wnd:"windy",rad:"radio",amb:"aria-mare",ems:"emergenze-ue",log:"registro"};
 const SLUG_VIEW=Object.fromEntries(Object.entries(VIEW_SLUG).map(([k,v])=>[v,k]));
 function setView(v,fromHash){
   if(!VIEW_SLUG[v])return;
@@ -1725,17 +2040,17 @@ document.addEventListener("visibilitychange",()=>{
   if(!document.hidden&&Date.now()-(S.lastFull||0)>4*60e3)refreshAll(false);
 });
 
-// Scorciatoie da tastiera per la sala: 1-8 cambiano vista, R accende/spegne il radar
+// Scorciatoie da tastiera per la sala: 1-9 cambiano vista, R accende/spegne il radar
 document.addEventListener("keydown",e=>{
   if(e.altKey||e.ctrlKey||e.metaKey)return;
   if(e.target&&e.target.matches&&e.target.matches("input,select,textarea"))return;
-  const order=["all","sis","met","map","wnd","amb","ems","log"];
-  if(e.key>="1"&&e.key<="8")setView(order[+e.key-1]);
+  const order=["all","sis","met","map","wnd","amb","ems","log","rad"];
+  if(e.key>="1"&&e.key<="9")setView(order[+e.key-1]);
   else if(e.key==="r"||e.key==="R"){const b=document.querySelector('#nav [data-l="radar"]');if(b)b.click();}
 });
 
 // ▶ CICLO — modalità video-wall: rotazione automatica delle viste dati ogni 45 s
-// (salta WINDY e REGISTRO, che sono viste di lavoro). Si spegne ripremendo.
+// (salta WINDY, RADIO e REGISTRO, che sono viste di lavoro). Si spegne ripremendo.
 let cycTimer=null;
 $("#cycBtn").addEventListener("click",()=>{
   S.cycle=!S.cycle;
@@ -1750,13 +2065,14 @@ $("#cycBtn").addEventListener("click",()=>{
 });
 
 /* ---------------- configurazione persistente della postazione ----------------
-   Layer mappa, previsioni ICON-2I e impostazioni Windy (non l'accensione del
-   widget: quella resta una scelta esplicita, click-to-load) sopravvivono al
+   Layer mappa, previsioni ICON-2I, impostazioni Windy e sintonia radio (non
+   l'accensione dei widget: quella resta una scelta esplicita, click-to-load) sopravvivono al
    riavvio del PC di sala. Solo localStorage, nessun dato inviato altrove. */
 function saveCfg(){
   try{localStorage.setItem("pcgz-monitor-cfg",JSON.stringify({
     layers:S.layers,prevLayer:$("#prevLayer").value,prevTime:$("#prevTime").value,
     windy:{ov:S.windy.ov,lvl:S.windy.lvl,prod:S.windy.prod,zoom:S.windy.zoom,detail:S.windy.detail},
+    radio:{rx:S.radio.rx,hz:S.radio.hz,mod:S.radio.mod,sec:S.radio.sec,grp:S.radio.grp,band:S.radio.band},
     side:document.body.classList.contains("side-closed"),
     view:S.view}))}catch(e){}
 }
@@ -1772,6 +2088,10 @@ function saveCfg(){
   if(c.prevTime!==undefined)$("#prevTime").value=c.prevTime;
   if(c.windy)Object.assign(S.windy,{ov:c.windy.ov||S.windy.ov,lvl:c.windy.lvl||S.windy.lvl,
     prod:c.windy.prod||S.windy.prod,zoom:c.windy.zoom||S.windy.zoom,detail:!!c.windy.detail});
+  if(c.radio&&isFinite(+c.radio.hz)&&+c.radio.hz>0){const q=c.radio;
+    Object.assign(S.radio,{rx:RADIO_RX[q.rx]?q.rx:S.radio.rx,hz:+q.hz,mod:RADIO_MODI.some(m=>m[0]===q.mod)?q.mod:S.radio.mod,
+      sec:typeof q.sec==="string"?q.sec.slice(0,12):"",grp:RADIO_GRP.some(g=>g[0]===q.grp)?q.grp:S.radio.grp,
+      band:RADIO_BANDE.some(b=>b.id===q.band)?q.band:S.radio.band});}
   applyLayers(); applyPrev();
   if(c.side&&innerWidth>720)sideCollapse(true);
   if(!location.hash&&c.view&&VIEW_SLUG[c.view])S.view=c.view;
