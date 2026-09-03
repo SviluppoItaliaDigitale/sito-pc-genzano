@@ -5,11 +5,59 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-03T20:39:51+00:00",
+  "generato": "2026-09-03T22:50:11+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-03T22:30:11+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Strisce blu e ticket sosta scaduto, ecco quanto si può 'sforare' senza essere multati",
+   "url": "https://www.adnkronos.com/cronaca/codice-della-strada-strisce-blu-ticket-sosta-scaduto-regole-novita_5lIDaUaiwMbo22k9aRJsYt"
+  },
+  {
+   "data": "2026-09-03T22:19:25+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Cobolli show, il colpo del torneo agli US Open",
+   "url": "https://www.adnkronos.com/sport/cobolli-us-open-video-schoolkate_3HHc7mq8L2uEvgEtayXl1z"
+  },
+  {
+   "data": "2026-09-03T22:04:39+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Caldo non cede nel weekend, sabato tornano i bollini arancioni: le città più roventi",
+   "url": "https://www.adnkronos.com/cronaca/caldo-weekend-settembre-bollini-arancioni_QrS1zC26ZNqbHBP4ICELW"
+  },
+  {
+   "data": "2026-09-03T21:56:06+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sky, serata-show per la 'Notte delle Coppe', tra gli ospiti Cardinale, Marotta e Carnevali",
+   "url": "https://www.adnkronos.com/sport/calcio-sky-champions-europa-league-tv_1kS5TbxZoqIRM96fFR1z2d"
+  },
+  {
+   "data": "2026-09-03T21:28:11+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Telecronista racconta l'ingresso in campo... del figlio",
+   "url": "https://www.adnkronos.com/sport/telecronista-figlio-campo-lacrime-diretta-tv_5IiallXwwm7Ltil15jJaZD"
+  },
+  {
+   "data": "2026-09-03T21:22:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Usa-Iran, Vance: \"Non la chiamerei guerra, non ci sono scontri a fuoco\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/usa-iran-vance-guerra-oggi-ultime-notizie_2C5WDSPHFlRcttgljXedYx"
+  },
+  {
+   "data": "2026-09-03T21:07:50+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Di Pasquale conduttrice di Report, Ranucci 'approva': \"Era la mia scelta\"",
+   "url": "https://www.adnkronos.com/politica/report-di-pasquale-piervincenzi-rai-ranucci_6u8D0vjutN4pyerzGmVOeV"
+  },
+  {
+   "data": "2026-09-03T20:40:23+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Bartiromo lascia Fox News, 'divorzio choc' per la giornalista preferita di Trump",
+   "url": "https://www.adnkronos.com/internazionale/esteri/bartiromo-fox-news-trump-italia_hBm5AnFboBSAoDZw7RYqV"
+  },
   {
    "data": "2026-09-03T20:11:54+00:00",
    "fonte": "ADNKRONOS",
@@ -125,28 +173,10 @@
    "url": "https://www.adnkronos.com/sport/fifa-uefa-infantino-mondiali_5V6yFDgGLc9l4PcBFacrpz"
   },
   {
-   "data": "2026-09-03T17:55:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Jane Fonda contro Trump: \"Tempi spaventosi e pericolosi negli Usa, fermiamo l'autoritarismo\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/jane-fonda-allarme-autoritarismo-donald-trump_7zYeWfRNc5aL5B18KKwC7j"
-  },
-  {
    "data": "2026-09-03T17:52:45+00:00",
    "fonte": "ANSA",
    "titolo": "Cambiano le multe, 1.000 euro per chi viaggia senza rc auto",
    "url": "https://www.ansa.it/canale_motori/notizie/istituzioni/2026/09/03/cambiano-le-multe-1.000-euro-per-chi-viaggia-senza-rc-auto_85c87aa9-6b47-4af1-b675-bdda6b8acb62.html"
-  },
-  {
-   "data": "2026-09-03T17:29:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "US Open, Cobolli-Schoolkate 3-6, 6-3 - Diretta",
-   "url": "https://www.adnkronos.com/sport/diretta-cobolli-schoolkate-oggi-us-open-risultato-live_2TYaf4Mh33rAzaP4nKl9gx"
-  },
-  {
-   "data": "2026-09-03T17:15:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Clooney annuncia una nuova serie tv: \"Gireremo alcune scene proprio qui a Venezia\"",
-   "url": "https://www.adnkronos.com/spettacoli/george-clooney-serie-tv-venezia-annuncio_5HOoK2bCDftS0ua5qI9iWN"
   },
   {
    "data": "2026-09-03T17:14:29+00:00",
@@ -155,40 +185,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/03/chiuse-indagini-su-cinturrino-verso-processo-per-omicidio-premeditato_6104ae7d-4d7e-4c56-ad8a-db9f4f58b359.html"
   },
   {
-   "data": "2026-09-03T17:08:28+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "America’s Cup, Alovisi (Trenitalia): \"Insieme a Luna Rossa valorizziamo identità italiana e parliamo a un pubblico globale\"",
-   "url": "https://www.adnkronos.com/sport/americas-cup-alovisi-trenitalia-insieme-a-luna-rossa-valorizziamo-identita-italiana-e-parliamo-a-un-pubblico-globale_13bd14Uw5mqXxSXM5c7RdG"
-  },
-  {
-   "data": "2026-09-03T17:07:24+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sinner: \"E' dura saltare gli Us Open, al lavoro per tornare più forte\"",
-   "url": "https://www.adnkronos.com/sport/sinner-tennis-us-open-tornei_2uiccenE1M551011kyEb5a"
-  },
-  {
    "data": "2026-09-03T17:04:00+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Cassazione, 'Pifferi lucida nell'omicidio della figlia ma pure molto fragile'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/03/cassazione-pifferi-lucida-nellomicidio-della-figlia-ma-pure-molto-fragile_84bf40ee-4ec3-4d01-923d-251bf8d6eaf6.html"
-  },
-  {
-   "data": "2026-09-03T17:03:58+00:00",
-   "fonte": "ANSA",
-   "titolo": "The Donald sulla moneta da 1 dollaro, è il primo presidente Usa in carica",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/03/the-donald-sulla-moneta-da-1-dollaro-e-il-primo-presidente-usa-in-carica_5f1326b6-6968-4503-b483-ff85761f8860.html"
-  },
-  {
-   "data": "2026-09-03T16:57:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Omicidi-suicidi e tragedie in famiglia, 10 morti in 4 giorni da Pietralata a Finale Ligure",
-   "url": "https://www.adnkronos.com/cronaca/omicidi-suicidi-tragedie-in-famiglia-lunga-scia-di-sangue_13tTaSzE8XWgbZIjZoSf5G"
-  },
-  {
-   "data": "2026-09-03T16:54:59+00:00",
-   "fonte": "ANSA",
-   "titolo": "Tajani: bimbo in coma a Sharm in volo verso l'Italia",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/03/tajani-bimbo-in-coma-a-sharm-in-volo-verso-litalia-_a40de73d-165e-4c4b-9893-e36e6c608790.html"
   }
  ]
 }
