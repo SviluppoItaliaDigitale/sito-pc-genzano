@@ -5,11 +5,23 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-02T22:31:39+00:00",
+  "generato": "2026-09-03T05:07:30+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-03T05:02:27+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Us Open, Carlos Alcaraz soffre ma rimonta e batte Jaime Faria: è terzo turno",
+   "url": "https://www.adnkronos.com/sport/us-open-2026-carlos-alcaraz-oggi-jaime-faria-terzo-turno_HxKcSKhciqhP1ST9hsgmE"
+  },
+  {
+   "data": "2026-09-03T04:44:34+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Vuelta di Spagna, oggi dodicesima tappa: orario, percorso e dove vederla",
+   "url": "https://www.adnkronos.com/sport/vuelta-spagna-oggi-tappa-12-orario-percorso-dove-vederla-tv-streaming_NEcBeExVS8eHS9PimlWP3"
+  },
   {
    "data": "2026-09-02T22:04:16+00:00",
    "fonte": "ADNKRONOS",
@@ -177,18 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Tromba d'aria a Policoro, il Comune: 'Danni ingenti'",
    "url": "https://www.ansa.it/basilicata/notizie/2026/09/02/tromba-daria-a-policoro-il-comune-danni-ingenti-alle-cose_655b9eb7-1f15-4bb2-9996-603433184227.html"
-  },
-  {
-   "data": "2026-09-02T19:31:13+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Ex vincitore del Grande Fratello indagato per violenza sessuale",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/02/ex-vincitore-del-grande-fratello-indagato-per-violenza-sessuale_6a1d546d-fc35-49a5-a03a-4fbbb447d938.html"
-  },
-  {
-   "data": "2026-09-02T19:28:47+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Si schianta con la Porsche a Miami, muore un abruzzese di 32 anni",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/02/si-schianta-con-la-porsche-a-miami-muore-un-abruzzese-di-32-anni_0295b6c6-4a6e-449a-be38-4ac6541c915c.html"
   }
  ]
 }
