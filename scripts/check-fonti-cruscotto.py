@@ -2,7 +2,8 @@
 """Smoke-check delle fonti dati esterne del cruscotto (/cruscotto/).
 
 Le schede del cruscotto leggono dati live da servizi di terzi (INGV, Open-Meteo,
-DPC, EUMETSAT, NASA, EFFIS, ARPA Lazio, ItaliaMeteo/MeteoHub). Se uno di questi cambia endpoint o cade,
+DPC, EUMETSAT, NASA, EFFIS, ARPA Lazio, ItaliaMeteo/MeteoHub; la Sala situazioni
+/monitor/ anche il ricevitore SDR OpenWebRX+ di IZ0FKE). Se uno di questi cambia endpoint o cade,
 la scheda diventa vuota SENZA errore visibile. Questo script verifica ogni fonte
 e stampa un report Markdown. Exit code = numero di fonti in errore (0 = tutto ok).
 
@@ -169,6 +170,31 @@ def chk_arpa():
     return ok, det
 
 
+def chk_sdr_noantri():
+    # Ricevitore SDR OpenWebRX+ di IZ0FKE (Roma), vista RADIO della Sala
+    # situazioni /monitor/ (iframe click-to-load). status.json è pubblico e
+    # con CORS aperto: la vista lo legge per elencare i profili SDR (bande)
+    # disponibili. Se cade, il pannello resta sui profili incorporati ma lo
+    # spettro non si carica.
+    return _chk_owrx("https://sdr.noantri.org/status.json")
+
+
+def chk_sdr_i6iqx():
+    # Secondo ricevitore della vista RADIO (I6IQX, Bucchianico): copre 80/160/60 m e
+    # PMR446 che il ricevitore romano non ha. status.json senza CORS: la vista usa
+    # la copia incorporata dei profili, questo check verifica che sia online.
+    return _chk_owrx("https://sdr-plus.i6iqx.it/status.json")
+
+
+def _chk_owrx(url):
+    ok, det, _, j = _get(url, expect_json=True)
+    if ok and isinstance(j, dict) and isinstance(j.get("sdrs"), list):
+        prof = sum(len(s.get("profiles") or []) for s in j["sdrs"] if isinstance(s, dict))
+        rx = (j.get("receiver") or {}).get("name", "?")
+        return True, f"{det} · {rx} · {len(j['sdrs'])} SDR / {prof} profili · {j.get('version', '')}"
+    return False, det if not ok else "Risposta JSON inattesa (manca 'sdrs')"
+
+
 SORGENTI = [
     ("Terremoti — INGV FDSN", "Terremoti, Vulcani", chk_ingv),
     ("Meteo puntuale — Open-Meteo", "Meteo, cartine", lambda: chk_openmeteo("forecast", "api.open-meteo.com", "current=temperature_2m")),
@@ -183,6 +209,8 @@ SORGENTI = [
     ("Aria Europa — Copernicus CAMS (WMS ECMWF)", "Aria Europa (CAMS)", chk_cams_eu),
     ("Emergenze EU — Copernicus EMS Rapid Mapping", "Emergenze EU (EMS)", chk_ems_rapid),
     ("Allerte globali — GDACS", "Sala situazioni (GDACS)", chk_gdacs),
+    ("Ricevitore SDR — OpenWebRX+ IZ0FKE", "Sala situazioni (RADIO)", chk_sdr_noantri),
+    ("Ricevitore SDR — OpenWebRX+ I6IQX", "Sala situazioni (RADIO)", chk_sdr_i6iqx),
     ("Previsioni — ItaliaMeteo (ICON-2I)", "Previsioni ItaliaMeteo", lambda: chk_wms_getmap("meteohub:t2m-t2m", "https://maps.mistralportal.it/wms")),
     ("Mare onde — ItaliaMeteo (WW3)", "Mare ItaliaMeteo", lambda: chk_wms_getmap("meteohub:ww3_hs-hs", "https://maps.mistralportal.it/wms")),
     ("Radar SRI — ItaliaMeteo", "Radar ItaliaMeteo", lambda: chk_wms_getmap("meteohub:radar-sri", "https://maps.mistralportal.it/wms")),
