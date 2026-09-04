@@ -5,11 +5,41 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-03T22:50:11+00:00",
+  "generato": "2026-09-04T05:37:25+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-04T05:15:16+00:00",
+   "fonte": "ANSA",
+   "titolo": "Indagine sui militari che hanno aderito al partito di Vannacci",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/03/indagine-sui-militari-che-hanno-aderito-al-partito-di-vannacci_e42ad605-d75f-41a5-874a-dce5e8efc580.html"
+  },
+  {
+   "data": "2026-09-04T04:49:19+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Germania, tris di elezioni in un mese: Sassonia-Anhalt, Berlino e poi Meclemburgo-Pomerania",
+   "url": "https://www.adnkronos.com/internazionale/esteri/elezioni-germania-sassonia-afd-governo_4XqV8iw6tpENjzHFZg6qKg"
+  },
+  {
+   "data": "2026-09-04T04:45:12+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Carburanti, Salvini: \"Proroga del taglio delle accise sul diesel fino al 10 settembre\". Allo studio per dopo misure selettive",
+   "url": "https://www.adnkronos.com/economia/taglio-accise-studio-proroga-misure-ultime-notizie_3RmNfD1R74DfSfKUCYjxNP"
+  },
+  {
+   "data": "2026-09-04T04:43:13+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Vuelta di Spagna, oggi la 13esima tappa: orario, percorso e dove vederla",
+   "url": "https://www.adnkronos.com/sport/vuelta-spagna-oggi-tappa-13-orario-percorso-dove-vederla-tv-streaming_7BY9z5m0etUGKsOi57edRj"
+  },
+  {
+   "data": "2026-09-04T04:38:56+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Formula 1, oggi prove libere Gp Monza: orario e dove vederle in tv",
+   "url": "https://www.adnkronos.com/sport/gp-monza-oggi-prove-libere-formula-1-orario-dove-vederle-tv-streaming_7IL2ahQsCxHfmYHfaRmbWB"
+  },
   {
    "data": "2026-09-03T22:30:11+00:00",
    "fonte": "ADNKRONOS",
@@ -35,6 +65,12 @@
    "url": "https://www.adnkronos.com/sport/calcio-sky-champions-europa-league-tv_1kS5TbxZoqIRM96fFR1z2d"
   },
   {
+   "data": "2026-09-03T21:52:12+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il governo Meloni eguaglia il Berlusconi II, il record di longevità e la festa",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/03/il-governo-meloni-eguaglia-il-berlusconi-ii-il-record-di-longevita-e-la-festa_70bfd96c-a438-41fc-ba4b-3108938afbc8.html"
+  },
+  {
    "data": "2026-09-03T21:28:11+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Telecronista racconta l'ingresso in campo... del figlio",
@@ -53,28 +89,22 @@
    "url": "https://www.adnkronos.com/politica/report-di-pasquale-piervincenzi-rai-ranucci_6u8D0vjutN4pyerzGmVOeV"
   },
   {
+   "data": "2026-09-03T21:04:12+00:00",
+   "fonte": "ANSA",
+   "titolo": "Conte: 'Ok al progetto ma il Pd non chieda che il suo segretario rappresenti tutti'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/03/conte-ok-al-progetto-ma-il-pd-non-chieda-che-il-suo-segretario-rappresenti-tutti_5bcd5c08-4985-42ff-a1a3-d99b8dbb446b.html"
+  },
+  {
    "data": "2026-09-03T20:40:23+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Bartiromo lascia Fox News, 'divorzio choc' per la giornalista preferita di Trump",
    "url": "https://www.adnkronos.com/internazionale/esteri/bartiromo-fox-news-trump-italia_hBm5AnFboBSAoDZw7RYqV"
   },
   {
-   "data": "2026-09-03T20:11:54+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "US Open, ancora una sorpresa: Auger-Aliassime eliminato",
-   "url": "https://www.adnkronos.com/sport/us-open-auger-aliassime-eliminato-khachanov_3QQjOnE4g69BoT7bR2FSjj"
-  },
-  {
-   "data": "2026-09-03T20:02:33+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "US Open, Cobolli litiga con l'arbitro: \"Era fuori?\"",
-   "url": "https://www.adnkronos.com/sport/cobolli-schoolkate-us-open-litiga-arbitro_17IUA23qvqxL0YZ3LmMdTT"
-  },
-  {
-   "data": "2026-09-03T19:50:20+00:00",
+   "data": "2026-09-03T20:27:03+00:00",
    "fonte": "ANSA",
-   "titolo": "Il governo Meloni eguaglia il Berlusconi II, domani il record di longevità e la festa",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/03/il-governo-meloni-eguaglia-il-berlusconi-ii-domani-il-record-di-longevita-e-la-festa_70bfd96c-a438-41fc-ba4b-3108938afbc8.html"
+   "titolo": "Ipotesi choc in casa Volkswagen, addio a Seat entro il 2029",
+   "url": "https://www.ansa.it/canale_motori/notizie/industria_analisi/2026/09/03/ipotesi-choc-in-casa-volkswagen-addio-a-seat-entro-il-2029_d0686a09-5609-45e0-9862-157629ca7baf.html"
   },
   {
    "data": "2026-09-03T19:32:26+00:00",
@@ -89,12 +119,6 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/03/uccide-la-ex-lanciandola-da-un-viadotto-le-ha-teso-un-agguato_f1452487-af5d-4f86-9912-7d63e49339da.html"
   },
   {
-   "data": "2026-09-03T19:20:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "SuperEnalotto, estrazione e numeri vincenti di oggi 3 settembre 2026",
-   "url": "https://www.adnkronos.com/cronaca/superenalotto-estrazione-numeri-vincenti-oggi-3-settembre_rOXMHpUJuzvdPJieod0Sw"
-  },
-  {
    "data": "2026-09-03T19:19:03+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Uccide moglie e figlio 15enne poi si spara, tragedia nel Savonese",
@@ -105,12 +129,6 @@
    "fonte": "ANSA",
    "titolo": "Giochi del Mediterraneo, sulla nave Aroya tra sport e scambio di culture",
    "url": "https://www.ansa.it/puglia/notizie/speciali/xx_giochi_del_mediterraneo_taranto_2026/2026/09/01/giochi-del-mediterraneo-sulla-nave-aroya-tra-sport-e-scambio-di-culture_900d7f1e-a265-4d37-874f-117e811e66dc.html"
-  },
-  {
-   "data": "2026-09-03T19:17:44+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ipotesi choc in casa Volkswagen, addio a Seat entro il 2029",
-   "url": "https://www.ansa.it/canale_motori/notizie/industria_analisi/2026/09/03/ipotesi-choc-in-casa-volkswagen-addio-a-seat-entro-il-2029_d0686a09-5609-45e0-9862-157629ca7baf.html"
   },
   {
    "data": "2026-09-03T19:15:41+00:00",
@@ -167,28 +185,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/03/a-roma-gara-di-droni-organizzata-dalla-difesa-con-piloti-civili-e-militari_95772ac1-1aaf-4f81-83ac-5b609224a817.html"
   },
   {
-   "data": "2026-09-03T17:58:57+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Fifa, le accuse alla Uefa: \"Campagna diffamatoria per sabotare Infantino\"",
-   "url": "https://www.adnkronos.com/sport/fifa-uefa-infantino-mondiali_5V6yFDgGLc9l4PcBFacrpz"
-  },
-  {
    "data": "2026-09-03T17:52:45+00:00",
    "fonte": "ANSA",
    "titolo": "Cambiano le multe, 1.000 euro per chi viaggia senza rc auto",
    "url": "https://www.ansa.it/canale_motori/notizie/istituzioni/2026/09/03/cambiano-le-multe-1.000-euro-per-chi-viaggia-senza-rc-auto_85c87aa9-6b47-4af1-b675-bdda6b8acb62.html"
-  },
-  {
-   "data": "2026-09-03T17:14:29+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Chiuse indagini su Cinturrino, verso processo per omicidio premeditato",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/03/chiuse-indagini-su-cinturrino-verso-processo-per-omicidio-premeditato_6104ae7d-4d7e-4c56-ad8a-db9f4f58b359.html"
-  },
-  {
-   "data": "2026-09-03T17:04:00+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Cassazione, 'Pifferi lucida nell'omicidio della figlia ma pure molto fragile'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/03/cassazione-pifferi-lucida-nellomicidio-della-figlia-ma-pure-molto-fragile_84bf40ee-4ec3-4d01-923d-251bf8d6eaf6.html"
   }
  ]
 }
