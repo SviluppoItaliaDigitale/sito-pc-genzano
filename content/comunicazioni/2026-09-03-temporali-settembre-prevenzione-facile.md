@@ -1,6 +1,6 @@
 ---
 title: "Temporali di settembre: cosa fare"
-date: 2026-09-03
+date: 2026-09-03T00:01:00+02:00
 description: "A settembre ci sono temporali forti. Ecco come riconoscerli e come proteggerti."
 badge: "Prevenzione"
 priorita: "normale"
