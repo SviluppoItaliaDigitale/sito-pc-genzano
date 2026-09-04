@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/",
-  "generato": "2026-09-04T14:06:11+00:00",
+  "generato": "2026-09-04T17:37:44+00:00",
   "licenza": "Copernicus Emergency Management Service — dati pubblici",
   "nota": "Copia locale: l'API non espone CORS, il browser non può leggerla direttamente."
  },
@@ -111,14 +111,15 @@
    "closed": false,
    "code": "EMSR922",
    "countries": [
+    "Bosnia and Herzegovina",
     "Montenegro"
    ],
    "eventTime": "2026-08-14T22:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-09-04T13:33:26.820107",
+   "lastUpdate": "2026-09-04T17:27:37.118569",
    "n_aois": 5,
-   "n_products": 37,
-   "name": "Wildfire in Montenegro"
+   "n_products": 40,
+   "name": "Wildfire in Montenegro and Bosnia and Herzegovina"
   },
   {
    "activationTime": "2026-08-15T08:52:00",
