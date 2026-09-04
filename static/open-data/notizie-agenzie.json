@@ -5,11 +5,107 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-04T19:53:32+00:00",
+  "generato": "2026-09-04T22:12:19+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-04T22:03:40+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Medusa ortica, così provoca dolore e morte delle cellule: eparina protegge dal veleno",
+   "url": "https://www.adnkronos.com/cronaca/medusa-ortica-di-mare-veleno-eparina-studio_2ofvjR5Xy9eohMwjwGcPpz"
+  },
+  {
+   "data": "2026-09-04T22:03:17+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Caldo non molla la presa, oggi e domani bollino arancione in tre città. Da mercoledì giù le temperature",
+   "url": "https://www.adnkronos.com/cronaca/caldo-bollino-weekend-ultime-notizie_2RdiYM8MoAGI0mO7YfuFnm"
+  },
+  {
+   "data": "2026-09-04T22:02:22+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Hormuz e i chip, gli Usa e Kim: così la Corea del Sud potrebbe schierarsi con Trump",
+   "url": "https://www.adnkronos.com/internazionale/esteri/usa-iran-stretto-di-hormuz-quale-ruolo-di-seul-scenari_1HmFmM9zrJEkC2bC3krx00"
+  },
+  {
+   "data": "2026-09-04T22:01:35+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina-Russia, Trump: \"Ho una proposta di pace\". Witkoff e Kushner prima da Putin e poi da Zelensky",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-trump-piano-fine-guerra_6PIrwqp5JNAkKj1N2Y6EVe"
+  },
+  {
+   "data": "2026-09-04T21:57:53+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Chiazza di gasolio nel Naviglio Grande, barriere anche a Milano",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/04/chiazza-di-gasolio-nel-naviglio-grande-barriere-anche-a-milano_a352de31-ef3a-4d72-a88a-e82d6d790971.html"
+  },
+  {
+   "data": "2026-09-04T21:15:20+00:00",
+   "fonte": "ANSA",
+   "titolo": "La spinta di Mattarella a Cernobbio: 'Ue invidiata dal mondo, ora rafforzarla'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/04/mattarella-si-riaffaccia-luso-della-forza-per-le-proprie-pretese-internazionali_dc0cbe71-0520-4218-99e5-ee20f6047740.html"
+  },
+  {
+   "data": "2026-09-04T21:10:39+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Meloni celebra record governo a Bari e lancia la sfida: \"Il meglio deve ancora venire\"",
+   "url": "https://www.adnkronos.com/politica/governo-record-sfida-elezioni-meloni-show-bari-cosa-ha-detto-premier_4ZHhJJLzdEjODj3FOBSwXj"
+  },
+  {
+   "data": "2026-09-04T20:50:02+00:00",
+   "fonte": "ANSA",
+   "titolo": "Ucciso in un agguato a Udine, si cerca l'ex compagno della vittima",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/04/ucciso-in-un-agguato-a-udine-si-cerca-lex-compagno-della-vittima_d4d01284-0f34-4ed6-b48c-a1ac3ba3fa24.html"
+  },
+  {
+   "data": "2026-09-04T20:42:26+00:00",
+   "fonte": "ANSA",
+   "titolo": "Crisi Genoa, a Marassi il Como stravince 4-1. Doppietta di Diao CRONACA e FOTO",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/04/crisi-genoa-a-marassi-il-como-stravince-4-1.-doppietta-di-diao-cronaca-e-foto_e2438f13-e0c0-4a89-807e-fbe2c2887964.html"
+  },
+  {
+   "data": "2026-09-04T20:33:54+00:00",
+   "fonte": "ANSA",
+   "titolo": "Drone sugli 007 di Kiev. Trump, 'Putin non intende attaccare la Nato'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/04/zelensky-un-drone-ha-colpito-il-quartier-generale-dellintelligence_2909e7e8-1a6a-4d5b-af61-5ec4cb4d3051.html"
+  },
+  {
+   "data": "2026-09-04T20:07:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Terremoto oggi a Cosenza, scossa di magnitudo 3.7: avvertita in tutta la provincia",
+   "url": "https://www.adnkronos.com/cronaca/terremoto-oggi-cosenza-scossa-magnitudo_O4dOu7Tgc0NiWsrZE1EMB"
+  },
+  {
+   "data": "2026-09-04T20:03:05+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Chiazza di gasolio nel Naviglio Grande, galleggianti per contenere lo sversamento",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/04/chiazza-di-gasolio-nel-naviglio-grande-galleggianti-per-contenere-lo-sversamento_9de76e10-3850-416d-9163-aa4392ff5a2b.html"
+  },
+  {
+   "data": "2026-09-04T19:58:45+00:00",
+   "fonte": "ANSA",
+   "titolo": "Meloni festeggia a Bari il record e lancia la sfida: 'Non ho mollato e non mollerò'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/04/meloni-abbiamo-piu-consenso-del-primo-giorno-ne-siamo-fieri-_d771cf5d-2adc-4689-a8ca-d3189bc9d359.html"
+  },
+  {
+   "data": "2026-09-04T19:56:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Udine, uomo ucciso con con cacciavite: si cerca l'assassino",
+   "url": "https://www.adnkronos.com/cronaca/omicidio-udine-uomo-ucciso-con-cacciavite_3ExI1lPvjFZi5epM2Hq2wl"
+  },
+  {
+   "data": "2026-09-04T19:53:34+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Trovata morta in un cortile a ferragosto, è stata uccisa",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/04/quarantenne-trovata-morta-a-messina-ad-agosto-e-stata-uccisa_b65fe714-a129-4302-a688-9ca97f8e2a36.html"
+  },
+  {
+   "data": "2026-09-04T19:51:43+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "La strage di Finale Ligure, sequestrati i biglietti nella casa",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/04/la-strage-di-finale-ligure-sequestrati-i-biglietti-nella-casa_5b992255-f8ce-4a48-81b8-c2e3eb56a0b4.html"
+  },
   {
    "data": "2026-09-04T19:47:47+00:00",
    "fonte": "ANSA CRONACA",
@@ -23,28 +119,10 @@
    "url": "https://www.adnkronos.com/politica/francesca-pascale-berlusconi-meloni-bari_1SouY5ImoMbZesO5d5EAXS"
   },
   {
-   "data": "2026-09-04T19:40:48+00:00",
+   "data": "2026-09-04T19:40:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "SuperEnalotto, estrazione e numeri vincenti di oggi 4 settembre 2026",
+   "titolo": "SuperEnalotto, estrazione di oggi 4 settembre 2026: un 5 da 156mila euro",
    "url": "https://www.adnkronos.com/cronaca/supernalotto-oggi-combinazione-vincente-4-settembre-jackpot_7zj4p99nwXiqzEXEgTlj7"
-  },
-  {
-   "data": "2026-09-04T19:36:44+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Uomo ucciso a colpi di cacciavite a Udine",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/04/uomo-ucciso-a-colpi-di-cacciavite-a-udine_d4d01284-0f34-4ed6-b48c-a1ac3ba3fa24.html"
-  },
-  {
-   "data": "2026-09-04T19:35:44+00:00",
-   "fonte": "ANSA",
-   "titolo": "Meloni festeggia a Bari il record e lancia la sfida: 'Non ho mollato e non mollerò'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/04/meloni-abbiamo-piu-consenso-del-primo-giorno-ne-siamo-fieri-_d771cf5d-2adc-4689-a8ca-d3189bc9d359.html"
-  },
-  {
-   "data": "2026-09-04T19:31:05+00:00",
-   "fonte": "ANSA",
-   "titolo": "In campo Genoa-Como 1-3 DIRETTA e FOTO",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/04/in-campo-genoa-como-1-3-diretta-e-foto_e2438f13-e0c0-4a89-807e-fbe2c2887964.html"
   },
   {
    "data": "2026-09-04T19:25:03+00:00",
@@ -111,84 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Abusi sessuali su un bambino, familiare arrestato nel Palermitano",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/04/abusi-sessuali-su-bambino-familiare-arrestato-nel-palermitano_cee5969d-a2df-448d-80fd-470b5c5b03e3.html"
-  },
-  {
-   "data": "2026-09-04T18:41:12+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Accoltella i genitori e la sorella, fermato 30enne per tentato omicidio",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/04/accoltella-i-genitori-e-la-sorella-fermato-30enne-per-tentato-omicidio_55c1640f-a504-489c-b1bf-53cada808a57.html"
-  },
-  {
-   "data": "2026-09-04T18:40:43+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Quarantenne trovata morta a Messina ad agosto, è stata uccisa",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/04/quarantenne-trovata-morta-a-messina-ad-agosto-e-stata-uccisa_b65fe714-a129-4302-a688-9ca97f8e2a36.html"
-  },
-  {
-   "data": "2026-09-04T18:39:07+00:00",
-   "fonte": "ANSA",
-   "titolo": "Taglio delle accise fino al 10 settembre, poi misure mirate per chi ne ha bisogno",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/04/pronto-il-nuovo-decreto-il-taglio-delle-accise-diesel-sara-prorogato-al-10-settembre_23890cd9-945d-4dc7-832d-6802e5c5e194.html"
-  },
-  {
-   "data": "2026-09-04T18:35:15+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Nel Trevigiano una donna contagiata da dengue dopo il rientro dallo Sri Lanka",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/04/nel-trevigiano-una-donna-contagiata-da-dengue-dopo-il-rientro-dallo-sri_92ac00c4-3b94-4238-b531-103d67e510ee.html"
-  },
-  {
-   "data": "2026-09-04T18:33:21+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "'Bimbo autistico picchiato in una scuola a Napoli', in un audio le violenze",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/03/bimbo-autistico-picchiato-in-una-scuola-a-napoli-in-un-audio-le-violenze_2536f365-f1f9-45e3-be7e-5e7b7d0354d4.html"
-  },
-  {
-   "data": "2026-09-04T18:31:44+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Si tuffa in un laghetto per la pesca e muore annegato in Polesine",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/04/si-tuffa-in-un-laghetto-per-la-pesca-e-muore-annegato-in-polesine_a7179b58-9e8a-43d8-942d-e6ec5c5c3416.html"
-  },
-  {
-   "data": "2026-09-04T18:29:30+00:00",
-   "fonte": "ANSA",
-   "titolo": "Drone sugli 007 di Kiev mentre Trump manda gli inviati da Putin e Zelensky",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/04/zelensky-un-drone-ha-colpito-il-quartier-generale-dellintelligence_2909e7e8-1a6a-4d5b-af61-5ec4cb4d3051.html"
-  },
-  {
-   "data": "2026-09-04T18:24:53+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Cadono dallo scooter, muoiono due ragazzi a Cagliari",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/04/cadono-dallo-scooter-muoiono-due-ragazzi-a-cagliari_8bac129e-847b-49c7-a6ad-e9f6641881ed.html"
-  },
-  {
-   "data": "2026-09-04T18:24:12+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "'Ci ha guardati male', arrestati due 17enni che spararono a un coetaneo",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/04/ci-ha-guardati-male-arrestati-17enni-che-spararono-a-coetaneo_77078c6b-a52f-4d1a-924e-e2d1f1696598.html"
-  },
-  {
-   "data": "2026-09-04T18:23:23+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Investe la ex che stava passeggiando con il nuovo compagno",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/04/investe-la-ex-che-stava-passeggiando-con-il-nuovo-compagno_cfa76bb3-731f-4b08-973f-a470ecf76956.html"
-  },
-  {
-   "data": "2026-09-04T18:23:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Serie A, Genoa-Como 1-2 - Diretta",
-   "url": "https://www.adnkronos.com/sport/diretta-genoa-como-oggi-serie-a-risultato-live_5Dnfm8pF5XtUEJE89ca2hm"
-  },
-  {
-   "data": "2026-09-04T18:17:36+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Sempio declina l'invito: 'Non incontrerò il consulente psichiatrico dei pm'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/04/sempio-declina-linvito-non-incontrero-il-consulente-psichiatrico-dei-pm_4daaef75-2f4d-4566-83d2-766377cbd726.html"
-  },
-  {
-   "data": "2026-09-04T18:12:29+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Balotelli e la domanda a Vannacci: \"Io per lei sono italiano?\"",
-   "url": "https://www.adnkronos.com/sport/balotelli-vannacci-italiano-domanda_7qyqB0YWUmj0tqFJkDBAmw"
   }
  ]
 }
