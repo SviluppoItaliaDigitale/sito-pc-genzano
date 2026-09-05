@@ -1,6 +1,6 @@
 ---
 title: "Grandine: un rischio in crescita anche nel Lazio"
-date: 2026-09-05
+date: 2026-09-05T00:01:00+02:00
 description: "La grandine di settembre può causare danni a persone, auto, colture. Come riconoscere il pericolo e proteggersi."
 badge: "Prevenzione"
 priorita: "normale"
