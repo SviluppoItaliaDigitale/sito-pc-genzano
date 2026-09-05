@@ -56,7 +56,7 @@ Il punto vero è un altro, e riguarda tutti. Una mappa non è una fotografia del
 
 È un ottimo esercizio e costa poco. Si confronta la stessa area del mondo su proiezioni diverse e si chiede ai ragazzi quale sembri più grande. Poi si guardano i numeri reali. Serve a capire, prima ancora della geografia, che uno strumento non è mai neutrale. Nemmeno quando sembra soltanto un disegno.
 
-Ne parliamo anche nel percorso su [cartografia e orientamento](/formazione/) dei nostri materiali per le scuole.
+Trovi altri spunti per l'attività didattica nella sezione [Formazione e materiali per le scuole](/formazione/) del nostro sito.
 
 ## Per approfondire
 
