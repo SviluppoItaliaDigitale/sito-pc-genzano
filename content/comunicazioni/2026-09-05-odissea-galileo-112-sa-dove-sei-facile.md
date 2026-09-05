@@ -29,11 +29,13 @@ Il tuo telefono usa questi satelliti. Per questo la mappa sul telefono sa dove t
 
 ## Perché questo aiuta quando chiami il 112
 
-Quando chiami il **112** da un telefono, il telefono manda anche la tua posizione. Lo fa da solo. Si chiama **AML**.
+Quando chiami il **112** da uno smartphone, il telefono manda anche la tua posizione. Lo fa da solo. Uno smartphone è un telefono moderno, con le mappe e le applicazioni.
 
 Prima, con le vecchie antenne, la posizione era poco precisa. Poteva sbagliare di diversi chilometri. Con i satelliti oggi si sbaglia solo di pochi metri.
 
-Per questo motivo, tutti i telefoni venduti in Europa devono funzionare con Galileo.
+Per questo motivo, tutti gli smartphone venduti in Europa devono funzionare con Galileo.
+
+Con un telefono vecchio, invece, questo non succede. Anche per questo devi sempre dire tu dove sei.
 
 ## Cosa devi fare tu quando chiami il 112
 
