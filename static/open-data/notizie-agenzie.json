@@ -5,22 +5,106 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-05T19:02:33+00:00",
+  "generato": "2026-09-05T21:07:18+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
+   "data": "2026-09-05T20:54:06+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Roma, trionfo con l'Atalanta e i tifosi sognano: \"Siamo da scudetto\"",
+   "url": "https://www.adnkronos.com/sport/roma-atalanta-tifosi-vinceremo-scudetto_2T1X4jKeShIuluv3uIiYGN"
+  },
+  {
+   "data": "2026-09-05T20:48:40+00:00",
+   "fonte": "ANSA",
+   "titolo": "Serie A:  Roma batte Atalanta 2-1 Inter rimonta-show sul Napoli",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/05/serie-a-roma-atalanta-2-1_13875323-af86-4332-ab96-7e6238be8afa.html"
+  },
+  {
+   "data": "2026-09-05T20:28:56+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "I 'Me contro Te' si sono sposati, la cerimonia show a Milano",
+   "url": "https://www.adnkronos.com/spettacoli/me-contro-te-sposati-matrimonio-cerimonia-sold-out-milano_5g9stdJ4jJwS4toYn3c1kN"
+  },
+  {
+   "data": "2026-09-05T20:23:51+00:00",
+   "fonte": "ANSA",
+   "titolo": "Conclusi dopo 3 ore i colloqui di Putin con Witkoff e Kushner",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/05/ucraina-in-corso-lincontro-di-putin-con-witkoff-e-kushner_b2166357-c13f-4379-b13a-6f4d70445a92.html"
+  },
+  {
+   "data": "2026-09-05T20:12:36+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Terremoto nel Messinese, la scossa di magnitudo 3.1",
+   "url": "https://www.adnkronos.com/cronaca/terremoto-oggi-5-settembre-messinese-epicentro-dove_1QJgEAaxBCqK5UwimOjMRv"
+  },
+  {
+   "data": "2026-09-05T20:07:27+00:00",
+   "fonte": "ANSA",
+   "titolo": "Alessandro Di Battista operato a Cuba, slitta il rientro in Italia",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/05/alessandro-di-battista-operato-a-cuba-slitta-il-rientro-in-italia_0978aacf-84ca-48e7-a11d-987f72161750.html"
+  },
+  {
+   "data": "2026-09-05T20:02:27+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Algeria, ritrovato morto bambino di 10 anni caduto in un pozzo",
+   "url": "https://www.adnkronos.com/internazionale/esteri/algeria-ayoub-morto-pozzo_6DaPYTvPpNA9eptHPm7Vne"
+  },
+  {
+   "data": "2026-09-05T19:42:28+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Emergency annuncia legge iniziativa popolare per diritto all'obiezione di coscienza alla guerra",
+   "url": "https://www.adnkronos.com/cronaca/emergency-annuncia-legge-iniziativa-popolare-per-diritto-allobiezione-di-coscienza-alla-guerra_71GrNz3NlzfT1YcHu7WGhC"
+  },
+  {
+   "data": "2026-09-05T19:41:47+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Gol annullato a Ndicka e rigore chiesto da Gasperini: cos'è successo in Roma-Atalanta",
+   "url": "https://www.adnkronos.com/sport/caos-roma-atalanta-gol-annullato-ndicka-rigore-negato-mora-gasperini-proteste_6Y4fuO7HEy7j7nKsQOYDeZ"
+  },
+  {
+   "data": "2026-09-05T19:32:17+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "US Open, Sabalenka ad Alcaraz: \"Sono gelosa... dei tuoi capelli\"",
+   "url": "https://www.adnkronos.com/sport/sabalenka-alcaraz-gelosa-capelli-us-open_7oPoa6G4PdpjCcz9vlU6a9"
+  },
+  {
+   "data": "2026-09-05T19:30:04+00:00",
+   "fonte": "ANSA",
+   "titolo": "La grande paura in Germania per l'Afd. Weidel,'Ulli scrivi la storia'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/05/la-grande-paura-in-germania-per-lafd.-weidelulli-scrivi-la-storia_212e4e89-4400-495c-8b81-c2dff89fdb48.html"
+  },
+  {
+   "data": "2026-09-05T19:21:04+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'Italia di Velasco si prende la finale europea, Polonia battuta 3-1",
+   "url": "https://www.ansa.it/sito/notizie/sport/pallavolo/2026/09/05/eurovolley-3-1-alla-polonia-italia-in-finale-con-la-turchia_437345e7-a3da-4b88-9999-3c13440f71c2.html"
+  },
+  {
+   "data": "2026-09-05T19:12:32+00:00",
+   "fonte": "ANSA",
+   "titolo": "Biagio Antonacci torna al Vittoriale con 10 serate unplugged",
+   "url": "https://www.ansa.it/sito/videogallery/spettacolo/2026/09/05/biagio-antonacci-torna-al-vittoriale-con-10-serate-unplugged_7f6bad64-d051-42ae-8078-ed1d48c26055.html"
+  },
+  {
+   "data": "2026-09-05T19:11:57+00:00",
+   "fonte": "ANSA",
+   "titolo": "Al Lido il ritorno romantico di Moretti e il rock degli Oasis",
+   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/05/al-lido-il-ritorno-romantico-di-moretti-e-il-rock-degli-oasis_16150380-6a6c-4ef5-94fd-4b330cd66ace.html"
+  },
+  {
+   "data": "2026-09-05T19:06:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "SuperEnalotto, estrazione di oggi 5 settembre 2026: numeri vincenti",
+   "url": "https://www.adnkronos.com/cronaca/superenalotto-estrazione-sabato-5-settembre-2026-numeri-vincenti_4ECBJRlGnJh4qOUawANxSJ"
+  },
+  {
    "data": "2026-09-05T18:40:23+00:00",
    "fonte": "ANSA",
    "titolo": "Scontro Monti-Vannacci, 'combatterò la retorica fascista'",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/09/05/scontro-monti-vannacci-combattero-la-retorica-fascista-_84aa8d72-971e-4662-b0b7-60b5f9e91739.html"
-  },
-  {
-   "data": "2026-09-05T18:38:34+00:00",
-   "fonte": "ANSA",
-   "titolo": "Serie A: in campo Roma-Atalanta DIRETTA",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/05/serie-a-in-campo-roma-atalanta-diretta_13875323-af86-4332-ab96-7e6238be8afa.html"
   },
   {
    "data": "2026-09-05T18:28:46+00:00",
@@ -29,46 +113,22 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/05/il-padre-di-lorena-la-politica-sia-unita-contro-la-violenza_16979f60-5a88-43c0-951d-9dc5bf806861.html"
   },
   {
-   "data": "2026-09-05T18:22:06+00:00",
-   "fonte": "ANSA",
-   "titolo": "Alessandro Di Battista operato a Cuba, slitta il rientro in Italia",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/05/alessandro-di-battista-operato-a-cuba-slitta-il-rientro-in-italia_0978aacf-84ca-48e7-a11d-987f72161750.html"
-  },
-  {
-   "data": "2026-09-05T18:04:11+00:00",
-   "fonte": "ANSA",
-   "titolo": "Eurovolley: 3-1 alla Polonia, Italia in finale con la Turchia",
-   "url": "https://www.ansa.it/sito/notizie/sport/pallavolo/2026/09/05/eurovolley-3-1-alla-polonia-italia-in-finale-con-la-turchia_437345e7-a3da-4b88-9999-3c13440f71c2.html"
-  },
-  {
    "data": "2026-09-05T18:03:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Serie A, oggi Roma-Atalanta 0-0 - Diretta",
+   "titolo": "Serie A, Roma-Atalanta 2-1, i giallorossi vincono in rimonta e volano in testa alla classifica",
    "url": "https://www.adnkronos.com/sport/diretta-roma-atalanta-oggi-serie-a-risultato-live_30DNVMORPzceYp1S3mdsza"
   },
   {
-   "data": "2026-09-05T18:01:34+00:00",
+   "data": "2026-09-05T18:01:00+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Europei di pallavolo, Italia-Turchia in finale: quando si gioca e dove vederla in tv",
    "url": "https://www.adnkronos.com/sport/italia-turchia-finale-europei-femminili-pallavolo-quando-gioca-orario-dove-vederla-tv_6rwvnmvn3LEsU6F1BSnO5T"
-  },
-  {
-   "data": "2026-09-05T17:55:57+00:00",
-   "fonte": "ANSA",
-   "titolo": "Witkoff e Kushner al Cremlino. Stop ai raid per 3 giorni su Mosca e Kiev",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/05/ucraina-in-corso-lincontro-di-putin-con-witkoff-e-kushner_b2166357-c13f-4379-b13a-6f4d70445a92.html"
   },
   {
    "data": "2026-09-05T17:49:22+00:00",
    "fonte": "ANSA",
    "titolo": "F1: Gasly sorprende tutti a Monza, dopo la beffa di Monaco la prima pole",
    "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/09/05/f1-gasly-sorprende-tutti-a-monza-dopo-la-beffa-di-monaco-la-prima-pole_3ed5be0b-c182-472e-b9da-5743457d26e9.html"
-  },
-  {
-   "data": "2026-09-05T17:35:04+00:00",
-   "fonte": "ANSA",
-   "titolo": "Venezia, Nanni Moretti: 'Basta fare lo stesso film, volevo una storia d'amore'",
-   "url": "https://www.ansa.it/sito/notizie/cultura/cinema/2026/09/05/nanni-moretti-basta-fare-lo-stesso-film-volevo-una-storia-damore_7ac45def-fdde-4137-924c-97aa79e9ab15.html"
   },
   {
    "data": "2026-09-05T17:34:27+00:00",
@@ -102,7 +162,7 @@
   },
   {
    "data": "2026-09-05T17:02:59+00:00",
-   "fonte": "ANSA CRONACA",
+   "fonte": "ANSA",
    "titolo": "La procura di Roma indaga sugli italiani negli Epstein file",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/05/indagine-della-procura-di-roma-sugli-italiani-negli-epstein-files_144afa36-da50-4944-a016-c834cf475473.html"
   },
@@ -129,66 +189,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Ballando con le stelle 2026, Massimo Ghini tra i concorrenti",
    "url": "https://www.adnkronos.com/spettacoli/ballando-con-le-stelle-2026-massimo-ghini-concorrente_2P5cHczd07ISbpDSbIaMxL"
-  },
-  {
-   "data": "2026-09-05T16:54:21+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Agguato a Udine, fermato il presunto assassino",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/05/agguato-a-udine-fermato-il-presunto-assassino_58676968-ed34-44b8-bdbc-c370a6089659.html"
-  },
-  {
-   "data": "2026-09-05T16:47:47+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "#AccadeOggi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/05/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
-  },
-  {
-   "data": "2026-09-05T16:37:07+00:00",
-   "fonte": "ANSA",
-   "titolo": "Segregata dal marito in Egitto, salva all'arrivo all'aeroporto",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/05/segregata-dal-marito-in-egitto-salva-allarrivo-allaeroporto_6f4c9655-27ef-4743-a06b-0d0777120da5.html"
-  },
-  {
-   "data": "2026-09-05T16:32:45+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Legambiente: 'Emergenza Naviglio affrontata con intervento di qualità'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/05/legambiente-emergenza-naviglio-affrontata-con-intervento-di-qualita_d8dad000-a2bb-4a39-ac01-036bd5fc44ce.html"
-  },
-  {
-   "data": "2026-09-05T16:31:21+00:00",
-   "fonte": "ANSA",
-   "titolo": "F1: Saetta McQueen compie un giro d'onore a Monza, la Safety Car si veste \"Cars\"",
-   "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/09/05/f1-saetta-mcqueen-compie-un-giro-donore-a-monza-la-safety-car-si-veste-cars_404f70a1-85aa-4a5d-ba0e-82c3e4db8caa.html"
-  },
-  {
-   "data": "2026-09-05T16:12:49+00:00",
-   "fonte": "ANSA",
-   "titolo": "Fuga talenti all'estero costa 11 miliardi. Calderone, calati del 20%",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/05/fuga-talenti-allestero-costa-11-miliardi.-calderone-calati-del-20_67a387ab-91f1-4ea0-91d2-a31bfe835273.html"
-  },
-  {
-   "data": "2026-09-05T16:10:55+00:00",
-   "fonte": "ANSA",
-   "titolo": "Un diamante dalle ceneri di un sacerdote, 'per riflettere la luce di Dio'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/05/un-diamante-dalle-ceneri-di-un-sacerdote-per-riflettere-la-luce-di-dio_c34d3dc3-9515-4de5-8317-a2636d772247.html"
-  },
-  {
-   "data": "2026-09-05T15:59:10+00:00",
-   "fonte": "ANSA",
-   "titolo": "In Nepal un cittadino cinese estratto vivo da tunnel sepolto dopo 9 giorni",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/05/in-nepal-un-cittadino-cinese-estratto-vivo-da-tunnel-sepolto-dopo-9-giorni_82538ad2-59ec-4987-9794-8950d09c66ab.html"
-  },
-  {
-   "data": "2026-09-05T15:45:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "US Open, Cobolli-Blockx 7-6, 3-6 - Diretta",
-   "url": "https://www.adnkronos.com/sport/diretta-cobolli-blockx-oggi-us-open-risultato-live_78KNtSvGt1OJe5pXu71NGB"
-  },
-  {
-   "data": "2026-09-05T15:34:02+00:00",
-   "fonte": "ANSA",
-   "titolo": "Riaperte le indagini sui delitti del 'mostro di Modena'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/05/i-delitti-del-mostro-di-modena-verso-la-riapertura-delle-indagini_18cc18a7-e7d7-4e85-a720-7da685c02c63.html"
   }
  ]
 }
