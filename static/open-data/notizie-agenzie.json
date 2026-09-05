@@ -5,22 +5,46 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-05T21:07:18+00:00",
+  "generato": "2026-09-05T22:55:23+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
+   "data": "2026-09-05T22:06:05+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Domenica di sole e gran caldo sull'Italia, ancora bollini arancioni: le città più 'bollenti'",
+   "url": "https://www.adnkronos.com/cronaca/caldo-italia-domenica-6-settembre-meteo_35tKGR4ddk0BcUr1KsFipL"
+  },
+  {
+   "data": "2026-09-05T21:29:04+00:00",
+   "fonte": "ANSA",
+   "titolo": "Conclusi dopo 3 ore i colloqui di Putin con Witkoff e Kushner",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/05/ucraina-in-corso-lincontro-di-putin-con-witkoff-e-kushner_b2166357-c13f-4379-b13a-6f4d70445a92.html"
+  },
+  {
+   "data": "2026-09-05T21:17:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Inter-Napoli, veleni su Lautaro Martinez: andava espulso due volte?",
+   "url": "https://www.adnkronos.com/sport/lautaro-martinez-espulso-gomitata-esultanza-inter-napoli_591Btxrs6JgUOLzjYrFsGV"
+  },
+  {
+   "data": "2026-09-05T20:58:08+00:00",
+   "fonte": "ANSA",
+   "titolo": "Serie A:  Roma batte Atalanta 2-1 Inter rimonta-show sul Napoli",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/05/serie-a-roma-batte-atalanta-2-1-inter-rimonta-show-sul-napoli_13875323-af86-4332-ab96-7e6238be8afa.html"
+  },
+  {
+   "data": "2026-09-05T20:56:14+00:00",
+   "fonte": "ANSA",
+   "titolo": "Alessandro Di Battista operato a Cuba, slitta il rientro in Italia",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/05/alessandro-di-battista-operato-a-cuba-slitta-il-rientro-in-italia_0978aacf-84ca-48e7-a11d-987f72161750.html"
+  },
+  {
    "data": "2026-09-05T20:54:06+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Roma, trionfo con l'Atalanta e i tifosi sognano: \"Siamo da scudetto\"",
    "url": "https://www.adnkronos.com/sport/roma-atalanta-tifosi-vinceremo-scudetto_2T1X4jKeShIuluv3uIiYGN"
-  },
-  {
-   "data": "2026-09-05T20:48:40+00:00",
-   "fonte": "ANSA",
-   "titolo": "Serie A:  Roma batte Atalanta 2-1 Inter rimonta-show sul Napoli",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/05/serie-a-roma-atalanta-2-1_13875323-af86-4332-ab96-7e6238be8afa.html"
   },
   {
    "data": "2026-09-05T20:28:56+00:00",
@@ -29,22 +53,10 @@
    "url": "https://www.adnkronos.com/spettacoli/me-contro-te-sposati-matrimonio-cerimonia-sold-out-milano_5g9stdJ4jJwS4toYn3c1kN"
   },
   {
-   "data": "2026-09-05T20:23:51+00:00",
-   "fonte": "ANSA",
-   "titolo": "Conclusi dopo 3 ore i colloqui di Putin con Witkoff e Kushner",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/05/ucraina-in-corso-lincontro-di-putin-con-witkoff-e-kushner_b2166357-c13f-4379-b13a-6f4d70445a92.html"
-  },
-  {
    "data": "2026-09-05T20:12:36+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Terremoto nel Messinese, la scossa di magnitudo 3.1",
    "url": "https://www.adnkronos.com/cronaca/terremoto-oggi-5-settembre-messinese-epicentro-dove_1QJgEAaxBCqK5UwimOjMRv"
-  },
-  {
-   "data": "2026-09-05T20:07:27+00:00",
-   "fonte": "ANSA",
-   "titolo": "Alessandro Di Battista operato a Cuba, slitta il rientro in Italia",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/05/alessandro-di-battista-operato-a-cuba-slitta-il-rientro-in-italia_0978aacf-84ca-48e7-a11d-987f72161750.html"
   },
   {
    "data": "2026-09-05T20:02:27+00:00",
@@ -115,7 +127,7 @@
   {
    "data": "2026-09-05T18:03:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Serie A, Roma-Atalanta 2-1, i giallorossi vincono in rimonta e volano in testa alla classifica",
+   "titolo": "Serie A, Roma-Atalanta 2-1: giallorossi vincono in rimonta e volano in testa alla classifica con l'Inter",
    "url": "https://www.adnkronos.com/sport/diretta-roma-atalanta-oggi-serie-a-risultato-live_30DNVMORPzceYp1S3mdsza"
   },
   {
@@ -135,12 +147,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Giovane ferito alla gamba da un colpo di pistola nel Milanese",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/05/giovane-ferito-alla-gamba-da-un-colpo-di-pistola-nel-milanese_308673b6-b5f5-4224-8dd5-8f6c6b5ad209.html"
-  },
-  {
-   "data": "2026-09-05T17:25:51+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Tocco di mano di Lobotka, Chivu chiede rigore: proteste in Inter-Napoli",
-   "url": "https://www.adnkronos.com/sport/mano-lobotka-area-rigore-chivu-inter-napoli_5Gmm1Wy9F43MCXmI7ZHbpH"
   },
   {
    "data": "2026-09-05T17:21:52+00:00",
@@ -183,12 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Agguato mortale a Udine, il presunto assassino fermato dopo meno di 24 ore",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/05/agguato-a-udine-e-caccia-alluomo-in-citta-e-dintorni_6d0da7f8-f961-4a67-903e-e13c929533c5.html"
-  },
-  {
-   "data": "2026-09-05T16:56:50+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ballando con le stelle 2026, Massimo Ghini tra i concorrenti",
-   "url": "https://www.adnkronos.com/spettacoli/ballando-con-le-stelle-2026-massimo-ghini-concorrente_2P5cHczd07ISbpDSbIaMxL"
   }
  ]
 }
