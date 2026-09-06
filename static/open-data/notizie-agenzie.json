@@ -5,28 +5,76 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-06T20:40:49+00:00",
+  "generato": "2026-09-06T22:22:59+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-06T20:18:23+00:00",
+   "data": "2026-09-06T22:04:07+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina-Russia, Zelensky al tavolo con gli inviati di Trump: \"Guerra continuerà\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/guerra-ucraina-russia-zelensky-colloqui-witkoff_63PFRjhPrMPjeYYKF90vY9"
+  },
+  {
+   "data": "2026-09-06T22:02:53+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Germania, valanga AfD nelle elezioni in Sassonia-Anhalt: \"Abbiamo fatto la storia\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/germania-elezioni-sassonia-afd-voto_58PKw7iYt7evRqJBMgjBKt"
+  },
+  {
+   "data": "2026-09-06T21:54:15+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Fabio Grosso esonerato dalla Fiorentina: non sarà più l'allenatore",
+   "url": "https://www.adnkronos.com/sport/fabio-grosso-fiorentina-esonerato-da-allenatore-oggi-lannuncio_K219OYCegVtRozvEvupdP"
+  },
+  {
+   "data": "2026-09-06T21:31:51+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "L'AfD trionfa col 44% in Sassonia-Anhalt, chi è Ulrich Siegmund: \"L'uomo più pericoloso della Germania\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ulrich-siegmund-elezioni-afd-sassonia-anhalt-oggi_5pPnhbrT1czEn6K09iLg0R"
+  },
+  {
+   "data": "2026-09-06T21:11:12+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Us Open, Alcaraz si sbarazza di Paul in tre set e vola ai quarti",
+   "url": "https://www.adnkronos.com/sport/tennis-us-open-alcaraz-paul-sinner_355Sad2MQr7Q5029mhFFvu"
+  },
+  {
+   "data": "2026-09-06T20:57:35+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Juve-Milan 1-1, dubbi sul gol rossonero: De Winter fa fallo su Kolo Muani?",
+   "url": "https://www.adnkronos.com/sport/juve-milan-1-1-fallo-de-winter-var_6GXZfJqm8kZmCyPgtLFNff"
+  },
+  {
+   "data": "2026-09-06T20:47:39+00:00",
+   "fonte": "ANSA",
+   "titolo": "Juventus-Milan termina 1-1",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/06/juventus-milan-termina-1-1_0c3a486d-1be2-4c91-b068-6c478760311a.html"
+  },
+  {
+   "data": "2026-09-06T20:42:48+00:00",
+   "fonte": "ANSA",
+   "titolo": "Firenze ricorda Lorena: 'Non abituiamoci a queste tragedie'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/06/firenze-ricorda-lorena-non-abituiamoci-a-queste-tragedie_2b434102-84a0-4d2a-a32b-ffb0375388d0.html"
+  },
+  {
+   "data": "2026-09-06T20:42:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Aereo Boeing 767 cargo di Amazon esce di pista, si schianta e prende fuoco a Miami: \"Almeno 5 morti\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/aereo-cargo-amazon-schianta-aeroporto-oggi-miami-prende-fuoco-ultime-notizie_2LSa4l48U4CG8gHfVSZLM9"
+  },
+  {
+   "data": "2026-09-06T20:32:37+00:00",
    "fonte": "ANSA",
    "titolo": "Elezioni in Germania, Afd trionfa con il 44,2% in Sassonia-Anhalt. Cdu al 18%",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/06/elezioni-in-germania-exit-poll-ard-in-sassonia-anhalt-afd-trionfa-con_243aead0-87e3-4c0c-aebc-18a1cdcd76be.html"
   },
   {
-   "data": "2026-09-06T20:17:30+00:00",
-   "fonte": "ANSA",
-   "titolo": "Serie A: in campo Juventus-Milan 0-1 DIRETTA",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/06/serie-a-juventus-milan-in-campo-alle-20.45-diretta_0c3a486d-1be2-4c91-b068-6c478760311a.html"
-  },
-  {
    "data": "2026-09-06T20:12:00+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Proteste in Germania dopo voto per Afd in Sassonia‑Anhalt. L'allarme del Consiglio degli Ebrei: \"Siamo inorriditi\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/afd-proteste-germania-exit-poll-voto-sassonia-anhalt_6vUx73uM2F4Bq6zWAvhVpz"
+   "url": "https://www.adnkronos.com/internazionale/esteri/afd-proteste-germania-exit-poll-voto-sassonia-anhalt-oggi_6vUx73uM2F4Bq6zWAvhVpz"
   },
   {
    "data": "2026-09-06T19:57:11+00:00",
@@ -89,28 +137,10 @@
    "url": "https://www.ansa.it/sito/notizie/politica/2026/09/06/ansia-per-di-battista-amici-e-famiglia-mantengono-il-riserbo-_0978aacf-84ca-48e7-a11d-987f72161750.html"
   },
   {
-   "data": "2026-09-06T18:21:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Reggio Emilia, al Festival di Emergency le testimonianze degli operatori in Ucraina: \"Attacchi tutti i giorni, conflitto totalizzante\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-al-festival-di-emergency-le-testimonianze-degli-operatori-attacchi-tutti-i-giorni-conflitto-totalizzante_74gNPvtsECNnFYupPJ3RO4"
-  },
-  {
-   "data": "2026-09-06T18:19:15+00:00",
-   "fonte": "ANSA",
-   "titolo": "Firenze ricorda Lorena: \"Non abituiamoci a queste tragedie\"",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/06/firenze-ricorda-lorena-non-abituiamoci-a-queste-tragedie_2b434102-84a0-4d2a-a32b-ffb0375388d0.html"
-  },
-  {
    "data": "2026-09-06T18:14:33+00:00",
    "fonte": "ANSA",
    "titolo": "La regina Margherita di Danimarca ricoverata in ospedale",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/06/la-regina-margherita-di-danimarca-ricoverata-in-ospedale_123054e3-00c7-402d-9b4b-c8e8ae5ce0cc.html"
-  },
-  {
-   "data": "2026-09-06T18:14:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Serie A, oggi Juventus-Milan 0-1 - Diretta",
-   "url": "https://www.adnkronos.com/sport/calcio-serie-a-juventus-milan-stadium_7FTYf24TFuKU1FdnxXvtlG"
   },
   {
    "data": "2026-09-06T17:50:23+00:00",
@@ -159,36 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "L'ultimo caldo, da mercoledì piogge e calo delle temperature",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/06/lultimo-caldo-da-mercoledi-piogge-e-calo-delle-temperature_32628aa4-1035-4e29-857b-efa90987da43.html"
-  },
-  {
-   "data": "2026-09-06T17:21:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Musica techno e palloncini bianchi, l'ultimo saluto a Maria Spinelli: la 22enne italiana uccisa al rave in Svizzera",
-   "url": "https://www.adnkronos.com/cronaca/maria-spinelli-22enne-italiana-uccisa-rave-svizzera_24ceM0pzksE5964uX9vkew"
-  },
-  {
-   "data": "2026-09-06T17:05:56+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Da Meloni a Sinner, l'Italia applaude Antonelli: \"Vittoria storica, complimenti Kimi\"",
-   "url": "https://www.adnkronos.com/sport/antonelli-vince-gp-monza-messaggi-sinner-meloni-salvini-italia_3P1X9Gnsg64p7xEawXjCAl"
-  },
-  {
-   "data": "2026-09-06T16:38:52+00:00",
-   "fonte": "ANSA",
-   "titolo": "'Dilettevoli inedite eccedenze' di Mina, 10 canzoni e 10 foto mai viste prima",
-   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/06/dilettevoli-inedite-eccedenze-di-mina-10-canzoni-e-10-foto-mai-viste-prima_5e2b860a-7f5f-49f4-8a84-104bba3ea0ba.html"
-  },
-  {
-   "data": "2026-09-06T16:35:56+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "#AccadeOggi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/06/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
-  },
-  {
-   "data": "2026-09-06T16:33:10+00:00",
-   "fonte": "ANSA",
-   "titolo": "Giorgetti: 'Pil verso l'1%, per le imprese i salari sono investimenti'",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/06/giorgetti-pil-verso-l1-per-le-imprese-i-salari-sono-investimenti_73fa5546-eb46-44e1-b11a-bb19159f5a21.html"
   }
  ]
 }
