@@ -47,10 +47,111 @@ EMOJI_LIVELLO = {
     "rosso": "🔴",
 }
 
+# Struttura dei messaggi (rule 02 § "Comunicazione di crisi sui social",
+# ISO 22329 + CWA CEN/CENELEC), in quest'ordine: (1) tipo di evento,
+# (2) livello e colore, (3) area + finestra temporale, (4) cosa fare,
+# (5) fonte ufficiale con link, (6) prossimo aggiornamento.
+# Vincoli di accessibilità (rule 03): al massimo DUE emoji per messaggio
+# (qui: colore del livello + telefono), niente maiuscole continue oltre il
+# titolo, niente caratteri decorativi. Hashtag stabili del Gruppo.
+# Esercitazione 06/09/2026: i messaggi precedenti mancavano dei punti 4 e 6
+# e avevano 3-4 emoji.
+HASHTAG_ALLERTA = "#PCGenzano #AllertaLazio #Genzano"
+HASHTAG_EMERGENZA = "#PCGenzano #Genzano"
+FONTE_CFR = ("Fonte: Centro Funzionale Regionale Lazio — "
+             "https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti")
+PROSSIMO_AGG = ("Prossimo aggiornamento: su questo canale al cambio di livello; "
+                f"stato verificato in continuo su {SITO_URL}/allerte-meteo/")
+
+# Azioni di autoprotezione per livello: stesse frasi della pagina canonica
+# /allerte-meteo/ (§ "Cosa fare" per colore) — se cambiano là, cambiano qui.
+COSA_FARE = {
+    "gialla": [
+        "Segui i bollettini ufficiali.",
+        "Evita zone soggette ad allagamento.",
+        "Non sostare lungo corsi d'acqua, fossi o sottopassaggi.",
+    ],
+    "arancione": [
+        "Limita gli spostamenti non necessari.",
+        "Metti in sicurezza balconi, cantine e seminterrati, solo se puoi farlo senza pericolo.",
+        "Tieni pronto il kit di emergenza e segui le indicazioni delle autorità.",
+    ],
+    "rossa": [
+        "Non uscire se non è strettamente necessario.",
+        "Allontanati da piani interrati e seminterrati; non attraversare strade allagate o sottopassaggi.",
+        "Segui solo le indicazioni delle autorità e tieni il telefono carico.",
+    ],
+    "verde": [
+        "Non sono richieste azioni specifiche.",
+        "Resta informato attraverso i canali ufficiali.",
+    ],
+}
+
+# Azioni per gli avvisi meteo avversi (blocco avviso_meteo), per tipo: stesse
+# frasi delle pagine canoniche /rischi-prevenzione/{vento-forte,ondate-di-calore,
+# temporali-intensi}/ § "Cosa fare DURANTE" e /allerte-meteo/. La chiave è
+# cercata come sottostringa del campo `tipo` (es. "vento, neve").
+COSA_FARE_AVVISO = {
+    "vento": [
+        "Rimani in casa se possibile, lontano da finestre e vetrate.",
+        "Se sei all'aperto, allontanati da alberi, pali della luce, impalcature e cartelloni.",
+        "In auto rallenta ed evita le strade alberate.",
+    ],
+    "neve": [
+        "Limita gli spostamenti in auto; se devi guidare, usa pneumatici invernali o catene.",
+        "Fai attenzione al ghiaccio su strade e marciapiedi.",
+        "Tieni a portata di mano torcia, coperte e telefono carico.",
+    ],
+    "ghiaccio": [
+        "Fai attenzione al ghiaccio su strade, marciapiedi e scale esterne.",
+        "Limita gli spostamenti in auto nelle ore più fredde.",
+    ],
+    "calore": [
+        "Bevi molta acqua anche se non senti sete; evita alcolici e bevande zuccherate.",
+        "Non uscire nelle ore più calde (11:00-17:00).",
+        "Controlla anziani, bambini e persone fragili; non lasciare mai persone o animali in auto al sole.",
+    ],
+    "temporali": [
+        "Entra in un edificio solido o in auto con i finestrini chiusi.",
+        "Allontanati da alberi isolati, pali metallici, tralicci e corsi d'acqua.",
+        "Non attraversare sottopassaggi allagati.",
+    ],
+    "mareggiate": [
+        "Non sostare su moli, scogliere, spiagge e lungomare.",
+        "Non entrare in acqua e tieni lontane le imbarcazioni dalla riva.",
+    ],
+}
+
 # Categoria della notifica determina pin/unpin
 CRITICAL = "critical"        # unpin all + send + pin
 INFORMATIONAL = "info"        # send (no pin/unpin)
 CESSATION = "cessation"       # unpin all + send (no pin)
+
+
+def _norm_livello(liv: str | None) -> str:
+    liv = (liv or "").lower().strip()
+    return {"giallo": "gialla", "rosso": "rossa"}.get(liv, liv)
+
+
+def _blocco_cosa_fare(livello: str) -> list[str]:
+    azioni = COSA_FARE.get(livello) or COSA_FARE["gialla"]
+    return ["<b>Cosa fare</b>"] + [f"• {a}" for a in azioni]
+
+
+def _blocco_cosa_fare_avviso(tipo: str, livello: str) -> list[str]:
+    """Azioni per un avviso meteo avverso: unione delle liste dei tipi
+    riconosciuti in `tipo` (max 4 voci); se nessun tipo è noto, ripiega
+    sulle azioni del livello di allerta."""
+    t = (tipo or "").lower()
+    azioni: list[str] = []
+    for chiave, lista in COSA_FARE_AVVISO.items():
+        if chiave in t:
+            for a in lista:
+                if a not in azioni:
+                    azioni.append(a)
+    if not azioni:
+        return _blocco_cosa_fare(livello or "gialla")
+    return ["<b>Cosa fare</b>"] + [f"• {a}" for a in azioni[:4]]
 
 
 def leggi_json(path: Path) -> dict:
@@ -77,36 +178,38 @@ def leggi_json_precedente(rel_path: str) -> dict | None:
 
 
 def msg_allerta_cambiata(prev: dict | None, curr: dict) -> str:
-    livello = (curr.get("livello") or "").lower()
-    emoji = EMOJI_LIVELLO.get(livello, "ℹ️")
+    livello = _norm_livello(curr.get("livello"))
+    emoji = EMOJI_LIVELLO.get(livello, "🟡")
     titolo = curr.get("titolo", "Allerta meteo aggiornata")
     descrizione = curr.get("descrizione", "")
-    livello_prev = (prev.get("livello") or "").lower() if prev else None
+    livello_prev = _norm_livello(prev.get("livello")) if prev else None
 
     if livello == "verde":
         if livello_prev and livello_prev != "verde":
-            header = f"{emoji} <b>CESSATA ALLERTA</b>"
-            sotto = f"Si torna in stato verde dopo livello <b>{livello_prev}</b>."
+            header = f"{emoji} <b>Cessata allerta meteo</b>"
+            sotto = f"Si torna al livello verde dopo l'allerta {livello_prev}. Comune di Genzano di Roma."
         else:
-            header = f"{emoji} <b>STATO VERDE</b>"
-            sotto = "Nessuna allerta in corso."
+            header = f"{emoji} <b>Allerta meteo: livello verde</b>"
+            sotto = "Nessuna allerta in corso per il Comune di Genzano di Roma."
     else:
-        liv_label = livello.upper()
-        header = f"{emoji} <b>ALLERTA {liv_label}</b>"
+        header = f"{emoji} <b>Allerta meteo {livello}</b>"
         if livello_prev and livello_prev != livello:
-            sotto = f"Cambio di livello: <b>{livello_prev or 'verde'}</b> → <b>{livello}</b>."
+            sotto = f"Allerta {livello} (in precedenza {livello_prev or 'verde'}). Comune di Genzano di Roma."
         else:
-            sotto = "Aggiornamento dello stato di allerta."
+            sotto = f"Allerta {livello}. Comune di Genzano di Roma."
 
     parti = [header, "", f"<b>{titolo}</b>", sotto]
     if descrizione:
         parti.extend(["", descrizione])
+    parti.append("")
+    parti.extend(_blocco_cosa_fare(livello))
     parti.extend([
+        "📞 In caso di pericolo chiama il <b>112</b>. Segnalazioni non urgenti: 803 555.",
         "",
-        f"🔗 Dettagli: {SITO_URL}/allerte-meteo/",
-        f"📞 In emergenza chiama <b>112</b>",
+        f"<i>{FONTE_CFR}</i>",
+        f"<i>{PROSSIMO_AGG}</i>",
         "",
-        "<i>Fonte: Centro Funzionale Regione Lazio · Gruppo Comunale Volontari PC Genzano</i>",
+        HASHTAG_ALLERTA,
     ])
     return "\n".join(parti)
 
@@ -116,50 +219,72 @@ def msg_avviso_meteo(curr: dict | None) -> str:
     curr=None o senza `tipo` => avviso rientrato."""
     if not curr or not (curr.get("tipo") or "").strip():
         return "\n".join([
-            "🟢 <b>AVVISO METEO RIENTRATO</b>",
+            "🟢 <b>Avviso meteo rientrato</b>",
             "",
-            "L'avviso per fenomeni meteo avversi non è più in vigore.",
+            "L'avviso per fenomeni meteo avversi non è più in vigore per il Comune di Genzano di Roma.",
             "",
-            f"🔗 Dettagli: {SITO_URL}/allerte-meteo/",
+            "📞 In caso di pericolo chiama il <b>112</b>.",
             "",
-            "<i>Fonte: Centro Funzionale Regione Lazio · Gruppo Comunale Volontari PC Genzano</i>",
+            f"<i>{FONTE_CFR}</i>",
+            f"<i>{PROSSIMO_AGG}</i>",
+            "",
+            HASHTAG_ALLERTA,
         ])
     tipo = (curr.get("tipo") or "").strip()
-    livello = (curr.get("livello") or "").lower()
+    livello = _norm_livello(curr.get("livello"))
     emoji = EMOJI_LIVELLO.get(livello, "🟠")
     descrizione = (curr.get("descrizione") or "").strip()
-    liv_label = livello.upper() if livello else ""
-    header = f"{emoji} <b>AVVISO METEO — {tipo.upper()}</b>"
-    sotto = f"Livello <b>{liv_label}</b>." if liv_label else "Avviso per fenomeni meteo avversi."
+    url = (curr.get("url") or "").strip()
+    header = f"{emoji} <b>Avviso meteo: {tipo}</b>"
+    sotto = (f"Allerta {livello}. Comune di Genzano di Roma." if livello
+             else "Avviso per fenomeni meteo avversi. Comune di Genzano di Roma.")
     parti = [header, "", sotto]
     if descrizione:
         parti.extend(["", descrizione])
-    parti.extend([
-        "",
-        f"🔗 Dettagli: {SITO_URL}/allerte-meteo/",
-        f"📞 In emergenza chiama <b>112</b>",
-        "",
-        "<i>Fonte: Centro Funzionale Regione Lazio · Gruppo Comunale Volontari PC Genzano</i>",
-    ])
+    parti.append("")
+    parti.extend(_blocco_cosa_fare_avviso(tipo, livello))
+    parti.append("📞 In caso di pericolo chiama il <b>112</b>. Segnalazioni non urgenti: 803 555.")
+    parti.append("")
+    if url:
+        parti.append(f"<i>Fonte: avviso del Centro Funzionale Regionale Lazio — {url}</i>")
+    else:
+        parti.append(f"<i>{FONTE_CFR}</i>")
+    parti.extend([f"<i>{PROSSIMO_AGG}</i>", "", HASHTAG_ALLERTA])
     return "\n".join(parti)
+
+
+def _coda_emergenza(link: str, etichetta_link: str) -> list[str]:
+    parti = []
+    if link:
+        parti.append(f"{etichetta_link}: {link}")
+    parti.extend([
+        f"Pagina di emergenza del sito: {SITO_URL}/emergenza/",
+        "",
+        "<i>Fonte: Comune di Genzano di Roma — Gruppo Comunale Volontari di Protezione Civile</i>",
+        f"<i>Prossimo aggiornamento: su questo canale e su {SITO_URL}/emergenza/ appena la situazione cambia</i>",
+        "",
+        HASHTAG_EMERGENZA,
+    ])
+    return parti
 
 
 def msg_emergenza_attivata(curr: dict) -> str:
     titolo = curr.get("titolo") or "Emergenza in corso"
     descrizione = curr.get("descrizione") or ""
     link = curr.get("link") or ""
-    parti = ["🚨 <b>EMERGENZA IN CORSO</b>", "", f"<b>{titolo}</b>"]
+    parti = ["🚨 <b>Emergenza in corso</b>", "", f"<b>{titolo}</b>", "Comune di Genzano di Roma."]
     if descrizione:
         parti.extend(["", descrizione])
-    if link:
-        parti.extend(["", f"🔗 Maggiori informazioni: {link}"])
     parti.extend([
         "",
-        f"🌐 Pagina sito: {SITO_URL}/emergenza/",
-        f"📞 In emergenza immediata chiama <b>112</b>",
+        "<b>Cosa fare</b>",
+        "• Segui le indicazioni del Comune e delle autorità.",
+        "• Non recarti sul luogo dell'emergenza e non intralciare i soccorsi.",
+        "• Usa il telefono solo per comunicazioni necessarie.",
+        "📞 In caso di pericolo immediato chiama il <b>112</b>.",
         "",
-        "<i>Gruppo Comunale Volontari PC Genzano di Roma</i>",
     ])
+    parti.extend(_coda_emergenza(link, "Maggiori informazioni"))
     return "\n".join(parti)
 
 
@@ -167,34 +292,36 @@ def msg_emergenza_aggiornata(curr: dict) -> str:
     titolo = curr.get("titolo") or "Emergenza in corso"
     descrizione = curr.get("descrizione") or ""
     link = curr.get("link") or ""
-    parti = ["📢 <b>AGGIORNAMENTO EMERGENZA</b>", "", f"<b>{titolo}</b>"]
+    parti = ["🚨 <b>Aggiornamento emergenza</b>", "", f"<b>{titolo}</b>", "Comune di Genzano di Roma."]
     if descrizione:
         parti.extend(["", descrizione])
-    if link:
-        parti.extend(["", f"🔗 Aggiornamento: {link}"])
     parti.extend([
         "",
-        f"🌐 Pagina sito: {SITO_URL}/emergenza/",
-        f"📞 In emergenza immediata chiama <b>112</b>",
+        "<b>Cosa fare</b>",
+        "• Continua a seguire le indicazioni del Comune e delle autorità.",
+        "• Non recarti sul luogo dell'emergenza e non intralciare i soccorsi.",
+        "📞 In caso di pericolo immediato chiama il <b>112</b>.",
         "",
-        "<i>Gruppo Comunale Volontari PC Genzano di Roma</i>",
     ])
+    parti.extend(_coda_emergenza(link, "Aggiornamento"))
     return "\n".join(parti)
 
 
 def msg_emergenza_cessata(prev: dict) -> str:
     titolo_prev = prev.get("titolo") or "Emergenza"
     parti = [
-        "✅ <b>CESSATA EMERGENZA</b>",
+        "🟢 <b>Cessata emergenza</b>",
         "",
-        f"L'emergenza «<b>{titolo_prev}</b>» è cessata.",
-        "Si torna alla normale operatività ordinaria.",
+        f"L'emergenza «<b>{titolo_prev}</b>» è cessata. Comune di Genzano di Roma.",
+        "Si torna alla normale operatività.",
         "",
-        f"🌐 Sito: {SITO_URL}/",
-        f"📞 In emergenza chiama sempre <b>112</b>",
+        "<b>Cosa fare</b>",
+        "• Presta comunque attenzione a eventuali situazioni locali residue.",
+        "• Segnalazioni non urgenti alla Sala operativa regionale: 803 555.",
+        "📞 In caso di pericolo chiama sempre il <b>112</b>.",
         "",
-        "<i>Gruppo Comunale Volontari PC Genzano di Roma</i>",
     ]
+    parti.extend(_coda_emergenza("", ""))
     return "\n".join(parti)
 
 
@@ -225,8 +352,8 @@ def determina_notifica() -> tuple[str, str] | None:
 
     # Priorità 2: allerta
     if allerta_curr:
-        livello_curr = (allerta_curr.get("livello") or "").lower()
-        livello_prev = (allerta_prev or {}).get("livello", "").lower() if allerta_prev else None
+        livello_curr = _norm_livello(allerta_curr.get("livello"))
+        livello_prev = _norm_livello((allerta_prev or {}).get("livello")) if allerta_prev else None
 
         if allerta_prev is None:
             # Primo commit sul branch — notifica solo se non-verde
@@ -247,8 +374,8 @@ def determina_notifica() -> tuple[str, str] | None:
     avviso_prev = (allerta_prev or {}).get("avviso_meteo") or {}
     tipo_curr = (avviso_curr.get("tipo") or "").strip()
     tipo_prev = (avviso_prev.get("tipo") or "").strip()
-    liv_curr = (avviso_curr.get("livello") or "").lower()
-    liv_prev = (avviso_prev.get("livello") or "").lower()
+    liv_curr = _norm_livello(avviso_curr.get("livello"))
+    liv_prev = _norm_livello(avviso_prev.get("livello"))
     if (tipo_curr, liv_curr) != (tipo_prev, liv_prev):
         if not tipo_curr and tipo_prev:
             return (msg_avviso_meteo(None), CESSATION)

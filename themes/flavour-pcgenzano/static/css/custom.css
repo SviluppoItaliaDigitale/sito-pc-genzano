@@ -7711,3 +7711,43 @@ html.a11y-contrast-blue-cream .bottom-nav a.active { color: #003366; }
    assegnata al layer Leaflet con l'opzione className.
    ============================================================ */
 .osm-scura { filter: invert(1) hue-rotate(180deg) brightness(.85) contrast(.9) saturate(.35); }
+
+/* ============================================================
+   ALLERTA STATO ATTUALE v2.0 (06/09/2026)
+   Card dello shortcode allerta-stato-attuale (/allerte-meteo/,
+   /cruscotto/). Palette propria per livello, identica alla pagina
+   lite /emergenza/: le utility bg-orange / text-*-emphasis di
+   Bootstrap 5.3 usate prima non esistono in Bootstrap Italia e
+   l'arancione restava senza sfondo. Contrasti calcolati (titolo su
+   sfondo): verde 7.0:1, gialla 7.4:1, arancione 8.1:1, rossa 9.1:1;
+   corpo #1a1a1a ≥ 13:1. Nessun colore come unico veicolo: il livello
+   è sempre scritto ("Livello Rossa", icona diversa).
+   ============================================================ */
+.allerta-stato { border: 2px solid; border-left-width: 8px; color: #1a1a1a; }
+.allerta-stato .allerta-stato-sotto { color: #495057; }
+.allerta-stato-verde { background: #e8f5e9; border-color: #2e7d32; }
+.allerta-stato-verde .allerta-stato-titolo, .allerta-stato-verde .allerta-stato-icona { color: #1b5e20; }
+.allerta-stato-gialla { background: #fff8e1; border-color: #f9a825; }
+.allerta-stato-gialla .allerta-stato-titolo, .allerta-stato-gialla .allerta-stato-icona { color: #6d4c00; }
+.allerta-stato-arancione { background: #ffe0b2; border-color: #ef6c00; }
+.allerta-stato-arancione .allerta-stato-titolo, .allerta-stato-arancione .allerta-stato-icona { color: #6f2c00; }
+.allerta-stato-rossa { background: #ffebee; border-color: #c62828; }
+.allerta-stato-rossa .allerta-stato-titolo, .allerta-stato-rossa .allerta-stato-icona { color: #7f1414; }
+.allerta-stato-domani { padding: 0.6rem 0.9rem; border-radius: 6px; border-left: 5px solid; font-size: 0.95rem; }
+.allerta-stato-domani-gialla { background: #fff3cd; border-color: #f9a825; color: #5a3e00; }
+.allerta-stato-domani-arancione { background: #ffe0b2; border-color: #ef6c00; color: #6f2c00; }
+.allerta-stato-domani-rossa { background: #f8d7da; border-color: #c62828; color: #7f1414; }
+html.a11y-contrast-invert .allerta-stato,
+html.a11y-contrast-invert .allerta-stato-domani { background: #000; color: #fff; }
+html.a11y-contrast-invert .allerta-stato .allerta-stato-titolo,
+html.a11y-contrast-invert .allerta-stato .allerta-stato-icona,
+html.a11y-contrast-invert .allerta-stato .allerta-stato-sotto { color: #fff; }
+html.a11y-contrast-yellow-black .allerta-stato,
+html.a11y-contrast-yellow-black .allerta-stato-domani { background: #000; color: #ffff00; }
+html.a11y-contrast-yellow-black .allerta-stato .allerta-stato-titolo,
+html.a11y-contrast-yellow-black .allerta-stato .allerta-stato-icona,
+html.a11y-contrast-yellow-black .allerta-stato .allerta-stato-sotto { color: #ffff00; }
+@media print {
+  .allerta-stato, .allerta-stato-domani { background: #fff !important; color: #000 !important; border-color: #000 !important; }
+  .allerta-stato .allerta-stato-titolo, .allerta-stato .allerta-stato-icona, .allerta-stato-domani { color: #000 !important; }
+}
