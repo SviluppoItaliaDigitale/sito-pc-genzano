@@ -5,22 +5,46 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-05T22:55:23+00:00",
+  "generato": "2026-09-06T05:07:45+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
+   "data": "2026-09-06T04:55:01+00:00",
+   "fonte": "ANSA",
+   "titolo": "Israele, 'raid in Libano in risposta ad attacco su militari Idf'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/06/israele-raid-in-libano-in-risposta-ad-attacco-su-militari-idf_05dd4892-dd01-4b98-9244-47d3207f5126.html"
+  },
+  {
+   "data": "2026-09-06T04:52:26+00:00",
+   "fonte": "ANSA",
+   "titolo": "Tregua di 72 ore in corso. Oggi Witkoff e Kushner a Kiev",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/06/casa-bianca-discussi-piani-concreti-con-putin-per-kiev_9e8144e1-56b1-40fc-8dbf-4d06cfe62ad0.html"
+  },
+  {
+   "data": "2026-09-06T03:31:05+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Si opera per l'allungamento del pene, influencer muore a 43 anni",
+   "url": "https://www.adnkronos.com/internazionale/esteri/influencer-morto-allungamento-pene-operazione_3xJebXisSqhHVGd4ANCHco"
+  },
+  {
+   "data": "2026-09-06T03:27:29+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Putin incontra Witkoff e Kushner: \"Russia centrerà obiettivi in Ucraina\". Oggi gli inviati di Trump a Kiev",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-putin-incontro-witkoff-kushner_7lVYOSXWZCWXsNmb0V4tZy"
+  },
+  {
+   "data": "2026-09-06T03:25:38+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "L'Europa non può reggere una guerra prolungata con la Russia, l'analisi",
+   "url": "https://www.adnkronos.com/internazionale/esteri/guerra-nato-russia-europa-italia_6iTrcLYhmBoifCPzXh7kJf"
+  },
+  {
    "data": "2026-09-05T22:06:05+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Domenica di sole e gran caldo sull'Italia, ancora bollini arancioni: le città più 'bollenti'",
    "url": "https://www.adnkronos.com/cronaca/caldo-italia-domenica-6-settembre-meteo_35tKGR4ddk0BcUr1KsFipL"
-  },
-  {
-   "data": "2026-09-05T21:29:04+00:00",
-   "fonte": "ANSA",
-   "titolo": "Conclusi dopo 3 ore i colloqui di Putin con Witkoff e Kushner",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/05/ucraina-in-corso-lincontro-di-putin-con-witkoff-e-kushner_b2166357-c13f-4379-b13a-6f4d70445a92.html"
   },
   {
    "data": "2026-09-05T21:17:00+00:00",
@@ -107,12 +131,6 @@
    "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/05/al-lido-il-ritorno-romantico-di-moretti-e-il-rock-degli-oasis_16150380-6a6c-4ef5-94fd-4b330cd66ace.html"
   },
   {
-   "data": "2026-09-05T19:06:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "SuperEnalotto, estrazione di oggi 5 settembre 2026: numeri vincenti",
-   "url": "https://www.adnkronos.com/cronaca/superenalotto-estrazione-sabato-5-settembre-2026-numeri-vincenti_4ECBJRlGnJh4qOUawANxSJ"
-  },
-  {
    "data": "2026-09-05T18:40:23+00:00",
    "fonte": "ANSA",
    "titolo": "Scontro Monti-Vannacci, 'combatterò la retorica fascista'",
@@ -123,18 +141,6 @@
    "fonte": "ANSA",
    "titolo": "L'appello del papà di Lorena, 'politica unita contro la violenza'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/05/il-padre-di-lorena-la-politica-sia-unita-contro-la-violenza_16979f60-5a88-43c0-951d-9dc5bf806861.html"
-  },
-  {
-   "data": "2026-09-05T18:03:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Serie A, Roma-Atalanta 2-1: giallorossi vincono in rimonta e volano in testa alla classifica con l'Inter",
-   "url": "https://www.adnkronos.com/sport/diretta-roma-atalanta-oggi-serie-a-risultato-live_30DNVMORPzceYp1S3mdsza"
-  },
-  {
-   "data": "2026-09-05T18:01:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Europei di pallavolo, Italia-Turchia in finale: quando si gioca e dove vederla in tv",
-   "url": "https://www.adnkronos.com/sport/italia-turchia-finale-europei-femminili-pallavolo-quando-gioca-orario-dove-vederla-tv_6rwvnmvn3LEsU6F1BSnO5T"
   },
   {
    "data": "2026-09-05T17:49:22+00:00",
@@ -183,12 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Incidente al Rally 1000 Miglia, spettatore muore investito",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/05/incidente-al-rally-1000-miglia-spettatore-muore-investito-_bec2e8ee-51b1-4eda-950e-a377a906ec22.html"
-  },
-  {
-   "data": "2026-09-05T16:58:29+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Agguato mortale a Udine, il presunto assassino fermato dopo meno di 24 ore",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/05/agguato-a-udine-e-caccia-alluomo-in-citta-e-dintorni_6d0da7f8-f961-4a67-903e-e13c929533c5.html"
   }
  ]
 }
