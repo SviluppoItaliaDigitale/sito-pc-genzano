@@ -358,12 +358,12 @@ def determina_notifica() -> tuple[str, str] | None:
         if allerta_prev is None:
             # Primo commit sul branch — notifica solo se non-verde
             if livello_curr and livello_curr != "verde":
-                cat = CRITICAL if livello_curr in ("arancione", "rossa", "rosso") else INFORMATIONAL
+                cat = CRITICAL if livello_curr in ("arancione", "rossa") else INFORMATIONAL
                 return (msg_allerta_cambiata(None, allerta_curr), cat)
         elif livello_curr != livello_prev:
             if livello_curr == "verde":
                 return (msg_allerta_cambiata(allerta_prev, allerta_curr), CESSATION)
-            if livello_curr in ("arancione", "rossa", "rosso"):
+            if livello_curr in ("arancione", "rossa"):
                 return (msg_allerta_cambiata(allerta_prev, allerta_curr), CRITICAL)
             # gialla
             return (msg_allerta_cambiata(allerta_prev, allerta_curr), INFORMATIONAL)
@@ -380,7 +380,7 @@ def determina_notifica() -> tuple[str, str] | None:
         if not tipo_curr and tipo_prev:
             return (msg_avviso_meteo(None), CESSATION)
         if tipo_curr:
-            cat = CRITICAL if liv_curr in ("arancione", "rossa", "rosso") else INFORMATIONAL
+            cat = CRITICAL if liv_curr in ("arancione", "rossa") else INFORMATIONAL
             return (msg_avviso_meteo(avviso_curr), cat)
 
     return None

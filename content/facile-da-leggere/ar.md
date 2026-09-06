@@ -254,7 +254,7 @@ hreflang_xdefault: "/facile-da-leggere/"
 <li>أبقِ الحيوان مربوطًا أو في قفص النقل؛</li>
 <li>أحضر طعام الحيوان وماءه وأدويته؛</li>
 <li>أحضر دفتر الصحة إذا كان لديك؛</li>
-<li>خذه معك إلى منطقة الانتظار: الحيوانات مسموح بها.</li>
+<li>خذه معك إلى <a href="/aree-attesa/">منطقة الانتظار</a>: الحيوانات مسموح بها.</li>
 </ul>
 <p><strong>لا تفعل هذه الأشياء:</strong></p>
 <ul class="facile-elenco no">
@@ -326,6 +326,8 @@ hreflang_xdefault: "/facile-da-leggere/"
 <h2 style="color: #b45309;"><span class="icona" style="background: #b45309;">✉️</span> هل تريد أن تكتب لنا؟</h2>
 <p>إذا كان لديك سؤال غير عاجل، اكتب إلى:</p>
 <p style="text-align: center; font-size: 1.1rem;"><a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a></p>
+<p>أو تعال إلى مقرّنا:</p>
+<p style="text-align: center;"><strong lang="it">Via Sicilia 13-15</strong><br><span lang="it">Genzano di Roma</span></p>
 <p>إذا كانت هناك حالة طوارئ، لا تكتب بريدًا إلكترونيًا. اتصل بالرقم <strong>112</strong>.</p>
 </div>
 

@@ -42,6 +42,9 @@
 .lite-link-essenziali a { display: block; padding: 0.7rem 0; color: #003366; text-decoration: none; border-bottom: 1px solid #ddd; font-size: 1.05rem; }
 .lite-link-essenziali a::before { content: "› "; color: #c1121f; font-weight: 700; }
 .lite-footer { text-align: center; color: #6c757d; font-size: 0.85rem; margin: 2rem 0 1rem; padding-top: 1rem; border-top: 1px solid #ddd; }
+/* Nota (06/09/2026): la lite non carica la toolbar di accessibilità né il suo CSS
+   (per restare ultraleggera), quindi le classi html.a11y-contrast-* non si applicano
+   qui: niente varianti di contrasto in questo file. */
 @media print {
   .lite-112 { background: #000 !important; color: #fff !important; }
   .lite-allerta { border-left-width: 6px !important; }

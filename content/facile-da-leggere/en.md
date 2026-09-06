@@ -254,7 +254,7 @@ hreflang_xdefault: "/facile-da-leggere/"
 <li>keep the animal on a leash or in a carrier;</li>
 <li>bring food, water and the animal's medicines;</li>
 <li>bring the health booklet if you have it;</li>
-<li>take it with you to the safe waiting area: animals are allowed.</li>
+<li>take it with you to the <a href="/aree-attesa/">safe waiting area</a>: animals are allowed.</li>
 </ul>
 <p><strong>Do not do these things:</strong></p>
 <ul class="facile-elenco no">
@@ -326,6 +326,8 @@ hreflang_xdefault: "/facile-da-leggere/"
 <h2 style="color: #b45309;"><span class="icona" style="background: #b45309;">✉️</span> Do you want to write to us?</h2>
 <p>If you have a question that is not urgent, write to:</p>
 <p style="text-align: center; font-size: 1.1rem;"><a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a></p>
+<p>Or come to our office:</p>
+<p style="text-align: center;"><strong lang="it">Via Sicilia 13-15</strong><br><span lang="it">Genzano di Roma</span></p>
 <p>If there is an emergency, do not write an email. Call <strong>112</strong>.</p>
 </div>
 
