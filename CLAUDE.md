@@ -82,6 +82,23 @@ L'utente lavora **multi-device** (CLI desktop su `main`, push = deploy; mobile/c
 
 ---
 
+## Gate dei fatti e dei materiali scolastici — l'audit esterno non deve più servire
+
+🔴 **Istruzione permanente dell'utente (06/09/2026)**: *«queste cose non devono mai più capitare: non devo più rivolgermi ad altre intelligenze artificiali per fare un audit e poi passartelo»*. Un audit esterno aveva trovato 24 rilievi (11 P1) tutti fondati, con i gate del sito tutti verdi: fatti sbagliati su una tragedia (Rigopiano), istruzioni di sicurezza per bambini da correggere (Tartaruga saggia), rubriche che valutavano la paura, esercizi che spacciavano ipotesi per legge, dati climatici diversi dal dataset, note di sicurezza perse in stampa, pacchetti non paritari, ZIP inutilizzabili offline, privacy e accessibilità da riallineare, favicon vuota, ancore rotte. Da quel giorno valgono quattro gate in più, tutti **obbligati prima del `git add`**:
+
+| Gate | Quando | Agente / script |
+|---|---|---|
+| **Fatti e fonti** | ogni contenuto con dati verificabili (date, orari, bilanci, quantità, cause, norme, citazioni, dati da dataset): articoli, pagine, schede, kit, dossier, manuale | `pc-fact-checker` (richiamato anche da `pc-article-reviewer` § 12); `scripts/check-dati-schede.py` |
+| **Materiali scolastici** | ogni scheda stampabile, kit scuola, kit calamità, rubrica, gioco, percorso nuovo o modificato (`static/formazione/**`, `content/formazione/**`, `static/giochi/**`) | `pc-didattica-reviewer` (sicurezza DPC, pedagogia, età, normativa scuola vigente, esercizi, parità dei 4 formati, licenze); `scripts/check-parita-schede.py` |
+| **Scienza e cronaca** | contenuti che spiegano fenomeni, cause, scale, codici colore; articoli di cronaca, anniversari, vicende giudiziarie, contenuti con persone | `pc-revisore-scientifico`, `pc-desk-giornalistico` |
+| **Integrità e conformità** | asset, ZIP, ancore, codifiche, stati UI; pagine legali; traduzioni; dati aperti e feed; codice e workflow | `pc-integrita-tecnica`, `pc-conformita-legale`, `pc-revisore-traduzioni`, `pc-dati-e-feed`, `pc-revisore-codice`, `pc-revisore-automazioni`, `pc-sicurezza`; `scripts/check-integrita-asset.py`, `scripts/check-ancore.py` |
+
+**Regole cogenti che i gate applicano:** ogni numero, data o causa ha una **fonte primaria nominata** (INGV, DPC, VVF, ISPRA, Normattiva, MIM, dataset del sito) oppure viene riformulato come stima o ipotesi didattica; un dato sensibile (vittime, cause, istruzioni di sicurezza, norme vigenti) senza fonte è **bloccante**; una correzione fattuale si applica in **tutti** i file che ripetono il dato (schede, dossier, articoli, versioni facili, traduzioni); le istruzioni di autoprotezione per bambini coincidono con il DPC e non contengono divieti o garanzie assoluti senza scenario; le rubriche non usano paura, pianto o agitazione come livello; le avvertenze per l'adulto stanno **dentro** il wrapper stampabile; pagina, stampa singola, «Stampa tutto» e ZIP dicono la stessa cosa (gate `pacchetti-schede` in `validate-pr.yml`).
+
+**Audit interno ricorrente:** `pc-audit-completo` (routine mensile `trig_01RMQwDs5Ku2mRfkwkDZnKmx`, il 3 del mese alle 06:00 italiane) produce lo stesso rapporto di un auditor esterno (rilievi con prova, impatto, correzione, verifica, priorità), corregge la Categoria A fino a live, lascia in PR la Categoria B e apre issue con responsabile per ciò che va validato da Comune, RPD, RSPP o docenti; rapporti in `riferimenti-interni/audit-interni/`. `audit-sito.yml` §§ 46-49 esegue ogni 6 ore integrità asset, ancore, parità schede e dati vs dataset; `scadenze-conformita.yml` tiene il calendario legale (23 settembre, 31 marzo, revisioni annuali).
+
+---
+
 ## Umanizzazione della scrittura — prosa naturale, senza tic da IA
 
 🟢 **Dal 19/08/2026, per ogni testo destinato al sito** (articoli, pagine, caption, social): scrivi autentica prosa editoriale italiana — concreta, specifica, con ritmo variato entro il registro breve AGID — evitando i tic statistici degli LLM catalogati da [Wikipedia:Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing). Sintesi dei divieti: perifrasi al posto di «è» («rappresenta/costituisce/si configura come»), grappoli di lessico da IA («cruciale/fondamentale/significativo/panorama/testimonianza» — conta la densità, non la singola parola), importanza gonfiata su fatti ordinari, pseudoanalisi al gerundio («evidenziando così…», «sottolineando…»), consenso inventato senza fonte (bloccante), più di un «non solo X, ma anche Y» per articolo, terne-riempitivo di aggettivi, conclusioni prefabbricate («in conclusione», «guardando al futuro»), frasi da assistente virtuale nel contenuto.
@@ -302,7 +319,7 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 
 ## Agenti specializzati (`.claude/agents/`)
 
-17 agenti custom da usare PROATTIVAMENTE quando la conversazione fa match con la loro `description` (l'utente scrive in italiano naturale, fai tu il match e attiva da solo):
+34 agenti custom da usare PROATTIVAMENTE quando la conversazione fa match con la loro `description` (l'utente scrive in italiano naturale, fai tu il match e attiva da solo). I 17 aggiunti il 06/09/2026 (dopo l'audit esterno) formano il **sistema di affidabilità interno** descritto in § "Gate dei fatti e dei materiali scolastici":
 
 | Agent | Trigger naturali |
 |---|---|
@@ -323,6 +340,23 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 | `pc-materiali-publisher` | "pubblica output NotebookLM per il tema X" |
 | `pc-revisore-linguistico` | 🔴 gate linguistico obbligato richiamato da `pc-article-reviewer`: script deterministici (refusi + grammatica) **e** lettura sintattica per articoli mancanti, accordi, preposizioni. Riferimento Treccani |
 | `pc-correttore-bozze` | "controlla i refusi", "rileggi per refusi" — anche schede statiche HTML (`static/formazione/`, `static/giochi/`) |
+| `pc-fact-checker` | 🔴 gate dei fatti: "verifica i dati/le fonti", ogni contenuto con date, orari, bilanci, cause, norme, dataset — fonte primaria o riformulazione prudente |
+| `pc-didattica-reviewer` | 🔴 gate materiali scolastici: schede, kit, rubriche, giochi — sicurezza DPC, pedagogia, età, normativa scuola, esercizi, parità dei 4 formati |
+| `pc-revisore-scientifico` | "è scientificamente corretto?", pagine rischio, dossier, divulgazione — meccanismi, scale, fasi, tono della comunicazione del rischio |
+| `pc-desk-giornalistico` | cronaca, anniversari, vicende giudiziarie, persone e minori — attribuzione, deontologia, presunzione di non colpevolezza |
+| `pc-conformita-legale` | "la privacy è a posto?", "la dichiarazione di accessibilità è aggiornata?" — RPD, basi giuridiche PA, calendario AgID, note legali, licenze |
+| `pc-integrita-tecnica` | "il sito è integro?", "gli ZIP funzionano offline?", "le ancore?" — script di integrità, ancore, parità, codifiche, stati UI |
+| `pc-coerenza-trasversale` | "il sito si contraddice?", stessa informazione in più pagine — allineamento alla fonte canonica |
+| `pc-revisore-codice` | diff a template/partial/CSS/JS/script — escape, subpath, stati UI, idempotenza, a11y dei componenti |
+| `pc-revisore-automazioni` | workflow e routine — YAML, timeout, pin SHA, trigger, priorità deploy, watchdog, documentazione |
+| `pc-sicurezza` | CSP, header, segreti, supply chain, superficie JS, catena allerta — hardening in Report-Only prima dell'enforcing |
+| `pc-revisore-traduzioni` | "le traduzioni sono aggiornate?" — 7 lingue + facile multilingua allineate all'italiano canonico |
+| `pc-dati-e-feed` | open data, data/, CAP, RSS, sitemap, JSON endpoint — validità, coerenza fra formati, metadati, freschezza |
+| `pc-esercitazione-emergenza` | "se scatta un'allerta rossa adesso funziona tutto?" — esercitazione end-to-end in locale con verbale |
+| `pc-verifica-visiva` | markup custom, schede, stampa, mobile — screenshot letti davvero (Playwright) |
+| `pc-usabilita` | menu, hub, percorsi, "l'utente lo trova?" — architettura dell'informazione, Miller, orfane, vicoli ciechi |
+| `pc-documentazione` | dopo ogni modifica strutturale — CLAUDE.md, rules, agenti, manuale, AGENTS.md, CONTESTO allineati ai componenti reali |
+| `pc-audit-completo` | "fammi l'audit completo", routine mensile — orchestra script e specialisti, rapporto in formato rilievi, correzioni fino a live |
 
 Specifiche + workflow combinati in `manuale/parte-19-agenti-specializzati.md`. Aggiungendo/modificando un agent, aggiorna la Parte 19 e questa tabella.
 
@@ -361,7 +395,7 @@ Specifiche + workflow combinati in `manuale/parte-19-agenti-specializzati.md`. A
 | Meta-work su skill/agent | `skill-stocktake` · `agent-sort` · `agent-architecture-audit` |
 | Imparare dal lavoro | `continuous-learning-v2` |
 
-**Agent custom + skill in sequenza** quando rilevanti: revisione articolo `pc-article-reviewer` → `pc-photo-caption-verifier` (se foto) → `accessibility` → `seo-audit`; pre-push `pc-deploy-validator` → `production-audit` → `security-scan`; nuovo script `search-first` → `python-patterns` → `python-testing`.
+**Agent custom + skill in sequenza** quando rilevanti: revisione articolo `pc-article-reviewer` → `pc-fact-checker` (se dati) → `pc-desk-giornalistico` (se cronaca) → `pc-revisore-scientifico` (se fenomeni) → `pc-photo-caption-verifier` (se foto) → `accessibility` → `seo-audit`; materiali scolastici `pc-didattica-reviewer` → `pc-fact-checker` → `pc-verifica-visiva`; pre-push `pc-revisore-codice` → `pc-deploy-validator` → `production-audit` → `security-scan`; nuovo script `search-first` → `python-patterns` → `python-testing` → `pc-revisore-automazioni` (se in CI); modifica strutturale → `pc-usabilita` → `pc-documentazione`.
 
 ---
 

@@ -47,6 +47,12 @@ jobs:
         # del livello di tutela IP (agosto 2026).
         run: python3 scripts/check-jsonld.py public
 
+      - name: "⚓ Ancore interne e link speciali nell'HTML generato"
+        # Audit esterno 06/09/2026 (rilievi F16 e F21): i rimandi #frammento
+        # verso id inesistenti e il corpo mailto codificato due volte non
+        # erano visti da nessun controllo. lychee non segue i frammenti.
+        run: python3 scripts/check-ancore.py public --base-path ""
+
       - name: "📊 Statistiche build"
         run: |
           echo "Pagine generate: $(find public -name '*.html' | wc -l)"
@@ -72,6 +78,17 @@ jobs:
             echo "::error::Pacchetti 'Stampa tutto' non allineati ai kit: esegui python3 scripts/genera-pacchetti-schede.py e committa."
             exit 1
           fi
+
+      - name: "🧩 Parità kit ↔ Stampa tutto ↔ ZIP, avvertenze e apertura offline"
+        # Rilievi F02, F03, F09: avvertenze per l'adulto fuori dal wrapper
+        # stampabile (perse in Stampa tutto e ZIP), CSS non risolvibile e
+        # 234 href radicati su "/" negli ZIP offline.
+        run: python3 scripts/check-parita-schede.py
+
+      - name: "📊 Tabelle delle schede coerenti con i dataset aperti"
+        # Rilievo F07: la scheda clima riportava valori diversi dal dataset
+        # che dichiarava di usare, con media e conclusioni sbagliate.
+        run: python3 scripts/check-dati-schede.py
 
   menu-sync:
     name: "Coerenza menu hugo.toml ↔ site-chrome.js"
