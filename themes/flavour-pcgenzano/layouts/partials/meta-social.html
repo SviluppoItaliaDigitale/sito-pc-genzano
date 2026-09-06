@@ -63,7 +63,7 @@
   <meta property="og:url" content="{{ $.Scratch.Get "canonicalURL" | default .Permalink }}">
   {{- /* og:locale dinamico (mappa codice lingua → locale BCP-47) */ -}}
   {{- $lang := .Params.language | default "it" -}}
-  {{- $locale := index (dict "it" "it_IT" "en" "en_US" "fr" "fr_FR" "de" "de_DE" "es" "es_ES" "pt" "pt_PT" "ro" "ro_RO" "eo" "eo") $lang -}}
+  {{- $locale := index (dict "it" "it_IT" "en" "en_US" "fr" "fr_FR" "de" "de_DE" "es" "es_ES" "pt" "pt_PT" "ro" "ro_RO" "eo" "eo" "ar" "ar_AR") $lang -}}
   {{- if not $locale }}{{ $locale = "it_IT" }}{{ end -}}
   <meta property="og:locale" content="{{ $locale }}">
   <meta property="og:site_name" content="{{ .Site.Title }}">

@@ -13,7 +13,7 @@ Episodio del podcast del Gruppo Comunale Volontari di Protezione Civile di Genza
 
 - I tre kit distinti: KIT VAI (evacuazione rapida), KIT CASA (autonomia 72 ore), KIT AUTO.
 - KIT VAI: cosa metterci e cosa no, peso massimo per adulto e per bambino.
-- KIT CASA: acqua 3 litri/persona/giorno per 3 giorni, cibo non deperibile, torcia a manovella.
+- KIT CASA: acqua 4 litri/persona/giorno per 3 giorni, cibo non deperibile, torcia a manovella.
 - KIT AUTO: triangolo, giubbino, coperta isotermica, primo soccorso.
 - Documenti da fotocopiare e tenere in copia (carta identità, libretto sanitario, polizze).
 - Adattamenti per categorie vulnerabili: bambini, anziani, animali domestici.

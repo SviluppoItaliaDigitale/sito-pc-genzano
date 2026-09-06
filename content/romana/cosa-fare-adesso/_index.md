@@ -3,6 +3,7 @@ title: "Ce să faci acum — Română"
 description: "Acțiuni imediate în caz de urgență la Genzano di Roma: numere de sunat, comportamente de adoptat, link-uri utile."
 layout: "single"
 language: "ro"
+tts: false
 ---
 
 [← Înapoi la prezentarea în limba română](/romana/)
@@ -40,8 +41,16 @@ Identificați situația prin care treceți. Faceți clic pe link-ul corespunzăt
 2. **Sunați la 112** pentru a semnala situații de pericol.
 3. **Nu împiedicați salvatorii.** Nu mergeți la locul urgenței din curiozitate.
 4. **Urmăriți doar surse oficiale.** Nu răspândiți informații neverificate.
-5. **Ajutați-i pe cei în dificultate** dacă o puteți face în siguranță (vârstnici, copii, persoane cu dizabilități).
+5. **Ajutați-i pe cei în dificultate** dacă o puteți face în siguranță.
 6. **Țineți telefonul încărcat** și folosiți-l doar pentru comunicări necesare.
+
+{{< cosa-non-fare titolo="Ce NU trebuie făcut în orice urgență" >}}
+- **Nu sunați la 112 din curiozitate sau pentru a cere informații**: păstrați linia liberă pentru cei care au cu adevărat nevoie.
+- **Nu vă deplasați la locul evenimentului** pentru a vedea ce s-a întâmplat: încetiniți intervenția și vă puneți în pericol.
+- **Nu distribuiți știri neverificate** pe rețelele sociale: distribuiți doar surse oficiale (Protecția Civilă, Primăria, Centrul Funcțional Regional Lazio).
+- **Nu blocați cu mașina căile de acces** ale vehiculelor de intervenție.
+- **Nu reintrați într-o clădire avariată** înainte de avizul Pompierilor.
+{{< /cosa-non-fare >}}
 
 ## Resurse
 

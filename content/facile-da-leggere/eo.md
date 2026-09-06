@@ -8,6 +8,18 @@ sitemap:
   priority: 0.6
   changefreq: monthly
 dataUltimaRevisione: "2026-06-28"
+hreflang:
+  - lang: "it"
+    url: "/facile-da-leggere/"
+  - lang: "en"
+    url: "/facile-da-leggere/en/"
+  - lang: "eo"
+    url: "/facile-da-leggere/eo/"
+  - lang: "ro"
+    url: "/facile-da-leggere/ro/"
+  - lang: "ar"
+    url: "/facile-da-leggere/ar/"
+hreflang_xdefault: "/facile-da-leggere/"
 ---
 
 <nav class="facile-lang" aria-label="Lingvo">
@@ -250,6 +262,7 @@ dataUltimaRevisione: "2026-06-28"
 <li>ne lasu la beston en la aŭto dum varmo;</li>
 <li>ne liberigu la beston: ĝi povus perdiĝi.</li>
 </ul>
+<p>Por hundoj, katoj kaj dorlotbestoj la Grupo havas propran ilaron: <a href="/formazione/kit-calamita-animali-domestici/">Katastrofa ilaro por dorlotbestoj</a>.</p>
 </div>
 
 <div class="facile-blocco">
@@ -272,7 +285,7 @@ dataUltimaRevisione: "2026-06-28"
 <div class="facile-blocco">
 <h2><span class="icona">📍</span> Kien iri</h2>
 <p>En Genzano di Roma estas <strong>sekuraj lokoj</strong>.</p>
-<p>Ili nomiĝas <strong>atendareoj</strong> (en la itala: <em>aree di attesa</em>).</p>
+<p>Ili nomiĝas <strong>atendareoj</strong> (en la itala: <em lang="it">aree di attesa</em>).</p>
 
 {{< pittogramma src="/pittogrammi/iso7010/punto-raccolta.svg" alt="Signo de kolektiĝejo" size="large" >}}
 
@@ -296,9 +309,41 @@ dataUltimaRevisione: "2026-06-28"
 <p>Por peti helpon en urĝo, voku la <strong>112</strong>.</p>
 </div>
 
+<div class="facile-blocco">
+<h2><span class="icona">📚</span> Ĉu vi volas scii pli?</h2>
+<p>Sur la retejo estas aliaj paĝoj kun pliaj detaloj.</p>
+<ul class="facile-elenco">
+<li><a href="/cosa-fare-adesso/">Kion fari nun</a></li>
+<li><a href="/piano-familiare/">Plano por mia familio</a></li>
+<li><a href="/numeri-utili/">Utilaj telefonnumeroj</a></li>
+<li><a href="/faq/">Oftaj demandoj</a></li>
+<li><a href="/formazione/easy-to-read-scuola/">Facilaj folioj por lernejo</a></li>
+</ul>
+<p>Se vi bezonas helpon por legi, petu familianon, instruiston aŭ fidindan personon.</p>
+</div>
+
 <div class="facile-blocco" style="background: #fff3cd; border-color: #b45309;">
 <h2 style="color: #b45309;"><span class="icona" style="background: #b45309;">✉️</span> Ĉu vi volas skribi al ni?</h2>
 <p>Se vi havas demandon kiu ne estas urĝa, skribu al:</p>
 <p style="text-align: center; font-size: 1.1rem;"><a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a></p>
 <p>Se estas urĝo, ne skribu retmesaĝon. Voku la <strong>112</strong>.</p>
+</div>
+
+<div class="facile-blocco" style="background: #fff4e6; border-color: #ff5000;">
+<h2 style="color: #003366;"><span class="icona" style="background: #ff5000;">📄</span> Folioj kun simboloj por elŝuti</h2>
+<p>Tio estas folioj kiuj klarigas <strong>per simboloj</strong> kion fari en urĝa kazo. Ilin faris la <strong>Civila Protekto</strong> kun la projekto <strong>Abili a Proteggere</strong>.</p>
+<p>Vi povas elŝuti kaj presi ilin:</p>
+<ul>
+<li><a href="/manuali/schede-caa/scheda-caa-terremoto.pdf"><strong>Tertremo</strong> (PDF)</a></li>
+<li><a href="/manuali/schede-caa/scheda-caa-alluvione.pdf"><strong>Inundo</strong> (PDF)</a></li>
+<li><a href="/manuali/schede-caa/scheda-caa-incendi-boschivi.pdf"><strong>Arbara fajro</strong> (PDF)</a></li>
+</ul>
+<p>Estas ankaŭ la <strong><a href="/tabelle-comunicazione/">komunikaj tabeloj</a></strong>: simboloj kiujn oni montras per la fingro por diri bezonon aŭ kio okazas. Oni povas uzi ilin sur la ekrano aŭ presi ilin.</p>
+</div>
+
+<div class="facile-blocco" style="background: #e7f0fa; border-color: #003366;">
+<h2 style="color: #003366;"><span class="icona" style="background: #003366;">🎧</span> Ĉu vi volas aŭskulti anstataŭ legi?</h2>
+<p>Sur la retejo vi trovas <strong>sonpodkastojn</strong>, <strong>infografikojn</strong> kaj <strong>prezentojn</strong> pri gravaj temoj: tertremo, inundo, fajro, vetera atentigo, urĝa ilaro.</p>
+<p>Vi povas <strong>elŝuti ilin</strong> al via telefono kaj aŭskulti ilin kiam ajn vi volas.</p>
+<p style="text-align: center;"><a href="/risorse-pronte/"><strong>Iru al la pretaj materialoj</strong></a></p>
 </div>

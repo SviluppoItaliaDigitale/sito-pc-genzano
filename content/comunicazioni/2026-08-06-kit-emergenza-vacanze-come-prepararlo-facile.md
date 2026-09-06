@@ -73,7 +73,7 @@ Se resti a casa in estate, prepara una busta o un cassetto con queste cose:
 - Elenco dei tuoi medicinali.
 - Numeri utili: medico, vicini, familiari.
 - 1 torcia e 1 radio a batteria.
-- Almeno 3 litri di acqua per persona per 3 giorni.
+- Almeno 4 litri di acqua per persona per 3 giorni.
 - Cibo che non scade per 3 giorni (scatolame, pasta, biscotti).
 - Le chiavi di casa in una busta impermeabile.
 

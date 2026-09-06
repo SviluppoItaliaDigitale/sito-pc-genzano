@@ -3,6 +3,7 @@ title: "Familia Urĝa Plano — Esperanto"
 description: "Kiel prepari familian urĝan planon: kontaktoj, kunvenpunktoj, urĝa kit."
 layout: "single"
 language: "eo"
+tts: false
 ---
 
 [← Reen al la Esperanta resumo](/esperanto/)
@@ -52,7 +53,7 @@ Printu tiun ĉi paĝon (aŭ kopiu sur folio) kaj kompletigu kun viaj datumoj. Al
 ### 5. Urĝa kit — kie ĝi estas konservita
 
 - **Loko de la kit hejme**: ____________________
-- **La kit enhavas**: akvo (3 L po persono), longedaŭra manĝaĵo, poŝlampo + rezervaj baterioj, termika litkovrilo, fajfilo, telefonŝargilo, gravaj medikamentoj, kopio de la identigaj dokumentoj, kontanta mono.
+- **La kit enhavas**: akvo (4 L po persono tage, dum 3 tagoj), longedaŭra manĝaĵo, poŝlampo + rezervaj baterioj, termika litkovrilo, fajfilo, telefonŝargilo, gravaj medikamentoj, kopio de la identigaj dokumentoj, kontanta mono.
 
 ### 6. Specialaj bezonoj
 

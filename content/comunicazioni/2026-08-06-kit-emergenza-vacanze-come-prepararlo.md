@@ -75,7 +75,7 @@ Per chi resta a casa durante l'estate, un kit "cassetto dell'emergenza" contiene
 - Elenco farmaci abituali.
 - Numeri utili (medico curante, caregiver, vicini di fiducia).
 - Torcia e radio a batteria.
-- Scorta d'acqua (almeno 3 litri per persona per 3 giorni).
+- Scorta d'acqua (almeno 4 litri per persona per 3 giorni).
 - Scorta alimentare non deperibile (3 giorni).
 - Chiavi e documenti in busta impermeabile.
 
