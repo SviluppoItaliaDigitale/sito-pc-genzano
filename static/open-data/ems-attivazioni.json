@@ -1,12 +1,28 @@
 {
  "_snapshot": {
   "fonte": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/",
-  "generato": "2026-09-05T22:55:26+00:00",
+  "generato": "2026-09-06T13:04:20+00:00",
   "licenza": "Copernicus Emergency Management Service — dati pubblici",
   "nota": "Copia locale: l'API non espone CORS, il browser non può leggerla direttamente."
  },
  "count": 50,
  "results": [
+  {
+   "activationTime": "2026-09-06T09:07:00",
+   "category": "Wildfire",
+   "centroid": "POINT (20.798279972113534 40.033694823201664)",
+   "closed": false,
+   "code": "EMSR929",
+   "countries": [
+    "Greece"
+   ],
+   "eventTime": "2026-08-31T13:00:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-09-06T12:58:38.606445",
+   "n_aois": 1,
+   "n_products": 1,
+   "name": "Wildfire in Trapezitsa Mountain, Greece"
+  },
   {
    "activationTime": "2026-09-02T08:00:00",
    "category": "Storm",
@@ -116,7 +132,7 @@
    ],
    "eventTime": "2026-08-14T22:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-09-05T22:43:34.513570",
+   "lastUpdate": "2026-09-06T11:18:03.798618",
    "n_aois": 5,
    "n_products": 45,
    "name": "Wildfire in Montenegro and Bosnia and Herzegovina"
@@ -794,22 +810,6 @@
    "n_aois": 1,
    "n_products": 1,
    "name": "Wildfire in Rhineland-Palatinate, Germany"
-  },
-  {
-   "activationTime": "2026-05-01T07:59:00",
-   "category": "Wildfire",
-   "centroid": "POINT (10.486995751526113 43.76988485902923)",
-   "closed": true,
-   "code": "EMSR873",
-   "countries": [
-    "Italy"
-   ],
-   "eventTime": "2026-04-28T22:00:00",
-   "gdacsId": null,
-   "lastUpdate": "2026-05-05T13:50:30.098672",
-   "n_aois": 1,
-   "n_products": 2,
-   "name": "Wildfire in Tuscany, Italy"
   }
  ]
 }
