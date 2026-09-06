@@ -1,0 +1,133 @@
+name: "📅 Scadenze di conformità (accessibilità, privacy, pagine legali)"
+
+# Promemoria automatico degli adempimenti di legge del sito, con issue
+# aperta in anticipo e chiusa da sola al rientro:
+#
+#   - Dichiarazione di accessibilità: riesame e aggiornamento ENTRO IL
+#     23 SETTEMBRE di ogni anno (AgID, L. 4/2004, D.Lgs. 106/2018).
+#     Il parametro `dichiarazioneAccessibilita` in hugo.toml deve
+#     contenere il link alla dichiarazione depositata su form.agid.gov.it.
+#   - Obiettivi di accessibilità: pubblicazione ENTRO IL 31 MARZO.
+#   - Pagine legali (privacy, note legali, accessibilità, social media
+#     policy): `dataUltimaRevisione` non più vecchia di 12 mesi.
+#
+# Nasce dall'audit esterno del 06/09/2026 (rilievo F14): la dichiarazione
+# fissava il riesame a maggio 2027 e il link ufficiale era vuoto da mesi
+# senza che nessun controllo lo segnalasse. La verifica nel merito delle
+# pagine spetta all'agente `pc-conformita-legale`; questo workflow tiene
+# solo il calendario.
+
+on:
+  schedule:
+    - cron: "17 6 * * 1"   # lunedì 06:17 UTC (08:17 italiane)
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  scadenze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v4
+
+      - name: "📅 Calcola gli adempimenti in scadenza o scaduti"
+        id: calcolo
+        shell: bash
+        run: |
+          set +e
+          REPORT="/tmp/scadenze.md"
+          : > "$REPORT"
+          FOUND="false"
+          oggi=$(date -u +%Y-%m-%d)
+          oggi_ts=$(date -u -d "$oggi" +%s)
+          anno=$(date -u +%Y)
+          giorni() { echo $(( ( $(date -u -d "$1" +%s) - oggi_ts ) / 86400 )); }
+
+          echo "# Scadenze di conformità — controllo del $oggi" >> "$REPORT"
+          echo "" >> "$REPORT"
+
+          # 1. Dichiarazione di accessibilità: link ufficiale + finestra 23 settembre
+          LINK=$(grep -E '^\s*dichiarazioneAccessibilita\s*=' hugo.toml | sed -E 's/.*=\s*"([^"]*)".*/\1/')
+          scad="$anno-09-23"
+          d=$(giorni "$scad")
+          if [ "$d" -lt 0 ]; then
+            # scadenza dell'anno passata: la prossima è l'anno prossimo
+            scad="$((anno+1))-09-23"; d=$(giorni "$scad")
+          fi
+          echo "## Dichiarazione di accessibilità" >> "$REPORT"
+          if [ -z "$LINK" ]; then
+            echo "- ❌ \`dichiarazioneAccessibilita\` in \`hugo.toml\` è vuoto: la dichiarazione non risulta depositata su form.agid.gov.it (o il link non è stato inserito). Adempimento del referente del Gruppo." >> "$REPORT"
+            FOUND="true"
+          else
+            echo "- ✅ Link alla dichiarazione ufficiale presente: $LINK" >> "$REPORT"
+          fi
+          if [ "$d" -le 60 ]; then
+            echo "- ⚠️ Riesame annuale della dichiarazione entro il **23 settembre**: mancano $d giorni ($scad). Verificare contenuti non accessibili, metodo e date, poi aggiornare su form.agid.gov.it e in \`content/accessibilita/_index.md\`." >> "$REPORT"
+            FOUND="true"
+          else
+            echo "- ✅ Prossimo riesame: $scad (fra $d giorni)." >> "$REPORT"
+          fi
+
+          # 2. Obiettivi di accessibilità entro il 31 marzo
+          scad="$anno-03-31"; d=$(giorni "$scad")
+          if [ "$d" -lt 0 ]; then scad="$((anno+1))-03-31"; d=$(giorni "$scad"); fi
+          echo "" >> "$REPORT"; echo "## Obiettivi di accessibilità" >> "$REPORT"
+          if [ "$d" -le 60 ]; then
+            echo "- ⚠️ Pubblicazione degli obiettivi annuali entro il **31 marzo**: mancano $d giorni ($scad). Aggiornare la sezione «Obiettivi di accessibilità» in \`content/accessibilita/_index.md\`." >> "$REPORT"
+            FOUND="true"
+          else
+            echo "- ✅ Prossima scadenza: $scad (fra $d giorni)." >> "$REPORT"
+          fi
+
+          # 3. Pagine legali: dataUltimaRevisione entro 12 mesi
+          echo "" >> "$REPORT"; echo "## Revisione delle pagine legali (max 12 mesi)" >> "$REPORT"
+          for f in content/privacy/_index.md content/note-legali/_index.md content/accessibilita/_index.md content/social-media-policy/_index.md; do
+            rev=$(grep -E '^dataUltimaRevisione:' "$f" | sed -E 's/.*"([0-9-]+)".*/\1/')
+            if [ -z "$rev" ]; then
+              echo "- ❌ \`$f\`: campo \`dataUltimaRevisione\` mancante." >> "$REPORT"; FOUND="true"; continue
+            fi
+            eta=$(( ( oggi_ts - $(date -u -d "$rev" +%s) ) / 86400 ))
+            if [ "$eta" -gt 365 ]; then
+              echo "- ❌ \`$f\`: ultima revisione $rev ($eta giorni fa): oltre i 12 mesi. Far rivedere la pagina (agente \`pc-conformita-legale\`)." >> "$REPORT"; FOUND="true"
+            elif [ "$eta" -gt 300 ]; then
+              echo "- ⚠️ \`$f\`: ultima revisione $rev ($eta giorni fa): programmare la revisione annuale." >> "$REPORT"; FOUND="true"
+            else
+              echo "- ✅ \`$f\`: rivista il $rev." >> "$REPORT"
+            fi
+          done
+
+          echo "found=$FOUND" >> "$GITHUB_OUTPUT"
+          cat "$REPORT"
+
+      - name: "🚨 Apri o aggiorna l'issue delle scadenze"
+        uses: actions/github-script@v9
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('/tmp/scadenze.md', 'utf-8');
+            const found = '${{ steps.calcolo.outputs.found }}' === 'true';
+            const title = '[Automatico] Scadenze di conformità: accessibilità e pagine legali';
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner, repo: context.repo.repo,
+              state: 'open', labels: 'conformita', per_page: 50
+            });
+            const issue = existing.data.find(i => i.title === title);
+            const body = [
+              '_Controllo settimanale del calendario degli adempimenti. La verifica nel merito delle pagine spetta a chi cura il sito (agente `pc-conformita-legale`); questa issue si chiude da sola quando non ci sono scadenze entro 60 giorni né adempimenti aperti._',
+              '', report, '',
+              '---', '*Issue generata dal workflow `scadenze-conformita.yml`.*'
+            ].join('\n');
+            if (found) {
+              if (issue) {
+                await github.rest.issues.update({ owner: context.repo.owner, repo: context.repo.repo, issue_number: issue.number, body });
+              } else {
+                await github.rest.issues.create({ owner: context.repo.owner, repo: context.repo.repo, title, body, labels: ['conformita', 'manutenzione', 'automazione'] });
+              }
+            } else if (issue) {
+              await github.rest.issues.createComment({ owner: context.repo.owner, repo: context.repo.repo, issue_number: issue.number, body: 'Nessuna scadenza entro 60 giorni e nessun adempimento aperto: chiudo automaticamente.' });
+              await github.rest.issues.update({ owner: context.repo.owner, repo: context.repo.repo, issue_number: issue.number, state: 'closed', state_reason: 'completed' });
+            }

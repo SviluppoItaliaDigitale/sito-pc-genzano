@@ -177,6 +177,22 @@ python3 scripts/audit-grammatica-italiana.py | grep <nome-file>   # accenti, apo
 
 Non dare via libera al commit finché il gate linguistico non è pulito o i suoi rilievi non sono stati applicati.
 
+### 12. 🔴 GATE DEI FATTI — pc-fact-checker
+
+**Quando l'articolo contiene dati verificabili** (date e orari di eventi, bilanci di vittime/superstiti/evacuati, magnitudo, quantità, percentuali, statistiche, dati da dataset del sito, norme o atti con il loro contenuto, estremi di sentenze, cause attribuite a un evento, citazioni di enti) **devi invocare l'agent `pc-fact-checker`** prima di dare via libera al commit. Non è opzionale: un articolo di anniversario, un dossier o un caso studio senza questo gate non si committa.
+
+```
+Agent({
+  subagent_type: "pc-fact-checker",
+  description: "Verifica dei fatti su fonti primarie",
+  prompt: "Verifica su fonti primarie (INGV, DPC, VVF, ISPRA, Normattiva, MIM, dataset del sito) ogni affermazione verificabile di content/comunicazioni/<file>.md: date, orari, bilanci, cause, norme, dati. Correggi in-place ciò che è smentito da una fonte nominata, riformula in modo prudente ciò che non è verificabile, segnala come BLOCCANTE ogni dato sensibile (vittime, cause, istruzioni di sicurezza, norme vigenti) rimasto senza fonte. Applica la stessa correzione negli altri file del sito che ripetono il dato."
+})
+```
+
+**Perché esiste (6 settembre 2026)**: un audit esterno ha trovato una scheda pubblicata da mesi che contava 4 bambini fra le vittime di Rigopiano (erano fra i superstiti, tutti salvati), presentava il terremoto come innesco della valanga (nesso mai dimostrato) e riportava un orario diverso dalla ricostruzione INGV; lo stesso evento era raccontato con numeri diversi in un dossier e in un articolo programmato. Tutti i gate tecnici e linguistici erano verdi. I fatti sono un gate a sé.
+
+**Esecuzione minima senza Agent tool**: per ogni dato, apri tu la fonte primaria con WebFetch/Firecrawl e compila la tabella affermazione → fonte → verdetto descritta in `.claude/agents/pc-fact-checker.md`. Niente fonte, niente dato.
+
 ## Anti-pattern editoriali che riconosci da lontano
 
 - **"Si comunica che..."** in apertura: nominalizzazione tipica del burocratese. Sostituisci con apertura attiva ("La protezione civile interviene...", "Da lunedì 6 maggio...").
