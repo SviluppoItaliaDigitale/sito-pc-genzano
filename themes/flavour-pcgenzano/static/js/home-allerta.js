@@ -245,7 +245,7 @@
         if (barDomani) {
           if (domaniLevel >= 1 && domaniDate) {
             var liv = names[domaniLevel];
-            var titoloDom = { gialla: 'Previsto giallo', arancione: 'Previsto arancione', rossa: 'Previsto rosso' }[liv];
+            var titoloDom = { gialla: 'allerta gialla', arancione: 'allerta arancione', rossa: 'allerta rossa' }[liv];
             var dataLeg = domaniDate.getDate() + ' ' + mesi[domaniDate.getMonth()] + ' ' + domaniDate.getFullYear();
             barDomani.className = 'allerta-bar-domani allerta-bar-domani-' + liv;
             barDomani.style.display = '';
