@@ -4,7 +4,7 @@ description: "Informativa sul trattamento dei dati personali e sull'uso dei cook
 layout: "single"
 toc: true
 tts: true
-dataUltimaRevisione: "2026-06-02"
+dataUltimaRevisione: "2026-09-06"
 ---
 
 Questa pagina spiega quali dati possono essere trattati durante la navigazione del sito e come sono gestiti cookie, widget esterni e strumenti interattivi.
@@ -22,7 +22,7 @@ Email: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivil
 
 ## Contatto privacy
 
-Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma è un'articolazione del Comune di Genzano di Roma, iscritta al RUNTS nella sezione «Altri Enti del Terzo Settore». Per le caratteristiche e i volumi di trattamento gestiti, non è obbligato alla nomina formale di un Responsabile della protezione dei dati (DPO/RPD) ai sensi dell'art. 37 del Regolamento (UE) 2016/679.
+Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma è costituito dal Comune di Genzano di Roma ai sensi dell'art. 35 del D.Lgs. 1/2018 ed è iscritto al RUNTS nella sezione «Altri Enti del Terzo Settore». Per i trattamenti svolti nell'ambito dell'attività comunale di protezione civile, il Responsabile della protezione dei dati (RPD) di riferimento è quello designato dal Comune di Genzano di Roma, i cui recapiti sono pubblicati nella sezione privacy del [sito istituzionale del Comune](https://www.comune.genzanodiroma.roma.it/). Questo sito non raccoglie dati personali oltre a quelli tecnici descritti più avanti.
 
 Per informazioni sul trattamento dei dati personali, per esercitare i diritti previsti dal GDPR o per segnalare un problema relativo alla privacy puoi scrivere a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
 
@@ -43,7 +43,7 @@ Questi dati sono usati per garantire il funzionamento del sito, la sicurezza tec
 
 ## Base giuridica
 
-Il trattamento dei dati tecnici di navigazione si basa sul legittimo interesse del Titolare a garantire sicurezza, continuità e corretto funzionamento del sito, ai sensi dell'art. 6, par. 1, lett. f del Regolamento (UE) 2016/679.
+Il trattamento dei dati tecnici di navigazione si basa sull'esecuzione di un compito di interesse pubblico (art. 6, par. 1, lett. e del Regolamento (UE) 2016/679): l'informazione alla popolazione sui rischi e sulle attività di protezione civile prevista dal D.Lgs. 1/2018. La conservazione dei dati tecnici per garantire la sicurezza della rete e dell'informazione risponde a quanto indicato dal considerando 49 del Regolamento.
 
 ## Conservazione
 

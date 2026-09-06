@@ -126,7 +126,7 @@ Un percorso di 33 ore può essere costruito così:
 | Maggio | 4 | Caso storico o evento reale documentato |
 | Giugno | 4 | Volontariato, cittadinanza attiva e restituzione finale |
 
-## Inclusione e accessibilità
+## Inclusione e accessibilità {#inclusione-e-accessibilita}
 
 I materiali possono essere adattati a classi con BES, DSA, disabilità, alunni non italofoni o fragilità emotive.
 
@@ -138,7 +138,7 @@ Risorse utili:
 - [Pittogrammi](/pittogrammi/)
 - [Psicologia dell'emergenza](/formazione/psicologia-emergenza/)
 
-## Incontri con il Gruppo e PCTO
+## Incontri con il Gruppo e PCTO {#disponibilita-pcto}
 
 Il Gruppo può valutare incontri gratuiti nelle scuole del territorio, compatibilmente con disponibilità e attività operative.
 

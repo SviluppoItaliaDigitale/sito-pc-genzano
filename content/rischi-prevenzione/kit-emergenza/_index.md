@@ -30,7 +30,7 @@ Questa pagina distingue tre kit diversi, perché non tutte le emergenze richiedo
 </table>
 </div>
 
-## Kit evacuazione rapida
+## Kit evacuazione rapida {#kit-vai}
 
 È lo zaino da prendere al volo. Deve essere leggero e facile da portare.
 
@@ -52,7 +52,7 @@ Inserisci:
 
 > **Peso indicativo dello zaino**: tendenzialmente non oltre il **15-20% del peso corporeo** di chi lo porta. Se non riesci a portarlo per mezz'ora a piedi, è troppo pesante: riducilo. Uno zaino con cinghie sul torace e fianchi distribuisce meglio il carico di una borsa a tracolla.
 
-## Kit casa 72 ore
+## Kit casa 72 ore {#kit-casa}
 
 Serve quando puoi restare in casa ma acqua, corrente, gas, telefono o negozi potrebbero non essere disponibili.
 
@@ -74,7 +74,7 @@ Inserisci:
 - contatti utili stampati;
 - materiali specifici per bambini, anziani, persone con disabilità e animali domestici.
 
-## Kit auto
+## Kit auto {#kit-auto}
 
 Inserisci:
 
