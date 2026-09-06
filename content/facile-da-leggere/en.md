@@ -8,6 +8,18 @@ sitemap:
   priority: 0.6
   changefreq: monthly
 dataUltimaRevisione: "2026-06-28"
+hreflang:
+  - lang: "it"
+    url: "/facile-da-leggere/"
+  - lang: "en"
+    url: "/facile-da-leggere/en/"
+  - lang: "eo"
+    url: "/facile-da-leggere/eo/"
+  - lang: "ro"
+    url: "/facile-da-leggere/ro/"
+  - lang: "ar"
+    url: "/facile-da-leggere/ar/"
+hreflang_xdefault: "/facile-da-leggere/"
 ---
 
 <nav class="facile-lang" aria-label="Language">
@@ -250,6 +262,7 @@ dataUltimaRevisione: "2026-06-28"
 <li>do not leave the animal in the car in the heat;</li>
 <li>do not set the animal free: it may get lost.</li>
 </ul>
+<p>For dogs, cats and pets the Group has a dedicated kit: <a href="/formazione/kit-calamita-animali-domestici/">Pet disaster kit</a>.</p>
 </div>
 
 <div class="facile-blocco">
@@ -272,7 +285,7 @@ dataUltimaRevisione: "2026-06-28"
 <div class="facile-blocco">
 <h2><span class="icona">📍</span> Where to go</h2>
 <p>In Genzano di Roma there are <strong>safe places</strong>.</p>
-<p>They are called <strong>waiting areas</strong> (in Italian, <em>aree di attesa</em>).</p>
+<p>They are called <strong>waiting areas</strong> (in Italian, <em lang="it">aree di attesa</em>).</p>
 
 {{< pittogramma src="/pittogrammi/iso7010/punto-raccolta.svg" alt="Assembly point sign" size="large" >}}
 
@@ -296,9 +309,41 @@ dataUltimaRevisione: "2026-06-28"
 <p>To ask for help in an emergency, call <strong>112</strong>.</p>
 </div>
 
+<div class="facile-blocco">
+<h2><span class="icona">📚</span> Want to know more?</h2>
+<p>On the website there are other pages with more detail.</p>
+<ul class="facile-elenco">
+<li><a href="/cosa-fare-adesso/">What to do now</a></li>
+<li><a href="/piano-familiare/">Plan for my family</a></li>
+<li><a href="/numeri-utili/">Useful phone numbers</a></li>
+<li><a href="/faq/">Frequently asked questions</a></li>
+<li><a href="/formazione/easy-to-read-scuola/">Easy sheets for school</a></li>
+</ul>
+<p>If you need help reading, ask a family member, a teacher or a person you trust.</p>
+</div>
+
 <div class="facile-blocco" style="background: #fff3cd; border-color: #b45309;">
 <h2 style="color: #b45309;"><span class="icona" style="background: #b45309;">✉️</span> Do you want to write to us?</h2>
 <p>If you have a question that is not urgent, write to:</p>
 <p style="text-align: center; font-size: 1.1rem;"><a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a></p>
 <p>If there is an emergency, do not write an email. Call <strong>112</strong>.</p>
+</div>
+
+<div class="facile-blocco" style="background: #fff4e6; border-color: #ff5000;">
+<h2 style="color: #003366;"><span class="icona" style="background: #ff5000;">📄</span> Sheets with symbols to download</h2>
+<p>These are sheets that explain <strong>with symbols</strong> what to do in an emergency. They were made by <strong>Civil Protection</strong> with the <strong>Abili a Proteggere</strong> project.</p>
+<p>You can download and print them:</p>
+<ul>
+<li><a href="/manuali/schede-caa/scheda-caa-terremoto.pdf"><strong>Earthquake</strong> (PDF)</a></li>
+<li><a href="/manuali/schede-caa/scheda-caa-alluvione.pdf"><strong>Flood</strong> (PDF)</a></li>
+<li><a href="/manuali/schede-caa/scheda-caa-incendi-boschivi.pdf"><strong>Forest fire</strong> (PDF)</a></li>
+</ul>
+<p>There are also <strong><a href="/tabelle-comunicazione/">communication tables</a></strong>: symbols you can point to with your finger to say a need or what is happening. You can use them on screen or print them.</p>
+</div>
+
+<div class="facile-blocco" style="background: #e7f0fa; border-color: #003366;">
+<h2 style="color: #003366;"><span class="icona" style="background: #003366;">🎧</span> Do you want to listen instead of reading?</h2>
+<p>On the website you can find <strong>audio podcasts</strong>, <strong>infographics</strong> and <strong>presentations</strong> on important topics: earthquake, flood, fire, weather alert, emergency kit.</p>
+<p>You can <strong>download them</strong> to your phone and listen whenever you want.</p>
+<p style="text-align: center;"><a href="/risorse-pronte/"><strong>Go to the ready-made materials</strong></a></p>
 </div>

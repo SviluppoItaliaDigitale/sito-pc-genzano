@@ -3,6 +3,7 @@ title: "Plan d'Urgence Familial — Français"
 description: "Comment préparer un plan d'urgence familial : contacts, points de rassemblement, kit d'urgence."
 layout: "single"
 language: "fr"
+tts: false
 ---
 
 [← Retour à la vue d'ensemble en français](/francais/)
@@ -52,7 +53,7 @@ Imprimez cette page (ou recopiez sur une feuille) et complétez avec vos donnée
 ### 5. Kit d'urgence — où il est conservé
 
 - **Emplacement du kit à la maison** : ____________________
-- **Le kit contient** : eau (3 L par personne), aliments longue conservation, lampe torche + piles de rechange, couverture thermique, sifflet, chargeur de téléphone, médicaments importants, copie des papiers d'identité, espèces.
+- **Le kit contient** : eau (4 L par personne par jour, pendant 3 jours), aliments longue conservation, lampe torche + piles de rechange, couverture thermique, sifflet, chargeur de téléphone, médicaments importants, copie des papiers d'identité, espèces.
 
 ### 6. Besoins particuliers
 

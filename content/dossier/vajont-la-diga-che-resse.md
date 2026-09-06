@@ -3,7 +3,7 @@ title: "La diga che resse, la montagna che cadde"
 date: 2026-06-10T17:05:00+02:00
 type: "dossier"
 tema: "storia"
-description: "Vajont, 9 ottobre 1963: la frana del Monte Toc, l'onda che cancellò Longarone, 1.910 vittime. La diga rimase in piedi. Storia del disastro «annunciato» che insegnò all'Italia la differenza tra fatalità e colpa."
+description: "Vajont, 9 ottobre 1963: la frana del Monte Toc, l'onda che cancellò Longarone, 1.917 vittime. La diga rimase in piedi. Storia del disastro «annunciato» che insegnò all'Italia la differenza tra fatalità e colpa."
 image: "/images/dossier/frane-hero.webp"
 image_alt: "Il versante del Vajont con l'accumulo della frana del Monte Toc e la diga ancora integra tra le pareti della valle"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -39,7 +39,7 @@ I gestori dell'impianto scelsero di **governare la frana** invece di fermarsi: a
 {{< dossier-scena id="ondata" image="/images/dossier/storia-longarone-1963.webp" alt="Veduta aerea in bianco e nero della valle del Piave dopo il disastro: una distesa di fango e detriti ricopre il fondovalle dove sorgeva Longarone" align="top" kicker="Ore 22:39" title="Quarantacinque secondi" credito="Foto: US Army · pubblico dominio · Longarone, 1963" >}}
 Alle **22:39** del 9 ottobre 1963, **270 milioni di metri cubi** di montagna — un blocco di due chilometri — scivolarono nel lago in meno di un minuto, a una velocità stimata attorno ai **100 km/h**. L'acqua non ebbe dove andare: si sollevò in un'onda che risalì il versante opposto per circa **250 metri**, lambendo Casso, e **scavalcò il coronamento** della diga.
 
-Dall'altra parte, nella valle del Piave, c'era **Longarone**. L'onda la raggiunse in pochi minuti e la rase al suolo: delle case rimase il fango che si vede in questa foto aerea. Le vittime furono **1.910**, in gran parte a Longarone e nelle sue frazioni.
+Dall'altra parte, nella valle del Piave, c'era **Longarone**. L'onda la raggiunse in pochi minuti e la rase al suolo: delle case rimase il fango che si vede in questa foto aerea. Le vittime furono **1.917**, in gran parte a Longarone e nelle sue frazioni.
 
 La diga, intatta, è ancora lì. Non è un monumento all'ingegneria: è il testimone di pietra di una lezione che l'Italia non può dimenticare.
 {{< /dossier-scena >}}
@@ -68,7 +68,7 @@ A Longarone, oggi ricostruita, e sul coronamento della diga si va in visita come
 
 {{< dossier-fonti >}}
 - **Immagini:** versante del Toc con la frana e la diga (Frisia Orientalis · CC BY-SA 3.0) · la diga del Vajont dal basso (Tor91 · pubblico dominio) · la valle dopo l'onda, Longarone 1963 (US Army · pubblico dominio) · Longarone prima del disastro, 1961 (Biblioteca civica di Belluno · pubblico dominio in Italia) · Longarone ricostruita, panorama (Tor91 · pubblico dominio). Via Wikimedia Commons.
-- **Fonti:** [CNR-IRPI — la frana del Vajont](https://polaris.irpi.cnr.it/event/vajont/) (dinamica, volumi, onda) · [Disastro del Vajont — Wikipedia](https://it.wikipedia.org/wiki/Disastro_del_Vajont) (cronologia, processo, bilancio di 1.910 vittime) · Tina Merlin, *Sulla pelle viva* (la denuncia prima del disastro) · le grandezze fisiche (volume, run-up, velocità) sono stime consolidate della letteratura scientifica e vanno lette come ordini di grandezza.
+- **Fonti:** [CNR-IRPI — la frana del Vajont](https://polaris.irpi.cnr.it/9-ottobre-1963-il-disastro-del-vajont/) (dinamica, volumi, onda) · [Disastro del Vajont — Wikipedia](https://it.wikipedia.org/wiki/Disastro_del_Vajont) (cronologia, processo, bilancio di 1.917 vittime) · Tina Merlin, *Sulla pelle viva* (la denuncia prima del disastro) · le grandezze fisiche (volume, run-up, velocità) sono stime consolidate della letteratura scientifica e vanno lette come ordini di grandezza.
 - **Sul nostro sito:** [Dossier: La terra che scivola](/dossier/la-terra-che-scivola/) · [Dossier: Dalle macerie, un sistema](/dossier/nascita-protezione-civile-italiana/) · [Il rischio idrogeologico (Manuale, cap. 7.3)](/manuale/713-rischio-idrogeologico/) · [Rischio idrogeologico: cosa fare](/rischi-prevenzione/rischio-idrogeologico/).
 - Dossier a cura del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**. Guida divulgativa: in emergenza chiama il **112**.
 {{< /dossier-fonti >}}

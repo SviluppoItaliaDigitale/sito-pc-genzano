@@ -3,6 +3,7 @@ title: "Plan de Emergencia Familiar — Español"
 description: "Cómo preparar un plan de emergencia familiar: contactos, puntos de encuentro, kit de emergencia."
 layout: "single"
 language: "es"
+tts: false
 ---
 
 [← Volver a la descripción general en español](/espanol/)
@@ -52,7 +53,7 @@ Imprima esta página (o cópiela en una hoja) y complete con sus datos. Pegue el
 ### 5. Kit de emergencia — dónde se guarda
 
 - **Ubicación del kit en casa**: ____________________
-- **El kit contiene**: agua (3 L por persona), comida de larga duración, linterna + pilas de repuesto, manta térmica, silbato, cargador del móvil, medicamentos importantes, copia de los documentos, efectivo.
+- **El kit contiene**: agua (4 L por persona al día, durante 3 días), comida de larga duración, linterna + pilas de repuesto, manta térmica, silbato, cargador del móvil, medicamentos importantes, copia de los documentos, efectivo.
 
 ### 6. Necesidades especiales
 

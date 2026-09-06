@@ -3,6 +3,7 @@ title: "O que fazer agora — Português"
 description: "Ações imediatas em caso de emergência em Genzano di Roma: números para ligar, comportamentos a adotar, links úteis."
 layout: "single"
 language: "pt"
+tts: false
 ---
 
 [← Voltar à visão geral em português](/portugues/)
@@ -40,8 +41,16 @@ Identifique a situação que está a viver. Clique no link correspondente para v
 2. **Ligue para o 112** para sinalizar situações de perigo.
 3. **Não atrapalhe os socorros.** Não vá ao local da emergência por curiosidade.
 4. **Siga apenas fontes oficiais.** Não divulgue informações não verificadas.
-5. **Ajude quem está em dificuldades** se puder fazê-lo com segurança (idosos, crianças, pessoas com deficiência).
+5. **Ajude quem está em dificuldades** se puder fazê-lo com segurança.
 6. **Mantenha o telefone carregado** e use-o apenas para comunicações necessárias.
+
+{{< cosa-non-fare titolo="O que NÃO fazer em qualquer emergência" >}}
+- **Não ligue para o 112 por curiosidade ou para pedir informações**: mantenha a linha livre para quem realmente precisa.
+- **Não se dirija ao local do evento** para ver o que aconteceu: atrasa o socorro e coloca-se em perigo.
+- **Não partilhe notícias não verificadas** nas redes sociais: divulgue apenas fontes oficiais (Proteção Civil, Câmara Municipal, Centro Funcional Regional do Lácio).
+- **Não bloqueie as vias de acesso** aos veículos de socorro com o seu carro.
+- **Não regresse a um edifício danificado** antes da autorização dos Bombeiros.
+{{< /cosa-non-fare >}}
 
 ## Recursos
 

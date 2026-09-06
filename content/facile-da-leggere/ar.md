@@ -8,6 +8,18 @@ sitemap:
   priority: 0.6
   changefreq: monthly
 dataUltimaRevisione: "2026-06-28"
+hreflang:
+  - lang: "it"
+    url: "/facile-da-leggere/"
+  - lang: "en"
+    url: "/facile-da-leggere/en/"
+  - lang: "eo"
+    url: "/facile-da-leggere/eo/"
+  - lang: "ro"
+    url: "/facile-da-leggere/ro/"
+  - lang: "ar"
+    url: "/facile-da-leggere/ar/"
+hreflang_xdefault: "/facile-da-leggere/"
 ---
 
 <nav class="facile-lang" aria-label="اللغة">
@@ -250,6 +262,7 @@ dataUltimaRevisione: "2026-06-28"
 <li>لا تترك الحيوان في السيارة في الحر؛</li>
 <li>لا تطلق الحيوان: فقد يضيع.</li>
 </ul>
+<p>للكلاب والقطط والحيوانات الأليفة، لدى المجموعة عدة مخصصة: <a href="/formazione/kit-calamita-animali-domestici/">عدة الكوارث للحيوانات الأليفة</a>.</p>
 </div>
 
 <div class="facile-blocco">
@@ -272,7 +285,7 @@ dataUltimaRevisione: "2026-06-28"
 <div class="facile-blocco">
 <h2><span class="icona">📍</span> إلى أين تذهب</h2>
 <p>في جينزانو دي روما توجد <strong>أماكن آمنة</strong>.</p>
-<p>تُسمى <strong>مناطق الانتظار</strong> (بالإيطالية: <em>aree di attesa</em>).</p>
+<p>تُسمى <strong>مناطق الانتظار</strong> (بالإيطالية: <em lang="it">aree di attesa</em>).</p>
 
 {{< pittogramma src="/pittogrammi/iso7010/punto-raccolta.svg" alt="لافتة نقطة التجمع" size="large" >}}
 
@@ -296,9 +309,41 @@ dataUltimaRevisione: "2026-06-28"
 <p>لطلب المساعدة في حالة الطوارئ، اتصل بالرقم <strong>112</strong>.</p>
 </div>
 
+<div class="facile-blocco">
+<h2><span class="icona">📚</span> هل تريد معرفة المزيد؟</h2>
+<p>يوجد في الموقع صفحات أخرى بها مزيد من التفاصيل.</p>
+<ul class="facile-elenco">
+<li><a href="/cosa-fare-adesso/">ماذا تفعل الآن</a></li>
+<li><a href="/piano-familiare/">خطة لعائلتي</a></li>
+<li><a href="/numeri-utili/">أرقام هاتف مفيدة</a></li>
+<li><a href="/faq/">أسئلة شائعة</a></li>
+<li><a href="/formazione/easy-to-read-scuola/">بطاقات مبسطة للمدرسة</a></li>
+</ul>
+<p>إذا كنت بحاجة إلى مساعدة في القراءة، اطلب من أحد أفراد العائلة أو معلم أو شخص تثق به.</p>
+</div>
+
 <div class="facile-blocco" style="background: #fff3cd; border-color: #b45309;">
 <h2 style="color: #b45309;"><span class="icona" style="background: #b45309;">✉️</span> هل تريد أن تكتب لنا؟</h2>
 <p>إذا كان لديك سؤال غير عاجل، اكتب إلى:</p>
 <p style="text-align: center; font-size: 1.1rem;"><a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a></p>
 <p>إذا كانت هناك حالة طوارئ، لا تكتب بريدًا إلكترونيًا. اتصل بالرقم <strong>112</strong>.</p>
+</div>
+
+<div class="facile-blocco" style="background: #fff4e6; border-color: #ff5000;">
+<h2 style="color: #003366;"><span class="icona" style="background: #ff5000;">📄</span> بطاقات بالرموز للتحميل</h2>
+<p>هذه بطاقات تشرح <strong>بالرموز</strong> ماذا تفعل في حالة الطوارئ. أعدّتها <strong>الحماية المدنية</strong> ضمن مشروع <strong>Abili a Proteggere</strong>.</p>
+<p>يمكنك تحميلها وطباعتها:</p>
+<ul>
+<li><a href="/manuali/schede-caa/scheda-caa-terremoto.pdf"><strong>زلزال</strong> (PDF)</a></li>
+<li><a href="/manuali/schede-caa/scheda-caa-alluvione.pdf"><strong>فيضان</strong> (PDF)</a></li>
+<li><a href="/manuali/schede-caa/scheda-caa-incendi-boschivi.pdf"><strong>حريق غابات</strong> (PDF)</a></li>
+</ul>
+<p>هناك أيضًا <strong><a href="/tabelle-comunicazione/">جداول التواصل</a></strong>: رموز يمكن الإشارة إليها بالإصبع للتعبير عن حاجة أو عمّا يحدث. يمكن استخدامها على الشاشة أو طباعتها.</p>
+</div>
+
+<div class="facile-blocco" style="background: #e7f0fa; border-color: #003366;">
+<h2 style="color: #003366;"><span class="icona" style="background: #003366;">🎧</span> هل تريد الاستماع بدلاً من القراءة؟</h2>
+<p>يوجد في الموقع <strong>بودكاست صوتي</strong> و<strong>إنفوجرافيك</strong> و<strong>عروض تقديمية</strong> عن مواضيع مهمة: الزلزال، الفيضان، الحريق، تنبيه الطقس، حقيبة الطوارئ.</p>
+<p>يمكنك <strong>تحميلها</strong> على هاتفك والاستماع إليها متى شئت.</p>
+<p style="text-align: center;"><a href="/risorse-pronte/"><strong>اذهب إلى المواد الجاهزة</strong></a></p>
 </div>

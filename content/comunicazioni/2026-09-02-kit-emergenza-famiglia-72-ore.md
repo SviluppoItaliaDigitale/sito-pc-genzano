@@ -30,7 +30,7 @@ Gli studi sulle emergenze mostrano che, nei primi giorni dopo un evento di grand
 
 ### Acqua e alimenti
 
-- **acqua in bottiglia**: almeno 3 litri a persona al giorno;
+- **acqua in bottiglia**: almeno 4 litri a persona al giorno;
 - **alimenti** non deperibili (gallette, barrette, tonno, legumi in scatola, biscotti, scorte per lattanti se servono);
 - **apriscatole** manuale.
 

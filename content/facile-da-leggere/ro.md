@@ -8,6 +8,18 @@ sitemap:
   priority: 0.6
   changefreq: monthly
 dataUltimaRevisione: "2026-06-28"
+hreflang:
+  - lang: "it"
+    url: "/facile-da-leggere/"
+  - lang: "en"
+    url: "/facile-da-leggere/en/"
+  - lang: "eo"
+    url: "/facile-da-leggere/eo/"
+  - lang: "ro"
+    url: "/facile-da-leggere/ro/"
+  - lang: "ar"
+    url: "/facile-da-leggere/ar/"
+hreflang_xdefault: "/facile-da-leggere/"
 ---
 
 <nav class="facile-lang" aria-label="Limbă">
@@ -250,6 +262,7 @@ dataUltimaRevisione: "2026-06-28"
 <li>nu lăsa animalul în mașină pe căldură;</li>
 <li>nu elibera animalul: se poate pierde.</li>
 </ul>
+<p>Pentru câini, pisici și alte animale de companie, Grupul are o trusă dedicată: <a href="/formazione/kit-calamita-animali-domestici/">Trusă pentru animale de companie</a>.</p>
 </div>
 
 <div class="facile-blocco">
@@ -272,7 +285,7 @@ dataUltimaRevisione: "2026-06-28"
 <div class="facile-blocco">
 <h2><span class="icona">📍</span> Unde să mergi</h2>
 <p>În Genzano di Roma există <strong>locuri sigure</strong>.</p>
-<p>Se numesc <strong>zone de așteptare</strong> (în italiană: <em>aree di attesa</em>).</p>
+<p>Se numesc <strong>zone de așteptare</strong> (în italiană: <em lang="it">aree di attesa</em>).</p>
 
 {{< pittogramma src="/pittogrammi/iso7010/punto-raccolta.svg" alt="Semn pentru punctul de adunare" size="large" >}}
 
@@ -296,9 +309,41 @@ dataUltimaRevisione: "2026-06-28"
 <p>Pentru a cere ajutor în urgență, sună la <strong>112</strong>.</p>
 </div>
 
+<div class="facile-blocco">
+<h2><span class="icona">📚</span> Vrei să afli mai multe?</h2>
+<p>Pe site există alte pagini cu mai multe detalii.</p>
+<ul class="facile-elenco">
+<li><a href="/cosa-fare-adesso/">Ce să faci acum</a></li>
+<li><a href="/piano-familiare/">Plan pentru familia mea</a></li>
+<li><a href="/numeri-utili/">Numere de telefon utile</a></li>
+<li><a href="/faq/">Întrebări frecvente</a></li>
+<li><a href="/formazione/easy-to-read-scuola/">Fișe simple pentru școală</a></li>
+</ul>
+<p>Dacă ai nevoie de ajutor la citit, întreabă un membru al familiei, un profesor sau o persoană de încredere.</p>
+</div>
+
 <div class="facile-blocco" style="background: #fff3cd; border-color: #b45309;">
 <h2 style="color: #b45309;"><span class="icona" style="background: #b45309;">✉️</span> Vrei să ne scrii?</h2>
 <p>Dacă ai o întrebare care nu este urgentă, scrie la:</p>
 <p style="text-align: center; font-size: 1.1rem;"><a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a></p>
 <p>Dacă este o urgență, nu scrie e-mail. Sună la <strong>112</strong>.</p>
+</div>
+
+<div class="facile-blocco" style="background: #fff4e6; border-color: #ff5000;">
+<h2 style="color: #003366;"><span class="icona" style="background: #ff5000;">📄</span> Fișe cu simboluri de descărcat</h2>
+<p>Sunt fișe care explică <strong>prin simboluri</strong> ce trebuie făcut într-o urgență. Au fost realizate de <strong>Protecția Civilă</strong> prin proiectul <strong>Abili a Proteggere</strong>.</p>
+<p>Le poți descărca și tipări:</p>
+<ul>
+<li><a href="/manuali/schede-caa/scheda-caa-terremoto.pdf"><strong>Cutremur</strong> (PDF)</a></li>
+<li><a href="/manuali/schede-caa/scheda-caa-alluvione.pdf"><strong>Inundație</strong> (PDF)</a></li>
+<li><a href="/manuali/schede-caa/scheda-caa-incendi-boschivi.pdf"><strong>Incendiu de pădure</strong> (PDF)</a></li>
+</ul>
+<p>Există și <strong><a href="/tabelle-comunicazione/">tabele de comunicare</a></strong>: simboluri pe care le poți indica cu degetul pentru a spune o nevoie sau ce se întâmplă. Se pot folosi pe ecran sau se pot tipări.</p>
+</div>
+
+<div class="facile-blocco" style="background: #e7f0fa; border-color: #003366;">
+<h2 style="color: #003366;"><span class="icona" style="background: #003366;">🎧</span> Vrei să asculți în loc să citești?</h2>
+<p>Pe site găsești <strong>podcasturi audio</strong>, <strong>infografice</strong> și <strong>prezentări</strong> despre teme importante: cutremur, inundație, incendiu, alertă meteo, trusă de urgență.</p>
+<p>Le poți <strong>descărca</strong> pe telefon și le poți asculta oricând vrei.</p>
+<p style="text-align: center;"><a href="/risorse-pronte/"><strong>Mergi la materialele pregătite</strong></a></p>
 </div>

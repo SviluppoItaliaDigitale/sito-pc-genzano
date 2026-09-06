@@ -36,6 +36,12 @@ grep -rn "67.000 persone assistite\|65.000 sfollati" content/ static/
 grep -rn "L.R. Lazio 9/2017" themes/
 ```
 
+### Esito (stesso giorno, con OK dell'utente)
+
+Valori accertati da `pc-fact-checker` su fonte primaria e applicati da `pc-coerenza-trasversale` in un batch dedicato (33 file sorgente + pacchetti e ZIP rigenerati dagli script): Rigopiano 40 persone (VVF); Visso 2016 una sola vittima per malore, formulazione prudente; Vajont 1.917 (CNR-IRPI, URL della fonte corretto); L'Aquila circa 67.000 assistiti (DPC); acqua 4 L/persona/giorno per 3 giorni in 23 occorrenze (esclusi i contesti diversi: idratazione, escursioni, Kit Vai, standard IARU, citazione Sphere); codici colore della scheda di decodifica allineati a `data/codici_colore.yaml`; assistente virtuale senza la L.R. 9/2017 (costituzione con delibera CC n. 31/2023, art. 35 D.Lgs. 1/2018); articolo del 05/04/2026 portato a «Quarantacinque anni» e delibera al 1991 (slug invariato). Controlli: parità schede, dati vs dataset, refusi, build, ancore tutti verdi; grep residui a zero.
+
+**Aperto, decisione dell'utente**: nessun documento in archivio prova la delibera del 1991 (né del 1993); l'unico atto presente è la delibera CC n. 31 del 31/07/2023. Da chiarire con il Comune se esiste un atto del 1991 da citare, altrimenti riformulare la storia 1981-2023 in modo prudente.
+
 ## Parte B — Traduzioni (rapporto dell'agente)
 
 Perimetro reale: 7 hub `content/<lingua>/_index.md` + 21 pagine `cosa-fare-adesso`/`numeri-utili`/`piano-familiare` + `facile-da-leggere/{en,eo,ro,ar}` = 32 pagine. Nota: la mappa «4 pagine × 7 lingue» di CLAUDE.md/rule 09 §19 non corrisponde più al repo (esistono hub + 3 pagine, non `allerte-meteo` né `contatti`): da aggiornare.
@@ -57,6 +63,10 @@ Perimetro reale: 7 hub `content/<lingua>/_index.md` + 21 pagine `cosa-fare-adess
 - **Copertura**: manca il box «Cosa NON fare» in tutte le `cosa-fare-adesso` tradotte; manca il 116117 (multilingue!) in tutte le `numeri-utili`; YouPol e «chiamata silenziosa» assenti; nelle 4 facile mancano «Vuoi saperne di più», «Schede con i simboli» (CAA), «ascoltare invece di leggere», link kit animali.
 - **Esperanto**: «Operacia Salono» → probabilmente «Operacia Centro»; «Karabenistoj» → «Karabinieroj» (da verificare su PIV/Vikipedio).
 - Le 7 traduzioni aggiungono «(anziani, bambini, persone con disabilità)» assente nel canonico: riportarlo nell'italiano o toglierlo.
+
+### Esito (stesso giorno, con OK dell'utente)
+
+Tutti i rilievi della Parte B applicati in un batch dedicato (36 file): acqua 4 L/persona/giorno per 3 giorni e 112 come unico numero di emergenza nelle 7 lingue; `tts: false` sulle 28 pagine; `lang="it"` sui nomi propri italiani; box «Cosa NON fare», 116117, YouPol e chiamata silenziosa riportati dal canonico; blocchi mancanti nelle 4 versioni facili; hreflang reciproci per la famiglia `/facile-da-leggere/` (ramo frontmatter del partial); `og:locale` `ar_AR`; esperanto «Operacia Centro» (il precedente «Salono» significa salotto; «Karabenistoj» confermato da Vikipedio); mappa delle traduzioni riscritta in rule 09 §19 e CLAUDE.md. Restano per un prossimo passaggio: indirizzo della sede nel blocco «Vuoi scriverci» delle 4 facili, link ipertestuale a `/aree-attesa/` nella sezione animali, e il bug preesistente del partial hreflang che perde il sottopercorso sulla sola anteprima GitHub Pages.
 
 ## Parte C — Esercitazione della catena di emergenza (verbale dell'agente)
 
