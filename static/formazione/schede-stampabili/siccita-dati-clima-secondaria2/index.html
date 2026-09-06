@@ -7,7 +7,7 @@
   <meta name="description" content="Scheda fotocopiabile per la Scuola Secondaria di secondo grado. La siccità come rischio che cresce: analisi guidata della serie di pioggia annua di Genzano (ERA5/Open-Meteo), deficit idrico, siccità meteorologica e idrologica.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-  <link rel="stylesheet" href="../assets/scheda-print.css">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
   <style>
     .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
     .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
@@ -87,28 +87,28 @@
       e scaricare il dataset da <strong>/open-data/</strong> (file <em>clima-pioggia-annuale-genzano.json</em>).</p>
     </div>
     <table class="dati-tabella">
-      <caption>Pioggia annua a Genzano di Roma, 2016-2025 (mm). Fonte: ERA5/Open-Meteo via Laboratorio meteo del sito.</caption>
+      <caption>Pioggia annua a Genzano di Roma, 2016-2025 (mm, valori interi). Fonte: rianalisi ERA5/Open-Meteo, dataset aperto del sito <em>clima-pioggia-annuale-genzano.json</em>, serie 2005-2025 aggiornata a settembre 2026.</caption>
       <thead>
         <tr><th scope="col">Anno</th><th scope="col">Pioggia annua (mm)</th><th scope="col">Anno</th><th scope="col">Pioggia annua (mm)</th></tr>
       </thead>
       <tbody>
-        <tr><td>2016</td><td class="num">982</td><td>2021</td><td class="num">1168</td></tr>
+        <tr><td>2016</td><td class="num">982</td><td>2021</td><td class="num">1174</td></tr>
         <tr><td>2017</td><td class="num">908</td><td>2022</td><td class="num">962</td></tr>
-        <tr><td>2018</td><td class="num">1530</td><td>2023</td><td class="num">979</td></tr>
-        <tr><td>2019</td><td class="num">1317</td><td>2024</td><td class="num">922</td></tr>
-        <tr><td>2020</td><td class="num">n.d.</td><td>2025</td><td class="num">846</td></tr>
+        <tr><td>2018</td><td class="num">1530</td><td>2023</td><td class="num">1162</td></tr>
+        <tr><td>2019</td><td class="num">1317</td><td>2024</td><td class="num">1078</td></tr>
+        <tr><td>2020</td><td class="num">1178</td><td>2025</td><td class="num">1206</td></tr>
       </tbody>
     </table>
 
     <div class="sez-titolo"><span class="num">2</span><h2>Analisi guidata della serie</h2></div>
     <div class="testo-info">
       <p>Lavora sulla tabella, con calcolatrice o foglio di calcolo:</p>
-      <p>• <strong>a)</strong> Calcola la <strong>media</strong> dei 9 valori disponibili (escludi il n.d.).<br>
+      <p>• <strong>a)</strong> Calcola la <strong>media</strong> dei 10 valori del decennio.<br>
       • <strong>b)</strong> Individua l'anno <strong>più piovoso</strong> e quello <strong>più secco</strong> del decennio e calcola la loro differenza.<br>
-      • <strong>c)</strong> Conta quanti anni stanno <strong>sotto i 1.000 mm</strong>. In quale parte del decennio si concentrano?<br>
+      • <strong>c)</strong> Conta quanti anni stanno <strong>sotto i 1.000 mm</strong> e quanti sotto la media. Si concentrano in una parte del decennio o sono sparsi?<br>
       • <strong>d)</strong> Il <strong>2017</strong> — l'anno della crisi idrica nel Lazio — dove si colloca nella serie?</p>
     </div>
-    <div class="grafico-vuoto">[ Spazio per il grafico a barre — asse X: anni 2016-2025, asse Y: pioggia annua in mm. Lascia vuota la barra del 2020 (n.d.) e traccia una linea orizzontale sulla media calcolata ]</div>
+    <div class="grafico-vuoto">[ Spazio per il grafico a barre — asse X: anni 2016-2025, asse Y: pioggia annua in mm. Traccia una linea orizzontale sulla media calcolata ]</div>
 
     <div class="sez-titolo"><span class="num">3</span><h2>Dal dato al rischio: cosa fa il sistema</h2></div>
     <div class="testo-info">
@@ -156,10 +156,10 @@
     <div class="istruzioni-docente">
       <strong>Per il/la docente · Tracce e risultati attesi:</strong>
       <ul style="margin:0.3rem 0 0 1rem; padding:0;">
-        <li><strong>Analisi guidata</strong>: media dei 9 valori disponibili ≈ <strong>1.068 mm</strong>; massimo <strong>2018 (1.530 mm)</strong>, minimo <strong>2025 (846 mm)</strong>, differenza 684 mm; <strong>6 anni su 9</strong> sotto i 1.000 mm, con l'intero quadriennio <strong>2022-2025</strong> sotto soglia; il 2017 (908 mm) è tra gli anni più secchi della serie, coerente con la crisi idrica del Lazio di quell'anno.</li>
+        <li><strong>Analisi guidata</strong>: somma del decennio 11.497 mm, media ≈ <strong>1.150 mm</strong>; massimo <strong>2018 (1.530 mm)</strong>, minimo <strong>2017 (908 mm)</strong>, differenza 622 mm; <strong>3 anni su 10</strong> sotto i 1.000 mm (2016, 2017, 2022) e 4 sotto la media (gli stessi più il 2024); il 2017, anno della crisi idrica del Lazio, è il più secco della serie. Il quadriennio <strong>2022-2025</strong> (962, 1.162, 1.078, 1.206 mm) alterna anni sotto e sopra la media: la serie mostra forte variabilità da un anno all'altro, non un calo continuo — la siccità dipende anche da come e quando piove, non solo dal totale annuo.</li>
         <li><strong>(2)</strong> meteorologica = deficit di pioggia rispetto alla media; idrologica = effetto ritardato su falde, sorgenti e laghi. La falda vulcanica dei Colli Albani si ricarica in anni, non in giorni.</li>
         <li><strong>(3)</strong> distribuzione stagionale e intensità: piogge concentrate in pochi eventi violenti scorrono via (run-off) e non ricaricano la falda; contano anche temperatura ed evapotraspirazione.</li>
-        <li><strong>(4)</strong> onestà del dato: includere il n.d. come zero abbasserebbe artificiosamente la media (da ≈1.068 a ≈961 mm su 10 valori), falsando la conclusione.</li>
+        <li><strong>(4)</strong> onestà del dato: i valori sono una <em>rianalisi</em> (modello + osservazioni, celle di alcuni chilometri), non la lettura di un pluviometro di Genzano: vanno bene per confrontare gli anni fra loro, non per descrivere il singolo temporale. Tabella, esercizi e soluzioni vanno sempre generati dalla stessa versione del dataset (qui: serie aggiornata a settembre 2026).</li>
         <li><strong>(5)</strong> divieti tipici: irrigazione di giardini, lavaggio di auto e cortili, riempimento di piscine private. L'acqua risparmiata serve agli usi potabili di tutti.</li>
         <li><strong>Percorso sul sito</strong>: pagina operativa <a href="/rischi-prevenzione/siccita/">Siccità e crisi idrica</a>; il Laboratorio meteo (<a href="/laboratorio-meteo/">/laboratorio-meteo/</a>) e i dataset aperti (<a href="/open-data/">/open-data/</a>).</li>
         <li><strong>Riferimenti istituzionali</strong>: <a href="https://www.isprambiente.gov.it/" target="_blank" rel="noopener">ISPRA</a> (risorse idriche e siccità), <a href="https://www.cnr.it/" target="_blank" rel="noopener">CNR</a> (ricerca su clima e acque), Osservatori distrettuali delle Autorità di bacino — per il Lazio l'<a href="https://www.autoritadistrettoappenninocentrale.it/" target="_blank" rel="noopener">Autorità di Bacino dell'Appennino Centrale</a>.</li>

@@ -44,12 +44,13 @@ I moduli proposti dal Gruppo possono essere inseriti nel monte ore complessivo d
 |---|---|---|
 | D.Lgs. 9 aprile 2008, n. 81 | Testo Unico su salute e sicurezza. Lo studente in PCTO è equiparato al lavoratore per gli aspetti di tutela. | PCTO e scuola |
 | Art. 37 D.Lgs. 81/2008 | Obbligo di formazione sulla sicurezza. | PCTO |
-| Accordo Stato-Regioni 21 dicembre 2011 | Contenuti minimi della formazione generale e specifica. | PCTO e lavoratori |
+| Accordo Stato-Regioni 17 aprile 2025 (Rep. atti n. 59/CSR, GU n. 119 del 24 maggio 2025) | Durata e contenuti minimi dei percorsi formativi sulla sicurezza (art. 37, comma 2, D.Lgs. 81/2008). In vigore dal 24 maggio 2025; sostituisce gli accordi del 21 dicembre 2011, del 22 febbraio 2012 e del 7 luglio 2016, con un periodo transitorio di 12 mesi (fino al 24 maggio 2026). Le FAQ del Ministero del Lavoro chiariscono i casi dubbi. | PCTO e lavoratori |
+| Accordo Stato-Regioni 21 dicembre 2011 | Riferimento storico: contenuti minimi della formazione generale e specifica fino all'entrata in vigore dell'Accordo 2025. | Storico |
 | D.M. 26 agosto 1992 | Norme di prevenzione incendi per l'edilizia scolastica. | Piani di emergenza e prove |
 | D.M. 18 dicembre 1975 | Norme tecniche per l'edilizia scolastica. | Edifici scolastici |
 | Reg. UE 2016/425 | Classificazione dei dispositivi di protezione individuale. | DPI e attività pratiche |
 
-La formazione obbligatoria sulla sicurezza resta in capo all'istituto e ai soggetti abilitati. Il Gruppo può svolgere attività divulgative, non sostitutive.
+La formazione obbligatoria sulla sicurezza resta in capo all'istituto e ai soggetti formatori previsti dall'Accordo Stato-Regioni del 17 aprile 2025. I materiali divulgativi del Gruppo non equivalgono alla formazione certificata prevista dall'art. 37 del D.Lgs. 81/2008 e non la sostituiscono. Fonte: [Accordo Stato-Regioni del 17 aprile 2025 e FAQ](https://www.lavoro.gov.it/temi-e-priorita/salute-e-sicurezza/focus/pagine/accordo-stato-regioni-del-17042025-materia-di-formazione) sul sito del Ministero del Lavoro.
 
 ## Inclusione, accessibilità, BES e DSA
 

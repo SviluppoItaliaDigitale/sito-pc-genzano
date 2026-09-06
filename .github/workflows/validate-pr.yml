@@ -52,6 +52,27 @@ jobs:
           echo "Pagine generate: $(find public -name '*.html' | wc -l)"
           echo "Dimensione public/: $(du -sh public | cut -f1)"
 
+  pacchetti-schede:
+    name: "Parità pacchetti schede (Stampa tutto ↔ kit)"
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v4
+
+      - name: "🖨️ I pacchetti 'Stampa tutto' devono corrispondere ai kit"
+        # Audit esterno 06/09/2026 (rilievo F08): il pacchetto secondaria I
+        # committato aveva 36 schede contro le 38 linkate dal kit e presenti
+        # nello ZIP. Il generatore è idempotente: se rigenerandolo il file
+        # cambia, il pacchetto nel repo è stantio e la PR non passa.
+        run: |
+          python3 scripts/genera-pacchetti-schede.py
+          if ! git diff --quiet -- static/formazione/schede-stampabili/pacchetti/; then
+            git --no-pager diff --stat -- static/formazione/schede-stampabili/pacchetti/
+            echo "::error::Pacchetti 'Stampa tutto' non allineati ai kit: esegui python3 scripts/genera-pacchetti-schede.py e committa."
+            exit 1
+          fi
+
   menu-sync:
     name: "Coerenza menu hugo.toml ↔ site-chrome.js"
     runs-on: ubuntu-latest

@@ -18,7 +18,8 @@
     @media print {
       body { background: #fff; }
       .scheda-immagine-wrapper { max-width: 100%; margin: 0; padding: 0; }
-      .scheda-immagine-wrapper img { box-shadow: none; border-radius: 0; width: 100%; height: auto; max-height: calc(100vh - 16mm); object-fit: contain; }
+      .scheda-immagine-wrapper img { box-shadow: none; border-radius: 0; width: 100%; height: auto; max-height: calc(100vh - 44mm); object-fit: contain; }
+      .nota-adulto { padding: 0; margin: 0 0 2mm; } .nota-adulto-box { margin: 0; font-size: 9.5pt; line-height: 1.35; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
       /* Banda affiliazioni (Reg. UE 2021/888): Quality Label ESC + codice E10435833, Coordinamento FE.PI.VOL., SNPC Volontariato — stessa immagine di .scheda-page::after in assets/scheda-print.css */
       .scheda-immagine-wrapper::after { content: ""; display: block; height: 12mm; margin-top: 2mm; background: url("/images/footer-print-affiliazioni.png") no-repeat center / contain; -webkit-print-color-adjust: exact; print-color-adjust: exact; page-break-inside: avoid; }
       @page { size: A4 portrait; margin: 8mm; }
@@ -32,12 +33,11 @@
     <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
   </div>
 
-  <div class="nota-adulto">
-    <p class="nota-adulto-box"><strong>Nota per l'adulto:</strong> insegna prima di tutto al bambino ad <strong>avvisare subito un adulto</strong> quando succede qualcosa di grave. Il bambino compone da solo il 112 soltanto se ha già cercato un adulto e non lo trova.</p>
-  </div>
-
   <main class="scheda-immagine-wrapper">
     <h1 class="sr-only">Da colorare: Come chiamo il 112 — Infanzia</h1>
+    <div class="nota-adulto">
+      <p class="nota-adulto-box"><strong>Nota per l'adulto:</strong> insegna prima di tutto al bambino ad <strong>avvisare subito un adulto</strong> quando succede qualcosa di grave. Il bambino compone da solo il 112 soltanto se ha già cercato un adulto e non lo trova.</p>
+    </div>
     <img src="scheda-completa.png"
          alt="Scheda da colorare: come chiamo il 112. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo 'Come chiamo il 112?'. Sei vignette numerate: 1) bambino vede del fumo e un altro bambino caduto a terra che si è fatto male; 2) bambino calmo prende il telefono da un tavolo; 3) tastiera del telefono con i numeri 1-1-2 evidenziati in alto; 4) bambino al telefono con cartellino del nome 'Flavio'; 5) bambino al telefono indica una mappa con un pin di posizione; 6) bambino aspetta sulla porta di casa mentre l'ambulanza arriva con la sirena. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
   </main>
