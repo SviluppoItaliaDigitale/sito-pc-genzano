@@ -1,7 +1,7 @@
-# Immagini e testi social per «Il piano di emergenza familiare in 5 passi»
+# Immagini e testi social per «Kit di emergenza per le vacanze: cosa mettere e perché»
 
-- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-04-26-piano-emergenza-familiare-5-passi/
-- **Data**: 2026-04-26
+- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-08-06-kit-emergenza-vacanze-come-prepararlo/
+- **Data**: 2026-08-06
 - **Badge**: Prevenzione
 
 ## Dove va ogni file (a prova di errore)
