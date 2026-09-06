@@ -52,7 +52,7 @@ Se noti anomalie, rumori, gocce o cattivi odori, fai intervenire un tecnico **pr
 - **Verifica tubature e rubinetti**: perdite visibili o gocciolamenti vanno sistemati.
 - **Controlla gli scarichi**: se sono lenti, puliscili prima dei temporali estivi.
 - **Se hai un'autoclave**, programma un controllo periodico.
-- **Tieni una scorta di acqua potabile**: come riferimento pratico, almeno 3 litri a persona al giorno per 72 ore.
+- **Tieni una scorta di acqua potabile**: come riferimento pratico, almeno 4 litri a persona al giorno per 72 ore.
 
 ## Dispensa e scorte
 

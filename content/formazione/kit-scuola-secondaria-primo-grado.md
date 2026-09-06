@@ -323,7 +323,7 @@ Nel Lazio, dal 2017, **l'unico numero di emergenza per il cittadino è il 112** 
 | 803&nbsp;555 | Sala Operativa Protezione Civile Lazio — non urgenze |
 
 **5. Kit di emergenza**
-- Acqua (almeno 2 litri a persona)
+- Acqua (almeno 4 litri a persona)
 - Torcia con batterie di riserva
 - Radio a batterie o a manovella
 - Kit di primo soccorso

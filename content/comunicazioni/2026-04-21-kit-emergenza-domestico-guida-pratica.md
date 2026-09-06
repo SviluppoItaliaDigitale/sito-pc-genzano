@@ -27,7 +27,7 @@ Le prime 72 ore dopo un evento grave sono le più critiche. In quella finestra i
 
 ### Acqua e cibo
 
-- **Acqua in bottiglie sigillate**: almeno 3 litri a persona al giorno, per tre giorni.
+- **Acqua in bottiglie sigillate**: almeno 4 litri a persona al giorno, per tre giorni.
 - **Alimenti a lunga conservazione**: barrette energetiche, cracker, tonno in scatola, legumi in scatola, frutta secca. Scegli cibi che non richiedono cottura.
 - **Apriscatole manuale**: non dare per scontato che ci sia corrente.
 - **Posate e piatti usa e getta**.

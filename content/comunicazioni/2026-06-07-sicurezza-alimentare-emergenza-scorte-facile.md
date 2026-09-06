@@ -31,7 +31,7 @@ In questi casi il cibo può diventare pericoloso. Il cibo può guastarsi senza i
 
 Tieni una scorta di cibo per almeno 3 giorni. Ecco cosa comprare:
 
-- **Acqua in bottiglia**: 3 litri a persona ogni giorno.
+- **Acqua in bottiglia**: 4 litri a persona ogni giorno.
 - **Scatolette**: legumi, tonno, carne, frutta.
 - **Pasta secca e riso**: si conservano a lungo.
 - **Crackers e biscotti**: non hanno bisogno di cottura.
