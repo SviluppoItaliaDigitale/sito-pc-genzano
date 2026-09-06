@@ -1,7 +1,6 @@
 # Routine «Cura schede didattiche scuole» — prompt aggiornato al 06/09/2026
 
-Da incollare nel pannello https://claude.ai/code/routines/trig_01RESwx5eFP4SuTpF1iCFY4j
-(la routine è stata creata dal pannello web e non può essere aggiornata da una sessione).
+Testo in uso nella routine `trig_01JvpACoLYuvaHH8VBvuCzaG` (creata il 06/09/2026 in sostituzione di `trig_01RESwx5eFP4SuTpF1iCFY4j`, che non era aggiornabile da una sessione e va tenuta disattivata).
 Novità rispetto al prompt del 01/08/2026: punto 2 (script di parità e dati),
 punto 3 (gate `pc-didattica-reviewer` + `pc-fact-checker` con rotazione del catalogo),
 punto 5 (note dentro il wrapper stampabile, `pc-verifica-visiva`), punto 8 (parità dei pacchetti).
