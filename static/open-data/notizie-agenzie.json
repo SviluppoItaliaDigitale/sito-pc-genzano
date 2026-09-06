@@ -5,22 +5,148 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-06T13:04:17+00:00",
+  "generato": "2026-09-06T16:09:52+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-06T12:53:23+00:00",
+   "data": "2026-09-06T16:06:22+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Elezioni in Sassonia, exit poll: Afd trionfa con 44,5% dei voti",
+   "url": "https://www.adnkronos.com/internazionale/esteri/elezioni-sassonia-afd-risultati-voto-oggi_4kmjiAmAzOwFmircSKKJBz"
+  },
+  {
+   "data": "2026-09-06T16:03:29+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Vasto incendio in sito ecoballe di Taverna del Re nel napoletano",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/06/vasto-incendio-in-sito-ecoballe-di-taverna-del-re-nel-napoletano_1f851531-5cc2-4cc3-9e59-abe208624e4a.html"
+  },
+  {
+   "data": "2026-09-06T16:02:16+00:00",
    "fonte": "ANSA",
-   "titolo": "Incidente in una gara automobilistica in Sicilia, due giovani sono morti",
+   "titolo": "Eurovolley, in campo Italia-Turchia, la finale DIRETTA",
+   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/06/eurovolley-in-campo-italia-turchia-la-finale-diretta_89d9cdb0-a169-40cb-a9bc-6aaf94c7e45c.html"
+  },
+  {
+   "data": "2026-09-06T16:02:14+00:00",
+   "fonte": "ANSA",
+   "titolo": "++ Exit poll Ard, in Sassonia-Anhalt Afd trionfa con 44,5%, la Cdu al 18,5 % ++",
+   "url": "https://www.ansa.it/sito/notizie/flash/2026/09/06/exit-poll-ard-in-sassonia-anhalt-afd-trionfa-con-445-la-cdu_9c6db8a9-8215-4304-8e31-6fd18843302d.html"
+  },
+  {
+   "data": "2026-09-06T16:00:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Antonelli, trionfo nel Gp di Monza e lacrime: \"Non so cosa ho fatto\". I tifosi: \"Adesso vinci il Mondiale\"",
+   "url": "https://www.adnkronos.com/sport/gp-monza-antonelli-piange-trionfo-gran-premio-italia_kPncWpdilZMi6XAr4gvDL"
+  },
+  {
+   "data": "2026-09-06T15:58:45+00:00",
+   "fonte": "ANSA",
+   "titolo": "F1: Antonelli nella storia, parte dal fondo e vince a Monza: 'Un sogno che si realizza'",
+   "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/09/06/f1-antonelli-nella-storia-parte-dal-fondo-e-vince-a-monza-un-sogno-che_677a8367-c213-45d7-899f-6cd6978f6433.html"
+  },
+  {
+   "data": "2026-09-06T15:42:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Europei di pallavolo femminile, oggi la finale Italia-Turchia - Diretta",
+   "url": "https://www.adnkronos.com/sport/pallavolo-italia-turchia-finale_30Pv7ZVrFj1mq5ocrWuesY"
+  },
+  {
+   "data": "2026-09-06T15:39:22+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Matrimonio 'Me contro Te', Rotondi: \"Nozze manzoniane, un po' circensi ma non mi scandalizzano\"",
+   "url": "https://www.adnkronos.com/cronaca/matrimonio-me-contro-te-nozze-milano-ultime-notizie_ZPMMQdBOeUiTHTqQAYupC"
+  },
+  {
+   "data": "2026-09-06T15:29:00+00:00",
+   "fonte": "ANSA",
+   "titolo": "Tregua di 72 ore in corso.  L'inviato statunitense Witkoff a Kiev: \"Colloqui significativi, sostanziali, importanti\"",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/06/tregua-di-72-ore-in-corso.-linviato-statunitense-witkoff-a-kiev-colloqui-significativi-sostanziali_9e8144e1-56b1-40fc-8dbf-4d06cfe62ad0.html"
+  },
+  {
+   "data": "2026-09-06T15:24:04+00:00",
+   "fonte": "ANSA",
+   "titolo": "Riparte la scuola, il ritorno in classe scatta da Bolzano",
+   "url": "https://www.ansa.it/canale_legalita_scuola/speciali/back-to-school/2026/09/06/riparte-la-scuola-il-ritorno-in-classe-scatta-da-bolzano_24869e94-0b5f-4862-9a50-a4817a7fd0c3.html"
+  },
+  {
+   "data": "2026-09-06T15:17:23+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Gp Monza, Antonelli trionfa e allunga nel Mondiale: ordine di arrivo e come cambia la classifica piloti dopo il Gran Premio d'Italia",
+   "url": "https://www.adnkronos.com/sport/gp-monza-antonelli-vince-rimonta-allinga-mondiale-piloti-formula-1-come-cambia-classifica_47ANoAFrtaYj30tYe7PEfz"
+  },
+  {
+   "data": "2026-09-06T15:17:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Matrimonio show dei 'Me contro Te', lo psicologo: \"Privato e spettacolo ormai si sovrappongono\"",
+   "url": "https://www.adnkronos.com/cronaca/me-contro-te-matrimonio-psicologo-critico-genitori_7jCNuPwuLSZw5oWBUUpIAI"
+  },
+  {
+   "data": "2026-09-06T15:06:45+00:00",
+   "fonte": "ANSA",
+   "titolo": "Incidente in una gara automobilistica in Sicilia, due spettatori di 18 e 20 anni sono morti",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/06/incidente-in-una-gara-automobilistica-in-sicilia-due-giovani-sono-morti_db81dade-0014-451d-8079-8a412eed95c5.html"
   },
   {
-   "data": "2026-09-06T12:50:41+00:00",
+   "data": "2026-09-06T15:04:42+00:00",
    "fonte": "ANSA",
-   "titolo": "F1, Gp Monza DIRETTA Gasly parte dalla pole davanti a Russell e Ferrari",
-   "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/09/06/f1-gp-monza-diretta-gasly-parte-dalla-pole-davanti-a-russell-e-ferrari_677a8367-c213-45d7-899f-6cd6978f6433.html"
+   "titolo": "F1 Gp Monza, Leclerc: 'Sto bene. L'incidente? Devo rivedere le immagini'",
+   "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/09/06/f1-gp-monza-leclerc-si-ritira-dopo-incidente-al-terzo-giro-e-illeso.-la-ferrari-sta_63239208-e0f9-40d3-9ca7-6f8f9e7e2cb4.html"
+  },
+  {
+   "data": "2026-09-06T14:24:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Don Patriciello: \"Nozze 'Me contro Te' a pagamento ci interrogano, nel rapporto coi giovani qualcosa si è inceppato\"",
+   "url": "https://www.adnkronos.com/cronaca/don-patriciello-nozze-me-contro-te-rapporto-giovani_6zPVFDJaLGGNdu7tSSH0AZ"
+  },
+  {
+   "data": "2026-09-06T13:51:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Il 'royal wedding' all'Unipol Dome di Milano, biglietti fino a 250 euro e il 'sì' davanti a 6mila persone: dietro il fenomeno 'Me contro Te'",
+   "url": "https://www.adnkronos.com/spettacoli/me-contro-te-matrimonio-milano-video-biglietti-prezzo-oggi-ultime-notizie_wGymq28QZBTJ0eVcEhjsN"
+  },
+  {
+   "data": "2026-09-06T13:44:20+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Trump cambia look, addio ciuffo biondo: i capelli castani scatenano il web",
+   "url": "https://www.adnkronos.com/internazionale/esteri/donald-trump-colore-capelli-biondi-castani-oggi_6g094BVcwmSQefyF4YsRHv"
+  },
+  {
+   "data": "2026-09-06T13:37:43+00:00",
+   "fonte": "ANSA",
+   "titolo": "Giorgetti a Cernobbio: 'Quest'anno il Pil potrebbe avvicinarsi all'1%'",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/06/giorgetti-a-cernobbio-questanno-il-pil-potrebbe-avvicinarsi-all1_73fa5546-eb46-44e1-b11a-bb19159f5a21.html"
+  },
+  {
+   "data": "2026-09-06T13:36:10+00:00",
+   "fonte": "ANSA",
+   "titolo": "Germania, elezioni in Sassonia-Anhalt, alle 14 affluenza al 54,4%",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/06/germania-elezioni-in-sassonia-anhalt-alle-14-affluenza-al-544-_3e325eef-1b36-4c79-bacc-6a029988a436.html"
+  },
+  {
+   "data": "2026-09-06T13:27:22+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Uccisa al rave, in centinaia ai funerali dell'italiana uccisa in Svizzera",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/06/uccisa-al-rave-in-centinaia-ai-funerali-dellitaliana-uccisa-in-svizzera_32822317-1008-4d66-964c-0db083d46693.html"
+  },
+  {
+   "data": "2026-09-06T13:26:33+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Vaticano sul fine vita dopo la legge regionale del Veneto: 'Meno armi e più cure palliative'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/06/il-vaticano-sul-fine-vita-dopo-la-legge-regionale-del-veneto-meno_10dca6fb-9e0a-4d02-88e1-4dde31d37b03.html"
+  },
+  {
+   "data": "2026-09-06T13:21:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Gp Monza, scintille alla partenza: contatto Leclerc-Hamilton, poi Charles finisce a muro",
+   "url": "https://www.adnkronos.com/sport/gp-monza-caos-scintille-partenza-hamilton-leclerc-charles-muro-cosa-e-successo_1KmYEAJFA4LtoXE4WQtXkx"
+  },
+  {
+   "data": "2026-09-06T13:20:32+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Hunter Biden apre alla corsa per la Casa Bianca nel 2028: \"Forse dovrò candidarmi\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/hunter-biden-figlio-joe-corsa-casa-bianca-candidatura_5zUChRdNMdlsAAGYBZRXPL"
   },
   {
    "data": "2026-09-06T12:49:11+00:00",
@@ -29,34 +155,16 @@
    "url": "https://www.adnkronos.com/sport/calcio-infantino-fifa-mondiali-elezioni_3O4I6VbM9NjMhocBpfJs60"
   },
   {
-   "data": "2026-09-06T12:45:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Alta tensione Germania-Russia, Lavrov: \"Accuse su Lipsia sono inizio di una vera guerra\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/russia-germania-drone-lipsia-lavrov-guerra_2gsP2qZFcZ1qtBLDQvuqAt"
-  },
-  {
    "data": "2026-09-06T12:44:16+00:00",
    "fonte": "ANSA",
    "titolo": "F1: Da Sinner a Elkann e Chiellini, è parata di vip a Monza",
    "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/09/06/f1-da-sinner-a-elkann-e-chiellini-e-parata-di-vip-a-monza_4aad23fa-3154-48ab-9e31-cf0133eb67ae.html"
   },
   {
-   "data": "2026-09-06T12:43:40+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Gp Monza, l'omaggio commosso di Vettel a Schumacher: \"Hai ancora una gara da vincere\"",
-   "url": "https://www.adnkronos.com/sport/gp-monza-omaggio-vettelschumacher-ferrari_5UDeL272ZU5AST2K6CRAwR"
-  },
-  {
    "data": "2026-09-06T12:36:27+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Il Vaticano sul fine vita, 'meno fondi ad armi e più cure palliative'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/06/il-vaticano-sul-fine-vita-meno-fondi-ad-armi-e-piu-cure-palliative_90fdaa11-b09d-4243-9315-0093bbe17e02.html"
-  },
-  {
-   "data": "2026-09-06T12:35:02+00:00",
-   "fonte": "ANSA",
-   "titolo": "Giorgetti a Cernobbio: 'Quest'anno il Pil potrebbe avvicinarsi all'1%'",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/06/giorgetti-a-cernobbio-questanno-il-pil-potrebbe-avvicinarsi-all1_73fa5546-eb46-44e1-b11a-bb19159f5a21.html"
   },
   {
    "data": "2026-09-06T12:33:17+00:00",
@@ -77,118 +185,10 @@
    "url": "https://www.ansa.it/canale_legalita_scuola/speciali/back-to-school/2026/09/05/la-privacy-a-scuola-dal-tema-in-classe-allintelligenza-artificiale_27fbd783-5699-4fd8-b5c1-db6f06aa862d.html"
   },
   {
-   "data": "2026-09-06T12:21:47+00:00",
-   "fonte": "ANSA",
-   "titolo": "Tregua di 72 ore in corso. Witkoff e Kushner a Kiev. Zelensky: 'La pace è necessaria'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/06/casa-bianca-discussi-piani-concreti-con-putin-per-kiev_9e8144e1-56b1-40fc-8dbf-4d06cfe62ad0.html"
-  },
-  {
    "data": "2026-09-06T12:12:17+00:00",
    "fonte": "ANSA",
    "titolo": "I big della politica a Cernobbio. Schlein: 'Pronti al voto in qualsiasi momento'.",
    "url": "https://www.ansa.it/sito/notizie/economia/2026/09/06/i-big-della-politica-a-cernobbio-da-schlein-a-conte-a-renzi-e-pichetto_f9d24d56-2b6c-4af2-9b6e-83b524b551da.html"
-  },
-  {
-   "data": "2026-09-06T12:09:58+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Formula 1, oggi il Gp di Monza - Diretta",
-   "url": "https://www.adnkronos.com/sport/diretta-gp-monza-oggi-formula-1-live-gran-premio-italia_kgXLLT7hAIMaUPJsrHZCZ"
-  },
-  {
-   "data": "2026-09-06T12:06:49+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Trovato morto nell'incendio di casa, un arresto per omicidio nel Pavese",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/06/trovato-morto-nellincendio-di-casa-un-arresto-per-omicidio-nel-pavese_92452e9c-7203-43e9-bcfb-d1ebe8a062df.html"
-  },
-  {
-   "data": "2026-09-06T12:04:55+00:00",
-   "fonte": "ANSA",
-   "titolo": "Germania, vota la Sassonia Anhalt: affluenza molto alta alle 12",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/06/aperti-i-seggi-per-le-elezioni-regionali-nel-land-della-sassonia-anhalt_3e325eef-1b36-4c79-bacc-6a029988a436.html"
-  },
-  {
-   "data": "2026-09-06T12:01:25+00:00",
-   "fonte": "ANSA",
-   "titolo": "Leonardo Maria Del Vecchio: 'Creato un dualismo tra me e Milleri ma al centro ci sia Essilux'",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/06/leonardo-maria-del-vecchio-auspico-un-cambio-si-strategia-e-nuova-fase-per_0ecc57b2-6650-4def-aa7a-6e73101c45ff.html"
-  },
-  {
-   "data": "2026-09-06T11:55:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Doppia tragedia nei Rally. A Trapani due morti e due feriti, in Liguria navigatore perde la vita",
-   "url": "https://www.adnkronos.com/cronaca/rally-trapani-incidente-morti-genova_D8aufuKqmGbO8coDPvxJX"
-  },
-  {
-   "data": "2026-09-06T11:39:45+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Forum Cernobbio, il sondaggio promuove il governo Meloni e boccia l'opposizione",
-   "url": "https://www.adnkronos.com/economia/forum-cernobbio-sondaggio-governo-meloni_5ZC5HmA2H8gZKWki35z6r3"
-  },
-  {
-   "data": "2026-09-06T11:26:24+00:00",
-   "fonte": "ANSA",
-   "titolo": "Iran, attaccato un drone navale americano nello Stretto di Hormuz",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/06/iran-attaccato-un-drone-navale-americano-nello-stretto-di-hormuz_85574ef6-450b-4197-a11a-864eb1c1fb1d.html"
-  },
-  {
-   "data": "2026-09-06T11:25:44+00:00",
-   "fonte": "ANSA",
-   "titolo": "Lavrov: 'Le accuse tedesche per l'aeroporto di Lipsia sono l'inizio di una vera guerra'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/06/lavrov-accuse-tedesche-per-aeroporto-di-lipsia-sono-linizio-di-una-vera_5bd65c79-3b06-41fe-9765-2d3aea5c6506.html"
-  },
-  {
-   "data": "2026-09-06T11:08:03+00:00",
-   "fonte": "ANSA",
-   "titolo": "È morto il bimbo caduto in un pozzo profondo 80 metri in Algeria",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/05/e-morto-il-bimbo-caduto-in-un-pozzo-profondo-80-metri-in-algeria_7eb6e10c-2739-43d3-a149-39c4a85e6ebb.html"
-  },
-  {
-   "data": "2026-09-06T11:07:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina-Russia, Witkoff e Kushner a Kiev: colloqui con Zelensky al via",
-   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-inviati-trump-missione-pace-news_5mzKqKQug847W1hGTpb7mR"
-  },
-  {
-   "data": "2026-09-06T10:54:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Leonardo Maria Del Vecchio a Cernobbio: \"Luxottica? Auspico cambio di strategie e nuova fase\"",
-   "url": "https://www.adnkronos.com/finanza/leonardo-maria-del-vecchio-cernobbio_3TtHm6LdBoncOvWMRfBzbK"
-  },
-  {
-   "data": "2026-09-06T10:51:53+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Ultimi giorni di caldo anomalo, da mercoledì piogge e aria fresca",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/06/ultimi-giorni-di-caldo-anomalo-da-mercoledi-piogge-e-aria-fresca_f9853c57-cb4a-458d-912b-3f03b99b1acd.html"
-  },
-  {
-   "data": "2026-09-06T10:42:28+00:00",
-   "fonte": "ANSA",
-   "titolo": "Serie A: Frosinone-Venezia in campo alle 15 DIRETTA",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/06/serie-a-frosinone-venezia-in-campo-alle-15-diretta_8ca1ca58-50d1-427f-a3ee-7f000771d9b5.html"
-  },
-  {
-   "data": "2026-09-06T10:39:44+00:00",
-   "fonte": "ANSA",
-   "titolo": "Serie A: Parma-Monza in campo alle 15 DIRETTA",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/06/serie-a-parma-monza-in-campo-alle-15-diretta_aca002ea-3301-44a4-9fce-ecb6465a5f85.html"
-  },
-  {
-   "data": "2026-09-06T10:35:01+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "La chiazza di gasolio nel Naviglio è lunga 28 km e ha raggiunto la Darsena. 'Danni pesanti alla biodiversità'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/05/la-chiazza-di-gasolio-nel-naviglio-e-lunga-28-km-e-ha-raggiunto-la-darsena_05539e93-f5cf-4e92-83f9-17e8df6756f4.html"
-  },
-  {
-   "data": "2026-09-06T10:34:42+00:00",
-   "fonte": "ANSA",
-   "titolo": "Zangrillo da Cernobbio: 'Sul fine vita Parlamento si esprima, serve una legge dello Stato'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/06/zangrillo-da-cernobbio-sul-fine-vita-parlamento-si-esprima-serve-una-legge_10dca6fb-9e0a-4d02-88e1-4dde31d37b03.html"
-  },
-  {
-   "data": "2026-09-06T10:25:47+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Scambio di salme all'obitorio di Firenze, salta il funerale",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/06/scambio-di-salme-allobitorio-di-firenze-salta-il-funerale_6f7ea61c-6b2d-455b-a645-7b04a79bf376.html"
   }
  ]
 }
