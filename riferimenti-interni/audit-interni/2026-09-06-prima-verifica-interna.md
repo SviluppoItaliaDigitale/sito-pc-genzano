@@ -40,7 +40,7 @@ grep -rn "L.R. Lazio 9/2017" themes/
 
 Valori accertati da `pc-fact-checker` su fonte primaria e applicati da `pc-coerenza-trasversale` in un batch dedicato (33 file sorgente + pacchetti e ZIP rigenerati dagli script): Rigopiano 40 persone (VVF); Visso 2016 una sola vittima per malore, formulazione prudente; Vajont 1.917 (CNR-IRPI, URL della fonte corretto); L'Aquila circa 67.000 assistiti (DPC); acqua 4 L/persona/giorno per 3 giorni in 23 occorrenze (esclusi i contesti diversi: idratazione, escursioni, Kit Vai, standard IARU, citazione Sphere); codici colore della scheda di decodifica allineati a `data/codici_colore.yaml`; assistente virtuale senza la L.R. 9/2017 (costituzione con delibera CC n. 31/2023, art. 35 D.Lgs. 1/2018); articolo del 05/04/2026 portato a «Quarantacinque anni» e delibera al 1991 (slug invariato). Controlli: parità schede, dati vs dataset, refusi, build, ancore tutti verdi; grep residui a zero.
 
-**Aperto, decisione dell'utente**: nessun documento in archivio prova la delibera del 1991 (né del 1993); l'unico atto presente è la delibera CC n. 31 del 31/07/2023. Da chiarire con il Comune se esiste un atto del 1991 da citare, altrimenti riformulare la storia 1981-2023 in modo prudente.
+**Chiuso (decisione dell'utente, 06/09/2026)**: nessun atto disponibile per gli anni Ottanta e Novanta; le nozioni storiche (1981, delibera CC 1991 con il sindaco Cesaroni, delibera CC n. 31/2023) valgono come fonte interna e non vanno più messe in discussione. Registrato in `pc-fact-checker.md` § «Fatti istituzionali del Gruppo confermati dall'utente».
 
 ## Parte B — Traduzioni (rapporto dell'agente)
 
