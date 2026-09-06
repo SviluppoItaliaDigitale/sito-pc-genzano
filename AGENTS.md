@@ -465,6 +465,23 @@ In `.claude/agents/` ci sono **17 agenti custom** ottimizzati per Claude Code (a
 | `pc-social-publisher` | "rivedi le bozze social", "controlla immagini Instagram" | Rivede tono, accessibilità, hashtag, struttura crisi ISO 22329 + CWA, valida immagini IG (1080×1080 post, 1080×1920 story). Mai pubblica |
 | `pc-print-card-qa` | "controlla le schede stampabili", "i puzzle sono giocabili?" | QA strutturale HTML + verifica giocabilità puzzle (labirinto BFS, word search, sudoku risolvibile, cruciverba celle ok) |
 | `pc-site-auditor` | "fammi un audit del sito", "controlla tutto" | Audit whole-site read-only: Hugo build, link interni (distingue rotti vs futuri), ordering, frontmatter, anti-pattern, coerenza cross-file |
+| `pc-fact-checker` | "verifica i dati/le fonti" — ogni contenuto con date, bilanci, cause, norme, dataset | 🔴 Gate dei fatti: fonte primaria per ogni affermazione, correzione in tutti i file che ripetono il dato, bloccante senza fonte su vittime/cause/istruzioni/norme |
+| `pc-didattica-reviewer` | schede stampabili, kit, rubriche, giochi nuovi o modificati | 🔴 Gate materiali scolastici: sicurezza DPC, pedagogia ed età, normativa scuola vigente, esercizi, avvertenze dentro l'area stampabile, parità dei 4 formati |
+| `pc-revisore-scientifico` | "è scientificamente corretto?" | Meccanismi, scale, fasi e tono della comunicazione del rischio; gerarchia delle fonti |
+| `pc-desk-giornalistico` | cronaca, anniversari, vicende giudiziarie, persone | Attribuzione, deontologia, minori, vittime, presunzione di non colpevolezza |
+| `pc-conformita-legale` | privacy, accessibilità, note legali, scadenze | RPD, basi giuridiche PA, modello AgID, calendario 23 settembre / 31 marzo |
+| `pc-integrita-tecnica` | "il sito è integro?" | File corrotti, ancore, parità schede, ZIP offline, codifiche, stati UI |
+| `pc-coerenza-trasversale` | "il sito si contraddice?" | Allineamento di ogni copia di un'informazione alla fonte canonica |
+| `pc-revisore-codice` | diff a template/CSS/JS/script | Revisione del codice: escape, subpath, stati, idempotenza, a11y |
+| `pc-revisore-automazioni` | workflow e routine | YAML, timeout, pin SHA, trigger, priorità deploy, watchdog |
+| `pc-sicurezza` | CSP, header, segreti, supply chain | Hardening con metodo (Report-Only prima dell'enforcing) |
+| `pc-revisore-traduzioni` | "le traduzioni sono aggiornate?" | 7 lingue + facile multilingua allineate all'italiano canonico |
+| `pc-dati-e-feed` | open data, CAP, RSS, sitemap | Validità, coerenza fra formati, metadati, freschezza |
+| `pc-esercitazione-emergenza` | "se scatta un'allerta adesso funziona tutto?" | Esercitazione end-to-end in locale con verbale |
+| `pc-verifica-visiva` | markup custom, schede, stampa | Screenshot mobile/desktop/stampa letti davvero |
+| `pc-usabilita` | menu, hub, percorsi | Architettura dell'informazione e percorsi critici per profilo |
+| `pc-documentazione` | dopo modifiche strutturali | Documentazione allineata ai componenti reali |
+| `pc-audit-completo` | "fammi l'audit completo" (routine mensile) | Orchestratore: script + specialisti, rapporto in formato rilievi, correzioni fino a live |
 | `pc-materiali-publisher` | "pubblica gli output di NotebookLM per il tema X" | Pipeline pubblicazione automatica materiali NotebookLM su `/risorse-pronte/` (podcast, infografiche, presentazioni) |
 
 Quando l'utente fa una richiesta che corrisponde al trigger di uno di questi agenti, **applica i criteri descritti** anche se non puoi richiamare il sub-agent specifico.

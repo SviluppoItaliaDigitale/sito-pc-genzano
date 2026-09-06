@@ -242,7 +242,7 @@ Il **riunione informativa** iniziale in Sala Operativa (prima della partenza) e 
 - Piano di Emergenza locale
 - Piano urbanistico
 
-### Check-list 4 — Attivazione Colonna Mobile
+### Check-list 4 — Attivazione Colonna Mobile {#check-list-4-attivazione-colonna-mobile}
 
 Quando lo scouting conferma la necessità di un **modulo di colonna mobile**, la richiesta alla Sala Operativa deve indicare quale modulo serve. I moduli standard della **Colonna Mobile Nazionale** (ripresi dalle Colonne Mobili Regionali) sono:
 
