@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/",
-  "generato": "2026-09-06T16:09:55+00:00",
+  "generato": "2026-09-06T18:19:01+00:00",
   "licenza": "Copernicus Emergency Management Service — dati pubblici",
   "nota": "Copia locale: l'API non espone CORS, il browser non può leggerla direttamente."
  },
@@ -132,7 +132,7 @@
    ],
    "eventTime": "2026-08-14T22:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-09-06T16:09:35.496970",
+   "lastUpdate": "2026-09-06T17:49:13.342051",
    "n_aois": 5,
    "n_products": 48,
    "name": "Wildfire in Montenegro and Bosnia and Herzegovina"
