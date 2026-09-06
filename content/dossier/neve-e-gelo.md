@@ -52,7 +52,7 @@ Fu parte di una grande ondata di gelo che in Europa causò **oltre 650 vittime**
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="rigopiano" image="/images/dossier/neve-rigopiano.webp" alt="Veduta aerea a confronto dell'Hotel Rigopiano a Farindola: a sinistra l'area travolta dalla neve, a destra l'edificio prima della valanga" align="top" kicker="18 gennaio 2017 · Farindola (Pescara)" title="Rigopiano,<br>la ferita" credito="Immagine TVSEI · CC BY 3.0, via Wikimedia Commons" >}}
-Dopo giorni di nevicate intense, con accumuli fino a **un metro e mezzo** e pericolo valanghe di **grado 4 su 5**, alle 16:48 del 18 gennaio 2017 una valanga travolse l'Hotel Rigopiano. Delle **40 persone** presenti, **29 morirono** e **11 si salvarono**.
+Dopo giorni di nevicate intense, con accumuli fino a **un metro e mezzo** e pericolo valanghe di **grado 4 su 5**, poco prima delle 17 del 18 gennaio 2017 una valanga travolse l'Hotel Rigopiano. Delle **40 persone** presenti, **29 morirono** e **11 si salvarono**: 2 erano all'esterno, 9 furono estratte vive dalle macerie nei giorni successivi.
 
 Gli ultimi superstiti furono estratti dopo circa **62 ore** sotto la neve. È una ferita che ha cambiato la cultura della prevenzione valanghe in Italia. La memoria di quelle vite chiede rispetto, non spettacolo.
 {{< /dossier-scena >}}
