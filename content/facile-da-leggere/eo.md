@@ -254,7 +254,7 @@ hreflang_xdefault: "/facile-da-leggere/"
 <li>tenu la beston je rimeno aŭ en transportujo;</li>
 <li>kunportu manĝaĵon, akvon kaj medikamentojn de la besto;</li>
 <li>kunportu la sanlibreton se vi havas ĝin;</li>
-<li>kunprenu ĝin al la atendareo: bestoj estas permesataj.</li>
+<li>kunprenu ĝin al la <a href="/aree-attesa/">atendareo</a>: bestoj estas permesataj.</li>
 </ul>
 <p><strong>Ne faru ĉi tion:</strong></p>
 <ul class="facile-elenco no">
@@ -326,6 +326,8 @@ hreflang_xdefault: "/facile-da-leggere/"
 <h2 style="color: #b45309;"><span class="icona" style="background: #b45309;">✉️</span> Ĉu vi volas skribi al ni?</h2>
 <p>Se vi havas demandon kiu ne estas urĝa, skribu al:</p>
 <p style="text-align: center; font-size: 1.1rem;"><a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a></p>
+<p>Aŭ venu al nia sidejo:</p>
+<p style="text-align: center;"><strong lang="it">Via Sicilia 13-15</strong><br><span lang="it">Genzano di Roma</span></p>
 <p>Se estas urĝo, ne skribu retmesaĝon. Voku la <strong>112</strong>.</p>
 </div>
 
