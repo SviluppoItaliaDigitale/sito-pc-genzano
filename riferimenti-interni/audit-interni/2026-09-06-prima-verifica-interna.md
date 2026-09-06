@@ -58,6 +58,10 @@ Perimetro reale: 7 hub `content/<lingua>/_index.md` + 21 pagine `cosa-fare-adess
 - **Esperanto**: «Operacia Salono» → probabilmente «Operacia Centro»; «Karabenistoj» → «Karabinieroj» (da verificare su PIV/Vikipedio).
 - Le 7 traduzioni aggiungono «(anziani, bambini, persone con disabilità)» assente nel canonico: riportarlo nell'italiano o toglierlo.
 
+### Esito (stesso giorno, con OK dell'utente)
+
+Tutti i rilievi della Parte B applicati in un batch dedicato (36 file): acqua 4 L/persona/giorno per 3 giorni e 112 come unico numero di emergenza nelle 7 lingue; `tts: false` sulle 28 pagine; `lang="it"` sui nomi propri italiani; box «Cosa NON fare», 116117, YouPol e chiamata silenziosa riportati dal canonico; blocchi mancanti nelle 4 versioni facili; hreflang reciproci per la famiglia `/facile-da-leggere/` (ramo frontmatter del partial); `og:locale` `ar_AR`; esperanto «Operacia Centro» (il precedente «Salono» significa salotto; «Karabenistoj» confermato da Vikipedio); mappa delle traduzioni riscritta in rule 09 §19 e CLAUDE.md. Restano per un prossimo passaggio: indirizzo della sede nel blocco «Vuoi scriverci» delle 4 facili, link ipertestuale a `/aree-attesa/` nella sezione animali, e il bug preesistente del partial hreflang che perde il sottopercorso sulla sola anteprima GitHub Pages.
+
 ## Parte C — Esercitazione della catena di emergenza (verbale dell'agente)
 
 Scenario simulato in locale: arancione idrogeologica oggi, rossa domani → emergenza attiva → rientro a verde. Nessun commit, nessun workflow, nessun Telegram; dati ripristinati (`git status -- data/` vuoto).

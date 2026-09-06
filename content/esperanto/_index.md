@@ -3,6 +3,7 @@ title: "Esperanto — Civila Protekto Genzano di Roma"
 description: "Esencaj informoj en Esperanto pri civila protekto en Genzano di Roma: urĝaj numeroj, kondutoj antaŭ la ĉefaj riskoj, kontaktoj."
 layout: "single"
 language: "eo"
+tts: false
 aliases:
   - /eo/
 sitemap:
@@ -61,7 +62,7 @@ Tiu ĉi paĝo donas al vi la **esencajn informojn** en Esperanto. La kompleta re
 <li><strong>Ne</strong> uzu la lifton</li>
 <li>Foriĝu de fenestroj kaj librobretaroj</li>
 </ul>
-<p>Post la tremo, eliru trankvile per la ŝtuparo kaj atingu la plej proksiman <strong>"Area di Attesa"</strong> (atendzono). Vidu la <a href="/cartografia/">mapon de la atendzonoj</a>.</p>
+<p>Post la tremo, eliru trankvile per la ŝtuparo kaj atingu la plej proksiman <strong lang="it">"Area di Attesa"</strong> (atendzono). Vidu la <a href="/cartografia/">mapon de la atendzonoj</a>.</p>
 </div>
 
 <div class="en-card">
@@ -105,7 +106,7 @@ Tiu ĉi paĝo donas al vi la **esencajn informojn** en Esperanto. La kompleta re
 <h2>📦 Urĝa kit hejme</h2>
 <p>Tenu pretan etan dorsosakon kun:</p>
 <ul class="en-list">
-<li>Botelita akvo (3 litroj por persono)</li>
+<li>Botelita akvo (4 litroj po persono, tage, dum 3 tagoj)</li>
 <li>Longedaŭra manĝaĵo (biskvitoj, energiaj stangoj)</li>
 <li>Poŝlampo kun rezervaj baterioj</li>
 <li>Termika litkovrilo kaj fajfilo</li>
@@ -123,7 +124,7 @@ Tiu ĉi paĝo donas al vi la **esencajn informojn** en Esperanto. La kompleta re
 
 <div class="en-card">
 <h2>🗺️ Kien iri en urĝa kazo</h2>
-<p>Genzano havas <strong>10 difinitajn atendzonojn</strong> (Aree di Attesa) kie civitanoj devas kolektiĝi post grava evento. Ili estas malfermaj publikaj spacoj, markitaj per ŝildoj. Trovu la plej proksiman al via hejmo aŭ hotelo <em>antaŭ</em> ol urĝo okazas.</p>
+<p>Genzano havas <strong>10 difinitajn atendzonojn</strong> (<span lang="it">Aree di Attesa</span>) kie civitanoj devas kolektiĝi post grava evento. Ili estas malfermaj publikaj spacoj, markitaj per ŝildoj. Trovu la plej proksiman al via hejmo aŭ hotelo <em>antaŭ</em> ol urĝo okazas.</p>
 <p>👉 <a href="/cartografia/" style="background:#003366;color:#fff;padding:0.5rem 1rem;border-radius:6px;text-decoration:none;display:inline-block;margin-top:0.4rem">Vidi la mapon de la atendzonoj</a></p>
 </div>
 

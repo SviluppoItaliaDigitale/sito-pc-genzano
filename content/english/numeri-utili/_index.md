@@ -3,6 +3,7 @@ title: "Useful Numbers — English"
 description: "All emergency numbers and useful contacts for citizens of Genzano di Roma."
 layout: "single"
 language: "en"
+tts: false
 ---
 
 [← Back to English overview](/english/)
@@ -24,6 +25,14 @@ In the Lazio region, since 2017, **the only number to call in case of emergency 
 | **112** | Single Emergency Number (NUE) | Any emergency: medical, public order, fires, technical rescue |
 | **803&nbsp;555** | Lazio Civil Protection Operations Room | Non-urgent reports and information on regional emergencies |
 
+## 116117 — non-urgent medical care
+
+For health problems that are **not an emergency**, you can call **116117**, the free European number for non-urgent medical care. It is available **24 hours a day**, is **multilingual**, and is already active for calls from **Rome and its province**, including Genzano. For **emergencies**, **112** remains the number to call.
+
+- **Number:** [116117](tel:116117) — free from landline and mobile
+- **For:** out-of-hours GP service, non-urgent medical advice, information on regional health services and tourist medical assistance
+- **Available:** every day, 24 hours a day, with multilingual support
+
 ## Civil Protection Group contacts
 
 These contacts are **for non-urgent information and requests**. In case of emergency, always call **112**.
@@ -35,8 +44,9 @@ These contacts are **for non-urgent information and requests**. In case of emerg
 ## Useful apps
 
 - **IT-alert** — National public alarm system: [it-alert.it](https://www.it-alert.it/en/)
-- **Where ARE U** — App for 112 emergency calls with automatic location sending: [download the app](https://where.areu.lombardia.it/)
+- **Where ARE U** — App for 112 emergency calls with automatic location sending and silent call: [download the app](https://where.areu.lombardia.it/)
+- **YouPol** — State Police app to report bullying, domestic violence, drugs and other crimes, also anonymously: [Polizia di Stato](https://www.poliziadistato.it/)
 
 ## In case of emergency
 
-The Civil Protection Group **cannot be activated directly by citizens**. In case of emergency, contact **112** or **803&nbsp;555**: the competent authorities will alert and dispatch our teams.
+The Civil Protection Group **cannot be activated directly by citizens**. In case of emergency, always contact **112**. The regional toll-free number of the Lazio Regional Operations Room, **803&nbsp;555**, is available for non-urgent civil protection reports. The competent authorities will alert and dispatch our teams when necessary.

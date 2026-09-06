@@ -3,6 +3,7 @@ title: "Plan de Urgență Familial — Română"
 description: "Cum să pregătiți un plan de urgență familial: contacte, puncte de întâlnire, kit de urgență."
 layout: "single"
 language: "ro"
+tts: false
 ---
 
 [← Înapoi la prezentarea în limba română](/romana/)
@@ -52,7 +53,7 @@ Printați această pagină (sau copiați pe o foaie) și completați cu datele d
 ### 5. Kit de urgență — unde este păstrat
 
 - **Locația kitului acasă**: ____________________
-- **Kitul conține**: apă (3 L de persoană), alimente de lungă durată, lanternă + baterii de rezervă, pătură termică, fluier, încărcător de telefon, medicamente importante, copie a documentelor, numerar.
+- **Kitul conține**: apă (4 L de persoană pe zi, timp de 3 zile), alimente de lungă durată, lanternă + baterii de rezervă, pătură termică, fluier, încărcător de telefon, medicamente importante, copie a documentelor, numerar.
 
 ### 6. Nevoi speciale
 
