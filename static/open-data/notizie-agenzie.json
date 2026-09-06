@@ -5,15 +5,153 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-06T16:09:52+00:00",
+  "generato": "2026-09-06T18:18:58+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-06T16:06:22+00:00",
+   "data": "2026-09-06T18:16:42+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Firenze ricorda Lorena: \"Non abituiamoci a queste tragedie\"",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/06/firenze-ricorda-lorena-non-abituiamoci-a-queste-tragedie_2b434102-84a0-4d2a-a32b-ffb0375388d0.html"
+  },
+  {
+   "data": "2026-09-06T18:02:53+00:00",
+   "fonte": "ANSA",
+   "titolo": "Eurovolley, in campo Italia-Turchia 2-2, la finale DIRETTA",
+   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/06/eurovolley-in-campo-italia-turchia-la-finale-diretta_89d9cdb0-a169-40cb-a9bc-6aaf94c7e45c.html"
+  },
+  {
+   "data": "2026-09-06T18:01:11+00:00",
+   "fonte": "ANSA",
+   "titolo": "Serie A: Bologna-Sassuolo 2-2",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/06/serie-a-bologna-sassuolo-2-2_74b4353b-0644-48f6-9a94-a27ef7c13890.html"
+  },
+  {
+   "data": "2026-09-06T17:50:23+00:00",
+   "fonte": "ANSA",
+   "titolo": "F1: Impresa Antonelli a Monza, storico trionfo dal 19mo posto: 'Un sogno che si realizza'",
+   "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/09/06/f1-antonelli-nella-storia-parte-dal-fondo-e-vince-a-monza-un-sogno-che_677a8367-c213-45d7-899f-6cd6978f6433.html"
+  },
+  {
+   "data": "2026-09-06T17:50:00+00:00",
+   "fonte": "ANSA",
+   "titolo": "Elezioni in Germania, exit poll: Afd trionfa con il 44,4% in Sassonia-Anhalt. Cdu al 18,4%",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/06/elezioni-in-germania-exit-poll-ard-in-sassonia-anhalt-afd-trionfa-con_243aead0-87e3-4c0c-aebc-18a1cdcd76be.html"
+  },
+  {
+   "data": "2026-09-06T17:48:30+00:00",
+   "fonte": "ANSA",
+   "titolo": "FOTO F1: La domenica bestiale di Kimi. 'Mamma mia, che giornata'",
+   "url": "https://www.ansa.it/sito/photogallery/sport/2026/09/06/foto-f1-antonelli-nella-storia-un-sogno-che-si-realizza_cd43b930-9866-4c06-8fdf-0de0d08592df.html"
+  },
+  {
+   "data": "2026-09-06T17:44:49+00:00",
+   "fonte": "ANSA",
+   "titolo": "Coppa America, Sirena: \"L'edizione 2027 sarà la più bella di sempre\"",
+   "url": "https://www.ansa.it/sito/notizie/sport/speciali/coppa-america-2027/videogallery/2026/09/06/coppa-america-sirena-ledizione-2027-sara-la-piu-bella-di-sempre_396c1da1-3b27-4d58-aa8d-1e21ae08bdd4.html"
+  },
+  {
+   "data": "2026-09-06T17:43:24+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Esce di strada in un dirupo, motociclista muore davanti ai genitori",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/06/esce-di-strada-in-un-dirupo-motociclista-muore-davanti-ai-genitori_e4849382-e609-45ff-bd6d-8ab3bc1988dd.html"
+  },
+  {
+   "data": "2026-09-06T17:38:53+00:00",
+   "fonte": "ANSA",
+   "titolo": "Riparte la scuola, il ritorno in classe scatta da Bolzano",
+   "url": "https://www.ansa.it/canale_legalita_scuola/speciali/back-to-school/2026/09/06/riparte-la-scuola-il-ritorno-in-classe-scatta-da-bolzano_24869e94-0b5f-4862-9a50-a4817a7fd0c3.html"
+  },
+  {
+   "data": "2026-09-06T17:38:22+00:00",
+   "fonte": "ANSA",
+   "titolo": "Tregua di 72 ore in corso.  L'inviato statunitense Witkoff a Kiev: 'Russia e Ucraina dovranno fare dei compromessi'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/06/tregua-di-72-ore-in-corso.-linviato-statunitense-witkoff-a-kiev-colloqui-significativi-sostanziali_9e8144e1-56b1-40fc-8dbf-4d06cfe62ad0.html"
+  },
+  {
+   "data": "2026-09-06T17:35:58+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Colpita a martellate dall'ex, è in prognosi riservata",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/06/colpita-a-martellate-dallex-e-in-prognosi-riservata-_071f9785-3177-437b-ba8d-6aa0087bae93.html"
+  },
+  {
+   "data": "2026-09-06T17:34:41+00:00",
+   "fonte": "ANSA",
+   "titolo": "Consensi in calo e Iran, Trump alla prova di Dallas",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/06/consensi-in-calo-e-iran-trump-alla-prova-di-dallas_85574ef6-450b-4197-a11a-864eb1c1fb1d.html"
+  },
+  {
+   "data": "2026-09-06T17:31:43+00:00",
+   "fonte": "ANSA",
+   "titolo": "Incidente in una gara automobilistica in Sicilia ad Erice, morti due spettatori di 18 e 20 anni",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/06/incidente-in-una-gara-automobilistica-in-sicilia-due-giovani-sono-morti_db81dade-0014-451d-8079-8a412eed95c5.html"
+  },
+  {
+   "data": "2026-09-06T17:30:54+00:00",
+   "fonte": "ANSA",
+   "titolo": "La regina Margherita di Danimarca ricoverata in ospedale",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/06/la-regina-margherita-di-danimarca-ricoverata-in-ospedale_123054e3-00c7-402d-9b4b-c8e8ae5ce0cc.html"
+  },
+  {
+   "data": "2026-09-06T17:28:56+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "L'ultimo caldo, da mercoledì piogge e calo delle temperature",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/06/lultimo-caldo-da-mercoledi-piogge-e-calo-delle-temperature_32628aa4-1035-4e29-857b-efa90987da43.html"
+  },
+  {
+   "data": "2026-09-06T17:21:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Elezioni in Sassonia, exit poll: Afd trionfa con 44,5% dei voti",
+   "titolo": "Musica techno e palloncini bianchi, l'ultimo saluto a Maria Spinelli: la 22enne italiana uccisa al rave in Svizzera",
+   "url": "https://www.adnkronos.com/cronaca/maria-spinelli-22enne-italiana-uccisa-rave-svizzera_24ceM0pzksE5964uX9vkew"
+  },
+  {
+   "data": "2026-09-06T17:05:56+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Da Meloni a Sinner, l'Italia applaude Antonelli: \"Vittoria storica, complimenti Kimi\"",
+   "url": "https://www.adnkronos.com/sport/antonelli-vince-gp-monza-messaggi-sinner-meloni-salvini-italia_3P1X9Gnsg64p7xEawXjCAl"
+  },
+  {
+   "data": "2026-09-06T16:38:52+00:00",
+   "fonte": "ANSA",
+   "titolo": "'Dilettevoli inedite eccedenze' di Mina, 10 canzoni e 10 foto mai viste prima",
+   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/06/dilettevoli-inedite-eccedenze-di-mina-10-canzoni-e-10-foto-mai-viste-prima_5e2b860a-7f5f-49f4-8a84-104bba3ea0ba.html"
+  },
+  {
+   "data": "2026-09-06T16:37:44+00:00",
+   "fonte": "ANSA",
+   "titolo": "Venezia, Andrea Pallaoro: 'The Echo Chamber è il mio omaggio a Bertolucci'",
+   "url": "https://www.ansa.it/sito/notizie/cultura/cinema/2026/09/06/andrea-pallaoro-the-echo-chamber-e-il-mio-omaggio-a-bertolucci_d6ff3d6b-84f6-41ba-8ad1-880c36165120.html"
+  },
+  {
+   "data": "2026-09-06T16:35:56+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "#AccadeOggi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/06/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
+  },
+  {
+   "data": "2026-09-06T16:33:10+00:00",
+   "fonte": "ANSA",
+   "titolo": "Giorgetti: 'Pil verso l'1%, per le imprese i salari sono investimenti'",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/06/giorgetti-pil-verso-l1-per-le-imprese-i-salari-sono-investimenti_73fa5546-eb46-44e1-b11a-bb19159f5a21.html"
+  },
+  {
+   "data": "2026-09-06T16:31:22+00:00",
+   "fonte": "ANSA",
+   "titolo": "Cernobbio boccia il campo largo. I leader, 'Meloni ha fallito'",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/06/cernobbio-boccia-il-campo-largo.-i-leader-meloni-ha-fallito-_f9d24d56-2b6c-4af2-9b6e-83b524b551da.html"
+  },
+  {
+   "data": "2026-09-06T16:23:07+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'ultimo caldo, da mercoledì piogge e calo delle temperature",
+   "url": "https://www.ansa.it/canale_scienza/notizie/terra_poli/2026/09/06/lultimo-caldo-da-mercoledi-piogge-e-calo-delle-temperature-_142b28e7-aabc-4d69-82f4-ae3c89b5db41.html"
+  },
+  {
+   "data": "2026-09-06T16:06:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Elezioni in Sassonia-Anhalt, proiezioni: Afd trionfa con 44% dei voti. Siegmund: \"Abbiamo fatto la storia\"",
    "url": "https://www.adnkronos.com/internazionale/esteri/elezioni-sassonia-afd-risultati-voto-oggi_4kmjiAmAzOwFmircSKKJBz"
   },
   {
@@ -23,33 +161,15 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/06/vasto-incendio-in-sito-ecoballe-di-taverna-del-re-nel-napoletano_1f851531-5cc2-4cc3-9e59-abe208624e4a.html"
   },
   {
-   "data": "2026-09-06T16:02:16+00:00",
-   "fonte": "ANSA",
-   "titolo": "Eurovolley, in campo Italia-Turchia, la finale DIRETTA",
-   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/06/eurovolley-in-campo-italia-turchia-la-finale-diretta_89d9cdb0-a169-40cb-a9bc-6aaf94c7e45c.html"
-  },
-  {
-   "data": "2026-09-06T16:02:14+00:00",
-   "fonte": "ANSA",
-   "titolo": "++ Exit poll Ard, in Sassonia-Anhalt Afd trionfa con 44,5%, la Cdu al 18,5 % ++",
-   "url": "https://www.ansa.it/sito/notizie/flash/2026/09/06/exit-poll-ard-in-sassonia-anhalt-afd-trionfa-con-445-la-cdu_9c6db8a9-8215-4304-8e31-6fd18843302d.html"
-  },
-  {
    "data": "2026-09-06T16:00:00+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Antonelli, trionfo nel Gp di Monza e lacrime: \"Non so cosa ho fatto\". I tifosi: \"Adesso vinci il Mondiale\"",
    "url": "https://www.adnkronos.com/sport/gp-monza-antonelli-piange-trionfo-gran-premio-italia_kPncWpdilZMi6XAr4gvDL"
   },
   {
-   "data": "2026-09-06T15:58:45+00:00",
-   "fonte": "ANSA",
-   "titolo": "F1: Antonelli nella storia, parte dal fondo e vince a Monza: 'Un sogno che si realizza'",
-   "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/09/06/f1-antonelli-nella-storia-parte-dal-fondo-e-vince-a-monza-un-sogno-che_677a8367-c213-45d7-899f-6cd6978f6433.html"
-  },
-  {
    "data": "2026-09-06T15:42:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Europei di pallavolo femminile, oggi la finale Italia-Turchia - Diretta",
+   "titolo": "Europei di pallavolo femminile, oggi la finale Italia-Turchia 2-2 (25-16, 22-25, 25-12, 21-25) - Diretta",
    "url": "https://www.adnkronos.com/sport/pallavolo-italia-turchia-finale_30Pv7ZVrFj1mq5ocrWuesY"
   },
   {
@@ -57,18 +177,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Matrimonio 'Me contro Te', Rotondi: \"Nozze manzoniane, un po' circensi ma non mi scandalizzano\"",
    "url": "https://www.adnkronos.com/cronaca/matrimonio-me-contro-te-nozze-milano-ultime-notizie_ZPMMQdBOeUiTHTqQAYupC"
-  },
-  {
-   "data": "2026-09-06T15:29:00+00:00",
-   "fonte": "ANSA",
-   "titolo": "Tregua di 72 ore in corso.  L'inviato statunitense Witkoff a Kiev: \"Colloqui significativi, sostanziali, importanti\"",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/06/tregua-di-72-ore-in-corso.-linviato-statunitense-witkoff-a-kiev-colloqui-significativi-sostanziali_9e8144e1-56b1-40fc-8dbf-4d06cfe62ad0.html"
-  },
-  {
-   "data": "2026-09-06T15:24:04+00:00",
-   "fonte": "ANSA",
-   "titolo": "Riparte la scuola, il ritorno in classe scatta da Bolzano",
-   "url": "https://www.ansa.it/canale_legalita_scuola/speciali/back-to-school/2026/09/06/riparte-la-scuola-il-ritorno-in-classe-scatta-da-bolzano_24869e94-0b5f-4862-9a50-a4817a7fd0c3.html"
   },
   {
    "data": "2026-09-06T15:17:23+00:00",
@@ -81,114 +189,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Matrimonio show dei 'Me contro Te', lo psicologo: \"Privato e spettacolo ormai si sovrappongono\"",
    "url": "https://www.adnkronos.com/cronaca/me-contro-te-matrimonio-psicologo-critico-genitori_7jCNuPwuLSZw5oWBUUpIAI"
-  },
-  {
-   "data": "2026-09-06T15:06:45+00:00",
-   "fonte": "ANSA",
-   "titolo": "Incidente in una gara automobilistica in Sicilia, due spettatori di 18 e 20 anni sono morti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/06/incidente-in-una-gara-automobilistica-in-sicilia-due-giovani-sono-morti_db81dade-0014-451d-8079-8a412eed95c5.html"
-  },
-  {
-   "data": "2026-09-06T15:04:42+00:00",
-   "fonte": "ANSA",
-   "titolo": "F1 Gp Monza, Leclerc: 'Sto bene. L'incidente? Devo rivedere le immagini'",
-   "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/09/06/f1-gp-monza-leclerc-si-ritira-dopo-incidente-al-terzo-giro-e-illeso.-la-ferrari-sta_63239208-e0f9-40d3-9ca7-6f8f9e7e2cb4.html"
-  },
-  {
-   "data": "2026-09-06T14:24:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Don Patriciello: \"Nozze 'Me contro Te' a pagamento ci interrogano, nel rapporto coi giovani qualcosa si è inceppato\"",
-   "url": "https://www.adnkronos.com/cronaca/don-patriciello-nozze-me-contro-te-rapporto-giovani_6zPVFDJaLGGNdu7tSSH0AZ"
-  },
-  {
-   "data": "2026-09-06T13:51:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Il 'royal wedding' all'Unipol Dome di Milano, biglietti fino a 250 euro e il 'sì' davanti a 6mila persone: dietro il fenomeno 'Me contro Te'",
-   "url": "https://www.adnkronos.com/spettacoli/me-contro-te-matrimonio-milano-video-biglietti-prezzo-oggi-ultime-notizie_wGymq28QZBTJ0eVcEhjsN"
-  },
-  {
-   "data": "2026-09-06T13:44:20+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Trump cambia look, addio ciuffo biondo: i capelli castani scatenano il web",
-   "url": "https://www.adnkronos.com/internazionale/esteri/donald-trump-colore-capelli-biondi-castani-oggi_6g094BVcwmSQefyF4YsRHv"
-  },
-  {
-   "data": "2026-09-06T13:37:43+00:00",
-   "fonte": "ANSA",
-   "titolo": "Giorgetti a Cernobbio: 'Quest'anno il Pil potrebbe avvicinarsi all'1%'",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/06/giorgetti-a-cernobbio-questanno-il-pil-potrebbe-avvicinarsi-all1_73fa5546-eb46-44e1-b11a-bb19159f5a21.html"
-  },
-  {
-   "data": "2026-09-06T13:36:10+00:00",
-   "fonte": "ANSA",
-   "titolo": "Germania, elezioni in Sassonia-Anhalt, alle 14 affluenza al 54,4%",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/06/germania-elezioni-in-sassonia-anhalt-alle-14-affluenza-al-544-_3e325eef-1b36-4c79-bacc-6a029988a436.html"
-  },
-  {
-   "data": "2026-09-06T13:27:22+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Uccisa al rave, in centinaia ai funerali dell'italiana uccisa in Svizzera",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/06/uccisa-al-rave-in-centinaia-ai-funerali-dellitaliana-uccisa-in-svizzera_32822317-1008-4d66-964c-0db083d46693.html"
-  },
-  {
-   "data": "2026-09-06T13:26:33+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il Vaticano sul fine vita dopo la legge regionale del Veneto: 'Meno armi e più cure palliative'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/06/il-vaticano-sul-fine-vita-dopo-la-legge-regionale-del-veneto-meno_10dca6fb-9e0a-4d02-88e1-4dde31d37b03.html"
-  },
-  {
-   "data": "2026-09-06T13:21:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Gp Monza, scintille alla partenza: contatto Leclerc-Hamilton, poi Charles finisce a muro",
-   "url": "https://www.adnkronos.com/sport/gp-monza-caos-scintille-partenza-hamilton-leclerc-charles-muro-cosa-e-successo_1KmYEAJFA4LtoXE4WQtXkx"
-  },
-  {
-   "data": "2026-09-06T13:20:32+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Hunter Biden apre alla corsa per la Casa Bianca nel 2028: \"Forse dovrò candidarmi\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/hunter-biden-figlio-joe-corsa-casa-bianca-candidatura_5zUChRdNMdlsAAGYBZRXPL"
-  },
-  {
-   "data": "2026-09-06T12:49:11+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Infantino si ricandiderà alla presidenza della Fifa nel 2027",
-   "url": "https://www.adnkronos.com/sport/calcio-infantino-fifa-mondiali-elezioni_3O4I6VbM9NjMhocBpfJs60"
-  },
-  {
-   "data": "2026-09-06T12:44:16+00:00",
-   "fonte": "ANSA",
-   "titolo": "F1: Da Sinner a Elkann e Chiellini, è parata di vip a Monza",
-   "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/09/06/f1-da-sinner-a-elkann-e-chiellini-e-parata-di-vip-a-monza_4aad23fa-3154-48ab-9e31-cf0133eb67ae.html"
-  },
-  {
-   "data": "2026-09-06T12:36:27+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Il Vaticano sul fine vita, 'meno fondi ad armi e più cure palliative'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/06/il-vaticano-sul-fine-vita-meno-fondi-ad-armi-e-piu-cure-palliative_90fdaa11-b09d-4243-9315-0093bbe17e02.html"
-  },
-  {
-   "data": "2026-09-06T12:33:17+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Tragedia al Rally della Val D'Aveto, morto un copilota",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/06/incidente-al-rally-della-val-daveto-morto-copilota_4ce4f9c5-61e3-432a-8cdc-bb0f67c3b9f4.html"
-  },
-  {
-   "data": "2026-09-06T12:30:06+00:00",
-   "fonte": "ANSA",
-   "titolo": "'Dilettevoli inedite eccedenze' di Mina, 10 canzoni e 10 foto mai viste prima",
-   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/06/dilettevoli-inedite-eccedenze-di-mina-10-canzoni-e-10-foto-mai-viste-prima_5e2b860a-7f5f-49f4-8a84-104bba3ea0ba.html"
-  },
-  {
-   "data": "2026-09-06T12:28:52+00:00",
-   "fonte": "ANSA",
-   "titolo": "La privacy a scuola, dal tema in classe all'intelligenza artificiale",
-   "url": "https://www.ansa.it/canale_legalita_scuola/speciali/back-to-school/2026/09/05/la-privacy-a-scuola-dal-tema-in-classe-allintelligenza-artificiale_27fbd783-5699-4fd8-b5c1-db6f06aa862d.html"
-  },
-  {
-   "data": "2026-09-06T12:12:17+00:00",
-   "fonte": "ANSA",
-   "titolo": "I big della politica a Cernobbio. Schlein: 'Pronti al voto in qualsiasi momento'.",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/06/i-big-della-politica-a-cernobbio-da-schlein-a-conte-a-renzi-e-pichetto_f9d24d56-2b6c-4af2-9b6e-83b524b551da.html"
   }
  ]
 }
