@@ -5,40 +5,118 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-06T18:18:58+00:00",
+  "generato": "2026-09-06T20:40:49+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-06T18:16:42+00:00",
-   "fonte": "ANSA CRONACA",
+   "data": "2026-09-06T20:18:23+00:00",
+   "fonte": "ANSA",
+   "titolo": "Elezioni in Germania, Afd trionfa con il 44,2% in Sassonia-Anhalt. Cdu al 18%",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/06/elezioni-in-germania-exit-poll-ard-in-sassonia-anhalt-afd-trionfa-con_243aead0-87e3-4c0c-aebc-18a1cdcd76be.html"
+  },
+  {
+   "data": "2026-09-06T20:17:30+00:00",
+   "fonte": "ANSA",
+   "titolo": "Serie A: in campo Juventus-Milan 0-1 DIRETTA",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/06/serie-a-juventus-milan-in-campo-alle-20.45-diretta_0c3a486d-1be2-4c91-b068-6c478760311a.html"
+  },
+  {
+   "data": "2026-09-06T20:12:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Proteste in Germania dopo voto per Afd in Sassonia‑Anhalt. L'allarme del Consiglio degli Ebrei: \"Siamo inorriditi\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/afd-proteste-germania-exit-poll-voto-sassonia-anhalt_6vUx73uM2F4Bq6zWAvhVpz"
+  },
+  {
+   "data": "2026-09-06T19:57:11+00:00",
+   "fonte": "ANSA",
+   "titolo": "Auto piomba sugli spettatori alla cronoscalata di Erice, due morti",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/06/auto-piomba-sugli-spettatori-alla-cronoscalata-di-erice-due-morti-_db81dade-0014-451d-8079-8a412eed95c5.html"
+  },
+  {
+   "data": "2026-09-06T19:32:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Iran, media: \"Gemelle ventenni arrestate e picchiate, una condannata a morte\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/iran-gemelle-sentenza-impiccagione-carcere-ragazze_225JcWtKiYyG6XQzIe8i7z"
+  },
+  {
+   "data": "2026-09-06T19:14:12+00:00",
+   "fonte": "ANSA",
+   "titolo": "Eurovolley: sfuma in finale il sogno del 'triplete' per le azzurre di Velasco",
+   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/06/pallavolo-italia-ko-in-finale-europei-alla-turchia_89d9cdb0-a169-40cb-a9bc-6aaf94c7e45c.html"
+  },
+  {
+   "data": "2026-09-06T19:05:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "AfD vola in Sassonia-Anhalt, Vannacci: \"L'Europa cambia, nessun dorma\"",
+   "url": "https://www.adnkronos.com/politica/afd-elezioni-sassonia-roberto-vannacci-merz-monti_2s0TAu4eaql022GD0GuN1q"
+  },
+  {
+   "data": "2026-09-06T18:58:30+00:00",
+   "fonte": "ANSA",
+   "titolo": "A Venezia Pallaoro con script di Bertolucci e la regista May el-Toukhy",
+   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/06/a-venezia-pallaoro-con-script-di-bertolucci-e-la-regista-may-el-toukhy_921d35a0-77c7-46a4-a6c8-4721f8f97130.html"
+  },
+  {
+   "data": "2026-09-06T18:46:17+00:00",
+   "fonte": "ANSA",
+   "titolo": "Greta Scarano sul red carpet a Venezia richiama l'attenzione contro i femminicidi",
+   "url": "https://www.ansa.it/sito/notizie/cultura/cinema/2026/09/06/greta-scarano-sul-red-carpet-a-venezia-richiama-lattenzione-contro-i-femminicidi_1af5caa3-0d48-4d08-9058-27019d4ca6aa.html"
+  },
+  {
+   "data": "2026-09-06T18:37:43+00:00",
+   "fonte": "ANSA",
+   "titolo": "Witkoff e Kushner a Kiev ma nessun passo avanti, 'la guerra continua'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/06/witkoff-e-kushner-a-kiev-ma-nessun-passo-avanti-la-guerra-continua_9e8144e1-56b1-40fc-8dbf-4d06cfe62ad0.html"
+  },
+  {
+   "data": "2026-09-06T18:37:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "AfD stravince elezioni in Sassonia-Anhalt, Salvini: \"E' democrazia\". Tajani: \"Pessima notizia\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/afd-elezioni-sassonia-reazioni-italia_3TUUQz0vsbjYdzZ3Jre6Fn"
+  },
+  {
+   "data": "2026-09-06T18:29:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Mostra di Venezia, Susan Sarandon sul tappeto rosso con la spilletta 'cessate il fuoco a Gaza'",
+   "url": "https://www.adnkronos.com/spettacoli/venezia-83-susan-sarandon-sul-tappeto-rosso-con-la-spilletta-cessate-fuoco-a-gaza_5jIbOXY5XtAtxhYStfmgBS"
+  },
+  {
+   "data": "2026-09-06T18:21:33+00:00",
+   "fonte": "ANSA",
+   "titolo": "Ansia per Di Battista, amici e famiglia mantengono il riserbo",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/06/ansia-per-di-battista-amici-e-famiglia-mantengono-il-riserbo-_0978aacf-84ca-48e7-a11d-987f72161750.html"
+  },
+  {
+   "data": "2026-09-06T18:21:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Reggio Emilia, al Festival di Emergency le testimonianze degli operatori in Ucraina: \"Attacchi tutti i giorni, conflitto totalizzante\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-al-festival-di-emergency-le-testimonianze-degli-operatori-attacchi-tutti-i-giorni-conflitto-totalizzante_74gNPvtsECNnFYupPJ3RO4"
+  },
+  {
+   "data": "2026-09-06T18:19:15+00:00",
+   "fonte": "ANSA",
    "titolo": "Firenze ricorda Lorena: \"Non abituiamoci a queste tragedie\"",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/06/firenze-ricorda-lorena-non-abituiamoci-a-queste-tragedie_2b434102-84a0-4d2a-a32b-ffb0375388d0.html"
   },
   {
-   "data": "2026-09-06T18:02:53+00:00",
+   "data": "2026-09-06T18:14:33+00:00",
    "fonte": "ANSA",
-   "titolo": "Eurovolley, in campo Italia-Turchia 2-2, la finale DIRETTA",
-   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/06/eurovolley-in-campo-italia-turchia-la-finale-diretta_89d9cdb0-a169-40cb-a9bc-6aaf94c7e45c.html"
+   "titolo": "La regina Margherita di Danimarca ricoverata in ospedale",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/06/la-regina-margherita-di-danimarca-ricoverata-in-ospedale_123054e3-00c7-402d-9b4b-c8e8ae5ce0cc.html"
   },
   {
-   "data": "2026-09-06T18:01:11+00:00",
-   "fonte": "ANSA",
-   "titolo": "Serie A: Bologna-Sassuolo 2-2",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/06/serie-a-bologna-sassuolo-2-2_74b4353b-0644-48f6-9a94-a27ef7c13890.html"
+   "data": "2026-09-06T18:14:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serie A, oggi Juventus-Milan 0-1 - Diretta",
+   "url": "https://www.adnkronos.com/sport/calcio-serie-a-juventus-milan-stadium_7FTYf24TFuKU1FdnxXvtlG"
   },
   {
    "data": "2026-09-06T17:50:23+00:00",
    "fonte": "ANSA",
    "titolo": "F1: Impresa Antonelli a Monza, storico trionfo dal 19mo posto: 'Un sogno che si realizza'",
    "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/09/06/f1-antonelli-nella-storia-parte-dal-fondo-e-vince-a-monza-un-sogno-che_677a8367-c213-45d7-899f-6cd6978f6433.html"
-  },
-  {
-   "data": "2026-09-06T17:50:00+00:00",
-   "fonte": "ANSA",
-   "titolo": "Elezioni in Germania, exit poll: Afd trionfa con il 44,4% in Sassonia-Anhalt. Cdu al 18,4%",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/06/elezioni-in-germania-exit-poll-ard-in-sassonia-anhalt-afd-trionfa-con_243aead0-87e3-4c0c-aebc-18a1cdcd76be.html"
   },
   {
    "data": "2026-09-06T17:48:30+00:00",
@@ -65,12 +143,6 @@
    "url": "https://www.ansa.it/canale_legalita_scuola/speciali/back-to-school/2026/09/06/riparte-la-scuola-il-ritorno-in-classe-scatta-da-bolzano_24869e94-0b5f-4862-9a50-a4817a7fd0c3.html"
   },
   {
-   "data": "2026-09-06T17:38:22+00:00",
-   "fonte": "ANSA",
-   "titolo": "Tregua di 72 ore in corso.  L'inviato statunitense Witkoff a Kiev: 'Russia e Ucraina dovranno fare dei compromessi'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/06/tregua-di-72-ore-in-corso.-linviato-statunitense-witkoff-a-kiev-colloqui-significativi-sostanziali_9e8144e1-56b1-40fc-8dbf-4d06cfe62ad0.html"
-  },
-  {
    "data": "2026-09-06T17:35:58+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Colpita a martellate dall'ex, è in prognosi riservata",
@@ -81,18 +153,6 @@
    "fonte": "ANSA",
    "titolo": "Consensi in calo e Iran, Trump alla prova di Dallas",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/06/consensi-in-calo-e-iran-trump-alla-prova-di-dallas_85574ef6-450b-4197-a11a-864eb1c1fb1d.html"
-  },
-  {
-   "data": "2026-09-06T17:31:43+00:00",
-   "fonte": "ANSA",
-   "titolo": "Incidente in una gara automobilistica in Sicilia ad Erice, morti due spettatori di 18 e 20 anni",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/06/incidente-in-una-gara-automobilistica-in-sicilia-due-giovani-sono-morti_db81dade-0014-451d-8079-8a412eed95c5.html"
-  },
-  {
-   "data": "2026-09-06T17:30:54+00:00",
-   "fonte": "ANSA",
-   "titolo": "La regina Margherita di Danimarca ricoverata in ospedale",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/06/la-regina-margherita-di-danimarca-ricoverata-in-ospedale_123054e3-00c7-402d-9b4b-c8e8ae5ce0cc.html"
   },
   {
    "data": "2026-09-06T17:28:56+00:00",
@@ -119,12 +179,6 @@
    "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/06/dilettevoli-inedite-eccedenze-di-mina-10-canzoni-e-10-foto-mai-viste-prima_5e2b860a-7f5f-49f4-8a84-104bba3ea0ba.html"
   },
   {
-   "data": "2026-09-06T16:37:44+00:00",
-   "fonte": "ANSA",
-   "titolo": "Venezia, Andrea Pallaoro: 'The Echo Chamber è il mio omaggio a Bertolucci'",
-   "url": "https://www.ansa.it/sito/notizie/cultura/cinema/2026/09/06/andrea-pallaoro-the-echo-chamber-e-il-mio-omaggio-a-bertolucci_d6ff3d6b-84f6-41ba-8ad1-880c36165120.html"
-  },
-  {
    "data": "2026-09-06T16:35:56+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "#AccadeOggi",
@@ -135,60 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Giorgetti: 'Pil verso l'1%, per le imprese i salari sono investimenti'",
    "url": "https://www.ansa.it/sito/notizie/economia/2026/09/06/giorgetti-pil-verso-l1-per-le-imprese-i-salari-sono-investimenti_73fa5546-eb46-44e1-b11a-bb19159f5a21.html"
-  },
-  {
-   "data": "2026-09-06T16:31:22+00:00",
-   "fonte": "ANSA",
-   "titolo": "Cernobbio boccia il campo largo. I leader, 'Meloni ha fallito'",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/06/cernobbio-boccia-il-campo-largo.-i-leader-meloni-ha-fallito-_f9d24d56-2b6c-4af2-9b6e-83b524b551da.html"
-  },
-  {
-   "data": "2026-09-06T16:23:07+00:00",
-   "fonte": "ANSA",
-   "titolo": "L'ultimo caldo, da mercoledì piogge e calo delle temperature",
-   "url": "https://www.ansa.it/canale_scienza/notizie/terra_poli/2026/09/06/lultimo-caldo-da-mercoledi-piogge-e-calo-delle-temperature-_142b28e7-aabc-4d69-82f4-ae3c89b5db41.html"
-  },
-  {
-   "data": "2026-09-06T16:06:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Elezioni in Sassonia-Anhalt, proiezioni: Afd trionfa con 44% dei voti. Siegmund: \"Abbiamo fatto la storia\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/elezioni-sassonia-afd-risultati-voto-oggi_4kmjiAmAzOwFmircSKKJBz"
-  },
-  {
-   "data": "2026-09-06T16:03:29+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Vasto incendio in sito ecoballe di Taverna del Re nel napoletano",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/06/vasto-incendio-in-sito-ecoballe-di-taverna-del-re-nel-napoletano_1f851531-5cc2-4cc3-9e59-abe208624e4a.html"
-  },
-  {
-   "data": "2026-09-06T16:00:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Antonelli, trionfo nel Gp di Monza e lacrime: \"Non so cosa ho fatto\". I tifosi: \"Adesso vinci il Mondiale\"",
-   "url": "https://www.adnkronos.com/sport/gp-monza-antonelli-piange-trionfo-gran-premio-italia_kPncWpdilZMi6XAr4gvDL"
-  },
-  {
-   "data": "2026-09-06T15:42:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Europei di pallavolo femminile, oggi la finale Italia-Turchia 2-2 (25-16, 22-25, 25-12, 21-25) - Diretta",
-   "url": "https://www.adnkronos.com/sport/pallavolo-italia-turchia-finale_30Pv7ZVrFj1mq5ocrWuesY"
-  },
-  {
-   "data": "2026-09-06T15:39:22+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Matrimonio 'Me contro Te', Rotondi: \"Nozze manzoniane, un po' circensi ma non mi scandalizzano\"",
-   "url": "https://www.adnkronos.com/cronaca/matrimonio-me-contro-te-nozze-milano-ultime-notizie_ZPMMQdBOeUiTHTqQAYupC"
-  },
-  {
-   "data": "2026-09-06T15:17:23+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Gp Monza, Antonelli trionfa e allunga nel Mondiale: ordine di arrivo e come cambia la classifica piloti dopo il Gran Premio d'Italia",
-   "url": "https://www.adnkronos.com/sport/gp-monza-antonelli-vince-rimonta-allinga-mondiale-piloti-formula-1-come-cambia-classifica_47ANoAFrtaYj30tYe7PEfz"
-  },
-  {
-   "data": "2026-09-06T15:17:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Matrimonio show dei 'Me contro Te', lo psicologo: \"Privato e spettacolo ormai si sovrappongono\"",
-   "url": "https://www.adnkronos.com/cronaca/me-contro-te-matrimonio-psicologo-critico-genitori_7jCNuPwuLSZw5oWBUUpIAI"
   }
  ]
 }
