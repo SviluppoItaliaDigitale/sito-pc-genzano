@@ -43,7 +43,7 @@
     {{- $faseLabel = "Prevenzione" -}}
     {{- $stato = .stato_verde -}}
   {{- end -}}
-  {{- with $allerta.ultimo_controllo }}{{ $verificato = dateFormat "02/01/2006" . }}{{ end -}}
+  {{- with $allerta.ultimo_controllo }}{{ $r := try (dateFormat "02/01/2006" .) }}{{ if not $r.Err }}{{ $verificato = $r.Value }}{{ end }}{{ end -}}
 {{- else if eq .dinamico "incendi" -}}
   {{- with $allerta.rischio_incendi -}}
     {{- $livAib := .livello | default "" -}}
@@ -59,7 +59,7 @@
 <th scope="row"><i class="bi {{ .icona }} me-1" aria-hidden="true"></i>{{ .rischio }}</th>
 <td><span class="mt-fase mt-fase-{{ $faseKey }}">{{ $faseLabel }}</span></td>
 <td>{{ $stato }}</td>
-<td>{{ if $verificato }}{{ if in $verificato "-" }}{{ dateFormat "02/01/2006" $verificato }}{{ else }}{{ $verificato }}{{ end }}{{ end }}</td>
+<td>{{ if $verificato }}{{ if in $verificato "-" }}{{ $r := try (dateFormat "02/01/2006" $verificato) }}{{ if not $r.Err }}{{ $r.Value }}{{ else }}{{ $verificato }}{{ end }}{{ else }}{{ $verificato }}{{ end }}{{ end }}</td>
 <td><a href="{{ .fonte_url | strings.TrimPrefix "/" | relURL }}">{{ .fonte_label }}</a></td>
 </tr>
 {{- end }}

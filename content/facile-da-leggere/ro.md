@@ -254,7 +254,7 @@ hreflang_xdefault: "/facile-da-leggere/"
 <li>ține animalul în lesă sau în cușca de transport;</li>
 <li>adu mâncare, apă și medicamentele animalului;</li>
 <li>adu carnetul de sănătate dacă îl ai;</li>
-<li>ia-l cu tine la zona de așteptare: animalele sunt permise.</li>
+<li>ia-l cu tine la <a href="/aree-attesa/">zona de așteptare</a>: animalele sunt permise.</li>
 </ul>
 <p><strong>Nu face aceste lucruri:</strong></p>
 <ul class="facile-elenco no">
@@ -326,6 +326,8 @@ hreflang_xdefault: "/facile-da-leggere/"
 <h2 style="color: #b45309;"><span class="icona" style="background: #b45309;">✉️</span> Vrei să ne scrii?</h2>
 <p>Dacă ai o întrebare care nu este urgentă, scrie la:</p>
 <p style="text-align: center; font-size: 1.1rem;"><a href="mailto:segreteria@protezionecivilegenzano.it">segreteria@protezionecivilegenzano.it</a></p>
+<p>Sau vino la sediul nostru:</p>
+<p style="text-align: center;"><strong lang="it">Via Sicilia 13-15</strong><br><span lang="it">Genzano di Roma</span></p>
 <p>Dacă este o urgență, nu scrie e-mail. Sună la <strong>112</strong>.</p>
 </div>
 
