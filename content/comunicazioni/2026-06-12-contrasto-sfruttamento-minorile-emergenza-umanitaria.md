@@ -11,9 +11,10 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-06-12-contrasto-sfruttamento-minorile-emergenza-umanitaria-facile"
 ---
 
-Il **12 giugno** è la [Giornata mondiale contro il lavoro minorile](https://www.ilo.org/resource/world-day-against-child-labour) dell'**Organizzazione Internazionale del Lavoro**. Ogni anno nel mondo oltre **160 milioni di bambini** sono impiegati in forme di lavoro che ne compromettono salute, istruzione, sviluppo. Un problema che appare distante, ma che tocca anche le emergenze umanitarie in cui la Protezione Civile italiana interviene come parte di operazioni internazionali.
+Il **12 giugno** è la [Giornata mondiale contro il lavoro minorile](https://www.ilo.org/resource/world-day-against-child-labour) dell'**Organizzazione Internazionale del Lavoro**. Ogni anno nel mondo quasi **138 milioni di bambini** sono impiegati in forme di lavoro che ne compromettono salute, istruzione, sviluppo. Un problema che appare distante, ma che tocca anche le emergenze umanitarie in cui la Protezione Civile italiana interviene come parte di operazioni internazionali.
 
 ## Perché è un tema di Protezione Civile
 
@@ -26,11 +27,11 @@ Il lavoro minorile non è un problema "solo" dei Paesi in via di sviluppo. Si in
 
 La **Protezione Civile italiana** partecipa a missioni internazionali (Ucraina 2022, terremoti in Turchia e Siria, alluvioni nei Balcani). Ha esperienza nel coordinamento con agenzie internazionali come UNICEF e OIM che si occupano di tutela minori.
 
-## I grandi numeri (OIL, ISTAT)
+## I grandi numeri (OIL-UNICEF 2024, ISTAT)
 
-- Nel mondo ci sono circa **160 milioni** di bambini lavoratori (5-17 anni).
-- Il **70%** è impiegato in agricoltura.
-- Il **50%** fa lavori definiti "pericolosi" (macchinari, sostanze chimiche, miniere).
+- Nel mondo ci sono quasi **138 milioni** di bambini lavoratori (5-17 anni), secondo le stime OIL-UNICEF pubblicate nel giugno 2025 sui dati 2024.
+- Il **61%** è impiegato in agricoltura.
+- **54 milioni** (circa il 39% di chi lavora) fanno lavori definiti "pericolosi" (macchinari, sostanze chimiche, miniere).
 - In Italia il **fenomeno esiste** anche se è ridotto rispetto ad altri Paesi europei: le stime parlano di **decine di migliaia** di minori in lavori non dichiarati.
 
 ## Cosa si intende per lavoro minorile
@@ -43,11 +44,11 @@ L'ILO distingue:
 
 ## In Italia: la cornice
 
-La normativa italiana fissa l'età minima per il lavoro a **15 anni** (con eccezioni per apprendistato e spettacolo). La scolarità è **obbligatoria fino a 16 anni**. Chi scopre situazioni di sfruttamento minorile può segnalare a:
+La normativa italiana fissa l'età minima per il lavoro a **16 anni**, coincidente con la fine dell'obbligo di istruzione (art. 1, comma 622, L. 296/2006). Prima dei 16 anni l'ammissione al lavoro è ammessa solo in casi specifici, come l'apprendistato per la qualifica e i percorsi di alternanza scuola-lavoro (PCTO), oltre alle deroghe per lo spettacolo. Chi scopre situazioni di sfruttamento minorile può segnalare:
 
-- **112** (emergenza).
-- **Numero pubblica utilità 114** (emergenza infanzia).
-- **Forze dell'ordine** e **Servizi sociali** territoriali.
+- al **112** se il minore è in **pericolo immediato**;
+- al **Numero pubblica utilità 114** (emergenza infanzia) per segnalazioni senza pericolo immediato;
+- alle **Forze dell'ordine** e ai **Servizi sociali** territoriali.
 
 ## Educazione come prima risposta
 
