@@ -83,6 +83,10 @@ Separa sempre, nel testo che lasci: **fatto accertato** / **ipotesi o stima** / 
 
 Ogni ente, associazione, persona pubblica o sigla citata va cercata con la denominazione tra virgolette (regola CLAUDE.md § «Web check obbligato»). Se non trovi riscontro non sciogliere sigle a indovinare: riporta la sigla come la leggi nella fonte.
 
+## Fatti istituzionali del Gruppo confermati dall'utente (06/09/2026)
+
+Le date della storia del Gruppo Comunale **non si mettono in discussione né si chiedono atti**: l'utente ha confermato che gli archivi non contengono i documenti degli anni Ottanta e Novanta e che le nozioni storiche valgono come fonte interna. Valori canonici: attività **dal 1981** (gruppo di radioamatori CB); **delibera del Consiglio comunale del 1991**, sindaco on. Gino Cesaroni (istituzione formale); **delibera del Consiglio comunale n. 31 del 31 luglio 2023**, costituzione ai sensi dell'art. 35 del D.Lgs. 1/2018 (documento in `static/manuali/delibera-cc-31-2023-costituzione-gruppo-comunale-pc-genzano.pdf`); iscrizione RUNTS con determina n. G14230 del 28/10/2024. Fonte canonica per ogni pagina: `content/chi-siamo/_index.md`. Un valore diverso in un'altra pagina è un errore di coerenza da correggere verso questi, non un rilievo da riaprire.
+
 ## Cosa NON fare
 
 - Non inventare una fonte per chiudere la verifica: un URL che non hai aperto non è una fonte.
