@@ -5,8 +5,8 @@
 # Usato dal partial Hugo `video-correlati.html` per renderizzare la
 # sezione 'Approfondimenti video' in fondo agli articoli pertinenti.
 #
-# Pagine coperte: 290 / Video unici usati: 251 /
-# Link totali: 942 (max 5 per pagina,
+# Pagine coperte: 290 / Video unici usati: 253 /
+# Link totali: 941 (max 5 per pagina,
 # soglia score >= 2.0).
 
 canali:
@@ -49,7 +49,7 @@ canali:
     nome: Geopop — divulgazione scientifica
     tematico_pc: false
     url: https://www.youtube.com/@geopop/videos
-    video_count: 1323
+    video_count: 1330
   ingv-terremoti:
     nome: INGV — Istituto Nazionale di Geofisica e Vulcanologia
     tematico_pc: true
@@ -89,7 +89,7 @@ canali:
     nome: Rai News
     tematico_pc: false
     url: https://www.youtube.com/@RaiNews/videos
-    video_count: 1787
+    video_count: 1802
   solarino-sismologo:
     nome: Stefano Solarino — sismologo INGV (divulgazione sismica)
     tematico_pc: true
@@ -5461,22 +5461,6 @@ pagine:
       score: 2.0
       titolo: L'incredibile filmato di una valanga
       url: https://youtu.be/2iTZkDUzhZo
-  comunicazioni/2026-08-26-scuole-ripresa-settembre-prepararsi:
-    title: 'Scuole di Genzano di Roma: riprendere a settembre con un Piano di Emergenza aggiornato'
-    url: /comunicazioni/2026-08-26-scuole-ripresa-settembre-prepararsi/
-    video:
-    - anchored:
-      - evacuazione
-      canale: abili-a-proteggere
-      id: jy4kGt-eFWg
-      is_lis: false
-      overlap:
-      - comunale
-      - esercitazione
-      - evacuazione
-      score: 2.0
-      titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
-      url: https://youtu.be/jy4kGt-eFWg
   comunicazioni/2026-08-27-nepal-tibet-colata-detritica-bhote-koshi:
     title: 'Nepal e Tibet, il ghiacciaio che crolla e la valle spazzata: cosa è successo e cosa insegna'
     url: /comunicazioni/2026-08-27-nepal-tibet-colata-detritica-bhote-koshi/
@@ -5674,18 +5658,6 @@ pagine:
       score: 2.2
       titolo: Attivazione e operatività del Nucleo Tecnico Nazionale – Esercitazione EXE PO 2026
       url: https://youtu.be/3kA8XEf2u6I
-    - anchored:
-      - esercitazione
-      canale: abili-a-proteggere
-      id: jy4kGt-eFWg
-      is_lis: false
-      overlap:
-      - comunale
-      - esercitazione
-      - evacuazione
-      score: 2.0
-      titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
-      url: https://youtu.be/jy4kGt-eFWg
   comunicazioni/2026-08-31-mtg-i2-satellite-fulmini-europa:
     title: 'Il satellite che vede i fulmini: cosa cambia per le allerte con MTG-I2'
     url: /comunicazioni/2026-08-31-mtg-i2-satellite-fulmini-europa/
@@ -5833,6 +5805,66 @@ pagine:
       score: 6.0
       titolo: Chi ha paura dei temporali?
       url: https://youtu.be/kT-m1l4haIQ
+  comunicazioni/2026-09-04-flex-sentinel-3c-vega-c-fotosintesi-spazio:
+    title: 'Il 15 settembre partono FLEX e Sentinel-3C: un satellite per misurare la fotosintesi'
+    url: /comunicazioni/2026-09-04-flex-sentinel-3c-vega-c-fotosintesi-spazio/
+    video:
+    - anchored:
+      - satellite
+      - satelliti
+      canale: link4universe
+      id: ENiPspSKxXM
+      is_lis: false
+      overlap:
+      - altri
+      - lancio
+      - satellite
+      - satelliti
+      score: 9.2
+      titolo: 'MEV-2 pronto al lancio : il satellite "meccanico" che ripara altri satelliti'
+      url: https://youtu.be/ENiPspSKxXM
+    - anchored:
+      - satellite
+      canale: link4universe
+      id: NNfrui8RRF4
+      is_lis: false
+      overlap:
+      - lancio
+      - satellite
+      score: 7.0
+      titolo: LIVE - Lancio SpaceX - Satellite di Spionaggio NROL - 179
+      url: https://youtu.be/NNfrui8RRF4
+    - anchored:
+      - satellite
+      canale: link4universe
+      id: T-wp_8A2eRE
+      is_lis: false
+      overlap:
+      - lancio
+      - satellite
+      score: 7.0
+      titolo: LIVE - Lancio RocketLab - satellite MIKURA-I
+      url: https://youtu.be/T-wp_8A2eRE
+    - anchored:
+      - satellite
+      canale: ingv-vulcani
+      id: -7lSBNfnToM
+      is_lis: false
+      overlap:
+      - satellite
+      score: 6.0
+      titolo: Etna, 18 febbraio 2021 – L’eruzione vista dal satellite
+      url: https://youtu.be/-7lSBNfnToM
+    - anchored:
+      - satellite
+      canale: ingv-vulcani
+      id: 0pcdcnhfG-E
+      is_lis: false
+      overlap:
+      - satellite
+      score: 6.0
+      titolo: Etna, 2 marzo 2021 – L’eruzione vista dal satellite
+      url: https://youtu.be/0pcdcnhfG-E
   comunicazioni/2026-09-04-fulmini-protezione-civile-autoprotezione-facile:
     title: 'Fulmini: cosa fare per stare al sicuro'
     url: /comunicazioni/2026-09-04-fulmini-protezione-civile-autoprotezione-facile/
@@ -7105,30 +7137,6 @@ pagine:
       score: 2.2
       titolo: Le attività esercitative in programma – Esercitazione EXE PO 2026
       url: https://youtu.be/yPBNi9QoXa0
-    - anchored:
-      - esercitazione
-      canale: abili-a-proteggere
-      id: jy4kGt-eFWg
-      is_lis: false
-      overlap:
-      - comunale
-      - esercitazione
-      - evacuazione
-      score: 2.0
-      titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
-      url: https://youtu.be/jy4kGt-eFWg
-    - anchored:
-      - esercitazione
-      canale: ingv-terremoti
-      id: qKfP_mrgJdc
-      is_lis: false
-      overlap:
-      - area
-      - esercitazione
-      - rischio
-      score: 2.0
-      titolo: NEAMWave 2023 - Esercitazione per rischio tsunami nell'area Euro-Mediterranea. INGV-Alessandro Amato
-      url: https://youtu.be/qKfP_mrgJdc
   comunicazioni/2026-11-19-animali-domestici-emergenze:
     title: 'Animali domestici in emergenza: piani, kit, responsabilità'
     url: /comunicazioni/2026-11-19-animali-domestici-emergenze/
@@ -9509,30 +9517,6 @@ pagine:
       score: 2.8
       titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
       url: https://youtu.be/Ia_Uf9i6BTk
-    - anchored:
-      - esercitazione
-      canale: abili-a-proteggere
-      id: jy4kGt-eFWg
-      is_lis: false
-      overlap:
-      - comunale
-      - esercitazione
-      - evacuazione
-      score: 2.0
-      titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
-      url: https://youtu.be/jy4kGt-eFWg
-    - anchored:
-      - esercitazione
-      canale: ingv-terremoti
-      id: qKfP_mrgJdc
-      is_lis: false
-      overlap:
-      - area
-      - esercitazione
-      - rischio
-      score: 2.0
-      titolo: NEAMWave 2023 - Esercitazione per rischio tsunami nell'area Euro-Mediterranea. INGV-Alessandro Amato
-      url: https://youtu.be/qKfP_mrgJdc
   facile-da-leggere:
     title: Facile da leggere
     url: /facile-da-leggere/

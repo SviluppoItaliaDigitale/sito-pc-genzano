@@ -3,7 +3,7 @@
 # Aggiornato periodicamente; usato da scripts/genera-video-correlati.py
 # per il cross-match con i contenuti del sito.
 #
-# Totale: 8779 video (18 canali).
+# Totale: 8801 video (18 canali).
 
 canali:
   abili-a-proteggere:
@@ -45,7 +45,7 @@ canali:
     nome: Geopop — divulgazione scientifica
     tematico_pc: false
     url: https://www.youtube.com/@geopop/videos
-    video_count: 1323
+    video_count: 1330
   ingv-terremoti:
     nome: INGV — Istituto Nazionale di Geofisica e Vulcanologia
     tematico_pc: true
@@ -85,7 +85,7 @@ canali:
     nome: Rai News
     tematico_pc: false
     url: https://www.youtube.com/@RaiNews/videos
-    video_count: 1787
+    video_count: 1802
   solarino-sismologo:
     nome: Stefano Solarino — sismologo INGV (divulgazione sismica)
     tematico_pc: true
@@ -12112,6 +12112,11 @@ video:
     id: -ee_68T7v0Q
     titolo: What's the difference between a mild hybrid, full hybrid, and plug-in hybrid? A comparison of the...
     url: https://youtu.be/-ee_68T7v0Q
+  geopop--f5CCdjG0yQ:
+    canale: geopop
+    id: -f5CCdjG0yQ
+    titolo: 'Ricordiamo Andrea #Camilleri per il suo compleanno con Luca #Zingaretti a PopCorner.'
+    url: https://youtu.be/-f5CCdjG0yQ
   geopop--h0agiD1BAQ:
     canale: geopop
     id: -h0agiD1BAQ
@@ -12307,6 +12312,11 @@ video:
     id: 1_ZyfIBil-Y
     titolo: 'How the Brain Communicates: A Journey Inside the Neuronal Network'
     url: https://youtu.be/1_ZyfIBil-Y
+  geopop-1famKvkfFKM:
+    canale: geopop
+    id: 1famKvkfFKM
+    titolo: Il primo treno solare
+    url: https://youtu.be/1famKvkfFKM
   geopop-1gl5CoVYlnY:
     canale: geopop
     id: 1gl5CoVYlnY
@@ -12757,6 +12767,11 @@ video:
     id: 5xVsJivx4V4
     titolo: 'È iniziato lo sversamento in mare dell''acqua di Fukushima: è davvero radioattiva? Facciamo chiarezza'
     url: https://youtu.be/5xVsJivx4V4
+  geopop-5xxfi6iTlfI:
+    canale: geopop
+    id: 5xxfi6iTlfI
+    titolo: 'Martedì 8 settembre alle 21:30 sul @NOVE9 arriva #geopopracconta ! Ci seguirete?'
+    url: https://youtu.be/5xxfi6iTlfI
   geopop-5yr_BB4m_9M:
     canale: geopop
     id: 5yr_BB4m_9M
@@ -13202,6 +13217,11 @@ video:
     id: ABswZpkL2SY
     titolo: Come funziona il Canadair e quando interviene nelle missioni antincendio?
     url: https://youtu.be/ABswZpkL2SY
+  geopop-AC25afy29hY:
+    canale: geopop
+    id: AC25afy29hY
+    titolo: 'Perché SETTEmbre si chiama così se è il 9° mese dell''anno? #settembre  #geopop #perte'
+    url: https://youtu.be/AC25afy29hY
   geopop-AC7WlvHZzIE:
     canale: geopop
     id: AC7WlvHZzIE
@@ -14447,6 +14467,11 @@ video:
     id: MZV5ADZqwis
     titolo: Come agisce la cocaina sui nostri corpo e cervello? Gli effetti dal punto di vista scientifico
     url: https://youtu.be/MZV5ADZqwis
+  geopop-Mf3Ma08FjmI:
+    canale: geopop
+    id: Mf3Ma08FjmI
+    titolo: 'Il periodo più importante della vita di un essere umano: i primi mille giorni, il periodo critico'
+    url: https://youtu.be/Mf3Ma08FjmI
   geopop-MgAEg79x1Dk:
     canale: geopop
     id: MgAEg79x1Dk
@@ -16377,6 +16402,11 @@ video:
     id: ebznV-0cKF4
     titolo: Costa Concordia, la ricostruzione del naufragio dal momento dell’impatto alla rimozione del relitto
     url: https://youtu.be/ebznV-0cKF4
+  geopop-ecipOnOURSA:
+    canale: geopop
+    id: ecipOnOURSA
+    titolo: 5 cose che forse non sai sull'abbronzatura
+    url: https://youtu.be/ecipOnOURSA
   geopop-edb77-kJMYY:
     canale: geopop
     id: edb77-kJMYY
@@ -16897,6 +16927,11 @@ video:
     id: jUFo1wcin5I
     titolo: Come avviene la costruzione delle scuole nell’Africa sub-sahariana e perché è così difficile
     url: https://youtu.be/jUFo1wcin5I
+  geopop-jV05dmLLvlU:
+    canale: geopop
+    id: jV05dmLLvlU
+    titolo: A cosa serve davvero la creatina? Ecco i dati dell’EFSA
+    url: https://youtu.be/jV05dmLLvlU
   geopop-je0D6N9xhSk:
     canale: geopop
     id: je0D6N9xhSk
@@ -31432,6 +31467,11 @@ video:
     id: 6Bn10PON6vs
     titolo: INTERVIEW WITH POPE LEO XIV
     url: https://youtu.be/6Bn10PON6vs
+  rai-news-6Bz2gq_iJVU:
+    canale: rai-news
+    id: 6Bz2gq_iJVU
+    titolo: Sversamento di gasolio nel Naviglio Grande a Milano ì, danni pesanti alla biodiversità
+    url: https://youtu.be/6Bz2gq_iJVU
   rai-news-6CCgeahnWM8:
     canale: rai-news
     id: 6CCgeahnWM8
@@ -31592,6 +31632,11 @@ video:
     id: 7FaN-DwcSVA
     titolo: Omicidio Kirk, le pallottole del killer tra videogames, meme e ideologia
     url: https://youtu.be/7FaN-DwcSVA
+  rai-news-7G_0hm4agGY:
+    canale: rai-news
+    id: 7G_0hm4agGY
+    titolo: 'L''Onu ridisegna il mondo: stop alle mappe che riducono l''Africa'
+    url: https://youtu.be/7G_0hm4agGY
   rai-news-7QO4yLEbJbM:
     canale: rai-news
     id: 7QO4yLEbJbM
@@ -31752,6 +31797,11 @@ video:
     id: 8MjAWLhRIWk
     titolo: 'L’aurora boreale vista dallo spazio durante la tempesta solare: “Era come navigare dentro la luce”'
     url: https://youtu.be/8MjAWLhRIWk
+  rai-news-8QJjT0l3RQU:
+    canale: rai-news
+    id: 8QJjT0l3RQU
+    titolo: Trionfo AfD in Sassonia
+    url: https://youtu.be/8QJjT0l3RQU
   rai-news-8Wb2Jyl6_Q0:
     canale: rai-news
     id: 8Wb2Jyl6_Q0
@@ -32202,6 +32252,11 @@ video:
     id: BmcPR3B42C0
     titolo: President Zelensky on Rainews 24, the full interview by Paolo Petrecca
     url: https://youtu.be/BmcPR3B42C0
+  rai-news-BnK_ebTC9f0:
+    canale: rai-news
+    id: BnK_ebTC9f0
+    titolo: 'Messico, esplode il materiale pirotecnico alla festa patronale #news'
+    url: https://youtu.be/BnK_ebTC9f0
   rai-news-Bous0stE1gU:
     canale: rai-news
     id: Bous0stE1gU
@@ -32257,6 +32312,11 @@ video:
     id: C5L9XXmSpio
     titolo: 'Sanremo2025, Noa e Mira Awad: "Cantiamo "Imagine" perché non siamo da sole a sognare la pace"'
     url: https://youtu.be/C5L9XXmSpio
+  rai-news-C5NUsBHy-vY:
+    canale: rai-news
+    id: C5NUsBHy-vY
+    titolo: Si riaprono le indagini sui delitti attribuiti al “mostro di Modena”
+    url: https://youtu.be/C5NUsBHy-vY
   rai-news-C5Xht1f_G7I:
     canale: rai-news
     id: C5Xht1f_G7I
@@ -32977,6 +33037,11 @@ video:
     id: GqnqrENjeTo
     titolo: Massimiliano Gioni is the new director of the New Museum in New York
     url: https://youtu.be/GqnqrENjeTo
+  rai-news-Gu0jkZRUmbs:
+    canale: rai-news
+    id: Gu0jkZRUmbs
+    titolo: 'Nanni Moretti torna a Venezia dopo 37 anni: l’ovazione in sala stampa lo commuove'
+    url: https://youtu.be/Gu0jkZRUmbs
   rai-news-GuFth89NbPs:
     canale: rai-news
     id: GuFth89NbPs
@@ -33922,6 +33987,11 @@ video:
     id: NVk_aPm27Vs
     titolo: Sanremo2025, Gabry Ponte alla consolle apre la serata finale del Festival
     url: https://youtu.be/NVk_aPm27Vs
+  rai-news-NXe9rXigzjU:
+    canale: rai-news
+    id: NXe9rXigzjU
+    titolo: 'Nanni Moretti torna a Venezia dopo 37 anni: l’ovazione in sala stampa lo commuove'
+    url: https://youtu.be/NXe9rXigzjU
   rai-news-NZVzo7YREEc:
     canale: rai-news
     id: NZVzo7YREEc
@@ -34037,6 +34107,11 @@ video:
     id: O3Gfj50c0nw
     titolo: Alluvione nel Goriziano, abitanti tratti in salvo con i gommoni
     url: https://youtu.be/O3Gfj50c0nw
+  rai-news-O3JOBbNWdIE:
+    canale: rai-news
+    id: O3JOBbNWdIE
+    titolo: 'Le gare di rally segnate dalla tragedia: quattro morti tra piloti e spettatori'
+    url: https://youtu.be/O3JOBbNWdIE
   rai-news-O6qhTMzyKHo:
     canale: rai-news
     id: O6qhTMzyKHo
@@ -34497,6 +34572,11 @@ video:
     id: R6gizM25MW8
     titolo: 'Sanremo2025: Francesca Michielin, le prime prove con l’orchestra'
     url: https://youtu.be/R6gizM25MW8
+  rai-news-R9VOipG49xc:
+    canale: rai-news
+    id: R9VOipG49xc
+    titolo: 'L''ultimo sms di Federico Vella alla mamma di Lorena: "Tua figlia è morta"'
+    url: https://youtu.be/R9VOipG49xc
   rai-news-RAbJLwEF65Q:
     canale: rai-news
     id: RAbJLwEF65Q
@@ -35232,6 +35312,11 @@ video:
     id: WfMed1g_wmg
     titolo: 'Mare Fuori 5, Clotilde Esposito è Silvia: “Le nostre storie sono le storie di tutti”'
     url: https://youtu.be/WfMed1g_wmg
+  rai-news-WiRccPM9szQ:
+    canale: rai-news
+    id: WiRccPM9szQ
+    titolo: 'L''ascesa della Afd: la destra nazionalista trionfa in Sassonia Anhalt'
+    url: https://youtu.be/WiRccPM9szQ
   rai-news-WjDzpvTJAXI:
     canale: rai-news
     id: WjDzpvTJAXI
@@ -35562,6 +35647,11 @@ video:
     id: ZBlGHZcwLas
     titolo: Mattarella and Meloni in Bologna and Modena to visit the victims of the attack
     url: https://youtu.be/ZBlGHZcwLas
+  rai-news-ZBynnJiLXAo:
+    canale: rai-news
+    id: ZBynnJiLXAo
+    titolo: 'Gli Oasis al Lido, Liam saluta i fan: “Essere qui? Biblico”. Noel risponde in italiano: “Bellissimo”'
+    url: https://youtu.be/ZBynnJiLXAo
   rai-news-ZDgG8tgmJRM:
     canale: rai-news
     id: ZDgG8tgmJRM
@@ -35957,6 +36047,11 @@ video:
     id: b68Y72H-vqk
     titolo: Jason Momoa con mamma e fidanzata alla prima del film su Minecraft
     url: https://youtu.be/b68Y72H-vqk
+  rai-news-b6RfIP_bIcY:
+    canale: rai-news
+    id: b6RfIP_bIcY
+    titolo: Epstein Files, indagine della Procura di Roma su italiani
+    url: https://youtu.be/b6RfIP_bIcY
   rai-news-b6WG8CDNUG4:
     canale: rai-news
     id: b6WG8CDNUG4
@@ -35967,6 +36062,11 @@ video:
     id: b7CsjRR7dwQ
     titolo: 'Pope Wojtyla: "If I''m wrong, you will correct me"'
     url: https://youtu.be/b7CsjRR7dwQ
+  rai-news-b9Ldu6J4XvM:
+    canale: rai-news
+    id: b9Ldu6J4XvM
+    titolo: 'L''ultimo sms dell''assassino alla mamma di Lorena: "Tua figlia è morta"'
+    url: https://youtu.be/b9Ldu6J4XvM
   rai-news-bA_Ym41gbR4:
     canale: rai-news
     id: bA_Ym41gbR4
@@ -37362,6 +37462,11 @@ video:
     id: lgWz3KsXCqM
     titolo: 'Il videomessaggio del romanista Dovbyk al piccolo eroe di Kyiv: "Artur, vieni all’Olimpico":'
     url: https://youtu.be/lgWz3KsXCqM
+  rai-news-li_zpGuNQNs:
+    canale: rai-news
+    id: li_zpGuNQNs
+    titolo: Putin incontra al Cremlino gli inviati Usa Kushner e Witkoff
+    url: https://youtu.be/li_zpGuNQNs
   rai-news-lk3o4VGKAU4:
     canale: rai-news
     id: lk3o4VGKAU4
@@ -38027,6 +38132,11 @@ video:
     id: q1yfbZy5K9Q
     titolo: Sanremo 2026 -  Levante alle prove con l'orchestra
     url: https://youtu.be/q1yfbZy5K9Q
+  rai-news-q47bX4ckfN4:
+    canale: rai-news
+    id: q47bX4ckfN4
+    titolo: 'Oasis a Venezia 83, la magia ritrovata di Liam e Noel: “Hanno riscoperto chi sono l’uno per l’altro”'
+    url: https://youtu.be/q47bX4ckfN4
   rai-news-q5TZsa4SW3M:
     canale: rai-news
     id: q5TZsa4SW3M
