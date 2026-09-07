@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/",
-  "generato": "2026-09-06T22:23:46+00:00",
+  "generato": "2026-09-07T09:46:59+00:00",
   "licenza": "Copernicus Emergency Management Service — dati pubblici",
   "nota": "Copia locale: l'API non espone CORS, il browser non può leggerla direttamente."
  },
@@ -18,7 +18,7 @@
    ],
    "eventTime": "2026-08-31T13:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-09-06T14:13:55.690558",
+   "lastUpdate": "2026-09-07T08:37:50.090750",
    "n_aois": 1,
    "n_products": 1,
    "name": "Wildfire in Trapezitsa Mountain, Greece"
@@ -50,7 +50,7 @@
    ],
    "eventTime": "2026-08-25T22:00:00",
    "gdacsId": "FL1104124",
-   "lastUpdate": "2026-09-05T18:43:33.735115",
+   "lastUpdate": "2026-09-07T07:54:23.464751",
    "n_aois": 6,
    "n_products": 6,
    "name": "Flood in Nepal"
@@ -132,7 +132,7 @@
    ],
    "eventTime": "2026-08-14T22:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-09-06T20:45:34.321875",
+   "lastUpdate": "2026-09-07T07:23:14.238143",
    "n_aois": 5,
    "n_products": 49,
    "name": "Wildfire in Montenegro and Bosnia and Herzegovina"
@@ -164,7 +164,7 @@
    ],
    "eventTime": "2026-08-13T12:55:00",
    "gdacsId": null,
-   "lastUpdate": "2026-09-02T07:28:32.393846",
+   "lastUpdate": "2026-09-07T08:18:21.772161",
    "n_aois": 3,
    "n_products": 10,
    "name": "Wildfire in Huertgen Forest, Germany and Belgium"
@@ -244,7 +244,7 @@
    ],
    "eventTime": "2026-08-02T10:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-09-02T19:41:44.085807",
+   "lastUpdate": "2026-09-07T08:42:05.970120",
    "n_aois": 4,
    "n_products": 41,
    "name": "Wildfire in Serbia"
