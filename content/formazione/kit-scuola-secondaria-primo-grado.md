@@ -10,7 +10,7 @@ Questo kit è pensato per i docenti della **scuola secondaria di primo grado** c
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e si prestano all'uso nelle ore di scienze, geografia, educazione civica e tecnologia.
 
-> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-primo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-primo-grado.zip) (~234 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-primo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-primo-grado.zip) (~245 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
 ---
 
@@ -876,6 +876,16 @@ In plenaria, per 20-30 minuti. Il docente pone il dilemma, la classe discute con
 Alla fine si chiede agli studenti di scrivere in 10 righe la propria posizione e giustificarla.
 
 ---
+
+## Laboratori di comunicazione e collaborazione
+
+Attività stampabili con spazi per le risposte e guida per il docente nella pagina successiva. Scegliere la fascia indicata nella singola scheda e adattare tempi e strumenti alla classe. Le schede sono incluse anche nei pacchetti da stampare e da scaricare.
+
+- [Quando un dato manca](/formazione/schede-stampabili/quando-un-dato-manca-secondaria1/) — 11–14 anni. Trattare un dato mancante senza trasformarlo in zero.
+- [Un messaggio perde pezzi](/formazione/schede-stampabili/un-messaggio-perde-pezzi-secondaria1/) — 11–14 anni. Verificare la fedeltà di una comunicazione.
+- [La batteria sulla carta](/formazione/schede-stampabili/la-batteria-sulla-carta-secondaria1/) — 11–14 anni. Calcolare un consumo e dichiarare i limiti del modello.
+- [La consegna accessibile](/formazione/schede-stampabili/la-consegna-accessibile-secondaria1/) — 11–14 anni. Verificare un messaggio senza dipendere solo dal colore.
+- [Il registro degli aggiornamenti](/formazione/schede-stampabili/il-registro-degli-aggiornamenti-secondaria1/) — 12–14 anni. Riconoscere una versione superata.
 
 ## Materiale consigliato
 
