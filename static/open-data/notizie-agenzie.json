@@ -5,11 +5,17 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-06T22:22:59+00:00",
+  "generato": "2026-09-07T04:43:28+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-07T04:34:40+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sciopero dei treni, stop di 24 ore da questa sera: disagi, cancellazioni e fasce garantite",
+   "url": "https://www.adnkronos.com/cronaca/sciopero-treni-disagi-circolazione-cancellazioni-fasce-garantite_1WtHSHkKzFbm25LNm62cep"
+  },
   {
    "data": "2026-09-06T22:04:07+00:00",
    "fonte": "ADNKRONOS",
@@ -123,12 +129,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "AfD stravince elezioni in Sassonia-Anhalt, Salvini: \"E' democrazia\". Tajani: \"Pessima notizia\"",
    "url": "https://www.adnkronos.com/internazionale/esteri/afd-elezioni-sassonia-reazioni-italia_3TUUQz0vsbjYdzZ3Jre6Fn"
-  },
-  {
-   "data": "2026-09-06T18:29:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Mostra di Venezia, Susan Sarandon sul tappeto rosso con la spilletta 'cessate il fuoco a Gaza'",
-   "url": "https://www.adnkronos.com/spettacoli/venezia-83-susan-sarandon-sul-tappeto-rosso-con-la-spilletta-cessate-fuoco-a-gaza_5jIbOXY5XtAtxhYStfmgBS"
   },
   {
    "data": "2026-09-06T18:21:33+00:00",
