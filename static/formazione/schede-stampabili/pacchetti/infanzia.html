@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pacchetto stampa: Scuola dell'Infanzia (3-6 anni) — 44 schede A4</title>
-  <meta name="description" content="Stampa in un click tutte le 44 schede stampabili della Scuola dell'Infanzia (3-6 anni). Pacchetto auto-aggiornato dal sito istituzionale.">
+  <title>Pacchetto stampa: Scuola dell'Infanzia (3-6 anni) — 51 schede A4</title>
+  <meta name="description" content="Stampa in un click tutte le 51 schede stampabili della Scuola dell'Infanzia (3-6 anni). Pacchetto auto-aggiornato dal sito istituzionale.">
   <meta name="robots" content="noindex,follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
@@ -1304,23 +1304,44 @@
       .bli-scelte { gap: 1.5rem; }
     }
   
+
+/* === stili scheda 23 === */
+@page laboratorio26 { size: A4; margin: 5mm; }
+    .scheda-page:has(> .lab26-header) { page: laboratorio26; }
+    .lab26 { font-size: 14px; line-height: 1.4; }
+    .lab26 h2 { color: #003366; font-size: 15px; line-height: 1.3; margin: 3mm 0 1.5mm; }
+    .lab26 p { margin: 2.5mm 0; }
+    .lab26 .lab26-scenario { border-left: 3px solid #003366; padding: 2mm 3mm; background: #f1f5f7; }
+    .lab26 .lab26-risposta { height: 25mm; border: 1px solid #687787; margin-bottom: 2mm; }
+    .lab26 .lab26-nota { border-top: 1px solid #687787; padding-top: 2mm; font-size: 12px; }
+    .lab26 .lab26-meta { font-size: 12px; }
+    .lab26 li { margin-bottom: 3mm; }
+    .lab26 .lab26-osservazioni { height: 12mm; border: 1px solid #687787; }
+    .lab26-header .scheda-titolo-principale { font-size: 22px; line-height: 1.2; }
+    .lab26-header .scheda-sottotitolo { font-size: 12px; }
+    @media print {
+      .lab26 { font-size: 10.5pt; }
+      .lab26 h2 { font-size: 11pt; }
+      .lab26 section { break-inside: avoid; }
+      .lab26 .lab26-scenario { background: white; }
+    }
   </style>
 </head>
 <body>
 
   <header class="pacchetto-toolbar no-print" role="banner">
     <a href="/formazione/schede-stampabili/" aria-label="Torna alla hub delle schede stampabili">← Torna alle schede</a>
-    <span class="pacchetto-titolo">Pacchetto stampa: Scuola dell'Infanzia · 44 schede A4</span>
-    <button type="button" onclick="window.print()" aria-label="Apri la finestra di stampa per tutte le 44 schede di Scuola dell'Infanzia">
-      🖨️ Stampa tutto (44 fogli A4)
+    <span class="pacchetto-titolo">Pacchetto stampa: Scuola dell'Infanzia · 51 schede A4</span>
+    <button type="button" onclick="window.print()" aria-label="Apri la finestra di stampa per tutte le 51 schede di Scuola dell'Infanzia">
+      🖨️ Stampa tutto (58 fogli A4)
     </button>
   </header>
 
   <section class="pacchetto-intro no-print" aria-labelledby="pacchetto-intro-h1">
     <h1 id="pacchetto-intro-h1">Pacchetto stampa — Scuola dell'Infanzia</h1>
     <p>
-      Questo pacchetto contiene <strong>44 schede stampabili</strong> della Scuola dell'Infanzia (3-6 anni),
-      per un totale di <strong>44 fogli A4</strong>.
+      Questo pacchetto contiene <strong>51 schede stampabili</strong> della Scuola dell'Infanzia (3-6 anni),
+      per un totale di <strong>58 fogli A4</strong>.
       Premi <strong>"Stampa tutto"</strong> in alto (oppure <kbd>Ctrl+P</kbd> su Windows/Linux, <kbd>Cmd+P</kbd> su Mac)
       per aprire la finestra di stampa. Per archiviare in digitale scegli <em>"Salva come PDF"</em> come stampante.
     </p>
@@ -1337,7 +1358,7 @@
   </section>
 
   <nav class="pacchetto-toc no-print" aria-label="Indice del pacchetto">
-    <h2>Indice — 44 schede in questo pacchetto</h2>
+    <h2>Indice — 51 schede in questo pacchetto</h2>
     <ol>
       <li><a href="#scheda-rubrica-valutativa-infanzia">Griglia di osservazione — Scuola dell'Infanzia</a></li>
       <li><a href="#scheda-vero-falso-infanzia">Vero o Falso con le Faccine</a></li>
@@ -1383,6 +1404,13 @@
       <li><a href="#scheda-volontariato-ambiente-infanzia">Da colorare: Volontariato e ambiente — Infanzia</a></li>
       <li><a href="#scheda-nodi-che-salvano-infanzia">Da colorare: I nodi che salvano — Infanzia</a></li>
       <li><a href="#scheda-blackout-infanzia">Quando va via la luce</a></li>
+      <li><a href="#scheda-la-mia-voce-arriva-anche-senza-parole-infanzia">La mia voce arriva anche senza parole</a> <span class="toc-meta">· 2 fogli</span></li>
+      <li><a href="#scheda-prima-ti-chiedo-infanzia">Prima ti chiedo</a> <span class="toc-meta">· 2 fogli</span></li>
+      <li><a href="#scheda-la-consegna-si-puo-ripetere-infanzia">La consegna si può ripetere</a> <span class="toc-meta">· 2 fogli</span></li>
+      <li><a href="#scheda-il-rumore-che-scegliamo-infanzia">Il rumore che scegliamo</a> <span class="toc-meta">· 2 fogli</span></li>
+      <li><a href="#scheda-due-modi-per-raccontare-infanzia">Due modi per raccontare</a> <span class="toc-meta">· 2 fogli</span></li>
+      <li><a href="#scheda-la-tartaruga-chiede-aiuto-infanzia">La tartaruga chiede aiuto</a> <span class="toc-meta">· 2 fogli</span></li>
+      <li><a href="#scheda-intrecci-di-carta-insieme-infanzia">Intrecci di carta, insieme</a> <span class="toc-meta">· 2 fogli</span></li>
     </ol>
   </nav>
 
@@ -3479,6 +3507,398 @@
       <span>Scheda "Quando va via la luce" · Infanzia 3-6 anni · Rev. 01 - Agosto 2026</span>
     </footer>
 
+  </article>
+</section>
+
+<section id="scheda-la-mia-voce-arriva-anche-senza-parole-infanzia" class="pacchetto-scheda" aria-label="Scheda: La mia voce arriva anche senza parole">
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">La mia voce arriva anche senza parole</h1>
+        <div class="scheda-sottotitolo">Infanzia · 3–6 anni</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <p class="lab26-meta">15 minuti · colori · <strong>Obiettivo:</strong> Esprimere un bisogno con parole, gesti o disegni.</p>
+      <p class="lab26-meta">Nome o simbolo: ____________________ Data: ______________</p>
+      <p class="lab26-scenario">L’ADULTO LEGGE: Lia vuole chiedere aiuto, ma le parole non escono. Può indicare, fare un gesto o disegnare.</p>
+      <section><h2>1. DISEGNA UNA MANO CHE CHIEDE AIUTO.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 1"></div></section>
+<section><h2>2. MOSTRA COME DIRESTI: HO BISOGNO DI TE.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 2"></div></section>
+<section><h2>3. DISEGNA UN ADULTO DELLA SCUOLA A CUI PUOI RIVOLGERTI.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 3"></div></section>
+      <p class="lab26-nota avvertenza">Attività di classe con il docente. Puoi rispondere parlando, indicando o disegnando. Non occorre raccontare esperienze personali.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>I01 · Scheda alunno · Rev. 1 · 07/09/2026</span></footer>
+  </article>
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h2 class="scheda-titolo-principale">La mia voce arriva anche senza parole</h2>
+        <div class="scheda-sottotitolo">Infanzia · 3–6 anni · Guida per il docente</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <h2>Obiettivo e materiali</h2>
+      <p>Esprimere un bisogno con parole, gesti o disegni. 15 minuti · colori. La durata è orientativa.</p>
+      <h2>Conduzione e adattamenti</h2>
+      <p class="istruzioni-docente">Accettare ogni modalità comunicativa. Non obbligare a parlare o raccontare paure personali. A 3 anni usare indicazione e disegno condiviso; a 5–6 inventare una breve scena.</p>
+      <h2>Come condurre il laboratorio</h2>
+      <ol>
+        <li>Presentare l’obiettivo e leggere insieme la situazione, in condizioni ordinarie.</li>
+        <li>Proporre una consegna alla volta. Lasciare tempo per domande e chiarimenti.</li>
+        <li>Accettare risposte orali, gestuali, grafiche o dettate; adattare strumenti e tempi.</li>
+        <li>Confrontare le risposte e invitare a migliorare il proprio lavoro, senza gare di velocità.</li>
+      </ol>
+      <h2>Risposte e criteri di osservazione</h2>
+      <p class="scheda-docente">Esito atteso: il bambino individua un modo per chiedere aiuto. Osservare se lo usa spontaneamente, dopo un modello o con supporto; non attribuire un voto alla timidezza.</p>
+      <h2>Appunti del docente</h2>
+      <p class="lab26-meta">Che cosa ha funzionato? Quale supporto riproporre? Annotare il lavoro del gruppo senza dati personali.</p>
+      <div class="lab26-osservazioni" role="img" aria-label="Spazio per gli appunti del docente"></div>
+
+      <p class="lab26-nota">Gli eventuali dati numerici sono inventati per il laboratorio. Le attività non sostituiscono il piano di emergenza scolastico.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>I01 · Guida docente · Rev. 1 · 07/09/2026</span></footer>
+  </article>
+</section>
+
+<section id="scheda-prima-ti-chiedo-infanzia" class="pacchetto-scheda" aria-label="Scheda: Prima ti chiedo">
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Prima ti chiedo</h1>
+        <div class="scheda-sottotitolo">Infanzia · 3–6 anni</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <p class="lab26-meta">15 minuti · colori · <strong>Obiettivo:</strong> Offrire aiuto rispettando la scelta altrui.</p>
+      <p class="lab26-meta">Nome o simbolo: ____________________ Data: ______________</p>
+      <p class="lab26-scenario">L’ADULTO LEGGE: Teo sta costruendo una torre di cubi. Ada vuole aiutarlo. Prima domanda: «Vuoi una mano?» Teo può dire sì oppure no.</p>
+      <section><h2>1. DISEGNA ADA CHE OFFRE AIUTO.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 1"></div></section>
+<section><h2>2. L’ADULTO DICE «NO, GRAZIE». PROVA A RISPONDERE.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 2"></div></section>
+<section><h2>3. DISEGNA DUE PERSONE CHE COLLABORANO.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 3"></div></section>
+      <p class="lab26-nota avvertenza">Attività di classe con il docente. Puoi rispondere parlando, indicando o disegnando. Non occorre raccontare esperienze personali.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>I02 · Scheda alunno · Rev. 1 · 07/09/2026</span></footer>
+  </article>
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h2 class="scheda-titolo-principale">Prima ti chiedo</h2>
+        <div class="scheda-sottotitolo">Infanzia · 3–6 anni · Guida per il docente</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <h2>Obiettivo e materiali</h2>
+      <p>Offrire aiuto rispettando la scelta altrui. 15 minuti · colori. La durata è orientativa.</p>
+      <h2>Conduzione e adattamenti</h2>
+      <p class="istruzioni-docente">Gioco ordinario con cubi grandi, non simulazione di soccorso. Modellare «Va bene, sono qui». Non affidare ai bambini il sostegno fisico di compagni.</p>
+      <h2>Come condurre il laboratorio</h2>
+      <ol>
+        <li>Presentare l’obiettivo e leggere insieme la situazione, in condizioni ordinarie.</li>
+        <li>Proporre una consegna alla volta. Lasciare tempo per domande e chiarimenti.</li>
+        <li>Accettare risposte orali, gestuali, grafiche o dettate; adattare strumenti e tempi.</li>
+        <li>Confrontare le risposte e invitare a migliorare il proprio lavoro, senza gare di velocità.</li>
+      </ol>
+      <h2>Risposte e criteri di osservazione</h2>
+      <p class="scheda-docente">Accettare un rifiuto e chiedere prima di intervenire sono i due comportamenti osservabili. Per i più piccoli basta un gesto di offerta e una pausa di ascolto.</p>
+      <h2>Appunti del docente</h2>
+      <p class="lab26-meta">Che cosa ha funzionato? Quale supporto riproporre? Annotare il lavoro del gruppo senza dati personali.</p>
+      <div class="lab26-osservazioni" role="img" aria-label="Spazio per gli appunti del docente"></div>
+
+      <p class="lab26-nota">Gli eventuali dati numerici sono inventati per il laboratorio. Le attività non sostituiscono il piano di emergenza scolastico.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>I02 · Guida docente · Rev. 1 · 07/09/2026</span></footer>
+  </article>
+</section>
+
+<section id="scheda-la-consegna-si-puo-ripetere-infanzia" class="pacchetto-scheda" aria-label="Scheda: La consegna si può ripetere">
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">La consegna si può ripetere</h1>
+        <div class="scheda-sottotitolo">Infanzia · 4–6 anni</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <p class="lab26-meta">15 minuti · matita · <strong>Obiettivo:</strong> Chiedere una spiegazione invece di indovinare.</p>
+      <p class="lab26-meta">Nome o simbolo: ____________________ Data: ______________</p>
+      <p class="lab26-scenario">L’ADULTO LEGGE: «Metti il foglio nel contenitore». Ma ci sono due contenitori! Nina domanda: «Quale?» L’adulto risponde: «Quello sul tavolo».</p>
+      <section><h2>1. INDICA I DUE CONTENITORI DISEGNATI DALL’ADULTO.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 1"></div></section>
+<section><h2>2. PROVA A DIRE O INDICARE: NON HO CAPITO.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 2"></div></section>
+<section><h2>3. DISEGNA IL FOGLIO NEL POSTO SCELTO.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 3"></div></section>
+      <p class="lab26-nota avvertenza">Attività di classe con il docente. Puoi rispondere parlando, indicando o disegnando. Non occorre raccontare esperienze personali.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>I03 · Scheda alunno · Rev. 1 · 07/09/2026</span></footer>
+  </article>
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h2 class="scheda-titolo-principale">La consegna si può ripetere</h2>
+        <div class="scheda-sottotitolo">Infanzia · 4–6 anni · Guida per il docente</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <h2>Obiettivo e materiali</h2>
+      <p>Chiedere una spiegazione invece di indovinare. 15 minuti · matita. La durata è orientativa.</p>
+      <h2>Conduzione e adattamenti</h2>
+      <p class="istruzioni-docente">Disegnare due grandi rettangoli nel primo spazio. Ripetere con una consegna quotidiana ambigua e poi precisa. Non usare sirene o urgenza.</p>
+      <h2>Come condurre il laboratorio</h2>
+      <ol>
+        <li>Presentare l’obiettivo e leggere insieme la situazione, in condizioni ordinarie.</li>
+        <li>Proporre una consegna alla volta. Lasciare tempo per domande e chiarimenti.</li>
+        <li>Accettare risposte orali, gestuali, grafiche o dettate; adattare strumenti e tempi.</li>
+        <li>Confrontare le risposte e invitare a migliorare il proprio lavoro, senza gare di velocità.</li>
+      </ol>
+      <h2>Risposte e criteri di osservazione</h2>
+      <p class="scheda-docente">La richiesta di chiarimento è una competenza, non disobbedienza. A 4 anni proporre due opzioni visibili; a 6 far formulare una domanda.</p>
+      <h2>Appunti del docente</h2>
+      <p class="lab26-meta">Che cosa ha funzionato? Quale supporto riproporre? Annotare il lavoro del gruppo senza dati personali.</p>
+      <div class="lab26-osservazioni" role="img" aria-label="Spazio per gli appunti del docente"></div>
+
+      <p class="lab26-nota">Gli eventuali dati numerici sono inventati per il laboratorio. Le attività non sostituiscono il piano di emergenza scolastico.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>I03 · Guida docente · Rev. 1 · 07/09/2026</span></footer>
+  </article>
+</section>
+
+<section id="scheda-il-rumore-che-scegliamo-infanzia" class="pacchetto-scheda" aria-label="Scheda: Il rumore che scegliamo">
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Il rumore che scegliamo</h1>
+        <div class="scheda-sottotitolo">Infanzia · 3–6 anni</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <p class="lab26-meta">15 minuti · foglio · <strong>Obiettivo:</strong> Comunicare quando uno stimolo è fastidioso.</p>
+      <p class="lab26-meta">Nome o simbolo: ____________________ Data: ______________</p>
+      <p class="lab26-scenario">L’ADULTO LEGGE: Nel gioco possiamo dire «BASTA» o mostrarlo con la mano. Un suono può piacere a una persona e dare fastidio a un’altra.</p>
+      <section><h2>1. DISEGNA UN SUONO CHE TI PIACE.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 1"></div></section>
+<section><h2>2. INVENTA CON L’ADULTO UN GESTO PER FERMARE IL GIOCO.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 2"></div></section>
+<section><h2>3. PROVA IL GESTO E GUARDA L’ADULTO CHE SI FERMA.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 3"></div></section>
+      <p class="lab26-nota avvertenza">Attività di classe con il docente. Puoi rispondere parlando, indicando o disegnando. Non occorre raccontare esperienze personali.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>I04 · Scheda alunno · Rev. 1 · 07/09/2026</span></footer>
+  </article>
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h2 class="scheda-titolo-principale">Il rumore che scegliamo</h2>
+        <div class="scheda-sottotitolo">Infanzia · 3–6 anni · Guida per il docente</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <h2>Obiettivo e materiali</h2>
+      <p>Comunicare quando uno stimolo è fastidioso. 15 minuti · foglio. La durata è orientativa.</p>
+      <h2>Conduzione e adattamenti</h2>
+      <p class="istruzioni-docente">Nessun suono forte o improvviso; bastano voce bassa e disegni. La possibilità di fermarsi riguarda questo gioco, non sostituisce il piano scolastico. Concordare adattamenti per sensibilità sensoriali.</p>
+      <h2>Come condurre il laboratorio</h2>
+      <ol>
+        <li>Presentare l’obiettivo e leggere insieme la situazione, in condizioni ordinarie.</li>
+        <li>Proporre una consegna alla volta. Lasciare tempo per domande e chiarimenti.</li>
+        <li>Accettare risposte orali, gestuali, grafiche o dettate; adattare strumenti e tempi.</li>
+        <li>Confrontare le risposte e invitare a migliorare il proprio lavoro, senza gare di velocità.</li>
+      </ol>
+      <h2>Risposte e criteri di osservazione</h2>
+      <p class="scheda-docente">Non esistono preferenze corrette o sbagliate. Verificare che l’adulto rispetti il segnale e che il bambino possa scegliere di non partecipare.</p>
+      <h2>Appunti del docente</h2>
+      <p class="lab26-meta">Che cosa ha funzionato? Quale supporto riproporre? Annotare il lavoro del gruppo senza dati personali.</p>
+      <div class="lab26-osservazioni" role="img" aria-label="Spazio per gli appunti del docente"></div>
+
+      <p class="lab26-nota">Gli eventuali dati numerici sono inventati per il laboratorio. Le attività non sostituiscono il piano di emergenza scolastico.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>I04 · Guida docente · Rev. 1 · 07/09/2026</span></footer>
+  </article>
+</section>
+
+<section id="scheda-due-modi-per-raccontare-infanzia" class="pacchetto-scheda" aria-label="Scheda: Due modi per raccontare">
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Due modi per raccontare</h1>
+        <div class="scheda-sottotitolo">Infanzia · 4–6 anni</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <p class="lab26-meta">20 minuti · colori · <strong>Obiettivo:</strong> Riconoscere che lo stesso messaggio può avere forme diverse.</p>
+      <p class="lab26-meta">Nome o simbolo: ____________________ Data: ______________</p>
+      <p class="lab26-scenario">L’ADULTO LEGGE: Un cartoncino dice «QUI SI DISEGNA». Un altro mostra una matita. Possono aiutare persone diverse a capire la stessa cosa.</p>
+      <section><h2>1. DISEGNA UNA MATITA GRANDE.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 1"></div></section>
+<section><h2>2. L’ADULTO SCRIVE QUI SI DISEGNA. AGGIUNGI IL TUO SEGNO.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 2"></div></section>
+<section><h2>3. MOSTRA IL FOGLIO A UN COMPAGNO: CHE COSA CAPISCE?</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 3"></div></section>
+      <p class="lab26-nota avvertenza">Attività di classe con il docente. Puoi rispondere parlando, indicando o disegnando. Non occorre raccontare esperienze personali.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>I05 · Scheda alunno · Rev. 1 · 07/09/2026</span></footer>
+  </article>
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h2 class="scheda-titolo-principale">Due modi per raccontare</h2>
+        <div class="scheda-sottotitolo">Infanzia · 4–6 anni · Guida per il docente</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <h2>Obiettivo e materiali</h2>
+      <p>Riconoscere che lo stesso messaggio può avere forme diverse. 20 minuti · colori. La durata è orientativa.</p>
+      <h2>Conduzione e adattamenti</h2>
+      <p class="istruzioni-docente">Attività su cartelli di gioco, senza inventare segnaletica di emergenza. Trascrivere la frase nello spazio. Accettare simboli personali e verificare insieme il significato.</p>
+      <h2>Come condurre il laboratorio</h2>
+      <ol>
+        <li>Presentare l’obiettivo e leggere insieme la situazione, in condizioni ordinarie.</li>
+        <li>Proporre una consegna alla volta. Lasciare tempo per domande e chiarimenti.</li>
+        <li>Accettare risposte orali, gestuali, grafiche o dettate; adattare strumenti e tempi.</li>
+        <li>Confrontare le risposte e invitare a migliorare il proprio lavoro, senza gare di velocità.</li>
+      </ol>
+      <h2>Risposte e criteri di osservazione</h2>
+      <p class="scheda-docente">Osservare se il bambino associa messaggio e immagine. Se l’altro non comprende, cambiare il disegno insieme; non giudicare la qualità grafica.</p>
+      <h2>Appunti del docente</h2>
+      <p class="lab26-meta">Che cosa ha funzionato? Quale supporto riproporre? Annotare il lavoro del gruppo senza dati personali.</p>
+      <div class="lab26-osservazioni" role="img" aria-label="Spazio per gli appunti del docente"></div>
+
+      <p class="lab26-nota">Gli eventuali dati numerici sono inventati per il laboratorio. Le attività non sostituiscono il piano di emergenza scolastico.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>I05 · Guida docente · Rev. 1 · 07/09/2026</span></footer>
+  </article>
+</section>
+
+<section id="scheda-la-tartaruga-chiede-aiuto-infanzia" class="pacchetto-scheda" aria-label="Scheda: La tartaruga chiede aiuto">
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">La tartaruga chiede aiuto</h1>
+        <div class="scheda-sottotitolo">Infanzia · 3–6 anni</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <p class="lab26-meta">20 minuti · colori e carta · <strong>Obiettivo:</strong> Chiedere aiuto e collaborare con un adulto.</p>
+      <p class="lab26-meta">Nome o simbolo: ____________________ Data: ______________</p>
+      <p class="lab26-scenario">Il docente legge e mostra il riparo previsto nella propria aula. Se la terra trema, mi riparo sotto il banco o tavolo individuato, lontano dai vetri. Non corro verso le scale. Dopo la scossa seguo le indicazioni dell’adulto e il piano della scuola. Se ho paura posso dirlo: gli adulti mi aiutano.</p>
+      <section><h2>1. Disegna il riparo che il docente ti ha mostrato.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 1"></div></section>
+<section><h2>2. Mostra come chiedere aiuto, anche senza parlare.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 2"></div></section>
+<section><h2>3. Disegna te e il docente che seguite le indicazioni della scuola.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 3"></div></section>
+      <p class="lab26-nota avvertenza">Prima dell’attività il docente individua riparo e adattamenti secondo il piano scolastico. Nessuna prova improvvisa. Puoi chiedere aiuto anche senza parlare.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>R01 · Scheda alunno · Rev. 1 · 07/09/2026</span></footer>
+  </article>
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h2 class="scheda-titolo-principale">La tartaruga chiede aiuto</h2>
+        <div class="scheda-sottotitolo">Infanzia · 3–6 anni · Guida per il docente</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <h2>Obiettivo e materiali</h2>
+      <p>Chiedere aiuto e collaborare con un adulto. 20 minuti · colori e carta. La durata è orientativa.</p>
+      <h2>Conduzione e adattamenti</h2>
+      <p class="istruzioni-docente">Prima dell’uso il referente scolastico conferma riparo, modalità di protezione e successiva uscita secondo il piano locale. Non imporre a tutti la stessa postura: concordare gli adattamenti. Nessuna esercitazione improvvisa. La metafora non deve diventare promessa di protezione assoluta.</p>
+      <h2>Come condurre il laboratorio</h2>
+      <ol>
+        <li>Presentare l’obiettivo e leggere insieme la situazione, in condizioni ordinarie.</li>
+        <li>Proporre una consegna alla volta. Lasciare tempo per domande e chiarimenti.</li>
+        <li>Accettare risposte orali, gestuali, grafiche o dettate; adattare strumenti e tempi.</li>
+        <li>Confrontare le risposte e invitare a migliorare il proprio lavoro, senza gare di velocità.</li>
+      </ol>
+      <h2>Risposte e criteri di osservazione</h2>
+      <p class="scheda-docente">Osservare la richiesta di aiuto, anche gestuale, e la partecipazione con il supporto concordato. Non valutare la paura, la velocità o la qualità del disegno.</p>
+      <h2>Appunti del docente</h2>
+      <p class="lab26-meta">Che cosa ha funzionato? Quale supporto riproporre? Annotare il lavoro del gruppo senza dati personali.</p>
+      <div class="lab26-osservazioni" role="img" aria-label="Spazio per gli appunti del docente"></div>
+      <p class="lab26-meta">Riferimento: <a href="https://www.protezionecivile.gov.it/it/approfondimento/in-caso-di-terremoto/">Dipartimento della Protezione Civile: in caso di terremoto</a> (consultato il 7 settembre 2026). Il piano della scuola definisce le procedure locali.</p>
+      <p class="lab26-nota">Gli eventuali dati numerici sono inventati per il laboratorio. Le attività non sostituiscono il piano di emergenza scolastico.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>R01 · Guida docente · Rev. 1 · 07/09/2026</span></footer>
+  </article>
+</section>
+
+<section id="scheda-intrecci-di-carta-insieme-infanzia" class="pacchetto-scheda" aria-label="Scheda: Intrecci di carta, insieme">
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Intrecci di carta, insieme</h1>
+        <div class="scheda-sottotitolo">Infanzia · 4–6 anni</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <p class="lab26-meta">20 minuti · colori e carta · <strong>Obiettivo:</strong> Chiedere aiuto e collaborare con un adulto.</p>
+      <p class="lab26-meta">Nome o simbolo: ____________________ Data: ______________</p>
+      <p class="lab26-scenario">Facciamo un lavoro di manualità con strisce larghe di carta. È un gioco da tavolo insieme all’adulto. Non serve a legare persone o sostenere pesi.</p>
+      <section><h2>1. L’adulto prepara due strisce larghe. Appoggiale a croce sul tavolo.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 1"></div></section>
+<section><h2>2. L’adulto prepara una base con tagli larghi. Passa una striscia sopra e sotto, con il suo aiuto.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 2"></div></section>
+<section><h2>3. Disegna il tuo intreccio e racconta a chi hai chiesto aiuto.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 3"></div></section>
+      <p class="lab26-nota avvertenza">L’adulto prepara e taglia la carta. Si lavora insieme al tavolo, senza corde o nastri intorno al corpo e senza piccoli pezzi per chi li porta alla bocca.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>R02 · Scheda alunno · Rev. 1 · 07/09/2026</span></footer>
+  </article>
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h2 class="scheda-titolo-principale">Intrecci di carta, insieme</h2>
+        <div class="scheda-sottotitolo">Infanzia · 4–6 anni · Guida per il docente</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <h2>Obiettivo e materiali</h2>
+      <p>Chiedere aiuto e collaborare con un adulto. 20 minuti · colori e carta. La durata è orientativa.</p>
+      <h2>Conduzione e adattamenti</h2>
+      <p class="istruzioni-docente">Preparazione e uso delle forbici a carico dell’adulto. Nessuna corda, cappio, nastro intorno al corpo o piccoli pezzi per chi li porta alla bocca. A 4 anni usare solo incrocio; a 5–6 intreccio assistito. Valutare alternanza e collaborazione, non tenuta.</p>
+      <h2>Come condurre il laboratorio</h2>
+      <ol>
+        <li>Presentare l’obiettivo e leggere insieme la situazione, in condizioni ordinarie.</li>
+        <li>Proporre una consegna alla volta. Lasciare tempo per domande e chiarimenti.</li>
+        <li>Accettare risposte orali, gestuali, grafiche o dettate; adattare strumenti e tempi.</li>
+        <li>Confrontare le risposte e invitare a migliorare il proprio lavoro, senza gare di velocità.</li>
+      </ol>
+      <h2>Risposte e criteri di osservazione</h2>
+      <p class="scheda-docente">Osservare la richiesta di aiuto, anche gestuale, e la partecipazione con il supporto concordato. Non valutare la paura, la velocità o la qualità del disegno.</p>
+      <h2>Appunti del docente</h2>
+      <p class="lab26-meta">Che cosa ha funzionato? Quale supporto riproporre? Annotare il lavoro del gruppo senza dati personali.</p>
+      <div class="lab26-osservazioni" role="img" aria-label="Spazio per gli appunti del docente"></div>
+
+      <p class="lab26-nota">Gli eventuali dati numerici sono inventati per il laboratorio. Le attività non sostituiscono il piano di emergenza scolastico.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>R02 · Guida docente · Rev. 1 · 07/09/2026</span></footer>
   </article>
 </section>
   </main>

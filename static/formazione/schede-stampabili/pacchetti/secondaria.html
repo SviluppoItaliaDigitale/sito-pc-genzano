@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pacchetto stampa: Scuola Secondaria di I grado (11-13 anni) — 38 schede A4</title>
-  <meta name="description" content="Stampa in un click tutte le 38 schede stampabili della Scuola Secondaria di I grado (11-13 anni). Pacchetto auto-aggiornato dal sito istituzionale.">
+  <title>Pacchetto stampa: Scuola Secondaria di I grado (11-13 anni) — 43 schede A4</title>
+  <meta name="description" content="Stampa in un click tutte le 43 schede stampabili della Scuola Secondaria di I grado (11-13 anni). Pacchetto auto-aggiornato dal sito istituzionale.">
   <meta name="robots" content="noindex,follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
@@ -1170,23 +1170,44 @@
     .scheda-h2 { font-size: 1rem; margin: 0.6rem 0 0.25rem; }
     @media (max-width: 580px) { .due-colonne { grid-template-columns: 1fr; } }
   
+
+/* === stili scheda 24 === */
+@page laboratorio26 { size: A4; margin: 5mm; }
+    .scheda-page:has(> .lab26-header) { page: laboratorio26; }
+    .lab26 { font-size: 14px; line-height: 1.4; }
+    .lab26 h2 { color: #003366; font-size: 15px; line-height: 1.3; margin: 3mm 0 1.5mm; }
+    .lab26 p { margin: 2.5mm 0; }
+    .lab26 .lab26-scenario { border-left: 3px solid #003366; padding: 2mm 3mm; background: #f1f5f7; }
+    .lab26 .lab26-risposta { height: 25mm; border: 1px solid #687787; margin-bottom: 2mm; }
+    .lab26 .lab26-nota { border-top: 1px solid #687787; padding-top: 2mm; font-size: 12px; }
+    .lab26 .lab26-meta { font-size: 12px; }
+    .lab26 li { margin-bottom: 3mm; }
+    .lab26 .lab26-osservazioni { height: 12mm; border: 1px solid #687787; }
+    .lab26-header .scheda-titolo-principale { font-size: 22px; line-height: 1.2; }
+    .lab26-header .scheda-sottotitolo { font-size: 12px; }
+    @media print {
+      .lab26 { font-size: 10.5pt; }
+      .lab26 h2 { font-size: 11pt; }
+      .lab26 section { break-inside: avoid; }
+      .lab26 .lab26-scenario { background: white; }
+    }
   </style>
 </head>
 <body>
 
   <header class="pacchetto-toolbar no-print" role="banner">
     <a href="/formazione/schede-stampabili/" aria-label="Torna alla hub delle schede stampabili">← Torna alle schede</a>
-    <span class="pacchetto-titolo">Pacchetto stampa: Scuola Secondaria di I grado · 38 schede A4</span>
-    <button type="button" onclick="window.print()" aria-label="Apri la finestra di stampa per tutte le 38 schede di Scuola Secondaria di I grado">
-      🖨️ Stampa tutto (38 fogli A4)
+    <span class="pacchetto-titolo">Pacchetto stampa: Scuola Secondaria di I grado · 43 schede A4</span>
+    <button type="button" onclick="window.print()" aria-label="Apri la finestra di stampa per tutte le 43 schede di Scuola Secondaria di I grado">
+      🖨️ Stampa tutto (48 fogli A4)
     </button>
   </header>
 
   <section class="pacchetto-intro no-print" aria-labelledby="pacchetto-intro-h1">
     <h1 id="pacchetto-intro-h1">Pacchetto stampa — Scuola Secondaria di I grado</h1>
     <p>
-      Questo pacchetto contiene <strong>38 schede stampabili</strong> della Scuola Secondaria di I grado (11-13 anni),
-      per un totale di <strong>38 fogli A4</strong>.
+      Questo pacchetto contiene <strong>43 schede stampabili</strong> della Scuola Secondaria di I grado (11-13 anni),
+      per un totale di <strong>48 fogli A4</strong>.
       Premi <strong>"Stampa tutto"</strong> in alto (oppure <kbd>Ctrl+P</kbd> su Windows/Linux, <kbd>Cmd+P</kbd> su Mac)
       per aprire la finestra di stampa. Per archiviare in digitale scegli <em>"Salva come PDF"</em> come stampante.
     </p>
@@ -1203,7 +1224,7 @@
   </section>
 
   <nav class="pacchetto-toc no-print" aria-label="Indice del pacchetto">
-    <h2>Indice — 38 schede in questo pacchetto</h2>
+    <h2>Indice — 43 schede in questo pacchetto</h2>
     <ol>
       <li><a href="#scheda-rubrica-valutativa-secondaria">Rubrica valutativa Educazione Civica — Secondaria I</a></li>
       <li><a href="#scheda-decodifica-bollettino-secondaria">Decodifica del Bollettino di Allerta</a></li>
@@ -1243,6 +1264,11 @@
       <li><a href="#scheda-caso-campi-flegrei-secondaria">I Campi Flegrei — il vulcano che dorme accanto a Napoli</a></li>
       <li><a href="#scheda-caso-san-giuliano-secondaria">Caso San Giuliano di Puglia — 31 ottobre 2002</a></li>
       <li><a href="#scheda-caso-vermicino-secondaria">Caso Vermicino — 10-13 giugno 1981</a></li>
+      <li><a href="#scheda-quando-un-dato-manca-secondaria1">Quando un dato manca</a> <span class="toc-meta">· 2 fogli</span></li>
+      <li><a href="#scheda-un-messaggio-perde-pezzi-secondaria1">Un messaggio perde pezzi</a> <span class="toc-meta">· 2 fogli</span></li>
+      <li><a href="#scheda-la-batteria-sulla-carta-secondaria1">La batteria sulla carta</a> <span class="toc-meta">· 2 fogli</span></li>
+      <li><a href="#scheda-la-consegna-accessibile-secondaria1">La consegna accessibile</a> <span class="toc-meta">· 2 fogli</span></li>
+      <li><a href="#scheda-il-registro-degli-aggiornamenti-secondaria1">Il registro degli aggiornamenti</a> <span class="toc-meta">· 2 fogli</span></li>
     </ol>
   </nav>
 
@@ -6594,6 +6620,286 @@ e canali ufficiali del Comune.</div>
       <span class="scheda-site">protezionecivilegenzano.it</span>
       <span>Scheda "Caso Vermicino 1981" · Secondaria I · storia/ed. civica/italiano · rev. 2026-08</span>
     </footer>
+  </article>
+</section>
+
+<section id="scheda-quando-un-dato-manca-secondaria1" class="pacchetto-scheda" aria-label="Scheda: Quando un dato manca">
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Quando un dato manca</h1>
+        <div class="scheda-sottotitolo">Secondaria I · 11–14 anni</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <p class="lab26-meta">45 minuti · calcolatrice · <strong>Obiettivo:</strong> Trattare un dato mancante senza trasformarlo in zero.</p>
+      <p class="lab26-meta">Nome o simbolo: ____________________ Data: ______________</p>
+      <p class="lab26-scenario">Serie inventata di pioggia giornaliera (mm): lunedì 2; martedì 0; mercoledì dato mancante; giovedì 8; venerdì 10. Il sensore non ha registrato mercoledì.</p>
+      <section><h2>1. Calcola il totale noto e la media sui quattro giorni osservati.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 1"></div></section>
+<section><h2>2. Che media otterresti mettendo zero al posto del dato mancante? Perché è ingannevole?</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 2"></div></section>
+<section><h2>3. Scrivi una conclusione che dichiari ciò che sappiamo e ciò che non sappiamo.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 3"></div></section>
+      <p class="lab26-nota avvertenza">Attività di classe con il docente. Puoi rispondere parlando, indicando o disegnando. Non occorre raccontare esperienze personali.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>M01 · Scheda alunno · Rev. 1 · 07/09/2026</span></footer>
+  </article>
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h2 class="scheda-titolo-principale">Quando un dato manca</h2>
+        <div class="scheda-sottotitolo">Secondaria I · 11–14 anni · Guida per il docente</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <h2>Obiettivo e materiali</h2>
+      <p>Trattare un dato mancante senza trasformarlo in zero. 45 minuti · calcolatrice. La durata è orientativa.</p>
+      <h2>Conduzione e adattamenti</h2>
+      <p class="istruzioni-docente">Esercizio aritmetico su dati sintetici; non descrive il clima di Genzano. Estensione: mercoledì ipoteticamente 0–12 mm, calcolare intervallo del totale.</p>
+      <h2>Come condurre il laboratorio</h2>
+      <ol>
+        <li>Presentare l’obiettivo e leggere insieme la situazione, in condizioni ordinarie.</li>
+        <li>Proporre una consegna alla volta. Lasciare tempo per domande e chiarimenti.</li>
+        <li>Accettare risposte orali, gestuali, grafiche o dettate; adattare strumenti e tempi.</li>
+        <li>Confrontare le risposte e invitare a migliorare il proprio lavoro, senza gare di velocità.</li>
+      </ol>
+      <h2>Risposte e criteri di osservazione</h2>
+      <p class="scheda-docente">Totale noto 20 mm, media osservata 5 mm. Zero arbitrario produce 4 mm su cinque giorni. Totale dei cinque giorni ignoto. Nell’estensione: totale 20–32 mm, media 4–6,4 mm.</p>
+      <h2>Appunti del docente</h2>
+      <p class="lab26-meta">Che cosa ha funzionato? Quale supporto riproporre? Annotare il lavoro del gruppo senza dati personali.</p>
+      <div class="lab26-osservazioni" role="img" aria-label="Spazio per gli appunti del docente"></div>
+
+      <p class="lab26-nota">Gli eventuali dati numerici sono inventati per il laboratorio. Le attività non sostituiscono il piano di emergenza scolastico.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>M01 · Guida docente · Rev. 1 · 07/09/2026</span></footer>
+  </article>
+</section>
+
+<section id="scheda-un-messaggio-perde-pezzi-secondaria1" class="pacchetto-scheda" aria-label="Scheda: Un messaggio perde pezzi">
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Un messaggio perde pezzi</h1>
+        <div class="scheda-sottotitolo">Secondaria I · 11–14 anni</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <p class="lab26-meta">40 minuti · carta · <strong>Obiettivo:</strong> Verificare la fedeltà di una comunicazione.</p>
+      <p class="lab26-meta">Nome o simbolo: ____________________ Data: ______________</p>
+      <p class="lab26-scenario">Messaggio simulato: «Laboratorio annullato oggi alle 15. Nuovo incontro venerdì alle 16 in aula 2. Avviso del docente, ore 10». Una copia riporta: «Venerdì alle 15 in aula 2».</p>
+      <section><h2>1. Elenca le informazioni perse e quella alterata.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 1"></div></section>
+<section><h2>2. Scrivi una versione breve che conservi i dati necessari.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 2"></div></section>
+<section><h2>3. Progetta un controllo a coppie prima di consegnare il messaggio.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 3"></div></section>
+      <p class="lab26-nota avvertenza">Attività di classe con il docente. Puoi rispondere parlando, indicando o disegnando. Non occorre raccontare esperienze personali.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>M02 · Scheda alunno · Rev. 1 · 07/09/2026</span></footer>
+  </article>
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h2 class="scheda-titolo-principale">Un messaggio perde pezzi</h2>
+        <div class="scheda-sottotitolo">Secondaria I · 11–14 anni · Guida per il docente</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <h2>Obiettivo e materiali</h2>
+      <p>Verificare la fedeltà di una comunicazione. 40 minuti · carta. La durata è orientativa.</p>
+      <h2>Conduzione e adattamenti</h2>
+      <p class="istruzioni-docente">Comunicazione scolastica ordinaria. Non effettuare trasmissioni radio o telefonate a servizi di emergenza. Ruoli: autore, lettore, verificatore.</p>
+      <h2>Come condurre il laboratorio</h2>
+      <ol>
+        <li>Presentare l’obiettivo e leggere insieme la situazione, in condizioni ordinarie.</li>
+        <li>Proporre una consegna alla volta. Lasciare tempo per domande e chiarimenti.</li>
+        <li>Accettare risposte orali, gestuali, grafiche o dettate; adattare strumenti e tempi.</li>
+        <li>Confrontare le risposte e invitare a migliorare il proprio lavoro, senza gare di velocità.</li>
+      </ol>
+      <h2>Risposte e criteri di osservazione</h2>
+      <p class="scheda-docente">Persi annullamento odierno, provenienza e ora dell’avviso; alterato orario del nuovo incontro. Verificare chi/cosa/quando/dove e data o ora della versione. Accettare formulazioni diverse purché complete.</p>
+      <h2>Appunti del docente</h2>
+      <p class="lab26-meta">Che cosa ha funzionato? Quale supporto riproporre? Annotare il lavoro del gruppo senza dati personali.</p>
+      <div class="lab26-osservazioni" role="img" aria-label="Spazio per gli appunti del docente"></div>
+
+      <p class="lab26-nota">Gli eventuali dati numerici sono inventati per il laboratorio. Le attività non sostituiscono il piano di emergenza scolastico.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>M02 · Guida docente · Rev. 1 · 07/09/2026</span></footer>
+  </article>
+</section>
+
+<section id="scheda-la-batteria-sulla-carta-secondaria1" class="pacchetto-scheda" aria-label="Scheda: La batteria sulla carta">
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">La batteria sulla carta</h1>
+        <div class="scheda-sottotitolo">Secondaria I · 11–14 anni</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <p class="lab26-meta">45 minuti · calcolatrice · <strong>Obiettivo:</strong> Calcolare un consumo e dichiarare i limiti del modello.</p>
+      <p class="lab26-meta">Nome o simbolo: ____________________ Data: ______________</p>
+      <p class="lab26-scenario">Modello inventato: una batteria ha 20 Wh utilizzabili. Un apparecchio assorbe sempre 2 W. Trascuriamo tutte le perdite. Un secondo scenario assume solo 16 Wh utilizzabili.</p>
+      <section><h2>1. Calcola le ore teoriche nei due scenari usando energia ÷ potenza.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 1"></div></section>
+<section><h2>2. Calcola la riduzione percentuale dell’energia disponibile.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 2"></div></section>
+<section><h2>3. Scrivi due motivi per cui non prometteresti la stessa autonomia a un apparecchio reale.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 3"></div></section>
+      <p class="lab26-nota avvertenza">Attività di classe con il docente. Puoi rispondere parlando, indicando o disegnando. Non occorre raccontare esperienze personali.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>M03 · Scheda alunno · Rev. 1 · 07/09/2026</span></footer>
+  </article>
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h2 class="scheda-titolo-principale">La batteria sulla carta</h2>
+        <div class="scheda-sottotitolo">Secondaria I · 11–14 anni · Guida per il docente</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <h2>Obiettivo e materiali</h2>
+      <p>Calcolare un consumo e dichiarare i limiti del modello. 45 minuti · calcolatrice. La durata è orientativa.</p>
+      <h2>Conduzione e adattamenti</h2>
+      <p class="istruzioni-docente">Solo calcoli: niente collegamenti elettrici o prove su batterie. Chiarire differenza W e Wh; il modello non garantisce continuità a dispositivi sanitari.</p>
+      <h2>Come condurre il laboratorio</h2>
+      <ol>
+        <li>Presentare l’obiettivo e leggere insieme la situazione, in condizioni ordinarie.</li>
+        <li>Proporre una consegna alla volta. Lasciare tempo per domande e chiarimenti.</li>
+        <li>Accettare risposte orali, gestuali, grafiche o dettate; adattare strumenti e tempi.</li>
+        <li>Confrontare le risposte e invitare a migliorare il proprio lavoro, senza gare di velocità.</li>
+      </ol>
+      <h2>Risposte e criteri di osservazione</h2>
+      <p class="scheda-docente">10 h e 8 h. Riduzione 20%. Limiti: perdite, temperatura, invecchiamento, consumo variabile. Valutare unità, calcolo e prudenza della conclusione.</p>
+      <h2>Appunti del docente</h2>
+      <p class="lab26-meta">Che cosa ha funzionato? Quale supporto riproporre? Annotare il lavoro del gruppo senza dati personali.</p>
+      <div class="lab26-osservazioni" role="img" aria-label="Spazio per gli appunti del docente"></div>
+
+      <p class="lab26-nota">Gli eventuali dati numerici sono inventati per il laboratorio. Le attività non sostituiscono il piano di emergenza scolastico.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>M03 · Guida docente · Rev. 1 · 07/09/2026</span></footer>
+  </article>
+</section>
+
+<section id="scheda-la-consegna-accessibile-secondaria1" class="pacchetto-scheda" aria-label="Scheda: La consegna accessibile">
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">La consegna accessibile</h1>
+        <div class="scheda-sottotitolo">Secondaria I · 11–14 anni</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <p class="lab26-meta">45 minuti · fogli · <strong>Obiettivo:</strong> Verificare un messaggio senza dipendere solo dal colore.</p>
+      <p class="lab26-meta">Nome o simbolo: ____________________ Data: ______________</p>
+      <p class="lab26-scenario">Un cartello di gioco usa tre cerchi: verde, giallo, rosso. La legenda dice soltanto «segui il verde». La fotocopia è in bianco e nero. Non è segnaletica ufficiale.</p>
+      <section><h2>1. Descrivi il problema per chi vede soltanto la fotocopia.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 1"></div></section>
+<section><h2>2. Ridisegna usando testo e forme distinguibili: informazioni, attesa, laboratorio.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 2"></div></section>
+<section><h2>3. Fai provare il cartello a un compagno senza spiegazioni: registra l’esito e un’eventuale correzione.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 3"></div></section>
+      <p class="lab26-nota avvertenza">Attività di classe con il docente. Puoi rispondere parlando, indicando o disegnando. Non occorre raccontare esperienze personali.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>M04 · Scheda alunno · Rev. 1 · 07/09/2026</span></footer>
+  </article>
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h2 class="scheda-titolo-principale">La consegna accessibile</h2>
+        <div class="scheda-sottotitolo">Secondaria I · 11–14 anni · Guida per il docente</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <h2>Obiettivo e materiali</h2>
+      <p>Verificare un messaggio senza dipendere solo dal colore. 45 minuti · fogli. La durata è orientativa.</p>
+      <h2>Conduzione e adattamenti</h2>
+      <p class="istruzioni-docente">Non copiare forme inventate sui cartelli reali di sicurezza. L’obiettivo è il controllo d’uso. Consentire realizzazione digitale o descrizione orale.</p>
+      <h2>Come condurre il laboratorio</h2>
+      <ol>
+        <li>Presentare l’obiettivo e leggere insieme la situazione, in condizioni ordinarie.</li>
+        <li>Proporre una consegna alla volta. Lasciare tempo per domande e chiarimenti.</li>
+        <li>Accettare risposte orali, gestuali, grafiche o dettate; adattare strumenti e tempi.</li>
+        <li>Confrontare le risposte e invitare a migliorare il proprio lavoro, senza gare di velocità.</li>
+      </ol>
+      <h2>Risposte e criteri di osservazione</h2>
+      <p class="scheda-docente">Servono etichette e simboli distinguibili anche senza colore. La sola scelta di colori più intensi non risolve il problema. La prova deve documentare comprensione o difficoltà.</p>
+      <h2>Appunti del docente</h2>
+      <p class="lab26-meta">Che cosa ha funzionato? Quale supporto riproporre? Annotare il lavoro del gruppo senza dati personali.</p>
+      <div class="lab26-osservazioni" role="img" aria-label="Spazio per gli appunti del docente"></div>
+
+      <p class="lab26-nota">Gli eventuali dati numerici sono inventati per il laboratorio. Le attività non sostituiscono il piano di emergenza scolastico.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>M04 · Guida docente · Rev. 1 · 07/09/2026</span></footer>
+  </article>
+</section>
+
+<section id="scheda-il-registro-degli-aggiornamenti-secondaria1" class="pacchetto-scheda" aria-label="Scheda: Il registro degli aggiornamenti">
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Il registro degli aggiornamenti</h1>
+        <div class="scheda-sottotitolo">Secondaria I · 12–14 anni</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <p class="lab26-meta">45 minuti · matita · <strong>Obiettivo:</strong> Riconoscere una versione superata.</p>
+      <p class="lab26-meta">Nome o simbolo: ____________________ Data: ______________</p>
+      <p class="lab26-scenario">Avvisi inventati dello stesso docente: ore 9, «Incontro in aula 1 alle 14»; ore 10, «Aula 1 indisponibile, nuova aula da comunicare»; ore 11, «Confermato alle 14 in aula 3». Tutti riguardano lo stesso giorno.</p>
+      <section><h2>1. Compila tre righe: ora, luogo noto, informazione da confermare.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 1"></div></section>
+<section><h2>2. Quale avviso useresti alle 10:30? E alle 11:15?</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 2"></div></section>
+<section><h2>3. Scrivi una nota per chi conserva ancora la prima stampa.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 3"></div></section>
+      <p class="lab26-nota avvertenza">Attività di classe con il docente. Puoi rispondere parlando, indicando o disegnando. Non occorre raccontare esperienze personali.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>M05 · Scheda alunno · Rev. 1 · 07/09/2026</span></footer>
+  </article>
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h2 class="scheda-titolo-principale">Il registro degli aggiornamenti</h2>
+        <div class="scheda-sottotitolo">Secondaria I · 12–14 anni · Guida per il docente</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <h2>Obiettivo e materiali</h2>
+      <p>Riconoscere una versione superata. 45 minuti · matita. La durata è orientativa.</p>
+      <h2>Conduzione e adattamenti</h2>
+      <p class="istruzioni-docente">Spiegare che la recenza conta insieme a provenienza, ambito e validità. Non insegnare che qualunque messaggio più nuovo sia automaticamente affidabile.</p>
+      <h2>Come condurre il laboratorio</h2>
+      <ol>
+        <li>Presentare l’obiettivo e leggere insieme la situazione, in condizioni ordinarie.</li>
+        <li>Proporre una consegna alla volta. Lasciare tempo per domande e chiarimenti.</li>
+        <li>Accettare risposte orali, gestuali, grafiche o dettate; adattare strumenti e tempi.</li>
+        <li>Confrontare le risposte e invitare a migliorare il proprio lavoro, senza gare di velocità.</li>
+      </ol>
+      <h2>Risposte e criteri di osservazione</h2>
+      <p class="scheda-docente">Alle 10:30 luogo non definito; alle 11:15 aula 3. Nota: prima versione superata, luogo aula 3, ora invariata. Non inventare un’aula fra le 10 e le 11.</p>
+      <h2>Appunti del docente</h2>
+      <p class="lab26-meta">Che cosa ha funzionato? Quale supporto riproporre? Annotare il lavoro del gruppo senza dati personali.</p>
+      <div class="lab26-osservazioni" role="img" aria-label="Spazio per gli appunti del docente"></div>
+
+      <p class="lab26-nota">Gli eventuali dati numerici sono inventati per il laboratorio. Le attività non sostituiscono il piano di emergenza scolastico.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>M05 · Guida docente · Rev. 1 · 07/09/2026</span></footer>
   </article>
 </section>
   </main>
