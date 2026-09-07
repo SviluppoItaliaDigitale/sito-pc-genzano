@@ -4,13 +4,13 @@
   "licenza": "CC BY 4.0",
   "periodo": {
     "dal": "2026-04-04",
-    "al": "2026-09-04",
-    "ultimo_numero": "139/2026"
+    "al": "2026-09-06",
+    "ultimo_numero": "141/2026"
   },
-  "nota": "Dati PROVVISORI: censiti solo dall'adozione del nuovo gestionale, non coprono l'intero anno (mancano i mesi precedenti). Aggregati e anonimi, senza dati personali.",
-  "generato_il": "2026-09-05",
+  "nota": "Dati PROVVISORI: censiti solo dall'adozione del nuovo gestionale, non coprono l'intero anno (mancano i mesi precedenti). Aggregati e anonimi, senza dati personali. L'indicatore «Volontari con almeno un intervento» è aggiornato al 4 settembre 2026: dopo quella data i dati sono stati integrati per delta da un export parziale, che non permette di stabilire se i volontari delle righe nuove fossero già conteggiati; si riallinea al primo export cumulativo.",
+  "generato_il": "2026-09-07",
   "dati": {
     "Volontari con almeno un intervento": 32,
-    "Presenze dei volontari agli interventi": 583
+    "Presenze dei volontari agli interventi": 590
   }
 }
