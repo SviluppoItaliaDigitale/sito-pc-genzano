@@ -5,16 +5,94 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-07T19:14:21+00:00",
+  "generato": "2026-09-07T22:02:22+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-07T18:47:08+00:00",
+   "data": "2026-09-07T21:33:04+00:00",
    "fonte": "ANSA",
-   "titolo": "Serie A: in campo Udinese-Lazio 0-0 DIRETTA",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/07/serie-a-in-campo-udinese-lazio-diretta_9a1b8c85-2b54-45cb-98d2-5b76db2ec524.html"
+   "titolo": "Il Canada pronto a far scattare i dazi sul 'Made in Usa'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/07/il-canada-pronto-a-far-scattare-i-dazi-sul-made-in-usa_7ecb125e-cc6c-4fae-a524-05d204645edf.html"
+  },
+  {
+   "data": "2026-09-07T21:25:58+00:00",
+   "fonte": "ANSA",
+   "titolo": "Witkoff e Kushner tornano da Trump, 'progressi verso colloqui a tre'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/07/witkoff-dopo-la-visita-a-mosca-e-kiev-progressi-sostanziali.-trump-sente-putin_391a327c-3674-40b5-9264-eae5c0bcb3c2.html"
+  },
+  {
+   "data": "2026-09-07T21:04:40+00:00",
+   "fonte": "ANSA",
+   "titolo": "Serie A: Frattesi guida la rimonta, a Udine la Lazio si regala la vetta",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/07/serie-a-in-campo-udinese-lazio-1-2_9a1b8c85-2b54-45cb-98d2-5b76db2ec524.html"
+  },
+  {
+   "data": "2026-09-07T20:55:27+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Temptation Island, Sabrina riceve una sorpresa speciale: il videomessaggio da... Emma Marrone",
+   "url": "https://www.adnkronos.com/spettacoli/emma-videomessaggio-temptation-island-sabrina-soussi-giovanni_3EMM31XtMY48hNyM0o0Cg"
+  },
+  {
+   "data": "2026-09-07T20:33:24+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Tim, Cda Poste alza il prezzo dell'offerta di 0,30 euro per azione",
+   "url": "https://www.adnkronos.com/economia/poste-offerta-tim-nuovo-prezzo-azione_2zZtyfNUMRlUPrgyXooINm"
+  },
+  {
+   "data": "2026-09-07T20:24:25+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina-Russia, il nodo del Donbass e le 15 promesse mancate di Putin",
+   "url": "https://www.adnkronos.com/internazionale/esteri/putin-donbass-guerra-ucraina-russia_5I0mgN1ChdepVgM9nOwpQ8"
+  },
+  {
+   "data": "2026-09-07T20:09:57+00:00",
+   "fonte": "ANSA",
+   "titolo": "Lorena era ancora viva quando l'ex l'ha gettata dal viadotto",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/07/lorena-era-ancora-viva-quando-lex-lha-gettata-dal-viadotto_8844a33a-4658-465b-b62a-ae9932303cad.html"
+  },
+  {
+   "data": "2026-09-07T19:54:02+00:00",
+   "fonte": "ANSA",
+   "titolo": "La governance dell'acqua tra cultura e democrazia",
+   "url": "https://www.ansa.it/sito/notizie/ansa_incontra/2026/09/07/la-governance-dellacqua-tra-cultura-e-democrazia_74b2a6be-ae23-41b7-8cfe-5fea0b0d6cfb.html"
+  },
+  {
+   "data": "2026-09-07T19:48:41+00:00",
+   "fonte": "ANSA",
+   "titolo": "Erutta un vulcano in Indonesia, fermo l'aeroporto di Giacarta",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/07/erutta-un-vulcano-in-indonesia-fermo-laeroporto-di-giacarta_668c256e-3c55-4f34-8099-47810a1fa49e.html"
+  },
+  {
+   "data": "2026-09-07T19:46:34+00:00",
+   "fonte": "ANSA",
+   "titolo": "Di Battista sedato e in terapia intensiva dopo l'intervento",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/07/di-battista-sedato-e-in-terapia-intensiva-dopo-lintervento_499e3ef0-2aae-4d56-be9e-8d59d80af400.html"
+  },
+  {
+   "data": "2026-09-07T19:45:28+00:00",
+   "fonte": "ANSA",
+   "titolo": "Elezioni in Sassonia-Anhalt, Merz scioccato. 'Scossi nelle fondamenta ma non mi arrendo'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/07/elezioni-in-sassonia-anhalt-merz-scioccato.-scossi-nelle-fondamenta-ma-non-mi-arrendo_b20daeaf-6891-4f41-9889-d644a47307ba.html"
+  },
+  {
+   "data": "2026-09-07T19:23:57+00:00",
+   "fonte": "ANSA",
+   "titolo": "Emma Bonino ricoverata a Roma per insufficienza respiratoria, grave ma vigile",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/07/emma-bonino-ricoverata-in-ospedale-a-roma-e-grave_7b4947f8-04af-4663-a970-d39283ad2cc1.html"
+  },
+  {
+   "data": "2026-09-07T19:13:07+00:00",
+   "fonte": "ANSA",
+   "titolo": "Venezia: Javier Bardem e Penelope Cruz al Lido",
+   "url": "https://www.ansa.it/sito/photogallery/spettacolo/2026/09/07/venezia-javier-bardem-e-penelope-cruz-al-lido-_dc4c836c-5044-48fc-96dd-03687129ae90.html"
+  },
+  {
+   "data": "2026-09-07T19:05:35+00:00",
+   "fonte": "ANSA",
+   "titolo": "Venezia tra l'horror di Strippoli e l'incanto di Kore-eda",
+   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/07/venezia-tra-lhorror-di-strippoli-e-lincanto-di-kore-eda_2ecf4740-ff7a-4ccb-94fd-341ad9a70e52.html"
   },
   {
    "data": "2026-09-07T18:46:07+00:00",
@@ -27,12 +105,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Autopsia, Lorena ancora viva quando l'ex l'ha gettata dal viadotto",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/07/autopsia-lorena-ancora-viva-quando-lex-lha-gettata-dal-viadotto_3fee08e2-df62-49e8-a979-81e51260ddb5.html"
-  },
-  {
-   "data": "2026-09-07T18:32:57+00:00",
-   "fonte": "ANSA",
-   "titolo": "Elezioni in Sassonia-Anhalt, Merz scioccato. 'Scossi nelle fondamenta ma non mi arrendo'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/07/elezioni-in-sassonia-anhalt-merz-scioccato.-scossi-nelle-fondamenta-ma-non-mi-arrendo_b20daeaf-6891-4f41-9889-d644a47307ba.html"
   },
   {
    "data": "2026-09-07T18:24:15+00:00",
@@ -71,21 +143,9 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/07/gli-audio-rubati-a-raoul-bova-chiuse-le-indagini-per-il-pr_a281a0e2-5304-48f2-8343-6ae85bbe4077.html"
   },
   {
-   "data": "2026-09-07T18:06:18+00:00",
-   "fonte": "ANSA",
-   "titolo": "Erutta un vulcano in Indonesia, fermo l'aeroporto di Giacarta",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/07/erutta-un-vulcano-in-indonesia-fermo-laeroporto-di-giacarta_668c256e-3c55-4f34-8099-47810a1fa49e.html"
-  },
-  {
-   "data": "2026-09-07T18:02:22+00:00",
-   "fonte": "ANSA",
-   "titolo": "Lorena era ancora viva quando l'ex l'ha gettata dal viadotto",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/07/femminicidio-in-a1-disposta-lautopsia-sui-due-corpi_8844a33a-4658-465b-b62a-ae9932303cad.html"
-  },
-  {
    "data": "2026-09-07T17:59:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Serie A, Udinese-Lazio 0-0 - Diretta",
+   "titolo": "Serie A, Udinese-Lazio 1-2: Gattuso vince in rimonta con Frattesi e Gudmundsson",
    "url": "https://www.adnkronos.com/sport/diretta-udinese-lazio-oggi-serie-a-risultato-live_7sDTUEgdk4DOqv2LHduyr6"
   },
   {
@@ -105,12 +165,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "La Polizia provinciale di Verona cattura 18 cinghiali sul lago di Garda",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/07/la-polizia-provinciale-di-verona-cattura-18-cinghiali-sul-lago-di-garda_13adda21-6408-4572-bdc8-d5e861af42b8.html"
-  },
-  {
-   "data": "2026-09-07T17:42:03+00:00",
-   "fonte": "ANSA",
-   "titolo": "Emma Bonino ricoverata in ospedale a Roma, è grave",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/07/emma-bonino-ricoverata-in-ospedale-a-roma-e-grave_7b4947f8-04af-4663-a970-d39283ad2cc1.html"
   },
   {
    "data": "2026-09-07T17:38:06+00:00",
@@ -135,60 +189,6 @@
    "fonte": "ANSA",
    "titolo": "'Trump cambia look e diventa castano', le foto spopolano sui social",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/06/trump-cambia-look-e-diventa-castano-le-foto-spopolano-sui-social_1ffedf72-6de9-4cf5-9a8f-8d82529b77ca.html"
-  },
-  {
-   "data": "2026-09-07T17:23:50+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Nuzzi ricorda Marta, la 27enne precipitata dagli studi Mediaset di Cologno Monzese: \"Ti salutiamo così\"",
-   "url": "https://www.adnkronos.com/cronaca/marta-ricordo-gianlugi-nuzzi-dentro-la-notizia_1bR34y3GHj1FUM0phTAiHS"
-  },
-  {
-   "data": "2026-09-07T17:20:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Emma Bonino ricoverata d'urgenza in ospedale, è in gravi condizioni",
-   "url": "https://www.adnkronos.com/politica/emma-bonino-ospedale-ricovero-roma_2ggUX9MMRh5vSz0xNzYnPO"
-  },
-  {
-   "data": "2026-09-07T17:16:09+00:00",
-   "fonte": "ANSA",
-   "titolo": "'Constellation a rischio incendio', il Comune di Crans sapeva",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/07/il-comune-di-crans-montana-sapeva-del-pericolo-incendio-lo-rivela-unemail_de8fe3a4-2295-42de-a559-3c53c9eb375b.html"
-  },
-  {
-   "data": "2026-09-07T17:16:03+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Roberta Picchi ha un tumore al seno, il Como le rinnova il contratto fino al 2028",
-   "url": "https://www.adnkronos.com/sport/calcio-femminile-como-women-roberta-picchi_74pLjvwbpr3KemZqq6hzi4"
-  },
-  {
-   "data": "2026-09-07T17:14:37+00:00",
-   "fonte": "ANSA",
-   "titolo": "Lega studia anticipo pensione a 64 anni. Cgil contro, assegno inferiore 10,6%",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/07/cgil-pensione-anticipata-a-64-anni-con-il-tfr-scarica-costo-sui-lavoratori_a1ea1df9-465e-45c2-b05e-ad549c7e3caa.html"
-  },
-  {
-   "data": "2026-09-07T17:13:01+00:00",
-   "fonte": "ANSA",
-   "titolo": "Venezia, l'hairstylist: 'Sul red carpet capelli lunghi e onde morbide'",
-   "url": "https://www.ansa.it/canale_lifestyle/videogallery/2026/09/07/venezia-lhairstylist-sul-red-carpet-capelli-lunghi-e-onde-morbide_f8af4bd2-a1fb-4c19-8839-d204b26f1a9d.html"
-  },
-  {
-   "data": "2026-09-07T17:06:13+00:00",
-   "fonte": "ANSA",
-   "titolo": "F1: La festa di Antonelli, mangia gli spaghetti nella coppa vinta",
-   "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/09/07/la-festa-di-antonelli-mangia-gli-spaghetti-nella-coppa-vinta_3793c39d-eade-4c37-89b9-71c228f4d9de.html"
-  },
-  {
-   "data": "2026-09-07T17:00:47+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Crolla il solaio in una palazzina in centro a Roma, paura e nessun ferito",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/07/crolla-solaio-in-palazzina-in-centro-a-roma-non-risultano-feriti_ce387397-45f0-4dde-b998-c100421b8185.html"
-  },
-  {
-   "data": "2026-09-07T17:00:06+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Paura a Pordenone, bimbo di 2 anni incastrato con la testa nella ringhiera del parco giochi: soccorso",
-   "url": "https://www.adnkronos.com/cronaca/bimbo-pordenone-ringhiera-parco-giochi_6BioN3lCihkSr6tPMqSvwo"
   }
  ]
 }
