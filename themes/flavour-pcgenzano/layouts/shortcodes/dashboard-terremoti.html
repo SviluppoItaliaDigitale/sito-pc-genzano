@@ -45,7 +45,7 @@
           <caption class="visually-hidden">Elenco dei terremoti rilevati nel periodo e nell'area selezionati, con data, magnitudo, zona, profondità, latitudine e longitudine. Ordinabile per ogni colonna.</caption>
           <thead>
             <tr>
-              <th scope="col" aria-sort="descending"><button type="button" class="dash-sort-btn" data-sort="time">Data e Ora <span class="dash-sort-ind">↓</span></button></th>
+              <th scope="col" aria-sort="descending"><button type="button" class="dash-sort-btn" data-sort="time">Data e ora italiana <span class="dash-sort-ind">↓</span></button></th>
               <th scope="col" aria-sort="none"><button type="button" class="dash-sort-btn" data-sort="mag">Magnitudo <span class="dash-sort-ind"></span></button></th>
               <th scope="col" aria-sort="none"><button type="button" class="dash-sort-btn" data-sort="place">Zona <span class="dash-sort-ind"></span></button></th>
               <th scope="col" class="dash-num" aria-sort="none"><button type="button" class="dash-sort-btn" data-sort="depth">Profondità (km) <span class="dash-sort-ind"></span></button></th>
@@ -121,8 +121,14 @@
     function colore(m){ return m>=5?'#7f1d1d':m>=4?'#e8412b':m>=3?'#f5a623':m>=2?'#f7e359':'#9aa7b4'; }
     function raggio(m){ return Math.max(4, (m+1)*2.4); }
     function pad(n){ return ('0'+n).slice(-2); }
-    function oraIt(iso){ var d=new Date(iso); return pad(d.getDate())+'/'+pad(d.getMonth()+1)+' '+pad(d.getHours())+':'+pad(d.getMinutes()); }
-    function minFa(iso){ var m=Math.round((Date.now()-new Date(iso).getTime())/60000); if(m<60)return m+' min fa'; var h=Math.round(m/60); return h<48?h+' ore fa':Math.round(h/24)+' gg fa'; }
+    // I timestamp INGV senza offset sono UTC; tutte le viste usano l'ora italiana.
+    function parseINGVDate(iso){
+      if(typeof iso==='number') return new Date(iso);
+      var s=String(iso||'').trim();
+      return new Date(s ? (/(Z|[+-]\d\d:?\d\d)$/i.test(s)?s:s+'Z') : NaN);
+    }
+    function oraIt(iso){ var d=parseINGVDate(iso); return isNaN(d)?'N/D':d.toLocaleString('it-IT',{timeZone:'Europe/Rome',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}); }
+    function minFa(iso){ var m=Math.max(0,Math.round((Date.now()-parseINGVDate(iso).getTime())/60000)); if(!isFinite(m))return 'N/D'; if(m<60)return m+' min fa'; var h=Math.round(m/60); return h<48?h+' ore fa':Math.round(h/24)+' gg fa'; }
     function dist(la,lo){ var R=6371,t=Math.PI/180,dla=(la-GENZANO[0])*t,dlo=(lo-GENZANO[1])*t,a=Math.sin(dla/2)**2+Math.cos(GENZANO[0]*t)*Math.cos(la*t)*Math.sin(dlo/2)**2; return Math.round(R*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a))); }
 
     map = L.map('dash-sisma-mappa', { center: [42.2,12.6], zoom: 5, scrollWheelZoom:false });
@@ -174,7 +180,11 @@
       });
     });
 
-    function pad6(t){var d=new Date(t);return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())+' '+pad(d.getHours())+':'+pad(d.getMinutes())+':'+pad(d.getSeconds());}
+    function pad6(t){
+      var d=parseINGVDate(t); if(isNaN(d))return 'N/D';
+      var p={}; new Intl.DateTimeFormat('it-IT',{timeZone:'Europe/Rome',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'}).formatToParts(d).forEach(function(x){p[x.type]=x.value;});
+      return p.year+'-'+p.month+'-'+p.day+' '+p.hour+':'+p.minute+':'+p.second;
+    }
 
     function renderTabella(){
       var tbody=document.getElementById('dash-sisma-tbody');
@@ -200,7 +210,7 @@
       var arr=eventi.slice();
       arr.sort(function(a,b){
         var va,vb;
-        if(sortKey==='time'){ va=new Date(a.time).getTime(); vb=new Date(b.time).getTime(); }
+        if(sortKey==='time'){ va=parseINGVDate(a.time).getTime(); vb=parseINGVDate(b.time).getTime(); }
         else if(sortKey==='mag'){ va=a.mag; vb=b.mag; }
         else if(sortKey==='depth'){ va=a.depth; vb=b.depth; }
         else if(sortKey==='dist'){ va=dist(a.lat,a.lon); vb=dist(b.lat,b.lon); }
@@ -245,7 +255,7 @@
       document.getElementById('kpi-num').textContent=eventi.length;
       document.getElementById('kpi-max').textContent='M '+maxM.toFixed(1);
       document.getElementById('kpi-m3').textContent=m3;
-      var ult=eventi.slice().sort(function(a,b){return new Date(b.time)-new Date(a.time);});
+      var ult=eventi.slice().sort(function(a,b){return parseINGVDate(b.time)-parseINGVDate(a.time);});
       document.getElementById('kpi-ult').textContent=minFa(ult[0].time);
       renderTabella();
       // 2) Disegno i marker sulla mappa usando L.marker + L.divIcon (HTML/CSS)
