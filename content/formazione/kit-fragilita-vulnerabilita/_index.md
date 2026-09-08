@@ -6,7 +6,7 @@ draft: false
 type: "page"
 layout: "single"
 toc: true
-dataUltimaRevisione: "2026-05-06"
+dataUltimaRevisione: "2026-09-08"
 ---
 
 In emergenza non tutte le persone hanno gli stessi bisogni. Alcuni cittadini possono avere difficoltà di movimento, comunicazione, orientamento, terapia, alimentazione, assistenza quotidiana o comprensione delle informazioni.
@@ -34,6 +34,9 @@ Questa pagina raccoglie i kit già disponibili sul sito e aiuta a scegliere rapi
 <tr><td>Bambini e ragazzi durante attese, evacuazioni o accoglienza</td><td><a href="/formazione/kit-calamita-bambini/">Kit calamità per bambini</a></td><td>Schede stampabili, attività rassicuranti, CAA, routine visive e supporto emotivo leggero.</td></tr>
 <tr><td>Famiglie con animali domestici</td><td><a href="/formazione/kit-calamita-animali/">Kit calamità per animali domestici</a></td><td>Cibo, acqua, trasportino, guinzaglio, documenti, farmaci veterinari e foto recente.</td></tr>
 <tr><td>Bambini, adulti o famiglie con difficoltà linguistiche o comunicative</td><td><a href="/formazione/kit-calamita-italiano-l2/">Kit italiano L2</a> · <a href="/formazione/easy-to-read-scuola/">Easy-to-Read per le scuole</a> · <a href="/facile-da-leggere/">Facile da leggere</a> · <a href="/pittogrammi/">Pittogrammi</a></td><td>Testi semplici, immagini, frasario di emergenza, pittogrammi e comunicazione più accessibile.</td></tr>
+<tr><td>Direzione o personale di RSA, lungodegenze, hospice</td><td><a href="/formazione/kit-calamita-strutture-sanitarie/">Kit calamità per strutture sanitarie</a></td><td>Triage geriatrico, checklist evacuazione paziente, comunicazione con i familiari, gestione di dispositivi medici.</td></tr>
+<tr><td>Persona senza fissa dimora o operatore che la assiste</td><td><a href="/formazione/kit-calamita-senza-fissa-dimora/">Kit calamità senza fissa dimora</a></td><td>Scheda di identificazione minima e mappa delle risorse locali (riparo, pasti, salute, igiene).</td></tr>
+<tr><td>Volontario di Protezione Civile</td><td><a href="/formazione/kit-calamita-volontari-pc/">Kit calamità per volontari PC</a></td><td>Autovalutazione dello stress operativo e routine di decompressione dopo un intervento.</td></tr>
 </tbody>
 </table>
 </div>
