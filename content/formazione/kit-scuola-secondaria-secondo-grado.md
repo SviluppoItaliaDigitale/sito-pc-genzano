@@ -10,7 +10,7 @@ Questo kit è rivolto ai docenti della **scuola secondaria di secondo grado** ch
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e si prestano all'uso nelle ore di scienze della Terra, geografia, educazione civica, diritto e nelle attività PCTO.
 
-> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-secondo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-secondo-grado.zip) (~238 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-secondo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-secondo-grado.zip) (~251 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
 ---
 
@@ -1112,6 +1112,16 @@ Domande-chiave:
 - Cosa ci dicono i modelli climatici per i Castelli nei prossimi 20 anni?
 
 ---
+
+## Laboratori di comunicazione e collaborazione
+
+Attività stampabili con spazi per le risposte e guida per il docente nella pagina successiva. Scegliere la fascia indicata nella singola scheda e adattare tempi e strumenti alla classe. Le schede sono incluse anche nei pacchetti da stampare e da scaricare.
+
+- [Il costo delle scelte](/formazione/schede-stampabili/il-costo-delle-scelte-secondaria2/) — 14–19 anni. Confrontare alternative esplicitando le ipotesi.
+- [Due archivi, una sola versione](/formazione/schede-stampabili/due-archivi-una-sola-versione-secondaria2/) — 14–19 anni. Progettare un controllo fra formati didattici.
+- [Il sensore non dice tutta la verità](/formazione/schede-stampabili/il-sensore-non-dice-tutta-la-verita-secondaria2/) — 15–19 anni. Quantificare falsi allarmi e mancate rilevazioni.
+- [Una catena di dipendenze](/formazione/schede-stampabili/una-catena-di-dipendenze-secondaria2/) — 14–19 anni. Individuare punti comuni di guasto.
+- [Dal test alla correzione](/formazione/schede-stampabili/dal-test-alla-correzione-secondaria2/) — 15–19 anni. Valutare un materiale tramite prove osservabili.
 
 ## Materiale di approfondimento
 

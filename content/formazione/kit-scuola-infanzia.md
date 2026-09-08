@@ -634,6 +634,18 @@ Da adattare con intestazione della scuola e consegnare all'inizio del percorso:
 
 ---
 
+## Laboratori di comunicazione e collaborazione
+
+Attività stampabili con spazi per le risposte e guida per il docente nella pagina successiva. Scegliere la fascia indicata nella singola scheda e adattare tempi e strumenti alla classe. Le schede sono incluse anche nei pacchetti da stampare e da scaricare.
+
+- [La mia voce arriva anche senza parole](/formazione/schede-stampabili/la-mia-voce-arriva-anche-senza-parole-infanzia/) — 3–6 anni. Esprimere un bisogno con parole, gesti o disegni.
+- [Prima ti chiedo](/formazione/schede-stampabili/prima-ti-chiedo-infanzia/) — 3–6 anni. Offrire aiuto rispettando la scelta altrui.
+- [La consegna si può ripetere](/formazione/schede-stampabili/la-consegna-si-puo-ripetere-infanzia/) — 4–6 anni. Chiedere una spiegazione invece di indovinare.
+- [Il rumore che scegliamo](/formazione/schede-stampabili/il-rumore-che-scegliamo-infanzia/) — 3–6 anni. Comunicare quando uno stimolo è fastidioso.
+- [Due modi per raccontare](/formazione/schede-stampabili/due-modi-per-raccontare-infanzia/) — 4–6 anni. Riconoscere che lo stesso messaggio può avere forme diverse.
+- [La tartaruga chiede aiuto](/formazione/schede-stampabili/la-tartaruga-chiede-aiuto-infanzia/) — 3–6 anni. Chiedere aiuto e collaborare con un adulto.
+- [Intrecci di carta, insieme](/formazione/schede-stampabili/intrecci-di-carta-insieme-infanzia/) — 4–6 anni. Chiedere aiuto e collaborare con un adulto.
+
 ## Materiale consigliato
 
 Per approfondire e avere materiale aggiuntivo:
