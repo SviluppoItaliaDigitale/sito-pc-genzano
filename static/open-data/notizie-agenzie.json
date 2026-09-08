@@ -5,11 +5,17 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-08T00:11:25+00:00",
+  "generato": "2026-09-08T04:38:25+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-07T23:48:24+00:00",
+   "fonte": "ANSA",
+   "titolo": "La Russia riprende gli attacchi su Kiev dopo tre giorni di tregua",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/08/la-russia-riprende-gli-attacchi-su-kiev-dopo-tre-giorni-di-tregua_8e9ad342-064f-49d9-be0c-02486376ddf4.html"
+  },
   {
    "data": "2026-09-07T22:03:25+00:00",
    "fonte": "ADNKRONOS",
@@ -29,16 +35,10 @@
    "url": "https://www.adnkronos.com/cronaca/italia-meteo-svolta-mercoledi-8-settembre_1jzcguOFh0GPu6et80tSm0"
   },
   {
-   "data": "2026-09-07T21:33:04+00:00",
+   "data": "2026-09-07T21:35:50+00:00",
    "fonte": "ANSA",
    "titolo": "Il Canada pronto a far scattare i dazi sul 'Made in Usa'",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/07/il-canada-pronto-a-far-scattare-i-dazi-sul-made-in-usa_7ecb125e-cc6c-4fae-a524-05d204645edf.html"
-  },
-  {
-   "data": "2026-09-07T21:25:58+00:00",
-   "fonte": "ANSA",
-   "titolo": "Witkoff e Kushner tornano da Trump, 'progressi verso colloqui a tre'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/07/witkoff-dopo-la-visita-a-mosca-e-kiev-progressi-sostanziali.-trump-sente-putin_391a327c-3674-40b5-9264-eae5c0bcb3c2.html"
   },
   {
    "data": "2026-09-07T21:04:40+00:00",
