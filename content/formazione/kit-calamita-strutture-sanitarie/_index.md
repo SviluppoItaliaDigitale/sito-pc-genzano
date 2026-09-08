@@ -6,7 +6,7 @@ layout: "single"
 
 Le strutture sanitarie residenziali (RSA, lungodegenze, hospice, ospedali geriatrici, centri diurni) sono uno dei contesti più complessi in calamità. I casi reali (terremoto **Centro Italia 2016**, pandemia **Covid-19** nelle RSA) hanno lasciato lezioni importanti.
 
-Queste schede sono **strumenti operativi pronti da stampare A4** per personale, direzione, familiari distanti e ospiti coscienti.
+Queste schede sono **strumenti operativi pronti da stampare A4** per personale, direzione, familiari distanti e ospiti coscienti. I protocolli clinici e organizzativi qui proposti (triage, gestione del decompenso acuto, prevenzione dei decubiti, gestione di PEG e catetere) sono **bozze di lavoro basate su fonti pubbliche**: vanno validati dalla direzione sanitaria, dal RSPP e dal responsabile dell'emergenza della singola struttura prima dell'uso, e **non sostituiscono** i protocolli interni né le indicazioni del medico curante o del personale sanitario di riferimento.
 
 > **Prima di tutto**, leggi la **[Guida operatori RSA](/formazione/kit-calamita-strutture-sanitarie/00-guida-operatori-rsa.html)**.
 
@@ -33,13 +33,13 @@ Queste schede sono **strumenti operativi pronti da stampare A4** per personale, 
 | Scheda | Quando usarla |
 |---|---|
 | [Checklist evacuazione paziente non autosufficiente](/formazione/kit-calamita-strutture-sanitarie/06-checklist-evacuazione-paziente.html) | 1 scheda per paziente trasferito. Bag 72h + ausili + presidi. |
-| [Protocollo "Non separare la coppia"](/formazione/kit-calamita-strutture-sanitarie/07-protocollo-non-separare-coppia.html) | Coniugi/conviventi nella struttura. Regola NON negoziabile. |
+| [Protocollo "Non separare la coppia"](/formazione/kit-calamita-strutture-sanitarie/07-protocollo-non-separare-coppia.html) | Coniugi/conviventi nella struttura. Tenerli insieme ogni volta che lo scenario lo consente. |
 | [Triage geriatrico SALT](/formazione/kit-calamita-strutture-sanitarie/08-triage-geriatrico-salt.html) | Verde/Giallo/Arancione/Rosso per ordine evacuazione. |
 | [Comunicazione coi familiari in emergenza](/formazione/kit-calamita-strutture-sanitarie/09-comunicazione-familiari.html) | Una persona dedicata. Cosa dire, cosa NON dire, template telefonata. |
 | [Decompenso acuto post-evento](/formazione/kit-calamita-strutture-sanitarie/10-decompenso-acuto.html) | Riconoscere delirium, idratare, mobilizzare. Quando chiamare 112. |
 | [Prevenzione decubiti durante trasferimento](/formazione/kit-calamita-strutture-sanitarie/11-prevenzione-decubiti.html) | Scala di Braden, posizionamento, materasso anti-decubito. |
 | [Gestione PEG, catetere, presidi](/formazione/kit-calamita-strutture-sanitarie/12-gestione-peg-catetere.html) | Cosa portare in trasferimento, gestione emergenze su presidi. |
-| [Registro nominativo trasferimenti](/formazione/kit-calamita-strutture-sanitarie/13-registro-trasferimenti.html) | Documento legale (conservazione 10 anni). |
+| [Registro nominativo trasferimenti](/formazione/kit-calamita-strutture-sanitarie/13-registro-trasferimenti.html) | Documento della struttura, soggetto a GDPR: conservazione secondo la politica della struttura. |
 
 ### Schede per familiari distanti
 
@@ -54,7 +54,7 @@ Queste schede sono **strumenti operativi pronti da stampare A4** per personale, 
 
 | Scheda | Quando usarla |
 |---|---|
-| [Carta del comfort sensoriale](/formazione/kit-calamita-strutture-sanitarie/18-comfort-sensoriale.html) | Musica, profumi, oggetti, trigger. Riduce BPSD del 40% (Cochrane 2017). |
+| [Carta del comfort sensoriale](/formazione/kit-calamita-strutture-sanitarie/18-comfort-sensoriale.html) | Musica, profumi, oggetti, trigger: una revisione Cochrane ne segnala i benefici su agitazione e BPSD. |
 | [Reminiscence box — la scatola dei ricordi](/formazione/kit-calamita-strutture-sanitarie/19-reminiscence-box.html) | Istruzioni per familiari: oggetti che evocano la vita. |
 | [Comunicazione pittografica minima](/formazione/kit-calamita-strutture-sanitarie/20-comunicazione-pittografica-minima.html) | Pittogrammi essenziali per MMSE basso. Caratteri 48pt. |
 
@@ -62,8 +62,8 @@ Queste schede sono **strumenti operativi pronti da stampare A4** per personale, 
 
 - **Ministero della Salute** — linee guida emergenza RSA
 - **AGENAS**, **WHO Hospital Safety Index**, **Sphere Standards 2018**
-- **DPC + Ministero Salute** — rapporto evacuazione RSA Centro Italia 2016
-- **CSNAP / ISS** — lezioni Covid-RSA
+- Lezioni condivise dagli operatori del settore su emergenze reali (terremoto Centro Italia 2016, pandemia Covid-19 nelle RSA)
+- **ISS** — lezioni Covid-RSA
 - **SIGG**, **AIP**, **Cochrane Review** (2017 musica, 2018 reminiscence)
 - **Kitwood T**, **Feil N** (Validation Therapy), **EPUAP**
 
