@@ -5,11 +5,29 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-07T22:02:22+00:00",
+  "generato": "2026-09-08T00:11:25+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-07T22:03:25+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina-Russia, Zelensky: \"Putin vuole negoziare\". Ma Mosca ha risorse per la guerra fino al 2028",
+   "url": "https://www.adnkronos.com/internazionale/esteri/guerra-ucraina-russia-fino-al-2028-scenario_1R0b0jHYnn8cch6fZSubLW"
+  },
+  {
+   "data": "2026-09-07T22:02:58+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Effetto Afd, dopo Sassonia-Anhalt la mappa delle elezioni che possono cambiare Ue e Occidente",
+   "url": "https://www.adnkronos.com/internazionale/esteri/mappa-elezioni-2026-2027-europa-occidente_15jtjG5AsnyLeKDOc4vKZi"
+  },
+  {
+   "data": "2026-09-07T22:02:30+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Caldo bye bye, si ricomincia a respirare: mercoledì Italia senza afa",
+   "url": "https://www.adnkronos.com/cronaca/italia-meteo-svolta-mercoledi-8-settembre_1jzcguOFh0GPu6et80tSm0"
+  },
   {
    "data": "2026-09-07T21:33:04+00:00",
    "fonte": "ANSA",
@@ -171,24 +189,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Juventus, ansia Locatelli: infortunio contro Milan, rischio operazione",
    "url": "https://www.adnkronos.com/sport/infortunio-locatelli-juventus-si-opera-come-sta-quando-torna_7aixyATsKYPsVN821plhjO"
-  },
-  {
-   "data": "2026-09-07T17:35:39+00:00",
-   "fonte": "ANSA",
-   "titolo": "La corte gela le attese: 'Harry e Meghan restano privati cittadini'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/07/una-lettera-di-re-carlo-conferma-harry-e-meghan-tornati-a-londra-come-privati_f541ed62-2674-481e-a08c-86ad9cf3e4cd.html"
-  },
-  {
-   "data": "2026-09-07T17:34:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Il papà di Lorena Isceri, uccisa dall'ex sull'A1: \"Era buona, non voleva rovinare quel mascalzone\"",
-   "url": "https://www.adnkronos.com/cronaca/lorena-isceri-padre-franco-appello-tv_23PNmtggNFPDr7qHISRz00"
-  },
-  {
-   "data": "2026-09-07T17:24:26+00:00",
-   "fonte": "ANSA",
-   "titolo": "'Trump cambia look e diventa castano', le foto spopolano sui social",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/06/trump-cambia-look-e-diventa-castano-le-foto-spopolano-sui-social_1ffedf72-6de9-4cf5-9a8f-8d82529b77ca.html"
   }
  ]
 }
