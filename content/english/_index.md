@@ -3,6 +3,7 @@ title: "English — Civil Protection Genzano di Roma"
 description: "Essential information in English for tourists and foreign residents: emergency numbers, what to do in the main risks, key contacts."
 layout: "single"
 language: "en"
+tts: false
 aliases:
   - /en/
 sitemap:
@@ -89,7 +90,7 @@ This page gives you **essential information** in English. The full website is in
 <li>Do <strong>not</strong> use elevators</li>
 <li>Stay away from windows and bookcases</li>
 </ul>
-<p>After the shaking, exit calmly using the stairs and reach the closest <strong>"Area di Attesa"</strong> (waiting area). See the <a href="/cartografia/">map of waiting areas</a>.</p>
+<p>After the shaking, exit calmly using the stairs and reach the closest <strong lang="it">"Area di Attesa"</strong> (waiting area). See the <a href="/cartografia/">map of waiting areas</a>.</p>
 </div>
 
 <div class="en-card">
@@ -152,7 +153,7 @@ This page gives you **essential information** in English. The full website is in
 
 <div class="en-card">
 <h2>🗺️ Where to go in emergency</h2>
-<p>Genzano has <strong>10 designated waiting areas</strong> (Aree di Attesa) where citizens should gather after a major event. They are open public spaces, marked with signs. Find the closest to your home or hotel before an emergency happens.</p>
+<p>Genzano has <strong>10 designated waiting areas</strong> (<span lang="it">Aree di Attesa</span>) where citizens should gather after a major event. They are open public spaces, marked with signs. Find the closest to your home or hotel before an emergency happens.</p>
 <p>👉 <a href="/cartografia/" style="background: #003366; color: #fff; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; display: inline-block; margin-top: 0.4rem;">See the map of waiting areas</a></p>
 </div>
 

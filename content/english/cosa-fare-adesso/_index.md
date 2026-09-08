@@ -3,6 +3,7 @@ title: "What To Do Now — English"
 description: "Immediate actions in case of emergency in Genzano di Roma: numbers to call, behaviors to adopt, useful links."
 layout: "single"
 language: "en"
+tts: false
 ---
 
 [← Back to English overview](/english/)
@@ -40,8 +41,16 @@ Identify the situation you are experiencing. Click on the matching link to see t
 2. **Call 112** to report dangerous situations.
 3. **Do not hinder rescuers.** Do not go to the emergency site out of curiosity.
 4. **Follow only official sources.** Do not spread unverified information.
-5. **Help those in need** if you can do so safely (elderly, children, people with disabilities).
+5. **Help those in need** if you can do so safely.
 6. **Keep your phone charged** and use it only for necessary communications.
+
+{{< cosa-non-fare titolo="What NOT to do in any emergency" >}}
+- **Do not call 112 out of curiosity or to ask for information**: keep the line free for those who truly need it.
+- **Do not go to the scene of the event** to see what happened: you slow down rescuers and put yourself at risk.
+- **Do not share unverified news** on social media: only pass on official sources (Civil Protection, the Municipality, the Lazio Regional Functional Centre).
+- **Do not block access roads** for rescue vehicles with your car.
+- **Do not re-enter a damaged building** before the Fire Brigade gives the all-clear.
+{{< /cosa-non-fare >}}
 
 ## Resources
 

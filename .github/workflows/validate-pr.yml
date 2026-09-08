@@ -19,7 +19,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
@@ -47,10 +47,48 @@ jobs:
         # del livello di tutela IP (agosto 2026).
         run: python3 scripts/check-jsonld.py public
 
+      - name: "⚓ Ancore interne e link speciali nell'HTML generato"
+        # Audit esterno 06/09/2026 (rilievi F16 e F21): i rimandi #frammento
+        # verso id inesistenti e il corpo mailto codificato due volte non
+        # erano visti da nessun controllo. lychee non segue i frammenti.
+        run: python3 scripts/check-ancore.py public --base-path ""
+
       - name: "📊 Statistiche build"
         run: |
           echo "Pagine generate: $(find public -name '*.html' | wc -l)"
           echo "Dimensione public/: $(du -sh public | cut -f1)"
+
+  pacchetti-schede:
+    name: "Parità pacchetti schede (Stampa tutto ↔ kit)"
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v7
+
+      - name: "🖨️ I pacchetti 'Stampa tutto' devono corrispondere ai kit"
+        # Audit esterno 06/09/2026 (rilievo F08): il pacchetto secondaria I
+        # committato aveva 36 schede contro le 38 linkate dal kit e presenti
+        # nello ZIP. Il generatore è idempotente: se rigenerandolo il file
+        # cambia, il pacchetto nel repo è stantio e la PR non passa.
+        run: |
+          python3 scripts/genera-pacchetti-schede.py
+          if ! git diff --quiet -- static/formazione/schede-stampabili/pacchetti/; then
+            git --no-pager diff --stat -- static/formazione/schede-stampabili/pacchetti/
+            echo "::error::Pacchetti 'Stampa tutto' non allineati ai kit: esegui python3 scripts/genera-pacchetti-schede.py e committa."
+            exit 1
+          fi
+
+      - name: "🧩 Parità kit ↔ Stampa tutto ↔ ZIP, avvertenze e apertura offline"
+        # Rilievi F02, F03, F09: avvertenze per l'adulto fuori dal wrapper
+        # stampabile (perse in Stampa tutto e ZIP), CSS non risolvibile e
+        # 234 href radicati su "/" negli ZIP offline.
+        run: python3 scripts/check-parita-schede.py
+
+      - name: "📊 Tabelle delle schede coerenti con i dataset aperti"
+        # Rilievo F07: la scheda clima riportava valori diversi dal dataset
+        # che dichiarava di usare, con media e conclusioni sbagliate.
+        run: python3 scripts/check-dati-schede.py
 
   menu-sync:
     name: "Coerenza menu hugo.toml ↔ site-chrome.js"
@@ -58,7 +96,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: "🧭 Verifica che il menu di site-chrome.js sia generato da hugo.toml"
         # Il blocco MENU-AUTOGEN di site-chrome.js è GENERATO da
@@ -75,7 +113,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: "🔬 Valida YAML di .github/workflows/"
         run: |
@@ -91,7 +129,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 
@@ -133,7 +171,7 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: "📥 Checkout"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
 

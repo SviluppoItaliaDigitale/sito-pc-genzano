@@ -10,6 +10,18 @@ sitemap:
   priority: 0.8
   changefreq: monthly
 dataUltimaRevisione: "2026-05-06"
+hreflang:
+  - lang: "it"
+    url: "/facile-da-leggere/"
+  - lang: "en"
+    url: "/facile-da-leggere/en/"
+  - lang: "eo"
+    url: "/facile-da-leggere/eo/"
+  - lang: "ro"
+    url: "/facile-da-leggere/ro/"
+  - lang: "ar"
+    url: "/facile-da-leggere/ar/"
+hreflang_xdefault: "/facile-da-leggere/"
 ---
 
 <nav class="facile-lang" aria-label="Lingua / Language">

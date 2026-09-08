@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Alle **16:48 del 18 gennaio 2017** una valanga di neve, fango e detriti scese dal versante del **Monte Siella**, sul Gran Sasso, e investì l'**Hotel Rigopiano** nel comune di Farindola. **29 morti**, 11 superstiti tirati fuori dalle macerie nei giorni successivi. È il più grave evento valanghivo italiano degli ultimi cinquant'anni (fonte: Dipartimento della Protezione Civile).
+Poco prima delle 17 del **18 gennaio 2017** una valanga di neve, fango e detriti scese dal versante del **Monte Siella**, sul Gran Sasso, e investì l'**Hotel Rigopiano** nel comune di Farindola. **29 morti** e 11 superstiti: 2 si trovavano all'esterno dell'edificio, 9 furono tirati fuori dalle macerie nei giorni successivi. È il più grave evento valanghivo italiano degli ultimi cinquant'anni (fonte: Dipartimento della Protezione Civile).
 
 ## Il contesto: una giornata già difficile
 

@@ -16,6 +16,9 @@
   traduzioni come duplicati italiani della pagina principale.
 */ -}}
 
+{{- /* Nota (06/09/2026): i path passano ad absURL SENZA la barra iniziale —
+       con la barra Hugo scarta il sottopercorso del baseURL e su GitHub Pages
+       (/sito-pc-genzano/) gli hreflang puntavano alla radice del dominio. */ -}}
 {{- /* Slug terminale del path corrente (es. "numeri-utili" da "/numeri-utili/" o "/english/numeri-utili/") */ -}}
 {{- $path := strings.TrimPrefix "/" .RelPermalink -}}
 {{- $path = strings.TrimSuffix "/" $path -}}
@@ -37,11 +40,11 @@
          campo `hreflang_xdefault`, altrimenti la voce "en", altrimenti nessuno. */ -}}
   {{- $xdefault := "" -}}
   {{- range .Params.hreflang -}}
-    {{- $u := index . "url" | absURL -}}
+    {{- $u := index . "url" | strings.TrimPrefix "/" | absURL -}}
     <link rel="alternate" hreflang="{{ index . "lang" }}" href="{{ $u }}">
     {{- if eq (index . "lang") "en" -}}{{ $xdefault = $u }}{{- end -}}
   {{- end -}}
-  {{- with .Params.hreflang_xdefault -}}{{ $xdefault = . | absURL }}{{- end -}}
+  {{- with .Params.hreflang_xdefault -}}{{ $xdefault = strings.TrimPrefix "/" . | absURL }}{{- end -}}
   {{- with $xdefault -}}<link rel="alternate" hreflang="x-default" href="{{ . }}">{{- end -}}
 {{- else if in $sezioniTradotte $slug -}}
   {{- range $code, $folder := $langMap -}}
@@ -49,21 +52,21 @@
     {{- if eq $folder "" -}}
       {{- /* Italiano: path senza prefisso lingua */ -}}
       {{- if eq $slug "" -}}
-        {{- $altURL = "/" | absURL -}}
+        {{- $altURL = "" | absURL -}}
       {{- else -}}
-        {{- $altURL = printf "/%s/" $slug | absURL -}}
+        {{- $altURL = printf "%s/" $slug | absURL -}}
       {{- end -}}
     {{- else -}}
       {{- if eq $slug "" -}}
-        {{- $altURL = printf "/%s/" $folder | absURL -}}
+        {{- $altURL = printf "%s/" $folder | absURL -}}
       {{- else -}}
-        {{- $altURL = printf "/%s/%s/" $folder $slug | absURL -}}
+        {{- $altURL = printf "%s/%s/" $folder $slug | absURL -}}
       {{- end -}}
     {{- end -}}
     <link rel="alternate" hreflang="{{ $code }}" href="{{ $altURL }}">
   {{- end -}}
   {{- /* x-default: punta sempre alla versione italiana */ -}}
   {{- $defaultURL := "" -}}
-  {{- if eq $slug "" -}}{{ $defaultURL = "/" | absURL }}{{ else }}{{ $defaultURL = printf "/%s/" $slug | absURL }}{{ end -}}
+  {{- if eq $slug "" -}}{{ $defaultURL = "" | absURL }}{{ else }}{{ $defaultURL = printf "%s/" $slug | absURL }}{{ end -}}
   <link rel="alternate" hreflang="x-default" href="{{ $defaultURL }}">
 {{- end -}}

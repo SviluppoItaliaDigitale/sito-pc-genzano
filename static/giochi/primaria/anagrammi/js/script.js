@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { w: 'ZAINO', cat: 'Kit di emergenza', hint: 'Lo porti in spalla con dentro l\'essenziale',
         explain: 'Lo zaino di emergenza domestico ha acqua, cibo a lunga scadenza, torcia, radio a pile, medicine personali. Tieni vicino alla porta.' },
       { w: 'ACQUA', cat: 'Scorta fondamentale', hint: 'Si beve e spegne le fiamme',
-        explain: 'In emergenza idrica si parla di 3 litri al giorno per persona: 1 per bere, 2 per igiene minima.' },
+        explain: 'In emergenza idrica si parla di almeno 4 litri al giorno per persona, per bere e per l\'igiene minima.' },
       { w: 'CASCO', cat: 'Dispositivo di protezione', hint: 'Protegge la testa del volontario',
         explain: 'I caschi dei volontari (tipo cantiere o AIB) proteggono da oggetti fino a 5 kg che cadono dall\'alto.' },
       { w: 'RADIO', cat: 'Comunicazione', hint: 'Trasmette voci anche senza rete cellulare',

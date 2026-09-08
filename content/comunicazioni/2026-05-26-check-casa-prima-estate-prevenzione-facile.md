@@ -54,7 +54,7 @@ Se senti rumori strani o cattivi odori, chiama un tecnico.
 
 - Controlla i rubinetti. Se gocciolano, falli sistemare.
 - Se gli scarichi sono lenti, puliscili adesso.
-- Tieni in casa almeno 3 litri di acqua a persona. Sono utili per 3 giorni di emergenza.
+- Tieni in casa almeno 4 litri di acqua a persona. Sono utili per 3 giorni di emergenza.
 
 ## Le scorte di casa
 

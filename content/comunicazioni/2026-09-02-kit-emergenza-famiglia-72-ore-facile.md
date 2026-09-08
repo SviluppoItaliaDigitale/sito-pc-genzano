@@ -31,7 +31,7 @@ Dopo una grande emergenza la luce può mancare. L'acqua può mancare. I soccorsi
 
 ### Acqua e cibo
 
-- **acqua in bottiglia**: almeno 3 litri a persona ogni giorno;
+- **acqua in bottiglia**: almeno 4 litri a persona ogni giorno;
 - **cibo che non si guasta**: gallette, tonno in scatola, biscotti, barrette;
 - **apriscatole** manuale.
 

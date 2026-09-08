@@ -35,7 +35,7 @@ Lo zaino ti aiuta a essere autonomo per 3 giorni.
 
 ### Acqua e cibo
 
-- Acqua in bottiglie chiuse: 3 litri al giorno per ogni persona.
+- Acqua in bottiglie chiuse: 4 litri al giorno per ogni persona.
 - Cibo che dura a lungo: barrette, cracker, tonno in scatola, frutta secca.
 - Scegli cibo che non ha bisogno di cottura.
 - Un apriscatole a mano.

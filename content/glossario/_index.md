@@ -302,6 +302,9 @@ Quantità e valore di persone, edifici e beni presenti in un'area a rischio. Ins
 ### ETS {#ets}
 Ente del Terzo Settore. Categoria giuridica che raggruppa associazioni, OdV, fondazioni e imprese sociali con finalità civiche e di utilità sociale.
 
+### EUMETSAT {#eumetsat}
+Organizzazione europea per lo sfruttamento dei satelliti meteorologici (European Organisation for the Exploitation of Meteorological Satellites). Gestisce i satelliti Meteosat e MetOp: le sue immagini alimentano la scheda Satellite del [cruscotto](/cruscotto/) di questo sito e i modelli di previsione usati per le allerte meteo.
+
 ### Evacuazione
 Allontanamento ordinato da un'area a rischio verso un luogo più sicuro, secondo le indicazioni delle autorità.
 

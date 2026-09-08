@@ -1,7 +1,7 @@
 ---
-title: "Quarant'anni di volontariato: la storia del Gruppo Comunale di Genzano di Roma, dalle radio CB al Terzo Settore"
+title: "Quarantacinque anni di volontariato: la storia del Gruppo Comunale di Genzano di Roma, dalle radio CB al Terzo Settore"
 date: 2026-04-05
-description: "Dagli anni '80 come gruppo CB, all'istituzione nel 1993, alla flotta moderna: la storia del Gruppo Comunale di Genzano di Roma."
+description: "Dagli anni '80 come gruppo CB, all'istituzione nel 1991, alla flotta moderna: la storia del Gruppo Comunale di Genzano di Roma."
 badge: "Comunicazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-**Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma non è nato in un ufficio.** È nato in cucina, tra un caffè e una mappa sul tavolo. Un gruppo di appassionati di radio CB aveva deciso che una ricetrasmittente poteva servire a qualcosa di più che parlare di antenne. Era la prima metà degli anni Ottanta. La legge quadro sulla protezione civile non esisteva ancora e chi voleva rendersi utile in emergenza si organizzava come poteva. Quarant'anni dopo, quella piccola associazione di radioamatori è diventata uno dei gruppi comunali più strutturati dei Castelli Romani. Questa è la sua storia.
+**Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma non è nato in un ufficio.** È nato in cucina, tra un caffè e una mappa sul tavolo. Un gruppo di appassionati di radio CB aveva deciso che una ricetrasmittente poteva servire a qualcosa di più che parlare di antenne. Era la prima metà degli anni Ottanta. La legge quadro sulla protezione civile non esisteva ancora e chi voleva rendersi utile in emergenza si organizzava come poteva. Quarantacinque anni dopo, quella piccola associazione di radioamatori è diventata uno dei gruppi comunali più strutturati dei Castelli Romani. Questa è la sua storia.
 
 ---
 
@@ -29,9 +29,9 @@ Per i servizi di maggiore portata, viene riadattata una **vecchia ambulanza dism
 
 ---
 
-## 1993: l'istituzione ufficiale con delibera del Consiglio Comunale
+## 1991: l'istituzione ufficiale con delibera del Consiglio Comunale
 
-Il passaggio decisivo arriva nel 1993. Il sindaco dell'epoca, **on. Gino Cesaroni**, propone al Consiglio Comunale una delibera per l'istituzione formale del Gruppo Comunale Volontari di Protezione Civile. La delibera passa, il Gruppo diventa struttura ufficiale del Comune, e da quel momento la sua attività rientra pienamente nel Servizio Nazionale di Protezione Civile che la legge 24 febbraio 1992 n. 225 aveva appena costituito.
+Il passaggio decisivo arriva nel 1991. Il sindaco dell'epoca, **on. Gino Cesaroni**, propone al Consiglio Comunale una delibera per l'istituzione formale del Gruppo Comunale Volontari di Protezione Civile. La delibera passa, il Gruppo diventa struttura ufficiale del Comune, e la sua attività si inserisce nel Servizio Nazionale di Protezione Civile che la legge 24 febbraio 1992 n. 225 avrebbe costituito l'anno successivo.
 
 È una piccola rivoluzione locale: da associazione informale di appassionati, il Gruppo diventa un'articolazione operativa del Comune, con copertura assicurativa, inquadramento normativo chiaro e possibilità di attivazione in emergenze di rilievo regionale e nazionale.
 
@@ -150,7 +150,7 @@ Il mezzo è l'evoluzione del pickup da territorio: manovrabile, versatile, adatt
 
 ---
 
-## Quarant'anni di volontariato, di continuità
+## Quarantacinque anni di volontariato, di continuità
 
 Ripercorrere questa storia significa notare una costante: **il Gruppo non ha mai aspettato il mezzo perfetto**. Ha preso quello che c'era — un'ambulanza dismessa, un'autobotte militare da riconvertire, un Range Rover donato, un VM90 da smontare pezzo per pezzo — e l'ha reso utile al territorio. La cabina in lamiera autocostruita dell'ACP70 e il cassone rifatto del VM90 con i proventi di una donazione non sono aneddoti nostalgici. Dimostrano che la protezione civile, prima di essere un organigramma, è un modo di rimboccarsi le maniche.
 
@@ -166,7 +166,7 @@ Dagli anni Ottanta ad oggi, il Gruppo ha attraversato:
 - le alluvioni di Emilia-Romagna e Toscana (2023)
 - il nuovo **Codice di Protezione Civile** (D.Lgs. 2 gennaio 2018 n. 1) e la riforma del Terzo Settore
 
-Quarant'anni, sei Sindaci, due generazioni di volontari. Chi è passato per la sede del Gruppo ha lasciato qualcosa: un mezzo riallestito, una procedura scritta, un corso di formazione trasmesso al volontario più giovane. È così che un gruppo comunale resta vivo.
+Quarantacinque anni, sei Sindaci, due generazioni di volontari. Chi è passato per la sede del Gruppo ha lasciato qualcosa: un mezzo riallestito, una procedura scritta, un corso di formazione trasmesso al volontario più giovane. È così che un gruppo comunale resta vivo.
 
 ---
 

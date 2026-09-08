@@ -3,6 +3,7 @@ title: "Deutsch — Zivilschutz Genzano di Roma"
 description: "Wesentliche Informationen auf Deutsch für Touristen und ausländische Einwohner: Notrufnummern, Verhalten bei den wichtigsten Risiken, Kontakte."
 layout: "single"
 language: "de"
+tts: false
 aliases:
   - /de/
 sitemap:
@@ -60,7 +61,7 @@ Diese Seite gibt Ihnen die **wesentlichen Informationen** auf Deutsch. Die volls
 <li>Benutzen Sie <strong>keine</strong> Aufzüge</li>
 <li>Halten Sie sich von Fenstern und Bücherregalen fern</li>
 </ul>
-<p>Nach dem Beben verlassen Sie das Gebäude ruhig über die Treppe und erreichen Sie die nächstgelegene <strong>"Area di Attesa"</strong> (Sammelplatz). Siehe <a href="/cartografia/">Karte der Sammelplätze</a>.</p>
+<p>Nach dem Beben verlassen Sie das Gebäude ruhig über die Treppe und erreichen Sie die nächstgelegene <strong lang="it">"Area di Attesa"</strong> (Sammelplatz). Siehe <a href="/cartografia/">Karte der Sammelplätze</a>.</p>
 </div>
 
 <div class="en-card">
@@ -105,7 +106,7 @@ Diese Seite gibt Ihnen die **wesentlichen Informationen** auf Deutsch. Die volls
 <h2>📦 Notfall-Set zu Hause</h2>
 <p>Halten Sie einen kleinen Rucksack bereit mit:</p>
 <ul class="en-list">
-<li>Trinkwasser (3 Liter pro Person)</li>
+<li>Trinkwasser (4 Liter pro Person, pro Tag, für 3 Tage)</li>
 <li>Lange haltbare Lebensmittel (Kekse, Energieriegel)</li>
 <li>Taschenlampe mit Ersatzbatterien</li>
 <li>Rettungsdecke und Pfeife</li>
@@ -123,7 +124,7 @@ Diese Seite gibt Ihnen die **wesentlichen Informationen** auf Deutsch. Die volls
 
 <div class="en-card">
 <h2>🗺️ Wohin im Notfall</h2>
-<p>Genzano hat <strong>10 ausgewiesene Sammelplätze</strong> (Aree di Attesa), wo sich Bürger nach einem Großereignis versammeln sollen. Es sind offene öffentliche Räume, mit Schildern markiert. Finden Sie den nächsten zu Ihrer Wohnung oder Hotel <em>bevor</em> ein Notfall passiert.</p>
+<p>Genzano hat <strong>10 ausgewiesene Sammelplätze</strong> (<span lang="it">Aree di Attesa</span>), wo sich Bürger nach einem Großereignis versammeln sollen. Es sind offene öffentliche Räume, mit Schildern markiert. Finden Sie den nächsten zu Ihrer Wohnung oder Hotel <em>bevor</em> ein Notfall passiert.</p>
 <p>👉 <a href="/cartografia/" style="background:#003366;color:#fff;padding:0.5rem 1rem;border-radius:6px;text-decoration:none;display:inline-block;margin-top:0.4rem">Karte der Sammelplätze ansehen</a></p>
 </div>
 

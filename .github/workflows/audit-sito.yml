@@ -1,6 +1,6 @@
 name: "🕵️ Audit settimanale sito"
 
-# Audit completo automatico (38 sezioni) di contenuti, codice, governance:
+# Audit completo automatico (49 sezioni) di contenuti, codice, governance:
 # - 1-15  contenuti pubblicati: COI, numeri emergenza, telefono, sede, CAP,
 #         placeholder, asset rotti, badge, date, allegati, frasi AGID,
 #         pagine draft, schede stampabili, modalità emergenza, dataRevisione,
@@ -57,6 +57,9 @@ jobs:
 
       - name: "🏗️ Build sito (per smoke test rendering)"
         run: hugo --minify
+
+      - name: "🐍 Dipendenze per i controlli di integrità (sezioni 46-49)"
+        run: pip install --quiet pillow pypdf
 
       - name: "🧪 Audit contenuti"
         id: audit
@@ -1369,6 +1372,55 @@ jobs:
             printf "%b" "$UNCOVERED" >> "$REPORT"
           else
             ok "Tutte le estensioni dei link interni a file sono coperte dal render-link \$staticExts."
+          fi
+
+          # ----------------------------------------------------------------
+          section "46. Integrità dei file pubblicati (immagini, icone, PDF, ZIP, JSON, SVG)"
+          # Audit esterno 06/09/2026 (F18, F19): favicon.ico da 0 byte e PNG
+          # con stream corrotto in static/ da mesi, mai rilevati. Lo script
+          # decodifica davvero ogni file; i PDF senza tag sono informativi.
+          OUT46=$(python3 scripts/check-integrita-asset.py 2>/dev/null); RC46=$?
+          if [ "$RC46" -ne 0 ]; then
+            err "File vuoti o corrotti in static/ ($RC46):"
+            echo '```' >> "$REPORT"; echo "$OUT46" | grep -E "^\s+- " >> "$REPORT"; echo '```' >> "$REPORT"
+          else
+            ok "Nessun file vuoto o corrotto in static/."
+          fi
+
+          # ----------------------------------------------------------------
+          section "47. Ancore interne e link mailto nell'HTML generato"
+          # F16 e F21: rimandi #frammento verso id inesistenti (Hugo conserva
+          # le accentate negli id) e mailto codificato due volte. lychee non
+          # segue i frammenti: questo script sì, sulla build appena fatta.
+          OUT47=$(python3 scripts/check-ancore.py public --base-path "" 2>/dev/null); RC47=$?
+          if [ "$RC47" -ne 0 ]; then
+            err "Ancore o link speciali difettosi ($RC47):"
+            echo '```' >> "$REPORT"; echo "$OUT47" | grep -E "^\s+- " >> "$REPORT"; echo '```' >> "$REPORT"
+          else
+            ok "Tutte le ancore interne puntano a un id esistente; nessun mailto codificato due volte."
+          fi
+
+          # ----------------------------------------------------------------
+          section "48. Parità schede stampabili: kit ↔ Stampa tutto ↔ ZIP, avvertenze, offline"
+          # F02, F03, F08, F09: avvertenze fuori dal wrapper stampabile, pacchetto
+          # con 36 schede contro 38, ZIP con CSS non risolvibile e href radicati su /.
+          OUT48=$(python3 scripts/check-parita-schede.py 2>/dev/null); RC48=$?
+          if [ "$RC48" -ne 0 ]; then
+            err "Parità schede non rispettata ($RC48):"
+            echo '```' >> "$REPORT"; echo "$OUT48" | grep -E "^- ❌" >> "$REPORT"; echo '```' >> "$REPORT"
+          else
+            ok "Kit, 'Stampa tutto', ZIP e cartelle coincidono; avvertenze presenti; ZIP apribili offline."
+          fi
+
+          # ----------------------------------------------------------------
+          section "49. Tabelle delle schede coerenti con i dataset aperti citati"
+          # F07: valori diversi dal dataset dichiarato nella scheda clima.
+          OUT49=$(python3 scripts/check-dati-schede.py 2>/dev/null); RC49=$?
+          if [ "$RC49" -ne 0 ]; then
+            err "Discrepanze fra schede e dataset ($RC49):"
+            echo '```' >> "$REPORT"; echo "$OUT49" | grep -E "^\s+- " >> "$REPORT"; echo '```' >> "$REPORT"
+          else
+            ok "I valori annuali delle schede coincidono con i dataset aperti citati."
           fi
 
           # ----------------------------------------------------------------

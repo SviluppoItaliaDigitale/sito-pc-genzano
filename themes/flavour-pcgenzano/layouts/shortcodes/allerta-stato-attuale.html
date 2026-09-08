@@ -1,46 +1,81 @@
 {{- /* Shortcode allerta-stato-attuale — mostra il livello corrente leggendo data/allerta.json.
-       Riusabile su qualunque pagina (allerte-meteo, emergenza, cosa-fare-adesso, ecc.).
+       Riusabile su qualunque pagina (allerte-meteo, cruscotto, cosa-fare-adesso, ecc.).
        Il dato è coerente con la barra in homepage perché legge la stessa fonte (data/allerta.json),
        aggiornata da check-allerta.yml.
+
+       Livelli: i data file usano la forma femminile ("gialla", "rossa", come
+       check-allerta.py LEVEL_NAME); per robustezza si accettano anche "giallo"/"rosso".
+       Esercitazione 06/09/2026: il confronto con le sole forme maschili lasciava
+       un'allerta rossa con lo stile verde su /allerte-meteo/ e /cruscotto/.
+       Colori: classi scoped .allerta-stato-* in custom.css (sezione ALLERTA STATO
+       ATTUALE v2.0), stessa palette della pagina lite; niente utility Bootstrap 5.3
+       (bg-orange, text-*-emphasis) assenti da Bootstrap Italia.
 */ -}}
 {{- $allerta := .Site.Data.allerta -}}
 {{- if $allerta -}}
 {{- $controllo := or $allerta.ultimo_controllo $allerta.ultimo_aggiornamento -}}
 {{- $t := time.AsTime $controllo -}}
 {{- $mesi := slice "" "gennaio" "febbraio" "marzo" "aprile" "maggio" "giugno" "luglio" "agosto" "settembre" "ottobre" "novembre" "dicembre" -}}
+{{- $norm := dict "giallo" "gialla" "rosso" "rossa" -}}
+{{- $livRaw := lower (string ($allerta.livello | default "verde")) -}}
+{{- $liv := index $norm $livRaw | default $livRaw -}}
+{{- if not (in (slice "verde" "gialla" "arancione" "rossa") $liv) -}}{{- $liv = "verde" -}}{{- end -}}
 {{- /* Guard anti-dato-stantio: se il controllo della fonte è più vecchio di 12 ore,
        lo stato (anche "verde") potrebbe non rispecchiare il bollettino reale.
        Soglia = doppio del ciclo di controllo (check-allerta ≈ ogni 6h). */ -}}
 {{- $sogliaSec := 43200 -}}
 {{- $staleBuild := ge (sub now.Unix $t.Unix) $sogliaSec -}}
-{{- $bg := "bg-success bg-opacity-10 border-success" -}}
-{{- $titoloCol := "text-success-emphasis" -}}
 {{- $icon := "bi-shield-check" -}}
-{{- if eq $allerta.livello "giallo" -}}
-  {{- $bg = "bg-warning bg-opacity-10 border-warning" -}}
-  {{- $titoloCol = "text-warning-emphasis" -}}
-  {{- $icon = "bi-exclamation-triangle-fill" -}}
-{{- else if eq $allerta.livello "arancione" -}}
-  {{- $bg = "bg-orange bg-opacity-25 border-warning" -}}
-  {{- $titoloCol = "text-danger-emphasis" -}}
-  {{- $icon = "bi-exclamation-triangle-fill" -}}
-{{- else if eq $allerta.livello "rosso" -}}
-  {{- $bg = "bg-danger bg-opacity-25 border-danger" -}}
-  {{- $titoloCol = "text-danger-emphasis" -}}
-  {{- $icon = "bi-exclamation-octagon-fill" -}}
+{{- if eq $liv "gialla" -}}{{- $icon = "bi-exclamation-triangle-fill" -}}
+{{- else if eq $liv "arancione" -}}{{- $icon = "bi-exclamation-triangle-fill" -}}
+{{- else if eq $liv "rossa" -}}{{- $icon = "bi-exclamation-octagon-fill" -}}
+{{- end -}}
+{{- /* Pre-allerta per domani: stessa logica di home-barre-allerta.html
+       (visibile solo se livello ≥ gialla e titolo presente). */ -}}
+{{- $domaniVisibile := false -}}
+{{- $domaniLiv := "verde" -}}
+{{- $domaniTitolo := "" -}}
+{{- $domaniRischi := "" -}}
+{{- $domaniDataLeg := "" -}}
+{{- with $allerta.domani -}}
+  {{- $dl := index $norm (lower (string (.livello | default "verde"))) | default (lower (string (.livello | default "verde"))) -}}
+  {{- if and (in (slice "gialla" "arancione" "rossa") $dl) .titolo -}}
+    {{- $domaniVisibile = true -}}
+    {{- $domaniLiv = $dl -}}
+    {{- /* Etichetta dal livello ("allerta arancione"): il titolo del data file ("Previsto arancione") duplicherebbe "Previsto domani: Previsto …" */ -}}
+    {{- $domaniTitolo = printf "allerta %s" $dl -}}
+    {{- with .rischi -}}{{- $domaniRischi = delimit . ", " -}}{{- end -}}
+    {{- /* Guard anti-crash: una data non valida in .data (es. da un data
+           file corretto a mano) farebbe fallire time.AsTime e con essa
+           l'intera build Hugo (non solo questa pagina). try() intercetta. */ -}}
+    {{- with .data -}}
+      {{- $r := try (time.AsTime .) -}}
+      {{- if not $r.Err -}}
+        {{- $td := $r.Value -}}
+        {{- $domaniDataLeg = printf "%d %s %d" $td.Day (index $mesi (int $td.Month)) $td.Year -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
 {{- end -}}
 
-<div class="card mb-4 border-2 {{ $bg }}" role="region" aria-label="Stato allerta meteo attuale">
+<div class="card mb-4 allerta-stato allerta-stato-{{ $liv }}" role="region" aria-label="Stato allerta meteo attuale">
   <div class="card-body p-4">
     <div class="d-flex flex-wrap align-items-center mb-2">
-      <i class="bi {{ $icon }} fs-3 me-3 {{ $titoloCol }}" aria-hidden="true"></i>
+      <i class="bi {{ $icon }} fs-3 me-3 allerta-stato-icona" aria-hidden="true"></i>
       <div>
-        <h2 class="h5 mb-0 {{ $titoloCol }}">Stato attuale: {{ $allerta.titolo }}</h2>
-        <p class="mb-0 text-muted small">Livello {{ $allerta.livello | title }} · Comune di Genzano di Roma</p>
+        <h2 class="h5 mb-0 allerta-stato-titolo">Stato attuale: {{ $allerta.titolo }}</h2>
+        <p class="mb-0 small allerta-stato-sotto">Livello {{ $liv | title }} · Comune di Genzano di Roma</p>
       </div>
     </div>
     {{- with $allerta.descrizione }}
     <p class="mb-2">{{ . }}</p>
+    {{- end }}
+    {{- if $domaniVisibile }}
+    <div class="allerta-stato-domani allerta-stato-domani-{{ $domaniLiv }} mb-3" role="status" aria-label="Pre-allerta meteo per domani">
+      <i class="bi bi-calendar-event me-2" aria-hidden="true"></i>
+      <strong>Previsto domani{{ if $domaniDataLeg }} ({{ $domaniDataLeg }}){{ end }}:</strong>
+      {{ $domaniTitolo }}{{ if $domaniRischi }} <span class="text-nowrap">— {{ $domaniRischi }}</span>{{ end }}
+    </div>
     {{- end }}
     <div class="d-flex align-items-start mb-3 py-2 px-3 small allerta-stantia bg-warning bg-opacity-10 border border-warning rounded"
          role="note" data-controllo-unix="{{ $t.Unix }}" data-soglia-sec="{{ $sogliaSec }}"
@@ -53,7 +88,7 @@
       <span>L'ultima verifica automatica della fonte risale <strong>al {{ printf "%02d/%02d alle %02d:%02d" $t.Day (int $t.Month) $t.Hour $t.Minute }}<span class="allerta-stantia-ore"></span></strong>: lo stato mostrato potrebbe non rispecchiare il bollettino in vigore.
       Controlla la situazione attuale sul <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">bollettino della Regione Lazio</a>.</span>
     </div>
-    <p class="small text-muted mb-2">
+    <p class="small allerta-stato-sotto mb-2">
       {{ partial "fonte-badge.html" "ufficiale" }}<i class="bi bi-clock-history me-1" aria-hidden="true"></i>
       Verificato: <strong>{{ printf "%d %s %d, %02d:%02d" $t.Day (index $mesi (int $t.Month)) $t.Year $t.Hour $t.Minute }}</strong>
       · Fonte: <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Regionale Lazio</a>

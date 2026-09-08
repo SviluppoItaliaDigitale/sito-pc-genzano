@@ -3,6 +3,7 @@ title: "Numere utile — Română"
 description: "Toate numerele de urgență și contactele utile pentru cetățenii din Genzano di Roma."
 layout: "single"
 language: "ro"
+tts: false
 ---
 
 [← Înapoi la prezentarea în limba română](/romana/)
@@ -24,6 +25,14 @@ language: "ro"
 | **112** | Numărul Unic de Urgență (NUE) | Orice urgență: sanitară, ordine publică, incendii, salvare tehnică |
 | **803&nbsp;555** | Sala Operativă Protecția Civilă Lazio | Sesizări non-urgente și informații despre urgențe regionale |
 
+## 116117 — asistență medicală neurgentă
+
+Pentru probleme de sănătate care **nu reprezintă o urgență**, puteți suna la **116117**, numărul european gratuit pentru asistență medicală neurgentă. Este disponibil **24 de ore din 24**, este **multilingv** și este deja activ pentru apelurile din **Roma și provincie**, deci și din Genzano. Pentru **urgențe**, numărul prioritar rămâne **112**.
+
+- **Număr:** [116117](tel:116117) — gratuit de pe fix și mobil
+- **Pentru:** continuitatea asistenței medicale (fosta gardă medicală), sfaturi medicale neurgente, informații despre serviciile sanitare regionale și garda medicală turistică
+- **Disponibil:** în fiecare zi, 24 de ore din 24, cu asistență multilingvă
+
 ## Contacte ale Grupului de Protecție Civilă
 
 Aceste contacte sunt **pentru informații și solicitări non-urgente**. În caz de urgență, sunați întotdeauna la **112**.
@@ -35,8 +44,9 @@ Aceste contacte sunt **pentru informații și solicitări non-urgente**. În caz
 ## Aplicații utile
 
 - **IT-alert** — Sistem național de alarmă publică: [it-alert.it](https://www.it-alert.it/it/)
-- **Where ARE U** — Aplicație pentru apeluri de urgență la 112 cu trimitere automată a locației: [descărcați aplicația](https://where.areu.lombardia.it/)
+- **Where ARE U** — Aplicație pentru apeluri de urgență la 112 cu trimitere automată a locației și apel silențios: [descărcați aplicația](https://where.areu.lombardia.it/)
+- **YouPol** — Aplicația Poliției de Stat pentru a semnala bullying, violență domestică, droguri și alte infracțiuni, inclusiv anonim: [Polizia di Stato](https://www.poliziadistato.it/)
 
 ## În caz de urgență
 
-Grupul Comunal de Protecție Civilă **nu poate fi activat direct de cetățeni**. În caz de urgență, contactați **112** sau **803&nbsp;555**: autoritățile competente vor alerta și activa echipele noastre.
+Grupul Comunal de Protecție Civilă **nu poate fi activat direct de cetățeni**. În caz de urgență, contactați întotdeauna **112**. Numărul verde regional al Sălii Operative Lazio, **803&nbsp;555**, este disponibil pentru sesizări non-urgente de protecție civilă. Autoritățile competente vor alerta și activa echipele noastre, atunci când este necesar.

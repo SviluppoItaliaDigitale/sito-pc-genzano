@@ -3,6 +3,7 @@ title: "Português — Proteção Civil Genzano di Roma"
 description: "Informações essenciais em português para turistas e residentes estrangeiros: números de emergência, comportamentos perante os principais riscos, contactos."
 layout: "single"
 language: "pt"
+tts: false
 aliases:
   - /pt/
 sitemap:
@@ -60,7 +61,7 @@ Esta página oferece-lhe as **informações essenciais** em português. O site c
 <li><strong>Não</strong> use elevadores</li>
 <li>Afaste-se de janelas e estantes</li>
 </ul>
-<p>Após o tremor, saia com calma pelas escadas e dirija-se à <strong>"Area di Attesa"</strong> (área de espera) mais próxima. Veja o <a href="/cartografia/">mapa das áreas de espera</a>.</p>
+<p>Após o tremor, saia com calma pelas escadas e dirija-se à <strong lang="it">"Area di Attesa"</strong> (área de espera) mais próxima. Veja o <a href="/cartografia/">mapa das áreas de espera</a>.</p>
 </div>
 
 <div class="en-card">
@@ -105,7 +106,7 @@ Esta página oferece-lhe as **informações essenciais** em português. O site c
 <h2>📦 Kit de emergência em casa</h2>
 <p>Tenha preparada uma pequena mochila com:</p>
 <ul class="en-list">
-<li>Água engarrafada (3 litros por pessoa)</li>
+<li>Água engarrafada (4 litros por pessoa, por dia, durante 3 dias)</li>
 <li>Alimentos de longa duração (bolachas, barras energéticas)</li>
 <li>Lanterna com pilhas de reserva</li>
 <li>Manta térmica e apito</li>
@@ -123,7 +124,7 @@ Esta página oferece-lhe as **informações essenciais** em português. O site c
 
 <div class="en-card">
 <h2>🗺️ Para onde ir em caso de emergência</h2>
-<p>Genzano tem <strong>10 áreas de espera designadas</strong> (Aree di Attesa) onde os cidadãos devem reunir-se após um evento maior. São espaços públicos abertos, sinalizados. Identifique a mais próxima da sua casa ou hotel <em>antes</em> de uma emergência ocorrer.</p>
+<p>Genzano tem <strong>10 áreas de espera designadas</strong> (<span lang="it">Aree di Attesa</span>) onde os cidadãos devem reunir-se após um evento maior. São espaços públicos abertos, sinalizados. Identifique a mais próxima da sua casa ou hotel <em>antes</em> de uma emergência ocorrer.</p>
 <p>👉 <a href="/cartografia/" style="background:#003366;color:#fff;padding:0.5rem 1rem;border-radius:6px;text-decoration:none;display:inline-block;margin-top:0.4rem">Ver o mapa das áreas de espera</a></p>
 </div>
 

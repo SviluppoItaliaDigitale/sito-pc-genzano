@@ -34,7 +34,7 @@
 
   <script>
   (function(){
-    var SNAPSHOT={{ "open-data/ems-attivazioni.json" | relURL | jsonify }};
+    var SNAPSHOT={{ "open-data/ems-attivazioni.json" | relURL }};
     var API='https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/?limit=50';
     var lista=document.getElementById('dash-ems-lista');
     var stato=document.getElementById('ems-stato');
@@ -101,7 +101,8 @@
     }
 
     function usa(j){
-      ATTIV=(j&&j.results)||[];
+      if(!j || !Array.isArray(j.results)) throw new Error('Formato EMS non valido');
+      ATTIV=j.results;
       rendi();
       if(window.pcCache) pcCache.salva('ems', ATTIV);
     }
@@ -121,7 +122,7 @@
         if(!r.ok) throw new Error('snapshot HTTP '+r.status);
         return r.json();
       }).then(usa).catch(function(){
-        fetch(API).then(function(r){return r.json();}).then(usa).catch(daCacheOErrore);
+        fetch(API).then(function(r){if(!r.ok)throw new Error('EMS HTTP '+r.status);return r.json();}).then(usa).catch(daCacheOErrore);
       });
     }
 

@@ -3,6 +3,7 @@ title: "Français — Protection Civile Genzano di Roma"
 description: "Informations en français pour touristes et résidents : numéros d'urgence, comportements face aux risques, contacts de la protection civile de Genzano di Roma."
 layout: "single"
 language: "fr"
+tts: false
 aliases:
   - /fr/
 sitemap:
@@ -60,7 +61,7 @@ Cette page vous donne les **informations essentielles** en français. Le site co
 <li><strong>N'utilisez pas</strong> les ascenseurs</li>
 <li>Éloignez-vous des fenêtres et des bibliothèques</li>
 </ul>
-<p>Après la secousse, sortez calmement par les escaliers et rejoignez la <strong>"Area di Attesa"</strong> (zone d'attente) la plus proche. Voir la <a href="/cartografia/">carte des zones d'attente</a>.</p>
+<p>Après la secousse, sortez calmement par les escaliers et rejoignez la <strong lang="it">"Area di Attesa"</strong> (zone d'attente) la plus proche. Voir la <a href="/cartografia/">carte des zones d'attente</a>.</p>
 </div>
 
 <div class="en-card">
@@ -105,7 +106,7 @@ Cette page vous donne les **informations essentielles** en français. Le site co
 <h2>📦 Kit d'urgence à la maison</h2>
 <p>Préparez un petit sac à dos avec :</p>
 <ul class="en-list">
-<li>Eau en bouteille (3 litres par personne)</li>
+<li>Eau en bouteille (4 litres par personne, par jour, pendant 3 jours)</li>
 <li>Nourriture longue conservation (biscuits, barres énergétiques)</li>
 <li>Lampe torche avec piles de rechange</li>
 <li>Couverture thermique et sifflet</li>
@@ -123,7 +124,7 @@ Cette page vous donne les **informations essentielles** en français. Le site co
 
 <div class="en-card">
 <h2>🗺️ Où aller en cas d'urgence</h2>
-<p>Genzano dispose de <strong>10 zones d'attente désignées</strong> (Aree di Attesa) où les citoyens doivent se rassembler après un événement majeur. Ce sont des espaces publics ouverts, marqués par des panneaux. Repérez la plus proche de chez vous ou de votre hôtel <em>avant</em> qu'une urgence ne survienne.</p>
+<p>Genzano dispose de <strong>10 zones d'attente désignées</strong> (<span lang="it">Aree di Attesa</span>) où les citoyens doivent se rassembler après un événement majeur. Ce sont des espaces publics ouverts, marqués par des panneaux. Repérez la plus proche de chez vous ou de votre hôtel <em>avant</em> qu'une urgence ne survienne.</p>
 <p>👉 <a href="/cartografia/" style="background:#003366;color:#fff;padding:0.5rem 1rem;border-radius:6px;text-decoration:none;display:inline-block;margin-top:0.4rem">Voir la carte des zones d'attente</a></p>
 </div>
 

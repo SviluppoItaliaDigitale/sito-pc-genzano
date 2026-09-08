@@ -3,7 +3,7 @@ _[Indice manuale](README.md)_
 # Parte 19 — Agenti specializzati Claude Code (maggio 2026)
 
 A maggio 2026 sono stati installati nel repo **agenti specializzati**
-in `.claude/agents/` (**sedici a maggio 2026**). Sono profili professionali
+in `.claude/agents/` (**sedici a maggio 2026, trentaquattro dal 6 settembre 2026**). Sono profili professionali
 virtuali con cui Claude Code ti aiuta nei compiti ricorrenti del Gruppo,
 ognuno con un'expertise mirata. La progressione:
 
@@ -12,6 +12,7 @@ ognuno con un'expertise mirata. La progressione:
 - **2 agent aggiunti il 16-18 maggio 2026**: `pc-photo-caption-verifier` (gate visivo Read multimodale foto, codificato dopo l'incidente Formia), `pc-materiali-publisher` (publishing engineer dei materiali multimediali NotebookLM su `/risorse-pronte/`).
 - **1 agent aggiunto ad agosto 2026**: `pc-revisore-linguistico` (gate linguistico obbligato: script deterministici + lettura sintattica per articoli mancanti, accordi e reggenze — nasce il 19/08/2026 dopo che «L'Italia ha rete ben strutturata», «nella immagine» e «superficiale.Il» erano andati live superando tutti i controlli).
 - **1 agent aggiunto a maggio 2026**: `pc-correttore-bozze` (correttore di bozze deterministico — caccia refusi e errori ortografici/grammaticali su QUALSIASI contenuto, incluse le schede statiche HTML, il punto cieco da cui era passato "cuoperti"→"copriti").
+- **17 agent aggiunti il 6 settembre 2026 — il sistema di affidabilità interno.** Un audit esterno aveva trovato 24 rilievi (11 P1) tutti fondati con i gate del sito tutti verdi: fatti sbagliati su Rigopiano, istruzioni per bambini da correggere, rubriche che valutavano la paura, esercizi che spacciavano ipotesi per legge, dati diversi dal dataset, note perse in stampa, pacchetti non paritari, ZIP inutilizzabili offline, privacy e accessibilità da riallineare, favicon vuota, ancore rotte. L'istruzione dell'utente: *«queste cose non devono mai più capitare: non devo più rivolgermi ad altre intelligenze artificiali per fare un audit»*. Da qui i gate dei **fatti** (`pc-fact-checker`), dei **materiali scolastici** (`pc-didattica-reviewer`), della **scienza** (`pc-revisore-scientifico`), della **cronaca** (`pc-desk-giornalistico`), della **conformità legale**, dell'**integrità tecnica**, della **coerenza trasversale**, del **codice**, delle **automazioni**, della **sicurezza**, delle **traduzioni**, dei **dati e feed**, dell'**esercitazione di emergenza**, della **verifica visiva**, dell'**usabilità**, della **documentazione**, e il direttore dell'**audit interno mensile** (`pc-audit-completo`). Sezioni 18-34 di questa Parte.
 
 **La parte importante:** non devi ricordare nessun nome tecnico. **Scrivi a
 Claude in italiano normale**, dicendo cosa vuoi fare, e Claude attiva da solo
@@ -21,7 +22,7 @@ l'agente giusto.
 
 ---
 
-## 19.1 I sedici agenti e quando si attivano
+## 19.1 Gli agenti e quando si attivano
 
 ### 1. Caporedattore (revisione articoli) — 🔴 GATE OBBLIGATO
 
@@ -337,6 +338,185 @@ push) e dall'audit settimanale automatico `audit-sito.yml`.
 
 ---
 
+
+### 18. Fact-checker (gate dei fatti e delle fonti) — 🔴 GATE OBBLIGATO
+
+**Da settembre 2026 è il gate obbligato** su ogni contenuto con dati verificabili (date, orari, bilanci di vittime e superstiti, quantità, cause, norme, citazioni, dati da dataset), richiamato anche da `pc-article-reviewer` (§ 12). Esiste dopo l'audit del 6 settembre 2026: la scheda Rigopiano contava 4 bambini fra le vittime (erano fra i superstiti), attribuiva la valanga al terremoto (nesso non dimostrato) e riportava un orario diverso dalla ricostruzione INGV.
+
+**Frasi naturali**: *"verifica i dati di questo articolo"*, *"le fonti sono giuste?"*, *"controlla che i numeri tornino"*, *"questo caso studio è affidabile?"*.
+
+**Cosa fa**: estrae ogni affermazione verificabile, la confronta con la fonte primaria (INGV, DPC, VVF, ISPRA, Normattiva, MIM, dataset del sito) e produce una tabella affermazione → fonte → verdetto; corregge ciò che è smentito in tutti i file che ripetono il dato, riformula in modo prudente ciò che non è verificabile, blocca il commit se un dato sensibile resta senza fonte.
+
+**Identità tecnica**: `pc-fact-checker`.
+
+---
+
+### 19. Revisore didattico e della sicurezza (materiali scolastici) — 🔴 GATE OBBLIGATO
+
+**Gate obbligato** su ogni scheda stampabile, kit scuola, kit calamità, rubrica, gioco o percorso nuovo o modificato. Esiste perché la filastrocca della Tartaruga saggia consigliava il divano come riparo e «non avere paura» come regola, le note per l'adulto sparivano dal foglio stampato e un esercizio presentava come legge un limite di 5 minuti.
+
+**Frasi naturali**: *"controlla questa scheda prima di darla ai docenti"*, *"va bene per l'infanzia?"*, *"la rubrica è corretta?"*, *"il kit per le scuole è a posto?"*.
+
+**Cosa fa**: verifica sicurezza delle istruzioni (allineamento DPC), assenza di divieti assoluti senza scenario, adeguatezza all'età, rubriche senza emozioni come livelli, normativa scolastica vigente (OM 3/2025, D.M. 183/2024, Accordo 17/4/2025), esercizi e soluzioni che tornano, avvertenze dentro il wrapper stampabile, parità dei quattro formati (script `check-parita-schede.py`, `check-dati-schede.py`), licenze ARASAAC/ISO 7010; delega i fatti al fact-checker.
+
+**Identità tecnica**: `pc-didattica-reviewer`.
+
+---
+
+### 20. Comitato scientifico interno
+
+**Quando lo attivi**: contenuti che spiegano un fenomeno, una causa, una scala, un codice colore o un comportamento di autoprotezione. Esiste perché una scheda presentava il terremoto come innesco della valanga di Rigopiano.
+
+**Frasi naturali**: *"è scientificamente corretto?"*, *"stiamo spiegando bene il rischio?"*, *"magnitudo o intensità?"*.
+
+**Cosa fa**: controlla il ragionamento (cause sostenute dalle fonti primarie, scale e unità, pericolosità/vulnerabilità/rischio, previsione vs evento in corso), il tono della comunicazione del rischio e la gerarchia delle fonti (DPC → CNR/ISPRA/INGV → EENA → ISO).
+
+**Identità tecnica**: `pc-revisore-scientifico`.
+
+---
+
+### 21. Caposervizio di cronaca e deontologia
+
+**Quando lo attivi**: articoli su eventi reali, anniversari di tragedie, vicende giudiziarie, contenuti che citano persone, minori, vittime, indagati.
+
+**Frasi naturali**: *"questo articolo di cronaca è corretto?"*, *"possiamo scrivere così?"*, *"stiamo tutelando i minori?"*.
+
+**Cosa fa**: 5W nel lede, titolo che non eccede i fatti, attribuzione di ogni informazione, presunzione di non colpevolezza e fasi processuali, Carta di Treviso, tutela delle vittime, niente dati personali, orari arrotondati, ruolo del Gruppo secondo la Circolare DPC 6/8/2018, note di aggiornamento datate.
+
+**Identità tecnica**: `pc-desk-giornalistico`.
+
+---
+
+### 22. Responsabile della conformità legale
+
+**Quando lo attivi**: modifiche a privacy, accessibilità, note legali, trasparenza, social media policy, `hugo.toml`; nuovi trattamenti di dati; scadenze del 23 settembre e del 31 marzo.
+
+**Frasi naturali**: *"la privacy è a posto?"*, *"la dichiarazione di accessibilità è aggiornata?"*, *"chi è il nostro RPD?"*.
+
+**Cosa fa**: coerenza titolare/RPD/basi giuridiche per un ente pubblico, modello AgID della dichiarazione, calendario degli adempimenti, corrispondenza fra ciò che le pagine dichiarano e ciò che il sito fa, licenze. Non certifica: prepara il testo corretto e indica cosa deve confermare il Comune o il RPD. Il calendario è tenuto dal workflow `scadenze-conformita.yml`.
+
+**Identità tecnica**: `pc-conformita-legale`.
+
+---
+
+### 23. Ingegnere dell'integrità tecnica
+
+**Frasi naturali**: *"il sito è integro?"*, *"gli ZIP funzionano offline?"*, *"le ancore sono a posto?"*, *"i PDF sono leggibili?"*.
+
+**Cosa fa**: esegue e interpreta `check-integrita-asset.py` (file vuoti o corrotti, inventario PDF), `check-ancore.py` (frammenti e mailto), `check-parita-schede.py`, `check-jsonld.py`, smoke test e fingerprint live; controlla a mano gli stati dell'interfaccia (caricamento, vuoto, errore). Esiste dopo favicon vuota, PNG corrotto, 17 ancore rotte, 234 link assoluti negli ZIP, e-mail codificata due volte.
+
+**Identità tecnica**: `pc-integrita-tecnica`.
+
+---
+
+### 24. Revisore della coerenza trasversale
+
+**Frasi naturali**: *"il sito si contraddice da qualche parte?"*, *"kit e pagine rischio dicono la stessa cosa?"*.
+
+**Cosa fa**: inventario delle informazioni ripetute (comportamenti, kit, numeri, dati istituzionali, eventi, norme, definizioni) e allineamento di ogni copia alla fonte canonica (pagine rischio, chi-siamo, numeri_utili.yaml, Normattiva). Esiste perché la checklist del kit elencava le candele che la pagina blackout vieta.
+
+**Identità tecnica**: `pc-coerenza-trasversale`.
+
+---
+
+### 25. Revisore del codice
+
+**Quando lo attivi**: ogni modifica non banale a template, partial, shortcode, CSS, JavaScript, script Python; bug di interfaccia.
+
+**Cosa fa**: legge il diff riga per riga con la checklist Hugo (subpath, escape, guardie), JavaScript (stati, sicurezza, tastiera), CSS (scoped, isole brand, stampa), Python (idempotenza, fail-safe); esegue build, `node --check`, `py_compile`, `check-jsonld`, `check-ancore`, menu-sync.
+
+**Identità tecnica**: `pc-revisore-codice`.
+
+---
+
+### 26. Responsabile delle automazioni
+
+**Quando lo attivi**: creazione o modifica di un workflow, run falliti, job lenti, nuove fonti dati, routine.
+
+**Cosa fa**: YAML validi, `timeout-minutes`, permessi minimi, pin a SHA, anti-loop, trigger, modello di priorità del deploy (un merge per volta), copertura del watchdog, dipendenze installate, documentazione in rule 10 e manuale.
+
+**Identità tecnica**: `pc-revisore-automazioni`.
+
+---
+
+### 27. Responsabile della sicurezza
+
+**Quando lo attivi**: modifiche a `.htaccess`, CSP, workflow con segreti, nuovi widget o fonti, allarmi.
+
+**Cosa fa**: segreti e dati personali, CSP e header coerenti con ciò che il sito carica, supply chain (pin, vendor senza CDN), superficie JavaScript, catena allerta, risposta agli incidenti; hardening progressivo in Report-Only prima dell'enforcing.
+
+**Identità tecnica**: `pc-sicurezza`.
+
+---
+
+### 28. Responsabile delle versioni multilingue
+
+**Frasi naturali**: *"le traduzioni sono aggiornate?"*, *"l'inglese è corretto?"*.
+
+**Cosa fa**: ogni traduzione (7 lingue, facile-da-leggere multilingua, poster) dice esattamente ciò che dice l'italiano canonico; lingua naturale per un lettore in stress; markup `language`/hreflang/lang; equivalente HTML dei poster.
+
+**Identità tecnica**: `pc-revisore-traduzioni`.
+
+---
+
+### 29. Responsabile dei dati aperti e dei feed
+
+**Cosa fa**: validità (JSON, XML, CAP OASIS, RSS, sitemap), coerenza fra formati e copie (CSV ↔ JSON ↔ pagine), metadati e licenze, freschezza, regole di aggiornamento per delta, identificatori stabili, nessun dato personale.
+
+**Identità tecnica**: `pc-dati-e-feed`.
+
+---
+
+### 30. Direttore delle esercitazioni della catena di emergenza
+
+**Frasi naturali**: *"se scatta un'allerta rossa adesso, funziona tutto?"*, *"facciamo un'esercitazione"*.
+
+**Cosa fa**: simula in locale (mai su `main`) un'allerta e un'emergenza dal bollettino alla home, alla pagina lite, al CAP, al Telegram, con degradazioni e ritorno al verde; produce un verbale anello per anello.
+
+**Identità tecnica**: `pc-esercitazione-emergenza`.
+
+---
+
+### 31. Verificatore visivo del rendering
+
+**Quando lo attivi**: markup HTML custom nei contenuti, nuovi componenti, schede stampabili, mini-app, CSS strutturale.
+
+**Cosa fa**: server Hugo locale, screenshot con Playwright a 375/768/1280 px e in stampa A4, letti davvero (Read multimodale) per trovare testo schiacciato, immagini giganti, contrasto, note mancanti sul foglio, pagine che sbordano.
+
+**Identità tecnica**: `pc-verifica-visiva`.
+
+---
+
+### 32. Responsabile dell'usabilità e dell'architettura dell'informazione
+
+**Frasi naturali**: *"il sito si naviga bene?"*, *"un anziano trova i numeri utili?"*, *"dove metto questa pagina?"*.
+
+**Cosa fa**: percorsi critici per profilo (cittadino in emergenza, genitore, docente, anziano, volontario, giornalista, straniero) con soglie di click, coerenza delle etichette, pagine orfane, vicoli ciechi, Miller sui menu, priorità mobile; raccomanda e procede (rule 07).
+
+**Identità tecnica**: `pc-usabilita`.
+
+---
+
+### 33. Custode della documentazione
+
+**Quando lo attivi**: dopo ogni modifica strutturale (agenti, script, workflow, shortcode, sezioni, routine, regole).
+
+**Cosa fa**: ogni componente reale è documentato e ogni documentazione descrive un componente reale (CLAUDE.md, rules, agenti, manuale, AGENTS.md, CONTESTO-PROGETTO.md); manuale e rules dicono la stessa cosa; incidenti con la loro lezione.
+
+**Identità tecnica**: `pc-documentazione`.
+
+---
+
+### 34. Direttore dell'audit interno
+
+**Quando lo attivi**: audit mensile (routine `trig_01RMQwDs5Ku2mRfkwkDZnKmx`, il 3 del mese alle 06:00), prima di una distribuzione importante, dopo un incidente, o *"fammi l'audit completo"*.
+
+**Cosa fa**: esegue tutti gli script deterministici, invoca tutti gli specialisti, consolida i rilievi nel formato dell'audit esterno (prova, impatto, correzione, verifica, P1/P2/P3), corregge la Categoria A fino a live, lascia in PR la Categoria B, apre issue con responsabile per ciò che va validato da Comune, RPD, RSPP o docenti; rapporto in `riferimenti-interni/audit-interni/`.
+
+**Identità tecnica**: `pc-audit-completo`.
+
+---
+
 ## 19.2 Esempi di workflow tipici
 
 ### Pubblicare un articolo nuovo (sequenza ideale)
@@ -422,6 +602,23 @@ problema"* — e Claude corregge.
 | `.claude/agents/pc-social-publisher.md` | Risk Communication | 12 anni Comunication Officer PC, contributor CWA CEN/CENELEC |
 | `.claude/agents/pc-print-card-qa.md` | Print Quality Engineer | 10 anni Print Production Specialist per editori didattici |
 | `.claude/agents/pc-site-auditor.md` | Auditor di Sistema | 17 anni QA Lead e auditor tecnico per portali PA |
+| `.claude/agents/pc-fact-checker.md` | Fact-checker | 15 anni verifica dei fatti in quotidiani e agenzia, desk scientifico |
+| `.claude/agents/pc-didattica-reviewer.md` | Revisore didattico e sicurezza | 20 anni insegnamento, coordinamento ed. civica, RSPP di istituto, «Io non rischio» |
+| `.claude/agents/pc-revisore-scientifico.md` | Comitato scientifico interno | voce collettiva: meteorologo, geologo, idrologo, sismologo, vulcanologo, AIB, climatologo, sanità pubblica |
+| `.claude/agents/pc-desk-giornalistico.md` | Caposervizio di cronaca | 22 anni in redazione, formatore OdG su deontologia e cronaca giudiziaria |
+| `.claude/agents/pc-conformita-legale.md` | Conformità legale | 16 anni giurista e RPD per enti locali, docente ANCI |
+| `.claude/agents/pc-integrita-tecnica.md` | Integrità tecnica | 14 anni release engineer e QA di portali statici e pacchetti offline |
+| `.claude/agents/pc-coerenza-trasversale.md` | Coerenza trasversale | 12 anni redattore capo di portale istituzionale e knowledge manager PC |
+| `.claude/agents/pc-revisore-codice.md` | Revisore del codice | 15 anni frontend senior e code review su design system italiano |
+| `.claude/agents/pc-revisore-automazioni.md` | Automazioni | 12 anni ingegnere di piattaforma e CI/CD per servizi con vincoli di continuità |
+| `.claude/agents/pc-sicurezza.md` | Sicurezza | 14 anni sicurezza applicativa e risposta agli incidenti per PA |
+| `.claude/agents/pc-revisore-traduzioni.md` | Versioni multilingue | 15 anni traduttore istituzionale (UE, DG ECHO) e localization manager |
+| `.claude/agents/pc-dati-e-feed.md` | Dati aperti e feed | 12 anni data steward open data e integratore CAP |
+| `.claude/agents/pc-esercitazione-emergenza.md` | Esercitazioni catena emergenza | 18 anni sala operativa e responsabile esercitazioni di centro funzionale |
+| `.claude/agents/pc-verifica-visiva.md` | Verifica visiva | 12 anni QA visuale e regressione grafica, stampa A4 |
+| `.claude/agents/pc-usabilita.md` | Usabilità e IA | 14 anni UX researcher e information architect, kit Designers Italia |
+| `.claude/agents/pc-documentazione.md` | Documentazione | 13 anni technical writer e knowledge base docs-as-code |
+| `.claude/agents/pc-audit-completo.md` | Direttore audit interno | 20 anni audit di sistemi pubblici (ISO 19011/27001/22301) e verifiche accessibilità |
 
 I background sono "personae" usati per ancorare le valutazioni a standard
 verificabili (linee guida AGID, ISO 22329, WCAG, CWA, ecc.). Non sono persone

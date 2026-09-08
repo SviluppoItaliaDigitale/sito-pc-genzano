@@ -71,6 +71,8 @@
       return caricaAsset(BUNDLE + "pagefind-ui.css", "css")
         .then(function () { return caricaAsset(BUNDLE + "pagefind-ui.js", "js"); })
         .then(function () {
+          var loadingMsg = document.querySelector("#pcg-ricerca-ui .pcg-ricerca-loading");
+          if (loadingMsg) { loadingMsg.remove(); }
           /* global PagefindUI */
           new PagefindUI({
             element: "#pcg-ricerca-ui",

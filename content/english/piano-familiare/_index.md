@@ -3,6 +3,7 @@ title: "Family Emergency Plan — English"
 description: "How to prepare a family emergency plan: contacts, meeting points, emergency kit."
 layout: "single"
 language: "en"
+tts: false
 ---
 
 [← Back to English overview](/english/)
@@ -52,7 +53,7 @@ Print this page (or copy on a sheet of paper) and complete with your data. Stick
 ### 5. Emergency Kit — where it is kept
 
 - **Kit location at home**: ____________________
-- **Kit contains**: water (3 L per person), long-life food, flashlight + spare batteries, thermal blanket, whistle, phone charger, important medication, copy of ID documents, cash.
+- **Kit contains**: water (4 L per person per day, for 3 days), long-life food, flashlight + spare batteries, thermal blanket, whistle, phone charger, important medication, copy of ID documents, cash.
 
 ### 6. Special Needs
 

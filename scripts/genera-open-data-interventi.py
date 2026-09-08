@@ -19,8 +19,10 @@ L'export del gestionale è CUMULATIVO ("global report"): contiene sempre tutto
 dall'adozione del sistema. Perciò NON serve scartare a mano i dati già usati:
 ogni nuovo export ricontiene i vecchi + i nuovi, e questo script ricalcola e
 SOVRASCRIVE i totali aggregati. I dati restano PROVVISORI (dal nuovo gestionale,
-non da inizio anno). Se un export NON fosse cumulativo, va usata una logica di
-merge: in quel caso segnalarlo.
+non da inizio anno). Se l'export NON è cumulativo (filtrato a un periodo),
+NON usare questo script: sovrascriverebbe i totali con un sottoinsieme.
+Usa invece scripts/aggiorna-open-data-delta.py, che aggiunge ai dataset
+pubblicati le sole righe nuove dell'export parziale.
 """
 import csv
 import glob
@@ -107,6 +109,19 @@ def fnum(x):
     return v if v is not None else 0
 
 
+def chiave_numero(n):
+    """'130/2026' -> (2026, 130) per confronti; None se non parsabile."""
+    m = re.match(r"\s*(\d+)\s*/\s*(\d{4})", str(n or ""))
+    return (int(m.group(2)), int(m.group(1))) if m else None
+
+
+def ultimo_numero(righe, col):
+    """Numero di intervento più alto presente nelle righe (es. '130/2026')."""
+    nums = [(chiave_numero(col(r, "Numero")), col(r, "Numero")) for r in righe]
+    nums = [x for x in nums if x[0]]
+    return max(nums)[1].strip() if nums else None
+
+
 def write_kv(nome, indicatori, periodo):
     """Scrive un dataset chiave/valore in CSV + JSON."""
     csv_path = os.path.join(OUT, nome + ".csv")
@@ -190,7 +205,11 @@ def main():
     date = [parse_data_it(col(r, "Data Inizio")) for r in data]
     date = [d for d in date if d]
     periodo = {"dal": min(date).isoformat() if date else None,
-               "al": max(date).isoformat() if date else None}
+               "al": max(date).isoformat() if date else None,
+               # ultimo numero di intervento incluso: serve a
+               # aggiorna-open-data-delta.py per riconoscere le righe nuove
+               # di un export parziale, anche se cadono nello stesso giorno.
+               "ultimo_numero": ultimo_numero(data, col)}
     per_label = ""
     if date:
         d0, d1 = min(date), max(date)

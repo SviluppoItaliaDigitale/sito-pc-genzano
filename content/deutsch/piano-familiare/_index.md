@@ -3,6 +3,7 @@ title: "Familien-Notfallplan — Deutsch"
 description: "Wie man einen Familien-Notfallplan erstellt: Kontakte, Treffpunkte, Notfall-Set."
 layout: "single"
 language: "de"
+tts: false
 ---
 
 [← Zurück zur deutschen Übersicht](/deutsch/)
@@ -52,7 +53,7 @@ Drucken Sie diese Seite (oder schreiben Sie auf einen Zettel ab) und vervollstä
 ### 5. Notfall-Set — wo es aufbewahrt wird
 
 - **Ort des Sets zu Hause**: ____________________
-- **Das Set enthält**: Wasser (3 L pro Person), lange haltbare Lebensmittel, Taschenlampe + Ersatzbatterien, Rettungsdecke, Pfeife, Handy-Ladegerät, wichtige Medikamente, Kopie der Ausweisdokumente, Bargeld.
+- **Das Set enthält**: Wasser (4 L pro Person pro Tag, für 3 Tage), lange haltbare Lebensmittel, Taschenlampe + Ersatzbatterien, Rettungsdecke, Pfeife, Handy-Ladegerät, wichtige Medikamente, Kopie der Ausweisdokumente, Bargeld.
 
 ### 6. Besondere Bedürfnisse
 

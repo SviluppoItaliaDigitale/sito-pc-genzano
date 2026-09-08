@@ -52,7 +52,7 @@ Spiega ai bambini dove sono e mostraglieli fisicamente. Il giorno in cui servir√
 
 Lo [zaino di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/) √® parte integrante del piano. Ricordati di includere:
 
-- Acqua (3 litri al giorno per 3 giorni, per ogni persona)
+- Acqua (4 litri al giorno per 3 giorni, per ogni persona)
 - Alimenti non deperibili
 - Torcia, radio, powerbank, pile
 - Farmaci personali e kit di primo soccorso

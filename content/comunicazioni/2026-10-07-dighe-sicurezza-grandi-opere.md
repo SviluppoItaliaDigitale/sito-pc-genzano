@@ -81,7 +81,7 @@ I Comuni interessati sono dotati di **Piani di Emergenza specifici** per lo scen
 
 ## La memoria del Vajont
 
-Il **9 ottobre 1963** una frana di circa 260 milioni di metri cubi si staccò dal Monte Toc e precipitò nel bacino della diga del Vajont. Il conseguente tsunami lacustre superò la diga e travolse Longarone e altri paesi, causando **1.910 vittime**. La diga, paradossalmente, **resistette intatta**: la tragedia non fu causata da un cedimento della diga ma dalla frana.
+Il **9 ottobre 1963** una frana di circa 260 milioni di metri cubi si staccò dal Monte Toc e precipitò nel bacino della diga del Vajont. Il conseguente tsunami lacustre superò la diga e travolse Longarone e altri paesi, causando **1.917 vittime**. La diga, paradossalmente, **resistette intatta**: la tragedia non fu causata da un cedimento della diga ma dalla frana.
 
 Dal Vajont, la sicurezza delle dighe italiane è stata trasformata:
 

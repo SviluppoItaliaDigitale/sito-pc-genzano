@@ -3,6 +3,7 @@ title: "Română — Protecția Civilă Genzano di Roma"
 description: "Informații esențiale în limba română pentru turiști și rezidenți străini: numere de urgență, comportamente în fața principalelor riscuri, contacte."
 layout: "single"
 language: "ro"
+tts: false
 aliases:
   - /ro/
 sitemap:
@@ -60,7 +61,7 @@ Această pagină vă oferă **informațiile esențiale** în română. Site-ul c
 <li><strong>Nu</strong> folosiți liftul</li>
 <li>Stați departe de ferestre și de mobilă înaltă</li>
 </ul>
-<p>După cutremur, ieșiți cu calm pe scări și ajungeți la cea mai apropiată <strong>"Area di Attesa"</strong> (zonă de adunare). Vedeți <a href="/cartografia/">harta zonelor de adunare</a>.</p>
+<p>După cutremur, ieșiți cu calm pe scări și ajungeți la cea mai apropiată <strong lang="it">"Area di Attesa"</strong> (zonă de adunare). Vedeți <a href="/cartografia/">harta zonelor de adunare</a>.</p>
 </div>
 
 <div class="en-card">
@@ -105,7 +106,7 @@ Această pagină vă oferă **informațiile esențiale** în română. Site-ul c
 <h2>📦 Kit de urgență acasă</h2>
 <p>Țineți pregătit un mic rucsac cu:</p>
 <ul class="en-list">
-<li>Apă îmbuteliată (3 litri de persoană)</li>
+<li>Apă îmbuteliată (4 litri de persoană, pe zi, timp de 3 zile)</li>
 <li>Alimente de lungă durată (biscuiți, batoane energetice)</li>
 <li>Lanternă cu baterii de rezervă</li>
 <li>Pătură termică și fluier</li>
@@ -123,7 +124,7 @@ Această pagină vă oferă **informațiile esențiale** în română. Site-ul c
 
 <div class="en-card">
 <h2>🗺️ Unde să vă duceți în caz de urgență</h2>
-<p>Genzano are <strong>10 zone de adunare desemnate</strong> (Aree di Attesa) unde cetățenii trebuie să se adune după un eveniment major. Sunt spații publice deschise, marcate cu indicatoare. Găsiți cea mai apropiată de casa sau hotelul dvs. <em>înainte</em> de a se întâmpla o urgență.</p>
+<p>Genzano are <strong>10 zone de adunare desemnate</strong> (<span lang="it">Aree di Attesa</span>) unde cetățenii trebuie să se adune după un eveniment major. Sunt spații publice deschise, marcate cu indicatoare. Găsiți cea mai apropiată de casa sau hotelul dvs. <em>înainte</em> de a se întâmpla o urgență.</p>
 <p>👉 <a href="/cartografia/" style="background:#003366;color:#fff;padding:0.5rem 1rem;border-radius:6px;text-decoration:none;display:inline-block;margin-top:0.4rem">Vedeți harta zonelor de adunare</a></p>
 </div>
 

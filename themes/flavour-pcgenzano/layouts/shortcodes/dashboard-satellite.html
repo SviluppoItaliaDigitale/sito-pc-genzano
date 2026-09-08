@@ -85,7 +85,7 @@
       maxNativeZoom:8, maxZoom:9, opacity:1, attribution:'Imagery © NASA EOSDIS GIBS'
     });
 
-    var stella=L.marker(GENZANO,{keyboard:true,icon:L.divIcon({className:'dash-stella',html:'<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 26 26" aria-hidden="true"><path d="M13 1l3.4 7.6L24 9.3l-5.8 5 1.8 7.9L13 18.4 5.9 22.2l1.8-7.9L2 9.3l7.6-.7z" fill="#ffd166" stroke="#0b1622" stroke-width="1.4"/></svg>',iconSize:[22,22],iconAnchor:[11,11]})}).bindPopup('<strong>Genzano di Roma</strong>');
+    var stella=L.marker(GENZANO,{keyboard:true,icon:L.divIcon({className:'dash-stella',html:'<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 26 26" aria-hidden="true"><path d="M13 1l3.4 7.6L24 9.3l-5.8 5 1.8 7.9L13 18.4 5.9 22.2l1.8-7.9L2 9.3l7.6-.7z" fill="#ffd166" stroke="#0b1622" stroke-width="1.4"/></svg><span class="visually-hidden">Genzano di Roma</span>',iconSize:[22,22],iconAnchor:[11,11]})}).bindPopup('<strong>Genzano di Roma</strong>');
 
     var stato=document.getElementById('sat-stato');
     var modo='geocolour';

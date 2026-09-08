@@ -56,7 +56,7 @@ L'evento del 15 settembre 2022 ha riacceso il dibattito su due aspetti del siste
 
 **1. La precisione delle allerte meteo locali.** Per quel 15 settembre, il bollettino del **Centro Funzionale Regionale Marche** aveva emesso un'**allerta gialla** per rischio idrogeologico, non un'allerta arancione o rossa. La **previsione meteorologica** non aveva colto la **localizzazione esatta** del nucleo precipitativo né la sua **intensità eccezionale**. È un limite intrinseco delle previsioni meteorologiche italiane su scala locale per fenomeni convettivi: i modelli numerici hanno **risoluzione spaziale limitata** e i temporali estivi-autunnali sono difficili da prevedere con largo anticipo.
 
-**2. La comunicazione al cittadino.** Anche con un'allerta tempestiva, comunicare di notte a chi dorme è difficilissimo. Il sistema **IT-alert** — già in fase di sperimentazione nel 2022, oggi pienamente attivo — è stato pensato anche per rispondere a queste situazioni: una **notifica sonora forte** sul telefono cellulare, in qualunque luogo e ora, non legata ad app o configurazioni. È una della "lezioni operative" che eventi come l'alluvione marchigiana hanno reso urgenti.
+**2. La comunicazione al cittadino.** Anche con un'allerta tempestiva, comunicare di notte a chi dorme è difficilissimo. Il sistema **IT-alert** — già in fase di sperimentazione nel 2022, oggi pienamente attivo — è stato pensato anche per rispondere a queste situazioni: una **notifica sonora forte** sul telefono cellulare, in qualunque luogo e ora, non legata ad app o configurazioni. È una delle "lezioni operative" che eventi come l'alluvione marchigiana hanno reso urgenti.
 
 ## Cosa abbiamo costruito da allora
 

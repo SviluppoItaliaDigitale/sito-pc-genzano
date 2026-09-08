@@ -10,7 +10,7 @@
 
   var HEADER_HTML =
     '<a class="skip-to-content" href="#main-content">Vai al contenuto principale</a>' +
-    '<div class="it-header-slim-wrapper" role="banner">' +
+    '<div class="it-header-slim-wrapper">' +
       '<div class="container">' +
         '<div class="row"><div class="col-12">' +
           '<div class="it-header-slim-wrapper-content">' +
@@ -162,14 +162,14 @@
     '</div>';
 
   var FOOTER_HTML =
-    '<div class="utility-bar" role="group" aria-label="Informazioni di aggiornamento">' +
+    '<aside class="utility-bar" aria-label="Informazioni di aggiornamento">' +
       '<div class="container">' +
         '<div class="d-flex flex-wrap justify-content-between align-items-center">' +
           '<div class="utility-bar-item"><i class="bi bi-clock me-1" aria-hidden="true"></i><span id="live-datetime"></span></div>' +
           '<div class="utility-bar-item"><i class="bi bi-arrow-repeat me-1" aria-hidden="true"></i><span id="site-build-time">Sito aggiornato</span></div>' +
         '</div>' +
       '</div>' +
-    '</div>' +
+    '</aside>' +
     '<footer class="it-footer" id="footer" role="contentinfo">' +
       '<div class="it-footer-main">' +
         '<div class="container">' +
@@ -477,8 +477,10 @@
     if (!main) return;
 
     // Header
-    var headerDiv = document.createElement('div');
+    // <header> = landmark banner unico (speculare a baseof.html)
+    var headerDiv = document.createElement('header');
     headerDiv.id = 'site-header';
+    headerDiv.className = 'site-header';
     headerDiv.innerHTML = HEADER_HTML;
     main.parentNode.insertBefore(headerDiv, main);
 

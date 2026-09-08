@@ -15,7 +15,7 @@
 {{- $titleEnc := .Title | urlquery -}}
 {{- $descEnc := default .Site.Params.description .Description | urlquery -}}
 {{- $sourceEnc := .Site.Params.productionBaseURL | default .Site.BaseURL | urlquery -}}
-{{- $bodyEmail := printf "%s%%0A%%0A%s" .Title .Permalink | urlquery -}}
+{{- $bodyEmail := printf "%s\n\n%s" .Title .Permalink | urlquery -}}
 
 {{/* Le URL di share vanno costruite con printf + safeURL: senza safeURL,
      Hugo applica un secondo URL-escape ai valori dentro href="..." e
