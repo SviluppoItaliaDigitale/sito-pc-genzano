@@ -10,7 +10,7 @@ Questo kit è pensato per gli insegnanti della **scuola primaria** che desideran
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e sono adatti a bambini dai 6 agli 11 anni, con attività differenziate per le classi iniziali (I-II) e per le classi finali (III-IV-V).
 
-> 📦 **Scarica il pacchetto offline** — [`kit-scuola-primaria.zip`](/formazione/pacchetti/kit-scuola-primaria.zip) (~456 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-primaria.zip`](/formazione/pacchetti/kit-scuola-primaria.zip) (~468 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
 > ⚠️ **Avvertenza pedagogica — proporzionare l'argomento all'età.** Le attività di questo kit affrontano rischi reali (terremoto, alluvione, incendio, blackout, eventi storici) ma **non devono generare paura o ansia**. Il docente è chiamato a presentare i fenomeni in modo **concreto, rassicurante, agentivo**: l'attenzione è sui *comportamenti corretti che il bambino può fare* (preparare lo zaino, conoscere il punto di raccolta, chiamare il 112), non sull'enfasi del danno. I casi studio delle maxi-emergenze italiane sono adattati per la fascia 9-11 anni con focus su lieto fine, ricostruzione, solidarietà — **mai con immagini di vittime o cronaca cruda**. Se nella classe ci sono bambini reduci da eventi traumatici familiari (lutti, evacuazioni, terremoti recenti), valutare con cautela e raccordarsi con il dirigente scolastico, lo psicologo scolastico e con la pagina [Psicologia dell'emergenza](/formazione/psicologia-emergenza/).
 
@@ -907,6 +907,16 @@ Da adattare con intestazione della scuola:
 > *Il team docenti*
 
 ---
+
+## Laboratori di comunicazione e collaborazione
+
+Attività stampabili con spazi per le risposte e guida per il docente nella pagina successiva. Scegliere la fascia indicata nella singola scheda e adattare tempi e strumenti alla classe. Le schede sono incluse anche nei pacchetti da stampare e da scaricare.
+
+- [Una consegna, due interpretazioni](/formazione/schede-stampabili/una-consegna-due-interpretazioni-primaria/) — 6–8 anni. Rendere precisa una comunicazione.
+- [Il magazzino della solidarietà](/formazione/schede-stampabili/il-magazzino-della-solidarieta-primaria/) — 8–11 anni. Contare materiali e comunicare una mancanza.
+- [L’avviso che tutti capiscono](/formazione/schede-stampabili/lavviso-che-tutti-capiscono-primaria/) — 8–11 anni. Scrivere un avviso comprensibile.
+- [Il registro delle torce](/formazione/schede-stampabili/il-registro-delle-torce-primaria/) — 8–11 anni. Distinguere osservazione e ipotesi.
+- [Una mappa deve farsi capire](/formazione/schede-stampabili/una-mappa-deve-farsi-capire-primaria/) — 9–11 anni. Costruire una legenda e verificarne la comprensione.
 
 ## Materiale consigliato
 

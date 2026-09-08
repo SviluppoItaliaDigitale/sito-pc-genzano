@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pacchetto stampa: Scuola Secondaria di II grado (14-19 anni) — 36 schede A4</title>
-  <meta name="description" content="Stampa in un click tutte le 36 schede stampabili della Scuola Secondaria di II grado (14-19 anni). Pacchetto auto-aggiornato dal sito istituzionale.">
+  <title>Pacchetto stampa: Scuola Secondaria di II grado (14-19 anni) — 41 schede A4</title>
+  <meta name="description" content="Stampa in un click tutte le 41 schede stampabili della Scuola Secondaria di II grado (14-19 anni). Pacchetto auto-aggiornato dal sito istituzionale.">
   <meta name="robots" content="noindex,follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
@@ -972,23 +972,44 @@
       border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
     }
   
+
+/* === stili scheda 19 === */
+@page laboratorio26 { size: A4; margin: 5mm; }
+    .scheda-page:has(> .lab26-header) { page: laboratorio26; }
+    .lab26 { font-size: 14px; line-height: 1.4; }
+    .lab26 h2 { color: #003366; font-size: 15px; line-height: 1.3; margin: 3mm 0 1.5mm; }
+    .lab26 p { margin: 2.5mm 0; }
+    .lab26 .lab26-scenario { border-left: 3px solid #003366; padding: 2mm 3mm; background: #f1f5f7; }
+    .lab26 .lab26-risposta { height: 25mm; border: 1px solid #687787; margin-bottom: 2mm; }
+    .lab26 .lab26-nota { border-top: 1px solid #687787; padding-top: 2mm; font-size: 12px; }
+    .lab26 .lab26-meta { font-size: 12px; }
+    .lab26 li { margin-bottom: 3mm; }
+    .lab26 .lab26-osservazioni { height: 12mm; border: 1px solid #687787; }
+    .lab26-header .scheda-titolo-principale { font-size: 22px; line-height: 1.2; }
+    .lab26-header .scheda-sottotitolo { font-size: 12px; }
+    @media print {
+      .lab26 { font-size: 10.5pt; }
+      .lab26 h2 { font-size: 11pt; }
+      .lab26 section { break-inside: avoid; }
+      .lab26 .lab26-scenario { background: white; }
+    }
   </style>
 </head>
 <body>
 
   <header class="pacchetto-toolbar no-print" role="banner">
     <a href="/formazione/schede-stampabili/" aria-label="Torna alla hub delle schede stampabili">← Torna alle schede</a>
-    <span class="pacchetto-titolo">Pacchetto stampa: Scuola Secondaria di II grado · 36 schede A4</span>
-    <button type="button" onclick="window.print()" aria-label="Apri la finestra di stampa per tutte le 36 schede di Scuola Secondaria di II grado">
-      🖨️ Stampa tutto (36 fogli A4)
+    <span class="pacchetto-titolo">Pacchetto stampa: Scuola Secondaria di II grado · 41 schede A4</span>
+    <button type="button" onclick="window.print()" aria-label="Apri la finestra di stampa per tutte le 41 schede di Scuola Secondaria di II grado">
+      🖨️ Stampa tutto (46 fogli A4)
     </button>
   </header>
 
   <section class="pacchetto-intro no-print" aria-labelledby="pacchetto-intro-h1">
     <h1 id="pacchetto-intro-h1">Pacchetto stampa — Scuola Secondaria di II grado</h1>
     <p>
-      Questo pacchetto contiene <strong>36 schede stampabili</strong> della Scuola Secondaria di II grado (14-19 anni),
-      per un totale di <strong>36 fogli A4</strong>.
+      Questo pacchetto contiene <strong>41 schede stampabili</strong> della Scuola Secondaria di II grado (14-19 anni),
+      per un totale di <strong>46 fogli A4</strong>.
       Premi <strong>"Stampa tutto"</strong> in alto (oppure <kbd>Ctrl+P</kbd> su Windows/Linux, <kbd>Cmd+P</kbd> su Mac)
       per aprire la finestra di stampa. Per archiviare in digitale scegli <em>"Salva come PDF"</em> come stampante.
     </p>
@@ -1005,7 +1026,7 @@
   </section>
 
   <nav class="pacchetto-toc no-print" aria-label="Indice del pacchetto">
-    <h2>Indice — 36 schede in questo pacchetto</h2>
+    <h2>Indice — 41 schede in questo pacchetto</h2>
     <ol>
       <li><a href="#scheda-rubrica-valutativa-secondaria2">Rubrica valutativa Educazione Civica — Secondaria II</a></li>
       <li><a href="#scheda-caso-amatrice-secondaria2">Caso Studio: Amatrice — 24 agosto 2016</a></li>
@@ -1043,6 +1064,11 @@
       <li><a href="#scheda-cruciverba-secondaria2">Glossario commentato del lessico di Protezione Civile</a></li>
       <li><a href="#scheda-labirinto-evacuazione-secondaria2">Progetto piano di evacuazione di un edificio</a></li>
       <li><a href="#scheda-chiamo-112-secondaria2">Analisi linguistica del messaggio al 112 + protocollo</a></li>
+      <li><a href="#scheda-il-costo-delle-scelte-secondaria2">Il costo delle scelte</a> <span class="toc-meta">· 2 fogli</span></li>
+      <li><a href="#scheda-due-archivi-una-sola-versione-secondaria2">Due archivi, una sola versione</a> <span class="toc-meta">· 2 fogli</span></li>
+      <li><a href="#scheda-il-sensore-non-dice-tutta-la-verita-secondaria2">Il sensore non dice tutta la verità</a> <span class="toc-meta">· 2 fogli</span></li>
+      <li><a href="#scheda-una-catena-di-dipendenze-secondaria2">Una catena di dipendenze</a> <span class="toc-meta">· 2 fogli</span></li>
+      <li><a href="#scheda-dal-test-alla-correzione-secondaria2">Dal test alla correzione</a> <span class="toc-meta">· 2 fogli</span></li>
     </ol>
   </nav>
 
@@ -6391,6 +6417,286 @@ e canali ufficiali del Comune.</div>
       <span class="scheda-site">protezionecivilegenzano.it</span>
       <span>Scheda "Analisi linguistica chiamata 112 + protocollo" · Secondaria II · italiano/sicurezza/educazione civica · rev. 2026</span>
     </footer>
+  </article>
+</section>
+
+<section id="scheda-il-costo-delle-scelte-secondaria2" class="pacchetto-scheda" aria-label="Scheda: Il costo delle scelte">
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Il costo delle scelte</h1>
+        <div class="scheda-sottotitolo">Secondaria II · 14–19 anni</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <p class="lab26-meta">55 minuti · calcolatrice · <strong>Obiettivo:</strong> Confrontare alternative esplicitando le ipotesi.</p>
+      <p class="lab26-meta">Nome o simbolo: ____________________ Data: ______________</p>
+      <p class="lab26-scenario">Modello inventato per un magazzino: danno annuo atteso iniziale 2.000 euro. Intervento A costa 3.000 euro e porta il danno atteso a 1.200 euro/anno; B costa 5.000 euro e lo porta a 700 euro/anno. Orizzonte: 5 anni, senza sconto né manutenzione.</p>
+      <section><h2>1. Calcola costo totale atteso nei 5 anni: nessun intervento, A, B.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 1"></div></section>
+<section><h2>2. Con un budget iniziale di 4.000 euro, quale dei due interventi è ammissibile?</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 2"></div></section>
+<section><h2>3. Elenca tre informazioni mancanti prima di una decisione reale.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 3"></div></section>
+      <p class="lab26-nota avvertenza">Attività di classe con il docente. Puoi rispondere parlando, indicando o disegnando. Non occorre raccontare esperienze personali.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>S01 · Scheda alunno · Rev. 1 · 07/09/2026</span></footer>
+  </article>
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h2 class="scheda-titolo-principale">Il costo delle scelte</h2>
+        <div class="scheda-sottotitolo">Secondaria II · 14–19 anni · Guida per il docente</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <h2>Obiettivo e materiali</h2>
+      <p>Confrontare alternative esplicitando le ipotesi. 55 minuti · calcolatrice. La durata è orientativa.</p>
+      <h2>Conduzione e adattamenti</h2>
+      <p class="istruzioni-docente">Il danno atteso è una media modellistica, non una previsione certa. Non attribuire prezzi a vite umane. Per il biennio fornire schema dei calcoli; per il triennio discutere sensibilità.</p>
+      <h2>Come condurre il laboratorio</h2>
+      <ol>
+        <li>Presentare l’obiettivo e leggere insieme la situazione, in condizioni ordinarie.</li>
+        <li>Proporre una consegna alla volta. Lasciare tempo per domande e chiarimenti.</li>
+        <li>Accettare risposte orali, gestuali, grafiche o dettate; adattare strumenti e tempi.</li>
+        <li>Confrontare le risposte e invitare a migliorare il proprio lavoro, senza gare di velocità.</li>
+      </ol>
+      <h2>Risposte e criteri di osservazione</h2>
+      <p class="scheda-docente">Nessun intervento 10.000; A 9.000; B 8.500 euro. Con budget 4.000 solo A fra gli interventi. Mancano affidabilità stime, manutenzione, durata, effetti ulteriori e vincoli.</p>
+      <h2>Appunti del docente</h2>
+      <p class="lab26-meta">Che cosa ha funzionato? Quale supporto riproporre? Annotare il lavoro del gruppo senza dati personali.</p>
+      <div class="lab26-osservazioni" role="img" aria-label="Spazio per gli appunti del docente"></div>
+
+      <p class="lab26-nota">Gli eventuali dati numerici sono inventati per il laboratorio. Le attività non sostituiscono il piano di emergenza scolastico.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>S01 · Guida docente · Rev. 1 · 07/09/2026</span></footer>
+  </article>
+</section>
+
+<section id="scheda-due-archivi-una-sola-versione-secondaria2" class="pacchetto-scheda" aria-label="Scheda: Due archivi, una sola versione">
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Due archivi, una sola versione</h1>
+        <div class="scheda-sottotitolo">Secondaria II · 14–19 anni</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <p class="lab26-meta">55 minuti · carta o computer · <strong>Obiettivo:</strong> Progettare un controllo fra formati didattici.</p>
+      <p class="lab26-meta">Nome o simbolo: ____________________ Data: ______________</p>
+      <p class="lab26-scenario">Inventario fittizio web: scheda A rev.2, B rev.1, C rev.3. ZIP: A rev.1, B rev.1. Pacchetto stampa: A rev.2, B rev.1, C rev.2. La revisione web è il riferimento per questo esercizio.</p>
+      <section><h2>1. Elenca le discrepanze separando assenza e revisione superata.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 1"></div></section>
+<section><h2>2. Scrivi le condizioni che devono essere vere prima della distribuzione.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 2"></div></section>
+<section><h2>3. Progetta un registro con identificativo, revisione, formato ed esito.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 3"></div></section>
+      <p class="lab26-nota avvertenza">Attività di classe con il docente. Puoi rispondere parlando, indicando o disegnando. Non occorre raccontare esperienze personali.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>S02 · Scheda alunno · Rev. 1 · 07/09/2026</span></footer>
+  </article>
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h2 class="scheda-titolo-principale">Due archivi, una sola versione</h2>
+        <div class="scheda-sottotitolo">Secondaria II · 14–19 anni · Guida per il docente</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <h2>Obiettivo e materiali</h2>
+      <p>Progettare un controllo fra formati didattici. 55 minuti · carta o computer. La durata è orientativa.</p>
+      <h2>Conduzione e adattamenti</h2>
+      <p class="istruzioni-docente">Questo caso è sintetico, non un nuovo audit del sito. Variante biennio: tabella manuale; triennio: pseudocodice per uguaglianza degli insiemi e delle revisioni.</p>
+      <h2>Come condurre il laboratorio</h2>
+      <ol>
+        <li>Presentare l’obiettivo e leggere insieme la situazione, in condizioni ordinarie.</li>
+        <li>Proporre una consegna alla volta. Lasciare tempo per domande e chiarimenti.</li>
+        <li>Accettare risposte orali, gestuali, grafiche o dettate; adattare strumenti e tempi.</li>
+        <li>Confrontare le risposte e invitare a migliorare il proprio lavoro, senza gare di velocità.</li>
+      </ol>
+      <h2>Risposte e criteri di osservazione</h2>
+      <p class="scheda-docente">ZIP: A superata, C assente. Stampa: C superata. Non basta confrontare il numero di file. Controllare anche avvertenze, risorse e leggibilità offline.</p>
+      <h2>Appunti del docente</h2>
+      <p class="lab26-meta">Che cosa ha funzionato? Quale supporto riproporre? Annotare il lavoro del gruppo senza dati personali.</p>
+      <div class="lab26-osservazioni" role="img" aria-label="Spazio per gli appunti del docente"></div>
+
+      <p class="lab26-nota">Gli eventuali dati numerici sono inventati per il laboratorio. Le attività non sostituiscono il piano di emergenza scolastico.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>S02 · Guida docente · Rev. 1 · 07/09/2026</span></footer>
+  </article>
+</section>
+
+<section id="scheda-il-sensore-non-dice-tutta-la-verita-secondaria2" class="pacchetto-scheda" aria-label="Scheda: Il sensore non dice tutta la verità">
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Il sensore non dice tutta la verità</h1>
+        <div class="scheda-sottotitolo">Secondaria II · 15–19 anni</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <p class="lab26-meta">60 minuti · calcolatrice · <strong>Obiettivo:</strong> Quantificare falsi allarmi e mancate rilevazioni.</p>
+      <p class="lab26-meta">Nome o simbolo: ____________________ Data: ______________</p>
+      <p class="lab26-scenario">Simulazione di 100 prove: condizione bersaglio presente in 20 casi, riconosciuta in 16; assente in 80 casi, segnalata erroneamente in 8. Nessun sensore reale viene collaudato.</p>
+      <section><h2>1. Costruisci la tabella presenza/assenza e segnalazione sì/no.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 1"></div></section>
+<section><h2>2. Calcola sensibilità, quota di falsi positivi sugli assenti e precisione delle segnalazioni.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 2"></div></section>
+<section><h2>3. Spiega perché 80% di sensibilità non significa che l’80% degli allarmi sia corretto.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 3"></div></section>
+      <p class="lab26-nota avvertenza">Attività di classe con il docente. Puoi rispondere parlando, indicando o disegnando. Non occorre raccontare esperienze personali.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>S03 · Scheda alunno · Rev. 1 · 07/09/2026</span></footer>
+  </article>
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h2 class="scheda-titolo-principale">Il sensore non dice tutta la verità</h2>
+        <div class="scheda-sottotitolo">Secondaria II · 15–19 anni · Guida per il docente</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <h2>Obiettivo e materiali</h2>
+      <p>Quantificare falsi allarmi e mancate rilevazioni. 60 minuti · calcolatrice. La durata è orientativa.</p>
+      <h2>Conduzione e adattamenti</h2>
+      <p class="istruzioni-docente">Definire i denominatori prima dei calcoli. Dati inventati, nessuna soglia operativa. Biennio: usare frazioni; triennio: discutere la prevalenza.</p>
+      <h2>Come condurre il laboratorio</h2>
+      <ol>
+        <li>Presentare l’obiettivo e leggere insieme la situazione, in condizioni ordinarie.</li>
+        <li>Proporre una consegna alla volta. Lasciare tempo per domande e chiarimenti.</li>
+        <li>Accettare risposte orali, gestuali, grafiche o dettate; adattare strumenti e tempi.</li>
+        <li>Confrontare le risposte e invitare a migliorare il proprio lavoro, senza gare di velocità.</li>
+      </ol>
+      <h2>Risposte e criteri di osservazione</h2>
+      <p class="scheda-docente">Veri positivi 16, falsi negativi 4, falsi positivi 8, veri negativi 72. Sensibilità 16/20=80%; falsi positivi 8/80=10%; precisione 16/24≈66,7%. I denominatori rispondono a domande diverse.</p>
+      <h2>Appunti del docente</h2>
+      <p class="lab26-meta">Che cosa ha funzionato? Quale supporto riproporre? Annotare il lavoro del gruppo senza dati personali.</p>
+      <div class="lab26-osservazioni" role="img" aria-label="Spazio per gli appunti del docente"></div>
+
+      <p class="lab26-nota">Gli eventuali dati numerici sono inventati per il laboratorio. Le attività non sostituiscono il piano di emergenza scolastico.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>S03 · Guida docente · Rev. 1 · 07/09/2026</span></footer>
+  </article>
+</section>
+
+<section id="scheda-una-catena-di-dipendenze-secondaria2" class="pacchetto-scheda" aria-label="Scheda: Una catena di dipendenze">
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Una catena di dipendenze</h1>
+        <div class="scheda-sottotitolo">Secondaria II · 14–19 anni</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <p class="lab26-meta">55 minuti · carta · <strong>Obiettivo:</strong> Individuare punti comuni di guasto.</p>
+      <p class="lab26-meta">Nome o simbolo: ____________________ Data: ______________</p>
+      <p class="lab26-scenario">Scenario fittizio: il canale A è un sito consultato con Wi-Fi; il canale B è un’app sullo stesso tablet e Wi-Fi. Il canale C è una bacheca cartacea aggiornata dal docente. Nessuno è descritto come sistema di emergenza certificato.</p>
+      <section><h2>1. Disegna le dipendenze di A e B da tablet, rete e alimentazione.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 1"></div></section>
+<section><h2>2. Spiega perché A e B non sono alternative completamente indipendenti.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 2"></div></section>
+<section><h2>3. Valuta un vantaggio e due limiti di C; proponi come indicare l’ultimo aggiornamento.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 3"></div></section>
+      <p class="lab26-nota avvertenza">Attività di classe con il docente. Puoi rispondere parlando, indicando o disegnando. Non occorre raccontare esperienze personali.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>S04 · Scheda alunno · Rev. 1 · 07/09/2026</span></footer>
+  </article>
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h2 class="scheda-titolo-principale">Una catena di dipendenze</h2>
+        <div class="scheda-sottotitolo">Secondaria II · 14–19 anni · Guida per il docente</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <h2>Obiettivo e materiali</h2>
+      <p>Individuare punti comuni di guasto. 55 minuti · carta. La durata è orientativa.</p>
+      <h2>Conduzione e adattamenti</h2>
+      <p class="istruzioni-docente">Non interrompere rete o corrente per la prova. Lavorare sul diagramma. Per il triennio aggiungere dipendenza dal responsabile che aggiorna tutti i canali.</p>
+      <h2>Come condurre il laboratorio</h2>
+      <ol>
+        <li>Presentare l’obiettivo e leggere insieme la situazione, in condizioni ordinarie.</li>
+        <li>Proporre una consegna alla volta. Lasciare tempo per domande e chiarimenti.</li>
+        <li>Accettare risposte orali, gestuali, grafiche o dettate; adattare strumenti e tempi.</li>
+        <li>Confrontare le risposte e invitare a migliorare il proprio lavoro, senza gare di velocità.</li>
+      </ol>
+      <h2>Risposte e criteri di osservazione</h2>
+      <p class="scheda-docente">Guasti comuni: tablet, Wi-Fi, energia. C consultabile senza dispositivo, ma può essere vecchia o non raggiungibile. Indicare data, ora, autore e validità; prevedere aggiornamento e accessibilità.</p>
+      <h2>Appunti del docente</h2>
+      <p class="lab26-meta">Che cosa ha funzionato? Quale supporto riproporre? Annotare il lavoro del gruppo senza dati personali.</p>
+      <div class="lab26-osservazioni" role="img" aria-label="Spazio per gli appunti del docente"></div>
+
+      <p class="lab26-nota">Gli eventuali dati numerici sono inventati per il laboratorio. Le attività non sostituiscono il piano di emergenza scolastico.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>S04 · Guida docente · Rev. 1 · 07/09/2026</span></footer>
+  </article>
+</section>
+
+<section id="scheda-dal-test-alla-correzione-secondaria2" class="pacchetto-scheda" aria-label="Scheda: Dal test alla correzione">
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Dal test alla correzione</h1>
+        <div class="scheda-sottotitolo">Secondaria II · 15–19 anni</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <p class="lab26-meta">60 minuti · carta · <strong>Obiettivo:</strong> Valutare un materiale tramite prove osservabili.</p>
+      <p class="lab26-meta">Nome o simbolo: ____________________ Data: ______________</p>
+      <p class="lab26-scenario">Test fittizio di una scheda su 8 lettori: 5 trovano la data, 3 no; 6 identificano il luogo, 2 no; 4 capiscono l’azione richiesta, 4 no. Il campione è piccolo e non rappresentativo.</p>
+      <section><h2>1. Calcola la percentuale di riuscita per ciascun compito.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 1"></div></section>
+<section><h2>2. Scegli una modifica prioritaria motivandola con i risultati.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 2"></div></section>
+<section><h2>3. Progetta una seconda prova: compiti, istruzioni uguali per tutti e criterio di confronto.</h2><div class="lab26-risposta" role="img" aria-label="Spazio per la risposta 3"></div></section>
+      <p class="lab26-nota avvertenza">Attività di classe con il docente. Puoi rispondere parlando, indicando o disegnando. Non occorre raccontare esperienze personali.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>S05 · Scheda alunno · Rev. 1 · 07/09/2026</span></footer>
+  </article>
+  <article class="scheda-page">
+    <header class="scheda-header lab26-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h2 class="scheda-titolo-principale">Dal test alla correzione</h2>
+        <div class="scheda-sottotitolo">Secondaria II · 15–19 anni · Guida per il docente</div>
+      </div>
+    </header>
+    <div class="lab26">
+      <h2>Obiettivo e materiali</h2>
+      <p>Valutare un materiale tramite prove osservabili. 60 minuti · carta. La durata è orientativa.</p>
+      <h2>Conduzione e adattamenti</h2>
+      <p class="istruzioni-docente">Non registrare nomi o informazioni personali. Non simulare disabilità. Testare il documento, non classificare le capacità degli studenti. Permettere risposte orali.</p>
+      <h2>Come condurre il laboratorio</h2>
+      <ol>
+        <li>Presentare l’obiettivo e leggere insieme la situazione, in condizioni ordinarie.</li>
+        <li>Proporre una consegna alla volta. Lasciare tempo per domande e chiarimenti.</li>
+        <li>Accettare risposte orali, gestuali, grafiche o dettate; adattare strumenti e tempi.</li>
+        <li>Confrontare le risposte e invitare a migliorare il proprio lavoro, senza gare di velocità.</li>
+      </ol>
+      <h2>Risposte e criteri di osservazione</h2>
+      <p class="scheda-docente">Data 62,5%; luogo 75%; azione 50%. Priorità motivabile: chiarezza dell’azione. Seconda prova con compiti comparabili; segnalare effetti di apprendimento e numerosità ridotta, senza generalizzare.</p>
+      <h2>Appunti del docente</h2>
+      <p class="lab26-meta">Che cosa ha funzionato? Quale supporto riproporre? Annotare il lavoro del gruppo senza dati personali.</p>
+      <div class="lab26-osservazioni" role="img" aria-label="Spazio per gli appunti del docente"></div>
+
+      <p class="lab26-nota">Gli eventuali dati numerici sono inventati per il laboratorio. Le attività non sostituiscono il piano di emergenza scolastico.</p>
+    </div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>S05 · Guida docente · Rev. 1 · 07/09/2026</span></footer>
   </article>
 </section>
   </main>
