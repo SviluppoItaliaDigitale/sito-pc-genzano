@@ -34,6 +34,7 @@ body.blackout #lmap{filter:brightness(.55) saturate(.7)}
 .pill{font-family:var(--mono);font-size:11px;border:1px solid var(--line);border-radius:3px;
   padding:3px 8px;background:#081018;white-space:nowrap}
 .pill b{color:var(--grn)}
+#zonaPill.l-1 b{color:#a6b6c2}
 #zonaPill.l1 b{color:var(--gia)} #zonaPill.l2 b{color:var(--ara)} #zonaPill.l3 b{color:var(--red)}
 #zonaPill.l1,#zonaPill.l2,#zonaPill.l3{animation:blink 2.2s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.55}}
@@ -206,6 +207,7 @@ body.blackout #lmap{filter:brightness(.55) saturate(.7)}
 .dayRow .dl{flex:0 0 52px;font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;color:var(--dim)}
 .chip{flex:1;text-align:center;font-family:var(--mono);font-size:9px;letter-spacing:.05em;padding:4px 2px;
   border:1px solid var(--l,#1c3040);color:var(--l,#5d7a6e);background:#0a1826;border-radius:2px}
+.chip.l-1{--l:#a6b6c2}
 .chip.l0{--l:#35e08c} .chip.l1{--l:#ffd60a} .chip.l2{--l:#ff8c1a} .chip.l3{--l:#ff3b30}
 .chip.l1,.chip.l2,.chip.l3{background:color-mix(in srgb,var(--l) 12%,#0a1826);font-weight:700}
 
@@ -330,7 +332,7 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
 
 <header id="hdr">
   <div class="logo">SALA <b>SITUAZIONI</b><small>PROTEZIONE CIVILE GENZANO DI ROMA · SPERIMENTALE</small></div>
-  <span class="pill" id="zonaPill">ZONA F: <b id="zonaLvl">…</b></span>
+  <span class="pill l-1" id="zonaPill">ZONA F: <b id="zonaLvl">…</b></span>
   <span class="pill hideS">SISMI 7GG: <b id="qkN">…</b></span>
   <span class="pill hideS">PIOGGIA 24H: <b id="rainN">…</b></span>
   <a id="apBtn" class="hbtn hideS" href="https://activepager.com/auth/login" target="_blank" rel="noopener noreferrer"
@@ -428,7 +430,7 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
 
 <aside id="side">
   <div id="sideHd"><span class="dot"></span><h2 id="sideTitle">ALLERTA — LAZIO</h2>
-    <span style="margin-left:auto;font-family:var(--mono);font-size:10px;color:var(--grn)">● LIVE</span></div>
+    <span style="margin-left:auto;font-family:var(--mono);font-size:10px;color:var(--cyn)">AUTOAGGIORNAMENTO</span></div>
   <div id="feed" role="log" aria-live="polite"><div class="skel"></div><div class="skel"></div><div class="skel"></div></div>
   <div id="shareBar" aria-label="Condividi questa schermata">
     <span class="shLbl">CONDIVIDI:</span>
@@ -499,16 +501,38 @@ const S={view:"all",day:"today",black:false,
 try{S.logArr=JSON.parse(localStorage.getItem("pcgz-monitor-log")||"[]")||[]}catch(e){S.logArr=[]}
 const $=s=>document.querySelector(s);
 const pad=n=>String(n).padStart(2,"0");
-const now=()=>{const d=new Date();return pad(d.getHours())+":"+pad(d.getMinutes())+":"+pad(d.getSeconds())};
-const lvlOf=t=>/ROSSA/.test(t)?3:/ARANCIONE/.test(t)?2:/GIALLA/.test(t)?1:0;
+const now=()=>new Date().toLocaleTimeString("it-IT",{timeZone:"Europe/Rome",hour:"2-digit",minute:"2-digit",second:"2-digit"});
+const lvlOf=t=>{const s=String(t||"").toUpperCase();
+  return /\bROSS[AO]\b/.test(s)?3:/\bARANCIONE\b/.test(s)?2:/\bGIALL[AO]\b/.test(s)?1:
+    /\bVERDE\b|NESSUNA ALLERTA|ASSENZA DI FENOMENI SIGNIFICATIVI PREVEDIBILI/.test(s)?0:-1;};
+const lvlText=l=>LVL_TXT[l]||"DATI NON DISPONIBILI";
+const lvlColor=l=>LVL_COL[l]||"#a6b6c2";
+const utcMs=value=>{
+  if(typeof value==="number")return value;
+  const s=String(value||"").trim();
+  return s?Date.parse(/(Z|[+-]\d\d:?\d\d)$/i.test(s)?s:s+"Z"):NaN;
+};
+// La pipeline salva il controllo invariato circa ogni sei ore: margine di due ore.
+const SITE_MAX_AGE=8*36e5;
+const sitoFresh=()=>{const age=Date.now()-utcMs(S.sito&&S.sito.ultimo_controllo);
+  return Number.isFinite(age)&&age>=-5*6e4&&age<=SITE_MAX_AGE&&!S.errs.sito;};
+const weatherMs=t=>utcMs(t)-(/(Z|[+-]\d\d:?\d\d)$/i.test(String(t))?0:Number(S.wx&&S.wx.utc_offset_seconds||0)*1000);
+const precipText=c=>{
+  if(!Number.isFinite(c.precipitation))return "N/D";
+  const unit=S.wx&&S.wx.current_units&&S.wx.current_units.precipitation;
+  if(unit!=="mm")return "Unità non verificabile";
+  const interval=Number.isFinite(c.interval)&&c.interval>0?c.interval/60:null;
+  return c.precipitation.toFixed(1)+" mm"+(interval?" negli ultimi "+interval+" min":" · intervallo N/D");
+};
 const havKm=(a,b)=>{const R=6371,d=Math.PI/180,
   x=(b.lat-a.lat)*d,y=(b.lon-a.lon)*d,
   h=Math.sin(x/2)**2+Math.cos(a.lat*d)*Math.cos(b.lat*d)*Math.sin(y/2)**2;
   return 2*R*Math.asin(Math.sqrt(h))};
-async function jget(u,ms=15000){
+async function jget(u,ms=15000,noContent){
   const c=new AbortController();const t=setTimeout(()=>c.abort(),ms);
   try{const r=await fetch(u,{signal:c.signal});
     if(!r.ok)throw new Error("HTTP "+r.status);
+    if(r.status===204&&noContent!==undefined)return noContent;
     return await r.json();
   }finally{clearTimeout(t)}
 }
@@ -536,10 +560,12 @@ let radarLayer=L.tileLayer(radarUrl(),{pane:"radarPane",opacity:.78,maxZoom:11,m
   bounds:L.latLngBounds([35,4.44],[47.92,20.56]),attribution:"Radar-DPC © Dipartimento Protezione Civile (CC BY-SA)"});
 async function radarStamp(){
   try{const d=await jget("https://radar-api.protezionecivile.it/findLastProductByType?type=SRI");
-    const ms=d.time||(d.lastProducts&&d.lastProducts[0]&&d.lastProducts[0].time);
-    const t=new Date(ms||Date.now());
-    $("#radarLbl").textContent="RADAR DPC (SRI): "+pad(t.getHours())+":"+pad(t.getMinutes());
-  }catch(e){$("#radarLbl").textContent="RADAR DPC: orario n/d";}
+    const value=d&&(d.time||(d.lastProducts&&d.lastProducts[0]&&d.lastProducts[0].time));
+    const ms=typeof value==="number"?value:(/^\d+$/.test(value)?Number(value):utcMs(value));
+    if(!Number.isFinite(ms)||ms<=0||ms>Date.now()+5*6e4)throw new Error("Orario non valido");
+    const age=Math.max(0,Math.round((Date.now()-ms)/6e4));
+    $("#radarLbl").textContent="RADAR DPC (SRI): "+hm(ms)+" · "+age+" MIN FA"+(age>15?" · IN RITARDO":"");
+  }catch(e){$("#radarLbl").textContent="RADAR DPC: orario non verificabile";}
 }
 function radarRefresh(){ if(S.layers.radar){radarLayer.setUrl(radarUrl());radarStamp();} }
 setInterval(radarRefresh,5*60e3);
@@ -719,17 +745,27 @@ function topoDecode(topo){
       coordinates:(g.type==="Polygon"?[g.arcs]:g.arcs).map(poly=>poly.map(ring))}
   }));
 }
-const zoneMax=p=>Math.max(...RISKS.map(([k])=>lvlOf(p[k]||"")));
+const zoneMax=p=>{
+  const levels=RISKS.map(([k])=>lvlOf(p&&p[k])),max=Math.max(...levels);
+  return max>0?max:levels.includes(-1)?-1:max;
+};
+function bollettinoDay(day){
+  const stamp=S.boll&&String(S.boll.stamp||"").slice(0,8);
+  const today=new Intl.DateTimeFormat("sv-SE",{timeZone:"Europe/Rome",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());
+  const yesterday=new Date(Date.parse(today+"T12:00:00Z")-864e5).toISOString().slice(0,10);
+  if(stamp===today.replace(/-/g,""))return day;
+  return day==="today"&&stamp===yesterday.replace(/-/g,"")?"tomorrow":null;
+}
 function buildZoneLayer(){
-  const feats=S.zones[S.day]; if(!feats)return;
   if(zoneLayer)map.removeLayer(zoneLayer);
+  const feats=S.zones[bollettinoDay(S.day)]; if(!feats){zoneLayer=null;return;}
   zoneLayer=L.geoJSON({type:"FeatureCollection",features:feats},{pane:"zonePane",
     style:f=>{const l=zoneMax(f.properties),mine=f.properties["Nome zona"]===MYZONE;
       return {color:mine?"#37c7ff":"#04070b",weight:mine?1.8:.6,
-        fillColor:LVL_COL[l],fillOpacity:l?[0,.4,.48,.55][l]:.10}},
+        fillColor:lvlColor(l),fillOpacity:l<0?.25:l?[0,.4,.48,.55][l]:.10}},
     onEachFeature:(f,ly)=>{const p=f.properties;
       ly.bindPopup(`<b>${p["Nome zona"]}</b><br>`+
-        RISKS.map(([k,s])=>s+": "+LVL_TXT[lvlOf(p[k]||"")]).join("<br>"));}
+        RISKS.map(([k,s])=>s+": "+lvlText(lvlOf(p[k]||""))).join("<br>"));}
   });
   if(S.layers.zone)zoneLayer.addTo(map);
 }
@@ -754,7 +790,9 @@ function beep(){
 }
 async function loadSito(){
   try{ // same-origin: la pagina vive sul sito, il JSON è della pipeline check-allerta
-    S.sito=await jget(BASE+"allerta-stato/index.json",8000);
+    const data=await jget(BASE+"allerta-stato/index.json",8000);
+    if(!data||typeof data!=="object"||Array.isArray(data))throw new Error("Formato non valido");
+    S.sito=data;
     const av=S.sito.avviso_meteo||{};
     const key=[S.sito.livello,S.sito.emergenza_attiva,av.tipo,av.livello].join("|");
     if(S.sitoKey&&key!==S.sitoKey){ // cambio di stato mentre il monitor è acceso
@@ -765,7 +803,7 @@ async function loadSito(){
     }
     S.sitoKey=key; S.last.sito=Date.now();
     delete S.errs.sito;
-  }catch(e){S.sito=null;}
+  }catch(e){S.errs.sito="Stato del sito non raggiungibile. L’ultimo stato disponibile richiede verifica.";}
   updZona(); if(S.view==="all")render(); tickUpd();
 }
 async function findStamp(){
@@ -807,23 +845,24 @@ async function loadDPC(){
   updZona(); if(S.view==="all")render(); tickUpd();
 }
 function laz(day){
-  const zz=S.zones[day]; if(!zz)return null;
+  const zz=S.zones[bollettinoDay(day)]; if(!zz)return null;
   const m=new Map(zz.filter(z=>LAZIO.includes(z.properties["Nome zona"])).map(z=>[z.properties["Nome zona"],z.properties]));
   return LAZIO.map(n=>({n,p:m.get(n)})).filter(z=>z.p);
 }
 function updZona(){
   const pill=$("#zonaPill"),v=$("#zonaLvl");
-  if(S.sito){ // fonte primaria: pipeline del sito
-    const l={verde:0,giallo:1,gialla:1,arancione:2,rosso:3,rossa:3}[String(S.sito.livello).toLowerCase()]??0;
-    v.textContent=S.sito.emergenza_attiva?"EMERGENZA":["VERDE","GIALLA","ARANCIONE","ROSSA"][l];
-    pill.className="pill l"+(S.sito.emergenza_attiva?3:l); return;
+  if(S.sito){
+    const l=lvlOf(S.sito.livello),fresh=sitoFresh(),emg=S.sito.emergenza_attiva===true;
+    v.textContent=emg?(fresh?"EMERGENZA":"EMERGENZA DA VERIFICARE"):(fresh&&l>=0?["VERDE","GIALLA","ARANCIONE","ROSSA"][l]:"N/D");
+    pill.className="pill l"+(emg?3:fresh?l:-1);
+    pill.title=fresh&&l>=0?"Ultimo controllo: "+fmtT(S.sito.ultimo_controllo):"Stato non verificabile: consulta il bollettino ufficiale.";
+    return;
   }
-  const t=laz("today"),d=laz("tomorrow");
-  if(!t){v.textContent="N/D";return}
-  const my=t.find(z=>z.n===MYZONE),myD=d&&d.find(z=>z.n===MYZONE);
-  const lv=Math.max(my?zoneMax(my.p):0, myD?zoneMax(myD.p):0);
-  v.textContent=["VERDE","GIALLA","ARANCIONE","ROSSA"][lv];
+  const t=laz("today"),my=t&&t.find(z=>z.n===MYZONE);
+  const lv=my&&!S.errs.dpc&&!S.bollVecchio?zoneMax(my.p):-1;
+  v.textContent=lv<0?"N/D":["VERDE","GIALLA","ARANCIONE","ROSSA"][lv];
   pill.className="pill l"+lv;
+  pill.title=lv<0?"Stato non verificabile: consulta il bollettino ufficiale.":"Fonte: bollettino DPC valido per oggi.";
 }
 
 /* ---------------- INGV ---------------- */
@@ -833,8 +872,8 @@ async function loadINGV(){
   const d14=new Date(Date.now()-14*864e5), d7=new Date(Date.now()-7*864e5);
   try{
     const [loc,nat]=await Promise.all([
-      jget(`https://webservices.ingv.it/fdsnws/event/1/query?format=geojson&starttime=${iso(d14)}&lat=${GENZANO.lat}&lon=${GENZANO.lon}&maxradiuskm=120&orderby=time&limit=60`),
-      jget(`https://webservices.ingv.it/fdsnws/event/1/query?format=geojson&starttime=${iso(d7)}&minmag=3&orderby=time&limit=60`),
+      jget(`https://webservices.ingv.it/fdsnws/event/1/query?format=geojson&starttime=${iso(d14)}&lat=${GENZANO.lat}&lon=${GENZANO.lon}&maxradiuskm=120&orderby=time&limit=60`,15000,{features:[]}),
+      jget(`https://webservices.ingv.it/fdsnws/event/1/query?format=geojson&starttime=${iso(d7)}&minmag=3&orderby=time&limit=60`,15000,{features:[]}),
     ]);
     const seen=new Set(); S.quakes=[];
     for(const f of [...loc.features,...nat.features]){
@@ -844,7 +883,7 @@ async function loadINGV(){
         km:Math.round(havKm(GENZANO,{lat,lon})),col:magCol(p.mag),
         local:havKm(GENZANO,{lat,lon})<=120});
     }
-    S.quakes.sort((a,b)=>b.time.localeCompare(a.time));
+    S.quakes.sort((a,b)=>utcMs(b.time)-utcMs(a.time));
     // registro automatico: nuovi eventi locali M>=2 (mai al primo caricamento);
     // da M>=3 anche il segnale acustico di sala
     if(S.qkSeen)for(const q of S.quakes)
@@ -855,7 +894,7 @@ async function loadINGV(){
     S.qkSeen=new Set(S.quakes.map(q=>q.id));
     S.last.ingv=Date.now();
     if(map.hasLayer(worldLayer))buildWorld();
-    $("#qkN").textContent=S.quakes.filter(q=>Date.parse(q.time)>Date.now()-7*864e5).length;
+    $("#qkN").textContent=S.quakes.filter(q=>utcMs(q.time)>Date.now()-7*864e5).length;
     qkLayer.clearLayers();
     for(const q of S.quakes){
       L.circleMarker([q.lat,q.lon],{pane:"qkPane",radius:Math.max(3,q.mag*2),
@@ -863,7 +902,7 @@ async function loadINGV(){
        .bindPopup(`<b>M ${q.mag.toFixed(1)} — ${q.place||""}</b><br>${fmtT(q.time)} · prof. ${q.dep!=null?q.dep.toFixed(0):"?"} km<br>${q.km} km da Genzano`)
        .addTo(qkLayer);
       // eventi delle ultime 6 ore: anelli pulsanti anche sulla mappa Italia
-      if(Date.now()-Date.parse(q.time)<6*36e5){
+      if(Date.now()-utcMs(q.time)<6*36e5){
         const cls=q.mag>=4?"red":q.mag>=3?"orange":"yellow";
         L.marker([q.lat,q.lon],{icon:gdDot(cls,14),keyboard:false,interactive:false})
           .addTo(qkLayer);
@@ -887,7 +926,7 @@ async function loadWX(){
       `&daily=precipitation_sum,precipitation_probability_max,temperature_2m_max,temperature_2m_min,wind_gusts_10m_max`+
       `&forecast_days=4&timezone=Europe%2FRome`);
     S.wxT=Date.now(); S.last.wx=S.wxT;
-    const h=S.wx.hourly, i0=Math.max(0,h.time.findIndex(t=>Date.parse(t)>=Date.now()-36e5));
+    const h=S.wx.hourly, i0=Math.max(0,h.time.findIndex(t=>weatherMs(t)>=Date.now()-36e5));
     const r24=h.precipitation.slice(i0,i0+24).reduce((a,b)=>a+b,0);
     $("#rainN").textContent=r24.toFixed(1)+" mm";
     delete S.errs.wx;
@@ -957,11 +996,12 @@ async function loadObs(){
 async function loadAmb(){ // stessi endpoint e coordinate del cruscotto del sito
   try{
     S.aria=(await jget("https://air-quality-api.open-meteo.com/v1/air-quality?latitude=41.7085&longitude=12.6916&timezone=Europe%2FRome&current=european_aqi,pm10,pm2_5,ozone,nitrogen_dioxide,grass_pollen,olive_pollen,ragweed_pollen,birch_pollen")).current;
-    S.last.amb=Date.now();
+    S.last.aria=Date.now();
     delete S.errs.aria;
   }catch(e){S.errs.aria="Qualità dell'aria non raggiungibile.";}
   try{
     S.mare=(await jget("https://marine-api.open-meteo.com/v1/marine?latitude=41.43&longitude=12.62&timezone=Europe%2FRome&current=wave_height,wave_period,wave_direction")).current;
+    S.last.mare=Date.now();
     delete S.errs.mare;
   }catch(e){S.errs.mare="Dati marini non raggiungibili.";}
   if(S.view==="amb")render(); tickUpd();
@@ -1163,9 +1203,8 @@ const feed=$("#feed"),title=$("#sideTitle");
 const esc=s=>String(s??"").replace(/[<>&"]/g,c=>({"<":"&lt;",">":"&gt;","&":"&amp;",'"':"&quot;"}[c]));
 // aggiunge la Z (UTC) solo se il timestamp non dichiara già un fuso:
 // i tempi INGV/EMS sono UTC senza suffisso, quelli del sito hanno +02:00
-const fmtT=iso=>{const s=String(iso);
-  const d=new Date(/(Z|[+-]\d\d:?\d\d)$/.test(s)?s:s+"Z");
-  return d.toLocaleString("it-IT",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"})};
+const fmtT=iso=>{const d=new Date(utcMs(iso));
+  return isNaN(d)?"N/D":d.toLocaleString("it-IT",{timeZone:"Europe/Rome",day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"})};
 function errCard(msg){const e=document.createElement("div");e.className="err";e.textContent="⚠ "+msg;return e}
 function noteEl(extra){
   const n=document.createElement("div");n.className="note";
@@ -1179,23 +1218,24 @@ function noteEl(extra){
 }
 function statoCard(){
   if(!S.sito)return null;
-  const l={verde:0,gialla:1,giallo:1,arancione:2,rossa:3,rosso:3}[String(S.sito.livello).toLowerCase()]??0;
+  const l=lvlOf(S.sito.livello),fresh=sitoFresh(),emg=S.sito.emergenza_attiva===true;
   const el=document.createElement("div");
-  el.className="stato"+(S.sito.emergenza_attiva?" emg":"");
-  el.style.setProperty("--sc",S.sito.emergenza_attiva?"#ff3b30":LVL_COL[l]);
-  el.innerHTML=`<h3>${esc(S.sito.emergenza_attiva?("EMERGENZA: "+S.sito.emergenza_titolo):S.sito.titolo)}</h3>
+  el.className="stato"+(emg?" emg":"");
+  el.style.setProperty("--sc",emg?"#ff3b30":lvlColor(fresh?l:-1));
+  el.innerHTML=`<h3>${esc(!fresh?"STATO DA VERIFICARE":emg?("EMERGENZA: "+S.sito.emergenza_titolo):l<0?"STATO NON DISPONIBILE":S.sito.titolo)}</h3>
+    ${!fresh?`<p>Ultimo stato ricevuto: ${esc(emg?"EMERGENZA: "+S.sito.emergenza_titolo:S.sito.titolo||"N/D")}. Il controllo non è recente o non è verificabile.</p>`:""}
     <p>${esc(S.sito.descrizione)}</p>
-    <span class="src">FONTE: PROTEZIONECIVILEGENZANO.IT · AGG. ${fmtT(S.sito.ultimo_aggiornamento).toUpperCase()}</span>`;
+    <span class="src">FONTE: PROTEZIONECIVILEGENZANO.IT<br>ULTIMO CONTROLLO: ${fmtT(S.sito.ultimo_controllo).toUpperCase()} · ORA ITALIANA<br>ULTIMO CAMBIO LIVELLO: ${fmtT(S.sito.ultimo_aggiornamento).toUpperCase()}</span>`;
   return el;
 }
-const lvlNum=s=>({verde:0,giallo:1,gialla:1,arancione:2,rosso:3,rossa:3}[String(s||"").toLowerCase()]??0);
+const lvlNum=s=>lvlOf(s);
 function extraCards(){
   const out=[];
   const av=S.sito&&S.sito.avviso_meteo;
   if(av&&av.tipo){
     const l=lvlNum(av.livello);
     const el=document.createElement("div");el.className="stato";
-    el.style.setProperty("--sc",LVL_COL[l]);
+    el.style.setProperty("--sc",lvlColor(l));
     el.innerHTML=`<h3>AVVISO METEO: ${esc(String(av.tipo).toUpperCase())}</h3>
       <p>${esc(av.descrizione||("Avviso di condizioni meteorologiche avverse ("+av.tipo+"), livello "+(av.livello||"n/d")+"."))}</p>
       <span class="src">FONTE: CENTRO FUNZIONALE REGIONE LAZIO${av.validita_fine?" · VALIDO FINO AL "+fmtT(av.validita_fine).toUpperCase():""}</span>`;
@@ -1205,9 +1245,9 @@ function extraCards(){
   if(ri&&ri.livello){
     const l=lvlNum(ri.livello);
     const el=document.createElement("div");el.className="stato";
-    el.style.setProperty("--sc",LVL_COL[l]);
+    el.style.setProperty("--sc",lvlColor(l));
     el.innerHTML=`<h3>RISCHIO INCENDI BOSCHIVI — ZONA 9</h3>
-      <p>${esc(ri.titolo||"Bollettino di pericolosità da incendi boschivi")} — oggi: <b style="color:${LVL_COL[l]}">${esc(String(ri.livello_aib||ri.livello).toUpperCase())}</b>${ri.domani&&ri.domani.livello?` · domani: ${esc(String(ri.domani.livello_aib||ri.domani.livello).toUpperCase())}`:""}</p>
+      <p>${esc(ri.titolo||"Bollettino di pericolosità da incendi boschivi")} — oggi: <b style="color:${lvlColor(l)}">${esc(String(ri.livello_aib||ri.livello).toUpperCase())}</b>${ri.domani&&ri.domani.livello?` · domani: ${esc(String(ri.domani.livello_aib||ri.domani.livello).toUpperCase())}`:""}</p>
       <span class="src">FONTE: ${esc(ri.fonte||"REGIONE LAZIO — CENTRO FUNZIONALE")}${ri.data?" · BOLLETTINO DEL "+esc(ri.data):""}</span>`;
     out.push(el);
   }
@@ -1216,37 +1256,49 @@ function extraCards(){
 // Quadro di freschezza dei dati (pratica standard delle sale operative:
 // sapere QUANDO è arrivato l'ultimo dato di ogni fonte, a colpo d'occhio)
 function fontiCard(){
-  const righe=[["ALLERTA SITO",S.last.sito],["BOLLETTINO DPC",S.last.dpcOk],["SISMI INGV",S.last.ingv],
-    ["SISMI MONDO USGS",S.last.usgs],["METEO",S.last.wx],["ARIA/MARE",S.last.amb],
-    ["EMS UE",S.last.ems],["GDACS",S.last.gdacs],["VULCANI NASA",S.last.eonet],
-    ["STAZIONI",S.obs&&S.obs.t]];
+  const righe=[["ALLERTA SITO",S.last.sito,"sito",5,"Controllo: "+fmtT(S.sito&&S.sito.ultimo_controllo)],
+    ["BOLLETTINO DPC",S.last.dpcOk,"dpc",60,S.boll?S.boll.name:""],
+    ["SISMI INGV",S.last.ingv,"ingv",5,""],["SISMI MONDO USGS",S.last.usgs,"usgs",2,""],
+    ["METEO",S.last.wx,"wx",5,"Dato: "+fmtT(S.wx&&S.wx.current?weatherMs(S.wx.current.time):NaN)],
+    ["QUALITÀ ARIA",S.last.aria,"aria",30,""],["MARE",S.last.mare,"mare",30,""],
+    ["EMS UE",S.last.ems,"ems",15,"Snapshot: "+fmtT(S.emsSnap&&S.emsSnap.getTime())],
+    ["GDACS",S.last.gdacs,"gdacs",15,""],["VULCANI NASA",S.last.eonet,"eonet",15,""],
+    ["STAZIONI",S.obs&&S.obs.t,"obs",15,""]];
   const el=document.createElement("div");el.className="wx";
-  el.innerHTML=`<h3>STATO FONTI<span>ULTIMO DATO RICEVUTO</span></h3><div class="kgrid">`+
-    righe.map(([n,t])=>{
-      let v="—",c="#5d7a6e";
-      if(t){const m=Math.round((Date.now()-t)/6e4);
-        v=m<1?"ADESSO":m+" MIN FA";
-        c=m<12?"#35e08c":m<70?"#ffd60a":"#ff8c1a";}
-      return `<div class="kpi" style="--kc:${c}"><small>${n}</small><b style="font-size:12px">${v}</b></div>`;
-    }).join("")+`</div></div>`;
+  el.innerHTML=`<h3>STATO FONTI<span>RICEZIONE E DATA ALLA FONTE</span></h3><div class="kgrid">`+
+    righe.map(([n,t,key,period,source])=>{
+      const age=t?(Date.now()-t)/6e4:NaN;
+      const received=Number.isFinite(age)&&age>=-5;
+      const unverified=key==="sito"&&(!sitoFresh()||lvlOf(S.sito&&S.sito.livello)<0);
+      const failed=!!S.errs[key]||(key==="dpc"&&!!S.bollVecchio);
+      const delayed=received&&age>period*2;
+      const v=failed?"ERRORE":unverified?"DA VERIFICARE":!received?"N/D":delayed?"IN RITARDO":"RICEVUTO";
+      const color=failed||unverified||delayed?"#ffd60a":received?"#35e08c":"#a6b6c2";
+      const when=received?(age<1?"ADESSO":Math.round(age)+" MIN FA"):"NESSUNA RISPOSTA";
+      return `<div class="kpi" style="--kc:${color}"><small>${n}</small><b style="font-size:12px">${v}</b><small>${when}</small>${source?`<small>${esc(source)}</small>`:""}</div>`;
+    }).join("")+`</div><p class="note">Ricezione: ultima risposta riuscita. La data alla fonte indica il controllo o il dato, quando disponibile. Orari italiani.</p>`;
   return el;
 }
 function viewAll(){
   title.textContent="ALLERTA — LAZIO";
   feed.innerHTML="";
   const sc=statoCard(); if(sc)feed.appendChild(sc);
+  if(S.errs.sito)feed.appendChild(errCard(S.errs.sito));
   for(const el of extraCards())feed.appendChild(el);
   if(S.errs.dpc)feed.appendChild(errCard(S.errs.dpc));
   if(S.bollVecchio&&window.pcCache)feed.appendChild(errCard(pcCache.frase(S.bollVecchio)));
   const t=laz("today"),d=laz("tomorrow");
-  if(!t&&!S.errs.dpc){feed.insertAdjacentHTML("beforeend",'<div class="skel"></div><div class="skel"></div>');return}
+  if(!t&&!S.errs.dpc){
+    if(S.boll)feed.appendChild(errCard("Il bollettino caricato non copre la giornata corrente."));
+    else feed.insertAdjacentHTML("beforeend",'<div class="skel"></div><div class="skel"></div>');
+  }
   if(t)for(const z of t){
     const zd=d&&d.find(x=>x.n===z.n);
     const el=document.createElement("div");
     el.className="zone"+(z.n===MYZONE?" mine":"");
     const row=(lbl,p)=>!p?"":`<div class="dayRow"><span class="dl">${lbl}</span>`+
       RISKS.map(([k,short])=>{const l=lvlOf(p[k]||"");
-        return `<span class="chip l${l}" title="${esc(p[k]||"")}">${short}</span>`}).join("")+`</div>`;
+        return `<span class="chip l${l}" title="${esc(p[k]||"Stato non disponibile")}">${short}${l<0?" · N/D":""}</span>`}).join("")+`</div>`;
     el.innerHTML=`<h3>${esc(z.n)}${z.n===MYZONE?'<span class="tag">ZONA F — LA TUA ZONA</span>':""}</h3>
       ${z.n===MYZONE?`<div class="com">Include Genzano di Roma (DGR Lazio 865/2019)</div>`:""}
       ${row("OGGI",z.p)}${row("DOMANI",zd&&zd.p)}`;
@@ -1272,7 +1324,7 @@ function viewSis(){
   }
   feed.appendChild(noteEl());
 }
-const hm=ms=>{const d=new Date(ms);return pad(d.getHours())+":"+pad(d.getMinutes())};
+const hm=ms=>{const d=new Date(ms);return isNaN(d)?"N/D":d.toLocaleTimeString("it-IT",{timeZone:"Europe/Rome",hour:"2-digit",minute:"2-digit"})};
 function viewMet(){
   title.textContent="METEO — GENZANO / CASTELLI";
   feed.innerHTML="";
@@ -1280,11 +1332,11 @@ function viewMet(){
   if(S.errs.wx)feed.appendChild(errCard(S.errs.wx));
   if(!S.wx){if(!S.errs.wx)feed.innerHTML='<div class="skel"></div><div class="skel"></div>';return}
   const c=S.wx.current;
-  feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>CONDIZIONI ATTUALI<span>DATO ${hm(Date.parse(S.wx.current.time)||S.wxT)} · AGG. OGNI 5 MIN</span></h3>
+  feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>CONDIZIONI ATTUALI<span>STIMA MODELLO · DATO ${hm(weatherMs(c.time))} · ORA ITALIANA</span></h3>
     <div class="wxNow"><b>${c.temperature_2m.toFixed(0)}°</b>
     <div>Percepita: <span>${c.apparent_temperature.toFixed(0)}°C</span><br>
     Vento: <span>${c.wind_speed_10m.toFixed(0)} km/h</span> · Raffiche: <span>${c.wind_gusts_10m.toFixed(0)} km/h</span><br>
-    Precipitazione in atto: <span>${c.precipitation.toFixed(1)} mm/h</span></div></div></div>`);
+    Precipitazione accumulata: <span>${precipText(c)}</span></div></div></div>`);
   if(S.wx.minutely_15&&S.wx.minutely_15.time&&S.wx.minutely_15.time.length){
     feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>NOWCAST PIOGGIA — 3 ORE<span>modello, passo 15 min</span></h3><canvas id="nowCv"></canvas></div>`);
     drawNow();
@@ -1320,7 +1372,7 @@ function drawNow(){
   const w=c.clientWidth,h=64;
   c.width=w*DPR;c.height=h*DPR;x.setTransform(DPR,0,0,DPR,0,0);
   const mm=S.wx.minutely_15;
-  const i0=Math.max(0,mm.time.findIndex(t=>Date.parse(t)>=Date.now()-9e5));
+  const i0=Math.max(0,mm.time.findIndex(t=>weatherMs(t)>=Date.now()-9e5));
   const P=mm.precipitation.slice(i0,i0+12), N=P.length||1;
   const max=Math.max(.5,...P), bw=w/N;
   x.strokeStyle="rgba(18,33,46,.8)";x.beginPath();x.moveTo(0,h-14);x.lineTo(w,h-14);x.stroke();
@@ -1329,8 +1381,7 @@ function drawNow(){
     x.fillStyle=P[i]>0?"rgba(55,199,255,.85)":"rgba(55,199,255,.18)";
     x.fillRect(i*bw+1,h-14-Math.max(bh,2),bw-2,Math.max(bh,2));
     if(i%4===0){x.fillStyle="#5d7a6e";x.font="8px 'Share Tech Mono'";
-      const t=new Date(mm.time[i0+i]);
-      x.fillText(pad(t.getHours())+":"+pad(t.getMinutes()),i*bw+1,h-3);}
+      x.fillText(hm(weatherMs(mm.time[i0+i])),i*bw+1,h-3);}
   }
 }
 function drawRain(){
@@ -1338,7 +1389,7 @@ function drawRain(){
   const x=c.getContext("2d"); const DPR=Math.min(devicePixelRatio||1,2);
   const w=c.clientWidth,h=74;
   c.width=w*DPR;c.height=h*DPR;x.setTransform(DPR,0,0,DPR,0,0);
-  const hh=S.wx.hourly, i0=Math.max(0,hh.time.findIndex(t=>Date.parse(t)>=Date.now()-36e5));
+  const hh=S.wx.hourly, i0=Math.max(0,hh.time.findIndex(t=>weatherMs(t)>=Date.now()-36e5));
   const P=hh.precipitation.slice(i0,i0+24), PR=hh.precipitation_probability.slice(i0,i0+24);
   const max=Math.max(1,...P), bw=w/24;
   x.strokeStyle="rgba(18,33,46,.8)";x.beginPath();x.moveTo(0,h-14);x.lineTo(w,h-14);x.stroke();
@@ -1349,7 +1400,7 @@ function drawRain(){
     x.fillStyle="rgba(93,122,110,.55)";
     x.fillRect(i*bw+1,h-14-((PR[i]||0)/100)*(h-24),bw-2,1);
     if(i%6===0){x.fillStyle="#5d7a6e";x.font="8px 'Share Tech Mono'";
-      x.fillText(new Date(hh.time[i0+i]).getHours()+":00",i*bw+1,h-3);}
+      x.fillText(hm(weatherMs(hh.time[i0+i])),i*bw+1,h-3);}
   }
 }
 /* CARTE — tutte le cartine auto-generate del sito (stesse del cruscotto).
@@ -2132,11 +2183,11 @@ function newsUpd(){
 /* ---------------- ticker ---------------- */
 function tickUpd(){
   const parts=[];
-  if(S.sito)parts.push("SITO PC GENZANO · "+S.sito.titolo.toUpperCase());
+  if(S.sito)parts.push("SITO PC GENZANO · "+(sitoFresh()&&lvlOf(S.sito.livello)>=0?String(S.sito.titolo||"STATO NON DISPONIBILE").toUpperCase():"STATO DA VERIFICARE"));
   if(S.boll)parts.push("DPC · "+S.boll.name.toUpperCase());
   const t=laz("today");
   if(t){const my=t.find(z=>z.n===MYZONE),d=laz("tomorrow"),myD=d&&d.find(z=>z.n===MYZONE);
-    if(my)parts.push("ZONA F OGGI: "+LVL_TXT[zoneMax(my.p)]+(myD?" · DOMANI: "+LVL_TXT[zoneMax(myD.p)]:""));
+    if(my)parts.push("ZONA F OGGI: "+lvlText(zoneMax(my.p))+(myD?" · DOMANI: "+lvlText(zoneMax(myD.p)):""));
     const att=t.filter(z=>zoneMax(z.p)>0).map(z=>z.n);
     if(att.length)parts.push("ZONE LAZIO IN ALLERTA OGGI: "+att.join(", ").toUpperCase());
   }
@@ -2349,10 +2400,10 @@ if(initV)setView(initV,true);else setView(S.view,true);
 let curDay="";
 setInterval(()=>{
   $("#clock").textContent=now();
-  const d=new Date(), key=d.toDateString();
+  const d=new Date(), key=d.toLocaleDateString("sv-SE",{timeZone:"Europe/Rome"});
   if(key!==curDay){curDay=key; // la data si aggiorna da sola alla mezzanotte
     $("#dateTxt").textContent=d.toLocaleDateString("it-IT",
-      {weekday:"long",day:"numeric",month:"long",year:"numeric"}).toUpperCase();}
+      {timeZone:"Europe/Rome",weekday:"long",day:"numeric",month:"long",year:"numeric"}).toUpperCase();}
 },1000);
 S.lastFull=Date.now();
 loadSito(); loadDPC(); loadINGV(); loadWX(); loadAmb(); loadEMS(); loadGdacs(); loadNews();
@@ -2366,6 +2417,7 @@ setInterval(loadWX,5*60e3);            // quasi tempo reale: current a passo 15 
 setInterval(loadAmb,30*60e3);
 setInterval(loadEMS,15*60e3);
 setInterval(loadSito,5*60e3);
+setInterval(()=>{updZona();buildZoneLayer();if(S.view==="all")render();tickUpd()},60e3); // rivaluta anche dati divenuti vecchi
 setInterval(loadDPC,60*60e3);
 setInterval(()=>{if(S.obs)loadObs()},15*60e3); // stazioni: solo dopo il primo uso
 </script>

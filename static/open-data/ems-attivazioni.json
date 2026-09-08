@@ -1,12 +1,28 @@
 {
  "_snapshot": {
   "fonte": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/",
-  "generato": "2026-09-07T09:46:59+00:00",
+  "generato": "2026-09-08T04:38:33+00:00",
   "licenza": "Copernicus Emergency Management Service — dati pubblici",
   "nota": "Copia locale: l'API non espone CORS, il browser non può leggerla direttamente."
  },
  "count": 50,
  "results": [
+  {
+   "activationTime": "2026-09-07T14:44:00",
+   "category": "Storm",
+   "centroid": "POINT (16.688524454669405 40.230673340667245)",
+   "closed": false,
+   "code": "EMSR930",
+   "countries": [
+    "Italy"
+   ],
+   "eventTime": "2026-09-02T13:00:00",
+   "gdacsId": null,
+   "lastUpdate": "2026-09-08T04:20:39.291799",
+   "n_aois": 2,
+   "n_products": 0,
+   "name": "Storm in Basilicata, Italy."
+  },
   {
    "activationTime": "2026-09-06T09:07:00",
    "category": "Wildfire",
@@ -18,9 +34,9 @@
    ],
    "eventTime": "2026-08-31T13:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-09-07T08:37:50.090750",
+   "lastUpdate": "2026-09-07T12:19:19.600480",
    "n_aois": 1,
-   "n_products": 1,
+   "n_products": 2,
    "name": "Wildfire in Trapezitsa Mountain, Greece"
   },
   {
@@ -34,7 +50,7 @@
    ],
    "eventTime": "2026-08-28T15:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-09-04T13:06:22.536791",
+   "lastUpdate": "2026-09-07T17:25:05.744845",
    "n_aois": 4,
    "n_products": 4,
    "name": "Storm in Lombardy, Italy"
@@ -50,7 +66,7 @@
    ],
    "eventTime": "2026-08-25T22:00:00",
    "gdacsId": "FL1104124",
-   "lastUpdate": "2026-09-07T07:54:23.464751",
+   "lastUpdate": "2026-09-07T16:44:04.156835",
    "n_aois": 6,
    "n_products": 6,
    "name": "Flood in Nepal"
@@ -132,9 +148,9 @@
    ],
    "eventTime": "2026-08-14T22:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-09-07T07:23:14.238143",
+   "lastUpdate": "2026-09-07T18:19:07.796967",
    "n_aois": 5,
-   "n_products": 49,
+   "n_products": 53,
    "name": "Wildfire in Montenegro and Bosnia and Herzegovina"
   },
   {
@@ -164,7 +180,7 @@
    ],
    "eventTime": "2026-08-13T12:55:00",
    "gdacsId": null,
-   "lastUpdate": "2026-09-07T08:18:21.772161",
+   "lastUpdate": "2026-09-07T11:33:18.058518",
    "n_aois": 3,
    "n_products": 10,
    "name": "Wildfire in Huertgen Forest, Germany and Belgium"
@@ -237,14 +253,14 @@
    "activationTime": "2026-08-08T20:22:00",
    "category": "Wildfire",
    "centroid": "POINT (21.16667230811224 44.737865616308824)",
-   "closed": false,
+   "closed": true,
    "code": "EMSR914",
    "countries": [
     "Serbia"
    ],
    "eventTime": "2026-08-02T10:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-09-07T08:42:05.970120",
+   "lastUpdate": "2026-09-07T13:27:46.259757",
    "n_aois": 4,
    "n_products": 41,
    "name": "Wildfire in Serbia"
@@ -794,22 +810,6 @@
    "n_aois": 1,
    "n_products": 2,
    "name": "Wildfire in Bavaria, Germany"
-  },
-  {
-   "activationTime": "2026-05-02T07:55:00",
-   "category": "Wildfire",
-   "centroid": "POINT (7.7622 50.8811)",
-   "closed": true,
-   "code": "EMSR874",
-   "countries": [
-    "Germany"
-   ],
-   "eventTime": "2026-05-01T14:45:00",
-   "gdacsId": null,
-   "lastUpdate": "2026-05-04T16:36:52.552579",
-   "n_aois": 1,
-   "n_products": 1,
-   "name": "Wildfire in Rhineland-Palatinate, Germany"
   }
  ]
 }
