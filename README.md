@@ -86,7 +86,7 @@ Hub centrale: `/formazione/kit-calamita/` — cruscotto cruscotto-style: il visi
 | 🤝 Caregiver familiari | L. 205/2017 + Carta Eurocarers 2014 + WHO Self-care 2022 |
 | 🏥 Strutture sanitarie / RSA | Min. Salute + AGENAS + WHO Hospital Safety Index |
 | ♿ Disabilità adulti | CRPD ONU art. 11 + L. 18/2009 + WHO Disability 2013 |
-| 🩺 Terapie salvavita | WHO Health Cluster + Sphere § Essential health + ARERA 295/2018 |
+| 🩺 Terapie salvavita | WHO Health Cluster + Sphere § Essential health + ARERA 258/2015/R/com (TIMOE) |
 | 🤰 Gravidanza e neomamme | MISP IAWG 2018 + WHO Pregnancy + UNFPA + Sphere |
 | 🏚️ Senza fissa dimora | FEANTSA ETHOS + FIO.PSD + Min. Lavoro 2015 + Housing First |
 | 🌐 Italiano L2 / stranieri | UNHCR CwC 2020 + IOM CCCM + Sphere § Communication |

@@ -20,7 +20,7 @@ L'**hub centrale** è in `/formazione/kit-calamita/` (`content/formazione/kit-ca
 | 🤝 Caregiver familiari | L. 205/2017 + Carta Eurocarers 2014 + WHO Self-care 2022 + Zarit | `content/formazione/kit-calamita-caregiver-familiari/` | `static/formazione/kit-calamita-caregiver-familiari/` |
 | 🏥 Strutture sanitarie / RSA | Min. Salute + AGENAS + WHO Hospital Safety Index + CSNAP | `content/formazione/kit-calamita-strutture-sanitarie/` | `static/formazione/kit-calamita-strutture-sanitarie/` |
 | ♿ Disabilità adulti | CRPD ONU art. 11 + L. 18/2009 + WHO Disability Inclusive (2013) | `content/formazione/kit-calamita-disabilita-adulti/` | `static/formazione/kit-calamita-disabilita-adulti/` |
-| 🩺 Terapie salvavita | WHO Health Cluster 2018 + Sphere § Essential health + ARERA 295/2018 | `content/formazione/kit-calamita-terapie-salvavita/` | `static/formazione/kit-calamita-terapie-salvavita/` |
+| 🩺 Terapie salvavita | WHO Health Cluster 2018 + Sphere § Essential health + ARERA 258/2015/R/com (TIMOE) | `content/formazione/kit-calamita-terapie-salvavita/` | `static/formazione/kit-calamita-terapie-salvavita/` |
 | 🤰 Gravidanza e neomamme | MISP IAWG (2018) + WHO Pregnancy + UNFPA + Sphere | `content/formazione/kit-calamita-gravidanza/` | `static/formazione/kit-calamita-gravidanza/` |
 | 🏚️ Senza fissa dimora | FEANTSA ETHOS + FIO.PSD + Min. Lavoro 2015 + Housing First | `content/formazione/kit-calamita-senza-fissa-dimora/` | `static/formazione/kit-calamita-senza-fissa-dimora/` |
 | 🌐 Italiano L2 / stranieri | UNHCR CwC 2020 + IOM CCCM + Sphere § Communication | `content/formazione/kit-calamita-italiano-l2/` | `static/formazione/kit-calamita-italiano-l2/` |
@@ -50,7 +50,7 @@ I kit sono ispirati a un quadro **gerarchico** di standard. In caso di conflitto
 - Sphere Standards 2018, WHO (Health Cluster, mhGAP-HIG, Self-care 2022, Hospital Safety Index, KMC, Code latte materno 1981, Disability 2013), IFRC (Caring for Volunteers 2015, PFA), UNHCR (CwC 2020, RFL), IOM (CCCM Toolkit), IFE Core Group (Operational Guidance v3.0 2017), IAWG MISP (2018), NCTSN (PFA, STS), WSAVA, HelpAge International, FEANTSA (ETHOS), Eurocarers (Carta 2014), CWA CEN/CENELEC
 
 **Livello 3 — normativa italiana di settore**
-- L. 18/2009 ratifica CRPD, L. 67/2006 antidiscriminazione, L. 205/2017 art. 1 c. 255 caregiver, L. 33/2023 anziani non autosufficienti, L. 104/1992, D.Lgs. 105/2022, L. 281/1991 animali, L. 189/2004, D.Lgs. 286/1998 art. 35 stranieri, D.Lgs. 25/2008, L. 47/2017 MSNA, D.P.R. 223/1989 art. 2 residenza fittizia, ARERA delibera 295/2018 elettromedicali
+- L. 18/2009 ratifica CRPD, L. 67/2006 antidiscriminazione, L. 205/2017 art. 1 c. 255 caregiver, L. 33/2023 anziani non autosufficienti, L. 104/1992, D.Lgs. 105/2022, L. 281/1991 animali, L. 189/2004, D.Lgs. 286/1998 art. 35 stranieri, D.Lgs. 25/2008, L. 47/2017 MSNA, D.P.R. 223/1989 art. 2 residenza fittizia, ARERA delibera 258/2015/R/com (TIMOE) elettromedicali
 
 **Livello 4 — società scientifiche e federazioni italiane**
 - Salute: SIGG, SICP, AIP, SIN, SIGO, AIOM, AIPO-ITS, SIMER, SIMM, CNT/CIST, UNIAMO+Telethon, AIMA, SIPEM SoS, FNOPO
