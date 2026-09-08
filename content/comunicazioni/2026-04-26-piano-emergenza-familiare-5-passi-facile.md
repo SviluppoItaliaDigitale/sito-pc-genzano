@@ -61,7 +61,7 @@ Mostra questi 2 posti ai bambini. Portali lì fisicamente. Così i bambini li ri
 
 Lo zaino di emergenza è parte del piano. Dentro devi mettere:
 
-- Acqua: 3 litri al giorno per ogni persona, per 3 giorni
+- Acqua: 4 litri al giorno per ogni persona, per 3 giorni
 - Cibo che non si rovina (scatolette, cracker, barrette)
 - Torcia elettrica, radio a pile, powerbank e pile di ricambio
 - Farmaci personali e kit di pronto soccorso

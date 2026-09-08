@@ -11,7 +11,7 @@
 {{ $leafletCSS := "vendor/leaflet/leaflet.css" | relURL }}
 {{ $leafletJS  := "vendor/leaflet/leaflet.js"  | relURL }}
 
-<div class="radar-dpc-wrapper" role="group" aria-labelledby="radar-dpc-titolo">
+<div class="radar-dpc-wrapper" id="radar-dpc" role="group" aria-labelledby="radar-dpc-titolo">
   <h2 id="radar-dpc-titolo" class="h3 mt-4 mb-3" style="color:#003366">
     <i class="bi bi-cloud-rain-heavy-fill me-2" aria-hidden="true"></i>Radar pioggia in tempo reale (Protezione Civile)
   </h2>
@@ -109,12 +109,16 @@
 
     function aggiornaOrario(){
       var tipo = prodotto.split(':')[1].toUpperCase();
-      fetch(API + tipo, { mode: 'cors' }).then(function(r){ return r.json(); }).then(function(j){
-        var ms = j.lastProducts[0].time;
+      stato.textContent = 'Verifica orario del rilevamento…';
+      fetch(API + tipo, { mode: 'cors' }).then(function(r){ if(!r.ok)throw new Error('HTTP '+r.status);return r.json(); }).then(function(j){
+        if(tipo !== prodotto.split(':')[1].toUpperCase())return;
+        var value = j && (j.time || (j.lastProducts && j.lastProducts[0] && j.lastProducts[0].time));
+        var ms = typeof value === 'number' ? value : (/^\d+$/.test(value) ? Number(value) : Date.parse(value));
+        if(!Number.isFinite(ms) || ms <= 0 || ms > Date.now()+300000)throw new Error('Orario non valido');
         var d = new Date(ms);
         var mins = Math.round((Date.now() - ms)/60000);
-        stato.textContent = 'Ultimo rilevamento ' + pad(d.getHours()) + ':' + pad(d.getMinutes()) + (mins >= 0 ? (' (' + mins + ' min fa)') : '');
-      }).catch(function(){ stato.textContent = 'Aggiornato pochi minuti fa'; });
+        stato.textContent = 'Ultimo rilevamento ' + d.toLocaleTimeString('it-IT',{timeZone:'Europe/Rome',hour:'2-digit',minute:'2-digit'}) + ' (' + Math.max(0,mins) + ' min fa)' + (mins>15?' · dato in ritardo':'');
+      }).catch(function(){ if(tipo === prodotto.split(':')[1].toUpperCase())stato.textContent = 'Orario del rilevamento non verificabile'; });
     }
     function refresh(){ radar.setUrl(urlFor(prodotto, true)); aggiornaOrario(); }
     aggiornaOrario();

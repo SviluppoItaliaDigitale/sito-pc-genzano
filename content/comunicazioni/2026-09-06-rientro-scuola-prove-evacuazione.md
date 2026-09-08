@@ -1,6 +1,6 @@
 ---
 title: "Primo giorno di scuola: le prove di evacuazione non sono un dettaglio"
-date: 2026-09-06
+date: 2026-09-06T00:01:00+02:00
 description: "Le prove di evacuazione nelle scuole salvano vite. Come funzionano, perché vanno prese sul serio, cosa devono sapere studenti e genitori."
 badge: "Prevenzione"
 priorita: "normale"

@@ -29,7 +29,7 @@ In queste situazioni il cibo:
 
 Le linee guida del **Dipartimento Protezione Civile** e della **Croce Rossa** suggeriscono una scorta per **3-7 giorni**. Composizione ideale:
 
-- **Acqua potabile**: 3 litri a persona al giorno (per bere e igiene minima). Per una famiglia di 4 persone per 3 giorni sono circa 36 litri.
+- **Acqua potabile**: 4 litri a persona al giorno (per bere e igiene minima). Per una famiglia di 4 persone per 3 giorni sono circa 48 litri.
 - **Alimenti non deperibili**: scatolette di legumi, tonno, carne, pasta secca, riso, crackers, gallette, zucchero, sale.
 - **Cibi pronti**: minestroni UHT, zuppe pronte, frutta in scatola, biscotti.
 - **Alimenti speciali** per esigenze specifiche: latte in polvere per lattanti, pappe liofilizzate, alimenti celiaci, alimenti per animali domestici.

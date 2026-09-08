@@ -3,6 +3,7 @@ title: "Kion fari nun — Esperanto"
 description: "Tujaj agoj en urĝa kazo en Genzano di Roma: telefonoj, kondutoj, utilaj ligiloj."
 layout: "single"
 language: "eo"
+tts: false
 ---
 
 [← Reen al la Esperanta resumo](/esperanto/)
@@ -17,7 +18,7 @@ language: "eo"
 </div>
 <div class="col-md-6">
 <p class="fs-3 fw-bold text-danger mb-1">803&nbsp;555</p>
-<p>Operacia Salono Civila Protekto Lazio</p>
+<p>Operacia Centro Civila Protekto Lazio</p>
 </div>
 </div>
 </div>
@@ -40,8 +41,16 @@ Identigu la situacion en kiu vi troviĝas. Klaku sur la responda ligilo por vidi
 2. **Telefonu al 112** por raporti danĝerajn situaciojn.
 3. **Ne malhelpu la savistojn.** Ne iru al la loko de urĝo pro scivolo.
 4. **Sekvu nur oficialajn fontojn.** Ne disvastigu nekontrolitajn informojn.
-5. **Helpu tiujn kiuj bezonas helpon** se vi povas fari ĝin sekure (maljunuloj, infanoj, handikapuloj).
+5. **Helpu tiujn kiuj bezonas helpon** se vi povas fari ĝin sekure.
 6. **Tenu vian telefonon ŝargitan** kaj uzu ĝin nur por necesaj komunikoj.
+
+{{< cosa-non-fare titolo="Kion NE fari en ajna urĝa kazo" >}}
+- **Ne telefonu al 112 pro scivolo aŭ por peti informojn**: lasu la linion libera por tiuj kiuj vere bezonas ĝin.
+- **Ne iru al la loko de la evento** por vidi kio okazis: vi malrapidigas la savistojn kaj metas vin en danĝeron.
+- **Ne kunhavigu neverigitajn novaĵojn** en sociaj retoj: nur disvastigu oficialajn fontojn (Civila Protekto, Municipo, Regiona Funkcia Centro de Lazio).
+- **Ne bloku per via aŭto la alirvojojn** por savaj veturiloj.
+- **Ne reeniru damaĝitan konstruaĵon** antaŭ la permeso de la Fajrobrigado.
+{{< /cosa-non-fare >}}
 
 ## Rimedoj
 

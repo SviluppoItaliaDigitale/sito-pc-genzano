@@ -1,0 +1,103 @@
+name: Aggiorna video recenti (feed RSS) + cross-match
+
+# Complemento SETTIMANALE della scansione mensile del catalogo video
+# (aggiorna-video-correlati.yml, 1° del mese via yt-dlp): legge i feed
+# RSS/Atom ufficiali di YouTube dei canali monitorati (ultimi ~15 video
+# per canale, nessuna API key, nessun yt-dlp), aggiunge al catalogo i video
+# nuovi e rigenera la mappa pagina→video_correlati.
+#
+# Perché (02/09/2026): un video Geopop sul crollo del ghiacciaio in Nepal,
+# uscito poche ore dopo la scansione mensile, è rimasto invisibile al
+# cross-match mentre l'articolo del 27/08 era senza video. Con il feed
+# settimanale i video freschi entrano entro pochi giorni.
+#
+# Lunedì 10:23 UTC (finestra di manutenzione, fuori dai quarti d'ora).
+# Deploy coalescato da deploy-coalescer.yml (nessun trigger diretto).
+
+on:
+  schedule:
+    - cron: '23 10 * * 1'   # lunedì 10:23 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: aggiorna-video
+  cancel-in-progress: false
+
+jobs:
+  feed-video:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Video recenti dai feed RSS dei canali
+        run: python3 scripts/aggiorna-catalogo-video-feed.py
+
+      - name: Genera mappa video correlati
+        # Stessi default della scansione mensile (fonte unica di verità
+        # nello script: soglie, filtri, curatela FORCE_MATCHES/DENY_*).
+        run: python3 scripts/genera-video-correlati.py
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@2752ce1d29631191ea3f27c23495fa06139a5b78 # v3.2.1
+        with:
+          hugo-version: '0.154.5'
+          extended: true
+
+      - name: Verifica build Hugo
+        run: hugo --quiet --minify
+
+      - name: Check diff
+        id: diff
+        run: |
+          if git diff --quiet data/video_dpc_catalogo.yaml data/video_correlati.yaml; then
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+            echo "Nessun video nuovo nei feed: catalogo e mappa invariati."
+          else
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+            CAT=$(python3 -c "import yaml; print(len(yaml.safe_load(open('data/video_dpc_catalogo.yaml'))['video']))")
+            PAG=$(python3 -c "import yaml; print(len(yaml.safe_load(open('data/video_correlati.yaml'))['pagine']))")
+            echo "cat_count=$CAT" >> "$GITHUB_OUTPUT"
+            echo "pag_count=$PAG" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit modifiche
+        if: steps.diff.outputs.has_changes == 'true'
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/video_dpc_catalogo.yaml data/video_correlati.yaml
+          git commit -m "[skip-video-feed] Video recenti dai feed RSS dei canali + mappa correlati
+
+          Aggiornamento settimanale: video nuovi letti dai feed RSS ufficiali
+          dei canali YouTube monitorati e rigenerazione della mappa
+          pagina→video_correlati.
+
+          - Video totali nel catalogo: ${{ steps.diff.outputs.cat_count }}
+          - Pagine del sito con video correlati: ${{ steps.diff.outputs.pag_count }}
+
+          Generato dal workflow aggiorna-video-feed.yml (cron settimanale).
+          I falsi positivi si correggono nel generatore (DENY_VIDEO_IDS,
+          DENY_PAGE_VIDEO), mai solo nel YAML."
+          for tentativo in 1 2 3; do
+            if git push origin main 2>&1; then break; fi
+            echo "Push fallito (tentativo $tentativo), rebase..."
+            git pull --rebase origin main || { echo "Rebase fallito"; exit 1; }
+            if [ "$tentativo" = "3" ]; then echo "Push fallito dopo 3 tentativi"; exit 1; fi
+          done
+          echo "Mappa video aggiornata nel repo; deploy delegato a deploy-coalescer.yml."

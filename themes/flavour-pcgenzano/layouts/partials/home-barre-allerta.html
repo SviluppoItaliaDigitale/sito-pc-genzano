@@ -9,12 +9,22 @@
 {{ $allerta := .Site.Data.allerta }}
 {{ if $allerta }}
 {{ $controllo := or $allerta.ultimo_controllo $allerta.ultimo_aggiornamento }}
-<div id="allerta-bar" class="allerta-bar allerta-bar-{{ $allerta.livello }} allerta-bar-loading" role="alert" aria-label="Stato allerta meteo" data-aggiornamento="{{ $allerta.ultimo_aggiornamento }}" data-controllo="{{ $controllo }}">
+{{/* Normalizzazione livello: i data file usano la forma femminile
+     ("gialla"/"rossa", check-allerta.py LEVEL_NAME); per robustezza si
+     accettano anche "giallo"/"rosso". Stessa mappa usata dagli shortcode
+     allerta-stato-attuale e pagina-emergenza-lite (esercitazione 06/09/2026):
+     senza normalizzazione un valore legacy/corretto a mano lascerebbe la
+     barra HOMEPAGE (la più visibile del sito) senza classe CSS valida. */}}
+{{ $norm := dict "giallo" "gialla" "rosso" "rossa" }}
+{{ $livRawAllerta := lower (string ($allerta.livello | default "verde")) }}
+{{ $livAllerta := $livRawAllerta }}
+{{ with index $norm $livRawAllerta }}{{ $livAllerta = . }}{{ end }}
+<div id="allerta-bar" class="allerta-bar allerta-bar-{{ $livAllerta }} allerta-bar-loading" role="alert" aria-label="Stato allerta meteo" data-aggiornamento="{{ $allerta.ultimo_aggiornamento }}" data-controllo="{{ $controllo }}">
 <noscript><style>.allerta-bar-loading{opacity:1!important}</style></noscript>
   <div class="container">
     <div class="d-flex flex-wrap justify-content-between align-items-center">
       <div>
-        {{ if eq $allerta.livello "verde" }}<i id="allerta-icon" class="bi bi-shield-check me-2" aria-hidden="true"></i>
+        {{ if eq $livAllerta "verde" }}<i id="allerta-icon" class="bi bi-shield-check me-2" aria-hidden="true"></i>
         {{ else }}<i id="allerta-icon" class="bi bi-exclamation-triangle-fill me-2" aria-hidden="true"></i>{{ end }}
         <strong id="allerta-titolo">{{ $allerta.titolo }}</strong>
         <span id="allerta-desc" class="d-none d-md-inline ms-2">— {{ $allerta.descrizione }}</span>
@@ -43,16 +53,27 @@
 {{ $domaniTitolo := "" }}
 {{ $domaniRischi := "" }}
 {{ with $allerta.domani }}
-  {{ if in $domaniLivelliVisibili .livello }}
+  {{ $domaniLivRaw := lower (string (.livello | default "verde")) }}
+  {{ $domaniLivNorm := $domaniLivRaw }}
+  {{ with index $norm $domaniLivRaw }}{{ $domaniLivNorm = . }}{{ end }}
+  {{ if in $domaniLivelliVisibili $domaniLivNorm }}
     {{/* Difesa: blocco visibile SOLO se livello rilevante E titolo non vuoto.
          Evita render "Previsto domani: — gialla" se dati popolati a metà. */}}
     {{ if .titolo }}
     {{ $domaniVisibile = true }}
-    {{ $domaniLiv = .livello }}
-    {{ $domaniTitolo = .titolo }}
+    {{ $domaniLiv = $domaniLivNorm }}
+    {{/* Etichetta dal livello ("allerta arancione"): il titolo del data file ("Previsto arancione") duplicava "Previsto domani: Previsto …" (06/09/2026) */}}
+    {{ $domaniTitolo = printf "allerta %s" $domaniLivNorm }}
     {{ $domaniRischi = delimit .rischi ", " }}
-    {{ $td := time.AsTime .data }}
+    {{/* Guard anti-crash: una data non valida in .data (es. corretta a mano)
+         farebbe fallire time.AsTime e con essa l'intera build Hugo — la home
+         è la prima pagina renderizzata, quindi bloccherebbe l'intero sito.
+         try() intercetta l'errore (Hugo >= 0.122). */}}
+    {{ $rDom := try (time.AsTime .data) }}
+    {{ if not $rDom.Err }}
+    {{ $td := $rDom.Value }}
     {{ $domaniDataLeg = printf "%d %s %d" $td.Day (index $mesi (int $td.Month)) $td.Year }}
+    {{ end }}
     {{ end }}
   {{ end }}
 {{ end }}
@@ -80,7 +101,8 @@
   {{/* Difesa: blocco visibile SOLO se tipo non vuoto.
        Evita render "Avviso meteo: — allerta verde" se dati popolati a metà. */}}
   {{ if .tipo }}
-  {{ $avvisoLiv = .livello }}
+  {{ $avvisoLivRaw := lower (string (.livello | default "verde")) }}
+  {{ $avvisoLiv = $avvisoLivRaw }}{{ with index $norm $avvisoLivRaw }}{{ $avvisoLiv = . }}{{ end }}
   {{ $avvisoTipo = .tipo }}
   {{ $avvisoDescr = .descrizione }}
   {{ $avvisoUrl = .url }}
@@ -116,15 +138,21 @@
      di ieri non ancora rinnovato), la barra NON si mostra (scadenza per data). */}}
 {{ $oggiISO := now.Format "2006-01-02" }}
 {{ with $allerta.rischio_incendi }}
-  {{ if and (in (slice "gialla" "arancione" "rossa") .livello) (ge (string .data) $oggiISO) }}
+  {{ $incendiLivRaw := lower (string (.livello | default "verde")) }}
+  {{ $incendiLivNorm := $incendiLivRaw }}{{ with index $norm $incendiLivRaw }}{{ $incendiLivNorm = . }}{{ end }}
+  {{ if and (in (slice "gialla" "arancione" "rossa") $incendiLivNorm) (ge (string .data) $oggiISO) }}
     {{ $incendiVisibile = true }}
-    {{ $incendiLiv = .livello }}
+    {{ $incendiLiv = $incendiLivNorm }}
     {{ $incendiTitolo = .titolo }}
     {{ $incendiAib = .livello_aib }}
     {{ $incendiZona = .zona_aib }}
     {{ if .data }}
-      {{ $ti := time.AsTime .data }}
+      {{/* Guard anti-crash: vedi nota sulla pre-allerta domani più sopra. */}}
+      {{ $rIncendi := try (time.AsTime .data) }}
+      {{ if not $rIncendi.Err }}
+      {{ $ti := $rIncendi.Value }}
       {{ $incendiDataLeg = printf "%d %s %d" $ti.Day (index $mesi (int $ti.Month)) $ti.Year }}
+      {{ end }}
     {{ end }}
     {{ with .domani }}
       {{ $incendiDomLiv = .livello }}

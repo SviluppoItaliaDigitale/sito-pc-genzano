@@ -25,7 +25,7 @@ Il modo più rapido per vedere tutto in un colpo d'occhio è il nostro **cruscot
 
 <div class="consulta-rapida">
 {{< link-card url="/cruscotto/" icon="bi-speedometer2" titolo="Cruscotto del territorio" desc="Tutti i dati di rischio in tempo reale, in un'unica pagina, da fonti ufficiali e aperte (INGV, DPC, ARPA Lazio, Copernicus, Open-Meteo)." >}}
-{{< link-card url="/monitor/" icon="bi-display" titolo="Sala situazioni (sperimentale)" desc="Le stesse fonti su una sola schermata scura, con mappa a tutta pagina: pensata per lo schermo della sede durante un turno di monitoraggio. Si apre in una nuova scheda, così il sito resta aperto." nuova="true" >}}
+{{< link-card url="/monitor/" icon="bi-display" titolo="Sala situazioni (sperimentale)" desc="Le stesse fonti su una sola schermata scura, con mappa a tutta pagina e una vista RADIO per l'ascolto delle bande radioamatoriali via SDR (spettro e waterfall): pensata per lo schermo della sede durante un turno di monitoraggio. Si apre in una nuova scheda, così il sito resta aperto." nuova="true" >}}
 </div>
 
 ## Come usare questa pagina

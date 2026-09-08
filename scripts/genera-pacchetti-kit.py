@@ -70,12 +70,28 @@ def estrai_link_schede(md_path: Path) -> list[str]:
     return seen
 
 
-def patch_html_paths(html: str) -> str:
-    """Riscrive path assoluti dipendenti dal sito in path relativi offline."""
-    # CSS condiviso: assoluto -> relativo dalla cartella schede/<slug>/
+SITO_URL = "https://www.protezionecivilegenzano.it"
+
+
+def patch_html_paths(html: str, schede_incluse: list[str] | None = None) -> str:
+    """Riscrive path assoluti dipendenti dal sito in path relativi offline.
+
+    Regola (audit esterno 06/09/2026, rilievo F09): aperto da file:// un
+    href che inizia con "/" punta alla radice del disco, non al sito. Quindi:
+      - CSS condiviso e asset inclusi nello ZIP → percorso relativo;
+      - link a una scheda inclusa nello ZIP → percorso relativo alla scheda;
+      - ogni altro link interno al sito → URL https completo (funziona online,
+        e offline il browser mostra chiaramente che serve la rete).
+    """
+    schede_incluse = schede_incluse or []
+    # CSS condiviso: assoluto (o relativo alla hub) -> relativo dalla cartella schede/<slug>/
     html = html.replace(
         '/formazione/schede-stampabili/assets/scheda-print.css',
         '../../assets/scheda-print.css',
+    )
+    html = html.replace(
+        'href="../assets/scheda-print.css"',
+        'href="../../assets/scheda-print.css"',
     )
     # Favicon assoluto: rimuovo (non serve offline, evita errori 404 nel browser)
     html = re.sub(
@@ -89,6 +105,17 @@ def patch_html_paths(html: str) -> str:
         'href="/formazione/schede-stampabili/"',
         'href="../../INDICE.html"',
     )
+
+    # Link interni al sito che iniziano con "/": scheda inclusa → relativo,
+    # altrimenti → URL assoluto https del sito (mai path radicati su "/").
+    def _riscrivi_href(m: re.Match) -> str:
+        quote, target = m.group(1), m.group(2)
+        ms = re.match(r"^/formazione/schede-stampabili/([a-z0-9][a-z0-9-]*)/?(#.*)?$", target)
+        if ms and ms.group(1) in schede_incluse:
+            return f'href={quote}../{ms.group(1)}/index.html{ms.group(2) or ""}{quote}'
+        return f'href={quote}{SITO_URL}{target}{quote}'
+
+    html = re.sub(r'href=(["\'])(/[^"\']*)\1', _riscrivi_href, html)
     return html
 
 
@@ -393,7 +420,7 @@ def costruisci_pacchetto(slug: str, md_filename: str) -> tuple[int, int, list[st
             dst_dir = tmp / "schede" / s_slug
             dst_dir.mkdir(parents=True, exist_ok=True)
             html = src_html.read_text(encoding="utf-8")
-            html_patched = patch_html_paths(html)
+            html_patched = patch_html_paths(html, schede_slug)
             # Banda affiliazioni referenziata inline (schede immagine-only)
             html_patched = html_patched.replace(
                 "/images/footer-print-affiliazioni.png",

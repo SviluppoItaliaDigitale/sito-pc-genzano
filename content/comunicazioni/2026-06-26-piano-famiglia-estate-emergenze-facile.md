@@ -79,7 +79,7 @@ Decidi prima chi si occupa di:
 
 Tieni a casa uno zaino pronto. Deve avere:
 
-- Acqua (almeno 2 litri a persona).
+- Acqua.
 - Qualcosa da mangiare (biscotti, barrette).
 - Una torcia e le batterie.
 - Una radio a pile.

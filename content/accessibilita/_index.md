@@ -4,7 +4,7 @@ description: "Dichiarazione di accessibilità AGID: stato di conformità, conten
 layout: "single"
 toc: true
 tts: true
-dataUltimaRevisione: "2026-07-15"
+dataUltimaRevisione: "2026-09-06"
 aliases:
   - /dichiarazione-accessibilita.html
 ---
@@ -49,11 +49,12 @@ Le seguenti aree del sito **non sono pienamente accessibili** per i motivi indic
 - **Motivazione**: contenuto di terze parti (art. 3, comma 6, Direttiva UE 2016/2102 — esenzione per contenuti di terzi non sviluppati né finanziati né controllati).
 - **Mitigazione**: per ogni widget è disponibile un link al sito ufficiale del fornitore, dove il cittadino può accedere ai contenuti con le opzioni di accessibilità del fornitore stesso.
 
-### Documenti PDF storici nell'Area Download
-- **Alcuni PDF pre-2022** nell'Area Download (vecchi piani comunali, carte tematiche scansionate, ordinanze d'archivio) potrebbero non avere OCR completo e non rispettare PDF/UA.
-- **Motivazione**: documenti scansionati ricevuti da enti terzi (Comune, Regione, Prefettura), non rigenerabili dal Gruppo.
-- **Mitigazione**: per ogni PDF storico critico, il sito offre una pagina HTML equivalente accessibile. È in corso un audit progressivo per rigenerare i PDF con OCR completo e tag PDF/UA.
-- **Stato per documento**: consulta la pagina [Audit accessibilità dei PDF pubblicati](/accessibilita/audit-pdf/) per vedere il quadro aggiornato documento per documento (aggiornato al 28 maggio 2026).
+### Documenti PDF pubblicati sul sito
+- **Stato al 6 settembre 2026** (verifica esterna sui 50 PDF presenti nel repository del sito): 41 documenti non hanno una struttura di tag (PDF/UA, ISO 14289-1); di questi, 17 non contengono testo estraibile perché esportati come immagine: gli 8 poster di emergenza multilingue e le 9 presentazioni tematiche. Lo screen reader può quindi leggere in modo lineare, o non leggere affatto, questi file.
+- **Motivazione**: parte dei documenti sono scansioni o file ricevuti da enti terzi (Comune, Regione, Prefettura), non rigenerabili dal Gruppo; i poster e le presentazioni sono stati esportati da strumenti che rasterizzano il testo.
+- **Mitigazione**: per ogni documento esiste l'equivalente HTML accessibile sul sito. Il Manuale di Protezione Civile ha il reader online in [/manuale/](/manuale/); le presentazioni tematiche corrispondono alle pagine dei rischi e delle allerte; i poster multilingue corrispondono alle pagine tradotte (inglese, francese, tedesco, spagnolo, portoghese, rumeno, esperanto). Se un PDF non è leggibile con la tua tecnologia assistiva, scrivi a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it): forniamo una versione alternativa o un testo equivalente.
+- **Piano**: rigenerazione con struttura di tag, in ordine di priorità, per il Manuale, i materiali per le scuole, i documenti di emergenza e la modulistica; la presenza dei tag sarà verificata documento per documento e non presentata come conformità PDF/UA finché non sia stata controllata con lettore di schermo.
+- **Stato per documento**: consulta la pagina [Audit accessibilità dei PDF pubblicati](/accessibilita/audit-pdf/) per il quadro documento per documento.
 
 ### Mappe interattive
 - Le mappe Leaflet/MapLibre eventualmente integrate hanno limiti di interazione da sola tastiera per il pan/zoom (limite intrinseco delle librerie SVG-based).
@@ -65,7 +66,7 @@ Le seguenti aree del sito **non sono pienamente accessibili** per i motivi indic
 - **Metodo di redazione**: **autovalutazione** condotta dal soggetto ai sensi dell'art. 3, comma 1, della Decisione di esecuzione (UE) 2018/1523.
 - **Data ultima revisione**: 15 luglio 2026 (revisione del linguaggio: le affermazioni di conformità sono ora accompagnate da data, metodo e ambito della verifica).
 - **Dichiarazione sul portale AGID**: la pubblicazione della dichiarazione tramite la procedura ufficiale ([form.agid.gov.it](https://form.agid.gov.it/)) è a carico del referente del Gruppo; il collegamento sarà aggiunto qui e nel piè di pagina appena disponibile.
-- **Prossimo riesame previsto**: 10 maggio 2027 (riesame annuale obbligatorio ai sensi della normativa italiana ed europea sull'accessibilità).
+- **Riesame annuale**: secondo il calendario AgID, la dichiarazione va riesaminata e, se necessario, aggiornata **entro il 23 settembre di ogni anno**. Prossimo riesame: entro il 23 settembre 2026, poi entro il 23 settembre 2027.
 - **Frequenza dei test automatici**: settimanale (workflow `audit-sito.yml` ogni lunedì) + post-deploy (workflow `lighthouse-audit.yml` dopo ogni pubblicazione).
 
 ## Informazioni sul sito

@@ -3,6 +3,7 @@ title: "Español — Protección Civil Genzano di Roma"
 description: "Información esencial en español para turistas y residentes extranjeros: números de emergencia, qué hacer ante los principales riesgos, contactos."
 layout: "single"
 language: "es"
+tts: false
 aliases:
   - /es/
 sitemap:
@@ -60,7 +61,7 @@ Esta página le ofrece la **información esencial** en español. La web completa
 <li><strong>No</strong> use ascensores</li>
 <li>Aléjese de ventanas y estanterías</li>
 </ul>
-<p>Tras el temblor, salga con calma por las escaleras y llegue a la <strong>"Area di Attesa"</strong> (área de espera) más cercana. Vea el <a href="/cartografia/">mapa de áreas de espera</a>.</p>
+<p>Tras el temblor, salga con calma por las escaleras y llegue a la <strong lang="it">"Area di Attesa"</strong> (área de espera) más cercana. Vea el <a href="/cartografia/">mapa de áreas de espera</a>.</p>
 </div>
 
 <div class="en-card">
@@ -105,7 +106,7 @@ Esta página le ofrece la **información esencial** en español. La web completa
 <h2>📦 Kit de emergencia en casa</h2>
 <p>Tenga preparada una pequeña mochila con:</p>
 <ul class="en-list">
-<li>Agua embotellada (3 litros por persona)</li>
+<li>Agua embotellada (4 litros por persona, al día, durante 3 días)</li>
 <li>Comida de larga duración (galletas, barritas energéticas)</li>
 <li>Linterna con pilas de repuesto</li>
 <li>Manta térmica y silbato</li>
@@ -123,7 +124,7 @@ Esta página le ofrece la **información esencial** en español. La web completa
 
 <div class="en-card">
 <h2>🗺️ Adónde ir en caso de emergencia</h2>
-<p>Genzano cuenta con <strong>10 áreas de espera designadas</strong> (Aree di Attesa) donde los ciudadanos deben reunirse tras un evento mayor. Son espacios públicos abiertos, señalizados con carteles. Localice la más cercana a su casa u hotel <em>antes</em> de que ocurra una emergencia.</p>
+<p>Genzano cuenta con <strong>10 áreas de espera designadas</strong> (<span lang="it">Aree di Attesa</span>) donde los ciudadanos deben reunirse tras un evento mayor. Son espacios públicos abiertos, señalizados con carteles. Localice la más cercana a su casa u hotel <em>antes</em> de que ocurra una emergencia.</p>
 <p>👉 <a href="/cartografia/" style="background:#003366;color:#fff;padding:0.5rem 1rem;border-radius:6px;text-decoration:none;display:inline-block;margin-top:0.4rem">Ver el mapa de áreas de espera</a></p>
 </div>
 

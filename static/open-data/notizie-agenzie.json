@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-01T07:50:39+00:00",
+  "generato": "2026-09-08T04:38:25+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-01T07:41:51+00:00",
+   "data": "2026-09-07T23:48:24+00:00",
    "fonte": "ANSA",
-   "titolo": "Nel 2029 Lisbona avrà una nuova funicolare al posto di quella distrutta un anno fa",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/01/nel-2029-lisbona-avra-una-nuova-funicolare-al-posto-di-quella-distrutta_4fb49cd4-9f22-4ed6-a226-43baefc42bec.html"
+   "titolo": "La Russia riprende gli attacchi su Kiev dopo tre giorni di tregua",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/08/la-russia-riprende-gli-attacchi-su-kiev-dopo-tre-giorni-di-tregua_8e9ad342-064f-49d9-be0c-02486376ddf4.html"
   },
   {
-   "data": "2026-09-01T07:39:54+00:00",
-   "fonte": "ANSA",
-   "titolo": "Droni allertano la Lettonia e sconfinano in Estonia, decollano i caccia Nato. Missili su Kiev",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/01/droni-allertano-lettonia-e-sconfinano-in-estonia-decollano-caccia-nato_d5e0ef57-89b6-4937-b679-a8050d3a0077.html"
-  },
-  {
-   "data": "2026-09-01T07:39:47+00:00",
+   "data": "2026-09-07T22:03:25+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Malattia della pioggia, perché se ne parla: cos'è e sintomi",
-   "url": "https://www.adnkronos.com/cronaca/sintomi-malattia-della-pioggia-cos-e-cura_2N3YqCiiZB9PTrOpFcFAxB"
+   "titolo": "Ucraina-Russia, Zelensky: \"Putin vuole negoziare\". Ma Mosca ha risorse per la guerra fino al 2028",
+   "url": "https://www.adnkronos.com/internazionale/esteri/guerra-ucraina-russia-fino-al-2028-scenario_1R0b0jHYnn8cch6fZSubLW"
   },
   {
-   "data": "2026-09-01T07:38:39+00:00",
+   "data": "2026-09-07T22:02:58+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Effetto Afd, dopo Sassonia-Anhalt la mappa delle elezioni che possono cambiare Ue e Occidente",
+   "url": "https://www.adnkronos.com/internazionale/esteri/mappa-elezioni-2026-2027-europa-occidente_15jtjG5AsnyLeKDOc4vKZi"
+  },
+  {
+   "data": "2026-09-07T22:02:30+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Caldo bye bye, si ricomincia a respirare: mercoledì Italia senza afa",
+   "url": "https://www.adnkronos.com/cronaca/italia-meteo-svolta-mercoledi-8-settembre_1jzcguOFh0GPu6et80tSm0"
+  },
+  {
+   "data": "2026-09-07T21:35:50+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Canada pronto a far scattare i dazi sul 'Made in Usa'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/07/il-canada-pronto-a-far-scattare-i-dazi-sul-made-in-usa_7ecb125e-cc6c-4fae-a524-05d204645edf.html"
+  },
+  {
+   "data": "2026-09-07T21:04:40+00:00",
+   "fonte": "ANSA",
+   "titolo": "Serie A: Frattesi guida la rimonta, a Udine la Lazio si regala la vetta",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/07/serie-a-in-campo-udinese-lazio-1-2_9a1b8c85-2b54-45cb-98d2-5b76db2ec524.html"
+  },
+  {
+   "data": "2026-09-07T20:55:27+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Temptation Island, Sabrina riceve una sorpresa speciale: il videomessaggio da... Emma Marrone",
+   "url": "https://www.adnkronos.com/spettacoli/emma-videomessaggio-temptation-island-sabrina-soussi-giovanni_3EMM31XtMY48hNyM0o0Cg"
+  },
+  {
+   "data": "2026-09-07T20:33:24+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Tim, Cda Poste alza il prezzo dell'offerta di 0,30 euro per azione",
+   "url": "https://www.adnkronos.com/economia/poste-offerta-tim-nuovo-prezzo-azione_2zZtyfNUMRlUPrgyXooINm"
+  },
+  {
+   "data": "2026-09-07T20:24:25+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina-Russia, il nodo del Donbass e le 15 promesse mancate di Putin",
+   "url": "https://www.adnkronos.com/internazionale/esteri/putin-donbass-guerra-ucraina-russia_5I0mgN1ChdepVgM9nOwpQ8"
+  },
+  {
+   "data": "2026-09-07T20:09:57+00:00",
+   "fonte": "ANSA",
+   "titolo": "Lorena era ancora viva quando l'ex l'ha gettata dal viadotto",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/07/lorena-era-ancora-viva-quando-lex-lha-gettata-dal-viadotto_8844a33a-4658-465b-b62a-ae9932303cad.html"
+  },
+  {
+   "data": "2026-09-07T19:54:02+00:00",
+   "fonte": "ANSA",
+   "titolo": "La governance dell'acqua tra cultura e democrazia",
+   "url": "https://www.ansa.it/sito/notizie/ansa_incontra/2026/09/07/la-governance-dellacqua-tra-cultura-e-democrazia_74b2a6be-ae23-41b7-8cfe-5fea0b0d6cfb.html"
+  },
+  {
+   "data": "2026-09-07T19:48:41+00:00",
+   "fonte": "ANSA",
+   "titolo": "Erutta un vulcano in Indonesia, fermo l'aeroporto di Giacarta",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/07/erutta-un-vulcano-in-indonesia-fermo-laeroporto-di-giacarta_668c256e-3c55-4f34-8099-47810a1fa49e.html"
+  },
+  {
+   "data": "2026-09-07T19:46:34+00:00",
+   "fonte": "ANSA",
+   "titolo": "Di Battista sedato e in terapia intensiva dopo l'intervento",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/07/di-battista-sedato-e-in-terapia-intensiva-dopo-lintervento_499e3ef0-2aae-4d56-be9e-8d59d80af400.html"
+  },
+  {
+   "data": "2026-09-07T19:45:28+00:00",
+   "fonte": "ANSA",
+   "titolo": "Elezioni in Sassonia-Anhalt, Merz scioccato. 'Scossi nelle fondamenta ma non mi arrendo'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/07/elezioni-in-sassonia-anhalt-merz-scioccato.-scossi-nelle-fondamenta-ma-non-mi-arrendo_b20daeaf-6891-4f41-9889-d644a47307ba.html"
+  },
+  {
+   "data": "2026-09-07T19:23:57+00:00",
+   "fonte": "ANSA",
+   "titolo": "Emma Bonino ricoverata a Roma per insufficienza respiratoria, grave ma vigile",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/07/emma-bonino-ricoverata-in-ospedale-a-roma-e-grave_7b4947f8-04af-4663-a970-d39283ad2cc1.html"
+  },
+  {
+   "data": "2026-09-07T19:13:07+00:00",
+   "fonte": "ANSA",
+   "titolo": "Venezia: Javier Bardem e Penelope Cruz al Lido",
+   "url": "https://www.ansa.it/sito/photogallery/spettacolo/2026/09/07/venezia-javier-bardem-e-penelope-cruz-al-lido-_dc4c836c-5044-48fc-96dd-03687129ae90.html"
+  },
+  {
+   "data": "2026-09-07T19:05:35+00:00",
+   "fonte": "ANSA",
+   "titolo": "Venezia tra l'horror di Strippoli e l'incanto di Kore-eda",
+   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/07/venezia-tra-lhorror-di-strippoli-e-lincanto-di-kore-eda_2ecf4740-ff7a-4ccb-94fd-341ad9a70e52.html"
+  },
+  {
+   "data": "2026-09-07T18:46:07+00:00",
+   "fonte": "ANSA",
+   "titolo": "Regno Unito, caos a Portsmouth: anti-migranti incappucciati assediano il porto",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/07/regno-unito-caos-a-portsmouth-anti-migranti-incappucciati-assediano-il-porto_bda8bb0e-e7aa-4b83-83df-5e5993a7ee17.html"
+  },
+  {
+   "data": "2026-09-07T18:44:23+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Estate sicura, proseguono i controlli nelle stazioni e sui treni",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/01/estate-sicura-proseguono-i-controlli-nelle-stazioni-e-sui-treni_29a7862e-0063-4573-84ea-abaaec4354b6.html"
+   "titolo": "Autopsia, Lorena ancora viva quando l'ex l'ha gettata dal viadotto",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/07/autopsia-lorena-ancora-viva-quando-lex-lha-gettata-dal-viadotto_3fee08e2-df62-49e8-a979-81e51260ddb5.html"
   },
   {
-   "data": "2026-09-01T07:37:33+00:00",
+   "data": "2026-09-07T18:24:15+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Accoltellato mentre difende dai ladri la propria auto, è grave",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/01/accoltellato-mentre-difende-dai-ladri-la-propria-auto-e-grave_95cfd160-5e37-4b09-9255-aa4cacc21802.html"
+   "titolo": "Emma Bonino ricoverata in ospedale a Roma, è vigile",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/07/emma-bonino-ricoverata-in-ospedale-a-roma-e-vigile_87140b1f-fa53-44a1-b347-b2678f405fdf.html"
   },
   {
-   "data": "2026-09-01T07:33:18+00:00",
-   "fonte": "ANSA",
-   "titolo": "Dal Lussemburgo via libera al trasferimento del 25% di Delfin",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/01/dal-lussemburgo-via-libera-al-trasferimento-del-25-di-delfin_6ad7aacc-498c-4f5c-a662-407b39381146.html"
-  },
-  {
-   "data": "2026-09-01T07:29:22+00:00",
-   "fonte": "ANSA",
-   "titolo": "Mimit, prezzo benzina self supera 2,1 euro in autostrada",
-   "url": "https://www.ansa.it/canale_motori/notizie/mondo_motori/2026/09/01/mimit-prezzo-benzina-self-supera-21-euro-in-autostrada_6b73ee1d-6cca-4c15-8a03-d055b8a17bf8.html"
-  },
-  {
-   "data": "2026-09-01T07:17:42+00:00",
-   "fonte": "ANSA",
-   "titolo": "Generazione Yolo: la rivoluzione del \"si vive una sola volta\" che riscrive il senso del lavoro",
-   "url": "https://www.ansa.it/sito/notizie/magazine/numeri/2026/08/30/generazione-yolo-la-rivoluzione-del-si-vive-una-sola-volta-che-riscrive_5cbf48c2-4f6c-409c-a6ad-c8e9c1b61069.html"
-  },
-  {
-   "data": "2026-09-01T07:17:24+00:00",
-   "fonte": "ANSA",
-   "titolo": "Intelligence Seul: possibile un vertice Usa-Corea del Nord in qualsiasi momento",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/01/intelligence-seul-possibile-un-vertice-usa-corea-del-nord-in-qualsiasi-momento_f2ca1d58-9de7-4bae-a2d7-6d33e3a597c3.html"
-  },
-  {
-   "data": "2026-09-01T07:17:12+00:00",
+   "data": "2026-09-07T18:17:58+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "A Cremona una gru di 42 metri per la messa in sicurezza della cattedrale",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/01/a-cremona-una-gru-di-42-metri-per-la-messa-in-sicurezza-della-cattedrale_3e64cabe-ac26-4463-8fae-c01b680fa128.html"
+   "titolo": "Arriva il decreto, stretta sugli ospedali dopo il furto di fentanyl",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/07/arriva-il-decreto-stretta-sugli-ospedali-dopo-il-furto-di-fentanyl_8d7af05f-b975-4afe-bc34-6f7fc747b0af.html"
   },
   {
-   "data": "2026-09-01T07:15:48+00:00",
+   "data": "2026-09-07T18:12:20+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Alluvione in Nepal e Tibet, i morti sono più di 1.000",
-   "url": "https://www.adnkronos.com/internazionale/esteri/alluvione-nepal-tibet-morti-ultime-news-oggi_V3XDSqc8IkJemgkbWW8Lb"
+   "titolo": "Sondaggio politico, Fratelli d'Italia stabile e Pd cala. Vannacci sale ancora",
+   "url": "https://www.adnkronos.com/politica/sondaggio-tg-la7-elezioni-meloni-vannacci_2kVQgo9qsHlK0nKgHEOmuI"
   },
   {
-   "data": "2026-09-01T07:03:14+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Meteo, il caldo non è finito: dopo la tregua arriva una nuova ondata africana",
-   "url": "https://www.adnkronos.com/cronaca/caldo-record-previsioni-tregua-nuova-ondata-africana_2gatIYeXVB9E7BxqufiYPj"
-  },
-  {
-   "data": "2026-09-01T07:01:41+00:00",
+   "data": "2026-09-07T18:11:09+00:00",
    "fonte": "ANSA",
-   "titolo": "Dal Karakorum alle Alpi, tre scalatrici e l'emancipazione per il cambiamento",
-   "url": "https://www.ansa.it/donne/notizie/2026/08/31/dal-karakorum-alle-alpi-tre-scalatrici-e-lemancipazione-per-il-cambiamento_9be98819-8f6f-41c2-a0cb-24a3e2b17411.html"
+   "titolo": "Nuovi raid israeliani in Libano, sterminata una famiglia",
+   "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/09/07/nuovi-raid-israeliani-in-libano-sterminata-una-famiglia_a65d8ecf-b5c7-46bf-a111-e4f911f7f832.html"
   },
   {
-   "data": "2026-09-01T07:00:10+00:00",
-   "fonte": "ANSA",
-   "titolo": "Paura a Times Square: donna accoltella due persone, una è morta",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/01/paura-a-times-square-donna-accoltella-due-persone-una-e-morta_d736c91d-b08f-4b83-b764-3014da2e3180.html"
-  },
-  {
-   "data": "2026-09-01T06:49:14+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "US Open, oggi Cobolli-Comesana: orario, precedenti e dove vederla in tv",
-   "url": "https://www.adnkronos.com/sport/cobolli-comesana-oggi-us-open-orario-dove-vederla-tv_7t56SoUSBYGhrZwKayKDuJ"
-  },
-  {
-   "data": "2026-09-01T06:47:17+00:00",
+   "data": "2026-09-07T18:10:26+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Grandinata in Alto Adige, chicchi fino a cinque centimetri di diametro",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/01/grandinata-in-alto-adige-chicchi-fino-a-cinque-centimetri-di-diametro_93485722-a932-4a1c-8e8c-018794fe4166.html"
+   "titolo": "Due morti alla cronoscalata di Erice, indagato il pilota",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/07/due-morti-alla-cronoscalata-di-erice-indagato-il-pilota_cdd294b0-e933-413d-a829-f4adfc1bdb34.html"
   },
   {
-   "data": "2026-09-01T06:43:54+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "US Open, terza giornata: da Musetti a Cobolli, programma e dove vederli in tv",
-   "url": "https://www.adnkronos.com/sport/us-open-oggi-chi-gioca-musetti-cobolli-programma-dove-vederli-tv_4eR4y47LlYDnIdmFJk2tvT"
-  },
-  {
-   "data": "2026-09-01T06:35:40+00:00",
-   "fonte": "ANSA",
-   "titolo": "Al via il Semestre Aperto di Medicina 2026/2027",
-   "url": "https://www.ansa.it/canale_legalita_scuola/notizie/universita_news/2026/09/01/al-via-il-semestre-aperto-di-medicina-20262027_195af15e-99f9-4121-9393-c89409c00125.html"
-  },
-  {
-   "data": "2026-09-01T06:29:31+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "US Open, oggi Musetti-Fery: orario, precedenti e dove vederla in tv",
-   "url": "https://www.adnkronos.com/sport/musetti-fery-oggi-us-open-orario-dove-vederla-tv_6a3yER0dkr2b3qGtH4QWYd"
-  },
-  {
-   "data": "2026-09-01T06:29:02+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Pagamenti Inps settembre 2026, le date da segnare: quando arrivano pensioni, Assegno unico e ADI",
-   "url": "https://www.adnkronos.com/economia/pagamenti-inps-settembre-2026_jpmze01g7v5g55tPn3wIt"
-  },
-  {
-   "data": "2026-09-01T06:20:17+00:00",
+   "data": "2026-09-07T18:08:10+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Corriere muore durante una consegna, era in scadenza di contratto",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/31/corriere-muore-per-un-malore-durante-la-consegna-oggi-gli-scadeva-il-contratto_b603e5ca-12e1-4b35-8dba-6231698cb1f4.html"
+   "titolo": "Gli audio rubati a Raoul Bova, chiuse le indagini per il pr",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/07/gli-audio-rubati-a-raoul-bova-chiuse-le-indagini-per-il-pr_a281a0e2-5304-48f2-8343-6ae85bbe4077.html"
   },
   {
-   "data": "2026-09-01T06:19:33+00:00",
+   "data": "2026-09-07T17:59:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serie A, Udinese-Lazio 1-2: Gattuso vince in rimonta con Frattesi e Gudmundsson",
+   "url": "https://www.adnkronos.com/sport/diretta-udinese-lazio-oggi-serie-a-risultato-live_7sDTUEgdk4DOqv2LHduyr6"
+  },
+  {
+   "data": "2026-09-07T17:55:47+00:00",
    "fonte": "ANSA",
-   "titolo": "'Oltre mille le vittime delle inondazioni in Nepal e Tibet'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/01/-oltre-mille-le-vittime-delle-inondazioni-in-nepal-e-tibet-_a85d4f7e-64e4-44dd-ab3d-7d31dbe394f9.html"
+   "titolo": "Onori di Stato per Ratko Mladic, migliaia di persone al suo funerale",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/07/onori-di-stato-per-ratko-mladic-migliaia-di-persone-al-suo-funerale_d8f7fb5d-def5-4a03-ad9d-9ce79e09333f.html"
   },
   {
-   "data": "2026-09-01T06:17:45+00:00",
+   "data": "2026-09-07T17:54:35+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Alcaraz, niente più protesta per montepremi: lo spagnolo si ritira",
+   "url": "https://www.adnkronos.com/sport/alcaraz-annuncio-choc-protesta-montepremi-mi-ritiro_38DDdzYt3SLQfrmRKBjIa4"
+  },
+  {
+   "data": "2026-09-07T17:53:39+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Garlasco: legali di Sempio 'analisi psichiatrica inutile senza patologia'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/01/garlasco-legali-di-sempio-analisi-psichiatrica-inutile-senza-patologia_f214d552-8542-4f16-be25-37239e36e5c2.html"
+   "titolo": "La Polizia provinciale di Verona cattura 18 cinghiali sul lago di Garda",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/07/la-polizia-provinciale-di-verona-cattura-18-cinghiali-sul-lago-di-garda_13adda21-6408-4572-bdc8-d5e861af42b8.html"
   },
   {
-   "data": "2026-09-01T06:13:09+00:00",
+   "data": "2026-09-07T17:38:06+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Vuelta di Spagna, oggi decima tappa: orario, percorso e dove vederla in tv",
-   "url": "https://www.adnkronos.com/sport/vuelta-spagna-oggi-decima-tappa-orario-percorso-dove-vederla-tv_5WeV4ETAWJYjsx1F5NAYNv"
-  },
-  {
-   "data": "2026-09-01T06:00:26+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "La legge di Lidia Poët, stasera su Ra1: la serie sulla prima vera avvocata d'Italia",
-   "url": "https://www.adnkronos.com/spettacoli/le-legge-di-lidia-poet-matilda-de-angelis-rai-1-trama_36vdAGjDLtJcAXOigBPfjZ"
-  },
-  {
-   "data": "2026-09-01T05:57:15+00:00",
-   "fonte": "ANSA",
-   "titolo": "PRIME PAGINE | Botta e risposta tra Roma e Madrid, Schengen ancora bloccato",
-   "url": "https://www.ansa.it/sito/podcast/ansa_voice_daily/2026/09/01/prime-pagine-botta-e-risposta-tra-roma-e-madrid-schengen-ancora-bloccato_5e7a9800-4e91-4055-85f0-27648b223260.html"
-  },
-  {
-   "data": "2026-09-01T05:42:28+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina, Kiev sotto attacco: almeno 12 morti e danni ingenti. Colpita anche la rete ferroviaria",
-   "url": "https://www.adnkronos.com/internazionale/esteri/guerra-ucraina-russia-news-oggi-1-settembre-2026_13385XFcnhgm7mxQqSk40X"
-  },
-  {
-   "data": "2026-09-01T05:28:06+00:00",
-   "fonte": "ANSA",
-   "titolo": "Muro contro muro tra Roma e Madrid, Schengen resta bloccato",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/08/31/muro-contro-muro-tra-roma-e-madrid-schengen-resta-bloccato_bf0f73fd-6df0-4787-83ca-bc09b91ef828.html"
-  },
-  {
-   "data": "2026-09-01T05:15:06+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Usa, caro-vita tallone d'Achille per Trump verso midterm: anche carta igienica diventa un caso",
-   "url": "https://www.adnkronos.com/internazionale/esteri/trump-news-caro-vita-carta-igenica-elezioni-midterm_39xKGDxdOOx2ZJOj6B8Dud"
-  },
-  {
-   "data": "2026-09-01T05:02:59+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sport dopo le vacanze, il cardiologo: \"Ripartire gradualmente, attenzione a caldo e sintomi\"",
-   "url": "https://www.adnkronos.com/sport/sport-dopo-vacanze-consigli-cardiologo_5mhuPOLtQQ79dx6CsqV2FL"
+   "titolo": "Juventus, ansia Locatelli: infortunio contro Milan, rischio operazione",
+   "url": "https://www.adnkronos.com/sport/infortunio-locatelli-juventus-si-opera-come-sta-quando-torna_7aixyATsKYPsVN821plhjO"
   }
  ]
 }

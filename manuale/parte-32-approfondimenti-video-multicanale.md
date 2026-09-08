@@ -239,6 +239,15 @@ Per i canali divulgativi, sostituisci keyword generiche con forme contestualizza
 
 Dopo ogni fix: `python3 scripts/genera-video-correlati.py` → verifica il diff → commit. Il fix si propaga automaticamente ai rigeneri mensili successivi.
 
+**Opzione E — curatela per singola pagina: `DENY_PAGE_VIDEO` e `FORCE_MATCHES` (dal 01/09/2026)**
+
+Due casi che nessuna delle opzioni sopra copre:
+
+- un video è pertinente su alcune pagine ma **fuori tema su una sola** (es. il video sulla tempesta Vaia comparso sul dossier della tempesta *solare*; la scossa dei Campi Flegrei sull'anniversario di Norcia). Non va in `DENY_VIDEO_IDS` (lo toglierebbe ovunque): si aggiunge la coppia `("chiave-pagina", "ID")` a `DENY_PAGE_VIDEO`;
+- un video è **chiaramente pertinente** al soggetto di una pagina ma l'IDF non lo aggancia perché le parole non coincidono (es. *"Terremoto a Milano rilevato da Google"* per l'articolo sugli smartphone-sismometri; *"L'incidente ferroviario di Viareggio"* per l'anniversario di Viareggio 2009). Si aggiunge `"chiave-pagina": ["ID", …]` a `FORCE_MATCHES`: il video va in testa alla lista della pagina con `score: 10.0` e `curato: true`, e la pagina viene creata anche se l'algoritmo non le aveva trovato nulla.
+
+La chiave pagina è quella di `data/video_correlati.yaml` (`comunicazioni/<slug>`, `rischi-prevenzione/<slug>`, `manuale/<slug>`…). Entrambe le liste vivono nel generatore e sono applicate da `apply_curation()` in coda al cross-match, quindi **persistono ai rigeneri mensili**. Gate invariato: si forza solo un video che tratta il soggetto della pagina (verificato leggendo l'articolo), mai per "riempire". Nota: i dossier (`/dossier/`) hanno un layout proprio senza la sezione video, quindi forzare un video su un dossier non produce nulla.
+
 ---
 
 ## 32.9 Soglie editoriali (`--min-score`, `--max-per-page`)
@@ -287,6 +296,18 @@ La scelta editoriale attuale (`2.0 / 5`) bilancia 90% di copertura del sito con 
 - **Attribuzione**: ogni link mostra il **nome del canale** accanto al titolo del video (es. "Il disastro del Vajont — Geopop").
 
 ---
+
+## 32.13 Aggiornamento settimanale dal feed RSS dei canali (dal 02/09/2026)
+
+La scansione completa con yt-dlp (§ 32.1) gira solo il 1° del mese: un video pubblicato il giorno dopo restava fuori dal cross-match per quasi un mese. Caso reale: il video Geopop *«Cosa è successo in Nepal: la ricostruzione dei possibili scenari, dal ghiacciaio all'alluvione»* è uscito il 1° settembre 2026 poche ore dopo la scansione, mentre l'articolo sul Bhote Koshi del 27 agosto era senza video.
+
+**Cosa fa il workflow `aggiorna-video-feed.yml`** (lunedì 10:23 UTC, anche manuale):
+
+1. `scripts/aggiorna-catalogo-video-feed.py` legge il feed Atom ufficiale di YouTube (`https://www.youtube.com/feeds/videos.xml?channel_id=UC…`) di ciascuno dei 18 canali monitorati: ultimi ~15 video per canale, nessuna API key, nessun yt-dlp, solo stdlib + PyYAML.
+2. Aggiunge al catalogo `data/video_dpc_catalogo.yaml` **solo i video nuovi**, con lo stesso formato e le stesse chiavi (`<canale>-<id>`) della scansione mensile, e aggiorna `video_count` e il totale nell'intestazione. La scansione mensile resta la fonte completa e riallinea tutto.
+3. Rigenera la mappa con `genera-video-correlati.py` (stessi filtri lessicali, stesso gate tematico, stessa curatela `FORCE_MATCHES`/`DENY_*`), verifica la build Hugo e committa `[skip-video-feed]` solo se cambia qualcosa. Deploy coalescato.
+
+**Manutenzione.** Gli ID canale stanno nel dict `CHANNEL_IDS` dello script (risolti dal campo `externalId` della pagina del canale). Quando aggiungi un canale a `CANALI` (§ 32.7), aggiungi anche il suo ID qui: in mancanza lo script prova a risolverlo al volo dalla pagina dell'handle e lo segnala nel log, ma il parsing HTML di YouTube è meno stabile del feed. Fail-safe: un feed non raggiungibile fa saltare solo quel canale; lo script esce sempre 0 e non tocca il file se non c'è nulla da aggiungere. In locale: `python3 scripts/aggiorna-catalogo-video-feed.py --dry-run` mostra i video nuovi senza scrivere.
 
 ## 32.12 Riferimenti incrociati
 

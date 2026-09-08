@@ -1,6 +1,6 @@
 ---
 title: "Grandine: cosa fare per stare al sicuro"
-date: 2026-09-05
+date: 2026-09-05T00:01:00+02:00
 description: "La grandine può fare danni. Ecco come proteggerti prima, durante e dopo."
 badge: "Prevenzione"
 priorita: "normale"
