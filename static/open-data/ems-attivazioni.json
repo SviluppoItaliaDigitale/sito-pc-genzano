@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/",
-  "generato": "2026-09-08T20:11:51+00:00",
+  "generato": "2026-09-08T22:42:31+00:00",
   "licenza": "Copernicus Emergency Management Service — dati pubblici",
   "nota": "Copia locale: l'API non espone CORS, il browser non può leggerla direttamente."
  },
@@ -18,9 +18,9 @@
    ],
    "eventTime": "2026-09-02T13:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-09-08T18:34:48.102741",
+   "lastUpdate": "2026-09-08T22:03:57.144852",
    "n_aois": 2,
-   "n_products": 1,
+   "n_products": 2,
    "name": "Storm in Basilicata, Italy."
   },
   {

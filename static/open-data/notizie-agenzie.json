@@ -5,22 +5,94 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-08T20:11:34+00:00",
+  "generato": "2026-09-08T22:42:27+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
+   "data": "2026-09-08T22:10:56+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Caldo estremo, l'afa arretra ma non per tutti: giovedì bollino arancione per due città",
+   "url": "https://www.adnkronos.com/cronaca/previsioni-meteo-9-settembre-bollini-caldo_5uU4eiyRcQYgBe1f2qkq3S"
+  },
+  {
+   "data": "2026-09-08T22:08:54+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ex Ilva, licenziamenti sospesi fino a sentenza: governo apre a partecipazione pubblica",
+   "url": "https://www.adnkronos.com/economia/ex-ilva-licenziamenti-indotto-sospesi-governo-sindacati_6ePEoykWAcpUPWbQdEMhmc"
+  },
+  {
+   "data": "2026-09-08T22:07:56+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Gb, Francia e Canada sanzionano i coloni israeliani in Cisgiordania: ecco cosa esportano in Ue",
+   "url": "https://www.adnkronos.com/internazionale/esteri/cisgiordania-sanzioni-coloni-israeliani-gb-francia-canada-prodotti-ue_4I6Lm5f1kKWUf0Jf5aGSzm"
+  },
+  {
+   "data": "2026-09-08T22:04:13+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Russia, Putin: \"Nessun attacco all'Ue\". Lavrov ribalta la minaccia: \"Guerra breve se Europa ci colpisce\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/guerra-russia-europa-putin-trump_6BhDF0r9EjvOIi0gLnWhak"
+  },
+  {
+   "data": "2026-09-08T22:03:28+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Centrosinistra, prove di unità dei leader sul palco di Avs. Tra dubbi di Conte su Renzi, nodo Kiev e primarie sullo sfondo",
+   "url": "https://www.adnkronos.com/politica/centrosinistra-schlein-conte-bonelli-fratoianni-festa-avs-roma_7FJTzqP7HoLzFPBpgu878o"
+  },
+  {
+   "data": "2026-09-08T21:55:26+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Caso Garlasco, Verità Nascoste: \"Cadono accuse per complotto di De Rensis contro procura Pavia\"",
+   "url": "https://www.adnkronos.com/cronaca/garlasco-de-rensis-milo-infante-procura-pavia_3u5cmrFZPuNHZ9Cz5jc89q"
+  },
+  {
+   "data": "2026-09-08T21:54:59+00:00",
+   "fonte": "ANSA",
+   "titolo": "Champions League: l'Inter si fa male da sola, vince il Real su errori nerazzurri",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/08/champions-league-linter-si-fa-male-da-sola-vince-il-real-su-errori-nerazzurri_ffa7fc3c-cfbd-42ac-a6f8-083eb947a552.html"
+  },
+  {
+   "data": "2026-09-08T21:10:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ranucci: \"Per il 63% degli italiani potrei guidare il Paese, ma non mi candido\"",
+   "url": "https://www.adnkronos.com/politica/caso-report-ranucci-politica-candidatura_1IvwG3P43QF8JcQVpe4W2k"
+  },
+  {
+   "data": "2026-09-08T20:59:21+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Bastano 1000 passi in più al giorno per proteggere il cuore",
+   "url": "https://www.adnkronos.com/internazionale/esteri/camminare-1000-passi-infarto-cuore-studio_6e86fc9xsQC5eBTVr0v9wc"
+  },
+  {
+   "data": "2026-09-08T20:26:05+00:00",
+   "fonte": "ANSA",
+   "titolo": "Scure di Londra e di altri 11 contro i coloni, Israele chiude il consolato del Regno Unito",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/08/scure-di-londra-e-di-altri-11-contro-i-coloni-israele-chiude-il-consolato-del-regno_e599cc3b-d374-4f76-8ad3-30e9dff04d54.html"
+  },
+  {
+   "data": "2026-09-08T20:25:16+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Caos voli nel Regno Unito, il bilancio: oltre 1.000 cancellati per un guasto tecnico",
+   "url": "https://www.adnkronos.com/internazionale/esteri/caos-voli-gb-guasto-tecnico-bilancio_JNHOuArbupYIF0M8QTE0M"
+  },
+  {
+   "data": "2026-09-08T20:17:45+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Bimba di 14 mesi muore soffocata da rigurgito nel Nuorese",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/08/bimba-di-14-mesi-muore-soffocata-da-rigurgito-nel-nuorese_45bdad5f-3bd5-4848-9cee-1afb0fe65366.html"
+  },
+  {
+   "data": "2026-09-08T20:10:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Iran, media: nuovi attacchi Usa contro le petroliere di Teheran, missile al largo di Kharg",
+   "url": "https://www.adnkronos.com/internazionale/esteri/guerra-iran-usa-news-oggi-8-settembre_EbYtf3suBrWgAO2e19uOY"
+  },
+  {
    "data": "2026-09-08T20:07:02+00:00",
    "fonte": "ANSA",
    "titolo": "Ancora ladri nei musei francesi, rubati due Renoir in Costa Azzurra",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/08/furto-al-museo-renoir-di-cagnes-sur-mer-ritrovati-due-quadri-su-quattro_c59c5f13-860b-4751-a7c8-64c492850f23.html"
-  },
-  {
-   "data": "2026-09-08T20:00:49+00:00",
-   "fonte": "ANSA",
-   "titolo": "Scure di Londra e di altri 11 contro i coloni, Israele chiude il consolato del Regno Unito",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/08/scure-di-londra-e-di-altri-11-contro-i-coloni-israele-chiude-il-consolato-del-regno_e599cc3b-d374-4f76-8ad3-30e9dff04d54.html"
   },
   {
    "data": "2026-09-08T19:57:32+00:00",
@@ -53,21 +125,15 @@
    "url": "https://www.ansa.it/sito/notizie/politica/2026/09/08/il-campo-largo-punta-sul-programma-sulle-primarie-si-decidera_2665b195-a27a-4892-bf6b-20f493e944e9.html"
   },
   {
-   "data": "2026-09-08T19:44:28+00:00",
-   "fonte": "ANSA",
-   "titolo": "Champions League: Real Madrid-Inter in campo 2-0 - DIRETTA",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/08/champions-league-real-madrid-inter-in-campo-2-0-diretta_ffa7fc3c-cfbd-42ac-a6f8-083eb947a552.html"
-  },
-  {
    "data": "2026-09-08T19:41:07+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Real Madrid-Inter, avvio 'horror' dei nerazzurri: papera di Martinez e raddoppio Blancos",
    "url": "https://www.adnkronos.com/sport/real-madrid-inter-inizio-choc-nerazzurri-champions-gol-regalati-papera-martinez_5m8hRaxVUVvl9Hktojo4vm"
   },
   {
-   "data": "2026-09-08T19:29:55+00:00",
+   "data": "2026-09-08T19:29:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Champions League, i risultati di oggi: successi per Aston Villa e Aek, in campo Porto-City",
+   "titolo": "Champions League, i risultati di oggi: Haaland lancia il City contro il Porto, Borussia Dortmund-Villarreal 3-2",
    "url": "https://www.adnkronos.com/sport/champions-league-oggi-risultati-prima-giornata_5pFTrBRQLAjcOsshxdyZLy"
   },
   {
@@ -83,22 +149,10 @@
    "url": "https://www.ansa.it/sito/notizie/speciali/abna/2026/09/06/linformazione-dei-balcani-si-incontra-a-trieste_034f6d32-e96a-47ce-aec6-48af71071e30.html"
   },
   {
-   "data": "2026-09-08T19:00:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Dibattito con Schlein, Conte, Bonelli e Fratoianni a Roma, la foto e la promessa: \"Con noi al governo riconoscimento Palestina\"",
-   "url": "https://www.adnkronos.com/politica/centrosinistra-festa-avs-dibattito-conte-schlein-bonelli-fratoianni_4Q1MI7AGyA7ZKLtMePiOnc"
-  },
-  {
    "data": "2026-09-08T18:57:53+00:00",
    "fonte": "ANSA",
    "titolo": "Il sindaco di Ceuta a Bruxelles, ma ora l'Ue frena sull'emergenza",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/08/il-sindaco-di-ceuta-a-bruxelles-ma-ora-lue-frena-sullemergenza_029dff03-30d9-4b04-9721-48283a134c4e.html"
-  },
-  {
-   "data": "2026-09-08T18:40:23+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Juve, Locatelli si è operato al ginocchio: ecco quando tornerà in campo",
-   "url": "https://www.adnkronos.com/sport/juve-locatelli-operato-come-sta-quando-torna_4UR8eezizp626Arr6ksZHq"
   },
   {
    "data": "2026-09-08T18:37:26+00:00",
@@ -113,22 +167,10 @@
    "url": "https://www.ansa.it/sito/notizie/economia/2026/09/08/giorgetti-flat-tax-e-stipendi-per-i-giovani-nel-cantiere-manovra_58191531-a566-4691-8d37-d45fdaf0aa88.html"
   },
   {
-   "data": "2026-09-08T18:31:21+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Us Open, Sabalenka batte Noskova in tre set e vola in semifinale",
-   "url": "https://www.adnkronos.com/sport/us-open-risultati-oggi-sabalenka-vola-semifinale_6Spw6Utq63ye48gK650ep2"
-  },
-  {
    "data": "2026-09-08T18:27:28+00:00",
    "fonte": "ANSA",
    "titolo": "Figc: mancato tesseramento di Malagò, la procura del Coni respinge la richiesta di archiviazione",
    "url": "https://www.ansa.it/sito/notizie/sport/2026/09/08/figc-mancato-tesseramento-di-malago-la-procura-del-coni-respinge-la-richiesta-di-archiviazione_952a495b-b419-4a4a-82b2-4d284ed41f4b.html"
-  },
-  {
-   "data": "2026-09-08T18:18:51+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Mancato tesseramento Figc di Malagò, procura Coni respinge richiesta archiviazione",
-   "url": "https://www.adnkronos.com/sport/giovanni-malago-mancato-tesseramento-figc-procura-coni-respinge-richiesta-archiviazione_3mGboOYvB6dHy4D4aT2qdG"
   },
   {
    "data": "2026-09-08T18:13:56+00:00",
@@ -143,52 +185,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/08/appoggio-solo-le-mani-sul-seno-prof.-assolto-dal-tribunale-e-pm-chiede_7a8cb6cb-90b6-4e10-8697-e81e8f41bff8.html"
   },
   {
-   "data": "2026-09-08T18:00:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Real Madrid-Inter 2-0, raddoppia Valverde - Diretta",
-   "url": "https://www.adnkronos.com/sport/diretta-real-madrid-inter-champions-league-oggi-live-risultato_330x4cogDDdHfQmrRU5vPa"
-  },
-  {
-   "data": "2026-09-08T17:52:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Pensioni, Fornero: \"Giorgetti si contraddice, anche la proposta della Lega crea disparità di trattamento\"",
-   "url": "https://www.adnkronos.com/economia/pensioni-fornero-giorgetti-proposta-lega_6q4FP7m1xfem3P4TjgYDic"
-  },
-  {
    "data": "2026-09-08T17:42:19+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Strage di Viareggio, i giudici: 'La pena a Moretti non è illegale né illegittima'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/08/strage-viareggio-i-giudici-la-pena-a-moretti-non-e-illegale-ne-illegittima_f95e6959-97c6-4962-88b9-d59848723b69.html"
-  },
-  {
-   "data": "2026-09-08T17:40:57+00:00",
-   "fonte": "ANSA",
-   "titolo": "Bonino resta in ospedale, 'situazione delicata ma stabile'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/08/bonino-resta-in-ospedale-situazione-delicata-ma-stabile_2bb70846-1304-4484-8c37-63080210d00c.html"
-  },
-  {
-   "data": "2026-09-08T17:36:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Giorgetti: \"Ipotesi flat tax per gli stipendi dei giovani. Pensione a 64 anni? Bisogna garantire equilibrio conti\"",
-   "url": "https://www.adnkronos.com/economia/giorgetti-stipendi-giovani-flat-tax-pensioni_17NZqTsPlLU8X27ES8jGxS"
-  },
-  {
-   "data": "2026-09-08T17:30:52+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Domani i funerali di Lorena, lui da 15 anni in cura da uno psichiatra",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/08/lutto-cittadino-per-i-funerali-di-lorena-isceri-venerdi-una-fiaccolata_2110f928-d645-4d5a-a63c-af199d473a01.html"
-  },
-  {
-   "data": "2026-09-08T17:27:36+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Sequestravano la droga e la spacciavano, arrestati 5 agenti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/08/droga-e-reati-contro-la-pa-arrestati-5-poliziotti_3b27bf87-ac0f-4c8d-8a33-5ed83d4eb4af.html"
-  },
-  {
-   "data": "2026-09-08T17:24:51+00:00",
-   "fonte": "ANSA",
-   "titolo": "'50 anni fa morì Mao, la mia foto fece il giro del mondo'. Il corrispondente ANSA dell'epoca racconta l'immagine che scattò",
-   "url": "https://www.ansa.it/sito/videogallery/mondo/2026/09/08/mao-mori-pechino-resto-ferma-il-ricordo-di-zanatta-e-della-sua-foto_4d890daa-d244-4f2d-9657-f54e78619c8e.html"
   }
  ]
 }
