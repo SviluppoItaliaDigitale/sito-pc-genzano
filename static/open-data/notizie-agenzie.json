@@ -5,11 +5,179 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-08T17:32:25+00:00",
+  "generato": "2026-09-08T20:11:34+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-08T20:07:02+00:00",
+   "fonte": "ANSA",
+   "titolo": "Ancora ladri nei musei francesi, rubati due Renoir in Costa Azzurra",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/08/furto-al-museo-renoir-di-cagnes-sur-mer-ritrovati-due-quadri-su-quattro_c59c5f13-860b-4751-a7c8-64c492850f23.html"
+  },
+  {
+   "data": "2026-09-08T20:00:49+00:00",
+   "fonte": "ANSA",
+   "titolo": "Scure di Londra e di altri 11 contro i coloni, Israele chiude il consolato del Regno Unito",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/08/scure-di-londra-e-di-altri-11-contro-i-coloni-israele-chiude-il-consolato-del-regno_e599cc3b-d374-4f76-8ad3-30e9dff04d54.html"
+  },
+  {
+   "data": "2026-09-08T19:57:32+00:00",
+   "fonte": "ANSA",
+   "titolo": "Merkel con 'il cuore spezzato', l'Spd del Magdeburgo non chiude all'AfD",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/08/leader-locale-spd-chiede-dialogo-con-afd-doveroso-esplorare-possibile_2b49abd7-4ca8-4f0c-8173-26a3fd666b04.html"
+  },
+  {
+   "data": "2026-09-08T19:56:25+00:00",
+   "fonte": "ANSA",
+   "titolo": "Caos nei cieli del Regno Unito, in tilt anche gli scali di Heathrow e Gatwick",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/08/caos-nei-cieli-del-regno-unito-in-tilt-anche-gli-scali_48723a44-eed3-4055-be85-b15c535c50d3.html"
+  },
+  {
+   "data": "2026-09-08T19:55:30+00:00",
+   "fonte": "ANSA",
+   "titolo": "Gli agenti a lezione da Vannacci, un caso l'evento a Torino",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/08/e-bufera-sul-convegno-con-vannacci-a-torino-il-silp-cgil-chiede-lo-stop_a5be0d1c-8d60-43f7-a267-c27ac8ed3a52.html"
+  },
+  {
+   "data": "2026-09-08T19:46:59+00:00",
+   "fonte": "ANSA",
+   "titolo": "Mostra del Cinema di Venezia, Cruz-Bardem nel bunker nella giornata del confronto di coppia",
+   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/08/mostra-del-cinema-di-venezia-cruz-bardem-nel-bunker-nella-giornata_ddb8236f-5b7b-46fb-b215-aab27ba92d57.html"
+  },
+  {
+   "data": "2026-09-08T19:46:47+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il campo largo punta sul programma, sulle primarie si deciderà",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/08/il-campo-largo-punta-sul-programma-sulle-primarie-si-decidera_2665b195-a27a-4892-bf6b-20f493e944e9.html"
+  },
+  {
+   "data": "2026-09-08T19:44:28+00:00",
+   "fonte": "ANSA",
+   "titolo": "Champions League: Real Madrid-Inter in campo 2-0 - DIRETTA",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/08/champions-league-real-madrid-inter-in-campo-2-0-diretta_ffa7fc3c-cfbd-42ac-a6f8-083eb947a552.html"
+  },
+  {
+   "data": "2026-09-08T19:41:07+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Real Madrid-Inter, avvio 'horror' dei nerazzurri: papera di Martinez e raddoppio Blancos",
+   "url": "https://www.adnkronos.com/sport/real-madrid-inter-inizio-choc-nerazzurri-champions-gol-regalati-papera-martinez_5m8hRaxVUVvl9Hktojo4vm"
+  },
+  {
+   "data": "2026-09-08T19:29:55+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Champions League, i risultati di oggi: successi per Aston Villa e Aek, in campo Porto-City",
+   "url": "https://www.adnkronos.com/sport/champions-league-oggi-risultati-prima-giornata_5pFTrBRQLAjcOsshxdyZLy"
+  },
+  {
+   "data": "2026-09-08T19:22:14+00:00",
+   "fonte": "ANSA",
+   "titolo": "Elton John e Gilberto Gil, storico incontro dopo 35 anni al Rock in Rio",
+   "url": "https://www.ansa.it/sito/notizie/cultura/musica/2026/09/08/elton-john-e-gilberto-gil-storico-incontro-dopo-35-anni-al-rock-in-rio_c292da84-0023-4c19-ad70-7df85082e3fa.html"
+  },
+  {
+   "data": "2026-09-08T19:16:45+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'informazione dei Balcani si incontra a Trieste",
+   "url": "https://www.ansa.it/sito/notizie/speciali/abna/2026/09/06/linformazione-dei-balcani-si-incontra-a-trieste_034f6d32-e96a-47ce-aec6-48af71071e30.html"
+  },
+  {
+   "data": "2026-09-08T19:00:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Dibattito con Schlein, Conte, Bonelli e Fratoianni a Roma, la foto e la promessa: \"Con noi al governo riconoscimento Palestina\"",
+   "url": "https://www.adnkronos.com/politica/centrosinistra-festa-avs-dibattito-conte-schlein-bonelli-fratoianni_4Q1MI7AGyA7ZKLtMePiOnc"
+  },
+  {
+   "data": "2026-09-08T18:57:53+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il sindaco di Ceuta a Bruxelles, ma ora l'Ue frena sull'emergenza",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/08/il-sindaco-di-ceuta-a-bruxelles-ma-ora-lue-frena-sullemergenza_029dff03-30d9-4b04-9721-48283a134c4e.html"
+  },
+  {
+   "data": "2026-09-08T18:40:23+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Juve, Locatelli si è operato al ginocchio: ecco quando tornerà in campo",
+   "url": "https://www.adnkronos.com/sport/juve-locatelli-operato-come-sta-quando-torna_4UR8eezizp626Arr6ksZHq"
+  },
+  {
+   "data": "2026-09-08T18:37:26+00:00",
+   "fonte": "ANSA",
+   "titolo": "Putin sente Trump: 'Nessun piano di colpire l'Europa, avanti nei colloqui'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/08/putin-sente-trump-nessun-piano-di-colpire-leuropa-avanti-nei-colloqui_8e9ad342-064f-49d9-be0c-02486376ddf4.html"
+  },
+  {
+   "data": "2026-09-08T18:36:26+00:00",
+   "fonte": "ANSA",
+   "titolo": "Giorgetti, flat tax e stipendi per i giovani nel cantiere-manovra",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/08/giorgetti-flat-tax-e-stipendi-per-i-giovani-nel-cantiere-manovra_58191531-a566-4691-8d37-d45fdaf0aa88.html"
+  },
+  {
+   "data": "2026-09-08T18:31:21+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Us Open, Sabalenka batte Noskova in tre set e vola in semifinale",
+   "url": "https://www.adnkronos.com/sport/us-open-risultati-oggi-sabalenka-vola-semifinale_6Spw6Utq63ye48gK650ep2"
+  },
+  {
+   "data": "2026-09-08T18:27:28+00:00",
+   "fonte": "ANSA",
+   "titolo": "Figc: mancato tesseramento di Malagò, la procura del Coni respinge la richiesta di archiviazione",
+   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/08/figc-mancato-tesseramento-di-malago-la-procura-del-coni-respinge-la-richiesta-di-archiviazione_952a495b-b419-4a4a-82b2-4d284ed41f4b.html"
+  },
+  {
+   "data": "2026-09-08T18:18:51+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Mancato tesseramento Figc di Malagò, procura Coni respinge richiesta archiviazione",
+   "url": "https://www.adnkronos.com/sport/giovanni-malago-mancato-tesseramento-figc-procura-coni-respinge-richiesta-archiviazione_3mGboOYvB6dHy4D4aT2qdG"
+  },
+  {
+   "data": "2026-09-08T18:13:56+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'ira dell'Ue per il caso Mladic, la Bosnia espelle i diplomatici serbi",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/08/lue-il-funerale-di-mladic-contraddice-il-percorso-della-serbia-verso-lunione_9735357c-8a89-4d57-a12d-092220bc3061.html"
+  },
+  {
+   "data": "2026-09-08T18:07:23+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "'Appoggiò solo le mani sul seno', prof. assolto dal Tribunale e Pm chiede 6 anni",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/08/appoggio-solo-le-mani-sul-seno-prof.-assolto-dal-tribunale-e-pm-chiede_7a8cb6cb-90b6-4e10-8697-e81e8f41bff8.html"
+  },
+  {
+   "data": "2026-09-08T18:00:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Real Madrid-Inter 2-0, raddoppia Valverde - Diretta",
+   "url": "https://www.adnkronos.com/sport/diretta-real-madrid-inter-champions-league-oggi-live-risultato_330x4cogDDdHfQmrRU5vPa"
+  },
+  {
+   "data": "2026-09-08T17:52:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Pensioni, Fornero: \"Giorgetti si contraddice, anche la proposta della Lega crea disparità di trattamento\"",
+   "url": "https://www.adnkronos.com/economia/pensioni-fornero-giorgetti-proposta-lega_6q4FP7m1xfem3P4TjgYDic"
+  },
+  {
+   "data": "2026-09-08T17:42:19+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Strage di Viareggio, i giudici: 'La pena a Moretti non è illegale né illegittima'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/08/strage-viareggio-i-giudici-la-pena-a-moretti-non-e-illegale-ne-illegittima_f95e6959-97c6-4962-88b9-d59848723b69.html"
+  },
+  {
+   "data": "2026-09-08T17:40:57+00:00",
+   "fonte": "ANSA",
+   "titolo": "Bonino resta in ospedale, 'situazione delicata ma stabile'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/08/bonino-resta-in-ospedale-situazione-delicata-ma-stabile_2bb70846-1304-4484-8c37-63080210d00c.html"
+  },
+  {
+   "data": "2026-09-08T17:36:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Giorgetti: \"Ipotesi flat tax per gli stipendi dei giovani. Pensione a 64 anni? Bisogna garantire equilibrio conti\"",
+   "url": "https://www.adnkronos.com/economia/giorgetti-stipendi-giovani-flat-tax-pensioni_17NZqTsPlLU8X27ES8jGxS"
+  },
+  {
+   "data": "2026-09-08T17:30:52+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Domani i funerali di Lorena, lui da 15 anni in cura da uno psichiatra",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/08/lutto-cittadino-per-i-funerali-di-lorena-isceri-venerdi-una-fiaccolata_2110f928-d645-4d5a-a63c-af199d473a01.html"
+  },
   {
    "data": "2026-09-08T17:27:36+00:00",
    "fonte": "ANSA CRONACA",
@@ -17,178 +185,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/08/droga-e-reati-contro-la-pa-arrestati-5-poliziotti_3b27bf87-ac0f-4c8d-8a33-5ed83d4eb4af.html"
   },
   {
-   "data": "2026-09-08T17:15:57+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Poliziotti feriti a Roma, Meloni: \"Aggressore subito libero, inaccettabile\"",
-   "url": "https://www.adnkronos.com/politica/poliziotti-aggressione-roma-meloni_2kA7XoLngM5CwPfBdVUBsU"
-  },
-  {
-   "data": "2026-09-08T17:11:02+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "\"Preferisce il kebab... alla pizza\": la Lega 'punge' Calhanoglu sui social",
-   "url": "https://www.adnkronos.com/sport/preferisce-kebab-pizza-post-lega-contro-calhanoglu-inter_7abPKH11aUeA3T0wXjI0EU"
-  },
-  {
-   "data": "2026-09-08T17:11:00+00:00",
+   "data": "2026-09-08T17:24:51+00:00",
    "fonte": "ANSA",
-   "titolo": "Morti in ambulanza, nelle chat di Spada i selfie con le bare",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/08/morti-in-ambulanza-spada-seriale-spinta-ossessiva-e-incontrollabile-_7dd774cb-a8e2-4143-b234-c3a4595d4d8f.html"
-  },
-  {
-   "data": "2026-09-08T17:10:46+00:00",
-   "fonte": "ANSA",
-   "titolo": "'50 anni fa morì Mao, la mia foto fece il giro del mondo'",
+   "titolo": "'50 anni fa morì Mao, la mia foto fece il giro del mondo'. Il corrispondente ANSA dell'epoca racconta l'immagine che scattò",
    "url": "https://www.ansa.it/sito/videogallery/mondo/2026/09/08/mao-mori-pechino-resto-ferma-il-ricordo-di-zanatta-e-della-sua-foto_4d890daa-d244-4f2d-9657-f54e78619c8e.html"
-  },
-  {
-   "data": "2026-09-08T17:09:05+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Oasis a Roma nel 2027, due concerti a luglio nel calendario del Sun",
-   "url": "https://www.adnkronos.com/spettacoli/oasis-concerto-roma-luglio-2027_UcdJXfT2JJy6JMPGyedh2"
-  },
-  {
-   "data": "2026-09-08T17:06:15+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Concerto Bocelli, il Pd ha presentato un esposto all'Anac",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/08/concerto-bocelli-il-pd-ha-presentato-un-esposto-allanac_e7c7781c-6c93-41ac-af0a-dccdb7458f9d.html"
-  },
-  {
-   "data": "2026-09-08T17:05:24+00:00",
-   "fonte": "ANSA",
-   "titolo": "Putin a Trump: 'Non abbiamo alcun piano di aggredire l'Europa'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/08/putin-a-trump-non-abbiamo-alcun-piano-di-aggredire-leuropa_8e9ad342-064f-49d9-be0c-02486376ddf4.html"
-  },
-  {
-   "data": "2026-09-08T17:03:16+00:00",
-   "fonte": "ANSA",
-   "titolo": "Londra e altri 11 Paesi sanzionano i commerci con i coloni, ira di Israele",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/08/londra-e-altri-11-paesi-sanzionano-i-commerci-con-i-coloni-ira-di-israele_e599cc3b-d374-4f76-8ad3-30e9dff04d54.html"
-  },
-  {
-   "data": "2026-09-08T17:03:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sanità, Marino (Unindustria): \"Tariffe inadeguate mettono a rischio Ssn\"",
-   "url": "https://www.adnkronos.com/cronaca/sanita-marino-unindustria-tariffe-inadeguate-mettono-a-rischio-ssn_2xxK5Qz0REplYP7zrRWr6o"
-  },
-  {
-   "data": "2026-09-08T16:52:47+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ranucci, Cangiano: \"Giornalista indagato dopo la mia querela\"",
-   "url": "https://www.adnkronos.com/politica/ranucci-indagato-attentato-cangiano-querela_1Fa5oDiPJBXHuCcBH4FYjy"
-  },
-  {
-   "data": "2026-09-08T16:48:49+00:00",
-   "fonte": "ANSA",
-   "titolo": "Merkel: 'Mi si spezza il cuore, il successo dell'AfD è scioccante'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/08/leader-locale-spd-chiede-dialogo-con-afd-doveroso-esplorare-possibile_2b49abd7-4ca8-4f0c-8173-26a3fd666b04.html"
-  },
-  {
-   "data": "2026-09-08T16:47:57+00:00",
-   "fonte": "ANSA",
-   "titolo": "Gli studenti Ocse mai così male, ma gli italiani si salvano",
-   "url": "https://www.ansa.it/canale_legalita_scuola/speciali/back-to-school/2026/09/08/gli-studenti-ocse-mai-cosi-male-ma-gli-italiani-si-salvano_71d3673a-6607-4fef-830a-274818c76fe9.html"
-  },
-  {
-   "data": "2026-09-08T16:47:07+00:00",
-   "fonte": "ANSA",
-   "titolo": "Traffico aereo in tilt nel Regno Unito, coinvolti anche gli scali di Heathrow e Gatwick",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/08/traffico-aereo-in-tilt-in-gb-coinvolti-anche-scali-heathrow-e-gatwick_48723a44-eed3-4055-be85-b15c535c50d3.html"
-  },
-  {
-   "data": "2026-09-08T16:47:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Bonaccini (Ministero della Salute): \"Domanda salute cambiata, necessario rendere Ssn più sostenibile\"",
-   "url": "https://www.adnkronos.com/cronaca/bonaccini-ministero-della-salute-domanda-salute-cambiata-necessario-rendere-ssn-piu-sostenibile_mpujrK7w6NgHmSMXWMEJi"
-  },
-  {
-   "data": "2026-09-08T16:36:31+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Formula 1, Leclerc salta il Gp di Madrid? Come sta il pilota dopo l'incidente a Monza",
-   "url": "https://www.adnkronos.com/sport/formula-1-leclerc-salta-gp-madrid-come-sta-pilota-dopo-incidente-monza_6otaRPoF4YoTByt6CeBE7e"
-  },
-  {
-   "data": "2026-09-08T16:35:46+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "#AccadeOggi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/06/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
-  },
-  {
-   "data": "2026-09-08T16:34:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Club Santé Italie: \"Territorio, innovazione e collaborazione per costruire il sistema salute del futuro\"",
-   "url": "https://www.adnkronos.com/cronaca/club-sante-italie-territorio-innovazione-e-collaborazione-per-costruire-il-sistema-salute-del-futuro_2g2BCQxOlaGumJAOjvw452"
-  },
-  {
-   "data": "2026-09-08T16:32:35+00:00",
-   "fonte": "ANSA",
-   "titolo": "Nuova assistente sociale per i bimbi del bosco: 'L'obiettivo è il rientro'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/08/nuova-assistente-sociale-per-la-famiglia-del-bosco_9b915bca-5e8d-4f09-892f-589741a73dca.html"
-  },
-  {
-   "data": "2026-09-08T16:31:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Gran Bretagna e altri 11 Paesi sanzionano coloni in Cisgiordania. Israele chiude consolato Uk a Gerusalemme",
-   "url": "https://www.adnkronos.com/internazionale/esteri/israele-colonie-cisgiordania-sanzioni-francia-gb-canada_Dpb8DZATJJO3K0LpsHl8c"
-  },
-  {
-   "data": "2026-09-08T16:30:17+00:00",
-   "fonte": "ANSA",
-   "titolo": "Messi torna in corsa per il Pallone d'Oro, della serie A solo Lautaro",
-   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/08/messi-tra-i-30-per-il-pallone-doro-lautaro-lunico-della-serie-a_bfb788f7-7e12-4fbe-a025-aba7a3415919.html"
-  },
-  {
-   "data": "2026-09-08T16:16:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Emma Bonino ricoverata, le condizioni: \"E' lucida, ma la situazione resta delicata\"﻿",
-   "url": "https://www.adnkronos.com/politica/emma-bonino-ricoverata-condizioni-oggi_4qcyk57xd6kC8oZBZGrvwQ"
-  },
-  {
-   "data": "2026-09-08T16:15:12+00:00",
-   "fonte": "ANSA",
-   "titolo": "Emma Bonino è lucida ma la situazione resta delicata",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/08/le-condizioni-di-emma-bonino-sono-delicate-ma-stazionarie_2bb70846-1304-4484-8c37-63080210d00c.html"
-  },
-  {
-   "data": "2026-09-08T16:15:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Affitti brevi: è scontro aperto tra Ue, proprietari di case e piattaforme turistiche",
-   "url": "https://www.adnkronos.com/economia/affitti-brevi-scontro-ue-proprietari-piattaforme_2BjR7ctAn9OLjgq5MoNhR6"
-  },
-  {
-   "data": "2026-09-08T16:12:42+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ex Ilva, il governo alle imprese: \"Stop ai licenziamenti\". Aigi e Aepi accolgono l'appello",
-   "url": "https://www.adnkronos.com/lavoro/ilva-taranto-governo-appello-stop-licenziamenti_5bXG6O18s5UICAtUphe4io"
-  },
-  {
-   "data": "2026-09-08T16:11:02+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Volontario del 118 ucciso, la ex e il nuovo compagno i mandanti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/08/omicidio-un-anno-fa-nel-sassarese-carabinieri-arrestano-quattro-persone_86bd3606-8b4a-4bf5-88e7-a802e0b6b91a.html"
-  },
-  {
-   "data": "2026-09-08T16:04:05+00:00",
-   "fonte": "ANSA",
-   "titolo": "Mostra del Cinema di Venezia, Guadagnino: 'Joie de vivre nasce dall'amore che ho per Bertolucci'",
-   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/08/mostra-del-cinema-di-venezia-guadagnino-joie-de-vivre-nasce-dallamore-che_31829b36-48b6-468d-bd03-fc41f85073fd.html"
-  },
-  {
-   "data": "2026-09-08T16:02:12+00:00",
-   "fonte": "ANSA",
-   "titolo": "Javier Bardem: 'Dell'immigrazione siamo responsabili con i nostri lussi'",
-   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/08/javier-bardem-dellimmigrazione-siamo-responsabili-coi-nostri-lussi_c017d9a9-0717-4f6d-afb8-22683c881fc7.html"
-  },
-  {
-   "data": "2026-09-08T15:55:46+00:00",
-   "fonte": "ANSA",
-   "titolo": "Arriva Quando ti rivedrò, ultimo brano di Gino Paoli, doveva cantarlo con Vanoni",
-   "url": "https://www.ansa.it/sito/notizie/cultura/musica/2026/09/08/arriva-quando-ti-rivedro-ultimo-brano-di-gino-paoli-doveva-cantarlo-con_0608d6df-bedf-4247-aace-68092494c50a.html"
-  },
-  {
-   "data": "2026-09-08T15:33:56+00:00",
-   "fonte": "ANSA",
-   "titolo": "Torna il tempo della musica con X Factor, Irama debutta come giudice",
-   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/08/torna-il-tempo-della-musica-con-x-factor-irama-al-debutto-da-giudice_0c1a5494-297b-48c5-a8f7-d472cabcba42.html"
   }
  ]
 }
