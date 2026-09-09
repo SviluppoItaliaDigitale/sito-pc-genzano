@@ -67,7 +67,7 @@ Tutto questo si gestisce meglio se **mezzi e materiali** sono pronti **prima**, 
 
 ## Chi fa la manutenzione
 
-Il lavoro è svolto dai volontari del Gruppo stessi, secondo:
+Il lavoro è svolto dai volontari stessi del Gruppo, secondo:
 
 - **procedure** formali stabilite dal Responsabile del Gruppo;
 - **cadenze** previste dai manuali dei singoli materiali;
@@ -76,7 +76,7 @@ Il lavoro è svolto dai volontari del Gruppo stessi, secondo:
 
 ## Trasparenza
 
-Ogni intervento di manutenzione è **registrato**. Il Gruppo tiene un **libro di bordo** per ciascun mezzo e attrezzatura, consultabile in caso di audit o verifica da parte del Comune o della Regione.
+Ogni intervento di manutenzione è **registrato**. Il Gruppo tiene un **libro di bordo** per ciascun mezzo e ciascuna attrezzatura, consultabile in caso di audit o verifica da parte del Comune o della Regione.
 
 ## Un investimento che non si vede
 
