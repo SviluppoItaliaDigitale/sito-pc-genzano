@@ -59,7 +59,7 @@ Un'esercitazione, ben fatta, lascia:
 - **consapevolezza** su lacune tecniche o organizzative;
 - **cultura del rischio** alla popolazione.
 
-Un'esercitazione **mal fatta**, invece, rischia di consolidare procedure sbagliate: per questo ogni volontario è tenuto a prendere sul serio ogni manovra, anche in scenario simulato.
+Un'esercitazione **mal fatta**, invece, rischia di consolidare procedure sbagliate: per questo ogni volontario è tenuto a prendere sul serio ogni manovra, anche in uno scenario simulato.
 
 ## Il livello regionale
 
