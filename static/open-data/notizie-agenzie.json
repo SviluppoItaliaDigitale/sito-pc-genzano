@@ -5,11 +5,155 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-09T17:55:46+00:00",
+  "generato": "2026-09-09T20:37:14+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-09T20:07:49+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il caos nei cieli del Regno Unito continua, escluso un cyberattacco",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/09/caos-nei-cieli-nel-regno-unito-ancora-decine-di-voli-cancellati_3dd7c876-119d-4fe8-96c1-76afb22cbfef.html"
+  },
+  {
+   "data": "2026-09-09T20:07:21+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Famiglia nel bosco, bambini torneranno a casa \"per poche ore\"",
+   "url": "https://www.adnkronos.com/cronaca/famiglia-nel-bosco-bambini-ritorno-a-casa_2un9oDEdzjATGBGHcm3mni"
+  },
+  {
+   "data": "2026-09-09T19:44:22+00:00",
+   "fonte": "ANSA",
+   "titolo": "Buon decorso dopo l'operazione, si inizia a valutare il rientro di Di Battista",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/09/buon-decorso-dopo-loperazione-si-inizia-a-valutare-il-rientro-di-di-battista_cd55e6b8-8b00-41c3-b9ae-7ab7497587ca.html"
+  },
+  {
+   "data": "2026-09-09T19:42:20+00:00",
+   "fonte": "ANSA",
+   "titolo": "Quattordicenne uccisa dall'ex ad Afragola, la madre teste con il braccialetto elettronico",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/09/quattordicenne-uccisa-dallex-la-mamma-lui-era-tranquillo-fece-caffe-ai-carabinieri_04926959-48c1-4080-ba2f-3b7731515eec.html"
+  },
+  {
+   "data": "2026-09-09T19:39:07+00:00",
+   "fonte": "ANSA",
+   "titolo": "Un paese intero per l'addio a Lorena Isceri, 'cammini nella luce'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/09/i-funerali-lorena-lo-striscione-degli-amici-cresciuta-con-noi-cammini-nella_4484bbb0-2156-4a4c-9c60-32b38b9d9b8b.html"
+  },
+  {
+   "data": "2026-09-09T19:37:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Us Open, Rybakina vola in semifinale e sarà la nuova n.1 del mondo",
+   "url": "https://www.adnkronos.com/sport/tennis-us-open-rybakina-sabalenka_5lCBTmo5wtgABMqW4Q8U2E"
+  },
+  {
+   "data": "2026-09-09T19:36:04+00:00",
+   "fonte": "ANSA",
+   "titolo": "La legge elettorale in Aula alla Camera da lunedì 28 settembre, soglia al 42% senza ballottaggio",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/09/la-legge-elettorale-in-aula-alla-camera-da-lunedi-28-settembre_b01c25c9-6898-47c6-a191-3db70c012ff4.html"
+  },
+  {
+   "data": "2026-09-09T19:35:20+00:00",
+   "fonte": "ANSA",
+   "titolo": "Champions League: in campo Napoli-Arsenal  DIRETTA",
+   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/09/champions-league-in-campo-napoli-arsenal-diretta_b5a72c5b-51ec-430f-adc3-c2ca49de4eb0.html"
+  },
+  {
+   "data": "2026-09-09T19:33:29+00:00",
+   "fonte": "ANSA",
+   "titolo": "Apple svela il suo primo smartphone pieghevole, l'iPhone Duo",
+   "url": "https://www.ansa.it/canale_tecnologia/notizie/tecnologia/2026/09/09/ternus-con-nuovi-iphone18-spinta-sulle-funzionalita-ia_e65a74aa-1d16-4aec-a25e-1e841456cdae.html"
+  },
+  {
+   "data": "2026-09-09T19:32:07+00:00",
+   "fonte": "ANSA",
+   "titolo": "'L'aereo di Zelensky sfiorato da drone al decollo dalla Moldavia'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/09/laereo-di-zelensky-sfiorato-da-drone-al-decollo-dalla-moldavia_1e37fc3e-2a40-487e-a5bc-8440ff6f31a9.html"
+  },
+  {
+   "data": "2026-09-09T19:29:59+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Bassetti e lo studio sul tonno: \"Parassiti e disturbi se pesce crudo o poco cotto\"",
+   "url": "https://www.adnkronos.com/cronaca/tonno-studio-vermi-bassetti_3xeWk6r1WPGnMZ5ASvgf0o"
+  },
+  {
+   "data": "2026-09-09T19:15:50+00:00",
+   "fonte": "ANSA",
+   "titolo": "Trump esulta per l'Afd, Merz fa saltare la prevista telefonata",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/09/merz-attacca-afd-la-vostra-remigrazione-e-pulizia-etnica_b407514f-0810-4e73-997a-bb3f56476b1a.html"
+  },
+  {
+   "data": "2026-09-09T19:14:37+00:00",
+   "fonte": "ANSA",
+   "titolo": "Nuova escalation Iran-Usa, Teheran estende l'area sotto sanzioni a Hormuz",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/09/iran-attaccate-2-navi-statunitensi-e-10-petroliere-nel-golfo_17dd8e7d-5836-4e9b-a20d-4f323a23a961.html"
+  },
+  {
+   "data": "2026-09-09T19:05:28+00:00",
+   "fonte": "ANSA",
+   "titolo": "Slitta il voto sull'antisemitismo, scoppia il caso delle bandiere di Hamas",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/09/bandiera-di-hezbollah-al-sit-in-contro-il-ddl-antisemitismo-tensione-tra-i-manifestanti_622a882c-988f-4d84-ba98-a47f12fb327a.html"
+  },
+  {
+   "data": "2026-09-09T19:04:58+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "'Criticare non è antisemitismo', 300 sigle contro il ddl",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/09/criticare-non-e-antisemitismo-300-sigle-contro-il-ddl_d44ed826-521a-456a-991c-4323336fdec2.html"
+  },
+  {
+   "data": "2026-09-09T19:02:14+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "#AccadeOggi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/09/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
+  },
+  {
+   "data": "2026-09-09T18:51:31+00:00",
+   "fonte": "ANSA",
+   "titolo": "A Venezia da Vanessa Scalera a Alba Rohrwacher l'umanità estrema",
+   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/09/a-venezia-da-vanessa-scalera-a-alba-rohrwacher-lumanita-estrema_696abebf-274b-4365-9db2-d9cac3e468ef.html"
+  },
+  {
+   "data": "2026-09-09T18:35:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "L'aereo di Zelensky \"ha rischiato di essere colpito da un drone in volo per Oslo\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/zelensky-volo-oslo-drone-incidente_7i5MobL9Y1DiTVZ2mdE86w"
+  },
+  {
+   "data": "2026-09-09T18:29:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ecco l'iPhone pieghevole, Apple lancia il Duo: in Italia a ottobre",
+   "url": "https://www.adnkronos.com/economia/iphone-pieghevole-duo-apple-prezzo-italia_2nhYgrhzYAJAE5O31JXPJW"
+  },
+  {
+   "data": "2026-09-09T18:28:31+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Pillon, i 'bimbi del bosco' a Palmoli per poche ore la prossima settimana",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/09/pillon-i-bimbi-del-bosco-a-palmoli-per-poche-ore-la-prossima-settimana_01153d94-0c26-4360-8c71-53d4e812cd60.html"
+  },
+  {
+   "data": "2026-09-09T18:26:25+00:00",
+   "fonte": "ANSA",
+   "titolo": "'Ucciderà l'umanità entro il 2030', gli scienziati dell'Ia in fuga",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/09/ricercatore-di-anthropic-si-dimette-lumanita-a-rischio-entro-la-fine-del-decennio_ab7b0de2-95a8-40e1-abe9-fe86e123f6ba.html"
+  },
+  {
+   "data": "2026-09-09T18:24:05+00:00",
+   "fonte": "ANSA",
+   "titolo": "Ecco le norme Ue sugli affitti brevi, centrodestra in rivolta",
+   "url": "https://www.ansa.it/europa/notizie/rubriche/altrenews/2026/09/09/ue-lancia-nuove-norme-per-limitare-gli-affitti-brevi-contro-il-caro_ec018a90-d22b-4ea2-a69c-301cc8285bca.html"
+  },
+  {
+   "data": "2026-09-09T17:55:37+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "'Red Bull 64 Bars Live', Ele A, Nerissima Serpe e Papa V come special guest: il live a Taranto",
+   "url": "https://www.adnkronos.com/spettacoli/red-bull-64-bars-live-ele-a-nerissima-serpe-e-papa-v-come-special-guest-il-live-a-taranto_3SjYWOgzjajd2tXCYklHGQ"
+  },
+  {
+   "data": "2026-09-09T17:53:37+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Champions, oggi Napoli-Arsenal 0-0 - Diretta",
+   "url": "https://www.adnkronos.com/sport/champions-calcio-napoli-arsenal_78fdPDPANLnAFONpzTaPtO"
+  },
   {
    "data": "2026-09-09T17:50:00+00:00",
    "fonte": "ADNKRONOS",
@@ -17,7 +161,7 @@
    "url": "https://www.adnkronos.com/cronaca/alimentazione-de-palo-fondazione-natalita-fare-alleanza-per-far-ripartire-le-nascite_dW2NDqPHqUqCEnzWpfHUM"
   },
   {
-   "data": "2026-09-09T17:45:47+00:00",
+   "data": "2026-09-09T17:48:59+00:00",
    "fonte": "ANSA",
    "titolo": "A Trieste l'informazione dei Balcani unita contro le fake news",
    "url": "https://www.ansa.it/sito/notizie/speciali/abna/2026/09/09/a-trieste-linformazione-dei-balcani-unita-contro-le-fake-news_034f6d32-e96a-47ce-aec6-48af71071e30.html"
@@ -29,22 +173,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/09/maltempo-in-lombardia-195-interventi-dei-vigili-del-fuoco_df13f030-a229-4dbe-a6ea-3cffe031f19c.html"
   },
   {
-   "data": "2026-09-09T17:38:51+00:00",
-   "fonte": "ANSA",
-   "titolo": "'Ucciderà l'umanità entro il 2030', gli scienziati dell'Ia in fuga",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/09/ricercatore-di-anthropic-si-dimette-lumanita-a-rischio-entro-la-fine-del-decennio_ab7b0de2-95a8-40e1-abe9-fe86e123f6ba.html"
-  },
-  {
    "data": "2026-09-09T17:38:13+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Caro carburanti, Salvini: \"Italia aiuta Ucraina che bombarda raffinerie in Russia\"",
    "url": "https://www.adnkronos.com/economia/salvini-ucraina-russia-prezzo-benzina_6w5ZdYzAaPMqhuRbZIXDus"
-  },
-  {
-   "data": "2026-09-09T17:36:38+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ecco le norme Ue sugli affitti brevi, centrodestra in rivolta",
-   "url": "https://www.ansa.it/europa/notizie/rubriche/altrenews/2026/09/09/ue-lancia-nuove-norme-per-limitare-gli-affitti-brevi-contro-il-caro_ec018a90-d22b-4ea2-a69c-301cc8285bca.html"
   },
   {
    "data": "2026-09-09T17:35:52+00:00",
@@ -57,138 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "L'ex compagna di David Rossi: 'Viola diceva ai pm chi interrogare'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/09/lex-compagna-di-david-rossi-viola-diceva-ai-pm-chi-interrogare_282ab5cd-3f45-40d9-adb9-ab916d302dac.html"
-  },
-  {
-   "data": "2026-09-09T17:33:23+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Curata per un mal di pancia, muore a 2 anni. Si indaga per omicidio colposo",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/09/bimba-di-2-anni-morta-in-ospedale-a-milano-si-indaga-per-omicidio-colposo_20122816-1d11-4a65-b512-970969f833b8.html"
-  },
-  {
-   "data": "2026-09-09T17:32:23+00:00",
-   "fonte": "ANSA",
-   "titolo": "Brusca: 'La colpa delle stragi alla sinistra per aiutare Berlusconi'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/09/il-boss-giovanni-brusca-volevamo-dare-colpa-delle-stragi-alla-sinistra_ce64ac17-78fd-4f4f-b4e7-cbd269348775.html"
-  },
-  {
-   "data": "2026-09-09T17:32:15+00:00",
-   "fonte": "ANSA",
-   "titolo": "Folla ai funerali di Lorena Isceri. Il parroco: 'Amore non è possesso, l'altro non ci appartiene'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/09/i-funerali-lorena-lo-striscione-degli-amici-cresciuta-con-noi-cammini-nella_4484bbb0-2156-4a4c-9c60-32b38b9d9b8b.html"
-  },
-  {
-   "data": "2026-09-09T17:31:06+00:00",
-   "fonte": "ANSA",
-   "titolo": "Kiev: 'Pronti al compromesso', Mosca auspica colloqui trilaterali a breve",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/09/attacchi-russi-su-kiev-e-dintorni-danneggiato-un-impianto-alimentare_1e37fc3e-2a40-487e-a5bc-8440ff6f31a9.html"
-  },
-  {
-   "data": "2026-09-09T17:31:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Alimentazione, Scordamaglia (Filiera Italia): \"Ristorazione scolastica valorizzi qualità\"",
-   "url": "https://www.adnkronos.com/cronaca/alimentazione-scordamaglia-filiera-italia-ristorazione-scolastica-valorizzi-qualita_3ZV65f35bPSpiePA8xmHVG"
-  },
-  {
-   "data": "2026-09-09T17:28:50+00:00",
-   "fonte": "ANSA",
-   "titolo": "Dopo il caldo il maltempo, piogge e disagi al Centro-Nord",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/09/maltempo-trombe-daria-e-guasti-alla-circolazione-ferroviaria-_fade0ebc-07ae-4918-94ca-45507ca783f7.html"
-  },
-  {
-   "data": "2026-09-09T17:24:43+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Bimba scomparsa a Firenze, procura chiede di archiviare le indagini",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/09/bimba-scomparsa-a-firenze-procura-chiede-di-archiviare-le-indagini_4344cc5c-5320-4c1a-8427-5989c054d8ef.html"
-  },
-  {
-   "data": "2026-09-09T17:20:03+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sanchez: \"Meloni celebra oltre 3 anni di governo, il mio dura da 8 anni\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/sanchez-contro-meloni-governo-cosa-ha-detto_1NVqBUftvOnEdmmYxcwL8U"
-  },
-  {
-   "data": "2026-09-09T17:16:38+00:00",
-   "fonte": "ANSA",
-   "titolo": "La legge elettorale in Aula alla Camera da lunedì 28 settembre",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/09/la-legge-elettorale-in-aula-alla-camera-da-lunedi-28-settembre_b01c25c9-6898-47c6-a191-3db70c012ff4.html"
-  },
-  {
-   "data": "2026-09-09T17:15:38+00:00",
-   "fonte": "ANSA",
-   "titolo": "Malagò: 'Io tranquillo, insinuano dinamiche non elettorali...'",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/09/malago-io-tranquillo-insinuano-dinamiche-non-elettorali..._caef9afb-dd40-48ac-a93e-e02b0f68340b.html"
-  },
-  {
-   "data": "2026-09-09T17:12:40+00:00",
-   "fonte": "ANSA",
-   "titolo": "Bandiera di Hezbollah al sit-in contro il ddl antisemitismo, tensione tra i manifestanti",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/09/bandiera-di-hezbollah-al-sit-in-contro-il-ddl-antisemitismo-tensione-tra-i-manifestanti_622a882c-988f-4d84-ba98-a47f12fb327a.html"
-  },
-  {
-   "data": "2026-09-09T17:11:38+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il caos nei cieli del Regno Unito continua, escluso un cyberattacco",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/09/caos-nei-cieli-nel-regno-unito-ancora-decine-di-voli-cancellati_3dd7c876-119d-4fe8-96c1-76afb22cbfef.html"
-  },
-  {
-   "data": "2026-09-09T17:10:47+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Alla Camera voto 'touch', Qr code e nuove telecamere in Alta definizione: aula rinnovata per la ripresa dei lavori",
-   "url": "https://www.adnkronos.com/politica/camera-deputati-voto-touch-qr-code-novita-aula_5dW46r5X3iexFgugmV9HdG"
-  },
-  {
-   "data": "2026-09-09T17:09:28+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "La madre di Ragnedda denuncia il marito, 'violenze per 30 anni'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/09/femminicidio-in-gallura-la-madre-di-ragnedda-sono-stata-vittima-di-violenza-per-30-anni_dfb8b16f-9e74-4202-8ad6-84501d50fbd2.html"
-  },
-  {
-   "data": "2026-09-09T17:08:23+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Femminicidio A1, l'avvocato della famiglia Isceri: \"Vella in cura da psichiatra? Qualcuno potrebbe aver letto male momento di criticità\"",
-   "url": "https://www.adnkronos.com/cronaca/femminicidio-a1-avvocato-famiglia-isceri-psichiatra_26eHpxchPQxEYd1TC6ShGC"
-  },
-  {
-   "data": "2026-09-09T17:08:02+00:00",
-   "fonte": "ANSA",
-   "titolo": "L'Aiea deferisce l'Iran al Consiglio di sicurezza dell'Onu",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/09/iran-attaccate-2-navi-statunitensi-e-10-petroliere-nel-golfo_17dd8e7d-5836-4e9b-a20d-4f323a23a961.html"
-  },
-  {
-   "data": "2026-09-09T17:02:22+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Legale famiglia Berlusconi: 'Già accertata l'inattendibilità di Brusca'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/09/legale-famiglia-berlusconi-gia-accertata-linattendibilita-di-brusca_d5203cc3-a2a2-43d4-8554-5567c3d64414.html"
-  },
-  {
-   "data": "2026-09-09T17:01:34+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Accoltellò studente a Milano, Chiani ricorre contro la condanna",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/09/accoltello-studente-a-milano-chiani-ricorre-contro-la-condanna_e943cbef-1028-471f-9785-85cc34f9aefd.html"
-  },
-  {
-   "data": "2026-09-09T16:58:53+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Uccide la sorella e si impicca, dramma nel Torinese",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/09/donna-trovata-morta-in-casa-nel-torinese-si-cerca-il-fratello_60aec8c7-6955-479d-8bbc-b432d63a379a.html"
-  },
-  {
-   "data": "2026-09-09T16:57:12+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Violenze su bimba di 5 anni, chiesto processo per genitori e nonni",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/09/maltrattamenti-su-una-bimba-di-cinque-anni-chiesto-il-processo-per-genitori-e-nonni_334630c0-a20d-4fa0-bcea-a3663eee701e.html"
-  },
-  {
-   "data": "2026-09-09T16:56:07+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Cade dalla finestra, bimbo di 5 anni muore a Genova",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/09/-morto-bambino-di-5-anni-caduto-dalla-finestra-a-genova-_793714de-dff3-400f-b5cb-0c4b35575c28.html"
-  },
-  {
-   "data": "2026-09-09T16:53:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Alimentazione, Prandini (Coldiretti): \"Con Plasmon per dare ai bimbi il miglior cibo vero\"",
-   "url": "https://www.adnkronos.com/cronaca/alimentazione-prandini-coldiretti-con-plasmon-per-dare-ai-bimbi-il-miglior-cibo-vero_6KDKfA8Y4v0SkvgbAzC50M"
   }
  ]
 }
