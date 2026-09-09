@@ -5,11 +5,53 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-09T20:37:14+00:00",
+  "generato": "2026-09-09T22:46:48+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-09T22:05:23+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ddl antisemitismo, legge in aula il 2 ottobre: Pd cerca sintesi, ma è bufera su bandiere di Hamas in piazza",
+   "url": "https://www.adnkronos.com/politica/ddl-antisemitismo-divisioni-pd_61R1RoVDzSzqM1mymhM1Za"
+  },
+  {
+   "data": "2026-09-09T22:04:04+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Caldo estremo agli sgoccioli, archiviata l'afa: Italia tutta in verde all'inizio del weekend tranne una città",
+   "url": "https://www.adnkronos.com/cronaca/previsioni-meteo-10-settembre-bollini_3Q0R5GauDetnoOvG38Pt4M"
+  },
+  {
+   "data": "2026-09-09T22:03:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina, bilancio in rosso. NYT: \"Zelensky chiede altri 23 miliardi all'Ue\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-fondi-ue-23-miliardi-guerra_4byOHLAShyfDJwK0rD3MMI"
+  },
+  {
+   "data": "2026-09-09T21:40:15+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Mondiali donne, l'Italia sfiora l'impresa, eliminata 82-80 dall'Australia",
+   "url": "https://www.adnkronos.com/sport/basket-mondiali-femminili-italia-australia_3V3kRQmMazkHPL6TO3qRAo"
+  },
+  {
+   "data": "2026-09-09T21:38:40+00:00",
+   "fonte": "ANSA",
+   "titolo": "Champions League, all'Arsenal basta un gol di Odegaard per sbancare il Maradona",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/09/champions-league-napoli-battuto-1-0-dallarsenal_b5a72c5b-51ec-430f-adc3-c2ca49de4eb0.html"
+  },
+  {
+   "data": "2026-09-09T21:33:13+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Champions, Psg a valanga 6-1 sullo Slovan, manita del Barca e Liverpool supera l'Atletico",
+   "url": "https://www.adnkronos.com/sport/champions-calcio-psg-barcellona-liverpool_4nwPTMRl207A4JIRoRjLjS"
+  },
+  {
+   "data": "2026-09-09T21:30:24+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Kata, procura di Firenze chiede archiviazione dell'inchiesta per la bimba scomparsa",
+   "url": "https://www.adnkronos.com/cronaca/kata-scomparsa-inchiesta-firenze_1UoNmCMkVD5MfNmql4fUVK"
+  },
   {
    "data": "2026-09-09T20:07:49+00:00",
    "fonte": "ANSA",
@@ -51,12 +93,6 @@
    "fonte": "ANSA",
    "titolo": "La legge elettorale in Aula alla Camera da lunedì 28 settembre, soglia al 42% senza ballottaggio",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/09/09/la-legge-elettorale-in-aula-alla-camera-da-lunedi-28-settembre_b01c25c9-6898-47c6-a191-3db70c012ff4.html"
-  },
-  {
-   "data": "2026-09-09T19:35:20+00:00",
-   "fonte": "ANSA",
-   "titolo": "Champions League: in campo Napoli-Arsenal  DIRETTA",
-   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/09/champions-league-in-campo-napoli-arsenal-diretta_b5a72c5b-51ec-430f-adc3-c2ca49de4eb0.html"
   },
   {
    "data": "2026-09-09T19:33:29+00:00",
@@ -149,46 +185,10 @@
    "url": "https://www.adnkronos.com/spettacoli/red-bull-64-bars-live-ele-a-nerissima-serpe-e-papa-v-come-special-guest-il-live-a-taranto_3SjYWOgzjajd2tXCYklHGQ"
   },
   {
-   "data": "2026-09-09T17:53:37+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Champions, oggi Napoli-Arsenal 0-0 - Diretta",
-   "url": "https://www.adnkronos.com/sport/champions-calcio-napoli-arsenal_78fdPDPANLnAFONpzTaPtO"
-  },
-  {
-   "data": "2026-09-09T17:50:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Alimentazione, De Palo (Fondazione natalità): \"Fare alleanza per far ripartire le nascite\"",
-   "url": "https://www.adnkronos.com/cronaca/alimentazione-de-palo-fondazione-natalita-fare-alleanza-per-far-ripartire-le-nascite_dW2NDqPHqUqCEnzWpfHUM"
-  },
-  {
    "data": "2026-09-09T17:48:59+00:00",
    "fonte": "ANSA",
    "titolo": "A Trieste l'informazione dei Balcani unita contro le fake news",
    "url": "https://www.ansa.it/sito/notizie/speciali/abna/2026/09/09/a-trieste-linformazione-dei-balcani-unita-contro-le-fake-news_034f6d32-e96a-47ce-aec6-48af71071e30.html"
-  },
-  {
-   "data": "2026-09-09T17:45:21+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Maltempo in Lombardia, 195 interventi dei vigili del fuoco",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/09/maltempo-in-lombardia-195-interventi-dei-vigili-del-fuoco_df13f030-a229-4dbe-a6ea-3cffe031f19c.html"
-  },
-  {
-   "data": "2026-09-09T17:38:13+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Caro carburanti, Salvini: \"Italia aiuta Ucraina che bombarda raffinerie in Russia\"",
-   "url": "https://www.adnkronos.com/economia/salvini-ucraina-russia-prezzo-benzina_6w5ZdYzAaPMqhuRbZIXDus"
-  },
-  {
-   "data": "2026-09-09T17:35:52+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Di Battista ricoverato a Cuba, venerdì possibile rientro in Italia: \"Alessandro non vede l'ora di riprendersi le sue battaglie\"",
-   "url": "https://www.adnkronos.com/politica/alessandro-di-battista-quanto-torna-in-italia-aggiornamenti_WDRz8TfErDc0OkBpBEj2I"
-  },
-  {
-   "data": "2026-09-09T17:35:37+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "L'ex compagna di David Rossi: 'Viola diceva ai pm chi interrogare'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/09/lex-compagna-di-david-rossi-viola-diceva-ai-pm-chi-interrogare_282ab5cd-3f45-40d9-adb9-ab916d302dac.html"
   }
  ]
 }
