@@ -45,7 +45,7 @@ Eventi italiani successivi (L'Aquila 2009, Emilia 2012, Centro Italia 2016) hann
 
 ## Perché la comunicazione è PC
 
-In emergenza, **una comunicazione chiara riduce i morti e i danni**. Informazione corretta aiuta i cittadini a:
+In emergenza, **una comunicazione chiara riduce i morti e i danni**. Un'informazione corretta aiuta i cittadini a:
 
 - sapere **cosa è successo** senza panico;
 - seguire **istruzioni di autoprotezione**;

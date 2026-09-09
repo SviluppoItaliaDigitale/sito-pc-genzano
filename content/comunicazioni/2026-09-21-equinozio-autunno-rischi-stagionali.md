@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Il **23 settembre 2026** segna l'**equinozio d'autunno** astronomico. Da questa data, nell'emisfero nord, le notti diventano più lunghe del giorno. È un passaggio che, oltre al valore culturale, ha conseguenze pratiche anche nella vita quotidiana e nella sicurezza domestica.
+Il **23 settembre 2026** segna l'**equinozio d'autunno** astronomico. Da questa data, nell'emisfero nord, le notti diventano più lunghe dei giorni. È un passaggio che, oltre al valore culturale, ha conseguenze pratiche anche nella vita quotidiana e nella sicurezza domestica.
 
 ## Cosa cambia
 
@@ -36,7 +36,7 @@ Escursioni, bike, jogging richiedono più **attenzione**: meno luce, terreni pi�
 - **manutenzione** della caldaia: obbligatoria per legge secondo periodicità (DM 37/2008 e normative regionali);
 - **controllo** delle canne fumarie per stufe a legna, pellet, camini;
 - **verifica** della ventilazione nei locali con apparecchi a combustione;
-- **installazione** di rilevatori di **monossido di carbonio** se si usano stufe a gas o combustione.
+- **installazione** di rilevatori di **monossido di carbonio** se si usano stufe a gas o a combustione.
 
 ### Elettricità
 
