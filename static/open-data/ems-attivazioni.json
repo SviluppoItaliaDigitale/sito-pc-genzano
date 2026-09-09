@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/",
-  "generato": "2026-09-09T10:02:17+00:00",
+  "generato": "2026-09-09T14:24:59+00:00",
   "licenza": "Copernicus Emergency Management Service — dati pubblici",
   "nota": "Copia locale: l'API non espone CORS, il browser non può leggerla direttamente."
  },
@@ -18,7 +18,7 @@
    ],
    "eventTime": "2026-09-02T13:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-09-09T09:26:14.494187",
+   "lastUpdate": "2026-09-09T11:48:16.347227",
    "n_aois": 2,
    "n_products": 2,
    "name": "Storm in Basilicata, Italy."
@@ -34,9 +34,9 @@
    ],
    "eventTime": "2026-08-31T13:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-09-09T09:36:58.339692",
+   "lastUpdate": "2026-09-09T12:23:02.336335",
    "n_aois": 1,
-   "n_products": 2,
+   "n_products": 3,
    "name": "Wildfire in Trapezitsa Mountain, Greece"
   },
   {
@@ -50,7 +50,7 @@
    ],
    "eventTime": "2026-08-28T15:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-09-09T09:32:55.490322",
+   "lastUpdate": "2026-09-09T12:03:14.272490",
    "n_aois": 4,
    "n_products": 4,
    "name": "Storm in Lombardy, Italy"
@@ -148,9 +148,9 @@
    ],
    "eventTime": "2026-08-14T22:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-09-09T07:17:12.143994",
+   "lastUpdate": "2026-09-09T12:50:23.274226",
    "n_aois": 5,
-   "n_products": 55,
+   "n_products": 56,
    "name": "Wildfire in Montenegro and Bosnia and Herzegovina"
   },
   {
@@ -176,13 +176,14 @@
    "closed": false,
    "code": "EMSR920",
    "countries": [
-    "Germany"
+    "Germany",
+    "Belgium"
    ],
    "eventTime": "2026-08-13T12:55:00",
    "gdacsId": null,
-   "lastUpdate": "2026-09-07T11:33:18.058518",
+   "lastUpdate": "2026-09-09T14:12:03.808537",
    "n_aois": 3,
-   "n_products": 10,
+   "n_products": 11,
    "name": "Wildfire in Huertgen Forest, Germany and Belgium"
   },
   {
