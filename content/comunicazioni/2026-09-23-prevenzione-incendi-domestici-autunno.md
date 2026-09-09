@@ -14,7 +14,7 @@ draft: false
 versione_facile: "2026-09-23-prevenzione-incendi-domestici-autunno-facile"
 ---
 
-Gli **incendi domestici** in Italia causano ogni anno centinaia di vittime. I mesi più a rischio sono quelli del riscaldamento. Settembre è il momento giusto per fare i **controlli** che, a novembre, sarà troppo tardi rimpiangere di non aver fatto.
+Gli **incendi domestici** in Italia causano ogni anno centinaia di vittime. I mesi più a rischio sono quelli del riscaldamento. Settembre è il momento giusto per fare i **controlli** che, a novembre, sarà troppo tardi per rimpiangere di non aver fatto.
 
 ## Le cause più frequenti
 
@@ -30,7 +30,7 @@ Secondo dati dei **Vigili del Fuoco** e del **Ministero dell'Interno**, gli ince
 ## Cosa controllare ora
 
 ### Canne fumarie
-Se si ha **camino**, **stufa a legna**, **stufa a pellet**:
+Se si ha un **camino**, una **stufa a legna**, una **stufa a pellet**:
 
 - **pulizia** annuale obbligatoria da tecnico abilitato;
 - **certificato** di pulizia da conservare (serve anche per l'assicurazione);

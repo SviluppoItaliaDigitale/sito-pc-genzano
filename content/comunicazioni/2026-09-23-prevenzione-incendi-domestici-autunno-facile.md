@@ -47,7 +47,7 @@ Se hai un camino, una stufa a legna o una stufa a pellet:
 
 - Fai la manutenzione ogni 2 anni. Lo dice il libretto della caldaia.
 - Controlla che il bollino blu sia aggiornato.
-- Il locale della caldaia deve avere aria che entra e esce.
+- Il locale della caldaia deve avere aria che entra ed esce.
 
 ### Impianto elettrico
 

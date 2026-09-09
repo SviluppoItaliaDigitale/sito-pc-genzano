@@ -6,7 +6,7 @@ badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-19-giornata-aggiornamento-volontari.webp"
-image_alt: "Aula con volontari in divisa partecipano a una sessione di aggiornamento sulle procedure operative"
+image_alt: "Aula con volontari in divisa che partecipano a una sessione di aggiornamento sulle procedure operative"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
@@ -66,7 +66,7 @@ Ogni modulo seguito viene **registrato** nel curriculum personale del volontario
 
 Calendario di massima autunno 2026:
 
-- **sabato mattina**: moduli di sicurezza e sicurezza operativa;
+- **sabato mattina**: moduli di sicurezza operativa;
 - **sere infrasettimanali**: moduli teorici (radio, cartografia, comunicazione);
 - **giornate intere** su prenotazione: BLS-D;
 - **fine settimana**: aggiornamenti AIB con prova pratica.
