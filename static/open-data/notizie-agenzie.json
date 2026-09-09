@@ -5,11 +5,47 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-08T22:42:27+00:00",
+  "generato": "2026-09-09T05:20:28+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-09T05:14:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Allerta dell'Oms: \"Il fumo? Può ridurre chance di concepire un bimbo\"",
+   "url": "https://www.adnkronos.com/cronaca/fumo-fertilita-allerta-oms-studio_5Df5Rjl4E2UhZSqwvVM7RS"
+  },
+  {
+   "data": "2026-09-09T05:05:34+00:00",
+   "fonte": "ANSA",
+   "titolo": "Scure di Londra e di altri 11 contro i coloni, Israele chiude il consolato del Regno Unito",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/08/scure-di-londra-e-di-altri-11-contro-i-coloni-israele-chiude-il-consolato-del-regno_e599cc3b-d374-4f76-8ad3-30e9dff04d54.html"
+  },
+  {
+   "data": "2026-09-09T05:01:06+00:00",
+   "fonte": "ANSA",
+   "titolo": "Iran, 'attaccate 2 navi statunitensi e 10 petroliere nel Golfo'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/09/iran-attaccate-2-navi-statunitensi-e-10-petroliere-nel-golfo_17dd8e7d-5836-4e9b-a20d-4f323a23a961.html"
+  },
+  {
+   "data": "2026-09-09T04:47:05+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Femminicidio A1, oggi l'ultimo saluto a Lorena Isceri: i funerali a Squinzano",
+   "url": "https://www.adnkronos.com/cronaca/femminicidio-a1-lorena-isceri-funerali-oggi-dove-autopsia_43T1rcxp65L7G8MgJT8nQ0"
+  },
+  {
+   "data": "2026-09-09T03:09:22+00:00",
+   "fonte": "ANSA",
+   "titolo": "Caos nei cieli nel Regno Unito, ancora decine di voli cancellati",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/09/caos-nei-cieli-nel-regno-unito-ancora-decine-di-voli-cancellati_3dd7c876-119d-4fe8-96c1-76afb22cbfef.html"
+  },
+  {
+   "data": "2026-09-08T22:40:14+00:00",
+   "fonte": "ANSA",
+   "titolo": "Champions League: l'Inter si fa male da sola, vince il Real su errori nerazzurri",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/08/champions-league-linter-si-fa-male-da-sola-vince-il-real-su-errori-nerazzurri_ffa7fc3c-cfbd-42ac-a6f8-083eb947a552.html"
+  },
   {
    "data": "2026-09-08T22:10:56+00:00",
    "fonte": "ADNKRONOS",
@@ -47,12 +83,6 @@
    "url": "https://www.adnkronos.com/cronaca/garlasco-de-rensis-milo-infante-procura-pavia_3u5cmrFZPuNHZ9Cz5jc89q"
   },
   {
-   "data": "2026-09-08T21:54:59+00:00",
-   "fonte": "ANSA",
-   "titolo": "Champions League: l'Inter si fa male da sola, vince il Real su errori nerazzurri",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/08/champions-league-linter-si-fa-male-da-sola-vince-il-real-su-errori-nerazzurri_ffa7fc3c-cfbd-42ac-a6f8-083eb947a552.html"
-  },
-  {
    "data": "2026-09-08T21:10:00+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Ranucci: \"Per il 63% degli italiani potrei guidare il Paese, ma non mi candido\"",
@@ -63,12 +93,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Bastano 1000 passi in più al giorno per proteggere il cuore",
    "url": "https://www.adnkronos.com/internazionale/esteri/camminare-1000-passi-infarto-cuore-studio_6e86fc9xsQC5eBTVr0v9wc"
-  },
-  {
-   "data": "2026-09-08T20:26:05+00:00",
-   "fonte": "ANSA",
-   "titolo": "Scure di Londra e di altri 11 contro i coloni, Israele chiude il consolato del Regno Unito",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/08/scure-di-londra-e-di-altri-11-contro-i-coloni-israele-chiude-il-consolato-del-regno_e599cc3b-d374-4f76-8ad3-30e9dff04d54.html"
   },
   {
    "data": "2026-09-08T20:25:16+00:00",
@@ -101,12 +125,6 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/08/leader-locale-spd-chiede-dialogo-con-afd-doveroso-esplorare-possibile_2b49abd7-4ca8-4f0c-8173-26a3fd666b04.html"
   },
   {
-   "data": "2026-09-08T19:56:25+00:00",
-   "fonte": "ANSA",
-   "titolo": "Caos nei cieli del Regno Unito, in tilt anche gli scali di Heathrow e Gatwick",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/08/caos-nei-cieli-del-regno-unito-in-tilt-anche-gli-scali_48723a44-eed3-4055-be85-b15c535c50d3.html"
-  },
-  {
    "data": "2026-09-08T19:55:30+00:00",
    "fonte": "ANSA",
    "titolo": "Gli agenti a lezione da Vannacci, un caso l'evento a Torino",
@@ -123,18 +141,6 @@
    "fonte": "ANSA",
    "titolo": "Il campo largo punta sul programma, sulle primarie si deciderà",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/09/08/il-campo-largo-punta-sul-programma-sulle-primarie-si-decidera_2665b195-a27a-4892-bf6b-20f493e944e9.html"
-  },
-  {
-   "data": "2026-09-08T19:41:07+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Real Madrid-Inter, avvio 'horror' dei nerazzurri: papera di Martinez e raddoppio Blancos",
-   "url": "https://www.adnkronos.com/sport/real-madrid-inter-inizio-choc-nerazzurri-champions-gol-regalati-papera-martinez_5m8hRaxVUVvl9Hktojo4vm"
-  },
-  {
-   "data": "2026-09-08T19:29:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Champions League, i risultati di oggi: Haaland lancia il City contro il Porto, Borussia Dortmund-Villarreal 3-2",
-   "url": "https://www.adnkronos.com/sport/champions-league-oggi-risultati-prima-giornata_5pFTrBRQLAjcOsshxdyZLy"
   },
   {
    "data": "2026-09-08T19:22:14+00:00",
@@ -183,12 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "'Appoggiò solo le mani sul seno', prof. assolto dal Tribunale e Pm chiede 6 anni",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/08/appoggio-solo-le-mani-sul-seno-prof.-assolto-dal-tribunale-e-pm-chiede_7a8cb6cb-90b6-4e10-8697-e81e8f41bff8.html"
-  },
-  {
-   "data": "2026-09-08T17:42:19+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Strage di Viareggio, i giudici: 'La pena a Moretti non è illegale né illegittima'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/08/strage-viareggio-i-giudici-la-pena-a-moretti-non-e-illegale-ne-illegittima_f95e6959-97c6-4962-88b9-d59848723b69.html"
   }
  ]
 }
