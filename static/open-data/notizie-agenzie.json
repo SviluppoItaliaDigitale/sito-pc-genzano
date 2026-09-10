@@ -5,22 +5,76 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-10T20:03:17+00:00",
+  "generato": "2026-09-10T22:27:56+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
+   "data": "2026-09-10T22:02:14+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Torna l'ora solare, vantaggi e svantaggi: conviene mantenere quella legale?",
+   "url": "https://www.adnkronos.com/economia/ora-solare-legale-vantaggi-svantaggi-2026_3m1p4dsqzelNt7SBCoc3Zi"
+  },
+  {
+   "data": "2026-09-10T22:01:25+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "11 settembre, 25 anni dopo: da Trump al Pentagono a Vance e Biden a Ground Zero, le commemorazioni",
+   "url": "https://www.adnkronos.com/internazionale/esteri/11-settembre-anniversario-celebrazioni-oggi_6Lqi5UfsrY0wt7dq7eKjGs"
+  },
+  {
+   "data": "2026-09-10T22:01:02+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Trasporto aereo, torna l''incubo' degli scioperi: ecco i diritti dei viaggiatori",
+   "url": "https://www.adnkronos.com/cronaca/sciopero-aerei-13-settembre-rimborso_1zfvaHCBwF2cgPZK93Wvbu"
+  },
+  {
+   "data": "2026-09-10T22:00:16+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Caldo addio, torna l'Anticiclone delle Azzorre: ma dal 16 settembre cambia tutto",
+   "url": "https://www.adnkronos.com/cronaca/meteo-caldo-anomalo-anticiclone-azzorre-maltempo-previsioni_5KSXELt1QsdB9HEkY0Kc16"
+  },
+  {
+   "data": "2026-09-10T21:54:29+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Usa, Trump rilancia: \"500 dollari a un milione di americani truffati da Obamacare\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/usa-trump-5000-500-dollari-americani_3OOuMYaE0c9vHRygTyfJVW"
+  },
+  {
+   "data": "2026-09-10T21:51:20+00:00",
+   "fonte": "ANSA",
+   "titolo": "Eurovolley: l'Italia batte Svezia e pioggia, 3-0 a Piazza del Plebiscito",
+   "url": "https://www.ansa.it/sito/notizie/sport/pallavolo/2026/09/10/eurovolley-litalia-batte-svezia-e-pioggia-3-0-a-piazza-del-plebiscito_1cc4b6b8-2859-48dc-8327-6d4fd4a6bbdf.html"
+  },
+  {
+   "data": "2026-09-10T21:09:08+00:00",
+   "fonte": "ANSA",
+   "titolo": "La Champions del Como è subito una festa, Lipsia travolto",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/10/la-champions-del-como-e-subito-una-festa-lipsia-travolto_ed135978-a51b-463c-9d8f-dda78b577300.html"
+  },
+  {
+   "data": "2026-09-10T20:17:27+00:00",
+   "fonte": "ANSA",
+   "titolo": "Si ribalta bus turistico in Svizzera, 'ci sono morti e feriti'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/09/10/bus-turistico-coinvolto-in-un-incidente-stradale-in-svizzera-diversi-morti_264b84d3-1792-4d81-b064-21e3aa16218b.html"
+  },
+  {
+   "data": "2026-09-10T20:11:07+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Dritto e Rovescio, Mario Giordano conduttore al posto di Paolo Del Debbio: \"Una lieve indisposizione\"",
+   "url": "https://www.adnkronos.com/politica/dritto-rovescio-del-debbio-giordano-rete4_64mmplIeZrWnmmeBI7umRm"
+  },
+  {
+   "data": "2026-09-10T20:10:30+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Il Fenerbahce pareggia con la Roma e Kartal si dimette: \"Lo faccio per aiutare...\"",
+   "url": "https://www.adnkronos.com/sport/allenatore-fenerbahce-roma-champions-league_2H4VKzbmSRIZYlfPv1k86w"
+  },
+  {
    "data": "2026-09-10T19:49:19+00:00",
    "fonte": "ANSA",
    "titolo": "La figlia di Lea Garofalo si toglie la vita, anche lei si ribellò ai boss",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/10/la-figlia-di-lea-garofalo-si-toglie-la-vita-anche-lei-si-ribello-ai-boss_17abbcfc-3c0f-4582-bf35-cac7fc8438ef.html"
-  },
-  {
-   "data": "2026-09-10T19:44:27+00:00",
-   "fonte": "ANSA",
-   "titolo": "Bus turistico coinvolto in un incidente stradale in Svizzera, 'diversi morti'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/09/10/bus-turistico-coinvolto-in-un-incidente-stradale-in-svizzera-diversi-morti_264b84d3-1792-4d81-b064-21e3aa16218b.html"
   },
   {
    "data": "2026-09-10T19:36:32+00:00",
@@ -35,22 +89,10 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/africa/2026/09/10/media-gli-houthi-hanno-conquistato-la-citta-yemenita-di-mocha-sul-mar_8fec3631-c83e-464d-ab93-cd657b9b14a1.html"
   },
   {
-   "data": "2026-09-10T19:30:03+00:00",
-   "fonte": "ANSA",
-   "titolo": "Champions League, in campo Como-Lipsia LIVE",
-   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/10/champions-league-como-lipsia-in-campo-alle-21-diretta-_ed135978-a51b-463c-9d8f-dda78b577300.html"
-  },
-  {
    "data": "2026-09-10T19:26:33+00:00",
    "fonte": "ANSA",
    "titolo": "Il Centro-Nord sferzato dal maltempo, morte due donne",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/10/il-centro-nord-sferzato-dal-maltempo-morte-due-donne_ad4adb36-f20e-4fd6-affe-09288e92c696.html"
-  },
-  {
-   "data": "2026-09-10T19:26:00+00:00",
-   "fonte": "ANSA",
-   "titolo": "Mattarella a Piazza del Plebiscito per assistere a Italia-Svezia di volley",
-   "url": "https://www.ansa.it/sito/notizie/sport/pallavolo/2026/09/10/mattarella-a-piazza-del-plebiscito-per-assistere-a-italia-svezia-di-volley_1cc4b6b8-2859-48dc-8327-6d4fd4a6bbdf.html"
   },
   {
    "data": "2026-09-10T19:12:48+00:00",
@@ -65,9 +107,9 @@
    "url": "https://www.adnkronos.com/spettacoli/ranucci-crozza-imitazione-report_4a5gl3uRiClcLdUTF9XFiI"
   },
   {
-   "data": "2026-09-10T18:37:30+00:00",
+   "data": "2026-09-10T18:37:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Svizzera, pullman turistico coinvolto in incidente: diversi morti e feriti",
+   "titolo": "Pullman turistico si ribalta in Svizzera, diverse vittime e numerosi feriti: a bordo 48 persone",
    "url": "https://www.adnkronos.com/internazionale/esteri/incidente-pullman-svizzera-morti-news_7ClOoKNcDvYzVLDdJqBL3m"
   },
   {
@@ -109,7 +151,7 @@
   {
    "data": "2026-09-10T18:00:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Champions League, Como-Lipsia 2-0 - Diretta",
+   "titolo": "Champions League, Como-Lipsia 4-1: Fabregas cala il poker all'esordio",
    "url": "https://www.adnkronos.com/sport/diretta-como-lipsia-oggi-champions-league-risultato-live_4QcL7Q3QhNVJhsRtC3ZF2s"
   },
   {
@@ -119,28 +161,10 @@
    "url": "https://www.adnkronos.com/cronaca/morta-denise-cosco-figlia-lea-garofalo_Rm5MRCaZ8PG71E7ZVq9XS"
   },
   {
-   "data": "2026-09-10T17:59:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Europei pallavolo, Italia-Svezia 22-18 nel primo set, partita sospesa per pioggia - Diretta",
-   "url": "https://www.adnkronos.com/sport/diretta-italia-svzia-europei-pallavolo-live_2QzVGCg5Zt94DYq9k4130w"
-  },
-  {
-   "data": "2026-09-10T17:56:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Infettivologa Castagna: \"Terapie a lento rilascio incidono su qualità di vita\"",
-   "url": "https://www.adnkronos.com/cronaca/infettivologa-castagna-terapie-a-lento-rilascio-incidono-su-qualita-di-vita_2fKTK56FSJlUIju6onNLP6"
-  },
-  {
    "data": "2026-09-10T17:52:00+00:00",
    "fonte": "ANSA",
    "titolo": "Ultimi accertamenti per Alessandro Di Battista poi il probabile rientro",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/09/10/di-battista-verso-partenza-da-cuba-domani-attesi-ultimi-riscontri-medici_816da48a-b490-452b-a404-de359e2a4ab9.html"
-  },
-  {
-   "data": "2026-09-10T17:52:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Malattie rare, 'All the Feelings with Pbc': l'arte in aiuto nella colangite biliare primitiva",
-   "url": "https://www.adnkronos.com/cronaca/malattie-rare-all-the-feelings-with-pbc-larte-in-aiuto-nella-colangite-biliare-primitiva_5x7EDvj7SmwalRDh3cB3Wk"
   },
   {
    "data": "2026-09-10T17:49:11+00:00",
@@ -149,34 +173,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/10/la-morte-di-domenico-depositata-la-super-perizia_73353756-d2a6-4075-8a27-7aee1243b345.html"
   },
   {
-   "data": "2026-09-10T17:45:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Maltempo sull'Italia, due morti: un decesso nel Senese, donna annega in auto a Udine",
-   "url": "https://www.adnkronos.com/cronaca/due-morti-maltempo-oggi-donna-annegata-udine-senese_49dNYG5AIf0BGZ6TLczyqE"
-  },
-  {
    "data": "2026-09-10T17:42:38+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Aurora uccisa a 13 anni, ridotta la pena all'ex e la mamma invoca Meloni",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/10/omicidio-aurora-ridotta-a-15-anni-la-condanna-per-lex-imputato_80279aaf-1b69-49c9-b3f3-c02d14b1ab63.html"
-  },
-  {
-   "data": "2026-09-10T17:42:29+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Non servono i carri armati: così Mosca può sfidare la Nato nei Baltici senza invaderli",
-   "url": "https://www.adnkronos.com/internazionale/esteri/non-servono-i-carri-armati-cosi-mosca-puo-sfidare-la-nato-nei-baltici-senza-invaderli_5PTEkF2lBDZzZ2ObCJkeFK"
-  },
-  {
-   "data": "2026-09-10T17:39:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Infettivologo Moschese: \"Pazienti necessitano di slegarsi da terapia quotidiana\"",
-   "url": "https://www.adnkronos.com/cronaca/infettivologo-moschese-pazienti-necessitano-di-slegarsi-da-terapia-quotidiana_57k54G8BBUEgaqDqgzlPWA"
-  },
-  {
-   "data": "2026-09-10T17:37:32+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Vecchio (ViiV Healthcare): \"Terapie long acting importanti per aderenza alla cura\"",
-   "url": "https://www.adnkronos.com/salute/vecchio-viiv-healthcare-terapie-long-acting-importanti-per-aderenza-alla-cura_7w0ZjV5OP9wjscduVLmPeQ"
   },
   {
    "data": "2026-09-10T17:27:11+00:00",
