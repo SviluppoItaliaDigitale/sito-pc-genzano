@@ -5,11 +5,65 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-09T22:46:48+00:00",
+  "generato": "2026-09-10T05:20:27+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-10T05:11:45+00:00",
+   "fonte": "ANSA",
+   "titolo": "Trump: 'Fateci finire il lavoro e ogni americano avrà 5.000 dollari'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/10/trump-fateci-finire-il-lavoro-e-ogni-americano-avra-5.000-dollari_e33d95c6-6f62-484c-a603-a204425a8b44.html"
+  },
+  {
+   "data": "2026-09-10T05:00:06+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Vuelta di Spagna, oggi 18esima tappa: orario, percorso e dove vederla",
+   "url": "https://www.adnkronos.com/sport/vuelta-spagna-tappa-18-orario-percorso-e-dove-vederla_6ncO1S1KYovLV5CM2yb9EE"
+  },
+  {
+   "data": "2026-09-10T04:59:27+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Champions League, oggi Como-Lipsia: orario, probabili formazioni e dove vederla in tv",
+   "url": "https://www.adnkronos.com/sport/como-lipsia-oggi-champions-league-orario-dove-vederla-tv-probabili-formazioni_4UOHri9MoJ0tNFMjvfC1bS"
+  },
+  {
+   "data": "2026-09-10T04:56:14+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Champions League, oggi Fenerbahce-Roma: orario, probabili formazioni e dove vederla in tv",
+   "url": "https://www.adnkronos.com/sport/fenerbahce-roma-oggi-champions-league-orario-dove-vederla-tv-probabili-formazioni_1CUoWeg8ECJyNyExaLVOU4"
+  },
+  {
+   "data": "2026-09-10T04:55:31+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Europei pallavolo, oggi Italia-Svezia: orario e dove vederla in chiaro",
+   "url": "https://www.adnkronos.com/sport/italia-svezia-oggi-europei-pallavolo-orario-dove-vederla-tv-chiaro-streaming_6bbGX0DLv4dwZU3DKtKJko"
+  },
+  {
+   "data": "2026-09-10T04:55:03+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Alzheimer, una speranza dalla placenta: \"Spray nasale difende neuroni e memoria\"",
+   "url": "https://www.adnkronos.com/salute/alzheimer-malattia-placenta-spray-nasale_1ABVCJVfVA9DfjS35ucDwE"
+  },
+  {
+   "data": "2026-09-10T04:51:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Trump, comizio show di due ore a Dallas: \"5mila dollari a ogni americano se i Repubblicani vincono i midterm\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/trump-midterm-comizio-dallas_4Z6LgWYuqcBPG6XAnz9PMM"
+  },
+  {
+   "data": "2026-09-10T04:33:53+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "L'assegno unico diventa più 'ricco', ecco come cambia con il nuovo calcolo Isee",
+   "url": "https://www.adnkronos.com/economia/assegno-unico-inps-figli-2026-isee_51kD5VxIvzEsWJA8H5qRxO"
+  },
+  {
+   "data": "2026-09-10T04:30:46+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Champions League, tutte le partite di oggi e dove vederle",
+   "url": "https://www.adnkronos.com/sport/champions-league-partite-oggi-10-settembre-programma-dove-vederle-tv-streaming_1jIzJYJvDyfgex3LjgI8Zu"
+  },
   {
    "data": "2026-09-09T22:05:23+00:00",
    "fonte": "ADNKRONOS",
@@ -41,28 +95,10 @@
    "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/09/champions-league-napoli-battuto-1-0-dallarsenal_b5a72c5b-51ec-430f-adc3-c2ca49de4eb0.html"
   },
   {
-   "data": "2026-09-09T21:33:13+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Champions, Psg a valanga 6-1 sullo Slovan, manita del Barca e Liverpool supera l'Atletico",
-   "url": "https://www.adnkronos.com/sport/champions-calcio-psg-barcellona-liverpool_4nwPTMRl207A4JIRoRjLjS"
-  },
-  {
-   "data": "2026-09-09T21:30:24+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Kata, procura di Firenze chiede archiviazione dell'inchiesta per la bimba scomparsa",
-   "url": "https://www.adnkronos.com/cronaca/kata-scomparsa-inchiesta-firenze_1UoNmCMkVD5MfNmql4fUVK"
-  },
-  {
    "data": "2026-09-09T20:07:49+00:00",
    "fonte": "ANSA",
    "titolo": "Il caos nei cieli del Regno Unito continua, escluso un cyberattacco",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/09/caos-nei-cieli-nel-regno-unito-ancora-decine-di-voli-cancellati_3dd7c876-119d-4fe8-96c1-76afb22cbfef.html"
-  },
-  {
-   "data": "2026-09-09T20:07:21+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Famiglia nel bosco, bambini torneranno a casa \"per poche ore\"",
-   "url": "https://www.adnkronos.com/cronaca/famiglia-nel-bosco-bambini-ritorno-a-casa_2un9oDEdzjATGBGHcm3mni"
   },
   {
    "data": "2026-09-09T19:44:22+00:00",
@@ -83,12 +119,6 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/09/i-funerali-lorena-lo-striscione-degli-amici-cresciuta-con-noi-cammini-nella_4484bbb0-2156-4a4c-9c60-32b38b9d9b8b.html"
   },
   {
-   "data": "2026-09-09T19:37:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Us Open, Rybakina vola in semifinale e sarà la nuova n.1 del mondo",
-   "url": "https://www.adnkronos.com/sport/tennis-us-open-rybakina-sabalenka_5lCBTmo5wtgABMqW4Q8U2E"
-  },
-  {
    "data": "2026-09-09T19:36:04+00:00",
    "fonte": "ANSA",
    "titolo": "La legge elettorale in Aula alla Camera da lunedì 28 settembre, soglia al 42% senza ballottaggio",
@@ -105,12 +135,6 @@
    "fonte": "ANSA",
    "titolo": "'L'aereo di Zelensky sfiorato da drone al decollo dalla Moldavia'",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/09/laereo-di-zelensky-sfiorato-da-drone-al-decollo-dalla-moldavia_1e37fc3e-2a40-487e-a5bc-8440ff6f31a9.html"
-  },
-  {
-   "data": "2026-09-09T19:29:59+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Bassetti e lo studio sul tonno: \"Parassiti e disturbi se pesce crudo o poco cotto\"",
-   "url": "https://www.adnkronos.com/cronaca/tonno-studio-vermi-bassetti_3xeWk6r1WPGnMZ5ASvgf0o"
   },
   {
    "data": "2026-09-09T19:15:50+00:00",
@@ -149,18 +173,6 @@
    "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/09/a-venezia-da-vanessa-scalera-a-alba-rohrwacher-lumanita-estrema_696abebf-274b-4365-9db2-d9cac3e468ef.html"
   },
   {
-   "data": "2026-09-09T18:35:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "L'aereo di Zelensky \"ha rischiato di essere colpito da un drone in volo per Oslo\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/zelensky-volo-oslo-drone-incidente_7i5MobL9Y1DiTVZ2mdE86w"
-  },
-  {
-   "data": "2026-09-09T18:29:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ecco l'iPhone pieghevole, Apple lancia il Duo: in Italia a ottobre",
-   "url": "https://www.adnkronos.com/economia/iphone-pieghevole-duo-apple-prezzo-italia_2nhYgrhzYAJAE5O31JXPJW"
-  },
-  {
    "data": "2026-09-09T18:28:31+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Pillon, i 'bimbi del bosco' a Palmoli per poche ore la prossima settimana",
@@ -177,18 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Ecco le norme Ue sugli affitti brevi, centrodestra in rivolta",
    "url": "https://www.ansa.it/europa/notizie/rubriche/altrenews/2026/09/09/ue-lancia-nuove-norme-per-limitare-gli-affitti-brevi-contro-il-caro_ec018a90-d22b-4ea2-a69c-301cc8285bca.html"
-  },
-  {
-   "data": "2026-09-09T17:55:37+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "'Red Bull 64 Bars Live', Ele A, Nerissima Serpe e Papa V come special guest: il live a Taranto",
-   "url": "https://www.adnkronos.com/spettacoli/red-bull-64-bars-live-ele-a-nerissima-serpe-e-papa-v-come-special-guest-il-live-a-taranto_3SjYWOgzjajd2tXCYklHGQ"
-  },
-  {
-   "data": "2026-09-09T17:48:59+00:00",
-   "fonte": "ANSA",
-   "titolo": "A Trieste l'informazione dei Balcani unita contro le fake news",
-   "url": "https://www.ansa.it/sito/notizie/speciali/abna/2026/09/09/a-trieste-linformazione-dei-balcani-unita-contro-le-fake-news_034f6d32-e96a-47ce-aec6-48af71071e30.html"
   }
  ]
 }
