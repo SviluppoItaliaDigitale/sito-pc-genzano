@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-10T09:58:29+00:00",
+  "generato": "2026-09-10T14:07:49+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-10T09:51:09+00:00",
+   "data": "2026-09-10T14:00:11+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Comscore: l’estate traina lo smartphone. Comparto News a +5,5%, volano Paramount e Disney",
+   "url": "https://www.adnkronos.com/tecnologia/digital-ranking/comscore-lestate-traina-lo-smartphone-comparto-news-a-5-5-volano-paramount-e-disney_3o4g1B4QBrKdEkDgY7dPUw"
+  },
+  {
+   "data": "2026-09-10T13:53:28+00:00",
    "fonte": "ANSA",
    "titolo": "Maltempo: donna muore nel sottopasso allagato in Friuli. A Milano crolla il controsoffitto dell'aula bunker",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/10/maltempo-donna-muore-nel-sottopasso-allagato-in-friuli.-a-milano-crolla-il-controsoffitto_34403fe3-5466-4503-931b-7875cec4dbfe.html"
   },
   {
-   "data": "2026-09-10T09:45:00+00:00",
+   "data": "2026-09-10T13:45:25+00:00",
+   "fonte": "ANSA",
+   "titolo": "La Bce alza i tassi di un quarto di punto, i depositi passano al 2,50%",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/10/la-bce-alza-i-tassi-di-un-quarto-di-punto-i-depositi-passano-al-250_437501fd-ba6d-4c64-9539-19d86f5b276c.html"
+  },
+  {
+   "data": "2026-09-10T13:44:32+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Caso Ranucci, Lavitola resta in carcere. Confermata aggravante metodo mafioso",
-   "url": "https://www.adnkronos.com/cronaca/caso-ranucci-lavitola-carcere-riesame_7Ib6I8RjltW2SZ73TKnc4m"
+   "titolo": "Consumi, Brisigotti (Coop Italia): \"Famiglie cercano risparmio, sentiment generale è negativo'",
+   "url": "https://www.adnkronos.com/economia/consumi-brisigotti-coop-italia-famiglie-cercano-risparmio-sentiment-generale-e-negativo_6T7Q2TK9rdbtHTxQA6PbDu"
   },
   {
-   "data": "2026-09-10T09:41:43+00:00",
+   "data": "2026-09-10T13:40:39+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Mostra del cinema di Venezia, Alessandro Benetton: \"Il film di De Angelis è una storia italiana di grande qualità\"",
+   "url": "https://www.adnkronos.com/spettacoli/mostra-del-cinema-di-venezia-alessandro-benetton-il-film-di-de-angelis-e-una-storia-italiana-di-grande-qualita_1hlvCdQ1RwsLxlQZzEArR2"
+  },
+  {
+   "data": "2026-09-10T13:39:32+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Femminicidio in Gallura, Ragnedda scrive dal carcere: 'Mi sono dovuto difendere'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/10/femminicidio-in-gallura-ragnedda-scrive-dal-carcere-mi-sono-dovuto-difendere_3b8e454e-f284-40c9-8869-840987581fcc.html"
+  },
+  {
+   "data": "2026-09-10T13:38:30+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Consumi, Dalle Rive (Ancc Coop): \"Instabilità incide su fiducia consumatori\"",
+   "url": "https://www.adnkronos.com/economia/consumi-dalle-rive-ancc-coop-instabilita-incide-su-fiducia-consumatori_1HxGPzTz4qx90DerO8m8S0"
+  },
+  {
+   "data": "2026-09-10T13:35:58+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Consumi, Russo (Ancc Coop): \"Consumatori spaventati da rincari\"",
+   "url": "https://www.adnkronos.com/economia/consumi-russo-ancc-coop-consumatori-spaventati-da-rincari_7I7vlOXucHeAHRYejuv260"
+  },
+  {
+   "data": "2026-09-10T13:35:40+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Emma annuncia il rinvio del concerto, il video virale: \"Non posso avere sulla coscienza la vostra salute\"",
+   "url": "https://www.adnkronos.com/spettacoli/emma-concerto-annullato-video-cosa-ha-detto_UI6jiDIQh4Y5FZ56RQ9nu"
+  },
+  {
+   "data": "2026-09-10T13:34:25+00:00",
    "fonte": "ANSA",
-   "titolo": "Incidente nel reggino, morti uomo e le figlie di 14 e 8 anni",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/10/incidente-nel-reggino-morti-uomo-e-le-figlie-di-14-e-8-anni_ec7aca33-cffd-405e-b1a5-b7744af18aa0.html"
+   "titolo": "Media, donna austriaca muore dopo presunti abusi sessuali da parte del marito",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/10/media-donna-austriaca-muore-dopo-presunti-abusi-sessuali-da-parte-del_9d8fcc22-e006-47c2-8bb4-d36d39b0e4bc.html"
   },
   {
-   "data": "2026-09-10T09:39:46+00:00",
-   "fonte": "ANSA",
-   "titolo": "Agenzia Ue, domande di asilo Ue giù del 17% nei primi sei mesi 2026",
-   "url": "https://www.ansa.it/europa/notizie/rubriche/altrenews/2026/09/10/agenzia-ue-domande-di-asilo-ue-giu-del-17-nei-primi-sei-mesi-2026_6cafa310-f833-4ded-bd96-ce53ec6397c6.html"
+   "data": "2026-09-10T13:33:45+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Lui ha 53 anni, lei 24: a La volta buona arriva la proposta di matrimonio a sorpresa",
+   "url": "https://www.adnkronos.com/spettacoli/proposta-matrimonio-la-volta-buona-omar-gaia-oggi_59ITAQF8vx3h7swQrj3xwE"
   },
   {
-   "data": "2026-09-10T09:36:41+00:00",
+   "data": "2026-09-10T13:30:14+00:00",
    "fonte": "ANSA",
    "titolo": "Lavitola resta in carcere, confermata aggravante metodo mafioso",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/10/lavitola-resta-in-carcere-confermata-aggravante-metodo-mafioso_e8199802-8756-453c-bdb1-999cdb75b174.html"
   },
   {
-   "data": "2026-09-10T09:34:05+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Maltempo al Centro Nord: donna muore nel sottopasso allagato in Friuli. A Milano crolla il controsoffitto dell'aula bunker",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/10/maltempo-al-centro-nord-donna-annega-nel-sottopassaggio-allagato-in-friuli_34403fe3-5466-4503-931b-7875cec4dbfe.html"
-  },
-  {
-   "data": "2026-09-10T09:31:06+00:00",
-   "fonte": "ANSA",
-   "titolo": "Media, gli Houthi hanno conquistato la città yemenita di Mocha sul Mar Rosso",
-   "url": "https://www.ansa.it/sito/notizie/mondo/africa/2026/09/10/media-gli-houthi-hanno-conquistato-la-citta-yemenita-di-mocha-sul-mar_8fec3631-c83e-464d-ab93-cd657b9b14a1.html"
-  },
-  {
-   "data": "2026-09-10T09:27:03+00:00",
+   "data": "2026-09-10T13:25:07+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Oasis, la band contesta l'asta dell'archivio segreto da 1,6 milioni di sterline",
-   "url": "https://www.adnkronos.com/spettacoli/oasis-contro-asta-archivio-segreto_56VAq4yNfjboiJpkfUcpCI"
+   "titolo": "Consumi, Rapporto Coop: \"Italiani preoccupati da guerre e crisi economica, il 30% su soglia burning out\"",
+   "url": "https://www.adnkronos.com/economia/consumi-rapporto-coop-italiani-preoccupati-da-guerre-e-crisi-economica-il-30-su-soglia-burning-out_6qMFZFRABRzTc1gB8jQm1u"
   },
   {
-   "data": "2026-09-10T09:23:29+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Albero cade su due studenti universitari a Cassino, sono in ospedale",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/10/albero-cade-su-due-studenti-universitari-a-cassino-sono-in-ospedale_9d07d02d-9e2c-43e4-bcd6-b7fcc76195a8.html"
-  },
-  {
-   "data": "2026-09-10T09:23:06+00:00",
+   "data": "2026-09-10T13:24:15+00:00",
    "fonte": "ANSA",
-   "titolo": "Trump: 'Fateci finire il lavoro e ogni americano avrà 5.000 dollari'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/10/trump-fateci-finire-il-lavoro-e-ogni-americano-avra-5.000-dollari_e33d95c6-6f62-484c-a603-a204425a8b44.html"
+   "titolo": "In mostra a Londra le chitarre di Johnny Marr, un pezzo di storia degli Smiths",
+   "url": "https://www.ansa.it/canale_viaggi/notizie/mondo/2026/09/09/in-mostra-a-londra-le-chitarre-di-johnny-marr-un-pezzo-di-storia-degli-smiths_2a100158-d1f8-4c4e-8626-170c8d04e49c.html"
   },
   {
-   "data": "2026-09-10T09:21:23+00:00",
-   "fonte": "ANSA",
-   "titolo": "Apple svela il suo primo smartphone pieghevole, l'iPhone Duo",
-   "url": "https://www.ansa.it/canale_tecnologia/notizie/tecnologia/2026/09/09/ternus-con-nuovi-iphone18-spinta-sulle-funzionalita-ia_e65a74aa-1d16-4aec-a25e-1e841456cdae.html"
-  },
-  {
-   "data": "2026-09-10T09:12:32+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Chiara Ferragni, l'intervento al naso: \"Ecco perché è storto ora\"",
-   "url": "https://www.adnkronos.com/spettacoli/chiara-ferragni-naso-storto-intervento-motivo_7oDwvcUvlazhBAydBNJOio"
-  },
-  {
-   "data": "2026-09-10T09:09:59+00:00",
-   "fonte": "ANSA",
-   "titolo": "Legge elettorale, Vannacci: 'FdI sia coerente, voti le preferenze pure al Senato'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/10/vannacci-fdi-sia-coerente-voti-preferenze-pure-al-senato_aeca5f88-bac3-4d7c-aeb2-46cf82e7716e.html"
-  },
-  {
-   "data": "2026-09-10T09:06:40+00:00",
+   "data": "2026-09-10T13:22:45+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Temporali e piogge intense su tutta l'Italia, ma nel weekend torna il sole",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/10/temporali-e-piogge-intense-su-tutta-litalia-ma-nel-weekend-torna-il-sole_e436a334-493f-421a-8eed-1cbf7418bf7b.html"
   },
   {
-   "data": "2026-09-10T09:04:56+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Maltempo nel Veneziano, 130 richieste di intervento ai Vigili del fuoco",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/10/maltempo-nel-veneziano-130-richieste-di-intervento-ai-vigili-del-fuoco_4da23487-5174-4d41-9d27-b60d47cfdd18.html"
-  },
-  {
-   "data": "2026-09-10T09:00:23+00:00",
+   "data": "2026-09-10T13:22:26+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Ica Day, a Palermo confronto su innovazione, investimenti e governance infezioni",
-   "url": "https://www.adnkronos.com/cronaca/ica-day-a-palermo-confronto-su-innovazione-investimenti-e-governance-infezioni_6UK8syryBxqovLriKcDtCk"
+   "titolo": "Leao, pioggia di fischi all'esordio in Champions con il Galatasaray",
+   "url": "https://www.adnkronos.com/sport/leao-fischi-galatasaray-champions-cosa-e-successo_6m7nK2SFoo0UokenGFNew4"
   },
   {
-   "data": "2026-09-10T08:49:34+00:00",
+   "data": "2026-09-10T13:21:20+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Unicef, uno studente su 10 ha subito interruzioni a scuola per il clima",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/10/unicef-uno-studente-su-10-ha-subito-interruzioni-a-scuola-per-il-clima_80a6e68b-2264-4946-870b-1b5d3a8ca56a.html"
+  },
+  {
+   "data": "2026-09-10T13:21:16+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Minacce di morte ai figli, sindaca Gioia Tauro 'mi incateno al Comune'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/10/minacce-di-morte-ai-figli-sindaca-gioia-tauro-mi-incateno-al-comune_51337960-4f39-4c63-bab9-cac8d5381e2b.html"
+  },
+  {
+   "data": "2026-09-10T13:20:58+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "In Sardegna 171mila studenti tornano in classe il 16 settembre",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/10/in-sardegna-171mila-studenti-tornano-in-classe-il-16-settembre_526412a0-da47-4a0f-8f72-17d10d8121f4.html"
+  },
+  {
+   "data": "2026-09-10T13:17:33+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Us Open, tocca alle semifinali: il programma e dove vederle in chiaro",
-   "url": "https://www.adnkronos.com/sport/us-open-oggi-semifinali-programma-orari-dove-vederle-tv-streaming_4v2VwvEiDIpT6suhLFmi8c"
+   "titolo": "Migranti, crollo di arrivi a Lampedusa. Il sindaco: \"100mila nel 2023, quest'anno 10mila\"",
+   "url": "https://www.adnkronos.com/cronaca/lampedusa-migranti-arrivi-2026-dati_5rMVpQ3NCX2Iap5lokJuJK"
   },
   {
-   "data": "2026-09-10T08:41:36+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Operatrice Cup dell'ospedale di Venezia aggredita da un utente",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/10/operatrice-cup-dellospedale-di-venezia-aggredita-da-un-utente_440d9b22-a61f-4a8b-a204-0df6065ac9ea.html"
-  },
-  {
-   "data": "2026-09-10T08:40:28+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Maltempo in Toscana, 63.000 fulmini, allagamenti a Grosseto e nel Livornese",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/10/maltempo-in-toscana-63.000-fulmini-allagamenti-a-grosseto-e-nel-livornese_c2384b5d-6a72-42ea-9b69-b28721446bce.html"
-  },
-  {
-   "data": "2026-09-10T08:35:16+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Operaio investito dal treno, 3 patteggiamenti e una condanna a 8 mesi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/10/operaio-investito-dal-treno-3-patteggiamenti-e-una-condanna-a-8-mesi_678e17bf-98ec-40a8-ae0b-67bad7d8937d.html"
-  },
-  {
-   "data": "2026-09-10T08:34:00+00:00",
+   "data": "2026-09-10T13:01:39+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Bomba d'acqua su Roma, il maltempo colpisce la capitale dopo mesi di afa record",
-   "url": "https://www.adnkronos.com/cronaca/maltempo-roma-bomba-dacqua_vUsTYfYmotptNKTD4zvYo"
+   "titolo": "Poste, avanti sviluppo fotovoltaico: target 1300 impianti entro fine anno",
+   "url": "https://www.adnkronos.com/economia/poste-avanti-sviluppo-fotovoltaico-target-1300-impianti-entro-fine-anno_35bXqpWHkes9Q4r1MqMdLe"
   },
   {
-   "data": "2026-09-10T08:29:37+00:00",
+   "data": "2026-09-10T12:53:42+00:00",
    "fonte": "ANSA",
-   "titolo": "Venezia 83, Edoardo De Angelis presenta “Il fuoco che ti porti dentro”",
-   "url": "https://www.ansa.it/sito/videogallery/spettacolo/2026/09/10/venezia-83-edoardo-de-angelis-presenta-il-fuoco-che-ti-porti-dentro_d5356a4d-9d9c-44fb-89dd-12c12ef4c723.html"
+   "titolo": "Legge elettorale: Casellati, 'il governo si rimetterà all'Aula sulle preferenze'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/10/legge-elettorale-riunione-di-maggioranza-in-senato-con-tecnici-casellati-e-capigruppo_cf34bbcc-29f3-4188-9cca-0c628eba40e4.html"
   },
   {
-   "data": "2026-09-10T08:29:29+00:00",
+   "data": "2026-09-10T12:53:22+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Baricco a MAREtica: 'Le nuove generazioni possono salvare il mondo'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/10/baricco-a-maretica-le-nuove-generazioni-possono-salvare-il-mondo_a91dc873-c03f-4901-80b7-a5b886f0db89.html"
+  },
+  {
+   "data": "2026-09-10T12:50:36+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Certificato di malattia, si cambia e diventa retroattivo: cosa significa",
-   "url": "https://www.adnkronos.com/cronaca/malattia-certificato-lavoro-inps-retroattivo-cosa-significa_2XdjwoIjihS4lr4H3xXJsg"
+   "titolo": "Starbucks, nuovo store alla stazione Venezia Santa Lucia",
+   "url": "https://www.adnkronos.com/cronaca/starbucks-nuovo-store-alla-stazione-venezia-santa-lucia_tSmJc0JJvygqyTVPDTzEM"
   },
   {
-   "data": "2026-09-10T08:24:31+00:00",
+   "data": "2026-09-10T12:37:06+00:00",
    "fonte": "ANSA",
-   "titolo": "Us Open: Zverev facile in semifinale, Bolelli-Vavassori salutano New York",
-   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/10/us-open-zverev-facile-in-semifinale-bolelli-vavassori-salutano-new-york_5af806af-d3bf-417d-a438-a4c812f7df7f.html"
+   "titolo": "Omicidio di Aurora Tila, ridotta a 15 anni la condanna per l'ex fidanzato",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/10/omicidio-aurora-ridotta-a-15-anni-la-condanna-per-lex-imputato_80279aaf-1b69-49c9-b3f3-c02d14b1ab63.html"
   },
   {
-   "data": "2026-09-10T08:22:26+00:00",
+   "data": "2026-09-10T12:27:38+00:00",
    "fonte": "ANSA",
-   "titolo": "Riapre dopo oltre 20 anni la scuola a Ginostra, primo giorno in classe per Aysha",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/10/riapre-dopo-oltre-20-anni-la-scuola-a-ginostra-primo-giorno-in-classe-per_5f91d433-4b68-4aa6-a859-5656d484f086.html"
+   "titolo": "Famiglia di quattro persone muore in un attacco israeliano a Gaza",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/10/famiglia-di-quattro-persone-muore-in-un-attacco-israeliano-a-gaza_4607641d-e732-437e-a877-7d91fe8221ce.html"
   },
   {
-   "data": "2026-09-10T08:16:34+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Donna muore annegata nell'auto intrappolata nel sottopassaggio allagato",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/10/donna-muore-annegata-nellauto-intrappolata-nel-sottopassaggio-allagato_b193b201-1756-42b9-a19b-cdc5a0ccca2d.html"
-  },
-  {
-   "data": "2026-09-10T08:16:09+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Maltempo, forti disagi in Fvg e nel collegamento ferroviario con il Veneto",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/10/maltempo-forti-disagi-in-fvg-e-nel-collegamento-ferroviario-con-il-veneto_a6298bff-cf53-46a6-b446-7bf9241af047.html"
-  },
-  {
-   "data": "2026-09-10T08:14:58+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Arrestato nel 1944, ex deportato torna in visita al carcere di Bolzano",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/10/arrestato-nel-1944-ex-deportato-torna-in-visita-al-carcere-di-bolzano_6a553be3-218b-4283-aba5-df025564e7c1.html"
-  },
-  {
-   "data": "2026-09-10T08:11:57+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Venezia 83, nona giornata: ‘Naza’, Martone e la serie di Fanelli",
-   "url": "https://www.adnkronos.com/spettacoli/mostra-cinema-venezia-oggi-programma-fanelli-naza-martone_6ht9Sn93AN9Nwn3HfPLkXk"
-  },
-  {
-   "data": "2026-09-10T08:11:36+00:00",
+   "data": "2026-09-10T12:25:24+00:00",
    "fonte": "ANSA",
-   "titolo": "Meta lancia Muse, l'agente IA che può gestire acquisti, e-mail e viaggi",
-   "url": "https://www.ansa.it/canale_tecnologia/notizie/software_app/2026/09/09/meta-lancia-muse-lagente-ia-che-puo-gestire-acquisti-e-mail-e-viaggi_ae5674b9-6965-4e87-91b9-92ceb16ba6f7.html"
+   "titolo": "Camminano di nuovo 4 giovani paralizzati, tecnica nata in Italia",
+   "url": "https://www.ansa.it/canale_scienza/notizie/biotech/2026/09/07/camminano-di-nuovo-4-giovani-paralizzati-tecnica-nata-in-italia-_9273aeb0-445a-4a7f-bf9c-062eaca3c994.html"
+  },
+  {
+   "data": "2026-09-10T12:23:27+00:00",
+   "fonte": "ANSA",
+   "titolo": "In punta di piedi sulle bottiglie vuote, l’equilibrio formidabile di una ballerina americana",
+   "url": "https://www.ansa.it/sito/videogallery/short_video/2026/09/10/in-punta-di-piedi-sulle-bottiglie-vuote-lequilibrio-formidabile-di-una-ballerina-americana_de893848-47ca-4ada-8ed0-770525d9aabf.html"
+  },
+  {
+   "data": "2026-09-10T12:22:55+00:00",
+   "fonte": "ANSA",
+   "titolo": "Macron: \"Vorrei entro 10 anni il primo viaggio spaziale europeo con astronauti\"",
+   "url": "https://www.ansa.it/europa/notizie/rubriche/altrenews/2026/09/10/macron-vorrei-entro-10-anni-il-primo-viaggio-spaziale-europeo-con-astronauti_de2147d0-9fb1-4130-b4a1-9c6a13d19ee3.html"
+  },
+  {
+   "data": "2026-09-10T12:19:38+00:00",
+   "fonte": "ANSA",
+   "titolo": "È vero che le zanzare pungono alcune persone più di altre?",
+   "url": "https://www.ansa.it/sito/podcast/ansa_verified/2026/09/10/e-vero-che-le-zanzare-pungono-alcune-persone-piu-di-altre_4c147164-ac1c-48ed-adba-947e72f6941d.html"
   }
  ]
 }
