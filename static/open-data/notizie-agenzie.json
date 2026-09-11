@@ -5,11 +5,17 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-10T22:27:56+00:00",
+  "generato": "2026-09-11T00:23:22+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-10T22:26:15+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Maltempo, domani ancora rovesci e bora in Fvg",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/maltempo-domani-ancora-rovesci-e-bora-in-fvg_beca285c-dad8-4688-9459-0149b9e7e504.html"
+  },
   {
    "data": "2026-09-10T22:02:14+00:00",
    "fonte": "ADNKRONOS",
@@ -183,12 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Maltempo: donna muore nel sottopasso allagato in Friuli. Un secondo decesso in Toscana a causa di una tromba d'aria",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/10/maltempo-donna-muore-nel-sottopasso-allagato-in-friuli.-a-milano-crolla-il-controsoffitto_34403fe3-5466-4503-931b-7875cec4dbfe.html"
-  },
-  {
-   "data": "2026-09-10T17:25:28+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Un paese intero per l'addio a Lorena Isceri, 'cammini nella luce'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/09/i-funerali-lorena-lo-striscione-degli-amici-cresciuta-con-noi-cammini-nella_4484bbb0-2156-4a4c-9c60-32b38b9d9b8b.html"
   }
  ]
 }
