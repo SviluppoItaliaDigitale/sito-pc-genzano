@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://www.gdacs.org/gdacsapi/api/events/geteventlist/EVENTS4APP",
-  "generato": "2026-09-11T19:49:11+00:00",
+  "generato": "2026-09-11T22:19:20+00:00",
   "licenza": "GDACS — Global Disaster Alert and Coordination System (dati pubblici UE/ONU)",
   "nota": "Copia locale per lettura same-origin dalla Sala situazioni."
  },
@@ -41,6 +41,37 @@
   },
   {
    "alertlevel": "Green",
+   "country": "Indonesia",
+   "datemodified": "2026-09-11T21:52:04",
+   "description": "Earthquake in Indonesia",
+   "episodeid": 1732548,
+   "eventid": 1564809,
+   "eventtype": "EQ",
+   "fromdate": "2026-09-11T21:23:55",
+   "iso3": "IDN",
+   "lat": -5.0932,
+   "lon": 106.903,
+   "name": "Earthquake in Indonesia",
+   "severitytext": "Magnitude 6.6M, Depth:358.597km",
+   "todate": "2026-09-11T21:23:55"
+  },
+  {
+   "alertlevel": "Green",
+   "datemodified": "2026-09-11T21:14:49",
+   "description": "Tropical Cyclone NORBERT-26",
+   "episodeid": 9,
+   "eventid": 1001320,
+   "eventname": "NORBERT-26",
+   "eventtype": "TC",
+   "fromdate": "2026-09-09T21:00:00",
+   "lat": 16.8,
+   "lon": -125.7,
+   "name": "Tropical Cyclone NORBERT-26",
+   "severitytext": "Tropical Storm (maximum wind speed of 130 km/h)",
+   "todate": "2026-09-11T21:00:00"
+  },
+  {
+   "alertlevel": "Green",
    "country": "Colombia",
    "datemodified": "2026-09-11T17:22:42",
    "description": "Earthquake in Colombia",
@@ -54,21 +85,6 @@
    "name": "Earthquake in Colombia",
    "severitytext": "Magnitude 4.7M, Depth:61.088km",
    "todate": "2026-09-11T16:42:30"
-  },
-  {
-   "alertlevel": "Green",
-   "datemodified": "2026-09-11T18:02:22",
-   "description": "Tropical Cyclone NORBERT-26",
-   "episodeid": 8,
-   "eventid": 1001320,
-   "eventname": "NORBERT-26",
-   "eventtype": "TC",
-   "fromdate": "2026-09-09T21:00:00",
-   "lat": 16.6,
-   "lon": -124.7,
-   "name": "Tropical Cyclone NORBERT-26",
-   "severitytext": "Tropical Storm (maximum wind speed of 130 km/h)",
-   "todate": "2026-09-11T15:00:00"
   },
   {
    "alertlevel": "Green",
@@ -377,7 +393,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-09-11T11:59:41",
+   "datemodified": "2026-09-11T19:56:12",
    "description": "Forest fires in Australia",
    "episodeid": 4,
    "eventid": 1031878,
@@ -745,7 +761,7 @@
   {
    "alertlevel": "Green",
    "country": "Indonesia",
-   "datemodified": "2026-09-11T11:57:37",
+   "datemodified": "2026-09-11T19:54:46",
    "description": "Forest fires in Indonesia",
    "episodeid": 16,
    "eventid": 1031689,
@@ -884,6 +900,21 @@
    "name": "Earthquake in China",
    "severitytext": "Magnitude 4.7M, Depth:10km",
    "todate": "2026-09-10T16:53:33"
+  },
+  {
+   "alertlevel": "Green",
+   "country": "Galapagos Islands Region",
+   "datemodified": "2026-09-11T21:18:42",
+   "description": "Earthquake in Galapagos Islands Region",
+   "episodeid": 1732544,
+   "eventid": 1564744,
+   "eventtype": "EQ",
+   "fromdate": "2026-09-10T14:15:53",
+   "lat": 1.7027,
+   "lon": -90.6073,
+   "name": "Earthquake in Galapagos Islands Region",
+   "severitytext": "Magnitude 4.7M, Depth:10km",
+   "todate": "2026-09-10T14:15:53"
   },
   {
    "alertlevel": "Green",
@@ -1570,38 +1601,6 @@
    "lon": 29.9651,
    "name": "Forest fires in Zambia",
    "severitytext": "Green impact for forestfire in 10138 ha",
-   "todate": "2026-09-10T00:00:00"
-  },
-  {
-   "alertlevel": "Green",
-   "country": "Zambia",
-   "datemodified": "2026-09-11T19:15:11",
-   "description": "Forest fires in Zambia",
-   "episodeid": 4,
-   "eventid": 1031831,
-   "eventtype": "WF",
-   "fromdate": "2026-09-02T00:00:00",
-   "iso3": "ZMB",
-   "lat": -11.31,
-   "lon": 31.0146,
-   "name": "Forest fires in Zambia",
-   "severitytext": "Green impact for forestfire in 35365 ha",
-   "todate": "2026-09-10T00:00:00"
-  },
-  {
-   "alertlevel": "Green",
-   "country": "Zambia",
-   "datemodified": "2026-09-11T19:07:24",
-   "description": "Forest fires in Zambia",
-   "episodeid": 3,
-   "eventid": 1031828,
-   "eventtype": "WF",
-   "fromdate": "2026-09-05T00:00:00",
-   "iso3": "ZMB",
-   "lat": -11.41,
-   "lon": 30.9208,
-   "name": "Forest fires in Zambia",
-   "severitytext": "Green impact for forestfire in 7000 ha",
    "todate": "2026-09-10T00:00:00"
   }
  ]

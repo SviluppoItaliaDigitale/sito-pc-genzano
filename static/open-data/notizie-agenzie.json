@@ -5,28 +5,160 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-11T19:49:07+00:00",
+  "generato": "2026-09-11T22:19:19+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-11T19:43:25+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "SuperEnalotto centrato a La Valletta Brianza, un '6' da 223 milioni",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/superenalotto-centrato-a-la-valletta-brianza-un-6-da-223-milioni_6ee23415-734d-4487-bf53-80530eedec3e.html"
+   "data": "2026-09-11T22:13:28+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Putin: \"L'Europa si spinge verso la guerra con la Russia\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/putin-russia-europa-guerra-minaccia_1cx7qaQ1nnv4DGg0oOwJQo"
   },
   {
-   "data": "2026-09-11T19:27:32+00:00",
+   "data": "2026-09-11T22:10:08+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Addio caldo, afa finalmente fuori gioco: nel weekend tutta l'Italia in verde, quanto dura",
+   "url": "https://www.adnkronos.com/cronaca/previsioni-meteo-12-settembre-bollini-afa_4IdRqZP3OSx3JSr8Ml4gvi"
+  },
+  {
+   "data": "2026-09-11T22:07:26+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sepsi killer nel primo mese di vita, quali sono le cause e i sintomi per i neonati",
+   "url": "https://www.adnkronos.com/salute/sanita/sepsi-killer-allarme-neonati-cause-sintomi_40KpO7OzFO5dSh7cAuR8xK"
+  },
+  {
+   "data": "2026-09-11T22:03:36+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Caro carburante, bonus o aiuti a pensionati: le possibili misure del governo",
+   "url": "https://www.adnkronos.com/economia/caro-carburante-prezzi-bonus-pensionati_3jYZsULcbCOYOVFC2URcjy"
+  },
+  {
+   "data": "2026-09-11T21:53:16+00:00",
+   "fonte": "ANSA",
+   "titolo": "Bonino e l'allarme dopo la visita a Srebrenica: 'Qui c'è un genocidio'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/11/bonino-e-lallarme-dopo-la-visita-a-srebrenica-qui-ce-un-genocidio_d35682f7-490f-42d2-b1a0-c6bae1566e79.html"
+  },
+  {
+   "data": "2026-09-11T21:44:01+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Caso Elkann, Margherita non sarà parte civile contro John",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/margherita-non-sara-parte-civile-contro-figlio-john-elkann_48c8cc07-05b0-4a73-a65b-957463bd4c2d.html"
+  },
+  {
+   "data": "2026-09-11T21:43:30+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Lascia il vescovo con la Tesla, il Papa accetta le dimissioni",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/lascia-il-vescovo-con-la-tesla-il-papa-accetta-le-dimissioni_896685d6-74a3-4967-9cb8-b7835f7344a7.html"
+  },
+  {
+   "data": "2026-09-11T21:43:13+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Prima sentenza su urbanistica Milano: 'Buona fede e nessun accordo illecito'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/prima-sentenza-su-urbanistica-milano-buona-fede-e-nessun-accordo-illecito_0a894104-32b6-4bd6-bdd8-997d491fb36f.html"
+  },
+  {
+   "data": "2026-09-11T21:41:09+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Travolge e uccide donna di 46 anni in bici, poi fugge",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/travolta-e-uccisa-in-bicicletta-a-viareggio-trovato-il-conducente-pirata_c78c04f8-c8c3-44ae-b4a8-7d35cf072627.html"
+  },
+  {
+   "data": "2026-09-11T21:35:41+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Sequestrata e stuprata in casa in pieno centro a Roma",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/sequestro-violenza-e-rapina-ai-danni-di-una-donna-nel-centro-di-roma-un-arresto_002765bf-bb4b-462c-8124-0b94b4255df5.html"
+  },
+  {
+   "data": "2026-09-11T21:34:00+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Soffoca la moglie malata con un cuscino e poi chiama il 112",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/uccide-la-moglie-81enne-nel-cagliaritano-e-poi-chiama-i-carabinieri_deee53bf-c912-41f9-a38a-38569bcdbe97.html"
+  },
+  {
+   "data": "2026-09-11T21:32:57+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Neonati sepolti, pm impugnano l'assoluzione per il primo omicidio",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/neonati-sepolti-pm-impugnano-lassoluzione-per-il-primo-omicidio_60669151-9221-458b-a5ba-2a03d16c8d51.html"
+  },
+  {
+   "data": "2026-09-11T21:25:55+00:00",
+   "fonte": "ANSA",
+   "titolo": "Fitch conferma il rating dell'Italia a 'BBB+' con outlook stabile",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/11/fitch-conferma-il-rating-dellitalia-a-bbb-con-outlook-stabile_cd603873-f7bf-425a-b7fc-291cf68abdc9.html"
+  },
+  {
+   "data": "2026-09-11T21:19:58+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "#AccadeOggi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/10/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
+  },
+  {
+   "data": "2026-09-11T21:05:37+00:00",
+   "fonte": "ANSA",
+   "titolo": "Putin: 'Mandare truppe europee in Ucraina sarebbe una guerra contro la Russia'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/09/11/putin-mandare-truppe-europee-in-ucraina-sarebbe-una-guerra-contro-la-russia_f19b66c4-282a-460b-99ab-2823e99b47a9.html"
+  },
+  {
+   "data": "2026-09-11T21:04:48+00:00",
+   "fonte": "ANSA",
+   "titolo": "Addio a Emma Bonino, una vita in prima linea per i diritti",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/11/addio-a-emma-bonino-una-vita-in-prima-linea-per-i-diritti_759e1d37-70c0-4a4e-836e-dc86007ae0b8.html"
+  },
+  {
+   "data": "2026-09-11T20:53:30+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Buona la prima per Vanoli, la Fiorentina vince 4-2 a Venezia con una tripletta di Mastantuono",
+   "url": "https://www.adnkronos.com/sport/la-fiorentina-vince-4-2-a-venezia-tripletta-per-mastantuono_53YJFHdrm19hIylDbUQ65m"
+  },
+  {
+   "data": "2026-09-11T20:38:03+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Superenalotto, quanto incassa lo Stato del Jackpot da record e come riscuotere la vincita milionaria",
+   "url": "https://www.adnkronos.com/cronaca/superenalotto-oggi-estrazione-11-settembre-jackpot-tassa-riscossione_3rZH2B30F1DuXfzes0HHOQ"
+  },
+  {
+   "data": "2026-09-11T20:24:27+00:00",
+   "fonte": "ANSA",
+   "titolo": "SuperEnalotto centrato a Valletta Brianza in Lombardia, un '6' da 223 milioni",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/superenalotto-centrato-a-la-valletta-brianza-un-6-da-223-milioni_13728d7c-29d2-4ee9-92cf-92e71d66434f.html"
+  },
+  {
+   "data": "2026-09-11T20:15:36+00:00",
+   "fonte": "ANSA",
+   "titolo": "Una diplomatica senza frontiere, Bonino e il diritto oltre i confini",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/11/una-diplomatica-senza-frontiere-bonino-e-il-diritto-oltre-i-confini_721233ae-465f-4ce7-92b5-a01891e9032a.html"
+  },
+  {
+   "data": "2026-09-11T20:14:52+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ultimate Championships, Larissa Iapichino vince nel salto in lungo con 6,90",
+   "url": "https://www.adnkronos.com/sport/iapichino-trionfa-nel-lungo-agli-ultimate-championships_3wPCIV5BV6y7WpXcjfNWvO"
+  },
+  {
+   "data": "2026-09-11T20:09:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Francia, treno deraglia sulla tratta Rouen-Caen: 44 feriti",
+   "url": "https://www.adnkronos.com/internazionale/esteri/francia-rouen-caen-treno-deraglia_4C6muLPZoEoigy7aVMrcX2"
+  },
+  {
+   "data": "2026-09-11T20:06:47+00:00",
    "fonte": "ANSA",
    "titolo": "A Venezia il potere che opprime, tra sensi di colpa e fughe",
    "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/11/a-venezia-il-potere-che-opprime-tra-sensi-di-colpa-e-fughe_7ee5a537-25d6-4674-8130-53944d49fabf.html"
   },
   {
-   "data": "2026-09-11T19:26:20+00:00",
+   "data": "2026-09-11T19:48:13+00:00",
    "fonte": "ANSA",
-   "titolo": "++ SuperEnalotto centrato a La Valletta Brianza, un '6' da 223 milioni ++",
-   "url": "https://www.ansa.it/sito/notizie/flash/2026/09/11/superenalotto-centrato-a-la-valletta-brianza-un-6-da-223-milioni_cfcd6905-a7ec-4dd1-ac68-3d02eafb67a0.html"
+   "titolo": "Gli Houthi avanzano, 'il Mar Rosso è nostro'. Riad attacca Mocha",
+   "url": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/09/11/axios-bin-salman-ha-esortato-trump-a-colpire-gli-houthi_b1c8f056-9099-4c59-a149-8ad9a2dfd208.html"
+  },
+  {
+   "data": "2026-09-11T19:43:25+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "SuperEnalotto centrato a La Valletta Brianza, un '6' da 223 milioni",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/superenalotto-centrato-a-la-valletta-brianza-un-6-da-223-milioni_6ee23415-734d-4487-bf53-80530eedec3e.html"
   },
   {
    "data": "2026-09-11T19:22:10+00:00",
@@ -39,12 +171,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Fiori e lacrime per Denise, Calabresi 'Milano le dedichi un luogo vivo'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/fiori-e-lacrime-per-denise-calabresi-milano-le-dedichi-un-luogo-vivo_f916a6de-a487-4cda-bb01-90554536f3de.html"
-  },
-  {
-   "data": "2026-09-11T19:21:09+00:00",
-   "fonte": "ANSA",
-   "titolo": "Serie A: In campo Venezia-Fiorentina 1-2 DIRETTA",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/11/serie-a-venezia-fiorentina-in-campo-alle-20.45-diretta_d3471274-d0b3-4384-b295-b687decf94b2.html"
   },
   {
    "data": "2026-09-11T19:16:41+00:00",
@@ -63,132 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Operaio morto dopo caduta nel vuoto a Barletta, cinque indagati",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/operaio-morto-dopo-caduta-nel-vuoto-a-barletta-cinque-indagati_f569c0c2-0c3a-4ffc-9b07-1e86a8be972d.html"
-  },
-  {
-   "data": "2026-09-11T18:49:43+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Bonino e l'allarme dopo la visita a Srebrenica, 'qui c'è un genocidio'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/bonino-e-lallarme-dopo-la-visita-a-srebrenica-qui-ce-un-genocidio_ea7423c4-a220-4d42-8fe8-dcc9ccbce1cd.html"
-  },
-  {
-   "data": "2026-09-11T18:48:32+00:00",
-   "fonte": "ANSA",
-   "titolo": "Addio a Emma Bonino, una vita in prima linea per i diritti",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/11/addio-a-emma-bonino-una-vita-in-prima-linea-per-i-diritti_759e1d37-70c0-4a4e-836e-dc86007ae0b8.html"
-  },
-  {
-   "data": "2026-09-11T18:39:48+00:00",
-   "fonte": "ANSA",
-   "titolo": "Vance lancia la sfida al 2028, i Maga a Dallas lo incoronano",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/11/le-prove-di-vance-per-il-2028-i-dem-il-partito-dellodio_d25ae341-431b-4bfa-b7c4-eccf41a60dd2.html"
-  },
-  {
-   "data": "2026-09-11T18:34:58+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Donna muore dopo alcuni giorni da un intervento, pm apre inchiesta",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/donna-muore-dopo-alcuni-giorni-da-un-intervento-pm-apre-inchiesta_cd2de6fa-fa24-4ec2-a457-514e038dd9ca.html"
-  },
-  {
-   "data": "2026-09-11T18:34:51+00:00",
-   "fonte": "ANSA",
-   "titolo": "11 settembre, 25 anni dopo le Torri gemelle l'America si ferma",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/11/11-settembre-25-anni-fa-gli-attentati-trump-non-dimenticheremo-mai-per-questo_e7284ef4-cafb-420b-b34b-772c08a753b7.html"
-  },
-  {
-   "data": "2026-09-11T18:22:59+00:00",
-   "fonte": "ANSA",
-   "titolo": "Travolge e uccide donna di 46 anni in bici, poi fugge",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/travolta-e-uccisa-in-bicicletta-a-viareggio-trovato-il-conducente-pirata_c78c04f8-c8c3-44ae-b4a8-7d35cf072627.html"
-  },
-  {
-   "data": "2026-09-11T18:20:03+00:00",
-   "fonte": "ANSA",
-   "titolo": "Milleri: 'Non capisco Leonardo Maria, si chiuda successione'",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/11/milleri-non-capisco-la-reazione-di-leonardo-maria-del-vecchio_a56d4780-e28e-4ab0-a71c-1257e69ea13f.html"
-  },
-  {
-   "data": "2026-09-11T18:17:26+00:00",
-   "fonte": "ANSA",
-   "titolo": "Morte di Denise, gli inquirenti ascolteranno il compagno",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/morte-di-denise-gli-inquirenti-ascolteranno-il-compagno_ae0de50e-22d0-4331-92e1-35972bff6b5a.html"
-  },
-  {
-   "data": "2026-09-11T18:14:56+00:00",
-   "fonte": "ANSA",
-   "titolo": "Confermato blocco dell'area a caldo ex Ilva, riprendono i licenziamenti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/i-giudici-confermano-il-blocco-dellarea-a-caldo-dellex-ilva-_f68a4549-f259-40f3-9846-d433677488e8.html"
-  },
-  {
-   "data": "2026-09-11T18:11:49+00:00",
-   "fonte": "ANSA",
-   "titolo": "Morte Domenico, per la superperizia il piccolo si poteva salvare",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/il-cuore-artificiale-avrebbe-salvato-domenico-_c199751d-4c4a-495e-b423-d296a04238a0.html"
-  },
-  {
-   "data": "2026-09-11T18:11:42+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "US Open, oggi semifinale Zverev-Khachanov - Diretta",
-   "url": "https://www.adnkronos.com/sport/diretta-us-open-zverev-khachanov-live_5ln4uOEOWf8rqPI5kuTAoY"
-  },
-  {
-   "data": "2026-09-11T18:06:07+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Cagliari, soffoca la moglie 81enne e chiama i carabinieri: \"L'ho uccisa\"",
-   "url": "https://www.adnkronos.com/cronaca/cagliari-marioto-moglie-omicidio_51IsTY2YntexL1Mui8dtju"
-  },
-  {
-   "data": "2026-09-11T17:57:54+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Rapina a Donnarumma, Procura di Parigi chiede 10 anni per 'Ganito'",
-   "url": "https://www.adnkronos.com/sport/rapina-a-donnarumma-procura-parigi-chiede-10-ann-per-ganito_5JAaEiThhacGyTbgvTsPTS"
-  },
-  {
-   "data": "2026-09-11T17:52:27+00:00",
-   "fonte": "ANSA",
-   "titolo": "La Svezia va al voto, testa a testa con l'incognita ultradestra",
-   "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/09/11/la-svezia-va-al-voto-testa-a-testa-con-lincognita-ultradestra_3b7b89f4-b8ac-42ab-9f94-547b6277641c.html"
-  },
-  {
-   "data": "2026-09-11T17:37:47+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Regina (Confindustria): \"Con prezzi energia alle stelle si rischia distruzione tessuto industriale italiano\"",
-   "url": "https://www.adnkronos.com/economia/regina-confindustria-energia-prezzi-industria-italia_7jVf8oYHzqMT95JlDVaXuQ"
-  },
-  {
-   "data": "2026-09-11T17:33:14+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Dopo utilizzo droni con IA,su Cervino stop ricerche skyrunner dispersa",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/dopo-utilizzo-droni-con-iasu-cervino-stop-ricerche-skyrunner-dispersa_e6480d26-176d-4daa-8607-da7b4d41db2a.html"
-  },
-  {
-   "data": "2026-09-11T17:28:53+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Fava (Inps): \"Aumento produttività realizzato grazie ad Ai deve contribuire al sistema previdenziale\"",
-   "url": "https://www.adnkronos.com/economia/intelligenza-artificiale-lavoro-sistema-previdenziale-fava-inps_7kKPkFTdjkgVGFpQ3eI8Is"
-  },
-  {
-   "data": "2026-09-11T17:28:09+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Caso Daniela Ruggi, al Ris di Parma esami su alcuni oggetti sequestrati",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/caso-daniela-ruggi-al-ris-di-parma-esami-su-alcuni-oggetti-sequestrati_e3fbb3ba-ec54-4b6b-8690-fc9913afa4c9.html"
-  },
-  {
-   "data": "2026-09-11T17:22:52+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Crepet: \"Sinner lotta con i suoi demoni, mi è simpatico\"",
-   "url": "https://www.adnkronos.com/sport/sinner-infortunio-alcaraz-crepet_2QQjmWpF3ot4GxI4KACFY8"
-  },
-  {
-   "data": "2026-09-11T17:05:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Il Como vola, la scuola vicino allo stadio chiude per costruire... un parcheggio? Il sindaco: \"Calcio non c’entra\"",
-   "url": "https://www.adnkronos.com/sport/como-vola-scuola-vicino-stadio-chiude-parcheggio-cosa-succede-intervista-sindaco_36P571v1xGwXsoElZhTI3y"
-  },
-  {
-   "data": "2026-09-11T17:01:58+00:00",
-   "fonte": "ANSA",
-   "titolo": "Di Battista è partito da Cuba, il rientro domani a Roma",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/11/di-battista-partito-da-cuba-per-rientrare-in-italia_5a18ec74-acdd-477e-a806-8fe2d8382669.html"
   }
  ]
 }
