@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-11T09:31:27+00:00",
+  "generato": "2026-09-11T13:45:31+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-11T09:22:50+00:00",
+   "data": "2026-09-11T13:26:24+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sinner torna a Montecarlo, ora allenamenti: come sta e quando torna in campo",
+   "url": "https://www.adnkronos.com/sport/sinner-infortunio-come-sta-quando-torna-campo_2cM4ZCzm1nfx64sc0xa3UE"
+  },
+  {
+   "data": "2026-09-11T13:19:39+00:00",
    "fonte": "ANSA",
-   "titolo": "Intervista all'ANSA. Bonino ricorda Pannella a 10 anni dalla morte del leader radicale: 'Mi ha segnato la vita come nessuno'",
+   "titolo": "Le interviste e gli appelli di Emma Bonino, i video",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/11/le-interviste-e-gli-appelli-di-emma-bonino-i-video_ade687ec-b0c2-42d4-95e6-9eeb569e0f39.html"
+  },
+  {
+   "data": "2026-09-11T13:17:12+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'Ue: 'Con l'approvazione dei nuovi 6,1 miliardi, allocati tutti i 28,3 miliardi per la difesa dell'Ucraina nel 2026'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/11/lue-con-lapprovazione-dei-nuovi-61-miliardi-allocati-tutti-i-283-miliardi_237aa4d7-9543-4e4a-ab18-b4f255b5b420.html"
+  },
+  {
+   "data": "2026-09-11T13:15:42+00:00",
+   "fonte": "ANSA",
+   "titolo": "Intervista all'ANSA. Bonino e il rapporto con Pannella: 'Mi ha segnato la vita come nessuno'",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/09/11/intervista-allansa.-bonino-ricorda-pannella-a-10-anni-dalla-morte-del-leader_73d9c095-f2f9-4857-992d-8804af92ecf2.html"
   },
   {
-   "data": "2026-09-11T09:18:19+00:00",
+   "data": "2026-09-11T13:14:44+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Dall'arresto per aborto al Comune, l'ex sindaca di Bra ricorda Emma Bonino",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/dallarresto-per-aborto-al-comune-lex-sindaca-di-bra-ricorda-emma-bonino_d73ce954-8a6b-4dba-8c30-2a5b514ec9f2.html"
+  },
+  {
+   "data": "2026-09-11T13:14:24+00:00",
+   "fonte": "ANSA",
+   "titolo": "I giudici confermano il blocco dell'area a caldo dell'ex Ilva",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/i-giudici-confermano-il-blocco-dellarea-a-caldo-dellex-ilva-_f68a4549-f259-40f3-9846-d433677488e8.html"
+  },
+  {
+   "data": "2026-09-11T13:13:32+00:00",
+   "fonte": "ANSA",
+   "titolo": "Le chat di Delmastro, la Procura di Roma solleva un conflitto di attribuzione",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/11/le-chat-di-delmastro-la-procura-roma-solleva-un-conflitto-di-attribuzione_a7f8ca90-2a9b-42ce-a6e4-396cb28cfe3e.html"
+  },
+  {
+   "data": "2026-09-11T13:13:12+00:00",
    "fonte": "ANSA",
    "titolo": "Addio a Emma Bonino, una vita in prima linea per i diritti",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/09/11/addio-a-emma-bonino-una-vita-in-prima-linea-per-i-diritti_759e1d37-70c0-4a4e-836e-dc86007ae0b8.html"
   },
   {
-   "data": "2026-09-11T09:17:07+00:00",
-   "fonte": "ANSA",
-   "titolo": "Istat, nel secondo trimestre tasso di occupazione record al 63,1%",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/11/nel-secondo-trimestre-tasso-di-occupazione-record-al-631_385824be-64f8-4262-b533-774d5b1cd51a.html"
-  },
-  {
-   "data": "2026-09-11T09:16:45+00:00",
-   "fonte": "ANSA",
-   "titolo": "11 settembre: 25 anni fa gli attentati, oggi gli Stati Uniti ricordano le vittime",
-   "url": "https://www.ansa.it/sito/notizie/mondo/africa/2026/09/11/11-settembre-25-anni-fa-gli-attentati-oggi-gli-stati-uniti-ricordano-le-vittime_e7284ef4-cafb-420b-b34b-772c08a753b7.html"
-  },
-  {
-   "data": "2026-09-11T09:16:28+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Harry conferma i primi impegni pubblici in Gb, sarà un incubo che si avvera per Buckingham Palace?",
-   "url": "https://www.adnkronos.com/internazionale/esteri/harry-impegni-pubblici-londra_1kfMhrWJulyclKDM1WT5BO"
-  },
-  {
-   "data": "2026-09-11T09:08:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "A Roma 56enne sequestrata, violentata e rapinata in casa a Monti: arrestato l'aggressore",
-   "url": "https://www.adnkronos.com/cronaca/roma-rapina-sequestro-abuso-rione-monti_2Gbzt9cysbK6urjHKr6vgE"
-  },
-  {
-   "data": "2026-09-11T09:01:34+00:00",
-   "fonte": "ANSA",
-   "titolo": "E' morta Emma Bonino, il cordoglio di Meloni: 'Per decenni una voce forte della politica'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/11/e-morta-emma-bonino_c2113686-9771-4f65-a25d-30e9ec0987fe.html"
-  },
-  {
-   "data": "2026-09-11T09:00:03+00:00",
-   "fonte": "ANSA",
-   "titolo": "Morto un operaio di 34 anni precipitato nel vuoto in un oleificio",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/morto-operaio-di-34-anni-precipitato-nel-vuoto-in-un-oleificio_bd47b81a-d2af-48b0-831f-7aeb62142a25.html"
-  },
-  {
-   "data": "2026-09-11T08:58:11+00:00",
+   "data": "2026-09-11T13:12:05+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Operaio nel Napoletano ricoverato in pericolo di vita, indagini in corso",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/operaio-nel-napoletano-ricoverato-in-pericolo-di-vita-indagini-in-corso_933fa4fa-3609-4a5f-a533-4ce8b66dbc1f.html"
+   "titolo": "Morte di Denise, gli inquirenti ascolteranno il compagno",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/morte-di-denise-gli-inquirenti-ascolteranno-il-compagno_ae0de50e-22d0-4331-92e1-35972bff6b5a.html"
   },
   {
-   "data": "2026-09-11T08:57:19+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Morta Emma Bonino, Meloni: “Voce forte della politica italiana”. Il cordoglio della politica",
-   "url": "https://www.adnkronos.com/politica/emma-bonino-morta-cordoglio-politica_4oZdZyTgF3oS0ZhBZNAe56"
-  },
-  {
-   "data": "2026-09-11T08:53:48+00:00",
+   "data": "2026-09-11T13:11:15+00:00",
    "fonte": "ANSA",
-   "titolo": "Travolta e uccisa in bici a Viareggio, il conducente furgone fugge",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/travolta-e-uccisa-in-bici-a-viareggio-conducente-furgone-fugge_c78c04f8-c8c3-44ae-b4a8-7d35cf072627.html"
+   "titolo": "L'Italia ha inviato all'Ue una lettera per attivare la flessibilità su energia e difesa",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/11/litalia-ha-inviato-allue-una-lettera-per-attivare-la-flessibilita-su-energia-e-difesa_58c24cb1-ffc2-4f55-a48b-35fd045de7e0.html"
   },
   {
-   "data": "2026-09-11T08:42:35+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Gli Oasis fissano la data dell'annuncio del tour: il video con i droni su Manchester",
-   "url": "https://www.adnkronos.com/spettacoli/oasis-annuncio-tour-data-video_6hDUTl66GHpVHbsrvGpiO8"
-  },
-  {
-   "data": "2026-09-11T08:40:58+00:00",
-   "fonte": "ANSA",
-   "titolo": "Rose e cioccolatini, quella visita a sorpresa di Papa Francesco",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/rose-e-cioccolatini-quella-visita-a-sorpresa-di-papa-francesco-_c86e6201-c9f4-49b6-a32d-2f0548082511.html"
-  },
-  {
-   "data": "2026-09-11T08:38:56+00:00",
+   "data": "2026-09-11T13:09:50+00:00",
    "fonte": "ANSA",
    "titolo": "Addio a Emma Bonino, una vita di battaglie politiche e impegno",
    "url": "https://www.ansa.it/sito/photogallery/primopiano/2026/09/11/addio-a-emma-bonino-una-vita-di-battaglie-politiche-e-impegno_2cf75eb3-592d-41db-9122-1174ffb9a6a7.html"
   },
   {
-   "data": "2026-09-11T08:38:20+00:00",
-   "fonte": "ANSA",
-   "titolo": "Una diplomatica senza frontiere, Bonino e il diritto oltre i confini",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/11/una-diplomatica-senza-frontiere-bonino-e-il-diritto-oltre-i-confini_721233ae-465f-4ce7-92b5-a01891e9032a.html"
-  },
-  {
-   "data": "2026-09-11T08:35:00+00:00",
+   "data": "2026-09-11T13:08:56+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Emma Bonino e la battaglia per l’aborto: dall’autodenuncia alla legge 194",
-   "url": "https://www.adnkronos.com/politica/emma-bonino-aborto-autodenuncia-legge-194_2xVawws9R6DabEUEWONLOE"
+   "titolo": "Agrigento, casa abusiva ereditata dal padre: si dimette il vicesindaco Crosta",
+   "url": "https://www.adnkronos.com/cronaca/agrigento-casa-abusiva-dimette-vicesindaco-polemica_4FGBokoLInyCtok3v9Q9G4"
   },
   {
-   "data": "2026-09-11T08:32:43+00:00",
+   "data": "2026-09-11T13:01:11+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Venezia 83, oggi riflettori puntati su Russell Crowe e sull'italiano Ritorno a Buenos Aires",
-   "url": "https://www.adnkronos.com/spettacoli/mostra-venezia-programma-11-settembre-russell-crowe_56988fzNXTz6t1ntXFLrpO"
+   "titolo": "Da Don DeLillo a Paul Auster, l'attacco alle Torri Gemelle nei libri",
+   "url": "https://www.adnkronos.com/cultura/11-settembre-libri-delillo-auster_67tLf01MD4SG3RigyRmcks"
   },
   {
-   "data": "2026-09-11T08:25:04+00:00",
+   "data": "2026-09-11T12:58:46+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Imputati per omicidio girarono un video in cella, 5 indagati",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/imputati-per-omicidio-girarono-un-video-in-cella-5-indagati_c51d473a-b8c5-48ef-8100-d3e0052579f8.html"
+   "titolo": "Tolte le barriere in Darsena a Milano, sul Naviglio navigazione ancora vietata",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/tolte-le-barriere-in-darsena-a-milano-sul-naviglio-navigazione-ancora-vietata_779f7e77-def1-4e09-81bf-cf152019c198.html"
   },
   {
-   "data": "2026-09-11T08:17:52+00:00",
+   "data": "2026-09-11T12:58:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Svizzera, pullman fuori strada: 5 morti e 3 feriti gravi",
-   "url": "https://www.adnkronos.com/internazionale/esteri/pullman-fuori-strada-svizzera-morti-feriti-incidente_4kHyoBPLt8nw09MeTX73P6"
+   "titolo": "'Il filo di Arianna', alla mostra di Venezia la pellicola che racconta il cancro al rene",
+   "url": "https://www.adnkronos.com/spettacoli/il-filo-di-arianna-alla-mostra-di-venezia-la-pellicola-che-racconta-il-cancro-al-rene_31ym6Srpj74vnepAtnWwPG"
   },
   {
-   "data": "2026-09-11T08:09:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "11 settembre, Mattarella: \"Pagina abietta della storia\". Meloni: \"Fu attacco a tutto il mondo libero\"",
-   "url": "https://www.adnkronos.com/politica/mattarella-meloni-attentato-torri-gemelle-25-anni-dopo_khvhFlLKuC9z0L5gMfAu8"
-  },
-  {
-   "data": "2026-09-11T08:06:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Alimentazione, Programma Academy: valorizzare le filiere italiane per la salute dei bambini",
-   "url": "https://www.adnkronos.com/cronaca/alimentazione-programma-academy-valorizzare-le-filiere-italiane-per-la-salute-dei-bambini_AxVb86IBYyvdXI9ouwjti"
-  },
-  {
-   "data": "2026-09-11T07:45:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Morta Emma Bonino, la storica leader radicale aveva 78 anni",
-   "url": "https://www.adnkronos.com/cronaca/morta-emma-bonino-battaglie-testamento_1yle12Q5xIWUBCMmR694JS"
-  },
-  {
-   "data": "2026-09-11T07:25:02+00:00",
+   "data": "2026-09-11T12:57:04+00:00",
    "fonte": "ANSA",
-   "titolo": "Le prove di Vance per il 2028: 'i dem il partito dell'odio'. Trump:'Se non votate andrete all'inferno'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/11/le-prove-di-vance-per-il-2028-i-dem-il-partito-dellodio_d25ae341-431b-4bfa-b7c4-eccf41a60dd2.html"
+   "titolo": "11 settembre: 25 anni fa gli attentati, oggi gli Stati Uniti ricordano le vittime",
+   "url": "https://www.ansa.it/sito/notizie/mondo/africa/2026/09/11/11-settembre-25-anni-fa-gli-attentati-oggi-gli-stati-uniti-ricordano-le-vittime_e7284ef4-cafb-420b-b34b-772c08a753b7.html"
   },
   {
-   "data": "2026-09-11T07:22:57+00:00",
+   "data": "2026-09-11T12:55:07+00:00",
    "fonte": "ANSA",
-   "titolo": "Venezia, alla Mostra l'11 in concorso Bechis e Asgari, arriva Russell Crowe",
-   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/10/venezia-alla-mostra-l11-in-concorso-bechis-e-asgari-arriva-russell-crowe_d907794b-52fd-427f-8a51-d9e7bc8d3a6b.html"
+   "titolo": "La forza di rialzarsi di Giada, dalla sclerosi multipla all'oro nel Crossfit",
+   "url": "https://www.ansa.it/marche/notizie/2026/09/11/la-forza-di-rialzarsi-di-giada-dalla-sclerosi-multipla-alloro-nel-crossfit_ed4d2c57-1189-408c-af29-a3bde4d6a30c.html"
   },
   {
-   "data": "2026-09-11T07:19:56+00:00",
+   "data": "2026-09-11T12:52:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ai, Anelli (Fnomceo): \"Algoritmi non possono capire il disagio del paziente\"",
+   "url": "https://www.adnkronos.com/cronaca/ai-anelli-fnomceo-algoritmi-non-possono-capire-il-disagio-del-paziente_5C8JNBejNRJlzouhSypF2I"
+  },
+  {
+   "data": "2026-09-11T12:52:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Kefir superfood o moda del momento? Bassetti: \"Ecco cosa dice davvero la scienza\"",
+   "url": "https://www.adnkronos.com/cronaca/kefir-benefici-bassetti-intestino-glicemia-colesterolo_28HuqRnUR3nZETG3qFdVZO"
+  },
+  {
+   "data": "2026-09-11T12:50:53+00:00",
+   "fonte": "ANSA",
+   "titolo": "E' morta Emma Bonino, Mattarella: 'Ha impresso un segno nella vita della Repubblica'. Il cordoglio di Meloni: 'Per decenni una voce forte della politica'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/11/e-morta-emma-bonino_c2113686-9771-4f65-a25d-30e9ec0987fe.html"
+  },
+  {
+   "data": "2026-09-11T12:50:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Nomina Bianchedi capodelegazione Nazionale, necessaria integrazione documenti per parere Anac: esame in corso",
+   "url": "https://www.adnkronos.com/sport/bianchedi-capodelegazione-nazionale-integrazione-documenti-parere-anac-cosa-succede_7DeImNFYVTKourDH276GQ4"
+  },
+  {
+   "data": "2026-09-11T12:45:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Meloni e legge elettorale: \"Centrosinistra poco credibile, cittadini potranno scegliere. Afd? Nessun parallelismo\"",
+   "url": "https://www.adnkronos.com/politica/meloni-schlein-conte-legge-elettorale-afd_4zOh3teKDloDgL4FaQXxMW"
+  },
+  {
+   "data": "2026-09-11T12:39:07+00:00",
+   "fonte": "ANSA",
+   "titolo": "La morte di Domenico, a novembre l'incidente probatorio con la superperizia",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/la-morte-di-domenico-a-novembre-incidente-probatorio-con-superperizia_c199751d-4c4a-495e-b423-d296a04238a0.html"
+  },
+  {
+   "data": "2026-09-11T12:36:27+00:00",
+   "fonte": "ANSA",
+   "titolo": "Margherita non sarà parte civile contro figlio John Elkann",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/margherita-non-sara-parte-civile-contro-figlio-john-elkann_48c8cc07-05b0-4a73-a65b-957463bd4c2d.html"
+  },
+  {
+   "data": "2026-09-11T12:36:27+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ilary Blasi e Bastian Muller sposi il 13 settembre a Ravello: cosa si sa finora sul matrimonio 'top secret'",
+   "url": "https://www.adnkronos.com/spettacoli/ilary-blasi-bastian-muller-matrimonio-13-settembre-cosa-sappiamo-curiosita_4tO0jZroX8Q3jj9sOCqk9S"
+  },
+  {
+   "data": "2026-09-11T12:31:27+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Giornata mondiale sepsi, Zerocalcare-anestesisti 'riconoscerla subito può salvare una vita'",
+   "url": "https://www.adnkronos.com/cronaca/giornata-mondiale-sepsi-zerocalcare-anestesisti-riconoscerla-subito-puo-salvare-una-vita_7rXhm1Hxg1PlcxsmESyhFy"
+  },
+  {
+   "data": "2026-09-11T12:30:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Riccardo Iacona torna su Rai3 con PresaDiretta: \"Basta 'panini' e polarizzazione, viva il racconto lungo!\"",
+   "url": "https://www.adnkronos.com/spettacoli/riccardo-iacona-presa-diretta-nuova-stagione-intervista_2bg5Cf8XPXSoKAv5HOrSHW"
+  },
+  {
+   "data": "2026-09-11T12:28:54+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Casa, legge Ue minaccia affitti brevi: da Amalfi a Cortina ma anche a Roma, Milano, Venezia",
+   "url": "https://www.adnkronos.com/economia/affitti-brevi-legge-ue-cosa-cambia_61UxWqGlmYpA2TYqqVxQAQ"
+  },
+  {
+   "data": "2026-09-11T12:26:26+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "È morto l'ex ministro Raffaele Costa, aveva 90 anni",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/e-morto-lex-ministro-raffaele-costa-aveva-90-anni_fe35874f-2cc8-4294-8c1e-cc14724f179f.html"
+   "titolo": "Valditara 'istituti tecnici diventeranno licei, presto decreto'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/valditara-istituti-tecnici-diventeranno-licei-presto-decreto_f1c5ba12-737e-4a90-80d2-db9a9c564993.html"
   },
   {
-   "data": "2026-09-11T07:19:10+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Allarme ricercatori Anthropic su rischio estinzione umana con IA, Musk: \"Una montatura\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/anthropic-estinzione-umana-musk_GEkADm9sNfjgKMKCWlUwI"
-  },
-  {
-   "data": "2026-09-11T07:16:26+00:00",
+   "data": "2026-09-11T12:20:36+00:00",
    "fonte": "ANSA",
-   "titolo": "Il cane Spike fiuta la droga nell'orlo dell'accappatoio, sequestro in carcere",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/il-cane-spike-fiuta-la-droga-nellorlo-dellaccappatoio-sequestro-in-carcere_b66b3a4b-3d88-4f6e-bbd0-cb78f9a30954.html"
-  },
-  {
-   "data": "2026-09-11T07:03:22+00:00",
-   "fonte": "ANSA",
-   "titolo": "A 53 anni dal golpe in Cile contro Salvador Allende, non si terrà la cerimonia commemorativa ufficiale",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/11/a-53-anni-dal-golpe-in-cile-contro-salvador-allende-non-si-terra-la-cerimonia_8a22eb37-b533-4f3d-bc9d-b59171159dae.html"
-  },
-  {
-   "data": "2026-09-11T06:53:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Infettivologo Rusconi: \"Il paziente va seguito a 360 gradi\"",
-   "url": "https://www.adnkronos.com/cronaca/infettivologo-rusconi-il-paziente-va-seguito-a-360-gradi_7k00uSAhJZ5noVbNsabbjS"
-  },
-  {
-   "data": "2026-09-11T06:47:14+00:00",
-   "fonte": "ANSA",
-   "titolo": "25 anni fa l'attentato dell'11/9, le foto dallo spazio",
-   "url": "https://www.ansa.it/canale_scienza/notizie/spazio_astronomia/2026/09/11/25-anni-fa-lattentato-dell119-le-foto-dallo-spazio-_0a2cf7e7-4590-40c5-ae87-33f372008361.html"
+   "titolo": "Bonino in un'intervista con l'ANSA nel maggio 2018: \"La legge 194 positiva, ma va migliorata\"",
+   "url": "https://www.ansa.it/sito/videogallery/italia/2026/09/11/aborto-bonino-legge-194-positiva-ma-dopo-40-anni-va-migliorata_eb27f10a-f0ea-4e54-b119-c77912f61a71.html"
   }
  ]
 }
