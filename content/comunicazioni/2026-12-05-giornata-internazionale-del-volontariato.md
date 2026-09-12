@@ -20,26 +20,26 @@ social_punti:
   - "Chi vuole iniziare trova sul nostro sito la pagina Diventa volontario e le informazioni sul corso base."
 ---
 
-Il **5 dicembre** è la **Giornata internazionale del volontariato**, istituita dall'Assemblea generale delle Nazioni Unite nel 1985. Quest'anno ha un peso in più: le Nazioni Unite hanno proclamato il **2026 Anno internazionale dei volontari per lo sviluppo sostenibile**. È l'occasione per spiegare cosa significa, in Italia, essere volontari di protezione civile: non un gesto privato, ma un ruolo definito dalla legge.
+Il **5 dicembre** è la **Giornata internazionale del volontariato**, istituita dall'Assemblea generale delle Nazioni Unite nel 1985. Quest'anno ha un peso in più: le Nazioni Unite hanno proclamato il **2026 Anno internazionale dei volontari per lo sviluppo sostenibile**. È l'occasione per spiegare cosa significa, in Italia, essere volontari di protezione civile. Non un gesto privato, ma un ruolo definito dalla legge.
 
 ## Un miliardo di persone
 
-Secondo le stime delle Nazioni Unite, nel mondo circa un miliardo di persone fa volontariato, la maggior parte in forma informale, aiutando vicini e comunità senza un'organizzazione alle spalle. La Giornata serve a riconoscere questo lavoro e a chiedere ai governi di sostenerlo.
+Secondo le stime delle Nazioni Unite, nel mondo circa un miliardo di persone fa volontariato. La maggior parte lo fa in forma informale, aiutando vicini e comunità senza un'organizzazione alle spalle. La Giornata serve a riconoscere questo lavoro e a chiedere ai governi di sostenerlo.
 
 ## In Italia: il Codice della protezione civile
 
-Il volontariato organizzato di protezione civile è una **componente del Servizio nazionale**, come lo sono le Regioni, i Comuni, i Vigili del Fuoco. Lo stabilisce il **Codice della protezione civile**, il decreto legislativo n. 1 del 2018, che dedica al volontariato gli **articoli da 31 a 42**.
+Il volontariato organizzato di protezione civile è una **componente del Servizio nazionale**, come le Regioni, i Comuni, i Vigili del Fuoco. Lo stabilisce il **Codice della protezione civile**, il decreto legislativo n. 1 del 2018, che dedica al volontariato gli **articoli da 31 a 42**.
 
 Alcuni punti che riguardano da vicino ogni volontario:
 
 - **L'iscrizione all'elenco.** Un'organizzazione partecipa alle attività di protezione civile solo se è iscritta nell'elenco nazionale o territoriale. Il nostro Gruppo comunale è iscritto nell'elenco territoriale della Regione Lazio.
-- **Le tutele sul lavoro.** Quando il volontario è impiegato in un'emergenza o in un'esercitazione autorizzata, ha diritto a mantenere il posto di lavoro e la retribuzione, rimborsata al datore di lavoro. Ne parliamo nell'articolo sul [diritto del lavoratore volontario all'assenza](/comunicazioni/2026-10-12-volontariato-diritto-lavoratore-assenza/).
+- **Le tutele sul lavoro.** Quando il volontario è impiegato in un'emergenza o in un'esercitazione autorizzata, ha diritto a mantenere il posto di lavoro. La retribuzione resta garantita, rimborsata al datore di lavoro. Ne parliamo nell'articolo sul [diritto del lavoratore volontario all'assenza](/comunicazioni/2026-10-12-volontariato-diritto-lavoratore-assenza/).
 - **La formazione.** Il volontario opera solo dopo un percorso formativo e con i dispositivi di protezione previsti.
-- **I limiti.** Il volontariato integra il sistema, non lo sostituisce: non svolge compiti di polizia stradale, non sostituisce i Vigili del Fuoco, agisce su attivazione delle autorità.
+- **I limiti.** Il volontariato integra il sistema, non lo sostituisce. Non svolge compiti di polizia stradale, non sostituisce i Vigili del Fuoco, agisce su attivazione delle autorità.
 
 ## La Regione Lazio
 
-Nel Lazio i Gruppi comunali e le associazioni sono iscritti nell'elenco territoriale regionale e operano secondo il regolamento regionale sul volontariato di protezione civile. L'attivazione passa dalla Sala Operativa Regionale, di cui abbiamo raccontato il [funzionamento](/comunicazioni/2026-09-27-sala-operativa-regionale-soup-803555/).
+Nel Lazio i Gruppi comunali e le associazioni sono iscritti nell'elenco territoriale regionale. Operano secondo il regolamento regionale sul volontariato di protezione civile. L'attivazione passa dalla Sala Operativa Regionale, di cui abbiamo raccontato il [funzionamento](/comunicazioni/2026-09-27-sala-operativa-regionale-soup-803555/).
 
 ## Se vuoi iniziare
 

@@ -13,7 +13,7 @@ allegati: []
 draft: false
 tts: true
 lis_section: "allerte-meteo"
-social_citazione: "Un millimetro di pioggia è un litro d'acqua su ogni metro quadrato: cento millimetri in un'ora sono cento litri su ogni piastrella."
+social_citazione: "Un millimetro di pioggia è un litro d'acqua su ogni metro quadrato: cento millimetri in poche ore sono un evento estremo."
 social_punti:
   - "Il pluviometro misura la pioggia in millimetri: 1 mm equivale a 1 litro d'acqua per metro quadrato."
   - "Nel Lazio 238 stazioni in telemisura inviano ogni 15 minuti pioggia, temperatura e livelli dei fiumi al Centro Funzionale Regionale."
@@ -37,7 +37,7 @@ Lo strumento base è il **pluviometro**: un imbuto di dimensioni standard che ra
 
 Il **Centro Funzionale Regionale** della Regione Lazio gestisce una rete di monitoraggio in telemisura. Sono **238 stazioni** distribuite sul territorio, che misurano pioggia, altri parametri meteorologici e il livello dei corsi d'acqua. Ogni **15 minuti** i dati arrivano al database centrale e sono visibili su una piattaforma cartografica.
 
-Quando la pioggia misurata supera certe soglie, o i fiumi salgono oltre livelli prefissati, il Centro Funzionale emette una comunicazione di monitoraggio e informa i Comuni.
+Quando la pioggia misurata supera certe soglie, o i fiumi salgono oltre livelli prefissati, il Centro Funzionale emette una comunicazione di monitoraggio. Informa così i Comuni interessati.
 
 ## Radar e satelliti
 
@@ -47,7 +47,7 @@ A scala più grande lavorano i **satelliti Meteosat**, che seguono le masse d'ar
 
 ## Dal numero all'allerta
 
-Le misure entrano nella piattaforma DEWETRA, sviluppata dal Dipartimento della Protezione Civile e condivisa tra Regioni e Dipartimento. Da lì partono le valutazioni che ogni giorno diventano il **bollettino di criticità** e, quando serve, l'**allertamento** per le sette zone del Lazio. Genzano di Roma sta nella zona F, Bacini Costieri Sud.
+Le misure entrano nella piattaforma DEWETRA, sviluppata dal Dipartimento della Protezione Civile e condivisa tra Regioni e Dipartimento. Da lì partono le valutazioni quotidiane. Ogni giorno diventano il **bollettino di criticità** e, quando serve, l'**allertamento** per le sette zone del Lazio. Genzano di Roma sta nella zona F, Bacini Costieri Sud.
 
 ## Per approfondire
 

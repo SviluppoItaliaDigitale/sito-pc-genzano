@@ -16,12 +16,12 @@ lis_section: "rischio-idrogeologico"
 social_citazione: "A Casamicciola la montagna aveva già parlato nel 1910 e nel 2009. Nel 2022 sotto di lei c'erano ancora le case."
 social_punti:
   - "Il 26 novembre 2022, verso le 5 del mattino, dopo ore di pioggia intensa una colata di fango e detriti scese dal monte Epomeo su Casamicciola Terme."
-  - "Le vittime furono 12, tra cui bambini; centinaia le persone sfollate e decine le case colpite."
+  - "Le vittime furono 12, tra cui bambini; centinaia le persone sfollate."
   - "Il versante era già franato nel 1910 e nel 2009: il rischio era noto, le case erano rimaste."
   - "Con un'allerta in corso, se vivi sotto un versante ripido non restare ai piani bassi esposti al pendio."
 ---
 
-Nella notte tra il 25 e il 26 **novembre 2022** su Ischia piovve per ore, con la massima intensità verso l'alba. Poco prima delle 5 il versante del **monte Epomeo** sopra **Casamicciola Terme** cedette. Una colata di fango, acqua e detriti scese lungo il pendio e la via Celario, attraversò il paese e arrivò fino al mare, in piazza Bagni. Trascinò con sé case, auto e persone. Le vittime furono **12**, tra loro bambini. Le persone sfollate furono centinaia.
+Nella notte tra il 25 e il 26 **novembre 2022** su Ischia piovve per ore, con la massima intensità verso l'alba. Poco prima delle 5 il versante del **monte Epomeo** sopra **Casamicciola Terme** cedette. Una colata di fango, acqua e detriti scese lungo il pendio e la via Celario. Attraversò il paese e arrivò fino al mare, in piazza Bagni. Trascinò con sé case, auto e persone. Le vittime furono **12**, tra loro bambini. Le persone sfollate furono centinaia.
 
 ## Un versante che aveva già parlato
 

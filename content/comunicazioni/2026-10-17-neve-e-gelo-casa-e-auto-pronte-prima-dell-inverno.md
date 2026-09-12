@@ -26,7 +26,7 @@ A Genzano di Roma la neve non è un'abitudine. Proprio per questo, quando arriva
 ## In casa
 
 - **Pala e sale.** Sono gli attrezzi indispensabili per liberare l'accesso di casa o del negozio. Compra il sale prima che scarseggi.
-- **Tetto e grondaie.** Verifica che la copertura sia in ordine e che le grondaie siano libere dalle foglie d'autunno: neve e ghiaccio pesano, e l'acqua che non scorre gela.
+- **Tetto e grondaie.** Verifica che la copertura sia in ordine e che le grondaie siano libere dalle foglie d'autunno. Neve e ghiaccio pesano, e l'acqua che non scorre gela.
 - **Impianto di riscaldamento.** Fai controllare caldaia e stufe prima di accenderle: ne parliamo nell'articolo sulla [prevenzione degli incendi domestici in autunno](/comunicazioni/2026-09-23-prevenzione-incendi-domestici-autunno/).
 - **Scorte minime.** Acqua, cibo che non richiede cottura, farmaci, torcia e radio a pile: sono le stesse del [kit di emergenza](/rischi-prevenzione/kit-emergenza/).
 
@@ -43,7 +43,7 @@ A Genzano di Roma la neve non è un'abitudine. Proprio per questo, quando arriva
 - **Se devi guidare**: libera tutta l'auto dalla neve, non solo i finestrini; luci accese; marce basse e freno motore; niente manovre brusche; distanza di sicurezza aumentata. In salita non fermarti: ripartire è difficile e intralci gli altri.
 - **Niente due ruote.**
 - **Togli la neve dal tuo passo carraio** e non buttarla in strada: ostacola i mezzi.
-- **Attenzione ai lastroni** che si staccano dai tetti nel disgelo e agli **alberi** carichi di neve: i rami cedono, come abbiamo visto con la pioggia di settembre.
+- **Attenzione ai lastroni** che si staccano dai tetti nel disgelo e agli **alberi** carichi di neve. I rami cedono, come abbiamo visto con la pioggia di settembre.
 
 ## Dopo la nevicata
 

@@ -27,13 +27,13 @@ L'allerta gialla del 10 settembre è arrivata sul nostro sito la sera prima, con
 
 Il **Centro Funzionale della Regione Lazio** fa parte della rete nazionale dei Centri Funzionali. La rete gestisce il sistema di allertamento per il rischio meteo, idrogeologico e idraulico. È formata da un Centro Funzionale Centrale, presso il Dipartimento della Protezione Civile, e da un Centro Funzionale per ogni Regione.
 
-Il compito del Centro regionale non è prevedere il tempo. Le previsioni meteorologiche le elabora il Dipartimento. Il Centro Funzionale le riceve e valuta **gli effetti** che quei fenomeni possono avere sul territorio del Lazio: allagamenti, frane, piene dei fiumi, danni da temporali.
+Il compito del Centro regionale non è prevedere il tempo. Le previsioni meteorologiche le elabora il Dipartimento. Il Centro Funzionale le riceve e valuta **gli effetti** che quei fenomeni possono avere sul territorio del Lazio. Allagamenti, frane, piene dei fiumi, danni da temporali.
 
 ## Sette zone, quattro colori
 
 Il Lazio è diviso in **sette zone di allerta**, aree omogenee per bacini e comportamento idrologico. Genzano di Roma sta nella **zona F, Bacini Costieri Sud**. Per ogni zona il Centro Funzionale assegna ogni giorno un livello: **verde** (nessuna allerta), **giallo**, **arancione** o **rosso**. La valutazione distingue tre tipi di criticità: idrogeologica, idrogeologica per temporali e idraulica.
 
-Il risultato è il **Bollettino di criticità idrogeologica e idraulica**, pubblicato ogni giorno. Quando almeno una zona è gialla, si aggiunge l'**Allertamento del Sistema di Protezione Civile Regionale**: il documento che invita Comuni ed enti ad attivare le fasi operative dei loro piani. È il documento che il nostro sito legge in automatico per accendere la barra dell'allerta.
+Il risultato è il **Bollettino di criticità idrogeologica e idraulica**, pubblicato ogni giorno. Quando almeno una zona è gialla, si aggiunge l'**Allertamento del Sistema di Protezione Civile Regionale**. È il documento che invita Comuni ed enti ad attivare le fasi operative dei loro piani, e che il nostro sito legge in automatico per accendere la barra dell'allerta.
 
 ## Durante l'evento
 
@@ -43,7 +43,7 @@ I turni seguono il colore. Con il verde la sala è presidiata tutti i giorni dal
 
 ## Le regole
 
-Le regole del sistema sono nelle direttive regionali sull'allertamento per il rischio meteo, idrogeologico e idraulico, approvate con la deliberazione della Giunta regionale n. 865 del 26 novembre 2019. La validità dei livelli di allerta viene confermata o modificata dal bollettino del giorno successivo: per questo il nostro sito controlla i bollettini più volte al giorno.
+Le regole del sistema sono nelle direttive regionali sull'allertamento per il rischio meteo, idrogeologico e idraulico. Sono state approvate con la deliberazione della Giunta regionale n. 865 del 26 novembre 2019. La validità dei livelli di allerta viene confermata o modificata dal bollettino del giorno successivo: per questo il nostro sito controlla i bollettini più volte al giorno.
 
 Il numero verde del Centro Funzionale è **800 276 570**. La sede della sala operativa è a Roma, in via Laurentina.
 

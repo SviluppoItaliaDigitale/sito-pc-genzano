@@ -49,7 +49,7 @@ Esci dalla carreggiata rallentando gradualmente, accendi le **quattro frecce** e
 
 ## Informati
 
-Se viaggi su strade di grande comunicazione, tieni la radio sulle informazioni del traffico: saprai in anticipo dove la visibilità è ridotta e potrai scegliere un percorso alternativo.
+Se viaggi su strade di grande comunicazione, tieni la radio sulle informazioni del traffico. Saprai in anticipo dove la visibilità è ridotta e potrai scegliere un percorso alternativo.
 
 ## Per approfondire
 

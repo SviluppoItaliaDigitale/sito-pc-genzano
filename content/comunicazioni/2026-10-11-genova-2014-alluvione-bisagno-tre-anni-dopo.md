@@ -21,7 +21,7 @@ social_punti:
   - "In caso di alluvione non scendere in cantine e garage e non usare l'auto: pochi centimetri d'acqua bastano a bloccarla."
 ---
 
-Tre anni dopo l'alluvione del Fereggiano, Genova si ritrovò con l'acqua nelle stesse strade. Tra la sera del **9 ottobre** e la mattina del **10 ottobre 2014** su una parte della città caddero circa **395 millimetri** di pioggia in 24 ore, quasi la metà di quanto piove in un anno. Il **Bisagno**, il torrente coperto che passa sotto il centro, esondò di nuovo.
+Tre anni dopo l'alluvione del Fereggiano, Genova si ritrovò con l'acqua nelle stesse strade. Tra la sera del **9 ottobre** e la mattina del **10 ottobre 2014** su una parte della città caddero circa **395 millimetri** di pioggia in 24 ore. È quasi la metà di quanto piove in un anno. Il **Bisagno**, il torrente coperto che passa sotto il centro, esondò di nuovo.
 
 ## Una città costruita sopra i torrenti
 
@@ -31,13 +31,13 @@ Nella notte del 9 ottobre esondarono il Bisagno, lo **Sturla**, il **Fereggiano*
 
 ## Il terzo avviso
 
-Non era la prima volta. Il **7 ottobre 1970** il Bisagno aveva già invaso la città, con decine di vittime. Il **4 novembre 2011** l'esondazione del Fereggiano aveva ucciso sei persone. Dopo il 2011 era stato deciso di costruire un **canale scolmatore**, una galleria che porta a mare parte della piena senza passare dal centro. Nel 2014 il cantiere non era ancora partito. La polemica sull'allerta, dichiarata la sera stessa mentre l'acqua saliva, accompagnò i giorni successivi.
+Non era la prima volta. Il **7 ottobre 1970** il Bisagno aveva già invaso la città, con decine di vittime. Il **4 novembre 2011** l'esondazione del Fereggiano aveva ucciso sei persone. Dopo il 2011 era stato deciso di costruire un **canale scolmatore**, una galleria che porta a mare parte della piena senza passare dal centro. Nel 2014 il cantiere non era ancora partito. Quella sera non fu dichiarata nessuna allerta, solo un generico stato di attenzione: la polemica sulla mancata allerta, arrivata soltanto la mattina dopo, accompagnò i giorni successivi.
 
-I lavori dello scolmatore del Bisagno e del Fereggiano sono cominciati negli anni seguenti. Sono opere lunghe e costose: il tempo tra un'alluvione e la successiva è più breve di quello di un cantiere.
+I lavori dello scolmatore del Fereggiano sono partiti nell'aprile 2015; quelli del più ampio scolmatore del Bisagno sono arrivati solo negli anni successivi. Sono opere lunghe e costose: il tempo tra un'alluvione e la successiva è più breve di quello di un cantiere.
 
 ## Cosa insegna
 
-L'alluvione di Genova ricorda che il pericolo non è solo il fiume in campagna. È anche il torrente coperto in città, che la maggior parte delle persone non vede mai. A Genzano di Roma non ci sono torrenti coperti di quelle dimensioni, ma esistono fossi tombati e strade che diventano canali quando i tombini non reggono: il [10 settembre](/comunicazioni/2026-09-11-pioggia-alberi-tombini-voragine-otto-interventi/) lo abbiamo visto sulla via Appia.
+L'alluvione di Genova ricorda che il pericolo non è solo il fiume in campagna. È anche il torrente coperto in città, che la maggior parte delle persone non vede mai. A Genzano di Roma non ci sono torrenti coperti di quelle dimensioni, ma esistono fossi tombati e strade che diventano canali quando i tombini non reggono. Il [10 settembre](/comunicazioni/2026-09-11-pioggia-alberi-tombini-voragine-otto-interventi/) lo abbiamo visto sulla via Appia.
 
 Le regole del Dipartimento della Protezione Civile per l'alluvione:
 

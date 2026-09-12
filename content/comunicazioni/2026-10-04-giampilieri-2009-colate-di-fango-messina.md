@@ -15,13 +15,13 @@ tts: true
 lis_section: "rischio-idrogeologico"
 social_citazione: "Non fu il torrente a uccidere, ma il versante: il fango scese dalle colline e attraversò le case."
 social_punti:
-  - "Il 1° ottobre 2009 un temporale scaricò oltre 200 millimetri di pioggia in poche ore sui versanti a sud di Messina."
+  - "Il 1° ottobre 2009 un temporale scaricò in poche ore, sui versanti a sud di Messina, la pioggia che normalmente cade in mesi."
   - "Le colate di fango e detriti travolsero Giampilieri Superiore, Scaletta Zanclea, Altolia, Molino e altri borghi: 37 vittime."
   - "Case costruite ai piedi di versanti ripidi, vegetazione bruciata da incendi e terreni fragili aumentarono il danno."
   - "Se vivi sotto un versante ripido, informati sul piano comunale e allontanati ai primi segnali di colata."
 ---
 
-La sera del **1° ottobre 2009** un temporale si fermò sui versanti collinari a sud di **Messina**. In poche ore cadde una quantità di pioggia che normalmente cade in mesi. I torrenti si gonfiarono, ma il peggio venne dai pendii: colate di fango e detriti scesero sui borghi di **Giampilieri Superiore**, **Scaletta Zanclea**, Altolia, Molino, Briga, Pezzolo e Itala. Morirono **37 persone**.
+La sera del **1° ottobre 2009** un temporale si fermò sui versanti collinari a sud di **Messina**. In poche ore cadde una quantità di pioggia che normalmente cade in mesi. I torrenti si gonfiarono, ma il peggio venne dai pendii. Colate di fango e detriti scesero sui borghi di **Giampilieri Superiore**, **Scaletta Zanclea**, Altolia, Molino, Briga, Pezzolo e Itala. Morirono **37 persone**.
 
 ## Cosa accadde
 

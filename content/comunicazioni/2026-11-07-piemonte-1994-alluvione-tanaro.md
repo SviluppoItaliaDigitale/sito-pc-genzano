@@ -25,13 +25,13 @@ Nei primi giorni di **novembre 1994** una perturbazione rimase ferma per giorni 
 
 ## Il Tanaro esce dal suo letto
 
-Il Tanaro è un fiume di pianura alimentato dalle Alpi Marittime e dalle Langhe. Nel novembre 1994 la piena superò ogni livello conosciuto. Ad Alba l'acqua invase i quartieri bassi e le zone industriali; ad Asti raggiunse il centro; ad Alessandria il Tanaro entrò in città nella notte tra il 5 e il 6 novembre, sorprendendo gli abitanti dei quartieri vicini al fiume. A Ceva, in alta valle, il fiume portò via strade e ponti.
+Il Tanaro è un fiume di pianura alimentato dalle Alpi Marittime e dalle Langhe. Nel novembre 1994 la piena superò ogni livello conosciuto. Ad Alba l'acqua invase i quartieri bassi e le zone industriali; ad Asti raggiunse il centro. Ad Alessandria il Tanaro entrò in città nella notte tra il 5 e il 6 novembre, sorprendendo gli abitanti dei quartieri vicini al fiume. A Ceva, in alta valle, il fiume portò via strade e ponti.
 
 Il Po, ricevendo tutta quell'acqua, raggiunse livelli record lungo il suo corso. Il sistema di previsione e allerta di allora non era in grado di dire ai Comuni cosa sarebbe successo e quando.
 
 ## Perché fu un punto di svolta
 
-L'alluvione del 1994 fece capire che il rischio dei fiumi andava **conosciuto prima**, non subito dopo. Nei mesi seguenti presero forma strumenti che oggi diamo per scontati: la **mappatura delle aree allagabili** con diversi tempi di ritorno, i **piani di assetto idrogeologico** dei bacini, i **vincoli** sulle costruzioni nelle fasce fluviali. La legge 267 del 1998, dopo la frana di Sarno, avrebbe completato quel percorso. Il sistema dei Centri Funzionali e dell'allertamento per colori sarebbe arrivato nel decennio successivo.
+L'alluvione del 1994 fece capire che il rischio dei fiumi andava **conosciuto prima**, non subito dopo. Nei mesi seguenti presero forma strumenti che oggi diamo per scontati: la **mappatura delle aree allagabili** con diversi tempi di ritorno, i **piani di assetto idrogeologico** dei bacini. Arrivarono anche i **vincoli** sulle costruzioni nelle fasce fluviali. La legge 267 del 1998, dopo la frana di Sarno, avrebbe completato quel percorso. Il sistema dei Centri Funzionali e dell'allertamento per colori sarebbe arrivato nel decennio successivo.
 
 Il 1994 fu anche una grande prova per il **volontariato di protezione civile**: migliaia di persone da tutta Italia lavorarono per settimane nel fango delle città piemontesi. Molti Gruppi comunali del Nord sono nati o cresciuti da quell'esperienza.
 

@@ -20,14 +20,14 @@ social_punti:
   - "Se sei travolto: muoviti come per nuotare verso il margine e proteggi uno spazio davanti al petto."
 ---
 
-Nelle settimane tra Natale e l'Epifania molte famiglie dei Castelli partono per la montagna: Abruzzo, Appennino, Alpi. Sulle piste battute il rischio valanghe è gestito dai gestori; il pericolo comincia fuori pista, nelle escursioni con le ciaspole e nello scialpinismo. Queste sono le regole del Dipartimento della Protezione Civile per chi va in montagna d'inverno.
+Nelle settimane tra Natale e l'Epifania molte famiglie dei Castelli partono per la montagna: Abruzzo, Appennino, Alpi. Sulle piste battute il rischio valanghe è gestito dai gestori. Il pericolo comincia fuori pista, nelle escursioni con le ciaspole e nello scialpinismo. Queste sono le regole del Dipartimento della Protezione Civile per chi va in montagna d'inverno.
 
 ## Prima di partire
 
 - **Consulta il bollettino valanghe** della zona. Riporta il pericolo su una scala da **1 a 5** e spiega dove e perché il manto è instabile. Non fermarti al numero: leggi il testo.
 - **Informati dai gestori degli impianti** sulle condizioni dell'innevamento e dei versanti.
 - **Non andare mai da solo.** Perché l'autosoccorso sia possibile, almeno una persona della comitiva deve restare fuori dalla valanga.
-- **Attrezzatura per ciascuno**: apparecchio di ricerca in valanga (ARTVA), sonda e pala. Nella maggior parte dei casi chi viene sepolto è a circa un metro di profondità: con questi strumenti, e sapendoli usare, la ricerca dura minuti. Senza, dura troppo.
+- **Attrezzatura per ciascuno**: apparecchio di ricerca in valanga (ARTVA), sonda e pala. Nella maggior parte dei casi chi viene sepolto è a circa un metro di profondità. Con questi strumenti, e sapendoli usare, la ricerca dura minuti. Senza, dura troppo.
 
 ## Sul terreno
 
@@ -35,7 +35,7 @@ Nelle settimane tra Natale e l'Epifania molte famiglie dei Castelli partono per 
 - **Evita i pendii ripidi molto innevati**, soprattutto nelle ore più calde, quando il sole ammorbidisce il manto.
 - **Evita canaloni, pendii aperti e zone sottovento**, dove il vento accumula la neve.
 - **Muoviti sui punti più sicuri**: rocce affioranti, dossi, tratti pianeggianti.
-- Le valanghe avvengono quasi sempre negli stessi luoghi: chi conosce la zona lo sa. Chiedi.
+- **Chiedi a chi conosce la zona**: le valanghe avvengono quasi sempre negli stessi luoghi.
 
 ## Se una valanga ti travolge
 
@@ -47,7 +47,7 @@ Chi resta fuori chiama subito il **112** e comincia la ricerca con l'ARTVA, senz
 
 ## E la neve ai Castelli?
 
-Da noi il problema non sono le valanghe ma le strade in pendenza e gli alberi carichi: ne abbiamo parlato nell'articolo su [neve e gelo](/comunicazioni/2026-10-17-neve-e-gelo-casa-e-auto-pronte-prima-dell-inverno/). Se parti per la montagna, controlla anche l'auto: catene provate, antigelo, batteria, torcia e coperta a bordo.
+Da noi il problema non sono le valanghe ma le strade in pendenza e gli alberi carichi. Ne abbiamo parlato nell'articolo su [neve e gelo](/comunicazioni/2026-10-17-neve-e-gelo-casa-e-auto-pronte-prima-dell-inverno/). Se parti per la montagna, controlla anche l'auto: catene provate, antigelo, batteria, torcia e coperta a bordo.
 
 ## Per approfondire
 

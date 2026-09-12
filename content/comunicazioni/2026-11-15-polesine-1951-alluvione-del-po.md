@@ -1,7 +1,7 @@
 ---
 title: "Polesine, 14 novembre 1951: la grande alluvione del Po"
 date: 2026-11-15
-description: "Settantacinque anni fa il Po ruppe gli argini a Occhiobello e allagò il Polesine per settimane. Centomila ettari sott'acqua, centinaia di migliaia di sfollati."
+description: "Settantacinque anni fa il Po ruppe gli argini a Occhiobello e allagò il Polesine per settimane: oltre 113.000 ettari sott'acqua, 101 vittime, 180.000 sfollati."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -16,22 +16,22 @@ lis_section: "rischio-idrogeologico"
 social_citazione: "Quando l'acqua se ne andò, dopo settimane, molti polesani non tornarono: l'alluvione del 1951 svuotò un'intera provincia."
 social_punti:
   - "Il 14 novembre 1951 il Po in piena ruppe gli argini nel Polesine, tra Occhiobello e Paviole, e allagò la pianura fino al mare."
-  - "Circa centomila ettari restarono sott'acqua per settimane; le vittime furono decine e gli sfollati oltre centomila."
-  - "Fu la prima grande catastrofe dell'Italia repubblicana e spinse la nascita di un sistema nazionale di soccorso."
+  - "Oltre 113.000 ettari restarono sott'acqua per settimane; le vittime furono 101, più sette dispersi, e gli sfollati circa 180.000."
+  - "Nel 1951 non esisteva ancora la protezione civile: da quell'esperienza nacque l'idea di un sistema nazionale di soccorso."
   - "Le alluvioni di pianura danno tempo: usalo per mettere in salvo persone e animali, non per salvare i beni."
 ---
 
-Il **14 novembre 1951**, dopo giorni di pioggia su tutto il bacino, il **Po** in piena ruppe gli argini nel **Polesine**, la striscia di pianura tra Po e Adige nella provincia di Rovigo. Le rotte si aprirono nel tratto di Occhiobello, tra Paviole e Malcantone. L'acqua dilagò verso est e in pochi giorni raggiunse il mare. Restò sulla terra per settimane.
+Il **14 novembre 1951**, dopo giorni di pioggia su tutto il bacino, il **Po** in piena ruppe gli argini nel **Polesine**. È la striscia di pianura tra Po e Adige, nella provincia di Rovigo. Le rotte si aprirono nel tratto di Occhiobello, tra Paviole e Malcantone. L'acqua dilagò verso est e in pochi giorni raggiunse il mare. Restò sulla terra per settimane.
 
 ## Una provincia sott'acqua
 
-Furono allagati circa **centomila ettari**, gran parte della provincia. Le vittime furono decine; tra loro le persone di un camion carico di sfollati travolto dall'acqua nella notte a Frassinelle. Gli sfollati furono più di centomila. Molti non tornarono: l'alluvione accelerò un'emigrazione che negli anni successivi svuotò il Polesine.
+Furono allagati oltre **113.000 ettari** di terreno, gran parte della provincia. Le vittime furono **101**, più sette dispersi: di queste, 84 morirono in un solo episodio, l'affondamento di un camion carico di sfollati travolto dall'acqua nella notte tra il 14 e il 15 novembre a Frassinelle. Gli sfollati furono circa **180.000**. Molti non tornarono: l'alluvione accelerò un'emigrazione che negli anni successivi svuotò il Polesine.
 
 Le acque si ritirarono solo a dicembre. Le case, i campi e le strade emersero coperti di limo, con le colture distrutte e il bestiame perduto.
 
 ## I soccorsi di allora
 
-Nel 1951 non esisteva la protezione civile come la conosciamo. Intervennero l'esercito, i vigili del fuoco, la Croce Rossa, le parrocchie, i partiti, i sindacati e migliaia di volontari. Le famiglie polesane furono ospitate in tutta Italia. La macchina dei soccorsi fu improvvisata, generosa e lenta. Da quell'esperienza, e da quelle di Firenze 1966 e del Friuli 1976, nacque l'idea di un sistema nazionale, arrivato con la legge del 1992 e oggi nel Codice della protezione civile.
+Nel 1951 non esisteva la protezione civile come la conosciamo. Intervennero l'esercito, i vigili del fuoco, la Croce Rossa, le parrocchie, i partiti, i sindacati e migliaia di volontari. Le famiglie polesane furono ospitate in tutta Italia. La macchina dei soccorsi fu improvvisata, generosa e lenta. Da quell'esperienza, e da quelle di Firenze 1966 e del Friuli 1976, nacque l'idea di un sistema nazionale. È arrivato con la legge del 1992 ed è oggi nel Codice della protezione civile.
 
 ## Cosa insegna
 
@@ -58,3 +58,4 @@ Le regole del Dipartimento della Protezione Civile:
 
 - [Dipartimento della Protezione Civile — Rischio meteo-idro: sei preparato?](https://rischi.protezionecivile.gov.it/it/meteo-idro/sei-preparato)
 - [ISPRA — Dissesto idrogeologico in Italia](https://www.isprambiente.gov.it/it/attivita/suolo-e-territorio/dissesto-idrogeologico)
+- [CNR-IRPI — Polaris: 14 novembre 1951, l'alluvione del Polesine](https://polaris.irpi.cnr.it/14-novembre-1951-lalluvione-del-polesine/)
