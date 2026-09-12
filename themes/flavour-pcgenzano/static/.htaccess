@@ -183,29 +183,27 @@ RedirectMatch 410 ^/areefiltrate\.html$
   Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' data:; connect-src 'self' https://raw.githubusercontent.com https://api.github.com https://*.openstreetmap.org https://*.tile.openstreetmap.org https://webservices.ingv.it https://*.ingv.it https://radar-api.protezionecivile.it https://*.protezionecivile.it https://api.open-meteo.com https://marine-api.open-meteo.com https://air-quality-api.open-meteo.com https://archive-api.open-meteo.com https://*.arpalazio.gov.it https://eccharts.ecmwf.int https://rapidmapping.emergency.copernicus.eu https://maps.mistralportal.it https://meteohub.agenziaitaliameteo.it https://earthquake.usgs.gov https://eonet.gsfc.nasa.gov https://sdr.noantri.org https://sdr-plus.i6iqx.it wss://sdr.noantri.org wss://sdr-plus.i6iqx.it wss://ws1.blitzortung.org wss://ws3.blitzortung.org wss://ws7.blitzortung.org wss://ws8.blitzortung.org https://gc.zgo.at https://apicuollo.goatcounter.com; frame-src https://embed.windy.com https://www.windy.com https://sdr.noantri.org https://sdr-plus.i6iqx.it https://*.ingv.it https://terremoti.ingv.it https://www.youtube.com https://www.youtube-nocookie.com https://*.protezionecivile.gov.it https://*.regione.lazio.it https://mappe.protezionecivile.gov.it; frame-ancestors 'self'; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests"
 </IfModule>
 
-# Cache — richiesta utente (06/06/2026): "ogni modifica online subito".
-# HTML/CSS/JS NON in cache (sempre rivalidati: ogni modifica appare subito,
-# con 304 se invariati → resta comunque veloce). Le immagini/PDF, pesanti e che
-# cambiano insieme al nome file, restano in cache a lungo per le prestazioni.
+# Cache — DISATTIVATA su richiesta del Gruppo (12/09/2026).
+# Storia: dal 06/06/2026 pagine e codice erano "no-cache" ma immagini, PDF,
+# JSON, XML, font e ZIP restavano in cache (fino a 1 anno) o seguivano la
+# cache euristica del browser. Risultato: gli aggiornamenti dei file che
+# cambiano mantenendo lo stesso nome (cover rigenerate, PDF del manuale,
+# pacchetti ZIP, open data, feed) non si vedevano. Da questa data NESSUNA
+# risorsa viene conservata da browser o proxy: ogni richiesta arriva al
+# server e riceve sempre la versione corrente. Costo accettato: qualche KB
+# in più per visita in cambio di aggiornamenti visibili subito.
+# NON reintrodurre regole di cache (mod_expires, max-age, ExpiresByType):
+# istruzione permanente dell'utente, vedi .claude/rules/05 § "Cache".
 <IfModule mod_expires.c>
-  ExpiresActive On
-  ExpiresByType text/html "access plus 0 seconds"
-  ExpiresByType text/css "access plus 0 seconds"
-  ExpiresByType application/javascript "access plus 0 seconds"
-  ExpiresByType text/javascript "access plus 0 seconds"
-  ExpiresByType image/png "access plus 1 year"
-  ExpiresByType image/webp "access plus 1 year"
-  ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/svg+xml "access plus 1 year"
-  ExpiresByType image/x-icon "access plus 1 year"
-  ExpiresByType application/pdf "access plus 1 month"
+  ExpiresActive Off
 </IfModule>
 <IfModule mod_headers.c>
-  # Forza la rivalidazione di pagine e codice a ogni visita
-  <FilesMatch "\.(html|css|js)$">
-    Header set Cache-Control "no-cache, must-revalidate"
-  </FilesMatch>
+  Header unset ETag
+  Header always set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+  Header always set Pragma "no-cache"
+  Header always set Expires "0"
 </IfModule>
+FileETag None
 
 # Compressione gzip
 # Nota 2026-05-10: aggiunto text/javascript (RFC 9239, MIME type moderno

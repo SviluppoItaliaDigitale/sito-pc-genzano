@@ -44,14 +44,14 @@
   {{ partial "preconnect-dati.html" . }}
   <link rel="stylesheet" href="{{ "vendor/bootstrap-italia/css/bootstrap-italia.min.css" | relURL }}">
   <link rel="stylesheet" href="{{ "vendor/bootstrap-icons/bootstrap-icons.min.css" | relURL }}">
-  {{/* Cache-buster v=<hash contenuto>: Aruba serve i CSS/JS critici con
-       cache-control: max-age=2592000 (30 giorni). L'hash FNV32a sul
-       contenuto del file fa cambiare l'URL SOLO quando il file cambia
-       davvero — non a ogni build. Risultato: la cache di 30 giorni è
-       effettiva fra deploy consecutivi che non toccano questi asset,
-       e l'utente di ritorno non riscarica 211 KB di CSS ad ogni visita.
-       Storia: fino al 16/05/2026 il cache-buster era `now.Unix`, che
-       invalidava la cache ad ogni build (50+ deploy/settimana). */}}
+  {{/* Parametro v=<hash contenuto> sui CSS/JS del tema: cambia SOLO quando il
+       file cambia davvero. Dal 12/09/2026 la cache HTTP del sito è DISATTIVATA
+       (.htaccess: Cache-Control no-store su ogni risorsa, richiesta dell'utente),
+       quindi il parametro non serve più a invalidare una cache: resta come
+       rete di sicurezza per proxy o ambienti che ignorano gli header (es.
+       GitHub Pages, che serve con max-age=600 e non legge .htaccess).
+       Storia: fino al 16/05/2026 era `now.Unix`; dal 16/05 al 12/09/2026
+       accompagnava una cache di 30 giorni su Aruba. */}}
   {{- $vCustomCss := readFile "themes/flavour-pcgenzano/static/css/custom.css" | hash.FNV32a -}}
   {{- $vA11yCss := readFile "themes/flavour-pcgenzano/static/css/a11y-toolbar.css" | hash.FNV32a -}}
   {{- $vA11yJs := readFile "themes/flavour-pcgenzano/static/js/a11y-toolbar.js" | hash.FNV32a -}}
