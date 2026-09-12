@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-09-12T02:03",
+  "aggiornato": "2026-09-12T03:02",
   "data_lunga": "sabato 12 settembre 2026",
-  "aggiornato_label": "sabato 12 settembre 2026, ore 02:03",
+  "aggiornato_label": "sabato 12 settembre 2026, ore 03:02",
   "alba": "06:46",
   "tramonto": "19:24",
   "corrente": {
-    "temp": 19.0,
-    "percepita": 20.5,
+    "temp": 18.9,
+    "percepita": 20.1,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 80,
-    "vento": 2,
-    "raffiche": 15
+    "umidita": 78,
+    "vento": 3,
+    "raffiche": 18
   },
   "giorni": [
     {
