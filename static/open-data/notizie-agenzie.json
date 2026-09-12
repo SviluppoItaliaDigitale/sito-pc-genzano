@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-12T16:03:44+00:00",
+  "generato": "2026-09-12T18:24:33+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-12T15:53:44+00:00",
+   "data": "2026-09-12T18:20:37+00:00",
    "fonte": "ANSA",
-   "titolo": "Lvmh in crisi in Cina, la battaglia contro Molly tea manda a picco le vendite",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/12/louis-vuitton-vince-in-tribunale-in-cina-ma-le-vendite-crollano-per-la-vendetta-dei_3a2ca315-c79d-42f5-857c-a1bbd501f1e0.html"
+   "titolo": "Venezia, Riccardo Scamarcio premiato come miglior attore della Sezione Orizzonti",
+   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/12/venezia-riccardo-scamarcio-miglior-attore-della-sezione-orizzonti_2c5ad0ae-09b8-4ad2-a5b2-075bbcafdffc.html"
   },
   {
-   "data": "2026-09-12T15:53:18+00:00",
-   "fonte": "ANSA",
+   "data": "2026-09-12T18:15:06+00:00",
+   "fonte": "ANSA CRONACA",
    "titolo": "Libera, da 8 Comuni su 10 elenco sul web dei beni confiscati a mafie",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/libera-da-8-comuni-su-10-elenco-sul-web-dei-beni-confiscati-a-mafie_d994539b-8173-45d2-9f05-55303e749d5d.html"
   },
   {
-   "data": "2026-09-12T15:52:24+00:00",
+   "data": "2026-09-12T18:14:41+00:00",
    "fonte": "ANSA",
-   "titolo": "Serie A: in campo alle 18 Lazio-Milan DIRETTA",
+   "titolo": "Jovanotti: '60 anni? Non ci penso, faccio festa per lavoro'",
+   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/12/jovanotti-60-anni-non-ci-penso-faccio-festa-per-lavoro_34f90b0e-4ca1-4ca4-8fd8-96e678b54928.html"
+  },
+  {
+   "data": "2026-09-12T18:13:11+00:00",
+   "fonte": "ANSA",
+   "titolo": "Serie A: in campo Lazio-Milan 2-2 DIRETTA",
    "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/11/serie-a-lazio-milan-in-campo-sabato-alle-18-diretta_0e1ef1cb-d3fa-4248-b634-7efed8da19fa.html"
   },
   {
-   "data": "2026-09-12T15:50:57+00:00",
+   "data": "2026-09-12T18:04:17+00:00",
    "fonte": "ANSA",
-   "titolo": "Sequestrato l'appartamento di Denise ad Ariccia",
+   "titolo": "Ucraina, Zelensky a Putin: 'Vediamoci al G20 a Miami'. Gelo di Mosca",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/12/ucraina-zelensky-a-putin-vediamoci-al-g20-a-miami.-gelo-di-mosca_1a9e23a8-4a39-42d1-bcc4-42ab5d6f1b5f.html"
+  },
+  {
+   "data": "2026-09-12T18:01:12+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "I funerali della famiglia di Pietralata, 'riflettere sui drammi di chi ci vive accanto'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/i-funerali-della-famiglia-di-pietralata-riflettere-sui-drammi-di-chi-ci-vive-accanto_cfc5dfab-2e42-40b5-9b55-662996c6f2bb.html"
+  },
+  {
+   "data": "2026-09-12T17:58:56+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Giallo ad Arezzo, cadavere trovato vicino all'ospedale",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/giallo-ad-arezzo-cadavere-trovato-vicino-allospedale_8f30df1e-a344-4728-b169-9aa7c8c62922.html"
+  },
+  {
+   "data": "2026-09-12T17:55:31+00:00",
+   "fonte": "ANSA",
+   "titolo": "La morte di Denise, sequestrato l'appartamento di Ariccia",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/sequestrato-lappartamento-di-denise-ad-ariccia_64d8acdf-16c5-4b38-b461-3ab136196cf4.html"
   },
   {
-   "data": "2026-09-12T15:41:58+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Morte Denise Cosco: sequestrato appartamento, analisi anche sul secondo cellulare",
-   "url": "https://www.adnkronos.com/cronaca/denise-corsco-figlia-lea-garofalo-morte-inchiesta_5KxRjo80HwDuufRg4WeNZc"
-  },
-  {
-   "data": "2026-09-12T15:32:47+00:00",
-   "fonte": "ANSA",
-   "titolo": "Zelensky propone di incontrare Putin al G20 di Miami a dicembre. Ancora raid incrociati",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/12/zelensky-propone-di-incontrare-putin-al-g20-di-miami-a-dicembre.-ancora-raid-incrociati_1a9e23a8-4a39-42d1-bcc4-42ab5d6f1b5f.html"
-  },
-  {
-   "data": "2026-09-12T15:28:46+00:00",
-   "fonte": "ANSA",
-   "titolo": "F1: Norris in pole position a Madrid, Antonelli in prima fila",
-   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/12/f1-norris-in-pole-position-a-madrid-antonelli-in-prima-fila_8e6aaa3a-d88e-40ff-b64f-d0e3212e16ec.html"
-  },
-  {
-   "data": "2026-09-12T15:22:57+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Serie A, oggi Lazio-Milan - Diretta",
-   "url": "https://www.adnkronos.com/sport/diretta-lazio-milan-oggi-serie-a-live-risultato-aggiornamenti_4JPKopsevLkbbVoZZteG20"
-  },
-  {
-   "data": "2026-09-12T15:22:31+00:00",
-   "fonte": "ANSA",
-   "titolo": "Muti: 'I governi hanno fatto schifo su Villa Verdi, ora si diano una mossa'",
-   "url": "https://www.ansa.it/sito/notizie/cultura/musica/2026/09/12/muti-i-governi-hanno-fatto-schifo-su-villa-verdi-ora-si-diano-una_92d0d5e7-bed2-4212-8622-a81ffc2ffb66.html"
-  },
-  {
-   "data": "2026-09-12T15:21:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Gp Madrid, Norris in pole davanti ad Antonelli: la griglia di partenza",
-   "url": "https://www.adnkronos.com/sport/formula-1-pole-position-madrid-norris-griglia-partenza-gran-premio-spagna_A26KmJlbiSfVfefaxImna"
-  },
-  {
-   "data": "2026-09-12T15:17:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Masso colpisce auto dietro a corteo funebre: morta una donna",
-   "url": "https://www.adnkronos.com/cronaca/rieti-masso-auto-corteo-funebre_2TRCbq9psNuQ52artyc3Os"
-  },
-  {
-   "data": "2026-09-12T15:09:14+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Migranti, Philp (Tory): \"Se centrodestra europeo non si compatta, popolo sosterrà partiti estremisti\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/migranti-philp-tory-se-centrodestra-europeo-non-si-compatta-popolo-sosterra-partiti-estremisti_6YZNDGMJOnRgS2bar9whYE"
-  },
-  {
-   "data": "2026-09-12T15:03:15+00:00",
+   "data": "2026-09-12T17:54:03+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Auto esce di strada, 25enne muore e la compagna incinta perde il bimbo",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/auto-esce-di-strada-25enne-muore-e-la-compagna-incinta-perde-il-bimbo_875d636d-28c5-4c01-bc05-bb1ebee29a5c.html"
+   "titolo": "L'auto esce di strada, lui muore e lei incinta perde il bimbo",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/auto-fuori-strada-nel-cuneese-morto-26enne-e-ferita-la-moglie-incinta_708c06ac-f831-4fae-90d5-255cb43f3074.html"
   },
   {
-   "data": "2026-09-12T14:58:01+00:00",
+   "data": "2026-09-12T17:51:52+00:00",
    "fonte": "ANSA",
-   "titolo": "Anthropic: 'Dobbiamo rallentare il ritmo di sviluppo dei modelli di IA'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/12/anthropic-dobbiamo-rallentare-il-ritmo-di-sviluppo-dei-modelli-di-ia_8e12f648-d851-456f-87e5-7377c52b4f9c.html"
+   "titolo": "Attentato Ranucci, ex compagna di Lavitola in Procura per essere ascoltata",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/attentato-ranucci-ex-compagna-di-lavitola-in-procura-per-essere-ascoltata_e68cf87a-3dfd-443c-8bce-57bfa7f3726c.html"
   },
   {
-   "data": "2026-09-12T14:38:45+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Di Battista tornato in Italia, il neurochirurgo Maira: \"Ha superato 12 ore di volo, è un buon segnale\"",
-   "url": "https://www.adnkronos.com/salute/di-battista-malore-come-sta-neurochirurgo_i7ZMo9BKzuCRZvUiITvjC"
-  },
-  {
-   "data": "2026-09-12T14:38:23+00:00",
+   "data": "2026-09-12T17:47:13+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Escursionista settantenne trovata viva dopo cinque notti all'addiaccio",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/escursionista-settantenne-trovata-viva-dopo-cinque-notti-alladdiaccio_109bf4d3-423f-4d78-982b-f6b74a6b76bc.html"
+   "titolo": "Travolta da un masso, muore al corteo funebre della madre",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/travolta-da-un-masso-muore-al-corteo-funebre-della-madre_43a4141d-691b-4f90-a1af-906ec6819e5e.html"
   },
   {
-   "data": "2026-09-12T14:29:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Dopo tentato stupro non viene espulso, migrante arrestato per nuova violenza: il caso in UK",
-   "url": "https://www.adnkronos.com/internazionale/esteri/dopo-tentato-stupro-non-viene-espulso-migrante-arrestato-per-nuova-violenza-il-caso-in-uk_6AJH8wrV69xPqywxCAvsAQ"
-  },
-  {
-   "data": "2026-09-12T14:17:28+00:00",
+   "data": "2026-09-12T17:38:55+00:00",
    "fonte": "ANSA",
    "titolo": "Tensione nel centrodestra su Strade sicure, la Lega attacca",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/09/12/tensione-nel-centrodestra-su-strade-sicure-la-lega-attacca_8146c0c5-8f0e-4051-b7dd-7ca70c052426.html"
   },
   {
-   "data": "2026-09-12T14:12:10+00:00",
+   "data": "2026-09-12T17:38:53+00:00",
    "fonte": "ANSA",
-   "titolo": "L'Arabia Saudita chiude l'oleodotto chiave: 'Colpito da droni provenienti dall'Iraq'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/09/12/larabia-saudita-chiude-loleodotto-chiave-colpito-da-droni-provenienti-dalliraq_246a5129-7cd7-47e8-bb62-f1d689aa63bb.html"
+   "titolo": "Anthropic: 'Rallentare lo sviluppo dei modelli di IA'. Musk e OpenAI: 'Ha ragione'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/12/anthropic-rallentare-lo-sviluppo-dei-modelli-di-ia.-musk-e-openai-ha-ragione_8e12f648-d851-456f-87e5-7377c52b4f9c.html"
   },
   {
-   "data": "2026-09-12T14:02:32+00:00",
+   "data": "2026-09-12T17:23:22+00:00",
    "fonte": "ANSA",
-   "titolo": "Lady Gaga diventa mamma a 40 anni",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/12/lady-gaga-da-alla-luce-il-suo-primo-figlio_f5d1d53b-3519-4bad-89ae-12e290c5928e.html"
+   "titolo": "Domenica e lunedi' la camera ardente in Campidoglio per Emma Bonino",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/12/domenica-e-lunedi-la-camera-ardente-in-campidoglio-per-emma-bonino_5da22fcf-e615-4989-9cf3-ce1e7ca062f7.html"
   },
   {
-   "data": "2026-09-12T13:38:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Gp Misano, Marc Marquez domina gara sprint davanti a Bezzecchi: l'ordine di arrivo e come cambia la classifica",
-   "url": "https://www.adnkronos.com/sport/gp-misano-marc-marquez-vince-gara-sprint-ordine-arrivo-classifica-piloti_1ETDrGBIqFAg031UH91Jbu"
+   "data": "2026-09-12T17:20:20+00:00",
+   "fonte": "ANSA",
+   "titolo": "Fari dell'Ue sul voto in Svezia, l'ultradestra punta al governo",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/12/fari-dellue-sul-voto-in-svezia-lultradestra-punta-al-governo_1e64d82f-4762-4f17-be69-398496a99f56.html"
   },
   {
-   "data": "2026-09-12T13:33:32+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Licenziamento di due ex assistenti, pignorato il conto di Ilaria Salis",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/licenziamento-di-due-ex-assistenti-pignorato-il-conto-di-ilaria-salis_41c83124-fc0e-456f-8e59-04d63df22ca1.html"
+   "data": "2026-09-12T17:15:30+00:00",
+   "fonte": "ANSA",
+   "titolo": "F1: a Norris la prima pole a Madrid. Antonelli 2/o, delusione Ferrari",
+   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/12/f1-norris-in-pole-position-a-madrid-antonelli-in-prima-fila_8e6aaa3a-d88e-40ff-b64f-d0e3212e16ec.html"
   },
   {
-   "data": "2026-09-12T13:33:11+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Fedriga, un libro bianco sul lavoro per dare prospettiva al Paese",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/fedriga-un-libro-bianco-sul-lavoro-per-dare-prospettiva-al-paese_ae26474c-261b-4f05-a070-3ea763e5a0e1.html"
-  },
-  {
-   "data": "2026-09-12T13:31:42+00:00",
+   "data": "2026-09-12T17:04:03+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Arriva il clima settembrino, massime ovunque sotto i 30 gradi",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/arriva-il-clima-settembrino-massime-ovunque-sotto-i-30-gradi_5885fbf2-3b33-4eb8-b98b-6e89ccc9b2de.html"
   },
   {
-   "data": "2026-09-12T13:29:55+00:00",
+   "data": "2026-09-12T16:59:13+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Licenziamento di due ex assistenti, pignorato il conto di Ilaria Salis",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/licenziamento-di-due-ex-assistenti-pignorato-il-conto-di-ilaria-salis_688081d2-a317-4e68-bf4c-05dd1bb9e4f7.html"
+   "titolo": "Ministro Ciriani visita carabiniere che ha tentato salvare donna",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/ministro-ciriani-visita-carabiniere-che-ha-tentato-salvare-donna_4468a662-3da9-4930-9435-9bee7e118b55.html"
   },
   {
-   "data": "2026-09-12T13:18:25+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Brics, Xi: \"Dobbiamo respingere ogni forma di protezionismo\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/vertice-brics-nuova-delhi_5IPN16bFXkUx9T9SH9q0Is"
-  },
-  {
-   "data": "2026-09-12T13:12:54+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Malore su campo da padel, ricoverato l'ex capitano del Pescara Camplone",
-   "url": "https://www.adnkronos.com/sport/andrea-camplone-malore-pescara-come-sta_6bQuUPCVbC09IzehfIBDzm"
-  },
-  {
-   "data": "2026-09-12T13:04:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Formula 1, a Madrid è super Norris: pole position davanti ad Antonelli, Hamilton beffato - Rivivi le qualifiche",
-   "url": "https://www.adnkronos.com/sport/diretta-qualifiche-gp-madrid-oggi-formula-1-live_4EPyHdLK4HPY7M3E5E7NOs"
-  },
-  {
-   "data": "2026-09-12T13:00:00+00:00",
+   "data": "2026-09-12T16:58:55+00:00",
    "fonte": "ANSA",
-   "titolo": "Xi: 'I Paesi Brics dovrebbero opporsi a dazi arbitrari e protezionismo'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/12/xi-i-paesi-brics-dovrebbero-opporsi-a-dazi-arbitrari-e-protezionismo_df0b33d8-0937-45ef-b18e-d194e3b9bc6c.html"
+   "titolo": "Tenta di uccidere la ex in aula dopo la sentenza di condanna",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/tenta-di-uccidere-la-ex-in-aula-in-tribunale-dopo-la-sentenza-di-condanna_61f3033f-45fd-427b-9cbe-9cb7190f398e.html"
   },
   {
-   "data": "2026-09-12T12:59:38+00:00",
+   "data": "2026-09-12T16:54:36+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Principessa Kate Middleton a sorpresa nell'ospedale dove curò cancro, ringrazia medici e incontra pazienti",
+   "url": "https://www.adnkronos.com/salute/sanita/kate-middleton-visita-sorpresa-royal-marsden-pazienti_22CpqZ7c4FMUuYJVHh6UCM"
+  },
+  {
+   "data": "2026-09-12T16:48:28+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Legale Ilaria Salis, non c'è stato nessun rifiuto di pagare",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/legale-ilaria-salis-non-ce-stato-nessun-rifiuto-di-pagare_151ca41d-a635-4fc0-83ab-5c6cadf6d0f3.html"
+  },
+  {
+   "data": "2026-09-12T16:47:04+00:00",
    "fonte": "ANSA",
-   "titolo": "Addio a Emma Bonino, una vita in prima linea per i diritti",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/11/addio-a-emma-bonino-una-vita-in-prima-linea-per-i-diritti_759e1d37-70c0-4a4e-836e-dc86007ae0b8.html"
+   "titolo": "La benzina vola, rebus nuovi sostegni per il governo",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/12/prezzi-dei-carburanti-ancora-in-rialzo-il-gasolio-a-2208-euro_885d9f70-8fde-40f0-b0c3-f285fd93b75a.html"
+  },
+  {
+   "data": "2026-09-12T16:34:28+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Giallo ad Arezzo, cadavere trovato vicino all'ospedale",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/giallo-ad-arezzo-cadavere-trovato-vicino-allospedale_92b46282-7052-4bf2-8d96-f94870288481.html"
+  },
+  {
+   "data": "2026-09-12T16:33:49+00:00",
+   "fonte": "ANSA",
+   "titolo": "Di Battista tornato in Italia, ricoverato al Gemelli",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/laereo-con-di-battista-atterrato-a-ciampino_5a8f3f03-c9c9-47ad-853d-2164527953f5.html"
+  },
+  {
+   "data": "2026-09-12T16:32:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "\"Bisogna rallentare l'AI\": l'appello di Amodei, boss di Anthropic. Musk e Altman: \"Ha ragione\"",
+   "url": "https://www.adnkronos.com/economia/anthropic-ai-allarme-amodei_2UVWuRs0bYJf4yX7OZdDBG"
+  },
+  {
+   "data": "2026-09-12T16:28:01+00:00",
+   "fonte": "ANSA",
+   "titolo": "Trump: 'Un'Irlanda unita sarebbe fantastica'. Burhnam: 'Non c'è il sostegno dell'opinione pubblica'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/12/trump-unirlanda-unita-sarebbe-fantastica.-burhnam-non-ce-il-sostegno-dellopinione-pubblica_17fac25a-f9c6-4973-92b7-7b4860cc3eed.html"
+  },
+  {
+   "data": "2026-09-12T16:19:59+00:00",
+   "fonte": "ANSA",
+   "titolo": "Deragliato un treno in Francia, 'è stato un sabotaggio'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/12/deragliato-un-treno-in-francia-e-stato-un-sabotaggio_ddd0bcc5-d799-4e98-a663-01a0c3881b5d.html"
+  },
+  {
+   "data": "2026-09-12T16:17:19+00:00",
+   "fonte": "ANSA",
+   "titolo": "Festa nel bar del Superenalotto, 'ha vinto un solo giocatore'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/superenalotto-entusiasmo-a-oggiono-per-la-vincita-milionaria-e-uno-di-qui_13728d7c-29d2-4ee9-92cf-92e71d66434f.html"
+  },
+  {
+   "data": "2026-09-12T16:04:10+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Migranti, nuove manifestazioni a Portsmouth: \"L'immigrazione clandestina deve finire\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/migranti-manifestazione-portsmouth-inghilterra_5bNz9PL0IpbtL4VmEeUKMc"
+  },
+  {
+   "data": "2026-09-12T16:02:09+00:00",
+   "fonte": "ANSA",
+   "titolo": "Lvmh in crisi in Cina, la battaglia contro Molly tea manda a picco le vendite",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/12/louis-vuitton-vince-in-tribunale-in-cina-ma-le-vendite-crollano-per-la-vendetta-dei_3a2ca315-c79d-42f5-857c-a1bbd501f1e0.html"
   }
  ]
 }
