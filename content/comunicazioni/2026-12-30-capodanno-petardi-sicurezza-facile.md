@@ -40,7 +40,7 @@ Il Sindaco di Genzano di Roma pubblica un'ordinanza. L'ordinanza è una regola u
 - dove non puoi sparare (centro storico, parchi, boschi)
 - quali petardi sono vietati
 
-Controlla il sito del Comune: genzanodiroma.gov.it. Chi non rispetta l'ordinanza paga una multa. La multa può essere da 50 a 500 euro.
+Controlla il sito del Comune: www.comune.genzanodiroma.roma.it. Chi non rispetta l'ordinanza paga una multa. La multa può essere da 50 a 500 euro.
 
 ## Quali petardi puoi usare
 

@@ -93,12 +93,7 @@ Attenzione alla viabilità nei pressi dei cimiteri nei prossimi giorni.
 
 ## Per la Protezione Civile
 
-Anche per il Gruppo cambiano alcuni aspetti:
-
-- **esercitazioni** serali con luce artificiale;
-- **ricognizioni** sul territorio anticipate o con illuminazione;
-- **verifica** lampade da campo;
-- **segnaletica** riflettente rinfrescata su mezzi.
+Anche per chi opera in emergenza il buio anticipato conta: gli interventi serali richiedono illuminazione da campo, abbigliamento ad alta visibilità e più attenzione sulle strade. È il periodo in cui le organizzazioni verificano lampade, torce e catarifrangenti dei mezzi.
 
 ## Sul meteo
 
@@ -113,6 +108,6 @@ L'ora solare coincide con **clima tipicamente più piovoso**:
 
 - [Cambio ora solare — preparazione](/comunicazioni/2026-10-25-cambio-ora-solare-preparazione-sera/)
 - [Prima pioggia autunnale](/comunicazioni/2026-09-22-prima-pioggia-intensa-autunno/)
-- [Preparazione inverno](/comunicazioni/2026-10-17-preparazione-inverno-mezzi-antineve/)
+- [Neve e gelo: casa e auto pronte prima dell'inverno](/comunicazioni/2026-10-17-neve-e-gelo-casa-e-auto-pronte-prima-dell-inverno/)
 
 In emergenza: **112**.

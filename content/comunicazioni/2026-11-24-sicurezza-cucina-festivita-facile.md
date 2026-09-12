@@ -131,7 +131,7 @@ Non bere alcolici mentre cucini con i fornelli accesi. Non guidare dopo aver bev
 
 ## In caso di emergenza
 
-Chiama il **112**, il numero unico di emergenza. Vale per incendi, ustioni gravi e fuga di gas. Per avvelenamenti da alimenti chiama il **800 883 300** (Centro Antiveleni). Il numero è gratuito.
+Chiama il **112**, il numero unico di emergenza. Vale per incendi, ustioni gravi e fuga di gas. Per avvelenamenti chiama il Centro Antiveleni del Policlinico Gemelli di Roma: **06 3054343**. Risponde sempre, anche di notte.
 
 Comunica con calma. Di' il tuo indirizzo in modo chiaro. Tieni il telefono libero dopo la chiamata.
 

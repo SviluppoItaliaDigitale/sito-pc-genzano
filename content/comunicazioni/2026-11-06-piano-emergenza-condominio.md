@@ -76,7 +76,7 @@ Un piano condominiale considera:
 - iniziativa di **uno o più condomini** volenterosi;
 - approvazione in **assemblea** (non obbligatoria ma consigliata);
 - supporto dell'**amministratore** per elenchi e dati tecnici;
-- **consulenza** del Gruppo Comunale di PC o di un tecnico abilitato.
+- eventuale **consulenza** di un tecnico abilitato per gli aspetti impiantistici.
 
 ### In quanto tempo
 - **da zero**: 2-3 riunioni nell'arco di 1-2 mesi;
@@ -97,8 +97,7 @@ Una **prova** di evacuazione condominiale:
 - è **un gesto** di civiltà e buon senso;
 - può essere **svolta in 15-20 minuti** con buon coordinamento;
 - permette di **verificare** vie di fuga e comportamenti;
-- **coinvolge** anche i bambini in modo pedagogico;
-- può essere **assistita** dal Gruppo Comunale di PC.
+- **coinvolge** anche i bambini in modo pedagogico.
 
 ## Dotazioni consigliate
 
@@ -133,16 +132,9 @@ Ogni condomino può:
 - **segnalare** criticità all'amministratore;
 - **conoscere** i vicini di casa (utile in emergenza).
 
-## A Genzano di Roma
+## Da dove partire
 
-Il Gruppo Comunale Volontari di PC è **disponibile** a:
-
-- **incontri** gratuiti in condomini;
-- **consulenza** per la redazione di piani;
-- **assistenza** a prove di evacuazione;
-- **formazione** dei referenti condominiali.
-
-Per richieste: attraverso i contatti del Gruppo.
+Il piano condominiale funziona meglio se ogni famiglia ha già il proprio **piano familiare**: la pagina [Piano familiare di emergenza](/piano-familiare/) del sito guida passo passo nella compilazione e si può stampare. Per le persone con esigenze specifiche (anziani, disabilità, neonati, animali) sono disponibili i [kit pronti per situazioni vulnerabili](/formazione/kit-calamita/), utili anche per l'elenco dei condomini da assistere. I comportamenti da tenere per ogni rischio sono nelle pagine [Rischi e prevenzione](/rischi-prevenzione/).
 
 ## Per approfondire
 

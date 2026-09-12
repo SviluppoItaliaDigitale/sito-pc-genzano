@@ -18,7 +18,7 @@ Il **30 settembre** termina ufficialmente il **periodo di grave pericolosità pe
 ## Cosa cambia
 
 ### Dichiarazione dello stato
-Dal **1° ottobre** viene meno la dichiarazione di grave pericolosità. Questo implica:
+La chiusura del periodo di grave pericolosità è fissata dalla Regione e dai Comuni: a Genzano di Roma l'[ordinanza sindacale n. 14 del 17 giugno 2026](/comunicazioni/2026-06-18-ordinanza-sindacale-incendi-boschivi-2026/) lo estende **fino al 15 ottobre**. Alla scadenza:
 
 - **termine** di alcuni divieti speciali (es. abbruciamento stoppie in aree sensibili);
 - **ritorno** alla normale disciplina del Testo Unico Forestale e dei regolamenti locali;
@@ -44,7 +44,7 @@ I bollettini di pericolosità AIB della Regione Lazio continuano a essere emessi
 
 ## Il bilancio della stagione
 
-Un bilancio completo della stagione AIB 2026 sarà pubblicato a ottobre, dopo il consolidamento dei dati operativi da parte della Regione Lazio, dei Comuni e delle strutture del sistema nazionale.
+I dati consolidati della stagione AIB nel Lazio sono pubblicati dalla Regione e, a livello nazionale, dal Dipartimento della Protezione Civile e dai Vigili del Fuoco. Gli interventi del Gruppo sono raccontati negli articoli di questo sito e nei [dati aperti sugli interventi](/open-data/).
 
 ## Il lavoro nei boschi
 

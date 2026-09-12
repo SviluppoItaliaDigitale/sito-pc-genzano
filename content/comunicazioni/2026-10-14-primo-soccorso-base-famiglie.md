@@ -91,7 +91,7 @@ Prima di ogni azione:
 ### Sostanza ingerita
 - **non** provocare vomito;
 - **non** dare latte se non specificamente indicato;
-- **chiamare** il **Centro Antiveleni** (**800 883 300** per il CAV del Policlinico Umberto I) o **112**;
+- **chiamare** il **Centro Antiveleni** del Policlinico Gemelli di Roma (**06 3054343**, 24 ore su 24) o il **112**;
 - **portare** la confezione del prodotto al pronto soccorso.
 
 ### Sostanza inalata (gas, vernici)
@@ -129,4 +129,4 @@ Chi vuole **imparare bene**, non improvvisare:
 - [Kit emergenza famiglia](/comunicazioni/2026-09-02-kit-emergenza-famiglia-72-ore/)
 - [Ministero della Salute — Primo soccorso](https://www.salute.gov.it/)
 
-In emergenza: **112**. Centro Antiveleni Policlinico Umberto I: **800 883 300**.
+In emergenza: **112**. Centro Antiveleni Policlinico Gemelli: **06 3054343**.

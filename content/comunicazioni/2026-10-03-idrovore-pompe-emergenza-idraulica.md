@@ -87,7 +87,7 @@ In caso di allagamento:
 
 ## A Genzano di Roma
 
-Il Gruppo dispone di **moduli idrovora** della Regione Lazio, oltre a pompe proprie per interventi di supporto. L'uso è sempre **coordinato** con i Vigili del Fuoco, a cui spetta la primaria competenza in emergenza idraulica urbana.
+Il Gruppo dispone di **motopompe e idrovore** per gli allagamenti di scantinati e locali (vedi [Chi siamo](/chi-siamo/)). L'uso è sempre **coordinato** con i Vigili del Fuoco, a cui spetta la primaria competenza in emergenza idraulica urbana.
 
 ## Per approfondire
 

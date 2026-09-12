@@ -78,11 +78,11 @@ Per chi ha **figli a scuola**, per chi è **docente o personale ATA**, per chi �
 3. **Conoscere il punto di raccolta scolastico** (le aree di radunata) dove i bambini vengono portati in caso di evacuazione, e dove i genitori devono andarli a prendere (mai entrare nell'edificio in emergenza).
 4. **Conoscere il Sindaco e il responsabile della Protezione Civile comunale**: sono i primi referenti istituzionali in caso di emergenza.
 
-Per la **didattica della sicurezza sismica nelle scuole**, il Gruppo Comunale Volontari di Genzano collabora con gli istituti del territorio attraverso il programma di [Formazione](/formazione/), con kit didattici per ogni grado scolastico, schede stampabili, giochi educativi.
+Per la **didattica della sicurezza sismica nelle scuole**, la sezione [Formazione](/formazione/) di questo sito offre agli istituti kit didattici per ogni grado scolastico, schede stampabili e giochi educativi.
 
 ## Genzano e la sicurezza sismica delle scuole
 
-Genzano di Roma, classificato **zona sismica 2B**, ha l'obbligo di antisismicità per ogni nuova costruzione. Le **scuole pubbliche** del territorio sono soggette alle verifiche di vulnerabilità previste dalle norme nazionali. Per gli edifici scolastici di vecchia costruzione, il Comune ha programmato negli anni interventi progressivi di **miglioramento o adeguamento sismico**, finanziati anche con risorse del PNRR.
+Genzano di Roma, classificato **zona sismica 2B**, ha l'obbligo di antisismicità per ogni nuova costruzione. Le **scuole pubbliche** del territorio sono soggette alle verifiche di vulnerabilità previste dalle norme nazionali. Per gli edifici scolastici di vecchia costruzione, le norme prevedono verifiche di vulnerabilità e, dove serve, interventi di **miglioramento o adeguamento sismico** a carico degli enti proprietari; l'Anagrafe nazionale dell'edilizia scolastica del Ministero dell'Istruzione raccoglie i dati sugli edifici.
 
 Per i comportamenti di autoprotezione in caso di scossa, vedi [Rischio sismico](/rischi-prevenzione/rischio-sismico/) e l'articolo [Friuli 1976: nascita della protezione civile italiana](/comunicazioni/2026-05-06-friuli-1976-cinquant-anni-protezione-civile/).
 

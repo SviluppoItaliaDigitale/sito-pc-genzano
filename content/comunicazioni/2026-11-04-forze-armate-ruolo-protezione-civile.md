@@ -71,7 +71,7 @@ Dal **2008** oltre 6.000 militari dell'Esercito sono dispiegati sul territorio i
 
 ## Il Dipartimento Militare
 
-All'interno del **Comando Operativo delle Forze Armate (COFS)** esiste il coordinamento per le operazioni di supporto al sistema di PC. Le richieste provengono dal **Dipartimento della Protezione Civile** e vengono elaborate con procedure standardizzate.
+Il **Comando Operativo di Vertice Interforze (COVI)** coordina il concorso delle Forze Armate alle operazioni di supporto al sistema di PC. Le richieste provengono dal **Dipartimento della Protezione Civile** e vengono elaborate con procedure standardizzate.
 
 ## Campi di accoglienza misti
 
@@ -98,7 +98,7 @@ Oggi in molti Comuni italiani:
 - **iniziative** nelle scuole su storia e memoria;
 - **parate** in città principali (Roma, Altare della Patria).
 
-A **Genzano** il Comune organizza cerimonia ufficiale con deposizione di corona presso il **Monumento ai Caduti**.
+Per le cerimonie locali fa fede il programma pubblicato dal [Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/).
 
 ## Un grazie ai militari in servizio
 

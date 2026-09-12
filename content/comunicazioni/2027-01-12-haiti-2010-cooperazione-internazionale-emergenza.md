@@ -28,7 +28,7 @@ Haiti era un Paese fragile prima del terremoto: 60% della popolazione sotto la s
 
 La risposta internazionale fu massiccia. Le Nazioni Unite coordinarono **migliaia di soccorritori da decine di Paesi**. La sede ONU a Port-au-Prince era stata distrutta dalla scossa, con oltre 100 funzionari uccisi tra cui il capo missione **Hédi Annabi**.
 
-L'**Italia** rispose con il dispiegamento più grande mai realizzato dal Servizio Nazionale di Protezione Civile fuori dall'Europa: il modulo **EMERCOM** del Dipartimento, ospedali da campo, **centinaia di volontari** delle organizzazioni nazionali, vigili del fuoco, sanitari, ingegneri civili. La nave da sbarco **Cavour** della Marina Militare divenne ospedale galleggiante per settimane.
+L'**Italia** rispose con il dispiegamento più grande mai realizzato dal Servizio Nazionale di Protezione Civile fuori dall'Europa: squadre del Dipartimento, ospedali da campo, volontari delle organizzazioni nazionali, vigili del fuoco, sanitari, ingegneri civili. La portaerei **Cavour** della Marina Militare, con a bordo un ospedale, fu impiegata nella missione di soccorso.
 
 ## Cosa ci insegna oggi
 
@@ -51,7 +51,7 @@ A oltre 15 anni dal terremoto, Haiti non si è ancora ripresa completamente. Le 
 
 ## A Genzano di Roma
 
-Anche se siamo un piccolo Gruppo Comunale, facciamo parte di una **rete nazionale e internazionale** di Protezione Civile. Ogni anno, formiamo i nostri volontari con criteri compatibili con gli standard del Servizio Nazionale e, indirettamente, con quelli internazionali. Quando un'emergenza italiana attiva il sistema, anche un volontario di Genzano può essere chiamato a operare in colonna mobile regionale o nazionale.
+Anche un piccolo Gruppo Comunale fa parte del **Servizio nazionale della Protezione Civile**: quando la Regione attiva la colonna mobile, i volontari formati e abilitati possono essere chiamati a operare fuori dal proprio territorio.
 
 Per partecipare, vedi come [diventare volontario](/diventa-volontario/).
 

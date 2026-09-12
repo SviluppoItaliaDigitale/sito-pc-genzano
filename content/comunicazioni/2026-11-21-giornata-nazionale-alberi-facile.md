@@ -61,9 +61,9 @@ La legge dice che le scuole devono fare la **Festa dell'albero** il 21 novembre.
 - Rispetta il bosco quando ci vai a camminare.
 - Partecipa alle giornate di piantumazione.
 
-## Il Gruppo di Protezione Civile e gli alberi
+## La Protezione Civile e gli alberi
 
-I volontari del **Gruppo Comunale di Protezione Civile di Genzano** osservano gli alberi. Dopo una tempesta segnalano gli alberi pericolanti. Controllano i versanti colpiti dagli incendi. Collaborano con il **Parco Regionale Castelli Romani** e i **Carabinieri Forestali**.
+Un volontario di Protezione Civile impara a guardare gli alberi. Dopo una tempesta segnala al Comune gli alberi pericolanti. Un bosco bruciato o senza cura è un pericolo per frane e incendi.
 
 ## Per saperne di più
 

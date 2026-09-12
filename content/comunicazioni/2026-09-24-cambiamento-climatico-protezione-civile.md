@@ -57,13 +57,7 @@ Il volontariato organizzato **non sostituisce** le strutture pubbliche, ma **est
 
 ## Cosa cambia a Genzano di Roma
 
-I rischi storici del territorio (**idrogeologico**, **AIB**, **sismico**, **meteo estremo**) non scompaiono: si **amplificano** nelle code della distribuzione (fenomeni più estremi). Il Gruppo Comunale di PC di Genzano, in coordinamento con il Comune e la Regione Lazio:
-
-- **aggiorna** periodicamente il **Piano di Emergenza Comunale**;
-- **forma** i volontari su scenari di rischio emergenti;
-- **collabora** con scuole e cittadini sulla **cultura del rischio**;
-- **partecipa** a esercitazioni regionali su scenari climatici;
-- **informa** la popolazione sulle buone pratiche di **resilienza**.
+I rischi storici del territorio (**idrogeologico**, **AIB**, **sismico**, **meteo estremo**) non scompaiono: si **amplificano** nelle code della distribuzione (fenomeni più estremi). Per il sistema di protezione civile locale questo significa che il **Piano di Emergenza Comunale** va tenuto aggiornato sugli scenari più severi, che la formazione dei volontari deve includere i rischi emergenti (ondate di calore, temporali estremi) e che l'informazione ai cittadini sulle buone pratiche di **resilienza**, come le pagine [Rischi e prevenzione](/rischi-prevenzione/) di questo sito, diventa parte della prevenzione.
 
 ## Cosa può fare il cittadino
 

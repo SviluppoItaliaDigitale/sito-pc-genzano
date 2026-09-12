@@ -54,15 +54,9 @@ Nei mesi autunnali le **allerte meteo** della Regione Lazio si intensificano. Sa
 - **arancione**: fenomeni rilevanti, evitare spostamenti non necessari;
 - **rossa**: fenomeni molto intensi, restare al sicuro, seguire istruzioni degli enti.
 
-## Cosa fa il Gruppo di PC
+## Cosa fa il sistema di Protezione Civile
 
-Nel mese di ottobre il Gruppo Comunale:
-
-- **aggiorna** il Piano di Emergenza con il Comune;
-- **monitora** bollettini meteo regionali;
-- **coordina** squadre di pronto intervento;
-- **supporta** la popolazione fragile in caso di allerta;
-- **collabora** con Vigili del Fuoco, Polizia Locale, Parco.
+Con l'inizio della stagione il **Centro Funzionale Regionale** intensifica i bollettini di criticità; il **Comune**, in caso di allerta, attiva le procedure del [Piano di Emergenza](/piano-emergenza/) e, se serve, il gruppo comunale di volontari. Questo sito pubblica ogni allerta nella pagina [Allerte meteo](/allerte-meteo/) e racconta gli interventi effettuati, come nella [giornata di pioggia del 10 settembre](/comunicazioni/2026-09-11-pioggia-alberi-tombini-voragine-otto-interventi/).
 
 ## Il ruolo della cittadinanza
 

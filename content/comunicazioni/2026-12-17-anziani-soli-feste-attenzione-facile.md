@@ -110,7 +110,7 @@ Se c'è una minaccia, chiama il 112, il numero unico di emergenza.
 | Numero | Quando |
 |---|---|
 | **112** | Qualsiasi emergenza |
-| **06 87 58 46 06** | Telefono d'Argento — ascolto per anziani |
+| **Telefono d'Argento** | Ascolto per anziani. I numeri sono sul sito telefonodargento.it |
 | **Servizi Sociali del Comune** | Se l'anziano ha bisogno di aiuto continuo |
 
 ## Un gesto semplice

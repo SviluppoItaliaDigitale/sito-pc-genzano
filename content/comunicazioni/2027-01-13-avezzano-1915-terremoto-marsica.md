@@ -46,7 +46,7 @@ Tre lezioni dalla Marsica per la Protezione Civile contemporanea:
 
 ## A Genzano di Roma
 
-Anche se geograficamente distanti, i Castelli Romani e la Marsica condividono la stessa **faglia distensiva appenninica** che attraversa il Centro Italia. Storicamente i Castelli sono stati interessati da scosse di magnitudo media (M 4-5) generate dal sistema sismico locale (zona dei Colli Albani) e da risentimenti di eventi più lontani (Marsica 1915, L'Aquila 2009, Centro Italia 2016-17).
+I Castelli Romani e la Marsica hanno origini geologiche diverse: i primi sono un distretto vulcanico, la seconda si trova sull'Appennino, dove agiscono le faglie distensive responsabili dei grandi terremoti del Centro Italia. Storicamente i Castelli sono stati interessati da scosse di magnitudo media (M 4-5) generate dal sistema sismico locale (zona dei Colli Albani) e da risentimenti di eventi più lontani (Marsica 1915, L'Aquila 2009, Centro Italia 2016-17).
 
 Il [Piano di Emergenza Comunale](/piano-emergenza/) considera questi scenari di riferimento. Per le famiglie, il [Piano Familiare](/piano-familiare/) è lo strumento operativo personale.
 

@@ -95,7 +95,7 @@ In una cucina "sicura" dovrebbero esserci:
 - **coperta antifiamma** (utile per soffocare piccoli fuochi);
 - **kit primo soccorso** vicino;
 - **rilevatore fumo** nella cucina o in sala adiacente;
-- **numeri emergenza** scritti (112, centro antiveleni 800 883 300);
+- **numeri emergenza** scritti (112, Centro Antiveleni Gemelli 06 3054343);
 - **prese** e cavi controllati.
 
 ## In caso di fuoco
@@ -197,4 +197,4 @@ Nelle due feste storiche, in aggiunta:
 - [Primo soccorso in famiglia](/comunicazioni/2026-10-14-primo-soccorso-base-famiglie/)
 - [Monossido carbonio](/comunicazioni/2026-10-02-monossido-carbonio-intossicazioni/)
 
-In emergenza: **112**. Centro Antiveleni: **800 883 300**.
+In emergenza: **112**. Centro Antiveleni Policlinico Gemelli: **06 3054343**.

@@ -128,7 +128,7 @@ Se rimani bloccato per neve o ghiaccio:
 
 ## Per approfondire
 
-- [Preparazione inverno](/comunicazioni/2026-10-17-preparazione-inverno-mezzi-antineve/)
+- [Neve e gelo: casa e auto pronte prima dell'inverno](/comunicazioni/2026-10-17-neve-e-gelo-casa-e-auto-pronte-prima-dell-inverno/)
 - [Codice della Strada — ACI](https://www.aci.it/)
 - [Chiamare il 112](/comunicazioni/2026-10-08-segnalare-emergenze-112-come-fare/)
 

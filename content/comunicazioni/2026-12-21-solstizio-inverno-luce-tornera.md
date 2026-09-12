@@ -24,7 +24,7 @@ Oggi, **21 dicembre 2026**, è il **solstizio d'inverno**. Il **giorno più cort
 - **giorno** più corto dell'anno;
 - **notte** più lunga dell'anno;
 - **data**: tra 20 e 22 dicembre;
-- **nel 2026**: 21 dicembre alle 10:50 UTC (11:50 ora italiana).
+- **nel 2026**: 21 dicembre alle 20:50 UTC (21:50 ora italiana).
 
 ### A Roma e Lazio
 - **alba**: circa 07:36;
@@ -162,12 +162,7 @@ Un **anno** complesso per il mondo (conflitti, crisi, cambiamenti). Il solstizio
 
 ## In emergenza oggi
 
-Il 21 dicembre (**21/12**) è giorno come altri per la PC. Servizio ordinario:
-- **reperibilità** attiva;
-- **monitoraggio** meteo (possibili rovesci o piogge);
-- **coordinamento**;
-- **prevenzione** invernale;
-- **sicurezza** in eventuali incidenti.
+Il 21 dicembre è un giorno come gli altri per il sistema di emergenza: il **112** risponde a ogni ora e il Gruppo Comunale interviene quando attivato dal Comune. Le condizioni meteo sono nella pagina [Allerte meteo](/allerte-meteo/).
 
 ## Verso Natale e Capodanno
 
@@ -193,7 +188,7 @@ Sul nostro sito:
 
 - [Santa Lucia e il buio](/comunicazioni/2026-12-13-santa-lucia-tradizione-buio/).
 - [Qualità aria invernale](/comunicazioni/2026-11-09-qualita-aria-pm10-inverno/).
-- [Aggiornamento metà dicembre](/comunicazioni/2026-12-15-aggiornamento-meta-dicembre/).
+- [Nebbia: guidare in sicurezza](/comunicazioni/2026-12-15-nebbia-guidare-in-sicurezza/).
 - [Avvio dicembre / inverno meteorologico](/comunicazioni/2026-12-01-avvio-dicembre-inverno-meteorologico/).
 - [Ondate di freddo](/comunicazioni/2026-11-05-ondate-freddo-prevenzione-anziani/).
 

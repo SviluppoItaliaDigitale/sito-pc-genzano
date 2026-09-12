@@ -160,21 +160,13 @@ In tutti questi casi, **vittime** con **diritti violati** e sistemi che dovetter
 - **pari dignità** di cittadini;
 - **sussidiarietà** (intervento nella misura necessaria).
 
-## A Genzano di Roma
+## Nel sistema di protezione civile
 
-### La nostra attività
-- **inclusione** come principio operativo;
-- **attenzione** alle fragilità del territorio;
-- **collaborazione** con servizi sociali comunali;
-- **mappatura** (con consenso) di persone fragili;
-- **corsi** e formazione anche su questi temi.
+Il Codice della Protezione Civile (D.Lgs. 1/2018) affida al Sindaco la pianificazione comunale di emergenza. I piani prevedono attenzione alle **persone con esigenze specifiche** (anziani soli, persone con disabilità, malati cronici) e ai servizi sociali come interlocutori. Sul nostro sito:
 
-### Collaborazioni
-- **Comune**: servizi sociali;
-- **ASL Roma 6**: salute e vulnerabilità;
-- **associazioni**: Caritas, Sant'Egidio, Croce Rossa;
-- **scuole**: educazione ai diritti;
-- **parrocchie**: rete di ascolto.
+- la pagina [Persone con necessità specifiche](/rischi-prevenzione/persone-necessita-specifiche/) spiega come prepararsi;
+- i [kit pronti per situazioni vulnerabili](/formazione/kit-calamita/) offrono materiali stampabili per ogni categoria;
+- il [Piano di emergenza comunale](/piano-emergenza/) descrive l'organizzazione prevista per Genzano di Roma.
 
 ## Riflettere oggi
 
@@ -197,14 +189,7 @@ La PC **non fa politica** ma **fa** solidarietà concreta.
 
 ## Un impegno
 
-La PC di Genzano, in questa giornata, rinnova l'**impegno** a servire **ogni cittadino** con uguale dignità, senza distinzione di:
-- **provenienza**;
-- **reddito**;
-- **credo religioso** o politico;
-- **orientamento sessuale**;
-- **disabilità**;
-- **età**;
-- **condizione giuridica**.
+Il volontariato di Protezione Civile serve **ogni cittadino** con uguale dignità, senza distinzione di provenienza, reddito, credo religioso o politico, orientamento sessuale, disabilità, età o condizione giuridica. È il principio di solidarietà del Codice della Protezione Civile, e vale anche per il Gruppo Comunale di Genzano di Roma.
 
 La **solidarietà** è **universale**.
 

@@ -56,7 +56,7 @@ Tre lezioni operative dal terremoto Turchia-Siria 2023:
 
 ## A Genzano di Roma e nel volontariato italiano
 
-Anche il nostro Gruppo Comunale fa parte di una **rete operativa nazionale** che si attiva, attraverso le colonne mobili regionali, in caso di grandi emergenze internazionali. Quando il Sistema Nazionale risponde a un'emergenza all'estero, i criteri di selezione dei volontari sono molto stringenti (formazione specifica, certificazioni, capacità linguistiche, idoneità sanitaria).
+Il **Servizio nazionale della Protezione Civile**, di cui anche i gruppi comunali fanno parte, contribuisce alle missioni internazionali attraverso il Meccanismo unionale di protezione civile. Quando il Sistema Nazionale risponde a un'emergenza all'estero, i criteri di selezione dei volontari sono molto stringenti (formazione specifica, certificazioni, capacità linguistiche, idoneità sanitaria).
 
 Per chi vuole intraprendere un percorso che potrebbe portare anche a queste esperienze, vedi come [diventare volontario](/diventa-volontario/) e quali sono i [percorsi formativi](/formazione/) disponibili.
 

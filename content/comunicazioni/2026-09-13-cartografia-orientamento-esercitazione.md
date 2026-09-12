@@ -53,9 +53,9 @@ Due sistemi principali usati dalla PC italiana:
 
 Saper **convertire** rapidamente tra i due è utile in coordinamento interforze.
 
-## L'esercitazione di cartografia
+## Gli esercizi tipici di un'esercitazione di cartografia
 
-Il Gruppo Comunale di PC di Genzano di Roma organizza almeno **un'esercitazione di cartografia** all'anno. Esercizi tipici:
+Le esercitazioni di cartografia dei gruppi di protezione civile prevedono, di norma, esercizi come questi:
 
 - **identificare** un punto descritto via radio;
 - **descrivere** la propria posizione ai colleghi;
@@ -63,10 +63,13 @@ Il Gruppo Comunale di PC di Genzano di Roma organizza almeno **un'esercitazione 
 - **stimare** tempi di percorrenza;
 - **mappare** aree di interesse (frane, incendi, strutture).
 
+Nel Gruppo di Genzano di Roma cartografia e orientamento sono tra i temi del [corso base per i nuovi volontari](/comunicazioni/2026-09-07-corso-base-volontari-apertura-iscrizioni/).
+
 ## Per approfondire
 
+- [Cartografia del territorio](/cartografia/) — le mappe pubblicate su questo sito
 - [Istituto Geografico Militare](https://www.igmi.org/)
 - [Geoportale Regione Lazio](https://geoportale.regione.lazio.it/)
-- [Calendario esercitazioni autunnali](/comunicazioni/2026-08-25-esercitazioni-autunnali-calendario/)
+- [Esercitazioni di Protezione Civile: il calendario dell'autunno](/comunicazioni/2026-08-25-esercitazioni-autunnali-calendario/)
 
 In emergenza: **112**.

@@ -42,7 +42,7 @@ In occasione di eventi affollati:
 - **vie di fuga** visibili;
 - **servizi sanitari** presenti;
 - **Forze dell'Ordine** in presidio;
-- **PC** in reperibilità o presenza.
+- **volontariato di PC** attivabile dal Comune per l'assistenza alla popolazione.
 
 ### Cosa fare per sé
 - **arrivare** per tempo (non all'ultimo);
@@ -105,8 +105,6 @@ Nella **vigilia dell'Immacolata**:
 - eventuali **ordinanze** comunali limitano comunque l'uso;
 - **attesa** generale al 31 dicembre.
 
-Vedremo i petardi con un articolo dedicato vicino a Capodanno.
-
 ## Presepe
 
 ### Allestimenti
@@ -116,12 +114,8 @@ Vedremo i petardi con un articolo dedicato vicino a Capodanno.
 - **materiali ignifughi** dove possibile;
 - **statuine** non in bocca per lattanti.
 
-### Presepi storici nel territorio
-A Genzano e Castelli:
-- **presepi artistici** nelle chiese;
-- **presepe vivente** (se organizzato, calendario da verificare);
-- **presepe** in Piazza Frasconi (spesso);
-- **presepi** di altri Comuni visitabili.
+### Presepi nel territorio
+Per i presepi e gli eventi dei Castelli Romani fai riferimento ai programmi ufficiali dei Comuni e delle parrocchie.
 
 ## Alberi di Natale
 
@@ -148,14 +142,9 @@ In caso di **malore** o **emergenza** in strada o in casa:
 - **non** muovere ferito in dubbi di trauma;
 - **primo soccorso** di base se formazione.
 
-## Cosa fa la PC stasera
+## La Protezione Civile e gli eventi
 
-Stasera e nelle prossime due giornate:
-- **reperibilità** attiva;
-- **monitoraggio** meteo;
-- **presenza** agli eventi principali se richiesto;
-- **coordinamento** con Polizia Locale, Carabinieri, Comune;
-- **pronto intervento** in caso di necessità.
+Il Gruppo Comunale interviene quando è attivato dal Comune. Per qualunque emergenza, anche stasera, il numero è il **112**.
 
 ## Domani, 8 dicembre
 
@@ -178,7 +167,6 @@ Buona **vigilia dell'Immacolata** a tutti i cittadini di Genzano, a chi festeggi
 Sul nostro sito:
 
 - [Ponte Immacolata](/comunicazioni/2026-11-29-ponte-immacolata-preparazione/).
-- [Presidio PC ponte Immacolata](/comunicazioni/2026-12-05-presidio-ponte-immacolata/).
 - [Immacolata: festa e auguri](/comunicazioni/2026-12-08-immacolata-festa-auguri/).
 - [Sicurezza cucina festività](/comunicazioni/2026-11-24-sicurezza-cucina-festivita/).
 - [Riscaldamento sicuro a dicembre](/comunicazioni/2026-12-04-riscaldamento-sicuro-dicembre/).

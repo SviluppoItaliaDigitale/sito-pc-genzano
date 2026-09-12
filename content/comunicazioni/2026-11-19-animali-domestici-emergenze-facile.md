@@ -82,9 +82,9 @@ Assicurati che il tuo animale abbia il microchip. Controlla che i tuoi dati sian
 
 Non puoi abbandonare il tuo animale. È un reato. Sei responsabile di lui anche in emergenza.
 
-## A Genzano di Roma
+## A chi chiedere aiuto
 
-Il Gruppo Comunale di Protezione Civile lavora con la ASL Roma 6 (l'azienda sanitaria del territorio) per aiutare gli animali in emergenza. Collaboriamo con le associazioni zoofile locali.
+Per gli animali il riferimento è il servizio veterinario della ASL Roma 6, l'azienda sanitaria del territorio. Per gli animali randagi chiama il Comune.
 
 ## In caso di emergenza
 

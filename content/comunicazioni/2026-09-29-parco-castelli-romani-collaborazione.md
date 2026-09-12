@@ -1,7 +1,7 @@
 ---
 title: "Il Parco dei Castelli Romani: un alleato della Protezione Civile"
 date: 2026-09-29
-description: "Il Parco Regionale dei Castelli Romani è un interlocutore strategico per la PC territoriale. Funzioni, risorse, collaborazioni."
+description: "Il Parco Regionale dei Castelli Romani è un interlocutore della Protezione Civile del territorio: funzioni, antincendio, dissesto, educazione ambientale."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Il **Parco Regionale dei Castelli Romani** è un'area protetta di circa **15.000 ettari**. Tutela uno dei paesaggi più significativi del Lazio: i **Colli Albani**, i **due laghi vulcanici di Albano e Nemi**, i boschi e le aree agricole tradizionali. Il Parco non è solo natura: è un **soggetto attivo** nella Protezione Civile del territorio, fondamentale per il Gruppo di Genzano di Roma.
+Il **Parco Regionale dei Castelli Romani** è un'area protetta di circa **15.000 ettari**. Tutela uno dei paesaggi più significativi del Lazio: i **Colli Albani**, i **due laghi vulcanici di Albano e Nemi**, i boschi e le aree agricole tradizionali. Il Parco non è solo natura: è un **soggetto attivo** nella Protezione Civile del territorio, e Genzano di Roma è uno dei suoi Comuni.
 
 ## Le funzioni di Protezione Civile del Parco
 
@@ -58,7 +58,7 @@ Attraverso il **Centro Visita** e programmi dedicati, il Parco porta nelle scuol
 
 Il Parco dei Castelli Romani si estende su **15 Comuni**: Albano Laziale, Ariccia, Castel Gandolfo, Frascati, **Genzano di Roma**, Grottaferrata, Lanuvio, Lariano, Marino, Monte Compatri, Monte Porzio Catone, Nemi, Rocca di Papa, Rocca Priora, Velletri.
 
-Ogni Comune, tramite il proprio Gruppo di PC, **coordina** con il Parco le attività sulle aree di propria competenza.
+Ogni Comune pianifica per il proprio territorio; l'Ente Parco è uno degli interlocutori del Piano di Emergenza Comunale per le aree protette.
 
 ## I laghi di Albano e Nemi
 
@@ -67,16 +67,7 @@ I **due laghi vulcanici** sono ecosistemi delicati e punti di attenzione per la 
 - **Albano**: profondo oltre 170 metri, è un **invaso naturale**, oggetto di monitoraggio per equilibri idrologici;
 - **Nemi**: più piccolo, con vulnerabilità idrogeologiche del cratere.
 
-Il Gruppo di PC di Genzano, pur non confinando direttamente con i laghi, collabora con i Gruppi dei Comuni limitrofi su scenari di **rischio intercomunale**.
-
-## Collaborazioni attive
-
-Il Gruppo di Genzano e il Parco collaborano in:
-
-- **avvistamento AIB** nelle giornate di pericolosità elevata;
-- **formazione** ambientale in attività pubbliche;
-- **interventi** su aree boscate del territorio comunale;
-- **monitoraggio** di dissesto idrogeologico.
+Genzano di Roma si affaccia sul cratere del lago di Nemi: i versanti che scendono verso il lago sono tra le aree del territorio comunale più esposte a frane e ruscellamento, come descritto nella pagina sul [rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/).
 
 ## Per approfondire
 

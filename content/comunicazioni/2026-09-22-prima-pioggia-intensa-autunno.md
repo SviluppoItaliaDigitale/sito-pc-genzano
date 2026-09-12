@@ -39,7 +39,7 @@ Risultato: per la stessa quantità di pioggia, il **coefficiente di deflusso** �
 
 Il territorio dei Castelli Romani, con versanti ripidi, valli antiche, urbanizzazione in aree di fondovalle, è vulnerabile a questi fenomeni. Eventi tipici:
 
-- **allagamenti** di strade in conca (via delle Mole, via Napoli, strade in valle);
+- **allagamenti** delle strade in conca e nei fondovalle;
 - **fango** trascinato da campi su strade;
 - **canaloni** temporanei che riempiono cortili e cantine;
 - **smottamenti** localizzati su muri di sostegno deboli.
@@ -73,13 +73,7 @@ Il territorio dei Castelli Romani, con versanti ripidi, valli antiche, urbanizza
 
 ## Quando il Gruppo di PC interviene
 
-In caso di prima pioggia intensa con effetti diffusi, il Gruppo Comunale:
-
-- **si attiva** su richiesta del Comune e del COC (Centro Operativo Comunale);
-- **collabora** con Polizia Locale, Vigili del Fuoco, Forestali;
-- **presidia** punti critici;
-- **supporta** cittadini in aree disagiate;
-- **comunica** alla popolazione aggiornamenti verificati.
+In caso di prima pioggia intensa con effetti diffusi, il Gruppo Comunale si attiva **su richiesta del Comune** e opera sotto il coordinamento del COC (Centro Operativo Comunale), insieme a Polizia Locale e Vigili del Fuoco. Gli interventi tipici sono quelli raccontati negli articoli di questo sito: alberi caduti, caditoie ostruite, scantinati allagati, assistenza ai cittadini nelle zone disagiate. Le informazioni verificate alla popolazione passano dai canali del Comune e da questo sito.
 
 ## Per approfondire
 

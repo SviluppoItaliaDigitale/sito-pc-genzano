@@ -70,17 +70,8 @@ Il **ponte** è considerato l'**avvio** ufficiale della stagione natalizia turis
 
 ## Mercatini e tradizioni
 
-### Nel Lazio
-- **Roma**: Piazza Navona (9-11 dicembre avvio);
-- **Frascati**: mercatino dell'Immacolata;
-- **Tivoli**: mercatini natalizi;
-- **Rieti**: mercatino del Sabino.
-
-### A Genzano di Roma
-- **centro storico** con luminarie e addobbi;
-- **iniziative** commerciali del corso;
-- **fiaccolata** e manifestazioni dell'8 dicembre (calendario diocesano);
-- **presepi** artigianali e istituzionali.
+### Programmi ed eventi
+Per i mercatini e gli eventi del ponte fai riferimento ai siti ufficiali dei Comuni organizzatori. Per Genzano di Roma: [sito del Comune](https://www.comune.genzanodiroma.roma.it/).
 
 ### Se ci si sposta per mercatini
 - **parcheggi**: limitati, arrivare presto;
@@ -165,12 +156,9 @@ Durante festività e ponti:
 - **servizio** di PC nazionale e regionale attivo 24/7;
 - **monitoraggio** meteo e idrogeologico continuo;
 - **attivazioni** per nevicate, incidenti, incendi;
-- **volontari** disponibili in reperibilità.
+- **volontariato** attivabile dal Comune o dalla Regione in caso di necessità.
 
-A Genzano:
-- **gruppo comunale** in reperibilità;
-- **radio** di squadra in ascolto;
-- **coordinamento** con Polizia Locale e carabinieri.
+Il Gruppo Comunale di Genzano di Roma interviene quando attivato dal Comune: per le emergenze si chiama sempre il **112**.
 
 ## Dopo il ponte
 

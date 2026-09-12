@@ -68,7 +68,6 @@ Per attività sul campo:
 ### Lavoro notturno / emergenza stradale
 - **giubbotto** HV (classe 3 sulla viabilità);
 - **lampada** frontale;
-- **paletta** o **moschetto**;
 - **triangolo** di segnalazione.
 
 ## Le norme di riferimento
@@ -93,7 +92,7 @@ La divisa deve permettere di identificare:
 - **appartenenza** al Gruppo Comunale di Genzano di Roma;
 - **logo** PC Genzano;
 - **eventuale** ruolo (squadra specifica, responsabile);
-- **numero** di identificazione volontario.
+- **eventuale** tesserino di riconoscimento previsto dall'organizzazione.
 
 Un volontario **non identificato** rischia di essere confuso con personale non autorizzato, soprattutto durante emergenze.
 
@@ -108,16 +107,9 @@ Un volontario in **divisa ufficiale**:
 
 Il volontario **fuori servizio** non indossa la divisa in contesti privati: porterebbe a **confusione** tra ruolo pubblico e vita privata.
 
-## Investimenti del Gruppo
+## Chi fornisce i DPI
 
-Il Gruppo Comunale Volontari di PC di Genzano investe ogni anno in:
-
-- **rinnovo** dotazioni per nuovi volontari;
-- **sostituzione** DPI danneggiati o scaduti;
-- **acquisto** DPI specifici per nuovi scenari;
-- **manutenzione** attrezzature personali.
-
-I **fondi** provengono dal Comune, dalla Regione e da **donazioni** di privati.
+Per legge (D.M. 13 aprile 2011) i dispositivi di protezione individuale sono forniti dall'organizzazione di appartenenza, che ne cura anche sostituzione e manutenzione: il volontario non deve acquistarli da sé. Per un gruppo comunale la dotazione è a carico del Comune, con eventuali contributi regionali.
 
 ## Per approfondire
 

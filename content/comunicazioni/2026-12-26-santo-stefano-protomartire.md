@@ -135,7 +135,6 @@ Santo Stefano è un buon giorno per **pensarci**, con **calma**.
 - **alcuni** ristoranti e bar;
 - **cinema**;
 - **chiese**;
-- **PC reperibile**;
 - **112** sempre.
 
 ### Chiusi
@@ -146,13 +145,9 @@ Santo Stefano è un buon giorno per **pensarci**, con **calma**.
 - **molti** supermercati (aperture parziali);
 - **negozi** del corso variabile.
 
-## La nostra presenza
+## In emergenza
 
-La PC è in **servizio**:
-- **reperibilità** attiva;
-- **coordinamento** con forze dell'ordine;
-- **monitoraggio** meteo;
-- **pronti** in caso di emergenza.
+Anche a Santo Stefano il **112** risponde a ogni ora. Il Gruppo Comunale interviene quando attivato dal Comune.
 
 Come ogni giorno, per emergenze: **112**.
 
@@ -165,11 +160,7 @@ Da oggi al **31 dicembre**:
 - **preparativi** per Capodanno iniziano;
 - **ritmi** leggermente più lenti.
 
-I nostri articoli dei prossimi giorni tratteranno:
-- **27 dicembre**: tra Natale e Capodanno;
-- **28-30 dicembre**: bilancio dell'anno;
-- **31 dicembre**: Capodanno e petardi;
-- **1 gennaio 2027**: auguri di nuovo anno.
+Nei prossimi giorni su questo sito: la [sicurezza con petardi e fuochi](/comunicazioni/2026-12-30-capodanno-petardi-sicurezza/) e la [prevenzione delle valanghe per chi va in montagna](/comunicazioni/2026-12-29-vacanze-in-montagna-valanghe-sicurezza/).
 
 ## Qualche domanda per oggi
 

@@ -46,7 +46,7 @@ Molti di questi strumenti sono stati riutilizzati e raffinati nelle emergenze su
 
 ## A Genzano di Roma
 
-Anche Genzano custodisce un patrimonio storico-artistico vulnerabile: la **Collegiata di Santa Maria della Cima**, le chiese del centro storico, edifici di valore monumentale lungo la via Italo Belardi. Una scossa significativa potrebbe danneggiarli. Per questo il [Piano di Emergenza](/piano-emergenza/) comunale prevede l'attivazione di sopralluoghi mirati al patrimonio in caso di evento sismico, con il coordinamento della Soprintendenza.
+Anche Genzano custodisce un patrimonio storico-artistico vulnerabile: la **Collegiata di Santa Maria della Cima**, le chiese del centro storico, edifici di valore monumentale lungo la via Italo Belardi. Una scossa significativa potrebbe danneggiarli. Dopo un evento sismico la verifica dei beni culturali spetta alle Soprintendenze, con le squadre di rilievo del Ministero della Cultura; il [Piano di Emergenza](/piano-emergenza/) comunale individua gli scenari e le aree di attesa del territorio.
 
 ## Sul nostro sito
 

@@ -22,7 +22,6 @@ A **Genzano di Roma**, **430 metri** slm, la **neve** in inverno è **rara** ma 
 - **quota**: 430 m slm;
 - **media** giorni di neve all'anno: 1-3;
 - **accumulo** medio: 5-15 cm per evento;
-- **episodi** storici: 1985 (gelata), 2012 (neve 30+ cm), 2018 (neve 15+ cm);
 - **tendenza** attuale: nevicate più rare ma più intense quando avvengono.
 
 ### Ghiaccio
@@ -178,12 +177,7 @@ In caso di nevicata significativa:
 
 ## PC e emergenze neve
 
-In caso di neve a Genzano di Roma:
-- **sala operativa** comunale attivata;
-- **volontari** convocati;
-- **mezzi** (spalaneve, spargisale) mobilitati;
-- **coordinamento** con Polizia Locale;
-- **supporto** a soggetti fragili (soli, anziani, disabili).
+In caso di nevicata il Comune può attivare il Gruppo Comunale. Tra i [mezzi del Gruppo](/chi-siamo/) c'è un Mercedes Atego attrezzato con spazzaneve e spargisale. I volontari, quando attivati, possono supportare le persone fragili (sole, anziane, con disabilità). Per le emergenze si chiama il **112**.
 
 ## Cose da non fare
 

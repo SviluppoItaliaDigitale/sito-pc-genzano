@@ -29,11 +29,7 @@ Ogni Capodanno in Italia:
 - **fauna selvatica** disturbata.
 
 ### A Genzano di Roma
-Non siamo esenti:
-- **feriti** ogni anno al pronto soccorso;
-- **chiamate** al 112 per incendi balconi;
-- **animali** perduti;
-- **vetri** infranti;
+Nessun territorio è esente: anche qui la notte di Capodanno porta con sé il rischio di ustioni, principi d'incendio su balconi e terrazzi, animali spaventati che scappano, vetri infranti;
 - **danni** a veicoli.
 
 ## Ordinanze comunali
@@ -45,7 +41,7 @@ Il **Sindaco** di Genzano emette tipicamente un'**ordinanza** che limita:
 - **tipologie** proibite (botti illegali).
 
 ### Verifica
-- **consulta** il sito del Comune (genzanodiroma.gov.it);
+- **consulta** il [sito del Comune](https://www.comune.genzanodiroma.roma.it/);
 - **leggi** l'ordinanza completa;
 - **rispetta** i limiti: sanzioni previste;
 - **informa** familiari e vicini.
@@ -231,12 +227,8 @@ Se il tuo cane/gatto **scappa** per paura:
 
 ## La nostra presenza
 
-### Reperibilità
-La PC di Genzano è in **reperibilità rinforzata**:
-- **coordinatore** di turno;
-- **squadre** pronte all'intervento;
-- **coordinamento** con Polizia Locale e VVF;
-- **monitoraggio** chiamate al 112.
+### Chi interviene
+La notte di Capodanno il **112** smista le chiamate a Vigili del Fuoco, soccorso sanitario e forze dell'ordine. Il Gruppo Comunale interviene se attivato dal Comune.
 
 ### Supporto
 - **interveniamo** solo se attivati dalle autorità;
@@ -271,8 +263,7 @@ Il **Capodanno** è **festa di tutti**. Anche di chi **non vuole** o **non può*
 
 Sul nostro sito:
 
-- [Bilancio 2026](/comunicazioni/2026-12-28-bilancio-annuale-pc-genzano/).
-- [Prospettive 2027](/comunicazioni/2026-12-29-prospettive-2027-nuovo-anno/).
+- [Vacanze in montagna: valanghe e sicurezza](/comunicazioni/2026-12-29-vacanze-in-montagna-valanghe-sicurezza/).
 - [Settimana tra feste](/comunicazioni/2026-12-27-settimana-tra-feste-riflessione/).
 - [San Silvestro: auguri di fine anno](/comunicazioni/2026-12-31-san-silvestro-auguri-fine-anno/).
 - [Incendi domestici: prevenzione](/comunicazioni/2026-05-13-incendi-domestici-cucina-elettrodomestici/).

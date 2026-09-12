@@ -46,7 +46,7 @@ Le **Marche** furono colpite soprattutto dalle scosse del **24 agosto 2016** (Pe
 La sequenza Centro Italia 2016 è stata uno dei **massimi banchi di prova** del sistema italiano di protezione civile, ed è servita anche come **modello operativo** per gli anni successivi:
 
 - La **Sala Italia** del DPC fu attivata permanentemente per **mesi**, con turni di tecnici, geologi, sismologi.
-- Le **colonne mobili regionali** di tutte le regioni italiane si alternarono nelle aree colpite. Anche il **Lazio**, dunque anche il nostro **territorio dei Castelli Romani**, contribuì con squadre di volontari.
+- Le **colonne mobili regionali** di tutte le regioni italiane si alternarono nelle aree colpite. Anche la colonna mobile del **Lazio** fu impiegata nelle aree colpite.
 - Furono allestite **tendopoli** e poi **moduli abitativi prefabbricati** (le famose **SAE — Soluzioni Abitative in Emergenza**) per migliaia di famiglie.
 - Il **Soccorso Alpino e Speleologico** lavorò per settimane sui versanti con frane indotte dal sisma.
 - Il **monitoraggio in continuo** delle scosse fu garantito dall'**INGV** con bollettini ogni due ore o anche più frequenti durante i picchi della crisi.

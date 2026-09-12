@@ -1,107 +1,58 @@
 ---
-title: "Settimana della Protezione Civile nelle scuole: il programma"
+title: "Settimana nazionale della Protezione Civile: cosa possono fare le scuole"
 date: 2026-10-18
-description: "Anche quest'anno il Gruppo di Genzano di Roma partecipa alla Settimana nazionale della Protezione Civile nelle scuole. Ecco il programma."
+description: "Ogni ottobre la Settimana nazionale della Protezione Civile invita anche le scuole a parlare di rischi. Materiali pronti per ogni età e come usarli."
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-18-settimana-protezione-civile-scuole.webp"
-image_alt: "Volontari della Protezione Civile in aula di scuola primaria con bambini seduti al loro posto durante lezione interattiva"
+image_alt: "Cover dell'articolo: Settimana nazionale della Protezione Civile: cosa possono fare le scuole"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
 ---
 
-Nel corso delle prossime settimane, il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** sarà presente in diverse **scuole del territorio** per attività di **sensibilizzazione** e **formazione** degli studenti. Si tratta della partecipazione alla Settimana nazionale della Protezione Civile promossa dal Dipartimento e da **Io Non Rischio Scuola**.
+Dal 2019, intorno al **13 ottobre** (Giornata internazionale per la riduzione del rischio di disastri), in Italia si celebra la **Settimana nazionale della Protezione Civile**, istituita con la Direttiva del Presidente del Consiglio dei Ministri del 1° aprile 2019. È la settimana in cui il Dipartimento, le Regioni, i Comuni e il volontariato aprono le porte ai cittadini: esercitazioni, incontri, punti informativi. Nel Lazio, nel 2026, la Settimana ospita anche l'[esercitazione regionale di Cassino](/comunicazioni/2026-05-26-iso-22398-esercitazioni-protezione-civile/).
 
-## Le scuole coinvolte
+Le scuole sono tra i destinatari naturali di questa settimana. Non serve un evento speciale: bastano una lezione, una prova di evacuazione commentata, un compito da portare a casa.
 
-Per l'edizione 2026 il programma riguarda:
+## Perché le scuole
 
-- **scuole dell'infanzia** — attività ludico-educative sui comportamenti di base;
-- **scuole primarie** — lezioni interattive con giochi e simulazioni;
-- **scuole secondarie di I grado** — approfondimenti sui rischi del territorio;
-- **scuole secondarie di II grado** — contenuti tecnici e orientamento al volontariato.
+Chi impara da bambino cosa fare durante una scossa lo ricorda da adulto. L'educazione civica, obbligatoria dal 2020 (L. 92/2019), include tra i suoi temi la protezione civile e la sicurezza. La Settimana è un'occasione per collocare questi contenuti in un momento in cui tutto il Paese ne parla.
 
-Le date specifiche sono concordate con le **Dirigenze Scolastiche** secondo le esigenze di ciascun istituto.
+## Materiali pronti, per ogni età
 
-## I contenuti delle lezioni
+Su questo sito i docenti trovano materiali gratuiti già organizzati per grado scolastico:
 
-### Per le scuole dell'infanzia (5 anni)
-- il **112** cantato e memorizzato;
-- riconoscere **adulti** fidati in emergenza;
-- "**nascondi, resisti, scappa**" spiegato con gioco;
-- giochi per riconoscere i **suoni** di allerta.
+- **scuola dell'infanzia**: il [kit per l'infanzia](/formazione/kit-scuola-infanzia/) con storie, giochi e schede da colorare sul 112 e sui comportamenti di base;
+- **scuola primaria**: il [kit per la primaria](/formazione/kit-scuola-primaria/) con i rischi del territorio, il comportamento in caso di terremoto e il [piano familiare](/comunicazioni/2026-10-10-piano-famiglia-emergenza-come-fare/) da compilare a casa;
+- **secondaria di primo grado**: il [kit per la secondaria di primo grado](/formazione/kit-scuola-secondaria-primo-grado/), con il sistema di protezione civile, i rischi dei Castelli Romani e la lettura dei bollettini;
+- **secondaria di secondo grado**: il [kit per la secondaria di secondo grado](/formazione/kit-scuola-secondaria-secondo-grado/), con casi di studio, normativa, cartografia e orientamento al volontariato.
 
-### Per le scuole primarie (6-10 anni)
-- **rischi** nel territorio (idrogeologico, sismico, incendi);
-- comportamenti in caso di **terremoto**;
-- cosa fare se **ci si perde** fuori casa;
-- giochi didattici e schede illustrate;
-- **piano di emergenza familiare** da costruire a casa.
+Completano l'offerta i [percorsi didattici pronti](/formazione/percorsi-didattici/), le [schede stampabili](/formazione/schede-didattiche-giochi/), i [giochi della sicurezza](/giochi/) e gli [esperimenti](/formazione/esperimenti/) per capire i fenomeni.
 
-### Per le scuole secondarie di I grado (11-13 anni)
-- **sistema** di Protezione Civile in Italia;
-- **rischi** specifici dei Castelli Romani;
-- cosa fare in caso di **incendio in casa**, **alluvione**, **sisma**;
-- **prove** di evacuazione commentate;
-- **volontariato** come valore civico.
+## La prova di evacuazione
 
-### Per le scuole secondarie di II grado (14-19 anni)
-- **risk management** e comunicazione del rischio;
-- **normativa** nazionale e regionale;
-- **mappe** del rischio e cartografia;
-- **tecniche** di primo soccorso;
-- **orientamento** al volontariato e ai corsi di formazione.
+Le prove di evacuazione sono un obbligo per ogni scuola (D.Lgs. 81/2008 e D.M. 26 agosto 1992), almeno due volte l'anno. Farne una durante la Settimana, e commentarla in classe subito dopo, trasforma un adempimento in una lezione: dove ci si raduna, perché non si usa l'ascensore, chi conta i presenti. Ne abbiamo parlato nell'articolo sulle [prove di evacuazione a scuola](/comunicazioni/2026-09-06-rientro-scuola-prove-evacuazione/).
 
-## Le prove di evacuazione
+## Un compito per casa
 
-In ciascun istituto viene concordata una **prova di evacuazione** con:
-
-- **osservazione** da parte dei volontari PC;
-- **feedback** ai docenti e alla dirigenza;
-- **suggerimenti** di miglioramento;
-- **certificato** di prova effettuata.
-
-Le prove sono parte degli obblighi di sicurezza ai sensi del **D.Lgs. 81/2008**.
-
-## Materiali distribuiti
-
-Agli studenti e alle famiglie vengono forniti:
-
-- **opuscoli** Io Non Rischio su rischi specifici;
-- **schede** "piano di emergenza familiare" da compilare;
-- **adesivi** "112" per cellulare e frigo;
-- **mappa** delle **aree di attesa** di Genzano.
-
-## Coordinamento con istituzioni
-
-L'attività è svolta in coordinamento con:
-
-- **Ufficio Scolastico Regionale** del Lazio;
-- **Comune di Genzano** — assessorato Istruzione;
-- **Dipartimento di Protezione Civile** (materiali e linee guida);
-- **ANPAS** e **Croce Rossa** per primo soccorso.
+Il modo più semplice per far uscire la lezione dall'aula è il **piano familiare di emergenza**: la pagina [Piano familiare](/piano-familiare/) del sito si compila e si stampa in pochi minuti. I bambini portano a casa la domanda giusta: «Se succede qualcosa, dove ci troviamo?».
 
 ## Per genitori e docenti
 
-I genitori interessati possono:
-
-- **parlare** con i propri figli di ciò che apprendono;
-- **costruire** insieme il **piano di emergenza familiare**;
-- **verificare** aree di attesa vicine a casa;
-- **iscriversi** al proprio corso base come adulti;
-- **comunicare** al Gruppo eventuali necessità formative specifiche.
-
-## Il valore educativo
-
-Formare i cittadini **dall'infanzia** significa costruire una **cultura del rischio** diffusa e resiliente. Uno studente che sa cosa fare in caso di terremoto, crescerà come adulto preparato.
+- **parlare** con i propri figli di ciò che apprendono a scuola;
+- **costruire** insieme il piano di emergenza familiare;
+- **verificare** le [aree di attesa](/piano-emergenza/) vicine a casa e alla scuola;
+- **usare** i materiali del sito, liberi e gratuiti, anche fuori dalla Settimana.
 
 ## Per approfondire
 
-- [Piano di emergenza familiare](/comunicazioni/2026-10-10-piano-famiglia-emergenza-come-fare/)
-- [Prove di evacuazione nelle scuole](/comunicazioni/2026-09-06-rientro-scuola-prove-evacuazione/)
-- [Io Non Rischio in piazza](/comunicazioni/2026-10-11-io-non-rischio-giornata-piazza/)
+- [Il Servizio nazionale della Protezione Civile](/conoscere/servizio-nazionale/)
+- [Formazione e scuole](/formazione/)
+- [Educazione civica: la protezione civile in classe](/formazione/educazione-civica/)
+- [Lezioni sui rischi del territorio a scuola](/comunicazioni/2026-09-12-scuole-lezioni-rischio-territorio/)
+- [Settimana nazionale della Protezione Civile — Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/)
 
 In emergenza: **112**.

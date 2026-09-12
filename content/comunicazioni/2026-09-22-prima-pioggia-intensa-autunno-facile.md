@@ -34,7 +34,7 @@ Questo può causare:
 
 ## Nei Castelli Romani
 
-I Castelli Romani hanno molte colline e valli strette. L'acqua scende veloce dalle colline. Le strade in basso si allagano. Questo succede spesso in via delle Mole e in altre vie in vallata.
+I Castelli Romani hanno molte colline e valli strette. L'acqua scende veloce dalle colline. Le strade in basso si allagano. Questo succede nelle vie più in basso.
 
 ## Cosa fare prima
 
@@ -63,7 +63,7 @@ Quando sai che arriva una pioggia forte:
 
 ## Quando interviene il Gruppo di Protezione Civile
 
-Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma interviene quando lo chiede il Comune. Lavora insieme alla Polizia Locale e ai Vigili del Fuoco. Il Gruppo presidia i luoghi a rischio. Aiuta i cittadini nelle zone difficili. Dà informazioni verificate alla popolazione.
+Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma interviene quando lo chiede il Comune. Lavora insieme alla Polizia Locale e ai Vigili del Fuoco. I volontari tolgono gli alberi caduti dalle strade. Puliscono i tombini. Svuotano le cantine allagate. Aiutano i cittadini nelle zone difficili.
 
 Il COC (Centro Operativo Comunale) coordina tutte le operazioni.
 

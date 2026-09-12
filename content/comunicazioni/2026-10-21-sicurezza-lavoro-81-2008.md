@@ -99,13 +99,7 @@ Gli studi mostrano che **più della metà** degli infortuni sono evitabili con:
 
 ## Il ruolo della Protezione Civile
 
-Il Gruppo Comunale Volontari di PC rientra nel **D.Lgs. 81/2008** per le attività svolte dai volontari:
-
-- **formazione** in materia di sicurezza;
-- **DPI** forniti per tutte le attività;
-- **valutazione** dei rischi per ogni scenario;
-- **medico** di riferimento;
-- **assicurazione** specifica.
+Anche il volontariato di Protezione Civile rientra nel campo del **D.Lgs. 81/2008**, con le modalità stabilite dal **D.M. 13 aprile 2011**: formazione e informazione dei volontari sui rischi degli scenari operativi, dispositivi di protezione individuale forniti dall'organizzazione, controllo sanitario secondo le attività svolte. Il Gruppo Comunale di Genzano di Roma applica queste regole come ogni organizzazione del sistema.
 
 Il volontariato non può rappresentare **una scappatoia** alle regole di sicurezza.
 

@@ -48,7 +48,7 @@ Oggi tanti lavorano nella silente macchina che permette alla vita di continuare:
 - **medici**, **infermieri**, **OSS** di ospedali e case di cura;
 - **operatori delle centrali uniche di emergenza** (NUE 112);
 - **carabinieri**, **polizia**, **finanza**, **vigili urbani**, **vigili del fuoco**;
-- **protezione civile** in reperibilità (anche noi);
+- **volontari** di protezione civile attivabili dai Comuni;
 - **operatori** di trasporti pubblici;
 - **giornalisti** e comunicatori;
 - **autoferrotranvieri**;
@@ -100,14 +100,7 @@ A **Genzano tutta** i nostri auguri più **cari** e **sinceri**.
 
 ## I nostri canali stasera
 
-Il nostro **servizio** continua:
-- **reperibilità** attiva;
-- **monitoraggio** meteo;
-- **coordinamento** con forze dell'ordine.
-
-In caso di emergenza: **112** sempre e comunque.
-
-Sui social pubblicheremo auguri istituzionali. Seguiteci se volete.
+In caso di emergenza: **112** sempre e comunque. Il Gruppo Comunale interviene quando attivato dal Comune.
 
 ## Cena della vigilia: sicurezza
 

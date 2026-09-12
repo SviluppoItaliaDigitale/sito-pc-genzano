@@ -65,7 +65,7 @@ Tre lezioni dalla doppia esperienza genovese del 1970 e 2011:
 
 Genzano non ha la specificità geografica di Genova (versanti scoscesi al mare, rii tombati sotto la città a forte pendenza). Ma il principio della **conoscenza del rischio** vale anche da noi:
 - I **fossi e i tombini** del centro storico vanno tenuti puliti e funzionanti
-- Le **aree storicamente sensibili agli allagamenti urbani** (Piazzale della Vittoria, via Italo Belardi, area di San Gennaro) sono note al Comune
+- Gli scenari di allagamento del territorio sono descritti nel [Piano di Emergenza Comunale](/piano-emergenza/)
 - In caso di **allerta arancione/rossa**, le indicazioni operative per il cittadino sono nella sezione [Cosa Fare Adesso](/cosa-fare-adesso/)
 
 ## Sul nostro sito

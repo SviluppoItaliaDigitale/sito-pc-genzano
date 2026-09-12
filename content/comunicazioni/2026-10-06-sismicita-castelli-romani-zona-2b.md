@@ -35,7 +35,7 @@ Il territorio dei Castelli Romani presenta:
 - **sismicità locale** legata a movimenti di faglia e a residui vulcanici;
 - **vulnerabilità** del patrimonio edilizio storico non antisismico.
 
-Il **terremoto più recente** di un certo rilievo nei Castelli Romani risale al **2 febbraio 1975**, con epicentro in zona Villa Senni, magnitudo intorno a 3.8 della scala Richter locale.
+La sismicità dei Colli Albani si manifesta soprattutto con **sciami** di scosse di piccola e media magnitudo. Gli eventi storici sono consultabili nel Catalogo Parametrico dei Terremoti Italiani (CPTI15) dell'INGV, quelli recenti nella [scheda terremoti del cruscotto](/cruscotto/) di questo sito, alimentata in tempo reale dall'INGV.
 
 Fonte dati: **INGV — Istituto Nazionale di Geofisica e Vulcanologia**.
 

@@ -28,7 +28,7 @@ Il **13 dicembre** è la festa di **Santa Lucia**, martire siciliana vissuta tra
 - **Sicilia**: festa patronale, pane di Santa Lucia, cuccìa (grano cotto);
 - **Bergamo, Brescia, Cremona, Verona, Mantova, Trento, Udine**: Santa Lucia porta doni ai bambini nella notte;
 - **Scandinavia**: processione di bambine con corone di candele;
-- **Genzano**: festa religiosa nelle parrocchie, ma non tradizione "Santa Lucia porta-doni".
+- **Centro Italia**: la tradizione dei doni non è diffusa; la festa resta soprattutto religiosa.
 
 ## Perché "il giorno più corto"
 
@@ -139,11 +139,11 @@ Nei **Paesi nordici** il 13 dicembre è una festa molto sentita:
 - **atmosfera** di luce nel buio estremo;
 - **simbolo** di speranza.
 
-A Genzano non c'è questa tradizione specifica ma le **luminarie** del centro storico svolgono funzione simile: **luce** e **colore** in giornate corte.
+Da noi non c'è questa tradizione specifica, ma le **luminarie** natalizie svolgono una funzione simile: **luce** e **colore** in giornate corte.
 
 ## Dolci e tradizioni culinarie
 
-Pur senza tradizione specifica a Genzano:
+Pur senza una tradizione specifica nel Lazio:
 - **cuccìa** siciliana (grano cotto con ricotta);
 - **pan brioches** al pistacchio di Siracusa;
 - **biscotti** natalizi (inizio della tornata di preparazioni dolciarie);
@@ -159,13 +159,9 @@ In molte zone di Italia:
 
 Tradizione **viva** in alcune regioni, assente o marginale in altre.
 
-## L'impegno della PC
+## La Protezione Civile nelle ore buie
 
-In questa giornata del buio, la PC ricorda che:
-- **soccorriamo** a ogni ora, di giorno e di notte;
-- **attrezzature** di illuminazione disponibili (torri faro, lampade);
-- **volontari** pronti anche nelle ore buie;
-- **attenzione** particolare a persone fragili nel periodo invernale.
+Le emergenze non aspettano la luce del giorno: il **112** risponde a ogni ora. Il Gruppo Comunale interviene quando è attivato dal Comune, con un'attenzione particolare alle persone fragili nel periodo invernale.
 
 ## Otto giorni al solstizio
 

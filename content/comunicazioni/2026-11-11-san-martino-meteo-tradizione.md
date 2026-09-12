@@ -121,18 +121,12 @@ Dopo questo breve ritorno di mitezza, arriva il **vero inverno**:
 
 ## A Genzano di Roma
 
-Il territorio vive la festa con:
-
-- **sagre** locali a tema vino novello;
-- **cantine** aperte;
-- **eventi** in centro;
-- **tradizioni** popolari sentite;
-- **partecipazione** delle associazioni culturali.
+Ai Castelli Romani San Martino coincide con il vino novello e con iniziative locali che cambiano di anno in anno: per il programma fa fede il [sito del Comune](https://www.comune.genzanodiroma.roma.it/).
 
 ## Per approfondire
 
 - [Centro Funzionale Regionale Lazio](https://www.regione.lazio.it/)
 - [Cambiamento climatico](/comunicazioni/2026-09-24-cambiamento-climatico-protezione-civile/)
-- [Preparazione inverno](/comunicazioni/2026-10-17-preparazione-inverno-mezzi-antineve/)
+- [Neve e gelo: casa e auto pronte prima dell'inverno](/comunicazioni/2026-10-17-neve-e-gelo-casa-e-auto-pronte-prima-dell-inverno/)
 
 In emergenza: **112**.

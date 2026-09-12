@@ -73,7 +73,7 @@ In emergenza idraulica urbana, il Gruppo Comunale di PC:
 - **collabora** con Polizia Locale e Vigili del Fuoco nella chiusura di strade critiche;
 - **supporta** la segnalazione di caditoie ostruite e tombini saltati;
 - **aiuta** residenti in aree fragili (anziani, disabili) quando necessario;
-- **coordina** con il Comune l'attivazione del COC in caso di emergenza estesa.
+- **opera** sotto il coordinamento del COC (Centro Operativo Comunale) quando il Sindaco lo attiva.
 
 ## Per approfondire
 

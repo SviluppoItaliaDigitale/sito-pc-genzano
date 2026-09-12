@@ -212,12 +212,8 @@ Siamo nella **settimana tra le feste**. Dal **27 al 31 dicembre**. Giorni tradiz
 
 ## La PC nei giorni tra feste
 
-### Attività
-- **reperibilità** continua;
-- **monitoraggio** meteo;
-- **preparazione** ai servizi del 31 dicembre (Capodanno);
-- **coordinamento** con Comune su ordinanze Capodanno;
-- **verifica** mezzi e dotazioni.
+### Il sistema di emergenza non chiude
+Anche tra le feste il **112** risponde a ogni ora e il Gruppo Comunale interviene quando attivato dal Comune.
 
 ### Ordinanze in vista
 - **petardi** e **botti**: limitazioni spesso imposte da Sindaco;
@@ -244,8 +240,8 @@ Sul nostro sito:
 - [Santo Stefano protomartire](/comunicazioni/2026-12-26-santo-stefano-protomartire/).
 - [Natale: auguri da Genzano di Roma](/comunicazioni/2026-12-25-natale-auguri-genzano/).
 - [Anziani soli a Natale](/comunicazioni/2026-12-17-anziani-soli-feste-attenzione/).
-- [Bilancio annuale PC Genzano](/comunicazioni/2026-12-28-bilancio-annuale-pc-genzano/).
-- [Prospettive 2027: nuovo anno](/comunicazioni/2026-12-29-prospettive-2027-nuovo-anno/).
+- [Messina 1908: il terremoto e il maremoto](/comunicazioni/2026-12-28-messina-reggio-calabria-1908-soccorso-moderno/).
+- [Vacanze in montagna: valanghe e sicurezza](/comunicazioni/2026-12-29-vacanze-in-montagna-valanghe-sicurezza/).
 
 Fonti istituzionali:
 

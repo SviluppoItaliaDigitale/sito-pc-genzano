@@ -132,7 +132,7 @@ Il **23 dicembre** è giornata tradizionalmente dedicata agli **ultimi preparati
 ### Oggi (e domani mattina) lavorano
 - **sanitari** di ospedali e guardie mediche;
 - **pompieri**, **carabinieri**, **polizia**;
-- **PC volontari** in reperibilità;
+- **volontari** di protezione civile attivabili dai Comuni;
 - **corrieri** in ultime consegne;
 - **commercianti** del corso;
 - **ristoratori** per cene del 24;
@@ -198,7 +198,7 @@ Chi lavora il 23-24 dicembre merita gratitudine. Se entriamo in un negozio, **ri
 
 ### Come reagire
 - **112** per serie;
-- **Centro Antiveleni**: **800 883 300**;
+- **Centro Antiveleni** Policlinico Gemelli: **06 3054343**;
 - **primo soccorso** di base;
 - **farmaci** (antistaminici, paracetamolo) a portata;
 - **calma** trasmessa ai presenti.
@@ -246,4 +246,4 @@ Fonti istituzionali:
 - [Centro Antiveleni Roma — Policlinico Gemelli](https://www.policlinicogemelli.it/).
 - [Polizia di Stato — Polizia stradale](https://www.poliziadistato.it/).
 
-In emergenza: **112**. Centro Antiveleni: **800 883 300**.
+In emergenza: **112**. Centro Antiveleni Policlinico Gemelli: **06 3054343**.

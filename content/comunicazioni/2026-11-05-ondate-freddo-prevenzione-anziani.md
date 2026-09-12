@@ -103,23 +103,11 @@ Se si abita **vicino** a un anziano conosciuto, un **saluto** alla porta può sa
 
 ## Il ruolo del Comune
 
-Il **Comune** in periodi di allerta freddo attiva:
-
-- **numero verde** per segnalazioni;
-- **servizi sociali** per persone non autosufficienti;
-- **centro di accoglienza notturna** per senza dimora;
-- **coordinamento** con ASL per visite domiciliari;
-- **campagna informativa** alla popolazione.
+In periodi di freddo intenso il **Comune**, attraverso i servizi sociali, è il riferimento per le persone non autosufficienti e per chi vive per strada, in raccordo con la ASL. Le misure attivate di volta in volta sono pubblicate sul [sito del Comune](https://www.comune.genzanodiroma.roma.it/).
 
 ## L'allerta ondata di freddo
 
-Il **Centro Funzionale Regionale Lazio** e **ARPA Lazio** pubblicano bollettini di allerta quando le condizioni climatiche previste richiedono attenzione:
-
-- **soglia 1**: condizioni meteo rilevanti ma non critiche;
-- **soglia 2**: condizioni a rischio per popolazione fragile;
-- **soglia 3**: condizioni critiche per tutta la popolazione.
-
-Il bollettino è consultabile sul sito della Regione Lazio.
+Il **Centro Funzionale Regionale Lazio** emette avvisi di condizioni meteorologiche avverse anche per **neve, gelate e temperature rigide**: quando ne esce uno per il nostro territorio, questo sito lo riporta nella pagina [Allerte meteo](/allerte-meteo/). Per le ondate di freddo non esiste un sistema a livelli come quello del caldo estivo: contano l'avviso regionale e il buon senso.
 
 ## Persone senza dimora
 
@@ -146,6 +134,6 @@ Se vedete una persona senza dimora in difficoltà, **chiamare il 112**: la segna
 
 - [Manutenzione caldaia](/comunicazioni/2026-10-27-manutenzione-caldaia-controllo-annuale/)
 - [Monossido carbonio](/comunicazioni/2026-10-02-monossido-carbonio-intossicazioni/)
-- [Preparazione inverno](/comunicazioni/2026-10-17-preparazione-inverno-mezzi-antineve/)
+- [Neve e gelo: casa e auto pronte prima dell'inverno](/comunicazioni/2026-10-17-neve-e-gelo-casa-e-auto-pronte-prima-dell-inverno/)
 
 In emergenza: **112**.

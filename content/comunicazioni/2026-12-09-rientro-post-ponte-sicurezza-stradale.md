@@ -104,8 +104,7 @@ Fermarsi è sempre meglio che un **incidente**.
 
 ### Bus e taxi
 - **bus** di linea con orario festivo/prolungato;
-- **taxi**: prenotare in anticipo nelle giornate di picco;
-- **app** di trasporto privato (Uber, Free Now).
+- **taxi**: prenotare in anticipo nelle giornate di picco.
 
 ## Rientro a scuola e lavoro
 
@@ -150,15 +149,6 @@ Gli **anziani** soli vivono la fine del ponte come:
 
 Una **chiamata** o **visita** ad un familiare anziano nei prossimi giorni è un gesto semplice ma importante.
 
-## Oggi la PC
-
-Oggi la PC:
-- **continua** il servizio ordinario;
-- **presidio** su eventuali criticità di traffico;
-- **reperibilità** su eventi invernali;
-- **coordinamento** con forze dell'ordine;
-- **avvio** della seconda fase del corso (gli ultimi incontri prima dell'esame).
-
 ## Verso le feste
 
 Tra il 9 e il 24 dicembre:
@@ -168,7 +158,7 @@ Tra il 9 e il 24 dicembre:
 - **mercatini** e iniziative intensificati;
 - **temperature** in calo progressivo.
 
-La PC sarà presente con articoli su: **Santa Lucia** (13 dicembre), **solstizio** (21 dicembre), **preparazione al Natale**, **sicurezza delle feste**.
+Per le condizioni meteo del territorio consulta la pagina [Allerte meteo](/allerte-meteo/).
 
 ## Per approfondire
 
