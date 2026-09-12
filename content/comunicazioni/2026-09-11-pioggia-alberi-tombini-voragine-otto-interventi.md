@@ -1,7 +1,7 @@
 ---
 title: "Un giorno di pioggia: otto interventi tra alberi caduti, tombini e una voragine"
 date: 2026-09-11T00:02:00+02:00
-description: "Giovedì 10 settembre la pioggia ha tenuto impegnato il Gruppo dalla mattina a sera: un albero su via Diana, tombini ostruiti, rami e una voragine."
+description: "Allerta gialla e temporali il 10 settembre: otto interventi del Gruppo a Genzano, dall'albero su via Diana ai tombini ostruiti e a una voragine."
 badge: "Attività"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -12,16 +12,16 @@ area: "Genzano di Roma"
 allegati: []
 draft: false
 tts: true
-lis_section: "rischio-idrogeologico"
+lis_section: "allerte-meteo"
 social_citazione: "Un tombino ostruito la mattina è lo stesso tombino che allaga la strada la sera: la pioggia non aspetta."
 social_punti:
-  - "Giovedì 10 settembre 2026 il Gruppo ha registrato otto interventi in un solo giorno, tutti a Genzano, legati alla pioggia."
+  - "Giovedì 10 settembre 2026, giornata di allerta gialla su tutto il Lazio, il Gruppo ha registrato otto interventi in un solo giorno, tutti a Genzano."
   - "Nel tardo pomeriggio un grosso albero caduto su via Diana bloccava il transito in entrambi i sensi: liberato con le motoseghe in mezz'ora."
   - "Tombini ostruiti al bivio per Lanuvio, rami su via Lenin e via Carafa, un tombino divelto e una voragine in via Pizzicannella."
   - "Il giorno dopo, su richiesta dei Carabinieri, la pulizia dei detriti su via Appia Vecchia."
 ---
 
-Otto interventi in un giorno, tutti a Genzano, tutti legati alla stessa causa: la **pioggia** di giovedì 10 settembre 2026. Il Gruppo Comunale è uscito la mattina per due allagamenti e ostacoli sulla strada. Nel tardo pomeriggio è arrivata una raffica di segnalazioni una dietro l'altra: alberi, rami, tombini, una voragine. Il giorno dopo la coda: detriti da rimuovere su via Appia Vecchia.
+Otto interventi in un giorno, tutti a Genzano, tutti legati alla stessa causa: la **pioggia** di giovedì 10 settembre 2026. Era una giornata di **allerta gialla** per criticità idrogeologica e per temporali. Il Centro Funzionale Regionale l'aveva dichiarata il giorno prima su tutte le zone del Lazio, compresa la nostra. Erano attesi rovesci forti, raffiche di vento e fulmini fin dal primo mattino. Il Gruppo Comunale è uscito la mattina per due allagamenti e ostacoli sulla strada. Nel tardo pomeriggio è arrivata una raffica di segnalazioni una dietro l'altra: alberi, rami, tombini, una voragine. Il giorno dopo la coda: detriti da rimuovere su via Appia Vecchia.
 
 ## La mattina: il bivio per Lanuvio sott'acqua
 
@@ -55,6 +55,12 @@ Venerdì 11 settembre, in tarda mattinata, i **Carabinieri** chiedono la pulizia
 
 Con queste nove attivazioni gli interventi registrati dal 4 aprile salgono a **155**: quasi **478 ore** di lavoro e **8.820 chilometri**. I numeri sono aggregati e anonimi e si consultano nella pagina [Open Data](/open-data/).
 
+## Il quadro sui Castelli e a Roma
+
+Genzano non era un caso isolato. Secondo le cronache locali, il temporale ha colpito Roma, la sua provincia e i Castelli Romani in due fasi. La prima ondata è arrivata in mattinata, la seconda da metà pomeriggio: la stessa sequenza raccontata nel nostro registro. I Vigili del Fuoco di Roma hanno contato oltre 150 interventi in un giorno: alberi, rami, pali caduti, allagamenti. Le chiamate ricevute sono state migliaia. A Velletri un pino alto una ventina di metri è stato colpito da un fulmine. In diversi Comuni castellani si sono aperte voragini sull'asfalto. Ovunque erano al lavoro i Gruppi comunali di Protezione Civile e le Polizie Locali.
+
+Due dettagli spiegano perché una pioggia di settembre fa tanti danni. Le alberature arrivavano da settimane di caldo e siccità, quindi erano più fragili. I tombini, poi, erano pieni di foglie e terra. Quando cade molta acqua in poco tempo, la rete di scolo non regge e la strada si allaga. Il temporale della mattina è arrivato anche nel giorno in cui, in molti Comuni, riaprivano le scuole superiori. Il traffico era già intenso: le strade allagate si sono aggiunte al resto.
+
 ## Cosa puoi fare tu
 
 - **Non attraversare tratti di strada allagati** in auto o a piedi: non vedi cosa c'è sotto, e un tombino divelto o una voragine possono essere nascosti dall'acqua.
@@ -75,5 +81,11 @@ Con queste nove attivazioni gli interventi registrati dal 4 aprile salgono a **1
 
 **Fonti istituzionali:**
 
-- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/protezione-civile)
+- [Regione Lazio — Allertamento del Sistema di Protezione Civile Regionale del 9 settembre 2026 (PDF)](https://regione.lazio.it/sites/default/files/allertamentiregionali-allegati/2026/allertamento_09_09_2026.pdf)
+- [Regione Lazio — Bollettini e allertamenti](https://www.regione.lazio.it/protezione-civile/bollettini-allertamenti)
 - [Dipartimento della Protezione Civile — Rischio meteo-idro: sei preparato?](https://rischi.protezionecivile.gov.it/it/meteo-idro/sei-preparato)
+
+**Le cronache locali:**
+
+- [Castelli Notizie — Maltempo ai Castelli Romani, allagamenti e disagi: Protezione Civile in azione](https://www.castellinotizie.it/2026/09/10/maltempo-ai-castelli-romani-allagamenti-e-disagi-protezione-civile-in-azione-rami-spezzati-tombini-ostruiti-e-auto-in-panne/)
+- [Castelli Notizie — Maltempo tra Roma e Castelli Romani: automobilisti intrappolati, centinaia di interventi](https://www.castellinotizie.it/2026/09/10/maltempo-tra-roma-e-castelli-romani-automobilisti-intrappolati-centinaia-di-interventi-pino-caduto-a-velletri/)

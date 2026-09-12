@@ -46,10 +46,11 @@ Due dei quattro incendi di questi giorni partono da fuochi accesi in terreni pri
 ## Cosa puoi fare tu
 
 - **Chiama il 112** appena vedi fumo o fiamme: non aspettare di capire se è un fuoco "voluto".
-- **Non bruciare sfalci, potature o rifiuti** all'aperto: portali all'isola ecologica o aspetta la fine del periodo di pericolosità.
+- **Non bruciare sfalci, potature o rifiuti** all'aperto: portali all'isola ecologica. Anche fuori dal periodo di massima pericolosità, prima di bruciare residui vegetali chiedi al Comune: ci sono regole locali da rispettare e spesso serve un'autorizzazione.
 - **Tieni pulito il terreno** intorno a casa e ai capanni: erba tagliata, ramaglie via, legna lontana dai muri.
 - **Non avvicinarti** a un incendio per guardare o per filmare: intralci i mezzi e respiri fumo.
-- **Se il fuoco è vicino a casa tua**, chiudi porte e finestre, spegni il gas e allontanati nella direzione opposta al fumo.
+- **Se il fuoco minaccia casa tua e puoi allontanarti in sicurezza**, fallo subito, nella direzione opposta al fumo e alle fiamme.
+- **Se non puoi allontanarti**, resta in casa: chiudi porte, finestre, persiane e prese d'aria, spegni il gas e segui le indicazioni dei soccorritori.
 
 ## Per approfondire
 
