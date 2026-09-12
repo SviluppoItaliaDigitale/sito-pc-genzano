@@ -90,6 +90,24 @@ Header always set Permissions-Policy "geolocation=(self), microphone=(), camera=
 
 **CSP promossa a enforcing (15/08/2026):** l'header è ora `Content-Security-Policy` attivo (era Report-Only dal 10/05) con `upgrade-insecure-requests` reintrodotta. **Stretta dello stesso giorno:** rimosso `cdn.jsdelivr.net` da `script-src`/`style-src`/`font-src` (tutto è vendorizzato self-hosted, verifica meccanica: zero riferimenti nel repo) — se in futuro si reintroduce un asset da CDN, va prima riaggiunto alla policy. 🔴 Quando si aggiunge una nuova fonte dati al cruscotto o un nuovo widget, aggiornare anche `connect-src`/`frame-src` della policy: dimenticarlo produce una scheda vuota solo su Aruba (GitHub Pages non invia header). Dopo ogni modifica alla CSP: smoke test post-deploy su `/cruscotto/`.
 
+## Cache HTTP — DISATTIVATA, non reintrodurla (12/09/2026)
+
+🔴 **Istruzione permanente dell'utente (12/09/2026)**: *"elimina ogni cache e non metterla più"*, dopo problemi ripetuti di aggiornamenti non visibili sul sito live. Il blocco "Cache" di `themes/flavour-pcgenzano/static/.htaccess` invia su **ogni risorsa** (HTML, CSS, JS, immagini, PDF, ZIP, JSON, XML, font):
+
+```apache
+ExpiresActive Off
+Header always set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+Header always set Pragma "no-cache"
+Header always set Expires "0"
+FileETag None
+```
+
+- **Vietato** reintrodurre `ExpiresByType`, `max-age > 0`, `immutable`, `stale-while-revalidate`, service worker con precache, o altri meccanismi che conservino una copia nel browser o in un proxy. Vale anche per le pagine statiche in `static/**` (stesso `.htaccess`).
+- **Storia**: dal 06/06/2026 la policy era "pagine e codice senza cache, immagini 1 anno, PDF 1 mese". Restavano stantii i file che cambiano **mantenendo lo stesso nome** (cover rigenerate, `manuale-protezione-civile.pdf`, deck, pacchetti ZIP, open data, feed) e tutto ciò che non aveva una regola esplicita (JSON, XML, font, ZIP → cache euristica del browser, spesso giorni).
+- I parametri `?v=<hash>` sui CSS/JS del tema e `?v=<timestamp>` sulle cartine meteo restano come rete di sicurezza per gli ambienti che ignorano `.htaccess` (GitHub Pages serve con `max-age=600`): non sono cache, sono anti-cache. Non toglierli, non aggiungerne altri per compensare una cache che non c'è.
+- **Costo accettato**: ogni visita riscarica gli asset (bundle Bootstrap Italia ~250 KB compresso, CSS ~40 KB compresso, immagini della pagina). Lighthouse segnalerà `uses-long-cache-ttl`: è atteso, non è una regressione da correggere.
+- **Transizione**: i visitatori che avevano già in cache un'immagine o un PDF con la vecchia scadenza (1 anno / 1 mese) continuano a vederli finché il browser non li scarta o finché non fanno un aggiornamento forzato (Ctrl+F5 / svuota dati del sito). Da quel momento la nuova policy vale per sempre.
+
 ## Workflow GitHub Actions — qualità YAML
 
 I file in `.github/workflows/*.yml` sono validati da GitHub al momento del push. Se la validazione fallisce il run viene marcato "completed failure" con 0 job eseguiti, ma **nessuna issue viene aperta** e il problema può passare inosservato per settimane.
