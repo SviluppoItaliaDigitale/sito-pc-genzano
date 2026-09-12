@@ -2,7 +2,7 @@
 title: "Norcia, 30 ottobre 2016: la scossa più forte d'Italia degli ultimi 30 anni"
 date: 2026-10-30T00:02:00+02:00
 description: "Alle 7:40 del 30 ottobre 2016 una scossa di magnitudo 6.5 colpì Norcia: la più forte registrata in Italia dopo l'Irpinia."
-badge: "Comunicazione"
+badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-30-norcia-2016-decimo-anniversario-sequenza-centro-italia.webp"

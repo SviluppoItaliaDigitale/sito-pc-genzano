@@ -2,7 +2,7 @@
 title: "«Sempre al tuo fianco»: la fiction Rai sul rischio Vulcani con Ambra Angiolini"
 date: 2027-02-24
 description: "«Sempre al tuo fianco» (Rai 1, 2024): la serie con Ambra Angiolini sulla Protezione Civile e il rischio Vulcani. Cosa convince e cosa è romanzato."
-badge: "Comunicazione"
+badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-02-24-protezione-civile-fiction-tv-ambra-angiolini.webp"

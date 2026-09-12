@@ -640,7 +640,7 @@ Sala Operativa Unificata Permanente. Sala regionale antincendio boschivo, attiva
 *Approfondisci: [Il rischio da incendi boschivi](/conoscere/catalogo-dei-rischi/rischio-incendio/).*
 
 ### SOUR {#sour}
-Sala Operativa Unificata Regionale del Lazio. Sala operativa attiva 24 ore su 24 che coordina le emergenze a livello regionale; da non confondere con la SOUP, dedicata agli incendi boschivi.
+Sala Operativa Unificata Regionale: denominazione usata in passato per la Sala Operativa Regionale (SOR) della Protezione Civile del Lazio, attiva 24 ore su 24 per coordinare le emergenze regionali (numero verde 803 555). Dal 15 giugno al 30 settembre la stessa sala assume la configurazione SOUP, con Vigili del Fuoco e Carabinieri Forestali, per la campagna incendi boschivi.
 
 ### Stato di emergenza {#stato-di-emergenza}
 Atto del Consiglio dei Ministri (art. 24 del Codice della protezione civile) che dichiara un'emergenza di rilievo nazionale: sblocca poteri straordinari e ordinanze.

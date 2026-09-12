@@ -1,6 +1,6 @@
 ---
 title: "Messina e Reggio Calabria, 28 dicembre 1908: il terremoto che fece 100.000 vittime e fondò l'idea moderna di soccorso"
-date: 2026-12-28T00:02:00+02:00
+date: 2026-12-28
 description: "Alle 5:21 del 28 dicembre 1908 una scossa di magnitudo 7.1 distrusse Messina e Reggio Calabria."
 badge: "Informazione"
 priorita: "normale"

@@ -6310,68 +6310,6 @@ pagine:
       score: 13.0
       titolo: 'Il disastro del Vajont: l’analisi geologica e la ricostruzione della tragedia del 9 ottobre 1963'
       url: https://youtu.be/xUtCwhN8-pQ
-  comunicazioni/2026-10-15-aggiornamento-operativo-meta-ottobre:
-    title: 'Metà ottobre: aggiornamento operativo del Gruppo'
-    url: /comunicazioni/2026-10-15-aggiornamento-operativo-meta-ottobre/
-    video:
-    - anchored:
-      - esercitazione
-      canale: abili-a-proteggere
-      id: Ia_Uf9i6BTk
-      is_lis: false
-      overlap:
-      - esercitazione
-      - evacuazione
-      - procedure
-      score: 2.8
-      titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
-      url: https://youtu.be/Ia_Uf9i6BTk
-    - anchored:
-      - esercitazione
-      canale: dpc-gov
-      id: 6ImZj3WaeQY
-      is_lis: false
-      overlap:
-      - esercitazione
-      - rischio
-      - sismico
-      score: 2.2
-      titolo: 'MODEX SICILY 2019: esercitazione internazionale sul rischio sismico'
-      url: https://youtu.be/6ImZj3WaeQY
-    - anchored:
-      - esercitazione
-      canale: dpc-gov
-      id: M2_qoahQ-0A
-      is_lis: false
-      overlap:
-      - esercitazione
-      - test
-      score: 2.2
-      titolo: Test di un modulo ad elevata capacità di pompaggio – Esercitazione EXE PO 2026
-      url: https://youtu.be/M2_qoahQ-0A
-    - anchored:
-      - esercitazione
-      canale: dpc-gov
-      id: OkEoPVutZr4
-      is_lis: false
-      overlap:
-      - esercitazione
-      - pianificazione
-      score: 2.2
-      titolo: Esercitazione “Verso una pianificazione di protezione civile inclusiva”
-      url: https://youtu.be/OkEoPVutZr4
-    - anchored:
-      - esercitazione
-      canale: dpc-gov
-      id: UIpzlwhK2ik
-      is_lis: false
-      overlap:
-      - esercitazione
-      - rischio
-      - sismico
-      score: 2.2
-      titolo: 'CALABRIA 2011: esercitazione nazionale sul rischio sismico'
-      url: https://youtu.be/UIpzlwhK2ik
   comunicazioni/2026-10-15-reggio-emilia-1996-terremoto-correggio-rischio-padano:
     title: 'Reggio Emilia, 15 ottobre 1996: il terremoto che ha riportato la Pianura Padana sulla mappa sismica'
     url: /comunicazioni/2026-10-15-reggio-emilia-1996-terremoto-correggio-rischio-padano/
@@ -6702,34 +6640,6 @@ pagine:
       score: 2.0
       titolo: La Protezione Civile racconta il podcast DPC - Dove Parliamo di Clima con Filippo Thiery
       url: https://youtu.be/NukrIN8jnE4
-  comunicazioni/2026-10-29-allerta-meteo-ottobre-genzano:
-    title: 'Allerta gialla per temporali: il Gruppo segue l''evoluzione'
-    url: /comunicazioni/2026-10-29-allerta-meteo-ottobre-genzano/
-    video:
-    - anchored:
-      - temporali
-      canale: io-non-rischio
-      id: kT-m1l4haIQ
-      is_lis: false
-      overlap:
-      - temporali
-      score: 6.0
-      titolo: Chi ha paura dei temporali?
-      url: https://youtu.be/kT-m1l4haIQ
-  comunicazioni/2026-10-29-allerta-meteo-ottobre-genzano-facile:
-    title: Allerta gialla per temporali a Genzano di Roma
-    url: /comunicazioni/2026-10-29-allerta-meteo-ottobre-genzano-facile/
-    video:
-    - anchored:
-      - temporali
-      canale: io-non-rischio
-      id: kT-m1l4haIQ
-      is_lis: false
-      overlap:
-      - temporali
-      score: 6.0
-      titolo: Chi ha paura dei temporali?
-      url: https://youtu.be/kT-m1l4haIQ
   comunicazioni/2026-10-29-tempesta-vaia-2018-vento-foreste-cambiamento-climatico:
     title: 'Tempesta Vaia, 29 ottobre 2018: il vento che ha cambiato il volto delle Dolomiti'
     url: /comunicazioni/2026-10-29-tempesta-vaia-2018-vento-foreste-cambiamento-climatico/
@@ -7035,67 +6945,6 @@ pagine:
       score: 7.2
       titolo: 'Terremoti in pillole 23. L''onda inarrestabile: il maremoto'
       url: https://youtu.be/2w1JaOKE_2M
-  comunicazioni/2026-11-07-esercitazione-radio-inter-comunale:
-    title: 'Esercitazione radio inter-comunale: i Castelli in rete'
-    url: /comunicazioni/2026-11-07-esercitazione-radio-inter-comunale/
-    video:
-    - anchored:
-      - esercitazione
-      - test
-      canale: dpc-gov
-      id: M2_qoahQ-0A
-      is_lis: false
-      overlap:
-      - capacità
-      - esercitazione
-      - test
-      score: 4.8
-      titolo: Test di un modulo ad elevata capacità di pompaggio – Esercitazione EXE PO 2026
-      url: https://youtu.be/M2_qoahQ-0A
-    - anchored:
-      - esercitazione
-      canale: dpc-gov
-      id: yPBNi9QoXa0
-      is_lis: false
-      overlap:
-      - esercitazione
-      - programma
-      score: 2.8
-      titolo: Le attività esercitative in programma – Esercitazione EXE PO 2026
-      url: https://youtu.be/yPBNi9QoXa0
-    - anchored:
-      - esercitazione
-      canale: abili-a-proteggere
-      id: jy4kGt-eFWg
-      is_lis: false
-      overlap:
-      - comunale
-      - esercitazione
-      score: 2.4
-      titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
-      url: https://youtu.be/jy4kGt-eFWg
-    - anchored:
-      - esercitazione
-      canale: dpc-gov
-      id: 6ImZj3WaeQY
-      is_lis: false
-      overlap:
-      - esercitazione
-      - sismico
-      score: 2.4
-      titolo: 'MODEX SICILY 2019: esercitazione internazionale sul rischio sismico'
-      url: https://youtu.be/6ImZj3WaeQY
-    - anchored:
-      - esercitazione
-      canale: dpc-gov
-      id: UIpzlwhK2ik
-      is_lis: false
-      overlap:
-      - esercitazione
-      - sismico
-      score: 2.4
-      titolo: 'CALABRIA 2011: esercitazione nazionale sul rischio sismico'
-      url: https://youtu.be/UIpzlwhK2ik
   comunicazioni/2026-11-08-alluvione-versilia-1996-trent-anni:
     title: 'Trent''anni dall''alluvione della Versilia: quella notte del 19 giugno 1996'
     url: /comunicazioni/2026-11-08-alluvione-versilia-1996-trent-anni/
@@ -7122,21 +6971,6 @@ pagine:
       score: 2.2
       titolo: Io non rischio Alluvione – Cosa fare durante un’allerta, durante e dopo un’alluvione
       url: https://youtu.be/DbGSeVbDLCg
-  comunicazioni/2026-11-15-aggiornamento-meta-novembre:
-    title: 'Metà novembre: aggiornamento operativo del Gruppo'
-    url: /comunicazioni/2026-11-15-aggiornamento-meta-novembre/
-    video:
-    - anchored:
-      - esercitazione
-      canale: dpc-gov
-      id: yPBNi9QoXa0
-      is_lis: false
-      overlap:
-      - esercitazione
-      - programma
-      score: 2.2
-      titolo: Le attività esercitative in programma – Esercitazione EXE PO 2026
-      url: https://youtu.be/yPBNi9QoXa0
   comunicazioni/2026-11-19-animali-domestici-emergenze:
     title: 'Animali domestici in emergenza: piani, kit, responsabilità'
     url: /comunicazioni/2026-11-19-animali-domestici-emergenze/
