@@ -2,7 +2,7 @@
 title: "Genova, 7 ottobre 1970: l'alluvione storica più grave del Novecento ligure"
 date: 2026-10-07T00:02:00+02:00
 description: "Tra il 7 e l'8 ottobre 1970 una bomba d'acqua eccezionale colpì Genova: il rio Bisagno esondò, uccidendo 44 persone."
-badge: "Comunicazione"
+badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-07-genova-1970-alluvione-storica-piu-grave.webp"

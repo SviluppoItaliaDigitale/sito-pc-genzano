@@ -2,7 +2,7 @@
 title: "Rigopiano, 18 gennaio 2017: la valanga sull'hotel e il limite dell'allerta meteo"
 date: 2027-01-18
 description: "Una valanga distrusse l'hotel Rigopiano sul Gran Sasso: 29 morti. Era una giornata di allerta meteo arancione."
-badge: "Comunicazione"
+badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2027-01-18-rigopiano-2017-allerta-neve-valanga.webp"

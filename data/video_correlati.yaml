@@ -6702,34 +6702,6 @@ pagine:
       score: 2.0
       titolo: La Protezione Civile racconta il podcast DPC - Dove Parliamo di Clima con Filippo Thiery
       url: https://youtu.be/NukrIN8jnE4
-  comunicazioni/2026-10-29-allerta-meteo-ottobre-genzano:
-    title: 'Allerta gialla per temporali: il Gruppo segue l''evoluzione'
-    url: /comunicazioni/2026-10-29-allerta-meteo-ottobre-genzano/
-    video:
-    - anchored:
-      - temporali
-      canale: io-non-rischio
-      id: kT-m1l4haIQ
-      is_lis: false
-      overlap:
-      - temporali
-      score: 6.0
-      titolo: Chi ha paura dei temporali?
-      url: https://youtu.be/kT-m1l4haIQ
-  comunicazioni/2026-10-29-allerta-meteo-ottobre-genzano-facile:
-    title: Allerta gialla per temporali a Genzano di Roma
-    url: /comunicazioni/2026-10-29-allerta-meteo-ottobre-genzano-facile/
-    video:
-    - anchored:
-      - temporali
-      canale: io-non-rischio
-      id: kT-m1l4haIQ
-      is_lis: false
-      overlap:
-      - temporali
-      score: 6.0
-      titolo: Chi ha paura dei temporali?
-      url: https://youtu.be/kT-m1l4haIQ
   comunicazioni/2026-10-29-tempesta-vaia-2018-vento-foreste-cambiamento-climatico:
     title: 'Tempesta Vaia, 29 ottobre 2018: il vento che ha cambiato il volto delle Dolomiti'
     url: /comunicazioni/2026-10-29-tempesta-vaia-2018-vento-foreste-cambiamento-climatico/
