@@ -1,7 +1,7 @@
 ---
 title: "Esodo natalizio: traffico e sicurezza sulle autostrade"
 date: 2026-12-19
-description: "Il weekend 19-21 dicembre è il picco dell'esodo natalizio. Previsioni traffico, autostrade e consigli di sicurezza."
+description: "Il weekend 19-21 dicembre è il picco dell'esodo natalizio. Arterie più trafficate dal Lazio e consigli di sicurezza per il viaggio."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -23,12 +23,13 @@ Il **weekend 19-21 dicembre 2026** è il **picco dell'esodo natalizio**. Milioni
 - **secondary** peak: martedì 22 e mercoledì 23 per chi non poteva partire prima;
 - **ritorni**: 26-27 dicembre (primo rientro), 1-2 gennaio (secondo), 6 gennaio (Epifania).
 
-### Numeri
-- **oltre 15 milioni** di spostamenti stimati nel periodo;
-- **autostrade**: traffico 30-50% superiore a weekend ordinari;
-- **stazioni**: treni esauriti mesi prima;
-- **aeroporti**: voli pieni;
-- **benzinai** e autogrill molto affollati.
+### Cosa aspettarsi
+- **autostrade** più cariche dei fine settimana ordinari;
+- **treni** spesso esauriti con largo anticipo;
+- **aeroporti** con voli pieni;
+- **benzinai** e autogrill affollati.
+
+Le previsioni di traffico ufficiali sono pubblicate da Autostrade per l'Italia, ANAS e dalla Polizia Stradale.
 
 ## Arterie principali
 
@@ -165,21 +166,13 @@ Genzano non è attraversata da grandi flussi autostradali ma:
 - **acqua** e **bagno** prima (se in coda sicura);
 - **contatti** familiari per avvisare ritardo.
 
-## Previsioni meteo nel Lazio per il weekend
+## Meteo: dove informarsi
 
-### Riepilogo generale
-Secondo previsioni preliminari (verifiche giornaliere):
-- **venerdì 19**: possibili piogge sparse;
-- **sabato 20**: miglioramento, variabile;
-- **domenica 21**: stabile ma fresco;
-- **temperature**: minime 0-5 °C, massime 8-12 °C;
-- **vento**: debole a moderato da nord.
+Le condizioni meteo del fine settimana vanno verificate **il giorno della partenza**, non prima:
 
-### Consulta
-- **Centro Funzionale Regionale Lazio** per bollettini ufficiali;
-- **3bmeteo, ilmeteo, MeteoExpert** per previsioni dettagliate;
-- **Traffico: Autostrade.it**;
-- **Iconradar** per radar precipitazioni.
+- **Centro Funzionale Regionale Lazio** per bollettini e allerte (vedi [Allerte meteo](/allerte-meteo/));
+- **Servizio Meteorologico dell'Aeronautica** e **ItaliaMeteo** per le previsioni nazionali;
+- **Autostrade per l'Italia** e **ANAS** per traffico, cantieri e chiusure.
 
 ## Rientri
 
@@ -202,23 +195,12 @@ Secondo previsioni preliminari (verifiche giornaliere):
 
 ### 6 gennaio
 - **ultimo** rientro (fine vacanze);
-- **scuole** riaprono il 7 o 8;
+- **scuole** riaprono secondo il calendario scolastico regionale;
 - **picco** finale.
 
-## La PC durante l'esodo
+## In caso di emergenza in viaggio
 
-### Reperibilità
-- **squadre** disponibili;
-- **radio** in ascolto;
-- **coordinamento** con Polizia Stradale, Carabinieri;
-- **pronti** a convocazioni per incidenti o eventi straordinari.
-
-### Monitoraggio
-- **meteo** orario;
-- **condizioni** stradali su tratti locali;
-- **bollettini** viabilità nazionale;
-- **eventuali** chiusure programmate;
-- **situazioni** critiche segnalate.
+Per incidenti, malori o pericoli sulla strada il numero è il **112**, valido in tutta Italia e in Europa. Per il soccorso meccanico c'è il servizio ACI (**803 116**). Le informazioni sulla viabilità in tempo reale sono sui canali di Autostrade per l'Italia, ANAS e Polizia Stradale.
 
 ## Salute durante il viaggio
 
@@ -261,5 +243,6 @@ Fonti istituzionali:
 - [Polizia di Stato — Polizia stradale](https://www.poliziadistato.it/).
 - [Ministero delle Infrastrutture e dei Trasporti](https://www.mit.gov.it/).
 - [Servizio Meteorologico dell'Aeronautica](https://www.meteoam.it/).
+- [ItaliaMeteo — Agenzia nazionale](https://www.agenziaitaliameteo.it/).
 
 In emergenza: **112**. ACI soccorso stradale: **803 116**.

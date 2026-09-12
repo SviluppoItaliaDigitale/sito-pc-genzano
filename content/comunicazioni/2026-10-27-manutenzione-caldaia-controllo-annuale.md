@@ -104,7 +104,7 @@ Il Comune attraverso il **Catasto Unico Regionale Impianti Termici** (CURIT in L
 - conformità dei **controlli** nei tempi previsti;
 - adempimenti da parte di **proprietari** e manutentori.
 
-Il **Lazio** ha il suo sistema: CRITER (Catasto Regionale Impianti Termici).
+Anche il **Lazio** ha il proprio catasto regionale degli impianti termici, gestito dalla Regione: il manutentore vi registra il rapporto di controllo.
 
 ## Stagione e buone pratiche
 
@@ -120,6 +120,6 @@ Per chi sta per accendere:
 
 - [Monossido di carbonio](/comunicazioni/2026-10-02-monossido-carbonio-intossicazioni/)
 - [Incendi domestici](/comunicazioni/2026-09-23-prevenzione-incendi-domestici-autunno/)
-- [Regione Lazio — CRITER](https://www.regione.lazio.it/)
+- [Regione Lazio](https://www.regione.lazio.it/) — catasto regionale degli impianti termici
 
 In emergenza: **112**.

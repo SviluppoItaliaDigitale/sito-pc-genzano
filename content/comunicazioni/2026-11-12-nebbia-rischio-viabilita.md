@@ -135,15 +135,9 @@ Il territorio di Genzano presenta:
 - **formazioni** serali in autunno avanzato;
 - **nebbie** dense rare ma possibili.
 
-## Cosa fa il Gruppo di PC
+## Chi interviene
 
-In caso di nebbia intensa con ripercussioni:
-
-- **monitoraggio** della viabilità locale;
-- **coordinamento** con Polizia Locale;
-- **supporto** in caso di incidenti multipli;
-- **assistenza** ad anziani bloccati;
-- **segnaletica** temporanea in aree critiche.
+La gestione della circolazione in caso di nebbia spetta alla Polizia Locale e alla Polizia Stradale; per incidenti e malori il numero è il **112**. Il volontariato di Protezione Civile, se attivato dal Comune, può dare assistenza alle persone rimaste bloccate e supporto logistico ai soccorsi.
 
 ## Per approfondire
 

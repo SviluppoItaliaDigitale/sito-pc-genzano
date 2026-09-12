@@ -169,16 +169,16 @@ Il **veterinario aziendale** è figura centrale:
 
 Avere un veterinario di fiducia è **requisito normativo** e **risorsa di sicurezza**.
 
-## Il ruolo della PC
+## Il ruolo della Protezione Civile
 
-In emergenze di portata territoriale, la PC:
-- **supporta** evacuazioni (con Veterinari ASL);
-- **cerca** ricoveri temporanei per animali;
-- **coordina** con vigili del fuoco e Forze dell'Ordine;
-- **comunica** con aziende del territorio;
-- **supporta** allevatori nella ripartenza.
+In emergenze di portata territoriale il **Comune** attiva il sistema di protezione civile. Il gruppo comunale di volontari, quando attivato, opera sotto il coordinamento del Comune e insieme ai **Servizi Veterinari della ASL**, ai Vigili del Fuoco e alle Forze dell'Ordine. In questo quadro il volontariato può contribuire a:
 
-Per Genzano di Roma, la **PC comunale** tiene un elenco delle principali aziende zootecniche del territorio per pianificazione preventiva.
+- **supportare** l'evacuazione degli animali;
+- **individuare** ricoveri temporanei presso altre aziende;
+- **comunicare** con le aziende del territorio;
+- **assistere** gli allevatori nella fase di ripartenza.
+
+Le decisioni sanitarie (movimentazioni, quarantene, smaltimento) spettano sempre ai Servizi Veterinari della ASL.
 
 ## Emergenze veterinarie ordinarie
 

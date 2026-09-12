@@ -1,7 +1,7 @@
 ---
 title: "Io Non Rischio: torna la campagna nazionale di volontariato per il rischio"
 date: 2026-09-25
-description: "Ogni autunno Io Non Rischio porta migliaia di volontari nelle piazze italiane per parlare di rischi e autoprotezione. Cosa fa il Gruppo di Genzano di Roma."
+description: "Ogni autunno Io Non Rischio porta migliaia di volontari nelle piazze italiane per parlare di rischi e autoprotezione. Come funziona e cosa può fare ognuno."
 badge: "Volontariato"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Ogni autunno, **centinaia di piazze italiane** si riempiono di gazebo colorati e di volontari con la maglia blu. È la **campagna nazionale "Io Non Rischio"**, promossa dal **Dipartimento della Protezione Civile**, **ANPAS**, **INGV** e **ReLUIS**, con il supporto delle Regioni e del volontariato organizzato. Il Gruppo di Genzano di Roma partecipa, come ogni anno, all'edizione 2026.
+Ogni autunno, **centinaia di piazze italiane** si riempiono di gazebo colorati e di volontari con la maglia blu. È la **campagna nazionale "Io Non Rischio"**, promossa dal **Dipartimento della Protezione Civile**, **ANPAS**, **INGV** e **ReLUIS**, con il supporto delle Regioni e del volontariato organizzato. Nel 2025 anche il Gruppo di Genzano di Roma era in piazza.
 
 ## Cosa è "Io Non Rischio"
 
@@ -49,14 +49,7 @@ I volontari spiegano, con infografiche, materiali, video e dialogo diretto:
 
 ## A Genzano
 
-Il Gruppo Comunale di PC di Genzano, quando la Regione Lazio organizza l'edizione locale, partecipa:
-
-- **formando** volontari sui moduli della campagna;
-- **allestendo** il gazebo in piazza in una giornata dedicata;
-- **dialogando** con i cittadini;
-- **distribuendo** materiale ufficiale.
-
-Date e piazze dell'edizione 2026 saranno pubblicate appena definite dal coordinamento regionale.
+Nell'edizione 2025 i volontari del Gruppo Comunale erano in **piazza Tommaso Frasconi** con il gazebo della campagna: ne abbiamo raccontato la giornata nell'articolo [Io Non Rischio 2025 - Genzano di Roma in piazza](/comunicazioni/2025-10-14-io-non-rischio/). La partecipazione dei gruppi comunali dipende ogni anno dall'organizzazione del coordinamento regionale: se il Gruppo sarà in piazza anche nel 2026, data e luogo saranno comunicati su questo sito.
 
 ## Cosa può fare un cittadino
 

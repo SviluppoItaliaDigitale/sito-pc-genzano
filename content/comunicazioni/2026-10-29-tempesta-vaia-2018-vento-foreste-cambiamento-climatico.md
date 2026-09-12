@@ -56,10 +56,9 @@ Negli anni dopo Vaia:
 
 - Le **Province autonome di Trento e Bolzano**, le **Regioni Veneto, FVG, Lombardia** hanno lanciato **piani straordinari di esbosco** (recupero del legname schiantato), monitoraggio del bostrico, riforestazione.
 - A livello nazionale, il **Ministero dell'Agricoltura, Sovranità Alimentare e Foreste** (MASAF), in coordinamento con il **Servizio Nazionale di Protezione Civile**, ha avviato una **strategia forestale nazionale** che integra gli aspetti di protezione idrogeologica delle foreste alpine.
-- È stato attivato il **Servizio meteorologico distribuito** con bollettini specifici per **vento estremo** sui versanti alpini, in coordinamento con **MeteoSchweiz**, **DWD** (Germania), **ZAMG** (Austria), **Météo-France**.
 - Nei **Piani di Emergenza Comunali** delle aree alpine sono stati integrati scenari di "**post-Vaia**": isolamento per caduta alberi su strade, blackout prolungato, danni idrogeologici a cascata.
 
-A livello europeo, l'**EFFIS** (European Forest Fire Information System, integrato da EFI/Forest Information System) ha inserito Vaia nei propri modelli di rischio. La tempesta è oggi un caso di studio internazionale per la **gestione dei boschi in scenari climatici estremi**.
+La tempesta è oggi un caso di studio per la **gestione dei boschi in scenari climatici estremi**.
 
 ## Cosa deve sapere il cittadino oggi
 
@@ -76,7 +75,7 @@ Per chi vive in **zone esposte al vento** (collinari, alpine, costiere, in pianu
 
 I **Castelli Romani** non hanno foreste come quelle dolomitiche, ma sono soggetti a **eventi di vento intenso** soprattutto nelle stagioni di transizione (primavera, autunno) per via dell'orografia particolare. Le **bombe d'acqua** estive sui Castelli sono spesso accompagnate da **raffiche di downburst** che possono sradicare alberi, danneggiare tetti, far crollare cartelloni.
 
-In passato Genzano e i Comuni vicini hanno registrato eventi di vento con caduta di alberi su strade e auto. La **manutenzione del verde pubblico** è competenza del Comune; per gli alberi su fondi privati la responsabilità è del proprietario. Il **Gruppo Comunale Volontari** è regolarmente attivato per emergenze di questo tipo, con squadre di motoseghisti e operatori SAB (squadre antincendio boschivo) abilitate al taglio in sicurezza.
+In passato Genzano e i Comuni vicini hanno registrato eventi di vento con caduta di alberi su strade e auto. La **manutenzione del verde pubblico** è competenza del Comune; per gli alberi su fondi privati la responsabilità è del proprietario. Il **Gruppo Comunale Volontari**, quando attivato dal Comune, interviene per la rimozione degli alberi caduti sulla sede stradale, come nella [giornata del 10 settembre 2026](/comunicazioni/2026-09-11-pioggia-alberi-tombini-voragine-otto-interventi/).
 
 ## In ricordo
 

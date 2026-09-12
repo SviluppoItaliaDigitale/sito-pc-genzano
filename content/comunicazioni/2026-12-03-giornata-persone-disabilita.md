@@ -138,23 +138,11 @@ Come ogni centro storico, Genzano ha:
 - **parcheggi** dedicati non sempre sufficienti;
 - **trasporti** pubblici parzialmente accessibili.
 
-Il **Comune** lavora all'**abbattimento progressivo** con:
-- **PEBA** (Piano di Eliminazione Barriere Architettoniche);
-- **interventi** puntuali annuali;
-- **nuove costruzioni** già a norma;
-- **sensibilizzazione** degli esercenti;
-- **dialogo** con associazioni di settore.
+L'abbattimento delle barriere è competenza del **Comune**, con gli strumenti previsti dalla legge: il **PEBA** (Piano di Eliminazione delle Barriere Architettoniche, L. 41/1986) e le norme sulle nuove costruzioni.
 
-## Realtà del territorio
+## Gli interlocutori della pianificazione
 
-Nel territorio operano:
-- **cooperative sociali** per inclusione lavorativa;
-- **associazioni** di categoria (ANFFAS, UILDM, UICI, ENS);
-- **centri diurni** per disabili adulti;
-- **servizi** comunali per disabili;
-- **scuola** che pratica integrazione.
-
-La PC si **coordina** con questi attori per **completare** la rete di supporto.
+Una pianificazione inclusiva coinvolge le **associazioni di categoria** (tra le nazionali: ANFFAS, UILDM, UICI, ENS), i **servizi sociali** comunali, le **cooperative sociali** e le **scuole**. Sono loro a conoscere i bisogni reali delle persone da tutelare in emergenza.
 
 ## Il futuro
 

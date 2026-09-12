@@ -73,15 +73,9 @@ A Genzano di Roma il rischio **AIB autunnale** è generalmente basso, ma:
 - **barbecue** privati vanno sorvegliati;
 - **residui** agricoli devono essere smaltiti correttamente.
 
-## Cosa sta facendo il Gruppo
+## Cosa fa il sistema antincendio in autunno
 
-Nelle settimane di fine estate e autunno, il Gruppo:
-
-- **ricognizione** su aree critiche note;
-- **verifica** di zone già percorse dal fuoco;
-- **sensibilizzazione** di agricoltori e cittadini;
-- **coordinamento** con Carabinieri Forestali;
-- **revisione** equipaggiamento AIB prima del rimessaggio invernale.
+La campagna regionale antincendio boschivo si chiude di norma a metà ottobre, ma il bollettino di pericolosità del Centro Funzionale continua a essere emesso quando le condizioni lo richiedono. Le squadre di volontariato AIB, tra cui quelle del Gruppo, restano attivabili dalla Sala Operativa Unica Permanente della Regione per tutto l'anno: la stagione finisce sulla carta, non nei boschi.
 
 ## In caso di avvistamento fumo
 

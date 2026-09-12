@@ -1,7 +1,7 @@
 ---
 title: "1 dicembre: avvio dicembre e inverno meteorologico"
 date: 2026-12-01
-description: "Inizia dicembre 2026 e, con esso, l'inverno meteorologico. Cosa aspettarsi e come prepararsi al mese più freddo."
+description: "Inizia dicembre e, con esso, l'inverno meteorologico. Cosa aspettarsi nel Lazio e come prepararsi in casa, in auto e per le feste."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -28,25 +28,15 @@ Nei comunicati istituzionali, quando si parla di "inverno" in **climatologia** o
 
 ## Cosa aspettarsi a dicembre nel Lazio
 
-### Temperature medie
-- **Roma** (costa): 5-12 °C (min/max);
-- **Genzano** (Castelli): 2-10 °C;
-- **Appennino** laziale: -5 / +5 °C;
-- **minime assolute** possibili: -3 / -5 °C a Genzano di Roma;
-- **ondate di freddo** artico possibili (più rare a dicembre, più comuni a gennaio).
+Dicembre porta di norma temperature in calo, **gelate notturne** sempre più frequenti, giornate corte e umidità alta. Gli eventi tipici del mese sono:
 
-### Precipitazioni
-- **media** mensile: 80-120 mm nei Castelli;
-- **giorni** di pioggia: 8-12;
-- **neve**: possibile a Genzano (quota 430 m slm), più frequente oltre i 500-600 m;
-- **nebbia**: diffusa nelle pianure.
-
-### Eventi tipici
-- **ondate di freddo** dall'est o dal nord;
-- **nevicate** appenniniche;
+- **ondate di freddo** da est o da nord;
+- **nevicate** sull'Appennino, possibili anche ai Castelli Romani nelle irruzioni più fredde;
 - **piogge** intense localizzate;
-- **vento** in quota;
-- **gelate** notturne diffuse.
+- **vento** forte in quota e sulle coste;
+- **nebbie** nelle pianure e nelle conche.
+
+Le condizioni previste giorno per giorno sono nei bollettini del **Centro Funzionale Regionale** (vedi [Allerte meteo](/allerte-meteo/)); le serie storiche di temperatura e pioggia di Genzano si possono esplorare nel [Laboratorio meteo](/laboratorio-meteo/) del sito.
 
 ## Cosa fare a dicembre
 
@@ -104,61 +94,26 @@ Nei comunicati istituzionali, quando si parla di "inverno" in **climatologia** o
 
 ### Fuochi e petardi
 - **31 dicembre** è il momento critico;
-- **feriti**: ogni anno in Italia centinaia, in maggioranza minori;
-- **incendi**: anche da piccoli fuochi d'artificio;
+- **feriti** e **incendi**: le conseguenze più frequenti, anche da piccoli fuochi d'artificio;
 - **animali**: trauma acustico per cani e fauna;
-- **ordinanze**: ogni Comune pubblica limitazioni.
-
-A Genzano: l'**ordinanza** sindacale pre-Capodanno sarà pubblicata a breve.
+- **ordinanze**: i Comuni possono stabilire limitazioni con ordinanza sindacale. Per Genzano di Roma fa fede il [sito del Comune](https://www.comune.genzanodiroma.roma.it/).
 
 ### Pranzi e cene
-- **cucina** sicura (vedi nostro articolo del 24 novembre);
+- **cucina** sicura (vedi [Sicurezza in cucina durante le feste](/comunicazioni/2026-11-24-sicurezza-cucina-festivita/));
 - **alcol** moderato, mai alla guida;
 - **ospiti** fragili con attenzione (allergie, diete, mobilità);
 - **bambini** sorvegliati;
 - **tempi** rallentati e condivisi.
 
-## PC a dicembre
+## Chi chiamare
 
-### Attività previste
-- **iscrizioni al corso base** sempre aperte, avvio concordato con i nuovi iscritti;
-- **reperibilità** continua;
-- **presidio** eventi locali (mercatini, Immacolata, Natale, Capodanno);
-- **monitoraggio** meteo intensificato;
-- **coordinamento** con Comune per ordinanze festive.
-
-### Chi chiamare
 - **emergenza**: **112**;
-- **segnalazioni** non urgenti: **803&nbsp;555** (Regione Lazio);
-- **informazioni** PC Genzano: tramite canali ufficiali.
-
-### I nostri articoli di dicembre
-Nel corso del mese pubblicheremo approfondimenti su:
-- **neve** e **ghiaccio** in strada;
-- **riscaldamento** sicuro;
-- **festività** e sicurezza;
-- **bambini** e disabilità;
-- **fine anno**: bilancio e auguri.
-
-## Bilancio provvisorio 2026
-
-I numeri definitivi verranno pubblicati a fine dicembre. In via provvisoria:
-- **oltre 100 articoli** pubblicati quest'anno;
-- **decine** di eventi supportati;
-- **migliaia** di ore di volontariato;
-- **collaborazioni** con tutte le istituzioni locali;
-- **riconoscimento** crescente dai cittadini.
-
-Grazie a chi ha reso possibile tutto questo.
+- **segnalazioni** non urgenti: **803&nbsp;555** (Sala Operativa Protezione Civile Regione Lazio);
+- gli altri recapiti utili sono nella pagina [Numeri utili](/numeri-utili/).
 
 ## Avvio consapevole
 
-Dicembre è un mese **intenso**: sul piano meteo, operativo, sociale. Ma anche un mese **bello**, di comunità, di memoria, di auguri. La **Protezione Civile** vuole essere presente in entrambi gli aspetti:
-
-- **pronti** in emergenza;
-- **presenti** nelle feste;
-- **vicini** alle fragilità;
-- **portavoce** di cultura del rischio.
+Dicembre è un mese **intenso**: sul piano meteo, sociale, familiare. Ma anche un mese **bello**, di comunità, di memoria, di auguri. La cultura di protezione civile chiede poco: qualche verifica in casa e in auto, attenzione alle persone fragili, un occhio ai bollettini. Il resto è festa.
 
 ## Per approfondire
 
@@ -166,7 +121,6 @@ Sul nostro sito:
 
 - [Ondate di freddo](/comunicazioni/2026-11-05-ondate-freddo-prevenzione-anziani/).
 - [Pneumatici invernali](/comunicazioni/2026-11-03-pneumatici-invernali-catene-novembre/).
-- [Chiusura novembre](/comunicazioni/2026-11-30-chiusura-novembre-bilancio-dicembre/).
 - [Allerte meteo del territorio](/allerte-meteo/).
 - [Riscaldamento sicuro a dicembre](/comunicazioni/2026-12-04-riscaldamento-sicuro-dicembre/).
 - [Capodanno e petardi: sicurezza](/comunicazioni/2026-12-30-capodanno-petardi-sicurezza/).

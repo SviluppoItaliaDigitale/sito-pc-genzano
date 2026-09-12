@@ -85,7 +85,7 @@ Per il rischio sismico locale del nostro territorio, vedi [Rischio sismico](/ris
 
 Le **oltre 230.000 vittime** dello tsunami del 26 dicembre 2004 sono ricordate ogni anno nei 14 Paesi colpiti, con cerimonie nazionali e internazionali. Ad **Aceh**, in Indonesia, è stato costruito un **museo della memoria** con la grande nave da pesca "Apung 1" trasportata per chilometri dalla forza dell'onda e oggi conservata nel punto in cui si fermò.
 
-Per i **543 italiani** che persero la vita — la **maggior parte turisti** in vacanza in Thailandia e Maldive — i familiari hanno costituito l'**Associazione Italiana Vittime dello Tsunami**, che mantiene viva la memoria e ha promosso iniziative culturali e formative. Una **targa commemorativa** è stata posta presso la Farnesina a Roma.
+Tra le vittime ci furono anche **decine di cittadini italiani**, per la maggior parte turisti in vacanza in Thailandia, alle Maldive e in Sri Lanka; l'Unità di Crisi del Ministero degli Affari Esteri coordinò le ricerche e il rientro dei connazionali.
 
 Ventidue anni dopo, il messaggio del 26 dicembre 2004 è chiaro: **il rischio non conosce confini, e nessun Paese è "esonerato"** finché non si dota dei propri sistemi di allerta e dei propri piani di emergenza. L'Italia oggi è dotata. È un'eredità invisibile di chi non è tornato a casa.
 

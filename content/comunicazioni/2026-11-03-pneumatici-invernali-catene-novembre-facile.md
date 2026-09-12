@@ -100,7 +100,7 @@ La data di produzione è scritta sul fianco della gomma: cerca le lettere **DOT*
 
 ## Per saperne di più
 
-- [Preparazione inverno — mezzi e antineve](/comunicazioni/2026-10-17-preparazione-inverno-mezzi-antineve/)
+- [Neve e gelo: casa e auto pronte prima dell'inverno](/comunicazioni/2026-10-17-neve-e-gelo-casa-e-auto-pronte-prima-dell-inverno/)
 - [Come chiamare il 112 in emergenza](/comunicazioni/2026-10-08-segnalare-emergenze-112-come-fare/)
 
 In emergenza chiama il **112**.

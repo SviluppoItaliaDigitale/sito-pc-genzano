@@ -135,13 +135,12 @@ Se hai un vicino, parente, amico anziano solo, attenzione a:
 ## Servizi disponibili
 
 ### Nazionali
-- **Telefono d'Argento**: ascolto per anziani (06 87 58 46 06);
+- **Telefono d'Argento**: ascolto telefonico per anziani a Roma e provincia (recapiti su [telefonodargento.it](https://www.telefonodargento.it/));
 - **Auser**: associazione anziani con servizi;
 - **ANLA**: associazione nazionale lavoratori anziani;
 - **Croce Rossa**: alcuni centri hanno servizi per anziani.
 
 ### Locali Castelli Romani
-- **CAP comunale** di Genzano;
 - **Parrocchie** con iniziative anziani;
 - **Caritas** con distribuzione e visite;
 - **Pro Loco** e associazioni culturali;
@@ -220,9 +219,9 @@ Il **Natale** è periodo **critico** per truffe:
 Se incontri anziano solo in **grave distress** o **pericolo**:
 - **112** se emergenza sanitaria;
 - **Servizi Sociali comunali** per valutazione;
-- **113** (vecchio, ora 112) per forze ordine;
+- **112** per le forze dell'ordine;
 - **Telefono d'Argento** per ascolto;
-- **116000** per bambini ma anche disagi familiari in cui anziano coinvolto.
+- **1522** in caso di violenza o maltrattamenti in famiglia.
 
 ## Un gesto concreto
 
@@ -255,4 +254,4 @@ Fonti istituzionali:
 - [HelpAge International](https://www.helpage.org/).
 - [Ministero della Salute](https://www.salute.gov.it/).
 
-In emergenza: **112**. Telefono d'Argento: **06 87 58 46 06**.
+In emergenza: **112**. Segnalazioni non urgenti: Servizi Sociali del Comune.

@@ -1,7 +1,7 @@
 ---
 title: "Donare sangue e plasma: un gesto che salva vite"
 date: 2026-12-14
-description: "Chiudiamo l'anno ricordando l'importanza della donazione di sangue e plasma. A Genzano di Roma e Castelli i centri attivi."
+description: "Nel periodo delle feste le scorte di sangue calano. Chi può donare, come si fa e dove informarsi nel Lazio e nei Castelli Romani."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -13,18 +13,12 @@ allegati: []
 draft: false
 ---
 
-Nel **periodo natalizio** e nei **giorni festivi** aumentano gli **incidenti stradali** e si riduce la **disponibilità** di sangue e plasma. È un momento in cui la **donazione** è particolarmente preziosa. Qualche nota sulla donazione a Genzano di Roma e dintorni.
+Nel **periodo natalizio** e nei **giorni festivi** aumentano gli **incidenti stradali** e si riduce la **disponibilità** di sangue e plasma. È un momento in cui la **donazione** è particolarmente preziosa. Qualche nota su chi può donare, come si fa e dove informarsi.
 
-## La situazione italiana
+## Perché serve
 
-### Dati
-- **oltre 2,5 milioni** di sacche di sangue raccolte ogni anno in Italia;
-- **circa 1,7 milioni** di donatori;
-- **70% uomini, 30% donne**;
-- **autosufficienza** nazionale raggiunta, ma con fluttuazioni stagionali;
-- **plasma**: crescente domanda per farmaci plasmaderivati.
+Il sistema trasfusionale italiano è coordinato dal **Centro Nazionale Sangue** (CNS), che pubblica ogni anno i dati su raccolta e donatori. Il sangue serve per:
 
-### Perché serve
 - **trasfusioni** per pazienti in emergenza (traumi, chirurgie);
 - **trattamenti** per talassemia, leucemie, malattie croniche;
 - **plasmaderivati** per emofilia e immunodeficienze;
@@ -34,8 +28,7 @@ Nel **periodo natalizio** e nei **giorni festivi** aumentano gli **incidenti str
 ### Periodi critici
 - **estate**: calo donazioni per ferie;
 - **Natale-Capodanno**: calo per festività;
-- **influenza**: donatori malati non idonei;
-- **epidemie**: come Covid-19.
+- **influenza**: donatori malati non idonei.
 
 ## Chi può donare
 
@@ -86,26 +79,22 @@ Nel **periodo natalizio** e nei **giorni festivi** aumentano gli **incidenti str
 - **alimentazione** normale con ricchezza di ferro;
 - **referto** entro qualche giorno con esiti esami.
 
-## Dove donare nei dintorni
+## Dove donare
 
 ### Centri trasfusionali
-- **Ospedale dei Castelli - Ariccia**: centro trasfusionale aperto su appuntamento;
-- **Regina Apostolorum Albano**: se attivo servizio;
-- **Policlinico Tor Vergata** (Roma sud): facilmente raggiungibile da Genzano;
-- **Centro Emotrasfusionale ASL Roma 6**: informazioni su sito ASL.
+Nel Lazio la raccolta avviene nei **Servizi trasfusionali** degli ospedali pubblici e nelle unità di raccolta delle associazioni. Per il territorio dei Castelli Romani il riferimento è la **ASL Roma 6**: sedi, orari e modalità di prenotazione sono sul sito della ASL. Il CNS pubblica l'elenco nazionale dei punti di raccolta.
 
 ### Associazioni di donatori
-- **AVIS**: Associazione Volontari Italiani Sangue, con sezione nei Castelli;
+- **AVIS**: Associazione Volontari Italiani Sangue;
+- **FIDAS**: Federazione Italiana Associazioni Donatori di Sangue;
 - **FRATRES**: donatori di sangue di ispirazione cattolica;
-- **ADVS**: Associazione Donatori Volontari del Sangue;
-- **CRI**: Croce Rossa anche per donazioni.
+- **CRI**: Croce Rossa Italiana.
 
 ### Modalità di iscrizione
-- **sito** dell'associazione scelta;
-- **telefono** al centro trasfusionale;
-- **prima visita** con analisi cliniche;
+- **sito** dell'associazione scelta o della ASL;
+- **prima visita** con colloquio medico e analisi;
 - **tessera** di donatore;
-- **prenotazione** online spesso disponibile.
+- **prenotazione** delle donazioni successive, spesso online.
 
 ## Plasma: un'opportunità aggiuntiva
 
@@ -123,18 +112,7 @@ Nel **periodo natalizio** e nei **giorni festivi** aumentano gli **incidenti str
 
 ## Protezione Civile e donazioni
 
-### Il collegamento
-- **emergenze** richiedono sangue aggiuntivo;
-- **volontari PC** donatori attivi in molti gruppi;
-- **campagne informative** supportate;
-- **sensibilizzazione** sul territorio.
-
-### A Genzano
-Molti volontari del **Gruppo Comunale** sono **donatori regolari**. Incoraggiamo la pratica e:
-- **info** agli aspiranti volontari;
-- **collaborazione** con AVIS e FRATRES dei Castelli;
-- **contributo** a giornate di raccolta;
-- **esempio** ai cittadini.
+Nelle grandi emergenze la richiesta di sangue aumenta e il CNS coordina scorte e trasferimenti tra regioni; per questo chiede ai donatori di **programmare** le donazioni tutto l'anno, senza ondate emotive dopo un disastro. Donare con regolarità è un modo concreto per contribuire alla resilienza del territorio, anche per chi non fa volontariato di Protezione Civile.
 
 ## Una domanda frequente
 
@@ -158,15 +136,6 @@ Il corpo rigenera il volume di sangue in **24 ore**. Gli **eritrociti** (globuli
 
 Il **14 giugno** è la **Giornata Mondiale del Donatore di Sangue**. Oggi non è quella ricorrenza, ma ogni giorno è buono per ricordare l'importanza della donazione.
 
-## Bilancio di anno
-
-Pensare al **2026 in chiusura** ci suggerisce un bilancio:
-- **quanti** di noi hanno donato quest'anno?
-- **possiamo fare di più** il prossimo anno?
-- **nuovi donatori** da reclutare (familiari, amici)?
-- **giovani** (18-25 anni): risorsa cruciale;
-- **aziende** che facilitano donazione dei dipendenti.
-
 ## Un atto di cittadinanza
 
 Donare sangue è:
@@ -175,8 +144,6 @@ Donare sangue è:
 - **ugualitario** (non si "guadagna" con donazione);
 - **atto** di responsabilità civica;
 - **gesto** di solidarietà concreta.
-
-Un donatore regolare salva in media **15-20 vite** in un decennio.
 
 ## Invito
 
@@ -195,9 +162,10 @@ Sul nostro sito:
 
 Fonti istituzionali:
 
-- [AVIS Italia](https://www.avis.it/).
 - [Centro Nazionale Sangue (CNS)](https://www.centronazionalesangue.it/).
-- [Croce Rossa Italiana](https://www.cri.it/).
 - [Ministero della Salute — Sangue](https://www.salute.gov.it/).
+- [ASL Roma 6](https://www.aslroma6.it/).
+- [AVIS Italia](https://www.avis.it/).
+- [Croce Rossa Italiana](https://www.cri.it/).
 
 In emergenza: **112**.

@@ -69,7 +69,7 @@ Anche nei piccoli Comuni la comunicazione va curata. A Genzano di Roma:
 
 - il **Comune** comunica attraverso il proprio sito e i canali istituzionali;
 - il **Gruppo Comunale Volontari di PC** segue una [Social Media Policy](/social-media-policy/) pubblica;
-- in **emergenza**, la comunicazione è **coordinata** tra Sindaco, Responsabile del Gruppo, forze dell'ordine;
+- in **emergenza**, la comunicazione ufficiale al cittadino spetta al Sindaco e al Centro Operativo Comunale; il volontariato rilancia solo informazioni verificate;
 - la **fonte unica** viene indicata chiaramente ai media e ai cittadini.
 
 ## Il ruolo dei cittadini
@@ -84,7 +84,7 @@ Anche i cittadini sono **attori** della risk communication:
 
 ## Un esempio positivo
 
-Dopo la tragedia di **Casamicciola 2022** (Ischia), la comunicazione della Protezione Civile fu costante, sobria, coerente: comunicati ogni 2-3 ore, portavoce stabile, dati verificati, empatia verso la popolazione colpita. Un modello studiato in contesti internazionali.
+Dopo la tragedia di **Casamicciola 2022** (Ischia), la comunicazione della Protezione Civile fu costante, sobria, coerente: comunicati ogni 2-3 ore, portavoce stabile, dati verificati, empatia verso la popolazione colpita. 
 
 ## Per approfondire
 

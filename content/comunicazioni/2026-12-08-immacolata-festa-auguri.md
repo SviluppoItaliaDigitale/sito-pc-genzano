@@ -26,21 +26,11 @@ L'Immacolata è **festività nazionale** in Italia dal 1933. È giornata di:
 
 ## Oggi a Genzano di Roma
 
-Il **centro storico** è illuminato e animato:
-- **luminarie** accese;
-- **eventi** e manifestazioni religiose;
-- **mercatini** e iniziative commerciali;
-- **chiese** aperte per celebrazioni;
-- **ristoranti** e bar del corso.
+Per gli eventi e le celebrazioni di oggi fai riferimento al [sito del Comune](https://www.comune.genzanodiroma.roma.it/) e alle parrocchie.
 
-## Il nostro servizio continua
+## In emergenza
 
-Anche oggi:
-- **reperibilità** attiva;
-- **squadre** pronte su chiamata;
-- **monitoraggio** meteo e territorio;
-- **coordinamento** con forze dell'ordine;
-- **presenza** agli eventi se richiesto.
+Anche nei giorni di festa il numero per qualunque emergenza è il **112**. Il Gruppo Comunale interviene quando è attivato dal Comune.
 
 ## Oggi, alcuni consigli
 
@@ -92,16 +82,7 @@ Un pensiero e, se possibile, un **gesto concreto**:
 - **portare** coperte alle associazioni che aiutano senzatetto;
 - **ringraziare** chi lavora nelle feste.
 
-## La comunità di Genzano
-
-Genzano è una **città solidale**:
-- **associazioni** molte e attive;
-- **parrocchie** con iniziative benefiche;
-- **Comune** con servizi sociali;
-- **volontari** in vari ambiti;
-- **cittadini** disposti a dare una mano.
-
-Oggi, in questo clima di festa, ricordiamo che l'**aiuto reciproco** è l'anima di una comunità viva.
+In questo clima di festa, ricordiamo che l'**aiuto reciproco** è l'anima di una comunità viva.
 
 ## Auguri
 
@@ -120,14 +101,11 @@ Da martedì **9 dicembre**:
 - **avvio** della settimana che porta a Natale;
 - **luminarie** attive per tutto il periodo.
 
-Continueremo a seguire la settimana con articoli informativi e di servizio.
-
 ## Per approfondire
 
 Sul nostro sito:
 
 - [Vigilia Immacolata](/comunicazioni/2026-12-07-vigilia-immacolata-servizio-sicurezza/).
-- [Presidio PC ponte Immacolata](/comunicazioni/2026-12-05-presidio-ponte-immacolata/).
 - [Rientro post-ponte: sicurezza stradale](/comunicazioni/2026-12-09-rientro-post-ponte-sicurezza-stradale/).
 - [Chi siamo](/chi-siamo/).
 - [Diventa volontario](/diventa-volontario/).

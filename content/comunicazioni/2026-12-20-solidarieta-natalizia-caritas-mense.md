@@ -146,8 +146,7 @@ Il **freddo** è pericoloso per chi dorme all'aperto:
 - **Binario 95**: centro accoglienza di emergenza Stazione Termini;
 - **Sant'Egidio**: accoglienza e cena;
 - **Caritas**: ostelli e dormitori;
-- **Sala Baganza**, **Mensa Garbatella**: pasti;
-- **Asilo Notturno** Carlo Alberto: storia centenaria.
+- **mense** e dormitori delle parrocchie e delle associazioni: l'elenco aggiornato è sul sito di Roma Capitale e della Caritas diocesana.
 
 ### A Genzano
 Situazioni di grave emarginazione meno visibili. Per segnalazioni:
@@ -208,11 +207,10 @@ Il **Natale** può essere fatto di mille piccoli gesti di **cura reciproca**.
 
 ## La PC e la solidarietà
 
-### Il nostro ruolo
-- **indirizzare** persone a servizi adeguati;
-- **supportare** in emergenze (persone fragili in freddo, case senza luce, ecc.);
-- **collaborare** con associazioni;
-- **non sostituire** servizi sociali professionali;
+### Il ruolo del volontariato di Protezione Civile
+- **indirizzare** le persone ai servizi competenti;
+- **supportare**, quando attivato dal Comune, le persone fragili nelle emergenze (freddo intenso, blackout);
+- **non sostituire** i servizi sociali professionali;
 - **essere presenti** senza giudicare.
 
 ### Se segnali

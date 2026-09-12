@@ -135,12 +135,9 @@ Se c'è molta neve, il Sindaco può chiudere le scuole. Lo comunica sul sito del
 
 ## La Protezione Civile di Genzano di Roma
 
-Quando neve, la Protezione Civile di Genzano:
+Se nevica molto, il Comune può chiamare i volontari di Protezione Civile. Il Gruppo ha un mezzo con spazzaneve e spargisale. I volontari possono aiutare le persone sole, gli anziani e le persone con disabilità.
 
-- apre la sala operativa;
-- chiama i volontari;
-- usa i mezzi per spalare le strade;
-- aiuta le persone sole, gli anziani e le persone con disabilità.
+Se c'è un'emergenza chiama il 112.
 
 ## Cosa NON fare
 

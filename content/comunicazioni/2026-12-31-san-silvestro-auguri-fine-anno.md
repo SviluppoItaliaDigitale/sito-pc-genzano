@@ -200,7 +200,7 @@ Per ogni **emergenza**: **112**.
 
 ## Un grazie finale
 
-Il **2026** si chiude. È stato un **anno di lavoro intenso** per il **Gruppo Comunale Volontari di Protezione Civile di Genzano**.
+Il **2026** si chiude. Gli interventi e le attività del **Gruppo Comunale Volontari di Protezione Civile di Genzano** sono raccontati negli articoli di questo sito e nei [dati aperti](/open-data/).
 
 **Grazie** a tutti:
 - **volontari** del gruppo;
@@ -209,15 +209,14 @@ Il **2026** si chiude. È stato un **anno di lavoro intenso** per il **Gruppo Co
 - **cittadini** che ci hanno dato fiducia;
 - **colleghi** di altri gruppi PC;
 - **lettori** del nostro sito;
-- **sostenitori** sui social;
-- **media** che ci hanno raccontato.
+- **sostenitori** sui social.
 
 **Senza di voi**, non saremmo **noi**.
 
 ## Appuntamento
 
 ### Domani
-Domani **1 gennaio 2027**: primo articolo del nuovo anno, con **auguri** dal gruppo.
+Dal 1° gennaio questo sito continua con gli approfondimenti di ogni giorno.
 
 ### Poi
 Il **2027** ci aspetta con le sue **sfide**, ma soprattutto con le sue **possibilità**. Cammineremo insieme, **un giorno alla volta**.
@@ -236,9 +235,8 @@ E un **grazie grande** per essere stati con noi durante il **2026**.
 
 Sul nostro sito:
 
-- [Prospettive 2027](/comunicazioni/2026-12-29-prospettive-2027-nuovo-anno/).
+- [Vacanze in montagna: valanghe e sicurezza](/comunicazioni/2026-12-29-vacanze-in-montagna-valanghe-sicurezza/).
 - [Capodanno e petardi: sicurezza](/comunicazioni/2026-12-30-capodanno-petardi-sicurezza/).
-- [Bilancio 2026](/comunicazioni/2026-12-28-bilancio-annuale-pc-genzano/).
 - [Settimana tra feste: riflessione](/comunicazioni/2026-12-27-settimana-tra-feste-riflessione/).
 - [Storia del Gruppo Comunale](/comunicazioni/2026-04-05-storia-gruppo-comunale-volontari-genzano-quarant-anni/).
 - [Diventa volontario](/diventa-volontario/).

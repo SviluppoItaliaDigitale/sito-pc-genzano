@@ -18,15 +18,12 @@ Oggi **martedì 22 dicembre 2026** è tipicamente l'**ultimo giorno** di scuola 
 ## Il calendario scolastico 2026-2027 nel Lazio
 
 ### Vacanze di Natale
-- **ultimo giorno** di lezione: 22 dicembre 2026 (approssimativo);
-- **ripresa** lezioni: 7 o 8 gennaio 2027 (variabile);
-- **durata totale**: circa 16 giorni;
-- **festivo**: 25-26 dicembre, 1-6 gennaio;
-- **riferimento**: calendario USR Lazio (ciascuna scuola può adattare).
+- **festivi** nazionali: 25 e 26 dicembre, 1 e 6 gennaio;
+- **date** di chiusura e ripresa: fissate dal calendario scolastico della Regione Lazio, che ogni istituto può adattare nella propria autonomia;
+- **riferimento**: il calendario pubblicato dalla Regione Lazio e le comunicazioni della scuola.
 
 ### Altri momenti dell'anno
-- **vacanze estive**: da 10 giugno ca. a metà settembre;
-- **vacanze pasquali**: aprile 2027, 4-5 giorni circa;
+- **vacanze pasquali** e **estive**: date nel calendario regionale;
 - **chiusure** per festività nazionali e regionali.
 
 ## Per famiglie
@@ -196,21 +193,9 @@ Oggi **martedì 22 dicembre 2026** è tipicamente l'**ultimo giorno** di scuola 
 - **piccole parti** lontane dai lattanti;
 - **batterie** bottone pericolosissime se ingerite.
 
-## La PC e la scuola
+## La Protezione Civile e la scuola
 
-### Il nostro ruolo
-- **educazione** al rischio nelle scuole;
-- **esercitazioni** di evacuazione (ottobre-novembre 2026);
-- **Settimana** Protezione Civile (ottobre);
-- **laboratori** con bambini;
-- **formazione** insegnanti su PC.
-
-### Nel 2026-2027
-- continuiamo collaborazioni con scuole di Genzano;
-- **nuovi** progetti in primavera;
-- **distribuzione** di materiali pedagogici;
-- **gemellaggio** tra gruppi PC giovanili;
-- **formazione** civica.
+Durante l'anno le scuole svolgono le prove di evacuazione previste dalla normativa e possono usare i materiali didattici del sito: [kit per le scuole](/formazione/), [percorsi didattici](/formazione/percorsi-didattici/), [giochi della sicurezza](/giochi/). Le vacanze sono un buon momento per riprendere in famiglia quello che i bambini hanno imparato in classe, ad esempio con il [piano familiare di emergenza](/piano-familiare/).
 
 ## Auguri di buone feste
 
@@ -234,7 +219,7 @@ Sul nostro sito:
 Fonti istituzionali:
 
 - [Telefono Azzurro — emergenza infanzia 114](https://www.azzurro.it/).
-- [Centro Antiveleni Roma — Policlinico Gemelli](https://www.policlinicogemelli.it/).
+- [Centro Antiveleni — Policlinico Gemelli](https://www.policlinicogemelli.it/centri-specializzati/centro-antiveleni/).
 - [Società Italiana di Pediatria](https://sip.it/).
 - [UNICEF Italia](https://www.unicef.it/).
 - [MIM — Ministero Istruzione e Merito](https://www.mim.gov.it/).

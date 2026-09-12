@@ -113,7 +113,7 @@ C'è molto sangue?
 Qualcuno ha ingerito un prodotto pericoloso (prodotti per pulire, medicine, ecc.)?
 
 - Non far vomitare.
-- Chiama il Centro Antiveleni al numero **800 883 300** (numero gratuito). Oppure chiama il 112.
+- Chiama il Centro Antiveleni del Policlinico Gemelli di Roma al numero **06 3054343**. Risponde sempre, anche di notte. Oppure chiama il 112.
 - Porta la confezione del prodotto con te al pronto soccorso.
 
 Ha respirato gas o vernici?
@@ -151,4 +151,4 @@ Puoi fare un corso di primo soccorso. I corsi li organizzano:
 - [BLS-D e defibrillatore](/comunicazioni/2026-09-26-bls-d-defibrillatore-formazione/)
 - [Kit emergenza famiglia](/comunicazioni/2026-09-02-kit-emergenza-famiglia-72-ore/)
 
-In caso di emergenza chiama il **112**. Per avvelenamenti chiama il **800 883 300**.
+In caso di emergenza chiama il **112**. Per avvelenamenti chiama il Centro Antiveleni: **06 3054343**.

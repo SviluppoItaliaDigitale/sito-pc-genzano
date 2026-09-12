@@ -89,14 +89,7 @@ I rapporti con il datore di lavoro funzionano meglio se:
 
 ## A Genzano di Roma
 
-Il Gruppo Comunale dispone di **modulistica standard** per:
-
-- attivazione in emergenza;
-- attivazione in esercitazione;
-- comunicazione al datore di lavoro;
-- richiesta di rimborso.
-
-I volontari che necessitano di chiarimenti possono rivolgersi al **Responsabile del Gruppo** o alla **segreteria**.
+L'attestazione dell'attivazione da consegnare al datore di lavoro è rilasciata dall'autorità che ha attivato il volontario (Comune, Regione o Dipartimento), secondo la modulistica prevista dalla Regione Lazio. I volontari che hanno bisogno di chiarimenti possono rivolgersi al **Responsabile del Gruppo**.
 
 ## Per approfondire
 

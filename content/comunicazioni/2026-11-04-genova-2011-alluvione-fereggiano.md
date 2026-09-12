@@ -54,7 +54,7 @@ Tre lezioni operative dalla tragedia di Genova:
 
 ## A Genzano di Roma
 
-Anche Genzano è una città storica con **fossi tombati** sotto strade e piazze, retaggio dell'urbanizzazione del Novecento. I punti storicamente sensibili agli allagamenti urbani in caso di temporali intensi sono noti al Comune e gestiti nel [Piano di Emergenza Comunale](/piano-emergenza/).
+Anche Genzano è una città storica con **fossi tombati** sotto strade e piazze, retaggio dell'urbanizzazione del Novecento. Gli scenari di allagamento in caso di temporali intensi sono descritti nel [Piano di Emergenza Comunale](/piano-emergenza/).
 
 In caso di **allerta arancione o rossa** sul nostro Comune (vedi sempre la barra di stato in cima alla [homepage](/)):
 - **Non camminare** vicino a tombini o sotto i sottopassaggi
