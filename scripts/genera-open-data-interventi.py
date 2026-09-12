@@ -40,6 +40,12 @@ except ImportError:
 GLOB = os.path.expanduser("~/Scrivania/gcpc-genzano-di-roma_global_reports_*.xlsx")
 OUT = "static/open-data"
 
+# Etichette con refuso nel menu del gestionale: si pubblica la forma corretta
+# (il dato non cambia, cambia solo la grafia). Usata anche dal delta
+# (aggiorna-open-data-delta.py). Da correggere anche alla fonte, nel
+# vocabolario del gestionale, appena possibile.
+TIPOLOGIE_NORMALIZZATE = {"Allagamaneto": "Allagamento"}
+
 
 def trova_export():
     """Ritorna l'export più recente che corrisponde al pattern, o None."""
@@ -227,6 +233,7 @@ def main():
         t = str(col(r, "Tipologia evento") or "").strip()
         if t in ("", "-", "None"):
             t = " ".join(str(col(r, "Motivo") or "").split())
+        t = TIPOLOGIE_NORMALIZZATE.get(t, t)
         tip[t or "Non classificato"] += 1
 
     # automezzi impiegati (dedup per targa entro la cella; targa MAI pubblicata)
