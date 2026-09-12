@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/",
-  "generato": "2026-09-12T20:48:47+00:00",
+  "generato": "2026-09-12T22:53:02+00:00",
   "licenza": "Copernicus Emergency Management Service — dati pubblici",
   "nota": "Copia locale: l'API non espone CORS, il browser non può leggerla direttamente."
  },
@@ -18,9 +18,9 @@
    ],
    "eventTime": "2026-09-10T20:15:00",
    "gdacsId": null,
-   "lastUpdate": "2026-09-12T20:32:08.781213",
+   "lastUpdate": "2026-09-12T22:39:19.814229",
    "n_aois": 1,
-   "n_products": 0,
+   "n_products": 1,
    "name": "Wildfire in Island of Brac, Croatia"
   },
   {

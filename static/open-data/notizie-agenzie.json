@@ -5,34 +5,94 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-12T20:48:44+00:00",
+  "generato": "2026-09-12T22:52:59+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-12T20:43:32+00:00",
+   "data": "2026-09-12T22:47:36+00:00",
    "fonte": "ANSA",
-   "titolo": "Serie A: il Cagliari batte l'Atalanta a Bergamo, gol di Mendy, Scamacca e Maldini",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/12/serie-a-il-cagliari-batte-latalanta-a-bergamo-gol-di-mendy-scamacca-e-maldini_9162db63-e241-49d8-874e-37ba25fc4fbc.html"
+   "titolo": "Mostra del cinema di Venezia, vince la regista May el-Toukhy, sul palco le guerre con Naza e Dau",
+   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/13/mostra-del-cinema-di-venezia-vince-la-regista-may-el-toukhy-sul-palco_e27e8d18-1155-41cd-a6c6-d0b46d73669c.html"
+  },
+  {
+   "data": "2026-09-12T22:16:52+00:00",
+   "fonte": "ANSA",
+   "titolo": "Trionfo a Parigi per il primo show di Céline Dion,nel pubblico in festa Michelle Obama",
+   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/12/trionfo-a-parigi-per-il-primo-show-di-celine-dionnel-pubblico-in-festa-michelle_907f1c7c-f4d4-4c0d-8b65-ddca6255107a.html"
+  },
+  {
+   "data": "2026-09-12T22:05:06+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Meteo, addio afa con l'Anticiclone delle Azzorre: ma da martedì cambia tutto, piogge in arrivo",
+   "url": "https://www.adnkronos.com/cronaca/meteo-13-settembre-caldo-previsioni_4yi14l8Ta7BQui7vVzbKPq"
+  },
+  {
+   "data": "2026-09-12T22:01:16+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Iran-Houthi, doppia minaccia per le vie del petrolio. Arabia vuole raid Usa in Yemen, Trump dice no",
+   "url": "https://www.adnkronos.com/internazionale/esteri/houthi-yemen-arabia-trump-iran-guerra_uX3gtOvayWv2AMI7ix2Vm"
+  },
+  {
+   "data": "2026-09-12T21:22:59+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Goggia, malore in Argentina: rientro anticipato in Italia",
+   "url": "https://www.adnkronos.com/cronaca/goggia-malore-argentina-come-sta_6etLbXHnbaQbdjrFy7bpd2"
+  },
+  {
+   "data": "2026-09-12T21:21:05+00:00",
+   "fonte": "ANSA",
+   "titolo": "Tensione nel centrodestra su Strade sicure, la Lega attacca",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/12/tensione-nel-centrodestra-su-strade-sicure-la-lega-attacca_8146c0c5-8f0e-4051-b7dd-7ca70c052426.html"
+  },
+  {
+   "data": "2026-09-12T21:16:43+00:00",
+   "fonte": "ANSA",
+   "titolo": "Malore durante la preparazione in Argentina, Goggia torna in Italia in anticipo",
+   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/12/malore-durante-la-preparazione-in-argentina-goggia-torna-in-italia-in-anticipo_2d78676a-a825-4b79-91d2-1b2c000d9138.html"
+  },
+  {
+   "data": "2026-09-12T21:12:47+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Europei uomini, bis dell'Italia di De Giorgi, anche la Grecia ko 3-0",
+   "url": "https://www.adnkronos.com/sport/pallavolo-europei-de-giorgi-italia-grecia_7Dcew88ek0Arc4AMhF0Eio"
+  },
+  {
+   "data": "2026-09-12T21:05:01+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Centrosinistra, Conte: \"No a caminetti e segrete stanze per scegliere il leader\"",
+   "url": "https://www.adnkronos.com/politica/conte-primarie-m5s-pd-messaggio-schlein_4SGF8kllK6bYgggf8Rz0mU"
+  },
+  {
+   "data": "2026-09-12T21:04:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Serie A, Cagliari vince a Bergamo 2-1 con l'Atalanta e vola al secondo posto",
+   "url": "https://www.adnkronos.com/sport/calcio-serie-a-cagliari-atalanta-sarri_3gyYmVrGpBjTI6DgLcz2Oo"
+  },
+  {
+   "data": "2026-09-12T21:03:44+00:00",
+   "fonte": "ANSA",
+   "titolo": "Serie A: colpo Cagliari a Bergamo contro l'Atalanta, decide l'ex Maldini su rigore",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/12/serie-a-colpo-cagliari-a-bergamo-contro-latalanta-decide-lex-maldini-su-rigore_9162db63-e241-49d8-874e-37ba25fc4fbc.html"
+  },
+  {
+   "data": "2026-09-12T20:56:21+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "#AccadeOggi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
+  },
+  {
+   "data": "2026-09-12T20:49:09+00:00",
+   "fonte": "ANSA",
+   "titolo": "Venezia 83, la premiazione",
+   "url": "https://www.ansa.it/sito/photogallery/primopiano/2026/09/12/venezia-83-la-premiazione_d88f25b8-d790-4c9c-8b58-7ab875597f5f.html"
   },
   {
    "data": "2026-09-12T20:38:38+00:00",
    "fonte": "ANSA",
    "titolo": "Ucraina, Zelensky a Putin: 'Vediamoci al G20 a Miami'. Gelo di Mosca&nbsp;",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/12/ucraina-zelensky-a-putin-vediamoci-al-g20-a-miami.-gelo-di-moscanbsp_1a9e23a8-4a39-42d1-bcc4-42ab5d6f1b5f.html"
-  },
-  {
-   "data": "2026-09-12T20:35:47+00:00",
-   "fonte": "ANSA",
-   "titolo": "Mostra del cinema di Venezia, Leone d'oro a 'Woman Unknown' la rivincita delle donne",
-   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/12/mostra-del-cinema-di-venezia-leone-doro-a-woman-unknown-la-rivincita-delle_2c5ad0ae-09b8-4ad2-a5b2-075bbcafdffc.html"
-  },
-  {
-   "data": "2026-09-12T20:34:46+00:00",
-   "fonte": "ANSA",
-   "titolo": "Venezia 83, la premiazione",
-   "url": "https://www.ansa.it/sito/photogallery/primopiano/2026/09/12/venezia-83-la-premiazione_d88f25b8-d790-4c9c-8b58-7ab875597f5f.html"
   },
   {
    "data": "2026-09-12T20:22:29+00:00",
@@ -129,66 +189,6 @@
    "fonte": "ANSA",
    "titolo": "La morte di Denise, sequestrato l'appartamento di Ariccia",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/sequestrato-lappartamento-di-denise-ad-ariccia_64d8acdf-16c5-4b38-b461-3ab136196cf4.html"
-  },
-  {
-   "data": "2026-09-12T17:54:03+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "L'auto esce di strada, lui muore e lei incinta perde il bimbo",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/auto-fuori-strada-nel-cuneese-morto-26enne-e-ferita-la-moglie-incinta_708c06ac-f831-4fae-90d5-255cb43f3074.html"
-  },
-  {
-   "data": "2026-09-12T17:47:13+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Travolta da un masso, muore al corteo funebre della madre",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/travolta-da-un-masso-muore-al-corteo-funebre-della-madre_43a4141d-691b-4f90-a1af-906ec6819e5e.html"
-  },
-  {
-   "data": "2026-09-12T17:38:55+00:00",
-   "fonte": "ANSA",
-   "titolo": "Tensione nel centrodestra su Strade sicure, la Lega attacca",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/12/tensione-nel-centrodestra-su-strade-sicure-la-lega-attacca_8146c0c5-8f0e-4051-b7dd-7ca70c052426.html"
-  },
-  {
-   "data": "2026-09-12T17:23:22+00:00",
-   "fonte": "ANSA",
-   "titolo": "Domenica e lunedi' la camera ardente in Campidoglio per Emma Bonino",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/12/domenica-e-lunedi-la-camera-ardente-in-campidoglio-per-emma-bonino_5da22fcf-e615-4989-9cf3-ce1e7ca062f7.html"
-  },
-  {
-   "data": "2026-09-12T17:20:20+00:00",
-   "fonte": "ANSA",
-   "titolo": "Fari dell'Ue sul voto in Svezia, l'ultradestra punta al governo",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/12/fari-dellue-sul-voto-in-svezia-lultradestra-punta-al-governo_1e64d82f-4762-4f17-be69-398496a99f56.html"
-  },
-  {
-   "data": "2026-09-12T17:15:30+00:00",
-   "fonte": "ANSA",
-   "titolo": "F1: a Norris la prima pole a Madrid. Antonelli 2/o, delusione Ferrari",
-   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/12/f1-norris-in-pole-position-a-madrid-antonelli-in-prima-fila_8e6aaa3a-d88e-40ff-b64f-d0e3212e16ec.html"
-  },
-  {
-   "data": "2026-09-12T17:04:03+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Arriva il clima settembrino, massime ovunque sotto i 30 gradi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/arriva-il-clima-settembrino-massime-ovunque-sotto-i-30-gradi_5885fbf2-3b33-4eb8-b98b-6e89ccc9b2de.html"
-  },
-  {
-   "data": "2026-09-12T16:59:13+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Ministro Ciriani visita carabiniere che ha tentato salvare donna",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/ministro-ciriani-visita-carabiniere-che-ha-tentato-salvare-donna_4468a662-3da9-4930-9435-9bee7e118b55.html"
-  },
-  {
-   "data": "2026-09-12T16:58:55+00:00",
-   "fonte": "ANSA",
-   "titolo": "Tenta di uccidere la ex in aula dopo la sentenza di condanna",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/tenta-di-uccidere-la-ex-in-aula-in-tribunale-dopo-la-sentenza-di-condanna_61f3033f-45fd-427b-9cbe-9cb7190f398e.html"
-  },
-  {
-   "data": "2026-09-12T16:54:36+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Principessa Kate Middleton a sorpresa nell'ospedale dove curò cancro, ringrazia medici e incontra pazienti",
-   "url": "https://www.adnkronos.com/salute/sanita/kate-middleton-visita-sorpresa-royal-marsden-pazienti_22CpqZ7c4FMUuYJVHh6UCM"
   }
  ]
 }
