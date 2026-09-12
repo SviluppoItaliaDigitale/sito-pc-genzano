@@ -89,3 +89,4 @@ Due dettagli spiegano perché una pioggia di settembre fa tanti danni. Le albera
 
 - [Castelli Notizie — Maltempo ai Castelli Romani, allagamenti e disagi: Protezione Civile in azione](https://www.castellinotizie.it/2026/09/10/maltempo-ai-castelli-romani-allagamenti-e-disagi-protezione-civile-in-azione-rami-spezzati-tombini-ostruiti-e-auto-in-panne/)
 - [Castelli Notizie — Maltempo tra Roma e Castelli Romani: automobilisti intrappolati, centinaia di interventi](https://www.castellinotizie.it/2026/09/10/maltempo-tra-roma-e-castelli-romani-automobilisti-intrappolati-centinaia-di-interventi-pino-caduto-a-velletri/)
+- [Il Giornale dei Castelli Romani — Genzano, numerosi interventi della Protezione Civile per allagamenti e alberi caduti](https://www.giornaleinfocastelliromani.it/genzano-numerosi-interventi-della-protezione-civile-per-allagamenti-e-alberi-caduti-nella-giornata-di-ieri/)
