@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-09-12T01:02",
+  "aggiornato": "2026-09-12T02:03",
   "data_lunga": "sabato 12 settembre 2026",
-  "aggiornato_label": "sabato 12 settembre 2026, ore 01:02",
+  "aggiornato_label": "sabato 12 settembre 2026, ore 02:03",
   "alba": "06:46",
   "tramonto": "19:24",
   "corrente": {
-    "temp": 19.6,
-    "percepita": 21.7,
+    "temp": 19.0,
+    "percepita": 20.5,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 83,
+    "umidita": 80,
     "vento": 2,
-    "raffiche": 9
+    "raffiche": 15
   },
   "giorni": [
     {
@@ -22,7 +22,7 @@
       "tmin": 18,
       "pioggia": 0,
       "pioggia_mm": 0,
-      "raffiche": 41,
+      "raffiche": 37,
       "uv": 6,
       "uv_label": "alto"
     },
@@ -47,8 +47,8 @@
       "pioggia": 3,
       "pioggia_mm": 0.1,
       "raffiche": 26,
-      "uv": 6,
-      "uv_label": "alto"
+      "uv": 5,
+      "uv_label": "moderato"
     },
     {
       "label": "Mar 15",
