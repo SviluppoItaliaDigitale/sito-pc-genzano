@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/",
-  "generato": "2026-09-12T12:49:12+00:00",
+  "generato": "2026-09-12T16:03:46+00:00",
   "licenza": "Copernicus Emergency Management Service — dati pubblici",
   "nota": "Copia locale: l'API non espone CORS, il browser non può leggerla direttamente."
  },
@@ -50,7 +50,7 @@
    ],
    "eventTime": "2026-08-31T13:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-09-12T10:36:46.048845",
+   "lastUpdate": "2026-09-12T16:03:02.710824",
    "n_aois": 1,
    "n_products": 5,
    "name": "Wildfire in Trapezitsa Mountain, Greece"
@@ -164,7 +164,7 @@
    ],
    "eventTime": "2026-08-14T22:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-09-12T09:08:17.949285",
+   "lastUpdate": "2026-09-12T14:27:42.811083",
    "n_aois": 5,
    "n_products": 61,
    "name": "Wildfire in Montenegro and Bosnia and Herzegovina"
