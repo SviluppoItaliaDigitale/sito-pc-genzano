@@ -2,7 +2,7 @@
 title: "Le grandi esercitazioni nazionali: a cosa servono davvero"
 date: 2026-09-16
 description: "Ogni anno il Dipartimento di PC organizza esercitazioni nazionali che coinvolgono decine di migliaia di operatori."
-badge: "Esercitazione"
+badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-16-esercitazione-nazionale-pc-settembre.webp"

@@ -27,7 +27,7 @@ A queste condizioni si lega il rischio per la salute legato al **freddo estremo*
 
 ## Anche i Castelli Romani
 
-L'area dei Castelli Romani, per la sua altitudine collinare, può ricevere nevicate anche significative durante l'inverno. Lo abbiamo vissuto nell'organizzazione della risposta alla [neve ai Castelli Romani del gennaio 2026](/comunicazioni/2026-01-31-neve-castelli-romani-organizzazione/). La preparazione passa dai **mezzi antineve** e dalla pianificazione comunale, di cui parliamo nella scheda [Preparazione all'inverno e mezzi antineve](/comunicazioni/2026-10-17-preparazione-inverno-mezzi-antineve/).
+L'area dei Castelli Romani, per la sua altitudine collinare, può ricevere nevicate anche significative durante l'inverno. Lo abbiamo vissuto nell'organizzazione della risposta alla [neve ai Castelli Romani del gennaio 2026](/comunicazioni/2026-01-31-neve-castelli-romani-organizzazione/). La preparazione passa dai **mezzi antineve** e dalla pianificazione comunale, di cui parliamo nella scheda [Neve e gelo: la casa e l'auto pronte prima dell'inverno](/comunicazioni/2026-10-17-neve-e-gelo-casa-e-auto-pronte-prima-dell-inverno/).
 
 Il caso di **Rigopiano del 2017**, in cui un'imponente nevicata si combinò con una valanga, ricorda che neve e gelo possono concorrere a tragedie complesse: lo ripercorriamo nella scheda [Rigopiano 2017: allerta neve e valanga](/comunicazioni/2027-01-18-rigopiano-2017-allerta-neve-valanga/).
 
