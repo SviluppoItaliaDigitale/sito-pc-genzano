@@ -1,6 +1,6 @@
 ---
 title: "11 settembre: cosa la Protezione Civile ha imparato sulla comunicazione di crisi"
-date: 2026-09-11
+date: 2026-09-11T00:01:00+02:00
 description: "A 25 anni dall'attacco alle Torri Gemelle, una riflessione sulla comunicazione di emergenza e sulle lezioni che ancora oggi guidano i piani di PC."
 badge: "Informazione"
 priorita: "normale"

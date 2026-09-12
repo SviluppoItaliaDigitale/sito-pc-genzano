@@ -150,6 +150,7 @@ def main():
         t = str(col(r, "Tipologia evento") or "").strip()
         if t in ("", "-", "None"):
             t = " ".join(str(col(r, "Motivo") or "").split())
+        t = gen.TIPOLOGIE_NORMALIZZATE.get(t, t)
         d_tip[t or "Non classificato"] += 1
         mezzi = gen.automezzi(col(r, "Veicoli"))
         if mezzi:
