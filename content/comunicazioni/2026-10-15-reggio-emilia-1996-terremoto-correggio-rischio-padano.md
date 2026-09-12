@@ -1,6 +1,6 @@
 ---
 title: "Reggio Emilia, 15 ottobre 1996: il terremoto che ha riportato la Pianura Padana sulla mappa sismica"
-date: 2026-10-15T00:02:00+02:00
+date: 2026-10-15
 description: "Magnitudo 4.9 a Correggio (Reggio Emilia, 1996): un campanello d'allarme sulla sismicità della Pianura Padana, sottovalutata fino al 2012."
 badge: "Informazione"
 priorita: "normale"

@@ -57,7 +57,7 @@ Forte l'attenzione delle istituzioni. Il presidente della Regione Lombardia **At
 
 ## Perché ci riguarda da vicino
 
-Le radiocomunicazioni non sono un ricordo del passato: restano una **competenza operativa attuale**. Anche il nostro Gruppo cura la formazione radio e partecipa a [esercitazioni radio inter-comunali](/comunicazioni/2026-11-07-esercitazione-radio-inter-comunale/), perché in un'emergenza vera la radio può essere **l'unico collegamento che funziona**.
+Le radiocomunicazioni non sono un ricordo del passato: restano una **competenza operativa attuale**. Anche il nostro Gruppo cura la formazione radio e partecipa a esercitazioni radio inter-comunali, perché in un'emergenza vera la radio può essere **l'unico collegamento che funziona**.
 
 La Rete Zamberletti ricorda una lezione semplice: la tecnologia da sola non basta. Servono **persone preparate** che sappiano usarla. La resilienza, in fondo, è la capacità di comunicare quando tutto il resto smette di funzionare.
 
