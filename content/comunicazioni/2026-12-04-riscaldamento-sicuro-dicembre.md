@@ -164,14 +164,14 @@ A **dicembre** il **riscaldamento** funziona a pieno regime. È anche il mese di
 - **utili** in spazi piccoli;
 - **qualità** certificata necessaria.
 
-## Ordinanze comunali sul riscaldamento
+## Le regole nazionali sul riscaldamento
 
-A Genzano di Roma:
-- **fasce orarie** di accensione: variabili per zona climatica (zona D);
-- **temperatura** massima negli edifici pubblici (19 °C + 2 tolleranza);
-- **termostati** ad ambiente obbligatori;
-- **valvole termostatiche** obbligatorie dal 2017 nei condominii centralizzati;
-- **contabilizzazione** calore individuale per equità.
+In Italia valgono per tutti (D.P.R. 74/2013 e D.Lgs. 102/2014):
+- **fasce orarie** e periodo di accensione stabiliti per zona climatica;
+- **temperatura** massima negli edifici: 20 °C con 2 gradi di tolleranza;
+- **valvole termostatiche** e **contabilizzazione** del calore nei condomini con impianto centralizzato (obbligo dal 2017).
+
+Il Sindaco può modificare orari e periodi con ordinanza: fai riferimento al [sito del Comune](https://www.comune.genzanodiroma.roma.it/).
 
 ## In caso di emergenza
 

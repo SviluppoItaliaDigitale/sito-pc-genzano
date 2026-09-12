@@ -137,16 +137,6 @@ Un volontario di PC osserva gli alberi:
 - **bosco** in degrado → rischio idrogeologico e AIB;
 - **rimboschimenti** → sostegno attivo.
 
-## A Genzano
-
-Il Gruppo collabora con:
-
-- **Parco Regionale Castelli Romani**;
-- **Carabinieri Forestali**;
-- **Servizio Giardini** del Comune;
-- **Associazioni ambientaliste** del territorio;
-- **Scuole** per attività di educazione ambientale.
-
 ## Le azioni che tutti possiamo fare
 
 ### Individuali

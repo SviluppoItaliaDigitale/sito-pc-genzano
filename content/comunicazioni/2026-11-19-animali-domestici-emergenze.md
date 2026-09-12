@@ -21,8 +21,7 @@ In emergenza, gli **animali domestici** sono parte della famiglia, non "beni da 
 - **oltre 16 milioni** di cani e gatti domestici in Italia;
 - **il 40% delle famiglie** possiede almeno un animale;
 - **migliaia** di animali ogni anno vittime di emergenze (abbandoni, decessi, smarrimenti);
-- **Amatrice 2016**: oltre **2.500 animali** salvati e ricollocati dal volontariato;
-- **Emilia-Romagna 2023**: migliaia di animali da compagnia evacuati.
+- **Centro Italia 2016** ed **Emilia-Romagna 2023**: le associazioni animaliste e il volontariato hanno recuperato e accolto molti animali rimasti senza famiglia.
 
 ## La normativa
 
@@ -137,14 +136,9 @@ In molte emergenze sono attive:
 
 Le associazioni **collaborano** con il sistema di PC nazionale.
 
-## A Genzano di Roma
+## A chi rivolgersi sul territorio
 
-Il Gruppo Comunale di PC:
-
-- **include** la gestione animali nei propri scenari di emergenza;
-- **coordinamento** con l'**ASL Roma 6** per il servizio veterinario pubblico;
-- **contatti** con associazioni zoofile locali;
-- **sensibilizzazione** sul tema nei corsi e nelle scuole.
+Per gli animali il riferimento pubblico è il **servizio veterinario della ASL Roma 6**; in caso di pericolo immediato per persone o animali si chiama il **112**. Il Comune è il riferimento per gli animali vaganti e per le informazioni sui centri di accoglienza durante un'emergenza.
 
 ## Un messaggio
 

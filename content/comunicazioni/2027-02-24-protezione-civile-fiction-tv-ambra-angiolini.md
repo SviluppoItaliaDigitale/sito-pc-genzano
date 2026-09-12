@@ -19,7 +19,7 @@ draft: false
 
 La rappresentazione televisiva conta. Il pubblico italiano si è formato un'idea della **medicina** dai medical drama, del **diritto** dai legal drama, della **polizia** dalle serie poliziesche. La **Protezione Civile**, invece, era quasi assente dalla narrazione di intrattenimento. Per la prima volta una **fiction in prima serata** mette al centro le persone che fanno il nostro lavoro. Chi parte di notte con la chiamata di attivazione. Chi monta il campo. Chi tira su una tenda alle tre di mattina sotto la pioggia. Chi ascolta uno sfollato che non sa dove dormirà.
 
-Per chi fa volontariato significa una cosa concreta: **i giovani vedono che la Protezione Civile esiste**. Molti di noi sono entrati così, in tanti gruppi italiani: prima da spettatori, poi da curiosi, poi da volontari.
+Per chi fa volontariato significa una cosa concreta: **i giovani vedono che la Protezione Civile esiste**. Molti volontari, in tanti gruppi italiani, sono entrati così: prima da spettatori, poi da curiosi, poi da volontari.
 
 ## Cosa ci convince della fiction
 
@@ -34,7 +34,7 @@ Una fiction è una fiction: deve raccontare, deve emozionare, deve far funzionar
 
 - **La catena di comando è più lunga e più formale** di quella mostrata in TV. Un volontario non decide un'evacuazione: la propone al **Capo Gruppo**, che la valuta, che la passa al **Sindaco** (autorità di PC sul territorio), che la dispone. È una catena, non un eroe singolo.
 - **I tempi sono diversi**: una serie TV comprime in 50 minuti scenari che nella realtà durano giorni. La nostra giornata media non è azione continua: è **attesa attiva**, **riunione informativa**, **logistica**, **manutenzione mezzi**, **formazione**, **esercitazioni**.
-- **Le emergenze "spettacolari"** (frane, valanghe, alluvioni) sono **una piccola parte** del nostro lavoro. La maggior parte del tempo la passiamo in **prevenzione**: scuola, segnaletica, esercitazioni, manutenzione, presenza in piazza, supporto a sagre e grandi eventi.
+- **Le emergenze "spettacolari"** (frane, valanghe, alluvioni) sono **una piccola parte** del nostro lavoro. La maggior parte del tempo la passiamo in **prevenzione**: formazione, esercitazioni, manutenzione dei mezzi, informazione ai cittadini, assistenza alla popolazione durante gli eventi.
 - **Niente "lupi solitari"**: nella PC italiana **non esiste il volontario eroe** che salva la situazione da solo. Esiste la **squadra**, esiste il **sistema**. È quasi sempre meno cinematografico, quasi sempre più efficace.
 - **Il rapporto con il 112**: nessun volontario può essere attivato direttamente dalla cittadinanza. La chiamata al 112 mette in moto la **Centrale Unica Regionale**, che valuta e coinvolge il **Sindaco** e quindi il **Gruppo Comunale**. Il volontario non si auto-attiva.
 
@@ -76,4 +76,4 @@ Tutto il resto si impara dopo aver detto «sì». Se la fiction ti ha incuriosit
 - [INGV — Osservatorio Etneo / Sezione Vulcanologia](https://www.ct.ingv.it/) — monitoraggio Stromboli, Etna, Vulcano
 - [Rai Play — «Sempre al tuo fianco»](https://www.raiplay.it/programmi/sempreatuofianco) — la serie in streaming
 
-> **Ringraziamo la produzione** di «Sempre al tuo fianco» e Rai 1 per aver portato in prima serata il mondo del volontariato di Protezione Civile e il lavoro tecnico del rischio Vulcani. Anche se romanzata, ogni rappresentazione che mette sul piccolo schermo le persone che indossano il pettorale arancione è un piccolo passo culturale: il Paese ne ha bisogno.
+> **Ringraziamo la produzione** di «Sempre al tuo fianco» e Rai 1 per aver portato in prima serata il mondo del volontariato di Protezione Civile e il lavoro tecnico del rischio Vulcani. Anche se romanzata, ogni rappresentazione che mette sul piccolo schermo le persone che indossano la divisa gialla ad alta visibilità è un piccolo passo culturale: il Paese ne ha bisogno.

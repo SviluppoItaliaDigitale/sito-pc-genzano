@@ -53,8 +53,8 @@ Cogliamo l'occasione per ripassare alcuni principi di **sicurezza dei bambini** 
 - **educazione** progressiva alla cautela;
 - **spiegare** i pericoli con calma;
 - **giochi** adeguati all'età (marchio CE e senza parti staccabili);
-- **bicicletta**: casco obbligatorio;
-- **cintura** in auto (seggiolino);
+- **bicicletta**: casco sempre consigliato;
+- **seggiolino** in auto, sempre;
 - **numeri di emergenza** memorizzati (112).
 
 ### 6-12 anni
@@ -81,14 +81,14 @@ Cogliamo l'occasione per ripassare alcuni principi di **sicurezza dei bambini** 
 - **zone 30** più sicure in città.
 
 ### In bicicletta
-- **casco** obbligatorio per minori;
+- **casco** sempre consigliato, anche se non obbligatorio;
 - **pista ciclabile** dove disponibile;
 - **segnalare** manovre;
 - **età** minima per strade trafficate: maturità del bambino.
 
 ### In auto
-- **seggiolino** fino a 150 cm o 12 anni;
-- **seggiolino** omologato R129 o ECE 44-04;
+- **seggiolino** fino a 150 cm di statura (art. 172 Codice della Strada);
+- **seggiolino** omologato secondo la normativa vigente (R129);
 - **cinture** sempre allacciate;
 - **no** sul sedile passeggero anteriore se airbag attivo e posizione sbagliata;
 - **distanze brevi**: stessa regola.
@@ -148,7 +148,7 @@ Cogliamo l'occasione per ripassare alcuni principi di **sicurezza dei bambini** 
 - **scadenze** controllate.
 
 ### Intossicazioni
-- **Centro Antiveleni**: 800 883 300 (gratuito);
+- **Centro Antiveleni** del Policlinico Gemelli di Roma: 06 3054343 (attivo 24 ore su 24);
 - **avere** sotto mano: cosa ha ingerito, quanto, quando, peso del bambino;
 - **non** provocare vomito senza indicazione medica;
 - **conservare** la confezione del prodotto.
@@ -184,14 +184,9 @@ In caso di scomparsa di un minore:
 - **luoghi frequentati** comunicati alle forze dell'ordine;
 - **social** condivisi solo dopo autorizzazione delle forze dell'ordine.
 
-## La PC e i bambini
+## La Protezione Civile e i bambini
 
-Il nostro gruppo:
-- **incontra** scuole regolarmente;
-- **propone** laboratori di educazione al rischio;
-- **partecipa** a giornate aperte;
-- **distribuisce** materiali pedagogici;
-- **forma** insegnanti su PC.
+Educare i bambini al rischio è parte della cultura di protezione civile: nelle scuole si svolgono le prove di evacuazione previste dalla normativa e i materiali didattici del sito — [kit per le scuole](/formazione/), [giochi della sicurezza](/giochi/) e [schede stampabili](/formazione/schede-didattiche-giochi/) — sono a disposizione di insegnanti e famiglie.
 
 ## Un augurio
 
@@ -214,8 +209,8 @@ Sul nostro sito:
 Fonti istituzionali:
 
 - [Telefono Azzurro — emergenza infanzia 114](https://www.azzurro.it/).
-- [Centro Antiveleni Roma — Policlinico Gemelli](https://www.policlinicogemelli.it/).
+- [Centro Antiveleni — Policlinico Gemelli](https://www.policlinicogemelli.it/centri-specializzati/centro-antiveleni/).
 - [UNICEF Italia](https://www.unicef.it/).
 - [Società Italiana di Pediatria](https://sip.it/).
 
-In emergenza: **112**. Emergenza infanzia: **114**. Bambini scomparsi: **116000**. Centro Antiveleni: **800 883 300**.
+In emergenza: **112**. Emergenza infanzia: **114**. Bambini scomparsi: **116000**. Centro Antiveleni (Gemelli): **06 3054343**.

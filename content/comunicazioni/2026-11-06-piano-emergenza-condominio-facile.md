@@ -69,13 +69,13 @@ Scegli 1 posto sicuro fuori dal palazzo. Tutti si trovano lì dopo l'evacuazione
 
 ## Come si fa il piano
 
-Bastano 2 o 3 riunioni tra i vicini. Si può chiedere aiuto all'amministratore. Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma aiuta gratis.
+Bastano 2 o 3 riunioni tra i vicini. Si può chiedere aiuto all'amministratore.
 
 Il piano deve stare in 2-4 pagine. Deve avere la mappa del palazzo e i numeri di emergenza. Si appende in bacheca. Una copia va a ogni famiglia.
 
 ## Una prova di evacuazione
 
-Puoi fare una prova di evacuazione. Non è obbligatoria, ma è molto utile. Dura circa 15-20 minuti. Serve per capire se le scale funzionano come via di fuga. Anche i bambini possono partecipare. Il Gruppo Comunale di Protezione Civile può aiutarti a organizzarla.
+Puoi fare una prova di evacuazione. Non è obbligatoria, ma è molto utile. Dura circa 15-20 minuti. Serve per capire se le scale funzionano come via di fuga. Anche i bambini possono partecipare.
 
 ## Cosa è utile avere nel palazzo
 
@@ -93,16 +93,9 @@ Puoi fare una prova di evacuazione. Non è obbligatoria, ma è molto utile. Dura
 - segnala i problemi all'amministratore
 - conosci i tuoi vicini
 
-## A Genzano
+## Da dove partire
 
-Il Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma può aiutarti:
-
-- viene nel tuo condominio a spiegare come fare il piano
-- aiuta a scrivere il piano
-- assiste durante la prova di evacuazione
-- forma il referente del condominio
-
-Per informazioni, usa i [contatti del Gruppo](/contatti/).
+Prima fai il piano della tua famiglia. Sul sito trovi la pagina [Piano familiare di emergenza](/piano-familiare/). Puoi stamparla e compilarla. Per anziani, persone disabili, neonati e animali ci sono i [kit pronti](/formazione/kit-calamita/). Cosa fare per ogni rischio è nelle pagine [Rischi e prevenzione](/rischi-prevenzione/).
 
 ---
 

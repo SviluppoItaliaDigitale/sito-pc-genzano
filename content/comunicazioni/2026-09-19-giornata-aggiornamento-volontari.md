@@ -1,7 +1,7 @@
 ---
 title: "Giornata di aggiornamento per i volontari attivi"
 date: 2026-09-19
-description: "Oltre al corso base, i volontari in servizio fanno aggiornamenti periodici obbligatori. In autunno il Gruppo ripropone i moduli chiave."
+description: "Oltre al corso base, i volontari di Protezione Civile devono aggiornarsi: BLS-D, antincendio boschivo, sicurezza, radio. Cosa prevedono le norme e perché."
 badge: "Formazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Chi è già volontario di PC non smette mai di formarsi. Oltre al **corso base** iniziale, la normativa prevede **aggiornamenti periodici** per mantenere le abilitazioni operative. Il Gruppo Comunale Volontari di PC di Genzano di Roma ripropone, con la ripresa autunnale, i principali **moduli di aggiornamento**.
+Chi è già volontario di PC non smette mai di formarsi. Oltre al **corso base** iniziale, la normativa prevede **aggiornamenti periodici** per mantenere le abilitazioni operative. Con la ripresa autunnale è il momento tipico in cui le organizzazioni di volontariato programmano i **moduli di aggiornamento**: ecco quali sono e cosa prevedono le norme.
 
 ## Perché aggiornarsi
 
@@ -47,31 +47,20 @@ Ruolo del volontario come "primo contatto" con la popolazione, formule di comuni
 
 ## Chi insegna
 
-I docenti sono:
+Nel sistema di protezione civile i docenti dei moduli di aggiornamento sono di norma:
 
-- **volontari senior** del Gruppo, per i moduli operativi interni;
 - **istruttori certificati** (BLS-D, sicurezza) per i moduli soggetti a certificazione esterna;
-- **tecnici specialisti** (ingegneri, medici, radioamatori) per contenuti di nicchia;
-- **formatori regionali** per temi coordinati dalla Regione Lazio.
+- **tecnici specialisti** (ingegneri, medici, radioamatori) per i contenuti di settore;
+- **formatori regionali** per i temi coordinati dalla Regione Lazio, come l'antincendio boschivo;
+- **volontari esperti** dell'organizzazione per l'addestramento interno.
 
-## Come si registrano gli aggiornamenti
+## Come si documentano gli aggiornamenti
 
-Ogni modulo seguito viene **registrato** nel curriculum personale del volontario. Il Gruppo tiene un **libro aggiornamenti** per ciascun iscritto, fondamentale per:
-
-- verificare le **abilitazioni operative** di ogni volontario;
-- **pianificare** le squadre in base alle competenze;
-- **documentare** in caso di audit o controllo.
+Le abilitazioni hanno una scadenza: il BLS-D va rinnovato periodicamente secondo le regole dell'ente certificatore, la formazione sulla sicurezza segue il D.M. 13 aprile 2011, quella antincendio boschivo le disposizioni regionali. Ogni organizzazione deve poter dimostrare che i propri volontari hanno le abilitazioni in corso di validità: è una condizione per impiegarli in modo sicuro e per la copertura assicurativa.
 
 ## Quando si tengono
 
-Calendario di massima autunno 2026:
-
-- **sabato mattina**: moduli di sicurezza operativa;
-- **sere infrasettimanali**: moduli teorici (radio, cartografia, comunicazione);
-- **giornate intere** su prenotazione: BLS-D;
-- **fine settimana**: aggiornamenti AIB con prova pratica.
-
-Il calendario dettagliato è comunicato ai volontari per canali interni.
+Non esiste un calendario nazionale: ogni organizzazione programma gli aggiornamenti in base alle scadenze delle abilitazioni e alla disponibilità dei formatori. L'autunno, dopo la campagna antincendio, è il periodo più usato. Per il Gruppo di Genzano di Roma le informazioni sui corsi sono nella pagina [Diventa volontario](/diventa-volontario/).
 
 ## Per approfondire
 

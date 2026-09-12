@@ -88,13 +88,13 @@ Se sei un volontario o un operatore, dopo un intervento difficile è normale pro
 
 **Reazioni che durano alcuni giorni** sono normali e si risolvono da sole. Se invece **persistono dopo 3-4 settimane**, è il momento di parlarne: con il Coordinatore del Gruppo, con un collega di fiducia, o con uno psicologo della rete. Chiedere aiuto **non** è un segno di debolezza; è un segno di professionalità.
 
-## A Genzano di Roma
+## Dove trovare aiuto
 
-Il Gruppo Comunale di Volontari sta lavorando — in coordinamento con l'**ASL Roma 6** e con l'Ordine degli Psicologi del Lazio — per definire una procedura interna di supporto agli operatori dopo interventi significativi. Per chi soffre, anche solo un confronto con un collega che ha vissuto eventi simili può fare una differenza importante.
+Per chi soffre, anche solo un confronto con un collega che ha vissuto eventi simili può fare una differenza importante. Per un supporto professionale i riferimenti sono l'**Ordine degli Psicologi del Lazio**, che pubblica l'elenco degli iscritti, e il **Consiglio Nazionale dell'Ordine degli Psicologi** (CNOP), che ha linee guida dedicate alla psicologia dell'emergenza. In caso di bisogno immediato ci si rivolge al medico di base o ai servizi della ASL.
 
 ## Sul nostro sito
 
-- [Diventa volontario](/diventa-volontario/) — Il percorso per entrare nel Gruppo Comunale, che include formazione sul supporto post-intervento.
+- [Diventa volontario](/diventa-volontario/) — Il percorso per entrare nel Gruppo Comunale.
 - [Chi siamo](/chi-siamo/) — La storia e la struttura del Gruppo Comunale di Genzano.
 - [Kit per i volontari di PC](/formazione/kit-calamita-volontari-pc/) — Risorse operative per volontari, incluse indicazioni sul benessere in emergenza.
 

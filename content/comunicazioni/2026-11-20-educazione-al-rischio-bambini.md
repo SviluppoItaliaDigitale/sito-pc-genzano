@@ -137,7 +137,7 @@ La **scuola** è il luogo principale dove i bambini acquisiscono:
 - **professionalità** della PC in visite;
 - **continuità** educativa tra le età.
 
-Il **Gruppo Comunale di PC** collabora con le scuole del territorio di Genzano di Roma.
+Per le scuole, sul nostro sito la sezione [Formazione e scuole](/formazione/) raccoglie kit didattici e schede stampabili per ogni fascia di età.
 
 ## Il ruolo della famiglia
 

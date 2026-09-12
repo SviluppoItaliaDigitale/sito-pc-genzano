@@ -82,11 +82,7 @@ Un saluto alla porta può salvare una vita.
 
 ## Cosa fa il Comune
 
-Quando fa molto freddo, il Comune attiva alcuni servizi:
-
-- Un numero verde per le segnalazioni.
-- I servizi sociali per le persone non autosufficienti.
-- Un centro di accoglienza notturna per le persone senza casa.
+Quando fa molto freddo, il Comune aiuta le persone sole e le persone senza casa. Lo fa con i servizi sociali. Le informazioni sono sul sito del Comune.
 
 ## L'allerta freddo
 

@@ -117,11 +117,9 @@ Il territorio di Genzano non presenta bacini come quelli versiliesi, ma ha:
 
 - **versanti** del cratere del lago di Nemi;
 - **fossi** e **canali** di scolo che richiedono manutenzione;
-- **zone** di possibile smottamento;
-- **un Piano** di Emergenza Comunale aggiornato;
-- **cittadini** consapevoli.
+- **zone** di possibile smottamento, descritte nel [Piano di Emergenza Comunale](/piano-emergenza/).
 
-Le lezioni della Versilia 1996 vanno applicate **ovunque**, anche dove il rischio sembra minore.
+Le lezioni della Versilia 1996 vanno applicate **ovunque**, anche dove il rischio sembra minore. L'evento è raccontato in dettaglio nell'articolo dell'anniversario, [Versilia, 19 giugno 1996: la notte che cancellò Cardoso](/comunicazioni/2026-06-19-versilia-1996-alluvione-cardoso-stazzema/).
 
 ## Onore alle vittime
 

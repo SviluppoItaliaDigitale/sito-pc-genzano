@@ -17,7 +17,7 @@ draft: false
 
 ## Buon Natale
 
-A **ogni casa** di Genzano di Roma, da Via del Corso al Buonriposo, dalle Fontane alle Due Santini, da Villa Sforza alla Cecchina e Landi, e fuori di qui a tutti i **genzanesi** sparsi nel mondo:
+A **ogni casa** di Genzano di Roma e a tutti i **genzanesi** lontani:
 
 **Buon Natale**.
 
@@ -35,109 +35,36 @@ A **chi** oggi:
 
 ## Il significato profondo
 
-Il **Natale**, al di là delle tradizioni culturali e religiose, è diventato per la nostra cultura occidentale il momento in cui ci fermiamo per:
+Il **Natale**, al di là delle tradizioni culturali e religiose, è il momento in cui ci fermiamo per:
 
 - **ricordare** ciò che conta;
 - **rinsaldare** legami;
 - **perdonare** vecchi dissapori;
 - **ringraziare** chi ci sta vicino;
-- **condividere** tempo e affetti;
-- **essere presenti** a se stessi e agli altri.
+- **condividere** tempo e affetti.
 
 Che oggi sia per voi **esattamente** questo.
-
-## La nostra presenza
-
-Anche oggi, **25 dicembre 2026**, il Gruppo Comunale Volontari di PC di Genzano è:
-
-- in **reperibilità** attiva;
-- con **coordinatore** di turno sempre raggiungibile;
-- in **ascolto** dei canali istituzionali;
-- **pronto** a intervenire se necessario.
-
-Per **emergenze**: sempre e solo **112**.
-
-## Un piccolo bilancio
-
-Il **2026** che sta per chiudersi è stato per il nostro gruppo un anno di:
-
-- **presenza** costante sul territorio;
-- **formazione** (corso base sempre aperto ai nuovi iscritti);
-- **informazione** continua ai cittadini;
-- **collaborazione** con istituzioni;
-- **crescita** del gruppo.
-
-**Grazie** a chi ha reso possibile tutto questo: volontari, famiglie, Comune, forze dell'ordine, cittadini.
 
 ## Pranzo di Natale
 
 Se oggi siedi a tavola:
+
 - **godilo**;
 - **ascolta** chi ti parla;
 - **rallenta** i ritmi;
-- **fotografa** poco, vivi molto;
 - **racconta** storie di famiglia ai più giovani;
 - **ringrazia** chi ha cucinato;
 - **alza** un calice a chi manca.
 
-## Dopo il pranzo
+Qualche attenzione in cucina non guasta neppure oggi: i consigli sono nell'articolo [Sicurezza in cucina durante le feste](/comunicazioni/2026-11-24-sicurezza-cucina-festivita/).
 
-- **passeggiata** digestiva (anche al freddo);
-- **gioco** in famiglia (carte, tombola, indovinelli);
-- **film** insieme;
-- **riposo** se serve;
-- **chiamate** a parenti lontani;
-- **serenità**.
+## Se serve aiuto
 
-## Domani
-
-**26 dicembre — Santo Stefano**: secondo giorno di festa.
-- **famiglia** ancora insieme o ospiti d'altra parte;
-- **avanzi** del pranzo;
-- **passeggiate**;
-- **cinema** e teatro aperti;
-- **ristoranti** affollati.
-
-Anche domani la PC è in servizio. Proseguiamo insieme.
-
-## I giorni verso Capodanno
-
-Tra il **27 dicembre** e il **31 dicembre**:
-- **settimana** "tra feste";
-- **ritmi** rallentati;
-- **alcuni** già a lavoro (senza ferie);
-- **preparazione** di Capodanno;
-- **possibili** spostamenti.
-
-Saranno **giorni tranquilli** in genere, ma manterremo **presidio**.
-
-## Il nostro impegno continua
-
-Non ci fermiamo:
-- **monitoraggio** 24/7;
-- **reperibilità**;
-- **pronti** a ogni emergenza;
-- **rispondiamo** a chiamate;
-- **presenza** agli eventi.
+Anche il giorno di Natale il sistema di emergenza funziona come sempre: per qualunque **emergenza** chiama il **112**, il Numero Unico Europeo, attivo 24 ore su 24. Gli altri recapiti utili sono nella pagina [Numeri utili](/numeri-utili/); cosa fare nei primi minuti di un'emergenza è spiegato in [Cosa fare adesso](/cosa-fare-adesso/).
 
 ## Un augurio dal cuore
 
-Oggi **25 dicembre 2026** è una giornata come un'altra nel calendario. Ma è anche **unica**.
-
-Che questa **unicità** sia per voi **preziosa**. Che vi lasci il **ricordo** di un **bel Natale**.
-
-E che **domani**, dopo, si riparta con la stessa **serenità**.
-
-## A presto
-
-Continueremo a essere **con voi** e **per voi**.
-
-Nei prossimi giorni pubblicheremo:
-- **riflessioni** sul 2026;
-- **bilanci** dell'anno;
-- **prospettive** per il 2027;
-- **ultimo** dell'anno e Capodanno;
-- **auguri** finali il 31.
+Oggi **25 dicembre 2026** è una giornata come un'altra nel calendario. Ma è anche **unica**. Che questa **unicità** sia per voi **preziosa**, e che vi lasci il **ricordo** di un **bel Natale**.
 
 **Buon Natale** a tutti.
 
@@ -146,9 +73,8 @@ Nei prossimi giorni pubblicheremo:
 Sul nostro sito:
 
 - [Vigilia di Natale: auguri](/comunicazioni/2026-12-24-vigilia-natale-auguri/).
-- [Presidio ponte Immacolata](/comunicazioni/2026-12-05-presidio-ponte-immacolata/).
 - [Santo Stefano protomartire](/comunicazioni/2026-12-26-santo-stefano-protomartire/).
-- [Bilancio annuale PC Genzano](/comunicazioni/2026-12-28-bilancio-annuale-pc-genzano/).
+- [Numeri utili](/numeri-utili/).
 - [Chi siamo](/chi-siamo/).
 
 Fonti istituzionali:

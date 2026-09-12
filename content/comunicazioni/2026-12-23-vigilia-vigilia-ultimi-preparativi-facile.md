@@ -101,7 +101,7 @@ Gli anziani hanno bisogno di riposo. Non stancarli troppo. I bambini hanno bisog
 
 In caso di emergenza chiama il **112** (il numero unico di emergenza).
 
-Se pensi che qualcuno ha ingerito qualcosa di pericoloso, chiama il Centro Antiveleni al numero **800 883 300**. È gratuito.
+Se pensi che qualcuno ha ingerito qualcosa di pericoloso, chiama il Centro Antiveleni del Policlinico Gemelli di Roma al numero **06 3054343**. Risponde sempre, anche di notte.
 
 Tieni a portata di mano antistaminici e paracetamolo.
 

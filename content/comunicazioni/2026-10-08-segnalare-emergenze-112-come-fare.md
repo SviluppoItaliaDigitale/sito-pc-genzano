@@ -92,9 +92,9 @@ Il NUE 112 in Italia gestisce chiamate in **italiano**, **inglese**, **francese*
 - un **falso allarme intenzionale** è **reato** (art. 658 c.p.) e può comportare sanzioni penali e risarcimenti;
 - i **bambini** che chiamano per gioco vanno **educati**: spiegare loro che il 112 salva vite e non è un gioco.
 
-## Formazione nelle scuole
+## Allenarsi con i bambini
 
-Il Gruppo Comunale di PC e la Polizia Locale tengono, nelle scuole di Genzano di Roma, **simulazioni di chiamata al 112** con bambini e ragazzi. Un esercizio che resta memorabile e utile per tutta la vita.
+Simulare una chiamata al 112 in famiglia o in classe è un esercizio che resta per tutta la vita. Sul nostro sito ci sono la scheda stampabile [Chiamo il 112](/formazione/schede-stampabili/chiamo-112/) e il gioco [Chiamata al 112](/giochi/primaria/chiamata-112/) per le scuole.
 
 ## Per approfondire
 

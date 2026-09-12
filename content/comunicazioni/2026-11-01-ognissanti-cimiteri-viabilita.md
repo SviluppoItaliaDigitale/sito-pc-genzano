@@ -25,7 +25,7 @@ Tra le **9:00 e le 13:00** e tra le **15:00 e le 18:00** si registra maggior aff
 - **attenzione** agli anziani e ai pedoni con piante e fiori;
 - **non ostruire** i cancelli o le corsie di servizio.
 
-La Polizia Locale garantisce la **presenza** nei pressi degli accessi principali.
+Di norma la Polizia Locale è **presente** nei pressi degli accessi principali.
 
 ## Trasporto pubblico
 

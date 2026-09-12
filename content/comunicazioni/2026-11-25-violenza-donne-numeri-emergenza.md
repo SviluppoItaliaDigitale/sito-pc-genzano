@@ -153,11 +153,9 @@ I **Centri Antiviolenza** offrono:
 - **percorsi** di uscita dalla violenza;
 - **accompagnamento** in iter giudiziario.
 
-### A Genzano di Roma e dintorni
-- **CAV** territoriale coordinato con ASL Roma 6;
-- **comune** con sportello anti-violenza;
-- **associazioni** locali dedicate;
-- **liste** aggiornate sul sito Regione Lazio.
+### Come trovare il centro più vicino
+- **chiamare il 1522**: le operatrici indicano il Centro Antiviolenza competente per il territorio;
+- **consultare** la mappa dei centri sul sito [1522.eu](https://www.1522.eu/).
 
 ## La legge italiana
 
@@ -188,15 +186,9 @@ La violenza si previene **culturalmente**:
 - **contrasto** a stereotipi di genere;
 - **sensibilizzazione** costante.
 
-## Il ruolo della Protezione Civile
+## Il tema in emergenza
 
-Anche in PC:
-
-- **volontari** formati riconoscono segnali;
-- **protocolli** in centri di accoglienza;
-- **cooperazione** con Forze dell'Ordine;
-- **tutela** delle donne in emergenze (post-terremoto, alluvioni);
-- **supporto** psicologico.
+La violenza di genere non si ferma durante un'emergenza. Dopo un terremoto o un'alluvione, nei centri di accoglienza servono spazi sicuri per le donne, cooperazione con le Forze dell'Ordine e attenzione ai segnali di violenza. È un aspetto della pianificazione di protezione civile che riguarda tutto il sistema.
 
 ## Un impegno di tutti
 

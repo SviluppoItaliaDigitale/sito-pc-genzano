@@ -118,16 +118,6 @@ Nella Giornata di oggi:
 - **Forze di polizia** rilasciano comunicati dati;
 - **Media** dedicano spazio al tema.
 
-## A Genzano di Roma
-
-Il Gruppo ricorda:
-
-- **cittadini locali** coinvolti in incidenti stradali (in memoria, anche non di oggi);
-- **viabilità locale** con punti critici noti;
-- **campagne** del Comune e Polizia Locale per la sicurezza;
-- **lezioni** nelle scuole del territorio;
-- **controllo** velocità periodico.
-
 ## Le cose che funzionano
 
 Le politiche che **riducono** realmente le vittime:
