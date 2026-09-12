@@ -5,11 +5,23 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-11T22:19:19+00:00",
+  "generato": "2026-09-12T00:29:06+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-11T22:18:58+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Influenza, la stagione è già arrivata? I consigli dell'esperto per affrontare il primo freddo",
+   "url": "https://www.adnkronos.com/salute/influenza-stagione-consigli-esperto-contro-primo-freddo_5BsnlgeanOItG2y4pjipaQ"
+  },
+  {
+   "data": "2026-09-11T22:14:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Addio a Emma Bonino, una vita in nome della libertà. Mattarella: \"Punto di riferimento\". Martedì le esequie di Stato",
+   "url": "https://www.adnkronos.com/politica/emma-bonino-morte-camera-ardente-esequie-di-stato-quando_21ZaBWojuLYBInxcHmTZic"
+  },
   {
    "data": "2026-09-11T22:13:28+00:00",
    "fonte": "ADNKRONOS",
@@ -177,18 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Scoppia il caso firme, quadruplicano quelle per chi non è in Parlamento",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/09/11/l.-elettorale-verso-abbassamento-a-minimo-6mila-firme-per-i-nuovi-partiti_fdbea3c9-7b04-4778-9cbd-e634c1a471e8.html"
-  },
-  {
-   "data": "2026-09-11T19:14:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Superenalotto, centrato '6' da oltre 223 milioni: la vincita record a La Valletta Brianza",
-   "url": "https://www.adnkronos.com/cronaca/superenalotto-oggi-11-settembre-centrato-6_6DvgsokFL1yMoSyrMmMCAQ"
-  },
-  {
-   "data": "2026-09-11T19:13:46+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Operaio morto dopo caduta nel vuoto a Barletta, cinque indagati",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/11/operaio-morto-dopo-caduta-nel-vuoto-a-barletta-cinque-indagati_f569c0c2-0c3a-4ffc-9b07-1e86a8be972d.html"
   }
  ]
 }
