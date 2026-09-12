@@ -241,13 +241,15 @@ date: 2026-04-30T00:02:00+02:00
 
 ## Fonti giornalistiche negli articoli — parafrasi sempre, testate solo in fondo
 
-🔴 **Istruzione permanente dell'utente (28/08/2026).** Quando un articolo del sito riprende informazioni dalla stampa locale o nazionale (Castelli Notizie, Il Mamilio, RomaToday, Abitare a Roma, ecc.) per ampliare il racconto di un evento:
+🔴 **Istruzione permanente dell'utente (28/08/2026).** Quando un articolo del sito riprende informazioni dalla stampa locale o nazionale (Castelli Notizie, Il Giornale dei Castelli Romani — `giornaleinfocastelliromani.it`, Il Mamilio, RomaToday, Abitare a Roma, ecc.) per ampliare il racconto di un evento:
 
 1. **Parafrasi sempre, con parole nostre.** Mai copiare frasi delle testate, mai virgolettati attribuiti a una testata nel corpo dell'articolo. Il testo che pubblichiamo è redazione originale del Gruppo, anche per rispetto del diritto d'autore delle testate.
 2. **Nel corpo entrano solo i fatti**, e solo quelli che le nostre fonti interne (registro interventi, comunicazioni ufficiali, osservazione diretta) non hanno. Se serve un'attribuzione, è **generica**: *"secondo le cronache locali"*, *"le prime ricostruzioni"* — mai il nome della testata inline, mai il pattern `([Castelli Notizie](url))`.
 3. **Le testate si menzionano SOLO in fondo**, nella sezione "Per approfondire" (sottosezione *"Le cronache locali"* o *"Fonti"*), con titolo e link all'articolo originale: è quella la citazione della fonte, verificabile dal lettore.
 4. **Verifica obbligatoria**: ogni fatto ripreso dalla stampa va letto sulla fonte (WebFetch/Firecrawl), mai citato per sentito dire; se un dato di stampa contraddice il nostro registro, prevale il registro per i fatti nostri e si distingue con onestà per il resto.
 5. **Gerarchia invariata**: le cronache stanno dopo la linkografia interna e le fonti istituzionali nell'ordine della sezione "Per approfondire" (regola "Auto-integrazione approfondimenti").
+
+**Testate locali da consultare** per ogni articolo di cronaca del territorio: Castelli Notizie, **Il Giornale dei Castelli Romani** (`giornaleinfocastelliromani.it`, aggiunta su istruzione dell'utente del 12/09/2026), Il Mamilio, RomaToday (Castelli), Il Caffè. Il registro interventi prevale sempre sui fatti nostri: il 12/09/2026 una cronaca collocava la voragine del 10 settembre in via Appia Vecchia, mentre il registro (e l'articolo) la danno in via Pizzicannella.
 
 **Storia:** istruzione data il 28/08/2026 durante l'articolo sull'incendio in zona Molara; bonifica retroattiva di 9 articoli di luglio–agosto nella stessa giornata (PR #930). Sintesi operativa nella tabella "Automatismo totale" di `CLAUDE.md`, riga "Fonti giornalistiche".
 

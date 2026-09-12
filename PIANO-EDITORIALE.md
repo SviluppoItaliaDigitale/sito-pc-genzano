@@ -41,6 +41,9 @@ Controllare ogni giorno una **fonte calda** (DPC, Regione, INGV) e ogni settiman
 | **Prefettura di Roma** | Ordinanze prefettizie, coordinamento emergenze | prefettura.it/roma |
 | **Arma dei Carabinieri Forestale** | Incendi boschivi, tutela ambientale | carabinieri.it |
 | **Coordinamento Volontariato PC Lazio** | Bandi volontari, giornate formative | coordinamentopclazio.it |
+| **Castelli Notizie** (stampa locale) | Cronaca del territorio: maltempo, incendi, eventi; da parafrasare, testata citata solo in fondo (rule 02) | castellinotizie.it |
+| **Il Giornale dei Castelli Romani** (stampa locale) | Cronaca dei Castelli e di Genzano; stessa regola di parafrasi; il registro interventi prevale sui fatti nostri | giornaleinfocastelliromani.it |
+| **Il Mamilio** (stampa locale) | Cronaca dei Castelli Romani | ilmamilio.it |
 
 ### Fonti europee e internazionali
 

@@ -19,6 +19,21 @@
 # repository (data/allerta.json) che documentano apertura e chiusura dell'allerta.
 
 voci:
+  # Apertura: commit 65d98507d (pre-allerta domani verde→gialla, 09/09 18:16) + b2a80b103 (verde→gialla, 10/09 00:02)
+  # Chiusura: commit 3439079b4 (gialla→verde, 11/09 00:02)
+  - data_evento: "2026-09-10"
+    tipo: "Allerta gialla — criticità idrogeologica e idrogeologica per temporali"
+    zona: "Zona F — Bacini Costieri Sud (Genzano); allerta estesa a tutte le zone del Lazio"
+    fonte_allerta: "Allertamento del Sistema di Protezione Civile Regionale del 9 settembre 2026 (Centro Funzionale Regionale, su avviso DPC n. 26061 del 9 settembre), validità dal primo mattino del 10 settembre per le successive 18-24 ore."
+    azioni:
+      - "Pubblicazione automatica della pre-allerta dal pomeriggio del 9 settembre e dell'allerta dalla mezzanotte sui canali del sito: barra in homepage, pagina Allerte meteo, pagina di emergenza essenziale e feed CAP."
+      - "Monitoraggio automatico dei bollettini DPC/Regione Lazio fino al rientro a verde, registrato alla mezzanotte tra il 10 e l'11 settembre."
+      - "Squadre del Gruppo in servizio sul territorio comunale per l'intera giornata del 10 settembre, in raccordo con la Polizia Locale."
+    esito: "Durante la validità dell'allerta il Gruppo ha registrato otto interventi a Genzano: due allagamenti per tombini ostruiti su via Appia Vecchia al bivio per Lanuvio, un grosso albero caduto su via Diana con transito bloccato in entrambi i sensi, rami su via Lenin e via Carafa, canne su via Appia, un tombino divelto in via Stati Uniti d'America e una voragine sul manto stradale in via Pizzicannella. Il giorno dopo, su richiesta dei Carabinieri, la rimozione di detriti su via Appia Vecchia. Non risultano feriti né danni a persone documentati sui canali del Gruppo."
+    fonte_esito: "Registro interventi del Gruppo (interventi dal 147 al 155 del 2026, dati aggregati negli open data del sito) e storico pubblico del sistema di allertamento."
+    articolo: "/comunicazioni/2026-09-11-pioggia-alberi-tombini-voragine-otto-interventi/"
+    articolo_titolo: "Un giorno di pioggia: otto interventi tra alberi caduti, tombini e una voragine"
+
   # Apertura: commit f6ba326ba (verde→gialla, 10/08 13:17)
   # Chiusura: commit 86cb21676 (gialla→verde, 10/08 22:01)
   - data_evento: "2026-08-10"

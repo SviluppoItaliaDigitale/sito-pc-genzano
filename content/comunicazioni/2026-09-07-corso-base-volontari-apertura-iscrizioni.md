@@ -1,6 +1,6 @@
 ---
 title: "Come funziona il corso base per diventare volontari di Protezione Civile"
-date: 2026-09-07
+date: 2026-09-07T00:01:00+02:00
 description: "Le iscrizioni al corso base del Gruppo di Genzano sono sempre aperte. Requisiti, programma e come si organizza il percorso formativo."
 badge: "Formazione"
 priorita: "normale"
