@@ -466,7 +466,11 @@
       letter-spacing: 0.1em; text-transform: uppercase; }
     .oca .oca-carta-imp .oca-carta-tipo { color: #b45309; }
     .oca .oca-carta-eme .oca-carta-tipo { color: #c1121f; }
-    .oca .oca-carta-fatto { font-size: 9.5px; line-height: 1.32; margin: 1.4mm 0 0; flex: 1; }
+    .oca .oca-carta-corpo { display: flex; flex-direction: column; align-items: center; text-align: center;
+      gap: 1.4mm; flex: 1; margin: 1.4mm 0 0; }
+    .oca .oca-carta-fig { width: 21mm; height: 21mm; object-fit: contain; flex: none; }
+    .oca .oca-carta-fatto { font-size: 9.5px; line-height: 1.32; margin: 0; }
+    .oca .oca-carta-eme .oca-carta-fatto { margin: 1.4mm 0 0; }
     .oca .oca-carta-effetto { font-size: 9px; line-height: 1.3; margin: 1.4mm 0 0;
       border-top: 1px solid #c6d0da; padding-top: 1.2mm; font-weight: 700; color: #003366; }
     .oca .oca-carta-sol { font-size: 8.4px; line-height: 1.3; margin: 1.4mm 0 0;
@@ -3390,20 +3394,21 @@
       </header>
       <p class="oca-consegna"><strong>Foglio 2 — gli imprevisti.</strong> Ritaglia le carte e mettile in un mazzo, a faccia in giù, accanto al tabellone. Sono le cose che capitano: alcune aiutano, altre rallentano.</p>
       <div class="oca-mazzo">
-<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><p class="oca-carta-fatto">Manca la luce in tutta la via.</p><p class="oca-carta-effetto">Accendi la torcia, non le candele. Stai fermo un giro.</p></div>
-<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><p class="oca-carta-fatto">Piove forte e la strada si allaga.</p><p class="oca-carta-effetto">Aspetti al piano di sopra: stai fermo un giro.</p></div>
-<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><p class="oca-carta-fatto">Il cane di casa si è spaventato.</p><p class="oca-carta-effetto">Lo cerchi e lo tieni vicino: indietro di 2.</p></div>
-<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><p class="oca-carta-fatto">Hai lasciato lo zaino in camera.</p><p class="oca-carta-effetto">La prossima volta lo prepari la sera prima: indietro di 3.</p></div>
-<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><p class="oca-carta-fatto">Un albero caduto blocca la strada.</p><p class="oca-carta-effetto">Fai il giro dall&#x27;altra parte: indietro di 2.</p></div>
-<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><p class="oca-carta-fatto">La radio dà una notizia utile.</p><p class="oca-carta-effetto">Ora sai dove andare: avanti di 3.</p></div>
-<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><p class="oca-carta-fatto">Hai imparato a memoria il numero della mamma o del papà.</p><p class="oca-carta-effetto">Avanti di 2.</p></div>
-<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><p class="oca-carta-fatto">Trovi per terra una bottiglia sconosciuta.</p><p class="oca-carta-effetto">Non la tocchi, ti allontani e lo dici a un adulto: avanti di 2.</p></div>
-<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><p class="oca-carta-fatto">Hai messo l&#x27;acqua nello zaino.</p><p class="oca-carta-effetto">Avanti di 2.</p></div>
-<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><p class="oca-carta-fatto">Ti sei ricordato dov&#x27;è il punto di raccolta.</p><p class="oca-carta-effetto">Avanti di 3.</p></div>
-<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><p class="oca-carta-fatto">Vuoi filmare quello che succede.</p><p class="oca-carta-effetto">Metti via il telefono e ascolti l&#x27;adulto: stai fermo un giro.</p></div>
-<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><p class="oca-carta-fatto">Aiuti un vicino anziano a scendere le scale.</p><p class="oca-carta-effetto">Avanti di 3.</p></div>
+<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><div class="oca-carta-corpo"><img class="oca-carta-fig" src="/pittogrammi/arasaac-bn/oca-torcia.png" alt="una torcia elettrica"><p class="oca-carta-fatto">Manca la luce in tutta la via.</p></div><p class="oca-carta-effetto">Accendi la torcia, non le candele. Stai fermo un giro.</p></div>
+<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><div class="oca-carta-corpo"><img class="oca-carta-fig" src="/pittogrammi/arasaac-bn/oca-pioggia.png" alt="pioggia fitta che cade e forma pozzanghere"><p class="oca-carta-fatto">Piove forte e la strada si allaga.</p></div><p class="oca-carta-effetto">Aspetti al piano di sopra: stai fermo un giro.</p></div>
+<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><div class="oca-carta-corpo"><img class="oca-carta-fig" src="/pittogrammi/arasaac-bn/oca-cane.png" alt="un cane"><p class="oca-carta-fatto">Il cane di casa si è spaventato.</p></div><p class="oca-carta-effetto">Lo cerchi e lo tieni vicino: indietro di 2.</p></div>
+<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><div class="oca-carta-corpo"><img class="oca-carta-fig" src="/pittogrammi/arasaac-bn/alf-z-zaino.png" alt="uno zaino"><p class="oca-carta-fatto">Hai lasciato lo zaino in camera.</p></div><p class="oca-carta-effetto">La prossima volta lo prepari la sera prima: indietro di 3.</p></div>
+<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><div class="oca-carta-corpo"><img class="oca-carta-fig" src="/pittogrammi/arasaac-bn/oca-albero.png" alt="un albero"><p class="oca-carta-fatto">Un albero caduto blocca la strada.</p></div><p class="oca-carta-effetto">Fai il giro dall&#x27;altra parte: indietro di 2.</p></div>
+<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><div class="oca-carta-corpo"><img class="oca-carta-fig" src="/pittogrammi/arasaac-bn/oca-radio.png" alt="una radio con l&#x27;antenna"><p class="oca-carta-fatto">La radio dà una notizia utile.</p></div><p class="oca-carta-effetto">Ora sai dove andare: avanti di 3.</p></div>
+<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><div class="oca-carta-corpo"><img class="oca-carta-fig" src="/pittogrammi/arasaac-bn/alf-n-telefono.png" alt="un telefono"><p class="oca-carta-fatto">Hai imparato a memoria il numero della mamma o del papà.</p></div><p class="oca-carta-effetto">Avanti di 2.</p></div>
+<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><div class="oca-carta-corpo"><img class="oca-carta-fig" src="/pittogrammi/arasaac-bn/oca-bottiglia.png" alt="una bottiglia"><p class="oca-carta-fatto">Trovi per terra una bottiglia sconosciuta.</p></div><p class="oca-carta-effetto">Non la tocchi, ti allontani e lo dici a un adulto: avanti di 2.</p></div>
+<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><div class="oca-carta-corpo"><img class="oca-carta-fig" src="/pittogrammi/arasaac-bn/dis-acqua.png" alt="una bottiglia d&#x27;acqua e un bicchiere"><p class="oca-carta-fatto">Hai messo l&#x27;acqua nello zaino.</p></div><p class="oca-carta-effetto">Avanti di 2.</p></div>
+<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><div class="oca-carta-corpo"><img class="oca-carta-fig" src="/pittogrammi/arasaac-bn/dis-cortile.png" alt="il cortile della scuola"><p class="oca-carta-fatto">Ti sei ricordato dov&#x27;è il punto di raccolta.</p></div><p class="oca-carta-effetto">Avanti di 3.</p></div>
+<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><div class="oca-carta-corpo"><img class="oca-carta-fig" src="/pittogrammi/arasaac-bn/oca-filmare.png" alt="una persona che riprende con una videocamera"><p class="oca-carta-fatto">Vuoi filmare quello che succede.</p></div><p class="oca-carta-effetto">Metti via il telefono e ascolti l&#x27;adulto: stai fermo un giro.</p></div>
+<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><div class="oca-carta-corpo"><img class="oca-carta-fig" src="/pittogrammi/arasaac-bn/oca-anziano.png" alt="un signore anziano con il bastone"><p class="oca-carta-fatto">Aiuti un vicino anziano a scendere le scale.</p></div><p class="oca-carta-effetto">Avanti di 3.</p></div>
       </div>
-      <p class="nota-adulto">Per l'adulto: il ritaglio è a carico tuo con i più piccoli; dalla terza primaria i bambini possono ritagliare da seduti, sorvegliati, con forbici a punta arrotondata. Le carte si leggono ad alta voce: è lì che il gioco insegna, non nel punteggio.</p>
+      <p class="nota-adulto">Per l'adulto: il ritaglio è a carico tuo con i più piccoli; dalla terza primaria i bambini possono ritagliare da seduti, sorvegliati, con forbici a punta arrotondata. Le carte si leggono ad alta voce: è lì che il gioco insegna, non nel punteggio. Il disegno su ogni carta serve a chi ancora non legge: prima di leggere, chiedi che cosa vede.</p>
+      <p class="oca-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
       <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
         <span>OCA-PC · Foglio 2 di 4 · Rev. 1 · 13/09/2026</span></footer>
     </div>

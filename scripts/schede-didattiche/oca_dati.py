@@ -79,19 +79,34 @@ CASELLE = [
  (56, "arrivo",    "Arrivo",              "alf-l-luogo-sicuro"),
 ]
 
+# (fatto, effetto, pittogramma, descrizione del disegno per chi non lo vede)
+# Il pittogramma illustra il fatto della carta: aiuta chi ancora non legge
+# bene a capire di che cosa parla il bigliettino prima che l'adulto lo legga.
 IMPREVISTI = [
- ("Manca la luce in tutta la via.", "Accendi la torcia, non le candele. Stai fermo un giro."),
- ("Piove forte e la strada si allaga.", "Aspetti al piano di sopra: stai fermo un giro."),
- ("Il cane di casa si è spaventato.", "Lo cerchi e lo tieni vicino: indietro di 2."),
- ("Hai lasciato lo zaino in camera.", "La prossima volta lo prepari la sera prima: indietro di 3."),
- ("Un albero caduto blocca la strada.", "Fai il giro dall'altra parte: indietro di 2."),
- ("La radio dà una notizia utile.", "Ora sai dove andare: avanti di 3."),
- ("Hai imparato a memoria il numero della mamma o del papà.", "Avanti di 2."),
- ("Trovi per terra una bottiglia sconosciuta.", "Non la tocchi, ti allontani e lo dici a un adulto: avanti di 2."),
- ("Hai messo l'acqua nello zaino.", "Avanti di 2."),
- ("Ti sei ricordato dov'è il punto di raccolta.", "Avanti di 3."),
- ("Vuoi filmare quello che succede.", "Metti via il telefono e ascolti l'adulto: stai fermo un giro."),
- ("Aiuti un vicino anziano a scendere le scale.", "Avanti di 3."),
+ ("Manca la luce in tutta la via.", "Accendi la torcia, non le candele. Stai fermo un giro.",
+  "oca-torcia", "una torcia elettrica"),
+ ("Piove forte e la strada si allaga.", "Aspetti al piano di sopra: stai fermo un giro.",
+  "oca-pioggia", "pioggia fitta che cade e forma pozzanghere"),
+ ("Il cane di casa si è spaventato.", "Lo cerchi e lo tieni vicino: indietro di 2.",
+  "oca-cane", "un cane"),
+ ("Hai lasciato lo zaino in camera.", "La prossima volta lo prepari la sera prima: indietro di 3.",
+  "alf-z-zaino", "uno zaino"),
+ ("Un albero caduto blocca la strada.", "Fai il giro dall'altra parte: indietro di 2.",
+  "oca-albero", "un albero"),
+ ("La radio dà una notizia utile.", "Ora sai dove andare: avanti di 3.",
+  "oca-radio", "una radio con l'antenna"),
+ ("Hai imparato a memoria il numero della mamma o del papà.", "Avanti di 2.",
+  "alf-n-telefono", "un telefono"),
+ ("Trovi per terra una bottiglia sconosciuta.", "Non la tocchi, ti allontani e lo dici a un adulto: avanti di 2.",
+  "oca-bottiglia", "una bottiglia"),
+ ("Hai messo l'acqua nello zaino.", "Avanti di 2.",
+  "dis-acqua", "una bottiglia d'acqua e un bicchiere"),
+ ("Ti sei ricordato dov'è il punto di raccolta.", "Avanti di 3.",
+  "dis-cortile", "il cortile della scuola"),
+ ("Vuoi filmare quello che succede.", "Metti via il telefono e ascolti l'adulto: stai fermo un giro.",
+  "oca-filmare", "una persona che riprende con una videocamera"),
+ ("Aiuti un vicino anziano a scendere le scale.", "Avanti di 3.",
+  "oca-anziano", "un signore anziano con il bastone"),
 ]
 
 # domanda, risposta (capovolta sulla carta), fonte interna da cui viene la risposta

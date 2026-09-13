@@ -1,317 +1,357 @@
 {
- "alf-a-allerta": {
-  "arasaac_id": 25315,
-  "url": "https://arasaac.org/pictograms/25315",
-  "variante": "bianco e nero (da colorare)"
- },
- "alf-b-barella": {
-  "arasaac_id": 24933,
-  "url": "https://arasaac.org/pictograms/24933",
-  "variante": "bianco e nero (da colorare)"
- },
- "alf-c-casco": {
-  "arasaac_id": 2691,
-  "url": "https://arasaac.org/pictograms/2691",
-  "variante": "bianco e nero (da colorare)"
- },
- "alf-d-drone": {
-  "arasaac_id": 39123,
-  "url": "https://arasaac.org/pictograms/39123",
-  "variante": "bianco e nero (da colorare)"
- },
- "alf-e-elicottero": {
-  "arasaac_id": 7126,
-  "url": "https://arasaac.org/pictograms/7126",
-  "variante": "bianco e nero (da colorare)"
- },
- "alf-f-fiume": {
-  "arasaac_id": 2811,
-  "url": "https://arasaac.org/pictograms/2811",
-  "variante": "bianco e nero (da colorare)"
- },
- "alf-g-guanti": {
-  "arasaac_id": 7123,
-  "url": "https://arasaac.org/pictograms/7123",
-  "variante": "bianco e nero (da colorare)"
- },
- "alf-h-piazzola": {
-  "arasaac_id": 35377,
-  "url": "https://arasaac.org/pictograms/35377",
-  "variante": "bianco e nero (da colorare)"
- },
- "alf-i-incendio": {
-  "arasaac_id": 4654,
-  "url": "https://arasaac.org/pictograms/4654",
-  "variante": "bianco e nero (da colorare)"
- },
- "alf-j-joystick": {
-  "arasaac_id": 6201,
-  "url": "https://arasaac.org/pictograms/6201",
-  "variante": "bianco e nero (da colorare)"
- },
- "alf-k-kit": {
-  "arasaac_id": 2930,
-  "url": "https://arasaac.org/pictograms/2930",
-  "variante": "bianco e nero (da colorare)"
- },
- "alf-l-luogo-sicuro": {
-  "arasaac_id": 33065,
-  "url": "https://arasaac.org/pictograms/33065",
-  "variante": "bianco e nero (da colorare)"
- },
- "alf-m-mappa": {
-  "arasaac_id": 24161,
-  "url": "https://arasaac.org/pictograms/24161",
-  "variante": "bianco e nero (da colorare)"
- },
- "alf-n-telefono": {
-  "arasaac_id": 26479,
-  "url": "https://arasaac.org/pictograms/26479",
-  "variante": "bianco e nero (da colorare)"
- },
- "alf-o-ordine": {
-  "arasaac_id": 7102,
-  "url": "https://arasaac.org/pictograms/7102",
-  "variante": "bianco e nero (da colorare)"
- },
- "alf-p-protezione-civile": {
-  "arasaac_id": 28014,
-  "url": "https://arasaac.org/pictograms/28014",
-  "variante": "bianco e nero (da colorare)"
- },
- "alf-q-quaderno": {
-  "arasaac_id": 2359,
-  "url": "https://arasaac.org/pictograms/2359",
-  "variante": "bianco e nero (da colorare)"
- },
- "alf-r-radio": {
-  "arasaac_id": 37192,
-  "url": "https://arasaac.org/pictograms/37192",
-  "variante": "bianco e nero (da colorare)"
- },
- "alf-s-sicurezza": {
-  "arasaac_id": 34655,
-  "url": "https://arasaac.org/pictograms/34655",
-  "variante": "bianco e nero (da colorare)"
- },
- "alf-t-terremoto": {
-  "arasaac_id": 38310,
-  "url": "https://arasaac.org/pictograms/38310",
-  "variante": "bianco e nero (da colorare)"
- },
- "alf-u-uscita": {
-  "arasaac_id": 29621,
-  "url": "https://arasaac.org/pictograms/29621",
-  "variante": "bianco e nero (da colorare)"
- },
- "alf-v-volontari": {
-  "arasaac_id": 37538,
-  "url": "https://arasaac.org/pictograms/37538",
-  "variante": "bianco e nero (da colorare)"
- },
- "alf-w-warning": {
-  "arasaac_id": 7811,
-  "url": "https://arasaac.org/pictograms/7811",
-  "variante": "bianco e nero (da colorare)"
- },
- "alf-x-exit": {
-  "arasaac_id": 24705,
-  "url": "https://arasaac.org/pictograms/24705",
-  "variante": "bianco e nero (da colorare)"
- },
- "alf-y-semaforo": {
-  "arasaac_id": 36445,
-  "url": "https://arasaac.org/pictograms/36445",
-  "variante": "bianco e nero (da colorare)"
- },
- "alf-z-zaino": {
-  "arasaac_id": 2475,
-  "url": "https://arasaac.org/pictograms/2475",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-acqua": {
-  "arasaac_id": 2248,
-  "url": "https://arasaac.org/pictograms/2248",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-adulto-bambino": {
-  "arasaac_id": 11728,
-  "url": "https://arasaac.org/pictograms/11728",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-aereo": {
-  "arasaac_id": 2264,
-  "url": "https://arasaac.org/pictograms/2264",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-aereo-soccorsi": {
-  "arasaac_id": 36641,
-  "url": "https://arasaac.org/pictograms/36641",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-al-telefono": {
-  "arasaac_id": 34405,
-  "url": "https://arasaac.org/pictograms/34405",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-ambulanza": {
-  "arasaac_id": 6899,
-  "url": "https://arasaac.org/pictograms/6899",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-auto": {
-  "arasaac_id": 2339,
-  "url": "https://arasaac.org/pictograms/2339",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-autopompa": {
-  "arasaac_id": 4925,
-  "url": "https://arasaac.org/pictograms/4925",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-camion-rifornimenti": {
-  "arasaac_id": 6956,
-  "url": "https://arasaac.org/pictograms/6956",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-camion-tende": {
-  "arasaac_id": 2306,
-  "url": "https://arasaac.org/pictograms/2306",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-campo": {
-  "arasaac_id": 25912,
-  "url": "https://arasaac.org/pictograms/25912",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-cane": {
-  "arasaac_id": 35997,
-  "url": "https://arasaac.org/pictograms/35997",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-cortile": {
-  "arasaac_id": 33065,
-  "url": "https://arasaac.org/pictograms/33065",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-cuore": {
-  "arasaac_id": 4613,
-  "url": "https://arasaac.org/pictograms/4613",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-disegno": {
-  "arasaac_id": 8088,
-  "url": "https://arasaac.org/pictograms/8088",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-drone": {
-  "arasaac_id": 39123,
-  "url": "https://arasaac.org/pictograms/39123",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-elicottero": {
-  "arasaac_id": 7126,
-  "url": "https://arasaac.org/pictograms/7126",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-famiglia": {
-  "arasaac_id": 2392,
-  "url": "https://arasaac.org/pictograms/2392",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-furgone-accessibile": {
-  "arasaac_id": 35598,
-  "url": "https://arasaac.org/pictograms/35598",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-gatto": {
-  "arasaac_id": 7114,
-  "url": "https://arasaac.org/pictograms/7114",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-gioco": {
-  "arasaac_id": 2439,
-  "url": "https://arasaac.org/pictograms/2439",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-gommone": {
-  "arasaac_id": 3277,
-  "url": "https://arasaac.org/pictograms/3277",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-infermiera": {
-  "arasaac_id": 31390,
-  "url": "https://arasaac.org/pictograms/31390",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-lettera": {
-  "arasaac_id": 2688,
-  "url": "https://arasaac.org/pictograms/2688",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-lettura": {
-  "arasaac_id": 2447,
-  "url": "https://arasaac.org/pictograms/2447",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-medico": {
-  "arasaac_id": 2467,
-  "url": "https://arasaac.org/pictograms/2467",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-nevicata": {
-  "arasaac_id": 3135,
-  "url": "https://arasaac.org/pictograms/3135",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-pallone": {
-  "arasaac_id": 3241,
-  "url": "https://arasaac.org/pictograms/3241",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-pentola": {
-  "arasaac_id": 3231,
-  "url": "https://arasaac.org/pictograms/3231",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-pompiere": {
-  "arasaac_id": 2664,
-  "url": "https://arasaac.org/pictograms/2664",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-radio": {
-  "arasaac_id": 37192,
-  "url": "https://arasaac.org/pictograms/37192",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-scuola": {
-  "arasaac_id": 3082,
-  "url": "https://arasaac.org/pictograms/3082",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-sole": {
-  "arasaac_id": 7252,
-  "url": "https://arasaac.org/pictograms/7252",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-strisce": {
-  "arasaac_id": 3430,
-  "url": "https://arasaac.org/pictograms/3430",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-temporale": {
-  "arasaac_id": 34892,
-  "url": "https://arasaac.org/pictograms/34892",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-tenda": {
-  "arasaac_id": 4756,
-  "url": "https://arasaac.org/pictograms/4756",
-  "variante": "bianco e nero (da colorare)"
- },
- "dis-volontari": {
-  "arasaac_id": 37538,
-  "url": "https://arasaac.org/pictograms/37538",
-  "variante": "bianco e nero (da colorare)"
- }
+  "alf-a-allerta": {
+    "arasaac_id": 25315,
+    "url": "https://arasaac.org/pictograms/25315",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "alf-b-barella": {
+    "arasaac_id": 24933,
+    "url": "https://arasaac.org/pictograms/24933",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "alf-c-casco": {
+    "arasaac_id": 2691,
+    "url": "https://arasaac.org/pictograms/2691",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "alf-d-drone": {
+    "arasaac_id": 39123,
+    "url": "https://arasaac.org/pictograms/39123",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "alf-e-elicottero": {
+    "arasaac_id": 7126,
+    "url": "https://arasaac.org/pictograms/7126",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "alf-f-fiume": {
+    "arasaac_id": 2811,
+    "url": "https://arasaac.org/pictograms/2811",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "alf-g-guanti": {
+    "arasaac_id": 7123,
+    "url": "https://arasaac.org/pictograms/7123",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "alf-h-piazzola": {
+    "arasaac_id": 35377,
+    "url": "https://arasaac.org/pictograms/35377",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "alf-i-incendio": {
+    "arasaac_id": 4654,
+    "url": "https://arasaac.org/pictograms/4654",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "alf-j-joystick": {
+    "arasaac_id": 6201,
+    "url": "https://arasaac.org/pictograms/6201",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "alf-k-kit": {
+    "arasaac_id": 2930,
+    "url": "https://arasaac.org/pictograms/2930",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "alf-l-luogo-sicuro": {
+    "arasaac_id": 33065,
+    "url": "https://arasaac.org/pictograms/33065",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "alf-m-mappa": {
+    "arasaac_id": 24161,
+    "url": "https://arasaac.org/pictograms/24161",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "alf-n-telefono": {
+    "arasaac_id": 26479,
+    "url": "https://arasaac.org/pictograms/26479",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "alf-o-ordine": {
+    "arasaac_id": 7102,
+    "url": "https://arasaac.org/pictograms/7102",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "alf-p-protezione-civile": {
+    "arasaac_id": 28014,
+    "url": "https://arasaac.org/pictograms/28014",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "alf-q-quaderno": {
+    "arasaac_id": 2359,
+    "url": "https://arasaac.org/pictograms/2359",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "alf-r-radio": {
+    "arasaac_id": 37192,
+    "url": "https://arasaac.org/pictograms/37192",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "alf-s-sicurezza": {
+    "arasaac_id": 34655,
+    "url": "https://arasaac.org/pictograms/34655",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "alf-t-terremoto": {
+    "arasaac_id": 38310,
+    "url": "https://arasaac.org/pictograms/38310",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "alf-u-uscita": {
+    "arasaac_id": 29621,
+    "url": "https://arasaac.org/pictograms/29621",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "alf-v-volontari": {
+    "arasaac_id": 37538,
+    "url": "https://arasaac.org/pictograms/37538",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "alf-w-warning": {
+    "arasaac_id": 7811,
+    "url": "https://arasaac.org/pictograms/7811",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "alf-x-exit": {
+    "arasaac_id": 24705,
+    "url": "https://arasaac.org/pictograms/24705",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "alf-y-semaforo": {
+    "arasaac_id": 36445,
+    "url": "https://arasaac.org/pictograms/36445",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "alf-z-zaino": {
+    "arasaac_id": 2475,
+    "url": "https://arasaac.org/pictograms/2475",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-acqua": {
+    "arasaac_id": 2248,
+    "url": "https://arasaac.org/pictograms/2248",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-adulto-bambino": {
+    "arasaac_id": 11728,
+    "url": "https://arasaac.org/pictograms/11728",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-aereo": {
+    "arasaac_id": 2264,
+    "url": "https://arasaac.org/pictograms/2264",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-aereo-soccorsi": {
+    "arasaac_id": 36641,
+    "url": "https://arasaac.org/pictograms/36641",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-al-telefono": {
+    "arasaac_id": 34405,
+    "url": "https://arasaac.org/pictograms/34405",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-ambulanza": {
+    "arasaac_id": 6899,
+    "url": "https://arasaac.org/pictograms/6899",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-auto": {
+    "arasaac_id": 2339,
+    "url": "https://arasaac.org/pictograms/2339",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-autopompa": {
+    "arasaac_id": 4925,
+    "url": "https://arasaac.org/pictograms/4925",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-camion-rifornimenti": {
+    "arasaac_id": 6956,
+    "url": "https://arasaac.org/pictograms/6956",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-camion-tende": {
+    "arasaac_id": 2306,
+    "url": "https://arasaac.org/pictograms/2306",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-campo": {
+    "arasaac_id": 25912,
+    "url": "https://arasaac.org/pictograms/25912",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-cane": {
+    "arasaac_id": 35997,
+    "url": "https://arasaac.org/pictograms/35997",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-cortile": {
+    "arasaac_id": 33065,
+    "url": "https://arasaac.org/pictograms/33065",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-cuore": {
+    "arasaac_id": 4613,
+    "url": "https://arasaac.org/pictograms/4613",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-disegno": {
+    "arasaac_id": 8088,
+    "url": "https://arasaac.org/pictograms/8088",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-drone": {
+    "arasaac_id": 39123,
+    "url": "https://arasaac.org/pictograms/39123",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-elicottero": {
+    "arasaac_id": 7126,
+    "url": "https://arasaac.org/pictograms/7126",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-famiglia": {
+    "arasaac_id": 2392,
+    "url": "https://arasaac.org/pictograms/2392",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-furgone-accessibile": {
+    "arasaac_id": 35598,
+    "url": "https://arasaac.org/pictograms/35598",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-gatto": {
+    "arasaac_id": 7114,
+    "url": "https://arasaac.org/pictograms/7114",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-gioco": {
+    "arasaac_id": 2439,
+    "url": "https://arasaac.org/pictograms/2439",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-gommone": {
+    "arasaac_id": 3277,
+    "url": "https://arasaac.org/pictograms/3277",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-infermiera": {
+    "arasaac_id": 31390,
+    "url": "https://arasaac.org/pictograms/31390",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-lettera": {
+    "arasaac_id": 2688,
+    "url": "https://arasaac.org/pictograms/2688",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-lettura": {
+    "arasaac_id": 2447,
+    "url": "https://arasaac.org/pictograms/2447",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-medico": {
+    "arasaac_id": 2467,
+    "url": "https://arasaac.org/pictograms/2467",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-nevicata": {
+    "arasaac_id": 3135,
+    "url": "https://arasaac.org/pictograms/3135",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-pallone": {
+    "arasaac_id": 3241,
+    "url": "https://arasaac.org/pictograms/3241",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-pentola": {
+    "arasaac_id": 3231,
+    "url": "https://arasaac.org/pictograms/3231",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-pompiere": {
+    "arasaac_id": 2664,
+    "url": "https://arasaac.org/pictograms/2664",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-radio": {
+    "arasaac_id": 37192,
+    "url": "https://arasaac.org/pictograms/37192",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-scuola": {
+    "arasaac_id": 3082,
+    "url": "https://arasaac.org/pictograms/3082",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-sole": {
+    "arasaac_id": 7252,
+    "url": "https://arasaac.org/pictograms/7252",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-strisce": {
+    "arasaac_id": 3430,
+    "url": "https://arasaac.org/pictograms/3430",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-temporale": {
+    "arasaac_id": 34892,
+    "url": "https://arasaac.org/pictograms/34892",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-tenda": {
+    "arasaac_id": 4756,
+    "url": "https://arasaac.org/pictograms/4756",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "dis-volontari": {
+    "arasaac_id": 37538,
+    "url": "https://arasaac.org/pictograms/37538",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "oca-albero": {
+    "arasaac_id": 3057,
+    "url": "https://api.arasaac.org/v1/pictograms/3057?color=false&resolution=500",
+    "variante": "bianco e nero"
+  },
+  "oca-anziano": {
+    "arasaac_id": 4560,
+    "url": "https://api.arasaac.org/v1/pictograms/4560?color=false&resolution=500",
+    "variante": "bianco e nero"
+  },
+  "oca-bottiglia": {
+    "arasaac_id": 2288,
+    "url": "https://api.arasaac.org/v1/pictograms/2288?color=false&resolution=500",
+    "variante": "bianco e nero"
+  },
+  "oca-cane": {
+    "arasaac_id": 2517,
+    "url": "https://api.arasaac.org/v1/pictograms/2517?color=false&resolution=500",
+    "variante": "bianco e nero"
+  },
+  "oca-filmare": {
+    "arasaac_id": 27762,
+    "url": "https://api.arasaac.org/v1/pictograms/27762?color=false&resolution=500",
+    "variante": "bianco e nero"
+  },
+  "oca-pioggia": {
+    "arasaac_id": 3123,
+    "url": "https://api.arasaac.org/v1/pictograms/3123?color=false&resolution=500",
+    "variante": "bianco e nero"
+  },
+  "oca-radio": {
+    "arasaac_id": 38211,
+    "url": "https://api.arasaac.org/v1/pictograms/38211?color=false&resolution=500",
+    "variante": "bianco e nero"
+  },
+  "oca-torcia": {
+    "arasaac_id": 6138,
+    "url": "https://api.arasaac.org/v1/pictograms/6138?color=false&resolution=500",
+    "variante": "bianco e nero"
+  }
 }
