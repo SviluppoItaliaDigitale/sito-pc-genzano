@@ -115,8 +115,16 @@ def patch_html_paths(html: str, schede_incluse: list[str] | None = None) -> str:
 
     # Link interni al sito che iniziano con "/": scheda inclusa → relativo,
     # altrimenti → URL assoluto https del sito (mai path radicati su "/").
+    # Pittogrammi e immagini hanno una riscrittura loro, più avanti, che li
+    # copia dentro lo ZIP e li punta in relativo. Se la riscrittura generica
+    # degli href li prende per prima, diventano URL del sito e poi la seconda
+    # passata produce mostri come "https://…genzano.it../../assets/…": è
+    # successo con gli <image href> dentro le fustelle SVG del libro pop-up,
+    # sei figure sparite offline. Qui si lasciano stare.
     def _riscrivi_href(m: re.Match) -> str:
         quote, target = m.group(1), m.group(2)
+        if target.startswith(("/pittogrammi/", "/images/")):
+            return m.group(0)
         ms = re.match(r"^/formazione/schede-stampabili/([a-z0-9][a-z0-9-]*)/?(#.*)?$", target)
         if ms and ms.group(1) in schede_incluse:
             return f'href={quote}../{ms.group(1)}/index.html{ms.group(2) or ""}{quote}'

@@ -170,16 +170,21 @@ def fustella_volvella():
 def fustella_linguetta(slug, alt):
     """Striscia che scorre dentro due fessure: si tira e la figura avanza."""
     W, H = 118, 24
-    return svg(W + 12, H + 34, "".join([
+    return svg(W + 60, H + 58, "".join([
         f'<rect x="6" y="6" width="{W}" height="{H}" {TAGLIO} rx="1"/>',
         figura(slug, alt, 10, 7, 22),
         f'<text x="{6 + W - 4}" y="{6 + H / 2 + 1.4}" text-anchor="end" font-size="5" '
         f'font-weight="bold" fill="#0b3c5d">TIRA →</text>',
         quota(6, H + 14, 6 + W, "118 mm"),
-        f'<line x1="30" y1="{H + 24}" x2="30" y2="{H + 30}" {TAGLIO}/>',
-        f'<line x1="90" y1="{H + 24}" x2="90" y2="{H + 30}" {TAGLIO}/>',
-        f'<text x="60" y="{H + 22}" text-anchor="middle" font-size="2.8" fill="#475569">'
-        f'le due fessure nel foglio, lunghe 26 mm e distanti 60 mm</text>',
+        f'<line x1="30" y1="{H + 20}" x2="30" y2="{H + 46}" {TAGLIO}/>',
+        f'<line x1="90" y1="{H + 20}" x2="90" y2="{H + 46}" {TAGLIO}/>',
+        quota(30, H + 52, 90, "60 mm fra le due fessure"),
+        f'<text x="96" y="{H + 34}" font-size="2.8" fill="#475569">'
+        f'fessure lunghe 26 mm:</text>',
+        f'<text x="96" y="{H + 38}" font-size="2.8" fill="#475569">'
+        f'due più della striscia,</text>',
+        f'<text x="96" y="{H + 42}" font-size="2.8" fill="#475569">'
+        f'alta 24, così scorre</text>',
     ]))
 
 
