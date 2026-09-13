@@ -53,7 +53,7 @@ ALBUM = [
   sottotitolo="Album da colorare · Infanzia 4–6 anni e classe prima · 15–20 minuti a foglio · colori",
   intro="Dodici disegni di persone e animali che aiutano. Guarda il disegno, ascolta la frase, poi colora come vuoi.",
   fogli=[
-   dict(img="dis-volontari", tit="I volontari", alt="Tre volontari in divisa, uno accanto all'altro.",
+   dict(img="dis-volontari", tit="I volontari", alt="Due volontari in divisa sostengono una persona, uno per lato.",
         dida="I volontari aiutano gli altri per gentilezza, non per lavoro."),
    dict(img="dis-pompiere", tit="Il vigile del fuoco", alt="Vigile del fuoco che spegne le fiamme con la manichetta.",
         dida="Il vigile del fuoco spegne il fuoco con l'acqua."),
