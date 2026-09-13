@@ -9,7 +9,10 @@ image: "/images/2026-09-14-carta-naturalistica-castelli-romani-latium-volcano.we
 image_alt: "Cover dell'articolo: La Carta naturalistica dei Castelli Romani: leggere il vulcano su cui viviamo"
 scadenza: ""
 area: "Castelli Romani"
-allegati: []
+allegati:
+  - titolo: "Carta naturalistica dei Castelli Romani — Latium Volcano APS (versione web)"
+    url: "/manuali/carta-naturalistica-castelli-romani-latium-volcano.pdf"
+    dimensione: "1,8 MB"
 draft: false
 tts: true
 social_citazione: "Un vulcano si legge meglio con una carta in mano: i laghi sono crateri, i boschi crescono a fasce, le sorgenti dicono dove passa l'acqua."
@@ -22,7 +25,7 @@ social_punti:
 
 Sul tavolo della sede è arrivata una carta che vale la pena raccontare: la **Carta naturalistica dei Castelli Romani**, realizzata dall'associazione **Latium Volcano** di Rocca Priora. È un foglio in scala 1:30.000 che mostra il nostro territorio come lo vede un geologo: un grande apparato vulcanico con al centro i due laghi, i boschi disposti a fasce di quota e una rete di sentieri numerati. Sul retro, testi divulgativi sul vulcano, sul Parco, sulla vegetazione e sulla fauna.
 
-La carta non è una pubblicazione del Gruppo e non è nostra: chi la desidera la trova presso [Latium Volcano](https://www.latiumvolcano.it/), associazione ecologica ambientale che fa didattica nelle scuole, escursioni e monitoraggi. Qui raccontiamo cosa insegna a chi si occupa di protezione civile.
+La carta è opera di [Latium Volcano](https://www.latiumvolcano.it/), associazione ecologica ambientale che fa didattica nelle scuole, escursioni e monitoraggi: i diritti sono suoi. La versione web, a bassa risoluzione, si può scaricare in fondo a questo articolo e dalla nostra [Area Download](/area-download/); per la stampa e per altri usi il riferimento è l'associazione. Qui raccontiamo cosa insegna a chi si occupa di protezione civile.
 
 ## Un vulcano disegnato dall'alto
 
