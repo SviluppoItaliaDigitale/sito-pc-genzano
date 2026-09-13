@@ -149,6 +149,15 @@ jobs:
           TZ: Europe/Rome
         run: hugo --minify --baseURL "https://www.protezionecivilegenzano.it/"
 
+      - name: "🔎 Prepara le pagine statiche per la ricerca (Aruba)"
+        # Il tema marca il contenuto con data-pagefind-body sul <main>. Per
+        # Pagefind quel marcatore è esclusivo: se una pagina lo porta, vengono
+        # indicizzate solo le pagine che lo hanno. Le schede stampabili, i
+        # giochi, i kit e le storie vivono in static/ come HTML autonomi e non
+        # lo hanno mai avuto: erano online e linkate, ma invisibili a /cerca/
+        # e a Ctrl+K. Lo script lo aggiunge in public/ prima dell'indicizzazione.
+        run: python3 scripts/prepara-statiche-per-pagefind.py
+
       - name: "🔎 Genera indice Pagefind (Aruba)"
         # L'indice di ricerca full-text è un ARTEFATTO DI BUILD, non un file
         # sorgente: dal 15/07/2026 NON è più committato in static/pagefind/
@@ -199,6 +208,15 @@ jobs:
         env:
           TZ: Europe/Rome
         run: hugo --minify --baseURL "https://sviluppoitaliadigitale.github.io/sito-pc-genzano/"
+
+      - name: "🔎 Prepara le pagine statiche per la ricerca (GitHub Pages)"
+        # Il tema marca il contenuto con data-pagefind-body sul <main>. Per
+        # Pagefind quel marcatore è esclusivo: se una pagina lo porta, vengono
+        # indicizzate solo le pagine che lo hanno. Le schede stampabili, i
+        # giochi, i kit e le storie vivono in static/ come HTML autonomi e non
+        # lo hanno mai avuto: erano online e linkate, ma invisibili a /cerca/
+        # e a Ctrl+K. Lo script lo aggiunge in public/ prima dell'indicizzazione.
+        run: python3 scripts/prepara-statiche-per-pagefind.py
 
       - name: "🔎 Genera indice Pagefind (GitHub Pages)"
         run: npx -y pagefind@1.5.2 --site public

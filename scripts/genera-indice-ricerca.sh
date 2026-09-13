@@ -20,8 +20,10 @@
 # Cosa fa
 # -------
 #   1. Build del sito con Hugo in `public/`.
-#   2. Indicizzazione Pagefind di `public/` → `public/pagefind/`.
-#   3. Copia di `public/pagefind/` in `static/pagefind/` (da committare).
+#   2. Marcatura delle pagine HTML statiche con data-pagefind-body, senza la
+#      quale Pagefind le salta (schede stampabili, giochi, kit, storie).
+#   3. Indicizzazione Pagefind di `public/` → `public/pagefind/`.
+#   4. Copia di `public/pagefind/` in `static/pagefind/` (da committare).
 #
 # Quando rilanciarlo
 # ------------------
@@ -43,13 +45,16 @@ PAGEFIND_VERSION="1.5.2"
 cd "$(dirname "$0")/.."
 ROOT="$(pwd)"
 
-echo "1/3 · Build Hugo →  public/"
+echo "1/4 · Build Hugo →  public/"
 hugo --minify --quiet
 
-echo "2/3 · Indicizzazione Pagefind ${PAGEFIND_VERSION} →  public/pagefind/"
+echo "2/4 · Pagine statiche marcate per la ricerca (schede, giochi, kit, storie)"
+python3 scripts/prepara-statiche-per-pagefind.py
+
+echo "3/4 · Indicizzazione Pagefind ${PAGEFIND_VERSION} →  public/pagefind/"
 npx -y "pagefind@${PAGEFIND_VERSION}" --site public
 
-echo "3/3 · Copia indice →  static/pagefind/ (solo per hugo server locale)"
+echo "4/4 · Copia indice →  static/pagefind/ (solo per hugo server locale)"
 rm -rf "${ROOT}/static/pagefind"
 cp -r "${ROOT}/public/pagefind" "${ROOT}/static/pagefind"
 
