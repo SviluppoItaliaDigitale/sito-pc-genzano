@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-13T00:40:13+00:00",
+  "generato": "2026-09-13T10:30:24+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-12T22:47:36+00:00",
-   "fonte": "ANSA",
-   "titolo": "Mostra del cinema di Venezia, vince la regista May el-Toukhy, sul palco le guerre con Naza e Dau",
-   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/13/mostra-del-cinema-di-venezia-vince-la-regista-may-el-toukhy-sul-palco_e27e8d18-1155-41cd-a6c6-d0b46d73669c.html"
+   "data": "2026-09-13T10:24:46+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Vasto incendio a Positano provoca una frana, chiuso tratto della statale Amalfitana",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/vasto-incendio-a-positano-provoca-una-frana-chiuso-tratto-della-statale_c98c50df-3488-4290-a821-ee9750cad184.html"
   },
   {
-   "data": "2026-09-12T22:45:00+00:00",
+   "data": "2026-09-13T10:20:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Rybakina vince gli US Open, è la nuova numero 1 del mondo",
-   "url": "https://www.adnkronos.com/sport/us-open-rybakina-vince-finale-sabalenka_4cKnExJwA0oAx4hrxw3R9q"
+   "titolo": "Emma Bonino, camera ardente in Campidoglio: lunga fila in piazza per ultimo saluto",
+   "url": "https://www.adnkronos.com/politica/emma-bonino-camera-ardente-oggi_6qgu4wxWkNgIUGMrutpoXk"
   },
   {
-   "data": "2026-09-12T22:16:52+00:00",
+   "data": "2026-09-13T10:12:05+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sant’Anna di Vinadio, donna dispersa ritrovata viva dopo cinque giorni in montagna",
+   "url": "https://www.adnkronos.com/cronaca/donna-dispersa-donna-sant-anna-di-vinadio-trovata-viva_xdgVtIeTrx0MjZnzt9YxK"
+  },
+  {
+   "data": "2026-09-13T10:07:59+00:00",
+   "fonte": "ANSA",
+   "titolo": "A Villa Verdi Giuli ricuce con Muti: \"Presto si vedranno i cantieri\"",
+   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/13/a-villa-verdi-giuli-ricuce-con-muti-presto-si-vedranno-i-cantieri_df1a17d7-7b05-4443-a532-934e66b729ae.html"
+  },
+  {
+   "data": "2026-09-13T10:01:03+00:00",
+   "fonte": "ANSA",
+   "titolo": "La guerra in Ucraina: colpita una stazione di servizio al confine con la Polonia",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/13/la-guerra-in-ucraina-colpita-una-stazione-di-servizio-al-confine-con-la-polonia_dbc566df-ea39-4fa7-8f16-24d21a994204.html"
+  },
+  {
+   "data": "2026-09-13T09:33:55+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Manovra, Giorgetti: \"A studio taglio tasse giovani, penso a flat tax 5% su aumenti stipendio\"",
+   "url": "https://www.adnkronos.com/economia/manovra-2027-giorgetti-aumenti-stipendio-giovani-agevolazioni-fiscali_6SkJx3xA4dbWHuDZjbUi3O"
+  },
+  {
+   "data": "2026-09-13T09:32:20+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Incidente stradale per Daniel Maldini a Milano, sei feriti in scontro tra auto",
+   "url": "https://www.adnkronos.com/cronaca/maldini-incidente-stradale-milano_6QN4lSR7kGOLolRAh4bdf6"
+  },
+  {
+   "data": "2026-09-13T09:27:09+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Tre persone ferite con arma da taglio in strada a Torino",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/tre-persone-ferite-con-arma-da-taglio-in-strada-a-torino_40206533-9036-4afc-a5f1-fd2672048847.html"
+  },
+  {
+   "data": "2026-09-13T09:23:48+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Houthi, Tajani: \"Situazione complicata, i nostri militari in sicurezza\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/tajani-soldati-italiani-houthi-arabia_5MA97ehgimXCIanfUid8yM"
+  },
+  {
+   "data": "2026-09-13T09:12:07+00:00",
+   "fonte": "ANSA",
+   "titolo": "Us Open: Rybakina nuova regina di New York, 'sarà diverso svegliarmi da n.1'",
+   "url": "https://www.ansa.it/sito/notizie/sport/tennis/2026/09/13/us-open-rybakina-batte-sabalenka-in-tre-set-e-vince-il-titolo_07cb0129-cf2f-46dd-a545-79a52276b3cb.html"
+  },
+  {
+   "data": "2026-09-13T09:08:15+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Incidente a Venezia, riprese le ricerche della donna dispersa in laguna",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/incidente-a-venezia-riprese-le-ricerche-della-donna-dispersa-in-laguna_d6d490b3-4021-4671-904b-7ff93dc695c3.html"
+  },
+  {
+   "data": "2026-09-13T09:04:38+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Giovane accoltellato a Taranto nella notte, ferito al torace",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/giovane-accoltellato-a-taranto-nella-notte-ferito-al-torace_8121f367-9b08-4900-af94-b8c89eb1f665.html"
+  },
+  {
+   "data": "2026-09-13T09:01:22+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sofia Goggia, nessun trauma in allenamento: esami nei prossimi giorni",
+   "url": "https://www.adnkronos.com/sport/sofia-goggia-nessun-trauma-rientro-argentina-affaticamento_2JyrVHTqEpUzKUHZhhhafO"
+  },
+  {
+   "data": "2026-09-13T08:59:02+00:00",
+   "fonte": "ANSA",
+   "titolo": "Giorgetti: 'Con l'aumento dei tassi è importante tenere sotto controllo il debito'",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/13/giorgetti-con-laumento-dei-tassi-e-importante-tenere-sotto-controllo-il-debito_e126b138-8e64-45fd-a13e-94588b25e07e.html"
+  },
+  {
+   "data": "2026-09-13T08:50:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Roma, scontro frontale tra due auto a Morlupo: morta 53enne",
+   "url": "https://www.adnkronos.com/cronaca/incidente-morlupo-morta-donna_lAzn2NBSfYEumzNsmIkF6"
+  },
+  {
+   "data": "2026-09-13T08:39:59+00:00",
+   "fonte": "ANSA",
+   "titolo": "Dal 14 settembre al via l'anno scolastico in tutta Italia",
+   "url": "https://www.ansa.it/canale_legalita_scuola/speciali/back-to-school/2026/09/13/dal-14-settembre-al-via-lanno-scolastico-in-tutta-italia-_cd04942d-d5cf-48a0-b48d-40776345fe78.html"
+  },
+  {
+   "data": "2026-09-13T08:39:56+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ue, Follini: \"Evaporati 'poteri forti', in scena 'poteri vili'\"",
+   "url": "https://www.adnkronos.com/politica/ue-follini-evaporati-poteri-forti-in-scena-poteri-vili_4F2ftK3tWML3yV2ImKPei8"
+  },
+  {
+   "data": "2026-09-13T08:37:26+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il governo studia nuovo ecobonus al 65% per infissi e condizionatori",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/13/il-governo-studia-nuovo-ecobonus-al-65-per-infissi-e-condizionatori_85047a3a-8a90-4fbf-993d-e0a519b312ec.html"
+  },
+  {
+   "data": "2026-09-13T08:33:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina, attacco russo al confine con la Polonia. Cremlino: \"Possibile ripresa colloqui a ottobre\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/guerra-ucraina-russia-news-oggi-13-settembre-2026_EQ2XWWr7ETHXX8FuVFx3u"
+  },
+  {
+   "data": "2026-09-13T08:22:48+00:00",
    "fonte": "ANSA",
    "titolo": "Trionfo a Parigi per il primo show di Céline Dion,nel pubblico in festa Michelle Obama",
    "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/12/trionfo-a-parigi-per-il-primo-show-di-celine-dionnel-pubblico-in-festa-michelle_907f1c7c-f4d4-4c0d-8b65-ddca6255107a.html"
   },
   {
-   "data": "2026-09-12T22:05:06+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Meteo, addio afa con l'Anticiclone delle Azzorre: ma da martedì cambia tutto, piogge in arrivo",
-   "url": "https://www.adnkronos.com/cronaca/meteo-13-settembre-caldo-previsioni_4yi14l8Ta7BQui7vVzbKPq"
-  },
-  {
-   "data": "2026-09-12T22:01:16+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Iran-Houthi, doppia minaccia per le vie del petrolio. Arabia vuole raid Usa in Yemen, Trump dice no",
-   "url": "https://www.adnkronos.com/internazionale/esteri/houthi-yemen-arabia-trump-iran-guerra_uX3gtOvayWv2AMI7ix2Vm"
-  },
-  {
-   "data": "2026-09-12T21:22:59+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Goggia, malore in Argentina: rientro anticipato in Italia",
-   "url": "https://www.adnkronos.com/cronaca/goggia-malore-argentina-come-sta_6etLbXHnbaQbdjrFy7bpd2"
-  },
-  {
-   "data": "2026-09-12T21:21:05+00:00",
+   "data": "2026-09-13T08:16:29+00:00",
    "fonte": "ANSA",
-   "titolo": "Tensione nel centrodestra su Strade sicure, la Lega attacca",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/12/tensione-nel-centrodestra-su-strade-sicure-la-lega-attacca_8146c0c5-8f0e-4051-b7dd-7ca70c052426.html"
+   "titolo": "Tenta di lanciare busta con 9 cellulari oltre le mura del carcere, preso",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/tenta-di-lanciare-busta-con-9-cellulari-oltre-le-mura-del-carcere-preso_342b2590-0109-4d30-99b4-b3009b5a72a8.html"
   },
   {
-   "data": "2026-09-12T21:16:43+00:00",
+   "data": "2026-09-13T08:16:18+00:00",
    "fonte": "ANSA",
-   "titolo": "Malore durante la preparazione in Argentina, Goggia torna in Italia in anticipo",
-   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/12/malore-durante-la-preparazione-in-argentina-goggia-torna-in-italia-in-anticipo_2d78676a-a825-4b79-91d2-1b2c000d9138.html"
+   "titolo": "Incidente stradale per Daniel Maldini a Milano, in ospedale per accertamenti",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/incidente-stradale-per-daniel-maldini-a-milano-in-ospedale-per-accertamenti_2e4676f0-e731-4b9a-8e1c-062d050d418d.html"
   },
   {
-   "data": "2026-09-12T21:12:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Europei pallavolo, bis dell'Italia di De Giorgi: anche la Grecia ko 3-0",
-   "url": "https://www.adnkronos.com/sport/pallavolo-europei-de-giorgi-italia-grecia_7Dcew88ek0Arc4AMhF0Eio"
-  },
-  {
-   "data": "2026-09-12T21:05:01+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Centrosinistra, Conte: \"No a caminetti e segrete stanze per scegliere il leader\"",
-   "url": "https://www.adnkronos.com/politica/conte-primarie-m5s-pd-messaggio-schlein_4SGF8kllK6bYgggf8Rz0mU"
-  },
-  {
-   "data": "2026-09-12T21:04:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Cagliari vince a Bergamo 2-1 con l'Atalanta e vola al secondo posto",
-   "url": "https://www.adnkronos.com/sport/calcio-serie-a-cagliari-atalanta-sarri_3gyYmVrGpBjTI6DgLcz2Oo"
-  },
-  {
-   "data": "2026-09-12T21:03:44+00:00",
+   "data": "2026-09-13T07:59:52+00:00",
    "fonte": "ANSA",
-   "titolo": "Serie A: colpo Cagliari a Bergamo contro l'Atalanta, decide l'ex Maldini su rigore",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/12/serie-a-colpo-cagliari-a-bergamo-contro-latalanta-decide-lex-maldini-su-rigore_9162db63-e241-49d8-874e-37ba25fc4fbc.html"
+   "titolo": "Venezia 83, parata di stelle sul red carpet della cerimonia di chiusura",
+   "url": "https://www.ansa.it/sito/videogallery/spettacolo/2026/09/13/venezia-83-parata-di-stelle-sul-red-carpet-della-cerimonia-di-chiusura_8c251c78-513e-4033-9fa4-89e558a3bae7.html"
   },
   {
-   "data": "2026-09-12T20:56:21+00:00",
+   "data": "2026-09-13T07:58:39+00:00",
+   "fonte": "ANSA",
+   "titolo": "'Carney muove per rendere il Canada membro associato dell'Ue'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/13/carney-muove-per-rendere-il-canada-membro-associato-dellue_cbbe9067-0453-4b25-af68-3b0c4c6b5140.html"
+  },
+  {
+   "data": "2026-09-13T07:51:25+00:00",
+   "fonte": "ANSA",
+   "titolo": "Mostra del cinema di Venezia, vince la regista May el-Toukhy, sul palco le guerre con Naza e Dau",
+   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/13/mostra-del-cinema-di-venezia-vince-la-regista-may-el-toukhy-sul-palco_e27e8d18-1155-41cd-a6c6-d0b46d73669c.html"
+  },
+  {
+   "data": "2026-09-13T07:43:33+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Svezia, seggi aperti per elezioni parlamentari﻿",
+   "url": "https://www.adnkronos.com/internazionale/esteri/elezioni-svezia-oggi-news_6p9VnscD9fNHa2FHv3t9dO"
+  },
+  {
+   "data": "2026-09-13T07:29:47+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Formula 1, oggi Gp Spagna: orario, griglia di partenza e dove vederlo",
+   "url": "https://www.adnkronos.com/sport/gp-madrid-oggi-formula-1-orario-griglia-partenza-dove-vedere-gran-premio-spagna_1ECcB3aUAGTuEEyWVdAaRm"
+  },
+  {
+   "data": "2026-09-13T07:16:31+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ultimate Championship, tocca a Tamberi: gli azzurri in gara oggi nel 'Mondiale dei Mondiali' e dove vederli",
+   "url": "https://www.adnkronos.com/sport/ultimate-championship-oggi-atletica-tamberi-gare-orari-dove-vederle-chiaro_5MWH855AXPlqpOabTlFgck"
+  },
+  {
+   "data": "2026-09-13T07:14:21+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "#AccadeOggi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
+   "titolo": "Da domani al via l'anno scolastico in tutta Italia",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/da-domani-al-via-lanno-scolastico-in-tutta-italia_9e7d1627-7352-44dd-a229-2cddef83e769.html"
   },
   {
-   "data": "2026-09-12T20:49:09+00:00",
-   "fonte": "ANSA",
-   "titolo": "Venezia 83, la premiazione",
-   "url": "https://www.ansa.it/sito/photogallery/primopiano/2026/09/12/venezia-83-la-premiazione_d88f25b8-d790-4c9c-8b58-7ab875597f5f.html"
-  },
-  {
-   "data": "2026-09-12T20:38:38+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ucraina, Zelensky a Putin: 'Vediamoci al G20 a Miami'. Gelo di Mosca&nbsp;",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/12/ucraina-zelensky-a-putin-vediamoci-al-g20-a-miami.-gelo-di-moscanbsp_1a9e23a8-4a39-42d1-bcc4-42ab5d6f1b5f.html"
-  },
-  {
-   "data": "2026-09-12T20:22:29+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Battaglia navale nel Mar Nero, il drone ucraino vince il duello: la Russia va k.o.",
-   "url": "https://www.adnkronos.com/internazionale/esteri/video-droni-russia-ucraina-mar-nero_71OnuBqXVvqM3uvNViHwzy"
-  },
-  {
-   "data": "2026-09-12T20:12:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Jovanotti gladiatore col sorriso al Circo Massimo: \"Il pessimismo è un lusso che non posso permettermi\"",
-   "url": "https://www.adnkronos.com/spettacoli/jovanotti-concerto-circo-massimo-roma_wamXnIVpGTXOCM1c46T1W"
-  },
-  {
-   "data": "2026-09-12T20:04:03+00:00",
-   "fonte": "ANSA",
-   "titolo": "La benzina vola, rebus nuovi sostegni per il governo",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/12/prezzi-dei-carburanti-ancora-in-rialzo-il-gasolio-a-2208-euro_885d9f70-8fde-40f0-b0c3-f285fd93b75a.html"
-  },
-  {
-   "data": "2026-09-12T20:03:34+00:00",
-   "fonte": "ANSA",
-   "titolo": "Festa nel bar del Superenalotto, 'ha vinto un solo giocatore'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/superenalotto-entusiasmo-a-oggiono-per-la-vincita-milionaria-e-uno-di-qui_13728d7c-29d2-4ee9-92cf-92e71d66434f.html"
-  },
-  {
-   "data": "2026-09-12T19:17:19+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Il falco di AfD in Alto Adige, 'il Sudtirolo non è Italia'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/il-falco-di-afd-in-alto-adige-il-sudtirolo-non-e-italia_bd65de5e-dfdb-45b6-81f5-87be0055fb10.html"
-  },
-  {
-   "data": "2026-09-12T19:01:09+00:00",
-   "fonte": "ANSA",
-   "titolo": "Chiuso l'oleodotto chiave, Riad nella morsa delle milizie filo-iraniane",
-   "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/09/12/larabia-saudita-chiude-loleodotto-chiave-colpito-da-droni-provenienti-dalliraq_246a5129-7cd7-47e8-bb62-f1d689aa63bb.html"
-  },
-  {
-   "data": "2026-09-12T18:58:48+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trump show a Dublino: 'un'Irlanda unita sarebbe fantastica'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/12/trump-unirlanda-unita-sarebbe-fantastica.-burhnam-non-ce-il-sostegno-dellopinione-pubblica_17fac25a-f9c6-4973-92b7-7b4860cc3eed.html"
-  },
-  {
-   "data": "2026-09-12T18:51:14+00:00",
-   "fonte": "ANSA",
-   "titolo": "Appello di Anthropic per rallentare sull'IA, Musk e Altman d'accordo",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/12/anthropic-rallentare-lo-sviluppo-dei-modelli-di-ia.-musk-e-openai-ha-ragione_8e12f648-d851-456f-87e5-7377c52b4f9c.html"
-  },
-  {
-   "data": "2026-09-12T18:47:56+00:00",
-   "fonte": "ANSA",
-   "titolo": "Muti: 'I governi hanno fatto schifo su Villa Verdi, ora si diano una mossa'",
-   "url": "https://www.ansa.it/sito/notizie/cultura/musica/2026/09/12/muti-i-governi-hanno-fatto-schifo-su-villa-verdi-ora-si-diano-una_92d0d5e7-bed2-4212-8622-a81ffc2ffb66.html"
-  },
-  {
-   "data": "2026-09-12T18:41:39+00:00",
-   "fonte": "ANSA",
-   "titolo": "L'ex compagna di Lavitola 10 ore dai pm, 'non sapevo della bomba'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/attentato-ranucci-ex-compagna-di-lavitola-in-procura-per-essere-ascoltata_e68cf87a-3dfd-443c-8bce-57bfa7f3726c.html"
-  },
-  {
-   "data": "2026-09-12T18:28:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Mostra del cinema, Woman Unknown vince il Leone d'oro. Coppa Volpi a Mathilde Arcel e John Malkovich. Premio speciale della giuria a Naza",
-   "url": "https://www.adnkronos.com/spettacoli/mostra-cinema-venezia-premi-elenco_Lbp2p73CEvPvtb9TlyoUk"
-  },
-  {
-   "data": "2026-09-12T18:25:14+00:00",
+   "data": "2026-09-13T07:03:28+00:00",
    "fonte": "ANSA",
    "titolo": "Jovanotti: '60 anni? Non ci penso, faccio festa per lavoro'",
    "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/12/jovanotti-60-anni-non-ci-penso-faccio-festa-per-lavoro_34f90b0e-4ca1-4ca4-8fd8-96e678b54928.html"
-  },
-  {
-   "data": "2026-09-12T18:15:06+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Libera, da 8 Comuni su 10 elenco sul web dei beni confiscati a mafie",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/libera-da-8-comuni-su-10-elenco-sul-web-dei-beni-confiscati-a-mafie_d994539b-8173-45d2-9f05-55303e749d5d.html"
-  },
-  {
-   "data": "2026-09-12T18:01:12+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "I funerali della famiglia di Pietralata, 'riflettere sui drammi di chi ci vive accanto'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/i-funerali-della-famiglia-di-pietralata-riflettere-sui-drammi-di-chi-ci-vive-accanto_cfc5dfab-2e42-40b5-9b55-662996c6f2bb.html"
-  },
-  {
-   "data": "2026-09-12T17:58:56+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Giallo ad Arezzo, cadavere trovato vicino all'ospedale",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/giallo-ad-arezzo-cadavere-trovato-vicino-allospedale_8f30df1e-a344-4728-b169-9aa7c8c62922.html"
   }
  ]
 }
