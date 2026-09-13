@@ -1,4 +1,3 @@
-
 #
 # (fr/es/ro/ar), termini clinici EN citazionali. Nessun refuso reale trovato.
 # --- Bonifica 19/08/2026: lessico verificato dallo sweep completo ---
