@@ -301,7 +301,7 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 
 *Da ritagliare e giocare*:
 
-- 👉 [**Memory della protezione civile**](/formazione/schede-stampabili/memory-protezione-civile-infanzia/) — **20 tessere da ritagliare**, 10 coppie: autopompa, ambulanza, elicottero, gommone, drone, radio, cane da soccorso, casco, zaino, cassetta di pronto soccorso. Tre fogli: le tessere, il retro da incollare e le regole del gioco. I bambini colorano i disegni prima di ritagliare, così ogni classe ha il suo mazzo.
+- 👉 [**Memory della protezione civile**](/formazione/schede-stampabili/memory-protezione-civile-infanzia/) — **20 tessere da ritagliare, tutte diverse**: si abbinano a due a due perché le due cose vanno insieme (il vigile del fuoco e l'autopompa, il drone e il radiocomando, lo zaino e l'acqua, l'uscita e il cortile). Si abbina per significato, non per forma, e quando si trova la coppia si dice anche perché. Tre fogli: le tessere, il retro da incollare e le regole con l'elenco delle coppie per l'adulto.
 
 *Album da colorare (un disegno grande per foglio, 12 fogli per album)*:
 
