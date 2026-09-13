@@ -10,7 +10,7 @@ Questo kit è pensato per i docenti della **scuola secondaria di primo grado** c
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e si prestano all'uso nelle ore di scienze, geografia, educazione civica e tecnologia.
 
-> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-primo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-primo-grado.zip) (~314 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-primo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-primo-grado.zip) (~471 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
 ---
 
@@ -493,6 +493,7 @@ Per richieste specifiche: <a href="mailto:segreteria@protezionecivilegenzano.it"
 
 Schede pronte per la stampa specifiche per la scuola secondaria di primo grado:
 
+- 👉 [**Il gioco dell'oca della protezione civile**](/formazione/schede-stampabili/gioco-oca-protezione-civile/) — tabellone a spirale, carte **imprevisto** e carte **emergenza** da ritagliare, pedine e regole. Sulle caselle rosse si pesca una situazione («senti odore di gas in cucina: che cosa fai?») e si risponde ad alta voce. Adatto anche come ripasso finale del percorso: le risposte richiamano le pagine di autoprotezione del sito. *(ed. civica, gioco di gruppo)*
 - 👉 [**Decodifica del bollettino di allerta**](/formazione/schede-stampabili/decodifica-bollettino-secondaria/) — bollettino realistico del Centro Funzionale Lazio per Genzano: domande di analisi (codici colore, criticità, COC). Soluzioni per il docente.
 - 👉 [**Mappa dei rischi del quartiere**](/formazione/schede-stampabili/mappa-rischi-secondaria/) — indagine territoriale: lo studente consulta INGV, ISPRA, DPC, EFFIS e disegna la mappa dei rischi del proprio quartiere. domande di analisi.
 - 👉 [**Audit del Piano di Emergenza Scolastico**](/formazione/schede-stampabili/audit-piano-secondaria/) — compito di realtà: la classe analizza il piano di emergenza della scuola in 4 fasi (documenti, sopralluogo, intervista, sintesi). Output: report al Dirigente.

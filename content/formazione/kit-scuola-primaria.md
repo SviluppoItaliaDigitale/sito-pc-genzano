@@ -10,7 +10,7 @@ Questo kit è pensato per gli insegnanti della **scuola primaria** che desideran
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e sono adatti a bambini dai 6 agli 11 anni, con attività differenziate per le classi iniziali (I-II) e per le classi finali (III-IV-V).
 
-> 📦 **Scarica il pacchetto offline** — [`kit-scuola-primaria.zip`](/formazione/pacchetti/kit-scuola-primaria.zip) (~545 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-primaria.zip`](/formazione/pacchetti/kit-scuola-primaria.zip) (~702 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
 > ⚠️ **Avvertenza pedagogica — proporzionare l'argomento all'età.** Le attività di questo kit affrontano rischi reali (terremoto, alluvione, incendio, blackout, eventi storici) ma **non devono generare paura o ansia**. Il docente è chiamato a presentare i fenomeni in modo **concreto, rassicurante, agentivo**: l'attenzione è sui *comportamenti corretti che il bambino può fare* (preparare lo zaino, conoscere il punto di raccolta, chiamare il 112), non sull'enfasi del danno. I casi studio delle maxi-emergenze italiane sono adattati per la fascia 9-11 anni con focus su lieto fine, ricostruzione, solidarietà — **mai con immagini di vittime o cronaca cruda**. Se nella classe ci sono bambini reduci da eventi traumatici familiari (lutti, evacuazioni, terremoti recenti), valutare con cautela e raccordarsi con il dirigente scolastico, lo psicologo scolastico e con la pagina [Psicologia dell'emergenza](/formazione/psicologia-emergenza/).
 
@@ -492,6 +492,7 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 
 **Schede già pronte per la stampa per la scuola primaria:**
 
+- 👉 [**Il gioco dell'oca della protezione civile**](/formazione/schede-stampabili/gioco-oca-protezione-civile/) — tabellone a spirale con le caselle numerate, carte **imprevisto** e carte **emergenza** da ritagliare, pedine e regole. Si gioca con un dado: sulle caselle rosse si pesca una domanda («la terra trema mentre sei in classe: che cosa fai?») e si risponde ad alta voce per proseguire. Chi non sa rispondere non torna indietro: si legge insieme la risposta, che è quella del Dipartimento della Protezione Civile. *(ed. civica, gioco di gruppo)*
 - 👉 [**Chiamo il 112**](/formazione/schede-stampabili/chiamo-112/) — gioco di ruolo scritto: l'alunno simula una chiamata al numero unico di emergenza con consegna passo-passo.
 - 👉 [**Cruciverba della Sicurezza**](/formazione/schede-stampabili/cruciverba-primaria/) — 14 definizioni sulle parole-chiave della Protezione Civile, con soluzioni per il docente.
 - 👉 [**Piano di Emergenza Familiare**](/formazione/schede-stampabili/piano-familiare-primaria/) — l'alunno compila con la famiglia il piano di casa: contatti, punti di raccolta, kit, percorso di evacuazione.

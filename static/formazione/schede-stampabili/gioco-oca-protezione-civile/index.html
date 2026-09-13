@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scheda stampabile: Il gioco dell'oca della protezione civile</title>
+  <meta name="description" content="Gioco dell'oca da stampare: tabellone a spirale con caselle numerate, carte imprevisto e carte emergenza da ritagliare, pedine e regole. Si gioca con un dado.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    .scheda-page:has(> .oca) { padding: 0; }
+    .oca { padding: 9mm 11mm 4mm; display: flex; flex-direction: column; min-height: 238mm; }
+    .oca .scheda-header { margin-bottom: 2.5mm; align-items: center; }
+    .oca .scheda-header .scheda-titolo-principale { font-size: 25px; line-height: 1.15; }
+    .oca .scheda-header .scheda-sottotitolo { font-size: 11.5px; }
+    .oca .oca-consegna { font-size: 11px; margin: 0 0 2.5mm; }
+
+    .oca .oca-tabellone {
+      display: grid; grid-template-columns: repeat(7, 1fr); grid-template-rows: repeat(8, 1fr);
+      gap: 1.2mm; height: 176mm;
+    }
+    .oca .oca-cella {
+      border: 1.2px solid #1a3a5c; border-radius: 3px; position: relative;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: 1mm 0.6mm; text-align: center; overflow: hidden; background: #fff;
+    }
+    .oca .oca-num {
+      position: absolute; top: 0.4mm; left: 0.8mm;
+      font-family: Verdana, "DejaVu Sans", sans-serif; font-size: 8px; font-weight: 700; color: #003366;
+    }
+    .oca .oca-freccia {
+      position: absolute; bottom: 0.3mm; right: 0.9mm;
+      font-size: 11px; line-height: 1; color: #8fa0b0;
+    }
+    .oca .oca-simbolo {
+      font-family: Verdana, "DejaVu Sans", sans-serif; font-size: 20px; font-weight: 700; line-height: 1;
+    }
+    .oca .oca-cella img { width: 11mm; height: 11mm; object-fit: contain; }
+    .oca .oca-testo { font-size: 6.6px; line-height: 1.2; margin-top: 0.5mm; color: #1a1a1a; }
+    .oca .oca-grande { font-family: Verdana, "DejaVu Sans", sans-serif; font-size: 9px; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase; color: #003366; margin-top: 0.5mm; }
+    .oca .oca-imprevisto { background: #fff6e0; border-color: #b45309; }
+    .oca .oca-imprevisto .oca-simbolo { color: #b45309; }
+    .oca .oca-emergenza { background: #fdeceb; border-color: #c1121f; }
+    .oca .oca-emergenza .oca-simbolo { color: #c1121f; }
+    .oca .oca-avanti { background: #eaf6ec; border-color: #15803d; }
+    .oca .oca-fermo { background: #eef1f4; border-color: #55626e; }
+    .oca .oca-partenza, .oca .oca-arrivo { background: #e7f0fa; border-color: #003366; border-width: 2px; }
+
+    .oca .oca-legenda { display: flex; flex-wrap: wrap; gap: 2mm 5mm; font-size: 9.5px; margin: 3mm 0 0; }
+    .oca .oca-legenda span b { display: inline-block; width: 3.4mm; height: 3.4mm; border: 1.1px solid #1a3a5c;
+      border-radius: 2px; vertical-align: -0.5mm; margin-right: 1.2mm; }
+
+    .oca .oca-mazzo { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2mm; }
+    .oca .oca-carta {
+      border: 1.3px dashed #6b7884; border-radius: 4px; padding: 2mm 2mm 1.4mm;
+      display: flex; flex-direction: column; min-height: 46mm; break-inside: avoid;
+    }
+    .oca .oca-carta-tipo { font-family: Verdana, "DejaVu Sans", sans-serif; font-size: 7px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase; }
+    .oca .oca-carta-imp .oca-carta-tipo { color: #b45309; }
+    .oca .oca-carta-eme .oca-carta-tipo { color: #c1121f; }
+    .oca .oca-carta-fatto { font-size: 9.5px; line-height: 1.32; margin: 1.4mm 0 0; flex: 1; }
+    .oca .oca-carta-effetto { font-size: 9px; line-height: 1.3; margin: 1.4mm 0 0;
+      border-top: 1px solid #c6d0da; padding-top: 1.2mm; font-weight: 700; color: #003366; }
+    .oca .oca-carta-sol { font-size: 8.4px; line-height: 1.3; margin: 1.4mm 0 0;
+      border-top: 1px solid #c6d0da; padding-top: 1.2mm; transform: rotate(180deg); color: #384755; }
+
+    .oca .oca-regole { font-size: 12px; }
+    .oca .oca-regole h2 { font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--scheda-blu);
+      margin: 4mm 0 2mm; padding-bottom: 0.8mm; border-bottom: 2px solid var(--scheda-blu); }
+    .oca .oca-regole ol, .oca .oca-regole ul { margin: 0 0 0 5mm; padding: 0; }
+    .oca .oca-regole li { margin-bottom: 1.4mm; }
+    .oca .oca-pedine { display: grid; grid-template-columns: repeat(6, 1fr); gap: 2mm; margin: 2mm 0 0; }
+    .oca .oca-pedina { border: 1.3px dashed #6b7884; border-radius: 50%; aspect-ratio: 1/1;
+      display: flex; align-items: center; justify-content: center;
+      font-family: Verdana, "DejaVu Sans", sans-serif; font-size: 15px; font-weight: 700; color: #003366; }
+    .oca .nota-adulto { font-size: 10px; line-height: 1.45; margin: 3mm 0 0; }
+    .oca .oca-licenza { font-size: 7.6px; color: #555; margin: 1.6mm 0 0; }
+    .oca-indice { margin: 0 0 1rem; }
+    .oca-indice a { display: inline-block; padding: 0.2rem 0.55rem; margin: 0.12rem;
+      border: 1.5px solid var(--scheda-blu); border-radius: 5px; color: var(--scheda-blu);
+      text-decoration: none; font-size: 0.85rem; }
+    .oca-indice a:hover, .oca-indice a:focus { background: var(--scheda-blu); color: #fff;
+      outline: 2px solid #ffbe2e; outline-offset: 2px; }
+    @media (max-width: 700px) {
+      .oca { padding: 5mm 4mm; min-height: auto; }
+      .oca .oca-tabellone { height: auto; grid-auto-rows: 18mm; }
+      .oca .oca-mazzo { grid-template-columns: repeat(2, 1fr); }
+      .oca .oca-pedine { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">&larr; Torna alle schede</a>
+    <span class="scheda-titolo">Il gioco dell'oca della protezione civile</span>
+    <button type="button" onclick="window.print()">&#128424;&#65039; Stampa o salva come PDF</button>
+  </div>
+  <div class="no-print" style="max-width:21cm;margin:1.5rem auto 0;padding:0 1rem;">
+    <p style="margin:0 0 0.6rem;"><strong>Quattro fogli.</strong> Il tabellone, le carte imprevisto, le carte emergenza e le regole con le pedine. Serve un dado. Stampa su cartoncino le due pagine delle carte, oppure incolla i ritagli su un cartoncino riciclato.</p>
+    <nav class="oca-indice" aria-label="Vai al foglio"><a href="#tabellone">Foglio 1 — il tabellone</a> <a href="#imprevisti">Foglio 2 — gli imprevisti</a> <a href="#emergenze">Foglio 3 — le emergenze</a> <a href="#regole">Foglio 4 — le regole</a></nav>
+  </div>
+
+  <article class="scheda-page" id="tabellone">
+    <div class="oca">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h1 class="scheda-titolo-principale">Il gioco dell'oca della protezione civile</h1>
+          <div class="scheda-sottotitolo">Tabellone · Primaria e secondaria di primo grado · una partita 30–40 minuti · un dado e una pedina a testa</div>
+        </div>
+      </header>
+      <p class="oca-consegna"><strong>Foglio 1 — il tabellone.</strong> Si parte dalla casella 1, in alto a sinistra, e si va verso il centro seguendo i numeri. Chi arriva per primo alla casella 56 ha finito.</p>
+      <div class="oca-tabellone">
+<div class="oca-cella oca-partenza" style="grid-area:1/1"><span class="oca-num">1</span><span class="oca-freccia" aria-hidden="true">→</span><img src="/pittogrammi/arasaac-bn/alf-p-protezione-civile.png" alt="" aria-hidden="true"><span class="oca-grande">Partenza</span></div>
+<div class="oca-cella oca-via" style="grid-area:1/2"><span class="oca-num">2</span><span class="oca-freccia" aria-hidden="true">→</span></div>
+<div class="oca-cella oca-avanti" style="grid-area:1/3"><span class="oca-num">3</span><span class="oca-freccia" aria-hidden="true">→</span><img src="/pittogrammi/arasaac-bn/alf-z-zaino.png" alt="" aria-hidden="true"><span class="oca-testo">Hai lo zaino pronto: avanti di 2</span></div>
+<div class="oca-cella oca-via" style="grid-area:1/4"><span class="oca-num">4</span><span class="oca-freccia" aria-hidden="true">→</span></div>
+<div class="oca-cella oca-imprevisto" style="grid-area:1/5"><span class="oca-num">5</span><span class="oca-freccia" aria-hidden="true">→</span><span class="oca-simbolo" aria-hidden="true">?</span><span class="oca-testo">Imprevisto</span></div>
+<div class="oca-cella oca-via" style="grid-area:1/6"><span class="oca-num">6</span><span class="oca-freccia" aria-hidden="true">→</span></div>
+<div class="oca-cella oca-emergenza" style="grid-area:1/7"><span class="oca-num">7</span><span class="oca-freccia" aria-hidden="true">↓</span><span class="oca-simbolo" aria-hidden="true">!</span><span class="oca-testo">Emergenza</span></div>
+<div class="oca-cella oca-via" style="grid-area:2/7"><span class="oca-num">8</span><span class="oca-freccia" aria-hidden="true">↓</span></div>
+<div class="oca-cella oca-avanti" style="grid-area:3/7"><span class="oca-num">9</span><span class="oca-freccia" aria-hidden="true">↓</span><img src="/pittogrammi/arasaac-bn/alf-n-telefono.png" alt="" aria-hidden="true"><span class="oca-testo">Sai il 112 a memoria: avanti di 3</span></div>
+<div class="oca-cella oca-via" style="grid-area:4/7"><span class="oca-num">10</span><span class="oca-freccia" aria-hidden="true">↓</span></div>
+<div class="oca-cella oca-imprevisto" style="grid-area:5/7"><span class="oca-num">11</span><span class="oca-freccia" aria-hidden="true">↓</span><span class="oca-simbolo" aria-hidden="true">?</span><span class="oca-testo">Imprevisto</span></div>
+<div class="oca-cella oca-via" style="grid-area:6/7"><span class="oca-num">12</span><span class="oca-freccia" aria-hidden="true">↓</span></div>
+<div class="oca-cella oca-fermo" style="grid-area:7/7"><span class="oca-num">13</span><span class="oca-freccia" aria-hidden="true">↓</span><span class="oca-testo">Il telefono è scarico: stai fermo un giro</span></div>
+<div class="oca-cella oca-via" style="grid-area:8/7"><span class="oca-num">14</span><span class="oca-freccia" aria-hidden="true">←</span></div>
+<div class="oca-cella oca-emergenza" style="grid-area:8/6"><span class="oca-num">15</span><span class="oca-freccia" aria-hidden="true">←</span><span class="oca-simbolo" aria-hidden="true">!</span><span class="oca-testo">Emergenza</span></div>
+<div class="oca-cella oca-via" style="grid-area:8/5"><span class="oca-num">16</span><span class="oca-freccia" aria-hidden="true">←</span></div>
+<div class="oca-cella oca-avanti" style="grid-area:8/4"><span class="oca-num">17</span><span class="oca-freccia" aria-hidden="true">←</span><img src="/pittogrammi/arasaac-bn/alf-u-uscita.png" alt="" aria-hidden="true"><span class="oca-testo">Conosci l&#x27;uscita: avanti di 2</span></div>
+<div class="oca-cella oca-via" style="grid-area:8/3"><span class="oca-num">18</span><span class="oca-freccia" aria-hidden="true">←</span></div>
+<div class="oca-cella oca-imprevisto" style="grid-area:8/2"><span class="oca-num">19</span><span class="oca-freccia" aria-hidden="true">←</span><span class="oca-simbolo" aria-hidden="true">?</span><span class="oca-testo">Imprevisto</span></div>
+<div class="oca-cella oca-via" style="grid-area:8/1"><span class="oca-num">20</span><span class="oca-freccia" aria-hidden="true">↑</span></div>
+<div class="oca-cella oca-via" style="grid-area:7/1"><span class="oca-num">21</span><span class="oca-freccia" aria-hidden="true">↑</span></div>
+<div class="oca-cella oca-emergenza" style="grid-area:6/1"><span class="oca-num">22</span><span class="oca-freccia" aria-hidden="true">↑</span><span class="oca-simbolo" aria-hidden="true">!</span><span class="oca-testo">Emergenza</span></div>
+<div class="oca-cella oca-via" style="grid-area:5/1"><span class="oca-num">23</span><span class="oca-freccia" aria-hidden="true">↑</span></div>
+<div class="oca-cella oca-fermo" style="grid-area:4/1"><span class="oca-num">24</span><span class="oca-freccia" aria-hidden="true">↑</span><span class="oca-testo">Torni a prendere una cosa: indietro di 3</span></div>
+<div class="oca-cella oca-via" style="grid-area:3/1"><span class="oca-num">25</span><span class="oca-freccia" aria-hidden="true">↑</span></div>
+<div class="oca-cella oca-avanti" style="grid-area:2/1"><span class="oca-num">26</span><span class="oca-freccia" aria-hidden="true">→</span><img src="/pittogrammi/arasaac-bn/dis-scuola.png" alt="" aria-hidden="true"><span class="oca-testo">Hai fatto la prova di evacuazione: avanti di 3</span></div>
+<div class="oca-cella oca-via" style="grid-area:2/2"><span class="oca-num">27</span><span class="oca-freccia" aria-hidden="true">→</span></div>
+<div class="oca-cella oca-imprevisto" style="grid-area:2/3"><span class="oca-num">28</span><span class="oca-freccia" aria-hidden="true">→</span><span class="oca-simbolo" aria-hidden="true">?</span><span class="oca-testo">Imprevisto</span></div>
+<div class="oca-cella oca-via" style="grid-area:2/4"><span class="oca-num">29</span><span class="oca-freccia" aria-hidden="true">→</span></div>
+<div class="oca-cella oca-emergenza" style="grid-area:2/5"><span class="oca-num">30</span><span class="oca-freccia" aria-hidden="true">→</span><span class="oca-simbolo" aria-hidden="true">!</span><span class="oca-testo">Emergenza</span></div>
+<div class="oca-cella oca-via" style="grid-area:2/6"><span class="oca-num">31</span><span class="oca-freccia" aria-hidden="true">↓</span></div>
+<div class="oca-cella oca-via" style="grid-area:3/6"><span class="oca-num">32</span><span class="oca-freccia" aria-hidden="true">↓</span></div>
+<div class="oca-cella oca-avanti" style="grid-area:4/6"><span class="oca-num">33</span><span class="oca-freccia" aria-hidden="true">↓</span><img src="/pittogrammi/arasaac-bn/dis-adulto-bambino.png" alt="" aria-hidden="true"><span class="oca-testo">Aiuti un compagno: avanti di 2</span></div>
+<div class="oca-cella oca-via" style="grid-area:5/6"><span class="oca-num">34</span><span class="oca-freccia" aria-hidden="true">↓</span></div>
+<div class="oca-cella oca-imprevisto" style="grid-area:6/6"><span class="oca-num">35</span><span class="oca-freccia" aria-hidden="true">↓</span><span class="oca-simbolo" aria-hidden="true">?</span><span class="oca-testo">Imprevisto</span></div>
+<div class="oca-cella oca-via" style="grid-area:7/6"><span class="oca-num">36</span><span class="oca-freccia" aria-hidden="true">←</span></div>
+<div class="oca-cella oca-fermo" style="grid-area:7/5"><span class="oca-num">37</span><span class="oca-freccia" aria-hidden="true">←</span><span class="oca-testo">Ti sei messo a correre: stai fermo un giro</span></div>
+<div class="oca-cella oca-via" style="grid-area:7/4"><span class="oca-num">38</span><span class="oca-freccia" aria-hidden="true">←</span></div>
+<div class="oca-cella oca-emergenza" style="grid-area:7/3"><span class="oca-num">39</span><span class="oca-freccia" aria-hidden="true">←</span><span class="oca-simbolo" aria-hidden="true">!</span><span class="oca-testo">Emergenza</span></div>
+<div class="oca-cella oca-via" style="grid-area:7/2"><span class="oca-num">40</span><span class="oca-freccia" aria-hidden="true">↑</span></div>
+<div class="oca-cella oca-avanti" style="grid-area:6/2"><span class="oca-num">41</span><span class="oca-freccia" aria-hidden="true">↑</span><img src="/pittogrammi/arasaac-bn/alf-o-ordine.png" alt="" aria-hidden="true"><span class="oca-testo">In fila con calma: avanti di 2</span></div>
+<div class="oca-cella oca-via" style="grid-area:5/2"><span class="oca-num">42</span><span class="oca-freccia" aria-hidden="true">↑</span></div>
+<div class="oca-cella oca-imprevisto" style="grid-area:4/2"><span class="oca-num">43</span><span class="oca-freccia" aria-hidden="true">↑</span><span class="oca-simbolo" aria-hidden="true">?</span><span class="oca-testo">Imprevisto</span></div>
+<div class="oca-cella oca-via" style="grid-area:3/2"><span class="oca-num">44</span><span class="oca-freccia" aria-hidden="true">→</span></div>
+<div class="oca-cella oca-emergenza" style="grid-area:3/3"><span class="oca-num">45</span><span class="oca-freccia" aria-hidden="true">→</span><span class="oca-simbolo" aria-hidden="true">!</span><span class="oca-testo">Emergenza</span></div>
+<div class="oca-cella oca-via" style="grid-area:3/4"><span class="oca-num">46</span><span class="oca-freccia" aria-hidden="true">→</span></div>
+<div class="oca-cella oca-avanti" style="grid-area:3/5"><span class="oca-num">47</span><span class="oca-freccia" aria-hidden="true">↓</span><img src="/pittogrammi/arasaac-bn/dis-famiglia.png" alt="" aria-hidden="true"><span class="oca-testo">Il piano di famiglia è appeso in cucina: avanti di 3</span></div>
+<div class="oca-cella oca-via" style="grid-area:4/5"><span class="oca-num">48</span><span class="oca-freccia" aria-hidden="true">↓</span></div>
+<div class="oca-cella oca-imprevisto" style="grid-area:5/5"><span class="oca-num">49</span><span class="oca-freccia" aria-hidden="true">↓</span><span class="oca-simbolo" aria-hidden="true">?</span><span class="oca-testo">Imprevisto</span></div>
+<div class="oca-cella oca-via" style="grid-area:6/5"><span class="oca-num">50</span><span class="oca-freccia" aria-hidden="true">←</span></div>
+<div class="oca-cella oca-emergenza" style="grid-area:6/4"><span class="oca-num">51</span><span class="oca-freccia" aria-hidden="true">←</span><span class="oca-simbolo" aria-hidden="true">!</span><span class="oca-testo">Emergenza</span></div>
+<div class="oca-cella oca-via" style="grid-area:6/3"><span class="oca-num">52</span><span class="oca-freccia" aria-hidden="true">↑</span></div>
+<div class="oca-cella oca-fermo" style="grid-area:5/3"><span class="oca-num">53</span><span class="oca-freccia" aria-hidden="true">↑</span><span class="oca-testo">Ti sei distratto: indietro di 2</span></div>
+<div class="oca-cella oca-via" style="grid-area:4/3"><span class="oca-num">54</span><span class="oca-freccia" aria-hidden="true">→</span></div>
+<div class="oca-cella oca-via" style="grid-area:4/4"><span class="oca-num">55</span><span class="oca-freccia" aria-hidden="true">↓</span></div>
+<div class="oca-cella oca-arrivo" style="grid-area:5/4"><span class="oca-num">56</span><img src="/pittogrammi/arasaac-bn/alf-l-luogo-sicuro.png" alt="" aria-hidden="true"><span class="oca-grande">Arrivo</span></div>
+      </div>
+      <div class="oca-legenda">
+        <span><b style="background:#fff6e0;border-color:#b45309"></b>Casella imprevisto: peschi una carta</span>
+        <span><b style="background:#fdeceb;border-color:#c1121f"></b>Casella emergenza: peschi una carta e rispondi</span>
+        <span><b style="background:#eaf6ec;border-color:#15803d"></b>Casella verde: fai quello che c'è scritto, ti aiuta</span>
+        <span><b style="background:#eef1f4;border-color:#55626e"></b>Casella grigia: ti rallenta</span>
+      </div>
+      <p class="oca-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>OCA-PC · Foglio 1 di 4 · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+
+  <article class="scheda-page" id="imprevisti">
+    <div class="oca">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">Le carte imprevisto</h2>
+          <div class="scheda-sottotitolo">Il gioco dell'oca della protezione civile · Foglio 2</div>
+        </div>
+      </header>
+      <p class="oca-consegna"><strong>Foglio 2 — gli imprevisti.</strong> Ritaglia le carte e mettile in un mazzo, a faccia in giù, accanto al tabellone. Sono le cose che capitano: alcune aiutano, altre rallentano.</p>
+      <div class="oca-mazzo">
+<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><p class="oca-carta-fatto">Manca la luce in tutta la via.</p><p class="oca-carta-effetto">Accendi la torcia, non le candele. Stai fermo un giro.</p></div>
+<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><p class="oca-carta-fatto">Piove forte e la strada si allaga.</p><p class="oca-carta-effetto">Aspetti al piano di sopra: stai fermo un giro.</p></div>
+<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><p class="oca-carta-fatto">Il cane di casa si è spaventato.</p><p class="oca-carta-effetto">Lo cerchi e lo tieni vicino: indietro di 2.</p></div>
+<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><p class="oca-carta-fatto">Hai lasciato lo zaino in camera.</p><p class="oca-carta-effetto">Torni a prenderlo con un adulto: indietro di 3.</p></div>
+<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><p class="oca-carta-fatto">Un albero caduto blocca la strada.</p><p class="oca-carta-effetto">Fai il giro dall&#x27;altra parte: indietro di 2.</p></div>
+<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><p class="oca-carta-fatto">La radio dà una notizia utile.</p><p class="oca-carta-effetto">Ora sai dove andare: avanti di 3.</p></div>
+<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><p class="oca-carta-fatto">Hai imparato a memoria il numero della mamma o del papà.</p><p class="oca-carta-effetto">Avanti di 2.</p></div>
+<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><p class="oca-carta-fatto">Trovi per terra una bottiglia sconosciuta.</p><p class="oca-carta-effetto">Non la tocchi e lo dici a un adulto: avanti di 2.</p></div>
+<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><p class="oca-carta-fatto">Hai messo l&#x27;acqua nello zaino.</p><p class="oca-carta-effetto">Avanti di 2.</p></div>
+<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><p class="oca-carta-fatto">Ti sei ricordato dov&#x27;è il punto di raccolta.</p><p class="oca-carta-effetto">Avanti di 3.</p></div>
+<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><p class="oca-carta-fatto">Vuoi filmare quello che succede.</p><p class="oca-carta-effetto">Metti via il telefono e ascolti l&#x27;adulto: stai fermo un giro.</p></div>
+<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span><p class="oca-carta-fatto">Aiuti un vicino anziano a scendere le scale.</p><p class="oca-carta-effetto">Avanti di 3.</p></div>
+      </div>
+      <p class="nota-adulto">Per l'adulto: il ritaglio è a carico tuo con i più piccoli; dalla terza primaria i bambini possono ritagliare da seduti, sorvegliati, con forbici a punta arrotondata. Le carte si leggono ad alta voce: è lì che il gioco insegna, non nel punteggio.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>OCA-PC · Foglio 2 di 4 · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+
+  <article class="scheda-page" id="emergenze">
+    <div class="oca">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">Le carte emergenza</h2>
+          <div class="scheda-sottotitolo">Il gioco dell'oca della protezione civile · Foglio 3</div>
+        </div>
+      </header>
+      <p class="oca-consegna"><strong>Foglio 3 — le emergenze.</strong> Ritaglia le carte e fanne un secondo mazzo. Sopra c'è la domanda, sotto la risposta scritta al contrario: si legge solo dopo aver risposto, girando la carta.</p>
+      <div class="oca-mazzo">
+<div class="oca-carta oca-carta-eme"><span class="oca-carta-tipo">Emergenza</span><p class="oca-carta-fatto">La terra trema mentre sei in classe. Che cosa fai?</p><p class="oca-carta-sol soluzione-capovolta">Ti ripari sotto il banco, ti proteggi la testa con le braccia e aspetti che la scossa finisca. Poi esci in fila con l&#x27;insegnante.</p></div>
+<div class="oca-carta oca-carta-eme"><span class="oca-carta-tipo">Emergenza</span><p class="oca-carta-fatto">Senti odore di gas in cucina. Che cosa fai?</p><p class="oca-carta-sol soluzione-capovolta">Non accendi e non spegni niente, nemmeno la luce. Chiami subito un adulto, che apre le finestre e chiude il gas. Poi si esce.</p></div>
+<div class="oca-carta oca-carta-eme"><span class="oca-carta-tipo">Emergenza</span><p class="oca-carta-fatto">Suona l&#x27;allarme della scuola. Che cosa fai?</p><p class="oca-carta-sol soluzione-capovolta">Lasci tutto dov&#x27;è, ti metti in fila senza spingere e segui l&#x27;insegnante fino al punto di raccolta. Non torni indietro per nessun motivo.</p></div>
+<div class="oca-carta oca-carta-eme"><span class="oca-carta-tipo">Emergenza</span><p class="oca-carta-fatto">Vedi del fumo uscire da una porta chiusa. Che cosa fai?</p><p class="oca-carta-sol soluzione-capovolta">Non apri quella porta. Ti allontani, avvisi subito un adulto e uscite insieme dalla via più lontana dal fumo.</p></div>
+<div class="oca-carta oca-carta-eme"><span class="oca-carta-tipo">Emergenza</span><p class="oca-carta-fatto">Arriva un temporale forte mentre sei al parco. Che cosa fai?</p><p class="oca-carta-sol soluzione-capovolta">Vai al coperto in un edificio con un adulto. Non stai sotto gli alberi e lontano da pali e tettoie.</p></div>
+<div class="oca-carta oca-carta-eme"><span class="oca-carta-tipo">Emergenza</span><p class="oca-carta-fatto">Ti accorgi di esserti perso in un posto affollato. Che cosa fai?</p><p class="oca-carta-sol soluzione-capovolta">Ti fermi dove sei. Cerchi una persona in divisa o una mamma con bambini e dici il tuo nome e cognome. Non vai via con nessun altro.</p></div>
+<div class="oca-carta oca-carta-eme"><span class="oca-carta-tipo">Emergenza</span><p class="oca-carta-fatto">Un compagno si fa male e non riesce ad alzarsi. Che cosa fai?</p><p class="oca-carta-sol soluzione-capovolta">Non lo sposti. Chiami subito un adulto e resti lì con lui finché non arriva.</p></div>
+<div class="oca-carta oca-carta-eme"><span class="oca-carta-tipo">Emergenza</span><p class="oca-carta-fatto">Devi chiamare il 112. Che cosa dici?</p><p class="oca-carta-sol soluzione-capovolta">Dici dove sei, che cosa è successo e quante persone stanno male. Poi aspetti: non chiudi la chiamata per primo.</p></div>
+<div class="oca-carta oca-carta-eme"><span class="oca-carta-tipo">Emergenza</span><p class="oca-carta-fatto">L&#x27;acqua entra in strada e sale. Che cosa fai?</p><p class="oca-carta-sol soluzione-capovolta">Sali al piano di sopra con un adulto. Non scendi in cantina e non entri in garage.</p></div>
+<div class="oca-carta oca-carta-eme"><span class="oca-carta-tipo">Emergenza</span><p class="oca-carta-fatto">Trovi una siringa o un oggetto sconosciuto per terra. Che cosa fai?</p><p class="oca-carta-sol soluzione-capovolta">Non lo tocchi e non lo sposti. Ti allontani e lo dici subito a un adulto.</p></div>
+<div class="oca-carta oca-carta-eme"><span class="oca-carta-tipo">Emergenza</span><p class="oca-carta-fatto">Fa molto caldo e ti gira la testa. Che cosa fai?</p><p class="oca-carta-sol soluzione-capovolta">Ti metti all&#x27;ombra o al fresco, bevi acqua e lo dici a un adulto.</p></div>
+<div class="oca-carta oca-carta-eme"><span class="oca-carta-tipo">Emergenza</span><p class="oca-carta-fatto">Squilla il telefono di casa e non c&#x27;è nessun adulto. Che cosa fai?</p><p class="oca-carta-sol soluzione-capovolta">Non dici che sei solo e non dai il tuo indirizzo. Chiami il numero dei tuoi genitori che sai a memoria.</p></div>
+      </div>
+      <p class="nota-adulto">Per l'adulto: le risposte seguono le indicazioni del Dipartimento della Protezione Civile e le pagine di autoprotezione del sito, elencate nelle regole. Chi non sa rispondere non viene mandato indietro: si legge insieme la risposta e si prosegue. Sbagliare qui serve a imparare, non a perdere.</p>
+      <p class="oca-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>OCA-PC · Foglio 3 di 4 · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+
+  <article class="scheda-page" id="regole">
+    <div class="oca">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">Come si gioca</h2>
+          <div class="scheda-sottotitolo">Il gioco dell'oca della protezione civile · Foglio 4</div>
+        </div>
+      </header>
+      <div class="oca-regole">
+        <h2>Le regole</h2>
+        <ol>
+          <li>Si gioca in due o più, con <strong>un dado</strong> e una pedina a testa. Tutti partono dalla casella 1.</li>
+          <li>A turno si tira il dado e si avanza di tante caselle quanto il numero uscito.</li>
+          <li>Se arrivi su una <strong>casella verde o grigia</strong>, fai quello che c'è scritto.</li>
+          <li>Se arrivi su una <strong>casella imprevisto</strong>, peschi una carta, la leggi ad alta voce e fai quello che dice.</li>
+          <li>Se arrivi su una <strong>casella emergenza</strong>, peschi una carta e rispondi alla domanda. Se la risposta è giusta <strong>avanzi di 3</strong>. Se non lo è, si legge insieme la risposta girando la carta e <strong>resti dove sei</strong>: nessuno torna indietro per non aver saputo una cosa.</li>
+          <li>Vince chi arriva per primo alla casella 56. Con il numero esatto non serve: basta arrivarci o superarla.</li>
+        </ol>
+        <h2>Le pedine</h2>
+        <p style="margin:0 0 1mm;">Ritaglia questi cerchi, colorali di colori diversi e piegali a metà perché stiano in piedi. Oppure usa un bottone, un tappo o una gomma per ciascuno.</p>
+        <div class="oca-pedine">
+          <div class="oca-pedina">1</div><div class="oca-pedina">2</div><div class="oca-pedina">3</div>
+          <div class="oca-pedina">4</div><div class="oca-pedina">5</div><div class="oca-pedina">6</div>
+        </div>
+        <h2>Da dove vengono le risposte</h2>
+        <ul>
+          <li><a href="/rischi-prevenzione/rischio-sismico/">/rischi-prevenzione/rischio-sismico/</a></li>
+          <li><a href="/rischi-prevenzione/blackout/">/rischi-prevenzione/blackout/</a></li>
+          <li><a href="/formazione/schede-stampabili/labirinto-evacuazione-primaria/">/formazione/schede-stampabili/labirinto-evacuazione-primaria/</a></li>
+          <li><a href="/rischi-prevenzione/rischio-incendio/">/rischi-prevenzione/rischio-incendio/</a></li>
+          <li><a href="/rischi-prevenzione/temporali-intensi/">/rischi-prevenzione/temporali-intensi/</a></li>
+          <li><a href="/formazione/schede-stampabili/se-mi-perdo-infanzia/">/formazione/schede-stampabili/se-mi-perdo-infanzia/</a></li>
+          <li><a href="/formazione/primo-soccorso/">/formazione/primo-soccorso/</a></li>
+          <li><a href="/numeri-utili/">/numeri-utili/</a></li>
+          <li><a href="/rischi-prevenzione/rischio-idrogeologico/">/rischi-prevenzione/rischio-idrogeologico/</a></li>
+          <li><a href="/formazione/schede-stampabili/oggetti-se-non-so-che-cosa-e-facilitata/">/formazione/schede-stampabili/oggetti-se-non-so-che-cosa-e-facilitata/</a></li>
+          <li><a href="/rischi-prevenzione/ondate-di-calore/">/rischi-prevenzione/ondate-di-calore/</a></li>
+          <li><a href="/piano-familiare/">/piano-familiare/</a></li>
+        </ul>
+      </div>
+      <p class="nota-adulto">Per l'adulto: una partita dura 30–40 minuti, ma si può fermare prima e riprendere. Con i più piccoli gioca insieme a loro e leggi tu le carte. Il gioco serve a far dire ad alta voce i comportamenti giusti: quando qualcuno risponde bene, chiedi anche <em>perché</em>. Le risposte complete, con il prima, il durante e il dopo, sono nelle pagine elencate qui sopra: il gioco le richiama, non le sostituisce.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>OCA-PC · Foglio 4 di 4 · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+</body>
+</html>
