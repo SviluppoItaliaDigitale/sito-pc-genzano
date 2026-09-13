@@ -155,7 +155,7 @@ doc = f"""<!DOCTYPE html>
       <p class="mem-consegna"><strong>Foglio 1 — le tessere.</strong> Prima colora i disegni, poi ritaglia lungo le linee tratteggiate. Vengono 20 tessere, tutte <strong>diverse</strong>: si abbinano a due a due, perché le due cose vanno insieme.</p>
       <div class="mem-griglia">
 {tessere}      </div>
-      <p class="nota-adulto">Per l'adulto: la preparazione delle forbici è a carico dell'adulto. A 4 anni ritaglia l'adulto mentre il bambino colora; a 5–6 anni il bambino può ritagliare da seduto, sorvegliato, con forbici a punta arrotondata, un pezzo alla volta. Stampa su cartoncino o incolla le tessere su un cartoncino riciclato: sul foglio sottile i disegni si vedono in trasparenza e il gioco non funziona. Se la classe è numerosa, stampa due copie e fai due mazzi.</p>
+      <p class="nota-adulto">Per l'adulto: la preparazione delle forbici è a carico dell'adulto. A 4 anni ritaglia l'adulto mentre il bambino colora; a 5–6 anni il bambino può ritagliare da seduto, sorvegliato, con forbici a punta arrotondata, un pezzo alla volta. Stampa su cartoncino o incolla le tessere su un cartoncino riciclato: sul foglio sottile i disegni si vedono in trasparenza e il gioco non funziona. Se la classe è numerosa, stampa due copie e fai due mazzi. Stampando due volte questo foglio (e due volte il retro) si ottiene anche il <strong>memory classico a carte gemelle</strong>, quello in cui si cercano due tessere identiche: le istruzioni sono sul foglio 3.</p>
       <p class="mem-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d’Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
       <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
         <span>MEM-PC · Foglio 1 di 3 · Rev. 1 · {REV}</span></footer>
@@ -203,6 +203,19 @@ doc = f"""<!DOCTYPE html>
         <h2>Le dieci coppie, per l'adulto</h2>
         <ul class="mem-coppie">
 {elenco}        </ul>
+        <h2>Un altro modo di giocare: le carte gemelle</h2>
+        <p>Si può giocare anche al <strong>memory classico</strong>, quello in cui si cercano
+        <strong>due tessere identiche</strong>. Basta stampare <strong>due volte</strong> il foglio
+        delle tessere (e due volte anche quello del retro): vengono 40 tessere, cioè 20 coppie di
+        gemelle. Si gioca con le stesse regole, ma la coppia si forma quando le due tessere portano
+        <strong>lo stesso disegno</strong>.</p>
+        <p>È la versione più facile, adatta ai più piccoli e alla prima partita: non chiede di
+        ragionare sul collegamento, solo di ricordare dov'era il disegno. Anche così si dice ad alta
+        voce che cosa c'è disegnato, ed è lì che il gioco insegna i nomi. Quando i nomi sono chiari,
+        si passa alle coppie per significato, che è il gioco vero.</p>
+        <p>Con 40 tessere il tavolo diventa grande: con i più piccoli usane
+        <strong>sedici</strong> (otto coppie di gemelle) e tieni via le altre.</p>
+
         <h2>Per continuare</h2>
         <ul>
           <li><strong>Con i più grandi</strong>: non basta trovare la coppia, bisogna dire <em>perché</em> le due cose stanno insieme. Se non lo si sa, lo si cerca insieme.</li>
@@ -210,7 +223,7 @@ doc = f"""<!DOCTYPE html>
           <li><strong>Memory parlato</strong>: chi gira la tessera la descrive senza dire il nome, gli altri indovinano.</li>
         </ul>
       </div>
-      <p class="nota-adulto">Per l'adulto: le venti tessere sono tutte diverse e si abbinano per significato, non per forma: è questo che fa imparare qualcosa mentre si gioca. Tieni l'elenco delle coppie sotto gli occhi. Il gioco serve a dare un nome ai mezzi e agli oggetti e a collegarli fra loro, non a insegnare cosa fare in emergenza — per quello ci sono le schede di autoprotezione del kit. Con i bambini più piccoli comincia con <strong>sei tessere</strong> (tre coppie) e aggiungi le altre nelle partite successive. Non tenere il punteggio se il gruppo si innervosisce: si può giocare anche tutti insieme contro il tavolo, cercando di trovare tutte le coppie in squadra.</p>
+      <p class="nota-adulto">Per l'adulto: le venti tessere sono tutte diverse e si abbinano per significato, non per forma: è questo che fa imparare qualcosa mentre si gioca. Se il gruppo è alle prime armi, comincia dal memory classico a carte gemelle (stampa doppia) per fissare i nomi, e passa alle coppie per significato quando i nomi sono chiari. Tieni l'elenco delle coppie sotto gli occhi. Il gioco serve a dare un nome ai mezzi e agli oggetti e a collegarli fra loro, non a insegnare cosa fare in emergenza — per quello ci sono le schede di autoprotezione del kit. Con i bambini più piccoli comincia con <strong>sei tessere</strong> (tre coppie) e aggiungi le altre nelle partite successive. Non tenere il punteggio se il gruppo si innervosisce: si può giocare anche tutti insieme contro il tavolo, cercando di trovare tutte le coppie in squadra.</p>
       <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
         <span>MEM-PC · Foglio 3 di 3 · Rev. 1 · {REV}</span></footer>
     </div>
