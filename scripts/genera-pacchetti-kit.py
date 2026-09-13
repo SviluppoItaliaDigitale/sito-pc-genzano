@@ -115,8 +115,16 @@ def patch_html_paths(html: str, schede_incluse: list[str] | None = None) -> str:
 
     # Link interni al sito che iniziano con "/": scheda inclusa → relativo,
     # altrimenti → URL assoluto https del sito (mai path radicati su "/").
+    # Pittogrammi e immagini hanno una riscrittura loro, più avanti, che li
+    # copia dentro lo ZIP e li punta in relativo. Se la riscrittura generica
+    # degli href li prende per prima, diventano URL del sito e poi la seconda
+    # passata produce mostri come "https://…genzano.it../../assets/…": è
+    # successo con gli <image href> dentro le fustelle SVG del libro pop-up,
+    # sei figure sparite offline. Qui si lasciano stare.
     def _riscrivi_href(m: re.Match) -> str:
         quote, target = m.group(1), m.group(2)
+        if target.startswith(("/pittogrammi/", "/images/")):
+            return m.group(0)
         ms = re.match(r"^/formazione/schede-stampabili/([a-z0-9][a-z0-9-]*)/?(#.*)?$", target)
         if ms and ms.group(1) in schede_incluse:
             return f'href={quote}../{ms.group(1)}/index.html{ms.group(2) or ""}{quote}'
@@ -449,6 +457,20 @@ def costruisci_pacchetto(slug: str, md_filename: str) -> tuple[int, int, list[st
                         "/pittogrammi/" + pitto,
                         "../../assets/pittogrammi/" + pitto,
                     )
+            # Immagini del sito (loghi, illustrazioni): stesso trattamento dei
+            # pittogrammi. Senza questa riscrittura un src="/images/..." dentro
+            # lo ZIP punta alla radice del disco di chi apre il file, e offline
+            # resta un riquadro vuoto — che su una copertina si nota subito.
+            for img in set(re.findall(r'/images/([\w/.-]+\.(?:png|jpg|jpeg|webp|svg|gif))',
+                                      html_patched)):
+                img_src = ROOT / "static" / "images" / img
+                if img_src.exists():
+                    img_dst = tmp / "assets" / "images" / img
+                    img_dst.parent.mkdir(parents=True, exist_ok=True)
+                    if not img_dst.exists():
+                        shutil.copy(img_src, img_dst)
+                    html_patched = html_patched.replace(
+                        "/images/" + img, "../../assets/images/" + img)
             # Font self-hosted: lo porto nello ZIP solo se una scheda di questo
             # kit lo usa davvero, altrimenti peserebbe su tutti i pacchetti.
             if "assets/edu-cursive-400.woff2" in html_patched:
