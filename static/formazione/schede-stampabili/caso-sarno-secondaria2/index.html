@@ -8,6 +8,12 @@
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    /* In stampa il contenuto finiva a pochi millimetri dal fondo del foglio e la
+       riga di piè di pagina con la banda affiliazioni andava su una pagina in più:
+       un 4% in meno su tutto tiene il foglio intero. Solo in stampa. */
+    @media print { html { font-size: 96%; } }
+  </style>
 </head>
 <body>
 

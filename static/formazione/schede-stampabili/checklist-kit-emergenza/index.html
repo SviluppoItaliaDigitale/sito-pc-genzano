@@ -97,6 +97,10 @@
       body { background: #fff; font-size: 11pt; }
       .ck-tabella td.ck-check { width: 8%; }
     }
+  /* In stampa il contenuto finiva a pochi millimetri dal fondo del foglio e la
+     sola banda affiliazioni andava su una pagina in più: un 4% in meno
+     su tutto tiene il foglio intero. Solo in stampa. */
+  @media print { html { font-size: 96%; } }
   </style>
 </head>
 <body>

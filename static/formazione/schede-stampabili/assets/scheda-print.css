@@ -236,7 +236,10 @@ body {
 }
 /* In stampa il footer è già spinto in fondo: un filo di aria coerente col Kit */
 @media print {
-  .scheda-footer { padding-top: 8mm; padding-bottom: 3mm; }
+  /* 8mm → 3mm: con la banda affiliazioni sotto, la coda del foglio chiedeva
+     28mm; in sedici schede il contenuto finiva a pochi millimetri dal bordo e
+     la sola banda andava su un foglio nuovo. */
+  .scheda-footer { padding-top: 3mm; padding-bottom: 2mm; }
 }
 
 /* ── Banda affiliazioni: Quality Label ESC (cod. E10435833 obbligatorio per
@@ -258,7 +261,8 @@ body {
 @media print {
   .scheda-page::after {
     height: 13mm;
-    margin-top: 2mm;
+    margin-top: 1mm;
+    padding-top: 1mm;
     page-break-inside: avoid;
   }
 }
@@ -627,6 +631,39 @@ table.scheda-tabella th {
   }
   .scheda-header .scheda-titolo-principale {
     font-size: 1.25rem;
+  }
+}
+
+/* Tabelle larghe (rubriche, decodifica, glossari, piano familiare): su
+   telefono scorrono dentro il proprio contenitore invece di far scorrere
+   tutta la pagina. È il pattern .table-responsive di Bootstrap Italia (rule
+   03); non si tocca il display della tabella, così gli screen reader la
+   leggono ancora come tabella. In stampa il contenitore è trasparente. */
+.scheda-tabella-scorrevole {
+  overflow-x: auto;
+  max-width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+@media print {
+  .scheda-tabella-scorrevole { overflow: visible; }
+}
+
+/* Glossari a due colonne (dl con grid inline "auto 1fr" e dt nowrap, nei
+   casi di studio): su telefono la colonna dei termini non può restringersi e
+   la pagina scorre di lato. Sotto i 580 px il glossario va su una colonna
+   sola, termine sopra e definizione sotto. Solo a schermo: in stampa (A4,
+   200 mm utili) le due colonne ci stanno e restano. !important perché lo
+   stile è inline nell'HTML delle schede. */
+@media screen and (max-width: 580px) {
+  .scheda-page dl {
+    grid-template-columns: 1fr !important;
+    gap: 0.1rem 0 !important;
+  }
+  .scheda-page dt {
+    white-space: normal !important;
+  }
+  .scheda-page dd {
+    margin-bottom: 0.45rem !important;
   }
 }
 

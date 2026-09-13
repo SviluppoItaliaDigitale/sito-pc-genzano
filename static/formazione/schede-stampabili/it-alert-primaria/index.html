@@ -36,6 +36,10 @@
       margin: 0.5rem 0 0.2rem 0;
       color: #212529;
     }
+  /* In stampa il contenuto finiva a pochi millimetri dal fondo del foglio e la
+     riga di piè di pagina con la banda affiliazioni andava su una pagina in più:
+     un 6% in meno su tutto tiene il foglio intero. Solo in stampa. */
+  @media print { html { font-size: 94%; } }
   </style>
 </head>
 <body>

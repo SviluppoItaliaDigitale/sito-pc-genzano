@@ -97,6 +97,11 @@
         color-adjust: exact !important;
       }
     }
+    /* Su telefono la pagina scorreva di lato: sotto i 580 px le colonne si riducono. Solo a schermo, la stampa A4 resta uguale. */
+    @media screen and (max-width: 580px) {
+      .lab-griglia { grid-template-columns: repeat(11, 30px); grid-template-rows: repeat(9, 30px); }
+      .lab-cella { width: 30px; height: 30px; font-size: 1rem; }
+    }
   </style>
 </head>
 <body>
