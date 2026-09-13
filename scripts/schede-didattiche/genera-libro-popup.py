@@ -89,25 +89,32 @@ def fustella_vfold(slug, alt):
 
 
 def fustella_gradino(slug, alt):
-    """Il gradino si taglia dentro la piega del foglio: niente colla."""
-    W, H = 108, 62
-    piega = 14
-    x1, x2 = 26, 86
-    y1, y2 = piega + 12, piega + 30
+    """Il gradino si taglia dentro la piega del foglio: niente colla.
+
+    I due tagli partono DALLA piega e le vanno perpendicolari; la riga che li
+    unisce alla base è la piega su cui il gradino si ribalta in avanti. Tagli
+    paralleli alla piega, o staccati da essa, non producono nessun rilievo —
+    era l'errore della prima versione.
+    """
+    W, H = 108, 74
+    yF = 20          # la piega del foglio
+    D = 34           # quanto sporge il gradino
+    x1, x2 = 30, 90
     return svg(W + 12, H + 16, "".join([
         f'<rect x="6" y="6" width="{W}" height="{H}" fill="#ffffff" stroke="#cbd5e1" '
         f'stroke-width="0.4" stroke-dasharray="2 2"/>',
-        f'<line x1="6" y1="{piega + 6}" x2="{6 + W}" y2="{piega + 6}" {MONTE}/>',
-        f'<text x="{6 + W - 2}" y="{piega + 3.5}" text-anchor="end" font-size="2.8" '
+        f'<line x1="6" y1="{yF}" x2="{6 + W}" y2="{yF}" {MONTE}/>',
+        f'<text x="{6 + W - 2}" y="{yF - 2}" text-anchor="end" font-size="2.8" '
         f'fill="#0284c7">piega del foglio</text>',
-        f'<line x1="{x1}" y1="{y1 + 6}" x2="{x2}" y2="{y1 + 6}" {TAGLIO}/>',
-        f'<line x1="{x1}" y1="{y2 + 6}" x2="{x2}" y2="{y2 + 6}" {TAGLIO}/>',
-        f'<line x1="{x1}" y1="{y1 + 6}" x2="{x1}" y2="{y2 + 6}" {VALLE}/>',
-        f'<line x1="{x2}" y1="{y1 + 6}" x2="{x2}" y2="{y2 + 6}" {VALLE}/>',
-        figura(slug, alt, (x1 + x2) / 2 - 13, y1 + 9, 26),
-        quota(x1, y2 + 14, x2, "60 mm"),
-        f'<text x="{6 + W / 2}" y="{H + 12}" text-anchor="middle" font-size="2.8" fill="#475569">'
-        f'taglia le due righe nere, poi spingi il gradino in avanti</text>',
+        f'<line x1="{x1}" y1="{yF}" x2="{x1}" y2="{yF + D}" {TAGLIO}/>',
+        f'<line x1="{x2}" y1="{yF}" x2="{x2}" y2="{yF + D}" {TAGLIO}/>',
+        f'<line x1="{x1}" y1="{yF + D}" x2="{x2}" y2="{yF + D}" {VALLE}/>',
+        figura(slug, alt, (x1 + x2) / 2 - 13, yF + 4, 26),
+        quota(x1, yF + D + 11, x2, "60 mm"),
+        f'<text x="{x2 + 4}" y="{yF + D / 2}" font-size="2.8" fill="#475569">'
+        f'profondità 34 mm</text>',
+        f'<text x="{6 + W / 2}" y="{yF + D + 20}" text-anchor="middle" font-size="2.8" '
+        f'fill="#475569">i due tagli partono dalla piega; poi spingi il gradino in avanti</text>',
     ]))
 
 
@@ -124,19 +131,38 @@ def fustella_volvella():
         settori.append(
             f'<path d="M{cx} {cy} L{p0[0]:.1f} {p0[1]:.1f} A{R} {R} 0 0 1 {p1[0]:.1f} {p1[1]:.1f} Z" '
             f'fill="{colore}" fill-opacity="0.18" stroke="#111827" stroke-width="0.4"/>'
-            f'<text x="{cx + R * 0.62 * math.cos(am):.1f}" y="{cy + R * 0.62 * math.sin(am):.1f}" '
-            f'text-anchor="middle" font-size="4" font-weight="bold" fill="#111827">{nome}</text>')
+            f'<text x="{cx + R * 0.72 * math.cos(am):.1f}" y="{cy + R * 0.72 * math.sin(am):.1f}" '
+            f'text-anchor="middle" font-size="3.4" font-weight="bold" fill="#111827">{nome}</text>')
     return svg(148, 86, "".join(settori + [
         f'<circle cx="{cx}" cy="{cy}" r="{R}" {TAGLIO}/>',
         f'<circle cx="{cx}" cy="{cy}" r="2" {TAGLIO}/>',
         f'<line x1="{cx}" y1="{cy}" x2="{cx - 20}" y2="{cy + R + 7}" stroke="#64748b" stroke-width="0.3"/>',
         f'<text x="{cx - 21}" y="{cy + R + 10}" text-anchor="middle" font-size="2.8" fill="#475569">'
         f'foro per il fermacampione</text>',
-        f'<rect x="{cx + R + 6}" y="{cy - 16}" width="30" height="22" {TAGLIO}/>',
-        f'<text x="{cx + R + 21}" y="{cy - 4}" text-anchor="middle" font-size="3" '
+        f'<line x1="{cx}" y1="{cy}" x2="{cx + 8.6}" y2="{cy - 8.6}" stroke="#64748b" '
+        f'stroke-width="0.3" stroke-dasharray="1 1"/>',
+        f'<circle cx="{cx + 8.6}" cy="{cy - 8.6}" r="1.2" fill="none" stroke="#111827" '
+        f'stroke-width="0.4"/>',
+        f'<text x="{cx + 10.5}" y="{cy - 9.6}" font-size="2.4" fill="#475569">'
+        f'qui cade il centro della finestra</text>',
+        f'<rect x="{cx + R + 14}" y="{cy + 10}" width="20" height="12" fill="none" '
+        f'stroke="#111827" stroke-width="0.7"/>',
+        f'<text x="{cx + R + 24}" y="{cy + 17.5}" text-anchor="middle" font-size="2.8" '
         f'fill="#111827" font-weight="bold">FINESTRA</text>',
-        f'<text x="{cx + R + 21}" y="{cy + 1}" text-anchor="middle" font-size="2.6" fill="#475569">'
-        f'ritagliala nel foglio</text>',
+        f'<text x="{cx + R + 24}" y="{cy + 27}" text-anchor="middle" font-size="2.4" '
+        f'fill="#475569">20 × 12 mm</text>',
+        f'<text x="{cx + R + 12}" y="{cy - 16}" font-size="2.8" fill="#475569">'
+        f'la finestra si ritaglia nel foglio,</text>',
+        f'<text x="{cx + R + 12}" y="{cy - 12}" font-size="2.8" fill="#475569">'
+        f'non nel disco: è la finta da cui</text>',
+        f'<text x="{cx + R + 12}" y="{cy - 8}" font-size="2.8" fill="#475569">'
+        f'si vede un colore per volta.</text>',
+        f'<text x="{cx + R + 12}" y="{cy - 2}" font-size="2.8" fill="#475569">'
+        f'Deve stare tutta dentro uno spicchio:</text>',
+        f'<text x="{cx + R + 12}" y="{cy + 2}" font-size="2.8" fill="#475569">'
+        f'a cavallo di due, i colori si vedrebbero a coppie.</text>',
+        f'<text x="{cx + R + 12}" y="{cy + 6}" font-size="2.8" fill="#475569">'
+        f'Il centro va a 12 mm dal foro, in diagonale.</text>',
         quota(cx - R, 83, cx + R, "68 mm di diametro"),
     ]))
 
@@ -185,7 +211,9 @@ MECCANISMI = {
     "volvella": ("Volvella girevole",
                  "Ritaglia il disco e la finestra. Fora il centro del disco e il foglio nello "
                  "stesso punto, unisci con un fermacampione e apri i braccetti dietro. "
-                 "Girando il disco, nella finestra compare un colore per volta."),
+                 "Girando il disco, nella finestra compare un colore per volta. "
+                 "Il foro lo fa l'adulto, appoggiando il foglio su un tappetino e premendo con "
+                 "la punta di una matita: non si fa con le forbici."),
     "linguetta": ("Linguetta scorrevole",
                   "Ritaglia la striscia e le due fessure nel foglio. Infila la striscia da "
                   "sotto nella prima fessura e da sopra nella seconda. Tirando la linguetta "
@@ -230,7 +258,7 @@ def piede(n, tot):
             f'        <span>LIBRO-POPUP · Foglio {n} di {tot} · Rev. 1 · {REV}</span></footer>\n')
 
 
-LICENZA = ('      <p class="lib-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d’Aragona '
+LICENZA = ('      <p class="lib-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona '
            '— autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa '
            'licenza.</p>\n')
 
@@ -296,7 +324,7 @@ def pagina_copertina():
       ricordare e il disegno tecnico per ritagliarla.</p>
       <div class="lib-cop-fasce">
         <div><strong>Età</strong><span>6-11 anni, con un adulto</span></div>
-        <div><strong>Occorrente</strong><span>forbici, colla, un fermacampione, colori</span></div>
+        <div><strong>Occorrente</strong><span>forbici, colla, un fermacampione, colori per le figure</span></div>
         <div><strong>Tempo</strong><span>una tavola per volta, 30-40 minuti</span></div>
       </div>
       <div class="lib-cop-indice"><strong>Le otto tavole</strong><ol>{indice}</ol></div>
@@ -328,6 +356,8 @@ def pagina_guida():
             <li><strong>Colla</strong>: stick o vinilica in poca quantità, stesa con un pennellino.</li>
             <li><strong>Un fermacampione</strong> per il disco della Tavola 1.</li>
             <li>Forbici a punta arrotondata, righello, e una penna scarica per segnare le pieghe.</li>
+            <li><strong>I colori</strong>: le figure sono in bianco e nero apposta. Coloratele prima
+            di ritagliare, così ogni libro viene diverso dagli altri.</li>
           </ul>
         </div>
         <div class="lib-box">
@@ -392,7 +422,8 @@ def pagina_diploma():
           </div>
         </div>
         <p class="lib-tess-nota">Ritaglia lungo il bordo, piega a metà sulla riga blu e incolla
-        le due facce fra loro: viene un tesserino a due lati.</p>
+        i due <strong>rovesci</strong> l'uno sull'altro, lasciando fuori le facce stampate:
+        viene un tesserino a due lati.</p>
       </div>
       <p class="nota-adulto">Per l'adulto: il diploma non certifica nulla e non ha valore
       ufficiale — è il riconoscimento di un lavoro fatto insieme, e vale esattamente per
@@ -442,7 +473,7 @@ CSS = """
     .lib-montaggio { font-size: 10px; line-height: 1.4; margin: 1.8mm 0 0; color: #1a1a1a; }
 
     .lib-tessere { display: grid; grid-template-columns: repeat(7, 1fr); gap: 1.5mm; margin-top: 3mm; }
-    .lib-tessera { border: 1.2px dashed #6b7884; border-radius: 2px; padding: 1.5mm 0.6mm;
+    .lib-tessera { border: 1px solid #111827; border-radius: 2px; padding: 1.5mm 0.6mm;
       text-align: center; }
     .lib-tessera img { width: 15mm; height: 15mm; object-fit: contain; }
     .lib-tessera span { display: block; font-size: 7px; font-weight: 700; line-height: 1.1;
@@ -516,8 +547,8 @@ CSS = """
     .lib-dip-firme span { font-size: 9px; color: #475569; }
     .lib-tesserino { margin-top: 4mm; }
     .lib-tess-tit { font-size: 11px; font-weight: 700; color: var(--scheda-blu); margin-bottom: 1.5mm; }
-    .lib-tess-carta { display: flex; border: 1.4px dashed #6b7884; border-radius: 2px; }
-    .lib-tess-fronte { flex: 0 0 45mm; border-right: 2px dashed #0284c7; padding: 3mm;
+    .lib-tess-carta { display: flex; border: 1px solid #111827; border-radius: 2px; }
+    .lib-tess-fronte { flex: 0 0 45mm; border-right: 1.5px dashed #0284c7; padding: 3mm;
       text-align: center; }
     .lib-tess-fronte strong { display: block; font-size: 30px; color: #c1121f; font-weight: 800; }
     .lib-tess-fronte span { font-size: 9px; }

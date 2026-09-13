@@ -23,7 +23,7 @@ ALLERTA = [
     ("ARANCIONE", "#ea580c", "Preallarme",
      "I fenomeni possono essere diffusi. Si esce solo se serve, e il kit è pronto."),
     ("ROSSA",     "#dc2626", "Allarme",
-     "Fenomeni molto intensi. Non si esce, non si scende nei piani interrati."),
+     "Fenomeni molto intensi. Non si esce se non serve davvero, e si sta lontani dai piani interrati."),
 ]
 
 # ---------------------------------------------------------------------------
@@ -74,7 +74,7 @@ TAVOLE = [
             "Non prendere l'ascensore. Quando la scossa finisce, esci con calma dalle scale.",
             "Se sei all'aperto, va' in uno spazio aperto, lontano da edifici e alberi.",
         ],
-        pittogrammi=[("alf-t-terremoto", "Terremoto"), ("alf-c-casco", "Casco di protezione")],
+        pittogrammi=[("alf-t-terremoto", "Persona che si ripara sotto un tavolo durante un terremoto")],
         fonte="Pagina «Rischio sismico» del sito.",
     ),
     dict(
@@ -164,7 +164,7 @@ TAVOLE = [
             "Non tornare indietro a prendere niente.",
         ],
         pittogrammi=[("pop-sirena", "Sirena di allarme"), ("dis-cortile", "Cortile della scuola")],
-        fonte="Pagine «Formazione e scuole» e «Rischio sismico» del sito.",
+        fonte="Articolo «Rientro a scuola: le prove di evacuazione» del sito.",
     ),
     dict(
         n=7, id="tav7",
