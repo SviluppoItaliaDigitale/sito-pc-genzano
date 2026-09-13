@@ -38,6 +38,14 @@ In questa sezione puoi consultare e scaricare documenti relativi all'attività d
 | [Carta Rischio Sismico](https://www.protezionecivilegenzano.it/area-download/normativa/Rischio_Sismico_PC_Genzano.pdf) | PDF · 7,3 MB |
 | [Cartina Genzano di Roma](https://www.protezionecivilegenzano.it/area-download/normativa/Cartina_Genzano_di_Roma.pdf) | PDF · 3,0 MB |
 
+## Cartografia naturalistica dei Castelli Romani
+
+| Documento | Descrizione | Formato |
+|---|---|---|
+| [Carta naturalistica dei Castelli Romani](/manuali/carta-naturalistica-castelli-romani-latium-volcano.pdf) | Carta in scala 1:30.000 del Vulcano Laziale: rilievo, laghi, sorgenti, fasce di vegetazione e sentieri numerati; sul retro testi su vulcano, Parco, flora, fauna e quattro itinerari. Versione web a bassa risoluzione | PDF · 1,8 MB |
+
+Realizzata da **Latium Volcano APS — Associazione ecologica ambientale** di Rocca Priora (anno 2012, terza ristampa). I diritti sulla carta appartengono all'associazione: per usi diversi dalla consultazione personale rivolgersi a [www.latiumvolcano.it](https://www.latiumvolcano.it/). Ne parliamo nell'articolo [La Carta naturalistica dei Castelli Romani: leggere il vulcano su cui viviamo](/comunicazioni/2026-09-14-carta-naturalistica-castelli-romani-latium-volcano/).
+
 ## Documenti Operativi e Regolamenti
 
 | Documento | Formato |

@@ -112,6 +112,7 @@ Sul territorio di Genzano di Roma sono installati **cartelli segnaletici** che i
 - [Carta Rischio Incendio (PDF)](https://www.protezionecivilegenzano.it/area-download/normativa/Rischio_Incendio_PC_Genzano.pdf)
 - [Carta Rischio Sismico (PDF)](https://www.protezionecivilegenzano.it/area-download/normativa/Rischio_Sismico_PC_Genzano.pdf)
 - [Cartina Genzano di Roma (PDF)](https://www.protezionecivilegenzano.it/area-download/normativa/Cartina_Genzano_di_Roma.pdf)
+- [Carta naturalistica dei Castelli Romani (PDF, 1,8 MB)](/manuali/carta-naturalistica-castelli-romani-latium-volcano.pdf) — carta del Vulcano Laziale con sentieri, sorgenti e vegetazione, realizzata da Latium Volcano APS (diritti dell'associazione)
 
 ## Mappe esterne ufficiali
 
