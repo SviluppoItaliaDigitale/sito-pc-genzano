@@ -1,0 +1,27 @@
+Pittogrammi ARASAAC — variante in bianco e nero (da colorare)
+=============================================================
+
+Autore:    Sergio Palao
+Origine:   ARASAAC — https://arasaac.org
+Licenza:   Creative Commons BY-NC-SA 4.0
+           https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it
+Proprieta: Governo di Aragona (Spagna)
+           Departamento de Educacion, Cultura y Deporte
+
+ARASAAC pubblica ogni pittogramma anche con il solo contorno, senza colore:
+e' la variante che usiamo nelle schede didattiche da colorare. Il disegno e
+l'autore sono gli stessi della versione a colori.
+
+I file di questa cartella sono scaricati per identificativo, non per ricerca:
+l'elenco completo (nome del file -> id ARASAAC) e' in registro.json, ed e'
+quello che rende riproducibile il download. Per riscaricarli:
+
+    bash scripts/scarica-pittogrammi.sh            # solo i mancanti
+    bash scripts/scarica-pittogrammi.sh --force    # tutti
+
+Le opere derivate (schede stampabili, materiali didattici) che li includono
+ereditano la stessa licenza CC BY-NC-SA 4.0 e ne riportano l'attribuzione sul
+foglio stampato.
+
+Attribuzione completa:
+https://www.protezionecivilegenzano.it/attribuzioni-pittogrammi/

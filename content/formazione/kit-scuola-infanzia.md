@@ -10,7 +10,7 @@ Questo kit è pensato per gli insegnanti della **scuola dell'infanzia** che desi
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma per le attività di divulgazione nelle scuole del territorio.
 
-> 📦 **Scarica il pacchetto offline** — [`kit-scuola-infanzia.zip`](/formazione/pacchetti/kit-scuola-infanzia.zip) (~15,4 MB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-infanzia.zip`](/formazione/pacchetti/kit-scuola-infanzia.zip) (~16,4 MB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
 > ⚠️ **Avvertenza pedagogica — non spaventare i bambini.** Le attività di questo kit **non devono mai generare paura**. I bambini di 3-6 anni hanno una percezione del rischio molto diversa da quella dell'adulto: parlare di terremoti, incendi o allagamenti in modo enfatico o con immagini drammatiche può produrre **ansia, incubi, regressioni**. La regola è opposta: presentare i comportamenti corretti come **un gioco rassicurante** (la tartaruga che si ripara, il numero 112 come "amico che arriva"), proporzionato all'età, sempre concluso con la rassicurazione che **gli adulti sono lì per proteggerli**. Niente video reali di disastri, niente cronaca, niente racconto di vittime. Per la dimensione emotiva si rimanda alla pagina [Psicologia dell'emergenza](/formazione/psicologia-emergenza/).
 
@@ -264,7 +264,8 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 **Schede di letto-scrittura** a tema Protezione Civile per il pre-grafismo e il riconoscimento delle prime parole (5-6 anni):
 
 - 👉 [**ABC delle Vocali — Le parole che salvano**](/formazione/schede-stampabili/abc-vocali-infanzia/) — le 5 vocali abbinate a parole della Protezione Civile (A→AIUTO, E→ELMETTO, I→IDRANTE, O→OSPEDALE, U→USCITA), lettera da ricalcare e parola da ricopiare.
-- 👉 [**L'Alfabetiere della Sicurezza (A→Z)**](/formazione/schede-stampabili/alfabetiere-pc-infanzia/) — l'alfabeto completo: ogni lettera abbinata a una parola della Protezione Civile (A→ACQUA, C→CASCO, P→POMPIERE…) con la lettera da ricalcare. Completa l'ABC delle Vocali con tutte le 21 lettere. Adatta anche per la classe 1ª.
+- 👉 [**L'Alfabetiere della Sicurezza — tutte le lettere su un foglio**](/formazione/schede-stampabili/alfabetiere-pc-infanzia/) — tutte le lettere in tabella, ognuna con il disegno da colorare, la parola della protezione civile (A→ALLERTA, C→CASCO, T→TERREMOTO…) e la lettera da ricalcare. Si stampa su un foglio solo: si usa come poster o come foglio di lavoro. Adatta anche per la classe 1ª.
+- 👉 [**A come Allerta, Z come Zaino — il quaderno delle lettere**](/formazione/schede-stampabili/alfabetiere-az-infanzia/) — **una lettera per foglio**: il disegno da colorare, la lettera da ricalcare in **stampatello maiuscolo e minuscolo** e in **corsivo maiuscolo e minuscolo**, poi la parola da copiare. Dalla finestra di stampa si possono scegliere solo le pagine che servono. Le lettere H, J, W, X e Y portano una parola straniera spiegata in italiano. Adatto anche per la classe 1ª.
 - 👉 [**Riconosci l'Iniziale**](/formazione/schede-stampabili/riconosci-iniziale-infanzia/) — per ogni immagine il bambino cerchia la lettera con cui inizia la parola, fra tre opzioni. 10 parole-chiave della sicurezza.
 - 👉 [**Collega la Parola all'Immagine**](/formazione/schede-stampabili/collega-parola-immagine-infanzia/) — 8 parole in stampatello da collegare con una linea alle 8 immagini in colonna a destra. Adatta anche per la classe 1ª.
 
@@ -297,6 +298,18 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 - 👉 [**Colora il Vento**](/formazione/schede-stampabili/colorare-vento-infanzia/) — al riparo dagli oggetti che possono volare via.
 - 👉 [**Colora la Frana**](/formazione/schede-stampabili/colorare-frana-infanzia/) — riconosco i sassi che cadono, mi allontano e avviso un adulto.
 - 👉 [**Colora la Neve abbondante**](/formazione/schede-stampabili/colorare-neve-infanzia/) — vestito caldo, attento al ghiaccio, a casa al sicuro.
+
+*Da ritagliare e giocare*:
+
+- 👉 [**Memory della protezione civile**](/formazione/schede-stampabili/memory-protezione-civile-infanzia/) — **tessere da ritagliare, tutte diverse**: si abbinano a due a due perché le due cose vanno insieme (il vigile del fuoco e l'autopompa, il drone e il radiocomando, lo zaino e l'acqua, l'uscita e il cortile). Si abbina per significato, non per forma, e quando si trova la coppia si dice anche perché. La scheda ha le tessere, il retro da incollare e le regole con l'elenco delle coppie per l'adulto.
+
+*Album da colorare (un disegno grande per foglio)*:
+
+- 👉 [**I mezzi della protezione civile**](/formazione/schede-stampabili/disegni-mezzi-infanzia/) — autopompa, ambulanza, camion, furgone accessibile, auto, elicottero, aereo, gommone, drone, radio, la nevicata. Un mezzo per foglio, con una riga che dice a cosa serve.
+- 👉 [**Le persone che aiutano**](/formazione/schede-stampabili/disegni-persone-infanzia/) — volontari, vigile del fuoco, medico, infermiera, cane da soccorso, chi risponde al telefono, la mano dell'adulto, la famiglia, il gatto di casa, la tenda, l'acqua, il cortile della scuola.
+- 👉 [**Le giornate insieme**](/formazione/schede-stampabili/disegni-momenti-infanzia/) — il campo, la cucina, la lettura, il disegno, il gioco, il pallone, la lettera, la scuola, le strisce, il temporale, il sole, il cuore.
+
+Gli album servono a **dare un nome alle cose** e a far raccontare il bambino: le istruzioni su cosa fare in emergenza restano nelle schede di autoprotezione qui sopra. Dalla finestra di stampa si scelgono solo le pagine che servono.
 
 *Sui soccorritori e sul 112*:
 

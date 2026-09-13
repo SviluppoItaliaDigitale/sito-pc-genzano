@@ -3,7 +3,7 @@ title: "Attribuzioni dei pittogrammi"
 description: "Crediti, fonti e licenze dei pittogrammi usati sul sito per supportare la comprensione di bambini, anziani e parlanti italiano L2."
 type: "page"
 layout: "single"
-dataUltimaRevisione: "2026-05-06"
+dataUltimaRevisione: "2026-09-13"
 ---
 
 Il sito utilizza pittogrammi standardizzati per facilitare la comprensione dei contenuti a **bambini, anziani, persone con disabilità cognitive e parlanti l'italiano come lingua seconda (L2)**. I simboli provengono da due fonti pubbliche, con licenze esplicite, riportate qui di seguito secondo le condizioni richieste dai rispettivi titolari.
@@ -22,6 +22,14 @@ L'utilizzo dei pittogrammi ARASAAC sul sito è conforme alla licenza CC BY-NC-SA
 1. il sito è istituzionale, **senza scopo di lucro**;
 2. l'**attribuzione** è riportata in questa pagina, linkata dal piè di pagina (footer) di tutto il sito;
 3. le opere derivate (ad esempio le **schede stampabili** dei kit didattici per le scuole) che includono pittogrammi ARASAAC ereditano la **stessa licenza CC BY-NC-SA 4.0** e ne riportano l'attribuzione.
+
+### Versione in bianco e nero, da colorare
+
+ARASAAC pubblica ogni pittogramma anche in una **variante in bianco e nero**: lo stesso disegno con il solo contorno, pensato per essere colorato. Le schede didattiche da colorare del sito usano questa variante, raccolta in `/pittogrammi/arasaac-bn/`.
+
+Valgono le stesse condizioni: autore **Sergio Palao**, origine **ARASAAC**, proprietà del **Governo di Aragona**, licenza **CC BY-NC-SA 4.0**. Ogni scheda che li contiene riporta l'attribuzione sul foglio stampato ed eredita la stessa licenza.
+
+L'elenco dei pittogrammi usati, con il numero identificativo di ciascuno sul portale ARASAAC, è nel file `registro.json` della stessa cartella.
 
 ## Segnali di sicurezza ISO 7010
 

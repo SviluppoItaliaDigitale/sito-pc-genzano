@@ -93,6 +93,13 @@ def patch_html_paths(html: str, schede_incluse: list[str] | None = None) -> str:
         'href="../assets/scheda-print.css"',
         'href="../../assets/scheda-print.css"',
     )
+    # Font self-hosted richiamati da una url() dentro <style>: l'alfabetiere usa
+    # il corsivo scolastico. Senza questa riscrittura lo ZIP aperto offline
+    # cadrebbe sul corsivo di sistema, che ha le lettere legate in modo diverso.
+    html = html.replace(
+        "url('/formazione/schede-stampabili/assets/",
+        "url('../../assets/",
+    )
     # Favicon assoluto: rimuovo (non serve offline, evita errori 404 nel browser)
     html = re.sub(
         r'<link[^>]+rel=["\']?(?:icon|shortcut icon)["\']?[^>]*>',
@@ -438,6 +445,13 @@ def costruisci_pacchetto(slug: str, md_filename: str) -> tuple[int, int, list[st
                         "/pittogrammi/" + pitto,
                         "../../assets/pittogrammi/" + pitto,
                     )
+            # Font self-hosted: lo porto nello ZIP solo se una scheda di questo
+            # kit lo usa davvero, altrimenti peserebbe su tutti i pacchetti.
+            if "assets/edu-cursive-400.woff2" in html_patched:
+                for extra in ("edu-cursive-400.woff2", "OFL-edu-cursive.txt"):
+                    src_font = SCHEDE_BASE / "assets" / extra
+                    if src_font.exists() and not (tmp / "assets" / extra).exists():
+                        shutil.copy(src_font, tmp / "assets" / extra)
             (dst_dir / "index.html").write_text(html_patched, encoding="utf-8")
             # copia eventuali asset locali (immagini, css, js, json) accanto alla scheda
             for asset in src_dir.iterdir():

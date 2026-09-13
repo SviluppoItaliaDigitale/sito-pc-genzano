@@ -345,11 +345,48 @@ pittogrammi ARASAAC ereditano la stessa licenza CC BY-NC-SA 4.0.
 Attribuzione completa: https://www.protezionecivilegenzano.it/attribuzioni-pittogrammi/
 EOF
 
+# ---------------------------------------------------------------------------
+# ARASAAC in bianco e nero (versione da colorare) — scaricati PER ID
+#
+# A differenza della sezione sopra, che cerca per parola chiave e prende il
+# primo risultato, questi pittogrammi sono scelti uno per uno guardandoli e
+# sono richiamati per identificativo: il risultato e' riproducibile e non
+# cambia se ARASAAC riordina i risultati di ricerca. L'elenco vive in
+# static/pittogrammi/arasaac-bn/registro.json, scritto insieme alle schede
+# da colorare che li usano.
+# ---------------------------------------------------------------------------
+DEST_ARA_BN="$REPO_ROOT/static/pittogrammi/arasaac-bn"
+REG_BN="$DEST_ARA_BN/registro.json"
+OK_BN=0; FAIL_BN=0; SKIP_BN=0
+
+if [ -f "$REG_BN" ]; then
+  mkdir -p "$DEST_ARA_BN"
+  echo ""
+  echo "==> ARASAAC bianco e nero (da registro.json)"
+  while IFS='|' read -r NAME ID; do
+    [ -z "$NAME" ] && continue
+    OUT="$DEST_ARA_BN/$NAME.png"
+    if [ -f "$OUT" ] && [ "$FORCE" -eq 0 ]; then
+      SKIP_BN=$((SKIP_BN+1)); continue
+    fi
+    URL="https://api.arasaac.org/v1/pictograms/${ID}?color=false&resolution=500&download=false"
+    if curl -sLf -A "$UA" -o "$OUT" "$URL"; then
+      OK_BN=$((OK_BN+1)); echo "  [ok]   $NAME (id $ID)"
+    else
+      rm -f "$OUT"; FAIL_BN=$((FAIL_BN+1))
+      FAILED_ITEMS+=("ARASAAC b/n '$NAME' (id $ID) — download fallito")
+      echo "  [FAIL] $NAME (id $ID)"
+    fi
+    sleep 0.2
+  done < <(jq -r 'to_entries[] | "\(.key)|\(.value.arasaac_id)"' "$REG_BN")
+fi
+
 echo ""
 echo "==================================================="
 echo "Pittogrammi scaricati:"
 echo "  ISO 7010   ok=$OK_ISO  skip=$SKIP_ISO  fail=$FAIL_ISO"
 echo "  ARASAAC    ok=$OK_ARA  skip=$SKIP_ARA  fail=$FAIL_ARA"
+echo "  ARASAAC b/n ok=$OK_BN  skip=$SKIP_BN  fail=$FAIL_BN"
 echo "==================================================="
 
 if [ "${#FAILED_ITEMS[@]}" -gt 0 ]; then
