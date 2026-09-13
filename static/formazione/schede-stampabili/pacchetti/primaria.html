@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pacchetto stampa: Scuola Primaria (6-11 anni) — 83 schede A4</title>
-  <meta name="description" content="Stampa in un click tutte le 83 schede stampabili della Scuola Primaria (6-11 anni). Pacchetto auto-aggiornato dal sito istituzionale.">
+  <title>Pacchetto stampa: Scuola Primaria (6-11 anni) — 84 schede A4</title>
+  <meta name="description" content="Stampa in un click tutte le 84 schede stampabili della Scuola Primaria (6-11 anni). Pacchetto auto-aggiornato dal sito istituzionale.">
   <meta name="robots" content="noindex,follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
@@ -414,6 +414,146 @@
 
 /* === stili scheda 5 === */
 
+    .scheda-page:has(> .lib) { padding: 0; }
+    .lib { padding: 10mm 12mm 4mm; display: flex; flex-direction: column; min-height: 238mm; }
+    .lib .scheda-header { margin-bottom: 2mm; align-items: center; }
+    .lib .scheda-header .scheda-titolo-principale { font-size: 23px; line-height: 1.15; }
+    .lib .scheda-header .scheda-sottotitolo { font-size: 11px; }
+    .lib-tag { font-size: 9px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase;
+      color: #ea580c; margin: 0 0 2.5mm; }
+
+    .lib-corpo { display: flex; gap: 5mm; align-items: flex-start; }
+    .lib-testo { flex: 1; }
+    .lib-testo p { font-size: 11.5px; line-height: 1.45; margin: 0 0 2mm; }
+    .lib-regole h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em;
+      color: var(--scheda-blu); margin: 0 0 1.2mm; padding-bottom: 0.6mm;
+      border-bottom: 1.5px solid var(--scheda-blu); }
+    .lib-regole ul { margin: 0 0 0 4.5mm; padding: 0; }
+    .lib-regole li { font-size: 11px; line-height: 1.35; margin-bottom: 0.9mm; }
+    .lib-pitto { display: flex; flex-direction: column; gap: 2mm; flex: 0 0 22mm; }
+    .lib-pitto img { width: 22mm; height: 22mm; object-fit: contain; }
+
+    .lib-allerta { width: 100%; border-collapse: collapse; margin-top: 2.5mm; }
+    .lib-allerta td { font-size: 9.5px; line-height: 1.28; padding: 0.7mm 2mm 0.7mm 0;
+      vertical-align: top; border-top: 1px solid #e2e8f0; }
+    .lib-allerta td:first-child { width: 26mm; font-weight: 700; white-space: nowrap; }
+    .lib-all-che { width: 24mm; font-style: italic; color: #475569; }
+    .lib-all-pal { display: inline-block; width: 3.5mm; height: 3.5mm; border-radius: 1px;
+      border: 0.6px solid #1a1a1a; margin-right: 1.4mm; vertical-align: -0.5mm; }
+
+    .lib-fustella { margin-top: 3mm; border: 1.4px dashed #0b3c5d; border-radius: 3px;
+      padding: 2.5mm 3mm; background: #f8fafc; }
+    .lib-fustella-tit { font-size: 10.5px; font-weight: 700; color: var(--scheda-blu);
+      margin-bottom: 1.5mm; }
+    .lib-disegno { text-align: center; background: #fff; border: 1px solid #cbd5e1;
+      border-radius: 2px; padding: 2mm; }
+    .lib-disegno .fust { max-width: 100%; height: auto; }
+    .lib-montaggio { font-size: 10px; line-height: 1.4; margin: 1.8mm 0 0; color: #1a1a1a; }
+
+    .lib-tessere { display: grid; grid-template-columns: repeat(7, 1fr); gap: 1.5mm; margin-top: 3mm; }
+    .lib-tessera { border: 1px solid #111827; border-radius: 2px; padding: 1.5mm 0.6mm;
+      text-align: center; }
+    .lib-tessera img { width: 15mm; height: 15mm; object-fit: contain; }
+    .lib-tessera span { display: block; font-size: 7px; font-weight: 700; line-height: 1.1;
+      margin-top: 0.8mm; }
+
+    .lib .nota-adulto { font-size: 9.5px; line-height: 1.4; margin: 3mm 0 0; }
+    .lib-licenza { font-size: 8px; color: #555; margin: 1.5mm 0 0; }
+
+    /* copertina */
+    .lib-cop { text-align: center; }
+    .lib-cop-logo { width: 34mm; height: 34mm; object-fit: contain; margin: 4mm auto 3mm; display: block; }
+    .lib-cop-ente { font-size: 11px; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; color: #ea580c; line-height: 1.3; }
+    .lib-cop-titolo { font-size: 34px; font-weight: 800; color: var(--scheda-blu);
+      line-height: 1.12; margin: 4mm 0 2mm; }
+    .lib-cop-occhiello { display: inline-block; background: var(--scheda-blu); color: #fff;
+      font-size: 12px; font-weight: 700; padding: 1.2mm 4mm; border-radius: 12px; }
+    .lib-cop-testo { font-size: 12px; line-height: 1.5; max-width: 140mm; margin: 5mm auto 0; }
+    .lib-cop-fasce { display: flex; gap: 3mm; justify-content: center; margin: 5mm 0 0; }
+    .lib-cop-fasce > div { flex: 1; max-width: 52mm; border: 1px solid #cbd5e1; border-radius: 3px;
+      padding: 2mm; }
+    .lib-cop-fasce strong { display: block; font-size: 10px; color: var(--scheda-blu);
+      text-transform: uppercase; letter-spacing: 0.06em; }
+    .lib-cop-fasce span { font-size: 10.5px; }
+    .lib-cop-indice { text-align: left; max-width: 150mm; margin: 5mm auto 0; border: 1px solid #cbd5e1;
+      border-radius: 3px; padding: 2.5mm 3mm; }
+    .lib-cop-indice strong { font-size: 10.5px; color: var(--scheda-blu); text-transform: uppercase;
+      letter-spacing: 0.06em; }
+    .lib-cop-indice ol { columns: 2; margin: 1.5mm 0 0 5mm; padding: 0; }
+    .lib-cop-indice li { font-size: 10px; margin-bottom: 0.6mm; }
+    .lib-cop-nota { font-size: 9.5px; line-height: 1.45; text-align: left; max-width: 150mm;
+      margin: 4mm auto 0; background: #fff7ed; border-left: 3px solid #ea580c; padding: 2mm 3mm; }
+    .lib-cop-loghi { display: flex; justify-content: center; gap: 8mm; margin: auto 0 0; padding-top: 4mm; }
+    .lib-logo { text-align: center; }
+    .lib-logo img { width: 15mm; height: 15mm; object-fit: contain; display: block; margin: 0 auto 1mm; }
+    .lib-logo span { font-size: 7.5px; color: #475569; }
+
+    /* guida */
+    .lib-guida { display: flex; gap: 4mm; }
+    .lib-box { flex: 1; border: 1px solid #cbd5e1; border-radius: 3px; padding: 2.5mm 3mm; }
+    .lib-box-largo { margin-top: 3mm; }
+    .lib-box h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em;
+      color: var(--scheda-blu); margin: 0 0 1.5mm; }
+    .lib-box ul { margin: 0 0 0 4.5mm; padding: 0; }
+    .lib-box li { font-size: 10.5px; line-height: 1.35; margin-bottom: 1mm; }
+    .lib-legenda td { font-size: 10.5px; padding: 1mm 0; vertical-align: middle; }
+    .lib-legenda td:first-child { width: 22mm; }
+    .tr-taglio, .tr-monte, .tr-valle, .tr-colla { display: block; width: 20mm; height: 0; }
+    .tr-taglio { border-top: 2px solid #111827; }
+    .tr-monte { border-top: 2px dashed #0284c7; }
+    .tr-valle { border-top: 2px dotted #ea580c; }
+    .tr-colla { height: 4mm; background: repeating-linear-gradient(45deg, #fef3c7, #fef3c7 2px,
+      #fde68a 2px, #fde68a 4px); border: 1px dashed #d97706; }
+    .lib-trucco { font-size: 10px; line-height: 1.4; margin: 2mm 0 0; }
+    .lib-mec td { font-size: 10.5px; line-height: 1.35; padding: 1.2mm 2mm 1.2mm 0;
+      vertical-align: top; border-top: 1px solid #e2e8f0; }
+    .lib-mec-nome { width: 40mm; font-weight: 700; color: var(--scheda-blu); }
+
+    /* diploma e tesserino */
+    .lib-diploma { margin-top: 2mm; }
+    .lib-dip-bordo { border: 2.5px double var(--scheda-blu); border-radius: 4px; padding: 6mm;
+      text-align: center; }
+    .lib-dip-occhiello { font-size: 9.5px; letter-spacing: 0.07em; text-transform: uppercase;
+      color: #ea580c; font-weight: 700; }
+    .lib-dip-titolo { font-size: 26px; font-weight: 800; color: var(--scheda-blu);
+      line-height: 1.15; margin: 3mm 0; }
+    .lib-dip-testo { font-size: 11px; line-height: 1.45; margin: 2mm 0; }
+    .lib-dip-riga { border-bottom: 1px solid #1a1a1a; height: 7mm; margin: 0 auto; max-width: 90mm; }
+    .lib-dip-firme { display: flex; gap: 8mm; margin-top: 5mm; }
+    .lib-dip-firme > div { flex: 1; }
+    .lib-dip-firme span { font-size: 9px; color: #475569; }
+    .lib-tesserino { margin-top: 4mm; }
+    .lib-tess-tit { font-size: 11px; font-weight: 700; color: var(--scheda-blu); margin-bottom: 1.5mm; }
+    .lib-tess-carta { display: flex; border: 1px solid #111827; border-radius: 2px; }
+    .lib-tess-fronte { flex: 0 0 45mm; border-right: 1.5px dashed #0284c7; padding: 3mm;
+      text-align: center; }
+    .lib-tess-fronte strong { display: block; font-size: 30px; color: #c1121f; font-weight: 800; }
+    .lib-tess-fronte span { font-size: 9px; }
+    .lib-tess-retro { flex: 1; padding: 2.5mm 3mm; }
+    .lib-tess-retro div { font-size: 9.5px; line-height: 1.35; margin-bottom: 0.8mm; }
+    .lib-tess-nota { font-size: 9.5px; margin: 1.5mm 0 0; color: #475569; }
+
+    .lib-indice { margin: 0 0 1rem; }
+    .lib-indice a { display: inline-block; padding: 0.2rem 0.55rem; margin: 0.12rem;
+      border: 1.5px solid var(--scheda-blu); border-radius: 5px; color: var(--scheda-blu);
+      text-decoration: none; font-size: 0.85rem; }
+    .lib-indice a:hover, .lib-indice a:focus { background: var(--scheda-blu); color: #fff;
+      outline: 2px solid #ffbe2e; outline-offset: 2px; }
+
+    @media screen and (max-width: 700px) {
+      .lib { padding: 5mm 4mm; min-height: auto; }
+      .lib-corpo, .lib-guida, .lib-cop-fasce, .lib-tess-carta { flex-direction: column; }
+      .lib-pitto { flex-direction: row; }
+      .lib-tessere { grid-template-columns: repeat(3, 1fr); }
+      .lib-cop-indice ol { columns: 1; }
+      .lib-cop-loghi { flex-wrap: wrap; gap: 4mm; }
+      .lib-tess-fronte { border-right: none; border-bottom: 2px dashed #0284c7; }
+    }
+  
+
+/* === stili scheda 6 === */
+
     .scheda-page:has(> .oca) { padding: 0; }
     .oca { padding: 9mm 11mm 4mm; display: flex; flex-direction: column; min-height: 238mm; }
     .oca .scheda-header { margin-bottom: 2.5mm; align-items: center; }
@@ -509,7 +649,7 @@
     }
   
 
-/* === stili scheda 6 === */
+/* === stili scheda 7 === */
 
     .cv-griglia {
       display: grid;
@@ -560,7 +700,7 @@
     }
   
 
-/* === stili scheda 7 === */
+/* === stili scheda 8 === */
 
     .pf-tabella {
       width: 100%;
@@ -596,7 +736,7 @@
     }
   
 
-/* === stili scheda 8 === */
+/* === stili scheda 9 === */
 
     /* Griglia CAA: 12 celle indicabili, bordo blu istituzionale */
     .caa-griglia {
@@ -646,7 +786,7 @@
     }
   
 
-/* === stili scheda 9 === */
+/* === stili scheda 10 === */
 
     /* Finto schermo di telefono con il messaggio IT-alert */
     .italert-telefono {
@@ -677,7 +817,7 @@
     }
   
 
-/* === stili scheda 10 === */
+/* === stili scheda 11 === */
 
     /* I tre segnali del maremoto */
     .mare-segnali {
@@ -711,7 +851,7 @@
     @media (max-width: 600px) { .mare-segnali { grid-template-columns: 1fr; } }
   
 
-/* === stili scheda 11 === */
+/* === stili scheda 12 === */
 
     /* Le 3 tappe del viaggio */
     .bus-tappe {
@@ -742,7 +882,7 @@
     @media (max-width: 600px) { .bus-tappe { grid-template-columns: 1fr; } }
   
 
-/* === stili scheda 12 === */
+/* === stili scheda 13 === */
 
     .blp-vf {
       width: 100%;
@@ -786,7 +926,7 @@
     @media (max-width: 600px) { .blp-kit { columns: 1; } }
   
 
-/* === stili scheda 13 === */
+/* === stili scheda 14 === */
 
     .vfp-vf {
       width: 100%;
@@ -807,7 +947,7 @@
     }
   
 
-/* === stili scheda 14 === */
+/* === stili scheda 15 === */
 
     .tip-vf {
       width: 100%;
@@ -828,7 +968,7 @@
     }
   
 
-/* === stili scheda 15 === */
+/* === stili scheda 16 === */
 
     .sezione-titolo {
       display: flex;
@@ -1002,7 +1142,7 @@
     .istruzioni-maestra strong { color: #664d03; }
   
 
-/* === stili scheda 16 === */
+/* === stili scheda 17 === */
 
     .sezione-titolo {
       display: flex;
@@ -1142,7 +1282,7 @@
     .istruzioni-maestra li { margin: 0.15rem 0; }
   
 
-/* === stili scheda 17 === */
+/* === stili scheda 18 === */
 
     .frase-blocco {
       margin: 0.5rem 0 0.85rem 0;
@@ -1222,7 +1362,7 @@
     .istruzioni-maestra strong { color: #664d03; }
   
 
-/* === stili scheda 18 === */
+/* === stili scheda 19 === */
 
     .rs-blocco {
       display: flex;
@@ -1257,7 +1397,7 @@
     }
   
 
-/* === stili scheda 19 === */
+/* === stili scheda 20 === */
 
     .sezione-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 1rem 0 0.5rem 0; }
     .sezione-titolo .num {
@@ -1290,7 +1430,7 @@
     .mm-cella .vuoto { display: inline-block; min-width: 1.6rem; border-bottom: 2px solid var(--scheda-bordo); height: 1.6rem; }
   
 
-/* === stili scheda 20 === */
+/* === stili scheda 21 === */
 
     .di-griglia {
       display: grid;
@@ -1318,7 +1458,7 @@
     .di-iniziale b { color: var(--scheda-blu); font-size: 0.95rem; }
   
 
-/* === stili scheda 21 === */
+/* === stili scheda 22 === */
 
     .pf-item { margin: 0.7rem 0; }
     .pf-emo-titolo { display: flex; align-items: center; gap: 0.5rem; font-weight: 700; color: var(--scheda-blu); font-size: 0.95rem; margin-bottom: 0.3rem; }
@@ -1334,7 +1474,7 @@
     .pf-libera .pf-riga { margin-top: 0.5rem; }
   
 
-/* === stili scheda 22 === */
+/* === stili scheda 23 === */
 
     .cs-blocco { padding: 0.5rem 0.7rem; border: 1.5px solid var(--scheda-bordo); border-radius: 8px; margin: 0.55rem 0; }
     .cs-modello { display: flex; align-items: center; gap: 0.7rem; }
@@ -1353,7 +1493,7 @@
     }
   
 
-/* === stili scheda 23 === */
+/* === stili scheda 24 === */
 
     .cf-blocco { padding: 0.5rem 0.7rem; border: 1.5px solid var(--scheda-bordo); border-radius: 8px; margin: 0.6rem 0; }
     .cf-modello { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.2rem; }
@@ -1371,7 +1511,7 @@
     }
   
 
-/* === stili scheda 24 === */
+/* === stili scheda 25 === */
 
     .dt-item { display: flex; align-items: flex-start; gap: 0.7rem; margin: 0.7rem 0; }
     .dt-num {
@@ -1394,7 +1534,7 @@
     .dt-aiuto strong { color: #664d03; }
   
 
-/* === stili scheda 25 === */
+/* === stili scheda 26 === */
 
     .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
     .sez-titolo .num {
@@ -1466,7 +1606,7 @@
     }
   
 
-/* === stili scheda 26 === */
+/* === stili scheda 27 === */
 
     .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
     .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
@@ -1518,7 +1658,7 @@
     .istruzioni-maestra strong { color: #664d03; }
   
 
-/* === stili scheda 27 === */
+/* === stili scheda 28 === */
 
     .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
     .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
@@ -1592,7 +1732,7 @@
     }
   
 
-/* === stili scheda 28 === */
+/* === stili scheda 29 === */
 
     .mappa-svg {
       width: 100%; max-width: 600px;
@@ -1638,7 +1778,7 @@
     }
   
 
-/* === stili scheda 29 === */
+/* === stili scheda 30 === */
 
     .racconto-box {
       background: #f4f7fb; border-left: 4px solid var(--scheda-blu);
@@ -1691,7 +1831,7 @@
     }
   
 
-/* === stili scheda 30 === */
+/* === stili scheda 31 === */
 
     .frasi-griglia { display: grid; gap: 0.45rem; margin: 0.5rem 0; }
     .frase-card {
@@ -1741,7 +1881,7 @@
     }
   
 
-/* === stili scheda 31 === */
+/* === stili scheda 32 === */
 
     .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
     .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
@@ -1805,7 +1945,7 @@
     .istruzioni-maestra strong { color: #664d03; }
   
 
-/* === stili scheda 32 === */
+/* === stili scheda 33 === */
 
     .problema-card {
       padding: 0.7rem 0.85rem; background: #fff;
@@ -1860,7 +2000,7 @@
     }
   
 
-/* === stili scheda 33 === */
+/* === stili scheda 34 === */
 
     .mappa-italia { width: 100%; max-width: 360px; height: auto; margin: 0.4rem auto; display: block; }
     .legenda-zone {
@@ -1918,7 +2058,7 @@
     }
   
 
-/* === stili scheda 34 === */
+/* === stili scheda 35 === */
 
     .articolo-card {
       padding: 0.7rem 0.85rem; background: #fff;
@@ -1981,7 +2121,7 @@
     }
   
 
-/* === stili scheda 35 === */
+/* === stili scheda 36 === */
 
     .testo-box {
       background: #f4f7fb; border-left: 4px solid var(--scheda-blu);
@@ -2025,7 +2165,7 @@
     }
   
 
-/* === stili scheda 36 === */
+/* === stili scheda 37 === */
 
     .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
     .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
@@ -2095,7 +2235,7 @@
     .suggerimenti-box li { margin: 0.15rem 0; line-height: 1.4; }
   
 
-/* === stili scheda 37 === */
+/* === stili scheda 38 === */
 
     .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
     .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
@@ -2211,7 +2351,7 @@
     }
   
 
-/* === stili scheda 38 === */
+/* === stili scheda 39 === */
 
     .dialogo-box {
       background: #f4f7fb; border-left: 4px solid var(--scheda-blu);
@@ -2245,7 +2385,7 @@
     }
   
 
-/* === stili scheda 39 === */
+/* === stili scheda 40 === */
 
     .quattro-colori { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; margin: 0.5rem 0; }
     .col-card {
@@ -2280,7 +2420,7 @@
     @media (max-width: 580px) { .quattro-colori { grid-template-columns: 1fr; } }
   
 
-/* === stili scheda 40 === */
+/* === stili scheda 41 === */
 
     .scuola-mappa {
       border: 2.5px solid var(--scheda-blu); border-radius: 8px;
@@ -2309,7 +2449,7 @@
     .pf-checkbox { display: inline-block; width: 1.1rem; height: 1.1rem; border: 2px solid var(--scheda-bordo); border-radius: 3px; vertical-align: middle; margin-right: 0.35rem; }
   
 
-/* === stili scheda 41 === */
+/* === stili scheda 42 === */
 
     .timeline-box { background: #f4f7fb; border-left: 4px solid var(--scheda-blu); padding: 0.7rem 0.9rem; border-radius: 0 8px 8px 0; margin: 0.5rem 0; }
     .timeline-box .data { font-weight: 700; color: var(--scheda-blu); font-size: 0.95rem; margin-bottom: 0.3rem; }
@@ -2321,7 +2461,7 @@
     .istruzioni-maestra { margin-top: 0.8rem; padding: 0.55rem 0.85rem; background: #fff8e6; border-left: 4px solid var(--scheda-oro); border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45; }
   
 
-/* === stili scheda 42 === */
+/* === stili scheda 43 === */
 
     .timeline-box { background: #f4f7fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.35rem 0; }
     .timeline-box .data { font-weight: 700; color: var(--scheda-blu); font-size: 0.9rem; margin-bottom: 0.2rem; }
@@ -2344,7 +2484,7 @@
     .scheda-h2 { font-size: 1.02rem; margin: 0.7rem 0 0.3rem; }
   
 
-/* === stili scheda 43 === */
+/* === stili scheda 44 === */
 
     .timeline-box { background: #f4f7fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.35rem 0; }
     .timeline-box .data { font-weight: 700; color: var(--scheda-blu); font-size: 0.9rem; margin-bottom: 0.2rem; }
@@ -2366,7 +2506,7 @@
     .scheda-h2 { font-size: 1.02rem; margin: 0.7rem 0 0.3rem; }
   
 
-/* === stili scheda 44 === */
+/* === stili scheda 45 === */
 
     .timeline-box { background: #f4f7fb; border-left: 4px solid var(--scheda-blu); padding: 0.7rem 0.9rem; border-radius: 0 8px 8px 0; margin: 0.5rem 0; }
     .timeline-box .data { font-weight: 700; color: var(--scheda-blu); font-size: 0.95rem; margin-bottom: 0.3rem; }
@@ -2381,7 +2521,7 @@
     .vulcano-card .testo { font-size: 0.92rem; line-height: 1.5; margin-top: 0.25rem; }
   
 
-/* === stili scheda 45 === */
+/* === stili scheda 46 === */
 @page laboratorio26 { size: A4; margin: 5mm; }
     .scheda-page:has(> .lab26-header) { page: laboratorio26; }
     .lab26 { font-size: 14px; line-height: 1.4; }
@@ -2402,7 +2542,7 @@
       .lab26 .lab26-scenario { background: white; }
     }
 
-/* === stili scheda 46 === */
+/* === stili scheda 47 === */
 
     /* Percorso "Oggetti sconosciuti e confezioni alterate" — CSS scoped .os-page */
     .scheda-page:has(> .os-page) { padding: 0; }
@@ -2452,7 +2592,7 @@
     }
   
 
-/* === stili scheda 47 === */
+/* === stili scheda 48 === */
 
     /* Percorso "Oggetti sconosciuti e confezioni alterate" — CSS scoped .os-page */
     .scheda-page:has(> .os-page) { padding: 0; }
@@ -2503,7 +2643,7 @@
     }
   
 
-/* === stili scheda 48 === */
+/* === stili scheda 49 === */
 
     /* Percorso "Oggetti sconosciuti e confezioni alterate" — CSS scoped .os-page */
     .scheda-page:has(> .os-page) { padding: 0; }
@@ -2560,17 +2700,17 @@
 
   <header class="pacchetto-toolbar no-print" role="banner">
     <a href="/formazione/schede-stampabili/" aria-label="Torna alla hub delle schede stampabili">← Torna alle schede</a>
-    <span class="pacchetto-titolo">Pacchetto stampa: Scuola Primaria · 83 schede A4</span>
-    <button type="button" onclick="window.print()" aria-label="Apri la finestra di stampa per tutte le 83 schede di Scuola Primaria">
-      🖨️ Stampa tutto (108 fogli A4)
+    <span class="pacchetto-titolo">Pacchetto stampa: Scuola Primaria · 84 schede A4</span>
+    <button type="button" onclick="window.print()" aria-label="Apri la finestra di stampa per tutte le 84 schede di Scuola Primaria">
+      🖨️ Stampa tutto (119 fogli A4)
     </button>
   </header>
 
   <section class="pacchetto-intro no-print" aria-labelledby="pacchetto-intro-h1">
     <h1 id="pacchetto-intro-h1">Pacchetto stampa — Scuola Primaria</h1>
     <p>
-      Questo pacchetto contiene <strong>83 schede stampabili</strong> della Scuola Primaria (6-11 anni),
-      per un totale di <strong>108 fogli A4</strong>.
+      Questo pacchetto contiene <strong>84 schede stampabili</strong> della Scuola Primaria (6-11 anni),
+      per un totale di <strong>119 fogli A4</strong>.
       Premi <strong>"Stampa tutto"</strong> in alto (oppure <kbd>Ctrl+P</kbd> su Windows/Linux, <kbd>Cmd+P</kbd> su Mac)
       per aprire la finestra di stampa. Per archiviare in digitale scegli <em>"Salva come PDF"</em> come stampante.
     </p>
@@ -2587,12 +2727,13 @@
   </section>
 
   <nav class="pacchetto-toc no-print" aria-label="Indice del pacchetto">
-    <h2>Indice — 83 schede in questo pacchetto</h2>
+    <h2>Indice — 84 schede in questo pacchetto</h2>
     <ol>
       <li><a href="#scheda-rubrica-valutativa-primaria">Rubrica valutativa Educazione Civica — Scuola Primaria</a></li>
       <li><a href="#scheda-rischio-idrogeologico-primaria">Alluvioni e frane: cosa faccio</a></li>
       <li><a href="#scheda-incendio-boschivo-primaria">Incendio boschivo: cosa faccio</a></li>
       <li><a href="#scheda-triangolo-fuoco-primaria">Il triangolo del fuoco — esperimenti</a></li>
+      <li><a href="#scheda-libro-popup-protezione-civile">Il libro pop-updella protezione civile</a> <span class="toc-meta">· 11 fogli</span></li>
       <li><a href="#scheda-gioco-oca-protezione-civile">Il gioco dell'oca della protezione civile</a> <span class="toc-meta">· 4 fogli</span></li>
       <li><a href="#scheda-chiamo-112">Chiamo il 112</a></li>
       <li><a href="#scheda-cruciverba-primaria">Cruciverba della Sicurezza</a></li>
@@ -3298,6 +3439,447 @@
       <span class="scheda-site">protezionecivilegenzano.it</span>
       <span>Scheda "Triangolo del fuoco — Primaria" · Scienze + Ed. Civica · classi III-V · rev. 2026</span>
     </footer>
+  </article>
+</section>
+
+<section id="scheda-libro-popup-protezione-civile" class="pacchetto-scheda" aria-label="Scheda: Il libro pop-updella protezione civile">
+  <article class="scheda-page">
+    <div class="lib lib-cop">
+      <img class="lib-cop-logo" src="/images/logo-pc-genzano.png"
+           alt="Logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma"
+           width="400" height="400">
+      <div class="lib-cop-ente">Gruppo Comunale Volontari di Protezione Civile<br>Genzano di Roma</div>
+      <h1 class="lib-cop-titolo">Il libro pop-up<br>della protezione civile</h1>
+      <div class="lib-cop-occhiello">Otto tavole da ritagliare, piegare e far saltare su</div>
+      <p class="lib-cop-testo">Un libro da costruire con le proprie mani, per imparare che cosa
+      si fa quando trema la terra, quando arriva troppa acqua, quando c'è un incendio, quando
+      suona l'allarme a scuola. Ogni tavola ha una scena che si alza dalla pagina, le frasi da
+      ricordare e il disegno tecnico per ritagliarla.</p>
+      <div class="lib-cop-fasce">
+        <div><strong>Età</strong><span>6-11 anni, con un adulto</span></div>
+        <div><strong>Occorrente</strong><span>forbici, colla, un fermacampione, colori per le figure</span></div>
+        <div><strong>Tempo</strong><span>una tavola per volta, 30-40 minuti</span></div>
+      </div>
+      <div class="lib-cop-indice"><strong>Le otto tavole</strong><ol><li><strong>Tavola 1</strong> — Chi è la Protezione Civile</li><li><strong>Tavola 2</strong> — Sotto il tavolo, e tieni la testa</li><li><strong>Tavola 3</strong> — Si sale, non si scende</li><li><strong>Tavola 4</strong> — Va&#x27; via dalla parte opposta al fumo</li><li><strong>Tavola 5</strong> — Il fumo sta in alto, tu sta&#x27; in basso</li><li><strong>Tavola 6</strong> — Suona l&#x27;allarme: in fila, fino al punto di raccolta</li><li><strong>Tavola 7</strong> — Che cosa c&#x27;è nello zaino di emergenza</li><li><strong>Tavola 8</strong> — La telefonata al 112</li></ol></div>
+      <p class="lib-cop-nota">Questo libro è materiale didattico del Gruppo Comunale.
+      <strong>Nessun ministero, ufficio scolastico o altro ente governativo lo ha approvato,
+      validato o adottato</strong>: è uno spunto per lavorare in classe o a casa, non un
+      programma da seguire. Le indicazioni di autoprotezione riprendono le pagine del nostro
+      sito, che citano le fonti istituzionali; dove un'indicazione ufficiale dice altro, vale
+      quella. In emergenza si chiama sempre il <strong>112</strong>.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>LIBRO-POPUP · Foglio 1 di 11 · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="lib">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">Come si taglia e come si piega</h2>
+          <div class="scheda-sottotitolo">La legenda dei tracciati, i materiali e i quattro meccanismi del libro</div>
+        </div>
+      </header>
+      <p class="lib-tag">PRIMA DI COMINCIARE</p>
+      <div class="lib-guida">
+        <div class="lib-box">
+          <h3>Che cosa serve</h3>
+          <ul>
+            <li><strong>Fogli delle tavole</strong>: cartoncino da 200-250 g/m², così la scena sta in piedi.</li>
+            <li><strong>Pezzi mobili</strong>: cartoncino più sottile, 160-190 g/m².</li>
+            <li><strong>Colla</strong>: stick o vinilica in poca quantità, stesa con un pennellino.</li>
+            <li><strong>Un fermacampione</strong> per il disco della Tavola 1.</li>
+            <li>Forbici a punta arrotondata, righello, e una penna scarica per segnare le pieghe.</li>
+            <li><strong>I colori</strong>: le figure sono in bianco e nero apposta. Coloratele prima
+            di ritagliare, così ogni libro viene diverso dagli altri.</li>
+          </ul>
+        </div>
+        <div class="lib-box">
+          <h3>La legenda dei tracciati</h3>
+          <table class="lib-legenda">
+            <tr><td><span class="tr-taglio"></span></td><td><strong>Riga nera continua</strong> — qui si taglia.</td></tr>
+            <tr><td><span class="tr-monte"></span></td><td><strong>Riga blu tratteggiata</strong> — piega a monte: la cresta viene verso di te.</td></tr>
+            <tr><td><span class="tr-valle"></span></td><td><strong>Riga arancione punteggiata</strong> — piega a valle: la piega va indietro.</td></tr>
+            <tr><td><span class="tr-colla"></span></td><td><strong>Area a righine gialle</strong> — qui va la colla.</td></tr>
+          </table>
+          <p class="lib-trucco"><strong>Il trucco che cambia tutto:</strong> prima di piegare,
+          appoggia il righello sulla riga e ripassala con una penna scarica. La carta si
+          schiaccia e la piega viene netta invece di strapparsi.</p>
+        </div>
+      </div>
+      <div class="lib-box lib-box-largo">
+        <h3>I quattro meccanismi</h3>
+        <table class="lib-mec"><tr><td class="lib-mec-nome">Piega a V con due alette</td><td>Ritaglia il rettangolo con l&#x27;aletta sotto. Piega a monte la riga blu al centro e a valle la riga arancione in fondo. Apri la pagina a 90°, appoggia la piega del pezzo sulla piega della pagina e incolla le due alette di sbieco, una per facciata, formando una V. Chiudendo il libro il pezzo si abbassa da solo.</td></tr><tr><td class="lib-mec-nome">Gradino tagliato nella piega</td><td>Piega il foglio a metà. Taglia le due righe nere partendo dalla piega, poi apri e spingi in avanti la linguetta che si è formata: diventa un gradino in rilievo. Non serve colla.</td></tr><tr><td class="lib-mec-nome">Volvella girevole</td><td>Ritaglia il disco e la finestra. Fora il centro del disco e il foglio nello stesso punto, unisci con un fermacampione e apri i braccetti dietro. Girando il disco, nella finestra compare un colore per volta. Il foro lo fa l&#x27;adulto, appoggiando il foglio su un tappetino e premendo con la punta di una matita: non si fa con le forbici.</td></tr><tr><td class="lib-mec-nome">Linguetta scorrevole</td><td>Ritaglia la striscia e le due fessure nel foglio. Infila la striscia da sotto nella prima fessura e da sopra nella seconda. Tirando la linguetta la figura attraversa la scena.</td></tr><tr><td class="lib-mec-nome">Tasca porta-tessere</td><td>Ritaglia la tasca con le tre alette. Piega a valle la riga arancione, incolla le tre alette sul foglio e lascia aperto il lato di sopra: è lì che entrano le tessere.</td></tr></table>
+      </div>
+      <p class="nota-adulto">Per l'adulto: le fustelle sono disegnate in millimetri veri.
+      Stampa <strong>a dimensione reale</strong> (nella finestra di stampa scegli «100%» e non
+      «adatta alla pagina»), altrimenti le misure non tornano e i pezzi non combaciano. Una
+      tavola per volta è il ritmo giusto: montarle tutte in un pomeriggio stanca e il libro
+      viene peggio.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>LIBRO-POPUP · Foglio 2 di 11 · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="lib">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">Chi è la Protezione Civile</h2>
+          <div class="scheda-sottotitolo">Il Sindaco, i volontari e il semaforo dell&#x27;allerta meteo</div>
+        </div>
+      </header>
+      <p class="lib-tag">TAVOLA 1 · LA SQUADRA DELLA SICUREZZA</p>
+      <div class="lib-corpo">
+        <div class="lib-testo">
+          <p>La <strong>Protezione Civile</strong> è fatta di persone che si preparano prima che succeda qualcosa, e che intervengono quando succede: per proteggere le persone, gli animali, le case e l'ambiente.<br>Nel Comune la prima autorità di protezione civile è il <strong>Sindaco</strong>. I <strong>volontari</strong> sono cittadini che si sono formati e danno il loro tempo: non sono pagati, e si riconoscono dalla divisa ad alta visibilità.</p>
+          <div class="lib-regole"><h3>Che cosa si fa</h3><ul>
+          <li>I volontari non si chiamano direttamente: in emergenza si chiama il 112.</li>
+          <li>Il bollettino di allerta dice che tempo è previsto, non che cosa è già successo.</li>
+          </ul></div>
+        </div>
+        <div class="lib-pitto" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/dis-volontari.png" alt="Tre volontari in divisa, uno accanto all&#x27;altro" width="500" height="500"><img src="/pittogrammi/arasaac-bn/alf-y-semaforo.png" alt="Semaforo" width="500" height="500"></div>
+      </div>
+      <table class="lib-allerta"><tr><td><span class="lib-all-pal" style="background:#16a34a"></span>VERDE</td><td class="lib-all-che">Nessuna allerta</td><td>Giornata normale. Niente da fare di speciale.</td></tr><tr><td><span class="lib-all-pal" style="background:#ca8a04"></span>GIALLA</td><td class="lib-all-che">Attenzione</td><td>Possono esserci temporali forti in qualche zona. Sta&#x27; lontano da fossi e sottopassaggi.</td></tr><tr><td><span class="lib-all-pal" style="background:#ea580c"></span>ARANCIONE</td><td class="lib-all-che">Preallarme</td><td>I fenomeni possono essere diffusi. Si esce solo se serve, e il kit è pronto.</td></tr><tr><td><span class="lib-all-pal" style="background:#dc2626"></span>ROSSA</td><td class="lib-all-che">Allarme</td><td>Fenomeni molto intensi. Non si esce se non serve davvero, e si sta lontani dai piani interrati.</td></tr></table>
+      <div class="lib-fustella">
+        <div class="lib-fustella-tit">La fustella · Volvella girevole</div>
+        <div class="lib-disegno"><svg class="fust" width="148mm" height="86mm" viewBox="0 0 148 86" role="img" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="colla" width="3" height="3" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="3" height="3" fill="#fef3c7"/><line x1="0" y1="0" x2="0" y2="3" stroke="#d97706" stroke-width="0.8"/></pattern></defs><path d="M42 42 L42.0 8.0 A34 34 0 0 1 76.0 42.0 Z" fill="#16a34a" fill-opacity="0.18" stroke="#111827" stroke-width="0.4"/><text x="59.3" y="24.7" text-anchor="middle" font-size="3.4" font-weight="bold" fill="#111827">VERDE</text><path d="M42 42 L76.0 42.0 A34 34 0 0 1 42.0 76.0 Z" fill="#ca8a04" fill-opacity="0.18" stroke="#111827" stroke-width="0.4"/><text x="59.3" y="59.3" text-anchor="middle" font-size="3.4" font-weight="bold" fill="#111827">GIALLA</text><path d="M42 42 L42.0 76.0 A34 34 0 0 1 8.0 42.0 Z" fill="#ea580c" fill-opacity="0.18" stroke="#111827" stroke-width="0.4"/><text x="24.7" y="59.3" text-anchor="middle" font-size="3.4" font-weight="bold" fill="#111827">ARANCIONE</text><path d="M42 42 L8.0 42.0 A34 34 0 0 1 42.0 8.0 Z" fill="#dc2626" fill-opacity="0.18" stroke="#111827" stroke-width="0.4"/><text x="24.7" y="24.7" text-anchor="middle" font-size="3.4" font-weight="bold" fill="#111827">ROSSA</text><circle cx="42" cy="42" r="34" stroke="#111827" stroke-width="0.5" fill="none"/><circle cx="42" cy="42" r="2" stroke="#111827" stroke-width="0.5" fill="none"/><line x1="42" y1="42" x2="22" y2="83" stroke="#64748b" stroke-width="0.3"/><text x="21" y="86" text-anchor="middle" font-size="2.8" fill="#475569">foro per il fermacampione</text><line x1="42" y1="42" x2="50.6" y2="33.4" stroke="#64748b" stroke-width="0.3" stroke-dasharray="1 1"/><circle cx="50.6" cy="33.4" r="1.2" fill="none" stroke="#111827" stroke-width="0.4"/><text x="52.5" y="32.4" font-size="2.4" fill="#475569">qui cade il centro della finestra</text><rect x="90" y="52" width="20" height="12" fill="none" stroke="#111827" stroke-width="0.7"/><text x="100" y="59.5" text-anchor="middle" font-size="2.8" fill="#111827" font-weight="bold">FINESTRA</text><text x="100" y="69" text-anchor="middle" font-size="2.4" fill="#475569">20 × 12 mm</text><text x="88" y="26" font-size="2.8" fill="#475569">la finestra si ritaglia nel foglio,</text><text x="88" y="30" font-size="2.8" fill="#475569">non nel disco: è la finta da cui</text><text x="88" y="34" font-size="2.8" fill="#475569">si vede un colore per volta.</text><text x="88" y="40" font-size="2.8" fill="#475569">Deve stare tutta dentro uno spicchio:</text><text x="88" y="44" font-size="2.8" fill="#475569">a cavallo di due, i colori si vedrebbero a coppie.</text><text x="88" y="48" font-size="2.8" fill="#475569">Il centro va a 12 mm dal foro, in diagonale.</text><line x1="8" y1="83" x2="76" y2="83" stroke="#64748b" stroke-width="0.3"/><line x1="8" y1="81.8" x2="8" y2="84.2" stroke="#64748b" stroke-width="0.3"/><line x1="76" y1="81.8" x2="76" y2="84.2" stroke="#64748b" stroke-width="0.3"/><text x="42.0" y="81.2" text-anchor="middle" font-size="2.6" fill="#475569">68 mm di diametro</text></svg></div>
+        <p class="lib-montaggio">Ritaglia il disco e la finestra. Fora il centro del disco e il foglio nello stesso punto, unisci con un fermacampione e apri i braccetti dietro. Girando il disco, nella finestra compare un colore per volta. Il foro lo fa l&#x27;adulto, appoggiando il foglio su un tappetino e premendo con la punta di una matita: non si fa con le forbici.</p>
+      </div>
+      <p class="nota-adulto">Per l'adulto: ritaglia tu le parti piccole con i bambini
+      fino ai 6 anni; dai 7 possono ritagliare da seduti, sorvegliati, con forbici a punta
+      arrotondata. Fonte delle frasi di questa tavola: Livelli di allerta: pagina «Allerte meteo» del sito, che riprende il Centro Funzionale Regionale del Lazio. Non sostituiscono il
+      piano di emergenza della scuola o dell'edificio in cui vi trovate: se un'indicazione
+      ufficiale dice altro, vale quella.</p>
+      <p class="lib-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>LIBRO-POPUP · Foglio 3 di 11 · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="lib">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">Sotto il tavolo, e tieni la testa</h2>
+          <div class="scheda-sottotitolo">Che cosa fare mentre la terra trema, e che cosa fare dopo</div>
+        </div>
+      </header>
+      <p class="lib-tag">TAVOLA 2 · TERREMOTO</p>
+      <div class="lib-corpo">
+        <div class="lib-testo">
+          <p>Durante una scossa la cosa più pericolosa non è il pavimento che si muove: sono le <strong>cose che cadono</strong>. Un tavolo robusto ti fa da tetto.</p>
+          <div class="lib-regole"><h3>Che cosa si fa</h3><ul>
+          <li>Mettiti sotto un tavolo robusto e copriti la testa con le braccia.</li>
+          <li>Non correre fuori mentre trema: le cose cadono proprio davanti alle porte.</li>
+          <li>Sta' lontano da finestre, vetri, specchi e mobili pesanti.</li>
+          <li>Non prendere l'ascensore. Quando la scossa finisce, esci con calma dalle scale.</li>
+          <li>Se sei all'aperto, va' in uno spazio aperto, lontano da edifici e alberi.</li>
+          </ul></div>
+        </div>
+        <div class="lib-pitto" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-t-terremoto.png" alt="Persona che si ripara sotto un tavolo durante un terremoto" width="500" height="500"></div>
+      </div>
+      <div class="lib-fustella">
+        <div class="lib-fustella-tit">La fustella · Piega a V con due alette</div>
+        <div class="lib-disegno"><svg class="fust" width="108mm" height="84mm" viewBox="0 0 108 84" role="img" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="colla" width="3" height="3" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="3" height="3" fill="#fef3c7"/><line x1="0" y1="0" x2="0" y2="3" stroke="#d97706" stroke-width="0.8"/></pattern></defs><rect x="6" y="6" width="96" height="52" stroke="#111827" stroke-width="0.5" fill="none" rx="1"/><image href="/pittogrammi/arasaac-bn/pop-tavolo.png" x="34.0" y="10" width="40" height="40" preserveAspectRatio="xMidYMid meet"><title>Tavolo robusto visto di lato</title></image><line x1="54.0" y1="4" x2="54.0" y2="70" stroke="#0284c7" stroke-width="0.5" fill="none" stroke-dasharray="3 2"/><line x1="6" y1="58" x2="102" y2="58" stroke="#ea580c" stroke-width="0.5" fill="none" stroke-dasharray="0.7 1.7" stroke-linecap="round"/><rect x="6" y="58" width="96" height="12" stroke="#111827" stroke-width="0.5" fill="none"/><rect x="8" y="60" width="44.0" height="8" fill="url(#colla)" stroke="#d97706" stroke-width="0.4" stroke-dasharray="1.5 1.5"/><text x="30.0" y="65.1" text-anchor="middle" font-size="2.6" fill="#92400e" font-weight="bold">ALETTA SINISTRA</text><rect x="56.0" y="60" width="44.0" height="8" fill="url(#colla)" stroke="#d97706" stroke-width="0.4" stroke-dasharray="1.5 1.5"/><text x="78.0" y="65.1" text-anchor="middle" font-size="2.6" fill="#92400e" font-weight="bold">ALETTA DESTRA</text><line x1="6" y1="80" x2="102" y2="80" stroke="#64748b" stroke-width="0.3"/><line x1="6" y1="78.8" x2="6" y2="81.2" stroke="#64748b" stroke-width="0.3"/><line x1="102" y1="78.8" x2="102" y2="81.2" stroke="#64748b" stroke-width="0.3"/><text x="54.0" y="78.2" text-anchor="middle" font-size="2.6" fill="#475569">96 mm</text></svg></div>
+        <p class="lib-montaggio">Ritaglia il rettangolo con l&#x27;aletta sotto. Piega a monte la riga blu al centro e a valle la riga arancione in fondo. Apri la pagina a 90°, appoggia la piega del pezzo sulla piega della pagina e incolla le due alette di sbieco, una per facciata, formando una V. Chiudendo il libro il pezzo si abbassa da solo.</p>
+      </div>
+      <p class="nota-adulto">Per l'adulto: ritaglia tu le parti piccole con i bambini
+      fino ai 6 anni; dai 7 possono ritagliare da seduti, sorvegliati, con forbici a punta
+      arrotondata. Fonte delle frasi di questa tavola: Pagina «Rischio sismico» del sito. Non sostituiscono il
+      piano di emergenza della scuola o dell'edificio in cui vi trovate: se un'indicazione
+      ufficiale dice altro, vale quella.</p>
+      <p class="lib-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>LIBRO-POPUP · Foglio 4 di 11 · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="lib">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">Si sale, non si scende</h2>
+          <div class="scheda-sottotitolo">L&#x27;acqua riempie prima le cantine: i piani alti sono il posto giusto</div>
+        </div>
+      </header>
+      <p class="lib-tag">TAVOLA 3 · ALLUVIONE</p>
+      <div class="lib-corpo">
+        <div class="lib-testo">
+          <p>Quando arriva tanta acqua, riempie per prima la parte più bassa della casa: <strong>cantine, garage e locali interrati</strong>. È lì che non si va, nemmeno per prendere qualcosa.</p>
+          <div class="lib-regole"><h3>Che cosa si fa</h3><ul>
+          <li>Sali ai piani alti della casa.</li>
+          <li>Non scendere in cantina, in garage o nei locali interrati.</li>
+          <li>Non attraversare strade allagate, né a piedi né in auto: non si vede quanto è profondo.</li>
+          <li>Sta' lontano da fossi, ponti e corsi d'acqua.</li>
+          <li>Se un adulto te lo chiede, aiuta a chiudere le porte verso i locali più bassi.</li>
+          </ul></div>
+        </div>
+        <div class="lib-pitto" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/oca-pioggia.png" alt="Pioggia forte" width="500" height="500"><img src="/pittogrammi/arasaac-bn/pop-casa.png" alt="Casa" width="500" height="500"></div>
+      </div>
+      <div class="lib-fustella">
+        <div class="lib-fustella-tit">La fustella · Gradino tagliato nella piega</div>
+        <div class="lib-disegno"><svg class="fust" width="120mm" height="90mm" viewBox="0 0 120 90" role="img" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="colla" width="3" height="3" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="3" height="3" fill="#fef3c7"/><line x1="0" y1="0" x2="0" y2="3" stroke="#d97706" stroke-width="0.8"/></pattern></defs><rect x="6" y="6" width="108" height="74" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.4" stroke-dasharray="2 2"/><line x1="6" y1="20" x2="114" y2="20" stroke="#0284c7" stroke-width="0.5" fill="none" stroke-dasharray="3 2"/><text x="112" y="18" text-anchor="end" font-size="2.8" fill="#0284c7">piega del foglio</text><line x1="30" y1="20" x2="30" y2="54" stroke="#111827" stroke-width="0.5" fill="none"/><line x1="90" y1="20" x2="90" y2="54" stroke="#111827" stroke-width="0.5" fill="none"/><line x1="30" y1="54" x2="90" y2="54" stroke="#ea580c" stroke-width="0.5" fill="none" stroke-dasharray="0.7 1.7" stroke-linecap="round"/><image href="/pittogrammi/arasaac-bn/pop-scala.png" x="47.0" y="24" width="26" height="26" preserveAspectRatio="xMidYMid meet"><title>Scala con i gradini</title></image><line x1="30" y1="65" x2="90" y2="65" stroke="#64748b" stroke-width="0.3"/><line x1="30" y1="63.8" x2="30" y2="66.2" stroke="#64748b" stroke-width="0.3"/><line x1="90" y1="63.8" x2="90" y2="66.2" stroke="#64748b" stroke-width="0.3"/><text x="60.0" y="63.2" text-anchor="middle" font-size="2.6" fill="#475569">60 mm</text><text x="94" y="37.0" font-size="2.8" fill="#475569">profondità 34 mm</text><text x="60.0" y="74" text-anchor="middle" font-size="2.8" fill="#475569">i due tagli partono dalla piega; poi spingi il gradino in avanti</text></svg></div>
+        <p class="lib-montaggio">Piega il foglio a metà. Taglia le due righe nere partendo dalla piega, poi apri e spingi in avanti la linguetta che si è formata: diventa un gradino in rilievo. Non serve colla.</p>
+      </div>
+      <p class="nota-adulto">Per l'adulto: ritaglia tu le parti piccole con i bambini
+      fino ai 6 anni; dai 7 possono ritagliare da seduti, sorvegliati, con forbici a punta
+      arrotondata. Fonte delle frasi di questa tavola: Pagina «Rischio idrogeologico» del sito. Non sostituiscono il
+      piano di emergenza della scuola o dell'edificio in cui vi trovate: se un'indicazione
+      ufficiale dice altro, vale quella.</p>
+      <p class="lib-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>LIBRO-POPUP · Foglio 5 di 11 · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="lib">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">Va&#x27; via dalla parte opposta al fumo</h2>
+          <div class="scheda-sottotitolo">Nel bosco e nei campi ci si allontana: qui non si striscia</div>
+        </div>
+      </header>
+      <p class="lib-tag">TAVOLA 4 · INCENDIO FUORI, NEL BOSCO</p>
+      <div class="lib-corpo">
+        <div class="lib-testo">
+          <p>Un incendio in un bosco o in un campo si muove <strong>con il vento</strong> e può correre più di una persona. Qui la regola non è stare bassi: è <strong>andare via</strong>, dalla parte da cui il fumo non arriva.</p>
+          <div class="lib-regole"><h3>Che cosa si fa</h3><ul>
+          <li>Di' subito a un adulto di chiamare il 112, oppure chiamalo tu.</li>
+          <li>Allontanati nella direzione opposta a quella in cui va il fumo.</li>
+          <li>Non avvicinarti alle fiamme e non provare a spegnerle.</li>
+          <li>Non fermarti nelle strade dove passa il fumo.</li>
+          <li>Se non puoi allontanarti, entra in casa e chiudi porte, finestre e persiane.</li>
+          </ul></div>
+        </div>
+        <div class="lib-pitto" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-i-incendio.png" alt="Incendio" width="500" height="500"><img src="/pittogrammi/arasaac-bn/dis-autopompa.png" alt="Autopompa dei vigili del fuoco" width="500" height="500"></div>
+      </div>
+      <div class="lib-fustella">
+        <div class="lib-fustella-tit">La fustella · Piega a V con due alette</div>
+        <div class="lib-disegno"><svg class="fust" width="108mm" height="84mm" viewBox="0 0 108 84" role="img" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="colla" width="3" height="3" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="3" height="3" fill="#fef3c7"/><line x1="0" y1="0" x2="0" y2="3" stroke="#d97706" stroke-width="0.8"/></pattern></defs><rect x="6" y="6" width="96" height="52" stroke="#111827" stroke-width="0.5" fill="none" rx="1"/><image href="/pittogrammi/arasaac-bn/pop-fuoco.png" x="34.0" y="10" width="40" height="40" preserveAspectRatio="xMidYMid meet"><title>Fiamme</title></image><line x1="54.0" y1="4" x2="54.0" y2="70" stroke="#0284c7" stroke-width="0.5" fill="none" stroke-dasharray="3 2"/><line x1="6" y1="58" x2="102" y2="58" stroke="#ea580c" stroke-width="0.5" fill="none" stroke-dasharray="0.7 1.7" stroke-linecap="round"/><rect x="6" y="58" width="96" height="12" stroke="#111827" stroke-width="0.5" fill="none"/><rect x="8" y="60" width="44.0" height="8" fill="url(#colla)" stroke="#d97706" stroke-width="0.4" stroke-dasharray="1.5 1.5"/><text x="30.0" y="65.1" text-anchor="middle" font-size="2.6" fill="#92400e" font-weight="bold">ALETTA SINISTRA</text><rect x="56.0" y="60" width="44.0" height="8" fill="url(#colla)" stroke="#d97706" stroke-width="0.4" stroke-dasharray="1.5 1.5"/><text x="78.0" y="65.1" text-anchor="middle" font-size="2.6" fill="#92400e" font-weight="bold">ALETTA DESTRA</text><line x1="6" y1="80" x2="102" y2="80" stroke="#64748b" stroke-width="0.3"/><line x1="6" y1="78.8" x2="6" y2="81.2" stroke="#64748b" stroke-width="0.3"/><line x1="102" y1="78.8" x2="102" y2="81.2" stroke="#64748b" stroke-width="0.3"/><text x="54.0" y="78.2" text-anchor="middle" font-size="2.6" fill="#475569">96 mm</text></svg></div>
+        <p class="lib-montaggio">Ritaglia il rettangolo con l&#x27;aletta sotto. Piega a monte la riga blu al centro e a valle la riga arancione in fondo. Apri la pagina a 90°, appoggia la piega del pezzo sulla piega della pagina e incolla le due alette di sbieco, una per facciata, formando una V. Chiudendo il libro il pezzo si abbassa da solo.</p>
+      </div>
+      <p class="nota-adulto">Per l'adulto: ritaglia tu le parti piccole con i bambini
+      fino ai 6 anni; dai 7 possono ritagliare da seduti, sorvegliati, con forbici a punta
+      arrotondata. Fonte delle frasi di questa tavola: Pagina «Rischio incendio» del sito. Non sostituiscono il
+      piano di emergenza della scuola o dell'edificio in cui vi trovate: se un'indicazione
+      ufficiale dice altro, vale quella.</p>
+      <p class="lib-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>LIBRO-POPUP · Foglio 6 di 11 · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="lib">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">Il fumo sta in alto, tu sta&#x27; in basso</h2>
+          <div class="scheda-sottotitolo">Dentro un edificio la regola si capovolge: si esce rasoterra</div>
+        </div>
+      </header>
+      <p class="lib-tag">TAVOLA 5 · INCENDIO DENTRO CASA</p>
+      <div class="lib-corpo">
+        <div class="lib-testo">
+          <p>Il fumo è caldo, quindi <strong>sale verso il soffitto</strong>. L'aria che si respira resta in basso, a circa <strong>30-40 centimetri da terra</strong>. Per questo, se c'è molto fumo, si esce procedendo a carponi.</p>
+          <div class="lib-regole"><h3>Che cosa si fa</h3><ul>
+          <li>Se c'è molto fumo, va' a carponi verso l'uscita: in basso si respira.</li>
+          <li>Non usare l'ascensore.</li>
+          <li>Non aprire una porta se al tocco è calda: dietro c'è il fuoco.</li>
+          <li>Chiama il 112 quando sei fuori, in un posto sicuro.</li>
+          <li>Una volta fuori non rientrare: si torna dentro solo quando i vigili del fuoco dicono che si può.</li>
+          </ul></div>
+        </div>
+        <div class="lib-pitto" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-u-uscita.png" alt="Persona che esce da una porta aperta" width="500" height="500"><img src="/pittogrammi/arasaac-bn/pop-fuoco.png" alt="Fiamme" width="500" height="500"></div>
+      </div>
+      <div class="lib-fustella">
+        <div class="lib-fustella-tit">La fustella · Linguetta scorrevole</div>
+        <div class="lib-disegno"><svg class="fust" width="178mm" height="82mm" viewBox="0 0 178 82" role="img" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="colla" width="3" height="3" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="3" height="3" fill="#fef3c7"/><line x1="0" y1="0" x2="0" y2="3" stroke="#d97706" stroke-width="0.8"/></pattern></defs><rect x="6" y="6" width="118" height="24" stroke="#111827" stroke-width="0.5" fill="none" rx="1"/><image href="/pittogrammi/arasaac-bn/pop-strisciare.png" x="10" y="7" width="22" height="22" preserveAspectRatio="xMidYMid meet"><title>Bambino disteso che avanza sotto una linea bassa</title></image><text x="120" y="19.4" text-anchor="end" font-size="5" font-weight="bold" fill="#0b3c5d">TIRA →</text><line x1="6" y1="38" x2="124" y2="38" stroke="#64748b" stroke-width="0.3"/><line x1="6" y1="36.8" x2="6" y2="39.2" stroke="#64748b" stroke-width="0.3"/><line x1="124" y1="36.8" x2="124" y2="39.2" stroke="#64748b" stroke-width="0.3"/><text x="65.0" y="36.2" text-anchor="middle" font-size="2.6" fill="#475569">118 mm</text><line x1="30" y1="44" x2="30" y2="70" stroke="#111827" stroke-width="0.5" fill="none"/><line x1="90" y1="44" x2="90" y2="70" stroke="#111827" stroke-width="0.5" fill="none"/><line x1="30" y1="76" x2="90" y2="76" stroke="#64748b" stroke-width="0.3"/><line x1="30" y1="74.8" x2="30" y2="77.2" stroke="#64748b" stroke-width="0.3"/><line x1="90" y1="74.8" x2="90" y2="77.2" stroke="#64748b" stroke-width="0.3"/><text x="60.0" y="74.2" text-anchor="middle" font-size="2.6" fill="#475569">60 mm fra le due fessure</text><text x="96" y="58" font-size="2.8" fill="#475569">fessure lunghe 26 mm:</text><text x="96" y="62" font-size="2.8" fill="#475569">due più della striscia,</text><text x="96" y="66" font-size="2.8" fill="#475569">alta 24, così scorre</text></svg></div>
+        <p class="lib-montaggio">Ritaglia la striscia e le due fessure nel foglio. Infila la striscia da sotto nella prima fessura e da sopra nella seconda. Tirando la linguetta la figura attraversa la scena.</p>
+      </div>
+      <p class="nota-adulto">Per l'adulto: ritaglia tu le parti piccole con i bambini
+      fino ai 6 anni; dai 7 possono ritagliare da seduti, sorvegliati, con forbici a punta
+      arrotondata. Fonte delle frasi di questa tavola: Articolo «Incendi domestici» del sito, che cita i Vigili del Fuoco. Non sostituiscono il
+      piano di emergenza della scuola o dell'edificio in cui vi trovate: se un'indicazione
+      ufficiale dice altro, vale quella.</p>
+      <p class="lib-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>LIBRO-POPUP · Foglio 7 di 11 · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="lib">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">Suona l&#x27;allarme: in fila, fino al punto di raccolta</h2>
+          <div class="scheda-sottotitolo">L&#x27;uscita di emergenza si prova prima, così il giorno vero si sa già</div>
+        </div>
+      </header>
+      <p class="lib-tag">TAVOLA 6 · A SCUOLA</p>
+      <div class="lib-corpo">
+        <div class="lib-testo">
+          <p>A scuola l'uscita di emergenza non si improvvisa: si <strong>prova</strong>. Ogni classe ha una via di uscita, un punto di raccolta e due compagni con un compito. Il giorno in cui suona davvero, si fa quello che si è provato.</p>
+          <div class="lib-regole"><h3>Che cosa si fa</h3><ul>
+          <li>Quando suona, lascia tutto dov'è: lo zaino resta, tu vai.</li>
+          <li>Mettiti in fila e segui chi apre la fila.</li>
+          <li>Cammina, non correre, e resta in silenzio per sentire le indicazioni.</li>
+          <li>Al punto di raccolta resta con la tua classe finché non ti chiamano per nome.</li>
+          <li>Non tornare indietro a prendere niente.</li>
+          </ul></div>
+        </div>
+        <div class="lib-pitto" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/pop-sirena.png" alt="Sirena di allarme" width="500" height="500"><img src="/pittogrammi/arasaac-bn/dis-cortile.png" alt="Cortile della scuola" width="500" height="500"></div>
+      </div>
+      <div class="lib-fustella">
+        <div class="lib-fustella-tit">La fustella · Gradino tagliato nella piega</div>
+        <div class="lib-disegno"><svg class="fust" width="120mm" height="90mm" viewBox="0 0 120 90" role="img" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="colla" width="3" height="3" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="3" height="3" fill="#fef3c7"/><line x1="0" y1="0" x2="0" y2="3" stroke="#d97706" stroke-width="0.8"/></pattern></defs><rect x="6" y="6" width="108" height="74" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.4" stroke-dasharray="2 2"/><line x1="6" y1="20" x2="114" y2="20" stroke="#0284c7" stroke-width="0.5" fill="none" stroke-dasharray="3 2"/><text x="112" y="18" text-anchor="end" font-size="2.8" fill="#0284c7">piega del foglio</text><line x1="30" y1="20" x2="30" y2="54" stroke="#111827" stroke-width="0.5" fill="none"/><line x1="90" y1="20" x2="90" y2="54" stroke="#111827" stroke-width="0.5" fill="none"/><line x1="30" y1="54" x2="90" y2="54" stroke="#ea580c" stroke-width="0.5" fill="none" stroke-dasharray="0.7 1.7" stroke-linecap="round"/><image href="/pittogrammi/arasaac-bn/pop-fila.png" x="47.0" y="24" width="26" height="26" preserveAspectRatio="xMidYMid meet"><title>Cinque persone in fila indiana</title></image><line x1="30" y1="65" x2="90" y2="65" stroke="#64748b" stroke-width="0.3"/><line x1="30" y1="63.8" x2="30" y2="66.2" stroke="#64748b" stroke-width="0.3"/><line x1="90" y1="63.8" x2="90" y2="66.2" stroke="#64748b" stroke-width="0.3"/><text x="60.0" y="63.2" text-anchor="middle" font-size="2.6" fill="#475569">60 mm</text><text x="94" y="37.0" font-size="2.8" fill="#475569">profondità 34 mm</text><text x="60.0" y="74" text-anchor="middle" font-size="2.8" fill="#475569">i due tagli partono dalla piega; poi spingi il gradino in avanti</text></svg></div>
+        <p class="lib-montaggio">Piega il foglio a metà. Taglia le due righe nere partendo dalla piega, poi apri e spingi in avanti la linguetta che si è formata: diventa un gradino in rilievo. Non serve colla.</p>
+      </div>
+      <p class="nota-adulto">Per l'adulto: ritaglia tu le parti piccole con i bambini
+      fino ai 6 anni; dai 7 possono ritagliare da seduti, sorvegliati, con forbici a punta
+      arrotondata. Fonte delle frasi di questa tavola: Articolo «Rientro a scuola: le prove di evacuazione» del sito. Non sostituiscono il
+      piano di emergenza della scuola o dell'edificio in cui vi trovate: se un'indicazione
+      ufficiale dice altro, vale quella.</p>
+      <p class="lib-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>LIBRO-POPUP · Foglio 8 di 11 · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="lib">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">Che cosa c&#x27;è nello zaino di emergenza</h2>
+          <div class="scheda-sottotitolo">Una tasca da riempire con le tessere, e da rifare ogni sei mesi</div>
+        </div>
+      </header>
+      <p class="lib-tag">TAVOLA 7 · LO ZAINO</p>
+      <div class="lib-corpo">
+        <div class="lib-testo">
+          <p>Lo zaino di emergenza è quello che si prende <strong>se bisogna uscire di casa in fretta</strong>. Si prepara quando non serve, si tiene vicino alla porta, e si controlla ogni sei mesi.</p>
+          <div class="lib-regole"><h3>Che cosa si fa</h3><ul>
+          <li>Ritaglia le tessere e metti nella tasca quelle che servono davvero.</li>
+          <li>Aggiungi la tua: una medicina che prendi, il gioco piccolo, la foto di famiglia.</li>
+          <li>Ogni sei mesi controlla con un adulto: l'acqua scade e le pile si scaricano.</li>
+          </ul></div>
+        </div>
+        <div class="lib-pitto" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-z-zaino.png" alt="Zaino" width="500" height="500"></div>
+      </div>
+      <div class="lib-fustella">
+        <div class="lib-fustella-tit">La fustella · Tasca porta-tessere</div>
+        <div class="lib-disegno"><svg class="fust" width="128mm" height="82mm" viewBox="0 0 128 82" role="img" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="colla" width="3" height="3" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="3" height="3" fill="#fef3c7"/><line x1="0" y1="0" x2="0" y2="3" stroke="#d97706" stroke-width="0.8"/></pattern></defs><rect x="12" y="6" width="104" height="56" stroke="#111827" stroke-width="0.5" fill="none" rx="1"/><line x1="12" y1="62" x2="116" y2="62" stroke="#ea580c" stroke-width="0.5" fill="none" stroke-dasharray="0.7 1.7" stroke-linecap="round"/><rect x="2" y="6" width="10" height="56" fill="url(#colla)" stroke="#d97706" stroke-width="0.4" stroke-dasharray="1.5 1.5"/><text x="7.0" y="35.1" text-anchor="middle" font-size="2.6" fill="#92400e" font-weight="bold">INC.</text><rect x="116" y="6" width="10" height="56" fill="url(#colla)" stroke="#d97706" stroke-width="0.4" stroke-dasharray="1.5 1.5"/><text x="121.0" y="35.1" text-anchor="middle" font-size="2.6" fill="#92400e" font-weight="bold">INC.</text><rect x="12" y="62" width="104" height="8" fill="url(#colla)" stroke="#d97706" stroke-width="0.4" stroke-dasharray="1.5 1.5"/><text x="64.0" y="67.1" text-anchor="middle" font-size="2.6" fill="#92400e" font-weight="bold">INCOLLA SOTTO</text><text x="64.0" y="34.0" text-anchor="middle" font-size="4" fill="#94a3b8">il lato di sopra resta aperto</text><line x1="12" y1="80" x2="116" y2="80" stroke="#64748b" stroke-width="0.3"/><line x1="12" y1="78.8" x2="12" y2="81.2" stroke="#64748b" stroke-width="0.3"/><line x1="116" y1="78.8" x2="116" y2="81.2" stroke="#64748b" stroke-width="0.3"/><text x="64.0" y="78.2" text-anchor="middle" font-size="2.6" fill="#475569">104 mm</text></svg></div>
+        <p class="lib-montaggio">Ritaglia la tasca con le tre alette. Piega a valle la riga arancione, incolla le tre alette sul foglio e lascia aperto il lato di sopra: è lì che entrano le tessere.</p>
+      </div>
+        <div class="lib-tessere"><div class="lib-tessera"><img src="/pittogrammi/arasaac-bn/dis-acqua.png" alt="Acqua" width="500" height="500"><span>Acqua</span></div><div class="lib-tessera"><img src="/pittogrammi/arasaac-bn/oca-torcia.png" alt="Torcia" width="500" height="500"><span>Torcia</span></div><div class="lib-tessera"><img src="/pittogrammi/arasaac-bn/oca-radio.png" alt="Radio a pile" width="500" height="500"><span>Radio a pile</span></div><div class="lib-tessera"><img src="/pittogrammi/arasaac-bn/alf-k-kit.png" alt="Cassetta di pronto soccorso" width="500" height="500"><span>Cassetta di pronto soccorso</span></div><div class="lib-tessera"><img src="/pittogrammi/arasaac-bn/dis-lettera.png" alt="Documenti" width="500" height="500"><span>Documenti</span></div><div class="lib-tessera"><img src="/pittogrammi/arasaac-bn/pop-scatoletta.png" alt="Cibo in scatola" width="500" height="500"><span>Cibo in scatola</span></div><div class="lib-tessera"><img src="/pittogrammi/arasaac-bn/dis-famiglia.png" alt="Numeri di famiglia" width="500" height="500"><span>Numeri di famiglia</span></div></div>
+      <p class="nota-adulto">Per l'adulto: ritaglia tu le parti piccole con i bambini
+      fino ai 6 anni; dai 7 possono ritagliare da seduti, sorvegliati, con forbici a punta
+      arrotondata. Fonte delle frasi di questa tavola: Pagina «Kit di emergenza» del sito. Non sostituiscono il
+      piano di emergenza della scuola o dell'edificio in cui vi trovate: se un'indicazione
+      ufficiale dice altro, vale quella.</p>
+      <p class="lib-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>LIBRO-POPUP · Foglio 9 di 11 · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="lib">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">La telefonata al 112</h2>
+          <div class="scheda-sottotitolo">Un numero solo, e quattro cose da dire</div>
+        </div>
+      </header>
+      <p class="lib-tag">TAVOLA 8 · CHIEDERE AIUTO</p>
+      <div class="lib-corpo">
+        <div class="lib-testo">
+          <p>In Italia il numero delle emergenze è <strong>uno solo: il 112</strong>. Risponde una persona che ti fa delle domande e manda chi serve — l'ambulanza, i vigili del fuoco o i carabinieri. È gratuito, e funziona anche dal telefono di casa.</p>
+          <div class="lib-regole"><h3>Che cosa si fa</h3><ul>
+          <li>Di' dove sei: il paese, la via, il numero, un posto che si riconosce.</li>
+          <li>Di' che cosa è successo, con parole semplici.</li>
+          <li>Di' se c'è qualcuno che sta male, e quante persone sono.</li>
+          <li>Rispondi alle domande e non chiudere finché non te lo dicono.</li>
+          <li>Non chiamare il 112 per gioco: mentre parli con te, qualcuno aspetta davvero.</li>
+          </ul></div>
+        </div>
+        <div class="lib-pitto" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-n-telefono.png" alt="Telefono" width="500" height="500"><img src="/pittogrammi/arasaac-bn/dis-ambulanza.png" alt="Ambulanza" width="500" height="500"></div>
+      </div>
+      <div class="lib-fustella">
+        <div class="lib-fustella-tit">La fustella · Linguetta scorrevole</div>
+        <div class="lib-disegno"><svg class="fust" width="178mm" height="82mm" viewBox="0 0 178 82" role="img" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="colla" width="3" height="3" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="3" height="3" fill="#fef3c7"/><line x1="0" y1="0" x2="0" y2="3" stroke="#d97706" stroke-width="0.8"/></pattern></defs><rect x="6" y="6" width="118" height="24" stroke="#111827" stroke-width="0.5" fill="none" rx="1"/><image href="/pittogrammi/arasaac-bn/dis-al-telefono.png" x="10" y="7" width="22" height="22" preserveAspectRatio="xMidYMid meet"><title>Persona che parla al telefono</title></image><text x="120" y="19.4" text-anchor="end" font-size="5" font-weight="bold" fill="#0b3c5d">TIRA →</text><line x1="6" y1="38" x2="124" y2="38" stroke="#64748b" stroke-width="0.3"/><line x1="6" y1="36.8" x2="6" y2="39.2" stroke="#64748b" stroke-width="0.3"/><line x1="124" y1="36.8" x2="124" y2="39.2" stroke="#64748b" stroke-width="0.3"/><text x="65.0" y="36.2" text-anchor="middle" font-size="2.6" fill="#475569">118 mm</text><line x1="30" y1="44" x2="30" y2="70" stroke="#111827" stroke-width="0.5" fill="none"/><line x1="90" y1="44" x2="90" y2="70" stroke="#111827" stroke-width="0.5" fill="none"/><line x1="30" y1="76" x2="90" y2="76" stroke="#64748b" stroke-width="0.3"/><line x1="30" y1="74.8" x2="30" y2="77.2" stroke="#64748b" stroke-width="0.3"/><line x1="90" y1="74.8" x2="90" y2="77.2" stroke="#64748b" stroke-width="0.3"/><text x="60.0" y="74.2" text-anchor="middle" font-size="2.6" fill="#475569">60 mm fra le due fessure</text><text x="96" y="58" font-size="2.8" fill="#475569">fessure lunghe 26 mm:</text><text x="96" y="62" font-size="2.8" fill="#475569">due più della striscia,</text><text x="96" y="66" font-size="2.8" fill="#475569">alta 24, così scorre</text></svg></div>
+        <p class="lib-montaggio">Ritaglia la striscia e le due fessure nel foglio. Infila la striscia da sotto nella prima fessura e da sopra nella seconda. Tirando la linguetta la figura attraversa la scena.</p>
+      </div>
+      <p class="nota-adulto">Per l'adulto: ritaglia tu le parti piccole con i bambini
+      fino ai 6 anni; dai 7 possono ritagliare da seduti, sorvegliati, con forbici a punta
+      arrotondata. Fonte delle frasi di questa tavola: Pagina «Numeri utili» del sito. Non sostituiscono il
+      piano di emergenza della scuola o dell'edificio in cui vi trovate: se un'indicazione
+      ufficiale dice altro, vale quella.</p>
+      <p class="lib-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>LIBRO-POPUP · Foglio 10 di 11 · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="lib">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">Il diploma e il tesserino</h2>
+          <div class="scheda-sottotitolo">Da ritagliare quando il libro è finito e le otto tavole si aprono tutte</div>
+        </div>
+      </header>
+      <p class="lib-tag">ALLA FINE</p>
+      <div class="lib-diploma">
+        <div class="lib-dip-bordo">
+          <div class="lib-dip-occhiello">Gruppo Comunale Volontari di Protezione Civile · Genzano di Roma</div>
+          <div class="lib-dip-titolo">Diploma di piccola<br>protezione civile</div>
+          <p class="lib-dip-testo">Si consegna a</p>
+          <div class="lib-dip-riga"></div>
+          <p class="lib-dip-testo">che ha costruito il libro pop-up, ha imparato che cosa si fa
+          quando trema la terra, quando arriva troppa acqua e quando c'è un incendio, e sa che
+          in emergenza si chiama il <strong>112</strong>.</p>
+          <div class="lib-dip-firme">
+            <div><div class="lib-dip-riga"></div><span>data</span></div>
+            <div><div class="lib-dip-riga"></div><span>chi ha aiutato a costruirlo</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="lib-tesserino">
+        <div class="lib-tess-tit">Il tesserino da tenere in tasca</div>
+        <div class="lib-tess-carta">
+          <div class="lib-tess-fronte">
+            <strong>112</strong>
+            <span>il numero unico delle emergenze</span>
+          </div>
+          <div class="lib-tess-retro">
+            <div><strong>Dico dove sono</strong> — paese, via, numero, un posto che si riconosce.</div>
+            <div><strong>Dico che cosa è successo</strong> — con parole semplici.</div>
+            <div><strong>Dico se qualcuno sta male</strong> — e quante persone siamo.</div>
+            <div><strong>Non chiudo</strong> finché non me lo dicono.</div>
+          </div>
+        </div>
+        <p class="lib-tess-nota">Ritaglia lungo il bordo, piega a metà sulla riga blu e incolla
+        i due <strong>rovesci</strong> l'uno sull'altro, lasciando fuori le facce stampate:
+        viene un tesserino a due lati.</p>
+      </div>
+      <p class="nota-adulto">Per l'adulto: il diploma non certifica nulla e non ha valore
+      ufficiale — è il riconoscimento di un lavoro fatto insieme, e vale esattamente per
+      quello. Il tesserino riporta i quattro punti della telefonata al 112 della Tavola 8.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>LIBRO-POPUP · Foglio 11 di 11 · Rev. 1 · 13/09/2026</span></footer>
+    </div>
   </article>
 </section>
 

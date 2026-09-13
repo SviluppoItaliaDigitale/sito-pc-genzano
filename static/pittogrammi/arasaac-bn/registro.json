@@ -388,5 +388,45 @@
     "arasaac_id": 6138,
     "url": "https://api.arasaac.org/v1/pictograms/6138?color=false&resolution=500",
     "variante": "bianco e nero"
+  },
+  "pop-casa": {
+    "arasaac_id": 2317,
+    "url": "https://arasaac.org/pictograms/2317",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "pop-fila": {
+    "arasaac_id": 7102,
+    "url": "https://arasaac.org/pictograms/7102",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "pop-fuoco": {
+    "arasaac_id": 4654,
+    "url": "https://arasaac.org/pictograms/4654",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "pop-scala": {
+    "arasaac_id": 2379,
+    "url": "https://arasaac.org/pictograms/2379",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "pop-scatoletta": {
+    "arasaac_id": 8280,
+    "url": "https://arasaac.org/pictograms/8280",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "pop-sirena": {
+    "arasaac_id": 6891,
+    "url": "https://arasaac.org/pictograms/6891",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "pop-strisciare": {
+    "arasaac_id": 28039,
+    "url": "https://arasaac.org/pictograms/28039",
+    "variante": "bianco e nero (da colorare)"
+  },
+  "pop-tavolo": {
+    "arasaac_id": 3129,
+    "url": "https://arasaac.org/pictograms/3129",
+    "variante": "bianco e nero (da colorare)"
   }
 }
