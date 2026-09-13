@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-13T14:37:15+00:00",
+  "generato": "2026-09-13T17:41:50+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-13T14:32:00+00:00",
+   "data": "2026-09-13T17:39:29+00:00",
+   "fonte": "ANSA",
+   "titolo": "Attacco russo al confine con la Polonia, fermato un treno con consiglieri di sicurezza europei",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/13/attacco-russo-al-confine-con-la-polonia-fermato-un-treno-con-consiglieri-di-sicurezza_dbc566df-ea39-4fa7-8f16-24d21a994204.html"
+  },
+  {
+   "data": "2026-09-13T17:35:11+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Incendi sul Gargano, arrestato un volontario della protezione civile",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/incendi-sul-gargano-arrestato-un-volontario-della-protezione-civile_e3ea380b-a879-4ae8-86e2-fa37d35a74a0.html"
+  },
+  {
+   "data": "2026-09-13T17:34:59+00:00",
+   "fonte": "ANSA",
+   "titolo": "Parte l'anno scolastico, 8 milioni gli studenti sui banchi",
+   "url": "https://www.ansa.it/canale_legalita_scuola/speciali/back-to-school/2026/09/13/dal-14-settembre-al-via-lanno-scolastico-in-tutta-italia-_cd04942d-d5cf-48a0-b48d-40776345fe78.html"
+  },
+  {
+   "data": "2026-09-13T17:34:41+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Pierluigi Diaco e Alessio Orsingher punti dalle vespe in casa, interviene il disinfestatore: \"Nido enorme\"",
+   "url": "https://www.adnkronos.com/spettacoli/diaco-orsingher-vespe-punture-daniel-palmieri_5vv47oZF3ghO8zzeKYY9k8"
+  },
+  {
+   "data": "2026-09-13T17:34:28+00:00",
+   "fonte": "ANSA",
+   "titolo": "Serie A: in campo Napoli-Bologna 1-0 DIRETTA",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/12/serie-a-domenica-in-campo-alle-18-napoli-bologna-diretta-e-foto_bcd53161-3f50-424b-af98-553e405af5c7.html"
+  },
+  {
+   "data": "2026-09-13T17:28:23+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Morte avvelenate, la prof amica di Di Vita sentita per quasi 4 ore",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/morte-avvelenate-la-prof-amica-di-di-vita-sentita-per-quasi-4-ore_b8dfe2ef-b1d2-448b-b515-fc299aae46f4.html"
+  },
+  {
+   "data": "2026-09-13T17:27:38+00:00",
+   "fonte": "ANSA",
+   "titolo": "71 candeline per Leone, il fratello: 'Non è crollato, lo aiuta l'umorismo'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/13/71-candeline-per-leone-il-fratello-non-e-crollato-lo-aiuta-lumorismo_2a5b8ff7-29b6-4f70-b566-b10ae047fec4.html"
+  },
+  {
+   "data": "2026-09-13T17:25:16+00:00",
+   "fonte": "ANSA",
+   "titolo": "Schlein: 'È tempo di accelerare sul programma comune'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/13/schlein-e-tempo-di-accelerare-sul-programma-comune_e7972103-a0cf-45f2-a74a-72157aa676f0.html"
+  },
+  {
+   "data": "2026-09-13T17:21:42+00:00",
+   "fonte": "ANSA",
+   "titolo": "'Carney muove per rendere il Canada membro associato dell'Ue'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/13/carney-muove-per-rendere-il-canada-membro-associato-dellue_cbbe9067-0453-4b25-af68-3b0c4c6b5140.html"
+  },
+  {
+   "data": "2026-09-13T17:18:14+00:00",
+   "fonte": "ANSA",
+   "titolo": "Gisele Pelicot: 'La vergogna non mi appartiene più'. L'incontro con Cecchettin",
+   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/13/gisele-pelicot-la-vergogna-non-mi-appartiene-piu.-lincontro-con-cecchettin_efd59c01-aa40-4fcd-a53e-b928c732b906.html"
+  },
+  {
+   "data": "2026-09-13T17:16:47+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Us Open, oggi la finale Shelton-Zverev - Diretta",
+   "url": "https://www.adnkronos.com/sport/diretta-shelton-zverev-oggi-finale-us-open-live_5pacHejtFH0hOuhK8qz2gk"
+  },
+  {
+   "data": "2026-09-13T17:11:52+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina, linea dura Afd: \"Via gli ucraini dalla Germania, stop ai soldi per Kiev\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-germania-afd-aiuti-kiev_2Z9yACZ3YrswRT5qSiWdqk"
+  },
+  {
+   "data": "2026-09-13T17:03:56+00:00",
+   "fonte": "ANSA",
+   "titolo": "F1: Antonelli vola anche a Madrid e allunga per il Mondiale",
+   "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/09/13/f1-antonelli-vola-anche-a-madrid-e-allunga-per-il-mondiale_41f6549b-d709-404c-8233-846ee8a569b3.html"
+  },
+  {
+   "data": "2026-09-13T17:03:34+00:00",
+   "fonte": "ANSA",
+   "titolo": "Ranucci: 'Agirò in giudizio rispetto alla Rai'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/ranucci-agiro-in-giudizio-rispetto-alla-rai_eb267c22-1883-4975-92be-6c89aebe7f66.html"
+  },
+  {
+   "data": "2026-09-13T17:02:48+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "La nuova vita di Harry e Meghan nel Regno Unito: il primo video insieme ai figli nella campagna inglese",
+   "url": "https://www.adnkronos.com/internazionale/esteri/harry-meghan-video-social-campagna-inglese_2QqnuTL8wRAEdyIiHCg0FS"
+  },
+  {
+   "data": "2026-09-13T16:59:44+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il governo punta su ceto medio e giovani, l'ecobonus sale al 65%",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/13/il-governo-punta-su-ceto-medio-e-giovani-lecobonus-sale-al-65_e126b138-8e64-45fd-a13e-94588b25e07e.html"
+  },
+  {
+   "data": "2026-09-13T16:52:32+00:00",
+   "fonte": "ANSA",
+   "titolo": "Traghetto si capovolge nel Mar di Giava, decine di dispersi",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/13/traghetto-si-capovolge-nel-mar-di-giava-decine-di-dispersi-_f3df3474-5409-424b-ae53-01fc70017cc9.html"
+  },
+  {
+   "data": "2026-09-13T16:48:03+00:00",
    "fonte": "ANSA",
    "titolo": "Nuovo allarme di Anthropic sull'IA. Trump: 'Forze negative vogliono rallentarla'",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/13/nuovo-allarme-di-anthropic-sullia.-trump-forze-negative-vogliono-rallentarla_3334a155-424f-4620-987f-e26b24d0c667.html"
   },
   {
-   "data": "2026-09-13T14:26:44+00:00",
+   "data": "2026-09-13T16:45:59+00:00",
    "fonte": "ANSA",
-   "titolo": "Dal 14 settembre al via l'anno scolastico in tutta Italia",
-   "url": "https://www.ansa.it/canale_legalita_scuola/speciali/back-to-school/2026/09/13/dal-14-settembre-al-via-lanno-scolastico-in-tutta-italia-_cd04942d-d5cf-48a0-b48d-40776345fe78.html"
+   "titolo": "Omicidio nel Padovano, un uomo soffoca la suocera",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/omicidio-nel-padovano-un-uomo-soffoca-la-suocera_3e7271ff-1d59-4f33-be2d-eb631d558d83.html"
   },
   {
-   "data": "2026-09-13T14:26:29+00:00",
+   "data": "2026-09-13T16:44:15+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Incidente a Venezia, riprese le ricerche della donna dispersa in laguna",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/incidente-a-venezia-riprese-le-ricerche-della-donna-dispersa-in-laguna_d6d490b3-4021-4671-904b-7ff93dc695c3.html"
+   "titolo": "Turista tedesca di 17 anni denuncia una violenza sessuale a Rimini",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/turista-tedesca-di-17-anni-denuncia-una-violenza-sessuale-a-rimini_38113062-e420-41ac-9df1-d8d7d8ead848.html"
   },
   {
-   "data": "2026-09-13T14:25:46+00:00",
-   "fonte": "ANSA",
-   "titolo": "Dal Tasso a Quasimodo, la canzone del 'djprof'per gli alunni",
-   "url": "https://www.ansa.it/canale_legalita_scuola/speciali/back-to-school/2026/09/13/djprof-da-il-benvenuto-agli-studenti-con-una-canzone-fatta-di-letteratura_a6262109-c043-4354-92c8-67e3a8faddb2.html"
+   "data": "2026-09-13T16:43:10+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Uccide la suocera soffocandola poi chiama il 112: arrestato a Padova",
+   "url": "https://www.adnkronos.com/cronaca/padova-omicidio-suocera_4kAxg58biH42A5IBBN1ktC"
   },
   {
-   "data": "2026-09-13T14:25:11+00:00",
+   "data": "2026-09-13T16:39:36+00:00",
    "fonte": "ANSA",
    "titolo": "Mostra di Venezia, il direttore Barbera: 'Il cinema italiano? Vanno rinnovati temi e linguaggi'",
    "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/13/mostra-di-venezia-il-direttore-barbera-il-cinema-italiano-vanno-rinnovati-temi-e-linguaggi_92a8d5a1-f954-440a-9eae-d221553e2812.html"
   },
   {
-   "data": "2026-09-13T14:17:06+00:00",
+   "data": "2026-09-13T16:33:59+00:00",
    "fonte": "ANSA",
-   "titolo": "Crosetto: 'Più militari in strada non sia solo estetica, serve un riordino'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/13/crosetto-piu-militari-in-strada-non-sia-solo-estetica-serve-un-riordino_b56dc9b3-11b5-4368-85d8-53a16ff90a22.html"
+   "titolo": "In fila fino a 4 ore per votare in Svezia, si prevede un testa a testa",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/13/in-fila-fino-a-4-ore-per-votare-in-svezia-si-prevede-un-testa-a-testa_67ebcf47-ae70-4098-a85e-39d37a0324f1.html"
   },
   {
-   "data": "2026-09-13T14:15:11+00:00",
+   "data": "2026-09-13T16:30:29+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "A 13 anni trasforma migliaia di lattine in denaro per devolverlo a enti di beneficienza: la storia di Ryan",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ryan-lattine-riciclo-beneficienza_372vo9YfG1yfsmz79x3l0o"
+  },
+  {
+   "data": "2026-09-13T16:17:50+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Vasto incendio a Positano provoca una frana, senso unico alternato sulla statale Amalfitana",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/vasto-incendio-a-positano-provoca-una-frana-senso-unico-alternato-sulla_c98c50df-3488-4290-a821-ee9750cad184.html"
+   "titolo": "Morta in piscina, famiglia si oppone ad archiviazione inchiesta",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/morta-in-piscina-famiglia-si-oppone-ad-archiviazione-inchiesta_86358ac9-9018-40f0-9272-d8785059320f.html"
   },
   {
-   "data": "2026-09-13T14:12:35+00:00",
+   "data": "2026-09-13T16:17:45+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Donald Trump non vuole un rallentamento dell'Intelligenza artificiale: \"Chi vincerà questa corsa, vincerà tutto\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/trump-cina-competizione-intelligenza-artificiale_6RbSMPHoEw4ZUb6D8GELM8"
+   "titolo": "Serie A, Napoli-Bologna, annullato il gol al 6' del rossoblu Theate - Cosa è successo",
+   "url": "https://www.adnkronos.com/sport/calcio-serie-a-napoli-bologna-theate_7mgZ4cvhVcU5hjyMuHoDMo"
   },
   {
-   "data": "2026-09-13T14:10:11+00:00",
+   "data": "2026-09-13T15:56:29+00:00",
    "fonte": "ANSA",
-   "titolo": "Aperta la camera ardente di Emma Bonino in Campidoglio",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/13/aperta-la-camera-ardente-di-emma-bonino-in-campidoglio_9d72eb46-4861-4015-a756-9decb510740e.html"
+   "titolo": "Centinaia di cittadini alla camera ardente di Emma Bonino in Campidoglio",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/13/centinaia-di-cittadini-alla-camera-ardente-di-emma-bonino-in-campidoglio_9d72eb46-4861-4015-a756-9decb510740e.html"
   },
   {
-   "data": "2026-09-13T14:09:54+00:00",
-   "fonte": "ANSA",
-   "titolo": "MotoGp: Marc Marquez fa il bis a Misano, è in testa al mondiale",
-   "url": "https://www.ansa.it/sito/notizie/sport/moto/2026/09/13/motogp-misano-vince-marc-marquez-quinta-laprilia-di-martin_283e6ef0-d25d-4a42-93b0-301e24471869.html"
-  },
-  {
-   "data": "2026-09-13T14:07:50+00:00",
-   "fonte": "ANSA",
-   "titolo": "Serie A: in campo Lecce-Monza 1-0 DIRETTA",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/12/serie-a-domenica-in-campo-alle-15-lecce-monza-diretta-e-foto_e9f72192-c6ae-4c4f-8fd2-276d697a5dcb.html"
-  },
-  {
-   "data": "2026-09-13T14:00:45+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trionfo a Parigi per il primo show di Céline Dion,nel pubblico in festa Michelle Obama",
-   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/12/trionfo-a-parigi-per-il-primo-show-di-celine-dionnel-pubblico-in-festa-michelle_907f1c7c-f4d4-4c0d-8b65-ddca6255107a.html"
-  },
-  {
-   "data": "2026-09-13T14:00:30+00:00",
-   "fonte": "ANSA",
-   "titolo": "Aperti i seggi elettorali in Svezia, legislative molto combattute",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/13/aperti-i-seggi-elettorali-in-svezia-legislative-molto-combattute_67ebcf47-ae70-4098-a85e-39d37a0324f1.html"
-  },
-  {
-   "data": "2026-09-13T14:00:13+00:00",
-   "fonte": "ANSA",
-   "titolo": "Traghetto si capovolge in Indonesia, almeno 6 morti",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/13/traghetto-si-capovolge-in-indonesia-almeno-6-morti_f3df3474-5409-424b-ae53-01fc70017cc9.html"
-  },
-  {
-   "data": "2026-09-13T13:55:46+00:00",
-   "fonte": "ANSA",
-   "titolo": "La guerra in Ucraina: colpita una stazione di servizio al confine con la Polonia",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/13/la-guerra-in-ucraina-colpita-una-stazione-di-servizio-al-confine-con-la-polonia_dbc566df-ea39-4fa7-8f16-24d21a994204.html"
-  },
-  {
-   "data": "2026-09-13T13:47:40+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Gp Madrid, è caos virtual safety car: sosta a sorpresa di Antonelli, Norris perde il comando del Gran Premio",
-   "url": "https://www.adnkronos.com/sport/gp-madrid-caos-virtual-safety-car-norris-antonelli-cosa-e-successo_4RGITtaPpMOaaOHo3DfaEQ"
-  },
-  {
-   "data": "2026-09-13T13:38:33+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Incidente in barca nel canale di Tessera a Venezia, 25enne è grave: si cerca la moglie caduta in acqua",
-   "url": "https://www.adnkronos.com/cronaca/incidente-canale-venezia-sean-gabriella_3pTyXhbiaKyCpmo4rbro2M"
-  },
-  {
-   "data": "2026-09-13T13:36:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Gp Spagna, Hamilton subito out per problema ai freni: \"Sono demoralizzato\"",
-   "url": "https://www.adnkronos.com/sport/f1-gp-spagna-madrid-hamilton-ferrari_24M8jp7uFIMS0H5NJs4GO0"
-  },
-  {
-   "data": "2026-09-13T13:26:43+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "MotoGp, a San Marino cade Bezzecchi e Marquez vola in testa al Mondiale: ordine arrivo e classifica piloti",
-   "url": "https://www.adnkronos.com/sport/motogp-san-marino-marc-marquez-vince-ordine-arrivo-come-cambia-classifica_1XRXOqUIFmgbZLhd7bWmcA"
-  },
-  {
-   "data": "2026-09-13T13:23:41+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Paura a Roma, nuda e armata di coltello minaccia passante: bloccata con taser e portata in ospedale",
-   "url": "https://www.adnkronos.com/cronaca/roma-donna-nuda-taser_34D3USW5PNFCqP8Wuoxexm"
-  },
-  {
-   "data": "2026-09-13T13:06:31+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Torino, 83enne aggredita dal marito: è in gravi condizioni",
-   "url": "https://www.adnkronos.com/cronaca/torino-83enne-aggredita-dal-marito-e-in-gravi-condizioni_4bOg3sVT2AbsM41xrSEc3q"
-  },
-  {
-   "data": "2026-09-13T13:03:50+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Lega Navale Italiana, oltre 13mila giovani e l'alleanza con la Crusca per avvicinare al mare le nuove generazioni",
-   "url": "https://www.adnkronos.com/economia/lega-navale-italiana-oltre-13mila-giovani-e-lalleanza-con-la-crusca-per-avvicinare-al-mare-le-nuove-generazioni_4Wu2mo0yrVZXPRTUBlcJeY"
-  },
-  {
-   "data": "2026-09-13T12:52:04+00:00",
-   "fonte": "ANSA",
-   "titolo": "Malore durante la preparazione in Argentina, Goggia torna in Italia in anticipo",
-   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/12/malore-durante-la-preparazione-in-argentina-goggia-torna-in-italia-in-anticipo_2d78676a-a825-4b79-91d2-1b2c000d9138.html"
-  },
-  {
-   "data": "2026-09-13T12:44:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Mipel 130, a Milano torna l'appuntamento internazionale di pelletteria e dell'accessorio moda",
-   "url": "https://www.adnkronos.com/economia/mipel-130-a-milano-torna-lappuntamento-internazionale-di-pelletteria-e-dellaccessorio-moda_7bvZqxTgNd2264jxZ8Pzzm"
-  },
-  {
-   "data": "2026-09-13T12:33:53+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Gp Misano, cade subito Bezzecchi: cos'è successo e come cambia la corsa al Mondiale",
-   "url": "https://www.adnkronos.com/sport/gp-misano-cade-bezzecchi-primo-giro-cosa-successo-come-cambia-classifica-motogp_4HGXhIsh4yEk4RtntvXxNa"
-  },
-  {
-   "data": "2026-09-13T12:30:18+00:00",
-   "fonte": "ANSA",
-   "titolo": "Incidente stradale per Daniel Maldini a Milano, in ospedale per accertamenti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/incidente-stradale-per-daniel-maldini-a-milano-in-ospedale-per-accertamenti_2e4676f0-e731-4b9a-8e1c-062d050d418d.html"
-  },
-  {
-   "data": "2026-09-13T12:18:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Gp Madrid, Antonelli al comando della gara. Hamilton si ritira - Diretta",
-   "url": "https://www.adnkronos.com/sport/diretta-gp-madrid-oggi-formula-1-live-gran-premio-spagna_1azjU06u1abeUJa6RCq7DC"
-  },
-  {
-   "data": "2026-09-13T11:53:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Intelligenza artificiale, l’allarme di Anthropic: \"Tra un anno l'AI potrebbe prendere il controllo di internet\"",
-   "url": "https://www.adnkronos.com/economia/intelligenza-artificiale-anthropic-ceo-allarme-ai_1pNAmqkKsdQNDotefxUQ5e"
-  },
-  {
-   "data": "2026-09-13T11:41:45+00:00",
+   "data": "2026-09-13T15:53:04+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Morte avvelenate, prof amica di Gianni Di Vita sentita per quasi 4 ore",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/morte-avvelenate-prof-amica-di-gianni-di-vita-sentita-per-quasi-4-ore_b8dfe2ef-b1d2-448b-b515-fc299aae46f4.html"
+   "titolo": "Omicidio nel Padovano, uomo soffoca la suocera",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/omicidio-nel-padovano-uomo-soffoca-la-suocera_6e7d81de-25cf-40a5-8304-3e2595c03519.html"
   },
   {
-   "data": "2026-09-13T11:37:43+00:00",
+   "data": "2026-09-13T15:42:26+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Daniel Maldini positivo all'etilometro, ritirata patente dopo incidente",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/daniel-maldini-positivo-alletilometro-ritirata-patente-dopo-incidente_f144114d-1a42-4d13-9b4d-5b7a28481922.html"
+  },
+  {
+   "data": "2026-09-13T15:39:45+00:00",
    "fonte": "ANSA",
-   "titolo": "Incidente per Daniel Maldini a Milano, il calciatore portato in pronto soccorso",
-   "url": "https://www.ansa.it/sito/videogallery/italia/2026/09/13/incidente-per-daniel-maldini-a-milano-il-calciatore-portato-in-pronto-soccorso_df18227e-7220-4191-a29a-4bfcd1b17f4f.html"
+   "titolo": "Daniel Maldini positivo all'etilometro, ritirata la patente dopo l'incidente",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/daniel-maldini-positivo-alletilometro-ritirata-la-patente-dopo-lincidente_2e4676f0-e731-4b9a-8e1c-062d050d418d.html"
   }
  ]
 }
