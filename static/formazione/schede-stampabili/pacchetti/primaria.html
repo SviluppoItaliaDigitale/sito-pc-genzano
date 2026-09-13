@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pacchetto stampa: Scuola Primaria (6-11 anni) — 66 schede A4</title>
-  <meta name="description" content="Stampa in un click tutte le 66 schede stampabili della Scuola Primaria (6-11 anni). Pacchetto auto-aggiornato dal sito istituzionale.">
+  <title>Pacchetto stampa: Scuola Primaria (6-11 anni) — 82 schede A4</title>
+  <meta name="description" content="Stampa in un click tutte le 82 schede stampabili della Scuola Primaria (6-11 anni). Pacchetto auto-aggiornato dal sito istituzionale.">
   <meta name="robots" content="noindex,follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
@@ -2405,23 +2405,75 @@
       .os-page .os-scenario { background: #fff; }
     }
   
+
+/* === stili scheda 47 === */
+
+    /* Percorso "Oggetti sconosciuti e confezioni alterate" — CSS scoped .os-page */
+    .scheda-page:has(> .os-page) { padding: 0; }
+    .os-page { padding: 10mm 12mm 6mm; font-size: 16px; line-height: 1.38; min-height: 260mm; display: flex; flex-direction: column; }
+    .os-page .scheda-header { margin-bottom: 3mm; gap: 3mm; }
+    .os-page .scheda-header .scheda-titolo-principale { font-size: 25px; line-height: 1.15; }
+    .os-page .scheda-header .scheda-sottotitolo { font-size: 13px; }
+    .os-page h2 { font-size: 17px; line-height: 1.25; margin: 3mm 0 2mm; color: #003366; }
+    .os-page p { margin: 2mm 0 3mm; }
+    .os-page li { margin-bottom: 2mm; }
+    .os-page table { width: 100%; border-collapse: collapse; margin: 3mm 0; font-size: 15px; }
+    .os-page th, .os-page td { border: 1px solid #657483; padding: 2.5mm; text-align: left; }
+    .os-page th:last-child, .os-page td:last-child { min-width: 18mm; }
+    .os-page .os-meta { font-size: 13px; color: #384755; }
+    .os-page .os-answer { height: 16mm; border: 1px solid #697887; margin-bottom: 3mm; }
+    .os-page .os-draw { height: 37mm; }
+    .os-page .os-story { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; margin: 4mm 0; }
+    .os-page .os-story > div { border: 1.5px solid #304b62; padding: 2.5mm; font-size: 14px; }
+    .os-page .os-scene { height: 29mm; }
+    .os-page .os-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; margin: 5mm 0; }
+    .os-page .os-steps > div { padding: 4mm 2mm; border: 2px solid #304b62; text-align: center; font-weight: bold; }
+    .os-page .os-steps strong { display: inline-block; border: 2px solid #304b62; border-radius: 50%; width: 10mm; height: 10mm; line-height: 9mm; }
+    .os-page .os-big { font-size: 21px; font-weight: bold; margin: 4mm 0; }
+    .os-page .os-scenario { border-left: 3px solid #003366; padding: 3mm; background: #eef4f8; }
+    .os-page .os-choices { list-style-type: square; padding-left: 6mm; }
+    .os-page .nota-adulto { font-size: 12px; line-height: 1.35; border-top: 1px solid #687889; padding-top: 2mm; margin-top: 4mm; }
+    .os-page .soluzione-capovolta { margin: 3mm 0 0; padding: 2mm 3mm; font-size: 10px; line-height: 1.3; }
+    .os-page .scheda-footer { margin-top: auto; padding-top: 3mm; padding-bottom: 0; font-size: 10px; }
+    .os-page a:focus-visible { outline: 3px solid #a84a00; outline-offset: 3px; }
+    .os-guide { font-size: 14px; }
+    .os-guide p { margin: 2mm 0 3mm; }
+    .os-guide .os-fonte { margin: 0 0 1.5mm; font-size: 10.5px; line-height: 1.25; }
+    .os-guide .os-fonti p { margin: 1mm 0 1.5mm; font-size: 12px; }
+    .os-guide .os-fonti .os-fonte a { font-size: 9.5px; }
+    .os-guide .os-fonte a { word-break: break-all; }
+    @media screen and (max-width: 600px) {
+      .os-page { width: 100%; min-height: 0; padding: 1rem; }
+      .os-page .os-story { grid-template-columns: repeat(2, 1fr); }
+      .os-page .os-steps { grid-template-columns: 1fr; }
+      .os-page .soluzione-capovolta { transform: none; }
+      .os-page .os-answer { height: 20mm; }
+    }
+    @media print {
+      .os-page { min-height: 260mm; padding: 8mm 10mm 4mm; }
+      .os-page .scheda-footer { padding-top: 3mm; }
+      .os-page .scheda-header .scheda-titolo-principale { font-size: 23px; }
+      .os-page section, .os-page table, .os-page .nota-adulto, .os-page .os-steps, .os-page .os-story { break-inside: avoid; }
+      .os-page .os-scenario { background: #fff; }
+    }
+  
   </style>
 </head>
 <body>
 
   <header class="pacchetto-toolbar no-print" role="banner">
     <a href="/formazione/schede-stampabili/" aria-label="Torna alla hub delle schede stampabili">← Torna alle schede</a>
-    <span class="pacchetto-titolo">Pacchetto stampa: Scuola Primaria · 66 schede A4</span>
-    <button type="button" onclick="window.print()" aria-label="Apri la finestra di stampa per tutte le 66 schede di Scuola Primaria">
-      🖨️ Stampa tutto (77 fogli A4)
+    <span class="pacchetto-titolo">Pacchetto stampa: Scuola Primaria · 82 schede A4</span>
+    <button type="button" onclick="window.print()" aria-label="Apri la finestra di stampa per tutte le 82 schede di Scuola Primaria">
+      🖨️ Stampa tutto (104 fogli A4)
     </button>
   </header>
 
   <section class="pacchetto-intro no-print" aria-labelledby="pacchetto-intro-h1">
     <h1 id="pacchetto-intro-h1">Pacchetto stampa — Scuola Primaria</h1>
     <p>
-      Questo pacchetto contiene <strong>66 schede stampabili</strong> della Scuola Primaria (6-11 anni),
-      per un totale di <strong>77 fogli A4</strong>.
+      Questo pacchetto contiene <strong>82 schede stampabili</strong> della Scuola Primaria (6-11 anni),
+      per un totale di <strong>104 fogli A4</strong>.
       Premi <strong>"Stampa tutto"</strong> in alto (oppure <kbd>Ctrl+P</kbd> su Windows/Linux, <kbd>Cmd+P</kbd> su Mac)
       per aprire la finestra di stampa. Per archiviare in digitale scegli <em>"Salva come PDF"</em> come stampante.
     </p>
@@ -2438,7 +2490,7 @@
   </section>
 
   <nav class="pacchetto-toc no-print" aria-label="Indice del pacchetto">
-    <h2>Indice — 66 schede in questo pacchetto</h2>
+    <h2>Indice — 82 schede in questo pacchetto</h2>
     <ol>
       <li><a href="#scheda-rubrica-valutativa-primaria">Rubrica valutativa Educazione Civica — Scuola Primaria</a></li>
       <li><a href="#scheda-rischio-idrogeologico-primaria">Alluvioni e frane: cosa faccio</a></li>
@@ -2506,6 +2558,22 @@
       <li><a href="#scheda-oggetti-una-bevanda-trovata-facilitata">Una bevanda trovata</a></li>
       <li><a href="#scheda-oggetti-il-patto-con-gli-adulti-famiglia">Il patto con gli adulti</a></li>
       <li><a href="#scheda-oggetti-sconosciuti-guida-adulti">Oggetti sconosciuti e confezioni alterate</a> <span class="toc-meta">· 6 fogli</span></li>
+      <li><a href="#scheda-natura-bacche-e-funghi-vero-o-falso-primaria">Bacche e funghi: vero o falso</a></li>
+      <li><a href="#scheda-natura-la-fila-di-bruchi-primaria">La fila di bruchi</a></li>
+      <li><a href="#scheda-natura-dopo-la-passeggiata-il-controllo-primaria">Dopo la passeggiata: il controllo</a></li>
+      <li><a href="#scheda-natura-vespe-a-merenda-primaria">Vespe a merenda</a></li>
+      <li><a href="#scheda-natura-guardo-non-tocco-facilitata">Guardo, non tocco</a></li>
+      <li><a href="#scheda-natura-un-insetto-vola-vicino-facilitata">Un insetto vola vicino</a></li>
+      <li><a href="#scheda-natura-il-patto-per-le-uscite-famiglia">Il patto per le uscite</a></li>
+      <li><a href="#scheda-natura-che-non-si-tocca-guida-adulti">Natura che non si tocca</a> <span class="toc-meta">· 7 fogli</span></li>
+      <li><a href="#scheda-casa-sembra-una-caramella-primaria">Sembra una caramella</a></li>
+      <li><a href="#scheda-casa-pile-piccole-e-calamite-primaria">Pile piccole e calamite</a></li>
+      <li><a href="#scheda-casa-acqua-ed-elettricita-non-vanno-d-accordo-primaria">Acqua ed elettricità non vanno d’accordo</a></li>
+      <li><a href="#scheda-casa-una-scottatura-primaria">Una scottatura</a></li>
+      <li><a href="#scheda-casa-non-apro-chiedo-facilitata">Non apro, chiedo</a></li>
+      <li><a href="#scheda-casa-caldo-non-tocco-facilitata">Caldo: non tocco</a></li>
+      <li><a href="#scheda-casa-il-patto-in-casa-famiglia">Il patto in casa</a></li>
+      <li><a href="#scheda-casa-sicura-guida-adulti">Casa sicura</a> <span class="toc-meta">· 6 fogli</span></li>
     </ol>
   </nav>
 
@@ -9509,6 +9577,701 @@
 <p class="os-fonte"><strong>F11.</strong> Ministero della Salute · Modalità di segnalazione rischi alimentari da parte dei consumatori — <a href="https://www.salute.gov.it/new/it/faq/modalita-di-segnalazione-da-parte-dei-consumatori/">https://www.salute.gov.it/new/it/faq/modalita-di-segnalazione-da-parte-dei-consumatori/</a><br>Fonte italiana. Corpi estranei in una confezione o alimenti e bevande dall’aspetto, odore o sapore anomali: evitare il consumo e segnalare all’ASL/Dipartimento di Prevenzione competente.</p>
 <p>Le fonti F9, F10 e F11 sono italiane e coprono le stesse indicazioni sanitarie e alimentari delle fonti estere: in caso di dubbio prevalgono le indicazioni italiane.</p>
 <p>Prima di riutilizzare il materiale, controllate eventuali nuove indicazioni delle autorità. Non aggiungete dettagli tecnici su veleni, dispositivi o metodi di manomissione.</p>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>GUIDA-6 · Guida per gli adulti · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+</section>
+
+<section id="scheda-natura-bacche-e-funghi-vero-o-falso-primaria" class="pacchetto-scheda" aria-label="Scheda: Bacche e funghi: vero o falso">
+  <article class="scheda-page">
+    <div class="os-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Bacche e funghi: vero o falso</h1>
+        <div class="scheda-sottotitolo">Primaria · 6–8 anni · 15 minuti</div>
+      </div>
+    </header>
+    <p class="os-meta"><strong>Obiettivo:</strong> Distinguere ciò che si può fare da ciò che non si fa con bacche e funghi.</p>
+<p>Al parco e nel bosco trovo bacche, fiori e funghi. Non li conosco tutti. Scrivi <strong>V</strong> se la frase è vera, <strong>F</strong> se è falsa.</p>
+<table><thead><tr><th scope="col">Frase</th><th scope="col">V o F?</th></tr></thead><tbody><tr><td>Le bacche rosse sono sempre buone da mangiare.</td><td>……</td></tr><tr><td>Un fungo raccolto va fatto controllare da un micologo della ASL prima di mangiarlo.</td><td>……</td></tr><tr><td>Se ho messo in bocca una bacca, lo dico subito a un adulto anche se sto bene.</td><td>……</td></tr><tr><td>Posso riconoscere un fungo con una foto sul telefono.</td><td>……</td></tr><tr><td>I funghi non si danno da mangiare ai bambini.</td><td>……</td></tr></tbody></table>
+<p>Che cosa fai se un amico ti offre una bacca trovata a terra?</p>
+<div class="os-answer" role="img" aria-label="Spazio per scrivere, disegnare o indicare la risposta"></div>
+<p><strong>Ricordo:</strong> guardo, non assaggio, chiedo a un adulto. Non devo nascondere un errore.</p>
+<p class="nota-adulto">Per l’adulto: attività solo su carta e con dialoghi. Nessun contatto con animali, piante, funghi o insetti reali durante l’attività. Si può rispondere anche indicando o con il proprio comunicatore. Fonti: N10, N11, N12 nella <a href="/formazione/schede-stampabili/natura-che-non-si-tocca-guida-adulti/">guida per gli adulti</a>.</p>
+<div class="soluzione-capovolta"><strong>Per l’adulto:</strong> Nell’ordine: F, V, V, F, V. Il controllo del micologo della ASL è gratuito; app e foto non bastano; il Ministero della Salute raccomanda di non somministrare funghi ai bambini.</div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>NT04 · Scheda · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+</section>
+
+<section id="scheda-natura-la-fila-di-bruchi-primaria" class="pacchetto-scheda" aria-label="Scheda: La fila di bruchi">
+  <article class="scheda-page">
+    <div class="os-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">La fila di bruchi</h1>
+        <div class="scheda-sottotitolo">Primaria · 6–8 anni · 15 minuti</div>
+      </div>
+    </header>
+    <p class="os-meta"><strong>Obiettivo:</strong> Riconoscere la regola per la processionaria: non toccare, non passare sotto, avvisare.</p>
+<p class="os-scenario"><strong>Situazione inventata.</strong> Nel giardino della scuola c’è un pino con un nido bianco tra i rami. A terra una fila di bruchi pelosi cammina in processione. Un compagno vuole prenderne uno con un bastoncino.</p>
+<p>I bruchi della processionaria hanno peli che irritano pelle, occhi e naso. Non si toccano, nemmeno con un bastoncino o con i guanti.</p>
+<h2>Segna le azioni che mi proteggono</h2>
+<ul class="os-choices"><li>Mi allontano e non passo sotto il pino.</li><li>Soffio sui bruchi per farli andare via.</li><li>Avviso l’insegnante e dico dove ho visto il nido.</li><li>Se ho toccato un bruco, non mi strofino: lavo con acqua e sapone e lo dico all’adulto.</li></ul>
+<p>Scrivi o disegna il cartello che metteresti vicino al pino.</p>
+<div class="os-answer" role="img" aria-label="Spazio per scrivere, disegnare o indicare la risposta"></div>
+<p>I nidi li tolgono persone esperte, chiamate dal Comune o dalla ASL. Non gli alunni, non i genitori con il fai da te.</p>
+<p class="nota-adulto">Per l’adulto: attività solo su carta e con dialoghi. Nessun contatto con animali, piante, funghi o insetti reali durante l’attività. Si può rispondere anche indicando o con il proprio comunicatore. Fonti: N13, N14, N17 nella <a href="/formazione/schede-stampabili/natura-che-non-si-tocca-guida-adulti/">guida per gli adulti</a>.</p>
+<div class="soluzione-capovolta"><strong>Per l’adulto:</strong> Azioni corrette: 1, 3 e 4. Soffiare o toccare disperde i peli urticanti. Il nido si segnala all’adulto, che avvisa Comune o ASL.</div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>NT05 · Scheda · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+</section>
+
+<section id="scheda-natura-dopo-la-passeggiata-il-controllo-primaria" class="pacchetto-scheda" aria-label="Scheda: Dopo la passeggiata: il controllo">
+  <article class="scheda-page">
+    <div class="os-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Dopo la passeggiata: il controllo</h1>
+        <div class="scheda-sottotitolo">Primaria · 8–11 anni · 20 minuti</div>
+      </div>
+    </header>
+    <p class="os-meta"><strong>Obiettivo:</strong> Mettere in ordine le azioni contro le zecche, prima e dopo un’uscita.</p>
+<p class="os-scenario"><strong>Situazione inventata.</strong> La classe fa una passeggiata nel bosco. Al rientro un’alunna trova un puntino scuro attaccato alla caviglia: è una zecca.</p>
+<h2>Metti in ordine le azioni (scrivi 1, 2, 3, 4, 5)</h2>
+<table><thead><tr><th scope="col">Azione</th><th scope="col">Ordine</th></tr></thead><tbody><tr><td>A casa, con un adulto, controllo pelle, capelli e vestiti.</td><td>……</td></tr><tr><td>Prima di uscire metto pantaloni lunghi e vestiti chiari e resto sul sentiero.</td><td>……</td></tr><tr><td>Nei giorni dopo, se la pelle si arrossa o ho la febbre, l’adulto chiama il medico.</td><td>……</td></tr><tr><td>Trovo una zecca: non la strappo e non ci metto niente sopra. Avviso subito un adulto.</td><td>……</td></tr><tr><td>L’adulto la toglie con una pinzetta a punte sottili, vicino alla pelle, e poi disinfetta.</td><td>……</td></tr></tbody></table>
+<p>Perché non si mette olio, alcol o una fiamma sulla zecca?</p>
+<div class="os-answer" role="img" aria-label="Spazio per scrivere, disegnare o indicare la risposta"></div>
+<p class="nota-adulto">Per l’adulto: attività solo su carta e con dialoghi. Nessun contatto con animali, piante, funghi o insetti reali durante l’attività. Si può rispondere anche indicando o con il proprio comunicatore. Fonti: N1, N2 nella <a href="/formazione/schede-stampabili/natura-che-non-si-tocca-guida-adulti/">guida per gli adulti</a>.</p>
+<div class="soluzione-capovolta"><strong>Per l’adulto:</strong> Ordine: 2, 1, 4, 5, 3. Olio, alcol o calore fanno rigurgitare la zecca e la spingono più a fondo (ISS). La rimozione è compito dell’adulto.</div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>NT06 · Scheda · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+</section>
+
+<section id="scheda-natura-vespe-a-merenda-primaria" class="pacchetto-scheda" aria-label="Scheda: Vespe a merenda">
+  <article class="scheda-page">
+    <div class="os-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Vespe a merenda</h1>
+        <div class="scheda-sottotitolo">Primaria · 8–11 anni · 20 minuti</div>
+      </div>
+    </header>
+    <p class="os-meta"><strong>Obiettivo:</strong> Comportarsi con calma davanti a vespe e calabroni e riconoscere i segnali che richiedono il 112.</p>
+<p class="os-scenario"><strong>Situazione inventata.</strong> In giardino, durante la merenda, due vespe girano intorno al succo di frutta aperto. Un compagno vuole colpirle con il quaderno.</p>
+<h2>Segna le azioni che mi proteggono</h2>
+<ul class="os-choices"><li>Copro il succo e la merenda.</li><li>Colpisco la vespa con il quaderno.</li><li>Resto calmo e mi allontano piano, senza agitare le braccia.</li><li>Se vedo un nido, lo dico all’insegnante: lo tolgono persone esperte.</li></ul>
+<h2>Se una vespa mi punge</h2>
+<p>Lo dico subito a un adulto. L’adulto toglie il pungiglione, se si vede, con un’unghia o una pinzetta, lava e mette qualcosa di freddo.</p>
+<p>Quali segnali fanno chiamare subito il 112? Scrivi quelli che ricordi.</p>
+<div class="os-answer" role="img" aria-label="Spazio per scrivere, disegnare o indicare la risposta"></div>
+<p>Chi sa di essere allergico ha un piano concordato con la famiglia e il medico: lo conosce anche l’insegnante.</p>
+<p class="nota-adulto">Per l’adulto: attività solo su carta e con dialoghi. Nessun contatto con animali, piante, funghi o insetti reali durante l’attività. Si può rispondere anche indicando o con il proprio comunicatore. Fonti: N3, N4, N5 nella <a href="/formazione/schede-stampabili/natura-che-non-si-tocca-guida-adulti/">guida per gli adulti</a>.</p>
+<div class="soluzione-capovolta"><strong>Per l’adulto:</strong> Azioni corrette: 1, 3 e 4. Segnali per il 112: orticaria diffusa, gonfiore di viso o labbra, difficoltà a parlare o a respirare (Bambino Gesù).</div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>NT07 · Scheda · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+</section>
+
+<section id="scheda-natura-guardo-non-tocco-facilitata" class="pacchetto-scheda" aria-label="Scheda: Guardo, non tocco">
+  <article class="scheda-page">
+    <div class="os-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Guardo, non tocco</h1>
+        <div class="scheda-sottotitolo">Versione facilitata · età diverse · 10 minuti</div>
+      </div>
+    </header>
+    <p class="os-meta"><strong>Obiettivo:</strong> Chiedere aiuto davanti a una pianta o a un animale sconosciuto.</p>
+<p class="os-big">VEDO UNA PIANTA O UN ANIMALE. NON LO CONOSCO.</p>
+<div class="os-steps"><div><strong>1</strong><p>GUARDO</p>
+</div>
+<div><strong>2</strong><p>NON TOCCO</p>
+</div>
+<div><strong>3</strong><p>CHIAMO UN ADULTO</p>
+</div>
+</div>
+<p class="os-big">NON METTO IN BOCCA.</p>
+<p>Posso parlare. Posso fare un gesto. Posso indicare un’immagine. Posso usare il mio comunicatore.</p>
+<p>Scegli con l’adulto il tuo modo di chiedere aiuto.</p>
+<div class="os-answer" role="img" aria-label="Spazio per scrivere, disegnare o indicare la risposta"></div>
+<p class="nota-adulto">Per l’adulto: attività solo su carta e con dialoghi. Nessun contatto con animali, piante, funghi o insetti reali durante l’attività. Si può rispondere anche indicando o con il proprio comunicatore. Fonti: N12 nella <a href="/formazione/schede-stampabili/natura-che-non-si-tocca-guida-adulti/">guida per gli adulti</a>.</p>
+<div class="soluzione-capovolta"><strong>Per l’adulto:</strong> L’adulto concorda un segnale comprensibile e resta disponibile. Se la persona non può allontanarsi da sola, la aiuta secondo i suoi bisogni.</div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>NT14 · Scheda · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+</section>
+
+<section id="scheda-natura-un-insetto-vola-vicino-facilitata" class="pacchetto-scheda" aria-label="Scheda: Un insetto vola vicino">
+  <article class="scheda-page">
+    <div class="os-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Un insetto vola vicino</h1>
+        <div class="scheda-sottotitolo">Versione facilitata · età diverse · 10 minuti</div>
+      </div>
+    </header>
+    <p class="os-meta"><strong>Obiettivo:</strong> Restare calmi con un insetto vicino e segnalare subito una puntura.</p>
+<p class="os-big">UNA VESPA VOLA VICINO A ME.</p>
+<p class="os-big">STO FERMO. NON AGITO LE MANI.</p>
+<p class="os-big">VADO VIA PIANO. CHIAMO UN ADULTO.</p>
+<p>Indica, racconta o disegna come chiami l’adulto.</p>
+<div class="os-answer os-draw" role="img" aria-label="Spazio per scrivere, disegnare o indicare la risposta"></div>
+<p class="os-big">MI HA PUNTO? LO DICO SUBITO. ANCHE SE NON FA MALE.</p>
+<p class="nota-adulto">Per l’adulto: attività solo su carta e con dialoghi. Nessun contatto con animali, piante, funghi o insetti reali durante l’attività. Si può rispondere anche indicando o con il proprio comunicatore. Fonti: N3, N5 nella <a href="/formazione/schede-stampabili/natura-che-non-si-tocca-guida-adulti/">guida per gli adulti</a>.</p>
+<div class="soluzione-capovolta"><strong>Per l’adulto:</strong> Non richiedere di riconoscere l’insetto. Dopo una puntura l’adulto controlla i segnali di reazione grave e, se compaiono, chiama il 112.</div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>NT15 · Scheda · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+</section>
+
+<section id="scheda-natura-il-patto-per-le-uscite-famiglia" class="pacchetto-scheda" aria-label="Scheda: Il patto per le uscite">
+  <article class="scheda-page">
+    <div class="os-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Il patto per le uscite</h1>
+        <div class="scheda-sottotitolo">Famiglie, scuola e accompagnatori · 20 minuti</div>
+      </div>
+    </header>
+    <p class="os-meta"><strong>Obiettivo:</strong> Concordare un aiuto concreto per parco, giardino e gite.</p>
+<p>Le persone piccole o fragili non hanno il compito di riconoscere piante, funghi o animali pericolosi al posto degli adulti.</p>
+<h2>Noi adulti ci impegniamo a…</h2>
+<ul class="os-choices"><li>Ascoltare senza rimproveri quando qualcuno racconta di aver toccato o assaggiato qualcosa.</li><li>Conoscere le allergie note e il piano concordato con il pediatra, e dirlo a chi accompagna.</li><li>Tenere in rubrica il 112 e il Centro Antiveleni pediatrico (06 6859 3726).</li><li>Non dare funghi ai bambini e far controllare i funghi raccolti dal micologo della ASL.</li><li>Segnalare al Comune o alla ASL i nidi di processionaria e i vespai: la rimozione spetta a personale esperto.</li><li>Fare il controllo di pelle e vestiti dopo le uscite nei prati e nel bosco.</li></ul>
+<p>Quale segnale useremo per chiedere aiuto all’aperto?</p>
+<div class="os-answer" role="img" aria-label="Spazio per scrivere, disegnare o indicare la risposta"></div>
+<p>Chi accompagna la prossima uscita e che cosa porta con sé?</p>
+<div class="os-answer" role="img" aria-label="Spazio per scrivere, disegnare o indicare la risposta"></div>
+<p>Conservate questa scheda in famiglia o a scuola. Non pubblicate i nomi e le risposte personali.</p>
+<p class="nota-adulto">Per l’adulto: attività solo su carta e con dialoghi. Nessun contatto con animali, piante, funghi o insetti reali durante l’attività. Si può rispondere anche indicando o con il proprio comunicatore. Fonti: N1, N10, N12, N13 nella <a href="/formazione/schede-stampabili/natura-che-non-si-tocca-guida-adulti/">guida per gli adulti</a>.</p>
+<div class="soluzione-capovolta"><strong>Per l’adulto:</strong> Il patto serve agli adulti per organizzare sostegno e supervisione. Non è una promessa del bambino di non sbagliare.</div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>NT16 · Scheda per gli adulti · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+</section>
+
+<section id="scheda-natura-che-non-si-tocca-guida-adulti" class="pacchetto-scheda" aria-label="Scheda: Natura che non si tocca">
+  <article class="scheda-page">
+    <div class="os-page os-guide">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Natura che non si tocca</h1>
+        <div class="scheda-sottotitolo">Guida per famiglie, insegnanti e accompagnatori · Come proporre il percorso</div>
+      </div>
+    </header>
+    <h2>Come proporre il percorso</h2>
+<p>Il percorso riguarda l’educazione alla sicurezza all’aperto: parco, giardino della scuola, bosco, sentieri dei Castelli Romani. Si collega alla cultura di protezione civile e al rispetto degli esseri viventi.</p>
+<p>Non chiede ai bambini di riconoscere piante velenose, funghi, insetti o serpenti. Insegna una sola sequenza: guardo, non tocco, mi allontano con calma, chiedo a un adulto.</p>
+<h2>Prima dell’attività</h2>
+<ul><li>Scegliete la scheda in base a comprensione, età e bisogni della persona.</li><li>Sapete in anticipo chi ha allergie note al veleno di insetti e cosa ha concordato la famiglia con il pediatra.</li><li>Usate soltanto fogli, disegni e dialoghi. Nessun animale, pianta, fungo o insetto reale in classe; nessuna «prova» all’aperto.</li><li>Spiegate che gli esempi sono inventati e che i disegni non rappresentano distanze di sicurezza.</li></ul>
+<h2>Durante e dopo</h2>
+<p>Un incontro può comprendere lettura, attività e restituzione. Concludete ripetendo la sequenza e indicando chi può aiutare.</p>
+<p>Non tutta la natura è pericolosa: distinguete le attività guidate dall’adulto (raccogliere foglie scelte, accarezzare un cane con il permesso del padrone) dagli incontri imprevisti.</p>
+<p>Le schede sono materiale educativo del Gruppo. Non sono una certificazione, un protocollo sanitario o una validazione delle autorità citate.</p>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>GUIDA-1 · Guida per gli adulti · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="os-page os-guide">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h2 class="scheda-titolo-principale">Età, emozioni e accessibilità</h2>
+        <div class="scheda-sottotitolo">Guida per famiglie, insegnanti e accompagnatori · pagina 2 di 7</div>
+      </div>
+    </header>
+<h2>Infanzia</h2>
+<p>Frasi brevi, un’azione alla volta e adulto presente. Niente racconti di incidenti gravi. Accogliete le risposte con gesti, parole o disegni.</p>
+<h2>Primaria e secondaria</h2>
+<p>Introducete gradualmente il rapporto tra ciò che si osserva e ciò che si suppone: un serpente visto non è «sicuramente una vipera», un fungo bello non è «sicuramente buono». Ai più grandi proponete la verifica dei rimedi che circolano e la pianificazione di un’uscita.</p>
+<h2>Adattamenti</h2>
+<ul><li>Leggete ad alta voce e presentate una consegna alla volta.</li><li>Usate il sistema di comunicazione abituale della persona.</li><li>Concordate come aiutare chi non può allontanarsi da solo o non può segnalare una puntura con le parole.</li><li>Consentite pause e osservazione senza partecipazione forzata.</li><li>Non chiedete di raccontare esperienze personali spiacevoli.</li></ul>
+<p>Paura, pianto, lentezza o bisogno di supporto non sono errori da valutare. Osservate le azioni possibili con gli adattamenti concordati.</p>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>GUIDA-2 · Guida per gli adulti · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="os-page os-guide">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h2 class="scheda-titolo-principale">Se il contatto avviene davvero</h2>
+        <div class="scheda-sottotitolo">Guida per famiglie, insegnanti e accompagnatori · pagina 3 di 7</div>
+      </div>
+    </header>
+<p>Le indicazioni seguono le fonti della pagina finale. In ogni caso grave o in dubbio chiamate il <strong>112</strong>. Per ingestioni e contatti con sostanze potete chiamare il Centro Antiveleni pediatrico del Bambino Gesù, <strong>06 6859 3726</strong>, attivo 24 ore: dite età e peso, che cosa, quanto, da quanto tempo, sintomi.</p>
+<h2>Bacche, piante, funghi</h2>
+<p>Se un bambino ha messo in bocca una bacca o un fungo: non indurre il vomito, non fare mangiare né bere, non assaggiare per capire che cosa fosse; chiamare il Centro Antiveleni anche senza sintomi e conservare un campione di ciò che è stato ingerito. I funghi raccolti si fanno controllare dal micologo della ASL prima di consumarli e non si danno ai bambini; se dopo il consumo compaiono disturbi, Pronto Soccorso con gli avanzi.</p>
+<h2>Bruchi della processionaria</h2>
+<p>Non toccare bruchi e nidi. Dopo un contatto: non strofinare, lavare la pelle con acqua e sapone, sciacquare gli occhi con acqua abbondante, avvisare il pediatra; se sono interessati occhi, bocca o respiro, valutazione medica subito. I nidi si segnalano al Comune o alla ASL: la rimozione spetta a personale specializzato.</p>
+<h2>Vespe, api, calabroni</h2>
+<p>Togliere subito il pungiglione visibile con unghia o pinzetta, lavare e applicare freddo. Chiamare il 112 se compaiono orticaria diffusa, gonfiore del volto o delle labbra, difficoltà a parlare o a respirare. Chi ha un’allergia nota segue il piano concordato con il pediatra.</p>
+<h2>Zecche</h2>
+<p>La zecca la toglie un adulto con una pinzetta a punte sottili, afferrandola vicino alla pelle e tirando dolcemente; niente olio, alcol o calore. Disinfettare e osservare la zona nei giorni successivi: dal medico se compare un arrossamento che si allarga, febbre o dolori.</p>
+<h2>Cani e serpenti</h2>
+<p>Dopo un morso di cane: lavare con acqua e sapone, disinfettare, contattare il pediatra; Pronto Soccorso per lesioni importanti. Serpente avvistato: allontanarsi lentamente senza toccarlo. Morso di vipera: mantenere la persona calma e ferma, muovere il meno possibile l’arto, togliere anelli e bracciali, andare al Pronto Soccorso o chiamare il 112; non incidere, non succhiare, niente lacci né ghiaccio.</p>
+<p>Riferimenti: N1–N17.</p>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>GUIDA-3 · Guida per gli adulti · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="os-page os-guide">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h2 class="scheda-titolo-principale">Risposte e conduzione · prima parte</h2>
+        <div class="scheda-sottotitolo">Guida per famiglie, insegnanti e accompagnatori · pagina 4 di 7</div>
+      </div>
+    </header>
+<p><strong>01. Guardo con gli occhi</strong><br>Guardo, non tocco, chiedo. Accogliere anche risposte gestuali. Se un bambino racconta di aver assaggiato qualcosa, l’adulto chiama il Centro Antiveleni anche senza sintomi.</p>
+<p><strong>02. Sara e il cane al parco</strong><br>La richiesta di permesso è nella scena 4. Un cane senza padrone non si avvicina: si avvisa un adulto. Non insegnare posture «magiche»: la regola è non correre, non toccare, chiedere.</p>
+<p><strong>03. Piccoli animali, mani ferme</strong><br>Calma, braccia ferme, allontanarsi con l’adulto. I bruchi in fila (processionaria) hanno peli urticanti: si guardano da lontano. Accogliere risposte gestuali.</p>
+<p><strong>04. Bacche e funghi: vero o falso</strong><br>Nell’ordine: F, V, V, F, V. Il controllo del micologo della ASL è gratuito; app e foto non bastano; il Ministero della Salute raccomanda di non somministrare funghi ai bambini.</p>
+<p><strong>05. La fila di bruchi</strong><br>Azioni corrette: 1, 3 e 4. Soffiare o toccare disperde i peli urticanti. Il nido si segnala all’adulto, che avvisa Comune o ASL.</p>
+<p><strong>06. Dopo la passeggiata: il controllo</strong><br>Ordine: 2, 1, 4, 5, 3. Olio, alcol o calore fanno rigurgitare la zecca e la spingono più a fondo (ISS). La rimozione è compito dell’adulto.</p>
+<p><strong>07. Vespe a merenda</strong><br>Azioni corrette: 1, 3 e 4. Segnali per il 112: orticaria diffusa, gonfiore di viso o labbra, difficoltà a parlare o a respirare (Bambino Gesù).</p>
+<p><strong>08. Serpenti: fatto o supposizione</strong><br>Nell’ordine: F, S, F, S, F. Riscrittura: niente incisioni, succhiare o lacci; calma, arto fermo, anelli tolti, 112 o Pronto Soccorso (Centro Antiveleni Niguarda, ISS, AUSL Piacenza).</p>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>GUIDA-4 · Guida per gli adulti · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="os-page os-guide">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h2 class="scheda-titolo-principale">Risposte e osservazione · seconda parte</h2>
+        <div class="scheda-sottotitolo">Guida per famiglie, insegnanti e accompagnatori · pagina 5 di 7</div>
+      </div>
+    </header>
+<p><strong>09. Il fungo che sembra buono</strong><br>Ogni riscrittura deve contenere il controllo del micologo della ASL prima del consumo e nessun assaggio. L’esperienza di famiglia e le app non sostituiscono il controllo (Ministero della Salute).</p>
+<p><strong>10. Una chiamata al Centro Antiveleni</strong><br>Non indurre il vomito, non far mangiare né bere, non assaggiare la bacca per capire che cos’è. Si chiama anche senza sintomi (Bambino Gesù).</p>
+<p><strong>11. A chi chiedere aiuto</strong><br>1: segnalazione a scuola e al Comune/ASL, nessun fai da te. 2: 112 subito, è una reazione allergica grave. 3: Pronto Soccorso subito con gli avanzi, avvisare chi ha mangiato gli stessi funghi. 4: rimozione affidata a personale specializzato.</p>
+<p><strong>12. Rimedi che circolano</strong><br>Nell’ordine: M, M, M, F, F. La risposta corretta cita una fonte (Bambino Gesù, ISS, Ministero della Salute, Centro Antiveleni) e invita a chiedere aiuto se compaiono segnali gravi.</p>
+<p><strong>13. Uscita nel Parco: il piano del gruppo</strong><br>Verificare che il piano contenga: abiti lunghi e chiari, allergie note e piano concordato, 112 e Centro Antiveleni in rubrica; sul sentiero, allontanarsi con calma da serpenti e nidi; al rientro controllo zecche e osservazione nei giorni seguenti.</p>
+<p><strong>14. Guardo, non tocco</strong><br>L’adulto concorda un segnale comprensibile e resta disponibile. Se la persona non può allontanarsi da sola, la aiuta secondo i suoi bisogni.</p>
+<p><strong>15. Un insetto vola vicino</strong><br>Non richiedere di riconoscere l’insetto. Dopo una puntura l’adulto controlla i segnali di reazione grave e, se compaiono, chiama il 112.</p>
+<p><strong>16. Il patto per le uscite</strong><br>Il patto serve agli adulti per organizzare sostegno e supervisione. Non è una promessa del bambino di non sbagliare.</p>
+<p><strong>Osservazione descrittiva:</strong> riconosce la sequenza; chiede aiuto; riferisce i fatti. Registrare il supporto utile e i progressi, senza assegnare un voto alla paura.</p>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>GUIDA-5 · Guida per gli adulti · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="os-page os-guide os-fonti">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h2 class="scheda-titolo-principale">Fonti e aggiornamento</h2>
+        <div class="scheda-sottotitolo">Guida per famiglie, insegnanti e accompagnatori · pagina 6 di 7</div>
+      </div>
+    </header>
+<p>Fonti consultate il 13 settembre 2026. In Italia, per ogni emergenza, il numero da chiamare è il <strong>112</strong>. Le fonti sanitarie sono italiane (Istituto Superiore di Sanità, Ospedale Pediatrico Bambino Gesù, Ministero della Salute, Centri antiveleni, Vigili del Fuoco); dove citano recapiti locali, valgono quelli del territorio.</p>
+<p class="os-fonte"><strong>N1.</strong> Istituto Superiore di Sanità · EpiCentro · Zecche — <a href="https://www.epicentro.iss.it/zecche/">https://www.epicentro.iss.it/zecche/</a><br>Rimozione con pinzetta a punte sottili vicino alla pelle; niente alcol, olio, benzina o calore; disinfettare e osservare; abiti chiari e controllo al rientro.</p>
+<p class="os-fonte"><strong>N2.</strong> Ospedale Pediatrico Bambino Gesù · Punture di zecche — <a href="https://www.ospedalebambinogesu.it/punture-di-zecche-80533/">https://www.ospedalebambinogesu.it/punture-di-zecche-80533/</a><br>Afferrare alla base con pinzetta e tirare delicatamente; osservare la pelle nei giorni successivi; pediatra se compaiono arrossamento che si allarga, febbre o dolori.</p>
+<p class="os-fonte"><strong>N3.</strong> Ospedale Pediatrico Bambino Gesù · Punture di insetto — <a href="https://www.ospedalebambinogesu.it/punture-di-insetto-80312/">https://www.ospedalebambinogesu.it/punture-di-insetto-80312/</a><br>Coprire cibi e bevande dolci; far rimuovere i nidi da personale specializzato; segni di reazione allergica grave: orticaria diffusa, gonfiore, difficoltà a respirare.</p>
+<p class="os-fonte"><strong>N4.</strong> Ospedale Pediatrico Bambino Gesù · Allergia al veleno di insetti con pungiglione — <a href="https://www.ospedalebambinogesu.it/allergia-al-veleno-di-insetti-con-pungiglione-79925/">https://www.ospedalebambinogesu.it/allergia-al-veleno-di-insetti-con-pungiglione-79925/</a><br>Togliere subito il pungiglione con unghia o pinzetta; applicare freddo; chiamare i soccorsi se compaiono gonfiore del volto, difficoltà a parlare o a respirare.</p>
+<p class="os-fonte"><strong>N5.</strong> Ospedale Pediatrico Bambino Gesù · Vespa orientalis — <a href="https://www.ospedalebambinogesu.it/vespa-orientalis-tutto-quello-che-c-e-da-sapere-143148/">https://www.ospedalebambinogesu.it/vespa-orientalis-tutto-quello-che-c-e-da-sapere-143148/</a><br>Restare tranquilli e allontanarsi; non tentare di uccidere l’insetto né di rimuovere il nido; dopo la puntura lavare con acqua fredda e applicare freddo; 112 se reazione grave.</p>
+<p class="os-fonte"><strong>N6.</strong> Ospedale Pediatrico Bambino Gesù · Morsi di animali — <a href="https://www.ospedalebambinogesu.it/morso-d-animale-96888/">https://www.ospedalebambinogesu.it/morso-d-animale-96888/</a><br>Gli animali domestici non sono giocattoli e possono reagire se disturbati; gli animali selvatici non vanno disturbati; dopo un morso lavare con acqua e sapone e contattare il pediatra.</p>
+<p class="os-fonte"><strong>N7.</strong> Ministero della Salute · Tutela dall’aggressione dei cani — <a href="https://www.salute.gov.it/new/it/tema/animali-daffezione/tutela-dallaggressione-dei-cani/">https://www.salute.gov.it/new/it/tema/animali-daffezione/tutela-dallaggressione-dei-cani/</a><br>Il proprietario è sempre responsabile del proprio cane; guinzaglio nei luoghi pubblici e museruola a disposizione; affidare il cane solo a chi sa gestirlo.</p>
+<p class="os-fonte"><strong>N8.</strong> Istituto Superiore di Sanità · EpiCentro · Proteggersi da animali pericolosi — <a href="https://www.epicentro.iss.it/focus/alluvioni/animali">https://www.epicentro.iss.it/focus/alluvioni/animali</a><br>Serpente avvistato: allontanarsi lentamente e non toccarlo; morso: mantenere calma e ferma la persona e chiamare i soccorsi; stare alla larga da animali selvatici o randagi.</p>
+<p class="os-fonte"><strong>N9.</strong> Centro Antiveleni ASST Grande Ospedale Metropolitano Niguarda · Punture e morsi estivi — <a href="https://www.ospedaleniguarda.it/news/leggi/punture-estive-meduse-vipere-e-calabroni-che-fare">https://www.ospedaleniguarda.it/news/leggi/punture-estive-meduse-vipere-e-calabroni-che-fare</a><br>Morso di vipera: calma, muovere il meno possibile l’arto senza comprimerlo, Pronto Soccorso; non incidere, non succhiare, niente lacci né ghiaccio; battere un bastone a terra fa allontanare le vipere.</p>
+<p>Le fonti continuano nella pagina seguente.</p>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>GUIDA-6 · Guida per gli adulti · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="os-page os-guide os-fonti">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h2 class="scheda-titolo-principale">Fonti e aggiornamento (segue)</h2>
+        <div class="scheda-sottotitolo">Guida per famiglie, insegnanti e accompagnatori · pagina 7 di 7</div>
+      </div>
+    </header>
+<p class="os-fonte"><strong>N10.</strong> Ministero della Salute · Funghi, consumiamoli in sicurezza — <a href="https://www.salute.gov.it/new/it/tema/sistema-di-controllo-della-sicurezza-alimentare/funghi-consumiamoli-sicurezza/">https://www.salute.gov.it/new/it/tema/sistema-di-controllo-della-sicurezza-alimentare/funghi-consumiamoli-sicurezza/</a><br>Dieci regole: far controllare i funghi da un micologo della ASL (servizio gratuito), non fidarsi di app o di foto sui social, non somministrare funghi ai bambini.</p>
+<p class="os-fonte"><strong>N11.</strong> Ministero della Salute · Strutture per le intossicazioni (Centri antiveleni) — <a href="https://www.salute.gov.it/new/it/tema/sistema-di-controllo-della-sicurezza-alimentare/strutture-le-intossicazioni/">https://www.salute.gov.it/new/it/tema/sistema-di-controllo-della-sicurezza-alimentare/strutture-le-intossicazioni/</a><br>Disturbi dopo funghi non controllati: subito al Pronto Soccorso con gli avanzi e avvisare chi ha mangiato gli stessi funghi; il latte non è un antidoto.</p>
+<p class="os-fonte"><strong>N12.</strong> Ospedale Pediatrico Bambino Gesù · Centro Antiveleni pediatrico, le cose da sapere — <a href="https://www.ospedalebambinogesu.it/centro-antiveleni-le-cose-da-sapere-128569/">https://www.ospedalebambinogesu.it/centro-antiveleni-le-cose-da-sapere-128569/</a><br>Numero 06 6859 3726 attivo 24 ore; non indurre il vomito, non far mangiare né bere, non assaggiare il prodotto; chiamare anche senza sintomi; dire età, peso, cosa, quanto, quando.</p>
+<p class="os-fonte"><strong>N13.</strong> Comune di Pisa · Le processionarie del pino e della quercia (opuscolo) — <a href="https://ambiente.comune.pisa.it/documenti_servizi/Disinfestazioni/Disinfestazione%20verde%20pubblico/testi/opuscolo_processionarie.pdf">https://ambiente.comune.pisa.it/documenti_servizi/Disinfestazioni/Disinfestazione%20verde%20pubblico/testi/opuscolo_processionarie.pdf</a><br>Non toccare bruchi e nidi, non sostare sotto i pini infestati; in caso di contatto lavare la pelle con acqua e sapone e sciacquare gli occhi; segnalare i nidi alle autorità.</p>
+<p class="os-fonte"><strong>N14.</strong> Gazzetta Ufficiale · D.M. 30 ottobre 2007, Disposizioni per la lotta obbligatoria contro la processionaria del pino — <a href="https://www.gazzettaufficiale.it/eli/id/2008/02/16/08A01131/sg">https://www.gazzettaufficiale.it/eli/id/2008/02/16/08A01131/sg</a><br>Istituisce la lotta obbligatoria contro la processionaria del pino nelle aree in cui l’insetto minaccia seriamente la produzione o la sopravvivenza del popolamento arboreo. Il decreto riguarda la tutela del patrimonio boschivo, non il rischio per la salute delle persone (vedi N13).</p>
+<p class="os-fonte"><strong>N15.</strong> Unione europea · Numero unico di emergenza 112 — <a href="https://europa.eu/youreurope/citizens/travel/security-and-emergencies/emergency/index_it.htm">https://europa.eu/youreurope/citizens/travel/security-and-emergencies/emergency/index_it.htm</a><br>Il 112 consente di richiedere gratuitamente i servizi di emergenza in tutta l’Unione europea.</p>
+<p class="os-fonte"><strong>N16.</strong> Azienda Unità Sanitaria Locale di Piacenza · Morso di vipera: cosa fare e cosa evitare — <a href="https://www.ausl.pc.it/it/focus-e-approfondimenti/estate-in-salute/morso-di-vipera-cosa-fare-e-cosa-evitare">https://www.ausl.pc.it/it/focus-e-approfondimenti/estate-in-salute/morso-di-vipera-cosa-fare-e-cosa-evitare</a><br>Togliere orologi, anelli e bracciali e slacciare o tagliare abiti stretti nella zona colpita; chiamare il 112 e andare al Pronto Soccorso; non applicare lacci emostatici né aspirare il veleno.</p>
+<p class="os-fonte"><strong>N17.</strong> Ente Parco delle Madonie · Istruzioni per evitare spiacevoli inconvenienti: emergenza processionaria — <a href="https://www.parcodellemadonie.it/istruzioni-per-evitare-spiacevoli-inconvenienti-emergenza-processionaria/">https://www.parcodellemadonie.it/istruzioni-per-evitare-spiacevoli-inconvenienti-emergenza-processionaria/</a><br>In caso di contatto con la pelle lavare abbondantemente con acqua e sapone; se coinvolti gli occhi, sciacquarli abbondantemente; valutazione medica per sintomi respiratori o generalizzati; non toccare nidi né peli urticanti, rimozione affidata a personale specializzato.</p>
+<p>Prima di riutilizzare il materiale, controllate eventuali nuove indicazioni delle autorità. Non aggiungete dettagli tecnici su sostanze, specie o metodi pericolosi.</p>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>GUIDA-7 · Guida per gli adulti · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+</section>
+
+<section id="scheda-casa-sembra-una-caramella-primaria" class="pacchetto-scheda" aria-label="Scheda: Sembra una caramella">
+  <article class="scheda-page">
+    <div class="os-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Sembra una caramella</h1>
+        <div class="scheda-sottotitolo">Primaria · 6–8 anni · 15 minuti</div>
+      </div>
+    </header>
+    <p class="os-meta"><strong>Obiettivo:</strong> Distinguere un’attività autorizzata dall’adulto da un oggetto trovato in casa.</p>
+<p>Non tutto ciò che è in casa è pericoloso. Contano il posto, quello che sai e le indicazioni dell’adulto.</p>
+<p><strong>A</strong> = seguo l’attività già autorizzata dall’adulto. <strong>B</strong> = non tocco, non assaggio e avviso.</p>
+<table><thead><tr><th scope="col">Situazione raccontata</th><th scope="col">A o B?</th></tr></thead><tbody><tr><td>La mamma mi dà lo sciroppo con il misurino, come ha detto il pediatra.</td><td>……</td></tr><tr><td>Sul comodino dei nonni trovo pastiglie colorate senza scatola.</td><td>……</td></tr><tr><td>In lavanderia vedo capsule morbide e colorate come caramelle.</td><td>……</td></tr><tr><td>Aiuto a lavare l’insalata con un adulto accanto.</td><td>……</td></tr><tr><td>In una bottiglia d’acqua c’è un liquido che non sembra acqua.</td><td>……</td></tr></tbody></table>
+<p>Che differenza c’è tra lo sciroppo della mamma e le pastiglie sul comodino?</p>
+<div class="os-answer" role="img" aria-label="Spazio per scrivere, disegnare o indicare la risposta"></div>
+<p><strong>Ricordo:</strong> se ho già messo qualcosa in bocca, lo dico subito, anche se sto bene. L’adulto chiama il Centro Antiveleni.</p>
+<p class="nota-adulto">Per l’adulto: attività solo su carta e con dialoghi. Nessuna prova con prodotti, fornelli, prese o pile reali. Si può rispondere anche indicando o con il proprio comunicatore. Fonti: C4, C5 nella <a href="/formazione/schede-stampabili/casa-sicura-guida-adulti/">guida per gli adulti</a>.</p>
+<div class="soluzione-capovolta"><strong>Per l’adulto:</strong> Nell’ordine: A, B, B, A, B. Nei casi A l’adulto ha già dato indicazioni. Le capsule di detersivo e i liquidi travasati in bottiglie per alimenti sono un rischio noto (Bambino Gesù).</div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>CS04 · Scheda · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+</section>
+
+<section id="scheda-casa-pile-piccole-e-calamite-primaria" class="pacchetto-scheda" aria-label="Scheda: Pile piccole e calamite">
+  <article class="scheda-page">
+    <div class="os-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Pile piccole e calamite</h1>
+        <div class="scheda-sottotitolo">Primaria · 6–8 anni · 15 minuti</div>
+      </div>
+    </header>
+    <p class="os-meta"><strong>Obiettivo:</strong> Lasciare stare pile a bottone e magneti e segnalare subito un’ingestione.</p>
+<p>Le pile a bottone stanno nei telecomandi, nei giocattoli e nelle candeline finte. I magneti stanno in alcuni giochi e sul frigorifero. Sono piccoli, ma se finiscono in bocca fanno molto male dentro.</p>
+<h2>Segna le azioni che mi proteggono</h2>
+<ul class="os-choices"><li>Non metto in bocca pile e calamite, nemmeno per gioco.</li><li>Se trovo una pila a terra, la porto in bocca a un adulto per fargliela vedere.</li><li>Se trovo una pila a terra, la lascio dove è e chiamo un adulto.</li><li>Se mio fratello piccolo ne ha ingoiata una, lo dico subito anche se lui sta bene.</li></ul>
+<p>Completa: se qualcuno ingoia una pila o un magnete, l’adulto lo porta subito…</p>
+<div class="os-answer" role="img" aria-label="Spazio per scrivere, disegnare o indicare la risposta"></div>
+<p>Non si aspetta che stia male. Non si fa vomitare. Non si dà da mangiare o da bere.</p>
+<p class="nota-adulto">Per l’adulto: attività solo su carta e con dialoghi. Nessuna prova con prodotti, fornelli, prese o pile reali. Si può rispondere anche indicando o con il proprio comunicatore. Fonti: C3, C7, C8 nella <a href="/formazione/schede-stampabili/casa-sicura-guida-adulti/">guida per gli adulti</a>.</p>
+<div class="soluzione-capovolta"><strong>Per l’adulto:</strong> Azioni corrette: 1, 3 e 4. Ingestione certa o sospetta di pila a bottone o magneti: subito al Pronto Soccorso anche senza sintomi (Bambino Gesù).</div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>CS05 · Scheda · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+</section>
+
+<section id="scheda-casa-acqua-ed-elettricita-non-vanno-d-accordo-primaria" class="pacchetto-scheda" aria-label="Scheda: Acqua ed elettricità non vanno d’accordo">
+  <article class="scheda-page">
+    <div class="os-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Acqua ed elettricità non vanno d’accordo</h1>
+        <div class="scheda-sottotitolo">Primaria · 8–11 anni · 20 minuti</div>
+      </div>
+    </header>
+    <p class="os-meta"><strong>Obiettivo:</strong> Trovare gli errori in una descrizione e riscriverli in modo sicuro.</p>
+<p class="os-scenario"><strong>Descrizione inventata.</strong> «In bagno il phon è acceso sul bordo della vasca piena. In cucina una presa ha quattro spine attaccate a una ciabatta e il cavo del tostapane pende dal tavolo. Marco stacca la spina tirando il filo. In camera infila una forcina nella presa per vedere che succede.»</p>
+<h2>Trova gli errori</h2>
+<p>Sottolinea nella descrizione ogni comportamento pericoloso. Poi scrivi qui le tre correzioni più importanti.</p>
+<div class="os-answer os-draw" role="img" aria-label="Spazio per scrivere, disegnare o indicare la risposta"></div>
+<p>Gli apparecchi elettrici stanno lontani dall’acqua. Nelle prese non si infila niente. Troppe spine su una presa la scaldano. La spina si stacca tenendola in mano, non tirando il cavo. I copri-prese li mette l’adulto.</p>
+<p>Se vedo una presa che fuma o sento odore di bruciato: mi allontano e avviso subito un adulto.</p>
+<p class="nota-adulto">Per l’adulto: attività solo su carta e con dialoghi. Nessuna prova con prodotti, fornelli, prese o pile reali. Si può rispondere anche indicando o con il proprio comunicatore. Fonti: C1, C9 nella <a href="/formazione/schede-stampabili/casa-sicura-guida-adulti/">guida per gli adulti</a>.</p>
+<div class="soluzione-capovolta"><strong>Per l’adulto:</strong> Errori: phon vicino alla vasca; troppe spine su una presa; cavo che pende; spina tirata dal cavo; oggetto nella presa. Fonti: Bambino Gesù (casa), Vigili del Fuoco (impianto elettrico).</div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>CS06 · Scheda · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+</section>
+
+<section id="scheda-casa-una-scottatura-primaria" class="pacchetto-scheda" aria-label="Scheda: Una scottatura">
+  <article class="scheda-page">
+    <div class="os-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Una scottatura</h1>
+        <div class="scheda-sottotitolo">Primaria · 8–11 anni · 20 minuti</div>
+      </div>
+    </header>
+    <p class="os-meta"><strong>Obiettivo:</strong> Riscrivere in modo corretto i consigli sbagliati sulle ustioni.</p>
+<p class="os-scenario"><strong>Situazione inventata.</strong> A merenda tua sorella rovescia una tazza di latte caldo sulla mano. Piange. Un adulto è in casa.</p>
+<h2>Riscrivi questi consigli in modo corretto</h2>
+<p>«Metti subito il burro, così non resta il segno».</p>
+<div class="os-answer" role="img" aria-label="Spazio per scrivere, disegnare o indicare la risposta"></div>
+<p>«Un cubetto di ghiaccio sulla pelle e passa tutto».</p>
+<div class="os-answer" role="img" aria-label="Spazio per scrivere, disegnare o indicare la risposta"></div>
+<p>«Tieni la mano sotto l’acqua un minuto, poi basta».</p>
+<div class="os-answer" role="img" aria-label="Spazio per scrivere, disegnare o indicare la risposta"></div>
+<p>Cosa fa l’adulto: allontana dal calore, mette la parte sotto acqua corrente fresca per almeno 20 minuti, non rompe le bolle, non stacca i vestiti attaccati alla pelle. Va al Pronto Soccorso se l’ustione è grande, sul viso o sulle mani, o è causata da fiamma, elettricità o prodotti chimici.</p>
+<p class="nota-adulto">Per l’adulto: attività solo su carta e con dialoghi. Nessuna prova con prodotti, fornelli, prese o pile reali. Si può rispondere anche indicando o con il proprio comunicatore. Fonti: C2, C3 nella <a href="/formazione/schede-stampabili/casa-sicura-guida-adulti/">guida per gli adulti</a>.</p>
+<div class="soluzione-capovolta"><strong>Per l’adulto:</strong> Niente burro, olio, polveri o zucchero; niente ghiaccio; acqua corrente fresca per almeno 20 minuti; non rompere le vesciche né staccare i vestiti incollati (Bambino Gesù).</div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>CS07 · Scheda · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+</section>
+
+<section id="scheda-casa-non-apro-chiedo-facilitata" class="pacchetto-scheda" aria-label="Scheda: Non apro, chiedo">
+  <article class="scheda-page">
+    <div class="os-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Non apro, chiedo</h1>
+        <div class="scheda-sottotitolo">Versione facilitata · età diverse · 10 minuti</div>
+      </div>
+    </header>
+    <p class="os-meta"><strong>Obiettivo:</strong> Chiedere aiuto davanti a una bottiglia o a una scatola sconosciuta.</p>
+<p class="os-big">VEDO UNA BOTTIGLIA O UNA SCATOLA. NON SO COSA È.</p>
+<div class="os-steps"><div><strong>1</strong><p>NON APRO</p>
+</div>
+<div><strong>2</strong><p>NON ASSAGGIO</p>
+</div>
+<div><strong>3</strong><p>CHIAMO UN ADULTO</p>
+</div>
+</div>
+<p>Posso parlare. Posso fare un gesto. Posso indicare un’immagine. Posso usare il mio comunicatore.</p>
+<p>Scegli con l’adulto il tuo modo di chiedere aiuto.</p>
+<div class="os-answer" role="img" aria-label="Spazio per scrivere, disegnare o indicare la risposta"></div>
+<p class="os-big">HO GIÀ ASSAGGIATO? LO DICO SUBITO. ANCHE SE STO BENE.</p>
+<p class="nota-adulto">Per l’adulto: attività solo su carta e con dialoghi. Nessuna prova con prodotti, fornelli, prese o pile reali. Si può rispondere anche indicando o con il proprio comunicatore. Fonti: C4 nella <a href="/formazione/schede-stampabili/casa-sicura-guida-adulti/">guida per gli adulti</a>.</p>
+<div class="soluzione-capovolta"><strong>Per l’adulto:</strong> L’adulto concorda un segnale comprensibile e resta disponibile. In caso di assaggio, l’adulto chiama il Centro Antiveleni anche senza sintomi.</div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>CS14 · Scheda · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+</section>
+
+<section id="scheda-casa-caldo-non-tocco-facilitata" class="pacchetto-scheda" aria-label="Scheda: Caldo: non tocco">
+  <article class="scheda-page">
+    <div class="os-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Caldo: non tocco</h1>
+        <div class="scheda-sottotitolo">Versione facilitata · età diverse · 10 minuti</div>
+      </div>
+    </header>
+    <p class="os-meta"><strong>Obiettivo:</strong> Stare lontani dalle cose calde e chiamare un adulto dopo una scottatura.</p>
+<p class="os-big">PENTOLA, FORNO, FERRO DA STIRO: SONO CALDI.</p>
+<p class="os-big">NON TOCCO. STO LONTANO.</p>
+<p>Indica, racconta o disegna una cosa calda della tua casa.</p>
+<div class="os-answer os-draw" role="img" aria-label="Spazio per scrivere, disegnare o indicare la risposta"></div>
+<p class="os-big">MI SONO SCOTTATO? ACQUA FRESCA DAL RUBINETTO. CHIAMO UN ADULTO.</p>
+<p class="nota-adulto">Per l’adulto: attività solo su carta e con dialoghi. Nessuna prova con prodotti, fornelli, prese o pile reali. Si può rispondere anche indicando o con il proprio comunicatore. Fonti: C2, C3 nella <a href="/formazione/schede-stampabili/casa-sicura-guida-adulti/">guida per gli adulti</a>.</p>
+<div class="soluzione-capovolta"><strong>Per l’adulto:</strong> Non richiedere di valutare la gravità. L’adulto tiene la parte sotto acqua corrente fresca per almeno 20 minuti e decide se andare al Pronto Soccorso.</div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>CS15 · Scheda · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+</section>
+
+<section id="scheda-casa-il-patto-in-casa-famiglia" class="pacchetto-scheda" aria-label="Scheda: Il patto in casa">
+  <article class="scheda-page">
+    <div class="os-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Il patto in casa</h1>
+        <div class="scheda-sottotitolo">Famiglie, scuola e accompagnatori · 20 minuti</div>
+      </div>
+    </header>
+    <p class="os-meta"><strong>Obiettivo:</strong> Concordare un aiuto concreto e organizzare la casa a misura di bambino.</p>
+<p>Le persone piccole o fragili non hanno il compito di controllare la casa al posto degli adulti.</p>
+<h2>Noi adulti ci impegniamo a…</h2>
+<ul class="os-choices"><li>Ascoltare senza rimproveri quando qualcuno racconta di aver toccato o assaggiato qualcosa.</li><li>Tenere farmaci e prodotti per la casa chiusi, in alto, con l’etichetta originale; mai travasati in bottiglie per alimenti.</li><li>Riporre pile a bottone, magneti e piccoli oggetti fuori dalla portata dei bambini.</li><li>Girare i manici delle pentole verso il muro, usare i fuochi interni, non lasciare pentole sul fuoco senza controllo.</li><li>Non lasciare sedie o mobili accostati a finestre e balconi; mettere i copri-prese.</li><li>Tenere in rubrica il 112 e il Centro Antiveleni pediatrico (06 6859 3726).</li><li>Non assumere farmaci davanti ai bambini piccoli.</li></ul>
+<p>Quale segnale useremo per chiedere aiuto in casa?</p>
+<div class="os-answer" role="img" aria-label="Spazio per scrivere, disegnare o indicare la risposta"></div>
+<p>Quale adulto è il riferimento quando i genitori non ci sono?</p>
+<div class="os-answer" role="img" aria-label="Spazio per scrivere, disegnare o indicare la risposta"></div>
+<p>Conservate questa scheda in famiglia. Non pubblicate i nomi e le risposte personali.</p>
+<p class="nota-adulto">Per l’adulto: attività solo su carta e con dialoghi. Nessuna prova con prodotti, fornelli, prese o pile reali. Si può rispondere anche indicando o con il proprio comunicatore. Fonti: C1, C4, C5, C9 nella <a href="/formazione/schede-stampabili/casa-sicura-guida-adulti/">guida per gli adulti</a>.</p>
+<div class="soluzione-capovolta"><strong>Per l’adulto:</strong> Il patto serve agli adulti per organizzare sostegno e supervisione. Non è una promessa del bambino di non sbagliare.</div>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>CS16 · Scheda per gli adulti · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+</section>
+
+<section id="scheda-casa-sicura-guida-adulti" class="pacchetto-scheda" aria-label="Scheda: Casa sicura">
+  <article class="scheda-page">
+    <div class="os-page os-guide">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Casa sicura</h1>
+        <div class="scheda-sottotitolo">Guida per famiglie, insegnanti e accompagnatori · Come proporre il percorso</div>
+      </div>
+    </header>
+    <h2>Come proporre il percorso</h2>
+<p>Il percorso riguarda l’educazione alla sicurezza in casa: cucina, bagno, camera, balcone, casa dei nonni. Si collega alla cultura di protezione civile e all’autoprotezione quotidiana.</p>
+<p>Non chiede ai bambini di riconoscere prodotti pericolosi o di controllare la casa al posto degli adulti. Insegna una sola sequenza: non apro, non tocco, mi allontano, chiedo a un adulto.</p>
+<h2>Prima dell’attività</h2>
+<ul><li>Scegliete la scheda in base a comprensione, età e bisogni della persona.</li><li>Leggete le avvertenze e concordate gli adulti di riferimento, anche fuori casa (nonni, amici).</li><li>Usate soltanto fogli, disegni e dialoghi. Nessuna prova con prodotti, flaconi, fornelli, prese o pile reali; nessuna chiamata di prova al 112 o al Centro Antiveleni.</li><li>Spiegate che gli esempi sono inventati e che nomi di prodotti e situazioni non riguardano persone reali.</li></ul>
+<h2>Durante e dopo</h2>
+<p>Un incontro può comprendere lettura, attività e restituzione. Concludete ripetendo la sequenza e indicando chi può aiutare.</p>
+<p>Distinguete le attività autorizzate dall’adulto (lo sciroppo dato dalla mamma, cucinare insieme con un adulto accanto) dalle situazioni in cui il bambino è solo davanti a un oggetto sconosciuto o caldo.</p>
+<p>Le schede sono materiale educativo del Gruppo. Non sono una certificazione, un protocollo sanitario o una validazione delle autorità citate.</p>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>GUIDA-1 · Guida per gli adulti · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="os-page os-guide">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h2 class="scheda-titolo-principale">Età, emozioni e accessibilità</h2>
+        <div class="scheda-sottotitolo">Guida per famiglie, insegnanti e accompagnatori · pagina 2 di 6</div>
+      </div>
+    </header>
+<h2>Infanzia</h2>
+<p>Frasi brevi, un’azione alla volta e adulto presente. Niente racconti di incidenti gravi. Accogliete le risposte con gesti, parole o disegni.</p>
+<h2>Primaria e secondaria</h2>
+<p>Introducete gradualmente le cause: perché la pila a bottone è pericolosa anche se piccola, perché l’acqua sull’olio in fiamme peggiora le cose. Ai più grandi proponete la verifica dei rimedi che circolano e il ruolo di chi bada ai fratelli minori.</p>
+<h2>Adattamenti</h2>
+<ul><li>Leggete ad alta voce e presentate una consegna alla volta.</li><li>Usate il sistema di comunicazione abituale della persona.</li><li>Concordate come aiutare chi non può allontanarsi da solo da una fonte di calore o segnalare un malessere con le parole.</li><li>Consentite pause e osservazione senza partecipazione forzata.</li><li>Non chiedete di raccontare esperienze personali spiacevoli.</li></ul>
+<p>Paura, pianto, lentezza o bisogno di supporto non sono errori da valutare. Osservate le azioni possibili con gli adattamenti concordati.</p>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>GUIDA-2 · Guida per gli adulti · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="os-page os-guide">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h2 class="scheda-titolo-principale">Se l’incidente avviene davvero</h2>
+        <div class="scheda-sottotitolo">Guida per famiglie, insegnanti e accompagnatori · pagina 3 di 6</div>
+      </div>
+    </header>
+<p>Le indicazioni seguono le fonti della pagina finale. In ogni caso grave o in dubbio chiamate il <strong>112</strong>. Per ingestioni e contatti con sostanze chiamate il Centro Antiveleni pediatrico del Bambino Gesù, <strong>06 6859 3726</strong>, attivo 24 ore: dite età e peso, il nome commerciale del prodotto, quanto, da quanto tempo, sintomi. Tenete il contenitore.</p>
+<h2>Farmaci, detersivi, capsule, cosmetici</h2>
+<p>Non indurre il vomito, non fare mangiare né bere, non assaggiare il prodotto per capire che cos’è. Chiamare anche senza sintomi. Se la sostanza ha toccato pelle o occhi, togliere gli abiti e lavare con acqua tiepida per almeno 10-15 minuti.</p>
+<h2>Pile a bottone, magneti, oggetti appuntiti</h2>
+<p>Ingestione certa o sospetta: subito in Pronto Soccorso, anche se il bambino sembra stare bene. Niente vomito provocato, niente cibi o bevande, niente pacche sulla schiena.</p>
+<h2>Ustioni</h2>
+<p>Allontanare dalla fonte di calore, raffreddare con acqua corrente fresca per almeno 20 minuti; niente ghiaccio, burro, olio, polveri o zucchero; non staccare i vestiti incollati alla pelle, non rompere le vesciche. Pronto Soccorso per ustioni estese, a viso, mani o genitali, da fiamma, elettriche o chimiche.</p>
+<h2>Principio di incendio in cucina</h2>
+<p>Olio o grasso in fiamme: coprire con un coperchio, mai acqua. Se il fuoco non si spegne subito: uscire, chiudere la porta, non usare l’ascensore, chiamare il 112 da un luogo sicuro. Per l’odore di gas seguite la scheda del sito <a href="/formazione/schede-stampabili/odore-gas-infanzia/">Cosa faccio se sento odore di gas</a>.</p>
+<h2>Vapori di prodotti mescolati</h2>
+<p>Portare la persona all’aria aperta, arieggiare, non tornare nella stanza. Difficoltà a respirare: 112.</p>
+<p>Riferimenti: C1–C12.</p>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>GUIDA-3 · Guida per gli adulti · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="os-page os-guide">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h2 class="scheda-titolo-principale">Risposte e conduzione · prima parte</h2>
+        <div class="scheda-sottotitolo">Guida per famiglie, insegnanti e accompagnatori · pagina 4 di 6</div>
+      </div>
+    </header>
+<p><strong>01. Le cose che non si aprono</strong><br>Non apro, non assaggio, chiedo. Accogliere anche risposte gestuali. Se un bambino racconta di aver assaggiato qualcosa, l’adulto chiama il Centro Antiveleni anche senza sintomi.</p>
+<p><strong>02. Nina e la pentola</strong><br>La richiesta di aiuto è nella scena 5. L’acqua corrente fresca è il primo gesto corretto; niente ghiaccio, burro o olio. Accogliere risposte con parole, gesti o disegni.</p>
+<p><strong>03. Chi mi aiuta in casa</strong><br>Accogliere adulti di riferimento reali, scelti con la famiglia. Non chiedere di pubblicare nomi o recapiti. Il 112 lo chiama l’adulto; il bambino impara che può sempre dire cosa è successo.</p>
+<p><strong>04. Sembra una caramella</strong><br>Nell’ordine: A, B, B, A, B. Nei casi A l’adulto ha già dato indicazioni. Le capsule di detersivo e i liquidi travasati in bottiglie per alimenti sono un rischio noto (Bambino Gesù).</p>
+<p><strong>05. Pile piccole e calamite</strong><br>Azioni corrette: 1, 3 e 4. Ingestione certa o sospetta di pila a bottone o magneti: subito al Pronto Soccorso anche senza sintomi (Bambino Gesù).</p>
+<p><strong>06. Acqua ed elettricità non vanno d’accordo</strong><br>Errori: phon vicino alla vasca; troppe spine su una presa; cavo che pende; spina tirata dal cavo; oggetto nella presa. Fonti: Bambino Gesù (casa), Vigili del Fuoco (impianto elettrico).</p>
+<p><strong>07. Una scottatura</strong><br>Niente burro, olio, polveri o zucchero; niente ghiaccio; acqua corrente fresca per almeno 20 minuti; non rompere le vesciche né staccare i vestiti incollati (Bambino Gesù).</p>
+<p><strong>08. La padella prende fuoco</strong><br>Acqua sull’olio in fiamme provoca schizzi e allarga il fuoco; la padella non si sposta; con il fuoco che cresce si esce, si chiude la porta, si usano le scale e si chiama il 112 (Vigili del Fuoco).</p>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>GUIDA-4 · Guida per gli adulti · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="os-page os-guide">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h2 class="scheda-titolo-principale">Risposte e osservazione · seconda parte</h2>
+        <div class="scheda-sottotitolo">Guida per famiglie, insegnanti e accompagnatori · pagina 5 di 6</div>
+      </div>
+    </header>
+<p><strong>09. Non si mescolano</strong><br>Nell’ordine: F, S, F, S, S. Tre mosse: uscire all’aria, arieggiare, avvisare; 112 se il respiro è difficile (ISS, Centro Antiveleni).</p>
+<p><strong>10. Una chiamata chiara</strong><br>Non indurre il vomito, non far mangiare né bere, non assaggiare il prodotto. Si chiama anche senza sintomi e si porta il contenitore in ospedale se richiesto (Bambino Gesù).</p>
+<p><strong>11. A chi chiedere aiuto</strong><br>1: Centro Antiveleni o 112, niente vomito né bevande, flacone a portata. 2: acqua corrente fresca per almeno 20 minuti e Pronto Soccorso (ustione estesa con vesciche). 3: niente interruttori né fiamme, finestre aperte, fuori, 112 da fuori. 4: allontanarsi, non usare acqua, avvisare l’adulto, 112 se il fumo aumenta.</p>
+<p><strong>12. Miti in casa</strong><br>Nell’ordine: M, M, M, M, F, M. La risposta corretta indica il Pronto Soccorso subito anche senza sintomi e cita la fonte (Bambino Gesù).</p>
+<p><strong>13. Io e i più piccoli</strong><br>Attesi: prodotti in alto e chiusi con etichetta originale; piccoli oggetti riposti; fornelli spenti e manici verso il muro; niente sedie vicino a finestre e balconi; copri-prese; 112 e Centro Antiveleni in rubrica. In caso di ingestione: chiamare subito il Centro Antiveleni o il 112 e avvisare i genitori.</p>
+<p><strong>14. Non apro, chiedo</strong><br>L’adulto concorda un segnale comprensibile e resta disponibile. In caso di assaggio, l’adulto chiama il Centro Antiveleni anche senza sintomi.</p>
+<p><strong>15. Caldo: non tocco</strong><br>Non richiedere di valutare la gravità. L’adulto tiene la parte sotto acqua corrente fresca per almeno 20 minuti e decide se andare al Pronto Soccorso.</p>
+<p><strong>16. Il patto in casa</strong><br>Il patto serve agli adulti per organizzare sostegno e supervisione. Non è una promessa del bambino di non sbagliare.</p>
+<p><strong>Osservazione descrittiva:</strong> riconosce la sequenza; chiede aiuto; riferisce i fatti. Registrare il supporto utile e i progressi, senza assegnare un voto alla paura.</p>
+    <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>GUIDA-5 · Guida per gli adulti · Rev. 1 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="os-page os-guide os-fonti">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h2 class="scheda-titolo-principale">Fonti e aggiornamento</h2>
+        <div class="scheda-sottotitolo">Guida per famiglie, insegnanti e accompagnatori · pagina 6 di 6</div>
+      </div>
+    </header>
+<p>Fonti consultate il 13 settembre 2026. In Italia, per ogni emergenza, il numero da chiamare è il <strong>112</strong>. Le fonti sanitarie sono italiane (Istituto Superiore di Sanità, Ospedale Pediatrico Bambino Gesù, Ministero della Salute, Centri antiveleni, Vigili del Fuoco); dove citano recapiti locali, valgono quelli del territorio.</p>
+<p class="os-fonte"><strong>C1.</strong> Ospedale Pediatrico Bambino Gesù · Sicurezza del bambino in casa — <a href="https://www.ospedalebambinogesu.it/sicurezza-del-bambino-in-casa-111873/">https://www.ospedalebambinogesu.it/sicurezza-del-bambino-in-casa-111873/</a><br>Manici delle pentole verso il muro e fuochi interni; prodotti in contenitori riconoscibili, mai in bottiglie per alimenti; copri-prese; niente mobili o sedie accostati a finestre e balconi; pile, monete e piccoli oggetti fuori portata.</p>
+<p class="os-fonte"><strong>C2.</strong> Ospedale Pediatrico Bambino Gesù · Ustioni nel bambino — <a href="https://www.ospedalebambinogesu.it/ustioni-nel-bambino-90032/">https://www.ospedalebambinogesu.it/ustioni-nel-bambino-90032/</a><br>Allontanare dalla fonte di calore, bagnare con acqua fredda corrente; niente ghiaccio, burro, olio, polveri o zucchero; Pronto Soccorso per ustioni estese, a viso e mani, da fiamma, elettriche o chimiche.</p>
+<p class="os-fonte"><strong>C3.</strong> Ospedale Pediatrico Bambino Gesù · Bambini e incidenti: cosa fare nei primi 5 minuti — <a href="https://www.ospedalebambinogesu.it/bambini-e-incidenti-cosa-fare-nei-primi-5-minuti-109751/">https://www.ospedalebambinogesu.it/bambini-e-incidenti-cosa-fare-nei-primi-5-minuti-109751/</a><br>Ustione: acqua corrente fresca per almeno 20 minuti, non rompere le vesciche, non staccare i vestiti incollati; corpo estraneo ingerito: non indurre il vomito né dare pacche, chiamare i soccorsi.</p>
+<p class="os-fonte"><strong>C4.</strong> Ospedale Pediatrico Bambino Gesù · Centro Antiveleni pediatrico, le cose da sapere — <a href="https://www.ospedalebambinogesu.it/centro-antiveleni-le-cose-da-sapere-128569/">https://www.ospedalebambinogesu.it/centro-antiveleni-le-cose-da-sapere-128569/</a><br>Numero 06 6859 3726 attivo 24 ore; non indurre il vomito, non far mangiare né bere, non assaggiare il prodotto; chiamare anche senza sintomi; farmaci e prodotti chiusi e in alto, mai travasati in contenitori senza etichetta.</p>
+<p class="os-fonte"><strong>C5.</strong> Ospedale Pediatrico Bambino Gesù · Intossicazioni, come prevenirle in casa — <a href="https://www.ospedalebambinogesu.it/intossicazioni-come-prevenirle-in-casa-90410/">https://www.ospedalebambinogesu.it/intossicazioni-come-prevenirle-in-casa-90410/</a><br>Farmaci fuori dalla portata e nella confezione originale; detergenti e insetticidi in un mobile alto o chiuso a chiave; richiudere subito dopo l’uso; in caso di contatto chiamare il Centro Antiveleni.</p>
+<p class="os-fonte"><strong>C6.</strong> Ospedale Pediatrico Bambino Gesù · Incidenti e bambini — <a href="https://www.ospedalebambinogesu.it/incidenti-e-bambini-139789/">https://www.ospedalebambinogesu.it/incidenti-e-bambini-139789/</a><br>Ustioni e folgorazioni: allontanare dalla fonte e raffreddare con acqua; avvelenamento: Centro Antiveleni con dinamica e tempi, non indurre il vomito; corpo estraneo ingerito pericoloso: Pronto Soccorso.</p>
+<p class="os-fonte"><strong>C7.</strong> Ospedale Pediatrico Bambino Gesù · Batterie a bottone, comunicato dell’11 agosto 2026 — <a href="https://www.ospedalebambinogesu.it/batterie-a-bottone-in-tre-mesi-6-ricoveri-al-bambino-gesu-per-gravi-lesioni-all-esofago-il-triplo-del-2025-182024/">https://www.ospedalebambinogesu.it/batterie-a-bottone-in-tre-mesi-6-ricoveri-al-bambino-gesu-per-gravi-lesioni-all-esofago-il-triplo-del-2025-182024/</a><br>Ingestione certa o sospetta di una pila a bottone: subito in Pronto Soccorso anche senza sintomi; non provocare il vomito né dare cibi o bevande.</p>
+<p class="os-fonte"><strong>C8.</strong> Ospedale Pediatrico Bambino Gesù · Ami, monete, magneti: cosa finisce nella pancia dei bambini — <a href="https://www.ospedalebambinogesu.it/ami-monete-magneti-ecco-cosa-finisce-nella-pancia-dei-bambini-salvadanaio--78454/">https://www.ospedalebambinogesu.it/ami-monete-magneti-ecco-cosa-finisce-nella-pancia-dei-bambini-salvadanaio--78454/</a><br>Due magneti ingeriti si attraggono e possono perforare l’intestino; oggetti magnetici, appuntiti o pile a bottone richiedono il Pronto Soccorso senza attendere.</p>
+<p class="os-fonte"><strong>C9.</strong> Corpo Nazionale dei Vigili del Fuoco · La sicurezza in casa — <a href="https://www.vigilfuoco.it/servizi-ai-cittadini/sicurezza-nel-quotidiano/la-sicurezza-casa">https://www.vigilfuoco.it/servizi-ai-cittadini/sicurezza-nel-quotidiano/la-sicurezza-casa</a><br>Manici verso l’interno; mai lasciare pentole sul fuoco senza controllo; troppi apparecchi su una presa si scaldano; non tirare il cavo; olio in fiamme: coperchio, non acqua; in caso di incendio uscire, chiudere la porta, non usare l’ascensore, chiamare i soccorsi.</p>
+<p class="os-fonte"><strong>C10.</strong> Istituto Superiore di Sanità · La candeggina non va mischiata con altri prodotti — <a href="https://www.iss.it/en/covid-19-faq/-/asset_publisher/2R1Idyn3MPB6/content/mischiare-candeggina-e-detersivo-per-i-pavimenti-consente-di-pulire-pi%C3%B9-efficacemente-le-superfici-">https://www.iss.it/en/covid-19-faq/-/asset_publisher/2R1Idyn3MPB6/content/mischiare-candeggina-e-detersivo-per-i-pavimenti-consente-di-pulire-pi%C3%B9-efficacemente-le-superfici-</a><br>La candeggina non va mai mischiata con altri prodotti: possono formarsi sostanze tossiche per contatto e per inalazione; arieggiare, usare guanti, evitare schizzi.</p>
+<p class="os-fonte"><strong>C11.</strong> Istituto Superiore di Sanità · EpiCentro · Incidenti domestici — <a href="https://www.epicentro.iss.it/incidenti-domestici/">https://www.epicentro.iss.it/incidenti-domestici/</a><br>Secondo l’Organizzazione mondiale della sanità, gli incidenti domestici sono la prima causa di morte per i bambini; la prevenzione passa da informazione, educazione e dispositivi di sicurezza.</p>
+<p class="os-fonte"><strong>C12.</strong> Unione europea · Numero unico di emergenza 112 — <a href="https://europa.eu/youreurope/citizens/travel/security-and-emergencies/emergency/index_it.htm">https://europa.eu/youreurope/citizens/travel/security-and-emergencies/emergency/index_it.htm</a><br>Il 112 consente di richiedere gratuitamente i servizi di emergenza in tutta l’Unione europea.</p>
+<p>Prima di riutilizzare il materiale, controllate eventuali nuove indicazioni delle autorità. Non aggiungete dettagli tecnici su sostanze, specie o metodi pericolosi.</p>
     <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
       <span>GUIDA-6 · Guida per gli adulti · Rev. 1 · 13/09/2026</span></footer>
     </div>

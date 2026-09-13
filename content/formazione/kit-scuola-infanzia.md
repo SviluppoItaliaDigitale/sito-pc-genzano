@@ -10,7 +10,7 @@ Questo kit è pensato per gli insegnanti della **scuola dell'infanzia** che desi
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma per le attività di divulgazione nelle scuole del territorio.
 
-> 📦 **Scarica il pacchetto offline** — [`kit-scuola-infanzia.zip`](/formazione/pacchetti/kit-scuola-infanzia.zip) (~15,3 MB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-infanzia.zip`](/formazione/pacchetti/kit-scuola-infanzia.zip) (~15,4 MB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
 > ⚠️ **Avvertenza pedagogica — non spaventare i bambini.** Le attività di questo kit **non devono mai generare paura**. I bambini di 3-6 anni hanno una percezione del rischio molto diversa da quella dell'adulto: parlare di terremoti, incendi o allagamenti in modo enfatico o con immagini drammatiche può produrre **ansia, incubi, regressioni**. La regola è opposta: presentare i comportamenti corretti come **un gioco rassicurante** (la tartaruga che si ripara, il numero 112 come "amico che arriva"), proporzionato all'età, sempre concluso con la rassicurazione che **gli adulti sono lì per proteggerli**. Niente video reali di disastri, niente cronaca, niente racconto di vittime. Per la dimensione emotiva si rimanda alla pagina [Psicologia dell'emergenza](/formazione/psicologia-emergenza/).
 
@@ -657,6 +657,31 @@ Percorso di educazione alla sicurezza su una sola regola, ripetuta in forme adat
 - [Una bevanda trovata](/formazione/schede-stampabili/oggetti-una-bevanda-trovata-facilitata/) — versione facilitata, età diverse. Lasciare una bevanda sconosciuta e chiedere aiuto.
 - [Il patto con gli adulti](/formazione/schede-stampabili/oggetti-il-patto-con-gli-adulti-famiglia/) — per famiglie, scuola e accompagnatori. Concordare un aiuto concreto e accogliere le segnalazioni.
 - [Guida per gli adulti](/formazione/schede-stampabili/oggetti-sconosciuti-guida-adulti/) — come proporre il percorso, adattamenti, cosa fare se il ritrovamento è reale, risposte e fonti.
+
+
+## Natura che non si tocca
+
+Percorso di educazione alla sicurezza all'aperto su una sola regola, ripetuta in forme adatte all'età: **guardo, non tocco, chiedo a un adulto**. Bacche e funghi, bruchi della processionaria, vespe, zecche, cani sconosciuti, serpenti. Le attività si svolgono soltanto su carta e con dialoghi, senza contatto con animali o piante reali. Ogni scheda ha la nota per l'adulto e la soluzione capovolta. Leggete prima la guida per gli adulti. Le schede sono incluse nei pacchetti da stampare e da scaricare.
+
+- [Guardo con gli occhi](/formazione/schede-stampabili/natura-guardo-con-gli-occhi-infanzia/) — 3–6 anni. Ripetere la sequenza davanti a bacche, fiori e funghi sconosciuti.
+- [Sara e il cane al parco](/formazione/schede-stampabili/natura-sara-e-il-cane-al-parco-infanzia/) — 3–6 anni. Chiedere al padrone prima di avvicinarsi a un cane.
+- [Piccoli animali, mani ferme](/formazione/schede-stampabili/natura-piccoli-animali-mani-ferme-infanzia/) — 3–6 anni. Restare calmi davanti a un insetto e non toccare i bruchi in fila.
+- [Guardo, non tocco](/formazione/schede-stampabili/natura-guardo-non-tocco-facilitata/) — versione facilitata, età diverse. Chiedere aiuto davanti a una pianta o a un animale sconosciuto.
+- [Un insetto vola vicino](/formazione/schede-stampabili/natura-un-insetto-vola-vicino-facilitata/) — versione facilitata, età diverse. Restare calmi con un insetto vicino e segnalare subito una puntura.
+- [Il patto per le uscite](/formazione/schede-stampabili/natura-il-patto-per-le-uscite-famiglia/) — per famiglie, scuola e accompagnatori. Concordare un aiuto concreto per parco, giardino e gite.
+- [Guida per gli adulti](/formazione/schede-stampabili/natura-che-non-si-tocca-guida-adulti/) — come proporre il percorso, adattamenti, cosa fare se succede davvero, risposte e fonti.
+
+## Casa sicura
+
+Percorso di educazione alla sicurezza domestica su una sola regola, ripetuta in forme adatte all'età: **non apro, non tocco, chiedo a un adulto**. Farmaci e prodotti per la casa, pile e magneti, cose calde, elettricità, principio di incendio in cucina, finestre e balconi. Le attività si svolgono soltanto su carta e con dialoghi, senza prove con prodotti o apparecchi reali. Ogni scheda ha la nota per l'adulto e la soluzione capovolta. Leggete prima la guida per gli adulti. Le schede sono incluse nei pacchetti da stampare e da scaricare.
+
+- [Le cose che non si aprono](/formazione/schede-stampabili/casa-le-cose-che-non-si-aprono-infanzia/) — 3–6 anni. Ripetere la sequenza davanti a flaconi, scatole e medicine.
+- [Nina e la pentola](/formazione/schede-stampabili/casa-nina-e-la-pentola-infanzia/) — 3–6 anni. Stare lontani dalle cose calde e chiamare un adulto.
+- [Chi mi aiuta in casa](/formazione/schede-stampabili/casa-chi-mi-aiuta-in-casa-infanzia/) — 3–6 anni. Individuare gli adulti di riferimento e chiedere aiuto dopo un errore.
+- [Non apro, chiedo](/formazione/schede-stampabili/casa-non-apro-chiedo-facilitata/) — versione facilitata, età diverse. Chiedere aiuto davanti a una bottiglia o a una scatola sconosciuta.
+- [Caldo: non tocco](/formazione/schede-stampabili/casa-caldo-non-tocco-facilitata/) — versione facilitata, età diverse. Stare lontani dalle cose calde e chiamare un adulto dopo una scottatura.
+- [Il patto in casa](/formazione/schede-stampabili/casa-il-patto-in-casa-famiglia/) — per famiglie, scuola e accompagnatori. Concordare un aiuto concreto e organizzare la casa a misura di bambino.
+- [Guida per gli adulti](/formazione/schede-stampabili/casa-sicura-guida-adulti/) — come proporre il percorso, adattamenti, cosa fare se succede davvero, risposte e fonti.
 
 ## Materiale consigliato
 

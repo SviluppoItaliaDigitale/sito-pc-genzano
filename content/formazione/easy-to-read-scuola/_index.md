@@ -192,6 +192,10 @@ Le schede possono essere usate in lezioni da 30-45 minuti e abbinate alle attivi
 - [Percorsi didattici pronti](/formazione/percorsi-didattici/) — attività per docenti
 - [Se non so che cosa è](/formazione/schede-stampabili/oggetti-se-non-so-che-cosa-e-facilitata/) — scheda facilitata: non tocco, mi allontano, avviso un adulto
 - [Una bevanda trovata](/formazione/schede-stampabili/oggetti-una-bevanda-trovata-facilitata/) — scheda facilitata: lasciare una bevanda sconosciuta e chiedere aiuto
+- [Guardo, non tocco](/formazione/schede-stampabili/natura-guardo-non-tocco-facilitata/) — scheda facilitata: piante e animali sconosciuti
+- [Un insetto vola vicino](/formazione/schede-stampabili/natura-un-insetto-vola-vicino-facilitata/) — scheda facilitata: restare calmi e segnalare una puntura
+- [Non apro, chiedo](/formazione/schede-stampabili/casa-non-apro-chiedo-facilitata/) — scheda facilitata: bottiglie e scatole sconosciute in casa
+- [Caldo: non tocco](/formazione/schede-stampabili/casa-caldo-non-tocco-facilitata/) — scheda facilitata: cose calde e scottature
 
 ## Per approfondire
 
