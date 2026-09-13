@@ -264,8 +264,8 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 **Schede di letto-scrittura** a tema Protezione Civile per il pre-grafismo e il riconoscimento delle prime parole (5-6 anni):
 
 - 👉 [**ABC delle Vocali — Le parole che salvano**](/formazione/schede-stampabili/abc-vocali-infanzia/) — le 5 vocali abbinate a parole della Protezione Civile (A→AIUTO, E→ELMETTO, I→IDRANTE, O→OSPEDALE, U→USCITA), lettera da ricalcare e parola da ricopiare.
-- 👉 [**L'Alfabetiere della Sicurezza — tutte le lettere su un foglio**](/formazione/schede-stampabili/alfabetiere-pc-infanzia/) — le 26 lettere in tabella, ognuna con il disegno da colorare, la parola della protezione civile (A→ALLERTA, C→CASCO, T→TERREMOTO…) e la lettera da ricalcare. Si stampa su un foglio solo: si usa come poster o come foglio di lavoro. Adatta anche per la classe 1ª.
-- 👉 [**A come Allerta, Z come Zaino — il quaderno delle lettere**](/formazione/schede-stampabili/alfabetiere-az-infanzia/) — **una lettera per foglio, 26 fogli**: il disegno da colorare, la lettera da ricalcare in **stampatello maiuscolo e minuscolo** e in **corsivo maiuscolo e minuscolo**, poi la parola da copiare. Dalla finestra di stampa si possono scegliere solo le pagine che servono. Le lettere H, J, W, X e Y portano una parola straniera spiegata in italiano. Adatto anche per la classe 1ª.
+- 👉 [**L'Alfabetiere della Sicurezza — tutte le lettere su un foglio**](/formazione/schede-stampabili/alfabetiere-pc-infanzia/) — tutte le lettere in tabella, ognuna con il disegno da colorare, la parola della protezione civile (A→ALLERTA, C→CASCO, T→TERREMOTO…) e la lettera da ricalcare. Si stampa su un foglio solo: si usa come poster o come foglio di lavoro. Adatta anche per la classe 1ª.
+- 👉 [**A come Allerta, Z come Zaino — il quaderno delle lettere**](/formazione/schede-stampabili/alfabetiere-az-infanzia/) — **una lettera per foglio**: il disegno da colorare, la lettera da ricalcare in **stampatello maiuscolo e minuscolo** e in **corsivo maiuscolo e minuscolo**, poi la parola da copiare. Dalla finestra di stampa si possono scegliere solo le pagine che servono. Le lettere H, J, W, X e Y portano una parola straniera spiegata in italiano. Adatto anche per la classe 1ª.
 - 👉 [**Riconosci l'Iniziale**](/formazione/schede-stampabili/riconosci-iniziale-infanzia/) — per ogni immagine il bambino cerchia la lettera con cui inizia la parola, fra tre opzioni. 10 parole-chiave della sicurezza.
 - 👉 [**Collega la Parola all'Immagine**](/formazione/schede-stampabili/collega-parola-immagine-infanzia/) — 8 parole in stampatello da collegare con una linea alle 8 immagini in colonna a destra. Adatta anche per la classe 1ª.
 
@@ -301,9 +301,9 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 
 *Da ritagliare e giocare*:
 
-- 👉 [**Memory della protezione civile**](/formazione/schede-stampabili/memory-protezione-civile-infanzia/) — **20 tessere da ritagliare, tutte diverse**: si abbinano a due a due perché le due cose vanno insieme (il vigile del fuoco e l'autopompa, il drone e il radiocomando, lo zaino e l'acqua, l'uscita e il cortile). Si abbina per significato, non per forma, e quando si trova la coppia si dice anche perché. Tre fogli: le tessere, il retro da incollare e le regole con l'elenco delle coppie per l'adulto.
+- 👉 [**Memory della protezione civile**](/formazione/schede-stampabili/memory-protezione-civile-infanzia/) — **tessere da ritagliare, tutte diverse**: si abbinano a due a due perché le due cose vanno insieme (il vigile del fuoco e l'autopompa, il drone e il radiocomando, lo zaino e l'acqua, l'uscita e il cortile). Si abbina per significato, non per forma, e quando si trova la coppia si dice anche perché. La scheda ha le tessere, il retro da incollare e le regole con l'elenco delle coppie per l'adulto.
 
-*Album da colorare (un disegno grande per foglio, 12 fogli per album)*:
+*Album da colorare (un disegno grande per foglio)*:
 
 - 👉 [**I mezzi della protezione civile**](/formazione/schede-stampabili/disegni-mezzi-infanzia/) — autopompa, ambulanza, camion, furgone accessibile, auto, elicottero, aereo, gommone, drone, radio, la nevicata. Un mezzo per foglio, con una riga che dice a cosa serve.
 - 👉 [**Le persone che aiutano**](/formazione/schede-stampabili/disegni-persone-infanzia/) — volontari, vigile del fuoco, medico, infermiera, cane da soccorso, chi risponde al telefono, la mano dell'adulto, la famiglia, il gatto di casa, la tenda, l'acqua, il cortile della scuola.

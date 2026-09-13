@@ -94,6 +94,11 @@ for alb in ALBUM:
 {CSS.format()}  </style>
 </head>
 <body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">&larr; Torna alle schede</a>
+    <span class="scheda-titolo">{alb['titolo']}: album da colorare</span>
+    <button type="button" onclick="window.print()">&#128424;&#65039; Stampa o salva come PDF</button>
+  </div>
   <div class="no-print" style="max-width:21cm;margin:1.5rem auto 0;padding:0 1rem;">
     <p style="margin:0 0 0.6rem;"><strong>{tot} fogli, un disegno per foglio.</strong> {alb['intro']} Dalla finestra di stampa puoi scegliere <strong>solo le pagine</strong> che ti servono. Gli altri album: <a href="/formazione/schede-stampabili/">vedi l'elenco delle schede</a>.</p>
     <nav class="dis-indice" aria-label="Vai al foglio">{indice}</nav>

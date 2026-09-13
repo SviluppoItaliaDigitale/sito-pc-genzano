@@ -13,7 +13,7 @@ REV = '13/09/2026'
 CSS = """    /* Alfabetiere A-Z — un foglio per lettera, quattro scritture. CSS scoped .alf */
     @font-face {
       font-family: 'PC Corsivo';
-      src: url('edu-cursive-400.woff2') format('woff2');
+      src: url('/formazione/schede-stampabili/assets/edu-cursive-400.woff2') format('woff2');
       font-weight: 400 700;
       font-style: normal;
       font-display: swap;
