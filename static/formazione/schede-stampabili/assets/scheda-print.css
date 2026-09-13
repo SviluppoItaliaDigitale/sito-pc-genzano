@@ -222,6 +222,11 @@ body {
   border-top: 2px solid var(--scheda-blu);
   display: flex;
   justify-content: space-between;
+  /* Su schermo stretto le due voci restavano incollate ("...genzano.itMEM-PC"):
+     lo spazio fra loro e l'andata a capo lo impediscono. In stampa la riga sta
+     comoda, quindi space-between continua a decidere da solo. */
+  flex-wrap: wrap;
+  gap: 1mm 4mm;
   font-size: 0.75rem;
   color: var(--scheda-grigio);
 }
