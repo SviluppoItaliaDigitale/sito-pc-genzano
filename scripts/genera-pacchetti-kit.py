@@ -363,11 +363,13 @@ def formatta_dimensione(size_kb: int) -> str:
     return "~" + f"{mb:.1f}".replace(".", ",") + " MB"
 
 
-def aggiorna_dimensione_dichiarata(md_path: Path, zip_name: str, size_kb: int) -> None:
+def aggiorna_dimensione_dichiarata(md_path: Path, zip_name: str, size_kb: int) -> bool:
     """Riallinea la dimensione "(~N KB/MB)" dichiarata nel blockquote del kit
     alla dimensione reale dello ZIP appena prodotto. Le dimensioni scritte a
     mano vanno in drift a ogni rigenerazione (caso reale: dichiarati 106 KB,
-    reali 17,3 MB): la fonte di verità è lo ZIP, il testo si aggiorna da qui."""
+    reali 17,3 MB): la fonte di verità è lo ZIP, il testo si aggiorna da qui.
+    Ritorna True se il file è stato riscritto, così chi chiama sa che il kit
+    copiato dentro lo ZIP è ormai vecchio e va riarchiviato."""
     testo = md_path.read_text(encoding="utf-8")
     pattern = re.compile(
         r"(\(/formazione/pacchetti/" + re.escape(zip_name) + r"\)\s*)\(~[\d.,]+\s*[KM]B\)"
@@ -376,6 +378,8 @@ def aggiorna_dimensione_dichiarata(md_path: Path, zip_name: str, size_kb: int) -
     if n and nuovo != testo:
         md_path.write_text(nuovo, encoding="utf-8")
         print(f"  → aggiornata dimensione dichiarata in {md_path.name}: {formatta_dimensione(size_kb)}")
+        return True
+    return False
 
 
 def costruisci_pacchetto(slug: str, md_filename: str) -> tuple[int, int, list[str]]:
@@ -471,20 +475,30 @@ def costruisci_pacchetto(slug: str, md_filename: str) -> tuple[int, int, list[st
         (tmp / "README.txt").write_text(readme, encoding="utf-8")
 
         # copia kit md (testo originale)
-        shutil.copy(md_path, tmp / md_filename)
-
         # zip
         OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
         zip_path = OUTPUT_DIR / f"kit-scuola-{slug}.zip"
-        with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as zf:
-            for path in sorted(tmp.rglob("*")):
-                if path.is_file():
-                    arcname = path.relative_to(tmp)
-                    zf.write(path, arcname)
 
-        size_kb = zip_path.stat().st_size // 1024
+        # La dimensione dichiarata sta dentro il kit, e il kit sta dentro lo ZIP:
+        # scriverla dopo aver archiviato lasciava nel pacchetto una copia vecchia
+        # di una revisione, che `controllo-documenti.py` segnala come drift
+        # bloccante. Si archivia, si misura, si riscrive la dimensione e si
+        # riarchivia finché il numero dichiarato coincide con quello vero: di
+        # norma bastano due passate, perché la riscrittura sposta pochi byte.
+        for _ in range(4):
+            shutil.copy(md_path, tmp / md_filename)
+            with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as zf:
+                for path in sorted(tmp.rglob("*")):
+                    if path.is_file():
+                        arcname = path.relative_to(tmp)
+                        zf.write(path, arcname)
+            size_kb = zip_path.stat().st_size // 1024
+            if not aggiorna_dimensione_dichiarata(md_path, zip_path.name, size_kb):
+                break
+        else:
+            print(f"  ⚠ dimensione dichiarata non stabile per {zip_path.name}", file=sys.stderr)
+
         print(f"  → {zip_path.relative_to(ROOT)} ({size_kb} KB, {len(schede_dati)} schede)")
-        aggiorna_dimensione_dichiarata(md_path, zip_path.name, size_kb)
         if schede_mancanti:
             print(f"  ⚠ Linkate ma MANCANTI nel filesystem: {schede_mancanti}", file=sys.stderr)
         return (len(schede_dati), size_kb, schede_mancanti)
