@@ -449,6 +449,20 @@ def costruisci_pacchetto(slug: str, md_filename: str) -> tuple[int, int, list[st
                         "/pittogrammi/" + pitto,
                         "../../assets/pittogrammi/" + pitto,
                     )
+            # Immagini del sito (loghi, illustrazioni): stesso trattamento dei
+            # pittogrammi. Senza questa riscrittura un src="/images/..." dentro
+            # lo ZIP punta alla radice del disco di chi apre il file, e offline
+            # resta un riquadro vuoto — che su una copertina si nota subito.
+            for img in set(re.findall(r'/images/([\w/.-]+\.(?:png|jpg|jpeg|webp|svg|gif))',
+                                      html_patched)):
+                img_src = ROOT / "static" / "images" / img
+                if img_src.exists():
+                    img_dst = tmp / "assets" / "images" / img
+                    img_dst.parent.mkdir(parents=True, exist_ok=True)
+                    if not img_dst.exists():
+                        shutil.copy(img_src, img_dst)
+                    html_patched = html_patched.replace(
+                        "/images/" + img, "../../assets/images/" + img)
             # Font self-hosted: lo porto nello ZIP solo se una scheda di questo
             # kit lo usa davvero, altrimenti peserebbe su tutti i pacchetti.
             if "assets/edu-cursive-400.woff2" in html_patched:
