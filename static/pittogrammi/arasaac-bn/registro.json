@@ -314,6 +314,41 @@
     "url": "https://arasaac.org/pictograms/37538",
     "variante": "bianco e nero (da colorare)"
   },
+  "kcb-attrezzi": {
+    "arasaac_id": 7127,
+    "url": "https://api.arasaac.org/v1/pictograms/7127?color=false&resolution=500",
+    "variante": "bianco e nero"
+  },
+  "kcb-benzina": {
+    "arasaac_id": 8125,
+    "url": "https://api.arasaac.org/v1/pictograms/8125?color=false&resolution=500",
+    "variante": "bianco e nero"
+  },
+  "kcb-coperta": {
+    "arasaac_id": 2459,
+    "url": "https://api.arasaac.org/v1/pictograms/2459?color=false&resolution=500",
+    "variante": "bianco e nero"
+  },
+  "kcb-falo": {
+    "arasaac_id": 4664,
+    "url": "https://api.arasaac.org/v1/pictograms/4664?color=false&resolution=500",
+    "variante": "bianco e nero"
+  },
+  "kcb-libro": {
+    "arasaac_id": 2450,
+    "url": "https://api.arasaac.org/v1/pictograms/2450?color=false&resolution=500",
+    "variante": "bianco e nero"
+  },
+  "kcb-prolunga": {
+    "arasaac_id": 11170,
+    "url": "https://api.arasaac.org/v1/pictograms/11170?color=false&resolution=500",
+    "variante": "bianco e nero"
+  },
+  "kcb-sedia": {
+    "arasaac_id": 3155,
+    "url": "https://api.arasaac.org/v1/pictograms/3155?color=false&resolution=500",
+    "variante": "bianco e nero"
+  },
   "oca-albero": {
     "arasaac_id": 3057,
     "url": "https://api.arasaac.org/v1/pictograms/3057?color=false&resolution=500",
