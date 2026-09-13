@@ -5,7 +5,7 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-12T22:52:59+00:00",
+  "generato": "2026-09-13T00:40:13+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
@@ -15,6 +15,12 @@
    "fonte": "ANSA",
    "titolo": "Mostra del cinema di Venezia, vince la regista May el-Toukhy, sul palco le guerre con Naza e Dau",
    "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/13/mostra-del-cinema-di-venezia-vince-la-regista-may-el-toukhy-sul-palco_e27e8d18-1155-41cd-a6c6-d0b46d73669c.html"
+  },
+  {
+   "data": "2026-09-12T22:45:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Rybakina vince gli US Open, è la nuova numero 1 del mondo",
+   "url": "https://www.adnkronos.com/sport/us-open-rybakina-vince-finale-sabalenka_4cKnExJwA0oAx4hrxw3R9q"
   },
   {
    "data": "2026-09-12T22:16:52+00:00",
@@ -53,9 +59,9 @@
    "url": "https://www.ansa.it/sito/notizie/sport/2026/09/12/malore-durante-la-preparazione-in-argentina-goggia-torna-in-italia-in-anticipo_2d78676a-a825-4b79-91d2-1b2c000d9138.html"
   },
   {
-   "data": "2026-09-12T21:12:47+00:00",
+   "data": "2026-09-12T21:12:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Europei uomini, bis dell'Italia di De Giorgi, anche la Grecia ko 3-0",
+   "titolo": "Europei pallavolo, bis dell'Italia di De Giorgi: anche la Grecia ko 3-0",
    "url": "https://www.adnkronos.com/sport/pallavolo-europei-de-giorgi-italia-grecia_7Dcew88ek0Arc4AMhF0Eio"
   },
   {
@@ -67,7 +73,7 @@
   {
    "data": "2026-09-12T21:04:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Serie A, Cagliari vince a Bergamo 2-1 con l'Atalanta e vola al secondo posto",
+   "titolo": "Cagliari vince a Bergamo 2-1 con l'Atalanta e vola al secondo posto",
    "url": "https://www.adnkronos.com/sport/calcio-serie-a-cagliari-atalanta-sarri_3gyYmVrGpBjTI6DgLcz2Oo"
   },
   {
@@ -183,12 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Giallo ad Arezzo, cadavere trovato vicino all'ospedale",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/giallo-ad-arezzo-cadavere-trovato-vicino-allospedale_8f30df1e-a344-4728-b169-9aa7c8c62922.html"
-  },
-  {
-   "data": "2026-09-12T17:55:31+00:00",
-   "fonte": "ANSA",
-   "titolo": "La morte di Denise, sequestrato l'appartamento di Ariccia",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/12/sequestrato-lappartamento-di-denise-ad-ariccia_64d8acdf-16c5-4b38-b461-3ab136196cf4.html"
   }
  ]
 }
