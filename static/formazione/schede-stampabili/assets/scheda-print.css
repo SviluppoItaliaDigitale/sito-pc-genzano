@@ -630,6 +630,25 @@ table.scheda-tabella th {
   }
 }
 
+/* Glossari a due colonne (dl con grid inline "auto 1fr" e dt nowrap, nei
+   casi di studio): su telefono la colonna dei termini non può restringersi e
+   la pagina scorre di lato. Sotto i 580 px il glossario va su una colonna
+   sola, termine sopra e definizione sotto. Solo a schermo: in stampa (A4,
+   200 mm utili) le due colonne ci stanno e restano. !important perché lo
+   stile è inline nell'HTML delle schede. */
+@media screen and (max-width: 580px) {
+  .scheda-page dl {
+    grid-template-columns: 1fr !important;
+    gap: 0.1rem 0 !important;
+  }
+  .scheda-page dt {
+    white-space: normal !important;
+  }
+  .scheda-page dd {
+    margin-bottom: 0.45rem !important;
+  }
+}
+
 /* ================================================================
    SOLUZIONE CAPOVOLTA v1.0 — soluzione degli esercizi ruotata di 180°
    sullo stesso foglio (l'alunno non la legge a colpo d'occhio, il
