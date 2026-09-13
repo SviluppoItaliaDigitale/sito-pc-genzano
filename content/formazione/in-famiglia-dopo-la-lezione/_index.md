@@ -140,5 +140,7 @@ Risorse utili:
 - [Cosa fare adesso](/cosa-fare-adesso/) — azioni rapide per ogni rischio
 - [Il patto con gli adulti](/formazione/schede-stampabili/oggetti-il-patto-con-gli-adulti-famiglia/) — oggetti sconosciuti e confezioni alterate: gli impegni degli adulti, da concordare in famiglia
 - [Guida per gli adulti — Oggetti sconosciuti](/formazione/schede-stampabili/oggetti-sconosciuti-guida-adulti/) — come proporre il percorso e cosa fare se il ritrovamento è reale
+- [Il patto per le uscite](/formazione/schede-stampabili/natura-il-patto-per-le-uscite-famiglia/) — natura che non si tocca: gli impegni degli adulti per parco, giardino e gite, con la [guida](/formazione/schede-stampabili/natura-che-non-si-tocca-guida-adulti/)
+- [Il patto in casa](/formazione/schede-stampabili/casa-il-patto-in-casa-famiglia/) — casa sicura: farmaci, prodotti, pile, fornelli, finestre, con la [guida](/formazione/schede-stampabili/casa-sicura-guida-adulti/)
 - [Storie e racconti](/formazione/storie-e-racconti/) — letture per bambini
 - [Percorsi didattici](/formazione/percorsi-didattici/) — materiali per i docenti

@@ -10,7 +10,7 @@ Questo kit è rivolto ai docenti della **scuola secondaria di secondo grado** ch
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e si prestano all'uso nelle ore di scienze della Terra, geografia, educazione civica, diritto e nelle attività PCTO.
 
-> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-secondo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-secondo-grado.zip) (~273 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-secondo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-secondo-grado.zip) (~319 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
 ---
 
@@ -1134,6 +1134,31 @@ Percorso di educazione alla sicurezza su una sola regola, ripetuta in forme adat
 - [Una bevanda trovata](/formazione/schede-stampabili/oggetti-una-bevanda-trovata-facilitata/) — versione facilitata, età diverse. Lasciare una bevanda sconosciuta e chiedere aiuto.
 - [Il patto con gli adulti](/formazione/schede-stampabili/oggetti-il-patto-con-gli-adulti-famiglia/) — per famiglie, scuola e accompagnatori. Concordare un aiuto concreto e accogliere le segnalazioni.
 - [Guida per gli adulti](/formazione/schede-stampabili/oggetti-sconosciuti-guida-adulti/) — come proporre il percorso, adattamenti, cosa fare se il ritrovamento è reale, risposte e fonti.
+
+
+## Natura che non si tocca
+
+Percorso di educazione alla sicurezza all'aperto su una sola regola, ripetuta in forme adatte all'età: **guardo, non tocco, chiedo a un adulto**. Bacche e funghi, bruchi della processionaria, vespe, zecche, cani sconosciuti, serpenti. Le attività si svolgono soltanto su carta e con dialoghi, senza contatto con animali o piante reali. Ogni scheda ha la nota per l'adulto e la soluzione capovolta. Leggete prima la guida per gli adulti. Le schede sono incluse nei pacchetti da stampare e da scaricare.
+
+- [A chi chiedere aiuto](/formazione/schede-stampabili/natura-a-chi-chiedere-aiuto-secondaria2/) — 14–19 anni. Distinguere una segnalazione ordinaria da una richiesta urgente di soccorso.
+- [Rimedi che circolano](/formazione/schede-stampabili/natura-rimedi-che-circolano-secondaria2/) — 14–19 anni. Verificare i rimedi «sentiti dire» e rispondere in modo utile in una chat.
+- [Uscita nel Parco: il piano del gruppo](/formazione/schede-stampabili/natura-uscita-nel-parco-il-piano-del-gruppo-secondaria2/) — 14–19 anni. Completare il piano di sicurezza di un’escursione, prima, durante e dopo.
+- [Guardo, non tocco](/formazione/schede-stampabili/natura-guardo-non-tocco-facilitata/) — versione facilitata, età diverse. Chiedere aiuto davanti a una pianta o a un animale sconosciuto.
+- [Un insetto vola vicino](/formazione/schede-stampabili/natura-un-insetto-vola-vicino-facilitata/) — versione facilitata, età diverse. Restare calmi con un insetto vicino e segnalare subito una puntura.
+- [Il patto per le uscite](/formazione/schede-stampabili/natura-il-patto-per-le-uscite-famiglia/) — per famiglie, scuola e accompagnatori. Concordare un aiuto concreto per parco, giardino e gite.
+- [Guida per gli adulti](/formazione/schede-stampabili/natura-che-non-si-tocca-guida-adulti/) — come proporre il percorso, adattamenti, cosa fare se succede davvero, risposte e fonti.
+
+## Casa sicura
+
+Percorso di educazione alla sicurezza domestica su una sola regola, ripetuta in forme adatte all'età: **non apro, non tocco, chiedo a un adulto**. Farmaci e prodotti per la casa, pile e magneti, cose calde, elettricità, principio di incendio in cucina, finestre e balconi. Le attività si svolgono soltanto su carta e con dialoghi, senza prove con prodotti o apparecchi reali. Ogni scheda ha la nota per l'adulto e la soluzione capovolta. Leggete prima la guida per gli adulti. Le schede sono incluse nei pacchetti da stampare e da scaricare.
+
+- [A chi chiedere aiuto](/formazione/schede-stampabili/casa-a-chi-chiedere-aiuto-secondaria2/) — 14–19 anni. Distinguere una segnalazione ordinaria da una richiesta urgente di soccorso.
+- [Miti in casa](/formazione/schede-stampabili/casa-miti-in-casa-secondaria2/) — 14–19 anni. Verificare i rimedi «sentiti dire» e rispondere in modo utile in una chat.
+- [Io e i più piccoli](/formazione/schede-stampabili/casa-io-e-i-piu-piccoli-secondaria2/) — 14–19 anni. Preparare la casa quando si resta con fratelli o cugini piccoli.
+- [Non apro, chiedo](/formazione/schede-stampabili/casa-non-apro-chiedo-facilitata/) — versione facilitata, età diverse. Chiedere aiuto davanti a una bottiglia o a una scatola sconosciuta.
+- [Caldo: non tocco](/formazione/schede-stampabili/casa-caldo-non-tocco-facilitata/) — versione facilitata, età diverse. Stare lontani dalle cose calde e chiamare un adulto dopo una scottatura.
+- [Il patto in casa](/formazione/schede-stampabili/casa-il-patto-in-casa-famiglia/) — per famiglie, scuola e accompagnatori. Concordare un aiuto concreto e organizzare la casa a misura di bambino.
+- [Guida per gli adulti](/formazione/schede-stampabili/casa-sicura-guida-adulti/) — come proporre il percorso, adattamenti, cosa fare se succede davvero, risposte e fonti.
 
 ## Materiale di approfondimento
 
