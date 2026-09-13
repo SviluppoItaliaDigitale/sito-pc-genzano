@@ -3,151 +3,216 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Scheda stampabile: Alfabetiere della Protezione Civile (A→Z)</title>
-  <meta name="description" content="Scheda fotocopiabile: l'alfabeto completo dalla A alla Z, ogni lettera abbinata a una parola della Protezione Civile, con la lettera da ricalcare. Per imparare a leggere e scrivere.">
+  <title>Scheda stampabile: Alfabetiere della sicurezza in tabella (A–Z)</title>
+  <meta name="description" content="Scheda fotocopiabile su un solo foglio: le 26 lettere dell'alfabeto, ognuna con il disegno da colorare, la parola della protezione civile e la lettera da ricalcare.">
   <meta name="robots" content="index, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
   <style>
-    .alf-griglia {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.45rem;
-      margin: 0.5rem 0;
-    }
-    .alf-cella {
-      border: 1.5px solid var(--scheda-bordo);
-      border-radius: 8px;
-      padding: 0.4rem 0.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.55rem;
-    }
-    .alf-lettera {
-      font-family: "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
-      font-weight: 700;
-      font-size: 1.7rem;
-      line-height: 1;
-      color: var(--scheda-blu);
-      width: 2.5rem;
-      text-align: center;
-      flex-shrink: 0;
-    }
-    .alf-lettera small { display: block; font-size: 1.05rem; color: var(--scheda-grigio); }
-    .alf-corpo { flex: 1; min-width: 0; }
-    .alf-parola {
-      font-family: "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      font-size: 0.92rem;
-      line-height: 1.1;
-    }
-    .alf-parola b { color: var(--scheda-rosso); }
-    .alf-emo { font-size: 1.25rem; line-height: 1; }
-    .alf-traccia {
-      margin-top: 0.15rem;
-      font-family: "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
-      font-size: 1.25rem;
-      letter-spacing: 0.45em;
-      color: #cfd5db;
-      border-bottom: 1px dashed var(--scheda-bordo);
-    }
-    .alf-nota-cella {
-      font-size: 0.72rem;
-      color: #495057;
-      line-height: 1.25;
-    }
-    .alf-straniere {
-      margin-top: 0.7rem;
-      background: #eaf2fb;
-      border: 2px dashed var(--scheda-blu);
-      border-radius: 8px;
-      padding: 0.5rem 0.7rem;
-      font-size: 0.85rem;
-      line-height: 1.45;
-    }
-    .alf-straniere .lett {
-      font-family: "Trebuchet MS", "Arial Rounded MT Bold", sans-serif;
-      font-weight: 700;
-      color: var(--scheda-blu);
-      font-size: 1.1rem;
-      letter-spacing: 0.1em;
+    .scheda-page:has(> .alfT) { padding: 0; }
+    .alfT { padding: 10mm 13mm 4mm; display: flex; flex-direction: column; min-height: 238mm; }
+    .alfT .scheda-header { margin-bottom: 2.5mm; align-items: center; }
+    .alfT .scheda-header .scheda-titolo-principale { font-size: 25px; line-height: 1.15; }
+    .alfT .scheda-header .scheda-sottotitolo { font-size: 11.5px; }
+    .alfT .alf-intro { font-size: 10px; margin: 1.5mm 0 2mm; }
+    .alfT .alf-griglia { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.8mm; }
+    .alfT .alf-cella { border: 1.3px solid #1a3a5c; border-radius: 5px; padding: 1.1mm 0.8mm 0.8mm;
+      display: flex; flex-direction: column; align-items: center; text-align: center; break-inside: avoid; }
+    .alfT .alf-img { width: 13mm; height: 13mm; object-fit: contain; }
+    .alfT .alf-lettera { font-family: Verdana, "DejaVu Sans", sans-serif; font-weight: 700;
+      font-size: 13.5px; line-height: 1; color: #003366; margin-top: 0.4mm; }
+    .alfT .alf-lettera small { font-size: 11px; color: #5a6a78; margin-left: 2px; }
+    .alfT .alf-parola { font-family: Verdana, "DejaVu Sans", sans-serif; font-size: 7.4px;
+      font-weight: 700; letter-spacing: 0.02em; color: #1a1a1a; line-height: 1.15; margin-top: 0.4mm;
+      min-height: 1.8em; display: flex; align-items: center; }
+    .alfT .alf-traccia { font-family: Verdana, "DejaVu Sans", sans-serif; font-size: 13px;
+      letter-spacing: 0.22em; color: #c6d0da; border-bottom: 1px dashed #93a1af; width: 100%;
+      margin-top: 0.6mm; line-height: 1.15; }
+    .alfT .alf-straniere { font-size: 8.6px; border-left: 3px solid #003366; padding: 1mm 0 1mm 2.2mm; margin: 2mm 0 0; }
+    .alfT .alf-licenza { font-size: 7.4px; color: #555; margin: 1.2mm 0 0; }
+    .alfT .nota-adulto { font-size: 10px; line-height: 1.4; margin: 2.5mm 0 0; }
+    @media (max-width: 700px) {
+      .alfT { padding: 5mm 4mm; }
+      .alfT .alf-griglia { grid-template-columns: repeat(3, 1fr); }
     }
   </style>
 </head>
 <body>
-
-  <div class="scheda-toolbar no-print">
-    <a href="/formazione/schede-stampabili/" aria-label="Torna alle schede">← Torna alle schede</a>
-    <span class="scheda-titolo">Alfabetiere della PC — Infanzia / 1ª</span>
-    <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
-  </div>
-
-  <article class="scheda-page">
-
-    <header class="scheda-header">
-      <div class="scheda-logo" aria-hidden="true">PC</div>
-      <div class="scheda-intestazione">
-        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
-        <h1 class="scheda-titolo-principale">L'alfabetiere della sicurezza</h1>
-        <div class="scheda-sottotitolo">Scheda fotocopiabile — dall'ultimo anno della Scuola dell'Infanzia alla 1ª Primaria</div>
+  <article class="scheda-page" id="alfabetiere-tabella">
+    <div class="alfT">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h1 class="scheda-titolo-principale">L'alfabetiere della sicurezza</h1>
+          <div class="scheda-sottotitolo">Tutte le lettere su un foglio · Infanzia 5–6 anni e classe prima · 20–30 minuti · matita e colori</div>
+        </div>
+      </header>
+      <p class="alf-intro"><strong>Come si usa.</strong> Guarda il disegno, di' la parola ad alta voce, poi ricalca la lettera grigia. Puoi anche colorare i disegni. Per lavorare una lettera alla volta, con lo spazio per scrivere in stampatello e in corsivo, usa il quaderno <a href="/formazione/schede-stampabili/alfabetiere-az-infanzia/">A come Allerta, Z come Zaino</a>.</p>
+      <div class="alf-griglia">
+      <div class="alf-cella">
+        <img class="alf-img" src="/pittogrammi/arasaac-bn/alf-a-allerta.png" alt="Cartello triangolare di pericolo con un punto esclamativo." width="500" height="500">
+        <div class="alf-lettera">A<small>a</small></div>
+        <div class="alf-parola">Allerta</div>
+        <div class="alf-traccia" aria-hidden="true">A A A</div>
       </div>
-    </header>
-
-    <div class="scheda-meta">
-      <span><strong>Destinatari:</strong> 5-6 anni</span>
-      <span><strong>Obiettivo:</strong> riconoscere le lettere e leggere le prime parole</span>
-      <span><strong>Servono:</strong> matita e colori</span>
+      <div class="alf-cella">
+        <img class="alf-img" src="/pittogrammi/arasaac-bn/alf-b-barella.png" alt="Barella con le ruote, vista di lato." width="500" height="500">
+        <div class="alf-lettera">B<small>b</small></div>
+        <div class="alf-parola">Barella</div>
+        <div class="alf-traccia" aria-hidden="true">B B B</div>
+      </div>
+      <div class="alf-cella">
+        <img class="alf-img" src="/pittogrammi/arasaac-bn/alf-c-casco.png" alt="Elmetto di protezione da lavoro." width="500" height="500">
+        <div class="alf-lettera">C<small>c</small></div>
+        <div class="alf-parola">Casco</div>
+        <div class="alf-traccia" aria-hidden="true">C C C</div>
+      </div>
+      <div class="alf-cella">
+        <img class="alf-img" src="/pittogrammi/arasaac-bn/alf-d-drone.png" alt="Drone con quattro eliche e una piccola telecamera." width="500" height="500">
+        <div class="alf-lettera">D<small>d</small></div>
+        <div class="alf-parola">Drone</div>
+        <div class="alf-traccia" aria-hidden="true">D D D</div>
+      </div>
+      <div class="alf-cella">
+        <img class="alf-img" src="/pittogrammi/arasaac-bn/alf-e-elicottero.png" alt="Elicottero in volo, visto di lato." width="500" height="500">
+        <div class="alf-lettera">E<small>e</small></div>
+        <div class="alf-parola">Elicottero</div>
+        <div class="alf-traccia" aria-hidden="true">E E E</div>
+      </div>
+      <div class="alf-cella">
+        <img class="alf-img" src="/pittogrammi/arasaac-bn/alf-f-fiume.png" alt="Fiume che scorre fra due rive alberate." width="500" height="500">
+        <div class="alf-lettera">F<small>f</small></div>
+        <div class="alf-parola">Fiume</div>
+        <div class="alf-traccia" aria-hidden="true">F F F</div>
+      </div>
+      <div class="alf-cella">
+        <img class="alf-img" src="/pittogrammi/arasaac-bn/alf-g-guanti.png" alt="Un paio di guanti da lavoro." width="500" height="500">
+        <div class="alf-lettera">G<small>g</small></div>
+        <div class="alf-parola">Guanti</div>
+        <div class="alf-traccia" aria-hidden="true">G G G</div>
+      </div>
+      <div class="alf-cella">
+        <img class="alf-img" src="/pittogrammi/arasaac-bn/alf-h-piazzola.png" alt="Elicottero che atterra su una piazzola con la lettera H." width="500" height="500">
+        <div class="alf-lettera">H<small>h</small></div>
+        <div class="alf-parola">Helipad</div>
+        <div class="alf-traccia" aria-hidden="true">H H H</div>
+      </div>
+      <div class="alf-cella">
+        <img class="alf-img" src="/pittogrammi/arasaac-bn/alf-i-incendio.png" alt="Le fiamme di un incendio." width="500" height="500">
+        <div class="alf-lettera">I<small>i</small></div>
+        <div class="alf-parola">Incendio</div>
+        <div class="alf-traccia" aria-hidden="true">I I I</div>
+      </div>
+      <div class="alf-cella">
+        <img class="alf-img" src="/pittogrammi/arasaac-bn/alf-j-joystick.png" alt="Radiocomando con la leva del joystick." width="500" height="500">
+        <div class="alf-lettera">J<small>j</small></div>
+        <div class="alf-parola">Joystick</div>
+        <div class="alf-traccia" aria-hidden="true">J J J</div>
+      </div>
+      <div class="alf-cella">
+        <img class="alf-img" src="/pittogrammi/arasaac-bn/alf-k-kit.png" alt="Valigetta di pronto soccorso con la croce." width="500" height="500">
+        <div class="alf-lettera">K<small>k</small></div>
+        <div class="alf-parola">Kit</div>
+        <div class="alf-traccia" aria-hidden="true">K K K</div>
+      </div>
+      <div class="alf-cella">
+        <img class="alf-img" src="/pittogrammi/arasaac-bn/alf-l-luogo-sicuro.png" alt="Cortile aperto di una scuola, con gli alberi." width="500" height="500">
+        <div class="alf-lettera">L<small>l</small></div>
+        <div class="alf-parola">Luogo sicuro</div>
+        <div class="alf-traccia" aria-hidden="true">L L L</div>
+      </div>
+      <div class="alf-cella">
+        <img class="alf-img" src="/pittogrammi/arasaac-bn/alf-m-mappa.png" alt="Mappa di carta aperta, con le strade." width="500" height="500">
+        <div class="alf-lettera">M<small>m</small></div>
+        <div class="alf-parola">Mappa</div>
+        <div class="alf-traccia" aria-hidden="true">M M M</div>
+      </div>
+      <div class="alf-cella">
+        <img class="alf-img" src="/pittogrammi/arasaac-bn/alf-n-telefono.png" alt="Telefono con la cornetta e i tasti." width="500" height="500">
+        <div class="alf-lettera">N<small>n</small></div>
+        <div class="alf-parola">Numero 112</div>
+        <div class="alf-traccia" aria-hidden="true">N N N</div>
+      </div>
+      <div class="alf-cella">
+        <img class="alf-img" src="/pittogrammi/arasaac-bn/alf-o-ordine.png" alt="Cinque persone in fila, una dietro l&#x27;altra." width="500" height="500">
+        <div class="alf-lettera">O<small>o</small></div>
+        <div class="alf-parola">Ordine</div>
+        <div class="alf-traccia" aria-hidden="true">O O O</div>
+      </div>
+      <div class="alf-cella">
+        <img class="alf-img" src="/pittogrammi/arasaac-bn/alf-p-protezione-civile.png" alt="Due volontari in divisa accanto a un mezzo di soccorso." width="500" height="500">
+        <div class="alf-lettera">P<small>p</small></div>
+        <div class="alf-parola">Protezione Civile</div>
+        <div class="alf-traccia" aria-hidden="true">P P P</div>
+      </div>
+      <div class="alf-cella">
+        <img class="alf-img" src="/pittogrammi/arasaac-bn/alf-q-quaderno.png" alt="Quaderno ad anelli con l&#x27;etichetta sulla copertina." width="500" height="500">
+        <div class="alf-lettera">Q<small>q</small></div>
+        <div class="alf-parola">Quaderno</div>
+        <div class="alf-traccia" aria-hidden="true">Q Q Q</div>
+      </div>
+      <div class="alf-cella">
+        <img class="alf-img" src="/pittogrammi/arasaac-bn/alf-r-radio.png" alt="Radio ricetrasmittente portatile con l&#x27;antenna." width="500" height="500">
+        <div class="alf-lettera">R<small>r</small></div>
+        <div class="alf-parola">Radio</div>
+        <div class="alf-traccia" aria-hidden="true">R R R</div>
+      </div>
+      <div class="alf-cella">
+        <img class="alf-img" src="/pittogrammi/arasaac-bn/alf-s-sicurezza.png" alt="Bambino seduto nel seggiolino dell&#x27;auto, con le cinture allacciate." width="500" height="500">
+        <div class="alf-lettera">S<small>s</small></div>
+        <div class="alf-parola">Sicurezza</div>
+        <div class="alf-traccia" aria-hidden="true">S S S</div>
+      </div>
+      <div class="alf-cella">
+        <img class="alf-img" src="/pittogrammi/arasaac-bn/alf-t-terremoto.png" alt="Persona che si ripara sotto un tavolo." width="500" height="500">
+        <div class="alf-lettera">T<small>t</small></div>
+        <div class="alf-parola">Terremoto</div>
+        <div class="alf-traccia" aria-hidden="true">T T T</div>
+      </div>
+      <div class="alf-cella">
+        <img class="alf-img" src="/pittogrammi/arasaac-bn/alf-u-uscita.png" alt="Persona che esce da una porta aperta." width="500" height="500">
+        <div class="alf-lettera">U<small>u</small></div>
+        <div class="alf-parola">Uscita</div>
+        <div class="alf-traccia" aria-hidden="true">U U U</div>
+      </div>
+      <div class="alf-cella">
+        <img class="alf-img" src="/pittogrammi/arasaac-bn/alf-v-volontari.png" alt="Tre volontari in divisa, uno accanto all&#x27;altro." width="500" height="500">
+        <div class="alf-lettera">V<small>v</small></div>
+        <div class="alf-parola">Volontario</div>
+        <div class="alf-traccia" aria-hidden="true">V V V</div>
+      </div>
+      <div class="alf-cella">
+        <img class="alf-img" src="/pittogrammi/arasaac-bn/alf-w-warning.png" alt="Cartello triangolare di pericolo con due bambini che attraversano." width="500" height="500">
+        <div class="alf-lettera">W<small>w</small></div>
+        <div class="alf-parola">Warning</div>
+        <div class="alf-traccia" aria-hidden="true">W W W</div>
+      </div>
+      <div class="alf-cella">
+        <img class="alf-img" src="/pittogrammi/arasaac-bn/alf-x-exit.png" alt="Persona che accompagna una carrozzina verso l&#x27;uscita di emergenza." width="500" height="500">
+        <div class="alf-lettera">X<small>x</small></div>
+        <div class="alf-parola">Exit</div>
+        <div class="alf-traccia" aria-hidden="true">X X X</div>
+      </div>
+      <div class="alf-cella">
+        <img class="alf-img" src="/pittogrammi/arasaac-bn/alf-y-semaforo.png" alt="Semaforo con le tre luci." width="500" height="500">
+        <div class="alf-lettera">Y<small>y</small></div>
+        <div class="alf-parola">Yellow</div>
+        <div class="alf-traccia" aria-hidden="true">Y Y Y</div>
+      </div>
+      <div class="alf-cella">
+        <img class="alf-img" src="/pittogrammi/arasaac-bn/alf-z-zaino.png" alt="Zaino con le bretelle e la tasca davanti." width="500" height="500">
+        <div class="alf-lettera">Z<small>z</small></div>
+        <div class="alf-parola">Zaino</div>
+        <div class="alf-traccia" aria-hidden="true">Z Z Z</div>
+      </div>
+      </div>
+      <p class="alf-straniere"><strong>Le lettere ospiti.</strong> <strong>J</strong>, <strong>K</strong>, <strong>W</strong>, <strong>X</strong>, <strong>Y</strong> non fanno parte dell’alfabeto italiano di 21 lettere: si incontrano nelle parole venute da altre lingue. La <strong>H</strong> invece c’è, ma non ha un suono suo: si scrive in <em>ho, hai, ha, hanno</em> e nei gruppi <em>ch</em> e <em>gh</em>. Sul quaderno A–Z ogni parola straniera è spiegata in italiano.</p>
+      <p class="nota-adulto">Per l'adulto: si può usare come poster da appendere o come foglio di lavoro. Non si valuta la calligrafia: va bene anche indicare il disegno e dire la parola. Per i bambini che scrivono ancora poco, proponi solo le lettere del nome.</p>
+      <p class="alf-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>ALF-TAB · Foglio unico · Rev. 3 · 13/09/2026</span></footer>
     </div>
-
-    <p class="scheda-intro">
-      Ogni lettera dell'alfabeto è abbinata a una <strong>parola della Protezione Civile</strong>. Leggi la lettera grande e quella piccola, dì la parola ad alta voce e <strong>ricalca la lettera tratteggiata</strong> in basso.
-    </p>
-
-    <div class="alf-griglia">
-      <div class="alf-cella"><div class="alf-lettera">A<small>a</small></div><div class="alf-corpo"><div class="alf-parola"><span class="alf-emo" aria-hidden="true">💧</span> <b>A</b>CQUA</div><div class="alf-traccia" aria-hidden="true">A A A</div></div></div>
-      <div class="alf-cella"><div class="alf-lettera">B<small>b</small></div><div class="alf-corpo"><div class="alf-parola"><span class="alf-emo" aria-hidden="true">🧭</span> <b>B</b>USSOLA</div><div class="alf-traccia" aria-hidden="true">B B B</div></div></div>
-      <div class="alf-cella"><div class="alf-lettera">C<small>c</small></div><div class="alf-corpo"><div class="alf-parola"><span class="alf-emo" aria-hidden="true">⛑️</span> <b>C</b>ASCO</div><div class="alf-traccia" aria-hidden="true">C C C</div></div></div>
-      <div class="alf-cella"><div class="alf-lettera">D<small>d</small></div><div class="alf-corpo"><div class="alf-parola"><span class="alf-emo" aria-hidden="true">🦺</span> <b>D</b>IVISA</div><div class="alf-traccia" aria-hidden="true">D D D</div></div></div>
-      <div class="alf-cella"><div class="alf-lettera">E<small>e</small></div><div class="alf-corpo"><div class="alf-parola"><span class="alf-emo" aria-hidden="true">🧯</span> <b>E</b>STINTORE</div><div class="alf-traccia" aria-hidden="true">E E E</div></div></div>
-      <div class="alf-cella"><div class="alf-lettera">F<small>f</small></div><div class="alf-corpo"><div class="alf-parola"><span class="alf-emo" aria-hidden="true">🔥</span> <b>F</b>UOCO</div><div class="alf-traccia" aria-hidden="true">F F F</div></div></div>
-      <div class="alf-cella"><div class="alf-lettera">G<small>g</small></div><div class="alf-corpo"><div class="alf-parola"><span class="alf-emo" aria-hidden="true">🧤</span> <b>G</b>UANTI</div><div class="alf-traccia" aria-hidden="true">G G G</div></div></div>
-      <div class="alf-cella"><div class="alf-lettera">H<small>h</small></div><div class="alf-corpo"><div class="alf-parola"><span class="alf-emo" aria-hidden="true">🤫</span> <b>H</b> muta</div><div class="alf-nota-cella">La H non ha suono: aiuta altre lettere (es. <em>chiamo</em>).</div><div class="alf-traccia" aria-hidden="true">H H H</div></div></div>
-      <div class="alf-cella"><div class="alf-lettera">I<small>i</small></div><div class="alf-corpo"><div class="alf-parola"><span class="alf-emo" aria-hidden="true"><img src="/pittogrammi/iso7010/idrante-muro.svg" alt="" width="24" height="24" style="vertical-align:middle"></span> <b>I</b>DRANTE</div><div class="alf-traccia" aria-hidden="true">I I I</div></div></div>
-      <div class="alf-cella"><div class="alf-lettera">L<small>l</small></div><div class="alf-corpo"><div class="alf-parola"><span class="alf-emo" aria-hidden="true">🚨</span> <b>L</b>AMPEGGIANTE</div><div class="alf-traccia" aria-hidden="true">L L L</div></div></div>
-      <div class="alf-cella"><div class="alf-lettera">M<small>m</small></div><div class="alf-corpo"><div class="alf-parola"><span class="alf-emo" aria-hidden="true">🗺️</span> <b>M</b>APPA</div><div class="alf-traccia" aria-hidden="true">M M M</div></div></div>
-      <div class="alf-cella"><div class="alf-lettera">N<small>n</small></div><div class="alf-corpo"><div class="alf-parola"><span class="alf-emo" aria-hidden="true">❄️</span> <b>N</b>EVE</div><div class="alf-traccia" aria-hidden="true">N N N</div></div></div>
-      <div class="alf-cella"><div class="alf-lettera">O<small>o</small></div><div class="alf-corpo"><div class="alf-parola"><span class="alf-emo" aria-hidden="true">🏥</span> <b>O</b>SPEDALE</div><div class="alf-traccia" aria-hidden="true">O O O</div></div></div>
-      <div class="alf-cella"><div class="alf-lettera">P<small>p</small></div><div class="alf-corpo"><div class="alf-parola"><span class="alf-emo" aria-hidden="true">👨‍🚒</span> <b>P</b>OMPIERE</div><div class="alf-traccia" aria-hidden="true">P P P</div></div></div>
-      <div class="alf-cella"><div class="alf-lettera">Q<small>q</small></div><div class="alf-corpo"><div class="alf-parola"><span class="alf-emo" aria-hidden="true">🎛️</span> <b>Q</b>UADRO</div><div class="alf-traccia" aria-hidden="true">Q Q Q</div></div></div>
-      <div class="alf-cella"><div class="alf-lettera">R<small>r</small></div><div class="alf-corpo"><div class="alf-parola"><span class="alf-emo" aria-hidden="true">📻</span> <b>R</b>ADIO</div><div class="alf-traccia" aria-hidden="true">R R R</div></div></div>
-      <div class="alf-cella"><div class="alf-lettera">S<small>s</small></div><div class="alf-corpo"><div class="alf-parola"><span class="alf-emo" aria-hidden="true">🆘</span> <b>S</b>OCCORSO</div><div class="alf-traccia" aria-hidden="true">S S S</div></div></div>
-      <div class="alf-cella"><div class="alf-lettera">T<small>t</small></div><div class="alf-corpo"><div class="alf-parola"><span class="alf-emo" aria-hidden="true">🔦</span> <b>T</b>ORCIA</div><div class="alf-traccia" aria-hidden="true">T T T</div></div></div>
-      <div class="alf-cella"><div class="alf-lettera">U<small>u</small></div><div class="alf-corpo"><div class="alf-parola"><span class="alf-emo" aria-hidden="true">🚪</span> <b>U</b>SCITA</div><div class="alf-traccia" aria-hidden="true">U U U</div></div></div>
-      <div class="alf-cella"><div class="alf-lettera">V<small>v</small></div><div class="alf-corpo"><div class="alf-parola"><span class="alf-emo" aria-hidden="true">🤝</span> <b>V</b>OLONTARIO</div><div class="alf-traccia" aria-hidden="true">V V V</div></div></div>
-      <div class="alf-cella"><div class="alf-lettera">Z<small>z</small></div><div class="alf-corpo"><div class="alf-parola"><span class="alf-emo" aria-hidden="true">🎒</span> <b>Z</b>AINO</div><div class="alf-traccia" aria-hidden="true">Z Z Z</div></div></div>
-    </div>
-
-    <div class="alf-straniere">
-      <strong style="color: var(--scheda-blu);">Le 5 lettere "ospiti"</strong> — non sono nell'alfabeto italiano, ma le trovi in alcune parole utili:
-      <span class="lett">J K W X Y</span>. Per esempio la <strong>K</strong> di <strong>KIT</strong> (il kit di emergenza che tieni in casa).
-    </div>
-
-    <div class="scheda-docente">
-      <strong>Per la maestra/maestro:</strong>
-      <ul style="margin: 0.3rem 0 0 1rem; padding: 0;">
-        <li>Far leggere la lettera (maiuscola e minuscola), poi la parola scandendo le sillabe; infine ricalcare la lettera tratteggiata e provare a riscriverla a fianco.</li>
-        <li><strong>Estensione orale:</strong> chiedere un'altra parola che inizia con la stessa lettera; per le parole della sicurezza, spiegare a cosa serve l'oggetto (es. il casco protegge la testa).</li>
-        <li>La scheda completa l'<em>ABC delle Vocali</em> (solo A, E, I, O, U): qui ci sono tutte le 21 lettere dell'alfabeto italiano più le 5 lettere straniere.</li>
-      </ul>
-    </div>
-
-    <footer class="scheda-footer">
-      <span class="scheda-site">protezionecivilegenzano.it</span>
-      <span>Scheda "Alfabetiere della sicurezza" · Infanzia 5-6 anni / 1ª Primaria · letto-scrittura · rev. 2026</span>
-    </footer>
-
   </article>
-
 </body>
 </html>

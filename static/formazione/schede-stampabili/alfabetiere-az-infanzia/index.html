@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Schede stampabili: Alfabetiere della sicurezza A–Z — Infanzia e classe prima</title>
+  <meta name="description" content="Schede A4 stampabili: l'alfabeto dalla A alla Z, una lettera per foglio. Disegno da colorare, lettera da ricalcare in stampatello e corsivo, maiuscolo e minuscolo, e parola della protezione civile da copiare.">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
+  <style>
+    /* Alfabetiere A-Z — un foglio per lettera, quattro scritture. CSS scoped .alf */
+    @font-face {
+      font-family: 'PC Corsivo';
+      src: url('edu-cursive-400.woff2') format('woff2');
+      font-weight: 400 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    .alf-intro {
+      max-width: 21cm; margin: 1rem auto 0; padding: 0.8rem 1.2rem;
+      background: #eaf2fb; border-left: 4px solid var(--scheda-blu);
+      border-radius: 0 8px 8px 0; font-size: 0.95rem; line-height: 1.55; color: #333;
+    }
+    .alf-lettere { margin-top: 0.6rem; display: flex; flex-wrap: wrap; gap: 0.3rem; }
+    .alf-lettere a {
+      display: inline-block; min-width: 2rem; text-align: center; padding: 0.25rem 0.4rem;
+      border: 1px solid var(--scheda-blu); border-radius: 5px; color: var(--scheda-blu);
+      text-decoration: none; font-weight: 700;
+    }
+    .alf-lettere a:hover, .alf-lettere a:focus { background: var(--scheda-blu); color: #fff; outline: 2px solid #ffbe2e; outline-offset: 2px; }
+    .scheda-page:has(> .alf) { padding: 0; }
+    .alf { padding: 10mm 13mm 4mm; display: flex; flex-direction: column; min-height: 238mm; font-size: 14.5px; }
+    .alf .scheda-header { margin-bottom: 2.5mm; align-items: center; }
+    .alf .scheda-header .scheda-titolo-principale { font-size: 25px; line-height: 1.15; }
+    .alf .scheda-header .scheda-sottotitolo { font-size: 11.5px; }
+    .alf .alf-badge {
+      flex-shrink: 0; width: 44px; height: 44px; border: 3px solid var(--scheda-blu); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 23px; font-weight: 700; color: var(--scheda-blu); margin-left: auto;
+    }
+    .alf section h2 {
+      font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--scheda-blu);
+      margin: 3mm 0 4.5mm; padding-bottom: 0.8mm; border-bottom: 2px solid var(--scheda-blu);
+    }
+    .alf .alf-obiettivo { font-size: 12px; color: #384755; margin: 0 0 1mm; }
+    .alf .alf-disegno { text-align: center; margin: 0; }
+    .alf .alf-licenza { font-size: 8px; color: #555; margin: 2mm 0 0; }
+    .alf .alf-disegno img { width: 38mm; height: 38mm; object-fit: contain; }
+    .alf .alf-dida { text-align: center; font-size: 13.5px; margin: 0.5mm 0 0; }
+    .alf .alf-spiega {
+      margin: 1.5mm auto 0; max-width: 152mm; padding: 1.5mm 3mm; font-size: 12px; line-height: 1.35;
+      background: #f1f5f7; border-left: 3px solid var(--scheda-blu);
+    }
+    /* Riga di scrittura tipo quaderno: base continua, altezza maiuscole tratteggiata, altezza x puntinata */
+    .alf .alf-riga {
+      position: relative; height: 12.5mm; margin-bottom: 4.5mm;
+      border-bottom: 1.4px solid #1a1a1a; border-top: 1.1px dashed #93a1af;
+    }
+    .alf .alf-riga::before {
+      content: ""; position: absolute; left: 0; right: 0; top: 45%;
+      border-top: 1px dotted #c2ccd6;
+    }
+    .alf .alf-riga .alf-eti {
+      position: absolute; left: 0; top: -4.6mm; font-size: 9px; line-height: 1; letter-spacing: 0.04em;
+      text-transform: uppercase; color: #5d6b79; background: #fff; padding-right: 2mm;
+    }
+    .alf .alf-riga .alf-modelli {
+      position: absolute; left: 3mm; right: 2mm; bottom: 0.8mm;
+      display: flex; align-items: flex-end; gap: 11mm;
+      color: #b6c1cc; font-family: Verdana, Arial, sans-serif; font-size: 38px; line-height: 1;
+    }
+    .alf .alf-riga.alf-corsivo .alf-modelli { font-family: 'PC Corsivo', 'Segoe Script', cursive; font-size: 40px; gap: 13mm; }
+    .alf .alf-riga.alf-parola .alf-modelli { gap: 0; font-size: 30px; }
+    .alf .alf-riga.alf-parola.alf-corsivo .alf-modelli { font-size: 32px; }
+    .alf .nota-adulto { font-size: 11px; line-height: 1.3; border-top: 1px solid #687889; padding-top: 1.5mm; margin-top: auto; }
+    .alf .scheda-footer { margin-top: 2.5mm; padding-top: 2.5mm; padding-bottom: 0; font-size: 10px; }
+    @media screen and (max-width: 600px) {
+      .alf { padding: 1rem; min-height: 0; }
+      .alf .alf-disegno img { width: 100%; max-width: 52mm; height: auto; }
+      .alf .alf-riga .alf-modelli { font-size: 28px; gap: 6mm; }
+      .alf .alf-riga.alf-corsivo .alf-modelli { font-size: 30px; gap: 7mm; }
+    }
+    @media print {
+      .scheda-toolbar, .alf-intro, .no-print { display: none !important; }
+      body { background: #fff; }
+      .scheda-page { page-break-after: always; break-after: page; }
+      .scheda-page:last-of-type { page-break-after: auto; break-after: auto; }
+      .alf { min-height: 232mm; padding: 8mm 11mm 3mm; }
+      .alf section { break-inside: avoid; }
+      .alf .alf-spiega { background: #fff; }
+      .alf .alf-riga .alf-eti { background: #fff; }
+    }
+  </style>
+</head>
+<body>
+  <div class="scheda-toolbar no-print">
+    <a href="/formazione/schede-stampabili/">← Torna alle schede</a>
+    <span class="scheda-titolo">Alfabetiere della sicurezza A–Z · un foglio per lettera</span>
+    <button type="button" onclick="window.print()">Stampa o salva come PDF</button>
+  </div>
+
+  <div class="alf-intro no-print">
+    <strong>Una lettera per foglio, quattro scritture.</strong> Ogni foglio ha il disegno da colorare, la lettera da ricalcare in <strong>stampatello maiuscolo e minuscolo</strong> e in <strong>corsivo maiuscolo e minuscolo</strong>, e la parola da copiare. Puoi stampare tutto l’alfabeto oppure, dalla finestra di stampa, scegliere <strong>solo le pagine</strong> che ti servono: il foglio 1 è la A, il foglio 26 è la Z. Le lettere <strong>J, K, W, X e Y</strong> non fanno parte dell’alfabeto italiano di 21 lettere: si incontrano nelle parole venute da altre lingue. La <strong>H</strong> invece c’è (si scrive in <em>ho, hai, ha, hanno</em> e nei gruppi <em>ch</em> e <em>gh</em>) ma non ha un suono suo. Dove la parola è straniera, sul foglio trovi il riquadro che la spiega in italiano. Versione riepilogo su un solo foglio: <a href="/formazione/schede-stampabili/alfabetiere-pc-infanzia/">l’alfabetiere in tabella</a>.
+    <div class="alf-lettere"><a href="#lettera-a">A</a> <a href="#lettera-b">B</a> <a href="#lettera-c">C</a> <a href="#lettera-d">D</a> <a href="#lettera-e">E</a> <a href="#lettera-f">F</a> <a href="#lettera-g">G</a> <a href="#lettera-h">H</a> <a href="#lettera-i">I</a> <a href="#lettera-j">J</a> <a href="#lettera-k">K</a> <a href="#lettera-l">L</a> <a href="#lettera-m">M</a> <a href="#lettera-n">N</a> <a href="#lettera-o">O</a> <a href="#lettera-p">P</a> <a href="#lettera-q">Q</a> <a href="#lettera-r">R</a> <a href="#lettera-s">S</a> <a href="#lettera-t">T</a> <a href="#lettera-u">U</a> <a href="#lettera-v">V</a> <a href="#lettera-w">W</a> <a href="#lettera-x">X</a> <a href="#lettera-y">Y</a> <a href="#lettera-z">Z</a></div>
+  </div>
+
+  <article class="scheda-page" id="lettera-a">
+    <div class="alf">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h1 class="scheda-titolo-principale">A come Allerta</h1>
+          <div class="scheda-sottotitolo">Alfabetiere della sicurezza · Infanzia 5–6 anni e classe prima · 20–30 minuti · matita e colori</div>
+        </div>
+        <div class="alf-badge" aria-hidden="true">A</div>
+      </header>
+      <p class="alf-obiettivo"><strong>Obiettivo:</strong> riconoscere la lettera A, scriverla nelle quattro forme e collegarla a una parola della protezione civile.</p>
+      <section>
+        <h2>Colora il disegno</h2>
+        <div class="alf-disegno">
+          <img src="/pittogrammi/arasaac-bn/alf-a-allerta.png" alt="Cartello triangolare di pericolo con un punto esclamativo." width="500" height="500">
+        </div>
+        <p class="alf-dida">Il cartello dell’allerta avvisa che può arrivare un pericolo.</p>
+      </section>
+      <section>
+        <h2>Ricalca e continua: A a</h2>
+        <div class="alf-riga"><span class="alf-eti">Stampatello maiuscolo</span><span class="alf-modelli" aria-hidden="true">A A A</span></div>
+        <div class="alf-riga"><span class="alf-eti">Stampatello minuscolo</span><span class="alf-modelli" aria-hidden="true">a a a</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo maiuscolo — solo se lo sta già imparando</span><span class="alf-modelli" aria-hidden="true">A A A</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo minuscolo</span><span class="alf-modelli" aria-hidden="true">a a a</span></div>
+      </section>
+      <section>
+        <h2>Copia la parola: Allerta</h2>
+        <div class="alf-riga alf-parola"><span class="alf-eti">Stampatello</span><span class="alf-modelli" aria-hidden="true">Allerta</span></div>
+        <div class="alf-riga alf-corsivo alf-parola"><span class="alf-eti">Corsivo</span><span class="alf-modelli" aria-hidden="true">Allerta</span></div>
+      </section>
+      <p class="nota-adulto">Per l’adulto: leggi la consegna ad alta voce e proponi un passaggio alla volta. Prima si colora, poi si ricalca sulle lettere grigie e si continua da soli sulla riga, infine si copia la parola. Le righe grigie sono il modello: la riga di base è continua, quella in alto tratteggiata. Il corsivo si propone solo a chi lo sta già imparando. Si può anche indicare o dettare. Non si valuta la calligrafia.</p>
+      <p class="alf-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d’Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>ALF-A · Foglio 1 di 26 · Rev. 3 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page" id="lettera-b">
+    <div class="alf">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">B come Barella</h2>
+          <div class="scheda-sottotitolo">Alfabetiere della sicurezza · Infanzia 5–6 anni e classe prima · 20–30 minuti · matita e colori</div>
+        </div>
+        <div class="alf-badge" aria-hidden="true">B</div>
+      </header>
+      <p class="alf-obiettivo"><strong>Obiettivo:</strong> riconoscere la lettera B, scriverla nelle quattro forme e collegarla a una parola della protezione civile.</p>
+      <section>
+        <h2>Colora il disegno</h2>
+        <div class="alf-disegno">
+          <img src="/pittogrammi/arasaac-bn/alf-b-barella.png" alt="Barella con le ruote, vista di lato." width="500" height="500">
+        </div>
+        <p class="alf-dida">Sulla barella si trasporta chi si è fatto male.</p>
+      </section>
+      <section>
+        <h2>Ricalca e continua: B b</h2>
+        <div class="alf-riga"><span class="alf-eti">Stampatello maiuscolo</span><span class="alf-modelli" aria-hidden="true">B B B</span></div>
+        <div class="alf-riga"><span class="alf-eti">Stampatello minuscolo</span><span class="alf-modelli" aria-hidden="true">b b b</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo maiuscolo — solo se lo sta già imparando</span><span class="alf-modelli" aria-hidden="true">B B B</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo minuscolo</span><span class="alf-modelli" aria-hidden="true">b b b</span></div>
+      </section>
+      <section>
+        <h2>Copia la parola: Barella</h2>
+        <div class="alf-riga alf-parola"><span class="alf-eti">Stampatello</span><span class="alf-modelli" aria-hidden="true">Barella</span></div>
+        <div class="alf-riga alf-corsivo alf-parola"><span class="alf-eti">Corsivo</span><span class="alf-modelli" aria-hidden="true">Barella</span></div>
+      </section>
+      <p class="nota-adulto">Per l’adulto: leggi la consegna ad alta voce e proponi un passaggio alla volta. Prima si colora, poi si ricalca sulle lettere grigie e si continua da soli sulla riga, infine si copia la parola. Le righe grigie sono il modello: la riga di base è continua, quella in alto tratteggiata. Il corsivo si propone solo a chi lo sta già imparando. Si può anche indicare o dettare. Non si valuta la calligrafia.</p>
+      <p class="alf-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d’Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>ALF-B · Foglio 2 di 26 · Rev. 3 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page" id="lettera-c">
+    <div class="alf">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">C come Casco</h2>
+          <div class="scheda-sottotitolo">Alfabetiere della sicurezza · Infanzia 5–6 anni e classe prima · 20–30 minuti · matita e colori</div>
+        </div>
+        <div class="alf-badge" aria-hidden="true">C</div>
+      </header>
+      <p class="alf-obiettivo"><strong>Obiettivo:</strong> riconoscere la lettera C, scriverla nelle quattro forme e collegarla a una parola della protezione civile.</p>
+      <section>
+        <h2>Colora il disegno</h2>
+        <div class="alf-disegno">
+          <img src="/pittogrammi/arasaac-bn/alf-c-casco.png" alt="Elmetto di protezione da lavoro." width="500" height="500">
+        </div>
+        <p class="alf-dida">Il casco protegge la testa dei soccorritori.</p>
+      </section>
+      <section>
+        <h2>Ricalca e continua: C c</h2>
+        <div class="alf-riga"><span class="alf-eti">Stampatello maiuscolo</span><span class="alf-modelli" aria-hidden="true">C C C</span></div>
+        <div class="alf-riga"><span class="alf-eti">Stampatello minuscolo</span><span class="alf-modelli" aria-hidden="true">c c c</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo maiuscolo — solo se lo sta già imparando</span><span class="alf-modelli" aria-hidden="true">C C C</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo minuscolo</span><span class="alf-modelli" aria-hidden="true">c c c</span></div>
+      </section>
+      <section>
+        <h2>Copia la parola: Casco</h2>
+        <div class="alf-riga alf-parola"><span class="alf-eti">Stampatello</span><span class="alf-modelli" aria-hidden="true">Casco</span></div>
+        <div class="alf-riga alf-corsivo alf-parola"><span class="alf-eti">Corsivo</span><span class="alf-modelli" aria-hidden="true">Casco</span></div>
+      </section>
+      <p class="nota-adulto">Per l’adulto: leggi la consegna ad alta voce e proponi un passaggio alla volta. Prima si colora, poi si ricalca sulle lettere grigie e si continua da soli sulla riga, infine si copia la parola. Le righe grigie sono il modello: la riga di base è continua, quella in alto tratteggiata. Il corsivo si propone solo a chi lo sta già imparando. Si può anche indicare o dettare. Non si valuta la calligrafia.</p>
+      <p class="alf-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d’Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>ALF-C · Foglio 3 di 26 · Rev. 3 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page" id="lettera-d">
+    <div class="alf">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">D come Drone</h2>
+          <div class="scheda-sottotitolo">Alfabetiere della sicurezza · Infanzia 5–6 anni e classe prima · 20–30 minuti · matita e colori</div>
+        </div>
+        <div class="alf-badge" aria-hidden="true">D</div>
+      </header>
+      <p class="alf-obiettivo"><strong>Obiettivo:</strong> riconoscere la lettera D, scriverla nelle quattro forme e collegarla a una parola della protezione civile.</p>
+      <section>
+        <h2>Colora il disegno</h2>
+        <div class="alf-disegno">
+          <img src="/pittogrammi/arasaac-bn/alf-d-drone.png" alt="Drone con quattro eliche e una piccola telecamera." width="500" height="500">
+        </div>
+        <p class="alf-dida">Il drone vola e aiuta a cercare le persone.</p>
+      </section>
+      <section>
+        <h2>Ricalca e continua: D d</h2>
+        <div class="alf-riga"><span class="alf-eti">Stampatello maiuscolo</span><span class="alf-modelli" aria-hidden="true">D D D</span></div>
+        <div class="alf-riga"><span class="alf-eti">Stampatello minuscolo</span><span class="alf-modelli" aria-hidden="true">d d d</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo maiuscolo — solo se lo sta già imparando</span><span class="alf-modelli" aria-hidden="true">D D D</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo minuscolo</span><span class="alf-modelli" aria-hidden="true">d d d</span></div>
+      </section>
+      <section>
+        <h2>Copia la parola: Drone</h2>
+        <div class="alf-riga alf-parola"><span class="alf-eti">Stampatello</span><span class="alf-modelli" aria-hidden="true">Drone</span></div>
+        <div class="alf-riga alf-corsivo alf-parola"><span class="alf-eti">Corsivo</span><span class="alf-modelli" aria-hidden="true">Drone</span></div>
+      </section>
+      <p class="nota-adulto">Per l’adulto: leggi la consegna ad alta voce e proponi un passaggio alla volta. Prima si colora, poi si ricalca sulle lettere grigie e si continua da soli sulla riga, infine si copia la parola. Le righe grigie sono il modello: la riga di base è continua, quella in alto tratteggiata. Il corsivo si propone solo a chi lo sta già imparando. Si può anche indicare o dettare. Non si valuta la calligrafia.</p>
+      <p class="alf-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d’Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>ALF-D · Foglio 4 di 26 · Rev. 3 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page" id="lettera-e">
+    <div class="alf">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">E come Elicottero</h2>
+          <div class="scheda-sottotitolo">Alfabetiere della sicurezza · Infanzia 5–6 anni e classe prima · 20–30 minuti · matita e colori</div>
+        </div>
+        <div class="alf-badge" aria-hidden="true">E</div>
+      </header>
+      <p class="alf-obiettivo"><strong>Obiettivo:</strong> riconoscere la lettera E, scriverla nelle quattro forme e collegarla a una parola della protezione civile.</p>
+      <section>
+        <h2>Colora il disegno</h2>
+        <div class="alf-disegno">
+          <img src="/pittogrammi/arasaac-bn/alf-e-elicottero.png" alt="Elicottero in volo, visto di lato." width="500" height="500">
+        </div>
+        <p class="alf-dida">L’elicottero porta i soccorsi dove le strade non arrivano.</p>
+      </section>
+      <section>
+        <h2>Ricalca e continua: E e</h2>
+        <div class="alf-riga"><span class="alf-eti">Stampatello maiuscolo</span><span class="alf-modelli" aria-hidden="true">E E E</span></div>
+        <div class="alf-riga"><span class="alf-eti">Stampatello minuscolo</span><span class="alf-modelli" aria-hidden="true">e e e</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo maiuscolo — solo se lo sta già imparando</span><span class="alf-modelli" aria-hidden="true">E E E</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo minuscolo</span><span class="alf-modelli" aria-hidden="true">e e e</span></div>
+      </section>
+      <section>
+        <h2>Copia la parola: Elicottero</h2>
+        <div class="alf-riga alf-parola"><span class="alf-eti">Stampatello</span><span class="alf-modelli" aria-hidden="true">Elicottero</span></div>
+        <div class="alf-riga alf-corsivo alf-parola"><span class="alf-eti">Corsivo</span><span class="alf-modelli" aria-hidden="true">Elicottero</span></div>
+      </section>
+      <p class="nota-adulto">Per l’adulto: leggi la consegna ad alta voce e proponi un passaggio alla volta. Prima si colora, poi si ricalca sulle lettere grigie e si continua da soli sulla riga, infine si copia la parola. Le righe grigie sono il modello: la riga di base è continua, quella in alto tratteggiata. Il corsivo si propone solo a chi lo sta già imparando. La parola è lunga: va bene copiarne solo la prima parte. Si può anche indicare o dettare. Non si valuta la calligrafia.</p>
+      <p class="alf-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d’Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>ALF-E · Foglio 5 di 26 · Rev. 3 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page" id="lettera-f">
+    <div class="alf">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">F come Fiume</h2>
+          <div class="scheda-sottotitolo">Alfabetiere della sicurezza · Infanzia 5–6 anni e classe prima · 20–30 minuti · matita e colori</div>
+        </div>
+        <div class="alf-badge" aria-hidden="true">F</div>
+      </header>
+      <p class="alf-obiettivo"><strong>Obiettivo:</strong> riconoscere la lettera F, scriverla nelle quattro forme e collegarla a una parola della protezione civile.</p>
+      <section>
+        <h2>Colora il disegno</h2>
+        <div class="alf-disegno">
+          <img src="/pittogrammi/arasaac-bn/alf-f-fiume.png" alt="Fiume che scorre fra due rive alberate." width="500" height="500">
+        </div>
+        <p class="alf-dida">Quando piove tanto il fiume può ingrossarsi.</p>
+      </section>
+      <section>
+        <h2>Ricalca e continua: F f</h2>
+        <div class="alf-riga"><span class="alf-eti">Stampatello maiuscolo</span><span class="alf-modelli" aria-hidden="true">F F F</span></div>
+        <div class="alf-riga"><span class="alf-eti">Stampatello minuscolo</span><span class="alf-modelli" aria-hidden="true">f f f</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo maiuscolo — solo se lo sta già imparando</span><span class="alf-modelli" aria-hidden="true">F F F</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo minuscolo</span><span class="alf-modelli" aria-hidden="true">f f f</span></div>
+      </section>
+      <section>
+        <h2>Copia la parola: Fiume</h2>
+        <div class="alf-riga alf-parola"><span class="alf-eti">Stampatello</span><span class="alf-modelli" aria-hidden="true">Fiume</span></div>
+        <div class="alf-riga alf-corsivo alf-parola"><span class="alf-eti">Corsivo</span><span class="alf-modelli" aria-hidden="true">Fiume</span></div>
+      </section>
+      <p class="nota-adulto">Per l’adulto: leggi la consegna ad alta voce e proponi un passaggio alla volta. Prima si colora, poi si ricalca sulle lettere grigie e si continua da soli sulla riga, infine si copia la parola. Le righe grigie sono il modello: la riga di base è continua, quella in alto tratteggiata. Il corsivo si propone solo a chi lo sta già imparando. Si può anche indicare o dettare. Non si valuta la calligrafia.</p>
+      <p class="alf-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d’Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>ALF-F · Foglio 6 di 26 · Rev. 3 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page" id="lettera-g">
+    <div class="alf">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">G come Guanti</h2>
+          <div class="scheda-sottotitolo">Alfabetiere della sicurezza · Infanzia 5–6 anni e classe prima · 20–30 minuti · matita e colori</div>
+        </div>
+        <div class="alf-badge" aria-hidden="true">G</div>
+      </header>
+      <p class="alf-obiettivo"><strong>Obiettivo:</strong> riconoscere la lettera G, scriverla nelle quattro forme e collegarla a una parola della protezione civile.</p>
+      <section>
+        <h2>Colora il disegno</h2>
+        <div class="alf-disegno">
+          <img src="/pittogrammi/arasaac-bn/alf-g-guanti.png" alt="Un paio di guanti da lavoro." width="500" height="500">
+        </div>
+        <p class="alf-dida">I guanti proteggono le mani di chi lavora.</p>
+      </section>
+      <section>
+        <h2>Ricalca e continua: G g</h2>
+        <div class="alf-riga"><span class="alf-eti">Stampatello maiuscolo</span><span class="alf-modelli" aria-hidden="true">G G G</span></div>
+        <div class="alf-riga"><span class="alf-eti">Stampatello minuscolo</span><span class="alf-modelli" aria-hidden="true">g g g</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo maiuscolo — solo se lo sta già imparando</span><span class="alf-modelli" aria-hidden="true">G G G</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo minuscolo</span><span class="alf-modelli" aria-hidden="true">g g g</span></div>
+      </section>
+      <section>
+        <h2>Copia la parola: Guanti</h2>
+        <div class="alf-riga alf-parola"><span class="alf-eti">Stampatello</span><span class="alf-modelli" aria-hidden="true">Guanti</span></div>
+        <div class="alf-riga alf-corsivo alf-parola"><span class="alf-eti">Corsivo</span><span class="alf-modelli" aria-hidden="true">Guanti</span></div>
+      </section>
+      <p class="nota-adulto">Per l’adulto: leggi la consegna ad alta voce e proponi un passaggio alla volta. Prima si colora, poi si ricalca sulle lettere grigie e si continua da soli sulla riga, infine si copia la parola. Le righe grigie sono il modello: la riga di base è continua, quella in alto tratteggiata. Il corsivo si propone solo a chi lo sta già imparando. Si può anche indicare o dettare. Non si valuta la calligrafia.</p>
+      <p class="alf-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d’Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>ALF-G · Foglio 7 di 26 · Rev. 3 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page" id="lettera-h">
+    <div class="alf">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">H come Helipad</h2>
+          <div class="scheda-sottotitolo">Alfabetiere della sicurezza · Infanzia 5–6 anni e classe prima · 20–30 minuti · matita e colori</div>
+        </div>
+        <div class="alf-badge" aria-hidden="true">H</div>
+      </header>
+      <p class="alf-obiettivo"><strong>Obiettivo:</strong> riconoscere la lettera H, scriverla nelle quattro forme e collegarla a una parola della protezione civile.</p>
+      <section>
+        <h2>Colora il disegno</h2>
+        <div class="alf-disegno">
+          <img src="/pittogrammi/arasaac-bn/alf-h-piazzola.png" alt="Elicottero che atterra su una piazzola con la lettera H." width="500" height="500">
+        </div>
+        <p class="alf-dida">In italiano la H da sola non ha suono. A terra, però, la H grande indica la piazzola.</p>
+        <p class="alf-spiega"><strong>Che cosa vuol dire.</strong> Helipad è una parola inglese. È la piazzola dove atterra l’elicottero: si riconosce dalla grande H disegnata a terra.</p>
+      </section>
+      <section>
+        <h2>Ricalca e continua: H h</h2>
+        <div class="alf-riga"><span class="alf-eti">Stampatello maiuscolo</span><span class="alf-modelli" aria-hidden="true">H H H</span></div>
+        <div class="alf-riga"><span class="alf-eti">Stampatello minuscolo</span><span class="alf-modelli" aria-hidden="true">h h h</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo maiuscolo — solo se lo sta già imparando</span><span class="alf-modelli" aria-hidden="true">H H H</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo minuscolo</span><span class="alf-modelli" aria-hidden="true">h h h</span></div>
+      </section>
+      <section>
+        <h2>Copia la parola: Helipad</h2>
+        <div class="alf-riga alf-parola"><span class="alf-eti">Stampatello</span><span class="alf-modelli" aria-hidden="true">Helipad</span></div>
+        <div class="alf-riga alf-corsivo alf-parola"><span class="alf-eti">Corsivo</span><span class="alf-modelli" aria-hidden="true">Helipad</span></div>
+      </section>
+      <p class="nota-adulto">Per l’adulto: leggi la consegna ad alta voce e proponi un passaggio alla volta. Prima si colora, poi si ricalca sulle lettere grigie e si continua da soli sulla riga, infine si copia la parola. Le righe grigie sono il modello: la riga di base è continua, quella in alto tratteggiata. Il corsivo si propone solo a chi lo sta già imparando. La H fa parte dell’alfabeto italiano ma non ha un suono suo: si scrive in ho, hai, ha, hanno e nei gruppi ch e gh. Spiega la parola straniera prima di farla scrivere. Si può anche indicare o dettare. Non si valuta la calligrafia.</p>
+      <p class="alf-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d’Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>ALF-H · Foglio 8 di 26 · Rev. 3 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page" id="lettera-i">
+    <div class="alf">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">I come Incendio</h2>
+          <div class="scheda-sottotitolo">Alfabetiere della sicurezza · Infanzia 5–6 anni e classe prima · 20–30 minuti · matita e colori</div>
+        </div>
+        <div class="alf-badge" aria-hidden="true">I</div>
+      </header>
+      <p class="alf-obiettivo"><strong>Obiettivo:</strong> riconoscere la lettera I, scriverla nelle quattro forme e collegarla a una parola della protezione civile.</p>
+      <section>
+        <h2>Colora il disegno</h2>
+        <div class="alf-disegno">
+          <img src="/pittogrammi/arasaac-bn/alf-i-incendio.png" alt="Le fiamme di un incendio." width="500" height="500">
+        </div>
+        <p class="alf-dida">Se vedi un incendio lo dici subito a un adulto.</p>
+      </section>
+      <section>
+        <h2>Ricalca e continua: I i</h2>
+        <div class="alf-riga"><span class="alf-eti">Stampatello maiuscolo</span><span class="alf-modelli" aria-hidden="true">I I I</span></div>
+        <div class="alf-riga"><span class="alf-eti">Stampatello minuscolo</span><span class="alf-modelli" aria-hidden="true">i i i</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo maiuscolo — solo se lo sta già imparando</span><span class="alf-modelli" aria-hidden="true">I I I</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo minuscolo</span><span class="alf-modelli" aria-hidden="true">i i i</span></div>
+      </section>
+      <section>
+        <h2>Copia la parola: Incendio</h2>
+        <div class="alf-riga alf-parola"><span class="alf-eti">Stampatello</span><span class="alf-modelli" aria-hidden="true">Incendio</span></div>
+        <div class="alf-riga alf-corsivo alf-parola"><span class="alf-eti">Corsivo</span><span class="alf-modelli" aria-hidden="true">Incendio</span></div>
+      </section>
+      <p class="nota-adulto">Per l’adulto: leggi la consegna ad alta voce e proponi un passaggio alla volta. Prima si colora, poi si ricalca sulle lettere grigie e si continua da soli sulla riga, infine si copia la parola. Le righe grigie sono il modello: la riga di base è continua, quella in alto tratteggiata. Il corsivo si propone solo a chi lo sta già imparando. Si può anche indicare o dettare. Non si valuta la calligrafia.</p>
+      <p class="alf-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d’Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>ALF-I · Foglio 9 di 26 · Rev. 3 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page" id="lettera-j">
+    <div class="alf">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">J come Joystick</h2>
+          <div class="scheda-sottotitolo">Alfabetiere della sicurezza · Infanzia 5–6 anni e classe prima · 20–30 minuti · matita e colori</div>
+        </div>
+        <div class="alf-badge" aria-hidden="true">J</div>
+      </header>
+      <p class="alf-obiettivo"><strong>Obiettivo:</strong> riconoscere la lettera J, scriverla nelle quattro forme e collegarla a una parola della protezione civile.</p>
+      <section>
+        <h2>Colora il disegno</h2>
+        <div class="alf-disegno">
+          <img src="/pittogrammi/arasaac-bn/alf-j-joystick.png" alt="Radiocomando con la leva del joystick." width="500" height="500">
+        </div>
+        <p class="alf-dida">Con il joystick si guida il drone che cerca le persone.</p>
+        <p class="alf-spiega"><strong>Che cosa vuol dire.</strong> Joystick è una parola inglese. È la leva che si muove con la mano per guidare il drone.</p>
+      </section>
+      <section>
+        <h2>Ricalca e continua: J j</h2>
+        <div class="alf-riga"><span class="alf-eti">Stampatello maiuscolo</span><span class="alf-modelli" aria-hidden="true">J J J</span></div>
+        <div class="alf-riga"><span class="alf-eti">Stampatello minuscolo</span><span class="alf-modelli" aria-hidden="true">j j j</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo maiuscolo — solo se lo sta già imparando</span><span class="alf-modelli" aria-hidden="true">J J J</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo minuscolo</span><span class="alf-modelli" aria-hidden="true">j j j</span></div>
+      </section>
+      <section>
+        <h2>Copia la parola: Joystick</h2>
+        <div class="alf-riga alf-parola"><span class="alf-eti">Stampatello</span><span class="alf-modelli" aria-hidden="true">Joystick</span></div>
+        <div class="alf-riga alf-corsivo alf-parola"><span class="alf-eti">Corsivo</span><span class="alf-modelli" aria-hidden="true">Joystick</span></div>
+      </section>
+      <p class="nota-adulto">Per l’adulto: leggi la consegna ad alta voce e proponi un passaggio alla volta. Prima si colora, poi si ricalca sulle lettere grigie e si continua da soli sulla riga, infine si copia la parola. Le righe grigie sono il modello: la riga di base è continua, quella in alto tratteggiata. Il corsivo si propone solo a chi lo sta già imparando. Questa lettera non fa parte dell’alfabeto italiano di 21 lettere. Spiega la parola straniera prima di farla scrivere. Si può anche indicare o dettare. Non si valuta la calligrafia.</p>
+      <p class="alf-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d’Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>ALF-J · Foglio 10 di 26 · Rev. 3 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page" id="lettera-k">
+    <div class="alf">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">K come Kit</h2>
+          <div class="scheda-sottotitolo">Alfabetiere della sicurezza · Infanzia 5–6 anni e classe prima · 20–30 minuti · matita e colori</div>
+        </div>
+        <div class="alf-badge" aria-hidden="true">K</div>
+      </header>
+      <p class="alf-obiettivo"><strong>Obiettivo:</strong> riconoscere la lettera K, scriverla nelle quattro forme e collegarla a una parola della protezione civile.</p>
+      <section>
+        <h2>Colora il disegno</h2>
+        <div class="alf-disegno">
+          <img src="/pittogrammi/arasaac-bn/alf-k-kit.png" alt="Valigetta di pronto soccorso con la croce." width="500" height="500">
+        </div>
+        <p class="alf-dida">Nel kit c’è tutto quello che serve se bisogna uscire di casa.</p>
+      </section>
+      <section>
+        <h2>Ricalca e continua: K k</h2>
+        <div class="alf-riga"><span class="alf-eti">Stampatello maiuscolo</span><span class="alf-modelli" aria-hidden="true">K K K</span></div>
+        <div class="alf-riga"><span class="alf-eti">Stampatello minuscolo</span><span class="alf-modelli" aria-hidden="true">k k k</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo maiuscolo — solo se lo sta già imparando</span><span class="alf-modelli" aria-hidden="true">K K K</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo minuscolo</span><span class="alf-modelli" aria-hidden="true">k k k</span></div>
+      </section>
+      <section>
+        <h2>Copia la parola: Kit</h2>
+        <div class="alf-riga alf-parola"><span class="alf-eti">Stampatello</span><span class="alf-modelli" aria-hidden="true">Kit</span></div>
+        <div class="alf-riga alf-corsivo alf-parola"><span class="alf-eti">Corsivo</span><span class="alf-modelli" aria-hidden="true">Kit</span></div>
+      </section>
+      <p class="nota-adulto">Per l’adulto: leggi la consegna ad alta voce e proponi un passaggio alla volta. Prima si colora, poi si ricalca sulle lettere grigie e si continua da soli sulla riga, infine si copia la parola. Le righe grigie sono il modello: la riga di base è continua, quella in alto tratteggiata. Il corsivo si propone solo a chi lo sta già imparando. Questa lettera non fa parte dell’alfabeto italiano di 21 lettere. Si può anche indicare o dettare. Non si valuta la calligrafia.</p>
+      <p class="alf-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d’Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>ALF-K · Foglio 11 di 26 · Rev. 3 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page" id="lettera-l">
+    <div class="alf">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">L come Luogo sicuro</h2>
+          <div class="scheda-sottotitolo">Alfabetiere della sicurezza · Infanzia 5–6 anni e classe prima · 20–30 minuti · matita e colori</div>
+        </div>
+        <div class="alf-badge" aria-hidden="true">L</div>
+      </header>
+      <p class="alf-obiettivo"><strong>Obiettivo:</strong> riconoscere la lettera L, scriverla nelle quattro forme e collegarla a una parola della protezione civile.</p>
+      <section>
+        <h2>Colora il disegno</h2>
+        <div class="alf-disegno">
+          <img src="/pittogrammi/arasaac-bn/alf-l-luogo-sicuro.png" alt="Cortile aperto di una scuola, con gli alberi." width="500" height="500">
+        </div>
+        <p class="alf-dida">Il luogo sicuro è dove ci si ritrova quando si esce.</p>
+      </section>
+      <section>
+        <h2>Ricalca e continua: L l</h2>
+        <div class="alf-riga"><span class="alf-eti">Stampatello maiuscolo</span><span class="alf-modelli" aria-hidden="true">L L L</span></div>
+        <div class="alf-riga"><span class="alf-eti">Stampatello minuscolo</span><span class="alf-modelli" aria-hidden="true">l l l</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo maiuscolo — solo se lo sta già imparando</span><span class="alf-modelli" aria-hidden="true">L L L</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo minuscolo</span><span class="alf-modelli" aria-hidden="true">l l l</span></div>
+      </section>
+      <section>
+        <h2>Copia la parola: Luogo sicuro</h2>
+        <div class="alf-riga alf-parola"><span class="alf-eti">Stampatello</span><span class="alf-modelli" aria-hidden="true">Luogo sicuro</span></div>
+        <div class="alf-riga alf-corsivo alf-parola"><span class="alf-eti">Corsivo</span><span class="alf-modelli" aria-hidden="true">Luogo sicuro</span></div>
+      </section>
+      <p class="nota-adulto">Per l’adulto: leggi la consegna ad alta voce e proponi un passaggio alla volta. Prima si colora, poi si ricalca sulle lettere grigie e si continua da soli sulla riga, infine si copia la parola. Le righe grigie sono il modello: la riga di base è continua, quella in alto tratteggiata. Il corsivo si propone solo a chi lo sta già imparando. La parola è lunga: va bene copiarne solo la prima parte. Si può anche indicare o dettare. Non si valuta la calligrafia.</p>
+      <p class="alf-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d’Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>ALF-L · Foglio 12 di 26 · Rev. 3 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page" id="lettera-m">
+    <div class="alf">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">M come Mappa</h2>
+          <div class="scheda-sottotitolo">Alfabetiere della sicurezza · Infanzia 5–6 anni e classe prima · 20–30 minuti · matita e colori</div>
+        </div>
+        <div class="alf-badge" aria-hidden="true">M</div>
+      </header>
+      <p class="alf-obiettivo"><strong>Obiettivo:</strong> riconoscere la lettera M, scriverla nelle quattro forme e collegarla a una parola della protezione civile.</p>
+      <section>
+        <h2>Colora il disegno</h2>
+        <div class="alf-disegno">
+          <img src="/pittogrammi/arasaac-bn/alf-m-mappa.png" alt="Mappa di carta aperta, con le strade." width="500" height="500">
+        </div>
+        <p class="alf-dida">La mappa mostra le strade e i luoghi sicuri.</p>
+      </section>
+      <section>
+        <h2>Ricalca e continua: M m</h2>
+        <div class="alf-riga"><span class="alf-eti">Stampatello maiuscolo</span><span class="alf-modelli" aria-hidden="true">M M M</span></div>
+        <div class="alf-riga"><span class="alf-eti">Stampatello minuscolo</span><span class="alf-modelli" aria-hidden="true">m m m</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo maiuscolo — solo se lo sta già imparando</span><span class="alf-modelli" aria-hidden="true">M M M</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo minuscolo</span><span class="alf-modelli" aria-hidden="true">m m m</span></div>
+      </section>
+      <section>
+        <h2>Copia la parola: Mappa</h2>
+        <div class="alf-riga alf-parola"><span class="alf-eti">Stampatello</span><span class="alf-modelli" aria-hidden="true">Mappa</span></div>
+        <div class="alf-riga alf-corsivo alf-parola"><span class="alf-eti">Corsivo</span><span class="alf-modelli" aria-hidden="true">Mappa</span></div>
+      </section>
+      <p class="nota-adulto">Per l’adulto: leggi la consegna ad alta voce e proponi un passaggio alla volta. Prima si colora, poi si ricalca sulle lettere grigie e si continua da soli sulla riga, infine si copia la parola. Le righe grigie sono il modello: la riga di base è continua, quella in alto tratteggiata. Il corsivo si propone solo a chi lo sta già imparando. Si può anche indicare o dettare. Non si valuta la calligrafia.</p>
+      <p class="alf-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d’Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>ALF-M · Foglio 13 di 26 · Rev. 3 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page" id="lettera-n">
+    <div class="alf">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">N come Numero 112</h2>
+          <div class="scheda-sottotitolo">Alfabetiere della sicurezza · Infanzia 5–6 anni e classe prima · 20–30 minuti · matita e colori</div>
+        </div>
+        <div class="alf-badge" aria-hidden="true">N</div>
+      </header>
+      <p class="alf-obiettivo"><strong>Obiettivo:</strong> riconoscere la lettera N, scriverla nelle quattro forme e collegarla a una parola della protezione civile.</p>
+      <section>
+        <h2>Colora il disegno</h2>
+        <div class="alf-disegno">
+          <img src="/pittogrammi/arasaac-bn/alf-n-telefono.png" alt="Telefono con la cornetta e i tasti." width="500" height="500">
+        </div>
+        <p class="alf-dida">Il 112 è il numero unico per chiedere aiuto.</p>
+      </section>
+      <section>
+        <h2>Ricalca e continua: N n</h2>
+        <div class="alf-riga"><span class="alf-eti">Stampatello maiuscolo</span><span class="alf-modelli" aria-hidden="true">N N N</span></div>
+        <div class="alf-riga"><span class="alf-eti">Stampatello minuscolo</span><span class="alf-modelli" aria-hidden="true">n n n</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo maiuscolo — solo se lo sta già imparando</span><span class="alf-modelli" aria-hidden="true">N N N</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo minuscolo</span><span class="alf-modelli" aria-hidden="true">n n n</span></div>
+      </section>
+      <section>
+        <h2>Copia la parola: Numero 112</h2>
+        <div class="alf-riga alf-parola"><span class="alf-eti">Stampatello</span><span class="alf-modelli" aria-hidden="true">Numero 112</span></div>
+        <div class="alf-riga alf-corsivo alf-parola"><span class="alf-eti">Corsivo</span><span class="alf-modelli" aria-hidden="true">Numero 112</span></div>
+      </section>
+      <p class="nota-adulto">Per l’adulto: leggi la consegna ad alta voce e proponi un passaggio alla volta. Prima si colora, poi si ricalca sulle lettere grigie e si continua da soli sulla riga, infine si copia la parola. Le righe grigie sono il modello: la riga di base è continua, quella in alto tratteggiata. Il corsivo si propone solo a chi lo sta già imparando. La parola è lunga: va bene copiarne solo la prima parte. Si può anche indicare o dettare. Non si valuta la calligrafia.</p>
+      <p class="alf-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d’Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>ALF-N · Foglio 14 di 26 · Rev. 3 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page" id="lettera-o">
+    <div class="alf">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">O come Ordine</h2>
+          <div class="scheda-sottotitolo">Alfabetiere della sicurezza · Infanzia 5–6 anni e classe prima · 20–30 minuti · matita e colori</div>
+        </div>
+        <div class="alf-badge" aria-hidden="true">O</div>
+      </header>
+      <p class="alf-obiettivo"><strong>Obiettivo:</strong> riconoscere la lettera O, scriverla nelle quattro forme e collegarla a una parola della protezione civile.</p>
+      <section>
+        <h2>Colora il disegno</h2>
+        <div class="alf-disegno">
+          <img src="/pittogrammi/arasaac-bn/alf-o-ordine.png" alt="Cinque persone in fila, una dietro l&#x27;altra." width="500" height="500">
+        </div>
+        <p class="alf-dida">In fila, con ordine e senza spingere, si esce meglio.</p>
+      </section>
+      <section>
+        <h2>Ricalca e continua: O o</h2>
+        <div class="alf-riga"><span class="alf-eti">Stampatello maiuscolo</span><span class="alf-modelli" aria-hidden="true">O O O</span></div>
+        <div class="alf-riga"><span class="alf-eti">Stampatello minuscolo</span><span class="alf-modelli" aria-hidden="true">o o o</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo maiuscolo — solo se lo sta già imparando</span><span class="alf-modelli" aria-hidden="true">O O O</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo minuscolo</span><span class="alf-modelli" aria-hidden="true">o o o</span></div>
+      </section>
+      <section>
+        <h2>Copia la parola: Ordine</h2>
+        <div class="alf-riga alf-parola"><span class="alf-eti">Stampatello</span><span class="alf-modelli" aria-hidden="true">Ordine</span></div>
+        <div class="alf-riga alf-corsivo alf-parola"><span class="alf-eti">Corsivo</span><span class="alf-modelli" aria-hidden="true">Ordine</span></div>
+      </section>
+      <p class="nota-adulto">Per l’adulto: leggi la consegna ad alta voce e proponi un passaggio alla volta. Prima si colora, poi si ricalca sulle lettere grigie e si continua da soli sulla riga, infine si copia la parola. Le righe grigie sono il modello: la riga di base è continua, quella in alto tratteggiata. Il corsivo si propone solo a chi lo sta già imparando. Si può anche indicare o dettare. Non si valuta la calligrafia.</p>
+      <p class="alf-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d’Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>ALF-O · Foglio 15 di 26 · Rev. 3 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page" id="lettera-p">
+    <div class="alf">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">P come Protezione Civile</h2>
+          <div class="scheda-sottotitolo">Alfabetiere della sicurezza · Infanzia 5–6 anni e classe prima · 20–30 minuti · matita e colori</div>
+        </div>
+        <div class="alf-badge" aria-hidden="true">P</div>
+      </header>
+      <p class="alf-obiettivo"><strong>Obiettivo:</strong> riconoscere la lettera P, scriverla nelle quattro forme e collegarla a una parola della protezione civile.</p>
+      <section>
+        <h2>Colora il disegno</h2>
+        <div class="alf-disegno">
+          <img src="/pittogrammi/arasaac-bn/alf-p-protezione-civile.png" alt="Due volontari in divisa accanto a un mezzo di soccorso." width="500" height="500">
+        </div>
+        <p class="alf-dida">La Protezione Civile aiuta le persone quando c’è un pericolo.</p>
+      </section>
+      <section>
+        <h2>Ricalca e continua: P p</h2>
+        <div class="alf-riga"><span class="alf-eti">Stampatello maiuscolo</span><span class="alf-modelli" aria-hidden="true">P P P</span></div>
+        <div class="alf-riga"><span class="alf-eti">Stampatello minuscolo</span><span class="alf-modelli" aria-hidden="true">p p p</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo maiuscolo — solo se lo sta già imparando</span><span class="alf-modelli" aria-hidden="true">P P P</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo minuscolo</span><span class="alf-modelli" aria-hidden="true">p p p</span></div>
+      </section>
+      <section>
+        <h2>Copia la parola: Protezione Civile</h2>
+        <div class="alf-riga alf-parola"><span class="alf-eti">Stampatello</span><span class="alf-modelli" aria-hidden="true">Protezione Civile</span></div>
+        <div class="alf-riga alf-corsivo alf-parola"><span class="alf-eti">Corsivo</span><span class="alf-modelli" aria-hidden="true">Protezione Civile</span></div>
+      </section>
+      <p class="nota-adulto">Per l’adulto: leggi la consegna ad alta voce e proponi un passaggio alla volta. Prima si colora, poi si ricalca sulle lettere grigie e si continua da soli sulla riga, infine si copia la parola. Le righe grigie sono il modello: la riga di base è continua, quella in alto tratteggiata. Il corsivo si propone solo a chi lo sta già imparando. La parola è lunga: va bene copiarne solo la prima parte. Si può anche indicare o dettare. Non si valuta la calligrafia.</p>
+      <p class="alf-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d’Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>ALF-P · Foglio 16 di 26 · Rev. 3 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page" id="lettera-q">
+    <div class="alf">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">Q come Quaderno</h2>
+          <div class="scheda-sottotitolo">Alfabetiere della sicurezza · Infanzia 5–6 anni e classe prima · 20–30 minuti · matita e colori</div>
+        </div>
+        <div class="alf-badge" aria-hidden="true">Q</div>
+      </header>
+      <p class="alf-obiettivo"><strong>Obiettivo:</strong> riconoscere la lettera Q, scriverla nelle quattro forme e collegarla a una parola della protezione civile.</p>
+      <section>
+        <h2>Colora il disegno</h2>
+        <div class="alf-disegno">
+          <img src="/pittogrammi/arasaac-bn/alf-q-quaderno.png" alt="Quaderno ad anelli con l&#x27;etichetta sulla copertina." width="500" height="500">
+        </div>
+        <p class="alf-dida">Sul quaderno scriviamo quello che impariamo.</p>
+      </section>
+      <section>
+        <h2>Ricalca e continua: Q q</h2>
+        <div class="alf-riga"><span class="alf-eti">Stampatello maiuscolo</span><span class="alf-modelli" aria-hidden="true">Q Q Q</span></div>
+        <div class="alf-riga"><span class="alf-eti">Stampatello minuscolo</span><span class="alf-modelli" aria-hidden="true">q q q</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo maiuscolo — solo se lo sta già imparando</span><span class="alf-modelli" aria-hidden="true">Q Q Q</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo minuscolo</span><span class="alf-modelli" aria-hidden="true">q q q</span></div>
+      </section>
+      <section>
+        <h2>Copia la parola: Quaderno</h2>
+        <div class="alf-riga alf-parola"><span class="alf-eti">Stampatello</span><span class="alf-modelli" aria-hidden="true">Quaderno</span></div>
+        <div class="alf-riga alf-corsivo alf-parola"><span class="alf-eti">Corsivo</span><span class="alf-modelli" aria-hidden="true">Quaderno</span></div>
+      </section>
+      <p class="nota-adulto">Per l’adulto: leggi la consegna ad alta voce e proponi un passaggio alla volta. Prima si colora, poi si ricalca sulle lettere grigie e si continua da soli sulla riga, infine si copia la parola. Le righe grigie sono il modello: la riga di base è continua, quella in alto tratteggiata. Il corsivo si propone solo a chi lo sta già imparando. Si può anche indicare o dettare. Non si valuta la calligrafia.</p>
+      <p class="alf-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d’Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>ALF-Q · Foglio 17 di 26 · Rev. 3 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page" id="lettera-r">
+    <div class="alf">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">R come Radio</h2>
+          <div class="scheda-sottotitolo">Alfabetiere della sicurezza · Infanzia 5–6 anni e classe prima · 20–30 minuti · matita e colori</div>
+        </div>
+        <div class="alf-badge" aria-hidden="true">R</div>
+      </header>
+      <p class="alf-obiettivo"><strong>Obiettivo:</strong> riconoscere la lettera R, scriverla nelle quattro forme e collegarla a una parola della protezione civile.</p>
+      <section>
+        <h2>Colora il disegno</h2>
+        <div class="alf-disegno">
+          <img src="/pittogrammi/arasaac-bn/alf-r-radio.png" alt="Radio ricetrasmittente portatile con l&#x27;antenna." width="500" height="500">
+        </div>
+        <p class="alf-dida">Con la radio i volontari si parlano anche senza telefono.</p>
+      </section>
+      <section>
+        <h2>Ricalca e continua: R r</h2>
+        <div class="alf-riga"><span class="alf-eti">Stampatello maiuscolo</span><span class="alf-modelli" aria-hidden="true">R R R</span></div>
+        <div class="alf-riga"><span class="alf-eti">Stampatello minuscolo</span><span class="alf-modelli" aria-hidden="true">r r r</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo maiuscolo — solo se lo sta già imparando</span><span class="alf-modelli" aria-hidden="true">R R R</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo minuscolo</span><span class="alf-modelli" aria-hidden="true">r r r</span></div>
+      </section>
+      <section>
+        <h2>Copia la parola: Radio</h2>
+        <div class="alf-riga alf-parola"><span class="alf-eti">Stampatello</span><span class="alf-modelli" aria-hidden="true">Radio</span></div>
+        <div class="alf-riga alf-corsivo alf-parola"><span class="alf-eti">Corsivo</span><span class="alf-modelli" aria-hidden="true">Radio</span></div>
+      </section>
+      <p class="nota-adulto">Per l’adulto: leggi la consegna ad alta voce e proponi un passaggio alla volta. Prima si colora, poi si ricalca sulle lettere grigie e si continua da soli sulla riga, infine si copia la parola. Le righe grigie sono il modello: la riga di base è continua, quella in alto tratteggiata. Il corsivo si propone solo a chi lo sta già imparando. Si può anche indicare o dettare. Non si valuta la calligrafia.</p>
+      <p class="alf-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d’Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>ALF-R · Foglio 18 di 26 · Rev. 3 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page" id="lettera-s">
+    <div class="alf">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">S come Sicurezza</h2>
+          <div class="scheda-sottotitolo">Alfabetiere della sicurezza · Infanzia 5–6 anni e classe prima · 20–30 minuti · matita e colori</div>
+        </div>
+        <div class="alf-badge" aria-hidden="true">S</div>
+      </header>
+      <p class="alf-obiettivo"><strong>Obiettivo:</strong> riconoscere la lettera S, scriverla nelle quattro forme e collegarla a una parola della protezione civile.</p>
+      <section>
+        <h2>Colora il disegno</h2>
+        <div class="alf-disegno">
+          <img src="/pittogrammi/arasaac-bn/alf-s-sicurezza.png" alt="Bambino seduto nel seggiolino dell&#x27;auto, con le cinture allacciate." width="500" height="500">
+        </div>
+        <p class="alf-dida">Stare al sicuro vuol dire seguire le regole con calma.</p>
+      </section>
+      <section>
+        <h2>Ricalca e continua: S s</h2>
+        <div class="alf-riga"><span class="alf-eti">Stampatello maiuscolo</span><span class="alf-modelli" aria-hidden="true">S S S</span></div>
+        <div class="alf-riga"><span class="alf-eti">Stampatello minuscolo</span><span class="alf-modelli" aria-hidden="true">s s s</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo maiuscolo — solo se lo sta già imparando</span><span class="alf-modelli" aria-hidden="true">S S S</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo minuscolo</span><span class="alf-modelli" aria-hidden="true">s s s</span></div>
+      </section>
+      <section>
+        <h2>Copia la parola: Sicurezza</h2>
+        <div class="alf-riga alf-parola"><span class="alf-eti">Stampatello</span><span class="alf-modelli" aria-hidden="true">Sicurezza</span></div>
+        <div class="alf-riga alf-corsivo alf-parola"><span class="alf-eti">Corsivo</span><span class="alf-modelli" aria-hidden="true">Sicurezza</span></div>
+      </section>
+      <p class="nota-adulto">Per l’adulto: leggi la consegna ad alta voce e proponi un passaggio alla volta. Prima si colora, poi si ricalca sulle lettere grigie e si continua da soli sulla riga, infine si copia la parola. Le righe grigie sono il modello: la riga di base è continua, quella in alto tratteggiata. Il corsivo si propone solo a chi lo sta già imparando. Si può anche indicare o dettare. Non si valuta la calligrafia.</p>
+      <p class="alf-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d’Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>ALF-S · Foglio 19 di 26 · Rev. 3 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page" id="lettera-t">
+    <div class="alf">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">T come Terremoto</h2>
+          <div class="scheda-sottotitolo">Alfabetiere della sicurezza · Infanzia 5–6 anni e classe prima · 20–30 minuti · matita e colori</div>
+        </div>
+        <div class="alf-badge" aria-hidden="true">T</div>
+      </header>
+      <p class="alf-obiettivo"><strong>Obiettivo:</strong> riconoscere la lettera T, scriverla nelle quattro forme e collegarla a una parola della protezione civile.</p>
+      <section>
+        <h2>Colora il disegno</h2>
+        <div class="alf-disegno">
+          <img src="/pittogrammi/arasaac-bn/alf-t-terremoto.png" alt="Persona che si ripara sotto un tavolo." width="500" height="500">
+        </div>
+        <p class="alf-dida">Se la terra trema, ti ripari sotto il tavolo, proteggi la testa e aspetti che la scossa finisca.</p>
+      </section>
+      <section>
+        <h2>Ricalca e continua: T t</h2>
+        <div class="alf-riga"><span class="alf-eti">Stampatello maiuscolo</span><span class="alf-modelli" aria-hidden="true">T T T</span></div>
+        <div class="alf-riga"><span class="alf-eti">Stampatello minuscolo</span><span class="alf-modelli" aria-hidden="true">t t t</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo maiuscolo — solo se lo sta già imparando</span><span class="alf-modelli" aria-hidden="true">T T T</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo minuscolo</span><span class="alf-modelli" aria-hidden="true">t t t</span></div>
+      </section>
+      <section>
+        <h2>Copia la parola: Terremoto</h2>
+        <div class="alf-riga alf-parola"><span class="alf-eti">Stampatello</span><span class="alf-modelli" aria-hidden="true">Terremoto</span></div>
+        <div class="alf-riga alf-corsivo alf-parola"><span class="alf-eti">Corsivo</span><span class="alf-modelli" aria-hidden="true">Terremoto</span></div>
+      </section>
+      <p class="nota-adulto">Per l’adulto: leggi la consegna ad alta voce e proponi un passaggio alla volta. Prima si colora, poi si ricalca sulle lettere grigie e si continua da soli sulla riga, infine si copia la parola. Le righe grigie sono il modello: la riga di base è continua, quella in alto tratteggiata. Il corsivo si propone solo a chi lo sta già imparando. Si può anche indicare o dettare. Non si valuta la calligrafia.</p>
+      <p class="alf-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d’Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>ALF-T · Foglio 20 di 26 · Rev. 3 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page" id="lettera-u">
+    <div class="alf">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">U come Uscita</h2>
+          <div class="scheda-sottotitolo">Alfabetiere della sicurezza · Infanzia 5–6 anni e classe prima · 20–30 minuti · matita e colori</div>
+        </div>
+        <div class="alf-badge" aria-hidden="true">U</div>
+      </header>
+      <p class="alf-obiettivo"><strong>Obiettivo:</strong> riconoscere la lettera U, scriverla nelle quattro forme e collegarla a una parola della protezione civile.</p>
+      <section>
+        <h2>Colora il disegno</h2>
+        <div class="alf-disegno">
+          <img src="/pittogrammi/arasaac-bn/alf-u-uscita.png" alt="Persona che esce da una porta aperta." width="500" height="500">
+        </div>
+        <p class="alf-dida">La porta con la scritta uscita porta fuori, al sicuro.</p>
+      </section>
+      <section>
+        <h2>Ricalca e continua: U u</h2>
+        <div class="alf-riga"><span class="alf-eti">Stampatello maiuscolo</span><span class="alf-modelli" aria-hidden="true">U U U</span></div>
+        <div class="alf-riga"><span class="alf-eti">Stampatello minuscolo</span><span class="alf-modelli" aria-hidden="true">u u u</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo maiuscolo — solo se lo sta già imparando</span><span class="alf-modelli" aria-hidden="true">U U U</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo minuscolo</span><span class="alf-modelli" aria-hidden="true">u u u</span></div>
+      </section>
+      <section>
+        <h2>Copia la parola: Uscita</h2>
+        <div class="alf-riga alf-parola"><span class="alf-eti">Stampatello</span><span class="alf-modelli" aria-hidden="true">Uscita</span></div>
+        <div class="alf-riga alf-corsivo alf-parola"><span class="alf-eti">Corsivo</span><span class="alf-modelli" aria-hidden="true">Uscita</span></div>
+      </section>
+      <p class="nota-adulto">Per l’adulto: leggi la consegna ad alta voce e proponi un passaggio alla volta. Prima si colora, poi si ricalca sulle lettere grigie e si continua da soli sulla riga, infine si copia la parola. Le righe grigie sono il modello: la riga di base è continua, quella in alto tratteggiata. Il corsivo si propone solo a chi lo sta già imparando. Si può anche indicare o dettare. Non si valuta la calligrafia.</p>
+      <p class="alf-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d’Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>ALF-U · Foglio 21 di 26 · Rev. 3 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page" id="lettera-v">
+    <div class="alf">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">V come Volontario</h2>
+          <div class="scheda-sottotitolo">Alfabetiere della sicurezza · Infanzia 5–6 anni e classe prima · 20–30 minuti · matita e colori</div>
+        </div>
+        <div class="alf-badge" aria-hidden="true">V</div>
+      </header>
+      <p class="alf-obiettivo"><strong>Obiettivo:</strong> riconoscere la lettera V, scriverla nelle quattro forme e collegarla a una parola della protezione civile.</p>
+      <section>
+        <h2>Colora il disegno</h2>
+        <div class="alf-disegno">
+          <img src="/pittogrammi/arasaac-bn/alf-v-volontari.png" alt="Tre volontari in divisa, uno accanto all&#x27;altro." width="500" height="500">
+        </div>
+        <p class="alf-dida">Il volontario aiuta gli altri senza essere pagato.</p>
+      </section>
+      <section>
+        <h2>Ricalca e continua: V v</h2>
+        <div class="alf-riga"><span class="alf-eti">Stampatello maiuscolo</span><span class="alf-modelli" aria-hidden="true">V V V</span></div>
+        <div class="alf-riga"><span class="alf-eti">Stampatello minuscolo</span><span class="alf-modelli" aria-hidden="true">v v v</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo maiuscolo — solo se lo sta già imparando</span><span class="alf-modelli" aria-hidden="true">V V V</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo minuscolo</span><span class="alf-modelli" aria-hidden="true">v v v</span></div>
+      </section>
+      <section>
+        <h2>Copia la parola: Volontario</h2>
+        <div class="alf-riga alf-parola"><span class="alf-eti">Stampatello</span><span class="alf-modelli" aria-hidden="true">Volontario</span></div>
+        <div class="alf-riga alf-corsivo alf-parola"><span class="alf-eti">Corsivo</span><span class="alf-modelli" aria-hidden="true">Volontario</span></div>
+      </section>
+      <p class="nota-adulto">Per l’adulto: leggi la consegna ad alta voce e proponi un passaggio alla volta. Prima si colora, poi si ricalca sulle lettere grigie e si continua da soli sulla riga, infine si copia la parola. Le righe grigie sono il modello: la riga di base è continua, quella in alto tratteggiata. Il corsivo si propone solo a chi lo sta già imparando. La parola è lunga: va bene copiarne solo la prima parte. Si può anche indicare o dettare. Non si valuta la calligrafia.</p>
+      <p class="alf-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d’Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>ALF-V · Foglio 22 di 26 · Rev. 3 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page" id="lettera-w">
+    <div class="alf">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">W come Warning</h2>
+          <div class="scheda-sottotitolo">Alfabetiere della sicurezza · Infanzia 5–6 anni e classe prima · 20–30 minuti · matita e colori</div>
+        </div>
+        <div class="alf-badge" aria-hidden="true">W</div>
+      </header>
+      <p class="alf-obiettivo"><strong>Obiettivo:</strong> riconoscere la lettera W, scriverla nelle quattro forme e collegarla a una parola della protezione civile.</p>
+      <section>
+        <h2>Colora il disegno</h2>
+        <div class="alf-disegno">
+          <img src="/pittogrammi/arasaac-bn/alf-w-warning.png" alt="Cartello triangolare di pericolo con due bambini che attraversano." width="500" height="500">
+        </div>
+        <p class="alf-dida">Warning e attenzione vogliono dire la stessa cosa.</p>
+        <p class="alf-spiega"><strong>Che cosa vuol dire.</strong> Warning è una parola inglese. Vuol dire attenzione: la trovi sui cartelli di pericolo di tutto il mondo.</p>
+      </section>
+      <section>
+        <h2>Ricalca e continua: W w</h2>
+        <div class="alf-riga"><span class="alf-eti">Stampatello maiuscolo</span><span class="alf-modelli" aria-hidden="true">W W W</span></div>
+        <div class="alf-riga"><span class="alf-eti">Stampatello minuscolo</span><span class="alf-modelli" aria-hidden="true">w w w</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo maiuscolo — solo se lo sta già imparando</span><span class="alf-modelli" aria-hidden="true">W W W</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo minuscolo</span><span class="alf-modelli" aria-hidden="true">w w w</span></div>
+      </section>
+      <section>
+        <h2>Copia la parola: Warning</h2>
+        <div class="alf-riga alf-parola"><span class="alf-eti">Stampatello</span><span class="alf-modelli" aria-hidden="true">Warning</span></div>
+        <div class="alf-riga alf-corsivo alf-parola"><span class="alf-eti">Corsivo</span><span class="alf-modelli" aria-hidden="true">Warning</span></div>
+      </section>
+      <p class="nota-adulto">Per l’adulto: leggi la consegna ad alta voce e proponi un passaggio alla volta. Prima si colora, poi si ricalca sulle lettere grigie e si continua da soli sulla riga, infine si copia la parola. Le righe grigie sono il modello: la riga di base è continua, quella in alto tratteggiata. Il corsivo si propone solo a chi lo sta già imparando. Questa lettera non fa parte dell’alfabeto italiano di 21 lettere. Spiega la parola straniera prima di farla scrivere. Si può anche indicare o dettare. Non si valuta la calligrafia.</p>
+      <p class="alf-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d’Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>ALF-W · Foglio 23 di 26 · Rev. 3 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page" id="lettera-x">
+    <div class="alf">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">X come Exit</h2>
+          <div class="scheda-sottotitolo">Alfabetiere della sicurezza · Infanzia 5–6 anni e classe prima · 20–30 minuti · matita e colori</div>
+        </div>
+        <div class="alf-badge" aria-hidden="true">X</div>
+      </header>
+      <p class="alf-obiettivo"><strong>Obiettivo:</strong> riconoscere la lettera X, scriverla nelle quattro forme e collegarla a una parola della protezione civile.</p>
+      <section>
+        <h2>Colora il disegno</h2>
+        <div class="alf-disegno">
+          <img src="/pittogrammi/arasaac-bn/alf-x-exit.png" alt="Persona che accompagna una carrozzina verso l&#x27;uscita di emergenza." width="500" height="500">
+        </div>
+        <p class="alf-dida">Exit e uscita vogliono dire la stessa cosa.</p>
+        <p class="alf-spiega"><strong>Che cosa vuol dire.</strong> Exit è una parola inglese. Vuol dire uscita: si legge sui cartelli verdi negli aeroporti e nei musei.</p>
+      </section>
+      <section>
+        <h2>Ricalca e continua: X x</h2>
+        <div class="alf-riga"><span class="alf-eti">Stampatello maiuscolo</span><span class="alf-modelli" aria-hidden="true">X X X</span></div>
+        <div class="alf-riga"><span class="alf-eti">Stampatello minuscolo</span><span class="alf-modelli" aria-hidden="true">x x x</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo maiuscolo — solo se lo sta già imparando</span><span class="alf-modelli" aria-hidden="true">X X X</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo minuscolo</span><span class="alf-modelli" aria-hidden="true">x x x</span></div>
+      </section>
+      <section>
+        <h2>Copia la parola: Exit</h2>
+        <div class="alf-riga alf-parola"><span class="alf-eti">Stampatello</span><span class="alf-modelli" aria-hidden="true">Exit</span></div>
+        <div class="alf-riga alf-corsivo alf-parola"><span class="alf-eti">Corsivo</span><span class="alf-modelli" aria-hidden="true">Exit</span></div>
+      </section>
+      <p class="nota-adulto">Per l’adulto: leggi la consegna ad alta voce e proponi un passaggio alla volta. Prima si colora, poi si ricalca sulle lettere grigie e si continua da soli sulla riga, infine si copia la parola. Le righe grigie sono il modello: la riga di base è continua, quella in alto tratteggiata. Il corsivo si propone solo a chi lo sta già imparando. Questa lettera non fa parte dell’alfabeto italiano di 21 lettere. Spiega la parola straniera prima di farla scrivere. Si può anche indicare o dettare. Non si valuta la calligrafia.</p>
+      <p class="alf-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d’Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>ALF-X · Foglio 24 di 26 · Rev. 3 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page" id="lettera-y">
+    <div class="alf">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">Y come Yellow</h2>
+          <div class="scheda-sottotitolo">Alfabetiere della sicurezza · Infanzia 5–6 anni e classe prima · 20–30 minuti · matita e colori</div>
+        </div>
+        <div class="alf-badge" aria-hidden="true">Y</div>
+      </header>
+      <p class="alf-obiettivo"><strong>Obiettivo:</strong> riconoscere la lettera Y, scriverla nelle quattro forme e collegarla a una parola della protezione civile.</p>
+      <section>
+        <h2>Colora il disegno</h2>
+        <div class="alf-disegno">
+          <img src="/pittogrammi/arasaac-bn/alf-y-semaforo.png" alt="Semaforo con le tre luci." width="500" height="500">
+        </div>
+        <p class="alf-dida">Colora di giallo: è il colore dell’allerta gialla.</p>
+        <p class="alf-spiega"><strong>Che cosa vuol dire.</strong> Yellow è una parola inglese. Vuol dire giallo: è il colore dell’allerta gialla, quella che invita a stare attenti.</p>
+      </section>
+      <section>
+        <h2>Ricalca e continua: Y y</h2>
+        <div class="alf-riga"><span class="alf-eti">Stampatello maiuscolo</span><span class="alf-modelli" aria-hidden="true">Y Y Y</span></div>
+        <div class="alf-riga"><span class="alf-eti">Stampatello minuscolo</span><span class="alf-modelli" aria-hidden="true">y y y</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo maiuscolo — solo se lo sta già imparando</span><span class="alf-modelli" aria-hidden="true">Y Y Y</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo minuscolo</span><span class="alf-modelli" aria-hidden="true">y y y</span></div>
+      </section>
+      <section>
+        <h2>Copia la parola: Yellow</h2>
+        <div class="alf-riga alf-parola"><span class="alf-eti">Stampatello</span><span class="alf-modelli" aria-hidden="true">Yellow</span></div>
+        <div class="alf-riga alf-corsivo alf-parola"><span class="alf-eti">Corsivo</span><span class="alf-modelli" aria-hidden="true">Yellow</span></div>
+      </section>
+      <p class="nota-adulto">Per l’adulto: leggi la consegna ad alta voce e proponi un passaggio alla volta. Prima si colora, poi si ricalca sulle lettere grigie e si continua da soli sulla riga, infine si copia la parola. Le righe grigie sono il modello: la riga di base è continua, quella in alto tratteggiata. Il corsivo si propone solo a chi lo sta già imparando. Questa lettera non fa parte dell’alfabeto italiano di 21 lettere. Spiega la parola straniera prima di farla scrivere. Si può anche indicare o dettare. Non si valuta la calligrafia.</p>
+      <p class="alf-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d’Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>ALF-Y · Foglio 25 di 26 · Rev. 3 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page" id="lettera-z">
+    <div class="alf">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">Z come Zaino</h2>
+          <div class="scheda-sottotitolo">Alfabetiere della sicurezza · Infanzia 5–6 anni e classe prima · 20–30 minuti · matita e colori</div>
+        </div>
+        <div class="alf-badge" aria-hidden="true">Z</div>
+      </header>
+      <p class="alf-obiettivo"><strong>Obiettivo:</strong> riconoscere la lettera Z, scriverla nelle quattro forme e collegarla a una parola della protezione civile.</p>
+      <section>
+        <h2>Colora il disegno</h2>
+        <div class="alf-disegno">
+          <img src="/pittogrammi/arasaac-bn/alf-z-zaino.png" alt="Zaino con le bretelle e la tasca davanti." width="500" height="500">
+        </div>
+        <p class="alf-dida">Nello zaino metti acqua, torcia e una coperta.</p>
+      </section>
+      <section>
+        <h2>Ricalca e continua: Z z</h2>
+        <div class="alf-riga"><span class="alf-eti">Stampatello maiuscolo</span><span class="alf-modelli" aria-hidden="true">Z Z Z</span></div>
+        <div class="alf-riga"><span class="alf-eti">Stampatello minuscolo</span><span class="alf-modelli" aria-hidden="true">z z z</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo maiuscolo — solo se lo sta già imparando</span><span class="alf-modelli" aria-hidden="true">Z Z Z</span></div>
+        <div class="alf-riga alf-corsivo"><span class="alf-eti">Corsivo minuscolo</span><span class="alf-modelli" aria-hidden="true">z z z</span></div>
+      </section>
+      <section>
+        <h2>Copia la parola: Zaino</h2>
+        <div class="alf-riga alf-parola"><span class="alf-eti">Stampatello</span><span class="alf-modelli" aria-hidden="true">Zaino</span></div>
+        <div class="alf-riga alf-corsivo alf-parola"><span class="alf-eti">Corsivo</span><span class="alf-modelli" aria-hidden="true">Zaino</span></div>
+      </section>
+      <p class="nota-adulto">Per l’adulto: leggi la consegna ad alta voce e proponi un passaggio alla volta. Prima si colora, poi si ricalca sulle lettere grigie e si continua da soli sulla riga, infine si copia la parola. Le righe grigie sono il modello: la riga di base è continua, quella in alto tratteggiata. Il corsivo si propone solo a chi lo sta già imparando. Si può anche indicare o dettare. Non si valuta la calligrafia.</p>
+      <p class="alf-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d’Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
+        <span>ALF-Z · Foglio 26 di 26 · Rev. 3 · 13/09/2026</span></footer>
+    </div>
+  </article>
+  <script>
+    // Auto-stampa se chiamato con ?autoprint=1
+    (function () {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        if (params.get('autoprint') === '1') { window.addEventListener('load', function () { setTimeout(function () { window.print(); }, 400); }); }
+      } catch (e) {}
+    })();
+  </script>
+</body>
+</html>
