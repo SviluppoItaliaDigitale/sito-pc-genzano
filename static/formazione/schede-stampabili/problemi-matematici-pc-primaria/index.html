@@ -60,6 +60,10 @@
       background: #fff8e6; border-left: 4px solid var(--scheda-oro);
       border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
     }
+  /* In stampa il contenuto finiva a pochi millimetri dal fondo del foglio e la
+     sola banda affiliazioni andava su una pagina in più: un 6% in meno
+     su tutto tiene il foglio intero. Solo in stampa. */
+  @media print { html { font-size: 94%; } }
   </style>
 </head>
 <body>

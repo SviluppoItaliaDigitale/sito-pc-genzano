@@ -33,6 +33,16 @@
       margin-top: 0.2rem;
     }
     .di-iniziale b { color: var(--scheda-blu); font-size: 0.95rem; }
+    /* In stampa il contenuto finiva a pochi millimetri dal fondo del foglio e la
+       sola banda affiliazioni andava su una pagina in più: griglia un po' più
+       serrata e un 5% in meno su tutto tengono il foglio intero. Solo in stampa. */
+    @media print {
+      html { font-size: 95%; }
+      .di-griglia { gap: 0.5rem; }
+      .di-cella { padding: 0.45rem 0.5rem 0.5rem; }
+      .di-riga { margin-top: 0.45rem; }
+      .di-emo { font-size: 2.3rem; }
+    }
   </style>
 </head>
 <body>

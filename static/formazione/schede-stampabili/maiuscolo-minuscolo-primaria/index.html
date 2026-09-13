@@ -38,6 +38,10 @@
     }
     .mm-cella .sep { color: var(--scheda-grigio); }
     .mm-cella .vuoto { display: inline-block; min-width: 1.6rem; border-bottom: 2px solid var(--scheda-bordo); height: 1.6rem; }
+    /* Su telefono la pagina scorreva di lato: sotto i 580 px le colonne si riducono. Solo a schermo, la stampa A4 resta uguale. */
+    @media screen and (max-width: 580px) {
+      .mm-griglia { grid-template-columns: repeat(3, 1fr); gap: 0.35rem; }
+    }
   </style>
 </head>
 <body>

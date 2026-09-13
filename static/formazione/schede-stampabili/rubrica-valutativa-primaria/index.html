@@ -48,6 +48,10 @@
       background: #fff8e6; border-left: 4px solid var(--scheda-oro);
       border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
     }
+    /* Su telefono la legenda a più colonne faceva scorrere la pagina di lato. Solo a schermo. */
+    @media screen and (max-width: 580px) {
+      .legenda-livelli { grid-template-columns: 1fr 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -92,7 +96,7 @@
 
     <h2 class="scheda-h2">📊 Rubrica per indicatore</h2>
 
-    <table class="rubrica-tab">
+    <div class="scheda-tabella-scorrevole"><table class="rubrica-tab">
       <thead>
         <tr>
           <th>Indicatore</th>
@@ -146,7 +150,7 @@
           <td class="liv-avanzato">Si offre attivamente per piccole azioni di cittadinanza (aiutare un compagno, segnalare un problema, partecipare a giornate di sensibilizzazione).</td>
         </tr>
       </tbody>
-    </table>
+    </table></div>
 
     <h2 class="scheda-h2">📝 Esempio di sintesi descrittiva</h2>
 
