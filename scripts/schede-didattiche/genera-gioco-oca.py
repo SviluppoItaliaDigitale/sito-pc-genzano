@@ -279,8 +279,7 @@ doc = f"""<!DOCTYPE html>
       <p class="oca-consegna"><strong>Foglio 3 — le emergenze.</strong> Ritaglia le carte e fanne un secondo mazzo. Sopra c'è la domanda, sotto la risposta scritta al contrario: si legge solo dopo aver risposto, girando la carta.</p>
       <div class="oca-mazzo">
 {carte_eme}      </div>
-      <p class="nota-adulto">Per l'adulto: le risposte seguono le indicazioni del Dipartimento della Protezione Civile e le pagine di autoprotezione del sito, elencate nelle regole. Chi non sa rispondere non viene mandato indietro: si legge insieme la risposta e si prosegue. Sbagliare qui serve a imparare, non a perdere.</p>
-      <p class="oca-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
+      <p class="nota-adulto">Per l'adulto: Il ritaglio è a carico tuo con i più piccoli; dalla terza primaria i bambini possono ritagliare da seduti, sorvegliati, con forbici a punta arrotondata. Le risposte seguono le indicazioni del Dipartimento della Protezione Civile e le pagine di autoprotezione del sito, elencate nelle regole. Chi non sa rispondere non viene mandato indietro: si legge insieme la risposta e si prosegue. Sbagliare qui serve a imparare, non a perdere.</p>
       <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
         <span>OCA-PC · Foglio 3 di 4 · Rev. 1 · {REV}</span></footer>
     </div>
@@ -314,7 +313,8 @@ doc = f"""<!DOCTYPE html>
         <ul class="oca-fonti">
 {fonti_uniche}        </ul>
       </div>
-      <p class="nota-adulto">Per l'adulto: una partita dura 30–40 minuti, ma si può fermare prima e riprendere. Con i più piccoli gioca insieme a loro e leggi tu le carte. Il gioco serve a far dire ad alta voce i comportamenti giusti: quando qualcuno risponde bene, chiedi anche <em>perché</em>. Le risposte complete, con il prima, il durante e il dopo, sono nelle pagine elencate qui sopra: il gioco le richiama, non le sostituisce.</p>
+      <p class="nota-adulto">Per l'adulto: Il ritaglio è a carico tuo con i più piccoli; dalla terza primaria i bambini possono ritagliare da seduti, sorvegliati, con forbici a punta arrotondata. Una partita dura 30–40 minuti, ma si può fermare prima e riprendere. Con i più piccoli gioca insieme a loro e leggi tu le carte. Il gioco serve a far dire ad alta voce i comportamenti giusti: quando qualcuno risponde bene, chiedi anche <em>perché</em>. Le risposte complete, con il prima, il durante e il dopo, sono nelle pagine elencate qui sopra: il gioco le richiama, non le sostituisce.</p>
+      <p class="oca-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
       <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
         <span>OCA-PC · Foglio 4 di 4 · Rev. 1 · {REV}</span></footer>
     </div>
