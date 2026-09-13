@@ -1011,6 +1011,8 @@
         <a href="#inf-soccorso">⛑️ Soccorso ed emergenze</a>
         <a href="#inf-scuola">🏫 Sicurezza scolastica</a>
         <a href="#inf-chi-aiuta">🤝 Chi aiuta</a>
+        <a href="#inf-album">🎨 Album da colorare</a>
+        <a href="#inf-giochi-tavolo">🎲 Giochi da ritagliare</a>
         <a href="#inf-valori">❤️ Valori e abilità</a>
         <a href="#inf-leggere-scrivere">✏️ Leggere e scrivere</a>
         <a href="#inf-numeri-forme">🔢 Numeri e forme</a>
@@ -1305,6 +1307,10 @@
                     <a href="colorare-pompiere-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
                   </div>
                 </div>
+      </div>
+
+      <h3 class="h6 mt-4 mb-2 text-muted" data-fascia="infanzia" id="inf-album" style="font-weight:600; letter-spacing:0.02em; border-left:3px solid #c026d3; padding-left:0.5rem;">🎨 Album da colorare, un disegno per foglio</h3>
+      <div class="row g-3 mb-2" data-fascia="infanzia">
         <div class="col-md-6 col-lg-4">
                   <div class="scheda-card">
                     <div class="scheda-card-icon infanzia">🚑</div>
@@ -1335,7 +1341,12 @@
                     <a href="disegni-momenti-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
                   </div>
                 </div>
-        <div class="col-md-6 col-lg-4">
+      </div>
+
+      <h3 class="h6 mt-4 mb-2 text-muted" data-fascia="infanzia" data-fascia-extra="primaria secondaria1" id="inf-giochi-tavolo" style="font-weight:600; letter-spacing:0.02em; border-left:3px solid #c026d3; padding-left:0.5rem;">🎲 Giochi da ritagliare e da tavolo</h3>
+      <p class="text-muted mb-3" style="font-size: 0.92rem;">Si stampano, si colorano e si ritagliano: poi restano in classe o in casa e si rigiocano. Le fasce indicate su ogni scheda valgono più della sezione in cui si trovano.</p>
+      <div class="row g-3 mb-2" data-fascia="infanzia" data-fascia-extra="primaria secondaria1">
+        <div class="col-md-6 col-lg-4" data-fascia-card="infanzia primaria">
                   <div class="scheda-card">
                     <div class="scheda-card-icon infanzia">🃏</div>
                     <span class="scheda-fascia">Infanzia e primaria · da ritagliare</span>
@@ -1345,7 +1356,7 @@
                     <a href="memory-protezione-civile-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
                   </div>
                 </div>
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-6 col-lg-4" data-fascia-card="primaria secondaria1">
                   <div class="scheda-card">
                     <div class="scheda-card-icon primaria">🎲</div>
                     <span class="scheda-fascia">Primaria e secondaria I · gioco da tavolo</span>
@@ -1395,7 +1406,7 @@
         <span class="fascia-icona inf"><i class="bi bi-stars" aria-hidden="true"></i></span>
         Scuola dell'Infanzia (3-6 anni) — Leggere, scrivere, contare e giocare (21 schede)
       </h2>
-            <h3 class="h6 mt-4 mb-2 text-muted" data-fascia="infanzia" id="inf-leggere-scrivere" style="font-weight:600; letter-spacing:0.02em; border-left:3px solid #c026d3; padding-left:0.5rem;">✏️ Imparare a leggere e scrivere (5)</h3>
+            <h3 class="h6 mt-4 mb-2 text-muted" data-fascia="infanzia" id="inf-leggere-scrivere" style="font-weight:600; letter-spacing:0.02em; border-left:3px solid #c026d3; padding-left:0.5rem;">✏️ Imparare a leggere e scrivere</h3>
       <div class="row g-3 mb-2" data-fascia="infanzia">
 <div class="col-md-6 col-lg-4">
           <div class="scheda-card">
@@ -1433,7 +1444,7 @@
             <span class="scheda-fascia">Infanzia 5-6 / 1ª · letto-scrittura</span>
             <h3>A come Allerta, Z come Zaino</h3>
             <div class="scheda-meta"><span><i class="bi bi-pencil me-1" aria-hidden="true"></i>matita, colori</span><span><i class="bi bi-clock me-1" aria-hidden="true"></i>20-30 min a lettera</span></div>
-            <p class="scheda-desc">Il quaderno delle lettere: una lettera per foglio. Disegno da colorare, lettera da ricalcare in stampatello maiuscolo e minuscolo e in corsivo maiuscolo e minuscolo, parola da copiare. Dalla finestra di stampa si scelgono solo le pagine che servono.</p>
+            <p class="scheda-desc">L'alfabetiere in forma di quaderno: una lettera per foglio. Disegno da colorare, lettera da ricalcare in stampatello maiuscolo e minuscolo e in corsivo maiuscolo e minuscolo, parola da copiare. Dalla finestra di stampa si scelgono solo le pagine che servono.</p>
             <a href="alfabetiere-az-infanzia/" class="btn btn-primary"><i class="bi bi-printer me-1" aria-hidden="true"></i>Apri e stampa</a>
           </div>
         </div>
@@ -2879,6 +2890,12 @@
 
     var stato = { fascia: '', cerca: '' };
 
+    // Confronta un elenco di fasce separate da spazio con la fascia selezionata.
+    function appartiene(elenco, fascia) {
+      if (!fascia) return true;
+      return (' ' + (elenco || '').trim() + ' ').indexOf(' ' + fascia + ' ') !== -1;
+    }
+
     function filtra() {
       var q = stato.cerca.trim().toLowerCase();
       var fasciaSel = stato.fascia;
@@ -2888,9 +2905,13 @@
       cards.forEach(function (card) {
         var col = card.parentElement; // .col-md-6 col-lg-4
         var sezione = col.closest('[data-fascia]'); // il row.row.g-3.mb-2 con data-fascia
-        var fasciaCard = sezione ? sezione.getAttribute('data-fascia') : '';
+        // Una scheda può valere per più fasce (il memory per infanzia e primaria,
+        // il gioco dell'oca per primaria e secondaria I): in quel caso lo dichiara
+        // su di sé con data-fascia-card e vince sulla sezione che la ospita.
+        var fasciaCard = col.getAttribute('data-fascia-card')
+          || (sezione ? sezione.getAttribute('data-fascia') : '');
 
-        var okFascia = !fasciaSel || fasciaCard === fasciaSel;
+        var okFascia = !fasciaSel || appartiene(fasciaCard, fasciaSel);
         var okCerca = !q || card.textContent.toLowerCase().indexOf(q) !== -1;
         var visibile = okFascia && okCerca;
 
@@ -2900,7 +2921,8 @@
 
       // Nascondi gli h2/h3 di sezione che non hanno card visibili
       document.querySelectorAll('h2[data-fascia], h3[data-fascia]').forEach(function (h) {
-        var fasciaH = h.getAttribute('data-fascia');
+        var fasciaH = (h.getAttribute('data-fascia') || '')
+          + ' ' + (h.getAttribute('data-fascia-extra') || '');
         // Trova il primo row.row data-fascia successivo
         var prossimoRow = h.nextElementSibling;
         while (prossimoRow && !(prossimoRow.classList && prossimoRow.classList.contains('row'))) {
@@ -2910,7 +2932,7 @@
           prossimoRow.querySelectorAll('.col-md-6, .col-md-12, [class*="col-"]'),
           function (col) { return !col.classList.contains('schede-hidden'); }
         );
-        var nascondi = (fasciaSel && fasciaH !== fasciaSel) || !rowVisibile;
+        var nascondi = (fasciaSel && !appartiene(fasciaH, fasciaSel)) || !rowVisibile;
         h.classList.toggle('schede-hidden', nascondi);
         if (prossimoRow) prossimoRow.classList.toggle('schede-hidden', !rowVisibile);
       });
