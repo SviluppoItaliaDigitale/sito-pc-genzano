@@ -646,6 +646,18 @@ Attività stampabili con spazi per le risposte e guida per il docente nella pagi
 - [La tartaruga chiede aiuto](/formazione/schede-stampabili/la-tartaruga-chiede-aiuto-infanzia/) — 3–6 anni. Chiedere aiuto e collaborare con un adulto.
 - [Intrecci di carta, insieme](/formazione/schede-stampabili/intrecci-di-carta-insieme-infanzia/) — 4–6 anni. Chiedere aiuto e collaborare con un adulto.
 
+## Oggetti sconosciuti e confezioni alterate
+
+Percorso di educazione alla sicurezza su una sola regola, ripetuta in forme adatte all'età: **non tocco, mi allontano, avviso un adulto**. Le attività si svolgono soltanto su carta e con dialoghi: nessuna ricerca o manipolazione di oggetti reali, nessuna chiamata di prova al 112. Ogni scheda ha la nota per l'adulto e la soluzione capovolta. Leggete prima la guida per gli adulti. Le schede sono incluse nei pacchetti da stampare e da scaricare.
+
+- [Tre azioni che mi proteggono](/formazione/schede-stampabili/oggetti-tre-azioni-che-mi-proteggono-infanzia/) — 3–6 anni. Ripetere la sequenza con parole, gesti o immagini.
+- [La storia di Leo al parco](/formazione/schede-stampabili/oggetti-la-storia-di-leo-al-parco-infanzia/) — 3–6 anni. Raccontare una scelta prudente senza avvicinarsi all’oggetto.
+- [Le persone che mi aiutano](/formazione/schede-stampabili/oggetti-le-persone-che-mi-aiutano-infanzia/) — 3–6 anni. Individuare gli adulti di riferimento e chiedere aiuto dopo un errore.
+- [Se non so che cosa è](/formazione/schede-stampabili/oggetti-se-non-so-che-cosa-e-facilitata/) — versione facilitata, età diverse. Chiedere aiuto attraverso il proprio modo di comunicare.
+- [Una bevanda trovata](/formazione/schede-stampabili/oggetti-una-bevanda-trovata-facilitata/) — versione facilitata, età diverse. Lasciare una bevanda sconosciuta e chiedere aiuto.
+- [Il patto con gli adulti](/formazione/schede-stampabili/oggetti-il-patto-con-gli-adulti-famiglia/) — per famiglie, scuola e accompagnatori. Concordare un aiuto concreto e accogliere le segnalazioni.
+- [Guida per gli adulti](/formazione/schede-stampabili/oggetti-sconosciuti-guida-adulti/) — come proporre il percorso, adattamenti, cosa fare se il ritrovamento è reale, risposte e fonti.
+
 ## Materiale consigliato
 
 Per approfondire e avere materiale aggiuntivo:

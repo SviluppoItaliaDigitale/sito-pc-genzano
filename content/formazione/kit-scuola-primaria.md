@@ -10,7 +10,7 @@ Questo kit è pensato per gli insegnanti della **scuola primaria** che desideran
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e sono adatti a bambini dai 6 agli 11 anni, con attività differenziate per le classi iniziali (I-II) e per le classi finali (III-IV-V).
 
-> 📦 **Scarica il pacchetto offline** — [`kit-scuola-primaria.zip`](/formazione/pacchetti/kit-scuola-primaria.zip) (~468 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-primaria.zip`](/formazione/pacchetti/kit-scuola-primaria.zip) (~493 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
 > ⚠️ **Avvertenza pedagogica — proporzionare l'argomento all'età.** Le attività di questo kit affrontano rischi reali (terremoto, alluvione, incendio, blackout, eventi storici) ma **non devono generare paura o ansia**. Il docente è chiamato a presentare i fenomeni in modo **concreto, rassicurante, agentivo**: l'attenzione è sui *comportamenti corretti che il bambino può fare* (preparare lo zaino, conoscere il punto di raccolta, chiamare il 112), non sull'enfasi del danno. I casi studio delle maxi-emergenze italiane sono adattati per la fascia 9-11 anni con focus su lieto fine, ricostruzione, solidarietà — **mai con immagini di vittime o cronaca cruda**. Se nella classe ci sono bambini reduci da eventi traumatici familiari (lutti, evacuazioni, terremoti recenti), valutare con cautela e raccordarsi con il dirigente scolastico, lo psicologo scolastico e con la pagina [Psicologia dell'emergenza](/formazione/psicologia-emergenza/).
 
@@ -917,6 +917,19 @@ Attività stampabili con spazi per le risposte e guida per il docente nella pagi
 - [L’avviso che tutti capiscono](/formazione/schede-stampabili/lavviso-che-tutti-capiscono-primaria/) — 8–11 anni. Scrivere un avviso comprensibile.
 - [Il registro delle torce](/formazione/schede-stampabili/il-registro-delle-torce-primaria/) — 8–11 anni. Distinguere osservazione e ipotesi.
 - [Una mappa deve farsi capire](/formazione/schede-stampabili/una-mappa-deve-farsi-capire-primaria/) — 9–11 anni. Costruire una legenda e verificarne la comprensione.
+
+## Oggetti sconosciuti e confezioni alterate
+
+Percorso di educazione alla sicurezza su una sola regola, ripetuta in forme adatte all'età: **non tocco, mi allontano, avviso un adulto**. Le attività si svolgono soltanto su carta e con dialoghi: nessuna ricerca o manipolazione di oggetti reali, nessuna chiamata di prova al 112. Ogni scheda ha la nota per l'adulto e la soluzione capovolta. Leggete prima la guida per gli adulti. Le schede sono incluse nei pacchetti da stampare e da scaricare.
+
+- [Prima di raccogliere](/formazione/schede-stampabili/oggetti-prima-di-raccogliere-primaria/) — 6–8 anni. Distinguere un’attività guidata da un ritrovamento sconosciuto.
+- [Non tutto si può assaggiare](/formazione/schede-stampabili/oggetti-non-tutto-si-puo-assaggiare-primaria/) — 6–8 anni. Lasciare stare cibo, bevande e piccoli oggetti trovati.
+- [Una bottiglia con un forellino](/formazione/schede-stampabili/oggetti-una-bottiglia-con-un-forellino-primaria/) — 8–11 anni. Segnalare una confezione danneggiata senza fare prove sul contenuto.
+- [Una segnalazione chiara](/formazione/schede-stampabili/oggetti-una-segnalazione-chiara-primaria/) — 8–11 anni. Riferire luogo e fatti senza avvicinarsi per raccogliere dettagli.
+- [Se non so che cosa è](/formazione/schede-stampabili/oggetti-se-non-so-che-cosa-e-facilitata/) — versione facilitata, età diverse. Chiedere aiuto attraverso il proprio modo di comunicare.
+- [Una bevanda trovata](/formazione/schede-stampabili/oggetti-una-bevanda-trovata-facilitata/) — versione facilitata, età diverse. Lasciare una bevanda sconosciuta e chiedere aiuto.
+- [Il patto con gli adulti](/formazione/schede-stampabili/oggetti-il-patto-con-gli-adulti-famiglia/) — per famiglie, scuola e accompagnatori. Concordare un aiuto concreto e accogliere le segnalazioni.
+- [Guida per gli adulti](/formazione/schede-stampabili/oggetti-sconosciuti-guida-adulti/) — come proporre il percorso, adattamenti, cosa fare se il ritrovamento è reale, risposte e fonti.
 
 ## Materiale consigliato
 

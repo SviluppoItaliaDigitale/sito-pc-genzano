@@ -10,7 +10,7 @@ Questo kit è rivolto ai docenti della **scuola secondaria di secondo grado** ch
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e si prestano all'uso nelle ore di scienze della Terra, geografia, educazione civica, diritto e nelle attività PCTO.
 
-> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-secondo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-secondo-grado.zip) (~251 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-secondo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-secondo-grado.zip) (~273 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
 ---
 
@@ -1122,6 +1122,18 @@ Attività stampabili con spazi per le risposte e guida per il docente nella pagi
 - [Il sensore non dice tutta la verità](/formazione/schede-stampabili/il-sensore-non-dice-tutta-la-verita-secondaria2/) — 15–19 anni. Quantificare falsi allarmi e mancate rilevazioni.
 - [Una catena di dipendenze](/formazione/schede-stampabili/una-catena-di-dipendenze-secondaria2/) — 14–19 anni. Individuare punti comuni di guasto.
 - [Dal test alla correzione](/formazione/schede-stampabili/dal-test-alla-correzione-secondaria2/) — 15–19 anni. Valutare un materiale tramite prove osservabili.
+
+## Oggetti sconosciuti e confezioni alterate
+
+Percorso di educazione alla sicurezza su una sola regola, ripetuta in forme adatte all'età: **non tocco, mi allontano, avviso un adulto**. Le attività si svolgono soltanto su carta e con dialoghi: nessuna ricerca o manipolazione di oggetti reali, nessuna chiamata di prova al 112. Ogni scheda ha la nota per l'adulto e la soluzione capovolta. Leggete prima la guida per gli adulti. Le schede sono incluse nei pacchetti da stampare e da scaricare.
+
+- [A chi chiedere aiuto](/formazione/schede-stampabili/oggetti-a-chi-chiedere-aiuto-secondaria2/) — 14–19 anni. Distinguere una segnalazione ordinaria da una richiesta urgente di soccorso.
+- [Una notizia che fa paura](/formazione/schede-stampabili/oggetti-una-notizia-che-fa-paura-secondaria2/) — 14–19 anni. Verificare un messaggio allarmistico senza amplificarlo.
+- [Pulire il parco in sicurezza](/formazione/schede-stampabili/oggetti-pulire-il-parco-in-sicurezza-secondaria2/) — 14–19 anni. Riconoscere i limiti di una raccolta rifiuti organizzata.
+- [Se non so che cosa è](/formazione/schede-stampabili/oggetti-se-non-so-che-cosa-e-facilitata/) — versione facilitata, età diverse. Chiedere aiuto attraverso il proprio modo di comunicare.
+- [Una bevanda trovata](/formazione/schede-stampabili/oggetti-una-bevanda-trovata-facilitata/) — versione facilitata, età diverse. Lasciare una bevanda sconosciuta e chiedere aiuto.
+- [Il patto con gli adulti](/formazione/schede-stampabili/oggetti-il-patto-con-gli-adulti-famiglia/) — per famiglie, scuola e accompagnatori. Concordare un aiuto concreto e accogliere le segnalazioni.
+- [Guida per gli adulti](/formazione/schede-stampabili/oggetti-sconosciuti-guida-adulti/) — come proporre il percorso, adattamenti, cosa fare se il ritrovamento è reale, risposte e fonti.
 
 ## Materiale di approfondimento
 
