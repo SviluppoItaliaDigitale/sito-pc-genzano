@@ -23,6 +23,10 @@
       border-bottom: 2px solid #2f6fd0;
       border-radius: 2px;
     }
+  /* In stampa il contenuto finiva a pochi millimetri dal fondo del foglio e la
+     sola banda affiliazioni andava su una pagina in più: un 2% in meno
+     su tutto tiene il foglio intero. Solo in stampa. */
+  @media print { html { font-size: 98%; } }
   </style>
 </head>
 <body>

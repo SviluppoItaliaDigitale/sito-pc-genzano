@@ -4,7 +4,10 @@ Documento di lavoro interno (cartella non deployata). Serve a chi rifà i disegn
 oppure un'AI generativa di immagini. Le due schede sono state **ritirate dal sito l'11 agosto 2026** perché insegnano a bambini di 3-6
 anni comportamenti che a quell'età non devono compiere. Le due pagine ora **reindirizzano
 silenziosamente all'indice delle schede**: nessun avviso pubblico, nessuna ammissione di errore
-sul sito. Il disegno vecchio resta nel repository come riferimento per chi rifà il lavoro.
+sul sito. Il disegno vecchio resta nel repository come riferimento per chi rifà il lavoro, in
+`riferimenti-interni/audit-esterno-didattica/disegni-ritirati/` (cartella non deployata): fino al
+13/09/2026 stava ancora in `static/`, quindi restava scaricabile online al suo vecchio indirizzo pur
+non essendo più linkato — proprio i disegni giudicati sbagliati per questa età.
 Rientrano in catalogo quando i disegni sono rifatti.
 
 ## Il principio che governa tutto il rifacimento
@@ -96,8 +99,10 @@ non farle scrivere all'AI dentro l'immagine (esce quasi sempre sbagliata in ital
 
 ## Quando i disegni sono pronti
 
-1. Sostituire `scheda-completa.png` nelle due cartelle
-   (`static/formazione/schede-stampabili/pronto-soccorso-infanzia/` e `…/sicurezza-in-casa-infanzia/`).
+1. Rimettere il nuovo `scheda-completa.png` nelle due cartelle
+   (`static/formazione/schede-stampabili/pronto-soccorso-infanzia/` e `…/sicurezza-in-casa-infanzia/`),
+   che oggi contengono solo l'`index.html` di reindirizzamento. I vecchi disegni sono in
+   `disegni-ritirati/` accanto a questo brief.
 2. Ripristinare l'`index.html` della scheda: oggi contiene un **redirect** all'indice. Le versioni
    originali sono recuperabili dalla storia di git (commit precedenti all'11/08/2026). Va poi
    riscritto l'attributo `alt` descrivendo **fedelmente** le nuove vignette — quello vecchio

@@ -488,6 +488,14 @@
 
 /* === stili scheda 7 === */
 
+    /* In stampa il contenuto finiva a pochi millimetri dal fondo del foglio e la
+       sola banda affiliazioni andava su una pagina in più: un 4% in meno
+       su tutto tiene il foglio intero. Solo in stampa. */
+    @media print { html { font-size: 96%; } }
+  
+
+/* === stili scheda 8 === */
+
     .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
     .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
     .sez-titolo h2 { font-size: 1.05rem; color: var(--scheda-blu); margin: 0; }
@@ -543,7 +551,7 @@
     }
   
 
-/* === stili scheda 8 === */
+/* === stili scheda 9 === */
 
     .consegna-box {
       background: #eaf2fb; border-left: 4px solid var(--scheda-blu);
@@ -608,7 +616,7 @@
     }
   
 
-/* === stili scheda 9 === */
+/* === stili scheda 10 === */
 
     .tema-box {
       background: #003366; color: #fff;
@@ -665,7 +673,7 @@
     .istruzioni-maestra strong { color: #664d03; }
   
 
-/* === stili scheda 10 === */
+/* === stili scheda 11 === */
 
     .articolo-block {
       padding: 0.7rem 0.9rem; background: #fff;
@@ -718,7 +726,7 @@
     }
   
 
-/* === stili scheda 11 === */
+/* === stili scheda 12 === */
 
     .vulcano-svg { width: 100%; max-width: 480px; margin: 0.5rem auto; display: block; }
 
@@ -770,7 +778,7 @@
     }
   
 
-/* === stili scheda 12 === */
+/* === stili scheda 13 === */
 
     .nozione-box { background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.88rem; line-height: 1.55; }
     .nozione-box .titolo-n { font-weight: 700; color: var(--scheda-blu); margin-bottom: 0.2rem; font-size: 0.93rem; }
@@ -796,7 +804,7 @@
     .scheda-h2 { font-size: 1rem; margin: 0.6rem 0 0.25rem; }
   
 
-/* === stili scheda 13 === */
+/* === stili scheda 14 === */
 
     .articolo-box {
       background: #f4f7fb; border: 1.5px solid var(--scheda-bordo);
@@ -863,7 +871,7 @@
     }
   
 
-/* === stili scheda 14 === */
+/* === stili scheda 15 === */
 
     .sez-titolo { display: flex; align-items: baseline; gap: 0.6rem; margin: 0.9rem 0 0.4rem 0; }
     .sez-titolo .num { width: 1.8rem; height: 1.8rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; flex-shrink: 0; }
@@ -991,9 +999,13 @@
       border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
     }
     .istruzioni-maestra strong { color: #664d03; }
+    /* Su telefono la pagina scorreva di lato: sotto i 580 px le colonne si riducono. Solo a schermo, la stampa A4 resta uguale. */
+    @media screen and (max-width: 580px) {
+      .hashtag-grid { grid-template-columns: 1fr 1fr; }
+    }
   
 
-/* === stili scheda 15 === */
+/* === stili scheda 16 === */
 
     .timeline-box { background: #f4f7fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.3rem 0; }
     .timeline-box .data { font-weight: 700; color: var(--scheda-blu); font-size: 0.88rem; margin-bottom: 0.15rem; }
@@ -1025,7 +1037,7 @@
     @media (max-width: 580px) { .due-colonne { grid-template-columns: 1fr; } }
   
 
-/* === stili scheda 16 === */
+/* === stili scheda 17 === */
 
     .pf-tabella { width: 100%; border-collapse: collapse; margin-bottom: 0.6rem; font-size: 0.88rem; }
     .pf-tabella th, .pf-tabella td { border: 1.5px solid var(--scheda-bordo); padding: 0.45rem 0.6rem; text-align: left; }
@@ -1039,9 +1051,13 @@
       background: #fff8e6; border-left: 4px solid var(--scheda-oro);
       border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
     }
+  /* In stampa il contenuto finiva a pochi millimetri dal fondo del foglio e la
+     riga di piè di pagina con la banda affiliazioni andava su una pagina in più:
+     un 4% in meno su tutto tiene il foglio intero. Solo in stampa. */
+  @media print { html { font-size: 96%; } }
   
 
-/* === stili scheda 17 === */
+/* === stili scheda 18 === */
 
     .crucibox {
       display: grid; grid-template-columns: repeat(13, 1.65rem);
@@ -1069,7 +1085,7 @@
     @media (max-width: 580px) { .definizioni { grid-template-columns: 1fr; } .crucibox { grid-template-columns: repeat(13, 1.3rem); } .crucibox .cella { width: 1.3rem; height: 1.3rem; font-size: 0.55rem; } }
   
 
-/* === stili scheda 18 === */
+/* === stili scheda 19 === */
 
     .pianta-box { border: 2.5px solid var(--scheda-blu); border-radius: 8px; padding: 0.5rem; background: #f8fafc; margin: 0.5rem 0; }
     .pianta-svg { width: 100%; max-width: 100%; height: auto; }
@@ -1098,7 +1114,7 @@
     }
   
 
-/* === stili scheda 19 === */
+/* === stili scheda 20 === */
 
     .due-colonne { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin: 0.5rem 0; }
     .colonna-box { padding: 0.7rem 0.9rem; border-radius: 6px; border: 1.5px solid; }
@@ -1132,9 +1148,13 @@
       border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
     }
     @media (max-width: 580px) { .due-colonne { grid-template-columns: 1fr; } }
+  /* In stampa il contenuto finiva a pochi millimetri dal fondo del foglio e la
+     sola banda affiliazioni andava su una pagina in più: un 2% in meno
+     su tutto tiene il foglio intero. Solo in stampa. */
+  @media print { html { font-size: 98%; } }
   
 
-/* === stili scheda 20 === */
+/* === stili scheda 21 === */
 
     .timeline-box { background: #f4f7fb; border-left: 4px solid var(--scheda-blu); padding: 0.7rem 0.9rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; }
     .timeline-box .data { font-weight: 700; color: var(--scheda-blu); font-size: 0.92rem; margin-bottom: 0.2rem; }
@@ -1155,7 +1175,7 @@
     @media (max-width: 580px) { .due-colonne { grid-template-columns: 1fr; } }
   
 
-/* === stili scheda 21 === */
+/* === stili scheda 22 === */
 
     .timeline-box { background: #f4f7fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.3rem 0; }
     .timeline-box .data { font-weight: 700; color: var(--scheda-blu); font-size: 0.88rem; margin-bottom: 0.15rem; }
@@ -1181,9 +1201,38 @@
     .istruzioni-prof { margin-top: 0.7rem; padding: 0.5rem 0.85rem; background: #fff8e6; border-left: 4px solid var(--scheda-oro); border-radius: 0 6px 6px 0; font-size: 0.79rem; color: #664d03; line-height: 1.45; }
     .scheda-h2 { font-size: 1rem; margin: 0.6rem 0 0.25rem; }
     @media (max-width: 580px) { .due-colonne { grid-template-columns: 1fr; } }
+  /* In stampa il contenuto finiva a pochi millimetri dal fondo del foglio e la
+     sola banda affiliazioni andava su una pagina in più: un 2% in meno
+     su tutto tiene il foglio intero. Solo in stampa. */
+  @media print { html { font-size: 98%; } }
   
 
-/* === stili scheda 22 === */
+/* === stili scheda 23 === */
+
+    .timeline-box { background: #f4f7fb; border-left: 4px solid var(--scheda-blu); padding: 0.7rem 0.9rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; }
+    .timeline-box .data { font-weight: 700; color: var(--scheda-blu); font-size: 0.92rem; margin-bottom: 0.2rem; }
+    .timeline-box .corpo { font-size: 0.92rem; line-height: 1.5; }
+    .due-colonne { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin: 0.5rem 0; }
+    .colonna-box { padding: 0.7rem 0.9rem; border-radius: 6px; border: 1.5px solid var(--scheda-bordo); }
+    .colonna-box.ok { background: #e8f5e9; border-color: #2e7d32; }
+    .colonna-box.no { background: #fde8ea; border-color: #c1121f; }
+    .colonna-box .titolo-c { font-weight: 700; margin-bottom: 0.4rem; font-size: 0.95rem; }
+    .colonna-box.ok .titolo-c { color: #1b5e20; }
+    .colonna-box.no .titolo-c { color: #842029; }
+    .colonna-box ul { margin: 0; padding-left: 1.2rem; font-size: 0.88rem; line-height: 1.5; }
+    .domanda-card { padding: 0.5rem 0.7rem; background: #fff; border: 1.5px solid var(--scheda-bordo); border-radius: 6px; margin-bottom: 0.4rem; }
+    .domanda-card .num-q { width: 1.5rem; height: 1.5rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem; margin-right: 0.4rem; }
+    .righe { display: grid; gap: 0.4rem; padding-left: 2rem; margin-top: 0.3rem; }
+    .righe .r { border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.4rem; }
+    .istruzioni-prof { margin-top: 0.8rem; padding: 0.55rem 0.85rem; background: #fff8e6; border-left: 4px solid var(--scheda-oro); border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45; }
+    @media (max-width: 580px) { .due-colonne { grid-template-columns: 1fr; } }
+  /* In stampa il contenuto finiva a pochi millimetri dal fondo del foglio e la
+     sola banda affiliazioni andava su una pagina in più: un 4% in meno
+     su tutto tiene il foglio intero. Solo in stampa. */
+  @media print { html { font-size: 96%; } }
+  
+
+/* === stili scheda 24 === */
 
     .vulcano-card { padding: 0.7rem 0.9rem; background: #f4f7fb; border-left: 4px solid var(--scheda-blu); border-radius: 0 8px 8px 0; margin: 0.4rem 0; }
     .vulcano-card .nome { font-weight: 700; color: var(--scheda-blu); font-size: 1rem; margin-bottom: 0.3rem; }
@@ -1204,7 +1253,32 @@
     @media (max-width: 580px) { .due-colonne { grid-template-columns: 1fr; } }
   
 
-/* === stili scheda 23 === */
+/* === stili scheda 25 === */
+
+    .timeline-box { background: #f4f7fb; border-left: 4px solid var(--scheda-blu); padding: 0.7rem 0.9rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; }
+    .timeline-box .data { font-weight: 700; color: var(--scheda-blu); font-size: 0.92rem; margin-bottom: 0.2rem; }
+    .timeline-box .corpo { font-size: 0.92rem; line-height: 1.5; }
+    .due-colonne { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin: 0.5rem 0; }
+    .colonna-box { padding: 0.7rem 0.9rem; border-radius: 6px; border: 1.5px solid var(--scheda-bordo); }
+    .colonna-box.ok { background: #e8f5e9; border-color: #2e7d32; }
+    .colonna-box.no { background: #fde8ea; border-color: #c1121f; }
+    .colonna-box .titolo-c { font-weight: 700; margin-bottom: 0.4rem; font-size: 0.95rem; }
+    .colonna-box.ok .titolo-c { color: #1b5e20; }
+    .colonna-box.no .titolo-c { color: #842029; }
+    .colonna-box ul { margin: 0; padding-left: 1.2rem; font-size: 0.88rem; line-height: 1.5; }
+    .domanda-card { padding: 0.5rem 0.7rem; background: #fff; border: 1.5px solid var(--scheda-bordo); border-radius: 6px; margin-bottom: 0.4rem; }
+    .domanda-card .num-q { width: 1.5rem; height: 1.5rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.8rem; margin-right: 0.4rem; }
+    .righe { display: grid; gap: 0.4rem; padding-left: 2rem; margin-top: 0.3rem; }
+    .righe .r { border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.4rem; }
+    .istruzioni-prof { margin-top: 0.8rem; padding: 0.55rem 0.85rem; background: #fff8e6; border-left: 4px solid var(--scheda-oro); border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45; }
+    @media (max-width: 580px) { .due-colonne { grid-template-columns: 1fr; } }
+    /* In stampa il contenuto finiva a pochi millimetri dal fondo del foglio e la
+       sola banda affiliazioni andava su una pagina in più: un 2% in meno
+       su tutto tiene il foglio intero. Solo in stampa. */
+    @media print { html { font-size: 98%; } }
+  
+
+/* === stili scheda 26 === */
 
     .timeline-box { background: #f4f7fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.3rem 0; }
     .timeline-box .data { font-weight: 700; color: var(--scheda-blu); font-size: 0.88rem; margin-bottom: 0.15rem; }
@@ -1236,7 +1310,7 @@
     @media (max-width: 580px) { .due-colonne { grid-template-columns: 1fr; } }
   
 
-/* === stili scheda 24 === */
+/* === stili scheda 27 === */
 
     .timeline-box { background: #f4f7fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.3rem 0; }
     .timeline-box .data { font-weight: 700; color: var(--scheda-blu); font-size: 0.88rem; margin-bottom: 0.15rem; }
@@ -1268,7 +1342,7 @@
     @media (max-width: 580px) { .due-colonne { grid-template-columns: 1fr; } }
   
 
-/* === stili scheda 25 === */
+/* === stili scheda 28 === */
 @page laboratorio26 { size: A4; margin: 5mm; }
     .scheda-page:has(> .lab26-header) { page: laboratorio26; }
     .lab26 { font-size: 14px; line-height: 1.4; }
@@ -1289,7 +1363,7 @@
       .lab26 .lab26-scenario { background: white; }
     }
 
-/* === stili scheda 26 === */
+/* === stili scheda 29 === */
 
     /* Percorso "Oggetti sconosciuti e confezioni alterate" — CSS scoped .os-page */
     .scheda-page:has(> .os-page) { padding: 0; }
@@ -1339,7 +1413,7 @@
     }
   
 
-/* === stili scheda 27 === */
+/* === stili scheda 30 === */
 
     /* Percorso "Oggetti sconosciuti e confezioni alterate" — CSS scoped .os-page */
     .scheda-page:has(> .os-page) { padding: 0; }
@@ -1390,7 +1464,7 @@
     }
   
 
-/* === stili scheda 28 === */
+/* === stili scheda 31 === */
 
     /* Percorso "Oggetti sconosciuti e confezioni alterate" — CSS scoped .os-page */
     .scheda-page:has(> .os-page) { padding: 0; }
@@ -1581,7 +1655,7 @@
 
     <h2 class="scheda-h2">📊 Rubrica per indicatore</h2>
 
-    <table class="rubrica-tab">
+    <div class="scheda-tabella-scorrevole"><table class="rubrica-tab">
       <thead>
         <tr>
           <th>Indicatore</th>
@@ -1635,7 +1709,7 @@
           <td class="liv-4">Si impegna in progetti di classe (giornalino, video, mappa rischi); valuta diventare volontario a 18 anni.</td>
         </tr>
       </tbody>
-    </table>
+    </table></div>
 
     <h2 class="scheda-h2">📝 Esempio di motivazione del voto</h2>
 

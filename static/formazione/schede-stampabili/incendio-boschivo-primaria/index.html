@@ -26,6 +26,15 @@
       font-weight: 700;
       color: var(--scheda-blu);
     }
+  /* In stampa il contenuto finiva a pochi millimetri dal fondo del foglio e la
+     riga di piè di pagina con la banda affiliazioni andava su una pagina in più:
+     un 6% in meno su tutto e la coda del foglio senza aria tengono il foglio
+     intero. Solo in stampa. */
+  @media print {
+    html { font-size: 94%; }
+    .scheda-footer { padding-top: 0; padding-bottom: 0; }
+    .scheda-page { padding-bottom: 0; }
+  }
   </style>
 </head>
 <body>

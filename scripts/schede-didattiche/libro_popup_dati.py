@@ -50,7 +50,7 @@ TAVOLE = [
             "I volontari non si chiamano direttamente: in emergenza si chiama il 112.",
             "Il bollettino di allerta dice che tempo è previsto, non che cosa è già successo.",
         ],
-        pittogrammi=[("dis-volontari", "Tre volontari in divisa, uno accanto all'altro"),
+        pittogrammi=[("dis-volontari", "Due volontari in divisa aiutano e sostengono una persona"),
                      ("alf-y-semaforo", "Semaforo")],
         fonte="Livelli di allerta: pagina «Allerte meteo» del sito, che riprende il "
               "Centro Funzionale Regionale del Lazio.",
@@ -75,7 +75,7 @@ TAVOLE = [
             "Se sei all'aperto, va' in uno spazio aperto, lontano da edifici e alberi.",
         ],
         pittogrammi=[("alf-t-terremoto", "Persona che si ripara sotto un tavolo durante un terremoto")],
-        fonte="Pagina «Rischio sismico» del sito.",
+        fonte="Pagina «Rischio Sismico: Cosa Fare» del sito.",
     ),
     dict(
         n=3, id="tav3",
@@ -119,7 +119,7 @@ TAVOLE = [
             "Se non puoi allontanarti, entra in casa e chiudi porte, finestre e persiane.",
         ],
         pittogrammi=[("alf-i-incendio", "Incendio"), ("dis-autopompa", "Autopompa dei vigili del fuoco")],
-        fonte="Pagina «Rischio incendio» del sito.",
+        fonte="Pagina «Rischio Incendi Boschivi» del sito.",
     ),
     dict(
         n=5, id="tav5",
@@ -142,7 +142,7 @@ TAVOLE = [
             "Una volta fuori non rientrare: si torna dentro solo quando i vigili del fuoco dicono che si può.",
         ],
         pittogrammi=[("alf-u-uscita", "Persona che esce da una porta aperta"), ("pop-fuoco", "Fiamme")],
-        fonte="Articolo «Incendi domestici» del sito, che cita i Vigili del Fuoco.",
+        fonte="Articolo «Incendi domestici: cause più comuni e come prevenirli» del sito, che cita i Vigili del Fuoco.",
     ),
     dict(
         n=6, id="tav6",
@@ -164,7 +164,7 @@ TAVOLE = [
             "Non tornare indietro a prendere niente.",
         ],
         pittogrammi=[("pop-sirena", "Sirena di allarme"), ("dis-cortile", "Cortile della scuola")],
-        fonte="Articolo «Rientro a scuola: le prove di evacuazione» del sito.",
+        fonte="Articolo «Primo giorno di scuola: le prove di evacuazione non sono un dettaglio» del sito.",
     ),
     dict(
         n=7, id="tav7",
@@ -184,10 +184,10 @@ TAVOLE = [
             "Ogni sei mesi controlla con un adulto: l'acqua scade e le pile si scaricano.",
         ],
         tessere=[("dis-acqua", "Acqua"), ("oca-torcia", "Torcia"), ("oca-radio", "Radio a pile"),
-                 ("alf-k-kit", "Cassetta di pronto soccorso"), ("dis-lettera", "Documenti"),
+                 ("alf-k-kit", "Cassetta di pronto soccorso"), ("dis-lettera", "Un foglio con i tuoi dati"),
                  ("pop-scatoletta", "Cibo in scatola"), ("dis-famiglia", "Numeri di famiglia")],
         pittogrammi=[("alf-z-zaino", "Zaino")],
-        fonte="Pagina «Kit di emergenza» del sito.",
+        fonte="Pagina «Kit di emergenza: casa, evacuazione e auto» del sito.",
     ),
     dict(
         n=8, id="tav8",

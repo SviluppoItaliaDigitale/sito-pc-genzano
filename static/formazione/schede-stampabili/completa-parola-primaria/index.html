@@ -145,6 +145,10 @@
     .istruzioni-maestra strong { color: #664d03; }
     .istruzioni-maestra ul { margin: 0.3rem 0 0 1rem; padding: 0; }
     .istruzioni-maestra li { margin: 0.15rem 0; }
+    /* Su telefono la pagina scorreva di lato: sotto i 580 px le colonne si riducono. Solo a schermo, la stampa A4 resta uguale. */
+    @media screen and (max-width: 580px) {
+      .cp-traduci { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>

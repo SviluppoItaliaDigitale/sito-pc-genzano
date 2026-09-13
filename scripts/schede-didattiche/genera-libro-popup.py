@@ -139,12 +139,10 @@ def fustella_volvella():
         f'<line x1="{cx}" y1="{cy}" x2="{cx - 20}" y2="{cy + R + 7}" stroke="#64748b" stroke-width="0.3"/>',
         f'<text x="{cx - 21}" y="{cy + R + 10}" text-anchor="middle" font-size="2.8" fill="#475569">'
         f'foro per il fermacampione</text>',
-        f'<line x1="{cx}" y1="{cy}" x2="{cx + 8.6}" y2="{cy - 8.6}" stroke="#64748b" '
+        f'<line x1="{cx}" y1="{cy}" x2="{cx + 14.1}" y2="{cy - 14.1}" stroke="#64748b" '
         f'stroke-width="0.3" stroke-dasharray="1 1"/>',
-        f'<circle cx="{cx + 8.6}" cy="{cy - 8.6}" r="1.2" fill="none" stroke="#111827" '
+        f'<circle cx="{cx + 14.1}" cy="{cy - 14.1}" r="1.2" fill="none" stroke="#111827" '
         f'stroke-width="0.4"/>',
-        f'<text x="{cx + 10.5}" y="{cy - 9.6}" font-size="2.4" fill="#475569">'
-        f'qui cade il centro della finestra</text>',
         f'<rect x="{cx + R + 14}" y="{cy + 10}" width="20" height="12" fill="none" '
         f'stroke="#111827" stroke-width="0.7"/>',
         f'<text x="{cx + R + 24}" y="{cy + 17.5}" text-anchor="middle" font-size="2.8" '
@@ -162,7 +160,7 @@ def fustella_volvella():
         f'<text x="{cx + R + 12}" y="{cy + 2}" font-size="2.8" fill="#475569">'
         f'a cavallo di due, i colori si vedrebbero a coppie.</text>',
         f'<text x="{cx + R + 12}" y="{cy + 6}" font-size="2.8" fill="#475569">'
-        f'Il centro va a 12 mm dal foro, in diagonale.</text>',
+        f'Il centro va a 20 mm dal foro, in diagonale.</text>',
         quota(cx - R, 83, cx + R, "68 mm di diametro"),
     ]))
 

@@ -26,6 +26,10 @@
     .righe .r { border-bottom: 1.5px dashed var(--scheda-bordo); height: 1.4rem; }
     .istruzioni-prof { margin-top: 0.8rem; padding: 0.55rem 0.85rem; background: #fff8e6; border-left: 4px solid var(--scheda-oro); border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45; }
     @media (max-width: 580px) { .due-colonne { grid-template-columns: 1fr; } }
+    /* In stampa il contenuto finiva a pochi millimetri dal fondo del foglio e la
+       sola banda affiliazioni andava su una pagina in più: un 2% in meno
+       su tutto tiene il foglio intero. Solo in stampa. */
+    @media print { html { font-size: 98%; } }
   </style>
 </head>
 <body>

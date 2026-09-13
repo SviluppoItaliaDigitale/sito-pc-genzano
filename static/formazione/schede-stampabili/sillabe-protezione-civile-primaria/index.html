@@ -179,6 +179,10 @@
       line-height: 1.45;
     }
     .istruzioni-maestra strong { color: #664d03; }
+    /* Su telefono la pagina scorreva di lato: sotto i 580 px le colonne si riducono. Solo a schermo, la stampa A4 resta uguale. */
+    @media screen and (max-width: 580px) {
+      .parole-modello { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>

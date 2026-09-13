@@ -106,6 +106,12 @@
       line-height: 1.45;
     }
     .istruzioni-maestra strong { color: var(--scheda-blu); }
+    /* Su telefono la pagina scorreva di lato: sotto i 580 px le colonne si riducono. Solo a schermo, la stampa A4 resta uguale. */
+    @media screen and (max-width: 580px) {
+      .vocale-riga { grid-template-columns: 3rem 3rem 2.4rem 1fr; gap: 0.4rem; padding: 0.45rem 0.5rem; }
+      .vocale-parola { min-width: 0; }
+      .vocale-parola .parola-modello { font-size: 1.15rem; letter-spacing: 0.08em; }
+    }
   </style>
 </head>
 <body>
