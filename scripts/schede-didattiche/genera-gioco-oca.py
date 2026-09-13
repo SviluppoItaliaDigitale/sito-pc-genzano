@@ -18,6 +18,19 @@ ROOT = pathlib.Path(__file__).resolve().parents[2]
 DEST = ROOT / "static/formazione/schede-stampabili/gioco-oca-protezione-civile/index.html"
 COLONNE, RIGHE = 7, 8
 
+# Le pedine sono i mezzi dei soccorsi, uno per giocatore. Si ritagliano e si
+# piegano a metà: il disegno in alto è capovolto apposta, così una volta
+# piegata la pedina sta in piedi e si vede da tutte e due le parti.
+PEDINE = [
+ (1, "dis-autopompa",      "Autopompa",  "Camion dei pompieri con la scala e il lampeggiante."),
+ (2, "dis-ambulanza",      "Ambulanza",  "Ambulanza vista di lato, con la croce sul fianco."),
+ (3, "dis-elicottero",     "Elicottero", "Elicottero in volo, visto di lato."),
+ (4, "dis-aereo-soccorsi", "Aereo",      "Aereo a quattro eliche, visto di lato."),
+ (5, "dis-cane",           "Cane",       "Cane seduto, con la pettorina da lavoro."),
+ (6, "dis-gommone",        "Gommone",    "Gommone con i remi, visto dall'alto."),
+]
+
+
 def percorso_spirale(nc, nr):
     """Ordine delle celle lungo una spirale che entra verso il centro."""
     griglia = [[None] * nc for _ in range(nr)]
@@ -80,6 +93,20 @@ carte_eme = "".join(
 
 fonti = "".join(f'          <li><a href="{u}">{u}</a></li>\n' for _, _, u in EMERGENZE)
 fonti_uniche = "".join(f'          <li><a href="{u}">{u}</a></li>\n' for u in dict.fromkeys(u for _, _, u in EMERGENZE))
+
+pedine = "".join(
+    f'<div class="oca-pedina">'
+    f'<div class="oca-pedina-lato oca-pedina-sopra">'
+    f'<img src="/pittogrammi/arasaac-bn/{img}.png" alt="" aria-hidden="true">'
+    f'<span class="oca-pedina-nome">{html.escape(nome)}</span>'
+    f'<span class="oca-pedina-num">{n}</span></div>'
+    f'<div class="oca-pedina-piega" aria-hidden="true"></div>'
+    f'<div class="oca-pedina-lato">'
+    f'<span class="oca-pedina-num">{n}</span>'
+    f'<span class="oca-pedina-nome">{html.escape(nome)}</span>'
+    f'<img src="/pittogrammi/arasaac-bn/{img}.png" alt="{html.escape("Pedina " + str(n) + ": " + desc, quote=True)}">'
+    f'</div></div>\n'
+    for n, img, nome, desc in PEDINE)
 
 doc = f"""<!DOCTYPE html>
 <html lang="it" dir="ltr">
@@ -150,15 +177,23 @@ doc = f"""<!DOCTYPE html>
     .oca .oca-carta-sol {{ font-size: 8.4px; line-height: 1.3; margin: 1.4mm 0 0;
       border-top: 1px solid #c6d0da; padding-top: 1.2mm; transform: rotate(180deg); color: #384755; }}
 
-    .oca .oca-regole {{ font-size: 12px; }}
+    .oca .oca-regole {{ font-size: 11.4px; }}
     .oca .oca-regole h2 {{ font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--scheda-blu);
-      margin: 4mm 0 2mm; padding-bottom: 0.8mm; border-bottom: 2px solid var(--scheda-blu); }}
+      margin: 3mm 0 1.6mm; padding-bottom: 0.6mm; border-bottom: 2px solid var(--scheda-blu); }}
     .oca .oca-regole ol, .oca .oca-regole ul {{ margin: 0 0 0 5mm; padding: 0; }}
-    .oca .oca-regole li {{ margin-bottom: 1.4mm; }}
-    .oca .oca-pedine {{ display: grid; grid-template-columns: repeat(6, 1fr); gap: 2mm; margin: 2mm 0 0; }}
-    .oca .oca-pedina {{ border: 1.3px dashed #6b7884; border-radius: 50%; aspect-ratio: 1/1;
-      display: flex; align-items: center; justify-content: center;
-      font-family: Verdana, "DejaVu Sans", sans-serif; font-size: 15px; font-weight: 700; color: #003366; }}
+    .oca .oca-fonti {{ columns: 2; column-gap: 6mm; font-size: 10.5px; }}
+    .oca .oca-fonti li {{ break-inside: avoid; }}
+    .oca .oca-regole li {{ margin-bottom: 1mm; }}
+    .oca .oca-pedine {{ display: grid; grid-template-columns: repeat(6, 1fr); gap: 2.5mm; margin: 2mm 0 0; }}
+    .oca .oca-pedina {{ border: 1.3px dashed #6b7884; border-radius: 3px; overflow: hidden; break-inside: avoid; }}
+    .oca .oca-pedina-lato {{ display: flex; flex-direction: column; align-items: center; padding: 1.1mm 0.8mm; }}
+    .oca .oca-pedina-sopra {{ transform: rotate(180deg); }}
+    .oca .oca-pedina img {{ width: 10.5mm; height: 10.5mm; object-fit: contain; }}
+    .oca .oca-pedina-nome {{ font-family: Verdana, "DejaVu Sans", sans-serif; font-size: 7px;
+      font-weight: 700; color: #1a1a1a; margin-top: 0.6mm; line-height: 1.1; text-align: center; }}
+    .oca .oca-pedina-num {{ font-family: Verdana, "DejaVu Sans", sans-serif; font-size: 11px;
+      font-weight: 700; color: #003366; line-height: 1; }}
+    .oca .oca-pedina-piega {{ border-top: 1.1px dashed #93a1af; margin: 0 1mm; }}
     .oca .nota-adulto {{ font-size: 10px; line-height: 1.45; margin: 3mm 0 0; }}
     .oca .oca-licenza {{ font-size: 7.6px; color: #555; margin: 1.6mm 0 0; }}
     .oca-indice {{ margin: 0 0 1rem; }}
@@ -272,13 +307,11 @@ doc = f"""<!DOCTYPE html>
           <li>Vince chi arriva per primo alla casella 56. Con il numero esatto non serve: basta arrivarci o superarla.</li>
         </ol>
         <h2>Le pedine</h2>
-        <p style="margin:0 0 1mm;">Ritaglia questi cerchi, colorali di colori diversi e piegali a metà perché stiano in piedi. Oppure usa un bottone, un tappo o una gomma per ciascuno.</p>
+        <p style="margin:0 0 1.5mm;">Ogni giocatore sceglie il suo mezzo. Colora la pedina, ritagliala lungo il bordo e <strong>piegala a metà</strong> sulla linea tratteggiata: sta in piedi da sola e si vede da tutte e due le parti.</p>
         <div class="oca-pedine">
-          <div class="oca-pedina">1</div><div class="oca-pedina">2</div><div class="oca-pedina">3</div>
-          <div class="oca-pedina">4</div><div class="oca-pedina">5</div><div class="oca-pedina">6</div>
-        </div>
+{pedine}        </div>
         <h2>Da dove vengono le risposte</h2>
-        <ul>
+        <ul class="oca-fonti">
 {fonti_uniche}        </ul>
       </div>
       <p class="nota-adulto">Per l'adulto: una partita dura 30–40 minuti, ma si può fermare prima e riprendere. Con i più piccoli gioca insieme a loro e leggi tu le carte. Il gioco serve a far dire ad alta voce i comportamenti giusti: quando qualcuno risponde bene, chiedi anche <em>perché</em>. Le risposte complete, con il prima, il durante e il dopo, sono nelle pagine elencate qui sopra: il gioco le richiama, non le sostituisce.</p>
