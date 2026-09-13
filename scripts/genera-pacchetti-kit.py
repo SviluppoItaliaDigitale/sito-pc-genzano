@@ -363,11 +363,13 @@ def formatta_dimensione(size_kb: int) -> str:
     return "~" + f"{mb:.1f}".replace(".", ",") + " MB"
 
 
-def aggiorna_dimensione_dichiarata(md_path: Path, zip_name: str, size_kb: int) -> None:
+def aggiorna_dimensione_dichiarata(md_path: Path, zip_name: str, size_kb: int) -> bool:
     """Riallinea la dimensione "(~N KB/MB)" dichiarata nel blockquote del kit
     alla dimensione reale dello ZIP appena prodotto. Le dimensioni scritte a
     mano vanno in drift a ogni rigenerazione (caso reale: dichiarati 106 KB,
-    reali 17,3 MB): la fonte di verità è lo ZIP, il testo si aggiorna da qui."""
+    reali 17,3 MB): la fonte di verità è lo ZIP, il testo si aggiorna da qui.
+    Ritorna True se il file è stato riscritto, così chi chiama sa che il kit
+    copiato dentro lo ZIP è ormai vecchio e va riarchiviato."""
     testo = md_path.read_text(encoding="utf-8")
     pattern = re.compile(
         r"(\(/formazione/pacchetti/" + re.escape(zip_name) + r"\)\s*)\(~[\d.,]+\s*[KM]B\)"
@@ -376,14 +378,16 @@ def aggiorna_dimensione_dichiarata(md_path: Path, zip_name: str, size_kb: int) -
     if n and nuovo != testo:
         md_path.write_text(nuovo, encoding="utf-8")
         print(f"  → aggiornata dimensione dichiarata in {md_path.name}: {formatta_dimensione(size_kb)}")
+        return True
+    return False
 
 
-def costruisci_pacchetto(slug: str, md_filename: str) -> tuple[int, int, list[str]]:
-    """Ritorna (n_schede_incluse, dimensione_kb, lista_schede_mancanti)."""
+def costruisci_pacchetto(slug: str, md_filename: str) -> tuple[int, int, list[str], bool]:
+    """Ritorna (n_schede_incluse, dimensione_kb, lista_schede_mancanti, convergente)."""
     md_path = CONTENT_BASE / md_filename
     if not md_path.exists():
         print(f"⚠ File non trovato: {md_path}", file=sys.stderr)
-        return (0, 0, [])
+        return (0, 0, [], True)
 
     kit_titolo = estrai_titolo_kit(md_path)
     kit_desc = estrai_descrizione_kit(md_path)
@@ -471,23 +475,43 @@ def costruisci_pacchetto(slug: str, md_filename: str) -> tuple[int, int, list[st
         (tmp / "README.txt").write_text(readme, encoding="utf-8")
 
         # copia kit md (testo originale)
-        shutil.copy(md_path, tmp / md_filename)
-
         # zip
         OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
         zip_path = OUTPUT_DIR / f"kit-scuola-{slug}.zip"
-        with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as zf:
-            for path in sorted(tmp.rglob("*")):
-                if path.is_file():
-                    arcname = path.relative_to(tmp)
-                    zf.write(path, arcname)
 
-        size_kb = zip_path.stat().st_size // 1024
+        # La dimensione dichiarata sta dentro il kit, e il kit sta dentro lo ZIP:
+        # scriverla dopo aver archiviato lasciava nel pacchetto una copia vecchia
+        # di una revisione, che `controllo-documenti.py` segnala come drift
+        # bloccante. Si archivia, si misura, si riscrive la dimensione e si
+        # riarchivia finché il numero dichiarato coincide con quello vero: di
+        # norma bastano due passate, perché la riscrittura sposta pochi byte.
+        convergente = False
+        for _ in range(4):
+            shutil.copy(md_path, tmp / md_filename)
+            with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as zf:
+                for path in sorted(tmp.rglob("*")):
+                    if path.is_file():
+                        arcname = path.relative_to(tmp)
+                        zf.write(path, arcname)
+            size_kb = zip_path.stat().st_size // 1024
+            if not aggiorna_dimensione_dichiarata(md_path, zip_path.name, size_kb):
+                # il numero scritto nel kit coincide già con lo ZIP appena
+                # archiviato: dentro e fuori dicono la stessa cosa
+                convergente = True
+                break
+        else:
+            # Il pacchetto e la pagina direbbero due numeri diversi. Non è un
+            # avviso da leggere nei log: si esce in errore, così il workflow si
+            # ferma allo step del generatore e non arriva mai a committare la
+            # coppia incoerente che il ciclo esiste per impedire.
+            convergente = False
+            print(f"  ⚠ dimensione dichiarata non stabile per {zip_path.name}: "
+                  f"lo ZIP e la pagina direbbero numeri diversi", file=sys.stderr)
+
         print(f"  → {zip_path.relative_to(ROOT)} ({size_kb} KB, {len(schede_dati)} schede)")
-        aggiorna_dimensione_dichiarata(md_path, zip_path.name, size_kb)
         if schede_mancanti:
             print(f"  ⚠ Linkate ma MANCANTI nel filesystem: {schede_mancanti}", file=sys.stderr)
-        return (len(schede_dati), size_kb, schede_mancanti)
+        return (len(schede_dati), size_kb, schede_mancanti, convergente)
 
 
 def main() -> int:
@@ -496,9 +520,12 @@ def main() -> int:
     totale_schede = 0
     totale_kb = 0
     tutti_mancanti: list[tuple[str, str]] = []
+    non_convergenti: list[str] = []
 
     for slug, filename in KITS.items():
-        n, kb, mancanti = costruisci_pacchetto(slug, filename)
+        n, kb, mancanti, convergente = costruisci_pacchetto(slug, filename)
+        if not convergente:
+            non_convergenti.append(slug)
         totale_schede += n
         totale_kb += kb
         for m in mancanti:
@@ -506,6 +533,13 @@ def main() -> int:
 
     print("\n" + "=" * 60)
     print(f"Totale: {totale_schede} schede in {len(KITS)} pacchetti, {totale_kb} KB complessivi")
+
+    if non_convergenti:
+        print(f"\n✖ {len(non_convergenti)} pacchetti con dimensione non stabile: "
+              + ", ".join(non_convergenti), file=sys.stderr)
+        print("  Lo ZIP e la pagina dichiarerebbero numeri diversi: "
+              "niente da pubblicare finché non convergono.", file=sys.stderr)
+        return 1
 
     if tutti_mancanti:
         print(f"\n⚠ {len(tutti_mancanti)} link a schede non esistenti nel filesystem:")
