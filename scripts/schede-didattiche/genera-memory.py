@@ -25,7 +25,7 @@ COPPIE = [
  ("dis-gommone",    "Gommone",     "Gommone con i remi, visto dall'alto."),
  ("dis-drone",      "Drone",       "Drone con quattro eliche e una piccola telecamera."),
  ("dis-radio",      "Radio",       "Radio ricetrasmittente portatile con l'antenna."),
- ("dis-cane",       "Cane da soccorso", "Cane seduto, con la pettorina da lavoro."),
+ ("dis-cane",       "Cane che lavora", "Cane seduto, con la pettorina da lavoro."),
  ("alf-c-casco",    "Casco",       "Elmetto di protezione da lavoro."),
  ("alf-z-zaino",    "Zaino",       "Zaino con le bretelle e la tasca davanti."),
  ("alf-k-kit",      "Cassetta di pronto soccorso", "Valigetta di pronto soccorso con la croce."),
@@ -66,7 +66,7 @@ doc = f"""<!DOCTYPE html>
     .mem .mem-consegna {{ font-size: 11.5px; margin: 0 0 3mm; }}
     .mem .mem-griglia {{
       display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(5, 1fr);
-      gap: 0; border: 1.4px dashed #6b7884; border-radius: 2px; flex: 1;
+      gap: 0; border: 1.4px dashed #6b7884; border-radius: 2px; height: 170mm;
     }}
     .mem .mem-tessera, .mem .mem-retro {{
       border: 1.4px dashed #6b7884; margin: -0.7px; display: flex; flex-direction: column;
@@ -114,13 +114,13 @@ doc = f"""<!DOCTYPE html>
         <div class="scheda-intestazione">
           <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
           <h1 class="scheda-titolo-principale">Memory della protezione civile</h1>
-          <div class="scheda-sottotitolo">20 tessere da ritagliare · Infanzia 4–6 anni e classe prima · 20–30 minuti · forbici, colla, colori</div>
+          <div class="scheda-sottotitolo">20 tessere da ritagliare · Infanzia 4–6 anni e primaria · Preparazione 40–60 minuti, partita 15–20 · forbici, colla, colori</div>
         </div>
       </header>
       <p class="mem-consegna"><strong>Foglio 1 — le tessere.</strong> Prima colora i disegni, poi ritaglia lungo le linee tratteggiate. Vengono 20 tessere: ogni disegno compare <strong>due volte</strong>.</p>
       <div class="mem-griglia">
 {tessere}      </div>
-      <p class="nota-adulto">Per l'adulto: le forbici le usa un adulto o un bambino che sa già usarle, seduto e sorvegliato. Stampa su cartoncino o incolla le tessere su un cartoncino riciclato: sul foglio sottile i disegni si vedono in trasparenza e il gioco non funziona. Se la classe è numerosa, stampa due copie e fai due mazzi.</p>
+      <p class="nota-adulto">Per l'adulto: la preparazione delle forbici è a carico dell'adulto. A 4 anni ritaglia l'adulto mentre il bambino colora; a 5–6 anni il bambino può ritagliare da seduto, sorvegliato, con forbici a punta arrotondata, un pezzo alla volta. Stampa su cartoncino o incolla le tessere su un cartoncino riciclato: sul foglio sottile i disegni si vedono in trasparenza e il gioco non funziona. Se la classe è numerosa, stampa due copie e fai due mazzi.</p>
       <p class="mem-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d’Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
       <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
         <span>MEM-PC · Foglio 1 di 3 · Rev. 1 · {REV}</span></footer>
