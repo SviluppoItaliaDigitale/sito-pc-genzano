@@ -45,9 +45,10 @@
       text-decoration: none; font-size: 0.85rem; }
     .mem-indice a:hover, .mem-indice a:focus { background: var(--scheda-blu); color: #fff;
       outline: 2px solid #ffbe2e; outline-offset: 2px; }
-    @media (max-width: 700px) {
+    @media screen and (max-width: 700px) {
       .mem { padding: 5mm 4mm; min-height: auto; }
-      .mem .mem-griglia { grid-template-columns: repeat(2, 1fr); grid-template-rows: none; }
+      .mem .mem-griglia { grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: none; height: auto; grid-auto-rows: 34mm; }
       .mem .mem-coppie { columns: 1; }
     }
   </style>
