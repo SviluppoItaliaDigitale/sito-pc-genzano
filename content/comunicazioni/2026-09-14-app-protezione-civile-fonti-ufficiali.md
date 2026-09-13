@@ -1,6 +1,6 @@
 ---
 title: "Le app e i siti ufficiali da avere nel telefono"
-date: 2026-09-14
+date: 2026-09-14T00:01:00+02:00
 description: "Una selezione ragionata di siti, app e canali ufficiali da seguire per informazioni verificate su rischi, allerte ed emergenze."
 badge: "Informazione"
 priorita: "normale"
