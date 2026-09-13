@@ -10,7 +10,7 @@ Questo kit è pensato per i docenti della **scuola secondaria di primo grado** c
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e si prestano all'uso nelle ore di scienze, geografia, educazione civica e tecnologia.
 
-> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-primo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-primo-grado.zip) (~267 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-primo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-primo-grado.zip) (~314 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
 ---
 
@@ -898,6 +898,31 @@ Percorso di educazione alla sicurezza su una sola regola, ripetuta in forme adat
 - [Una bevanda trovata](/formazione/schede-stampabili/oggetti-una-bevanda-trovata-facilitata/) — versione facilitata, età diverse. Lasciare una bevanda sconosciuta e chiedere aiuto.
 - [Il patto con gli adulti](/formazione/schede-stampabili/oggetti-il-patto-con-gli-adulti-famiglia/) — per famiglie, scuola e accompagnatori. Concordare un aiuto concreto e accogliere le segnalazioni.
 - [Guida per gli adulti](/formazione/schede-stampabili/oggetti-sconosciuti-guida-adulti/) — come proporre il percorso, adattamenti, cosa fare se il ritrovamento è reale, risposte e fonti.
+
+
+## Natura che non si tocca
+
+Percorso di educazione alla sicurezza all'aperto su una sola regola, ripetuta in forme adatte all'età: **guardo, non tocco, chiedo a un adulto**. Bacche e funghi, bruchi della processionaria, vespe, zecche, cani sconosciuti, serpenti. Le attività si svolgono soltanto su carta e con dialoghi, senza contatto con animali o piante reali. Ogni scheda ha la nota per l'adulto e la soluzione capovolta. Leggete prima la guida per gli adulti. Le schede sono incluse nei pacchetti da stampare e da scaricare.
+
+- [Serpenti: fatto o supposizione](/formazione/schede-stampabili/natura-serpenti-fatto-o-supposizione-secondaria1/) — 11–14 anni. Separare ciò che si è visto da ciò che si suppone e ricordare cosa fare in caso di morso.
+- [Il fungo che sembra buono](/formazione/schede-stampabili/natura-il-fungo-che-sembra-buono-secondaria1/) — 11–14 anni. Riformulare in modo prudente le scorciatoie sul riconoscimento dei funghi.
+- [Una chiamata al Centro Antiveleni](/formazione/schede-stampabili/natura-una-chiamata-al-centro-antiveleni-secondaria1/) — 11–14 anni. Preparare le informazioni utili per una chiamata al Centro Antiveleni.
+- [Guardo, non tocco](/formazione/schede-stampabili/natura-guardo-non-tocco-facilitata/) — versione facilitata, età diverse. Chiedere aiuto davanti a una pianta o a un animale sconosciuto.
+- [Un insetto vola vicino](/formazione/schede-stampabili/natura-un-insetto-vola-vicino-facilitata/) — versione facilitata, età diverse. Restare calmi con un insetto vicino e segnalare subito una puntura.
+- [Il patto per le uscite](/formazione/schede-stampabili/natura-il-patto-per-le-uscite-famiglia/) — per famiglie, scuola e accompagnatori. Concordare un aiuto concreto per parco, giardino e gite.
+- [Guida per gli adulti](/formazione/schede-stampabili/natura-che-non-si-tocca-guida-adulti/) — come proporre il percorso, adattamenti, cosa fare se succede davvero, risposte e fonti.
+
+## Casa sicura
+
+Percorso di educazione alla sicurezza domestica su una sola regola, ripetuta in forme adatte all'età: **non apro, non tocco, chiedo a un adulto**. Farmaci e prodotti per la casa, pile e magneti, cose calde, elettricità, principio di incendio in cucina, finestre e balconi. Le attività si svolgono soltanto su carta e con dialoghi, senza prove con prodotti o apparecchi reali. Ogni scheda ha la nota per l'adulto e la soluzione capovolta. Leggete prima la guida per gli adulti. Le schede sono incluse nei pacchetti da stampare e da scaricare.
+
+- [La padella prende fuoco](/formazione/schede-stampabili/casa-la-padella-prende-fuoco-secondaria1/) — 11–14 anni. Riconoscere le azioni corrette davanti a un principio di incendio in cucina.
+- [Non si mescolano](/formazione/schede-stampabili/casa-non-si-mescolano-secondaria1/) — 11–14 anni. Separare un fatto osservato da una supposizione sui prodotti per la pulizia.
+- [Una chiamata chiara](/formazione/schede-stampabili/casa-una-chiamata-chiara-secondaria1/) — 11–14 anni. Preparare le informazioni utili per il Centro Antiveleni o il 112.
+- [Non apro, chiedo](/formazione/schede-stampabili/casa-non-apro-chiedo-facilitata/) — versione facilitata, età diverse. Chiedere aiuto davanti a una bottiglia o a una scatola sconosciuta.
+- [Caldo: non tocco](/formazione/schede-stampabili/casa-caldo-non-tocco-facilitata/) — versione facilitata, età diverse. Stare lontani dalle cose calde e chiamare un adulto dopo una scottatura.
+- [Il patto in casa](/formazione/schede-stampabili/casa-il-patto-in-casa-famiglia/) — per famiglie, scuola e accompagnatori. Concordare un aiuto concreto e organizzare la casa a misura di bambino.
+- [Guida per gli adulti](/formazione/schede-stampabili/casa-sicura-guida-adulti/) — come proporre il percorso, adattamenti, cosa fare se succede davvero, risposte e fonti.
 
 ## Materiale consigliato
 
