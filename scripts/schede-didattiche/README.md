@@ -1,6 +1,6 @@
 # Generatori delle schede didattiche a più fogli
 
-Quattro schede stampabili di `static/formazione/schede-stampabili/` non si
+Sette schede stampabili di `static/formazione/schede-stampabili/` non si
 scrivono a mano: hanno decine di fogli quasi identici, e un refuso corretto su
 un foglio solo resterebbe sugli altri venticinque. Qui vivono i generatori e i
 dati da cui nascono.
@@ -11,6 +11,7 @@ dati da cui nascono.
 | `genera-alfabetiere-tabella.py` | `alfabetiere-pc-infanzia/` | 1 (le 26 lettere in tabella) |
 | `genera-album-disegni.py` | `disegni-mezzi-infanzia/`, `disegni-persone-infanzia/`, `disegni-momenti-infanzia/` | 12 ciascuno |
 | `genera-memory.py` | `memory-protezione-civile-infanzia/` | 3 (tessere, retro, regole) |
+| `genera-gioco-oca.py` | `gioco-oca-protezione-civile/` | 4 (tabellone, imprevisti, emergenze, regole e pedine) |
 
 I testi stanno nei due moduli di dati, non nei generatori:
 
@@ -19,6 +20,11 @@ I testi stanno nei due moduli di dati, non nei generatori:
   e `muta` (la H, che nell'alfabeto italiano c'è ma non ha un suono proprio).
 - `disegni_dati.py` — i tre album, con titolo, disegno, testo alternativo e
   didascalia di ogni foglio.
+- `oca_dati.py` — il gioco dell'oca: le 56 caselle del percorso, le 12 carte
+  imprevisto (fatto, effetto, disegno e descrizione del disegno), le 12 carte
+  emergenza (domanda, risposta e pagina del sito da cui viene) e le 6 pedine.
+  Il percorso a spirale e la posizione delle caselle li calcola il generatore,
+  che verifica anche che le caselle disegnate siano tante quante i testi.
 
 ## Come si rigenera
 
@@ -28,6 +34,7 @@ python3 genera-alfabetiere-quaderno.py
 python3 genera-alfabetiere-tabella.py
 python3 genera-album-disegni.py
 python3 genera-memory.py
+python3 genera-gioco-oca.py
 cd ../..
 python3 scripts/genera-pacchetti-schede.py   # rifà "Stampa tutto"
 python3 scripts/genera-pacchetti-kit.py      # rifà gli ZIP offline
@@ -47,9 +54,15 @@ Governo di Aragona, licenza **CC BY-NC-SA 4.0**. Stanno in
 quale pittogramma ARASAAC viene, e si riscaricano con
 `bash scripts/scarica-pittogrammi.sh`.
 
-Ogni foglio prodotto porta l'attribuzione stampata, non solo il primo: queste
-schede si stampano anche una pagina alla volta, e il foglio che finisce in
-classe deve portarla con sé.
+Ogni foglio che contiene pittogrammi porta l'attribuzione stampata, non solo
+il primo: queste schede si stampano anche una pagina alla volta, e il foglio
+che finisce in classe deve portarla con sé. Se aggiungi disegni a un foglio che
+prima non ne aveva — è successo con le carte imprevisto del gioco dell'oca —
+ricordati di aggiungere l'attribuzione anche lì.
+
+I file che servono a una sola scheda portano il prefisso del suo generatore
+(`alf-` l'alfabetiere, `dis-` gli album, `oca-` il gioco dell'oca); i disegni
+già presenti si riusano invece di scaricarne un doppione.
 
 ## Se aggiungi un disegno
 

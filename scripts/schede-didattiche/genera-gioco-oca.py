@@ -81,9 +81,11 @@ celle = "\n".join(cella(*c) for c in CASELLE)
 
 carte_imp = "".join(
     f'<div class="oca-carta oca-carta-imp"><span class="oca-carta-tipo">Imprevisto</span>'
-    f'<p class="oca-carta-fatto">{html.escape(f)}</p>'
+    f'<div class="oca-carta-corpo">'
+    f'<img class="oca-carta-fig" src="/pittogrammi/arasaac-bn/{img}.png" alt="{html.escape(desc, quote=True)}">'
+    f'<p class="oca-carta-fatto">{html.escape(f)}</p></div>'
     f'<p class="oca-carta-effetto">{html.escape(e)}</p></div>\n'
-    for f, e in IMPREVISTI)
+    for f, e, img, desc in IMPREVISTI)
 
 carte_eme = "".join(
     f'<div class="oca-carta oca-carta-eme"><span class="oca-carta-tipo">Emergenza</span>'
@@ -171,7 +173,11 @@ doc = f"""<!DOCTYPE html>
       letter-spacing: 0.1em; text-transform: uppercase; }}
     .oca .oca-carta-imp .oca-carta-tipo {{ color: #b45309; }}
     .oca .oca-carta-eme .oca-carta-tipo {{ color: #c1121f; }}
-    .oca .oca-carta-fatto {{ font-size: 9.5px; line-height: 1.32; margin: 1.4mm 0 0; flex: 1; }}
+    .oca .oca-carta-corpo {{ display: flex; flex-direction: column; align-items: center; text-align: center;
+      gap: 1.4mm; flex: 1; margin: 1.4mm 0 0; }}
+    .oca .oca-carta-fig {{ width: 21mm; height: 21mm; object-fit: contain; flex: none; }}
+    .oca .oca-carta-fatto {{ font-size: 9.5px; line-height: 1.32; margin: 0; }}
+    .oca .oca-carta-eme .oca-carta-fatto {{ margin: 1.4mm 0 0; }}
     .oca .oca-carta-effetto {{ font-size: 9px; line-height: 1.3; margin: 1.4mm 0 0;
       border-top: 1px solid #c6d0da; padding-top: 1.2mm; font-weight: 700; color: #003366; }}
     .oca .oca-carta-sol {{ font-size: 8.4px; line-height: 1.3; margin: 1.4mm 0 0;
@@ -260,7 +266,8 @@ doc = f"""<!DOCTYPE html>
       <p class="oca-consegna"><strong>Foglio 2 — gli imprevisti.</strong> Ritaglia le carte e mettile in un mazzo, a faccia in giù, accanto al tabellone. Sono le cose che capitano: alcune aiutano, altre rallentano.</p>
       <div class="oca-mazzo">
 {carte_imp}      </div>
-      <p class="nota-adulto">Per l'adulto: il ritaglio è a carico tuo con i più piccoli; dalla terza primaria i bambini possono ritagliare da seduti, sorvegliati, con forbici a punta arrotondata. Le carte si leggono ad alta voce: è lì che il gioco insegna, non nel punteggio.</p>
+      <p class="nota-adulto">Per l'adulto: il ritaglio è a carico tuo con i più piccoli; dalla terza primaria i bambini possono ritagliare da seduti, sorvegliati, con forbici a punta arrotondata. Le carte si leggono ad alta voce: è lì che il gioco insegna, non nel punteggio. Il disegno su ogni carta serve a chi ancora non legge: prima di leggere, chiedi che cosa vede.</p>
+      <p class="oca-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questa scheda eredita la stessa licenza.</p>
       <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
         <span>OCA-PC · Foglio 2 di 4 · Rev. 1 · {REV}</span></footer>
     </div>
