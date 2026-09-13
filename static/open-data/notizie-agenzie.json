@@ -5,11 +5,65 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-13T19:50:36+00:00",
+  "generato": "2026-09-13T22:12:10+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-13T22:00:18+00:00",
+   "fonte": "ANSA",
+   "titolo": "Tennis, Zverev batte Shelton e vince lo US Open",
+   "url": "https://www.ansa.it/sito/notizie/sport/tennis/2026/09/14/tennis-zverev-batte-shelton-e-vince-lo-us-open_9a895769-5146-4e42-84cf-b6e252fab16a.html"
+  },
+  {
+   "data": "2026-09-13T21:51:27+00:00",
+   "fonte": "ANSA",
+   "titolo": "Testa a testa in Svezia, a metà dello spoglio si riduce la forchetta fra i due blocchi",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/13/testa-a-testa-in-svezia-a-meta-dello-spoglio-si-riduce-la-forchetta-fra-i-due_67ebcf47-ae70-4098-a85e-39d37a0324f1.html"
+  },
+  {
+   "data": "2026-09-13T21:20:07+00:00",
+   "fonte": "ANSA",
+   "titolo": "Serie A: Juventus ko con il Sassuolo, il Napoli riparte con Lobotka",
+   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/13/serie-a-juventus-ko-con-il-sassuolo-il-napoli-riparte-con-lobotka_d6d59a7d-644d-46a8-a2c8-a5d8a6cb5b8c.html"
+  },
+  {
+   "data": "2026-09-13T21:06:35+00:00",
+   "fonte": "ANSA",
+   "titolo": "Gen Z, lo \"stare bene\" come priorità generazionale",
+   "url": "https://www.ansa.it/canale_lifestyle/notizie/teen/2026/09/12/gen-z-lo-stare-bene-come-priorita-generazionale_41bb03e5-4409-4af7-921f-445fe76aae4d.html"
+  },
+  {
+   "data": "2026-09-13T20:29:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Morto Sean Michieli, il pescatore di 25 anni coinvolto nell'incidente in barca a Venezia. Ancora dispersa la moglie",
+   "url": "https://www.adnkronos.com/cronaca/morto-sean-michieli-incidente-venezia-moglie_3nO4smcJTarphiRcRdpQuE"
+  },
+  {
+   "data": "2026-09-13T20:17:05+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "La classifica dei paesi con il più alto consumo di birra pro capite: vince la Repubblica Ceca, Italia via dalla top 20",
+   "url": "https://www.adnkronos.com/internazionale/esteri/classifica-paesi-consumo-birra-pro-capite_5Hqmhp4F2ytCa9nQlXnTuI"
+  },
+  {
+   "data": "2026-09-13T20:07:56+00:00",
+   "fonte": "ANSA",
+   "titolo": "Scontro in laguna a Venezia, lui muore e la moglie è dispersa",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/scontro-in-laguna-a-venezia-lui-muore-e-la-moglie-e-dispersa_d6d490b3-4021-4671-904b-7ff93dc695c3.html"
+  },
+  {
+   "data": "2026-09-13T20:02:00+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Incidente a Venezia, morto il pescatore 25enne",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/incidente-a-venezia-morto-il-pescatore-25enne_ff72bee5-1a93-4336-8a84-7f4abb2e5527.html"
+  },
+  {
+   "data": "2026-09-13T19:50:20+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Gualtieri a sorpresa sul palco con Jovanotti per un duetto a Circo Massimo",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/gualtieri-a-sorpresa-sul-palco-con-jovanotti-per-un-duetto-a-circo-massimo_441247a0-860a-4f0e-80fe-ebe1f73a1382.html"
+  },
   {
    "data": "2026-09-13T19:37:42+00:00",
    "fonte": "ANSA CRONACA",
@@ -29,22 +83,10 @@
    "url": "https://www.ansa.it/sito/notizie/politica/2026/09/13/schlein-noi-pronti-per-il-voto-prima-e-meglio-e.-se-faremo-le-primarie-le-vinceremo_e7972103-a0cf-45f2-a74a-72157aa676f0.html"
   },
   {
-   "data": "2026-09-13T19:23:51+00:00",
-   "fonte": "ANSA",
-   "titolo": "Serie A: in campo Sassuolo-Juventus 0-0 DIRETTA",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/13/serie-a-in-campo-sassuolo-juventus-diretta_48fdc61e-1f1c-41f6-975e-ca747d608379.html"
-  },
-  {
    "data": "2026-09-13T19:14:23+00:00",
    "fonte": "ANSA",
    "titolo": "Il governo punta su ceto medio e giovani, l'ecobonus sale al 65%",
    "url": "https://www.ansa.it/sito/notizie/economia/2026/09/13/il-governo-punta-su-ceto-medio-e-giovani-lecobonus-sale-al-65_e126b138-8e64-45fd-a13e-94588b25e07e.html"
-  },
-  {
-   "data": "2026-09-13T19:13:20+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il centrosinistra verso la vittoria in Svezia, arretra l'ultradestra di Akesson",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/13/il-centrosinistra-verso-la-vittoria-in-svezia-arretra-lultradestra-di-akesson_67ebcf47-ae70-4098-a85e-39d37a0324f1.html"
   },
   {
    "data": "2026-09-13T19:06:16+00:00",
@@ -101,15 +143,9 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/13/attacco-russo-al-confine-con-la-polonia-fermato-un-treno-con-consiglieri-di-sicurezza_dbc566df-ea39-4fa7-8f16-24d21a994204.html"
   },
   {
-   "data": "2026-09-13T18:45:06+00:00",
-   "fonte": "ANSA",
-   "titolo": "Scontro in laguna a Venezia, lei dispersa e il marito in fin di vita",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/scontro-in-laguna-a-venezia-lei-dispersa-e-il-marito-in-fin-di-vita_d6d490b3-4021-4671-904b-7ff93dc695c3.html"
-  },
-  {
    "data": "2026-09-13T18:34:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Elezioni in Svezia, la coalizione di centro-sinistra avanti con il 51,3% dei voti: gli exit poll",
+   "titolo": "Elezioni Svezia, la coalizione di centro-sinistra avanti di un soffio: è testa a testa",
    "url": "https://www.adnkronos.com/internazionale/esteri/elezioni-svezia-exit-poll-centro-sinistra-vantaggio_14cYBUJO66ImHx5M8zune4"
   },
   {
@@ -117,12 +153,6 @@
    "fonte": "ANSA",
    "titolo": "Incidente e alcol test positivo, via la patente a Daniel Maldini",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/daniel-maldini-positivo-alletilometro-ritirata-la-patente-dopo-lincidente_2e4676f0-e731-4b9a-8e1c-062d050d418d.html"
-  },
-  {
-   "data": "2026-09-13T18:27:42+00:00",
-   "fonte": "ANSA",
-   "titolo": "Mostra di Venezia, il direttore Barbera: 'Il cinema italiano? Vanno rinnovati temi e linguaggi'",
-   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/13/mostra-di-venezia-il-direttore-barbera-il-cinema-italiano-vanno-rinnovati-temi-e-linguaggi_92a8d5a1-f954-440a-9eae-d221553e2812.html"
   },
   {
    "data": "2026-09-13T18:27:24+00:00",
@@ -139,14 +169,14 @@
   {
    "data": "2026-09-13T18:10:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Europei pallavolo, oggi Italia-Slovacchia: gli azzurri vincono il primo set 25-17 - Diretta",
-   "url": "https://www.adnkronos.com/sport/diretta-italia-slovacchia-oggi-europei-pallavolo-live-match-risultato-classifica_4BjLueq6F1n07cArLUUBlW"
+   "titolo": "Ragazza investita da un treno dell'Alta Velocità a Milano Lambrate: ritardi fino a 90 minuti",
+   "url": "https://www.adnkronos.com/cronaca/ragazza-investita-treno-milano-lambrate-ritardi_6tpiPJp89CDqqMfY3MELY0"
   },
   {
    "data": "2026-09-13T18:10:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Ragazza investita da un treno dell'Alta Velocità a Milano Lambrate: ritardi fino a 90 minuti",
-   "url": "https://www.adnkronos.com/cronaca/ragazza-investita-treno-milano-lambrate-ritardi_6tpiPJp89CDqqMfY3MELY0"
+   "titolo": "Europei pallavolo, Italia-Slovacchia 3-1: azzurri agli ottavi",
+   "url": "https://www.adnkronos.com/sport/diretta-italia-slovacchia-oggi-europei-pallavolo-live-match-risultato-classifica_4BjLueq6F1n07cArLUUBlW"
   },
   {
    "data": "2026-09-13T18:04:14+00:00",
@@ -159,36 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Attivisti di Avs picchiati a Venezia, verso il Daspo per gli influencer",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/attivisti-di-avs-picchiati-a-venezia-verso-il-daspo-per-gli-influencer_811eaae8-9573-429c-a4be-fdd01d29d769.html"
-  },
-  {
-   "data": "2026-09-13T17:50:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Serie A, oggi Sassuolo-Juventus 0-0 - Diretta",
-   "url": "https://www.adnkronos.com/sport/diretta-sassuolo-juve-oggi-serie-a-live-risultato-classifica_gGmo15Uem4I9XaxhXhtME"
-  },
-  {
-   "data": "2026-09-13T17:35:11+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Incendi sul Gargano, arrestato un volontario della protezione civile",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/incendi-sul-gargano-arrestato-un-volontario-della-protezione-civile_e3ea380b-a879-4ae8-86e2-fa37d35a74a0.html"
-  },
-  {
-   "data": "2026-09-13T17:34:41+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Pierluigi Diaco e Alessio Orsingher punti dalle vespe in casa, interviene il disinfestatore: \"Nido enorme\"",
-   "url": "https://www.adnkronos.com/spettacoli/diaco-orsingher-vespe-punture-daniel-palmieri_5vv47oZF3ghO8zzeKYY9k8"
-  },
-  {
-   "data": "2026-09-13T17:28:23+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Morte avvelenate, la prof amica di Di Vita sentita per quasi 4 ore",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/morte-avvelenate-la-prof-amica-di-di-vita-sentita-per-quasi-4-ore_b8dfe2ef-b1d2-448b-b515-fc299aae46f4.html"
-  },
-  {
-   "data": "2026-09-13T17:27:38+00:00",
-   "fonte": "ANSA",
-   "titolo": "71 candeline per Leone, il fratello: 'Non è crollato, lo aiuta l'umorismo'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/13/71-candeline-per-leone-il-fratello-non-e-crollato-lo-aiuta-lumorismo_2a5b8ff7-29b6-4f70-b566-b10ae047fec4.html"
   }
  ]
 }
