@@ -17,9 +17,10 @@ indicizzata senza che nessuno debba ricordarsi di marcarla.
 
 Cosa fa su ogni file:
   1. aggiunge `data-pagefind-body` al <body>, se non c'è già un marcatore;
-  2. aggiunge `data-pagefind-ignore` alle barre strumenti non stampabili
-     (.no-print, .scheda-toolbar, .storia-toolbar) e ai contenitori che il
-     chrome riempie via JavaScript, perché non finiscano negli estratti.
+  2. aggiunge `data-pagefind-ignore` agli elementi di servizio non
+     stampabili (.no-print, .scheda-toolbar, .storia-toolbar), di qualunque
+     tag — contenitori ma anche i singoli pulsanti «Stampa» e i link
+     «Indice» — perché non finiscano fra i risultati e negli estratti.
 
 Uso:
     python3 scripts/prepara-statiche-per-pagefind.py [--dry-run]
@@ -50,8 +51,12 @@ BODY_RE = re.compile(r'<body(?![^>]*\bdata-pagefind-body\b)([^>]*)>', re.IGNOREC
 HA_MARCATORE_RE = re.compile(r'\bdata-pagefind-body\b', re.IGNORECASE)
 
 # Elementi di servizio da escludere dagli estratti della ricerca.
+# Non solo i contenitori: nelle schede e nei kit i comandi sono spesso
+# <button class="btn-stampa no-print"> e <a class="btn-indice no-print">
+# come elementi a sé, e senza il marcatore finirebbero fra i risultati
+# (una ricerca di «Stampa A4» o «Indice» pescherebbe quelli).
 CLASSI_DA_IGNORARE = ('no-print', 'scheda-toolbar', 'storia-toolbar')
-APERTURA_RE = re.compile(r'<(div|nav|header|footer|section|aside)\b([^>]*)>', re.IGNORECASE)
+APERTURA_RE = re.compile(r'<([a-zA-Z][a-zA-Z0-9-]*)\b([^>]*)>')
 
 
 def file_da_trattare():
@@ -72,12 +77,15 @@ def file_da_trattare():
 
 
 def ignora_barre(testo: str) -> tuple[str, int]:
-    """Marca con data-pagefind-ignore le barre strumenti di servizio."""
+    """Marca con data-pagefind-ignore gli elementi di servizio, di qualunque
+    tag: contenitori, ma anche i singoli pulsanti e link di comando."""
     contatore = 0
 
     def sostituisci(m):
         nonlocal contatore
         tag, attributi = m.group(1), m.group(2)
+        if attributi.endswith('/'):   # elemento auto-chiuso: niente da marcare
+            return m.group(0)
         if 'data-pagefind-ignore' in attributi.lower():
             return m.group(0)
         classe = re.search(r'class=["\']([^"\']*)["\']', attributi, re.IGNORECASE)
