@@ -138,5 +138,7 @@ Risorse utili:
 - [Kit di emergenza](/rischi-prevenzione/kit-emergenza/) — tre kit: casa, auto, evacuazione
 - [Numeri utili](/numeri-utili/) — chi chiamare in caso di emergenza
 - [Cosa fare adesso](/cosa-fare-adesso/) — azioni rapide per ogni rischio
+- [Il patto con gli adulti](/formazione/schede-stampabili/oggetti-il-patto-con-gli-adulti-famiglia/) — oggetti sconosciuti e confezioni alterate: gli impegni degli adulti, da concordare in famiglia
+- [Guida per gli adulti — Oggetti sconosciuti](/formazione/schede-stampabili/oggetti-sconosciuti-guida-adulti/) — come proporre il percorso e cosa fare se il ritrovamento è reale
 - [Storie e racconti](/formazione/storie-e-racconti/) — letture per bambini
 - [Percorsi didattici](/formazione/percorsi-didattici/) — materiali per i docenti

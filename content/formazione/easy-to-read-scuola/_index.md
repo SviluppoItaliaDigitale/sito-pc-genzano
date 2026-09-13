@@ -190,6 +190,8 @@ Le schede possono essere usate in lezioni da 30-45 minuti e abbinate alle attivi
 - [Pittogrammi](/pittogrammi/) — catalogo dei pittogrammi
 - [Educazione civica](/formazione/educazione-civica/#inclusione-e-accessibilita) — inclusione e accessibilità
 - [Percorsi didattici pronti](/formazione/percorsi-didattici/) — attività per docenti
+- [Se non so che cosa è](/formazione/schede-stampabili/oggetti-se-non-so-che-cosa-e-facilitata/) — scheda facilitata: non tocco, mi allontano, avviso un adulto
+- [Una bevanda trovata](/formazione/schede-stampabili/oggetti-una-bevanda-trovata-facilitata/) — scheda facilitata: lasciare una bevanda sconosciuta e chiedere aiuto
 
 ## Per approfondire
 
