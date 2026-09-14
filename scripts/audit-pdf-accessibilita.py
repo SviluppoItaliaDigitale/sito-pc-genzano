@@ -31,7 +31,6 @@ Uso:
 
 from __future__ import annotations
 import argparse
-import subprocess
 import sys
 from pathlib import Path
 
@@ -127,19 +126,44 @@ def analizza_pdf(pdf_path: Path) -> dict:
                     lang_str = line.split("(", 1)[-1].split(")", 1)[0] if "(" in line else line.strip()
                     info["language"] = lang_str.strip("/").strip() or None
                     break
-            # Tagged: /MarkInfo<</Marked true>>
-            info["tagged"] = "/Marked true" in xref_str or "Marked true" in xref_str
-        # Searchable: usa pdftotext sulle prime 3 pagine
+            # Tagged secondo PDF/UA (ISO 14289-1): servono INSIEME l'albero dei
+            # tag (/StructTreeRoot) e la dichiarazione /MarkInfo<</Marked true>>.
+            # Il /MarkInfo può essere un riferimento indiretto (/MarkInfo 12 0 R):
+            # cercare la stringa "Marked true" dentro il catalog non lo vede e il
+            # documento risulta non taggato pur essendolo. È successo con due PDF
+            # nostri (il programma del Salone del libro e la delibera di
+            # costituzione del Gruppo), che la dichiarazione di accessibilità
+            # contava fra i non taggati: 44 invece di 42 (corretto il 14/09/2026).
+            albero = "/StructTreeRoot" in xref_str
+            marcato = False
+            for pezzo in xref_str.split("/MarkInfo")[1:]:
+                testa = pezzo.lstrip()
+                if testa.startswith("<<"):
+                    marcato = "Marked true" in testa.split(">>", 1)[0]
+                else:  # riferimento indiretto: /MarkInfo 12 0 R
+                    numero = testa.split()
+                    if numero and numero[0].isdigit():
+                        try:
+                            marcato = "Marked true" in doc.xref_object(int(numero[0]))
+                        except Exception:  # noqa: BLE001
+                            marcato = False
+                break
+            info["tagged"] = albero and marcato
+        # Searchable: il testo delle prime 3 pagine lo estrae PyMuPDF, che ha già
+        # il documento aperto. Prima si invocava `pdftotext` di poppler: dove il
+        # binario manca — questo container, per esempio — tutti i PDF nostri
+        # risultavano in ERRORE e la tabella pubblicata diceva il falso
+        # (audit 14/09/2026). Un controllo che dipende da un programma esterno
+        # non installato non è un controllo.
         try:
-            r = subprocess.run(
-                ["pdftotext", "-l", "3", str(pdf_path), "-"],
-                capture_output=True, text=True, timeout=30,
-            )
-            text_len = len(r.stdout.strip())
+            estratto = []
+            for n in range(min(3, doc.page_count)):
+                estratto.append(doc[n].get_text())
+            text_len = len("".join(estratto).strip())
             info["searchable"] = text_len >= 100
             info["text_chars_sample"] = text_len
         except Exception as e:
-            info["errors"].append(f"pdftotext failed: {e}")
+            info["errors"].append(f"estrazione testo fallita: {e}")
         doc.close()
     except Exception as e:
         info["errors"].append(f"open failed: {e}")
