@@ -5,11 +5,35 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-14T00:13:01+00:00",
+  "generato": "2026-09-14T04:58:22+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-14T04:44:34+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Zverev vince US Open, caccia a Sinner nel ranking Atp: come cambia la classifica",
+   "url": "https://www.adnkronos.com/sport/sinner-zverev-ranking-atp-us-open_6bfELHP0fMeuq01SuPiA2Y"
+  },
+  {
+   "data": "2026-09-14T04:07:43+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "L'addio a Emma Bonino, oggi dalle 10 alle 19 riapre la camera ardente in Campidoglio",
+   "url": "https://www.adnkronos.com/politica/emma-bonino-camera-ardente-secondo-giorno-aggiornamenti_5kMxnBEWtR8vIYjWbx9e4K"
+  },
+  {
+   "data": "2026-09-14T04:07:04+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Conte: \"M5S non firma programma con armi a Ucraina\". Schlein: \"Sostegno a Kiev\"",
+   "url": "https://www.adnkronos.com/politica/ucraina-pd-m5s-schlein-conte_2YWhGTLOcU99VTzQ8tKeBm"
+  },
+  {
+   "data": "2026-09-14T04:06:19+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Il Regno Unito scricchiola? Oggi il vertice tra Scozia, Irlanda del Nord e Galles: sul tavolo indipendenza e rapporti con Ue",
+   "url": "https://www.adnkronos.com/internazionale/esteri/regno-unito-vertice-scozia-irlanda-galles_8ydtWpOMa4EgkE5gvumPO"
+  },
   {
    "data": "2026-09-13T22:41:58+00:00",
    "fonte": "ANSA",
@@ -29,16 +53,16 @@
    "url": "https://www.adnkronos.com/internazionale/esteri/iran-usa-accordo-pace-sabotaggio_5YwjY9K4STc1pyamCr06Uc"
   },
   {
-   "data": "2026-09-13T22:09:58+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina, raid Russia al confine con Polonia. Kiev e Varsavia: \"Escalation\". Trump frena Zelensky: \"Non attaccare le raffinerie\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-attacco-confine-polonia_4yE2604UnGzAMQVS2QigLi"
-  },
-  {
    "data": "2026-09-13T22:09:21+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "\"Il Var ha sbagliato\", Manchester City vince il derby con gol irregolare",
    "url": "https://www.adnkronos.com/sport/haaland-gol-fuorigioco-manchester-city_6HYWOOKiGxaUVqYBgFp6Be"
+  },
+  {
+   "data": "2026-09-13T22:09:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina, raid Russia al confine con Polonia. Kiev e Varsavia: \"Escalation\". Trump frena Zelensky: \"Non attaccare le raffinerie\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-attacco-confine-polonia_4yE2604UnGzAMQVS2QigLi"
   },
   {
    "data": "2026-09-13T21:51:27+00:00",
@@ -165,30 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Raid russo vicino alla Polonia, 'nel mirino un treno per Varsavia'",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/13/attacco-russo-al-confine-con-la-polonia-fermato-un-treno-con-consiglieri-di-sicurezza_dbc566df-ea39-4fa7-8f16-24d21a994204.html"
-  },
-  {
-   "data": "2026-09-13T18:34:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Elezioni Svezia, la coalizione di centro-sinistra avanti di un soffio: è testa a testa",
-   "url": "https://www.adnkronos.com/internazionale/esteri/elezioni-svezia-exit-poll-centro-sinistra-vantaggio_14cYBUJO66ImHx5M8zune4"
-  },
-  {
-   "data": "2026-09-13T18:32:09+00:00",
-   "fonte": "ANSA",
-   "titolo": "Incidente e alcol test positivo, via la patente a Daniel Maldini",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/daniel-maldini-positivo-alletilometro-ritirata-la-patente-dopo-lincidente_2e4676f0-e731-4b9a-8e1c-062d050d418d.html"
-  },
-  {
-   "data": "2026-09-13T18:27:24+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ranucci: 'Mai avuto interessi negli affari di Lavitola'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/ranucci-mai-avuto-interessi-negli-affari-di-lavitola_eb267c22-1883-4975-92be-6c89aebe7f66.html"
-  },
-  {
-   "data": "2026-09-13T18:11:51+00:00",
-   "fonte": "ANSA",
-   "titolo": "F1: Antonelli vola anche a Madrid e allunga per il Mondiale",
-   "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/09/13/f1-antonelli-vola-anche-a-madrid-e-allunga-per-il-mondiale_41f6549b-d709-404c-8233-846ee8a569b3.html"
   }
  ]
 }
