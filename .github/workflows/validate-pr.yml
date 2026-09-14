@@ -53,6 +53,14 @@ jobs:
         # erano visti da nessun controllo. lychee non segue i frammenti.
         run: python3 scripts/check-ancore.py public --base-path ""
 
+      - name: "🔗 URL preferito sulle pagine statiche"
+        # Audit esterno 14/09/2026: le pagine autonome di static/ (schede, giochi,
+        # kit, storie) non dichiaravano il canonical, quindi produzione Aruba e
+        # copia GitHub Pages si presentavano ai motori come pagine distinte. Il
+        # controllo vale soprattutto per le FAMIGLIE nuove: chi ne aggiunge una
+        # senza elencarla nello script se ne accorge qui, non fra sei mesi.
+        run: python3 scripts/aggiungi-canonical-statiche.py --check
+
       - name: "📊 Statistiche build"
         run: |
           echo "Pagine generate: $(find public -name '*.html' | wc -l)"

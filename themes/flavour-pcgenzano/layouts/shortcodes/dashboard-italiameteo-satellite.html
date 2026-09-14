@@ -7,7 +7,12 @@
 {{ $leafletCSS := "vendor/leaflet/leaflet.css" | relURL }}
 {{ $leafletJS  := "vendor/leaflet/leaflet.js"  | relURL }}
 
-<link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">
+{{/* Leaflet una sola volta per pagina: il cruscotto monta nove schede con la mappa e
+     fino al 14/09/2026 ognuna ripeteva link e script, dieci copie in una pagina sola.
+     Con la cache disattivata (rule 05) erano dieci scaricamenti veri a ogni visita.
+     La guardia è la stessa di pc-fetch-cache.js; l'init inline di ciascuna scheda resta
+     al suo posto e trova `L` già definito, perché gli script classici eseguono in ordine. */}}
+{{ if not (.Page.Store.Get "leafletCss") }}{{ .Page.Store.Set "leafletCss" true }}<link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">{{ end }}
 <div class="dis-sat" aria-labelledby="dis-sat-tit">
   <h2 id="dis-sat-tit" class="h3 mt-4 mb-3" style="color:#003366">
     <i class="bi bi-globe-europe-africa me-2" aria-hidden="true"></i>Satellite ItaliaMeteo (Meteosat · EUMETSAT)
@@ -40,7 +45,7 @@
 
   <p class="small text-muted mt-2 mb-0">{{ partial "fonte-badge.html" "ufficiale" }}<i class="bi bi-info-circle" aria-hidden="true"></i> <strong>Colore (1&nbsp;km)</strong>: GeoColour, giorno e notte. <strong>Alta risoluzione (500&nbsp;m)</strong>: canale visibile, bianco e nero, solo di giorno. Fonte immagini: <a href="https://www.eumetsat.int/" target="_blank" rel="noopener noreferrer">EUMETSAT</a> (Meteosat di nuova generazione), distribuite in Italia dall'<a href="https://www.agenziaitaliameteo.it/meteo/dati-osservati/satelliti/" target="_blank" rel="noopener noreferrer">Agenzia ItaliaMeteo</a> — base <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap</a> / © CARTO. In emergenza chiama il <a href="tel:112">112</a>.</p>
 
-  <script src="{{ $leafletJS }}" crossorigin=""></script>
+  {{ if not (.Page.Store.Get "leafletJs") }}{{ .Page.Store.Set "leafletJs" true }}<script src="{{ $leafletJS }}" crossorigin=""></script>{{ end }}
   <script>
   (function(){
     if (typeof L === 'undefined') return;

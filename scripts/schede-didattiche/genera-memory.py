@@ -85,6 +85,8 @@ doc = f"""<!DOCTYPE html>
   <title>Scheda stampabile: Memory della protezione civile — 20 tessere da ritagliare</title>
   <meta name="description" content="Gioco del memory da stampare e ritagliare: 20 tessere tutte diverse, che si abbinano a due a due, su mezzi e oggetti della protezione civile. Con il retro da incollare e le regole del gioco.">
   <meta name="robots" content="index, follow">
+  <!-- URL preferito: la copia su GitHub Pages rimanda alla produzione. -->
+  <link rel="canonical" href="https://www.protezionecivilegenzano.it/formazione/schede-stampabili/memory-protezione-civile-infanzia/">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
   <style>

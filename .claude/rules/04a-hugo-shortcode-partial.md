@@ -146,6 +146,16 @@ CSS sezione **TABELLE DI COMUNICAZIONE CAA v1.0** in `custom.css`: `.caa-grid` �
 
 🔴 **Filtro eventi italiani (`isItaliano`) in `dashboard-terremoti.html`**: l'API INGV chiude il `place` con la provincia tra parentesi, a volte come **sigla** `(CS)`, a volte come **nome esteso** `(Cosenza)`/`(Reggio Calabria)` (tipico degli eventi offshore). Il filtro accetta entrambi (set `PROVINCE_IT` sigle + `PROVINCE_NOMI` nomi estesi) + mari/coste italiane. **Non restringere a sole sigle**: il 1° giugno 2026 un M6.2 "Costa Calabra nord-occidentale (Cosenza)" non compariva perché il filtro accettava solo `(CS)`.
 
+## Leaflet una sola volta per pagina (settembre 2026)
+
+I quattordici shortcode che montano una mappa (`dashboard-terremoti`, `dashboard-incendi`, `dashboard-satellite`, `dashboard-cams`, i quattro `dashboard-italiameteo-*`, `mappa-aree`, `mappa-punto`, `mappa-territorio`, `radar-dpc`, `scheda-terremoto`) includono `vendor/leaflet/leaflet.css` e `leaflet.js` dietro la stessa guardia di `pc-fetch-cache.js`:
+
+```go-html-template
+{{ if not (.Page.Store.Get "leafletJs") }}{{ .Page.Store.Set "leafletJs" true }}<script src="{{ $leafletJS }}" crossorigin=""></script>{{ end }}
+```
+
+Fino al 14/09/2026 ogni scheda ripeteva link e script: il cruscotto ne conteneva **dieci copie**, e poiché la cache è disattivata (rule 05 — istruzione dell'utente del 12/09/2026) erano dieci scaricamenti veri a ogni visita. L'init inline di ciascuna scheda resta al suo posto e trova `L` già definito, perché gli script classici eseguono in ordine di documento. 🔴 **Un nuovo shortcode con mappa nasce con la guardia**: senza, il conteggio riparte. Verifica: `grep -c '<script src=[^>]*leaflet' public/cruscotto/index.html` deve dare 1.
+
 ## Cruscotto — fallback "ultimo dato valido" (`pc-fetch-cache.js`, luglio 2026)
 
 Le 6 schede dati del cruscotto che fanno fetch JSON a runtime (`dashboard-terremoti`, `dashboard-vulcani`, `dashboard-aria`, `dashboard-mare`, `dashboard-ems`, `dashboard-italiameteo-osservazioni`) usano l'helper **`static/js/pc-fetch-cache.js`** (`window.pcCache`: `salva`/`leggi`/`frase`): a ogni fetch riuscito il payload è salvato in `localStorage` (`pcgz-cache:<chiave>`); se la fonte esterna non risponde (tipico durante una crisi su vasta scala), la scheda mostra **l'ultimo dato valido** (max 48h, 72h per EMS) con la riga di stato onesta *"Fonte al momento non raggiungibile — dati dell'ultimo aggiornamento riuscito: GG/MM alle HH:MM"* — mai spacciato per attuale (rule 06) — e continua a ritentare. L'helper è incluso una sola volta per pagina via guardia `.Page.Store "pcCacheJs"` in testa a ciascuno shortcode; ogni uso è protetto da `if(window.pcCache)` quindi le schede funzionano anche senza helper. Le schede a sola immagine (radar/satellite/ECMWF/incendi/CAMS) sono escluse: senza la fonte non c'è immagine da mostrare e i WebP ECMWF sono già self-hosted. Nato dall'audit esterno del 10/07/2026 (raccomandazione "caching aggressivo dei dati con fallback locale").

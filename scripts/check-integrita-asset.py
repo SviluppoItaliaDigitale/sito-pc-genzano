@@ -14,8 +14,9 @@ Controlli:
   - ZIP con testzip() pulito → errore;
   - JSON parsabili → errore;
   - PDF apribili con pypdf (se installato) → errore se illeggibili; in più
-    inventario informativo: pagine, struttura di tag (/StructTreeRoot,
-    prerequisito PDF/UA), testo estraibile nelle prime pagine.
+    inventario informativo: pagine, tag PDF/UA (albero /StructTreeRoot +
+    dichiarazione /Marked true, servono entrambi) e testo estraibile nelle
+    prime pagine, con la stessa soglia di `audit-pdf-accessibilita.py`.
 
 Uso:
   python3 scripts/check-integrita-asset.py [--radice static] [--pdf-report FILE.md]
@@ -62,14 +63,29 @@ def controlla_pdf(path: Path) -> tuple[str | None, dict | None]:
         reader = PdfReader(str(path))
         n = len(reader.pages)
         radice = reader.trailer["/Root"]
-        taggato = "/StructTreeRoot" in radice
+        # PDF/UA (ISO 14289-1) chiede DUE cose insieme: l'albero dei tag
+        # (/StructTreeRoot) e la dichiarazione che il contenuto è marcato
+        # (/MarkInfo << /Marked true >>). Contarne una sola dà un numero più
+        # generoso del vero: al 14/09/2026 tre PDF del sito hanno l'albero ma
+        # non la dichiarazione, e uno screen reader che si fida di /Marked li
+        # legge come non strutturati. Il criterio è lo stesso di
+        # `audit-pdf-accessibilita.py`, così i due controlli non danno due
+        # numeri diversi sugli stessi file.
+        mark = radice.get("/MarkInfo")
+        try:
+            marcato = bool(mark.get_object().get("/Marked")) if mark is not None else False
+        except Exception:  # noqa: BLE001
+            marcato = False
+        taggato = "/StructTreeRoot" in radice and marcato
         testo = 0
         for pagina in reader.pages[:3]:
             try:
                 testo += len((pagina.extract_text() or "").strip())
             except Exception:  # noqa: BLE001
                 pass
-        return None, {"pagine": n, "tag": taggato, "testo": testo > 0}
+        # Soglia: poche decine di caratteri sono intestazioni o filigrane, non
+        # un livello testuale leggibile. Stessa soglia dell'audit dedicato.
+        return None, {"pagine": n, "tag": taggato, "testo": testo >= 100}
     except Exception as e:  # noqa: BLE001
         return f"PDF non leggibile ({e.__class__.__name__}: {e})", None
 

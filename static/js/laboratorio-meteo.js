@@ -78,8 +78,16 @@
     var v = VARIABILI[varKey];
     // Per periodi recenti (inizio entro ~90 gg) uso l'endpoint forecast, che ha i dati
     // fino a ieri; per le serie storiche lunghe uso l'archivio ERA5 (latenza ~5 gg).
+    // Sono due cose diverse — rianalisi contro modello di previsione ad alta
+    // risoluzione — e chi legge il grafico deve sapere quale sta guardando: fino
+    // al 14/09/2026 la pagina scriveva "ERA5" anche quando i dati arrivavano dal
+    // forecast. Per un confronto climatico su più decenni va usato ERA5 e basta.
     var limite = ggFa(90);
-    var endpoint = (new Date(da) >= limite) ? FORECAST : ARCHIVE;
+    var usaForecast = new Date(da) >= limite;
+    var endpoint = usaForecast ? FORECAST : ARCHIVE;
+    var fonte = usaForecast
+      ? 'Open-Meteo, modello di previsione ad alta risoluzione (serie recente, non rianalisi ERA5)'
+      : 'Rianalisi ERA5 via Open-Meteo';
     var url = endpoint + '?latitude=' + luogo.lat + '&longitude=' + luogo.lon +
       '&start_date=' + da + '&end_date=' + a +
       '&daily=' + v.daily.join(',') + '&timezone=Europe%2FRome';
@@ -100,7 +108,7 @@
       var dati = {
         titolo: v.etichetta + ' a ' + luogo.nome,
         sottotitolo: 'Dal ' + fmtData(da) + ' al ' + fmtData(a),
-        tipo: v.tipo, unita: v.unita,
+        tipo: v.tipo, unita: v.unita, fonte: fonte,
         x: d.time,
         serie: v.serie.map(function (s) {
           return { nome: s.nome, colore: s.colore, tratto: s.tratto, valori: d[s.campo] || [] };
@@ -121,6 +129,11 @@
     ultimoDati = dati;
     $('lab-output').hidden = false;
     $('lab-grafico-titolo').textContent = dati.titolo + (dati.sottotitolo ? ' — ' + dati.sottotitolo : '');
+    var fEl = $('lab-fonte-serie');
+    if (fEl) {
+      if (dati.fonte) { fEl.textContent = 'Fonte di questa serie: ' + dati.fonte + '.'; fEl.hidden = false; }
+      else { fEl.hidden = true; }
+    }
     var box = $('lab-grafico');
     box.textContent = '';
     var r = (dati.tipo === 'bar') ? svgBarre(dati) : svgLinee(dati);

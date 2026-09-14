@@ -17,7 +17,7 @@
   </h2>
   <p class="mb-2">Pioggia rilevata in questo momento dalla rete radar nazionale del Dipartimento della Protezione Civile. È un dato <strong>indicativo</strong>: per le allerte valgono i bollettini ufficiali del <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Regionale del Lazio</a>.</p>
 
-  <link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">
+  {{ if not (.Page.Store.Get "leafletCss") }}{{ .Page.Store.Set "leafletCss" true }}<link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">{{ end }}
   <style>
   .radar-dpc-toolbar{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-bottom:.6rem}
   .radar-dpc-filter{display:inline-flex;align-items:center;gap:.4rem;border:2px solid #003366;background:#fff;color:#003366;padding:.4rem .85rem;border-radius:999px;font-size:.92rem;cursor:pointer;transition:all .15s}
@@ -64,7 +64,7 @@
 
   <p class="small text-muted mt-2 mb-0">{{ partial "fonte-badge.html" "ufficiale" }}<i class="bi bi-info-circle" aria-hidden="true"></i> Mosaico radar nazionale <strong>grezzo</strong>: ai bordi della copertura (per esempio sul mare presso la Sardegna) possono comparire echi non meteorologici. Per la versione validata e l'animazione apri il <a href="https://radar.protezionecivile.it/" target="_blank" rel="noopener noreferrer">radar ufficiale DPC</a>. Fonte: <a href="https://mappe.protezionecivile.gov.it/it/mappe-e-dashboard-rischi/piattaforma-radar/" target="_blank" rel="noopener noreferrer">Radar-DPC</a> © Dipartimento della Protezione Civile (WMTS open-data CC BY-SA) — base <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap</a>. In emergenza chiama il <a href="tel:112">112</a>.</p>
 
-  <script src="{{ $leafletJS }}" crossorigin=""></script>
+  {{ if not (.Page.Store.Get "leafletJs") }}{{ .Page.Store.Set "leafletJs" true }}<script src="{{ $leafletJS }}" crossorigin=""></script>{{ end }}
   <script>
   (function(){
     if (typeof L === 'undefined') return;

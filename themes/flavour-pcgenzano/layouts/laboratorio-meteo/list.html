@@ -79,6 +79,10 @@
         <figure class="lab-grafico-wrap" id="lab-grafico-wrap" hidden>
           <figcaption id="lab-grafico-titolo" class="lab-grafico-titolo"></figcaption>
           <div class="lab-grafico" id="lab-grafico"></div>
+          {{/* La provenienza della singola serie: per i periodi recenti i dati non
+               vengono dalla rianalisi ERA5 ma dal modello di previsione, e chi legge
+               il grafico deve saperlo (audit 14/09/2026). Lo riempie il JS. */}}
+          <p class="lab-fonte-serie small text-muted" id="lab-fonte-serie" hidden></p>
           <div class="lab-azioni" id="lab-azioni">
             <button type="button" class="btn btn-outline-primary btn-sm" id="lab-scarica-png">
               <i class="bi bi-image me-1" aria-hidden="true"></i>Scarica grafico (PNG)
@@ -119,6 +123,9 @@
       <p class="lab-fonte small text-muted mt-4">
         Fonte dati: rianalisi <strong>ERA5</strong> via <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a>
         (licenza CC BY 4.0), allineata ai dati del <a href="https://cds.climate.copernicus.eu/" target="_blank" rel="noopener noreferrer">Copernicus Climate Data Store</a>.
+        Per gli <strong>ultimi tre mesi</strong>, che la rianalisi non copre ancora, i dati arrivano invece dal modello di previsione
+        ad alta risoluzione di Open-Meteo: sotto ogni grafico è scritto quale delle due fonti stai guardando. Per confrontare
+        climi su più decenni usa periodi interamente coperti da ERA5, così la serie è omogenea.
         Per costruire il grafico in tempo reale, il tuo browser contatta direttamente <code>open-meteo.com</code>: nessun cookie, nessun tracciamento
         (vedi <a href="{{ "/privacy/" | relURL }}">Privacy</a>). Dati indicativi a scopo didattico.
       </p>

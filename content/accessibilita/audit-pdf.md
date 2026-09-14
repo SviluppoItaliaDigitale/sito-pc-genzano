@@ -4,7 +4,7 @@ description: "Stato di accessibilità (PDF/UA, ISO 14289-1) di tutti i documenti
 layout: "single"
 toc: false
 tts: true
-dataUltimaRevisione: "2026-05-28"
+dataUltimaRevisione: "2026-09-14"
 ---
 
 Pubblichiamo lo **stato di accessibilità di ogni PDF presente sul sito** in modo trasparente, come previsto dalla nostra [Dichiarazione di accessibilità](/accessibilita/) e dall'art. 3 della Legge Stanca (L. 4/2004).

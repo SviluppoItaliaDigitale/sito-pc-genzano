@@ -32,7 +32,7 @@
 
   <p class="small text-muted mt-3 mb-0">In emergenza chiama sempre il <strong><a href="tel:112">112</a></strong> (NUE). Il DAE va recuperato solo se vicino entro 1-2 minuti; altrimenti continua le compressioni toraciche (BLS).</p>
 {{ else }}
-  <link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">
+  {{ if not (.Page.Store.Get "leafletCss") }}{{ .Page.Store.Set "leafletCss" true }}<link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">{{ end }}
   <style>
   .mappa-territorio-toolbar{display:flex;flex-wrap:wrap;gap:0.5rem;align-items:center;margin-bottom:0.75rem}
   .mappa-territorio-filter{display:inline-flex;align-items:center;gap:0.4rem;border:2px solid transparent;background:#fff;padding:0.4rem 0.85rem;border-radius:999px;font-size:0.95rem;cursor:pointer;transition:all 0.15s}
@@ -69,7 +69,7 @@
 
   <p class="small text-muted mt-2 mb-0">Mappa: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a> — libreria <a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer">Leaflet</a> 1.9.4 self-hosted. Dati DAE conformi ai criteri <a href="https://www.ircouncil.it/" target="_blank" rel="noopener noreferrer">IRC</a> (L. 116/2021). Idranti coordinati con Comando VVF Roma.</p>
 
-  <script src="{{ $leafletJS }}" crossorigin=""></script>
+  {{ if not (.Page.Store.Get "leafletJs") }}{{ .Page.Store.Set "leafletJs" true }}<script src="{{ $leafletJS }}" crossorigin=""></script>{{ end }}
   <script id="dati-territorio" type="application/json">{{ dict "idranti" $idranti "dae" $dae | jsonify | safeJS }}</script>
   <script>
   (function(){

@@ -8,7 +8,7 @@
 {{ $leafletCSS := "vendor/leaflet/leaflet.css" | relURL }}
 {{ $leafletJS  := "vendor/leaflet/leaflet.js"  | relURL }}
 
-<link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">
+{{ if not (.Page.Store.Get "leafletCss") }}{{ .Page.Store.Set "leafletCss" true }}<link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">{{ end }}
 
 <style>
 .mappa-aree-wrapper{margin:1.5rem 0 2rem 0}
@@ -79,7 +79,7 @@
   <p class="small text-muted mt-2 mb-0">Mappa: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a> — libreria <a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer">Leaflet</a> 1.9.4 self-hosted.</p>
 </div>
 
-<script src="{{ $leafletJS }}" crossorigin=""></script>
+{{ if not (.Page.Store.Get "leafletJs") }}{{ .Page.Store.Set "leafletJs" true }}<script src="{{ $leafletJS }}" crossorigin=""></script>{{ end }}
 <script id="dati-aree-emergenza" type="application/json">{{ $aree | jsonify | safeJS }}</script>
 <script>
 (function(){

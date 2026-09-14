@@ -7542,6 +7542,18 @@ html.a11y-hide-images img.caa-cell-img { visibility: visible !important; }
 .mt-fase-gestione    { color: #7f1d1d; }  /* rosso scuro palette Emergenza */
 .mt-fase-superamento { color: #4338ca; }  /* indaco palette Aggiornamento */
 table.matrice-territorio th[scope="row"] { color: #003366; }
+/* Verifica più vecchia di 60 giorni: si dice, non si nasconde. Ambra scuro
+   #b45309 su bianco = 5,9:1, sopra il minimo AA anche a questa dimensione. */
+.mt-da-rinnovare {
+  display: inline-block;
+  margin-left: 0.35rem;
+  padding: 0.05rem 0.4rem;
+  border: 1px solid #b45309;
+  border-radius: 999px;
+  color: #b45309;
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
 @media (max-width: 576px) {
   .mt-fase { white-space: normal; }
 }

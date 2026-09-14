@@ -9,7 +9,7 @@
 {{- $leafletCSS := "vendor/leaflet/leaflet.css" | relURL -}}
 {{- $leafletJS  := "vendor/leaflet/leaflet.js"  | relURL -}}
 {{- $id := printf "mappa-punto-%s" (substr (md5 (printf "%s,%s" $lat $lon)) 0 8) -}}
-<link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">
+{{ if not (.Page.Store.Get "leafletCss") }}{{ .Page.Store.Set "leafletCss" true }}<link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">{{ end }}
 <style>
 .mappa-punto{height:380px;width:100%;border-radius:8px;border:2px solid #003366;box-shadow:0 4px 12px rgba(0,0,0,0.08);background:#eaeaea}
 @media (max-width:575px){.mappa-punto{height:300px}}
@@ -17,7 +17,7 @@
 </style>
 <div id="{{ $id }}" class="mappa-punto" role="application" aria-label="Mappa di {{ $label }} (OpenStreetMap)"></div>
 <p class="mappa-punto-credit">Mappa: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a> — Leaflet self-hosted. <a href="https://www.openstreetmap.org/?mlat={{ $lat }}&mlon={{ $lon }}#map={{ $zoom }}/{{ $lat }}/{{ $lon }}" target="_blank" rel="noopener noreferrer">Apri su OpenStreetMap</a></p>
-<script src="{{ $leafletJS }}" crossorigin=""></script>
+{{ if not (.Page.Store.Get "leafletJs") }}{{ .Page.Store.Set "leafletJs" true }}<script src="{{ $leafletJS }}" crossorigin=""></script>{{ end }}
 <script>
 (function(){
   var el=document.getElementById({{ $id | jsonify | safeJS }}); if(!el||typeof L==='undefined')return;

@@ -2040,3 +2040,6 @@ microsiemens
 mofeta
 submediterranea
 pseudocodice
+portapile
+potabilizzatore
+rasterizzano

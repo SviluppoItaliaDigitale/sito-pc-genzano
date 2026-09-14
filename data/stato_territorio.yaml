@@ -10,9 +10,11 @@
 #     Se ≠ verde la fase diventa "previsione" e la situazione è il titolo dell'allerta.
 #   - "incendi": data/allerta.json blocco rischio_incendi (bollettino AIB Zona 9),
 #     se presente; altrimenti valgono i campi statici della riga.
-# Le righe statiche vanno riverificate e ridatate quando lo stato cambia.
+# Le righe statiche vanno riverificate e ridatate quando lo stato cambia, e comunque
+# entro 60 giorni: oltre quella soglia lo shortcode le marca "verifica da rinnovare"
+# (una data di verifica vecchia accanto a un'affermazione sul presente non vale nulla).
 
-aggiornamento: "2026-07-05"
+aggiornamento: "2026-09-14"
 
 righe:
   - id: "meteo-idro"
@@ -28,8 +30,8 @@ righe:
     icona: "bi-fire"
     dinamico: "incendi"
     fase: "prevenzione"
-    stato: "Prevenzione stagionale rafforzata: campagna AIB regionale in corso, turni di avvistamento del Gruppo attivi sul territorio."
-    verificato: "2026-07-05"
+    stato: "Prevenzione stagionale: nel periodo di massima pericolosità il Centro Funzionale regionale pubblica ogni giorno il bollettino di pericolosità per la Zona 9 (Castelli Romani); quando indica un livello diverso da BASSO questa riga lo riporta da sola."
+    verificato: "2026-09-14"
     fonte_label: "Rischio incendi boschivi"
     fonte_url: "/rischi-prevenzione/rischio-incendio/"
 
@@ -38,7 +40,7 @@ righe:
     icona: "bi-activity"
     fase: "prevenzione"
     stato: "Prevenzione permanente: il momento di un terremoto non si può prevedere; si lavora su edifici, piani di emergenza e preparazione delle persone."
-    verificato: "2026-07-05"
+    verificato: "2026-09-14"
     fonte_label: "Rischio sismico"
     fonte_url: "/rischi-prevenzione/rischio-sismico/"
 
@@ -46,8 +48,8 @@ righe:
     rischio: "Vulcanico (Colli Albani)"
     icona: "bi-triangle"
     fase: "prevenzione"
-    stato: "Prevenzione permanente: il Vulcano Laziale è quiescente e monitorato in continuo dall'INGV; nessun segnale anomalo comunicato."
-    verificato: "2026-07-05"
+    stato: "Prevenzione permanente: il Vulcano Laziale è quiescente, non spento, e l'INGV lo monitora in continuo. Lo stato di attività aggiornato si legge sui comunicati dell'INGV."
+    verificato: "2026-09-14"
     fonte_label: "Il vulcanismo dei Colli Albani"
     fonte_url: "/conoscere/rischio-vulcanico-colli-albani/"
 
@@ -55,8 +57,8 @@ righe:
     rischio: "Ondate di calore"
     icona: "bi-thermometer-sun"
     fase: "prevenzione"
-    stato: "Prevenzione stagionale: misure estive di protezione dal caldo attive (giugno–settembre), attenzione alle persone fragili."
-    verificato: "2026-07-05"
+    stato: "Prevenzione stagionale: le misure estive di protezione dal caldo coprono il periodo giugno–settembre; l'attenzione alle persone fragili resta tutto l'anno, con caldo e con freddo."
+    verificato: "2026-09-14"
     fonte_label: "Ondate di calore"
     fonte_url: "/rischi-prevenzione/ondate-di-calore/"
 
@@ -64,7 +66,7 @@ righe:
     rischio: "Blackout e interruzione servizi"
     icona: "bi-lightning-charge"
     fase: "prevenzione"
-    stato: "Prevenzione permanente: preparazione delle famiglie e continuità dei servizi essenziali; nessuna interruzione in corso."
-    verificato: "2026-07-05"
+    stato: "Prevenzione permanente: preparazione delle famiglie e continuità dei servizi essenziali. Un'interruzione in corso non si legge qui: se riguarda il territorio compare nel banner di emergenza e nelle comunicazioni."
+    verificato: "2026-09-14"
     fonte_label: "Blackout"
     fonte_url: "/rischi-prevenzione/blackout/"

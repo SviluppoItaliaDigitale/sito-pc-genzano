@@ -1,10 +1,10 @@
-ultimo_audit: '2026-05-28'
-totale: 22
+ultimo_audit: '2026-09-14'
+totale: 51
 riepilogo:
   ACCESSIBILE: 2
-  PARZIALE: 8
-  NON_ACCESSIBILE: 0
-  TERZO: 12
+  PARZIALE: 15
+  NON_ACCESSIBILE: 18
+  TERZO: 16
   ERRORE: 0
 documenti:
 - path: /allegati/2026/2026-05-08-dpc-art-39-rimborsi-volontari-lavoratori-autonomi.pdf
@@ -20,6 +20,19 @@ documenti:
   origine: TERZO
   origine_descrizione: DPC / Dipartimento Protezione Civile
   verdict: TERZO
+- path: /allegati/2026/2026-06-26-venezuela-usgs-pager.pdf
+  file: 2026-06-26-venezuela-usgs-pager.pdf
+  size_kb: 2147.7
+  searchable: true
+  tagged: false
+  language: null
+  title: null
+  pages: 1
+  errors: []
+  text_chars_sample: 2561
+  origine: GRUPPO
+  origine_descrizione: Classificazione di default (assumiamo nostro produzione)
+  verdict: PARZIALE
 - path: /allegati/2026/determinazione-lazio-g05626-2026-campagna-comunicazione-pc.pdf
   file: determinazione-lazio-g05626-2026-campagna-comunicazione-pc.pdf
   size_kb: 306.8
@@ -29,7 +42,7 @@ documenti:
   title: null
   pages: 11
   errors: []
-  text_chars_sample: 7729
+  text_chars_sample: 7808
   origine: TERZO
   origine_descrizione: Regione Lazio (BURL, DGR, determine, regolamenti regionali)
   verdict: TERZO
@@ -42,7 +55,7 @@ documenti:
   title: null
   pages: 18
   errors: []
-  text_chars_sample: 6690
+  text_chars_sample: 6744
   origine: TERZO
   origine_descrizione: Regione Lazio (BURL, DGR, determine, regolamenti regionali)
   verdict: TERZO
@@ -55,7 +68,20 @@ documenti:
   title: null
   pages: 4
   errors: []
-  text_chars_sample: 5212
+  text_chars_sample: 5439
+  origine: TERZO
+  origine_descrizione: Comune di Genzano di Roma (ordinanze, delibere)
+  verdict: TERZO
+- path: /allegati/2026/ordinanza-sindacale-12-2026-coc-infiorata.pdf
+  file: ordinanza-sindacale-12-2026-coc-infiorata.pdf
+  size_kb: 85.6
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: null
+  pages: 3
+  errors: []
+  text_chars_sample: 5396
   origine: TERZO
   origine_descrizione: Comune di Genzano di Roma (ordinanze, delibere)
   verdict: TERZO
@@ -63,7 +89,7 @@ documenti:
   file: programma-talk-salone-del-libro-2026.pdf
   size_kb: 351.8
   searchable: false
-  tagged: false
+  tagged: true
   language: it-IT
   title: programma-talk-salone-del-libro-2026.pdf
   pages: 1
@@ -71,6 +97,32 @@ documenti:
   text_chars_sample: 5
   origine: TERZO
   origine_descrizione: Salone del Libro Torino
+  verdict: TERZO
+- path: /allegati/2026/raccomandazioni-aib-2026.pdf
+  file: raccomandazioni-aib-2026.pdf
+  size_kb: 167.9
+  searchable: true
+  tagged: false
+  language: null
+  title: null
+  pages: 4
+  errors: []
+  text_chars_sample: 27760
+  origine: GRUPPO
+  origine_descrizione: Classificazione di default (assumiamo nostro produzione)
+  verdict: PARZIALE
+- path: /allegati/2026/regione-lazio-adempimenti-aib-2026.pdf
+  file: regione-lazio-adempimenti-aib-2026.pdf
+  size_kb: 210.7
+  searchable: true
+  tagged: true
+  language: it
+  title: null
+  pages: 3
+  errors: []
+  text_chars_sample: 6419
+  origine: TERZO
+  origine_descrizione: Regione Lazio (BURL, DGR, determine, regolamenti regionali)
   verdict: TERZO
 - path: /allegati/2026/regolamento-regionale-lazio-4-2026-safor-prociv.pdf
   file: regolamento-regionale-lazio-4-2026-safor-prociv.pdf
@@ -81,10 +133,36 @@ documenti:
   title: null
   pages: 7
   errors: []
-  text_chars_sample: 6458
+  text_chars_sample: 6577
   origine: TERZO
   origine_descrizione: Regione Lazio (BURL, DGR, determine, regolamenti regionali)
   verdict: TERZO
+- path: /allegati/2026/volantino-116117-cure-non-urgenti-regione-lazio.pdf
+  file: volantino-116117-cure-non-urgenti-regione-lazio.pdf
+  size_kb: 158.2
+  searchable: true
+  tagged: false
+  language: null
+  title: NUMERO_EUROPEO_22_11_24_PER_STAMPA_BUTTA
+  pages: 2
+  errors: []
+  text_chars_sample: 635
+  origine: TERZO
+  origine_descrizione: Regione Lazio (BURL, DGR, determine, regolamenti regionali)
+  verdict: TERZO
+- path: /area-download/normativa/Ordinanza_Sindacale_AIB_2026.pdf
+  file: Ordinanza_Sindacale_AIB_2026.pdf
+  size_kb: 183.6
+  searchable: true
+  tagged: false
+  language: null
+  title: ord_00014_17-06-2026.pdf
+  pages: 9
+  errors: []
+  text_chars_sample: 5760
+  origine: GRUPPO
+  origine_descrizione: Classificazione di default (assumiamo nostro produzione)
+  verdict: PARZIALE
 - path: /manuali/Caritas_Banco_Alimentare_Manuale_Emporio_Solidale.pdf
   file: Caritas_Banco_Alimentare_Manuale_Emporio_Solidale.pdf
   size_kb: 4173.9
@@ -94,7 +172,7 @@ documenti:
   title: ManualeCaritasBanco013
   pages: 60
   errors: []
-  text_chars_sample: 1016
+  text_chars_sample: 1024
   origine: TERZO
   origine_descrizione: Caritas / Banco Alimentare
   verdict: TERZO
@@ -107,7 +185,7 @@ documenti:
   title: null
   pages: 88
   errors: []
-  text_chars_sample: 517
+  text_chars_sample: 702
   origine: TERZO
   origine_descrizione: Federazione Italiana Cuochi (FIC)
   verdict: TERZO
@@ -120,10 +198,23 @@ documenti:
   title: null
   pages: 75
   errors: []
-  text_chars_sample: 210
+  text_chars_sample: 213
   origine: TERZO
   origine_descrizione: Fondazione Barilla
   verdict: TERZO
+- path: /manuali/carta-naturalistica-castelli-romani-latium-volcano.pdf
+  file: carta-naturalistica-castelli-romani-latium-volcano.pdf
+  size_kb: 1807.1
+  searchable: false
+  tagged: false
+  language: null
+  title: null
+  pages: 2
+  errors: []
+  text_chars_sample: 0
+  origine: GRUPPO
+  origine_descrizione: Classificazione di default (assumiamo nostro produzione)
+  verdict: NON_ACCESSIBILE
 - path: /manuali/cna-best-practices-social-media-crisis-2023.pdf
   file: cna-best-practices-social-media-crisis-2023.pdf
   size_kb: 636.8
@@ -134,9 +225,22 @@ documenti:
     Emergency Management Agencies
   pages: 23
   errors: []
-  text_chars_sample: 4153
+  text_chars_sample: 4212
   origine: TERZO
   origine_descrizione: CNA / Confederazione Nazionale Artigianato
+  verdict: TERZO
+- path: /manuali/delibera-cc-31-2023-costituzione-gruppo-comunale-pc-genzano.pdf
+  file: delibera-cc-31-2023-costituzione-gruppo-comunale-pc-genzano.pdf
+  size_kb: 1161.4
+  searchable: true
+  tagged: true
+  language: en-US
+  title: Nome_Comune
+  pages: 12
+  errors: []
+  text_chars_sample: 7488
+  origine: TERZO
+  origine_descrizione: Comune di Genzano di Roma (ordinanze, delibere)
   verdict: TERZO
 - path: /manuali/fema-saver-innovative-uses-social-media-emergency-management.pdf
   file: fema-saver-innovative-uses-social-media-emergency-management.pdf
@@ -147,7 +251,7 @@ documenti:
   title: Innovative Uses of Social Media in Emergency Management
   pages: 26
   errors: []
-  text_chars_sample: 3839
+  text_chars_sample: 3895
   origine: TERZO
   origine_descrizione: FEMA (Federal Emergency Management Agency, USA)
   verdict: TERZO
@@ -160,9 +264,23 @@ documenti:
   title: locandina-diventa-volontario
   pages: 1
   errors: []
-  text_chars_sample: 211
+  text_chars_sample: 208
   origine: GRUPPO
   origine_descrizione: Locandina del Gruppo
+  verdict: PARZIALE
+- path: /manuali/manuale-protezione-civile.pdf
+  file: manuale-protezione-civile.pdf
+  size_kb: 695.6
+  searchable: true
+  tagged: false
+  language: it
+  title: Fondamenti, ordinamento e gestione delle emergenze. Con il commentario, articolo
+    per articolo, del Codice della protezione civile. — Manuale di Protezione Civile
+  pages: 127
+  errors: []
+  text_chars_sample: 3567
+  origine: GRUPPO
+  origine_descrizione: Classificazione di default (assumiamo nostro produzione)
   verdict: PARZIALE
 - path: /manuali/moduli/domanda-ammissione-volontari.pdf
   file: domanda-ammissione-volontari.pdf
@@ -173,7 +291,7 @@ documenti:
   title: null
   pages: 1
   errors: []
-  text_chars_sample: 2973
+  text_chars_sample: 3223
   origine: GRUPPO
   origine_descrizione: Modulo del Gruppo (modulistica)
   verdict: ACCESSIBILE
@@ -186,23 +304,166 @@ documenti:
   title: presentazione_youpol_#esserci
   pages: 6
   errors: []
-  text_chars_sample: 1870
+  text_chars_sample: 1580
   origine: TERZO
   origine_descrizione: Polizia di Stato
   verdict: TERZO
 - path: /manuali/presentazione-struttura-sito.pdf
   file: presentazione-struttura-sito.pdf
-  size_kb: 1480.2
+  size_kb: 2475.1
   searchable: true
   tagged: true
   language: it-IT
   title: null
-  pages: 55
+  pages: 68
   errors: []
-  text_chars_sample: 1017
+  text_chars_sample: 1002
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
   verdict: ACCESSIBILE
+- path: /manuali/schede-caa/scheda-caa-alluvione.pdf
+  file: scheda-caa-alluvione.pdf
+  size_kb: 1843.4
+  searchable: true
+  tagged: false
+  language: null
+  title: Layout 1
+  pages: 4
+  errors: []
+  text_chars_sample: 932
+  origine: GRUPPO
+  origine_descrizione: Classificazione di default (assumiamo nostro produzione)
+  verdict: PARZIALE
+- path: /manuali/schede-caa/scheda-caa-incendi-boschivi.pdf
+  file: scheda-caa-incendi-boschivi.pdf
+  size_kb: 1130.6
+  searchable: true
+  tagged: false
+  language: null
+  title: Layout 1
+  pages: 2
+  errors: []
+  text_chars_sample: 621
+  origine: GRUPPO
+  origine_descrizione: Classificazione di default (assumiamo nostro produzione)
+  verdict: PARZIALE
+- path: /manuali/schede-caa/scheda-caa-terremoto.pdf
+  file: scheda-caa-terremoto.pdf
+  size_kb: 649.2
+  searchable: true
+  tagged: false
+  language: null
+  title: Layout 1
+  pages: 2
+  errors: []
+  text_chars_sample: 621
+  origine: GRUPPO
+  origine_descrizione: Classificazione di default (assumiamo nostro produzione)
+  verdict: PARZIALE
+- path: /poster-emergenza-multilingua/poster-emergenza-de.pdf
+  file: poster-emergenza-de.pdf
+  size_kb: 451.4
+  searchable: false
+  tagged: false
+  language: null
+  title: poster-emergenza-de
+  pages: 1
+  errors: []
+  text_chars_sample: 0
+  origine: GRUPPO
+  origine_descrizione: Classificazione di default (assumiamo nostro produzione)
+  verdict: NON_ACCESSIBILE
+- path: /poster-emergenza-multilingua/poster-emergenza-en.pdf
+  file: poster-emergenza-en.pdf
+  size_kb: 415.5
+  searchable: false
+  tagged: false
+  language: null
+  title: poster-emergenza-en
+  pages: 1
+  errors: []
+  text_chars_sample: 0
+  origine: GRUPPO
+  origine_descrizione: Classificazione di default (assumiamo nostro produzione)
+  verdict: NON_ACCESSIBILE
+- path: /poster-emergenza-multilingua/poster-emergenza-eo.pdf
+  file: poster-emergenza-eo.pdf
+  size_kb: 410.2
+  searchable: false
+  tagged: false
+  language: null
+  title: poster-emergenza-eo
+  pages: 1
+  errors: []
+  text_chars_sample: 0
+  origine: GRUPPO
+  origine_descrizione: Classificazione di default (assumiamo nostro produzione)
+  verdict: NON_ACCESSIBILE
+- path: /poster-emergenza-multilingua/poster-emergenza-es.pdf
+  file: poster-emergenza-es.pdf
+  size_kb: 434.6
+  searchable: false
+  tagged: false
+  language: null
+  title: poster-emergenza-es
+  pages: 1
+  errors: []
+  text_chars_sample: 0
+  origine: GRUPPO
+  origine_descrizione: Classificazione di default (assumiamo nostro produzione)
+  verdict: NON_ACCESSIBILE
+- path: /poster-emergenza-multilingua/poster-emergenza-fr.pdf
+  file: poster-emergenza-fr.pdf
+  size_kb: 447.1
+  searchable: false
+  tagged: false
+  language: null
+  title: poster-emergenza-fr
+  pages: 1
+  errors: []
+  text_chars_sample: 0
+  origine: GRUPPO
+  origine_descrizione: Classificazione di default (assumiamo nostro produzione)
+  verdict: NON_ACCESSIBILE
+- path: /poster-emergenza-multilingua/poster-emergenza-it.pdf
+  file: poster-emergenza-it.pdf
+  size_kb: 413.6
+  searchable: false
+  tagged: false
+  language: null
+  title: poster-emergenza-it
+  pages: 1
+  errors: []
+  text_chars_sample: 0
+  origine: GRUPPO
+  origine_descrizione: Classificazione di default (assumiamo nostro produzione)
+  verdict: NON_ACCESSIBILE
+- path: /poster-emergenza-multilingua/poster-emergenza-pt.pdf
+  file: poster-emergenza-pt.pdf
+  size_kb: 430.0
+  searchable: false
+  tagged: false
+  language: null
+  title: poster-emergenza-pt
+  pages: 1
+  errors: []
+  text_chars_sample: 0
+  origine: GRUPPO
+  origine_descrizione: Classificazione di default (assumiamo nostro produzione)
+  verdict: NON_ACCESSIBILE
+- path: /poster-emergenza-multilingua/poster-emergenza-ro.pdf
+  file: poster-emergenza-ro.pdf
+  size_kb: 436.5
+  searchable: false
+  tagged: false
+  language: null
+  title: poster-emergenza-ro
+  pages: 1
+  errors: []
+  text_chars_sample: 0
+  origine: GRUPPO
+  origine_descrizione: Classificazione di default (assumiamo nostro produzione)
+  verdict: NON_ACCESSIBILE
 - path: /presentazioni/2026-03-21-rischio-sismico-presentazione-pdf.pdf
   file: 2026-03-21-rischio-sismico-presentazione-pdf.pdf
   size_kb: 16740.1
@@ -212,7 +473,7 @@ documenti:
   title: null
   pages: 15
   errors: []
-  text_chars_sample: 2213
+  text_chars_sample: 2188
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
   verdict: PARZIALE
@@ -225,7 +486,7 @@ documenti:
   title: null
   pages: 13
   errors: []
-  text_chars_sample: 1567
+  text_chars_sample: 1517
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
   verdict: PARZIALE
@@ -238,7 +499,7 @@ documenti:
   title: null
   pages: 15
   errors: []
-  text_chars_sample: 1546
+  text_chars_sample: 1522
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
   verdict: PARZIALE
@@ -251,7 +512,7 @@ documenti:
   title: null
   pages: 15
   errors: []
-  text_chars_sample: 1376
+  text_chars_sample: 1338
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
   verdict: PARZIALE
@@ -264,7 +525,7 @@ documenti:
   title: null
   pages: 15
   errors: []
-  text_chars_sample: 1358
+  text_chars_sample: 1343
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
   verdict: PARZIALE
@@ -277,7 +538,7 @@ documenti:
   title: null
   pages: 15
   errors: []
-  text_chars_sample: 1128
+  text_chars_sample: 1112
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
   verdict: PARZIALE
@@ -290,7 +551,124 @@ documenti:
   title: null
   pages: 15
   errors: []
-  text_chars_sample: 1107
+  text_chars_sample: 1097
   origine: GRUPPO
   origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
   verdict: PARZIALE
+- path: /presentazioni/2026-05-29-animali-emergenza-presentazione-pdf.pdf
+  file: 2026-05-29-animali-emergenza-presentazione-pdf.pdf
+  size_kb: 13545.5
+  searchable: false
+  tagged: false
+  language: null
+  title: null
+  pages: 15
+  errors: []
+  text_chars_sample: 0
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: NON_ACCESSIBILE
+- path: /presentazioni/2026-05-29-it-alert-presentazione-pdf.pdf
+  file: 2026-05-29-it-alert-presentazione-pdf.pdf
+  size_kb: 12616.4
+  searchable: false
+  tagged: false
+  language: null
+  title: null
+  pages: 15
+  errors: []
+  text_chars_sample: 0
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: NON_ACCESSIBILE
+- path: /presentazioni/2026-05-29-nue-112-presentazione-pdf.pdf
+  file: 2026-05-29-nue-112-presentazione-pdf.pdf
+  size_kb: 11036.1
+  searchable: false
+  tagged: false
+  language: null
+  title: null
+  pages: 15
+  errors: []
+  text_chars_sample: 0
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: NON_ACCESSIBILE
+- path: /presentazioni/2026-05-29-piano-familiare-presentazione-pdf.pdf
+  file: 2026-05-29-piano-familiare-presentazione-pdf.pdf
+  size_kb: 16565.4
+  searchable: false
+  tagged: false
+  language: null
+  title: null
+  pages: 15
+  errors: []
+  text_chars_sample: 0
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: NON_ACCESSIBILE
+- path: /presentazioni/2026-05-29-temporali-intensi-presentazione-pdf.pdf
+  file: 2026-05-29-temporali-intensi-presentazione-pdf.pdf
+  size_kb: 13765.1
+  searchable: false
+  tagged: false
+  language: null
+  title: null
+  pages: 15
+  errors: []
+  text_chars_sample: 0
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: NON_ACCESSIBILE
+- path: /presentazioni/2026-05-30-aree-emergenza-presentazione-pdf.pdf
+  file: 2026-05-30-aree-emergenza-presentazione-pdf.pdf
+  size_kb: 14408.6
+  searchable: false
+  tagged: false
+  language: null
+  title: null
+  pages: 15
+  errors: []
+  text_chars_sample: 0
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: NON_ACCESSIBILE
+- path: /presentazioni/2026-05-30-blackout-presentazione-pdf.pdf
+  file: 2026-05-30-blackout-presentazione-pdf.pdf
+  size_kb: 13986.5
+  searchable: false
+  tagged: false
+  language: null
+  title: null
+  pages: 15
+  errors: []
+  text_chars_sample: 0
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: NON_ACCESSIBILE
+- path: /presentazioni/2026-05-30-dopo-emergenza-presentazione-pdf.pdf
+  file: 2026-05-30-dopo-emergenza-presentazione-pdf.pdf
+  size_kb: 15661.4
+  searchable: false
+  tagged: false
+  language: null
+  title: null
+  pages: 15
+  errors: []
+  text_chars_sample: 0
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: NON_ACCESSIBILE
+- path: /presentazioni/2026-05-30-vento-forte-presentazione-pdf.pdf
+  file: 2026-05-30-vento-forte-presentazione-pdf.pdf
+  size_kb: 10927.5
+  searchable: false
+  tagged: false
+  language: null
+  title: null
+  pages: 15
+  errors: []
+  text_chars_sample: 0
+  origine: GRUPPO
+  origine_descrizione: Presentazione tematica generata da scripts/genera-presentazione.py
+  verdict: NON_ACCESSIBILE
