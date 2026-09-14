@@ -111,6 +111,27 @@
     ck.textContent = t.getDate() + ' ' + mesi[t.getMonth()] + ' ' + t.getFullYear() + ', ' + pad(t.getHours()) + ':' + pad(t.getMinutes()) + ' — dato non recente, consulta il bollettino del Centro Funzionale';
   }
 
+  /* Nessun bollettino valido adesso (non ancora emesso, o l'ultimo è
+     scaduto): lo stato mostrato resta quello del build e la riga "Verificato"
+     dice, senza girarci intorno, che il bollettino non è verificabile in
+     questo momento — mantenendo l'ora dell'ultimo controllo riuscito, mai
+     quella corrente. */
+  function segnalaBollettinoNonVerificabile(bar) {
+    var ck = document.getElementById('allerta-controllo');
+    if (!ck) return;
+    var iso = bar.getAttribute('data-controllo');
+    var quando = '';
+    if (iso) {
+      var t = new Date(iso);
+      if (!isNaN(t.getTime())) {
+        var mesi = ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre'];
+        var pad = function (x) { return x < 10 ? '0' + x : '' + x; };
+        quando = t.getDate() + ' ' + mesi[t.getMonth()] + ' ' + t.getFullYear() + ', ' + pad(t.getHours()) + ':' + pad(t.getMinutes()) + ' — ';
+      }
+    }
+    ck.textContent = quando + 'bollettino non verificabile in questo momento: consulta il Centro Funzionale regionale';
+  }
+
   function checkAllertaDPC() {
     var bar = document.getElementById('allerta-bar');
     if (!bar) return;
@@ -138,20 +159,27 @@
           }
         }
 
-        // Fallback: se entrambi fuori validità, prendi il "domani" se c'è,
-        // altrimenti l'"oggi" — meglio mostrare qualcosa che niente.
-        if (bollettini.length === 0) {
-          for (var k2 = results.length - 1; k2 >= 0; k2--) {
-            if (results[k2]) {
-              var pb = parseBollettino(results[k2]);
-              if (pb) { bollettini.push(pb); break; }
-            }
-          }
-        }
-
+        // Nessun bollettino nella sua finestra di validità: NON si ripiega su
+        // uno scaduto. Fino al 14/09/2026 qui c'era un fallback che prendeva
+        // comunque il "domani" o l'"oggi" disponibile ("meglio mostrare
+        // qualcosa che niente") e più sotto la riga "Verificato" veniva
+        // riscritta con l'ora corrente: il risultato era un bollettino
+        // scaduto presentato come attuale, con un orario fresco. In protezione
+        // civile è il contrario di ciò che serve (rule 06: mai spacciare per
+        // attuale un dato che non lo è). Si tiene lo stato del build — che
+        // check-allerta.py ha già filtrato per validità — e si dichiara che
+        // in questo momento il bollettino non è verificabile.
         if (bollettini.length === 0) {
           bar.classList.remove('allerta-bar-loading');
-          segnalaDatoNonRecente(bar);
+          // Due casi diversi, due messaggi diversi: se i bollettini li abbiamo
+          // letti ma sono tutti fuori validità, il dato non è verificabile
+          // adesso; se invece non siamo riusciti a scaricarli (rete del
+          // visitatore, fonte giù), il controllo fatto dal server resta valido
+          // e va svalutato solo se è vecchio.
+          var letti = false;
+          for (var kr = 0; kr < results.length; kr++) { if (results[kr]) letti = true; }
+          if (letti) segnalaBollettinoNonVerificabile(bar);
+          else segnalaDatoNonRecente(bar);
           return;
         }
 
@@ -209,7 +237,9 @@
           if (ic) ic.className = maxLiv === 'verde' ? 'bi bi-shield-check me-2' : 'bi bi-exclamation-triangle-fill me-2';
         }
 
-        // Aggiorna "Verificato: <ora>" con l'ora locale del client.
+        // Aggiorna "Verificato: <ora>" con l'ora locale del client. Si arriva
+        // qui solo con almeno un bollettino nella sua finestra di validità:
+        // l'orario fresco certifica una verifica che è davvero avvenuta.
         var ck = document.getElementById('allerta-controllo');
         var mesi = ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre'];
         if (ck) {
