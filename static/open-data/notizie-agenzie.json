@@ -5,16 +5,64 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-14T20:26:09+00:00",
+  "generato": "2026-09-14T23:20:06+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-14T20:18:31+00:00",
+   "data": "2026-09-14T22:13:25+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Fisco, 730 al rush finale: c'è tempo fino a fine mese",
+   "url": "https://www.adnkronos.com/economia/dichiarazione-dei-redditi-730-fisco-ultime-notizie_1yx4a1ffyY4xJM5AzIxixa"
+  },
+  {
+   "data": "2026-09-14T22:09:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Emma Bonino, oggi in Campidoglio i funerali di Stato: attesi Mattarella e Meloni",
+   "url": "https://www.adnkronos.com/politica/funerali-stato-emma-bonino-oggi-presente-mattarella-meloni_199HnxtkiqH5BllXuC4J72"
+  },
+  {
+   "data": "2026-09-14T22:07:13+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Meteo, afa finalmente ko: tutta Italia in verde fino a mercoledì, poi arriva la svolta con la perturbazione atlantica",
+   "url": "https://www.adnkronos.com/cronaca/previsioni-meteo-15-settembre-bollini_1N2sHIxAVbfFMBFa1Hq5T2"
+  },
+  {
+   "data": "2026-09-14T22:05:02+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Tumori, con caffè o tè bollente rischio cancro esofago più alto: \"Meglio tiepido\"",
+   "url": "https://www.adnkronos.com/cronaca/cancro-esofago-bevande-calde-rischio_7ojKJ6QqBcU8kIfpA4b9R6"
+  },
+  {
+   "data": "2026-09-14T21:32:44+00:00",
    "fonte": "ANSA",
-   "titolo": "Serie A: in campo Inter-Udinese 4-2 DIRETTA",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/13/serie-a-lunedi-in-campo-alle-2045-inter-udinese-diretta_e9fe5800-ebaa-4d0d-9f50-6c609baa7a03.html"
+   "titolo": "Serie A: da 0-2 a 5-3, l'Inter la ribalta anche con l'Udinese e torna in vetta",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/14/serie-a-da-0-2-a-5-3-linter-la-ribalta-anche-con-ludinese-e-torna-in-vetta_e9fe5800-ebaa-4d0d-9f50-6c609baa7a03.html"
+  },
+  {
+   "data": "2026-09-14T21:05:41+00:00",
+   "fonte": "ANSA",
+   "titolo": "Stalking ai danni della Ferilli, chiesto il processo per un 36enne",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/14/stalking-ai-danni-della-ferilli-chiesto-il-processo-per-un-36enne_ceef821e-57be-428d-97f4-65edc488df9a.html"
+  },
+  {
+   "data": "2026-09-14T21:05:23+00:00",
+   "fonte": "ANSA",
+   "titolo": "Leone cancella i tagli di Francesco e rialza gli stipendi dei cardinali",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/14/leone-cancella-i-tagli-di-francesco-e-rialza-gli-stipendi-dei-cardinali_70081e96-177e-432b-968b-11637cbb0708.html"
+  },
+  {
+   "data": "2026-09-14T20:50:08+00:00",
+   "fonte": "ANSA",
+   "titolo": "Spari con arma ad aria compressa al centro di Roma, ferita una donna",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/14/spari-con-arma-ad-aria-compressa-al-centro-di-roma-ferita-una-donna_980d8691-367f-4798-aeb6-f764a38ab56d.html"
+  },
+  {
+   "data": "2026-09-14T20:49:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Colpita con pistola ad aria compressa mentre cammina per strada a Roma, ferita 50enne",
+   "url": "https://www.adnkronos.com/cronaca/roma-ferita-pallino-pistola-aria-compressa_T6MRlY5qQkbAGf7jqYEvz"
   },
   {
    "data": "2026-09-14T20:08:16+00:00",
@@ -57,12 +105,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Tornano a scuola i bimbi del bosco, il rientro sarà graduale",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/14/tornano-a-scuola-i-bimbi-del-bosco-il-rientro-sara-graduale_5eb9b2ce-2801-4406-928a-ad5b3484171e.html"
-  },
-  {
-   "data": "2026-09-14T18:44:37+00:00",
-   "fonte": "ANSA",
-   "titolo": "Stalking ai danni della Ferilli, chiesto il processo per un 36enne",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/14/stalking-ai-danni-della-ferilli-chiesto-il-processo-per-un-36enne_ceef821e-57be-428d-97f4-65edc488df9a.html"
   },
   {
    "data": "2026-09-14T18:44:31+00:00",
@@ -145,50 +187,8 @@
   {
    "data": "2026-09-14T17:54:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Serie A, oggi Inter-Udinese 4-2, Esposito cala il poker - Diretta",
-   "url": "https://www.adnkronos.com/sport/diretta-inter-udinese-oggi-risultato-live_uf3iJJ0BuVinZYmaqrHVi"
-  },
-  {
-   "data": "2026-09-14T17:52:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Alghero, 48enne muore durante preparativi per gara pesca in apnea",
-   "url": "https://www.adnkronos.com/cronaca/alghero-sub-apneista-morto_1TvyfUe9qdmV7VZk3ZljHG"
-  },
-  {
-   "data": "2026-09-14T17:50:42+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Molestie su una 13enne, l'indagato: 'Voglio farmi aiutare'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/14/molestie-su-13enne-lindagato-sono-dispiaciuto-voglio-farmi-aiutare_2a31b360-7c95-4132-bcc5-182d1ca50195.html"
-  },
-  {
-   "data": "2026-09-14T17:50:25+00:00",
-   "fonte": "ANSA",
-   "titolo": "Greco: 'Velleitaria una pausa nello sviluppo dell'IA, lavorare per maggiori garanzie'",
-   "url": "https://www.ansa.it/calabria/notizie/2026/09/14/greco-velleitaria-una-pausa-nello-sviluppo-dellia-lavorare-per-maggiori_fa93cec4-e996-4c68-b76a-3977d8f23107.html"
-  },
-  {
-   "data": "2026-09-14T17:47:35+00:00",
-   "fonte": "ANSA",
-   "titolo": "Uno studente investito dal bus al primo giorno di scuola, è gravissimo",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/14/investito-da-un-autobus-il-primo-giorno-di-scuola-18enne-gravissimo_d126e052-96d0-4417-b762-11e96f5e010c.html"
-  },
-  {
-   "data": "2026-09-14T17:46:58+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Fallaci, monsignor Fisichella: \"La sua intelligenza e il suo pensiero provocano ancora oggi\"",
-   "url": "https://www.adnkronos.com/cronaca/oriana-fallaci-20-anni-dalla-morte-ricordo-monsignor-fisichella_1dWkWxrnripuczGZUvkNaB"
-  },
-  {
-   "data": "2026-09-14T17:43:49+00:00",
-   "fonte": "ANSA",
-   "titolo": "Mattarella e le nuove tecnologie: 'Rischi per l'uomo'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/14/mattarella-e-le-nuove-tecnologie-rischi-per-luomo-_c7171f9f-9907-4b6a-afac-9cf5d7b16b56.html"
-  },
-  {
-   "data": "2026-09-14T17:41:30+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Netanyahu contro Naza, il documentario premiato a Venezia è \"scioccante e intollerabile\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/naza-venezia-israele-netanyahu-inchiesta_2jQKYygyilU2JeuMOVpJZC"
+   "titolo": "L'Inter batte 5-3 l'Udinese e resta in vetta alla Serie A a punteggio pieno con la Roma - Rivivi la diretta",
+   "url": "https://www.adnkronos.com/sport/inter-udinese-5-3-nerazzurri-primi-con-la-roma_uf3iJJ0BuVinZYmaqrHVi"
   }
  ]
 }
