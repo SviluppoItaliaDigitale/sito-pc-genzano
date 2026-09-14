@@ -59,7 +59,36 @@ def perc(d, riemp="none", colore=BLU, sw=2, tratteggio=None):
     return f'<path {_a(d=d, fill=riemp, stroke=colore, stroke_width=sw, stroke_dasharray=tratteggio)}/>'
 
 
+# Una scritta centrata che non ci sta viene TAGLIATA dal viewBox, in silenzio:
+# l'SVG ritaglia senza dire niente. Lo spazio disponibile dipende da DOVE sta:
+# una didascalia al centro ha tutta la larghezza, un'etichetta a lato ne ha il
+# doppio della distanza dal bordo più vicino. Larghezza media di un carattere a
+# corpo 9 col font delle schede, misurata sulla pagina reale: ~4,3 unità.
+# Due didascalie sono andate live tagliate prima che ci fosse questo controllo,
+# e la prima correzione ne ha rotta un'altra proprio perché guardavo la sola
+# lunghezza e non la posizione.
+LARGHEZZA_CARATTERE = 4.3
+VIEWBOX_LARGHEZZA = 160
+
+
+def _spazio_per(x):
+    """Larghezza utile per una scritta centrata in x, prima del ritaglio."""
+    return 2 * min(x, VIEWBOX_LARGHEZZA - x)
+
+
 def testo(x, y, s, dim=9, colore=BLU, ancora="middle", peso=700):
+    if ancora == "middle":
+        import re
+        visibile = re.sub(r"&[a-zA-Z]+;", "x", s)          # entità = un carattere
+        larghezza = len(visibile) * LARGHEZZA_CARATTERE * (dim / 9)
+        spazio = _spazio_per(x)
+        if larghezza > spazio:
+            raise ValueError(
+                f"Scritta troppo lunga per la sua posizione: «{s}»\n"
+                f"  larghezza stimata {larghezza:.0f} unità, disponibili {spazio:.0f} "
+                f"(centrata in x={x}).\n"
+                f"  Accorciala, spostala verso il centro, riduci il corpo, oppure "
+                f"spezzala su due righe con due chiamate a testo().")
     return (f'<text {_a(x=x, y=y, font_size=dim, fill=colore, text_anchor=ancora, font_weight=peso)}>'
             f'{s}</text>')
 
@@ -450,7 +479,7 @@ def _condensa():
         bicchiere(96, 40, 44, 54, livello=38),
         *[rett(34 + i * 8, 46, 7, 6, r=1, riemp="#fff") for i in range(3)],   # cubetti di ghiaccio
         gocce([(26, 58), (24, 70), (28, 82), (70, 62), (72, 76)], 2),          # condensa fuori
-        testo(48, 110, "acqua e ghiaccio"), testo(118, 110, "acqua ambiente"),
+        testo(44, 110, "con ghiaccio"), testo(120, 110, "ambiente"),
     ]
     return "".join(d), ("Due bicchieri uguali: su quello con acqua e ghiaccio si formano goccioline "
                         "all'esterno, su quello con acqua a temperatura ambiente il vetro resta asciutto.")
@@ -494,7 +523,7 @@ def _acqua_limpida():
         perc("M58,34 L102,34 L84,58 L84,72 L76,72 L76,58 Z", riemp="#fff"),       # imbuto
         perc("M62,38 L98,38", sw=1.4, tratteggio="3 2"),                          # carta da filtro
         bicchiere(64, 78, 32, 26, livello=16),
-        testo(80, 116, "torbida e salata: dopo il filtro sono uguali"),
+        testo(80, 116, "dopo il filtro sembrano uguali"),
     ]
     return "".join(d), ("Un imbuto con la carta da filtro sopra un bicchiere, fra due bottiglie: "
                         "una con acqua torbida di terra e una con acqua limpida ma salata; dopo il "
