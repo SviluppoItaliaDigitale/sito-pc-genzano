@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/",
-  "generato": "2026-09-14T16:29:30+00:00",
+  "generato": "2026-09-14T20:26:12+00:00",
   "licenza": "Copernicus Emergency Management Service — dati pubblici",
   "nota": "Copia locale: l'API non espone CORS, il browser non può leggerla direttamente."
  },
@@ -18,7 +18,7 @@
    ],
    "eventTime": "2026-09-10T20:15:00",
    "gdacsId": null,
-   "lastUpdate": "2026-09-14T13:20:50.024431",
+   "lastUpdate": "2026-09-14T17:22:47.731922",
    "n_aois": 1,
    "n_products": 2,
    "name": "Wildfire in Island of Brac, Croatia"
@@ -52,7 +52,7 @@
    "gdacsId": null,
    "lastUpdate": "2026-09-14T15:37:23.163151",
    "n_aois": 1,
-   "n_products": 6,
+   "n_products": 7,
    "name": "Wildfire in Trapezitsa Mountain, Greece"
   },
   {
@@ -164,9 +164,9 @@
    ],
    "eventTime": "2026-08-14T22:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-09-14T16:28:32.996654",
+   "lastUpdate": "2026-09-14T17:18:48.302396",
    "n_aois": 5,
-   "n_products": 63,
+   "n_products": 64,
    "name": "Wildfire in Montenegro and Bosnia and Herzegovina"
   },
   {
