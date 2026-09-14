@@ -5,8 +5,8 @@
 # Usato dal partial Hugo `video-correlati.html` per renderizzare la
 # sezione 'Approfondimenti video' in fondo agli articoli pertinenti.
 #
-# Pagine coperte: 290 / Video unici usati: 253 /
-# Link totali: 941 (max 5 per pagina,
+# Pagine coperte: 306 / Video unici usati: 265 /
+# Link totali: 1018 (max 5 per pagina,
 # soglia score >= 2.0).
 
 canali:
@@ -49,7 +49,7 @@ canali:
     nome: Geopop — divulgazione scientifica
     tematico_pc: false
     url: https://www.youtube.com/@geopop/videos
-    video_count: 1330
+    video_count: 1340
   ingv-terremoti:
     nome: INGV — Istituto Nazionale di Geofisica e Vulcanologia
     tematico_pc: true
@@ -74,12 +74,12 @@ canali:
     nome: Link4Universe — Adrian Fartade
     tematico_pc: false
     url: https://www.youtube.com/@link4universe/videos
-    video_count: 1232
+    video_count: 1234
   natgeo-italia:
     nome: National Geographic Italia
     tematico_pc: false
     url: https://www.youtube.com/@natgeoit/videos
-    video_count: 644
+    video_count: 645
   rai-cultura:
     nome: Rai Cultura (documentari)
     tematico_pc: false
@@ -89,7 +89,7 @@ canali:
     nome: Rai News
     tematico_pc: false
     url: https://www.youtube.com/@RaiNews/videos
-    video_count: 1802
+    video_count: 1817
   solarino-sismologo:
     nome: Stefano Solarino — sismologo INGV (divulgazione sismica)
     tematico_pc: true
@@ -434,9 +434,20 @@ pagine:
       - frana
       - idrogeologico
       - rischio
-      score: 4.4
+      score: 8.6
       titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
       url: https://youtu.be/Lu7IXn90TBQ
+    - anchored:
+      - idrogeologico
+      canale: cmcc
+      id: CiSTPzoI_zs
+      is_lis: false
+      overlap:
+      - idrogeologico
+      - rischio
+      score: 6.6
+      titolo: Rilocalizzazioni degli edifici residenziali dalle aree a rischio idrogeologico
+      url: https://youtu.be/CiSTPzoI_zs
     - anchored:
       - alluvione
       - frana
@@ -470,16 +481,6 @@ pagine:
       score: 2.0
       titolo: 'Kit siccità: cittadini IT'
       url: https://youtu.be/3zLaQO7QvTw
-    - anchored:
-      - siccità
-      canale: cima-foundation
-      id: 6go6B2sB2SY
-      is_lis: false
-      overlap:
-      - siccità
-      score: 2.0
-      titolo: 'Kit siccità: turisti IT'
-      url: https://youtu.be/6go6B2sB2SY
   comunicazioni/2026-03-11-tohoku-fukushima-2011-tsunami-emergenze-multiple:
     title: 'Tōhoku, 11 marzo 2011: il terremoto, lo tsunami e Fukushima — quindici anni dopo l''emergenza tripla che ha cambiato
       il mondo'
@@ -685,7 +686,7 @@ pagine:
       overlap:
       - esercitazione
       - procedure
-      score: 2.2
+      score: 3.0
       titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
       url: https://youtu.be/Ia_Uf9i6BTk
     - anchored:
@@ -696,9 +697,42 @@ pagine:
       overlap:
       - elevata
       - esercitazione
-      score: 2.2
+      score: 3.0
       titolo: Test di un modulo ad elevata capacità di pompaggio – Esercitazione EXE PO 2026
       url: https://youtu.be/M2_qoahQ-0A
+    - anchored:
+      - esercitazione
+      canale: abili-a-proteggere
+      id: jy4kGt-eFWg
+      is_lis: false
+      overlap:
+      - comunale
+      - esercitazione
+      score: 2.4
+      titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
+      url: https://youtu.be/jy4kGt-eFWg
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: 6ImZj3WaeQY
+      is_lis: false
+      overlap:
+      - esercitazione
+      - rischio
+      score: 2.2
+      titolo: 'MODEX SICILY 2019: esercitazione internazionale sul rischio sismico'
+      url: https://youtu.be/6ImZj3WaeQY
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: Qdr1TEgicd8
+      is_lis: false
+      overlap:
+      - esercitazione
+      - rischio
+      score: 2.2
+      titolo: 'NEIFLEX 2018: esercitazione internazionale sul rischio idraulico'
+      url: https://youtu.be/Qdr1TEgicd8
   comunicazioni/2026-04-11-antincendio-boschivo-triangolo-fuoco-attrezzature-tecniche-attacco:
     title: 'Antincendio boschivo: dal triangolo del fuoco agli attrezzi manuali, la guida pratica per il volontario'
     url: /comunicazioni/2026-04-11-antincendio-boschivo-triangolo-fuoco-attrezzature-tecniche-attacco/
@@ -764,20 +798,6 @@ pagine:
     url: /comunicazioni/2026-04-15-esercitazione-antincendio-boschivo-preparazione/
     video:
     - anchored:
-      - antincendio
-      - boschivo
-      canale: abili-a-proteggere
-      id: GVKQznWv4eE
-      is_lis: true
-      overlap:
-      - antincendio
-      - boschivo
-      - campagna
-      - estiva
-      score: 5.2
-      titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
-      url: https://youtu.be/GVKQznWv4eE
-    - anchored:
       - esercitazione
       canale: abili-a-proteggere
       id: Ia_Uf9i6BTk
@@ -786,33 +806,9 @@ pagine:
       - esercitazione
       - evacuazione
       - procedure
-      score: 3.4
+      score: 7.6
       titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
       url: https://youtu.be/Ia_Uf9i6BTk
-    - anchored:
-      - boschivo
-      canale: dpc-gov
-      id: FPLoljB20QA
-      is_lis: false
-      overlap:
-      - boschivo
-      - incendio
-      - situazione
-      score: 3.0
-      titolo: 'Incendi boschivi Sardegna: Curcio fa il punto della situazione'
-      url: https://youtu.be/FPLoljB20QA
-    - anchored:
-      - boschivo
-      canale: io-non-rischio
-      id: qxQJQEjzRwc
-      is_lis: true
-      overlap:
-      - boschivo
-      - evitare
-      - incendio
-      score: 3.0
-      titolo: Io non rischio Incendi boschivi - Cosa fare per evitare, se avvisti, se sei coinvolto in un incendio
-      url: https://youtu.be/qxQJQEjzRwc
     - anchored:
       - esercitazione
       canale: dpc-gov
@@ -821,9 +817,43 @@ pagine:
       overlap:
       - esercitazione
       - operatività
-      score: 2.8
+      score: 7.0
       titolo: Attivazione e operatività del Nucleo Tecnico Nazionale – Esercitazione EXE PO 2026
       url: https://youtu.be/3kA8XEf2u6I
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: OkEoPVutZr4
+      is_lis: false
+      overlap:
+      - esercitazione
+      - pianificazione
+      score: 7.0
+      titolo: Esercitazione “Verso una pianificazione di protezione civile inclusiva”
+      url: https://youtu.be/OkEoPVutZr4
+    - anchored:
+      - esercitazione
+      canale: abili-a-proteggere
+      id: jy4kGt-eFWg
+      is_lis: false
+      overlap:
+      - comunale
+      - esercitazione
+      - evacuazione
+      score: 6.8
+      titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
+      url: https://youtu.be/jy4kGt-eFWg
+    - anchored:
+      - esercitazione
+      canale: ingv-terremoti
+      id: qKfP_mrgJdc
+      is_lis: false
+      overlap:
+      - area
+      - esercitazione
+      score: 6.6
+      titolo: NEAMWave 2023 - Esercitazione per rischio tsunami nell'area Euro-Mediterranea. INGV-Alessandro Amato
+      url: https://youtu.be/qKfP_mrgJdc
   comunicazioni/2026-04-15-frana-costone-nemi-chiusura-via-nemorense:
     title: 'Frana di un costone nel territorio di Nemi: supporto alla chiusura di via Nemorense'
     url: /comunicazioni/2026-04-15-frana-costone-nemi-chiusura-via-nemorense/
@@ -838,7 +868,7 @@ pagine:
       - frana
       - idrogeologico
       - rischio
-      score: 7.8
+      score: 8.2
       titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
       url: https://youtu.be/Lu7IXn90TBQ
     - anchored:
@@ -994,6 +1024,19 @@ pagine:
     url: /comunicazioni/2026-04-24-frane-movimenti-terreno-castelli-romani/
     video:
     - anchored:
+      - frana
+      canale: geopop
+      id: Lu7IXn90TBQ
+      is_lis: false
+      overlap:
+      - dissesto
+      - frana
+      - idrogeologico
+      - rischio
+      score: 8.2
+      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
+      url: https://youtu.be/Lu7IXn90TBQ
+    - anchored:
       - caratteristiche
       - frana
       canale: dpc-gov
@@ -1005,19 +1048,6 @@ pagine:
       score: 8.0
       titolo: Il Professor Casagli illustra le caratteristiche della frana – Frana Niscemi 2026
       url: https://youtu.be/L98tBMJZn0k
-    - anchored:
-      - frana
-      canale: geopop
-      id: Lu7IXn90TBQ
-      is_lis: false
-      overlap:
-      - dissesto
-      - frana
-      - idrogeologico
-      - rischio
-      score: 7.8
-      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
-      url: https://youtu.be/Lu7IXn90TBQ
     - anchored:
       - frana
       canale: dpc-gov
@@ -1064,7 +1094,7 @@ pagine:
       - frana
       - idrogeologico
       - rischio
-      score: 7.8
+      score: 8.2
       titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
       url: https://youtu.be/Lu7IXn90TBQ
     - anchored:
@@ -1327,7 +1357,7 @@ pagine:
       overlap:
       - esercitazione
       - procedure
-      score: 2.8
+      score: 7.0
       titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
       url: https://youtu.be/Ia_Uf9i6BTk
     - anchored:
@@ -1338,9 +1368,40 @@ pagine:
       overlap:
       - esercitazione
       - tecnico
-      score: 2.8
+      score: 7.0
       titolo: Attivazione e operatività del Nucleo Tecnico Nazionale – Esercitazione EXE PO 2026
       url: https://youtu.be/3kA8XEf2u6I
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: gA5H_FuzG-c
+      is_lis: false
+      overlap:
+      - emergenza
+      - esercitazione
+      score: 6.2
+      titolo: 'JFWEDROP 2015: esercitazione europea sulle emergenze in mare'
+      url: https://youtu.be/gA5H_FuzG-c
+    - anchored:
+      - esercitazione
+      canale: abili-a-proteggere
+      id: QFQtk_XfdS4
+      is_lis: true
+      overlap:
+      - esercitazione
+      score: 6.0
+      titolo: 'Glossario in LIS: Esercitazione di protezione civile'
+      url: https://youtu.be/QFQtk_XfdS4
+    - anchored:
+      - esercitazione
+      canale: abili-a-proteggere
+      id: jy4kGt-eFWg
+      is_lis: false
+      overlap:
+      - esercitazione
+      score: 6.0
+      titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
+      url: https://youtu.be/jy4kGt-eFWg
   comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza:
     title: 'Aiutare i vicini fragili in emergenza: un gesto di comunità che salva vite'
     url: /comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/
@@ -1401,6 +1462,20 @@ pagine:
     video:
     - anchored:
       - frana
+      - idrogeologico
+      canale: geopop
+      id: Lu7IXn90TBQ
+      is_lis: false
+      overlap:
+      - frana
+      - idrogeologico
+      - mappa
+      - rischio
+      score: 13.6
+      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
+      url: https://youtu.be/Lu7IXn90TBQ
+    - anchored:
+      - frana
       - sarno
       canale: geopop
       id: fpeEmFI5G8s
@@ -1413,20 +1488,6 @@ pagine:
       titolo: Alluvione di Sarno del 5 maggio 1998, le cause della frana e la ricostruzione della tragedia
       url: https://youtu.be/fpeEmFI5G8s
     - anchored:
-      - frana
-      - idrogeologico
-      canale: geopop
-      id: Lu7IXn90TBQ
-      is_lis: false
-      overlap:
-      - frana
-      - idrogeologico
-      - mappa
-      - rischio
-      score: 9.4
-      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
-      url: https://youtu.be/Lu7IXn90TBQ
-    - anchored:
       - sarno
       canale: dpc-gov
       id: 8v4izQL7MuA
@@ -1438,6 +1499,17 @@ pagine:
       titolo: 'Sarno 1998-2023: il ricordo dei funzionari del Dipartimento'
       url: https://youtu.be/8v4izQL7MuA
     - anchored:
+      - idrogeologico
+      canale: cmcc
+      id: CiSTPzoI_zs
+      is_lis: false
+      overlap:
+      - idrogeologico
+      - rischio
+      score: 6.6
+      titolo: Rilocalizzazioni degli edifici residenziali dalle aree a rischio idrogeologico
+      url: https://youtu.be/CiSTPzoI_zs
+    - anchored:
       - frana
       canale: cima-foundation
       id: gsBgcnO6qfc
@@ -1447,16 +1519,6 @@ pagine:
       score: 6.0
       titolo: Frana di Arenzano 2016
       url: https://youtu.be/gsBgcnO6qfc
-    - anchored:
-      - frana
-      canale: dpc-gov
-      id: 6eeYoCoFn5M
-      is_lis: false
-      overlap:
-      - frana
-      score: 6.0
-      titolo: Le attività operative in corso – Frana Niscemi 2026
-      url: https://youtu.be/6eeYoCoFn5M
   comunicazioni/2026-05-06-blackout-interruzione-corrente-cosa-fare:
     title: 'Blackout: cosa fare quando salta la corrente (anche per ore o giorni)'
     url: /comunicazioni/2026-05-06-blackout-interruzione-corrente-cosa-fare/
@@ -1941,6 +2003,18 @@ pagine:
     video:
     - anchored:
       - frana
+      canale: geopop
+      id: Lu7IXn90TBQ
+      is_lis: false
+      overlap:
+      - frana
+      - idrogeologico
+      - rischio
+      score: 3.2
+      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
+      url: https://youtu.be/Lu7IXn90TBQ
+    - anchored:
+      - frana
       canale: rai-news
       id: i5Yj1DQExuo
       is_lis: false
@@ -1950,18 +2024,6 @@ pagine:
       score: 3.0
       titolo: Frana a Niscemi, il video di un nuovo cedimento in diretta
       url: https://youtu.be/i5Yj1DQExuo
-    - anchored:
-      - frana
-      canale: geopop
-      id: Lu7IXn90TBQ
-      is_lis: false
-      overlap:
-      - frana
-      - idrogeologico
-      - rischio
-      score: 2.8
-      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
-      url: https://youtu.be/Lu7IXn90TBQ
     - anchored:
       - frana
       canale: cima-foundation
@@ -2005,7 +2067,7 @@ pagine:
       - esercitazione
       - evacuazione
       - procedure
-      score: 3.4
+      score: 7.6
       titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
       url: https://youtu.be/Ia_Uf9i6BTk
     - anchored:
@@ -2016,9 +2078,96 @@ pagine:
       overlap:
       - esercitazione
       - evacuazione
-      score: 2.4
+      score: 6.6
       titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
       url: https://youtu.be/jy4kGt-eFWg
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: 6ImZj3WaeQY
+      is_lis: false
+      overlap:
+      - esercitazione
+      - rischio
+      score: 6.2
+      titolo: 'MODEX SICILY 2019: esercitazione internazionale sul rischio sismico'
+      url: https://youtu.be/6ImZj3WaeQY
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: Qdr1TEgicd8
+      is_lis: false
+      overlap:
+      - esercitazione
+      - rischio
+      score: 6.2
+      titolo: 'NEIFLEX 2018: esercitazione internazionale sul rischio idraulico'
+      url: https://youtu.be/Qdr1TEgicd8
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: UIpzlwhK2ik
+      is_lis: false
+      overlap:
+      - esercitazione
+      - rischio
+      score: 6.2
+      titolo: 'CALABRIA 2011: esercitazione nazionale sul rischio sismico'
+      url: https://youtu.be/UIpzlwhK2ik
+  comunicazioni/2026-05-26-iso-22398-esercitazioni-protezione-civile-facile:
+    title: Perché si fanno le esercitazioni? Versione facile da leggere
+    url: /comunicazioni/2026-05-26-iso-22398-esercitazioni-protezione-civile-facile/
+    video:
+    - anchored:
+      - esercitazione
+      canale: abili-a-proteggere
+      id: Ia_Uf9i6BTk
+      is_lis: false
+      overlap:
+      - esercitazione
+      score: 6.0
+      titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
+      url: https://youtu.be/Ia_Uf9i6BTk
+    - anchored:
+      - esercitazione
+      canale: abili-a-proteggere
+      id: QFQtk_XfdS4
+      is_lis: true
+      overlap:
+      - esercitazione
+      score: 6.0
+      titolo: 'Glossario in LIS: Esercitazione di protezione civile'
+      url: https://youtu.be/QFQtk_XfdS4
+    - anchored:
+      - esercitazione
+      canale: abili-a-proteggere
+      id: jy4kGt-eFWg
+      is_lis: false
+      overlap:
+      - esercitazione
+      score: 6.0
+      titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
+      url: https://youtu.be/jy4kGt-eFWg
+    - anchored:
+      - esercitazione
+      canale: cima-foundation
+      id: UsSW6k87nXM
+      is_lis: false
+      overlap:
+      - esercitazione
+      score: 6.0
+      titolo: Esercitazione Droni Protezione Civile - Spotorno 2024
+      url: https://youtu.be/UsSW6k87nXM
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: 3kA8XEf2u6I
+      is_lis: false
+      overlap:
+      - esercitazione
+      score: 6.0
+      titolo: Attivazione e operatività del Nucleo Tecnico Nazionale – Esercitazione EXE PO 2026
+      url: https://youtu.be/3kA8XEf2u6I
   comunicazioni/2026-05-28-dpc-decreto-167-animali-emergenza:
     title: 'Animali in emergenza: il DPC pubblica le prime regole nazionali (DCD 167/2026)'
     url: /comunicazioni/2026-05-28-dpc-decreto-167-animali-emergenza/
@@ -2414,7 +2563,7 @@ pagine:
       - idrogeologico
       - mappa
       - rischio
-      score: 7.8
+      score: 8.2
       titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
       url: https://youtu.be/Lu7IXn90TBQ
     - anchored:
@@ -3157,6 +3306,34 @@ pagine:
     url: /comunicazioni/2026-06-22-rischio-idrogeologico-estivo-siccita-piogge/
     video:
     - anchored:
+      - frana
+      - idrogeologico
+      canale: geopop
+      id: Lu7IXn90TBQ
+      is_lis: false
+      overlap:
+      - frana
+      - idrogeologico
+      - mappa
+      - rischio
+      score: 9.6
+      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
+      url: https://youtu.be/Lu7IXn90TBQ
+    - anchored:
+      - idrogeologico
+      canale: cmcc
+      id: CiSTPzoI_zs
+      is_lis: false
+      overlap:
+      - aree
+      - degli
+      - edifici
+      - idrogeologico
+      - rischio
+      score: 8.4
+      titolo: Rilocalizzazioni degli edifici residenziali dalle aree a rischio idrogeologico
+      url: https://youtu.be/CiSTPzoI_zs
+    - anchored:
       - siccità
       canale: cima-foundation
       id: d3PnplO-uGI
@@ -3187,30 +3364,6 @@ pagine:
       score: 6.0
       titolo: 'Kit siccità: turisti IT'
       url: https://youtu.be/6go6B2sB2SY
-    - anchored:
-      - siccità
-      canale: geopop
-      id: xbkBI9oAO9w
-      is_lis: false
-      overlap:
-      - siccità
-      score: 6.0
-      titolo: Cos'è il cuneo salino? Sintesi sull'emergenza siccità in Italia e la crisi idrica del Po
-      url: https://youtu.be/xbkBI9oAO9w
-    - anchored:
-      - frana
-      - idrogeologico
-      canale: geopop
-      id: Lu7IXn90TBQ
-      is_lis: false
-      overlap:
-      - frana
-      - idrogeologico
-      - mappa
-      - rischio
-      score: 5.4
-      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
-      url: https://youtu.be/Lu7IXn90TBQ
   comunicazioni/2026-06-22-rischio-idrogeologico-estivo-siccita-piogge-facile:
     title: 'Estate e piogge forti: cosa può succedere e cosa fare'
     url: /comunicazioni/2026-06-22-rischio-idrogeologico-estivo-siccita-piogge-facile/
@@ -3224,7 +3377,7 @@ pagine:
       - frana
       - idrogeologico
       - rischio
-      score: 3.0
+      score: 3.4
       titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
       url: https://youtu.be/Lu7IXn90TBQ
     - anchored:
@@ -3431,7 +3584,7 @@ pagine:
       - modulo
       - pompaggio
       - test
-      score: 12.8
+      score: 17.0
       titolo: Test di un modulo ad elevata capacità di pompaggio – Esercitazione EXE PO 2026
       url: https://youtu.be/M2_qoahQ-0A
     - anchored:
@@ -3446,7 +3599,7 @@ pagine:
       - nucleo
       - operatività
       - tecnico
-      score: 10.8
+      score: 15.0
       titolo: Attivazione e operatività del Nucleo Tecnico Nazionale – Esercitazione EXE PO 2026
       url: https://youtu.be/3kA8XEf2u6I
     - anchored:
@@ -3460,7 +3613,7 @@ pagine:
       - esercitazione
       - exe
       - programma
-      score: 9.8
+      score: 14.0
       titolo: Le attività esercitative in programma – Esercitazione EXE PO 2026
       url: https://youtu.be/yPBNi9QoXa0
     - anchored:
@@ -3472,21 +3625,20 @@ pagine:
       - esercitazione
       - idraulico
       - rischio
-      score: 3.4
+      score: 7.6
       titolo: 'NEIFLEX 2018: esercitazione internazionale sul rischio idraulico'
       url: https://youtu.be/Qdr1TEgicd8
     - anchored:
-      - alluvione
-      canale: io-non-rischio
-      id: DbGSeVbDLCg
-      is_lis: true
+      - esercitazione
+      canale: dpc-gov
+      id: 6ImZj3WaeQY
+      is_lis: false
       overlap:
-      - allerta
-      - alluvione
+      - esercitazione
       - rischio
-      score: 2.6
-      titolo: Io non rischio Alluvione – Cosa fare durante un’allerta, durante e dopo un’alluvione
-      url: https://youtu.be/DbGSeVbDLCg
+      score: 6.6
+      titolo: 'MODEX SICILY 2019: esercitazione internazionale sul rischio sismico'
+      url: https://youtu.be/6ImZj3WaeQY
   comunicazioni/2026-06-26-smartphone-sismometri-allerta-terremoto-venezuela:
     title: 'Trenta secondi che contano: come gli smartphone hanno allertato il Venezuela prima del terremoto'
     url: /comunicazioni/2026-06-26-smartphone-sismometri-allerta-terremoto-venezuela/
@@ -3653,7 +3805,7 @@ pagine:
       - esercitazione
       - pianificazione
       - verso
-      score: 4.4
+      score: 8.6
       titolo: Esercitazione “Verso una pianificazione di protezione civile inclusiva”
       url: https://youtu.be/OkEoPVutZr4
     - anchored:
@@ -3665,7 +3817,7 @@ pagine:
       - esercitazione
       - evacuazione
       - procedure
-      score: 3.4
+      score: 7.6
       titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
       url: https://youtu.be/Ia_Uf9i6BTk
     - anchored:
@@ -3676,7 +3828,7 @@ pagine:
       overlap:
       - esercitazione
       - test
-      score: 2.8
+      score: 7.0
       titolo: Test di un modulo ad elevata capacità di pompaggio – Esercitazione EXE PO 2026
       url: https://youtu.be/M2_qoahQ-0A
     - anchored:
@@ -3687,7 +3839,7 @@ pagine:
       overlap:
       - esercitazione
       - vulcano
-      score: 2.8
+      score: 7.0
       titolo: Sorvolo di Vulcano – Esercitazione VULCANO 2022
       url: https://youtu.be/Q8S0OHxOYtQ
     - anchored:
@@ -3698,7 +3850,7 @@ pagine:
       overlap:
       - esercitazione
       - vulcano
-      score: 2.8
+      score: 7.0
       titolo: L'esercitazione nazionale di protezione civile sul rischio vulcanico – Esercitazione VULCANO 2022
       url: https://youtu.be/_AYUUv69F3U
   comunicazioni/2026-07-10-seveso-1976-cinquant-anni-direttiva-europea:
@@ -4165,6 +4317,30 @@ pagine:
       score: 6.0
       titolo: 'Kit siccità: gestori di strutture turistiche IT'
       url: https://youtu.be/d3PnplO-uGI
+  comunicazioni/2026-07-20-fine-settimana-incendi-velletri-nemi-aprilia:
+    title: 'Un fine settimana di fuoco: quattro interventi tra Velletri, Nemi e Aprilia'
+    url: /comunicazioni/2026-07-20-fine-settimana-incendi-velletri-nemi-aprilia/
+    video:
+    - anchored:
+      - rogo
+      canale: rai-news
+      id: 4-08j6iQDeY
+      is_lis: false
+      overlap:
+      - rogo
+      score: 2.0
+      titolo: 'Rogo di Crans-Montana: tre ragazzi sopravvissuti tornano assieme tra i banchi di scuola'
+      url: https://youtu.be/4-08j6iQDeY
+    - anchored:
+      - rogo
+      canale: rai-news
+      id: uHbeKde8x3I
+      is_lis: false
+      overlap:
+      - rogo
+      score: 2.0
+      titolo: 'Rogo Crans-Montana: tre ragazzi sopravvissuti tornano assieme tra i banchi di scuola'
+      url: https://youtu.be/uHbeKde8x3I
   comunicazioni/2026-07-23-disabilita-emergenza-piani-accessibili:
     title: 'Disabilità in emergenza: piani accessibili e inclusivi'
     url: /comunicazioni/2026-07-23-disabilita-emergenza-piani-accessibili/
@@ -5418,7 +5594,7 @@ pagine:
       overlap:
       - esercitazione
       - procedure
-      score: 2.8
+      score: 7.0
       titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
       url: https://youtu.be/Ia_Uf9i6BTk
     - anchored:
@@ -5430,9 +5606,42 @@ pagine:
       - area
       - esercitazione
       - rischio
-      score: 2.6
+      score: 6.8
       titolo: NEAMWave 2023 - Esercitazione per rischio tsunami nell'area Euro-Mediterranea. INGV-Alessandro Amato
       url: https://youtu.be/qKfP_mrgJdc
+    - anchored:
+      - esercitazione
+      canale: abili-a-proteggere
+      id: jy4kGt-eFWg
+      is_lis: false
+      overlap:
+      - comunale
+      - esercitazione
+      score: 6.2
+      titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
+      url: https://youtu.be/jy4kGt-eFWg
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: 6ImZj3WaeQY
+      is_lis: false
+      overlap:
+      - esercitazione
+      - rischio
+      score: 6.2
+      titolo: 'MODEX SICILY 2019: esercitazione internazionale sul rischio sismico'
+      url: https://youtu.be/6ImZj3WaeQY
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: Qdr1TEgicd8
+      is_lis: false
+      overlap:
+      - esercitazione
+      - rischio
+      score: 6.2
+      titolo: 'NEIFLEX 2018: esercitazione internazionale sul rischio idraulico'
+      url: https://youtu.be/Qdr1TEgicd8
   comunicazioni/2026-08-26-cani-protezione-civile:
     title: 'Cani della Protezione Civile: gli amici a quattro zampe che salvano vite'
     url: /comunicazioni/2026-08-26-cani-protezione-civile/
@@ -5461,6 +5670,33 @@ pagine:
       score: 2.0
       titolo: L'incredibile filmato di una valanga
       url: https://youtu.be/2iTZkDUzhZo
+  comunicazioni/2026-08-26-scuole-ripresa-settembre-prepararsi:
+    title: 'Scuole di Genzano di Roma: riprendere a settembre con un Piano di Emergenza aggiornato'
+    url: /comunicazioni/2026-08-26-scuole-ripresa-settembre-prepararsi/
+    video:
+    - anchored:
+      - evacuazione
+      canale: abili-a-proteggere
+      id: jy4kGt-eFWg
+      is_lis: false
+      overlap:
+      - comunale
+      - esercitazione
+      - evacuazione
+      score: 2.4
+      titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
+      url: https://youtu.be/jy4kGt-eFWg
+    - anchored:
+      - evacuazione
+      canale: abili-a-proteggere
+      id: Ia_Uf9i6BTk
+      is_lis: false
+      overlap:
+      - esercitazione
+      - evacuazione
+      score: 2.2
+      titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
+      url: https://youtu.be/Ia_Uf9i6BTk
   comunicazioni/2026-08-27-nepal-tibet-colata-detritica-bhote-koshi:
     title: 'Nepal e Tibet, il ghiacciaio che crolla e la valle spazzata: cosa è successo e cosa insegna'
     url: /comunicazioni/2026-08-27-nepal-tibet-colata-detritica-bhote-koshi/
@@ -5644,7 +5880,7 @@ pagine:
       - esercitazione
       - evacuazione
       - procedure
-      score: 2.8
+      score: 3.6
       titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
       url: https://youtu.be/Ia_Uf9i6BTk
     - anchored:
@@ -5655,9 +5891,43 @@ pagine:
       overlap:
       - esercitazione
       - operatività
-      score: 2.2
+      score: 3.0
       titolo: Attivazione e operatività del Nucleo Tecnico Nazionale – Esercitazione EXE PO 2026
       url: https://youtu.be/3kA8XEf2u6I
+    - anchored:
+      - esercitazione
+      canale: abili-a-proteggere
+      id: jy4kGt-eFWg
+      is_lis: false
+      overlap:
+      - comunale
+      - esercitazione
+      - evacuazione
+      score: 2.8
+      titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
+      url: https://youtu.be/jy4kGt-eFWg
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: 6ImZj3WaeQY
+      is_lis: false
+      overlap:
+      - esercitazione
+      - rischio
+      score: 2.2
+      titolo: 'MODEX SICILY 2019: esercitazione internazionale sul rischio sismico'
+      url: https://youtu.be/6ImZj3WaeQY
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: Qdr1TEgicd8
+      is_lis: false
+      overlap:
+      - esercitazione
+      - rischio
+      score: 2.2
+      titolo: 'NEIFLEX 2018: esercitazione internazionale sul rischio idraulico'
+      url: https://youtu.be/Qdr1TEgicd8
   comunicazioni/2026-08-31-mtg-i2-satellite-fulmini-europa:
     title: 'Il satellite che vede i fulmini: cosa cambia per le allerte con MTG-I2'
     url: /comunicazioni/2026-08-31-mtg-i2-satellite-fulmini-europa/
@@ -5943,7 +6213,7 @@ pagine:
       - comunale
       - esercitazione
       - evacuazione
-      score: 2.6
+      score: 3.0
       titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
       url: https://youtu.be/jy4kGt-eFWg
     - anchored:
@@ -5954,7 +6224,7 @@ pagine:
       overlap:
       - esercitazione
       - evacuazione
-      score: 2.4
+      score: 2.8
       titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
       url: https://youtu.be/Ia_Uf9i6BTk
   comunicazioni/2026-09-06-rientro-scuola-prove-evacuazione-facile:
@@ -5973,6 +6243,34 @@ pagine:
       score: 3.0
       titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
       url: https://youtu.be/jy4kGt-eFWg
+  comunicazioni/2026-09-07-lariano-incendio-bosco-quattro-ore:
+    title: Quattro ore nel bosco di Lariano con l'autobotte
+    url: /comunicazioni/2026-09-07-lariano-incendio-bosco-quattro-ore/
+    video:
+    - anchored:
+      - boschivo
+      canale: dpc-gov
+      id: FPLoljB20QA
+      is_lis: false
+      overlap:
+      - boschivo
+      - incendio
+      - situazione
+      score: 2.6
+      titolo: 'Incendi boschivi Sardegna: Curcio fa il punto della situazione'
+      url: https://youtu.be/FPLoljB20QA
+    - anchored:
+      - boschivo
+      canale: abili-a-proteggere
+      id: GVKQznWv4eE
+      is_lis: true
+      overlap:
+      - antincendio
+      - boschivo
+      - campagna
+      score: 2.4
+      titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
+      url: https://youtu.be/GVKQznWv4eE
   comunicazioni/2026-09-10-soverato-2000-alluvione-campeggio-le-giare:
     title: 'Soverato, 10 settembre 2000: l''alluvione del campeggio Le Giare'
     url: /comunicazioni/2026-09-10-soverato-2000-alluvione-campeggio-le-giare/
@@ -5989,6 +6287,60 @@ pagine:
       score: 2.2
       titolo: Io non rischio Alluvione – Cosa fare durante un’allerta, durante e dopo un’alluvione
       url: https://youtu.be/DbGSeVbDLCg
+  comunicazioni/2026-09-11-pioggia-alberi-tombini-voragine-otto-interventi:
+    title: 'Un giorno di pioggia: otto interventi tra alberi caduti, tombini e una voragine'
+    url: /comunicazioni/2026-09-11-pioggia-alberi-tombini-voragine-otto-interventi/
+    video:
+    - anchored:
+      - voragine
+      canale: geopop
+      id: 2vFmw1l2eqA
+      is_lis: false
+      overlap:
+      - voragine
+      score: 6.0
+      titolo: 'VORAGINE A NAPOLI: LA SPIEGAZIONE GEOLOGICA DEL FENOMENO'
+      url: https://youtu.be/2vFmw1l2eqA
+    - anchored:
+      - voragine
+      canale: geopop
+      id: 7JMgjMHvyQo
+      is_lis: false
+      overlap:
+      - voragine
+      score: 6.0
+      titolo: La porta dell'inferno - LA SPIEGAZIONE GEOLOGICA della voragine di fuoco
+      url: https://youtu.be/7JMgjMHvyQo
+    - anchored:
+      - voragine
+      canale: ingv-vulcani
+      id: 2uqjdFLU8Jo
+      is_lis: false
+      overlap:
+      - voragine
+      score: 6.0
+      titolo: Etna,  13 giugno 2019, Voragine
+      url: https://youtu.be/2uqjdFLU8Jo
+    - anchored:
+      - voragine
+      canale: ingv-vulcani
+      id: eWu1Ph2vCz8
+      is_lis: false
+      overlap:
+      - voragine
+      score: 6.0
+      titolo: 'Etna: Attivita'' dal Cratere Voragine del 3 luglio 2024'
+      url: https://youtu.be/eWu1Ph2vCz8
+    - anchored:
+      - temporali
+      canale: io-non-rischio
+      id: kT-m1l4haIQ
+      is_lis: false
+      overlap:
+      - temporali
+      score: 2.0
+      titolo: Chi ha paura dei temporali?
+      url: https://youtu.be/kT-m1l4haIQ
   comunicazioni/2026-09-13-cartografia-orientamento-esercitazione:
     title: 'Cartografia e orientamento: perché la mappa resta uno strumento vitale'
     url: /comunicazioni/2026-09-13-cartografia-orientamento-esercitazione/
@@ -6003,6 +6355,68 @@ pagine:
       score: 6.0
       titolo: 'Sicuri in Montagna: cartografia, sai dove andare?'
       url: https://youtu.be/9kMOL7z3yiw
+  comunicazioni/2026-09-14-carta-naturalistica-castelli-romani-latium-volcano:
+    title: 'La Carta naturalistica dei Castelli Romani: leggere il vulcano su cui viviamo'
+    url: /comunicazioni/2026-09-14-carta-naturalistica-castelli-romani-latium-volcano/
+    video:
+    - anchored:
+      - vulcano
+      canale: geopop
+      id: SHl690TWTSo
+      is_lis: false
+      overlap:
+      - cono
+      - forma
+      - trovano
+      - vulcano
+      score: 9.0
+      titolo: 'I vulcani lineari non hanno la forma a "cono": cosa sono, dove si trovano e le caratteristiche'
+      url: https://youtu.be/SHl690TWTSo
+    - anchored:
+      - vulcano
+      canale: dpc-gov
+      id: _AYUUv69F3U
+      is_lis: false
+      overlap:
+      - rischio
+      - vulcanico
+      - vulcano
+      score: 7.2
+      titolo: L'esercitazione nazionale di protezione civile sul rischio vulcanico – Esercitazione VULCANO 2022
+      url: https://youtu.be/_AYUUv69F3U
+    - anchored:
+      - vulcano
+      canale: geopop
+      id: F33a_qlVLAQ
+      is_lis: false
+      overlap:
+      - forma
+      - vulcano
+      score: 7.0
+      titolo: Vulcani a scudo, perché si chiamano così e perché hanno quella forma "corta e chiatta"
+      url: https://youtu.be/F33a_qlVLAQ
+    - anchored:
+      - vulcano
+      canale: geopop
+      id: v2VFX_ZIWr8
+      is_lis: false
+      overlap:
+      - geologica
+      - vulcano
+      score: 7.0
+      titolo: Perché tante scosse di terremoto a Santorini? L'analisi geologica e le caratteristiche del vulcano
+      url: https://youtu.be/v2VFX_ZIWr8
+    - anchored:
+      - vulcano
+      canale: ingv-vulcani
+      id: doJOni-e2BE
+      is_lis: false
+      overlap:
+      - campi
+      - vulcano
+      score: 7.0
+      titolo: Campi Flegrei - Nel sonno del vulcano
+      url: https://youtu.be/doJOni-e2BE
   comunicazioni/2026-09-15-alluvione-marche-2022-bombe-acqua-cambiamento-climatico:
     title: 'Alluvione delle Marche, 15-16 settembre 2022: la notte delle bombe d''acqua sui Monti del Catria'
     url: /comunicazioni/2026-09-15-alluvione-marche-2022-bombe-acqua-cambiamento-climatico/
@@ -6064,7 +6478,7 @@ pagine:
       - esercitazione
       - evacuazione
       - procedure
-      score: 3.4
+      score: 7.6
       titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
       url: https://youtu.be/Ia_Uf9i6BTk
     - anchored:
@@ -6077,7 +6491,7 @@ pagine:
       - esercitazione
       - nell
       - rischio
-      score: 3.2
+      score: 7.4
       titolo: NEAMWave 2023 - Esercitazione per rischio tsunami nell'area Euro-Mediterranea. INGV-Alessandro Amato
       url: https://youtu.be/qKfP_mrgJdc
     - anchored:
@@ -6089,7 +6503,7 @@ pagine:
       - esercitazione
       - idraulico
       - rischio
-      score: 3.0
+      score: 7.2
       titolo: 'NEIFLEX 2018: esercitazione internazionale sul rischio idraulico'
       url: https://youtu.be/Qdr1TEgicd8
     - anchored:
@@ -6101,7 +6515,7 @@ pagine:
       - esercitazione
       - rischio
       - vulcanico
-      score: 3.0
+      score: 7.2
       titolo: L'esercitazione nazionale di protezione civile sul rischio vulcanico – Esercitazione VULCANO 2022
       url: https://youtu.be/_AYUUv69F3U
     - anchored:
@@ -6112,9 +6526,26 @@ pagine:
       overlap:
       - esercitazione
       - flegrei
-      score: 2.8
+      score: 7.0
       titolo: Esercitazione nazionale "Exe Flegrei 2024"
       url: https://youtu.be/YInihWkOdI0
+  comunicazioni/2026-09-19-giornata-aggiornamento-volontari:
+    title: Giornata di aggiornamento per i volontari attivi
+    url: /comunicazioni/2026-09-19-giornata-aggiornamento-volontari/
+    video:
+    - anchored:
+      - antincendio
+      - boschivo
+      canale: abili-a-proteggere
+      id: GVKQznWv4eE
+      is_lis: true
+      overlap:
+      - antincendio
+      - boschivo
+      - campagna
+      score: 3.0
+      titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
+      url: https://youtu.be/GVKQznWv4eE
   comunicazioni/2026-09-20-alluvione-livorno-2017-memoria:
     title: '10 settembre 2017: ricordare Livorno per non ripetere gli errori'
     url: /comunicazioni/2026-09-20-alluvione-livorno-2017-memoria/
@@ -6228,6 +6659,150 @@ pagine:
       score: 6.2
       titolo: Intervista a David Piccinini - Direttore Generale servizio protezione civile regione Marche
       url: https://youtu.be/jJpZO_erLUQ
+  comunicazioni/2026-09-27-sala-operativa-regionale-soup-803555:
+    title: 'Chi risponde all''803 555: la Sala Operativa Regionale della Protezione Civile'
+    url: /comunicazioni/2026-09-27-sala-operativa-regionale-soup-803555/
+    video:
+    - anchored:
+      - boschivo
+      canale: dpc-gov
+      id: FPLoljB20QA
+      is_lis: false
+      overlap:
+      - boschivo
+      - incendio
+      - situazione
+      score: 2.6
+      titolo: 'Incendi boschivi Sardegna: Curcio fa il punto della situazione'
+      url: https://youtu.be/FPLoljB20QA
+  comunicazioni/2026-09-29-parco-castelli-romani-collaborazione:
+    title: 'Il Parco dei Castelli Romani: un alleato della Protezione Civile'
+    url: /comunicazioni/2026-09-29-parco-castelli-romani-collaborazione/
+    video:
+    - anchored:
+      - dissesto
+      canale: geopop
+      id: Lu7IXn90TBQ
+      is_lis: false
+      overlap:
+      - dissesto
+      - frana
+      - idrogeologico
+      - rischio
+      score: 4.2
+      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
+      url: https://youtu.be/Lu7IXn90TBQ
+  comunicazioni/2026-10-01-ottobre-mese-rischio-idrogeologico:
+    title: 'Ottobre: il mese del rischio idrogeologico'
+    url: /comunicazioni/2026-10-01-ottobre-mese-rischio-idrogeologico/
+    video:
+    - anchored:
+      - idrogeologico
+      canale: cmcc
+      id: CiSTPzoI_zs
+      is_lis: false
+      overlap:
+      - aree
+      - degli
+      - edifici
+      - idrogeologico
+      - rischio
+      score: 8.4
+      titolo: Rilocalizzazioni degli edifici residenziali dalle aree a rischio idrogeologico
+      url: https://youtu.be/CiSTPzoI_zs
+    - anchored:
+      - idrogeologico
+      canale: geopop
+      id: Lu7IXn90TBQ
+      is_lis: false
+      overlap:
+      - idrogeologico
+      - rischio
+      score: 6.6
+      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
+      url: https://youtu.be/Lu7IXn90TBQ
+  comunicazioni/2026-10-01-ottobre-mese-rischio-idrogeologico-facile:
+    title: 'Ottobre: attenzione al rischio idrogeologico'
+    url: /comunicazioni/2026-10-01-ottobre-mese-rischio-idrogeologico-facile/
+    video:
+    - anchored:
+      - idrogeologico
+      canale: geopop
+      id: Lu7IXn90TBQ
+      is_lis: false
+      overlap:
+      - frana
+      - idrogeologico
+      - rischio
+      score: 7.6
+      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
+      url: https://youtu.be/Lu7IXn90TBQ
+    - anchored:
+      - idrogeologico
+      canale: cmcc
+      id: CiSTPzoI_zs
+      is_lis: false
+      overlap:
+      - idrogeologico
+      - rischio
+      score: 6.6
+      titolo: Rilocalizzazioni degli edifici residenziali dalle aree a rischio idrogeologico
+      url: https://youtu.be/CiSTPzoI_zs
+  comunicazioni/2026-10-04-giampilieri-2009-colate-di-fango-messina:
+    title: 'Giampilieri, 1° ottobre 2009: le colate di fango che travolsero i borghi di Messina'
+    url: /comunicazioni/2026-10-04-giampilieri-2009-colate-di-fango-messina/
+    video:
+    - anchored:
+      - messina
+      canale: geopop
+      id: 4cJ9IdeTZ2A
+      is_lis: false
+      overlap:
+      - messina
+      score: 6.0
+      titolo: Identificata la faglia del Terremoto di Messina del 1908 - Vi spiego tutto
+      url: https://youtu.be/4cJ9IdeTZ2A
+    - anchored:
+      - messina
+      canale: ingv-terremoti
+      id: UgAcbTC4rbA
+      is_lis: false
+      overlap:
+      - messina
+      score: 6.0
+      titolo: 1908 Messina and Reggio Calabria Tsunami propagation- Simulazione propagazione del maremoto del 1908
+      url: https://youtu.be/UgAcbTC4rbA
+  comunicazioni/2026-10-05-geoportali-strumenti-digitali-rischio:
+    title: 'Geoportali: come leggere le mappe di rischio del proprio territorio'
+    url: /comunicazioni/2026-10-05-geoportali-strumenti-digitali-rischio/
+    video:
+    - anchored:
+      - idrogeologico
+      canale: geopop
+      id: Lu7IXn90TBQ
+      is_lis: false
+      overlap:
+      - dati
+      - dissesto
+      - frana
+      - idrogeologico
+      - mappa
+      - rischio
+      score: 6.2
+      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
+      url: https://youtu.be/Lu7IXn90TBQ
+    - anchored:
+      - idrogeologico
+      canale: cmcc
+      id: CiSTPzoI_zs
+      is_lis: false
+      overlap:
+      - aree
+      - idrogeologico
+      - rischio
+      score: 3.2
+      titolo: Rilocalizzazioni degli edifici residenziali dalle aree a rischio idrogeologico
+      url: https://youtu.be/CiSTPzoI_zs
   comunicazioni/2026-10-06-sismicita-castelli-romani-zona-2b:
     title: 'Sismicità dei Castelli Romani: perché siamo in zona 2B'
     url: /comunicazioni/2026-10-06-sismicita-castelli-romani-zona-2b/
@@ -6310,6 +6885,32 @@ pagine:
       score: 13.0
       titolo: 'Il disastro del Vajont: l’analisi geologica e la ricostruzione della tragedia del 9 ottobre 1963'
       url: https://youtu.be/xUtCwhN8-pQ
+  comunicazioni/2026-10-11-genova-2014-alluvione-bisagno-tre-anni-dopo:
+    title: 'Genova, 9 ottobre 2014: il Bisagno esonda di nuovo, tre anni dopo il Fereggiano'
+    url: /comunicazioni/2026-10-11-genova-2014-alluvione-bisagno-tre-anni-dopo/
+    video:
+    - anchored:
+      - genova
+      canale: natgeo-italia
+      id: 0D9l-vhRadU
+      is_lis: false
+      overlap:
+      - genova
+      - mare
+      - pericolo
+      score: 7.6
+      titolo: 'Codice rosso - Salvataggi in mare: Genova. Pericolo in fondo al mare'
+      url: https://youtu.be/0D9l-vhRadU
+    - anchored:
+      - genova
+      canale: solarino-sismologo
+      id: quun4sD4YQw
+      is_lis: false
+      overlap:
+      - genova
+      score: 6.0
+      titolo: Terremoti a Fontanigorda (Genova) ottobre 2024
+      url: https://youtu.be/quun4sD4YQw
   comunicazioni/2026-10-15-reggio-emilia-1996-terremoto-correggio-rischio-padano:
     title: 'Reggio Emilia, 15 ottobre 1996: il terremoto che ha riportato la Pianura Padana sulla mappa sismica'
     url: /comunicazioni/2026-10-15-reggio-emilia-1996-terremoto-correggio-rischio-padano/
@@ -6387,6 +6988,41 @@ pagine:
       score: 8.2
       titolo: Mirandola, i danni dopo la scossa del 29 maggio – Terremoto Emilia
       url: https://youtu.be/KjQSuaVrjlY
+  comunicazioni/2026-10-17-neve-e-gelo-casa-e-auto-pronte-prima-dell-inverno:
+    title: 'Neve e gelo: la casa e l''auto pronte prima dell''inverno'
+    url: /comunicazioni/2026-10-17-neve-e-gelo-casa-e-auto-pronte-prima-dell-inverno/
+    video:
+    - anchored:
+      - neve
+      canale: cnsas
+      id: CyIq3dZGscc
+      is_lis: false
+      overlap:
+      - neve
+      - prudenza
+      score: 7.0
+      titolo: 'Covid-19: “Sì allo sport in montagna, ma quest’anno prima la prudenza”. Sicuri sulla Neve 2021'
+      url: https://youtu.be/CyIq3dZGscc
+    - anchored:
+      - neve
+      canale: cnsas
+      id: _eRFm4JSkYs
+      is_lis: false
+      overlap:
+      - neve
+      score: 6.0
+      titolo: 'Sicuri in Montagna - Racchette da neve: istruzioni per l''uso'
+      url: https://youtu.be/_eRFm4JSkYs
+    - anchored:
+      - neve
+      canale: geopop
+      id: JXmJa_Vo28o
+      is_lis: false
+      overlap:
+      - neve
+      score: 6.0
+      titolo: Le 5 differenze tra neve e grandine
+      url: https://youtu.be/JXmJa_Vo28o
   comunicazioni/2026-10-20-rischio-industriale-seveso:
     title: 'Rischio industriale: la direttiva Seveso e i piani di emergenza'
     url: /comunicazioni/2026-10-20-rischio-industriale-seveso/
@@ -6945,6 +7581,73 @@ pagine:
       score: 7.2
       titolo: 'Terremoti in pillole 23. L''onda inarrestabile: il maremoto'
       url: https://youtu.be/2w1JaOKE_2M
+  comunicazioni/2026-11-07-piemonte-1994-alluvione-tanaro:
+    title: 'Piemonte, 5-6 novembre 1994: l''alluvione del Tanaro che cambiò le regole'
+    url: /comunicazioni/2026-11-07-piemonte-1994-alluvione-tanaro/
+    video:
+    - anchored:
+      - alluvione
+      - tragedia
+      canale: geopop
+      id: fpeEmFI5G8s
+      is_lis: false
+      overlap:
+      - alluvione
+      - frana
+      - sarno
+      - tragedia
+      score: 5.8
+      titolo: Alluvione di Sarno del 5 maggio 1998, le cause della frana e la ricostruzione della tragedia
+      url: https://youtu.be/fpeEmFI5G8s
+    - anchored:
+      - idrogeologico
+      canale: geopop
+      id: Lu7IXn90TBQ
+      is_lis: false
+      overlap:
+      - frana
+      - idrogeologico
+      - rischio
+      score: 3.2
+      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
+      url: https://youtu.be/Lu7IXn90TBQ
+    - anchored:
+      - idrogeologico
+      canale: cmcc
+      id: CiSTPzoI_zs
+      is_lis: false
+      overlap:
+      - aree
+      - degli
+      - idrogeologico
+      - rischio
+      score: 3.0
+      titolo: Rilocalizzazioni degli edifici residenziali dalle aree a rischio idrogeologico
+      url: https://youtu.be/CiSTPzoI_zs
+    - anchored:
+      - alluvione
+      canale: io-non-rischio
+      id: DbGSeVbDLCg
+      is_lis: true
+      overlap:
+      - allerta
+      - alluvione
+      - rischio
+      score: 2.2
+      titolo: Io non rischio Alluvione – Cosa fare durante un’allerta, durante e dopo un’alluvione
+      url: https://youtu.be/DbGSeVbDLCg
+    - anchored:
+      - alluvione
+      canale: io-non-rischio
+      id: pRNdk6d1tWg
+      is_lis: true
+      overlap:
+      - alluvione
+      - rischio
+      - subito
+      score: 2.2
+      titolo: Io non rischio Alluvione – Cosa sapere e cosa fare fin da subito
+      url: https://youtu.be/pRNdk6d1tWg
   comunicazioni/2026-11-08-alluvione-versilia-1996-trent-anni:
     title: 'Trent''anni dall''alluvione della Versilia: quella notte del 19 giugno 1996'
     url: /comunicazioni/2026-11-08-alluvione-versilia-1996-trent-anni/
@@ -6959,6 +7662,59 @@ pagine:
       score: 6.0
       titolo: SUV-scooter crash in Versilia, 17-year-old dies
       url: https://youtu.be/FFoUC5_3Ark
+    - anchored:
+      - idrogeologico
+      canale: cmcc
+      id: CiSTPzoI_zs
+      is_lis: false
+      overlap:
+      - aree
+      - edifici
+      - idrogeologico
+      - rischio
+      score: 3.8
+      titolo: Rilocalizzazioni degli edifici residenziali dalle aree a rischio idrogeologico
+      url: https://youtu.be/CiSTPzoI_zs
+    - anchored:
+      - idrogeologico
+      canale: geopop
+      id: Lu7IXn90TBQ
+      is_lis: false
+      overlap:
+      - frana
+      - idrogeologico
+      - rischio
+      score: 3.2
+      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
+      url: https://youtu.be/Lu7IXn90TBQ
+    - anchored:
+      - alluvione
+      canale: io-non-rischio
+      id: DbGSeVbDLCg
+      is_lis: true
+      overlap:
+      - allerta
+      - alluvione
+      - rischio
+      score: 2.2
+      titolo: Io non rischio Alluvione – Cosa fare durante un’allerta, durante e dopo un’alluvione
+      url: https://youtu.be/DbGSeVbDLCg
+  comunicazioni/2026-11-15-polesine-1951-alluvione-del-po:
+    title: 'Polesine, 14 novembre 1951: la grande alluvione del Po'
+    url: /comunicazioni/2026-11-15-polesine-1951-alluvione-del-po/
+    video:
+    - anchored:
+      - alluvione
+      - vittime
+      canale: geopop
+      id: cijPrtMm8o0
+      is_lis: false
+      overlap:
+      - alluvione
+      - vittime
+      score: 3.8
+      titolo: '▶️INONDAZIONI, NUBIFRAGI, ALLUVIONI, VITTIME: COSA STA SUCCEDENDO? |GeologiaPOP🌍'
+      url: https://youtu.be/cijPrtMm8o0
     - anchored:
       - alluvione
       canale: io-non-rischio
@@ -6995,6 +7751,35 @@ pagine:
       score: 2.0
       titolo: Islanda, nuova eruzione vulcanica. Evacuati gli abitanti di Grindavik
       url: https://youtu.be/eYZMSEKA-Ro
+  comunicazioni/2026-11-21-giornata-nazionale-alberi:
+    title: 'Giornata nazionale degli alberi: boschi, prevenzione, rischio idrogeologico'
+    url: /comunicazioni/2026-11-21-giornata-nazionale-alberi/
+    video:
+    - anchored:
+      - idrogeologico
+      canale: cmcc
+      id: CiSTPzoI_zs
+      is_lis: false
+      overlap:
+      - aree
+      - degli
+      - idrogeologico
+      - rischio
+      score: 7.8
+      titolo: Rilocalizzazioni degli edifici residenziali dalle aree a rischio idrogeologico
+      url: https://youtu.be/CiSTPzoI_zs
+    - anchored:
+      - idrogeologico
+      canale: geopop
+      id: Lu7IXn90TBQ
+      is_lis: false
+      overlap:
+      - frana
+      - idrogeologico
+      - rischio
+      score: 7.6
+      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
+      url: https://youtu.be/Lu7IXn90TBQ
   comunicazioni/2026-11-23-irpinia-1980-anniversario-46:
     title: '23 novembre 1980: 46 anni dal terremoto dell''Irpinia'
     url: /comunicazioni/2026-11-23-irpinia-1980-anniversario-46/
@@ -7012,6 +7797,64 @@ pagine:
       score: 8.2
       titolo: 'SHAKEMOVIE: propagazione onde sismiche del terremoto Mw 6.9 del 23/11/1980 in Irpinia e Basilicata'
       url: https://youtu.be/NfgA9KZ3IWo
+  comunicazioni/2026-11-30-ischia-2022-frana-casamicciola:
+    title: 'Casamicciola, 26 novembre 2022: la frana all''alba sull''isola d''Ischia'
+    url: /comunicazioni/2026-11-30-ischia-2022-frana-casamicciola/
+    video:
+    - anchored:
+      - frana
+      canale: geopop
+      id: Lu7IXn90TBQ
+      is_lis: false
+      overlap:
+      - dissesto
+      - frana
+      - idrogeologico
+      - rischio
+      score: 8.2
+      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
+      url: https://youtu.be/Lu7IXn90TBQ
+    - anchored:
+      - frana
+      canale: geopop
+      id: fpeEmFI5G8s
+      is_lis: false
+      overlap:
+      - frana
+      - ricostruzione
+      score: 7.0
+      titolo: Alluvione di Sarno del 5 maggio 1998, le cause della frana e la ricostruzione della tragedia
+      url: https://youtu.be/fpeEmFI5G8s
+    - anchored:
+      - frana
+      canale: cima-foundation
+      id: gsBgcnO6qfc
+      is_lis: false
+      overlap:
+      - frana
+      score: 6.0
+      titolo: Frana di Arenzano 2016
+      url: https://youtu.be/gsBgcnO6qfc
+    - anchored:
+      - frana
+      canale: dpc-gov
+      id: 6eeYoCoFn5M
+      is_lis: false
+      overlap:
+      - frana
+      score: 6.0
+      titolo: Le attività operative in corso – Frana Niscemi 2026
+      url: https://youtu.be/6eeYoCoFn5M
+    - anchored:
+      - frana
+      canale: dpc-gov
+      id: 9olWlF0VMDM
+      is_lis: false
+      overlap:
+      - frana
+      score: 6.0
+      titolo: Il Capo Dipartimento fa il punto sulle attività in corso – Frana Niscemi 2026
+      url: https://youtu.be/9olWlF0VMDM
   comunicazioni/2026-12-02-neve-e-ghiaccio-preparazione:
     title: 'Neve e ghiaccio: prepararsi per l''inverno rigido'
     url: /comunicazioni/2026-12-02-neve-e-ghiaccio-preparazione/
@@ -7262,6 +8105,76 @@ pagine:
       score: 3.6
       titolo: 'Sequenza sismica in Pianura Padana 2012: il terremoto di magnitudo 5.8 del 29 maggio'
       url: https://youtu.be/2ZVvY4ufdYM
+  comunicazioni/2026-12-29-vacanze-in-montagna-valanghe-sicurezza:
+    title: 'Vacanze sulla neve: il bollettino valanghe e le regole per chi va in montagna'
+    url: /comunicazioni/2026-12-29-vacanze-in-montagna-valanghe-sicurezza/
+    video:
+    - anchored:
+      - montagna
+      - neve
+      canale: cnsas
+      id: CyIq3dZGscc
+      is_lis: false
+      overlap:
+      - montagna
+      - neve
+      - sicuri
+      score: 13.0
+      titolo: 'Covid-19: “Sì allo sport in montagna, ma quest’anno prima la prudenza”. Sicuri sulla Neve 2021'
+      url: https://youtu.be/CyIq3dZGscc
+    - anchored:
+      - montagna
+      - neve
+      canale: cnsas
+      id: _eRFm4JSkYs
+      is_lis: false
+      overlap:
+      - montagna
+      - neve
+      - sicuri
+      score: 13.0
+      titolo: 'Sicuri in Montagna - Racchette da neve: istruzioni per l''uso'
+      url: https://youtu.be/_eRFm4JSkYs
+    - anchored:
+      - montagna
+      - regole
+      canale: cnsas
+      id: 7NKVJqnbt8c
+      is_lis: false
+      overlap:
+      - fuori
+      - montagna
+      - regole
+      - sicuri
+      score: 9.4
+      titolo: Sicuri in Montagna - Fuori sentiero, ma dentro le regole
+      url: https://youtu.be/7NKVJqnbt8c
+    - anchored:
+      - montagna
+      - regole
+      canale: cnsas
+      id: YMfRmwyiQv4
+      is_lis: false
+      overlap:
+      - montagna
+      - regole
+      - sicuri
+      score: 8.8
+      titolo: 'Sicuri in Montagna - Freeride: free... Ma con delle regole'
+      url: https://youtu.be/YMfRmwyiQv4
+    - anchored:
+      - montagna
+      canale: cnsas
+      id: uG9xAid4xig
+      is_lis: false
+      overlap:
+      - escursione
+      - montagna
+      - prevenzione
+      - sicuri
+      score: 8.2
+      titolo: 'Sicuri in Montagna - Pianificazione è prevenzione: come preparare un''escursione'
+      url: https://youtu.be/uG9xAid4xig
   comunicazioni/2027-01-13-avezzano-1915-terremoto-marsica:
     title: 'Avezzano, 13 gennaio 1915: il terremoto della Marsica e la sua eredità'
     url: /comunicazioni/2027-01-13-avezzano-1915-terremoto-marsica/
@@ -7503,7 +8416,7 @@ pagine:
       - frana
       - idrogeologico
       - rischio
-      score: 14.4
+      score: 18.6
       titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
       url: https://youtu.be/Lu7IXn90TBQ
     - anchored:
@@ -7518,6 +8431,18 @@ pagine:
       score: 7.8
       titolo: Alluvione di Sarno del 5 maggio 1998, le cause della frana e la ricostruzione della tragedia
       url: https://youtu.be/fpeEmFI5G8s
+    - anchored:
+      - idrogeologico
+      canale: cmcc
+      id: CiSTPzoI_zs
+      is_lis: false
+      overlap:
+      - aree
+      - idrogeologico
+      - rischio
+      score: 7.2
+      titolo: Rilocalizzazioni degli edifici residenziali dalle aree a rischio idrogeologico
+      url: https://youtu.be/CiSTPzoI_zs
     - anchored:
       - frana
       canale: dpc-gov
@@ -7540,16 +8465,6 @@ pagine:
       score: 6.6
       titolo: Il Capo Dipartimento fa il punto sulle attività in corso – Frana Niscemi 2026
       url: https://youtu.be/9olWlF0VMDM
-    - anchored:
-      - frana
-      canale: cima-foundation
-      id: gsBgcnO6qfc
-      is_lis: false
-      overlap:
-      - frana
-      score: 6.0
-      titolo: Frana di Arenzano 2016
-      url: https://youtu.be/gsBgcnO6qfc
   conoscere/catalogo-dei-rischi/rischio-incendio:
     title: Il rischio da incendi boschivi
     url: /conoscere/catalogo-dei-rischi/rischio-incendio/
@@ -7895,6 +8810,31 @@ pagine:
     url: /conoscere/le-quattro-fasi/prevenzione/
     video:
     - anchored:
+      - esercitazione
+      - pianificazione
+      canale: dpc-gov
+      id: OkEoPVutZr4
+      is_lis: false
+      overlap:
+      - esercitazione
+      - pianificazione
+      score: 4.0
+      titolo: Esercitazione “Verso una pianificazione di protezione civile inclusiva”
+      url: https://youtu.be/OkEoPVutZr4
+    - anchored:
+      - esercitazione
+      canale: ingv-terremoti
+      id: qKfP_mrgJdc
+      is_lis: false
+      overlap:
+      - area
+      - esercitazione
+      - nell
+      - rischio
+      score: 3.4
+      titolo: NEAMWave 2023 - Esercitazione per rischio tsunami nell'area Euro-Mediterranea. INGV-Alessandro Amato
+      url: https://youtu.be/qKfP_mrgJdc
+    - anchored:
       - vulnerabilità
       canale: cmcc
       id: PONxa3SC-kc
@@ -7908,39 +8848,26 @@ pagine:
       url: https://youtu.be/PONxa3SC-kc
     - anchored:
       - esercitazione
-      - pianificazione
+      canale: abili-a-proteggere
+      id: jy4kGt-eFWg
+      is_lis: false
+      overlap:
+      - comunale
+      - esercitazione
+      score: 2.2
+      titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
+      url: https://youtu.be/jy4kGt-eFWg
+    - anchored:
+      - esercitazione
       canale: dpc-gov
-      id: OkEoPVutZr4
+      id: 6ImZj3WaeQY
       is_lis: false
       overlap:
       - esercitazione
-      - pianificazione
-      score: 3.2
-      titolo: Esercitazione “Verso una pianificazione di protezione civile inclusiva”
-      url: https://youtu.be/OkEoPVutZr4
-    - anchored:
-      - esercitazione
-      canale: ingv-terremoti
-      id: qKfP_mrgJdc
-      is_lis: false
-      overlap:
-      - area
-      - esercitazione
-      - nell
       - rischio
-      score: 2.6
-      titolo: NEAMWave 2023 - Esercitazione per rischio tsunami nell'area Euro-Mediterranea. INGV-Alessandro Amato
-      url: https://youtu.be/qKfP_mrgJdc
-    - anchored:
-      - vulnerabilità
-      canale: cmcc
-      id: JQtfXKRG1gs
-      is_lis: false
-      overlap:
-      - vulnerabilità
-      score: 2.0
-      titolo: CLIMATE CHANGE 2022 - Impatti, adattamento e vulnerabilità
-      url: https://youtu.be/JQtfXKRG1gs
+      score: 2.2
+      titolo: 'MODEX SICILY 2019: esercitazione internazionale sul rischio sismico'
+      url: https://youtu.be/6ImZj3WaeQY
   conoscere/rischio-vulcanico-colli-albani:
     title: 'Il vulcanismo dei Colli Albani: capire il Vulcano Laziale'
     url: /conoscere/rischio-vulcanico-colli-albani/
@@ -8410,7 +9337,7 @@ pagine:
       - dissesto
       - frana
       - idrogeologico
-      score: 3.6
+      score: 4.0
       titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
       url: https://youtu.be/Lu7IXn90TBQ
     - anchored:
@@ -8663,7 +9590,7 @@ pagine:
       overlap:
       - esercitazione
       - flegrei
-      score: 3.2
+      score: 4.0
       titolo: Esercitazione nazionale "Exe Flegrei 2024"
       url: https://youtu.be/YInihWkOdI0
     - anchored:
@@ -8674,9 +9601,41 @@ pagine:
       overlap:
       - esercitazione
       - pianificazione
-      score: 2.2
+      score: 3.0
       titolo: Esercitazione “Verso una pianificazione di protezione civile inclusiva”
       url: https://youtu.be/OkEoPVutZr4
+    - anchored:
+      - esercitazione
+      canale: ingv-terremoti
+      id: qKfP_mrgJdc
+      is_lis: false
+      overlap:
+      - area
+      - esercitazione
+      score: 2.6
+      titolo: NEAMWave 2023 - Esercitazione per rischio tsunami nell'area Euro-Mediterranea. INGV-Alessandro Amato
+      url: https://youtu.be/qKfP_mrgJdc
+    - anchored:
+      - esercitazione
+      canale: abili-a-proteggere
+      id: jy4kGt-eFWg
+      is_lis: false
+      overlap:
+      - comunale
+      - esercitazione
+      score: 2.2
+      titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
+      url: https://youtu.be/jy4kGt-eFWg
+    - anchored:
+      - esercitazione
+      canale: abili-a-proteggere
+      id: Ia_Uf9i6BTk
+      is_lis: false
+      overlap:
+      - esercitazione
+      score: 2.0
+      titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
+      url: https://youtu.be/Ia_Uf9i6BTk
   dossier/quando-il-mare-si-ritira:
     title: Quando il mare si ritira
     url: /dossier/quando-il-mare-si-ritira/
@@ -9201,6 +10160,31 @@ pagine:
     url: /dossier/troppa-acqua/
     video:
     - anchored:
+      - idrogeologico
+      canale: geopop
+      id: Lu7IXn90TBQ
+      is_lis: false
+      overlap:
+      - dati
+      - frana
+      - idrogeologico
+      - rischio
+      score: 4.0
+      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
+      url: https://youtu.be/Lu7IXn90TBQ
+    - anchored:
+      - idrogeologico
+      canale: cmcc
+      id: CiSTPzoI_zs
+      is_lis: false
+      overlap:
+      - aree
+      - idrogeologico
+      - rischio
+      score: 3.0
+      titolo: Rilocalizzazioni degli edifici residenziali dalle aree a rischio idrogeologico
+      url: https://youtu.be/CiSTPzoI_zs
+    - anchored:
       - tempesta
       canale: geopop
       id: cmEzpKqaTEU
@@ -9348,9 +10332,55 @@ pagine:
       - esercitazione
       - evacuazione
       - procedure
-      score: 2.8
+      score: 3.6
       titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
       url: https://youtu.be/Ia_Uf9i6BTk
+    - anchored:
+      - esercitazione
+      canale: abili-a-proteggere
+      id: jy4kGt-eFWg
+      is_lis: false
+      overlap:
+      - comunale
+      - esercitazione
+      - evacuazione
+      score: 2.8
+      titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
+      url: https://youtu.be/jy4kGt-eFWg
+    - anchored:
+      - esercitazione
+      canale: ingv-terremoti
+      id: qKfP_mrgJdc
+      is_lis: false
+      overlap:
+      - area
+      - esercitazione
+      - rischio
+      score: 2.8
+      titolo: NEAMWave 2023 - Esercitazione per rischio tsunami nell'area Euro-Mediterranea. INGV-Alessandro Amato
+      url: https://youtu.be/qKfP_mrgJdc
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: 6ImZj3WaeQY
+      is_lis: false
+      overlap:
+      - esercitazione
+      - rischio
+      score: 2.2
+      titolo: 'MODEX SICILY 2019: esercitazione internazionale sul rischio sismico'
+      url: https://youtu.be/6ImZj3WaeQY
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: Qdr1TEgicd8
+      is_lis: false
+      overlap:
+      - esercitazione
+      - rischio
+      score: 2.2
+      titolo: 'NEIFLEX 2018: esercitazione internazionale sul rischio idraulico'
+      url: https://youtu.be/Qdr1TEgicd8
   facile-da-leggere:
     title: Facile da leggere
     url: /facile-da-leggere/
@@ -9870,9 +10900,20 @@ pagine:
       - evacuazione
       - motoria
       - procedure
-      score: 9.8
+      score: 10.2
       titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
       url: https://youtu.be/Ia_Uf9i6BTk
+    - anchored:
+      - evacuazione
+      canale: abili-a-proteggere
+      id: jy4kGt-eFWg
+      is_lis: false
+      overlap:
+      - esercitazione
+      - evacuazione
+      score: 2.2
+      titolo: Esercitazione TWIST 2013 - Evacuazione di un disabile uditivo dagli uffici comunali
+      url: https://youtu.be/jy4kGt-eFWg
   glossario:
     title: Glossario di protezione civile
     url: /glossario/
@@ -10244,7 +11285,7 @@ pagine:
       - idrogeologico
       - mappa
       - rischio
-      score: 11.4
+      score: 15.6
       titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
       url: https://youtu.be/Lu7IXn90TBQ
     - anchored:
@@ -10259,6 +11300,19 @@ pagine:
       score: 7.8
       titolo: Alluvione di Sarno del 5 maggio 1998, le cause della frana e la ricostruzione della tragedia
       url: https://youtu.be/fpeEmFI5G8s
+    - anchored:
+      - idrogeologico
+      canale: cmcc
+      id: CiSTPzoI_zs
+      is_lis: false
+      overlap:
+      - aree
+      - degli
+      - idrogeologico
+      - rischio
+      score: 7.4
+      titolo: Rilocalizzazioni degli edifici residenziali dalle aree a rischio idrogeologico
+      url: https://youtu.be/CiSTPzoI_zs
     - anchored:
       - frana
       canale: dpc-gov
@@ -10281,16 +11335,6 @@ pagine:
       score: 6.6
       titolo: Il Capo Dipartimento fa il punto sulle attività in corso – Frana Niscemi 2026
       url: https://youtu.be/9olWlF0VMDM
-    - anchored:
-      - frana
-      canale: cima-foundation
-      id: gsBgcnO6qfc
-      is_lis: false
-      overlap:
-      - frana
-      score: 6.0
-      titolo: Frana di Arenzano 2016
-      url: https://youtu.be/gsBgcnO6qfc
   manuale/714-rischio-meteo-idrologico:
     title: 'Il rischio meteo-idrologico: temporali, vento, neve, calore'
     url: /manuale/714-rischio-meteo-idrologico/
@@ -10471,7 +11515,7 @@ pagine:
       - ingv
       - rischio
       - tsunami
-      score: 9.8
+      score: 10.2
       titolo: NEAMWave 2023 - Esercitazione per rischio tsunami nell'area Euro-Mediterranea. INGV-Alessandro Amato
       url: https://youtu.be/qKfP_mrgJdc
     - anchored:
@@ -10953,9 +11997,21 @@ pagine:
       - frana
       - idrogeologico
       - rischio
-      score: 4.4
+      score: 8.6
       titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
       url: https://youtu.be/Lu7IXn90TBQ
+    - anchored:
+      - idrogeologico
+      canale: cmcc
+      id: CiSTPzoI_zs
+      is_lis: false
+      overlap:
+      - aree
+      - idrogeologico
+      - rischio
+      score: 7.2
+      titolo: Rilocalizzazioni degli edifici residenziali dalle aree a rischio idrogeologico
+      url: https://youtu.be/CiSTPzoI_zs
     - anchored:
       - alluvione
       - frana
@@ -10990,16 +12046,6 @@ pagine:
       score: 2.6
       titolo: Il Capo Dipartimento fa il punto sulle attività in corso – Frana Niscemi 2026
       url: https://youtu.be/9olWlF0VMDM
-    - anchored:
-      - frana
-      canale: cima-foundation
-      id: gsBgcnO6qfc
-      is_lis: false
-      overlap:
-      - frana
-      score: 2.0
-      titolo: Frana di Arenzano 2016
-      url: https://youtu.be/gsBgcnO6qfc
   rischi-prevenzione/rischio-incendio:
     title: Rischio Incendi Boschivi
     url: /rischi-prevenzione/rischio-incendio/
@@ -11600,7 +12646,7 @@ pagine:
       - frana
       - idrogeologico
       - rischio
-      score: 6.8
+      score: 7.2
       titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
       url: https://youtu.be/Lu7IXn90TBQ
     - anchored:
@@ -11802,9 +12848,53 @@ pagine:
       overlap:
       - esercitazione
       - programma
-      score: 2.8
+      score: 7.0
       titolo: Le attività esercitative in programma – Esercitazione EXE PO 2026
       url: https://youtu.be/yPBNi9QoXa0
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: 6ImZj3WaeQY
+      is_lis: false
+      overlap:
+      - esercitazione
+      - rischio
+      score: 6.2
+      titolo: 'MODEX SICILY 2019: esercitazione internazionale sul rischio sismico'
+      url: https://youtu.be/6ImZj3WaeQY
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: Qdr1TEgicd8
+      is_lis: false
+      overlap:
+      - esercitazione
+      - rischio
+      score: 6.2
+      titolo: 'NEIFLEX 2018: esercitazione internazionale sul rischio idraulico'
+      url: https://youtu.be/Qdr1TEgicd8
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: UIpzlwhK2ik
+      is_lis: false
+      overlap:
+      - esercitazione
+      - rischio
+      score: 6.2
+      titolo: 'CALABRIA 2011: esercitazione nazionale sul rischio sismico'
+      url: https://youtu.be/UIpzlwhK2ik
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
+      id: _AYUUv69F3U
+      is_lis: false
+      overlap:
+      - esercitazione
+      - rischio
+      score: 6.2
+      titolo: L'esercitazione nazionale di protezione civile sul rischio vulcanico – Esercitazione VULCANO 2022
+      url: https://youtu.be/_AYUUv69F3U
   standard-iso/iso-31073:
     title: ISO 31073 — Vocabolario di gestione del rischio
     url: /standard-iso/iso-31073/
@@ -11856,6 +12946,32 @@ pagine:
       score: 2.0
       titolo: 'Verso una maggiore resilienza delle città transfrontaliere al rischio alluvioni: il progetto ADAPT'
       url: https://youtu.be/k0X5nx6BRmc
+  strumenti:
+    title: Strumenti di consultazione in tempo reale
+    url: /strumenti/
+    video:
+    - anchored:
+      - idrogeologico
+      canale: cmcc
+      id: CiSTPzoI_zs
+      is_lis: false
+      overlap:
+      - idrogeologico
+      - rischio
+      score: 2.4
+      titolo: Rilocalizzazioni degli edifici residenziali dalle aree a rischio idrogeologico
+      url: https://youtu.be/CiSTPzoI_zs
+    - anchored:
+      - idrogeologico
+      canale: geopop
+      id: Lu7IXn90TBQ
+      is_lis: false
+      overlap:
+      - idrogeologico
+      - rischio
+      score: 2.4
+      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
+      url: https://youtu.be/Lu7IXn90TBQ
   tabelle-comunicazione:
     title: Tabelle di comunicazione (CAA)
     url: /tabelle-comunicazione/

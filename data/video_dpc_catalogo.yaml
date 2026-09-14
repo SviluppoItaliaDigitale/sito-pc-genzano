@@ -3,7 +3,7 @@
 # Aggiornato periodicamente; usato da scripts/genera-video-correlati.py
 # per il cross-match con i contenuti del sito.
 #
-# Totale: 8801 video (18 canali).
+# Totale: 8829 video (18 canali).
 
 canali:
   abili-a-proteggere:
@@ -45,7 +45,7 @@ canali:
     nome: Geopop — divulgazione scientifica
     tematico_pc: false
     url: https://www.youtube.com/@geopop/videos
-    video_count: 1330
+    video_count: 1340
   ingv-terremoti:
     nome: INGV — Istituto Nazionale di Geofisica e Vulcanologia
     tematico_pc: true
@@ -70,12 +70,12 @@ canali:
     nome: Link4Universe — Adrian Fartade
     tematico_pc: false
     url: https://www.youtube.com/@link4universe/videos
-    video_count: 1232
+    video_count: 1234
   natgeo-italia:
     nome: National Geographic Italia
     tematico_pc: false
     url: https://www.youtube.com/@natgeoit/videos
-    video_count: 644
+    video_count: 645
   rai-cultura:
     nome: Rai Cultura (documentari)
     tematico_pc: false
@@ -85,7 +85,7 @@ canali:
     nome: Rai News
     tematico_pc: false
     url: https://www.youtube.com/@RaiNews/videos
-    video_count: 1802
+    video_count: 1817
   solarino-sismologo:
     nome: Stefano Solarino — sismologo INGV (divulgazione sismica)
     tematico_pc: true
@@ -12227,6 +12227,11 @@ video:
     id: 0Su-cpXuyGM
     titolo: 'Fuochi d''Artificio: come funzionano e da cosa dipendono i diversi colori ed effetti visivi?'
     url: https://youtu.be/0Su-cpXuyGM
+  geopop-0TobRrqxqLg:
+    canale: geopop
+    id: 0TobRrqxqLg
+    titolo: 'Perché le #torrigemelle sono crollate? E perché la Torre Sud è crollata per prima? #geopop'
+    url: https://youtu.be/0TobRrqxqLg
   geopop-0WaNr0v1-t0:
     canale: geopop
     id: 0WaNr0v1-t0
@@ -12257,6 +12262,11 @@ video:
     id: 0y9v423X09w
     titolo: Ma l’elisoccorso si paga?
     url: https://youtu.be/0y9v423X09w
+  geopop-0zP72c8azsY:
+    canale: geopop
+    id: 0zP72c8azsY
+    titolo: Abbassare il volume della musica in macchina quando parcheggiate? C'è un motivo scientifico
+    url: https://youtu.be/0zP72c8azsY
   geopop-12gFqASWxlI:
     canale: geopop
     id: 12gFqASWxlI
@@ -12572,6 +12582,11 @@ video:
     id: 49lCL86KFkI
     titolo: How MotoGP racing suits are made - airbag technology and other technical aspects
     url: https://youtu.be/49lCL86KFkI
+  geopop-49tiGAN_U1M:
+    canale: geopop
+    id: 49tiGAN_U1M
+    titolo: '#elniño avrà conseguenze in #italia ? Cerchiamo di fare chiarezza. #geopop #perte'
+    url: https://youtu.be/49tiGAN_U1M
   geopop-4G-cqJy_6_o:
     canale: geopop
     id: 4G-cqJy_6_o
@@ -13037,6 +13052,11 @@ video:
     id: 8SWOxJfgVxc
     titolo: What does quartz watch mean? COOL! I DIDN'T KNOW THAT
     url: https://youtu.be/8SWOxJfgVxc
+  geopop-8SaiR-S9zis:
+    canale: geopop
+    id: 8SaiR-S9zis
+    titolo: 'Quella del #worldtradecenter è la stazione ferroviaria più costosa della storia.'
+    url: https://youtu.be/8SaiR-S9zis
   geopop-8TDL96qFx1o:
     canale: geopop
     id: 8TDL96qFx1o
@@ -13162,6 +13182,11 @@ video:
     id: 9tg1XWd9elw
     titolo: '▶️AIRGUN E LA SISMICA - ASPETTI TECNICI: FACCIAMO CHIAREZZA |GeologiaPOP🌍'
     url: https://youtu.be/9tg1XWd9elw
+  geopop-9wF86w3h63o:
+    canale: geopop
+    id: 9wF86w3h63o
+    titolo: 'La storia geologica della Pianura Padana e cosa c''è sotto [spoiler: montagne]'
+    url: https://youtu.be/9wF86w3h63o
   geopop-9wjGZthWIQ0:
     canale: geopop
     id: 9wjGZthWIQ0
@@ -13962,6 +13987,11 @@ video:
     id: I3IpKEtWqvU
     titolo: LAMINAR FLOW - Here is the scientific explanation and a home experiment
     url: https://youtu.be/I3IpKEtWqvU
+  geopop-IIMVFt83oOk:
+    canale: geopop
+    id: IIMVFt83oOk
+    titolo: cos'è il caglio che si usa per fare i formaggi?
+    url: https://youtu.be/IIMVFt83oOk
   geopop-IK2mTKs_SSc:
     canale: geopop
     id: IK2mTKs_SSc
@@ -14172,6 +14202,11 @@ video:
     id: K73JN-5t6V0
     titolo: How do you create a political party? And where do existing parties get their money?
     url: https://youtu.be/K73JN-5t6V0
+  geopop-KACwWnNqhIs:
+    canale: geopop
+    id: KACwWnNqhIs
+    titolo: 'Cosa cambia con la nuova mappa del mondo: le dimensioni di Africa e Continenti a confronto'
+    url: https://youtu.be/KACwWnNqhIs
   geopop-KCdTHzpfIYo:
     canale: geopop
     id: KCdTHzpfIYo
@@ -15477,6 +15512,11 @@ video:
     id: W3C02y8A8LY
     titolo: Fusione nucleare, a che punto è la ricerca? L'eccellenza del progetto ITER
     url: https://youtu.be/W3C02y8A8LY
+  geopop-W4at5XxD9y0:
+    canale: geopop
+    id: W4at5XxD9y0
+    titolo: 'Dove vanno le #zanzare d’inverno? Saperlo, può aiutarci a ridurne la proliferazione'
+    url: https://youtu.be/W4at5XxD9y0
   geopop-W58NmDuFy8A:
     canale: geopop
     id: W58NmDuFy8A
@@ -15667,6 +15707,11 @@ video:
     id: XLeKaLnNbO4
     titolo: Why is there a hole in the airplane windows?
     url: https://youtu.be/XLeKaLnNbO4
+  geopop-XNbdhxPwySY:
+    canale: geopop
+    id: XNbdhxPwySY
+    titolo: Ho costruito un mini-pianeta a casa - come fare un Terrarium e perché
+    url: https://youtu.be/XNbdhxPwySY
   geopop-XPcKehh0Lgo:
     canale: geopop
     id: XPcKehh0Lgo
@@ -17297,6 +17342,11 @@ video:
     id: n8EkP_BY7Ck
     titolo: 'Marie Curie, the first woman to win a Nobel Prize: she made history with her discoveries of radio...'
     url: https://youtu.be/n8EkP_BY7Ck
+  geopop-nCOTNOl8BdA:
+    canale: geopop
+    id: nCOTNOl8BdA
+    titolo: 'La verità sui vaccini: perché sono obbligatori?'
+    url: https://youtu.be/nCOTNOl8BdA
   geopop-nCRYmQqs-yc:
     canale: geopop
     id: nCRYmQqs-yc
@@ -23777,6 +23827,11 @@ video:
     id: Qa9Umc5xFlI
     titolo: L'incredibile Oceano liquido di Encelado
     url: https://youtu.be/Qa9Umc5xFlI
+  link4universe-QaZi224_r2Y:
+    canale: link4universe
+    id: QaZi224_r2Y
+    titolo: LIVE - LANCIO razzo italiano VEGA (Avio) con Sentinel-3C e FLEX (ESA/UE)
+    url: https://youtu.be/QaZi224_r2Y
   link4universe-QboonAxSmJk:
     canale: link4universe
     id: QboonAxSmJk
@@ -27132,6 +27187,11 @@ video:
     id: yfODcSSZR98
     titolo: Panorama dell'Esplorazione Spaziale nel 2014
     url: https://youtu.be/yfODcSSZR98
+  link4universe-yrXY1eSGWQg:
+    canale: link4universe
+    id: yrXY1eSGWQg
+    titolo: Rieccomi! Serata chiacchiere e ritorno alle live - novità spaziali in arrivo!
+    url: https://youtu.be/yrXY1eSGWQg
   link4universe-ytv9KOW4goY:
     canale: link4universe
     id: ytv9KOW4goY
@@ -29302,6 +29362,11 @@ video:
     id: fEDC8yY8V7c
     titolo: Plastiki - L'oceano di plastica
     url: https://youtu.be/fEDC8yY8V7c
+  natgeo-italia-fHINFtd1ItA:
+    canale: natgeo-italia
+    id: fHINFtd1ItA
+    titolo: 5 fatti sorprendenti sugli orsi polari
+    url: https://youtu.be/fHINFtd1ItA
   natgeo-italia-fJGIYf1JOok:
     canale: natgeo-italia
     id: fJGIYf1JOok
@@ -30952,6 +31017,11 @@ video:
     id: 2VjVnBxTvbg
     titolo: 'Cloud, il talkcast di RaiNews.it: le emozioni del festival'
     url: https://youtu.be/2VjVnBxTvbg
+  rai-news-2ZKVIW1xSCM:
+    canale: rai-news
+    id: 2ZKVIW1xSCM
+    titolo: Il legame tra gli Houthi e l'Iran e perché Trump non aiuta l'Arabia Saudita
+    url: https://youtu.be/2ZKVIW1xSCM
   rai-news-2ZW_Ke2dTps:
     canale: rai-news
     id: 2ZW_Ke2dTps
@@ -31157,6 +31227,11 @@ video:
     id: 3zye2JwIxrg
     titolo: Bayesian Shipwreck, Major Recovery Operation
     url: https://youtu.be/3zye2JwIxrg
+  rai-news-4-08j6iQDeY:
+    canale: rai-news
+    id: 4-08j6iQDeY
+    titolo: 'Rogo di Crans-Montana: tre ragazzi sopravvissuti tornano assieme tra i banchi di scuola'
+    url: https://youtu.be/4-08j6iQDeY
   rai-news-40E5VLfHHYA:
     canale: rai-news
     id: 40E5VLfHHYA
@@ -31982,6 +32057,11 @@ video:
     id: A6zCqfzB4ME
     titolo: 'Il "poliziotto ologramma": l''idea coreana per la sicurezza'
     url: https://youtu.be/A6zCqfzB4ME
+  rai-news-A85lwWbaTQQ:
+    canale: rai-news
+    id: A85lwWbaTQQ
+    titolo: 'Ex socio Lavitola: "Smistavo denaro ma non sapevo a cosa servisse"'
+    url: https://youtu.be/A85lwWbaTQQ
   rai-news-A9TEdZgdei0:
     canale: rai-news
     id: A9TEdZgdei0
@@ -32917,6 +32997,11 @@ video:
     id: Fz8hs44s64s
     titolo: Children abused in a nursery school in Asti, two teachers banned
     url: https://youtu.be/Fz8hs44s64s
+  rai-news-FzRCSOvUhYI:
+    canale: rai-news
+    id: FzRCSOvUhYI
+    titolo: Rotte del petrolio a rischio. Attaccato l'East-West Pipeline
+    url: https://youtu.be/FzRCSOvUhYI
   rai-news-G-YjCc82FIk:
     canale: rai-news
     id: G-YjCc82FIk
@@ -34167,6 +34252,11 @@ video:
     id: ORtwuRsyCq4
     titolo: In piazza in tutta Italia per la Festa della Liberazione, le testimonianze
     url: https://youtu.be/ORtwuRsyCq4
+  rai-news-OSgD6yz08TA:
+    canale: rai-news
+    id: OSgD6yz08TA
+    titolo: 'IA, Benanti: "Interessi economici dietro la paura dei robot"'
+    url: https://youtu.be/OSgD6yz08TA
   rai-news-OUN7fYKnS6U:
     canale: rai-news
     id: OUN7fYKnS6U
@@ -34422,6 +34512,11 @@ video:
     id: Q4JMBLhRvFI
     titolo: Babbo Natale in Ferrari al Policlinico Gemelli di Roma, regali ai bambini ricoverati
     url: https://youtu.be/Q4JMBLhRvFI
+  rai-news-QBcx5YC4HWk:
+    canale: rai-news
+    id: QBcx5YC4HWk
+    titolo: Militare tenta di uccidere l'ex compagna nell'aula di Tribunale di Udine
+    url: https://youtu.be/QBcx5YC4HWk
   rai-news-QBp2Wvad5Y8:
     canale: rai-news
     id: QBp2Wvad5Y8
@@ -34612,6 +34707,11 @@ video:
     id: RKgIACKk28o
     titolo: 'Sanremo2025: Coma Cose, le prime prove con l’orchestra'
     url: https://youtu.be/RKgIACKk28o
+  rai-news-RMW9be72P-A:
+    canale: rai-news
+    id: RMW9be72P-A
+    titolo: Il San Francesco di Giotto torna a risplendere
+    url: https://youtu.be/RMW9be72P-A
   rai-news-RP4fOz1kneE:
     canale: rai-news
     id: RP4fOz1kneE
@@ -34817,6 +34917,11 @@ video:
     id: Srqj50lztvY
     titolo: 'Top stories from Italy in English: June 24th edition, Giorgia Meloni meets Viktor Orban'
     url: https://youtu.be/Srqj50lztvY
+  rai-news-St3Snk7nfuI:
+    canale: rai-news
+    id: St3Snk7nfuI
+    titolo: 'Oasis a Roma: show di droni sull''Olimpico'
+    url: https://youtu.be/St3Snk7nfuI
   rai-news-Sxu3QA51GHw:
     canale: rai-news
     id: Sxu3QA51GHw
@@ -36622,6 +36727,11 @@ video:
     id: f8MZpVtZpmM
     titolo: The Faces of Work - TG2 Dossier
     url: https://youtu.be/f8MZpVtZpmM
+  rai-news-fCRIaJcV9PM:
+    canale: rai-news
+    id: fCRIaJcV9PM
+    titolo: 'Droni russi colpiscono al confine tra Polonia e Ucraina, Varsavia: "Escalation russa"'
+    url: https://youtu.be/fCRIaJcV9PM
   rai-news-fDMWqXOvNuM:
     canale: rai-news
     id: fDMWqXOvNuM
@@ -37797,6 +37907,11 @@ video:
     id: ndEZ71K9RC8
     titolo: Londra, 20 anni fa gli attentati terroristici che causarono la morte di 52 persone
     url: https://youtu.be/ndEZ71K9RC8
+  rai-news-ndJEbSFSU-M:
+    canale: rai-news
+    id: ndJEbSFSU-M
+    titolo: Il legame tra gli Houthi e l'Iran
+    url: https://youtu.be/ndJEbSFSU-M
   rai-news-ngOlPmFgpXE:
     canale: rai-news
     id: ngOlPmFgpXE
@@ -38627,6 +38742,11 @@ video:
     id: tApyh11FvC8
     titolo: 'Dua Lipa: Italian wedding'
     url: https://youtu.be/tApyh11FvC8
+  rai-news-tEiA-eGgrY8:
+    canale: rai-news
+    id: tEiA-eGgrY8
+    titolo: Droni russi colpiscono al confine tra Polonia e Ucraina
+    url: https://youtu.be/tEiA-eGgrY8
   rai-news-tH70xznhn4Q:
     canale: rai-news
     id: tH70xznhn4Q
@@ -38672,6 +38792,11 @@ video:
     id: tWlBPrfMTsw
     titolo: The emotions of the second evening of the 2026 Sanremo Festival
     url: https://youtu.be/tWlBPrfMTsw
+  rai-news-tbd3mLj7C2A:
+    canale: rai-news
+    id: tbd3mLj7C2A
+    titolo: 'Amodei alla Cbs: "Agenti AI potrebbero presto controllare internet"'
+    url: https://youtu.be/tbd3mLj7C2A
   rai-news-te9w2CWYoWc:
     canale: rai-news
     id: te9w2CWYoWc
@@ -38757,6 +38882,11 @@ video:
     id: uCSxD2s9sE4
     titolo: 'Mare Fuori 5, Carmine Recano as Commander Massimo: "The kids don''t trust us adults anymore."'
     url: https://youtu.be/uCSxD2s9sE4
+  rai-news-uHbeKde8x3I:
+    canale: rai-news
+    id: uHbeKde8x3I
+    titolo: 'Rogo Crans-Montana: tre ragazzi sopravvissuti tornano assieme tra i banchi di scuola'
+    url: https://youtu.be/uHbeKde8x3I
   rai-news-uHjGCIRZ4bs:
     canale: rai-news
     id: uHjGCIRZ4bs
@@ -39072,6 +39202,11 @@ video:
     id: wj_ImrBYAy8
     titolo: La nave mercantile incagliata nel pontile
     url: https://youtu.be/wj_ImrBYAy8
+  rai-news-wkIXrbQ3Eks:
+    canale: rai-news
+    id: wkIXrbQ3Eks
+    titolo: Droni da guerra e armi autonome, i casi in cui l'AI ha già lavorato in autonomia
+    url: https://youtu.be/wkIXrbQ3Eks
   rai-news-wmTPyTlwnwM:
     canale: rai-news
     id: wmTPyTlwnwM
@@ -39317,6 +39452,11 @@ video:
     id: ykzOs8FeL6U
     titolo: Milano. Fuga di monossido all'asilo
     url: https://youtu.be/ykzOs8FeL6U
+  rai-news-ylElkDQLjls:
+    canale: rai-news
+    id: ylElkDQLjls
+    titolo: Stupro a Castellammare di Stabia, l'amicizia sui social diventata un incubo
+    url: https://youtu.be/ylElkDQLjls
   rai-news-yn8AZYdRte8:
     canale: rai-news
     id: yn8AZYdRte8
