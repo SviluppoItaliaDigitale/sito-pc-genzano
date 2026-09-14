@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/",
-  "generato": "2026-09-13T19:50:38+00:00",
+  "generato": "2026-09-14T10:22:46+00:00",
   "licenza": "Copernicus Emergency Management Service — dati pubblici",
   "nota": "Copia locale: l'API non espone CORS, il browser non può leggerla direttamente."
  },
@@ -59,14 +59,14 @@
    "activationTime": "2026-09-02T08:00:00",
    "category": "Storm",
    "centroid": "POINT (10.08183610452019 45.164037169774694)",
-   "closed": false,
+   "closed": true,
    "code": "EMSR928",
    "countries": [
     "Italy"
    ],
    "eventTime": "2026-08-28T15:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-09-10T21:40:26.985253",
+   "lastUpdate": "2026-09-14T08:13:55.900279",
    "n_aois": 4,
    "n_products": 8,
    "name": "Storm in Lombardy, Italy"
@@ -75,14 +75,14 @@
    "activationTime": "2026-08-26T09:53:00",
    "category": "Flood",
    "centroid": "POINT (85.35376299877846 28.212231792029492)",
-   "closed": false,
+   "closed": true,
    "code": "EMSR927",
    "countries": [
     "Nepal"
    ],
    "eventTime": "2026-08-25T22:00:00",
    "gdacsId": "FL1104124",
-   "lastUpdate": "2026-09-10T14:13:11.803908",
+   "lastUpdate": "2026-09-14T07:16:09.150534",
    "n_aois": 6,
    "n_products": 6,
    "name": "Flood in Nepal"
@@ -164,7 +164,7 @@
    ],
    "eventTime": "2026-08-14T22:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-09-13T18:55:14.025392",
+   "lastUpdate": "2026-09-14T10:13:48.424004",
    "n_aois": 5,
    "n_products": 62,
    "name": "Wildfire in Montenegro and Bosnia and Herzegovina"
