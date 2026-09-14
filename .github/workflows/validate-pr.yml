@@ -98,6 +98,30 @@ jobs:
         # che dichiarava di usare, con media e conclusioni sbagliate.
         run: python3 scripts/check-dati-schede.py
 
+  fascicolo-esperimenti:
+    name: "Fascicolo esperimenti: un foglio per esperimento"
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v7
+
+      - name: "🌐 Browser per misurare l'impaginazione reale"
+        run: |
+          pip install --quiet playwright
+          playwright install --with-deps chromium
+
+      - name: "🖨️ Un foglio per esperimento, niente scritte tagliate"
+        # Il 14/09/2026 questi difetti sono andati live o ci sono andati vicino,
+        # e nessun controllo testuale poteva vederli: dipendono da come il
+        # browser impagina. Il fascicolo è finito a 66 pagine invece di 33
+        # (l'area stampabile non è il foglio intero: `@page` tiene 5mm per lato),
+        # 12 schede sono finite su due pagine, e due didascalie sono arrivate
+        # MOZZATE sul foglio perché l'SVG ritaglia in silenzio ciò che esce dal
+        # riquadro. Una di quelle stava sulla scheda che spiega perché un'acqua
+        # limpida non è detto si possa bere.
+        run: python3 scripts/check-fascicolo-esperimenti.py
+
   menu-sync:
     name: "Coerenza menu hugo.toml ↔ site-chrome.js"
     runs-on: ubuntu-latest

@@ -26,6 +26,7 @@ senza illustrazione semplicemente non ne riceve una, senza rompere nulla.
 """
 
 import math
+import re
 
 BLU = "#003366"       # tratto istituzionale
 ACQUA = "#cfe3f5"     # azzurro chiaro -> grigio chiaro in monocromia
@@ -59,7 +60,52 @@ def perc(d, riemp="none", colore=BLU, sw=2, tratteggio=None):
     return f'<path {_a(d=d, fill=riemp, stroke=colore, stroke_width=sw, stroke_dasharray=tratteggio)}/>'
 
 
+# Una scritta che non ci sta viene TAGLIATA dal viewBox, in silenzio: l'SVG
+# ritaglia senza dire niente e la didascalia arriva mozzata sul foglio.
+#
+# Quanto è larga una scritta non lo sappiamo con certezza, perché le schede
+# usano lo stack di font del sistema (`scheda-print.css`): su un Mac è San
+# Francisco, su Windows Segoe UI, su Linux può cadere su DejaVu, che è molto
+# più largo. Misurate le stesse frasi con quei font, la larghezza per carattere
+# va da 4,4 a 6,0 unità. Tarare sul font della macchina che genera il file
+# significherebbe consegnare didascalie tagliate a chi ha l'altro font — è la
+# stessa trappola che ci è costata due didascalie live: misurare in un contesto
+# e concludere per tutti.
+#
+# Quindi si ragiona sul CASO PEGGIORE, e invece di rifiutare la frase le si
+# riduce il corpo quanto basta perché stia comunque. Sotto una soglia di
+# leggibilità non si scende: lì la frase va riscritta, e il programma lo dice.
+LARGHEZZA_PEGGIORE = 6.0   # unità per carattere a corpo 9, misurata sui font di sistema
+DIM_MINIMA = 7.0           # sotto questo corpo la didascalia non si legge più in stampa
+VIEWBOX_LARGHEZZA = 160
+MARGINE = 0.5           # tolleranza: sotto mezza unità è contatto, non sovrapposizione
+
+
+def _spazio_per(x):
+    """Larghezza utile per una scritta centrata in x, prima del ritaglio."""
+    return 2 * min(x, VIEWBOX_LARGHEZZA - x)
+
+
+def _larghezza(s, dim):
+    """Larghezza nel caso peggiore fra i font di sistema possibili."""
+    visibile = re.sub(r"&[a-zA-Z]+;", "x", s)      # un'entità rende un carattere
+    return len(visibile) * LARGHEZZA_PEGGIORE * (dim / 9)
+
+
 def testo(x, y, s, dim=9, colore=BLU, ancora="middle", peso=700):
+    if ancora == "middle":
+        spazio = _spazio_per(x)
+        serve = _larghezza(s, dim)
+        if serve > spazio:
+            ridotto = dim * spazio / serve
+            if ridotto < DIM_MINIMA:
+                raise ValueError(
+                    f"Scritta troppo lunga perché stia comunque leggibile: «{s}»\n"
+                    f"  servirebbe corpo {ridotto:.1f} (minimo {DIM_MINIMA}) "
+                    f"centrata in x={x}, dove ci sono {spazio:.0f} unità.\n"
+                    f"  Riscrivila più corta, spostala verso il centro, oppure "
+                    f"spezzala su due righe con due chiamate a testo().")
+            dim = round(ridotto, 1)
     return (f'<text {_a(x=x, y=y, font_size=dim, fill=colore, text_anchor=ancora, font_weight=peso)}>'
             f'{s}</text>')
 
@@ -450,7 +496,7 @@ def _condensa():
         bicchiere(96, 40, 44, 54, livello=38),
         *[rett(34 + i * 8, 46, 7, 6, r=1, riemp="#fff") for i in range(3)],   # cubetti di ghiaccio
         gocce([(26, 58), (24, 70), (28, 82), (70, 62), (72, 76)], 2),          # condensa fuori
-        testo(48, 110, "acqua e ghiaccio"), testo(118, 110, "acqua ambiente"),
+        testo(44, 110, "con ghiaccio"), testo(120, 110, "ambiente"),
     ]
     return "".join(d), ("Due bicchieri uguali: su quello con acqua e ghiaccio si formano goccioline "
                         "all'esterno, su quello con acqua a temperatura ambiente il vetro resta asciutto.")
@@ -494,7 +540,7 @@ def _acqua_limpida():
         perc("M58,34 L102,34 L84,58 L84,72 L76,72 L76,58 Z", riemp="#fff"),       # imbuto
         perc("M62,38 L98,38", sw=1.4, tratteggio="3 2"),                          # carta da filtro
         bicchiere(64, 78, 32, 26, livello=16),
-        testo(80, 116, "torbida e salata: dopo il filtro sono uguali"),
+        testo(80, 116, "dopo il filtro sembrano uguali"),
     ]
     return "".join(d), ("Un imbuto con la carta da filtro sopra un bicchiere, fra due bottiglie: "
                         "una con acqua torbida di terra e una con acqua limpida ma salata; dopo il "
@@ -509,7 +555,8 @@ def _distanza_riparo():
         perc("M48,44 q10,-8 12,4 q6,-4 4,8 L48,60 Z", riemp="#fff"),   # mano vicina
         rett(92, 34, 8, 50, riemp=GRIGIO),                             # libro
         perc("M116,44 q10,-8 12,4 q6,-4 4,8 L116,60 Z", riemp="#fff"), # mano lontana e schermata
-        testo(80, 108, "pi&ugrave; lontano e schermato: arriva meno"),
+        testo(80, 102, "pi&ugrave; lontano: arriva meno"),
+        testo(80, 114, "uno schermo: ancora meno"),
     ]
     return "".join(d), ("Una torcia che illumina una mano vicina in pieno fascio; pi&ugrave; lontano "
                         "un libro spesso fa da schermo e la seconda mano resta in ombra.")
@@ -547,7 +594,7 @@ def _mappa_pericoli():
         cerchio(48, 78, 9, colore="#2f6b3a"), perc("M43,78 l4,4 l7,-8", colore="#2f6b3a", sw=2.2),
         freccia(96, 78, 130, 78, "#2f6b3a"),
         rett(140, 68, 4, 20, riemp="#2f6b3a", colore="none", sw=0),   # uscita
-        testo(80, 110, "pericoli, posti sicuri, via d'uscita"),
+        testo(80, 110, "pericoli, posti sicuri, uscita"),
     ]
     return "".join(d), ("La pianta di una casa con delle croci sui punti pericolosi, un segno di "
                         "spunta sui posti sicuri e una freccia che indica la via d'uscita.")
@@ -638,7 +685,7 @@ def _allarme_livello():
           for a in [0.5, 1.6, 2.7, 3.8, 4.9, 6.0]],
         linea(112, 56, 112, 72), rett(102, 72, 20, 14, r=2, riemp="#fff"),  # pila
         testo(112, 96, "pila"), freccia(30, 76, 30, 62),
-        testo(80, 112, "l'acqua sale: il circuito si chiude"),
+        testo(80, 112, "l'acqua sale e accende il LED"),
     ]
     return "".join(d), ("Una bacinella in cui l'acqua sale e solleva un tappo di sughero: il "
                         "galleggiante chiude il circuito e il LED collegato alla pila si accende.")
@@ -695,6 +742,12 @@ def figura(titolo):
     if not scena:
         return ""
     disegno, descrizione = scena()
+    urti = _collisioni(disegno)
+    if urti:
+        righe = "\n".join(f'  «{a}» si sovrappone a «{b}» (riga y={y})' for a, b, y in urti)
+        raise ValueError(
+            f"Etichette sovrapposte nel disegno di «{titolo}»:\n{righe}\n"
+            f"  Allontanale, accorciale o spostane una su un'altra riga.")
     return (
         f'<figure class="esp-figura">'
         f'<svg viewBox="{VIEWBOX}" role="img" aria-label="{descrizione}" '
@@ -703,6 +756,52 @@ def figura(titolo):
         f'<g aria-hidden="true">{disegno}</g>'
         f'</svg></figure>'
     )
+
+
+def _etichette(disegno):
+    """Riquadri occupati dalle scritte del disegno, nel caso peggiore.
+
+    Serve a `figura()` per accorgersi che due etichette vicine si sovrappongono.
+    L'ampiezza orizzontale dipende dall'ancoraggio: `middle` si allarga da
+    entrambi i lati, `start` verso destra, `end` verso sinistra.
+    """
+    fuori = []
+    for tag in re.finditer(r'<text ([^>]*)>(.*?)</text>', disegno, re.S):
+        attr, contenuto = tag.group(1), tag.group(2)
+        def a(nome, default=None):
+            m = re.search(rf'{nome}="([^"]*)"', attr)
+            return m.group(1) if m else default
+        x = float(a("x", 0))
+        y = float(a("y", 0))
+        dim = float(a("font-size", 9))
+        ancora = a("text-anchor", "start")
+        largo = _larghezza(contenuto, dim)
+        if ancora == "middle":
+            x1, x2 = x - largo / 2, x + largo / 2
+        elif ancora == "end":
+            x1, x2 = x - largo, x
+        else:
+            x1, x2 = x, x + largo
+        fuori.append((x1, x2, y, dim, contenuto))
+    return fuori
+
+
+def _collisioni(disegno):
+    """Coppie di scritte che si sovrappongono. Vuoto = nessuna."""
+    etichette = _etichette(disegno)
+    urti = []
+    for i, uno in enumerate(etichette):
+        for altro in etichette[i + 1:]:
+            x1, x2, y, dim, testo1 = uno
+            X1, X2, Y, DIM, testo2 = altro
+            # Due righe si toccano in verticale se le basi distano meno
+            # dell'altezza dei caratteri: sopra quella distanza non possono
+            # incrociarsi comunque.
+            if abs(y - Y) >= 0.9 * max(dim, DIM):
+                continue
+            if min(x2, X2) - max(x1, X1) > MARGINE:
+                urti.append((testo1, testo2, y))
+    return urti
 
 
 def mancanti(titoli):
