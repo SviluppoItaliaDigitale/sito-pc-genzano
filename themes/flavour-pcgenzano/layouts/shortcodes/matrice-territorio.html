@@ -59,7 +59,16 @@
 <th scope="row"><i class="bi {{ .icona }} me-1" aria-hidden="true"></i>{{ .rischio }}</th>
 <td><span class="mt-fase mt-fase-{{ $faseKey }}">{{ $faseLabel }}</span></td>
 <td>{{ $stato }}</td>
-<td>{{ if $verificato }}{{ if in $verificato "-" }}{{ $r := try (dateFormat "02/01/2006" $verificato) }}{{ if not $r.Err }}{{ $r.Value }}{{ else }}{{ $verificato }}{{ end }}{{ else }}{{ $verificato }}{{ end }}{{ end }}</td>
+{{- /* Una data di verifica vecchia accanto a un'affermazione sul presente
+       vale poco: oltre 60 giorni la riga lo dichiara (audit 14/09/2026, che
+       trovò cinque righe ferme al 5 luglio). La soglia non si applica alle
+       righe dinamiche, che si ridatano da sole a ogni bollettino. */ -}}
+{{- $vecchia := false -}}
+{{- if and $verificato (not .dinamico) (in $verificato "-") -}}
+  {{- $d := try (time.AsTime $verificato) -}}
+  {{- if not $d.Err }}{{ if lt $d.Value (now.AddDate 0 0 -60) }}{{ $vecchia = true }}{{ end }}{{ end -}}
+{{- end -}}
+<td>{{ if $verificato }}{{ if in $verificato "-" }}{{ $r := try (dateFormat "02/01/2006" $verificato) }}{{ if not $r.Err }}{{ $r.Value }}{{ else }}{{ $verificato }}{{ end }}{{ else }}{{ $verificato }}{{ end }}{{ if $vecchia }} <span class="mt-da-rinnovare">verifica da rinnovare</span>{{ end }}{{ end }}</td>
 <td><a href="{{ .fonte_url | strings.TrimPrefix "/" | relURL }}">{{ .fonte_label }}</a></td>
 </tr>
 {{- end }}
