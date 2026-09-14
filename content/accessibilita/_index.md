@@ -4,7 +4,7 @@ description: "Dichiarazione di accessibilità AGID: stato di conformità, conten
 layout: "single"
 toc: true
 tts: true
-dataUltimaRevisione: "2026-09-06"
+dataUltimaRevisione: "2026-09-14"
 aliases:
   - /dichiarazione-accessibilita.html
 ---
@@ -50,7 +50,7 @@ Le seguenti aree del sito **non sono pienamente accessibili** per i motivi indic
 - **Mitigazione**: per ogni widget è disponibile un link al sito ufficiale del fornitore, dove il cittadino può accedere ai contenuti con le opzioni di accessibilità del fornitore stesso.
 
 ### Documenti PDF pubblicati sul sito
-- **Stato al 6 settembre 2026** (verifica esterna sui 50 PDF presenti nel repository del sito): 41 documenti non hanno una struttura di tag (PDF/UA, ISO 14289-1); di questi, 17 non contengono testo estraibile perché esportati come immagine: gli 8 poster di emergenza multilingue e le 9 presentazioni tematiche. Lo screen reader può quindi leggere in modo lineare, o non leggere affatto, questi file.
+- **Stato al 14 settembre 2026** (controllo automatico su tutti i **51 PDF** del sito, documento per documento, con l'esito pubblicato nella pagina [Audit accessibilità dei PDF](/accessibilita/audit-pdf/)): **42 documenti non hanno i tag di struttura** (PDF/UA, ISO 14289-1) e **20 non contengono testo estraibile** perché esportati come immagine — fra questi i poster di emergenza multilingue e le presentazioni tematiche. Lo screen reader può quindi leggere in modo lineare, o non leggere affatto, questi file. Di tutti i PDF, **35 sono nostri** e su quelli possiamo intervenire; 16 sono documenti di enti terzi che ripubblichiamo così come li ricevono i cittadini.
 - **Motivazione**: parte dei documenti sono scansioni o file ricevuti da enti terzi (Comune, Regione, Prefettura), non rigenerabili dal Gruppo; i poster e le presentazioni sono stati esportati da strumenti che rasterizzano il testo.
 - **Mitigazione**: per ogni documento esiste l'equivalente HTML accessibile sul sito. Il Manuale di Protezione Civile ha il reader online in [/manuale/](/manuale/); le presentazioni tematiche corrispondono alle pagine dei rischi e delle allerte; i poster multilingue corrispondono alle pagine tradotte (inglese, francese, tedesco, spagnolo, portoghese, rumeno, esperanto). Se un PDF non è leggibile con la tua tecnologia assistiva, scrivi a [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it): forniamo una versione alternativa o un testo equivalente.
 - **Piano**: rigenerazione con struttura di tag, in ordine di priorità, per il Manuale, i materiali per le scuole, i documenti di emergenza e la modulistica; la presenza dei tag sarà verificata documento per documento e non presentata come conformità PDF/UA finché non sia stata controllata con lettore di schermo.

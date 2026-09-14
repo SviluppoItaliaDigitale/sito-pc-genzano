@@ -4,8 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Schede stampabili: Esperimenti di protezione civile (A4)</title>
-  <meta name="description" content="Schede A4 stampabili: 21 esperimenti e attività di protezione civile per la scuola e la famiglia. Un esperimento per foglio. Stampa tutto o solo le pagine che ti servono.">
+  <meta name="description" content="Schede A4 stampabili: 33 esperimenti e attività di protezione civile per la scuola e la famiglia. Un esperimento per foglio. Stampa tutto o solo le pagine che ti servono.">
   <meta name="robots" content="index, follow">
+  <!-- URL preferito: la copia su GitHub Pages rimanda alla produzione. -->
+  <link rel="canonical" href="https://www.protezionecivilegenzano.it/formazione/schede-stampabili/esperimenti-protezione-civile/">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
   <style>
@@ -23,6 +25,15 @@
       background: #eaf2fb; border-left: 4px solid var(--scheda-blu);
       border-radius: 0 6px 6px 0; font-size: 0.92rem; line-height: 1.45;
     }
+    .esp-domanda {
+      background: #eaf2fb;
+      border-left: 3px solid #003366;
+      font-style: italic;
+    }
+    .esp-limite {
+      background: #fffaf0;
+      border-left: 3px solid #b45309;
+    }
     .esp-sicurezza {
       margin: 0.5rem 0; padding: 0.55rem 0.85rem;
       background: #fff8e6; border-left: 4px solid var(--scheda-oro);
@@ -34,13 +45,31 @@
       body { background: #fff; }
       .scheda-page { page-break-after: always; break-after: page; }
       .scheda-page:last-of-type { page-break-after: auto; break-after: auto; }
+      /* Le schede con domanda, variabile, risultato atteso e limite del modello
+         hanno quattro blocchi in più e da sole sforerebbero il foglio: la
+         promessa del fascicolo è un esperimento per foglio, quindi si stringono
+         qui invece di spezzarsi su due pagine. Solo in stampa: a schermo il
+         testo resta alla dimensione piena. */
+      .scheda-page.esp-estesa { font-size: 0.9rem; }
+      .esp-estesa .esp-block, .esp-estesa .esp-pc, .esp-estesa .esp-sicurezza {
+        margin: 0.3rem 0; line-height: 1.35;
+      }
+      .esp-estesa .esp-pc, .esp-estesa .esp-sicurezza, .esp-estesa .esp-domanda, .esp-estesa .esp-limite {
+        padding: 0.35rem 0.6rem;
+      }
+      .esp-estesa .esp-passi li { margin-bottom: 0.15rem; line-height: 1.3; }
+      .esp-estesa .scheda-h2 { margin: 0.5rem 0 0.2rem; }
+      /* Il riquadro «Cosa ho osservato» a 4,5rem mangiava il foglio: sei schede
+         su 33 finivano su due pagine, fra cui una vecchia. In stampa basta una
+         riga per annotare, e la promessa «un esperimento per foglio» regge. */
+      .scheda-page .scheda-box-disegno { min-height: 2rem !important; }
     }
   </style>
 </head>
 <body>
   <div class="scheda-toolbar no-print">
     <a href="/formazione/schede-stampabili/">&larr; Torna alle schede</a>
-    <span class="scheda-titolo">Esperimenti di protezione civile &mdash; 21 schede A4</span>
+    <span class="scheda-titolo">Esperimenti di protezione civile &mdash; 33 schede A4</span>
     <button type="button" onclick="window.print()">&#128424;&#65039; Stampa o salva come PDF</button>
   </div>
 
@@ -72,7 +101,7 @@
       <li>Soffia nel purè: l&#x27;aria fatica, si accumula e poi &quot;scoppia&quot; schizzando.</li>
     </ol>
 
-    <div class="esp-block"><span class="et">Cosa si impara.</span> La viscosità (densità) del magma decide il tipo di eruzione: magma fluido = eruzione dolce (effusiva); magma denso = eruzione violenta (esplosiva).</div>
+    <div class="esp-block"><span class="et">Cosa si impara.</span> Conta quanto il magma è vischioso, cioè quanta fatica fa a scorrere: non è la stessa cosa della densità, che dice quanto pesa a parità di volume. Nel magma fluido i gas escono man mano; in quello vischioso restano intrappolati, la pressione cresce e l&#x27;eruzione è esplosiva. Sono i gas a far scoppiare l&#x27;eruzione, il magma vischioso li trattiene.</div>
 
     <div class="esp-pc"><strong>In chiave protezione civile.</strong> Vulcani diversi si monitorano in modo diverso e le vie di evacuazione cambiano col tipo di rischio. Sul sito: «Il vulcanismo dei Colli Albani».</div>
 
@@ -104,15 +133,144 @@
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">
-      <li>Costruisci delle torrette infilando gli stuzzicadenti nei marshmallow.</li>
-      <li>Appoggia le torri sulla gelatina.</li>
-      <li>Scuoti delicatamente la teglia: simuli le onde sismiche (ondulatorie, di lato, e sussultorie, dall&#x27;alto in basso).</li>
+      <li>Costruisci due torrette uguali infilando gli stuzzicadenti nei marshmallow.</li>
+      <li>Appoggia una torre sulla gelatina e l&#x27;altra accanto, sul fondo rigido della teglia o su un tagliere.</li>
+      <li>Scuoti delicatamente la teglia sempre allo stesso modo: simuli le onde sismiche (ondulatorie, di lato, e sussultorie, dall&#x27;alto in basso).</li>
+      <li>Guarda quale delle due oscilla di più. Poi rifai la prova con una torre alta e una bassa, tutte e due sulla gelatina.</li>
     </ol>
 
-    <div class="esp-block"><span class="et">Cosa si impara.</span> La gelatina si comporta come un terreno molle, che amplifica le scosse. Le torri alte e strette cadono; quelle basse, larghe alla base o rinforzate a triangolo, resistono.</div>
+    <div class="esp-block"><span class="et">Cosa si impara.</span> La stessa torre oscilla molto di più sulla gelatina che sul fondo rigido: il terreno molle amplifica le scosse. E fra due torri sulla stessa gelatina, quella alta e stretta si muove più di quella bassa e larga. Attenzione: non vuol dire che una casa bassa sia sempre più sicura di una casa alta — conta come è costruita, non solo quanto è alta.</div>
 
-    <div class="esp-pc"><strong>In chiave protezione civile.</strong> Il terremoto non si può evitare, ma le case sicure sì: è la prevenzione edilizia (edilizia antisismica). Sul sito: «Il rischio sismico in Italia».</div>
+    <div class="esp-pc"><strong>In chiave protezione civile.</strong> Il terremoto non si può impedire, ma si possono costruire e rinforzare case che lo reggono: è la prevenzione edilizia (edilizia antisismica). Sul sito: «Il rischio sismico in Italia».</div>
     <div class="esp-sicurezza"><strong>&#9888;&#65039; Sicurezza.</strong> Gli stuzzicadenti sono appuntiti: usali con un adulto.</div>
+
+    <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
+    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Esperimenti di protezione civile &middot; Terremoti &middot; rev. 2026</span>
+    </footer>
+  </article>
+
+  <article class="scheda-page esp-estesa">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile &mdash; Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Quando il terreno perde sostegno</h1>
+        <div class="scheda-sottotitolo">Esperimento di protezione civile &mdash; Terremoti</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Et&agrave; consigliata:</strong> 🟠 Ragazzi</span>
+      <span><strong>Tema:</strong> Terremoti</span>
+    </div>
+
+    <div class="esp-domanda"><span class="et">La domanda.</span> Come fa un terreno solido a comportarsi come un liquido durante un terremoto?</div>
+    <div class="esp-block"><span class="et">Materiali.</span> Due contenitori trasparenti uguali, sabbia fine, acqua, due oggetti pesanti piccoli e uguali (due biglie di vetro o due dadi da brodo), un tavolo su cui battere.</div>
+
+    <h2 class="scheda-h2">Come si fa</h2>
+    <ol class="esp-passi">
+      <li>Riempi il primo contenitore di sabbia asciutta e appoggia una biglia sulla superficie.</li>
+      <li>Riempi il secondo con la stessa sabbia e aggiungi acqua fino a bagnarla tutta, senza che resti uno strato d&#x27;acqua sopra; appoggia l&#x27;altra biglia.</li>
+      <li>Batti le mani sul tavolo vicino ai due contenitori, allo stesso modo per dieci secondi.</li>
+      <li>Guarda le due biglie: nella sabbia satura la biglia affonda, in quella asciutta resta dov&#x27;è.</li>
+    </ol>
+    <div class="esp-block"><span class="et">Cosa si cambia.</span> Solo l&#x27;acqua nella sabbia: stessa sabbia, stessa biglia, stesse vibrazioni.</div>
+    <div class="esp-block"><span class="et">Che cosa aspettarsi.</span> Nella sabbia satura la biglia sprofonda e la superficie diventa lucida; nella sabbia asciutta non succede quasi nulla.</div>
+
+    <div class="esp-block"><span class="et">Cosa si impara.</span> In un terreno sabbioso pieno d&#x27;acqua le vibrazioni fanno perdere il contatto fra i granelli: per qualche secondo il terreno si comporta come un liquido e non sostiene più quello che ci sta sopra. Si chiama liquefazione, e l&#x27;acqua nel terreno è la condizione che la rende possibile.</div>
+    <div class="esp-limite"><span class="et">Dove il modello si ferma.</span> Qui le vibrazioni durano pochi secondi e la scala è quella di una bacinella: in un terremoto vero il fenomeno riguarda strati di terreno profondi diversi metri e coinvolge le fondazioni degli edifici.</div>
+
+    <div class="esp-pc"><strong>In chiave protezione civile.</strong> Per questo la carta della pericolosità sismica locale guarda anche che terreno c&#x27;è sotto, non solo quanto forte può essere la scossa: lo stesso terremoto fa danni diversi su roccia e su sabbia satura.</div>
+    <div class="esp-sicurezza"><strong>&#9888;&#65039; Sicurezza.</strong> Si batte sul tavolo, non sui contenitori. Asciuga subito l&#x27;acqua versata: il pavimento bagnato scivola.</div>
+
+    <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
+    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Esperimenti di protezione civile &middot; Terremoti &middot; rev. 2026</span>
+    </footer>
+  </article>
+
+  <article class="scheda-page esp-estesa">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile &mdash; Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Costruiamo un sismografo</h1>
+        <div class="scheda-sottotitolo">Esperimento di protezione civile &mdash; Terremoti</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Et&agrave; consigliata:</strong> 🔵 Primaria · 🟠 Ragazzi</span>
+      <span><strong>Tema:</strong> Terremoti</span>
+    </div>
+
+    <div class="esp-domanda"><span class="et">La domanda.</span> Come si fa a registrare un movimento che dura pochi secondi?</div>
+    <div class="esp-block"><span class="et">Materiali.</span> Una scatola di cartone robusta, un bicchiere di plastica, dello spago, un pennarello a punta fine, qualche sasso o monete, una striscia di carta lunga (va bene un rotolo da cassa).</div>
+
+    <h2 class="scheda-h2">Come si fa</h2>
+    <ol class="esp-passi">
+      <li>Ritaglia una finestra sul lato della scatola e fai passare la striscia di carta da parte a parte, così puoi tirarla piano.</li>
+      <li>Buca il fondo del bicchiere, infilaci il pennarello con la punta che sfiora la carta e riempilo di sassi.</li>
+      <li>Appendi il bicchiere allo spago al centro della scatola: deve restare fermo e sospeso, sfiorando la carta.</li>
+      <li>Uno tira la striscia piano e sempre uguale, un altro scuote la scatola: prima poco, poi forte, poi di nuovo poco.</li>
+    </ol>
+    <div class="esp-block"><span class="et">Cosa si cambia.</span> Quanto forte si scuote la scatola. La velocità con cui si tira la carta resta la stessa.</div>
+    <div class="esp-block"><span class="et">Che cosa aspettarsi.</span> Sulla carta compare una linea quasi dritta quando la scatola è ferma, e zig-zag tanto più ampi quanto più forte si scuote.</div>
+
+    <div class="esp-block"><span class="et">Cosa si impara.</span> Il pennarello resta fermo per inerzia mentre il foglio si muove con la terra: così si registra un terremoto. Il tracciato dice quanto e per quanto ha tremato: racconta un terremoto già avvenuto. Nessuno strumento prevede quando arriverà il prossimo.</div>
+    <div class="esp-limite"><span class="et">Dove il modello si ferma.</span> Un sismografo vero registra frazioni di millimetro in tre direzioni; questo vede solo gli scossoni grossi, in un verso solo.</div>
+
+    <div class="esp-pc"><strong>In chiave protezione civile.</strong> L&#x27;INGV registra così i terremoti italiani e li pubblica in pochi minuti: li trovi nel cruscotto del sito, scheda «Terremoti».</div>
+    <div class="esp-sicurezza"><strong>&#9888;&#65039; Sicurezza.</strong> Il buco nel bicchiere lo fa un adulto. La scatola si scuote appoggiata al tavolo, non sollevata.</div>
+
+    <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
+    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Esperimenti di protezione civile &middot; Terremoti &middot; rev. 2026</span>
+    </footer>
+  </article>
+
+  <article class="scheda-page esp-estesa">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile &mdash; Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Il ritmo che fa oscillare una torre</h1>
+        <div class="scheda-sottotitolo">Esperimento di protezione civile &mdash; Terremoti</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Et&agrave; consigliata:</strong> 🟠 Ragazzi</span>
+      <span><strong>Tema:</strong> Terremoti</span>
+    </div>
+
+    <div class="esp-domanda"><span class="et">La domanda.</span> Perché in uno stesso terremoto un palazzo oscilla moltissimo e quello accanto quasi niente?</div>
+    <div class="esp-block"><span class="et">Materiali.</span> Un cartoncino rigido come base, tre cannucce o listelli flessibili di altezza diversa (10, 20 e 30 cm), pongo o nastro biadesivo, tre gommini uguali da mettere in cima.</div>
+
+    <h2 class="scheda-h2">Come si fa</h2>
+    <ol class="esp-passi">
+      <li>Fissa le tre cannucce in piedi sulla base con il pongo e metti un gommino in cima a ciascuna: sono tre edifici di altezza diversa.</li>
+      <li>Muovi la base avanti e indietro molto lentamente, con un ritmo regolare: guarda quale torre oscilla di più.</li>
+      <li>Aumenta un po&#x27; il ritmo, sempre regolare, e guarda di nuovo. Poi vai veloce.</li>
+      <li>Per ogni ritmo segna quale torre si muove di più.</li>
+    </ol>
+    <div class="esp-block"><span class="et">Cosa si cambia.</span> Solo la frequenza con cui muovi la base: l&#x27;ampiezza del movimento resta la stessa.</div>
+    <div class="esp-block"><span class="et">Che cosa aspettarsi.</span> Ogni torre ha il suo ritmo: la più alta risponde ai movimenti lenti, la più bassa a quelli veloci. Al ritmo giusto una torre oscilla moltissimo mentre le altre due restano quasi ferme.</div>
+
+    <div class="esp-block"><span class="et">Cosa si impara.</span> Ogni struttura ha una frequenza propria. Quando il terreno si muove con quel ritmo, le oscillazioni si sommano invece di annullarsi: è la risonanza. Non esiste quindi un&#x27;altezza «sicura»: dipende da come il ritmo dell&#x27;edificio incontra il ritmo del terremoto.</div>
+    <div class="esp-limite"><span class="et">Dove il modello si ferma.</span> Un edificio vero ha molte frequenze proprie, non una sola, e la sua risposta dipende da materiali, fondazioni e collegamenti fra le parti.</div>
+
+    <div class="esp-pc"><strong>In chiave protezione civile.</strong> È il motivo per cui la normativa antisismica fa calcolare il comportamento dinamico dell&#x27;edificio, non solo la sua resistenza a spinta ferma.</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
     <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
@@ -234,6 +392,49 @@
     </footer>
   </article>
 
+  <article class="scheda-page esp-estesa">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile &mdash; Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Quanta pioggia è caduta?</h1>
+        <div class="scheda-sottotitolo">Esperimento di protezione civile &mdash; Misurare la pioggia</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Et&agrave; consigliata:</strong> 🔵 Primaria · 🟠 Ragazzi</span>
+      <span><strong>Tema:</strong> Misurare la pioggia</span>
+    </div>
+
+    <div class="esp-domanda"><span class="et">La domanda.</span> Quando il bollettino dice «50 millimetri di pioggia», quanta acqua è caduta davvero?</div>
+    <div class="esp-block"><span class="et">Materiali.</span> Una bottiglia di plastica trasparente da 1,5 litri, forbici, un righello, nastro adesivo, un pennarello indelebile, qualche sasso.</div>
+
+    <h2 class="scheda-h2">Come si fa</h2>
+    <ol class="esp-passi">
+      <li>Un adulto taglia la bottiglia all&#x27;altezza della spalla: sotto è il bicchiere, la parte di sopra capovolta fa da imbuto.</li>
+      <li>Metti i sassi sul fondo perché non voli via, incastra l&#x27;imbuto e fissa il righello fuori, con lo zero al fondo piatto.</li>
+      <li>Riempi d&#x27;acqua fino allo zero: è il livello di partenza, perché il fondo della bottiglia non è piatto davvero.</li>
+      <li>Mettilo all&#x27;aperto lontano da muri e alberi. Ogni giorno alla stessa ora leggi i millimetri, segnali in tabella e svuoti fino allo zero.</li>
+    </ol>
+    <div class="esp-block"><span class="et">Cosa si cambia.</span> Solo la giornata: posizione, ora della lettura e livello di partenza restano uguali.</div>
+    <div class="esp-block"><span class="et">Che cosa aspettarsi.</span> In una pioggia normale salgono pochi millimetri; in un temporale forte anche 20-30 in poche ore.</div>
+
+    <div class="esp-block"><span class="et">Cosa si impara.</span> Un millimetro di pioggia è un litro d&#x27;acqua per ogni metro quadrato. Il numero del bollettino è una previsione, il tuo è una misura: confrontarli fa capire la differenza.</div>
+    <div class="esp-limite"><span class="et">Dove il modello si ferma.</span> Misuri un punto solo: un temporale può scaricare il doppio a trecento metri. Per questo il Centro Funzionale usa una rete di stazioni e il radar.</div>
+
+    <div class="esp-pc"><strong>In chiave protezione civile.</strong> I livelli di allerta nascono dalla pioggia attesa su un&#x27;intera zona. Sul sito: «Allerte meteo» e «Laboratorio meteo», per confrontare le tue misure con le serie storiche.</div>
+    <div class="esp-sicurezza"><strong>&#9888;&#65039; Sicurezza.</strong> Il taglio lo fa un adulto. Non si esce a leggere durante il temporale: si aspetta che passi.</div>
+
+    <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
+    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Esperimenti di protezione civile &middot; Misurare la pioggia &middot; rev. 2026</span>
+    </footer>
+  </article>
+
   <article class="scheda-page">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
@@ -253,12 +454,12 @@
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">
-      <li>Tieni un lato della vaschetta un po&#x27; più alto, come una spiaggia in pendenza.</li>
-      <li>Dai una spinta decisa all&#x27;acqua con la paletta dal lato profondo.</li>
-      <li>Osserva l&#x27;onda che corre verso il lato basso e cresce avvicinandosi.</li>
+      <li>Metti un libro sotto un’estremità della vaschetta: quel lato si alza e l’acqua lì è bassa, come una spiaggia in pendenza. All’altra estremità l’acqua resta più profonda: è il mare aperto.</li>
+      <li>Dal lato profondo dai una spinta decisa all’acqua con la paletta, verso la spiaggia.</li>
+      <li>Guarda l’onda correre verso il lato rialzato: dove il fondale si alza rallenta, si accorcia e cresce in altezza.</li>
     </ol>
 
-    <div class="esp-block"><span class="et">Cosa si impara.</span> L&#x27;onda nasce da uno spostamento improvviso di tanta acqua (terremoto sottomarino, frana, eruzione) e cresce quando arriva vicino alla riva. Non è l&#x27;onda del vento: ha molta più forza.</div>
+    <div class="esp-block"><span class="et">Cosa si impara.</span> L&#x27;onda nasce da uno spostamento improvviso di tanta acqua (terremoto sottomarino, frana, eruzione). Dove il mare è profondo corre veloce ed è bassa; quando il fondale si alza verso riva rallenta e l&#x27;acqua si accumula in altezza. Non è l&#x27;onda del vento, che muove solo la superficie: qui si muove tutta la colonna d&#x27;acqua, e per questo ha molta più forza.</div>
 
     <div class="esp-pc"><strong>In chiave protezione civile.</strong> Al mare, se senti un forte terremoto o vedi il mare ritirarsi all&#x27;improvviso, allontanati subito verso un punto alto. Sul sito: «Il rischio da maremoto».</div>
 
@@ -268,6 +469,91 @@
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
       <span>Esperimenti di protezione civile &middot; Maremoti &middot; rev. 2026</span>
+    </footer>
+  </article>
+
+  <article class="scheda-page esp-estesa">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile &mdash; Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Il tombino ostruito</h1>
+        <div class="scheda-sottotitolo">Esperimento di protezione civile &mdash; Alluvioni urbane</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Et&agrave; consigliata:</strong> 🔵 Primaria · 🟠 Ragazzi</span>
+      <span><strong>Tema:</strong> Alluvioni urbane</span>
+    </div>
+
+    <div class="esp-domanda"><span class="et">La domanda.</span> Perché una strada si allaga anche quando i tombini ci sono?</div>
+    <div class="esp-block"><span class="et">Materiali.</span> Una bacinella, un colino o una retina, una bottiglia d&#x27;acqua, foglie secche (o pezzetti di carta), un cronometro.</div>
+
+    <h2 class="scheda-h2">Come si fa</h2>
+    <ol class="esp-passi">
+      <li>Appoggia il colino sopra un contenitore vuoto: è il tombino, il contenitore è la fognatura.</li>
+      <li>Versa un litro d&#x27;acqua a velocità costante e conta i secondi che impiega a scendere tutta.</li>
+      <li>Ora copri metà del colino con le foglie e ripeti versando allo stesso modo, contando di nuovo i secondi.</li>
+      <li>Coprilo quasi del tutto e ripeti una terza volta. Segna i tre tempi e guarda quanta acqua resta sopra.</li>
+    </ol>
+    <div class="esp-block"><span class="et">Cosa si cambia.</span> Solo quante foglie coprono la griglia.</div>
+    <div class="esp-block"><span class="et">Che cosa aspettarsi.</span> Col colino libero l&#x27;acqua scende quasi subito; con la griglia mezza coperta ci mette molto di più e si forma un ristagno; quasi chiusa, l&#x27;acqua resta quasi tutta sopra.</div>
+
+    <div class="esp-block"><span class="et">Cosa si impara.</span> Il tombino non è un buco che ingoia tutto: ha una portata, cioè una quantità massima d&#x27;acqua che può far passare in un secondo. Le foglie di un temporale autunnale la riducono di colpo, e l&#x27;acqua che non scende si ferma in strada.</div>
+    <div class="esp-limite"><span class="et">Dove il modello si ferma.</span> Nella realtà conta anche quanto è piena la fognatura più a valle: un tombino pulito non serve a niente se il collettore è già al massimo.</div>
+
+    <div class="esp-pc"><strong>In chiave protezione civile.</strong> È il motivo per cui la pulizia delle caditoie prima della stagione delle piogge è prevenzione vera. Segnalare un tombino ostruito al Comune è un gesto utile.</div>
+    <div class="esp-sicurezza"><strong>&#9888;&#65039; Sicurezza.</strong> Si lavora sopra un lavandino o all&#x27;aperto. Non avvicinarsi ai tombini veri, tanto meno quando piove.</div>
+
+    <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
+    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Esperimenti di protezione civile &middot; Alluvioni urbane &middot; rev. 2026</span>
+    </footer>
+  </article>
+
+  <article class="scheda-page esp-estesa">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile &mdash; Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">L&#x27;acqua risale da sola</h1>
+        <div class="scheda-sottotitolo">Esperimento di protezione civile &mdash; Acqua e terreno</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Et&agrave; consigliata:</strong> 🟢 Infanzia · 🔵 Primaria</span>
+      <span><strong>Tema:</strong> Acqua e terreno</span>
+    </div>
+
+    <div class="esp-domanda"><span class="et">La domanda.</span> L&#x27;acqua può andare verso l&#x27;alto senza che nessuno la spinga?</div>
+    <div class="esp-block"><span class="et">Materiali.</span> Due bicchieri, acqua, colorante alimentare o succo scuro, una striscia di carta assorbente, una di stoffa e una di carta plastificata.</div>
+
+    <h2 class="scheda-h2">Come si fa</h2>
+    <ol class="esp-passi">
+      <li>Colora l&#x27;acqua e mettine un dito in un bicchiere.</li>
+      <li>Appoggia nel bicchiere la striscia di carta assorbente, tenendola dritta, e guardala per due minuti.</li>
+      <li>Ripeti con la stoffa e con la carta plastificata, sempre due minuti.</li>
+      <li>Confronta fin dove è salita l&#x27;acqua nei tre materiali e segna il livello con una matita.</li>
+    </ol>
+    <div class="esp-block"><span class="et">Cosa si cambia.</span> Solo il materiale della striscia.</div>
+    <div class="esp-block"><span class="et">Che cosa aspettarsi.</span> Nella carta assorbente l&#x27;acqua sale di parecchi centimetri, nella stoffa un po&#x27; meno, nella carta plastificata quasi per niente.</div>
+
+    <div class="esp-block"><span class="et">Cosa si impara.</span> Dentro i materiali porosi ci sono tanti canaletti sottilissimi, e l&#x27;acqua ci sale dentro da sola: si chiama capillarità. Succede anche nel terreno e nei muri.</div>
+    <div class="esp-limite"><span class="et">Dove il modello si ferma.</span> Nel muro di una casa allagata l&#x27;acqua sale più piano e molto più in alto di così, e porta con sé sali che restano anche quando è asciugato.</div>
+
+    <div class="esp-pc"><strong>In chiave protezione civile.</strong> È la ragione per cui dopo un allagamento i muri restano umidi per settimane e gli intonaci vanno rifatti: l&#x27;acqua non se ne va solo perché il pavimento è asciutto.</div>
+
+    <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
+    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Esperimenti di protezione civile &middot; Acqua e terreno &middot; rev. 2026</span>
     </footer>
   </article>
 
@@ -295,10 +581,52 @@
       <li>Osservate: dopo pochi secondi la fiamma si indebolisce e si spegne.</li>
     </ol>
 
-    <div class="esp-block"><span class="et">Cosa si impara.</span> La fiamma si spegne perché nel barattolo l&#x27;ossigeno si riduce (basta che scenda sotto un certo livello). Per bruciare il fuoco ha bisogno di tre cose insieme — il triangolo del fuoco: combustibile, comburente (ossigeno) e calore. Togline una e il fuoco si spegne.</div>
+    <div class="esp-block"><span class="et">Cosa si impara.</span> La fiamma si spegne perché nel barattolo l&#x27;ossigeno scende sotto il livello che serve per bruciare: non finisce del tutto, ne resta ancora parecchio. Per bruciare il fuoco ha bisogno di tre cose insieme — il triangolo del fuoco: combustibile, comburente (ossigeno) e calore. Togline una e il fuoco si spegne.</div>
 
     <div class="esp-pc"><strong>In chiave protezione civile.</strong> È il principio dello spegnimento: le linee tagliafuoco tolgono il combustibile, l&#x27;acqua toglie il calore. Sul sito: «Il rischio da incendi boschivi».</div>
     <div class="esp-sicurezza"><strong>&#9888;&#65039; Sicurezza.</strong> C&#x27;è una fiamma: SOLO con un adulto, mai per l&#x27;infanzia. Tieni lontani capelli, maniche e carta; non lasciare la candela incustodita.</div>
+
+    <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
+    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Esperimenti di protezione civile &middot; Incendi boschivi &middot; rev. 2026</span>
+    </footer>
+  </article>
+
+  <article class="scheda-page esp-estesa">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile &mdash; Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Il bosco di tessere</h1>
+        <div class="scheda-sottotitolo">Esperimento di protezione civile &mdash; Incendi boschivi</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Et&agrave; consigliata:</strong> 🟢 Infanzia · 🔵 Primaria</span>
+      <span><strong>Tema:</strong> Incendi boschivi</span>
+    </div>
+
+    <div class="esp-domanda"><span class="et">La domanda.</span> Perché a volte un incendio si ferma da solo e a volte no?</div>
+    <div class="esp-block"><span class="et">Materiali.</span> Una scatola di tessere del domino (o tessere di cartoncino che stiano in piedi).</div>
+
+    <h2 class="scheda-h2">Come si fa</h2>
+    <ol class="esp-passi">
+      <li>Metti le tessere in fila, una vicinissima all&#x27;altra, e falle cadere: è un bosco fitto.</li>
+      <li>Rifai la fila allargando le distanze finché la caduta si ferma da sola.</li>
+      <li>Rimetti la fila fitta ma togli tre tessere in mezzo, lasciando un vuoto: prova di nuovo.</li>
+      <li>Prova a disegnare su un foglio dove metteresti i vuoti per proteggere una casa messa in fondo alla fila.</li>
+    </ol>
+    <div class="esp-block"><span class="et">Cosa si cambia.</span> La distanza fra le tessere e dove si lascia il vuoto.</div>
+    <div class="esp-block"><span class="et">Che cosa aspettarsi.</span> La fila fitta cade tutta; oltre una certa distanza la caduta si ferma; il vuoto in mezzo la ferma sempre.</div>
+
+    <div class="esp-block"><span class="et">Cosa si impara.</span> Perché il fuoco avanzi serve altro materiale da bruciare a portata: se la vegetazione è continua avanza, se è interrotta si ferma. È un&#x27;analogia, non un modello del fuoco: le tessere non hanno vento, calore né pendenza.</div>
+    <div class="esp-limite"><span class="et">Dove il modello si ferma.</span> In un incendio vero il fuoco può saltare le interruzioni con le faville portate dal vento, e sale in salita molto più in fretta che in piano: per questo le fasce tagliafuoco da sole non bastano.</div>
+
+    <div class="esp-pc"><strong>In chiave protezione civile.</strong> La pulizia del sottobosco e le fasce tagliafuoco servono proprio a togliere continuità al combustibile. È la parte «prevenzione» della campagna antincendio.</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
     <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
@@ -328,14 +656,57 @@
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">
-      <li>Metti un termometro al sole e uno all&#x27;ombra; confronta dopo dieci minuti.</li>
-      <li>Al sole, appoggia un termometro sotto il foglio nero e uno sotto il bianco.</li>
-      <li>Confronta le temperature.</li>
+      <li>Al sole, appoggia un termometro sotto il foglio nero e uno sotto il bianco: dopo dieci minuti confronta.</li>
+      <li>Ripeti mettendo i due fogli all&#x27;ombra: la differenza quasi sparisce.</li>
+      <li>Per misurare la temperatura dell&#x27;aria, invece, tieni il termometro all&#x27;ombra e ventilato: è così che la misurano le stazioni meteo.</li>
     </ol>
 
-    <div class="esp-block"><span class="et">Cosa si impara.</span> All&#x27;ombra fa molto più fresco e i colori scuri si scaldano più di quelli chiari.</div>
+    <div class="esp-block"><span class="et">Cosa si impara.</span> I colori scuri assorbono più luce del sole e si scaldano di più: è l&#x27;irraggiamento. Il termometro al sole misura quanto si è scaldato lui, non l&#x27;aria: per questo i termometri delle stazioni meteo stanno all&#x27;ombra, dentro una casetta ventilata.</div>
 
     <div class="esp-pc"><strong>In chiave protezione civile.</strong> Sono le regole delle ondate di calore: stare all&#x27;ombra nelle ore calde, vestirsi leggeri e chiari, bere spesso. Sul sito: «Ondate di calore».</div>
+
+    <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
+    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Esperimenti di protezione civile &middot; Ondate di calore &middot; rev. 2026</span>
+    </footer>
+  </article>
+
+  <article class="scheda-page esp-estesa">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile &mdash; Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Quale materiale conserva il calore?</h1>
+        <div class="scheda-sottotitolo">Esperimento di protezione civile &mdash; Ondate di calore</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Et&agrave; consigliata:</strong> 🔵 Primaria · 🟠 Ragazzi</span>
+      <span><strong>Tema:</strong> Ondate di calore</span>
+    </div>
+
+    <div class="esp-domanda"><span class="et">La domanda.</span> Come si tiene fresca una casa quando fuori fa caldissimo?</div>
+    <div class="esp-block"><span class="et">Materiali.</span> Tre barattoli di vetro uguali con coperchio, acqua tiepida, un termometro, alluminio da cucina, un panno di lana o pile, un giornale.</div>
+
+    <h2 class="scheda-h2">Come si fa</h2>
+    <ol class="esp-passi">
+      <li>Riempi i tre barattoli con la stessa quantità di acqua tiepida, misurata: la temperatura di partenza deve essere uguale per tutti.</li>
+      <li>Avvolgi il primo nell&#x27;alluminio, il secondo nella lana, il terzo nel giornale. Un quarto barattolo senza niente fa da confronto, se ne hai uno.</li>
+      <li>Mettili tutti nello stesso posto, lontano da sole e correnti.</li>
+      <li>Misura la temperatura di ciascuno dopo 10, 20 e 30 minuti e scrivi i numeri in tabella.</li>
+    </ol>
+    <div class="esp-block"><span class="et">Cosa si cambia.</span> Solo il materiale che avvolge il barattolo.</div>
+    <div class="esp-block"><span class="et">Che cosa aspettarsi.</span> Tutti si raffreddano, ma a velocità diverse: quello nudo perde calore più in fretta, quelli avvolti lo trattengono più a lungo.</div>
+
+    <div class="esp-block"><span class="et">Cosa si impara.</span> Isolare non vuol dire «tenere caldo»: vuol dire rallentare il passaggio di calore, in tutte e due le direzioni. Lo stesso materiale che d&#x27;inverno tiene dentro il calore, d&#x27;estate lo tiene fuori.</div>
+    <div class="esp-limite"><span class="et">Dove il modello si ferma.</span> Qui misuri un barattolo fermo in una stanza. In una casa contano anche il sole che entra dalle finestre, le persone, gli elettrodomestici e il ricambio d&#x27;aria.</div>
+
+    <div class="esp-pc"><strong>In chiave protezione civile.</strong> Nelle ondate di calore si chiudono persiane e tapparelle nelle ore calde e si arieggia la notte: è lo stesso principio, applicato alle stanze.</div>
+    <div class="esp-sicurezza"><strong>&#9888;&#65039; Sicurezza.</strong> Acqua tiepida, non bollente: la riscalda un adulto e la versa lui nei barattoli.</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
     <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
@@ -439,14 +810,14 @@
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">
-      <li>Quando vedi un lampo, conta i secondi fino al tuono.</li>
+      <li>Con una registrazione di un temporale, o guardando dalla finestra di casa, conta i secondi fra il lampo e il tuono.</li>
       <li>Dividi per 3: ottieni circa la distanza del temporale in chilometri.</li>
-      <li>Ripeti: se i secondi diminuiscono, il temporale si avvicina.</li>
+      <li>Ripeti: se i secondi diminuiscono, il temporale si sta avvicinando.</li>
     </ol>
 
-    <div class="esp-block"><span class="et">Cosa si impara.</span> La luce arriva subito, il suono molto più piano. Se tra lampo e tuono passano meno di 30 secondi, sei in zona di pericolo: meglio stare al riparo. Variante: strofina un palloncino sui capelli e avvicinalo a un dito al buio — la scintilla è elettricità statica, come un mini fulmine.</div>
+    <div class="esp-block"><span class="et">Cosa si impara.</span> La luce arriva subito, il suono molto più piano: contando i secondi si stima la distanza. Ma il conteggio serve a capire se il temporale si avvicina, non a decidere se si è al sicuro: se senti il tuono, il fulmine può già raggiungerti. Variante: strofina un palloncino sui capelli e avvicinalo a un dito al buio — la scintilla è elettricità statica, come un mini fulmine.</div>
 
-    <div class="esp-pc"><strong>In chiave protezione civile.</strong> Durante un temporale resta al chiuso, lontano da alberi isolati e specchi d&#x27;acqua. Sul sito: «Cosa fare con i temporali intensi».</div>
+    <div class="esp-pc"><strong>In chiave protezione civile.</strong> Quando senti il primo tuono entra subito in un edificio o in un&#x27;auto chiusa e restaci finché non sono passati 30 minuti dall&#x27;ultimo tuono. Lontano da alberi isolati e specchi d&#x27;acqua. Sul sito: «Cosa fare con i temporali intensi».</div>
     <div class="esp-sicurezza"><strong>&#9888;&#65039; Sicurezza.</strong> Si osserva SOLO da dentro casa o da un luogo riparato, mai all&#x27;aperto durante il temporale.</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
@@ -463,7 +834,7 @@
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
         <div class="scheda-ente">Protezione Civile &mdash; Genzano di Roma</div>
-        <h1 class="scheda-titolo-principale">L&#x27;acqua che sparisce</h1>
+        <h1 class="scheda-titolo-principale">L&#x27;acqua che sparisce (la siccità)</h1>
         <div class="scheda-sottotitolo">Esperimento di protezione civile &mdash; Siccità</div>
       </div>
     </header>
@@ -495,6 +866,48 @@
     </footer>
   </article>
 
+  <article class="scheda-page esp-estesa">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile &mdash; Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Le goccioline vengono dall&#x27;aria</h1>
+        <div class="scheda-sottotitolo">Esperimento di protezione civile &mdash; Umidità e nebbia</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Et&agrave; consigliata:</strong> 🟢 Infanzia · 🔵 Primaria</span>
+      <span><strong>Tema:</strong> Umidità e nebbia</span>
+    </div>
+
+    <div class="esp-domanda"><span class="et">La domanda.</span> Da dove arriva l&#x27;acqua sul bicchiere della bibita fredda?</div>
+    <div class="esp-block"><span class="et">Materiali.</span> Due bicchieri uguali, acqua fredda con ghiaccio, acqua a temperatura ambiente, un panno asciutto.</div>
+
+    <h2 class="scheda-h2">Come si fa</h2>
+    <ol class="esp-passi">
+      <li>Riempi un bicchiere di acqua con ghiaccio e l&#x27;altro di acqua a temperatura ambiente.</li>
+      <li>Asciuga bene l&#x27;esterno di tutti e due, e falli vedere: sono asciutti.</li>
+      <li>Aspetta cinque minuti senza toccarli.</li>
+      <li>Guarda e tocca l&#x27;esterno dei due bicchieri: quello freddo è bagnato, l&#x27;altro no.</li>
+    </ol>
+    <div class="esp-block"><span class="et">Cosa si cambia.</span> Solo la temperatura dell&#x27;acqua dentro il bicchiere.</div>
+    <div class="esp-block"><span class="et">Che cosa aspettarsi.</span> Sul bicchiere freddo si formano goccioline; su quello a temperatura ambiente no.</div>
+
+    <div class="esp-block"><span class="et">Cosa si impara.</span> Nell&#x27;aria c&#x27;è sempre acqua che non si vede, sotto forma di vapore. Quando l&#x27;aria tocca una superficie fredda si raffredda e non riesce più a tenerla tutta: il vapore diventa goccioline. L&#x27;acqua non è passata attraverso il vetro, viene dall&#x27;aria.</div>
+    <div class="esp-limite"><span class="et">Dove il modello si ferma.</span> È lo stesso meccanismo delle nuvole e della nebbia, ma lì l&#x27;aria si raffredda salendo in quota o toccando il terreno freddo, non un bicchiere.</div>
+
+    <div class="esp-pc"><strong>In chiave protezione civile.</strong> Capire l&#x27;umidità serve a leggere le previsioni: nebbia, rugiada e brina nascono tutte da questo passaggio, e la nebbia è un rischio vero per chi guida.</div>
+
+    <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
+    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Esperimenti di protezione civile &middot; Umidità e nebbia &middot; rev. 2026</span>
+    </footer>
+  </article>
+
   <article class="scheda-page">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
@@ -510,7 +923,7 @@
       <span><strong>Tema:</strong> Rischio chimico</span>
     </div>
 
-    <div class="esp-block"><span class="et">Materiali.</span> Un batuffolo con qualche goccia di vaniglia, profumo o un po&#x27; di caffè (un odore forte e innocuo).</div>
+    <div class="esp-block"><span class="et">Materiali.</span> Un batuffolo con un po&#x27; di caffè in polvere o scorza di limone. In classe preferisci questi al profumo: ci può essere chi ha asma o allergie. Senza odori: un piccolo diffusore di bolle di sapone, e si alza la mano quando arriva una bolla.</div>
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">
@@ -519,10 +932,10 @@
       <li>Apri il batuffolo: ognuno alza la mano appena sente l&#x27;odore.</li>
     </ol>
 
-    <div class="esp-block"><span class="et">Cosa si impara.</span> L&#x27;odore, come un gas, si diffonde nell&#x27;aria e si sposta con le correnti: raggiunge prima chi è vicino e sottovento.</div>
+    <div class="esp-block"><span class="et">Cosa si impara.</span> L&#x27;odore, come un gas, si diffonde nell&#x27;aria e si sposta con le correnti: raggiunge prima chi è vicino e sottovento. Ma l&#x27;olfatto non misura la pericolosità: molti gas pericolosi — il monossido di carbonio per primo — non si sentono affatto, e un odore forte non vuol dire per forza veleno. Non si annusa per capire se l&#x27;aria è sicura.</div>
 
     <div class="esp-pc"><strong>In chiave protezione civile.</strong> In caso di nube tossica da un incidente industriale, spesso la cosa giusta NON è scappare ma chiudersi in casa (chiudere porte, finestre e aerazione) e seguire le autorità. Sul sito: «Il rischio chimico-industriale».</div>
-    <div class="esp-sicurezza"><strong>&#9888;&#65039; Sicurezza.</strong> Usa solo sostanze innocue (vaniglia, caffè): mai prodotti chimici o spray irritanti.</div>
+    <div class="esp-sicurezza"><strong>&#9888;&#65039; Sicurezza.</strong> Mai prodotti chimici o spray. Chiedi prima se qualcuno ha asma o allergie: in quel caso usa la variante con le bolle di sapone.</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
     <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
@@ -557,9 +970,9 @@
       <li>Bagna il dito nel sapone e ritocca l&#x27;acqua: il pepe &quot;scappa&quot; verso i bordi.</li>
     </ol>
 
-    <div class="esp-block"><span class="et">Cosa si impara.</span> Il sapone rompe la tensione dell&#x27;acqua e allontana lo sporco: ecco perché lavarsi le mani col sapone funziona davvero. (Variante: glitter sulle mani da togliere prima con sola acqua, poi col sapone.)</div>
+    <div class="esp-block"><span class="et">Cosa si impara.</span> Il pepe scappa perché il sapone abbassa la tensione superficiale dell&#x27;acqua: è questo che vedi, non il lavaggio dei germi. Lavarsi le mani funziona per un&#x27;altra ragione: il sapone stacca lo sporco e i microbi dalla pelle mentre le strofini, e l&#x27;acqua li porta via nel risciacquo. Per vedere quella parte usa la variante col glitter: prima solo acqua, poi sapone e venti secondi di sfregamento.</div>
 
-    <div class="esp-pc"><strong>In chiave protezione civile.</strong> L&#x27;igiene è la prima difesa contro le epidemie. Sul sito: «Il rischio sanitario».</div>
+    <div class="esp-pc"><strong>In chiave protezione civile.</strong> L&#x27;igiene è la prima difesa contro le epidemie: strofinare almeno venti secondi, dita e polsi compresi, poi risciacquare. Sul sito: «Il rischio sanitario».</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
     <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
@@ -567,6 +980,49 @@
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
       <span>Esperimenti di protezione civile &middot; Rischio sanitario &middot; rev. 2026</span>
+    </footer>
+  </article>
+
+  <article class="scheda-page esp-estesa">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile &mdash; Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Acqua limpida significa potabile?</h1>
+        <div class="scheda-sottotitolo">Esperimento di protezione civile &mdash; Acqua sicura</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Et&agrave; consigliata:</strong> 🔵 Primaria · 🟠 Ragazzi</span>
+      <span><strong>Tema:</strong> Acqua sicura</span>
+    </div>
+
+    <div class="esp-domanda"><span class="et">La domanda.</span> Se un&#x27;acqua è trasparente, vuol dire che si può bere?</div>
+    <div class="esp-block"><span class="et">Materiali.</span> Due bottiglie d&#x27;acqua del rubinetto, terra e foglioline per sporcare la prima, un cucchiaino di sale per la seconda, un imbuto, carta da filtro (o un tovagliolo di carta), due bicchieri trasparenti.</div>
+
+    <h2 class="scheda-h2">Come si fa</h2>
+    <ol class="esp-passi">
+      <li>Prepara la prima bottiglia mescolando acqua e terra: è torbida e si vede.</li>
+      <li>Prepara la seconda sciogliendo bene il sale: resta trasparente come prima.</li>
+      <li>Filtra la prima con l&#x27;imbuto e la carta da filtro: guarda l&#x27;acqua che esce.</li>
+      <li>Filtra allo stesso modo la seconda: non si assaggia nessuna delle due, nemmeno questa. Confronta solo l&#x27;aspetto delle due acque filtrate.</li>
+    </ol>
+    <div class="esp-block"><span class="et">Cosa si cambia.</span> Che cosa è stato aggiunto all&#x27;acqua: una cosa che si vede o una che non si vede.</div>
+    <div class="esp-block"><span class="et">Che cosa aspettarsi.</span> Il filtro toglie la terra e l&#x27;acqua torna limpida; l&#x27;acqua col sale era limpida prima e resta limpida dopo, perché il sale è rimasto dentro.</div>
+
+    <div class="esp-block"><span class="et">Cosa si impara.</span> Il filtro trattiene quello che è in sospensione, non quello che è disciolto. Un&#x27;acqua limpida può contenere sali, sostanze chimiche o microbi che non si vedono: limpidezza e sicurezza sono due cose diverse.</div>
+    <div class="esp-limite"><span class="et">Dove il modello si ferma.</span> Un filtro vero per l&#x27;acqua da bere usa più strati e spesso una disinfezione: questo è un modello, non un potabilizzatore.</div>
+
+    <div class="esp-pc"><strong>In chiave protezione civile.</strong> In emergenza l&#x27;acqua sicura è quella che le autorità dichiarano tale, o quella in bottiglia sigillata del kit. Un&#x27;ordinanza di non potabilità vale anche se dal rubinetto esce acqua trasparente.</div>
+    <div class="esp-sicurezza"><strong>&#9888;&#65039; Sicurezza.</strong> L&#x27;acqua di questo esperimento NON si beve e non si assaggia, nemmeno quella filtrata: si guarda soltanto. A fine attività si butta e ci si lava le mani.</div>
+
+    <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
+    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Esperimenti di protezione civile &middot; Acqua sicura &middot; rev. 2026</span>
     </footer>
   </article>
 
@@ -670,7 +1126,7 @@
 
     <div class="esp-block"><span class="et">Cosa si impara.</span> Ad allenare lo sguardo a riconoscere i punti critici prima che accada qualcosa.</div>
 
-    <div class="esp-pc"><strong>In chiave protezione civile.</strong> Durante un terremoto la regola è «mi getto, mi copro, resto»: sotto un tavolo robusto o un letto, lontano da finestre e mobili alti, proteggendo la testa. Va bene anche il vano di una porta <strong>inserita in un muro portante</strong> (quello più spesso) o lo spazio vicino a una parete portante o sotto una trave; <strong>non</strong> proteggono invece le porte leggere dei tramezzi e i vecchi portoni. Gli ascensori non si usano mai. Sul sito: «Piano familiare».</div>
+    <div class="esp-pc"><strong>In chiave protezione civile.</strong> Durante un terremoto la regola è «mi getto, mi copro, resto»: sotto un tavolo robusto, lontano da finestre e mobili alti, proteggendo la testa. Le porte e gli architravi NON sono posti sicuri e NON si usano gli ascensori. Sul sito: «Piano familiare».</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
     <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
@@ -755,6 +1211,48 @@
     </footer>
   </article>
 
+  <article class="scheda-page esp-estesa">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile &mdash; Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Il messaggio arriva corretto?</h1>
+        <div class="scheda-sottotitolo">Esperimento di protezione civile &mdash; Comunicazione</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Et&agrave; consigliata:</strong> 🔵 Primaria · 🟠 Ragazzi</span>
+      <span><strong>Tema:</strong> Comunicazione</span>
+    </div>
+
+    <div class="esp-domanda"><span class="et">La domanda.</span> Perché alla radio si ripete quello che si è appena sentito?</div>
+    <div class="esp-block"><span class="et">Materiali.</span> Un foglio con cinque messaggi scritti (per esempio: «Via Italo Belardi 14, secondo piano, due persone»), carta e penna per chi riceve.</div>
+
+    <h2 class="scheda-h2">Come si fa</h2>
+    <ol class="esp-passi">
+      <li>Primo giro: chi trasmette legge il messaggio una volta sola, a voce normale, e chi riceve scrive quello che ha capito. Nessuno può chiedere di ripetere.</li>
+      <li>Confrontate: quante parole sono arrivate storte? Segnate il numero di errori.</li>
+      <li>Secondo giro, messaggi nuovi: chi riceve ripete ad alta voce quello che ha scritto e chi trasmette conferma con «corretto» oppure corregge. Solo allora si passa al messaggio dopo.</li>
+      <li>Contate di nuovo gli errori e confrontate i due numeri. Se potete, rifate il primo giro con un po&#x27; di rumore di fondo.</li>
+    </ol>
+    <div class="esp-block"><span class="et">Cosa si cambia.</span> Solo la conferma: nel secondo giro chi riceve ripete e chi trasmette conferma.</div>
+    <div class="esp-block"><span class="et">Che cosa aspettarsi.</span> Nel secondo giro gli errori calano molto, soprattutto su numeri e nomi propri. Col rumore di fondo la differenza diventa ancora più grande.</div>
+
+    <div class="esp-block"><span class="et">Cosa si impara.</span> Ripetere sembra una perdita di tempo e invece è il modo più rapido per accorgersi subito di un errore, quando costa poco correggerlo. Nei messaggi di emergenza i numeri e gli indirizzi sono la parte che si sbaglia più facilmente.</div>
+    <div class="esp-limite"><span class="et">Dove il modello si ferma.</span> Qui nessuno rischia niente se un messaggio arriva storto. In un&#x27;emergenza vera un indirizzo sbagliato manda i soccorsi dalla parte opposta.</div>
+
+    <div class="esp-pc"><strong>In chiave protezione civile.</strong> È il motivo per cui nelle comunicazioni radio si ripete e si conferma, e per cui l&#x27;operatore del 112 fa ripetere l&#x27;indirizzo. Si compita anche lettera per lettera quando serve.</div>
+
+    <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
+    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Esperimenti di protezione civile &middot; Comunicazione &middot; rev. 2026</span>
+    </footer>
+  </article>
+
   <article class="scheda-page">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
@@ -797,7 +1295,7 @@
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
         <div class="scheda-ente">Protezione Civile &mdash; Genzano di Roma</div>
-        <h1 class="scheda-titolo-principale">Il percorso al buio</h1>
+        <h1 class="scheda-titolo-principale">La voce che guida</h1>
         <div class="scheda-sottotitolo">Esperimento di protezione civile &mdash; Evacuazione</div>
       </div>
     </header>
@@ -811,14 +1309,14 @@
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">
-      <li>In una stanza sicura crea un piccolo percorso con ostacoli morbidi.</li>
-      <li>Benda un bambino (come se ci fosse fumo o un blackout).</li>
-      <li>Un compagno lo guida verso l&#x27;uscita usando solo la voce, con indicazioni chiare. Poi si invertono i ruoli.</li>
+      <li>In una stanza illuminata e sicura crea un piccolo percorso con ostacoli morbidi.</li>
+      <li>Un bambino chiude gli occhi (o si benda, se se la sente): non è il fumo, è un esercizio di ascolto.</li>
+      <li>Un compagno lo guida verso l&#x27;uscita usando solo la voce, con indicazioni chiare e una alla volta. Poi si invertono i ruoli.</li>
     </ol>
 
-    <div class="esp-block"><span class="et">Cosa si impara.</span> L&#x27;importanza dell&#x27;ascolto, della calma e di avere una guida designata durante un&#x27;evacuazione.</div>
+    <div class="esp-block"><span class="et">Cosa si impara.</span> Quanto contano l&#x27;ascolto, la calma e avere una sola voce che guida: con due persone che parlano insieme il percorso diventa subito più difficile. Provatelo.</div>
 
-    <div class="esp-pc"><strong>In chiave protezione civile.</strong> Con fumo o poca luce si esce piegati, vicino al pavimento dove l&#x27;aria è più pulita, seguendo la segnaletica e chi guida. Sul sito: «Cosa fare in caso di blackout».</div>
+    <div class="esp-pc"><strong>In chiave protezione civile.</strong> Durante un&#x27;evacuazione si segue chi guida e la segnaletica, senza correre e senza parlare tutti insieme. Se invece c&#x27;è del fumo la regola cambia: si va a carponi verso l&#x27;uscita, perché l&#x27;aria respirabile resta in basso — è un&#x27;altra cosa da questo esercizio. Sul sito: «Cosa fare in caso di blackout».</div>
     <div class="esp-sicurezza"><strong>&#9888;&#65039; Sicurezza.</strong> Usa ostacoli morbidi e libera il pavimento; un adulto sorveglia sempre il percorso.</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
@@ -827,6 +1325,49 @@
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
       <span>Esperimenti di protezione civile &middot; Evacuazione &middot; rev. 2026</span>
+    </footer>
+  </article>
+
+  <article class="scheda-page esp-estesa">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile &mdash; Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale">Un piccolo allarme di livello</h1>
+        <div class="scheda-sottotitolo">Esperimento di protezione civile &mdash; Sensori e allarmi</div>
+      </div>
+    </header>
+
+    <div class="scheda-meta">
+      <span><strong>Et&agrave; consigliata:</strong> 🟠 Ragazzi</span>
+      <span><strong>Tema:</strong> Sensori e allarmi</span>
+    </div>
+
+    <div class="esp-domanda"><span class="et">La domanda.</span> Come fa uno strumento a sapere da solo quando è il momento di suonare?</div>
+    <div class="esp-block"><span class="et">Materiali.</span> Una bacinella, un tappo di sughero, due fili elettrici sottili, un LED, una pila da 4,5 volt con portapile, nastro adesivo, uno stecchino di legno.</div>
+
+    <h2 class="scheda-h2">Come si fa</h2>
+    <ol class="esp-passi">
+      <li>Collega il LED alla pila lasciando il circuito interrotto: due capi liberi che accendono il LED quando si toccano.</li>
+      <li>Fissa un capo a uno stecchino verticale sul bordo, all&#x27;altezza che scegli come soglia; l&#x27;altro sul tappo che galleggia.</li>
+      <li>Versa acqua piano: quando il tappo arriva alla soglia i capi si toccano e il LED si accende.</li>
+      <li>Sposta la soglia più in alto e più in basso; poi muovi l&#x27;acqua con la mano mentre il livello le è vicino.</li>
+    </ol>
+    <div class="esp-block"><span class="et">Cosa si cambia.</span> L&#x27;altezza della soglia, e se l&#x27;acqua è ferma o mossa.</div>
+    <div class="esp-block"><span class="et">Che cosa aspettarsi.</span> Il LED si accende quando il galleggiante arriva alla soglia. Con l&#x27;acqua mossa lampeggia anche se il livello medio non è cambiato: è un falso allarme.</div>
+
+    <div class="esp-block"><span class="et">Cosa si impara.</span> Un sensore misura, ma è la soglia decisa da qualcuno a trasformare la misura in allarme. Troppo bassa: allarmi continui, e la gente smette di dar retta. Troppo alta: l&#x27;allarme arriva tardi. Le onde spiegano perché i sistemi veri mediano le misure prima di decidere.</div>
+    <div class="esp-limite"><span class="et">Dove il modello si ferma.</span> È un prototipo didattico a pile, non un dispositivo di sicurezza: non si usa per sorvegliare niente davvero.</div>
+
+    <div class="esp-pc"><strong>In chiave protezione civile.</strong> Gli idrometri sui fiumi funzionano così, con soglie ufficiali: superata una soglia scatta una fase di allerta e si avvisano i Comuni.</div>
+    <div class="esp-sicurezza"><strong>&#9888;&#65039; Sicurezza.</strong> Solo pila da 4,5 volt e LED: mai la corrente di casa vicino all&#x27;acqua. Il circuito lo controlla un adulto prima di versare l&#x27;acqua.</div>
+
+    <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
+    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Esperimenti di protezione civile &middot; Sensori e allarmi &middot; rev. 2026</span>
     </footer>
   </article>
 

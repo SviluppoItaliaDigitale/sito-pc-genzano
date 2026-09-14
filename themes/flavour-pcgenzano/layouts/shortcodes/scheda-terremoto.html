@@ -12,7 +12,7 @@
 {{ $leafletJS  := "vendor/leaflet/leaflet.js"  | relURL }}
 {{ $rischioSismico := "rischi-prevenzione/rischio-sismico/" | relURL }}
 
-<link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">
+{{ if not (.Page.Store.Get "leafletCss") }}{{ .Page.Store.Set "leafletCss" true }}<link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">{{ end }}
 <div class="scheda-eq" id="scheda-eq" aria-live="polite">
 
   <div class="scheda-eq-stato" id="eq-stato" role="status">Caricamento dei dati dell'evento…</div>
@@ -184,7 +184,7 @@
 @media print{.eq-tablist{display:none}.eq-panel[hidden]{display:block!important}#eq-mappa{display:none}}
 </style>
 
-<script src="{{ $leafletJS }}" crossorigin=""></script>
+{{ if not (.Page.Store.Get "leafletJs") }}{{ .Page.Store.Set "leafletJs" true }}<script src="{{ $leafletJS }}" crossorigin=""></script>{{ end }}
 <script>
 (function(){
   var FDSN='https://webservices.ingv.it/fdsnws/event/1/query';
