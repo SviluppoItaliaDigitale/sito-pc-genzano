@@ -10,8 +10,14 @@ I contenuti sono la versione stampabile (sintetica) della pagina Hugo
 /formazione/esperimenti/. Per modificare un esperimento, edita la lista ESPERIMENTI
 qui sotto e rilancia: python3 scripts/genera-schede-esperimenti.py
 """
+import sys
 from html import escape
 from pathlib import Path
+
+# Le illustrazioni vivono in un modulo a parte: sono tante e hanno una loro
+# libreria di primitive, tenerle qui renderebbe illeggibile la lista dei testi.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from illustrazioni_esperimenti import figura, mancanti  # noqa: E402
 
 OUT = Path("static/formazione/schede-stampabili/esperimenti-protezione-civile/index.html")
 
@@ -562,19 +568,84 @@ HEAD = """<!DOCTYPE html>
          promessa del fascicolo è un esperimento per foglio, quindi si stringono
          qui invece di spezzarsi su due pagine. Solo in stampa: a schermo il
          testo resta alla dimensione piena. */
-      .scheda-page.esp-estesa {{ font-size: 0.9rem; }}
-      .esp-estesa .esp-block, .esp-estesa .esp-pc, .esp-estesa .esp-sicurezza {{
+      .scheda-page.esp-compatta {{ font-size: 0.9rem; }}
+      .esp-compatta .esp-block, .esp-compatta .esp-pc, .esp-compatta .esp-sicurezza {{
         margin: 0.3rem 0; line-height: 1.35;
       }}
-      .esp-estesa .esp-pc, .esp-estesa .esp-sicurezza, .esp-estesa .esp-domanda, .esp-estesa .esp-limite {{
+      .esp-compatta .esp-pc, .esp-compatta .esp-sicurezza, .esp-compatta .esp-domanda, .esp-compatta .esp-limite {{
         padding: 0.35rem 0.6rem;
       }}
-      .esp-estesa .esp-passi li {{ margin-bottom: 0.15rem; line-height: 1.3; }}
-      .esp-estesa .scheda-h2 {{ margin: 0.5rem 0 0.2rem; }}
+      .esp-compatta .esp-passi li {{ margin-bottom: 0.15rem; line-height: 1.3; }}
+      .esp-compatta .scheda-h2 {{ margin: 0.5rem 0 0.2rem; }}
       /* Il riquadro «Cosa ho osservato» a 4,5rem mangiava il foglio: sei schede
          su 33 finivano su due pagine, fra cui una vecchia. In stampa basta una
          riga per annotare, e la promessa «un esperimento per foglio» regge. */
+      /* La compattazione tipografica vale per TUTTE le schede, non solo per le
+         più lunghe: serve a lasciare su ogni foglio lo spazio per l'illustrazione
+         del montaggio. Prima era legata alla presenza del blocco «La domanda» e
+         le schede più vecchie restavano a corpo pieno, senza spazio per il disegno. */
       .scheda-page .scheda-box-disegno {{ min-height: 2rem !important; }}
+      /* Altezza definita = il flex sa quanto spazio ha da distribuire alla figura. */
+      /* L'area stampabile non è il foglio intero: `@page` di scheda-print.css
+         tiene 5mm di margine per lato, quindi restano 28,7cm. Dare alla scheda
+         un'altezza maggiore produce un foglio bianco dopo ciascuna (66 pagine
+         invece di 33): misurato, non supposto. 28,4cm lascia un filo di gioco. */
+      .scheda-page {{ height: 28.4cm; margin: 0 auto; box-shadow: none; }}
+      /* Secondo livello, per gli esperimenti con più testo: senza questo il
+         disegno su quelle schede scendeva a ~14mm, una dimensione in cui non si
+         legge più che cosa mostra. Il livello lo decide la lunghezza del testo,
+         non una lista di titoli scritta a mano: un esperimento nuovo e lungo lo
+         riceve da solo. */
+      .esp-figura {{ min-height: 52px; }}
+      .scheda-page.esp-fitta {{ font-size: 0.84rem; }}
+      .esp-fitta .esp-passi li {{ margin-bottom: 0.1rem; line-height: 1.25; }}
+      .esp-fitta .esp-block, .esp-fitta .esp-pc, .esp-fitta .esp-sicurezza {{
+        margin: 0.3rem 0; line-height: 1.35;
+      }}
+      .esp-fitta .scheda-h2 {{ margin: 0.4rem 0 0.15rem; }}
+      .esp-fitta .scheda-box-disegno {{ min-height: 1.5rem !important; }}
+      /* Schede dense: disegno e spazio per annotare dividono la stessa riga. */
+      .esp-osserva {{ display: flex; gap: 0.6rem; align-items: stretch; flex: 1 1 0; min-height: 0; }}
+      .esp-osserva .esp-figura {{ flex: 0 0 auto; margin: 0; max-height: none; align-self: stretch; }}
+      .esp-osserva .scheda-box-disegno {{ flex: 1 1 auto; min-height: 1.5rem !important; }}
+    }}
+    /* La figura si prende lo spazio che AVANZA sul foglio, non una misura fissa.
+       La scheda è un contenitore flex in colonna: dandole un'altezza definita in
+       stampa e alla figura `flex: 1`, il disegno cresce dove la scheda è vuota e
+       si stringe dove è piena. Così la promessa «un esperimento per foglio» regge
+       da sola, anche quando un domani si aggiunge un esperimento lungo: nessuna
+       taratura per scheda da rifare a mano.
+       Il primo tentativo era una figura flottata a destra: su un contenitore flex
+       il float è ignorato, la figura si prendeva una riga intera (+180 px) e
+       dodici schede su 33 finivano su due pagine. */
+    .esp-figura {{
+      flex: 1 1 0;
+      /* A schermo lo spazio non è contingentato come sul foglio: il minimo può
+         essere generoso. In stampa scende a 52px, dove ogni millimetro conta. */
+      min-height: 140px;
+      max-height: 250px;
+      align-self: center;
+      display: flex;
+      justify-content: center;
+      width: auto;
+      max-width: 100%;
+      margin: 0.35rem 0 0.45rem;
+      padding: 0.3rem 0.5rem;
+      border: 1px solid #cfd8e3;
+      border-radius: 5px;
+      background: #fff;
+      break-inside: avoid;
+    }}
+    /* height:100% + width:auto = il disegno mantiene le proporzioni e riempie
+       in altezza; `preserveAspectRatio` di default lo centra senza deformarlo. */
+    .esp-figura svg {{ height: 100%; width: auto; max-width: 100%; display: block; }}
+    .esp-osserva {{ display: flex; gap: 0.6rem; align-items: stretch; }}
+    .esp-osserva .scheda-box-disegno {{ flex: 1 1 auto; }}
+    @media screen and (max-width: 620px) {{ .esp-osserva {{ display: block; }} }}
+
+    @media screen and (max-width: 620px) {{
+      .esp-figura {{ float: none; width: 100%; margin: 0.4rem 0 0.6rem; }}
+      .esp-compatta .esp-figura {{ width: 100%; }}
     }}
   </style>
 </head>
@@ -589,6 +660,30 @@ HEAD = """<!DOCTYPE html>
     <strong>Un esperimento per foglio.</strong> Puoi stampare tutto il fascicolo oppure, dalla finestra di stampa, scegliere <strong>solo le pagine</strong> che ti servono. Ogni scheda indica età consigliata, materiali, procedura, cosa si impara e le note di sicurezza. Versione completa e interattiva: <a href="/formazione/esperimenti/">Esperimenti e attività di protezione civile</a>.
   </div>
 """
+
+def _densita(e):
+    """Caratteri di testo della scheda: proxy di quanto riempie il foglio.
+
+    Serve a scegliere il livello di compattazione senza tenere una lista di
+    titoli: un esperimento aggiunto domani riceve il livello giusto da solo.
+    La soglia è tarata sulla resa reale misurata in stampa, non a occhio.
+    """
+    campi = ("domanda", "materiali", "cambia", "atteso", "impara", "limite", "pc", "sicurezza")
+    return sum(len(str(e.get(c) or "")) for c in campi) + sum(len(p) for p in e["passi"])
+
+
+SOGLIA_DENSA = 1300  # caratteri: sopra questa soglia la scheda è piena (tarato in stampa)
+
+
+def _densa(e):
+    """Scheda troppo piena per reggere l'illustrazione sopra il testo.
+
+    Su queste il disegno scende accanto al riquadro «Cosa ho osservato»,
+    riprendendosi lo spazio che quel riquadro occupa comunque: sopra il testo
+    sarebbe finito a 18mm, una misura in cui non si capisce più che cosa mostra.
+    """
+    return _densita(e) > SOGLIA_DENSA
+
 
 PAGE = """
   <article class="scheda-page{estesa}">
@@ -606,7 +701,7 @@ PAGE = """
       <span><strong>Tema:</strong> {tema}</span>
     </div>
 
-{domanda}    <div class="esp-block"><span class="et">Materiali.</span> {materiali}</div>
+{domanda}{figura_alto}    <div class="esp-block"><span class="et">Materiali.</span> {materiali}</div>
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">
@@ -618,7 +713,7 @@ PAGE = """
     <div class="esp-pc"><strong>In chiave protezione civile.</strong> {pc}</div>
 {sicurezza}
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva">{figura_basso}<div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -681,7 +776,9 @@ def render():
                 materiali=escape(e["materiali"]),
                 passi=passi,
                 domanda=domanda, cambia=cambia, atteso=atteso, limite=limite,
-                estesa=" esp-estesa" if domanda else "",
+                estesa=" esp-compatta" + (" esp-fitta" if _densa(e) else ""),
+                figura_alto="" if _densa(e) else figura(e["titolo"]),
+                figura_basso=figura(e["titolo"]) if _densa(e) else "",
                 impara=escape(e["impara"]),
                 pc=escape(e["pc"]),
                 sicurezza=sicurezza,
@@ -693,6 +790,15 @@ def render():
 
 def main():
     OUT.parent.mkdir(parents=True, exist_ok=True)
+    # Un esperimento senza disegno non deve passare in silenzio: il fascicolo
+    # sarebbe l'unico foglio nudo fra 33 illustrati e nessuno se ne accorgerebbe.
+    senza = mancanti([e["titolo"] for e in ESPERIMENTI])
+    if senza:
+        raise SystemExit(
+            "Esperimenti senza illustrazione in illustrazioni_esperimenti.py:\n  - "
+            + "\n  - ".join(senza)
+            + "\nAggiungi la scena e la voce nel registro SCENE.")
+
     OUT.write_text(render(), encoding="utf-8")
     print(f"Scritto {OUT} ({len(ESPERIMENTI)} schede)")
 

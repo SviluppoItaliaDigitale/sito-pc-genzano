@@ -50,19 +50,84 @@
          promessa del fascicolo è un esperimento per foglio, quindi si stringono
          qui invece di spezzarsi su due pagine. Solo in stampa: a schermo il
          testo resta alla dimensione piena. */
-      .scheda-page.esp-estesa { font-size: 0.9rem; }
-      .esp-estesa .esp-block, .esp-estesa .esp-pc, .esp-estesa .esp-sicurezza {
+      .scheda-page.esp-compatta { font-size: 0.9rem; }
+      .esp-compatta .esp-block, .esp-compatta .esp-pc, .esp-compatta .esp-sicurezza {
         margin: 0.3rem 0; line-height: 1.35;
       }
-      .esp-estesa .esp-pc, .esp-estesa .esp-sicurezza, .esp-estesa .esp-domanda, .esp-estesa .esp-limite {
+      .esp-compatta .esp-pc, .esp-compatta .esp-sicurezza, .esp-compatta .esp-domanda, .esp-compatta .esp-limite {
         padding: 0.35rem 0.6rem;
       }
-      .esp-estesa .esp-passi li { margin-bottom: 0.15rem; line-height: 1.3; }
-      .esp-estesa .scheda-h2 { margin: 0.5rem 0 0.2rem; }
+      .esp-compatta .esp-passi li { margin-bottom: 0.15rem; line-height: 1.3; }
+      .esp-compatta .scheda-h2 { margin: 0.5rem 0 0.2rem; }
       /* Il riquadro «Cosa ho osservato» a 4,5rem mangiava il foglio: sei schede
          su 33 finivano su due pagine, fra cui una vecchia. In stampa basta una
          riga per annotare, e la promessa «un esperimento per foglio» regge. */
+      /* La compattazione tipografica vale per TUTTE le schede, non solo per le
+         più lunghe: serve a lasciare su ogni foglio lo spazio per l'illustrazione
+         del montaggio. Prima era legata alla presenza del blocco «La domanda» e
+         le schede più vecchie restavano a corpo pieno, senza spazio per il disegno. */
       .scheda-page .scheda-box-disegno { min-height: 2rem !important; }
+      /* Altezza definita = il flex sa quanto spazio ha da distribuire alla figura. */
+      /* L'area stampabile non è il foglio intero: `@page` di scheda-print.css
+         tiene 5mm di margine per lato, quindi restano 28,7cm. Dare alla scheda
+         un'altezza maggiore produce un foglio bianco dopo ciascuna (66 pagine
+         invece di 33): misurato, non supposto. 28,4cm lascia un filo di gioco. */
+      .scheda-page { height: 28.4cm; margin: 0 auto; box-shadow: none; }
+      /* Secondo livello, per gli esperimenti con più testo: senza questo il
+         disegno su quelle schede scendeva a ~14mm, una dimensione in cui non si
+         legge più che cosa mostra. Il livello lo decide la lunghezza del testo,
+         non una lista di titoli scritta a mano: un esperimento nuovo e lungo lo
+         riceve da solo. */
+      .esp-figura { min-height: 52px; }
+      .scheda-page.esp-fitta { font-size: 0.84rem; }
+      .esp-fitta .esp-passi li { margin-bottom: 0.1rem; line-height: 1.25; }
+      .esp-fitta .esp-block, .esp-fitta .esp-pc, .esp-fitta .esp-sicurezza {
+        margin: 0.3rem 0; line-height: 1.35;
+      }
+      .esp-fitta .scheda-h2 { margin: 0.4rem 0 0.15rem; }
+      .esp-fitta .scheda-box-disegno { min-height: 1.5rem !important; }
+      /* Schede dense: disegno e spazio per annotare dividono la stessa riga. */
+      .esp-osserva { display: flex; gap: 0.6rem; align-items: stretch; flex: 1 1 0; min-height: 0; }
+      .esp-osserva .esp-figura { flex: 0 0 auto; margin: 0; max-height: none; align-self: stretch; }
+      .esp-osserva .scheda-box-disegno { flex: 1 1 auto; min-height: 1.5rem !important; }
+    }
+    /* La figura si prende lo spazio che AVANZA sul foglio, non una misura fissa.
+       La scheda è un contenitore flex in colonna: dandole un'altezza definita in
+       stampa e alla figura `flex: 1`, il disegno cresce dove la scheda è vuota e
+       si stringe dove è piena. Così la promessa «un esperimento per foglio» regge
+       da sola, anche quando un domani si aggiunge un esperimento lungo: nessuna
+       taratura per scheda da rifare a mano.
+       Il primo tentativo era una figura flottata a destra: su un contenitore flex
+       il float è ignorato, la figura si prendeva una riga intera (+180 px) e
+       dodici schede su 33 finivano su due pagine. */
+    .esp-figura {
+      flex: 1 1 0;
+      /* A schermo lo spazio non è contingentato come sul foglio: il minimo può
+         essere generoso. In stampa scende a 52px, dove ogni millimetro conta. */
+      min-height: 140px;
+      max-height: 250px;
+      align-self: center;
+      display: flex;
+      justify-content: center;
+      width: auto;
+      max-width: 100%;
+      margin: 0.35rem 0 0.45rem;
+      padding: 0.3rem 0.5rem;
+      border: 1px solid #cfd8e3;
+      border-radius: 5px;
+      background: #fff;
+      break-inside: avoid;
+    }
+    /* height:100% + width:auto = il disegno mantiene le proporzioni e riempie
+       in altezza; `preserveAspectRatio` di default lo centra senza deformarlo. */
+    .esp-figura svg { height: 100%; width: auto; max-width: 100%; display: block; }
+    .esp-osserva { display: flex; gap: 0.6rem; align-items: stretch; }
+    .esp-osserva .scheda-box-disegno { flex: 1 1 auto; }
+    @media screen and (max-width: 620px) { .esp-osserva { display: block; } }
+
+    @media screen and (max-width: 620px) {
+      .esp-figura { float: none; width: 100%; margin: 0.4rem 0 0.6rem; }
+      .esp-compatta .esp-figura { width: 100%; }
     }
   </style>
 </head>
@@ -77,7 +142,7 @@
     <strong>Un esperimento per foglio.</strong> Puoi stampare tutto il fascicolo oppure, dalla finestra di stampa, scegliere <strong>solo le pagine</strong> che ti servono. Ogni scheda indica età consigliata, materiali, procedura, cosa si impara e le note di sicurezza. Versione completa e interattiva: <a href="/formazione/esperimenti/">Esperimenti e attività di protezione civile</a>.
   </div>
 
-  <article class="scheda-page">
+  <article class="scheda-page esp-compatta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -92,7 +157,7 @@
       <span><strong>Tema:</strong> Vulcani</span>
     </div>
 
-    <div class="esp-block"><span class="et">Materiali.</span> Due bicchieri, una cannuccia, acqua, purè di patate denso (o ketchup).</div>
+<figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Due bicchieri affiancati con una cannuccia ciascuno: in quello con l'acqua le bolle salgono e scoppiano subito, in quello con il pur&egrave; denso la bolla resta intrappolata e gonfia la superficie." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><path d="M17.0,60.0 L61.0,60.0 L59.0,94 L19.0,94 Z" fill="#cfe3f5" stroke="none" stroke-width="0"/><path d="M16,44 L19,94 L59,94 L62,44" fill="none" stroke="#003366" stroke-width="2"/><path d="M99.0,60.0 L143.0,60.0 L141.0,94 L101.0,94 Z" fill="#e6dcc6" stroke="none" stroke-width="0"/><path d="M98,44 L101,94 L141,94 L144,44" fill="none" stroke="#003366" stroke-width="2"/><line x1="30" y1="30" x2="39" y2="60" stroke="#003366" stroke-width="2"/><line x1="112" y1="30" x2="121" y2="60" stroke="#003366" stroke-width="2"/><circle cx="39" cy="52" r="3" fill="none" stroke="#003366" stroke-width="2"/><circle cx="35" cy="42" r="2.5" fill="none" stroke="#003366" stroke-width="2"/><circle cx="41" cy="34" r="2" fill="none" stroke="#003366" stroke-width="2"/><path d="M110,58 q11,-13 22,0" fill="#e6dcc6" stroke="#003366" stroke-width="2"/><path d="M110,58 q11,-13 22,0" fill="none" stroke="#003366" stroke-width="2"/><text x="39" y="110" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">acqua</text><text x="121" y="110" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">pur&egrave;</text><line x1="8" y1="96" x2="152" y2="96" stroke="#003366" stroke-width="2"/></g></svg></figure>    <div class="esp-block"><span class="et">Materiali.</span> Due bicchieri, una cannuccia, acqua, purè di patate denso (o ketchup).</div>
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">
@@ -106,7 +171,7 @@
     <div class="esp-pc"><strong>In chiave protezione civile.</strong> Vulcani diversi si monitorano in modo diverso e le vie di evacuazione cambiano col tipo di rischio. Sul sito: «Il vulcanismo dei Colli Albani».</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -114,7 +179,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page">
+  <article class="scheda-page esp-compatta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -129,7 +194,7 @@
       <span><strong>Tema:</strong> Terremoti</span>
     </div>
 
-    <div class="esp-block"><span class="et">Materiali.</span> Una teglia di gelatina solida e compatta, stuzzicadenti, marshmallow (o cubetti di formaggio).</div>
+<figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Una teglia di gelatina con due torrette di stuzzicadenti e marshmallow, una bassa e una alta; le frecce ai lati indicano che si scuote la teglia." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><rect x="22" y="62" width="116" height="26" rx="3" fill="#cfe3f5" stroke="#003366" stroke-width="2"/><line x1="40" y1="62" x2="40" y2="34" stroke="#003366" stroke-width="2"/><circle cx="40" cy="30" r="5" fill="#fff" stroke="#003366" stroke-width="2"/><line x1="112" y1="62" x2="112" y2="20" stroke="#003366" stroke-width="2"/><circle cx="112" cy="16" r="5" fill="#fff" stroke="#003366" stroke-width="2"/><line x1="6" y1="66" x2="16" y2="66" stroke="#c2410c" stroke-width="2"/><line x1="6" y1="72" x2="16" y2="72" stroke="#c2410c" stroke-width="2"/><line x1="6" y1="78" x2="16" y2="78" stroke="#c2410c" stroke-width="2"/><line x1="144" y1="66" x2="154" y2="66" stroke="#c2410c" stroke-width="2"/><line x1="144" y1="72" x2="154" y2="72" stroke="#c2410c" stroke-width="2"/><line x1="144" y1="78" x2="154" y2="78" stroke="#c2410c" stroke-width="2"/><text x="80" y="104" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">si scuote la teglia</text></g></svg></figure>    <div class="esp-block"><span class="et">Materiali.</span> Una teglia di gelatina solida e compatta, stuzzicadenti, marshmallow (o cubetti di formaggio).</div>
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">
@@ -145,7 +210,7 @@
     <div class="esp-sicurezza"><strong>&#9888;&#65039; Sicurezza.</strong> Gli stuzzicadenti sono appuntiti: usali con un adulto.</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -153,7 +218,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page esp-estesa">
+  <article class="scheda-page esp-compatta esp-fitta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -188,7 +253,7 @@
     <div class="esp-sicurezza"><strong>&#9888;&#65039; Sicurezza.</strong> Si batte sul tavolo, non sui contenitori. Asciuga subito l&#x27;acqua versata: il pavimento bagnato scivola.</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Due contenitori con sabbia: in quello asciutto la biglia resta appoggiata in superficie, in quello saturo d'acqua la stessa biglia sprofonda." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><path d="M16,46 L16,94 L68,94 L68,46" fill="none" stroke="#003366" stroke-width="2"/><path d="M92,46 L92,94 L144,94 L144,46" fill="none" stroke="#003366" stroke-width="2"/><rect x="18" y="62" width="48" height="30" rx="0" fill="#e6dcc6" stroke="none" stroke-width="0"/><rect x="94" y="62" width="48" height="30" rx="0" fill="#e6dcc6" stroke="none" stroke-width="0"/><rect x="94" y="62" width="48" height="30" rx="0" fill="#cfe3f5" fill-opacity="0.5" stroke="none" stroke-width="0"/><circle cx="99" cy="70" r="1.5" fill="#5b87b5" stroke="none" stroke-width="0"/><circle cx="107" cy="79" r="1.5" fill="#5b87b5" stroke="none" stroke-width="0"/><circle cx="115" cy="70" r="1.5" fill="#5b87b5" stroke="none" stroke-width="0"/><circle cx="123" cy="79" r="1.5" fill="#5b87b5" stroke="none" stroke-width="0"/><circle cx="131" cy="70" r="1.5" fill="#5b87b5" stroke="none" stroke-width="0"/><circle cx="139" cy="79" r="1.5" fill="#5b87b5" stroke="none" stroke-width="0"/><line x1="94" y1="62" x2="142" y2="62" stroke="#3f6f9f" stroke-width="2"/><circle cx="42" cy="58" r="5" fill="#fff" stroke="#003366" stroke-width="2"/><circle cx="118" cy="82" r="5" fill="#fff" stroke="#003366" stroke-width="2"/><line x1="118" y1="68" x2="118" y2="76" stroke="#c2410c" stroke-width="2"/><path d="M118.0,76.0 L115.4,70.6 L120.6,70.6 Z" fill="#c2410c"/><text x="42" y="110" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">asciutta</text><text x="118" y="110" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">satura</text></g></svg></figure><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -196,7 +261,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page esp-estesa">
+  <article class="scheda-page esp-compatta esp-fitta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -231,7 +296,7 @@
     <div class="esp-sicurezza"><strong>&#9888;&#65039; Sicurezza.</strong> Il buco nel bicchiere lo fa un adulto. La scatola si scuote appoggiata al tavolo, non sollevata.</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Una scatola di cartone con una finestra ritagliata: dentro pende un bicchiere con un pennarello che tocca una striscia di carta, tirata fuori da un lato e gi&agrave; segnata da una traccia ondulata." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><path d="M28,30 L28,86 L108,86 L108,30" fill="none" stroke="#003366" stroke-width="2"/><rect x="40" y="44" width="34" height="26" rx="0" fill="#fff" stroke="#003366" stroke-width="2"/><line x1="68" y1="30" x2="68" y2="52" stroke="#003366" stroke-width="2"/><path d="M60,52 L64,70 L72,70 L76,52 Z" fill="#fff" stroke="#003366" stroke-width="2"/><line x1="68" y1="70" x2="68" y2="82" stroke="#c2410c" stroke-width="2"/><rect x="22" y="82" width="116" height="8" rx="0" fill="#cfe3f5" stroke="#003366" stroke-width="2"/><line x1="140" y1="86" x2="152" y2="86" stroke="#c2410c" stroke-width="2"/><path d="M152.0,86.0 L146.6,88.6 L146.6,83.4 Z" fill="#c2410c"/><path d="M30,86 q6,-4 12,0 q6,4 12,0 q6,-4 12,0" fill="none" stroke="#c2410c" stroke-width="1.5"/><text x="80" y="108" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">si tira la striscia</text></g></svg></figure><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -239,7 +304,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page esp-estesa">
+  <article class="scheda-page esp-compatta esp-fitta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -273,7 +338,7 @@
     <div class="esp-pc"><strong>In chiave protezione civile.</strong> È il motivo per cui la normativa antisismica fa calcolare il comportamento dinamico dell&#x27;edificio, non solo la sua resistenza a spinta ferma.</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Tre cannucce di altezza diversa in piedi su una base, ognuna con un gommino in cima: al ritmo giusto una sola, quella evidenziata, oscilla molto pi&ugrave; delle altre." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><rect x="18" y="88" width="124" height="8" rx="0" fill="#e6dcc6" stroke="#003366" stroke-width="2"/><line x1="44" y1="88" x2="44" y2="66" stroke="#003366" stroke-width="2"/><circle cx="44" cy="62" r="5" fill="#fff" stroke="#003366" stroke-width="2"/><line x1="80" y1="88" x2="80" y2="46" stroke="#003366" stroke-width="2"/><circle cx="80" cy="42" r="5" fill="#fff" stroke="#003366" stroke-width="2"/><path d="M116,88 q8,-22 4,-42" fill="none" stroke="#c2410c" stroke-width="2"/><circle cx="120" cy="42" r="5" fill="#fff" stroke="#c2410c" stroke-width="2"/><line x1="18" y1="100" x2="28" y2="100" stroke="#c2410c" stroke-width="2"/><line x1="18" y1="106" x2="28" y2="106" stroke="#c2410c" stroke-width="2"/><line x1="134" y1="100" x2="144" y2="100" stroke="#c2410c" stroke-width="2"/><line x1="134" y1="106" x2="144" y2="106" stroke="#c2410c" stroke-width="2"/><text x="80" y="116" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">la base oscilla al ritmo giusto</text></g></svg></figure><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -281,7 +346,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page">
+  <article class="scheda-page esp-compatta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -296,7 +361,7 @@
       <span><strong>Tema:</strong> Frane e alluvioni</span>
     </div>
 
-    <div class="esp-block"><span class="et">Materiali.</span> Una spugna da cucina asciutta, un piatto, acqua, un po&#x27; di terra o sabbia.</div>
+<figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Una spugna appoggiata inclinata su un piatto con un po' di terra sopra; dall'alto si versa acqua che la attraversa e cola in basso." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><path d="M20,86 L140,86" fill="none" stroke="#003366" stroke-width="2"/><path d="M34,78 L108,50 L120,66 L46,94 Z" fill="#cfe3f5" stroke="#003366" stroke-width="2"/><path d="M96,54 L112,48 L118,58 L102,64 Z" fill="#e6dcc6" stroke="#003366" stroke-width="2"/><line x1="118" y1="26" x2="108" y2="44" stroke="#c2410c" stroke-width="2"/><path d="M108.0,44.0 L108.3,38.0 L112.9,40.5 Z" fill="#c2410c"/><circle cx="60" cy="92" r="1.8" fill="#003366" stroke="none" stroke-width="0"/><circle cx="70" cy="96" r="1.8" fill="#003366" stroke="none" stroke-width="0"/><circle cx="80" cy="92" r="1.8" fill="#003366" stroke="none" stroke-width="0"/><text x="80" y="112" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">acqua sulla spugna inclinata</text></g></svg></figure>    <div class="esp-block"><span class="et">Materiali.</span> Una spugna da cucina asciutta, un piatto, acqua, un po&#x27; di terra o sabbia.</div>
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">
@@ -310,7 +375,7 @@
     <div class="esp-pc"><strong>In chiave protezione civile.</strong> È il motivo dei livelli di allerta meteo (gialla, arancione, rossa) legati alla pioggia attesa. Sul sito: «Il rischio idrogeologico» e «Allerte meteo».</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -318,7 +383,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page">
+  <article class="scheda-page esp-compatta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -333,7 +398,7 @@
       <span><strong>Tema:</strong> Frane e alluvioni</span>
     </div>
 
-    <div class="esp-block"><span class="et">Materiali.</span> Due vaschette inclinate (una con terra nuda, una con una zolla di erba con radici), due bottiglie col tappo forato.</div>
+<figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Due vaschette inclinate sotto la stessa pioggia: da quella con terra nuda esce acqua torbida e carica di terra, da quella coperta d'erba esce acqua molto pi&ugrave; pulita." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><path d="M14,54 L62,54 L70,86 L14,86 Z" fill="#e6dcc6" stroke="#003366" stroke-width="2"/><path d="M90,54 L138,54 L146,86 L90,86 Z" fill="#e6dcc6" stroke="#003366" stroke-width="2"/><line x1="90" y1="54" x2="138" y2="54" stroke="#2f6b3a" stroke-width="3"/><path d="M104,56 l-4,12 M116,56 l0,14 M128,56 l4,12" fill="none" stroke="#2f6b3a" stroke-width="1.5"/><line x1="30" y1="24" x2="36" y2="46" stroke="#c2410c" stroke-width="2"/><path d="M36.0,46.0 L32.1,41.5 L37.1,40.1 Z" fill="#c2410c"/><line x1="110" y1="24" x2="116" y2="46" stroke="#c2410c" stroke-width="2"/><path d="M116.0,46.0 L112.1,41.5 L117.1,40.1 Z" fill="#c2410c"/><path d="M70,86 q6,8 10,14" fill="none" stroke="#e6dcc6" stroke-width="4"/><path d="M146,86 q6,8 10,14" fill="none" stroke="#cfe3f5" stroke-width="4"/><text x="40" y="110" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">terra nuda</text><text x="120" y="110" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">con radici</text></g></svg></figure>    <div class="esp-block"><span class="et">Materiali.</span> Due vaschette inclinate (una con terra nuda, una con una zolla di erba con radici), due bottiglie col tappo forato.</div>
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">
@@ -347,7 +412,7 @@
     <div class="esp-pc"><strong>In chiave protezione civile.</strong> Spiega perché disboscare o cementificare aumenta il rischio di frane e alluvioni: il verde è una difesa del territorio.</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -355,7 +420,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page">
+  <article class="scheda-page esp-compatta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -370,7 +435,7 @@
       <span><strong>Tema:</strong> Alluvioni urbane</span>
     </div>
 
-    <div class="esp-block"><span class="et">Materiali.</span> Due vassoi (uno con terra o un panno spugnoso, uno con un foglio di plastica liscio), una bottiglia d&#x27;acqua.</div>
+<figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Due vassoi inclinati sotto la stessa acqua: nel vassoio con la terra l'acqua viene assorbita, su quello con il foglio di plastica scivola via tutta insieme." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><path d="M14,56 L64,44 L72,74 L22,86 Z" fill="#e6dcc6" stroke="#003366" stroke-width="2"/><path d="M90,56 L140,44 L148,74 L98,86 Z" fill="#9aa5b1" stroke="#003366" stroke-width="2"/><line x1="30" y1="20" x2="34" y2="40" stroke="#c2410c" stroke-width="2"/><path d="M34.0,40.0 L30.4,35.2 L35.5,34.2 Z" fill="#c2410c"/><line x1="106" y1="20" x2="110" y2="40" stroke="#c2410c" stroke-width="2"/><path d="M110.0,40.0 L106.4,35.2 L111.5,34.2 Z" fill="#c2410c"/><circle cx="32" cy="58" r="1.8" fill="#003366" stroke="none" stroke-width="0"/><circle cx="44" cy="54" r="1.8" fill="#003366" stroke="none" stroke-width="0"/><circle cx="54" cy="50" r="1.8" fill="#003366" stroke="none" stroke-width="0"/><path d="M98,80 q14,10 22,18" fill="none" stroke="#cfe3f5" stroke-width="4"/><text x="40" y="110" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">prato</text><text x="120" y="110" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">asfalto</text></g></svg></figure>    <div class="esp-block"><span class="et">Materiali.</span> Due vassoi (uno con terra o un panno spugnoso, uno con un foglio di plastica liscio), una bottiglia d&#x27;acqua.</div>
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">
@@ -384,7 +449,7 @@
     <div class="esp-pc"><strong>In chiave protezione civile.</strong> È il motivo per cui gli allagamenti urbani colpiscono anche zone lontane dai fiumi. Sul sito: «Il rischio idrogeologico».</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -392,7 +457,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page esp-estesa">
+  <article class="scheda-page esp-compatta esp-fitta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -427,7 +492,7 @@
     <div class="esp-sicurezza"><strong>&#9888;&#65039; Sicurezza.</strong> Il taglio lo fa un adulto. Non si esce a leggere durante il temporale: si aspetta che passi.</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Una bottiglia tagliata a met&agrave;: la parte alta &egrave; capovolta dentro la bassa e fa da imbuto, sul fianco &egrave; fissato un righello e sul fondo ci sono dei sassi per la stabilit&agrave;." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><path d="M56,40 L48,58 L48,96 L112,96 L112,58 L104,40" fill="none" stroke="#003366" stroke-width="2"/><path d="M56,40 L48,58 L112,58 L104,40 Z" fill="#fff" stroke="#003366" stroke-width="2"/><line x1="48" y1="58" x2="112" y2="58" stroke="#003366" stroke-width="2" stroke-dasharray="3 2"/><rect x="48" y="78" width="64" height="18" rx="0" fill="#cfe3f5" stroke="none" stroke-width="0"/><rect x="48" y="88" width="64" height="8" rx="0" fill="#9aa5b1" stroke="none" stroke-width="0"/><rect x="116" y="58" width="8" height="38" rx="0" fill="#fff" stroke="#003366" stroke-width="2"/><line x1="116" y1="64" x2="121" y2="64" stroke="#003366" stroke-width="1.2"/><line x1="116" y1="72" x2="121" y2="72" stroke="#003366" stroke-width="1.2"/><line x1="116" y1="80" x2="121" y2="80" stroke="#003366" stroke-width="1.2"/><line x1="116" y1="88" x2="121" y2="88" stroke="#003366" stroke-width="1.2"/><line x1="80" y1="18" x2="80" y2="34" stroke="#c2410c" stroke-width="2"/><path d="M80.0,34.0 L77.4,28.6 L82.6,28.6 Z" fill="#c2410c"/><text x="80" y="112" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">imbuto + righello</text></g></svg></figure><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -435,7 +500,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page">
+  <article class="scheda-page esp-compatta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -450,7 +515,7 @@
       <span><strong>Tema:</strong> Maremoti</span>
     </div>
 
-    <div class="esp-block"><span class="et">Materiali.</span> Una vaschetta lunga (o teglia) con un po&#x27; d&#x27;acqua, un libretto o una paletta.</div>
+<figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Una vaschetta con acqua tenuta inclinata da un libro sotto un'estremit&agrave;: l'onda parte dal lato profondo e cresce avvicinandosi al fondale in salita." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><path d="M12,44 L12,88 L148,88 L148,44" fill="none" stroke="#003366" stroke-width="2"/><rect x="14" y="66" width="132" height="22" rx="0" fill="#cfe3f5" stroke="none" stroke-width="0"/><path d="M14,66 q12,-10 24,0 q12,10 24,0 q12,-10 24,0 q12,10 24,0 q12,-10 24,0" fill="none" stroke="#003366" stroke-width="2"/><rect x="120" y="88" width="26" height="8" rx="0" fill="#9aa5b1" stroke="#003366" stroke-width="2"/><path d="M120,66 L146,52 L146,66 Z" fill="#e6dcc6" stroke="#003366" stroke-width="2"/><line x1="30" y1="56" x2="62" y2="56" stroke="#c2410c" stroke-width="2"/><path d="M62.0,56.0 L56.6,58.6 L56.6,53.4 Z" fill="#c2410c"/><text x="80" y="110" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">il fondale sale: l'onda cresce</text></g></svg></figure>    <div class="esp-block"><span class="et">Materiali.</span> Una vaschetta lunga (o teglia) con un po&#x27; d&#x27;acqua, un libretto o una paletta.</div>
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">
@@ -464,7 +529,7 @@
     <div class="esp-pc"><strong>In chiave protezione civile.</strong> Al mare, se senti un forte terremoto o vedi il mare ritirarsi all&#x27;improvviso, allontanati subito verso un punto alto. Sul sito: «Il rischio da maremoto».</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -472,7 +537,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page esp-estesa">
+  <article class="scheda-page esp-compatta esp-fitta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -507,7 +572,7 @@
     <div class="esp-sicurezza"><strong>&#9888;&#65039; Sicurezza.</strong> Si lavora sopra un lavandino o all&#x27;aperto. Non avvicinarsi ai tombini veri, tanto meno quando piove.</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Un colino appoggiato su un contenitore fa da tombino: alcune foglie appoggiate sopra ne coprono i fori e l'acqua versata passa pi&ugrave; lentamente." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><path d="M40,52 q40,-14 80,0 L112,64 L48,64 Z" fill="#fff" stroke="#003366" stroke-width="2"/><line x1="50" y1="56" x2="50" y2="64" stroke="#003366" stroke-width="1.2"/><line x1="59" y1="56" x2="59" y2="64" stroke="#003366" stroke-width="1.2"/><line x1="68" y1="56" x2="68" y2="64" stroke="#003366" stroke-width="1.2"/><line x1="77" y1="56" x2="77" y2="64" stroke="#003366" stroke-width="1.2"/><line x1="86" y1="56" x2="86" y2="64" stroke="#003366" stroke-width="1.2"/><line x1="95" y1="56" x2="95" y2="64" stroke="#003366" stroke-width="1.2"/><line x1="104" y1="56" x2="104" y2="64" stroke="#003366" stroke-width="1.2"/><line x1="113" y1="56" x2="113" y2="64" stroke="#003366" stroke-width="1.2"/><path d="M48,64 L52,94 L108,94 L112,64" fill="none" stroke="#003366" stroke-width="2"/><rect x="52" y="84" width="56" height="10" rx="0" fill="#cfe3f5" stroke="none" stroke-width="0"/><path d="M56,48 q6,-5 12,0 M84,46 q6,-5 12,0" fill="none" stroke="#e6dcc6" stroke-width="2.5"/><line x1="80" y1="16" x2="80" y2="36" stroke="#c2410c" stroke-width="2"/><path d="M80.0,36.0 L77.4,30.6 L82.6,30.6 Z" fill="#c2410c"/><text x="80" y="112" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">foglie sopra: passa meno acqua</text></g></svg></figure><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -515,7 +580,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page esp-estesa">
+  <article class="scheda-page esp-compatta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -531,7 +596,7 @@
     </div>
 
     <div class="esp-domanda"><span class="et">La domanda.</span> L&#x27;acqua può andare verso l&#x27;alto senza che nessuno la spinga?</div>
-    <div class="esp-block"><span class="et">Materiali.</span> Due bicchieri, acqua, colorante alimentare o succo scuro, una striscia di carta assorbente, una di stoffa e una di carta plastificata.</div>
+<figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Tre striscioline immerse nello stesso bicchiere di acqua colorata: nella carta assorbente l'acqua risale molto, nella stoffa meno, nella carta plastificata quasi per niente." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><path d="M57.4,74.0 L102.7,74.0 L101.0,96 L59.0,96 Z" fill="#7aa7cf" stroke="none" stroke-width="0"/><path d="M56,56 L59,96 L101,96 L104,56" fill="none" stroke="#003366" stroke-width="2"/><rect x="64" y="20" width="7" height="48" rx="0" fill="#e9eef4" stroke="#003366" stroke-width="2"/><rect x="78" y="20" width="7" height="48" rx="0" fill="#f2f0e8" stroke="#003366" stroke-width="2"/><rect x="92" y="20" width="7" height="48" rx="0" fill="#fff" stroke="#003366" stroke-width="2"/><rect x="64" y="40" width="7" height="28" rx="0" fill="#7aa7cf" stroke="none" stroke-width="0"/><rect x="78" y="54" width="7" height="14" rx="0" fill="#7aa7cf" stroke="none" stroke-width="0"/><rect x="92" y="64" width="7" height="4" rx="0" fill="#7aa7cf" stroke="none" stroke-width="0"/><rect x="64" y="20" width="7" height="48" rx="0" fill="none" stroke="#003366" stroke-width="2"/><rect x="78" y="20" width="7" height="48" rx="0" fill="none" stroke="#003366" stroke-width="2"/><rect x="92" y="20" width="7" height="48" rx="0" fill="none" stroke="#003366" stroke-width="2"/><line x1="56" y1="60" x2="56" y2="42" stroke="#c2410c" stroke-width="2"/><path d="M56.0,42.0 L58.6,47.4 L53.4,47.4 Z" fill="#c2410c"/><text x="80" y="112" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">carta &middot; stoffa &middot; plastica</text></g></svg></figure>    <div class="esp-block"><span class="et">Materiali.</span> Due bicchieri, acqua, colorante alimentare o succo scuro, una striscia di carta assorbente, una di stoffa e una di carta plastificata.</div>
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">
@@ -549,7 +614,7 @@
     <div class="esp-pc"><strong>In chiave protezione civile.</strong> È la ragione per cui dopo un allagamento i muri restano umidi per settimane e gli intonaci vanno rifatti: l&#x27;acqua non se ne va solo perché il pavimento è asciutto.</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -557,7 +622,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page">
+  <article class="scheda-page esp-compatta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -572,7 +637,7 @@
       <span><strong>Tema:</strong> Incendi boschivi</span>
     </div>
 
-    <div class="esp-block"><span class="et">Materiali.</span> Una candelina, un barattolo di vetro, un piattino.</div>
+<figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Una candelina accesa su un piattino e un barattolo di vetro capovolto che viene calato sopra la fiamma fino a coprirla." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><rect x="56" y="88" width="48" height="6" rx="2" fill="#fff" stroke="#003366" stroke-width="2"/><rect x="74" y="62" width="12" height="26" rx="0" fill="#fff" stroke="#003366" stroke-width="2"/><path d="M80,62 q-7,-9 0,-16 q7,7 0,16 Z" fill="#c2410c" stroke="#c2410c" stroke-width="1"/><path d="M46,18 L46,88 M114,18 L114,88" fill="none" stroke="#003366" stroke-width="2"/><path d="M46,18 L114,18" fill="none" stroke="#003366" stroke-width="2"/><line x1="130" y1="34" x2="118" y2="44" stroke="#c2410c" stroke-width="2"/><path d="M118.0,44.0 L120.5,38.5 L123.8,42.5 Z" fill="#c2410c"/><text x="80" y="112" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">il barattolo scende sulla fiamma</text></g></svg></figure>    <div class="esp-block"><span class="et">Materiali.</span> Una candelina, un barattolo di vetro, un piattino.</div>
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">
@@ -587,7 +652,7 @@
     <div class="esp-sicurezza"><strong>&#9888;&#65039; Sicurezza.</strong> C&#x27;è una fiamma: SOLO con un adulto, mai per l&#x27;infanzia. Tieni lontani capelli, maniche e carta; non lasciare la candela incustodita.</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -595,7 +660,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page esp-estesa">
+  <article class="scheda-page esp-compatta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -611,7 +676,7 @@
     </div>
 
     <div class="esp-domanda"><span class="et">La domanda.</span> Perché a volte un incendio si ferma da solo e a volte no?</div>
-    <div class="esp-block"><span class="et">Materiali.</span> Una scatola di tessere del domino (o tessere di cartoncino che stiano in piedi).</div>
+<figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Una fila di tessere del domino che cadono una sull'altra si interrompe dove c'&egrave; uno spazio vuoto: oltre il varco le tessere restano in piedi." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><rect x="16" y="54" width="6" height="30" rx="0" fill="#fff" stroke="#003366" stroke-width="2"/><rect x="27" y="54" width="6" height="30" rx="0" fill="#fff" stroke="#003366" stroke-width="2"/><rect x="38" y="54" width="6" height="30" rx="0" fill="#fff" stroke="#003366" stroke-width="2"/><rect x="49" y="54" width="6" height="30" rx="0" fill="#fff" stroke="#003366" stroke-width="2"/><rect x="60" y="54" width="6" height="30" rx="0" fill="#fff" stroke="#003366" stroke-width="2"/><path d="M74,84 L96,60 L102,64 L80,88 Z" fill="#fff" stroke="#003366" stroke-width="2"/><rect x="112" y="54" width="6" height="30" rx="0" fill="#fff" stroke="#003366" stroke-width="2"/><rect x="123" y="54" width="6" height="30" rx="0" fill="#fff" stroke="#003366" stroke-width="2"/><rect x="134" y="54" width="6" height="30" rx="0" fill="#fff" stroke="#003366" stroke-width="2"/><line x1="104" y1="50" x2="104" y2="90" stroke="#c2410c" stroke-width="2" stroke-dasharray="4 3"/><line x1="10" y1="42" x2="22" y2="50" stroke="#c2410c" stroke-width="2"/><path d="M22.0,50.0 L16.1,49.2 L19.0,44.8 Z" fill="#c2410c"/><text x="80" y="110" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">il varco ferma la caduta</text></g></svg></figure>    <div class="esp-block"><span class="et">Materiali.</span> Una scatola di tessere del domino (o tessere di cartoncino che stiano in piedi).</div>
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">
@@ -629,7 +694,7 @@
     <div class="esp-pc"><strong>In chiave protezione civile.</strong> La pulizia del sottobosco e le fasce tagliafuoco servono proprio a togliere continuità al combustibile. È la parte «prevenzione» della campagna antincendio.</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -637,7 +702,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page">
+  <article class="scheda-page esp-compatta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -652,7 +717,7 @@
       <span><strong>Tema:</strong> Ondate di calore</span>
     </div>
 
-    <div class="esp-block"><span class="et">Materiali.</span> Due termometri (o uno da spostare), un foglio bianco e uno nero, un posto al sole.</div>
+<figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Al sole, due termometri sotto due fogli: sotto il foglio chiaro la colonnina resta bassa, sotto il foglio scuro sale." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><circle cx="24" cy="22" r="9" fill="#fff" stroke="#c2410c" stroke-width="2"/><line x1="37.0" y1="22.0" x2="41.0" y2="22.0" stroke="#c2410c" stroke-width="1.5"/><line x1="33.196047499173595" y1="31.188727354369757" x2="36.0256005758424" y2="34.01602807879122" stroke="#c2410c" stroke-width="1.5"/><line x1="24.01035224723953" y1="34.99999587811385" x2="24.013537554082465" y2="38.99999460984119" stroke="#c2410c" stroke-width="1.5"/><line x1="14.818598617339932" y1="31.20336181242962" x2="11.993552038059912" y2="34.035165447023346" stroke="#c2410c" stroke-width="1.5"/><line x1="11.000016487541986" y1="22.02070448791433" x2="7.000021560631829" y2="22.027075099580276" stroke="#c2410c" stroke-width="1.5"/><line x1="14.789329710500454" y1="12.825930411309802" x2="11.955277313731363" y2="10.003139768635895" stroke="#c2410c" stroke-width="1.5"/><line x1="23.96894328454034" y1="9.000037096959666" x2="23.959387372091214" y2="5.000048511408796" stroke="#c2410c" stroke-width="1.5"/><line x1="33.16673197710949" y1="12.782027074251182" x2="35.98726489314319" y2="9.945727712482315" stroke="#c2410c" stroke-width="1.5"/><rect x="52" y="52" width="40" height="5" rx="0" fill="#fff" stroke="#003366" stroke-width="2"/><rect x="102" y="52" width="40" height="5" rx="0" fill="#333" stroke="#333" stroke-width="2"/><rect x="68" y="60" width="6" height="30" rx="3" fill="#fff" stroke="#003366" stroke-width="2"/><circle cx="71" cy="92" r="5" fill="#fff" stroke="#003366" stroke-width="2"/><rect x="118" y="60" width="6" height="30" rx="3" fill="#fff" stroke="#003366" stroke-width="2"/><circle cx="121" cy="92" r="5" fill="#c2410c" stroke="#c2410c" stroke-width="2"/><rect x="119" y="74" width="4" height="16" rx="0" fill="#c2410c" stroke="none" stroke-width="0"/><text x="71" y="112" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">chiaro</text><text x="121" y="112" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">scuro</text></g></svg></figure>    <div class="esp-block"><span class="et">Materiali.</span> Due termometri (o uno da spostare), un foglio bianco e uno nero, un posto al sole.</div>
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">
@@ -666,7 +731,7 @@
     <div class="esp-pc"><strong>In chiave protezione civile.</strong> Sono le regole delle ondate di calore: stare all&#x27;ombra nelle ore calde, vestirsi leggeri e chiari, bere spesso. Sul sito: «Ondate di calore».</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -674,7 +739,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page esp-estesa">
+  <article class="scheda-page esp-compatta esp-fitta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -709,7 +774,7 @@
     <div class="esp-sicurezza"><strong>&#9888;&#65039; Sicurezza.</strong> Acqua tiepida, non bollente: la riscalda un adulto e la versa lui nei barattoli.</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Tre barattoli uguali con la stessa acqua tiepida, avvolti uno nell'alluminio, uno nella lana e uno nella carta di giornale, con un termometro per confrontarli." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><rect x="14" y="46" width="38" height="46" rx="3" fill="#cfe3f5" stroke="#003366" stroke-width="2"/><rect x="14" y="40" width="38" height="8" rx="2" fill="#fff" stroke="#003366" stroke-width="2"/><rect x="61" y="46" width="38" height="46" rx="3" fill="#cfe3f5" stroke="#003366" stroke-width="2"/><rect x="61" y="40" width="38" height="8" rx="2" fill="#fff" stroke="#003366" stroke-width="2"/><rect x="108" y="46" width="38" height="46" rx="3" fill="#cfe3f5" stroke="#003366" stroke-width="2"/><rect x="108" y="40" width="38" height="8" rx="2" fill="#fff" stroke="#003366" stroke-width="2"/><line x1="16" y1="52" x2="50" y2="52" stroke="#9aa5b1" stroke-width="1.4"/><line x1="16" y1="60" x2="50" y2="60" stroke="#9aa5b1" stroke-width="1.4"/><line x1="16" y1="68" x2="50" y2="68" stroke="#9aa5b1" stroke-width="1.4"/><line x1="16" y1="76" x2="50" y2="76" stroke="#9aa5b1" stroke-width="1.4"/><line x1="16" y1="84" x2="50" y2="84" stroke="#9aa5b1" stroke-width="1.4"/><path d="M63,52 q9,-5 18,0 q9,5 18,0" fill="none" stroke="#6b5b3e" stroke-width="1.4"/><path d="M63,60 q9,-5 18,0 q9,5 18,0" fill="none" stroke="#6b5b3e" stroke-width="1.4"/><path d="M63,68 q9,-5 18,0 q9,5 18,0" fill="none" stroke="#6b5b3e" stroke-width="1.4"/><path d="M63,76 q9,-5 18,0 q9,5 18,0" fill="none" stroke="#6b5b3e" stroke-width="1.4"/><path d="M63,84 q9,-5 18,0 q9,5 18,0" fill="none" stroke="#6b5b3e" stroke-width="1.4"/><line x1="110" y1="52" x2="144" y2="52" stroke="#8a8a8a" stroke-width="1.4" stroke-dasharray="3 2"/><line x1="110" y1="60" x2="144" y2="60" stroke="#8a8a8a" stroke-width="1.4" stroke-dasharray="3 2"/><line x1="110" y1="68" x2="144" y2="68" stroke="#8a8a8a" stroke-width="1.4" stroke-dasharray="3 2"/><line x1="110" y1="76" x2="144" y2="76" stroke="#8a8a8a" stroke-width="1.4" stroke-dasharray="3 2"/><line x1="110" y1="84" x2="144" y2="84" stroke="#8a8a8a" stroke-width="1.4" stroke-dasharray="3 2"/><rect x="30" y="24" width="4" height="18" rx="2" fill="#fff" stroke="#003366" stroke-width="2"/><text x="33" y="110" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">alluminio</text><text x="80" y="110" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">lana</text><text x="127" y="110" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">giornale</text></g></svg></figure><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -717,7 +782,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page">
+  <article class="scheda-page esp-compatta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -732,7 +797,7 @@
       <span><strong>Tema:</strong> Neve e gelo</span>
     </div>
 
-    <div class="esp-block"><span class="et">Materiali.</span> Due cubetti di ghiaccio uguali, due piattini, un cucchiaino di sale.</div>
+<figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Due cubetti di ghiaccio uguali su due piattini: quello su cui &egrave; stato sparso il sale si &egrave; gi&agrave; sciolto molto di pi&ugrave;." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><path d="M18,80 q30,10 60,0" fill="none" stroke="#003366" stroke-width="2"/><path d="M82,80 q30,10 60,0" fill="none" stroke="#003366" stroke-width="2"/><path d="M34,58 L62,58 L58,78 L38,78 Z" fill="#cfe3f5" stroke="#003366" stroke-width="2"/><path d="M100,64 L124,64 L120,78 L104,78 Z" fill="#cfe3f5" stroke="#003366" stroke-width="2"/><circle cx="102" cy="60" r="1.5" fill="#c2410c" stroke="none" stroke-width="0"/><circle cx="109" cy="57" r="1.5" fill="#c2410c" stroke="none" stroke-width="0"/><circle cx="116" cy="60" r="1.5" fill="#c2410c" stroke="none" stroke-width="0"/><circle cx="122" cy="58" r="1.5" fill="#c2410c" stroke="none" stroke-width="0"/><circle cx="104" cy="84" r="1.8" fill="#003366" stroke="none" stroke-width="0"/><circle cx="112" cy="86" r="1.8" fill="#003366" stroke="none" stroke-width="0"/><circle cx="120" cy="84" r="1.8" fill="#003366" stroke="none" stroke-width="0"/><text x="48" y="108" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">senza sale</text><text x="112" y="108" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">con sale</text></g></svg></figure>    <div class="esp-block"><span class="et">Materiali.</span> Due cubetti di ghiaccio uguali, due piattini, un cucchiaino di sale.</div>
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">
@@ -746,7 +811,7 @@
     <div class="esp-pc"><strong>In chiave protezione civile.</strong> Ecco perché d&#x27;inverno si sparge il sale sulle strade ghiacciate. Attenzione al ghiaccio nero, sottile e quasi invisibile. Sul sito: «Il rischio da neve e gelo».</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -754,7 +819,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page">
+  <article class="scheda-page esp-compatta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -769,7 +834,7 @@
       <span><strong>Tema:</strong> Vento forte</span>
     </div>
 
-    <div class="esp-block"><span class="et">Materiali.</span> Un sacchetto di plastica leggero o un calzino, un cerchio di cartoncino, dello spago, un bastoncino.</div>
+<figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Una manica a vento: un sacchetto fissato a un cerchio di cartoncino in cima a un bastoncino, gonfiata e tenuta orizzontale dal vento che arriva da sinistra." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><line x1="26" y1="92" x2="26" y2="22" stroke="#003366" stroke-width="3"/><line x1="12" y1="92" x2="44" y2="92" stroke="#003366" stroke-width="2"/><circle cx="26" cy="30" r="0" fill="none" stroke="#003366" stroke-width="2"/><line x1="26" y1="30" x2="34" y2="30" stroke="#003366" stroke-width="2"/><path d="M34,20 L34,40 L34,40" fill="none" stroke="#003366" stroke-width="2"/><path d="M34,20 q40,4 62,10 q10,2 18,6 M34,40 q40,-2 62,2 q10,1 18,4" fill="none" stroke="#003366" stroke-width="2"/><path d="M34,20 L34,40" fill="none" stroke="#003366" stroke-width="2"/><line x1="96" y1="26" x2="96" y2="40" stroke="#9aa5b1" stroke-width="1.4"/><line x1="102" y1="28" x2="102" y2="42" stroke="#9aa5b1" stroke-width="1.4"/><line x1="108" y1="30" x2="108" y2="44" stroke="#9aa5b1" stroke-width="1.4"/><line x1="114" y1="32" x2="114" y2="46" stroke="#9aa5b1" stroke-width="1.4"/><path d="M4,16 q14,-4 26,0" fill="none" stroke="#c2410c" stroke-width="1.5"/><path d="M4,26 q14,-4 26,0" fill="none" stroke="#c2410c" stroke-width="1.5"/><path d="M4,36 q14,-4 26,0" fill="none" stroke="#c2410c" stroke-width="1.5"/><text x="80" y="110" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">il vento la riempie e la orienta</text></g></svg></figure>    <div class="esp-block"><span class="et">Materiali.</span> Un sacchetto di plastica leggero o un calzino, un cerchio di cartoncino, dello spago, un bastoncino.</div>
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">
@@ -783,7 +848,7 @@
     <div class="esp-pc"><strong>In chiave protezione civile.</strong> Con il vento forte gli oggetti volano e gli alberi possono cadere. Sul sito: «Cosa fare con il vento forte».</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -791,7 +856,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page">
+  <article class="scheda-page esp-compatta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -806,7 +871,7 @@
       <span><strong>Tema:</strong> Temporali e fulmini</span>
     </div>
 
-    <div class="esp-block"><span class="et">Materiali.</span> Gli occhi, le orecchie e un modo per contare. Si osserva da un luogo sicuro, al chiuso.</div>
+<figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Una nuvola con un lampo a sinistra e un orecchio a destra, con le onde del tuono che arrivano dopo: si contano i secondi fra il lampo e il tuono." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><path d="M16,34 q-2,-14 12,-14 q4,-10 16,-6 q12,-6 18,6 q12,0 10,14 Z" fill="#e7ecf2" stroke="#003366" stroke-width="2"/><path d="M40,34 L32,52 L40,52 L32,68" fill="none" stroke="#c2410c" stroke-width="2.5"/><circle cx="112" cy="44" r="9" fill="none" stroke="#003366" stroke-width="2"/><path d="M112,44 q6,-8 0,-14" fill="none" stroke="#003366" stroke-width="1.5"/><path d="M86,36 q-8,8 0,16" fill="none" stroke="#9aa5b1" stroke-width="1.4"/><path d="M93,33 q-8,8 0,16" fill="none" stroke="#9aa5b1" stroke-width="1.4"/><path d="M100,30 q-8,8 0,16" fill="none" stroke="#9aa5b1" stroke-width="1.4"/><text x="80" y="92" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">conta i secondi fra lampo e tuono</text><text x="80" y="108" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">3 secondi &asymp; 1 km</text></g></svg></figure>    <div class="esp-block"><span class="et">Materiali.</span> Gli occhi, le orecchie e un modo per contare. Si osserva da un luogo sicuro, al chiuso.</div>
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">
@@ -821,7 +886,7 @@
     <div class="esp-sicurezza"><strong>&#9888;&#65039; Sicurezza.</strong> Si osserva SOLO da dentro casa o da un luogo riparato, mai all&#x27;aperto durante il temporale.</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -829,7 +894,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page">
+  <article class="scheda-page esp-compatta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -844,7 +909,7 @@
       <span><strong>Tema:</strong> Siccità</span>
     </div>
 
-    <div class="esp-block"><span class="et">Materiali.</span> Due piattini con la stessa quantità d&#x27;acqua, un pennarello per segnare il livello.</div>
+<figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Due piattini con la stessa acqua e il livello segnato: in quello lasciato al sole l'acqua &egrave; scesa molto sotto il segno, in quello all'ombra quasi no." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><circle cx="28" cy="22" r="8" fill="#fff" stroke="#c2410c" stroke-width="2"/><line x1="39.0" y1="22.0" x2="43.0" y2="22.0" stroke="#c2410c" stroke-width="1.4"/><line x1="35.781270960839194" y1="29.775076992159025" x2="38.610824037507996" y2="32.60237771658049" stroke="#c2410c" stroke-width="1.4"/><line x1="28.008759593818066" y1="32.99999651225018" x2="28.011944900661" y2="36.99999524397752" stroke="#c2410c" stroke-width="1.4"/><line x1="20.231121906979944" y1="29.787459995132753" x2="17.406075327699924" y2="32.61926362972648" stroke="#c2410c" stroke-width="1.4"/><line x1="17.000013950997065" y1="22.017519182081355" x2="13.000019024086907" y2="22.0238897937473" stroke="#c2410c" stroke-width="1.4"/><line x1="20.206355908885" y1="14.237325732646756" x2="17.372303512115906" y2="11.41453508997285" stroke="#c2410c" stroke-width="1.4"/><line x1="27.973721240764903" y1="11.000031389735103" x2="27.964165328315776" y2="7.000042804184231" stroke="#c2410c" stroke-width="1.4"/><line x1="35.75646551909265" y1="14.200176755135615" x2="38.57699843512634" y2="11.363877393366748" stroke="#c2410c" stroke-width="1.4"/><path d="M104,14 q-2,-8 8,-8 q3,-7 11,-4 q9,-4 12,5 q9,0 7,10 Z" fill="#e7ecf2" stroke="#003366" stroke-width="2"/><path d="M18,60 q30,16 60,0" fill="none" stroke="#003366" stroke-width="2"/><rect x="24" y="60" width="48" height="8" rx="0" fill="#cfe3f5" stroke="none" stroke-width="0"/><path d="M84,60 q30,16 60,0" fill="none" stroke="#003366" stroke-width="2"/><rect x="90" y="60" width="48" height="16" rx="0" fill="#cfe3f5" stroke="none" stroke-width="0"/><line x1="24" y1="60" x2="72" y2="60" stroke="#c2410c" stroke-width="1.6" stroke-dasharray="3 2"/><line x1="90" y1="60" x2="138" y2="60" stroke="#c2410c" stroke-width="1.6" stroke-dasharray="3 2"/><text x="48" y="104" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">al sole</text><text x="114" y="104" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">all'ombra</text></g></svg></figure>    <div class="esp-block"><span class="et">Materiali.</span> Due piattini con la stessa quantità d&#x27;acqua, un pennarello per segnare il livello.</div>
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">
@@ -858,7 +923,7 @@
     <div class="esp-pc"><strong>In chiave protezione civile.</strong> È la siccità, un rischio lento. Risparmiare acqua (chiudere il rubinetto, segnalare le perdite) aiuta tutti. Sul sito: «Il rischio da deficit idrico».</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -866,7 +931,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page esp-estesa">
+  <article class="scheda-page esp-compatta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -882,7 +947,7 @@
     </div>
 
     <div class="esp-domanda"><span class="et">La domanda.</span> Da dove arriva l&#x27;acqua sul bicchiere della bibita fredda?</div>
-    <div class="esp-block"><span class="et">Materiali.</span> Due bicchieri uguali, acqua fredda con ghiaccio, acqua a temperatura ambiente, un panno asciutto.</div>
+<figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Due bicchieri uguali: su quello con acqua e ghiaccio si formano goccioline all'esterno, su quello con acqua a temperatura ambiente il vetro resta asciutto." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><path d="M26.9,56.0 L69.1,56.0 L67.0,94 L29.0,94 Z" fill="#cfe3f5" stroke="none" stroke-width="0"/><path d="M26,40 L29,94 L67,94 L70,40" fill="none" stroke="#003366" stroke-width="2"/><path d="M96.9,56.0 L139.1,56.0 L137.0,94 L99.0,94 Z" fill="#cfe3f5" stroke="none" stroke-width="0"/><path d="M96,40 L99,94 L137,94 L140,40" fill="none" stroke="#003366" stroke-width="2"/><rect x="34" y="46" width="7" height="6" rx="1" fill="#fff" stroke="#003366" stroke-width="2"/><rect x="42" y="46" width="7" height="6" rx="1" fill="#fff" stroke="#003366" stroke-width="2"/><rect x="50" y="46" width="7" height="6" rx="1" fill="#fff" stroke="#003366" stroke-width="2"/><circle cx="26" cy="58" r="2" fill="#003366" stroke="none" stroke-width="0"/><circle cx="24" cy="70" r="2" fill="#003366" stroke="none" stroke-width="0"/><circle cx="28" cy="82" r="2" fill="#003366" stroke="none" stroke-width="0"/><circle cx="70" cy="62" r="2" fill="#003366" stroke="none" stroke-width="0"/><circle cx="72" cy="76" r="2" fill="#003366" stroke="none" stroke-width="0"/><text x="48" y="110" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">acqua e ghiaccio</text><text x="118" y="110" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">acqua ambiente</text></g></svg></figure>    <div class="esp-block"><span class="et">Materiali.</span> Due bicchieri uguali, acqua fredda con ghiaccio, acqua a temperatura ambiente, un panno asciutto.</div>
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">
@@ -900,7 +965,7 @@
     <div class="esp-pc"><strong>In chiave protezione civile.</strong> Capire l&#x27;umidità serve a leggere le previsioni: nebbia, rugiada e brina nascono tutte da questo passaggio, e la nebbia è un rischio vero per chi guida.</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -908,7 +973,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page">
+  <article class="scheda-page esp-compatta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -923,7 +988,7 @@
       <span><strong>Tema:</strong> Rischio chimico</span>
     </div>
 
-    <div class="esp-block"><span class="et">Materiali.</span> Un batuffolo con un po&#x27; di caffè in polvere o scorza di limone. In classe preferisci questi al profumo: ci può essere chi ha asma o allergie. Senza odori: un piccolo diffusore di bolle di sapone, e si alza la mano quando arriva una bolla.</div>
+<figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="La pianta di una stanza: da chi sta in un angolo partono onde concentriche che raggiungono prima la persona vicina e poi quella lontana." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><rect x="14" y="22" width="132" height="72" rx="3" fill="none" stroke="#003366" stroke-width="2"/><circle cx="32" cy="63.36" r="3.3600000000000003" fill="none" stroke="#003366" stroke-width="2"/><line x1="32" y1="66.72" x2="32" y2="74.88" stroke="#003366" stroke-width="2"/><line x1="32" y1="66.72" x2="26.72" y2="71.52" stroke="#003366" stroke-width="2"/><line x1="32" y1="66.72" x2="37.28" y2="71.52" stroke="#003366" stroke-width="2"/><line x1="32" y1="74.88" x2="27.2" y2="84" stroke="#003366" stroke-width="2"/><line x1="32" y1="74.88" x2="36.8" y2="84" stroke="#003366" stroke-width="2"/><path d="M40,84 a14,14 0 0 1 28,-28" fill="none" stroke="#c2410c" stroke-width="1.6" stroke-dasharray="4 3"/><path d="M40,84 a30,30 0 0 1 60,-60" fill="none" stroke="#c2410c" stroke-width="1.6" stroke-dasharray="4 3"/><path d="M40,84 a46,46 0 0 1 92,-92" fill="none" stroke="#c2410c" stroke-width="1.6" stroke-dasharray="4 3"/><circle cx="84" cy="63.36" r="3.3600000000000003" fill="none" stroke="#003366" stroke-width="2"/><line x1="84" y1="66.72" x2="84" y2="74.88" stroke="#003366" stroke-width="2"/><line x1="84" y1="66.72" x2="78.72" y2="71.52" stroke="#003366" stroke-width="2"/><line x1="84" y1="66.72" x2="89.28" y2="71.52" stroke="#003366" stroke-width="2"/><line x1="84" y1="74.88" x2="79.2" y2="84" stroke="#003366" stroke-width="2"/><line x1="84" y1="74.88" x2="88.8" y2="84" stroke="#003366" stroke-width="2"/><circle cx="128" cy="63.36" r="3.3600000000000003" fill="none" stroke="#003366" stroke-width="2"/><line x1="128" y1="66.72" x2="128" y2="74.88" stroke="#003366" stroke-width="2"/><line x1="128" y1="66.72" x2="122.72" y2="71.52" stroke="#003366" stroke-width="2"/><line x1="128" y1="66.72" x2="133.28" y2="71.52" stroke="#003366" stroke-width="2"/><line x1="128" y1="74.88" x2="123.2" y2="84" stroke="#003366" stroke-width="2"/><line x1="128" y1="74.88" x2="132.8" y2="84" stroke="#003366" stroke-width="2"/><text x="80" y="110" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">chi &egrave; vicino lo sente prima</text></g></svg></figure>    <div class="esp-block"><span class="et">Materiali.</span> Un batuffolo con un po&#x27; di caffè in polvere o scorza di limone. In classe preferisci questi al profumo: ci può essere chi ha asma o allergie. Senza odori: un piccolo diffusore di bolle di sapone, e si alza la mano quando arriva una bolla.</div>
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">
@@ -938,7 +1003,7 @@
     <div class="esp-sicurezza"><strong>&#9888;&#65039; Sicurezza.</strong> Mai prodotti chimici o spray. Chiedi prima se qualcuno ha asma o allergie: in quel caso usa la variante con le bolle di sapone.</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -946,7 +1011,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page">
+  <article class="scheda-page esp-compatta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -961,7 +1026,7 @@
       <span><strong>Tema:</strong> Rischio sanitario</span>
     </div>
 
-    <div class="esp-block"><span class="et">Materiali.</span> Un piatto fondo con acqua, pepe macinato, un goccio di sapone per piatti.</div>
+<figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Un piatto con acqua e pepe in superficie: appena il dito col sapone tocca il centro, il pepe scappa verso il bordo lasciando un cerchio pulito." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><circle cx="80" cy="58" r="40" fill="#cfe3f5" stroke="#003366" stroke-width="2"/><circle cx="80" cy="58" r="40" fill="none" stroke="#003366" stroke-width="2"/><circle cx="113.0" cy="58.0" r="1.6" fill="#333" stroke="none" stroke-width="0"/><circle cx="107.2360752920194" cy="76.63320162203617" r="1.6" fill="#333" stroke="none" stroke-width="0"/><circle cx="91.95780589773022" cy="88.75728983691846" r="1.6" fill="#333" stroke="none" stroke-width="0"/><circle cx="72.50233087512814" cy="90.13697181898044" r="1.6" fill="#333" stroke="none" stroke-width="0"/><circle cx="55.666007387138905" cy="80.29028495818798" r="1.6" fill="#333" stroke="none" stroke-width="0"/><circle cx="47.3302476121853" cy="62.65696026597562" r="1.6" fill="#333" stroke="none" stroke-width="0"/><circle cx="50.40697226097314" cy="43.396825371269884" r="1.6" fill="#333" stroke="none" stroke-width="0"/><circle cx="63.821392895756915" cy="29.23799951035159" r="1.6" fill="#333" stroke="none" stroke-width="0"/><circle cx="82.88746645350173" cy="25.126567908417258" r="1.6" fill="#333" stroke="none" stroke-width="0"/><circle cx="100.94486490610691" cy="32.49877191065241" r="1.6" fill="#333" stroke="none" stroke-width="0"/><circle cx="111.68561945946207" cy="48.77928855943544" r="1.6" fill="#333" stroke="none" stroke-width="0"/><circle cx="80" cy="58" r="15" fill="#fff" stroke="none" stroke-width="0"/><line x1="80" y1="8" x2="80" y2="44" stroke="#c2410c" stroke-width="2.5"/><circle cx="80" cy="46" r="4" fill="#c2410c" stroke="#c2410c" stroke-width="2"/><line x1="95.65803689804905" y1="64.62011181924706" x2="104.8686468380779" y2="68.51429524233356" stroke="#c2410c" stroke-width="2"/><path d="M104.9,68.5 L98.9,68.8 L100.9,64.0 Z" fill="#c2410c"/><line x1="76.13756439021752" y1="74.55540972492932" x2="73.86554344328665" y2="84.29388603371126" stroke="#c2410c" stroke-width="2"/><path d="M73.9,84.3 L72.6,78.4 L77.6,79.6 Z" fill="#c2410c"/><line x1="63.0289888114892" y1="57.00763956173114" x2="53.046041053541664" y2="56.42389812745534" stroke="#c2410c" stroke-width="2"/><path d="M53.0,56.4 L58.6,54.1 L58.3,59.3 Z" fill="#c2410c"/><line x1="78.09340704210406" y1="41.107252938231106" x2="76.97188177275352" y2="31.17034290189646" stroke="#c2410c" stroke-width="2"/><path d="M77.0,31.2 L80.2,36.2 L75.0,36.8 Z" fill="#c2410c"/><text x="80" y="112" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">il sapone allontana il pepe</text></g></svg></figure>    <div class="esp-block"><span class="et">Materiali.</span> Un piatto fondo con acqua, pepe macinato, un goccio di sapone per piatti.</div>
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">
@@ -975,7 +1040,7 @@
     <div class="esp-pc"><strong>In chiave protezione civile.</strong> L&#x27;igiene è la prima difesa contro le epidemie: strofinare almeno venti secondi, dita e polsi compresi, poi risciacquare. Sul sito: «Il rischio sanitario».</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -983,7 +1048,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page esp-estesa">
+  <article class="scheda-page esp-compatta esp-fitta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -1018,7 +1083,7 @@
     <div class="esp-sicurezza"><strong>&#9888;&#65039; Sicurezza.</strong> L&#x27;acqua di questo esperimento NON si beve e non si assaggia, nemmeno quella filtrata: si guarda soltanto. A fine attività si butta e ci si lava le mani.</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Un imbuto con la carta da filtro sopra un bicchiere, fra due bottiglie: una con acqua torbida di terra e una con acqua limpida ma salata; dopo il filtro l'aspetto &egrave; lo stesso." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><path d="M20,22 L20,50 L14,58 L14,84 L38,84 L38,58 L32,50 L32,22" fill="none" stroke="#003366" stroke-width="2"/><rect x="15" y="62" width="22" height="21" rx="0" fill="#e6dcc6" stroke="none" stroke-width="0"/><path d="M120,22 L120,50 L114,58 L114,84 L138,84 L138,58 L132,50 L132,22" fill="none" stroke="#003366" stroke-width="2"/><rect x="115" y="62" width="22" height="21" rx="0" fill="#cfe3f5" stroke="none" stroke-width="0"/><path d="M58,34 L102,34 L84,58 L84,72 L76,72 L76,58 Z" fill="#fff" stroke="#003366" stroke-width="2"/><path d="M62,38 L98,38" fill="none" stroke="#003366" stroke-width="1.4" stroke-dasharray="3 2"/><path d="M65.2,88.0 L94.8,88.0 L93.0,104 L67.0,104 Z" fill="#cfe3f5" stroke="none" stroke-width="0"/><path d="M64,78 L67,104 L93,104 L96,78" fill="none" stroke="#003366" stroke-width="2"/><text x="80" y="116" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">torbida e salata: dopo il filtro sono uguali</text></g></svg></figure><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -1026,7 +1091,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page">
+  <article class="scheda-page esp-compatta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -1041,7 +1106,7 @@
       <span><strong>Tema:</strong> Rischio nucleare</span>
     </div>
 
-    <div class="esp-block"><span class="et">Materiali.</span> Una torcia (o la luce del telefono), un righello, un libro spesso.</div>
+<figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Una torcia che illumina una mano vicina in pieno fascio; pi&ugrave; lontano un libro spesso fa da schermo e la seconda mana resta in ombra." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><path d="M10,50 L30,50 L30,66 L10,66 Z" fill="#fff" stroke="#003366" stroke-width="2"/><path d="M30,52 L74,36 L74,80 L30,64 Z" fill="#fdf0e2" stroke="none" stroke-width="0"/><path d="M30,52 L74,36 M30,64 L74,80" fill="none" stroke="#c2410c" stroke-width="1.4" stroke-dasharray="4 3"/><path d="M48,44 q10,-8 12,4 q6,-4 4,8 L48,60 Z" fill="#fff" stroke="#003366" stroke-width="2"/><rect x="92" y="34" width="8" height="50" rx="0" fill="#9aa5b1" stroke="#003366" stroke-width="2"/><path d="M116,44 q10,-8 12,4 q6,-4 4,8 L116,60 Z" fill="#fff" stroke="#003366" stroke-width="2"/><text x="80" y="108" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">pi&ugrave; lontano e schermato: arriva meno</text></g></svg></figure>    <div class="esp-block"><span class="et">Materiali.</span> Una torcia (o la luce del telefono), un righello, un libro spesso.</div>
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">
@@ -1055,7 +1120,7 @@
     <div class="esp-pc"><strong>In chiave protezione civile.</strong> Sono i tre principi della radioprotezione — distanza, tempo, schermatura. Sul sito: «Il rischio nucleare e radiologico».</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -1063,7 +1128,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page">
+  <article class="scheda-page esp-compatta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -1078,7 +1143,7 @@
       <span><strong>Tema:</strong> Prepararsi</span>
     </div>
 
-    <div class="esp-block"><span class="et">Materiali.</span> Uno zaino e tanti oggetti (torcia, radio a pile, bottiglia d&#x27;acqua, fischietto, una barretta, un peluche, le chiavi, un videogioco, un fumetto, una coperta…).</div>
+<figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Uno zaino accanto agli oggetti da scegliere: torcia, radio a pile, bottiglia d'acqua, fischietto e una barretta, segnati come da mettere dentro." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><path d="M22,44 q20,-18 40,0 L62,92 L22,92 Z" fill="#fff" stroke="#003366" stroke-width="2"/><path d="M30,44 q12,-10 24,0" fill="none" stroke="#003366" stroke-width="1.6"/><rect x="30" y="60" width="24" height="12" rx="2" fill="none" stroke="#003366" stroke-width="2"/><rect x="80" y="30" width="16" height="9" rx="1" fill="#fff" stroke="#003366" stroke-width="2"/><path d="M96,28 L106,24 L106,45 L96,41 Z" fill="#fdf0e2" stroke="#003366" stroke-width="2"/><rect x="118" y="22" width="5" height="7" rx="0" fill="#fff" stroke="#003366" stroke-width="2"/><path d="M115,29 L126,29 L128,34 L128,48 L113,48 L113,34 Z" fill="#cfe3f5" stroke="#003366" stroke-width="2"/><rect x="80" y="58" width="24" height="17" rx="2" fill="#fff" stroke="#003366" stroke-width="2"/><line x1="84" y1="58" x2="80" y2="48" stroke="#003366" stroke-width="2"/><circle cx="98" cy="66" r="3.5" fill="none" stroke="#003366" stroke-width="2"/><line x1="84" y1="62" x2="92" y2="62" stroke="#003366" stroke-width="1.2"/><line x1="84" y1="66" x2="92" y2="66" stroke="#003366" stroke-width="1.2"/><line x1="84" y1="70" x2="92" y2="70" stroke="#003366" stroke-width="1.2"/><path d="M113,60 L131,60 q6,0 6,7 q0,7 -6,7 L113,74 Z" fill="#fff" stroke="#003366" stroke-width="2"/><circle cx="127" cy="67" r="2.2" fill="none" stroke="#003366" stroke-width="2"/><line x1="113" y1="63" x2="107" y2="63" stroke="#003366" stroke-width="3"/><path d="M82,88 l6,6 l11,-13" fill="none" stroke="#2f6b3a" stroke-width="3"/><text x="80" y="112" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">prima l'indispensabile</text></g></svg></figure>    <div class="esp-block"><span class="et">Materiali.</span> Uno zaino e tanti oggetti (torcia, radio a pile, bottiglia d&#x27;acqua, fischietto, una barretta, un peluche, le chiavi, un videogioco, un fumetto, una coperta…).</div>
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">
@@ -1092,7 +1157,7 @@
     <div class="esp-pc"><strong>In chiave protezione civile.</strong> È il kit di emergenza di famiglia. Sul sito: «Kit di emergenza».</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -1100,7 +1165,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page">
+  <article class="scheda-page esp-compatta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -1115,7 +1180,7 @@
       <span><strong>Tema:</strong> Pianificare</span>
     </div>
 
-    <div class="esp-block"><span class="et">Materiali.</span> Carta e colori.</div>
+<figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="La pianta di una casa con delle croci sui punti pericolosi, un segno di spunta sui posti sicuri e una freccia che indica la via d'uscita." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><rect x="16" y="18" width="128" height="76" rx="2" fill="none" stroke="#003366" stroke-width="2"/><line x1="80" y1="18" x2="80" y2="60" stroke="#003366" stroke-width="2"/><line x1="80" y1="60" x2="144" y2="60" stroke="#003366" stroke-width="2"/><path d="M30,34 l12,12 M42,34 l-12,12" fill="none" stroke="#c2410c" stroke-width="2.5"/><path d="M104,34 l12,12 M116,34 l-12,12" fill="none" stroke="#c2410c" stroke-width="2.5"/><circle cx="48" cy="78" r="9" fill="none" stroke="#2f6b3a" stroke-width="2"/><path d="M43,78 l4,4 l7,-8" fill="none" stroke="#2f6b3a" stroke-width="2.2"/><line x1="96" y1="78" x2="130" y2="78" stroke="#2f6b3a" stroke-width="2"/><path d="M130.0,78.0 L124.6,80.6 L124.6,75.4 Z" fill="#2f6b3a"/><rect x="140" y="68" width="4" height="20" rx="0" fill="#2f6b3a" stroke="none" stroke-width="0"/><text x="80" y="110" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">pericoli, posti sicuri, via d'uscita</text></g></svg></figure>    <div class="esp-block"><span class="et">Materiali.</span> Carta e colori.</div>
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">
@@ -1129,7 +1194,7 @@
     <div class="esp-pc"><strong>In chiave protezione civile.</strong> Durante un terremoto la regola è «mi getto, mi copro, resto»: sotto un tavolo robusto, lontano da finestre e mobili alti, proteggendo la testa. Le porte e gli architravi NON sono posti sicuri e NON si usano gli ascensori. Sul sito: «Piano familiare».</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -1137,7 +1202,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page">
+  <article class="scheda-page esp-compatta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -1152,7 +1217,7 @@
       <span><strong>Tema:</strong> Segnaletica</span>
     </div>
 
-    <div class="esp-block"><span class="et">Materiali.</span> Cartoncini con i simboli di sicurezza (uscita di emergenza, punto di raccolta, estintore, direzione di evacuazione).</div>
+<figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Cartoncini disposti a griglia con il dorso in alto: due sono girati e mostrano lo stesso simbolo di uscita di emergenza, cio&egrave; una coppia trovata." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><rect x="16" y="26" width="22" height="28" rx="2" fill="#eef2f6" stroke="#003366" stroke-width="2"/><rect x="68" y="26" width="22" height="28" rx="2" fill="#eef2f6" stroke="#003366" stroke-width="2"/><rect x="120" y="26" width="22" height="28" rx="2" fill="#eef2f6" stroke="#003366" stroke-width="2"/><rect x="16" y="60" width="22" height="28" rx="2" fill="#eef2f6" stroke="#003366" stroke-width="2"/><rect x="42" y="60" width="22" height="28" rx="2" fill="#eef2f6" stroke="#003366" stroke-width="2"/><rect x="68" y="60" width="22" height="28" rx="2" fill="#eef2f6" stroke="#003366" stroke-width="2"/><rect x="94" y="60" width="22" height="28" rx="2" fill="#eef2f6" stroke="#003366" stroke-width="2"/><rect x="120" y="60" width="22" height="28" rx="2" fill="#eef2f6" stroke="#003366" stroke-width="2"/><rect x="42" y="26" width="22" height="28" rx="2" fill="#fff" stroke="#003366" stroke-width="2"/><rect x="45" y="31" width="8" height="18" rx="0" fill="#fff" stroke="#2f6b3a" stroke-width="2"/><line x1="54" y1="40" x2="61" y2="40" stroke="#2f6b3a" stroke-width="2"/><path d="M61.0,40.0 L55.6,42.6 L55.6,37.4 Z" fill="#2f6b3a"/><rect x="94" y="26" width="22" height="28" rx="2" fill="#fff" stroke="#003366" stroke-width="2"/><rect x="97" y="31" width="8" height="18" rx="0" fill="#fff" stroke="#2f6b3a" stroke-width="2"/><line x1="106" y1="40" x2="113" y2="40" stroke="#2f6b3a" stroke-width="2"/><path d="M113.0,40.0 L107.6,42.6 L107.6,37.4 Z" fill="#2f6b3a"/><text x="80" y="108" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">due uguali: coppia trovata</text></g></svg></figure>    <div class="esp-block"><span class="et">Materiali.</span> Cartoncini con i simboli di sicurezza (uscita di emergenza, punto di raccolta, estintore, direzione di evacuazione).</div>
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">
@@ -1166,7 +1231,7 @@
     <div class="esp-pc"><strong>In chiave protezione civile.</strong> Sono i segnali internazionali ISO 7010. Trovi i simboli da stampare nel catalogo dei pittogrammi del sito.</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -1174,7 +1239,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page">
+  <article class="scheda-page esp-compatta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -1189,7 +1254,7 @@
       <span><strong>Tema:</strong> Comunicazione</span>
     </div>
 
-    <div class="esp-block"><span class="et">Materiali.</span> Due telefoni giocattolo (o spenti).</div>
+<figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Due persone al telefono: chi chiama il 112 e l'operatore che risponde, con il numero 112 nel fumetto fra i due." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><circle cx="34" cy="62.2" r="4.2" fill="none" stroke="#003366" stroke-width="2"/><line x1="34" y1="66.4" x2="34" y2="76.6" stroke="#003366" stroke-width="2"/><line x1="34" y1="66.4" x2="27.4" y2="72.4" stroke="#003366" stroke-width="2"/><line x1="34" y1="66.4" x2="40.6" y2="72.4" stroke="#003366" stroke-width="2"/><line x1="34" y1="76.6" x2="28.0" y2="88" stroke="#003366" stroke-width="2"/><line x1="34" y1="76.6" x2="40.0" y2="88" stroke="#003366" stroke-width="2"/><circle cx="126" cy="62.2" r="4.2" fill="none" stroke="#003366" stroke-width="2"/><line x1="126" y1="66.4" x2="126" y2="76.6" stroke="#003366" stroke-width="2"/><line x1="126" y1="66.4" x2="119.4" y2="72.4" stroke="#003366" stroke-width="2"/><line x1="126" y1="66.4" x2="132.6" y2="72.4" stroke="#003366" stroke-width="2"/><line x1="126" y1="76.6" x2="120.0" y2="88" stroke="#003366" stroke-width="2"/><line x1="126" y1="76.6" x2="132.0" y2="88" stroke="#003366" stroke-width="2"/><rect x="46" y="56" width="9" height="15" rx="2" fill="#fff" stroke="#003366" stroke-width="2"/><rect x="106" y="56" width="9" height="15" rx="2" fill="#fff" stroke="#003366" stroke-width="2"/><path d="M62,44 q18,-12 36,0 q-18,12 -36,0 Z" fill="#fff" stroke="#003366" stroke-width="2"/><text x="80" y="48" font-size="12" fill="#c2410c" text-anchor="middle" font-weight="700">112</text><path d="M58,60 q-4,6 0,12" fill="none" stroke="#9aa5b1" stroke-width="1.3"/><path d="M53,64 q-4,6 0,12" fill="none" stroke="#9aa5b1" stroke-width="1.3"/><text x="80" y="110" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">dove sei, che cosa &egrave; successo</text></g></svg></figure>    <div class="esp-block"><span class="et">Materiali.</span> Due telefoni giocattolo (o spenti).</div>
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">
@@ -1203,7 +1268,7 @@
     <div class="esp-pc"><strong>In chiave protezione civile.</strong> Il 112 è il Numero Unico di Emergenza, l&#x27;unico da chiamare nel Lazio. Sul sito: gioco «La chiamata al 112» e «Numeri utili».</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -1211,7 +1276,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page esp-estesa">
+  <article class="scheda-page esp-compatta esp-fitta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -1245,7 +1310,7 @@
     <div class="esp-pc"><strong>In chiave protezione civile.</strong> È il motivo per cui nelle comunicazioni radio si ripete e si conferma, e per cui l&#x27;operatore del 112 fa ripetere l&#x27;indirizzo. Si compita anche lettera per lettera quando serve.</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Chi trasmette legge un messaggio scritto e chi riceve lo scrive; una freccia di ritorno mostra che il messaggio viene ripetuto e confermato." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><circle cx="30" cy="57.92" r="3.9200000000000004" fill="none" stroke="#003366" stroke-width="2"/><line x1="30" y1="61.84" x2="30" y2="71.36" stroke="#003366" stroke-width="2"/><line x1="30" y1="61.84" x2="23.84" y2="67.44" stroke="#003366" stroke-width="2"/><line x1="30" y1="61.84" x2="36.16" y2="67.44" stroke="#003366" stroke-width="2"/><line x1="30" y1="71.36" x2="24.4" y2="82" stroke="#003366" stroke-width="2"/><line x1="30" y1="71.36" x2="35.6" y2="82" stroke="#003366" stroke-width="2"/><circle cx="130" cy="57.92" r="3.9200000000000004" fill="none" stroke="#003366" stroke-width="2"/><line x1="130" y1="61.84" x2="130" y2="71.36" stroke="#003366" stroke-width="2"/><line x1="130" y1="61.84" x2="123.84" y2="67.44" stroke="#003366" stroke-width="2"/><line x1="130" y1="61.84" x2="136.16" y2="67.44" stroke="#003366" stroke-width="2"/><line x1="130" y1="71.36" x2="124.4" y2="82" stroke="#003366" stroke-width="2"/><line x1="130" y1="71.36" x2="135.6" y2="82" stroke="#003366" stroke-width="2"/><rect x="42" y="40" width="20" height="16" rx="1" fill="#fff" stroke="#003366" stroke-width="2"/><line x1="45" y1="44" x2="59" y2="44" stroke="#003366" stroke-width="1.2"/><line x1="45" y1="48" x2="59" y2="48" stroke="#003366" stroke-width="1.2"/><line x1="45" y1="52" x2="59" y2="52" stroke="#003366" stroke-width="1.2"/><rect x="98" y="40" width="20" height="16" rx="1" fill="#fff" stroke="#003366" stroke-width="2"/><line x1="101" y1="44" x2="115" y2="44" stroke="#003366" stroke-width="1.2"/><line x1="101" y1="48" x2="115" y2="48" stroke="#003366" stroke-width="1.2"/><line x1="101" y1="52" x2="115" y2="52" stroke="#003366" stroke-width="1.2"/><line x1="66" y1="44" x2="94" y2="44" stroke="#c2410c" stroke-width="2"/><path d="M94.0,44.0 L88.6,46.6 L88.6,41.4 Z" fill="#c2410c"/><line x1="94" y1="56" x2="66" y2="56" stroke="#2f6b3a" stroke-width="2"/><path d="M66.0,56.0 L71.4,53.4 L71.4,58.6 Z" fill="#2f6b3a"/><text x="80" y="104" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">si ripete e si conferma</text></g></svg></figure><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -1253,7 +1318,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page">
+  <article class="scheda-page esp-compatta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -1268,7 +1333,7 @@
       <span><strong>Tema:</strong> Comunicazione</span>
     </div>
 
-    <div class="esp-block"><span class="et">Materiali.</span> Due bicchieri di plastica, uno spago lungo, uno stuzzicadenti.</div>
+<figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Due bicchieri di plastica uniti da uno spago ben teso, con dei piccoli segni di vibrazione lungo il filo." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><path d="M14,44 L26,44 L30,74 L18,74 Z" fill="#fff" stroke="#003366" stroke-width="2"/><path d="M146,44 L134,44 L130,74 L142,74 Z" fill="#fff" stroke="#003366" stroke-width="2"/><line x1="28" y1="58" x2="132" y2="58" stroke="#003366" stroke-width="2"/><path d="M50,54 q6,4 12,0" fill="none" stroke="#c2410c" stroke-width="1.3"/><path d="M72,54 q6,4 12,0" fill="none" stroke="#c2410c" stroke-width="1.3"/><path d="M94,54 q6,4 12,0" fill="none" stroke="#c2410c" stroke-width="1.3"/><text x="80" y="100" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">spago teso: la voce passa</text></g></svg></figure>    <div class="esp-block"><span class="et">Materiali.</span> Due bicchieri di plastica, uno spago lungo, uno stuzzicadenti.</div>
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">
@@ -1282,7 +1347,7 @@
     <div class="esp-pc"><strong>In chiave protezione civile.</strong> In emergenza le reti telefoniche possono cadere: per questo i volontari usano la radio, che non dipende dalla rete dei cellulari. Sul sito: «Telecomunicazioni in emergenza».</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -1290,7 +1355,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page">
+  <article class="scheda-page esp-compatta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -1305,7 +1370,7 @@
       <span><strong>Tema:</strong> Evacuazione</span>
     </div>
 
-    <div class="esp-block"><span class="et">Materiali.</span> Una benda per gli occhi, qualche ostacolo morbido.</div>
+<figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Una persona bendata avanza fra alcuni ostacoli morbidi seguendo la voce di chi la guida da fuori percorso." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><circle cx="46" cy="58.480000000000004" r="4.48" fill="none" stroke="#003366" stroke-width="2"/><line x1="46" y1="62.96" x2="46" y2="73.84" stroke="#003366" stroke-width="2"/><line x1="46" y1="62.96" x2="38.96" y2="69.36" stroke="#003366" stroke-width="2"/><line x1="46" y1="62.96" x2="53.04" y2="69.36" stroke="#003366" stroke-width="2"/><line x1="46" y1="73.84" x2="39.6" y2="86" stroke="#003366" stroke-width="2"/><line x1="46" y1="73.84" x2="52.4" y2="86" stroke="#003366" stroke-width="2"/><rect x="38" y="62" width="16" height="5" rx="2" fill="#333" stroke="#333" stroke-width="2"/><circle cx="132" cy="61.92" r="3.9200000000000004" fill="none" stroke="#003366" stroke-width="2"/><line x1="132" y1="65.84" x2="132" y2="75.36" stroke="#003366" stroke-width="2"/><line x1="132" y1="65.84" x2="125.84" y2="71.44" stroke="#003366" stroke-width="2"/><line x1="132" y1="65.84" x2="138.16" y2="71.44" stroke="#003366" stroke-width="2"/><line x1="132" y1="75.36" x2="126.4" y2="86" stroke="#003366" stroke-width="2"/><line x1="132" y1="75.36" x2="137.6" y2="86" stroke="#003366" stroke-width="2"/><path d="M118,58 q-6,8 0,14" fill="none" stroke="#c2410c" stroke-width="1.4"/><path d="M110,61 q-6,8 0,14" fill="none" stroke="#c2410c" stroke-width="1.4"/><path d="M102,64 q-6,8 0,14" fill="none" stroke="#c2410c" stroke-width="1.4"/><rect x="72" y="78" width="14" height="10" rx="2" fill="#eef2f6" stroke="#003366" stroke-width="2"/><rect x="96" y="74" width="14" height="14" rx="2" fill="#eef2f6" stroke="#003366" stroke-width="2"/><path d="M46,90 q14,8 26,2" fill="none" stroke="#2f6b3a" stroke-width="1.6" stroke-dasharray="4 3"/><text x="80" y="110" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">istruzioni brevi e precise</text></g></svg></figure>    <div class="esp-block"><span class="et">Materiali.</span> Una benda per gli occhi, qualche ostacolo morbido.</div>
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">
@@ -1320,7 +1385,7 @@
     <div class="esp-sicurezza"><strong>&#9888;&#65039; Sicurezza.</strong> Usa ostacoli morbidi e libera il pavimento; un adulto sorveglia sempre il percorso.</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
@@ -1328,7 +1393,7 @@
     </footer>
   </article>
 
-  <article class="scheda-page esp-estesa">
+  <article class="scheda-page esp-compatta esp-fitta">
     <header class="scheda-header">
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
@@ -1363,7 +1428,7 @@
     <div class="esp-sicurezza"><strong>&#9888;&#65039; Sicurezza.</strong> Solo pila da 4,5 volt e LED: mai la corrente di casa vicino all&#x27;acqua. Il circuito lo controlla un adulto prima di versare l&#x27;acqua.</div>
 
     <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
-    <div class="scheda-box-disegno" style="min-height: 4.5rem;"></div>
+    <div class="esp-osserva"><figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Una bacinella in cui l'acqua sale e solleva un tappo di sughero: il galleggiante chiude il circuito e il LED collegato alla pila si accende." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><rect x="18" y="68" width="72" height="26" rx="0" fill="#cfe3f5" stroke="none" stroke-width="0"/><path d="M16,44 L16,94 L92,94 L92,44" fill="none" stroke="#003366" stroke-width="2"/><rect x="48" y="44" width="5" height="26" rx="0" fill="#fff" stroke="#003366" stroke-width="2"/><path d="M42,66 q8,-8 16,0 q-8,8 -16,0 Z" fill="#e6dcc6" stroke="#003366" stroke-width="2"/><line x1="50" y1="46" x2="50" y2="30" stroke="#003366" stroke-width="2"/><line x1="50" y1="30" x2="112" y2="30" stroke="#003366" stroke-width="2"/><line x1="112" y1="30" x2="112" y2="44" stroke="#003366" stroke-width="2"/><circle cx="112" cy="50" r="6" fill="#fff7d6" stroke="#c2410c" stroke-width="2"/><line x1="119.02066049512298" y1="53.835404308833624" x2="122.53099074268448" y2="55.75310646325043" stroke="#c2410c" stroke-width="1.4"/><line x1="111.76640382158969" y1="57.99658882433204" x2="111.64960573238453" y2="61.99488323649806" stroke="#c2410c" stroke-width="1.4"/><line x1="104.76742286386352" y1="53.41903904187064" x2="101.15113429579526" y2="55.12855856280596" stroke="#c2410c" stroke-width="1.4"/><line x1="105.67225830468466" y1="45.105136872458246" x2="102.508387457027" y2="42.65770530868737" stroke="#c2410c" stroke-width="1.4"/><line x1="113.49209895538061" y1="42.140379099005344" x2="114.2381484330709" y2="38.21056864850801" stroke="#c2410c" stroke-width="1.4"/><line x1="119.68136229320292" y1="47.76467601440859" x2="123.52204343980439" y2="46.64701402161289" stroke="#c2410c" stroke-width="1.4"/><line x1="112" y1="56" x2="112" y2="72" stroke="#003366" stroke-width="2"/><rect x="102" y="72" width="20" height="14" rx="2" fill="#fff" stroke="#003366" stroke-width="2"/><text x="112" y="96" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">pila</text><line x1="30" y1="76" x2="30" y2="62" stroke="#c2410c" stroke-width="2"/><path d="M30.0,62.0 L32.6,67.4 L27.4,67.4 Z" fill="#c2410c"/><text x="80" y="112" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">l'acqua sale: il circuito si chiude</text></g></svg></figure><div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
       <span class="scheda-site">protezionecivilegenzano.it</span>
