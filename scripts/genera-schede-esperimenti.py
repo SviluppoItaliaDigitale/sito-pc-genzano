@@ -596,7 +596,6 @@ HEAD = """<!DOCTYPE html>
          legge più che cosa mostra. Il livello lo decide la lunghezza del testo,
          non una lista di titoli scritta a mano: un esperimento nuovo e lungo lo
          riceve da solo. */
-      .esp-figura {{ min-height: 52px; }}
       .scheda-page.esp-fitta {{ font-size: 0.84rem; }}
       .esp-fitta .esp-passi li {{ margin-bottom: 0.1rem; line-height: 1.25; }}
       .esp-fitta .esp-block, .esp-fitta .esp-pc, .esp-fitta .esp-sicurezza {{
@@ -620,9 +619,7 @@ HEAD = """<!DOCTYPE html>
        dodici schede su 33 finivano su due pagine. */
     .esp-figura {{
       flex: 1 1 0;
-      /* A schermo lo spazio non è contingentato come sul foglio: il minimo può
-         essere generoso. In stampa scende a 52px, dove ogni millimetro conta. */
-      min-height: 140px;
+      min-height: 52px;
       max-height: 250px;
       align-self: center;
       display: flex;
@@ -639,6 +636,15 @@ HEAD = """<!DOCTYPE html>
     /* height:100% + width:auto = il disegno mantiene le proporzioni e riempie
        in altezza; `preserveAspectRatio` di default lo centra senza deformarlo. */
     .esp-figura svg {{ height: 100%; width: auto; max-width: 100%; display: block; }}
+    /* A schermo lo spazio non è contingentato come sul foglio, quindi il minimo
+       può essere generoso. Deve stare in un blocco `screen` esplicito: messo nel
+       blocco generale si applicherebbe anche in stampa e, avendo la stessa
+       specificità della regola dentro `@media print` ma venendo dopo, vincerebbe
+       lei — il minimo di stampa resterebbe 140px e la figura non potrebbe più
+       stringersi per stare nel foglio. */
+    @media screen {{
+      .esp-figura {{ min-height: 140px; }}
+    }}
     .esp-osserva {{ display: flex; gap: 0.6rem; align-items: stretch; }}
     .esp-osserva .scheda-box-disegno {{ flex: 1 1 auto; }}
     @media screen and (max-width: 620px) {{ .esp-osserva {{ display: block; }} }}

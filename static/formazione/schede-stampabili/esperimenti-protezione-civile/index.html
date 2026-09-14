@@ -78,7 +78,6 @@
          legge più che cosa mostra. Il livello lo decide la lunghezza del testo,
          non una lista di titoli scritta a mano: un esperimento nuovo e lungo lo
          riceve da solo. */
-      .esp-figura { min-height: 52px; }
       .scheda-page.esp-fitta { font-size: 0.84rem; }
       .esp-fitta .esp-passi li { margin-bottom: 0.1rem; line-height: 1.25; }
       .esp-fitta .esp-block, .esp-fitta .esp-pc, .esp-fitta .esp-sicurezza {
@@ -102,9 +101,7 @@
        dodici schede su 33 finivano su due pagine. */
     .esp-figura {
       flex: 1 1 0;
-      /* A schermo lo spazio non è contingentato come sul foglio: il minimo può
-         essere generoso. In stampa scende a 52px, dove ogni millimetro conta. */
-      min-height: 140px;
+      min-height: 52px;
       max-height: 250px;
       align-self: center;
       display: flex;
@@ -121,6 +118,15 @@
     /* height:100% + width:auto = il disegno mantiene le proporzioni e riempie
        in altezza; `preserveAspectRatio` di default lo centra senza deformarlo. */
     .esp-figura svg { height: 100%; width: auto; max-width: 100%; display: block; }
+    /* A schermo lo spazio non è contingentato come sul foglio, quindi il minimo
+       può essere generoso. Deve stare in un blocco `screen` esplicito: messo nel
+       blocco generale si applicherebbe anche in stampa e, avendo la stessa
+       specificità della regola dentro `@media print` ma venendo dopo, vincerebbe
+       lei — il minimo di stampa resterebbe 140px e la figura non potrebbe più
+       stringersi per stare nel foglio. */
+    @media screen {
+      .esp-figura { min-height: 140px; }
+    }
     .esp-osserva { display: flex; gap: 0.6rem; align-items: stretch; }
     .esp-osserva .scheda-box-disegno { flex: 1 1 auto; }
     @media screen and (max-width: 620px) { .esp-osserva { display: block; } }
@@ -1217,7 +1223,7 @@
       <span><strong>Tema:</strong> Segnaletica</span>
     </div>
 
-<figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Cartoncini disposti a griglia con il dorso in alto: due sono girati e mostrano lo stesso simbolo di uscita di emergenza, cio&egrave; una coppia trovata." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><rect x="16" y="26" width="22" height="28" rx="2" fill="#eef2f6" stroke="#003366" stroke-width="2"/><rect x="68" y="26" width="22" height="28" rx="2" fill="#eef2f6" stroke="#003366" stroke-width="2"/><rect x="120" y="26" width="22" height="28" rx="2" fill="#eef2f6" stroke="#003366" stroke-width="2"/><rect x="16" y="60" width="22" height="28" rx="2" fill="#eef2f6" stroke="#003366" stroke-width="2"/><rect x="42" y="60" width="22" height="28" rx="2" fill="#eef2f6" stroke="#003366" stroke-width="2"/><rect x="68" y="60" width="22" height="28" rx="2" fill="#eef2f6" stroke="#003366" stroke-width="2"/><rect x="94" y="60" width="22" height="28" rx="2" fill="#eef2f6" stroke="#003366" stroke-width="2"/><rect x="120" y="60" width="22" height="28" rx="2" fill="#eef2f6" stroke="#003366" stroke-width="2"/><rect x="42" y="26" width="22" height="28" rx="2" fill="#fff" stroke="#003366" stroke-width="2"/><rect x="45" y="31" width="8" height="18" rx="0" fill="#fff" stroke="#2f6b3a" stroke-width="2"/><line x1="54" y1="40" x2="61" y2="40" stroke="#2f6b3a" stroke-width="2"/><path d="M61.0,40.0 L55.6,42.6 L55.6,37.4 Z" fill="#2f6b3a"/><rect x="94" y="26" width="22" height="28" rx="2" fill="#fff" stroke="#003366" stroke-width="2"/><rect x="97" y="31" width="8" height="18" rx="0" fill="#fff" stroke="#2f6b3a" stroke-width="2"/><line x1="106" y1="40" x2="113" y2="40" stroke="#2f6b3a" stroke-width="2"/><path d="M113.0,40.0 L107.6,42.6 L107.6,37.4 Z" fill="#2f6b3a"/><text x="80" y="108" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">due uguali: coppia trovata</text></g></svg></figure>    <div class="esp-block"><span class="et">Materiali.</span> Cartoncini con i simboli di sicurezza (uscita di emergenza, punto di raccolta, estintore, direzione di evacuazione).</div>
+<figure class="esp-figura"><svg viewBox="0 0 160 120" role="img" aria-label="Cartoncini disposti a griglia con il dorso in alto: due sono girati e mostrano lo stesso simbolo di uscita di emergenza, cio&egrave; una coppia trovata." xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round"><g aria-hidden="true"><rect x="16" y="26" width="22" height="28" rx="2" fill="#eef2f6" stroke="#003366" stroke-width="2"/><rect x="68" y="26" width="22" height="28" rx="2" fill="#eef2f6" stroke="#003366" stroke-width="2"/><rect x="120" y="26" width="22" height="28" rx="2" fill="#eef2f6" stroke="#003366" stroke-width="2"/><rect x="16" y="60" width="22" height="28" rx="2" fill="#eef2f6" stroke="#003366" stroke-width="2"/><rect x="42" y="60" width="22" height="28" rx="2" fill="#eef2f6" stroke="#003366" stroke-width="2"/><rect x="68" y="60" width="22" height="28" rx="2" fill="#eef2f6" stroke="#003366" stroke-width="2"/><rect x="94" y="60" width="22" height="28" rx="2" fill="#eef2f6" stroke="#003366" stroke-width="2"/><rect x="120" y="60" width="22" height="28" rx="2" fill="#eef2f6" stroke="#003366" stroke-width="2"/><rect x="42" y="26" width="22" height="28" rx="2" fill="#fff" stroke="#003366" stroke-width="2"/><image href="/pittogrammi/iso7010/uscita-emergenza-destra.svg" x="43.5" y="28" width="19" height="24" preserveAspectRatio="xMidYMid meet"/><rect x="94" y="26" width="22" height="28" rx="2" fill="#fff" stroke="#003366" stroke-width="2"/><image href="/pittogrammi/iso7010/uscita-emergenza-destra.svg" x="95.5" y="28" width="19" height="24" preserveAspectRatio="xMidYMid meet"/><text x="80" y="108" font-size="9" fill="#003366" text-anchor="middle" font-weight="700">due uguali: coppia trovata</text></g></svg></figure>    <div class="esp-block"><span class="et">Materiali.</span> Cartoncini con i simboli di sicurezza (uscita di emergenza, punto di raccolta, estintore, direzione di evacuazione).</div>
 
     <h2 class="scheda-h2">Come si fa</h2>
     <ol class="esp-passi">

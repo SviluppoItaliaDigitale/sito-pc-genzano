@@ -115,6 +115,18 @@ def omino(x, y, h=26, colore=BLU):
             linea(x, y - h * 0.38, x + h * 0.2, y, 2, colore))
 
 
+def immagine(href, x, y, w, h):
+    """Immagine esterna dentro il disegno, per i segnali ufficiali.
+
+    Serve per i pittogrammi ISO 7010: sui segnali di sicurezza la regola del
+    sito (03-accessibility § «cascata di icone vettoriali») chiede il segnale
+    REALE, quello che il bambino trover&agrave; a scuola, non una nostra
+    approssimazione. Stesso percorso assoluto usato dalle altre schede.
+    """
+    return (f'<image {_a(href=href, x=x, y=y, width=w, height=h)} '
+            f'preserveAspectRatio="xMidYMid meet"/>')
+
+
 def piano(x1, x2, y, colore=BLU):
     return linea(x1, y, x2, y, 2, colore)
 
@@ -545,12 +557,14 @@ def _memory():
     d = [
         *[rett(16 + c * 26, 26 + r * 34, 22, 28, r=2, riemp="#eef2f6")
           for r in range(2) for c in range(5) if not (r == 0 and c in (1, 3))],
-        # Sulle due carte girate un simbolo leggibile: porta + freccia che esce.
-        # La sagoma dell'omino in corsa, a questa dimensione, era uno scarabocchio.
+        # Sulle due carte girate il segnale ISO 7010 vero di uscita di emergenza.
+        # Prima c'era un glifo porta+freccia disegnato da noi: su un materiale
+        # che insegna proprio i segnali di sicurezza, mostrarne uno inventato
+        # vanifica l'esercizio — il bambino deve riconoscere quello che trova
+        # davvero a scuola (regola 03 § «cascata di icone vettoriali»).
         *[x for c in (42, 94) for x in (
             rett(c, 26, 22, 28, r=2, riemp="#fff"),
-            rett(c + 3, 31, 8, 18, riemp="#fff", colore="#2f6b3a"),
-            freccia(c + 12, 40, c + 19, 40, "#2f6b3a", 2),
+            immagine("/pittogrammi/iso7010/uscita-emergenza-destra.svg", c + 1.5, 28, 19, 24),
         )],
         testo(80, 108, "due uguali: coppia trovata"),
     ]
