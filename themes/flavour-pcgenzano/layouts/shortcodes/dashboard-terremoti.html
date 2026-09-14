@@ -7,7 +7,12 @@
 {{ $leafletCSS := "vendor/leaflet/leaflet.css" | relURL }}
 {{ $leafletJS  := "vendor/leaflet/leaflet.js"  | relURL }}
 
-<link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">
+{{/* Leaflet una sola volta per pagina: il cruscotto monta nove schede con la mappa e
+     fino al 14/09/2026 ognuna ripeteva link e script, dieci copie in una pagina sola.
+     Con la cache disattivata (rule 05) erano dieci scaricamenti veri a ogni visita.
+     La guardia è la stessa di pc-fetch-cache.js; l'init inline di ciascuna scheda resta
+     al suo posto e trova `L` già definito, perché gli script classici eseguono in ordine. */}}
+{{ if not (.Page.Store.Get "leafletCss") }}{{ .Page.Store.Set "leafletCss" true }}<link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">{{ end }}
 <div class="dash-sisma" role="group" aria-labelledby="dash-sisma-tit">
   <h2 id="dash-sisma-tit" class="visually-hidden">Cruscotto terremoti in Italia</h2>
 
@@ -71,7 +76,7 @@
   <noscript><div class="alert alert-warning mt-2" role="note">Per il cruscotto serve JavaScript. Dati ufficiali su <a href="https://terremoti.ingv.it/" target="_blank" rel="noopener noreferrer">terremoti.ingv.it</a>.</div></noscript>
   <p class="small text-muted mt-2 mb-0">{{ partial "fonte-badge.html" "ufficiale" }}Dati: <a href="https://terremoti.ingv.it/" target="_blank" rel="noopener noreferrer">INGV — Istituto Nazionale di Geofisica e Vulcanologia</a> (FDSN, open data). Aggiornamento automatico. In emergenza chiama il <a href="tel:112">112</a>.</p>
 
-  <script src="{{ $leafletJS }}" crossorigin=""></script>
+  {{ if not (.Page.Store.Get "leafletJs") }}{{ .Page.Store.Set "leafletJs" true }}<script src="{{ $leafletJS }}" crossorigin=""></script>{{ end }}
   <script>
   (function(){
     if (typeof L === 'undefined') return;

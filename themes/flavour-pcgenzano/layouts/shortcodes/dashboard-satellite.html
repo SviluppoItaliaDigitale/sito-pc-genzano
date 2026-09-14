@@ -12,7 +12,12 @@
 {{ $leafletCSS := "vendor/leaflet/leaflet.css" | relURL }}
 {{ $leafletJS  := "vendor/leaflet/leaflet.js"  | relURL }}
 
-<link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">
+{{/* Leaflet una sola volta per pagina: il cruscotto monta nove schede con la mappa e
+     fino al 14/09/2026 ognuna ripeteva link e script, dieci copie in una pagina sola.
+     Con la cache disattivata (rule 05) erano dieci scaricamenti veri a ogni visita.
+     La guardia è la stessa di pc-fetch-cache.js; l'init inline di ciascuna scheda resta
+     al suo posto e trova `L` già definito, perché gli script classici eseguono in ordine. */}}
+{{ if not (.Page.Store.Get "leafletCss") }}{{ .Page.Store.Set "leafletCss" true }}<link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">{{ end }}
 <div class="dash-sat" aria-labelledby="dash-sat-tit">
   <h2 id="dash-sat-tit" class="visually-hidden">Vista satellitare dell'Italia in tempo reale</h2>
   <div class="dash-sisma-toolbar" role="group" aria-label="Tipo e risoluzione dell'immagine satellitare">
@@ -31,7 +36,7 @@
     Dato indicativo: per le previsioni vedi la scheda <strong>Meteo</strong>, in emergenza chiama il <a href="tel:112">112</a>.
   </p>
 
-  <script src="{{ $leafletJS }}" crossorigin=""></script>
+  {{ if not (.Page.Store.Get "leafletJs") }}{{ .Page.Store.Set "leafletJs" true }}<script src="{{ $leafletJS }}" crossorigin=""></script>{{ end }}
   <script>
   (function(){
     if (typeof L === 'undefined') return;

@@ -12,7 +12,12 @@
   </h2>
   <p class="mb-2">Altezza e periodo delle onde previsti dal modello <strong>WW3 MEDITA</strong> dell'<strong>Agenzia ItaliaMeteo</strong> per i mari italiani. Utile per la costa laziale. Sono dati <strong>indicativi</strong>: per la sicurezza in mare valgono gli avvisi della <a href="https://www.guardiacostiera.gov.it/" target="_blank" rel="noopener noreferrer">Guardia Costiera</a> (emergenze in mare: <strong>1530</strong>).</p>
 
-  <link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">
+  {{/* Leaflet una sola volta per pagina: il cruscotto monta nove schede con la mappa e
+     fino al 14/09/2026 ognuna ripeteva link e script, dieci copie in una pagina sola.
+     Con la cache disattivata (rule 05) erano dieci scaricamenti veri a ogni visita.
+     La guardia è la stessa di pc-fetch-cache.js; l'init inline di ciascuna scheda resta
+     al suo posto e trova `L` già definito, perché gli script classici eseguono in ordine. */}}
+{{ if not (.Page.Store.Get "leafletCss") }}{{ .Page.Store.Set "leafletCss" true }}<link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">{{ end }}
   <style>
   .dimm-toolbar{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-bottom:.6rem}
   .dimm-filter{display:inline-flex;align-items:center;gap:.4rem;border:2px solid #003366;background:#fff;color:#003366;padding:.4rem .85rem;border-radius:999px;font-size:.92rem;cursor:pointer;transition:all .15s}
@@ -57,7 +62,7 @@
 
   <p class="small text-muted mt-2 mb-0">{{ partial "fonte-badge.html" "ufficiale" }}<i class="bi bi-info-circle" aria-hidden="true"></i> Modello d'onda <strong>WW3 MEDITA</strong>, aggiornato dall'Agenzia ItaliaMeteo. Mappa completa su <a href="https://meteohub.agenziaitaliameteo.it/app/maps/marine" target="_blank" rel="noopener noreferrer">MeteoHub</a>. Fonte: <strong>Agenzia nazionale per la meteorologia e climatologia «ItaliaMeteo»</strong>, licenza <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> — base <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap</a>. Emergenze in mare: <a href="tel:1530">1530</a>.</p>
 
-  <script src="{{ $leafletJS }}" crossorigin=""></script>
+  {{ if not (.Page.Store.Get "leafletJs") }}{{ .Page.Store.Set "leafletJs" true }}<script src="{{ $leafletJS }}" crossorigin=""></script>{{ end }}
   <script>
   (function(){
     if (typeof L === 'undefined') return;

@@ -13,7 +13,12 @@
   </h2>
   <p class="mb-2">Intensità della pioggia al suolo (prodotto <strong>SRI</strong>) elaborata dall'<strong>Agenzia ItaliaMeteo</strong> dalla rete radar nazionale. È un dato <strong>indicativo</strong>: per le allerte valgono i bollettini del <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Regionale del Lazio</a>. È complementare al <strong>radar DPC</strong> presente nell'altra scheda.</p>
 
-  <link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">
+  {{/* Leaflet una sola volta per pagina: il cruscotto monta nove schede con la mappa e
+     fino al 14/09/2026 ognuna ripeteva link e script, dieci copie in una pagina sola.
+     Con la cache disattivata (rule 05) erano dieci scaricamenti veri a ogni visita.
+     La guardia è la stessa di pc-fetch-cache.js; l'init inline di ciascuna scheda resta
+     al suo posto e trova `L` già definito, perché gli script classici eseguono in ordine. */}}
+{{ if not (.Page.Store.Get "leafletCss") }}{{ .Page.Store.Set "leafletCss" true }}<link rel="stylesheet" href="{{ $leafletCSS }}" crossorigin="">{{ end }}
   <style>
   .dimr-toolbar{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;margin-bottom:.6rem}
   .dimr-filter{display:inline-flex;align-items:center;gap:.4rem;border:2px solid #003366;background:#fff;color:#003366;padding:.4rem .85rem;border-radius:999px;font-size:.92rem;cursor:pointer;transition:all .15s}
@@ -49,7 +54,7 @@
 
   <p class="small text-muted mt-2 mb-0">{{ partial "fonte-badge.html" "ufficiale" }}<i class="bi bi-info-circle" aria-hidden="true"></i> Prodotto radar <strong>SRI</strong> (intensità di pioggia al suolo). Mappa completa su <a href="https://meteohub.agenziaitaliameteo.it/app/maps/radar" target="_blank" rel="noopener noreferrer">MeteoHub</a>. Fonte: <strong>Agenzia nazionale per la meteorologia e climatologia «ItaliaMeteo»</strong>, licenza <a href="https://creativecommons.org/licenses/by/4.0/deed.it" target="_blank" rel="noopener noreferrer">CC BY 4.0</a> — base <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap</a>. In emergenza chiama il <a href="tel:112">112</a>.</p>
 
-  <script src="{{ $leafletJS }}" crossorigin=""></script>
+  {{ if not (.Page.Store.Get "leafletJs") }}{{ .Page.Store.Set "leafletJs" true }}<script src="{{ $leafletJS }}" crossorigin=""></script>{{ end }}
   <script>
   (function(){
     if (typeof L === 'undefined') return;
