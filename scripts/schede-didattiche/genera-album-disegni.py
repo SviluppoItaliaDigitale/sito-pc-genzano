@@ -88,6 +88,8 @@ for alb in ALBUM:
   <title>Scheda stampabile: {alb['titolo']} — album da colorare</title>
   <meta name="description" content="Album di {tot} fogli A4 da colorare: {alb['intro']}">
   <meta name="robots" content="index, follow">
+  <!-- URL preferito: la copia su GitHub Pages rimanda alla produzione. -->
+  <link rel="canonical" href="https://www.protezionecivilegenzano.it/formazione/schede-stampabili/{alb['slug']}/">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
   <style>
