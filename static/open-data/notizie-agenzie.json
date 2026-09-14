@@ -5,16 +5,40 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-13T22:12:10+00:00",
+  "generato": "2026-09-14T00:13:01+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-13T22:00:18+00:00",
+   "data": "2026-09-13T22:41:58+00:00",
    "fonte": "ANSA",
-   "titolo": "Tennis, Zverev batte Shelton e vince lo US Open",
+   "titolo": "Tennis, Zverev batte Shelton e vince gli US Open",
    "url": "https://www.ansa.it/sito/notizie/sport/tennis/2026/09/14/tennis-zverev-batte-shelton-e-vince-lo-us-open_9a895769-5146-4e42-84cf-b6e252fab16a.html"
+  },
+  {
+   "data": "2026-09-13T22:23:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Zverev come Donnarumma: vince gli Us Open ma... non se ne accorge e non esulta",
+   "url": "https://www.adnkronos.com/sport/zverev-donnarumma-vince-us-open-non-esulta_JYsxP0IIYMpOmiofOrEag"
+  },
+  {
+   "data": "2026-09-13T22:10:26+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Iran, il Nyt: \"Così gli ultraconservatori hanno fatto saltare l'accordo di pace con gli Usa\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/iran-usa-accordo-pace-sabotaggio_5YwjY9K4STc1pyamCr06Uc"
+  },
+  {
+   "data": "2026-09-13T22:09:58+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina, raid Russia al confine con Polonia. Kiev e Varsavia: \"Escalation\". Trump frena Zelensky: \"Non attaccare le raffinerie\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-attacco-confine-polonia_4yE2604UnGzAMQVS2QigLi"
+  },
+  {
+   "data": "2026-09-13T22:09:21+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "\"Il Var ha sbagliato\", Manchester City vince il derby con gol irregolare",
+   "url": "https://www.adnkronos.com/sport/haaland-gol-fuorigioco-manchester-city_6HYWOOKiGxaUVqYBgFp6Be"
   },
   {
    "data": "2026-09-13T21:51:27+00:00",
@@ -165,30 +189,6 @@
    "fonte": "ANSA",
    "titolo": "F1: Antonelli vola anche a Madrid e allunga per il Mondiale",
    "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/09/13/f1-antonelli-vola-anche-a-madrid-e-allunga-per-il-mondiale_41f6549b-d709-404c-8233-846ee8a569b3.html"
-  },
-  {
-   "data": "2026-09-13T18:10:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ragazza investita da un treno dell'Alta Velocità a Milano Lambrate: ritardi fino a 90 minuti",
-   "url": "https://www.adnkronos.com/cronaca/ragazza-investita-treno-milano-lambrate-ritardi_6tpiPJp89CDqqMfY3MELY0"
-  },
-  {
-   "data": "2026-09-13T18:10:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Europei pallavolo, Italia-Slovacchia 3-1: azzurri agli ottavi",
-   "url": "https://www.adnkronos.com/sport/diretta-italia-slovacchia-oggi-europei-pallavolo-live-match-risultato-classifica_4BjLueq6F1n07cArLUUBlW"
-  },
-  {
-   "data": "2026-09-13T18:04:14+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Soffoca l'anziana suocera con una busta, arrestato settantenne",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/omicidio-nel-padovano-un-uomo-soffoca-la-suocera_3e7271ff-1d59-4f33-be2d-eb631d558d83.html"
-  },
-  {
-   "data": "2026-09-13T17:51:48+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Attivisti di Avs picchiati a Venezia, verso il Daspo per gli influencer",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/13/attivisti-di-avs-picchiati-a-venezia-verso-il-daspo-per-gli-influencer_811eaae8-9573-429c-a4be-fdd01d29d769.html"
   }
  ]
 }
