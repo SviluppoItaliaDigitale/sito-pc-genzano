@@ -500,7 +500,7 @@ def _distanza_riparo():
         testo(80, 108, "pi&ugrave; lontano e schermato: arriva meno"),
     ]
     return "".join(d), ("Una torcia che illumina una mano vicina in pieno fascio; pi&ugrave; lontano "
-                        "un libro spesso fa da schermo e la seconda mana resta in ombra.")
+                        "un libro spesso fa da schermo e la seconda mano resta in ombra.")
 
 
 def _zaino():
