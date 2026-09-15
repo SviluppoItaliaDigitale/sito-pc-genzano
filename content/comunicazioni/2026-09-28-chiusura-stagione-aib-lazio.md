@@ -69,6 +69,6 @@ Anche fuori dal periodo di grave pericolosità:
 
 - [Bilancio campagna AIB 2026](/comunicazioni/2026-08-30-bilancio-campagna-aib-2026/)
 - [Rischio interfaccia urbano-rurale](/comunicazioni/2026-08-19-interfaccia-urbano-rurale-rischio-incendi/)
-- [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it/)
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/protezione-civile)
 
 In emergenza: **112**.
