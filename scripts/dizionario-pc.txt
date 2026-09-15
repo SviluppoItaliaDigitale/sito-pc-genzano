@@ -2043,3 +2043,4 @@ pseudocodice
 portapile
 potabilizzatore
 rasterizzano
+politerapia
