@@ -79,6 +79,20 @@ def lista_schede_kit(md_path: Path) -> list[str]:
     return seen
 
 
+def _testo_da_html(frammento):
+    """Testo pulito da un frammento HTML, senza incollare le parole.
+
+    Un `<br>` separa due parole tanto quanto uno spazio: toglierlo e basta
+    produceva titoli come «Il libro pop-updella protezione civile», arrivati
+    fino al pacchetto pubblicato e letti così anche dagli screen reader.
+    Stessa cura per i tag di blocco, che a video vanno a capo.
+    """
+    testo = re.sub(r"<br\s*/?>", " ", frammento, flags=re.IGNORECASE)
+    testo = re.sub(r"</(p|div|li|h[1-6]|tr|td|th)>", " ", testo, flags=re.IGNORECASE)
+    testo = re.sub(r"<[^>]+>", "", testo)
+    return re.sub(r"\s+", " ", testo).strip()
+
+
 def estrai_styles_articoli_titolo(
     html: str, slug: str
 ) -> tuple[list[str], list[tuple[str, str]], str]:
@@ -98,11 +112,11 @@ def estrai_styles_articoli_titolo(
         html, re.IGNORECASE | re.DOTALL
     )
     if m_title:
-        titolo = re.sub(r"<[^>]+>", "", m_title.group(1)).strip()
+        titolo = _testo_da_html(m_title.group(1))
     else:
         m_h1 = re.search(r"<h1[^>]*>(.+?)</h1>", html, re.IGNORECASE | re.DOTALL)
         if m_h1:
-            titolo = re.sub(r"<[^>]+>", "", m_h1.group(1)).strip()
+            titolo = _testo_da_html(m_h1.group(1))
         else:
             m_t = re.search(r"<title>([^<]+)</title>", html, re.IGNORECASE)
             titolo = (m_t.group(1) if m_t else "Scheda").strip()

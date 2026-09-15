@@ -4,7 +4,7 @@ description: "Informativa sul trattamento dei dati personali e sull'uso dei cook
 layout: "single"
 toc: true
 tts: true
-dataUltimaRevisione: "2026-09-06"
+dataUltimaRevisione: "2026-09-15"
 ---
 
 Questa pagina spiega quali dati possono essere trattati durante la navigazione del sito e come sono gestiti cookie, widget esterni e strumenti interattivi.
@@ -92,29 +92,52 @@ Per capire quali contenuti sono più utili ai cittadini, il sito misura le visit
 
 Puoi consultare il sito senza essere identificato. I dati statistici sono ospitati dal servizio GoatCounter.
 
-## Widget di terze parti
+## Widget di terze parti (si caricano solo se li apri tu)
 
-Il sito incorpora alcuni widget di consultazione forniti da servizi esterni. Nessun widget viene caricato automaticamente: prima compare un riquadro informativo e l'utente deve scegliere di caricarlo.
+Alcune mappe e previsioni sono fornite da servizi esterni e restano **spente finché non le attivi**: al loro posto trovi un riquadro con una descrizione e un pulsante. Prima del clic il tuo browser non contatta il fornitore.
 
-Solo dopo il clic, il browser può ricevere risorse dal fornitore esterno e possono applicarsi anche le policy di quel servizio.
+Dopo il clic il browser riceve contenuti da quel servizio, che vede il tuo indirizzo IP e applica la propria informativa.
 
 <div class="table-responsive">
 <table>
-<caption>Widget esterni caricati solo su richiesta dell'utente</caption>
+<caption>Widget esterni che si caricano solo dopo un clic dell'utente</caption>
 <thead>
 <tr><th scope="col">Servizio</th><th scope="col">Fornitore</th><th scope="col">Finalità</th><th scope="col">Pagine</th><th scope="col">Informativa</th></tr>
 </thead>
 <tbody>
-<tr><td>Windy.com</td><td>Windyty, SE</td><td>Mappa meteo interattiva.</td><td>Home, Allerte meteo, Strumenti.</td><td><a href="https://account.windy.com/agreements/windy-privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Windy</a></td></tr>
-<tr><td>INGV — Terremoti</td><td>Istituto Nazionale di Geofisica e Vulcanologia</td><td>Mappa e lista dei terremoti recenti.</td><td>Home, Rischio sismico, Strumenti.</td><td><a href="https://www.ingv.it/privacy" target="_blank" rel="noopener noreferrer">Privacy INGV</a></td></tr>
-<tr><td>Radar DPC</td><td>Dipartimento della Protezione Civile</td><td>Mosaico radar nazionale delle precipitazioni.</td><td>Allerte meteo, Strumenti.</td><td><a href="https://www.protezionecivile.gov.it/it/approfondimento/privacy/" target="_blank" rel="noopener noreferrer">Privacy DPC</a></td></tr>
-<tr><td>Blitzortung / Lightning Maps</td><td>Rete volontaria internazionale</td><td>Mappa dei fulmini in tempo reale.</td><td>Temporali intensi, Strumenti.</td><td><a href="https://www.blitzortung.org/en/cover_your_area.php" target="_blank" rel="noopener noreferrer">Informazioni Blitzortung</a></td></tr>
-<tr><td>MeteoAM</td><td>Aeronautica Militare</td><td>Previsione meteo ufficiale per Genzano di Roma.</td><td>Allerte meteo, Strumenti.</td><td><a href="https://www.meteoam.it/it/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy MeteoAM</a></td></tr>
+<tr><td>Windy.com</td><td>Windyty, SE</td><td>Mappa meteo interattiva.</td><td>Allerte meteo.</td><td><a href="https://account.windy.com/agreements/windy-privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Windy</a></td></tr>
+<tr><td>MeteoAM</td><td>Aeronautica Militare</td><td>Previsione meteo ufficiale per Genzano di Roma.</td><td>Allerte meteo.</td><td><a href="https://www.meteoam.it/it/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy MeteoAM</a></td></tr>
+<tr><td>INGV — terremoti.ingv.it</td><td>Istituto Nazionale di Geofisica e Vulcanologia</td><td>Mappa interattiva dei terremoti recenti.</td><td>Rischio sismico.</td><td><a href="https://www.ingv.it/privacy" target="_blank" rel="noopener noreferrer">Privacy INGV</a></td></tr>
+<tr><td>Blitzortung / Lightning Maps</td><td>Rete volontaria internazionale</td><td>Mappa dei fulmini in tempo reale.</td><td>Temporali intensi.</td><td><a href="https://www.blitzortung.org/en/cover_your_area.php" target="_blank" rel="noopener noreferrer">Informazioni Blitzortung</a></td></tr>
 </tbody>
 </table>
 </div>
 
-Per non caricare un widget è sufficiente non premere il pulsante di attivazione. In alternativa puoi aprire direttamente il sito del fornitore.
+Per non caricare un widget basta non premere il pulsante. In alternativa puoi aprire direttamente il sito del fornitore.
+
+## Pagine che si collegano da sole alle fonti dei dati
+
+Alcune pagine servono a mostrare dati che cambiano di continuo — scosse, pioggia, qualità dell'aria, stato del mare. Lì **le mappe e i grafici si caricano appena apri la pagina**, senza che tu debba premere niente: aspettare un clic vorrebbe dire mostrarti una pagina vuota proprio quando cerchi un'informazione urgente.
+
+Quando questo accade, il tuo browser contatta direttamente l'ente che pubblica il dato. Quell'ente vede il tuo **indirizzo IP** e i dati tecnici della richiesta, come accadrebbe se aprissi il suo sito. **A noi non torna nulla**: non riceviamo quelle richieste, non le registriamo e non le colleghiamo a nessuna persona.
+
+<div class="table-responsive">
+<table>
+<caption>Pagine con collegamento automatico e fonti contattate</caption>
+<thead>
+<tr><th scope="col">Pagina</th><th scope="col">Fonti contattate dal tuo browser</th></tr>
+</thead>
+<tbody>
+<tr><td><a href="/cruscotto/">Cruscotto del territorio</a></td><td>INGV, Dipartimento della Protezione Civile (radar), Open-Meteo, ARPA Lazio, ItaliaMeteo, ECMWF, EUMETSAT, NASA, USGS, Copernicus, OpenStreetMap.</td></tr>
+<tr><td><a href="/allerte-meteo/">Allerte meteo</a></td><td>Radar del Dipartimento della Protezione Civile e sfondo cartografico OpenStreetMap.</td></tr>
+<tr><td><a href="/laboratorio-meteo/">Laboratorio meteo</a></td><td>Serie storiche Open-Meteo (dati ERA5).</td></tr>
+<tr><td><a href="/cartografia/">Cartografia operativa</a></td><td>Sfondo cartografico OpenStreetMap. La posizione è richiesta solo se premi «centra sulla mia posizione» e resta sul tuo dispositivo.</td></tr>
+<tr><td>Sala situazioni (strumento sperimentale)</td><td>Le fonti sopra, più i ricevitori radio pubblici usati per il solo ascolto.</td></tr>
+</tbody>
+</table>
+</div>
+
+Se preferisci non contattare queste fonti, non aprire quelle pagine: tutte le informazioni essenziali per l'emergenza sono disponibili senza collegamenti esterni nella pagina [Emergenza](/emergenza/) e in [Numeri utili](/numeri-utili/).
 
 ## Trasferimento dati a terzi: piattaforma ActivePager
 
