@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-15T17:00:28+00:00",
+  "generato": "2026-09-15T20:06:28+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-15T16:46:07+00:00",
+   "data": "2026-09-15T19:57:56+00:00",
    "fonte": "ANSA",
-   "titolo": "L'Italia proroga di altri 15 giorni il blocco di Schengen con la Spagna, Madrid risponde",
+   "titolo": "Torna a Roma il Festival della mobilità sostenibile e delle città intelligenti",
+   "url": "https://www.ansa.it/sito/notizie/eventi/2026/09/14/torna-a-roma-il-festival-della-mobilita-sostenibile-e-delle-citta-intelligenti_86b94b94-1989-46b5-85de-bf35cf0908cc.html"
+  },
+  {
+   "data": "2026-09-15T19:56:15+00:00",
+   "fonte": "ANSA",
+   "titolo": "Chiude il Kennedy Center. Trump: 'Si ristruttura solo se c'è il mio nome'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/15/il-board-del-kennedy-center-ne-decreta-la-chiusura-immediata_a590b198-e998-439f-97a0-4eae84a37073.html"
+  },
+  {
+   "data": "2026-09-15T19:55:50+00:00",
+   "fonte": "ANSA",
+   "titolo": "Mattarella: 'Il diritto non può essere subordinato alle contingenze della politica'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/15/monito-di-mattarella-sulia-gli-stati-recuperino-lautorita-smarrita-rispetto-ai-soggetti_7b78284f-6946-42eb-aaf2-5cf98a9977eb.html"
+  },
+  {
+   "data": "2026-09-15T19:40:30+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Il Kennedy Center chiude. Trump: \"Riapre solo col mio nome\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/kennedy-center-chiusura-nome-trump_2nalOFqaValFwPqbnyzIoI"
+  },
+  {
+   "data": "2026-09-15T19:34:06+00:00",
+   "fonte": "ANSA",
+   "titolo": "Firenze omaggia Oriana Fallaci nei 20 anni dalla morte",
+   "url": "https://www.ansa.it/toscana/notizie/2026/09/15/firenze-omaggia-oriana-fallaci-nei-20-anni-dalla-morte_0d32b0b3-da20-4e0f-bd93-d541130a47db.html"
+  },
+  {
+   "data": "2026-09-15T19:23:06+00:00",
+   "fonte": "ANSA",
+   "titolo": "Salvini e il dialogo con la Russia, l'affondo di Mosca sul gas",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/15/lambasciatore-russo-lincontro-tra-salvini-e-imprese-in-russia-indica-il-ritorno-al-realismo_6bba0641-6681-4357-8291-75490a7652f5.html"
+  },
+  {
+   "data": "2026-09-15T19:10:12+00:00",
+   "fonte": "ANSA",
+   "titolo": "Von der Leyen cerca la ricetta per l'IA e prova a compattare i pro-Ue",
+   "url": "https://www.ansa.it/europa/notizie/rubriche/altrenews/2026/09/15/ansa-von-der-leyen-cerca-la-ricetta-per-lia-e-prova-a-compattare_1df4a918-db25-4eb7-8c09-2a079ef81459.html"
+  },
+  {
+   "data": "2026-09-15T19:09:24+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina, Conte: \"No armi a Kiev, altrimenti siamo come il governo Meloni\"",
+   "url": "https://www.adnkronos.com/politica/conte-schlein-ucraina-primarie_5BTqSSb1dZZZ78fGfFHJ6k"
+  },
+  {
+   "data": "2026-09-15T19:07:54+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "SuperEnalotto, estrazione di oggi 15 settembre 2026: numeri vincenti",
+   "url": "https://www.adnkronos.com/cronaca/superenalotto-numeri-vincenti-oggi-quote-jackpot_3uilmuNHxvLMEJWtt4YcRy"
+  },
+  {
+   "data": "2026-09-15T18:56:20+00:00",
+   "fonte": "ANSA",
+   "titolo": "Roma proroga il blocco di Schengen, Madrid attacca Meloni e Tajani",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/litalia-proroga-di-altri-15-giorni-il-blocco-di-schengen-con-la-spagna_cea01180-76fc-45d4-bad1-ae2182b8f3c0.html"
   },
   {
-   "data": "2026-09-15T16:42:59+00:00",
-   "fonte": "ANSA",
-   "titolo": "Cercò persone sotto le macerie del sisma e del ponte Morandi, morto il cane Marley",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/cerco-persone-sotto-macerie-sisma-e-ponte-morandi-morto-il-cane-marley_d8d85ca9-6c75-4ff0-a99a-d944348cb63e.html"
+   "data": "2026-09-15T18:54:47+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Stretta su B&B a Napoli, tetto del 30% e il 70% ad uso abitativo",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/stretta-su-bb-a-napoli-tetto-del-30-e-il-70-ad-uso-abitativo_8ec1a94d-6be2-482d-bd81-a37a4f78e5d3.html"
   },
   {
-   "data": "2026-09-15T16:42:02+00:00",
+   "data": "2026-09-15T18:32:50+00:00",
    "fonte": "ANSA",
    "titolo": "Piano anti Lotito, perquisiti i vertici della Banca del Fucino",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/aggiotaggio-su-quote-della-lazio-perquisiti-presidente-e-ad-della-banca-del-fucino_b84b2c88-20db-49f7-9d1f-ba5806ade573.html"
   },
   {
-   "data": "2026-09-15T16:40:04+00:00",
+   "data": "2026-09-15T18:16:14+00:00",
    "fonte": "ANSA",
-   "titolo": "Trovato il corpo della donna dispersa nella Laguna di Venezia",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/trovato-il-corpo-della-donna-dispersa-nella-laguna-di-venezia-_8a3b9fed-3fb4-416d-ad60-98d956b702b7.html"
+   "titolo": "Tensione sul Baltico, jet italiani abbattono un drone russo",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/15/caccia-italiani-abbattono-un-drone-sopra-la-lituania.-mosca-se-la-polonia-attacca-annientata_e8651f95-a56c-416f-b180-781bd323584d.html"
   },
   {
-   "data": "2026-09-15T16:31:03+00:00",
+   "data": "2026-09-15T18:14:02+00:00",
    "fonte": "ANSA",
-   "titolo": "Doppiatori sul grande schermo per andare oltre la malattia",
-   "url": "https://www.ansa.it/canale_saluteebenessere/notizie/sanita/2026/09/15/ansa-la-storiadoppiatori-sul-grande-schermo-per-andare-oltre-la-malattia_da6f68ba-50e2-4ecb-adaf-f353cacdd904.html"
+   "titolo": "Trump lancia le Guerre Stellari, armi nello spazio contro Mosca e Pechino",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/15/trump-lancia-le-guerre-stellari-armi-nello-spazio-contro-mosca-e-pechino_9dbb103a-c600-45a9-96a2-209a3c4f3035.html"
   },
   {
-   "data": "2026-09-15T16:25:06+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Minasi (Lega): \"Prevenzione, cure e centralità del paziente le priorità\"",
-   "url": "https://www.adnkronos.com/cronaca/minasi-lega-prevenzione-cure-e-centralita-del-paziente-le-priorita_14osQvcSAYlTFR8dS2Iq7W"
-  },
-  {
-   "data": "2026-09-15T16:25:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Food, Anir Confindustria: \"Per grande ristorazione più certezza su contratti e regole\"",
-   "url": "https://www.adnkronos.com/economia/food-anir-confindustria-per-grande-ristorazione-piu-certezza-su-contratti-e-regole_7MI7tjHxLASgvZ1Wb3yMS0"
-  },
-  {
-   "data": "2026-09-15T16:24:43+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Girelli (Pd): \"La sanità italiana deve puntare su prevenzione e gestione del rischio\"",
-   "url": "https://www.adnkronos.com/cronaca/girelli-pd-la-sanita-italiana-deve-puntare-su-prevenzione-e-gestione-del-rischio_15jnWRCeC1XW3xssgAdKkI"
-  },
-  {
-   "data": "2026-09-15T16:24:05+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Tumore rinofaringeo, Pisani (Ailar): \"Necessari percorsi multidisciplinari e centralità del paziente\"",
-   "url": "https://www.adnkronos.com/cronaca/tumore-rinofaringeo-pisani-ailar-necessari-percorsi-multidisciplinari-e-centralita-del-paziente_5UYXHNR2rUfJJ497AlGquE"
-  },
-  {
-   "data": "2026-09-15T16:23:47+00:00",
+   "data": "2026-09-15T18:09:55+00:00",
    "fonte": "ANSA",
-   "titolo": "Spiava il conto di Meloni, ex bancario verso il processo",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/spiava-i-conti-di-mattarella-e-meloni-chiuse-indagini-su-ex-dipendente-banca_a7bda609-cf67-4e86-8dec-4c9279f1186c.html"
+   "titolo": "Schiaffo della Corte Suprema a Trump: 'Giù le mani dal voto'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/09/15/la-corte-suprema-boccia-le-restrizioni-di-trump-sul-voto-per-posta_10780754-26a5-4754-85fd-5a65b8d1839b.html"
   },
   {
-   "data": "2026-09-15T16:23:39+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Tumore rinofaringeo, Bianco (Teha Group): \"Impatto sociale ed economico significativo\"",
-   "url": "https://www.adnkronos.com/cronaca/tumore-rinofaringeo-bianco-teha-group-impatto-sociale-ed-economico-significativo_3iw8jZ4Tb5r6GDREs4lGXa"
-  },
-  {
-   "data": "2026-09-15T16:23:17+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Tumore rinofaringeo, Mercante (UniBo): \"Serve squadra di specialisti per migliorare prognosi\"",
-   "url": "https://www.adnkronos.com/cronaca/tumore-rinofaringeo-mercante-unibo-serve-squadra-di-specialisti-per-migliorare-prognosi_38x07AxDuHxiENKki2LOe0"
-  },
-  {
-   "data": "2026-09-15T16:22:54+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Tumore rinofaringeo, Bossi (Humanitas): \"Più ricerca in Europa e cooperazione con la Cina\"",
-   "url": "https://www.adnkronos.com/cronaca/tumore-rinofaringeo-bossi-humanitas-piu-ricerca-in-europa-e-cooperazione-con-la-cina_6p2IFFAVbMGNmiKmxuo4kI"
-  },
-  {
-   "data": "2026-09-15T16:21:05+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Il nipote di Lenzini: \"Spero che i tifosi della Lazio tornino presto allo stadio. Indagine aggiotaggio? Al momento poco da dire\"",
-   "url": "https://www.adnkronos.com/sport/lazio-nipote-presidente-lenzini-tifosi-stadio-vicenda-aggiotaggio-poco-dire_tMnrHDvrP7iTjw3LQNsTW"
-  },
-  {
-   "data": "2026-09-15T16:21:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Mattarella sull'IA: \"Stati recuperino sovranità smarrita rispetto a soggetti privati\"",
-   "url": "https://www.adnkronos.com/politica/intelligenza-artificiale-monito-di-mattarella_6a4jsUc95R8C0jfeYyWV0N"
-  },
-  {
-   "data": "2026-09-15T16:20:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Food, Anir Confindustria: \"Progettare futuro e diventare sempre più pezzo industria italiana\"",
-   "url": "https://www.adnkronos.com/economia/food-anir-confindustria-progettare-futuro-e-diventare-sempre-piu-pezzo-industria-italiana_7wy5eMT8M1pJ919DnN4koA"
-  },
-  {
-   "data": "2026-09-15T16:17:41+00:00",
+   "data": "2026-09-15T18:08:46+00:00",
    "fonte": "ANSA",
-   "titolo": "'Mancano sicurezza e privacy', salta l'incontro della famiglia del bosco",
+   "titolo": "Gelo di Teheran sui colloqui. Il Pentagono ammette, 'le armi scarseggiano'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/15/liran-nessuna-trattativa-con-gli-usa.-il-pentagono-smentisce-trump-carenza_2e9c6940-64d5-444a-93a4-333dc3bf1746.html"
+  },
+  {
+   "data": "2026-09-15T18:08:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Bologna, manichino di Valditara alle finestre del liceo Minghetti: \"Nemico degli studenti\"",
+   "url": "https://www.adnkronos.com/cronaca/manichino-valditara-liceo-bologna-protesta-studenti_3kTUhjHjR3H6LUOVobSFpS"
+  },
+  {
+   "data": "2026-09-15T18:06:57+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sondaggio centrosinistra, Conte batte Schlein nelle primarie",
+   "url": "https://www.adnkronos.com/politica/sondaggio-primarie-schlein-conte-salis_62YpzkZyFzDlbUOipjE0y8"
+  },
+  {
+   "data": "2026-09-15T18:05:16+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Salta l'incontro nella nuova casa della famiglia del bosco",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/mancano-sicurezza-e-privacy-salta-lincontro-della-famiglia-del-bosco_f32b6534-8141-4ce2-a87d-451624f26772.html"
   },
   {
-   "data": "2026-09-15T16:15:31+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ranucci fa ricorso per tornare a condurre Report",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/ranucci-fa-ricorso-al-tribunale-dopo-la-rimozione-dalla-conduzione-di-report_081bc58c-685d-4bbb-801e-d1f7d2c10ca1.html"
-  },
-  {
-   "data": "2026-09-15T16:12:02+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Pillon, 'incontro famiglia del bosco spostato nella solita località protetta'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/pillon-incontro-famiglia-del-bosco-spostato-nella-solita-localita-protetta_7afcc389-abd7-449a-a66e-e81b2ca462a2.html"
-  },
-  {
-   "data": "2026-09-15T16:11:36+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Molestie su 13enne a Torino, disposto il carcere per l'indagato",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/molestie-su-13enne-a-torino-disposto-il-carcere-per-lindagato-_b2e65ff2-515c-4d6c-a9e4-1ba4c9601ced.html"
-  },
-  {
-   "data": "2026-09-15T16:01:20+00:00",
+   "data": "2026-09-15T18:05:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Nautica: oltre 1.000 imbarcazioni e 45 Paesi, a Genova il 66° Salone Internazionale",
-   "url": "https://www.adnkronos.com/economia/nautica-oltre-1000-imbarcazioni-e-45-paesi-a-genova-il-66-salone-internazionale_4lJTWfJptYnH2xDlh55X3C"
+   "titolo": "Europei Pallavolo, oggi Italia-Repubblica Ceca 23-25, gli azzurri perdono il primo set - Diretta",
+   "url": "https://www.adnkronos.com/sport/diretta-italia-repubblica-ceca-agli-europei-di-pallavolo_53O7QSwB4ekpNJBLEnIjoE"
   },
   {
-   "data": "2026-09-15T15:57:16+00:00",
+   "data": "2026-09-15T18:02:48+00:00",
    "fonte": "ANSA",
-   "titolo": "Michael J. Fox agli Emmy: \"Accettare il Parkinson non significava arrendermi\"",
-   "url": "https://www.ansa.it/sito/videogallery/spettacolo/2026/09/15/michael-j.-fox-agli-emmy-accettare-il-parkinson-non-significava-arrendermi_7a5e4141-f05e-4022-aa04-95b80c48d6ca.html"
+   "titolo": "Corsa carburanti senza fine. Meloni: 'Servono azioni immediate dell'Ue'",
+   "url": "https://www.ansa.it/canale_motori/notizie/mondo_motori/2026/09/15/corsa-carburanti-senza-fine.-meloni-servono-azioni-immediate-dellue_16539ad3-9f4e-4d22-b40f-edc23a8ce6a1.html"
   },
   {
-   "data": "2026-09-15T15:56:29+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Roberto Vecchioni rinviato a giudizio per diffamazione di La Russa junior",
-   "url": "https://www.adnkronos.com/spettacoli/geronimo-la-russa-roberto-vecchioni-festival-la-gaberiana_3ASLdrcDSy2IL21Zvp6swA"
-  },
-  {
-   "data": "2026-09-15T15:54:26+00:00",
+   "data": "2026-09-15T18:00:34+00:00",
    "fonte": "ANSA",
-   "titolo": "Monito di Mattarella sul'IA: 'Gli Stati recuperino l'autorità smarrita rispetto ai soggetti privati'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/15/monito-di-mattarella-sulia-gli-stati-recuperino-lautorita-smarrita-rispetto-ai-soggetti_7b78284f-6946-42eb-aaf2-5cf98a9977eb.html"
-  },
-  {
-   "data": "2026-09-15T15:51:55+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Caso David Rossi, nuove prove del Ris al Foro Italico il 28 settembre",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/caso-david-rossi-nuove-prove-del-ris-al-foro-italico-il-28-settembre_ecc0c6e7-fb10-4ef6-82e1-e2e27fa560d6.html"
-  },
-  {
-   "data": "2026-09-15T15:49:07+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "'Mancano sicurezza e privacy', salta l'incontro della famiglia del bosco",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/mancano-sicurezza-e-privacy-salta-lincontro-della-famiglia-del-bosco_3594678a-ac90-4d1e-8654-3b3fb7495e10.html"
-  },
-  {
-   "data": "2026-09-15T15:47:01+00:00",
-   "fonte": "ANSA",
-   "titolo": "L'addio a Emma Bonino, Prodi: 'La difesa dei deboli è sempre stata la sua stella polare'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/15/laddio-a-emma-bonino-prodi-la-difesa-dei-deboli-e-sempre-stata-la-sua_75b7482d-4b3a-446e-9d1a-c39d82a561f7.html"
-  },
-  {
-   "data": "2026-09-15T15:41:58+00:00",
-   "fonte": "ANSA",
-   "titolo": "Truffa a Revolut con pec italiana compromessa, indaga la Postale",
+   "titolo": "Pec italiana compromessa, Revolut consegna i dati dei clienti agli hacker",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/truffa-a-revolut-con-pec-italiana-compromessa-indaga-la-postale_b3b5047d-80a0-4242-93d2-8574c7f2f310.html"
   },
   {
-   "data": "2026-09-15T15:24:25+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "L'ex compagna di Lavitola lo denuncia per maltrattamenti, indagano i pm",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/lex-compagna-di-lavitola-lo-denuncia-per-maltrattamenti-indagano-i-pm_44aa119e-2f13-45af-b00f-de4b60c59133.html"
+   "data": "2026-09-15T17:54:51+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'ultimo addio a Emma con il ricordo della sua lezione europeista",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/15/laddio-a-emma-bonino-prodi-la-difesa-dei-deboli-e-sempre-stata-la-sua_75b7482d-4b3a-446e-9d1a-c39d82a561f7.html"
   },
   {
-   "data": "2026-09-15T15:15:49+00:00",
+   "data": "2026-09-15T17:53:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Schianto in Lamborghini e uso gas esilarante, Sterling rischia due anni di carcere",
+   "url": "https://www.adnkronos.com/sport/sterling-rischia-due-anni-di-carcere-per-guida-pericolosa_7m1m0oQTRimRouCUcmAC0Y"
+  },
+  {
+   "data": "2026-09-15T17:48:02+00:00",
    "fonte": "ANSA",
-   "titolo": "Firenze omaggia Oriana Fallaci nei 20 anni dalla morte",
-   "url": "https://www.ansa.it/toscana/notizie/2026/09/15/firenze-omaggia-oriana-fallaci-nei-20-anni-dalla-morte_0d32b0b3-da20-4e0f-bd93-d541130a47db.html"
+   "titolo": "Taylor Swift scatena i fan con l'apparizione agli Emmy",
+   "url": "https://www.ansa.it/sito/notizie/cultura/musica/2026/09/15/taylor-swift-scatena-i-fan-con-lapparizione-agli-emmy_1a584c7d-4668-4f38-a9fb-258c4c08edf2.html"
+  },
+  {
+   "data": "2026-09-15T17:46:39+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Riaperti spazi aerei sull'Etna, torna operativo l'aeroporto di Catania",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/riaperti-spazi-aerei-sulletna-torna-operativo-laeroporto-di-catania_6d8b64ea-3dc7-4b25-99b3-fcce53db8d70.html"
+  },
+  {
+   "data": "2026-09-15T17:43:20+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "'Diffamata da Corona', slitta ancora la testimonianza a Milano di Giorgia Meloni",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/diffamata-da-corona-slitta-ancora-la-testimonianza-a-milano-di-giorgia-meloni_26dc7429-a72a-46b3-b911-4ff67ef127dc.html"
+  },
+  {
+   "data": "2026-09-15T17:39:43+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Va in carcere l'uomo che ha molestato una 13enne a Torino",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/molestie-su-13enne-a-torino-disposto-il-carcere-per-lindagato-_b2e65ff2-515c-4d6c-a9e4-1ba4c9601ced.html"
+  },
+  {
+   "data": "2026-09-15T17:32:28+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Segnalati alcuni casi di salmonellosi a Trieste",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/segnalati-alcuni-casi-di-salmonellosi-a-trieste_7025e4af-0606-4b66-a5a1-05d7447f25d5.html"
+  },
+  {
+   "data": "2026-09-15T17:31:13+00:00",
+   "fonte": "ANSA",
+   "titolo": "Via libera del Senato alla legge elettorale, è scontro in Aula",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/15/via-libera-del-senato-alla-legge-elettorale-ora-torna-alla_4cbd1ef1-7d19-4d50-85aa-c9859de9677b.html"
   }
  ]
 }
