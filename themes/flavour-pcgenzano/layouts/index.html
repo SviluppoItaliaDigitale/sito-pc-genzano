@@ -9,6 +9,25 @@
 {{ $emergenza := .Site.Data.emergenza }}
 {{ $isEmergenza := and $emergenza $emergenza.attiva }}
 
+{{/* ── ALLERTA ALTA: la home si alleggerisce da sola ──
+     L'emergenza dichiarata riduce la home da 14 sezioni a 7. Un'allerta
+     arancione o rossa non è un'emergenza dichiarata, ma è il momento in cui
+     il cittadino cerca un'istruzione, non una campagna o un gioco: qui sotto
+     le sezioni promozionali e divulgative restano fuori finché dura.
+     Il gialla NON declassa nulla: è frequente e non cambia i comportamenti.
+     La valutazione è a build-time, ma `check-allerta.yml` lancia un deploy
+     urgente a ogni cambio di livello, quindi la home segue l'allerta.
+     Normalizzazione identica a home-barre-allerta.html: i data file usano la
+     forma femminile, si accettano anche "giallo"/"rosso" corretti a mano. */}}
+{{ $normLivello := dict "giallo" "gialla" "rosso" "rossa" }}
+{{ $livelloHome := "verde" }}
+{{ with .Site.Data.allerta }}
+  {{ $l := lower (string (.livello | default "verde")) }}
+  {{ with index $normLivello $l }}{{ $l = . }}{{ end }}
+  {{ $livelloHome = $l }}
+{{ end }}
+{{ $allertaAlta := in (slice "arancione" "rossa") $livelloHome }}
+
 {{/* ── BANNER EMERGENZA ──
      Renderizzato SITE-WIDE da baseof.html (subito dopo la navbar, fuori da
      <main>), così compare su ogni pagina durante un'emergenza, non solo qui.
@@ -131,20 +150,20 @@
 
 {{/* Banner reclutamento volontari — rilancio campagna Regione Lazio,
      rimanda a /diventa-volontario/ (solo modalità ordinaria) */}}
-{{ partial "banner-volontariato.html" . }}
+{{ if not $allertaAlta }}{{ partial "banner-volontariato.html" . }}{{ end }}
 
 {{/* Dossier interattivi — box col dossier più recente (racconti visivi scrollytelling) */}}
-{{ partial "dossier-home.html" . }}
+{{ if not $allertaAlta }}{{ partial "dossier-home.html" . }}{{ end }}
 
 {{/* Approfondimenti — ultime 3 uscite del canale magazine (prevenzione,
      conoscenza, formazione), separate dalle notizie operative in alto */}}
-{{ partial "approfondimenti-home.html" . }}
+{{ if not $allertaAlta }}{{ partial "approfondimenti-home.html" . }}{{ end }}
 
 {{/* Comunità: canali social + IT-alert + terremoti */}}
 {{ partial "social-channels.html" . }}
 
 {{/* Giochi della Sicurezza — CTA formazione */}}
-{{ partial "games-cta.html" . }}
+{{ if not $allertaAlta }}{{ partial "games-cta.html" . }}{{ end }}
 
 {{/* Box "Condividi e scarica" (QR + Stampa + share) — coerente con tutte
      le pagine del sito da maggio 2026 (richiesta utente di uniformità).
