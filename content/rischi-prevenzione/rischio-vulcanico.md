@@ -105,8 +105,6 @@ Per i comportamenti completi vedi la pagina dedicata: [Rischio Sismico — cosa 
 - **Non confondere** la CO₂ (anidride carbonica naturale, dal sottosuolo) con il CO (monossido di carbonio antropico, da caldaie e bruciatori): hanno fonti diverse ma entrambi possono essere letali in spazi confinati. In dubbio, esci, ventila, chiama il 112.
 {{< /cosa-non-fare >}}
 
-{{< chi-chiamare >}}
-
 ## <i class="bi bi-bookmark-star-fill text-primary me-2" aria-hidden="true"></i>Fonti istituzionali e scientifiche {#fonti}
 
 **Approfondisci la materia:** [Il vulcanismo dei Colli Albani](/conoscere/rischio-vulcanico-colli-albani/) — storia eruttiva, i laghi di Albano e Nemi come crateri, le emissioni di gas e il monitoraggio dell'INGV.
@@ -130,3 +128,5 @@ Sulle pagine dedicate ai docenti sono disponibili materiali specifici per fascia
 - 📜 [Caso studio: Campi Flegrei (vulcano monitorato in attività)](/formazione/schede-stampabili/caso-campi-flegrei-secondaria2/)
 
 Per il quadro pedagogico complessivo dei rischi del territorio: [Per i docenti — Educazione Civica e Protezione Civile](/formazione/educazione-civica/) e i [Percorsi didattici pronti](/formazione/percorsi-didattici/).
+
+{{< chi-chiamare >}}

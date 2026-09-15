@@ -4,7 +4,7 @@ description: "Dichiarazione di accessibilità AGID: stato di conformità, conten
 layout: "single"
 toc: true
 tts: true
-dataUltimaRevisione: "2026-09-14"
+dataUltimaRevisione: "2026-09-15"
 aliases:
   - /dichiarazione-accessibilita.html
 ---
@@ -19,10 +19,10 @@ Il sito è **parzialmente conforme** ai requisiti dello standard europeo armoniz
 
 **Cosa risulta conforme nelle verifiche effettuate.** Ogni voce indica come e quando è stata verificata: i risultati valgono per le pagine e le date indicate, non come garanzia assoluta e permanente sull'intero sito.
 
-- **Lighthouse Accessibilità: 100/100** — mediana su 9 run × 3 URL campione (home, archivio comunicazioni, numeri utili), verifica del 10 maggio 2026; il punteggio è ricontrollato dall'audit automatico 2 volte al giorno (`lighthouse-audit.yml`).
+- **Lighthouse Accessibilità: 100/100** — mediana su 9 run × 3 URL campione (home, archivio comunicazioni, numeri utili), verifica del 10 maggio 2026; il controllo automatico gira due volte al giorno (`lighthouse-audit.yml`) e segnala se il punteggio scende sotto 95: garantisce quindi che non ci siano regressioni, non che il punteggio sia ancora 100 nel momento in cui leggi.
 - **Best Practices: 100/100** e **SEO: 100/100** — stesse condizioni di test.
 - **Performance: 95/100** — mediana (LCP 2,3 s, TBT 70-130 ms, CLS 0,024-0,058), stesse condizioni di test.
-- **Gate axe-core su ogni modifica** — dal luglio 2026 ogni proposta di modifica al sito passa un controllo automatico axe-core (WCAG 2.2 AA) su 11 pagine campione prima della pubblicazione: al 15 luglio 2026 il gate risulta superato con **0 violazioni confermate**; restano segnalati controlli "da revisione manuale" (non violazioni accertate) che vengono esaminati progressivamente.
+- **Gate axe-core su ogni modifica** — dal luglio 2026 ogni proposta di modifica al sito passa un controllo automatico axe-core (WCAG 2.2 AA) su 11 pagine campione prima della pubblicazione: dal 15 agosto 2026 il gate è **bloccante**, cioè una violazione confermata impedisce la pubblicazione della modifica; da fine maggio 2026 a oggi non se n'è registrata nessuna. Restano segnalati controlli "da revisione manuale" (non violazioni accertate), esaminati progressivamente.
 - **Contrasto colore WCAG AA**: nei test (automatici axe-core + calcoli manuali sui componenti del tema) non risultano testi sotto la soglia 4,5:1 sulle pagine campione; le regressioni note emerse in passato sono state corrette e sono documentate nel repository pubblico.
 - **Navigazione da tastiera**: percorsi Tab/Shift+Tab/Enter/Esc verificati manualmente sulle pagine campione (elenco più sotto), senza trappole da tastiera riscontrate. Sulle mini-app interattive (giochi, quiz, schede stampabili) la navigazione completa richiede JavaScript attivo.
 - **Focus visibile**: ogni elemento interattivo ha outline visibile (3px) al focus.
@@ -45,7 +45,7 @@ Il sito è **parzialmente conforme** ai requisiti dello standard europeo armoniz
 Le seguenti aree del sito **non sono pienamente accessibili** per i motivi indicati. Il Gruppo si impegna a migliorare progressivamente.
 
 ### Widget di terze parti
-- **Strumenti meteo embed**: Windy.com, INGV mappa sismica, Radar DPC, MeteoAM, Blitzortung. Sono caricati con sistema **click-to-load** (l'utente sceglie esplicitamente di attivarli). L'interfaccia interna dei widget dipende dal fornitore esterno e non è sotto il nostro controllo.
+- **Strumenti meteo embed**: Windy.com, MeteoAM, Blitzortung e la mappa di terremoti.ingv.it sono caricati con sistema **click-to-load** (l'utente sceglie esplicitamente di attivarli). Le mappe dati del [Cruscotto](/cruscotto/) e il radar del Dipartimento della Protezione Civile si caricano invece all'apertura della pagina, perché mostrano dati che cambiano di continuo. In entrambi i casi l'interfaccia dipende dal fornitore esterno e non è sotto il nostro controllo.
 - **Motivazione**: contenuto di terze parti (art. 3, comma 6, Direttiva UE 2016/2102 — esenzione per contenuti di terzi non sviluppati né finanziati né controllati).
 - **Mitigazione**: per ogni widget è disponibile un link al sito ufficiale del fornitore, dove il cittadino può accedere ai contenuti con le opzioni di accessibilità del fornitore stesso.
 
@@ -64,7 +64,7 @@ Le seguenti aree del sito **non sono pienamente accessibili** per i motivi indic
 
 - **Dichiarazione redatta il**: 10 maggio 2026.
 - **Metodo di redazione**: **autovalutazione** condotta dal soggetto ai sensi dell'art. 3, comma 1, della Decisione di esecuzione (UE) 2018/1523.
-- **Data ultima revisione**: 15 luglio 2026 (revisione del linguaggio: le affermazioni di conformità sono ora accompagnate da data, metodo e ambito della verifica).
+- **Data ultima revisione**: 15 settembre 2026 (allineate alla realtà la descrizione dei contenuti di terze parti e lo stato del controllo automatico; la revisione precedente, del 15 luglio 2026, aveva accompagnato ogni affermazione di conformità con data, metodo e ambito della verifica).
 - **Dichiarazione sul portale AGID**: la pubblicazione della dichiarazione tramite la procedura ufficiale ([form.agid.gov.it](https://form.agid.gov.it/)) è a carico del referente del Gruppo; il collegamento sarà aggiunto qui e nel piè di pagina appena disponibile.
 - **Riesame annuale**: secondo il calendario AgID, la dichiarazione va riesaminata e, se necessario, aggiornata **entro il 23 settembre di ogni anno**. Prossimo riesame: entro il 23 settembre 2026, poi entro il 23 settembre 2027.
 - **Frequenza dei test automatici**: settimanale (workflow `audit-sito.yml` ogni lunedì) + post-deploy (workflow `lighthouse-audit.yml` dopo ogni pubblicazione).

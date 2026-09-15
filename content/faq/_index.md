@@ -123,9 +123,9 @@ Sì. Le chiamate false o inutili possono ritardare i soccorsi a chi ne ha davver
 
 No. Il sito usa solo cookie tecnici necessari al funzionamento. Non usa pubblicità né profilazione. I dettagli sono nella [Privacy policy](/privacy/).
 
-### I widget di Windy, INGV o Radar DPC raccolgono dati?
+### I widget e le mappe esterne raccolgono dati?
 
-I widget esterni vengono caricati solo se l'utente sceglie di aprirli. Dopo il caricamento si applicano anche le policy del servizio esterno. Per dettagli consulta [Privacy](/privacy/) e [Strumenti](/strumenti/).
+Dipende dal tipo. Le mappe di Windy, MeteoAM, Blitzortung e terremoti.ingv.it restano spente finché non premi il pulsante per aprirle. Le pagine che mostrano dati in tempo reale — il [Cruscotto](/cruscotto/), il radar delle [Allerte meteo](/allerte-meteo/), il [Laboratorio meteo](/laboratorio-meteo/) — si collegano invece da sole alle fonti appena le apri, altrimenti mostrerebbero una pagina vuota proprio quando serve un dato. In quel caso l'ente che pubblica il dato vede il tuo indirizzo IP; a noi non torna nulla. Il dettaglio è in [Privacy](/privacy/).
 
 ### Il sito è accessibile?
 

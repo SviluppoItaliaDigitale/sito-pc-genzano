@@ -38,6 +38,59 @@ Lo stato sotto è letto direttamente dai **bollettini ufficiali del Centro Funzi
 </div>
 </div>
 
+## Che cosa fare, colore per colore
+
+{{< callout tipo="info" titolo="Cosa cambia colore per colore qui a Genzano" >}}
+Per ogni livello — verde, giallo, arancione, rosso — abbiamo preparato una scheda che spiega **cosa significa concretamente a Genzano**, quali zone sono più delicate e cosa fa il Comune con il Gruppo: [Allerta meteo: cosa significa a Genzano, colore per colore](/allerte-meteo/cosa-significa-a-genzano/).
+{{< /callout >}}
+
+{{< callout tipo="avviso" titolo="Verde non vuol dire rischio zero" >}}
+L'assenza di allerta significa che **non sono previsti fenomeni significativi**, non che il rischio sia nullo. La preparazione si fa **prima**, quando il cielo è sereno: tieni pronto il [kit di emergenza](/rischi-prevenzione/kit-emergenza/), conosci le aree di attesa del tuo quartiere e compila il [Piano Familiare](/piano-familiare/). Quando arriva l'allerta è troppo tardi per organizzarsi.
+{{< /callout >}}
+
+### <span class="badge badge-allerta-verde">VERDE</span> — Nessuna allerta
+
+{{< pittogramma src="/pittogrammi/arasaac/calma.png" alt="Pittogramma: situazione di calma" size="small" inline="true" >}} Non sono previsti fenomeni significativi.
+
+**Cosa fare:**
+
+- Non sono richieste azioni specifiche.
+- Resta informato attraverso i canali ufficiali.
+
+### <span class="badge badge-allerta-gialla">GIALLA</span> — Attenzione
+
+{{< pittogramma src="/pittogrammi/arasaac/attenzione.png" alt="Pittogramma: attenzione" size="small" inline="true" >}} Sono possibili fenomeni localizzati, anche intensi.
+
+**Cosa fare:**
+
+- Segui i bollettini ufficiali.
+- Evita zone soggette ad allagamento.
+- Non sostare lungo corsi d'acqua, fossi o sottopassaggi.
+- Fai attenzione ad alberi, impalcature e oggetti esposti al vento.
+
+### <span class="badge badge-allerta-arancione">ARANCIONE</span> — Preallarme
+
+{{< pittogramma src="/pittogrammi/arasaac/allarme.png" alt="Pittogramma: allarme" size="small" inline="true" >}} I fenomeni previsti possono essere diffusi e pericolosi.
+
+**Cosa fare:**
+
+- Limita gli spostamenti non necessari.
+- Metti in sicurezza balconi, cantine e locali seminterrati, solo se puoi farlo senza pericolo.
+- Tieni pronto il [kit di emergenza](/rischi-prevenzione/kit-emergenza/).
+- Segui le indicazioni delle autorità.
+
+### <span class="badge badge-allerta-rossa">ROSSA</span> — Allarme
+
+{{< pittogramma src="/pittogrammi/arasaac/emergenza.png" alt="Pittogramma: emergenza" size="small" inline="true" >}} I fenomeni previsti sono molto intensi e possono causare danni gravi.
+
+**Cosa fare:**
+
+- Non uscire se non è strettamente necessario.
+- Allontanati da piani interrati e seminterrati.
+- Non attraversare strade allagate o sottopassaggi.
+- Segui solo le indicazioni delle autorità.
+- Tieni il telefono carico.
+
 ## Previsione meteo di oggi
 
 Temperatura massima e cielo previsti **oggi** nelle cinque province del Lazio, con il dettaglio per Genzano di Roma e i prossimi giorni. La cartina è una **nostra elaborazione** su dati aperti [Open-Meteo](https://open-meteo.com/) (modelli ECMWF), aggiornata ogni ora. È un dato **indicativo**: per le allerte valgono i bollettini ufficiali del Centro Funzionale Regionale del Lazio.
@@ -99,59 +152,6 @@ Genzano di Roma rientra nella **Zona di allerta F — Bacini Costieri Sud**, sec
 - **Allerta di criticità:** indica gli effetti possibili al suolo, per esempio allagamenti, frane o piene.
 
 Il codice colore dipende dagli effetti attesi, non solo dalla quantità di pioggia prevista.
-
-## Significato dei codici colore
-
-{{< callout tipo="info" titolo="Cosa cambia colore per colore qui a Genzano" >}}
-Per ogni livello — verde, giallo, arancione, rosso — abbiamo preparato una scheda che spiega **cosa significa concretamente a Genzano**, quali zone sono più delicate e cosa fa il Comune con il Gruppo: [Allerta meteo: cosa significa a Genzano, colore per colore](/allerte-meteo/cosa-significa-a-genzano/).
-{{< /callout >}}
-
-{{< callout tipo="avviso" titolo="Verde non vuol dire rischio zero" >}}
-L'assenza di allerta significa che **non sono previsti fenomeni significativi**, non che il rischio sia nullo. La preparazione si fa **prima**, quando il cielo è sereno: tieni pronto il [kit di emergenza](/rischi-prevenzione/kit-emergenza/), conosci le aree di attesa del tuo quartiere e compila il [Piano Familiare](/piano-familiare/). Quando arriva l'allerta è troppo tardi per organizzarsi.
-{{< /callout >}}
-
-### <span class="badge badge-allerta-verde">VERDE</span> — Nessuna allerta
-
-{{< pittogramma src="/pittogrammi/arasaac/calma.png" alt="Pittogramma: situazione di calma" size="small" inline="true" >}} Non sono previsti fenomeni significativi.
-
-**Cosa fare:**
-
-- Non sono richieste azioni specifiche.
-- Resta informato attraverso i canali ufficiali.
-
-### <span class="badge badge-allerta-gialla">GIALLA</span> — Attenzione
-
-{{< pittogramma src="/pittogrammi/arasaac/attenzione.png" alt="Pittogramma: attenzione" size="small" inline="true" >}} Sono possibili fenomeni localizzati, anche intensi.
-
-**Cosa fare:**
-
-- Segui i bollettini ufficiali.
-- Evita zone soggette ad allagamento.
-- Non sostare lungo corsi d'acqua, fossi o sottopassaggi.
-- Fai attenzione ad alberi, impalcature e oggetti esposti al vento.
-
-### <span class="badge badge-allerta-arancione">ARANCIONE</span> — Preallarme
-
-{{< pittogramma src="/pittogrammi/arasaac/allarme.png" alt="Pittogramma: allarme" size="small" inline="true" >}} I fenomeni previsti possono essere diffusi e pericolosi.
-
-**Cosa fare:**
-
-- Limita gli spostamenti non necessari.
-- Metti in sicurezza balconi, cantine e locali seminterrati, solo se puoi farlo senza pericolo.
-- Tieni pronto il [kit di emergenza](/rischi-prevenzione/kit-emergenza/).
-- Segui le indicazioni delle autorità.
-
-### <span class="badge badge-allerta-rossa">ROSSA</span> — Allarme
-
-{{< pittogramma src="/pittogrammi/arasaac/emergenza.png" alt="Pittogramma: emergenza" size="small" inline="true" >}} I fenomeni previsti sono molto intensi e possono causare danni gravi.
-
-**Cosa fare:**
-
-- Non uscire se non è strettamente necessario.
-- Allontanati da piani interrati e seminterrati.
-- Non attraversare strade allagate o sottopassaggi.
-- Segui solo le indicazioni delle autorità.
-- Tieni il telefono carico.
 
 ## Tipi di rischio monitorati
 
