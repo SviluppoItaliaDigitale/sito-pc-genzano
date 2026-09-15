@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://www.gdacs.org/gdacsapi/api/events/geteventlist/EVENTS4APP",
-  "generato": "2026-09-15T20:06:29+00:00",
+  "generato": "2026-09-15T22:54:47+00:00",
   "licenza": "GDACS — Global Disaster Alert and Coordination System (dati pubblici UE/ONU)",
   "nota": "Copia locale per lettura same-origin dalla Sala situazioni."
  },
@@ -9,8 +9,23 @@
  "events": [
   {
    "alertlevel": "Green",
+   "datemodified": "2026-09-15T20:50:57",
+   "description": "Tropical Cyclone FIFTEEN-E-26",
+   "episodeid": 9,
+   "eventid": 1001321,
+   "eventname": "FIFTEEN-E-26",
+   "eventtype": "TC",
+   "fromdate": "2026-09-13T21:00:00",
+   "lat": 15.7,
+   "lon": -125.0,
+   "name": "Tropical Cyclone FIFTEEN-E-26",
+   "severitytext": "Tropical Depression (maximum wind speed of 56 km/h)",
+   "todate": "2026-09-15T21:00:00"
+  },
+  {
+   "alertlevel": "Green",
    "country": "Japan",
-   "datemodified": "2026-09-15T19:52:18",
+   "datemodified": "2026-09-15T20:20:52",
    "description": "Tropical Cyclone TWENTYFOUR-26",
    "episodeid": 2,
    "eventid": 1001322,
@@ -42,18 +57,19 @@
   },
   {
    "alertlevel": "Green",
-   "datemodified": "2026-09-15T20:06:00",
-   "description": "Tropical Cyclone FIFTEEN-E-26",
-   "episodeid": 8,
-   "eventid": 1001321,
-   "eventname": "FIFTEEN-E-26",
-   "eventtype": "TC",
-   "fromdate": "2026-09-13T21:00:00",
-   "lat": 16.1,
-   "lon": -123.9,
-   "name": "Tropical Cyclone FIFTEEN-E-26",
-   "severitytext": "Tropical Depression (maximum wind speed of 56 km/h)",
-   "todate": "2026-09-15T15:00:00"
+   "country": "Indonesia",
+   "datemodified": "2026-09-15T21:50:42",
+   "description": "Earthquake in Indonesia",
+   "episodeid": 1734216,
+   "eventid": 1566383,
+   "eventtype": "EQ",
+   "fromdate": "2026-09-15T16:12:49",
+   "iso3": "IDN",
+   "lat": -4.2614,
+   "lon": 102.0754,
+   "name": "Earthquake in Indonesia",
+   "severitytext": "Magnitude 4.5M, Depth:76.224km",
+   "todate": "2026-09-15T16:12:49"
   },
   {
    "alertlevel": "Green",
@@ -1582,22 +1598,6 @@
    "lon": 15.0688,
    "name": "Forest fires in Angola",
    "severitytext": "Green impact for forestfire in 5279 ha",
-   "todate": "2026-09-14T00:00:00"
-  },
-  {
-   "alertlevel": "Green",
-   "country": "Angola",
-   "datemodified": "2026-09-15T15:06:25",
-   "description": "Forest fires in Angola",
-   "episodeid": 10,
-   "eventid": 1031879,
-   "eventtype": "WF",
-   "fromdate": "2026-09-09T00:00:00",
-   "iso3": "AGO",
-   "lat": -15.7298,
-   "lon": 18.7955,
-   "name": "Forest fires in Angola",
-   "severitytext": "Green impact for forestfire in 12589 ha",
    "todate": "2026-09-14T00:00:00"
   }
  ]
