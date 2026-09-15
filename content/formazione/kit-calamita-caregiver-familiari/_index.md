@@ -27,7 +27,7 @@ Le schede sono ispirate a riferimenti su caregiver familiari, assistenza domicil
 - Carta europea del caregiver familiare — Eurocarers
 - WHO — materiali su self-care, salute e benessere
 - L. 104/1992 — legge quadro per l'assistenza, l'integrazione sociale e i diritti delle persone con disabilità
-- L. 33/2023 — deleghe in materia di politiche in favore delle persone anziane
+- L. 33/2023 — deleghe in materia di politiche in favore delle persone anziane, attuata dal D.Lgs. 29/2024 (Sistema nazionale per la popolazione anziana non autosufficiente)
 - SIGG, SICP, AIMA, FISH, FAND — società, associazioni e federazioni di riferimento
 
 Per segnalare bisogni: [segreteria@protezionecivilegenzano.it](mailto:segreteria@protezionecivilegenzano.it).
