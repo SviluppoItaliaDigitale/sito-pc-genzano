@@ -58,6 +58,9 @@ Società del gruppo FS Italiane che gestisce le strade e le autostrade statali i
 ### ANPAS {#anpas}
 Associazione Nazionale Pubbliche Assistenze. Rete nazionale di pubbliche assistenze sanitarie e di protezione civile, partner storica del Dipartimento.
 
+### APS {#aps}
+Associazione di Promozione Sociale. Forma giuridica di Ente del Terzo Settore, distinta dall'OdV: alcune associazioni con compiti di protezione civile (ad esempio nelle radiocomunicazioni di emergenza) sono costituite come APS.
+
 ### AR / Area di ricovero
 Area dove possono essere allestite tende, moduli o altre soluzioni per ospitare temporaneamente persone evacuate.
 
@@ -77,6 +80,9 @@ Agenzia Regionale per la Protezione dell'Ambiente del Lazio. Monitora aria, acqu
 
 ### AS / Area di ammassamento soccorritori
 Area destinata all'arrivo e all'organizzazione di uomini, mezzi e materiali inviati a supporto di un'emergenza.
+
+### ASI {#asi}
+Agenzia Spaziale Italiana. Gestisce la costellazione radar COSMO-SkyMed ed è centro di competenza del Dipartimento della Protezione Civile per i dati satellitari: le sue analisi producono mappe del danno usate nel coordinamento dei soccorsi.
 
 ### ASL {#asl}
 Azienda Sanitaria Locale. Ente che eroga i servizi sanitari sul territorio; in emergenza coordina ospedali, emergenza sanitaria e medici di base.
@@ -457,6 +463,9 @@ Insieme di interventi che riducono gli effetti di un evento dannoso (argini, edi
 
 ### MODIS {#modis}
 Sensore a bordo dei satelliti NASA Terra e Aqua (Moderate Resolution Imaging Spectroradiometer). Riprende ogni giorno l'intera superficie terrestre: le sue immagini documentano incendi, alluvioni e uragani, anche in questo sito.
+
+### MTG {#mtg}
+Meteosat di Terza Generazione (Meteosat Third Generation). Famiglia di satelliti meteorologici europei, sviluppata dall'ESA e operata da EUMETSAT, che sostituisce la generazione precedente con immagini più frequenti e uno strumento dedicato alla sorveglianza dei fulmini.
 
 ## N
 

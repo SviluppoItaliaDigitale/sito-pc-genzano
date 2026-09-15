@@ -1208,3 +1208,30 @@
     - "UHT"
   definizione: "Ultra High Temperature: trattamento che rende un alimento (latte, succhi) conservabile a lungo senza frigorifero prima dell'apertura. Utile nelle scorte di emergenza."
   link: "/glossario/#uht"
+
+# ============================================================
+# Aggiunte 2026-09-15 — sigle ricorrenti segnalate da check-glossario-coverage
+# ============================================================
+
+- id: asi
+  termine: "ASI"
+  varianti:
+    - "ASI"
+    - "Agenzia Spaziale Italiana"
+  definizione: "Agenzia Spaziale Italiana: gestisce la costellazione radar COSMO-SkyMed ed è centro di competenza del Dipartimento della Protezione Civile per i dati satellitari."
+  link: "/glossario/#asi"
+
+- id: aps
+  termine: "APS"
+  varianti:
+    - "APS"
+    - "Associazione di Promozione Sociale"
+  definizione: "Associazione di Promozione Sociale: forma giuridica di Ente del Terzo Settore, distinta dall'OdV. Alcune associazioni con compiti di protezione civile sono costituite come APS."
+  link: "/glossario/#aps"
+
+- id: mtg
+  termine: "MTG"
+  varianti:
+    - "MTG"
+  definizione: "Meteosat di Terza Generazione: famiglia di satelliti meteorologici europei (ESA/EUMETSAT) con immagini più frequenti e sorveglianza dei fulmini."
+  link: "/glossario/#mtg"
