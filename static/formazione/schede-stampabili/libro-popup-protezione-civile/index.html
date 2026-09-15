@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Scheda stampabile: Il libro pop-up della protezione civile — otto tavole da costruire</title>
-  <meta name="description" content="Libro pop-up da stampare, ritagliare e montare: otto tavole che si alzano dalla pagina su terremoto, alluvione, incendio nel bosco, fumo in casa, evacuazione a scuola, zaino di emergenza e chiamata al 112. Con guida al taglio, fustelle in millimetri veri, diploma e tesserino.">
+  <title>Scheda stampabile: Il libro pop-up della protezione civile — 13 tavole da costruire</title>
+  <meta name="description" content="Libro pop-up da stampare, ritagliare e montare: 13 tavole su terremoto, alluvione, temporale, vento forte, incendio, caldo, blackout, gas nei posti chiusi, evacuazione a scuola, zaino di emergenza e chiamata al 112. Un solo meccanismo per tutte: due tagli e una spinta, senza colla. Si sceglie quali tavole stampare.">
   <meta name="robots" content="index, follow">
   <!-- URL preferito: la copia su GitHub Pages rimanda alla produzione. -->
   <link rel="canonical" href="https://www.protezionecivilegenzano.it/formazione/schede-stampabili/libro-popup-protezione-civile/">
@@ -12,7 +12,13 @@
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
   <style>
     .scheda-page:has(> .lib) { padding: 0; }
-    .lib { padding: 10mm 12mm 4mm; display: flex; flex-direction: column; min-height: 238mm; }
+    /* La banda affiliazioni (.scheda-page::after, da scheda-print.css) è un
+       fratello di .lib: con il padding del foglio azzerato qui sopra andrebbe
+       da un bordo all'altro della pagina invece di restare inquadrata come
+       nelle altre schede. Le si restituisce lo stesso margine orizzontale
+       usato dentro .lib, così il logo non tocca i bordi del foglio. */
+    .scheda-page:has(> .lib)::after { margin: 3mm 12mm 0; }
+    .lib { padding: 10mm 12mm 4mm; display: flex; flex-direction: column; min-height: 258mm; }
     .lib .scheda-header { margin-bottom: 2mm; align-items: center; }
     .lib .scheda-header .scheda-titolo-principale { font-size: 23px; line-height: 1.15; }
     .lib .scheda-header .scheda-sottotitolo { font-size: 11px; }
@@ -30,26 +36,55 @@
     .lib-pitto { display: flex; flex-direction: column; gap: 2mm; flex: 0 0 22mm; }
     .lib-pitto img { width: 22mm; height: 22mm; object-fit: contain; }
 
-    .lib-allerta { width: 100%; border-collapse: collapse; margin-top: 2.5mm; }
-    .lib-allerta td { font-size: 9.5px; line-height: 1.28; padding: 0.7mm 2mm 0.7mm 0;
-      vertical-align: top; border-top: 1px solid #e2e8f0; }
-    .lib-allerta td:first-child { width: 26mm; font-weight: 700; white-space: nowrap; }
-    .lib-all-che { width: 24mm; font-style: italic; color: #475569; }
-    .lib-all-pal { display: inline-block; width: 3.5mm; height: 3.5mm; border-radius: 1px;
-      border: 0.6px solid #1a1a1a; margin-right: 1.4mm; vertical-align: -0.5mm; }
-
     .lib-fustella { margin-top: 3mm; border: 1.4px dashed #0b3c5d; border-radius: 3px;
-      padding: 2.5mm 3mm; background: #f8fafc; }
+      padding: 2.5mm 3mm; background: #f8fafc;
+      /* si prende lo spazio che avanza sul foglio: un disegno grande si ritaglia
+         meglio di uno piccolo, e lo spazio altrimenti resterebbe bianco. */
+      flex: 1 1 auto; display: flex; flex-direction: column; min-height: 0; }
     .lib-fustella-tit { font-size: 10.5px; font-weight: 700; color: var(--scheda-blu);
       margin-bottom: 1.5mm; }
     .lib-disegno { text-align: center; background: #fff; border: 1px solid #cbd5e1;
-      border-radius: 2px; padding: 2mm; }
-    .lib-disegno .fust { max-width: 100%; height: auto; }
+      border-radius: 2px; padding: 2mm; flex: 1 1 0; min-height: 60mm;
+      display: flex; align-items: center; justify-content: center; }
+    /* nessuna misura fissa sull'SVG: si allarga fino al riquadro, così il
+       disegno da ritagliare è grande quanto il foglio permette. */
+    .lib-disegno .fust { width: 100%; max-width: 165mm; height: auto; }
     .lib-montaggio { font-size: 10px; line-height: 1.4; margin: 1.8mm 0 0; color: #1a1a1a; }
 
-    .lib-tessere { display: grid; grid-template-columns: repeat(7, 1fr); gap: 1.5mm; margin-top: 3mm; }
+    /* i tre passi, uguali per tutte le tavole */
+    .lib-passi { list-style: none; display: flex; gap: 4mm; margin: 3mm 0 0; padding: 0; }
+    .lib-passo { flex: 1; border: 1px solid #cbd5e1; border-radius: 3px; padding: 2.5mm;
+      display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .lib-passo-n { width: 7mm; height: 7mm; border-radius: 50%; background: var(--scheda-blu);
+      color: #fff; font-weight: 800; font-size: 12px; line-height: 7mm; margin-bottom: 1.5mm; }
+    .lib-passo-dis svg { width: 42mm; height: 28mm; }
+    .lib-passo-testo strong { display: block; font-size: 11px; color: var(--scheda-blu);
+      margin-top: 1mm; }
+    .lib-passo-testo span { font-size: 9.5px; line-height: 1.35; }
+    .lib-guida-intro { font-size: 11.5px; line-height: 1.45; margin: 0 0 1mm; }
+
+    .lib-guida { display: flex; gap: 5mm; margin-top: 4mm; align-items: flex-start; }
+    .lib-box { flex: 1; border: 1px solid #cbd5e1; border-radius: 3px; padding: 2.5mm 3mm; }
+    .lib-box-largo { margin-top: 3mm; flex: 0 0 auto; }
+    .lib-box h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em;
+      color: var(--scheda-blu); margin: 0 0 1.5mm; padding-bottom: 0.6mm;
+      border-bottom: 1.5px solid var(--scheda-blu); }
+    .lib-box ul { margin: 0 0 0 4.5mm; padding: 0; }
+    .lib-box li { font-size: 10.5px; line-height: 1.35; margin-bottom: 0.9mm; }
+    .lib-extra { font-size: 10.5px; line-height: 1.4; margin: 0; }
+    .lib-legenda td { font-size: 10.5px; line-height: 1.35; padding: 1mm 2mm 1mm 0;
+      vertical-align: middle; }
+    .tr-taglio, .tr-monte, .tr-valle { display: block; width: 20mm; height: 0; }
+    .tr-taglio { border-top: 2px solid #111827; }
+    .tr-monte { border-top: 2px dashed #0284c7; }
+    .tr-valle { border-top: 2px dotted #ea580c; }
+    .lib-trucco { font-size: 10px; line-height: 1.4; margin: 2mm 0 0; }
+
+    .lib-tessere-box { margin-top: 3mm; border: 1.4px dashed #0b3c5d; border-radius: 3px;
+      padding: 2.5mm 3mm; background: #f8fafc; }
+    .lib-tessere { display: grid; grid-template-columns: repeat(7, 1fr); gap: 1.5mm; }
     .lib-tessera { border: 1px solid #111827; border-radius: 2px; padding: 1.5mm 0.6mm;
-      text-align: center; }
+      text-align: center; background: #fff; }
     .lib-tessera img { width: 15mm; height: 15mm; object-fit: contain; }
     .lib-tessera span { display: block; font-size: 7px; font-weight: 700; line-height: 1.1;
       margin-top: 0.8mm; }
@@ -81,31 +116,6 @@
     .lib-cop-indice li { font-size: 10px; margin-bottom: 0.6mm; }
     .lib-cop-nota { font-size: 9.5px; line-height: 1.45; text-align: left; max-width: 150mm;
       margin: 4mm auto 0; background: #fff7ed; border-left: 3px solid #ea580c; padding: 2mm 3mm; }
-    .lib-cop-loghi { display: flex; justify-content: center; gap: 8mm; margin: auto 0 0; padding-top: 4mm; }
-    .lib-logo { text-align: center; }
-    .lib-logo img { width: 15mm; height: 15mm; object-fit: contain; display: block; margin: 0 auto 1mm; }
-    .lib-logo span { font-size: 7.5px; color: #475569; }
-
-    /* guida */
-    .lib-guida { display: flex; gap: 4mm; }
-    .lib-box { flex: 1; border: 1px solid #cbd5e1; border-radius: 3px; padding: 2.5mm 3mm; }
-    .lib-box-largo { margin-top: 3mm; }
-    .lib-box h3 { font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em;
-      color: var(--scheda-blu); margin: 0 0 1.5mm; }
-    .lib-box ul { margin: 0 0 0 4.5mm; padding: 0; }
-    .lib-box li { font-size: 10.5px; line-height: 1.35; margin-bottom: 1mm; }
-    .lib-legenda td { font-size: 10.5px; padding: 1mm 0; vertical-align: middle; }
-    .lib-legenda td:first-child { width: 22mm; }
-    .tr-taglio, .tr-monte, .tr-valle, .tr-colla { display: block; width: 20mm; height: 0; }
-    .tr-taglio { border-top: 2px solid #111827; }
-    .tr-monte { border-top: 2px dashed #0284c7; }
-    .tr-valle { border-top: 2px dotted #ea580c; }
-    .tr-colla { height: 4mm; background: repeating-linear-gradient(45deg, #fef3c7, #fef3c7 2px,
-      #fde68a 2px, #fde68a 4px); border: 1px dashed #d97706; }
-    .lib-trucco { font-size: 10px; line-height: 1.4; margin: 2mm 0 0; }
-    .lib-mec td { font-size: 10.5px; line-height: 1.35; padding: 1.2mm 2mm 1.2mm 0;
-      vertical-align: top; border-top: 1px solid #e2e8f0; }
-    .lib-mec-nome { width: 40mm; font-weight: 700; color: var(--scheda-blu); }
 
     /* diploma e tesserino */
     .lib-diploma { margin-top: 2mm; }
@@ -131,6 +141,28 @@
     .lib-tess-retro div { font-size: 9.5px; line-height: 1.35; margin-bottom: 0.8mm; }
     .lib-tess-nota { font-size: 9.5px; margin: 1.5mm 0 0; color: #475569; }
 
+    /* scelta delle tavole da stampare (solo a schermo) */
+    .lib-scelta { border: 2px solid var(--scheda-blu); border-radius: 6px; padding: 0.9rem 1rem;
+      margin: 0 0 1rem; }
+    .lib-scelta legend { font-weight: 700; color: var(--scheda-blu); padding: 0 0.4rem;
+      font-size: 1rem; }
+    .lib-scelta-griglia { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 0.3rem 1rem; margin: 0.4rem 0 0; }
+    .lib-scelta label { display: flex; align-items: flex-start; gap: 0.45rem; font-size: 0.9rem;
+      line-height: 1.3; padding: 0.15rem 0; cursor: pointer; }
+    .lib-scelta input { margin-top: 0.15rem; width: 1.05rem; height: 1.05rem; flex: 0 0 auto; }
+    .lib-scelta input:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 2px; }
+    .lib-scelta-azioni { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center;
+      margin-top: 0.8rem; padding-top: 0.6rem; border-top: 1px solid #cbd5e1; }
+    .lib-scelta-azioni button { font: inherit; padding: 0.35rem 0.8rem; border-radius: 5px;
+      border: 1.5px solid var(--scheda-blu); background: #fff; color: var(--scheda-blu);
+      cursor: pointer; }
+    .lib-scelta-azioni button.primario { background: var(--scheda-blu); color: #fff; }
+    .lib-scelta-azioni button:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 2px; }
+    .lib-conteggio { font-size: 0.9rem; }
+    .lib-esclusa { opacity: 0.4; }
+    .lib-esclusa .lib { filter: grayscale(1); }
+
     .lib-indice { margin: 0 0 1rem; }
     .lib-indice a { display: inline-block; padding: 0.2rem 0.55rem; margin: 0.12rem;
       border: 1.5px solid var(--scheda-blu); border-radius: 5px; color: var(--scheda-blu);
@@ -138,16 +170,20 @@
     .lib-indice a:hover, .lib-indice a:focus { background: var(--scheda-blu); color: #fff;
       outline: 2px solid #ffbe2e; outline-offset: 2px; }
 
+    @media print {
+      .lib-esclusa { display: none !important; }
+      .lib-ultima-stampata { page-break-after: auto !important; }
+    }
+
     @media screen and (max-width: 700px) {
       .lib { padding: 5mm 4mm; min-height: auto; }
-      .lib-corpo, .lib-guida, .lib-cop-fasce, .lib-tess-carta { flex-direction: column; }
+      .lib-corpo, .lib-guida, .lib-cop-fasce, .lib-tess-carta, .lib-passi { flex-direction: column; }
       .lib-pitto { flex-direction: row; }
       .lib-tessere { grid-template-columns: repeat(3, 1fr); }
       .lib-cop-indice ol { columns: 1; }
-      .lib-cop-loghi { flex-wrap: wrap; gap: 4mm; }
       .lib-tess-fronte { border-right: none; border-bottom: 2px dashed #0284c7; }
     }
-  </style>
+</style>
 </head>
 <body>
   <div class="scheda-toolbar no-print">
@@ -156,133 +192,174 @@
     <button type="button" onclick="window.print()">&#128424;&#65039; Stampa o salva come PDF</button>
   </div>
   <div class="no-print" style="max-width:21cm;margin:1.5rem auto 0;padding:0 1rem;">
-    <p style="margin:0 0 0.6rem;"><strong>Undici fogli.</strong> La copertina, la guida al taglio,
-    le <strong>otto tavole</strong> e il diploma. Stampa <strong>a dimensione reale</strong>
-    («100%», non «adatta alla pagina»): le fustelle sono disegnate in millimetri veri e devono
-    combaciare. Su cartoncino le scene stanno in piedi; su carta normale si afflosciano.</p>
-    <nav class="lib-indice" aria-label="Vai alla tavola"><a href="#copertina">Copertina</a>
-    <a href="#guida">Guida</a> <a href="#tav1">Tavola 1</a> <a href="#tav2">Tavola 2</a> <a href="#tav3">Tavola 3</a> <a href="#tav4">Tavola 4</a> <a href="#tav5">Tavola 5</a> <a href="#tav6">Tavola 6</a> <a href="#tav7">Tavola 7</a> <a href="#tav8">Tavola 8</a> <a href="#diploma">Diploma</a></nav>
+    <p style="margin:0 0 0.8rem;"><strong>16 fogli in tutto</strong>: la copertina, le
+    istruzioni, 13 tavole e il diploma. Tutte le tavole si montano allo stesso modo —
+    <strong>due tagli e una spinta, senza colla</strong> — quindi si impara una volta sola.
+    Va bene la carta della stampante; su cartoncino leggero il gradino sta su meglio.</p>
+    <form id="scelta" class="lib-scelta no-print">
+      <fieldset style="border:0;padding:0;margin:0">
+        <legend>Scegli che cosa stampare</legend>
+        <p style="margin:0;font-size:0.92rem">Servono solo alcune emergenze? Togli la spunta alle
+        altre: verranno stampati soltanto i fogli che hai lasciato selezionati.</p>
+        <div class="lib-scelta-griglia"><label><input type="checkbox" value="copertina" checked> <span>Copertina</span></label><label><input type="checkbox" value="guida" checked> <span>Come si fa (istruzioni)</span></label><label><input type="checkbox" value="tav1" checked> <span>Tavola 1 — Chi è la Protezione Civile</span></label><label><input type="checkbox" value="tav2" checked> <span>Tavola 2 — Sotto il tavolo, e tieni la testa</span></label><label><input type="checkbox" value="tav3" checked> <span>Tavola 3 — Si sale, non si scende</span></label><label><input type="checkbox" value="tav4" checked> <span>Tavola 4 — Quando tuona, si entra</span></label><label><input type="checkbox" value="tav5" checked> <span>Tavola 5 — Il pericolo è quello che vola</span></label><label><input type="checkbox" value="tav6" checked> <span>Tavola 6 — Va' via dalla parte opposta al fumo</span></label><label><input type="checkbox" value="tav7" checked> <span>Tavola 7 — Il fumo sta in alto, tu sta' in basso</span></label><label><input type="checkbox" value="tav8" checked> <span>Tavola 8 — Bevi prima di avere sete</span></label><label><input type="checkbox" value="tav9" checked> <span>Tavola 9 — Via la luce: si accende la torcia</span></label><label><input type="checkbox" value="tav10" checked> <span>Tavola 10 — Nelle buche non si entra</span></label><label><input type="checkbox" value="tav11" checked> <span>Tavola 11 — Suona l'allarme: in fila, fino al punto di raccolta</span></label><label><input type="checkbox" value="tav12" checked> <span>Tavola 12 — Che cosa c'è nello zaino di emergenza</span></label><label><input type="checkbox" value="tav13" checked> <span>Tavola 13 — La telefonata al 112</span></label><label><input type="checkbox" value="diploma" checked> <span>Diploma e tesserino</span></label></div>
+        <div class="lib-scelta-azioni">
+          <button type="button" id="tutte">Seleziona tutto</button>
+          <button type="button" id="nessuna">Solo copertina e istruzioni</button>
+          <button type="button" id="stampa" class="primario">&#128424;&#65039; Stampa o salva come PDF</button>
+          <span class="lib-conteggio" id="conteggio" role="status" aria-live="polite"></span>
+        </div>
+      </fieldset>
+    </form>
+    <nav class="lib-indice" aria-label="Vai al foglio"><a href="#copertina">Copertina</a> <a href="#guida">Come si fa</a> <a href="#tav1">1. La Squadra Della Sicurezza</a> <a href="#tav2">2. Terremoto</a> <a href="#tav3">3. Alluvione</a> <a href="#tav4">4. Temporale E Fulmini</a> <a href="#tav5">5. Vento Forte</a> <a href="#tav6">6. Incendio Fuori, Nel Bosco</a> <a href="#tav7">7. Incendio Dentro Casa</a> <a href="#tav8">8. Caldo</a> <a href="#tav9">9. Blackout</a> <a href="#tav10">10. Buche E Posti Chiusi</a> <a href="#tav11">11. A Scuola</a> <a href="#tav12">12. Lo Zaino</a> <a href="#tav13">13. Chiedere Aiuto</a> <a href="#diploma">Diploma</a></nav>
   </div>
 
-  <article class="scheda-page" id="copertina">
+  <article class="scheda-page" id="copertina" data-scelta="copertina">
     <div class="lib lib-cop">
       <img class="lib-cop-logo" src="/images/logo-pc-genzano.png"
            alt="Logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma"
            width="400" height="400">
       <div class="lib-cop-ente">Gruppo Comunale Volontari di Protezione Civile<br>Genzano di Roma</div>
       <h1 class="lib-cop-titolo">Il libro pop-up<br>della protezione civile</h1>
-      <div class="lib-cop-occhiello">Otto tavole da ritagliare, piegare e far saltare su</div>
-      <p class="lib-cop-testo">Un libro da costruire con le proprie mani, per imparare che cosa
-      si fa quando trema la terra, quando arriva troppa acqua, quando c'è un incendio, quando
-      suona l'allarme a scuola. Ogni tavola ha una scena che si alza dalla pagina, le frasi da
-      ricordare e il disegno tecnico per ritagliarla.</p>
+      <div class="lib-cop-occhiello">13 tavole da ritagliare, piegare e far saltare su</div>
+      <p class="lib-cop-testo">Un libro da costruire con le proprie mani, per imparare che cosa si
+      fa quando trema la terra, quando arriva troppa acqua, quando tuona, quando manca la luce,
+      quando fa troppo caldo e quando suona l'allarme a scuola. Ogni tavola si monta
+      <strong>allo stesso modo</strong>: due tagli e una spinta. Si impara una volta sola.</p>
       <div class="lib-cop-fasce">
         <div><strong>Età</strong><span>6-11 anni, con un adulto</span></div>
-        <div><strong>Occorrente</strong><span>forbici, colla, un fermacampione, colori per le figure</span></div>
-        <div><strong>Tempo</strong><span>una tavola per volta, 30-40 minuti</span></div>
+        <div><strong>Occorrente</strong><span>forbici e colori. Niente colla</span></div>
+        <div><strong>Tempo</strong><span>una tavola per volta, 15-20 minuti</span></div>
       </div>
-      <div class="lib-cop-indice"><strong>Le otto tavole</strong><ol><li><strong>Tavola 1</strong> — Chi è la Protezione Civile</li><li><strong>Tavola 2</strong> — Sotto il tavolo, e tieni la testa</li><li><strong>Tavola 3</strong> — Si sale, non si scende</li><li><strong>Tavola 4</strong> — Va&#x27; via dalla parte opposta al fumo</li><li><strong>Tavola 5</strong> — Il fumo sta in alto, tu sta&#x27; in basso</li><li><strong>Tavola 6</strong> — Suona l&#x27;allarme: in fila, fino al punto di raccolta</li><li><strong>Tavola 7</strong> — Che cosa c&#x27;è nello zaino di emergenza</li><li><strong>Tavola 8</strong> — La telefonata al 112</li></ol></div>
+      <div class="lib-cop-indice"><strong>Le 13 tavole</strong><ol><li><strong>Tavola 1</strong> — Chi è la Protezione Civile</li><li><strong>Tavola 2</strong> — Sotto il tavolo, e tieni la testa</li><li><strong>Tavola 3</strong> — Si sale, non si scende</li><li><strong>Tavola 4</strong> — Quando tuona, si entra</li><li><strong>Tavola 5</strong> — Il pericolo è quello che vola</li><li><strong>Tavola 6</strong> — Va' via dalla parte opposta al fumo</li><li><strong>Tavola 7</strong> — Il fumo sta in alto, tu sta' in basso</li><li><strong>Tavola 8</strong> — Bevi prima di avere sete</li><li><strong>Tavola 9</strong> — Via la luce: si accende la torcia</li><li><strong>Tavola 10</strong> — Nelle buche non si entra</li><li><strong>Tavola 11</strong> — Suona l'allarme: in fila, fino al punto di raccolta</li><li><strong>Tavola 12</strong> — Che cosa c'è nello zaino di emergenza</li><li><strong>Tavola 13</strong> — La telefonata al 112</li></ol></div>
       <p class="lib-cop-nota">Questo libro è materiale didattico del Gruppo Comunale.
       <strong>Nessun ministero, ufficio scolastico o altro ente governativo lo ha approvato,
       validato o adottato</strong>: è uno spunto per lavorare in classe o a casa, non un
       programma da seguire. Le indicazioni di autoprotezione riprendono le pagine del nostro
       sito, che citano le fonti istituzionali; dove un'indicazione ufficiale dice altro, vale
       quella. In emergenza si chiama sempre il <strong>112</strong>.</p>
-      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
-        <span>LIBRO-POPUP · Foglio 1 di 11 · Rev. 1 · 13/09/2026</span></footer>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span><span>LIBRO-POPUP · Copertina · Rev. 2 · 15/09/2026</span></footer>
     </div>
   </article>
-
-  <article class="scheda-page" id="guida">
+  <article class="scheda-page" id="guida" data-scelta="guida">
     <div class="lib">
       <header class="scheda-header">
         <div class="scheda-logo" aria-hidden="true">PC</div>
         <div class="scheda-intestazione">
           <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
-          <h2 class="scheda-titolo-principale">Come si taglia e come si piega</h2>
-          <div class="scheda-sottotitolo">La legenda dei tracciati, i materiali e i quattro meccanismi del libro</div>
+          <h2 class="scheda-titolo-principale">Come si fa</h2>
+          <div class="scheda-sottotitolo">Tre passi, uguali per tutte le tavole</div>
         </div>
       </header>
-      <p class="lib-tag">PRIMA DI COMINCIARE</p>
+      <p class="lib-tag">SI IMPARA UNA VOLTA SOLA</p>
+      <p class="lib-guida-intro">Tutte le tavole di questo libro si montano nello stesso modo.
+      Non c'è colla, non ci sono alette da incollare e non serve il fermacampione: si ritaglia, si
+      piega a metà, si taglia due volte, si spinge. Quando hai fatto la prima tavola, sai fare anche le altre.</p>
+      <ol class="lib-passi"><li class="lib-passo"><div class="lib-passo-n">1</div><div class="lib-passo-dis"><svg viewBox="0 0 60 40" role="img" aria-label="Il foglio si piega a metà lungo la riga blu orizzontale">
+      <rect x="6" y="5" width="48" height="30" stroke="#64748b" stroke-width="0.6" fill="none" rx="1"/>
+      <line x1="4" y1="20" x2="56" y2="20" stroke="#0284c7" stroke-width="1" stroke-dasharray="3 2"/>
+      <path d="M46,9 q7,6 0,11" stroke="#111827" stroke-width="0.8" fill="none"/>
+      <path d="M46,20 l1.2,-2.4 l-2.4,0 Z" fill="#111827"/></svg></div><div class="lib-passo-testo"><strong>Ritaglia e piega a metà</strong><span>Ritaglia il rettangolo, poi piegalo sulla riga blu. Passaci sopra l'unghia.</span></div></li><li class="lib-passo"><div class="lib-passo-n">2</div><div class="lib-passo-dis"><svg viewBox="0 0 60 40" role="img" aria-label="Si tagliano due righe nere che partono dalla piega">
+      <rect x="12" y="6" width="36" height="28" stroke="#64748b" stroke-width="0.6" fill="none" rx="1"/>
+      <line x1="12" y1="6" x2="48" y2="6" stroke="#0284c7" stroke-width="1.2"/>
+      <line x1="24" y1="6" x2="24" y2="20" stroke="#111827" stroke-width="1.2"/>
+      <line x1="36" y1="6" x2="36" y2="20" stroke="#111827" stroke-width="1.2"/>
+      <line x1="24" y1="20" x2="36" y2="20" stroke="#ea580c" stroke-width="0.8" stroke-dasharray="0.8 1.6"/></svg></div><div class="lib-passo-testo"><strong>Taglia le due righe nere</strong><span>Partono dalla piega. Ferma le forbici dove comincia la riga arancione.</span></div></li><li class="lib-passo"><div class="lib-passo-n">3</div><div class="lib-passo-dis"><svg viewBox="0 0 60 40" role="img" aria-label="Aprendo il foglio la linguetta si spinge in avanti e diventa un gradino in rilievo">
+      <path d="M8,32 L30,26 L52,32" stroke="#64748b" stroke-width="0.6" fill="none"/>
+      <path d="M8,32 L8,12 L30,6 L30,26 Z" stroke="#64748b" stroke-width="0.6" fill="#f8fafc"/>
+      <path d="M52,32 L52,12 L30,6 L30,26 Z" stroke="#64748b" stroke-width="0.6" fill="#fff"/>
+      <path d="M22,24 L38,24 L38,16 L22,16 Z" stroke="#111827" stroke-width="0.9" fill="#fff"/>
+      <path d="M30,24 L30,16" stroke="#ea580c" stroke-width="0.6" stroke-dasharray="0.8 1.6"/></svg></div><div class="lib-passo-testo"><strong>Apri e spingi in avanti</strong><span>Apri il pezzo e spingi la linguetta verso di te: il gradino si alza da solo.</span></div></li></ol>
       <div class="lib-guida">
         <div class="lib-box">
           <h3>Che cosa serve</h3>
           <ul>
-            <li><strong>Fogli delle tavole</strong>: cartoncino da 200-250 g/m², così la scena sta in piedi.</li>
-            <li><strong>Pezzi mobili</strong>: cartoncino più sottile, 160-190 g/m².</li>
-            <li><strong>Colla</strong>: stick o vinilica in poca quantità, stesa con un pennellino.</li>
-            <li><strong>Un fermacampione</strong> per il disco della Tavola 1.</li>
-            <li>Forbici a punta arrotondata, righello, e una penna scarica per segnare le pieghe.</li>
-            <li><strong>I colori</strong>: le figure sono in bianco e nero apposta. Coloratele prima
-            di ritagliare, così ogni libro viene diverso dagli altri.</li>
+            <li><strong>Forbici</strong> a punta arrotondata.</li>
+            <li><strong>Colori</strong>: le figure sono in bianco e nero apposta, così ogni libro
+            viene diverso. Colora prima di ritagliare.</li>
+            <li><strong>Carta</strong>: va bene quella della stampante. Su cartoncino leggero il
+            gradino sta su meglio, ma non è obbligatorio.</li>
           </ul>
         </div>
         <div class="lib-box">
-          <h3>La legenda dei tracciati</h3>
+          <h3>Le righe del disegno</h3>
           <table class="lib-legenda">
-            <tr><td><span class="tr-taglio"></span></td><td><strong>Riga nera continua</strong> — qui si taglia.</td></tr>
-            <tr><td><span class="tr-monte"></span></td><td><strong>Riga blu tratteggiata</strong> — piega a monte: la cresta viene verso di te.</td></tr>
-            <tr><td><span class="tr-valle"></span></td><td><strong>Riga arancione punteggiata</strong> — piega a valle: la piega va indietro.</td></tr>
-            <tr><td><span class="tr-colla"></span></td><td><strong>Area a righine gialle</strong> — qui va la colla.</td></tr>
+            <tr><td><span class="tr-taglio"></span></td><td><strong>Riga nera</strong> — qui si taglia.</td></tr>
+            <tr><td><span class="tr-monte"></span></td><td><strong>Riga blu</strong> — qui si piega il foglio a metà.</td></tr>
+            <tr><td><span class="tr-valle"></span></td><td><strong>Riga arancione</strong> — qui si piega la linguetta e si spinge.</td></tr>
           </table>
-          <p class="lib-trucco"><strong>Il trucco che cambia tutto:</strong> prima di piegare,
-          appoggia il righello sulla riga e ripassala con una penna scarica. La carta si
-          schiaccia e la piega viene netta invece di strapparsi.</p>
+          <p class="lib-trucco"><strong>Il trucco:</strong> prima di piegare, passa l'unghia o una
+          penna scarica sulla riga, con il righello. La carta si schiaccia e la piega viene dritta
+          invece di strapparsi.</p>
         </div>
       </div>
       <div class="lib-box lib-box-largo">
-        <h3>I quattro meccanismi</h3>
-        <table class="lib-mec"><tr><td class="lib-mec-nome">Piega a V con due alette</td><td>Ritaglia il rettangolo con l&#x27;aletta sotto. Piega a monte la riga blu al centro e a valle la riga arancione in fondo. Apri la pagina a 90°, appoggia la piega del pezzo sulla piega della pagina e incolla le due alette di sbieco, una per facciata, formando una V. Chiudendo il libro il pezzo si abbassa da solo.</td></tr><tr><td class="lib-mec-nome">Gradino tagliato nella piega</td><td>Piega il foglio a metà. Taglia le due righe nere partendo dalla piega, poi apri e spingi in avanti la linguetta che si è formata: diventa un gradino in rilievo. Non serve colla.</td></tr><tr><td class="lib-mec-nome">Volvella girevole</td><td>Ritaglia il disco e la finestra. Fora il centro del disco e il foglio nello stesso punto, unisci con un fermacampione e apri i braccetti dietro. Girando il disco, nella finestra compare un colore per volta. Il foro lo fa l&#x27;adulto, appoggiando il foglio su un tappetino e premendo con la punta di una matita: non si fa con le forbici.</td></tr><tr><td class="lib-mec-nome">Linguetta scorrevole</td><td>Ritaglia la striscia e le due fessure nel foglio. Infila la striscia da sotto nella prima fessura e da sopra nella seconda. Tirando la linguetta la figura attraversa la scena.</td></tr><tr><td class="lib-mec-nome">Tasca porta-tessere</td><td>Ritaglia la tasca con le tre alette. Piega a valle la riga arancione, incolla le tre alette sul foglio e lascia aperto il lato di sopra: è lì che entrano le tessere.</td></tr></table>
+        <h3>Se vuoi fare di più (facoltativo)</h3>
+        <p class="lib-extra">Fai un <strong>secondo gradino più piccolo</strong> dentro al primo:
+        due tagli più corti, sempre partendo dalla piega, e un'altra spinta. Vengono due scene una
+        dietro l'altra. È lo stesso gesto di prima, quindi non c'è niente di nuovo da imparare.</p>
       </div>
-      <p class="nota-adulto">Per l'adulto: le fustelle sono disegnate in millimetri veri.
-      Stampa <strong>a dimensione reale</strong> (nella finestra di stampa scegli «100%» e non
-      «adatta alla pagina»), altrimenti le misure non tornano e i pezzi non combaciano. Una
-      tavola per volta è il ritmo giusto: montarle tutte in un pomeriggio stanca e il libro
-      viene peggio.</p>
-      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
-        <span>LIBRO-POPUP · Foglio 2 di 11 · Rev. 1 · 13/09/2026</span></footer>
+      <p class="nota-adulto">Per l'adulto: il pezzo si ritaglia seguendo le righe stampate, non
+      misure, quindi la stampa «adatta alla pagina» non rovina il lavoro e non serve impostare il
+      100%. Una tavola per volta è il ritmo giusto: montarle tutte in un pomeriggio stanca e il
+      libro viene peggio.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span><span>LIBRO-POPUP · Guida · Rev. 2 · 15/09/2026</span></footer>
     </div>
   </article>
-
-  <article class="scheda-page" id="tav1">
+  <article class="scheda-page" id="tav1" data-scelta="tav1">
     <div class="lib">
       <header class="scheda-header">
         <div class="scheda-logo" aria-hidden="true">PC</div>
         <div class="scheda-intestazione">
           <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
           <h2 class="scheda-titolo-principale">Chi è la Protezione Civile</h2>
-          <div class="scheda-sottotitolo">Il Sindaco, i volontari e il semaforo dell&#x27;allerta meteo</div>
+          <div class="scheda-sottotitolo">Il Sindaco, i volontari e il numero da chiamare</div>
         </div>
       </header>
       <p class="lib-tag">TAVOLA 1 · LA SQUADRA DELLA SICUREZZA</p>
       <div class="lib-corpo">
         <div class="lib-testo">
-          <p>La <strong>Protezione Civile</strong> è fatta di persone che si preparano prima che succeda qualcosa, e che intervengono quando succede: per proteggere le persone, gli animali, le case e l'ambiente.<br>Nel Comune la prima autorità di protezione civile è il <strong>Sindaco</strong>. I <strong>volontari</strong> sono cittadini che si sono formati e danno il loro tempo: non sono pagati, e si riconoscono dalla divisa ad alta visibilità.</p>
-          <div class="lib-regole"><h3>Che cosa si fa</h3><ul>
-          <li>I volontari non si chiamano direttamente: in emergenza si chiama il 112.</li>
-          <li>Il bollettino di allerta dice che tempo è previsto, non che cosa è già successo.</li>
-          </ul></div>
+          <p>La <strong>Protezione Civile</strong> è fatta di persone che si preparano prima che succeda qualcosa, e che intervengono quando succede: per proteggere le persone, gli animali, le case e l'ambiente. Nel Comune la prima autorità di protezione civile è il <strong>Sindaco</strong>. I <strong>volontari</strong> sono cittadini che si sono formati e danno il loro tempo: non sono pagati, e si riconoscono dalla divisa ad alta visibilità.</p>
+          <div class="lib-regole"><h3>Che cosa si fa</h3><ul><li>I volontari non si chiamano direttamente: in emergenza si chiama il 112.</li><li>Il bollettino di allerta dice che tempo è previsto, non che cosa è già successo.</li><li>Prepararsi prima serve più che correre dopo.</li></ul></div>
         </div>
-        <div class="lib-pitto" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/dis-volontari.png" alt="Due volontari in divisa aiutano e sostengono una persona" width="500" height="500"><img src="/pittogrammi/arasaac-bn/alf-y-semaforo.png" alt="Semaforo" width="500" height="500"></div>
+        <div class="lib-pitto"><img src="/pittogrammi/arasaac-bn/alf-p-protezione-civile.png" alt="Simbolo della protezione civile" width="500" height="500"></div>
       </div>
-      <table class="lib-allerta"><tr><td><span class="lib-all-pal" style="background:#16a34a"></span>VERDE</td><td class="lib-all-che">Nessuna allerta</td><td>Giornata normale. Niente da fare di speciale.</td></tr><tr><td><span class="lib-all-pal" style="background:#ca8a04"></span>GIALLA</td><td class="lib-all-che">Attenzione</td><td>Possono esserci temporali forti in qualche zona. Sta&#x27; lontano da fossi e sottopassaggi.</td></tr><tr><td><span class="lib-all-pal" style="background:#ea580c"></span>ARANCIONE</td><td class="lib-all-che">Preallarme</td><td>I fenomeni possono essere diffusi. Si esce solo se serve, e il kit è pronto.</td></tr><tr><td><span class="lib-all-pal" style="background:#dc2626"></span>ROSSA</td><td class="lib-all-che">Allarme</td><td>Fenomeni molto intensi. Non si esce se non serve davvero, e si sta lontani dai piani interrati.</td></tr></table>
       <div class="lib-fustella">
-        <div class="lib-fustella-tit">La fustella · Volvella girevole</div>
-        <div class="lib-disegno"><svg class="fust" width="148mm" height="86mm" viewBox="0 0 148 86" role="img" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="colla" width="3" height="3" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="3" height="3" fill="#fef3c7"/><line x1="0" y1="0" x2="0" y2="3" stroke="#d97706" stroke-width="0.8"/></pattern></defs><path d="M42 42 L42.0 8.0 A34 34 0 0 1 76.0 42.0 Z" fill="#16a34a" fill-opacity="0.18" stroke="#111827" stroke-width="0.4"/><text x="59.3" y="24.7" text-anchor="middle" font-size="3.4" font-weight="bold" fill="#111827">VERDE</text><path d="M42 42 L76.0 42.0 A34 34 0 0 1 42.0 76.0 Z" fill="#ca8a04" fill-opacity="0.18" stroke="#111827" stroke-width="0.4"/><text x="59.3" y="59.3" text-anchor="middle" font-size="3.4" font-weight="bold" fill="#111827">GIALLA</text><path d="M42 42 L42.0 76.0 A34 34 0 0 1 8.0 42.0 Z" fill="#ea580c" fill-opacity="0.18" stroke="#111827" stroke-width="0.4"/><text x="24.7" y="59.3" text-anchor="middle" font-size="3.4" font-weight="bold" fill="#111827">ARANCIONE</text><path d="M42 42 L8.0 42.0 A34 34 0 0 1 42.0 8.0 Z" fill="#dc2626" fill-opacity="0.18" stroke="#111827" stroke-width="0.4"/><text x="24.7" y="24.7" text-anchor="middle" font-size="3.4" font-weight="bold" fill="#111827">ROSSA</text><circle cx="42" cy="42" r="34" stroke="#111827" stroke-width="0.5" fill="none"/><circle cx="42" cy="42" r="2" stroke="#111827" stroke-width="0.5" fill="none"/><line x1="42" y1="42" x2="22" y2="83" stroke="#64748b" stroke-width="0.3"/><text x="21" y="86" text-anchor="middle" font-size="2.8" fill="#475569">foro per il fermacampione</text><line x1="42" y1="42" x2="56.1" y2="27.9" stroke="#64748b" stroke-width="0.3" stroke-dasharray="1 1"/><circle cx="56.1" cy="27.9" r="1.2" fill="none" stroke="#111827" stroke-width="0.4"/><rect x="90" y="52" width="20" height="12" fill="none" stroke="#111827" stroke-width="0.7"/><text x="100" y="59.5" text-anchor="middle" font-size="2.8" fill="#111827" font-weight="bold">FINESTRA</text><text x="100" y="69" text-anchor="middle" font-size="2.4" fill="#475569">20 × 12 mm</text><text x="88" y="26" font-size="2.8" fill="#475569">la finestra si ritaglia nel foglio,</text><text x="88" y="30" font-size="2.8" fill="#475569">non nel disco: è la finta da cui</text><text x="88" y="34" font-size="2.8" fill="#475569">si vede un colore per volta.</text><text x="88" y="40" font-size="2.8" fill="#475569">Deve stare tutta dentro uno spicchio:</text><text x="88" y="44" font-size="2.8" fill="#475569">a cavallo di due, i colori si vedrebbero a coppie.</text><text x="88" y="48" font-size="2.8" fill="#475569">Il centro va a 20 mm dal foro, in diagonale.</text><line x1="8" y1="83" x2="76" y2="83" stroke="#64748b" stroke-width="0.3"/><line x1="8" y1="81.8" x2="8" y2="84.2" stroke="#64748b" stroke-width="0.3"/><line x1="76" y1="81.8" x2="76" y2="84.2" stroke="#64748b" stroke-width="0.3"/><text x="42.0" y="81.2" text-anchor="middle" font-size="2.6" fill="#475569">68 mm di diametro</text></svg></div>
-        <p class="lib-montaggio">Ritaglia il disco e la finestra. Fora il centro del disco e il foglio nello stesso punto, unisci con un fermacampione e apri i braccetti dietro. Girando il disco, nella finestra compare un colore per volta. Il foro lo fa l&#x27;adulto, appoggiando il foglio su un tappetino e premendo con la punta di una matita: non si fa con le forbici.</p>
+        <div class="lib-fustella-tit">Il gradino di questa tavola</div>
+        <div class="lib-disegno"><svg class="fust" viewBox="0 0 108 74" role="img"
+     aria-label="Pezzo da ritagliare: un rettangolo con la piega a metà, due tagli che partono dalla piega e una linguetta da spingere in avanti, con sopra volontari in divisa"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect x="6" y="6" width="96" height="54" stroke="#111827" stroke-width="1" fill="none" rx="1"/>
+  <text x="54" y="4.2" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">1 · RITAGLIA IL RETTANGOLO</text>
+  <line x1="6" y1="30" x2="102" y2="30" stroke="#0284c7" stroke-width="1" stroke-dasharray="3 2"/>
+  <text x="54" y="27.5" text-anchor="middle" font-size="3" fill="#0284c7" font-weight="bold">2 · PIEGA QUI, A META&#x27;</text>
+  <line x1="36" y1="30" x2="36" y2="48" stroke="#111827" stroke-width="1.2"/>
+  <line x1="72" y1="30" x2="72" y2="48" stroke="#111827" stroke-width="1.2"/>
+  <line x1="26" y1="39" x2="34.5" y2="39" stroke="#111827" stroke-width="0.4"/>
+  <path d="M36,39 l-2.2,-1.1 l0,2.2 Z" fill="#111827"/>
+  <text x="18" y="40" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">3 · TAGLIA</text>
+  <line x1="82" y1="39" x2="73.5" y2="39" stroke="#111827" stroke-width="0.4"/>
+  <path d="M72,39 l2.2,-1.1 l0,2.2 Z" fill="#111827"/>
+  <text x="90" y="40" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">3 · TAGLIA</text>
+  <image xlink:href="/pittogrammi/arasaac-bn/dis-volontari.png" x="41" y="31" width="26" height="16" preserveAspectRatio="xMidYMid meet"/>
+  <line x1="36" y1="48" x2="72" y2="48" stroke="#ea580c" stroke-width="0.9" stroke-dasharray="0.8 1.6" stroke-linecap="round"/>
+  <text x="54" y="52.5" text-anchor="middle" font-size="3" fill="#ea580c" font-weight="bold">4 · SPINGI IN AVANTI QUESTA LINGUETTA</text>
+  <text x="54" y="58.5" text-anchor="middle" font-size="4" fill="#111827" font-weight="bold">I VOLONTARI</text>
+  <text x="54" y="68" text-anchor="middle" font-size="3" fill="#64748b" font-weight="normal">Coloralo prima di ritagliare. Niente colla.</text>
+</svg></div>
+        <p class="lib-montaggio"><strong>Sempre gli stessi passi, su tutte le tavole:</strong> ritaglia il
+        rettangolo, piegalo a metà sulla riga blu, taglia le due righe nere partendo dalla piega,
+        apri e spingi in avanti la linguetta. Niente colla e niente misure da rispettare.</p>
       </div>
-      <p class="nota-adulto">Per l'adulto: ritaglia tu le parti piccole con i bambini
-      fino ai 6 anni; dai 7 possono ritagliare da seduti, sorvegliati, con forbici a punta
-      arrotondata. Fonte delle frasi di questa tavola: Livelli di allerta: pagina «Allerte meteo» del sito, che riprende il Centro Funzionale Regionale del Lazio. Non sostituiscono il
-      piano di emergenza della scuola o dell'edificio in cui vi trovate: se un'indicazione
-      ufficiale dice altro, vale quella.</p>
+      
+      <p class="nota-adulto">Per l'adulto: fino ai 6 anni ritaglia tu; dai 7 anni ritagliano
+      loro da seduti, sorvegliati, con forbici a punta arrotondata. Le frasi di questa tavola
+      vengono dalla pagine «Chi siamo» e «Allerte meteo» del sito. Non sostituiscono il piano di emergenza della scuola o
+      dell'edificio in cui vi trovate: se un'indicazione ufficiale dice altro, vale quella.</p>
       <p class="lib-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza.</p>
-      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
-        <span>LIBRO-POPUP · Foglio 3 di 11 · Rev. 1 · 13/09/2026</span></footer>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span><span>LIBRO-POPUP · Tavola 1 di 13 · Rev. 2 · 15/09/2026</span></footer>
     </div>
   </article>
-
-  <article class="scheda-page" id="tav2">
+  <article class="scheda-page" id="tav2" data-scelta="tav2">
     <div class="lib">
       <header class="scheda-header">
         <div class="scheda-logo" aria-hidden="true">PC</div>
@@ -296,232 +373,587 @@
       <div class="lib-corpo">
         <div class="lib-testo">
           <p>Durante una scossa la cosa più pericolosa non è il pavimento che si muove: sono le <strong>cose che cadono</strong>. Un tavolo robusto ti fa da tetto.</p>
-          <div class="lib-regole"><h3>Che cosa si fa</h3><ul>
-          <li>Mettiti sotto un tavolo robusto e copriti la testa con le braccia.</li>
-          <li>Non correre fuori mentre trema: le cose cadono proprio davanti alle porte.</li>
-          <li>Sta' lontano da finestre, vetri, specchi e mobili pesanti.</li>
-          <li>Non prendere l'ascensore. Quando la scossa finisce, esci con calma dalle scale.</li>
-          <li>Se sei all'aperto, va' in uno spazio aperto, lontano da edifici e alberi.</li>
-          </ul></div>
+          <div class="lib-regole"><h3>Che cosa si fa</h3><ul><li>Mettiti sotto un tavolo robusto e copriti la testa con le braccia.</li><li>Non correre fuori mentre trema: le cose cadono proprio davanti alle porte.</li><li>Sta' lontano da finestre, vetri, specchi e mobili pesanti.</li><li>Non prendere l'ascensore. Quando la scossa finisce, esci con calma dalle scale.</li><li>Se sei all'aperto, va' in uno spazio aperto, lontano da edifici e alberi.</li></ul></div>
         </div>
-        <div class="lib-pitto" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-t-terremoto.png" alt="Persona che si ripara sotto un tavolo durante un terremoto" width="500" height="500"></div>
+        <div class="lib-pitto"><img src="/pittogrammi/arasaac-bn/alf-t-terremoto.png" alt="Persona che si ripara sotto un tavolo" width="500" height="500"></div>
       </div>
       <div class="lib-fustella">
-        <div class="lib-fustella-tit">La fustella · Piega a V con due alette</div>
-        <div class="lib-disegno"><svg class="fust" width="108mm" height="84mm" viewBox="0 0 108 84" role="img" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="colla" width="3" height="3" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="3" height="3" fill="#fef3c7"/><line x1="0" y1="0" x2="0" y2="3" stroke="#d97706" stroke-width="0.8"/></pattern></defs><rect x="6" y="6" width="96" height="52" stroke="#111827" stroke-width="0.5" fill="none" rx="1"/><image href="/pittogrammi/arasaac-bn/pop-tavolo.png" x="34.0" y="10" width="40" height="40" preserveAspectRatio="xMidYMid meet"><title>Tavolo robusto visto di lato</title></image><line x1="54.0" y1="4" x2="54.0" y2="70" stroke="#0284c7" stroke-width="0.5" fill="none" stroke-dasharray="3 2"/><line x1="6" y1="58" x2="102" y2="58" stroke="#ea580c" stroke-width="0.5" fill="none" stroke-dasharray="0.7 1.7" stroke-linecap="round"/><rect x="6" y="58" width="96" height="12" stroke="#111827" stroke-width="0.5" fill="none"/><rect x="8" y="60" width="44.0" height="8" fill="url(#colla)" stroke="#d97706" stroke-width="0.4" stroke-dasharray="1.5 1.5"/><text x="30.0" y="65.1" text-anchor="middle" font-size="2.6" fill="#92400e" font-weight="bold">ALETTA SINISTRA</text><rect x="56.0" y="60" width="44.0" height="8" fill="url(#colla)" stroke="#d97706" stroke-width="0.4" stroke-dasharray="1.5 1.5"/><text x="78.0" y="65.1" text-anchor="middle" font-size="2.6" fill="#92400e" font-weight="bold">ALETTA DESTRA</text><line x1="6" y1="80" x2="102" y2="80" stroke="#64748b" stroke-width="0.3"/><line x1="6" y1="78.8" x2="6" y2="81.2" stroke="#64748b" stroke-width="0.3"/><line x1="102" y1="78.8" x2="102" y2="81.2" stroke="#64748b" stroke-width="0.3"/><text x="54.0" y="78.2" text-anchor="middle" font-size="2.6" fill="#475569">96 mm</text></svg></div>
-        <p class="lib-montaggio">Ritaglia il rettangolo con l&#x27;aletta sotto. Piega a monte la riga blu al centro e a valle la riga arancione in fondo. Apri la pagina a 90°, appoggia la piega del pezzo sulla piega della pagina e incolla le due alette di sbieco, una per facciata, formando una V. Chiudendo il libro il pezzo si abbassa da solo.</p>
+        <div class="lib-fustella-tit">Il gradino di questa tavola</div>
+        <div class="lib-disegno"><svg class="fust" viewBox="0 0 108 74" role="img"
+     aria-label="Pezzo da ritagliare: un rettangolo con la piega a metà, due tagli che partono dalla piega e una linguetta da spingere in avanti, con sopra tavolo robusto visto di lato"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect x="6" y="6" width="96" height="54" stroke="#111827" stroke-width="1" fill="none" rx="1"/>
+  <text x="54" y="4.2" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">1 · RITAGLIA IL RETTANGOLO</text>
+  <line x1="6" y1="30" x2="102" y2="30" stroke="#0284c7" stroke-width="1" stroke-dasharray="3 2"/>
+  <text x="54" y="27.5" text-anchor="middle" font-size="3" fill="#0284c7" font-weight="bold">2 · PIEGA QUI, A META&#x27;</text>
+  <line x1="36" y1="30" x2="36" y2="48" stroke="#111827" stroke-width="1.2"/>
+  <line x1="72" y1="30" x2="72" y2="48" stroke="#111827" stroke-width="1.2"/>
+  <line x1="26" y1="39" x2="34.5" y2="39" stroke="#111827" stroke-width="0.4"/>
+  <path d="M36,39 l-2.2,-1.1 l0,2.2 Z" fill="#111827"/>
+  <text x="18" y="40" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">3 · TAGLIA</text>
+  <line x1="82" y1="39" x2="73.5" y2="39" stroke="#111827" stroke-width="0.4"/>
+  <path d="M72,39 l2.2,-1.1 l0,2.2 Z" fill="#111827"/>
+  <text x="90" y="40" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">3 · TAGLIA</text>
+  <image xlink:href="/pittogrammi/arasaac-bn/pop-tavolo.png" x="41" y="31" width="26" height="16" preserveAspectRatio="xMidYMid meet"/>
+  <line x1="36" y1="48" x2="72" y2="48" stroke="#ea580c" stroke-width="0.9" stroke-dasharray="0.8 1.6" stroke-linecap="round"/>
+  <text x="54" y="52.5" text-anchor="middle" font-size="3" fill="#ea580c" font-weight="bold">4 · SPINGI IN AVANTI QUESTA LINGUETTA</text>
+  <text x="54" y="58.5" text-anchor="middle" font-size="4" fill="#111827" font-weight="bold">IL TAVOLO</text>
+  <text x="54" y="68" text-anchor="middle" font-size="3" fill="#64748b" font-weight="normal">Coloralo prima di ritagliare. Niente colla.</text>
+</svg></div>
+        <p class="lib-montaggio"><strong>Sempre gli stessi passi, su tutte le tavole:</strong> ritaglia il
+        rettangolo, piegalo a metà sulla riga blu, taglia le due righe nere partendo dalla piega,
+        apri e spingi in avanti la linguetta. Niente colla e niente misure da rispettare.</p>
       </div>
-      <p class="nota-adulto">Per l'adulto: ritaglia tu le parti piccole con i bambini
-      fino ai 6 anni; dai 7 possono ritagliare da seduti, sorvegliati, con forbici a punta
-      arrotondata. Fonte delle frasi di questa tavola: Pagina «Rischio Sismico: Cosa Fare» del sito. Non sostituiscono il
-      piano di emergenza della scuola o dell'edificio in cui vi trovate: se un'indicazione
-      ufficiale dice altro, vale quella.</p>
+      
+      <p class="nota-adulto">Per l'adulto: fino ai 6 anni ritaglia tu; dai 7 anni ritagliano
+      loro da seduti, sorvegliati, con forbici a punta arrotondata. Le frasi di questa tavola
+      vengono dalla pagina «Rischio sismico» del sito. Non sostituiscono il piano di emergenza della scuola o
+      dell'edificio in cui vi trovate: se un'indicazione ufficiale dice altro, vale quella.</p>
       <p class="lib-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza.</p>
-      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
-        <span>LIBRO-POPUP · Foglio 4 di 11 · Rev. 1 · 13/09/2026</span></footer>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span><span>LIBRO-POPUP · Tavola 2 di 13 · Rev. 2 · 15/09/2026</span></footer>
     </div>
   </article>
-
-  <article class="scheda-page" id="tav3">
+  <article class="scheda-page" id="tav3" data-scelta="tav3">
     <div class="lib">
       <header class="scheda-header">
         <div class="scheda-logo" aria-hidden="true">PC</div>
         <div class="scheda-intestazione">
           <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
           <h2 class="scheda-titolo-principale">Si sale, non si scende</h2>
-          <div class="scheda-sottotitolo">L&#x27;acqua riempie prima le cantine: i piani alti sono il posto giusto</div>
+          <div class="scheda-sottotitolo">L'acqua riempie prima le cantine: i piani alti sono il posto giusto</div>
         </div>
       </header>
       <p class="lib-tag">TAVOLA 3 · ALLUVIONE</p>
       <div class="lib-corpo">
         <div class="lib-testo">
           <p>Quando arriva tanta acqua, riempie per prima la parte più bassa della casa: <strong>cantine, garage e locali interrati</strong>. È lì che non si va, nemmeno per prendere qualcosa.</p>
-          <div class="lib-regole"><h3>Che cosa si fa</h3><ul>
-          <li>Sali ai piani alti della casa.</li>
-          <li>Non scendere in cantina, in garage o nei locali interrati.</li>
-          <li>Non attraversare strade allagate, né a piedi né in auto: non si vede quanto è profondo.</li>
-          <li>Sta' lontano da fossi, ponti e corsi d'acqua.</li>
-          <li>Se un adulto te lo chiede, aiuta a chiudere le porte verso i locali più bassi.</li>
-          </ul></div>
+          <div class="lib-regole"><h3>Che cosa si fa</h3><ul><li>Sali ai piani alti della casa.</li><li>Non scendere in cantina, in garage o nei locali interrati.</li><li>Non attraversare strade allagate, né a piedi né in auto: non si vede quanto è profondo.</li><li>Sta' lontano da fossi, ponti e corsi d'acqua.</li><li>Se un adulto te lo chiede, aiuta a chiudere le porte verso i locali più bassi.</li></ul></div>
         </div>
-        <div class="lib-pitto" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/oca-pioggia.png" alt="Pioggia forte" width="500" height="500"><img src="/pittogrammi/arasaac-bn/pop-casa.png" alt="Casa" width="500" height="500"></div>
+        <div class="lib-pitto"><img src="/pittogrammi/arasaac-bn/oca-pioggia.png" alt="Pioggia forte" width="500" height="500"></div>
       </div>
       <div class="lib-fustella">
-        <div class="lib-fustella-tit">La fustella · Gradino tagliato nella piega</div>
-        <div class="lib-disegno"><svg class="fust" width="120mm" height="90mm" viewBox="0 0 120 90" role="img" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="colla" width="3" height="3" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="3" height="3" fill="#fef3c7"/><line x1="0" y1="0" x2="0" y2="3" stroke="#d97706" stroke-width="0.8"/></pattern></defs><rect x="6" y="6" width="108" height="74" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.4" stroke-dasharray="2 2"/><line x1="6" y1="20" x2="114" y2="20" stroke="#0284c7" stroke-width="0.5" fill="none" stroke-dasharray="3 2"/><text x="112" y="18" text-anchor="end" font-size="2.8" fill="#0284c7">piega del foglio</text><line x1="30" y1="20" x2="30" y2="54" stroke="#111827" stroke-width="0.5" fill="none"/><line x1="90" y1="20" x2="90" y2="54" stroke="#111827" stroke-width="0.5" fill="none"/><line x1="30" y1="54" x2="90" y2="54" stroke="#ea580c" stroke-width="0.5" fill="none" stroke-dasharray="0.7 1.7" stroke-linecap="round"/><image href="/pittogrammi/arasaac-bn/pop-scala.png" x="47.0" y="24" width="26" height="26" preserveAspectRatio="xMidYMid meet"><title>Scala con i gradini</title></image><line x1="30" y1="65" x2="90" y2="65" stroke="#64748b" stroke-width="0.3"/><line x1="30" y1="63.8" x2="30" y2="66.2" stroke="#64748b" stroke-width="0.3"/><line x1="90" y1="63.8" x2="90" y2="66.2" stroke="#64748b" stroke-width="0.3"/><text x="60.0" y="63.2" text-anchor="middle" font-size="2.6" fill="#475569">60 mm</text><text x="94" y="37.0" font-size="2.8" fill="#475569">profondità 34 mm</text><text x="60.0" y="74" text-anchor="middle" font-size="2.8" fill="#475569">i due tagli partono dalla piega; poi spingi il gradino in avanti</text></svg></div>
-        <p class="lib-montaggio">Piega il foglio a metà. Taglia le due righe nere partendo dalla piega, poi apri e spingi in avanti la linguetta che si è formata: diventa un gradino in rilievo. Non serve colla.</p>
+        <div class="lib-fustella-tit">Il gradino di questa tavola</div>
+        <div class="lib-disegno"><svg class="fust" viewBox="0 0 108 74" role="img"
+     aria-label="Pezzo da ritagliare: un rettangolo con la piega a metà, due tagli che partono dalla piega e una linguetta da spingere in avanti, con sopra scala che porta ai piani alti"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect x="6" y="6" width="96" height="54" stroke="#111827" stroke-width="1" fill="none" rx="1"/>
+  <text x="54" y="4.2" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">1 · RITAGLIA IL RETTANGOLO</text>
+  <line x1="6" y1="30" x2="102" y2="30" stroke="#0284c7" stroke-width="1" stroke-dasharray="3 2"/>
+  <text x="54" y="27.5" text-anchor="middle" font-size="3" fill="#0284c7" font-weight="bold">2 · PIEGA QUI, A META&#x27;</text>
+  <line x1="36" y1="30" x2="36" y2="48" stroke="#111827" stroke-width="1.2"/>
+  <line x1="72" y1="30" x2="72" y2="48" stroke="#111827" stroke-width="1.2"/>
+  <line x1="26" y1="39" x2="34.5" y2="39" stroke="#111827" stroke-width="0.4"/>
+  <path d="M36,39 l-2.2,-1.1 l0,2.2 Z" fill="#111827"/>
+  <text x="18" y="40" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">3 · TAGLIA</text>
+  <line x1="82" y1="39" x2="73.5" y2="39" stroke="#111827" stroke-width="0.4"/>
+  <path d="M72,39 l2.2,-1.1 l0,2.2 Z" fill="#111827"/>
+  <text x="90" y="40" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">3 · TAGLIA</text>
+  <image xlink:href="/pittogrammi/arasaac-bn/pop-scala.png" x="41" y="31" width="26" height="16" preserveAspectRatio="xMidYMid meet"/>
+  <line x1="36" y1="48" x2="72" y2="48" stroke="#ea580c" stroke-width="0.9" stroke-dasharray="0.8 1.6" stroke-linecap="round"/>
+  <text x="54" y="52.5" text-anchor="middle" font-size="3" fill="#ea580c" font-weight="bold">4 · SPINGI IN AVANTI QUESTA LINGUETTA</text>
+  <text x="54" y="58.5" text-anchor="middle" font-size="4" fill="#111827" font-weight="bold">LE SCALE</text>
+  <text x="54" y="68" text-anchor="middle" font-size="3" fill="#64748b" font-weight="normal">Coloralo prima di ritagliare. Niente colla.</text>
+</svg></div>
+        <p class="lib-montaggio"><strong>Sempre gli stessi passi, su tutte le tavole:</strong> ritaglia il
+        rettangolo, piegalo a metà sulla riga blu, taglia le due righe nere partendo dalla piega,
+        apri e spingi in avanti la linguetta. Niente colla e niente misure da rispettare.</p>
       </div>
-      <p class="nota-adulto">Per l'adulto: ritaglia tu le parti piccole con i bambini
-      fino ai 6 anni; dai 7 possono ritagliare da seduti, sorvegliati, con forbici a punta
-      arrotondata. Fonte delle frasi di questa tavola: Pagina «Rischio idrogeologico» del sito. Non sostituiscono il
-      piano di emergenza della scuola o dell'edificio in cui vi trovate: se un'indicazione
-      ufficiale dice altro, vale quella.</p>
+      
+      <p class="nota-adulto">Per l'adulto: fino ai 6 anni ritaglia tu; dai 7 anni ritagliano
+      loro da seduti, sorvegliati, con forbici a punta arrotondata. Le frasi di questa tavola
+      vengono dalla pagina «Rischio idrogeologico» del sito. Non sostituiscono il piano di emergenza della scuola o
+      dell'edificio in cui vi trovate: se un'indicazione ufficiale dice altro, vale quella.</p>
       <p class="lib-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza.</p>
-      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
-        <span>LIBRO-POPUP · Foglio 5 di 11 · Rev. 1 · 13/09/2026</span></footer>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span><span>LIBRO-POPUP · Tavola 3 di 13 · Rev. 2 · 15/09/2026</span></footer>
     </div>
   </article>
-
-  <article class="scheda-page" id="tav4">
+  <article class="scheda-page" id="tav4" data-scelta="tav4">
     <div class="lib">
       <header class="scheda-header">
         <div class="scheda-logo" aria-hidden="true">PC</div>
         <div class="scheda-intestazione">
           <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
-          <h2 class="scheda-titolo-principale">Va&#x27; via dalla parte opposta al fumo</h2>
+          <h2 class="scheda-titolo-principale">Quando tuona, si entra</h2>
+          <div class="scheda-sottotitolo">Il posto sicuro è dentro un edificio, non sotto un albero</div>
+        </div>
+      </header>
+      <p class="lib-tag">TAVOLA 4 · TEMPORALE E FULMINI</p>
+      <div class="lib-corpo">
+        <div class="lib-testo">
+          <p>Durante un temporale il posto sicuro è <strong>dentro</strong>: un edificio solido, oppure un'auto con i finestrini chiusi. Un albero isolato non è un riparo, e una tettoia leggera nemmeno.</p>
+          <div class="lib-regole"><h3>Che cosa si fa</h3><ul><li>Entra in un edificio solido, oppure in auto con i finestrini chiusi.</li><li>Sta' lontano da alberi isolati, pali di metallo e recinzioni metalliche.</li><li>Non ripararti sotto una tettoia o una struttura leggera.</li><li>Dentro casa, sta' lontano dalle finestre e dalle porte finestre.</li><li>Non attraversare un sottopassaggio allagato.</li></ul></div>
+        </div>
+        <div class="lib-pitto"><img src="/pittogrammi/arasaac-bn/dis-temporale.png" alt="Nuvola con pioggia e fulmine" width="500" height="500"></div>
+      </div>
+      <div class="lib-fustella">
+        <div class="lib-fustella-tit">Il gradino di questa tavola</div>
+        <div class="lib-disegno"><svg class="fust" viewBox="0 0 108 74" role="img"
+     aria-label="Pezzo da ritagliare: un rettangolo con la piega a metà, due tagli che partono dalla piega e una linguetta da spingere in avanti, con sopra casa vista di fronte"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect x="6" y="6" width="96" height="54" stroke="#111827" stroke-width="1" fill="none" rx="1"/>
+  <text x="54" y="4.2" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">1 · RITAGLIA IL RETTANGOLO</text>
+  <line x1="6" y1="30" x2="102" y2="30" stroke="#0284c7" stroke-width="1" stroke-dasharray="3 2"/>
+  <text x="54" y="27.5" text-anchor="middle" font-size="3" fill="#0284c7" font-weight="bold">2 · PIEGA QUI, A META&#x27;</text>
+  <line x1="36" y1="30" x2="36" y2="48" stroke="#111827" stroke-width="1.2"/>
+  <line x1="72" y1="30" x2="72" y2="48" stroke="#111827" stroke-width="1.2"/>
+  <line x1="26" y1="39" x2="34.5" y2="39" stroke="#111827" stroke-width="0.4"/>
+  <path d="M36,39 l-2.2,-1.1 l0,2.2 Z" fill="#111827"/>
+  <text x="18" y="40" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">3 · TAGLIA</text>
+  <line x1="82" y1="39" x2="73.5" y2="39" stroke="#111827" stroke-width="0.4"/>
+  <path d="M72,39 l2.2,-1.1 l0,2.2 Z" fill="#111827"/>
+  <text x="90" y="40" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">3 · TAGLIA</text>
+  <image xlink:href="/pittogrammi/arasaac-bn/pop-casa.png" x="41" y="31" width="26" height="16" preserveAspectRatio="xMidYMid meet"/>
+  <line x1="36" y1="48" x2="72" y2="48" stroke="#ea580c" stroke-width="0.9" stroke-dasharray="0.8 1.6" stroke-linecap="round"/>
+  <text x="54" y="52.5" text-anchor="middle" font-size="3" fill="#ea580c" font-weight="bold">4 · SPINGI IN AVANTI QUESTA LINGUETTA</text>
+  <text x="54" y="58.5" text-anchor="middle" font-size="4" fill="#111827" font-weight="bold">DENTRO CASA</text>
+  <text x="54" y="68" text-anchor="middle" font-size="3" fill="#64748b" font-weight="normal">Coloralo prima di ritagliare. Niente colla.</text>
+</svg></div>
+        <p class="lib-montaggio"><strong>Sempre gli stessi passi, su tutte le tavole:</strong> ritaglia il
+        rettangolo, piegalo a metà sulla riga blu, taglia le due righe nere partendo dalla piega,
+        apri e spingi in avanti la linguetta. Niente colla e niente misure da rispettare.</p>
+      </div>
+      
+      <p class="nota-adulto">Per l'adulto: fino ai 6 anni ritaglia tu; dai 7 anni ritagliano
+      loro da seduti, sorvegliati, con forbici a punta arrotondata. Le frasi di questa tavola
+      vengono dalla pagina «Temporali intensi» del sito. Non sostituiscono il piano di emergenza della scuola o
+      dell'edificio in cui vi trovate: se un'indicazione ufficiale dice altro, vale quella.</p>
+      <p class="lib-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span><span>LIBRO-POPUP · Tavola 4 di 13 · Rev. 2 · 15/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page" id="tav5" data-scelta="tav5">
+    <div class="lib">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">Il pericolo è quello che vola</h2>
+          <div class="scheda-sottotitolo">Non è il vento a far male: sono i rami, le tegole e i cartelloni</div>
+        </div>
+      </header>
+      <p class="lib-tag">TAVOLA 5 · VENTO FORTE</p>
+      <div class="lib-corpo">
+        <div class="lib-testo">
+          <p>Con il vento forte il pericolo non è l'aria che spinge: sono le cose che si staccano e <strong>volano</strong> — rami, tegole, vasi, cartelloni. Per questo si sta lontani da tutto ciò che può cadere.</p>
+          <div class="lib-regole"><h3>Che cosa si fa</h3><ul><li>Resta in casa, lontano da finestre e vetrate.</li><li>Se sei fuori, allontanati da alberi, pali della luce, impalcature e cartelloni.</li><li>Non fermarti sotto un cornicione o sotto qualcosa di appeso.</li><li>Tieni chiuse porte e finestre.</li><li>Un cavo elettrico caduto non si tocca mai: dillo a un adulto, che chiama il 112.</li></ul></div>
+        </div>
+        <div class="lib-pitto"><img src="/pittogrammi/arasaac-bn/alf-w-warning.png" alt="Segnale di pericolo generico" width="500" height="500"></div>
+      </div>
+      <div class="lib-fustella">
+        <div class="lib-fustella-tit">Il gradino di questa tavola</div>
+        <div class="lib-disegno"><svg class="fust" viewBox="0 0 108 74" role="img"
+     aria-label="Pezzo da ritagliare: un rettangolo con la piega a metà, due tagli che partono dalla piega e una linguetta da spingere in avanti, con sopra albero piegato dal vento"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect x="6" y="6" width="96" height="54" stroke="#111827" stroke-width="1" fill="none" rx="1"/>
+  <text x="54" y="4.2" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">1 · RITAGLIA IL RETTANGOLO</text>
+  <line x1="6" y1="30" x2="102" y2="30" stroke="#0284c7" stroke-width="1" stroke-dasharray="3 2"/>
+  <text x="54" y="27.5" text-anchor="middle" font-size="3" fill="#0284c7" font-weight="bold">2 · PIEGA QUI, A META&#x27;</text>
+  <line x1="36" y1="30" x2="36" y2="48" stroke="#111827" stroke-width="1.2"/>
+  <line x1="72" y1="30" x2="72" y2="48" stroke="#111827" stroke-width="1.2"/>
+  <line x1="26" y1="39" x2="34.5" y2="39" stroke="#111827" stroke-width="0.4"/>
+  <path d="M36,39 l-2.2,-1.1 l0,2.2 Z" fill="#111827"/>
+  <text x="18" y="40" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">3 · TAGLIA</text>
+  <line x1="82" y1="39" x2="73.5" y2="39" stroke="#111827" stroke-width="0.4"/>
+  <path d="M72,39 l2.2,-1.1 l0,2.2 Z" fill="#111827"/>
+  <text x="90" y="40" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">3 · TAGLIA</text>
+  <image xlink:href="/pittogrammi/arasaac-bn/oca-albero.png" x="41" y="31" width="26" height="16" preserveAspectRatio="xMidYMid meet"/>
+  <line x1="36" y1="48" x2="72" y2="48" stroke="#ea580c" stroke-width="0.9" stroke-dasharray="0.8 1.6" stroke-linecap="round"/>
+  <text x="54" y="52.5" text-anchor="middle" font-size="3" fill="#ea580c" font-weight="bold">4 · SPINGI IN AVANTI QUESTA LINGUETTA</text>
+  <text x="54" y="58.5" text-anchor="middle" font-size="4" fill="#111827" font-weight="bold">L'ALBERO</text>
+  <text x="54" y="68" text-anchor="middle" font-size="3" fill="#64748b" font-weight="normal">Coloralo prima di ritagliare. Niente colla.</text>
+</svg></div>
+        <p class="lib-montaggio"><strong>Sempre gli stessi passi, su tutte le tavole:</strong> ritaglia il
+        rettangolo, piegalo a metà sulla riga blu, taglia le due righe nere partendo dalla piega,
+        apri e spingi in avanti la linguetta. Niente colla e niente misure da rispettare.</p>
+      </div>
+      
+      <p class="nota-adulto">Per l'adulto: fino ai 6 anni ritaglia tu; dai 7 anni ritagliano
+      loro da seduti, sorvegliati, con forbici a punta arrotondata. Le frasi di questa tavola
+      vengono dalla pagina «Vento forte» del sito. Non sostituiscono il piano di emergenza della scuola o
+      dell'edificio in cui vi trovate: se un'indicazione ufficiale dice altro, vale quella.</p>
+      <p class="lib-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span><span>LIBRO-POPUP · Tavola 5 di 13 · Rev. 2 · 15/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page" id="tav6" data-scelta="tav6">
+    <div class="lib">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">Va' via dalla parte opposta al fumo</h2>
           <div class="scheda-sottotitolo">Nel bosco e nei campi ci si allontana: qui non si striscia</div>
         </div>
       </header>
-      <p class="lib-tag">TAVOLA 4 · INCENDIO FUORI, NEL BOSCO</p>
+      <p class="lib-tag">TAVOLA 6 · INCENDIO FUORI, NEL BOSCO</p>
       <div class="lib-corpo">
         <div class="lib-testo">
           <p>Un incendio in un bosco o in un campo si muove <strong>con il vento</strong> e può correre più di una persona. Qui la regola non è stare bassi: è <strong>andare via</strong>, dalla parte da cui il fumo non arriva.</p>
-          <div class="lib-regole"><h3>Che cosa si fa</h3><ul>
-          <li>Di' subito a un adulto di chiamare il 112, oppure chiamalo tu.</li>
-          <li>Allontanati nella direzione opposta a quella in cui va il fumo.</li>
-          <li>Non avvicinarti alle fiamme e non provare a spegnerle.</li>
-          <li>Non fermarti nelle strade dove passa il fumo.</li>
-          <li>Se non puoi allontanarti, entra in casa e chiudi porte, finestre e persiane.</li>
-          </ul></div>
+          <div class="lib-regole"><h3>Che cosa si fa</h3><ul><li>Di' subito a un adulto di chiamare il 112, oppure chiamalo tu.</li><li>Allontanati nella direzione opposta a quella in cui va il fumo.</li><li>Non avvicinarti alle fiamme e non provare a spegnerle.</li><li>Non fermarti nelle strade dove passa il fumo.</li><li>Se non puoi allontanarti, entra in casa e chiudi porte, finestre e persiane.</li></ul></div>
         </div>
-        <div class="lib-pitto" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-i-incendio.png" alt="Incendio" width="500" height="500"><img src="/pittogrammi/arasaac-bn/dis-autopompa.png" alt="Autopompa dei vigili del fuoco" width="500" height="500"></div>
+        <div class="lib-pitto"><img src="/pittogrammi/arasaac-bn/alf-i-incendio.png" alt="Incendio" width="500" height="500"></div>
       </div>
       <div class="lib-fustella">
-        <div class="lib-fustella-tit">La fustella · Piega a V con due alette</div>
-        <div class="lib-disegno"><svg class="fust" width="108mm" height="84mm" viewBox="0 0 108 84" role="img" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="colla" width="3" height="3" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="3" height="3" fill="#fef3c7"/><line x1="0" y1="0" x2="0" y2="3" stroke="#d97706" stroke-width="0.8"/></pattern></defs><rect x="6" y="6" width="96" height="52" stroke="#111827" stroke-width="0.5" fill="none" rx="1"/><image href="/pittogrammi/arasaac-bn/pop-fuoco.png" x="34.0" y="10" width="40" height="40" preserveAspectRatio="xMidYMid meet"><title>Fiamme</title></image><line x1="54.0" y1="4" x2="54.0" y2="70" stroke="#0284c7" stroke-width="0.5" fill="none" stroke-dasharray="3 2"/><line x1="6" y1="58" x2="102" y2="58" stroke="#ea580c" stroke-width="0.5" fill="none" stroke-dasharray="0.7 1.7" stroke-linecap="round"/><rect x="6" y="58" width="96" height="12" stroke="#111827" stroke-width="0.5" fill="none"/><rect x="8" y="60" width="44.0" height="8" fill="url(#colla)" stroke="#d97706" stroke-width="0.4" stroke-dasharray="1.5 1.5"/><text x="30.0" y="65.1" text-anchor="middle" font-size="2.6" fill="#92400e" font-weight="bold">ALETTA SINISTRA</text><rect x="56.0" y="60" width="44.0" height="8" fill="url(#colla)" stroke="#d97706" stroke-width="0.4" stroke-dasharray="1.5 1.5"/><text x="78.0" y="65.1" text-anchor="middle" font-size="2.6" fill="#92400e" font-weight="bold">ALETTA DESTRA</text><line x1="6" y1="80" x2="102" y2="80" stroke="#64748b" stroke-width="0.3"/><line x1="6" y1="78.8" x2="6" y2="81.2" stroke="#64748b" stroke-width="0.3"/><line x1="102" y1="78.8" x2="102" y2="81.2" stroke="#64748b" stroke-width="0.3"/><text x="54.0" y="78.2" text-anchor="middle" font-size="2.6" fill="#475569">96 mm</text></svg></div>
-        <p class="lib-montaggio">Ritaglia il rettangolo con l&#x27;aletta sotto. Piega a monte la riga blu al centro e a valle la riga arancione in fondo. Apri la pagina a 90°, appoggia la piega del pezzo sulla piega della pagina e incolla le due alette di sbieco, una per facciata, formando una V. Chiudendo il libro il pezzo si abbassa da solo.</p>
+        <div class="lib-fustella-tit">Il gradino di questa tavola</div>
+        <div class="lib-disegno"><svg class="fust" viewBox="0 0 108 74" role="img"
+     aria-label="Pezzo da ritagliare: un rettangolo con la piega a metà, due tagli che partono dalla piega e una linguetta da spingere in avanti, con sopra fiamme in un campo"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect x="6" y="6" width="96" height="54" stroke="#111827" stroke-width="1" fill="none" rx="1"/>
+  <text x="54" y="4.2" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">1 · RITAGLIA IL RETTANGOLO</text>
+  <line x1="6" y1="30" x2="102" y2="30" stroke="#0284c7" stroke-width="1" stroke-dasharray="3 2"/>
+  <text x="54" y="27.5" text-anchor="middle" font-size="3" fill="#0284c7" font-weight="bold">2 · PIEGA QUI, A META&#x27;</text>
+  <line x1="36" y1="30" x2="36" y2="48" stroke="#111827" stroke-width="1.2"/>
+  <line x1="72" y1="30" x2="72" y2="48" stroke="#111827" stroke-width="1.2"/>
+  <line x1="26" y1="39" x2="34.5" y2="39" stroke="#111827" stroke-width="0.4"/>
+  <path d="M36,39 l-2.2,-1.1 l0,2.2 Z" fill="#111827"/>
+  <text x="18" y="40" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">3 · TAGLIA</text>
+  <line x1="82" y1="39" x2="73.5" y2="39" stroke="#111827" stroke-width="0.4"/>
+  <path d="M72,39 l2.2,-1.1 l0,2.2 Z" fill="#111827"/>
+  <text x="90" y="40" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">3 · TAGLIA</text>
+  <image xlink:href="/pittogrammi/arasaac-bn/pop-fuoco.png" x="41" y="31" width="26" height="16" preserveAspectRatio="xMidYMid meet"/>
+  <line x1="36" y1="48" x2="72" y2="48" stroke="#ea580c" stroke-width="0.9" stroke-dasharray="0.8 1.6" stroke-linecap="round"/>
+  <text x="54" y="52.5" text-anchor="middle" font-size="3" fill="#ea580c" font-weight="bold">4 · SPINGI IN AVANTI QUESTA LINGUETTA</text>
+  <text x="54" y="58.5" text-anchor="middle" font-size="4" fill="#111827" font-weight="bold">IL FUOCO</text>
+  <text x="54" y="68" text-anchor="middle" font-size="3" fill="#64748b" font-weight="normal">Coloralo prima di ritagliare. Niente colla.</text>
+</svg></div>
+        <p class="lib-montaggio"><strong>Sempre gli stessi passi, su tutte le tavole:</strong> ritaglia il
+        rettangolo, piegalo a metà sulla riga blu, taglia le due righe nere partendo dalla piega,
+        apri e spingi in avanti la linguetta. Niente colla e niente misure da rispettare.</p>
       </div>
-      <p class="nota-adulto">Per l'adulto: ritaglia tu le parti piccole con i bambini
-      fino ai 6 anni; dai 7 possono ritagliare da seduti, sorvegliati, con forbici a punta
-      arrotondata. Fonte delle frasi di questa tavola: Pagina «Rischio Incendi Boschivi» del sito. Non sostituiscono il
-      piano di emergenza della scuola o dell'edificio in cui vi trovate: se un'indicazione
-      ufficiale dice altro, vale quella.</p>
+      
+      <p class="nota-adulto">Per l'adulto: fino ai 6 anni ritaglia tu; dai 7 anni ritagliano
+      loro da seduti, sorvegliati, con forbici a punta arrotondata. Le frasi di questa tavola
+      vengono dalla pagina «Rischio incendi boschivi» del sito. Non sostituiscono il piano di emergenza della scuola o
+      dell'edificio in cui vi trovate: se un'indicazione ufficiale dice altro, vale quella.</p>
       <p class="lib-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza.</p>
-      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
-        <span>LIBRO-POPUP · Foglio 6 di 11 · Rev. 1 · 13/09/2026</span></footer>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span><span>LIBRO-POPUP · Tavola 6 di 13 · Rev. 2 · 15/09/2026</span></footer>
     </div>
   </article>
-
-  <article class="scheda-page" id="tav5">
+  <article class="scheda-page" id="tav7" data-scelta="tav7">
     <div class="lib">
       <header class="scheda-header">
         <div class="scheda-logo" aria-hidden="true">PC</div>
         <div class="scheda-intestazione">
           <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
-          <h2 class="scheda-titolo-principale">Il fumo sta in alto, tu sta&#x27; in basso</h2>
+          <h2 class="scheda-titolo-principale">Il fumo sta in alto, tu sta' in basso</h2>
           <div class="scheda-sottotitolo">Dentro un edificio la regola si capovolge: si esce rasoterra</div>
         </div>
       </header>
-      <p class="lib-tag">TAVOLA 5 · INCENDIO DENTRO CASA</p>
+      <p class="lib-tag">TAVOLA 7 · INCENDIO DENTRO CASA</p>
       <div class="lib-corpo">
         <div class="lib-testo">
           <p>Il fumo è caldo, quindi <strong>sale verso il soffitto</strong>. L'aria che si respira resta in basso, a circa <strong>30-40 centimetri da terra</strong>. Per questo, se c'è molto fumo, si esce procedendo a carponi.</p>
-          <div class="lib-regole"><h3>Che cosa si fa</h3><ul>
-          <li>Se c'è molto fumo, va' a carponi verso l'uscita: in basso si respira.</li>
-          <li>Non usare l'ascensore.</li>
-          <li>Non aprire una porta se al tocco è calda: dietro c'è il fuoco.</li>
-          <li>Chiama il 112 quando sei fuori, in un posto sicuro.</li>
-          <li>Una volta fuori non rientrare: si torna dentro solo quando i vigili del fuoco dicono che si può.</li>
-          </ul></div>
+          <div class="lib-regole"><h3>Che cosa si fa</h3><ul><li>Se c'è molto fumo, va' a carponi verso l'uscita: in basso si respira.</li><li>Non usare l'ascensore.</li><li>Non aprire una porta se al tocco è calda: dietro c'è il fuoco.</li><li>Chiama il 112 quando sei fuori, in un posto sicuro.</li><li>Una volta fuori non rientrare: si torna dentro quando lo dicono i vigili del fuoco.</li></ul></div>
         </div>
-        <div class="lib-pitto" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-u-uscita.png" alt="Persona che esce da una porta aperta" width="500" height="500"><img src="/pittogrammi/arasaac-bn/pop-fuoco.png" alt="Fiamme" width="500" height="500"></div>
+        <div class="lib-pitto"><img src="/pittogrammi/arasaac-bn/alf-u-uscita.png" alt="Persona che esce da una porta aperta" width="500" height="500"></div>
       </div>
       <div class="lib-fustella">
-        <div class="lib-fustella-tit">La fustella · Linguetta scorrevole</div>
-        <div class="lib-disegno"><svg class="fust" width="178mm" height="82mm" viewBox="0 0 178 82" role="img" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="colla" width="3" height="3" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="3" height="3" fill="#fef3c7"/><line x1="0" y1="0" x2="0" y2="3" stroke="#d97706" stroke-width="0.8"/></pattern></defs><rect x="6" y="6" width="118" height="24" stroke="#111827" stroke-width="0.5" fill="none" rx="1"/><image href="/pittogrammi/arasaac-bn/pop-strisciare.png" x="10" y="7" width="22" height="22" preserveAspectRatio="xMidYMid meet"><title>Bambino disteso che avanza sotto una linea bassa</title></image><text x="120" y="19.4" text-anchor="end" font-size="5" font-weight="bold" fill="#0b3c5d">TIRA →</text><line x1="6" y1="38" x2="124" y2="38" stroke="#64748b" stroke-width="0.3"/><line x1="6" y1="36.8" x2="6" y2="39.2" stroke="#64748b" stroke-width="0.3"/><line x1="124" y1="36.8" x2="124" y2="39.2" stroke="#64748b" stroke-width="0.3"/><text x="65.0" y="36.2" text-anchor="middle" font-size="2.6" fill="#475569">118 mm</text><line x1="30" y1="44" x2="30" y2="70" stroke="#111827" stroke-width="0.5" fill="none"/><line x1="90" y1="44" x2="90" y2="70" stroke="#111827" stroke-width="0.5" fill="none"/><line x1="30" y1="76" x2="90" y2="76" stroke="#64748b" stroke-width="0.3"/><line x1="30" y1="74.8" x2="30" y2="77.2" stroke="#64748b" stroke-width="0.3"/><line x1="90" y1="74.8" x2="90" y2="77.2" stroke="#64748b" stroke-width="0.3"/><text x="60.0" y="74.2" text-anchor="middle" font-size="2.6" fill="#475569">60 mm fra le due fessure</text><text x="96" y="58" font-size="2.8" fill="#475569">fessure lunghe 26 mm:</text><text x="96" y="62" font-size="2.8" fill="#475569">due più della striscia,</text><text x="96" y="66" font-size="2.8" fill="#475569">alta 24, così scorre</text></svg></div>
-        <p class="lib-montaggio">Ritaglia la striscia e le due fessure nel foglio. Infila la striscia da sotto nella prima fessura e da sopra nella seconda. Tirando la linguetta la figura attraversa la scena.</p>
+        <div class="lib-fustella-tit">Il gradino di questa tavola</div>
+        <div class="lib-disegno"><svg class="fust" viewBox="0 0 108 74" role="img"
+     aria-label="Pezzo da ritagliare: un rettangolo con la piega a metà, due tagli che partono dalla piega e una linguetta da spingere in avanti, con sopra persona che avanza carponi sotto il fumo"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect x="6" y="6" width="96" height="54" stroke="#111827" stroke-width="1" fill="none" rx="1"/>
+  <text x="54" y="4.2" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">1 · RITAGLIA IL RETTANGOLO</text>
+  <line x1="6" y1="30" x2="102" y2="30" stroke="#0284c7" stroke-width="1" stroke-dasharray="3 2"/>
+  <text x="54" y="27.5" text-anchor="middle" font-size="3" fill="#0284c7" font-weight="bold">2 · PIEGA QUI, A META&#x27;</text>
+  <line x1="36" y1="30" x2="36" y2="48" stroke="#111827" stroke-width="1.2"/>
+  <line x1="72" y1="30" x2="72" y2="48" stroke="#111827" stroke-width="1.2"/>
+  <line x1="26" y1="39" x2="34.5" y2="39" stroke="#111827" stroke-width="0.4"/>
+  <path d="M36,39 l-2.2,-1.1 l0,2.2 Z" fill="#111827"/>
+  <text x="18" y="40" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">3 · TAGLIA</text>
+  <line x1="82" y1="39" x2="73.5" y2="39" stroke="#111827" stroke-width="0.4"/>
+  <path d="M72,39 l2.2,-1.1 l0,2.2 Z" fill="#111827"/>
+  <text x="90" y="40" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">3 · TAGLIA</text>
+  <image xlink:href="/pittogrammi/arasaac-bn/pop-strisciare.png" x="41" y="31" width="26" height="16" preserveAspectRatio="xMidYMid meet"/>
+  <line x1="36" y1="48" x2="72" y2="48" stroke="#ea580c" stroke-width="0.9" stroke-dasharray="0.8 1.6" stroke-linecap="round"/>
+  <text x="54" y="52.5" text-anchor="middle" font-size="3" fill="#ea580c" font-weight="bold">4 · SPINGI IN AVANTI QUESTA LINGUETTA</text>
+  <text x="54" y="58.5" text-anchor="middle" font-size="4" fill="#111827" font-weight="bold">A CARPONI</text>
+  <text x="54" y="68" text-anchor="middle" font-size="3" fill="#64748b" font-weight="normal">Coloralo prima di ritagliare. Niente colla.</text>
+</svg></div>
+        <p class="lib-montaggio"><strong>Sempre gli stessi passi, su tutte le tavole:</strong> ritaglia il
+        rettangolo, piegalo a metà sulla riga blu, taglia le due righe nere partendo dalla piega,
+        apri e spingi in avanti la linguetta. Niente colla e niente misure da rispettare.</p>
       </div>
-      <p class="nota-adulto">Per l'adulto: ritaglia tu le parti piccole con i bambini
-      fino ai 6 anni; dai 7 possono ritagliare da seduti, sorvegliati, con forbici a punta
-      arrotondata. Fonte delle frasi di questa tavola: Articolo «Incendi domestici: cause più comuni e come prevenirli» del sito, che cita i Vigili del Fuoco. Non sostituiscono il
-      piano di emergenza della scuola o dell'edificio in cui vi trovate: se un'indicazione
-      ufficiale dice altro, vale quella.</p>
+      
+      <p class="nota-adulto">Per l'adulto: fino ai 6 anni ritaglia tu; dai 7 anni ritagliano
+      loro da seduti, sorvegliati, con forbici a punta arrotondata. Le frasi di questa tavola
+      vengono dalla articolo «Incendi domestici» del sito, che cita i Vigili del Fuoco. Non sostituiscono il piano di emergenza della scuola o
+      dell'edificio in cui vi trovate: se un'indicazione ufficiale dice altro, vale quella.</p>
       <p class="lib-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza.</p>
-      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
-        <span>LIBRO-POPUP · Foglio 7 di 11 · Rev. 1 · 13/09/2026</span></footer>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span><span>LIBRO-POPUP · Tavola 7 di 13 · Rev. 2 · 15/09/2026</span></footer>
     </div>
   </article>
-
-  <article class="scheda-page" id="tav6">
+  <article class="scheda-page" id="tav8" data-scelta="tav8">
     <div class="lib">
       <header class="scheda-header">
         <div class="scheda-logo" aria-hidden="true">PC</div>
         <div class="scheda-intestazione">
           <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
-          <h2 class="scheda-titolo-principale">Suona l&#x27;allarme: in fila, fino al punto di raccolta</h2>
-          <div class="scheda-sottotitolo">L&#x27;uscita di emergenza si prova prima, così il giorno vero si sa già</div>
+          <h2 class="scheda-titolo-principale">Bevi prima di avere sete</h2>
+          <div class="scheda-sottotitolo">Nelle ore più calde si sta all'ombra, e in macchina non resta nessuno</div>
         </div>
       </header>
-      <p class="lib-tag">TAVOLA 6 · A SCUOLA</p>
+      <p class="lib-tag">TAVOLA 8 · CALDO</p>
+      <div class="lib-corpo">
+        <div class="lib-testo">
+          <p>Quando fa molto caldo il corpo fatica a raffreddarsi, e la sete arriva <strong>dopo</strong> che il corpo ha già cominciato a soffrire. Per questo si beve prima, e all'ombra ci si sta per scelta, non per premio.</p>
+          <div class="lib-regole"><h3>Che cosa si fa</h3><ul><li>Bevi acqua spesso, anche se non hai sete.</li><li>Nelle ore più calde, fra le 11 e le 17, resta all'ombra o in casa.</li><li>Metti vestiti leggeri e chiari, il cappello e gli occhiali da sole.</li><li>In casa abbassa le tapparelle quando il sole batte sulla finestra.</li><li>In una macchina parcheggiata al sole non resta nessuno: né le persone né gli animali.</li></ul></div>
+        </div>
+        <div class="lib-pitto"><img src="/pittogrammi/arasaac-bn/dis-sole.png" alt="Sole" width="500" height="500"></div>
+      </div>
+      <div class="lib-fustella">
+        <div class="lib-fustella-tit">Il gradino di questa tavola</div>
+        <div class="lib-disegno"><svg class="fust" viewBox="0 0 108 74" role="img"
+     aria-label="Pezzo da ritagliare: un rettangolo con la piega a metà, due tagli che partono dalla piega e una linguetta da spingere in avanti, con sopra bottiglia d'acqua"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect x="6" y="6" width="96" height="54" stroke="#111827" stroke-width="1" fill="none" rx="1"/>
+  <text x="54" y="4.2" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">1 · RITAGLIA IL RETTANGOLO</text>
+  <line x1="6" y1="30" x2="102" y2="30" stroke="#0284c7" stroke-width="1" stroke-dasharray="3 2"/>
+  <text x="54" y="27.5" text-anchor="middle" font-size="3" fill="#0284c7" font-weight="bold">2 · PIEGA QUI, A META&#x27;</text>
+  <line x1="36" y1="30" x2="36" y2="48" stroke="#111827" stroke-width="1.2"/>
+  <line x1="72" y1="30" x2="72" y2="48" stroke="#111827" stroke-width="1.2"/>
+  <line x1="26" y1="39" x2="34.5" y2="39" stroke="#111827" stroke-width="0.4"/>
+  <path d="M36,39 l-2.2,-1.1 l0,2.2 Z" fill="#111827"/>
+  <text x="18" y="40" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">3 · TAGLIA</text>
+  <line x1="82" y1="39" x2="73.5" y2="39" stroke="#111827" stroke-width="0.4"/>
+  <path d="M72,39 l2.2,-1.1 l0,2.2 Z" fill="#111827"/>
+  <text x="90" y="40" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">3 · TAGLIA</text>
+  <image xlink:href="/pittogrammi/arasaac-bn/oca-bottiglia.png" x="41" y="31" width="26" height="16" preserveAspectRatio="xMidYMid meet"/>
+  <line x1="36" y1="48" x2="72" y2="48" stroke="#ea580c" stroke-width="0.9" stroke-dasharray="0.8 1.6" stroke-linecap="round"/>
+  <text x="54" y="52.5" text-anchor="middle" font-size="3" fill="#ea580c" font-weight="bold">4 · SPINGI IN AVANTI QUESTA LINGUETTA</text>
+  <text x="54" y="58.5" text-anchor="middle" font-size="4" fill="#111827" font-weight="bold">L'ACQUA</text>
+  <text x="54" y="68" text-anchor="middle" font-size="3" fill="#64748b" font-weight="normal">Coloralo prima di ritagliare. Niente colla.</text>
+</svg></div>
+        <p class="lib-montaggio"><strong>Sempre gli stessi passi, su tutte le tavole:</strong> ritaglia il
+        rettangolo, piegalo a metà sulla riga blu, taglia le due righe nere partendo dalla piega,
+        apri e spingi in avanti la linguetta. Niente colla e niente misure da rispettare.</p>
+      </div>
+      
+      <p class="nota-adulto">Per l'adulto: fino ai 6 anni ritaglia tu; dai 7 anni ritagliano
+      loro da seduti, sorvegliati, con forbici a punta arrotondata. Le frasi di questa tavola
+      vengono dalla pagina «Ondate di calore» del sito. Non sostituiscono il piano di emergenza della scuola o
+      dell'edificio in cui vi trovate: se un'indicazione ufficiale dice altro, vale quella.</p>
+      <p class="lib-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span><span>LIBRO-POPUP · Tavola 8 di 13 · Rev. 2 · 15/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page" id="tav9" data-scelta="tav9">
+    <div class="lib">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">Via la luce: si accende la torcia</h2>
+          <div class="scheda-sottotitolo">Non la candela, e il frigorifero resta chiuso</div>
+        </div>
+      </header>
+      <p class="lib-tag">TAVOLA 9 · BLACKOUT</p>
+      <div class="lib-corpo">
+        <div class="lib-testo">
+          <p>Quando va via la corrente di solito non è successo niente di grave, e torna da sola. La candela invece può dare fuoco alle cose: la <strong>torcia</strong> no.</p>
+          <div class="lib-regole"><h3>Che cosa si fa</h3><ul><li>Usa la torcia elettrica, non le candele.</li><li>Tieni chiusi il frigorifero e il congelatore: il cibo si conserva per ore.</li><li>Non prendere l'ascensore.</li><li>Se sei in ascensore quando va via la luce, premi il pulsante di allarme e aspetta: non provare a uscire da solo.</li><li>Lasciate accesa una sola lampada: così vi accorgete quando la corrente torna.</li></ul></div>
+        </div>
+        <div class="lib-pitto"><img src="/pittogrammi/arasaac-bn/dis-radio.png" alt="Radio a pile" width="500" height="500"></div>
+      </div>
+      <div class="lib-fustella">
+        <div class="lib-fustella-tit">Il gradino di questa tavola</div>
+        <div class="lib-disegno"><svg class="fust" viewBox="0 0 108 74" role="img"
+     aria-label="Pezzo da ritagliare: un rettangolo con la piega a metà, due tagli che partono dalla piega e una linguetta da spingere in avanti, con sopra torcia elettrica accesa"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect x="6" y="6" width="96" height="54" stroke="#111827" stroke-width="1" fill="none" rx="1"/>
+  <text x="54" y="4.2" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">1 · RITAGLIA IL RETTANGOLO</text>
+  <line x1="6" y1="30" x2="102" y2="30" stroke="#0284c7" stroke-width="1" stroke-dasharray="3 2"/>
+  <text x="54" y="27.5" text-anchor="middle" font-size="3" fill="#0284c7" font-weight="bold">2 · PIEGA QUI, A META&#x27;</text>
+  <line x1="36" y1="30" x2="36" y2="48" stroke="#111827" stroke-width="1.2"/>
+  <line x1="72" y1="30" x2="72" y2="48" stroke="#111827" stroke-width="1.2"/>
+  <line x1="26" y1="39" x2="34.5" y2="39" stroke="#111827" stroke-width="0.4"/>
+  <path d="M36,39 l-2.2,-1.1 l0,2.2 Z" fill="#111827"/>
+  <text x="18" y="40" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">3 · TAGLIA</text>
+  <line x1="82" y1="39" x2="73.5" y2="39" stroke="#111827" stroke-width="0.4"/>
+  <path d="M72,39 l2.2,-1.1 l0,2.2 Z" fill="#111827"/>
+  <text x="90" y="40" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">3 · TAGLIA</text>
+  <image xlink:href="/pittogrammi/arasaac-bn/oca-torcia.png" x="41" y="31" width="26" height="16" preserveAspectRatio="xMidYMid meet"/>
+  <line x1="36" y1="48" x2="72" y2="48" stroke="#ea580c" stroke-width="0.9" stroke-dasharray="0.8 1.6" stroke-linecap="round"/>
+  <text x="54" y="52.5" text-anchor="middle" font-size="3" fill="#ea580c" font-weight="bold">4 · SPINGI IN AVANTI QUESTA LINGUETTA</text>
+  <text x="54" y="58.5" text-anchor="middle" font-size="4" fill="#111827" font-weight="bold">LA TORCIA</text>
+  <text x="54" y="68" text-anchor="middle" font-size="3" fill="#64748b" font-weight="normal">Coloralo prima di ritagliare. Niente colla.</text>
+</svg></div>
+        <p class="lib-montaggio"><strong>Sempre gli stessi passi, su tutte le tavole:</strong> ritaglia il
+        rettangolo, piegalo a metà sulla riga blu, taglia le due righe nere partendo dalla piega,
+        apri e spingi in avanti la linguetta. Niente colla e niente misure da rispettare.</p>
+      </div>
+      
+      <p class="nota-adulto">Per l'adulto: fino ai 6 anni ritaglia tu; dai 7 anni ritagliano
+      loro da seduti, sorvegliati, con forbici a punta arrotondata. Le frasi di questa tavola
+      vengono dalla pagina «Blackout» del sito. Non sostituiscono il piano di emergenza della scuola o
+      dell'edificio in cui vi trovate: se un'indicazione ufficiale dice altro, vale quella.</p>
+      <p class="lib-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span><span>LIBRO-POPUP · Tavola 9 di 13 · Rev. 2 · 15/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page" id="tav10" data-scelta="tav10">
+    <div class="lib">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">Nelle buche non si entra</h2>
+          <div class="scheda-sottotitolo">Dalle nostre parti certi gas si fermano in basso, dove non si vedono</div>
+        </div>
+      </header>
+      <p class="lib-tag">TAVOLA 10 · BUCHE E POSTI CHIUSI</p>
+      <div class="lib-corpo">
+        <div class="lib-testo">
+          <p>Ai Castelli Romani, sotto terra, c'è un gas che ogni tanto esce dal suolo. <strong>Non ha odore</strong> ed è pesante: si ferma nei posti bassi e chiusi, come pozzi, cantine e buche. Chi entra non si accorge di niente.</p>
+          <div class="lib-regole"><h3>Che cosa si fa</h3><ul><li>Non entrare mai in un pozzo, in una buca o in una cantina che non conosci.</li><li>Se una persona è dentro e non risponde, <strong>non entrare a prenderla</strong>: chi entra per aiutare diventa la seconda persona in pericolo.</li><li>Chiama subito un adulto e il 112, e di' che c'è qualcuno dentro un posto chiuso.</li><li>Tieni lontani gli altri e aspetta i vigili del fuoco: hanno le bombole per respirare.</li><li>Il gas per cucinare ha un odore aggiunto apposta, diverso da quello delle buche: se lo senti in casa, non accendere niente, apri le finestre, esci e chiama un adulto.</li></ul></div>
+        </div>
+        <div class="lib-pitto"><img src="/pittogrammi/arasaac-bn/alf-a-allerta.png" alt="Segnale di allerta" width="500" height="500"></div>
+      </div>
+      <div class="lib-fustella">
+        <div class="lib-fustella-tit">Il gradino di questa tavola</div>
+        <div class="lib-disegno"><svg class="fust" viewBox="0 0 108 74" role="img"
+     aria-label="Pezzo da ritagliare: un rettangolo con la piega a metà, due tagli che partono dalla piega e una linguetta da spingere in avanti, con sopra cartello di pericolo"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect x="6" y="6" width="96" height="54" stroke="#111827" stroke-width="1" fill="none" rx="1"/>
+  <text x="54" y="4.2" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">1 · RITAGLIA IL RETTANGOLO</text>
+  <line x1="6" y1="30" x2="102" y2="30" stroke="#0284c7" stroke-width="1" stroke-dasharray="3 2"/>
+  <text x="54" y="27.5" text-anchor="middle" font-size="3" fill="#0284c7" font-weight="bold">2 · PIEGA QUI, A META&#x27;</text>
+  <line x1="36" y1="30" x2="36" y2="48" stroke="#111827" stroke-width="1.2"/>
+  <line x1="72" y1="30" x2="72" y2="48" stroke="#111827" stroke-width="1.2"/>
+  <line x1="26" y1="39" x2="34.5" y2="39" stroke="#111827" stroke-width="0.4"/>
+  <path d="M36,39 l-2.2,-1.1 l0,2.2 Z" fill="#111827"/>
+  <text x="18" y="40" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">3 · TAGLIA</text>
+  <line x1="82" y1="39" x2="73.5" y2="39" stroke="#111827" stroke-width="0.4"/>
+  <path d="M72,39 l2.2,-1.1 l0,2.2 Z" fill="#111827"/>
+  <text x="90" y="40" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">3 · TAGLIA</text>
+  <image xlink:href="/pittogrammi/arasaac-bn/alf-a-allerta.png" x="41" y="31" width="26" height="16" preserveAspectRatio="xMidYMid meet"/>
+  <line x1="36" y1="48" x2="72" y2="48" stroke="#ea580c" stroke-width="0.9" stroke-dasharray="0.8 1.6" stroke-linecap="round"/>
+  <text x="54" y="52.5" text-anchor="middle" font-size="3" fill="#ea580c" font-weight="bold">4 · SPINGI IN AVANTI QUESTA LINGUETTA</text>
+  <text x="54" y="58.5" text-anchor="middle" font-size="4" fill="#111827" font-weight="bold">IL CARTELLO</text>
+  <text x="54" y="68" text-anchor="middle" font-size="3" fill="#64748b" font-weight="normal">Coloralo prima di ritagliare. Niente colla.</text>
+</svg></div>
+        <p class="lib-montaggio"><strong>Sempre gli stessi passi, su tutte le tavole:</strong> ritaglia il
+        rettangolo, piegalo a metà sulla riga blu, taglia le due righe nere partendo dalla piega,
+        apri e spingi in avanti la linguetta. Niente colla e niente misure da rispettare.</p>
+      </div>
+      
+      <p class="nota-adulto">Per l'adulto: fino ai 6 anni ritaglia tu; dai 7 anni ritagliano
+      loro da seduti, sorvegliati, con forbici a punta arrotondata. Le frasi di questa tavola
+      vengono dalla pagina «Rischio vulcanico» del sito. Non sostituiscono il piano di emergenza della scuola o
+      dell'edificio in cui vi trovate: se un'indicazione ufficiale dice altro, vale quella.</p>
+      <p class="lib-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span><span>LIBRO-POPUP · Tavola 10 di 13 · Rev. 2 · 15/09/2026</span></footer>
+    </div>
+  </article>
+  <article class="scheda-page" id="tav11" data-scelta="tav11">
+    <div class="lib">
+      <header class="scheda-header">
+        <div class="scheda-logo" aria-hidden="true">PC</div>
+        <div class="scheda-intestazione">
+          <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+          <h2 class="scheda-titolo-principale">Suona l'allarme: in fila, fino al punto di raccolta</h2>
+          <div class="scheda-sottotitolo">L'uscita di emergenza si prova prima, così il giorno vero si sa già</div>
+        </div>
+      </header>
+      <p class="lib-tag">TAVOLA 11 · A SCUOLA</p>
       <div class="lib-corpo">
         <div class="lib-testo">
           <p>A scuola l'uscita di emergenza non si improvvisa: si <strong>prova</strong>. Ogni classe ha una via di uscita, un punto di raccolta e due compagni con un compito. Il giorno in cui suona davvero, si fa quello che si è provato.</p>
-          <div class="lib-regole"><h3>Che cosa si fa</h3><ul>
-          <li>Quando suona, lascia tutto dov'è: lo zaino resta, tu vai.</li>
-          <li>Mettiti in fila e segui chi apre la fila.</li>
-          <li>Cammina, non correre, e resta in silenzio per sentire le indicazioni.</li>
-          <li>Al punto di raccolta resta con la tua classe finché non ti chiamano per nome.</li>
-          <li>Non tornare indietro a prendere niente.</li>
-          </ul></div>
+          <div class="lib-regole"><h3>Che cosa si fa</h3><ul><li>Quando suona, lascia tutto dov'è: lo zaino resta, tu vai.</li><li>Mettiti in fila e segui chi apre la fila.</li><li>Cammina, non correre, e resta in silenzio per sentire le indicazioni.</li><li>Al punto di raccolta resta con la tua classe finché non ti chiamano per nome.</li><li>Non tornare indietro a prendere niente.</li></ul></div>
         </div>
-        <div class="lib-pitto" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/pop-sirena.png" alt="Sirena di allarme" width="500" height="500"><img src="/pittogrammi/arasaac-bn/dis-cortile.png" alt="Cortile della scuola" width="500" height="500"></div>
+        <div class="lib-pitto"><img src="/pittogrammi/arasaac-bn/pop-sirena.png" alt="Sirena di allarme" width="500" height="500"></div>
       </div>
       <div class="lib-fustella">
-        <div class="lib-fustella-tit">La fustella · Gradino tagliato nella piega</div>
-        <div class="lib-disegno"><svg class="fust" width="120mm" height="90mm" viewBox="0 0 120 90" role="img" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="colla" width="3" height="3" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="3" height="3" fill="#fef3c7"/><line x1="0" y1="0" x2="0" y2="3" stroke="#d97706" stroke-width="0.8"/></pattern></defs><rect x="6" y="6" width="108" height="74" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.4" stroke-dasharray="2 2"/><line x1="6" y1="20" x2="114" y2="20" stroke="#0284c7" stroke-width="0.5" fill="none" stroke-dasharray="3 2"/><text x="112" y="18" text-anchor="end" font-size="2.8" fill="#0284c7">piega del foglio</text><line x1="30" y1="20" x2="30" y2="54" stroke="#111827" stroke-width="0.5" fill="none"/><line x1="90" y1="20" x2="90" y2="54" stroke="#111827" stroke-width="0.5" fill="none"/><line x1="30" y1="54" x2="90" y2="54" stroke="#ea580c" stroke-width="0.5" fill="none" stroke-dasharray="0.7 1.7" stroke-linecap="round"/><image href="/pittogrammi/arasaac-bn/pop-fila.png" x="47.0" y="24" width="26" height="26" preserveAspectRatio="xMidYMid meet"><title>Cinque persone in fila indiana</title></image><line x1="30" y1="65" x2="90" y2="65" stroke="#64748b" stroke-width="0.3"/><line x1="30" y1="63.8" x2="30" y2="66.2" stroke="#64748b" stroke-width="0.3"/><line x1="90" y1="63.8" x2="90" y2="66.2" stroke="#64748b" stroke-width="0.3"/><text x="60.0" y="63.2" text-anchor="middle" font-size="2.6" fill="#475569">60 mm</text><text x="94" y="37.0" font-size="2.8" fill="#475569">profondità 34 mm</text><text x="60.0" y="74" text-anchor="middle" font-size="2.8" fill="#475569">i due tagli partono dalla piega; poi spingi il gradino in avanti</text></svg></div>
-        <p class="lib-montaggio">Piega il foglio a metà. Taglia le due righe nere partendo dalla piega, poi apri e spingi in avanti la linguetta che si è formata: diventa un gradino in rilievo. Non serve colla.</p>
+        <div class="lib-fustella-tit">Il gradino di questa tavola</div>
+        <div class="lib-disegno"><svg class="fust" viewBox="0 0 108 74" role="img"
+     aria-label="Pezzo da ritagliare: un rettangolo con la piega a metà, due tagli che partono dalla piega e una linguetta da spingere in avanti, con sopra bambini in fila verso l'uscita"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect x="6" y="6" width="96" height="54" stroke="#111827" stroke-width="1" fill="none" rx="1"/>
+  <text x="54" y="4.2" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">1 · RITAGLIA IL RETTANGOLO</text>
+  <line x1="6" y1="30" x2="102" y2="30" stroke="#0284c7" stroke-width="1" stroke-dasharray="3 2"/>
+  <text x="54" y="27.5" text-anchor="middle" font-size="3" fill="#0284c7" font-weight="bold">2 · PIEGA QUI, A META&#x27;</text>
+  <line x1="36" y1="30" x2="36" y2="48" stroke="#111827" stroke-width="1.2"/>
+  <line x1="72" y1="30" x2="72" y2="48" stroke="#111827" stroke-width="1.2"/>
+  <line x1="26" y1="39" x2="34.5" y2="39" stroke="#111827" stroke-width="0.4"/>
+  <path d="M36,39 l-2.2,-1.1 l0,2.2 Z" fill="#111827"/>
+  <text x="18" y="40" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">3 · TAGLIA</text>
+  <line x1="82" y1="39" x2="73.5" y2="39" stroke="#111827" stroke-width="0.4"/>
+  <path d="M72,39 l2.2,-1.1 l0,2.2 Z" fill="#111827"/>
+  <text x="90" y="40" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">3 · TAGLIA</text>
+  <image xlink:href="/pittogrammi/arasaac-bn/pop-fila.png" x="41" y="31" width="26" height="16" preserveAspectRatio="xMidYMid meet"/>
+  <line x1="36" y1="48" x2="72" y2="48" stroke="#ea580c" stroke-width="0.9" stroke-dasharray="0.8 1.6" stroke-linecap="round"/>
+  <text x="54" y="52.5" text-anchor="middle" font-size="3" fill="#ea580c" font-weight="bold">4 · SPINGI IN AVANTI QUESTA LINGUETTA</text>
+  <text x="54" y="58.5" text-anchor="middle" font-size="4" fill="#111827" font-weight="bold">LA FILA</text>
+  <text x="54" y="68" text-anchor="middle" font-size="3" fill="#64748b" font-weight="normal">Coloralo prima di ritagliare. Niente colla.</text>
+</svg></div>
+        <p class="lib-montaggio"><strong>Sempre gli stessi passi, su tutte le tavole:</strong> ritaglia il
+        rettangolo, piegalo a metà sulla riga blu, taglia le due righe nere partendo dalla piega,
+        apri e spingi in avanti la linguetta. Niente colla e niente misure da rispettare.</p>
       </div>
-      <p class="nota-adulto">Per l'adulto: ritaglia tu le parti piccole con i bambini
-      fino ai 6 anni; dai 7 possono ritagliare da seduti, sorvegliati, con forbici a punta
-      arrotondata. Fonte delle frasi di questa tavola: Articolo «Primo giorno di scuola: le prove di evacuazione non sono un dettaglio» del sito. Non sostituiscono il
-      piano di emergenza della scuola o dell'edificio in cui vi trovate: se un'indicazione
-      ufficiale dice altro, vale quella.</p>
+      
+      <p class="nota-adulto">Per l'adulto: fino ai 6 anni ritaglia tu; dai 7 anni ritagliano
+      loro da seduti, sorvegliati, con forbici a punta arrotondata. Le frasi di questa tavola
+      vengono dalla articolo «Le prove di evacuazione» del sito. Non sostituiscono il piano di emergenza della scuola o
+      dell'edificio in cui vi trovate: se un'indicazione ufficiale dice altro, vale quella.</p>
       <p class="lib-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza.</p>
-      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
-        <span>LIBRO-POPUP · Foglio 8 di 11 · Rev. 1 · 13/09/2026</span></footer>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span><span>LIBRO-POPUP · Tavola 11 di 13 · Rev. 2 · 15/09/2026</span></footer>
     </div>
   </article>
-
-  <article class="scheda-page" id="tav7">
+  <article class="scheda-page" id="tav12" data-scelta="tav12">
     <div class="lib">
       <header class="scheda-header">
         <div class="scheda-logo" aria-hidden="true">PC</div>
         <div class="scheda-intestazione">
           <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
-          <h2 class="scheda-titolo-principale">Che cosa c&#x27;è nello zaino di emergenza</h2>
-          <div class="scheda-sottotitolo">Una tasca da riempire con le tessere, e da rifare ogni sei mesi</div>
+          <h2 class="scheda-titolo-principale">Che cosa c'è nello zaino di emergenza</h2>
+          <div class="scheda-sottotitolo">Si prepara quando non serve, e si controlla ogni sei mesi</div>
         </div>
       </header>
-      <p class="lib-tag">TAVOLA 7 · LO ZAINO</p>
+      <p class="lib-tag">TAVOLA 12 · LO ZAINO</p>
       <div class="lib-corpo">
         <div class="lib-testo">
           <p>Lo zaino di emergenza è quello che si prende <strong>se bisogna uscire di casa in fretta</strong>. Si prepara quando non serve, si tiene vicino alla porta, e si controlla ogni sei mesi.</p>
-          <div class="lib-regole"><h3>Che cosa si fa</h3><ul>
-          <li>Ritaglia le tessere e metti nella tasca quelle che servono davvero.</li>
-          <li>Aggiungi la tua: una medicina che prendi, il gioco piccolo, la foto di famiglia.</li>
-          <li>Ogni sei mesi controlla con un adulto: l'acqua scade e le pile si scaricano.</li>
-          </ul></div>
+          <div class="lib-regole"><h3>Che cosa si fa</h3><ul><li>Ritaglia le tessere qui sotto e infila dietro il gradino quelle che servono davvero.</li><li>Aggiungi la tua: una medicina che prendi, il gioco piccolo, la foto di famiglia.</li><li>Ogni sei mesi controlla con un adulto: l'acqua scade e le pile si scaricano.</li></ul></div>
         </div>
-        <div class="lib-pitto" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-z-zaino.png" alt="Zaino" width="500" height="500"></div>
+        <div class="lib-pitto"><img src="/pittogrammi/arasaac-bn/alf-k-kit.png" alt="Kit di emergenza" width="500" height="500"></div>
       </div>
       <div class="lib-fustella">
-        <div class="lib-fustella-tit">La fustella · Tasca porta-tessere</div>
-        <div class="lib-disegno"><svg class="fust" width="128mm" height="82mm" viewBox="0 0 128 82" role="img" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="colla" width="3" height="3" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="3" height="3" fill="#fef3c7"/><line x1="0" y1="0" x2="0" y2="3" stroke="#d97706" stroke-width="0.8"/></pattern></defs><rect x="12" y="6" width="104" height="56" stroke="#111827" stroke-width="0.5" fill="none" rx="1"/><line x1="12" y1="62" x2="116" y2="62" stroke="#ea580c" stroke-width="0.5" fill="none" stroke-dasharray="0.7 1.7" stroke-linecap="round"/><rect x="2" y="6" width="10" height="56" fill="url(#colla)" stroke="#d97706" stroke-width="0.4" stroke-dasharray="1.5 1.5"/><text x="7.0" y="35.1" text-anchor="middle" font-size="2.6" fill="#92400e" font-weight="bold">INC.</text><rect x="116" y="6" width="10" height="56" fill="url(#colla)" stroke="#d97706" stroke-width="0.4" stroke-dasharray="1.5 1.5"/><text x="121.0" y="35.1" text-anchor="middle" font-size="2.6" fill="#92400e" font-weight="bold">INC.</text><rect x="12" y="62" width="104" height="8" fill="url(#colla)" stroke="#d97706" stroke-width="0.4" stroke-dasharray="1.5 1.5"/><text x="64.0" y="67.1" text-anchor="middle" font-size="2.6" fill="#92400e" font-weight="bold">INCOLLA SOTTO</text><text x="64.0" y="34.0" text-anchor="middle" font-size="4" fill="#94a3b8">il lato di sopra resta aperto</text><line x1="12" y1="80" x2="116" y2="80" stroke="#64748b" stroke-width="0.3"/><line x1="12" y1="78.8" x2="12" y2="81.2" stroke="#64748b" stroke-width="0.3"/><line x1="116" y1="78.8" x2="116" y2="81.2" stroke="#64748b" stroke-width="0.3"/><text x="64.0" y="78.2" text-anchor="middle" font-size="2.6" fill="#475569">104 mm</text></svg></div>
-        <p class="lib-montaggio">Ritaglia la tasca con le tre alette. Piega a valle la riga arancione, incolla le tre alette sul foglio e lascia aperto il lato di sopra: è lì che entrano le tessere.</p>
+        <div class="lib-fustella-tit">Il gradino di questa tavola</div>
+        <div class="lib-disegno"><svg class="fust" viewBox="0 0 108 74" role="img"
+     aria-label="Pezzo da ritagliare: un rettangolo con la piega a metà, due tagli che partono dalla piega e una linguetta da spingere in avanti, con sopra zaino di emergenza"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect x="6" y="6" width="96" height="54" stroke="#111827" stroke-width="1" fill="none" rx="1"/>
+  <text x="54" y="4.2" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">1 · RITAGLIA IL RETTANGOLO</text>
+  <line x1="6" y1="30" x2="102" y2="30" stroke="#0284c7" stroke-width="1" stroke-dasharray="3 2"/>
+  <text x="54" y="27.5" text-anchor="middle" font-size="3" fill="#0284c7" font-weight="bold">2 · PIEGA QUI, A META&#x27;</text>
+  <line x1="36" y1="30" x2="36" y2="48" stroke="#111827" stroke-width="1.2"/>
+  <line x1="72" y1="30" x2="72" y2="48" stroke="#111827" stroke-width="1.2"/>
+  <line x1="26" y1="39" x2="34.5" y2="39" stroke="#111827" stroke-width="0.4"/>
+  <path d="M36,39 l-2.2,-1.1 l0,2.2 Z" fill="#111827"/>
+  <text x="18" y="40" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">3 · TAGLIA</text>
+  <line x1="82" y1="39" x2="73.5" y2="39" stroke="#111827" stroke-width="0.4"/>
+  <path d="M72,39 l2.2,-1.1 l0,2.2 Z" fill="#111827"/>
+  <text x="90" y="40" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">3 · TAGLIA</text>
+  <image xlink:href="/pittogrammi/arasaac-bn/alf-z-zaino.png" x="41" y="31" width="26" height="16" preserveAspectRatio="xMidYMid meet"/>
+  <line x1="36" y1="48" x2="72" y2="48" stroke="#ea580c" stroke-width="0.9" stroke-dasharray="0.8 1.6" stroke-linecap="round"/>
+  <text x="54" y="52.5" text-anchor="middle" font-size="3" fill="#ea580c" font-weight="bold">4 · SPINGI IN AVANTI QUESTA LINGUETTA</text>
+  <text x="54" y="58.5" text-anchor="middle" font-size="4" fill="#111827" font-weight="bold">LO ZAINO</text>
+  <text x="54" y="68" text-anchor="middle" font-size="3" fill="#64748b" font-weight="normal">Coloralo prima di ritagliare. Niente colla.</text>
+</svg></div>
+        <p class="lib-montaggio"><strong>Sempre gli stessi passi, su tutte le tavole:</strong> ritaglia il
+        rettangolo, piegalo a metà sulla riga blu, taglia le due righe nere partendo dalla piega,
+        apri e spingi in avanti la linguetta. Niente colla e niente misure da rispettare.</p>
       </div>
-        <div class="lib-tessere"><div class="lib-tessera"><img src="/pittogrammi/arasaac-bn/dis-acqua.png" alt="Acqua" width="500" height="500"><span>Acqua</span></div><div class="lib-tessera"><img src="/pittogrammi/arasaac-bn/oca-torcia.png" alt="Torcia" width="500" height="500"><span>Torcia</span></div><div class="lib-tessera"><img src="/pittogrammi/arasaac-bn/oca-radio.png" alt="Radio a pile" width="500" height="500"><span>Radio a pile</span></div><div class="lib-tessera"><img src="/pittogrammi/arasaac-bn/alf-k-kit.png" alt="Cassetta di pronto soccorso" width="500" height="500"><span>Cassetta di pronto soccorso</span></div><div class="lib-tessera"><img src="/pittogrammi/arasaac-bn/dis-lettera.png" alt="Un foglio con i tuoi dati" width="500" height="500"><span>Un foglio con i tuoi dati</span></div><div class="lib-tessera"><img src="/pittogrammi/arasaac-bn/pop-scatoletta.png" alt="Cibo in scatola" width="500" height="500"><span>Cibo in scatola</span></div><div class="lib-tessera"><img src="/pittogrammi/arasaac-bn/dis-famiglia.png" alt="Numeri di famiglia" width="500" height="500"><span>Numeri di famiglia</span></div></div>
-      <p class="nota-adulto">Per l'adulto: ritaglia tu le parti piccole con i bambini
-      fino ai 6 anni; dai 7 possono ritagliare da seduti, sorvegliati, con forbici a punta
-      arrotondata. Fonte delle frasi di questa tavola: Pagina «Kit di emergenza: casa, evacuazione e auto» del sito. Non sostituiscono il
-      piano di emergenza della scuola o dell'edificio in cui vi trovate: se un'indicazione
-      ufficiale dice altro, vale quella.</p>
+      <div class="lib-tessere-box"><div class="lib-fustella-tit">Le tessere da ritagliare</div><div class="lib-tessere"><div class="lib-tessera"><img src="/pittogrammi/arasaac-bn/oca-bottiglia.png" alt="" width="500" height="500"><span>Acqua</span></div><div class="lib-tessera"><img src="/pittogrammi/arasaac-bn/pop-scatoletta.png" alt="" width="500" height="500"><span>Cibo</span></div><div class="lib-tessera"><img src="/pittogrammi/arasaac-bn/oca-torcia.png" alt="" width="500" height="500"><span>Torcia</span></div><div class="lib-tessera"><img src="/pittogrammi/arasaac-bn/oca-radio.png" alt="" width="500" height="500"><span>Radio</span></div><div class="lib-tessera"><img src="/pittogrammi/arasaac-bn/kcb-coperta.png" alt="" width="500" height="500"><span>Coperta</span></div><div class="lib-tessera"><img src="/pittogrammi/arasaac-bn/alf-n-telefono.png" alt="" width="500" height="500"><span>Numeri</span></div><div class="lib-tessera"><img src="/pittogrammi/arasaac-bn/dis-lettera.png" alt="" width="500" height="500"><span>Documenti</span></div></div></div>
+      <p class="nota-adulto">Per l'adulto: fino ai 6 anni ritaglia tu; dai 7 anni ritagliano
+      loro da seduti, sorvegliati, con forbici a punta arrotondata. Le frasi di questa tavola
+      vengono dalla pagina «Kit di emergenza» del sito. Non sostituiscono il piano di emergenza della scuola o
+      dell'edificio in cui vi trovate: se un'indicazione ufficiale dice altro, vale quella.</p>
       <p class="lib-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza.</p>
-      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
-        <span>LIBRO-POPUP · Foglio 9 di 11 · Rev. 1 · 13/09/2026</span></footer>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span><span>LIBRO-POPUP · Tavola 12 di 13 · Rev. 2 · 15/09/2026</span></footer>
     </div>
   </article>
-
-  <article class="scheda-page" id="tav8">
+  <article class="scheda-page" id="tav13" data-scelta="tav13">
     <div class="lib">
       <header class="scheda-header">
         <div class="scheda-logo" aria-hidden="true">PC</div>
@@ -531,44 +963,58 @@
           <div class="scheda-sottotitolo">Un numero solo, e quattro cose da dire</div>
         </div>
       </header>
-      <p class="lib-tag">TAVOLA 8 · CHIEDERE AIUTO</p>
+      <p class="lib-tag">TAVOLA 13 · CHIEDERE AIUTO</p>
       <div class="lib-corpo">
         <div class="lib-testo">
           <p>In Italia il numero delle emergenze è <strong>uno solo: il 112</strong>. Risponde una persona che ti fa delle domande e manda chi serve — l'ambulanza, i vigili del fuoco o i carabinieri. È gratuito, e funziona anche dal telefono di casa.</p>
-          <div class="lib-regole"><h3>Che cosa si fa</h3><ul>
-          <li>Di' dove sei: il paese, la via, il numero, un posto che si riconosce.</li>
-          <li>Di' che cosa è successo, con parole semplici.</li>
-          <li>Di' se c'è qualcuno che sta male, e quante persone sono.</li>
-          <li>Rispondi alle domande e non chiudere finché non te lo dicono.</li>
-          <li>Non chiamare il 112 per gioco: mentre parli con te, qualcuno aspetta davvero.</li>
-          </ul></div>
+          <div class="lib-regole"><h3>Che cosa si fa</h3><ul><li>Di' dove sei: il paese, la via, il numero, un posto che si riconosce.</li><li>Di' che cosa è successo, con parole semplici.</li><li>Di' se c'è qualcuno che sta male, e quante persone siete.</li><li>Rispondi alle domande e non chiudere finché non te lo dicono.</li><li>Non chiamare il 112 per gioco: mentre parli tu, qualcuno aspetta davvero.</li></ul></div>
         </div>
-        <div class="lib-pitto" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-n-telefono.png" alt="Telefono" width="500" height="500"><img src="/pittogrammi/arasaac-bn/dis-ambulanza.png" alt="Ambulanza" width="500" height="500"></div>
+        <div class="lib-pitto"><img src="/pittogrammi/arasaac-bn/alf-n-telefono.png" alt="Telefono" width="500" height="500"></div>
       </div>
       <div class="lib-fustella">
-        <div class="lib-fustella-tit">La fustella · Linguetta scorrevole</div>
-        <div class="lib-disegno"><svg class="fust" width="178mm" height="82mm" viewBox="0 0 178 82" role="img" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="colla" width="3" height="3" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="3" height="3" fill="#fef3c7"/><line x1="0" y1="0" x2="0" y2="3" stroke="#d97706" stroke-width="0.8"/></pattern></defs><rect x="6" y="6" width="118" height="24" stroke="#111827" stroke-width="0.5" fill="none" rx="1"/><image href="/pittogrammi/arasaac-bn/dis-al-telefono.png" x="10" y="7" width="22" height="22" preserveAspectRatio="xMidYMid meet"><title>Persona che parla al telefono</title></image><text x="120" y="19.4" text-anchor="end" font-size="5" font-weight="bold" fill="#0b3c5d">TIRA →</text><line x1="6" y1="38" x2="124" y2="38" stroke="#64748b" stroke-width="0.3"/><line x1="6" y1="36.8" x2="6" y2="39.2" stroke="#64748b" stroke-width="0.3"/><line x1="124" y1="36.8" x2="124" y2="39.2" stroke="#64748b" stroke-width="0.3"/><text x="65.0" y="36.2" text-anchor="middle" font-size="2.6" fill="#475569">118 mm</text><line x1="30" y1="44" x2="30" y2="70" stroke="#111827" stroke-width="0.5" fill="none"/><line x1="90" y1="44" x2="90" y2="70" stroke="#111827" stroke-width="0.5" fill="none"/><line x1="30" y1="76" x2="90" y2="76" stroke="#64748b" stroke-width="0.3"/><line x1="30" y1="74.8" x2="30" y2="77.2" stroke="#64748b" stroke-width="0.3"/><line x1="90" y1="74.8" x2="90" y2="77.2" stroke="#64748b" stroke-width="0.3"/><text x="60.0" y="74.2" text-anchor="middle" font-size="2.6" fill="#475569">60 mm fra le due fessure</text><text x="96" y="58" font-size="2.8" fill="#475569">fessure lunghe 26 mm:</text><text x="96" y="62" font-size="2.8" fill="#475569">due più della striscia,</text><text x="96" y="66" font-size="2.8" fill="#475569">alta 24, così scorre</text></svg></div>
-        <p class="lib-montaggio">Ritaglia la striscia e le due fessure nel foglio. Infila la striscia da sotto nella prima fessura e da sopra nella seconda. Tirando la linguetta la figura attraversa la scena.</p>
+        <div class="lib-fustella-tit">Il gradino di questa tavola</div>
+        <div class="lib-disegno"><svg class="fust" viewBox="0 0 108 74" role="img"
+     aria-label="Pezzo da ritagliare: un rettangolo con la piega a metà, due tagli che partono dalla piega e una linguetta da spingere in avanti, con sopra bambino che parla al telefono"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <rect x="6" y="6" width="96" height="54" stroke="#111827" stroke-width="1" fill="none" rx="1"/>
+  <text x="54" y="4.2" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">1 · RITAGLIA IL RETTANGOLO</text>
+  <line x1="6" y1="30" x2="102" y2="30" stroke="#0284c7" stroke-width="1" stroke-dasharray="3 2"/>
+  <text x="54" y="27.5" text-anchor="middle" font-size="3" fill="#0284c7" font-weight="bold">2 · PIEGA QUI, A META&#x27;</text>
+  <line x1="36" y1="30" x2="36" y2="48" stroke="#111827" stroke-width="1.2"/>
+  <line x1="72" y1="30" x2="72" y2="48" stroke="#111827" stroke-width="1.2"/>
+  <line x1="26" y1="39" x2="34.5" y2="39" stroke="#111827" stroke-width="0.4"/>
+  <path d="M36,39 l-2.2,-1.1 l0,2.2 Z" fill="#111827"/>
+  <text x="18" y="40" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">3 · TAGLIA</text>
+  <line x1="82" y1="39" x2="73.5" y2="39" stroke="#111827" stroke-width="0.4"/>
+  <path d="M72,39 l2.2,-1.1 l0,2.2 Z" fill="#111827"/>
+  <text x="90" y="40" text-anchor="middle" font-size="3" fill="#111827" font-weight="bold">3 · TAGLIA</text>
+  <image xlink:href="/pittogrammi/arasaac-bn/dis-al-telefono.png" x="41" y="31" width="26" height="16" preserveAspectRatio="xMidYMid meet"/>
+  <line x1="36" y1="48" x2="72" y2="48" stroke="#ea580c" stroke-width="0.9" stroke-dasharray="0.8 1.6" stroke-linecap="round"/>
+  <text x="54" y="52.5" text-anchor="middle" font-size="3" fill="#ea580c" font-weight="bold">4 · SPINGI IN AVANTI QUESTA LINGUETTA</text>
+  <text x="54" y="58.5" text-anchor="middle" font-size="4" fill="#111827" font-weight="bold">IL TELEFONO</text>
+  <text x="54" y="68" text-anchor="middle" font-size="3" fill="#64748b" font-weight="normal">Coloralo prima di ritagliare. Niente colla.</text>
+</svg></div>
+        <p class="lib-montaggio"><strong>Sempre gli stessi passi, su tutte le tavole:</strong> ritaglia il
+        rettangolo, piegalo a metà sulla riga blu, taglia le due righe nere partendo dalla piega,
+        apri e spingi in avanti la linguetta. Niente colla e niente misure da rispettare.</p>
       </div>
-      <p class="nota-adulto">Per l'adulto: ritaglia tu le parti piccole con i bambini
-      fino ai 6 anni; dai 7 possono ritagliare da seduti, sorvegliati, con forbici a punta
-      arrotondata. Fonte delle frasi di questa tavola: Pagina «Numeri utili» del sito. Non sostituiscono il
-      piano di emergenza della scuola o dell'edificio in cui vi trovate: se un'indicazione
-      ufficiale dice altro, vale quella.</p>
+      
+      <p class="nota-adulto">Per l'adulto: fino ai 6 anni ritaglia tu; dai 7 anni ritagliano
+      loro da seduti, sorvegliati, con forbici a punta arrotondata. Le frasi di questa tavola
+      vengono dalla pagina «Numeri utili» del sito. Non sostituiscono il piano di emergenza della scuola o
+      dell'edificio in cui vi trovate: se un'indicazione ufficiale dice altro, vale quella.</p>
       <p class="lib-licenza">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza.</p>
-      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
-        <span>LIBRO-POPUP · Foglio 10 di 11 · Rev. 1 · 13/09/2026</span></footer>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span><span>LIBRO-POPUP · Tavola 13 di 13 · Rev. 2 · 15/09/2026</span></footer>
     </div>
   </article>
-
-  <article class="scheda-page" id="diploma">
+  <article class="scheda-page" id="diploma" data-scelta="diploma">
     <div class="lib">
       <header class="scheda-header">
         <div class="scheda-logo" aria-hidden="true">PC</div>
         <div class="scheda-intestazione">
           <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
           <h2 class="scheda-titolo-principale">Il diploma e il tesserino</h2>
-          <div class="scheda-sottotitolo">Da ritagliare quando il libro è finito e le otto tavole si aprono tutte</div>
+          <div class="scheda-sottotitolo">Da ritagliare quando il libro è finito</div>
         </div>
       </header>
       <p class="lib-tag">ALLA FINE</p>
@@ -579,8 +1025,8 @@
           <p class="lib-dip-testo">Si consegna a</p>
           <div class="lib-dip-riga"></div>
           <p class="lib-dip-testo">che ha costruito il libro pop-up, ha imparato che cosa si fa
-          quando trema la terra, quando arriva troppa acqua e quando c'è un incendio, e sa che
-          in emergenza si chiama il <strong>112</strong>.</p>
+          quando trema la terra, quando arriva troppa acqua e quando c'è un incendio, e sa che in
+          emergenza si chiama il <strong>112</strong>.</p>
           <div class="lib-dip-firme">
             <div><div class="lib-dip-riga"></div><span>data</span></div>
             <div><div class="lib-dip-riga"></div><span>chi ha aiutato a costruirlo</span></div>
@@ -590,10 +1036,7 @@
       <div class="lib-tesserino">
         <div class="lib-tess-tit">Il tesserino da tenere in tasca</div>
         <div class="lib-tess-carta">
-          <div class="lib-tess-fronte">
-            <strong>112</strong>
-            <span>il numero unico delle emergenze</span>
-          </div>
+          <div class="lib-tess-fronte"><strong>112</strong><span>il numero unico delle emergenze</span></div>
           <div class="lib-tess-retro">
             <div><strong>Dico dove sono</strong> — paese, via, numero, un posto che si riconosce.</div>
             <div><strong>Dico che cosa è successo</strong> — con parole semplici.</div>
@@ -601,17 +1044,60 @@
             <div><strong>Non chiudo</strong> finché non me lo dicono.</div>
           </div>
         </div>
-        <p class="lib-tess-nota">Ritaglia lungo il bordo, piega a metà sulla riga blu e incolla
-        i due <strong>rovesci</strong> l'uno sull'altro, lasciando fuori le facce stampate:
-        viene un tesserino a due lati.</p>
+        <p class="lib-tess-nota">Ritaglia lungo il bordo e piega a metà sulla riga blu, con la
+        parte scritta verso l'esterno: senza colla il tesserino ha già due facce, il 112 su un
+        lato e le quattro cose da dire sull'altro.</p>
       </div>
       <p class="nota-adulto">Per l'adulto: il diploma non certifica nulla e non ha valore
-      ufficiale — è il riconoscimento di un lavoro fatto insieme, e vale esattamente per
-      quello. Il tesserino riporta i quattro punti della telefonata al 112 della Tavola 8.</p>
-      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span>
-        <span>LIBRO-POPUP · Foglio 11 di 11 · Rev. 1 · 13/09/2026</span></footer>
+      ufficiale — è il riconoscimento di un lavoro fatto insieme, e vale esattamente per quello.
+      Il tesserino riporta i quattro punti della telefonata al 112 dell'ultima tavola.</p>
+      <footer class="scheda-footer"><span class="scheda-site">protezionecivilegenzano.it</span><span>LIBRO-POPUP · Diploma · Rev. 2 · 15/09/2026</span></footer>
     </div>
   </article>
+  <script>
+  (function () {
+    // Scelta delle tavole da stampare. Senza JavaScript non succede niente e si
+    // stampa tutto: la scheda resta utilizzabile, che è il comportamento giusto
+    // per un materiale che finisce in classe su computer vecchi.
+    var form = document.getElementById('scelta');
+    if (!form) return;
+    var conteggio = document.getElementById('conteggio');
 
+    function aggiorna() {
+      var caselle = form.querySelectorAll('input[type=checkbox]');
+      var scelti = 0;
+      caselle.forEach(function (c) {
+        var pagina = document.getElementById(c.value);
+        if (!pagina) return;
+        pagina.classList.toggle('lib-esclusa', !c.checked);
+        if (c.checked) scelti++;
+      });
+      // L'ultimo foglio stampato non deve forzare un salto pagina: altrimenti
+      // esce un foglio bianco in fondo.
+      document.querySelectorAll('.lib-ultima-stampata').forEach(function (p) {
+        p.classList.remove('lib-ultima-stampata');
+      });
+      var visibili = document.querySelectorAll('.scheda-page:not(.lib-esclusa)');
+      if (visibili.length) visibili[visibili.length - 1].classList.add('lib-ultima-stampata');
+      conteggio.textContent = scelti === 0
+        ? 'Nessun foglio selezionato: non verrà stampato niente.'
+        : (scelti === 1 ? 'Verrà stampato 1 foglio.' : 'Verranno stampati ' + scelti + ' fogli.');
+    }
+
+    form.addEventListener('change', aggiorna);
+    document.getElementById('tutte').addEventListener('click', function () {
+      form.querySelectorAll('input[type=checkbox]').forEach(function (c) { c.checked = true; });
+      aggiorna();
+    });
+    document.getElementById('nessuna').addEventListener('click', function () {
+      form.querySelectorAll('input[type=checkbox]').forEach(function (c) {
+        c.checked = (c.value === 'copertina' || c.value === 'guida');
+      });
+      aggiorna();
+    });
+    document.getElementById('stampa').addEventListener('click', function () { window.print(); });
+    aggiorna();
+  })();
+</script>
 </body>
 </html>
