@@ -1,6 +1,6 @@
 # Generatori delle schede didattiche a più fogli
 
-Sette schede stampabili di `static/formazione/schede-stampabili/` non si
+Nove schede stampabili di `static/formazione/schede-stampabili/` non si
 scrivono a mano: hanno decine di fogli quasi identici, e un refuso corretto su
 un foglio solo resterebbe sugli altri venticinque. Qui vivono i generatori e i
 dati da cui nascono.
@@ -12,6 +12,8 @@ dati da cui nascono.
 | `genera-album-disegni.py` | `disegni-mezzi-infanzia/`, `disegni-persone-infanzia/`, `disegni-momenti-infanzia/` | 12 ciascuno |
 | `genera-memory.py` | `memory-protezione-civile-infanzia/` | 3 (tessere, retro, regole) |
 | `genera-gioco-oca.py` | `gioco-oca-protezione-civile/` | 4 (tabellone, imprevisti, emergenze, regole e pedine) |
+| `genera-libro-popup.py` | `libro-popup-protezione-civile/` | 16 (copertina, guida, tredici tavole con la scelta di stampa, diploma) |
+| `genera-storia-popup.py` | `flavia-libro-popup/` | 14 fogli A4 **orizzontali** (copertina e retro, guida, dodici capitoli con la storia) |
 
 I testi stanno nei due moduli di dati, non nei generatori:
 
@@ -20,6 +22,13 @@ I testi stanno nei due moduli di dati, non nei generatori:
   e `muta` (la H, che nell'alfabeto italiano c'è ma non ha un suono proprio).
 - `disegni_dati.py` — i tre album, con titolo, disegno, testo alternativo e
   didascalia di ogni foglio.
+- `libro_popup_dati.py` — le tredici tavole del quaderno pop-up: titolo, testo,
+  regole «che cosa si fa» (le stesse delle pagine sui rischi del sito) e
+  pittogramma di ciascuna emergenza.
+- `storia_popup_dati.py` — il libro con la storia: i dodici capitoli di «Flavia,
+  Flavio e lo zaino rosso», con il testo da leggere ad alta voce e i rimandi
+  alle regole di `libro_popup_dati.py` (una regola sta scritta in un posto solo).
+  I disegni delle scene sono tracciati dal generatore, non sono pittogrammi.
 - `oca_dati.py` — il gioco dell'oca: le 56 caselle del percorso, le 12 carte
   imprevisto (fatto, effetto, disegno e descrizione del disegno), le 12 carte
   emergenza (domanda, risposta e pagina del sito da cui viene) e le 6 pedine.
@@ -35,6 +44,8 @@ python3 genera-alfabetiere-tabella.py
 python3 genera-album-disegni.py
 python3 genera-memory.py
 python3 genera-gioco-oca.py
+python3 genera-libro-popup.py
+python3 genera-storia-popup.py
 cd ../..
 python3 scripts/genera-pacchetti-schede.py   # rifà "Stampa tutto"
 python3 scripts/genera-pacchetti-kit.py      # rifà gli ZIP offline

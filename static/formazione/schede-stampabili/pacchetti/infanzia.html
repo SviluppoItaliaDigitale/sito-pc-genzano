@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pacchetto stampa: Scuola dell'Infanzia (3-6 anni) — 77 schede A4</title>
-  <meta name="description" content="Stampa in un click tutte le 77 schede stampabili della Scuola dell'Infanzia (3-6 anni). Pacchetto auto-aggiornato dal sito istituzionale.">
+  <title>Pacchetto stampa: Scuola dell'Infanzia (3-6 anni) — 78 schede A4</title>
+  <meta name="description" content="Stampa in un click tutte le 78 schede stampabili della Scuola dell'Infanzia (3-6 anni). Pacchetto auto-aggiornato dal sito istituzionale.">
   <meta name="robots" content="noindex,follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
@@ -178,6 +178,104 @@
 
 /* === stili scheda 2 === */
 
+    /* foglio A4 orizzontale: la .scheda-page condivisa è verticale, qui si ribalta.
+       Niente classe sul wrapper: «Stampa tutto» riconosce le pagine dalla stringa esatta
+       class="scheda-page" e le riscrive. Niente pagina con nome (@page storia): in Chromium
+       il contenuto di una pagina con nome sparisce dal PDF (verificato il 16/09/2026, sia
+       qui sia dentro il pacchetto). Da solo il libro stampa in orizzontale con la @page
+       globale; dentro «Stampa tutto» (verticale) ogni foglio viene ruotato di 90 gradi. */
+    .scheda-page:has(> .st-foglio) { width: 297mm; min-height: 210mm; padding: 5mm; }
+    /* la banda delle affiliazioni sta dentro il foglio (così ruota con lui nel pacchetto);
+       la ::after condivisa qui si spegne per non averla due volte */
+    .scheda-page:has(> .st-foglio)::after { display: none; }
+    .st-foglio { position: relative; width: 287mm; height: 195mm; }
+    .st-banda { position: absolute; left: 159.6mm; top: 182.5mm; width: 111.4mm; height: 13mm; object-fit: contain; }
+    .st-scena { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .st-testo { position: absolute; left: 10mm; top: 7mm; width: 94mm; }
+    .st-icona { position: absolute; left: 88mm; top: 6mm; width: 16mm; height: 16mm; object-fit: contain;
+      border: 0.3mm solid #cbd5e1; border-radius: 2mm; padding: 1mm; background: #fff; }
+    .st-kicker, .st-titolo { padding-right: 20mm; }
+    .st-crediti { position: absolute; left: 10mm; top: 172.5mm; width: 94mm; margin: 0; font-size: 6.5px;
+      line-height: 1.25; color: #475569; }
+    .st-kicker { font-size: 9px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase;
+      color: #ea580c; margin: 0 0 1.5mm; }
+    .st-titolo { font-size: 24px; line-height: 1.1; color: var(--scheda-blu); margin: 0 0 3mm; }
+    .st-testo p { font-size: 13px; line-height: 1.45; margin: 0 0 2.2mm; }
+    .st-regole { position: absolute; left: 10mm; top: 141mm; width: 94mm; border: 1px solid #cbd5e1;
+      border-radius: 3px; padding: 2mm 3mm; background: #fff; }
+    .st-regole h3 { font-size: 9px; text-transform: uppercase; letter-spacing: 0.07em;
+      color: var(--scheda-blu); margin: 0 0 1mm; }
+    .st-regole ul { margin: 0 0 0 4mm; padding: 0; }
+    .st-regole li { font-size: 9.5px; line-height: 1.3; margin-bottom: 0.6mm; }
+    .st-piede { position: absolute; left: 10mm; right: 8mm; bottom: 13.5mm; margin: 0; display: flex;
+      justify-content: space-between; font-size: 8px; color: #475569; }
+    .st-piede span:first-child { font-weight: 700; color: var(--scheda-blu); }
+
+    /* copertina (metà destra) e retro (metà sinistra) */
+    .st-cop { position: absolute; left: 152mm; top: 32mm; width: 127mm; text-align: center; }
+    .st-cop-ente { font-size: 9px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+      color: #ea580c; margin: 0 0 3mm; }
+    .st-cop-titolo { font-size: 31px; line-height: 1.08; color: var(--scheda-blu); margin: 0 0 3mm; }
+    .st-cop-sotto { display: inline-block; background: var(--scheda-blu); color: #fff; font-size: 11px;
+      font-weight: 700; padding: 1.2mm 4mm; border-radius: 12px; margin: 0 0 3mm; }
+    .st-cop-eta { font-size: 11px; margin: 0; }
+    .st-retro { position: absolute; left: 10mm; top: 8mm; width: 122mm; }
+    .st-retro h2 { font-size: 15px; color: var(--scheda-blu); margin: 0 0 2mm; }
+    .st-retro p { font-size: 10.5px; line-height: 1.45; margin: 0 0 2mm; }
+    .st-retro-nota { background: #fff7ed; border-left: 3px solid #ea580c; padding: 1.5mm 2.5mm; }
+    .st-112 { border: 2px solid var(--scheda-blu); border-radius: 4px; padding: 2.5mm 3mm; margin-top: 3mm; }
+    .st-112 h3 { font-size: 12px; color: var(--scheda-blu); margin: 0 0 1mm; }
+    .st-112 p { font-size: 11px; margin: 0 0 2.2mm; }
+    .st-riga { display: inline-block; width: 46mm; border-bottom: 1px solid #1a1a1a; height: 5mm;
+      vertical-align: bottom; }
+    .st-riga.st-corta { width: 14mm; }
+
+    /* guida — il contenuto sta in un contenitore posizionato in assoluto, come nei capitoli:
+       con la pagina con nome (@page storia) Chromium perde nel PDF il contenuto in flusso normale
+       del foglio, mentre quello posizionato in assoluto resta (verificato il 16/09/2026). */
+    .st-guida-inner { position: absolute; left: 10mm; top: 7mm; width: 267mm; }
+    .st-guida-testa p { font-size: 12px; line-height: 1.45; margin: 0; max-width: 200mm; }
+    .st-passi { list-style: none; display: flex; gap: 4mm; margin: 5mm 0 0; padding: 0; }
+    /* .st-passo è un blocco, non un contenitore flessibile: dentro una pagina con nome (@page storia)
+       Chromium perde nel PDF il contenuto di un <li> flessibile — verificato il 16/09/2026. */
+    .st-passo { flex: 1; border: 1px solid #cbd5e1; border-radius: 3px; padding: 3mm; display: block; text-align: center; }
+    .st-passo-n { width: 7mm; height: 7mm; border-radius: 50%; background: var(--scheda-blu); color: #fff;
+      font-weight: 800; font-size: 12px; line-height: 7mm; margin: 0 auto 1.5mm; }
+    .st-passo svg { display: block; width: 42mm; height: 35mm; margin: 0 auto; }
+    .st-passo strong { display: block; font-size: 11px; color: var(--scheda-blu); margin: 1.5mm 0 1mm; }
+    .st-passo span { font-size: 9.5px; line-height: 1.35; }
+    .st-legenda { display: flex; gap: 6mm; flex-wrap: wrap; margin-top: 4mm; font-size: 10px; }
+    .st-tr { display: inline-block; width: 12mm; height: 0; vertical-align: middle; margin-right: 1.5mm; }
+    .st-tr-nera { border-top: 2px solid #111827; }
+    .st-tr-blu { border-top: 2px dashed #0284c7; }
+    .st-tr-arancio { border-top: 2px dotted #ea580c; }
+    .st-guida-nota { font-size: 9.5px; line-height: 1.4; margin: 3mm 0 0; max-width: 240mm; }
+    .st-guida .st-piede { left: 0; right: 0; }
+
+    .st-indice { margin: 0 0 1rem; }
+    .st-indice a { display: inline-block; padding: 0.2rem 0.55rem; margin: 0.12rem; border: 1.5px solid var(--scheda-blu);
+      border-radius: 5px; color: var(--scheda-blu); text-decoration: none; font-size: 0.85rem; }
+    .st-indice a:hover, .st-indice a:focus { background: var(--scheda-blu); color: #fff; outline: 2px solid #ffbe2e; outline-offset: 2px; }
+
+    /* banda affiliazioni (::after condivisa) centrata sulla pagina DESTRA del libro,
+       non sulla piega: a schermo è alta 14 mm (immagine 120 mm), in stampa 13 mm (111 mm) */
+    @media print {
+      @page { size: A4 landscape; margin: 5mm; }
+      /* la .scheda-page condivisa mette min-height:auto ma qui la specificità è maggiore: va ripetuto */
+      .scheda-page:has(> .st-foglio) { width: 287mm; min-height: auto; padding: 0; margin: 0; }
+      /* dentro «Stampa tutto» la pagina resta verticale (il pacchetto impone la sua @page dopo
+         gli stili delle schede): il foglio 287×195 ruotato di 90 gradi entra nei 200×287 utili */
+      .pacchetto-scheda .scheda-page:has(> .st-foglio) { width: 200mm; height: 287mm; overflow: hidden; }
+      .pacchetto-scheda .scheda-page:has(> .st-foglio) > .st-foglio { transform: translateX(195mm) rotate(90deg); transform-origin: 0 0; }
+    }
+    @media screen and (max-width: 300mm) {
+      /* a schermo stretto il foglio si scala tutto insieme, testo compreso: è un'anteprima */
+      .scheda-page:has(> .st-foglio) { width: 100%; min-height: 0; padding: 2mm; overflow-x: auto; }
+    }
+
+
+/* === stili scheda 3 === */
+
     .vf-domanda {
       display: flex;
       align-items: center;
@@ -222,7 +320,7 @@
     }
   
 
-/* === stili scheda 3 === */
+/* === stili scheda 4 === */
 
     .lab-griglia {
       display: grid;
@@ -319,7 +417,7 @@
     }
   
 
-/* === stili scheda 4 === */
+/* === stili scheda 5 === */
 
     .ts-grande {
       text-align: center;
@@ -384,7 +482,7 @@
     }
   
 
-/* === stili scheda 5 === */
+/* === stili scheda 6 === */
 
     .tc-area {
       display: grid;
@@ -440,7 +538,7 @@
     }
   
 
-/* === stili scheda 6 === */
+/* === stili scheda 7 === */
 
     .vocali-griglia {
       display: flex;
@@ -547,7 +645,7 @@
     }
   
 
-/* === stili scheda 7 === */
+/* === stili scheda 8 === */
 
     .scheda-page:has(> .alfT) { padding: 0; }
     .alfT { padding: 10mm 13mm 4mm; display: flex; flex-direction: column; min-height: 238mm; }
@@ -577,7 +675,7 @@
     }
   
 
-/* === stili scheda 8 === */
+/* === stili scheda 9 === */
 
     /* Alfabetiere A-Z — un foglio per lettera, quattro scritture. CSS scoped .alf */
     @font-face {
@@ -663,7 +761,7 @@
     }
   
 
-/* === stili scheda 9 === */
+/* === stili scheda 10 === */
 
     .ri-griglia {
       display: grid;
@@ -751,7 +849,7 @@
     }
   
 
-/* === stili scheda 10 === */
+/* === stili scheda 11 === */
 
     .cpi-area {
       display: grid;
@@ -887,7 +985,7 @@
     .istruzioni-maestra strong { color: #664d03; }
   
 
-/* === stili scheda 11 === */
+/* === stili scheda 12 === */
 
     .num-griglia { display: flex; flex-direction: column; gap: 0.5rem; margin: 0.6rem 0; }
     .num-riga {
@@ -933,7 +1031,7 @@
     .istruzioni-maestra strong { color: #664d03; }
   
 
-/* === stili scheda 12 === */
+/* === stili scheda 13 === */
 
     .ciclo-griglia {
       display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem;
@@ -989,7 +1087,7 @@
     }
   
 
-/* === stili scheda 13 === */
+/* === stili scheda 14 === */
 
     .triangolo-svg {
       max-width: 360px; height: auto; margin: 0.4rem auto; display: block;
@@ -1043,7 +1141,7 @@
     }
   
 
-/* === stili scheda 14 === */
+/* === stili scheda 15 === */
 
     .cartelli-griglia {
       display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem;
@@ -1089,7 +1187,7 @@
     }
   
 
-/* === stili scheda 15 === */
+/* === stili scheda 16 === */
 
     .rosa-svg { max-width: 320px; height: auto; margin: 0.5rem auto; display: block; }
     .punti-griglia {
@@ -1124,7 +1222,7 @@
     }
   
 
-/* === stili scheda 16 === */
+/* === stili scheda 17 === */
 
     .vign-griglia {
       display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem;
@@ -1176,7 +1274,7 @@
     }
   
 
-/* === stili scheda 17 === */
+/* === stili scheda 18 === */
 
     body { margin: 0; padding: 0; background: #f4f7fb; }
     .scheda-immagine-wrapper { max-width: 900px; margin: 1rem auto; padding: 0 1rem; }
@@ -1192,7 +1290,7 @@
     }
   
 
-/* === stili scheda 18 === */
+/* === stili scheda 19 === */
 
     .conta-griglia { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; margin: 0.5rem 0; }
     .conta-card {
@@ -1231,7 +1329,7 @@
     }
   
 
-/* === stili scheda 19 === */
+/* === stili scheda 20 === */
 
     body { margin: 0; padding: 0; background: #f4f7fb; }
     .scheda-immagine-wrapper { max-width: 900px; margin: 1rem auto; padding: 0 1rem; }
@@ -1247,7 +1345,7 @@
     }
   
 
-/* === stili scheda 20 === */
+/* === stili scheda 21 === */
 
     .scheda-page:has(> .mem) { padding: 0; }
     .mem { padding: 10mm 12mm 4mm; display: flex; flex-direction: column; min-height: 238mm; }
@@ -1293,7 +1391,7 @@
     }
   
 
-/* === stili scheda 21 === */
+/* === stili scheda 22 === */
 
     .scheda-page:has(> .dis) { padding: 0; }
     .dis { padding: 12mm 15mm 5mm; display: flex; flex-direction: column; min-height: 238mm; }
@@ -1327,7 +1425,7 @@
     }
   
 
-/* === stili scheda 22 === */
+/* === stili scheda 23 === */
 
     body { margin: 0; padding: 0; background: #f4f7fb; }
     .scheda-immagine-wrapper { max-width: 900px; margin: 1rem auto; padding: 0 1rem; }
@@ -1346,7 +1444,7 @@
     }
   
 
-/* === stili scheda 23 === */
+/* === stili scheda 24 === */
 
     .lab-wrap { max-width: 600px; margin: 0.4rem auto; }
     .lab-legenda { display: flex; flex-wrap: wrap; gap: 0.5rem 1.1rem; justify-content: center; margin: 0.6rem 0; font-size: 0.9rem; }
@@ -1356,7 +1454,7 @@
     .lab-soluzione { max-width: 320px; margin: 0.4rem 0; border: 1px solid var(--scheda-bordo); border-radius: 6px; }
   
 
-/* === stili scheda 24 === */
+/* === stili scheda 25 === */
 
     body { margin: 0; padding: 0; background: #f4f7fb; }
     .scheda-immagine-wrapper { max-width: 900px; margin: 1rem auto; padding: 0 1rem; }
@@ -1375,7 +1473,7 @@
     }
   
 
-/* === stili scheda 25 === */
+/* === stili scheda 26 === */
 
     .bli-regole {
       display: grid;
@@ -1456,7 +1554,7 @@
     }
   
 
-/* === stili scheda 26 === */
+/* === stili scheda 27 === */
 @page laboratorio26 { size: A4; margin: 5mm; }
     .scheda-page:has(> .lab26-header) { page: laboratorio26; }
     .lab26 { font-size: 14px; line-height: 1.4; }
@@ -1477,7 +1575,7 @@
       .lab26 .lab26-scenario { background: white; }
     }
 
-/* === stili scheda 27 === */
+/* === stili scheda 28 === */
 
     /* Percorso "Oggetti sconosciuti e confezioni alterate" — CSS scoped .os-page */
     .scheda-page:has(> .os-page) { padding: 0; }
@@ -1527,7 +1625,7 @@
     }
   
 
-/* === stili scheda 28 === */
+/* === stili scheda 29 === */
 
     /* Percorso "Oggetti sconosciuti e confezioni alterate" — CSS scoped .os-page */
     .scheda-page:has(> .os-page) { padding: 0; }
@@ -1578,7 +1676,7 @@
     }
   
 
-/* === stili scheda 29 === */
+/* === stili scheda 30 === */
 
     /* Percorso "Oggetti sconosciuti e confezioni alterate" — CSS scoped .os-page */
     .scheda-page:has(> .os-page) { padding: 0; }
@@ -1630,22 +1728,28 @@
     }
   
   </style>
+  <style>
+    /* Ultima parola sul formato di pagina: le schede portano le proprie regole @page (anche
+       orizzontali, come il libro pop-up con la storia) e, concatenate qui sopra, l'ultima
+       vincerebbe su tutto il pacchetto. Il pacchetto stampa sempre in verticale. */
+    @media print { @page { size: A4; margin: 5mm; } }
+  </style>
 </head>
 <body>
 
   <header class="pacchetto-toolbar no-print" role="banner">
     <a href="/formazione/schede-stampabili/" aria-label="Torna alla hub delle schede stampabili">← Torna alle schede</a>
-    <span class="pacchetto-titolo">Pacchetto stampa: Scuola dell'Infanzia · 77 schede A4</span>
-    <button type="button" onclick="window.print()" aria-label="Apri la finestra di stampa per tutte le 77 schede di Scuola dell'Infanzia">
-      🖨️ Stampa tutto (160 fogli A4)
+    <span class="pacchetto-titolo">Pacchetto stampa: Scuola dell'Infanzia · 78 schede A4</span>
+    <button type="button" onclick="window.print()" aria-label="Apri la finestra di stampa per tutte le 78 schede di Scuola dell'Infanzia">
+      🖨️ Stampa tutto (174 fogli A4)
     </button>
   </header>
 
   <section class="pacchetto-intro no-print" aria-labelledby="pacchetto-intro-h1">
     <h1 id="pacchetto-intro-h1">Pacchetto stampa — Scuola dell'Infanzia</h1>
     <p>
-      Questo pacchetto contiene <strong>77 schede stampabili</strong> della Scuola dell'Infanzia (3-6 anni),
-      per un totale di <strong>160 fogli A4</strong>.
+      Questo pacchetto contiene <strong>78 schede stampabili</strong> della Scuola dell'Infanzia (3-6 anni),
+      per un totale di <strong>174 fogli A4</strong>.
       Premi <strong>"Stampa tutto"</strong> in alto (oppure <kbd>Ctrl+P</kbd> su Windows/Linux, <kbd>Cmd+P</kbd> su Mac)
       per aprire la finestra di stampa. Per archiviare in digitale scegli <em>"Salva come PDF"</em> come stampante.
     </p>
@@ -1662,9 +1766,10 @@
   </section>
 
   <nav class="pacchetto-toc no-print" aria-label="Indice del pacchetto">
-    <h2>Indice — 77 schede in questo pacchetto</h2>
+    <h2>Indice — 78 schede in questo pacchetto</h2>
     <ol>
       <li><a href="#scheda-rubrica-valutativa-infanzia">Griglia di osservazione — Scuola dell'Infanzia</a></li>
+      <li><a href="#scheda-flavia-libro-popup">Flavia, Flavio e lo zaino rosso</a> <span class="toc-meta">· 14 fogli</span></li>
       <li><a href="#scheda-vero-falso-infanzia">Vero o Falso con le Faccine</a></li>
       <li><a href="#scheda-labirinto-uscita">Il Labirinto dell'Uscita</a></li>
       <li><a href="#scheda-tartaruga-saggia-infanzia">Le Regole della Tartaruga Saggia</a></li>
@@ -1860,6 +1965,328 @@
       <span class="scheda-site">protezionecivilegenzano.it</span>
       <span>Griglia Ed. Civica · Infanzia · D.M. 183/2024 · rev. 2026-05</span>
     </footer>
+  </article>
+</section>
+
+<section id="scheda-flavia-libro-popup" class="pacchetto-scheda" aria-label="Scheda: Flavia, Flavio e lo zaino rosso">
+  <article class="scheda-page">
+    <div class="st-foglio">
+      <svg class="st-scena" viewBox="0 0 287 182" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="Copertina: sotto il sole, una famiglia con due bambini, un bambino che legge e lo zaino rosso"
+           fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="143.5" y1="4" x2="143.5" y2="176" stroke="#0284c7" stroke-width="0.5" stroke-dasharray="3 2" stroke-linecap="butt"/><text x="141.5" y="179.5" font-size="2.3" fill="#0284c7" text-anchor="end" font-weight="400">piega qui, con il disegno fuori</text><image href="/images/logo-pc-genzano.png" x="204.25" y="8" width="22" height="22"/><image href="/pittogrammi/arasaac-bn/dis-sole.png" x="146.5" y="2" width="20" height="20" preserveAspectRatio="xMidYMid meet"/><image href="/pittogrammi/arasaac-bn/dis-lettura.png" x="150" y="134" width="42" height="42" preserveAspectRatio="xMidYMid meet"/><image href="/pittogrammi/arasaac-bn/dis-famiglia.png" x="190" y="114" width="62" height="62" preserveAspectRatio="xMidYMid meet"/><image href="/pittogrammi/arasaac-bn/alf-z-zaino.png" x="254" y="144" width="30" height="30" preserveAspectRatio="xMidYMid meet"/><line x1="151.5" y1="178" x2="279" y2="178" stroke="#111827" stroke-width="0.66" stroke-linecap="round"/></svg>
+      <div class="st-cop">
+        <p class="st-cop-ente">Gruppo Comunale Volontari di Protezione Civile · Genzano di Roma</p>
+        <h1 class="st-cop-titolo">Flavia, Flavio e lo zaino rosso</h1>
+        <p class="st-cop-sotto">Un anno di piccole emergenze, dodici pop-up da alzare</p>
+        <p class="st-cop-eta">Una storia da leggere insieme, dai 4 anni. Il genitore taglia, il libro si alza.</p>
+      </div>
+      <div class="st-retro">
+        <h2>Per chi legge ad alta voce</h2>
+        <p>Dodici capitoli, un anno nella vita di Flavia e Flavio. In ogni capitolo succede una
+        cosa che può succedere davvero — la terra che trema, il fumo, il caldo, la luce che va
+        via — e i due fratelli fanno la cosa giusta. Il ritornello è sempre lo stesso:
+        <strong>«Respiro. Guardo. So cosa fare.»</strong> Non dice di non avere paura. Dice che cosa
+        fare con la paura.</p>
+        <p>Le regole in fondo a ogni capitolo sono le stesse delle pagine sui rischi del nostro
+        sito, che citano le fonti istituzionali. Se un'indicazione ufficiale dice altro, vale
+        quella. In emergenza si chiama sempre il <strong>112</strong>.</p>
+        <p class="st-retro-nota">Materiale didattico del Gruppo Comunale. <strong>Nessun
+        ministero, ufficio scolastico o altro ente governativo lo ha approvato, validato o
+        adottato.</strong> Testi e scene sono opera del Gruppo; le icone dei capitoli e alcuni
+        oggetti sono pittogrammi ARASAAC (autore Sergio Palao, Governo di Aragona), i cartelli
+        sono segnali ISO 7010. Per questo il libro si può stampare, copiare e colorare
+        liberamente per usi non commerciali, citando le fonti: licenza CC BY-NC-SA 4.0.</p>
+        <div class="st-112">
+          <h3>La nostra telefonata al 112</h3>
+          <p>Compilate insieme, così i bambini sanno che cosa dire.</p>
+          <p>Mi chiamo <span class="st-riga"></span></p>
+          <p>Abito a <span class="st-riga"></span> in via <span class="st-riga"></span> numero <span class="st-riga st-corta"></span></p>
+          <p>Vicino a <span class="st-riga"></span></p>
+        </div>
+      </div>
+      <p class="st-crediti">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza.</p>
+      <p class="st-piede"><span>protezionecivilegenzano.it</span><span>FLAVIA-POPUP · Foglio 1 di 14 · Rev. 1 · 16/09/2026</span></p>
+      <img class="st-banda" src="/images/footer-print-affiliazioni.png" alt="Affiliazioni del Gruppo: Quality Label del Corpo europeo di solidarietà, codice E10435833; Coordinamento FE.PI.VOL.; Servizio Nazionale della Protezione Civile, volontariato" width="1200" height="140">
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="st-foglio st-guida">
+      <div class="st-guida-inner">
+      <div class="st-guida-testa">
+        <p class="st-kicker">Prima di cominciare · questo foglio non si rilega</p>
+        <h2 class="st-titolo">Come si prepara il libro</h2>
+        <p>Servono le <strong>forbici</strong> e, solo per rilegare, la <strong>colla stick</strong>.
+        Ogni capitolo si prepara allo stesso modo, in quattro gesti; il quinto passo si fa una volta
+        sola, alla fine. I disegni sono in bianco e nero apposta: i bambini li colorano prima che
+        il genitore pieghi e tagli.</p>
+      </div>
+      <ol class="st-passi"><li class="st-passo"><div class="st-passo-n">1</div><svg viewBox="0 0 60 50" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M30,42 L30,4 L58,8 L58,46 Z" fill="#fff" stroke="#111827" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"/><path d="M30,42 L30,4 L2,8 L2,46 Z" fill="#fff" stroke="#111827" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"/><line x1="30" y1="4" x2="30" y2="42" stroke="#0284c7" stroke-width="0.8" stroke-linecap="round"/><line x1="30" y1="18" x2="44" y2="19" stroke="#111827" stroke-width="0.8" stroke-linecap="round"/><line x1="30" y1="30" x2="44" y2="31" stroke="#111827" stroke-width="0.8" stroke-linecap="round"/><line x1="44" y1="19" x2="44" y2="31" stroke="#ea580c" stroke-width="0.5" stroke-dasharray="0.8 1.2" stroke-linecap="round"/><circle cx="46" cy="12" r="1.2" fill="#111827" stroke="#111827" stroke-width="0.55"/><circle cx="13" cy="12" r="1.2" fill="#111827" stroke="#111827" stroke-width="0.55"/><path d="M12,30 q4,-6 8,0" fill="none" stroke="#111827" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M50,36 q-4,-6 -8,0" fill="none" stroke="#111827" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/></svg><strong>Piega a metà, disegno fuori</strong><span>Piega il foglio sulla riga blu tenendo il disegno all&#x27;esterno: le due metà del disegno restano in vista. Premi la piega con l&#x27;unghia.</span></li><li class="st-passo"><div class="st-passo-n">2</div><svg viewBox="0 0 60 50" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M30,42 L30,4 L58,8 L58,46 Z" fill="#fff" stroke="#111827" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"/><path d="M30,42 L30,4 L2,8 L2,46 Z" fill="#f8fafc" stroke="#111827" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"/><line x1="30" y1="4" x2="30" y2="42" stroke="#0284c7" stroke-width="0.8" stroke-linecap="round"/><line x1="30" y1="18" x2="44" y2="19" stroke="#111827" stroke-width="1.1" stroke-linecap="round"/><line x1="30" y1="30" x2="44" y2="31" stroke="#111827" stroke-width="1.1" stroke-linecap="round"/><line x1="44" y1="19" x2="44" y2="31" stroke="#ea580c" stroke-width="0.5" stroke-dasharray="0.8 1.2" stroke-linecap="round"/><circle cx="20" cy="15" r="2.2" fill="none" stroke="#111827" stroke-width="0.55"/><circle cx="20" cy="21" r="2.2" fill="none" stroke="#111827" stroke-width="0.55"/><path d="M22,16 L36,18.5" fill="none" stroke="#111827" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/><path d="M22,20 L36,18.5" fill="none" stroke="#111827" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/><path d="M8,26 l6,0 m-6,0 l1.5,-1.5 m-1.5,1.5 l1.5,1.5" fill="none" stroke="#111827" stroke-width="0.4" stroke-linejoin="round" stroke-linecap="round"/></svg><strong>Taglia le due righe dalla piega</strong><span>Foglio ancora piegato: le due righe nere partono dalla piega. Tagliale con le forbici, i due strati insieme, e fermati dove finisce la riga.</span></li><li class="st-passo"><div class="st-passo-n">3</div><svg viewBox="0 0 60 50" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M30,42 L30,4 L58,8 L58,46 Z" fill="#f8fafc" stroke="#111827" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"/><path d="M30,42 L30,4 L2,8 L2,46 Z" fill="#f8fafc" stroke="#111827" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"/><line x1="30" y1="4" x2="30" y2="42" stroke="#0284c7" stroke-width="0.8" stroke-linecap="round"/><path d="M14,12 q-6,10 0,20" fill="none" stroke="#111827" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M14,32 l-2,-2 m2,2 l2,-2" fill="none" stroke="#111827" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M46,12 q6,10 0,20" fill="none" stroke="#111827" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M46,32 l-2,-2 m2,2 l2,-2" fill="none" stroke="#111827" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/></svg><strong>Ripiega, disegno dentro</strong><span>Apri il foglio e ripiegalo dall&#x27;altra parte, con il disegno all&#x27;interno: adesso è una doppia pagina del libro. Premi di nuovo la piega.</span></li><li class="st-passo"><div class="st-passo-n">4</div><svg viewBox="0 0 60 50" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4,36 L30,30 L56,36" fill="none" stroke="#64748b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M4,36 L4,8 L30,2 L30,30 Z" fill="#f8fafc" stroke="#111827" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"/><path d="M56,36 L56,8 L30,2 L30,30 Z" fill="#fff" stroke="#111827" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"/><path d="M20,26 L40,26 L40,14 L20,14 Z" fill="#fff" stroke="#111827" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/><path d="M30,26 L30,14" fill="none" stroke="#ea580c" stroke-width="0.5" stroke-dasharray="0.8 1.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M30,2 L30,-2" fill="none" stroke="#64748b" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M36,6 l-6,6 m6,-6 l-2.2,0 m2.2,0 l0,2.2" fill="none" stroke="#111827" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M44,44 l-6,-4 m6,4 l-2.5,-0.2 m2.5,0.2 l-0.8,-2.4" fill="none" stroke="#111827" stroke-width="0.5" stroke-linejoin="round" stroke-linecap="round"/></svg><strong>Spingi la scena da dietro</strong><span>Apri il foglio a metà. Con un dito da dietro spingi il pezzo fra i due tagli verso l&#x27;interno, finché la sua piega si rovescia e viene avanti. Chiudi e premi: riaprendo, la scena si alza.</span></li><li class="st-passo"><div class="st-passo-n">5</div><svg viewBox="0 0 60 50" aria-hidden="true" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M6,40 L6,4 L18,2 L18,38 Z" fill="#fff" stroke="#111827" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"/><path d="M18,38 L18,2 L30,4 L30,40 Z" fill="#f8fafc" stroke="#111827" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"/><path d="M30,40 L30,4 L42,2 L42,38 Z" fill="#fff" stroke="#111827" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"/><path d="M42,38 L42,2 L54,4 L54,40 Z" fill="#f8fafc" stroke="#111827" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"/><path d="M2,42 L2,2 L58,2 L58,42" fill="none" stroke="#111827" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round"/><path d="M19.5,3.5 L19.5,36.5 M28.5,5.5 L28.5,38.5" fill="none" stroke="#ea580c" stroke-width="0.6" stroke-dasharray="1 1" stroke-linejoin="round" stroke-linecap="round"/><text x="30" y="47" font-size="2.4" fill="#64748b" text-anchor="middle" font-weight="400">copertina</text></svg><strong>Rilega i capitoli</strong><span>Incolla i fogli retro contro retro, in ordine, con un filo di colla solo sui bordi esterni: mai al centro, dove il pop-up deve muoversi. La copertina si piega col disegno fuori e abbraccia il blocco. Oppure una cartellina, e i fogli restano sciolti.</span></li></ol>
+      <div class="st-legenda">
+        <span><i class="st-tr st-tr-nera"></i> riga nera: si taglia, partendo dalla piega</span>
+        <span><i class="st-tr st-tr-blu"></i> riga blu: la piega del libro</span>
+        <span><i class="st-tr st-tr-arancio"></i> riga arancione: qui il taglio finisce; è la cerniera del pop-up</span>
+      </div>
+      <p class="st-guida-nota">Per l'adulto: il pop-up regge anche se la stampa non è al millimetro,
+      quindi «adatta alla pagina» va bene. Se il pezzo fatica a rovesciarsi, piegalo prima avanti e
+      indietro lungo le due righe arancioni. Le forbici le usa l'adulto o, dai 7 anni, il bambino da
+      seduto e sorvegliato, con la punta arrotondata. Carta normale della stampante va bene; su
+      cartoncino leggero le scene stanno su meglio.</p>
+      </div>
+      <p class="st-piede"><span>protezionecivilegenzano.it</span><span>FLAVIA-POPUP · Foglio 2 di 14 · Rev. 1 · 16/09/2026</span></p>
+      <img class="st-banda" src="/images/footer-print-affiliazioni.png" alt="Affiliazioni del Gruppo: Quality Label del Corpo europeo di solidarietà, codice E10435833; Coordinamento FE.PI.VOL.; Servizio Nazionale della Protezione Civile, volontariato" width="1200" height="140">
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="st-foglio">
+      <svg class="st-scena" viewBox="0 0 287 182" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="Davanti alla scuola, tre volontari in divisa e due adulti con un bambino. Il pop-up è lo zaino di emergenza." fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="143.5" y1="4" x2="143.5" y2="176" stroke="#0284c7" stroke-width="0.5" stroke-dasharray="3 2" stroke-linecap="butt"/><line x1="109.5" y1="92" x2="177.5" y2="92" stroke="#111827" stroke-width="0.7" stroke-linecap="butt"/><line x1="109.5" y1="138" x2="177.5" y2="138" stroke="#111827" stroke-width="0.7" stroke-linecap="butt"/><line x1="109.5" y1="92" x2="109.5" y2="138" stroke="#ea580c" stroke-width="0.5" stroke-dasharray="0.8 1.4" stroke-linecap="round"/><line x1="177.5" y1="92" x2="177.5" y2="138" stroke="#ea580c" stroke-width="0.5" stroke-dasharray="0.8 1.4" stroke-linecap="round"/><text x="179.0" y="93" font-size="2.3" fill="#64748b" text-anchor="start" font-weight="400">taglia</text><text x="179.0" y="139" font-size="2.3" fill="#64748b" text-anchor="start" font-weight="400">taglia</text><text x="143.5" y="179.5" font-size="2.3" fill="#0284c7" text-anchor="middle" font-weight="400">piega qui</text><image href="/pittogrammi/arasaac-bn/alf-z-zaino.png" x="122.5" y="94" width="42" height="42" preserveAspectRatio="xMidYMid meet"/><image href="/pittogrammi/arasaac-bn/dis-scuola.png" x="224" y="4" width="58" height="58" preserveAspectRatio="xMidYMid meet"/><image href="/pittogrammi/arasaac-bn/dis-volontari.png" x="182" y="124" width="52" height="52" preserveAspectRatio="xMidYMid meet"/><image href="/pittogrammi/arasaac-bn/dis-adulto-bambino.png" x="232" y="124" width="52" height="52" preserveAspectRatio="xMidYMid meet"/><line x1="148" y1="176" x2="283" y2="176" stroke="#111827" stroke-width="0.66" stroke-linecap="round"/>
+      </svg>
+      <img class="st-icona" src="/pittogrammi/arasaac-bn/alf-z-zaino.png" alt="Icona: zaino" width="500" height="500">
+      <div class="st-testo">
+        <p class="st-kicker">Capitolo 1 · settembre</p>
+        <h2 class="st-titolo">Lo zaino rosso</h2>
+        <p>Un mattino, a scuola, arrivò Anna. Aveva la divisa ad alta visibilità dei volontari della Protezione Civile e, sul taschino, il suo nome.</p><p>«Noi ci prepariamo prima», disse ai bambini. «Così, quando succede qualcosa, sappiamo già cosa fare.»</p><p>Poi aprì uno zaino rosso: una bottiglia d&#x27;acqua, una torcia, una radio, una coperta, un foglio con i numeri importanti.</p><p>«Si tiene vicino alla porta», disse Anna. «E si controlla ogni sei mesi, perché l&#x27;acqua scade e le pile si scaricano.»</p><p>Flavia e Flavio si guardarono. Le cose da fare, loro le volevano sapere tutte.</p>
+      </div>
+      <aside class="st-regole" aria-label="Le regole di questo capitolo">
+        <h3>Che cosa si fa</h3>
+        <ul><li>I volontari non si chiamano direttamente: in emergenza si chiama il 112.</li><li>Ogni sei mesi controlla con un adulto: l'acqua scade e le pile si scaricano.</li></ul>
+      </aside>
+      <p class="st-crediti">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza.</p>
+      <p class="st-piede"><span>protezionecivilegenzano.it</span><span>FLAVIA-POPUP · Foglio 3 di 14 · Rev. 1 · 16/09/2026</span></p>
+      <img class="st-banda" src="/images/footer-print-affiliazioni.png" alt="Affiliazioni del Gruppo: Quality Label del Corpo europeo di solidarietà, codice E10435833; Coordinamento FE.PI.VOL.; Servizio Nazionale della Protezione Civile, volontariato" width="1200" height="140">
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="st-foglio">
+      <svg class="st-scena" viewBox="0 0 287 182" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="La famiglia in piedi mentre la casa trema, con i segni della vibrazione ai lati. Il pop-up è un bambino accovacciato sotto un tavolo, con la testa protetta dalle braccia." fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="143.5" y1="4" x2="143.5" y2="176" stroke="#0284c7" stroke-width="0.5" stroke-dasharray="3 2" stroke-linecap="butt"/><line x1="109.5" y1="92" x2="177.5" y2="92" stroke="#111827" stroke-width="0.7" stroke-linecap="butt"/><line x1="109.5" y1="138" x2="177.5" y2="138" stroke="#111827" stroke-width="0.7" stroke-linecap="butt"/><line x1="109.5" y1="92" x2="109.5" y2="138" stroke="#ea580c" stroke-width="0.5" stroke-dasharray="0.8 1.4" stroke-linecap="round"/><line x1="177.5" y1="92" x2="177.5" y2="138" stroke="#ea580c" stroke-width="0.5" stroke-dasharray="0.8 1.4" stroke-linecap="round"/><text x="179.0" y="93" font-size="2.3" fill="#64748b" text-anchor="start" font-weight="400">taglia</text><text x="179.0" y="139" font-size="2.3" fill="#64748b" text-anchor="start" font-weight="400">taglia</text><text x="143.5" y="179.5" font-size="2.3" fill="#0284c7" text-anchor="middle" font-weight="400">piega qui</text><image href="/pittogrammi/arasaac-bn/alf-t-terremoto.png" x="122.5" y="94" width="42" height="42" preserveAspectRatio="xMidYMid meet"/><image href="/pittogrammi/arasaac-bn/dis-famiglia.png" x="186" y="122" width="54" height="54" preserveAspectRatio="xMidYMid meet"/><path d="M182,134 q2.5,6.0 0,12" fill="none" stroke="#111827" stroke-width="0.49500000000000005" stroke-linejoin="round" stroke-linecap="round"/><path d="M185.5,131 q4,9.0 0,18" fill="none" stroke="#111827" stroke-width="0.44000000000000006" stroke-linejoin="round" stroke-linecap="round"/><path d="M244,134 q-2.5,6.0 0,12" fill="none" stroke="#111827" stroke-width="0.49500000000000005" stroke-linejoin="round" stroke-linecap="round"/><path d="M240.5,131 q-4,9.0 0,18" fill="none" stroke="#111827" stroke-width="0.44000000000000006" stroke-linejoin="round" stroke-linecap="round"/><line x1="148" y1="176" x2="283" y2="176" stroke="#111827" stroke-width="0.66" stroke-linecap="round"/>
+      </svg>
+      <img class="st-icona" src="/pittogrammi/arasaac-bn/alf-t-terremoto.png" alt="Icona: bambino accovacciato sotto un tavolo" width="500" height="500">
+      <div class="st-testo">
+        <p class="st-kicker">Capitolo 2 · ottobre</p>
+        <h2 class="st-titolo">La terra trema</h2>
+        <p>Una sera i due fratelli costruivano una torre sul tappeto. All&#x27;improvviso la torre tremò. Poi tremarono i bicchieri, la lampada, la casa intera.</p><p>Flavio scattò verso la porta. «No!», disse Flavia. «Le cose cadono proprio lì davanti. Sotto il tavolo!»</p><p>Respirarono. Guardarono. Sapevano cosa fare.</p><p>Andarono sotto il tavolo grande della cucina e si coprirono la testa con le braccia, mentre la mamma li teneva vicini.</p><p>Quando tutto fu fermo, uscirono con calma dalle scale, senza ascensore, fino allo spazio aperto davanti a casa.</p>
+      </div>
+      <aside class="st-regole" aria-label="Le regole di questo capitolo">
+        <h3>Che cosa si fa</h3>
+        <ul><li>Mettiti sotto un tavolo robusto e copriti la testa con le braccia.</li><li>Non correre fuori mentre trema: le cose cadono proprio davanti alle porte.</li><li>Non prendere l'ascensore. Quando la scossa finisce, esci con calma dalle scale.</li></ul>
+      </aside>
+      <p class="st-crediti">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza.</p>
+      <p class="st-piede"><span>protezionecivilegenzano.it</span><span>FLAVIA-POPUP · Foglio 4 di 14 · Rev. 1 · 16/09/2026</span></p>
+      <img class="st-banda" src="/images/footer-print-affiliazioni.png" alt="Affiliazioni del Gruppo: Quality Label del Corpo europeo di solidarietà, codice E10435833; Coordinamento FE.PI.VOL.; Servizio Nazionale della Protezione Civile, volontariato" width="1200" height="140">
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="st-foglio">
+      <svg class="st-scena" viewBox="0 0 287 182" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="Il cortile della scuola con la sirena che suona; i bambini in fila e, accanto, gli adulti con un bambino. Il pop-up è il cartello verde del punto di raccolta." fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="143.5" y1="4" x2="143.5" y2="176" stroke="#0284c7" stroke-width="0.5" stroke-dasharray="3 2" stroke-linecap="butt"/><line x1="109.5" y1="92" x2="177.5" y2="92" stroke="#111827" stroke-width="0.7" stroke-linecap="butt"/><line x1="109.5" y1="138" x2="177.5" y2="138" stroke="#111827" stroke-width="0.7" stroke-linecap="butt"/><line x1="109.5" y1="92" x2="109.5" y2="138" stroke="#ea580c" stroke-width="0.5" stroke-dasharray="0.8 1.4" stroke-linecap="round"/><line x1="177.5" y1="92" x2="177.5" y2="138" stroke="#ea580c" stroke-width="0.5" stroke-dasharray="0.8 1.4" stroke-linecap="round"/><text x="179.0" y="93" font-size="2.3" fill="#64748b" text-anchor="start" font-weight="400">taglia</text><text x="179.0" y="139" font-size="2.3" fill="#64748b" text-anchor="start" font-weight="400">taglia</text><text x="143.5" y="179.5" font-size="2.3" fill="#0284c7" text-anchor="middle" font-weight="400">piega qui</text><line x1="143.5" y1="135" x2="143.5" y2="119" stroke="#111827" stroke-width="0.77" stroke-linecap="round"/><image href="/pittogrammi/iso7010/punto-raccolta.svg" x="132.5" y="97" width="22" height="22" preserveAspectRatio="xMidYMid meet"/><image href="/pittogrammi/arasaac-bn/dis-scuola.png" x="150" y="4" width="62" height="62" preserveAspectRatio="xMidYMid meet"/><image href="/pittogrammi/arasaac-bn/pop-sirena.png" x="250" y="6" width="26" height="26" preserveAspectRatio="xMidYMid meet"/><image href="/pittogrammi/arasaac-bn/pop-fila.png" x="182" y="116" width="60" height="60" preserveAspectRatio="xMidYMid meet"/><image href="/pittogrammi/arasaac-bn/dis-adulto-bambino.png" x="238" y="126" width="50" height="50" preserveAspectRatio="xMidYMid meet"/><line x1="148" y1="176" x2="283" y2="176" stroke="#111827" stroke-width="0.66" stroke-linecap="round"/>
+      </svg>
+      <img class="st-icona" src="/pittogrammi/arasaac-bn/pop-sirena.png" alt="Icona: sirena di allarme" width="500" height="500">
+      <div class="st-testo">
+        <p class="st-kicker">Capitolo 3 · novembre</p>
+        <h2 class="st-titolo">La campanella strana</h2>
+        <p>A scuola, un giorno, suonò una campanella diversa: lunga, che non finiva mai. Era la prova di evacuazione.</p><p>Flavio, che quel mese era chiudi-fila, controllò che nessuno restasse indietro. Flavia lasciò lo zaino sotto il banco: lo zaino resta, tu vai.</p><p>Camminarono senza correre e senza parlare, per sentire la maestra.</p><p>Al punto di raccolta, nel cortile, la maestra chiamò i nomi uno per uno. «Flavia?» «Presente!» «Flavio?» «Presente!»</p><p>Nessuno tornò indietro a prendere niente.</p>
+      </div>
+      <aside class="st-regole" aria-label="Le regole di questo capitolo">
+        <h3>Che cosa si fa</h3>
+        <ul><li>Quando suona, lascia tutto dov'è: lo zaino resta, tu vai.</li><li>Cammina, non correre, e resta in silenzio per sentire le indicazioni.</li><li>Al punto di raccolta resta con la tua classe finché non ti chiamano per nome.</li><li>Non tornare indietro a prendere niente.</li></ul>
+      </aside>
+      <p class="st-crediti">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza. Segnali di sicurezza ISO 7010 da Wikimedia Commons (pubblico dominio).</p>
+      <p class="st-piede"><span>protezionecivilegenzano.it</span><span>FLAVIA-POPUP · Foglio 5 di 14 · Rev. 1 · 16/09/2026</span></p>
+      <img class="st-banda" src="/images/footer-print-affiliazioni.png" alt="Affiliazioni del Gruppo: Quality Label del Corpo europeo di solidarietà, codice E10435833; Coordinamento FE.PI.VOL.; Servizio Nazionale della Protezione Civile, volontariato" width="1200" height="140">
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="st-foglio">
+      <svg class="st-scena" viewBox="0 0 287 182" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="Nuvole con fulmine e pioggia; un albero piegato dal vento e, lontano dall&#x27;albero, gli adulti con un bambino. Il pop-up è la macchina, il posto sicuro con i finestrini chiusi." fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="143.5" y1="4" x2="143.5" y2="176" stroke="#0284c7" stroke-width="0.5" stroke-dasharray="3 2" stroke-linecap="butt"/><line x1="109.5" y1="92" x2="177.5" y2="92" stroke="#111827" stroke-width="0.7" stroke-linecap="butt"/><line x1="109.5" y1="138" x2="177.5" y2="138" stroke="#111827" stroke-width="0.7" stroke-linecap="butt"/><line x1="109.5" y1="92" x2="109.5" y2="138" stroke="#ea580c" stroke-width="0.5" stroke-dasharray="0.8 1.4" stroke-linecap="round"/><line x1="177.5" y1="92" x2="177.5" y2="138" stroke="#ea580c" stroke-width="0.5" stroke-dasharray="0.8 1.4" stroke-linecap="round"/><text x="179.0" y="93" font-size="2.3" fill="#64748b" text-anchor="start" font-weight="400">taglia</text><text x="179.0" y="139" font-size="2.3" fill="#64748b" text-anchor="start" font-weight="400">taglia</text><text x="143.5" y="179.5" font-size="2.3" fill="#0284c7" text-anchor="middle" font-weight="400">piega qui</text><image href="/pittogrammi/arasaac-bn/dis-auto.png" x="122.5" y="94" width="42" height="42" preserveAspectRatio="xMidYMid meet"/><image href="/pittogrammi/arasaac-bn/dis-temporale.png" x="150" y="6" width="54" height="54" preserveAspectRatio="xMidYMid meet"/><image href="/pittogrammi/arasaac-bn/oca-pioggia.png" x="230" y="10" width="46" height="46" preserveAspectRatio="xMidYMid meet"/><image href="/pittogrammi/arasaac-bn/dis-adulto-bambino.png" x="182" y="126" width="50" height="50" preserveAspectRatio="xMidYMid meet"/><image href="/pittogrammi/arasaac-bn/oca-albero.png" x="232" y="122" width="54" height="54" preserveAspectRatio="xMidYMid meet"/><line x1="148" y1="176" x2="283" y2="176" stroke="#111827" stroke-width="0.66" stroke-linecap="round"/>
+      </svg>
+      <img class="st-icona" src="/pittogrammi/arasaac-bn/dis-temporale.png" alt="Icona: nuvola con fulmine" width="500" height="500">
+      <div class="st-testo">
+        <p class="st-kicker">Capitolo 4 · giugno</p>
+        <h2 class="st-titolo">Il cielo brontola</h2>
+        <p>Al campo, il cielo diventò grigio e cominciò a brontolare. Flavio era sotto un grande albero, solo in mezzo al prato, a ripararsi dalle prime gocce.</p><p>«Via da lì!», chiamò il papà.</p><p>Con i fulmini, un albero da solo non è un riparo, e nemmeno una tettoia leggera. Il posto sicuro è dentro: una casa, oppure la macchina con i finestrini chiusi.</p><p>Flavio corse alla macchina, dove Flavia era già seduta, e tirò su il finestrino.</p><p>Fuori il temporale fece tutto il suo spettacolo, e loro lo guardarono da dentro.</p>
+      </div>
+      <aside class="st-regole" aria-label="Le regole di questo capitolo">
+        <h3>Che cosa si fa</h3>
+        <ul><li>Entra in un edificio solido, oppure in auto con i finestrini chiusi.</li><li>Sta' lontano da alberi isolati, pali di metallo e recinzioni metalliche.</li><li>Non ripararti sotto una tettoia o una struttura leggera.</li></ul>
+      </aside>
+      <p class="st-crediti">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza.</p>
+      <p class="st-piede"><span>protezionecivilegenzano.it</span><span>FLAVIA-POPUP · Foglio 6 di 14 · Rev. 1 · 16/09/2026</span></p>
+      <img class="st-banda" src="/images/footer-print-affiliazioni.png" alt="Affiliazioni del Gruppo: Quality Label del Corpo europeo di solidarietà, codice E10435833; Coordinamento FE.PI.VOL.; Servizio Nazionale della Protezione Civile, volontariato" width="1200" height="140">
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="st-foglio">
+      <svg class="st-scena" viewBox="0 0 287 182" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="Raffiche di vento, un cartellone che vola, la casa chiusa; da un palo con il segnale di pericolo elettrico pende un filo caduto a terra. Il pop-up è l&#x27;albero piegato dal vento." fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="143.5" y1="4" x2="143.5" y2="176" stroke="#0284c7" stroke-width="0.5" stroke-dasharray="3 2" stroke-linecap="butt"/><line x1="109.5" y1="92" x2="177.5" y2="92" stroke="#111827" stroke-width="0.7" stroke-linecap="butt"/><line x1="109.5" y1="138" x2="177.5" y2="138" stroke="#111827" stroke-width="0.7" stroke-linecap="butt"/><line x1="109.5" y1="92" x2="109.5" y2="138" stroke="#ea580c" stroke-width="0.5" stroke-dasharray="0.8 1.4" stroke-linecap="round"/><line x1="177.5" y1="92" x2="177.5" y2="138" stroke="#ea580c" stroke-width="0.5" stroke-dasharray="0.8 1.4" stroke-linecap="round"/><text x="179.0" y="93" font-size="2.3" fill="#64748b" text-anchor="start" font-weight="400">taglia</text><text x="179.0" y="139" font-size="2.3" fill="#64748b" text-anchor="start" font-weight="400">taglia</text><text x="143.5" y="179.5" font-size="2.3" fill="#0284c7" text-anchor="middle" font-weight="400">piega qui</text><image href="/pittogrammi/arasaac-bn/oca-albero.png" x="122.5" y="94" width="42" height="42" preserveAspectRatio="xMidYMid meet"/><path d="M150,30 q9.1,-3 18.2,0 q3.9,1.5 1.3,-2.2" fill="none" stroke="#111827" stroke-width="0.49500000000000005" stroke-linejoin="round" stroke-linecap="round"/><path d="M150,34 q9.1,-3 18.2,0 q3.9,1.5 1.3,-2.2" fill="none" stroke="#111827" stroke-width="0.49500000000000005" stroke-linejoin="round" stroke-linecap="round"/><path d="M150,38 q9.1,-3 18.2,0 q3.9,1.5 1.3,-2.2" fill="none" stroke="#111827" stroke-width="0.49500000000000005" stroke-linejoin="round" stroke-linecap="round"/><path d="M196,20 q10.5,-3 21.0,0 q4.5,1.5 1.5,-2.2" fill="none" stroke="#111827" stroke-width="0.49500000000000005" stroke-linejoin="round" stroke-linecap="round"/><path d="M196,24 q10.5,-3 21.0,0 q4.5,1.5 1.5,-2.2" fill="none" stroke="#111827" stroke-width="0.49500000000000005" stroke-linejoin="round" stroke-linecap="round"/><path d="M196,28 q10.5,-3 21.0,0 q4.5,1.5 1.5,-2.2" fill="none" stroke="#111827" stroke-width="0.49500000000000005" stroke-linejoin="round" stroke-linecap="round"/><path d="M240,34 q8.399999999999999,-3 16.799999999999997,0 q3.5999999999999996,1.5 1.2000000000000002,-2.2" fill="none" stroke="#111827" stroke-width="0.49500000000000005" stroke-linejoin="round" stroke-linecap="round"/><path d="M240,38 q8.399999999999999,-3 16.799999999999997,0 q3.5999999999999996,1.5 1.2000000000000002,-2.2" fill="none" stroke="#111827" stroke-width="0.49500000000000005" stroke-linejoin="round" stroke-linecap="round"/><path d="M240,42 q8.399999999999999,-3 16.799999999999997,0 q3.5999999999999996,1.5 1.2000000000000002,-2.2" fill="none" stroke="#111827" stroke-width="0.49500000000000005" stroke-linejoin="round" stroke-linecap="round"/><path d="M262,60 L272,58 L270,70 L260,72 Z" fill="#fff" stroke="#111827" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"/><image href="/pittogrammi/arasaac-bn/pop-casa.png" x="226" y="118" width="58" height="58" preserveAspectRatio="xMidYMid meet"/><line x1="186" y1="176" x2="186" y2="118" stroke="#111827" stroke-width="0.77" stroke-linecap="round"/><line x1="180.0" y1="122" x2="192.0" y2="122" stroke="#111827" stroke-width="0.55" stroke-linecap="round"/><image href="/pittogrammi/iso7010/pericolo-elettrico.svg" x="180" y="123.5" width="12" height="10.5" preserveAspectRatio="xMidYMid meet"/><path d="M188,122 q12,22 22,54" fill="none" stroke="#111827" stroke-width="0.6050000000000001" stroke-linejoin="round" stroke-linecap="round"/><line x1="148" y1="176" x2="283" y2="176" stroke="#111827" stroke-width="0.66" stroke-linecap="round"/>
+      </svg>
+      <img class="st-icona" src="/pittogrammi/arasaac-bn/oca-albero.png" alt="Icona: albero piegato dal vento" width="500" height="500">
+      <div class="st-testo">
+        <p class="st-kicker">Capitolo 5 · novembre</p>
+        <h2 class="st-titolo">Il vento porta via le cose</h2>
+        <p>Un pomeriggio il vento si alzò fortissimo. Sul balcone un vaso cadde. Un cartellone volò via dalla strada come un aquilone.</p><p>«Andiamo a far volare il nostro!», disse Flavio. «Non oggi», disse la nonna. «Il pericolo non è il vento: è quello che il vento fa volare.»</p><p>Restarono in casa, lontani dalle finestre, con porte e finestre chiuse.</p><p>Il giorno dopo, a vento finito, Flavia vide in strada un filo elettrico caduto a terra. Non lo toccò: lo disse alla nonna, e la nonna chiamò il 112.</p>
+      </div>
+      <aside class="st-regole" aria-label="Le regole di questo capitolo">
+        <h3>Che cosa si fa</h3>
+        <ul><li>Resta in casa, lontano da finestre e vetrate.</li><li>Tieni chiuse porte e finestre.</li><li>Un cavo elettrico caduto non si tocca mai: dillo a un adulto, che chiama il 112.</li></ul>
+      </aside>
+      <p class="st-crediti">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza. Segnali di sicurezza ISO 7010 da Wikimedia Commons (pubblico dominio).</p>
+      <p class="st-piede"><span>protezionecivilegenzano.it</span><span>FLAVIA-POPUP · Foglio 7 di 14 · Rev. 1 · 16/09/2026</span></p>
+      <img class="st-banda" src="/images/footer-print-affiliazioni.png" alt="Affiliazioni del Gruppo: Quality Label del Corpo europeo di solidarietà, codice E10435833; Coordinamento FE.PI.VOL.; Servizio Nazionale della Protezione Civile, volontariato" width="1200" height="140">
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="st-foglio">
+      <svg class="st-scena" viewBox="0 0 287 182" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="Piove, il fosso è diventato un fiume e l&#x27;acqua circonda la casa; un gommone dei soccorsi. Il pop-up è la scala che sale ai piani alti." fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="143.5" y1="4" x2="143.5" y2="176" stroke="#0284c7" stroke-width="0.5" stroke-dasharray="3 2" stroke-linecap="butt"/><line x1="109.5" y1="92" x2="177.5" y2="92" stroke="#111827" stroke-width="0.7" stroke-linecap="butt"/><line x1="109.5" y1="138" x2="177.5" y2="138" stroke="#111827" stroke-width="0.7" stroke-linecap="butt"/><line x1="109.5" y1="92" x2="109.5" y2="138" stroke="#ea580c" stroke-width="0.5" stroke-dasharray="0.8 1.4" stroke-linecap="round"/><line x1="177.5" y1="92" x2="177.5" y2="138" stroke="#ea580c" stroke-width="0.5" stroke-dasharray="0.8 1.4" stroke-linecap="round"/><text x="179.0" y="93" font-size="2.3" fill="#64748b" text-anchor="start" font-weight="400">taglia</text><text x="179.0" y="139" font-size="2.3" fill="#64748b" text-anchor="start" font-weight="400">taglia</text><text x="143.5" y="179.5" font-size="2.3" fill="#0284c7" text-anchor="middle" font-weight="400">piega qui</text><image href="/pittogrammi/arasaac-bn/pop-scala.png" x="122.5" y="94" width="42" height="42" preserveAspectRatio="xMidYMid meet"/><image href="/pittogrammi/arasaac-bn/oca-pioggia.png" x="150" y="6" width="50" height="50" preserveAspectRatio="xMidYMid meet"/><image href="/pittogrammi/arasaac-bn/alf-f-fiume.png" x="228" y="8" width="50" height="50" preserveAspectRatio="xMidYMid meet"/><image href="/pittogrammi/arasaac-bn/pop-casa.png" x="228" y="120" width="56" height="56" preserveAspectRatio="xMidYMid meet"/><path d="M148,176 q10,-4 20,0 q10,4 20,0 q10,-4 20,0 q10,4 20,0 q10,-4 20,0 q10,4 20,0 q10,-4 15,0" fill="#e5e7eb" stroke="#111827" stroke-width="0.66" stroke-linejoin="round" stroke-linecap="round"/><path d="M148,170 q10,-3 20,0 q10,3 20,0" fill="none" stroke="#111827" stroke-width="0.49500000000000005" stroke-linejoin="round" stroke-linecap="round"/><image href="/pittogrammi/arasaac-bn/dis-gommone.png" x="180" y="134" width="46" height="46" preserveAspectRatio="xMidYMid meet"/>
+      </svg>
+      <img class="st-icona" src="/pittogrammi/arasaac-bn/oca-pioggia.png" alt="Icona: nuvola con pioggia" width="500" height="500">
+      <div class="st-testo">
+        <p class="st-kicker">Capitolo 6 · dicembre</p>
+        <h2 class="st-titolo">Troppa acqua</h2>
+        <p>Piovve per due giorni. Il fosso dietro casa diventò un fiume marrone. L&#x27;acqua entrò nel garage e salì sulle scale della cantina.</p><p>«Il mio libro è in garage!», disse Flavia. «Si sale, non si scende», disse il papà. «Il libro lo prendiamo dopo.»</p><p>Salirono al piano di sopra con la nonna, senza scendere a prendere niente.</p><p>Dalla finestra Flavio vide la strada allagata. Non si attraversa, né a piedi né in macchina: non si vede quanto è profonda.</p><p>Aspettarono in alto, finché l&#x27;acqua non se ne andò.</p>
+      </div>
+      <aside class="st-regole" aria-label="Le regole di questo capitolo">
+        <h3>Che cosa si fa</h3>
+        <ul><li>Sali ai piani alti della casa.</li><li>Non scendere in cantina, in garage o nei locali interrati.</li><li>Non attraversare strade allagate, né a piedi né in auto: non si vede quanto è profondo.</li></ul>
+      </aside>
+      <p class="st-crediti">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza.</p>
+      <p class="st-piede"><span>protezionecivilegenzano.it</span><span>FLAVIA-POPUP · Foglio 8 di 14 · Rev. 1 · 16/09/2026</span></p>
+      <img class="st-banda" src="/images/footer-print-affiliazioni.png" alt="Affiliazioni del Gruppo: Quality Label del Corpo europeo di solidarietà, codice E10435833; Coordinamento FE.PI.VOL.; Servizio Nazionale della Protezione Civile, volontariato" width="1200" height="140">
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="st-foglio">
+      <svg class="st-scena" viewBox="0 0 287 182" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="Dal bosco sale una colonna di fumo; un elicottero e un pompiere con la manichetta lavorano sull&#x27;incendio; la famiglia cammina dalla parte opposta al fumo. Il pop-up sono le fiamme." fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="143.5" y1="4" x2="143.5" y2="176" stroke="#0284c7" stroke-width="0.5" stroke-dasharray="3 2" stroke-linecap="butt"/><line x1="109.5" y1="92" x2="177.5" y2="92" stroke="#111827" stroke-width="0.7" stroke-linecap="butt"/><line x1="109.5" y1="138" x2="177.5" y2="138" stroke="#111827" stroke-width="0.7" stroke-linecap="butt"/><line x1="109.5" y1="92" x2="109.5" y2="138" stroke="#ea580c" stroke-width="0.5" stroke-dasharray="0.8 1.4" stroke-linecap="round"/><line x1="177.5" y1="92" x2="177.5" y2="138" stroke="#ea580c" stroke-width="0.5" stroke-dasharray="0.8 1.4" stroke-linecap="round"/><text x="179.0" y="93" font-size="2.3" fill="#64748b" text-anchor="start" font-weight="400">taglia</text><text x="179.0" y="139" font-size="2.3" fill="#64748b" text-anchor="start" font-weight="400">taglia</text><text x="143.5" y="179.5" font-size="2.3" fill="#0284c7" text-anchor="middle" font-weight="400">piega qui</text><image href="/pittogrammi/arasaac-bn/pop-fuoco.png" x="122.5" y="94" width="42" height="42" preserveAspectRatio="xMidYMid meet"/><image href="/pittogrammi/arasaac-bn/dis-sole.png" x="152" y="8" width="36" height="36" preserveAspectRatio="xMidYMid meet"/><image href="/pittogrammi/arasaac-bn/dis-elicottero.png" x="226" y="8" width="50" height="50" preserveAspectRatio="xMidYMid meet"/><path d="M206,88 q-12,-15.0 3.5999999999999996,-27.0 q-14.399999999999999,-18.0 2.4000000000000004,-33.0 q9.600000000000001,-15.0 4.800000000000001,-9.0" fill="none" stroke="#111827" stroke-width="0.66" stroke-dasharray="2 1.3" stroke-linejoin="round" stroke-linecap="round"/><image href="/pittogrammi/arasaac-bn/dis-pompiere.png" x="178" y="128" width="48" height="48" preserveAspectRatio="xMidYMid meet"/><image href="/pittogrammi/arasaac-bn/dis-famiglia.png" x="236" y="128" width="48" height="48" preserveAspectRatio="xMidYMid meet"/><path d="M266,118 l10,0 l-3,-3 m3,3 l-3,3" fill="none" stroke="#111827" stroke-width="0.66" stroke-linejoin="round" stroke-linecap="round"/><line x1="148" y1="176" x2="283" y2="176" stroke="#111827" stroke-width="0.66" stroke-linecap="round"/>
+      </svg>
+      <img class="st-icona" src="/pittogrammi/arasaac-bn/alf-i-incendio.png" alt="Icona: fiamme" width="500" height="500">
+      <div class="st-testo">
+        <p class="st-kicker">Capitolo 7 · agosto</p>
+        <h2 class="st-titolo">Fumo sulla collina</h2>
+        <p>In agosto, dalla collina dietro il paese, salì una colonna di fumo. Un incendio nel bosco.</p><p>Il papà chiamò subito il 112.</p><p>«Da che parte va il fumo?», chiese Flavia. «Verso il lago. Noi andiamo dall&#x27;altra parte», disse Flavio, che il nonno gliel&#x27;aveva insegnato.</p><p>Nel bosco non ci si avvicina e non si prova a spegnere: si va via, dalla parte opposta al fumo, senza fermarsi nelle strade dove passa.</p><p>Arrivati a casa chiusero porte, finestre e persiane, e aspettarono i vigili del fuoco.</p>
+      </div>
+      <aside class="st-regole" aria-label="Le regole di questo capitolo">
+        <h3>Che cosa si fa</h3>
+        <ul><li>Di' subito a un adulto di chiamare il 112, oppure chiamalo tu.</li><li>Allontanati nella direzione opposta a quella in cui va il fumo.</li><li>Non avvicinarti alle fiamme e non provare a spegnerle.</li></ul>
+      </aside>
+      <p class="st-crediti">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza.</p>
+      <p class="st-piede"><span>protezionecivilegenzano.it</span><span>FLAVIA-POPUP · Foglio 9 di 14 · Rev. 1 · 16/09/2026</span></p>
+      <img class="st-banda" src="/images/footer-print-affiliazioni.png" alt="Affiliazioni del Gruppo: Quality Label del Corpo europeo di solidarietà, codice E10435833; Coordinamento FE.PI.VOL.; Servizio Nazionale della Protezione Civile, volontariato" width="1200" height="140">
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="st-foglio">
+      <svg class="st-scena" viewBox="0 0 287 182" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="Il corridoio pieno di fumo, che resta in alto vicino al soffitto; sui fornelli la pentola fuma ancora; il cartello dell&#x27;uscita di emergenza e una persona che esce dalla porta. Il pop-up è un bambino che avanza a carponi." fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="143.5" y1="4" x2="143.5" y2="176" stroke="#0284c7" stroke-width="0.5" stroke-dasharray="3 2" stroke-linecap="butt"/><line x1="109.5" y1="92" x2="177.5" y2="92" stroke="#111827" stroke-width="0.7" stroke-linecap="butt"/><line x1="109.5" y1="138" x2="177.5" y2="138" stroke="#111827" stroke-width="0.7" stroke-linecap="butt"/><line x1="109.5" y1="92" x2="109.5" y2="138" stroke="#ea580c" stroke-width="0.5" stroke-dasharray="0.8 1.4" stroke-linecap="round"/><line x1="177.5" y1="92" x2="177.5" y2="138" stroke="#ea580c" stroke-width="0.5" stroke-dasharray="0.8 1.4" stroke-linecap="round"/><text x="179.0" y="93" font-size="2.3" fill="#64748b" text-anchor="start" font-weight="400">taglia</text><text x="179.0" y="139" font-size="2.3" fill="#64748b" text-anchor="start" font-weight="400">taglia</text><text x="143.5" y="179.5" font-size="2.3" fill="#0284c7" text-anchor="middle" font-weight="400">piega qui</text><image href="/pittogrammi/arasaac-bn/pop-strisciare.png" x="122.5" y="94" width="42" height="42" preserveAspectRatio="xMidYMid meet"/><path d="M150,14 q6,-4 12,0 q6,4 12,0" fill="none" stroke="#111827" stroke-width="0.6050000000000001" stroke-dasharray="2 1.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M168,17 q6,-4 12,0 q6,4 12,0" fill="none" stroke="#111827" stroke-width="0.6050000000000001" stroke-dasharray="2 1.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M186,14 q6,-4 12,0 q6,4 12,0" fill="none" stroke="#111827" stroke-width="0.6050000000000001" stroke-dasharray="2 1.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M204,17 q6,-4 12,0 q6,4 12,0" fill="none" stroke="#111827" stroke-width="0.6050000000000001" stroke-dasharray="2 1.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M222,14 q6,-4 12,0 q6,4 12,0" fill="none" stroke="#111827" stroke-width="0.6050000000000001" stroke-dasharray="2 1.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M240,17 q6,-4 12,0 q6,4 12,0" fill="none" stroke="#111827" stroke-width="0.6050000000000001" stroke-dasharray="2 1.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M258,14 q6,-4 12,0 q6,4 12,0" fill="none" stroke="#111827" stroke-width="0.6050000000000001" stroke-dasharray="2 1.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M156,24 q6,-4 12,0 q6,4 12,0" fill="none" stroke="#111827" stroke-width="0.55" stroke-dasharray="2 1.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M174,27 q6,-4 12,0 q6,4 12,0" fill="none" stroke="#111827" stroke-width="0.55" stroke-dasharray="2 1.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M192,24 q6,-4 12,0 q6,4 12,0" fill="none" stroke="#111827" stroke-width="0.55" stroke-dasharray="2 1.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M210,27 q6,-4 12,0 q6,4 12,0" fill="none" stroke="#111827" stroke-width="0.55" stroke-dasharray="2 1.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M228,24 q6,-4 12,0 q6,4 12,0" fill="none" stroke="#111827" stroke-width="0.55" stroke-dasharray="2 1.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M246,27 q6,-4 12,0 q6,4 12,0" fill="none" stroke="#111827" stroke-width="0.55" stroke-dasharray="2 1.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M264,24 q6,-4 12,0 q6,4 12,0" fill="none" stroke="#111827" stroke-width="0.55" stroke-dasharray="2 1.2" stroke-linejoin="round" stroke-linecap="round"/><image href="/pittogrammi/iso7010/uscita-emergenza-sinistra.svg" x="182" y="99" width="15" height="15" preserveAspectRatio="xMidYMid meet"/><image href="/pittogrammi/arasaac-bn/alf-u-uscita.png" x="184" y="126" width="50" height="50" preserveAspectRatio="xMidYMid meet"/><rect x="256" y="138" width="26" height="38" rx="1" fill="#fff" stroke="#111827" stroke-width="0.6050000000000001"/><circle cx="263" cy="141.5" r="1.6" fill="none" stroke="#111827" stroke-width="0.55"/><circle cx="275" cy="141.5" r="1.6" fill="none" stroke="#111827" stroke-width="0.55"/><image href="/pittogrammi/arasaac-bn/dis-pentola.png" x="258" y="121" width="18" height="18" preserveAspectRatio="xMidYMid meet"/><path d="M267,122 q-5,-4.0 1.5,-7.2 q-6.0,-4.8 1.0,-8.8 q4.0,-4.0 2.0,-2.4" fill="none" stroke="#111827" stroke-width="0.66" stroke-dasharray="2 1.3" stroke-linejoin="round" stroke-linecap="round"/><line x1="148" y1="176" x2="283" y2="176" stroke="#111827" stroke-width="0.66" stroke-linecap="round"/>
+      </svg>
+      <img class="st-icona" src="/pittogrammi/arasaac-bn/pop-strisciare.png" alt="Icona: bambino che avanza carponi" width="500" height="500">
+      <div class="st-testo">
+        <p class="st-kicker">Capitolo 8 · gennaio</p>
+        <h2 class="st-titolo">Fumo in cucina</h2>
+        <p>Una domenica una padella dimenticata riempì il corridoio di fumo grigio. Il papà spense il fornello, ma il fumo era tanto e stava in alto, vicino al soffitto.</p><p>«Giù, a carponi!»</p><p>Flavia e Flavio si misero a quattro zampe: in basso l&#x27;aria si respira. Flavio arrivò per primo alla porta di casa e toccò la maniglia: era fredda, si poteva aprire.</p><p>Uscirono per le scale, senza ascensore, fino in strada. Da fuori il papà chiamò il 112.</p><p>Una volta fuori non si rientra: si aspetta che qualcuno dica che si può.</p>
+      </div>
+      <aside class="st-regole" aria-label="Le regole di questo capitolo">
+        <h3>Che cosa si fa</h3>
+        <ul><li>Se c'è molto fumo, va' a carponi verso l'uscita: in basso si respira.</li><li>Non aprire una porta se al tocco è calda: dietro c'è il fuoco.</li><li>Una volta fuori non rientrare: si torna dentro quando lo dicono i vigili del fuoco.</li></ul>
+      </aside>
+      <p class="st-crediti">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza. Segnali di sicurezza ISO 7010 da Wikimedia Commons (pubblico dominio).</p>
+      <p class="st-piede"><span>protezionecivilegenzano.it</span><span>FLAVIA-POPUP · Foglio 10 di 14 · Rev. 1 · 16/09/2026</span></p>
+      <img class="st-banda" src="/images/footer-print-affiliazioni.png" alt="Affiliazioni del Gruppo: Quality Label del Corpo europeo di solidarietà, codice E10435833; Coordinamento FE.PI.VOL.; Servizio Nazionale della Protezione Civile, volontariato" width="1200" height="140">
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="st-foglio">
+      <svg class="st-scena" viewBox="0 0 287 182" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="Un prato ai Castelli con le colline e una buca profonda; gli adulti tengono il bambino lontano dal bordo. Il pop-up è il triangolo giallo di pericolo piantato davanti alla buca." fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="143.5" y1="4" x2="143.5" y2="176" stroke="#0284c7" stroke-width="0.5" stroke-dasharray="3 2" stroke-linecap="butt"/><line x1="109.5" y1="92" x2="177.5" y2="92" stroke="#111827" stroke-width="0.7" stroke-linecap="butt"/><line x1="109.5" y1="138" x2="177.5" y2="138" stroke="#111827" stroke-width="0.7" stroke-linecap="butt"/><line x1="109.5" y1="92" x2="109.5" y2="138" stroke="#ea580c" stroke-width="0.5" stroke-dasharray="0.8 1.4" stroke-linecap="round"/><line x1="177.5" y1="92" x2="177.5" y2="138" stroke="#ea580c" stroke-width="0.5" stroke-dasharray="0.8 1.4" stroke-linecap="round"/><text x="179.0" y="93" font-size="2.3" fill="#64748b" text-anchor="start" font-weight="400">taglia</text><text x="179.0" y="139" font-size="2.3" fill="#64748b" text-anchor="start" font-weight="400">taglia</text><text x="143.5" y="179.5" font-size="2.3" fill="#0284c7" text-anchor="middle" font-weight="400">piega qui</text><line x1="143.5" y1="135" x2="143.5" y2="117" stroke="#111827" stroke-width="0.77" stroke-linecap="round"/><image href="/pittogrammi/iso7010/pericolo-generico.svg" x="131.5" y="96" width="24" height="21" preserveAspectRatio="xMidYMid meet"/><image href="/pittogrammi/arasaac-bn/dis-sole.png" x="152" y="8" width="36" height="36" preserveAspectRatio="xMidYMid meet"/><path d="M182.0,130 q25.0,-44.800000000000004 50.0,-8.4 q25.0,-22.400000000000002 50.0,8.4 Z" fill="#fff" stroke="#111827" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"/><path d="M225.0,118 q15.0,-35.2 30.0,-6.6 q15.0,-17.6 30.0,6.6 Z" fill="#fff" stroke="#111827" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"/><image href="/pittogrammi/arasaac-bn/dis-adulto-bambino.png" x="184" y="124" width="52" height="52" preserveAspectRatio="xMidYMid meet"/><ellipse cx="252" cy="166" rx="17.0" ry="2.8000000000000003" fill="#fff" stroke="#111827" stroke-width="0.55"/><path d="M235.0,166 q0,10 17.0,10 q17.0,0 17.0,-10" fill="#e5e7eb" stroke="#111827" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"/><line x1="240.1" y1="167.5" x2="240.9" y2="171.5" stroke="#111827" stroke-width="0.44000000000000006" stroke-linecap="round"/><line x1="244.85999999999999" y1="167.5" x2="245.66" y2="171.5" stroke="#111827" stroke-width="0.44000000000000006" stroke-linecap="round"/><line x1="249.62" y1="167.5" x2="250.42000000000002" y2="171.5" stroke="#111827" stroke-width="0.44000000000000006" stroke-linecap="round"/><line x1="254.38" y1="167.5" x2="255.18" y2="171.5" stroke="#111827" stroke-width="0.44000000000000006" stroke-linecap="round"/><line x1="259.14" y1="167.5" x2="259.94" y2="171.5" stroke="#111827" stroke-width="0.44000000000000006" stroke-linecap="round"/><line x1="263.9" y1="167.5" x2="264.7" y2="171.5" stroke="#111827" stroke-width="0.44000000000000006" stroke-linecap="round"/><line x1="148" y1="176" x2="234" y2="176" stroke="#111827" stroke-width="0.66" stroke-linecap="round"/><line x1="270" y1="176" x2="283" y2="176" stroke="#111827" stroke-width="0.66" stroke-linecap="round"/>
+      </svg>
+      <img class="st-icona" src="/pittogrammi/arasaac-bn/alf-a-allerta.png" alt="Icona: triangolo di pericolo" width="500" height="500">
+      <div class="st-testo">
+        <p class="st-kicker">Capitolo 9 · aprile</p>
+        <h2 class="st-titolo">La buca nel prato</h2>
+        <p>Una passeggiata ai Castelli, in primavera. In mezzo al prato c&#x27;era una buca profonda, con le pareti di terra. Flavia si sporse a guardare.</p><p>«Ferma», disse Anna, che era con loro. «Ai Castelli Romani, sotto terra, c&#x27;è un gas che ogni tanto esce dal suolo. Non ha odore ed è pesante: si ferma nei posti bassi e chiusi, e chi entra non se ne accorge.»</p><p>Nelle buche, nei pozzi e nelle cantine che non si conoscono non si entra.</p><p>«E se qualcuno è dentro e non risponde?», chiese Flavio. «Non si entra a prenderlo. Si chiama un adulto e il 112, e si aspettano i vigili del fuoco.»</p>
+      </div>
+      <aside class="st-regole" aria-label="Le regole di questo capitolo">
+        <h3>Che cosa si fa</h3>
+        <ul><li>Non entrare mai in un pozzo, in una buca o in una cantina che non conosci.</li><li>Se una persona è dentro e non risponde, <strong>non entrare a prenderla</strong>: chi entra per aiutare diventa la seconda persona in pericolo.</li><li>Chiama subito un adulto e il 112, e di' che c'è qualcuno dentro un posto chiuso.</li></ul>
+      </aside>
+      <p class="st-crediti">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza. Segnali di sicurezza ISO 7010 da Wikimedia Commons (pubblico dominio).</p>
+      <p class="st-piede"><span>protezionecivilegenzano.it</span><span>FLAVIA-POPUP · Foglio 11 di 14 · Rev. 1 · 16/09/2026</span></p>
+      <img class="st-banda" src="/images/footer-print-affiliazioni.png" alt="Affiliazioni del Gruppo: Quality Label del Corpo europeo di solidarietà, codice E10435833; Coordinamento FE.PI.VOL.; Servizio Nazionale della Protezione Civile, volontariato" width="1200" height="140">
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="st-foglio">
+      <svg class="st-scena" viewBox="0 0 287 182" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="Una stanza al buio: dalla finestra si vedono le stelle e la luna; la famiglia è insieme, con la radio a pile. Il pop-up è la torcia accesa." fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="143.5" y1="4" x2="143.5" y2="176" stroke="#0284c7" stroke-width="0.5" stroke-dasharray="3 2" stroke-linecap="butt"/><line x1="109.5" y1="92" x2="177.5" y2="92" stroke="#111827" stroke-width="0.7" stroke-linecap="butt"/><line x1="109.5" y1="138" x2="177.5" y2="138" stroke="#111827" stroke-width="0.7" stroke-linecap="butt"/><line x1="109.5" y1="92" x2="109.5" y2="138" stroke="#ea580c" stroke-width="0.5" stroke-dasharray="0.8 1.4" stroke-linecap="round"/><line x1="177.5" y1="92" x2="177.5" y2="138" stroke="#ea580c" stroke-width="0.5" stroke-dasharray="0.8 1.4" stroke-linecap="round"/><text x="179.0" y="93" font-size="2.3" fill="#64748b" text-anchor="start" font-weight="400">taglia</text><text x="179.0" y="139" font-size="2.3" fill="#64748b" text-anchor="start" font-weight="400">taglia</text><text x="143.5" y="179.5" font-size="2.3" fill="#0284c7" text-anchor="middle" font-weight="400">piega qui</text><image href="/pittogrammi/arasaac-bn/oca-torcia.png" x="122.5" y="94" width="42" height="42" preserveAspectRatio="xMidYMid meet"/><rect x="222" y="14" width="46" height="40" rx="0" fill="#e5e7eb" stroke="#111827" stroke-width="0.6050000000000001"/><line x1="245.0" y1="14" x2="245.0" y2="54" stroke="#111827" stroke-width="0.55" stroke-linecap="round"/><line x1="222" y1="34.0" x2="268" y2="34.0" stroke="#111827" stroke-width="0.55" stroke-linecap="round"/><circle cx="228" cy="20" r="0.7" fill="#111827" stroke="#111827" stroke-width="0.55"/><circle cx="236" cy="26" r="0.7" fill="#111827" stroke="#111827" stroke-width="0.55"/><circle cx="252" cy="19" r="0.7" fill="#111827" stroke="#111827" stroke-width="0.55"/><circle cx="262" cy="28" r="0.7" fill="#111827" stroke="#111827" stroke-width="0.55"/><circle cx="232" cy="44" r="0.7" fill="#111827" stroke="#111827" stroke-width="0.55"/><circle cx="258" cy="46" r="0.7" fill="#111827" stroke="#111827" stroke-width="0.55"/><path d="M258,38 a5,5 0 1,0 0,10 a3.6,3.6 0 1,1 0,-10 Z" fill="#fff" stroke="#111827" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round"/><image href="/pittogrammi/arasaac-bn/dis-famiglia.png" x="182" y="124" width="52" height="52" preserveAspectRatio="xMidYMid meet"/><image href="/pittogrammi/arasaac-bn/dis-radio.png" x="240" y="140" width="36" height="36" preserveAspectRatio="xMidYMid meet"/><line x1="148" y1="176" x2="283" y2="176" stroke="#111827" stroke-width="0.66" stroke-linecap="round"/>
+      </svg>
+      <img class="st-icona" src="/pittogrammi/arasaac-bn/oca-torcia.png" alt="Icona: torcia elettrica" width="500" height="500">
+      <div class="st-testo">
+        <p class="st-kicker">Capitolo 10 · febbraio</p>
+        <h2 class="st-titolo">Via la luce</h2>
+        <p>Una sera d&#x27;inverno la luce se ne andò. Tutto buio.</p><p>La nonna prese la torcia dallo zaino rosso — non le candele, che possono dare fuoco alle cose.</p><p>Lasciarono accesa una sola lampada, per accorgersi quando la corrente tornava. Il frigorifero restò chiuso: il cibo si conserva per ore.</p><p>Flavio voleva scendere a vedere se il palazzo era tutto al buio. «Con le scale», disse Flavia, «non con l&#x27;ascensore.»</p><p>La luce tornò dopo un&#x27;ora, e la lampada si accese da sola.</p>
+      </div>
+      <aside class="st-regole" aria-label="Le regole di questo capitolo">
+        <h3>Che cosa si fa</h3>
+        <ul><li>Usa la torcia elettrica, non le candele.</li><li>Tieni chiusi il frigorifero e il congelatore: il cibo si conserva per ore.</li><li>Non prendere l'ascensore.</li></ul>
+      </aside>
+      <p class="st-crediti">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza.</p>
+      <p class="st-piede"><span>protezionecivilegenzano.it</span><span>FLAVIA-POPUP · Foglio 12 di 14 · Rev. 1 · 16/09/2026</span></p>
+      <img class="st-banda" src="/images/footer-print-affiliazioni.png" alt="Affiliazioni del Gruppo: Quality Label del Corpo europeo di solidarietà, codice E10435833; Coordinamento FE.PI.VOL.; Servizio Nazionale della Protezione Civile, volontariato" width="1200" height="140">
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="st-foglio">
+      <svg class="st-scena" viewBox="0 0 287 182" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="Un pomeriggio caldissimo: il sole batte sulla finestra con la tapparella; una bottiglia d&#x27;acqua con il bicchiere e un cuore. Il pop-up è un bambino che parla al telefono." fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="143.5" y1="4" x2="143.5" y2="176" stroke="#0284c7" stroke-width="0.5" stroke-dasharray="3 2" stroke-linecap="butt"/><line x1="109.5" y1="92" x2="177.5" y2="92" stroke="#111827" stroke-width="0.7" stroke-linecap="butt"/><line x1="109.5" y1="138" x2="177.5" y2="138" stroke="#111827" stroke-width="0.7" stroke-linecap="butt"/><line x1="109.5" y1="92" x2="109.5" y2="138" stroke="#ea580c" stroke-width="0.5" stroke-dasharray="0.8 1.4" stroke-linecap="round"/><line x1="177.5" y1="92" x2="177.5" y2="138" stroke="#ea580c" stroke-width="0.5" stroke-dasharray="0.8 1.4" stroke-linecap="round"/><text x="179.0" y="93" font-size="2.3" fill="#64748b" text-anchor="start" font-weight="400">taglia</text><text x="179.0" y="139" font-size="2.3" fill="#64748b" text-anchor="start" font-weight="400">taglia</text><text x="143.5" y="179.5" font-size="2.3" fill="#0284c7" text-anchor="middle" font-weight="400">piega qui</text><image href="/pittogrammi/arasaac-bn/dis-al-telefono.png" x="122.5" y="94" width="42" height="42" preserveAspectRatio="xMidYMid meet"/><image href="/pittogrammi/arasaac-bn/dis-sole.png" x="150" y="4" width="50" height="50" preserveAspectRatio="xMidYMid meet"/><rect x="236" y="10" width="40" height="30" rx="0" fill="#fff" stroke="#111827" stroke-width="0.55"/><line x1="236" y1="14" x2="276" y2="14" stroke="#111827" stroke-width="0.44000000000000006" stroke-linecap="round"/><line x1="236" y1="18" x2="276" y2="18" stroke="#111827" stroke-width="0.44000000000000006" stroke-linecap="round"/><line x1="236" y1="22" x2="276" y2="22" stroke="#111827" stroke-width="0.44000000000000006" stroke-linecap="round"/><line x1="236" y1="26" x2="276" y2="26" stroke="#111827" stroke-width="0.44000000000000006" stroke-linecap="round"/><line x1="236" y1="30" x2="276" y2="30" stroke="#111827" stroke-width="0.44000000000000006" stroke-linecap="round"/><line x1="236" y1="34" x2="276" y2="34" stroke="#111827" stroke-width="0.44000000000000006" stroke-linecap="round"/><image href="/pittogrammi/arasaac-bn/dis-acqua.png" x="186" y="136" width="40" height="40" preserveAspectRatio="xMidYMid meet"/><image href="/pittogrammi/arasaac-bn/dis-cuore.png" x="236" y="132" width="40" height="40" preserveAspectRatio="xMidYMid meet"/><line x1="148" y1="176" x2="283" y2="176" stroke="#111827" stroke-width="0.66" stroke-linecap="round"/>
+      </svg>
+      <img class="st-icona" src="/pittogrammi/arasaac-bn/dis-sole.png" alt="Icona: sole" width="500" height="500">
+      <div class="st-testo">
+        <p class="st-kicker">Capitolo 11 · luglio</p>
+        <h2 class="st-titolo">Il giorno più caldo</h2>
+        <p>Il giorno più caldo dell&#x27;anno, alle due del pomeriggio, la nonna si sedette di colpo. Aveva il viso rosso e parlava piano.</p><p>Respirarono. Guardarono. Sapevano cosa fare.</p><p>Flavia prese il telefono e fece il 112. «Sono Flavia. Sono a Genzano.» Disse la via, il numero di casa e il nome del negozio all&#x27;angolo. «Mia nonna sta male: è rossa e parla piano. Siamo in tre.»</p><p>Rispose a tutte le domande e non chiuse finché non glielo dissero.</p><p>Intanto Flavio portò alla nonna un bicchiere d&#x27;acqua e tirò giù la tapparella.</p>
+      </div>
+      <aside class="st-regole" aria-label="Le regole di questo capitolo">
+        <h3>Che cosa si fa</h3>
+        <ul><li>Di' dove sei: il paese, la via, il numero, un posto che si riconosce.</li><li>Di' se c'è qualcuno che sta male, e quante persone siete.</li><li>Rispondi alle domande e non chiudere finché non te lo dicono.</li></ul>
+      </aside>
+      <p class="st-crediti">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza.</p>
+      <p class="st-piede"><span>protezionecivilegenzano.it</span><span>FLAVIA-POPUP · Foglio 13 di 14 · Rev. 1 · 16/09/2026</span></p>
+      <img class="st-banda" src="/images/footer-print-affiliazioni.png" alt="Affiliazioni del Gruppo: Quality Label del Corpo europeo di solidarietà, codice E10435833; Coordinamento FE.PI.VOL.; Servizio Nazionale della Protezione Civile, volontariato" width="1200" height="140">
+    </div>
+  </article>
+  <article class="scheda-page">
+    <div class="st-foglio">
+      <svg class="st-scena" viewBox="0 0 287 182" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="I volontari con il furgone, la famiglia, il sole, un cuore e lo zaino rosso vicino. Il pop-up è il diploma di piccola protezione civile." fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="143.5" y1="4" x2="143.5" y2="176" stroke="#0284c7" stroke-width="0.5" stroke-dasharray="3 2" stroke-linecap="butt"/><line x1="109.5" y1="92" x2="177.5" y2="92" stroke="#111827" stroke-width="0.7" stroke-linecap="butt"/><line x1="109.5" y1="138" x2="177.5" y2="138" stroke="#111827" stroke-width="0.7" stroke-linecap="butt"/><line x1="109.5" y1="92" x2="109.5" y2="138" stroke="#ea580c" stroke-width="0.5" stroke-dasharray="0.8 1.4" stroke-linecap="round"/><line x1="177.5" y1="92" x2="177.5" y2="138" stroke="#ea580c" stroke-width="0.5" stroke-dasharray="0.8 1.4" stroke-linecap="round"/><text x="179.0" y="93" font-size="2.3" fill="#64748b" text-anchor="start" font-weight="400">taglia</text><text x="179.0" y="139" font-size="2.3" fill="#64748b" text-anchor="start" font-weight="400">taglia</text><text x="143.5" y="179.5" font-size="2.3" fill="#0284c7" text-anchor="middle" font-weight="400">piega qui</text><rect x="121.5" y="101" width="44" height="30" rx="1.5" fill="#fff" stroke="#111827" stroke-width="0.77"/><rect x="124.0" y="103.5" width="39" height="25" rx="1" fill="#fff" stroke="#0284c7" stroke-width="0.385"/><text x="143.5" y="112.4" font-size="4.2" fill="#0284c7" text-anchor="middle" font-weight="700">DIPLOMA</text><text x="143.5" y="119.0" font-size="2.6" fill="#111827" text-anchor="middle" font-weight="400">di piccola</text><text x="143.5" y="124.4" font-size="2.6" fill="#111827" text-anchor="middle" font-weight="400">protezione civile</text><image href="/pittogrammi/arasaac-bn/dis-sole.png" x="152" y="8" width="34" height="34" preserveAspectRatio="xMidYMid meet"/><image href="/pittogrammi/arasaac-bn/dis-cuore.png" x="240" y="12" width="34" height="34" preserveAspectRatio="xMidYMid meet"/><image href="/pittogrammi/arasaac-bn/alf-p-protezione-civile.png" x="178" y="122" width="52" height="52" preserveAspectRatio="xMidYMid meet"/><image href="/pittogrammi/arasaac-bn/dis-famiglia.png" x="233" y="126" width="48" height="48" preserveAspectRatio="xMidYMid meet"/><image href="/pittogrammi/arasaac-bn/alf-z-zaino.png" x="150" y="142" width="28" height="28" preserveAspectRatio="xMidYMid meet"/><line x1="148" y1="176" x2="283" y2="176" stroke="#111827" stroke-width="0.66" stroke-linecap="round"/>
+      </svg>
+      <img class="st-icona" src="/pittogrammi/arasaac-bn/alf-p-protezione-civile.png" alt="Icona: volontari di protezione civile con il furgone" width="500" height="500">
+      <div class="st-testo">
+        <p class="st-kicker">Capitolo 12 · settembre, un anno dopo</p>
+        <h2 class="st-titolo">Il diploma</h2>
+        <p>L&#x27;ambulanza arrivò poco dopo. La nonna tornò a casa la sera stessa, con una gran voglia di gelato.</p><p>Il giorno dopo Anna venne a trovarli. «Hai detto dove eri, che cosa era successo, chi stava male, e non hai chiuso», disse a Flavia. «E tu hai portato l&#x27;acqua e fatto ombra», disse a Flavio. «È tutto quello che serve.»</p><p>Diede a ciascuno un foglio con il bordo blu: il diploma di piccola protezione civile.</p><p>Li attaccarono sopra i letti, accanto allo zaino rosso.</p><p>Prima respiro. Poi guardo. Poi so cosa fare. E in emergenza si chiama il 112.</p>
+      </div>
+      <aside class="st-regole" aria-label="Le regole di questo capitolo">
+        <h3>Che cosa si fa</h3>
+        <ul><li>Non chiamare il 112 per gioco: mentre parli tu, qualcuno aspetta davvero.</li><li>I volontari non si chiamano direttamente: in emergenza si chiama il 112.</li></ul>
+      </aside>
+      <p class="st-crediti">Pittogrammi: ARASAAC (arasaac.org), Governo di Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0. Questo foglio eredita la stessa licenza.</p>
+      <p class="st-piede"><span>protezionecivilegenzano.it</span><span>FLAVIA-POPUP · Foglio 14 di 14 · Rev. 1 · 16/09/2026</span></p>
+      <img class="st-banda" src="/images/footer-print-affiliazioni.png" alt="Affiliazioni del Gruppo: Quality Label del Corpo europeo di solidarietà, codice E10435833; Coordinamento FE.PI.VOL.; Servizio Nazionale della Protezione Civile, volontariato" width="1200" height="140">
+    </div>
   </article>
 </section>
 
