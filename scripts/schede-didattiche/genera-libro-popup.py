@@ -212,7 +212,7 @@ def pagina_tavola(n, t):
       {tessere}
       <p class="nota-adulto">Per l'adulto: fino ai 6 anni ritaglia tu; dai 7 anni ritagliano
       loro da seduti, sorvegliati, con forbici a punta arrotondata. Le frasi di questa tavola
-      vengono dalla {t["fonte"]}. Non sostituiscono il piano di emergenza della scuola o
+      vengono {"dall'" if t["fonte"][0] in "aeiou" else "dalla "}{t["fonte"]}. Non sostituiscono il piano di emergenza della scuola o
       dell'edificio in cui vi trovate: se un'indicazione ufficiale dice altro, vale quella.</p>
       {LICENZA}
       {piede(f"Tavola {n} di {len(TAVOLE)}")}

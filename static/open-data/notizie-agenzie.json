@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-15T17:00:28+00:00",
+  "generato": "2026-09-16T22:03:34+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-15T16:46:07+00:00",
+   "data": "2026-09-16T21:29:53+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Messaggio pro-Ceuta 'nascosto', in Spagna è polemica contro Mbappé, Vinicius e Konaté: cos'è successo",
+   "url": "https://www.adnkronos.com/sport/messaggio-ceuta-nascosto-polemica-mbappe-vinicius-konate_17m5WJpXSt0Ij6aErp9KVC"
+  },
+  {
+   "data": "2026-09-16T21:15:35+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Caso Revolut, hacker chiedono un riscatto di 3 milioni di dollari dopo la violazione dei dati",
+   "url": "https://www.adnkronos.com/economia/revolut-furto-dati-riscatto-hacker_7J21xhLut0JYz5f1vPo6lq"
+  },
+  {
+   "data": "2026-09-16T20:59:53+00:00",
    "fonte": "ANSA",
-   "titolo": "L'Italia proroga di altri 15 giorni il blocco di Schengen con la Spagna, Madrid risponde",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/litalia-proroga-di-altri-15-giorni-il-blocco-di-schengen-con-la-spagna_cea01180-76fc-45d4-bad1-ae2182b8f3c0.html"
+   "titolo": "Donna ferita da piombino a Roma: 50enne confessa, denunciato",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/16/donna-ferita-da-piombino-a-roma-50enne-confessa-denunciato_42a4667e-0671-4780-9f8a-dfc48f4ed2c5.html"
   },
   {
-   "data": "2026-09-15T16:42:59+00:00",
-   "fonte": "ANSA",
-   "titolo": "Cercò persone sotto le macerie del sisma e del ponte Morandi, morto il cane Marley",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/cerco-persone-sotto-macerie-sisma-e-ponte-morandi-morto-il-cane-marley_d8d85ca9-6c75-4ff0-a99a-d944348cb63e.html"
-  },
-  {
-   "data": "2026-09-15T16:42:02+00:00",
-   "fonte": "ANSA",
-   "titolo": "Piano anti Lotito, perquisiti i vertici della Banca del Fucino",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/aggiotaggio-su-quote-della-lazio-perquisiti-presidente-e-ad-della-banca-del-fucino_b84b2c88-20db-49f7-9d1f-ba5806ade573.html"
-  },
-  {
-   "data": "2026-09-15T16:40:04+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trovato il corpo della donna dispersa nella Laguna di Venezia",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/trovato-il-corpo-della-donna-dispersa-nella-laguna-di-venezia-_8a3b9fed-3fb4-416d-ad60-98d956b702b7.html"
-  },
-  {
-   "data": "2026-09-15T16:31:03+00:00",
-   "fonte": "ANSA",
-   "titolo": "Doppiatori sul grande schermo per andare oltre la malattia",
-   "url": "https://www.ansa.it/canale_saluteebenessere/notizie/sanita/2026/09/15/ansa-la-storiadoppiatori-sul-grande-schermo-per-andare-oltre-la-malattia_da6f68ba-50e2-4ecb-adaf-f353cacdd904.html"
-  },
-  {
-   "data": "2026-09-15T16:25:06+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Minasi (Lega): \"Prevenzione, cure e centralità del paziente le priorità\"",
-   "url": "https://www.adnkronos.com/cronaca/minasi-lega-prevenzione-cure-e-centralita-del-paziente-le-priorita_14osQvcSAYlTFR8dS2Iq7W"
-  },
-  {
-   "data": "2026-09-15T16:25:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Food, Anir Confindustria: \"Per grande ristorazione più certezza su contratti e regole\"",
-   "url": "https://www.adnkronos.com/economia/food-anir-confindustria-per-grande-ristorazione-piu-certezza-su-contratti-e-regole_7MI7tjHxLASgvZ1Wb3yMS0"
-  },
-  {
-   "data": "2026-09-15T16:24:43+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Girelli (Pd): \"La sanità italiana deve puntare su prevenzione e gestione del rischio\"",
-   "url": "https://www.adnkronos.com/cronaca/girelli-pd-la-sanita-italiana-deve-puntare-su-prevenzione-e-gestione-del-rischio_15jnWRCeC1XW3xssgAdKkI"
-  },
-  {
-   "data": "2026-09-15T16:24:05+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Tumore rinofaringeo, Pisani (Ailar): \"Necessari percorsi multidisciplinari e centralità del paziente\"",
-   "url": "https://www.adnkronos.com/cronaca/tumore-rinofaringeo-pisani-ailar-necessari-percorsi-multidisciplinari-e-centralita-del-paziente_5UYXHNR2rUfJJ497AlGquE"
-  },
-  {
-   "data": "2026-09-15T16:23:47+00:00",
-   "fonte": "ANSA",
-   "titolo": "Spiava il conto di Meloni, ex bancario verso il processo",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/spiava-i-conti-di-mattarella-e-meloni-chiuse-indagini-su-ex-dipendente-banca_a7bda609-cf67-4e86-8dec-4c9279f1186c.html"
-  },
-  {
-   "data": "2026-09-15T16:23:39+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Tumore rinofaringeo, Bianco (Teha Group): \"Impatto sociale ed economico significativo\"",
-   "url": "https://www.adnkronos.com/cronaca/tumore-rinofaringeo-bianco-teha-group-impatto-sociale-ed-economico-significativo_3iw8jZ4Tb5r6GDREs4lGXa"
-  },
-  {
-   "data": "2026-09-15T16:23:17+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Tumore rinofaringeo, Mercante (UniBo): \"Serve squadra di specialisti per migliorare prognosi\"",
-   "url": "https://www.adnkronos.com/cronaca/tumore-rinofaringeo-mercante-unibo-serve-squadra-di-specialisti-per-migliorare-prognosi_38x07AxDuHxiENKki2LOe0"
-  },
-  {
-   "data": "2026-09-15T16:22:54+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Tumore rinofaringeo, Bossi (Humanitas): \"Più ricerca in Europa e cooperazione con la Cina\"",
-   "url": "https://www.adnkronos.com/cronaca/tumore-rinofaringeo-bossi-humanitas-piu-ricerca-in-europa-e-cooperazione-con-la-cina_6p2IFFAVbMGNmiKmxuo4kI"
-  },
-  {
-   "data": "2026-09-15T16:21:05+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Il nipote di Lenzini: \"Spero che i tifosi della Lazio tornino presto allo stadio. Indagine aggiotaggio? Al momento poco da dire\"",
-   "url": "https://www.adnkronos.com/sport/lazio-nipote-presidente-lenzini-tifosi-stadio-vicenda-aggiotaggio-poco-dire_tMnrHDvrP7iTjw3LQNsTW"
-  },
-  {
-   "data": "2026-09-15T16:21:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Mattarella sull'IA: \"Stati recuperino sovranità smarrita rispetto a soggetti privati\"",
-   "url": "https://www.adnkronos.com/politica/intelligenza-artificiale-monito-di-mattarella_6a4jsUc95R8C0jfeYyWV0N"
-  },
-  {
-   "data": "2026-09-15T16:20:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Food, Anir Confindustria: \"Progettare futuro e diventare sempre più pezzo industria italiana\"",
-   "url": "https://www.adnkronos.com/economia/food-anir-confindustria-progettare-futuro-e-diventare-sempre-piu-pezzo-industria-italiana_7wy5eMT8M1pJ919DnN4koA"
-  },
-  {
-   "data": "2026-09-15T16:17:41+00:00",
-   "fonte": "ANSA",
-   "titolo": "'Mancano sicurezza e privacy', salta l'incontro della famiglia del bosco",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/mancano-sicurezza-e-privacy-salta-lincontro-della-famiglia-del-bosco_f32b6534-8141-4ce2-a87d-451624f26772.html"
-  },
-  {
-   "data": "2026-09-15T16:15:31+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ranucci fa ricorso per tornare a condurre Report",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/ranucci-fa-ricorso-al-tribunale-dopo-la-rimozione-dalla-conduzione-di-report_081bc58c-685d-4bbb-801e-d1f7d2c10ca1.html"
-  },
-  {
-   "data": "2026-09-15T16:12:02+00:00",
+   "data": "2026-09-16T20:58:45+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Pillon, 'incontro famiglia del bosco spostato nella solita località protetta'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/pillon-incontro-famiglia-del-bosco-spostato-nella-solita-localita-protetta_7afcc389-abd7-449a-a66e-e81b2ca462a2.html"
+   "titolo": "Donna ferita da piombino a Roma: 50enne confessa, denunciato",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/16/donna-ferita-da-piombino-a-roma-50enne-confessa-denunciato_5dfe26b9-a7a2-4e51-94c2-822e36e896d7.html"
   },
   {
-   "data": "2026-09-15T16:11:36+00:00",
+   "data": "2026-09-16T20:57:41+00:00",
+   "fonte": "ANSA",
+   "titolo": "Europa League: Milan sconfitto 2-0 dal Benfica a San Siro CRONACA e FOTO",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/16/europa-league-milan-sconfitto-2-0-dal-benfica-a-san-siro-cronaca-e-foto_512ed9f3-3195-40a2-86c4-3b4f23f60d44.html"
+  },
+  {
+   "data": "2026-09-16T20:52:01+00:00",
+   "fonte": "ANSA",
+   "titolo": "Revolut, gli hacker 'abbiamo i dati della polizia italiana'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/16/revolut-gli-hacker-abbiamo-i-dati-della-polizia-italiana_843a8437-4be5-4388-b303-702947fc3d53.html"
+  },
+  {
+   "data": "2026-09-16T20:51:12+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Molestie su 13enne a Torino, disposto il carcere per l'indagato",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/molestie-su-13enne-a-torino-disposto-il-carcere-per-lindagato-_b2e65ff2-515c-4d6c-a9e4-1ba4c9601ced.html"
+   "titolo": "Turista disperso da ieri sera viene ritrovato senza vita in un torrente",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/16/turista-disperso-da-ieri-sera-viene-ritrovato-senza-vita-in-un-torrente_8e4bc7e5-880b-431e-9f32-b1f5f60689ba.html"
   },
   {
-   "data": "2026-09-15T16:01:20+00:00",
+   "data": "2026-09-16T20:48:53+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "#AccadeOggi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/16/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
+  },
+  {
+   "data": "2026-09-16T20:46:07+00:00",
+   "fonte": "ANSA",
+   "titolo": "A Milano rabbino aggredito, 'preso a calci e pugni a fermata del bus'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/16/a-milano-rabbino-aggredito-preso-a-calci-e-pugni-a-fermata-del-bus_75d9797f-e106-492f-97fc-6d4e2f8d8e5b.html"
+  },
+  {
+   "data": "2026-09-16T20:36:54+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Nautica: oltre 1.000 imbarcazioni e 45 Paesi, a Genova il 66° Salone Internazionale",
-   "url": "https://www.adnkronos.com/economia/nautica-oltre-1000-imbarcazioni-e-45-paesi-a-genova-il-66-salone-internazionale_4lJTWfJptYnH2xDlh55X3C"
+   "titolo": "\"Vai in pensione\", Giuliacci e i meteo-insulti per le previsioni: \"Qualche volta rispondo...\"",
+   "url": "https://www.adnkronos.com/cronaca/giuliacci-meteo-previsioni-insulti_ZeXJquuBT0ctBFQUP1QJS"
   },
   {
-   "data": "2026-09-15T15:57:16+00:00",
-   "fonte": "ANSA",
-   "titolo": "Michael J. Fox agli Emmy: \"Accettare il Parkinson non significava arrendermi\"",
-   "url": "https://www.ansa.it/sito/videogallery/spettacolo/2026/09/15/michael-j.-fox-agli-emmy-accettare-il-parkinson-non-significava-arrendermi_7a5e4141-f05e-4022-aa04-95b80c48d6ca.html"
-  },
-  {
-   "data": "2026-09-15T15:56:29+00:00",
+   "data": "2026-09-16T20:09:04+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Roberto Vecchioni rinviato a giudizio per diffamazione di La Russa junior",
-   "url": "https://www.adnkronos.com/spettacoli/geronimo-la-russa-roberto-vecchioni-festival-la-gaberiana_3ASLdrcDSy2IL21Zvp6swA"
+   "titolo": "\"Dimenticheremo presto Diana\", la frase choc di Carlo dopo la morte di Lady D",
+   "url": "https://www.adnkronos.com/internazionale/esteri/re-carlo-principessa-diana-libro_4imeZXB4yOof9zfzdPXRME"
   },
   {
-   "data": "2026-09-15T15:54:26+00:00",
+   "data": "2026-09-16T20:02:25+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Caso mancato tesseramento, Malagò: \"Attacchi da fuoco amico, affronterò partita a testa alta\"",
+   "url": "https://www.adnkronos.com/sport/giovanni-malago-mancato-tesseramento-cosa-succede-figc-commissariamento_Rpnnxusp0OkNm5cBhKS9e"
+  },
+  {
+   "data": "2026-09-16T19:56:21+00:00",
    "fonte": "ANSA",
-   "titolo": "Monito di Mattarella sul'IA: 'Gli Stati recuperino l'autorità smarrita rispetto ai soggetti privati'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/15/monito-di-mattarella-sulia-gli-stati-recuperino-lautorita-smarrita-rispetto-ai-soggetti_7b78284f-6946-42eb-aaf2-5cf98a9977eb.html"
+   "titolo": "La Fed rialza i tassi di 25 punti base, Warsh 'scontenta' Trump. La Casa Bianca: \"Decisione infelice\"",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/16/la-fed-rialza-i-tassi-di-25-punti-base-prima-volta-in-3-anni_244008fb-ab04-473d-ae63-e7dac0b32701.html"
   },
   {
-   "data": "2026-09-15T15:51:55+00:00",
+   "data": "2026-09-16T19:48:49+00:00",
+   "fonte": "ANSA",
+   "titolo": "Mossa di Meloni, addio al bollo per le auto piccole e medie",
+   "url": "https://www.ansa.it/canale_motori/notizie/istituzioni/2026/09/16/mossa-di-meloni-addio-al-bollo-per-le-auto-piccole-e-medie_cb12208d-db01-44ea-a5b5-7535dd0d2550.html"
+  },
+  {
+   "data": "2026-09-16T19:37:27+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Caso David Rossi, nuove prove del Ris al Foro Italico il 28 settembre",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/caso-david-rossi-nuove-prove-del-ris-al-foro-italico-il-28-settembre_ecc0c6e7-fb10-4ef6-82e1-e2e27fa560d6.html"
+   "titolo": "Ritrovata stasera a Udine la ragazzina scomparsa lo scorso 11 settembre",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/16/ritrovata-stasera-a-udine-la-ragazzina-scomparsa-lo-scorso-11-settembre_de2f1bdf-8dc8-42fc-b142-69784e69bdfb.html"
   },
   {
-   "data": "2026-09-15T15:49:07+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "'Mancano sicurezza e privacy', salta l'incontro della famiglia del bosco",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/mancano-sicurezza-e-privacy-salta-lincontro-della-famiglia-del-bosco_3594678a-ac90-4d1e-8654-3b3fb7495e10.html"
+   "data": "2026-09-16T19:21:37+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Dieta e abitudini per l'eterna giovinezza, i consigli dell'esperto: \"Mantenere attivo il cervello\"",
+   "url": "https://www.adnkronos.com/spettacoli/la-volta-buona-dieta-longevita-garattini-oggi_1qD0bqhtiLtu3Xs0u4dBkg"
   },
   {
-   "data": "2026-09-15T15:47:01+00:00",
+   "data": "2026-09-16T19:14:51+00:00",
    "fonte": "ANSA",
-   "titolo": "L'addio a Emma Bonino, Prodi: 'La difesa dei deboli è sempre stata la sua stella polare'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/15/laddio-a-emma-bonino-prodi-la-difesa-dei-deboli-e-sempre-stata-la-sua_75b7482d-4b3a-446e-9d1a-c39d82a561f7.html"
+   "titolo": "L'accusa dell'Fbi: 'I russi pianificavano omicidi in America e in Europa'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/16/usa-gli-007-russi-pianificano-omicidi-mirati-in-america-ed-europa.-il-cremlino_63ccfeef-bec5-4021-8f41-80d16098fb25.html"
   },
   {
-   "data": "2026-09-15T15:41:58+00:00",
+   "data": "2026-09-16T19:01:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Fed rialza i tassi dello 0,25%, Warsh: \"Inflazione troppo alta\". Ira Trump, Casa Bianca: \"Decisione infelice\"",
+   "url": "https://www.adnkronos.com/economia/fed-rialzo-tassi-oggi-motivo-inflazione_21DfuEJEGOg2Xx1pKnh7Dy"
+  },
+  {
+   "data": "2026-09-16T18:42:20+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Atp Finals, Alcaraz raggiunge Sinner a Torino e Cobolli resta in corsa: come cambia la race",
+   "url": "https://www.adnkronos.com/sport/atp-finals-alcaraz-qualificato-sinner-cobolli-come-cambia-race_6d1bLCwJiTG6zjdWrgWbHK"
+  },
+  {
+   "data": "2026-09-16T18:31:18+00:00",
    "fonte": "ANSA",
-   "titolo": "Truffa a Revolut con pec italiana compromessa, indaga la Postale",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/truffa-a-revolut-con-pec-italiana-compromessa-indaga-la-postale_b3b5047d-80a0-4242-93d2-8574c7f2f310.html"
+   "titolo": "L'allarme di von der Leyen: 'Nazionalisti e russi vogliono l'Ue in frantumi'",
+   "url": "https://www.ansa.it/europa/notizie/rubriche/altrenews/2026/09/16/lallarme-di-von-der-leyen-nazionalisti-e-russi-vogliono-lue-in-frantumi_5ec22d77-a814-4987-ba62-4a7d31b30201.html"
   },
   {
-   "data": "2026-09-15T15:24:25+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "L'ex compagna di Lavitola lo denuncia per maltrattamenti, indagano i pm",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/lex-compagna-di-lavitola-lo-denuncia-per-maltrattamenti-indagano-i-pm_44aa119e-2f13-45af-b00f-de4b60c59133.html"
-  },
-  {
-   "data": "2026-09-15T15:15:49+00:00",
+   "data": "2026-09-16T18:26:57+00:00",
    "fonte": "ANSA",
-   "titolo": "Firenze omaggia Oriana Fallaci nei 20 anni dalla morte",
-   "url": "https://www.ansa.it/toscana/notizie/2026/09/15/firenze-omaggia-oriana-fallaci-nei-20-anni-dalla-morte_0d32b0b3-da20-4e0f-bd93-d541130a47db.html"
+   "titolo": "Bufera su Ed Sheeran. Gli artisti lo abbandonano dopo l'uscita del rapper pro-pal Macklemore",
+   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/16/censura-anti-pro-pal-tutti-gli-artisti-ospiti-abbandonano-ed-sheeran_f5b92307-b7f5-4ea5-9dc7-2f2c5a6b4729.html"
+  },
+  {
+   "data": "2026-09-16T18:25:00+00:00",
+   "fonte": "ANSA",
+   "titolo": "Strage a Gaza, tanti bambini tra le vittime del crollo di un palazzo",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/16/crolla-un-palazzo-a-gaza-il-bilancio-sale-a-20-morti.-almeno-50-bambini-sotto-le-macerie_fd1a071c-c486-44ea-a27d-f69b144f51af.html"
+  },
+  {
+   "data": "2026-09-16T18:25:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Calci e insulti al rabbino alla fermata del bus, tre fermati a Milano. Meloni: \"Episodio vile e inaccettabile\"",
+   "url": "https://www.adnkronos.com/cronaca/rabbino-aggredito-milano_4ARYAK7Bxolb1lPFkcVcpy"
+  },
+  {
+   "data": "2026-09-16T18:13:33+00:00",
+   "fonte": "ANSA",
+   "titolo": "La Rai avvia una procedura disciplinare contro Ranucci: 'Violate le norme interne'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/16/la-rai-avvia-una-procedura-disciplinare-contro-ranucci-violate-le-norme-interne_ef465297-627f-4eb4-bc5d-0d0604777c46.html"
+  },
+  {
+   "data": "2026-09-16T18:04:49+00:00",
+   "fonte": "ANSA",
+   "titolo": "Da Meta ad Anthropic, è sfida tra entusiasti e apocalittici dell'IA",
+   "url": "https://www.ansa.it/canale_tecnologia/notizie/future_tech/2026/09/16/da-meta-ad-anthropic-e-sfida-tra-entusiasti-e-apocalittici-dellia_89693bc0-77b5-48a1-9210-028b6a903d7a.html"
+  },
+  {
+   "data": "2026-09-16T18:00:42+00:00",
+   "fonte": "ANSA",
+   "titolo": "Dario Vitale direttore creativo di Emporio Armani e accessori, il primo fuori dalla famiglia",
+   "url": "https://www.ansa.it/canale_lifestyle/notizie/moda/2026/09/16/dario-vitale-direttore-creativo-di-emporio-armani-e-accessori-il-primo-fuori-dalla_6c7f695d-4c40-4f94-9ab7-ba2e686b1081.html"
+  },
+  {
+   "data": "2026-09-16T18:00:16+00:00",
+   "fonte": "ANSA",
+   "titolo": "E' morta Sunny, il secondo cane degli Obama dopo Bo",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/16/e-morta-sunny-il-secondo-cane-degli-obama-dopo-bo_8c952ae4-73db-4a1b-8bd5-efecba31e652.html"
+  },
+  {
+   "data": "2026-09-16T17:59:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Milan-Benfica 0-2, Lukebakio-Kaminski gol e prima sconfitta per i rossoneri",
+   "url": "https://www.adnkronos.com/sport/diretta-milan-benfica-oggi-europa-league-live_5dREXO0L8x5bwnkcfVE5ta"
+  },
+  {
+   "data": "2026-09-16T17:51:00+00:00",
+   "fonte": "ANSA",
+   "titolo": "Thaci condannato a 25 anni per crimini di guerra in Kosovo",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/16/thaci-condannato-a-25-anni-per-crimini-di-guerra-in-kosovo.-i-sostenitori-tentano-lassalto_f0670d62-ebc3-475d-9ed2-27feccf23c80.html"
+  },
+  {
+   "data": "2026-09-16T17:49:12+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'omicidio di Carol Maltesi, ergastolo per l'ex nel sesto processo",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/16/lomicidio-di-carol-maltesi-ergastolo-per-lex-nel-sesto-processo_09f70eba-634f-4ed0-9b82-74f22cc725e9.html"
   }
  ]
 }

@@ -32,7 +32,7 @@ Umbria-Marche 1997 ha cambiato due protocolli operativi della Protezione Civile 
 
 1. **Sicurezza dei soccorritori prima di tutto.** Il crollo della volta avvenne durante un **sopralluogo tecnico**, con persone all'interno di una struttura già lesionata. Da allora i protocolli di accesso post-sisma agli edifici di culto, monumentali e storici sono molto più restrittivi: nessun ingresso senza puntellamento preventivo, monitoraggio in tempo reale delle scosse, valutazione di stabilità da remoto dove possibile (droni, scanner laser).
 
-2. **La tutela del patrimonio culturale è componente del soccorso.** Dopo Assisi, il Ministero della Cultura ha sviluppato le **Carte del rischio** del patrimonio storico, e il Sistema Nazionale di Protezione Civile ha integrato nelle proprie procedure il **Funzionario di Beni Culturali in emergenza**, una figura che si attiva nelle prime 72 ore per documentare, stabilizzare e proteggere il patrimonio colpito.
+2. **La tutela del patrimonio culturale è una componente del soccorso.** Dopo Assisi, il Ministero della Cultura ha sviluppato le **Carte del rischio** del patrimonio storico, e il Sistema Nazionale di Protezione Civile ha integrato nelle proprie procedure il **Funzionario di Beni Culturali in emergenza**, una figura che si attiva nelle prime 72 ore per documentare, stabilizzare e proteggere il patrimonio colpito.
 
 ## La ricostruzione come modello
 
