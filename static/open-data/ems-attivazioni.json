@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/",
-  "generato": "2026-09-15T22:54:48+00:00",
+  "generato": "2026-09-16T11:24:03+00:00",
   "licenza": "Copernicus Emergency Management Service — dati pubblici",
   "nota": "Copia locale: l'API non espone CORS, il browser non può leggerla direttamente."
  },
@@ -18,7 +18,7 @@
    ],
    "eventTime": "2026-09-15T13:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-09-15T19:39:25.410999",
+   "lastUpdate": "2026-09-16T09:33:06.157146",
    "n_aois": 1,
    "n_products": 0,
    "name": "Wildfire in Huelva Province, Spain"
@@ -34,7 +34,7 @@
    ],
    "eventTime": "2026-09-10T20:15:00",
    "gdacsId": null,
-   "lastUpdate": "2026-09-15T21:07:29.035548",
+   "lastUpdate": "2026-09-16T10:09:02.444791",
    "n_aois": 1,
    "n_products": 3,
    "name": "Wildfire in Island of Brac, Croatia"
