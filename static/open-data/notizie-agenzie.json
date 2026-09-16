@@ -5,11 +5,53 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-15T22:54:45+00:00",
+  "generato": "2026-09-16T06:03:20+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-16T05:48:27+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Scoperto evasore totale a Genova: sequestrati beni per 800mila euro a professionista sanitario",
+   "url": "https://www.adnkronos.com/cronaca/scoperto-evasore-totale-a-genova-sequestrati-beni-per-800mila-euro-a-professionista-sanitario_4J9IMCHnDgwz2gcCyXCKgY"
+  },
+  {
+   "data": "2026-09-16T05:21:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Terremoto oggi in Calabria, doppia scossa in provincia di Catanzaro: gli epicentri a Squillace e Amaroni",
+   "url": "https://www.adnkronos.com/cronaca/terremoto-oggi-calabria-scosse-catanzaro-aggiornamenti-diretta_3ReYUS7eGIOIBt6irA7UPS"
+  },
+  {
+   "data": "2026-09-16T05:00:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Elicottero di una tv precipita mentre filma un incidente stradale: almeno 3 morti, tragedia a Los Angeles",
+   "url": "https://www.adnkronos.com/internazionale/esteri/elicottero-tv-precipita-los-angeles-morti_7gKhs7gHmEizcTnFwzX4XC"
+  },
+  {
+   "data": "2026-09-16T04:37:29+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Europa League, oggi Milan-Benfica: orario, probabili formazioni e dove vederla in tv",
+   "url": "https://www.adnkronos.com/sport/europa-league-oggi-milan-benfica-orario-e-dove-vederla-in-tv_5OeG69jkRb4mmyKv6bYXMU"
+  },
+  {
+   "data": "2026-09-16T04:36:48+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Europa League al via, oggi si comincia: le partite della prima giornata e dove vederle",
+   "url": "https://www.adnkronos.com/sport/europa-league-chi-gioca-oggi-partite-dove-vederle_2ztvbLWkTLrHxCgJ1j1a4I"
+  },
+  {
+   "data": "2026-09-16T03:35:20+00:00",
+   "fonte": "ANSA",
+   "titolo": "Usa, Camera approva nuova misura che impone a Trump la fine della guerra in Iran",
+   "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/09/16/usa-camera-approva-nuova-misura-che-impone-a-trump-la-fine-della_2e9c6940-64d5-444a-93a4-333dc3bf1746.html"
+  },
+  {
+   "data": "2026-09-16T03:30:03+00:00",
+   "fonte": "ANSA",
+   "titolo": "Usa: 'I servizi d'intelligence russi pianificano omicidi mirati in America ed Europa'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/16/usa-i-servizi-dintelligence-russi-pianificano-omicidi-mirati-in-america-ed-europa_63ccfeef-bec5-4021-8f41-80d16098fb25.html"
+  },
   {
    "data": "2026-09-15T22:27:21+00:00",
    "fonte": "ADNKRONOS",
@@ -95,18 +137,6 @@
    "url": "https://www.ansa.it/europa/notizie/rubriche/altrenews/2026/09/15/ansa-von-der-leyen-cerca-la-ricetta-per-lia-e-prova-a-compattare_1df4a918-db25-4eb7-8c09-2a079ef81459.html"
   },
   {
-   "data": "2026-09-15T19:09:24+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina, Conte: \"No armi a Kiev, altrimenti siamo come il governo Meloni\"",
-   "url": "https://www.adnkronos.com/politica/conte-schlein-ucraina-primarie_5BTqSSb1dZZZ78fGfFHJ6k"
-  },
-  {
-   "data": "2026-09-15T19:07:54+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "SuperEnalotto, estrazione di oggi 15 settembre 2026: numeri vincenti",
-   "url": "https://www.adnkronos.com/cronaca/superenalotto-numeri-vincenti-oggi-quote-jackpot_3uilmuNHxvLMEJWtt4YcRy"
-  },
-  {
    "data": "2026-09-15T18:56:20+00:00",
    "fonte": "ANSA",
    "titolo": "Roma proroga il blocco di Schengen, Madrid attacca Meloni e Tajani",
@@ -125,12 +155,6 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/aggiotaggio-su-quote-della-lazio-perquisiti-presidente-e-ad-della-banca-del-fucino_b84b2c88-20db-49f7-9d1f-ba5806ade573.html"
   },
   {
-   "data": "2026-09-15T18:16:14+00:00",
-   "fonte": "ANSA",
-   "titolo": "Tensione sul Baltico, jet italiani abbattono un drone russo",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/15/caccia-italiani-abbattono-un-drone-sopra-la-lituania.-mosca-se-la-polonia-attacca-annientata_e8651f95-a56c-416f-b180-781bd323584d.html"
-  },
-  {
    "data": "2026-09-15T18:14:02+00:00",
    "fonte": "ANSA",
    "titolo": "Trump lancia le Guerre Stellari, armi nello spazio contro Mosca e Pechino",
@@ -143,34 +167,10 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/09/15/la-corte-suprema-boccia-le-restrizioni-di-trump-sul-voto-per-posta_10780754-26a5-4754-85fd-5a65b8d1839b.html"
   },
   {
-   "data": "2026-09-15T18:08:46+00:00",
-   "fonte": "ANSA",
-   "titolo": "Gelo di Teheran sui colloqui. Il Pentagono ammette, 'le armi scarseggiano'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/15/liran-nessuna-trattativa-con-gli-usa.-il-pentagono-smentisce-trump-carenza_2e9c6940-64d5-444a-93a4-333dc3bf1746.html"
-  },
-  {
-   "data": "2026-09-15T18:08:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Bologna, manichino di Valditara alle finestre del liceo Minghetti: \"Nemico degli studenti\"",
-   "url": "https://www.adnkronos.com/cronaca/manichino-valditara-liceo-bologna-protesta-studenti_3kTUhjHjR3H6LUOVobSFpS"
-  },
-  {
-   "data": "2026-09-15T18:06:57+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sondaggio centrosinistra, Conte batte Schlein nelle primarie",
-   "url": "https://www.adnkronos.com/politica/sondaggio-primarie-schlein-conte-salis_62YpzkZyFzDlbUOipjE0y8"
-  },
-  {
    "data": "2026-09-15T18:05:16+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Salta l'incontro nella nuova casa della famiglia del bosco",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/15/mancano-sicurezza-e-privacy-salta-lincontro-della-famiglia-del-bosco_f32b6534-8141-4ce2-a87d-451624f26772.html"
-  },
-  {
-   "data": "2026-09-15T18:05:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Europei pallavolo, Italia-Repubblica Ceca 3-1: azzurri in vetta al girone a punteggio pieno - Rivivi la diretta",
-   "url": "https://www.adnkronos.com/sport/italia-repubblica-ceca-3-1-azzurri-a-punteggio-pieno-agli-europei_53O7QSwB4ekpNJBLEnIjoE"
   },
   {
    "data": "2026-09-15T18:02:48+00:00",
