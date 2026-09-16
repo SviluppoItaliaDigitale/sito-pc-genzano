@@ -21,7 +21,7 @@ Ogni autunno, **centinaia di piazze italiane** si riempiono di gazebo colorati e
 
 ## Di cosa si parla
 
-I rischi trattati variano di edizione, ma ruotano intorno ai principali rischi italiani:
+I rischi trattati variano di edizione in edizione, ma ruotano intorno ai principali rischi italiani:
 
 - **rischio sismico**;
 - **rischio maremoto**;
