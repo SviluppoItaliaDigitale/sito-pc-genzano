@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/",
-  "generato": "2026-09-16T19:02:06+00:00",
+  "generato": "2026-09-16T22:03:37+00:00",
   "licenza": "Copernicus Emergency Management Service — dati pubblici",
   "nota": "Copia locale: l'API non espone CORS, il browser non può leggerla direttamente."
  },
@@ -18,9 +18,9 @@
    ],
    "eventTime": "2026-09-15T13:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-09-16T18:19:03.828510",
+   "lastUpdate": "2026-09-16T21:06:28.015945",
    "n_aois": 1,
-   "n_products": 0,
+   "n_products": 1,
    "name": "Wildfire in Huelva Province, Spain"
   },
   {
