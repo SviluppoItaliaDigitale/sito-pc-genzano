@@ -10,7 +10,7 @@ Questo kit è pensato per gli insegnanti della **scuola dell'infanzia** che desi
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma per le attività di divulgazione nelle scuole del territorio.
 
-> 📦 **Scarica il pacchetto offline** — [`kit-scuola-infanzia.zip`](/formazione/pacchetti/kit-scuola-infanzia.zip) (~16,4 MB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-infanzia.zip`](/formazione/pacchetti/kit-scuola-infanzia.zip) (~16,8 MB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
 > ⚠️ **Avvertenza pedagogica — non spaventare i bambini.** Le attività di questo kit **non devono mai generare paura**. I bambini di 3-6 anni hanno una percezione del rischio molto diversa da quella dell'adulto: parlare di terremoti, incendi o allagamenti in modo enfatico o con immagini drammatiche può produrre **ansia, incubi, regressioni**. La regola è opposta: presentare i comportamenti corretti come **un gioco rassicurante** (la tartaruga che si ripara, il numero 112 come "amico che arriva"), proporzionato all'età, sempre concluso con la rassicurazione che **gli adulti sono lì per proteggerli**. Niente video reali di disastri, niente cronaca, niente racconto di vittime. Per la dimensione emotiva si rimanda alla pagina [Psicologia dell'emergenza](/formazione/psicologia-emergenza/).
 
@@ -256,6 +256,7 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 
 **Schede già pronte per la stampa per la scuola dell'infanzia:**
 
+- 👉 [**Flavia, Flavio e lo zaino rosso — il libro pop-up con la storia**](/formazione/schede-stampabili/flavia-libro-popup/) — dodici capitoli da leggere ad alta voce: un anno di piccole emergenze (la terra che trema, il temporale, il vento, l'alluvione, il fumo, il caldo, il buio) e due fratelli che sanno che cosa fare. Fogli A4 orizzontali: ogni doppia pagina ha il pop-up già disegnato, l'adulto piega, taglia due righe e la scena si alza. *(dai 4 anni, letto da un adulto)*
 - 👉 [**Vero o Falso con le Faccine**](/formazione/schede-stampabili/vero-falso-infanzia/) — il bambino colora di verde le frasi giuste e di rosso quelle sbagliate.
 - 👉 [**Il Labirinto dell'Uscita**](/formazione/schede-stampabili/labirinto-uscita/) — il bambino traccia con la matita il percorso sicuro evitando gli ostacoli.
 - 👉 [**La Tartaruga Saggia**](/formazione/schede-stampabili/tartaruga-saggia-infanzia/) — Tina spiega 4 comportamenti di autoprotezione, il bambino li ricostruisce.

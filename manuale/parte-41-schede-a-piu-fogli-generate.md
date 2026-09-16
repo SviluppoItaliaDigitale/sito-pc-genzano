@@ -13,6 +13,9 @@ generatore in `scripts/schede-didattiche/`, e l'HTML è il suo prodotto.
 | Le persone che aiutano | `disegni-persone-infanzia/` | 12 | `genera-album-disegni.py` |
 | Le giornate insieme | `disegni-momenti-infanzia/` | 12 | `genera-album-disegni.py` |
 | Memory della protezione civile | `memory-protezione-civile-infanzia/` | 3 | `genera-memory.py` |
+| Il gioco dell'oca della protezione civile | `gioco-oca-protezione-civile/` | 4 | `genera-gioco-oca.py` |
+| Il libro pop-up della protezione civile | `libro-popup-protezione-civile/` | 16 | `genera-libro-popup.py` |
+| Flavia, Flavio e lo zaino rosso (libro pop-up con la storia) | `flavia-libro-popup/` | 14, A4 orizzontale | `genera-storia-popup.py` |
 
 ## Non modificare l'HTML a mano
 
