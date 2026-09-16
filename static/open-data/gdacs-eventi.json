@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://www.gdacs.org/gdacsapi/api/events/geteventlist/EVENTS4APP",
-  "generato": "2026-09-16T15:30:57+00:00",
+  "generato": "2026-09-16T19:02:05+00:00",
   "licenza": "GDACS — Global Disaster Alert and Coordination System (dati pubblici UE/ONU)",
   "nota": "Copia locale per lettura same-origin dalla Sala situazioni."
  },
@@ -10,7 +10,7 @@
   {
    "alertlevel": "Green",
    "country": "Japan",
-   "datemodified": "2026-09-16T15:27:03",
+   "datemodified": "2026-09-16T15:47:43",
    "description": "Earthquake in Japan",
    "episodeid": 1734348,
    "eventid": 1566529,
@@ -42,7 +42,7 @@
   {
    "alertlevel": "Green",
    "country": "Japan",
-   "datemodified": "2026-09-16T14:24:02",
+   "datemodified": "2026-09-16T18:05:56",
    "description": "Tropical Cyclone DUJUAN-26",
    "episodeid": 5,
    "eventid": 1001322,
