@@ -348,6 +348,12 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   <style>
 __STYLES_SCHEDE__
   </style>
+  <style>
+    /* Ultima parola sul formato di pagina: le schede portano le proprie regole @page (anche
+       orizzontali, come il libro pop-up con la storia) e, concatenate qui sopra, l'ultima
+       vincerebbe su tutto il pacchetto. Il pacchetto stampa sempre in verticale. */
+    @media print { @page { size: A4; margin: 5mm; } }
+  </style>
 </head>
 <body>
 
