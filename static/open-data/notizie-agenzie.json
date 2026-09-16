@@ -5,16 +5,118 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-16T19:02:04+00:00",
+  "generato": "2026-09-16T22:03:34+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-16T18:53:11+00:00",
+   "data": "2026-09-16T21:29:53+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Messaggio pro-Ceuta 'nascosto', in Spagna è polemica contro Mbappé, Vinicius e Konaté: cos'è successo",
+   "url": "https://www.adnkronos.com/sport/messaggio-ceuta-nascosto-polemica-mbappe-vinicius-konate_17m5WJpXSt0Ij6aErp9KVC"
+  },
+  {
+   "data": "2026-09-16T21:15:35+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Caso Revolut, hacker chiedono un riscatto di 3 milioni di dollari dopo la violazione dei dati",
+   "url": "https://www.adnkronos.com/economia/revolut-furto-dati-riscatto-hacker_7J21xhLut0JYz5f1vPo6lq"
+  },
+  {
+   "data": "2026-09-16T20:59:53+00:00",
    "fonte": "ANSA",
-   "titolo": "La mossa di Meloni, addio al bollo per le auto piccole e medie",
-   "url": "https://www.ansa.it/canale_motori/notizie/istituzioni/2026/09/16/la-mossa-di-meloni-addio-al-bollo-per-le-auto-piccole-e-medie_cb12208d-db01-44ea-a5b5-7535dd0d2550.html"
+   "titolo": "Donna ferita da piombino a Roma: 50enne confessa, denunciato",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/16/donna-ferita-da-piombino-a-roma-50enne-confessa-denunciato_42a4667e-0671-4780-9f8a-dfc48f4ed2c5.html"
+  },
+  {
+   "data": "2026-09-16T20:58:45+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Donna ferita da piombino a Roma: 50enne confessa, denunciato",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/16/donna-ferita-da-piombino-a-roma-50enne-confessa-denunciato_5dfe26b9-a7a2-4e51-94c2-822e36e896d7.html"
+  },
+  {
+   "data": "2026-09-16T20:57:41+00:00",
+   "fonte": "ANSA",
+   "titolo": "Europa League: Milan sconfitto 2-0 dal Benfica a San Siro CRONACA e FOTO",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/16/europa-league-milan-sconfitto-2-0-dal-benfica-a-san-siro-cronaca-e-foto_512ed9f3-3195-40a2-86c4-3b4f23f60d44.html"
+  },
+  {
+   "data": "2026-09-16T20:52:01+00:00",
+   "fonte": "ANSA",
+   "titolo": "Revolut, gli hacker 'abbiamo i dati della polizia italiana'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/16/revolut-gli-hacker-abbiamo-i-dati-della-polizia-italiana_843a8437-4be5-4388-b303-702947fc3d53.html"
+  },
+  {
+   "data": "2026-09-16T20:51:12+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Turista disperso da ieri sera viene ritrovato senza vita in un torrente",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/16/turista-disperso-da-ieri-sera-viene-ritrovato-senza-vita-in-un-torrente_8e4bc7e5-880b-431e-9f32-b1f5f60689ba.html"
+  },
+  {
+   "data": "2026-09-16T20:48:53+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "#AccadeOggi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/16/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
+  },
+  {
+   "data": "2026-09-16T20:46:07+00:00",
+   "fonte": "ANSA",
+   "titolo": "A Milano rabbino aggredito, 'preso a calci e pugni a fermata del bus'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/16/a-milano-rabbino-aggredito-preso-a-calci-e-pugni-a-fermata-del-bus_75d9797f-e106-492f-97fc-6d4e2f8d8e5b.html"
+  },
+  {
+   "data": "2026-09-16T20:36:54+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "\"Vai in pensione\", Giuliacci e i meteo-insulti per le previsioni: \"Qualche volta rispondo...\"",
+   "url": "https://www.adnkronos.com/cronaca/giuliacci-meteo-previsioni-insulti_ZeXJquuBT0ctBFQUP1QJS"
+  },
+  {
+   "data": "2026-09-16T20:09:04+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "\"Dimenticheremo presto Diana\", la frase choc di Carlo dopo la morte di Lady D",
+   "url": "https://www.adnkronos.com/internazionale/esteri/re-carlo-principessa-diana-libro_4imeZXB4yOof9zfzdPXRME"
+  },
+  {
+   "data": "2026-09-16T20:02:25+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Caso mancato tesseramento, Malagò: \"Attacchi da fuoco amico, affronterò partita a testa alta\"",
+   "url": "https://www.adnkronos.com/sport/giovanni-malago-mancato-tesseramento-cosa-succede-figc-commissariamento_Rpnnxusp0OkNm5cBhKS9e"
+  },
+  {
+   "data": "2026-09-16T19:56:21+00:00",
+   "fonte": "ANSA",
+   "titolo": "La Fed rialza i tassi di 25 punti base, Warsh 'scontenta' Trump. La Casa Bianca: \"Decisione infelice\"",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/16/la-fed-rialza-i-tassi-di-25-punti-base-prima-volta-in-3-anni_244008fb-ab04-473d-ae63-e7dac0b32701.html"
+  },
+  {
+   "data": "2026-09-16T19:48:49+00:00",
+   "fonte": "ANSA",
+   "titolo": "Mossa di Meloni, addio al bollo per le auto piccole e medie",
+   "url": "https://www.ansa.it/canale_motori/notizie/istituzioni/2026/09/16/mossa-di-meloni-addio-al-bollo-per-le-auto-piccole-e-medie_cb12208d-db01-44ea-a5b5-7535dd0d2550.html"
+  },
+  {
+   "data": "2026-09-16T19:37:27+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Ritrovata stasera a Udine la ragazzina scomparsa lo scorso 11 settembre",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/16/ritrovata-stasera-a-udine-la-ragazzina-scomparsa-lo-scorso-11-settembre_de2f1bdf-8dc8-42fc-b142-69784e69bdfb.html"
+  },
+  {
+   "data": "2026-09-16T19:21:37+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Dieta e abitudini per l'eterna giovinezza, i consigli dell'esperto: \"Mantenere attivo il cervello\"",
+   "url": "https://www.adnkronos.com/spettacoli/la-volta-buona-dieta-longevita-garattini-oggi_1qD0bqhtiLtu3Xs0u4dBkg"
+  },
+  {
+   "data": "2026-09-16T19:14:51+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'accusa dell'Fbi: 'I russi pianificavano omicidi in America e in Europa'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/16/usa-gli-007-russi-pianificano-omicidi-mirati-in-america-ed-europa.-il-cremlino_63ccfeef-bec5-4021-8f41-80d16098fb25.html"
+  },
+  {
+   "data": "2026-09-16T19:01:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Fed rialza i tassi dello 0,25%, Warsh: \"Inflazione troppo alta\". Ira Trump, Casa Bianca: \"Decisione infelice\"",
+   "url": "https://www.adnkronos.com/economia/fed-rialzo-tassi-oggi-motivo-inflazione_21DfuEJEGOg2Xx1pKnh7Dy"
   },
   {
    "data": "2026-09-16T18:42:20+00:00",
@@ -29,22 +131,10 @@
    "url": "https://www.ansa.it/europa/notizie/rubriche/altrenews/2026/09/16/lallarme-di-von-der-leyen-nazionalisti-e-russi-vogliono-lue-in-frantumi_5ec22d77-a814-4987-ba62-4a7d31b30201.html"
   },
   {
-   "data": "2026-09-16T18:27:40+00:00",
-   "fonte": "ANSA",
-   "titolo": "Hackerata banca Revolut: 'Abbiamo i dati della polizia italiana'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/16/hackerata-banca-revolut-abbiamo-i-dati-della-polizia-italiana_843a8437-4be5-4388-b303-702947fc3d53.html"
-  },
-  {
    "data": "2026-09-16T18:26:57+00:00",
    "fonte": "ANSA",
    "titolo": "Bufera su Ed Sheeran. Gli artisti lo abbandonano dopo l'uscita del rapper pro-pal Macklemore",
    "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/16/censura-anti-pro-pal-tutti-gli-artisti-ospiti-abbandonano-ed-sheeran_f5b92307-b7f5-4ea5-9dc7-2f2c5a6b4729.html"
-  },
-  {
-   "data": "2026-09-16T18:25:45+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Calci e insulti al rabbino alla fermata del bus, tre fermati a Milano",
-   "url": "https://www.adnkronos.com/cronaca/rabbino-aggredito-milano_4ARYAK7Bxolb1lPFkcVcpy"
   },
   {
    "data": "2026-09-16T18:25:00+00:00",
@@ -53,28 +143,16 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/16/crolla-un-palazzo-a-gaza-il-bilancio-sale-a-20-morti.-almeno-50-bambini-sotto-le-macerie_fd1a071c-c486-44ea-a27d-f69b144f51af.html"
   },
   {
-   "data": "2026-09-16T18:24:09+00:00",
-   "fonte": "ANSA",
-   "titolo": "La denuncia: 'Un rabbino preso a botte alla fermata del bus a Milano'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/16/la-denuncia-un-rabbino-preso-a-botte-alla-fermata-del-bus-a-milano_75d9797f-e106-492f-97fc-6d4e2f8d8e5b.html"
-  },
-  {
-   "data": "2026-09-16T18:14:46+00:00",
-   "fonte": "ANSA",
-   "titolo": "La Fed rialza i tassi di 25 punti base, prima volta in 3 anni",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/16/la-fed-rialza-i-tassi-di-25-punti-base-prima-volta-in-3-anni_244008fb-ab04-473d-ae63-e7dac0b32701.html"
+   "data": "2026-09-16T18:25:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Calci e insulti al rabbino alla fermata del bus, tre fermati a Milano. Meloni: \"Episodio vile e inaccettabile\"",
+   "url": "https://www.adnkronos.com/cronaca/rabbino-aggredito-milano_4ARYAK7Bxolb1lPFkcVcpy"
   },
   {
    "data": "2026-09-16T18:13:33+00:00",
    "fonte": "ANSA",
    "titolo": "La Rai avvia una procedura disciplinare contro Ranucci: 'Violate le norme interne'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/16/la-rai-avvia-una-procedura-disciplinare-contro-ranucci-violate-le-norme-interne_ef465297-627f-4eb4-bc5d-0d0604777c46.html"
-  },
-  {
-   "data": "2026-09-16T18:09:11+00:00",
-   "fonte": "ANSA",
-   "titolo": "Milan Benfica DIRETTA e FOTO",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/16/milan-benfica-diretta-e-foto_512ed9f3-3195-40a2-86c4-3b4f23f60d44.html"
   },
   {
    "data": "2026-09-16T18:04:49+00:00",
@@ -95,9 +173,9 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/16/e-morta-sunny-il-secondo-cane-degli-obama-dopo-bo_8c952ae4-73db-4a1b-8bd5-efecba31e652.html"
   },
   {
-   "data": "2026-09-16T17:59:09+00:00",
+   "data": "2026-09-16T17:59:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Europa League, oggi Milan-Benfica - Diretta",
+   "titolo": "Milan-Benfica 0-2, Lukebakio-Kaminski gol e prima sconfitta per i rossoneri",
    "url": "https://www.adnkronos.com/sport/diretta-milan-benfica-oggi-europa-league-live_5dREXO0L8x5bwnkcfVE5ta"
   },
   {
@@ -111,84 +189,6 @@
    "fonte": "ANSA",
    "titolo": "L'omicidio di Carol Maltesi, ergastolo per l'ex nel sesto processo",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/16/lomicidio-di-carol-maltesi-ergastolo-per-lex-nel-sesto-processo_09f70eba-634f-4ed0-9b82-74f22cc725e9.html"
-  },
-  {
-   "data": "2026-09-16T17:30:57+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Truffa a Revolut, si è attivata anche la Dna",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/16/truffa-a-revolut-si-e-attivata-anche-la-dna_001a8b07-f554-4516-9e84-e1bc98ba17a2.html"
-  },
-  {
-   "data": "2026-09-16T17:29:44+00:00",
-   "fonte": "ANSA",
-   "titolo": "'Violenza sessuale prima dei 16 anni per 1,7 milioni di donne'",
-   "url": "https://www.ansa.it/donne/notizie/2026/09/16/violenza-sessuale-prima-dei-16-anni-per-17-milioni-di-donne_f2f1c025-54c5-4108-bc07-be6c88248746.html"
-  },
-  {
-   "data": "2026-09-16T17:27:58+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Djokovic torna in campo a Pechino (con Sinner): \"Felice di esserci\"",
-   "url": "https://www.adnkronos.com/sport/djokovic-ritiro-annuncio-pechino-spiazza-tifosi_6o4N9ytyxhFUn0X7Q2gAYs"
-  },
-  {
-   "data": "2026-09-16T17:26:51+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Bollo auto: Fedriga, bene abolizione senza oneri per le Regioni",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/16/bollo-auto-fedriga-bene-abolizione-senza-oneri-per-le-regioni_9f96c858-c923-40d0-b16b-9fbf0f8f1caa.html"
-  },
-  {
-   "data": "2026-09-16T17:25:53+00:00",
-   "fonte": "ANSA",
-   "titolo": "Quando Berlusconi nel 2008 propose di abolire il bollo auto",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/16/quando-berlusconi-nel-2008-propose-di-abolire-il-bollo-auto_44bdbd86-8856-4cc0-9dab-d8838a4cde3f.html"
-  },
-  {
-   "data": "2026-09-16T17:24:52+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "De Meo (Fi): 'Manca vera politica difesa comune. Estendere clausola mutua difesa agli attacchi ibridi'",
-   "url": "https://www.adnkronos.com/internazionale/esteri/de-meo-fi-manca-vera-politica-difesa-comune-estendere-clausola-mutua-difesa-agli-attacchi-ibridi_1k5Oua251vHz7KFGWcwQ9q"
-  },
-  {
-   "data": "2026-09-16T17:23:31+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ue, Annunziata: 'Dietro attacchi ibridi c'è Putin. Non riarmo ma difesa adeguata'",
-   "url": "https://www.adnkronos.com/internazionale/esteri/ue-annunziata-dietro-attacchi-ibridi-ce-putin-non-riarmo-ma-difesa-adeguata_2vGpzRVRnTzsjkc8sGLMOk"
-  },
-  {
-   "data": "2026-09-16T17:03:07+00:00",
-   "fonte": "ANSA",
-   "titolo": "Orrore a Pompei, custode violenta un turista minorenne negli scavi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/16/orrore-a-pompei-custode-violenta-un-turista-minorenne-negli-scavi_5d4e2434-ccf0-4557-92e6-710b7f3be2b1.html"
-  },
-  {
-   "data": "2026-09-16T17:00:39+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Revolut, inchiesta pm Reggio Calabria per intrusione in sistema informatico",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/16/revolut-inchiesta-pm-reggio-calabria-per-intrusione-in-sistema-informatico_0e59f7a0-e5db-48ff-8362-1b714db8d996.html"
-  },
-  {
-   "data": "2026-09-16T16:57:23+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Scontro Grillo-Conte sul simbolo M5S, niente problemi con nuova legge elettorale per l'ex premier: raccolta firme non impatta",
-   "url": "https://www.adnkronos.com/politica/m5s-simbolo-scontro-grillo-conte-simbolo-esperto_6yj4HQRr8FmgolwNzepHAU"
-  },
-  {
-   "data": "2026-09-16T16:56:12+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Pirozzi (IAI): 'Von der Leyen innovativa sui cittadini, ma poco geopolitica'",
-   "url": "https://www.adnkronos.com/internazionale/esteri/pirozzi-iai-von-der-leyen-innovativa-sui-cittadini-ma-poco-geopolitica_IM72HAD4w5BwADrf5msWs"
-  },
-  {
-   "data": "2026-09-16T16:52:56+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Casini (Commissione europea): 'Dalla sicurezza alla vita dei cittadini, delineato il programma dell’Ue'",
-   "url": "https://www.adnkronos.com/internazionale/esteri/casini-commissione-europea-dalla-sicurezza-alla-vita-dei-cittadini-delineato-il-programma-dellue_1nhWnGuRW4X30QZvXOZ79S"
-  },
-  {
-   "data": "2026-09-16T16:51:17+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Intossicazione da salmonella a scuola, 14 bambini ricoverati nel Bresciano",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/16/intossicazione-da-salmonella-a-scuola-14-bambini-ricoverati-nel-bresciano_65342edc-2fbd-4964-8d2f-a7177ef086c1.html"
   }
  ]
 }
