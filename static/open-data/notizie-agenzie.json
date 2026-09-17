@@ -5,11 +5,35 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-17T00:20:46+00:00",
+  "generato": "2026-09-17T05:08:52+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-17T02:13:00+00:00",
+   "fonte": "ANSA",
+   "titolo": "Trump minaccia il taglio del commercio con l'Ue se Canada diventa membro associato",
+   "url": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/09/17/applicherei-dazi-molto-pesanti-sui-prodotti-provenienti-dalleuropa_2de6a844-36a9-4852-9f77-b4f4f845d513.html"
+  },
+  {
+   "data": "2026-09-17T01:42:45+00:00",
+   "fonte": "ANSA",
+   "titolo": "OpenAI: 'Sei nuovi casi di comportamento preoccupante dei modelli IA'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/17/openai-sei-nuovi-casi-di-comportamento-preoccupante-dei-modelli-ia_470f9247-10ae-4861-91d5-dd8f991a198c.html"
+  },
+  {
+   "data": "2026-09-17T01:30:17+00:00",
+   "fonte": "ANSA",
+   "titolo": "Ucraina: udite a Kiev una decina di forti esplosioni",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/17/ucraina-udite-a-kiev-una-decina-di-forti-esplosioni_db794caf-bb8a-4ee2-8e35-012df8bf0d43.html"
+  },
+  {
+   "data": "2026-09-17T01:29:54+00:00",
+   "fonte": "ANSA",
+   "titolo": "Trump, 'Kennedy Center un disastro, mia amministrazione merita un riconoscimento'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/17/trump-kennedy-center-un-disastro-mia-amministrazione-merita-un-riconoscimento_2ddf3842-d28e-4f8d-a08c-d5e704799164.html"
+  },
   {
    "data": "2026-09-16T23:04:48+00:00",
    "fonte": "ANSA CRONACA",
@@ -33,6 +57,12 @@
    "fonte": "ADNKRONOS",
    "titolo": "Bollo auto abolito, la mossa di Meloni: \"Via una delle tasse più odiate\"",
    "url": "https://www.adnkronos.com/politica/bollo-auto-abolito-meloni-misura_49IHnP1RUTgJzgohFbplpK"
+  },
+  {
+   "data": "2026-09-16T22:10:18+00:00",
+   "fonte": "ANSA",
+   "titolo": "Europa League: Milan ko con il Benfica, fischi a San Siro CRONACA e FOTO",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/16/europa-league-milan-ko-con-il-benfica-fischi-a-san-siro-cronaca-e-foto_512ed9f3-3195-40a2-86c4-3b4f23f60d44.html"
   },
   {
    "data": "2026-09-16T22:10:06+00:00",
@@ -77,12 +107,6 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/16/donna-ferita-da-piombino-a-roma-50enne-confessa-denunciato_5dfe26b9-a7a2-4e51-94c2-822e36e896d7.html"
   },
   {
-   "data": "2026-09-16T20:57:41+00:00",
-   "fonte": "ANSA",
-   "titolo": "Europa League: Milan sconfitto 2-0 dal Benfica a San Siro CRONACA e FOTO",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/16/europa-league-milan-sconfitto-2-0-dal-benfica-a-san-siro-cronaca-e-foto_512ed9f3-3195-40a2-86c4-3b4f23f60d44.html"
-  },
-  {
    "data": "2026-09-16T20:52:01+00:00",
    "fonte": "ANSA",
    "titolo": "Revolut, gli hacker 'abbiamo i dati della polizia italiana'",
@@ -102,7 +126,7 @@
   },
   {
    "data": "2026-09-16T20:46:07+00:00",
-   "fonte": "ANSA",
+   "fonte": "ANSA CRONACA",
    "titolo": "A Milano rabbino aggredito, 'preso a calci e pugni a fermata del bus'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/16/a-milano-rabbino-aggredito-preso-a-calci-e-pugni-a-fermata-del-bus_75d9797f-e106-492f-97fc-6d4e2f8d8e5b.html"
   },
@@ -165,30 +189,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Atp Finals, Alcaraz raggiunge Sinner a Torino e Cobolli resta in corsa: come cambia la race",
    "url": "https://www.adnkronos.com/sport/atp-finals-alcaraz-qualificato-sinner-cobolli-come-cambia-race_6d1bLCwJiTG6zjdWrgWbHK"
-  },
-  {
-   "data": "2026-09-16T18:31:18+00:00",
-   "fonte": "ANSA",
-   "titolo": "L'allarme di von der Leyen: 'Nazionalisti e russi vogliono l'Ue in frantumi'",
-   "url": "https://www.ansa.it/europa/notizie/rubriche/altrenews/2026/09/16/lallarme-di-von-der-leyen-nazionalisti-e-russi-vogliono-lue-in-frantumi_5ec22d77-a814-4987-ba62-4a7d31b30201.html"
-  },
-  {
-   "data": "2026-09-16T18:26:57+00:00",
-   "fonte": "ANSA",
-   "titolo": "Bufera su Ed Sheeran. Gli artisti lo abbandonano dopo l'uscita del rapper pro-pal Macklemore",
-   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/16/censura-anti-pro-pal-tutti-gli-artisti-ospiti-abbandonano-ed-sheeran_f5b92307-b7f5-4ea5-9dc7-2f2c5a6b4729.html"
-  },
-  {
-   "data": "2026-09-16T18:25:00+00:00",
-   "fonte": "ANSA",
-   "titolo": "Strage a Gaza, tanti bambini tra le vittime del crollo di un palazzo",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/16/crolla-un-palazzo-a-gaza-il-bilancio-sale-a-20-morti.-almeno-50-bambini-sotto-le-macerie_fd1a071c-c486-44ea-a27d-f69b144f51af.html"
-  },
-  {
-   "data": "2026-09-16T18:13:33+00:00",
-   "fonte": "ANSA",
-   "titolo": "La Rai avvia una procedura disciplinare contro Ranucci: 'Violate le norme interne'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/16/la-rai-avvia-una-procedura-disciplinare-contro-ranucci-violate-le-norme-interne_ef465297-627f-4eb4-bc5d-0d0604777c46.html"
   }
  ]
 }
