@@ -5,11 +5,41 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-17T21:57:14+00:00",
+  "generato": "2026-09-17T23:57:51+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-17T22:20:46+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Meteo, l'estate è ormai agli sgoccioli: tutta l'Italia in verde fino a sabato, ma attenzione ai temporali",
+   "url": "https://www.adnkronos.com/cronaca/previsioni-meteo-18-settembre-bollini_3IsNkFGkSqTmW33bpDlF4g"
+  },
+  {
+   "data": "2026-09-17T22:18:51+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Bollo auto, occhio al campo P.2 su carta circolazione: il primo elenco dei modelli esentati",
+   "url": "https://www.adnkronos.com/economia/bollo-auto-esenzione-campo-carta-circolazione_58rhoPByBs2oe5RXGVSom4"
+  },
+  {
+   "data": "2026-09-17T22:17:09+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Addio bollo e tripletta flat tax, il 'cantiere' Manovra tra voto e risorse",
+   "url": "https://www.adnkronos.com/economia/bollo-auto-13esima-detassata-flat-tax-manovra_2ASEEOhz1UQEirZfNSoquE"
+  },
+  {
+   "data": "2026-09-17T22:14:49+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina, Zelensky: \"Colpiremo Russia al cuore\". Kim aiuta Putin: 30mila soldati dalla Nordcorea",
+   "url": "https://www.adnkronos.com/internazionale/esteri/guerra-ucraina-russia-operazioni-lungo-raggio-kiev-soldati-nordcoreani_29uJJOD4ZoDwbAxr1iayO4"
+  },
+  {
+   "data": "2026-09-17T22:03:47+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Usa, media: \"Pentagono valuta di ritirare 25mila soldati dall'Europa\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/usa-ritiro-contingente-europa-soldati-usa-oggi_6tC3kp2krFzpfbA7iT5dUc"
+  },
   {
    "data": "2026-09-17T21:16:01+00:00",
    "fonte": "ADNKRONOS",
@@ -131,12 +161,6 @@
    "url": "https://www.ansa.it/europa/notizie/rubriche/altrenews/2026/09/17/lue-approva-il-kids-act-divieto-dei-social-per-gli-under_70fecd53-e35e-4de9-a178-ab92d825a7f4.html"
   },
   {
-   "data": "2026-09-17T18:54:14+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Accusa di maltrattamenti dall'ex, difesa Lavitola: \"Indignato, valuta denuncia per calunnia\"",
-   "url": "https://www.adnkronos.com/cronaca/lavitola-ex-compagna-accuse-maltrattamenti-difesa-respinge-accuse_4baAsDzvvs2zNdoH05G1O5"
-  },
-  {
    "data": "2026-09-17T18:45:35+00:00",
    "fonte": "ANSA",
    "titolo": "Il Policlinico Gemelli e il Bambino Gesù nella classifica Newsweek dei migliori ospedali",
@@ -165,30 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Penalisti di Roma, 'cani vivono meglio dei detenuti a Regina Coeli'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/17/penalisti-di-roma-cani-vivono-meglio-dei-detenuti-a-regina-coeli_ff3b1634-0fa6-4b2d-b6da-e0c571406778.html"
-  },
-  {
-   "data": "2026-09-17T18:29:18+00:00",
-   "fonte": "ANSA",
-   "titolo": "Non favorì Sempio, archiviata l'accusa all'ex pm Venditti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/17/non-favori-sempio-archiviata-laccusa-allex-pm-venditti_245e3a5b-ee5c-469b-9c9a-534b8672111d.html"
-  },
-  {
-   "data": "2026-09-17T18:27:52+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il giudice: 'L'aggressione al rabbino violenta e dettata da odio religioso'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/17/il-giudice-laggressione-al-rabbino-violenta-e-dettata-da-odio-religioso_73a2b425-fbae-4767-a945-6e173ee23f83.html"
-  },
-  {
-   "data": "2026-09-17T18:26:09+00:00",
-   "fonte": "ANSA",
-   "titolo": "Morte avvelenate, la pista dell'omicidio sempre più concreta",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/17/morte-avvelenate-la-pista-dellomicidio-sempre-piu-concreta_8e2b2e97-6996-4eaa-9028-ea83addfe0f1.html"
-  },
-  {
-   "data": "2026-09-17T18:12:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Jet russi violano lo spazio aereo della Lituania, intervengono i caccia italiani",
-   "url": "https://www.adnkronos.com/internazionale/esteri/jet-russi-violano-spazio-aereo-lituano-intervento-caccia-italiani_33pnMwihNmTbKogl7K21CM"
   }
  ]
 }
