@@ -1,16 +1,16 @@
 {
-  "aggiornato": "2026-09-17T13:36",
+  "aggiornato": "2026-09-17T14:02",
   "data_lunga": "giovedì 17 settembre 2026",
-  "aggiornato_label": "giovedì 17 settembre 2026, ore 13:36",
+  "aggiornato_label": "giovedì 17 settembre 2026, ore 14:02",
   "alba": "06:51",
   "tramonto": "19:15",
   "corrente": {
-    "temp": 25.0,
+    "temp": 24.9,
     "percepita": 24.8,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 59,
-    "vento": 16,
+    "umidita": 60,
+    "vento": 17,
     "raffiche": 41
   },
   "giorni": [
@@ -23,8 +23,8 @@
       "pioggia": 5,
       "pioggia_mm": 0,
       "raffiche": 42,
-      "uv": 5,
-      "uv_label": "moderato"
+      "uv": 6,
+      "uv_label": "alto"
     },
     {
       "label": "Ven 18",
