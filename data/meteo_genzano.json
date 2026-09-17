@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-09-17T07:02",
+  "aggiornato": "2026-09-17T08:02",
   "data_lunga": "giovedì 17 settembre 2026",
-  "aggiornato_label": "giovedì 17 settembre 2026, ore 07:02",
+  "aggiornato_label": "giovedì 17 settembre 2026, ore 08:02",
   "alba": "06:51",
   "tramonto": "19:15",
   "corrente": {
-    "temp": 18.4,
-    "percepita": 18.1,
+    "temp": 19.3,
+    "percepita": 19.3,
     "cielo": "Sereno",
     "icona": "<g><line x1=\"44.8\" y1=\"28.0\" x2=\"52.8\" y2=\"28.0\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"39.9\" y1=\"39.9\" x2=\"45.5\" y2=\"45.5\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"28.0\" y1=\"44.8\" x2=\"28.0\" y2=\"52.8\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"16.1\" y1=\"39.9\" x2=\"10.5\" y2=\"45.5\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"11.2\" y1=\"28.0\" x2=\"3.2\" y2=\"28.0\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"16.1\" y1=\"16.1\" x2=\"10.5\" y2=\"10.5\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"28.0\" y1=\"11.2\" x2=\"28.0\" y2=\"3.2\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><line x1=\"39.9\" y1=\"16.1\" x2=\"45.5\" y2=\"10.5\" stroke=\"#f6a800\" stroke-width=\"5.1\" stroke-linecap=\"round\"/><circle cx=\"28.0\" cy=\"28.0\" r=\"16.0\" fill=\"#f6a800\"/></g>",
-    "umidita": 65,
-    "vento": 6,
-    "raffiche": 16
+    "umidita": 68,
+    "vento": 7,
+    "raffiche": 20
   },
   "giorni": [
     {
@@ -21,8 +21,8 @@
       "tmax": 25,
       "tmin": 18,
       "pioggia": 13,
-      "pioggia_mm": 0,
-      "raffiche": 44,
+      "pioggia_mm": 0.1,
+      "raffiche": 45,
       "uv": 5,
       "uv_label": "moderato"
     },
@@ -33,10 +33,10 @@
       "tmax": 25,
       "tmin": 19,
       "pioggia": 63,
-      "pioggia_mm": 0.8,
+      "pioggia_mm": 0.7,
       "raffiche": 37,
-      "uv": 5,
-      "uv_label": "moderato"
+      "uv": 6,
+      "uv_label": "alto"
     },
     {
       "label": "Sab 19",
