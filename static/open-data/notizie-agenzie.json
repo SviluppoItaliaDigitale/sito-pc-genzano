@@ -5,11 +5,53 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-16T22:03:34+00:00",
+  "generato": "2026-09-17T00:20:46+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-16T23:04:48+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "La rinascita della ex biblioteca distrutta dall'incendio",
+   "url": "https://www.ansa.it/sito/notizie/magazine/numeri/2026/09/16/sarajevo-tra-le-ferite-e-la-speranza-di-europa_69fee30c-d4b2-4a67-b7f4-8bf706591522.html"
+  },
+  {
+   "data": "2026-09-16T23:00:38+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Dayton, la pace che ha congelato la Bosnia",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/17/dayton-la-pace-che-ha-congelato-la-bosnia_ab176254-d5a3-4953-9790-8d8b562af753.html"
+  },
+  {
+   "data": "2026-09-16T23:00:34+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "La rosa nel mercato di Markale",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/17/la-rosa-nel-mercato-di-markale_f5cbb1b3-9bdd-41ae-88c3-5a63d98ae618.html"
+  },
+  {
+   "data": "2026-09-16T22:21:10+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Bollo auto abolito, la mossa di Meloni: \"Via una delle tasse più odiate\"",
+   "url": "https://www.adnkronos.com/politica/bollo-auto-abolito-meloni-misura_49IHnP1RUTgJzgohFbplpK"
+  },
+  {
+   "data": "2026-09-16T22:10:06+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Russia, da domani il voto 'per vincere la guerra': elezioni tra strategia di Putin e disinteresse totale",
+   "url": "https://www.adnkronos.com/internazionale/esteri/elezioni-russia-voto-putin-appello_1C6GrqWj6N09Bmn6XOZcaA"
+  },
+  {
+   "data": "2026-09-16T22:05:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Canada, Ucraina e Ai, Ursula von der Leyen traccia la rotta Ue: \"Ultranazionalisti non ci divideranno\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ue-von-der-leyen-discorso-stato-unione_5hTMrFcuzjlRN6B1iT8Rte"
+  },
+  {
+   "data": "2026-09-16T22:03:59+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ex Ilva, licenziamenti e decreto congelati: si attende la decisione della Cassazione",
+   "url": "https://www.adnkronos.com/economia/ex-ilva-licenziamenti-decreto-oggi-cassazione_7bpT6llWBJBdfvDqTVJgcE"
+  },
   {
    "data": "2026-09-16T21:29:53+00:00",
    "fonte": "ADNKRONOS",
@@ -71,7 +113,7 @@
    "url": "https://www.adnkronos.com/cronaca/giuliacci-meteo-previsioni-insulti_ZeXJquuBT0ctBFQUP1QJS"
   },
   {
-   "data": "2026-09-16T20:09:04+00:00",
+   "data": "2026-09-16T20:09:00+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "\"Dimenticheremo presto Diana\", la frase choc di Carlo dopo la morte di Lady D",
    "url": "https://www.adnkronos.com/internazionale/esteri/re-carlo-principessa-diana-libro_4imeZXB4yOof9zfzdPXRME"
@@ -143,52 +185,10 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/16/crolla-un-palazzo-a-gaza-il-bilancio-sale-a-20-morti.-almeno-50-bambini-sotto-le-macerie_fd1a071c-c486-44ea-a27d-f69b144f51af.html"
   },
   {
-   "data": "2026-09-16T18:25:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Calci e insulti al rabbino alla fermata del bus, tre fermati a Milano. Meloni: \"Episodio vile e inaccettabile\"",
-   "url": "https://www.adnkronos.com/cronaca/rabbino-aggredito-milano_4ARYAK7Bxolb1lPFkcVcpy"
-  },
-  {
    "data": "2026-09-16T18:13:33+00:00",
    "fonte": "ANSA",
    "titolo": "La Rai avvia una procedura disciplinare contro Ranucci: 'Violate le norme interne'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/16/la-rai-avvia-una-procedura-disciplinare-contro-ranucci-violate-le-norme-interne_ef465297-627f-4eb4-bc5d-0d0604777c46.html"
-  },
-  {
-   "data": "2026-09-16T18:04:49+00:00",
-   "fonte": "ANSA",
-   "titolo": "Da Meta ad Anthropic, è sfida tra entusiasti e apocalittici dell'IA",
-   "url": "https://www.ansa.it/canale_tecnologia/notizie/future_tech/2026/09/16/da-meta-ad-anthropic-e-sfida-tra-entusiasti-e-apocalittici-dellia_89693bc0-77b5-48a1-9210-028b6a903d7a.html"
-  },
-  {
-   "data": "2026-09-16T18:00:42+00:00",
-   "fonte": "ANSA",
-   "titolo": "Dario Vitale direttore creativo di Emporio Armani e accessori, il primo fuori dalla famiglia",
-   "url": "https://www.ansa.it/canale_lifestyle/notizie/moda/2026/09/16/dario-vitale-direttore-creativo-di-emporio-armani-e-accessori-il-primo-fuori-dalla_6c7f695d-4c40-4f94-9ab7-ba2e686b1081.html"
-  },
-  {
-   "data": "2026-09-16T18:00:16+00:00",
-   "fonte": "ANSA",
-   "titolo": "E' morta Sunny, il secondo cane degli Obama dopo Bo",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/16/e-morta-sunny-il-secondo-cane-degli-obama-dopo-bo_8c952ae4-73db-4a1b-8bd5-efecba31e652.html"
-  },
-  {
-   "data": "2026-09-16T17:59:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Milan-Benfica 0-2, Lukebakio-Kaminski gol e prima sconfitta per i rossoneri",
-   "url": "https://www.adnkronos.com/sport/diretta-milan-benfica-oggi-europa-league-live_5dREXO0L8x5bwnkcfVE5ta"
-  },
-  {
-   "data": "2026-09-16T17:51:00+00:00",
-   "fonte": "ANSA",
-   "titolo": "Thaci condannato a 25 anni per crimini di guerra in Kosovo",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/16/thaci-condannato-a-25-anni-per-crimini-di-guerra-in-kosovo.-i-sostenitori-tentano-lassalto_f0670d62-ebc3-475d-9ed2-27feccf23c80.html"
-  },
-  {
-   "data": "2026-09-16T17:49:12+00:00",
-   "fonte": "ANSA",
-   "titolo": "L'omicidio di Carol Maltesi, ergastolo per l'ex nel sesto processo",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/16/lomicidio-di-carol-maltesi-ergastolo-per-lex-nel-sesto-processo_09f70eba-634f-4ed0-9b82-74f22cc725e9.html"
   }
  ]
 }
