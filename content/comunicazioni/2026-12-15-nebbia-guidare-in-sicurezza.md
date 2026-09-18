@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-12-15-nebbia-guidare-in-sicurezza-facile"
 tts: true
 lis_section: "allerte-meteo"
 social_citazione: "Nella nebbia gli abbaglianti non aiutano: la luce rimbalza sulle gocce e costruisce un muro bianco davanti a te."

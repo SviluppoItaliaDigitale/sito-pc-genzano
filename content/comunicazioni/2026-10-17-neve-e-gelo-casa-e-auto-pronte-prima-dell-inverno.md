@@ -11,6 +11,7 @@ scadenza: ""
 area: "Genzano di Roma"
 allegati: []
 draft: false
+versione_facile: "2026-10-17-neve-e-gelo-casa-e-auto-pronte-prima-dell-inverno-facile"
 tts: true
 lis_section: "allerte-meteo"
 social_citazione: "Le catene si imparano a montare in garage, con calma: sotto la nevicata, al buio, è troppo tardi."
