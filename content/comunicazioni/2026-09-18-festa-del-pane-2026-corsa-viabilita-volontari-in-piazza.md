@@ -29,7 +29,7 @@ social_punti:
 draft: false
 ---
 
-Da **venerdì 18 a domenica 20 settembre 2026** Genzano di Roma ospita la **38ª Festa del Pane Casareccio IGP**, insieme ai festeggiamenti per il Patrono **San Tommaso da Villanova**. Domenica mattina si corre anche la **Corsa del Pane Genzanese**. Il centro cambia volto per tre giorni: strade chiuse, divieti di sosta, autobus deviati. Il Comune ha regolato tutto con due ordinanze del 14 settembre, la **n. 134** per la festa e la **n. 133** per la corsa, e con l'**ordinanza sindacale n. 19** ha attivato il **Centro Operativo Comunale** per i tre giorni. Qui trovi le informazioni utili per arrivare e muoverti senza sorprese. E una cosa in più: **i volontari del Gruppo saranno in piazza**. Vieni a trovarci.
+Da **venerdì 18 a domenica 20 settembre 2026** Genzano di Roma ospita la **38ª Festa del Pane Casareccio IGP**, insieme ai festeggiamenti per il Patrono **San Tommaso da Villanova**. Domenica mattina si corre anche la **Corsa del Pane Genzanese**. Il centro cambia volto per tre giorni: strade chiuse, divieti di sosta, autobus deviati. Il Comune ha regolato tutto con due ordinanze del 14 settembre: la **n. 134** per la festa e la **n. 133** per la corsa. Con l'**ordinanza sindacale n. 19** ha anche attivato il **Centro Operativo Comunale** per i tre giorni. Qui trovi le informazioni utili per arrivare e muoverti senza sorprese. E una cosa in più: **i volontari del Gruppo saranno in piazza**. Vieni a trovarci.
 
 ## Vieni a trovarci: i volontari sono in piazza per te
 
@@ -58,7 +58,7 @@ Il COC è la struttura che, su mandato del Sindaco, dirige e coordina i servizi 
 - l'**attivazione delle funzioni di supporto** del COC, con i referenti indicati nel Piano di Protezione Civile per coordinare volontari, materiali e mezzi;
 - la **trasmissione dell'atto al Servizio di Protezione Civile** del Comune, per attivare la presenza dei volontari durante la manifestazione, con il **presidio di alcune aree di attesa** previste dal Piano.
 
-L'ordinanza richiama la [Circolare del Dipartimento della Protezione Civile del 6 agosto 2018](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/). Ricorda inoltre che l'attivazione del Piano comunale e del COC è il presupposto per impiegare le organizzazioni di volontariato iscritte nell'elenco territoriale. Con questa attivazione valgono anche i benefici previsti dagli **articoli 39 e 40 del D.Lgs. 1/2018** (Codice della Protezione Civile). L'atto è stato inviato al **Gruppo Comunale di Protezione Civile di Genzano di Roma** e, per competenza, alla Prefettura di Roma, all'Agenzia regionale di Protezione Civile, al Commissariato e alla Stazione dei Carabinieri di Genzano, alla Polizia Locale, al 118 e ai Vigili del Fuoco. La sua efficacia **cessa al termine della manifestazione**. Responsabile del procedimento è la Comandante della Polizia Locale e Protezione Civile, dottoressa Monica Palladinelli. Il testo integrale è tra gli allegati in fondo alla pagina.
+L'ordinanza richiama la [Circolare del Dipartimento della Protezione Civile del 6 agosto 2018](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/). Ricorda inoltre che l'attivazione del Piano comunale e del COC è il presupposto per impiegare le organizzazioni di volontariato iscritte nell'elenco territoriale. Con questa attivazione valgono anche i benefici previsti dagli **articoli 39 e 40 del D.Lgs. 1/2018** (Codice della Protezione Civile). L'atto è stato inviato al **Gruppo Comunale di Protezione Civile di Genzano di Roma**. Per competenza, va anche alla Prefettura di Roma, all'Agenzia regionale di Protezione Civile, al Commissariato e alla Stazione dei Carabinieri di Genzano, alla Polizia Locale, al 118 e ai Vigili del Fuoco. La sua efficacia **cessa al termine della manifestazione**. Responsabile del procedimento è la Comandante della Polizia Locale e Protezione Civile, dottoressa Monica Palladinelli. Il testo integrale è tra gli allegati in fondo alla pagina.
 
 ## Che cosa fa il volontariato di Protezione Civile a una festa
 
@@ -81,7 +81,16 @@ Il programma completo, giorno per giorno, è sul sito del Comune. Questi sono gl
 - **Sabato 19 settembre.** Dalle 9 il Villaggio riapre e prosegue la preparazione dell'**Infiorata di Pane**, iniziata la sera prima. Dalle 16 alle 20, in piazza Frasconi (lato ex scuola Locatelli), lo **Stand della Prevenzione della ASL Roma 6**. In serata spettacoli di danza e, alle 22, il concerto in piazza Frasconi.
 - **Domenica 20 settembre.** Dalle 8 l'**Infiorata di Pane** in via Nazario Sauro. Alle 9 parte la **Corsa del Pane Genzanese**, premiazioni alle 11. Alle 12:15 la discesa della Fanfara dei Bersaglieri da via Belardi. Lo Stand della Prevenzione della ASL Roma 6 torna dalle 10 alle 13 e dalle 17 alle 20. Alle 19 la "Bruschetta più lunga del mondo" in via Belardi, poi spettacoli fino al concerto delle 21:30. Alle **23:45 lo spettacolo pirotecnico**, a ridotto impatto sonoro.
 
-Sabato e domenica ci sono stand gastronomici in corso Don Minzoni, espositori in corso Gramsci e via Garibaldi, degustazioni in via Ronconi e piazza Buttaroni, un'area food su corso Gramsci, visite guidate a Palazzo Sforza Cesarini e laboratori per bambini. Secondo le informazioni diffuse finora, l'ingresso agli eventi in programma è gratuito.
+Sabato e domenica in centro trovi anche:
+
+- stand gastronomici in corso Don Minzoni;
+- espositori in corso Gramsci e via Garibaldi;
+- degustazioni in via Ronconi e piazza Buttaroni;
+- un'area food su corso Gramsci;
+- visite guidate a Palazzo Sforza Cesarini;
+- laboratori per bambini.
+
+Secondo le informazioni diffuse finora, l'ingresso agli eventi in programma è gratuito.
 
 > ⚠️ **Per eventuali variazioni fai sempre riferimento alla [pagina ufficiale della Festa sul sito del Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/novita/festa-del-santo-patrono-e-38a-festa-del-pane-casareccio-igp).** Il Gruppo riporta il programma a titolo informativo e **non risponde di modifiche** decise dall'organizzazione.
 
@@ -105,7 +114,16 @@ Sono previsti anche divieti di sosta più limitati:
 - domenica 20 dalle 17: **via Don Nicola Galieti**, davanti all'ingresso dei campi da tennis;
 - domenica 20 dalle 8 alle 11: divieto di transito in **viale Giacomo Matteotti** e **via Cadore**, per la Corsa del Pane.
 
-Il piano di sicurezza prevede **chiusure con blocchi in cemento armato** agli accessi dell'area: corso Gramsci da via Pizzicannella, via Garibaldi da via dei Mille, corso Don Minzoni da via Di Vittorio, via Colabona, via Ferrazza e via Imbastari da corso Gramsci, la scalinata di via Belardi davanti a piazza Marconi, piazza Buttaroni agli incroci con via Guidobaldi (salita dei Merli) e con via Moscati. I **passi carrabili** interni al perimetro sono chiusi con transenne. Nell'area entrano solo i mezzi delle Forze dell'Ordine, della Protezione Civile, della Croce Rossa e quelli di servizio della festa.
+Il piano di sicurezza prevede **chiusure con blocchi in cemento armato** agli accessi dell'area:
+
+- corso Gramsci da via Pizzicannella;
+- via Garibaldi da via dei Mille;
+- corso Don Minzoni da via Di Vittorio;
+- via Colabona, via Ferrazza e via Imbastari da corso Gramsci;
+- la scalinata di via Belardi davanti a piazza Marconi;
+- piazza Buttaroni agli incroci con via Guidobaldi (salita dei Merli) e con via Moscati.
+
+I **passi carrabili** interni al perimetro sono chiusi con transenne. Nell'area entrano solo i mezzi delle Forze dell'Ordine, della Protezione Civile, della Croce Rossa e quelli di servizio della festa.
 
 ## Percorsi alternativi e autobus Cotral
 
@@ -118,7 +136,19 @@ Gli **autobus Cotral**, dalle 15 di venerdì 18 a fine manifestazione, mantengon
 
 ## Domenica 20 settembre: la Corsa del Pane (ordinanza n. 133)
 
-La **Corsa del Pane Genzanese**, gara podistica organizzata da Genzano Marathon, parte alle 9 e si svolge indicativamente **fino alle 10:45**. L'ordinanza n. 133 dispone, dalle 8:30 e fino a cessate esigenze, il **divieto di transito** in via Fratelli Colabona, via Chatillon, via Ercole Imbastari, via Guidobaldi, piazza Belvedere, via dei Magazzini, via Scaloni (dietro Palazzo Sforza Cesarini), piazza Sforza Cesarini e via Don Morosini, dove un corridoio di un metro e mezzo è protetto da transenne e nastro.
+La **Corsa del Pane Genzanese**, gara podistica organizzata da Genzano Marathon, parte alle 9 e si svolge indicativamente **fino alle 10:45**. Dalle 8:30 e fino a cessate esigenze, l'ordinanza n. 133 dispone il **divieto di transito** nelle seguenti vie:
+
+- via Fratelli Colabona;
+- via Chatillon;
+- via Ercole Imbastari;
+- via Guidobaldi;
+- piazza Belvedere;
+- via dei Magazzini;
+- via Scaloni (dietro Palazzo Sforza Cesarini);
+- piazza Sforza Cesarini;
+- via Don Morosini.
+
+Lungo il percorso, un corridoio di un metro e mezzo è protetto da transenne e nastro.
 
 Dalle 9 alla fine della gara **via Don Morosini** è a senso unico verso piazza Dante Alighieri e piazzale Sforza Cesarini. È vietata la sosta con rimozione in **piazza Dante Alighieri** (lato ingresso da viale Vittorio Veneto) e in **via dei Magazzini**. Dalle 8:30 alle 11 circa sono chiusi con blocchi in cemento gli accessi da viale Matteotti a **via Pace e Tempesta**, **via Cadore** e **piazza della Libertà**.
 
