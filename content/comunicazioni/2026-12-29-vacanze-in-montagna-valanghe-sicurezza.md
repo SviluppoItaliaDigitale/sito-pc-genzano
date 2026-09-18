@@ -11,6 +11,7 @@ scadenza: ""
 area: ""
 allegati: []
 draft: false
+versione_facile: "2026-12-29-vacanze-in-montagna-valanghe-sicurezza-facile"
 tts: true
 social_citazione: "Non andare mai da solo: perché l'autosoccorso funzioni, almeno uno della comitiva deve restare fuori dalla valanga."
 social_punti:
