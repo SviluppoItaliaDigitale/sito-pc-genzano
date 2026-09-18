@@ -13,3 +13,4 @@ pannello web e non da un agente).
 | Audit interno completo del sito (3 del mese, 06:00) | `trig_01RMQwDs5Ku2mRfkwkDZnKmx` | sì (creata il 06/09/2026) | vedi `.claude/agents/pc-audit-completo.md` |
 | Lavorazione autonoma issue automatiche (12:00 UTC) | `trig_01EL97B5vF55j3JAWGiNiNCM` | sì | vedi rule 10 |
 | Lettura sintattica articoli in uscita (mercoledì) | `trig_015yjxdHQ1nxq246YjDRm98N` | sì | vedi rule 10 |
+| Rassegna normativa e albo pretorio → articolo (ogni giorno 08:00) | `trig_01TKRgVQ2spnYvCfNYkhAAQt` | sì (creata il 18/09/2026) | `rassegna-normativa-albo.md` |
