@@ -5,22 +5,28 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-18T19:37:55+00:00",
+  "generato": "2026-09-18T21:53:52+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-18T19:35:34+00:00",
+   "data": "2026-09-18T21:45:21+00:00",
    "fonte": "ANSA",
-   "titolo": "Serie A: Monza-Sassuolo 0-0 DIRETTA e FOTO",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/18/serie-a-monza-sassuolo-0-0-diretta-e-foto_c2badf2a-c1ad-4529-bb87-01950ffdc1f8.html"
+   "titolo": "Trump: 'Accordo con Danimarca e Groenlandia per il controllo Usa della sicurezza dell'isola'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/09/18/trump-accordo-con-danimarca-e-groenlandia-per-il-controllo-usa-della-sicurezza_1cca247f-3819-4ca1-8017-ce344cbcec44.html"
   },
   {
-   "data": "2026-09-18T19:34:17+00:00",
+   "data": "2026-09-18T21:17:10+00:00",
    "fonte": "ANSA",
-   "titolo": "Trump bandisce dalla Casa Bianca Cnn, Politico e Msnow",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/18/trump-bandisce-dalla-casa-bianca-cnn-politico-e-msnow_9f252cbe-a284-4450-a74e-740d1cb212bd.html"
+   "titolo": "Doppietta di Varela, il 2-1 del Monza al Sassuolo salva Juric",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/18/doppietta-di-varela-il-2-1-del-monza-al-sassuolo-salva-juric_c2badf2a-c1ad-4529-bb87-01950ffdc1f8.html"
+  },
+  {
+   "data": "2026-09-18T19:43:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Trump e il nuovo attacco ai media: Cnn, MsNow e Politico cacciati dalla Casa Bianca",
+   "url": "https://www.adnkronos.com/internazionale/esteri/trump-media-cnn-msnow-politico-casa-bianca_DYNyoluXou4XlmnrcfIWM"
   },
   {
    "data": "2026-09-18T19:21:56+00:00",
@@ -35,15 +41,15 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/18/linfettivologo-indagato-per-i-cpr-mai-fatto-fare-certificati-falsi_4f296e12-ea92-4253-b8fe-a193b1c70d68.html"
   },
   {
-   "data": "2026-09-18T19:10:31+00:00",
+   "data": "2026-09-18T19:10:00+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Superenalotto, numeri ed estrazione vincente di oggi: la combinazione",
    "url": "https://www.adnkronos.com/cronaca/superenalotto-oggi-18-settembre-estrazione-numeri-combinazione_2rYjEFeq0QkKUx2sST7knW"
   },
   {
-   "data": "2026-09-18T19:07:39+00:00",
+   "data": "2026-09-18T19:07:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "L’errore dell’AI che ha sfiorato una crisi Usa-Cina: \"Poteva scatenare una guerra\"",
+   "titolo": "L’errore dell'AI e la crisi sfiorata Usa-Cina: \"Poteva scatenare una guerra\"",
    "url": "https://www.adnkronos.com/internazionale/esteri/intelligenza-artificiale-errori-ai-guerra-usa-cina_3t35ucsUc8NvmBICPGZMgs"
   },
   {
@@ -183,12 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "#AccadeOggi",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/18/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
-  },
-  {
-   "data": "2026-09-18T17:03:34+00:00",
-   "fonte": "ANSA",
-   "titolo": "Damiano David e Dove Cameron sposi a Montalcino",
-   "url": "https://www.ansa.it/canale_lifestyle/notizie/beauty_fitness/2026/09/18/damiano-david-e-dove-cameron-sposi-a-montalcino_572f1f59-49b6-4166-beb0-3e44e54de06e.html"
   }
  ]
 }
