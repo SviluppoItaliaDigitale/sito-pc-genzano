@@ -1,40 +1,40 @@
 {
-  "aggiornato": "2026-09-18T20:02",
+  "aggiornato": "2026-09-18T20:23",
   "data_lunga": "venerdì 18 settembre 2026",
-  "aggiornato_label": "venerdì 18 settembre 2026, ore 20:02",
+  "aggiornato_label": "venerdì 18 settembre 2026, ore 20:23",
   "alba": "06:52",
   "tramonto": "19:13",
   "corrente": {
-    "temp": 19.1,
+    "temp": 19.2,
     "percepita": 20.8,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
     "umidita": 92,
     "vento": 8,
-    "raffiche": 18
+    "raffiche": 19
   },
   "giorni": [
     {
       "label": "Oggi",
-      "icona": "<g><g><ellipse cx=\"16.0\" cy=\"17.2\" rx=\"13.8\" ry=\"6.7\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"10.0\" cy=\"14.2\" r=\"6.2\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.7\" cy=\"12.9\" r=\"5.3\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"10.4\" r=\"6.2\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g><polygon points=\"15.1,24.1 20.5,24.1 16.4,33.1 18.7,25.9 14.2,25.9\" fill=\"#f6a800\"/></g>",
-      "cielo": "Temporale",
+      "icona": "<g><g><ellipse cx=\"16.0\" cy=\"17.2\" rx=\"13.8\" ry=\"6.7\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"10.0\" cy=\"14.2\" r=\"6.2\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.7\" cy=\"12.9\" r=\"5.3\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"10.4\" r=\"6.2\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g><line x1=\"11.0\" y1=\"26.3\" x2=\"9.7\" y2=\"31.3\" stroke=\"#3a78c2\" stroke-width=\"2.4\" stroke-linecap=\"round\"/><line x1=\"16.0\" y1=\"26.3\" x2=\"14.7\" y2=\"31.3\" stroke=\"#3a78c2\" stroke-width=\"2.4\" stroke-linecap=\"round\"/><line x1=\"21.0\" y1=\"26.3\" x2=\"19.7\" y2=\"31.3\" stroke=\"#3a78c2\" stroke-width=\"2.4\" stroke-linecap=\"round\"/></g>",
+      "cielo": "Rovesci",
       "tmax": 25,
       "tmin": 19,
       "pioggia": 75,
-      "pioggia_mm": 3.6,
+      "pioggia_mm": 2.9,
       "raffiche": 40,
       "uv": 6,
       "uv_label": "alto"
     },
     {
       "label": "Sab 19",
-      "icona": "<g><g><ellipse cx=\"16.0\" cy=\"17.2\" rx=\"13.8\" ry=\"6.7\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"10.0\" cy=\"14.2\" r=\"6.2\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.7\" cy=\"12.9\" r=\"5.3\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"10.4\" r=\"6.2\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g><line x1=\"11.0\" y1=\"26.3\" x2=\"9.7\" y2=\"31.3\" stroke=\"#3a78c2\" stroke-width=\"2.4\" stroke-linecap=\"round\"/><line x1=\"16.0\" y1=\"26.3\" x2=\"14.7\" y2=\"31.3\" stroke=\"#3a78c2\" stroke-width=\"2.4\" stroke-linecap=\"round\"/><line x1=\"21.0\" y1=\"26.3\" x2=\"19.7\" y2=\"31.3\" stroke=\"#3a78c2\" stroke-width=\"2.4\" stroke-linecap=\"round\"/></g>",
-      "cielo": "Rovesci",
+      "icona": "<g><g><ellipse cx=\"16.0\" cy=\"17.2\" rx=\"13.8\" ry=\"6.7\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"10.0\" cy=\"14.2\" r=\"6.2\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.7\" cy=\"12.9\" r=\"5.3\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"10.4\" r=\"6.2\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g><polygon points=\"15.1,24.1 20.5,24.1 16.4,33.1 18.7,25.9 14.2,25.9\" fill=\"#f6a800\"/></g>",
+      "cielo": "Temporale",
       "tmax": 24,
       "tmin": 18,
       "pioggia": 68,
-      "pioggia_mm": 3.0,
-      "raffiche": 32,
+      "pioggia_mm": 5.0,
+      "raffiche": 30,
       "uv": 6,
       "uv_label": "alto"
     },
