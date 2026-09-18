@@ -17,6 +17,7 @@ Il repository ha **9 workflow** attivi che automatizzano deploy, controlli, aggi
 | Aggiornamento MANUALE | `aggiorna-manuale.yml` | lunedì 06:00 UTC, manuale | Confronta hash fonti AGID/DI, apre Issue se cambiate |
 | **Audit completo sito** | `audit-sito.yml` | lunedì 09:00 UTC, manuale | **Sezioni**: contenuti (1-15) + codice/template (16-22) + governance docs (23-32) + audit aggiuntivo (33-37) + link critici normativa (38). Fuso da `coerenza-docs.yml` + `check-normativa-links.yml` il 26 aprile 2026 |
 | Verifica link sito completo | `check-links-sito.yml` | lunedì 10:00 UTC, manuale | Crawl completo con **lychee**: tutti i link interni + esterni del sito, apre issue automatica su 404/drift |
+| Rassegna normativa e albo pretorio | `normativa-watcher.yml` | ogni giorno 05:30 UTC (lunedì digest settimanale), manuale | Legge l'**albo pretorio di Genzano di Roma**, la **Gazzetta Ufficiale**, **Normattiva** e il **BURL Lazio** (`scripts/normativa-watcher.py`), classifica gli atti per rilevanza PC e apre la issue del giorno; la Routine quotidiana «Rassegna normativa e albo pretorio» (08:00 italiane) legge gli atti e pubblica gli articoli fino a live. Dettagli in `.claude/rules/10-automazioni-github-actions.md` |
 
 ### 10.2 — `deploy.yml` — Build e Deploy
 
