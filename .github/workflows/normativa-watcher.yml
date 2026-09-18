@@ -1,19 +1,38 @@
-name: 📰 Normativa Watcher (sweep settimanale)
+name: 📰 Normativa Watcher (rassegna quotidiana + digest settimanale)
+
+# Legge ogni giorno le FONTI PRIMARIE (albo pretorio di Genzano di Roma,
+# Gazzetta Ufficiale, Normattiva, BURL Lazio) e il lunedì aggiunge la
+# rassegna stampa (Google News, feed, DPC via Firecrawl). Apre una issue con
+# gli atti a rilevanza diretta/indiretta: la Routine "Rassegna normativa e
+# albo pretorio" (rule 10) la lavora e pubblica gli articoli fino a live.
+# Dedup stateless: gli URL già comparsi nelle issue `normativa-watcher`
+# vengono scartati (`--dedup-issues`), niente file di stato da committare.
 
 on:
   schedule:
-    # Lunedì 06:00 UTC (08:00 italiana ora legale)
-    - cron: '0 6 * * 1'
+    # Ogni giorno 05:30 UTC (07:30 italiane). Lo scheduler GitHub può
+    # ritardare di ore: la Routine CCR non dipende da questo run (esegue
+    # lo script da sola alle 06:00 UTC) — questo è il registro e la rete
+    # di sicurezza.
+    - cron: '30 5 * * *'
   workflow_dispatch:
     inputs:
       days:
-        description: 'Finestra in giorni'
+        description: 'Finestra in giorni (default: 2; 7 per la rassegna settimanale)'
         required: false
-        default: '7'
+        default: ''
+      fonti:
+        description: 'primarie | news | tutte (default: primarie nei giorni feriali, tutte il lunedì)'
+        required: false
+        default: ''
 
 permissions:
   issues: write
   contents: read
+
+concurrency:
+  group: normativa-watcher
+  cancel-in-progress: false
 
 jobs:
   watch:
@@ -31,83 +50,102 @@ jobs:
       - name: Installa dipendenze
         run: pip install feedparser
 
-      - name: Esegui sweep RSS + Firecrawl (se chiave disponibile)
-        id: sweep
-        env:
-          # Se il secret FIRECRAWL_API_KEY è settato a livello repo, lo script
-          # aggiunge il DPC (home + Area stampa) come fonte monitorata via
-          # Firecrawl. Se assente, lo script salta gracefully (vedi rule 08
-          # § "Firecrawl MCP").
-          FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
+      - name: Decidi finestra e fonti
+        id: piano
         run: |
           DAYS="${{ inputs.days }}"
-          [ -z "$DAYS" ] && DAYS=7
-          python3 scripts/normativa-watcher.py --days "$DAYS" --out novita.json
-          TOTALE=$(python3 -c "import json; print(json.load(open('novita.json'))['totale'])")
-          echo "totale=$TOTALE" >> "$GITHUB_OUTPUT"
-          echo "[info] Hit settimana: $TOTALE"
+          FONTI="${{ inputs.fonti }}"
+          if [ "$(date -u +%u)" = "1" ]; then
+            [ -z "$DAYS" ] && DAYS=7
+            [ -z "$FONTI" ] && FONTI=tutte
+          else
+            [ -z "$DAYS" ] && DAYS=2
+            [ -z "$FONTI" ] && FONTI=primarie
+          fi
+          echo "days=$DAYS" >> "$GITHUB_OUTPUT"
+          echo "fonti=$FONTI" >> "$GITHUB_OUTPUT"
+          echo "[info] finestra=$DAYS giorni, fonti=$FONTI"
 
-      - name: Genera issue body (se hit > 0)
-        if: steps.sweep.outputs.totale != '0'
+      - name: Esegui la rassegna
+        id: sweep
+        env:
+          # Se il secret FIRECRAWL_API_KEY è settato, lo script aggiunge il DPC
+          # (home + Area stampa) alle fonti news (rule 08 § Firecrawl MCP).
+          FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python3 - <<'PY' > issue_body.md
+          python3 scripts/normativa-watcher.py \
+            --days "${{ steps.piano.outputs.days }}" \
+            --fonti "${{ steps.piano.outputs.fonti }}" \
+            --dedup-issues \
+            --out novita.json --issue-body issue_body.md
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
           import json
-          from datetime import datetime
           d = json.load(open('novita.json'))
-          oggi = datetime.now().strftime('%d %B %Y')
-          print(f"# Novità normative e cronaca PC — settimana al {oggi}\n")
-          print(f"Sweep automatico ({d['finestra_giorni']} giorni). Trovati **{d['totale']} risultati** unici dopo dedup.\n")
-          print("Le voci sotto sono raggruppate per fonte. **Verificare sempre la fonte originale**: le notizie di Google News possono essere riprese non istituzionali.\n")
-          # Raggruppa per fonte
-          from collections import defaultdict
-          per_fonte = defaultdict(list)
-          for n in d['novita']:
-              per_fonte[n['fonte']].append(n)
-          for fonte, items in sorted(per_fonte.items()):
-              print(f"\n## {fonte} ({len(items)} hit)\n")
-              for it in items[:15]:
-                  data = (it.get('published') or '')[:10]
-                  titolo = it['titolo'].replace('|', '\\|')
-                  print(f"- **{data}** — [{titolo}]({it['link']})")
-              if len(items) > 15:
-                  print(f"- *... e altri {len(items) - 15} risultati (non mostrati per brevità)*")
-          print("\n---\n")
-          print("📌 **Cosa fare**:")
-          print("- scorri i titoli e identifica le novità potenzialmente rilevanti per articoli del Gruppo;")
-          print("- per ogni hit interessante, apri il link e verifica la fonte ufficiale;")
-          print("- se decidi di scrivere un articolo, chiudi questa issue commentando con il link all'articolo pubblicato;")
-          print("- se la settimana non ha novità rilevanti, chiudi senza commento.")
-          print("\n_Issue generata automaticamente da `.github/workflows/normativa-watcher.yml`._")
+          print(f"totale={d['totale']}")
+          print(f"primarie={d['totale_primarie']}")
+          print(f"dirette={d['totale_dirette']}")
+          print(f"errori={len(d['errori'])}")
           PY
+          echo "[info] voci: $(python3 -c "import json; print(json.load(open('novita.json'))['totale'])")"
 
       - name: Crea label se mancanti
-        if: steps.sweep.outputs.totale != '0'
+        if: steps.sweep.outputs.totale != '0' || steps.sweep.outputs.errori != '0'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh label create normativa-watcher --color 0E8A16 --description "Sweep settimanale RSS normativa PC" 2>/dev/null || true
+          gh label create normativa-watcher --color 0E8A16 --description "Rassegna normativa, albo pretorio, GU, BURL" 2>/dev/null || true
           gh label create automazione --color FBCA04 --description "Generato da workflow automatico" 2>/dev/null || true
 
-      - name: Apri issue settimanale
+      - name: Apri issue (se ci sono voci nuove)
         if: steps.sweep.outputs.totale != '0'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          DATA=$(date -u +"%Y-%m-%d")
-          TITOLO="Novità normative PC — settimana al $DATA (${{ steps.sweep.outputs.totale }} hit)"
+          DATA=$(TZ=Europe/Rome date +"%d/%m/%Y")
+          if [ "${{ steps.piano.outputs.fonti }}" = "primarie" ]; then
+            TITOLO="Rassegna normativa e albo pretorio — $DATA (${{ steps.sweep.outputs.primarie }} atti, ${{ steps.sweep.outputs.dirette }} diretti)"
+          else
+            TITOLO="Novità normative PC — settimana al $DATA (${{ steps.sweep.outputs.totale }} voci, ${{ steps.sweep.outputs.dirette }} dirette)"
+          fi
           gh issue create \
             --title "$TITOLO" \
             --body-file issue_body.md \
             --label "normativa-watcher,automazione"
 
-      - name: Log silenzioso (se zero hit)
+      - name: Segnala fonti irraggiungibili (issue in-place)
+        if: steps.sweep.outputs.errori != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TITOLO="⚠️ Normativa watcher: una o più fonti primarie non rispondono"
+          CORPO=$(python3 -c "import json; d=json.load(open('novita.json')); print('Fonti in errore nel run del ' + d['generato_il'][:16] + ' UTC:\n\n- ' + '\n- '.join(d['errori']) + '\n\nSe l\'errore persiste per più giorni la struttura della pagina è probabilmente cambiata: aggiornare il parser in \`scripts/normativa-watcher.py\` (rule 10 § Normativa watcher). Questa issue si chiude da sola al primo run senza errori.\n\nRun: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}')")
+          N=$(gh issue list --search "in:title \"$TITOLO\"" --state open --json number --jq '.[0].number // empty')
+          if [ -n "$N" ]; then
+            gh issue comment "$N" --body "$CORPO"
+          else
+            gh issue create --title "$TITOLO" --body "$CORPO" --label "normativa-watcher,automazione"
+          fi
+
+      - name: Chiudi la segnalazione fonti se tutto risponde
+        if: steps.sweep.outputs.errori == '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TITOLO="⚠️ Normativa watcher: una o più fonti primarie non rispondono"
+          N=$(gh issue list --search "in:title \"$TITOLO\"" --state open --json number --jq '.[0].number // empty')
+          [ -n "$N" ] && gh issue close "$N" --comment "Tutte le fonti primarie rispondono di nuovo (run ${{ github.run_id }})." || true
+
+      - name: Log silenzioso (se zero voci)
         if: steps.sweep.outputs.totale == '0'
-        run: echo "[info] Nessuna novità nella finestra. Niente issue creata."
+        run: echo "[info] Nessuna voce nuova nella finestra. Niente issue creata."
 
       - name: Upload risultato come artifact (debug)
         if: always()
         uses: actions/upload-artifact@v7
         with:
           name: normativa-watcher-results
-          path: novita.json
+          path: |
+            novita.json
+            issue_body.md
           retention-days: 14

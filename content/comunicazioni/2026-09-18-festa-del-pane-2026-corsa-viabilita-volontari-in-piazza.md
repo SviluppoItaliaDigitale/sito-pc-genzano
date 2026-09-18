@@ -10,6 +10,9 @@ image_alt: "Cover dell'articolo: Festa del Pane 2026 e Corsa del Pane, strade ch
 scadenza: "2026-09-21"
 area: "Genzano di Roma"
 allegati:
+  - titolo: "Ordinanza sindacale n. 19 del 14 settembre 2026 — Attivazione del Centro Operativo Comunale (COC) per la Festa del Pane 2026"
+    url: "/allegati/2026/ordinanza-sindacale-19-2026-coc-festa-del-pane.pdf"
+    dimensione: "87 KB"
   - titolo: "Ordinanza dirigenziale n. 134 del 14 settembre 2026 — Festa del Pane 2026 (disciplina della circolazione)"
     url: "/allegati/2026/ordinanza-dirigenziale-134-2026-festa-del-pane.pdf"
     dimensione: "147 KB"
@@ -21,12 +24,12 @@ social_citazione: "Se durante la festa hai bisogno di aiuto, cerca i volontari c
 social_punti:
   - "Dal 18 al 20 settembre 2026 la 38ª Festa del Pane Casareccio IGP e la festa del Patrono San Tommaso da Villanova."
   - "Domenica 20 settembre, dalle 9, la Corsa del Pane Genzanese: altre vie chiuse al traffico dalle 8 alle 11 circa (viale Matteotti e via Cadore)."
-  - "Via Belardi, via Battisti, via Sauro e piazza Buttaroni chiuse da venerdì 18 alle 12; corso Gramsci da sabato 19 alle 8."
+  - "Con l'ordinanza sindacale n. 19 del 14 settembre il Sindaco attiva il Centro Operativo Comunale (COC) per i tre giorni della festa."
   - "I volontari del Gruppo sono in piazza per assistere le persone. Per le emergenze chiama sempre il 112."
 draft: false
 ---
 
-Da **venerdì 18 a domenica 20 settembre 2026** Genzano di Roma ospita la **38ª Festa del Pane Casareccio IGP**, insieme ai festeggiamenti per il Patrono **San Tommaso da Villanova**. Domenica mattina si corre anche la **Corsa del Pane Genzanese**. Il centro cambia volto per tre giorni: strade chiuse, divieti di sosta, autobus deviati. Il Comune ha regolato tutto con due ordinanze del 14 settembre, la **n. 134** per la festa e la **n. 133** per la corsa. Qui trovi le informazioni utili per arrivare e muoverti senza sorprese. E una cosa in più: **i volontari del Gruppo saranno in piazza**. Vieni a trovarci.
+Da **venerdì 18 a domenica 20 settembre 2026** Genzano di Roma ospita la **38ª Festa del Pane Casareccio IGP**, insieme ai festeggiamenti per il Patrono **San Tommaso da Villanova**. Domenica mattina si corre anche la **Corsa del Pane Genzanese**. Il centro cambia volto per tre giorni: strade chiuse, divieti di sosta, autobus deviati. Il Comune ha regolato tutto con due ordinanze del 14 settembre, la **n. 134** per la festa e la **n. 133** per la corsa, e con l'**ordinanza sindacale n. 19** ha attivato il **Centro Operativo Comunale** per i tre giorni. Qui trovi le informazioni utili per arrivare e muoverti senza sorprese. E una cosa in più: **i volontari del Gruppo saranno in piazza**. Vieni a trovarci.
 
 ## Vieni a trovarci: i volontari sono in piazza per te
 
@@ -43,6 +46,19 @@ Cercaci se:
 Se sei curioso, fermati due minuti a parlare con noi. Ti raccontiamo come funziona la Protezione Civile a Genzano, che cosa contiene il [kit di emergenza per la famiglia](/comunicazioni/2026-09-02-kit-emergenza-famiglia-72-ore/) e come [entrare nel Gruppo](/diventa-volontario/). Il [corso base per nuovi volontari](/comunicazioni/2026-09-07-corso-base-volontari-apertura-iscrizioni/) ha appena aperto le iscrizioni.
 
 Per le **emergenze**, il numero resta sempre e solo il **112**. I volontari possono prestare le prime cure e chiamare i soccorsi con te, ma la chiamata al 112 non va mai rimandata.
+
+## Il Sindaco attiva il Centro Operativo Comunale (ordinanza n. 19)
+
+Il Sindaco **Rocco Fabio Papalia** attiva il **Centro Operativo Comunale (COC)** per i giorni **18, 19 e 20 settembre**. Lo dispone l'**ordinanza sindacale n. 19 del 14 settembre 2026**, pubblicata all'albo pretorio il 16 settembre. È la stessa misura adottata a giugno per l'[Infiorata](/comunicazioni/2026-06-03-infiorata-2026-attivazione-coc/). La festa richiama un afflusso eccezionale di persone: per questo il Comune la classifica come **evento a rilevante impatto locale**, con possibili rischi per la pubblica incolumità.
+
+Il COC è la struttura che, su mandato del Sindaco, dirige e coordina i servizi di assistenza previsti dal **Piano di emergenza comunale**. L'ordinanza dispone in sintesi:
+
+- l'**attivazione del COC** per dirigere e coordinare l'assistenza ai partecipanti alla manifestazione;
+- la **sede operativa** al Comando della Polizia Locale, in **via Roma 31/A** (telefono 06 936 4687);
+- l'**attivazione delle funzioni di supporto** del COC, con i referenti indicati nel Piano di Protezione Civile per coordinare volontari, materiali e mezzi;
+- la **trasmissione dell'atto al Servizio di Protezione Civile** del Comune, per attivare la presenza dei volontari durante la manifestazione, con il **presidio di alcune aree di attesa** previste dal Piano.
+
+L'ordinanza richiama la [Circolare del Dipartimento della Protezione Civile del 6 agosto 2018](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/). Ricorda inoltre che l'attivazione del Piano comunale e del COC è il presupposto per impiegare le organizzazioni di volontariato iscritte nell'elenco territoriale. Con questa attivazione valgono anche i benefici previsti dagli **articoli 39 e 40 del D.Lgs. 1/2018** (Codice della Protezione Civile). L'atto è stato inviato al **Gruppo Comunale di Protezione Civile di Genzano di Roma** e, per competenza, alla Prefettura di Roma, all'Agenzia regionale di Protezione Civile, al Commissariato e alla Stazione dei Carabinieri di Genzano, alla Polizia Locale, al 118 e ai Vigili del Fuoco. La sua efficacia **cessa al termine della manifestazione**. Responsabile del procedimento è la Comandante della Polizia Locale e Protezione Civile, dottoressa Monica Palladinelli. Il testo integrale è tra gli allegati in fondo alla pagina.
 
 ## Che cosa fa il volontariato di Protezione Civile a una festa
 
@@ -129,6 +145,7 @@ Se passi vicino al percorso, rispetta le indicazioni del personale della Polizia
 **Fonti istituzionali**
 
 - [Comune di Genzano di Roma — Festa del Santo Patrono e 38ª Festa del Pane Casareccio IGP](https://www.comune.genzanodiroma.roma.it/novita/festa-del-santo-patrono-e-38a-festa-del-pane-casareccio-igp) — programma ufficiale.
+- [Albo pretorio del Comune di Genzano di Roma — Ordinanza sindacale n. 19 del 14 settembre 2026, attivazione del Centro Operativo Comunale](https://genzanodiroma.trasparenza-valutazione-merito.it/web/trasparenza/papca-ap/-/papca/display/10512335) — in pubblicazione dal 16 settembre al 1° ottobre 2026 (allegata in fondo alla pagina).
 - Ordinanze dirigenziali n. 133 e n. 134 del 14 settembre 2026 del Comando di Polizia Locale e Protezione Civile di Genzano di Roma (allegate in fondo alla pagina).
 - [Circolare DPC 6 agosto 2018 — Manifestazioni pubbliche e impiego del volontariato di Protezione Civile](https://www.protezionecivile.gov.it/it/normativa/circolare-del-6-agosto-2018-manifestazioni-pubbliche-precisazioni-sullattivazione-e-limpiego-del-volontariato-di-protezione-civile/)
 - [Genzano Marathon — Corsa del Pane Genzanese](https://www.genzanomarathon.it/corsa-del-pane-2/) — organizzatore della gara.
