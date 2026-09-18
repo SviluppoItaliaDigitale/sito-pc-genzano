@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-09-18T03:03",
+  "aggiornato": "2026-09-18T04:03",
   "data_lunga": "venerdì 18 settembre 2026",
-  "aggiornato_label": "venerdì 18 settembre 2026, ore 03:03",
+  "aggiornato_label": "venerdì 18 settembre 2026, ore 04:03",
   "alba": "06:52",
   "tramonto": "19:13",
   "corrente": {
-    "temp": 19.1,
-    "percepita": 21.3,
+    "temp": 18.8,
+    "percepita": 20.9,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 92,
-    "vento": 4,
-    "raffiche": 19
+    "umidita": 93,
+    "vento": 5,
+    "raffiche": 17
   },
   "giorni": [
     {
