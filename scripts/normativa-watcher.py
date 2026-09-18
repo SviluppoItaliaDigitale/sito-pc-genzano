@@ -690,7 +690,8 @@ def corpo_issue(output):
                  "**si scrive un articolo**. Sequenza: aprire la fonte primaria e leggere l'atto integrale (mai dal solo titolo); "
                  "verificare estremi e vigenza (`pc-normative-verifier`, `pc-fact-checker`); redigere l'articolo con tutti i gate "
                  "(`pc-article-reviewer`, cover, versione facile se norma densa); aggiornare le pagine che citano la norma (`/normativa/`, manuale — opera viva); "
-                 "PR pronta secondo la Categoria B di rule 10 e commento qui con il numero della PR. "
+                 "se l'evento ha già un articolo, integrare quello invece di duplicare; "
+                 "**pubblicazione fino a live** (PR + merge + verifica deploy, come da Routine quotidiana «Rassegna normativa e albo pretorio», rule 10) e commento qui con il link all'articolo. "
                  "Atti che non riguardano il Gruppo (rumore delle parole chiave): dichiararlo in un commento e chiudere.")
     righe.append("\n_Issue generata da `.github/workflows/normativa-watcher.yml` (`scripts/normativa-watcher.py`)._")
     return '\n'.join(righe) + '\n'
