@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-09-18T17:02",
+  "aggiornato": "2026-09-18T18:03",
   "data_lunga": "venerdì 18 settembre 2026",
-  "aggiornato_label": "venerdì 18 settembre 2026, ore 17:02",
+  "aggiornato_label": "venerdì 18 settembre 2026, ore 18:03",
   "alba": "06:52",
   "tramonto": "19:13",
   "corrente": {
-    "temp": 22.7,
-    "percepita": 24.8,
-    "cielo": "Rovesci",
-    "icona": "<g><g><ellipse cx=\"28.0\" cy=\"30.1\" rx=\"24.5\" ry=\"11.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"17.4\" cy=\"24.8\" r=\"10.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.4\" cy=\"22.5\" r=\"9.4\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"18.0\" r=\"10.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g><line x1=\"19.0\" y1=\"46.2\" x2=\"16.7\" y2=\"55.2\" stroke=\"#3a78c2\" stroke-width=\"4.4\" stroke-linecap=\"round\"/><line x1=\"28.0\" y1=\"46.2\" x2=\"25.7\" y2=\"55.2\" stroke=\"#3a78c2\" stroke-width=\"4.4\" stroke-linecap=\"round\"/><line x1=\"37.0\" y1=\"46.2\" x2=\"34.7\" y2=\"55.2\" stroke=\"#3a78c2\" stroke-width=\"4.4\" stroke-linecap=\"round\"/></g>",
-    "umidita": 79,
-    "vento": 8,
-    "raffiche": 33
+    "temp": 20.5,
+    "percepita": 22.8,
+    "cielo": "Temporale",
+    "icona": "<g><g><ellipse cx=\"28.0\" cy=\"30.1\" rx=\"24.5\" ry=\"11.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"17.4\" cy=\"24.8\" r=\"10.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.4\" cy=\"22.5\" r=\"9.4\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"18.0\" r=\"10.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g><polygon points=\"26.4,42.4 36.0,42.4 28.8,58.4 32.8,45.6 24.8,45.6\" fill=\"#f6a800\"/></g>",
+    "umidita": 87,
+    "vento": 5,
+    "raffiche": 24
   },
   "giorni": [
     {
@@ -20,7 +20,7 @@
       "cielo": "Temporale",
       "tmax": 24,
       "tmin": 19,
-      "pioggia": 50,
+      "pioggia": 75,
       "pioggia_mm": 3.5,
       "raffiche": 36,
       "uv": 6,
@@ -32,7 +32,7 @@
       "cielo": "Rovesci",
       "tmax": 24,
       "tmin": 18,
-      "pioggia": 75,
+      "pioggia": 68,
       "pioggia_mm": 1.9,
       "raffiche": 32,
       "uv": 6,
@@ -44,7 +44,7 @@
       "cielo": "Coperto",
       "tmax": 26,
       "tmin": 18,
-      "pioggia": 5,
+      "pioggia": 3,
       "pioggia_mm": 0,
       "raffiche": 31,
       "uv": 6,
