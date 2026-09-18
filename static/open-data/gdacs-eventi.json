@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://www.gdacs.org/gdacsapi/api/events/geteventlist/EVENTS4APP",
-  "generato": "2026-09-18T21:53:54+00:00",
+  "generato": "2026-09-18T23:56:47+00:00",
   "licenza": "GDACS — Global Disaster Alert and Coordination System (dati pubblici UE/ONU)",
   "nota": "Copia locale per lettura same-origin dalla Sala situazioni."
  },
@@ -22,6 +22,21 @@
    "name": "Flood in Spain",
    "severitytext": "Magnitude 0 ",
    "todate": "2026-09-19T01:00:00"
+  },
+  {
+   "alertlevel": "Green",
+   "country": "Kermadec Islands Region",
+   "datemodified": "2026-09-18T23:42:43",
+   "description": "Earthquake in Kermadec Islands Region",
+   "episodeid": 1734773,
+   "eventid": 1566905,
+   "eventtype": "EQ",
+   "fromdate": "2026-09-18T23:18:28",
+   "lat": -27.8581,
+   "lon": -177.2286,
+   "name": "Earthquake in Kermadec Islands Region",
+   "severitytext": "Magnitude 5.5M, Depth:94.054km",
+   "todate": "2026-09-18T23:18:28"
   },
   {
    "alertlevel": "Green",
@@ -470,39 +485,39 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-09-18T19:39:00",
+   "datemodified": "2026-09-18T23:25:30",
    "description": "Forest fires in Australia",
-   "episodeid": 37,
+   "episodeid": 38,
    "eventid": 1031772,
    "eventtype": "WF",
    "fromdate": "2026-09-04T00:00:00",
    "iso3": "AUS",
-   "lat": -15.9879,
-   "lon": 130.5141,
+   "lat": -15.989,
+   "lon": 130.5142,
    "name": "Forest fires in Australia",
-   "severitytext": "Green impact for forestfire in 65149 ha",
+   "severitytext": "Green impact for forestfire in 65949 ha",
    "todate": "2026-09-18T00:00:00"
   },
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-09-18T19:41:03",
+   "datemodified": "2026-09-18T23:23:02",
    "description": "Forest fires in Australia",
-   "episodeid": 11,
+   "episodeid": 12,
    "eventid": 1031939,
    "eventtype": "WF",
    "fromdate": "2026-09-04T00:00:00",
    "iso3": "AUS",
-   "lat": -13.9199,
-   "lon": 136.6198,
+   "lat": -13.9201,
+   "lon": 136.6196,
    "name": "Forest fires in Australia",
-   "severitytext": "Green impact for forestfire in 12513 ha",
+   "severitytext": "Green impact for forestfire in 12645 ha",
    "todate": "2026-09-18T00:00:00"
   },
   {
    "alertlevel": "Green",
    "country": "Brazil",
-   "datemodified": "2026-09-18T19:38:45",
+   "datemodified": "2026-09-18T23:22:13",
    "description": "Forest fires in Brazil",
    "episodeid": 9,
    "eventid": 1031954,
@@ -518,7 +533,7 @@
   {
    "alertlevel": "Green",
    "country": "Mozambique",
-   "datemodified": "2026-09-18T19:39:47",
+   "datemodified": "2026-09-18T23:22:56",
    "description": "Forest fires in Mozambique",
    "episodeid": 7,
    "eventid": 1031983,
@@ -534,7 +549,7 @@
   {
    "alertlevel": "Green",
    "country": "Zambia",
-   "datemodified": "2026-09-18T19:37:25",
+   "datemodified": "2026-09-18T23:21:17",
    "description": "Forest fires in Zambia",
    "episodeid": 11,
    "eventid": 1031827,
@@ -1526,17 +1541,17 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-09-18T19:22:04",
+   "datemodified": "2026-09-18T23:18:27",
    "description": "Forest fires in Australia",
-   "episodeid": 16,
+   "episodeid": 17,
    "eventid": 1031915,
    "eventtype": "WF",
    "fromdate": "2026-09-10T00:00:00",
    "iso3": "AUS",
-   "lat": -20.5083,
-   "lon": 123.7276,
+   "lat": -20.5082,
+   "lon": 123.73,
    "name": "Forest fires in Australia",
-   "severitytext": "Green impact for forestfire in 8945 ha",
+   "severitytext": "Green impact for forestfire in 9225 ha",
    "todate": "2026-09-18T00:00:00"
   },
   {
@@ -1558,7 +1573,7 @@
   {
    "alertlevel": "Green",
    "country": "Mozambique",
-   "datemodified": "2026-09-18T19:17:56",
+   "datemodified": "2026-09-18T23:18:48",
    "description": "Forest fires in Mozambique",
    "episodeid": 9,
    "eventid": 1031942,
@@ -1585,22 +1600,6 @@
    "lon": 36.3171,
    "name": "Forest fires in Mozambique",
    "severitytext": "Green impact for forestfire in 216673 ha",
-   "todate": "2026-09-18T00:00:00"
-  },
-  {
-   "alertlevel": "Green",
-   "country": "Australia",
-   "datemodified": "2026-09-18T19:21:32",
-   "description": "Forest fires in Australia",
-   "episodeid": 9,
-   "eventid": 1031992,
-   "eventtype": "WF",
-   "fromdate": "2026-09-10T00:00:00",
-   "iso3": "AUS",
-   "lat": -21.4633,
-   "lon": 128.5079,
-   "name": "Forest fires in Australia",
-   "severitytext": "Green impact for forestfire in 6726 ha",
    "todate": "2026-09-18T00:00:00"
   }
  ]

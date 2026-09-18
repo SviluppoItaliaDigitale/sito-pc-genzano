@@ -5,16 +5,58 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-18T21:53:52+00:00",
+  "generato": "2026-09-18T23:56:45+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-18T21:45:21+00:00",
+   "data": "2026-09-18T23:48:33+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Addio a Sandro Mazzola, l'uomo che raccolse l'eredità impossibile",
+   "url": "https://www.adnkronos.com/sport/addio-sandro-mazzola-leggenda-inter_5Xbvdn2H0X459Y2ThQijsQ"
+  },
+  {
+   "data": "2026-09-18T23:43:04+00:00",
+   "fonte": "ANSA",
+   "titolo": "Addio a Sandro Mazzola, la bandiera dell'Inter aveva 83 anni",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/19/addio-a-sandro-mazzola-la-bandiera-dellinter-aveva-83-anni_4e64feca-d64f-4fb1-92e1-065b2d74325f.html"
+  },
+  {
+   "data": "2026-09-18T23:27:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "E' morto Sandro Mazzola, bandiera eterna dell'Inter",
+   "url": "https://www.adnkronos.com/sport/e-morto-sandro-mazzola-bandiera-inter_5Tz1FWj5WQOKPBdknHr4gM"
+  },
+  {
+   "data": "2026-09-18T22:04:18+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Diabete e sesso, lo studio rassicura: nessun aumento significativo del rischio di ipoglicemia",
+   "url": "https://www.adnkronos.com/cronaca/sesso-diabete-tipo-1-glicemia-cosa-succede_2v5AzMf24NKXuXKTx1zQKc"
+  },
+  {
+   "data": "2026-09-18T22:03:11+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina, Putin pronto all’escalation: l'attacco all'Europa e il timore di una \"mobilitazione invisibile\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-putin-escalation-mobilitazione-news_1Ghrl64cyiwIffvWZpDXF6"
+  },
+  {
+   "data": "2026-09-18T22:02:56+00:00",
    "fonte": "ANSA",
    "titolo": "Trump: 'Accordo con Danimarca e Groenlandia per il controllo Usa della sicurezza dell'isola'",
    "url": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/09/18/trump-accordo-con-danimarca-e-groenlandia-per-il-controllo-usa-della-sicurezza_1cca247f-3819-4ca1-8017-ce344cbcec44.html"
+  },
+  {
+   "data": "2026-09-18T22:02:29+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Morbillo, è allarme negli Usa. Italia prima per casi in Europa in in primi 6 mesi 2026",
+   "url": "https://www.adnkronos.com/internazionale/esteri/morbillo-usa-europa-italia-quadro_1Bshe3svF5pxgLpJAj9QeY"
+  },
+  {
+   "data": "2026-09-18T21:53:10+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Trump annuncia accordo con Danimarca e Groenlandia: \"Usa controlleranno sicurezza territorio artico\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/trump-groenlandia-danimarca-accordo_7xeX3mYamnlolftDr9Fflu"
   },
   {
    "data": "2026-09-18T21:17:10+00:00",
@@ -131,12 +173,6 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/18/presunti-fondi-ad-hamas-chiuse-indagini-su-hannoun_7fc962a2-ba26-45f3-91a7-65e6329336f0.html"
   },
   {
-   "data": "2026-09-18T17:44:13+00:00",
-   "fonte": "ANSA",
-   "titolo": "Daniel Maldini e 9 azzurri alla prima volta, la nuova Italia di Mancini",
-   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/18/nazionale-34-azzurri-convocati-da-mancini-ce-anche-daniel-maldini-_79b29bf1-61c3-4556-905b-0ef7c7fa8095.html"
-  },
-  {
    "data": "2026-09-18T17:43:36+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "In tv ostenta vita da sogno, la guardia di finanza scopre redditi non dichiarati",
@@ -153,42 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Tensione a Rozzano per la criminalità, ronde e pestaggi dei cittadini",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/18/tensione-a-rozzano-per-la-criminalita-ronde-e-pestaggi-dei-cittadini_974135a5-edf7-4624-9d5b-a74817590dbc.html"
-  },
-  {
-   "data": "2026-09-18T17:41:10+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Turista di 19 anni denuncia due violenze in poche ore nel Salento",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/18/turista-19enne-denuncia-due-violenze-in-poche-ore-nel-salento_35341630-a15c-4075-bd9d-59701e352be1.html"
-  },
-  {
-   "data": "2026-09-18T17:40:25+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Auto sulla folla a Modena, El Koudri cercò sul web articoli su Isis e Bin Laden",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/18/auto-sulla-folla-a-modena-el-koudri-cerco-sul-web-articoli-su-isis_83193eb5-7367-49b1-8fbf-561b4c8f9e4d.html"
-  },
-  {
-   "data": "2026-09-18T17:34:32+00:00",
-   "fonte": "ANSA",
-   "titolo": "Presidio a Torino contro Vannacci, tensione con gli agenti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/18/presidio-a-torino-contro-vannacci-tensione-con-gli-agenti_ddd4008a-0a98-4fdc-9ee8-deee4675909e.html"
-  },
-  {
-   "data": "2026-09-18T17:33:24+00:00",
-   "fonte": "ANSA",
-   "titolo": "A pesca sugli scogli, uomo muore colpito da un fulmine nel Brindisino",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/18/a-pesca-sugli-scogli-uomo-muore-colpito-da-un-fulmine-nel-brindisino_9955cd84-c324-4ba6-a700-6402304192f4.html"
-  },
-  {
-   "data": "2026-09-18T17:20:26+00:00",
-   "fonte": "ANSA",
-   "titolo": "Faro dell'Ue sul taglio del bollo. Il governo: 'Usiamo soldi nazionali'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/18/faro-ue-sul-taglio-del-bollo.-il-governo-usiamo-soldi-nazionali_9f52eeaa-801e-42c5-bc83-af7f81527b83.html"
-  },
-  {
-   "data": "2026-09-18T17:14:21+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "#AccadeOggi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/18/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
   }
  ]
 }
