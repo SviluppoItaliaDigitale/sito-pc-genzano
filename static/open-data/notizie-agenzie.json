@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-19T03:39:28+00:00",
+  "generato": "2026-09-19T08:18:38+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-19T03:17:13+00:00",
+   "data": "2026-09-19T08:11:16+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Picchiato per aver difeso un detenuto da aggressione omofoba, 3 a processo",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/19/picchiato-per-aver-difeso-un-detenuto-da-aggressione-omofoba-3-a-processo_4a18dc97-2504-4c52-9777-571a90216292.html"
+  },
+  {
+   "data": "2026-09-19T08:10:31+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Incidente a Venezia, tracce di alcol e droga nel sangue del tassista",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/19/incidente-a-venezia-tracce-di-alcol-e-droga-nel-sangue-del-tassista_77916123-a225-406f-a7e1-6cf92a5377a5.html"
+  },
+  {
+   "data": "2026-09-19T08:09:37+00:00",
    "fonte": "ANSA",
-   "titolo": "Inps: controlli su assegno unico, rischio revisione importi",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/18/inps-controlli-su-assegno-unico-rischio-revisione-importi_35010935-d1c4-4c0d-b996-1a0858191cb3.html"
+   "titolo": "Addio a Sandro Mazzola, la bandiera dell'Inter aveva 83 anni",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/19/addio-a-sandro-mazzola-la-bandiera-dellinter-aveva-83-anni_4e64feca-d64f-4fb1-92e1-065b2d74325f.html"
+  },
+  {
+   "data": "2026-09-19T08:03:44+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Due incendi e caduta albero a Monteriggioni a causa dei fulmini",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/19/due-incendi-e-caduta-albero-a-monteriggioni-a-causa-dei-fulmini_3b55acc7-2914-4a20-a4e1-ca2d0ac50ae4.html"
+  },
+  {
+   "data": "2026-09-19T07:55:32+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Cucchi: 'Su certificati e Cpr il pm ha acquisito le mie conversazioni'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/19/cucchi-su-certificati-e-cpr-il-pm-ha-acquisito-le-mie-conversazioni_497a249f-5918-4339-ab9f-bdabb1fa1f30.html"
+  },
+  {
+   "data": "2026-09-19T07:53:49+00:00",
+   "fonte": "ANSA",
+   "titolo": "Forte esplosione avvertita a Riad, scatta l'allerta per la popolazione",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/19/forte-esplosione-avvertita-a-riad-scatta-lallerta-per-la-popolazione_83a5e95b-d523-4913-a557-a06ae487425b.html"
+  },
+  {
+   "data": "2026-09-19T07:52:34+00:00",
+   "fonte": "ANSA",
+   "titolo": "Trump firma la legge che impone nuove sanzioni contro la Russia",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/19/trump-firma-la-legge-che-impone-nuove-sanzioni-contro-la-russia_2075c441-d9d7-49f4-b72d-9135c6db0d29.html"
+  },
+  {
+   "data": "2026-09-19T07:51:51+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Quanto si indebitano gli italiani per vivere? L'analisi tra prestiti, mutui e stipendi fermi",
+   "url": "https://www.adnkronos.com/economia/debito-italiani-quanto-costa-analisi-cgia_2eZbRKX1aft1dbEjCu1Hta"
+  },
+  {
+   "data": "2026-09-19T07:47:41+00:00",
+   "fonte": "ANSA",
+   "titolo": "Trump: 'Accordo con Danimarca e Groenlandia per il controllo Usa della sicurezza sull'isola'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/09/18/trump-accordo-con-danimarca-e-groenlandia-per-il-controllo-usa-della-sicurezza_1cca247f-3819-4ca1-8017-ce344cbcec44.html"
+  },
+  {
+   "data": "2026-09-19T07:47:34+00:00",
+   "fonte": "ANSA",
+   "titolo": "'Gemini viola tre aziende, è la prima volta per l'Ia di Google'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/19/media-gemini-viola-tre-aziende-e-la-prima-volta-per-lia-di-google_3cc242f1-ac49-4aa6-a77d-e5c9b5294a38.html"
+  },
+  {
+   "data": "2026-09-19T07:33:13+00:00",
+   "fonte": "ANSA",
+   "titolo": "Le mostre del weekend, da Kandinsky a Bertozzi",
+   "url": "https://www.ansa.it/canale_viaggi/notizie/arte/2026/09/16/le-mostre-del-weekend-da-kandinsky-a-bertozzi_e5384eee-1532-4833-b98b-72f10cb735a9.html"
+  },
+  {
+   "data": "2026-09-19T07:32:42+00:00",
+   "fonte": "ANSA",
+   "titolo": "Gerwig, perché Meryl Streep darà la voce al leone Aslan di Narnia",
+   "url": "https://www.ansa.it/sito/notizie/cultura/cinema/2026/09/18/gerwig-perche-meryl-streep-dara-la-voce-al-leone-aslan-di-narnia_f565c2c0-8449-454a-a76a-94fe653d4dad.html"
+  },
+  {
+   "data": "2026-09-19T07:29:39+00:00",
+   "fonte": "ANSA",
+   "titolo": "'Un rapporto di intelligence generato con l'IA ha rischiato di scatenare una guerra'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/19/rapporto-intelligence-generato-con-ia-ha-rischiato-di-scatenere-guerra-usa-cina_7615ea70-4ec5-43ce-8610-60635cca4a36.html"
+  },
+  {
+   "data": "2026-09-19T07:27:56+00:00",
+   "fonte": "ANSA",
+   "titolo": "Visual culture, critica, storia dell'arte. Il punto di vista di Kevin McManus",
+   "url": "https://www.ansa.it/sito/podcast/una_cura_per_arte/2026/09/18/visual-culture-critica-storia-dellarte.-il-punto-di-vista-di-kevin-mcmanus_2d0b8fc8-8fba-490e-8390-97db8330a598.html"
+  },
+  {
+   "data": "2026-09-19T07:23:53+00:00",
+   "fonte": "ANSA",
+   "titolo": "Alla scoperta di Étoile, Jovayork - La musica dell'anima e Xoftex",
+   "url": "https://www.ansa.it/sito/podcast/siamo_serie/2026/09/18/alla-scoperta-di-etoile-jovayork-la-musica-dellanima-e-xoftex_75f68a92-cbbe-4224-82d3-5fd85ec0a593.html"
+  },
+  {
+   "data": "2026-09-19T07:23:45+00:00",
+   "fonte": "ANSA",
+   "titolo": "Estinzione (reloaded)",
+   "url": "https://www.ansa.it/sito/podcast/la_parola_della_settimana/2026/09/19/estinzione-reloaded_c9459d37-1358-4ceb-be00-04534b22fd17.html"
+  },
+  {
+   "data": "2026-09-19T07:23:13+00:00",
+   "fonte": "ANSA",
+   "titolo": "Mattarella: \"Serve avere cura del teatro e della condizione di chi ci lavora\"",
+   "url": "https://www.ansa.it/sito/videogallery/spettacolo/2026/09/18/mattarella-serve-avere-cura-del-teatro-e-della-condizione-di-chi-ci-lavora_e1b81364-3e8d-4fed-817b-4e37a309711b.html"
+  },
+  {
+   "data": "2026-09-19T07:23:06+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Dal M5S un Patto generazionale per i giovani: dai 15mila euro per i 18enni al voto ai 16enni, le proposte",
+   "url": "https://www.adnkronos.com/politica/m5s-patto-generazionale-giovani-punti-programma_5F2prRDjjIBthkR4FYqGvq"
+  },
+  {
+   "data": "2026-09-19T07:13:35+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Prof accoltellata da studente 13enne, Crepet: \"Violenza a portata di click, serve più autorevolezza\"",
+   "url": "https://www.adnkronos.com/cronaca/paolo-crepet-prof-accoltellata-studente-roma_5yYJBz2Q95QHFgTMbh6xcE"
+  },
+  {
+   "data": "2026-09-19T07:12:41+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Caro carburanti, benzina arriva a 2,153 euro al litro. Gasolio a 2,330",
+   "url": "https://www.adnkronos.com/economia/benzina-diesel-prezzo-carburanti-gasolio-oggi_3DB6vPvoeNqoDmFoYG4ZWk"
+  },
+  {
+   "data": "2026-09-19T07:02:52+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Caso Garlasco, la criminologa Anna Vagli rinviata a giudizio per diffamazione nei confronti di Stasi",
+   "url": "https://www.adnkronos.com/cronaca/garlasco-stasi-diffamazione-anna-vagli_2Xl8ScATs37Mards0hPE48"
+  },
+  {
+   "data": "2026-09-19T07:02:16+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Feltri contro Ranucci: \"Dovrebbe andare ad arare, la Rai non doveva nemmeno assumerlo\"",
+   "url": "https://www.adnkronos.com/politica/feltri-contro-ranucci-caso-report_50N6mHBURYeZRlxnCYTHXm"
+  },
+  {
+   "data": "2026-09-19T06:36:46+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Italia verso l'autunno, tra piogge al Centro-Sud e rialzo delle temperature: le previsioni",
+   "url": "https://www.adnkronos.com/cronaca/meteo-oggi-previsioni-pioggia-19-settembre_1RsuGC9xecKdrt1VSeD4ws"
+  },
+  {
+   "data": "2026-09-19T06:00:25+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Banche centrali, Cesarano (Sella sgr): \"Tassi alti e meno Treasury alla Cina, torna il rischio debito\"",
+   "url": "https://www.adnkronos.com/economia/banche-centrali-cesarano-tassi-alti-meno-treasury-cina_2TkUIovXJybV9FmXvxuZQ8"
+  },
+  {
+   "data": "2026-09-19T05:52:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Trump e la guerra ibrida di Putin: \"Russia attacca gli alleati dell'Ucraina da cinque anni\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-news-oggi-19-settembre_1ikL20XjVnxFsivZVPFkYQ"
+  },
+  {
+   "data": "2026-09-19T05:30:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Racca (Federfarma Lombardia): \"3.054 croci verdi per la salute dei cittadini, disponibili 2 nuovi vaccini\"",
+   "url": "https://www.adnkronos.com/cronaca/racca-federfarma-lombardia-3054-croci-verdi-per-la-salute-dei-cittadini-disponibili-2-nuovi-vaccini_3PdOS7Btq0ChGaf5VhocTy"
+  },
+  {
+   "data": "2026-09-19T05:28:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Mandelli (Fofi): \"Oggi il farmacista è un professionista della salute\"",
+   "url": "https://www.adnkronos.com/cronaca/mandelli-fofi-oggi-il-farmacista-e-un-professionista-della-salute_5Zfo2dz2l1rdk6yySnaCla"
+  },
+  {
+   "data": "2026-09-19T05:27:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Monti (Lombardia): \"Innovazione, prevenzione e prossimità per i cittadini\"",
+   "url": "https://www.adnkronos.com/cronaca/monti-lombardia-innovazione-prevenzione-e-prossimita-per-i-cittadini_35DAh72deI3mp1OMK0z8lW"
+  },
+  {
+   "data": "2026-09-19T03:36:51+00:00",
+   "fonte": "ANSA",
+   "titolo": "Presidio a Torino contro Vannacci, tensione con gli agenti",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/18/presidio-a-torino-contro-vannacci-tensione-con-gli-agenti_ddd4008a-0a98-4fdc-9ee8-deee4675909e.html"
   },
   {
    "data": "2026-09-19T03:16:22+00:00",
    "fonte": "ANSA",
    "titolo": "Traffico aereo interrotto e poi ripreso all'aeroporto del Lussemburgo per la presenza di droni",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/19/traffico-aereo-interrotto-e-poi-ripreso-allaeroporto-del-lussemburgo-per-la-presenza_c8ee173d-2ba9-473d-94e1-db6c3b96aa5f.html"
-  },
-  {
-   "data": "2026-09-18T23:48:33+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Addio a Sandro Mazzola, l'uomo che raccolse l'eredità impossibile",
-   "url": "https://www.adnkronos.com/sport/addio-sandro-mazzola-leggenda-inter_5Xbvdn2H0X459Y2ThQijsQ"
-  },
-  {
-   "data": "2026-09-18T23:43:04+00:00",
-   "fonte": "ANSA",
-   "titolo": "Addio a Sandro Mazzola, la bandiera dell'Inter aveva 83 anni",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/19/addio-a-sandro-mazzola-la-bandiera-dellinter-aveva-83-anni_4e64feca-d64f-4fb1-92e1-065b2d74325f.html"
-  },
-  {
-   "data": "2026-09-18T23:27:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "E' morto Sandro Mazzola, bandiera eterna dell'Inter",
-   "url": "https://www.adnkronos.com/sport/e-morto-sandro-mazzola-bandiera-inter_5Tz1FWj5WQOKPBdknHr4gM"
-  },
-  {
-   "data": "2026-09-18T22:04:18+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Diabete e sesso, lo studio rassicura: nessun aumento significativo del rischio di ipoglicemia",
-   "url": "https://www.adnkronos.com/cronaca/sesso-diabete-tipo-1-glicemia-cosa-succede_2v5AzMf24NKXuXKTx1zQKc"
-  },
-  {
-   "data": "2026-09-18T22:03:11+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina, Putin pronto all’escalation: l'attacco all'Europa e il timore di una \"mobilitazione invisibile\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-putin-escalation-mobilitazione-news_1Ghrl64cyiwIffvWZpDXF6"
-  },
-  {
-   "data": "2026-09-18T22:02:56+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trump: 'Accordo con Danimarca e Groenlandia per il controllo Usa della sicurezza dell'isola'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/09/18/trump-accordo-con-danimarca-e-groenlandia-per-il-controllo-usa-della-sicurezza_1cca247f-3819-4ca1-8017-ce344cbcec44.html"
-  },
-  {
-   "data": "2026-09-18T22:02:29+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Morbillo, è allarme negli Usa. Italia prima per casi in Europa in in primi 6 mesi 2026",
-   "url": "https://www.adnkronos.com/internazionale/esteri/morbillo-usa-europa-italia-quadro_1Bshe3svF5pxgLpJAj9QeY"
-  },
-  {
-   "data": "2026-09-18T21:53:10+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Trump annuncia accordo con Danimarca e Groenlandia: \"Usa controlleranno sicurezza territorio artico\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/trump-groenlandia-danimarca-accordo_7xeX3mYamnlolftDr9Fflu"
-  },
-  {
-   "data": "2026-09-18T21:17:10+00:00",
-   "fonte": "ANSA",
-   "titolo": "Doppietta di Varela, il 2-1 del Monza al Sassuolo salva Juric",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/18/doppietta-di-varela-il-2-1-del-monza-al-sassuolo-salva-juric_c2badf2a-c1ad-4529-bb87-01950ffdc1f8.html"
-  },
-  {
-   "data": "2026-09-18T19:43:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Trump e il nuovo attacco ai media: Cnn, MsNow e Politico cacciati dalla Casa Bianca",
-   "url": "https://www.adnkronos.com/internazionale/esteri/trump-media-cnn-msnow-politico-casa-bianca_DYNyoluXou4XlmnrcfIWM"
-  },
-  {
-   "data": "2026-09-18T19:21:56+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Tentato omicidio di un finanziere a Bari, arrestato un 15enne",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/18/tentato-omicidio-di-un-finanziere-a-bari-arrestato-un-15enne_82ed98f4-bfc6-4ee9-be57-f3d6c47f771e.html"
-  },
-  {
-   "data": "2026-09-18T19:16:39+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "L'infettivologo indagato per i Cpr: 'Mai fatto fare certificati falsi'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/18/linfettivologo-indagato-per-i-cpr-mai-fatto-fare-certificati-falsi_4f296e12-ea92-4253-b8fe-a193b1c70d68.html"
-  },
-  {
-   "data": "2026-09-18T19:10:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Superenalotto, numeri ed estrazione vincente di oggi: la combinazione",
-   "url": "https://www.adnkronos.com/cronaca/superenalotto-oggi-18-settembre-estrazione-numeri-combinazione_2rYjEFeq0QkKUx2sST7knW"
-  },
-  {
-   "data": "2026-09-18T19:07:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "L’errore dell'AI e la crisi sfiorata Usa-Cina: \"Poteva scatenare una guerra\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/intelligenza-artificiale-errori-ai-guerra-usa-cina_3t35ucsUc8NvmBICPGZMgs"
-  },
-  {
-   "data": "2026-09-18T19:05:36+00:00",
-   "fonte": "ANSA",
-   "titolo": "Scoppia il caso Aspides, Roma chiede all'Ue più navi e fondi",
-   "url": "https://www.ansa.it/sito/notizie/mondo/africa/2026/09/18/la-fregata-bergamini-scorta-un-mercantile-italiano-a-bab-el-mandeb_2708dbf7-ef46-4ae2-9841-2489604162d0.html"
-  },
-  {
-   "data": "2026-09-18T19:04:25+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "'Ritardi per i cargo italiani', poi Crosetto sblocca Aspides",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/18/-ritardi-per-i-cargo-italiani-poi-crosetto-sblocca-aspides_8b4c57c6-2139-4c52-a08e-af0bf687c1d4.html"
-  },
-  {
-   "data": "2026-09-18T18:43:04+00:00",
-   "fonte": "ANSA",
-   "titolo": "Accoltella la prof e tenta di filmare tutto. L'insegnante: 'Gli voglio bene, vorrei abbracciarlo'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/18/accoltella-la-prof-e-tenta-di-filmare-tutto.-linsegnante-gli-voglio-bene-vorrei_b2503db3-f84e-4e54-a32e-ea20c1f9cea7.html"
-  },
-  {
-   "data": "2026-09-18T18:24:59+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Agente morto dopo inseguimento, pm chiede processo immediato per l'arrestato",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/18/agente-morto-dopo-inseguimento-pm-chiede-processo-immediato-per-larrestato_203e38db-4ef2-4437-aa2f-ce5e8af5c209.html"
-  },
-  {
-   "data": "2026-09-18T18:20:30+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "I malesseri del 13enne, 'silenzioso e appassionato di video crime'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/18/i-malesseri-del-13enne-silenzioso-e-appassionato-di-video-crime_2ab4059f-5464-4f21-a157-6bb3a45a44df.html"
-  },
-  {
-   "data": "2026-09-18T18:17:16+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Brindisi, colpito da fulmine mentre pesca su scogli: morto un 70enne",
-   "url": "https://www.adnkronos.com/cronaca/ostuni-fulmine-maltempo-pescatore-morto_2twv55fLFIICRtTxtUlDfz"
-  },
-  {
-   "data": "2026-09-18T18:10:06+00:00",
-   "fonte": "ANSA",
-   "titolo": "Macron: 'Nessuno è al riparo, risponderemo agli attacchi russi'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/18/macron-nessuno-e-al-riparo-risponderemo-agli-attacchi-russi_ed3e6373-9e89-4972-8f17-40a2bc553c98.html"
-  },
-  {
-   "data": "2026-09-18T17:56:36+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Dalla bomba agli algoritmi: perché Trump e Xi cercano regole per la corsa all’AI",
-   "url": "https://www.adnkronos.com/internazionale/esteri/dalla-bomba-agli-algoritmi-perche-trump-e-xi-cercano-regole-per-la-corsa-allai_5XOyVMNmvs0EkDP0tDbqKg"
-  },
-  {
-   "data": "2026-09-18T17:51:03+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Pino Insegno, il legale: \"Non deve sua presenza in Rai a Meloni, affermarlo lede la sua reputazione\"",
-   "url": "https://www.adnkronos.com/cronaca/pino-insegno-legale-diffida_1BbhAheZlim3QFhDZD47SV"
-  },
-  {
-   "data": "2026-09-18T17:47:07+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "La difesa di Sempio: 'L'archiviazione dell'ex pm Venditti punto a nostro favore'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/18/la-difesa-di-sempio-larchiviazione-dellex-pm-venditti-punto-a-nostro-favore_a87edc8f-4b59-4870-880d-93958523f41b.html"
-  },
-  {
-   "data": "2026-09-18T17:46:56+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Tentato omicidio plurimo di 4 persone, condanna imputato a 11 anni",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/18/tentato-omicidio-plurimo-di-4-persone-condanna-imputato-a-11-anni_e524aa31-3763-41f1-b927-226a23d471e4.html"
-  },
-  {
-   "data": "2026-09-18T17:46:48+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Presunti fondi ad Hamas, chiuse indagini su Hannoun",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/18/presunti-fondi-ad-hamas-chiuse-indagini-su-hannoun_7fc962a2-ba26-45f3-91a7-65e6329336f0.html"
-  },
-  {
-   "data": "2026-09-18T17:43:36+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "In tv ostenta vita da sogno, la guardia di finanza scopre redditi non dichiarati",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/18/in-tv-ostenta-vita-da-sogno-la-guardia-di-finanza-scopre-redditi-non-dichiarati_55541b71-c370-4223-8c3a-d05859b39121.html"
-  },
-  {
-   "data": "2026-09-18T17:42:14+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Quattordicenne va a scuola con lama da 18 cm nello zaino",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/18/quattordicenne-va-a-scuola-con-lama-da-18-cm-nello-zaino_982a1b1d-da02-4b01-b6a4-3e419fcf980f.html"
   }
  ]
 }
