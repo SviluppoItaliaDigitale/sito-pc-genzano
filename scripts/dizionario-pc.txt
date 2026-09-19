@@ -2047,3 +2047,7 @@ politerapia
 # --- Libro pop-up con la storia 16/09/2026: forme corrette segnalate dal correttore ---
 gliel
 sedette
+scansionabili
+teejeez
+eclipse
+turbo
