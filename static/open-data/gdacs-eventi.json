@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://www.gdacs.org/gdacsapi/api/events/geteventlist/EVENTS4APP",
-  "generato": "2026-09-19T16:05:53+00:00",
+  "generato": "2026-09-19T18:37:39+00:00",
   "licenza": "GDACS — Global Disaster Alert and Coordination System (dati pubblici UE/ONU)",
   "nota": "Copia locale per lettura same-origin dalla Sala situazioni."
  },
@@ -9,7 +9,7 @@
  "events": [
   {
    "alertlevel": "Green",
-   "datemodified": "2026-09-19T16:05:14",
+   "datemodified": "2026-09-19T17:20:13",
    "description": "Tropical Cyclone SIX-26",
    "episodeid": 1,
    "eventid": 1001323,
@@ -21,6 +21,22 @@
    "name": "Tropical Cyclone SIX-26",
    "severitytext": "Tropical Depression (maximum wind speed of 74 km/h)",
    "todate": "2026-09-19T15:00:00"
+  },
+  {
+   "alertlevel": "Green",
+   "country": "Colombia",
+   "datemodified": "2026-09-19T18:18:07",
+   "description": "Earthquake in Colombia",
+   "episodeid": 1734897,
+   "eventid": 1566986,
+   "eventtype": "EQ",
+   "fromdate": "2026-09-19T13:44:35",
+   "iso3": "COL",
+   "lat": 4.5179,
+   "lon": -76.8729,
+   "name": "Earthquake in Colombia",
+   "severitytext": "Magnitude 4.8M, Depth:58.204km",
+   "todate": "2026-09-19T13:44:35"
   },
   {
    "alertlevel": "Green",
@@ -1587,22 +1603,6 @@
    "lon": 29.5586,
    "name": "Forest fires in Zambia",
    "severitytext": "Green impact for forestfire in 5536 ha",
-   "todate": "2026-09-19T00:00:00"
-  },
-  {
-   "alertlevel": "Green",
-   "country": "Brazil",
-   "datemodified": "2026-09-19T15:28:36",
-   "description": "Forest fires in Brazil",
-   "episodeid": 6,
-   "eventid": 1032162,
-   "eventtype": "WF",
-   "fromdate": "2026-09-10T00:00:00",
-   "iso3": "BRA",
-   "lat": -10.4443,
-   "lon": -48.656,
-   "name": "Forest fires in Brazil",
-   "severitytext": "Green impact for forestfire in 5389 ha",
    "todate": "2026-09-19T00:00:00"
   }
  ]
