@@ -5,11 +5,23 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-18T23:56:45+00:00",
+  "generato": "2026-09-19T03:39:28+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-19T03:17:13+00:00",
+   "fonte": "ANSA",
+   "titolo": "Inps: controlli su assegno unico, rischio revisione importi",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/18/inps-controlli-su-assegno-unico-rischio-revisione-importi_35010935-d1c4-4c0d-b996-1a0858191cb3.html"
+  },
+  {
+   "data": "2026-09-19T03:16:22+00:00",
+   "fonte": "ANSA",
+   "titolo": "Traffico aereo interrotto e poi ripreso all'aeroporto del Lussemburgo per la presenza di droni",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/19/traffico-aereo-interrotto-e-poi-ripreso-allaeroporto-del-lussemburgo-per-la-presenza_c8ee173d-2ba9-473d-94e1-db6c3b96aa5f.html"
+  },
   {
    "data": "2026-09-18T23:48:33+00:00",
    "fonte": "ADNKRONOS",
@@ -143,12 +155,6 @@
    "url": "https://www.adnkronos.com/internazionale/esteri/dalla-bomba-agli-algoritmi-perche-trump-e-xi-cercano-regole-per-la-corsa-allai_5XOyVMNmvs0EkDP0tDbqKg"
   },
   {
-   "data": "2026-09-18T17:53:16+00:00",
-   "fonte": "ANSA",
-   "titolo": "Pm: 'Archiviare Rocchi e gli altri per le bussate in sala Var'",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/18/pm-monza-archiviare-linchiesta-sugli-arbitri-per-le-bussate-in-sala-var_7712ddf5-b524-43b1-a945-ef6ccf734cf7.html"
-  },
-  {
    "data": "2026-09-18T17:51:03+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Pino Insegno, il legale: \"Non deve sua presenza in Rai a Meloni, affermarlo lede la sua reputazione\"",
@@ -183,12 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Quattordicenne va a scuola con lama da 18 cm nello zaino",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/18/quattordicenne-va-a-scuola-con-lama-da-18-cm-nello-zaino_982a1b1d-da02-4b01-b6a4-3e419fcf980f.html"
-  },
-  {
-   "data": "2026-09-18T17:41:26+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Tensione a Rozzano per la criminalità, ronde e pestaggi dei cittadini",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/18/tensione-a-rozzano-per-la-criminalita-ronde-e-pestaggi-dei-cittadini_974135a5-edf7-4624-9d5b-a74817590dbc.html"
   }
  ]
 }
