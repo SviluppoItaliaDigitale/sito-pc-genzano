@@ -5,46 +5,142 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-19T18:37:38+00:00",
+  "generato": "2026-09-19T21:03:54+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-19T18:32:23+00:00",
+   "data": "2026-09-19T20:37:55+00:00",
+   "fonte": "ANSA",
+   "titolo": "A Venezia la Lazio vince 2-0 con in gol di  Zaccagni al 51' e Noslin al 60' CRONACA FOTO",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/19/a-venezia-la-lazio-vince-2-0-con-in-gol-di-zaccagni-al-51-e-noslin-al-60-cronaca-foto_6df52126-fcd2-4cdd-9cc1-bfea86b586e4.html"
+  },
+  {
+   "data": "2026-09-19T20:34:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Louvre, appendono due quadri nella sala della Gioconda. Arrestati due tedeschi: \"Stavamo scherzando\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/tedeschi-museo-louvre-due-quadri-arrestati-oggi_3W0kHuhCvudXl3FNQueXcg"
+  },
+  {
+   "data": "2026-09-19T20:33:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "De Luca contro Bonelli: \"Porta jella\". Avs: \"Attacchi sguaiati\". Pd: \"No alle offese\"",
+   "url": "https://www.adnkronos.com/politica/de-luca-contro-bonelli-video-attacco_NmFGTHPzRkHYGCKJROs2c"
+  },
+  {
+   "data": "2026-09-19T20:20:55+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina, Conte: \"Temo attacco Russia? Ho paura che entriamo in guerra\"",
+   "url": "https://www.adnkronos.com/politica/conte-ucraina-russia-guerra_6sqb8pNGHR4H2BJyBvxwZa"
+  },
+  {
+   "data": "2026-09-19T20:20:54+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Ubriachi in cella picchiano agenti, sette al pronto soccorso",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/19/ubriachi-in-cella-picchiano-agenti-sette-al-pronto-soccorso_559209c8-b204-4402-8634-f822b84414ab.html"
+  },
+  {
+   "data": "2026-09-19T20:08:08+00:00",
+   "fonte": "ANSA",
+   "titolo": "Le chat del 13enne, forse arruolato da gruppi estremisti",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/19/il-video-del-13enne-con-laggressione-alla-prof-ragazzi-guardate-il-tg-dopo_97003dfc-8c9b-4825-bd86-586bae7ac908.html"
+  },
+  {
+   "data": "2026-09-19T19:59:26+00:00",
+   "fonte": "ANSA",
+   "titolo": "Oktoberfest al via, torna la festa della birra",
+   "url": "https://www.ansa.it/sito/photogallery/curiosita/2026/09/19/oktoberfest-al-via-torna-la-festa-della-birra_6c2ca671-8cb8-468b-b582-ed2c73df4392.html"
+  },
+  {
+   "data": "2026-09-19T19:59:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Prof accoltellata a Roma, perché l'Adnkronos non pubblica il video",
+   "url": "https://www.adnkronos.com/cronaca/prof-accoltellata-a-roma-perche-ladnkronos-non-pubblica-il-video_2Ac0oj6hChyaieBYYZ9cww"
+  },
+  {
+   "data": "2026-09-19T19:56:57+00:00",
+   "fonte": "ANSA",
+   "titolo": "Riad sott'attacco. Houthi: 'Non siamo in guerra con l'Italia'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/19/riad-sottattacco.-gli-houthi-non-siamo-in-guerra-con-litalia_83a5e95b-d523-4913-a557-a06ae487425b.html"
+  },
+  {
+   "data": "2026-09-19T19:47:20+00:00",
+   "fonte": "ANSA",
+   "titolo": "Conte avverte gli alleati: 'Il mandato di Nova è chiaro: sulle armi non cedo'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/19/conte-assolvero-il-mandato-di-nova-no-al-vivacchiare-della-politica_9e587ba7-024f-4f2b-89fc-5d26d37786bf.html"
+  },
+  {
+   "data": "2026-09-19T19:40:29+00:00",
+   "fonte": "ANSA",
+   "titolo": "Ucraina, Trump firma le sanzioni a Mosca. Zelensky: 'Grazie America!'&nbsp;",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/19/ucraina-trump-firma-le-sanzioni-a-mosca.-zelensky-grazie-america_2075c441-d9d7-49f4-b72d-9135c6db0d29.html"
+  },
+  {
+   "data": "2026-09-19T19:40:06+00:00",
+   "fonte": "ANSA",
+   "titolo": "Trump pianta la bandiera sulla Groenlandia, tra terre rare e rotte artiche",
+   "url": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/09/18/trump-accordo-con-danimarca-e-groenlandia-per-il-controllo-usa-della-sicurezza_1cca247f-3819-4ca1-8017-ce344cbcec44.html"
+  },
+  {
+   "data": "2026-09-19T19:19:29+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Trump: \"Il problema dell'IA è solo il nome: chiamiamola Intelligenza Suprema\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/trump-intelligenza-artificiale-sondaggio_3VU3nWOg7wZ3a6fFoyHxaw"
+  },
+  {
+   "data": "2026-09-19T19:17:51+00:00",
+   "fonte": "ANSA",
+   "titolo": "Regge la tregua di Pontida ma Salvini non cede: 'Si vince uniti da nord a sud'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/19/salvini-a-pontida-la-lega-vince-solo-se-e-forte-e-unita-da-nord-a-sud_dc5905ed-0d59-4546-bbba-3f9b25a0aa92.html"
+  },
+  {
+   "data": "2026-09-19T19:17:15+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "SuperEnalotto, estrazione di oggi 19 settembre 2026: numeri vincenti",
+   "url": "https://www.adnkronos.com/cronaca/superenalotto-estrazione-combinazione-vincente-schedina_5rIDei8rGfi64yh8Lhn8ak"
+  },
+  {
+   "data": "2026-09-19T19:08:58+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "#AccadeOggi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/19/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
+  },
+  {
+   "data": "2026-09-19T19:04:04+00:00",
+   "fonte": "ANSA",
+   "titolo": "A Roma due giorni di gare di droni con i big della competizione",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/19/a-roma-due-giorni-di-gare-di-droni-con-i-big-della-competizione_fda0bd69-ddb1-47db-b9e8-d04ec69d4d5a.html"
+  },
+  {
+   "data": "2026-09-19T18:59:55+00:00",
    "fonte": "ANSA",
    "titolo": "All'Olimpico un 2-2 da spettacolo, la Roma avanti e l'Inter la riprende",
    "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/19/serie-a-roma-inter-termina-2-2-cronaca-e-foto_9dee726b-13e0-4040-b6f8-fa5250cb001f.html"
   },
   {
-   "data": "2026-09-19T18:29:37+00:00",
-   "fonte": "ANSA",
-   "titolo": "A Roma due giorni di gare di droni con i big della competizione",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/18/a-roma-due-giorni-di-gare-di-droni-con-i-big-della-competizione_fda0bd69-ddb1-47db-b9e8-d04ec69d4d5a.html"
-  },
-  {
-   "data": "2026-09-19T18:24:35+00:00",
-   "fonte": "ANSA",
-   "titolo": "Riad sott'attacco. Gli Houthi: 'Non siamo in guerra con l'Italia'&nbsp;",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/19/riad-sottattacco.-gli-houthi-non-siamo-in-guerra-con-litalia_83a5e95b-d523-4913-a557-a06ae487425b.html"
-  },
-  {
-   "data": "2026-09-19T18:13:39+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il video del 13enne con l'aggressione alla prof: 'Ragazzi guardate il Tg dopo'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/19/il-video-del-13enne-con-laggressione-alla-prof-ragazzi-guardate-il-tg-dopo_97003dfc-8c9b-4825-bd86-586bae7ac908.html"
-  },
-  {
-   "data": "2026-09-19T18:11:44+00:00",
+   "data": "2026-09-19T18:52:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Serie A, oggi Venezia-Lazio - Diretta",
-   "url": "https://www.adnkronos.com/sport/diretta-venezia-lazio-serie-a-oggi-live_4yJR0kb5z0FvP41gZiuhWU"
+   "titolo": "Salvini a Pontida: \"La Lega vince solo se forte e unita da Nord a Sud, mai mollare\"",
+   "url": "https://www.adnkronos.com/politica/matteo-salvini-pontida-giovani-oggi-news-lega_174ynEgx6eSddlixg4imSY"
   },
   {
-   "data": "2026-09-19T18:11:07+00:00",
+   "data": "2026-09-19T18:35:23+00:00",
    "fonte": "ANSA",
-   "titolo": "Salvini a Pontida: 'La Lega vince solo se è forte e unita, da Nord a Sud'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/19/salvini-a-pontida-la-lega-vince-solo-se-e-forte-e-unita-da-nord-a-sud_dc5905ed-0d59-4546-bbba-3f9b25a0aa92.html"
+   "titolo": "Berlinesi al voto fra l'emergenza casa e la rabbia per il degrado",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/19/berlinesi-al-voto-fra-lemergenza-casa-e-la-rabbia-per-il-degrado_a6875b74-0dc6-4a2b-b2f8-4ef4ceca2900.html"
+  },
+  {
+   "data": "2026-09-19T18:31:34+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Conte batte Schlein nei sondaggi sulle primarie. I Dem restano fiduciosi: \"Nessuna paura\"",
+   "url": "https://www.adnkronos.com/politica/giuseppe-conte-elly-schlein-silvia-salis-primarie-centrosinistra_4ukVBZ1X0jkN34rJQBZNFW"
+  },
+  {
+   "data": "2026-09-19T18:11:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Venezia-Lazio 0-2, Zaccagni-Noslin gol e Gattuso primo con Roma e Inter",
+   "url": "https://www.adnkronos.com/sport/diretta-venezia-lazio-serie-a-oggi-live_4yJR0kb5z0FvP41gZiuhWU"
   },
   {
    "data": "2026-09-19T18:06:54+00:00",
@@ -93,102 +189,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Rozzano, indagini sulle 'ronde': ipotesi percosse con odio razziale",
    "url": "https://www.adnkronos.com/cronaca/rozzano-ronde-indagini-carabinieri_1GPPmC50V4DACq5TQo7dm8"
-  },
-  {
-   "data": "2026-09-19T17:54:50+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Madre e figlia morte avvelenate, Locatelli: 'Le uniche certezze sono sulla ricina'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/19/morte-avvelenate-locatelli-le-uniche-certezze-sono-sulla-ricina_f12a7edf-f1e0-4582-9e29-357d6c3fffae.html"
-  },
-  {
-   "data": "2026-09-19T17:54:20+00:00",
-   "fonte": "ANSA",
-   "titolo": "8 giovani su 10 si impegnano nella vita pubblica ma le istituzioni non li ascoltano",
-   "url": "https://www.ansa.it/canale_lifestyle/notizie/societa_diritti/2026/09/17/8-giovani-su-10-si-impegnano-nella-vita-pubblica-ma-le-istituzioni-non-li-ascoltano_8fe1c5d0-94e5-45e6-bfce-882bfe9c939f.html"
-  },
-  {
-   "data": "2026-09-19T17:54:00+00:00",
-   "fonte": "ANSA",
-   "titolo": "Conte avverte gli alleati: 'Il mandato di Nova è chiaro: sulle armi non cedo'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/19/conte-assolvero-il-mandato-di-nova-no-al-vivacchiare-della-politica_9e587ba7-024f-4f2b-89fc-5d26d37786bf.html"
-  },
-  {
-   "data": "2026-09-19T17:51:19+00:00",
-   "fonte": "ANSA",
-   "titolo": "Gerwig, perché Meryl Streep darà la voce al leone Aslan di Narnia",
-   "url": "https://www.ansa.it/sito/notizie/cultura/cinema/2026/09/18/gerwig-perche-meryl-streep-dara-la-voce-al-leone-aslan-di-narnia_f565c2c0-8449-454a-a76a-94fe653d4dad.html"
-  },
-  {
-   "data": "2026-09-19T17:49:29+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Due incendi e caduta albero a Monteriggioni a causa dei fulmini",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/19/due-incendi-e-caduta-albero-a-monteriggioni-a-causa-dei-fulmini_3b55acc7-2914-4a20-a4e1-ca2d0ac50ae4.html"
-  },
-  {
-   "data": "2026-09-19T17:49:25+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "#AccadeOggi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/19/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
-  },
-  {
-   "data": "2026-09-19T17:49:19+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Tentato omicidio di un finanziere a Bari, arrestato un 15enne",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/18/tentato-omicidio-di-un-finanziere-a-bari-arrestato-un-15enne_82ed98f4-bfc6-4ee9-be57-f3d6c47f771e.html"
-  },
-  {
-   "data": "2026-09-19T17:49:08+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Picchiato per aver difeso un detenuto da aggressione omofoba, 3 a processo",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/19/picchiato-per-aver-difeso-un-detenuto-da-aggressione-omofoba-3-a-processo_4a18dc97-2504-4c52-9777-571a90216292.html"
-  },
-  {
-   "data": "2026-09-19T17:49:02+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Microchirurgia migliora autonomia 14enne dopo paralisi cerebrale infantile",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/19/microchirurgia-migliora-autonomia-14enne-dopo-paralisi-cerebrale-infantile_21a27cbf-38c9-4405-b9f0-7263725602fc.html"
-  },
-  {
-   "data": "2026-09-19T17:48:47+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Si rovescia con il trattore, muore imprenditore vinicolo",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/19/si-rovescia-con-il-trattore-muore-imprenditore-vinicolo_12e4874b-0e8c-40ed-870f-306f14926679.html"
-  },
-  {
-   "data": "2026-09-19T17:48:40+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "A Como 6 a processo per morte di due operai pagati 50 centesimi all'ora",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/19/a-como-6-a-processo-per-morte-di-due-operai-pagati-50-centesimi-allora_81469cbc-4c2b-4d1f-9d29-e73102a09df2.html"
-  },
-  {
-   "data": "2026-09-19T17:48:33+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Spin Time 'in 50mila in corteo, restituire il palazzo al pubblico'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/19/spin-time-in-50mila-in-corteo-restituire-il-palazzo-al-pubblico_dbc308d8-cbd2-49ee-9b92-e45206a27a88.html"
-  },
-  {
-   "data": "2026-09-19T17:41:40+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "I certificati anti Cpr, Cucchi: 'Io intercettata illegalmente'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/19/cucchi-su-certificati-e-cpr-il-pm-ha-acquisito-le-mie-conversazioni_497a249f-5918-4339-ab9f-bdabb1fa1f30.html"
-  },
-  {
-   "data": "2026-09-19T17:23:32+00:00",
-   "fonte": "ANSA",
-   "titolo": "'Gemini ha violato 3 aziende', la prima volta dell'Ia di Google",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/19/media-gemini-viola-tre-aziende-e-la-prima-volta-per-lia-di-google_3cc242f1-ac49-4aa6-a77d-e5c9b5294a38.html"
-  },
-  {
-   "data": "2026-09-19T17:19:37+00:00",
-   "fonte": "ANSA",
-   "titolo": "Berlinesi al voto fra l'emergenza casa e la rabbia per il degrado",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/19/berlinesi-al-voto-fra-lemergenza-casa-e-la-rabbia-per-il-degrado_a6875b74-0dc6-4a2b-b2f8-4ef4ceca2900.html"
-  },
-  {
-   "data": "2026-09-19T17:12:15+00:00",
-   "fonte": "ANSA",
-   "titolo": "Bruxelles chiarisce su fondi Pnrr per il taglio del bollo, 'ci sono margini'",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/19/bruxelles-chiarisce-su-fondi-pnrr-per-il-taglio-del-bollo-ci-sono-margini_60f8c90f-671c-4530-8048-de1e819f00e3.html"
   }
  ]
 }
