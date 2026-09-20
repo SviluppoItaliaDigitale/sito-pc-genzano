@@ -1,6 +1,6 @@
 ---
 title: "10 settembre 2017: ricordare Livorno per non ripetere gli errori"
-date: 2026-09-20
+date: 2026-09-20T00:01:00+02:00
 description: "Nove anni fa Livorno fu colpita da un'alluvione lampo che causò 9 vittime. La memoria di quell'evento impegna tutta la PC a lavorare su prevenzione."
 badge: "Informazione"
 priorita: "normale"
