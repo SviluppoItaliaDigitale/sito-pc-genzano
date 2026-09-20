@@ -194,6 +194,22 @@ Entrambi gli script si difendono da soli: il delta rifiuta un export cumulativo 
 
 Dopo lo script, il resto della procedura è invariato: articoli per le giornate di intervento non ancora raccontate (gate `pc-article-reviewer`, niente nomi, orari arrotondati), PR, merge, verifica del deploy. Il file `.xlsx` non si committa mai.
 
+## Pubblicazione automatica social — repo privato `social-pc-genzano` (20/09/2026)
+
+🟢 Instagram e Facebook non si pubblicano più a mano. Il repo **privato** [`social-pc-genzano`](https://github.com/SviluppoItaliaDigitale/social-pc-genzano) prende il materiale già generato qui in `social-bozze/AAAA/MM/<slug>/` e lo pubblica **due volte al giorno** (fasce 08:30 e 18:30 italiane), rinnovando da solo il token Instagram il **1 e il 16** di ogni mese. Questo repo non cambia: continua a generare bozze e immagini con `genera-social-bozze.yml`.
+
+🔴 **Perché due repo.** Le credenziali delle pagine social non stanno in un repo pubblico. Le **immagini invece devono restare qui**: Instagram le scarica da `raw.githubusercontent.com` senza autenticazione, e da un repo privato non potrebbe. La dipendenza è a senso unico — il repo privato legge quello pubblico, mai il contrario — quindi nessun workflow di questo repo va modificato per la pubblicazione.
+
+**Regole di merito scritte nel codice, non nella configurazione:**
+
+- **`Allerta` ed `Emergenza` non si pubblicano mai in automatico.** Valgono nel momento in cui escono: vanno pubblicate a mano (`BADGE_ESCLUSI_AUTO` in `social_coda_lib.py`).
+- Le versioni in italiano semplice (`-facile`) non vanno sui social.
+- **Un post automatico al giorno**, e mai prima che l'articolo sia online sul sito (un articolo calendarizzato resta in coda).
+- **Commenti Instagram disattivati** sui post automatici (`comment_enabled=false` dopo la pubblicazione): i canali sono presidiati a orari definiti e un post che nessuno modera non deve raccogliere commenti. Variabile `IG_COMMENTI` per cambiare idea. Su Facebook si imposta dalla Pagina, non via API.
+- Tre tentativi falliti e la voce si ferma in `stato: errore` con una issue, invece di ritentare all'infinito.
+
+**Dove si interviene:** la coda `coda-social.yaml` dell'altro repo è l'unico stato, modificabile anche da telefono (`stato: saltato` blocca una pubblicazione). Credenziali da configurare, procedura di attivazione e diagnosi dei guasti: README di `social-pc-genzano`. Per provare senza pubblicare: **Actions → Pubblicazione automatica social → Run workflow** con `dry_run` a `true`.
+
 ## Snapshot Copernicus EMS — la scheda del cruscotto non legge più l'API dal browser (24/08/2026)
 
 🔴 L'API pubblica `rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/` risponde **200 ma senza header `Access-Control-Allow-Origin`**: dal browser la fetch è bloccata dalla same-origin policy. La scheda `dashboard-ems.html` del cruscotto falliva **in silenzio** (mostrando "Errore caricamento" o l'ultimo dato in `pc-fetch-cache`).
