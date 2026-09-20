@@ -287,6 +287,18 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 
 ---
 
+## Pubblicazione automatica social — cosa non esce mai da solo
+
+🔴 Dal 20/09/2026 Instagram e Facebook pubblicano **da soli** due volte al giorno (08:30 e 18:30) dal repo **privato** `SviluppoItaliaDigitale/social-pc-genzano`, che legge il materiale da `social-bozze/` di questo repo. Il sito non cambia: continua solo a generare le bozze. Vincoli scritti nel codice, non nella configurazione:
+
+- **Mai in automatico i badge `Allerta` ed `Emergenza`**: valgono nel momento in cui escono, si pubblicano a mano.
+- **Mai le versioni facili** (`-facile`), **mai un articolo non ancora online** sul sito.
+- **Un post al giorno**, finestra di recupero di 3 giorni (non ripesca l'archivio).
+- **Commenti Instagram disattivati** sui post automatici (i canali sono presidiati a orari definiti, vedi `/social-media-policy/`).
+- **Menzioni verificate**: `@dpcgov_official`, `@regionelazio.official`, `@comunegenzanodiroma`, `@fepiv_ol`. Un handle non si aggiunge mai per somiglianza col nome dell'ente (rule 02, web check obbligato).
+
+🔴 **Dopo la pubblicazione**: su **Facebook** il testo si riscrive (`scripts/modifica-post.py fb-testo`), su **Instagram no** — l'API accetta solo i commenti, verificato sul campo. Le **immagini non si cambiano su nessuna delle due**: una foto aggiunta a un articolo già pubblicato entra nei post successivi, non in quelli usciti. Per fermare o spostare una pubblicazione si modifica `coda-social.yaml` dell'altro repo, anche da telefono. Dettagli operativi in `manuale/parte-42-pubblicazione-automatica-social.md`, regole in rule 10 § "Pubblicazione automatica social".
+
 ## Auto-integrazione approfondimenti (video + link) — pre-autorizzata
 
 🟢 Istruzione permanente (20/05/2026): integra da sola gli **approfondimenti pertinenti** (video + link a siti della nostra lista) in articoli e pagine, senza OK caso per caso. Copre l'intero flusso fino a live.
