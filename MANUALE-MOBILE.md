@@ -417,6 +417,12 @@ Hugo ignora i commenti HTML al render, quindi non si vedono in produzione.
 
 ## 4. Ottenere le bozze social per gli articoli
 
+> 🟢 **Dal 20 settembre 2026 Instagram e Facebook non si copiano più a mano.** Escono da soli due
+> volte al giorno, alle 08:30 e alle 18:30, dal repository privato `social-pc-genzano`. Le bozze qui
+> sotto restano il materiale di partenza e ti servono ancora **per X e Telegram**, che continuano a
+> essere copia e incolla. Come fermare un post, come spostarlo e cosa si può correggere dopo la
+> pubblicazione: [manuale, Parte 42](manuale/parte-42-pubblicazione-automatica-social.md).
+
 Dopo che il workflow `📱 Genera bozze social` è andato a buon fine, le
 bozze sono nel repo. Le trovi qui (replica per ogni articolo):
 
