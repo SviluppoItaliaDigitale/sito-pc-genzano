@@ -102,6 +102,7 @@ jobs:
       - name: "🩺 Controlli di salute giornalieri (watchdog universale)"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SOCIAL_PAT: ${{ secrets.SOCIAL_REPO_PAT }}
           REPO: ${{ github.repository }}
         run: |
           set -uo pipefail
@@ -124,6 +125,34 @@ jobs:
               PROBLEMI="${PROBLEMI}- **${wf}** — controllare il log nella tab Actions\n"
             done <<< "$FALLITI"
             PROBLEMI="${PROBLEMI}\n"
+          fi
+
+          # ------------------------------------------------------------
+          # 1-bis) SENTINELLA DELLA PUBBLICAZIONE SOCIAL (altro repository).
+          #    Il sistema che pubblica su Instagram e Facebook vive nel repo
+          #    privato social-pc-genzano, che nessuno apre: se là si ferma,
+          #    la sua issue di guasto resta invisibile e — peggio — se non
+          #    parte affatto non viene creata nessuna issue. Qui si controlla
+          #    da fuori che giri davvero, almeno una volta ogni 24 ore.
+          # ------------------------------------------------------------
+          SOCIAL_REPO="SviluppoItaliaDigitale/social-pc-genzano"
+          # Il GITHUB_TOKEN di questo repo non vede l'altro, che è privato.
+          GH_TOKEN="${SOCIAL_PAT:-$GH_TOKEN}" \
+          ULTIMO=$(gh run list --repo "$SOCIAL_REPO" --workflow "pubblica-social-auto.yml" \
+                     --limit 1 --json createdAt,conclusion \
+                     --jq '.[0] | "\(.createdAt) \(.conclusion)"' 2>/dev/null || true)
+          if [ -z "$ULTIMO" ]; then
+            PROBLEMI="${PROBLEMI}### Pubblicazione social: nessun giro trovato\n\nIl workflow di \`$SOCIAL_REPO\` non risulta mai partito, o il repository non è raggiungibile.\n\n"
+          else
+            QUANDO=$(echo "$ULTIMO" | awk '{print $1}')
+            ESITO=$(echo "$ULTIMO" | awk '{print $2}')
+            TS=$(date -u -d "$QUANDO" +%s 2>/dev/null || echo 0)
+            ORE=$(( ($(date -u +%s) - TS) / 3600 ))
+            if [ "$TS" = "0" ] || [ "$ORE" -gt 26 ]; then
+              PROBLEMI="${PROBLEMI}### Pubblicazione social ferma da ${ORE} ore\n\nDovrebbe girare due volte al giorno (08:30 e 18:30). Ultimo giro: ${QUANDO}.\n\nDa controllare: i workflow programmati di GitHub si disattivano da soli dopo 60 giorni senza commit nel repository, e si fermano se finiscono i minuti disponibili.\n\n"
+            elif [ "$ESITO" = "failure" ]; then
+              PROBLEMI="${PROBLEMI}### Pubblicazione social: ultimo giro fallito\n\nGiro del ${QUANDO} concluso con errore. Il dettaglio è nelle issue di \`$SOCIAL_REPO\`.\n\n"
+            fi
           fi
 
           # ------------------------------------------------------------
