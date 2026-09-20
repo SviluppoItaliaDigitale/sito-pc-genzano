@@ -1,6 +1,6 @@
 ---
 title: "Equinozio d'autunno: cambiano i rischi, cambiano le abitudini"
-date: 2026-09-21
+date: 2026-09-21T00:01:00+02:00
 description: "Il 22 settembre segna l'equinozio d'autunno astronomico. Un'occasione per rivedere le abitudini domestiche in chiave di sicurezza."
 badge: "Informazione"
 priorita: "normale"
