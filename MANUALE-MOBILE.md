@@ -418,10 +418,18 @@ Hugo ignora i commenti HTML al render, quindi non si vedono in produzione.
 ## 4. Ottenere le bozze social per gli articoli
 
 > 🟢 **Dal 20 settembre 2026 Instagram e Facebook non si copiano più a mano.** Escono da soli due
-> volte al giorno, alle 08:30 e alle 18:30, dal repository privato `social-pc-genzano`. Le bozze qui
-> sotto restano il materiale di partenza e ti servono ancora **per X e Telegram**, che continuano a
-> essere copia e incolla. Come fermare un post, come spostarlo e cosa si può correggere dopo la
-> pubblicazione: [manuale, Parte 42](manuale/parte-42-pubblicazione-automatica-social.md).
+> volte al giorno, alle 08:30 e alle 18:30, dal repository privato `social-pc-genzano`. Come fermare
+> un post, come spostarlo e cosa si può correggere dopo la pubblicazione:
+> [manuale, Parte 42](manuale/parte-42-pubblicazione-automatica-social.md).
+>
+> Su **Telegram** ogni articolo nuovo arriva già da solo sul canale, con titolo, sommario e link
+> (workflow `notifica-telegram-articolo.yml`): è un avviso, non un post curato. La bozza
+> `telegram.txt` qui sotto serve se vuoi pubblicare qualcosa di più ricco.
+>
+> Resta davvero da copiare a mano solo **X**, dove la pubblicazione automatica costerebbe
+> (l'accesso gratuito non esiste più da febbraio 2026, e un post con un link si paga venti
+> centesimi di dollaro). Scelta del 20/09/2026: non ne vale la pena, le bozze restano per il
+> copia e incolla.
 
 Dopo che il workflow `📱 Genera bozze social` è andato a buon fine, le
 bozze sono nel repo. Le trovi qui (replica per ogni articolo):

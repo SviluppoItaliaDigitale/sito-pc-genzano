@@ -170,7 +170,23 @@ stesso messaggio d'errore fuorviante, `Only photo or video can be accepted as me
 Da lì la regola che resta: **il messaggio d'errore riporta l'indirizzo della prima immagine**. Un
 guasto dello stesso tipo, la prossima volta, si legge al primo colpo.
 
-## 42.10 — Documentazione collegata
+## 42.10 — Le altre due reti
+
+**Telegram** non passa da questo sistema, ma è già automatico per conto suo: a ogni articolo nuovo
+il workflow `notifica-telegram-articolo.yml` manda sul canale un avviso con badge, titolo, sommario
+e link. È una segnalazione, non un post curato; la bozza `telegram.txt` resta per quando si vuole
+pubblicare qualcosa di più costruito.
+
+**X resta a mano, per una scelta di spesa presa il 20/09/2026.** L'accesso gratuito alle API non
+esiste più da febbraio 2026: si paga a consumo, e un post che contiene un link costa **0,20 dollari**
+contro gli 0,015 di un post senza. Siccome i nostri post il link ce l'hanno sempre, un post al
+giorno farebbe circa **73 dollari l'anno**. Per il pubblico che quella piattaforma ha per un gruppo
+comunale non vale la spesa: le bozze continuano a essere generate e si copiano quando serve.
+
+Se un domani si decidesse diversamente, la via ragionevole è automatizzare **solo i contenuti
+importanti**, non tutto: a un post a settimana la spesa scende intorno ai dieci dollari l'anno.
+
+## 42.11 — Documentazione collegata
 
 - Regole operative e vincoli: [`.claude/rules/10-automazioni-github-actions.md`](../.claude/rules/10-automazioni-github-actions.md) § "Pubblicazione automatica social"
 - Generazione delle bozze: [Parte 11](parte-11-testi-per-i-social-instagram-facebook-x-telegram.md) e [Parte 16](parte-16-bozze-social-gestione-quota-api.md)
