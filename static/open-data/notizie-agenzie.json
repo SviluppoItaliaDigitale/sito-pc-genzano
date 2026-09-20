@@ -5,11 +5,77 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-19T23:07:12+00:00",
+  "generato": "2026-09-20T06:18:34+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-20T06:11:31+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina, maxi attacco contro la Russia: colpita raffineria. Sindaco Mosca: \"Vogliono sabotare elezioni\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-ultime-news-guerra-oggi-20-settembre_3TWBhaOe7oaNhEnwOcmW5C"
+  },
+  {
+   "data": "2026-09-20T06:08:10+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "In moto si scontra con ebike, morto 39enne sull'isola d'Ischia",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/in-moto-si-scontra-con-ebike-morto-39enne-sullisola-dischia_2f41dc2b-21d2-4c00-9104-f1733ca7e991.html"
+  },
+  {
+   "data": "2026-09-20T06:04:57+00:00",
+   "fonte": "ANSA",
+   "titolo": "Raid di droni ucraini su Mosca, almeno due morti",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/20/allarme-per-droni-in-volo-su-kiev-raid-su-mosca_a2b0173b-8bb7-44a0-947e-7cca5ba92364.html"
+  },
+  {
+   "data": "2026-09-20T05:48:43+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "MotoGp, oggi si corre in Austria: orario, griglia di partenza e dove vedere gara in chiaro",
+   "url": "https://www.adnkronos.com/sport/motogp-gp-austria-oggi-orario-griglia-partenza-dove-vederlo_ZH7RahzBHuG08Id138DZC"
+  },
+  {
+   "data": "2026-09-20T05:38:02+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il nemico nella stanza accanto",
+   "url": "https://www.ansa.it/sito/podcast/la_scelta_del_direttore/2026/09/18/il-nemico-nella-stanza-accanto_c1495d23-8028-4bd6-8cdb-8744dbade043.html"
+  },
+  {
+   "data": "2026-09-20T05:34:22+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Germania, elezioni oggi nel Meclemburgo e a Berlino: voto cruciale per Merz dopo trionfo AfD in Sassonia",
+   "url": "https://www.adnkronos.com/internazionale/esteri/germania-elezioni-meclemburgo-berlino-afd-merz-ultime-notizie_7nEBTlfmO2A7V8gUEYwgPW"
+  },
+  {
+   "data": "2026-09-20T04:43:12+00:00",
+   "fonte": "ANSA",
+   "titolo": "Trump anticipa il rientro da Camp David e torna alla Casa Bianca",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/20/trump-anticipa-il-rientro-da-camp-david-e-torna-alla-casa-bianca_d85ac995-09c8-4380-8a2c-330e9dd7d8ba.html"
+  },
+  {
+   "data": "2026-09-20T03:15:06+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'esercito americano  attacca una imbarcazione nel Mar dei Caraibi, quattro morti",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/20/lesercito-americano-attacca-una-imbarcazione-nel-mar-dei-caraibi-quattro_cc1e15bf-33af-4e02-9b1a-42945c4e09b9.html"
+  },
+  {
+   "data": "2026-09-20T02:36:05+00:00",
+   "fonte": "ANSA",
+   "titolo": "Graduale ritorno alla normalità a Cuba dopo il blackout elettrico nazionale",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/20/graduale-ritorno-alla-normalita-a-cuba-dopo-il-blackout-elettrico-nazionale_77bf7493-6d51-44e1-988a-72788527fde1.html"
+  },
+  {
+   "data": "2026-09-20T01:22:50+00:00",
+   "fonte": "ANSA",
+   "titolo": "Ed Sheeran torna sul palco dopo la bufera e parla di Gaza: 'Situazione ingiustificabile'",
+   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/20/ed-sheeran-torna-sul-palco-dopo-la-bufera-e-parla-di-gaza-situazione-ingiustificabile_c8e9f0d5-5296-49f3-9efe-2626f702bb82.html"
+  },
+  {
+   "data": "2026-09-19T23:51:36+00:00",
+   "fonte": "ANSA",
+   "titolo": "Addio a Sandro Mazzola, quando ricordava il Grande Torino e papà Valentino",
+   "url": "https://www.ansa.it/sito/videogallery/italia/2026/09/19/addio-a-sandro-mazzola-quando-ricordava-il-grande-torino-e-papa-valentino_76a60efd-14ab-4287-8c90-5ad61bfeaa27.html"
+  },
   {
    "data": "2026-09-19T22:07:00+00:00",
    "fonte": "ADNKRONOS",
@@ -27,12 +93,6 @@
    "fonte": "ANSA",
    "titolo": "La Lazio vince 2-0 a Venezia e raggiunge Inter e Roma in vetta",
    "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/19/la-lazio-vince-2-0-a-venezia-e-raggiunge-inter-e-roma-in-vetta_6df52126-fcd2-4cdd-9cc1-bfea86b586e4.html"
-  },
-  {
-   "data": "2026-09-19T20:49:31+00:00",
-   "fonte": "ANSA",
-   "titolo": "Riad sott'attacco. Gli Houthi: 'Non siamo in guerra con l'Italia'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/19/riad-sottattacco.-gli-houthi-non-siamo-in-guerra-con-litalia_83a5e95b-d523-4913-a557-a06ae487425b.html"
   },
   {
    "data": "2026-09-19T20:34:00+00:00",
@@ -83,28 +143,10 @@
    "url": "https://www.ansa.it/sito/notizie/politica/2026/09/19/conte-assolvero-il-mandato-di-nova-no-al-vivacchiare-della-politica_9e587ba7-024f-4f2b-89fc-5d26d37786bf.html"
   },
   {
-   "data": "2026-09-19T19:40:29+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ucraina, Trump firma le sanzioni a Mosca. Zelensky: 'Grazie America!'&nbsp;",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/19/ucraina-trump-firma-le-sanzioni-a-mosca.-zelensky-grazie-america_2075c441-d9d7-49f4-b72d-9135c6db0d29.html"
-  },
-  {
-   "data": "2026-09-19T19:40:06+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trump pianta la bandiera sulla Groenlandia, tra terre rare e rotte artiche",
-   "url": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/09/18/trump-accordo-con-danimarca-e-groenlandia-per-il-controllo-usa-della-sicurezza_1cca247f-3819-4ca1-8017-ce344cbcec44.html"
-  },
-  {
    "data": "2026-09-19T19:19:29+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Trump: \"Il problema dell'IA è solo il nome: chiamiamola Intelligenza Suprema\"",
    "url": "https://www.adnkronos.com/internazionale/esteri/trump-intelligenza-artificiale-sondaggio_3VU3nWOg7wZ3a6fFoyHxaw"
-  },
-  {
-   "data": "2026-09-19T19:17:51+00:00",
-   "fonte": "ANSA",
-   "titolo": "Regge la tregua di Pontida ma Salvini non cede: 'Si vince uniti da nord a sud'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/19/salvini-a-pontida-la-lega-vince-solo-se-e-forte-e-unita-da-nord-a-sud_dc5905ed-0d59-4546-bbba-3f9b25a0aa92.html"
   },
   {
    "data": "2026-09-19T19:17:15+00:00",
@@ -137,24 +179,6 @@
    "url": "https://www.adnkronos.com/politica/matteo-salvini-pontida-giovani-oggi-news-lega_174ynEgx6eSddlixg4imSY"
   },
   {
-   "data": "2026-09-19T18:35:23+00:00",
-   "fonte": "ANSA",
-   "titolo": "Berlinesi al voto fra l'emergenza casa e la rabbia per il degrado",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/19/berlinesi-al-voto-fra-lemergenza-casa-e-la-rabbia-per-il-degrado_a6875b74-0dc6-4a2b-b2f8-4ef4ceca2900.html"
-  },
-  {
-   "data": "2026-09-19T18:31:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Conte batte Schlein nei sondaggi sulle primarie. I Dem restano fiduciosi: \"Nessuna paura\"",
-   "url": "https://www.adnkronos.com/politica/giuseppe-conte-elly-schlein-silvia-salis-primarie-centrosinistra_4ukVBZ1X0jkN34rJQBZNFW"
-  },
-  {
-   "data": "2026-09-19T18:11:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Venezia-Lazio 0-2, Zaccagni-Noslin gol e Gattuso primo con Roma e Inter",
-   "url": "https://www.adnkronos.com/sport/diretta-venezia-lazio-serie-a-oggi-live_4yJR0kb5z0FvP41gZiuhWU"
-  },
-  {
    "data": "2026-09-19T18:06:54+00:00",
    "fonte": "ANSA",
    "titolo": "Gasolio sfiora i 2,9 euro con punte di 3,1 euro. Balza il carburante per gli aerei",
@@ -165,30 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Auto sulla folla, l'avvocato che assiste il fratello della vittima: 'Gesto con finalità terroristica'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/19/auto-sulla-folla-lavvocato-gesto-con-finalita-terroristica_7c919819-3e77-4fa7-a97a-59d30b2a0184.html"
-  },
-  {
-   "data": "2026-09-19T18:05:48+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Operaio muore cadendo dal tetto di un capannone, altri tre incidenti sul lavoro in Veneto",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/19/tre-incidenti-sul-lavoro-in-veneto-operai-feriti-gravi-in-ospedale_248b9776-4ee6-4ff7-89bf-0a796356bcc5.html"
-  },
-  {
-   "data": "2026-09-19T18:05:25+00:00",
-   "fonte": "ANSA",
-   "titolo": "Le ronde a Rozzano finiscono in procura, anche ipotesi odio razziale",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/19/ai-pm-uninformativa-dei-carabinieri-sulle-ronde-a-rozzano-anche-odio-razziale_ac2b622f-df87-43ff-9894-a30116f70889.html"
-  },
-  {
-   "data": "2026-09-19T18:04:03+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Precipita da una ferrata e muore nel Vicentino",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/19/precipita-da-una-ferrata-e-muore-nel-vicentino_7323da74-734a-4a4e-bdc7-514bdfd2469e.html"
-  },
-  {
-   "data": "2026-09-19T18:03:27+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Omicidio Nada Cella, il 18 gennaio il processo d'appello",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/19/omicidio-nada-cella-il-18-gennaio-il-processo-dappello_f94bdb50-bb07-490a-a5f0-f1118fce68b6.html"
   }
  ]
 }
