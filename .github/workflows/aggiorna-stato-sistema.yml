@@ -147,8 +147,12 @@ jobs:
           # ------------------------------------------------------------
           SOCIAL_REPO="SviluppoItaliaDigitale/social-pc-genzano"
           # Il GITHUB_TOKEN di questo repo non vede l'altro, che è privato.
-          GH_TOKEN="${SOCIAL_PAT:-$GH_TOKEN}" \
-          ULTIMO=$(gh run list --repo "$SOCIAL_REPO" --workflow "pubblica-social-auto.yml" \
+          # 🔴 Il token diverso va passato DENTRO la sostituzione di comando:
+          # scritto prima dell'assegnazione (GH_TOKEN=... ULTIMO=...) bash lo
+          # legge come una doppia assegnazione e il token resta cambiato per
+          # tutto il resto dello script, facendo fallire la chiusura della
+          # issue con "Resource not accessible by personal access token".
+          ULTIMO=$(GH_TOKEN="${SOCIAL_PAT:-$GH_TOKEN}" gh run list --repo "$SOCIAL_REPO" --workflow "pubblica-social-auto.yml" \
                      --limit 1 --json createdAt,conclusion \
                      --jq '.[0] | "\(.createdAt) \(.conclusion)"' 2>/dev/null || true)
           if [ -z "$ULTIMO" ]; then
