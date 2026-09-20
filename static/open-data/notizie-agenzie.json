@@ -5,11 +5,143 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-20T18:03:41+00:00",
+  "generato": "2026-09-20T20:44:35+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-20T20:42:44+00:00",
+   "fonte": "ANSA",
+   "titolo": "Serie A: Il Milan batte il Lecce 3-0",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/20/serie-a-il-milan-batte-il-lecce-3-0_e53a5b82-704a-469c-9b9c-515ccb840563.html"
+  },
+  {
+   "data": "2026-09-20T20:38:08+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'AfD vince anche in Meclemburgo-Pomerania, Berlino alla Linke ma Merz non molla",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/20/lafd-vince-anche-in-meclemburgo-pomerania-berlino-alla-linke-ma-merz-non_e858bc98-bac2-4f2f-a7ce-abd390ca6baf.html"
+  },
+  {
+   "data": "2026-09-20T20:08:21+00:00",
+   "fonte": "ANSA",
+   "titolo": "Mondiali di ciclismo: Evenepoel domina la crono, un Ganna d'argento si inchina ancora",
+   "url": "https://www.ansa.it/sito/notizie/sport/ciclismo/2026/09/20/mondiali-di-ciclismo-evenepoel-domina-la-crono-un-ganna-dargento-si-inchina-ancora_405461e8-3504-4ec3-a65c-b75ac56f805a.html"
+  },
+  {
+   "data": "2026-09-20T19:39:10+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Evenepoel campione del mondo a cronometro, 2° posto per Ganna",
+   "url": "https://www.adnkronos.com/sport/ciclismo-ganna-cronometro-evenepoel-campione-del-mondo_7yhhCqTwKIx1Lpq1zHLNIg"
+  },
+  {
+   "data": "2026-09-20T19:34:11+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Fedriga dai lavoratori Electrolux che presenziano a Pordenonelegge",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/fedriga-dai-lavoratori-electrolux-che-presenziano-a-pordenonelegge_05a330a0-3482-4ef3-94f3-7068ec8b5cda.html"
+  },
+  {
+   "data": "2026-09-20T19:20:46+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "#AccadeOggi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
+  },
+  {
+   "data": "2026-09-20T19:18:56+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il partito di Putin rivince le elezioni. Pioggia di droni e missili su Mosca",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/20/il-partito-di-putin-rivince-le-elezioni-pioggia-di-droni-e-missili-su-mosca_e4dff2be-9db4-41e8-ae3d-ed08b4618e8e.html"
+  },
+  {
+   "data": "2026-09-20T19:16:01+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Mourinho show dopo il ko del Real: \"C'erano due rossi\" e mostra le foto in conferenza",
+   "url": "https://www.adnkronos.com/sport/mourinho-real-madrid-atletico-simeone-show-arbitro-polemiche_63HMBikvkaKbJcXwy8Ba7y"
+  },
+  {
+   "data": "2026-09-20T19:16:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sarri: \"Contatto Kalulu-Rowe? Se il Var è così meglio abolirlo\"",
+   "url": "https://www.adnkronos.com/sport/var-meglio-abolirlo-sarri-protesta-juve-atalanta-rowe_19V7Qt8iCHrKIfn3m3zMtW"
+  },
+  {
+   "data": "2026-09-20T19:08:32+00:00",
+   "fonte": "ANSA",
+   "titolo": "Mattarella: 'Emerge a livello globale la tentazione di democrazia illiberale'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/19/mattarella-alla-cerimonia-di-chiusura-di-pordenonelegge_f8be6bcc-6a04-4957-b0b8-9685a710c734.html"
+  },
+  {
+   "data": "2026-09-20T19:00:22+00:00",
+   "fonte": "ANSA",
+   "titolo": "Germania, il trionfo di Elif Eralp nella capitale: 'Abbiamo fatto la storia'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/20/candidata-linke-a-berlino-fatta-la-storia-da-oggi-cambiamo-la-nostra-citta_886896f5-37c2-41be-bdea-13ad39bce623.html"
+  },
+  {
+   "data": "2026-09-20T18:40:28+00:00",
+   "fonte": "ANSA",
+   "titolo": "Sorprende ladri nel cortile di casa, spara e ne uccide uno",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/sorprende-i-ladri-nel-cortile-di-casa-spara-e-ne-uccide-uno_016cdb4e-c1c9-49c5-80df-5241d7dc17e2.html"
+  },
+  {
+   "data": "2026-09-20T18:36:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Elezioni Russia, exit poll: \"Al partito di Putin il 49,4% di voti\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/elezioni-russia-esito-exit-poll_1w26vCX9BRkXk6CfvIVPRu"
+  },
+  {
+   "data": "2026-09-20T18:29:36+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Insegue il pallone e viene travolto dal bus, 12enne gravissimo",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/insegue-il-pallone-e-viene-travolto-dal-bus-12enne-gravissimo_37663a97-b77b-447e-bafc-3a67057b3b4c.html"
+  },
+  {
+   "data": "2026-09-20T18:27:41+00:00",
+   "fonte": "ANSA",
+   "titolo": "Nuova escalation, Trump torna prima da Camp David: 'Devo decidere sull'Iran'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/09/20/nuova-escalation-trump-torna-prima-da-camp-david-devo-decidere-sulliran_d85ac995-09c8-4380-8a2c-330e9dd7d8ba.html"
+  },
+  {
+   "data": "2026-09-20T18:26:29+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Mattarella, la battaglia dei diritti è lungi dall'essere conclusa",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/mattarella-la-battaglia-dei-diritti-e-lungi-dallessere-conclusa_d4c01eee-dc8b-42fa-a677-2bb9f1c64d68.html"
+  },
+  {
+   "data": "2026-09-20T18:26:14+00:00",
+   "fonte": "ANSA",
+   "titolo": "Lega, la mossa di Salvini a Pontida: congresso straordinario a ottobre",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/20/lega-la-mossa-di-salvini-a-pontida-congresso-straordinario-a-ottobre_f7eadbe5-25a0-4754-a303-b2aae6c72b05.html"
+  },
+  {
+   "data": "2026-09-20T18:23:36+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Europei pallavolo, oggi ottavi Italia-Danimarca - Diretta",
+   "url": "https://www.adnkronos.com/sport/europei-pallavolo-oggi-ottavi-italia-danimarca-diretta_4fvgx9lZhIQcz4Mth0Kkn6"
+  },
+  {
+   "data": "2026-09-20T18:22:35+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Minorenni in giro da soli di notte, denunciati i genitori per abbandono",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/minorenni-in-giro-da-soli-di-notte-denunciati-i-genitori-per-abbandono_e0d6df2e-f82e-4210-9f10-dc6e8f2dd282.html"
+  },
+  {
+   "data": "2026-09-20T18:21:32+00:00",
+   "fonte": "ANSA",
+   "titolo": "Elezioni in Germania, a Berlino Die Linke festeggia la vittoria sulla CDU",
+   "url": "https://www.ansa.it/sito/videogallery/mondo/2026/09/20/elezioni-in-germania-a-berlino-die-linke-festeggia-la-vittoria-sulla-cdu_95ddd27b-ce2a-4739-b9b7-a8dc89eda154.html"
+  },
+  {
+   "data": "2026-09-20T18:02:13+00:00",
+   "fonte": "ANSA",
+   "titolo": "Lula contro le scommesse online, ma il calcio reagisce: 'Così moriamo'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/20/lula-contro-le-scommesse-online-ma-il-calcio-reagisce-cosi-moriamo_8fe4b894-df24-4f9c-ab69-a93c0cfa5fef.html"
+  },
+  {
+   "data": "2026-09-20T18:01:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Milan-Lecce 3-0: arriva il tris di Moreira - Diretta",
+   "url": "https://www.adnkronos.com/sport/diretta-milan-lecce-oggi-serie-a-live_1v542Di0JWyZ2cS1Qd6R5G"
+  },
   {
    "data": "2026-09-20T17:59:27+00:00",
    "fonte": "ANSA",
@@ -17,28 +149,16 @@
    "url": "https://www.ansa.it/sito/notizie/politica/2026/09/20/meloni-in-classe-numero-massimo-di-stranieri-e-divieto-di-burqa-norma-in-arrivo_eee88fcc-7ab4-4a71-864f-6699535148f3.html"
   },
   {
-   "data": "2026-09-20T17:59:11+00:00",
-   "fonte": "ANSA",
-   "titolo": "Lula contro le scommesse online ma il calcio reagisce, 'così moriamo'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/20/lula-contro-le-scommesse-online-ma-il-calcio-reagisce-cosi-moriamo_8fe4b894-df24-4f9c-ab69-a93c0cfa5fef.html"
-  },
-  {
-   "data": "2026-09-20T17:55:07+00:00",
-   "fonte": "ANSA",
-   "titolo": "Serie A, Juventus-Atalanta 2-0",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/20/serie-a-juventus-atalanta-2-0_64b2f6be-3aa2-476e-9403-48b2a88a021b.html"
+   "data": "2026-09-20T17:59:24+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "'Tetto difficile da applicare, non possiamo cacciare i bimbi'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/presidi-il-numero-massimo-di-stranieri-condivisibile-ma-difficile-da-applicare_6df39cbe-bae5-46d7-8ffc-4f4896637743.html"
   },
   {
    "data": "2026-09-20T17:54:56+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Spara a ladro, la vittima identificata dai carabinieri",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/spara-a-ladro-la-vittima-identificata-dai-carabinieri_35ef656c-a581-41d7-87ec-d9ad7728b743.html"
-  },
-  {
-   "data": "2026-09-20T17:53:59+00:00",
-   "fonte": "ANSA",
-   "titolo": "Germania, prime proiezioni: l'AfD prima in Pomerania, la Linke vince a Berlino. Merz: 'Un disastro'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/20/germania-prime-proiezioni-lafd-prima-in-pomerania-la-linke-vince-a-berlino.-merz_e858bc98-bac2-4f2f-a7ce-abd390ca6baf.html"
   },
   {
    "data": "2026-09-20T17:51:04+00:00",
@@ -59,12 +179,6 @@
    "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/20/ed-sheeran-torna-sul-palco-dopo-la-bufera-e-parla-di-gaza-situazione-ingiustificabile_c8e9f0d5-5296-49f3-9efe-2626f702bb82.html"
   },
   {
-   "data": "2026-09-20T17:40:16+00:00",
-   "fonte": "ANSA",
-   "titolo": "Mattarella alla cerimonia di chiusura di Pordenonelegge",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/19/mattarella-alla-cerimonia-di-chiusura-di-pordenonelegge_f8be6bcc-6a04-4957-b0b8-9685a710c734.html"
-  },
-  {
    "data": "2026-09-20T17:35:45+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Prof accoltellata a Roma, i genitori del 13enne le chiedono scusa",
@@ -75,120 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Moto travolge il pubblico durante una esibizione, un ferito gravissimo",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/moto-travolge-il-pubblico-durante-una-esibizione-un-ferito-gravissimo_2ea934da-1455-4b1d-b7f9-1fdbc1bacbf7.html"
-  },
-  {
-   "data": "2026-09-20T17:24:04+00:00",
-   "fonte": "ANSA",
-   "titolo": "Una 24enne in testa al campionato dei droni, ha vinto la tappa di Roma",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/una-24enne-in-testa-al-campionato-dei-droni-ha-vinto-la-tappa-di-roma_ad501624-018e-4db2-8eb0-6bf306096d9d.html"
-  },
-  {
-   "data": "2026-09-20T17:20:43+00:00",
-   "fonte": "ANSA",
-   "titolo": "'Una leggenda vive', Milano si prepara all'addio di Mazzola",
-   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/20/domani-a-milano-i-funerali-di-sandro-mazzola_0cfc7294-fd9d-404c-9f1c-0b3aa02d13e5.html"
-  },
-  {
-   "data": "2026-09-20T16:59:25+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Fedriga, \"scelta congresso straordinario favorisce discussione e crescita\"",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/fedriga-scelta-congresso-straordinario-favorisce-discussione-e-crescita_8ba420c8-2974-4b78-acb0-6e23295cf2d5.html"
-  },
-  {
-   "data": "2026-09-20T16:53:21+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Il giallo delle sorelline, portate in comunità coi quattro fratelli",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/sorelline-ritrovate-portate-in-comunita-insieme-ai-4-fratelli_ed21639e-3ec7-49aa-ba2f-5efe1dc040a5.html"
-  },
-  {
-   "data": "2026-09-20T16:49:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Juve-Atalanta, proteste nerazzurre per mancato rigore su Rowe: cos'è successo",
-   "url": "https://www.adnkronos.com/sport/juve-atalanta-rowe-proteste-rigore-cosa-e-successo_6VZtx3eLRkJ4Y2lrrtCCqM"
-  },
-  {
-   "data": "2026-09-20T16:46:20+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "#AccadeOggi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
-  },
-  {
-   "data": "2026-09-20T16:37:25+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "In moto contro una balaustra, muore il figlio di Leone di Lernia",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/finisce-in-moto-contro-una-balaustra-muore-il-figlio-di-leone-di-lernia_7fefcfc6-0a9f-4db5-bf25-af4b75e240c6.html"
-  },
-  {
-   "data": "2026-09-20T16:34:42+00:00",
-   "fonte": "ANSA",
-   "titolo": "Schlein: 'Meloni ponga fine a suoi fallimenti e dica quando si vota'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/20/schlein-meloni-ponga-fine-a-suoi-fallimenti-e-dica-quando-si-vota_0585fbac-8355-4920-9ab4-ee7af2e0d1d7.html"
-  },
-  {
-   "data": "2026-09-20T16:29:04+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Valditara, 'l'opposizione ha nostalgia delle classi ghetto'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/valditara-lopposizione-ha-nostalgia-delle-classi-ghetto_c9de24c8-7e69-4df6-a599-fbe190aa447c.html"
-  },
-  {
-   "data": "2026-09-20T16:26:28+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "In Italia 930mila alunni stranieri, sono oltre l'11%",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/in-italia-930mila-alunni-stranieri-sono-oltre-l11_d061dbc4-b6a2-409b-8ee9-1dab1317329a.html"
-  },
-  {
-   "data": "2026-09-20T16:19:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Juve-Atalanta, curva bianconera non rispetta minuto di silenzio per Mazzola e volta le spalle al campo",
-   "url": "https://www.adnkronos.com/sport/juve-atalanta-curva-non-rispetta-minuto-silenzio-mazzola_7cGttD4UkLY6jlbu69al36"
-  },
-  {
-   "data": "2026-09-20T16:16:13+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "'Una Nessuna Centomila', domani il live all'Arena di Verona: svelato il cast",
-   "url": "https://www.adnkronos.com/spettacoli/una-nessuna-centomila-domani-arena-di-verona-cast_1RlQ1qx0QJfpMuEFWYRBkg"
-  },
-  {
-   "data": "2026-09-20T16:16:07+00:00",
-   "fonte": "ANSA",
-   "titolo": "Salvini a Pontida: 'Si vince uniti, Congresso straordinario a ottobre'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/20/a-pontida-le-magliette-pro-e-contro-salvini-sempre-con-lui-si-dimetta-subito_f7eadbe5-25a0-4754-a303-b2aae6c72b05.html"
-  },
-  {
-   "data": "2026-09-20T16:10:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Elezioni Germania, AfD avanti in Meclemburgo e Cdu crolla. Merz: \"Disastro ma non mi dimetto\". Die Linke vince a Berlino",
-   "url": "https://www.adnkronos.com/internazionale/esteri/elezioni-germania-risultati-oggi-20-settembre_7CIliVNpX1Mir7dHuBsuxO"
-  },
-  {
-   "data": "2026-09-20T16:06:58+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trump: 'Deciderò se e quando far esplodere l'Iran, si comportino bene'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/09/20/trump-decidero-se-e-quando-far-esplodere-liran-si-comportino-bene_d85ac995-09c8-4380-8a2c-330e9dd7d8ba.html"
-  },
-  {
-   "data": "2026-09-20T15:59:08+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Presidi: 'Il numero massimo di stranieri condivisibile ma difficile da applicare'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/presidi-il-numero-massimo-di-stranieri-condivisibile-ma-difficile-da-applicare_6df39cbe-bae5-46d7-8ffc-4f4896637743.html"
-  },
-  {
-   "data": "2026-09-20T15:49:48+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Spara e uccide un ladro, lui stesso ha allertato il 112",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/spara-e-uccide-un-ladro-lui-stesso-ha-allertato-il-112_0fb24fa2-b798-4031-8c64-f239678602ed.html"
-  },
-  {
-   "data": "2026-09-20T15:47:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Da Legnano a Milano, la sfilata di auto d'epoca con il numero 1522 per le donne vittime di violenza e stalking",
-   "url": "https://www.adnkronos.com/cronaca/auto-epoca-milano-raduno-1522-sostegno-numero-anti-violenza-stalking_2dEMrkHlpl4ctlv7YfnBgE"
-  },
-  {
-   "data": "2026-09-20T15:41:54+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Frosinone-Como 2-0, gialloblù quinti a sorpresa. Il Parma batte il Genoa, prima vittoria per Cuesta",
-   "url": "https://www.adnkronos.com/sport/serie-a-risultati-oggi-frosinone-super-como-ko-parma-genoa_26obyc8BhcoWEBDLlbWyzi"
   }
  ]
 }
