@@ -118,13 +118,23 @@ jobs:
                       --created "$(date -u -d '24 hours ago' +%Y-%m-%dT%H:%M:%S)Z..$(date -u +%Y-%m-%dT%H:%M:%S)Z" \
                       --limit 100 --json name,workflowName,url \
                       --jq '[.[] | .workflowName] | unique | .[]' 2>/dev/null || true)
+          # Un fallimento già rientrato non è un problema: segnalarlo manda
+          # un avviso per qualcosa che funziona di nuovo, e l'avviso di lupo
+          # al lupo insegna a non aprire più le segnalazioni. Si tiene solo
+          # ciò che è ANCORA rotto, cioè dove l'ultimo run è fallito.
+          ROTTI=""
           if [ -n "$FALLITI" ]; then
-            PROBLEMI="${PROBLEMI}### Workflow con run falliti nelle ultime 24 ore\n\n"
             while IFS= read -r wf; do
               [ -z "$wf" ] && continue
-              PROBLEMI="${PROBLEMI}- **${wf}** — controllare il log nella tab Actions\n"
+              ULTIMO_ESITO=$(gh run list --repo "$REPO" --workflow "$wf" --limit 1 \
+                               --json conclusion --jq '.[0].conclusion' 2>/dev/null || echo "")
+              if [ "$ULTIMO_ESITO" = "failure" ]; then
+                ROTTI="${ROTTI}- **${wf}** — ancora fallito all'ultimo giro, controllare il log nella tab Actions\n"
+              fi
             done <<< "$FALLITI"
-            PROBLEMI="${PROBLEMI}\n"
+          fi
+          if [ -n "$ROTTI" ]; then
+            PROBLEMI="${PROBLEMI}### Workflow ancora in errore\n\n${ROTTI}\n"
           fi
 
           # ------------------------------------------------------------
