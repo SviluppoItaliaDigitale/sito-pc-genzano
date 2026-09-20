@@ -275,6 +275,12 @@ def _barra_brand(base: Image.Image, W: int) -> None:
            font=ImageFont.truetype(str(find_font("Regular")), 24), fill=(220, 232, 245))
 
 
+# I JPEG sono salvati BASELINE, non progressive: la Content Publishing API di
+# Instagram rifiuta i progressive con l'errore "Only photo or video can be
+# accepted as media type" (code 9004). Verificato sul campo il 20/09/2026, alla
+# prima pubblicazione automatica. Non rimettere progressive=True.
+
+
 def crea_slide_titolo(titolo: str, badge: str, out_path: Path,
                       W: int = 1080, H: int = 1350) -> Path:
     """Slide 1 del carosello / post singolo: card-titolo verticale nativa 4:5.
@@ -312,7 +318,7 @@ def crea_slide_titolo(titolo: str, badge: str, out_path: Path,
            font=ImageFont.truetype(str(find_font("Bold")), 30), fill=WHITE)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    base.convert("RGB").save(out_path, "JPEG", quality=92, optimize=True, progressive=True)
+    base.convert("RGB").save(out_path, "JPEG", quality=92, optimize=True, progressive=False)
     return out_path
 
 
@@ -339,7 +345,7 @@ def crea_slide_foto(foto_path: Path, out_path: Path,
         font=ImageFont.truetype(str(find_font("Bold")), 30), fill=WHITE)
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    base.convert("RGB").save(out_path, "JPEG", quality=92, optimize=True, progressive=True)
+    base.convert("RGB").save(out_path, "JPEG", quality=92, optimize=True, progressive=False)
     return out_path
 
 
@@ -377,7 +383,7 @@ def crea_slide_citazione(testo: str, out_path: Path,
     d.text((60, H - 92), "protezionecivilegenzano.it",
            font=ImageFont.truetype(str(find_font("Bold")), 30), fill=WHITE)
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    base.convert("RGB").save(out_path, "JPEG", quality=92, optimize=True, progressive=True)
+    base.convert("RGB").save(out_path, "JPEG", quality=92, optimize=True, progressive=False)
     return out_path
 
 
@@ -404,7 +410,7 @@ def crea_slide_punti(punti: list, out_path: Path,
     d.text((60, H - 92), "protezionecivilegenzano.it",
            font=ImageFont.truetype(str(find_font("Bold")), 30), fill=WHITE)
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    base.convert("RGB").save(out_path, "JPEG", quality=92, optimize=True, progressive=True)
+    base.convert("RGB").save(out_path, "JPEG", quality=92, optimize=True, progressive=False)
     return out_path
 
 
@@ -484,7 +490,7 @@ def crea_slide_affiliazioni(out_path: Path,
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     # JPEG quality 95 (era 92) per ridurre artifact su dettagli fini dei loghi
-    base.convert("RGB").save(out_path, "JPEG", quality=95, optimize=True, progressive=True, subsampling=0)
+    base.convert("RGB").save(out_path, "JPEG", quality=95, optimize=True, progressive=False, subsampling=0)
     return out_path
 
 
@@ -551,7 +557,7 @@ def crea_story_verticale(cover_path: Path, titolo: str, descrizione: str,
            font=ImageFont.truetype(str(find_font("Regular")), 30), fill=(223, 234, 245))
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    base.convert("RGB").save(out_path, "JPEG", quality=92, optimize=True, progressive=True)
+    base.convert("RGB").save(out_path, "JPEG", quality=92, optimize=True, progressive=False)
     return out_path
 
 
