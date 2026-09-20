@@ -28,6 +28,10 @@ Un temporale passa in venti minuti. Quello che lascia dietro dura settimane.
 
 L'**11 settembre**, su segnalazione dei Carabinieri, una squadra ha ripulito il manto stradale di **via Appia Vecchia** dai detriti che impedivano il transito regolare delle auto. Sul posto anche la Polizia Locale. Il **13 settembre**, all'incrocio tra **via Napoli e viale Lenin**, un ramo caduto in parte sulla siepe di una proprietà privata è stato tagliato e messo in sicurezza.
 
+{{< foto src="/images/2026-09-20-piattaforma-aerea-taglio-rami.webp"
+         alt="Un operatore con casco e imbragatura taglia rami dal cestello della piattaforma aerea, sollevato tra le fronde. Sotto, un volontario a terra accanto al mezzo con la scritta Protezione Civile Città di Genzano di Roma. A sinistra un grosso tronco spezzato e rami tagliati sul terreno."
+         caption="La piattaforma aerea del Gruppo durante il taglio dei rami in quota. A terra il tronco spezzato e il materiale già tagliato. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
+
 Il **14 settembre** in **via Diana** la squadra ha trovato la situazione più difficile della settimana. Un ceppo già tagliato durante il maltempo era smottato: il tronco poggiava in un punto instabile. La rimozione non è stata possibile in sicurezza. Sul posto sono intervenuti anche i **Vigili del Fuoco** e la **Polizia Locale**. Quando le condizioni non permettono di operare, la scelta corretta è fermarsi e segnalare: un albero rimosso male è più pericoloso di un albero lasciato dov'è.
 
 Il **16 settembre** altre due uscite: un albero di modeste dimensioni a bordo strada in **via Montegiove**, e il supporto a Roma per il ritiro di materiali, su richiesta del Comune. Il **17 settembre** un albero a bordo strada nei pressi dell'**Hotel Primus**.
