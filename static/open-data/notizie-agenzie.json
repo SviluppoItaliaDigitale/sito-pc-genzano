@@ -5,22 +5,64 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-20T20:44:35+00:00",
+  "generato": "2026-09-20T22:43:21+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-20T20:42:44+00:00",
-   "fonte": "ANSA",
-   "titolo": "Serie A: Il Milan batte il Lecce 3-0",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/20/serie-a-il-milan-batte-il-lecce-3-0_e53a5b82-704a-469c-9b9c-515ccb840563.html"
+   "data": "2026-09-20T22:05:41+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "M5S, Conte sfida Meloni e punta a Palazzo Chigi: \"Non indietreggeremo di un millimetro\"",
+   "url": "https://www.adnkronos.com/politica/giuseppe-conte-giorgia-meloni-m5s-ultime-notizie_4FV0lgKdBxOS5L66jQqYxm"
   },
   {
-   "data": "2026-09-20T20:38:08+00:00",
+   "data": "2026-09-20T22:03:23+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Meloni punge le opposizioni: \"Non cantate 'Bollo ciao'?\". E mette Vannacci nel mirino: \"A scuola tetto a stranieri e stop al burqa\"",
+   "url": "https://www.adnkronos.com/politica/giorgia-meloni-studenti-stranieri-scuola-divieto-burqa_7wpdMvuG0aSGMBmeoMUxuc"
+  },
+  {
+   "data": "2026-09-20T22:02:18+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "\"Russia minaccia Nato, piano di Putin può scattare presto\": l'allarme dell'intelligence in Europa",
+   "url": "https://www.adnkronos.com/internazionale/esteri/russia-minaccia-nato-piano-di-putin-puo-scattare-presto-lallarme-dellintelligence-in-europa_4F8AwC1kniZtyDkLmL05U4"
+  },
+  {
+   "data": "2026-09-20T21:50:06+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Como manca l'aggancio in vetta, riscatto Juve e Milan",
+   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/20/il-como-manca-laggancio-in-vetta-riscatto-juve-e-milan_bcc5657b-55dc-4374-8c43-8efea9afdc80.html"
+  },
+  {
+   "data": "2026-09-20T21:35:22+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Schlein: \"Sfida storica del Pd, dopo 20 anni vinceremo le elezioni\"",
+   "url": "https://www.adnkronos.com/politica/schlein-pd-elezioni-meloni_1zdEGYJqWtR2Yj99xAHj7i"
+  },
+  {
+   "data": "2026-09-20T21:29:45+00:00",
+   "fonte": "ANSA",
+   "titolo": "Cori e spalle, la curva della Juve non rispetta il minuto per Mazzola",
+   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/20/cori-e-spalle-la-curva-della-juve-non-rispetta-il-minuto-per-mazzola_40a0d083-21c1-4a39-9cb7-7e0f3809dc43.html"
+  },
+  {
+   "data": "2026-09-20T21:14:24+00:00",
    "fonte": "ANSA",
    "titolo": "L'AfD vince anche in Meclemburgo-Pomerania, Berlino alla Linke ma Merz non molla",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/20/lafd-vince-anche-in-meclemburgo-pomerania-berlino-alla-linke-ma-merz-non_e858bc98-bac2-4f2f-a7ce-abd390ca6baf.html"
+  },
+  {
+   "data": "2026-09-20T21:12:24+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Il ladro entra in casa, il labrador fa festa e porta i giochi...",
+   "url": "https://www.adnkronos.com/internazionale/esteri/video-cane-labrador-ladro_3cmKXTplm787lEqeUlGHig"
+  },
+  {
+   "data": "2026-09-20T21:12:11+00:00",
+   "fonte": "ANSA",
+   "titolo": "Eurovolley: dominio azzurro a Torino, l'Italia stacca il pass per i quarti",
+   "url": "https://www.ansa.it/sito/notizie/sport/pallavolo/2026/09/20/eurovolley-dominio-azzurro-a-torino-litalia-stacca-il-pass-per-i-quarti_65f76b35-9640-47a2-b8ce-5f185d435be0.html"
   },
   {
    "data": "2026-09-20T20:08:21+00:00",
@@ -113,9 +155,9 @@
    "url": "https://www.ansa.it/sito/notizie/politica/2026/09/20/lega-la-mossa-di-salvini-a-pontida-congresso-straordinario-a-ottobre_f7eadbe5-25a0-4754-a303-b2aae6c72b05.html"
   },
   {
-   "data": "2026-09-20T18:23:36+00:00",
+   "data": "2026-09-20T18:23:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Europei pallavolo, oggi ottavi Italia-Danimarca - Diretta",
+   "titolo": "Europei pallavolo, Italia-Danimarca 3-0 e azzurri ai quarti - Rivivi la diretta",
    "url": "https://www.adnkronos.com/sport/europei-pallavolo-oggi-ottavi-italia-danimarca-diretta_4fvgx9lZhIQcz4Mth0Kkn6"
   },
   {
@@ -139,7 +181,7 @@
   {
    "data": "2026-09-20T18:01:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Milan-Lecce 3-0: arriva il tris di Moreira - Diretta",
+   "titolo": "Milan-Lecce 3-0: Pulisic, Rabiot e Moreira portano i rossoneri al quinto posto",
    "url": "https://www.adnkronos.com/sport/diretta-milan-lecce-oggi-serie-a-live_1v542Di0JWyZ2cS1Qd6R5G"
   },
   {
@@ -147,48 +189,6 @@
    "fonte": "ANSA",
    "titolo": "La stretta di Meloni: 'In classe tetto agli stranieri e divieto di burqa'",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/09/20/meloni-in-classe-numero-massimo-di-stranieri-e-divieto-di-burqa-norma-in-arrivo_eee88fcc-7ab4-4a71-864f-6699535148f3.html"
-  },
-  {
-   "data": "2026-09-20T17:59:24+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "'Tetto difficile da applicare, non possiamo cacciare i bimbi'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/presidi-il-numero-massimo-di-stranieri-condivisibile-ma-difficile-da-applicare_6df39cbe-bae5-46d7-8ffc-4f4896637743.html"
-  },
-  {
-   "data": "2026-09-20T17:54:56+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Spara a ladro, la vittima identificata dai carabinieri",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/spara-a-ladro-la-vittima-identificata-dai-carabinieri_35ef656c-a581-41d7-87ec-d9ad7728b743.html"
-  },
-  {
-   "data": "2026-09-20T17:51:04+00:00",
-   "fonte": "ANSA",
-   "titolo": "Kallas scrive ai 27 per rafforzare Aspides, strada in salita",
-   "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/09/20/kallas-scrive-ai-27-per-rafforzare-aspides-strada-in-salita-_10dc84e7-f0fa-4279-9237-3e50882bd55e.html"
-  },
-  {
-   "data": "2026-09-20T17:45:55+00:00",
-   "fonte": "ANSA",
-   "titolo": "La prof accoltellata, caccia a chi ha postato il video online",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/prof-accoltellata-i-genitori-del-13enne-le-chiedono-scusa_e3bd5550-82f3-4f4f-b48c-7be396c4e40c.html"
-  },
-  {
-   "data": "2026-09-20T17:40:25+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ed Sheeran si scusa e rompe il silenzio: 'A Gaza situazione inaccettabile'",
-   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/20/ed-sheeran-torna-sul-palco-dopo-la-bufera-e-parla-di-gaza-situazione-ingiustificabile_c8e9f0d5-5296-49f3-9efe-2626f702bb82.html"
-  },
-  {
-   "data": "2026-09-20T17:35:45+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Prof accoltellata a Roma, i genitori del 13enne le chiedono scusa",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/prof-accoltellata-a-roma-i-genitori-del-13enne-le-chiedono-scusa_2e5a4c29-049d-4052-89f4-d1661d770c83.html"
-  },
-  {
-   "data": "2026-09-20T17:31:12+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Moto travolge il pubblico durante una esibizione, un ferito gravissimo",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/moto-travolge-il-pubblico-durante-una-esibizione-un-ferito-gravissimo_2ea934da-1455-4b1d-b7f9-1fdbc1bacbf7.html"
   }
  ]
 }
