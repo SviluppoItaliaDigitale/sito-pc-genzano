@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-20T11:35:11+00:00",
+  "generato": "2026-09-20T14:53:05+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-20T11:25:04+00:00",
+   "data": "2026-09-20T14:37:13+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "MotoGp, oggi Gp Austria - Diretta",
-   "url": "https://www.adnkronos.com/sport/motogp-gp-austria-diretta-martin-pole_3BOqcUOBoGDyLNbCycRlmo"
+   "titolo": "Camila Giorgi diventa mamma: è nato il primo figlio Magnus Vangelis",
+   "url": "https://www.adnkronos.com/sport/camila-giorgi-mamma-nato-figlio-magnus-vangelis_32RN9MltQOVIhWPub0edSs"
   },
   {
-   "data": "2026-09-20T11:21:53+00:00",
-   "fonte": "ANSA",
-   "titolo": "Salvini a Pontida: 'Si vince uniti, Congresso straordinario a ottobre'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/20/a-pontida-le-magliette-pro-e-contro-salvini-sempre-con-lui-si-dimetta-subito_f7eadbe5-25a0-4754-a303-b2aae6c72b05.html"
-  },
-  {
-   "data": "2026-09-20T11:20:42+00:00",
-   "fonte": "ANSA",
-   "titolo": "Meloni: 'In classe numero massimo di stranieri e divieto di burqa, norma in arrivo'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/20/meloni-in-classe-numero-massimo-di-stranieri-e-divieto-di-burqa-norma-in-arrivo_eee88fcc-7ab4-4a71-864f-6699535148f3.html"
-  },
-  {
-   "data": "2026-09-20T11:18:38+00:00",
-   "fonte": "ANSA",
-   "titolo": "Serie A: Fiorentina-Napoli in campo 0-1 DIRETTA",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/20/serie-a-fiorentina-napoli-in-campo-alle-12.30-diretta_58e62a85-e3ca-4f29-b244-4913260b8f2a.html"
-  },
-  {
-   "data": "2026-09-20T11:11:36+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "\"Vannacci premier entro 10 anni\", la previsione di Alemanno",
-   "url": "https://www.adnkronos.com/politica/vannacci-elezioni-futuro-nazionale-premier_3McJgkwAQzPMJsnAqUcKPy"
-  },
-  {
-   "data": "2026-09-20T11:05:45+00:00",
+   "data": "2026-09-20T14:36:02+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Con l'auto investe e uccide donna, indagato per omicidio stradale",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/con-lauto-investe-e-uccide-donna-indagato-per-omicidio-stradale_8d6e1a8a-dfc0-4314-ba29-3bad311769b7.html"
+   "titolo": "Spara e uccide un ladro, gli altri della banda scappati a piedi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/spara-e-uccide-un-ladro-gli-altri-della-banda-scappati-a-piedi_9c6f19f8-f5b1-4b7f-85e4-ea7bf459e729.html"
   },
   {
-   "data": "2026-09-20T11:05:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Pontida, Lega intitola pratone a Bossi. Salvini accolto da ovazione: \"Si vince uniti\"",
-   "url": "https://www.adnkronos.com/politica/lega-pontida-salvinibossi-news_3kZ1N1YkIYsnnACtx8kSnG"
-  },
-  {
-   "data": "2026-09-20T10:57:37+00:00",
+   "data": "2026-09-20T14:34:49+00:00",
    "fonte": "ANSA",
-   "titolo": "Sorprende i ladri nel cortile di casa, spara e ne uccide uno",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/sorprende-i-ladri-nel-cortile-di-casa-spara-e-ne-uccide-uno_016cdb4e-c1c9-49c5-80df-5241d7dc17e2.html"
+   "titolo": "Serie A, in campo Parma-Genoa DIRETTA",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/20/serie-a-parma-genoa-in-campo-diretta_8852d9e7-1382-4d2b-91aa-eb29aab14c47.html"
   },
   {
-   "data": "2026-09-20T10:56:58+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Spara e uccide ladro, 35enne indagato per omicidio",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/spara-e-uccide-ladro-35enne-indagato-per-omicidio_a9fa9c45-dbe1-401e-ada1-0d7715ec8697.html"
-  },
-  {
-   "data": "2026-09-20T10:50:22+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Calciatore investito in campo, l'incidente da brividi",
-   "url": "https://www.adnkronos.com/sport/calciatore-investito-in-campo-video_5zBHr6CFYGiHHzE06bIcsc"
-  },
-  {
-   "data": "2026-09-20T10:46:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Meloni: \"In Cdm a breve norma con numero massimo studenti stranieri in classe e divieto burqa\"",
-   "url": "https://www.adnkronos.com/politica/meloni-scuola-burqa-studenti-stranieri-classe_3fbNAadbh9JE9jAGOhRBT6"
-  },
-  {
-   "data": "2026-09-20T10:41:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Cuneo, sente rumori nel cortile di casa: spara contro ladri e ne uccide uno. E' indagato per omicidio",
-   "url": "https://www.adnkronos.com/cronaca/cuneo-spara-ladri-cortile-casa-omicidio_Bi0tfP4Ngyjj43FJOVt6Q"
-  },
-  {
-   "data": "2026-09-20T10:34:19+00:00",
+   "data": "2026-09-20T14:31:07+00:00",
    "fonte": "ANSA",
-   "titolo": "Ed Sheeran torna sul palco dopo la bufera e parla di Gaza: 'Situazione ingiustificabile'",
-   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/20/ed-sheeran-torna-sul-palco-dopo-la-bufera-e-parla-di-gaza-situazione-ingiustificabile_c8e9f0d5-5296-49f3-9efe-2626f702bb82.html"
+   "titolo": "Schlein: 'Meloni ponga fine a suoi fallimenti e dica quando si vota'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/20/schlein-meloni-ponga-fine-a-suoi-fallimenti-e-dica-quando-si-vota_0585fbac-8355-4920-9ab4-ee7af2e0d1d7.html"
   },
   {
-   "data": "2026-09-20T10:29:03+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Roma, infortunio per Wesley, salta la Nazionale: cosa è successo",
-   "url": "https://www.adnkronos.com/sport/wesley-infortunio-come-sta-lesterno-della-roma-salta-nazionale_44hsICtGLt67NvV7SBSoti"
-  },
-  {
-   "data": "2026-09-20T10:22:22+00:00",
+   "data": "2026-09-20T14:30:34+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Sorelline ritrovate, indagini su come siano finite nel negozio",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/sorelline-ritrovate-indagini-su-come-siano-finite-nel-negozio_ed21639e-3ec7-49aa-ba2f-5efe1dc040a5.html"
+   "titolo": "Presidi, 'tetto stranieri condivisibile ma difficile da applicare'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/presidi-tetto-stranieri-condivisibile-ma-difficile-da-applicare_81ada149-5fb9-4f4e-b96f-3fcb8b2e1ca4.html"
   },
   {
-   "data": "2026-09-20T10:20:18+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Sorprende ladri nel cortile di casa, spara e ne uccide uno",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/sorprende-ladri-nel-cortile-di-casa-spara-e-ne-uccide-uno_aa5edf4f-3b92-465f-a6b1-46786d0f44c7.html"
-  },
-  {
-   "data": "2026-09-20T10:17:39+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Imu e Tari, nuove regole: cambiano dichiarazione e multe, ecco le novità",
-   "url": "https://www.adnkronos.com/economia/imu-tari-nuove-regole-novita-2027_2T6N8Bc0gs1UZFCDFVi9jW"
-  },
-  {
-   "data": "2026-09-20T10:08:14+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Verissimo, domenica 20 settembre: gli ospiti e le anticipazioni di oggi",
-   "url": "https://www.adnkronos.com/spettacoli/verissimo-oggi-ospiti-interviste_QUEfPh3VKgnavWce4yLyI"
-  },
-  {
-   "data": "2026-09-20T10:05:41+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Sorprende ladri nel cortile di casa, spara e ne uccide uno",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/sorprende-ladri-nel-cortile-di-casa-spara-e-ne-uccide-uno_683a2672-8e24-4efd-bdd8-d3ff905489a0.html"
-  },
-  {
-   "data": "2026-09-20T10:05:01+00:00",
+   "data": "2026-09-20T14:27:36+00:00",
    "fonte": "ANSA",
-   "titolo": "In Germania seggi aperti a Berlino e nel Meclemburgo Pomerania",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/20/in-germania-seggi-aperti-a-berlino-e-nel-meclemburgo-pomerania_e858bc98-bac2-4f2f-a7ce-abd390ca6baf.html"
+   "titolo": "Trump: 'Deciderò se e quando far esplodere l'Iran, si comportino bene'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/09/20/trump-decidero-se-e-quando-far-esplodere-liran-si-comportino-bene_d85ac995-09c8-4380-8a2c-330e9dd7d8ba.html"
   },
   {
-   "data": "2026-09-20T10:03:30+00:00",
+   "data": "2026-09-20T14:26:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Davide Di Lernia, il figlio 47enne di Leone morto in un incidente in moto",
-   "url": "https://www.adnkronos.com/cronaca/davide-di-lernia-figlio-leone-morto-incidente-decapitato_38JB1BW9vkT6h4BeAMBBYA"
+   "titolo": "M5S, la base approva il programma in 20 punti: \"L'invio di armi all'Ucraina allontana la pace\"",
+   "url": "https://www.adnkronos.com/politica/m5s-programma-20-punti-m5s-invio-armi-ucraina_6cQvbZW9yGEpzOg4VdwlDu"
   },
   {
-   "data": "2026-09-20T10:01:35+00:00",
-   "fonte": "ANSA",
-   "titolo": "Venezuela, svelata una statua in onore del cane da soccorso durante i terremoti",
-   "url": "https://www.ansa.it/sito/videogallery/mondo/2026/09/20/venezuela-svelata-una-statua-in-onore-del-cane-da-soccorso-durante-i-terremoti_1c65a9a5-a689-44da-9c4d-161d8f7a453f.html"
-  },
-  {
-   "data": "2026-09-20T09:56:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Serie A, oggi Fiorentina-Napoli 0-1 - Diretta",
-   "url": "https://www.adnkronos.com/sport/serie-a-fiorentina-napoli-diretta_3o2L1sbA768ajRIPav3Anu"
-  },
-  {
-   "data": "2026-09-20T09:52:25+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Coldiretti Puglia, grandine e bombe d'acqua su tendoni di uva, danni",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/coldiretti-puglia-grandine-e-bombe-dacqua-su-tendoni-di-uva-danni_00c60007-e1c1-4054-baf3-e7e0d48aef6a.html"
-  },
-  {
-   "data": "2026-09-20T09:49:37+00:00",
-   "fonte": "ANSA",
-   "titolo": "Mosca, edifici danneggiati dopo un massiccio attacco di droni. Zelensky: 'Usati anche missili da crociera e balistici'",
-   "url": "https://www.ansa.it/sito/videogallery/mondo/2026/09/20/mosca-edifici-danneggiati-dopo-un-massiccio-attacco-di-droni-due-vittime_77f45297-ce16-4649-a9f5-a17c71c3b799.html"
-  },
-  {
-   "data": "2026-09-20T09:46:50+00:00",
+   "data": "2026-09-20T14:20:47+00:00",
    "fonte": "ANSA",
    "titolo": "Mosca: 'Oltre 1.100 droni sulla Russia'. Zelensky: 'Usati anche missili da crociera e balistici'",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/20/allarme-per-droni-in-volo-su-kiev-raid-su-mosca_a2b0173b-8bb7-44a0-947e-7cca5ba92364.html"
   },
   {
-   "data": "2026-09-20T09:37:51+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Le chat del 13enne, forse arruolato da gruppi estremisti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/19/il-video-del-13enne-con-laggressione-alla-prof-ragazzi-guardate-il-tg-dopo_97003dfc-8c9b-4825-bd86-586bae7ac908.html"
+   "data": "2026-09-20T14:20:12+00:00",
+   "fonte": "ANSA",
+   "titolo": "Ed Sheeran si scusa e rompe il silenzio: 'A Gaza situazione inaccettabile'",
+   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/20/ed-sheeran-torna-sul-palco-dopo-la-bufera-e-parla-di-gaza-situazione-ingiustificabile_c8e9f0d5-5296-49f3-9efe-2626f702bb82.html"
   },
   {
-   "data": "2026-09-20T09:36:40+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Escursionista si perde sul Pollino, salvato da drone con termocamera",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/escursionista-si-perde-sul-pollino-salvato-da-drone-con-termocamera_d6831ec4-1fa5-44b7-9801-bc9d20e3d610.html"
+   "data": "2026-09-20T14:06:28+00:00",
+   "fonte": "ANSA",
+   "titolo": "Serie A, in campo Frosinone-Como DIRETTA",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/20/serie-a-frosinone-como-in-campo-diretta_a16575d6-66fe-4050-b634-b38b963e6302.html"
   },
   {
-   "data": "2026-09-20T09:00:55+00:00",
+   "data": "2026-09-20T13:57:19+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Prof aggredita, gli inquirenti a caccia di chi ha pubblicato il video online",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/prof-aggredita-gli-inquirenti-a-caccia-di-chi-ha-pubblicato-il-video-online_e3bd5550-82f3-4f4f-b48c-7be396c4e40c.html"
+  },
+  {
+   "data": "2026-09-20T13:56:29+00:00",
+   "fonte": "ANSA",
+   "titolo": "Meloni: 'In classe numero massimo di stranieri e divieto di burqa, norma in arrivo'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/20/meloni-in-classe-numero-massimo-di-stranieri-e-divieto-di-burqa-norma-in-arrivo_eee88fcc-7ab4-4a71-864f-6699535148f3.html"
+  },
+  {
+   "data": "2026-09-20T13:55:37+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Presidi: 'Il numero massimo di stranieri condivisibile ma difficile da applicare'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/presidi-il-numero-massimo-di-stranieri-condivisibile-ma-difficile-da-applicare_6df39cbe-bae5-46d7-8ffc-4f4896637743.html"
+  },
+  {
+   "data": "2026-09-20T13:38:30+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Milano, ferito dopo lite in strada: grave 25enne",
-   "url": "https://www.adnkronos.com/cronaca/milano-lite-strada-ferito-grave-25enne_6WikILmCCpppfsiSgeVm6M"
+   "titolo": "Russia al voto, partecipazione alle 15 al 52,6%: superato il dato delle precedenti consultazioni",
+   "url": "https://www.adnkronos.com/internazionale/esteri/elezioni-russia-affluenza-precedenti-consultazioni_6pvcYTylff3kazg7zdvWmA"
   },
   {
-   "data": "2026-09-20T08:45:14+00:00",
+   "data": "2026-09-20T13:37:59+00:00",
+   "fonte": "ANSA",
+   "titolo": "MotoGp, in Austria vince Acosta su Ktm",
+   "url": "https://www.ansa.it/sito/notizie/sport/moto/2026/09/20/motogp-in-austria-vince-acosta-su-ktm_46cf08f1-d6e2-40dc-8368-ced5eec9eb55.html"
+  },
+  {
+   "data": "2026-09-20T13:31:58+00:00",
+   "fonte": "ANSA",
+   "titolo": "Sorprende i ladri nel cortile di casa, spara e ne uccide uno",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/sorprende-i-ladri-nel-cortile-di-casa-spara-e-ne-uccide-uno_016cdb4e-c1c9-49c5-80df-5241d7dc17e2.html"
+  },
+  {
+   "data": "2026-09-20T13:27:38+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Percosse a una donna disabile, arrestata la badante dopo la condanna",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/percosse-a-una-donna-disabile-arrestata-la-badante-dopo-la-condanna_9fbd2024-b207-4267-a72a-309da69887f0.html"
+   "titolo": "Spara e uccide un ladro, il vicino 'ha fatto bene'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/spara-e-uccide-un-ladro-il-vicino-ha-fatto-bene_e51ddce8-ee02-429d-a334-20b4f81241af.html"
+  },
+  {
+   "data": "2026-09-20T13:27:02+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Malore in immersione, sub muore a Giannutri",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/malore-in-immersione-sub-muore-a-giannutri_8ca2a413-ff36-451d-8394-0a1338bbf593.html"
+  },
+  {
+   "data": "2026-09-20T13:14:41+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Residuo maltempo al Sud, ma da domani generale stabilità ovunque",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/residuo-maltempo-al-sud-ma-da-domani-generale-stabilita-ovunque_ccb7d384-78e7-4580-afc9-e2e77601c41b.html"
+  },
+  {
+   "data": "2026-09-20T13:14:23+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Prof accoltellata, indagini sul video dell’aggressione e su chi era in videochiamata",
+   "url": "https://www.adnkronos.com/cronaca/prof-accoltellata-roma-indagini-video-partecipanti-call-videochiamata_lrUtz6TYfaYuF5RT2T1dy"
+  },
+  {
+   "data": "2026-09-20T13:09:02+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Prof aggredita, inquirenti a caccia di chi ha pubblicato il video online",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/prof-aggredita-inquirenti-a-caccia-di-chi-ha-pubblicato-il-video-online_dcae22e2-2b33-4fb6-89a0-9333bd2b37e0.html"
+  },
+  {
+   "data": "2026-09-20T13:06:29+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Sorelline ritrovate, portate in comunità insieme ai 4 fratelli",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/sorelline-ritrovate-portate-in-comunita-insieme-ai-4-fratelli_ed21639e-3ec7-49aa-ba2f-5efe1dc040a5.html"
+  },
+  {
+   "data": "2026-09-20T13:04:18+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Sorelline ritrovate, portate in comunità insieme ai 4 fratelli",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/sorelline-ritrovate-portate-in-comunita-insieme-ai-4-fratelli_355a4959-67a0-4b17-884b-1ee822986597.html"
+  },
+  {
+   "data": "2026-09-20T13:03:04+00:00",
+   "fonte": "ANSA",
+   "titolo": "Milano si prepara a dire addio a Sandro Mazzola, lutto cittadino e bandiere a mezz'asta",
+   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/20/domani-a-milano-i-funerali-di-sandro-mazzola_0cfc7294-fd9d-404c-9f1c-0b3aa02d13e5.html"
+  },
+  {
+   "data": "2026-09-20T12:49:32+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Prodi: \"Se AfD vince elezioni in Germania, l'Ue è finita\"",
+   "url": "https://www.adnkronos.com/politica/prodi-afd-germania-elezioni-ue_7KGg80YNJXl9fRbjEZJ9QM"
+  },
+  {
+   "data": "2026-09-20T12:48:56+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Spara e uccide ladro, è accorso sentendo del frastuono",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/spara-e-uccide-ladro-e-accorso-sentendo-del-frastuono_43a52c00-21ea-4078-9f8c-837aaf0e8a8d.html"
+  },
+  {
+   "data": "2026-09-20T12:48:34+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Palermo, a Salvatore Vecchio il Premio Polifonia delle Arti 'Salvator Gotta 2026'",
+   "url": "https://www.adnkronos.com/cronaca/salvatore-vecchio-premio-polifonia-arti-salvator-gotta-2026_5rT3tAkegMn14qv4ffby3q"
+  },
+  {
+   "data": "2026-09-20T12:43:16+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Burqa, hijab e chador: quali sono le differenze tra i veli",
+   "url": "https://www.adnkronos.com/cronaca/burqa-hijab-scuola-meloni-differenze_6cnp4RzZOCW2X7tjsujNfG"
+  },
+  {
+   "data": "2026-09-20T12:33:12+00:00",
+   "fonte": "ANSA",
+   "titolo": "Salvini a Pontida: 'Si vince uniti, Congresso straordinario a ottobre'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/20/a-pontida-le-magliette-pro-e-contro-salvini-sempre-con-lui-si-dimetta-subito_f7eadbe5-25a0-4754-a303-b2aae6c72b05.html"
+  },
+  {
+   "data": "2026-09-20T12:24:01+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Mauro Corona a Verissimo: \"Sono un traditore e un violento, non cerco il perdono\"",
+   "url": "https://www.adnkronos.com/spettacoli/corona-intervista-verissimo-canale-5_5MIrrjmaCAl9E5aqNe8sle"
   }
  ]
 }
