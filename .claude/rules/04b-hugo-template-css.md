@@ -272,7 +272,7 @@ Le foto utente vanno **sempre** inline nel corpo come `{{< foto >}}` (mai nel ba
 **Regole della scrittura sociale**: caricate dinamicamente dalle rules `02-content-design-pa.md` (linguaggio AGID, hashtag stabili, struttura post crisi), `03-accessibility.md` (a11y social: alt text, max 2 emoji, no Unicode decorativi), `06-protezione-civile-scientifica.md` (codici colore, struttura 6 punti per allerte).
 
 **Cosa NON fa** (intenzionalmente):
-- Non pubblica automaticamente sui social (le bozze sono per copia/incolla manuale).
+- Non pubblica nulla: si ferma alle bozze. Dal 20/09/2026 Instagram e Facebook sono serviti dal repo privato `social-pc-genzano`, che prende il materiale da `social-bozze/` e pubblica due volte al giorno (rule 10 § "Pubblicazione automatica social"). X e Telegram restano copia/incolla manuale.
 - Non aggiunge informazioni che non sono nell'articolo (testo delle slide preso dall'articolo, mai inventato).
 - Non sostituisce la rilettura umana.
 

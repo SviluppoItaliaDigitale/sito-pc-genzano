@@ -122,12 +122,42 @@ chiamate fino al giorno dopo (non ti spilla soldi).
 
 ## Cosa NON fa
 
-- **Non pubblica** automaticamente sui social. Le bozze sono per copia/incolla
-  manuale (scelta voluta: tu hai sempre il controllo finale).
+- **Non pubblica** nulla: si ferma alle bozze. La pubblicazione su Instagram e
+  Facebook è un sistema a parte, nel repo privato
+  [`social-pc-genzano`](https://github.com/SviluppoItaliaDigitale/social-pc-genzano)
+  (vedi la sezione qui sotto). Per X e Telegram le bozze restano da copiare a mano.
 - **Non aggiunge informazioni** che non sono nell'articolo (mai inventa
   numeri, date, fonti).
-- **Non sostituisce la rilettura umana**: la AI può commettere errori. Sempre
+- **Non sostituisce la rilettura umana**: può commettere errori. Sempre
   rileggere prima di pubblicare.
+
+## Pubblicazione automatica su Instagram e Facebook
+
+Dal 20 settembre 2026 il materiale prodotto qui viene pubblicato da solo su
+Instagram e Facebook, due volte al giorno, dal repo **privato**
+[`social-pc-genzano`](https://github.com/SviluppoItaliaDigitale/social-pc-genzano).
+Le credenziali delle pagine social stanno lì perché quel repo non è pubblico;
+le immagini restano qui, perché Instagram deve poterle scaricare senza
+autenticazione.
+
+Come funziona, in breve:
+
+1. Esce un articolo, e i workflow di questo repo generano testi e immagini in
+   `social-bozze/AAAA/MM/<slug>/` come sempre.
+2. L'altro repo mette in coda gli articoli nuovi che hanno il materiale pronto,
+   uno al giorno, e li pubblica nelle fasce 08:30 e 18:30.
+3. Il token di Instagram si rinnova da solo il primo e il sedici di ogni mese.
+
+Cosa **non** viene pubblicato in automatico: gli articoli con badge `Allerta` o
+`Emergenza` (vanno pubblicati a mano, nel momento in cui servono), le versioni in
+italiano semplice, e qualsiasi articolo non ancora online sul sito. Sui post
+automatici i **commenti Instagram sono disattivati**, perché i canali sono
+presidiati a orari definiti (vedi `/social-media-policy/`).
+
+Per fermare una pubblicazione già programmata basta modificare la coda
+`coda-social.yaml` dell'altro repo, anche da telefono. Istruzioni complete,
+credenziali da configurare e cosa fare quando qualcosa si rompe: README di
+`social-pc-genzano`.
 
 ## Personalizzare lo stile
 
