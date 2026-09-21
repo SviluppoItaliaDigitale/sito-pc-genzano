@@ -61,3 +61,35 @@ Il mio ambiente blocca da sé i comandi git che riscrivono la storia
 rimando di sessione sono ancora lì: la pulizia richiede proprio quei comandi.
 Si sblocca dalle impostazioni di Claude Code, con una regola di permesso per
 Bash.
+
+## Instagram: due API, due spazi di identificativi
+
+Scoperto il 21/09/2026 provando a cancellare un doppione. Le due API di
+Instagram non sono intercambiabili, e la differenza non è documentata in modo
+evidente:
+
+- **Con login Instagram** (`graph.instagram.com`, il nostro `IG_ACCESS_TOKEN`):
+  serve a pubblicare. Gli identificativi dei contenuti che restituisce **non
+  valgono** sull'altra API.
+- **Con login Facebook** (`graph.facebook.com`, token derivato dalla Pagina):
+  è l'unica che accetta l'eliminazione, e vuole gli identificativi del **suo**
+  spazio, che si ottengono da `/{instagram_business_account}/media`.
+
+Quindi per cancellare un contenuto: dalla Pagina si ricava l'account Instagram
+collegato, da quello l'elenco dei contenuti con gli identificativi giusti, e su
+quelli si chiama la cancellazione. Cercare l'identificativo con l'API sbagliata
+porta a *Unsupported delete request*, che sembra un problema di permessi e non
+lo è.
+
+**L'account Instagram collegato alla Pagina**: `17841449011648440`
+(Pagina `239709112708894`).
+
+## Il token della Pagina non si ottiene da /me/accounts
+
+Su questo portafoglio business `GET /me/accounts` risponde con una lista
+**vuota**, pur avendo `pages_show_list` concesso. Il token della Pagina si
+ricava invece chiedendolo alla Pagina per identificativo:
+
+```bash
+curl -s "https://graph.facebook.com/v23.0/239709112708894?fields=access_token&access_token=TOKEN_UTENTE_LUNGA_DURATA"
+```
