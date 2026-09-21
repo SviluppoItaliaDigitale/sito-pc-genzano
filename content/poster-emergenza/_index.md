@@ -27,6 +27,7 @@ Questa pagina è l'**equivalente testuale accessibile** degli otto poster: stess
 <li>Tieni il telefono carico e libera le linee telefoniche.</li>
 </ol>
 
+<p class="small">Pagina di emergenza essenziale online — <a href="/emergenza/">www.protezionecivilegenzano.it/emergenza</a></p>
 <p class="small text-muted">Scarica per la stampa: <a href="/poster-emergenza-multilingua/poster-emergenza-it.pdf">PDF</a> · <a href="/poster-emergenza-multilingua/poster-emergenza-it.png">PNG</a></p>
 
 ## English {#english}
@@ -45,6 +46,7 @@ Questa pagina è l'**equivalente testuale accessibile** degli otto poster: stess
 <li>Keep your phone charged and keep phone lines free.</li>
 </ol>
 
+<p class="small">Essential emergency page online — <a href="/emergenza/">www.protezionecivilegenzano.it/emergenza</a></p>
 <p class="small text-muted">Print version: <a href="/poster-emergenza-multilingua/poster-emergenza-en.pdf">PDF</a> · <a href="/poster-emergenza-multilingua/poster-emergenza-en.png">PNG</a></p>
 </div>
 
@@ -64,6 +66,7 @@ Questa pagina è l'**equivalente testuale accessibile** degli otto poster: stess
 <li>Gardez votre téléphone chargé et libérez les lignes téléphoniques.</li>
 </ol>
 
+<p class="small">Page d'urgence essentielle en ligne — <a href="/emergenza/">www.protezionecivilegenzano.it/emergenza</a></p>
 <p class="small text-muted">Version imprimable : <a href="/poster-emergenza-multilingua/poster-emergenza-fr.pdf">PDF</a> · <a href="/poster-emergenza-multilingua/poster-emergenza-fr.png">PNG</a></p>
 </div>
 
@@ -83,6 +86,7 @@ Questa pagina è l'**equivalente testuale accessibile** degli otto poster: stess
 <li>Halten Sie Ihr Telefon geladen und halten Sie die Telefonleitungen frei.</li>
 </ol>
 
+<p class="small">Wesentliche Notfallseite online — <a href="/emergenza/">www.protezionecivilegenzano.it/emergenza</a></p>
 <p class="small text-muted">Druckversion: <a href="/poster-emergenza-multilingua/poster-emergenza-de.pdf">PDF</a> · <a href="/poster-emergenza-multilingua/poster-emergenza-de.png">PNG</a></p>
 </div>
 
@@ -102,6 +106,7 @@ Questa pagina è l'**equivalente testuale accessibile** degli otto poster: stess
 <li>Mantén el teléfono cargado y deja libres las líneas telefónicas.</li>
 </ol>
 
+<p class="small">Página de emergencia esencial en línea — <a href="/emergenza/">www.protezionecivilegenzano.it/emergenza</a></p>
 <p class="small text-muted">Versión para imprimir: <a href="/poster-emergenza-multilingua/poster-emergenza-es.pdf">PDF</a> · <a href="/poster-emergenza-multilingua/poster-emergenza-es.png">PNG</a></p>
 </div>
 
@@ -121,6 +126,7 @@ Questa pagina è l'**equivalente testuale accessibile** degli otto poster: stess
 <li>Mantenha o telemóvel carregado e liberte as linhas telefónicas.</li>
 </ol>
 
+<p class="small">Página de emergência essencial online — <a href="/emergenza/">www.protezionecivilegenzano.it/emergenza</a></p>
 <p class="small text-muted">Versão para impressão: <a href="/poster-emergenza-multilingua/poster-emergenza-pt.pdf">PDF</a> · <a href="/poster-emergenza-multilingua/poster-emergenza-pt.png">PNG</a></p>
 </div>
 
@@ -140,6 +146,7 @@ Questa pagina è l'**equivalente testuale accessibile** degli otto poster: stess
 <li>Ține telefonul încărcat și eliberează liniile telefonice.</li>
 </ol>
 
+<p class="small">Pagină esențială de urgență online — <a href="/emergenza/">www.protezionecivilegenzano.it/emergenza</a></p>
 <p class="small text-muted">Versiune pentru tipărire: <a href="/poster-emergenza-multilingua/poster-emergenza-ro.pdf">PDF</a> · <a href="/poster-emergenza-multilingua/poster-emergenza-ro.png">PNG</a></p>
 </div>
 
@@ -159,6 +166,7 @@ Questa pagina è l'**equivalente testuale accessibile** degli otto poster: stess
 <li>Tenu la telefonon ŝargita kaj liberigu la telefonliniojn.</li>
 </ol>
 
+<p class="small">Esenca krizpaĝo enrete — <a href="/emergenza/">www.protezionecivilegenzano.it/emergenza</a></p>
 <p class="small text-muted">Presebla versio: <a href="/poster-emergenza-multilingua/poster-emergenza-eo.pdf">PDF</a> · <a href="/poster-emergenza-multilingua/poster-emergenza-eo.png">PNG</a></p>
 </div>
 
