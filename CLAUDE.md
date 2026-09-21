@@ -299,6 +299,16 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 
 🔴 **Dopo la pubblicazione**: su **Facebook** il testo si riscrive (`scripts/modifica-post.py fb-testo`), su **Instagram no** — l'API accetta solo i commenti, verificato sul campo. Le **immagini non si cambiano su nessuna delle due**: una foto aggiunta a un articolo già pubblicato entra nei post successivi, non in quelli usciti. Per fermare o spostare una pubblicazione si modifica `coda-social.yaml` dell'altro repo, anche da telefono. Dettagli operativi in `manuale/parte-42-pubblicazione-automatica-social.md`, regole in rule 10 § "Pubblicazione automatica social".
 
+## Accessi e permessi — si chiede per l'intero ciclo di vita
+
+🟢 **Istruzione permanente dell'utente (21/09/2026):** *«siamo una squadra, dobbiamo avere pieno potere e accesso a ogni tipo di funzionalità; io ti do le indicazioni e tu esegui»*. Il metodo è quello: indicazione, esecuzione, resoconto — senza fermarsi a chiedere conferma per ogni passo ordinario.
+
+🔴 **Regola che ne discende:** quando si configura un accesso a un servizio esterno, si chiedono i permessi per **tutto il ciclo di vita** di ciò che si andrà a gestire — creare, correggere, **annullare** — non solo per il passo che serve quel giorno. Nasce dal 21/09/2026: il giorno prima erano stati chiesti i permessi per pubblicare sui social, e quando un post è uscito due volte non si poteva eliminarlo (manca `instagram_manage_contents`, che non richiede revisione di Meta perché gli asset sono nostri).
+
+**Inventario vivo in `riferimenti-interni/accessi/README.md`**: ogni credenziale, che cosa abilita, che cosa **non** abilita, e i limiti che nessun permesso sblocca (su Instagram un post pubblicato non si modifica; su Facebook si riscrive il testo ma non le immagini). Va aggiornato quando si aggiunge un servizio o si scopre un limite: è lì che si guarda prima di promettere che una cosa si può fare.
+
+---
+
 ## Auto-integrazione approfondimenti (video + link) — pre-autorizzata
 
 🟢 Istruzione permanente (20/05/2026): integra da sola gli **approfondimenti pertinenti** (video + link a siti della nostra lista) in articoli e pagine, senza OK caso per caso. Copre l'intero flusso fino a live.
