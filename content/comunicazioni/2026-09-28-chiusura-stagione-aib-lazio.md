@@ -13,12 +13,12 @@ allegati: []
 draft: false
 ---
 
-Il **15 ottobre** termina ufficialmente il **periodo di grave pericolosità per gli incendi boschivi** nel Lazio. Lo prevede la **Campagna Antincendio Boschivo 2026 della Regione Lazio**, avviata il 15 giugno 2026. La chiusura non significa che il rischio sia zero, ma segna la **fine del regime straordinario**.
+Il **15 ottobre** termina ufficialmente il periodo di massima pericolosità per gli incendi boschivi nel Lazio. Per il 2026 coincidono in questa data due atti avviati il 15 giugno: la campagna antincendio boschivo nazionale e lo **stato di grave pericolosità per gli incendi boschivi** dichiarato dalla Regione Lazio. La chiusura non significa che il rischio sia zero, ma segna la **fine del regime straordinario**.
 
 ## Cosa cambia
 
 ### Dichiarazione dello stato
-Per il 2026 la Regione Lazio ha fissato il periodo di massima pericolosità **dal 15 giugno al 15 ottobre** su tutto il territorio regionale: lo stesso arco temporale che a Genzano di Roma recepisce l'[ordinanza sindacale n. 14 del 17 giugno 2026](/comunicazioni/2026-06-18-ordinanza-sindacale-incendi-boschivi-2026/). Alla scadenza:
+Per il 2026 due atti distinti chiudono nella stessa data. A livello nazionale, il Ministro per la Protezione Civile e le Politiche del Mare ha fissato i tempi della campagna antincendio boschivo **dal 15 giugno al 15 ottobre 2026** (Gazzetta Ufficiale, Serie generale n. 133 dell'11 giugno 2026). A livello regionale, lo **stato di grave pericolosità per gli incendi boschivi** su tutto il territorio del Lazio discende dal Piano regionale di previsione, prevenzione e lotta attiva contro gli incendi boschivi, che colloca i periodi di massima pericolosità **da metà giugno a metà ottobre**. Il Piano è stato approvato con la Delibera di Giunta Regionale n. 228 del 25 maggio 2023 e prorogato per il 2026 dalla Giunta regionale, con il parere favorevole della XII Commissione del Consiglio regionale del 21 luglio 2026. A Genzano di Roma questo stato è recepito dall'[ordinanza sindacale n. 14 del 17 giugno 2026](/comunicazioni/2026-06-18-ordinanza-sindacale-incendi-boschivi-2026/), in vigore **fino al 15 ottobre**. Per il 2026 i due periodi coincidono: quando la campagna nazionale si chiude, si chiude anche il regime straordinario regionale e comunale. Alla scadenza:
 
 - **termine** di alcuni divieti speciali (es. abbruciamento stoppie in aree sensibili);
 - **ritorno** alla normale disciplina del Testo Unico Forestale e dei regolamenti locali;
@@ -67,8 +67,17 @@ Anche fuori dal periodo di grave pericolosità:
 
 ## Per approfondire
 
+Sul nostro sito:
+
 - [Bilancio campagna AIB 2026](/comunicazioni/2026-08-30-bilancio-campagna-aib-2026/)
+- [Ordinanza sindacale n. 14 del 17 giugno 2026](/comunicazioni/2026-06-18-ordinanza-sindacale-incendi-boschivi-2026/)
+- [Campagna antincendio boschivo 2026: dal 15 giugno al 15 ottobre](/comunicazioni/2026-06-08-campagna-antincendio-boschivo-2026/)
 - [Rischio interfaccia urbano-rurale](/comunicazioni/2026-08-19-interfaccia-urbano-rurale-rischio-incendi/)
+
+Fonti istituzionali:
+
+- [Attività antincendio boschivo per la stagione estiva 2026 — Gazzetta Ufficiale, Serie generale n. 133 dell'11 giugno 2026](https://www.gazzettaufficiale.it/eli/id/2026/06/11/26A02891/SG)
+- [Presentata la Campagna Antincendio Boschivo 2026 — Regione Lazio](https://www.regione.lazio.it/notizie/presentata-la-campagna-antincendio-boschivo-2026)
 - [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/protezione-civile)
 
 In emergenza: **112**.
