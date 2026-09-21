@@ -5,11 +5,47 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-21T20:50:57+00:00",
+  "generato": "2026-09-21T23:53:44+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-21T22:15:59+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Trump (e figli) senza freni sull'IA, ecco l'interesse finanziario di presidente e famiglia nel settore",
+   "url": "https://www.adnkronos.com/internazionale/esteri/trump-figli-investimenti-ia-analisi-washington-post_3EGZc7xrTTPdMLNpjHz62s"
+  },
+  {
+   "data": "2026-09-21T22:14:49+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Meteo, verso l'Equinozio d'autunno: clima mite ma al Sud attenzione a piogge e temporali, le previsioni",
+   "url": "https://www.adnkronos.com/cronaca/previsioni-meteo-22-settembre-equinozio-autunno_3SczaEgbdfwMg6Cg7hjUda"
+  },
+  {
+   "data": "2026-09-21T22:12:48+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sanremo 2027, De Martino cambia le regole: voto online ed Eurovision, 24 Big in gara e paletti su Ia",
+   "url": "https://www.adnkronos.com/spettacoli/sanremo-de-martino-tutte-le-novita_4W9HrOXXjR1qBbKWMBblnM"
+  },
+  {
+   "data": "2026-09-21T22:06:40+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Scuola, l'alert di Mattarella \"è leva integrazione\": intanto il governo lavora a tetto stranieri e stop burqa in classe",
+   "url": "https://www.adnkronos.com/politica/scuola-mattarella-governo-burqa-stranieri_2gydb1NEFVMX5yy3DI70Oa"
+  },
+  {
+   "data": "2026-09-21T21:32:15+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Trump attacca ancora Cnn, Politico e Ms Now: \"Studio Ovale non può essere profanato da pagliacci con fake news\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/trump-attacca-cnn-politico-pagliacci-fake-news_1FutvPlIy9O0XqBv2j8gP4"
+  },
+  {
+   "data": "2026-09-21T21:05:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Miss Italia 2026 è Sarah Rizea: la 18enne atleta di Vado Ligure ha vinto il titolo di reginetta",
+   "url": "https://www.adnkronos.com/spettacoli/sarah-rizea-miss-italia-2026-chi-e_nPT3M2OEmZVlRGI0pJ9P2"
+  },
   {
    "data": "2026-09-21T20:34:00+00:00",
    "fonte": "ADNKRONOS",
@@ -137,12 +173,6 @@
    "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/21/gli-ultras-ai-funerali-di-sandro-mazzola-il-tuo-nome-nella-storia-dellinter_7a153788-b747-4753-a2e0-f6fef5275d11.html"
   },
   {
-   "data": "2026-09-21T18:55:05+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ranucci, spunta anche il sosia: \"Mi fermano per strada e mi chiedono le foto\"",
-   "url": "https://www.adnkronos.com/cronaca/ranucci-sosia-report-rai_PwiHJj7fJmToj81u4RbTi"
-  },
-  {
    "data": "2026-09-21T18:52:05+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "La morte di Denise Cosco, verifiche su eventuali contatti con il padre",
@@ -159,36 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Tajani: 'Mi scuso con le donne, non le ho mai volute offendere'",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/09/21/tajani-mi-scuso-con-le-donne-non-le-ho-mai-volute-offendere_8ff45906-1a05-4edf-b2b5-64ed8bb232e4.html"
-  },
-  {
-   "data": "2026-09-21T18:24:53+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Migrante aggredisce poliziotti con spranga a Crotone. Il Tribunale ne aveva respinto il trattenimento: \"Non pericoloso\"",
-   "url": "https://www.adnkronos.com/cronaca/crotone-migrante-aggressione-poliziotti-respinto-trattenimento_1va1NFK9gBrJVL9bZcNCWi"
-  },
-  {
-   "data": "2026-09-21T18:23:59+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "#AccadeOggi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/21/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
-  },
-  {
-   "data": "2026-09-21T18:22:17+00:00",
-   "fonte": "ANSA",
-   "titolo": "Debacle della Cdu in Germania, Merz in bilico ma non molla",
-   "url": "https://www.ansa.it/sito/podcast/in_diretta_dal_mondo/2026/09/21/debacle-della-cdu-in-germania-merz-in-bilico-ma-non-molla_aac86718-74f3-490a-b16e-4208aca83977.html"
-  },
-  {
-   "data": "2026-09-21T18:17:25+00:00",
-   "fonte": "ANSA",
-   "titolo": "Cellule zombie nell'organismo che invecchia",
-   "url": "https://www.ansa.it/canale_scienza/notizie/biotech/2026/09/21/nellorganismo-che-invecchia-le-cellule-diventano-zombie-_ab64a4f6-bd96-413c-bee0-a34d466b4372.html"
-  },
-  {
-   "data": "2026-09-21T18:12:40+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sondaggio politico, Fratelli d'Italia cresce e Pd cala. Vannacci all'8%",
-   "url": "https://www.adnkronos.com/politica/sondaggio-tg-la7-meloni-vannacci-pd-elezioni_6aNAS4vV49Dy38qcMXoqhO"
   }
  ]
 }
