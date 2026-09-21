@@ -24,6 +24,10 @@ package-lock.json
 # Contesto AI generato on-demand (rigenerabile con scripts/export-contesto-progetto.sh)
 CONTESTO-PROGETTO.md
 CONTESTO-PROGETTO-slim.md
+# Nomi precedenti dello stesso export, ancora sul disco di chi lavorava
+# sul sito prima della rinomina.
+CONTESTO-AI.md
+CONTESTO-AI-slim.md
 __pycache__/
 
 # Report runtime degli script di controllo (rigenerato ad ogni esecuzione)

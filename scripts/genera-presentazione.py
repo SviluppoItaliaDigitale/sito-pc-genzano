@@ -794,6 +794,7 @@ content("Versione in Braille", [
 content("Versioni in più lingue", [
     "Contenuti chiave tradotti in più lingue.",
     "Per residenti stranieri e visitatori.",
+    "Poster «In emergenza chiama il 112» in otto lingue, da stampare e affiggere.",
     "Lingua dichiarata correttamente anche per gli assistenti vocali.",
 ], N())
 
