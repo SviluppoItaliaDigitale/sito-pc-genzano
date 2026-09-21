@@ -53,6 +53,12 @@ enableGitInfo = true
   # procedura è completata: finché è vuoto, il sito linka la pagina interna
   # /accessibilita/ (autovalutazione). Vedi audit esterno 15/07/2026.
   dichiarazioneAccessibilita = ""
+  # Il deposito sul portale AgID è in capo al Comune di Genzano di Roma, ente
+  # titolare del servizio: il Gruppo non ha un'utenza sul portale. Finché resta
+  # `true`, il controllo delle scadenze non apre promemoria su un adempimento
+  # che non dipende da noi. Quando il Comune deposita: si mette il link qui
+  # sopra e si porta questo a `false`.
+  dichiarazioneAccessibilita_attesa_ente = true
   # Informazioni istituzionali
   coi = "14° COI Prov. di Roma"
   registroRegionale = "n.184"
