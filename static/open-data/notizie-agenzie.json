@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-21T16:54:10+00:00",
+  "generato": "2026-09-21T20:50:57+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-21T16:49:00+00:00",
+   "data": "2026-09-21T20:34:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Pnrr, Alparone (Lombardia): \"Non è traguardo ma partenza per nuovi servizi sul territorio\"",
-   "url": "https://www.adnkronos.com/cronaca/pnrr-alparone-lombardia-non-e-traguardo-ma-partenza-per-nuovi-servizi-sul-territorio_4ZFXygnLcqsrxKoslminFk"
+   "titolo": "Renzi, l''avvertimento' al campo largo: \"Da soli perdete...\"",
+   "url": "https://www.adnkronos.com/politica/renzi-elezioni-schlein-conte-giletti_3Gt9NbFd1dlBZxC75lbWDS"
   },
   {
-   "data": "2026-09-21T16:46:45+00:00",
+   "data": "2026-09-21T20:33:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Veneto, il presidente Alberto Stefani ferito in un incidente stradale: stava andando al consiglio federale della Lega a Milano",
+   "url": "https://www.adnkronos.com/politica/alberto-stefani-incidente-come-sta_4180eaimuaDXvePoxobOXe"
+  },
+  {
+   "data": "2026-09-21T20:17:36+00:00",
+   "fonte": "ANSA",
+   "titolo": "'I jet erano pronti contro gli houthi, poi lo stop di Trump'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/09/21/i-jet-erano-pronti-contro-gli-houthi-poi-lo-stop-di-trump_5a5117b7-6646-4851-9244-5caef3a44aca.html"
+  },
+  {
+   "data": "2026-09-21T20:16:28+00:00",
+   "fonte": "ANSA",
+   "titolo": "'La guerra in Ucraina deve finire', il monito di Trump",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/21/la-guerra-in-ucraina-deve-finire-il-monito-di-trump_cf2e3c21-7423-45ad-a530-b4bf0065f264.html"
+  },
+  {
+   "data": "2026-09-21T20:15:27+00:00",
+   "fonte": "ANSA",
+   "titolo": "Cnn, Politico e MsNow fanno causa a Trump, e il pool tv lo oscura",
+   "url": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/09/21/il-pool-tv-della-casa-bianca-non-seguira-piu-trump-dopo-il-bando_2b4b224b-27ab-4acc-9230-b64994300728.html"
+  },
+  {
+   "data": "2026-09-21T20:13:22+00:00",
+   "fonte": "ANSA",
+   "titolo": "Cina, a 6 anni batte due volte il record mondiale femminile del cubo di Rubik",
+   "url": "https://www.ansa.it/sito/videogallery/mondo/2026/09/21/cina-a-6-anni-batte-due-volte-il-record-mondiale-femminile-del-cubo_49f929a1-59d5-404e-95f8-c01cd644a728.html"
+  },
+  {
+   "data": "2026-09-21T20:12:53+00:00",
+   "fonte": "ANSA",
+   "titolo": "Mattarella: 'La scuola è aperta a tutti. E' integrazione, aiuti a non creare ghetti'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/21/mattarella-agli-studenti-la-cultura-rende-liberi_af7c5db3-feda-43c4-abe6-d226da53196b.html"
+  },
+  {
+   "data": "2026-09-21T20:07:54+00:00",
+   "fonte": "ANSA",
+   "titolo": "Semilibertà per Chico Forti, potrà continuare ad uscire dal carcere",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/21/semiliberta-per-chico-forti-potra-continuare-ad-uscire-dal-carcere_131a6004-f01b-43da-93ef-203062b495e3.html"
+  },
+  {
+   "data": "2026-09-21T19:51:52+00:00",
+   "fonte": "ANSA",
+   "titolo": "Salvini: 'Al congresso mi aspetto candidature'. Tensione con i lombardi",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/21/salvini-al-congresso-conto-e-mi-aspetto-che-si-candidi-qualcun-altro_344b8b82-7cf7-4e0a-b53d-20735c0a84ef.html"
+  },
+  {
+   "data": "2026-09-21T19:51:13+00:00",
+   "fonte": "ANSA",
+   "titolo": "La prof accoltellata a Roma dal tredicenne, si cercano gli istigatori",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/21/la-prof-accoltellata-a-roma-dal-tredicenne-si-cercano-gli-istigatori_54912b3a-8707-4045-86e3-9e7c638a9629.html"
+  },
+  {
+   "data": "2026-09-21T19:47:38+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ostia, autocarro danneggia ponte sulla via del Mare: traffico in tilt a Roma Sud",
+   "url": "https://www.adnkronos.com/cronaca/via-del-mare-roma-ostia-traffico-deviazione_2jTtyn8C2P3NjlhxuDpZxe"
+  },
+  {
+   "data": "2026-09-21T19:46:08+00:00",
+   "fonte": "ANSA",
+   "titolo": "Lo stilista Domenico Vacca nominato da Giuli consigliere per il cinema",
+   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/21/lo-stilista-domenico-vacca-nominato-da-giuli-consigliere-per-il-cinema_2e874a3b-02bb-49e6-b468-0747f1d85a37.html"
+  },
+  {
+   "data": "2026-09-21T19:44:51+00:00",
+   "fonte": "ANSA",
+   "titolo": "Vandalizzate le pietre d'inciampo a Roma per Spizzichino e Spagnoletto",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/21/vandalizzate-le-pietre-dinciampo-a-roma-per-spizzichino-e-spagnoletto_7ececb58-f1db-43d9-a551-90659370268a.html"
+  },
+  {
+   "data": "2026-09-21T19:41:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Giallo a Cassino, donna trovata morta in casa: indagini in corso",
+   "url": "https://www.adnkronos.com/cronaca/donna-morta-cassino-indagini_1EWlf9mYLIKxwJCsBqhyvc"
+  },
+  {
+   "data": "2026-09-21T19:36:16+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "L'incidente a Milano : Daniel Maldini negativo alle sostanze stupefacenti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/21/lincidente-a-milano-daniel-maldini-negativo-alle-sostanze-stupefacenti_dfd2d571-7806-4889-a033-b21bfc04115b.html"
+   "titolo": "'Abusato in un parco a Torino', la denuncia di un dodicenne",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/21/abusato-in-un-parco-a-torino-la-denuncia-di-un-dodicenne_55c99ac0-5816-4cb2-b409-68dd170f3454.html"
   },
   {
-   "data": "2026-09-21T16:46:09+00:00",
+   "data": "2026-09-21T19:35:57+00:00",
+   "fonte": "ANSA",
+   "titolo": "Dalle ballerine ai diamanti, all'asta gli oggetti personali di Brigitte Bardot",
+   "url": "https://www.ansa.it/sito/notizie/cultura/cinema/2026/09/21/dalle-ballerine-ai-diamanti-allasta-gli-oggetti-personali-di-brigitte-bardot_b28af765-ba10-4946-b968-6e1786c0dc09.html"
+  },
+  {
+   "data": "2026-09-21T19:29:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Tajani: \"Mi spiace che mie parole siano state fraintese, mi scuso, mai offeso le donne\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/tajani-mi-spiace-mie-parole-fraintese_7FPrPHm3l4vwt16eoMG2ms"
+   "titolo": "Usa, operai tranciano cavo della fibra ottica in un cantiere: voli sospesi nei principali aeroporti della costa orientale",
+   "url": "https://www.adnkronos.com/internazionale/esteri/disagi-aeroporti-usa-cavo-tranciato_5oOPbcuO2MdeD5XsSOJfgk"
   },
   {
-   "data": "2026-09-21T16:45:00+00:00",
+   "data": "2026-09-21T19:24:01+00:00",
+   "fonte": "ANSA",
+   "titolo": "Germania, Merz assediato non molla: 'Dramma Cdu, ma il problema non sono io'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/21/elezioni-in-germania-merz-il-governo-restera-per-assicurare-il-futuro-democratico-del_64293371-4512-4ab8-ab37-0abbaebb497e.html"
+  },
+  {
+   "data": "2026-09-21T19:00:35+00:00",
+   "fonte": "ANSA",
+   "titolo": "Rivoluzione in chirurgia, anestesia 'green' e stop al digiuno",
+   "url": "https://www.ansa.it/canale_saluteebenessere/notizie/ospedali_italiani/2026/09/21/rivoluzione-in-chirurgia-anestesia-green-e-stop-al-digiuno_6cf0467f-813e-49f6-bc84-6caaac5e2f1b.html"
+  },
+  {
+   "data": "2026-09-21T18:59:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Sanità, Mennini (ministero Salute): \"Investire in prevenzione, cure e trattamenti favorisce salute e Pil\"",
-   "url": "https://www.adnkronos.com/cronaca/sanita-mennini-ministero-salute-investire-in-prevenzione-cure-e-trattamenti-favorisce-salute-e-pil_1YcepUzF62YFKwOvRsqS2G"
+   "titolo": "Blitz anticamorra a Napoli, nascosti nel muro Rolex e banconote per più di 3 milioni di euro: la scoperta",
+   "url": "https://www.adnkronos.com/cronaca/blitz-anticamorra-napoli-banconote-rolex_3W487iKSSWDeMmjfBksYrK"
   },
   {
-   "data": "2026-09-21T16:42:00+00:00",
+   "data": "2026-09-21T18:56:36+00:00",
+   "fonte": "ANSA",
+   "titolo": "A Sant'Ambrogio l'ultimo saluto a Mazzola: 'Non ti scorderemo mai'",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/21/gli-ultras-ai-funerali-di-sandro-mazzola-il-tuo-nome-nella-storia-dellinter_7a153788-b747-4753-a2e0-f6fef5275d11.html"
+  },
+  {
+   "data": "2026-09-21T18:55:05+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Malattie rare, Scopinaro (Uniamo): \"Per sanità davvero migliore si considerino bisogni pazienti\"",
-   "url": "https://www.adnkronos.com/cronaca/malattie-rare-scopinaro-uniamo-per-sanita-davvero-migliore-si-considerino-bisogni-pazienti_6XAQPCqMa9wIkjdpRu5Mku"
+   "titolo": "Ranucci, spunta anche il sosia: \"Mi fermano per strada e mi chiedono le foto\"",
+   "url": "https://www.adnkronos.com/cronaca/ranucci-sosia-report-rai_PwiHJj7fJmToj81u4RbTi"
   },
   {
-   "data": "2026-09-21T16:38:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sanità, Pavesi (Aifa): \"Interoperabilità dei dati per creare valore comune\"",
-   "url": "https://www.adnkronos.com/cronaca/sanita-pavesi-aifa-interoperabilita-dei-dati-per-creare-valore-comune_3zd7RDm5dbIHB2yHYzoVZQ"
-  },
-  {
-   "data": "2026-09-21T16:34:58+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Presley Gerber, media Usa: \"Il figlio di Cindy Crawford morto per sospetta overdose\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/presley-gerber-causa-morte-figlio-cindy-crawford_3uRqEcOlyzu5uEiXhkGATS"
-  },
-  {
-   "data": "2026-09-21T16:33:03+00:00",
+   "data": "2026-09-21T18:52:05+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Banconote nascoste nei muri, un tesoro della Camorra di oltre 3 milioni",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/21/banconote-nascoste-nei-muri-un-tesoro-della-camorra-di-oltre-3-milioni_ae04d537-d83c-449d-b0c1-7e3858a91a5c.html"
+   "titolo": "La morte di Denise Cosco, verifiche su eventuali contatti con il padre",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/21/la-morte-di-denise-cosco-verifiche-su-eventuali-contatti-con-il-padre_9b52bb77-7433-414c-baa1-4e6e588d3bf3.html"
   },
   {
-   "data": "2026-09-21T16:30:52+00:00",
+   "data": "2026-09-21T18:48:28+00:00",
+   "fonte": "ANSA",
+   "titolo": "Startup italiana 'predice' i reati delle aziende con l'IA: scova mafiosi, furbetti e caporali",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/21/startup-ia-italiana-predice-i-reati-delle-aziende-convocati-in-parlamentonbsp_f138c760-a4be-4d7f-b3c4-7696e5b5571f.html"
+  },
+  {
+   "data": "2026-09-21T18:39:53+00:00",
    "fonte": "ANSA",
    "titolo": "Tajani: 'Mi scuso con le donne, non le ho mai volute offendere'",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/09/21/tajani-mi-scuso-con-le-donne-non-le-ho-mai-volute-offendere_8ff45906-1a05-4edf-b2b5-64ed8bb232e4.html"
   },
   {
-   "data": "2026-09-21T16:30:00+00:00",
+   "data": "2026-09-21T18:24:53+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Salute Direzione Nord: \"Prevenzione, equità e innovazione leve per garantire diritto universale\"",
-   "url": "https://www.adnkronos.com/cronaca/salute-direzione-nord-prevenzione-equita-e-innovazione-leve-per-garantire-diritto-universale_27Pw9l8KQaxQLxapwKXNiC"
+   "titolo": "Migrante aggredisce poliziotti con spranga a Crotone. Il Tribunale ne aveva respinto il trattenimento: \"Non pericoloso\"",
+   "url": "https://www.adnkronos.com/cronaca/crotone-migrante-aggressione-poliziotti-respinto-trattenimento_1va1NFK9gBrJVL9bZcNCWi"
   },
   {
-   "data": "2026-09-21T16:26:59+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il Tribunale concede la semilibertà a Chico Forti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/21/il-tribunale-concede-la-semiliberta-a-chico-forti_131a6004-f01b-43da-93ef-203062b495e3.html"
-  },
-  {
-   "data": "2026-09-21T16:25:32+00:00",
-   "fonte": "ANSA",
-   "titolo": "Mattarella ad Amatrice per la cerimonia di inaugurazione dell'anno scolastico",
-   "url": "https://www.ansa.it/sito/notizie/dirette_live/2026/09/21/mattarella-ad-amatrice-per-la-cerimonia-di-inaugurazione-dellanno-scolastico_220cbf3b-ab01-4da6-81b4-0ee2b82a6728.html"
-  },
-  {
-   "data": "2026-09-21T16:24:29+00:00",
-   "fonte": "ANSA",
-   "titolo": "Panetta: 'L'Ia spinge crescita e investimenti, ma rischi per l'inflazione'",
-   "url": "https://www.ansa.it/sito/notizie/economia/aziende/2026/09/21/panetta-per-paesi-che-adottano-lia-spinta-a-crescita-e-investimenti_abdcd65f-d861-41a7-9d5b-198b14b9b00c.html"
-  },
-  {
-   "data": "2026-09-21T16:23:55+00:00",
+   "data": "2026-09-21T18:23:59+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Il tribunale concede la semilibertà a Chico Forti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/21/il-tribunale-concede-la-semiliberta-a-chico-forti_e120e3bd-8c99-4bef-8e05-ca9013650210.html"
+   "titolo": "#AccadeOggi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/21/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
   },
   {
-   "data": "2026-09-21T16:22:00+00:00",
+   "data": "2026-09-21T18:22:17+00:00",
+   "fonte": "ANSA",
+   "titolo": "Debacle della Cdu in Germania, Merz in bilico ma non molla",
+   "url": "https://www.ansa.it/sito/podcast/in_diretta_dal_mondo/2026/09/21/debacle-della-cdu-in-germania-merz-in-bilico-ma-non-molla_aac86718-74f3-490a-b16e-4208aca83977.html"
+  },
+  {
+   "data": "2026-09-21T18:17:25+00:00",
+   "fonte": "ANSA",
+   "titolo": "Cellule zombie nell'organismo che invecchia",
+   "url": "https://www.ansa.it/canale_scienza/notizie/biotech/2026/09/21/nellorganismo-che-invecchia-le-cellule-diventano-zombie-_ab64a4f6-bd96-413c-bee0-a34d466b4372.html"
+  },
+  {
+   "data": "2026-09-21T18:12:40+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Xhaka ammette la frode sul pass Covid, niente Nazionale: rischia carcere e lunga squalifica",
-   "url": "https://www.adnkronos.com/sport/granit-xhakaconfessione-falso-certificato-covid-svizzera-rischi_5eL2c8Wo0ZMdt1hSNnROOs"
-  },
-  {
-   "data": "2026-09-21T16:21:29+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il figlio di Cindy Crawford, Presley Gerber, morto a 27 anni per 'apparente overdose'",
-   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/21/trovato-morto-a-27-anni-presley-gerber-il-figlio-di-cindy-crawford_28d0af48-4aab-4129-aebf-46c0975f1c66.html"
-  },
-  {
-   "data": "2026-09-21T16:20:08+00:00",
-   "fonte": "ANSA",
-   "titolo": "Mattarella agli studenti: 'La cultura rende liberi'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/21/mattarella-agli-studenti-la-cultura-rende-liberi_af7c5db3-feda-43c4-abe6-d226da53196b.html"
-  },
-  {
-   "data": "2026-09-21T16:17:27+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Usava i social dai domiciliari, Mario Adinolfi va in carcere",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/21/usava-i-social-dai-domiciliari-mario-adinolfi-va-in-carcere_35ccb8bc-81a6-4686-8aed-c43dc9c7b288.html"
-  },
-  {
-   "data": "2026-09-21T16:07:03+00:00",
-   "fonte": "ANSA",
-   "titolo": "Zuppi: 'La scuola deve essere inclusiva'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/21/zuppi-la-scuola-deve-essere-inclusiva-_d8604614-b860-43d3-a0ce-0a3f29629f78.html"
-  },
-  {
-   "data": "2026-09-21T16:01:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Omicidi Villa Pamphili, i testimoni in aula: \"Anastasia era impaurita da Kaufmann\"",
-   "url": "https://www.adnkronos.com/cronaca/omicidi-villa-pamphili-testimoni-duplice-omicidio-kaufmann_3dAL0dkwoV65vDW9K71AND"
-  },
-  {
-   "data": "2026-09-21T15:55:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Zuppi: \"Scuola sia inclusiva, questione educativa tocca il cuore della nostra convivenza\"",
-   "url": "https://www.adnkronos.com/cronaca/scuola-inclusiva-cosa-ha-detto-zuppi_7hBHL3TiJSOrt5gmOuDhSZ"
-  },
-  {
-   "data": "2026-09-21T15:52:02+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Villa Pamphili, teste in Aula 'Anastasia era impaurita da Kaufmann'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/21/villa-pamphili-teste-in-aula-anastasia-era-impaurita-da-kaufmann_ff06a422-5cea-4a38-9b6b-e64ca51b3af0.html"
-  },
-  {
-   "data": "2026-09-21T15:52:02+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Spagna, il ct campione del mondo De La Fuente rinnova fino al 2032",
-   "url": "https://www.adnkronos.com/sport/de-la-fuente-rinnova-con-la-spagna-fino-al-2032_1lNdhsJ3TR0C3sQDCfC8QM"
-  },
-  {
-   "data": "2026-09-21T15:50:29+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "L'attesa è lunga e aggredisce due infermieri in ospedale a Roma",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/21/lattesa-e-lunga-e-aggredisce-due-infermieri-in-ospedale-a-roma_8eb62284-d52c-49c1-a7ad-b13af1a40440.html"
-  },
-  {
-   "data": "2026-09-21T15:43:08+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il pool tv della Casa Bianca non seguirà più Trump dopo il bando di tre testate giornalistiche",
-   "url": "https://www.ansa.it/sito/notizie/mondo/nordamerica/2026/09/21/il-pool-tv-della-casa-bianca-non-seguira-piu-trump-dopo-il-bando_2b4b224b-27ab-4acc-9230-b64994300728.html"
-  },
-  {
-   "data": "2026-09-21T15:42:36+00:00",
-   "fonte": "ANSA",
-   "titolo": "Gli ultras ai funerali di Sandro Mazzola: 'Il tuo nome nella storia dell'Inter'",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/21/gli-ultras-ai-funerali-di-sandro-mazzola-il-tuo-nome-nella-storia-dellinter_7a153788-b747-4753-a2e0-f6fef5275d11.html"
-  },
-  {
-   "data": "2026-09-21T15:41:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Farmaci, anti-obesità semaglutide al centro della nuova protezione cardio-renale",
-   "url": "https://www.adnkronos.com/cronaca/farmaci-anti-obesita-semaglutide-al-centro-della-nuova-protezione-cardio-renale_jAc5SCtcGcz3Cda5zAk7s"
-  },
-  {
-   "data": "2026-09-21T15:29:53+00:00",
-   "fonte": "ANSA",
-   "titolo": "Grillo: 'Non ho il potere né le facoltà di fondare un partito. Io estromesso dal M5s'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/21/grillo-non-ho-il-potere-ne-le-facolta-di-fondare-un-partito.-io-estromesso-dal-m5s_03120d5d-2cd8-43d7-b2b2-44cfaef92989.html"
-  },
-  {
-   "data": "2026-09-21T15:21:43+00:00",
-   "fonte": "ANSA",
-   "titolo": "De Martino: \"Autotune a Sanremo ammesso se al servizio della canzone. Quote rosa? Stucchevoli\"",
-   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/21/de-martino-autotune-a-sanremo-ammesso-solo-se-al-servizio-della-canzone_e3724150-27a9-4fc3-9b69-db3faad4523f.html"
-  },
-  {
-   "data": "2026-09-21T15:17:00+00:00",
-   "fonte": "ANSA",
-   "titolo": "Torna 'Dedicata a te', 1.000 euro per 1,1 milioni di famiglie",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/21/al-via-nuova-edizione-carta-dedicata-a-te-1.000-euro-a-oltre-11-milioni-famiglie_e2f985f9-42ee-4451-9fab-8a9295dd69a0.html"
+   "titolo": "Sondaggio politico, Fratelli d'Italia cresce e Pd cala. Vannacci all'8%",
+   "url": "https://www.adnkronos.com/politica/sondaggio-tg-la7-meloni-vannacci-pd-elezioni_6aNAS4vV49Dy38qcMXoqhO"
   }
  ]
 }
