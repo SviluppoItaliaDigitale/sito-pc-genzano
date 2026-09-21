@@ -35,6 +35,22 @@ set -u
 
 git rev-parse --is-inside-work-tree >/dev/null 2>&1 || exit 0
 
+# --- Hook dei messaggi di commit -------------------------------------------
+# Stessa regola dell'identita', applicata al testo: nessun messaggio di commit
+# deve rimandare a uno strumento automatico. Git non attiva da solo gli hook
+# versionati, quindi qui si punta `core.hooksPath` alla cartella .githooks del
+# repo. Idempotente: se e' gia' impostato non fa nulla.
+#
+# Perche' serve (21/09/2026): un censimento ha trovato 170 commit su main, dal
+# 19 giugno, con la riga di sessione nel messaggio. Nessuna sessione lo faceva
+# apposta: la regola c'era, ma era affidata alla memoria.
+if [ -d "$(git rev-parse --show-toplevel 2>/dev/null)/.githooks" ]; then
+  if [ "$(git config core.hooksPath 2>/dev/null || true)" != ".githooks" ]; then
+    git config core.hooksPath .githooks 2>/dev/null \
+      && echo "[identita-git] Hook dei messaggi di commit attivati (.githooks)." >&2
+  fi
+fi
+
 # Identita' canonica del repository: il nome della persona che cura il sito.
 # L'email resta quella `noreply` di GitHub: e' il campo con cui GitHub collega
 # il commit al profilo, quindi cambiarla scollegherebbe i commit dall'account.
