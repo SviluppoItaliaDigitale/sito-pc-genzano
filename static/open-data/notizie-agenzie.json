@@ -5,13 +5,61 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-21T00:31:18+00:00",
+  "generato": "2026-09-21T05:20:57+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-20T22:40:53+00:00",
+   "data": "2026-09-21T04:55:24+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "A New York la settimana Onu: 130 leader attesi per discutere guerre, clima e Intelligenza artificiale",
+   "url": "https://www.adnkronos.com/internazionale/esteri/onu-palazzo-vetro-guerre-cambiamento-climatico-temi-caldi_5dXmrlwOamonQd21Hyq5yo"
+  },
+  {
+   "data": "2026-09-21T04:47:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Morto il figlio di Cindy Crawford, Presley Gerber aveva 27 anni",
+   "url": "https://www.adnkronos.com/internazionale/esteri/morto-figlio-cindy-crawford-presley-gerber_sFCYioyaPRUSos3hMraQ6"
+  },
+  {
+   "data": "2026-09-21T04:36:16+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Lega, Salvini a Pontida lancia il congresso a ottobre: \"Nessuno spazio a divisioni\"",
+   "url": "https://www.adnkronos.com/politica/pontida-lega-salvini-congresso-ottobre-partito_4YguRPVwBcMRYrzOyXvTKs"
+  },
+  {
+   "data": "2026-09-21T03:11:11+00:00",
+   "fonte": "ANSA",
+   "titolo": "Per i suoi ex consiglieri, Kamala Harris non correrà nel 2028",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/21/per-i-suoi-ex-consiglieri-kamala-harris-non-correra-nel-2028_c138aadf-b513-41e2-b2d4-f172e55dfc58.html"
+  },
+  {
+   "data": "2026-09-21T03:07:01+00:00",
+   "fonte": "ANSA",
+   "titolo": "Protesta a Austin, in Texas, dopo che un agente dell'Ice ha sparato e ferito una persona",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/21/fox-luomo-colpito-dallice-in-texas-e-un-migrante-senza-documenti-del-venezuela_29f82974-8902-4a17-896c-f09c49651f57.html"
+  },
+  {
+   "data": "2026-09-21T03:01:48+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il partito di Putin rivince le elezioni. Pioggia di droni e missili su Mosca",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/20/il-partito-di-putin-rivince-le-elezioni-pioggia-di-droni-e-missili-su-mosca_e4dff2be-9db4-41e8-ae3d-ed08b4618e8e.html"
+  },
+  {
+   "data": "2026-09-21T02:58:51+00:00",
+   "fonte": "ANSA",
+   "titolo": "Bessent: 'I colloqui con la Cina un successo, sull'IA ci rivedremo'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/21/bessent-i-colloqui-con-la-cina-un-successo-sullia-ci-rivedremo_9a10b2b8-a8a5-4263-bb56-cc7b2d9e9a3c.html"
+  },
+  {
+   "data": "2026-09-21T02:51:09+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il tifone Dujuan si avvicina alle coste del Giappone, previsti venti a 198 km orari",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/21/tifone-dujuan-si-avvicina-alle-coste-del-giappone-previsti-venti-a-198_c90f18d7-807f-4595-a309-fc746f63453f.html"
+  },
+  {
+   "data": "2026-09-21T02:47:57+00:00",
    "fonte": "ANSA",
    "titolo": "L'AfD vince anche in Meclemburgo-Pomerania, Berlino alla Linke ma Merz non molla",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/21/lafd-vince-anche-in-meclemburgo-pomerania-berlino-alla-linke-ma-merz-non_e858bc98-bac2-4f2f-a7ce-abd390ca6baf.html"
@@ -65,18 +113,6 @@
    "url": "https://www.adnkronos.com/internazionale/esteri/video-cane-labrador-ladro_3cmKXTplm787lEqeUlGHig"
   },
   {
-   "data": "2026-09-20T21:12:11+00:00",
-   "fonte": "ANSA",
-   "titolo": "Eurovolley: dominio azzurro a Torino, l'Italia stacca il pass per i quarti",
-   "url": "https://www.ansa.it/sito/notizie/sport/pallavolo/2026/09/20/eurovolley-dominio-azzurro-a-torino-litalia-stacca-il-pass-per-i-quarti_65f76b35-9640-47a2-b8ce-5f185d435be0.html"
-  },
-  {
-   "data": "2026-09-20T20:08:21+00:00",
-   "fonte": "ANSA",
-   "titolo": "Mondiali di ciclismo: Evenepoel domina la crono, un Ganna d'argento si inchina ancora",
-   "url": "https://www.ansa.it/sito/notizie/sport/ciclismo/2026/09/20/mondiali-di-ciclismo-evenepoel-domina-la-crono-un-ganna-dargento-si-inchina-ancora_405461e8-3504-4ec3-a65c-b75ac56f805a.html"
-  },
-  {
    "data": "2026-09-20T19:39:10+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Evenepoel campione del mondo a cronometro, 2° posto per Ganna",
@@ -93,12 +129,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "#AccadeOggi",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
-  },
-  {
-   "data": "2026-09-20T19:18:56+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il partito di Putin rivince le elezioni. Pioggia di droni e missili su Mosca",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/20/il-partito-di-putin-rivince-le-elezioni-pioggia-di-droni-e-missili-su-mosca_e4dff2be-9db4-41e8-ae3d-ed08b4618e8e.html"
   },
   {
    "data": "2026-09-20T19:16:01+00:00",
@@ -143,12 +173,6 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/insegue-il-pallone-e-viene-travolto-dal-bus-12enne-gravissimo_37663a97-b77b-447e-bafc-3a67057b3b4c.html"
   },
   {
-   "data": "2026-09-20T18:27:41+00:00",
-   "fonte": "ANSA",
-   "titolo": "Nuova escalation, Trump torna prima da Camp David: 'Devo decidere sull'Iran'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/09/20/nuova-escalation-trump-torna-prima-da-camp-david-devo-decidere-sulliran_d85ac995-09c8-4380-8a2c-330e9dd7d8ba.html"
-  },
-  {
    "data": "2026-09-20T18:26:29+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Mattarella, la battaglia dei diritti è lungi dall'essere conclusa",
@@ -161,34 +185,10 @@
    "url": "https://www.ansa.it/sito/notizie/politica/2026/09/20/lega-la-mossa-di-salvini-a-pontida-congresso-straordinario-a-ottobre_f7eadbe5-25a0-4754-a303-b2aae6c72b05.html"
   },
   {
-   "data": "2026-09-20T18:23:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Europei pallavolo, Italia-Danimarca 3-0 e azzurri ai quarti - Rivivi la diretta",
-   "url": "https://www.adnkronos.com/sport/europei-pallavolo-oggi-ottavi-italia-danimarca-diretta_4fvgx9lZhIQcz4Mth0Kkn6"
-  },
-  {
    "data": "2026-09-20T18:22:35+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Minorenni in giro da soli di notte, denunciati i genitori per abbandono",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/20/minorenni-in-giro-da-soli-di-notte-denunciati-i-genitori-per-abbandono_e0d6df2e-f82e-4210-9f10-dc6e8f2dd282.html"
-  },
-  {
-   "data": "2026-09-20T18:21:32+00:00",
-   "fonte": "ANSA",
-   "titolo": "Elezioni in Germania, a Berlino Die Linke festeggia la vittoria sulla CDU",
-   "url": "https://www.ansa.it/sito/videogallery/mondo/2026/09/20/elezioni-in-germania-a-berlino-die-linke-festeggia-la-vittoria-sulla-cdu_95ddd27b-ce2a-4739-b9b7-a8dc89eda154.html"
-  },
-  {
-   "data": "2026-09-20T18:02:13+00:00",
-   "fonte": "ANSA",
-   "titolo": "Lula contro le scommesse online, ma il calcio reagisce: 'Così moriamo'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/20/lula-contro-le-scommesse-online-ma-il-calcio-reagisce-cosi-moriamo_8fe4b894-df24-4f9c-ab69-a93c0cfa5fef.html"
-  },
-  {
-   "data": "2026-09-20T18:01:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Milan-Lecce 3-0: Pulisic, Rabiot e Moreira portano i rossoneri al quinto posto",
-   "url": "https://www.adnkronos.com/sport/diretta-milan-lecce-oggi-serie-a-live_1v542Di0JWyZ2cS1Qd6R5G"
   }
  ]
 }
