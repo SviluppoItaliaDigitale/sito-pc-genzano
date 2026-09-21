@@ -17,7 +17,7 @@ Con la fine dell'estate meteorologica si può fare un primo bilancio operativo d
 
 ## Il quadro generale
 
-La stagione AIB 2026 nel Lazio si è aperta ufficialmente con la **Dichiarazione dello stato di grave pericolosità per gli incendi boschivi** della Regione Lazio, che ha coperto il periodo **15 giugno — 30 settembre**, come stabilito dal Piano AIB regionale.
+La stagione AIB 2026 nel Lazio si è aperta ufficialmente il **15 giugno**, quando sono scattati due atti distinti. A livello nazionale, il Ministro per la Protezione Civile e le Politiche del Mare ha fissato i tempi della campagna antincendio boschivo (Gazzetta Ufficiale, Serie generale n. 133 dell'11 giugno 2026). A livello regionale, il Piano regionale antincendi boschivi della Regione Lazio ha dichiarato lo **stato di grave pericolosità per gli incendi boschivi** (Delibera di Giunta Regionale n. 228 del 25 maggio 2023, prorogata per il 2026). Entrambi coprono il periodo **15 giugno — 15 ottobre 2026**, lo stesso che a Genzano di Roma recepisce l'[ordinanza sindacale n. 14 del 17 giugno 2026](/comunicazioni/2026-06-18-ordinanza-sindacale-incendi-boschivi-2026/).
 
 Dal punto di vista climatico, l'estate è stata caratterizzata da:
 
@@ -65,7 +65,7 @@ Il Gruppo di Genzano ringrazia tutti i volontari, i loro familiari, le strutture
 
 ## Per approfondire
 
-- [Regione Lazio — AIB](https://protezionecivile.regione.lazio.it/)
+- [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/protezione-civile)
 - [Parco Regionale dei Castelli Romani](https://www.parcocastelliromani.it/)
 - [Come segnalare un incendio](/comunicazioni/2026-08-02-ondate-calore-agosto-fragili/)
 
