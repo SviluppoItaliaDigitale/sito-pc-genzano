@@ -5,8 +5,8 @@
 # Usato dal partial Hugo `video-correlati.html` per renderizzare la
 # sezione 'Approfondimenti video' in fondo agli articoli pertinenti.
 #
-# Pagine coperte: 306 / Video unici usati: 265 /
-# Link totali: 1018 (max 5 per pagina,
+# Pagine coperte: 308 / Video unici usati: 267 /
+# Link totali: 1032 (max 5 per pagina,
 # soglia score >= 2.0).
 
 canali:
@@ -19,7 +19,7 @@ canali:
     nome: CICAP — Comitato Italiano per il Controllo delle Affermazioni sulle Pseudoscienze
     tematico_pc: false
     url: https://www.youtube.com/@CICAP_it/videos
-    video_count: 629
+    video_count: 630
   cima-foundation:
     nome: CIMA Research Foundation
     tematico_pc: true
@@ -29,7 +29,7 @@ canali:
     nome: CMCC — Centro Euro-Mediterraneo sui Cambiamenti Climatici
     tematico_pc: false
     url: https://www.youtube.com/@CMCCvideo/videos
-    video_count: 942
+    video_count: 944
   cnsas:
     nome: CNSAS — Corpo Nazionale Soccorso Alpino e Speleologico
     tematico_pc: true
@@ -39,7 +39,7 @@ canali:
     nome: Dario Bressanini — chimica e scienza dell'alimentazione
     tematico_pc: false
     url: https://www.youtube.com/@dariobressanini/videos
-    video_count: 143
+    video_count: 144
   dpc-gov:
     nome: Dipartimento della Protezione Civile (PCM)
     tematico_pc: true
@@ -49,7 +49,7 @@ canali:
     nome: Geopop — divulgazione scientifica
     tematico_pc: false
     url: https://www.youtube.com/@geopop/videos
-    video_count: 1340
+    video_count: 1350
   ingv-terremoti:
     nome: INGV — Istituto Nazionale di Geofisica e Vulcanologia
     tematico_pc: true
@@ -79,7 +79,7 @@ canali:
     nome: National Geographic Italia
     tematico_pc: false
     url: https://www.youtube.com/@natgeoit/videos
-    video_count: 645
+    video_count: 646
   rai-cultura:
     nome: Rai Cultura (documentari)
     tematico_pc: false
@@ -89,7 +89,7 @@ canali:
     nome: Rai News
     tematico_pc: false
     url: https://www.youtube.com/@RaiNews/videos
-    video_count: 1817
+    video_count: 1832
   solarino-sismologo:
     nome: Stefano Solarino — sismologo INGV (divulgazione sismica)
     tematico_pc: true
@@ -1845,6 +1845,16 @@ pagine:
     - anchored:
       - resilienza
       canale: cmcc
+      id: ISIlvlqRcog
+      is_lis: false
+      overlap:
+      - resilienza
+      score: 2.0
+      titolo: 'Trame di resilienza: Infrastrutture per l’Italia del 2050 | FUTURE BRIEF N. 2'
+      url: https://youtu.be/ISIlvlqRcog
+    - anchored:
+      - resilienza
+      canale: cmcc
       id: Ia74MYBSA-U
       is_lis: false
       overlap:
@@ -2690,6 +2700,16 @@ pagine:
       score: 6.2
       titolo: 'Verso una maggiore resilienza delle città transfrontaliere al rischio alluvioni: il progetto ADAPT'
       url: https://youtu.be/k0X5nx6BRmc
+    - anchored:
+      - resilienza
+      canale: cmcc
+      id: ISIlvlqRcog
+      is_lis: false
+      overlap:
+      - resilienza
+      score: 6.0
+      titolo: 'Trame di resilienza: Infrastrutture per l’Italia del 2050 | FUTURE BRIEF N. 2'
+      url: https://youtu.be/ISIlvlqRcog
   comunicazioni/2026-06-08-campagna-antincendio-boschivo-2026:
     title: 'Campagna antincendio boschivo 2026: dal 15 giugno al 15 ottobre la lotta attiva'
     url: /comunicazioni/2026-06-08-campagna-antincendio-boschivo-2026/
@@ -2950,6 +2970,16 @@ pagine:
       score: 2.8
       titolo: 'Verso una maggiore resilienza delle città transfrontaliere al rischio alluvioni: il progetto ADAPT'
       url: https://youtu.be/k0X5nx6BRmc
+    - anchored:
+      - resilienza
+      canale: cmcc
+      id: ISIlvlqRcog
+      is_lis: false
+      overlap:
+      - resilienza
+      score: 2.0
+      titolo: 'Trame di resilienza: Infrastrutture per l’Italia del 2050 | FUTURE BRIEF N. 2'
+      url: https://youtu.be/ISIlvlqRcog
     - anchored:
       - resilienza
       canale: cmcc
@@ -3301,6 +3331,16 @@ pagine:
       score: 6.8
       titolo: 'Verso una maggiore resilienza delle città transfrontaliere al rischio alluvioni: il progetto ADAPT'
       url: https://youtu.be/k0X5nx6BRmc
+    - anchored:
+      - resilienza
+      canale: cmcc
+      id: ISIlvlqRcog
+      is_lis: false
+      overlap:
+      - resilienza
+      score: 6.0
+      titolo: 'Trame di resilienza: Infrastrutture per l’Italia del 2050 | FUTURE BRIEF N. 2'
+      url: https://youtu.be/ISIlvlqRcog
   comunicazioni/2026-06-22-rischio-idrogeologico-estivo-siccita-piogge:
     title: 'Rischio idrogeologico estivo: siccità e piogge brevi intense'
     url: /comunicazioni/2026-06-22-rischio-idrogeologico-estivo-siccita-piogge/
@@ -3712,6 +3752,16 @@ pagine:
       score: 6.6
       titolo: 'Verso una maggiore resilienza delle città transfrontaliere al rischio alluvioni: il progetto ADAPT'
       url: https://youtu.be/k0X5nx6BRmc
+    - anchored:
+      - resilienza
+      canale: cmcc
+      id: ISIlvlqRcog
+      is_lis: false
+      overlap:
+      - resilienza
+      score: 6.0
+      titolo: 'Trame di resilienza: Infrastrutture per l’Italia del 2050 | FUTURE BRIEF N. 2'
+      url: https://youtu.be/ISIlvlqRcog
   comunicazioni/2026-06-29-viareggio-2009-memoria-rischio-industriale:
     title: 'Viareggio, 29 giugno 2009: la memoria e le lezioni sul rischio industriale'
     url: /comunicazioni/2026-06-29-viareggio-2009-memoria-rischio-industriale/
@@ -5819,54 +5869,6 @@ pagine:
       score: 5.4
       titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
       url: https://youtu.be/GVKQznWv4eE
-    - anchored:
-      - boschivo
-      canale: dpc-gov
-      id: 4UBxxIfaGL4
-      is_lis: false
-      overlap:
-      - boschivo
-      - incendio
-      - rischio
-      score: 2.2
-      titolo: Spot 2006 sul rischio incendi boschivi
-      url: https://youtu.be/4UBxxIfaGL4
-    - anchored:
-      - boschivo
-      canale: dpc-gov
-      id: 53yYyLsFW3Q
-      is_lis: false
-      overlap:
-      - boschivo
-      - incendio
-      - rischio
-      score: 2.2
-      titolo: Spot 2012 sul rischio incendi boschivi
-      url: https://youtu.be/53yYyLsFW3Q
-    - anchored:
-      - boschivo
-      canale: io-non-rischio
-      id: 9tYSNBQY7OY
-      is_lis: true
-      overlap:
-      - boschivo
-      - incendio
-      - rischio
-      score: 2.2
-      titolo: Io non rischio Incendi Boschivi – Cosa sapere e cosa fare fin da subito
-      url: https://youtu.be/9tYSNBQY7OY
-    - anchored:
-      - boschivo
-      canale: io-non-rischio
-      id: pvk-P_5WBBw
-      is_lis: true
-      overlap:
-      - boschivo
-      - incendio
-      - rischio
-      score: 2.2
-      titolo: Io non rischio Incendi Boschivi – Domande e risposte
-      url: https://youtu.be/pvk-P_5WBBw
   comunicazioni/2026-08-31-chiusura-agosto-settembre-agenda:
     title: 'Settembre 2026: l''agenda della Protezione Civile di Genzano di Roma'
     url: /comunicazioni/2026-08-31-chiusura-agosto-settembre-agenda/
@@ -7023,6 +7025,41 @@ pagine:
       score: 6.0
       titolo: Le 5 differenze tra neve e grandine
       url: https://youtu.be/JXmJa_Vo28o
+  comunicazioni/2026-10-17-neve-e-gelo-casa-e-auto-pronte-prima-dell-inverno-facile:
+    title: 'Neve e gelo: prepara la casa e l''auto'
+    url: /comunicazioni/2026-10-17-neve-e-gelo-casa-e-auto-pronte-prima-dell-inverno-facile/
+    video:
+    - anchored:
+      - neve
+      canale: cnsas
+      id: CyIq3dZGscc
+      is_lis: false
+      overlap:
+      - neve
+      - prudenza
+      score: 7.0
+      titolo: 'Covid-19: “Sì allo sport in montagna, ma quest’anno prima la prudenza”. Sicuri sulla Neve 2021'
+      url: https://youtu.be/CyIq3dZGscc
+    - anchored:
+      - neve
+      canale: cnsas
+      id: _eRFm4JSkYs
+      is_lis: false
+      overlap:
+      - neve
+      score: 6.0
+      titolo: 'Sicuri in Montagna - Racchette da neve: istruzioni per l''uso'
+      url: https://youtu.be/_eRFm4JSkYs
+    - anchored:
+      - neve
+      canale: geopop
+      id: JXmJa_Vo28o
+      is_lis: false
+      overlap:
+      - neve
+      score: 6.0
+      titolo: Le 5 differenze tra neve e grandine
+      url: https://youtu.be/JXmJa_Vo28o
   comunicazioni/2026-10-20-rischio-industriale-seveso:
     title: 'Rischio industriale: la direttiva Seveso e i piani di emergenza'
     url: /comunicazioni/2026-10-20-rischio-industriale-seveso/
@@ -7049,6 +7086,17 @@ pagine:
     title: 'Risparmio energetico e resilienza: come l''energia incide sulle emergenze'
     url: /comunicazioni/2026-10-24-giornata-onu-risparmio-energetico-emergenze/
     video:
+    - anchored:
+      - resilienza
+      canale: cmcc
+      id: ISIlvlqRcog
+      is_lis: false
+      overlap:
+      - infrastrutture
+      - resilienza
+      score: 7.0
+      titolo: 'Trame di resilienza: Infrastrutture per l’Italia del 2050 | FUTURE BRIEF N. 2'
+      url: https://youtu.be/ISIlvlqRcog
     - anchored:
       - resilienza
       canale: cmcc
@@ -8175,6 +8223,74 @@ pagine:
       score: 8.2
       titolo: 'Sicuri in Montagna - Pianificazione è prevenzione: come preparare un''escursione'
       url: https://youtu.be/uG9xAid4xig
+  comunicazioni/2026-12-29-vacanze-in-montagna-valanghe-sicurezza-facile:
+    title: Vai in montagna? Occhio alle valanghe
+    url: /comunicazioni/2026-12-29-vacanze-in-montagna-valanghe-sicurezza-facile/
+    video:
+    - anchored:
+      - montagna
+      - regole
+      canale: cnsas
+      id: 7NKVJqnbt8c
+      is_lis: false
+      overlap:
+      - fuori
+      - montagna
+      - regole
+      - sicuri
+      score: 8.8
+      titolo: Sicuri in Montagna - Fuori sentiero, ma dentro le regole
+      url: https://youtu.be/7NKVJqnbt8c
+    - anchored:
+      - montagna
+      - regole
+      canale: cnsas
+      id: YMfRmwyiQv4
+      is_lis: false
+      overlap:
+      - montagna
+      - regole
+      - sicuri
+      score: 8.2
+      titolo: 'Sicuri in Montagna - Freeride: free... Ma con delle regole'
+      url: https://youtu.be/YMfRmwyiQv4
+    - anchored:
+      - montagna
+      canale: cnsas
+      id: uG9xAid4xig
+      is_lis: false
+      overlap:
+      - escursione
+      - montagna
+      - prevenzione
+      - sicuri
+      score: 8.2
+      titolo: 'Sicuri in Montagna - Pianificazione è prevenzione: come preparare un''escursione'
+      url: https://youtu.be/uG9xAid4xig
+    - anchored:
+      - montagna
+      canale: cnsas
+      id: 9UvB3YmhwtA
+      is_lis: false
+      overlap:
+      - ghiaccio
+      - montagna
+      - sicuri
+      score: 8.0
+      titolo: 'Sicuri in Montagna - Scalare l''acqua: affrontare le cascate di ghiaccio in sicurezza'
+      url: https://youtu.be/9UvB3YmhwtA
+    - anchored:
+      - montagna
+      canale: cnsas
+      id: 9kMOL7z3yiw
+      is_lis: false
+      overlap:
+      - andare
+      - montagna
+      - sicuri
+      score: 8.0
+      titolo: 'Sicuri in Montagna: cartografia, sai dove andare?'
+      url: https://youtu.be/9kMOL7z3yiw
   comunicazioni/2027-01-13-avezzano-1915-terremoto-marsica:
     title: 'Avezzano, 13 gennaio 1915: il terremoto della Marsica e la sua eredità'
     url: /comunicazioni/2027-01-13-avezzano-1915-terremoto-marsica/
@@ -11792,6 +11908,19 @@ pagine:
     url: /rischi-prevenzione/dopo-emergenza/
     video:
     - anchored:
+      - alluvione
+      - verifica
+      canale: geopop
+      id: _CWX0_o09tY
+      is_lis: false
+      overlap:
+      - alluvione
+      - sempre
+      - verifica
+      score: 3.4
+      titolo: 'Alluvione in Spagna: che cos’è il DANA, quando si verifica e perché è sempre più frequente'
+      url: https://youtu.be/_CWX0_o09tY
+    - anchored:
       - blackout
       canale: rai-news
       id: aG-JNELt430
@@ -12387,6 +12516,17 @@ pagine:
     - anchored:
       - resilienza
       canale: cmcc
+      id: ISIlvlqRcog
+      is_lis: false
+      overlap:
+      - infrastrutture
+      - resilienza
+      score: 3.0
+      titolo: 'Trame di resilienza: Infrastrutture per l’Italia del 2050 | FUTURE BRIEF N. 2'
+      url: https://youtu.be/ISIlvlqRcog
+    - anchored:
+      - resilienza
+      canale: cmcc
       id: k0X5nx6BRmc
       is_lis: false
       overlap:
@@ -12613,6 +12753,16 @@ pagine:
     title: ISO 22300 — Vocabolario di sicurezza e resilienza
     url: /standard-iso/iso-22300/
     video:
+    - anchored:
+      - resilienza
+      canale: cmcc
+      id: ISIlvlqRcog
+      is_lis: false
+      overlap:
+      - resilienza
+      score: 6.0
+      titolo: 'Trame di resilienza: Infrastrutture per l’Italia del 2050 | FUTURE BRIEF N. 2'
+      url: https://youtu.be/ISIlvlqRcog
     - anchored:
       - resilienza
       canale: cmcc
@@ -12936,6 +13086,16 @@ pagine:
       score: 4.0
       titolo: 'Partecipazione e resilienza: strumenti per lo sviluppo urbano, ambientale e di benessere sociale.'
       url: https://youtu.be/Ia74MYBSA-U
+    - anchored:
+      - resilienza
+      canale: cmcc
+      id: ISIlvlqRcog
+      is_lis: false
+      overlap:
+      - resilienza
+      score: 2.0
+      titolo: 'Trame di resilienza: Infrastrutture per l’Italia del 2050 | FUTURE BRIEF N. 2'
+      url: https://youtu.be/ISIlvlqRcog
     - anchored:
       - resilienza
       canale: cmcc

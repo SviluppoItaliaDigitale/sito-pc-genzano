@@ -3,7 +3,7 @@
 # Aggiornato periodicamente; usato da scripts/genera-video-correlati.py
 # per il cross-match con i contenuti del sito.
 #
-# Totale: 8829 video (18 canali).
+# Totale: 8859 video (18 canali).
 
 canali:
   abili-a-proteggere:
@@ -15,7 +15,7 @@ canali:
     nome: CICAP — Comitato Italiano per il Controllo delle Affermazioni sulle Pseudoscienze
     tematico_pc: false
     url: https://www.youtube.com/@CICAP_it/videos
-    video_count: 629
+    video_count: 630
   cima-foundation:
     nome: CIMA Research Foundation
     tematico_pc: true
@@ -25,7 +25,7 @@ canali:
     nome: CMCC — Centro Euro-Mediterraneo sui Cambiamenti Climatici
     tematico_pc: false
     url: https://www.youtube.com/@CMCCvideo/videos
-    video_count: 942
+    video_count: 944
   cnsas:
     nome: CNSAS — Corpo Nazionale Soccorso Alpino e Speleologico
     tematico_pc: true
@@ -35,7 +35,7 @@ canali:
     nome: Dario Bressanini — chimica e scienza dell'alimentazione
     tematico_pc: false
     url: https://www.youtube.com/@dariobressanini/videos
-    video_count: 143
+    video_count: 144
   dpc-gov:
     nome: Dipartimento della Protezione Civile (PCM)
     tematico_pc: true
@@ -45,7 +45,7 @@ canali:
     nome: Geopop — divulgazione scientifica
     tematico_pc: false
     url: https://www.youtube.com/@geopop/videos
-    video_count: 1340
+    video_count: 1350
   ingv-terremoti:
     nome: INGV — Istituto Nazionale di Geofisica e Vulcanologia
     tematico_pc: true
@@ -75,7 +75,7 @@ canali:
     nome: National Geographic Italia
     tematico_pc: false
     url: https://www.youtube.com/@natgeoit/videos
-    video_count: 645
+    video_count: 646
   rai-cultura:
     nome: Rai Cultura (documentari)
     tematico_pc: false
@@ -85,7 +85,7 @@ canali:
     nome: Rai News
     tematico_pc: false
     url: https://www.youtube.com/@RaiNews/videos
-    video_count: 1817
+    video_count: 1832
   solarino-sismologo:
     nome: Stefano Solarino — sismologo INGV (divulgazione sismica)
     tematico_pc: true
@@ -3017,6 +3017,11 @@ video:
     id: hlhMAVjKBgk
     titolo: '#pensoCICAP - Fabio Turone'
     url: https://youtu.be/hlhMAVjKBgk
+  cicap-houvBF3Whv0:
+    canale: cicap
+    id: houvBF3Whv0
+    titolo: La Luna al cinema - con Marcello Rossi
+    url: https://youtu.be/houvBF3Whv0
   cicap-i2iBhr8-9Y0:
     canale: cicap
     id: i2iBhr8-9Y0
@@ -5667,6 +5672,11 @@ video:
     id: FjxD0X7l128
     titolo: FLAME Workshop 03-02-2025 | Feedback Report - Breakout session 1
     url: https://youtu.be/FjxD0X7l128
+  cmcc-FnaRxLpQRBk:
+    canale: cmcc
+    id: FnaRxLpQRBk
+    titolo: 'IPCC OPEN HOUR: AR7 Working Group I: Expert Reviewer Registration'
+    url: https://youtu.be/FnaRxLpQRBk
   cmcc-FrQPkliQ4WQ:
     canale: cmcc
     id: FrQPkliQ4WQ
@@ -5842,6 +5852,11 @@ video:
     id: IKiA8Uunxuw
     titolo: 'Jyotsna Khara: Innovation Labs are the heart of the project | Naturance'
     url: https://youtu.be/IKiA8Uunxuw
+  cmcc-ISIlvlqRcog:
+    canale: cmcc
+    id: ISIlvlqRcog
+    titolo: 'Trame di resilienza: Infrastrutture per l’Italia del 2050 | FUTURE BRIEF N. 2'
+    url: https://youtu.be/ISIlvlqRcog
   cmcc-ITH5uWAN8Zc:
     canale: cmcc
     id: ITH5uWAN8Zc
@@ -9907,6 +9922,11 @@ video:
     id: faKbEZa3hB0
     titolo: What happened after SPUTNIK?
     url: https://youtu.be/faKbEZa3hB0
+  dario-bressanini-fzMYuooQneM:
+    canale: dario-bressanini
+    id: fzMYuooQneM
+    titolo: Il cimitero delle pillole (per dimagrire)
+    url: https://youtu.be/fzMYuooQneM
   dario-bressanini-gC1Y70My_iE:
     canale: dario-bressanini
     id: gC1Y70My_iE
@@ -12812,6 +12832,11 @@ video:
     id: 6Bv4eLvDtDA
     titolo: 'La "conquista" del polo nord: l''impresa di Nobile e Amundsen a bordo del dirigibile Norge'
     url: https://youtu.be/6Bv4eLvDtDA
+  geopop-6DJPh4ybU0E:
+    canale: geopop
+    id: 6DJPh4ybU0E
+    titolo: Perché prima di decolli e atterraggi viene chiesto di chiudere i tavolini?È per la nostra sicurezza.
+    url: https://youtu.be/6DJPh4ybU0E
   geopop-6EFHaktlC4k:
     canale: geopop
     id: 6EFHaktlC4k
@@ -12877,6 +12902,11 @@ video:
     id: 6fBSVSmYSaE
     titolo: 'Il fenomeno delle “case bara” di Hong Kong: come sono fatte e perché ci vivono 220 mila persone?'
     url: https://youtu.be/6fBSVSmYSaE
+  geopop-6jhGdT4QK7U:
+    canale: geopop
+    id: 6jhGdT4QK7U
+    titolo: Avete mai notato la telecamera sul parabrezza? Ecco a cosa serve e come farla funzionare bene
+    url: https://youtu.be/6jhGdT4QK7U
   geopop-6kBSSBSfPVQ:
     canale: geopop
     id: 6kBSSBSfPVQ
@@ -13327,6 +13357,11 @@ video:
     id: B3VHnN4UzEg
     titolo: We open a cigarette with tobacco heated in the laboratory
     url: https://youtu.be/B3VHnN4UzEg
+  geopop-B51so3HB0wM:
+    canale: geopop
+    id: B51so3HB0wM
+    titolo: 'Oggi dalle ore 21:30, vi aspettiamo sul @NOVE9  per  #GeopopRacconta: #chernobyl'
+    url: https://youtu.be/B51so3HB0wM
   geopop-BChMoAAGzPk:
     canale: geopop
     id: BChMoAAGzPk
@@ -14672,6 +14707,11 @@ video:
     id: OEMBaR9dqJM
     titolo: GeoPOP ROCKS!  Don't cry - Guns N'Roses - Guitar solo cover
     url: https://youtu.be/OEMBaR9dqJM
+  geopop-OG2C8oJhp-k:
+    canale: geopop
+    id: OG2C8oJhp-k
+    titolo: Come fare a lanciare la propria attività quando si è giovani e non si hanno risorse? Guarda qui
+    url: https://youtu.be/OG2C8oJhp-k
   geopop-OLfVIu3hsZ8:
     canale: geopop
     id: OLfVIu3hsZ8
@@ -14917,6 +14957,11 @@ video:
     id: QTNi0EvVw-s
     titolo: 'The machines that dug the tunnels for Milan''s Metro 4: here is how TBM moles work'
     url: https://youtu.be/QTNi0EvVw-s
+  geopop-QWHAe3LYtt0:
+    canale: geopop
+    id: QWHAe3LYtt0
+    titolo: Perché gli adolescenti sono ribelli - i motivi biochimici
+    url: https://youtu.be/QWHAe3LYtt0
   geopop-QYXktiNFl-A:
     canale: geopop
     id: QYXktiNFl-A
@@ -15192,6 +15237,11 @@ video:
     id: T9LPqaj_74s
     titolo: 'Turbulence on the London-Singapore flight: what happened and why it didn''t drop 2,000 meters in a...'
     url: https://youtu.be/T9LPqaj_74s
+  geopop-TGipVy-Zrms:
+    canale: geopop
+    id: TGipVy-Zrms
+    titolo: 4 persone con lesione midollare completa tornano in piedi e camminano grazie alle neurostimolazione
+    url: https://youtu.be/TGipVy-Zrms
   geopop-THcUz5r14Ew:
     canale: geopop
     id: THcUz5r14Ew
@@ -16382,6 +16432,11 @@ video:
     id: dhQYqA-96cg
     titolo: California Gold Rush, l’incredibile storia della corsa all’oro negli USA di metà ‘800
     url: https://youtu.be/dhQYqA-96cg
+  geopop-dtikahfhEzY:
+    canale: geopop
+    id: dtikahfhEzY
+    titolo: L’AI ci ha battuti? Come ha risolto (forse) un problema da un milione di dollari
+    url: https://youtu.be/dtikahfhEzY
   geopop-du6J7hENyUU:
     canale: geopop
     id: du6J7hENyUU
@@ -16567,6 +16622,11 @@ video:
     id: fj1g14cwH0I
     titolo: Does an induction cooktop use more energy than a gas stove? We ran a test to find out
     url: https://youtu.be/fj1g14cwH0I
+  geopop-fkRWjhgE038:
+    canale: geopop
+    id: fkRWjhgE038
+    titolo: Cosa sta succedendo ai ghiacciai nel mondo e cosa possiamo fare
+    url: https://youtu.be/fkRWjhgE038
   geopop-fm-mAPr_zUo:
     canale: geopop
     id: fm-mAPr_zUo
@@ -16647,6 +16707,11 @@ video:
     id: gceTeDqp_XU
     titolo: ▶️RISERVE DI PETROLIO NEL MONDO - CLASSIFICA TOP-10 | GeoPOP🌍
     url: https://youtu.be/gceTeDqp_XU
+  geopop-gfpYUsuRvOo:
+    canale: geopop
+    id: gfpYUsuRvOo
+    titolo: No, la Torre di Pisa non è la più inclinata del mondo.
+    url: https://youtu.be/gfpYUsuRvOo
   geopop-ggZ3KbfmmzQ:
     canale: geopop
     id: ggZ3KbfmmzQ
@@ -17262,6 +17327,11 @@ video:
     id: mU6bLRT2c4I
     titolo: ▶️ I KARATI DELL'ORO SONO DIVERSI DAI CARATI DEI DIAMANTI |GeologiaPOP
     url: https://youtu.be/mU6bLRT2c4I
+  geopop-mUiRUu_Ekao:
+    canale: geopop
+    id: mUiRUu_Ekao
+    titolo: Come produrre energia rinnovabile se non hai spazio per i pannelli solari (c'entra la blockchain)
+    url: https://youtu.be/mUiRUu_Ekao
   geopop-mVML3ireHkk:
     canale: geopop
     id: mVML3ireHkk
@@ -29812,6 +29882,11 @@ video:
     id: mZjRsfruypA
     titolo: Wild America - La costa
     url: https://youtu.be/mZjRsfruypA
+  natgeo-italia-mjzY5_Qweb4:
+    canale: natgeo-italia
+    id: mjzY5_Qweb4
+    titolo: 5 fatti sorprendenti sugli ornitorinchi
+    url: https://youtu.be/mjzY5_Qweb4
   natgeo-italia-mvUgpt8tfwg:
     canale: natgeo-italia
     id: mvUgpt8tfwg
@@ -31437,6 +31512,11 @@ video:
     id: 5Pi_pLlh5iw
     titolo: 'Intervista a caldo al vincitore delle Nuove Proposte di Sanremo 2026: Nicolò Filippucci'
     url: https://youtu.be/5Pi_pLlh5iw
+  rai-news-5Pv_kdH9R3g:
+    canale: rai-news
+    id: 5Pv_kdH9R3g
+    titolo: 'Baldissero d''Alba, spara contro i ladri e ne uccide uno: indagini sulla dinamica #cronaca'
+    url: https://youtu.be/5Pv_kdH9R3g
   rai-news-5Ra6eZZmABg:
     canale: rai-news
     id: 5Ra6eZZmABg
@@ -31587,6 +31667,11 @@ video:
     id: 6PHASYQZwS8
     titolo: 'World Map: War and Religion: The Role of Faith in Modern Conflicts'
     url: https://youtu.be/6PHASYQZwS8
+  rai-news-6QDamRBqbxM:
+    canale: rai-news
+    id: 6QDamRBqbxM
+    titolo: 'Il voto in Russia: elettori e candidati sotto controllo'
+    url: https://youtu.be/6QDamRBqbxM
   rai-news-6QZWfDS9ecQ:
     canale: rai-news
     id: 6QZWfDS9ecQ
@@ -31982,6 +32067,11 @@ video:
     id: 9W4WyRQu_K0
     titolo: The hunt for Mexico's new drug kingpin, Juan Carlos Valencia Gonzalez.
     url: https://youtu.be/9W4WyRQu_K0
+  rai-news-9XApJKzN3mE:
+    canale: rai-news
+    id: 9XApJKzN3mE
+    titolo: Lapponia, sulle piste da sci la neve "conservata" dallo scorso inverno
+    url: https://youtu.be/9XApJKzN3mE
   rai-news-9XZX_ZjYseM:
     canale: rai-news
     id: 9XZX_ZjYseM
@@ -32202,6 +32292,11 @@ video:
     id: Az8VFJx5xAU
     titolo: Scuola, conto alla rovescia per il ritorno in aula. Il punto sulle nuove sfide di quest'anno
     url: https://youtu.be/Az8VFJx5xAU
+  rai-news-AzAzLG40mxQ:
+    canale: rai-news
+    id: AzAzLG40mxQ
+    titolo: Ritrovate vicino casa le due sorelline scomparse a San Cataldo
+    url: https://youtu.be/AzAzLG40mxQ
   rai-news-B2g1HEEtmJU:
     canale: rai-news
     id: B2g1HEEtmJU
@@ -32812,6 +32907,11 @@ video:
     id: Eqes_W7aab8
     titolo: Justice referendum; high turnout and a "No" vote from young people, an initial analysis of the vote.
     url: https://youtu.be/Eqes_W7aab8
+  rai-news-EvCgJ1Iho_k:
+    canale: rai-news
+    id: EvCgJ1Iho_k
+    titolo: Gran Paradiso, i ghiacciai si sciolgono sotto i 3 500 metri spariranno in vent'anni
+    url: https://youtu.be/EvCgJ1Iho_k
   rai-news-F0y2Cpf2yLY:
     canale: rai-news
     id: F0y2Cpf2yLY
@@ -34557,6 +34657,11 @@ video:
     id: QPh4i0DNmVo
     titolo: 'Two anarchists killed in Rome explosion: they were preparing a bomb'
     url: https://youtu.be/QPh4i0DNmVo
+  rai-news-QVAyEEGq2iM:
+    canale: rai-news
+    id: QVAyEEGq2iM
+    titolo: 'Strage di Castel D''Azzano: nuovi video e dubbi sulle decisioni dell''irruzione'
+    url: https://youtu.be/QVAyEEGq2iM
   rai-news-QW63yjxC2_Q:
     canale: rai-news
     id: QW63yjxC2_Q
@@ -34597,6 +34702,11 @@ video:
     id: QmqggQyRSNA
     titolo: 'MappaMondi: The Geopolitics of Aid. Why Does Power Hinder Solidarity?'
     url: https://youtu.be/QmqggQyRSNA
+  rai-news-Qn6D72Ja0Xw:
+    canale: rai-news
+    id: Qn6D72Ja0Xw
+    titolo: 'Pallavolo, Italia-Danimarca: i rumori del campo sono impressionanti'
+    url: https://youtu.be/Qn6D72Ja0Xw
   rai-news-Qo07OQww01Q:
     canale: rai-news
     id: Qo07OQww01Q
@@ -34792,6 +34902,11 @@ video:
     id: RvsClwHgvPI
     titolo: 'West Nile, Pregliasco: "Ecco come distinguere i sintomi dalla febbre normale"'
     url: https://youtu.be/RvsClwHgvPI
+  rai-news-RyKeBBRKKuw:
+    canale: rai-news
+    id: RyKeBBRKKuw
+    titolo: Iran centinaia di donne corrono senza il velo nella maratona di Teheran
+    url: https://youtu.be/RyKeBBRKKuw
   rai-news-RyotHgeY1Zs:
     canale: rai-news
     id: RyotHgeY1Zs
@@ -35062,6 +35177,11 @@ video:
     id: TvkKwMi0qwU
     titolo: 'Supernova: la sonda per proteggere la Terra dagli asteroidi'
     url: https://youtu.be/TvkKwMi0qwU
+  rai-news-Tw9hr_Ox0Y4:
+    canale: rai-news
+    id: Tw9hr_Ox0Y4
+    titolo: Africa, fame d'acqua
+    url: https://youtu.be/Tw9hr_Ox0Y4
   rai-news-U4D57xvSFTo:
     canale: rai-news
     id: U4D57xvSFTo
@@ -35502,6 +35622,11 @@ video:
     id: XHdbJ8O0pHA
     titolo: Forrest, the little donkey with crooked legs who dreams of running. His story touches the hearts ...
     url: https://youtu.be/XHdbJ8O0pHA
+  rai-news-XISlUC-k6p0:
+    canale: rai-news
+    id: XISlUC-k6p0
+    titolo: Gran Paradiso, i ghiacciai si sciolgono sotto i 3 500 metri spariranno in vent'anni
+    url: https://youtu.be/XISlUC-k6p0
   rai-news-XM6QBzafbP8:
     canale: rai-news
     id: XM6QBzafbP8
@@ -36842,6 +36967,11 @@ video:
     id: fwemPhD_mvI
     titolo: 'SANREMO 2026: quarta serata, tutte le cover (parte3)'
     url: https://youtu.be/fwemPhD_mvI
+  rai-news-fxVJ858tNJ4:
+    canale: rai-news
+    id: fxVJ858tNJ4
+    titolo: 'L’IA decide quanto siamo belli? Il volto diventa un algoritmo: da boom richieste a diagnosi cliniche'
+    url: https://youtu.be/fxVJ858tNJ4
   rai-news-g06keBigWv4:
     canale: rai-news
     id: g06keBigWv4
@@ -37152,6 +37282,11 @@ video:
     id: i7Vx6l5s3Bk
     titolo: The Houthis threaten Bab el-Mandeb, the "other" strait (where 10% of the world's oil passes through)
     url: https://youtu.be/i7Vx6l5s3Bk
+  rai-news-iDGIUa5rq-k:
+    canale: rai-news
+    id: iDGIUa5rq-k
+    titolo: 'Una mandria di bisonti attraversa Manhattan: la sfilata nel cuore di New York'
+    url: https://youtu.be/iDGIUa5rq-k
   rai-news-iFlFhy4XCFk:
     canale: rai-news
     id: iFlFhy4XCFk
@@ -37212,6 +37347,11 @@ video:
     id: ij4jHU2CCPk
     titolo: 'Uomo ucciso a coltellate, la moglie arrestata per omicidio volontario: "Mi sono difesa"'
     url: https://youtu.be/ij4jHU2CCPk
+  rai-news-ijOQJLjXaH4:
+    canale: rai-news
+    id: ijOQJLjXaH4
+    titolo: Tour nelle polemiche. Il costo dei biglietti delle prossime tappe di Ed Sheeran si è dimezzato
+    url: https://youtu.be/ijOQJLjXaH4
   rai-news-im2On7Z-39w:
     canale: rai-news
     id: im2On7Z-39w
@@ -37837,6 +37977,11 @@ video:
     id: nK66oc_iG8Q
     titolo: Trump "in a good mood" over Supreme Court green light for new ballroom
     url: https://youtu.be/nK66oc_iG8Q
+  rai-news-nKIukrJfCt8:
+    canale: rai-news
+    id: nKIukrJfCt8
+    titolo: Ritrovate vicino casa le due sorelline scomparse a San Cataldo
+    url: https://youtu.be/nKIukrJfCt8
   rai-news-nL4OMPhS1B4:
     canale: rai-news
     id: nL4OMPhS1B4
@@ -38332,6 +38477,11 @@ video:
     id: qZ4mbeF11LU
     titolo: 'April 25: Street celebrations, gunfire in Rome, and violent protests in Milan.'
     url: https://youtu.be/qZ4mbeF11LU
+  rai-news-q_DfVz_b8YA:
+    canale: rai-news
+    id: q_DfVz_b8YA
+    titolo: 'Caltanissetta. Parla il papà delle sorelline ritrovate: "È stata una marachella"'
+    url: https://youtu.be/q_DfVz_b8YA
   rai-news-qdqGCJDUosc:
     canale: rai-news
     id: qdqGCJDUosc
