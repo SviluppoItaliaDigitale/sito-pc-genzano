@@ -5,11 +5,23 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-20T22:43:21+00:00",
+  "generato": "2026-09-21T00:31:18+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-20T22:40:53+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'AfD vince anche in Meclemburgo-Pomerania, Berlino alla Linke ma Merz non molla",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/21/lafd-vince-anche-in-meclemburgo-pomerania-berlino-alla-linke-ma-merz-non_e858bc98-bac2-4f2f-a7ce-abd390ca6baf.html"
+  },
+  {
+   "data": "2026-09-20T22:26:59+00:00",
+   "fonte": "ANSA",
+   "titolo": "La stretta di Meloni: 'In classe tetto agli stranieri e divieto di burqa'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/20/meloni-in-classe-numero-massimo-di-stranieri-e-divieto-di-burqa-norma-in-arrivo_eee88fcc-7ab4-4a71-864f-6699535148f3.html"
+  },
   {
    "data": "2026-09-20T22:05:41+00:00",
    "fonte": "ADNKRONOS",
@@ -29,7 +41,7 @@
    "url": "https://www.adnkronos.com/internazionale/esteri/russia-minaccia-nato-piano-di-putin-puo-scattare-presto-lallarme-dellintelligence-in-europa_4F8AwC1kniZtyDkLmL05U4"
   },
   {
-   "data": "2026-09-20T21:50:06+00:00",
+   "data": "2026-09-20T22:01:39+00:00",
    "fonte": "ANSA",
    "titolo": "Il Como manca l'aggancio in vetta, riscatto Juve e Milan",
    "url": "https://www.ansa.it/sito/notizie/sport/2026/09/20/il-como-manca-laggancio-in-vetta-riscatto-juve-e-milan_bcc5657b-55dc-4374-8c43-8efea9afdc80.html"
@@ -45,12 +57,6 @@
    "fonte": "ANSA",
    "titolo": "Cori e spalle, la curva della Juve non rispetta il minuto per Mazzola",
    "url": "https://www.ansa.it/sito/notizie/sport/2026/09/20/cori-e-spalle-la-curva-della-juve-non-rispetta-il-minuto-per-mazzola_40a0d083-21c1-4a39-9cb7-7e0f3809dc43.html"
-  },
-  {
-   "data": "2026-09-20T21:14:24+00:00",
-   "fonte": "ANSA",
-   "titolo": "L'AfD vince anche in Meclemburgo-Pomerania, Berlino alla Linke ma Merz non molla",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/20/lafd-vince-anche-in-meclemburgo-pomerania-berlino-alla-linke-ma-merz-non_e858bc98-bac2-4f2f-a7ce-abd390ca6baf.html"
   },
   {
    "data": "2026-09-20T21:12:24+00:00",
@@ -183,12 +189,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Milan-Lecce 3-0: Pulisic, Rabiot e Moreira portano i rossoneri al quinto posto",
    "url": "https://www.adnkronos.com/sport/diretta-milan-lecce-oggi-serie-a-live_1v542Di0JWyZ2cS1Qd6R5G"
-  },
-  {
-   "data": "2026-09-20T17:59:27+00:00",
-   "fonte": "ANSA",
-   "titolo": "La stretta di Meloni: 'In classe tetto agli stranieri e divieto di burqa'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/20/meloni-in-classe-numero-massimo-di-stranieri-e-divieto-di-burqa-norma-in-arrivo_eee88fcc-7ab4-4a71-864f-6699535148f3.html"
   }
  ]
 }
