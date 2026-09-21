@@ -532,7 +532,7 @@ Schede pronte per la stampa specifiche per la scuola secondaria di primo grado:
 - 👉 [**Caso Irpinia 1980**](/formazione/schede-stampabili/caso-irpinia-secondaria/) — "Fate presto": Pertini in tv, Zamberletti, nascita Servizio Nazionale PC. *(storia/ed. civica)*
 - 👉 [**Caso L'Aquila 2009**](/formazione/schede-stampabili/caso-aquila-secondaria/) — sciame sismico, Commissione Grandi Rischi, Case C.A.S.E., riforma comunicazione del rischio. *(storia/scienze)*
 - 👉 [**Caso Vajont 1963**](/formazione/schede-stampabili/caso-vajont-secondaria/) — disastro annunciato: ascolto della scienza, responsabilità tecnica e politica, Tina Merlin. *(storia/scienze/ed. civica)*
-- 👉 [**Caso Messina-Reggio 1908**](/formazione/schede-stampabili/caso-messina-secondaria/) — tsunami, prima legge antisismica al mondo (R.D.L. 193/1909), cooperazione internazionale. *(storia/scienze)*
+- 👉 [**Caso Messina-Reggio 1908**](/formazione/schede-stampabili/caso-messina-secondaria/) — tsunami, prima legge antisismica italiana (R.D. 193/1909), cooperazione internazionale. *(storia/scienze)*
 - 👉 [**Caso Stava 1985**](/formazione/schede-stampabili/caso-stava-secondaria/) — responsabilità d'impresa, riforma controlli ambientali, Direttiva Seveso II. *(scienze/ed. civica)*
 - 👉 [**Caso Sarno 1998**](/formazione/schede-stampabili/caso-sarno-secondaria/) — colata detritica, Legge 267/1998, Piani di Assetto Idrogeologico (PAI). *(scienze/geografia)*
 - 👉 [**Caso Versilia 1996**](/formazione/schede-stampabili/caso-versilia-secondaria/) — flash flood, nascita dei Centri Funzionali, codici colore allerta meteo, IT-alert. *(scienze/geografia)*

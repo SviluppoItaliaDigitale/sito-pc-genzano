@@ -955,7 +955,7 @@ Gli elaborati migliori possono essere proposti alla stampa locale (siti e giorna
 R. Un PCTO con il Gruppo copre 30-50 ore. Le ore restanti vanno completate con altri enti. Il PCTO PC è un'ottima **esperienza qualificante** nel piano triennale dello studente, specialmente per indirizzi CAT, chimico-ambientale, elettrotecnico.
 
 **D. Come gestisco uno studente interessato al volontariato "vero"?**
-R. Gli studenti maggiorenni possono iscriversi direttamente al Gruppo. Gli studenti dai 16 anni possono farlo con il consenso dei genitori (articolo 34 D.Lgs. 117/2017 — Codice del Terzo Settore). Il PCTO può essere la porta di ingresso.
+R. Gli studenti maggiorenni possono iscriversi direttamente al Gruppo. Gli studenti dai 16 anni possono farlo con il consenso del genitore o di chi esercita la responsabilità genitoriale, secondo il regolamento del Gruppo (vedi `/diventa-volontario/`); la piena operatività sul campo resta comunque al compimento dei 18 anni. Il PCTO può essere la porta di ingresso.
 
 **D. Il processo Grandi Rischi dell'Aquila è un tema politicamente sensibile. Come lo affronto?**
 R. Come un **caso di studio di diritto penale e di filosofia della scienza**. Fatti: condanne in primo grado, assoluzioni in appello (eccetto De Bernardinis), dibattito sul ruolo della scienza nella comunicazione del rischio. Il tema è ricchissimo per il colloquio di Esame di Stato perché attraversa diritto, filosofia, scienza, comunicazione.
