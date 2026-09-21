@@ -1,7 +1,7 @@
 ---
-title: "30 settembre: si chiude la stagione di grave pericolosità AIB nel Lazio"
+title: "15 ottobre: si chiude la stagione di grave pericolosità AIB nel Lazio"
 date: 2026-09-28
-description: "Il 30 settembre termina ufficialmente il periodo di massima pericolosità AIB del Lazio. Cosa cambia e cosa rimane attivo nelle settimane successive."
+description: "Il 15 ottobre termina ufficialmente il periodo di massima pericolosità AIB del Lazio. Cosa cambia e cosa rimane attivo nelle settimane successive."
 badge: "Aggiornamento"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -13,19 +13,19 @@ allegati: []
 draft: false
 ---
 
-Il **30 settembre** termina ufficialmente il **periodo di grave pericolosità per gli incendi boschivi** nel Lazio. Lo prevede la **Dichiarazione regionale dello stato di grave pericolosità AIB**, in corso dal 15 giugno 2026. La chiusura non significa che il rischio sia zero, ma segna la **fine del regime straordinario**.
+Il **15 ottobre** termina ufficialmente il **periodo di grave pericolosità per gli incendi boschivi** nel Lazio. Lo prevede la **Campagna Antincendio Boschivo 2026 della Regione Lazio**, avviata il 15 giugno 2026. La chiusura non significa che il rischio sia zero, ma segna la **fine del regime straordinario**.
 
 ## Cosa cambia
 
 ### Dichiarazione dello stato
-La chiusura del periodo di grave pericolosità è fissata dalla Regione e dai Comuni: a Genzano di Roma l'[ordinanza sindacale n. 14 del 17 giugno 2026](/comunicazioni/2026-06-18-ordinanza-sindacale-incendi-boschivi-2026/) lo estende **fino al 15 ottobre**. Alla scadenza:
+Per il 2026 la Regione Lazio ha fissato il periodo di massima pericolosità **dal 15 giugno al 15 ottobre** su tutto il territorio regionale: lo stesso arco temporale che a Genzano di Roma recepisce l'[ordinanza sindacale n. 14 del 17 giugno 2026](/comunicazioni/2026-06-18-ordinanza-sindacale-incendi-boschivi-2026/). Alla scadenza:
 
 - **termine** di alcuni divieti speciali (es. abbruciamento stoppie in aree sensibili);
 - **ritorno** alla normale disciplina del Testo Unico Forestale e dei regolamenti locali;
 - **riduzione** del presidio speciale del sistema regionale AIB.
 
 ### Presidio sul territorio
-Il presidio AIB rimane **potenziato** nelle prime settimane di ottobre, in particolare nelle giornate con:
+Il presidio AIB resta **attento** anche nelle settimane successive alla chiusura del regime straordinario, in particolare nelle giornate con:
 
 - **vento forte** da quadranti secchi (grecale, tramontana);
 - **umidità** bassa;

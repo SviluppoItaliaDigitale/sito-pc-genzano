@@ -99,6 +99,7 @@
     }
 
     function pad(n){ return ('0'+n).slice(-2); }
+    function escapeHtml(s){ return String(s||'').replace(/[&<>"']/g, function(c){ return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]); }); }
     function reftimeQ(){
       var end = new Date(); end.setUTCMinutes(59,0,0);
       var start = new Date(end.getTime() - 3*3600*1000); start.setUTCMinutes(0,0,0);
@@ -146,7 +147,7 @@
           if(it.prod[0].val[0].ref > lastRef) lastRef = it.prod[0].val[0].ref;
           var m = L.circleMarker([st.lat, st.lon], { radius:4, color:'#333', weight:.4, fillColor:b.c, fillOpacity:.9 });
           (function(nome, valore, ref){
-            m.bindPopup(function(){ return '<strong>'+nome+'</strong><br>'+cfg.label+': <strong>'+valore.toFixed(cfg.dec)+' '+cfg.unit+'</strong>'+(ref?'<br><span style="color:#666">ore '+ref.slice(11,16)+'</span>':''); });
+            m.bindPopup(function(){ return '<strong>'+escapeHtml(nome)+'</strong><br>'+cfg.label+': <strong>'+valore.toFixed(cfg.dec)+' '+cfg.unit+'</strong>'+(ref?'<br><span style="color:#666">ore '+ref.slice(11,16)+'</span>':''); });
           })(nomeStazione(st), val, it.prod[0].val[0].ref);
           m.addTo(puntiLayer); n++;
         }

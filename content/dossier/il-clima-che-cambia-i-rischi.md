@@ -35,7 +35,7 @@ Non è una percezione: è una misura. E le misure, in protezione civile, sono l'
 {{< dossier-dato to="2017" label="L'anno in cui a Genzano compaiono i **giorni oltre i 35 °C**: nei dodici anni precedenti della serie, neanche uno" >}}
 {{< /dossier-dati >}}
 
-{{< dossier-scena id="roventi" image="/images/dossier/clima-giorni-caldi-genzano.webp" alt="Grafico a barre dei giorni all'anno con massima di almeno 35 gradi a Genzano: barre assenti fino al 2016, poi comparse quasi ogni anno dal 2017" align="top" kicker="La soglia dei 35 °C" title="I giorni che<br>prima non c'erano" credito="Elaborazione del Gruppo su dati ERA5/Open-Meteo (CC BY 4.0)" >}}
+{{< dossier-scena id="roventi" image="/images/dossier/clima-giorni-caldi-genzano.webp" alt="Grafico a barre dei giorni all'anno con massima di almeno 35 gradi a Genzano: barre assenti fino al 2016, poi comparse a intermittenza dal 2017, in circa metà degli anni successivi" align="top" kicker="La soglia dei 35 °C" title="I giorni che<br>prima non c'erano" credito="Elaborazione del Gruppo su dati ERA5/Open-Meteo (CC BY 4.0)" >}}
 C'è un secondo grafico, ancora più eloquente. Conta i giorni all'anno in cui la massima raggiunge i **35 °C** — la soglia del caldo che fa male, quella dei [bollettini del Ministero](/dossier/caldo-che-uccide/). Dal 2005 al 2016, a Genzano, di giorni così **non se ne registrava nessuno**: l'altitudine e il verde dei Castelli ci facevano da scudo.
 
 Dal **2017** sono comparsi — cinque quell'anno, poi a ondate, quasi un anno su due. Pochi, in assoluto: ma il punto non è il numero, è la **comparsa**. Una soglia che il nostro microclima non superava mai ha cominciato a cadere, e la fisica del riscaldamento dice che cadrà sempre più spesso.

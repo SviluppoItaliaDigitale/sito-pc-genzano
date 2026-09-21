@@ -368,6 +368,65 @@ def line_index_to_friendly(text: str, idx: int) -> tuple[int, int, str]:
     return line_no, col, snippet
 
 
+_TAG_LINGUA = r"div|section|article|aside|p|span|li|ul|ol|td|th|blockquote|figure|dl|main|nav|details"
+_APRE_LINGUA = re.compile(r"<(" + _TAG_LINGUA + r")\b[^>]*\blang=[\"']?([a-z]{2})", re.I)
+
+
+def mask_blocchi_lingua_straniera(text: str) -> str:
+    """Azzera i blocchi HTML marcati `lang="xx"` con xx diverso da italiano.
+
+    WHY: una pagina italiana puo' contenere sezioni in altra lingua marcate
+    correttamente per l'accessibilita' (WCAG 3.1.2) — per esempio i poster di
+    emergenza multilingua, dove «En una emergencia» e' spagnolo corretto e non
+    un'elisione italiana mancante. Le regole di questo audit valgono solo
+    sull'italiano, quindi quei blocchi escono dal perimetro.
+
+    Il blocco diventa spazi ma i newline restano, cosi' i numeri di riga dei
+    findings successivi non si spostano.
+    """
+    out = text
+    pos = 0
+    while True:
+        m = _APRE_LINGUA.search(out, pos)
+        if not m:
+            return out
+        if m.group(2).lower() == "it":
+            pos = m.end()
+            continue
+        fine = _fine_blocco(out, m.start(), m.group(1))
+        blocco = out[m.start():fine]
+        out = out[: m.start()] + "".join(c if c == "\n" else " " for c in blocco) + out[fine:]
+        pos = fine
+
+
+def _fine_blocco(text: str, start: int, tag: str) -> int:
+    """Indice di fine del blocco `<tag ...> ... </tag>`, gestendo l'annidamento.
+
+    Se la chiusura manca (markup imperfetto) ci si ferma al titolo Markdown
+    successivo, o a fine testo: meglio mascherare un po' meno che spostare i
+    numeri di riga.
+    """
+    apre = re.compile(r"<" + tag + r"\b", re.I)
+    chiude = re.compile(r"</" + tag + r"\s*>", re.I)
+    livello = 0
+    pos = start
+    while pos < len(text):
+        ma = apre.search(text, pos)
+        mc = chiude.search(text, pos)
+        if mc is None:
+            break
+        if ma is not None and ma.start() < mc.start():
+            livello += 1
+            pos = ma.end()
+            continue
+        livello -= 1
+        if livello == 0:
+            return mc.end()
+        pos = mc.end()
+    limite = re.search(r"\n##? ", text[start:])
+    return start + limite.start() if limite else len(text)
+
+
 def _mask_preserve_lines(text: str, pattern: str, flags=0) -> str:
     """Sostituisce i match con spazi mantenendo i newline (offset stabili)."""
     def repl(m):
@@ -428,6 +487,7 @@ def _mask_html(text: str) -> str:
         apertura = "".join(ch if ch == "\n" else " " for ch in m.group(1))
         chiusura = "".join(ch if ch == "\n" else " " for ch in m.group(3))
         return apertura + _mask_js_keep_prose(m.group(2)) + chiusura
+    text = mask_blocchi_lingua_straniera(text)
     t = re.sub(r"(<script[^>]*>)(.*?)(</script>)", _script_repl, text, flags=re.I | re.S)
     t = _mask_preserve_lines(t, r"<style[^>]*>.*?</style>", re.I | re.S)
     t = _mask_preserve_lines(t, r"<!--.*?-->", re.S)
@@ -533,8 +593,10 @@ def audit_file(path: Path) -> list[dict]:
     body = text[body_start:]
     body_offset = body_start
 
+    # Blocchi marcati in un'altra lingua (poster multilingua, citazioni):
+    # fuori perimetro, le regole di italiano non si applicano.
+    masked = mask_blocchi_lingua_straniera(body)
     # Maschera code fences ``` ... ``` con spazi (mantiene posizioni)
-    masked = body
     for m in re.finditer(r"```.*?```", body, re.DOTALL):
         s, e = m.start(), m.end()
         masked = masked[:s] + (" " * (e - s)) + masked[e:]

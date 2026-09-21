@@ -126,6 +126,7 @@
     function colore(m){ return m>=5?'#7f1d1d':m>=4?'#e8412b':m>=3?'#f5a623':m>=2?'#f7e359':'#9aa7b4'; }
     function raggio(m){ return Math.max(4, (m+1)*2.4); }
     function pad(n){ return ('0'+n).slice(-2); }
+    function escapeHtml(s){ return String(s||'').replace(/[&<>"']/g, function(c){ return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]); }); }
     // I timestamp INGV senza offset sono UTC; tutte le viste usano l'ora italiana.
     function parseINGVDate(iso){
       if(typeof iso==='number') return new Date(iso);
@@ -231,7 +232,7 @@
         html += '<tr data-ev="'+k+'" title="Apri la scheda completa del terremoto" style="cursor:pointer">'+
                 '<td class="dash-cell-time">'+pad6(e.time)+'</td>'+
                 '<td><span class="dash-mag" style="border-left-color:'+colore(e.mag)+'">M '+e.mag.toFixed(1)+'</span></td>'+
-                '<td class="dash-cell-place">'+(e.id?'<a class="dash-scheda-link" href="'+SCHEDA+'#'+e.id+'" title="Apri la scheda completa di questo terremoto">'+e.place+'</a>':e.place)+'</td>'+
+                '<td class="dash-cell-place">'+(e.id?'<a class="dash-scheda-link" href="'+SCHEDA+'#'+e.id+'" title="Apri la scheda completa di questo terremoto">'+escapeHtml(e.place)+'</a>':escapeHtml(e.place))+'</td>'+
                 '<td class="dash-num">'+e.depth+'</td>'+
                 '<td class="dash-num">'+dist(e.lat,e.lon)+'</td>'+
                 '<td class="dash-num dash-col-hide-sm">'+e.lat.toFixed(2)+'</td>'+
@@ -278,7 +279,7 @@
               iconSize:[s,s], iconAnchor:[r,r]
             }),
             keyboard:false, riseOnHover:true, alt:'Terremoto M '+e.mag.toFixed(1)
-          }).bindPopup('<strong>M '+e.mag.toFixed(1)+'</strong><br>'+e.place+'<br>'+oraIt(e.time)+' · prof. '+e.depth+' km<br>'+dist(e.lat,e.lon)+' km da Genzano di Roma'+(e.id?'<br><a href="'+SCHEDA+'#'+e.id+'">Scheda completa →</a>':''));
+          }).bindPopup('<strong>M '+e.mag.toFixed(1)+'</strong><br>'+escapeHtml(e.place)+'<br>'+oraIt(e.time)+' · prof. '+e.depth+' km<br>'+dist(e.lat,e.lon)+' km da Genzano di Roma'+(e.id?'<br><a href="'+SCHEDA+'#'+e.id+'">Scheda completa →</a>':''));
           cm.addTo(markers); markerById[i]=cm;
         } catch(err) { /* aggira eventuali corner case Leaflet residui */ }
       });

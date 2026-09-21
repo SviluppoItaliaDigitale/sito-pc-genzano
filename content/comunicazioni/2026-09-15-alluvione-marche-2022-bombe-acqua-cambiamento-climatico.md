@@ -23,7 +23,7 @@ Sono passati **quattro anni**. Nella notte fra **giovedì 15 e venerdì 16 sette
 
 L'acqua corse a valle attraverso i piccoli **fossi appenninici** che alimentano il **torrente Misa** e i suoi affluenti. Strutture idrauliche dimensionate per piene "ordinarie" non ressero. Nel pieno della notte, mentre molte persone dormivano, l'acqua entrò nelle case di **Pianello di Ostra**, **Bettolelle**, **Trecastelli**, **Senigallia**, **Cantiano**, **Sassoferrato**.
 
-Il bilancio finale fu di **13 vittime**, tra cui un bambino di otto anni travolto in auto con la madre. Centinaia gli **sfollati**, migliaia gli **edifici allagati**, decine di milioni di euro i **danni economici**. L'evento del 15-16 settembre 2022 è entrato di diritto fra le grandi alluvioni della storia recente italiana, in una sequenza che è ormai una **costante annuale**: Sardegna 2013, Genova 2014, Piemonte 2016, Sicilia 2018, Veneto-Lombardia (Vaia) 2018, Emilia-Romagna 2023.
+Il bilancio finale fu di **13 vittime**, tra cui un bambino di otto anni travolto in auto con la madre. Circa **150 sfollati**, migliaia gli **edifici allagati**, danni complessivi stimati nell'ordine dei **2 miliardi di euro** una volta completate le verifiche nei mesi successivi. L'evento del 15-16 settembre 2022 è entrato di diritto fra le grandi alluvioni della storia recente italiana, in una sequenza che è ormai una **costante annuale**: Sardegna 2013, Genova 2014, Piemonte 2016, Sicilia 2018, Veneto-Lombardia (Vaia) 2018, Emilia-Romagna 2023.
 
 ## Cosa è successo davvero quella notte
 
@@ -48,7 +48,7 @@ I primi soccorsi furono attivati nelle ore della notte stessa. **Vigili del fuoc
 
 Le operazioni di **ricerca dei dispersi**, **soccorso ai sopravvissuti intrappolati nelle case allagate**, **evacuazione delle aree ancora a rischio**, **drenaggio degli edifici colpiti**, **ripristino delle linee elettriche e di comunicazione** durarono settimane. Lo Stato dichiarò lo **stato di emergenza** e furono stanziati i primi 5 milioni di euro di risorse, poi progressivamente integrati.
 
-Particolarmente complesso fu il caso di **Cantiano**, paese marchigiano dell'entroterra, dove il torrente **Burano** distrusse parte del centro storico e mise in crisi le linee di approvvigionamento idrico. Tra le vittime si contò anche un volontario intervenuto per soccorrere chi era rimasto intrappolato nelle case allagate.
+Particolarmente complesso fu il caso di **Cantiano**, paese marchigiano dell'entroterra, dove il torrente **Burano** distrusse parte del centro storico e mise in crisi le linee di approvvigionamento idrico.
 
 ## La lezione: codici colore, allerta meteo, comunicazione
 

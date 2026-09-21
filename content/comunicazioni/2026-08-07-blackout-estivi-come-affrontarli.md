@@ -73,7 +73,7 @@ Per affrontare un blackout prolungato senza sorprese:
 - una **radio** a batteria o a manovella per ricevere notizie;
 - scorta d'acqua e cibo non deperibile;
 - **farmaci** personali a vista;
-- una **candela** solo come ultima risorsa, e mai lasciata incustodita.
+- **mai candele**: usa solo torce a pile o lampade a LED (le fiamme libere sono un rischio d'incendio).
 
 ## Per approfondire
 

@@ -1,7 +1,7 @@
 ---
 title: "10 settembre 2017: ricordare Livorno per non ripetere gli errori"
 date: 2026-09-20T00:01:00+02:00
-description: "Nove anni fa Livorno fu colpita da un'alluvione lampo che causò 9 vittime. La memoria di quell'evento impegna tutta la PC a lavorare su prevenzione."
+description: "Nove anni fa Livorno fu colpita da un'alluvione lampo che causò 8 vittime. La memoria di quell'evento impegna tutta la PC a lavorare su prevenzione."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Nella notte del **9-10 settembre 2017**, un violento temporale scaricò sulla città di **Livorno** e sui quartieri collinari una quantità enorme di pioggia in poche ore. I **torrenti Ardenza, Rio Maggiore, Rio Ugione** esondarono e l'acqua, con il fango, causò **9 vittime** e gravi danni. A nove anni di distanza, quella notte è ancora un caso di studio nel sistema italiano di Protezione Civile.
+Nella notte del **9-10 settembre 2017**, un violento temporale scaricò sulla città di **Livorno** e sui quartieri collinari una quantità enorme di pioggia in poche ore. I **torrenti Rio Maggiore e Rio Ardenza** esondarono e l'acqua, con il fango, causò **8 vittime** e gravi danni. A nove anni di distanza, quella notte è ancora un caso di studio nel sistema italiano di Protezione Civile.
 
 ## Cosa accadde
 
@@ -26,7 +26,7 @@ Nella notte del **9-10 settembre 2017**, un violento temporale scaricò sulla ci
 
 {{< foto src="/images/2026-09-20-alluvione-livorno-2017-memoria-livorno-mascagni.webp"
          alt="La Terrazza Mascagni a Livorno, simbolo della città"
-         caption="La Terrazza Mascagni a Livorno: la città fu colpita dall'alluvione del 9-10 settembre 2017 con esondazione dei rii Maggiore, Ardenza e Banditella. 9 vittime. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Terrazza_Mascagni_-_panoramio.jpg)." >}}
+         caption="La Terrazza Mascagni a Livorno: la città fu colpita dall'alluvione del 9-10 settembre 2017 con l'esondazione dei rii Maggiore e Ardenza. 8 vittime. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Terrazza_Mascagni_-_panoramio.jpg)." >}}
 
 
 ## Le lezioni

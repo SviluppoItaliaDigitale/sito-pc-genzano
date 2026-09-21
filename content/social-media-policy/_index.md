@@ -2,7 +2,7 @@
 title: "Social Media Policy"
 description: "Come il Gruppo PC di Genzano di Roma comunica sui social: canali ufficiali, orari di presìdio, netiquette, moderazione e licenza dei contenuti."
 layout: "single"
-dataUltimaRevisione: "2026-05-06"
+dataUltimaRevisione: "2026-09-21"
 toc: true
 ---
 
@@ -32,7 +32,9 @@ I contenuti sono redatti da volontari del Gruppo, coordinati da un Referente per
 
 I canali social del Gruppo sono presidiati, in tempo ordinario, **dal lunedì al venerdì, indicativamente dalle 9 alle 18**. Nei fine settimana e nei giorni festivi il presìdio è discontinuo.
 
-Durante eventi di **allerta** o **emergenza**, il canale Telegram ufficiale viene aggiornato in tempo reale 24 ore su 24 fino al termine dell'evento. Gli altri canali (Instagram, Facebook, X) vengono aggiornati a cadenza regolare durante le stesse fasi.
+Dal 20 settembre 2026, **Instagram** e **Facebook** pubblicano anche in **automatico, due volte al giorno** (indicativamente alle 8:30 e alle 18:30), a partire da bozze già scritte e riviste dalla redazione contestualmente alla pubblicazione degli articoli sul sito. Non sono mai pubblicati in questo modo i contenuti con badge **Allerta** o **Emergenza** (che restano decisi e pubblicati a mano, nel momento in cui servono) né le versioni in italiano semplice. Sui soli post usciti in automatico, i **commenti sono disattivati**, perché escono al di fuori degli orari di presìdio umano indicati sopra: la lettura e l'eventuale correzione dei contenuti restano comunque a cura della redazione, secondo le stesse regole di questa policy. **X (Twitter)** e **Telegram** restano pubblicati manualmente dalla redazione.
+
+Durante eventi di **allerta** o **emergenza**, il canale Telegram ufficiale viene aggiornato in tempo reale 24 ore su 24 fino al termine dell'evento. Gli altri canali (Instagram, Facebook, X) vengono aggiornati a cadenza regolare durante le stesse fasi, sempre a cura della redazione.
 
 **Per le emergenze il canale unico è il 112** (Numero Unico Europeo). I social del Gruppo non sostituiscono in alcun caso il 112, né l'Ufficio di Protezione Civile comunale, né la Sala operativa regionale.
 
@@ -206,7 +208,9 @@ Per segnalazioni sulla policy, richieste di chiarimento o ricorsi sulla moderazi
 
 ## Versione e aggiornamenti
 
-Versione pubblicata il **22 aprile 2026**, aggiornata il **27 aprile 2026**. La policy viene rivista almeno una volta all'anno. Le modifiche significative sono annotate in fondo alla pagina con data e sintesi.
+Versione pubblicata il **22 aprile 2026**, aggiornata il **27 aprile 2026** e il **21 settembre 2026**. La policy viene rivista almeno una volta all'anno. Le modifiche significative sono annotate in fondo alla pagina con data e sintesi.
+
+**21 settembre 2026** — aggiunta in *"Orari di presìdio"* la descrizione della pubblicazione automatica su Instagram e Facebook (due post al giorno da bozze già scritte dalla redazione, mai per Allerta/Emergenza né per le versioni facili, commenti disattivati sui soli post automatici); X e Telegram restano pubblicati a mano.
 
 **27 aprile 2026** — aggiunta la sezione *"Comunicazione di crisi sui social"* con struttura standard del messaggio di allerta, policy degli hashtag, monitoraggio della disinformazione, ridondanza tra canali e accessibilità dei post. Riferimenti normativi riorganizzati in 5 livelli con gerarchia di prevalenza esplicita: italiano vincolante (AGID + DPC) → scientifico italiano (CNR, ISPRA) → tecnico-operativo europeo (EENA, CWA CEN/CENELEC) → standard internazionali (ISO 22329:2021, WCAG 2.2 AA) → normativa orizzontale. **DPC** elevato a riferimento principale insieme ad AGID.
 

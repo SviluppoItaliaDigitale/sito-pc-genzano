@@ -1,7 +1,7 @@
 ---
 title: "Equinozio d'autunno: cambiano i rischi, cambiano le abitudini"
 date: 2026-09-21T00:01:00+02:00
-description: "Il 22 settembre segna l'equinozio d'autunno astronomico. Un'occasione per rivedere le abitudini domestiche in chiave di sicurezza."
+description: "Il 23 settembre segna l'equinozio d'autunno astronomico. Un'occasione per rivedere le abitudini domestiche in chiave di sicurezza."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
