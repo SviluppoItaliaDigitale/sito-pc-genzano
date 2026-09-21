@@ -62,21 +62,8 @@ ELISIONI = {
     "trent", "cinquant", "quarant", "sessant", "settant", "ottant", "novant",
 }
 
-NON_ITALIAN_LANG_BLOCK = re.compile(
-    r'(?is)<div\s+lang="(?!it")[a-z-]+"\s*>.*?</div>'
-)
-
-def strip_non_italian_lang_blocks(t):
-    # Blocchi `<div lang="xx">...</div>` con xx diverso da "it" (pagine
-    # multilingua come /poster-emergenza/, /facile-da-leggere/): il testo è
-    # in un'altra lingua per dichiarazione esplicita (WCAG 3.1.2), quindi il
-    # dizionario italiano lo segnalerebbe tutto come refuso. Non annidati nel
-    # sito (verificato), quindi il match non-greedy è sicuro.
-    return NON_ITALIAN_LANG_BLOCK.sub(" ", t)
-
 def strip_markdown(t):
     t = re.sub(r"(?s)^---\n.*?\n---\n", "", t)        # frontmatter YAML
-    t = strip_non_italian_lang_blocks(t)
     t = re.sub(r"\S+@\S+", " ", t)                      # email
     t = re.sub(r"\b[\w.-]+\.(?:it|com|org|net|gov|eu|edu|info)\b", " ", t)  # domini nudi
     # Marcatori di enfasi RIMOSSI per fusione (non per sostituzione con spazio):
@@ -97,7 +84,6 @@ def strip_markdown(t):
     return t
 
 def strip_html(t):
-    t = strip_non_italian_lang_blocks(t)
     t = re.sub(r"(?is)<(script|style)[^>]*>.*?</\1>", " ", t)
     t = re.sub(r"<[^>]+>", " ", t)
     t = html.unescape(t)
