@@ -1,26 +1,33 @@
 name: "⏰ Sveglia della pubblicazione social"
 
-# Seconda rete per la pubblicazione automatica su Instagram e Facebook, che
-# vive nel repository privato social-pc-genzano.
+# Sveglia la pubblicazione su Instagram e Facebook, che vive nel repository
+# privato social-pc-genzano.
 #
-# Perche' esiste (21/09/2026): quel repository e' nato il 20 settembre e il
-# giorno dopo lo scheduler di GitHub non aveva ancora prodotto un solo run del
-# suo cron — il post del mattino sarebbe rimasto in coda. E' lo stesso motivo
-# per cui l'allerta meteo ha un doppio innesco (rule 10): su questo progetto lo
-# scheduler ritarda e a volte salta, quindi le cose che devono accadere ogni
-# giorno hanno due sveglie invece di una.
+# I post devono uscire INSIEME agli articoli del sito, non a un orario fisso
+# (istruzione dell'utente del 21/09/2026). L'innesco principale e' quindi un
+# evento, non un orario: appena le bozze social di un articolo nuovo sono
+# pronte, o appena un articolo calendarizzato diventa online, questo workflow
+# chiama la pubblicazione.
 #
-# Qui il cron gira in un repository con decine di workflow attivi, dove lo
-# scheduler e' "caldo". Chiamare il workflow privato quando ha gia' pubblicato
-# non fa danno: la coda segna le voci come pubblicate e un secondo giro non
-# trova nulla di maturo. Per questo non c'e' nessun controllo preliminare.
+# Restano due giri a orario come rete di sicurezza, per i casi in cui un
+# evento si perde. Chiamare il workflow privato quando ha gia' pubblicato non
+# fa danno: la coda segna le voci come pubblicate, e una voce non esce finche'
+# la sua pagina non risponde davvero sul sito. Per questo non c'e' nessun
+# controllo preliminare.
 
 on:
+  workflow_run:
+    # L'innesco che conta: le bozze social di un articolo nuovo sono pronte,
+    # oppure il rebuild del mattino ha portato online un articolo
+    # calendarizzato.
+    workflows:
+      - "📱 Genera bozze social automatiche"
+      - "🗓️ Pubblicazione programmata articoli"
+    types: [completed]
   schedule:
-    # Un'ora dopo gli slot del repository privato (07:05 e 17:05 UTC), per
-    # lasciargli la precedenza quando il suo cron funziona.
-    - cron: '5 8 * * *'
-    - cron: '5 18 * * *'
+    # Rete di sicurezza, se un evento si perde.
+    - cron: '35 8 * * *'
+    - cron: '35 18 * * *'
   workflow_dispatch:
 
 permissions:
@@ -36,6 +43,9 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: 📣 Chiama la pubblicazione nel repository privato
+        # Su workflow_run gira anche se il workflow chiamante è fallito: le
+        # bozze potrebbero essere state generate lo stesso, e un giro in più
+        # non pubblica nulla che non sia pronto.
         env:
           GH_TOKEN: ${{ secrets.SOCIAL_REPO_PAT }}
         run: |

@@ -289,11 +289,11 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 
 ## Pubblicazione automatica social — cosa non esce mai da solo
 
-🔴 Dal 20/09/2026 Instagram e Facebook pubblicano **da soli** due volte al giorno (08:30 e 18:30) dal repo **privato** `SviluppoItaliaDigitale/social-pc-genzano`, che legge il materiale da `social-bozze/` di questo repo. Il sito non cambia: continua solo a generare le bozze. Vincoli scritti nel codice, non nella configurazione:
+🔴 Dal 20/09/2026 Instagram e Facebook pubblicano **da soli** dal repo **privato** `SviluppoItaliaDigitale/social-pc-genzano`, che legge il materiale da `social-bozze/` di questo repo. 🔴 **Dal 21/09/2026 i post escono in concomitanza con l'articolo sul sito**, non a orari fissi: l'innesco è `sveglia-social.yml` al termine delle bozze social; i post sono distanziati di almeno mezz'ora fra loro e nessuno esce prima che la pagina risponda davvero sul sito. Il sito non cambia: continua solo a generare le bozze. Vincoli scritti nel codice, non nella configurazione:
 
 - **Mai in automatico i badge `Allerta` ed `Emergenza`**: valgono nel momento in cui escono, si pubblicano a mano.
 - **Mai le versioni facili** (`-facile`), **mai un articolo non ancora online** sul sito.
-- **Un post al giorno**, finestra di recupero di 3 giorni (non ripesca l'archivio).
+- **Un post per articolo**, appena l'articolo è online; finestra di recupero di 3 giorni (non ripesca l'archivio).
 - **Commenti Instagram disattivati** sui post automatici (i canali sono presidiati a orari definiti, vedi `/social-media-policy/`).
 - **Menzioni verificate**: `@dpcgov_official`, `@regionelazio.official`, `@comunegenzanodiroma`, `@fepiv_ol`. Un handle non si aggiunge mai per somiglianza col nome dell'ente (rule 02, web check obbligato).
 
