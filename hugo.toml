@@ -255,6 +255,12 @@ enableGitInfo = true
   parent = "accessibilita-supporti"
   weight = 4
 
+[[menus.main]]
+  name = "Poster di emergenza multilingua"
+  url = "/poster-emergenza/"
+  parent = "accessibilita-supporti"
+  weight = 5
+
 # --- Dropdown: Volontariato ---
 [[menus.main]]
   name = "Volontariato"

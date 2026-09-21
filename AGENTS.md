@@ -446,7 +446,7 @@ python3 scripts/fix-ordering-articoli-stesso-giorno.py
 
 ## 7. Agenti specializzati esistenti (riferimento)
 
-In `.claude/agents/` ci sono **17 agenti custom** ottimizzati per Claude Code (al 19 agosto 2026; il 17° è `pc-revisore-linguistico`). **ChatGPT/Codex ha il suo sistema di sub-agenti diverso** e non li può richiamare direttamente, ma può **emulare il loro lavoro** seguendo le specifiche descritte. Le specifiche complete (system prompt + workflow + esempi) sono in `manuale/parte-19-agenti-specializzati.md`.
+In `.claude/agents/` ci sono **34 agenti custom** ottimizzati per Claude Code (i 17 aggiunti il 6 settembre 2026, dopo un audit esterno, formano il sistema di affidabilità interno — fatti, materiali scolastici, scienza, cronaca, conformità legale, integrità tecnica, coerenza trasversale, codice, automazioni, sicurezza, traduzioni, dati e feed, esercitazione di emergenza, verifica visiva, usabilità, documentazione, audit interno mensile). **ChatGPT/Codex ha il suo sistema di sub-agenti diverso** e non li può richiamare direttamente, ma può **emulare il loro lavoro** seguendo le specifiche descritte. Le specifiche complete (system prompt + workflow + esempi) sono in `manuale/parte-19-agenti-specializzati.md`.
 
 | Agent | Trigger naturali | Cosa fa (sintesi) |
 |---|---|---|
@@ -459,6 +459,7 @@ In `.claude/agents/` ci sono **17 agenti custom** ottimizzati per Claude Code (a
 | `pc-internal-linker` | "linkografia interna", "questo articolo ha abbastanza link interni?" | Propone/applica link a glossario, kit, articoli correlati, standard ISO (rispetta regola AGID: interno prima di esterno) |
 | `pc-seo-checker` | "controlla il SEO", "meta description OK?", "Open Graph immagine giusta?" | Verifica meta description ≤160, OG image 1200×630, JSON-LD Article, slug, canonical, sitemap, RSS, lang |
 | `pc-normative-verifier` | "le norme citate sono vigenti?", "verifica leggi" | Verifica vigenza norme statali (Normattiva) e regionali (BURL Lazio) via WebFetch + conoscenza pregressa |
+| `pc-correttore-bozze` | "controlla i refusi", "rileggi per refusi" — anche schede statiche HTML | Correttore deterministico (`check-refusi.py`) + giudizio su refuso vs nome proprio/sigla, su qualsiasi contenuto incluse le schede statiche |
 | `pc-image-fixer` | "ecco una foto", "applica fascia blu", "scarica foto da Wikipedia per articolo X" | Applica fascia blu istituzionale via Pillow (1200px WebP ≤200 KB), posiziona inline con `{{< foto >}}` (mai banner), genera cover tipografica, scarica da Wikipedia/NASA/USGS/NOAA |
 | `pc-issue-triage` | "controlla le issue", "fai pulizia tracker" | Audita issue aperte vs realtà repo, distingue obsolete da reali, batch close con commenti tracciabili |
 | `pc-deploy-validator` | "verifica prima del push", "controlla il deploy", "build OK?" | Pre-push gate 26 check: Hugo build, YAML workflow, frontmatter, marker banditi, header sicurezza, mixed content, ordering articoli stesso giorno |

@@ -118,6 +118,7 @@
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/facile-da-leggere/" role="menuitem"><span>Facile da Leggere</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/lis/" role="menuitem"><span>Contenuti in LIS</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/tabelle-comunicazione/" role="menuitem"><span>Tabelle di comunicazione (CAA)</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/poster-emergenza/" role="menuitem"><span>Poster di emergenza multilingua</span></a></li>' +
                   '</ul></div></div>' +
                 '</li>' +
                 '<li class="nav-item dropdown" role="none">' +

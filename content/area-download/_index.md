@@ -128,16 +128,18 @@ Per segnalare un link non funzionante scrivi a <a href="mailto:segreteria@protez
 
 Poster A4/A2 stampabili **"In emergenza chiama il 112"** in **otto lingue**, pensati per spazi comunitari, scuole, ambulatori e luoghi frequentati da residenti e turisti stranieri. Ogni poster riporta il numero unico 112, le azioni essenziali e il QR alla pagina di emergenza del sito. Stampa la lingua che ti serve e affiggila.
 
-| Lingua | Stampa (PDF A2) | Anteprima |
-|---|---|---|
-| Italiano | [PDF](/poster-emergenza-multilingua/poster-emergenza-it.pdf) | [PNG](/poster-emergenza-multilingua/poster-emergenza-it.png) |
-| English | [PDF](/poster-emergenza-multilingua/poster-emergenza-en.pdf) | [PNG](/poster-emergenza-multilingua/poster-emergenza-en.png) |
-| Français | [PDF](/poster-emergenza-multilingua/poster-emergenza-fr.pdf) | [PNG](/poster-emergenza-multilingua/poster-emergenza-fr.png) |
-| Deutsch | [PDF](/poster-emergenza-multilingua/poster-emergenza-de.pdf) | [PNG](/poster-emergenza-multilingua/poster-emergenza-de.png) |
-| Español | [PDF](/poster-emergenza-multilingua/poster-emergenza-es.pdf) | [PNG](/poster-emergenza-multilingua/poster-emergenza-es.png) |
-| Português | [PDF](/poster-emergenza-multilingua/poster-emergenza-pt.pdf) | [PNG](/poster-emergenza-multilingua/poster-emergenza-pt.png) |
-| Română | [PDF](/poster-emergenza-multilingua/poster-emergenza-ro.pdf) | [PNG](/poster-emergenza-multilingua/poster-emergenza-ro.png) |
-| Esperanto | [PDF](/poster-emergenza-multilingua/poster-emergenza-eo.pdf) | [PNG](/poster-emergenza-multilingua/poster-emergenza-eo.png) |
+I file PDF e PNG sono immagini: non contengono un testo leggibile da uno screen reader. Se usi un lettore di schermo o non riesci a vedere l'immagine, consulta la pagina **[Poster di emergenza — testo accessibile](/poster-emergenza/)**, che riporta lo stesso contenuto di ogni poster in formato testo, nelle otto lingue.
+
+| Lingua | Stampa (PDF A2) | Anteprima | Testo accessibile |
+|---|---|---|---|
+| Italiano | [PDF](/poster-emergenza-multilingua/poster-emergenza-it.pdf) | [PNG](/poster-emergenza-multilingua/poster-emergenza-it.png) | [HTML](/poster-emergenza/#italiano) |
+| English | [PDF](/poster-emergenza-multilingua/poster-emergenza-en.pdf) | [PNG](/poster-emergenza-multilingua/poster-emergenza-en.png) | [HTML](/poster-emergenza/#english) |
+| Français | [PDF](/poster-emergenza-multilingua/poster-emergenza-fr.pdf) | [PNG](/poster-emergenza-multilingua/poster-emergenza-fr.png) | [HTML](/poster-emergenza/#francais) |
+| Deutsch | [PDF](/poster-emergenza-multilingua/poster-emergenza-de.pdf) | [PNG](/poster-emergenza-multilingua/poster-emergenza-de.png) | [HTML](/poster-emergenza/#deutsch) |
+| Español | [PDF](/poster-emergenza-multilingua/poster-emergenza-es.pdf) | [PNG](/poster-emergenza-multilingua/poster-emergenza-es.png) | [HTML](/poster-emergenza/#espanol) |
+| Português | [PDF](/poster-emergenza-multilingua/poster-emergenza-pt.pdf) | [PNG](/poster-emergenza-multilingua/poster-emergenza-pt.png) | [HTML](/poster-emergenza/#portugues) |
+| Română | [PDF](/poster-emergenza-multilingua/poster-emergenza-ro.pdf) | [PNG](/poster-emergenza-multilingua/poster-emergenza-ro.png) | [HTML](/poster-emergenza/#romana) |
+| Esperanto | [PDF](/poster-emergenza-multilingua/poster-emergenza-eo.pdf) | [PNG](/poster-emergenza-multilingua/poster-emergenza-eo.png) | [HTML](/poster-emergenza/#esperanto) |
 
 ## Formazione e solidarietà
 

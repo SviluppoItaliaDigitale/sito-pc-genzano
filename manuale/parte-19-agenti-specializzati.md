@@ -338,6 +338,36 @@ push) e dall'audit settimanale automatico `audit-sito.yml`.
 
 ---
 
+### 16. Revisore Linguistico (gate sintattico) — 🔴 GATE OBBLIGATO
+
+**CV**: venticinque anni come **revisore di bozze e consulente linguistico** per case editrici, quotidiani e amministrazioni pubbliche, formazione in linguistica italiana. Autorità di riferimento sui casi dubbi: vocabolario ed enciclopedia **Treccani**, in subordine **Accademia della Crusca**.
+
+**Da agosto 2026 è un sub-gate obbligato** di `pc-article-reviewer`, invocato su ogni articolo o pagina nuovi o sostanzialmente modificati, **prima del `git add`**. Fa ciò che nessuno script deterministico può fare: una **lettura sintattica** frase per frase — articoli mancanti, accordi di genere/numero, preposizioni errate, concordanze verbali, elisioni mancanti, parole incollate dopo la punteggiatura, ripetizioni involontarie. Esiste dopo che il 19/08/2026 tre errori reali ("L'Italia ha rete ben strutturata" senza articolo, "nella immagine" senza elisione, "superficiale.Il" senza spazio) sono andati live superando tutti i controlli esistenti.
+
+**Quando lo attivi manualmente**: vuoi una verifica sintattica approfondita, oltre ai refusi, su un testo che ti sembra "corretto ma stona".
+
+**Cosa fa**: esegue prima i due correttori deterministici (`check-refusi.py` per i refusi di parola, `audit-grammatica-italiana.py` per accenti/apostrofi/spaziature/elisioni), poi la passata di lettura sulle classi di errore che le regex non vedono. Restituisce le correzioni applicate con motivazione, oppure "Italiano corretto, nessuna modifica necessaria".
+
+**Identità tecnica**: `pc-revisore-linguistico`.
+
+---
+
+### 17. Publishing Engineer (materiali NotebookLM)
+
+**CV**: 10 anni nel **content pipeline automation** per la PA italiana, specializzato in workflow di publishing multimediale (feed podcast iTunes, infografiche social-ready, presentazioni PPTX per docenti). Conosce a memoria RSS 2.0 Apple Podcasts, Schema.org Article, WCAG 2.2 AA per file scaricabili, licenze CC BY-NC-SA 4.0.
+
+**Quando lo attivi**: hai scaricato materiali generati con **Google NotebookLM** (podcast, infografiche, presentazioni) su un tema e vuoi pubblicarli su `/risorse-pronte/` senza passaggi manuali.
+
+**Frasi naturali che lo attivano automaticamente**:
+- *"Pubblica gli output di NotebookLM per il tema X."*
+- *"Ho caricato i file nella drop zone."*
+- *"Publish notebooklm <tema>."*
+
+**Cosa fa**: rileva i temi disponibili da `data/risorse_pronte.yaml`, scansiona `~/Scrivania/materiali-output/<tema>/` classificando i file per estensione, lancia `scripts/pubblica-materiali-multimediali.py`, verifica la build, committa con messaggio descrittivo, esegue il push. Riporta: file pubblicati, naming canonico applicato, durata audio (se `ffprobe` disponibile), URL della pagina `/risorse-pronte/` aggiornata, cross-link automatico creato sulle pagine rischio/sezione corrispondenti.
+
+**Identità tecnica**: `pc-materiali-publisher`.
+
+---
 
 ### 18. Fact-checker (gate dei fatti e delle fonti) — 🔴 GATE OBBLIGATO
 
@@ -602,6 +632,16 @@ problema"* — e Claude corregge.
 | `.claude/agents/pc-social-publisher.md` | Risk Communication | 12 anni Comunication Officer PC, contributor CWA CEN/CENELEC |
 | `.claude/agents/pc-print-card-qa.md` | Print Quality Engineer | 10 anni Print Production Specialist per editori didattici |
 | `.claude/agents/pc-site-auditor.md` | Auditor di Sistema | 17 anni QA Lead e auditor tecnico per portali PA |
+| `.claude/agents/pc-photo-caption-verifier.md` | Verificatore visivo foto | gate visivo Read multimodale, codificato dopo l'incidente Formia |
+| `.claude/agents/pc-accessibility-auditor.md` | Accessibility Designer IAAP CPACC | 15 anni audit WCAG su PA italiana (INPS, INAIL, Min. Salute, Ag. Entrate) |
+| `.claude/agents/pc-content-freshness.md` | Content Strategist editoriale | 18 anni vicedirettore editoriale Repubblica.it, ex caporedattore web ANSA.it |
+| `.claude/agents/pc-italian-l2-writer.md` | Glottologa italiano L2 | dottorato Linguistica Applicata Università per Stranieri di Siena, 8 anni CILS |
+| `.claude/agents/pc-internal-linker.md` | SEO Editor / Internal Linker | 12 anni content editor La Stampa / Il Sole 24 Ore Digital |
+| `.claude/agents/pc-seo-checker.md` | SEO Technical Specialist | certificazione Google Search Central, 10 anni SEO technical lead per PA |
+| `.claude/agents/pc-normative-verifier.md` | Avvocato amministrativista | dottorato Diritto Amministrativo Sapienza, 14 anni consulente legislativo Camera dei Deputati |
+| `.claude/agents/pc-correttore-bozze.md` | Correttore di bozze | 20 anni proofreader e redattore editoriale |
+| `.claude/agents/pc-revisore-linguistico.md` | Revisore linguistico | 25 anni revisore di bozze e consulente linguistico, formazione linguistica italiana |
+| `.claude/agents/pc-materiali-publisher.md` | Publishing Engineer NotebookLM | 10 anni content pipeline automation per la PA italiana |
 | `.claude/agents/pc-fact-checker.md` | Fact-checker | 15 anni verifica dei fatti in quotidiani e agenzia, desk scientifico |
 | `.claude/agents/pc-didattica-reviewer.md` | Revisore didattico e sicurezza | 20 anni insegnamento, coordinamento ed. civica, RSPP di istituto, «Io non rischio» |
 | `.claude/agents/pc-revisore-scientifico.md` | Comitato scientifico interno | voce collettiva: meteorologo, geologo, idrologo, sismologo, vulcanologo, AIB, climatologo, sanità pubblica |
