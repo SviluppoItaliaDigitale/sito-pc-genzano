@@ -1,8 +1,8 @@
-# Immagini e testi social per «Cucina in emergenza: chi fa cosa e perché la formazione HACCP è obbligatoria»
+# Immagini e testi social per «Blackout elettrici estivi: perché accadono e come affrontarli»
 
-- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2025-03-10-cucina-emergenza-haccp-ruoli-volontari/
-- **Data**: 2025-03-10
-- **Badge**: Formazione
+- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-08-07-blackout-estivi-come-affrontarli/
+- **Data**: 2026-08-07
+- **Badge**: Prevenzione
 
 ## Dove va ogni file (a prova di errore)
 

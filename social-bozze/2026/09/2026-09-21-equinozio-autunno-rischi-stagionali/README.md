@@ -1,8 +1,8 @@
-# Immagini e testi social per «Cucina in emergenza: chi fa cosa e perché la formazione HACCP è obbligatoria»
+# Immagini e testi social per «Equinozio d'autunno: cambiano i rischi, cambiano le abitudini»
 
-- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2025-03-10-cucina-emergenza-haccp-ruoli-volontari/
-- **Data**: 2025-03-10
-- **Badge**: Formazione
+- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-09-21-equinozio-autunno-rischi-stagionali/
+- **Data**: 2026-09-21
+- **Badge**: Informazione
 
 ## Dove va ogni file (a prova di errore)
 

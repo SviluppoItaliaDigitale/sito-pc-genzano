@@ -1,8 +1,8 @@
-# Immagini e testi social per «Cucina in emergenza: chi fa cosa e perché la formazione HACCP è obbligatoria»
+# Immagini e testi social per «Alluvione delle Marche, 15-16 settembre 2022: la notte delle bombe d'acqua sui Monti del Catria»
 
-- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2025-03-10-cucina-emergenza-haccp-ruoli-volontari/
-- **Data**: 2025-03-10
-- **Badge**: Formazione
+- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-09-15-alluvione-marche-2022-bombe-acqua-cambiamento-climatico/
+- **Data**: 2026-09-15
+- **Badge**: Informazione
 
 ## Dove va ogni file (a prova di errore)
 
@@ -11,7 +11,7 @@ Il numero del carosello è l'ordine di caricamento.
 
 | File | Dove si pubblica |
 |---|---|
-| `feed-carosello-1.jpg`, `feed-carosello-2.jpg` | FEED Instagram + Facebook — carosello: caricale **tutte, in ordine** (1080×1350) |
+| `feed-carosello-1.jpg`, `feed-carosello-2.jpg`, `feed-carosello-3.jpg`, `feed-carosello-4.jpg` | FEED Instagram + Facebook — carosello: caricale **tutte, in ordine** (1080×1350) |
 | `storia.jpg` | STORIE Instagram + Facebook — verticale, sparisce dopo 24h (1080×1920) |
 | `instagram.txt` | testo per Instagram |
 | `facebook.txt` | testo per Facebook (anteprima OG dall'URL) |
