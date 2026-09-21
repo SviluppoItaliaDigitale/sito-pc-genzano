@@ -50,26 +50,36 @@ jobs:
           echo "# Scadenze di conformità — controllo del $oggi" >> "$REPORT"
           echo "" >> "$REPORT"
 
-          # 1. Dichiarazione di accessibilità: link ufficiale + finestra 23 settembre
+          # 1. Dichiarazione di accessibilità
+          #
+          # 🔴 Il deposito su form.agid.gov.it è in capo al COMUNE, ente titolare
+          # del servizio: il Gruppo non ha un'utenza sul portale e non può farlo.
+          # Ricordare una scadenza che non dipende da noi non serve a nulla e dà
+          # l'impressione di un inadempimento nostro (istruzione dell'utente del
+          # 21/09/2026: «fino a che il Comune non mi dà notizie non me lo devi
+          # ricordare»). Il controllo resta, ma tace finché il flag
+          # `dichiarazioneAccessibilita_attesa_ente` in hugo.toml è `true`.
+          # Quando il Comune deposita: si toglie il flag, si mette il link nel
+          # parametro `dichiarazioneAccessibilita`, e il calendario riparte.
           LINK=$(grep -E '^\s*dichiarazioneAccessibilita\s*=' hugo.toml | sed -E 's/.*=\s*"([^"]*)".*/\1/')
-          scad="$anno-09-23"
-          d=$(giorni "$scad")
-          if [ "$d" -lt 0 ]; then
-            # scadenza dell'anno passata: la prossima è l'anno prossimo
-            scad="$((anno+1))-09-23"; d=$(giorni "$scad")
-          fi
+          ATTESA=$(grep -E '^\s*dichiarazioneAccessibilita_attesa_ente\s*=' hugo.toml | grep -c 'true' || true)
           echo "## Dichiarazione di accessibilità" >> "$REPORT"
-          if [ -z "$LINK" ]; then
-            echo "- ❌ \`dichiarazioneAccessibilita\` in \`hugo.toml\` è vuoto: la dichiarazione non risulta depositata su form.agid.gov.it (o il link non è stato inserito). Adempimento del referente del Gruppo." >> "$REPORT"
-            FOUND="true"
-          else
+          if [ -n "$LINK" ]; then
             echo "- ✅ Link alla dichiarazione ufficiale presente: $LINK" >> "$REPORT"
-          fi
-          if [ "$d" -le 60 ]; then
-            echo "- ⚠️ Riesame annuale della dichiarazione entro il **23 settembre**: mancano $d giorni ($scad). Verificare contenuti non accessibili, metodo e date, poi aggiornare su form.agid.gov.it e in \`content/accessibilita/_index.md\`." >> "$REPORT"
-            FOUND="true"
+            scad="$anno-09-23"
+            d=$(giorni "$scad")
+            [ "$d" -lt 0 ] && { scad="$((anno+1))-09-23"; d=$(giorni "$scad"); }
+            if [ "$d" -le 60 ]; then
+              echo "- ⚠️ Riesame annuale entro il **23 settembre**: mancano $d giorni ($scad)." >> "$REPORT"
+              FOUND="true"
+            else
+              echo "- ✅ Prossimo riesame: $scad (fra $d giorni)." >> "$REPORT"
+            fi
+          elif [ "$ATTESA" -gt 0 ]; then
+            echo "- ℹ️ Deposito sul portale AgID in capo al Comune di Genzano di Roma, ente titolare: nessun promemoria finché non arriva notizia dall'ente. La pagina \`/accessibilita/\` resta il riferimento pubblico e viene riesaminata a ogni modifica sostanziale." >> "$REPORT"
           else
-            echo "- ✅ Prossimo riesame: $scad (fra $d giorni)." >> "$REPORT"
+            echo "- ❌ \`dichiarazioneAccessibilita\` in \`hugo.toml\` è vuoto e non risulta l'attesa dell'ente titolare: verificare chi deve depositare." >> "$REPORT"
+            FOUND="true"
           fi
 
           # 2. Obiettivi di accessibilità entro il 31 marzo
