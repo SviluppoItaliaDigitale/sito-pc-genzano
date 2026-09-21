@@ -77,7 +77,7 @@ Tieni queste cose pronte:
 - 1 **radio** a batteria per sentire le notizie;
 - acqua e cibo che non si guasta;
 - i tuoi **farmaci** in un posto visibile;
-- 1 **candela** come ultima risorsa — non lasciarla mai sola.
+- Mai candele: usa solo torce a pile. Le candele accese possono causare un incendio.
 
 ## In caso di emergenza
 

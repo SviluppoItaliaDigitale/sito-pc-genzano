@@ -1,10 +1,10 @@
-ultimo_audit: '2026-09-14'
-totale: 51
+ultimo_audit: '2026-09-21'
+totale: 54
 riepilogo:
   ACCESSIBILE: 2
   PARZIALE: 15
   NON_ACCESSIBILE: 18
-  TERZO: 16
+  TERZO: 19
   ERRORE: 0
 documenti:
 - path: /allegati/2026/2026-05-08-dpc-art-39-rimborsi-volontari-lavoratori-autonomi.pdf
@@ -72,6 +72,32 @@ documenti:
   origine: TERZO
   origine_descrizione: Comune di Genzano di Roma (ordinanze, delibere)
   verdict: TERZO
+- path: /allegati/2026/ordinanza-dirigenziale-133-2026-corsa-del-pane.pdf
+  file: ordinanza-dirigenziale-133-2026-corsa-del-pane.pdf
+  size_kb: 117.6
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: null
+  pages: 5
+  errors: []
+  text_chars_sample: 5013
+  origine: TERZO
+  origine_descrizione: Comune di Genzano di Roma (ordinanze, delibere)
+  verdict: TERZO
+- path: /allegati/2026/ordinanza-dirigenziale-134-2026-festa-del-pane.pdf
+  file: ordinanza-dirigenziale-134-2026-festa-del-pane.pdf
+  size_kb: 146.6
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: null
+  pages: 7
+  errors: []
+  text_chars_sample: 4274
+  origine: TERZO
+  origine_descrizione: Comune di Genzano di Roma (ordinanze, delibere)
+  verdict: TERZO
 - path: /allegati/2026/ordinanza-sindacale-12-2026-coc-infiorata.pdf
   file: ordinanza-sindacale-12-2026-coc-infiorata.pdf
   size_kb: 85.6
@@ -82,6 +108,19 @@ documenti:
   pages: 3
   errors: []
   text_chars_sample: 5396
+  origine: TERZO
+  origine_descrizione: Comune di Genzano di Roma (ordinanze, delibere)
+  verdict: TERZO
+- path: /allegati/2026/ordinanza-sindacale-19-2026-coc-festa-del-pane.pdf
+  file: ordinanza-sindacale-19-2026-coc-festa-del-pane.pdf
+  size_kb: 87.0
+  searchable: true
+  tagged: true
+  language: it-IT
+  title: null
+  pages: 4
+  errors: []
+  text_chars_sample: 5518
   origine: TERZO
   origine_descrizione: Comune di Genzano di Roma (ordinanze, delibere)
   verdict: TERZO

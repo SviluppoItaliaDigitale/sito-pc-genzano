@@ -107,6 +107,32 @@ def default_files(md_only=False):
         files += glob.glob(os.path.join(ROOT, "static", "giochi", "**", "*.html"), recursive=True)
     return sorted(set(files))
 
+_MASCHERA = None
+
+
+def _maschera_lingua_straniera(testo):
+    """Azzera i blocchi HTML marcati `lang="xx"` con xx diverso da italiano.
+
+    Riusa la funzione dell'audit grammaticale: una pagina italiana puo'
+    contenere sezioni in altra lingua marcate per l'accessibilita' (i poster
+    di emergenza multilingua), e quelle parole non vanno cercate nel
+    dizionario italiano. Se l'import fallisce si prosegue senza maschera.
+    """
+    global _MASCHERA
+    if _MASCHERA is None:
+        try:
+            import importlib.util
+            percorso = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                    "audit-grammatica-italiana.py")
+            spec = importlib.util.spec_from_file_location("_audit_gram", percorso)
+            mod = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(mod)
+            _MASCHERA = mod.mask_blocchi_lingua_straniera
+        except Exception:
+            _MASCHERA = lambda t: t
+    return _MASCHERA(testo)
+
+
 def main():
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     md_only = "--md-only" in sys.argv
@@ -126,6 +152,7 @@ def main():
         m_lang = re.search(r"^language:\s*[\"']?([a-z]{2})", raw, re.M)
         if m_lang and m_lang.group(1) != "it":
             continue
+        raw = _maschera_lingua_straniera(raw)
         text = strip_html(raw) if f.endswith((".html", ".htm")) else strip_markdown(raw)
         suspects = {}
         for w in iter_words(text):

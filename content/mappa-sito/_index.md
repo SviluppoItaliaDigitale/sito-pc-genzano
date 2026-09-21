@@ -444,6 +444,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Tabelle di comunicazione (CAA)</p>
   <p class="ms-card-desc">Tabelle con simboli da indicare per comunicare in emergenza: per afasia, disabilità cognitive o chi non parla italiano. Da usare a schermo o stampare.</p>
 </a>
+<a class="ms-card ms-edu" href="/poster-emergenza/">
+  <div class="ms-card-icon"><i class="bi bi-translate"></i></div>
+  <p class="ms-card-title">Poster di emergenza multilingua</p>
+  <p class="ms-card-desc">Il testo dei poster del 112 in 8 lingue, leggibile da screen reader: i PDF/PNG stampabili sono immagini, questa pagina è l'equivalente accessibile.</p>
+</a>
 <a class="ms-card ms-edu" href="/quiz-preparazione/">
   <div class="ms-card-icon"><i class="bi bi-clipboard-check"></i></div>
   <p class="ms-card-title">Quanto sei preparato?</p>

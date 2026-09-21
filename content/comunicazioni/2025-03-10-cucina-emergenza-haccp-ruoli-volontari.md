@@ -24,7 +24,7 @@ Tutti i volontari che operano in cucina, a qualsiasi titolo, devono avere una fo
 
 - **HACCP** (Hazard Analysis and Critical Control Points — analisi dei rischi e punti critici di controllo). L'operatore deve essere formato alla gestione corretta degli alimenti, dei luoghi di stoccaggio, della preparazione e della conservazione dall'arrivo della merce fino alla somministrazione. **Chi ha in corso malattie trasmissibili** (anche una semplice influenza) **non può operare in cucina**.
 - **Addetto antincendio**. Verifica la presenza e l'idoneità degli estintori in cucina: CO₂ per fuochi elettrici, coperta antifiamma per le pentole in caso di fiammata.
-- **Addetto al Primo Soccorso**. Controlla la cassetta di Primo Soccorso di tipo B con allegato 1 (quella prevista dal D.Lgs. 81/08 per le cucine).
+- **Addetto al Primo Soccorso**. Controlla la cassetta di Primo Soccorso di tipo B con allegato 1 (il contenuto minimo è fissato dal D.M. 388/2003, in attuazione dell'art. 45 del D.Lgs. 81/2008).
 - **Installatore qualificato GPL**. Verifica la corretta installazione e lo stoccaggio delle bombole secondo la norma UNI/TR 11426.
 
 ## I ruoli in cucina
@@ -81,6 +81,7 @@ Per informazioni: [segreteria@protezionecivilegenzano.it](mailto:segreteria@prot
 
 ## Riferimenti
 
-- D.Lgs. 81/2008, artt. 28-30, in materia di valutazione dei rischi sul lavoro.
+- D.Lgs. 81/2008, artt. 28-30 e art. 45, in materia di valutazione dei rischi sul lavoro e di primo soccorso.
+- D.M. 388/2003, Allegato 1, sul contenuto minimo della cassetta di pronto soccorso.
 - D.Lgs. 193/2007, recepimento del Regolamento CE 852/2004 sull'igiene dei prodotti alimentari.
 - Manuale di Cucina in Emergenza DSEFIC-FIC, cap. 1.

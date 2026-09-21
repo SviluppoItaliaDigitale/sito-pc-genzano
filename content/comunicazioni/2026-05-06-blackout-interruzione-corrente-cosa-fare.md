@@ -39,7 +39,7 @@ Un minimo di preparazione cambia moltissimo la gestione del blackout:
 - **Acqua in bottiglie** (anche se l'acqua di rubinetto può continuare a funzionare qualche ora).
 - **Cibo non deperibile** che non richiede cottura.
 - **Radio a pile o a manovella** per ricevere comunicazioni ufficiali.
-- **Candele** solo con contenitori stabili e lontano da tende o carta (ricorda: fiamme libere = rischio incendio).
+- **Mai candele**: usa solo torce elettriche o lampade a LED con pile di ricambio (le fiamme libere sono un rischio d'incendio).
 - **Farmaci termolabili**: se hai insulina o altri farmaci che vanno in frigo, informati col tuo medico su quanto possono restare fuori frigo in sicurezza.
 
 Numeri utili da salvare:
@@ -76,7 +76,7 @@ Numeri utili da salvare:
 
 - **Non accendere fornelli a gas** per scaldare la casa: rischio di monossido.
 - **Non usare generatori elettrici in casa**: vanno sempre all'esterno, ben ventilati.
-- **Non lasciare candele accese** incustodite.
+- **Non usare candele accese**: usa sempre torce elettriche o lampade a LED.
 - **Non cercare di "riattivare" da solo** contatori manomessi: chiama il gestore.
 - **Non aprire armadi e congelatori** ripetutamente: perdi il freddo utile.
 
