@@ -48,11 +48,17 @@ EMAIL_ORA="$(git config user.email 2>/dev/null || true)"
 #   a) identita' assente;
 #   b) identita' riconducibile a uno strumento automatico;
 #   c) stessa email dell'account del repo ma nome diverso (allinea le sigle
-#      storiche al nome della persona, senza toccare l'identita' di altri).
+#      storiche al nome della persona, senza toccare l'identita' di altri);
+#   d) nome uguale a quello dell'account GitHub del repo (con qualunque email:
+#      e' la stessa persona che scrive da una macchina configurata con la sua
+#      email personale). Senza questo caso, l'email privata finisce in chiaro
+#      su ogni commit pubblico: la forma `noreply` esiste per evitarlo.
+#      Un collaboratore diverso ha un altro nome e non viene toccato.
 da_correggere=0
 [ -z "$NOME_ORA" ] || [ -z "$EMAIL_ORA" ] && da_correggere=1
 printf '%s %s' "$NOME_ORA" "$EMAIL_ORA" | grep -qiE 'claude|anthropic|\bbot\b|assistant' && da_correggere=1
 [ "$EMAIL_ORA" = "$EMAIL_OK" ] && [ "$NOME_ORA" != "$NOME_OK" ] && da_correggere=1
+[ "$NOME_ORA" = "SviluppoItaliaDigitale" ] && da_correggere=1
 
 [ "$da_correggere" -eq 0 ] && exit 0
 
