@@ -538,6 +538,12 @@ def audit_file(path: Path) -> list[dict]:
     for m in re.finditer(r"```.*?```", body, re.DOTALL):
         s, e = m.start(), m.end()
         masked = masked[:s] + (" " * (e - s)) + masked[e:]
+    # Maschera blocchi <div lang="xx">...</div> con xx diverso da "it"
+    # (pagine multilingua come /poster-emergenza/): l'italiano non elide in
+    # spagnolo/francese/ecc., ogni regola qui sarebbe un falso positivo.
+    for m in re.finditer(r'(?is)<div\s+lang="(?!it")[a-z-]+"\s*>.*?</div>', masked):
+        s, e = m.start(), m.end()
+        masked = masked[:s] + (" " * (e - s)) + masked[e:]
     # Maschera anche shortcode Hugo {{< ... >}} che possono avere parametri
     # in lingue diverse o codice
     for m in re.finditer(r"\{\{[<%].*?[%>]\}\}", masked, re.DOTALL):
