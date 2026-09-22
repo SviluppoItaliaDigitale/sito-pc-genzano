@@ -282,6 +282,10 @@ html.a11y-pause-anim .navArr.hint{animation:none}
   display:flex;justify-content:space-between;gap:8px}
 .wx h3 span{font-family:var(--mono);font-size:9.5px;color:var(--dim);font-weight:400}
 .wx p{font-size:11.5px;line-height:1.5}
+/* Riga di onesta' del dato: compare solo quando una fonte letta direttamente
+   dal browser ha smesso di rispondere e a schermo resta l'ultima lettura. */
+.wx p.staleNota{margin:6px 0 0;padding:5px 7px;border-left:3px solid #ffd60a;
+  background:rgba(255,214,10,.08);color:#ffd60a;font-size:11px}
 .wxNow{display:flex;gap:14px;align-items:baseline;font-family:var(--mono)}
 .wxNow b{font-size:26px;color:#f2f7f4;font-weight:400}
 .wxNow div{font-size:10.5px;color:var(--dim);line-height:1.6}
@@ -1243,20 +1247,30 @@ async function loadSpazio(){
 }
 
 /* ---------------- RADIOSONDE — SondeHub (CORS aperto, nessuna chiave) ---------
-   I palloni meteo trasmettono in 400 MHz e si ricevono con lo stesso SDR della
-   vista RADIO: sono l'esercizio di ascolto piu' istruttivo che esista, e la
-   telemetria (quota, posizione) e' pubblicata dalla rete di chi li insegue. */
+   I palloni meteo portano un trasmettitore nel segmento dei 400 MHz riservato
+   agli ausili meteorologici, e la loro telemetria (quota, posizione, frequenza)
+   e' pubblicata dalla rete di chi li insegue.
+   🔴 Non si dice che si ricevono "con il ricevitore di questa pagina": i profili
+   dei due SDR incorporati partono da ~430 MHz e NON coprono quel segmento
+   (verificato per calcolo il 22/09/2026). La frequenza mostrata e' quella reale
+   trasmessa dal pallone, campo "frequency" della fonte, non una stima nostra. */
+const SONDA_MAX_AGE=30*60e3; // un frame piu' vecchio non e' telemetria corrente
 async function loadSonde(){
   try{
     const d=await jget("https://api.v2.sondehub.org/sondes/telemetry?duration=3h",20000);
-    const out=[];
+    const out=[],ora=Date.now();
     for(const serial of Object.keys(d||{})){
       const frames=Object.values(d[serial]||{});
       const u=frames[frames.length-1];
       if(!u||!Number.isFinite(Number(u.lat))||!Number.isFinite(Number(u.lon)))continue;
+      // La finestra chiesta e' di tre ore: dentro ci sono anche palloni che non
+      // trasmettono piu' da un pezzo. Mostrarli accanto a chi sta volando
+      // adesso li farebbe leggere come attuali.
+      const t=utcMs(u.datetime);
+      if(Number.isFinite(t)&&ora-t>SONDA_MAX_AGE)continue;
       const km=havKm(GENZANO,{lat:Number(u.lat),lon:Number(u.lon)});
       out.push({serial,lat:Number(u.lat),lon:Number(u.lon),alt:Number(u.alt),
-        tipo:u.type||"",km:Math.round(km),t:utcMs(u.datetime)});
+        tipo:u.type||"",mhz:Number(u.frequency),km:Math.round(km),t});
     }
     out.sort((a,b)=>a.km-b.km);
     S.sonde=out.slice(0,10); S.last.sonde=Date.now(); delete S.errs.sonde;
@@ -1317,6 +1331,13 @@ const snapVecchio=snap=>{
   const t=utcMs(snap&&snap.generato);
   return Number.isFinite(t)?(Date.now()-t>SNAP_MAX_AGE?t:null):null;
 };
+// Stessa difesa per le schede che leggono la fonte DIRETTAMENTE dal browser
+// (meteo spaziale, radiosonde): se la fonte risponde una volta e poi smette, i
+// dati restano in memoria e il pannello continuerebbe a mostrarli come attuali.
+// Oltre la soglia si dichiara l'ora dell'ultima lettura riuscita invece di
+// tacere (rilievo colto in revisione il 22/09/2026).
+const DIRETTO_MAX_AGE=45*60e3;
+const direttoVecchio=t=>Number.isFinite(t)&&Date.now()-t>DIRETTO_MAX_AGE?t:null;
 // Filtri per etichetta operativa. "tutti" resta sempre disponibile e sempre per
 // primo: qualunque filtro si applichi, si deve poter tornare a vedere l'intero
 // traffico con un clic.
@@ -2746,21 +2767,33 @@ async function radioLive(){ // nome, versione e profili reali del ricevitore (CO
 // Schede che accompagnano l'ascolto: quanto e' disturbata la ionosfera (cioe'
 // quanto sono affidabili i collegamenti HF) e quali palloni meteo sono in volo.
 function schedeRadioDati(){
+  // Riga onesta quando la fonte ha smesso di rispondere: si dichiara l'ora
+  // dell'ultima lettura riuscita invece di lasciar credere che sia di adesso.
+  const staleP=t=>t?`<p class="staleNota">Fonte non raggiungibile in questo momento: dati dell'ultima lettura riuscita, ${hm(t)}.</p>`:"";
   if(S.spazio){
-    const sp=S.spazio;
-    const [testo,col]=Number.isFinite(sp.kp)?kpStato(sp.kp):["non disponibile","#a6b6c2"];
-    feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>METEO SPAZIALE — PROPAGAZIONE HF<span>NOAA SWPC</span></h3>
+    const sp=S.spazio,vecchio=direttoVecchio(S.last.spazio);
+    // KP_SCALA ha tre campi per riga: soglia, testo, colore. La soglia qui si
+    // scarta: senza il buco iniziale finiva a schermo attaccata al valore
+    // ("0.35" invece di "0.3 quiete") e il colore diventava una parola.
+    const [,testo,col]=Number.isFinite(sp.kp)?kpStato(sp.kp):[null,"non disponibile","#a6b6c2"];
+    feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>METEO SPAZIALE — PROPAGAZIONE HF<span>NOAA SWPC${vecchio?" · NON AGGIORNATO":""}</span></h3>
       <div class="kgrid">
-      <div class="kpi" style="--kc:${col}"><small>INDICE Kp</small><b>${Number.isFinite(sp.kp)?sp.kp.toFixed(1):"—"}</b><em>${testo}</em></div>
+      <div class="kpi" style="--kc:${vecchio?"#a6b6c2":col}"><small>INDICE Kp</small><b>${Number.isFinite(sp.kp)?sp.kp.toFixed(1):"—"}</b><em>${vecchio?"misura delle "+hm(sp.kpQuando||S.last.spazio):testo}</em></div>
       <div class="kpi"><small>BRILLAMENTO</small><b>${esc(sp.classe||"—")}</b><em>${sp.flareQuando?"alle "+hm(sp.flareQuando):"nessuno rilevato"}</em></div>
       </div>
+      ${staleP(vecchio)}
       <p style="margin:6px 0 0;color:var(--dim);font-size:11px">Kp alto e brillamenti di classe M o X degradano le comunicazioni in HF, soprattutto sulle bande alte.</p></div>`);
   }
+  // 🔴 Il titolo non dice piu' "in volo": dalla telemetria si sa dove stava il
+  //    pallone e quando, non se stia ancora salendo. Si mostra il fatto (quota,
+  //    frequenza, ora dell'ultimo dato) e il lettore giudica.
   if(S.sonde&&S.sonde.length){
-    feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>RADIOSONDE IN VOLO<span>SONDEHUB · PIÙ VICINE A GENZANO</span></h3>`+
-      S.sonde.slice(0,6).map(x=>`<div class="obsRow"><span class="on">${esc(x.serial)} <em>${esc(x.tipo)}</em></span>`+
-        `<span>${Number.isFinite(x.alt)?Math.round(x.alt)+" m":"quota N/D"} · ${x.km} km</span></div>`).join("")+
-      `<p style="margin:6px 0 0;color:var(--dim);font-size:11px">Trasmettono intorno ai 400 MHz: si ricevono con lo stesso ricevitore di questa pagina.</p></div>`);
+    const vecchio=direttoVecchio(S.last.sonde);
+    feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>RADIOSONDE — ULTIMA TELEMETRIA<span>SONDEHUB · PIÙ VICINE A GENZANO${vecchio?" · NON AGGIORNATO":""}</span></h3>`+
+      S.sonde.slice(0,6).map(x=>`<div class="obsRow"><span class="on">${esc(x.serial)} <em>${esc(x.tipo)}${Number.isFinite(x.mhz)?" · "+x.mhz.toFixed(3)+" MHz":""}</em></span>`+
+        `<span>${Number.isFinite(x.alt)?Math.round(x.alt)+" m":"quota N/D"} · ${x.km} km · ${Number.isFinite(x.t)?hm(x.t):"ora N/D"}</span></div>`).join("")+
+      staleP(vecchio)+
+      `<p style="margin:6px 0 0;color:var(--dim);font-size:11px">Trasmettono nel segmento dei 400 MHz riservato agli ausili meteorologici: fuori dalle bande coperte dai ricevitori di questa pagina, che partono dai 430 MHz.</p></div>`);
   }
 }
 function viewRad(){
