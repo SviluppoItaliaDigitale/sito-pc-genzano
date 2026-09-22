@@ -303,7 +303,7 @@ Ogni percorso è completo di: **prerequisiti**, **obiettivi di apprendimento**, 
 <span class="meta-badge meta-fascia">Scuola Primaria classi III-V (8-11 anni)</span>
 <span class="meta-badge meta-durata">4 ore (lezioni da 1 ora) + eventuale incontro con i volontari del Gruppo</span>
 <span class="meta-badge meta-disciplina">Educazione Civica · Storia · Geografia · Cittadinanza</span>
-<span class="meta-badge meta-nucleo">1 — Costituzione, diritto, legalità e solidarietà</span>
+<span class="meta-badge meta-nucleo">1 — Costituzione</span>
 </div>
 
 ### Articolazione
@@ -693,7 +693,7 @@ Rubrica fascia, indicatori 1 (autoprotezione), 5 (ruolo delle istituzioni). Poss
 <span class="meta-badge meta-fascia">Scuola Secondaria di II grado. Particolarmente adatto a Licei delle Scienze Umane, Istituti Tecnici e Professionali con indirizzo sanitario</span>
 <span class="meta-badge meta-durata">4 ore (preferibilmente in due incontri da 2 ore)</span>
 <span class="meta-badge meta-disciplina">Educazione Civica · Scienze · Educazione fisica</span>
-<span class="meta-badge meta-nucleo">1 — Costituzione, diritto, legalità e solidarietà</span>
+<span class="meta-badge meta-nucleo">1 — Costituzione</span>
 </div>
 
 <p class="percorso-norma"><strong>Riferimento normativo:</strong> **L. 4 agosto 2021, n. 116** sull'obbligo del **DAE** (Defibrillatore Automatico Esterno) negli spazi pubblici e sulla formazione del personale.</p>
@@ -751,7 +751,7 @@ Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-val
 <span class="meta-badge meta-fascia">Scuola Secondaria di II grado. Integrabile nei PCTO</span>
 <span class="meta-badge meta-durata">3 ore in aula + visita facoltativa al Gruppo. **Versione PCTO**: 3 ore in aula + **30-50 ore di tirocinio** presso il Gruppo Comunale</span>
 <span class="meta-badge meta-disciplina">Educazione Civica · Storia · Diritto</span>
-<span class="meta-badge meta-nucleo">1 — Costituzione, diritto, legalità e solidarietà</span>
+<span class="meta-badge meta-nucleo">1 — Costituzione</span>
 </div>
 
 <p class="percorso-norma"><strong>Riferimento normativo:</strong> **artt. 2, 4 e 118 della Costituzione** (sussidiarietà orizzontale) · **D.Lgs. 3 luglio 2017, n. 117** (Codice del Terzo Settore) · **D.Lgs. 2 gennaio 2018, n. 1** (Codice della Protezione Civile, artt. 32-42 sul volontariato).</p>
@@ -804,7 +804,7 @@ Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-val
 <span class="meta-badge meta-fascia">Scuola Secondaria di II grado</span>
 <span class="meta-badge meta-durata">2-3 ore</span>
 <span class="meta-badge meta-disciplina">Educazione Civica · Diritto · Geografia · Lingua inglese (lessico tecnico)</span>
-<span class="meta-badge meta-nucleo">1 — Costituzione, diritto, legalità e solidarietà</span>
+<span class="meta-badge meta-nucleo">1 — Costituzione</span>
 </div>
 
 <p class="percorso-norma"><strong>Riferimento normativo:</strong> **artt. 11 e 117 della Costituzione** (rapporti con l'Unione Europea) · **Decisione UE n. 1313/2013** sul Meccanismo unionale di protezione civile (UCPM, *Union Civil Protection Mechanism*).</p>
@@ -902,7 +902,7 @@ Rubrica fascia, indicatori 1 (autoprotezione), 3 (conoscenza del territorio), 5 
 <span class="meta-badge meta-fascia">Scuola Secondaria di II grado, in particolare Licei delle Scienze Umane</span>
 <span class="meta-badge meta-durata">3 ore (lezioni da 1 ora). Estendibile a workshop di 6 ore con uno psicologo dell'emergenza</span>
 <span class="meta-badge meta-disciplina">Educazione Civica · Scienze Umane · Italiano</span>
-<span class="meta-badge meta-nucleo">1 — Costituzione, diritto, legalità e solidarietà</span>
+<span class="meta-badge meta-nucleo">1 — Costituzione</span>
 </div>
 
 <p class="percorso-norma"><strong>Riferimento normativo:</strong> **art. 32 Cost.** (diritto alla salute, anche mentale) · **WHO — Psychological First Aid: Guide for field workers** (2011) · **Sphere Standards 2018** sezione "Mental Health and Psychosocial Support" · **NCTSN** (National Child Traumatic Stress Network) per il PFA pediatrico.</p>
@@ -1004,7 +1004,7 @@ Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-val
 <span class="meta-badge meta-fascia">Scuola Secondaria di II grado</span>
 <span class="meta-badge meta-durata">4 ore (lezioni da 1 ora) + eventuale visita a un luogo della memoria</span>
 <span class="meta-badge meta-disciplina">Storia · Italiano · Educazione Civica · Geografia</span>
-<span class="meta-badge meta-nucleo">1 — Costituzione, diritto, legalità e solidarietà (+ 2 per la dimensione di sostenibilità del rischio)</span>
+<span class="meta-badge meta-nucleo">1 — Costituzione (+ 2 per la dimensione di sostenibilità del rischio)</span>
 </div>
 
 ### Articolazione
@@ -1051,7 +1051,7 @@ Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-val
 <span class="meta-badge meta-fascia">Scuola Secondaria di I e II grado</span>
 <span class="meta-badge meta-durata">3 ore (lezioni da 1 ora)</span>
 <span class="meta-badge meta-disciplina">Educazione Civica · Italiano · Diritto · Scienze Umane</span>
-<span class="meta-badge meta-nucleo">1 — Costituzione, diritto, legalità e solidarietà (+ 3 per la cittadinanza digitale-comunicativa)</span>
+<span class="meta-badge meta-nucleo">1 — Costituzione (+ 3 per la cittadinanza digitale-comunicativa)</span>
 </div>
 
 <p class="percorso-norma"><strong>Riferimento normativo:</strong> **Convenzione ONU sui diritti delle persone con disabilità** (New York 13 dicembre 2006), ratificata dall'Italia con **L. 3 marzo 2009, n. 18** · **Sendai Framework for Disaster Risk Reduction 2015-2030** (target B e D, "Disability-Inclusive Disaster Risk Reduction") · **L. 9 gennaio 2004, n. 4** (Legge Stanca, accessibilità digitale) · **ISO 22395:2018** sulla comunicazione con persone vulnerabili in emergenza.</p>
