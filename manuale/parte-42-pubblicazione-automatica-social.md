@@ -195,6 +195,11 @@ revisione ha trovato prima che facessero danni:
   va in coda mezz'ora dopo il primo, e in quel momento non succede niente che richiami il sistema.
   Ora il sito resta in attesa e lo chiama all'orario giusto. È successo proprio al resoconto della
   Festa del Pane, sbloccato a mano alle 22:30 del 22 settembre.
+- **L'attesa partiva solo se il secondo post era già in coda.** La notte del 23 settembre i due
+  articoli calendarizzati sono andati online insieme e nessuno dei due era ancora in coda quando
+  il sito ha deciso: il primo è uscito alle 00:40, il secondo, previsto per le 01:09, solo alle
+  01:16 col giro orario. Il sito ora calcola da sé l'orario che il sistema assegnerà a ciascun
+  post (stessa regola della mezz'ora) e si mette in attesa prima ancora di chiamarlo.
 
 ### Gli articoli retrodatati
 
