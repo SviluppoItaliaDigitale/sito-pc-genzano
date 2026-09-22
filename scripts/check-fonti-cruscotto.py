@@ -140,7 +140,15 @@ def chk_dpc_bollettino():
         ok, det, _, _ = _get(base + nome, expect_json=False)
         if not ok:
             return False, f"{nome} non raggiungibile ({det})"
-    return True, f"bollettino {stamp} presente sulla fonte"
+    # il mirror da cui si ricava il timbro: se muore si resta sull'API di
+    # ripiego, che ha una quota per IP — meglio saperlo prima
+    mirror = ("https://raw.githubusercontent.com/opendatasicilia/"
+              "DPC-bollettini-criticita-idrogeologica-idraulica/refs/heads/main/"
+              "data/bollettini/bollettino-oggi-zone-latest.csv")
+    ok, det, _, _ = _get(mirror, expect_json=False)
+    if not ok:
+        return False, f"bollettino {stamp} presente, ma il mirror del timbro non risponde ({det})"
+    return True, f"bollettino {stamp} presente sulla fonte · mirror del timbro attivo"
 
 
 def chk_gdacs():

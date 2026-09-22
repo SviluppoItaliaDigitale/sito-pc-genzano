@@ -41,9 +41,9 @@ jobs:
           # scrive nulla ed esce 0: la scheda dei punti caldi resta spenta,
           # mai popolata con dati di riempimento.
           FIRMS_MAP_KEY: ${{ secrets.FIRMS_MAP_KEY }}
-          # Con il token l'API di GitHub dà mille richieste l'ora invece delle
-          # sessanta per IP: è il motivo per cui il timbro del bollettino DPC
-          # si risolve qui e non nel browser di chi guarda la Sala.
+          # Serve solo al RIPIEGO del bollettino DPC: il timbro si ricava dal
+          # mirror opendatasicilia (nomi di file fissi, nessuna quota), e
+          # l'API di GitHub si usa solo se quel mirror non risponde.
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python3 scripts/genera-dpc-bollettino.py
