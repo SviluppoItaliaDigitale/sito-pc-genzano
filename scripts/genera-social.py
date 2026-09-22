@@ -396,6 +396,11 @@ def salva_bozze(slug: str, bozze: dict, art: dict, dry_run: bool = False) -> Pat
         contenuto = bozze.get(piattaforma, "")
         if not contenuto:
             continue
+        # Gemini a volte attacca il tag del badge alla prima parola
+        # ("[INFORMAZIONE]Il 23 settembre..."): dal 20/09/2026 questi testi
+        # escono da soli su Instagram e Facebook, senza una rilettura che lo
+        # corregga a mano.
+        contenuto = re.sub(r"^(\[[^\]\n]{2,40}\])(?=[^\s(])", r"\1 ", contenuto)
         # I .txt contengono SOLO il testo da pubblicare: si copiano e si
         # incollano così come sono. Le istruzioni su quale immagine va nel feed
         # e quale nella storia stanno nel README.md della cartella, scritto da
