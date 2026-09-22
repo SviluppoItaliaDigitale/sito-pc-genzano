@@ -1,13 +1,15 @@
 # Snapshot self-hosted della Sala situazioni (/monitor/), rigenerati ogni
-# 15 minuti: notizie agenzie (ANSA/Adnkronos), allerte globali GDACS e
-# attivazioni Copernicus EMS. Queste fonti non espongono CORS ai browser.
+# 15 minuti: notizie agenzie (ANSA/Adnkronos), allerte globali GDACS,
+# attivazioni Copernicus EMS, mezzi aerei antincendio ed emergenze dichiarate
+# in volo (adsb.fi), avvisi MeteoAlarm e punti caldi NASA FIRMS.
+# Queste fonti non espongono CORS ai browser.
 # Gli script sono fail-safe (fonte giù = file invariato, exit 0) e committano
 # solo se i dati cambiano davvero.
 # FRESCHEZZA: la Sala situazioni legge questi JSON PRIMA da
 # raw.githubusercontent.com (CORS aperto, già in CSP) — disponibili al
 # commit, SENZA aspettare il deploy — con fallback sulla copia del sito.
 # Freschezza effettiva ~15-20 minuti (cron 15 + cache CDN raw ~5).
-name: "🖥️ Dati Sala situazioni (notizie + GDACS + EMS)"
+name: "🖥️ Dati Sala situazioni (notizie + GDACS + EMS + volo + allerte + incendi)"
 
 on:
   schedule:
@@ -24,15 +26,28 @@ permissions:
 jobs:
   aggiorna:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    # Sei fonti in sequenza, ognuna con i suoi ritentativi: dieci minuti erano
+    # troppo pochi e in caso di rallentamenti simultanei GitHub avrebbe ucciso il
+    # job PRIMA del commit, buttando via anche gli snapshot riusciti (rilievo
+    # colto in revisione il 22/09/2026). I ritentativi dei singoli script sono
+    # stati ridotti e il tetto alzato: due difese, non una.
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v7
 
       - name: "📰🌍 Rigenera gli snapshot (fail-safe per fonte)"
+        env:
+          # Chiave gratuita NASA FIRMS. Se il segreto non esiste lo script non
+          # scrive nulla ed esce 0: la scheda dei punti caldi resta spenta,
+          # mai popolata con dati di riempimento.
+          FIRMS_MAP_KEY: ${{ secrets.FIRMS_MAP_KEY }}
         run: |
           python3 scripts/genera-notizie-agenzie.py
           python3 scripts/genera-gdacs-eventi.py
           python3 scripts/genera-ems-attivazioni.py
+          python3 scripts/genera-volo-soccorso.py
+          python3 scripts/genera-meteoalarm.py
+          python3 scripts/genera-incendi-firms.py
 
       - name: "💾 Commit solo se i dati sono cambiati"
         run: |
@@ -40,12 +55,16 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add static/open-data/notizie-agenzie.json \
                   static/open-data/gdacs-eventi.json \
-                  static/open-data/ems-attivazioni.json
+                  static/open-data/ems-attivazioni.json \
+                  static/open-data/volo-soccorso.json \
+                  static/open-data/meteoalarm-italia.json
+          # incendi-firms.json esiste solo se il segreto FIRMS_MAP_KEY e' configurato
+          [ -f static/open-data/incendi-firms.json ] && git add static/open-data/incendi-firms.json || true
           if git diff --cached --quiet; then
             echo "Snapshot invariati: nessun commit."
             exit 0
           fi
-          git commit -m "[skip-dati-sala] Snapshot sala situazioni: notizie + GDACS + EMS"
+          git commit -m "[skip-dati-sala] Snapshot sala situazioni: notizie, GDACS, EMS, volo, MeteoAlarm, FIRMS"
           # anti non-fast-forward: altri workflow committano di frequente
           git pull --rebase origin main
           git push
