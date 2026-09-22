@@ -3174,7 +3174,14 @@ const OBS_RAD={longitude:GENZANO.lon*Math.PI/180,latitude:GENZANO.lat*Math.PI/18
 /* Calcola posizione e angoli per TUTTI i satelliti caricati.
    Sedicimila oggetti si propagano in un paio di decimi di secondo, quindi si
    rifa' tutto a ogni giro invece di tenere stati parziali che si disallineano. */
-function orbCalcola(){
+/* `freschezza` in millisecondi: se il calcolo precedente e' piu' recente di
+   cosi', si riusa invece di rifarlo. Serve perche' il temporizzatore calcola
+   e poi chiede il ridisegno, e il pannello a sua volta calcola: senza questa
+   soglia ogni giro propagherebbe due volte tutti i satelliti — con il catalogo
+   intero sono ~120 ms invece di ~60, quattro volte al minuto, su un telefono.
+   Chi vuole il calcolo fresco per forza chiama senza argomento. */
+function orbCalcola(freschezza){
+  if(freschezza&&S.orb.calc&&Date.now()-S.orb.calc.t<freschezza)return S.orb.calc;
   const t=new Date(), gmst=satellite.gstime(t), sole=orbSole(t);
   const soleEcf=satellite.eciToEcf(sole,gmst);
   const soleEl=satellite.ecfToLookAngles(OBS_RAD,soleEcf).elevation*180/Math.PI;
@@ -3366,6 +3373,9 @@ function orbPillole(){
 // il gruppo "active" della fonte conta circa sedicimila oggetti: sotto un
 // migliaio lo scarico e' troncato o non e' il catalogo, e non si dichiara completo
 const ORB_MIN_CATALOGO=1000;
+// quanto puo' essere vecchio un calcolo perche' il pannello lo riusi invece di
+// rifarlo: due secondi su posizioni che si rinfrescano ogni quindici
+const ORB_FRESCO=2000;
 const PASS_ORE=48, PASS_STEP=30e3;
 // sotto questa soglia il filtro geografico mostra anche i piu' vicini fuori
 const MIN_AREA=8;
@@ -3446,7 +3456,7 @@ function viewOrb(){
   //    le posizioni all'istante di apertura, mentre la scheda diceva "adesso".
   //    Un satellite in orbita bassa fa 7,8 km al secondo: dopo dieci minuti
   //    e' a migliaia di chilometri da dove lo si mostrava.
-  const c=orbCalcola();
+  const c=orbCalcola(ORB_FRESCO);
   const sel=orbFiltra(c.lista,S.orb.filtro);
   // 🔴 Coi filtri geografici NON si scarta chi sta sotto l'orizzonte: la domanda
   //    e' "chi passa sull'area", non "chi vedo da Genzano". Un satellite sopra
