@@ -44,6 +44,13 @@ Le superfici a **sfondo scuro/colorato** del sito (page-hero/`.app-page-hero` bl
 
 Vale anche per le **pagine HTML statiche** (`static/**/index.html`, hero iniettato da `site-chrome.js`). L'agent `pc-accessibility-auditor` § 7 ha lo snippet di calcolo deterministico.
 
+🔴 **Due trappole su fondo scuro, trovate il 22/09/2026 sulla Sala situazioni** (`/monitor/`, tema scuro proprio, fuori dal campione `pa11y-ci`):
+
+- **Un colore "secondario" definito una volta e usato ovunque va calcolato una volta sola, ma sul serio.** La variabile `--dim` valeva `#5d7a6e`: scelta a occhio perché "si legge ma non spicca", stava fra **3,49:1 e 4,30:1** sui cinque fondi della pagina e reggeva le didascalie di *tutti* i riquadri, le note e le etichette. Un'unica variabile sbagliata sono decine di violazioni. Portata a `#709080` (minimo **4,67:1** su ogni fondo): 16 violazioni sparite con una riga. 🔴 Quando si corregge un caso singolo con un tono più chiaro scritto a mano, **si sta nascondendo il problema della variabile**: si alza la variabile e si fanno puntare lì anche le eccezioni già scritte.
+- **L'opacità come "stato secondario" smorza anche il testo che porta l'informazione.** Un `opacity:.72` marcava gli avvisi meteo *non ancora iniziati*: portava il nome del fenomeno («Vento», «Temporali») a **3,31:1**. La distinzione era già scritta a parole nella colonna accanto — «in corso» oppure «dalle HH:MM» — che è il modo accessibile di darla (WCAG 1.4.1: mai il solo aspetto visivo). L'opacità è stata tolta, non compensata.
+
+Il controllo si fa **eseguendo axe sulla pagina renderizzata, in ogni vista e a entrambe le larghezze** (1280 e 375): su una pagina a viste il difetto può stare in una sola di esse, e l'unico modo di vederlo è aprirle tutte. `.pa11yci.json` copre le pagine Hugo chiave, **non** le pagine autonome di `static/`: lì la verifica è a carico di chi le tocca.
+
 ### Form e controlli
 - Ogni campo ha una `<label>` associata correttamente
 - Errori descritti testualmente, non solo con colore o icona
