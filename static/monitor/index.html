@@ -543,10 +543,10 @@ const EMS_COL={Wildfire:"#ff8c1a",Flood:"#37c7ff",Storm:"#b48cff",Earthquake:"#f
 const S={view:"all",day:"today",black:false,
   layers:{zone:true,radar:false,qk:true,sat:false,fire:false,blitz:false,fwi:false},
   boll:null,bollVecchio:null,zones:{today:null,tomorrow:null},sito:null,
-  quakes:[],wx:null,wxT:0,aria:null,mare:null,ems:[],emsSnap:null,
+  quakes:[],wx:null,wxT:0,aria:null,mare:null,mareog:null,ems:[],emsSnap:null,
   obs:null,obsBusy:false,last:{},lastFull:0,errs:{},
   strikes:[],cycle:false,qkSeen:null,logArr:[],gdacs:[],gdacsSnap:null,news:[],newsCache:"",
-  usgs:[],eonet:[]};
+  usgs:[],eonet:[],emsc:[],volo:null,malarm:null,firms:null};
 try{S.logArr=JSON.parse(localStorage.getItem("pcgz-monitor-log")||"[]")||[]}catch(e){S.logArr=[]}
 const $=s=>document.querySelector(s);
 const pad=n=>String(n).padStart(2,"0");
@@ -969,7 +969,7 @@ async function loadINGV(){
 async function loadWX(){
   try{
     S.wx=await jget(`https://api.open-meteo.com/v1/forecast?latitude=${GENZANO.lat}&longitude=${GENZANO.lon}`+
-      `&current=temperature_2m,apparent_temperature,wind_speed_10m,wind_gusts_10m,precipitation,weather_code`+
+      `&current=temperature_2m,apparent_temperature,wind_speed_10m,wind_gusts_10m,precipitation,weather_code,uv_index,snow_depth,soil_moisture_0_to_1cm,relative_humidity_2m`+
       `&minutely_15=precipitation&forecast_minutely_15=16`+
       `&hourly=precipitation,precipitation_probability,wind_gusts_10m,temperature_2m`+
       `&daily=precipitation_sum,precipitation_probability_max,temperature_2m_max,temperature_2m_min,wind_gusts_10m_max`+
@@ -1056,6 +1056,42 @@ async function loadAmb(){ // stessi endpoint e coordinate del cruscotto del sito
   if(S.view==="amb")render(); tickUpd();
 }
 
+/* ---------------- MAREOGRAFI IOC/UNESCO — livello del mare in tempo reale ----------------
+   Sea Level Station Monitoring Facility (IOC/UNESCO, CORS aperto): le tre stazioni
+   del litorale laziale campionano ogni pochi secondi e il dato arriva con pochi
+   minuti di ritardo. ATTENZIONE: "slevel" e' riferito allo ZERO DELLA STAZIONE,
+   non al livello medio mare: si mostra come scostamento, mai come quota assoluta.
+   Cio' che conta operativamente non e' il valore puntuale ma la VARIAZIONE nell'ora
+   (acqua alta, storm surge, ritiro anomalo che precede un maremoto). */
+const IOC_ST=[{code:"AZ42",nome:"ANZIO"},{code:"CI20",nome:"CIVITAVECCHIA"},{code:"GA37",nome:"GAETA"}];
+const IOC_URL="https://www.ioc-sealevelmonitoring.org/service.php";
+const IOC_MAX_AGE=45*60e3; // oltre tre quarti d'ora il dato non si spaccia per attuale
+async function loadMare(){
+  const esiti=await Promise.all(IOC_ST.map(async st=>{
+    try{
+      const d=await jget(`${IOC_URL}?query=data&code=${encodeURIComponent(st.code)}&period=0.06&format=json`,20000);
+      const pt=(Array.isArray(d)?d:[]).filter(r=>Number.isFinite(Number(r&&r.slevel))&&r.stime)
+        .map(r=>({v:Number(r.slevel),t:utcMs(r.stime)}))
+        .filter(r=>Number.isFinite(r.t)).sort((a,b)=>a.t-b.t);
+      if(!pt.length)return {...st,vuoto:true};
+      const ultimo=pt[pt.length-1];
+      // riferimento piu' vicino a un'ora prima dell'ultimo campione
+      const bersaglio=ultimo.t-60*60e3;
+      let rif=pt[0];
+      for(const r of pt){if(Math.abs(r.t-bersaglio)<Math.abs(rif.t-bersaglio))rif=r;}
+      const coperturaOra=Math.abs(rif.t-bersaglio)<=15*60e3;
+      return {...st,liv:ultimo.v,t:ultimo.t,
+        delta:coperturaOra?ultimo.v-rif.v:null,
+        min:Math.min(...pt.map(r=>r.v)),max:Math.max(...pt.map(r=>r.v)),n:pt.length};
+    }catch(e){return {...st,errore:true}}
+  }));
+  const buone=esiti.filter(e=>Number.isFinite(e.liv));
+  S.mareog=esiti;
+  if(buone.length){S.last.mareog=Date.now();delete S.errs.mareog}
+  else S.errs.mareog="Mareografi IOC non raggiungibili.";
+  if(S.view==="amb")render(); tickUpd();
+}
+
 /* ---------------- Copernicus EMS Rapid Mapping ----------------
    L'API pubblica non espone più le intestazioni CORS (verificato 24/08/2026),
    quindi da browser la lettura diretta fallisce. Fonte primaria: snapshot
@@ -1108,6 +1144,73 @@ async function loadGdacs(){
     S.last.gdacs=Date.now(); delete S.errs.gdacs;
   }catch(e){S.errs.gdacs="Allerte GDACS non disponibili.";}
   if(map.hasLayer(worldLayer))buildWorld();
+  if(S.view==="ems")render(); tickUpd();
+}
+
+/* ---------------- EMSC — area euro-mediterranea ----------------
+   seismicportal.eu (CORS aperto) copre la finestra che INGV e USGS lasciano
+   scoperta: eventi M3.5+ del Mediterraneo e d'Europa, sotto la soglia M4.5 del
+   feed mondiale USGS. L'ITALIA E' ESCLUSA di proposito: li' la fonte autorevole
+   e' INGV, e mostrare lo stesso sisma con due magnitudo diverse confonderebbe. */
+async function loadEmsc(){
+  try{
+    const d=await jget("https://www.seismicportal.eu/fdsnws/event/1/query?format=json&limit=30&minmag=3.5"+
+      "&minlat=30&maxlat=50&minlon=-12&maxlon=40&orderby=time",15000);
+    S.emsc=(d.features||[]).map(f=>f.properties||{})
+      .filter(p=>Number.isFinite(Number(p.mag))&&Number.isFinite(Number(p.lat)))
+      .filter(p=>!/\bITALY\b/i.test(String(p.flynn_region||"")))
+      .map(p=>({mag:Number(p.mag),magtype:p.magtype||"",zona:p.flynn_region||"—",
+        t:utcMs(p.time),dep:Math.abs(Number(p.depth)||0),
+        lat:Number(p.lat),lon:Number(p.lon),id:p.unid||""}))
+      .filter(q=>Number.isFinite(q.t)).slice(0,12);
+    S.last.emsc=Date.now(); delete S.errs.emsc;
+  }catch(e){S.errs.emsc="Sismi EMSC non raggiungibili.";}
+  if(S.view==="sis")render(); tickUpd();
+}
+
+/* ---------------- NASA FIRMS — punti caldi da satellite ----------------
+   Snapshot opzionale: esiste solo se il repository ha il segreto FIRMS_MAP_KEY.
+   Se manca, la scheda non compare e NON si segnala un errore, perche' non e' un
+   guasto ma una configurazione assente. Un punto caldo non e' un incendio
+   confermato: la nota della scheda lo dice a chiare lettere. */
+async function loadFirms(){
+  try{
+    const d=await jgetSnap("incendi-firms.json",10000);
+    S.firms={punti:d.punti||[],snap:d._snapshot||{}};
+    S.last.firms=Date.now();
+  }catch(e){S.firms=null;} // assente = scheda spenta, nessun errore a schermo
+  if(S.view==="ems")render();
+}
+
+/* ---------------- MeteoAlarm — quadro nazionale degli avvisi ----------------
+   Feed EUMETNET senza CORS: si legge lo snapshot. 🔴 NON sostituisce il bollettino
+   DPC, che per Genzano (Zona F) resta la fonte che fa fede ed e' gia' in cima alla
+   vista: questo serve a vedere che cosa succede nelle altre regioni. */
+const MA_COL={rossa:"#ff3b30",arancione:"#ff8c1a",gialla:"#ffd60a"};
+async function loadMeteoalarm(){
+  try{
+    const d=await jgetSnap("meteoalarm-italia.json",10000);
+    // Difesa speculare a quella dello script: fra uno snapshot e l'altro passano
+    // 15 minuti e un avviso puo' scadere nel frattempo. Un avviso scaduto non si
+    // mostra mai come corrente (stessa regola della barra allerta in homepage).
+    const ora=Date.now();
+    S.malarm={avvisi:(d.avvisi||[]).filter(a=>{
+      const f=utcMs(a.fine); return !Number.isFinite(f)||f>ora;}),snap:d._snapshot||{}};
+    S.last.malarm=Date.now(); delete S.errs.malarm;
+  }catch(e){S.errs.malarm="Quadro MeteoAlarm non disponibile.";}
+  if(S.view==="all")render(); tickUpd();
+}
+
+/* ---------------- VOLO — mezzi antincendio ed emergenze dichiarate ----------------
+   adsb.fi non espone il CORS: si legge lo snapshot committato ogni 15 minuti da
+   scripts/genera-volo-soccorso.py. Il ritardo e' dichiarato nella scheda: un
+   velivolo in volo si sposta parecchio in un quarto d'ora. */
+async function loadVolo(){
+  try{
+    const d=await jgetSnap("volo-soccorso.json",10000);
+    S.volo={aib:d.antincendio||[],emg:d.emergenze||[],snap:d._snapshot||{}};
+    S.last.volo=Date.now(); delete S.errs.volo;
+  }catch(e){S.errs.volo="Snapshot dei mezzi aerei non disponibile.";}
   if(S.view==="ems")render(); tickUpd();
 }
 
@@ -1353,14 +1456,23 @@ function viewAll(){
       ${row("OGGI",z.p)}${row("DOMANI",zd&&zd.p)}`;
     feed.appendChild(el);
   }
+  // Quadro nazionale: utile per valutare una partenza in colonna mobile, mai al
+  // posto del bollettino DPC per la Zona F, che sta piu' in alto in questa stessa vista.
+  if(S.malarm&&S.malarm.avvisi.length){
+    feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>ALTRE REGIONI — AVVISI METEOALARM<span>EUMETNET · NON SOSTITUISCE IL DPC</span></h3>`+
+      S.malarm.avvisi.slice(0,12).map(a=>
+        `<div class="obsRow"><span class="on" style="color:${MA_COL[a.livello]||"#a6b6c2"}">${esc(a.regione)} <em>${esc(a.fenomeno)}</em></span>`+
+        `<span>allerta ${esc(a.livello)}${a.fine?" · fino al "+fmtT(a.fine):""}</span></div>`).join("")+`</div>`);
+  }
   feed.appendChild(fontiCard());
-  feed.appendChild(noteEl());
+  feed.appendChild(noteEl(S.malarm&&S.malarm.avvisi.length
+    ?'Gli avvisi delle altre regioni vengono da <a href="https://meteoalarm.org/" target="_blank" rel="noopener">MeteoAlarm</a> (EUMETNET) e sono di contesto: per Genzano fa fede la Zona F del bollettino DPC qui sopra.':""));
 }
 function viewSis(){
   title.textContent="SISMICO — RETE INGV";
   feed.innerHTML="";
   if(S.errs.ingv)feed.appendChild(errCard(S.errs.ingv));
-  if(!S.quakes.length&&!S.errs.ingv){feed.innerHTML='<div class="skel"></div><div class="skel"></div>';return}
+  if(!S.quakes.length&&!S.errs.ingv&&!S.emsc.length){feed.innerHTML='<div class="skel"></div><div class="skel"></div>';return}
   for(const q of S.quakes.slice(0,25)){
     const el=document.createElement("div");
     el.className="qk"+(q.mag>=3.5||q.local&&q.mag>=2?" hot":"");
@@ -1370,6 +1482,13 @@ function viewSis(){
       <div class="kv"><span>Distanza da Genzano:</span><span>${q.km} km</span></div>
       <div class="kv"><span>Profondità · Ora:</span><span>${q.dep!=null?q.dep.toFixed(0):"?"} km · ${fmtT(q.time)}</span></div></div>`;
     feed.appendChild(el);
+  }
+  // Euro-Mediterraneo: copre la fascia M3.5-4.5 che il feed mondiale USGS non porta.
+  if(S.errs.emsc)feed.appendChild(errCard(S.errs.emsc));
+  if(S.emsc&&S.emsc.length){
+    feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>AREA EURO-MEDITERRANEA — M3.5+<span>EMSC · ITALIA ESCLUSA (FONTE INGV)</span></h3>`+
+      S.emsc.map(q=>`<div class="obsRow"><span class="on">M${q.mag.toFixed(1)} ${esc(String(q.magtype||"").toLowerCase())} <em>${esc(q.zona)}</em></span>`+
+        `<span>${q.dep.toFixed(0)} km · ${fmtT(q.t)}</span></div>`).join("")+`</div>`);
   }
   feed.appendChild(noteEl());
 }
@@ -1386,6 +1505,22 @@ function viewMet(){
     <div>Percepita: <span>${c.apparent_temperature.toFixed(0)}°C</span><br>
     Vento: <span>${c.wind_speed_10m.toFixed(0)} km/h</span> · Raffiche: <span>${c.wind_gusts_10m.toFixed(0)} km/h</span><br>
     Precipitazione accumulata: <span>${precipText(c)}</span></div></div></div>`);
+  // Indici che pesano sul rischio: UV (ondate di calore), neve al suolo,
+  // umidita' del primo centimetro di suolo (innesco incendi e risposta alle piogge).
+  {
+    const uvT=v=>!Number.isFinite(v)?["N/D","#a6b6c2"]:v<3?["basso","#35e08c"]:v<6?["moderato","#ffd60a"]:v<8?["alto","#ff8c1a"]:v<11?["molto alto","#ff3b30"]:["estremo","#b48cff"];
+    const [uvTxt,uvCol]=uvT(c.uv_index);
+    const sm=c.soil_moisture_0_to_1cm;
+    const smT=!Number.isFinite(sm)?["N/D","#a6b6c2"]:sm<0.10?["suolo molto secco","#ff3b30"]:sm<0.20?["suolo secco","#ff8c1a"]:sm<0.35?["suolo umido","#35e08c"]:["suolo molto umido","#37c7ff"];
+    const neve=Number.isFinite(c.snow_depth)?c.snow_depth*100:null;
+    feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>INDICI DI RISCHIO<span>STIMA MODELLO</span></h3>
+      <div class="kgrid">
+      <div class="kpi" style="--kc:${uvCol}"><small>INDICE UV</small><b>${Number.isFinite(c.uv_index)?c.uv_index.toFixed(1):"—"}</b><em>${uvTxt}</em></div>
+      <div class="kpi" style="--kc:${smT[1]}"><small>UMIDITÀ DEL SUOLO</small><b>${Number.isFinite(sm)?(sm*100).toFixed(0)+"%":"—"}</b><em>${smT[0]}</em></div>
+      <div class="kpi" style="--kc:${neve?"#37c7ff":"#a6b6c2"}"><small>NEVE AL SUOLO</small><b>${neve!=null?neve.toFixed(0):"—"}</b><em>cm</em></div>
+      <div class="kpi"><small>UMIDITÀ ARIA</small><b>${Number.isFinite(c.relative_humidity_2m)?c.relative_humidity_2m.toFixed(0):"—"}</b><em>%</em></div>
+      </div></div>`);
+  }
   if(S.wx.minutely_15&&S.wx.minutely_15.time&&S.wx.minutely_15.time.length){
     feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>NOWCAST PIOGGIA — 3 ORE<span>modello, passo 15 min</span></h3><canvas id="nowCv"></canvas></div>`);
     drawNow();
@@ -1649,16 +1784,38 @@ function viewAmb(){
   }
   if(S.errs.mare)feed.appendChild(errCard(S.errs.mare));
   if(S.mare){
-    const m=S.mare, dir=["N","NE","E","SE","S","SO","O","NO"][Math.round((m.wave_direction%360)/45)%8];
+    const m=S.mare;
+    const dir=Number.isFinite(m.wave_direction)
+      ?["N","NE","E","SE","S","SO","O","NO"][Math.round((m.wave_direction%360)/45)%8]:"—";
     feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>MARE — LITORALE ROMANO SUD<span>ONDA AL LARGO</span></h3>
       <div class="kgrid">
       <div class="kpi" style="--kc:#37c7ff"><small>ALTEZZA ONDA</small><b>${m.wave_height?.toFixed(1)??"—"}</b><em>m</em></div>
       <div class="kpi"><small>PERIODO</small><b>${m.wave_period?.toFixed(0)??"—"}</b><em>s</em></div>
-      <div class="kpi"><small>DIREZIONE</small><b>${dir}</b><em>${m.wave_direction?.toFixed(0)??"—"}°</em></div>
+      <div class="kpi"><small>DIREZIONE</small><b>${dir}</b><em>${Number.isFinite(m.wave_direction)?m.wave_direction.toFixed(0)+"°":"N/D"}</em></div>
       </div></div>`);
   }
-  if(!S.aria&&!S.mare&&!S.errs.aria&&!S.errs.mare)feed.innerHTML='<div class="skel"></div><div class="skel"></div>';
-  feed.appendChild(noteEl("Dati aria/pollini: modello CAMS Copernicus via Open-Meteo — indicativi."));
+  if(S.errs.mareog)feed.appendChild(errCard(S.errs.mareog));
+  if(S.mareog&&S.mareog.some(m=>Number.isFinite(m.liv))){
+    const cm=v=>(v*100);
+    feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>LIVELLO DEL MARE — MAREOGRAFI DEL LITORALE<span>IOC / UNESCO</span></h3>
+      <div class="kgrid">`+S.mareog.map(m=>{
+        if(!Number.isFinite(m.liv))return `<div class="kpi" style="--kc:#a6b6c2"><small>${m.nome}</small><b>—</b><em>${m.errore?"non raggiungibile":"nessun dato"}</em></div>`;
+        const eta=Date.now()-m.t;
+        if(eta>IOC_MAX_AGE)return `<div class="kpi" style="--kc:#a6b6c2"><small>${m.nome}</small><b>—</b><em>ultimo dato ${new Date(m.t).toLocaleTimeString("it-IT",{timeZone:"Europe/Rome",hour:"2-digit",minute:"2-digit"})}, non recente</em></div>`;
+        let tend="variazione oraria N/D",col="#37c7ff";
+        if(Number.isFinite(m.delta)){
+          const d=cm(m.delta);
+          tend=Math.abs(d)<1?"stabile nell'ultima ora"
+            :`${d>0?"▲":"▼"} ${Math.abs(d).toFixed(0)} cm in un'ora`;
+          if(Math.abs(d)>=30)col="#ff8c1a";
+          if(Math.abs(d)>=50)col="#ff3b30";
+        }
+        return `<div class="kpi" style="--kc:${col}"><small>${m.nome}</small><b>${cm(m.liv).toFixed(0)}</b><em>cm sullo zero · ${tend}</em></div>`;
+      }).join("")+`</div></div>`);
+  }
+  if(!S.aria&&!S.mare&&!S.mareog&&!S.errs.aria&&!S.errs.mare&&!S.errs.mareog)feed.innerHTML='<div class="skel"></div><div class="skel"></div>';
+  feed.appendChild(noteEl("Dati aria/pollini: modello CAMS Copernicus via Open-Meteo — indicativi. "+
+    "Mareografi: rete IOC/UNESCO Sea Level Station Monitoring Facility, dati grezzi non validati; il valore è lo scostamento dallo zero della stazione, non una quota assoluta — conta la variazione, non il numero."));
 }
 function viewEms(){
   title.textContent="EMERGENZE — UE E MONDO";
@@ -1696,8 +1853,32 @@ function viewEms(){
       feed.appendChild(el);
     }
   }
+  // Mezzi aerei: due elenchi di soli fatti trasmessi, mai una deduzione sulla missione.
+  if(S.errs.volo)feed.appendChild(errCard(S.errs.volo));
+  if(S.volo){
+    const v=S.volo, riga=a=>`<div class="obsRow"><span class="on">${esc(a.immatricolazione||a.volo||a.hex||"—")} <em>${esc(a.modello||a.tipo_icao||"")}</em></span>`+
+      `<span>${a.a_terra?"a terra":(Number.isFinite(a.quota_ft)?Math.round(a.quota_ft)+" ft":"quota N/D")}${a.motivo?" · "+esc(a.motivo):""}</span></div>`;
+    feed.insertAdjacentHTML("beforeend",`<div class="wx" style="margin-top:4px"><h3>MEZZI AEREI ANTINCENDIO SULL'ITALIA<span>ADS-B · ${v.aib.length} IN VOLO</span></h3>`+
+      (v.aib.length?v.aib.map(riga).join("")
+        :`<p style="margin:0">Nessun mezzo aereo antincendio risulta in volo in questo momento.</p>`)+`</div>`);
+    if(v.emg.length)feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>EMERGENZE DICHIARATE IN VOLO<span>CODICE TRASMESSO DAL VELIVOLO</span></h3>`+
+      v.emg.map(riga).join("")+`</div>`);
+  }
+  // Punti caldi da satellite: presenti solo se il repository ha la chiave FIRMS.
+  if(S.firms&&S.firms.punti.length){
+    const f=S.firms, forti=f.punti.filter(p=>Number.isFinite(p.potenza_radiativa_mw)&&p.potenza_radiativa_mw>=5).length;
+    feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>PUNTI CALDI DA SATELLITE — ITALIA<span>NASA FIRMS · ULTIME ${esc(String(f.snap.finestra_ore||24))} ORE</span></h3>
+      <div class="kgrid">
+      <div class="kpi" style="--kc:${f.punti.length?"#ff8c1a":"#35e08c"}"><small>ANOMALIE RILEVATE</small><b>${f.punti.length}</b><em>punti</em></div>
+      <div class="kpi"><small>CON POTENZA ≥ 5 MW</small><b>${forti}</b><em>più probabili incendi</em></div>
+      </div></div>`);
+  }
   const snapNote=S.emsSnap?`Snapshot EMS del ${fmtT(S.emsSnap.toISOString())} (rigenerato ogni 15 minuti).`:"";
-  feed.appendChild(noteEl('Attivazioni <a href="https://rapidmapping.emergency.copernicus.eu/" target="_blank" rel="noopener">Copernicus EMS Rapid Mapping</a> e allerte globali <a href="https://www.gdacs.org/" target="_blank" rel="noopener">GDACS</a> (dati pubblici, copie self-hosted rigenerate a ogni deploy). '+snapNote));
+  feed.appendChild(noteEl('Attivazioni <a href="https://rapidmapping.emergency.copernicus.eu/" target="_blank" rel="noopener">Copernicus EMS Rapid Mapping</a> e allerte globali <a href="https://www.gdacs.org/" target="_blank" rel="noopener">GDACS</a> (dati pubblici, copie self-hosted rigenerate a ogni deploy). '+snapNote+
+    ' Mezzi aerei: rete comunitaria <a href="https://adsb.fi/" target="_blank" rel="noopener">adsb.fi</a>, snapshot ogni 15 minuti'+
+    (S.volo&&S.volo.snap&&S.volo.snap.generato?` (ultimo: ${fmtT(S.volo.snap.generato)})`:"")+
+    '. Il modello è quello dichiarato dalla fonte; essere in volo non implica un intervento in corso e la copertura ADS-B non è totale.'+
+    (S.firms&&S.firms.punti.length?' Punti caldi: <a href="https://firms.modaps.eosdis.nasa.gov/" target="_blank" rel="noopener">NASA FIRMS</a> — un\'anomalia termica vista dal satellite non è un incendio confermato.':"")));
 }
 /* ---------------- RADIO — ascolto SDR delle bande radioamatoriali ----------------
    Ricevitore web OpenWebRX+ di IZ0FKE (Roma, https://sdr.noantri.org/): spettro,
@@ -2648,7 +2829,7 @@ navArrUpd(); setTimeout(navArrUpd,1200); // ricontrollo dopo il caricamento dei 
 // ⟳ AGGIORNA — forza il refresh immediato di tutte le fonti
 function refreshAll(man){
   S.lastFull=Date.now();
-  loadSito(); loadINGV(); loadWX(); loadAmb(); loadEMS(); loadGdacs(); loadNews();
+  loadSito(); loadINGV(); loadWX(); loadAmb(); loadMare(); loadEmsc(); loadEMS(); loadVolo(); loadMeteoalarm(); loadFirms(); loadGdacs(); loadNews();
   loadUsgs(); loadEonet();
   if(S.obs||S.view==="met")loadObs();
   if(S.layers.radar)radarRefresh();
@@ -2746,16 +2927,21 @@ setInterval(()=>{
       {timeZone:"Europe/Rome",weekday:"long",day:"numeric",month:"long",year:"numeric"}).toUpperCase();}
 },1000);
 S.lastFull=Date.now();
-loadSito(); loadDPC(); loadINGV(); loadWX(); loadAmb(); loadEMS(); loadGdacs(); loadNews();
+loadSito(); loadDPC(); loadINGV(); loadWX(); loadAmb(); loadMare(); loadEmsc(); loadEMS(); loadVolo(); loadMeteoalarm(); loadFirms(); loadGdacs(); loadNews();
 loadUsgs(); loadEonet();
 setInterval(loadUsgs,2*60e3);          // USGS aggiorna il feed ogni minuto
+setInterval(loadEmsc,5*60e3);          // EMSC: area euro-mediterranea, Italia esclusa (fonte INGV)
 setInterval(loadEonet,15*60e3);
 setInterval(loadGdacs,15*60e3);
 setInterval(loadNews,3*60e3);          // snapshot committato ogni 15 min, letto da raw GitHub
 setInterval(loadINGV,5*60e3);
 setInterval(loadWX,5*60e3);            // quasi tempo reale: current a passo 15 min
 setInterval(loadAmb,30*60e3);
+setInterval(loadMare,5*60e3);     // mareografi IOC: campionamento continuo, ritardo di pochi minuti
 setInterval(loadEMS,15*60e3);
+setInterval(loadVolo,5*60e3);
+setInterval(loadMeteoalarm,10*60e3);
+setInterval(loadFirms,15*60e3);          // lo snapshot cambia ogni 15 min: si rilegge piu' spesso per allinearsi presto
 setInterval(loadSito,5*60e3);
 setInterval(()=>{updZona();buildZoneLayer();if(S.view==="all")render();tickUpd()},60e3); // rivaluta anche dati divenuti vecchi
 setInterval(loadDPC,60*60e3);

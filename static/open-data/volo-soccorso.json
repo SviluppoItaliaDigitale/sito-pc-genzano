@@ -1,0 +1,13 @@
+{
+ "_snapshot": {
+  "generato": "2026-09-22T08:55:54+00:00",
+  "fonte": "adsb.fi — rete comunitaria di riceventi ADS-B",
+  "fonte_url": "https://adsb.fi/",
+  "copertura": "Italia e mari circostanti; velivoli fuori dal riquadro nazionale esclusi",
+  "velivoli_osservati": 889,
+  "cerchi_raggiunti": "3/3",
+  "avvertenza": "Essere in volo non implica un intervento in corso. Il modello è quello dichiarato dalla banca dati della fonte; la copertura ADS-B non è totale."
+ },
+ "antincendio": [],
+ "emergenze": []
+}

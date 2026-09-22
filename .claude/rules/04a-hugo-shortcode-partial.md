@@ -160,6 +160,34 @@ Fino al 14/09/2026 ogni scheda ripeteva link e script: il cruscotto ne conteneva
 
 Le 6 schede dati del cruscotto che fanno fetch JSON a runtime (`dashboard-terremoti`, `dashboard-vulcani`, `dashboard-aria`, `dashboard-mare`, `dashboard-ems`, `dashboard-italiameteo-osservazioni`) usano l'helper **`static/js/pc-fetch-cache.js`** (`window.pcCache`: `salva`/`leggi`/`frase`): a ogni fetch riuscito il payload è salvato in `localStorage` (`pcgz-cache:<chiave>`); se la fonte esterna non risponde (tipico durante una crisi su vasta scala), la scheda mostra **l'ultimo dato valido** (max 48h, 72h per EMS) con la riga di stato onesta *"Fonte al momento non raggiungibile — dati dell'ultimo aggiornamento riuscito: GG/MM alle HH:MM"* — mai spacciato per attuale (rule 06) — e continua a ritentare. L'helper è incluso una sola volta per pagina via guardia `.Page.Store "pcCacheJs"` in testa a ciascuno shortcode; ogni uso è protetto da `if(window.pcCache)` quindi le schede funzionano anche senza helper. Le schede a sola immagine (radar/satellite/ECMWF/incendi/CAMS) sono escluse: senza la fonte non c'è immagine da mostrare e i WebP ECMWF sono già self-hosted. Nato dall'audit esterno del 10/07/2026 (raccomandazione "caching aggressivo dei dati con fallback locale").
 
+## Sala situazioni `/monitor/` — fonti dati aggiunte il 22/09/2026
+
+Sei fonti nuove, divise per come si raggiungono. **La discriminante è il CORS**: si verifica sempre prima di scrivere codice, con `curl -sI -H "Origin: https://www.protezionecivilegenzano.it" <url> | grep -i access-control`.
+
+**Lette direttamente dal browser (CORS aperto, nessuna chiave):**
+
+| Fonte | Vista | Note |
+|---|---|---|
+| **Mareografi IOC/UNESCO** (`www.ioc-sealevelmonitoring.org`) | ARIA·MARE | Anzio `AZ42`, Civitavecchia `CI20`, Gaeta `GA37`. Campionamento continuo, ritardo di pochi minuti. 🔴 `slevel` è lo **scostamento dallo zero della stazione**, non una quota assoluta: si mostra in cm con la **variazione nell'ora**, che è il dato operativo (storm surge, acqua alta, ritiro anomalo). Oltre 45 minuti di età il valore non si mostra più come attuale. |
+| **EMSC** (`www.seismicportal.eu`) | SISMICO | M3.5+ euro-mediterranei, **Italia esclusa di proposito**: lì fa fede INGV e mostrare lo stesso sisma con due magnitudo diverse confonderebbe. Copre la fascia M3.5–4.5 che il feed mondiale USGS non porta. |
+| **Open-Meteo** (host già in CSP) | METEO | Scheda «Indici di rischio»: UV, **umidità del suolo** (precursore di inneschi e risposta alle piogge), neve al suolo, umidità dell'aria. |
+
+**Lette da snapshot committato** (`aggiorna-dati-sala.yml`, ogni 15 min), perché la fonte non espone il CORS:
+
+| Fonte | Script | Vista | Note |
+|---|---|---|---|
+| **adsb.fi** | `genera-volo-soccorso.py` | EMERGENZE | Mezzi antincendio ed emergenze dichiarate in volo. |
+| **MeteoAlarm** (EUMETNET) | `genera-meteoalarm.py` | ALLERTA | Quadro delle altre regioni. 🔴 **Non sostituisce mai il bollettino DPC**: per Genzano fa fede la Zona F, e la scheda lo dice nell'intestazione. |
+| **NASA FIRMS** | `genera-incendi-firms.py` | EMERGENZE | Punti caldi da satellite. **Richiede il segreto `FIRMS_MAP_KEY`**: senza, lo script non scrive nulla e la scheda non compare — mai dati di riempimento. |
+
+🔴 **Tre regole imparate costruendole, da non ripetere:**
+
+1. **Un filtro per tipo di velivolo va guardato prima di fidarsene.** La prima esecuzione ha etichettato «antincendio» un `AT-802` a 400 ft sopra la Slovenia: era un aereo **agricolo** in irrorazione. Ora la lista `MODELLI_AIB` contiene solo airframe a impiego esclusivamente antincendio (Canadair, AT-802**F**/Fire Boss, S-64, BE-200) e c'è un riquadro geografico sull'Italia, perché i cerchi di raccolta sbordano su Slovenia, Croazia, Corsica e Tunisia.
+2. **Un avviso scaduto non è un avviso.** Il feed MeteoAlarm continua a esporre gli avvisi per un po' dopo la fine della validità. Si filtrano **due volte**: nello script e di nuovo nel browser, perché fra uno snapshot e l'altro passano 15 minuti. Stessa logica della barra allerta in homepage (rule 09 § 15).
+3. **Un punto caldo non è un incendio.** FIRMS rileva anomalie termiche: possono essere fiaccole industriali, bruciature agricole o falsi positivi. Il campo `confidence` della fonte si riporta tale e quale invece di tradurlo in una certezza che non ha.
+
+**Dove NON si è potuto arrivare:** il **traffico navale (AIS)** non ha una fonte gratuita e lecita per l'Italia — AISHub la concede solo a chi contribuisce con un proprio ricevitore, MarineTraffic e VesselFinder sono a pagamento, airplanes.live nega l'accesso senza autorizzazione scritta. Verificato il 22/09/2026; se un giorno il Gruppo installasse un ricevitore AIS la strada si aprirebbe.
+
 ## Sala situazioni `/monitor/` — vista RADIO (ascolto SDR, settembre 2026)
 
 `static/monitor/index.html` (pagina statica a viste, fuori da Hugo) ha la vista **RADIO** (`data-v="rad"`, hash `#radio`, tasto `9`): ascolto delle bande radioamatoriali con **spettro, waterfall e audio nella pagina**: la Sala è un **client WebSocket** del server OpenWebRX+ (motore `RE`: `reOpen/reApply/reOnBin`, codec `PcAdpcm`, canvas `#rxSpec`/`#rxWf`, barra `#rxBar`) verso due ricevitori (`RADIO_RX`: IZ0FKE Roma `https://sdr.noantri.org/`, predefinito, 8 SDR in parallelo al 19/09/2026 (2 m, 10/40/20/80 m, 6 m, 70 cm su due profili, QO-100); I6IQX Bucchianico `https://sdr-plus.i6iqx.it/` per 160/60/30/17/15/12 m e PMR446; `radioSetRx()` cambia server e ricollega), click-to-load come `#windyWrap` (wrapper `#radioWrap`, `S.radio`, `radioSync()`), con pannello laterale di sintonia: gruppi HF/VHF/UHF/uso libero, bande con limiti «da … a …» (`RADIO_BANDE`, kHz, IARU R1 + PNRF), frequenze notevoli (`RADIO_PRESET`), sintonia manuale, selettore del ricevitore, link ai ricevitori solo-http della zona (`RADIO_LINK`, mai in iframe: mixed content), riquadro «e per trasmettere?». Regole:
