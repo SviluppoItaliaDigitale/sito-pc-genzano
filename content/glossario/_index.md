@@ -200,6 +200,9 @@ Centro Operativo Regionale (sala operativa regionale). Per il Lazio attiva i COC
 ### Copernicus EMS
 Servizio europeo di gestione delle emergenze. Fornisce mappe satellitari e prodotti cartografici a supporto di grandi emergenze, come alluvioni, incendi e terremoti.
 
+### COSMO-SkyMed {#cosmo-skymed}
+Costellazione di satelliti radar italiani, gestita dall'Agenzia Spaziale Italiana per conto della Difesa e della Protezione Civile. Osserva il territorio anche di notte e con nuvole, e produce le immagini con cui si misurano gli spostamenti del suolo (frane, terremoti, aree vulcaniche) e si mappano i danni dopo un disastro.
+
 ### COVID-19 {#covid-19}
 Malattia respiratoria causata dal coronavirus SARS-CoV-2. La pandemia dichiarata il 31 gennaio 2020 ha attivato per la prima volta su scala nazionale il Servizio di protezione civile per un'emergenza sanitaria, con il Capo del Dipartimento come coordinatore della risposta.
 *Approfondisci: [Il rischio sanitario (Manuale, cap. 7.17)](/manuale/717-rischio-sanitario/).*

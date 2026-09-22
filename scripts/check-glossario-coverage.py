@@ -39,9 +39,16 @@ SIGLE_BLACKLIST = {
     # parole inglesi maiuscole comuni
     "AND", "FOR", "WITH", "FROM", "INTO", "OVER", "UNDER", "THE", "OUR", "YOUR",
     "ALL", "NEW", "NOW", "ONE", "TWO", "TOP", "GET", "SET", "USE",
-    # date / numeri romani
+    # date / numeri romani (X, XI... coprono anche i "Parte N" del manuale)
     "MM", "DD", "YY", "YYYY", "I", "II", "III", "IV", "VI", "VII", "VIII", "IX",
+    "XI", "XII", "XIII", "XIV", "XV", "XVI",
     # ordinali italiani come "I°", "II°"
+    # nomi propri di paese/licenza/fonte che non sono sigle PC da spiegare
+    "USA",  # nome di paese, non una sigla da glossario PC
+    "FAQ",  # link a /faq/ nel testo, pagina già linkata e autoesplicativa
+    "IGO",  # suffisso delle licenze Creative Commons per enti intergovernativi
+             # (es. "CC BY-SA 3.0 IGO" nei crediti immagine dei dossier ESA/NASA)
+    "U.S", "US",  # frammento di crediti fotografici ("U.S. Army", "U.S. Navy")
     # tecnologie di uso comune che non meritano voce di glossario PC
     "SMS", "MMS", "LED", "APP", "QR", "PIN", "SIM", "NFC",
     # frammenti di sigle puntate già in glossario (DI.COMA.C. → "COMA")

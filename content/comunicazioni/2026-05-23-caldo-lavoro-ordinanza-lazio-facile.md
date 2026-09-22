@@ -8,6 +8,7 @@ autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-23-caldo-lavoro-ordinanza-lazio-facile.webp"
 image_alt: "Cover dell'articolo: Caldo e lavoro, stop al lavoro al sole nelle ore calde. Versione facile"
 scadenza: "2026-09-15"
+archiviato: true
 area: "Lazio"
 allegati: []
 versione_facile_di: "2026-05-23-caldo-lavoro-ordinanza-lazio"
