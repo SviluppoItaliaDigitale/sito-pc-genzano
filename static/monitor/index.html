@@ -949,7 +949,7 @@ async function loadSito(){
     S.sitoKey=key; S.last.sito=Date.now();
     delete S.errs.sito;
   }catch(e){S.errs.sito="Stato del sito non raggiungibile. L’ultimo stato disponibile richiede verifica.";}
-  updZona(); if(S.view==="all")render(); tickUpd();
+  updZona(); rendSe("all"); tickUpd();
 }
 async function findStamp(){
   const q=new URL(location.href).searchParams.get("stamp"); if(q)return q;
@@ -987,7 +987,7 @@ async function loadDPC(){
       S.bollVecchio=c.t; buildZoneLayer(); delete S.errs.dpc;
     } else S.errs.dpc="Bollettino DPC non raggiungibile ("+e.message+").";
   }
-  updZona(); if(S.view==="all")render(); tickUpd();
+  updZona(); rendSe("all"); tickUpd();
 }
 function laz(day){
   const zz=S.zones[bollettinoDay(day)]; if(!zz)return null;
@@ -1055,7 +1055,7 @@ async function loadINGV(){
     }
     delete S.errs.ingv;
   }catch(e){S.errs.ingv="Servizio INGV non raggiungibile ("+e.message+").";$("#qkN").textContent="N/D";}
-  if(S.view==="sis")render(); tickUpd();
+  rendSe("sis"); tickUpd();
 }
 
 /* ---------------- Open-Meteo: previsioni + aria/pollini + mare ----------------
@@ -1076,7 +1076,7 @@ async function loadWX(){
     $("#rainN").textContent=r24.toFixed(1)+" mm";
     delete S.errs.wx;
   }catch(e){S.errs.wx="Open-Meteo non raggiungibile ("+e.message+").";$("#rainN").textContent="N/D";}
-  if(S.view==="met")render(); tickUpd();
+  rendSe("met"); tickUpd();
 }
 
 /* ---------------- Osservazioni stazioni al suolo — ItaliaMeteo/MeteoHub ----------------
@@ -1136,7 +1136,7 @@ async function loadObs(){
     else S.errs.obs="Stazioni ItaliaMeteo non raggiungibili.";
   }
   S.obsBusy=false;
-  if(S.view==="met")render(); tickUpd();
+  rendSe("met"); tickUpd();
 }
 async function loadAmb(){ // stessi endpoint e coordinate del cruscotto del sito
   try{
@@ -1149,7 +1149,7 @@ async function loadAmb(){ // stessi endpoint e coordinate del cruscotto del sito
     S.last.mare=Date.now();
     delete S.errs.mare;
   }catch(e){S.errs.mare="Dati marini non raggiungibili.";}
-  if(S.view==="amb")render(); tickUpd();
+  rendSe("amb"); tickUpd();
 }
 
 /* ---------------- MAREOGRAFI IOC/UNESCO — livello del mare in tempo reale ----------------
@@ -1203,7 +1203,7 @@ async function loadMare(){
   S.mareog=esiti;
   if(buone.length){S.last.mareog=Date.now();delete S.errs.mareog}
   else S.errs.mareog="Mareografi IOC non raggiungibili.";
-  if(S.view==="amb")render(); tickUpd();
+  rendSe("amb"); tickUpd();
 }
 
 /* ---------------- Copernicus EMS Rapid Mapping ----------------
@@ -1238,7 +1238,7 @@ async function loadEMS(){
   }
   if(ok)S.last.ems=Date.now();
   if(map.hasLayer(worldLayer))buildWorld();
-  if(S.view==="ems")render(); tickUpd();
+  rendSe("ems"); tickUpd();
 }
 
 /* ---------------- GDACS — allerte disastri a scala mondiale ----------------
@@ -1258,7 +1258,7 @@ async function loadGdacs(){
     S.last.gdacs=Date.now(); delete S.errs.gdacs;
   }catch(e){S.errs.gdacs="Allerte GDACS non disponibili.";}
   if(map.hasLayer(worldLayer))buildWorld();
-  if(S.view==="ems")render(); tickUpd();
+  rendSe("ems"); tickUpd();
 }
 
 /* ---------------- EMSC — area euro-mediterranea ----------------
@@ -1279,7 +1279,7 @@ async function loadEmsc(){
       .filter(q=>Number.isFinite(q.t)).slice(0,12);
     S.last.emsc=Date.now(); delete S.errs.emsc;
   }catch(e){S.errs.emsc="Sismi EMSC non raggiungibili.";}
-  if(S.view==="sis")render(); tickUpd();
+  rendSe("sis"); tickUpd();
 }
 
 /* ---------------- METEO SPAZIALE — NOAA SWPC (CORS aperto, nessuna chiave) ----
@@ -1351,7 +1351,7 @@ async function loadFirms(){
     S.firms={punti:d.punti||[],snap:d._snapshot||{}};
     S.last.firms=Date.now();
   }catch(e){S.firms=null;} // assente = scheda spenta, nessun errore a schermo
-  if(S.view==="ems")render();
+  rendSe("ems");
 }
 
 /* ---------------- MeteoAlarm — quadro nazionale degli avvisi ----------------
@@ -1376,7 +1376,7 @@ async function loadMeteoalarm(){
       snap:d._snapshot||{}};
     S.last.malarm=Date.now(); delete S.errs.malarm;
   }catch(e){S.errs.malarm="Quadro MeteoAlarm non disponibile.";}
-  if(S.view==="all")render(); tickUpd();
+  rendSe("all"); tickUpd();
 }
 
 /* ---------------- VOLO — mezzi antincendio ed emergenze dichiarate ----------------
@@ -1457,7 +1457,7 @@ async function loadVolo(){
     S.last.volo=Date.now(); delete S.errs.volo;
   }catch(e){S.errs.volo="Snapshot dei mezzi aerei non disponibile.";}
   buildVolo();
-  if(S.view==="ems")render(); tickUpd();
+  rendSe("ems"); tickUpd();
 }
 
 /* ---------------- USGS — sismi mondiali quasi in tempo reale ----------------
@@ -2018,7 +2018,7 @@ function logAdd(txt,auto){
   S.logArr.push({t:Date.now(),txt:String(txt).slice(0,300),auto:!!auto});
   if(S.logArr.length>500)S.logArr=S.logArr.slice(-500);
   try{localStorage.setItem("pcgz-monitor-log",JSON.stringify(S.logArr))}catch(e){}
-  if(S.view==="log")render();
+  rendSe("log");
 }
 const logStamp=t=>{const d=new Date(t);
   return d.toLocaleDateString("it-IT",{day:"2-digit",month:"2-digit"})+" "+pad(d.getHours())+":"+pad(d.getMinutes())};
@@ -3260,7 +3260,7 @@ async function orbCarica(tutti){
   // cosa e' stato CHIESTO: serve alla riprova, perche' "tutti" resta falso
   // proprio quando il catalogo completo e' il gruppo che non e' arrivato.
   if(tutti)S.orb.chiesto=true;
-  if(S.view==="orb")render();
+  rendSe("orb");
   const mappa=new Map();
   for(const s of S.orb.recs)mappa.set(s.id,s);
   const gruppi=tutti?["active"]:ORB_PC.concat(["galileo","gps-ops","science","visual"]);
@@ -3290,7 +3290,7 @@ async function orbCarica(tutti){
   else delete S.errs.orb;
   S.orb.busy=false;
   orbCalcola();
-  if(S.view==="orb")render();
+  rendSe("orb");
   if(mapLayerOn("orb"))orbDisegna();
   tickUpd();
 }
@@ -3572,6 +3572,12 @@ const MIA_VISTE=[["all","ALLERTA"],["sis","SISMICO"],["met","METEO"],["amb","ARI
 const MIA_FN={all:()=>viewAll(),sis:()=>viewSis(),met:()=>viewMet(),amb:()=>viewAmb(),
               ems:()=>viewEms(),orb:()=>viewOrb(),log:()=>viewLog()};
 
+/* Un caricamento che arriva mentre si guarda la Mia Sala deve aggiornarla:
+   prima ogni fonte ridisegnava solo la propria vista, quindi la riga "scheda
+   al momento non disponibile" restava li' anche dopo il ritorno dei dati,
+   finche' non si cambiava vista e si tornava indietro. */
+function rendSe(vista){ if(S.view===vista||S.view==="mia")render(); }
+
 function miaCarica(){
   try{const a=JSON.parse(localStorage.getItem(MIA_CHIAVE)||"[]");
       return Array.isArray(a)?a.filter(x=>typeof x==="string"):[]}catch(e){return []}
@@ -3605,6 +3611,12 @@ function miaRaccogli(vista){
 // stellina su ogni scheda delle viste normali
 function miaDecora(vista){
   if(vista==="mia")return;
+  // 🔴 Stelline SOLO dove la Mia Sala sa ricostruire la scheda. Le viste che
+  //    incorporano un riquadro di terzi o una tela (Windy, traffico, navi,
+  //    radio, carte) non stanno in MIA_FN: una scheda scelta li' non potrebbe
+  //    mai comparire e resterebbe per sempre "al momento non disponibile".
+  //    Meglio non offrire la stellina che offrirne una che non porta a nulla.
+  if(!MIA_FN[vista])return;
   const scelte=miaCarica();
   for(const card of feed.querySelectorAll(":scope > .wx")){
     if(card.hasAttribute("data-nomia"))continue;   // schede di dettaglio: dipendono da una selezione
@@ -3966,7 +3978,10 @@ document.addEventListener("visibilitychange",()=>{
 document.addEventListener("keydown",e=>{
   if(e.altKey||e.ctrlKey||e.metaKey)return;
   if(e.target&&e.target.matches&&e.target.matches("input,select,textarea"))return;
-  const order=["all","sis","met","map","wnd","tra","amb","ems","log","rad"];
+  // I tasti vanno da 1 a 9: un decimo elemento non lo raggiungerebbe nessuno.
+  // MIA SALA, NAVI, SATELLITI e RADIO restano senza scorciatoia, e il manuale
+  // scrive questa mappatura, non "le prime nove della barra" (non coincidono).
+  const order=["all","sis","met","map","wnd","tra","amb","ems","log"];
   if(e.key>="1"&&e.key<="9")setView(order[+e.key-1]);
   else if(e.key==="r"||e.key==="R"){const b=document.querySelector('#nav [data-l="radar"]');if(b)b.click();}
 });
@@ -4053,7 +4068,7 @@ setInterval(loadFirms,15*60e3);
 setInterval(loadSpazio,20*60e3);       // l'indice Kp NOAA ha passo di 3 ore
 setInterval(loadSonde,10*60e3);          // lo snapshot cambia ogni 15 min: si rilegge piu' spesso per allinearsi presto
 setInterval(loadSito,5*60e3);
-setInterval(()=>{updZona();buildZoneLayer();if(S.view==="all")render();tickUpd()},60e3); // rivaluta anche dati divenuti vecchi
+setInterval(()=>{updZona();buildZoneLayer();rendSe("all");tickUpd()},60e3); // rivaluta anche dati divenuti vecchi
 setInterval(loadDPC,60*60e3);
 setInterval(()=>{if(S.obs)loadObs()},15*60e3); // stazioni: solo dopo il primo uso
 </script>
