@@ -302,6 +302,16 @@ Il caso ADS-B Exchange è quello da ricordare: **si carica benissimo in un ifram
 
 ⚠️ **Una risposta che si legge ma è vuota non è un dato.** Passando da adsb.fi (chiave `aircraft`) ad adsb.lol (chiave `ac`), il generatore ha letto la fonte, non ha trovato nulla e ha **sovrascritto una fotografia buona con una vuota**, senza che nulla segnalasse il guasto: il fail-safe copriva le eccezioni, non il silenzio. Ora c'è una guardia esplicita — sopra l'Italia centrale zero velivoli significa schema cambiato, non cielo vuoto — e lo stesso controllo è in `check-fonti-cruscotto.py`.
 
+## Sala situazioni `/monitor/` — la legenda che si stirava (22/09/2026)
+
+Segnalato dall'utente da telefono: alla prima apertura una **striscia verticale** occupava il lato destro dello schermo. Era la legenda del campo previsionale ICON-2I (`#prevLeg`).
+
+🔴 **Un'immagine stretta dentro un flex in colonna si stira, e l'altezza segue.** `#prevCtl` è `display:flex;flex-direction:column`, quindi per impostazione predefinita (`align-items:stretch`) allarga i figli alla larghezza del riquadro. Le legende di ItaliaMeteo sono alte e strettissime — la temperatura è **22 × 894 px** — e stirata a 132 px diventava alta **5285 px**: quasi sei schermate, col riquadro che partiva 4578 px sopra il bordo superiore. Misurato in browser, non dedotto. Rimedio: `align-self:start` per la larghezza vera, più un riquadro `#prevLegBox` con tetto d'altezza (`min(38vh,300px)`, `min(32vh,240px)` su telefono) che **scorre** invece di rimpicciolire la scala a filo illeggibile. Da 586% a 35% dell'altezza schermo.
+
+🔴 **Un'area che scorre dev'essere raggiungibile da tastiera** (`tabindex="0"` + `role="group"` + `aria-label` + fuoco visibile): axe la segnala come `scrollable-region-focusable`, ed è una violazione che il rimedio stesso introduce se non ci si pensa. Trovata eseguendo axe sulla pagina, che **non è nel campione di `pa11y-ci`**: su questa pagina il controllo è a carico di chi la tocca.
+
+⚠️ La legenda è accesa dal menu del campo previsionale, e quella scelta è **persistita** in `pcgz-monitor-cfg`: per questo ricompariva «alla prima apertura» di ogni visita successiva, non una volta sola.
+
 ## Sala situazioni `/monitor/` — pronto soccorso in diretta (22/09/2026)
 
 Richiesta dell'utente, ripetuta: *«non riesci proprio a mettere online i dati? sempre per questione di utilizzo in emergenza»*. Scheda in testa alla vista **EMERGENZE**: i dieci pronto soccorso più vicini a Genzano, con quante persone sono in attesa e per quale codice di triage. Dato della **Regione Lazio** (CC BY 4.0), letto attraverso il ponte `static/api/pronto-soccorso.php`.
