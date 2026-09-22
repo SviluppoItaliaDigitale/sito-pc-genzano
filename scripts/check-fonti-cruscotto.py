@@ -226,6 +226,29 @@ def chk_emsc():
     return False, det if not ok else "Risposta JSON inattesa (manca 'features')"
 
 
+def chk_pronto_soccorso():
+    """Stato dei pronto soccorso: servizio della Regione Lazio (CC BY 4.0).
+
+    Si controlla l'endpoint che la Sala legge attraverso il ponte PHP, e non
+    solo che risponda: si verifica che torni i GRUPPI di triage. Una risposta
+    valida ma senza gruppi vorrebbe dire schema cambiato, e la scheda
+    mostrerebbe ospedali tutti a zero — che e' l'informazione opposta a
+    "dato non disponibile".
+
+    Nota: il servizio risponde 400 alle richieste che portano un'intestazione
+    Origin, ed e' la ragione per cui esiste il ponte; qui si interroga come lo
+    interroga il server, cioe' senza Origin.
+    """
+    url = ("https://server.salutelazio.it/server/external-services/facilities/"
+           "structures/emergency-status?facilityId=PS000000000000000008")  # PS Castelli, Ariccia
+    ok, det, _, j = _get(url, expect_json=True)
+    if not ok:
+        return False, det
+    if not isinstance(j, dict) or not isinstance(j.get("groups"), list) or not j["groups"]:
+        return False, "Risposta JSON inattesa (manca 'groups'): schema cambiato?"
+    return True, f"{det} · {len(j['groups'])} codici di triage"
+
+
 def chk_adsb():
     """Fonte dei mezzi aerei: adsb.lol (ODbL). La chiave dei velivoli e' 'ac'.
     Si controlla anche che l'elenco non sia VUOTO: sopra l'Italia centrale non
@@ -303,6 +326,7 @@ SORGENTI = [
     ("Mareografi — IOC/UNESCO", "Sala situazioni (ARIA·MARE)", chk_ioc_mareografi),
     ("Sismi euro-mediterranei — EMSC", "Sala situazioni (SISMICO)", chk_emsc),
     ("Mezzi aerei — adsb.lol", "Sala situazioni (EMERGENZE)", chk_adsb),
+    ("Pronto soccorso — Regione Lazio", "Sala situazioni (EMERGENZE)", chk_pronto_soccorso),
     ("Effemeridi orbitali — CelesTrak", "Sala situazioni (SATELLITI)", chk_celestrak),
     ("Avvisi europei — MeteoAlarm", "Sala situazioni (ALLERTA)", chk_meteoalarm),
 ]
