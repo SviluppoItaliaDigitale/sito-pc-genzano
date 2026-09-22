@@ -243,8 +243,8 @@ Genera bozze post social (X, Facebook, Instagram, Telegram) + immagini per il **
 - `scripts/genera-social.py` — motore Python: legge le rules `.claude/rules/02|03|06.md` e le inietta nel system prompt di Gemini, ottiene 4 testi via JSON strutturato, salva i `.txt` in `social-bozze/AAAA/MM/<slug>/`.
 - `scripts/genera-immagini-social.py` — Pillow: genera le immagini e il `README.md` della cartella. Font ufficiale **Titillium Web** (design system `.italia`, già nel repo `static/vendor/bootstrap-italia/`), colori istituzionali (#003366 + accento giallo #ffbe2e).
 - `scripts/genera-social.sh` — wrapper bash sequenziale.
-- `.github/workflows/genera-social-bozze.yml` — automazione CI a ogni push articolo **e al termine di ogni deploy**, perché anche gli articoli calendarizzati abbiano il materiale quando vanno online (22/09/2026).
-- `scripts/social_comune.py` + `scripts/social-pronti.py` — regole comuni (articolo online in ora italiana, materiale completo, candidato alla pubblicazione automatica) e i comandi `mancanti` / `sveglia` / `controlla`.
+- `.github/workflows/genera-social-bozze.yml` — automazione CI a ogni push articolo **e al termine di ogni deploy** (la chiama `deploy.yml` dopo il caricamento su Aruba), perché anche gli articoli calendarizzati abbiano il materiale quando vanno online (22/09/2026).
+- `scripts/social_comune.py` + `scripts/social-pronti.py` — regole comuni (articolo online in ora italiana, materiale completo, candidato alla pubblicazione automatica) e i comandi `mancanti` / `sveglia` / `attendi` / `controlla`.
 
 **5 tipi di slide** (tutti 4:5 tranne la storia 9:16):
 - **Title card** — titolo + badge colorato per categoria + accento. Apre sempre il carosello (o è il post singolo).

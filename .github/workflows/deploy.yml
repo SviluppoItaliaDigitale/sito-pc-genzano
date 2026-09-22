@@ -14,6 +14,7 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  actions: write  # per chiamare genera-social-bozze.yml a fine caricamento
 
 concurrency:
   group: "pages"
@@ -203,6 +204,23 @@ jobs:
           log-level: verbose
           exclude: |
             **/documenti/**
+
+      - name: "📣 Materiale social per gli articoli appena online"
+        # Il sito è appena stato caricato su Aruba: è l'istante in cui un
+        # articolo calendarizzato diventa online, e ogni articolo che esce sul
+        # sito esce anche sui social (istruzione dell'utente del 21/09/2026).
+        # Si chiama genera-social-bozze.yml in modo esplicito perché il suo
+        # innesco `workflow_run` non partirebbe: GitHub non crea quell'evento
+        # per i run lanciati con il GITHUB_TOKEN, cioè per tutti i deploy che
+        # non vengono da un push (coalescer, allerta, rebuild del mattino) e
+        # quindi proprio per quelli notturni (22/09/2026). Un workflow_dispatch
+        # invece crea sempre il run. Non blocca mai il deploy.
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run genera-social-bozze.yml --repo "$GITHUB_REPOSITORY" --ref main -f recupero=true \
+            || echo "::warning::Chiamata al materiale social non riuscita: ci pensa il giro orario."
 
       - name: "🏗️ Build per GitHub Pages"
         env:

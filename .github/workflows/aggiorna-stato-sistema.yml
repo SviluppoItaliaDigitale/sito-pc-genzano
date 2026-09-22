@@ -180,7 +180,8 @@ jobs:
           #    e, se il token consente di leggere la coda, articoli pronti ma
           #    non pubblicati. Logica in scripts/social-pronti.py.
           # ------------------------------------------------------------
-          SOCIAL_FUORI=$(python3 scripts/social-pronti.py controlla --ore 48 --tolleranza-min 180 2>/dev/null || true)
+          SOCIAL_FUORI=$(python3 scripts/social-pronti.py controlla --ore 48 --tolleranza-min 180 2>>"$RUNNER_TEMP/social-pronti.log" || true)
+          cat "$RUNNER_TEMP/social-pronti.log" 2>/dev/null || true
           if [ -n "$SOCIAL_FUORI" ]; then
             PROBLEMI="${PROBLEMI}${SOCIAL_FUORI}\n\n"
           fi

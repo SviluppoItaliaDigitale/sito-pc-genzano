@@ -2,7 +2,7 @@
 title: "Social Media Policy"
 description: "Come il Gruppo PC di Genzano di Roma comunica sui social: canali ufficiali, orari di presìdio, netiquette, moderazione e licenza dei contenuti."
 layout: "single"
-dataUltimaRevisione: "2026-09-21"
+dataUltimaRevisione: "2026-09-22"
 toc: true
 ---
 
@@ -32,7 +32,7 @@ I contenuti sono redatti da volontari del Gruppo, coordinati da un Referente per
 
 I canali social del Gruppo sono presidiati, in tempo ordinario, **dal lunedì al venerdì, indicativamente dalle 9 alle 18**. Nei fine settimana e nei giorni festivi il presìdio è discontinuo.
 
-Dal 20 settembre 2026, **Instagram** e **Facebook** pubblicano anche in **automatico, due volte al giorno** (indicativamente alle 8:30 e alle 18:30), a partire da bozze già scritte e riviste dalla redazione contestualmente alla pubblicazione degli articoli sul sito. Non sono mai pubblicati in questo modo i contenuti con badge **Allerta** o **Emergenza** (che restano decisi e pubblicati a mano, nel momento in cui servono) né le versioni in italiano semplice. Sui soli post usciti in automatico, i **commenti sono disattivati**, perché escono al di fuori degli orari di presìdio umano indicati sopra: la lettura e l'eventuale correzione dei contenuti restano comunque a cura della redazione, secondo le stesse regole di questa policy. **X (Twitter)** e **Telegram** restano pubblicati manualmente dalla redazione.
+Dal 20 settembre 2026 **Instagram** e **Facebook** pubblicano anche in **automatico**: il post esce insieme all'articolo, appena la sua pagina è online sul sito. Se escono più articoli nello stesso momento, i post si distanziano di mezz'ora. Il testo del post nasce dall'articolo, che la redazione ha già rivisto. Non sono mai pubblicati in questo modo i contenuti con badge **Allerta** o **Emergenza** (restano decisi e pubblicati a mano, nel momento in cui servono) né le versioni in italiano semplice. Sui soli post usciti in automatico i **commenti sono disattivati**, perché possono uscire anche fuori dagli orari di presìdio indicati sopra: la lettura e l'eventuale correzione dei contenuti restano comunque a cura della redazione, secondo le stesse regole di questa policy. **X (Twitter)** resta pubblicato a mano dalla redazione; su **Telegram** escono in automatico gli avvisi di allerta e gli articoli urgenti.
 
 Durante eventi di **allerta** o **emergenza**, il canale Telegram ufficiale viene aggiornato in tempo reale 24 ore su 24 fino al termine dell'evento. Gli altri canali (Instagram, Facebook, X) vengono aggiornati a cadenza regolare durante le stesse fasi, sempre a cura della redazione.
 

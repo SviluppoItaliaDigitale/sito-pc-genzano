@@ -417,8 +417,9 @@ Hugo ignora i commenti HTML al render, quindi non si vedono in produzione.
 
 ## 4. Ottenere le bozze social per gli articoli
 
-> 🟢 **Dal 20 settembre 2026 Instagram e Facebook non si copiano più a mano.** Escono da soli due
-> volte al giorno, alle 08:30 e alle 18:30, dal repository privato `social-pc-genzano`. Come fermare
+> 🟢 **Dal 20 settembre 2026 Instagram e Facebook non si copiano più a mano.** Escono da soli
+> insieme all'articolo, appena la pagina è online, dal repository privato `social-pc-genzano`
+> (calendarizzati compresi: il materiale nasce quando l'articolo va online). Come fermare
 > un post, come spostarlo e cosa si può correggere dopo la pubblicazione:
 > [manuale, Parte 42](manuale/parte-42-pubblicazione-automatica-social.md).
 >
