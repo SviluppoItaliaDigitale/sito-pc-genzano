@@ -1,0 +1,35 @@
+{
+  "_nota": "Regole di classificazione dei velivoli, in un posto solo. Le leggono sia scripts/genera-volo-soccorso.py (fotografia periodica) sia static/api/aerei.php (lettura in tempo reale): se stessero scritte due volte, prima o poi direbbero cose diverse e lo stesso velivolo risulterebbe antincendio in una vista e no nell'altra.",
+  "_fonte": "adsb.lol",
+  "_licenza": "Open Database License (ODbL) v1.0 — https://opendatacommons.org/licenses/odbl/1-0/",
+  "_attribuzione": "Dati dei velivoli: adsb.lol (ODbL 1.0)",
+
+  "tipi_antincendio": ["CL2T", "CL21"],
+  "_tipi_nota": "Designatori ICAO (campo 't') di velivoli a impiego ESCLUSIVAMENTE antincendio. La fonte non manda una descrizione testuale del modello, quindi si va per designatore: e' un codice, e un codice sbagliato etichetta male centinaia di velivoli tutti insieme. Si aggiunge solo cio' che si e' verificato.",
+  "_tipi_verificati": {
+    "CL2T": "Canadair CL-215T/CL-415. CONFERMATO sul campo il 22/09/2026: la fonte ha restituito I-DPCE (flotta del Dipartimento della Protezione Civile) e F-ZBEU con nominativo PELIC42 (Securite Civile francese).",
+    "CL21": "Canadair CL-215 a pistoni. Airframe inequivocabile (anfibio antincendio, nessun uso civile diverso), ma NON osservato in volo durante la verifica: se un giorno compare, controllare che sia davvero un CL-215."
+  },
+  "_tipi_esclusi": {
+    "AT8T": "Air Tractor AT-802. ESCLUSO: lo stesso designatore copre sia l'AT-802F antincendio sia l'AT-802 AGRICOLO. La fonte non permette di distinguerli, e chiamare antincendio un'irrorazione e' l'invenzione che il 22/09/2026 era gia' stata evitata una volta (un S5-BZT a 400 ft sopra la Slovenia).",
+    "CL41": "ESCLUSO: rischia di indicare il Canadair CT-114 Tutor, il jet da addestramento delle Snowbirds, non il CL-415.",
+    "B200_BE20": "ESCLUSI: 'BE20' ha restituito 73 Beechcraft King Air in volo, aerei d'affari. Se fosse stato preso per il Beriev Be-200 avrebbe etichettato settantatre velivoli come bombardieri d'acqua. Il designatore del Be-200 non e' stato verificato, quindi non c'e'.",
+    "CH-47": "ESCLUSO: trasporto pesante che concorre all'antincendio ma normalmente fa altro. Dedurre la missione dal tipo non e' lecito."
+  },
+
+  "emergenze": {
+    "7700": "guasto grave a bordo",
+    "7600": "radio in avaria",
+    "7500": "dirottamento"
+  },
+  "categorie": {
+    "A0": "non dichiarata", "A1": "aereo leggero", "A2": "aereo piccolo",
+    "A3": "aereo medio", "A4": "aereo pesante", "A5": "aereo molto pesante",
+    "A6": "alte prestazioni", "A7": "elicottero",
+    "B1": "aliante", "B2": "piu' leggero dell'aria", "B3": "paracadutista",
+    "B4": "ultraleggero", "B6": "a pilotaggio remoto", "B7": "veicolo spaziale"
+  },
+  "quota_bassa_ft": 2000,
+  "raggio_area_km": 400,
+  "raggio_notevoli_km": 800
+}

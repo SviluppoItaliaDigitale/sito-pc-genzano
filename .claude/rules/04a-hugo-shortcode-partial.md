@@ -287,7 +287,20 @@ Richiesta dell'utente: *«per gli aerei e navi utilizza i software online, perch
 
 Il caso ADS-B Exchange è quello da ricordare: **si carica benissimo in un iframe** (provato: 222 aerei sull'Italia centrale, 12.354 in totale) e sarebbe bastato incorporarlo. È lecito che manchi, non tecnico. **Non si incorpora.**
 
-Restano quindi due strade per gli aerei, entrambe già scritte altrove in questa regola: lo **snapshot** che il sito già produce da adsb.fi ogni 15 minuti (nostro, filtrato, con le etichette operative), oppure un **intermediario** che rilanci una fonte senza CORS al browser — che non richiede hardware né licenze, ma è il primo componente fuori da GitHub e Aruba, con credenziali proprie e non sorvegliato dai controlli del sito. 🔴 La fonte di quell'intermediario **non può essere `airplanes.live`**: la loro API richiede autorizzazione scritta preventiva (verificato il 22/09/2026). adsb.fi resta quella praticabile.
+**Gli aerei in diretta si fanno con un ponte sul nostro server (22/09/2026).** Richiesta dell'utente: *«serve per forza vedere in che posizione sono durante un'emergenza»*. Poiché la mappa altrui non si può incorporare e la fonte non si può chiamare dal browser, la Sala legge **`static/api/aerei.php`**, che sta sul nostro dominio ed è quindi stessa origine: la CSP non cambia (`connect-src 'self'` copre già), nessun servizio di terzi viene contattato dal browser, nessun account nuovo. 🔴 È **l'unica eccezione** alla regola del sito statico, dichiarata per esteso in rule 05 § "L'unica eccezione al sito statico".
+
+🔴 **Fonte adsb.lol, non adsb.fi, ed è una questione di licenza.** adsb.fi scrive *«open data is for personal, non-commercial use only»*: un sito istituzionale pubblico «personale» non è. adsb.lol pubblica tutto sotto **ODbL 1.0** — la stessa di OpenStreetMap — che la ridistribuzione la consente a chiunque, con **attribuzione obbligatoria** (sta nella scheda e nel JSON, non si toglie). Spostata sulla stessa fonte anche la fotografia, così non convivono due licenze diverse per lo stesso dato. `airplanes.live` resta esclusa: la sua API richiede autorizzazione scritta preventiva.
+
+🔴 **La classificazione va per DESIGNATORE ICAO, e i codici si verificano.** adsb.lol non manda la descrizione testuale del modello (campo `desc` di adsb.fi): manda `t`, il designatore. Le regole stanno in **`static/api/volo-classificazione.json`**, letto sia dal ponte PHP sia dal generatore Python, perché scritte due volte prima o poi divergono. Verifica fatta interrogando la fonte per tipo, non a memoria:
+- `CL2T` ✅ **confermato**: ha restituito **I-DPCE** (flotta del Dipartimento) e **F-ZBEU «PELIC42»** (Sécurité Civile francese). È il Canadair.
+- `S64` ✅ confermato (Erickson Aircrane).
+- `AT8T` ❌ **escluso**: lo stesso codice copre l'AT-802F antincendio **e** l'AT-802 agricolo, che la fonte non distingue.
+- `CL41` ❌ escluso: rischia di indicare il CT-114 Tutor, non il CL-415.
+- `BE20` ❌ **escluso, e istruttivo**: interrogandolo sono tornati **73 Beechcraft King Air**. Se fosse stato preso per il Beriev Be-200, settantatré aerei d'affari sarebbero diventati bombardieri d'acqua. **Un designatore non verificato non si aggiunge**: un codice sbagliato etichetta male centinaia di velivoli tutti insieme.
+
+🔴 **Due cadenze e due nomi.** In diretta si rinfresca ogni **20 secondi** (a 400 nodi sono quasi 4 km) e la scheda dice «IN DIRETTA» con l'ora della lettura; sulla fotografia si resta a 5 minuti e la scheda dice «FOTOGRAFIA». Fermo a scheda nascosta. **La scheda deve sempre dire quale delle due sta mostrando**: fra «adesso» e «un quarto d'ora fa», per un velivolo, ci sono decine di chilometri.
+
+⚠️ **Una risposta che si legge ma è vuota non è un dato.** Passando da adsb.fi (chiave `aircraft`) ad adsb.lol (chiave `ac`), il generatore ha letto la fonte, non ha trovato nulla e ha **sovrascritto una fotografia buona con una vuota**, senza che nulla segnalasse il guasto: il fail-safe copriva le eccezioni, non il silenzio. Ora c'è una guardia esplicita — sopra l'Italia centrale zero velivoli significa schema cambiato, non cielo vuoto — e lo stesso controllo è in `check-fonti-cruscotto.py`.
 
 ## Sala situazioni `/monitor/` — vista RADIO (ascolto SDR, settembre 2026)
 
