@@ -8,6 +8,19 @@ rispondono 200 con dati veri ma senza CORS, adsb.one e airplanes.live rifiutano
 committa il JSON e la Sala lo legge da raw.githubusercontent.com — stesso pattern
 di GDACS, Copernicus EMS e notizie delle agenzie.
 
+🔴 DAL 22/09/2026 QUESTA È LA RETE DI SICUREZZA, NON LA VIA PRINCIPALE. La Sala
+legge i velivoli in diretta dal ponte `static/api/aerei.php`, che sta sul nostro
+server e quindi il CORS non lo riguarda. Questo snapshot resta perché il ponte
+richiede PHP: su GitHub Pages non c'è, e in locale nemmeno. Quando il ponte non
+risponde, la Sala ricade qui e lo dichiara nella scheda.
+
+🔴 FONTE adsb.lol E NON PIÙ adsb.fi — è una questione di licenza, non di dati.
+adsb.fi scrive «open data is for personal, non-commercial use only»: noi la
+ridistribuiamo su un sito istituzionale pubblico, che "personale" non è. adsb.lol
+pubblica tutto sotto **Open Database License (ODbL) v1.0**, la stessa di
+OpenStreetMap, che la ridistribuzione la consente esplicitamente a chiunque,
+con attribuzione. L'attribuzione è obbligatoria e viaggia nello snapshot.
+
 Perché NON si usa OpenSky nemmeno come alternativa: i suoi "state vector" non
 contengono il tipo di velivolo, quindi non reggono nessuno dei filtri qui sotto.
 
@@ -21,8 +34,12 @@ seguire un volo minuto per minuto.
 dati della fonte; nessuna deduzione sulla missione in corso:
   - "categoria": emitter category ADS-B trasmessa dal velivolo (A7 = elicottero,
     verificato per controprova sui modelli).
-  - "antincendio": filtro sul MODELLO leggibile, limitato agli airframe a impiego
-    esclusivamente antincendio (vedi MODELLI_AIB).
+  - "antincendio": filtro sul DESIGNATORE ICAO trasmesso (campo "t"), limitato
+    agli airframe a impiego esclusivamente antincendio. adsb.lol non manda una
+    descrizione testuale del modello, quindi si va per codice: i designatori
+    ammessi e quelli esclusi, con il motivo, stanno in
+    static/api/volo-classificazione.json, letto anche dal ponte PHP perché le
+    due strade non possano classificare lo stesso velivolo in modo diverso.
   - "emergenza": codice trasmesso (7700/7600/7500) o campo emergency.
 Essere in volo NON implica un intervento in corso, e la copertura ADS-B non è totale:
 molti mezzi di Stato non trasmettono affatto.
@@ -48,7 +65,8 @@ import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 
-FONTE = "https://opendata.adsb.fi/api/v2/lat/{lat}/lon/{lon}/dist/{dist}"
+FONTE = "https://api.adsb.lol/v2/point/{lat}/{lon}/{dist}"
+REGOLE = pathlib.Path(__file__).resolve().parent.parent / "static" / "api" / "volo-classificazione.json"
 UA = "PCGenzanoBot/1.0 (+https://www.protezionecivilegenzano.it/)"
 USCITA = pathlib.Path(__file__).resolve().parent.parent / "static" / "open-data" / "volo-soccorso.json"
 
@@ -58,44 +76,24 @@ MAX_ELENCO = 700           # tetto difensivo sulla dimensione del file
 
 CERCHI = [(45.5, 10.0, 250), (42.0, 12.5, 250), (37.5, 14.5, 250)]
 
-# Modelli a impiego esclusivamente antincendio: nessuno è un velivolo privato o
-# generalista. Confronto per sottostringa sul campo "desc" della fonte, così il
-# criterio resta leggibile e verificabile da chiunque apra il file.
-MODELLI_AIB = (
-    "CL-215", "CL-415", "CL-515",      # Canadair, flotta di Stato antincendio
-    "AT-802F", "FIRE BOSS",             # SOLO la variante antincendio dell'Air Tractor
-    "S-64", "S64",                      # Erickson Aircrane
-    "BE-200",                           # Beriev anfibio
-)
-# 🔴 Esclusi di proposito, imparato guardando il primo risultato reale (22/09/2026):
-#   - "AT-802" liscio: è l'AIR TRACTOR agricolo. La prima esecuzione ha agganciato
-#     un S5-BZT a 400 ft e 89 kt sopra la Slovenia, cioè un'irrorazione agricola.
-#     Chiamarlo "antincendio" sarebbe stata esattamente l'invenzione da evitare.
-#   - CH-47 Chinook: trasporto pesante militare che CONCORRE all'antincendio ma
-#     normalmente fa altro; dedurre la missione dal tipo non è lecito.
-#   Gli elicotteri generalisti non sono "soccorso": sono elicotteri, e come tali
-#   compaiono nella categoria trasmessa, senza etichette che non ci competono.
+# 🔴 Le regole di classificazione NON stanno qui: stanno in
+# static/api/volo-classificazione.json, che legge anche il ponte PHP della
+# lettura in diretta. Scriverle due volte significa, prima o poi, che lo stesso
+# velivolo risulta antincendio in una vista e no nell'altra. Nel file c'e' anche
+# l'elenco dei designatori ESCLUSI col motivo: leggerlo prima di aggiungerne.
+try:
+    _R = json.loads(REGOLE.read_text(encoding="utf-8"))
+except Exception as e:                       # fail-safe come il resto dello script
+    print("regole di classificazione non leggibili: %s" % e, file=sys.stderr)
+    raise SystemExit(0)
 
-# 🔴 NIENTE AFFERMAZIONI SUL PAESE. La versione precedente usava un riquadro
-# lat/lon "dell'Italia" e il commento sosteneva che escludesse Slovenia, Croazia,
-# Corsica e Tunisia: era FALSO, quel rettangolo contiene Lubiana, Zagabria, Nizza
-# e Tunisi (rilievo colto in revisione il 22/09/2026 e verificato con i calcoli).
-# Un rettangolo non sa dove finisce uno Stato, e disegnare un poligono d'Italia a
-# memoria sarebbe stato inventare coordinate. Si usa quindi l'unico criterio che
-# si può affermare con esattezza: la DISTANZA da Genzano. Tutte le etichette
-# parlano di distanza, mai di territorio nazionale.
-RAGGIO_NOTEVOLI = 800     # km: entro cui si tengono anche antincendio ed emergenze
-
-EMERGENZE = {"7700": "guasto grave a bordo", "7600": "radio in avaria", "7500": "dirottamento"}
-# Emitter category ADS-B (standard DO-260B), resa leggibile.
-CATEGORIE = {
-    "A0": "non dichiarata", "A1": "aereo leggero", "A2": "aereo piccolo",
-    "A3": "aereo medio", "A4": "aereo pesante", "A5": "aereo molto pesante",
-    "A6": "alte prestazioni", "A7": "elicottero",
-    "B1": "aliante", "B2": "più leggero dell'aria", "B3": "paracadutista",
-    "B4": "ultraleggero", "B6": "a pilotaggio remoto", "B7": "veicolo spaziale",
-}
-QUOTA_BASSA_FT = 2000
+TIPI_AIB = tuple(t.upper() for t in _R["tipi_antincendio"])
+EMERGENZE = _R["emergenze"]
+CATEGORIE = _R["categorie"]
+QUOTA_BASSA_FT = int(_R["quota_bassa_ft"])
+RAGGIO_NOTEVOLI = int(_R["raggio_notevoli_km"])   # km: entro cui si tengono antincendio ed emergenze
+ATTRIBUZIONE = _R["_attribuzione"]
+LICENZA = _R["_licenza"]
 
 
 def ora() -> str:
@@ -145,12 +143,14 @@ def scheda(a: dict):
     a_terra = str(a.get("alt_baro")) == "ground"
     quota = 0 if a_terra else num(a.get("alt_baro"))
     cat = str(a.get("category") or "")
-    desc = str(a.get("desc") or "").upper()
+    tipo = str(a.get("t") or "").strip().upper()
     sq = str(a.get("squawk") or "")
     em = str(a.get("emergency") or "").lower()
 
     etichette = []
-    if any(m in desc for m in MODELLI_AIB):
+    # confronto ESATTO sul designatore, non per sottostringa: un "contiene" su
+    # codici di quattro lettere aggancia parenti che non c'entrano
+    if tipo and tipo in TIPI_AIB:
         etichette.append("antincendio")
     if cat == "A7":
         etichette.append("elicottero")
@@ -163,8 +163,10 @@ def scheda(a: dict):
         "hex": a.get("hex"),
         "immatricolazione": a.get("r") or None,
         "volo": (a.get("flight") or "").strip() or None,
-        "modello": a.get("desc") or None,
-        "tipo_icao": a.get("t") or None,
+        # la fonte non manda una descrizione del modello: si riporta il
+        # designatore ICAO, che e' un dato e non una nostra interpretazione
+        "modello": None,
+        "tipo_icao": tipo or None,
         "categoria": CATEGORIE.get(cat, "non dichiarata"),
         "lat": round(la, 3),
         "lon": round(lo, 3),
@@ -190,7 +192,10 @@ def main() -> int:
             print("[avviso] cerchio %s,%s: %s" % (lat, lon, e), file=sys.stderr)
             continue
         raggiunti += 1
-        for a in d.get("aircraft") or []:
+        # adsb.lol usa "ac"; "aircraft" era la chiave di adsb.fi. Si accettano
+        # entrambe per non dipendere da un solo nome, ma se cambiassero tutte e
+        # due il conteggio finisce a zero e il guardiano qui sotto se ne accorge.
+        for a in (d.get("ac") or d.get("aircraft") or []):
             h = a.get("hex")
             if h:
                 grezzi.setdefault(h, a)
@@ -198,6 +203,17 @@ def main() -> int:
 
     if not raggiunti:
         print("[fail-safe] nessun cerchio raggiungibile: snapshot lasciato invariato.", file=sys.stderr)
+        return 0
+
+    # 🔴 Fonte raggiunta ma NESSUN velivolo: sopra l'Italia centrale non succede.
+    #    Vuol dire quasi sempre che la fonte ha cambiato il nome del campo, come
+    #    e' accaduto il 22/09/2026 passando da adsb.fi ("aircraft") a adsb.lol
+    #    ("ac"): il conteggio andava a zero e una fotografia buona veniva
+    #    sovrascritta con una vuota, senza che nulla segnalasse il guasto.
+    #    Una risposta che si legge ma non contiene niente e' sospetta, non e' un dato.
+    if not grezzi:
+        print("[fail-safe] fonte raggiunta ma nessun velivolo: schema cambiato? "
+              "snapshot lasciato invariato.", file=sys.stderr)
         return 0
 
     tutti = [v for v in (scheda(a) for a in grezzi.values()) if v]
@@ -221,8 +237,10 @@ def main() -> int:
     dati = {
         "_snapshot": {
             "generato": ora(),
-            "fonte": "adsb.fi — rete comunitaria di riceventi ADS-B",
-            "fonte_url": "https://adsb.fi/",
+            "fonte": "adsb.lol — rete comunitaria di riceventi ADS-B",
+            "fonte_url": "https://adsb.lol/",
+            "licenza": LICENZA,
+            "attribuzione": ATTRIBUZIONE,
             "perimetro": ("tutti i velivoli entro %d km da Genzano; antincendio ed "
                           "emergenze fino a %d km. Il criterio è la distanza, non il "
                           "territorio di uno Stato." % (RAGGIO_AREA, RAGGIO_NOTEVOLI)),
