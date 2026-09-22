@@ -266,6 +266,10 @@ Richiesta dell'utente: *«per gli aerei e navi utilizza i software online, perch
 
 🔴 **Chiudere un riquadro di terzi: `src=""` NON basta.** Il browser lo risolve sull'indirizzo della pagina corrente e il contenuto resta caricato (verificato il 22/09/2026). Serve **`about:blank`** — costante `VUOTO`, applicata anche alle viste Windy e traffico, che avevano lo stesso difetto. Verifica: dopo la chiusura nessun riquadro figlio deve avere l'URL del terzo.
 
+🔴 **La mappa incorporata si può, il dato grezzo no: sono due cose diverse.** La vista NAVI mostra la **mappa di VesselFinder dentro un riquadro**, cosa che loro consentono gratuitamente per la pubblicazione. Il **flusso AIS grezzo** — le posizioni delle navi da ingerire e disegnare sulla nostra cartina, come si fa con i mezzi aerei — quello **non è gratuito né disponibile**: AISHub lo concede solo a chi contribuisce con un proprio ricevitore, MarineTraffic e VesselFinder lo vendono. Verificato il 22/09/2026. Conseguenza pratica: sul mare **non si può filtrare, evidenziare o incrociare nulla** con i nostri dati, perché le navi non passano da noi — si guarda la loro mappa così com'è. Se un giorno il Gruppo installasse un ricevitore AIS, la strada del dato grezzo si aprirebbe.
+
+⚠️ **Da non confondere leggendo in fretta:** «VesselFinder è a pagamento» (vero del **dato**) e «l'incorporamento di VesselFinder è gratuito e permesso» (vero della **mappa**) convivono, e la prima stesura di questa sezione le accostava senza distinguerle — una sessione futura poteva leggerne una e smontare la vista NAVI credendola non consentita. Segnalato in revisione il 22/09/2026.
+
 **Aerei: nessuna via libera e lecita esiste.** Verificato uno per uno il 22/09/2026, prima di scrivere codice:
 
 | servizio | incorporabile? | esito |
@@ -281,10 +285,6 @@ Richiesta dell'utente: *«per gli aerei e navi utilizza i software online, perch
 Il caso ADS-B Exchange è quello da ricordare: **si carica benissimo in un iframe** (provato: 222 aerei sull'Italia centrale, 12.354 in totale) e sarebbe bastato incorporarlo. È lecito che manchi, non tecnico. **Non si incorpora.**
 
 Restano quindi due strade per gli aerei, entrambe già scritte altrove in questa regola: lo **snapshot** che il sito già produce da adsb.fi ogni 15 minuti (nostro, filtrato, con le etichette operative), oppure un **intermediario** che rilanci una fonte senza CORS al browser — che non richiede hardware né licenze, ma è il primo componente fuori da GitHub e Aruba, con credenziali proprie e non sorvegliato dai controlli del sito. 🔴 La fonte di quell'intermediario **non può essere `airplanes.live`**: la loro API richiede autorizzazione scritta preventiva (verificato il 22/09/2026). adsb.fi resta quella praticabile.
-
-🔴 **La mappa incorporata si può, il dato grezzo no: sono due cose diverse.** La vista NAVI mostra la **mappa di VesselFinder dentro un riquadro**, cosa che loro consentono gratuitamente per la pubblicazione. Il **flusso AIS grezzo** — le posizioni delle navi da ingerire e disegnare sulla nostra cartina, come si fa con i mezzi aerei — quello **non è gratuito né disponibile**: AISHub lo concede solo a chi contribuisce con un proprio ricevitore, MarineTraffic e VesselFinder lo vendono. Verificato il 22/09/2026. Conseguenza pratica: sul mare **non si può filtrare, evidenziare o incrociare nulla** con i nostri dati, perché le navi non passano da noi — si guarda la loro mappa così com'è. Se un giorno il Gruppo installasse un ricevitore AIS, la strada del dato grezzo si aprirebbe.
-
-⚠️ **Da non confondere leggendo in fretta:** «VesselFinder è a pagamento» (vero del **dato**) e «l'incorporamento di VesselFinder è gratuito e permesso» (vero della **mappa**) convivono, e la prima stesura di questa sezione le accostava senza distinguerle — una sessione futura poteva leggerne una e smontare la vista NAVI credendola non consentita. Segnalato in revisione il 22/09/2026.
 
 ## Sala situazioni `/monitor/` — vista RADIO (ascolto SDR, settembre 2026)
 
