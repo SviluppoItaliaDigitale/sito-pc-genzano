@@ -159,7 +159,21 @@ html.a11y-pause-anim .navArr.hint{animation:none}
    Il riordino e' a pulsanti, non a trascinamento: WCAG 2.2 criterio 2.5.7
    chiede sempre un'alternativa al trascinamento, e il gate di accessibilita'
    di questo repository e' bloccante. */
-.wx h3{position:relative}
+/* 🔴 Il titolo va in un elemento suo (.wxT). Come testo nudo dentro un flex
+   diventa un elemento anonimo che si restringe prima di tutti: con accanto il
+   sottotitolo E i comandi ▲▼✕ si strizzava in colonna su tre righe. Lo si e'
+   visto solo riempendo davvero la Mia Sala con schede prese da viste diverse. */
+.wx h3{position:relative;align-items:flex-start}
+.wx h3 .wxT{flex:1 1 auto;min-width:0;line-height:1.35}
+.wx h3 span{flex:0 1 auto;text-align:right;line-height:1.35}
+/* Intestazione che porta dei comandi: due righe, non tre colonne. In fila
+   titolo + sottotitolo + pulsanti restano larghi un terzo ciascuno e il
+   titolo si spezza parola per parola. Cosi' il titolo ha tutta la larghezza,
+   il sottotitolo gli sta sotto e i comandi stanno a destra di entrambi. */
+.wx h3.wxHdCmd{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:3px 10px;align-items:start}
+.wx h3.wxHdCmd .wxT{grid-column:1;grid-row:1}
+.wx h3.wxHdCmd span{grid-column:1;grid-row:2;text-align:left}
+.wx h3.wxHdCmd .miaNav,.wx h3.wxHdCmd .miaStar{grid-column:2;grid-row:1/span 2;align-self:center;margin-left:0}
 /* 🔴 Non un glifo nudo: un comando con la sua parola. Una ☆ sola in
    un'intestazione si legge come decorazione — l'utente che aveva chiesto la
    Mia Sala non l'ha riconosciuta e ha chiesto se si trascinassero le schede.
@@ -174,14 +188,42 @@ html.a11y-pause-anim .navArr.hint{animation:none}
 .miaStar.on{color:var(--gia);border-color:var(--gia)}
 .miaStar:focus-visible{outline:2px solid var(--gia);outline-offset:2px}
 .miaNav{margin-left:auto;display:inline-flex;gap:3px;flex:0 0 auto}
-.miaBtn{background:#0b1620;border:1px solid var(--line);color:var(--tx);cursor:pointer;
-  font-size:10px;line-height:1;padding:3px 6px;border-radius:3px;transition:border-color .12s,color .12s}
+.miaBtn{background:#0b1620;border:1px solid var(--dim);color:var(--tx);cursor:pointer;
+  font-size:11px;line-height:1;padding:5px 8px;min-width:26px;min-height:26px;border-radius:4px;
+  display:inline-flex;align-items:center;justify-content:center;transition:border-color .12s,color .12s}
 .miaBtn:hover{border-color:rgba(55,199,255,.5);color:#eaf6ef}
 .miaBtn:focus-visible{outline:2px solid var(--gia);outline-offset:1px}
 .miaBtn[disabled]{opacity:.35;cursor:default}
 @media(prefers-reduced-motion:reduce){.miaStar,.miaBtn{transition:none}}
 html.a11y-pause-anim .miaStar,html.a11y-pause-anim .miaBtn{transition:none}
 @media print{.miaStar,.miaNav{display:none}}
+
+/* ---- MIA SALA: guida di apertura ------------------------------------------
+   Stesso idioma grafico del resto della Sala (.rstep, .ems, .stato): cornice
+   sottile piu' filetto colorato a sinistra che dice di che cosa si parla.
+   Contrasti calcolati su #0a1826: --cyn 9,20:1 · --gia 12,70:1 · --grn
+   10,41:1 · --tx 12,51:1 · --dim 5,11:1. */
+.miaGuida{display:grid;gap:7px;margin-top:9px}
+.miaBox{border:1px solid var(--line);border-left:3px solid var(--bc,var(--cyn));
+  background:#0a1826;padding:8px 10px;font-size:11.5px;line-height:1.55}
+.miaBox .tit{display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:9px;
+  letter-spacing:.14em;color:var(--bc,var(--cyn));margin-bottom:5px}
+.miaBox .tit i{font-style:normal;border:1px solid var(--bc,var(--cyn));border-radius:999px;
+  width:16px;height:16px;display:inline-flex;align-items:center;justify-content:center;font-size:9px}
+.miaBox p{margin:0;font-size:11.5px}
+.miaBox p+p{margin-top:4px}
+.miaBox strong{color:#eaf6ef;font-weight:600}
+.miaBox .ghi{font-family:var(--mono);color:var(--gia)}
+.miaVp{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px;
+  padding:3px 9px;margin:3px 4px 0 0;font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;
+  color:var(--tx);background:#0b1620}
+.miaVp.no{color:var(--dim);border-style:dashed}
+.miaNota{font-family:var(--mono);font-size:9.5px;color:var(--dim);line-height:1.5;
+  border-top:1px solid var(--line);padding-top:7px;margin:9px 0 0}
+/* riga di chiusura della Mia Sala piena: e' una legenda, non una scheda */
+.miaFoot{border:1px solid var(--line);border-left:3px solid var(--dim);background:#0a1826;
+  padding:7px 10px;margin:0;font-size:11px;color:var(--dim);line-height:1.5}
+.miaFoot b{color:var(--tx);font-weight:400;font-family:var(--mono)}
 .fchip{background:#0b1620;border:1px solid var(--line);color:var(--tx);cursor:pointer;
   border-radius:999px;display:inline-flex;align-items:center;gap:5px;
   transition:border-color .12s,color .12s,background .12s;
@@ -3719,11 +3761,30 @@ function miaCarica(){
       return Array.isArray(a)?a.filter(x=>typeof x==="string"):[]}catch(e){return []}
 }
 function miaSalva(a){try{localStorage.setItem(MIA_CHIAVE,JSON.stringify(a))}catch(e){}}
+/* Il titolo della scheda e' testo nudo dentro l'h3. Lo si racchiude in un
+   <b class="wxT"> per dargli una colonna propria nel flex (altrimenti, con
+   accanto sottotitolo e comandi, si strizza su tre righe). L'identificatore
+   deve restare lo STESSO di prima, perche' e' gia' salvato nei browser: per
+   questo miaTesto legge indifferentemente il .wxT o i nodi di testo. */
+function miaTesto(h){
+  const t=h.querySelector(":scope > .wxT");
+  if(t)return t.textContent;
+  let s=""; for(const n of h.childNodes){ if(n.nodeType===3)s+=n.textContent; }
+  return s;
+}
+function miaTitoloBox(h){
+  h.classList.add("wxHdCmd");
+  if(h.querySelector(":scope > .wxT"))return;
+  const b=document.createElement("b"); b.className="wxT";
+  const da=[]; for(const n of h.childNodes){ if(n.nodeType===3&&n.textContent.trim())da.push(n); }
+  if(!da.length)return;
+  h.insertBefore(b,da[0]);
+  for(const n of da)b.appendChild(n);
+}
 // id stabile: vista + titolo della scheda senza la parte variabile dentro <span>
 function miaId(vista,card){
   const h=card.querySelector("h3"); if(!h)return null;
-  let t=""; for(const n of h.childNodes){ if(n.nodeType===3)t+=n.textContent; }
-  t=t.trim().replace(/\s+/g," ");
+  const t=miaTesto(h).trim().replace(/\s+/g," ");
   if(!t)return null;
   return vista+"|"+t;
 }
@@ -3758,6 +3819,7 @@ function miaDecora(vista){
     if(card.hasAttribute("data-nomia"))continue;   // schede di dettaglio: dipendono da una selezione
     const id=miaId(vista,card); if(!id)continue;
     const h=card.querySelector("h3"); if(!h||h.querySelector(".miaStar"))continue;
+    miaTitoloBox(h);
     const on=scelte.includes(id);
     const b=document.createElement("button");
     b.type="button"; b.className="miaStar"+(on?" on":"");
@@ -3775,12 +3837,26 @@ function viewMia(){
   feed.innerHTML="";
   const scelte=miaCarica();
   if(!scelte.length){
-    feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>MIA SALA<span>NESSUNA SCHEDA SCELTA</span></h3>
-      <p>Qui finiscono le schede che scegli tu, nell'ordine che vuoi: così tieni sott'occhio insieme cose che stanno in viste diverse — per esempio l'allerta, i sismi e i satelliti sopra di noi.</p>
-      <p style="margin-top:6px">Non si trascina niente: in cima a ogni scheda c'è il pulsante <b>☆ MIA SALA</b>. Toccalo e la scheda finisce qui; toccalo di nuovo e la togli.</p>
-      <p style="margin-top:6px">Il pulsante c'è nelle viste che la Mia Sala sa ricostruire — <b>ALLERTA, SISMICO, METEO, ARIA·MARE, EMERGENZE, SATELLITI, REGISTRO</b> — e non nelle altre, che incorporano una mappa di terzi o un ricevitore e non si possono duplicare.</p>
-      <p style="margin-top:6px">Qui dentro ogni scheda ha <b>▲ ▼</b> per spostarla e <b>✕</b> per toglierla.</p>
-      <p style="margin-top:6px;color:var(--dim);font-size:11px">La scelta resta su questo dispositivo, nel browser: non viene inviata da nessuna parte.</p></div>`);
+    feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3><b class="wxT">MIA SALA</b><span>NESSUNA SCHEDA SCELTA</span></h3>
+      <p>Tieni sott'occhio insieme, su una schermata sola, schede che stanno in viste diverse: l'allerta, i sismi, i mezzi aerei, i satelliti sopra di noi.</p>
+      <div class="miaGuida">
+        <div class="miaBox" style="--bc:var(--cyn)">
+          <div class="tit"><i>1</i>SCEGLI LA SCHEDA</div>
+          <p><strong>Non si trascina niente e non ci sono spunte.</strong> In cima a ogni scheda c'è il pulsante <span class="ghi">☆ MIA SALA</span>: toccalo e la scheda finisce qui.</p>
+        </div>
+        <div class="miaBox" style="--bc:var(--gia)">
+          <div class="tit"><i>2</i>DOVE TROVI QUEL PULSANTE</div>
+          <p>Nelle viste che la Mia Sala sa ricostruire:</p>
+          <p><span class="miaVp">ALLERTA</span><span class="miaVp">SISMICO</span><span class="miaVp">METEO</span><span class="miaVp">ARIA·MARE</span><span class="miaVp">EMERGENZE</span><span class="miaVp">SATELLITI</span><span class="miaVp">REGISTRO</span></p>
+          <p style="margin-top:7px;color:var(--dim)">Non in quelle che incorporano una mappa di terzi o un ricevitore: non si possono aprire due volte.</p>
+          <p><span class="miaVp no">CARTE</span><span class="miaVp no">WINDY</span><span class="miaVp no">TRAFFICO</span><span class="miaVp no">NAVI</span><span class="miaVp no">RADIO</span></p>
+        </div>
+        <div class="miaBox" style="--bc:var(--grn)">
+          <div class="tit"><i>3</i>ORDINA COME VUOI</div>
+          <p>Qui dentro ogni scheda ha <span class="ghi">▲ ▼</span> per spostarla e <span class="ghi">✕</span> per toglierla. Le schede restano vive: si aggiornano come nelle loro viste.</p>
+        </div>
+      </div>
+      <p class="miaNota">La scelta resta su questo dispositivo, nel browser: non viene inviata da nessuna parte.</p></div>`);
     return;
   }
   // si raccoglie ogni vista UNA volta sola, anche se ha piu' schede scelte
@@ -3795,6 +3871,7 @@ function viewMia(){
     if(!card){mancanti.push(id);return}
     const h=card.querySelector("h3");
     if(h){
+      miaTitoloBox(h);
       const nav=document.createElement("span");
       nav.className="miaNav";
       nav.innerHTML=
@@ -3806,9 +3883,12 @@ function viewMia(){
     feed.appendChild(card); n++;
   });
   if(mancanti.length)feed.insertAdjacentHTML("beforeend",
-    `<div class="wx"><p style="margin:0;color:var(--dim);font-size:11px">${mancanti.length} scheda/e scelta/e non è disponibile in questo momento (la sua fonte non ha dati adesso): ricompare da sola quando torna.</p></div>`);
+    `<div class="miaBox" style="--bc:var(--gia);margin-bottom:9px"><div class="tit">IN ATTESA DELLA FONTE</div>`+
+    `<p>${mancanti.length===1
+        ?"Una scheda che hai scelto non è disponibile in questo momento: la sua fonte non ha dati adesso. Ricompare da sola quando torna"
+        :mancanti.length+" schede che hai scelto non sono disponibili in questo momento: le loro fonti non hanno dati adesso. Ricompaiono da sole quando tornano"}, senza che tu debba fare nulla.</p></div>`);
   feed.insertAdjacentHTML("beforeend",
-    `<p style="margin:2px 0 0;color:var(--dim);font-size:11px">${n} scheda/e. Con ▲ ▼ cambi l'ordine, con ✕ togli. Le schede restano vive: si aggiornano come nelle loro viste.</p>`);
+    `<p class="miaFoot"><b>${n}</b> ${n===1?"scheda":"schede"} nella tua sala · <b>▲ ▼</b> per cambiare l'ordine · <b>✕</b> per togliere · <b>☆ MIA SALA</b> nelle altre viste per aggiungerne</p>`);
 }
 
 document.addEventListener("click",e=>{
