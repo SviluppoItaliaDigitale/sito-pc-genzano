@@ -150,16 +150,70 @@ def pronto_dal(path: Path, online: dt.datetime, *, bozze: bool) -> dt.datetime:
     return max(online, c) if c else online
 
 
-def ultimo_giro_social() -> dt.datetime | None:
+STATI_IN_CORSO = ("queued", "in_progress", "waiting", "requested", "pending")
+
+
+def ultimo_giro_social() -> dict | None:
+    """Ultimo giro del workflow di pubblicazione nel repository privato:
+    {"creato": datetime, "in_corso": bool}, o None se non leggibile."""
     token = _token_social()
     if not token:
         return None
     dati = _api(f"https://api.github.com/repos/{REPO_SOCIAL}/actions/workflows/"
                 f"{WORKFLOW_SOCIAL}/runs?per_page=1", token)
     try:
-        return _parse_iso(dati["workflow_runs"][0]["created_at"])  # type: ignore[index]
+        run = dati["workflow_runs"][0]  # type: ignore[index]
+        return {"creato": _parse_iso(run["created_at"]),
+                "in_corso": run.get("status") in STATI_IN_CORSO}
     except (KeyError, IndexError, TypeError):
         return None
+
+
+def chiama_social() -> bool:
+    """Lancia il workflow di pubblicazione del repository privato."""
+    token = _token_social()
+    if not token:
+        log("SOCIAL_PAT assente: non posso chiamare il repository social.")
+        return False
+    req = urllib.request.Request(
+        f"https://api.github.com/repos/{REPO_SOCIAL}/actions/workflows/{WORKFLOW_SOCIAL}/dispatches",
+        data=json.dumps({"ref": "main"}).encode("utf-8"), method="POST",
+        headers={"Accept": "application/vnd.github+json", "User-Agent": UA,
+                 "Authorization": f"Bearer {token}", "Content-Type": "application/json"})
+    try:
+        with urllib.request.urlopen(req, timeout=20) as r:
+            return 200 <= r.status < 300
+    except Exception as e:
+        log(f"Chiamata al repository social non riuscita: {e}")
+        return False
+
+
+def articoli_aggiunti_di_recente(ore: float) -> set[str]:
+    """Slug degli articoli comparsi su main nelle ultime `ore`, qualunque sia
+    la loro data. Servono per gli articoli retrodatati (un resoconto scritto
+    giorni dopo l'intervento), che la sola data farebbe cadere fuori da ogni
+    finestra. Vuoto se l'API non risponde."""
+    token = _token_sito()
+    if not token:
+        return set()
+    da = (S.adesso() - dt.timedelta(hours=ore)).astimezone(dt.timezone.utc)
+    url = (f"https://api.github.com/repos/{REPO_SITO}/commits?"
+           + urllib.parse.urlencode({"path": "content/comunicazioni", "sha": "main",
+                                     "since": da.strftime("%Y-%m-%dT%H:%M:%SZ"),
+                                     "per_page": 100}))
+    commits = _api(url, token)
+    if not isinstance(commits, list):
+        return set()
+    slug = set()
+    for c in commits:
+        dettaglio = _api(f"https://api.github.com/repos/{REPO_SITO}/commits/{c.get('sha')}", token)
+        for f in (dettaglio or {}).get("files", []) if isinstance(dettaglio, dict) else []:
+            nome = f.get("filename", "")
+            if (f.get("status") == "added" and nome.startswith("content/comunicazioni/")
+                    and nome.endswith(".md") and not nome.endswith("-facile.md")
+                    and not nome.endswith("_index.md")):
+                slug.add(Path(nome).stem)
+    return slug
 
 
 def voci_coda() -> dict[str, dict] | None:
@@ -220,9 +274,11 @@ def cmd_mancanti(args) -> int:
     scelti: dict[Path, dt.datetime] = {}
     for p, _fm, d in S.articoli(args.ore, ora):
         scelti[p] = d
-    # File passati esplicitamente (articoli toccati da un push): valgono a
-    # qualunque età, purché online e non versioni facili.
-    for f in args.file:
+    # File passati esplicitamente (articoli toccati da un push) e articoli
+    # comparsi su main di recente (i retrodatati): valgono a qualunque età,
+    # purché online e non versioni facili.
+    recenti = [f"content/comunicazioni/{s}.md" for s in articoli_aggiunti_di_recente(args.ore)]
+    for f in list(args.file) + recenti:
         p = (S.ROOT / f).resolve() if not Path(f).is_absolute() else Path(f)
         if not p.is_file() or p in scelti:
             continue
@@ -249,32 +305,60 @@ def cmd_mancanti(args) -> int:
     return 0
 
 
-def cmd_sveglia(args) -> int:
+RIPROVA_MIN = 60  # una voce che il repository social ha già visto si richiama al massimo ogni ora
+
+
+def decidi(args) -> tuple[bool, int]:
+    """(chiamare adesso il repository social?, minuti alla prossima voce in
+    coda che matura entro --attesa-max-min, 0 se nessuna).
+
+    Con la coda leggibile la decisione è esatta:
+      - voce in coda e matura, pagina online → sì, salvo che un giro sia già
+        in corso, o che il repository social sia già partito dopo che la voce
+        è maturata (allora al massimo una volta l'ora: un guasto che si
+        ripete non deve consumare i suoi minuti a ogni deploy);
+      - voce in coda ma programmata più avanti (i 30 minuti fra un post e
+        l'altro) → no adesso, ma si segnala fra quanto matura;
+      - articolo pronto e online ma assente dalla coda → sì, con la stessa
+        regola dell'ora;
+      - voce pubblicata, saltata o in errore → no.
+    Con la coda illeggibile si procede per date: materiale pronto da meno di
+    --recenti-min minuti e nessun giro partito negli ultimi --pausa-min.
+    """
     ora = S.adesso()
     coda = voci_coda()
+    giro = ultimo_giro_social()
     log("Coda del repository social: " + ("letta" if coda is not None
         else "non leggibile con questo token, si decide dalle sole date"))
-    pronti = []
+    if giro:
+        log(f"Ultimo giro del repository social: {S.fmt(giro['creato'])}"
+            + (" (in corso)" if giro["in_corso"] else ""))
+
+    def gia_visto(dal: dt.datetime) -> bool:
+        """Il repository social è partito dopo `dal` e da meno di un'ora."""
+        return bool(giro and giro["creato"] and giro["creato"] >= dal
+                    and (ora - giro["creato"]).total_seconds() < RIPROVA_MIN * 60)
+
+    pronti, attese = [], []
     for p, fm, d in S.articoli(args.ore, ora):
         slug = p.stem
         if not S.candidato_auto(p, fm) or not S.materiale_pubblicabile(slug):
             continue
-        voce = coda.get(slug) if coda is not None else None
-        if voce is not None:
-            # La coda sa già tutto: si sveglia solo per una voce matura.
-            # `errore` resta fermo: il repository privato ha aperto la sua
-            # issue e senza una correzione riproverebbe a vuoto.
-            if voce["stato"] != "in_coda":
-                continue
-            quando = voce.get("pubblica_il")
-            if quando is not None and quando > ora:
-                continue
+        if coda is not None:
+            voce = coda.get(slug)
+            if voce is not None:
+                if voce["stato"] != "in_coda":
+                    continue
+                quando = voce.get("pubblica_il")
+                if quando is not None and quando > ora:
+                    attese.append(quando)
+                    continue
+                if gia_visto(quando or d):
+                    continue
+            else:
+                if gia_visto(pronto_dal(p, d, bozze=True)):
+                    continue
         else:
-            # Articolo non ancora in coda (o coda illeggibile): si sveglia solo
-            # se il materiale è pronto da poco. Se è pronto da ore e non è
-            # ancora uscito, lo prendono i giri programmati del repository
-            # privato: richiamarlo a ogni deploy consumerebbe i suoi minuti
-            # senza cambiare nulla.
             pronto = pronto_dal(p, d, bozze=True)
             if (ora - pronto).total_seconds() > args.recenti_min * 60:
                 continue
@@ -284,34 +368,90 @@ def cmd_sveglia(args) -> int:
         log(f"  pronto e online: {slug}")
         pronti.append(slug)
 
-    decisione = "no"
+    sveglia = False
     if pronti:
-        giro = ultimo_giro_social()
-        if giro and (ora - giro).total_seconds() < args.pausa_min * 60:
-            log(f"Il repository social ha un giro partito alle {S.fmt(giro)}: "
+        if giro and giro["in_corso"]:
+            log("Il repository social ha un giro in corso: pubblicherà lui.")
+        elif (coda is None and giro and giro["creato"]
+              and (ora - giro["creato"]).total_seconds() < args.pausa_min * 60):
+            log(f"Il repository social è partito alle {S.fmt(giro['creato'])}: "
                 f"non lo richiamo prima di {args.pausa_min} minuti.")
         else:
-            decisione = "si"
-    print(f"sveglia={decisione}")
+            sveglia = True
+
+    attesa = 0
+    vicine = [q for q in attese if (q - ora).total_seconds() <= args.attesa_max_min * 60]
+    if vicine:
+        prossima = min(vicine)
+        attesa = max(1, int((prossima - ora).total_seconds() // 60) + 1)
+        log(f"Prossima voce in coda alle {S.fmt(prossima)} (fra {attesa} min).")
+    return sveglia, attesa
+
+
+def _scrivi_output(**valori) -> None:
     uscita = os.environ.get("GITHUB_OUTPUT")
     if uscita:
         with open(uscita, "a", encoding="utf-8") as fh:
-            fh.write(f"sveglia={decisione}\n")
+            for k, v in valori.items():
+                fh.write(f"{k}={v}\n")
+
+
+def cmd_sveglia(args) -> int:
+    sveglia, attesa = decidi(args)
+    decisione = "si" if sveglia else "no"
+    print(f"sveglia={decisione}")
+    print(f"attesa_min={attesa}")
+    _scrivi_output(sveglia=decisione, attesa_min=attesa)
+    return 0
+
+
+def cmd_attendi(args) -> int:
+    """Resta sveglio fino a --max-min minuti e chiama il repository social
+    ogni volta che una voce in coda matura. Serve ai post distanziati di
+    mezz'ora: nessun altro evento cade in quell'istante, e i giri programmati
+    di GitHub in questi repository partono a blocchi di ore. Gira nel
+    repository del sito, i cui minuti sono gratuiti."""
+    import time
+    fine = time.monotonic() + args.max_min * 60
+    while time.monotonic() < fine:
+        sveglia, attesa = decidi(args)
+        if sveglia:
+            if chiama_social():
+                log(f"{S.fmt(S.adesso())}: pubblicazione richiesta al repository social.")
+            time.sleep(180)  # il tempo di partire e di aggiornare la coda
+            continue
+        if not attesa:
+            log("Nessuna voce in attesa: finito.")
+            return 0
+        resto = fine - time.monotonic()
+        pausa = min(attesa * 60 + 30, resto)
+        if pausa <= 0:
+            break
+        log(f"Attendo {int(pausa // 60)} min.")
+        time.sleep(pausa)
+    log("Tempo massimo raggiunto: ci penseranno i giri programmati.")
     return 0
 
 
 def cmd_controlla(args) -> int:
     ora = S.adesso()
     tolleranza = dt.timedelta(minutes=args.tolleranza_min)
-    senza_materiale, non_pubblicati = [], []
+    senza_materiale, non_pubblicati, non_verificabili = [], [], []
     coda = voci_coda()
+    visti = set()
     for p, fm, d in S.articoli(args.ore, ora):
+        visti.add(p.stem)
         slug = p.stem
         if not S.materiale_completo(slug):
             if ora - pronto_dal(p, d, bozze=False) >= tolleranza:
                 senza_materiale.append((slug, d))
             continue
-        if coda is None or not S.candidato_auto(p, fm):
+        if not S.candidato_auto(p, fm):
+            continue
+        if ora - pronto_dal(p, d, bozze=True) < tolleranza:
+            continue
+        if coda is None:
+            non_verificabili.append((slug, d))
             continue
         voce = coda.get(slug)
         if voce is not None and voce["stato"] in STATI_CHIUSI:
@@ -319,8 +459,23 @@ def cmd_controlla(args) -> int:
         if voce is not None and voce["stato"] == "in_coda" \
                 and voce.get("pubblica_il") and voce["pubblica_il"] > ora:
             continue  # programmata più avanti di proposito
-        if ora - pronto_dal(p, d, bozze=True) >= tolleranza:
-            non_pubblicati.append((slug, d, voce["stato"] if voce else "assente dalla coda"))
+        non_pubblicati.append((slug, d, voce["stato"] if voce else "assente dalla coda"))
+
+    # Retrodatati: comparsi sul sito di recente con una data più vecchia della
+    # finestra del repository social, che li scarta. Vanno pubblicati a mano.
+    retrodatati = []
+    for slug in sorted(articoli_aggiunti_di_recente(args.ore) - visti):
+        p = S.CONTENT_COMUNICAZIONI / f"{slug}.md"
+        fm = S.leggi_frontmatter(p)
+        if not fm or not S.candidato_auto(p, fm) or not S.is_online(fm, ora):
+            continue
+        dal = S.online_dal(fm)
+        if dal is None or dal >= ora - dt.timedelta(hours=S.FINESTRA_RECUPERO_ORE - 6):
+            continue  # ancora dentro la finestra del repository social: non è retrodatato
+        voce = (coda or {}).get(slug)
+        if voce is not None and voce["stato"] in STATI_CHIUSI:
+            continue
+        retrodatati.append((slug, dal))
 
     righe = []
     if senza_materiale:
@@ -334,11 +489,24 @@ def cmd_controlla(args) -> int:
         righe.append("### Articoli pronti ma non pubblicati sui social\n")
         righe += [f"- `{s}` — online dal {S.fmt(d)}, stato in coda: {st}" for s, d, st in non_pubblicati]
         righe.append(f"\nDa controllare: le issue e l'ultimo giro di `{REPO_SOCIAL}`.\n")
-    if coda is None:
-        log("Coda social non leggibile: controllata solo la presenza del materiale.")
+    if retrodatati:
+        righe.append("### Articoli retrodatati: fuori dalla pubblicazione automatica\n")
+        righe.append("Comparsi sul sito di recente ma con una data più vecchia di tre giorni: "
+                     "il repository social li scarta. Vanno pubblicati a mano "
+                     "(`coda-social.py accoda <slug>` nel repository social).\n")
+        righe += [f"- `{s}` — datato {S.fmt(d)}" for s, d in retrodatati]
+        righe.append("")
+    if non_verificabili:
+        righe.append("### Pubblicazione social non verificabile\n")
+        righe.append(f"`SOCIAL_REPO_PAT` non riesce a leggere `coda-social.yaml` di `{REPO_SOCIAL}` "
+                     "(permesso Contents: Read mancante, o API non raggiungibile): non si sa se "
+                     f"questi articoli, pronti da oltre {args.tolleranza_min // 60} ore, siano usciti.\n")
+        righe += [f"- `{s}` — online dal {S.fmt(d)}" for s, d in non_verificabili]
+        righe.append("")
     if righe:
         print("\n".join(righe))
-    return min(len(senza_materiale) + len(non_pubblicati), 100)
+    return min(len(senza_materiale) + len(non_pubblicati) + len(retrodatati)
+               + len(non_verificabili), 100)
 
 
 def main() -> int:
@@ -353,21 +521,28 @@ def main() -> int:
                    help="da quanti minuti l'articolo deve essere pronto perché, se Gemini "
                         "non risponde, si ammettano i testi di riserva")
 
-    s = sub.add_parser("sveglia", help="decide se chiamare subito la pubblicazione")
-    s.add_argument("--ore", type=float, default=S.FINESTRA_RECUPERO_ORE - 6,
-                   help="finestra degli articoli, un po' più stretta di quella del "
-                        "repository social per non svegliarlo su voci che rifiuterebbe")
-    s.add_argument("--recenti-min", type=int, default=120,
-                   help="sveglia solo per il materiale pronto da meno di N minuti")
-    s.add_argument("--pausa-min", type=int, default=20,
-                   help="non richiamare se il repository social è partito da meno di N minuti")
+    for nome, aiuto in (("sveglia", "decide se chiamare subito la pubblicazione"),
+                        ("attendi", "resta sveglio e chiama la pubblicazione quando le voci in coda maturano")):
+        s = sub.add_parser(nome, help=aiuto)
+        s.add_argument("--ore", type=float, default=S.FINESTRA_RECUPERO_ORE - 6,
+                       help="finestra degli articoli, un po' più stretta di quella del "
+                            "repository social per non svegliarlo su voci che rifiuterebbe")
+        s.add_argument("--recenti-min", type=int, default=120,
+                       help="a coda illeggibile, sveglia solo per il materiale pronto da meno di N minuti")
+        s.add_argument("--pausa-min", type=int, default=20,
+                       help="a coda illeggibile, non richiamare se il repository social è partito da meno di N minuti")
+        s.add_argument("--attesa-max-min", type=int, default=90,
+                       help="segnala le voci in coda che maturano entro N minuti")
+        if nome == "attendi":
+            s.add_argument("--max-min", type=int, default=100, help="durata massima dell'attesa")
 
     c = sub.add_parser("controlla", help="controllo di salute: articoli rimasti indietro")
     c.add_argument("--ore", type=float, default=48)
     c.add_argument("--tolleranza-min", type=int, default=180)
 
     args = p.parse_args()
-    return {"mancanti": cmd_mancanti, "sveglia": cmd_sveglia, "controlla": cmd_controlla}[args.cmd](args)
+    return {"mancanti": cmd_mancanti, "sveglia": cmd_sveglia, "attendi": cmd_attendi,
+            "controlla": cmd_controlla}[args.cmd](args)
 
 
 if __name__ == "__main__":

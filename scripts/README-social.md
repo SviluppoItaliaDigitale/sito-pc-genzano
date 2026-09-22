@@ -101,8 +101,8 @@ bash scripts/genera-social.sh --dry-run content/comunicazioni/<file>.md
 ## Workflow automatico (GitHub Action)
 
 Il workflow `genera-social-bozze.yml` gira al **push su `main`** che modifica
-un articolo, **al termine di ogni deploy riuscito** e ogni ora come rete. A ogni
-giro:
+un articolo, **al termine di ogni deploy** (lo chiama `deploy.yml` subito dopo
+il caricamento su Aruba) e ogni ora come rete. A ogni giro:
 
 1. Individua gli articoli da servire: quelli toccati dal push, più tutti gli
    articoli **online** nelle ultime 72 ore a cui manca il materiale
@@ -115,9 +115,11 @@ giro:
    niente di inventato.
 3. Genera le immagini (feed + storia).
 4. Committa il tutto con messaggio `[skip-social] Bozze social: ...`
-5. Se un articolo pronto è appena diventato raggiungibile sul sito, chiama
-   la pubblicazione nel repository privato `social-pc-genzano`
-   (`scripts/social-pronti.py sveglia`).
+5. Se un articolo pronto è raggiungibile sul sito e non risulta ancora
+   pubblicato, chiama la pubblicazione nel repository privato
+   `social-pc-genzano` (`scripts/social-pronti.py sveglia`). Se ci sono post
+   in coda distanziati di mezz'ora, affida l'attesa a `sveglia-social.yml`
+   (`social-pronti.py attendi`), che li chiama quando maturano.
 
 Il marker `[skip-social]` impedisce ricorsioni infinite. Le date si leggono
 in ora italiana, come fa Hugo (`scripts/social_comune.py`): fino al 22/09/2026
@@ -125,8 +127,9 @@ i generatori usavano la data UTC del runner, e fra mezzanotte e le due un
 articolo del giorno risultava «futuro».
 
 Per sapere in qualunque momento quali articoli online sono rimasti senza
-materiale: `python3 scripts/social-pronti.py controlla` (lo stesso controllo
-gira ogni giorno nel controllo di salute del sistema).
+materiale, pronti ma non pubblicati, o retrodatati e quindi fuori dalla
+pubblicazione automatica: `python3 scripts/social-pronti.py controlla` (lo
+stesso controllo gira ogni giorno nel controllo di salute del sistema).
 
 Si può anche lanciare manualmente da `Actions → 📱 Genera bozze social automatiche → Run workflow`.
 
@@ -152,7 +155,7 @@ chiamate fino al giorno dopo (non ti spilla soldi).
 ## Pubblicazione automatica su Instagram e Facebook
 
 Dal 20 settembre 2026 il materiale prodotto qui viene pubblicato da solo su
-Instagram e Facebook, due volte al giorno, dal repo **privato**
+Instagram e Facebook, insieme all'articolo, dal repo **privato**
 [`social-pc-genzano`](https://github.com/SviluppoItaliaDigitale/social-pc-genzano).
 Le credenziali delle pagine social stanno lì perché quel repo non è pubblico;
 le immagini restano qui, perché Instagram deve poterle scaricare senza
@@ -162,8 +165,9 @@ Come funziona, in breve:
 
 1. Esce un articolo, e i workflow di questo repo generano testi e immagini in
    `social-bozze/AAAA/MM/<slug>/` come sempre.
-2. L'altro repo mette in coda gli articoli nuovi che hanno il materiale pronto,
-   uno al giorno, e li pubblica nelle fasce 08:30 e 18:30.
+2. L'altro repo mette in coda gli articoli nuovi che hanno il materiale pronto
+   e li pubblica appena la loro pagina risponde sul sito, a mezz'ora l'uno
+   dall'altro se escono insieme.
 3. Il token di Instagram si rinnova da solo il primo e il sedici di ogni mese.
 
 Cosa **non** viene pubblicato in automatico: gli articoli con badge `Allerta` o
