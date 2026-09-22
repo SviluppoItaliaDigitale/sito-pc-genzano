@@ -8,6 +8,7 @@ autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-05-23-caldo-lavoro-ordinanza-lazio.webp"
 image_alt: "Cover dell'articolo: Caldo e lavoro, stop ai lavori all'aperto nelle ore più calde in tutto il Lazio"
 scadenza: "2026-09-15"
+archiviato: true
 area: "Lazio"
 allegati: []
 social_citazione: "Nei giorni di caldo intenso, dalle 12:30 alle 16 il lavoro all'aperto sotto il sole si ferma."
