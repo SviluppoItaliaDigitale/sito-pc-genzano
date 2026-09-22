@@ -1,0 +1,11 @@
+{
+ "stamp": "20260922_1421",
+ "name": "Bollettino del 22 settembre 2026 ore 14:21",
+ "_snapshot": {
+  "letto": "2026-09-22T17:03:02Z",
+  "fonte": "https://github.com/pcm-dpc/DPC-Bollettini-Criticita-Idrogeologica-Idraulica",
+  "timbro_da": "mirror opendatasicilia",
+  "licenza": "CC BY 4.0 — Dipartimento della Protezione Civile",
+  "nota": "Il repository del DPC non espone un nome di file stabile: il timbro del bollettino corrente si ricava dal mirror opendatasicilia (stessa fonte della barra di allerta del sito) e si verifica sulla fonte ufficiale, da cui restano le carte."
+ }
+}
