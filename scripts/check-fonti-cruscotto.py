@@ -195,6 +195,55 @@ def _chk_owrx(url):
     return False, det if not ok else "Risposta JSON inattesa (manca 'sdrs')"
 
 
+def chk_ioc_mareografi():
+    """Mareografi IOC/UNESCO: si controlla anche la FRESCHEZZA, perche' una
+    stazione che risponde con dati di ieri e' inutile quanto una muta."""
+    url = ("https://www.ioc-sealevelmonitoring.org/service.php"
+           "?query=data&code=AZ42&period=0.05&format=json")
+    ok, det, _, j = _get(url, expect_json=True)
+    if not ok:
+        return False, det
+    if not isinstance(j, list) or not j:
+        return False, "Risposta senza campioni per la stazione di Anzio"
+    try:
+        ultimo = datetime.datetime.strptime(j[-1]["stime"], "%Y-%m-%d %H:%M:%S")
+        ultimo = ultimo.replace(tzinfo=datetime.timezone.utc)
+        eta = (datetime.datetime.now(datetime.timezone.utc) - ultimo).total_seconds() / 60
+    except (KeyError, ValueError, TypeError) as e:
+        return False, f"Campo stime illeggibile: {e}"
+    if eta > 90:
+        return False, f"{det} · ultimo campione di {eta:.0f} minuti fa (stazione ferma)"
+    return True, f"{det} · Anzio: {len(j)} campioni, ultimo {eta:.0f} min fa"
+
+
+def chk_emsc():
+    url = ("https://www.seismicportal.eu/fdsnws/event/1/query?format=json&limit=1"
+           "&minmag=3&minlat=30&maxlat=50&minlon=-12&maxlon=40")
+    ok, det, _, j = _get(url, expect_json=True)
+    if ok and isinstance(j, dict) and j.get("features"):
+        return True, f"{det} · {len(j['features'])} evento di prova"
+    return False, det if not ok else "Risposta JSON inattesa (manca 'features')"
+
+
+def chk_adsb():
+    ok, det, _, j = _get("https://opendata.adsb.fi/api/v2/lat/42.0/lon/12.5/dist/250",
+                         expect_json=True)
+    if ok and isinstance(j, dict) and isinstance(j.get("aircraft"), list):
+        return True, f"{det} · {len(j['aircraft'])} velivoli nel cerchio centrale"
+    return False, det if not ok else "Risposta JSON inattesa (manca 'aircraft')"
+
+
+def chk_meteoalarm():
+    # _get ritorna (ok, dettaglio, last-modified, corpo): il corpo e' il QUARTO valore.
+    ok, det, _, corpo = _get("https://feeds.meteoalarm.org/feeds/meteoalarm-legacy-atom-italy")
+    if not ok:
+        return False, det
+    b = corpo if isinstance(corpo, bytes) else (corpo or "").encode()
+    if b"<feed" not in b:
+        return False, "Risposta non riconosciuta come feed Atom"
+    return True, f"{det} · {b.count(b'<entry')} avvisi nel feed"
+
+
 SORGENTI = [
     ("Terremoti — INGV FDSN", "Terremoti, Vulcani", chk_ingv),
     ("Meteo puntuale — Open-Meteo", "Meteo, cartine", lambda: chk_openmeteo("forecast", "api.open-meteo.com", "current=temperature_2m")),
@@ -215,6 +264,10 @@ SORGENTI = [
     ("Mare onde — ItaliaMeteo (WW3)", "Mare ItaliaMeteo", lambda: chk_wms_getmap("meteohub:ww3_hs-hs", "https://maps.mistralportal.it/wms")),
     ("Radar SRI — ItaliaMeteo", "Radar ItaliaMeteo", lambda: chk_wms_getmap("meteohub:radar-sri", "https://maps.mistralportal.it/wms")),
     ("Osservazioni stazioni — ItaliaMeteo", "Osservazioni ItaliaMeteo", chk_obs_italiameteo),
+    ("Mareografi — IOC/UNESCO", "Sala situazioni (ARIA·MARE)", chk_ioc_mareografi),
+    ("Sismi euro-mediterranei — EMSC", "Sala situazioni (SISMICO)", chk_emsc),
+    ("Mezzi aerei — adsb.fi", "Sala situazioni (EMERGENZE)", chk_adsb),
+    ("Avvisi europei — MeteoAlarm", "Sala situazioni (ALLERTA)", chk_meteoalarm),
 ]
 
 
