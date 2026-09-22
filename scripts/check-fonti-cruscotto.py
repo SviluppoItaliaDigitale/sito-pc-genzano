@@ -10,6 +10,7 @@ e stampa un report Markdown. Exit code = numero di fonti in errore (0 = tutto ok
 Solo stdlib: gira ovunque (locale + GitHub Actions) senza dipendenze.
 Uso:  python3 scripts/check-fonti-cruscotto.py
 """
+import re
 import json
 import time
 import sys
@@ -113,6 +114,33 @@ def chk_ems_rapid():
     if ok and isinstance(j, dict) and "results" in j:
         return True, f"{det} · {j.get('count', '?')} attivazioni totali"
     return False, det if not ok else "Risposta JSON inattesa (manca 'results')"
+
+
+def chk_dpc_bollettino():
+    # Bollettino di criticita' DPC. Il repository ufficiale NON espone un file
+    # con nome stabile (i bollettini si chiamano col minuto di pubblicazione,
+    # 20260922_1421.json), quindi il timbro si risolve in CI e la Sala legge il
+    # nostro snapshot static/open-data/dpc-bollettino.json. Qui si controlla che
+    # il bollettino indicato dallo snapshot esista ancora sulla fonte: se non
+    # esiste, lo snapshot e' fermo o il DPC ha cambiato schema dei nomi.
+    import json as _json
+    from pathlib import Path as _Path
+    p = _Path(__file__).resolve().parent.parent / "static" / "open-data" / "dpc-bollettino.json"
+    if not p.exists():
+        return False, "snapshot dpc-bollettino.json assente"
+    try:
+        snap = _json.loads(p.read_text(encoding="utf-8"))
+    except Exception as e:
+        return False, f"snapshot illeggibile: {e}"
+    stamp = snap.get("stamp") or ""
+    if not re.fullmatch(r"\d{8}_\d{4}", stamp):
+        return False, f"timbro non valido nello snapshot: {stamp!r}"
+    base = "https://raw.githubusercontent.com/pcm-dpc/DPC-Bollettini-Criticita-Idrogeologica-Idraulica/master/files/"
+    for nome in (f"{stamp}.json", f"topojson/{stamp}_today.json", f"topojson/{stamp}_tomorrow.json"):
+        ok, det, _, _ = _get(base + nome, expect_json=False)
+        if not ok:
+            return False, f"{nome} non raggiungibile ({det})"
+    return True, f"bollettino {stamp} presente sulla fonte"
 
 
 def chk_gdacs():
@@ -317,6 +345,7 @@ SORGENTI = [
     ("Aria Europa — Copernicus CAMS (WMS ECMWF)", "Aria Europa (CAMS)", chk_cams_eu),
     ("Emergenze EU — Copernicus EMS Rapid Mapping", "Emergenze EU (EMS)", chk_ems_rapid),
     ("Allerte globali — GDACS", "Sala situazioni (GDACS)", chk_gdacs),
+    ("Bollettino criticità DPC", "Sala situazioni (ALLERTA, cartina zone)", chk_dpc_bollettino),
     ("Ricevitore SDR — OpenWebRX+ IZ0FKE", "Sala situazioni (RADIO)", chk_sdr_noantri),
     ("Ricevitore SDR — OpenWebRX+ I6IQX", "Sala situazioni (RADIO)", chk_sdr_i6iqx),
     ("Previsioni — ItaliaMeteo (ICON-2I)", "Previsioni ItaliaMeteo", lambda: chk_wms_getmap("meteohub:t2m-t2m", "https://maps.mistralportal.it/wms")),
