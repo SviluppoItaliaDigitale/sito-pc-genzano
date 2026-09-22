@@ -6,7 +6,7 @@ draft: false
 type: "page"
 layout: "single"
 toc: true
-dataUltimaRevisione: "2026-05-06"
+dataUltimaRevisione: "2026-09-22"
 ---
 
 Questa pagina aiuta dirigenti, docenti coordinatori di educazione civica e insegnanti a usare i materiali di protezione civile nei percorsi scolastici. I contenuti sono gratuiti e pensati per attività in classe, educazione civica, PCTO, incontri con i volontari e percorsi interdisciplinari.
@@ -20,15 +20,17 @@ Questa pagina aiuta dirigenti, docenti coordinatori di educazione civica e inseg
 L'educazione civica nelle scuole italiane è regolata principalmente da:
 
 - **D.Lgs. 2 gennaio 2018, n. 1** — Codice della protezione civile, cornice generale del Servizio nazionale.
-- **Legge 20 agosto 2019, n. 92** — introduce l'insegnamento scolastico dell'educazione civica. L'articolo 3, lettera h, richiama la formazione di base in materia di protezione civile.
+- **Legge 20 agosto 2019, n. 92** — introduce l'insegnamento scolastico dell'educazione civica. L'articolo 3, comma 1, lettera h), include la «formazione di base in materia di protezione civile» fra i temi dell'insegnamento.
 - **D.M. 7 settembre 2024, n. 183** — definisce le Linee guida nazionali per l'insegnamento dell'educazione civica, applicabili dall'anno scolastico 2024/2025.
-- **Legge 17 febbraio 2025, n. 21** — introduce conoscenze di base sulla sicurezza nei luoghi di lavoro, con particolare rilievo per la secondaria di secondo grado e per i PCTO.
+- **Legge 17 febbraio 2025, n. 21** — aggiunge la lettera h-ter) allo stesso articolo 3. Le conoscenze di base sulla sicurezza nei luoghi di lavoro entrano fra i temi dell'educazione civica. È in vigore dal 19 marzo 2025.
 
-L'educazione civica prevede almeno **33 ore annuali**, con valutazione autonoma e contributo di più docenti del consiglio di classe.
+L'educazione civica prevede almeno **33 ore annuali** (art. 2, comma 3, L. 92/2019), con valutazione autonoma e contributo di più docenti del consiglio di classe.
+
+Sul modulo di sicurezza sul lavoro una precisazione utile: la L. 21/2025 non distingue per ordine di scuola. Il peso maggiore nella secondaria di secondo grado e nei PCTO, dove il tema è già presente per effetto del D.Lgs. 81/2008, resta una scelta didattica dell'istituto.
 
 ## Collegamento con i nuclei del D.M. 183/2024
 
-### Nucleo 1 — Costituzione, diritto, legalità e solidarietà
+### Nucleo 1 — Costituzione {#nucleo-1}
 
 La protezione civile permette di lavorare su solidarietà, responsabilità, volontariato, doveri civici e ruolo delle istituzioni.
 
@@ -40,7 +42,7 @@ Materiali utili:
 - [Diventa volontario](/diventa-volontario/)
 - [Storie e racconti](/formazione/storie-e-racconti/)
 
-### Nucleo 2 — Sviluppo economico e sostenibilità
+### Nucleo 2 — Sviluppo economico e sostenibilità {#nucleo-2}
 
 È il nucleo più vicino ai temi di protezione civile: rischi naturali, tutela del territorio, prevenzione, resilienza, salute, ambiente, cambiamenti climatici e sicurezza.
 
@@ -61,7 +63,7 @@ Materiali utili:
 - [Piano di emergenza familiare](/piano-familiare/)
 - [Giochi della sicurezza](/giochi/)
 
-### Nucleo 3 — Cittadinanza digitale
+### Nucleo 3 — Cittadinanza digitale {#nucleo-3}
 
 In emergenza è essenziale saper distinguere fonti ufficiali, messaggi verificati, notizie false, allarmi non confermati e comunicazioni istituzionali.
 
