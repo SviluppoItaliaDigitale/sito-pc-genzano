@@ -18,12 +18,25 @@ name: "⏰ Sveglia della pubblicazione social"
 # del mattino). Da quando le bozze si generano anche dopo ogni deploy, cioè
 # decine di volte al giorno, quegli inneschi avrebbero chiamato il repository
 # privato a ogni giro, consumando i suoi minuti senza pubblicare niente di più.
+#
+# Modalità `attendi` (22/09/2026). Quando più articoli escono insieme il
+# repository privato li distanzia di mezz'ora, e in quegli istanti non accade
+# nessun evento che lo richiami: il secondo post aspettava ore, fino al primo
+# giro programmato. genera-social-bozze.yml lancia allora questo workflow con
+# attendi=true, che resta sveglio (fino a 100 minuti, minuti gratuiti) e
+# chiama la pubblicazione ogni volta che una voce in coda matura
+# (scripts/social-pronti.py attendi).
 
 on:
   schedule:
     - cron: '35 8 * * *'
     - cron: '35 18 * * *'
   workflow_dispatch:
+    inputs:
+      attendi:
+        description: "Resta sveglio e chiama la pubblicazione quando le voci in coda maturano (true/false)"
+        required: false
+        default: "false"
 
 permissions:
   contents: read
@@ -34,6 +47,7 @@ concurrency:
 
 jobs:
   sveglia:
+    if: ${{ github.event.inputs.attendi != 'true' }}
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -50,3 +64,24 @@ jobs:
           gh workflow run "pubblica-social-auto.yml" --repo "$REPO"
           echo "Pubblicazione richiesta a $REPO."
           echo "Se ha gia' pubblicato, questo giro non trova voci mature e non fa nulla."
+
+  attendi:
+    if: ${{ github.event.inputs.attendi == 'true' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 110
+    steps:
+      - name: "📥 Checkout (script, articoli e materiale social)"
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+            scripts
+            content/comunicazioni
+            social-bozze
+          sparse-checkout-cone-mode: true
+
+      - name: "⏳ Chiama la pubblicazione quando le voci maturano"
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOCIAL_PAT: ${{ secrets.SOCIAL_REPO_PAT }}
+        run: python3 scripts/social-pronti.py attendi --max-min 100

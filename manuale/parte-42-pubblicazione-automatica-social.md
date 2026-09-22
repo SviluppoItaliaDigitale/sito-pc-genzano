@@ -27,13 +27,15 @@ contrario. Nel sito non è cambiato nulla, continua a generare bozze e immagini 
 
 1. Un articolo va online: perché lo hai appena pubblicato, oppure perché era **calendarizzato** ed
    è arrivata la sua data.
-2. Al termine del deploy che lo mette online, il sito genera da solo i testi e le immagini social
+2. Al termine del deploy che lo mette online, il sito (è `deploy.yml` a chiamarlo, subito dopo il
+   caricamento) genera da solo i testi e le immagini social
    in `social-bozze/AAAA/MM/<slug>/`. Se Gemini, che scrive i testi, non risponde per più di
    un'ora, i testi si compongono dal titolo, dal sommario e dai punti chiave dell'articolo: meglio
    un post più asciutto che nessun post.
 3. Appena la pagina dell'articolo risponde davvero sul sito, il sito chiama il sistema di
    pubblicazione, che mette l'articolo in coda e lo pubblica.
-4. Se escono più articoli insieme, i post si distanziano di **mezz'ora** l'uno dall'altro. Nessun
+4. Se escono più articoli insieme, i post si distanziano di **mezz'ora** l'uno dall'altro: il sito
+   resta in attesa e chiama il sistema ogni volta che un post in coda arriva al suo orario. Nessun
    post esce prima che la sua pagina sia raggiungibile: un link rotto è peggio di un post in
    ritardo.
 
@@ -179,7 +181,28 @@ semplicemente non aveva niente da pubblicare. Lo ha notato l'utente.
 
 Da quel giorno il materiale si genera **al termine di ogni deploy**, cioè nel momento in cui un
 articolo diventa online, e il controllo di salute giornaliero del sito (la segnalazione
-«🩺 Salute del sistema») elenca ogni articolo online da oltre tre ore ancora senza materiale.
+«🩺 Salute del sistema») elenca ogni articolo online da oltre tre ore ancora senza materiale o
+non pubblicato.
+
+La prima versione della correzione, pubblicata la sera stessa, aveva a sua volta due buchi che una
+revisione ha trovato prima che facessero danni:
+
+- **Il «dopo il deploy» non scattava quasi mai.** Era affidato a un innesco di GitHub che non parte
+  per i deploy lanciati da altri workflow, cioè per tutti quelli notturni: proprio quelli che
+  mettono online gli articoli calendarizzati. Ora è il deploy stesso a chiamare la generazione,
+  appena finito il caricamento.
+- **Il secondo post di una coppia aspettava ore.** Quando due articoli escono insieme il secondo
+  va in coda mezz'ora dopo il primo, e in quel momento non succede niente che richiami il sistema.
+  Ora il sito resta in attesa e lo chiama all'orario giusto. È successo proprio al resoconto della
+  Festa del Pane, sbloccato a mano alle 22:30 del 22 settembre.
+
+### Gli articoli retrodatati
+
+Il sistema guarda la **data dell'articolo**, e scarta quelli più vecchi di tre giorni. Un articolo
+scritto dopo, con la data del giorno in cui è successo qualcosa (tipico dei resoconti degli
+interventi), cade fuori da quella finestra anche se sul sito è appena comparso: non esce in
+automatico e va pubblicato a mano. La segnalazione «🩺 Salute del sistema» lo elenca, perché non
+passi inosservato.
 
 ## 42.9 — Tre difetti trovati solo pubblicando davvero
 

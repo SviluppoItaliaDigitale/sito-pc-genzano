@@ -9,10 +9,18 @@ name: "📱 Genera bozze social automatiche"
 # sui social, in concomitanza. Per questo il workflow gira in quattro casi:
 #
 #   - push su main di un articolo: gli articoli toccati, più il recupero;
-#   - al termine di ogni deploy riuscito: e' l'istante in cui un articolo
+#   - al termine di ogni deploy: deploy.yml lo chiama con `recupero=true`
+#     subito dopo il caricamento su Aruba, che e' l'istante in cui un articolo
 #     calendarizzato diventa davvero online;
 #   - ogni ora, come rete di sicurezza;
 #   - a mano (Run workflow), su un articolo o su tutti.
+#
+# 🔴 Non con `workflow_run` sul deploy (tolto il 22/09/2026, lo stesso giorno
+# in cui era stato messo): GitHub non crea quell'evento per i run lanciati con
+# il GITHUB_TOKEN, e tutti i deploy che non vengono da un push lo sono
+# (coalescer, allerta, rebuild del mattino). Scattava solo dopo i deploy da
+# push, cioè mai a mezzanotte, quando vanno online i calendarizzati. Un
+# workflow_dispatch invece crea il run anche se lanciato col GITHUB_TOKEN.
 #
 # 🔴 Perché il deploy (22/09/2026). Fino a quel giorno il workflow girava
 # solo al push, e il generatore salta gli articoli con data futura: un
@@ -40,11 +48,10 @@ on:
     paths:
       - "content/comunicazioni/**.md"
       - ".claude/rules/**.md"  # se cambiano le rules, ri-genera
-  workflow_run:
-    workflows: ["🚀 Build e Deploy"]
-    types: [completed]
   schedule:
-    # Rete di sicurezza, se l'evento del deploy si perde.
+    # Rete di sicurezza, se la chiamata dal deploy si perde. In questo
+    # repository i giri programmati partono a blocchi, ogni 4-5 ore: e' una
+    # rete, non il meccanismo.
     - cron: "41 * * * *"
   workflow_dispatch:
     inputs:
@@ -55,9 +62,14 @@ on:
         description: "Sovrascrivi bozze esistenti (true/false)"
         required: false
         default: "false"
+      recupero:
+        description: "Solo gli articoli online di recente senza materiale (lo usa deploy.yml)"
+        required: false
+        default: "false"
 
 permissions:
   contents: write
+  actions: write  # per affidare l'attesa a sveglia-social.yml
 
 # Un giro alla volta: due giri insieme genererebbero lo stesso materiale e il
 # secondo andrebbe in conflitto al push.
@@ -67,11 +79,8 @@ concurrency:
 
 jobs:
   bozze-social:
-    # Skip se il messaggio del commit ha [skip-social]; dopo un deploy solo se
-    # riuscito (un deploy annullato o fallito non ha messo online nulla).
-    if: >-
-      !contains(github.event.head_commit.message || '', '[skip-social]')
-      && (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success')
+    # Skip se il messaggio del commit ha [skip-social].
+    if: "!contains(github.event.head_commit.message || '', '[skip-social]')"
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -101,7 +110,7 @@ jobs:
             echo "articolo=${{ github.event.inputs.articolo }}" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ github.event.inputs.recupero }}" != "true" ]; then
             echo "modalita=batch" >> "$GITHUB_OUTPUT"
             exit 0
           fi
@@ -232,8 +241,8 @@ jobs:
       - name: "📣 Sveglia la pubblicazione social"
         # Gira a ogni giro, anche senza materiale nuovo: dopo un push le bozze
         # nascono prima che il deploy metta online la pagina, e il repository
-        # privato non pubblica un link che non risponde. È il giro successivo
-        # al deploy che lo trova raggiungibile e lo sveglia.
+        # privato non pubblica un link che non risponde. È il giro chiamato a
+        # fine deploy che lo trova raggiungibile e lo sveglia.
         id: sveglia
         env:
           GH_TOKEN: ${{ github.token }}
@@ -252,3 +261,16 @@ jobs:
           gh workflow run "pubblica-social-auto.yml" --repo "SviluppoItaliaDigitale/social-pc-genzano" \
             && echo "Pubblicazione richiesta al repository social." \
             || echo "::warning::Chiamata al repository social non riuscita: ci penseranno i suoi giri programmati."
+
+      - name: "⏳ Affida l'attesa dei post distanziati"
+        # Più articoli insieme escono a mezz'ora l'uno dall'altro, e in quegli
+        # istanti non accade nessun evento che richiami il repository social.
+        # sveglia-social.yml resta sveglio fino a quando le voci maturano: i
+        # minuti di questo repository sono gratuiti, quelli dell'altro no.
+        if: steps.sveglia.outputs.attesa_min != '' && steps.sveglia.outputs.attesa_min != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow run sveglia-social.yml --repo "$GITHUB_REPOSITORY" --ref main -f attendi=true \
+            && echo "Attesa affidata a sveglia-social.yml (prossima voce fra ${{ steps.sveglia.outputs.attesa_min }} min)." \
+            || echo "::warning::Non sono riuscito ad affidare l'attesa: ci penseranno i giri programmati."
