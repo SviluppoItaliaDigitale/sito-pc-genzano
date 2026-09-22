@@ -16,7 +16,12 @@
 :root{
   --bg:#04070b; --panel:#0a1119; --panel2:#0d1520; --line:#12212e;
   --grn:#35e08c; --gia:#ffd60a; --ara:#ff8c1a; --red:#ff3b30; --cyn:#37c7ff;
-  --tx:#c9dcd2; --dim:#5d7a6e;
+  /* 🔴 --dim si CALCOLA, non si sceglie a occhio: il vecchio #5d7a6e stava
+     fra 3,49:1 e 4,30:1 sui fondi della pagina, sotto il minimo 4,5:1 di
+     WCAG 2.2 AA, e regge le didascalie dei riquadri e le note. Questo tono
+     tiene almeno 4,67:1 ovunque (verificato il 22/09/2026 con la formula
+     della luminanza relativa) ed e' lo stesso gia' adottato per le pastiglie. */
+  --tx:#c9dcd2; --dim:#709080;
   --mono:'Share Tech Mono',monospace; --disp:'Chakra Petch',sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -84,7 +89,8 @@ html.a11y-pause-anim .navArr.hint{animation:none}
 #map{position:fixed;top:76px;left:0;right:min(380px,42vw);bottom:52px}
 #lmap{position:absolute;inset:0;background:#04070b}
 #windyWrap,#radioWrap,#traffWrap{position:absolute;inset:0;display:none;z-index:1001;background:#04070b}
-#windyWrap iframe,#traffWrap iframe{width:100%;height:100%;border:0}
+#mareWrap{position:absolute;inset:0;display:none;z-index:1001;background:#04070b}
+#windyWrap iframe,#traffWrap iframe,#mareWrap iframe{width:100%;height:100%;border:0}
 #radioWrap{flex-direction:column}
 #rxBar{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;padding:6px 10px;background:#0a1119;border-bottom:1px solid var(--line);font-family:var(--mono)}
 .rxVfo b{font-size:22px;color:#f2f7f4;font-weight:400;letter-spacing:.04em} .rxVfo span{margin-left:8px;font-size:10px;color:var(--cyn);letter-spacing:.14em}
@@ -138,10 +144,9 @@ html.a11y-pause-anim .navArr.hint{animation:none}
    22/09/2026 ("tutti appiccicati"). Chi aggiunge una fila usa queste classi:
    non serve inventarne altre. */
 .filtriGruppo{margin:0 0 10px}
-/* --dim (#5d7a6e) non arriva a 4,5:1 su questi fondi: 3,91:1 per il titolo di
-   fila e 4,16:1 per il contatore. Qui si usa un grigio-verde piu' chiaro che
-   resta secondario ma passa il livello AA (5,2:1 e 5,6:1), calcolato non a occhio. */
-.filtriTit{font-family:var(--mono);font-size:9px;letter-spacing:.16em;color:#709080;
+/* Titolo di fila e contatore stanno su --dim: secondario alla vista, ma
+   oltre il 4,5:1 richiesto (vedi la nota sulla variabile in cima al foglio). */
+.filtriTit{font-family:var(--mono);font-size:9px;letter-spacing:.16em;color:var(--dim);
   margin:0 0 5px;text-transform:uppercase}
 .fchips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px}
 /* riga di elenco che si puo' toccare per aprire il dettaglio */
@@ -173,7 +178,7 @@ html.a11y-pause-anim .miaStar,html.a11y-pause-anim .miaBtn{transition:none}
   border-radius:999px;display:inline-flex;align-items:center;gap:5px;
   transition:border-color .12s,color .12s,background .12s;
   font:inherit;font-size:10px;letter-spacing:.04em;padding:4px 10px}
-.fchip .c{color:#709080;font-weight:700;margin-left:0;
+.fchip .c{color:var(--dim);font-weight:700;margin-left:0;
   background:#060d14;border-radius:999px;padding:1px 6px;min-width:16px;text-align:center}
 .fchip:hover{border-color:rgba(55,199,255,.45);color:#eaf6ef;background:#0e1d29}
 .fchip.azione{color:var(--cyn);border-color:rgba(55,199,255,.45);background:#06121a}
@@ -459,6 +464,7 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
   <button data-v="map"><span class="ic">▤</span>CARTE</button>
   <button data-v="wnd"><span class="ic">☈</span>WINDY</button>
   <button data-v="tra" title="Traffico e incidenti segnalati in tempo reale"><span class="ic">⇄</span>TRAFFICO</button>
+  <button data-v="mar" title="Navi in tempo reale via AIS, al largo del Lazio"><span class="ic">⚓</span>NAVI</button>
   <button data-v="rad" title="Ascolto delle bande radioamatoriali via SDR (spettro e waterfall)"><span class="ic">⌁</span>RADIO</button>
   <button data-v="orb" title="Satelliti in orbita: dove sono adesso e quali passano su Genzano"><span class="ic">✦</span>SATELLITI</button>
   <button data-v="amb"><span class="ic">✿</span>ARIA·MARE</button>
@@ -483,6 +489,7 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
   <div id="lmap"></div>
   <div id="windyWrap"><iframe id="windyFrame" title="Mappa meteo interattiva Windy centrata su Genzano di Roma" loading="lazy"></iframe></div>
   <div id="traffWrap"><iframe id="traffFrame" title="Mappa del traffico in tempo reale centrata su Genzano di Roma" loading="lazy"></iframe></div>
+  <div id="mareWrap"><iframe id="mareFrame" title="Mappa delle navi in tempo reale al largo del Lazio" loading="lazy"></iframe></div>
   <div id="radioWrap">
     <div id="rxBar">
       <div class="rxVfo"><b id="rxFreq">—</b><span id="rxMode"></span></div>
@@ -632,7 +639,7 @@ const S={view:"all",day:"today",black:false,
   obs:null,obsBusy:false,last:{},lastFull:0,errs:{},
   strikes:[],cycle:false,qkSeen:null,logArr:[],gdacs:[],gdacsSnap:null,news:[],newsCache:"",
   usgs:[],eonet:[],emsc:[],volo:null,malarm:null,firms:null,spazio:null,sonde:[],
-  orb:{recs:[],gruppi:{},filtro:"tutti",caricato:0,tutti:false,busy:false,epoca:0,calc:null,sel:null}};
+  orb:{recs:[],gruppi:{},filtro:"tutti",caricato:0,tutti:false,chiesto:false,falliti:[],busy:false,epoca:0,calc:null,sel:null}};
 try{S.logArr=JSON.parse(localStorage.getItem("pcgz-monitor-log")||"[]")||[]}catch(e){S.logArr=[]}
 const $=s=>document.querySelector(s);
 const pad=n=>String(n).padStart(2,"0");
@@ -1712,7 +1719,11 @@ function viewAll(){
   if(S.malarm&&S.malarm.avvisi.length){
     feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>ALTRE REGIONI — AVVISI METEOALARM<span>${S.malarm.avvisi.filter(a=>a.inCorso).length} IN CORSO · NON SOSTITUISCE IL DPC</span></h3>`+
       S.malarm.avvisi.slice(0,12).map(a=>
-        `<div class="obsRow"><span class="on" style="color:${MA_COL[a.livello]||"#a6b6c2"}${a.inCorso?"":";opacity:.72"}">${esc(a.regione)} <em>${esc(a.fenomeno)}</em></span>`+
+        // 🔴 Niente opacita' sugli avvisi non ancora iniziati: smorzava anche il
+        //    nome del fenomeno, portandolo a 3,31:1 (sotto il 4,5:1 di WCAG 2.2 AA).
+        //    La distinzione e' gia' scritta a parole nella colonna accanto —
+        //    "in corso" oppure "dalle HH:MM" — che e' il modo accessibile di darla.
+        `<div class="obsRow"><span class="on" style="color:${MA_COL[a.livello]||"#a6b6c2"}">${esc(a.regione)} <em>${esc(a.fenomeno)}</em></span>`+
         `<span>${a.inCorso?`allerta ${esc(a.livello)} in corso`:`allerta ${esc(a.livello)} <b>dalle ${fmtT(a.inizio)}</b>`}`+
         `${a.fine?" · fino al "+fmtT(a.fine):""}</span></div>`).join("")+`</div>`);
   }
@@ -1880,6 +1891,10 @@ S.windy={on:false,ov:"radar",lvl:"surface",prod:"ecmwf",zoom:8,detail:false};
    su richiesta esplicita dell'utente, mai al caricamento della pagina.
    🔴 Il dato e' SEGNALATO DAGLI UTENTI, non ufficiale: le chiusure che fanno fede
    sono quelle di Polizia Locale, Comune e Anas. La scheda lo dice. */
+// 🔴 Per staccare davvero un riquadro di terzi NON basta src="": il browser lo
+//    risolve sull'indirizzo della pagina corrente e il contenuto resta caricato
+//    (verificato il 22/09/2026: restavano tre riquadri figli). Serve about:blank.
+const VUOTO="about:blank";
 S.traffico={on:false,zoom:11};
 const traffUrl=()=>`https://embed.waze.com/it/iframe?zoom=${S.traffico.zoom}`+
   `&lat=${GENZANO.lat}&lon=${GENZANO.lon}&ct=livemap`;
@@ -1914,7 +1929,7 @@ function viewTra(){
     el.addEventListener("click",e=>{
       const z=e.target.closest("[data-tz]");
       if(z){S.traffico.zoom=Number(z.dataset.tz);$("#traffFrame").src=traffUrl();render();return;}
-      if(e.target.closest("#traffOff")){S.traffico.on=false;$("#traffFrame").src="";traffSync();render();}
+      if(e.target.closest("#traffOff")){S.traffico.on=false;$("#traffFrame").src=VUOTO;traffSync();render();}
     });
   }
   feed.appendChild(noteEl('Traffico: mappa live di <a href="https://www.waze.com/live-map" target="_blank" rel="noopener">Waze</a>. '+
@@ -1983,7 +1998,7 @@ function viewWnd(){
     feed.appendChild(el);
     el.querySelector("#windyCtl").addEventListener("click",e=>{
       const b=e.target.closest("button");if(!b)return;
-      if(b.id==="windyOff"){S.windy.on=false;$("#windyFrame").src="";windySync();render();return;}
+      if(b.id==="windyOff"){S.windy.on=false;$("#windyFrame").src=VUOTO;windySync();render();return;}
       if(b.dataset.ov)w.ov=b.dataset.ov;
       else if(b.dataset.lvl)w.lvl=b.dataset.lvl;
       else if(b.dataset.prod)w.prod=b.dataset.prod;
@@ -3077,6 +3092,9 @@ const ORB_GRUPPI=[
   ["visual",   "PIÙ LUMINOSI",  false, "i piu' luminosi, quelli che si vedono a occhio nudo"],
 ];
 const ORB_PC=ORB_GRUPPI.filter(g=>g[2]).map(g=>g[0]);
+// il nome della fonte ("sarsat", "active") non dice niente a chi legge:
+// si mostra l'etichetta che compare gia' sulle pastiglie dei filtri
+const orbEtichetta=g=>g==="active"?"CATALOGO COMPLETO":((ORB_GRUPPI.find(x=>x[0]===g)||[,g])[1]);
 const ORB_TTL=6*3600e3;      // le TLE si rinnovano poche volte al giorno
 const ORB_TLE_VECCHIA=7*24*3600e3; // oltre una settimana la previsione degrada
 const AU_KM=149597870.7, R_TERRA=6378.137;
@@ -3119,6 +3137,15 @@ function orbParse(txt,gruppo,mappa){
   }
   return n;
 }
+// Quante effemeridi valide contiene uno scarico, a prescindere da quante ne
+// fossero gia' in memoria: serve a distinguere un catalogo completo davvero
+// arrivato da una risposta troncata o da una pagina di errore.
+function orbConta(txt){
+  const L=txt.split("\n"); let n=0;
+  for(let i=0;i+2<L.length;i+=3)
+    if((L[i]||"").trim()&&(L[i+1]||"").startsWith("1 ")&&(L[i+2]||"").startsWith("2 "))n++;
+  return n;
+}
 // l'epoca della TLE sta nella riga 1, colonne 19-32: AAGGG.frazione
 function orbEpoca(r1){
   const a=parseInt(r1.slice(18,20),10), g=parseFloat(r1.slice(20,32));
@@ -3147,7 +3174,14 @@ const OBS_RAD={longitude:GENZANO.lon*Math.PI/180,latitude:GENZANO.lat*Math.PI/18
 /* Calcola posizione e angoli per TUTTI i satelliti caricati.
    Sedicimila oggetti si propagano in un paio di decimi di secondo, quindi si
    rifa' tutto a ogni giro invece di tenere stati parziali che si disallineano. */
-function orbCalcola(){
+/* `freschezza` in millisecondi: se il calcolo precedente e' piu' recente di
+   cosi', si riusa invece di rifarlo. Serve perche' il temporizzatore calcola
+   e poi chiede il ridisegno, e il pannello a sua volta calcola: senza questa
+   soglia ogni giro propagherebbe due volte tutti i satelliti — con il catalogo
+   intero sono ~120 ms invece di ~60, quattro volte al minuto, su un telefono.
+   Chi vuole il calcolo fresco per forza chiama senza argomento. */
+function orbCalcola(freschezza){
+  if(freschezza&&S.orb.calc&&Date.now()-S.orb.calc.t<freschezza)return S.orb.calc;
   const t=new Date(), gmst=satellite.gstime(t), sole=orbSole(t);
   const soleEcf=satellite.eciToEcf(sole,gmst);
   const soleEl=satellite.ecfToLookAngles(OBS_RAD,soleEcf).elevation*180/Math.PI;
@@ -3197,7 +3231,11 @@ function orbFiltra(lista,f){
   if(f==="tutti")return lista;
   if(f==="pc")return lista.filter(x=>x.gruppi.some(g=>ORB_PC.includes(g)));
   if(f==="sopra")return lista.filter(x=>x.el>0);
-  if(f==="occhio")return lista.filter(x=>x.el>10&&x.ill&&S.orb.calc&&S.orb.calc.buio);
+  // 🔴 Illuminato e alto sull'orizzonte NON vuol dire visibile a occhio nudo:
+  //    un cubesat o un satellite di navigazione puo' soddisfare entrambe le
+  //    condizioni ed essere troppo debole. Si richiede anche l'appartenenza
+  //    al gruppo "visual" della fonte, che e' l'elenco dei piu' luminosi.
+  if(f==="occhio")return lista.filter(x=>x.el>10&&x.ill&&x.gruppi.includes("visual")&&S.orb.calc&&S.orb.calc.buio);
   if(f.startsWith("a:")){const a=ORB_AREE[f.slice(2)]; return a?lista.filter(x=>orbInArea(x,a)):lista}
   if(f.startsWith("g:"))return lista.filter(x=>x.gruppi.includes(f.slice(2)));
   if(f.startsWith("o:"))return lista.filter(x=>orbFascia(x.quota)===f.slice(2));
@@ -3219,22 +3257,36 @@ function orbFascePresenti(){
 
 async function orbCarica(tutti){
   if(S.orb.busy)return; S.orb.busy=true;
+  // cosa e' stato CHIESTO: serve alla riprova, perche' "tutti" resta falso
+  // proprio quando il catalogo completo e' il gruppo che non e' arrivato.
+  if(tutti)S.orb.chiesto=true;
   if(S.view==="orb")render();
   const mappa=new Map();
   for(const s of S.orb.recs)mappa.set(s.id,s);
   const gruppi=tutti?["active"]:ORB_PC.concat(["galileo","gps-ops","science","visual"]);
-  let errori=0;
+  // 🔴 Un gruppo caduto NON si perde in silenzio: con dati gia' in memoria
+  //    l'errore spariva e i conteggi restavano incompleti senza modo di
+  //    riprovare. Si tiene l'elenco dei falliti e si dice quali sono.
+  const falliti=[]; let lettiTutti=0;
   for(const g of gruppi){
     try{
       const txt=await orbScarica(g);
       orbParse(txt,g==="active"?null:g,mappa);
+      // 🔴 Si contano gli oggetti PRESENTI nello scarico, non quelli aggiunti:
+      //    una riprova che ritrova cio' che e' gia' in memoria e' comunque
+      //    riuscita, e giudicarla dal numero di righe nuove la dichiarava fallita.
+      if(g==="active")lettiTutti+=orbConta(txt);
       S.orb.gruppi[g]=true;
-    }catch(e){errori++}
+    }catch(e){falliti.push(g)}
   }
   S.orb.recs=[...mappa.values()];
   S.orb.caricato=Date.now();
-  if(tutti)S.orb.tutti=true;
-  if(errori&&!S.orb.recs.length)S.errs.orb="Effemeridi CelesTrak non raggiungibili.";
+  // 🔴 "catalogo completo" si dichiara solo se il catalogo e' DAVVERO arrivato:
+  //    prima bastava chiederlo, e un scarico fallito etichettava i dati parziali
+  //    come completi nascondendo anche il pulsante per riprovare.
+  if(tutti&&!falliti.includes("active")&&lettiTutti>ORB_MIN_CATALOGO)S.orb.tutti=true;
+  S.orb.falliti=falliti;
+  if(falliti.length&&!S.orb.recs.length)S.errs.orb="Effemeridi CelesTrak non raggiungibili.";
   else delete S.errs.orb;
   S.orb.busy=false;
   orbCalcola();
@@ -3244,6 +3296,29 @@ async function orbCarica(tutti){
 }
 
 const mapLayerOn=k=>!!(S.layers&&S.layers[k]);
+/* 🔴 Le posizioni invecchiano in fretta: un satellite in orbita bassa percorre
+   7,8 km al secondo, quindi in un minuto si sposta di quasi cinquecento
+   chilometri. Si ricalcola ogni 15 secondi, ma SOLO quando serve davvero —
+   vista aperta o livello della cartina acceso — per non far lavorare il
+   telefono a vuoto. Difetto colto in revisione dopo la pubblicazione: il
+   calcolo del primo caricamento restava in uso all'infinito mentre la scheda
+   diceva "adesso" (22/09/2026). */
+const ORB_TICK=15e3;
+setInterval(()=>{
+  if(document.hidden)return;
+  if(!S.orb.recs.length)return;
+  const serve=(S.view==="orb")||mapLayerOn("orb");
+  if(!serve)return;
+  orbCalcola();
+  // La cartina si ridisegna sempre: non ruba niente a nessuno.
+  if(mapLayerOn("orb"))orbDisegna();
+  // Il pannello NO se l'utente ci sta dentro: ridisegnarlo gli toglierebbe il
+  // fuoco da sotto le dita mentre naviga da tastiera. I numeri restano quelli
+  // dell'ultimo giro, e l'ora del calcolo e' scritta nella scheda.
+  if(S.view!=="orb")return;
+  const dentro=document.activeElement&&feed.contains(document.activeElement);
+  if(!dentro)render();
+},ORB_TICK);
 // Sulla cartina si disegna SOLO cio' che il filtro attivo seleziona e che sta
 // sopra l'orizzonte: con "tutti" sarebbero migliaia di punti illeggibili, e un
 // satellite sotto l'orizzonte da Genzano non si vede comunque.
@@ -3295,6 +3370,12 @@ function orbPillole(){
    al clic senza precalcolare nulla.
    🔴 Un geostazionario non "passa": sta fermo rispetto a terra ed e' sopra
    l'orizzonte sempre o mai. Va detto, non lasciato come elenco vuoto. */
+// il gruppo "active" della fonte conta circa sedicimila oggetti: sotto un
+// migliaio lo scarico e' troncato o non e' il catalogo, e non si dichiara completo
+const ORB_MIN_CATALOGO=1000;
+// quanto puo' essere vecchio un calcolo perche' il pannello lo riusi invece di
+// rifarlo: due secondi su posizioni che si rinfrescano ogni quindici
+const ORB_FRESCO=2000;
 const PASS_ORE=48, PASS_STEP=30e3;
 // sotto questa soglia il filtro geografico mostra anche i piu' vicini fuori
 const MIN_AREA=8;
@@ -3371,7 +3452,11 @@ function viewOrb(){
       <p style="margin-top:8px"><button class="fchip azione" id="orbGo"${S.orb.busy?" disabled":""}>${S.orb.busy?"CARICAMENTO…":"CARICA I SATELLITI"}</button></p></div>`);
     return;
   }
-  const c=S.orb.calc||orbCalcola();
+  // 🔴 SEMPRE ricalcolato: riusare il calcolo del primo caricamento congelava
+  //    le posizioni all'istante di apertura, mentre la scheda diceva "adesso".
+  //    Un satellite in orbita bassa fa 7,8 km al secondo: dopo dieci minuti
+  //    e' a migliaia di chilometri da dove lo si mostrava.
+  const c=orbCalcola(ORB_FRESCO);
   const sel=orbFiltra(c.lista,S.orb.filtro);
   // 🔴 Coi filtri geografici NON si scarta chi sta sotto l'orizzonte: la domanda
   //    e' "chi passa sull'area", non "chi vedo da Genzano". Un satellite sopra
@@ -3388,7 +3473,9 @@ function viewOrb(){
     <div class="kpi" style="--kc:#35e08c"><small>SOPRA L'ORIZZONTE</small><b>${c.lista.filter(x=>x.el>0).length}</b><em>da Genzano adesso</em></div>
     <div class="kpi"><small>CIELO A GENZANO</small><b>${c.soleEl>0?"giorno":c.buio?"buio":"crepuscolo"}</b><em>Sole a ${c.soleEl.toFixed(0)}°</em></div>
     <div class="kpi"><small>ETÀ DELLE EFFEMERIDI</small><b style="font-size:15px">${esc(etaTxt)}</b><em>metà ne ha meno di così</em></div>
+    <div class="kpi"><small>POSIZIONI CALCOLATE</small><b style="font-size:15px">${hm(c.t)}</b><em>rifatte ogni 15 secondi</em></div>
     </div>
+    ${(S.orb.falliti&&S.orb.falliti.length)?`<p class="staleNota">${S.orb.falliti.length===1?"Non è arrivato il gruppo":"Non sono arrivati i gruppi"} <b>${esc(S.orb.falliti.map(orbEtichetta).join(", "))}</b>: i conteggi qui sotto sono incompleti. <button type="button" class="fchip azione" id="orbRiprova">RIPROVA</button></p>`:""}
     ${tropVec?`<p class="staleNota">${c.vecchie} effemeridi su ${c.conEta} hanno più di una settimana: su quelle la posizione calcolata perde precisione.</p>`:""}
     <p style="margin:6px 0 0;color:var(--dim);font-size:11px">Le posizioni sono <b>calcolate</b> con il modello SGP4 dalle effemeridi pubbliche, non riprese da un servizio di tracciamento. Sulla cartina il punto è la <b>verticale a terra</b> del satellite, non il posto da cui si vede: uno a ventimila chilometri di quota è sopra l'orizzonte di Genzano anche col punto sul Sahara. ${S.orb.tutti?"":`<button class="fchip azione" id="orbTutti"${S.orb.busy?" disabled":""} style="margin-left:4px">${S.orb.busy?"CARICAMENTO…":"CARICA TUTTI GLI ATTIVI (~16.000, 2,7 MB)"}</button>`}</p></div>`);
   feed.insertAdjacentHTML("beforeend",orbPillole());
@@ -3435,8 +3522,14 @@ document.addEventListener("keydown",e=>{
   e.preventDefault(); riga.click();
 });
 document.addEventListener("click",e=>{
-  const go=e.target.closest("#orbGo,#orbTutti");
-  if(go){orbCarica(go.id==="orbTutti"||S.orb.tutti);return}
+  const go=e.target.closest("#orbGo,#orbTutti,#orbRiprova");
+  if(go){
+    // la riprova riparte dai gruppi caduti, non da capo
+    if(go.id==="orbRiprova"){const f=S.orb.falliti||[];S.orb.falliti=[];
+      for(const g of f)delete S.orb.gruppi[g];
+      orbCarica(f.includes("active")||S.orb.chiesto);return;}
+    orbCarica(go.id==="orbTutti"||S.orb.tutti);return;
+  }
   if(e.target.closest("#orbChiudi")){S.orb.sel=null;render();return}
   const riga=e.target.closest("[data-orbid]");
   if(riga){
@@ -3588,7 +3681,81 @@ document.addEventListener("click",e=>{
   miaSalva(a); render();
 });
 
-function render(){({all:viewAll,sis:viewSis,met:viewMet,map:viewMap,wnd:viewWnd,tra:viewTra,rad:viewRad,amb:viewAmb,ems:viewEms,orb:viewOrb,mia:viewMia,log:viewLog})[S.view]();miaDecora(S.view);windySync();traffSync();radioSync();}
+
+/* ---------------- NAVI — mappa AIS in tempo reale ----------------
+   Richiesta dell'utente (22/09/2026): «fai come Flightradar o MarineTraffic»,
+   senza hardware e senza licenze. Si usa la mappa che VesselFinder pubblica
+   apposta per essere incorporata (pagina /embed del loro sito): nessuna chiave,
+   nessuna ingestione di dati, nessun reverse engineering. Stesso click-to-load
+   di Windy e Waze: il server di terzi e' contattato solo su richiesta esplicita.
+
+   🔴 PERCHE' NON IL LORO SCRIPT. Il codice che pubblicano e' un <script> che
+   costruisce un iframe verso /aismap con il parametro "ra" (l'indirizzo della
+   pagina ospite, che e' come autorizzano l'incorporamento). Qui si costruisce
+   direttamente QUELL'IFRAME: e' l'uso previsto, e tiene il codice di terzi fuori
+   dalla nostra origine — uno <script> altrui avrebbe accesso pieno alla pagina,
+   e la CSP del sito non ammette script di terze parti.
+
+   🔴 L'AIS NON E' UN CENSIMENTO. Trasmettono i mercantili sopra una certa stazza,
+   i passeggeri e chi lo monta per scelta: pescherecci piccoli, barche da diporto
+   e molti mezzi di Stato non compaiono. La copertura dipende dalle stazioni
+   riceventi a terra. La scheda lo dice: non si legge come "tutto cio' che
+   naviga". */
+S.navi={on:false,zoom:8,lat:41.4,lon:12.6};
+const naviUrl=()=>{
+  const ra=encodeURIComponent(location.origin+location.pathname);
+  return "https://www.vesselfinder.com/aismap?zoom="+S.navi.zoom+
+    "&lat="+S.navi.lat+"&lon="+S.navi.lon+
+    "&width=100%25&height=100%25&names=false&track=false"+
+    "&fleet=false&fleet_name=false&fleet_hide_old_positions=false"+
+    "&clicktoact=false&store_pos=false&ra="+ra;
+};
+function mareSync(){
+  const w=$("#mareWrap"); if(w)w.style.display=(S.view==="mar"&&S.navi.on)?"block":"none";
+}
+const NAVI_ZONE=[[10,"LITORALE LAZIALE",41.45,12.45],[8,"TIRRENO CENTRALE",41.2,12.4],
+                 [7,"TIRRENO",40.5,12.5],[6,"MEDITERRANEO",39.0,13.0]];
+function viewMar(){
+  title.textContent="NAVI — AIS IN TEMPO REALE";
+  feed.innerHTML="";
+  if(!S.navi.on){
+    const el=document.createElement("div"); el.className="wx";
+    el.innerHTML=`<h3>MAPPA DELLE NAVI<span>CLICK-TO-LOAD</span></h3>
+      <p>Navi in navigazione al largo del Lazio, dai loro trasponder <b>AIS</b>:
+      nome, rotta, velocità e porto di destinazione. Per vederla devi caricare la
+      mappa fornita da <b>VesselFinder</b>: il browser riceverà risorse dal loro
+      server e potrebbe essere impostato qualche cookie tecnico di terze parti.</p>
+      <button class="wbtn" id="naviLoad">⚓ CARICA LA MAPPA DELLE NAVI</button>
+      <p style="margin-top:6px"><a href="https://www.vesselfinder.com/" target="_blank" rel="noopener">In alternativa aprila in una nuova scheda</a>.</p>`;
+    feed.appendChild(el);
+    el.querySelector("#naviLoad").addEventListener("click",()=>{
+      S.navi.on=true; $("#mareFrame").src=naviUrl(); mareSync(); render();
+    });
+  }else{
+    const el=document.createElement("div"); el.className="wx";
+    el.innerHTML=`<h3>MAPPA DELLE NAVI<span>TRASPONDER AIS</span></h3>
+      <div class="filtriGruppo"><p class="filtriTit">Che tratto di mare</p>
+      <div class="fchips" role="group" aria-label="Zona della mappa delle navi">`+
+      NAVI_ZONE.map(([z,et])=>`<button type="button" class="fchip" data-nz="${z}" aria-pressed="${S.navi.zoom===z}">${et}</button>`).join("")+
+      `</div></div>
+      <button class="wbtn" id="naviOff">✕ CHIUDI LA MAPPA</button>`;
+    feed.appendChild(el);
+    el.addEventListener("click",e=>{
+      const z=e.target.closest("[data-nz]");
+      if(z){
+        const zz=Number(z.dataset.nz), zona=NAVI_ZONE.find(x=>x[0]===zz);
+        if(zona){S.navi.zoom=zona[0];S.navi.lat=zona[2];S.navi.lon=zona[3];}
+        $("#mareFrame").src=naviUrl(); render(); return;
+      }
+      if(e.target.closest("#naviOff")){S.navi.on=false;$("#mareFrame").src=VUOTO;mareSync();render();}
+    });
+  }
+  feed.appendChild(noteEl('Navi: mappa live di <a href="https://www.vesselfinder.com/" target="_blank" rel="noopener">VesselFinder</a>, dai trasponder AIS. '+
+    '<b>L\'AIS non è un censimento di ciò che naviga</b>: lo trasmettono i mercantili sopra una certa stazza, i passeggeri e chi lo monta per scelta, mentre pescherecci piccoli, barche da diporto e molti mezzi di Stato non compaiono; la copertura dipende dalle stazioni riceventi a terra. '+
+    'Per un\'emergenza in mare il riferimento è la <b>Guardia Costiera</b>, numero <a href="tel:1530">1530</a>.'));
+}
+
+function render(){({all:viewAll,sis:viewSis,met:viewMet,map:viewMap,wnd:viewWnd,tra:viewTra,rad:viewRad,amb:viewAmb,ems:viewEms,orb:viewOrb,mar:viewMar,mia:viewMia,log:viewLog})[S.view]();miaDecora(S.view);windySync();traffSync();mareSync();radioSync();}
 
 /* ---------------- barra NOTIZIE — agenzie di stampa (Italia e mondo) ----------------
    ANSA + Adnkronos dallo snapshot self-hosted open-data/notizie-agenzie.json
@@ -3658,7 +3825,7 @@ function tickUpd(){
 /* Deep-link e condivisione delle schermate: ogni vista ha un hash proprio
    (#allerta, #sismico, #meteo, #carte, #windy, #radio, #aria-mare, #emergenze-ue),
    così il link condiviso apre direttamente quella schermata. */
-const VIEW_SLUG={all:"allerta",sis:"sismico",met:"meteo",map:"carte",wnd:"windy",tra:"traffico",rad:"radio",amb:"aria-mare",ems:"emergenze-ue",orb:"satelliti",mia:"mia-sala",log:"registro"};
+const VIEW_SLUG={all:"allerta",sis:"sismico",met:"meteo",map:"carte",wnd:"windy",tra:"traffico",rad:"radio",amb:"aria-mare",ems:"emergenze-ue",orb:"satelliti",mar:"navi",mia:"mia-sala",log:"registro"};
 const SLUG_VIEW=Object.fromEntries(Object.entries(VIEW_SLUG).map(([k,v])=>[v,k]));
 function setView(v,fromHash){
   if(!VIEW_SLUG[v])return;
