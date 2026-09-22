@@ -2225,7 +2225,13 @@ function viewEms(){
   // ---- PRONTO SOCCORSO vicini: il carico sulle strutture che servono Genzano ----
   if(S.errs.ps)feed.appendChild(errCard(S.errs.ps));
   if(psPronto){
-    const vecchio=direttoVecchio(S.last.ps);
+    // 🔴 La freschezza si misura su QUANDO IL PONTE HA RAGGIUNTO LA FONTE, non
+    // su quando noi abbiamo ricevuto la risposta del ponte: il ponte risponde
+    // sempre, anche servendo una copia vecchia di ore, quindi misurando la
+    // nostra ricezione la scheda direbbe "IN DIRETTA" per sempre. Stessa regola
+    // della scheda dei mezzi aerei, che usa gia' `vecchiaDel`.
+    const dalPonte=S.ps.vecchiaDel?Date.parse(S.ps.vecchiaDel):NaN;
+    const vecchio=Number.isFinite(dalPonte)?dalPonte:direttoVecchio(S.last.ps);
     const el=document.createElement("div");el.className="wx";
     const righe=S.ps.ospedali.map(o=>{
       const nome=`<span class="psNome">${esc(o.nome.replace(/^Pronto Soccorso\s*/i,""))}<em>${o.km} km</em></span>`;
@@ -2244,7 +2250,8 @@ function viewEms(){
       Questi numeri dicono quanto sono carichi i pronto soccorso del nostro territorio, non dove conviene andare.</p>
       <div class="psTest"><span></span><span>in attesa</span><span>per codice di triage</span></div>
       ${righe}
-      <p class="dim" style="margin:.5rem 0 0">${esc(S.ps.attribuzione)}${vecchio?" · ultima lettura riuscita "+fmtT(new Date(vecchio).toISOString()):""}</p>`;
+      ${vecchio?`<p class="staleNota">La fonte non risponde in questo momento: questi numeri sono dell'ultima lettura riuscita, <b>${fmtT(new Date(vecchio).toISOString())}</b>. Un pronto soccorso nel frattempo si è svuotato o riempito.</p>`:""}
+      <p class="dim" style="margin:.5rem 0 0">${esc(S.ps.attribuzione)}</p>`;
     feed.appendChild(el);
   }
   for(const a of S.ems){
