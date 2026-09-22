@@ -26,7 +26,12 @@ permissions:
 jobs:
   aggiorna:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    # Sei fonti in sequenza, ognuna con i suoi ritentativi: dieci minuti erano
+    # troppo pochi e in caso di rallentamenti simultanei GitHub avrebbe ucciso il
+    # job PRIMA del commit, buttando via anche gli snapshot riusciti (rilievo
+    # colto in revisione il 22/09/2026). I ritentativi dei singoli script sono
+    # stati ridotti e il tetto alzato: due difese, non una.
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v7
 

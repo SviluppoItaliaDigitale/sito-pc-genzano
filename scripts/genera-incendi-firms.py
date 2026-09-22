@@ -46,17 +46,17 @@ def ora() -> str:
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
 
 
-def scarica(url: str, tentativi: int = 3) -> str:
+def scarica(url: str, tentativi: int = 2) -> str:
     ultimo = None
     for n in range(tentativi):
         try:
             req = urllib.request.Request(url, headers={"User-Agent": UA})
-            with urllib.request.urlopen(req, timeout=60) as r:
+            with urllib.request.urlopen(req, timeout=30) as r:
                 return r.read().decode("utf-8", "replace")
         except (urllib.error.URLError, TimeoutError, OSError) as e:
             ultimo = e
             if n < tentativi - 1:
-                time.sleep(5 * (n + 1))
+                time.sleep(3)
     raise RuntimeError(f"FIRMS non raggiungibile: {ultimo}")
 
 

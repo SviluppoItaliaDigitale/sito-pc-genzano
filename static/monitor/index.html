@@ -1242,8 +1242,14 @@ async function loadMeteoalarm(){
     // 15 minuti e un avviso puo' scadere nel frattempo. Un avviso scaduto non si
     // mostra mai come corrente (stessa regola della barra allerta in homepage).
     const ora=Date.now();
-    S.malarm={avvisi:(d.avvisi||[]).filter(a=>{
-      const f=utcMs(a.fine); return !Number.isFinite(f)||f>ora;}),snap:d._snapshot||{}};
+    S.malarm={avvisi:(d.avvisi||[])
+      .filter(a=>{const f=utcMs(a.fine); return !Number.isFinite(f)||f>ora;})
+      // Lo stato "in corso" si RICALCOLA qui: lo snapshot ha fino a 15 minuti e
+      // un avviso puo' essere cominciato nel frattempo. Un avviso che deve ancora
+      // iniziare non si presenta come attivo.
+      .map(a=>{const i=utcMs(a.inizio);
+        return {...a,inCorso:!Number.isFinite(i)||i<=ora,inizioMs:i};}),
+      snap:d._snapshot||{}};
     S.last.malarm=Date.now(); delete S.errs.malarm;
   }catch(e){S.errs.malarm="Quadro MeteoAlarm non disponibile.";}
   if(S.view==="all")render(); tickUpd();
@@ -1253,6 +1259,16 @@ async function loadMeteoalarm(){
    adsb.fi non espone il CORS: si legge lo snapshot committato ogni 15 minuti da
    scripts/genera-volo-soccorso.py. Il ritardo e' dichiarato nella scheda: un
    velivolo in volo si sposta parecchio in un quarto d'ora. */
+// Gli script generatori sono fail-safe: se la fonte cade lasciano il file com'era
+// ed escono puliti. Vuol dire che uno snapshot puo' invecchiare in silenzio, e il
+// browser deve accorgersene invece di presentare posizioni vecchie come attuali
+// (rilievo colto in revisione il 22/09/2026). Soglia generosa: il workflow
+// rigenera ogni 15 minuti, oltre i 50 il dato non e' piu' "adesso".
+const SNAP_MAX_AGE=50*60e3;
+const snapVecchio=snap=>{
+  const t=utcMs(snap&&snap.generato);
+  return Number.isFinite(t)?(Date.now()-t>SNAP_MAX_AGE?t:null):null;
+};
 const VOLO_FILTRI=[["tutti","TUTTI",null],["antincendio","ANTINCENDIO","antincendio"],
   ["elicottero","ELICOTTERI","elicottero"],["emergenza","EMERGENZE","emergenza"],
   ["bassa-quota","BASSA QUOTA","bassa-quota"]];
@@ -1555,10 +1571,11 @@ function viewAll(){
   // Quadro nazionale: utile per valutare una partenza in colonna mobile, mai al
   // posto del bollettino DPC per la Zona F, che sta piu' in alto in questa stessa vista.
   if(S.malarm&&S.malarm.avvisi.length){
-    feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>ALTRE REGIONI — AVVISI METEOALARM<span>EUMETNET · NON SOSTITUISCE IL DPC</span></h3>`+
+    feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>ALTRE REGIONI — AVVISI METEOALARM<span>${S.malarm.avvisi.filter(a=>a.inCorso).length} IN CORSO · NON SOSTITUISCE IL DPC</span></h3>`+
       S.malarm.avvisi.slice(0,12).map(a=>
-        `<div class="obsRow"><span class="on" style="color:${MA_COL[a.livello]||"#a6b6c2"}">${esc(a.regione)} <em>${esc(a.fenomeno)}</em></span>`+
-        `<span>allerta ${esc(a.livello)}${a.fine?" · fino al "+fmtT(a.fine):""}</span></div>`).join("")+`</div>`);
+        `<div class="obsRow"><span class="on" style="color:${MA_COL[a.livello]||"#a6b6c2"}${a.inCorso?"":";opacity:.72"}">${esc(a.regione)} <em>${esc(a.fenomeno)}</em></span>`+
+        `<span>${a.inCorso?`allerta ${esc(a.livello)} in corso`:`allerta ${esc(a.livello)} <b>dalle ${fmtT(a.inizio)}</b>`}`+
+        `${a.fine?" · fino al "+fmtT(a.fine):""}</span></div>`).join("")+`</div>`);
   }
   feed.appendChild(fontiCard());
   feed.appendChild(noteEl(S.malarm&&S.malarm.avvisi.length
@@ -2001,6 +2018,14 @@ function viewEms(){
   // mai una deduzione sulla missione in corso.
   if(S.errs.volo)feed.appendChild(errCard(S.errs.volo));
   if(S.volo){
+    const vecchio=snapVecchio(S.volo.snap);
+    if(vecchio){
+      feed.insertAdjacentHTML("beforeend",
+        `<div class="wx" style="margin-top:4px"><h3>MEZZI AEREI NELL'AREA<span>DATO NON RECENTE</span></h3>
+        <p style="margin:0">L'ultimo aggiornamento riuscito risale a <b>${fmtT(new Date(vecchio).toISOString())}</b>:
+        la fonte ADS-B non risponde da un po'. Le posizioni di allora non vengono mostrate,
+        perché un velivolo nel frattempo si è spostato.</p></div>`);
+    } else {
     const tot=S.volo.lista.length;
     const conta=f=>f==="tutti"?tot:S.volo.lista.filter(v=>v.etichette.includes(f)).length;
     const sel=voloFiltra(S.volo.lista,S.voloFiltro);
@@ -2018,9 +2043,10 @@ function viewEms(){
           (sel.length>MAX?`<p style="margin:6px 0 0;color:var(--dim)">…e altri ${sel.length-MAX}. Attiva il livello VOLO sulla cartina per vederli tutti.</p>`:"")
         :`<p style="margin:0">Nessun velivolo corrisponde a questo filtro in questo momento.</p>`)+
       `</div>`);
+    }
   }
   // Punti caldi da satellite: presenti solo se il repository ha la chiave FIRMS.
-  if(S.firms&&S.firms.punti.length){
+  if(S.firms&&S.firms.punti.length&&!snapVecchio(S.firms.snap)){
     const f=S.firms, forti=f.punti.filter(p=>Number.isFinite(p.potenza_radiativa_mw)&&p.potenza_radiativa_mw>=5).length;
     feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>PUNTI CALDI DA SATELLITE — ITALIA<span>NASA FIRMS · ULTIME ${esc(String(f.snap.finestra_ore||24))} ORE</span></h3>
       <div class="kgrid">

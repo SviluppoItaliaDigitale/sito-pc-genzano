@@ -28,7 +28,9 @@ Essere in volo NON implica un intervento in corso, e la copertura ADS-B non è t
 molti mezzi di Stato non trasmettono affatto.
 
 PERIMETRO — si tengono tutti i velivoli entro RAGGIO_AREA da Genzano (orizzonte
-operativo realistico) più, su tutta l'Italia, quelli di rilievo operativo. È una
+operativo realistico) e, fino a RAGGIO_NOTEVOLI, quelli di rilievo operativo. Il
+criterio è sempre la distanza: non si afferma mai che un velivolo sia "sull'Italia",
+perché un riquadro di coordinate non sa dove finisce uno Stato. È una
 scelta di peso: l'elenco viene committato ogni 15 minuti e tenere l'intera Italia
 farebbe crescere il repository di alcuni GB l'anno. Per allargare basta alzare
 RAGGIO_AREA.
@@ -74,8 +76,15 @@ MODELLI_AIB = (
 #   Gli elicotteri generalisti non sono "soccorso": sono elicotteri, e come tali
 #   compaiono nella categoria trasmessa, senza etichette che non ci competono.
 
-IT_LAT = (35.2, 47.2)
-IT_LON = (6.4, 18.8)
+# 🔴 NIENTE AFFERMAZIONI SUL PAESE. La versione precedente usava un riquadro
+# lat/lon "dell'Italia" e il commento sosteneva che escludesse Slovenia, Croazia,
+# Corsica e Tunisia: era FALSO, quel rettangolo contiene Lubiana, Zagabria, Nizza
+# e Tunisi (rilievo colto in revisione il 22/09/2026 e verificato con i calcoli).
+# Un rettangolo non sa dove finisce uno Stato, e disegnare un poligono d'Italia a
+# memoria sarebbe stato inventare coordinate. Si usa quindi l'unico criterio che
+# si può affermare con esattezza: la DISTANZA da Genzano. Tutte le etichette
+# parlano di distanza, mai di territorio nazionale.
+RAGGIO_NOTEVOLI = 800     # km: entro cui si tengono anche antincendio ed emergenze
 
 EMERGENZE = {"7700": "guasto grave a bordo", "7600": "radio in avaria", "7500": "dirottamento"}
 # Emitter category ADS-B (standard DO-260B), resa leggibile.
@@ -100,17 +109,21 @@ def km(a, b) -> float:
     return 2 * R * math.asin(math.sqrt(h))
 
 
-def scarica(url: str, tentativi: int = 3):
+def scarica(url: str, tentativi: int = 2):
+    """Tentativi e attese volutamente contenuti: questo script gira insieme ad
+    altri cinque dentro un solo job, e tre ritentativi da 45 s per ciascuno dei
+    tre cerchi mangerebbero da soli l'intero tetto di tempo, facendo fallire il
+    commit degli snapshot che erano riusciti (rilievo colto in revisione)."""
     ultimo = None
     for n in range(tentativi):
         try:
             req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/json"})
-            with urllib.request.urlopen(req, timeout=45) as r:
+            with urllib.request.urlopen(req, timeout=20) as r:
                 return json.loads(r.read().decode("utf-8", "replace"))
         except (urllib.error.URLError, TimeoutError, ValueError, OSError) as e:
             ultimo = e
             if n < tentativi - 1:
-                time.sleep(4 * (n + 1))
+                time.sleep(3)
     raise RuntimeError(f"fonte non raggiungibile: {ultimo}")
 
 
@@ -126,7 +139,8 @@ def scheda(a: dict):
     la, lo = num(a.get("lat")), num(a.get("lon"))
     if la is None or lo is None:
         return None
-    if not (IT_LAT[0] <= la <= IT_LAT[1] and IT_LON[0] <= lo <= IT_LON[1]):
+    dist = km(GENZANO, (la, lo))
+    if dist > RAGGIO_NOTEVOLI:
         return None
     a_terra = str(a.get("alt_baro")) == "ground"
     quota = 0 if a_terra else num(a.get("alt_baro"))
@@ -158,7 +172,7 @@ def scheda(a: dict):
         "a_terra": a_terra,
         "velocita_kt": num(a.get("gs")),
         "rotta": num(a.get("dir")) if a.get("dir") is not None else num(a.get("track")),
-        "km_da_genzano": round(km(GENZANO, (la, lo))),
+        "km_da_genzano": round(dist),
         "etichette": etichette,
     }
     if "emergenza" in etichette:
@@ -187,6 +201,8 @@ def main() -> int:
         return 0
 
     tutti = [v for v in (scheda(a) for a in grezzi.values()) if v]
+    # Entro RAGGIO_AREA si tiene tutto; fino a RAGGIO_NOTEVOLI solo cio' che ha
+    # rilievo operativo. Oltre, gia' scartato in scheda().
     notevoli = {"antincendio", "emergenza"}
     elenco = [v for v in tutti
               if v["km_da_genzano"] <= RAGGIO_AREA or (notevoli & set(v["etichette"]))]
@@ -207,8 +223,10 @@ def main() -> int:
             "generato": ora(),
             "fonte": "adsb.fi — rete comunitaria di riceventi ADS-B",
             "fonte_url": "https://adsb.fi/",
-            "perimetro": ("tutti i velivoli entro %d km da Genzano, più i mezzi "
-                          "antincendio e le emergenze su tutta l'Italia" % RAGGIO_AREA),
+            "perimetro": ("tutti i velivoli entro %d km da Genzano; antincendio ed "
+                          "emergenze fino a %d km. Il criterio è la distanza, non il "
+                          "territorio di uno Stato." % (RAGGIO_AREA, RAGGIO_NOTEVOLI)),
+            "raggio_notevoli_km": RAGGIO_NOTEVOLI,
             "raggio_area_km": RAGGIO_AREA,
             "velivoli_osservati": len(grezzi),
             "cerchi_raggiunti": "%d/%d" % (raggiunti, len(CERCHI)),

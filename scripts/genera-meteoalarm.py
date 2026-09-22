@@ -74,17 +74,17 @@ def txt(el, tag: str) -> str:
     return ""
 
 
-def scarica(tentativi: int = 3) -> bytes:
+def scarica(tentativi: int = 2) -> bytes:
     ultimo = None
     for n in range(tentativi):
         try:
             req = urllib.request.Request(FEED, headers={"User-Agent": UA})
-            with urllib.request.urlopen(req, timeout=45) as r:
+            with urllib.request.urlopen(req, timeout=20) as r:
                 return r.read()
         except (urllib.error.URLError, TimeoutError, OSError) as e:
             ultimo = e
             if n < tentativi - 1:
-                time.sleep(4 * (n + 1))
+                time.sleep(3)
     raise RuntimeError(f"feed non raggiungibile: {ultimo}")
 
 
@@ -127,14 +127,24 @@ def main() -> int:
                     continue
             except ValueError:
                 pass  # data illeggibile: si tiene, meglio un avviso in più che uno perso
+        # 🔴 Un avviso che deve ancora cominciare NON e' in corso: va detto, o il
+        #    lettore lo prende per attivo (rilievo colto in revisione il 22/09/2026).
+        inizio = txt(e, "onset") or txt(e, "effective")
+        futuro = False
+        if inizio:
+            try:
+                futuro = datetime.fromisoformat(inizio.replace("Z", "+00:00")) > adesso
+            except ValueError:
+                pass
         avvisi.append({
+            "in_corso": not futuro,
             "regione": txt(e, "areaDesc") or "—",
             "fenomeno": fenomeno,
             "livello": livello or "non dichiarato",
             "evento_originale": evento,
             "severita": txt(e, "severity"),
             "certezza": txt(e, "certainty"),
-            "inizio": txt(e, "onset") or txt(e, "effective"),
+            "inizio": inizio,
             "fine": fine,
             "emesso": txt(e, "sent"),
             "identificativo": txt(e, "identifier"),
@@ -150,6 +160,7 @@ def main() -> int:
             "fonte_url": "https://meteoalarm.org/",
             "avvisi": len(avvisi),
             "scaduti_scartati": scaduti,
+            "in_corso": sum(1 for a in avvisi if a["in_corso"]),
             "avvertenza": (
                 "Quadro nazionale, non sostituisce il bollettino di criticità del "
                 "Dipartimento della Protezione Civile: per Genzano di Roma fa fede "

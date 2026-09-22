@@ -1,14 +1,16 @@
 {
  "_snapshot": {
-  "generato": "2026-09-22T09:04:33+00:00",
+  "generato": "2026-09-22T09:26:50+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
   "avvisi": 9,
   "scaduti_scartati": 1,
+  "in_corso": 7,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
   {
+   "in_corso": true,
    "regione": "Basilicata",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -21,6 +23,7 @@
    "identificativo": "2.49.0.0.380.3.IT.260922103950.015"
   },
   {
+   "in_corso": true,
    "regione": "Calabria",
    "fenomeno": "Pioggia",
    "livello": "gialla",
@@ -33,6 +36,7 @@
    "identificativo": "2.49.0.0.380.3.IT.260922103950.019"
   },
   {
+   "in_corso": true,
    "regione": "Calabria",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -45,6 +49,7 @@
    "identificativo": "2.49.0.0.380.3.IT.260922103950.018"
   },
   {
+   "in_corso": false,
    "regione": "Calabria",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -57,6 +62,7 @@
    "identificativo": "2.49.0.0.380.3.IT.260922103950.017"
   },
   {
+   "in_corso": true,
    "regione": "Campania",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -69,6 +75,7 @@
    "identificativo": "2.49.0.0.380.3.IT.260922103950.014"
   },
   {
+   "in_corso": true,
    "regione": "Puglia",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -81,6 +88,7 @@
    "identificativo": "2.49.0.0.380.3.IT.260922103950.016"
   },
   {
+   "in_corso": false,
    "regione": "Sardegna",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -93,6 +101,7 @@
    "identificativo": "2.49.0.0.380.3.IT.260922103950.022"
   },
   {
+   "in_corso": true,
    "regione": "Sicilia",
    "fenomeno": "Pioggia",
    "livello": "gialla",
@@ -105,6 +114,7 @@
    "identificativo": "2.49.0.0.380.3.IT.260922103950.021"
   },
   {
+   "in_corso": true,
    "regione": "Sicilia",
    "fenomeno": "Temporali",
    "livello": "gialla",
