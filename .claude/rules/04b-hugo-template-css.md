@@ -243,7 +243,8 @@ Genera bozze post social (X, Facebook, Instagram, Telegram) + immagini per il **
 - `scripts/genera-social.py` — motore Python: legge le rules `.claude/rules/02|03|06.md` e le inietta nel system prompt di Gemini, ottiene 4 testi via JSON strutturato, salva i `.txt` in `social-bozze/AAAA/MM/<slug>/`.
 - `scripts/genera-immagini-social.py` — Pillow: genera le immagini e il `README.md` della cartella. Font ufficiale **Titillium Web** (design system `.italia`, già nel repo `static/vendor/bootstrap-italia/`), colori istituzionali (#003366 + accento giallo #ffbe2e).
 - `scripts/genera-social.sh` — wrapper bash sequenziale.
-- `.github/workflows/genera-social-bozze.yml` — automazione CI a ogni push articolo.
+- `.github/workflows/genera-social-bozze.yml` — automazione CI a ogni push articolo **e al termine di ogni deploy**, perché anche gli articoli calendarizzati abbiano il materiale quando vanno online (22/09/2026).
+- `scripts/social_comune.py` + `scripts/social-pronti.py` — regole comuni (articolo online in ora italiana, materiale completo, candidato alla pubblicazione automatica) e i comandi `mancanti` / `sveglia` / `controlla`.
 
 **5 tipi di slide** (tutti 4:5 tranne la storia 9:16):
 - **Title card** — titolo + badge colorato per categoria + accento. Apre sempre il carosello (o è il post singolo).
@@ -272,7 +273,8 @@ Le foto utente vanno **sempre** inline nel corpo come `{{< foto >}}` (mai nel ba
 **Regole della scrittura sociale**: caricate dinamicamente dalle rules `02-content-design-pa.md` (linguaggio AGID, hashtag stabili, struttura post crisi), `03-accessibility.md` (a11y social: alt text, max 2 emoji, no Unicode decorativi), `06-protezione-civile-scientifica.md` (codici colore, struttura 6 punti per allerte).
 
 **Cosa NON fa** (intenzionalmente):
-- Non pubblica nulla: si ferma alle bozze. Dal 20/09/2026 Instagram e Facebook sono serviti dal repo privato `social-pc-genzano`, che prende il materiale da `social-bozze/` e pubblica due volte al giorno (rule 10 § "Pubblicazione automatica social"). X e Telegram restano copia/incolla manuale.
+- Non pubblica nulla: si ferma alle bozze. Dal 20/09/2026 Instagram e Facebook sono serviti dal repo privato `social-pc-genzano`, che prende il materiale da `social-bozze/` e lo pubblica insieme all'articolo, appena la pagina risponde sul sito (rule 10 § "Pubblicazione automatica social"). X resta copia/incolla manuale; Telegram ha il suo avviso automatico solo per gli articoli urgenti (`notifica-telegram-articolo.yml`).
+- Non aggiunge informazioni che non sono nell'articolo nemmeno nei **testi di riserva**: quando Gemini non risponde (`genera-social.py --riserva`) i testi si compongono da titolo, descrizione e `social_punti` del frontmatter, che hanno già passato il gate editoriale.
 - Non aggiunge informazioni che non sono nell'articolo (testo delle slide preso dall'articolo, mai inventato).
 - Non sostituisce la rilettura umana.
 

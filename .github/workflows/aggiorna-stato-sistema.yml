@@ -163,10 +163,26 @@ jobs:
             TS=$(date -u -d "$QUANDO" +%s 2>/dev/null || echo 0)
             ORE=$(( ($(date -u +%s) - TS) / 3600 ))
             if [ "$TS" = "0" ] || [ "$ORE" -gt 26 ]; then
-              PROBLEMI="${PROBLEMI}### Pubblicazione social ferma da ${ORE} ore\n\nDovrebbe girare due volte al giorno (08:30 e 18:30). Ultimo giro: ${QUANDO}.\n\nDa controllare: i workflow programmati di GitHub si disattivano da soli dopo 60 giorni senza commit nel repository, e si fermano se finiscono i minuti disponibili.\n\n"
+              PROBLEMI="${PROBLEMI}### Pubblicazione social ferma da ${ORE} ore\n\nDovrebbe girare più volte al giorno: ogni ora da sé, più le chiamate del sito quando esce un articolo. Ultimo giro: ${QUANDO}.\n\nDa controllare: i workflow programmati di GitHub si disattivano da soli dopo 60 giorni senza commit nel repository, e si fermano se finiscono i minuti disponibili.\n\n"
             elif [ "$ESITO" = "failure" ]; then
               PROBLEMI="${PROBLEMI}### Pubblicazione social: ultimo giro fallito\n\nGiro del ${QUANDO} concluso con errore. Il dettaglio è nelle issue di \`$SOCIAL_REPO\`.\n\n"
             fi
+          fi
+
+          # ------------------------------------------------------------
+          # 1-ter) ARTICOLI RIMASTI FUORI DAI SOCIAL.
+          #    Ogni articolo online esce anche su Instagram e Facebook
+          #    (istruzione dell'utente del 21/09/2026). La sentinella qui sopra
+          #    guarda solo che il repository social giri: il 22/09/2026 girava
+          #    regolare e non pubblicava nulla, perché agli articoli
+          #    calendarizzati mancava il materiale. Qui si guarda l'esito:
+          #    articoli online da oltre 3 ore senza materiale in social-bozze/
+          #    e, se il token consente di leggere la coda, articoli pronti ma
+          #    non pubblicati. Logica in scripts/social-pronti.py.
+          # ------------------------------------------------------------
+          SOCIAL_FUORI=$(python3 scripts/social-pronti.py controlla --ore 48 --tolleranza-min 180 2>/dev/null || true)
+          if [ -n "$SOCIAL_FUORI" ]; then
+            PROBLEMI="${PROBLEMI}${SOCIAL_FUORI}\n\n"
           fi
 
           # ------------------------------------------------------------

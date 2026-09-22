@@ -35,13 +35,15 @@ Dipendenze: Pillow (pip install Pillow), font-liberation (apt: fonts-liberation)
 """
 
 import argparse
-import datetime
 import re
 import subprocess
 import sys
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import social_comune  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT_COMUNICAZIONI = ROOT / "content" / "comunicazioni"
@@ -652,10 +654,11 @@ def estrai_articolo(path: Path) -> dict | None:
     # Le versioni "facile" (A2) sono nascoste da liste/feed: niente social dedicato.
     if fm.get("versione_facile_di"):
         return None
-    m = re.match(r"(\d{4}-\d{2}-\d{2})", fm.get("date", ""))
+    m = re.match(r"(\d{4}-\d{2}-\d{2})", social_comune.testo_campo(fm, "date"))
     if not m:
         return None
-    if datetime.date.fromisoformat(m.group(1)) > datetime.date.today():
+    # Online come lo decide Hugo, in ora italiana (scripts/social_comune.py).
+    if not social_comune.is_online(fm):
         return None
 
     # Cover principale dal frontmatter
@@ -712,7 +715,6 @@ def estrai_articolo(path: Path) -> dict | None:
 
 def trova_articoli_pubblicati() -> list[Path]:
     risultati = []
-    oggi = datetime.date.today()
     for p in sorted(CONTENT_COMUNICAZIONI.glob("*.md")):
         if p.name == "_index.md":
             continue
@@ -725,8 +727,7 @@ def trova_articoli_pubblicati() -> list[Path]:
             continue
         if fm.get("versione_facile_di"):
             continue
-        m = re.match(r"(\d{4}-\d{2}-\d{2})", fm.get("date", ""))
-        if not m or datetime.date.fromisoformat(m.group(1)) > oggi:
+        if not social_comune.is_online(fm):
             continue
         risultati.append(p)
     return risultati

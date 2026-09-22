@@ -4,7 +4,7 @@ _[Indice manuale](README.md)_
 
 Dal **20 settembre 2026** i contenuti del sito escono da soli su Instagram e Facebook. Non serve
 più copiare e incollare le bozze: il materiale che il sito già produce viene preso, messo in coda
-e pubblicato due volte al giorno.
+e pubblicato **insieme all'articolo**, appena la sua pagina è online.
 
 Questa Parte spiega cosa succede senza di te, cosa puoi fermare e cosa non si può più cambiare
 una volta che un post è uscito.
@@ -25,11 +25,22 @@ contrario. Nel sito non è cambiato nulla, continua a generare bozze e immagini 
 
 ## 42.2 — Cosa succede, e quando
 
-1. Pubblichi un articolo sul sito.
-2. Il sito genera da solo i testi e le immagini social in `social-bozze/AAAA/MM/<slug>/`.
-3. Due volte al giorno il sistema guarda cosa è pronto, lo mette in coda **uno al giorno**, e
-   pubblica quello arrivato a scadenza.
-4. Le fasce sono **08:30 e 18:30**, ora italiana.
+1. Un articolo va online: perché lo hai appena pubblicato, oppure perché era **calendarizzato** ed
+   è arrivata la sua data.
+2. Al termine del deploy che lo mette online, il sito genera da solo i testi e le immagini social
+   in `social-bozze/AAAA/MM/<slug>/`. Se Gemini, che scrive i testi, non risponde per più di
+   un'ora, i testi si compongono dal titolo, dal sommario e dai punti chiave dell'articolo: meglio
+   un post più asciutto che nessun post.
+3. Appena la pagina dell'articolo risponde davvero sul sito, il sito chiama il sistema di
+   pubblicazione, che mette l'articolo in coda e lo pubblica.
+4. Se escono più articoli insieme, i post si distanziano di **mezz'ora** l'uno dall'altro. Nessun
+   post esce prima che la sua pagina sia raggiungibile: un link rotto è peggio di un post in
+   ritardo.
+
+Il sistema gira anche da solo, in teoria ogni ora (in pratica a intervalli irregolari: GitHub
+salta molti giri programmati nei repository poco attivi), e il sito lo richiama due volte al giorno,
+alle 10:35 e alle 20:35 con l'ora legale, come rete di sicurezza: se una chiamata si perde, il giro
+successivo recupera.
 
 Su Instagram esce il carosello con tutte le immagini dell'articolo, più la **storia** da 24 ore.
 Su Facebook esce lo stesso materiale con il **testo scritto per Facebook**, che è più disteso e
@@ -51,9 +62,9 @@ riguardano la responsabilità del Gruppo.
 - **Gli articoli non ancora online.** Se un articolo è programmato per domani, la voce resta in
   coda e riparte al giro successivo, quando l'articolo è davvero leggibile.
 
-C'è anche un limite di ritmo: **un solo post automatico al giorno**, e il sistema guarda indietro
-solo di tre giorni. Se resta fermo per una settimana non recupera l'arretrato pubblicando sette
-post di fila.
+C'è anche un limite all'indietro: il sistema guarda solo gli articoli **degli ultimi tre giorni**.
+Se resta fermo per una settimana non recupera l'arretrato pubblicando sette post di fila; gli
+arretrati più vecchi si pubblicano a mano, scegliendo quali.
 
 ## 42.4 — I commenti su Instagram
 
@@ -154,6 +165,22 @@ Per provare senza pubblicare niente: **Actions → Pubblicazione automatica soci
 con `dry_run` a `true`. Mostra cosa uscirebbe, quante immagini e quanto è lunga la didascalia,
 senza chiamare nessuna piattaforma.
 
+### Il guasto che non dava errori: gli articoli calendarizzati (22/09/2026)
+
+Il sistema pubblica solo gli articoli che hanno il materiale pronto in `social-bozze/`. Fino al
+22 settembre il sito generava quel materiale in un solo momento: quando l'articolo veniva
+**caricato**. Un articolo scritto in anticipo, in quel momento, ha una data futura e non è ancora
+online: veniva saltato, e poi nessuno lo riprendeva quando la data arrivava.
+
+Così il resoconto della Festa del Pane (21 settembre) e «La prima pioggia intensa d'autunno»
+(22 settembre) sono rimasti fuori dai social, e ci sarebbero rimasti i **108 articoli** già in
+calendario. Nessun controllo se n'è accorto, perché il sistema di pubblicazione girava regolare:
+semplicemente non aveva niente da pubblicare. Lo ha notato l'utente.
+
+Da quel giorno il materiale si genera **al termine di ogni deploy**, cioè nel momento in cui un
+articolo diventa online, e il controllo di salute giornaliero del sito (la segnalazione
+«🩺 Salute del sistema») elenca ogni articolo online da oltre tre ore ancora senza materiale.
+
 ## 42.9 — Tre difetti trovati solo pubblicando davvero
 
 Vale la pena ricordarli, perché nessuno dei tre si vedeva in simulazione e tutti e tre davano lo
@@ -172,10 +199,12 @@ guasto dello stesso tipo, la prossima volta, si legge al primo colpo.
 
 ## 42.10 — Le altre due reti
 
-**Telegram** non passa da questo sistema, ma è già automatico per conto suo: a ogni articolo nuovo
-il workflow `notifica-telegram-articolo.yml` manda sul canale un avviso con badge, titolo, sommario
-e link. È una segnalazione, non un post curato; la bozza `telegram.txt` resta per quando si vuole
-pubblicare qualcosa di più costruito.
+**Telegram** non passa da questo sistema e segue una regola sua, più stretta: il workflow
+`notifica-telegram-articolo.yml` manda sul canale un avviso solo per gli articoli **urgenti**
+(badge `Allerta`, `Avviso`, `Emergenza`, `Aggiornamento`), e solo quando l'articolo viene caricato
+già online: un articolo urgente calendarizzato non viene annunciato. È una segnalazione, non un
+post curato; la bozza `telegram.txt` resta per quando si vuole pubblicare qualcosa di più
+costruito.
 
 **X resta a mano, per una scelta di spesa presa il 20/09/2026.** L'accesso gratuito alle API non
 esiste più da febbraio 2026: si paga a consumo, e un post che contiene un link costa **0,20 dollari**

@@ -11,7 +11,14 @@ Lo script `genera-social.py` usa il **tier gratuito Gemini 2.5 Flash** che ha li
 - Una rigenerazione massiva su 372 articoli **non sta in un solo lancio**: si fermerà
   dopo ~50 articoli.
 - Sui prossimi articoli pubblicati il workflow CI `genera-social-bozze.yml` continua
-  a funzionare correttamente (1 articolo per push = ben sotto il limite).
+  a funzionare correttamente: genera il materiale di ogni articolo quando va online
+  (calendarizzati compresi), cioè pochi articoli al giorno, ben sotto il limite.
+- **Se la quota si esaurisce lo stesso** (per esempio dopo una rigenerazione massiva
+  lanciata la mattina), gli articoli del giorno non restano fuori dai social: dopo
+  un'ora senza risposta da Gemini il workflow compone i **testi di riserva** dal
+  frontmatter dell'articolo (titolo, descrizione, `social_punti`), senza inventare
+  nulla (`genera-social.py --riserva`, dal 22/09/2026). Conviene quindi lanciare le
+  rigenerazioni massive la sera, a ridosso del reset della quota.
 
 **Strategia di rigenerazione massiva** (quando serve):
 1. Lancia `bash scripts/genera-social.sh --all` la prima volta — produrrà ~50 bozze
