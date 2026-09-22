@@ -83,8 +83,8 @@ html.a11y-pause-anim .navArr.hint{animation:none}
 
 #map{position:fixed;top:76px;left:0;right:min(380px,42vw);bottom:52px}
 #lmap{position:absolute;inset:0;background:#04070b}
-#windyWrap,#radioWrap{position:absolute;inset:0;display:none;z-index:1001;background:#04070b}
-#windyWrap iframe{width:100%;height:100%;border:0}
+#windyWrap,#radioWrap,#traffWrap{position:absolute;inset:0;display:none;z-index:1001;background:#04070b}
+#windyWrap iframe,#traffWrap iframe{width:100%;height:100%;border:0}
 #radioWrap{flex-direction:column}
 #rxBar{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;padding:6px 10px;background:#0a1119;border-bottom:1px solid var(--line);font-family:var(--mono)}
 .rxVfo b{font-size:22px;color:#f2f7f4;font-weight:400;letter-spacing:.04em} .rxVfo span{margin-left:8px;font-size:10px;color:var(--cyn);letter-spacing:.14em}
@@ -406,6 +406,7 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
   <button data-v="met"><span class="ic">≋</span>METEO</button>
   <button data-v="map"><span class="ic">▤</span>CARTE</button>
   <button data-v="wnd"><span class="ic">☈</span>WINDY</button>
+  <button data-v="tra" title="Traffico e incidenti segnalati in tempo reale"><span class="ic">⇄</span>TRAFFICO</button>
   <button data-v="rad" title="Ascolto delle bande radioamatoriali via SDR (spettro e waterfall)"><span class="ic">⌁</span>RADIO</button>
   <button data-v="amb"><span class="ic">✿</span>ARIA·MARE</button>
   <button data-v="ems"><span class="ic">⚑</span>EMERGENZE</button>
@@ -427,6 +428,7 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
 <main id="map">
   <div id="lmap"></div>
   <div id="windyWrap"><iframe id="windyFrame" title="Mappa meteo interattiva Windy centrata su Genzano di Roma" loading="lazy"></iframe></div>
+  <div id="traffWrap"><iframe id="traffFrame" title="Mappa del traffico in tempo reale centrata su Genzano di Roma" loading="lazy"></iframe></div>
   <div id="radioWrap">
     <div id="rxBar">
       <div class="rxVfo"><b id="rxFreq">—</b><span id="rxMode"></span></div>
@@ -1715,6 +1717,53 @@ function viewMap(){
    caricato SOLO su richiesta esplicita (click-to-load, stesso pattern di
    /allerte-meteo/ — privacy-first + WCAG 3.2.5 Change on Request). */
 S.windy={on:false,ov:"radar",lvl:"surface",prod:"ecmwf",zoom:8,detail:false};
+/* ---------------- TRAFFICO — mappa live in tempo reale ----------------
+   Si usa la mappa incorporabile che Waze pubblica apposta (embed.waze.com/iframe):
+   nessuna chiave, nessuna ingestione di dati, nessun reverse engineering di API
+   altrui. Stesso click-to-load di Windy: il server di terzi viene contattato solo
+   su richiesta esplicita dell'utente, mai al caricamento della pagina.
+   🔴 Il dato e' SEGNALATO DAGLI UTENTI, non ufficiale: le chiusure che fanno fede
+   sono quelle di Polizia Locale, Comune e Anas. La scheda lo dice. */
+S.traffico={on:false,zoom:11};
+const traffUrl=()=>`https://embed.waze.com/it/iframe?zoom=${S.traffico.zoom}`+
+  `&lat=${GENZANO.lat}&lon=${GENZANO.lon}&ct=livemap`;
+function traffSync(){
+  $("#traffWrap").style.display=(S.view==="tra"&&S.traffico.on)?"block":"none";
+}
+function viewTra(){
+  title.textContent="TRAFFICO — TEMPO REALE";
+  feed.innerHTML="";
+  if(!S.traffico.on){
+    const el=document.createElement("div");el.className="wx";
+    el.innerHTML=`<h3>MAPPA DEL TRAFFICO<span>CLICK-TO-LOAD</span></h3>
+      <p>Traffico, rallentamenti, incidenti e strade chiuse segnalati in tempo reale,
+      centrati su Genzano di Roma. Per vederla devi caricare la mappa fornita da
+      <b>Waze</b>: il browser riceverà risorse dal loro server e potrebbe essere
+      impostato qualche cookie tecnico di terze parti.</p>
+      <button class="wbtn" id="traffLoad">⇄ CARICA LA MAPPA DEL TRAFFICO</button>
+      <p style="margin-top:6px"><a href="https://www.waze.com/it/live-map/directions?latlng=${GENZANO.lat}%2C${GENZANO.lon}" target="_blank" rel="noopener">In alternativa aprila in una nuova scheda</a>.</p>`;
+    feed.appendChild(el);
+    el.querySelector("#traffLoad").addEventListener("click",()=>{
+      S.traffico.on=true;$("#traffFrame").src=traffUrl();traffSync();render();
+    });
+  }else{
+    const el=document.createElement("div");el.className="wx";
+    el.innerHTML=`<h3>MAPPA DEL TRAFFICO<span>SEGNALAZIONI DEGLI UTENTI</span></h3>
+      <div class="fchips" role="group" aria-label="Zoom della mappa del traffico">`+
+      [[13,"GENZANO"],[11,"CASTELLI"],[9,"LAZIO"],[7,"CENTRO ITALIA"]].map(([z,et])=>
+        `<button type="button" class="fchip" data-tz="${z}" aria-pressed="${S.traffico.zoom===z}">${et}</button>`).join("")+
+      `</div>
+      <button class="wbtn" id="traffOff">✕ CHIUDI LA MAPPA</button>`;
+    feed.appendChild(el);
+    el.addEventListener("click",e=>{
+      const z=e.target.closest("[data-tz]");
+      if(z){S.traffico.zoom=Number(z.dataset.tz);$("#traffFrame").src=traffUrl();render();return;}
+      if(e.target.closest("#traffOff")){S.traffico.on=false;$("#traffFrame").src="";traffSync();render();}
+    });
+  }
+  feed.appendChild(noteEl('Traffico: mappa live di <a href="https://www.waze.com/live-map" target="_blank" rel="noopener">Waze</a>. '+
+    '<b>Le segnalazioni arrivano dagli utenti e non sono ufficiali.</b> Le chiusure e le deviazioni che fanno fede sono quelle disposte da Polizia Locale, Comune e Anas; il Gruppo non regola il traffico (Circolare DPC 6 agosto 2018).'));
+}
 // Overlay Windy raggruppati per uso operativo (id ufficiali degli URL windy.com)
 const WINDY_GRP=[
   ["OSSERVATO",[["radar","RADAR"],["satellite","SATELLITE"]]],
@@ -2777,7 +2826,7 @@ function viewRad(){
   feed.appendChild(tx);
   feed.appendChild(noteEl('Ricevitori esterni <a href="https://sdr.noantri.org/" target="_blank" rel="noopener">OpenWebRX+ di IZ0FKE</a> e <a href="https://sdr-plus.i6iqx.it/" target="_blank" rel="noopener">OpenWebRX+ di I6IQX</a>, caricati solo su tua richiesta; limiti di banda da <a href="https://www.iaru-r1.org/on-the-air/band-plans/" target="_blank" rel="noopener">IARU Regione 1</a> e dal Piano nazionale di ripartizione delle frequenze (MIMIT); canali PMR446/CB/LPD di libero uso. Le frequenze di rete sono quelle pubblicate dalle rispettive organizzazioni.'));
 }
-function render(){({all:viewAll,sis:viewSis,met:viewMet,map:viewMap,wnd:viewWnd,rad:viewRad,amb:viewAmb,ems:viewEms,log:viewLog})[S.view]();windySync();radioSync();}
+function render(){({all:viewAll,sis:viewSis,met:viewMet,map:viewMap,wnd:viewWnd,tra:viewTra,rad:viewRad,amb:viewAmb,ems:viewEms,log:viewLog})[S.view]();windySync();traffSync();radioSync();}
 
 /* ---------------- barra NOTIZIE — agenzie di stampa (Italia e mondo) ----------------
    ANSA + Adnkronos dallo snapshot self-hosted open-data/notizie-agenzie.json
@@ -2847,7 +2896,7 @@ function tickUpd(){
 /* Deep-link e condivisione delle schermate: ogni vista ha un hash proprio
    (#allerta, #sismico, #meteo, #carte, #windy, #radio, #aria-mare, #emergenze-ue),
    così il link condiviso apre direttamente quella schermata. */
-const VIEW_SLUG={all:"allerta",sis:"sismico",met:"meteo",map:"carte",wnd:"windy",rad:"radio",amb:"aria-mare",ems:"emergenze-ue",log:"registro"};
+const VIEW_SLUG={all:"allerta",sis:"sismico",met:"meteo",map:"carte",wnd:"windy",tra:"traffico",rad:"radio",amb:"aria-mare",ems:"emergenze-ue",log:"registro"};
 const SLUG_VIEW=Object.fromEntries(Object.entries(VIEW_SLUG).map(([k,v])=>[v,k]));
 function setView(v,fromHash){
   if(!VIEW_SLUG[v])return;
@@ -2988,7 +3037,7 @@ document.addEventListener("visibilitychange",()=>{
 document.addEventListener("keydown",e=>{
   if(e.altKey||e.ctrlKey||e.metaKey)return;
   if(e.target&&e.target.matches&&e.target.matches("input,select,textarea"))return;
-  const order=["all","sis","met","map","wnd","amb","ems","log","rad"];
+  const order=["all","sis","met","map","wnd","tra","amb","ems","log","rad"];
   if(e.key>="1"&&e.key<="9")setView(order[+e.key-1]);
   else if(e.key==="r"||e.key==="R"){const b=document.querySelector('#nav [data-l="radar"]');if(b)b.click();}
 });
