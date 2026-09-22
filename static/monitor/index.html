@@ -2131,13 +2131,28 @@ function viewEms(){
     }
   }
   // Punti caldi da satellite: presenti solo se il repository ha la chiave FIRMS.
+  // 🔴 Il riquadro chiesto alla fonte (6,4–18,8 E / 35,2–47,2 N) NON e' l'Italia:
+  //    contiene Corsica, Slovenia, Croazia, Bosnia, Montenegro e la punta della
+  //    Tunisia. Col primo dato reale, 28 punti su 99 erano fuori dai confini
+  //    (22/09/2026): il titolo non dice "Italia", e il numero che conta per una
+  //    sala di Genzano e' la distanza del punto piu' vicino, non il totale.
   if(S.firms&&S.firms.punti.length&&!snapVecchio(S.firms.snap)){
     const f=S.firms, forti=f.punti.filter(p=>Number.isFinite(p.potenza_radiativa_mw)&&p.potenza_radiativa_mw>=5).length;
-    feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>PUNTI CALDI DA SATELLITE — ITALIA<span>NASA FIRMS · ULTIME ${esc(String(f.snap.finestra_ore||24))} ORE</span></h3>
+    let vicino=null;
+    for(const p of f.punti){
+      if(!Number.isFinite(p.lat)||!Number.isFinite(p.lon))continue;
+      const d=havKm(GENZANO,{lat:p.lat,lon:p.lon});
+      if(vicino===null||d<vicino)vicino=d;
+    }
+    feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>PUNTI CALDI DA SATELLITE<span>NASA FIRMS · ITALIA E PAESI VICINI · ULTIME ${esc(String(f.snap.finestra_ore||24))} ORE</span></h3>
       <div class="kgrid">
       <div class="kpi" style="--kc:${f.punti.length?"#ff8c1a":"#35e08c"}"><small>ANOMALIE RILEVATE</small><b>${f.punti.length}</b><em>punti</em></div>
       <div class="kpi"><small>CON POTENZA ≥ 5 MW</small><b>${forti}</b><em>più probabili incendi</em></div>
-      </div></div>`);
+      <!-- la distanza da sola non dice gravita': il punto piu' vicino puo' essere
+           un'anomalia da 2 MW. Il colore di allarme sta sulla potenza, non qui. -->
+      <div class="kpi"><small>PIÙ VICINO A GENZANO</small><b>${vicino!==null?Math.round(vicino):"—"}</b><em>${vicino!==null?"km":"posizione N/D"}</em></div>
+      </div>
+      <p style="margin:6px 0 0;color:var(--dim);font-size:11px">Il riquadro interrogato copre l'Italia e i paesi vicini: parte dei punti cade oltre confine.</p></div>`);
   }
   const snapNote=S.emsSnap?`Snapshot EMS del ${fmtT(S.emsSnap.toISOString())} (rigenerato ogni 15 minuti).`:"";
   feed.appendChild(noteEl('Attivazioni <a href="https://rapidmapping.emergency.copernicus.eu/" target="_blank" rel="noopener">Copernicus EMS Rapid Mapping</a> e allerte globali <a href="https://www.gdacs.org/" target="_blank" rel="noopener">GDACS</a> (dati pubblici, copie self-hosted rigenerate a ogni deploy). '+snapNote+
