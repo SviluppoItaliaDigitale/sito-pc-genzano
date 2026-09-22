@@ -100,15 +100,33 @@ bash scripts/genera-social.sh --dry-run content/comunicazioni/<file>.md
 
 ## Workflow automatico (GitHub Action)
 
-Al **push su `main`** che modifica un articolo `content/comunicazioni/*.md`,
-il workflow `genera-social-bozze.yml`:
+Il workflow `genera-social-bozze.yml` gira al **push su `main`** che modifica
+un articolo, **al termine di ogni deploy riuscito** e ogni ora come rete. A ogni
+giro:
 
-1. Identifica gli articoli toccati nel commit
-2. Genera le bozze per ognuno
-3. Genera le immagini Instagram
+1. Individua gli articoli da servire: quelli toccati dal push, più tutti gli
+   articoli **online** nelle ultime 72 ore a cui manca il materiale
+   (`scripts/social-pronti.py mancanti`). È il caso degli articoli
+   **calendarizzati**: al commit hanno data futura e vengono saltati, e il
+   loro materiale nasce al primo deploy dopo la data di uscita.
+2. Genera i testi per ognuno. Se Gemini non risponde e l'articolo è pronto
+   da almeno un'ora, compone **testi di riserva** dal frontmatter
+   (`genera-social.py --riserva`): titolo, descrizione e `social_punti`,
+   niente di inventato.
+3. Genera le immagini (feed + storia).
 4. Committa il tutto con messaggio `[skip-social] Bozze social: ...`
+5. Se un articolo pronto è appena diventato raggiungibile sul sito, chiama
+   la pubblicazione nel repository privato `social-pc-genzano`
+   (`scripts/social-pronti.py sveglia`).
 
-Il marker `[skip-social]` impedisce ricorsioni infinite.
+Il marker `[skip-social]` impedisce ricorsioni infinite. Le date si leggono
+in ora italiana, come fa Hugo (`scripts/social_comune.py`): fino al 22/09/2026
+i generatori usavano la data UTC del runner, e fra mezzanotte e le due un
+articolo del giorno risultava «futuro».
+
+Per sapere in qualunque momento quali articoli online sono rimasti senza
+materiale: `python3 scripts/social-pronti.py controlla` (lo stesso controllo
+gira ogni giorno nel controllo di salute del sistema).
 
 Si può anche lanciare manualmente da `Actions → 📱 Genera bozze social automatiche → Run workflow`.
 

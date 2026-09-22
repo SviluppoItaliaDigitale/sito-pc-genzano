@@ -523,7 +523,7 @@ Tutti i workflow di manutenzione girano **lunedì** scaglionati. Lista in `CLAUD
 - `pubblica-programmata.yml` — giornaliero 06:00 UTC → rilancia deploy per articoli con `date` futura passata
 - `audit-sito.yml` — lunedì 09:00 UTC → audit completo (contenuti + codice + governance docs + accessibilità)
 - `check-links-sito.yml` — lunedì 10:00 UTC → crawl lychee
-- `genera-social-bozze.yml` — ogni push articolo → bozze social (X/FB/IG/Telegram) via Gemini API
+- `genera-social-bozze.yml` — ogni push articolo e al termine di ogni deploy → bozze social (X/FB/IG/Telegram) via Gemini API per ogni articolo online, calendarizzati compresi
 - `scarica-foto-automatica.yml` — ogni push: step 1 deprecato (marker bandito), step 2 attivo (`auto-cover-mancanti.py`)
 - `smoke-test-post-deploy.yml` + `lighthouse-audit.yml` — post-deploy
 

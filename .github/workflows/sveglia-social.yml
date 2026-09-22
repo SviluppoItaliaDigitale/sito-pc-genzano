@@ -3,29 +3,24 @@ name: "⏰ Sveglia della pubblicazione social"
 # Sveglia la pubblicazione su Instagram e Facebook, che vive nel repository
 # privato social-pc-genzano.
 #
-# I post devono uscire INSIEME agli articoli del sito, non a un orario fisso
-# (istruzione dell'utente del 21/09/2026). L'innesco principale e' quindi un
-# evento, non un orario: appena le bozze social di un articolo nuovo sono
-# pronte, o appena un articolo calendarizzato diventa online, questo workflow
-# chiama la pubblicazione.
+# I post escono INSIEME agli articoli del sito (istruzione dell'utente del
+# 21/09/2026), e la sveglia che conta la dà genera-social-bozze.yml: gira al
+# termine di ogni deploy, prepara il materiale degli articoli appena andati
+# online (calendarizzati compresi) e chiama il repository privato appena la
+# pagina risponde davvero sul sito.
 #
-# Restano due giri a orario come rete di sicurezza, per i casi in cui un
-# evento si perde. Chiamare il workflow privato quando ha gia' pubblicato non
-# fa danno: la coda segna le voci come pubblicate, e una voce non esce finche'
-# la sua pagina non risponde davvero sul sito. Per questo non c'e' nessun
-# controllo preliminare.
+# Qui restano due giri a orario, come rete di sicurezza per ciò che quella
+# sveglia non vede: voci rimaste in coda, un evento perso, un giro fallito.
+# Chiamare il workflow privato quando ha già pubblicato non fa danno: la
+# coda segna le voci come pubblicate.
+#
+# 22/09/2026: tolti gli inneschi a evento (fine delle bozze social, rebuild
+# del mattino). Da quando le bozze si generano anche dopo ogni deploy, cioè
+# decine di volte al giorno, quegli inneschi avrebbero chiamato il repository
+# privato a ogni giro, consumando i suoi minuti senza pubblicare niente di più.
 
 on:
-  workflow_run:
-    # L'innesco che conta: le bozze social di un articolo nuovo sono pronte,
-    # oppure il rebuild del mattino ha portato online un articolo
-    # calendarizzato.
-    workflows:
-      - "📱 Genera bozze social automatiche"
-      - "🗓️ Pubblicazione programmata articoli"
-    types: [completed]
   schedule:
-    # Rete di sicurezza, se un evento si perde.
     - cron: '35 8 * * *'
     - cron: '35 18 * * *'
   workflow_dispatch:
@@ -43,9 +38,6 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: 📣 Chiama la pubblicazione nel repository privato
-        # Su workflow_run gira anche se il workflow chiamante è fallito: le
-        # bozze potrebbero essere state generate lo stesso, e un giro in più
-        # non pubblica nulla che non sia pronto.
         env:
           GH_TOKEN: ${{ secrets.SOCIAL_REPO_PAT }}
         run: |
@@ -57,4 +49,4 @@ jobs:
           REPO="SviluppoItaliaDigitale/social-pc-genzano"
           gh workflow run "pubblica-social-auto.yml" --repo "$REPO"
           echo "Pubblicazione richiesta a $REPO."
-          echo "Se il suo cron ha gia' pubblicato, questo giro non trova voci mature e non fa nulla."
+          echo "Se ha gia' pubblicato, questo giro non trova voci mature e non fa nulla."

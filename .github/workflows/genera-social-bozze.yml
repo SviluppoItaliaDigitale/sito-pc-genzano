@@ -1,17 +1,38 @@
 name: "📱 Genera bozze social automatiche"
 
-# Per ogni nuovo articolo committato in content/comunicazioni/, genera
-# le bozze social (X, Facebook, Instagram, Telegram) via Gemini API +
-# le immagini Instagram (post 1080x1080 + story 1080x1920) via Pillow.
+# Prepara il materiale social di ogni articolo ONLINE sul sito: i testi (X,
+# Facebook, Instagram, Telegram) via Gemini API e le immagini (feed + storia)
+# via Pillow, in social-bozze/AAAA/MM/<slug>/. Da lì il repository privato
+# social-pc-genzano li pubblica su Instagram e Facebook.
 #
-# Bozze testuali + immagini Instagram finiscono insieme in
-# social-bozze/<slug>/ — committate dal workflow con marker [skip-social]
-# per evitare loop, e visibili/scaricabili da GitHub web (utile da mobile:
-# tutto il materiale di un articolo in un solo posto).
+# Regola dell'utente (21/09/2026): ogni articolo che esce sul sito esce anche
+# sui social, in concomitanza. Per questo il workflow gira in quattro casi:
 #
-# La cartella social-bozze/ NON viene servita da Hugo (non è una
-# cartella riconosciuta come content/, static/, themes/, data/, layouts/),
-# quindi resta solo nel repo come archivio di lavoro.
+#   - push su main di un articolo: gli articoli toccati, più il recupero;
+#   - al termine di ogni deploy riuscito: e' l'istante in cui un articolo
+#     calendarizzato diventa davvero online;
+#   - ogni ora, come rete di sicurezza;
+#   - a mano (Run workflow), su un articolo o su tutti.
+#
+# 🔴 Perché il deploy (22/09/2026). Fino a quel giorno il workflow girava
+# solo al push, e il generatore salta gli articoli con data futura: un
+# articolo scritto in anticipo veniva saltato al commit e nessuno lo
+# riprendeva quando la data arrivava. Il repository privato pubblica solo ciò
+# che ha il materiale pronto, quindi quegli articoli non uscivano mai sui
+# social: il resoconto della Festa del Pane del 21/09 e la «Prima pioggia
+# intensa» del 22/09, e con loro i 108 articoli già in calendario. Adesso a
+# ogni giro scripts/social-pronti.py cerca gli articoli online nelle ultime
+# 72 ore (la finestra di recupero del repository privato) a cui manca il
+# materiale, e li genera.
+#
+# Dopo il commit, lo stesso script decide se svegliare subito il repository
+# privato: sì quando un articolo pronto è appena diventato raggiungibile sul
+# sito. Non a ogni giro: il repository privato consuma minuti a pagamento e
+# i suoi giri programmati bastano per tutto ciò che non è appena uscito.
+#
+# La cartella social-bozze/ NON viene servita da Hugo: resta solo nel repo.
+# I commit del workflow portano [skip-social] e, fatti col GITHUB_TOKEN, non
+# riattivano i workflow su push.
 
 on:
   push:
@@ -19,6 +40,12 @@ on:
     paths:
       - "content/comunicazioni/**.md"
       - ".claude/rules/**.md"  # se cambiano le rules, ri-genera
+  workflow_run:
+    workflows: ["🚀 Build e Deploy"]
+    types: [completed]
+  schedule:
+    # Rete di sicurezza, se l'evento del deploy si perde.
+    - cron: "41 * * * *"
   workflow_dispatch:
     inputs:
       articolo:
@@ -32,11 +59,19 @@ on:
 permissions:
   contents: write
 
-# Skip se il commit precedente è del bot stesso (evita loop).
-# Skip se il messaggio del commit ha [skip-social].
+# Un giro alla volta: due giri insieme genererebbero lo stesso materiale e il
+# secondo andrebbe in conflitto al push.
+concurrency:
+  group: genera-social-bozze
+  cancel-in-progress: false
+
 jobs:
   bozze-social:
-    if: "!contains(github.event.head_commit.message, '[skip-social]')"
+    # Skip se il messaggio del commit ha [skip-social]; dopo un deploy solo se
+    # riuscito (un deploy annullato o fallito non ha messo online nulla).
+    if: >-
+      !contains(github.event.head_commit.message || '', '[skip-social]')
+      && (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success')
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
@@ -45,49 +80,70 @@ jobs:
         with:
           fetch-depth: 2
 
+      - name: "🔄 Allinea all'ultimo main"
+        # Un giro in attesa (concurrency) parte dal commit di quando e' stato
+        # innescato: senza allinearsi non vedrebbe il materiale appena
+        # committato dal giro precedente e lo rigenererebbe.
+        run: git pull --ff-only origin main || echo "::warning::Allineamento a main non riuscito, proseguo dal commit dell'evento."
+
       - name: "🐍 Setup Python"
         uses: actions/setup-python@v7
         with:
           python-version: "3.x"
 
+      - name: "📝 Articoli da processare"
+        id: lista
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -n "${{ github.event.inputs.articolo }}" ]; then
+            echo "modalita=singolo" >> "$GITHUB_OUTPUT"
+            echo "articolo=${{ github.event.inputs.articolo }}" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "modalita=batch" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # Articoli aggiunti o modificati dal push: valgono a qualunque età.
+          CHANGED=""
+          if [ "${{ github.event_name }}" = "push" ]; then
+            CHANGED=$(git diff --name-only --diff-filter=AM \
+              "${{ github.event.before }}" "${{ github.sha }}" 2>/dev/null \
+              | grep -E '^content/comunicazioni/[0-9].+\.md$' || true)
+          fi
+
+          # Articoli online a cui manca il materiale: quelli toccati dal push
+          # e quelli andati online nelle ultime 72 ore (i calendarizzati).
+          # Riga per riga: percorso<TAB>1 se sono ammessi i testi di riserva.
+          # shellcheck disable=SC2086
+          LISTA=$(python3 scripts/social-pronti.py mancanti --ore 72 $CHANGED)
+          if [ -z "$LISTA" ]; then
+            echo "modalita=nessuno" >> "$GITHUB_OUTPUT"
+          else
+            echo "modalita=lista" >> "$GITHUB_OUTPUT"
+            {
+              echo "files<<EOF"
+              echo "$LISTA"
+              echo "EOF"
+            } >> "$GITHUB_OUTPUT"
+          fi
+
       - name: "📦 Installa dipendenze"
+        if: steps.lista.outputs.modalita != 'nessuno'
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq fonts-liberation
           pip install --quiet Pillow
 
-      - name: "📝 Articoli da processare"
-        id: lista
-        run: |
-          if [ -n "${{ github.event.inputs.articolo }}" ]; then
-            echo "modalita=singolo" >> "$GITHUB_OUTPUT"
-            echo "articolo=${{ github.event.inputs.articolo }}" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event_name }}" = "push" ]; then
-            # Articoli aggiunti/modificati nell'ultimo push
-            CHANGED=$(git diff --name-only --diff-filter=AM \
-              "${{ github.event.before }}" "${{ github.sha }}" \
-              | grep -E '^content/comunicazioni/[0-9].+\.md$' || true)
-            if [ -z "$CHANGED" ]; then
-              echo "modalita=nessuno" >> "$GITHUB_OUTPUT"
-            else
-              echo "modalita=changed" >> "$GITHUB_OUTPUT"
-              echo "files<<EOF" >> "$GITHUB_OUTPUT"
-              echo "$CHANGED" >> "$GITHUB_OUTPUT"
-              echo "EOF" >> "$GITHUB_OUTPUT"
-            fi
-          else
-            echo "modalita=batch" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: "🤖 Genera bozze (Gemini)"
+      - name: "🤖 Genera i testi (Gemini)"
         if: steps.lista.outputs.modalita != 'nessuno'
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           if [ -z "$GEMINI_API_KEY" ]; then
-            echo "::warning::GEMINI_API_KEY non configurata. Salto generazione bozze."
-            echo "Aggiungi GEMINI_API_KEY come Secret in Settings -> Secrets and variables -> Actions"
-            exit 0
+            echo "::warning::GEMINI_API_KEY non configurata: solo testi di riserva, e solo dopo un'ora dall'uscita dell'articolo."
           fi
 
           FORCE=""
@@ -102,16 +158,20 @@ jobs:
             batch)
               python3 scripts/genera-social.py --all $FORCE
               ;;
-            changed)
-              while IFS= read -r f; do
+            lista)
+              # I testi di riserva (dal frontmatter) solo se l'articolo è
+              # pronto da almeno un'ora: prima si lascia a Gemini qualche giro.
+              while IFS=$'\t' read -r f riserva; do
                 [ -z "$f" ] && continue
                 echo "=== $f ==="
-                python3 scripts/genera-social.py $FORCE "$f" || echo "  (errore non-fatale, continuo)"
+                RISERVA=""
+                [ "$riserva" = "1" ] && RISERVA="--riserva"
+                python3 scripts/genera-social.py $FORCE $RISERVA "$f" || echo "  (errore non fatale, continuo)"
               done <<< "${{ steps.lista.outputs.files }}"
               ;;
           esac
 
-      - name: "🖼️ Genera immagini Instagram (Pillow)"
+      - name: "🖼️ Genera le immagini (Pillow)"
         if: steps.lista.outputs.modalita != 'nessuno'
         run: |
           FORCE=""
@@ -126,10 +186,10 @@ jobs:
             batch)
               python3 scripts/genera-immagini-social.py --all $FORCE
               ;;
-            changed)
-              while IFS= read -r f; do
+            lista)
+              while IFS=$'\t' read -r f _riserva; do
                 [ -z "$f" ] && continue
-                python3 scripts/genera-immagini-social.py $FORCE "$f" || echo "  (errore non-fatale)"
+                python3 scripts/genera-immagini-social.py $FORCE "$f" || echo "  (errore non fatale)"
               done <<< "${{ steps.lista.outputs.files }}"
               ;;
           esac
@@ -140,7 +200,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          # Aggiungi solo se ci sono nuovi file (testi e immagini stanno insieme in social-bozze/<slug>/)
+          # Testi e immagini stanno insieme in social-bozze/AAAA/MM/<slug>/
           git add social-bozze/ 2>/dev/null || true
 
           if git diff --staged --quiet; then
@@ -148,14 +208,13 @@ jobs:
           else
             CHANGED=$(git diff --staged --name-only)
             COUNT_TXT=$(echo "$CHANGED" | grep -c '\.txt$' || true)
-            COUNT_IMG=$(echo "$CHANGED" | grep -c '\.webp$' || true)
+            COUNT_IMG=$(echo "$CHANGED" | grep -c '\.jpg$' || true)
             COUNT_TXT="${COUNT_TXT:-0}"
             COUNT_IMG="${COUNT_IMG:-0}"
             git commit -m "[skip-social] Bozze social: $COUNT_TXT testi + $COUNT_IMG immagini"
 
             # Rebase + push con retry per gestire conflitti di concorrenza
             # (più workflow possono pushare insieme dopo un articolo nuovo).
-            # Fino a 3 tentativi: pull --rebase + push.
             for tentativo in 1 2 3; do
               if git push 2>&1; then
                 echo "Push riuscito al tentativo $tentativo"
@@ -169,3 +228,27 @@ jobs:
               fi
             done
           fi
+
+      - name: "📣 Sveglia la pubblicazione social"
+        # Gira a ogni giro, anche senza materiale nuovo: dopo un push le bozze
+        # nascono prima che il deploy metta online la pagina, e il repository
+        # privato non pubblica un link che non risponde. È il giro successivo
+        # al deploy che lo trova raggiungibile e lo sveglia.
+        id: sveglia
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOCIAL_PAT: ${{ secrets.SOCIAL_REPO_PAT }}
+        run: python3 scripts/social-pronti.py sveglia
+
+      - name: "📣 Chiama il repository social"
+        if: steps.sveglia.outputs.sveglia == 'si'
+        env:
+          GH_TOKEN: ${{ secrets.SOCIAL_REPO_PAT }}
+        run: |
+          if [ -z "${GH_TOKEN:-}" ]; then
+            echo "::warning::SOCIAL_REPO_PAT non configurato: sveglia saltata."
+            exit 0
+          fi
+          gh workflow run "pubblica-social-auto.yml" --repo "SviluppoItaliaDigitale/social-pc-genzano" \
+            && echo "Pubblicazione richiesta al repository social." \
+            || echo "::warning::Chiamata al repository social non riuscita: ci penseranno i suoi giri programmati."

@@ -16,6 +16,15 @@ Modalità:
   python3 scripts/genera-social.py --since 2026-04-01     # da una data in poi
   python3 scripts/genera-social.py --dry-run path/...     # mostra senza scrivere
   python3 scripts/genera-social.py --force path/...       # sovrascrive bozze esistenti
+  python3 scripts/genera-social.py --riserva path/...     # se Gemini non risponde, testi di riserva
+
+Testi di riserva (22/09/2026): se Gemini non risponde (quota, rete, chiave
+assente) e lo script è lanciato con --riserva, i quattro testi si compongono
+dal frontmatter dell'articolo (titolo, descrizione, social_punti), che ha già
+passato il gate editoriale: niente viene inventato. Senza testi il repository
+social non può pubblicare, e l'articolo resterebbe fuori dai social per
+sempre. Il workflow passa --riserva solo quando l'articolo è pronto da almeno
+un'ora, così Gemini ha prima qualche giro per rispondere.
 
 Variabili d'ambiente richieste:
   GEMINI_API_KEY    chiave Google AI Studio (gratuita)
@@ -36,6 +45,9 @@ import time
 import urllib.error
 import urllib.request
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import social_comune  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT_COMUNICAZIONI = ROOT / "content" / "comunicazioni"
@@ -123,32 +135,9 @@ def carica_rules() -> str:
 
 
 def parse_frontmatter(testo: str) -> tuple[dict, str]:
-    """Frontmatter YAML semplice (senza dipendenze): coppie chiave: valore.
-    Ritorna (dict_frontmatter, corpo_articolo).
-    """
-    if not testo.startswith("---\n"):
-        return {}, testo
-    fine = testo.find("\n---", 4)
-    if fine < 0:
-        return {}, testo
-    raw_fm = testo[4:fine].strip()
-    body = testo[fine + 4:].lstrip("\n")
-
-    fm = {}
-    chiave_corrente = None
-    for riga in raw_fm.split("\n"):
-        if not riga.strip() or riga.lstrip().startswith("#"):
-            continue
-        m = re.match(r"^([a-zA-Z_][a-zA-Z0-9_]*):\s*(.*)$", riga)
-        if m:
-            chiave_corrente = m.group(1)
-            valore = m.group(2).strip()
-            if valore.startswith('"') and valore.endswith('"'):
-                valore = valore[1:-1]
-            elif valore == "":
-                valore = ""
-            fm[chiave_corrente] = valore
-    return fm, body
+    """Frontmatter dell'articolo: stesso parser di tutta la catena social
+    (scripts/social_comune.py), che legge anche le liste come social_punti."""
+    return social_comune.parse_frontmatter(testo)
 
 
 def estrai_articolo(path: Path) -> dict | None:
@@ -161,16 +150,20 @@ def estrai_articolo(path: Path) -> dict | None:
 
     fm, body = parse_frontmatter(testo)
 
-    if fm.get("draft", "").lower() in ("true", "yes", "1"):
+    # Le versioni "facile" (A2) sono nascoste da liste e feed: niente social
+    # dedicato, come per le immagini (genera-immagini-social.py).
+    if social_comune.is_facile(path, fm):
         return None
 
-    data_str = fm.get("date", "")
-    m_data = re.match(r"(\d{4}-\d{2}-\d{2})", data_str)
+    # Online come lo decide Hugo: data e ora italiane (hugo.toml timeZone).
+    # Fino al 22/09/2026 qui c'era date.today() del runner, cioè UTC: fra
+    # mezzanotte e le due un articolo di oggi risultava "futuro".
+    if not social_comune.is_online(fm):
+        return None  # bozza, senza data, o calendarizzato non ancora online
+
+    m_data = re.match(r"(\d{4}-\d{2}-\d{2})", social_comune.testo_campo(fm, "date"))
     if not m_data:
         return None
-    data_articolo = datetime.date.fromisoformat(m_data.group(1))
-    if data_articolo > datetime.date.today():
-        return None  # articolo futuro calendarizzato, non ancora pubblicato
 
     slug = path.stem
     url = f"{SITO_BASE}/comunicazioni/{slug}/"
@@ -181,16 +174,18 @@ def estrai_articolo(path: Path) -> dict | None:
     corpo_pulito = re.sub(r"\s+", " ", corpo_pulito).strip()
     estratto = corpo_pulito[:600]
 
+    punti = fm.get("social_punti") or []
     return {
         "path": str(path),
         "slug": slug,
-        "title": fm.get("title", ""),
-        "description": fm.get("description", ""),
-        "badge": fm.get("badge", ""),
-        "area": fm.get("area", ""),
+        "title": social_comune.testo_campo(fm, "title"),
+        "description": social_comune.testo_campo(fm, "description"),
+        "badge": social_comune.testo_campo(fm, "badge"),
+        "area": social_comune.testo_campo(fm, "area"),
         "date": m_data.group(1),
         "url": url,
         "estratto": estratto,
+        "punti": [str(x).strip() for x in punti if str(x).strip()] if isinstance(punti, list) else [],
     }
 
 
@@ -401,6 +396,11 @@ def salva_bozze(slug: str, bozze: dict, art: dict, dry_run: bool = False) -> Pat
         contenuto = bozze.get(piattaforma, "")
         if not contenuto:
             continue
+        # Gemini a volte attacca il tag del badge alla prima parola
+        # ("[INFORMAZIONE]Il 23 settembre..."): dal 20/09/2026 questi testi
+        # escono da soli su Instagram e Facebook, senza una rilettura che lo
+        # corregga a mano.
+        contenuto = re.sub(r"^(\[[^\]\n]{2,40}\])(?=[^\s(])", r"\1 ", contenuto)
         # I .txt contengono SOLO il testo da pubblicare: si copiano e si
         # incollano così come sono. Le istruzioni su quale immagine va nel feed
         # e quale nella storia stanno nel README.md della cartella, scritto da
@@ -415,29 +415,68 @@ def salva_bozze(slug: str, bozze: dict, art: dict, dry_run: bool = False) -> Pat
 
 
 def trova_articoli_pubblicati(since: datetime.date | None = None) -> list[Path]:
-    """Trova tutti gli articoli pubblicati (data <= oggi, non draft)."""
+    """Articoli online adesso (ora italiana), escluse bozze e versioni facili."""
     risultati = []
-    oggi = datetime.date.today()
-    for p in sorted(CONTENT_COMUNICAZIONI.glob("*.md")):
-        if p.name == "_index.md":
-            continue
-        try:
-            testo = p.read_text(encoding="utf-8")
-        except OSError:
-            continue
-        fm, _ = parse_frontmatter(testo)
-        if fm.get("draft", "").lower() in ("true", "yes", "1"):
-            continue
-        m = re.match(r"(\d{4}-\d{2}-\d{2})", fm.get("date", ""))
-        if not m:
-            continue
-        data = datetime.date.fromisoformat(m.group(1))
-        if data > oggi:
-            continue
-        if since and data < since:
+    for p, _fm, online in sorted(social_comune.articoli(), key=lambda x: x[0].name):
+        if since and online.date() < since:
             continue
         risultati.append(p)
     return risultati
+
+
+# Hashtag per badge: la stessa tabella del prompt (costruisci_system_prompt),
+# che resta l'unica fonte degli hashtag ammessi.
+HASHTAG_IG = {
+    "Allerta": "#PCGenzano #Genzano #AllertaLazio #ProtezioneCivile #CastelliRomani",
+    "Emergenza": "#PCGenzano #Genzano #NUE112 #AllertaLazio #ProtezioneCivile",
+    "Volontariato": "#PCGenzano #Genzano #ProtezioneCivile #Volontariato #CastelliRomani",
+    "Formazione": "#PCGenzano #Genzano #ProtezioneCivile #Volontariato #CastelliRomani",
+    "Evento": "#PCGenzano #Genzano #ProtezioneCivile #Volontariato #CastelliRomani",
+}
+HASHTAG_IG_DEFAULT = "#PCGenzano #Genzano #ProtezioneCivile #GenzanoDiRoma #CastelliRomani"
+
+
+def _pulisci(s: str) -> str:
+    """Toglie il Markdown dai testi del frontmatter: sui social non si vede."""
+    s = re.sub(r"\*\*(.+?)\*\*", r"\1", s)
+    s = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", s)
+    return re.sub(r"\s+", " ", s).strip()
+
+
+def testi_di_riserva(art: dict) -> dict:
+    """I quattro testi composti dal frontmatter, quando Gemini non risponde.
+
+    Solo ciò che l'articolo dice già (titolo, descrizione, social_punti), che
+    ha passato il gate editoriale: niente viene inventato. La forma segue le
+    regole del prompt: tag del badge fra parentesi quadre, niente emoji,
+    hashtag solo dalla lista approvata. L'invito a leggere sul sito, le
+    menzioni degli enti e il luogo li aggiunge il repository social al
+    momento della pubblicazione (social_coda_lib.componi_testo).
+    """
+    titolo = _pulisci(art["title"])
+    descr = _pulisci(art["description"]) or _pulisci(art["estratto"])[:300].rsplit(". ", 1)[0]
+    if descr and not descr.endswith((".", "!", "?")):
+        descr += "."
+    punti = [_pulisci(x) for x in art.get("punti", []) if _pulisci(x)]
+    tag = f"[{art['badge'].upper()}] " if art["badge"] else ""
+    ig_tag = HASHTAG_IG.get(art["badge"], HASHTAG_IG_DEFAULT)
+    corti = " ".join(ig_tag.split()[:3])
+    url = art["url"]
+
+    blocco = [f"{tag}{titolo}", "", descr]
+    if punti:
+        blocco += ["", "In sintesi:"] + [f"• {x}" for x in punti]
+    instagram = "\n".join(blocco + ["", "Link in bio.", "", "", "", ig_tag])
+    facebook = "\n".join(blocco + ["", f"Approfondisci sul nostro sito: {url}", "", ig_tag])
+    telegram = "\n".join(
+        [f"{tag}**{titolo}**", "", descr]
+        + ([""] + [f"— {x}" for x in punti] if punti else [])
+        + ["", f"**[Leggi sul sito]({url})**", corti]
+    )
+    # X conta ogni indirizzo come 23 caratteri: il titolo sta sempre nei 280.
+    spazio = 280 - 23 - len(corti) - 2
+    x = f"{titolo if len(titolo) <= spazio else titolo[:spazio - 1].rstrip() + '…'} {url} {corti}"
+    return {"x": x, "facebook": facebook, "instagram": instagram, "telegram": telegram}
 
 
 def main() -> int:
@@ -447,13 +486,17 @@ def main() -> int:
     parser.add_argument("--since", help="Solo articoli con data >= YYYY-MM-DD")
     parser.add_argument("--dry-run", action="store_true", help="Mostra senza scrivere")
     parser.add_argument("--force", action="store_true", help="Sovrascrivi bozze esistenti")
+    parser.add_argument("--riserva", action="store_true",
+                        help="Se Gemini non risponde, scrivi i testi di riserva dal frontmatter")
     args = parser.parse_args()
 
     api_key = os.environ.get("GEMINI_API_KEY", "").strip()
-    if not api_key:
+    if not api_key and not args.riserva:
         stampa_err("GEMINI_API_KEY non impostata. "
                    "Aggiungi 'export GEMINI_API_KEY=...' a ~/.bashrc e ricarica.")
         return 2
+    if not api_key:
+        stampa_info("GEMINI_API_KEY non impostata: userò i testi di riserva.")
 
     rules = carica_rules()
     system_prompt = costruisci_system_prompt(rules)
@@ -499,7 +542,14 @@ def main() -> int:
             continue
 
         stampa_info(f"  → Genero: {art['slug']}")
-        bozze = chiama_gemini(api_key, system_prompt, costruisci_user_prompt(art))
+        bozze = (chiama_gemini(api_key, system_prompt, costruisci_user_prompt(art))
+                 if api_key else None)
+        if not bozze and args.riserva:
+            bozze = testi_di_riserva(art)
+            avviso = f"Gemini non disponibile: testi di riserva per {art['slug']}"
+            stampa_info(f"    {avviso}")
+            if os.environ.get("GITHUB_ACTIONS"):
+                print(f"::warning::{avviso}")
         if not bozze:
             errori += 1
             continue

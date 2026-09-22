@@ -292,6 +292,8 @@ Mai inserire PC Genzano tra le affiliazioni (sarebbe doppione: è già la firma 
 
 ### 13.10 — Pubblicazione assistita delle bozze (lo script che ti aiuta sui social)
 
+> Dal 20 settembre 2026 **Instagram e Facebook escono da soli**, insieme all'articolo: vedi la [Parte 42](parte-42-pubblicazione-automatica-social.md). Lo script qui descritto resta utile per X e per le pubblicazioni fatte a mano.
+
 **A cosa serve.** Quando pubblichi un nuovo articolo sul sito, lo script `genera-social-bozze.yml` produce in automatico 4 bozze (X, Facebook, Instagram, Telegram) e le mette in `social-bozze/AAAA/MM/<slug>/`. Fin qui è automatico. Poi però devi pubblicare a mano sui 4 canali, e ogni volta fai gli stessi gesti: copia, incolla, carica le foto, premi "Pubblica". Quattro volte.
 
 Da maggio 2026 c'è uno script che ti accompagna in questi gesti: ti apre i 4 canali, ti mette il testo della bozza giusta negli appunti e ti dice cosa fare in ogni step. Tu fai solo `Ctrl+V` e premi "Pubblica".
