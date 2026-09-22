@@ -506,7 +506,7 @@ body.side-closed #sideCol{right:0}
   body.muro #feed > .miaVuoto{column-span:all;max-width:760px}
   /* 🔴 I livelli di cartina si nascondono: la cartina e' coperta dal muro e
      un comando che non produce nulla e' un invito a sbagliare. */
-  body.muro #nav [data-l],body.muro #nav .sep{display:none}
+  body.muro #nav [data-l],body.muro #nav .sepLay{display:none}
 }
 @media(max-width:720px){
   #hdr{gap:6px;padding:0 8px}
@@ -577,20 +577,31 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
 </header>
 
 <nav id="nav" aria-label="Pannelli e livelli mappa">
+  <!-- 🔴 Ordine per TIPOLOGIA, non alfabetico: in emergenza non si cerca una
+       voce per iniziale, si cerca la famiglia. Le quattro famiglie seguono il
+       ciclo del rischio della rule 06 — che cosa e' previsto, che cosa sta
+       succedendo, con che cosa lo guardo, che cosa fa la sala — e sono divise
+       da un separatore. MIA SALA resta sempre la prima, fuori dalle famiglie.
+       I tasti 1-9 seguono QUESTO ordine (vedi il gestore keydown): chi cambia
+       l'ordine qui cambia anche le scorciatoie, ed e' voluto. -->
   <button data-v="mia" title="Le schede che hai scelto tu, nell'ordine che vuoi"><span class="ic">★</span>MIA SALA</button>
-  <button data-v="all" class="act"><span class="ic">▲</span>ALLERTA</button>
-  <button data-v="sis"><span class="ic">◈</span>SISMICO</button>
-  <button data-v="met"><span class="ic">≋</span>METEO</button>
-  <button data-v="map"><span class="ic">▤</span>CARTE</button>
-  <button data-v="wnd"><span class="ic">☈</span>WINDY</button>
-  <button data-v="tra" title="Traffico e incidenti segnalati in tempo reale"><span class="ic">⇄</span>TRAFFICO</button>
-  <button data-v="mar" title="Navi in tempo reale via AIS, al largo del Lazio"><span class="ic">⚓</span>NAVI</button>
-  <button data-v="rad" title="Ascolto delle bande radioamatoriali via SDR (spettro e waterfall)"><span class="ic">⌁</span>RADIO</button>
-  <button data-v="orb" title="Satelliti in orbita: dove sono adesso e quali passano su Genzano"><span class="ic">✦</span>SATELLITI</button>
-  <button data-v="amb"><span class="ic">✿</span>ARIA·MARE</button>
-  <button data-v="ems"><span class="ic">⚑</span>EMERGENZE</button>
-  <button data-v="log"><span class="ic">✎</span>REGISTRO</button>
   <span class="sep"></span>
+  <button data-v="all" class="act" title="Previsione e allertamento — bollettino DPC, Zona F, avvisi delle altre regioni"><span class="ic">▲</span>ALLERTA</button>
+  <button data-v="met" title="Previsione — meteo su Genzano, pioggia, indici di rischio, stazioni"><span class="ic">≋</span>METEO</button>
+  <button data-v="amb" title="Condizioni ambientali — qualita' dell'aria, stato del mare, mareografi"><span class="ic">✿</span>ARIA·MARE</button>
+  <span class="sep"></span>
+  <button data-v="sis" title="Eventi in corso — terremoti in Italia, Europa e nel mondo"><span class="ic">◈</span>SISMICO</button>
+  <button data-v="ems" title="Eventi in corso — emergenze in Italia, Europa e nel mondo, mezzi aerei, punti caldi"><span class="ic">⚑</span>EMERGENZE</button>
+  <button data-v="tra" title="Eventi in corso — traffico e incidenti segnalati in tempo reale"><span class="ic">⇄</span>TRAFFICO</button>
+  <span class="sep"></span>
+  <button data-v="map" title="Osservazione — carte e immagini satellitari"><span class="ic">▤</span>CARTE</button>
+  <button data-v="wnd" title="Osservazione — vento e modelli meteo su mappa (Windy)"><span class="ic">☈</span>WINDY</button>
+  <button data-v="orb" title="Osservazione — satelliti in orbita: dove sono adesso e quali passano su Genzano"><span class="ic">✦</span>SATELLITI</button>
+  <button data-v="mar" title="Osservazione — navi in tempo reale via AIS, al largo del Lazio"><span class="ic">⚓</span>NAVI</button>
+  <span class="sep"></span>
+  <button data-v="rad" title="Sala — ascolto delle bande radioamatoriali via SDR (spettro e waterfall)"><span class="ic">⌁</span>RADIO</button>
+  <button data-v="log" title="Sala — registro del turno, annotazioni su questo computer"><span class="ic">✎</span>REGISTRO</button>
+  <span class="sep sepLay"></span>
   <button data-l="zone" class="act"><span class="ic">◱</span>ZONE</button>
   <button data-l="radar"><span class="ic">◉</span>RADAR</button>
   <button data-l="blitz"><span class="ic">⚡</span>FULMINI</button>
@@ -4280,11 +4291,16 @@ document.addEventListener("visibilitychange",()=>{
 document.addEventListener("keydown",e=>{
   if(e.altKey||e.ctrlKey||e.metaKey)return;
   if(e.target&&e.target.matches&&e.target.matches("input,select,textarea"))return;
-  // I tasti vanno da 1 a 9: un decimo elemento non lo raggiungerebbe nessuno.
-  // MIA SALA, NAVI, SATELLITI e RADIO restano senza scorciatoia, e il manuale
-  // scrive questa mappatura, non "le prime nove della barra" (non coincidono).
-  const order=["all","sis","met","map","wnd","tra","amb","ems","log"];
-  if(e.key>="1"&&e.key<="9")setView(order[+e.key-1]);
+  /* 🔴 I tasti seguono la BARRA: il tasto N apre l'N-esimo tab, MIA SALA
+     compresa. Prima erano una lista scritta a parte che non coincideva con
+     l'ordine visibile — imparabile solo a memoria, e destinata a divergere a
+     ogni riordino. Leggendo il DOM non possono piu' separarsi. Restano 1-9:
+     un decimo elemento non lo raggiungerebbe nessuno (SATELLITI, NAVI, RADIO
+     e REGISTRO si aprono col clic). */
+  if(e.key>="1"&&e.key<="9"){
+    const tab=document.querySelectorAll("#nav button[data-v]")[+e.key-1];
+    if(tab)setView(tab.getAttribute("data-v"));
+  }
   else if(e.key==="r"||e.key==="R"){const b=document.querySelector('#nav [data-l="radar"]');if(b)b.click();}
 });
 
@@ -4298,7 +4314,8 @@ $("#cycBtn").addEventListener("click",()=>{
   b.textContent=S.cycle?"⏸ CICLO ON":"▶ CICLO";
   if(cycTimer){clearInterval(cycTimer);cycTimer=null;}
   if(S.cycle)cycTimer=setInterval(()=>{
-    const order=["all","sis","met","map","amb","ems"];
+    // stesse famiglie della barra, saltando le viste di lavoro
+    const order=["all","met","amb","sis","ems","map"];
     setView(order[(order.indexOf(S.view)+1)%order.length]);
   },45e3);
 });
