@@ -61,6 +61,14 @@ body.blackout #lmap{filter:brightness(.55) saturate(.7)}
 #nav button .ic{margin-right:5px}
 #nav button.act{color:#eaf6ef;background:linear-gradient(180deg,#0f1b26,#0a141d);box-shadow:inset 0 -2px 0 var(--cyn)}
 #nav button:hover{color:var(--tx)}
+/* 🔴 Segno sui tab che hanno schede nella Mia Sala. La riga in basso ciano
+   dice QUALE tab e' aperto; la riga in alto gialla dice QUALI tab hai messo
+   nella Mia Sala: due informazioni diverse, due bordi diversi, si leggono
+   insieme. Il colore non basta (WCAG 1.4.1): accanto al nome compare la
+   stellina, e il titolo del pulsante dice quante schede sono. */
+#nav button.miaOn{color:#e8d98a;box-shadow:inset 0 2px 0 var(--gia)}
+#nav button.miaOn.act{color:#f4ecc4;box-shadow:inset 0 2px 0 var(--gia),inset 0 -2px 0 var(--cyn)}
+#nav button .miaTag{color:var(--gia);font-size:9px;margin-left:5px;letter-spacing:0}
 #nav .sep{flex:0 0 1px;background:var(--line);margin:4px 4px}
 /* Frecce di overflow del menu: compaiono solo quando ci sono voci fuori
    dallo schermo, con dissolvenza sul bordo — così è chiaro che c'è altro */
@@ -1063,8 +1071,23 @@ async function loadSito(){
   }catch(e){S.errs.sito="Stato del sito non raggiungibile. L’ultimo stato disponibile richiede verifica.";}
   updZona(); rendSe("all"); tickUpd();
 }
+/* 🔴 Il timbro del bollettino si chiede al NOSTRO snapshot, non all'API di
+   GitHub. Nel repository del Dipartimento i bollettini si chiamano col minuto
+   reale di pubblicazione (20260922_1421.json) e non c'e' nessun nome stabile
+   da chiamare: per sapere qual e' l'ultimo bisogna leggere l'elenco dei
+   commit. Fatto dal browser di ogni visitatore vuol dire appoggiarsi a 60
+   richieste l'ora PER INDIRIZZO IP, condivise da tutti quelli che escono
+   dalla stessa rete — e una pagina che si ricarica ne consuma fino a nove per
+   volta: in sede la scheda si spegneva e la cartina delle zone restava senza
+   colori. Ora la domanda la fa la CI ogni quarto d'ora (scripts/genera-dpc-
+   bollettino.py) e qui basta una richiesta sola, senza quota.
+   L'API resta come ripiego per l'ambiente locale prima del primo deploy. */
 async function findStamp(){
   const q=new URL(location.href).searchParams.get("stamp"); if(q)return q;
+  try{
+    const s=await jgetSnap("dpc-bollettino.json",10000);
+    if(s&&typeof s.stamp==="string"&&/^\d{8}_\d{4}$/.test(s.stamp))return s.stamp;
+  }catch(e){/* snapshot assente: si ripiega sull'API */}
   const cm=await jget(`https://api.github.com/repos/${REPO}/commits?per_page=8`);
   for(const c of cm){
     const det=await jget(`https://api.github.com/repos/${REPO}/commits/${c.sha}`);
@@ -1847,9 +1870,14 @@ function fontiCard(){
       const unverified=key==="sito"&&(!sitoFresh()||lvlOf(S.sito&&S.sito.livello)<0);
       const failed=!!S.errs[key]||(key==="dpc"&&!!S.bollVecchio);
       const delayed=received&&age>period*2;
-      const v=failed?"ERRORE":unverified?"DA VERIFICARE":!received?"N/D":delayed?"IN RITARDO":"RICEVUTO";
-      const color=failed||unverified||delayed?"#ffd60a":received?"#35e08c":"#a6b6c2";
-      const when=received?(age<1?"ADESSO":Math.round(age)+" MIN FA"):"NESSUNA RISPOSTA";
+      /* 🔴 Una fonte mai interrogata non e' una fonte che non risponde.
+         Le stazioni si caricano solo aprendo la vista METEO: finche' nessuno
+         l'ha aperta il riquadro diceva "N/D — NESSUNA RISPOSTA", cioe'
+         mostrava come guasto qualcosa che nessuno aveva ancora chiesto. */
+      const maiChiesta=!t&&!S.errs[key];
+      const v=failed?"ERRORE":unverified?"DA VERIFICARE":maiChiesta?"IN ATTESA":!received?"N/D":delayed?"IN RITARDO":"RICEVUTO";
+      const color=failed||unverified||delayed?"#ffd60a":received?"#35e08c":maiChiesta?"#709080":"#a6b6c2";
+      const when=received?(age<1?"ADESSO":Math.round(age)+" MIN FA"):maiChiesta?"NON ANCORA RICHIESTA":"NESSUNA RISPOSTA";
       return `<div class="kpi" style="--kc:${color}"><small>${n}</small><b style="font-size:12px">${v}</b><small>${when}</small>${source?`<small>${esc(source)}</small>`:""}</div>`;
     }).join("")+`</div><p class="note">Ricezione: ultima risposta riuscita. La data alla fonte indica il controllo o il dato, quando disponibile. Orari italiani.</p>`;
   return el;
@@ -3860,6 +3888,29 @@ function miaDecora(vista){
   }
 }
 
+/* Marca i tab delle viste da cui hai preso almeno una scheda. Si richiama a
+   ogni render, quindi si aggiorna da sola a ogni aggiunta o rimozione. */
+function miaTab(){
+  const per={};
+  for(const id of miaCarica()){const v=miaVista(id); per[v]=(per[v]||0)+1;}
+  for(const b of document.querySelectorAll("#nav button[data-v]")){
+    const v=b.getAttribute("data-v"), n=(v==="mia")?0:(per[v]||0);
+    if(!b.hasAttribute("data-tit"))b.setAttribute("data-tit",b.getAttribute("title")||"");
+    b.classList.toggle("miaOn",n>0);
+    let tag=b.querySelector(".miaTag");
+    if(n>0){
+      if(!tag){tag=document.createElement("span");tag.className="miaTag";
+               tag.setAttribute("aria-hidden","true");tag.textContent="★";b.appendChild(tag);}
+      const base=b.getAttribute("data-tit");
+      b.title=(base?base+" · ":"")+(n===1?"1 scheda nella Mia Sala":n+" schede nella Mia Sala");
+    }else{
+      if(tag)tag.remove();
+      const base=b.getAttribute("data-tit");
+      if(base)b.title=base; else b.removeAttribute("title");
+    }
+  }
+}
+
 function viewMia(){
   title.textContent="MIA SALA — LE SCHEDE CHE HAI SCELTO";
   feed.innerHTML="";
@@ -4016,6 +4067,7 @@ function viewMar(){
 
 function render(){
   document.body.classList.toggle("muro",S.view==="mia");
+  miaTab();
   try{navArrUpd()}catch(e){}   // nascondendo i livelli cambia cosa resta fuori dal riquadro
   ({all:viewAll,sis:viewSis,met:viewMet,map:viewMap,wnd:viewWnd,tra:viewTra,rad:viewRad,amb:viewAmb,ems:viewEms,orb:viewOrb,mar:viewMar,mia:viewMia,log:viewLog})[S.view]();miaDecora(S.view);windySync();traffSync();mareSync();radioSync();}
 

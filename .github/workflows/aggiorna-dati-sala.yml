@@ -41,7 +41,12 @@ jobs:
           # scrive nulla ed esce 0: la scheda dei punti caldi resta spenta,
           # mai popolata con dati di riempimento.
           FIRMS_MAP_KEY: ${{ secrets.FIRMS_MAP_KEY }}
+          # Con il token l'API di GitHub dà mille richieste l'ora invece delle
+          # sessanta per IP: è il motivo per cui il timbro del bollettino DPC
+          # si risolve qui e non nel browser di chi guarda la Sala.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          python3 scripts/genera-dpc-bollettino.py
           python3 scripts/genera-notizie-agenzie.py
           python3 scripts/genera-gdacs-eventi.py
           python3 scripts/genera-ems-attivazioni.py
