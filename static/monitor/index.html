@@ -160,11 +160,19 @@ html.a11y-pause-anim .navArr.hint{animation:none}
    chiede sempre un'alternativa al trascinamento, e il gate di accessibilita'
    di questo repository e' bloccante. */
 .wx h3{position:relative}
-.miaStar{margin-left:auto;background:none;border:0;cursor:pointer;color:var(--dim);
-  font-size:13px;line-height:1;padding:0 2px;transition:color .12s}
-.miaStar:hover{color:var(--gia)}
-.miaStar.on{color:var(--gia)}
-.miaStar:focus-visible{outline:2px solid var(--gia);outline-offset:2px;border-radius:3px}
+/* 🔴 Non un glifo nudo: un comando con la sua parola. Una ☆ sola in
+   un'intestazione si legge come decorazione — l'utente che aveva chiesto la
+   Mia Sala non l'ha riconosciuta e ha chiesto se si trascinassero le schede.
+   Misurata prima: 15,7 x 28 px, cioe' sotto i 24 px minimi del criterio
+   WCAG 2.2 AA 2.5.8 sulla dimensione dei bersagli. */
+.miaStar{margin-left:auto;background:#0b1620;border:1px solid var(--dim);cursor:pointer;
+  color:var(--tx);font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;
+  line-height:1;padding:6px 8px;border-radius:999px;min-height:24px;flex:0 0 auto;
+  display:inline-flex;align-items:center;gap:4px;white-space:nowrap;transition:color .12s,border-color .12s}
+.miaStar .g{font-size:12px;line-height:1}
+.miaStar:hover{color:var(--gia);border-color:var(--gia)}
+.miaStar.on{color:var(--gia);border-color:var(--gia)}
+.miaStar:focus-visible{outline:2px solid var(--gia);outline-offset:2px}
 .miaNav{margin-left:auto;display:inline-flex;gap:3px;flex:0 0 auto}
 .miaBtn{background:#0b1620;border:1px solid var(--line);color:var(--tx);cursor:pointer;
   font-size:10px;line-height:1;padding:3px 6px;border-radius:3px;transition:border-color .12s,color .12s}
@@ -3757,7 +3765,7 @@ function miaDecora(vista){
     b.setAttribute("aria-pressed",on?"true":"false");
     b.title=on?"Togli dalla Mia Sala":"Aggiungi alla Mia Sala";
     b.setAttribute("aria-label",b.title);
-    b.textContent=on?"★":"☆";
+    b.innerHTML=`<span class="g" aria-hidden="true">${on?"★":"☆"}</span>MIA SALA`;
     h.appendChild(b);
   }
 }
@@ -3769,7 +3777,9 @@ function viewMia(){
   if(!scelte.length){
     feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>MIA SALA<span>NESSUNA SCHEDA SCELTA</span></h3>
       <p>Qui finiscono le schede che scegli tu, nell'ordine che vuoi: così tieni sott'occhio insieme cose che stanno in viste diverse — per esempio l'allerta, i sismi e i satelliti sopra di noi.</p>
-      <p style="margin-top:6px">Apri una vista qualsiasi e tocca la <b>☆</b> nell'intestazione di una scheda. Torna qui e la trovi.</p>
+      <p style="margin-top:6px">Non si trascina niente: in cima a ogni scheda c'è il pulsante <b>☆ MIA SALA</b>. Toccalo e la scheda finisce qui; toccalo di nuovo e la togli.</p>
+      <p style="margin-top:6px">Il pulsante c'è nelle viste che la Mia Sala sa ricostruire — <b>ALLERTA, SISMICO, METEO, ARIA·MARE, EMERGENZE, SATELLITI, REGISTRO</b> — e non nelle altre, che incorporano una mappa di terzi o un ricevitore e non si possono duplicare.</p>
+      <p style="margin-top:6px">Qui dentro ogni scheda ha <b>▲ ▼</b> per spostarla e <b>✕</b> per toglierla.</p>
       <p style="margin-top:6px;color:var(--dim);font-size:11px">La scelta resta su questo dispositivo, nel browser: non viene inviata da nessuna parte.</p></div>`);
     return;
   }
