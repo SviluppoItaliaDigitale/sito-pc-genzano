@@ -2765,7 +2765,8 @@ async function radioLive(){ // nome, versione e profili reali del ricevitore (CO
   }catch(e){S.radio.live={err:true,t:Date.now()};if(S.view==="rad")render();}
 }
 // Schede che accompagnano l'ascolto: quanto e' disturbata la ionosfera (cioe'
-// quanto sono affidabili i collegamenti HF) e quali palloni meteo sono in volo.
+// quanto sono affidabili i collegamenti HF) e che cosa hanno trasmesso da poco
+// i palloni meteo piu' vicini.
 function schedeRadioDati(){
   // Riga onesta quando la fonte ha smesso di rispondere: si dichiara l'ora
   // dell'ultima lettura riuscita invece di lasciar credere che sia di adesso.
