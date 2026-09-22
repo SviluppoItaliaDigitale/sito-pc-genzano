@@ -949,7 +949,7 @@ async function loadSito(){
     S.sitoKey=key; S.last.sito=Date.now();
     delete S.errs.sito;
   }catch(e){S.errs.sito="Stato del sito non raggiungibile. L’ultimo stato disponibile richiede verifica.";}
-  updZona(); if(S.view==="all")render(); tickUpd();
+  updZona(); rendSe("all"); tickUpd();
 }
 async function findStamp(){
   const q=new URL(location.href).searchParams.get("stamp"); if(q)return q;
@@ -987,7 +987,7 @@ async function loadDPC(){
       S.bollVecchio=c.t; buildZoneLayer(); delete S.errs.dpc;
     } else S.errs.dpc="Bollettino DPC non raggiungibile ("+e.message+").";
   }
-  updZona(); if(S.view==="all")render(); tickUpd();
+  updZona(); rendSe("all"); tickUpd();
 }
 function laz(day){
   const zz=S.zones[bollettinoDay(day)]; if(!zz)return null;
@@ -1055,7 +1055,7 @@ async function loadINGV(){
     }
     delete S.errs.ingv;
   }catch(e){S.errs.ingv="Servizio INGV non raggiungibile ("+e.message+").";$("#qkN").textContent="N/D";}
-  if(S.view==="sis")render(); tickUpd();
+  rendSe("sis"); tickUpd();
 }
 
 /* ---------------- Open-Meteo: previsioni + aria/pollini + mare ----------------
@@ -1076,7 +1076,7 @@ async function loadWX(){
     $("#rainN").textContent=r24.toFixed(1)+" mm";
     delete S.errs.wx;
   }catch(e){S.errs.wx="Open-Meteo non raggiungibile ("+e.message+").";$("#rainN").textContent="N/D";}
-  if(S.view==="met")render(); tickUpd();
+  rendSe("met"); tickUpd();
 }
 
 /* ---------------- Osservazioni stazioni al suolo — ItaliaMeteo/MeteoHub ----------------
@@ -1136,7 +1136,7 @@ async function loadObs(){
     else S.errs.obs="Stazioni ItaliaMeteo non raggiungibili.";
   }
   S.obsBusy=false;
-  if(S.view==="met")render(); tickUpd();
+  rendSe("met"); tickUpd();
 }
 async function loadAmb(){ // stessi endpoint e coordinate del cruscotto del sito
   try{
@@ -1149,7 +1149,7 @@ async function loadAmb(){ // stessi endpoint e coordinate del cruscotto del sito
     S.last.mare=Date.now();
     delete S.errs.mare;
   }catch(e){S.errs.mare="Dati marini non raggiungibili.";}
-  if(S.view==="amb")render(); tickUpd();
+  rendSe("amb"); tickUpd();
 }
 
 /* ---------------- MAREOGRAFI IOC/UNESCO — livello del mare in tempo reale ----------------
@@ -1203,7 +1203,7 @@ async function loadMare(){
   S.mareog=esiti;
   if(buone.length){S.last.mareog=Date.now();delete S.errs.mareog}
   else S.errs.mareog="Mareografi IOC non raggiungibili.";
-  if(S.view==="amb")render(); tickUpd();
+  rendSe("amb"); tickUpd();
 }
 
 /* ---------------- Copernicus EMS Rapid Mapping ----------------
@@ -1238,7 +1238,7 @@ async function loadEMS(){
   }
   if(ok)S.last.ems=Date.now();
   if(map.hasLayer(worldLayer))buildWorld();
-  if(S.view==="ems")render(); tickUpd();
+  rendSe("ems"); tickUpd();
 }
 
 /* ---------------- GDACS — allerte disastri a scala mondiale ----------------
@@ -1258,7 +1258,7 @@ async function loadGdacs(){
     S.last.gdacs=Date.now(); delete S.errs.gdacs;
   }catch(e){S.errs.gdacs="Allerte GDACS non disponibili.";}
   if(map.hasLayer(worldLayer))buildWorld();
-  if(S.view==="ems")render(); tickUpd();
+  rendSe("ems"); tickUpd();
 }
 
 /* ---------------- EMSC — area euro-mediterranea ----------------
@@ -1279,7 +1279,7 @@ async function loadEmsc(){
       .filter(q=>Number.isFinite(q.t)).slice(0,12);
     S.last.emsc=Date.now(); delete S.errs.emsc;
   }catch(e){S.errs.emsc="Sismi EMSC non raggiungibili.";}
-  if(S.view==="sis")render(); tickUpd();
+  rendSe("sis"); tickUpd();
 }
 
 /* ---------------- METEO SPAZIALE — NOAA SWPC (CORS aperto, nessuna chiave) ----
@@ -1351,7 +1351,7 @@ async function loadFirms(){
     S.firms={punti:d.punti||[],snap:d._snapshot||{}};
     S.last.firms=Date.now();
   }catch(e){S.firms=null;} // assente = scheda spenta, nessun errore a schermo
-  if(S.view==="ems")render();
+  rendSe("ems");
 }
 
 /* ---------------- MeteoAlarm — quadro nazionale degli avvisi ----------------
@@ -1376,13 +1376,16 @@ async function loadMeteoalarm(){
       snap:d._snapshot||{}};
     S.last.malarm=Date.now(); delete S.errs.malarm;
   }catch(e){S.errs.malarm="Quadro MeteoAlarm non disponibile.";}
-  if(S.view==="all")render(); tickUpd();
+  rendSe("all"); tickUpd();
 }
 
 /* ---------------- VOLO — mezzi antincendio ed emergenze dichiarate ----------------
-   adsb.fi non espone il CORS: si legge lo snapshot committato ogni 15 minuti da
-   scripts/genera-volo-soccorso.py. Il ritardo e' dichiarato nella scheda: un
-   velivolo in volo si sposta parecchio in un quarto d'ora. */
+   Nessuna fonte ADS-B gratuita espone il CORS (verificato con GET reali il
+   22/09/2026 su adsb.fi, adsb.lol, airplanes.live e OpenSky), quindi il browser
+   non puo' chiamarle. Si legge il ponte api/aerei.php, che sta sul nostro
+   server ed e' stessa origine; dove il PHP non gira si ricade sulla fotografia
+   committata da scripts/genera-volo-soccorso.py. Fonte adsb.lol, dati sotto
+   ODbL 1.0: l'attribuzione e' obbligatoria e sta nella scheda. */
 // Gli script generatori sono fail-safe: se la fonte cade lasciano il file com'era
 // ed escono puliti. Vuol dire che uno snapshot puo' invecchiare in silenzio, e il
 // browser deve accorgersene invece di presentare posizioni vecchie come attuali
@@ -1450,14 +1453,40 @@ function buildVolo(){
       .addTo(voloLayer);
   }
 }
+/* Due strade per gli stessi velivoli, nello stesso formato.
+   1. IN DIRETTA dal ponte sul nostro server (api/aerei.php): la fonte non
+      espone il CORS, quindi il browser non puo' chiamarla da solo; il ponte
+      si', ed e' stessa origine.
+   2. LA FOTOGRAFIA committata, se il ponte non c'e' — su GitHub Pages il PHP
+      non gira, in locale nemmeno, e su Aruba potrebbe mancare. Non e' un
+      ripiego teorico: e' la condizione normale di meta' degli ambienti in cui
+      questa pagina si apre.
+   La scheda dice sempre QUALE delle due sta guardando e di quando e'. */
 async function loadVolo(){
+  let fatto=false;
   try{
-    const d=await jgetSnap("volo-soccorso.json",12000);
-    S.volo={lista:d.velivoli||[],snap:d._snapshot||{}};
-    S.last.volo=Date.now(); delete S.errs.volo;
-  }catch(e){S.errs.volo="Snapshot dei mezzi aerei non disponibile.";}
+    const d=await jget(BASE+"api/aerei.php",9000);
+    // si accetta solo una risposta che sia davvero la nostra: se il PHP non
+    // viene eseguito, il server restituisce il sorgente come testo e `jget`
+    // fallirebbe; ma se un giorno restituisse un JSON qualunque, questo
+    // controllo evita di mostrarlo come fossero velivoli.
+    if(d&&d._sorgente&&d._sorgente.diretta&&Array.isArray(d.velivoli)){
+      S.volo={lista:d.velivoli,diretta:true,letto:d._sorgente.letto,
+              vecchiaDel:d._sorgente.copia_vecchia_del||null,
+              attribuzione:d._sorgente.attribuzione||"",
+              raggioKm:d._sorgente.raggio_km||null,snap:{}};
+      S.last.volo=Date.now(); delete S.errs.volo; fatto=true;
+    }
+  }catch(e){ /* nessun ponte qui: si passa alla fotografia */ }
+  if(!fatto){
+    try{
+      const d=await jgetSnap("volo-soccorso.json",12000);
+      S.volo={lista:d.velivoli||[],diretta:false,snap:d._snapshot||{}};
+      S.last.volo=Date.now(); delete S.errs.volo;
+    }catch(e){S.errs.volo="Mezzi aerei non disponibili: né il collegamento diretto né la fotografia rispondono.";}
+  }
   buildVolo();
-  if(S.view==="ems")render(); tickUpd();
+  rendSe("ems"); tickUpd();
 }
 
 /* ---------------- USGS — sismi mondiali quasi in tempo reale ----------------
@@ -2018,7 +2047,7 @@ function logAdd(txt,auto){
   S.logArr.push({t:Date.now(),txt:String(txt).slice(0,300),auto:!!auto});
   if(S.logArr.length>500)S.logArr=S.logArr.slice(-500);
   try{localStorage.setItem("pcgz-monitor-log",JSON.stringify(S.logArr))}catch(e){}
-  if(S.view==="log")render();
+  rendSe("log");
 }
 const logStamp=t=>{const d=new Date(t);
   return d.toLocaleDateString("it-IT",{day:"2-digit",month:"2-digit"})+" "+pad(d.getHours())+":"+pad(d.getMinutes())};
@@ -2172,7 +2201,8 @@ function viewEms(){
   // mai una deduzione sulla missione in corso.
   if(S.errs.volo)feed.appendChild(errCard(S.errs.volo));
   if(S.volo){
-    const vecchio=snapVecchio(S.volo.snap);
+    // in diretta non c'e' snapshot da invecchiare: il controllo vale sulla fotografia
+    const vecchio=S.volo.diretta?null:snapVecchio(S.volo.snap);
     if(vecchio){
       feed.insertAdjacentHTML("beforeend",
         `<div class="wx" style="margin-top:4px"><h3>MEZZI AEREI NELL'AREA<span>DATO NON RECENTE</span></h3>
@@ -2189,7 +2219,14 @@ function viewEms(){
       `<span class="rt">${a.a_terra?"a terra":(Number.isFinite(a.quota_ft)?Math.round(a.quota_ft)+" ft":"quota N/D")}`+
       ` · ${a.km_da_genzano} km${a.motivo?" · "+esc(a.motivo):""}</span></div>`;
     feed.insertAdjacentHTML("beforeend",
-      `<div class="wx" style="margin-top:4px"><h3>MEZZI AEREI NELL'AREA<span>ADS-B · ${tot} OSSERVATI${S.voloFiltro!=="tutti"?` · FILTRO: ${esc(S.voloFiltro.replace("cat:","").toUpperCase())}`:""}</span></h3>`+
+      `<div class="wx" style="margin-top:4px"><h3>MEZZI AEREI NELL'AREA<span>${S.volo.diretta?"IN DIRETTA":"FOTOGRAFIA"} · ${tot} OSSERVATI${S.voloFiltro!=="tutti"?` · FILTRO: ${esc(S.voloFiltro.replace("cat:","").toUpperCase())}`:""}</span></h3>`+
+      // 🔴 Chi guarda deve sapere se sta vedendo "adesso" o "un quarto d'ora fa":
+      //    la differenza, per un velivolo, sono decine di chilometri.
+      (S.volo.diretta
+        ? (S.volo.vecchiaDel
+            ? `<p class="staleNota">La fonte non risponde in questo momento: queste posizioni sono dell'ultima lettura riuscita, <b>${fmtT(S.volo.vecchiaDel)}</b>.</p>`
+            : `<p style="margin:0 0 6px;color:var(--dim);font-size:11px">Posizioni <b style="color:var(--grn)">in diretta</b>, lette alle <b>${fmtT(S.volo.letto)}</b> e rinfrescate ogni 20 secondi${S.volo.raggioKm?`, entro ${S.volo.raggioKm} km da Genzano`:""}, più chi trasmette il codice di emergenza 7700 ovunque si trovi.</p>`)
+        : `<p style="margin:0 0 6px;color:var(--dim);font-size:11px">Fotografia aggiornata ogni quarto d'ora${S.volo.snap&&S.volo.snap.generato?`, l'ultima delle <b>${fmtT(S.volo.snap.generato)}</b>`:""}: il collegamento diretto qui non è disponibile. Un velivolo in volo si sposta parecchio in quindici minuti.</p>`)+
       `<div class="filtriGruppo"><p class="filtriTit">Che cosa mostrare</p><div class="fchips" role="group" aria-label="Filtra i mezzi aerei per situazione">`+
         VOLO_FILTRI.map(([k,et])=>`<button type="button" class="fchip" data-vf="${k}" aria-pressed="${S.voloFiltro===k}">${et}<span class="c">${conta(k)}</span></button>`).join("")+
       `</div></div>`+
@@ -2228,7 +2265,7 @@ function viewEms(){
   }
   const snapNote=S.emsSnap?`Snapshot EMS del ${fmtT(S.emsSnap.toISOString())} (rigenerato ogni 15 minuti).`:"";
   feed.appendChild(noteEl('Attivazioni <a href="https://rapidmapping.emergency.copernicus.eu/" target="_blank" rel="noopener">Copernicus EMS Rapid Mapping</a> e allerte globali <a href="https://www.gdacs.org/" target="_blank" rel="noopener">GDACS</a> (dati pubblici, copie self-hosted rigenerate a ogni deploy). '+snapNote+
-    ' Mezzi aerei: rete comunitaria <a href="https://adsb.fi/" target="_blank" rel="noopener">adsb.fi</a>, snapshot ogni 15 minuti'+
+    ' Mezzi aerei: rete comunitaria <a href="https://adsb.lol/" target="_blank" rel="noopener">adsb.lol</a> (dati sotto <a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" rel="noopener">ODbL 1.0</a>)'+
     (S.volo&&S.volo.snap&&S.volo.snap.generato?` (ultimo: ${fmtT(S.volo.snap.generato)})`:"")+
     '. <b>Non è un tracciamento in tempo reale</b>: in un quarto d\'ora un velivolo percorre molta strada, e la copertura ADS-B non è totale (molti mezzi di Stato non trasmettono). Il modello e la categoria sono quelli dichiarati dalla fonte; essere in volo non implica un intervento in corso.'+
     (S.firms&&S.firms.punti.length?' Punti caldi: <a href="https://firms.modaps.eosdis.nasa.gov/" target="_blank" rel="noopener">NASA FIRMS</a> — un\'anomalia termica vista dal satellite non è un incendio confermato.':"")));
@@ -3260,7 +3297,7 @@ async function orbCarica(tutti){
   // cosa e' stato CHIESTO: serve alla riprova, perche' "tutti" resta falso
   // proprio quando il catalogo completo e' il gruppo che non e' arrivato.
   if(tutti)S.orb.chiesto=true;
-  if(S.view==="orb")render();
+  rendSe("orb");
   const mappa=new Map();
   for(const s of S.orb.recs)mappa.set(s.id,s);
   const gruppi=tutti?["active"]:ORB_PC.concat(["galileo","gps-ops","science","visual"]);
@@ -3290,7 +3327,7 @@ async function orbCarica(tutti){
   else delete S.errs.orb;
   S.orb.busy=false;
   orbCalcola();
-  if(S.view==="orb")render();
+  rendSe("orb");
   if(mapLayerOn("orb"))orbDisegna();
   tickUpd();
 }
@@ -3572,6 +3609,12 @@ const MIA_VISTE=[["all","ALLERTA"],["sis","SISMICO"],["met","METEO"],["amb","ARI
 const MIA_FN={all:()=>viewAll(),sis:()=>viewSis(),met:()=>viewMet(),amb:()=>viewAmb(),
               ems:()=>viewEms(),orb:()=>viewOrb(),log:()=>viewLog()};
 
+/* Un caricamento che arriva mentre si guarda la Mia Sala deve aggiornarla:
+   prima ogni fonte ridisegnava solo la propria vista, quindi la riga "scheda
+   al momento non disponibile" restava li' anche dopo il ritorno dei dati,
+   finche' non si cambiava vista e si tornava indietro. */
+function rendSe(vista){ if(S.view===vista||S.view==="mia")render(); }
+
 function miaCarica(){
   try{const a=JSON.parse(localStorage.getItem(MIA_CHIAVE)||"[]");
       return Array.isArray(a)?a.filter(x=>typeof x==="string"):[]}catch(e){return []}
@@ -3605,6 +3648,12 @@ function miaRaccogli(vista){
 // stellina su ogni scheda delle viste normali
 function miaDecora(vista){
   if(vista==="mia")return;
+  // 🔴 Stelline SOLO dove la Mia Sala sa ricostruire la scheda. Le viste che
+  //    incorporano un riquadro di terzi o una tela (Windy, traffico, navi,
+  //    radio, carte) non stanno in MIA_FN: una scheda scelta li' non potrebbe
+  //    mai comparire e resterebbe per sempre "al momento non disponibile".
+  //    Meglio non offrire la stellina che offrirne una che non porta a nulla.
+  if(!MIA_FN[vista])return;
   const scelte=miaCarica();
   for(const card of feed.querySelectorAll(":scope > .wx")){
     if(card.hasAttribute("data-nomia"))continue;   // schede di dettaglio: dipendono da una selezione
@@ -3966,7 +4015,10 @@ document.addEventListener("visibilitychange",()=>{
 document.addEventListener("keydown",e=>{
   if(e.altKey||e.ctrlKey||e.metaKey)return;
   if(e.target&&e.target.matches&&e.target.matches("input,select,textarea"))return;
-  const order=["all","sis","met","map","wnd","tra","amb","ems","log","rad"];
+  // I tasti vanno da 1 a 9: un decimo elemento non lo raggiungerebbe nessuno.
+  // MIA SALA, NAVI, SATELLITI e RADIO restano senza scorciatoia, e il manuale
+  // scrive questa mappatura, non "le prime nove della barra" (non coincidono).
+  const order=["all","sis","met","map","wnd","tra","amb","ems","log"];
   if(e.key>="1"&&e.key<="9")setView(order[+e.key-1]);
   else if(e.key==="r"||e.key==="R"){const b=document.querySelector('#nav [data-l="radar"]');if(b)b.click();}
 });
@@ -4047,13 +4099,26 @@ setInterval(loadWX,5*60e3);            // quasi tempo reale: current a passo 15 
 setInterval(loadAmb,30*60e3);
 setInterval(loadMare,5*60e3);     // mareografi IOC: campionamento continuo, ritardo di pochi minuti
 setInterval(loadEMS,15*60e3);
-setInterval(loadVolo,5*60e3);
+/* 🔴 Due cadenze, non una. In diretta si rinfresca ogni 20 secondi, perche'
+   un velivolo a 400 nodi percorre quasi 4 km in quel tempo e "dove sono
+   adesso" e' esattamente cio' che serve in emergenza. Sulla fotografia si
+   resta a 5 minuti: il file si rigenera ogni quarto d'ora, chiederlo piu'
+   spesso non lo renderebbe piu' fresco. Fermo a scheda nascosta: nessuno
+   sta guardando, e la fonte e' gratuita e va trattata con riguardo. */
+const VOLO_DIRETTA_MS=20e3, VOLO_SNAP_MS=5*60e3;
+let voloUltimo=0;
+setInterval(()=>{
+  if(document.hidden)return;
+  const passo=(S.volo&&S.volo.diretta)?VOLO_DIRETTA_MS:VOLO_SNAP_MS;
+  if(Date.now()-voloUltimo<passo)return;
+  voloUltimo=Date.now(); loadVolo();
+},5e3);
 setInterval(loadMeteoalarm,10*60e3);
 setInterval(loadFirms,15*60e3);
 setInterval(loadSpazio,20*60e3);       // l'indice Kp NOAA ha passo di 3 ore
 setInterval(loadSonde,10*60e3);          // lo snapshot cambia ogni 15 min: si rilegge piu' spesso per allinearsi presto
 setInterval(loadSito,5*60e3);
-setInterval(()=>{updZona();buildZoneLayer();if(S.view==="all")render();tickUpd()},60e3); // rivaluta anche dati divenuti vecchi
+setInterval(()=>{updZona();buildZoneLayer();rendSe("all");tickUpd()},60e3); // rivaluta anche dati divenuti vecchi
 setInterval(loadDPC,60*60e3);
 setInterval(()=>{if(S.obs)loadObs()},15*60e3); // stazioni: solo dopo il primo uso
 </script>

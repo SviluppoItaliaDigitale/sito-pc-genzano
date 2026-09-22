@@ -57,10 +57,27 @@ Se aggiungi nuove esclusioni al workflow, aggiorna anche questa tabella e la **P
 ## Regole di compatibilità
 
 Ogni modifica deve essere compatibile con:
-- Build statica di Hugo (nessun server-side rendering, nessuna API runtime)
+- Build statica di Hugo (nessun server-side rendering, nessuna API runtime) — **una sola eccezione, dichiarata: `static/api/aerei.php`**, vedi sotto
 - Deploy FTP su Aruba (percorsi degli asset devono essere corretti per entrambi i baseURL)
 - GitHub Pages con subpath `/sito-pc-genzano/` (usa `{{ absURL }}` o `{{ relURL }}` nei template, mai percorsi assoluti hardcoded)
 - Certificato HTTPS esistente su Aruba (non modificare la configurazione DNS senza coordinamento)
+
+## L'unica eccezione al sito statico: il ponte dei mezzi aerei (22/09/2026)
+
+🔴 Il sito è statico, e resta statico. `static/api/aerei.php` è **l'unico file eseguito dal server**, e sta qui documentato perché una deroga non dichiarata è una trappola per chi verrà dopo.
+
+**Perché esiste.** L'utente ha chiesto i mezzi aerei in tempo reale, *«serve per forza vedere in che posizione sono durante un'emergenza»*. Nessuna fonte ADS-B gratuita espone il CORS — verificato il 22/09/2026 con GET reali, non con HEAD (che sul CORS può mentire): adsb.fi e adsb.lol rispondono 200 con i dati ma senza intestazione, OpenSky limita il CORS al proprio dominio, airplanes.live risponde 403. Il browser quindi non può leggerle, e una fotografia committata non è «tempo reale»: il minimo dello scheduler di GitHub Actions è di cinque minuti, in pratica ritarda di ore, e a cadenza alta il repository crescerebbe di GB l'anno. Un intermediario è **l'unica strada tecnica**, e questa è quella che non aggiunge nulla fuori da ciò che il Gruppo già controlla: niente account nuovi, niente credenziali nuove, niente servizi di terzi che sappiano chi sta guardando.
+
+**Le alternative e perché no.** Un *Cloudflare Worker* avrebbe tenuto il sito statico, ma sarebbe stato il primo componente fuori da GitHub e Aruba, con credenziali proprie e fuori dai controlli automatici del sito. Incorporare una mappa altrui non si può: tutte vietano l'iframe tranne ADS-B Exchange, che lo consente tecnicamente ma lo proibisce nelle condizioni d'uso (rule 04a).
+
+**Cosa comporta, e non va dimenticato.**
+- **Solo su Aruba.** Su GitHub Pages il PHP non gira e in locale nemmeno: là la Sala ricade sulla fotografia committata **e lo dichiara nella scheda**. È la condizione normale di metà degli ambienti in cui la pagina si apre, non un caso limite.
+- **La CSP non cambia**: la chiamata è di stessa origine e `connect-src 'self'` la copre già. È un vantaggio di questa strada rispetto al Worker, che avrebbe richiesto un host nuovo in `connect-src`.
+- **Non è un proxy generico**: l'indirizzo di destinazione è scritto nel file, non arriva da chi chiama. Un proxy che accetta un URL dall'esterno diventa un ponte per raggiungere qualunque cosa a nome del nostro dominio. Chi tocca quel file non aggiunga mai un parametro che diventi parte dell'URL chiamato.
+- **Se il PHP non venisse eseguito**, il server servirebbe il sorgente come testo: nessun segreto dentro (non ce ne sono, e non ce ne devono entrare), e la Sala scarta una risposta che non sia il JSON atteso.
+- **Va trattata con riguardo la fonte**: una copia locale di dodici secondi fa da cuscinetto, così cento visitatori restano poche richieste al minuto. adsb.lol chiede di essere avvisata per usi di produzione: se il traffico cresce, si scrive loro.
+
+**Licenza.** I dati sono di **adsb.lol sotto ODbL 1.0**, la stessa di OpenStreetMap, che consente esplicitamente la ridistribuzione con attribuzione — obbligatoria, e sta nella scheda. 🔴 Si è passati da adsb.fi proprio per questo: le loro condizioni dicono *«open data is for personal, non-commercial use only»*, e un sito istituzionale pubblico «personale» non è. Valeva anche per la fotografia, che è stata spostata sulla stessa fonte.
 
 ## Rollback
 
