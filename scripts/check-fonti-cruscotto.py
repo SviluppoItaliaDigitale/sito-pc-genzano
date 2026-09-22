@@ -11,6 +11,7 @@ Solo stdlib: gira ovunque (locale + GitHub Actions) senza dipendenze.
 Uso:  python3 scripts/check-fonti-cruscotto.py
 """
 import json
+import time
 import sys
 import datetime
 import urllib.request
@@ -244,6 +245,31 @@ def chk_meteoalarm():
     return True, f"{det} · {b.count(b'<entry')} avvisi nel feed"
 
 
+def chk_celestrak():
+    # Effemeridi orbitali della vista SATELLITI. Si controlla un gruppo piccolo e
+    # stabile (le stazioni spaziali): se risponde quello, risponde l'endpoint.
+    # Non si scarica il catalogo completo, che è di 2,7 MB.
+    # Due tentativi: CelesTrak chiude ogni tanto la connessione a freddo e un
+    # solo colpo produrrebbe un falso allarme settimanale. Non si tocca _get,
+    # che e' condiviso con le altre fonti.
+    for tentativo in range(2):
+        ok, det, _, corpo = _get(
+            "https://celestrak.org/NORAD/elements/gp.php?GROUP=stations&FORMAT=TLE")
+        if ok:
+            break
+        if tentativo == 0:
+            time.sleep(5)
+    if not ok:
+        return False, f"{det} (due tentativi)"
+    txt = corpo.decode("utf-8", "replace") if isinstance(corpo, bytes) else (corpo or "")
+    if "Invalid query" in txt:
+        return False, "La fonte non riconosce più il gruppo richiesto"
+    righe = [r for r in txt.splitlines() if r.startswith("1 ")]
+    if not righe:
+        return False, "Nessuna effemeride nella risposta"
+    return True, f"{det} · {len(righe)} oggetti nel gruppo stazioni"
+
+
 SORGENTI = [
     ("Terremoti — INGV FDSN", "Terremoti, Vulcani", chk_ingv),
     ("Meteo puntuale — Open-Meteo", "Meteo, cartine", lambda: chk_openmeteo("forecast", "api.open-meteo.com", "current=temperature_2m")),
@@ -267,6 +293,7 @@ SORGENTI = [
     ("Mareografi — IOC/UNESCO", "Sala situazioni (ARIA·MARE)", chk_ioc_mareografi),
     ("Sismi euro-mediterranei — EMSC", "Sala situazioni (SISMICO)", chk_emsc),
     ("Mezzi aerei — adsb.fi", "Sala situazioni (EMERGENZE)", chk_adsb),
+    ("Effemeridi orbitali — CelesTrak", "Sala situazioni (SATELLITI)", chk_celestrak),
     ("Avvisi europei — MeteoAlarm", "Sala situazioni (ALLERTA)", chk_meteoalarm),
 ]
 

@@ -412,6 +412,7 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
   <button data-v="wnd"><span class="ic">☈</span>WINDY</button>
   <button data-v="tra" title="Traffico e incidenti segnalati in tempo reale"><span class="ic">⇄</span>TRAFFICO</button>
   <button data-v="rad" title="Ascolto delle bande radioamatoriali via SDR (spettro e waterfall)"><span class="ic">⌁</span>RADIO</button>
+  <button data-v="orb" title="Satelliti in orbita: dove sono adesso e quali passano su Genzano"><span class="ic">✦</span>SATELLITI</button>
   <button data-v="amb"><span class="ic">✿</span>ARIA·MARE</button>
   <button data-v="ems"><span class="ic">⚑</span>EMERGENZE</button>
   <button data-v="log"><span class="ic">✎</span>REGISTRO</button>
@@ -421,6 +422,7 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
   <button data-l="blitz"><span class="ic">⚡</span>FULMINI</button>
   <button data-l="qk" class="act"><span class="ic">●</span>SISMI</button>
   <button data-l="sat"><span class="ic">✦</span>SATELLITE</button>
+  <button data-l="orb"><span class="ic">✧</span>ORBITE</button>
   <button data-l="fire"><span class="ic">▵</span>FUOCHI</button>
   <button data-l="fwi"><span class="ic">♨</span>AIB PREV</button>
   <button data-l="volo"><span class="ic">✈</span>VOLO</button>
@@ -534,6 +536,9 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
 </footer>
 
 <script src="../vendor/leaflet/leaflet.js"></script>
+<!-- SGP4 vendorizzato (MIT): le posizioni dei satelliti si calcolano qui,
+     dalle effemeridi pubbliche. Vedi vendor/satellite/README.md -->
+<script src="../vendor/satellite/satellite.min.js"></script>
 <script src="../js/pc-fetch-cache.js"></script>
 <script>
 "use strict";
@@ -572,13 +577,14 @@ const EMS_COL={Wildfire:"#ff8c1a",Flood:"#37c7ff",Storm:"#b48cff",Earthquake:"#f
   "Volcanic activity":"#ff3b30",Landslide:"#c99e6b",Other:"#5d7a6e"};
 
 const S={view:"all",day:"today",black:false,
-  layers:{zone:true,radar:false,qk:true,sat:false,fire:false,blitz:false,fwi:false,volo:false,mareo:false},
+  layers:{zone:true,radar:false,qk:true,sat:false,fire:false,blitz:false,fwi:false,volo:false,mareo:false,orb:false},
   voloFiltro:"tutti",
   boll:null,bollVecchio:null,zones:{today:null,tomorrow:null},sito:null,
   quakes:[],wx:null,wxT:0,aria:null,mare:null,mareog:null,ems:[],emsSnap:null,
   obs:null,obsBusy:false,last:{},lastFull:0,errs:{},
   strikes:[],cycle:false,qkSeen:null,logArr:[],gdacs:[],gdacsSnap:null,news:[],newsCache:"",
-  usgs:[],eonet:[],emsc:[],volo:null,malarm:null,firms:null,spazio:null,sonde:[]};
+  usgs:[],eonet:[],emsc:[],volo:null,malarm:null,firms:null,spazio:null,sonde:[],
+  orb:{recs:[],gruppi:{},filtro:"tutti",caricato:0,tutti:false,busy:false,epoca:0,calc:null}};
 try{S.logArr=JSON.parse(localStorage.getItem("pcgz-monitor-log")||"[]")||[]}catch(e){S.logArr=[]}
 const $=s=>document.querySelector(s);
 const pad=n=>String(n).padStart(2,"0");
@@ -794,7 +800,7 @@ map.on("mousemove",e=>{
 });
 
 let zoneLayer=null, qkLayer=L.layerGroup([]);
-const voloLayer=L.layerGroup([]), mareoLayer=L.layerGroup([]);
+const voloLayer=L.layerGroup([]), mareoLayer=L.layerGroup([]), orbLayer=L.layerGroup([]);
 qkLayer.addTo(map);
 
 function applyLayers(){
@@ -803,7 +809,8 @@ function applyLayers(){
   on(radarLayer,S.layers.radar); on(satLayer,S.layers.sat); on(fireLayer,S.layers.fire);
   on(fwiLayer,S.layers.fwi); on(blitzLayer,S.layers.blitz);
   on(qkLayer,S.layers.qk);
-  on(voloLayer,S.layers.volo); on(mareoLayer,S.layers.mareo);
+  on(voloLayer,S.layers.volo); on(mareoLayer,S.layers.mareo); on(orbLayer,S.layers.orb);
+  if(S.layers.orb){ if(!S.orb.recs.length&&!S.orb.busy)orbCarica(false); else orbDisegna(); }
   if(zoneLayer)on(zoneLayer,S.layers.zone);
   $("#radarLbl").style.display=S.layers.radar?"block":"none";
   $("#blitzLbl").style.display=S.layers.blitz?"block":"none";
@@ -2986,7 +2993,290 @@ function viewRad(){
   schedeRadioDati();
   feed.appendChild(noteEl('Ricevitori esterni <a href="https://sdr.noantri.org/" target="_blank" rel="noopener">OpenWebRX+ di IZ0FKE</a> e <a href="https://sdr-plus.i6iqx.it/" target="_blank" rel="noopener">OpenWebRX+ di I6IQX</a>, caricati solo su tua richiesta; limiti di banda da <a href="https://www.iaru-r1.org/on-the-air/band-plans/" target="_blank" rel="noopener">IARU Regione 1</a> e dal Piano nazionale di ripartizione delle frequenze (MIMIT); canali PMR446/CB/LPD di libero uso. Le frequenze di rete sono quelle pubblicate dalle rispettive organizzazioni.'));
 }
-function render(){({all:viewAll,sis:viewSis,met:viewMet,map:viewMap,wnd:viewWnd,tra:viewTra,rad:viewRad,amb:viewAmb,ems:viewEms,log:viewLog})[S.view]();windySync();traffSync();radioSync();}
+
+/* ================= SATELLITI IN ORBITA — CelesTrak + SGP4 =====================
+   Le effemeridi (TLE) vengono da CelesTrak, che espone il CORS aperto: le legge
+   il browser, senza snapshot e senza far crescere il repository.
+   Le posizioni si CALCOLANO con satellite.js (SGP4 vendorizzato, MIT): e' il
+   modello con cui le TLE stesse sono definite. Verificato il 22/09/2026 contro
+   una fonte indipendente sulla ISS: 0,4 km di scarto in orizzontale.
+
+   🔴 I GRUPPI SONO DELLA FONTE, NON NOSTRI. "sarsat" e "dmc" non sono etichette
+   che ci siamo inventati: CelesTrak raggruppa cosi' i satelliti che portano un
+   ripetitore COSPAS-SARSAT per i radiofari di emergenza a 406 MHz e quelli della
+   Disaster Monitoring Constellation. Il filtro "protezione civile" e' l'unione
+   di gruppi della fonte, dichiarata qui sotto.
+
+   🔴 PESO. Il catalogo completo degli attivi e' di ~16.000 oggetti e 2,7 MB:
+   non si scarica all'apertura. All'ingresso si caricano i gruppi di protezione
+   civile (poche centinaia, ~90 KB) e il resto arriva solo su richiesta esplicita,
+   come per Windy, Waze e il ricevitore radio. */
+const CT_BASE="https://celestrak.org/NORAD/elements/gp.php?FORMAT=TLE&GROUP=";
+// nome del gruppo CelesTrak -> etichetta e se rientra in "protezione civile"
+const ORB_GRUPPI=[
+  ["sarsat",   "SOCCORSO",      true,  "portano un ripetitore COSPAS-SARSAT per i radiofari di emergenza a 406 MHz"],
+  ["dmc",      "DISASTRI",      true,  "Disaster Monitoring Constellation: osservazione rapida delle aree colpite"],
+  ["weather",  "METEO",         true,  "satelliti meteorologici polari"],
+  ["goes",     "METEO GEO",     true,  "meteorologici geostazionari"],
+  ["resource", "OSSERVAZIONE",  true,  "osservazione della Terra: da queste immagini nascono le mappe Copernicus EMS"],
+  ["stations", "STAZIONI",      true,  "stazioni spaziali abitate, ISS compresa"],
+  ["amateur",  "RADIOAMATORI",  true,  "satelliti radioamatoriali, usati anche nelle emergenze"],
+  ["galileo",  "NAVIGAZIONE",   false, "costellazione europea Galileo"],
+  ["gps-ops",  "GPS",           false, "costellazione GPS operativa"],
+  ["science",  "SCIENZA",       false, "satelliti scientifici"],
+  ["visual",   "PIÙ LUMINOSI",  false, "i piu' luminosi, quelli che si vedono a occhio nudo"],
+];
+const ORB_PC=ORB_GRUPPI.filter(g=>g[2]).map(g=>g[0]);
+const ORB_TTL=6*3600e3;      // le TLE si rinnovano poche volte al giorno
+const ORB_TLE_VECCHIA=7*24*3600e3; // oltre una settimana la previsione degrada
+const AU_KM=149597870.7, R_TERRA=6378.137;
+
+function orbCacheLeggi(g){
+  try{
+    const r=JSON.parse(localStorage.getItem("pcgz-tle:"+g)||"null");
+    if(r&&r.t&&Date.now()-r.t<ORB_TTL&&typeof r.txt==="string")return r.txt;
+  }catch(e){}
+  return null;
+}
+function orbCacheSalva(g,txt){
+  // la cache non e' un vezzo: CelesTrak chiede esplicitamente di non riscaricare
+  // le stesse effemeridi a ogni visita.
+  try{localStorage.setItem("pcgz-tle:"+g,JSON.stringify({t:Date.now(),txt:txt}))}catch(e){}
+}
+async function orbScarica(g){
+  const c=orbCacheLeggi(g); if(c!==null)return c;
+  const r=await fetch(CT_BASE+encodeURIComponent(g),{cache:"no-store"});
+  if(!r.ok)throw new Error("HTTP "+r.status);
+  const txt=await r.text();
+  if(!/^\s*\S/.test(txt)||/Invalid query/i.test(txt))throw new Error("risposta non valida");
+  orbCacheSalva(g,txt); return txt;
+}
+// dalle tre righe di una TLE al record propagabile, tenendo il gruppo di origine
+function orbParse(txt,gruppo,mappa){
+  const L=txt.split("\n"); let n=0;
+  for(let i=0;i+2<L.length;i+=3){
+    const nome=(L[i]||"").trim(), r1=L[i+1], r2=L[i+2];
+    if(!nome||!r1||!r1.startsWith("1 ")||!r2||!r2.startsWith("2 "))continue;
+    const id=r1.slice(2,7).trim();
+    if(mappa.has(id)){ // gia' presente: si aggiunge solo il gruppo
+      const g=mappa.get(id); if(gruppo&&!g.gruppi.includes(gruppo))g.gruppi.push(gruppo);
+      continue;
+    }
+    let rec; try{rec=satellite.twoline2satrec(r1,r2)}catch(e){continue}
+    if(!rec||rec.error)continue;
+    mappa.set(id,{id,nome,rec,gruppi:gruppo?[gruppo]:[],epoca:orbEpoca(r1)});
+    n++;
+  }
+  return n;
+}
+// l'epoca della TLE sta nella riga 1, colonne 19-32: AAGGG.frazione
+function orbEpoca(r1){
+  const a=parseInt(r1.slice(18,20),10), g=parseFloat(r1.slice(20,32));
+  if(!Number.isFinite(a)||!Number.isFinite(g))return 0;
+  const anno=a<57?2000+a:1900+a;
+  return Date.UTC(anno,0,1)+(g-1)*86400e3;
+}
+
+// posizione del Sole in km nel sistema inerziale (serve per sapere chi e'
+// illuminato e se l'osservatore e' al buio)
+function orbSole(t){
+  const jd=satellite.jday(t.getUTCFullYear(),t.getUTCMonth()+1,t.getUTCDate(),
+                          t.getUTCHours(),t.getUTCMinutes(),t.getUTCSeconds());
+  const sp=satellite.sunPos(jd);
+  return {x:sp.rsun[0]*AU_KM,y:sp.rsun[1]*AU_KM,z:sp.rsun[2]*AU_KM};
+}
+// illuminato dal Sole = dal lato giorno, oppure fuori dal cilindro d'ombra
+function orbIlluminato(p,s){
+  const ns=Math.hypot(s.x,s.y,s.z),ux=s.x/ns,uy=s.y/ns,uz=s.z/ns;
+  const proj=p.x*ux+p.y*uy+p.z*uz;
+  if(proj>0)return true;
+  return Math.hypot(p.x-proj*ux,p.y-proj*uy,p.z-proj*uz)>R_TERRA;
+}
+const OBS_RAD={longitude:GENZANO.lon*Math.PI/180,latitude:GENZANO.lat*Math.PI/180,height:0.435};
+
+/* Calcola posizione e angoli per TUTTI i satelliti caricati.
+   Sedicimila oggetti si propagano in un paio di decimi di secondo, quindi si
+   rifa' tutto a ogni giro invece di tenere stati parziali che si disallineano. */
+function orbCalcola(){
+  const t=new Date(), gmst=satellite.gstime(t), sole=orbSole(t);
+  const soleEcf=satellite.eciToEcf(sole,gmst);
+  const soleEl=satellite.ecfToLookAngles(OBS_RAD,soleEcf).elevation*180/Math.PI;
+  const out=[]; const eta=[];
+  for(const sat of S.orb.recs){
+    let pv; try{pv=satellite.propagate(sat.rec,t)}catch(e){continue}
+    if(!pv||!pv.position||!Number.isFinite(pv.position.x))continue;
+    const ecf=satellite.eciToEcf(pv.position,gmst);
+    const la=satellite.ecfToLookAngles(OBS_RAD,ecf);
+    const geo=satellite.eciToGeodetic(pv.position,gmst);
+    const el=la.elevation*180/Math.PI;
+    if(sat.epoca)eta.push(Math.abs(t.getTime()-sat.epoca));
+    out.push({
+      id:sat.id, nome:sat.nome, gruppi:sat.gruppi, epoca:sat.epoca,
+      lat:satellite.degreesLat(geo.latitude), lon:satellite.degreesLong(geo.longitude),
+      quota:geo.height, el:el, az:la.azimuth*180/Math.PI, dist:la.rangeSat,
+      ill:orbIlluminato(pv.position,sole)
+    });
+  }
+  // 🔴 L'eta' delle effemeridi si misura sulla MEDIANA, non sul caso peggiore:
+  //    col minimo bastavano 2 TLE vecchie su 717 (lo 0,3%) a far comparire un
+  //    avviso per tutte, cioe' rumore che si impara a ignorare. Alcune epoche
+  //    sono nel futuro, perche' la fonte pubblica anche elementi previsti:
+  //    per questo si prende il valore assoluto.
+  eta.sort((a,b)=>a-b);
+  const mediana=eta.length?eta[Math.floor(eta.length/2)]:0;
+  const vecchie=eta.filter(x=>x>ORB_TLE_VECCHIA).length;
+  S.orb.calc={t:t.getTime(),soleEl:soleEl,lista:out,
+    buio:soleEl<-6,   // crepuscolo civile: sotto i -6° il cielo e' abbastanza scuro
+    etaMediana:mediana, vecchie:vecchie, conEta:eta.length};
+  return S.orb.calc;
+}
+// fasce di orbita: le soglie sono le definizioni correnti di LEO/MEO/GEO
+const ORB_FASCE=[["leo","ORBITA BASSA",0,2000],["meo","ORBITA MEDIA",2000,34000],
+                 ["geo","GEOSTAZIONARIA",34000,37000],["alta","ORBITA ALTA",37000,1e9]];
+function orbFascia(q){const f=ORB_FASCE.find(x=>q>=x[2]&&q<x[3]);return f?f[0]:"alta"}
+
+function orbFiltra(lista,f){
+  if(f==="tutti")return lista;
+  if(f==="pc")return lista.filter(x=>x.gruppi.some(g=>ORB_PC.includes(g)));
+  if(f==="sopra")return lista.filter(x=>x.el>0);
+  if(f==="occhio")return lista.filter(x=>x.el>10&&x.ill&&S.orb.calc&&S.orb.calc.buio);
+  if(f.startsWith("g:"))return lista.filter(x=>x.gruppi.includes(f.slice(2)));
+  if(f.startsWith("o:"))return lista.filter(x=>orbFascia(x.quota)===f.slice(2));
+  return lista;
+}
+// le pastiglie di gruppo si ricavano da CIO' CHE E' CARICATO, non da una lista
+// scritta a priori: compaiono solo i gruppi realmente presenti, come per gli aerei
+function orbGruppiPresenti(){
+  const c=new Map();
+  for(const x of (S.orb.calc?S.orb.calc.lista:[]))
+    for(const g of x.gruppi) c.set(g,(c.get(g)||0)+1);
+  return ORB_GRUPPI.filter(g=>c.has(g[0])).map(g=>[g[0],g[1],c.get(g[0]),g[3]]);
+}
+function orbFascePresenti(){
+  const c=new Map();
+  for(const x of (S.orb.calc?S.orb.calc.lista:[])) c.set(orbFascia(x.quota),(c.get(orbFascia(x.quota))||0)+1);
+  return ORB_FASCE.filter(f=>c.has(f[0])).map(f=>[f[0],f[1],c.get(f[0])]);
+}
+
+async function orbCarica(tutti){
+  if(S.orb.busy)return; S.orb.busy=true;
+  if(S.view==="orb")render();
+  const mappa=new Map();
+  for(const s of S.orb.recs)mappa.set(s.id,s);
+  const gruppi=tutti?["active"]:ORB_PC.concat(["galileo","gps-ops","science","visual"]);
+  let errori=0;
+  for(const g of gruppi){
+    try{
+      const txt=await orbScarica(g);
+      orbParse(txt,g==="active"?null:g,mappa);
+      S.orb.gruppi[g]=true;
+    }catch(e){errori++}
+  }
+  S.orb.recs=[...mappa.values()];
+  S.orb.caricato=Date.now();
+  if(tutti)S.orb.tutti=true;
+  if(errori&&!S.orb.recs.length)S.errs.orb="Effemeridi CelesTrak non raggiungibili.";
+  else delete S.errs.orb;
+  S.orb.busy=false;
+  orbCalcola();
+  if(S.view==="orb")render();
+  if(mapLayerOn("orb"))orbDisegna();
+  tickUpd();
+}
+
+const mapLayerOn=k=>!!(S.layers&&S.layers[k]);
+// Sulla cartina si disegna SOLO cio' che il filtro attivo seleziona e che sta
+// sopra l'orizzonte: con "tutti" sarebbero migliaia di punti illeggibili, e un
+// satellite sotto l'orizzonte da Genzano non si vede comunque.
+const ORB_MAX_MAPPA=400;
+function orbDisegna(){
+  if(typeof orbLayer==="undefined")return;
+  orbLayer.clearLayers();
+  if(!S.orb.calc)return;
+  const sel=orbFiltra(S.orb.calc.lista,S.orb.filtro)
+    .filter(x=>x.el>0).sort((a,b)=>b.el-a.el).slice(0,ORB_MAX_MAPPA);
+  for(const x of sel){
+    const pc=x.gruppi.some(g=>ORB_PC.includes(g));
+    L.circleMarker([x.lat,x.lon],{radius:x.el>30?5:3.5,
+      color:pc?"#ffd60a":(x.ill?"#e879f9":"#7fa8c9"),
+      weight:1.2,fillOpacity:x.ill?.85:.35})
+     .bindPopup(`<b>${esc(x.nome)}</b><br>`+
+       `${x.el.toFixed(0)}° sull'orizzonte · azimut ${x.az.toFixed(0)}°<br>`+
+       `quota ${Math.round(x.quota)} km · distanza ${Math.round(x.dist)} km<br>`+
+       (x.ill?"illuminato dal Sole":"nell'ombra della Terra")+
+       (x.gruppi.length?`<br><small>${esc(x.gruppi.join(", "))}</small>`:""))
+     .addTo(orbLayer);
+  }
+}
+
+function orbPillole(){
+  const c=S.orb.calc, n=c?c.lista.length:0;
+  const conta=f=>orbFiltra(c?c.lista:[],f).length;
+  // 🔴 "TUTTI" resta sempre la prima pastiglia e sempre disponibile: da
+  //    qualunque filtro si torna all'intero catalogo con un clic.
+  const riga1=[["tutti","TUTTI",n],["pc","PROTEZIONE CIVILE",conta("pc")],
+               ["sopra","SOPRA L'ORIZZONTE",conta("sopra")],
+               ["occhio","VISIBILI A OCCHIO NUDO",conta("occhio")]];
+  const riga2=orbGruppiPresenti().map(g=>["g:"+g[0],g[1],g[2]]);
+  const riga3=orbFascePresenti().map(f=>["o:"+f[0],f[1],f[2]]);
+  const pil=r=>`<div class="voloFiltri">`+r.map(([k,lab,q])=>
+    `<button class="vfPill${S.orb.filtro===k?" act":""}" data-orb="${esc(k)}"`+
+    ` aria-pressed="${S.orb.filtro===k}">${esc(lab)}<i>${q}</i></button>`).join("")+`</div>`;
+  return pil(riga1)+(riga2.length?pil(riga2):"")+(riga3.length?pil(riga3):"");
+}
+
+function viewOrb(){
+  title.textContent="SATELLITI — ORBITE E PASSAGGI SU GENZANO";
+  feed.innerHTML="";
+  if(S.errs.orb){feed.appendChild(errCard(S.errs.orb));return}
+  if(!S.orb.recs.length){
+    feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>SATELLITI IN ORBITA<span>CELESTRAK · CALCOLO SGP4 NELLA PAGINA</span></h3>
+      <p>Posizioni calcolate qui, dalle effemeridi pubbliche di CelesTrak: nessun servizio di terzi vede cosa guardi.</p>
+      <p style="margin-top:8px"><button class="vfPill" id="orbGo"${S.orb.busy?" disabled":""}>${S.orb.busy?"CARICAMENTO…":"CARICA I SATELLITI"}</button></p></div>`);
+    return;
+  }
+  const c=S.orb.calc||orbCalcola();
+  const sel=orbFiltra(c.lista,S.orb.filtro);
+  const sopra=sel.filter(x=>x.el>0).sort((a,b)=>b.el-a.el);
+  const gg=c.etaMediana/86400e3;
+  const etaTxt=c.conEta?(gg<1?`meno di un giorno`:`${gg.toFixed(1)} giorni`):"non disponibile";
+  const tropVec=c.conEta&&c.vecchie/c.conEta>0.05;
+  feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>SATELLITI IN ORBITA<span>CELESTRAK · CALCOLO NELLA PAGINA</span></h3>
+    <div class="kgrid">
+    <div class="kpi"><small>CARICATI</small><b>${c.lista.length}</b><em>${S.orb.tutti?"catalogo attivo completo":"gruppi selezionati"}</em></div>
+    <div class="kpi" style="--kc:#35e08c"><small>SOPRA L'ORIZZONTE</small><b>${c.lista.filter(x=>x.el>0).length}</b><em>da Genzano adesso</em></div>
+    <div class="kpi"><small>CIELO A GENZANO</small><b>${c.soleEl>0?"giorno":c.buio?"buio":"crepuscolo"}</b><em>Sole a ${c.soleEl.toFixed(0)}°</em></div>
+    <div class="kpi"><small>ETÀ DELLE EFFEMERIDI</small><b style="font-size:15px">${esc(etaTxt)}</b><em>metà ne ha meno di così</em></div>
+    </div>
+    ${tropVec?`<p class="staleNota">${c.vecchie} effemeridi su ${c.conEta} hanno più di una settimana: su quelle la posizione calcolata perde precisione.</p>`:""}
+    <p style="margin:6px 0 0;color:var(--dim);font-size:11px">Le posizioni sono <b>calcolate</b> con il modello SGP4 dalle effemeridi pubbliche, non riprese da un servizio di tracciamento. Sulla cartina il punto è la <b>verticale a terra</b> del satellite, non il posto da cui si vede: uno a ventimila chilometri di quota è sopra l'orizzonte di Genzano anche col punto sul Sahara. ${S.orb.tutti?"":`<button class="vfPill" id="orbTutti"${S.orb.busy?" disabled":""} style="margin-left:4px">${S.orb.busy?"CARICAMENTO…":"CARICA TUTTI GLI ATTIVI (~16.000, 2,7 MB)"}</button>`}</p></div>`);
+  feed.insertAdjacentHTML("beforeend",orbPillole());
+  const nota=ORB_GRUPPI.find(g=>"g:"+g[0]===S.orb.filtro);
+  if(nota)feed.insertAdjacentHTML("beforeend",
+    `<p style="margin:0 0 8px;color:var(--dim);font-size:11px">${esc(nota[1])}: ${esc(nota[3])}.</p>`);
+  if(!sopra.length){
+    feed.insertAdjacentHTML("beforeend",`<div class="wx"><p>Nessuno dei satelliti selezionati è sopra l'orizzonte di Genzano in questo momento. ${S.orb.filtro==="occhio"&&!c.buio?"A occhio nudo si vedono solo col cielo scuro: riprova dopo il tramonto.":"Torneranno: il filtro conta solo chi è visibile adesso."}</p></div>`);
+    return;
+  }
+  feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>SOPRA L'ORIZZONTE ADESSO<span>${sopra.length} · I PIÙ ALTI PER PRIMI</span></h3>`+
+    sopra.slice(0,25).map(x=>`<div class="obsRow"><span class="on">${esc(x.nome)}`+
+      `${x.ill?' <em style="color:#ffd60a">☀ illuminato</em>':''}</span>`+
+      `<span>${x.el.toFixed(0)}° · az ${x.az.toFixed(0)}° · ${Math.round(x.quota)} km di quota · ${Math.round(x.dist)} km da qui</span></div>`).join("")+
+    (sopra.length>25?`<p style="margin:6px 0 0;color:var(--dim);font-size:11px">Mostrati i 25 più alti di ${sopra.length}.</p>`:"")+
+    `</div>`);
+}
+
+document.addEventListener("click",e=>{
+  const go=e.target.closest("#orbGo,#orbTutti");
+  if(go){orbCarica(go.id==="orbTutti"||S.orb.tutti);return}
+  const p=e.target.closest("[data-orb]");
+  if(!p)return;
+  S.orb.filtro=p.getAttribute("data-orb");
+  render();
+  if(mapLayerOn("orb"))orbDisegna();
+});
+
+function render(){({all:viewAll,sis:viewSis,met:viewMet,map:viewMap,wnd:viewWnd,tra:viewTra,rad:viewRad,amb:viewAmb,ems:viewEms,orb:viewOrb,log:viewLog})[S.view]();windySync();traffSync();radioSync();}
 
 /* ---------------- barra NOTIZIE — agenzie di stampa (Italia e mondo) ----------------
    ANSA + Adnkronos dallo snapshot self-hosted open-data/notizie-agenzie.json
@@ -3056,7 +3346,7 @@ function tickUpd(){
 /* Deep-link e condivisione delle schermate: ogni vista ha un hash proprio
    (#allerta, #sismico, #meteo, #carte, #windy, #radio, #aria-mare, #emergenze-ue),
    così il link condiviso apre direttamente quella schermata. */
-const VIEW_SLUG={all:"allerta",sis:"sismico",met:"meteo",map:"carte",wnd:"windy",tra:"traffico",rad:"radio",amb:"aria-mare",ems:"emergenze-ue",log:"registro"};
+const VIEW_SLUG={all:"allerta",sis:"sismico",met:"meteo",map:"carte",wnd:"windy",tra:"traffico",rad:"radio",amb:"aria-mare",ems:"emergenze-ue",orb:"satelliti",log:"registro"};
 const SLUG_VIEW=Object.fromEntries(Object.entries(VIEW_SLUG).map(([k,v])=>[v,k]));
 function setView(v,fromHash){
   if(!VIEW_SLUG[v])return;
