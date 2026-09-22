@@ -5,11 +5,47 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-21T23:53:44+00:00",
+  "generato": "2026-09-22T03:49:59+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-22T03:21:07+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il tifone Dujuan flagella il Giappone orientale, 2 morti e diversi dispersi",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/22/tifone-dujuan-flagella-il-giappone-orientale-2-morti-e-diversi-dispersi_af3b910a-5204-4478-8db0-629699aa34aa.html"
+  },
+  {
+   "data": "2026-09-22T03:18:31+00:00",
+   "fonte": "ANSA",
+   "titolo": "La Francia lavora a una risoluzione del consiglio di sicurezza dell'Onu per Hormuz",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/22/francia-lavora-a-risoluzione-del-consiglio-di-sicurezza-dellonu-per-hormuz_a339206d-6f7a-400c-bbeb-f57876af94f0.html"
+  },
+  {
+   "data": "2026-09-22T03:17:28+00:00",
+   "fonte": "ANSA",
+   "titolo": "Kallas: 'L'operazione Aspides ha bisogno di altri assetti navali e aerei'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/22/kallas-loperazione-aspides-ha-bisogno-di-altri-assetti-navali-e-aerei_8c73f7d9-8eb5-469c-8ae2-261fda345fc6.html"
+  },
+  {
+   "data": "2026-09-22T03:12:04+00:00",
+   "fonte": "ANSA",
+   "titolo": "A Sant'Ambrogio l'ultimo saluto a Mazzola: 'Non ti scorderemo mai'",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/21/gli-ultras-ai-funerali-di-sandro-mazzola-il-tuo-nome-nella-storia-dellinter_7a153788-b747-4753-a2e0-f6fef5275d11.html"
+  },
+  {
+   "data": "2026-09-22T03:08:18+00:00",
+   "fonte": "ANSA",
+   "titolo": "Semilibertà per Chico Forti, potrà continuare ad uscire dal carcere",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/21/semiliberta-per-chico-forti-potra-continuare-ad-uscire-dal-carcere_131a6004-f01b-43da-93ef-203062b495e3.html"
+  },
+  {
+   "data": "2026-09-22T03:07:58+00:00",
+   "fonte": "ANSA",
+   "titolo": "La Corea del Nord testa un 'nuovo tipo' di arma, proteste da Seul e Tokyo",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/22/la-corea-del-nord-testa-un-nuovo-tipo-di-arma-proteste-da-seul-e-tokyo_30ae30cc-5e7e-499a-8708-8723f86edcee.html"
+  },
   {
    "data": "2026-09-21T22:15:59+00:00",
    "fonte": "ADNKRONOS",
@@ -59,18 +95,6 @@
    "url": "https://www.adnkronos.com/politica/alberto-stefani-incidente-come-sta_4180eaimuaDXvePoxobOXe"
   },
   {
-   "data": "2026-09-21T20:17:36+00:00",
-   "fonte": "ANSA",
-   "titolo": "'I jet erano pronti contro gli houthi, poi lo stop di Trump'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/09/21/i-jet-erano-pronti-contro-gli-houthi-poi-lo-stop-di-trump_5a5117b7-6646-4851-9244-5caef3a44aca.html"
-  },
-  {
-   "data": "2026-09-21T20:16:28+00:00",
-   "fonte": "ANSA",
-   "titolo": "'La guerra in Ucraina deve finire', il monito di Trump",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/21/la-guerra-in-ucraina-deve-finire-il-monito-di-trump_cf2e3c21-7423-45ad-a530-b4bf0065f264.html"
-  },
-  {
    "data": "2026-09-21T20:15:27+00:00",
    "fonte": "ANSA",
    "titolo": "Cnn, Politico e MsNow fanno causa a Trump, e il pool tv lo oscura",
@@ -89,12 +113,6 @@
    "url": "https://www.ansa.it/sito/notizie/politica/2026/09/21/mattarella-agli-studenti-la-cultura-rende-liberi_af7c5db3-feda-43c4-abe6-d226da53196b.html"
   },
   {
-   "data": "2026-09-21T20:07:54+00:00",
-   "fonte": "ANSA",
-   "titolo": "Semilibertà per Chico Forti, potrà continuare ad uscire dal carcere",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/21/semiliberta-per-chico-forti-potra-continuare-ad-uscire-dal-carcere_131a6004-f01b-43da-93ef-203062b495e3.html"
-  },
-  {
    "data": "2026-09-21T19:51:52+00:00",
    "fonte": "ANSA",
    "titolo": "Salvini: 'Al congresso mi aspetto candidature'. Tensione con i lombardi",
@@ -102,7 +120,7 @@
   },
   {
    "data": "2026-09-21T19:51:13+00:00",
-   "fonte": "ANSA",
+   "fonte": "ANSA CRONACA",
    "titolo": "La prof accoltellata a Roma dal tredicenne, si cercano gli istigatori",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/21/la-prof-accoltellata-a-roma-dal-tredicenne-si-cercano-gli-istigatori_54912b3a-8707-4045-86e3-9e7c638a9629.html"
   },
@@ -155,22 +173,10 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/21/elezioni-in-germania-merz-il-governo-restera-per-assicurare-il-futuro-democratico-del_64293371-4512-4ab8-ab37-0abbaebb497e.html"
   },
   {
-   "data": "2026-09-21T19:00:35+00:00",
-   "fonte": "ANSA",
-   "titolo": "Rivoluzione in chirurgia, anestesia 'green' e stop al digiuno",
-   "url": "https://www.ansa.it/canale_saluteebenessere/notizie/ospedali_italiani/2026/09/21/rivoluzione-in-chirurgia-anestesia-green-e-stop-al-digiuno_6cf0467f-813e-49f6-bc84-6caaac5e2f1b.html"
-  },
-  {
    "data": "2026-09-21T18:59:00+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Blitz anticamorra a Napoli, nascosti nel muro Rolex e banconote per più di 3 milioni di euro: la scoperta",
    "url": "https://www.adnkronos.com/cronaca/blitz-anticamorra-napoli-banconote-rolex_3W487iKSSWDeMmjfBksYrK"
-  },
-  {
-   "data": "2026-09-21T18:56:36+00:00",
-   "fonte": "ANSA",
-   "titolo": "A Sant'Ambrogio l'ultimo saluto a Mazzola: 'Non ti scorderemo mai'",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/21/gli-ultras-ai-funerali-di-sandro-mazzola-il-tuo-nome-nella-storia-dellinter_7a153788-b747-4753-a2e0-f6fef5275d11.html"
   },
   {
    "data": "2026-09-21T18:52:05+00:00",
@@ -183,12 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Startup italiana 'predice' i reati delle aziende con l'IA: scova mafiosi, furbetti e caporali",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/21/startup-ia-italiana-predice-i-reati-delle-aziende-convocati-in-parlamentonbsp_f138c760-a4be-4d7f-b3c4-7696e5b5571f.html"
-  },
-  {
-   "data": "2026-09-21T18:39:53+00:00",
-   "fonte": "ANSA",
-   "titolo": "Tajani: 'Mi scuso con le donne, non le ho mai volute offendere'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/21/tajani-mi-scuso-con-le-donne-non-le-ho-mai-volute-offendere_8ff45906-1a05-4edf-b2b5-64ed8bb232e4.html"
   }
  ]
 }
