@@ -227,11 +227,21 @@ def chk_emsc():
 
 
 def chk_adsb():
-    ok, det, _, j = _get("https://opendata.adsb.fi/api/v2/lat/42.0/lon/12.5/dist/250",
-                         expect_json=True)
-    if ok and isinstance(j, dict) and isinstance(j.get("aircraft"), list):
-        return True, f"{det} · {len(j['aircraft'])} velivoli nel cerchio centrale"
-    return False, det if not ok else "Risposta JSON inattesa (manca 'aircraft')"
+    """Fonte dei mezzi aerei: adsb.lol (ODbL). La chiave dei velivoli e' 'ac'.
+    Si controlla anche che l'elenco non sia VUOTO: sopra l'Italia centrale non
+    capita mai, e una risposta valida ma senza velivoli e' il sintomo di uno
+    schema cambiato — e' successo il 22/09/2026 passando da adsb.fi, che usava
+    'aircraft', e per poco una fotografia buona veniva sovrascritta con una
+    vuota senza che nulla segnalasse il guasto."""
+    ok, det, _, j = _get("https://api.adsb.lol/v2/point/42.0/12.5/250", expect_json=True)
+    if not ok:
+        return False, det
+    if not isinstance(j, dict) or not isinstance(j.get("ac"), list):
+        return False, "Risposta JSON inattesa (manca 'ac'): schema cambiato?"
+    n = len(j["ac"])
+    if n == 0:
+        return False, f"{det} · nessun velivolo nel cerchio centrale: schema cambiato?"
+    return True, f"{det} · {n} velivoli nel cerchio centrale"
 
 
 def chk_meteoalarm():
@@ -292,7 +302,7 @@ SORGENTI = [
     ("Osservazioni stazioni — ItaliaMeteo", "Osservazioni ItaliaMeteo", chk_obs_italiameteo),
     ("Mareografi — IOC/UNESCO", "Sala situazioni (ARIA·MARE)", chk_ioc_mareografi),
     ("Sismi euro-mediterranei — EMSC", "Sala situazioni (SISMICO)", chk_emsc),
-    ("Mezzi aerei — adsb.fi", "Sala situazioni (EMERGENZE)", chk_adsb),
+    ("Mezzi aerei — adsb.lol", "Sala situazioni (EMERGENZE)", chk_adsb),
     ("Effemeridi orbitali — CelesTrak", "Sala situazioni (SATELLITI)", chk_celestrak),
     ("Avvisi europei — MeteoAlarm", "Sala situazioni (ALLERTA)", chk_meteoalarm),
 ]
