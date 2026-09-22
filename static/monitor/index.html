@@ -131,12 +131,58 @@ html.a11y-pause-anim .navArr.hint{animation:none}
 /* Vista RADIO — frontalino di sintonia nel pannello laterale */
 #nav button.rxon::after{content:" ●";color:var(--grn);font-size:9px}
 /* Pastiglie di filtro dell'elenco velivoli */
-.fchips{display:flex;flex-wrap:wrap;gap:4px;margin:0 0 7px}
-.fchip{background:#0d1a24;border:1px solid var(--line);color:var(--dim);cursor:pointer;
-  font:inherit;font-size:10px;letter-spacing:.04em;padding:3px 7px;border-radius:2px}
-.fchip .c{color:var(--tx);font-weight:700;margin-left:4px}
+/* ---- FILTRI A PASTIGLIA -----------------------------------------------------
+   Usati dai mezzi aerei e dai satelliti: UNO stile solo per tutta la pagina.
+   Le file sono etichettate (.filtriGruppo) perche' tre file di pastiglie senza
+   titolo non si capisce che cosa distinguano — segnalato dall'utente il
+   22/09/2026 ("tutti appiccicati"). Chi aggiunge una fila usa queste classi:
+   non serve inventarne altre. */
+.filtriGruppo{margin:0 0 10px}
+/* --dim (#5d7a6e) non arriva a 4,5:1 su questi fondi: 3,91:1 per il titolo di
+   fila e 4,16:1 per il contatore. Qui si usa un grigio-verde piu' chiaro che
+   resta secondario ma passa il livello AA (5,2:1 e 5,6:1), calcolato non a occhio. */
+.filtriTit{font-family:var(--mono);font-size:9px;letter-spacing:.16em;color:#709080;
+  margin:0 0 5px;text-transform:uppercase}
+.fchips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px}
+/* riga di elenco che si puo' toccare per aprire il dettaglio */
+.obsRow.orbRiga{cursor:pointer;border-radius:3px;padding-left:4px;padding-right:4px;
+  margin-left:-4px;margin-right:-4px}
+.obsRow.orbRiga:hover{background:#0e1d29}
+.obsRow.orbRiga:focus-visible{outline:2px solid var(--gia);outline-offset:-2px}
+
+/* ---- MIA SALA: stellina di scelta e comandi di riordino --------------------
+   Il riordino e' a pulsanti, non a trascinamento: WCAG 2.2 criterio 2.5.7
+   chiede sempre un'alternativa al trascinamento, e il gate di accessibilita'
+   di questo repository e' bloccante. */
+.wx h3{position:relative}
+.miaStar{margin-left:auto;background:none;border:0;cursor:pointer;color:var(--dim);
+  font-size:13px;line-height:1;padding:0 2px;transition:color .12s}
+.miaStar:hover{color:var(--gia)}
+.miaStar.on{color:var(--gia)}
+.miaStar:focus-visible{outline:2px solid var(--gia);outline-offset:2px;border-radius:3px}
+.miaNav{margin-left:auto;display:inline-flex;gap:3px;flex:0 0 auto}
+.miaBtn{background:#0b1620;border:1px solid var(--line);color:var(--tx);cursor:pointer;
+  font-size:10px;line-height:1;padding:3px 6px;border-radius:3px;transition:border-color .12s,color .12s}
+.miaBtn:hover{border-color:rgba(55,199,255,.5);color:#eaf6ef}
+.miaBtn:focus-visible{outline:2px solid var(--gia);outline-offset:1px}
+.miaBtn[disabled]{opacity:.35;cursor:default}
+@media(prefers-reduced-motion:reduce){.miaStar,.miaBtn{transition:none}}
+html.a11y-pause-anim .miaStar,html.a11y-pause-anim .miaBtn{transition:none}
+@media print{.miaStar,.miaNav{display:none}}
+.fchip{background:#0b1620;border:1px solid var(--line);color:var(--tx);cursor:pointer;
+  border-radius:999px;display:inline-flex;align-items:center;gap:5px;
+  transition:border-color .12s,color .12s,background .12s;
+  font:inherit;font-size:10px;letter-spacing:.04em;padding:4px 10px}
+.fchip .c{color:#709080;font-weight:700;margin-left:0;
+  background:#060d14;border-radius:999px;padding:1px 6px;min-width:16px;text-align:center}
+.fchip:hover{border-color:rgba(55,199,255,.45);color:#eaf6ef;background:#0e1d29}
+.fchip.azione{color:var(--cyn);border-color:rgba(55,199,255,.45);background:#06121a}
+.fchip.azione:hover{border-color:var(--cyn);color:#dff3ff}
+.fchip[disabled]{opacity:.5;cursor:default}
+@media(prefers-reduced-motion:reduce){.fchip{transition:none}}
+html.a11y-pause-anim .fchip{transition:none}
 .fchip[aria-pressed="true"]{background:var(--cyn);border-color:var(--cyn);color:#0a141d}
-.fchip[aria-pressed="true"] .c{color:#0a141d}
+.fchip[aria-pressed="true"] .c{color:#0a141d;background:rgba(0,0,0,.18)}
 .fchip:focus-visible{outline:2px solid #ffbe2e;outline-offset:1px}
 .acRow{display:flex;justify-content:space-between;gap:8px;padding:3px 0;border-bottom:1px solid #12222e;font-size:11px}
 .acRow .lab{color:var(--tx)}
@@ -282,6 +328,7 @@ html.a11y-pause-anim .navArr.hint{animation:none}
   display:flex;justify-content:space-between;gap:8px}
 .wx h3 span{font-family:var(--mono);font-size:9.5px;color:var(--dim);font-weight:400}
 .wx p{font-size:11.5px;line-height:1.5}
+
 /* Riga di onesta' del dato: compare solo quando una fonte letta direttamente
    dal browser ha smesso di rispondere e a schermo resta l'ultima lettura. */
 .wx p.staleNota{margin:6px 0 0;padding:5px 7px;border-left:3px solid #ffd60a;
@@ -405,6 +452,7 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
 </header>
 
 <nav id="nav" aria-label="Pannelli e livelli mappa">
+  <button data-v="mia" title="Le schede che hai scelto tu, nell'ordine che vuoi"><span class="ic">★</span>MIA SALA</button>
   <button data-v="all" class="act"><span class="ic">▲</span>ALLERTA</button>
   <button data-v="sis"><span class="ic">◈</span>SISMICO</button>
   <button data-v="met"><span class="ic">≋</span>METEO</button>
@@ -584,7 +632,7 @@ const S={view:"all",day:"today",black:false,
   obs:null,obsBusy:false,last:{},lastFull:0,errs:{},
   strikes:[],cycle:false,qkSeen:null,logArr:[],gdacs:[],gdacsSnap:null,news:[],newsCache:"",
   usgs:[],eonet:[],emsc:[],volo:null,malarm:null,firms:null,spazio:null,sonde:[],
-  orb:{recs:[],gruppi:{},filtro:"tutti",caricato:0,tutti:false,busy:false,epoca:0,calc:null}};
+  orb:{recs:[],gruppi:{},filtro:"tutti",caricato:0,tutti:false,busy:false,epoca:0,calc:null,sel:null}};
 try{S.logArr=JSON.parse(localStorage.getItem("pcgz-monitor-log")||"[]")||[]}catch(e){S.logArr=[]}
 const $=s=>document.querySelector(s);
 const pad=n=>String(n).padStart(2,"0");
@@ -1542,7 +1590,9 @@ function worldMode(on){
 }
 
 /* ---------------- pannelli ---------------- */
-const feed=$("#feed"),title=$("#sideTitle");
+// 🔴 "feed" e' let e non const perche' la Mia Sala lo punta per un istante a un
+//    contenitore staccato per raccogliere le schede di una vista (vedi miaRaccogli).
+let feed=$("#feed"); const title=$("#sideTitle");
 // Filtri dell'elenco velivoli: delega sul feed, perche' le pastiglie vengono
 // ricreate a ogni render. Cambiano anche i marcatori sulla cartina, cosi' elenco
 // e mappa mostrano sempre la stessa selezione.
@@ -2125,12 +2175,12 @@ function viewEms(){
       ` · ${a.km_da_genzano} km${a.motivo?" · "+esc(a.motivo):""}</span></div>`;
     feed.insertAdjacentHTML("beforeend",
       `<div class="wx" style="margin-top:4px"><h3>MEZZI AEREI NELL'AREA<span>ADS-B · ${tot} OSSERVATI${S.voloFiltro!=="tutti"?` · FILTRO: ${esc(S.voloFiltro.replace("cat:","").toUpperCase())}`:""}</span></h3>`+
-      `<div class="fchips" role="group" aria-label="Filtra i mezzi aerei per situazione">`+
+      `<div class="filtriGruppo"><p class="filtriTit">Che cosa mostrare</p><div class="fchips" role="group" aria-label="Filtra i mezzi aerei per situazione">`+
         VOLO_FILTRI.map(([k,et])=>`<button type="button" class="fchip" data-vf="${k}" aria-pressed="${S.voloFiltro===k}">${et}<span class="c">${conta(k)}</span></button>`).join("")+
-      `</div>`+
-      `<div class="fchips" role="group" aria-label="Filtra i mezzi aerei per categoria dichiarata">`+
+      `</div></div>`+
+      `<div class="filtriGruppo"><p class="filtriTit">Categoria dichiarata dal velivolo</p><div class="fchips" role="group" aria-label="Filtra i mezzi aerei per categoria dichiarata">`+
         voloCategorie().map(([c,n])=>`<button type="button" class="fchip" data-vf="cat:${esc(c)}" aria-pressed="${S.voloFiltro==="cat:"+c}">${esc(c.toUpperCase())}<span class="c">${n}</span></button>`).join("")+
-      `</div>`+
+      `</div></div>`+
       (sel.length?sel.slice(0,MAX).map(riga).join("")+
           (sel.length>MAX?`<p style="margin:6px 0 0;color:var(--dim)">…e altri ${sel.length-MAX}. Attiva il livello VOLO sulla cartina per vederli tutti.</p>`:"")
         :`<p style="margin:0">Nessun velivolo corrisponde a questo filtro in questo momento.</p>`)+
@@ -3131,6 +3181,14 @@ function orbCalcola(){
   return S.orb.calc;
 }
 // fasce di orbita: le soglie sono le definizioni correnti di LEO/MEO/GEO
+// Riquadri geografici per i filtri "sopra l'Italia / l'Europa": sono rettangoli
+// di coordinate, quindi contengono anche i vicini. Non si scrive "Italia" e
+// basta: si dice che e' un riquadro, come per i punti caldi da satellite.
+const ORB_AREE={
+  it:{eti:"SOPRA L'ITALIA",  s:35.2, n:47.2, o:6.4,  e:18.8},
+  eu:{eti:"SOPRA L'EUROPA",  s:34.0, n:71.5, o:-11.0,e:40.0}
+};
+const orbInArea=(x,a)=>x.lat>=a.s&&x.lat<=a.n&&x.lon>=a.o&&x.lon<=a.e;
 const ORB_FASCE=[["leo","ORBITA BASSA",0,2000],["meo","ORBITA MEDIA",2000,34000],
                  ["geo","GEOSTAZIONARIA",34000,37000],["alta","ORBITA ALTA",37000,1e9]];
 function orbFascia(q){const f=ORB_FASCE.find(x=>q>=x[2]&&q<x[3]);return f?f[0]:"alta"}
@@ -3140,6 +3198,7 @@ function orbFiltra(lista,f){
   if(f==="pc")return lista.filter(x=>x.gruppi.some(g=>ORB_PC.includes(g)));
   if(f==="sopra")return lista.filter(x=>x.el>0);
   if(f==="occhio")return lista.filter(x=>x.el>10&&x.ill&&S.orb.calc&&S.orb.calc.buio);
+  if(f.startsWith("a:")){const a=ORB_AREE[f.slice(2)]; return a?lista.filter(x=>orbInArea(x,a)):lista}
   if(f.startsWith("g:"))return lista.filter(x=>x.gruppi.includes(f.slice(2)));
   if(f.startsWith("o:"))return lista.filter(x=>orbFascia(x.quota)===f.slice(2));
   return lista;
@@ -3214,15 +3273,92 @@ function orbPillole(){
   const conta=f=>orbFiltra(c?c.lista:[],f).length;
   // 🔴 "TUTTI" resta sempre la prima pastiglia e sempre disponibile: da
   //    qualunque filtro si torna all'intero catalogo con un clic.
-  const riga1=[["tutti","TUTTI",n],["pc","PROTEZIONE CIVILE",conta("pc")],
-               ["sopra","SOPRA L'ORIZZONTE",conta("sopra")],
-               ["occhio","VISIBILI A OCCHIO NUDO",conta("occhio")]];
-  const riga2=orbGruppiPresenti().map(g=>["g:"+g[0],g[1],g[2]]);
-  const riga3=orbFascePresenti().map(f=>["o:"+f[0],f[1],f[2]]);
-  const pil=r=>`<div class="voloFiltri">`+r.map(([k,lab,q])=>
-    `<button class="vfPill${S.orb.filtro===k?" act":""}" data-orb="${esc(k)}"`+
-    ` aria-pressed="${S.orb.filtro===k}">${esc(lab)}<i>${q}</i></button>`).join("")+`</div>`;
-  return pil(riga1)+(riga2.length?pil(riga2):"")+(riga3.length?pil(riga3):"");
+  const file=[
+    ["Che cosa mostrare", [["tutti","TUTTI",n],["pc","PROTEZIONE CIVILE",conta("pc")],
+      ["sopra","SOPRA L'ORIZZONTE",conta("sopra")],["occhio","VISIBILI A OCCHIO NUDO",conta("occhio")]]],
+    ["Dove si trovano adesso", Object.entries(ORB_AREE).map(([k,a])=>["a:"+k,a.eti,conta("a:"+k)])],
+    ["Gruppo della fonte", orbGruppiPresenti().map(g=>["g:"+g[0],g[1],g[2]])],
+    ["Fascia di orbita", orbFascePresenti().map(f=>["o:"+f[0],f[1],f[2]])],
+  ];
+  return file.filter(([,r])=>r.length).map(([tit,r])=>
+    `<div class="filtriGruppo"><p class="filtriTit">${esc(tit)}</p><div class="fchips" role="group" aria-label="${esc(tit)}">`+
+    r.map(([k,lab,q])=>`<button class="fchip" data-orb="${esc(k)}"`+
+      ` aria-pressed="${S.orb.filtro===k}">${esc(lab)}<span class="c">${q}</span></button>`).join("")+
+    `</div></div>`).join("");
+}
+
+
+/* ---- PASSAGGI: quando torna sopra di noi --------------------------------
+   Si propaga in avanti a passi di 30 secondi per 48 ore e si cercano gli
+   intervalli in cui il satellite sta sopra l'orizzonte di Genzano. Sono ~5.800
+   propagazioni per satellite: qualche decina di millisecondi, si fa al volo
+   al clic senza precalcolare nulla.
+   🔴 Un geostazionario non "passa": sta fermo rispetto a terra ed e' sopra
+   l'orizzonte sempre o mai. Va detto, non lasciato come elenco vuoto. */
+const PASS_ORE=48, PASS_STEP=30e3;
+// sotto questa soglia il filtro geografico mostra anche i piu' vicini fuori
+const MIN_AREA=8;
+function orbPassaggi(id){
+  const sat=S.orb.recs.find(r=>r.id===id);
+  if(!sat)return null;
+  const t0=Date.now(), out=[], area=ORB_AREE.it;
+  let cur=null, sempre=true, mai=true, italia=[], curIt=null;
+  for(let ms=0; ms<=PASS_ORE*3600e3; ms+=PASS_STEP){
+    const t=new Date(t0+ms), gmst=satellite.gstime(t);
+    let pv; try{pv=satellite.propagate(sat.rec,t)}catch(e){break}
+    if(!pv||!pv.position)break;
+    const ecf=satellite.eciToEcf(pv.position,gmst);
+    const la=satellite.ecfToLookAngles(OBS_RAD,ecf);
+    const el=la.elevation*180/Math.PI, az=la.azimuth*180/Math.PI;
+    if(el>0){ mai=false;
+      if(!cur)cur={inizio:t.getTime(),azIn:az,max:el,tMax:t.getTime(),azMax:az};
+      else if(el>cur.max){cur.max=el;cur.tMax=t.getTime();cur.azMax=az}
+    }else{ sempre=false;
+      if(cur){cur.fine=t.getTime(); cur.azFin=az; out.push(cur); cur=null;}
+    }
+    // sorvolo del riquadro italiano: e' la verticale a terra, non la visibilita'
+    const geo=satellite.eciToGeodetic(pv.position,gmst);
+    const dentro=orbInArea({lat:satellite.degreesLat(geo.latitude),
+                            lon:satellite.degreesLong(geo.longitude)},area);
+    if(dentro){ if(!curIt)curIt={inizio:t.getTime()} }
+    else if(curIt){curIt.fine=t.getTime(); italia.push(curIt); curIt=null}
+    if(out.length>=8&&italia.length>=8)break;
+  }
+  if(cur){cur.fine=t0+PASS_ORE*3600e3; cur.aperto=true; out.push(cur)}
+  if(curIt){curIt.fine=t0+PASS_ORE*3600e3; curIt.aperto=true; italia.push(curIt)}
+  return {nome:sat.nome, id:sat.id, gruppi:sat.gruppi,
+          passaggi:out.slice(0,6), italia:italia.slice(0,6),
+          sempre:sempre&&!mai, mai:mai};
+}
+// dagli azimut alla direzione in parole: un numero da solo non dice dove guardare
+const ROSA=["nord","nord-est","est","sud-est","sud","sud-ovest","ovest","nord-ovest"];
+const orbRosa=a=>ROSA[Math.round(((a%360)+360)%360/45)%8];
+const orbDur=ms=>{const m=Math.round(ms/60000);return m<60?`${m} min`:`${Math.floor(m/60)} h ${m%60} min`};
+
+function orbSchedaDettaglio(){
+  if(!S.orb.sel)return "";
+  const d=orbPassaggi(S.orb.sel);
+  if(!d)return "";
+  const pc=d.gruppi.some(g=>ORB_PC.includes(g));
+  const gr=d.gruppi.map(g=>{const x=ORB_GRUPPI.find(y=>y[0]===g);return x?x[1]:g}).join(" · ");
+  let corpo;
+  if(d.mai) corpo=`<p>Nelle prossime ${PASS_ORE} ore non sale mai sopra l'orizzonte di Genzano: la sua orbita non porta qui.</p>`;
+  else if(d.sempre) corpo=`<p>È <b>sempre</b> sopra l'orizzonte di Genzano: sta fermo rispetto alla Terra, quindi non "passa" — si punta l'antenna una volta e resta lì.</p>`;
+  else corpo=`<p class="filtriTit" style="margin-top:2px">Prossimi passaggi sopra Genzano</p>`+
+    d.passaggi.map(p=>{
+      const alto=p.max>=40?"#35e08c":p.max>=15?"#ffd60a":"#5d7a6e";
+      return `<div class="obsRow"><span class="on" style="color:${alto}">${fmtT(new Date(p.inizio).toISOString())}</span>`+
+        `<span>fino a <b>${p.max.toFixed(0)}°</b> · da ${esc(orbRosa(p.azIn))} verso ${esc(orbRosa(p.azFin!==undefined?p.azFin:p.azMax))} · dura ${orbDur(p.fine-p.inizio)}${p.aperto?" (oltre la finestra)":""}</span></div>`;
+    }).join("");
+  const it=d.italia.length
+    ? `<p class="filtriTit" style="margin-top:8px">Quando sorvola il riquadro italiano</p>`+
+      d.italia.map(p=>`<div class="obsRow"><span class="on">${fmtT(new Date(p.inizio).toISOString())}</span>`+
+        `<span>per ${orbDur(p.fine-p.inizio)}${p.aperto?" (oltre la finestra)":""}</span></div>`).join("")
+    : `<p style="margin-top:8px;color:var(--dim);font-size:11px">Nelle prossime ${PASS_ORE} ore non sorvola il riquadro italiano.</p>`;
+  return `<div class="wx" id="orbDett" data-nomia="1"><h3>${esc(d.nome)}<span>${esc(gr||"gruppo non dichiarato")}${pc?" · PROTEZIONE CIVILE":""}</span></h3>`+
+    corpo+it+
+    `<p style="margin:8px 0 0;color:var(--dim);font-size:11px">Orari italiani, calcolati adesso per le prossime ${PASS_ORE} ore. «Fino a N°» è l'altezza massima sull'orizzonte: sotto i 15° l'orizzonte urbano spesso lo copre. Il sorvolo del riquadro italiano è la <b>verticale a terra</b>, che non coincide con la visibilità da qui.</p>`+
+    `<p style="margin:6px 0 0"><button type="button" class="fchip" id="orbChiudi">CHIUDI LA SCHEDA</button></p></div>`;
 }
 
 function viewOrb(){
@@ -3232,12 +3368,17 @@ function viewOrb(){
   if(!S.orb.recs.length){
     feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>SATELLITI IN ORBITA<span>CELESTRAK · CALCOLO SGP4 NELLA PAGINA</span></h3>
       <p>Posizioni calcolate qui, dalle effemeridi pubbliche di CelesTrak: nessun servizio di terzi vede cosa guardi.</p>
-      <p style="margin-top:8px"><button class="vfPill" id="orbGo"${S.orb.busy?" disabled":""}>${S.orb.busy?"CARICAMENTO…":"CARICA I SATELLITI"}</button></p></div>`);
+      <p style="margin-top:8px"><button class="fchip azione" id="orbGo"${S.orb.busy?" disabled":""}>${S.orb.busy?"CARICAMENTO…":"CARICA I SATELLITI"}</button></p></div>`);
     return;
   }
   const c=S.orb.calc||orbCalcola();
   const sel=orbFiltra(c.lista,S.orb.filtro);
-  const sopra=sel.filter(x=>x.el>0).sort((a,b)=>b.el-a.el);
+  // 🔴 Coi filtri geografici NON si scarta chi sta sotto l'orizzonte: la domanda
+  //    e' "chi passa sull'area", non "chi vedo da Genzano". Un satellite sopra
+  //    la Norvegia e' sopra l'Europa anche se da qui non si alza. Con gli altri
+  //    filtri resta invece l'orizzonte, che li' e' il criterio giusto.
+  const perArea=S.orb.filtro.startsWith("a:");
+  const sopra=(perArea?sel:sel.filter(x=>x.el>0)).sort((a,b)=>b.el-a.el);
   const gg=c.etaMediana/86400e3;
   const etaTxt=c.conEta?(gg<1?`meno di un giorno`:`${gg.toFixed(1)} giorni`):"non disponibile";
   const tropVec=c.conEta&&c.vecchie/c.conEta>0.05;
@@ -3249,26 +3390,62 @@ function viewOrb(){
     <div class="kpi"><small>ETÀ DELLE EFFEMERIDI</small><b style="font-size:15px">${esc(etaTxt)}</b><em>metà ne ha meno di così</em></div>
     </div>
     ${tropVec?`<p class="staleNota">${c.vecchie} effemeridi su ${c.conEta} hanno più di una settimana: su quelle la posizione calcolata perde precisione.</p>`:""}
-    <p style="margin:6px 0 0;color:var(--dim);font-size:11px">Le posizioni sono <b>calcolate</b> con il modello SGP4 dalle effemeridi pubbliche, non riprese da un servizio di tracciamento. Sulla cartina il punto è la <b>verticale a terra</b> del satellite, non il posto da cui si vede: uno a ventimila chilometri di quota è sopra l'orizzonte di Genzano anche col punto sul Sahara. ${S.orb.tutti?"":`<button class="vfPill" id="orbTutti"${S.orb.busy?" disabled":""} style="margin-left:4px">${S.orb.busy?"CARICAMENTO…":"CARICA TUTTI GLI ATTIVI (~16.000, 2,7 MB)"}</button>`}</p></div>`);
+    <p style="margin:6px 0 0;color:var(--dim);font-size:11px">Le posizioni sono <b>calcolate</b> con il modello SGP4 dalle effemeridi pubbliche, non riprese da un servizio di tracciamento. Sulla cartina il punto è la <b>verticale a terra</b> del satellite, non il posto da cui si vede: uno a ventimila chilometri di quota è sopra l'orizzonte di Genzano anche col punto sul Sahara. ${S.orb.tutti?"":`<button class="fchip azione" id="orbTutti"${S.orb.busy?" disabled":""} style="margin-left:4px">${S.orb.busy?"CARICAMENTO…":"CARICA TUTTI GLI ATTIVI (~16.000, 2,7 MB)"}</button>`}</p></div>`);
   feed.insertAdjacentHTML("beforeend",orbPillole());
+  const dett=orbSchedaDettaglio();
+  if(dett)feed.insertAdjacentHTML("beforeend",dett);
   const nota=ORB_GRUPPI.find(g=>"g:"+g[0]===S.orb.filtro);
   if(nota)feed.insertAdjacentHTML("beforeend",
     `<p style="margin:0 0 8px;color:var(--dim);font-size:11px">${esc(nota[1])}: ${esc(nota[3])}.</p>`);
-  if(!sopra.length){
+  // 🔴 Sopra il riquadro italiano c'e' spesso UN satellite solo: il filtro da
+  //    solo darebbe una lista vuota e inutile. Quando la selezione geografica e'
+  //    magra si aggiungono i piu' vicini che stanno fuori, in una sezione a
+  //    parte e dichiarata — mai mescolati di nascosto ai primi.
+  let fuori=[];
+  if(S.orb.filtro.startsWith("a:")&&sel.length<MIN_AREA){
+    const a=ORB_AREE[S.orb.filtro.slice(2)];
+    const dentro=new Set(sel.map(x=>x.id));
+    fuori=c.lista.filter(x=>!dentro.has(x.id))
+      .map(x=>({...x,kmArea:Math.min(
+        Math.abs(x.lat-a.s),Math.abs(x.lat-a.n),Math.abs(x.lon-a.o),Math.abs(x.lon-a.e))}))
+      .sort((p,q)=>p.kmArea-q.kmArea).slice(0,12);
+  }
+  if(!sopra.length&&!fuori.length){
     feed.insertAdjacentHTML("beforeend",`<div class="wx"><p>Nessuno dei satelliti selezionati è sopra l'orizzonte di Genzano in questo momento. ${S.orb.filtro==="occhio"&&!c.buio?"A occhio nudo si vedono solo col cielo scuro: riprova dopo il tramonto.":"Torneranno: il filtro conta solo chi è visibile adesso."}</p></div>`);
     return;
   }
-  feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>SOPRA L'ORIZZONTE ADESSO<span>${sopra.length} · I PIÙ ALTI PER PRIMI</span></h3>`+
-    sopra.slice(0,25).map(x=>`<div class="obsRow"><span class="on">${esc(x.nome)}`+
+  feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>${perArea?esc((ORB_AREE[S.orb.filtro.slice(2)]||{}).eti||"NELL'AREA"):"SOPRA L'ORIZZONTE ADESSO"}<span>${sopra.length} · TOCCA UNO PER I PASSAGGI</span></h3>`+
+    sopra.slice(0,25).map(x=>`<div class="obsRow orbRiga" role="button" tabindex="0" data-orbid="${esc(x.id)}" aria-label="Passaggi di ${esc(x.nome)}"><span class="on">${esc(x.nome)}`+
       `${x.ill?' <em style="color:#ffd60a">☀ illuminato</em>':''}</span>`+
-      `<span>${x.el.toFixed(0)}° · az ${x.az.toFixed(0)}° · ${Math.round(x.quota)} km di quota · ${Math.round(x.dist)} km da qui</span></div>`).join("")+
+      `<span>${x.el>0?`${x.el.toFixed(0)}° · az ${x.az.toFixed(0)}°`:"sotto l'orizzonte da qui"} · ${Math.round(x.quota)} km di quota · ${Math.round(x.dist)} km da qui</span></div>`).join("")+
     (sopra.length>25?`<p style="margin:6px 0 0;color:var(--dim);font-size:11px">Mostrati i 25 più alti di ${sopra.length}.</p>`:"")+
+    (perArea?`<p style="margin:6px 0 0;color:var(--dim);font-size:11px">Qui conta <b>dove si trovano</b>, non se si vedono da Genzano: alcuni sono sopra l'area ma sotto il nostro orizzonte.</p>`:"")+
     `</div>`);
+  if(fuori.length)feed.insertAdjacentHTML("beforeend",
+    `<div class="wx"><h3>FUORI DAL RIQUADRO, I PIÙ VICINI<span>${fuori.length} · PERCHÉ DENTRO CE NE SONO POCHI</span></h3>`+
+    fuori.map(x=>`<div class="obsRow orbRiga" role="button" tabindex="0" data-orbid="${esc(x.id)}" aria-label="Passaggi di ${esc(x.nome)}">`+
+      `<span class="on">${esc(x.nome)}</span><span>${x.lat.toFixed(1)}°, ${x.lon.toFixed(1)}° · ${Math.round(x.quota)} km di quota${x.el>0?` · ${x.el.toFixed(0)}° sull'orizzonte`:""}</span></div>`).join("")+
+    `<p style="margin:6px 0 0;color:var(--dim);font-size:11px">Sopra il riquadro scelto ce ne sono pochi in questo istante, quindi qui ci sono i più vicini che stanno fuori. Tocca un nome per sapere quando ci arriva.</p></div>`);
 }
 
+document.addEventListener("keydown",e=>{
+  if(e.key!=="Enter"&&e.key!==" ")return;
+  const riga=e.target.closest&&e.target.closest("[data-orbid]");
+  if(!riga)return;
+  e.preventDefault(); riga.click();
+});
 document.addEventListener("click",e=>{
   const go=e.target.closest("#orbGo,#orbTutti");
   if(go){orbCarica(go.id==="orbTutti"||S.orb.tutti);return}
+  if(e.target.closest("#orbChiudi")){S.orb.sel=null;render();return}
+  const riga=e.target.closest("[data-orbid]");
+  if(riga){
+    const id=riga.getAttribute("data-orbid");
+    S.orb.sel=(S.orb.sel===id)?null:id;   // ritoccare la stessa riga richiude
+    render();
+    const d=document.querySelector("#orbDett"); if(d)d.scrollIntoView({block:"nearest"});
+    return;
+  }
   const p=e.target.closest("[data-orb]");
   if(!p)return;
   S.orb.filtro=p.getAttribute("data-orb");
@@ -3276,7 +3453,142 @@ document.addEventListener("click",e=>{
   if(mapLayerOn("orb"))orbDisegna();
 });
 
-function render(){({all:viewAll,sis:viewSis,met:viewMet,map:viewMap,wnd:viewWnd,tra:viewTra,rad:viewRad,amb:viewAmb,ems:viewEms,orb:viewOrb,log:viewLog})[S.view]();windySync();traffSync();radioSync();}
+
+/* ================= MIA SALA — schede scelte e ordinate dall'utente ===========
+   Richiesta dell'utente (22/09/2026): poter mettere insieme le schede che
+   servono a lui, nell'ordine che vuole, invece di saltare da una vista all'altra.
+
+   🔴 PERCHE' PULSANTI E NON TRASCINAMENTO. Il criterio WCAG 2.2 "2.5.7 Dragging
+   Movements" impone che ogni azione fatta trascinando abbia un'alternativa a
+   singolo puntamento, e questo repository ha il gate di accessibilita'
+   BLOCCANTE sulle pull request. Col trascinamento i pulsanti andrebbero scritti
+   comunque: si parte da quelli, che funzionano da tastiera e col dito.
+
+   🔴 COME SI RACCOLGONO LE SCHEDE SENZA RISCRIVERE OGNI VISTA. Le viste
+   scrivono dentro #feed. Qui si punta temporaneamente "feed" a un contenitore
+   staccato dal documento, si chiama la funzione della vista, si riprendono le
+   .wx prodotte e si rimette tutto a posto. Cosi' una scheda nuova diventa
+   selezionabile da sola, senza che nessuno debba ricordarsene: e' lo stesso
+   motivo per cui le pastiglie dei gruppi si ricavano dai dati. */
+const MIA_CHIAVE="pcgz-monitor-mia-sala";
+// Viste che producono schede raccoglibili. Escluse quelle che incorporano un
+// riquadro di terzi o una tela (Windy, traffico, radio): non sono "schede", e
+// duplicarle significherebbe aprire due volte lo stesso servizio esterno.
+const MIA_VISTE=[["all","ALLERTA"],["sis","SISMICO"],["met","METEO"],["amb","ARIA·MARE"],
+                 ["ems","EMERGENZE"],["orb","SATELLITI"],["log","REGISTRO"]];
+const MIA_FN={all:()=>viewAll(),sis:()=>viewSis(),met:()=>viewMet(),amb:()=>viewAmb(),
+              ems:()=>viewEms(),orb:()=>viewOrb(),log:()=>viewLog()};
+
+function miaCarica(){
+  try{const a=JSON.parse(localStorage.getItem(MIA_CHIAVE)||"[]");
+      return Array.isArray(a)?a.filter(x=>typeof x==="string"):[]}catch(e){return []}
+}
+function miaSalva(a){try{localStorage.setItem(MIA_CHIAVE,JSON.stringify(a))}catch(e){}}
+// id stabile: vista + titolo della scheda senza la parte variabile dentro <span>
+function miaId(vista,card){
+  const h=card.querySelector("h3"); if(!h)return null;
+  let t=""; for(const n of h.childNodes){ if(n.nodeType===3)t+=n.textContent; }
+  t=t.trim().replace(/\s+/g," ");
+  if(!t)return null;
+  return vista+"|"+t;
+}
+const miaTitolo=id=>id.split("|").slice(1).join("|");
+const miaVista=id=>id.split("|")[0];
+
+/* Chiama la funzione di una vista scrivendo in un contenitore staccato e
+   restituisce le schede prodotte. Il titolo del pannello viene ripristinato:
+   le viste lo riscrivono, e senza questo la Mia Sala prenderebbe il nome
+   dell'ultima vista raccolta. */
+function miaRaccogli(vista){
+  const fn=MIA_FN[vista]; if(!fn)return [];
+  const vero=feed, titoloPrima=title.textContent;
+  const box=document.createElement("div");
+  feed=box;
+  try{ fn(); }catch(e){ }
+  finally{ feed=vero; title.textContent=titoloPrima; }
+  return [...box.querySelectorAll(":scope > .wx")];
+}
+
+// stellina su ogni scheda delle viste normali
+function miaDecora(vista){
+  if(vista==="mia")return;
+  const scelte=miaCarica();
+  for(const card of feed.querySelectorAll(":scope > .wx")){
+    if(card.hasAttribute("data-nomia"))continue;   // schede di dettaglio: dipendono da una selezione
+    const id=miaId(vista,card); if(!id)continue;
+    const h=card.querySelector("h3"); if(!h||h.querySelector(".miaStar"))continue;
+    const on=scelte.includes(id);
+    const b=document.createElement("button");
+    b.type="button"; b.className="miaStar"+(on?" on":"");
+    b.setAttribute("data-mia-add",id);
+    b.setAttribute("aria-pressed",on?"true":"false");
+    b.title=on?"Togli dalla Mia Sala":"Aggiungi alla Mia Sala";
+    b.setAttribute("aria-label",b.title);
+    b.textContent=on?"★":"☆";
+    h.appendChild(b);
+  }
+}
+
+function viewMia(){
+  title.textContent="MIA SALA — LE SCHEDE CHE HAI SCELTO";
+  feed.innerHTML="";
+  const scelte=miaCarica();
+  if(!scelte.length){
+    feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>MIA SALA<span>NESSUNA SCHEDA SCELTA</span></h3>
+      <p>Qui finiscono le schede che scegli tu, nell'ordine che vuoi: così tieni sott'occhio insieme cose che stanno in viste diverse — per esempio l'allerta, i sismi e i satelliti sopra di noi.</p>
+      <p style="margin-top:6px">Apri una vista qualsiasi e tocca la <b>☆</b> nell'intestazione di una scheda. Torna qui e la trovi.</p>
+      <p style="margin-top:6px;color:var(--dim);font-size:11px">La scelta resta su questo dispositivo, nel browser: non viene inviata da nessuna parte.</p></div>`);
+    return;
+  }
+  // si raccoglie ogni vista UNA volta sola, anche se ha piu' schede scelte
+  const cache={}, mancanti=[];
+  for(const id of scelte){
+    const v=miaVista(id);
+    if(!(v in cache))cache[v]=miaRaccogli(v);
+  }
+  let n=0;
+  scelte.forEach((id,i)=>{
+    const card=(cache[miaVista(id)]||[]).find(c=>miaId(miaVista(id),c)===id);
+    if(!card){mancanti.push(id);return}
+    const h=card.querySelector("h3");
+    if(h){
+      const nav=document.createElement("span");
+      nav.className="miaNav";
+      nav.innerHTML=
+        `<button type="button" class="miaBtn" data-mia-su="${esc(id)}"${i===0?" disabled":""} aria-label="Sposta in su: ${esc(miaTitolo(id))}">▲</button>`+
+        `<button type="button" class="miaBtn" data-mia-giu="${esc(id)}"${i===scelte.length-1?" disabled":""} aria-label="Sposta in giù: ${esc(miaTitolo(id))}">▼</button>`+
+        `<button type="button" class="miaBtn" data-mia-via="${esc(id)}" aria-label="Togli dalla Mia Sala: ${esc(miaTitolo(id))}">✕</button>`;
+      h.appendChild(nav);
+    }
+    feed.appendChild(card); n++;
+  });
+  if(mancanti.length)feed.insertAdjacentHTML("beforeend",
+    `<div class="wx"><p style="margin:0;color:var(--dim);font-size:11px">${mancanti.length} scheda/e scelta/e non è disponibile in questo momento (la sua fonte non ha dati adesso): ricompare da sola quando torna.</p></div>`);
+  feed.insertAdjacentHTML("beforeend",
+    `<p style="margin:2px 0 0;color:var(--dim);font-size:11px">${n} scheda/e. Con ▲ ▼ cambi l'ordine, con ✕ togli. Le schede restano vive: si aggiornano come nelle loro viste.</p>`);
+}
+
+document.addEventListener("click",e=>{
+  const add=e.target.closest("[data-mia-add]");
+  if(add){
+    const id=add.getAttribute("data-mia-add"); let a=miaCarica();
+    a.includes(id) ? a=a.filter(x=>x!==id) : a.push(id);
+    miaSalva(a); render(); return;
+  }
+  const su=e.target.closest("[data-mia-su]"), giu=e.target.closest("[data-mia-giu]"),
+        via=e.target.closest("[data-mia-via]");
+  if(!su&&!giu&&!via)return;
+  let a=miaCarica();
+  if(via){ a=a.filter(x=>x!==via.getAttribute("data-mia-via")); }
+  else{
+    const id=(su||giu).getAttribute(su?"data-mia-su":"data-mia-giu");
+    const i=a.indexOf(id), j=su?i-1:i+1;
+    if(i>=0&&j>=0&&j<a.length){const t=a[i];a[i]=a[j];a[j]=t}
+  }
+  miaSalva(a); render();
+});
+
+function render(){({all:viewAll,sis:viewSis,met:viewMet,map:viewMap,wnd:viewWnd,tra:viewTra,rad:viewRad,amb:viewAmb,ems:viewEms,orb:viewOrb,mia:viewMia,log:viewLog})[S.view]();miaDecora(S.view);windySync();traffSync();radioSync();}
 
 /* ---------------- barra NOTIZIE — agenzie di stampa (Italia e mondo) ----------------
    ANSA + Adnkronos dallo snapshot self-hosted open-data/notizie-agenzie.json
@@ -3346,7 +3658,7 @@ function tickUpd(){
 /* Deep-link e condivisione delle schermate: ogni vista ha un hash proprio
    (#allerta, #sismico, #meteo, #carte, #windy, #radio, #aria-mare, #emergenze-ue),
    così il link condiviso apre direttamente quella schermata. */
-const VIEW_SLUG={all:"allerta",sis:"sismico",met:"meteo",map:"carte",wnd:"windy",tra:"traffico",rad:"radio",amb:"aria-mare",ems:"emergenze-ue",orb:"satelliti",log:"registro"};
+const VIEW_SLUG={all:"allerta",sis:"sismico",met:"meteo",map:"carte",wnd:"windy",tra:"traffico",rad:"radio",amb:"aria-mare",ems:"emergenze-ue",orb:"satelliti",mia:"mia-sala",log:"registro"};
 const SLUG_VIEW=Object.fromEntries(Object.entries(VIEW_SLUG).map(([k,v])=>[v,k]));
 function setView(v,fromHash){
   if(!VIEW_SLUG[v])return;
