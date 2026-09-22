@@ -84,7 +84,8 @@ html.a11y-pause-anim .navArr.hint{animation:none}
 #map{position:fixed;top:76px;left:0;right:min(380px,42vw);bottom:52px}
 #lmap{position:absolute;inset:0;background:#04070b}
 #windyWrap,#radioWrap,#traffWrap{position:absolute;inset:0;display:none;z-index:1001;background:#04070b}
-#windyWrap iframe,#traffWrap iframe{width:100%;height:100%;border:0}
+#mareWrap{position:absolute;inset:0;display:none;z-index:1001;background:#04070b}
+#windyWrap iframe,#traffWrap iframe,#mareWrap iframe{width:100%;height:100%;border:0}
 #radioWrap{flex-direction:column}
 #rxBar{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;padding:6px 10px;background:#0a1119;border-bottom:1px solid var(--line);font-family:var(--mono)}
 .rxVfo b{font-size:22px;color:#f2f7f4;font-weight:400;letter-spacing:.04em} .rxVfo span{margin-left:8px;font-size:10px;color:var(--cyn);letter-spacing:.14em}
@@ -459,6 +460,7 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
   <button data-v="map"><span class="ic">▤</span>CARTE</button>
   <button data-v="wnd"><span class="ic">☈</span>WINDY</button>
   <button data-v="tra" title="Traffico e incidenti segnalati in tempo reale"><span class="ic">⇄</span>TRAFFICO</button>
+  <button data-v="mar" title="Navi in tempo reale via AIS, al largo del Lazio"><span class="ic">⚓</span>NAVI</button>
   <button data-v="rad" title="Ascolto delle bande radioamatoriali via SDR (spettro e waterfall)"><span class="ic">⌁</span>RADIO</button>
   <button data-v="orb" title="Satelliti in orbita: dove sono adesso e quali passano su Genzano"><span class="ic">✦</span>SATELLITI</button>
   <button data-v="amb"><span class="ic">✿</span>ARIA·MARE</button>
@@ -483,6 +485,7 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
   <div id="lmap"></div>
   <div id="windyWrap"><iframe id="windyFrame" title="Mappa meteo interattiva Windy centrata su Genzano di Roma" loading="lazy"></iframe></div>
   <div id="traffWrap"><iframe id="traffFrame" title="Mappa del traffico in tempo reale centrata su Genzano di Roma" loading="lazy"></iframe></div>
+  <div id="mareWrap"><iframe id="mareFrame" title="Mappa delle navi in tempo reale al largo del Lazio" loading="lazy"></iframe></div>
   <div id="radioWrap">
     <div id="rxBar">
       <div class="rxVfo"><b id="rxFreq">—</b><span id="rxMode"></span></div>
@@ -1880,6 +1883,10 @@ S.windy={on:false,ov:"radar",lvl:"surface",prod:"ecmwf",zoom:8,detail:false};
    su richiesta esplicita dell'utente, mai al caricamento della pagina.
    🔴 Il dato e' SEGNALATO DAGLI UTENTI, non ufficiale: le chiusure che fanno fede
    sono quelle di Polizia Locale, Comune e Anas. La scheda lo dice. */
+// 🔴 Per staccare davvero un riquadro di terzi NON basta src="": il browser lo
+//    risolve sull'indirizzo della pagina corrente e il contenuto resta caricato
+//    (verificato il 22/09/2026: restavano tre riquadri figli). Serve about:blank.
+const VUOTO="about:blank";
 S.traffico={on:false,zoom:11};
 const traffUrl=()=>`https://embed.waze.com/it/iframe?zoom=${S.traffico.zoom}`+
   `&lat=${GENZANO.lat}&lon=${GENZANO.lon}&ct=livemap`;
@@ -1914,7 +1921,7 @@ function viewTra(){
     el.addEventListener("click",e=>{
       const z=e.target.closest("[data-tz]");
       if(z){S.traffico.zoom=Number(z.dataset.tz);$("#traffFrame").src=traffUrl();render();return;}
-      if(e.target.closest("#traffOff")){S.traffico.on=false;$("#traffFrame").src="";traffSync();render();}
+      if(e.target.closest("#traffOff")){S.traffico.on=false;$("#traffFrame").src=VUOTO;traffSync();render();}
     });
   }
   feed.appendChild(noteEl('Traffico: mappa live di <a href="https://www.waze.com/live-map" target="_blank" rel="noopener">Waze</a>. '+
@@ -1983,7 +1990,7 @@ function viewWnd(){
     feed.appendChild(el);
     el.querySelector("#windyCtl").addEventListener("click",e=>{
       const b=e.target.closest("button");if(!b)return;
-      if(b.id==="windyOff"){S.windy.on=false;$("#windyFrame").src="";windySync();render();return;}
+      if(b.id==="windyOff"){S.windy.on=false;$("#windyFrame").src=VUOTO;windySync();render();return;}
       if(b.dataset.ov)w.ov=b.dataset.ov;
       else if(b.dataset.lvl)w.lvl=b.dataset.lvl;
       else if(b.dataset.prod)w.prod=b.dataset.prod;
@@ -3588,7 +3595,81 @@ document.addEventListener("click",e=>{
   miaSalva(a); render();
 });
 
-function render(){({all:viewAll,sis:viewSis,met:viewMet,map:viewMap,wnd:viewWnd,tra:viewTra,rad:viewRad,amb:viewAmb,ems:viewEms,orb:viewOrb,mia:viewMia,log:viewLog})[S.view]();miaDecora(S.view);windySync();traffSync();radioSync();}
+
+/* ---------------- NAVI — mappa AIS in tempo reale ----------------
+   Richiesta dell'utente (22/09/2026): «fai come Flightradar o MarineTraffic»,
+   senza hardware e senza licenze. Si usa la mappa che VesselFinder pubblica
+   apposta per essere incorporata (pagina /embed del loro sito): nessuna chiave,
+   nessuna ingestione di dati, nessun reverse engineering. Stesso click-to-load
+   di Windy e Waze: il server di terzi e' contattato solo su richiesta esplicita.
+
+   🔴 PERCHE' NON IL LORO SCRIPT. Il codice che pubblicano e' un <script> che
+   costruisce un iframe verso /aismap con il parametro "ra" (l'indirizzo della
+   pagina ospite, che e' come autorizzano l'incorporamento). Qui si costruisce
+   direttamente QUELL'IFRAME: e' l'uso previsto, e tiene il codice di terzi fuori
+   dalla nostra origine — uno <script> altrui avrebbe accesso pieno alla pagina,
+   e la CSP del sito non ammette script di terze parti.
+
+   🔴 L'AIS NON E' UN CENSIMENTO. Trasmettono i mercantili sopra una certa stazza,
+   i passeggeri e chi lo monta per scelta: pescherecci piccoli, barche da diporto
+   e molti mezzi di Stato non compaiono. La copertura dipende dalle stazioni
+   riceventi a terra. La scheda lo dice: non si legge come "tutto cio' che
+   naviga". */
+S.navi={on:false,zoom:8,lat:41.4,lon:12.6};
+const naviUrl=()=>{
+  const ra=encodeURIComponent(location.origin+location.pathname);
+  return "https://www.vesselfinder.com/aismap?zoom="+S.navi.zoom+
+    "&lat="+S.navi.lat+"&lon="+S.navi.lon+
+    "&width=100%25&height=100%25&names=false&track=false"+
+    "&fleet=false&fleet_name=false&fleet_hide_old_positions=false"+
+    "&clicktoact=false&store_pos=false&ra="+ra;
+};
+function mareSync(){
+  const w=$("#mareWrap"); if(w)w.style.display=(S.view==="mar"&&S.navi.on)?"block":"none";
+}
+const NAVI_ZONE=[[10,"LITORALE LAZIALE",41.45,12.45],[8,"TIRRENO CENTRALE",41.2,12.4],
+                 [7,"TIRRENO",40.5,12.5],[6,"MEDITERRANEO",39.0,13.0]];
+function viewMar(){
+  title.textContent="NAVI — AIS IN TEMPO REALE";
+  feed.innerHTML="";
+  if(!S.navi.on){
+    const el=document.createElement("div"); el.className="wx";
+    el.innerHTML=`<h3>MAPPA DELLE NAVI<span>CLICK-TO-LOAD</span></h3>
+      <p>Navi in navigazione al largo del Lazio, dai loro trasponder <b>AIS</b>:
+      nome, rotta, velocità e porto di destinazione. Per vederla devi caricare la
+      mappa fornita da <b>VesselFinder</b>: il browser riceverà risorse dal loro
+      server e potrebbe essere impostato qualche cookie tecnico di terze parti.</p>
+      <button class="wbtn" id="naviLoad">⚓ CARICA LA MAPPA DELLE NAVI</button>
+      <p style="margin-top:6px"><a href="https://www.vesselfinder.com/" target="_blank" rel="noopener">In alternativa aprila in una nuova scheda</a>.</p>`;
+    feed.appendChild(el);
+    el.querySelector("#naviLoad").addEventListener("click",()=>{
+      S.navi.on=true; $("#mareFrame").src=naviUrl(); mareSync(); render();
+    });
+  }else{
+    const el=document.createElement("div"); el.className="wx";
+    el.innerHTML=`<h3>MAPPA DELLE NAVI<span>TRASPONDER AIS</span></h3>
+      <div class="filtriGruppo"><p class="filtriTit">Che tratto di mare</p>
+      <div class="fchips" role="group" aria-label="Zona della mappa delle navi">`+
+      NAVI_ZONE.map(([z,et])=>`<button type="button" class="fchip" data-nz="${z}" aria-pressed="${S.navi.zoom===z}">${et}</button>`).join("")+
+      `</div></div>
+      <button class="wbtn" id="naviOff">✕ CHIUDI LA MAPPA</button>`;
+    feed.appendChild(el);
+    el.addEventListener("click",e=>{
+      const z=e.target.closest("[data-nz]");
+      if(z){
+        const zz=Number(z.dataset.nz), zona=NAVI_ZONE.find(x=>x[0]===zz);
+        if(zona){S.navi.zoom=zona[0];S.navi.lat=zona[2];S.navi.lon=zona[3];}
+        $("#mareFrame").src=naviUrl(); render(); return;
+      }
+      if(e.target.closest("#naviOff")){S.navi.on=false;$("#mareFrame").src=VUOTO;mareSync();render();}
+    });
+  }
+  feed.appendChild(noteEl('Navi: mappa live di <a href="https://www.vesselfinder.com/" target="_blank" rel="noopener">VesselFinder</a>, dai trasponder AIS. '+
+    '<b>L\'AIS non è un censimento di ciò che naviga</b>: lo trasmettono i mercantili sopra una certa stazza, i passeggeri e chi lo monta per scelta, mentre pescherecci piccoli, barche da diporto e molti mezzi di Stato non compaiono; la copertura dipende dalle stazioni riceventi a terra. '+
+    'Per un\'emergenza in mare il riferimento è la <b>Guardia Costiera</b>, numero <a href="tel:1530">1530</a>.'));
+}
+
+function render(){({all:viewAll,sis:viewSis,met:viewMet,map:viewMap,wnd:viewWnd,tra:viewTra,rad:viewRad,amb:viewAmb,ems:viewEms,orb:viewOrb,mar:viewMar,mia:viewMia,log:viewLog})[S.view]();miaDecora(S.view);windySync();traffSync();mareSync();radioSync();}
 
 /* ---------------- barra NOTIZIE — agenzie di stampa (Italia e mondo) ----------------
    ANSA + Adnkronos dallo snapshot self-hosted open-data/notizie-agenzie.json
@@ -3658,7 +3739,7 @@ function tickUpd(){
 /* Deep-link e condivisione delle schermate: ogni vista ha un hash proprio
    (#allerta, #sismico, #meteo, #carte, #windy, #radio, #aria-mare, #emergenze-ue),
    così il link condiviso apre direttamente quella schermata. */
-const VIEW_SLUG={all:"allerta",sis:"sismico",met:"meteo",map:"carte",wnd:"windy",tra:"traffico",rad:"radio",amb:"aria-mare",ems:"emergenze-ue",orb:"satelliti",mia:"mia-sala",log:"registro"};
+const VIEW_SLUG={all:"allerta",sis:"sismico",met:"meteo",map:"carte",wnd:"windy",tra:"traffico",rad:"radio",amb:"aria-mare",ems:"emergenze-ue",orb:"satelliti",mar:"navi",mia:"mia-sala",log:"registro"};
 const SLUG_VIEW=Object.fromEntries(Object.entries(VIEW_SLUG).map(([k,v])=>[v,k]));
 function setView(v,fromHash){
   if(!VIEW_SLUG[v])return;

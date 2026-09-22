@@ -246,6 +246,34 @@ Richiesta dell'utente: poter **personalizzare la posizione delle schede** e **ve
 
 CSP: `celestrak.org` in `connect-src` (rule 05). Fonte da aggiungere a `check-fonti-cruscotto.py`.
 
+## Sala situazioni `/monitor/` — vista NAVI, e perché gli aerei non si possono incorporare (22/09/2026)
+
+Richiesta dell'utente: *«per gli aerei e navi utilizza i software online, perché non possiamo permetterci nessun tipo di hardware o di acquistare le licenze. Devi praticamente fare come Flightradar o MarineTraffic»*.
+
+**Navi: si può, e si fa.** Vista `data-v="mar"` (slug `navi`): mappa AIS di **VesselFinder**, che l'incorporamento lo **pubblica apposta** (pagina `/embed` del loro sito) — permesso per pubblicazione, nessuna chiave, nessun costo. Click-to-load come Windy e Waze.
+
+🔴 **Si usa l'iframe, non il loro `<script>`.** Il codice che pubblicano è uno script che costruisce un iframe verso `/aismap` col parametro **`ra`** (l'indirizzo della pagina ospite: è così che autorizzano l'incorporamento — senza, l'endpoint risponde «Forbidden»). Qui si costruisce direttamente quell'iframe: è l'uso previsto, e tiene il codice di terzi **fuori dalla nostra origine**, dove avrebbe accesso pieno alla pagina. La CSP del sito non ammette script di terze parti, e questa non fa eccezione: `www.vesselfinder.com` va in **`frame-src`**, mai in `script-src`.
+
+🔴 **L'AIS non è un censimento di ciò che naviga**: lo trasmettono i mercantili sopra una certa stazza, i passeggeri e chi lo monta per scelta; pescherecci piccoli, diporto e molti mezzi di Stato non compaiono, e la copertura dipende dalle stazioni riceventi a terra. La scheda lo dice, e rimanda alla Guardia Costiera (1530) per le emergenze in mare.
+
+🔴 **Chiudere un riquadro di terzi: `src=""` NON basta.** Il browser lo risolve sull'indirizzo della pagina corrente e il contenuto resta caricato (verificato il 22/09/2026). Serve **`about:blank`** — costante `VUOTO`, applicata anche alle viste Windy e traffico, che avevano lo stesso difetto. Verifica: dopo la chiusura nessun riquadro figlio deve avere l'URL del terzo.
+
+**Aerei: nessuna via libera e lecita esiste.** Verificato uno per uno il 22/09/2026, prima di scrivere codice:
+
+| servizio | incorporabile? | esito |
+|---|---|---|
+| **Flightradar24** | ❌ | `X-Frame-Options: SAMEORIGIN` su `/simple` e `/simple_index.php` |
+| **Plane Finder** | ❌ | `SAMEORIGIN` |
+| **adsb.fi** (globe) | ❌ | `SAMEORIGIN` |
+| **airplanes.live** (globe) | ❌ | `SAMEORIGIN` |
+| **RadarBox / AirNav** | ❌ | nessuna intestazione, ma reindirizza ad `airnavradar.com` che *refused to connect* |
+| **ADS-B Exchange** | ⚠️ tecnicamente **sì** | **vietato dalle condizioni**: l'Acceptable Use Policy proibisce di «pubblicare, rivendere, trasmettere, diffondere il servizio» (§6.9), di «consentire l'accesso a chiunque non sia un utente autorizzato» (§6.7) e ogni uso «non esplicitamente permesso» (§6.8) |
+| **MarineTraffic** | ❌ | `SAMEORIGIN` (per le navi si usa VesselFinder) |
+
+Il caso ADS-B Exchange è quello da ricordare: **si carica benissimo in un iframe** (provato: 222 aerei sull'Italia centrale, 12.354 in totale) e sarebbe bastato incorporarlo. È lecito che manchi, non tecnico. **Non si incorpora.**
+
+Restano quindi due strade per gli aerei, entrambe già scritte altrove in questa regola: lo **snapshot** che il sito già produce da adsb.fi ogni 15 minuti (nostro, filtrato, con le etichette operative), oppure un **intermediario** che rilanci una fonte senza CORS al browser — che non richiede hardware né licenze, ma è il primo componente fuori da GitHub e Aruba, con credenziali proprie e non sorvegliato dai controlli del sito.
+
 **Dove NON si è potuto arrivare:** il **traffico navale (AIS)** non ha una fonte gratuita e lecita per l'Italia — AISHub la concede solo a chi contribuisce con un proprio ricevitore, MarineTraffic e VesselFinder sono a pagamento, airplanes.live nega l'accesso senza autorizzazione scritta. Verificato il 22/09/2026; se un giorno il Gruppo installasse un ricevitore AIS la strada si aprirebbe.
 
 ## Sala situazioni `/monitor/` — vista RADIO (ascolto SDR, settembre 2026)
