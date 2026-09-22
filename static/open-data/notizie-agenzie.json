@@ -5,34 +5,76 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-22T21:13:04+00:00",
+  "generato": "2026-09-22T23:36:32+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-22T21:04:36+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sangiuliano posta foto di donna con niqab a Napoli: \"Ecco pericolo islamizzazione\"",
-   "url": "https://www.adnkronos.com/politica/sangiuliano-foto-donna-niqab-napoli_3VFS2Q3Srx4B1N218Wf9tm"
+   "data": "2026-09-22T22:30:39+00:00",
+   "fonte": "ANSA",
+   "titolo": "Meloni difende il tetto agli stranieri in classe e tira in ballo Mattarella",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/22/meloni-difende-il-tetto-agli-stranieri-in-classe-e-tira-in-ballo-mattarella_2c3d1f7a-0c23-43fe-b2aa-eb9368acdb7c.html"
   },
   {
-   "data": "2026-09-22T21:02:21+00:00",
+   "data": "2026-09-22T22:22:32+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Conti pubblici, Italia resta in procedura: il ruolo della clausola di salvaguardia nazionale",
+   "url": "https://www.adnkronos.com/economia/deficit-italia-conti-pubblici-clausola-salvaguardia_mySB3wIQmEhczYnV1Q5To"
+  },
+  {
+   "data": "2026-09-22T22:15:02+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Pensioni ottobre 2026, cedolino Inps: aumenti, arretrati e rimborsi 730",
+   "url": "https://www.adnkronos.com/economia/pensioni-ottobre-2026-cedolino-inps-arretrati-rimborsi-730_1mS7VCzod6Ed15oSVR7agE"
+  },
+  {
+   "data": "2026-09-22T22:05:55+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Meloni: \"Mattarella ministro firmava per meno stranieri in classe\". Dal Pd al M5S, la protesta delle opposizioni",
+   "url": "https://www.adnkronos.com/politica/meloni-studenti-stranieri-mattarella-polemiche-opposizione_1JYqUxKaP408VXmC6jfjQO"
+  },
+  {
+   "data": "2026-09-22T21:37:22+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Di Battista in video a DiMartedì, 'sto sempre meglio e tornerò presto'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/22/di-battista-in-video-a-dimartedi-sto-sempre-meglio-e-tornero-presto_fd62e6c0-2032-499d-b4d8-3eda1ef5e2f7.html"
+  },
+  {
+   "data": "2026-09-22T21:27:05+00:00",
    "fonte": "ANSA",
    "titolo": "Di Battista in video a DiMartedì su La7: “Ogni giorno mi sento meglio”",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/09/22/di-battista-in-video-a-dimartedi-su-la7-ogni-giorno-mi-sento-meglio_5fb2287d-a847-4ef7-a7cc-190e8f4eb060.html"
+  },
+  {
+   "data": "2026-09-22T21:25:00+00:00",
+   "fonte": "ANSA",
+   "titolo": "Vespa col braccio fasciato in tv con la premier, ho fatto una rovinosa caduta",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/22/vespa-col-braccio-fasciato-in-tv-con-la-premier-ho-fatto-una-rovinosa-caduta_a0c8c3e9-1307-48f3-8f1b-30e215bf02ac.html"
+  },
+  {
+   "data": "2026-09-22T21:17:12+00:00",
+   "fonte": "ANSA",
+   "titolo": "Guerra ai media Usa, la Casa Bianca lancia la Trump Tv",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/22/dai-simpson-a-friends-lo-spot-per-la-trump-tv-con-gli-spezzoni-di-serie_d1c53ff9-15f0-41d3-bd62-160484dcbb89.html"
+  },
+  {
+   "data": "2026-09-22T21:16:48+00:00",
+   "fonte": "ANSA",
+   "titolo": "Melania Trump torna in pista all'Onu e sfida Donald sulla Cnn",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/22/melania-trump-torna-in-pista-allonu-e-sfida-donald-sulla-cnn_5cb3bed2-3415-43af-8697-3451a0a038aa.html"
+  },
+  {
+   "data": "2026-09-22T21:04:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sangiuliano pubblica foto di donna con niqab a Napoli: \"Ecco pericolo islamizzazione\"",
+   "url": "https://www.adnkronos.com/politica/sangiuliano-foto-donna-niqab-napoli_3VFS2Q3Srx4B1N218Wf9tm"
   },
   {
    "data": "2026-09-22T20:16:00+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Il videomessaggio di Di Battista a La7: \"I medici cubani mi hanno salvato la vita, tornerò prestissimo\"",
    "url": "https://www.adnkronos.com/politica/di-battista-videomessaggio-dimartedi_9S3QFy2lb9Esy7QrzdAS2"
-  },
-  {
-   "data": "2026-09-22T19:55:44+00:00",
-   "fonte": "ANSA",
-   "titolo": "Meloni difende il tetto agli stranieri in classe e tira in ballo Mattarella",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/22/meloni-difende-il-tetto-agli-stranieri-in-classe-e-tira-in-ballo-mattarella_2c3d1f7a-0c23-43fe-b2aa-eb9368acdb7c.html"
   },
   {
    "data": "2026-09-22T19:54:06+00:00",
@@ -89,9 +131,9 @@
    "url": "https://www.ansa.it/sito/notizie/economia/2026/09/22/deficit-resta-al-31-salvini-chiede-lo-scostamento-fi-frena_bc5746d2-787c-4dad-b9b8-6fdd14cc3876.html"
   },
   {
-   "data": "2026-09-22T19:01:02+00:00",
+   "data": "2026-09-22T19:01:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Superenalotto, estrazione oggi 22 settembre 2026: centrato '5+1' da oltre 531mila euro",
+   "titolo": "Superenalotto, estrazione 22 settembre 2026: centrato '5+1' da oltre 531mila euro",
    "url": "https://www.adnkronos.com/cronaca/superenalotto-estrazione-oggi-22-settembre-2026-numeri_36xBWYNKIr5epITX3ZcSL4"
   },
   {
@@ -131,22 +173,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/22/maltrattavano-i-bimbi-in-un-asilo-nellisernino-condannate-due-maestre_32cb8e3d-66a5-4a2c-b0c7-371f29a54794.html"
   },
   {
-   "data": "2026-09-22T18:27:30+00:00",
-   "fonte": "ANSA",
-   "titolo": "Guerra ai media Usa, la Casa Bianca lancia la Trump Tv",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/22/dai-simpson-a-friends-lo-spot-per-la-trump-tv-con-gli-spezzoni-di-serie_d1c53ff9-15f0-41d3-bd62-160484dcbb89.html"
-  },
-  {
    "data": "2026-09-22T18:15:58+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Senatrici del centrosinistra in minigonna per protesta contro Tajani, scoppia la polemica in Aula",
    "url": "https://www.adnkronos.com/politica/tajani-gonne-proteste-senatrici-campolargo_JmgoQXRTIKujuZiUy20zu"
-  },
-  {
-   "data": "2026-09-22T18:14:52+00:00",
-   "fonte": "ANSA",
-   "titolo": "Melania Trump torna in pista all'Onu e sfida Donald sulla Cnn",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/22/melania-trump-torna-in-pista-allonu-e-sfida-donald-sulla-cnn_5cb3bed2-3415-43af-8697-3451a0a038aa.html"
   },
   {
    "data": "2026-09-22T18:14:46+00:00",
@@ -159,36 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Riad riapre l'oleodotto. Il G7 agli Houthi: 'Basta attacchi'",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/22/riad-riapre-il-gasdotto-est-ovest-oggi-potrebbe-tornare-a-esportare_a7df8fa7-574a-489a-9a8a-61b5a7a9f1c2.html"
-  },
-  {
-   "data": "2026-09-22T18:10:43+00:00",
-   "fonte": "ANSA",
-   "titolo": "Violenza sessuale, 'chiesta l'archiviazione per senatore Fi'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/22/violenza-sessuale-chiesta-larchiviazione-per-il-senatore-di-fi-querela-tardiva_ae472a3a-1a8f-40d2-bd40-aed1a25463d1.html"
-  },
-  {
-   "data": "2026-09-22T18:08:14+00:00",
-   "fonte": "ANSA",
-   "titolo": "Stellantis, nuova cassa a Mirafiori, pesano crisi del mercato e caro-energia",
-   "url": "https://www.ansa.it/sito/notizie/economia/aziende/2026/09/22/stellantis-a-mirafiori-torna-la-cassa-integrazione-dal-19-al-30-ottobre_a85af9b1-a3e9-4cdb-acf2-9e7d33d50db1.html"
-  },
-  {
-   "data": "2026-09-22T18:01:21+00:00",
-   "fonte": "ANSA",
-   "titolo": "Matthew McConaughey e Woody Harrelson fratelli? Il dubbio diventa una commedia",
-   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/22/matthew-mcconaughey-e-woody-harrelson-fratelli-il-dubbio-diventa-una-commedia_b488b9e7-aef9-4018-ac7c-47cf222fc5b7.html"
-  },
-  {
-   "data": "2026-09-22T17:58:19+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Forte dei Marmi prolunga la stagione balneare al primo novembre",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/22/forte-dei-marmi-prolunga-la-stagione-balneare-al-primo-novembre_a55f0538-f559-4cc9-96e4-4c991f5a34da.html"
-  },
-  {
-   "data": "2026-09-22T17:55:33+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Festeggiarono il Capodanno a colpi di pistola, 6 misure cautelari",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/22/festeggiarono-il-capodanno-a-colpi-di-pistola-6-misure-cautelari_6e9aa913-6dc5-42be-b1dd-6334fc699aad.html"
   }
  ]
 }
