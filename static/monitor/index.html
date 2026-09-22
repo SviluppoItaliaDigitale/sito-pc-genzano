@@ -436,6 +436,30 @@ body.side-closed #sideCol{right:0}
   #newsWrap{animation:none;padding-left:10px}
 }
 button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
+
+/* ---- PRONTO SOCCORSO (vista EMERGENZE) ----
+   Contrasti calcolati sul fondo scuro, non stimati: il testo secondario usa
+   --dim (#709080), gia' verificato >=4,67:1 su tutti i fondi della pagina. */
+.psAvviso{margin:.1rem 0 .55rem;color:var(--tx);line-height:1.45}
+.psAvviso b{color:#ffbe2e}
+.psTest{display:grid;grid-template-columns:1fr auto minmax(0,1.5fr);gap:8px;align-items:center;
+  font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);padding:0 0 3px;border-bottom:1px solid var(--line)}
+.psTest span:nth-child(2){text-align:right}
+.psRiga{display:grid;grid-template-columns:1fr auto minmax(0,1.5fr);gap:8px;align-items:center;
+  padding:5px 0;border-bottom:1px solid var(--line)}
+.psRiga:last-of-type{border-bottom:0}
+.psNome{color:var(--tx);font-weight:600}
+.psNome em{display:block;font-style:normal;font-size:10px;color:var(--dim);letter-spacing:.06em}
+.psTot{font-variant-numeric:tabular-nums;font-size:17px;font-weight:700;color:var(--tx);text-align:right}
+.psChips{display:flex;flex-wrap:wrap;gap:4px;justify-content:flex-end}
+.psCod{border:1px solid var(--pc);color:var(--tx);border-radius:999px;padding:1px 7px;font-size:10px;white-space:nowrap}
+.psCod::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--pc);margin-right:5px;vertical-align:baseline}
+.wx .dim{color:var(--dim)}
+@media(max-width:620px){
+  .psTest{display:none}
+  .psRiga{grid-template-columns:1fr auto;row-gap:4px}
+  .psChips{grid-column:1/-1;justify-content:flex-start}
+}
 </style>
 </head>
 <body>
@@ -638,7 +662,7 @@ const S={view:"all",day:"today",black:false,
   quakes:[],wx:null,wxT:0,aria:null,mare:null,mareog:null,ems:[],emsSnap:null,
   obs:null,obsBusy:false,last:{},lastFull:0,errs:{},
   strikes:[],cycle:false,qkSeen:null,logArr:[],gdacs:[],gdacsSnap:null,news:[],newsCache:"",
-  usgs:[],eonet:[],emsc:[],volo:null,malarm:null,firms:null,spazio:null,sonde:[],
+  usgs:[],eonet:[],emsc:[],volo:null,malarm:null,firms:null,spazio:null,sonde:[],ps:null,
   orb:{recs:[],gruppi:{},filtro:"tutti",caricato:0,tutti:false,chiesto:false,falliti:[],busy:false,epoca:0,calc:null,sel:null}};
 try{S.logArr=JSON.parse(localStorage.getItem("pcgz-monitor-log")||"[]")||[]}catch(e){S.logArr=[]}
 const $=s=>document.querySelector(s);
@@ -1489,6 +1513,30 @@ async function loadVolo(){
   rendSe("ems"); tickUpd();
 }
 
+/* ---------------- Pronto soccorso — carico sulle strutture vicine ----------------
+   Dato della Regione Lazio (CC BY 4.0), letto attraverso il ponte sul nostro
+   server: il servizio risponde 400 alle richieste che portano un'intestazione
+   Origin, quindi dal browser non si legge (verificato il 22/09/2026).
+   🔴 Non e' una guida per scegliere l'ospedale: in emergenza decide il 112. */
+async function loadPs(){
+  try{
+    const d=await jget(BASE+"api/pronto-soccorso.php",12000);
+    if(d&&d._sorgente&&d._sorgente.diretta&&Array.isArray(d.ospedali)){
+      S.ps={ospedali:d.ospedali,letto:d._sorgente.letto,
+            attribuzione:d._sorgente.attribuzione||"",
+            avvertenza:d._sorgente.avvertenza||"",
+            vecchiaDel:d._sorgente.copia_vecchia_del||null};
+      S.last.ps=Date.now(); delete S.errs.ps;
+    } else {
+      S.errs.ps="Stato dei pronto soccorso non disponibile in questo ambiente.";
+    }
+  }catch(e){
+    // su GitHub Pages e in locale il PHP non gira: la scheda si spegne e lo dice
+    S.errs.ps="Stato dei pronto soccorso non disponibile in questo ambiente.";
+  }
+  rendSe("ems"); tickUpd();
+}
+
 /* ---------------- USGS — sismi mondiali quasi in tempo reale ----------------
    Feed pubblico M4.5+ degli ultimi 7 giorni (CORS aperto), aggiornato da USGS
    ogni minuto: lo interroghiamo ogni 2. Dedup contro INGV e GDACS in buildWorld. */
@@ -2172,7 +2220,40 @@ function viewEms(){
       Copernicus EMS</a> e nel <a href="${BASE}cruscotto/">Cruscotto del territorio</a>.</p>`;
     feed.appendChild(el);
   } else if(S.errs.ems)feed.appendChild(errCard(S.errs.ems));
-  if(!S.ems.length&&!S.errs.ems&&!(S.gdacs&&S.gdacs.length)){feed.innerHTML='<div class="skel"></div><div class="skel"></div>';return}
+  const psPronto=S.ps&&S.ps.ospedali&&S.ps.ospedali.length;
+  if(!S.ems.length&&!S.errs.ems&&!(S.gdacs&&S.gdacs.length)&&!psPronto&&!S.errs.ps){feed.innerHTML='<div class="skel"></div><div class="skel"></div>';return}
+  // ---- PRONTO SOCCORSO vicini: il carico sulle strutture che servono Genzano ----
+  if(S.errs.ps)feed.appendChild(errCard(S.errs.ps));
+  if(psPronto){
+    // 🔴 La freschezza si misura su QUANDO IL PONTE HA RAGGIUNTO LA FONTE, non
+    // su quando noi abbiamo ricevuto la risposta del ponte: il ponte risponde
+    // sempre, anche servendo una copia vecchia di ore, quindi misurando la
+    // nostra ricezione la scheda direbbe "IN DIRETTA" per sempre. Stessa regola
+    // della scheda dei mezzi aerei, che usa gia' `vecchiaDel`.
+    const dalPonte=S.ps.vecchiaDel?Date.parse(S.ps.vecchiaDel):NaN;
+    const vecchio=Number.isFinite(dalPonte)?dalPonte:direttoVecchio(S.last.ps);
+    const el=document.createElement("div");el.className="wx";
+    const righe=S.ps.ospedali.map(o=>{
+      const nome=`<span class="psNome">${esc(o.nome.replace(/^Pronto Soccorso\s*/i,""))}<em>${o.km} km</em></span>`;
+      // struttura senza dato: stessa riga delle altre, con il vuoto dichiarato.
+      // Mai confonderla con "nessuno in attesa", che e' un'informazione opposta.
+      if(!o.stato)return `<div class="psRiga">${nome}<span class="psTot dim">—</span><span class="psChips"><span class="dim">stato non disponibile</span></span></div>`;
+      const chip=o.stato.codici.filter(c=>c.pazienti>0).map(c=>
+        `<span class="psCod" style="--pc:${esc(c.colore||"#709080")}" title="${esc(c.etichetta)} — attesa media ${c.attesaMediaMin} min, massima ${c.attesaMassimaMin} min">${esc(c.etichetta)} ${c.pazienti}</span>`).join("");
+      return `<div class="psRiga">${nome}
+        <span class="psTot">${o.stato.inAttesa}</span>
+        <span class="psChips">${chip||'<span class="dim">nessuno in attesa</span>'}</span></div>`;
+    }).join("");
+    el.innerHTML=`<h3>PRONTO SOCCORSO VICINI<span>${vecchio?"NON AGGIORNATO":"REGIONE LAZIO · IN DIRETTA"}</span></h3>
+      <p class="psAvviso"><b>In emergenza si chiama il 112.</b> È la centrale che sceglie l'ospedale,
+      in base alle condizioni della persona e alle specialità disponibili: un codice grave non fa la fila.
+      Questi numeri dicono quanto sono carichi i pronto soccorso del nostro territorio, non dove conviene andare.</p>
+      <div class="psTest"><span></span><span>in attesa</span><span>per codice di triage</span></div>
+      ${righe}
+      ${vecchio?`<p class="staleNota">La fonte non risponde in questo momento: questi numeri sono dell'ultima lettura riuscita, <b>${fmtT(new Date(vecchio).toISOString())}</b>. Un pronto soccorso nel frattempo si è svuotato o riempito.</p>`:""}
+      <p class="dim" style="margin:.5rem 0 0">${esc(S.ps.attribuzione)}</p>`;
+    feed.appendChild(el);
+  }
   for(const a of S.ems){
     const col=EMS_COL[a.category]||EMS_COL.Other;
     const el=document.createElement("div");el.className="ems";el.style.setProperty("--ec",col);
@@ -3986,7 +4067,7 @@ try{
 // ⟳ AGGIORNA — forza il refresh immediato di tutte le fonti
 function refreshAll(man){
   S.lastFull=Date.now();
-  loadSito(); loadINGV(); loadWX(); loadAmb(); loadMare(); loadEmsc(); loadEMS(); loadVolo(); loadMeteoalarm(); loadFirms(); loadSpazio(); loadSonde(); loadGdacs(); loadNews();
+  loadSito(); loadINGV(); loadWX(); loadAmb(); loadMare(); loadEmsc(); loadEMS(); loadVolo(); loadPs(); loadMeteoalarm(); loadFirms(); loadSpazio(); loadSonde(); loadGdacs(); loadNews();
   loadUsgs(); loadEonet();
   if(S.obs||S.view==="met")loadObs();
   if(S.layers.radar)radarRefresh();
@@ -4087,7 +4168,7 @@ setInterval(()=>{
       {timeZone:"Europe/Rome",weekday:"long",day:"numeric",month:"long",year:"numeric"}).toUpperCase();}
 },1000);
 S.lastFull=Date.now();
-loadSito(); loadDPC(); loadINGV(); loadWX(); loadAmb(); loadMare(); loadEmsc(); loadEMS(); loadVolo(); loadMeteoalarm(); loadFirms(); loadSpazio(); loadSonde(); loadGdacs(); loadNews();
+loadSito(); loadDPC(); loadINGV(); loadWX(); loadAmb(); loadMare(); loadEmsc(); loadEMS(); loadVolo(); loadPs(); loadMeteoalarm(); loadFirms(); loadSpazio(); loadSonde(); loadGdacs(); loadNews();
 loadUsgs(); loadEonet();
 setInterval(loadUsgs,2*60e3);          // USGS aggiorna il feed ogni minuto
 setInterval(loadEmsc,5*60e3);          // EMSC: area euro-mediterranea, Italia esclusa (fonte INGV)
@@ -4105,6 +4186,15 @@ setInterval(loadEMS,15*60e3);
    resta a 5 minuti: il file si rigenera ogni quarto d'ora, chiederlo piu'
    spesso non lo renderebbe piu' fresco. Fermo a scheda nascosta: nessuno
    sta guardando, e la fonte e' gratuita e va trattata con riguardo. */
+/* il carico dei pronto soccorso si muove nell'arco dei minuti, non dei secondi */
+const PS_MS=60e3;
+let psUltimo=0;
+setInterval(()=>{
+  if(document.hidden)return;
+  if(Date.now()-psUltimo<PS_MS)return;
+  psUltimo=Date.now(); loadPs();
+},10e3);
+
 const VOLO_DIRETTA_MS=20e3, VOLO_SNAP_MS=5*60e3;
 let voloUltimo=0;
 setInterval(()=>{
