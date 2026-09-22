@@ -306,6 +306,40 @@ def cmd_mancanti(args) -> int:
 
 
 RIPROVA_MIN = 60  # una voce che il repository social ha già visto si richiama al massimo ogni ora
+# Specchio di social_coda_lib.INTERVALLO_MINIMO_MINUTI: minuti fra un post e
+# l'altro. Se cambia là, va cambiato qui.
+INTERVALLO_SOCIAL_MIN = 30
+
+
+def slot_previsti(coda: dict[str, dict], online: list[dt.datetime],
+                  ora: dt.datetime) -> list[dt.datetime]:
+    """Istanti che il repository social assegnerà agli articoli assenti dalla
+    coda quando lo si sveglia: specchio di social_coda_lib.prossimo_slot, che
+    parte da adesso (o dall'uscita sul sito) e scorre in avanti di mezz'ora
+    finché non è lontano dagli altri post, pubblicati o in coda.
+
+    Serve a sapere PRIMA di svegliarlo quali post non usciranno subito: la
+    coda li conterrà solo dopo il suo giro, e nessun evento cadrà quando
+    maturano (notte del 23/09/2026: due articoli online insieme, il secondo
+    programmato mezz'ora dopo il primo è uscito solo col giro orario
+    successivo, perché al momento della decisione la coda non lo conteneva).
+    """
+    passo = dt.timedelta(minutes=INTERVALLO_SOCIAL_MIN).total_seconds()
+    occupati = [v["pubblica_il"] for v in coda.values()
+                if v["stato"] in ("in_coda", "pubblicato") and v["pubblica_il"]]
+    out = []
+    for d in sorted(online):
+        cand = max(d, ora)
+        cambiato = True
+        while cambiato:
+            cambiato = False
+            for o in occupati:
+                if abs((cand - o).total_seconds()) < passo:
+                    cand = o + dt.timedelta(seconds=passo)
+                    cambiato = True
+        occupati.append(cand)
+        out.append(cand)
+    return out
 
 
 def decidi(args) -> tuple[bool, int]:
@@ -324,6 +358,10 @@ def decidi(args) -> tuple[bool, int]:
       - voce pubblicata, saltata o in errore → no.
     Con la coda illeggibile si procede per date: materiale pronto da meno di
     --recenti-min minuti e nessun giro partito negli ultimi --pausa-min.
+
+    L'attesa conta anche i post che il repository social metterà in coda
+    più avanti al giro che si sta per chiamare (slot_previsti): senza, con
+    due articoli usciti insieme il secondo aspetterebbe il giro programmato.
     """
     ora = S.adesso()
     coda = voci_coda()
@@ -339,7 +377,7 @@ def decidi(args) -> tuple[bool, int]:
         return bool(giro and giro["creato"] and giro["creato"] >= dal
                     and (ora - giro["creato"]).total_seconds() < RIPROVA_MIN * 60)
 
-    pronti, attese = [], []
+    pronti, attese, assenti = [], [], []
     for p, fm, d in S.articoli(args.ore, ora):
         slug = p.stem
         if not S.candidato_auto(p, fm) or not S.materiale_pubblicabile(slug):
@@ -367,6 +405,8 @@ def decidi(args) -> tuple[bool, int]:
             continue
         log(f"  pronto e online: {slug}")
         pronti.append(slug)
+        if coda is not None and slug not in coda:
+            assenti.append(d)
 
     sveglia = False
     if pronti:
@@ -378,6 +418,18 @@ def decidi(args) -> tuple[bool, int]:
                 f"non lo richiamo prima di {args.pausa_min} minuti.")
         else:
             sveglia = True
+
+    if pronti:
+        # Chi non esce a questo giro, il repository social lo mette in coda
+        # più avanti: si calcola adesso quando, per affidarne l'attesa.
+        if coda is not None:
+            dopo = [q for q in slot_previsti(coda, assenti, ora)
+                    if (q - ora).total_seconds() > 60]
+            for q in dopo:
+                log(f"  il repository social lo metterà in coda per le {S.fmt(q)}")
+            attese.extend(dopo)
+        elif len(pronti) > 1:
+            attese.append(ora + dt.timedelta(minutes=INTERVALLO_SOCIAL_MIN))
 
     attesa = 0
     vicine = [q for q in attese if (q - ora).total_seconds() <= args.attesa_max_min * 60]
