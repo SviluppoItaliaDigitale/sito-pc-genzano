@@ -472,6 +472,34 @@ body.side-closed #side{transform:translateX(100%)}
 body.side-closed #map{right:0}
 body.side-closed #sideCol{right:0}
 #sideTgl{display:none}
+
+/* ---- MIA SALA A MURO ------------------------------------------------------
+   🔴 La Mia Sala esiste per vedere PIU' SCHEDE INSIEME — richiesta di chi la
+   usa in sede: «in contemporanea vedono le varie schede su un'unica pagina».
+   Nella colonna da 380 px le schede si scorrono una per volta, che e' il
+   contrario di quello che serve. Da 900 px in su la vista prende tutta la
+   larghezza (la cartina resta montata dietro, coperta: niente display:none,
+   che costringerebbe Leaflet a rimisurarsi al ritorno) e le schede vanno a
+   griglia: 2 colonne a 900, 3 a 1280, 5 su un monitor da 1920.
+   Sotto i 900 px resta la colonna: su un telefono «insieme» non esiste. */
+@media(min-width:900px){
+  body.muro #side{left:0;width:auto;border-left:none}
+  body.muro #sideCol{display:none}
+  /* 🔴 Colonne, non griglia. Con una griglia l'altezza di ogni riga e' quella
+     della scheda piu' alta: sotto una scheda corta resta un buco grande
+     quanto la differenza — su 1920 px erano centinaia di pixel vuoti. Le
+     colonne impaginano come un giornale, riempiendo davvero lo spazio;
+     break-inside tiene ogni scheda intera. L'ordine e' per colonna: la prima
+     scheda in alto a sinistra, l'ultima in basso a destra. */
+  body.muro #feed{columns:340px;column-gap:9px}
+  body.muro #feed > .wx{break-inside:avoid;margin-bottom:9px}
+  /* guida, avvisi e legenda non sono schede: prendono tutta la larghezza */
+  body.muro #feed > .miaBox,body.muro #feed > .miaFoot{column-span:all;break-inside:avoid}
+  body.muro #feed > .miaVuoto{column-span:all;max-width:760px}
+  /* 🔴 I livelli di cartina si nascondono: la cartina e' coperta dal muro e
+     un comando che non produce nulla e' un invito a sbagliare. */
+  body.muro #nav [data-l],body.muro #nav .sep{display:none}
+}
 @media(max-width:720px){
   #hdr{gap:6px;padding:0 8px}
   #hdr .logo{min-width:0}
@@ -3837,7 +3865,7 @@ function viewMia(){
   feed.innerHTML="";
   const scelte=miaCarica();
   if(!scelte.length){
-    feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3><b class="wxT">MIA SALA</b><span>NESSUNA SCHEDA SCELTA</span></h3>
+    feed.insertAdjacentHTML("beforeend",`<div class="wx miaVuoto"><h3><b class="wxT">MIA SALA</b><span>NESSUNA SCHEDA SCELTA</span></h3>
       <p>Tieni sott'occhio insieme, su una schermata sola, schede che stanno in viste diverse: l'allerta, i sismi, i mezzi aerei, i satelliti sopra di noi.</p>
       <div class="miaGuida">
         <div class="miaBox" style="--bc:var(--cyn)">
@@ -3854,6 +3882,7 @@ function viewMia(){
         <div class="miaBox" style="--bc:var(--grn)">
           <div class="tit"><i>3</i>ORDINA COME VUOI</div>
           <p>Qui dentro ogni scheda ha <span class="ghi">▲ ▼</span> per spostarla e <span class="ghi">✕</span> per toglierla. Le schede restano vive: si aggiornano come nelle loro viste.</p>
+          <p style="margin-top:5px">Su uno schermo largo la Mia Sala si apre <strong>a tutta pagina</strong> e le schede vanno in colonne affiancate: più ne scegli, più se ne vedono insieme senza scorrere.</p>
         </div>
       </div>
       <p class="miaNota">La scelta resta su questo dispositivo, nel browser: non viene inviata da nessuna parte.</p></div>`);
@@ -3985,7 +4014,10 @@ function viewMar(){
     'Per un\'emergenza in mare il riferimento è la <b>Guardia Costiera</b>, numero <a href="tel:1530">1530</a>.'));
 }
 
-function render(){({all:viewAll,sis:viewSis,met:viewMet,map:viewMap,wnd:viewWnd,tra:viewTra,rad:viewRad,amb:viewAmb,ems:viewEms,orb:viewOrb,mar:viewMar,mia:viewMia,log:viewLog})[S.view]();miaDecora(S.view);windySync();traffSync();mareSync();radioSync();}
+function render(){
+  document.body.classList.toggle("muro",S.view==="mia");
+  try{navArrUpd()}catch(e){}   // nascondendo i livelli cambia cosa resta fuori dal riquadro
+  ({all:viewAll,sis:viewSis,met:viewMet,map:viewMap,wnd:viewWnd,tra:viewTra,rad:viewRad,amb:viewAmb,ems:viewEms,orb:viewOrb,mar:viewMar,mia:viewMia,log:viewLog})[S.view]();miaDecora(S.view);windySync();traffSync();mareSync();radioSync();}
 
 /* ---------------- barra NOTIZIE — agenzie di stampa (Italia e mondo) ----------------
    ANSA + Adnkronos dallo snapshot self-hosted open-data/notizie-agenzie.json
