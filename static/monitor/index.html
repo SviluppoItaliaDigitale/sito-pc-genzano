@@ -59,12 +59,22 @@ body.blackout #lmap{filter:brightness(.55) saturate(.7)}
 #nav .sep{flex:0 0 1px;background:var(--line);margin:4px 4px}
 /* Frecce di overflow del menu: compaiono solo quando ci sono voci fuori
    dallo schermo, con dissolvenza sul bordo — così è chiaro che c'è altro */
-.navArr{position:fixed;top:46px;height:30px;width:30px;z-index:1101;display:none;
-  align-items:center;justify-content:center;border:none;border-bottom:1px solid var(--line);
-  color:var(--cyn);cursor:pointer;font-size:18px;line-height:1;padding:0}
-#navL{left:0;background:linear-gradient(90deg,#060b10 55%,rgba(6,11,16,0))}
-#navR{right:0;background:linear-gradient(270deg,#060b10 55%,rgba(6,11,16,0))}
-.navArr:focus-visible{outline:2px solid var(--cyn);outline-offset:-2px}
+.navArr{position:fixed;top:46px;height:30px;min-width:52px;z-index:1101;display:none;
+  align-items:center;justify-content:center;gap:3px;border:none;border-bottom:1px solid var(--line);
+  color:#0a141d;background:var(--cyn);cursor:pointer;font-size:17px;font-weight:700;line-height:1;padding:0 7px;
+  font-family:inherit}
+.navArr .n{font-size:11px;font-weight:700;letter-spacing:.02em}
+#navL{left:0;box-shadow:6px 0 10px -4px #060b10}
+#navR{right:0;box-shadow:-6px 0 10px -4px #060b10}
+.navArr:hover{background:#7fe9ff}
+.navArr:focus-visible{outline:3px solid #ffbe2e;outline-offset:-3px}
+/* Richiamo discreto finche' l'utente non scorre mai: chiarisce che il menu
+   continua oltre il bordo. Si spegne al primo scorrimento e rispetta sia
+   prefers-reduced-motion sia il fermo-animazioni della barra accessibilita'. */
+@keyframes navPulse{0%,100%{opacity:1}50%{opacity:.55}}
+.navArr.hint{animation:navPulse 1.9s ease-in-out 3}
+@media(prefers-reduced-motion:reduce){.navArr.hint{animation:none}}
+html.a11y-pause-anim .navArr.hint{animation:none}
 @media(max-width:1100px){#nav button .ic{display:none}}
 /* Header su schermi stretti: si nascondono prima gli elementi secondari,
    restano sempre zona, ACTIVEPAGER, AGGIORNA e orologio */
@@ -120,6 +130,19 @@ body.blackout #lmap{filter:brightness(.55) saturate(.7)}
 .bmk .pf em{color:var(--ylw,#ffd60a)} .pre .pd{grid-column:1/-1;font-family:var(--mono);font-size:9px;color:var(--dim);line-height:1.35}
 /* Vista RADIO — frontalino di sintonia nel pannello laterale */
 #nav button.rxon::after{content:" ●";color:var(--grn);font-size:9px}
+/* Pastiglie di filtro dell'elenco velivoli */
+.fchips{display:flex;flex-wrap:wrap;gap:4px;margin:0 0 7px}
+.fchip{background:#0d1a24;border:1px solid var(--line);color:var(--dim);cursor:pointer;
+  font:inherit;font-size:10px;letter-spacing:.04em;padding:3px 7px;border-radius:2px}
+.fchip .c{color:var(--tx);font-weight:700;margin-left:4px}
+.fchip[aria-pressed="true"]{background:var(--cyn);border-color:var(--cyn);color:#0a141d}
+.fchip[aria-pressed="true"] .c{color:#0a141d}
+.fchip:focus-visible{outline:2px solid #ffbe2e;outline-offset:1px}
+.acRow{display:flex;justify-content:space-between;gap:8px;padding:3px 0;border-bottom:1px solid #12222e;font-size:11px}
+.acRow .lab{color:var(--tx)}
+.acRow .lab em{color:var(--dim);font-style:normal}
+.acRow .rt{color:var(--dim);white-space:nowrap}
+.acPin{font-size:15px;line-height:1;text-shadow:0 0 3px #000}
 .vfo{border:1px solid var(--line);background:#081018;padding:8px 10px;font-family:var(--mono);display:flex;flex-direction:column;gap:2px}
 .vfo b{font-size:24px;font-weight:400;color:#f2f7f4;letter-spacing:.04em;line-height:1.1}
 .vfo span{font-size:10px;letter-spacing:.14em;color:var(--cyn)}
@@ -395,9 +418,11 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
   <button data-l="sat"><span class="ic">✦</span>SATELLITE</button>
   <button data-l="fire"><span class="ic">▵</span>FUOCHI</button>
   <button data-l="fwi"><span class="ic">♨</span>AIB PREV</button>
+  <button data-l="volo"><span class="ic">✈</span>VOLO</button>
+  <button data-l="mareo"><span class="ic">〜</span>MAREE</button>
 </nav>
-<button id="navL" class="navArr" aria-label="Scorri il menu a sinistra: altre voci disponibili">‹</button>
-<button id="navR" class="navArr" aria-label="Scorri il menu a destra: altre voci disponibili">›</button>
+<button id="navL" class="navArr" aria-label="Scorri il menu a sinistra"><span aria-hidden="true">‹</span><span class="n" id="navLn"></span></button>
+<button id="navR" class="navArr" aria-label="Scorri il menu a destra"><span class="n" id="navRn"></span><span aria-hidden="true">›</span></button>
 
 <main id="map">
   <div id="lmap"></div>
@@ -541,7 +566,8 @@ const EMS_COL={Wildfire:"#ff8c1a",Flood:"#37c7ff",Storm:"#b48cff",Earthquake:"#f
   "Volcanic activity":"#ff3b30",Landslide:"#c99e6b",Other:"#5d7a6e"};
 
 const S={view:"all",day:"today",black:false,
-  layers:{zone:true,radar:false,qk:true,sat:false,fire:false,blitz:false,fwi:false},
+  layers:{zone:true,radar:false,qk:true,sat:false,fire:false,blitz:false,fwi:false,volo:false,mareo:false},
+  voloFiltro:"tutti",
   boll:null,bollVecchio:null,zones:{today:null,tomorrow:null},sito:null,
   quakes:[],wx:null,wxT:0,aria:null,mare:null,mareog:null,ems:[],emsSnap:null,
   obs:null,obsBusy:false,last:{},lastFull:0,errs:{},
@@ -762,6 +788,7 @@ map.on("mousemove",e=>{
 });
 
 let zoneLayer=null, qkLayer=L.layerGroup([]);
+const voloLayer=L.layerGroup([]), mareoLayer=L.layerGroup([]);
 qkLayer.addTo(map);
 
 function applyLayers(){
@@ -770,6 +797,7 @@ function applyLayers(){
   on(radarLayer,S.layers.radar); on(satLayer,S.layers.sat); on(fireLayer,S.layers.fire);
   on(fwiLayer,S.layers.fwi); on(blitzLayer,S.layers.blitz);
   on(qkLayer,S.layers.qk);
+  on(voloLayer,S.layers.volo); on(mareoLayer,S.layers.mareo);
   if(zoneLayer)on(zoneLayer,S.layers.zone);
   $("#radarLbl").style.display=S.layers.radar?"block":"none";
   $("#blitzLbl").style.display=S.layers.blitz?"block":"none";
@@ -1063,7 +1091,10 @@ async function loadAmb(){ // stessi endpoint e coordinate del cruscotto del sito
    non al livello medio mare: si mostra come scostamento, mai come quota assoluta.
    Cio' che conta operativamente non e' il valore puntuale ma la VARIAZIONE nell'ora
    (acqua alta, storm surge, ritiro anomalo che precede un maremoto). */
-const IOC_ST=[{code:"AZ42",nome:"ANZIO"},{code:"CI20",nome:"CIVITAVECCHIA"},{code:"GA37",nome:"GAETA"}];
+// Coordinate dall'elenco stazioni IOC (query=stationlist), non stimate.
+const IOC_ST=[{code:"AZ42",nome:"ANZIO",lat:41.4469,lon:12.6348},
+  {code:"CI20",nome:"CIVITAVECCHIA",lat:42.0940,lon:11.7896},
+  {code:"GA37",nome:"GAETA",lat:41.2100,lon:13.5897}];
 const IOC_URL="https://www.ioc-sealevelmonitoring.org/service.php";
 const IOC_MAX_AGE=45*60e3; // oltre tre quarti d'ora il dato non si spaccia per attuale
 async function loadMare(){
@@ -1085,6 +1116,21 @@ async function loadMare(){
         min:Math.min(...pt.map(r=>r.v)),max:Math.max(...pt.map(r=>r.v)),n:pt.length};
     }catch(e){return {...st,errore:true}}
   }));
+  // Marcatori sulla cartina: le stazioni sono punti geografici, ha senso vederle
+  // dove sono invece che solo in elenco.
+  mareoLayer.clearLayers();
+  for(const m of esiti){
+    if(!Number.isFinite(m.liv))continue;
+    const d=Number.isFinite(m.delta)?m.delta*100:null;
+    const col=d===null?"#37c7ff":Math.abs(d)>=50?"#ff3b30":Math.abs(d)>=30?"#ff8c1a":"#37c7ff";
+    L.circleMarker([m.lat,m.lon],{radius:6,color:col,weight:2,fillColor:col,fillOpacity:.45,
+      pane:"qkPane",keyboard:true})
+      .bindPopup(`<b>${esc(m.nome)}</b><br>Mareografo IOC/UNESCO`+
+        `<br>${(m.liv*100).toFixed(0)} cm sullo zero della stazione`+
+        `<br>${d===null?"variazione oraria N/D":(Math.abs(d)<1?"stabile nell'ultima ora":(d>0?"+":"−")+Math.abs(d).toFixed(0)+" cm in un'ora")}`+
+        `<br><small>Dato grezzo non validato.</small>`)
+      .addTo(mareoLayer);
+  }
   const buone=esiti.filter(e=>Number.isFinite(e.liv));
   S.mareog=esiti;
   if(buone.length){S.last.mareog=Date.now();delete S.errs.mareog}
@@ -1205,12 +1251,50 @@ async function loadMeteoalarm(){
    adsb.fi non espone il CORS: si legge lo snapshot committato ogni 15 minuti da
    scripts/genera-volo-soccorso.py. Il ritardo e' dichiarato nella scheda: un
    velivolo in volo si sposta parecchio in un quarto d'ora. */
+const VOLO_FILTRI=[["tutti","TUTTI",null],["antincendio","ANTINCENDIO","antincendio"],
+  ["elicottero","ELICOTTERI","elicottero"],["emergenza","EMERGENZE","emergenza"],
+  ["bassa-quota","BASSA QUOTA","bassa-quota"]];
+const voloColore=v=>v.etichette.includes("emergenza")?"#ff3b30"
+  :v.etichette.includes("antincendio")?"#ff8c1a"
+  :v.etichette.includes("elicottero")?"#b48cff":"#37c7ff";
+function voloFiltra(lista,f){
+  if(f==="tutti")return lista;
+  return lista.filter(v=>v.etichette.includes(f));
+}
+function buildVolo(){
+  voloLayer.clearLayers();
+  if(!S.volo)return;
+  for(const v of voloFiltra(S.volo.lista,S.voloFiltro)){
+    if(!Number.isFinite(v.lat)||!Number.isFinite(v.lon))continue;
+    const col=voloColore(v);
+    // L'elicottero non ha una prua "a freccia" leggibile a colpo d'occhio: si usa
+    // un simbolo diverso invece di ruotare un'icona che non direbbe nulla.
+    const eli=v.etichette.includes("elicottero");
+    const rot=Number.isFinite(v.rotta)?v.rotta:0;
+    const html=eli
+      ?`<span class="acPin" style="color:${col}">✚</span>`
+      :`<span class="acPin" style="color:${col};display:inline-block;transform:rotate(${rot}deg)">➤</span>`;
+    const nome=esc(v.immatricolazione||v.volo||v.hex||"—");
+    L.marker([v.lat,v.lon],{keyboard:true,
+      icon:L.divIcon({className:"",html,iconSize:[16,16],iconAnchor:[8,8]}),
+      alt:`Velivolo ${nome}`})
+      .bindPopup(`<b>${nome}</b><br>${esc(v.modello||v.tipo_icao||"modello non dichiarato")}`+
+        `<br>${esc(v.categoria)}`+
+        `<br>${v.a_terra?"a terra":(Number.isFinite(v.quota_ft)?Math.round(v.quota_ft)+" ft":"quota N/D")}`+
+        `${Number.isFinite(v.velocita_kt)?" · "+Math.round(v.velocita_kt)+" kt":""}`+
+        `<br>${v.km_da_genzano} km da Genzano`+
+        `${v.motivo?`<br><b style="color:#ff3b30">${esc(v.motivo)}</b>`:""}`+
+        `<br><small>Posizione dello snapshot, non in tempo reale.</small>`)
+      .addTo(voloLayer);
+  }
+}
 async function loadVolo(){
   try{
-    const d=await jgetSnap("volo-soccorso.json",10000);
-    S.volo={aib:d.antincendio||[],emg:d.emergenze||[],snap:d._snapshot||{}};
+    const d=await jgetSnap("volo-soccorso.json",12000);
+    S.volo={lista:d.velivoli||[],snap:d._snapshot||{}};
     S.last.volo=Date.now(); delete S.errs.volo;
   }catch(e){S.errs.volo="Snapshot dei mezzi aerei non disponibile.";}
+  buildVolo();
   if(S.view==="ems")render(); tickUpd();
 }
 
@@ -1352,6 +1436,16 @@ function worldMode(on){
 
 /* ---------------- pannelli ---------------- */
 const feed=$("#feed"),title=$("#sideTitle");
+// Filtri dell'elenco velivoli: delega sul feed, perche' le pastiglie vengono
+// ricreate a ogni render. Cambiano anche i marcatori sulla cartina, cosi' elenco
+// e mappa mostrano sempre la stessa selezione.
+feed.addEventListener("click",e=>{
+  const b=e.target.closest("[data-vf]");
+  if(!b)return;
+  S.voloFiltro=b.dataset.vf;
+  buildVolo();
+  render();
+});
 const esc=s=>String(s??"").replace(/[<>&"]/g,c=>({"<":"&lt;",">":"&gt;","&":"&amp;",'"':"&quot;"}[c]));
 // aggiunge la Z (UTC) solo se il timestamp non dichiara già un fuso:
 // i tempi INGV/EMS sono UTC senza suffisso, quelli del sito hanno +02:00
@@ -1853,16 +1947,28 @@ function viewEms(){
       feed.appendChild(el);
     }
   }
-  // Mezzi aerei: due elenchi di soli fatti trasmessi, mai una deduzione sulla missione.
+  // Mezzi aerei: tutti quelli osservati nell'area, filtrabili per categoria.
+  // Ogni riga contiene solo fatti trasmessi dal velivolo o dichiarati dalla fonte,
+  // mai una deduzione sulla missione in corso.
   if(S.errs.volo)feed.appendChild(errCard(S.errs.volo));
   if(S.volo){
-    const v=S.volo, riga=a=>`<div class="obsRow"><span class="on">${esc(a.immatricolazione||a.volo||a.hex||"—")} <em>${esc(a.modello||a.tipo_icao||"")}</em></span>`+
-      `<span>${a.a_terra?"a terra":(Number.isFinite(a.quota_ft)?Math.round(a.quota_ft)+" ft":"quota N/D")}${a.motivo?" · "+esc(a.motivo):""}</span></div>`;
-    feed.insertAdjacentHTML("beforeend",`<div class="wx" style="margin-top:4px"><h3>MEZZI AEREI ANTINCENDIO SULL'ITALIA<span>ADS-B · ${v.aib.length} IN VOLO</span></h3>`+
-      (v.aib.length?v.aib.map(riga).join("")
-        :`<p style="margin:0">Nessun mezzo aereo antincendio risulta in volo in questo momento.</p>`)+`</div>`);
-    if(v.emg.length)feed.insertAdjacentHTML("beforeend",`<div class="wx"><h3>EMERGENZE DICHIARATE IN VOLO<span>CODICE TRASMESSO DAL VELIVOLO</span></h3>`+
-      v.emg.map(riga).join("")+`</div>`);
+    const tot=S.volo.lista.length;
+    const conta=f=>f==="tutti"?tot:S.volo.lista.filter(v=>v.etichette.includes(f)).length;
+    const sel=voloFiltra(S.volo.lista,S.voloFiltro);
+    const MAX=40;
+    const riga=a=>`<div class="acRow"><span class="lab" style="border-left:3px solid ${voloColore(a)};padding-left:6px">`+
+      `${esc(a.immatricolazione||a.volo||a.hex||"—")} <em>${esc(a.modello||a.tipo_icao||a.categoria)}</em></span>`+
+      `<span class="rt">${a.a_terra?"a terra":(Number.isFinite(a.quota_ft)?Math.round(a.quota_ft)+" ft":"quota N/D")}`+
+      ` · ${a.km_da_genzano} km${a.motivo?" · "+esc(a.motivo):""}</span></div>`;
+    feed.insertAdjacentHTML("beforeend",
+      `<div class="wx" style="margin-top:4px"><h3>MEZZI AEREI NELL'AREA<span>ADS-B · ${tot} OSSERVATI</span></h3>`+
+      `<div class="fchips" role="group" aria-label="Filtra i mezzi aerei">`+
+        VOLO_FILTRI.map(([k,et])=>`<button type="button" class="fchip" data-vf="${k}" aria-pressed="${S.voloFiltro===k}">${et}<span class="c">${conta(k)}</span></button>`).join("")+
+      `</div>`+
+      (sel.length?sel.slice(0,MAX).map(riga).join("")+
+          (sel.length>MAX?`<p style="margin:6px 0 0;color:var(--dim)">…e altri ${sel.length-MAX}. Attiva il livello VOLO sulla cartina per vederli tutti.</p>`:"")
+        :`<p style="margin:0">Nessun velivolo corrisponde a questo filtro in questo momento.</p>`)+
+      `</div>`);
   }
   // Punti caldi da satellite: presenti solo se il repository ha la chiave FIRMS.
   if(S.firms&&S.firms.punti.length){
@@ -1877,7 +1983,7 @@ function viewEms(){
   feed.appendChild(noteEl('Attivazioni <a href="https://rapidmapping.emergency.copernicus.eu/" target="_blank" rel="noopener">Copernicus EMS Rapid Mapping</a> e allerte globali <a href="https://www.gdacs.org/" target="_blank" rel="noopener">GDACS</a> (dati pubblici, copie self-hosted rigenerate a ogni deploy). '+snapNote+
     ' Mezzi aerei: rete comunitaria <a href="https://adsb.fi/" target="_blank" rel="noopener">adsb.fi</a>, snapshot ogni 15 minuti'+
     (S.volo&&S.volo.snap&&S.volo.snap.generato?` (ultimo: ${fmtT(S.volo.snap.generato)})`:"")+
-    '. Il modello è quello dichiarato dalla fonte; essere in volo non implica un intervento in corso e la copertura ADS-B non è totale.'+
+    '. <b>Non è un tracciamento in tempo reale</b>: in un quarto d\'ora un velivolo percorre molta strada, e la copertura ADS-B non è totale (molti mezzi di Stato non trasmettono). Il modello e la categoria sono quelli dichiarati dalla fonte; essere in volo non implica un intervento in corso.'+
     (S.firms&&S.firms.punti.length?' Punti caldi: <a href="https://firms.modaps.eosdis.nasa.gov/" target="_blank" rel="noopener">NASA FIRMS</a> — un\'anomalia termica vista dal satellite non è un incendio confermato.':"")));
 }
 /* ---------------- RADIO — ascolto SDR delle bande radioamatoriali ----------------
@@ -2817,14 +2923,38 @@ window.addEventListener("resize",()=>{
 const navEl=$("#nav");
 function navArrUpd(){
   const max=navEl.scrollWidth-navEl.clientWidth-2;
-  $("#navL").style.display=navEl.scrollLeft>2?"flex":"none";
-  $("#navR").style.display=(max>0&&navEl.scrollLeft<max)?"flex":"none";
+  const L=$("#navL"),R=$("#navR");
+  L.style.display=navEl.scrollLeft>2?"flex":"none";
+  R.style.display=(max>0&&navEl.scrollLeft<max)?"flex":"none";
+  // Quante voci restano davvero fuori schermo: il numero dice all'utente che
+  // il menu continua, cosa che una freccia da sola non comunica.
+  const box=navEl.getBoundingClientRect();
+  let fuoriSx=0,fuoriDx=0;
+  navEl.querySelectorAll("button[data-v]").forEach(b=>{
+    const r=b.getBoundingClientRect();
+    if(r.right<box.left+34)fuoriSx++;
+    else if(r.left>box.right-34)fuoriDx++;
+  });
+  $("#navLn").textContent=fuoriSx?fuoriSx:"";
+  $("#navRn").textContent=fuoriDx?fuoriDx:"";
+  L.setAttribute("aria-label",fuoriSx?`Scorri il menu a sinistra: altri ${fuoriSx} pannelli`:"Scorri il menu a sinistra");
+  R.setAttribute("aria-label",fuoriDx?`Scorri il menu a destra: altri ${fuoriDx} pannelli`:"Scorri il menu a destra");
 }
 navEl.addEventListener("scroll",navArrUpd,{passive:true});
 window.addEventListener("resize",navArrUpd);
 $("#navL").addEventListener("click",()=>navEl.scrollBy({left:-180,behavior:"smooth"}));
 $("#navR").addEventListener("click",()=>navEl.scrollBy({left:180,behavior:"smooth"}));
 navArrUpd(); setTimeout(navArrUpd,1200); // ricontrollo dopo il caricamento dei font
+// Il richiamo lampeggia solo a chi non ha mai scorso il menu, una volta sola.
+try{
+  if(!localStorage.getItem("pcgz-monitor-nav-visto")){
+    setTimeout(()=>{const R=$("#navR");if(R&&R.style.display!=="none")R.classList.add("hint")},1500);
+    navEl.addEventListener("scroll",()=>{
+      $("#navR").classList.remove("hint");
+      try{localStorage.setItem("pcgz-monitor-nav-visto","1")}catch(e){}
+    },{once:true,passive:true});
+  }
+}catch(e){} // storage negato (finestra anonima): il menu resta comunque usabile
 
 // ⟳ AGGIORNA — forza il refresh immediato di tutte le fonti
 function refreshAll(man){

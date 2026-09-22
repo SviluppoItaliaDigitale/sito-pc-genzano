@@ -176,9 +176,15 @@ Sei fonti nuove, divise per come si raggiungono. **La discriminante è il CORS**
 
 | Fonte | Script | Vista | Note |
 |---|---|---|---|
-| **adsb.fi** | `genera-volo-soccorso.py` | EMERGENZE | Mezzi antincendio ed emergenze dichiarate in volo. |
+| **adsb.fi** | `genera-volo-soccorso.py` | EMERGENZE | **Tutti** i velivoli entro 400 km da Genzano (`RAGGIO_AREA`, una costante da alzare per allargare) più antincendio ed emergenze su tutta l'Italia. Filtri nell'elenco: tutti / antincendio / elicotteri / emergenze / bassa quota. |
 | **MeteoAlarm** (EUMETNET) | `genera-meteoalarm.py` | ALLERTA | Quadro delle altre regioni. 🔴 **Non sostituisce mai il bollettino DPC**: per Genzano fa fede la Zona F, e la scheda lo dice nell'intestazione. |
 | **NASA FIRMS** | `genera-incendi-firms.py` | EMERGENZE | Punti caldi da satellite. **Richiede il segreto `FIRMS_MAP_KEY`**: senza, lo script non scrive nulla e la scheda non compare — mai dati di riempimento. |
+
+**Livelli di cartina** (barra dei livelli, accanto a ZONE/RADAR/SISMI): **VOLO** disegna i velivoli del filtro attivo (freccia orientata sulla rotta trasmessa per gli aerei, simbolo diverso per gli elicotteri, che una prua non la mostrano) e **MAREE** le tre stazioni mareografiche. Elenco e cartina mostrano **sempre la stessa selezione**: il clic su una pastiglia di filtro rigenera entrambi.
+
+🔴 **Peso sul repository:** `volo-soccorso.json` è riscritto e committato **ogni 15 minuti** e cambia sempre, perché cambiano le posizioni. Per questo si scrive compatto (`separators=(",",":")`) e il perimetro è l'area, non l'Italia intera: a 400 km sono ~55 KB per commit, con l'Italia intera sarebbero oltre 110 KB, cioè alcuni GB l'anno di crescita per un dato che a una sala di Genzano non serve.
+
+🔴 **Frecce del menu dei pannelli:** non bastava una chevron sul bordo, perché non comunica che il menu continua. Ora `navArrUpd()` conta i pulsanti `[data-v]` davvero fuori dal riquadro e lo scrive nella freccia (**«‹ 3»**, **«› 4»**), aggiornando anche l'`aria-label`. Al primo accesso la freccia destra lampeggia tre volte (`.hint`), una sola volta per dispositivo (`localStorage` `pcgz-monitor-nav-visto`), e il richiamo rispetta `prefers-reduced-motion` e il fermo-animazioni della barra accessibilità.
 
 🔴 **Tre regole imparate costruendole, da non ripetere:**
 
