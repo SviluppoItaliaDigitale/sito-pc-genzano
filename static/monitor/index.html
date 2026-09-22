@@ -273,7 +273,17 @@ html.a11y-pause-anim .fchip{transition:none}
 #prevCtl select{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--tx);
   background:#081018;border:1px solid var(--line);border-radius:3px;padding:3px 4px;max-width:184px}
 #prevCtl select:focus-visible{outline:2px solid var(--cyn);outline-offset:1px}
-#prevLeg{max-width:184px;background:#fff;border:1px solid var(--line)}
+/* 🔴 La legenda NON si stira. #prevCtl e' un flex in colonna, quindi per
+   impostazione predefinita allarga i figli alla larghezza del riquadro: la
+   scala di ItaliaMeteo e' alta e strettissima (la temperatura e' 22x894 px) e
+   stirata a 132 px diventava alta 5285, cioe' quasi sei schermate, invadendo
+   il telefono con una striscia verticale. `align-self:start` le lascia la sua
+   larghezza vera; il riquadro le mette un tetto e la fa scorrere, cosi' le
+   bande di colore restano leggibili invece di essere rimpicciolite a filo. */
+#prevLegBox{align-self:start;max-height:min(38vh,300px);overflow:auto;overscroll-behavior:contain;
+  background:#fff;border:1px solid var(--line);line-height:0}
+#prevLeg{display:block;width:auto;max-width:none}
+#prevLegBox:focus-visible{outline:2px solid var(--cyn);outline-offset:1px}
 #dayTgl{position:absolute;top:8px;right:10px;display:flex;z-index:1000}
 #dayTgl button{font-family:var(--mono);font-size:10px;letter-spacing:.15em;padding:4px 12px;cursor:pointer;
   background:#081018;color:var(--dim);border:1px solid var(--line)}
@@ -427,7 +437,7 @@ body.side-closed #sideCol{right:0}
   #hdr .hideS{display:none}
   #dayTgl{top:auto;bottom:40px;right:10px}
   #prevCtl{top:auto;bottom:78px;right:10px;max-width:170px}
-  #prevLeg{max-width:154px}
+  #prevLegBox{max-height:min(32vh,240px)}
   #srcTag{display:none}
 }
 @media(prefers-reduced-motion:reduce){
@@ -575,7 +585,7 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
       <option value="36">+36 ORE</option>
       <option value="48">+48 ORE</option>
     </select>
-    <img id="prevLeg" alt="Legenda del campo previsionale selezionato" hidden>
+    <div id="prevLegBox" hidden tabindex="0" role="group" aria-label="Legenda della scala di colori: scorri per vederla tutta"><img id="prevLeg" alt="Legenda del campo previsionale selezionato"></div>
   </div>
   <div id="legend">
     <span><i style="background:var(--grn)"></i>NESSUNA</span>
@@ -813,10 +823,10 @@ const prevWms=L.tileLayer.wms(WMS_IM,
   {pane:"wxPane",layers:"meteohub:t2m-t2m",format:"image/png",transparent:true,version:"1.1.1",
    opacity:.55,maxZoom:11,attribution:"Agenzia ItaliaMeteo — modello ICON-2I (CC BY 4.0)"});
 function applyPrev(){
-  const lay=$("#prevLayer").value, off=$("#prevTime").value, leg=$("#prevLeg");
+  const lay=$("#prevLayer").value, off=$("#prevTime").value, leg=$("#prevLeg"), legBox=$("#prevLegBox");
   if(!lay){
     if(map.hasLayer(prevWms))map.removeLayer(prevWms);
-    leg.hidden=true; return;
+    legBox.hidden=true; return;
   }
   const p={layers:lay};
   if(off){const d=new Date();d.setUTCMinutes(0,0,0);d.setUTCHours(d.getUTCHours()+parseInt(off,10));p.time=d.toISOString();}
@@ -824,7 +834,7 @@ function applyPrev(){
   prevWms.setParams(p);
   if(!map.hasLayer(prevWms))map.addLayer(prevWms);
   leg.src=WMS_IM+"?service=WMS&request=GetLegendGraphic&format=image/png&version=1.1.1&layer="+encodeURIComponent(lay);
-  leg.hidden=false;
+  legBox.hidden=false;
 }
 $("#prevLayer").addEventListener("change",()=>{applyPrev();saveCfg();});
 $("#prevTime").addEventListener("change",()=>{applyPrev();saveCfg();});
