@@ -64,12 +64,34 @@ temi:
   icona: bi-heart
   descrizione: 'DCD 167/2026 del DPC: come proteggere chi non può chiedere aiuto.'
 materiali:
+- id: allerta-meteo-video-codici-colore-2026-09-23
+  tema: allerta-meteo
+  tema_titolo: Allerta meteo
+  tipo: video
+  titolo: 'Video: i colori dell''allerta meteo'
+  descrizione: Video verticale senza audio (24 secondi) che spiega verde, gialla,
+    arancione e rossa. Pronto da condividere su WhatsApp e social.
+  file_url: /video/2026-09-23-allerta-meteo-codici-colore.mp4
+  dimensione: 4.6 MB
+  data_pubblicazione: '2026-09-23'
+  licenza: CC BY 4.0
+- id: allerta-meteo-video-cosa-fare-2026-09-23
+  tema: allerta-meteo
+  tema_titolo: Allerta meteo
+  tipo: video
+  titolo: 'Video: allerta meteo, cosa fare colore per colore'
+  descrizione: Video verticale senza audio (31 secondi) con le azioni da fare per
+    ogni colore dell'allerta, dal verde al rosso.
+  file_url: /video/2026-09-23-allerta-meteo-cosa-fare.mp4
+  dimensione: 5.9 MB
+  data_pubblicazione: '2026-09-23'
+  licenza: CC BY 4.0
 - id: allerta-meteo-podcast-2026-03-25
   tema: allerta-meteo
   tema_titolo: Allerta meteo
   tipo: podcast
   titolo: 'Podcast: Allerta meteo'
-  descrizione: Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online
+  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
     o scaricabile per ascolto offline.
   file_url: /podcast/episodi/2026-03-25-allerta-meteo-podcast.m4a
   dimensione: 37.1 MB
@@ -113,7 +135,7 @@ materiali:
   tema_titolo: Kit emergenza famiglia
   tipo: podcast
   titolo: 'Podcast: Kit emergenza famiglia'
-  descrizione: Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online
+  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
     o scaricabile per ascolto offline.
   file_url: /podcast/episodi/2026-04-17-kit-emergenza-podcast.m4a
   dimensione: 48.0 MB
@@ -179,7 +201,7 @@ materiali:
   tema_titolo: Rischio incendi boschivi
   tipo: podcast
   titolo: 'Podcast: Rischio incendi boschivi'
-  descrizione: Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online
+  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
     o scaricabile per ascolto offline.
   file_url: /podcast/episodi/2026-05-18-rischio-incendio-podcast.m4a
   dimensione: 50.2 MB
@@ -223,7 +245,7 @@ materiali:
   tema_titolo: Rischio sismico
   tipo: podcast
   titolo: 'Podcast: Rischio sismico'
-  descrizione: Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online
+  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
     o scaricabile per ascolto offline.
   file_url: /podcast/episodi/2026-03-21-rischio-sismico-podcast.m4a
   dimensione: 52.0 MB
@@ -245,7 +267,7 @@ materiali:
   tema_titolo: Rischio idrogeologico
   tipo: podcast
   titolo: 'Podcast: Rischio idrogeologico'
-  descrizione: Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online
+  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
     o scaricabile per ascolto offline.
   file_url: /podcast/episodi/2026-04-08-rischio-idrogeologico-podcast.m4a
   dimensione: 49.0 MB
@@ -289,7 +311,7 @@ materiali:
   tema_titolo: Blackout
   tipo: podcast
   titolo: 'Podcast: Blackout'
-  descrizione: Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online
+  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
     o scaricabile per ascolto offline.
   file_url: /podcast/episodi/2026-04-30-blackout-podcast.m4a
   dimensione: 41.1 MB
@@ -300,7 +322,7 @@ materiali:
   tema_titolo: Animali in emergenza
   tipo: podcast
   titolo: 'Podcast: Animali in emergenza'
-  descrizione: Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online
+  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
     o scaricabile per ascolto offline.
   file_url: /podcast/episodi/2026-05-28-animali-emergenza-podcast.m4a
   dimensione: 43.2 MB
@@ -311,7 +333,7 @@ materiali:
   tema_titolo: Temporali intensi
   tipo: podcast
   titolo: 'Podcast: Temporali intensi'
-  descrizione: Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online
+  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
     o scaricabile per ascolto offline.
   file_url: /podcast/episodi/2026-05-09-temporali-intensi-podcast.m4a
   dimensione: 31.0 MB
@@ -322,7 +344,7 @@ materiali:
   tema_titolo: Vento forte
   tipo: podcast
   titolo: 'Podcast: Vento forte'
-  descrizione: Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online
+  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
     o scaricabile per ascolto offline.
   file_url: /podcast/episodi/2026-05-05-vento-forte-podcast.m4a
   dimensione: 53.5 MB
@@ -333,7 +355,7 @@ materiali:
   tema_titolo: Piano familiare di emergenza
   tipo: podcast
   titolo: 'Podcast: Piano familiare di emergenza'
-  descrizione: Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online
+  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
     o scaricabile per ascolto offline.
   file_url: /podcast/episodi/2026-04-12-piano-familiare-podcast.m4a
   dimensione: 30.9 MB
@@ -344,7 +366,7 @@ materiali:
   tema_titolo: Ondate di calore
   tipo: podcast
   titolo: 'Podcast: Ondate di calore'
-  descrizione: Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online
+  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
     o scaricabile per ascolto offline.
   file_url: /podcast/episodi/2026-05-14-ondate-di-calore-podcast.m4a
   dimensione: 32.3 MB
@@ -355,7 +377,7 @@ materiali:
   tema_titolo: Rischio vulcanico
   tipo: podcast
   titolo: 'Podcast: Rischio vulcanico'
-  descrizione: Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online
+  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
     o scaricabile per ascolto offline.
   file_url: /podcast/episodi/2026-05-23-rischio-vulcanico-podcast.m4a
   dimensione: 29.7 MB
@@ -366,7 +388,7 @@ materiali:
   tema_titolo: IT-alert
   tipo: podcast
   titolo: 'Podcast: IT-alert'
-  descrizione: Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online
+  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
     o scaricabile per ascolto offline.
   file_url: /podcast/episodi/2026-04-03-it-alert-podcast.m4a
   dimensione: 38.6 MB
@@ -377,7 +399,7 @@ materiali:
   tema_titolo: Aree di emergenza
   tipo: podcast
   titolo: 'Podcast: Aree di emergenza'
-  descrizione: Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online
+  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
     o scaricabile per ascolto offline.
   file_url: /podcast/episodi/2026-04-21-aree-emergenza-podcast.m4a
   dimensione: 17.9 MB
@@ -388,7 +410,7 @@ materiali:
   tema_titolo: Dopo l'emergenza
   tipo: podcast
   titolo: 'Podcast: Dopo l''emergenza'
-  descrizione: Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online
+  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
     o scaricabile per ascolto offline.
   file_url: /podcast/episodi/2026-04-26-dopo-emergenza-podcast.m4a
   dimensione: 30.0 MB
@@ -399,7 +421,7 @@ materiali:
   tema_titolo: NUE 112
   tipo: podcast
   titolo: 'Podcast: NUE 112'
-  descrizione: Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online
+  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
     o scaricabile per ascolto offline.
   file_url: /podcast/episodi/2026-03-30-nue-112-podcast.m4a
   dimensione: 20.9 MB
@@ -663,7 +685,7 @@ materiali:
   tema_titolo: Blackout
   tipo: podcast
   titolo: 'Podcast: Blackout'
-  descrizione: Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online
+  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
     o scaricabile per ascolto offline.
   file_url: /podcast/episodi/2026-05-30-blackout-podcast.m4a
   dimensione: 41.1 MB
@@ -707,7 +729,7 @@ materiali:
   tema_titolo: Vento forte
   tipo: podcast
   titolo: 'Podcast: Vento forte'
-  descrizione: Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online
+  descrizione: Podcast audio in forma di dialogo sul tema. Ascoltabile online
     o scaricabile per ascolto offline.
   file_url: /podcast/episodi/2026-05-30-vento-forte-podcast.m4a
   dimensione: 53.5 MB
