@@ -5,7 +5,7 @@ layout: "single"
 toc: true
 image: ""
 date: 2026-05-29
-dataUltimaRevisione: "2026-06-07"
+dataUltimaRevisione: "2026-09-23"
 ---
 
 La protezione civile non è solo il numero da chiamare quando succede qualcosa. È un **sistema** che lavora ogni giorno: studia i rischi, prepara il territorio, interviene durante gli eventi e accompagna il ritorno alla normalità. Questa sezione la racconta come una materia, passo dopo passo, perché capirla è il primo modo per esserne parte.
@@ -50,11 +50,13 @@ Sono le quattro fasi del ciclo del rischio. Le trovi spiegate una per una nella 
 - **[Storia della protezione civile italiana](/conoscere/storia-della-protezione-civile/)** — dal Vajont al Codice del 2018, e il ruolo di Giuseppe Zamberletti.
 - **[La scienza del rischio e i Centri di competenza](/conoscere/scienza-del-rischio/)** — come la conoscenza scientifica diventa allerta: la catena dal modello al bollettino.
 - **[La dimensione internazionale](/conoscere/dimensione-internazionale/)** — il Meccanismo europeo di protezione civile, rescEU e il Quadro di Sendai.
+- **[Protezione civile e Agenda 2030](/conoscere/agenda-2030/)** — i traguardi dell'Agenda 2030 sul rischio di disastri, gli indicatori in comune con Sendai e i dati di partenza di Genzano.
 
 ## Indice A-Z dei concetti
 
 Cerca il concetto che ti interessa e vai diritto alla pagina che lo spiega. Dove il tema ha anche una pagina operativa («cosa faccio?»), trovi il rimando lì dentro.
 
+- **Agenda 2030 e obiettivi di sviluppo sostenibile** — [Protezione civile e Agenda 2030](/conoscere/agenda-2030/)
 - **Agibilità e schede AeDES** — [Dopo l'emergenza](/conoscere/le-quattro-fasi/dopo-l-emergenza/)
 - **Catalogo dei rischi** — [Il catalogo dei rischi](/conoscere/catalogo-dei-rischi/)
 - **Centri di competenza** — [La scienza del rischio](/conoscere/scienza-del-rischio/)

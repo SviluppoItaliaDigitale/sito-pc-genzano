@@ -10,7 +10,7 @@ Questo kit è pensato per i docenti della **scuola secondaria di primo grado** c
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e si prestano all'uso nelle ore di scienze, geografia, educazione civica e tecnologia.
 
-> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-primo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-primo-grado.zip) (~693 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-primo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-primo-grado.zip) (~698 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
 ---
 
@@ -508,6 +508,7 @@ Schede pronte per la stampa specifiche per la scuola secondaria di primo grado:
 
 **Schede curriculari trasversali** (matematica, italiano, ed. civica, scienze):
 
+- 👉 [**Da Sendai a Genzano (Agenda 2030)**](/formazione/schede-stampabili/sendai-genzano-agenda2030-secondaria/) — il traguardo 11.5 letto sui dati ISPRA IdroGEO di Genzano: percentuali, confronto con Città metropolitana e Lazio, differenza fra persone esposte e persone colpite. *(matematica, geografia, ed. civica)*
 - 👉 [**Statistica dei Rischi Italiani**](/formazione/schede-stampabili/statistica-rischi-secondaria/) — tabella DPC, calcolo percentuali, costruzione istogramma, riflessione sui dati. *(matematica)*
 - 👉 [**Scrivi un Testo Informativo**](/formazione/schede-stampabili/scrittura-informativa-secondaria/) — produrre un testo di ~300 parole su un rischio del territorio (struttura 5W + fonti). *(italiano)*
 - 👉 [**Debate strutturato sui Rischi**](/formazione/schede-stampabili/debate-strutturato-secondaria/) — debate scolastico in 5 fasi su un tema PC (vietare costruzioni in zona sismica). Griglia di valutazione. *(ed. civica)*
