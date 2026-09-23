@@ -37,7 +37,7 @@ Il risultato è il **Bollettino di criticità idrogeologica e idraulica**, pubbl
 
 ## Durante l'evento
 
-Emessa l'allerta, comincia il **monitoraggio in tempo reale**. Il Centro osserva quello che sta accadendo: la pioggia misurata dalle stazioni, il radar, il livello dei fiumi. Se un corso d'acqua supera le soglie fissate per le sue sezioni di misura, emette una **Comunicazione di monitoraggio idrometrico**. In generale fornisce supporto alle decisioni di tutti gli enti del sistema, dai Comuni alla Sala Operativa Regionale.
+Emessa l'allerta, comincia il **monitoraggio in tempo reale**. Il Centro osserva quello che sta accadendo: la pioggia misurata dalle stazioni, il radar, il livello dei fiumi. Se un corso d'acqua supera le soglie fissate per le sue sezioni di misura, il Centro emette una **Comunicazione di monitoraggio idrometrico**. In generale fornisce supporto alle decisioni di tutti gli enti del sistema, dai Comuni alla Sala Operativa Regionale.
 
 I turni seguono il colore. Con il verde la sala è presidiata tutti i giorni dalle 10 alle 18. Con il giallo il presidio passa a **24 ore su 24**, salvo diversa disposizione del responsabile. Con l'arancione e il rosso il presidio continuo dura finché il rischio non è cessato.
 
