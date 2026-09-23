@@ -1,4 +1,4 @@
-# Immagini e testi social per «Sterpi, un boschetto e cumuli di rifiuti in fiamme verso Carano»
+# Immagini e testi social per «Sterpi, un boschetto e cumuli di rifiuti in fiamme ad Aprilia»
 
 - **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-09-22-incendio-sterpaglie-rifiuti-carano/
 - **Data**: 2026-09-22
