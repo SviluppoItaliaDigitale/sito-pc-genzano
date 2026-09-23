@@ -2796,10 +2796,25 @@ function reOpen(){
   ws.onmessage=e=>{if(typeof e.data==="string")reOnText(e.data);else reOnBin(e.data)};
   ws.onerror=()=>reStatus("Errore di collegamento col ricevitore",true);
   ws.onclose=ev=>{if(RE.ws!==ws)return;RE.ws=null;RE.started=false;
-    if(S.radio.on)reStatus("Collegamento chiuso"+(ev.reason?" ("+ev.reason+")":"")+" — premi RICOLLEGA",true);};
+    if(!S.radio.on)return;
+    /* 🔴 Riconnessione automatica (23/09/2026). Un ricevitore lasciato acceso
+       per ore in sala perde il collegamento per un nulla (rete, riavvio del
+       server) e prima restava muto finche' qualcuno non premeva RICOLLEGA: e'
+       quello che il client ufficiale di OpenWebRX non fa, lui ricollega. Qui
+       si ritenta al massimo 5 volte con attesa crescente (3, 6, 12, 24, 30 s),
+       mai se il server ha detto di essere occupato (`backoff`), mai su una
+       chiusura chiesta da noi (reClose azzera onclose). Poi si torna a chiedere
+       all'operatore. */
+    const motivo=ev.reason?" ("+ev.reason+")":"";
+    RE.retry=(RE.retry||0)+1;
+    if(RE.noRetry||RE.retry>5){reStatus("Collegamento chiuso"+motivo+" — premi RICOLLEGA",true);return;}
+    const attesa=Math.min(30,3*Math.pow(2,RE.retry-1));
+    reStatus("Collegamento chiuso"+motivo+" — ricollego tra "+attesa+" s (tentativo "+RE.retry+" di 5)",true);
+    RE.retryT=setTimeout(()=>{RE.retryT=0;if(S.radio.on&&!RE.ws)reOpen();},attesa*1000);};
   reScopeInit(); reUtcStart(); rePalette(); reMetaShow(); reSrv();
 }
 function reClose(){
+  if(RE.retryT){clearTimeout(RE.retryT);RE.retryT=0;} RE.noRetry=false;
   if(RE.selTimer){clearTimeout(RE.selTimer);RE.selTimer=null;}
   reScanStop(); if(RE.rec)reRecStop(true);
   if(RE.ws){const w=RE.ws;RE.ws=null;try{w.onclose=null;w.close()}catch(e){}}
@@ -2841,7 +2856,7 @@ function reOnText(s){
     case "secondary_demod":reDecMsg(j.value);break;
     case "metadata":reMetaMsg(j.value||{});break;
     case "log_message":reStatus(String(j.value));break;
-    case "backoff":reStatus("Server occupato: "+String(j.reason||""),true);break;
+    case "backoff":RE.noRetry=true;reStatus("Server occupato: "+String(j.reason||"")+" — riprova più tardi con RICOLLEGA",true);break;
     case "sdr_error":case "demodulator_error":reStatus(String(j.value),true);break;
   }
 }
@@ -2867,7 +2882,7 @@ function reApply(){ // porta il ricevitore sulla frequenza del pannello, cambian
   if(bp){params.low_cut=bp[0];params.high_cut=bp[1];}
   if(S.radio.sec){if(bp&&(RE.secOff<bp[0]||RE.secOff>bp[1]))RE.secOff=bp[0]+Math.round((bp[1]-bp[0])/2);params.secondary_offset_freq=RE.secOff;}
   reSend({type:"dspcontrol",params:params});
-  if(!RE.started){RE.started=true;reSend({type:"dspcontrol",action:"start"});}
+  if(!RE.started){RE.started=true;RE.retry=0;reSend({type:"dspcontrol",action:"start"});}
   reStatusLine();reDecSync();reDirty();
 }
 function reTune(){if(S.radio.on&&RE.ws)reApply();}
@@ -4265,8 +4280,15 @@ function tickUpd(){
    così il link condiviso apre direttamente quella schermata. */
 const VIEW_SLUG={all:"allerta",sis:"sismico",met:"meteo",map:"carte",wnd:"windy",tra:"traffico",rad:"radio",amb:"aria-mare",ems:"emergenze-ue",orb:"satelliti",mar:"navi",mia:"mia-sala",log:"registro"};
 const SLUG_VIEW=Object.fromEntries(Object.entries(VIEW_SLUG).map(([k,v])=>[v,k]));
-function setView(v,fromHash){
+function setView(v,fromHash,daCiclo){
   if(!VIEW_SLUG[v])return;
+  /* 🔴 Una scelta MANUALE di vista (clic su un tab, tasti 1-9, indirizzo)
+     spegne il ciclo video-wall. Prima il ciclo continuava anche se l'operatore
+     aveva appena aperto RADIO o NAVI, e dopo 45 secondi la Sala saltava ad
+     ALLERTA da sola: «la radio si stacca senza aver toccato nulla», «il tab
+     navi si disconnette», «alcuni tab mi fanno uscire fuori» (23/09/2026).
+     Chi prende il comando ha il comando; il ciclo si riaccende col pulsante. */
+  if(S.cycle&&!daCiclo)cicloSet(false);
   S.view=v;
   document.querySelectorAll("#nav [data-v]").forEach(x=>x.classList.toggle("act",x.dataset.v===v));
   if(!fromHash)history.replaceState(null,"","#"+VIEW_SLUG[v]);
@@ -4435,19 +4457,21 @@ document.addEventListener("keydown",e=>{
 
 // ▶ CICLO — modalità video-wall: rotazione automatica delle viste dati ogni 45 s
 // (salta WINDY, RADIO e REGISTRO, che sono viste di lavoro). Si spegne ripremendo.
+// Si spegne ripremendo il pulsante E a ogni scelta manuale di vista (vedi setView).
 let cycTimer=null;
-$("#cycBtn").addEventListener("click",()=>{
-  S.cycle=!S.cycle;
+function cicloSet(on){
+  S.cycle=!!on;
   const b=$("#cycBtn");
-  b.classList.toggle("on",S.cycle);b.setAttribute("aria-pressed",S.cycle);
+  b.classList.toggle("on",S.cycle);b.setAttribute("aria-pressed",String(S.cycle));
   b.textContent=S.cycle?"⏸ CICLO ON":"▶ CICLO";
   if(cycTimer){clearInterval(cycTimer);cycTimer=null;}
   if(S.cycle)cycTimer=setInterval(()=>{
     // stesse famiglie della barra, saltando le viste di lavoro
     const order=["all","met","amb","sis","ems","map"];
-    setView(order[(order.indexOf(S.view)+1)%order.length]);
+    setView(order[(order.indexOf(S.view)+1)%order.length],false,true);
   },45e3);
-});
+}
+$("#cycBtn").addEventListener("click",()=>cicloSet(!S.cycle));
 
 /* ---------------- configurazione persistente della postazione ----------------
    Layer mappa, previsioni ICON-2I, impostazioni Windy e sintonia radio (non
