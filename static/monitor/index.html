@@ -650,6 +650,8 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
   <span class="sep"></span>
   <button data-v="rad" title="Sala — ascolto delle bande radioamatoriali via SDR (spettro e waterfall)"><span class="ic" aria-hidden="true">⌁</span>RADIO</button>
   <button data-v="log" title="Sala — registro del turno, annotazioni su questo computer"><span class="ic" aria-hidden="true">✎</span>REGISTRO</button>
+  <span class="sep"></span>
+  <button id="tastiBtn" class="modo" aria-pressed="true" title="Scorciatoie a tasto singolo: i tasti da 1 a 9 aprono i tab nell'ordine della barra, R accende e spegne il radar. Spegnile se usi il riconoscimento vocale o rischi di premere tasti per sbaglio"><span class="ic" aria-hidden="true">⌨</span>TASTI RAPIDI</button>
   <span class="sep sepLay"></span>
   <button id="soloBtn" class="modo" aria-pressed="true" title="Acceso: sulla cartina restano solo i livelli della vista aperta. Spento: i livelli accesi nelle altre viste restano sulla cartina anche quando cambi vista."><span class="ic" aria-hidden="true">⧉</span>SOLO LA VISTA</button>
 </nav>
@@ -827,6 +829,7 @@ const EMS_COL={Wildfire:"#ff8c1a",Flood:"#37c7ff",Storm:"#b48cff",Earthquake:"#f
   "Volcanic activity":"#ff3b30",Landslide:"#c99e6b",Other:"#5d7a6e"};
 
 const S={view:"all",day:"today",black:false,
+  tasti:true, // scorciatoie a tasto singolo (1-9, R): spegnibili, WCAG 2.1.4
   /* Scelta per ogni livello DENTRO la sua vista (la vista che lo possiede e'
      in VISTA_DI). I default accendono cio' che la vista e' fatta per mostrare;
      restano spenti solo i livelli che aprono un collegamento vivo (fulmini,
@@ -4498,8 +4501,22 @@ document.addEventListener("visibilitychange",()=>{
   if(!document.hidden&&Date.now()-(S.lastFull||0)>4*60e3)refreshAll(false);
 });
 
-// Scorciatoie da tastiera per la sala: 1-9 cambiano vista, R accende/spegne il radar
+// Scorciatoie da tastiera per la sala: 1-9 cambiano vista, R accende/spegne il radar.
+// 🔴 Sono scorciatoie a TASTO SINGOLO (caratteri stampabili): WCAG 2.2 criterio 2.1.4
+//    chiede che l'utente possa spegnerle — chi usa il riconoscimento vocale o un
+//    ausilio che manda tasti per sbaglio si ritroverebbe la vista cambiata
+//    mentre detta. L'interruttore e' ⌨ TASTI RAPIDI nella barra (S.tasti,
+//    persistito); le frecce della sintonia radio non sono caratteri e restano.
+function tastiSet(on){
+  S.tasti=!!on;
+  const b=$("#tastiBtn"); b.setAttribute("aria-pressed",String(S.tasti));
+  const r=document.querySelector('#sideMap [data-l="radar"]');
+  if(r)r.title="Radar DPC: dove sta piovendo adesso"+(S.tasti?" (tasto R)":"");
+  saveCfg();
+}
+$("#tastiBtn").addEventListener("click",()=>tastiSet(!S.tasti));
 document.addEventListener("keydown",e=>{
+  if(!S.tasti)return;
   if(e.altKey||e.ctrlKey||e.metaKey)return;
   if(e.target&&e.target.matches&&e.target.matches("input,select,textarea,[contenteditable]"))return;
   /* 🔴 I tasti seguono la BARRA: il tasto N apre l'N-esimo tab, MIA SALA
@@ -4547,7 +4564,7 @@ $("#cycBtn").addEventListener("click",()=>cicloSet(!S.cycle));
    riavvio del PC di sala. Solo localStorage, nessun dato inviato altrove. */
 function saveCfg(){
   try{localStorage.setItem("pcgz-monitor-cfg",JSON.stringify({
-    v:2,layers:S.layers,solo:S.solo,emsScala:S.emsScala,prevLayer:$("#prevLayer").value,prevTime:$("#prevTime").value,
+    v:2,layers:S.layers,solo:S.solo,tasti:S.tasti,emsScala:S.emsScala,prevLayer:$("#prevLayer").value,prevTime:$("#prevTime").value,
     windy:{ov:S.windy.ov,lvl:S.windy.lvl,prod:S.windy.prod,zoom:S.windy.zoom,detail:S.windy.detail},
     radio:{rx:S.radio.rx,hz:S.radio.hz,mod:S.radio.mod,sec:S.radio.sec,grp:S.radio.grp,band:S.radio.band,split:!!S.radio.split,
       pal:RE.pal,lvMode:RE.lvMode,lvMan:RE.lvMan,nr:RE.nr,nrDb:RE.nrDb,step:RE.step},
@@ -4565,6 +4582,8 @@ function saveCfg(){
   //    da qui in poi le scelte si salvano e si ritrovano.
   if(c.v>=2&&c.layers)for(const k in S.layers)if(typeof c.layers[k]==="boolean")S.layers[k]=c.layers[k];
   if(typeof c.solo==="boolean")S.solo=c.solo;
+  if(typeof c.tasti==="boolean"){S.tasti=c.tasti;$("#tastiBtn").setAttribute("aria-pressed",String(S.tasti));
+    const r=document.querySelector('#sideMap [data-l="radar"]');if(r&&!S.tasti)r.title="Radar DPC: dove sta piovendo adesso";}
   if(c.emsScala==="area"||c.emsScala==="mondo")S.emsScala=c.emsScala;
   $("#soloBtn").setAttribute("aria-pressed",String(S.solo));
   if(c.prevLayer!==undefined)$("#prevLayer").value=c.prevLayer;
