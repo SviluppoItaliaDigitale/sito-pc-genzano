@@ -4448,10 +4448,13 @@ document.addEventListener("keydown",e=>{
     if(tab)setView(tab.getAttribute("data-v"));
   }
   else if(e.key==="r"||e.key==="R"){
-    // il radar e' un livello della vista METEO: con SOLO LA VISTA acceso si
-    // va li', altrimenti il tasto cambierebbe qualcosa che non si vede
-    S.layers.radar=!S.layers.radar;
-    if(S.solo&&S.view!==VISTA_DI.radar)setView(VISTA_DI.radar); else {applyLayers();saveCfg();}
+    // il radar e' un livello della vista METEO: con SOLO LA VISTA acceso, da
+    // un'altra vista il tasto porta in METEO CON il radar acceso (non lo
+    // inverte: partendo dal default acceso lo avrebbe spento proprio mentre
+    // apriva la vista, rilievo di revisione del 23/09/2026); dentro METEO,
+    // o a composizione libera, lo accende e lo spegne.
+    if(S.solo&&S.view!==VISTA_DI.radar){S.layers.radar=true;setView(VISTA_DI.radar);}
+    else {S.layers.radar=!S.layers.radar;applyLayers();saveCfg();}
   }
 });
 
