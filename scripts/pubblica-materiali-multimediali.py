@@ -118,7 +118,7 @@ def classifica_file(path: Path) -> tuple[str, str, str] | None:
 
 # Descrizioni per tipo (usate quando l'utente non fornisce descrizione custom)
 DESC_TIPO = {
-    "podcast":         "Podcast audio (dialogo fra due voci AI) sul tema. Ascoltabile online o scaricabile per ascolto offline.",
+    "podcast":         "Podcast audio in forma di dialogo sul tema. Ascoltabile online o scaricabile per ascolto offline.",
     "infografica":     "Infografica formato quadrato pronta per condivisione social, stampa A4 e affissione in bacheca.",
     "presentazione":   "Presentazione PowerPoint per docenti: 15 slide per un'ora di Educazione Civica in classe (formato modificabile).",
     "presentazione-pdf": "Stessa presentazione in formato PDF: apribile su qualsiasi dispositivo senza PowerPoint.",
