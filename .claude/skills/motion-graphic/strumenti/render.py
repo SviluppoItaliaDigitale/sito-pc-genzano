@@ -20,7 +20,7 @@ Per ogni formato scrive in motion/out/<nome>/:
   voce.mp3                traccia voce montata, se ci sono motion/voce/<nome>/line_*.wav;
                           in alternativa si usa motion/voce/<nome>/voce.mp3 (traccia già pronta)
 """
-import argparse, io, json, shutil, subprocess, sys
+import argparse, io, os, shutil, subprocess, sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -29,7 +29,6 @@ from build import build, traccia_voce, MOTION, ROOT  # noqa: E402
 FORMATI = {"9x16": (1080, 1920), "4x5": (1080, 1350), "1x1": (1080, 1080), "16x9": (1920, 1080)}
 WEB = {"9x16": (720, 1280), "4x5": (720, 900), "1x1": (720, 720), "16x9": (1280, 720)}
 FPS = 30
-CHROME = Path("/opt/pw-browsers/chromium-1194/chrome-linux/chrome")
 BT709 = ["-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709"]
 
 
@@ -52,10 +51,27 @@ def ff(*args):
     subprocess.run([FF, "-hide_banner", "-loglevel", "error", "-y", *args], check=True)
 
 
+def trova_chromium():
+    """Chromium già presente: cartella di PLAYWRIGHT_BROWSERS_PATH (nel container
+    /opt/pw-browsers), revisione più recente. None se non ce n'è nessuno."""
+    radici = [os.environ.get("PLAYWRIGHT_BROWSERS_PATH"), "/opt/pw-browsers",
+              str(Path.home() / ".cache" / "ms-playwright")]
+    for r in filter(None, radici):
+        trovati = sorted(Path(r).glob("chromium-*/chrome-linux*/chrome"),
+                         key=lambda f: int(f.parts[-3].split("-")[1]) if f.parts[-3].split("-")[1].isdigit() else 0)
+        if trovati:
+            return trovati[-1]
+    return None
+
+
 def browser(p):
     opts = dict(args=["--force-color-profile=srgb", "--font-render-hinting=none", "--disable-lcd-text"])
-    if CHROME.exists():
-        opts["executable_path"] = str(CHROME)
+    chrome = trova_chromium()
+    if chrome:
+        opts["executable_path"] = str(chrome)
+    else:  # macchina senza browser di Playwright: lo si installa una volta
+        print("[render] nessun Chromium trovato: installo quello di Playwright")
+        subprocess.run([sys.executable, "-m", "playwright", "install", "chromium"], check=True)
     return p.chromium.launch(**opts)
 
 
@@ -132,6 +148,8 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
     html = build(a.nome)
     voce_mp3 = None
+    vtt_scritto = False
+    (out / f"{a.nome}.vtt").unlink(missing_ok=True)  # mai un vtt di un render precedente
     with sync_playwright() as p:
         b = browser(p)
         for fmt in formati:
@@ -205,8 +223,9 @@ def main():
                    out / f"verifica-{fmt}.png", colonne=3)
             for f in (master, web):
                 print(f"[mp4] {f.relative_to(ROOT)}  {f.stat().st_size / 1e6:.1f} MB")
-            if info["S"] and not (out / f"{a.nome}.vtt").exists():
+            if info["S"] and not vtt_scritto:  # una volta per esecuzione, sempre rigenerato
                 vtt(info["S"], out / f"{a.nome}.vtt")
+                vtt_scritto = True
             pg.close()
         b.close()
     if voce_mp3 and voce_mp3.parent == out:

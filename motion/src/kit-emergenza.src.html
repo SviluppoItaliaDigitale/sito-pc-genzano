@@ -107,6 +107,7 @@ DUR.forEach(d => START.push(START[START.length - 1] + d));
 const TOTAL = START[SCENES.length];
 window.TOTAL = TOTAL;
 window.VOICE_AT = START.slice(0, -1).map(s => +(s + LEAD).toFixed(3));   // per il montaggio audio
+window.SUBS = SUBS.map((testo, k) => ({ da: +(START[k] + LEAD).toFixed(3), a: +(START[k] + LEAD + VOICE[k] + .2).toFixed(3), testo }));   // per il file .vtt
 
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const prog = (u, s, d) => clamp((u - s) / d);
