@@ -1,11 +1,11 @@
 {
  "_snapshot": {
-  "generato": "2026-09-22T23:36:41+00:00",
+  "generato": "2026-09-23T01:49:36+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 11,
-  "scaduti_scartati": 1,
-  "in_corso": 8,
+  "avvisi": 9,
+  "scaduti_scartati": 3,
+  "in_corso": 6,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
@@ -21,19 +21,6 @@
    "fine": "2026-09-23T06:59:00+00:00",
    "emesso": "2026-09-22T08:39:50+00:00",
    "identificativo": "2.49.0.0.380.3.IT.260922103950.015"
-  },
-  {
-   "in_corso": true,
-   "regione": "Calabria",
-   "fenomeno": "Pioggia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Rain Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-09-22T08:00:00+00:00",
-   "fine": "2026-09-22T23:59:00+00:00",
-   "emesso": "2026-09-22T08:39:50+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.260922103950.019"
   },
   {
    "in_corso": true,
@@ -112,19 +99,6 @@
    "fine": "2026-09-23T23:59:00+00:00",
    "emesso": "2026-09-22T08:39:50+00:00",
    "identificativo": "2.49.0.0.380.3.IT.260922103950.022"
-  },
-  {
-   "in_corso": true,
-   "regione": "Sicilia",
-   "fenomeno": "Pioggia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Rain Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-09-22T08:00:00+00:00",
-   "fine": "2026-09-22T23:59:00+00:00",
-   "emesso": "2026-09-22T08:39:50+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.260922103950.021"
   },
   {
    "in_corso": true,

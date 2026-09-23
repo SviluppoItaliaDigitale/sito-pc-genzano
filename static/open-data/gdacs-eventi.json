@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://www.gdacs.org/gdacsapi/api/events/geteventlist/EVENTS4APP",
-  "generato": "2026-09-22T23:36:34+00:00",
+  "generato": "2026-09-23T01:49:28+00:00",
   "licenza": "GDACS — Global Disaster Alert and Coordination System (dati pubblici UE/ONU)",
   "nota": "Copia locale per lettura same-origin dalla Sala situazioni."
  },
@@ -569,17 +569,17 @@
   {
    "alertlevel": "Green",
    "country": "Indonesia",
-   "datemodified": "2026-09-22T19:36:17",
+   "datemodified": "2026-09-22T23:36:38",
    "description": "Forest fires in Indonesia",
-   "episodeid": 2,
+   "episodeid": 3,
    "eventid": 1032333,
    "eventtype": "WF",
    "fromdate": "2026-09-08T00:00:00",
    "iso3": "IDN",
-   "lat": -3.1491,
+   "lat": -3.1492,
    "lon": 114.4443,
    "name": "Forest fires in Indonesia",
-   "severitytext": "Green impact for forestfire in 5522 ha",
+   "severitytext": "Green impact for forestfire in 5529 ha",
    "todate": "2026-09-22T00:00:00"
   },
   {
@@ -1129,17 +1129,17 @@
   {
    "alertlevel": "Green",
    "country": "Papua New Guinea",
-   "datemodified": "2026-09-22T19:37:35",
+   "datemodified": "2026-09-22T23:38:12",
    "description": "Forest fires in Papua New Guinea",
-   "episodeid": 4,
+   "episodeid": 5,
    "eventid": 1032294,
    "eventtype": "WF",
    "fromdate": "2026-09-08T00:00:00",
    "iso3": "PNG",
-   "lat": -5.6975,
-   "lon": 149.3391,
+   "lat": -5.6973,
+   "lon": 149.3392,
    "name": "Forest fires in Papua New Guinea",
-   "severitytext": "Green impact for forestfire in 10868 ha",
+   "severitytext": "Green impact for forestfire in 11023 ha",
    "todate": "2026-09-22T00:00:00"
   },
   {
@@ -1305,17 +1305,17 @@
   {
    "alertlevel": "Green",
    "country": "Indonesia",
-   "datemodified": "2026-09-22T19:36:41",
+   "datemodified": "2026-09-22T23:37:49",
    "description": "Forest fires in Indonesia",
-   "episodeid": 5,
+   "episodeid": 6,
    "eventid": 1032280,
    "eventtype": "WF",
    "fromdate": "2026-09-08T00:00:00",
    "iso3": "IDN",
-   "lat": -2.0087,
-   "lon": 111.1168,
+   "lat": -2.0086,
+   "lon": 111.1169,
    "name": "Forest fires in Indonesia",
-   "severitytext": "Green impact for forestfire in 6942 ha",
+   "severitytext": "Green impact for forestfire in 6949 ha",
    "todate": "2026-09-22T00:00:00"
   },
   {
