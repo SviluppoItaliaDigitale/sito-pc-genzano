@@ -6,7 +6,7 @@ draft: false
 type: "page"
 layout: "single"
 toc: true
-dataUltimaRevisione: "2026-09-22"
+dataUltimaRevisione: "2026-09-23"
 ---
 
 Questa pagina aiuta dirigenti, docenti coordinatori di educazione civica e insegnanti a usare i materiali di protezione civile nei percorsi scolastici. I contenuti sono gratuiti e pensati per attività in classe, educazione civica, PCTO, incontri con i volontari e percorsi interdisciplinari.
@@ -46,17 +46,22 @@ Materiali utili:
 
 È il nucleo più vicino ai temi di protezione civile: rischi naturali, tutela del territorio, prevenzione, resilienza, salute, ambiente, cambiamenti climatici e sicurezza.
 
-Collegamenti con Agenda 2030:
+Collegamenti con l'Agenda 2030 (i traguardi in cui il rischio di disastri è scritto esplicitamente):
 
-- Goal 3 — Salute e benessere;
-- Goal 6 — Acqua pulita e servizi igienici;
-- Goal 11 — Città e comunità sostenibili;
-- Goal 13 — Lotta al cambiamento climatico;
-- Goal 15 — Vita sulla Terra.
+- Goal 1 — Sconfiggere la povertà: traguardo 1.5, resilienza delle persone più vulnerabili ai disastri;
+- Goal 3 — Salute e benessere: traguardo 3.d, allerta precoce e gestione dei rischi sanitari;
+- Goal 4 — Istruzione di qualità: traguardo 4.7, educazione allo sviluppo sostenibile;
+- Goal 11 — Città e comunità sostenibili: traguardi 11.5 e 11.b, meno vittime e danni, piani di riduzione del rischio;
+- Goal 13 — Lotta contro il cambiamento climatico: traguardi 13.1 e 13.3, adattamento ed educazione sul clima.
+
+In modo indiretto riguardano la protezione civile anche il Goal 6 (acqua pulita, siccità), il Goal 15 (vita sulla Terra, incendi boschivi) e il Goal 17 (partnership). La spiegazione completa, con gli indicatori in comune con il Quadro di Sendai, è nella pagina [Protezione civile e Agenda 2030](/conoscere/agenda-2030/).
 
 Materiali utili:
 
 - [Rischi e prevenzione](/rischi-prevenzione/)
+- [La mia città sicura (Agenda 2030, Goal 11) — Primaria](/formazione/schede-stampabili/citta-sicura-agenda2030-primaria/)
+- [Da Sendai a Genzano (Agenda 2030) — Secondaria I grado](/formazione/schede-stampabili/sendai-genzano-agenda2030-secondaria/)
+- [Leggere un indicatore dell'Agenda 2030 — Secondaria II grado](/formazione/schede-stampabili/indicatori-agenda2030-secondaria2/)
 - [Mappa rischi del quartiere — Primaria](/formazione/schede-stampabili/mappa-cieca-quartiere-primaria/)
 - [Mappa rischi del quartiere — Secondaria I grado](/formazione/schede-stampabili/mappa-rischi-secondaria/)
 - [Decodifica bollettino allerta](/formazione/schede-stampabili/decodifica-bollettino-secondaria/)

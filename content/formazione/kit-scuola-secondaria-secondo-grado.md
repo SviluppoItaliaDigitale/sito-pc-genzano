@@ -10,7 +10,7 @@ Questo kit è rivolto ai docenti della **scuola secondaria di secondo grado** ch
 
 I contenuti sono stati sviluppati dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma e si prestano all'uso nelle ore di scienze della Terra, geografia, educazione civica, diritto e nelle attività PCTO.
 
-> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-secondo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-secondo-grado.zip) (~324 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
+> 📦 **Scarica il pacchetto offline** — [`kit-scuola-secondaria-secondo-grado.zip`](/formazione/pacchetti/kit-scuola-secondaria-secondo-grado.zip) (~330 KB) contiene tutte le schede stampabili linkate da questo kit, indice cliccabile, istruzioni per l'uso. Aggiornato automaticamente quando aggiungiamo, modifichiamo o togliamo schede dal kit.
 
 ---
 
@@ -727,6 +727,7 @@ Schede pronte per la stampa specifiche per la scuola secondaria di secondo grado
 - 👉 [**Il Codice della Protezione Civile (D.Lgs. 1/2018)**](/formazione/schede-stampabili/codice-pc-secondaria2/) — analisi degli articoli chiave (artt. 1, 2, 6, 12, 18, 32-35), tabella delle autorità di PC per livello, domande di applicazione. *(diritto, ed. civica)*
 - 👉 [**Tettonica delle placche e magnitudo**](/formazione/schede-stampabili/placche-tettoniche-secondaria2/) — placche, faglie, magnitudo Mw vs Richter, scala Mercalli, formula del momento sismico, domande di applicazione. *(scienze della Terra, fisica)*
 - 👉 [**Cambiamento climatico e rischi mediterranei**](/formazione/schede-stampabili/climate-change-secondaria2/) — IPCC, dati italiani, 6 eventi recenti, mitigazione vs adattamento, costruzione grafico, domande. *(scienze, geografia)*
+- 👉 [**Leggere un indicatore dell'Agenda 2030**](/formazione/schede-stampabili/indicatori-agenda2030-secondaria2/) — i traguardi 1.5, 11.5, 11.b e 13.1 nel testo ufficiale, gli indicatori in comune con il Quadro di Sendai, un esercizio di normalizzazione e un compito di realtà per il territorio. *(ed. civica, diritto, matematica, inglese CLIL)*
 - 👉 [**Economia del rischio: prevenire o ricostruire**](/formazione/schede-stampabili/economia-rischio-secondaria2/) — rapporto 1:5 prevenzione/ricostruzione, costi reali italiani, formula BCR, domande con quesito etico finale. *(economia, statistica)*
 - 👉 [**Il caso L'Aquila 2009 — comunicazione di crisi**](/formazione/schede-stampabili/caso-aquila-secondaria2/) — il processo alla Commissione Grandi Rischi, dilemmi etici, principio di precauzione, domande con dilemma personale. *(diritto, etica)*
 - 👉 [**English for Civil Protection**](/formazione/schede-stampabili/english-civil-protection-secondaria2/) — glossario tecnico inglese, lettura di un articolo internazionale (EU Civil Protection Mechanism), comprehension, gioco di ruolo emergency call. *(inglese L2)*

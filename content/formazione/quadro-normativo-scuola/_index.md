@@ -6,7 +6,7 @@ draft: false
 type: "page"
 layout: "single"
 toc: true
-dataUltimaRevisione: "2026-05-21"
+dataUltimaRevisione: "2026-09-23"
 ---
 
 Questa pagina raccoglie i principali riferimenti normativi utili per collaborazioni tra scuole e Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. È pensata per Dirigenti scolastici, DSGA, DPO, RSPP, ASPP e docenti referenti.
@@ -87,7 +87,7 @@ Per foto, video e dati degli studenti il riferimento resta sempre il DPO dell'is
 | Raccomandazione Consiglio UE 22 maggio 2018 | Otto competenze chiave per l'apprendimento permanente. | Programmazione didattica |
 | Indicazioni Nazionali per il Curricolo, D.M. 254/2012 | Quadro pedagogico per infanzia, primaria e secondaria di primo grado. | Primo ciclo |
 | D.P.R. 87, 88 e 89/2010 | Regolamenti per professionali, tecnici e licei. | Secondaria II grado |
-| Agenda 2030 ONU | Obiettivi di sviluppo sostenibile. I più collegati alla protezione civile sono 3, 4, 6, 11, 13, 15, 16 e 17. | Educazione civica e sostenibilità |
+| Agenda 2030 ONU | Obiettivi di sviluppo sostenibile. Il rischio di disastri è scritto nei traguardi 1.5, 3.d, 4.7, 11.5, 11.b, 13.1 e 13.3; in modo indiretto riguardano la protezione civile anche i Goal 6, 15, 16 e 17. Mappa completa in [Protezione civile e Agenda 2030](/conoscere/agenda-2030/). | Educazione civica e sostenibilità |
 
 ## Stato dei materiali del Gruppo
 

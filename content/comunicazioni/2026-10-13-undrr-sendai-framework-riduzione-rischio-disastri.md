@@ -6,10 +6,16 @@ badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-10-13-undrr-sendai-framework-riduzione-rischio-disastri.webp"
-image_alt: "Cover dell'articolo: Sendai Framework e ONU: che cosa fa il mondo per la riduzione del rischio"
+image_alt: "Cover dell'articolo: 13 ottobre, Giornata ONU per la riduzione dei disastri: il Sendai Framework e cosa facciamo a Genzano"
 scadenza: ""
 area: ""
 allegati: []
+social_citazione: "Gli obiettivi di Sendai non si raggiungono solo nei vertici internazionali: si costruiscono nei territori, un comune alla volta."
+social_punti:
+  - "13 ottobre: Giornata Internazionale ONU per la riduzione del rischio di disastri"
+  - "Il Sendai Framework 2015-2030 fissa sette obiettivi globali misurabili"
+  - "Rischio = Pericolosità × Esposizione × Vulnerabilità"
+  - "A Genzano: Piano di Emergenza, kit di emergenza e Piano Familiare per prepararsi"
 draft: false
 ---
 
@@ -19,14 +25,14 @@ In questo articolo guardiamo cosa significa **prevenire i disastri a livello glo
 
 ## I Sette Obiettivi del Sendai Framework
 
-Il **Sendai Framework**, adottato il 18 marzo 2015 dalla Terza Conferenza Mondiale ONU sulla Riduzione del Rischio di Disastri, fissa **sette obiettivi globali** misurabili da raggiungere entro il **2030**:
+Il **Sendai Framework** è stato adottato il 18 marzo 2015 dalla Terza Conferenza Mondiale ONU sulla Riduzione del Rischio di Disastri. Fissa **sette obiettivi globali** misurabili da raggiungere entro il **2030**:
 
 {{< foto src="/images/2026-10-13-undrr-sendai-framework-riduzione-rischio-disastri-fonte-wikipedia.webp"
          alt="Emblema delle Nazioni Unite: una mappa del globo terrestre vista dal Polo Nord, in oro su sfondo nero, racchiusa da due rami d'ulivo dorati intrecciati alla base"
          caption="L'emblema delle Nazioni Unite, l'organizzazione che nel 2015 ha adottato il Sendai Framework durante la Terza Conferenza Mondiale sulla Riduzione del Rischio di Disastri. Foto: Joowwww — Public domain — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Emblem_of_the_United_Nations.svg)." >}}
 
 
-1. Ridurre la **mortalità globale** per disastri (target: -50% rispetto al periodo 2005-2015)
+1. Ridurre la **mortalità globale** per disastri (l'obiettivo è abbassare la mortalità media ogni 100.000 abitanti nel decennio 2020-2030 rispetto al periodo 2005-2015, senza una percentuale fissata)
 2. Ridurre il **numero di persone colpite**
 3. Ridurre i **danni economici diretti** in rapporto al PIL globale
 4. Ridurre i **danni alle infrastrutture critiche** (ospedali, scuole, reti di trasporto, energia, acqua)
@@ -34,7 +40,7 @@ Il **Sendai Framework**, adottato il 18 marzo 2015 dalla Terza Conferenza Mondia
 6. Rafforzare la **cooperazione internazionale** per i Paesi in via di sviluppo
 7. Aumentare la **disponibilità di sistemi di allerta precoce** multi-rischio e l'accesso del pubblico
 
-L'Italia, come tutti i Paesi firmatari, riferisce annualmente i propri progressi sull'attuazione del Framework attraverso la **strategia nazionale** che il Dipartimento della Protezione Civile aggiorna periodicamente.
+L'Italia, come gli altri Paesi firmatari, contribuisce con i propri dati al monitoraggio internazionale dell'attuazione del Framework curato dall'UNDRR (*Sendai Framework Monitor*). A livello nazionale, la previsione e la prevenzione del rischio sono fra le attività fondamentali del Servizio Nazionale della Protezione Civile. Le disciplina il [Codice della Protezione Civile](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1) (D.Lgs. 1/2018).
 
 ## Le quattro priorità del Sendai
 
@@ -47,7 +53,7 @@ Il Framework articola la strategia in **quattro priorità d'azione**:
 
 ## Il rischio come prodotto, non come fenomeno
 
-Una delle conquiste concettuali del Sendai Framework è la formulazione esplicita:
+Un concetto chiave della riduzione del rischio di disastri, ripreso anche dal Sendai Framework, è la scomposizione:
 
 > **Rischio = Pericolosità × Esposizione × Vulnerabilità**
 
@@ -67,6 +73,12 @@ L'Italia ha tradotto il Sendai Framework in:
 - **Piano Nazionale di Protezione Civile** e Piani Regionali / Comunali (come il nostro [Piano di Emergenza](/piano-emergenza/)).
 - **Casa Italia** e **PNRR**: programmi di investimento sulla resilienza degli edifici pubblici e sulla ricostruzione post-evento (Sismabonus, Superbonus per la riqualificazione energetica e sismica).
 - **Sistema di allertamento multirischio**: dal Centro Funzionale Centrale al Centro Funzionale Regionale del Lazio, fino a [IT-alert](https://www.it-alert.it/) per i messaggi di emergenza diretti alla popolazione.
+
+## Sendai e l'Agenda 2030 misurano le stesse cose
+
+Nel 2015 le Nazioni Unite hanno approvato anche l'**Agenda 2030 per lo sviluppo sostenibile**. Alcuni suoi traguardi parlano proprio di disastri. L'**11.5** chiede di ridurre morti, persone colpite e danni economici. L'**11.b** chiede alle città piani di riduzione del rischio in linea con Sendai. Il **13.1** chiede più capacità di adattamento al clima.
+
+Per misurarli si usano gli stessi indicatori di Sendai. Il numero di morti, dispersi e persone colpite ogni 100.000 abitanti, per esempio, vale per i traguardi 1.5, 11.5 e 13.1 dell'Agenda e per gli obiettivi A e B di Sendai. La mappa completa, con i dati dell'ISPRA sul rischio frane a Genzano, è nella pagina [Protezione civile e Agenda 2030](/conoscere/agenda-2030/). Per le scuole ci sono tre [schede stampabili](/formazione/educazione-civica/), una per ogni ordine.
 
 ## Il ruolo di ogni comune
 
@@ -94,6 +106,7 @@ Una giornata, un anno di impegno: il 13 ottobre non è un giorno isolato, è il 
 
 ## Per saperne di più
 
+- Sul nostro sito: [Protezione civile e Agenda 2030](/conoscere/agenda-2030/) · [La dimensione internazionale](/conoscere/dimensione-internazionale/)
 - [International Day for Disaster Risk Reduction — UNDRR](https://www.undrr.org/event/international-day-disaster-risk-reduction)
 - [Sendai Framework for Disaster Risk Reduction 2015-2030](https://www.undrr.org/implementing-sendai-framework/what-sendai-framework)
 - [Dipartimento della Protezione Civile — Riduzione del rischio](https://www.protezionecivile.gov.it/)

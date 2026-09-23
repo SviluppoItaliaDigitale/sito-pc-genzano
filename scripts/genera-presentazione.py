@@ -831,7 +831,7 @@ divider("Risorse e trasparenza", N())
 
 content("Conoscere la Protezione Civile", [
     "Sezione dottrinale: storia, Servizio Nazionale e le quattro fasi (previsione, prevenzione, soccorso, superamento).",
-    "La scienza del rischio e i Centri di competenza; la dimensione internazionale del sistema.",
+    "La scienza del rischio e i Centri di competenza; la dimensione internazionale del sistema e l'Agenda 2030.",
     "Il catalogo dei rischi e il vulcanismo dei Colli Albani (Vulcano Laziale).",
     "Le telecomunicazioni in emergenza: capire come funziona la rete radio.",
 ], N(), fonti="DPC · INGV · ISPRA · CNR-IRPI · CIMA · CMCC · ISS")
