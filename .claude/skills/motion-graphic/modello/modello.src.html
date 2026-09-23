@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Allerta meteo: i quattro colori — Protezione Civile Genzano di Roma</title>
+<style>
+/*FONTS*/
+:root{--bg:#0a1220;--az:#2e90fa;--ar:#f59e0b;--tx:#eef2f7;--dim:#93a1b5;
+  --verde:#34b25a;--gialla:#ffcc00;--arancione:#ff8a00;--rossa:#ef4136}
+html,body{margin:0;height:100%;background:#000;overflow:hidden}
+#stage{position:absolute;left:50%;top:50%;width:calc(var(--W)*1px);height:calc(var(--H)*1px);
+  background:var(--bg);overflow:hidden;font-family:'Titillium Web',sans-serif;color:var(--tx);
+  -webkit-font-smoothing:antialiased}
+body.render #stage{left:0;top:0;transform:none!important}
+#pioggia{position:absolute;inset:0}
+.scena{position:absolute;left:calc(var(--side)*1px);right:calc(var(--side)*1px);
+  top:calc(var(--top)*1px);bottom:calc((var(--H) - var(--bot))*1px);
+  display:flex;flex-direction:column;justify-content:center;gap:calc(34px*var(--k))}
+.chip{align-self:flex-start;font:700 calc(26px*var(--k)) 'Roboto Mono',monospace;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--az);border:3px solid var(--az);border-radius:999px;
+  padding:.35em .9em}
+h1{margin:0;font-weight:900;font-size:calc(var(--t)*1px);line-height:1.02;letter-spacing:-.01em}
+.m{display:block;overflow:hidden;padding:.12em .22em;margin:-.12em -.22em}
+.m>.i{display:block;will-change:transform}
+.sotto{font-weight:600;font-size:calc(46px*var(--k));line-height:1.25;color:var(--dim);margin:0}
+.sotto b{color:var(--tx)}
+.voci{display:grid;grid-template-columns:1fr;gap:calc(26px*var(--k))}
+[data-fmt="1x1"] .voci,[data-fmt="16x9"] .voci{grid-template-columns:1fr 1fr}
+.voce{display:flex;align-items:center;gap:calc(28px*var(--k));background:rgba(255,255,255,.05);
+  border-radius:calc(28px*var(--k));padding:calc(22px*var(--k)) calc(28px*var(--k));transform-origin:0 50%}
+.pill{flex:none;min-width:calc(250px*var(--k));text-align:center;font:700 calc(30px*var(--k)) 'Roboto Mono',monospace;
+  letter-spacing:.12em;color:#0a1220;border-radius:999px;padding:.55em .7em}
+.voce p{margin:0;font-weight:600;font-size:calc(38px*var(--k));line-height:1.2}
+.voce p small{display:block;font-weight:400;font-size:.8em;color:var(--dim)}
+.grande{font-weight:900;font-size:calc(150px*var(--k));line-height:1;color:var(--ar)}
+.fonte{font:500 calc(24px*var(--k)) 'Roboto Mono',monospace;letter-spacing:.06em;color:var(--dim);margin:0}
+#hud{position:absolute;left:calc(var(--hx)*1px);top:calc(var(--hy)*1px);height:72px;display:flex;
+  align-items:center;gap:22px;padding:0 30px;border-radius:999px;background:rgba(255,255,255,.07);
+  font:700 24px 'Roboto Mono',monospace;letter-spacing:.16em;color:var(--dim)}
+#hud .dots{display:flex;gap:12px}
+#hud .dot{width:16px;height:16px;border-radius:50%;background:#33415a}
+#wipe{position:absolute;width:40px;height:40px;margin:-20px 0 0 -20px;border-radius:50%;opacity:0;pointer-events:none}
+.banda{position:absolute;top:0;bottom:0;width:26%;opacity:0}
+#lampo{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none}
+#sub{position:absolute;left:calc(var(--side)*1px);right:calc(var(--side)*1px);top:calc(var(--sub)*1px);
+  background:rgba(10,18,32,.86);border:2px solid rgba(255,255,255,.12);border-radius:22px;padding:18px 26px;
+  font-weight:600;font-size:43px;line-height:1.25;text-align:center;opacity:0}
+/* anteprima: comandi fuori dal palco, mai nel video */
+#ui{position:fixed;left:0;right:0;bottom:8px;display:flex;gap:8px;justify-content:center;font:600 14px system-ui}
+#ui a,#ui button{color:#eef2f7;background:#1d2a40;border:0;border-radius:999px;padding:8px 14px;text-decoration:none;cursor:pointer}
+#ui a[aria-current]{background:#2e90fa;color:#0a1220}
+#avvio{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.6);
+  color:#fff;font:700 28px system-ui;border:0;width:100%;cursor:pointer}
+body.render #ui,body.render #avvio{display:none!important}
+</style>
+</head>
+<body>
+<div id="stage" role="img" aria-label="">
+  <canvas id="pioggia"></canvas>
+  <div id="scene"></div>
+  <div id="wipe"></div>
+  <div id="bande"></div>
+  <div id="lampo"></div>
+  <div id="hud"><div class="dots"></div><span class="lab"></span></div>
+  <div id="sub" aria-hidden="true"></div>
+</div>
+<nav id="ui" aria-label="Formato"></nav>
+<button id="avvio" type="button">Tocca per avviare (con audio)</button>
+<script>
+/* ===================== CONFIG — testi, colori, tempi ===================== */
+const CONFIG = {
+  titolo: "Allerta meteo: i quattro colori",
+  hud: "ALLERTA METEO",
+  posterT: 0,                    // secondo usato come anteprima (il primo fotogramma ha già contenuto)
+  scene: [
+    { tipo: "titolo", dur: 4.2, pioggia: 0.15,
+      chip: "Protezione Civile · Genzano di Roma",
+      righe: ["Allerta meteo:", "quattro colori"],
+      sotto: "Ognuno dice <b>quanto è alto il pericolo</b>.",
+      sottotitolo: "Allerta meteo: quattro colori, ognuno dice quanto è alto il pericolo." },
+    { tipo: "livelli", dur: 7.5, pioggia: [0.1, 0.35, 0.65, 1], lampi: true,
+      titolo: "Che cosa significano",
+      voci: [
+        { c: "verde",     nome: "VERDE",     t: "Nessuna allerta" },
+        { c: "gialla",    nome: "GIALLA",    t: "Criticità ordinaria", s: "occasionale pericolo per le persone" },
+        { c: "arancione", nome: "ARANCIONE", t: "Criticità moderata",  s: "pericolo per le persone" },
+        { c: "rossa",     nome: "ROSSA",     t: "Criticità elevata",   s: "grave pericolo per le persone" } ],
+      sottotitolo: "Verde, nessuna allerta. Gialla, arancione e rossa: pericolo crescente per le persone." },
+    { tipo: "chiusura", dur: 4.8, pioggia: 0,
+      righe: ["Informati sui", "canali ufficiali"],
+      sotto: "Genzano di Roma · <b>Zona di allerta F</b>",
+      web: "protezionecivilegenzano.it", sos: "Emergenza? 112",
+      fonte: "Fonte: Dipartimento della Protezione Civile",
+      sottotitolo: "Informati sui canali ufficiali. In emergenza chiama il 112." }
+  ]
+};
+/* Durate delle frasi della voce (le scrive voce.py; vuoto = video senza voce).
+   Il testo PARLATO sta in motion/voce/<nome>/testi.txt (numeri in lettere),
+   il testo MOSTRATO nel campo "sottotitolo" di ogni scena (numeri in cifre). */
+const DUR = /*DUR*/[];
+const AUDIO = /*AUDIO*/"";
+
+/* ===================== FORMATI e zone sicure ===================== */
+const FORMATI = {
+  "9x16": { W:1080, H:1920, hx:96,  hy:212, side:96,  top:330, bot:1400, sub:1240, t:118, k:1   },
+  "4x5":  { W:1080, H:1350, hx:96,  hy:64,  side:96,  top:190, bot:1130, sub:1150, t:104, k:.9  },
+  "1x1":  { W:1080, H:1080, hx:80,  hy:56,  side:80,  top:160, bot:900,  sub:910,  t:92,  k:.8  },
+  "16x9": { W:1920, H:1080, hx:120, hy:56,  side:160, top:170, bot:880,  sub:900,  t:112, k:.9  }
+};
+const Q = new URLSearchParams(location.search);
+const RENDER = Q.get("render") === "1";
+const FMT = FORMATI[Q.get("fmt")] ? Q.get("fmt") : "9x16";
+const L = FORMATI[FMT];
+const $ = s => document.querySelector(s);
+const stage = $("#stage");
+document.documentElement.dataset.fmt = FMT;
+for (const k of ["W","H","side","top","bot","sub","hx","hy","t","k"]) stage.style.setProperty("--" + k, L[k]);
+if (RENDER) document.body.classList.add("render");
+stage.setAttribute("aria-label", CONFIG.titolo);
+
+/* ===================== AIUTANTI (deterministici) ===================== */
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const prog = (u, s, d) => clamp((u - s) / d);
+const outCubic = x => 1 - Math.pow(1 - x, 3);
+const outQuart = x => 1 - Math.pow(1 - x, 4);
+const inOutCubic = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const outBack = x => { const c = 1.70158, c3 = c + 1; return 1 + c3 * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const hash = n => { const x = Math.sin(n * 12.9898 + 78.233) * 43758.5453; return x - Math.floor(x); };
+const lerp = (a, b, x) => a + (b - a) * x;
+function reveal(el, p) { el.style.transform = `translateY(${(1 - outQuart(p)) * 115}%)`; }
+function fadeUp(el, p, d = 40) { const e = outCubic(p); el.style.opacity = e; el.style.transform = `translateY(${(1 - e) * d}px)`; }
+function pop(el, p) { const e = p <= 0 ? 0 : outBack(p); el.style.opacity = clamp(p * 3); el.style.transform = `scale(${lerp(.6, 1, e)})`; }
+function wavePath(t, y, amp, len, w) { // tracciato SVG per l'acqua
+  let d = `M0 ${y}`; for (let x = 0; x <= w; x += 20) d += ` L${x} ${y + Math.sin(x / len * 6.283 + t * 2) * amp}`;
+  return d + ` L${w} 9999 L0 9999 Z`;
+}
+
+/* ===================== SCENE ===================== */
+const EXTRA_USCITA = 0.5;
+const durScena = (s, k) => (DUR.length && DUR[k] != null) ? 0.45 + DUR[k] + 0.75 + (s.uscita ? EXTRA_USCITA : 0) : s.dur;
+const START = []; let acc = 0;
+CONFIG.scene.forEach((s, k) => { START[k] = acc; acc += durScena(s, k); });
+const TOTAL = acc;
+const VOICE_AT = CONFIG.scene.map((s, k) => (DUR.length && DUR[k] != null) ? START[k] + 0.45 : null);
+const SUBS = CONFIG.scene.map((s, k) => VOICE_AT[k] == null ? null :
+  { da: VOICE_AT[k], a: VOICE_AT[k] + DUR[k] + 0.2, testo: s.sottotitolo }).filter(Boolean);
+const COL = n => getComputedStyle(document.documentElement).getPropertyValue("--" + n).trim();
+
+const box = $("#scene"), NODI = [];
+const righe = arr => `<h1>${arr.map(r => `<span class="m"><span class="i">${r}</span></span>`).join("")}</h1>`;
+CONFIG.scene.forEach((s, k) => {
+  const el = document.createElement("section");
+  el.className = "scena"; el.style.opacity = 0;
+  if (s.tipo === "titolo") el.innerHTML = `<span class="chip">${s.chip}</span>${righe(s.righe)}<p class="sotto">${s.sotto}</p>`;
+  if (s.tipo === "livelli") el.innerHTML = `${righe([s.titolo])}<div class="voci">${s.voci.map(v =>
+    `<div class="voce"><span class="pill" style="background:var(--${v.c})">${v.nome}</span><p>${v.t}${v.s ? `<small>${v.s}</small>` : ""}</p></div>`).join("")}</div>`;
+  if (s.tipo === "chiusura") el.innerHTML = `${righe(s.righe)}<p class="sotto">${s.sotto}</p>
+    <p class="sotto"><b>${s.web}</b></p><div class="grande">${s.sos}</div><p class="fonte">${s.fonte}</p>`;
+  box.appendChild(el); NODI.push(el);
+});
+const dots = $("#hud .dots");
+CONFIG.scene.forEach(() => dots.insertAdjacentHTML("beforeend", '<span class="dot"></span>'));
+$("#hud .lab").textContent = CONFIG.hud;
+["verde", "gialla", "arancione", "rossa"].forEach((c, i) =>
+  $("#bande").insertAdjacentHTML("beforeend", `<div class="banda" style="left:${i * 25 - .5}%;background:var(--${c})"></div>`));
+
+/* pioggia su canvas, due passate (lontana sottile, vicina spessa) */
+const cv = $("#pioggia"), cx = cv.getContext("2d");
+cv.width = L.W; cv.height = L.H;
+function drawRain(t, q) {
+  cx.clearRect(0, 0, L.W, L.H);
+  if (q <= 0.01) return;
+  for (const [n, lw, sp, len, a] of [[260, 2, 1500, 38, .22], [120, 3.5, 2300, 70, .38]]) {
+    cx.strokeStyle = `rgba(160,190,230,${a * q})`; cx.lineWidth = lw; cx.beginPath();
+    const m = Math.round(n * q);
+    for (let i = 0; i < m; i++) {
+      const x = hash(i + lw * 97) * (L.W + 200) - 100, y = (hash(i * 3.1 + lw) * (L.H + len) + t * sp) % (L.H + len) - len;
+      cx.moveTo(x, y); cx.lineTo(x - len * .18, y + len);
+    }
+    cx.stroke();
+  }
+}
+
+/* ===================== RENDER(t) — unica fonte di verità ===================== */
+const scenaDi = t => { let k = 0; while (k + 1 < START.length && t >= START[k + 1]) k++; return k; };
+function render(t) {
+  t = clamp(t, 0, TOTAL);
+  const k = scenaDi(t), s = CONFIG.scene[k], u = t - START[k], D = durScena(s, k);
+  NODI.forEach((n, i) => n.style.opacity = i === k ? 1 : 0);
+  const el = NODI[k], esce = k < CONFIG.scene.length - 1 ? 1 - prog(u, D - .35, .35) : 1;
+  el.style.opacity = esce;
+
+  // HUD
+  dots.querySelectorAll(".dot").forEach((d, i) => {
+    const on = i === k ? outBack(prog(u, 0, .4)) : i < k ? 1 : 0;
+    d.style.background = i <= k ? "var(--az)" : "#33415a";
+    d.style.transform = `scale(${i === k ? lerp(1, 1.45, on) : 1})`;
+  });
+
+  // transizione a cerchio dal pallino dell'HUD
+  const w = $("#wipe"), dp = dots.children[k];
+  if (k > 0 && s.tipo !== "chiusura" && u < .7) { // la chiusura entra con le bande
+    const r = stage.getBoundingClientRect(), b = dp.getBoundingClientRect(), sc = RENDER ? 1 : r.width / L.W;
+    w.style.left = ((b.left + b.width / 2 - r.left) / sc) + "px"; w.style.top = ((b.top + b.height / 2 - r.top) / sc) + "px";
+    w.style.background = "var(--az)";
+    w.style.transform = `scale(${outCubic(prog(u, 0, .45)) * Math.hypot(L.W, L.H) / 18})`;
+    w.style.opacity = 1 - prog(u, .3, .4);
+  } else w.style.opacity = 0;
+
+  // contenuti della scena
+  const H1 = el.querySelectorAll("h1 .i");
+  if (s.tipo === "titolo") {
+    // il primo fotogramma è già completo (anteprima WhatsApp): solo respiro e sottotitolo
+    H1.forEach(i => i.style.transform = "none");
+    el.querySelector("h1").style.transform = `scale(${lerp(1.03, 1, outCubic(prog(u, 0, 3)))})`;
+    fadeUp(el.querySelector(".chip"), 1);
+    fadeUp(el.querySelector(".sotto"), prog(u, .3, .6));
+  }
+  if (s.tipo === "livelli") {
+    H1.forEach((i, j) => reveal(i, prog(u, .15 + j * .08, .55)));
+    el.querySelectorAll(".voce").forEach((v, j) => pop(v, prog(u, .7 + j * .9, .5)));
+  }
+  if (s.tipo === "chiusura") {
+    H1.forEach((i, j) => reveal(i, prog(u, .55 + j * .1, .55)));
+    const ps = el.querySelectorAll(".sotto");
+    fadeUp(ps[0], prog(u, 1.0, .5)); fadeUp(ps[1], prog(u, 1.25, .5));
+    pop(el.querySelector(".grande"), prog(u, 1.6, .5));
+    fadeUp(el.querySelector(".fonte"), prog(u, 2.1, .5), 20);
+  }
+  // spazzata a 4 bande all'ingresso della chiusura
+  const sw = s.tipo === "chiusura" ? prog(u, 0, .9) : 1;
+  $("#bande").querySelectorAll(".banda").forEach((b, i) => {
+    const p = clamp(sw * 1.6 - i * .15);
+    b.style.opacity = sw < 1 ? 1 : 0;
+    b.style.transform = `translateY(${lerp(100, -100, inOutCubic(p))}%)`;
+  });
+
+  // pioggia: fissa, oppure che cresce con le voci comparse
+  let q = s.pioggia || 0;
+  if (Array.isArray(s.pioggia)) { const j = clamp(Math.floor((u - .7) / .9), 0, s.pioggia.length - 1); q = u < .7 ? 0 : s.pioggia[j]; }
+  drawRain(t, q);
+  // lampi rari: max 1 ogni 2 s, bianco ≤ 0,3 (WCAG 2.3.1: meno di 3 lampi al secondo)
+  let lampo = 0;
+  if (s.lampi && q >= 1) { const f = (u % 2.3); lampo = f < .12 ? .28 * (1 - f / .12) : 0; }
+  $("#lampo").style.opacity = lampo;
+
+  // sottotitoli della voce
+  const sub = $("#sub"), cur = SUBS.find(x => t >= x.da - .1 && t <= x.a);
+  if (cur) { sub.textContent = cur.testo; sub.style.opacity = Math.min(prog(t, cur.da - .1, .2), 1 - prog(t, cur.a - .2, .2)); }
+  else sub.style.opacity = 0;
+}
+
+/* ===================== AVVIO ===================== */
+window.TOTAL = TOTAL;
+window.VOICE_AT = VOICE_AT;
+window.SUBS = SUBS;
+window.POSTER_T = CONFIG.posterT;
+window.KEYFRAMES = [0, ...START.flatMap((s, k) => [s + .35, s + durScena(CONFIG.scene[k], k) * .75])];
+window.renderFrame = render;
+Promise.all(["400", "600", "700", "900"].map(p => document.fonts.load(`${p} 40px "Titillium Web"`))
+  .concat(["500", "700"].map(p => document.fonts.load(`${p} 20px "Roboto Mono"`))))
+  .then(() => document.fonts.ready).then(() => { render(0); window.__ready = true; if (!RENDER) anteprima(); });
+
+function anteprima() {
+  const fit = () => { const s = Math.min(innerWidth / L.W, (innerHeight - 50) / L.H);
+    stage.style.transform = `translate(-50%,calc(-50% - 20px)) scale(${s})`; };
+  fit(); addEventListener("resize", fit);
+  for (const f in FORMATI) {
+    const a = document.createElement("a"); a.href = `?fmt=${f}`; a.textContent = f.replace("x", ":");
+    if (f === FMT) a.setAttribute("aria-current", "true"); $("#ui").appendChild(a);
+  }
+  const au = AUDIO ? new Audio(AUDIO) : null;
+  let t0 = null, pausa = false, tp = 0;
+  const ora = () => au ? au.currentTime : (performance.now() - t0) / 1000;
+  const giro = () => { if (!pausa) { let t = ora(); if (t >= TOTAL) { if (au) au.currentTime = 0; else t0 = performance.now(); t = 0; } render(t); } requestAnimationFrame(giro); };
+  const parti = () => { t0 = performance.now(); if (au) au.play(); requestAnimationFrame(giro); };
+  stage.addEventListener("click", () => {
+    pausa = !pausa;
+    if (au) pausa ? au.pause() : au.play();
+    else if (pausa) tp = ora(); else t0 = performance.now() - tp * 1000;
+  });
+  if (au) { const b = $("#avvio"); b.style.display = "flex"; b.onclick = () => { b.style.display = "none"; parti(); }; }
+  else parti();
+}
+</script>
+</body>
+</html>
