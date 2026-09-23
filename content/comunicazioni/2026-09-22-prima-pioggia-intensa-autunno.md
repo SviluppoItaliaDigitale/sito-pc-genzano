@@ -1,6 +1,6 @@
 ---
 title: "La prima pioggia intensa d'autunno è la più pericolosa"
-date: 2026-09-22
+date: 2026-09-22T00:01:00+02:00
 description: "Studi e cronaca mostrano che le prime piogge autunnali su terreno secco causano effetti maggiori delle successive. Come prepararsi e reagire."
 badge: "Prevenzione"
 priorita: "normale"

@@ -1,6 +1,6 @@
 ---
 title: "La prima pioggia forte d'autunno è la più pericolosa"
-date: 2026-09-22
+date: 2026-09-22T00:01:00+02:00
 description: "La prima pioggia forte d'autunno è più pericolosa. Ecco cosa fare prima, durante e dopo."
 badge: "Prevenzione"
 priorita: "normale"
