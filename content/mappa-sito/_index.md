@@ -759,6 +759,7 @@ La protezione civile spiegata come materia.
 - [Il registro dei disastri che non sono successi](/registro-prevenzione/)
 - [Da dove comincio? (l'ingresso giusto per la tua situazione)](/da-dove-comincio/)
 - [Clima e protezione civile: la fine dell'eccezione](/conoscere/clima-e-protezione-civile/)
+- [Protezione civile e Agenda 2030](/conoscere/agenda-2030/)
 - [Da piramide a rete](/conoscere/da-piramide-a-rete/)
 - [Telecomunicazioni in emergenza](/conoscere/telecomunicazioni-emergenza/)
   - [La Rete Radio nazionale di emergenza (Zamberletti)](/conoscere/telecomunicazioni-emergenza/rete-zamberletti/)

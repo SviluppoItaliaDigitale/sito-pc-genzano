@@ -209,6 +209,7 @@ Ogni data fissa si ripete ogni anno con aggiornamenti minimi. Preparare le bozze
 - Esercitazione regionale se programmata (badge: Esercitazione)
 - Resoconto corsi primaverili del Gruppo (badge: Formazione)
 - Chiusura anno scolastico: bilancio kit scuole (badge: Formazione)
+- **Festival dello Sviluppo Sostenibile ASviS** (di norma tra maggio e giugno: date da verificare ogni anno su asvis.it) — articolo sul contributo della protezione civile e del volontariato ai traguardi 1.5, 11.5, 11.b e 13.1, con rimando a `/conoscere/agenda-2030/` e alle tre schede scolastiche (badge: Informazione)
 - Lancio iniziativa **Kit Calamità per categorie vulnerabili** — 12 kit operativi A4 stampabili (bambini, anziani, RSA, disabilità, neonati, gravidanza, animali, caregiver, terapie salvavita, senza dimora, italiano L2, volontari PC) basati su standard internazionali NCTSN/IFRC/WHO/Sphere/FEANTSA/UNHCR/IOM/IFE/MISP/WSAVA/Eurocarers (badge: Formazione)
 - **Serie Standard ISO per la Protezione Civile** (lancio 8 maggio 2026) — hub permanente `/standard-iso/` con 30 schede + serie news divulgative calendarizzate dal 12 maggio al 12 giugno (uno ogni 3-4 giorni): 22324 codici colore (12 maggio), 22322 public warning + IT-alert (15 maggio), 22329 social in emergenza (19 maggio), 22361 gestione crisi (22 maggio), 22398 esercitazioni (26 maggio), 22395 persone vulnerabili (29 maggio). Le restanti 4 ricadono in giugno. Vincolo: parafrasi originali nostre, mai copia di testo ISO (norme a pagamento). Badge: Formazione.
 
@@ -246,6 +247,7 @@ Ogni data fissa si ripete ogni anno con aggiornamenti minimi. Preparare le bozze
 - **13 settembre** — Giornata mondiale primo soccorso (sabato seconda settimana) (badge: Formazione)
 - **15 settembre** — Inizio scuole: programma kit didattici (badge: Formazione)
 - **23 settembre** — Festa di San Pio da Pietrelcina, patrono dei Volontari di Protezione Civile italiana (memoria liturgica, anniversario della morte 1968). Articolo annuale di ricorrenza con rimando alla pagina istituzionale `/san-pio-da-pietrelcina/` (badge: Volontariato)
+- **25 settembre** — Anniversario dell'adozione dell'Agenda 2030 (Assemblea generale ONU, 2015): spunto per rilanciare `/conoscere/agenda-2030/` e le schede per l'avvio dell'anno scolastico (badge: Informazione)
 - Fine campagna AIB: bilancio stagione (badge: Aggiornamento)
 - Preparazione autunno: rischio idrogeologico (badge: Prevenzione)
 - **Infiorata di Genzano** se ricade a settembre: sicurezza evento (badge: Attività)
@@ -253,7 +255,7 @@ Ogni data fissa si ripete ogni anno con aggiornamenti minimi. Preparare le bozze
 ### Ottobre
 - **Seconda settimana** — Settimana Io Non Rischio (badge: Evento)
 - **11 ottobre** — Giornata internazionale riduzione rischio catastrofi (13 ottobre ufficiale) (badge: Informazione)
-- **13 ottobre** — Giornata UNDRR riduzione rischio catastrofi (badge: Informazione)
+- **13 ottobre** — Giornata UNDRR riduzione rischio catastrofi, con il legame fra indicatori di Sendai e Agenda 2030 (`/conoscere/agenda-2030/`) (badge: Informazione)
 - **15 ottobre** — Giornata mondiale lavaggio mani: igiene in emergenza (badge: Informazione)
 - **16 ottobre** — Giornata mondiale alimentazione: scorte in emergenza (badge: Informazione)
 - Come leggere i bollettini meteo e di criticità (badge: Informazione)
