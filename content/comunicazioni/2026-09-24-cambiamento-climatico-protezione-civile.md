@@ -17,7 +17,7 @@ Il **cambiamento climatico** non è un tema astratto per la Protezione Civile: �
 
 ## Cosa osservano gli scienziati
 
-Secondo **IPCC**, **CNR-ISAC**, **ISPRA**, **CMCC**, sull'Italia e sul Mediterraneo si osserva:
+Secondo **l'IPCC**, il **CNR-ISAC**, **l'ISPRA** e il **CMCC**, sull'Italia e sul Mediterraneo si osserva:
 
 - **aumento** della temperatura media annuale;
 - **aumento** della frequenza di ondate di calore;
@@ -48,7 +48,7 @@ Crescono rapidamente:
 - **crisi idriche** prolungate.
 
 ### Più attenzione al volontariato
-Il volontariato organizzato **non sostituisce** le strutture pubbliche, ma **estende** la capacità di risposta su vasta scala. Con eventi più frequenti, serve:
+Il volontariato organizzato **non sostituisce** le strutture pubbliche, ma **estende** la capacità di risposta su vasta scala. Con eventi più frequenti, servono:
 
 - **più volontari** formati;
 - **formazione continua** aggiornata;
