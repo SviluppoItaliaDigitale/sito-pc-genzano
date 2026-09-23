@@ -5,11 +5,23 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-22T23:36:32+00:00",
+  "generato": "2026-09-23T01:49:27+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-23T01:44:40+00:00",
+   "fonte": "ANSA",
+   "titolo": "Missili e aiuti per l'inverno, il pressing di Zelensky al Palazzo di Vetro",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/22/missili-e-aiuti-per-linverno-il-pressing-di-zelensky-al-palazzo-di-vetro_efdfe43c-c6ac-437b-98d6-495475b8c4c2.html"
+  },
+  {
+   "data": "2026-09-23T01:38:52+00:00",
+   "fonte": "ANSA",
+   "titolo": "Trump all'Onu: 'Putin fermi la guerra'. E lancia l'ultimatum all'Iran",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/22/trump-allonu-putin-fermi-la-guerra.-e-lancia-lultimatum-alliran_68a02777-7c4a-49c6-a576-362f728dd3f8.html"
+  },
   {
    "data": "2026-09-22T22:30:39+00:00",
    "fonte": "ANSA",
@@ -77,12 +89,6 @@
    "url": "https://www.adnkronos.com/politica/di-battista-videomessaggio-dimartedi_9S3QFy2lb9Esy7QrzdAS2"
   },
   {
-   "data": "2026-09-22T19:54:06+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trump all'Onu: 'Putin fermi la guerra'. E lancia l'ultimatum all'Iran",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/22/trump-allonu-putin-fermi-la-guerra.-e-lancia-lultimatum-alliran_68a02777-7c4a-49c6-a576-362f728dd3f8.html"
-  },
-  {
    "data": "2026-09-22T19:42:02+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "America's Cup, presentata a Nisida la seconda regata preliminare. Abodi: \"Da qui progetto per la formazione dei detenuti\"",
@@ -93,12 +99,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Ucraina, Trump vede Zelensky: \"Insieme troveremo soluzione per finire la guerra\"",
    "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-incontro-trump-zelensky-news_5yHcip58IiwHMXzO9KuB8W"
-  },
-  {
-   "data": "2026-09-22T19:27:28+00:00",
-   "fonte": "ANSA",
-   "titolo": "Missili e aiuti per l'inverno, il pressing di Zelensky al Palazzo di Vetro",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/22/missili-e-aiuti-per-linverno-il-pressing-di-zelensky-al-palazzo-di-vetro_efdfe43c-c6ac-437b-98d6-495475b8c4c2.html"
   },
   {
    "data": "2026-09-22T19:25:38+00:00",
