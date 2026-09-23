@@ -14,6 +14,7 @@ draft: false
 versione_facile: "2026-09-23-allerta-meteo-colori-cosa-fare-video-facile"
 tts: true
 lis_section: "allerte-meteo"
+social_video: "/video/2026-09-23-allerta-meteo-reel.mp4"
 social_citazione: "Il colore dell'allerta non dice che tempo farà: dice quali effetti può avere la pioggia sul territorio."
 social_punti:
   - "Verde: non sono previsti fenomeni significativi. È il momento di prepararsi: piano del Comune, zone a rischio, kit di emergenza."
