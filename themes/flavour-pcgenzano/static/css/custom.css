@@ -7270,6 +7270,21 @@ html.a11y-pause-anim .banner-volontariato .card:focus-within { transform: none; 
 .article-body figure.video-campagna.video-verticale {
   max-width: 400px;
 }
+/* VIDEO COPPIA v1.0 — due video verticali affiancati (allerte-meteo, 23/09/2026) */
+.article-body .video-coppia {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+@media (min-width: 768px) {
+  .article-body .video-coppia { grid-template-columns: 1fr 1fr; }
+}
+.article-body .video-coppia figure.video-campagna.video-verticale {
+  max-width: 340px;
+  width: 100%;
+  margin: 0 auto;
+}
 .article-body figure.video-campagna.video-verticale .video-js {
   width: 100%;
   height: auto;

@@ -48,6 +48,15 @@ Per ogni livello — verde, giallo, arancione, rosso — abbiamo preparato una s
 L'assenza di allerta significa che **non sono previsti fenomeni significativi**, non che il rischio sia nullo. La preparazione si fa **prima**, quando il cielo è sereno: tieni pronto il [kit di emergenza](/rischi-prevenzione/kit-emergenza/), conosci le aree di attesa del tuo quartiere e compila il [Piano Familiare](/piano-familiare/). Quando arriva l'allerta è troppo tardi per organizzarsi.
 {{< /callout >}}
 
+### I colori dell'allerta in due video
+
+Due video brevi, senza audio, riassumono questa sezione: il primo spiega che cosa significa ogni colore, il secondo che cosa fare. Le stesse informazioni sono scritte qui sotto, colore per colore. Puoi scaricarli dalle [Risorse pronte](/risorse-pronte/) per condividerli.
+
+<div class="video-coppia">
+{{< video src="/video/2026-09-23-allerta-meteo-codici-colore.mp4" poster="/video/2026-09-23-allerta-meteo-codici-colore-poster.webp" verticale="true" titolo="Video senza audio: i quattro colori dell'allerta meteo e il loro significato" caption="Che cosa significano i quattro colori." >}}
+{{< video src="/video/2026-09-23-allerta-meteo-cosa-fare.mp4" poster="/video/2026-09-23-allerta-meteo-cosa-fare-poster.webp" verticale="true" titolo="Video senza audio: cosa fare con l'allerta verde, gialla, arancione e rossa" caption="Cosa fare, dal verde al rosso." >}}
+</div>
+
 ### <span class="badge badge-allerta-verde">VERDE</span> — Nessuna allerta
 
 {{< pittogramma src="/pittogrammi/arasaac/calma.png" alt="Pittogramma: situazione di calma" size="small" inline="true" >}} Non sono previsti fenomeni significativi.
@@ -198,6 +207,7 @@ Per sviluppatori e altri enti: lo stato di allerta è disponibile anche come [fe
 
 ## Approfondimenti dall'archivio
 
+- [Allerta meteo in due video: cosa dicono i colori e cosa fare](/comunicazioni/2026-09-23-allerta-meteo-colori-cosa-fare-video/)
 - [Previsioni meteo e bollettini: come funziona il sistema](/comunicazioni/2026-04-20-previsioni-meteo-bollettini-come-funzionano/)
 - [Zone di allerta del Lazio: come leggere il bollettino](/comunicazioni/2026-05-07-zone-allerta-lazio-come-leggere-bollettino/)
 - [Temporali intensi: comportamenti corretti](/comunicazioni/2026-05-09-temporali-intensi-comportamenti-corretti/)

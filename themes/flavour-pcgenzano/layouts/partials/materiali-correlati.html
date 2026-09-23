@@ -82,6 +82,7 @@
                   {{ else if eq .tipo "presentazione-pdf" }}<i class="bi bi-file-earmark-pdf me-1" aria-hidden="true"></i>Presentazione PDF
                   {{ else if eq .tipo "quiz" }}<i class="bi bi-check2-square me-1" aria-hidden="true"></i>Quiz
                   {{ else if eq .tipo "flashcard" }}<i class="bi bi-card-list me-1" aria-hidden="true"></i>Flashcard
+                  {{ else if eq .tipo "video" }}<i class="bi bi-camera-video me-1" aria-hidden="true"></i>Video MP4
                   {{ else }}<i class="bi bi-file-earmark me-1" aria-hidden="true"></i>{{ .tipo | title }}
                   {{ end }}
                 </div>
