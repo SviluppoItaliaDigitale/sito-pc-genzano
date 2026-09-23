@@ -5,16 +5,124 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-23T01:49:27+00:00",
+  "generato": "2026-09-23T07:29:09+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-23T01:44:40+00:00",
+   "data": "2026-09-23T07:16:51+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Tre carabinieri feriti durante un intervento per sedare un pestaggio",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/23/tre-carabinieri-feriti-durante-un-intervento-per-sedare-un-pestaggio_9c8b9a6b-bbb4-410b-b847-5bd0609b9c89.html"
+  },
+  {
+   "data": "2026-09-23T07:15:47+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Strage Bologna, Cavallini presenta ricorso a Corte Strasburgo contro revoca semilibertà",
+   "url": "https://www.adnkronos.com/cronaca/strage-bologna-gilberto-cavallini-oggi-ricorso_7lpggGAMzOYzpejhOnlpNu"
+  },
+  {
+   "data": "2026-09-23T07:13:52+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Precipita durante lavori al Colosseo, muore operaio",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/23/precipita-durante-lavori-al-colosseo-muore-operaio_82ae0949-04c5-498a-ba98-ccb93fb3c9db.html"
+  },
+  {
+   "data": "2026-09-23T07:11:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Caro carburanti, prezzo medio self benzina a 2,155 euro e gasolio a 2,340",
+   "url": "https://www.adnkronos.com/economia/caro-carburanti-prezzi-benzina-diesel-oggi-ultimi-dati_1rLE5K9wmufOXUBuHYDGMI"
+  },
+  {
+   "data": "2026-09-23T07:10:55+00:00",
+   "fonte": "ANSA",
+   "titolo": "Borsa Italiana, torna “Investire in un mondo che cambia”",
+   "url": "https://www.ansa.it/native/ansacom/2026/09/23/borsa-italiana-torna-investire-in-un-mondo-che-cambia_888859c4-747a-4d19-bb54-925ed66f8933.html"
+  },
+  {
+   "data": "2026-09-23T07:05:51+00:00",
+   "fonte": "ANSA",
+   "titolo": "Attacco russo su un centro commerciale a Zaporizhzhia",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/23/attacco-russo-su-un-centro-commerciale-a-zaporizhzhia_fc4fce7b-0e40-4f81-bd28-32e20dbb1357.html"
+  },
+  {
+   "data": "2026-09-23T06:47:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Equinozio d'Autunno con calo delle temperature minime, piogge venerdì poi weekend di sole",
+   "url": "https://www.adnkronos.com/cronaca/equinozio-autunno-previsioni-meteo-prossimi-giorni_600WGwdqDYRJFwDwAxMnfq"
+  },
+  {
+   "data": "2026-09-23T06:44:55+00:00",
+   "fonte": "ANSA",
+   "titolo": "Marte è stato ricco di acqua, è sempre più probabile che abbia ospitato la vita",
+   "url": "https://www.ansa.it/canale_scienza/notizie/spazio_astronomia/2026/09/23/marte-e-stato-ricco-di-acqua-sempre-piu-probabile-che-abbia-ospitato_4efbb4ab-a535-4fcf-ba52-b970e906428c.html"
+  },
+  {
+   "data": "2026-09-23T06:43:59+00:00",
+   "fonte": "ANSA",
+   "titolo": "Precipita durante lavori al Colosseo, muore operaio",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/23/precipita-durante-lavori-al-colosseo-muore-operaio-_d2e19d2c-1896-4bd4-b861-c2d8e26b5a9e.html"
+  },
+  {
+   "data": "2026-09-23T06:05:02+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Non capisce l'italiano, il sindaco 'congela' la consegna della cittadinanza",
+   "url": "https://www.adnkronos.com/cronaca/cadoneghe-sindaco-cittadinanza-italiano_4Qip7r7U5mloX0EeaYfJe8"
+  },
+  {
+   "data": "2026-09-23T05:59:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Roma, nella notte incidente sul lavoro al Colosseo: muore operaio di 22 anni",
+   "url": "https://www.adnkronos.com/cronaca/roma-infortunio-sul-lavoro-colosseo-morto-operaio-22-anni_jqnNbkFoCu0GUfKGqOG0A"
+  },
+  {
+   "data": "2026-09-23T05:55:26+00:00",
+   "fonte": "ANSA",
+   "titolo": "PRIME PAGINE | Meloni difende il tetto a stranieri in classe e tira in ballo Mattarella",
+   "url": "https://www.ansa.it/sito/podcast/ansa_voice_daily/2026/09/23/prime-pagine-meloni-difende-il-tetto-a-stranieri-in-classe-e-tira-in-ballo-mattarella_7001448e-8190-48da-b3fa-5f62252a7547.html"
+  },
+  {
+   "data": "2026-09-23T05:51:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Venezuela, Machado tenta di rientrare nel Paese senza riuscirci",
+   "url": "https://www.adnkronos.com/internazionale/esteri/venezuela-nobel-per-la-pace-machado-ultime-news_7EwONqc6nxILNEuhGLu724"
+  },
+  {
+   "data": "2026-09-23T05:36:56+00:00",
    "fonte": "ANSA",
    "titolo": "Missili e aiuti per l'inverno, il pressing di Zelensky al Palazzo di Vetro",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/22/missili-e-aiuti-per-linverno-il-pressing-di-zelensky-al-palazzo-di-vetro_efdfe43c-c6ac-437b-98d6-495475b8c4c2.html"
+  },
+  {
+   "data": "2026-09-23T05:27:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Blitz contro immigrazione irregolare in quattro Paesi europei, arresti e perquisizioni",
+   "url": "https://www.adnkronos.com/cronaca/blitz-contro-immigrazione-irregolare-arresti-perquisizioni_4AFRCM5UFG8I8reFQnsIru"
+  },
+  {
+   "data": "2026-09-23T05:14:57+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'estate è al capolinea, arriva l'equinozio d'autunno",
+   "url": "https://www.ansa.it/canale_scienza/notizie/spazio_astronomia/2026/09/22/lestate-e-al-capolinea-arriva-lequinozio-dautunno_fe42717b-f661-4bf1-bdd1-30f5ebb0682b.html"
+  },
+  {
+   "data": "2026-09-23T05:08:40+00:00",
+   "fonte": "ANSA",
+   "titolo": "Hayden Panettiere morta per overdose di fentanyl",
+   "url": "https://www.ansa.it/sito/notizie/cultura/cinema/2026/09/22/hayden-panettiere-morta-per-overdose-di-fentanyl_f8343f6b-6868-4191-a810-d9a8f29939f2.html"
+  },
+  {
+   "data": "2026-09-23T04:42:51+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Europei pallavolo, oggi quarti Italia-Finlandia: orario e dove vederla in chiaro",
+   "url": "https://www.adnkronos.com/sport/europei-pallavolo-oggi-italia-finlandia-orario-e-dove-vederla_1M7iwI1pyZwLtbfqJtXKDC"
+  },
+  {
+   "data": "2026-09-23T04:32:58+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Usa-Cina, Xi Jinping vola da Trump: i dossier sul tavolo e le incognite",
+   "url": "https://www.adnkronos.com/internazionale/esteri/trump-xi-vertice-washington-taiwan-dazi-tregua-commerciale_3bPXePEW8czOhdXQsdvhee"
   },
   {
    "data": "2026-09-23T01:38:52+00:00",
@@ -77,118 +185,10 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/22/melania-trump-torna-in-pista-allonu-e-sfida-donald-sulla-cnn_5cb3bed2-3415-43af-8697-3451a0a038aa.html"
   },
   {
-   "data": "2026-09-22T21:04:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sangiuliano pubblica foto di donna con niqab a Napoli: \"Ecco pericolo islamizzazione\"",
-   "url": "https://www.adnkronos.com/politica/sangiuliano-foto-donna-niqab-napoli_3VFS2Q3Srx4B1N218Wf9tm"
-  },
-  {
-   "data": "2026-09-22T20:16:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Il videomessaggio di Di Battista a La7: \"I medici cubani mi hanno salvato la vita, tornerò prestissimo\"",
-   "url": "https://www.adnkronos.com/politica/di-battista-videomessaggio-dimartedi_9S3QFy2lb9Esy7QrzdAS2"
-  },
-  {
-   "data": "2026-09-22T19:42:02+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "America's Cup, presentata a Nisida la seconda regata preliminare. Abodi: \"Da qui progetto per la formazione dei detenuti\"",
-   "url": "https://www.adnkronos.com/sport/americas-cup-vela-nisida-napoli-abodi_6ZWOsLQsggdp7LXa5MjXAY"
-  },
-  {
-   "data": "2026-09-22T19:42:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina, Trump vede Zelensky: \"Insieme troveremo soluzione per finire la guerra\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-incontro-trump-zelensky-news_5yHcip58IiwHMXzO9KuB8W"
-  },
-  {
    "data": "2026-09-22T19:25:38+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "La famiglia del bosco per la prima volta insieme nella nuova casa",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/22/la-famiglia-del-bosco-per-la-prima-volta-insieme-nella-nuova-casa_fc064992-1f83-48b9-aedb-a8b28eb8e9d0.html"
-  },
-  {
-   "data": "2026-09-22T19:22:35+00:00",
-   "fonte": "ANSA",
-   "titolo": "Taylor Swift annuncia il nuovo singolo 'Patient Zero'",
-   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/22/taylor-swift-annuncia-il-nuovo-singolo-patient-zero_a06f0706-d649-4957-9cdf-64eea8e3da2c.html"
-  },
-  {
-   "data": "2026-09-22T19:14:56+00:00",
-   "fonte": "ANSA",
-   "titolo": "Sangiuliano (FdI) posta foto: 'Ecco il pericolo islamizzazione'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/22/sangiuliano-fdi-posta-foto-ecco-il-pericolo-islamizzazione_c99c440b-a35b-4d3d-aa18-f86a2997ec54.html"
-  },
-  {
-   "data": "2026-09-22T19:08:57+00:00",
-   "fonte": "ANSA",
-   "titolo": "Vannacci dopo la gaffe di Tajani: 'Io preferisco la donna senza gonna'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/22/vannacci-gonna-corta-o-gonna-lunga-una-donna-la-preferisco-sempre-senza_8d6e269c-0fd8-478a-9ec2-87fa4901a974.html"
-  },
-  {
-   "data": "2026-09-22T19:01:40+00:00",
-   "fonte": "ANSA",
-   "titolo": "Deficit resta al 3,1%, Salvini chiede lo scostamento, FI frena",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/22/deficit-resta-al-31-salvini-chiede-lo-scostamento-fi-frena_bc5746d2-787c-4dad-b9b8-6fdd14cc3876.html"
-  },
-  {
-   "data": "2026-09-22T19:01:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Superenalotto, estrazione 22 settembre 2026: centrato '5+1' da oltre 531mila euro",
-   "url": "https://www.adnkronos.com/cronaca/superenalotto-estrazione-oggi-22-settembre-2026-numeri_36xBWYNKIr5epITX3ZcSL4"
-  },
-  {
-   "data": "2026-09-22T18:59:21+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "La traiettoria e le torce, i dubbi sulla legittima difesa",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/22/spara-e-uccide-ladro-in-fuga-colpito-da-30-metri-esplosi-13-colpi_2add8f29-1683-45a3-b6e3-0b4bf9d98545.html"
-  },
-  {
-   "data": "2026-09-22T18:52:29+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "La BC Roma di basket si presenta al Palatiziano, Mannion: \"Vogliamo portare il club in alto\"",
-   "url": "https://www.adnkronos.com/sport/basket-bc-roma-mannion-palatiziano_WUhhZpC22wksDIhcXGtxm"
-  },
-  {
-   "data": "2026-09-22T18:50:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Schlein attacca Meloni: \"Provoca Mattarella, totale mancanza di senso dello Stato\"",
-   "url": "https://www.adnkronos.com/politica/meloni-mattarella-schlein-scuola-studenti-stranieri_3as4orOPpBNzoVlIXdoFYx"
-  },
-  {
-   "data": "2026-09-22T18:42:34+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trump all'Onu: \"Presto gli accordi con l'Iran e fra Russia e Ucraina\"",
-   "url": "https://www.ansa.it/sito/videogallery/mondo/2026/09/22/trump-allonu-presto-gli-accordi-con-liran-e-fra-russia-e-ucraina_8e1a9995-820e-4571-adc9-4784ec10a05e.html"
-  },
-  {
-   "data": "2026-09-22T18:36:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Vespa in onda con fasciatura al braccio e volto tumefatto: \"Ho fatto una rovinosa caduta\"",
-   "url": "https://www.adnkronos.com/politica/bruno-vespa-caduta-fasciatura-volto-tumefatto-meloni-porta-a-porta_51MDwUe862uEwYS1N68iFO"
-  },
-  {
-   "data": "2026-09-22T18:32:52+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Maltrattavano i bimbi in un asilo nell'Isernino, condannate due maestre",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/22/maltrattavano-i-bimbi-in-un-asilo-nellisernino-condannate-due-maestre_32cb8e3d-66a5-4a2c-b0c7-371f29a54794.html"
-  },
-  {
-   "data": "2026-09-22T18:15:58+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Senatrici del centrosinistra in minigonna per protesta contro Tajani, scoppia la polemica in Aula",
-   "url": "https://www.adnkronos.com/politica/tajani-gonne-proteste-senatrici-campolargo_JmgoQXRTIKujuZiUy20zu"
-  },
-  {
-   "data": "2026-09-22T18:14:46+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "I Testimoni di Geova aprono alle trasfusioni di sangue",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/22/i-testimoni-di-geova-aprono-alle-trasfusioni-di-sangue_c49926db-4754-4cb1-a696-e0510ff0e671.html"
-  },
-  {
-   "data": "2026-09-22T18:10:58+00:00",
-   "fonte": "ANSA",
-   "titolo": "Riad riapre l'oleodotto. Il G7 agli Houthi: 'Basta attacchi'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/22/riad-riapre-il-gasdotto-est-ovest-oggi-potrebbe-tornare-a-esportare_a7df8fa7-574a-489a-9a8a-61b5a7a9f1c2.html"
   }
  ]
 }
