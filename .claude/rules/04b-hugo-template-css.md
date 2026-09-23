@@ -253,7 +253,7 @@ Genera bozze post social (X, Facebook, Instagram, Telegram) + immagini per il **
 - **Foto** — immagine inline `{{< foto >}}` mostrata **intera, mai tagliata** (fit-contain) su sfondo sfocato di se stessa, card con angoli arrotondati + ombra.
 - **Storia** (9:16) — foto reale in evidenza (o titolo) + descrizione + CTA "Leggi sul sito".
 
-Ordine carosello: **title card → citazione → punti → foto** (max 10 slide). Citazione e punti compaiono **solo se** i campi `social_citazione`/`social_punti` sono compilati nel frontmatter. Per CLAUDE.md § "Automatismo totale", Claude li compila **dal testo dell'articolo** quando lo scrive (mai inventati); il gate `pc-article-reviewer` ne verifica presenza e fedeltà. Le versioni "facile" (A2) sono escluse dalla generazione social.
+Ordine carosello: **title card → citazione → punti → foto** (max 10 slide). Se l'articolo ha `social_video` nel frontmatter, al posto del carosello esce quel video (Reel su Instagram, video su Facebook; rule 10 § "Pubblicazione automatica social"). Citazione e punti compaiono **solo se** i campi `social_citazione`/`social_punti` sono compilati nel frontmatter. Per CLAUDE.md § "Automatismo totale", Claude li compila **dal testo dell'articolo** quando lo scrive (mai inventati); il gate `pc-article-reviewer` ne verifica presenza e fedeltà. Le versioni "facile" (A2) sono escluse dalla generazione social.
 
 **Cartelle e nomi file (a prova di errore — la destinazione è nel nome):**
 - `social-bozze/AAAA/MM/<slug>/` — fuori da Hugo (non deployata), solo nel repo. Contiene tutto il materiale social di un articolo:
