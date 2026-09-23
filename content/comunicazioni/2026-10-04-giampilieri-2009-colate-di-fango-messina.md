@@ -37,7 +37,7 @@ Il Governo dichiarò lo stato di emergenza. Negli anni successivi sono seguiti i
 
 ## Cosa insegna ai Castelli Romani
 
-I Castelli non hanno le pendenze della costa ionica di Messina, ma hanno versanti vulcanici ripidi, valloni incisi e case costruite sotto i pendii. Le colate rapide sono un fenomeno possibile anche qui, come ricordano le [frane e movimenti del terreno ai Castelli Romani](/comunicazioni/2026-04-24-frane-movimenti-terreno-castelli-romani/) descritte sul nostro sito.
+I Castelli non hanno le pendenze della costa ionica di Messina, ma hanno versanti vulcanici ripidi, valloni incisi e case costruite sotto i pendii. Le colate rapide sono un fenomeno possibile anche qui, come ricordano le [frane e movimenti del terreno ai Castelli Romani](/comunicazioni/2026-04-24-frane-movimenti-terreno-castelli-romani/) descritti sul nostro sito.
 
 Per chi vive sotto un versante valgono le regole del Dipartimento della Protezione Civile:
 
