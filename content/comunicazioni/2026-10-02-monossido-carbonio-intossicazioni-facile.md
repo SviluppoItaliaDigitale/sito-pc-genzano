@@ -53,7 +53,7 @@ Se questo accade, è una emergenza.
 2. Non accendere luci o apparecchi elettrici.
 3. Chiama il 112, il numero unico di emergenza.
 4. Non rientrare in casa.
-5. Avverti i vicini se usate la stessa caldaia.
+5. Avverti i vicini se usi la stessa caldaia.
 
 ## Se una persona perde conoscenza
 

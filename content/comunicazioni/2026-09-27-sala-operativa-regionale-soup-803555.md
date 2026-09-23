@@ -29,7 +29,7 @@ La **Sala Operativa Regionale** della Protezione Civile del Lazio coordina la ri
 
 Il suo numero verde è **803 555**. È il numero per le **segnalazioni non urgenti** e per i rapporti con i Comuni e le organizzazioni di volontariato. Se c'è un pericolo per le persone, il numero da chiamare è sempre il **112**.
 
-## Inverno e estate: due assetti
+## Inverno ed estate: due assetti
 
 La composizione della Sala cambia con la stagione.
 

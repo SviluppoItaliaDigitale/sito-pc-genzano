@@ -41,7 +41,7 @@ Se hai un camino, una stufa a legna o una stufa a pellet:
 - Chiama un tecnico per pulire la canna fumaria. Fallo ogni anno.
 - Conserva il certificato di pulizia.
 - Controlla che il comignolo sia intatto.
-- Tieni lontano dai materiali che bruciano facilmente.
+- Tienilo lontano dai materiali che bruciano facilmente.
 
 ### Caldaia
 
@@ -77,7 +77,7 @@ L'estintore non è obbligatorio in casa. Ma è molto utile.
 - Non asciugare vestiti bagnati sulla stufa.
 - Non usare bracieri dentro casa. Sono mortali.
 - Spegni sempre le candele prima di uscire o dormire.
-- Non lasciare pentole sul fuoco da soli.
+- Non lasciare pentole sul fuoco da sole.
 - Non fumare a letto.
 - Tieni fiammiferi e accendini lontano dai bambini.
 
