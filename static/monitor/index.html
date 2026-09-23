@@ -34,7 +34,7 @@ body.blackout #lmap{filter:brightness(.55) saturate(.7)}
 
 #hdr{position:fixed;inset:0 0 auto 0;height:46px;display:flex;align-items:center;gap:10px;
   padding:0 12px;background:linear-gradient(180deg,#0b141d,#070d13);border-bottom:1px solid var(--line);z-index:1100}
-#hdr .logo{font-weight:700;letter-spacing:.12em;font-size:14px;color:#eaf6ef;white-space:nowrap}
+#hdr .logo{font-weight:700;letter-spacing:.12em;font-size:14px;color:#eaf6ef;white-space:nowrap;margin:0;line-height:1.2}
 #hdr .logo b{color:var(--cyn)}
 #hdr .logo small{color:var(--dim);font-size:9px;letter-spacing:.18em;display:block;line-height:1}
 .pill{font-family:var(--mono);font-size:11px;border:1px solid var(--line);border-radius:3px;
@@ -70,6 +70,12 @@ body.blackout #lmap{filter:brightness(.55) saturate(.7)}
 #nav button.miaOn.act{color:#f4ecc4;box-shadow:inset 0 2px 0 var(--gia),inset 0 -2px 0 var(--cyn)}
 #nav button .miaTag{color:var(--gia);font-size:9px;margin-left:5px;letter-spacing:0}
 #nav .sep{flex:0 0 1px;background:var(--line);margin:4px 4px}
+/* Interruttore di modalita' della cartina, in coda ai tab: stile diverso dai
+   tab (cornice, pastiglia) perche' non apre un pannello, cambia come la
+   cartina risponde ai tab. Ciano su fondo scuro 9,9:1; premuto, scuro su ciano. */
+#nav button.modo{color:var(--cyn);margin:3px 6px;min-height:24px;border:1px solid rgba(55,199,255,.45);border-radius:3px;padding:0 9px}
+#nav button.modo[aria-pressed="true"]{color:#04070b;background:var(--cyn);border-color:var(--cyn);font-weight:700;box-shadow:none}
+#nav button.modo:focus-visible{outline:2px solid #ffbe2e;outline-offset:-2px}
 /* Frecce di overflow del menu: compaiono solo quando ci sono voci fuori
    dallo schermo, con dissolvenza sul bordo — così è chiaro che c'è altro */
 .navArr{position:fixed;top:46px;height:30px;min-width:52px;z-index:1101;display:none;
@@ -251,6 +257,9 @@ html.a11y-pause-anim .fchip{transition:none}
 .acRow .lab{color:var(--tx)}
 .acRow .lab em{color:var(--dim);font-style:normal}
 .acRow .rt{color:var(--dim);white-space:nowrap}
+/* il glifo resta 15 px, ma l'area di tocco/fuoco del marcatore e' 24 x 24
+   (WCAG 2.2 AA 2.5.8): su un telefono un aereo da 16 px non si prendeva */
+.acHit{display:flex;width:24px;height:24px;align-items:center;justify-content:center}
 .acPin{font-size:15px;line-height:1;text-shadow:0 0 3px #000}
 .vfo{border:1px solid var(--line);background:#081018;padding:8px 10px;font-family:var(--mono);display:flex;flex-direction:column;gap:2px}
 .vfo b{font-size:24px;font-weight:400;color:#f2f7f4;letter-spacing:.04em;line-height:1.1}
@@ -292,12 +301,16 @@ html.a11y-pause-anim .fchip{transition:none}
 .stella svg{filter:drop-shadow(0 0 4px rgba(255,209,102,.7))}
 #srcTag{position:absolute;top:8px;left:52px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;
   color:var(--dim);border:1px dashed var(--line);padding:3px 8px;background:rgba(4,7,11,.85);z-index:1000;max-width:60%}
-#radarLbl{position:absolute;bottom:34px;left:10px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;
-  color:var(--cyn);background:rgba(4,7,11,.85);padding:3px 8px;border:1px solid var(--line);z-index:1000;display:none}
-#blitzLbl{position:absolute;bottom:60px;left:10px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;
-  color:var(--gia);background:rgba(4,7,11,.85);padding:3px 8px;border:1px solid var(--line);z-index:1000;display:none}
-#worldLbl{position:absolute;bottom:34px;right:10px;font-family:var(--mono);font-size:10px;letter-spacing:.1em;
-  color:var(--tx);background:rgba(4,7,11,.85);padding:3px 8px;border:1px solid var(--line);z-index:1000;display:none;max-width:60%}
+/* 🔴 Etichette e legenda stanno in UNA colonna (#mapInfo) in basso a sinistra,
+   cosi' si spingono a vicenda invece di sovrapporsi quando la legenda cresce;
+   i 22 px in fondo restano all'attribuzione OpenStreetMap. */
+#mapInfo{position:absolute;left:10px;bottom:22px;z-index:1000;display:flex;flex-direction:column;align-items:flex-start;gap:4px;
+  max-width:calc(100% - 20px);pointer-events:none}
+#mapInfo > *{pointer-events:auto}
+#radarLbl{font-family:var(--mono);font-size:10px;letter-spacing:.1em;
+  color:var(--cyn);background:rgba(4,7,11,.85);padding:3px 8px;border:1px solid var(--line);display:none}
+#blitzLbl{font-family:var(--mono);font-size:10px;letter-spacing:.1em;
+  color:var(--gia);background:rgba(4,7,11,.85);padding:3px 8px;border:1px solid var(--line);display:none}
 /* Pallini eventi mondo (GDACS/EMS): punto pieno + anelli concentrici che si
    espandono, colorati per livello di allerta — stile sala situazioni. I verdi
    restano fermi (quiete); pulsano solo orange/red e le attivazioni EMS. */
@@ -318,18 +331,22 @@ html.a11y-pause-anim .fchip{transition:none}
 #mesBtn{position:absolute;top:84px;left:10px;z-index:1000;cursor:pointer;font-family:var(--mono);
   font-size:10px;letter-spacing:.12em;color:var(--dim);background:#081018;border:1px solid var(--line);padding:5px 9px}
 #mesBtn.act{color:#04070b;background:var(--cyn);border-color:var(--cyn);font-weight:700}
-#coordBox{position:absolute;bottom:86px;left:10px;font-family:var(--mono);font-size:10px;letter-spacing:.08em;
-  color:var(--dim);background:rgba(4,7,11,.85);padding:3px 8px;border:1px solid var(--line);z-index:1000}
+#coordBox{font-family:var(--mono);font-size:10px;letter-spacing:.08em;
+  color:var(--dim);background:rgba(4,7,11,.85);padding:3px 8px;border:1px solid var(--line)}
 #coordBox.ok{color:#04070b;background:var(--grn)}
 .mesTip{font-family:var(--mono)!important;background:#0d1520!important;color:#eaf6ef!important;
   border:1px solid var(--cyn)!important;border-radius:3px!important;font-size:11px!important}
 .mesTip::before{display:none!important}
 @media(max-width:720px){#coordBox,#mesBtn{display:none}}
-#prevCtl{position:absolute;top:44px;right:10px;z-index:1000;display:flex;flex-direction:column;gap:4px;
-  background:rgba(4,7,11,.88);border:1px solid var(--line);padding:6px 8px;max-width:200px}
+/* 🔴 Dal 23/09/2026 il controllo ICON-2I NON galleggia piu' sulla cartina:
+   sta nella striscia SULLA CARTINA del pannello METEO, dove stanno gli altri
+   livelli di quella vista (richiesta dell'utente: «non devono stare dentro la
+   cartina ma nei menu' laterali»). */
+#prevCtl{display:flex;flex-direction:column;gap:6px;flex:1 1 100%;margin-top:4px;
+  background:#060d14;border:1px solid var(--line);padding:6px 8px}
 #prevCtl .pcLbl{font-family:var(--mono);font-size:8.5px;letter-spacing:.16em;color:var(--dim)}
-#prevCtl select{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--tx);
-  background:#081018;border:1px solid var(--line);border-radius:3px;padding:3px 4px;max-width:184px}
+#prevCtl select{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--tx);min-height:28px;
+  background:#081018;border:1px solid var(--dim);border-radius:3px;padding:3px 4px;max-width:184px}
 #prevCtl select:focus-visible{outline:2px solid var(--cyn);outline-offset:1px}
 /* 🔴 La legenda NON si stira. #prevCtl e' un flex in colonna, quindi per
    impostazione predefinita allarga i figli alla larghezza del riquadro: la
@@ -338,16 +355,27 @@ html.a11y-pause-anim .fchip{transition:none}
    il telefono con una striscia verticale. `align-self:start` le lascia la sua
    larghezza vera; il riquadro le mette un tetto e la fa scorrere, cosi' le
    bande di colore restano leggibili invece di essere rimpicciolite a filo. */
-#prevLegBox{align-self:start;max-height:min(38vh,300px);overflow:auto;overscroll-behavior:contain;
+#prevLegBox{align-self:start;max-height:min(28vh,220px);overflow:auto;overscroll-behavior:contain;
   background:#fff;border:1px solid var(--line);line-height:0}
 #prevLeg{display:block;width:auto;max-width:none}
 #prevLegBox:focus-visible{outline:2px solid var(--cyn);outline-offset:1px}
-#dayTgl{position:absolute;top:8px;right:10px;display:flex;z-index:1000}
-#dayTgl button{font-family:var(--mono);font-size:10px;letter-spacing:.15em;padding:4px 12px;cursor:pointer;
-  background:#081018;color:var(--dim);border:1px solid var(--line)}
-#dayTgl button.act{color:#04070b;background:var(--cyn);border-color:var(--cyn);font-weight:700}
-#legend{position:absolute;bottom:8px;left:10px;display:flex;gap:10px;font-family:var(--mono);font-size:10px;
-  color:var(--dim);background:rgba(4,7,11,.85);padding:4px 8px;border:1px solid var(--line);z-index:1000;flex-wrap:wrap}
+/* OGGI/DOMANI del bollettino: nella striscia SULLA CARTINA della vista ALLERTA */
+/* pastiglie segmentate (OGGI/DOMANI, AREA/MONDO): bordo --dim visibile, come
+   i pulsantini della Mia Sala (rule 04a: un bordo a 1,1:1 e' invisibile) */
+.segm{display:inline-flex;vertical-align:middle}
+.segm button{font-family:var(--mono);font-size:10px;letter-spacing:.15em;padding:4px 12px;cursor:pointer;min-height:28px;
+  background:#081018;color:var(--dim);border:1px solid var(--dim)}
+.segm button:focus-visible{outline:2px solid #ffbe2e;outline-offset:1px}
+.segm button[aria-pressed="true"]{color:#04070b;background:var(--cyn);border-color:var(--cyn);font-weight:700}
+/* Legenda DINAMICA: elenca solo cio' che e' davvero acceso sulla cartina in
+   questo momento, e lo dice quando non c'e' niente. Prima era fissa (livelli
+   di allerta + sisma) anche con la cartina piena di satelliti. */
+#legend{display:flex;gap:10px;font-family:var(--mono);font-size:10px;
+  color:var(--dim);background:rgba(4,7,11,.97);padding:4px 8px;border:1px solid var(--line);flex-wrap:wrap;
+  max-width:100%} /* fondo quasi pieno: il contrasto non dipende dalla tessera sotto */
+#legend b{color:var(--tx);font-weight:600;letter-spacing:.12em}
+.leaflet-control-attribution{background:rgba(4,7,11,.92)!important;color:var(--dim)!important;font-family:var(--mono)!important}
+.leaflet-control-attribution a{color:var(--cyn)!important}
 #legend i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px;vertical-align:-1px}
 
 #side{position:fixed;top:76px;right:0;bottom:52px;width:min(380px,42vw);background:var(--panel);
@@ -355,6 +383,23 @@ html.a11y-pause-anim .fchip{transition:none}
 #sideHd{display:flex;align-items:center;gap:8px;padding:9px 12px;border-bottom:1px solid var(--line);background:var(--panel2)}
 #sideHd h2{font-size:12px;letter-spacing:.14em;color:#eaf6ef;font-weight:600}
 #sideHd .dot{width:7px;height:7px;border-radius:50%;background:var(--grn);animation:blink 1.6s infinite;flex:0 0 auto}
+/* ---- SULLA CARTINA ----------------------------------------------------------
+   🔴 La cartina e' DELLA VISTA (23/09/2026). I livelli di cartina non stanno
+   piu' nella barra dei tab, dove sembravano tab anche loro (l'utente apriva
+   «VOLO» aspettandosi i filtri degli aerei, che stanno in EMERGENZE, e in
+   SATELLITI trovava sismi e zone di allerta ma nessun satellite, perche' il
+   livello ORBITE era spento e il suo pulsante fuori schermo). Ogni vista
+   mostra QUI, in testa al proprio pannello, i suoi livelli e i loro comandi. */
+#sideMap{padding:7px 10px 8px;border-bottom:1px solid var(--line);background:#081018}
+#sideMap[hidden]{display:none}
+.smGrp{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.smGrp[hidden]{display:none}
+.smLbl{font-family:var(--mono);font-size:9px;letter-spacing:.16em;color:var(--dim);margin-right:2px}
+#sideMap .fchip .ic{margin:0}
+/* bersagli di almeno 24 px (WCAG 2.2 AA 2.5.8): le pastiglie del pannello
+   sono a 23 px, qui si alzano perche' sono comandi della cartina */
+#sideMap .fchip{min-height:28px}
+#sideMap .fchip[aria-pressed="false"]{border-color:var(--dim)}
 #feed{flex:1;overflow-y:auto;padding:10px 10px 20px;scrollbar-width:thin;scrollbar-color:#1a2c3b transparent}
 #feed a{color:var(--cyn)}
 #shareBar{display:flex;flex-wrap:wrap;gap:4px;align-items:center;padding:6px 10px;
@@ -476,7 +521,9 @@ html.a11y-pause-anim .fchip{transition:none}
 #sideCol:focus-visible{outline:2px solid var(--cyn);outline-offset:-2px}
 #side{transition:transform .25s;max-width:100vw;transform:none}
 #map{transition:right .25s}
-body.side-closed #side{transform:translateX(100%)}
+/* chiuso = anche invisibile all'albero di accessibilita': un pannello solo
+   traslato fuori schermo resta nell'ordine di Tab (WCAG 2.4.3/2.4.7) */
+body.side-closed #side{transform:translateX(100%);visibility:hidden;transition:transform .25s,visibility 0s .25s}
 body.side-closed #map{right:0}
 body.side-closed #sideCol{right:0}
 #sideTgl{display:none}
@@ -491,7 +538,7 @@ body.side-closed #sideCol{right:0}
    griglia: 2 colonne a 900, 3 a 1280, 5 su un monitor da 1920.
    Sotto i 900 px resta la colonna: su un telefono «insieme» non esiste. */
 @media(min-width:900px){
-  body.muro #side{left:0;width:auto;border-left:none}
+  body.muro #side{left:0;width:auto;border-left:none;transform:none;visibility:visible}
   body.muro #sideCol{display:none}
   /* 🔴 Colonne, non griglia. Con una griglia l'altezza di ogni riga e' quella
      della scheda piu' alta: sotto una scheda corta resta un buco grande
@@ -504,9 +551,10 @@ body.side-closed #sideCol{right:0}
   /* guida, avvisi e legenda non sono schede: prendono tutta la larghezza */
   body.muro #feed > .miaBox,body.muro #feed > .miaFoot{column-span:all;break-inside:avoid}
   body.muro #feed > .miaVuoto{column-span:all;max-width:760px}
-  /* 🔴 I livelli di cartina si nascondono: la cartina e' coperta dal muro e
-     un comando che non produce nulla e' un invito a sbagliare. */
-  body.muro #nav [data-l],body.muro #nav .sepLay{display:none}
+  /* 🔴 La striscia SULLA CARTINA e l'interruttore SOLO LA VISTA si
+     nascondono: la cartina e' coperta dal muro e un comando che non produce
+     nulla e' un invito a sbagliare. */
+  body.muro #nav #soloBtn,body.muro #nav .sepLay,body.muro #sideMap{display:none}
 }
 @media(max-width:720px){
   #hdr{gap:6px;padding:0 8px}
@@ -516,14 +564,12 @@ body.side-closed #sideCol{right:0}
   #zonaPill{overflow:hidden;text-overflow:ellipsis;max-width:30vw}
   #map{right:0}
   #sideCol{display:none}
-  #side{width:min(88vw,340px);transform:translateX(100%);transition:transform .3s;box-shadow:-8px 0 30px #000}
-  #side.open{transform:none}
+  #side{width:min(88vw,340px);transform:translateX(100%);visibility:hidden;transition:transform .3s,visibility 0s .3s;box-shadow:-8px 0 30px #000}
+  #side.open{transform:none;visibility:visible;transition:transform .3s}
   #sideTgl{display:block;position:fixed;right:10px;top:84px;z-index:1060;background:var(--panel2);
     border:1px solid var(--line);color:var(--tx);font-family:var(--mono);font-size:11px;padding:6px 10px;cursor:pointer}
   #hdr .hideS{display:none}
-  #dayTgl{top:auto;bottom:40px;right:10px}
-  #prevCtl{top:auto;bottom:78px;right:10px;max-width:170px}
-  #prevLegBox{max-height:min(32vh,240px)}
+  #prevLegBox{max-height:min(28vh,200px)}
   #srcTag{display:none}
 }
 @media(prefers-reduced-motion:reduce){
@@ -561,7 +607,7 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
 <body>
 
 <header id="hdr">
-  <div class="logo">SALA <b>SITUAZIONI</b><small>PROTEZIONE CIVILE GENZANO DI ROMA · SPERIMENTALE</small></div>
+  <h1 class="logo">SALA <b>SITUAZIONI</b><small>PROTEZIONE CIVILE GENZANO DI ROMA · SPERIMENTALE</small></h1>
   <span class="pill l-1" id="zonaPill">ZONA F: <b id="zonaLvl">…</b></span>
   <span class="pill hideS">SISMI 7GG: <b id="qkN">…</b></span>
   <span class="pill hideS">PIOGGIA 24H: <b id="rainN">…</b></span>
@@ -576,42 +622,36 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
   <span id="clock">--:--:--</span>
 </header>
 
-<nav id="nav" aria-label="Pannelli e livelli mappa">
+<nav id="nav" aria-label="Pannelli della sala">
   <!-- 🔴 Ordine per TIPOLOGIA, non alfabetico: in emergenza non si cerca una
        voce per iniziale, si cerca la famiglia. Le quattro famiglie seguono il
        ciclo del rischio della rule 06 — che cosa e' previsto, che cosa sta
        succedendo, con che cosa lo guardo, che cosa fa la sala — e sono divise
        da un separatore. MIA SALA resta sempre la prima, fuori dalle famiglie.
        I tasti 1-9 seguono QUESTO ordine (vedi il gestore keydown): chi cambia
-       l'ordine qui cambia anche le scorciatoie, ed e' voluto. -->
-  <button data-v="mia" title="Le schede che hai scelto tu, nell'ordine che vuoi"><span class="ic">★</span>MIA SALA</button>
+       l'ordine qui cambia anche le scorciatoie, ed e' voluto.
+       🔴 Qui stanno SOLO i tab. I livelli di cartina (zone, radar, sismi,
+       orbite…) stanno nella striscia SULLA CARTINA del pannello della vista a
+       cui appartengono (#sideMap): dal 23/09/2026 la cartina e' della vista. -->
+  <button data-v="mia" title="Le schede che hai scelto tu, nell'ordine che vuoi"><span class="ic" aria-hidden="true">★</span>MIA SALA</button>
   <span class="sep"></span>
-  <button data-v="all" class="act" title="Previsione e allertamento — bollettino DPC, Zona F, avvisi delle altre regioni"><span class="ic">▲</span>ALLERTA</button>
-  <button data-v="met" title="Previsione — meteo su Genzano, pioggia, indici di rischio, stazioni"><span class="ic">≋</span>METEO</button>
-  <button data-v="amb" title="Condizioni ambientali — qualita' dell'aria, stato del mare, mareografi"><span class="ic">✿</span>ARIA·MARE</button>
+  <button data-v="all" class="act" title="Previsione e allertamento — bollettino DPC, Zona F, avvisi delle altre regioni"><span class="ic" aria-hidden="true">▲</span>ALLERTA</button>
+  <button data-v="met" title="Previsione — meteo su Genzano, pioggia, indici di rischio, stazioni"><span class="ic" aria-hidden="true">≋</span>METEO</button>
+  <button data-v="amb" title="Condizioni ambientali — qualita' dell'aria, stato del mare, mareografi"><span class="ic" aria-hidden="true">✿</span>ARIA·MARE</button>
   <span class="sep"></span>
-  <button data-v="sis" title="Eventi in corso — terremoti in Italia, Europa e nel mondo"><span class="ic">◈</span>SISMICO</button>
-  <button data-v="ems" title="Eventi in corso — emergenze in Italia, Europa e nel mondo, mezzi aerei, punti caldi"><span class="ic">⚑</span>EMERGENZE</button>
-  <button data-v="tra" title="Eventi in corso — traffico e incidenti segnalati in tempo reale"><span class="ic">⇄</span>TRAFFICO</button>
+  <button data-v="sis" title="Eventi in corso — terremoti in Italia, Europa e nel mondo"><span class="ic" aria-hidden="true">◈</span>SISMICO</button>
+  <button data-v="ems" title="Eventi in corso — emergenze in Italia, Europa e nel mondo, mezzi aerei, punti caldi"><span class="ic" aria-hidden="true">⚑</span>EMERGENZE</button>
+  <button data-v="tra" title="Eventi in corso — traffico e incidenti segnalati in tempo reale"><span class="ic" aria-hidden="true">⇄</span>TRAFFICO</button>
   <span class="sep"></span>
-  <button data-v="map" title="Osservazione — carte e immagini satellitari"><span class="ic">▤</span>CARTE</button>
-  <button data-v="wnd" title="Osservazione — vento e modelli meteo su mappa (Windy)"><span class="ic">☈</span>WINDY</button>
-  <button data-v="orb" title="Osservazione — satelliti in orbita: dove sono adesso e quali passano su Genzano"><span class="ic">✦</span>SATELLITI</button>
-  <button data-v="mar" title="Osservazione — navi in tempo reale via AIS, al largo del Lazio"><span class="ic">⚓</span>NAVI</button>
+  <button data-v="map" title="Osservazione — carte e immagini satellitari"><span class="ic" aria-hidden="true">▤</span>CARTE</button>
+  <button data-v="wnd" title="Osservazione — vento e modelli meteo su mappa (Windy)"><span class="ic" aria-hidden="true">☈</span>WINDY</button>
+  <button data-v="orb" title="Osservazione — satelliti in orbita: dove sono adesso e quali passano su Genzano"><span class="ic" aria-hidden="true">✦</span>SATELLITI</button>
+  <button data-v="mar" title="Osservazione — navi in tempo reale via AIS, al largo del Lazio"><span class="ic" aria-hidden="true">⚓</span>NAVI</button>
   <span class="sep"></span>
-  <button data-v="rad" title="Sala — ascolto delle bande radioamatoriali via SDR (spettro e waterfall)"><span class="ic">⌁</span>RADIO</button>
-  <button data-v="log" title="Sala — registro del turno, annotazioni su questo computer"><span class="ic">✎</span>REGISTRO</button>
+  <button data-v="rad" title="Sala — ascolto delle bande radioamatoriali via SDR (spettro e waterfall)"><span class="ic" aria-hidden="true">⌁</span>RADIO</button>
+  <button data-v="log" title="Sala — registro del turno, annotazioni su questo computer"><span class="ic" aria-hidden="true">✎</span>REGISTRO</button>
   <span class="sep sepLay"></span>
-  <button data-l="zone" class="act"><span class="ic">◱</span>ZONE</button>
-  <button data-l="radar"><span class="ic">◉</span>RADAR</button>
-  <button data-l="blitz"><span class="ic">⚡</span>FULMINI</button>
-  <button data-l="qk" class="act"><span class="ic">●</span>SISMI</button>
-  <button data-l="sat"><span class="ic">✦</span>SATELLITE</button>
-  <button data-l="orb"><span class="ic">✧</span>ORBITE</button>
-  <button data-l="fire"><span class="ic">▵</span>FUOCHI</button>
-  <button data-l="fwi"><span class="ic">♨</span>AIB PREV</button>
-  <button data-l="volo"><span class="ic">✈</span>VOLO</button>
-  <button data-l="mareo"><span class="ic">〜</span>MAREE</button>
+  <button id="soloBtn" class="modo" aria-pressed="true" title="Acceso: sulla cartina restano solo i livelli della vista aperta. Spento: i livelli accesi nelle altre viste restano sulla cartina anche quando cambi vista."><span class="ic" aria-hidden="true">⧉</span>SOLO LA VISTA</button>
 </nav>
 <button id="navL" class="navArr" aria-label="Scorri il menu a sinistra"><span aria-hidden="true">‹</span><span class="n" id="navLn"></span></button>
 <button id="navR" class="navArr" aria-label="Scorri il menu a destra"><span class="n" id="navRn"></span><span aria-hidden="true">›</span></button>
@@ -653,52 +693,76 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
     </div>
   </div>
   <span id="srcTag">DPC · INGV · USGS · NASA · ITALIAMETEO · COPERNICUS · OPEN-METEO · BLITZORTUNG · SDR IZ0FKE — STRUMENTO SPERIMENTALE, DATI INDICATIVI</span>
-  <span id="radarLbl">RADAR DPC: —</span>
-  <span id="blitzLbl">FULMINI: —</span>
-  <span id="worldLbl">MONDO — GDACS: VERDE/ARANCIO/ROSSO (anelli = allerta) · CIANO = EMS COPERNICUS · SISMI INGV+USGS 7GG: GIALLO M4+ / ARANCIO M5+ / ROSSO M6+ · MAGENTA = VULCANI ATTIVI (NASA). CLIC SUI PUNTI PER LA SCHEDA</span>
   <button id="mesBtn" aria-pressed="false" title="Misura distanze e raggi sulla mappa: primo clic fissa il centro, secondo clic congela, terzo cancella. ESC esce.">✚ MISURA</button>
-  <span id="coordBox" title="Clic sulla mappa per copiare le coordinate">LAT — · LON —</span>
-  <div id="dayTgl" role="group" aria-label="Giorno bollettino">
-    <button data-d="today" class="act">OGGI</button><button data-d="tomorrow">DOMANI</button>
-  </div>
-  <div id="prevCtl" role="group" aria-label="Livelli previsionali ICON-2I sulla mappa">
-    <span class="pcLbl">PREVISIONI ICON-2I</span>
-    <select id="prevLayer" aria-label="Campo previsionale da mostrare sulla mappa">
-      <option value="">SPENTO</option>
-      <option value="meteohub:t2m-t2m">TEMPERATURA 2 M</option>
-      <option value="meteohub:prec3-tp">PRECIPITAZIONE 3H</option>
-      <option value="meteohub:snow3-snow">NEVE 3H</option>
-      <option value="meteohub:wind-vmax_10m">RAFFICHE VENTO</option>
-      <option value="meteohub:cloud-tcc">NUVOLOSITÀ</option>
-      <option value="meteohub:humidity-r">UMIDITÀ</option>
-      <option value="meteohub:pressure-pmsl">PRESSIONE</option>
-      <option value="meteohub:zerot-hzerocl">ZERO TERMICO</option>
-    </select>
-    <select id="prevTime" aria-label="Orizzonte temporale della previsione">
-      <option value="">ADESSO</option>
-      <option value="6">+6 ORE</option>
-      <option value="12">+12 ORE</option>
-      <option value="24">+24 ORE</option>
-      <option value="36">+36 ORE</option>
-      <option value="48">+48 ORE</option>
-    </select>
-    <div id="prevLegBox" hidden tabindex="0" role="group" aria-label="Legenda della scala di colori: scorri per vederla tutta"><img id="prevLeg" alt="Legenda del campo previsionale selezionato"></div>
-  </div>
-  <div id="legend">
-    <span><i style="background:var(--grn)"></i>NESSUNA</span>
-    <span><i style="background:var(--gia)"></i>GIALLA</span>
-    <span><i style="background:var(--ara)"></i>ARANCIONE</span>
-    <span><i style="background:var(--red)"></i>ROSSA</span>
-    <span><i style="background:var(--cyn);border-radius:0"></i>SISMA</span>
+  <div id="mapInfo">
+    <span id="coordBox" title="Clic sulla mappa per copiare le coordinate">LAT — · LON —</span>
+    <span id="blitzLbl">FULMINI: —</span>
+    <span id="radarLbl">RADAR DPC: —</span>
+    <div id="legend" aria-live="off"><b>CARTINA</b></div>
   </div>
 </main>
 
-<button id="sideTgl" aria-controls="side">☰ PANNELLO</button>
+<button id="sideTgl" aria-controls="side" aria-expanded="false">☰ PANNELLO</button>
 <button id="sideCol" aria-controls="side" aria-expanded="true" title="Riduci il pannello laterale per vedere più mappa">»</button>
 
 <aside id="side">
   <div id="sideHd"><span class="dot"></span><h2 id="sideTitle">ALLERTA — LAZIO</h2>
     <span style="margin-left:auto;font-family:var(--mono);font-size:10px;color:var(--cyn)">AUTOAGGIORNAMENTO</span></div>
+  <!-- 🔴 SULLA CARTINA: i livelli di cartina di OGNI vista, nel suo pannello.
+       Un gruppo per vista (data-per); sideMapSync() mostra quello della vista
+       aperta e allinea aria-pressed allo stato S.layers. Le viste senza livelli
+       (WINDY, TRAFFICO, NAVI, RADIO, REGISTRO, MIA SALA) non hanno la striscia. -->
+  <div id="sideMap" hidden>
+    <div class="smGrp" data-per="all" hidden role="group" aria-labelledby="smLbl-all"><span class="smLbl" id="smLbl-all">SULLA CARTINA</span>
+      <button type="button" class="fchip" data-l="zone" aria-pressed="true" title="Zone di allerta del bollettino DPC, colorate per livello"><span class="ic" aria-hidden="true">◱</span>ZONE DI ALLERTA</button>
+      <span id="dayTgl" class="segm" role="group" aria-label="Giorno del bollettino"><button type="button" data-d="today" aria-pressed="true">OGGI</button><button type="button" data-d="tomorrow" aria-pressed="false">DOMANI</button></span>
+    </div>
+    <div class="smGrp" data-per="met" hidden role="group" aria-labelledby="smLbl-met"><span class="smLbl" id="smLbl-met">SULLA CARTINA</span>
+      <button type="button" class="fchip" data-l="radar" aria-pressed="false" title="Radar DPC: dove sta piovendo adesso (tasto R)"><span class="ic" aria-hidden="true">◉</span>RADAR DPC</button>
+      <button type="button" class="fchip" data-l="blitz" aria-pressed="false" title="Fulmini in tempo reale (Blitzortung): il collegamento si apre solo se acceso"><span class="ic" aria-hidden="true">⚡</span>FULMINI</button>
+      <div id="prevCtl" role="group" aria-label="Campo previsionale ICON-2I sulla cartina">
+        <span class="pcLbl">PREVISIONI ICON-2I SULLA CARTINA</span>
+        <select id="prevLayer" aria-label="Campo previsionale da mostrare sulla cartina">
+          <option value="">SPENTO</option>
+          <option value="meteohub:t2m-t2m">TEMPERATURA 2 M</option>
+          <option value="meteohub:prec3-tp">PRECIPITAZIONE 3H</option>
+          <option value="meteohub:snow3-snow">NEVE 3H</option>
+          <option value="meteohub:wind-vmax_10m">RAFFICHE VENTO</option>
+          <option value="meteohub:cloud-tcc">NUVOLOSITÀ</option>
+          <option value="meteohub:humidity-r">UMIDITÀ</option>
+          <option value="meteohub:pressure-pmsl">PRESSIONE</option>
+          <option value="meteohub:zerot-hzerocl">ZERO TERMICO</option>
+        </select>
+        <select id="prevTime" aria-label="Orizzonte temporale della previsione">
+          <option value="">ADESSO</option>
+          <option value="6">+6 ORE</option>
+          <option value="12">+12 ORE</option>
+          <option value="24">+24 ORE</option>
+          <option value="36">+36 ORE</option>
+          <option value="48">+48 ORE</option>
+        </select>
+        <div id="prevLegBox" hidden tabindex="0" role="group" aria-label="Legenda della scala di colori: scorri per vederla tutta"><img id="prevLeg" alt="Legenda del campo previsionale selezionato"></div>
+      </div>
+    </div>
+    <div class="smGrp" data-per="amb" hidden role="group" aria-labelledby="smLbl-amb"><span class="smLbl" id="smLbl-amb">SULLA CARTINA</span>
+      <button type="button" class="fchip" data-l="mareo" aria-pressed="true" title="Mareografi IOC/UNESCO di Anzio, Civitavecchia e Gaeta"><span class="ic" aria-hidden="true">〜</span>MAREOGRAFI</button>
+    </div>
+    <div class="smGrp" data-per="sis" hidden role="group" aria-labelledby="smLbl-sis"><span class="smLbl" id="smLbl-sis">SULLA CARTINA</span>
+      <button type="button" class="fchip" data-l="qk" aria-pressed="true" title="Terremoti INGV degli ultimi 7 giorni"><span class="ic" aria-hidden="true">●</span>SISMI 7 GIORNI</button>
+    </div>
+    <div class="smGrp" data-per="ems" hidden role="group" aria-labelledby="smLbl-ems"><span class="smLbl" id="smLbl-ems">SULLA CARTINA</span>
+      <button type="button" class="fchip" data-l="volo" aria-pressed="true" title="Mezzi aerei: la cartina segue il filtro scelto nella scheda «Mezzi aerei»"><span class="ic" aria-hidden="true">✈</span>MEZZI AEREI</button>
+      <button type="button" class="fchip" data-l="fire" aria-pressed="true" title="Punti caldi da satellite EFFIS (Copernicus)"><span class="ic" aria-hidden="true">▵</span>FUOCHI EFFIS</button>
+      <button type="button" class="fchip" data-l="fwi" aria-pressed="false" title="Indice di pericolo incendi previsto (Fire Weather Index, EFFIS)"><span class="ic" aria-hidden="true">♨</span>AIB PREVISIONALE</button>
+      <span id="emsScala" class="segm" role="group" aria-label="Scala della cartina"><button type="button" data-scala="area" aria-pressed="true" title="Cartina centrata su Genzano, circa 400 km: i mezzi aerei si leggono">AREA 400 KM</button><button type="button" data-scala="mondo" aria-pressed="false" title="Planisfero: emergenze GDACS ed EMS nel mondo">MONDO</button></span>
+    </div>
+    <div class="smGrp" data-per="map" hidden role="group" aria-labelledby="smLbl-map"><span class="smLbl" id="smLbl-map">SULLA CARTINA</span>
+      <button type="button" class="fchip" data-l="sat" aria-pressed="true" title="Immagine satellitare NASA in colori reali del giorno precedente"><span class="ic" aria-hidden="true">✦</span>SATELLITE NASA</button>
+    </div>
+    <div class="smGrp" data-per="orb" hidden role="group" aria-labelledby="smLbl-orb"><span class="smLbl" id="smLbl-orb">SULLA CARTINA</span>
+      <button type="button" class="fchip" data-l="orb" aria-pressed="true" title="Verticale a terra dei satelliti selezionati e sopra l'orizzonte di Genzano (al massimo 400)"><span class="ic" aria-hidden="true">✧</span>ORBITE</button>
+    </div>
+  </div>
   <div id="feed" role="log" aria-live="polite"><div class="skel"></div><div class="skel"></div><div class="skel"></div></div>
   <div id="shareBar" aria-label="Condividi questa schermata">
     <span class="shLbl">CONDIVIDI:</span>
@@ -712,14 +776,14 @@ button:focus-visible{outline:2px solid var(--cyn);outline-offset:2px}
   </div>
 </aside>
 
-<footer id="news">
+<div id="news" role="region" aria-label="Notizie delle agenzie di stampa">
   <span class="lbl">NOTIZIE</span>
   <div style="flex:1;overflow:hidden"><div id="newsWrap"><span id="newsTxt">CARICAMENTO ULTIME NOTIZIE DEL SITO…</span><span id="newsTxt2" aria-hidden="true"></span></div></div>
-</footer>
-<footer id="tick">
+</div>
+<div id="tick" role="region" aria-label="Tempo reale: feed ufficiali">
   <span class="lbl">TEMPO REALE</span>
   <div style="flex:1;overflow:hidden"><div id="tickWrap"><span id="tickTxt">CARICAMENTO FEED UFFICIALI…   ···   </span><span id="tickTxt2" aria-hidden="true"></span></div></div>
-</footer>
+</div>
 
 <script src="../vendor/leaflet/leaflet.js"></script>
 <!-- SGP4 vendorizzato (MIT): le posizioni dei satelliti si calcolano qui,
@@ -763,7 +827,14 @@ const EMS_COL={Wildfire:"#ff8c1a",Flood:"#37c7ff",Storm:"#b48cff",Earthquake:"#f
   "Volcanic activity":"#ff3b30",Landslide:"#c99e6b",Other:"#5d7a6e"};
 
 const S={view:"all",day:"today",black:false,
-  layers:{zone:true,radar:false,qk:true,sat:false,fire:false,blitz:false,fwi:false,volo:false,mareo:false,orb:false},
+  /* Scelta per ogni livello DENTRO la sua vista (la vista che lo possiede e'
+     in VISTA_DI). I default accendono cio' che la vista e' fatta per mostrare;
+     restano spenti solo i livelli che aprono un collegamento vivo (fulmini,
+     WebSocket) o che sovrappongono una scala di colori facile da confondere
+     con l'allerta (AIB previsionale). */
+  layers:{zone:true,radar:true,qk:true,sat:true,fire:true,blitz:false,fwi:false,volo:true,mareo:true,orb:true},
+  solo:true, // SOLO LA VISTA: sulla cartina restano solo i livelli della vista aperta
+  emsScala:"area", // EMERGENZE: "area" (Genzano, ~400 km) o "mondo" (planisfero)
   voloFiltro:"tutti",
   boll:null,bollVecchio:null,zones:{today:null,tomorrow:null},sito:null,
   quakes:[],wx:null,wxT:0,aria:null,mare:null,mareog:null,ems:[],emsSnap:null,
@@ -774,6 +845,16 @@ const S={view:"all",day:"today",black:false,
 try{S.logArr=JSON.parse(localStorage.getItem("pcgz-monitor-log")||"[]")||[]}catch(e){S.logArr=[]}
 const $=s=>document.querySelector(s);
 const pad=n=>String(n).padStart(2,"0");
+/* 🔴 LA CARTINA E' DELLA VISTA (23/09/2026). Richiesta dell'utente: «quando
+   entro in un tab voglio vedere quel tipo di dato specifico e non tutti i dati
+   degli altri tab». Ogni livello di cartina appartiene a UNA vista; e' visibile
+   se e' acceso nella sua vista E (con SOLO LA VISTA attivo) se quella vista e'
+   aperta. Con SOLO LA VISTA spento i livelli accesi restano anche cambiando
+   vista: e' la composizione libera (radar + zone insieme) per chi la vuole.
+   `prev` e' il campo previsionale ICON-2I, che ha i suoi due menu' a tendina. */
+const VISTA_DI={zone:"all",radar:"met",blitz:"met",prev:"met",mareo:"amb",qk:"sis",volo:"ems",fire:"ems",fwi:"ems",sat:"map",orb:"orb"};
+const layerVis=k=>!!S.layers[k]&&(!S.solo||VISTA_DI[k]===S.view);
+const prevVis=()=>!!$("#prevLayer").value&&(!S.solo||VISTA_DI.prev===S.view);
 const now=()=>new Date().toLocaleTimeString("it-IT",{timeZone:"Europe/Rome",hour:"2-digit",minute:"2-digit",second:"2-digit"});
 const lvlOf=t=>{const s=String(t||"").toUpperCase();
   return /\bROSS[AO]\b/.test(s)?3:/\bARANCIONE\b/.test(s)?2:/\bGIALL[AO]\b/.test(s)?1:
@@ -820,9 +901,12 @@ map.createPane("radarPane"); map.getPane("radarPane").style.zIndex=420;
 map.createPane("qkPane");    map.getPane("qkPane").style.zIndex=450;
 
 // stella di Genzano — stesso divIcon del cruscotto del sito
-L.marker([GENZANO.lat,GENZANO.lon],{keyboard:true,icon:L.divIcon({className:"stella",
+L.marker([GENZANO.lat,GENZANO.lon],{keyboard:true,alt:"Genzano di Roma — sede del Gruppo, zona di allerta F",icon:L.divIcon({className:"stella",
   html:'<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M13 1l3.4 7.6L24 9.3l-5.8 5 1.8 7.9L13 18.4 5.9 22.2l1.8-7.9L2 9.3l7.6-.7z" fill="#ffd166" stroke="#0b1622" stroke-width="1.4"/></svg>',
   iconSize:[26,26],iconAnchor:[13,13]})}).bindPopup("<b>Genzano di Roma</b><br>Zona di allerta F — Bacini Costieri Sud").addTo(map);
+// 🔴 un marcatore da tastiera (role=button) senza nome e' muto per lo screen
+//    reader: il divIcon e' un <div>, l'opzione `alt` vale solo per le <img>
+{const st=document.querySelector("#lmap .stella");if(st){st.setAttribute("aria-label","Genzano di Roma: sede del Gruppo, zona di allerta F");st.setAttribute("title","Genzano di Roma");}}
 
 // RADAR DPC — stesso metodo del cruscotto (WMTS geowebcache; il TIME è ignorato
 // dal servizio, quindi si mostra l'ultimo fotogramma con l'orario reale dall'API)
@@ -840,7 +924,7 @@ async function radarStamp(){
     $("#radarLbl").textContent="RADAR DPC (SRI): "+hm(ms)+" · "+age+" MIN FA"+(age>15?" · IN RITARDO":"");
   }catch(e){$("#radarLbl").textContent="RADAR DPC: orario non verificabile";}
 }
-function radarRefresh(){ if(S.layers.radar){radarLayer.setUrl(radarUrl());radarStamp();} }
+function radarRefresh(){ if(layerVis("radar")){radarLayer.setUrl(radarUrl());radarStamp();} }
 setInterval(radarRefresh,5*60e3);
 
 // SATELLITE — NASA GIBS VIIRS true color (come il cruscotto), giorno precedente
@@ -878,7 +962,7 @@ function lzwDecode(b){
   return out.join("");
 }
 function blitzConnect(){
-  if(blitzWs||!S.layers.blitz)return;
+  if(blitzWs||!layerVis("blitz"))return;
   try{
     const ws=new WebSocket(BLITZ_HOSTS[blitzIdx++%BLITZ_HOSTS.length]);
     blitzWs=ws;
@@ -893,7 +977,7 @@ function blitzConnect(){
       S.strikes.push(m._t);
       blitzLbl();
     }catch(e){}};
-    ws.onclose=()=>{blitzWs=null;if(S.layers.blitz)setTimeout(blitzConnect,4000);};
+    ws.onclose=()=>{blitzWs=null;if(layerVis("blitz"))setTimeout(blitzConnect,4000);};
     ws.onerror=()=>{try{ws.close()}catch(e){}};
   }catch(e){blitzWs=null;}
 }
@@ -908,7 +992,7 @@ setInterval(()=>{ // dissolvenza per età + pulizia oltre 10 minuti
     m.setStyle({fillOpacity:Math.max(.15,.95-(age/(10*60e3))*.8),radius:age<90e3?5:3.5});
   });
   S.strikes=S.strikes.filter(t=>nowMs-t<=10*60e3);
-  if(S.layers.blitz){blitzLbl();tickUpd();}
+  if(layerVis("blitz")){blitzLbl();tickUpd();}
 },20e3);
 
 // PREVISIONI ICON-2I — WMS ItaliaMeteo/MeteoHub (CC BY 4.0), stessi campi del
@@ -921,20 +1005,29 @@ const prevWms=L.tileLayer.wms(WMS_IM,
    opacity:.55,maxZoom:11,attribution:"Agenzia ItaliaMeteo — modello ICON-2I (CC BY 4.0)"});
 function applyPrev(){
   const lay=$("#prevLayer").value, off=$("#prevTime").value, leg=$("#prevLeg"), legBox=$("#prevLegBox");
-  if(!lay){
+  // il campo scelto resta scelto, ma sulla cartina compare solo nella vista
+  // METEO se SOLO LA VISTA e' acceso (stessa regola degli altri livelli)
+  if(!lay||!prevVis()){
     if(map.hasLayer(prevWms))map.removeLayer(prevWms);
-    legBox.hidden=true; return;
+    legBox.hidden=!lay; return;
   }
   const p={layers:lay};
   if(off){const d=new Date();d.setUTCMinutes(0,0,0);d.setUTCHours(d.getUTCHours()+parseInt(off,10));p.time=d.toISOString();}
   else p.time=null;
-  prevWms.setParams(p);
+  // setParams ridisegna TUTTE le tessere: si chiama solo se campo o orizzonte
+  // sono cambiati (applyLayers passa di qui a ogni cambio vista o pastiglia)
+  const cur=prevWms.wmsParams||{};
+  if(cur.layers!==lay||(cur.time||null)!==(p.time||null))prevWms.setParams(p);
   if(!map.hasLayer(prevWms))map.addLayer(prevWms);
-  leg.src=WMS_IM+"?service=WMS&request=GetLegendGraphic&format=image/png&version=1.1.1&layer="+encodeURIComponent(lay);
+  const src=WMS_IM+"?service=WMS&request=GetLegendGraphic&format=image/png&version=1.1.1&layer="+encodeURIComponent(lay);
+  if(leg.getAttribute("src")!==src)leg.src=src;
+  const o=$("#prevLayer").selectedOptions[0], nome=o?o.textContent:"";
+  leg.alt="Scala di colori del campo "+nome+(off?" a +"+off+" ore":" adesso")+": i valori si leggono solo nell'immagine";
+  legBox.setAttribute("aria-label","Legenda "+nome+": scorri per vederla tutta");
   legBox.hidden=false;
 }
-$("#prevLayer").addEventListener("change",()=>{applyPrev();saveCfg();});
-$("#prevTime").addEventListener("change",()=>{applyPrev();saveCfg();});
+$("#prevLayer").addEventListener("change",()=>{applyPrev();legendUpd();saveCfg();});
+$("#prevTime").addEventListener("change",()=>{applyPrev();legendUpd();saveCfg();});
 
 /* ---------------- MISURA — distanze e raggi d'azione sulla mappa ----------------
    Per pianificare: raggio di evacuazione, distanza di una squadra da un punto.
@@ -989,20 +1082,73 @@ let zoneLayer=null, qkLayer=L.layerGroup([]);
 const voloLayer=L.layerGroup([]), mareoLayer=L.layerGroup([]), orbLayer=L.layerGroup([]);
 qkLayer.addTo(map);
 
+// in modalita' mondo (vista EMERGENZE) worldLayer e' definito piu' avanti nel
+// file: il try copre la chiamata, che in pratica arriva sempre dopo
+const inWorld=()=>{try{return map.hasLayer(worldLayer)}catch(e){return false}};
 function applyLayers(){
   const on=(lay,flag)=>{ if(flag&&!map.hasLayer(lay))map.addLayer(lay);
                          if(!flag&&map.hasLayer(lay))map.removeLayer(lay); };
-  on(radarLayer,S.layers.radar); on(satLayer,S.layers.sat); on(fireLayer,S.layers.fire);
-  on(fwiLayer,S.layers.fwi); on(blitzLayer,S.layers.blitz);
-  on(qkLayer,S.layers.qk);
-  on(voloLayer,S.layers.volo); on(mareoLayer,S.layers.mareo); on(orbLayer,S.layers.orb);
-  if(S.layers.orb){ if(!S.orb.recs.length&&!S.orb.busy)orbCarica(false); else orbDisegna(); }
-  if(zoneLayer)on(zoneLayer,S.layers.zone);
-  $("#radarLbl").style.display=S.layers.radar?"block":"none";
-  $("#blitzLbl").style.display=S.layers.blitz?"block":"none";
-  if(S.layers.blitz){blitzConnect();blitzLbl();}
+  const radarEra=map.hasLayer(radarLayer);
+  on(radarLayer,layerVis("radar")); on(satLayer,layerVis("sat")); on(fireLayer,layerVis("fire"));
+  on(fwiLayer,layerVis("fwi")); on(blitzLayer,layerVis("blitz"));
+  // 🔴 in modalita' mondo i sismi stanno gia' nel layer mondo: non si
+  //    riaggiungono sopra (prima un clic sul livello li raddoppiava)
+  on(qkLayer,qkVis());
+  on(voloLayer,layerVis("volo")); on(mareoLayer,layerVis("mareo")); on(orbLayer,layerVis("orb"));
+  // caricamento automatico dei satelliti: non si ritenta di continuo dopo un
+  // guasto (ogni cambio vista rifarebbe 11 richieste a CelesTrak); la riprova
+  // esplicita resta ai pulsanti della scheda
+  if(layerVis("orb")){ if(!S.orb.recs.length&&!S.orb.busy&&Date.now()-(S.orb.ultimoTentativo||0)>5*60e3)orbCarica(false); else if(S.orb.recs.length)orbDisegna(); }
+  if(zoneLayer)on(zoneLayer,layerVis("zone"));
+  $("#radarLbl").style.display=layerVis("radar")?"block":"none";
+  $("#blitzLbl").style.display=layerVis("blitz")?"block":"none";
+  if(layerVis("blitz")){blitzConnect();blitzLbl();}
   else if(blitzWs){try{blitzWs.close()}catch(e){} blitzWs=null;}
-  if(S.layers.radar)radarStamp();
+  if(layerVis("radar")&&!radarEra)radarStamp(); // l'orario del radar si rilegge quando si accende, poi ogni 5 minuti
+  applyPrev(); sideMapSync(); legendUpd();
+}
+// i sismi INGV non stanno sulla cartina in modalita' mondo (li' sono nel layer mondo)
+const qkVis=()=>layerVis("qk")&&!inWorld();
+/* La striscia SULLA CARTINA: mostra il gruppo della vista aperta e allinea le
+   pastiglie allo stato. Gli elementi sono fissi nel documento (non si
+   rigenerano a ogni render): chi ha il fuoco su una pastiglia non lo perde. */
+function sideMapSync(){
+  const box=$("#sideMap"); if(!box)return;
+  let alcuno=false;
+  box.querySelectorAll(".smGrp").forEach(g=>{const mio=g.dataset.per===S.view; g.hidden=!mio; if(mio)alcuno=true;});
+  box.hidden=!alcuno;
+  box.querySelectorAll("button[data-l]").forEach(b=>b.setAttribute("aria-pressed",String(!!S.layers[b.dataset.l])));
+  box.querySelectorAll("button[data-scala]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.scala===S.emsScala)));
+}
+/* Legenda dinamica della cartina: una voce per ogni livello DAVVERO visibile
+   adesso, nell'ordine dei livelli; `q` = quadratino (raster o simbolo non
+   tondo). Colori identici a quelli usati dai marcatori. */
+const LEGENDA={
+  zone:[["var(--grn)","NESSUNA"],["var(--gia)","GIALLA"],["var(--ara)","ARANCIONE"],["var(--red)","ROSSA"]],
+  radar:[["var(--cyn)","RADAR DPC","q"]],
+  blitz:[["#ffd60a","FULMINE (10 MIN)"]],
+  qk:[["var(--cyn)","SISMA","q"]],
+  mareo:[["#37c7ff","MAREOGRAFO"],["#ff8c1a","VARIA ≥30 CM/H"],["#ff3b30","VARIA ≥50 CM/H"]],
+  volo:[["#37c7ff","AEREO"],["#b48cff","ELICOTTERO"],["#ff8c1a","ANTINCENDIO"],["#ff3b30","EMERGENZA"]],
+  fire:[["#ff3b30","FUOCHI EFFIS","q"]],
+  fwi:[["#ff8c1a","AIB PREVISIONALE","q"]],
+  sat:[["#9fb3c4","SATELLITE NASA (IERI)","q"]],
+  orb:[["#ffd60a","SAT. PROTEZIONE CIVILE"],["#e879f9","SAT. ILLUMINATO"],["#7fa8c9","SAT. IN OMBRA"]],
+  // livello mondo (EMERGENZE): stessi colori di .gd-dot; era un'etichetta
+  // galleggiante che si sovrapponeva al riquadro delle fonti
+  mondo:[["#35e08c","GDACS VERDE"],["#ff8c1a","GDACS ARANCIO"],["#ff3b30","GDACS ROSSO"],["#37c7ff","EMS COPERNICUS"],
+         ["#ffd60a","SISMA M4+ (7 GG)"],["#ff8c1a","SISMA M5+"],["#ff3b30","SISMA M6+"],["#e879f9","VULCANO ATTIVO"]],
+};
+const LEG_ORDINE=["zone","radar","blitz","qk","mareo","volo","fire","fwi","sat","orb"];
+function legendUpd(){
+  const el=$("#legend"); if(!el)return;
+  const parti=[];
+  if(inWorld())for(const [c,t] of LEGENDA.mondo)parti.push(`<span><i style="background:${c}"></i>${t}</span>`);
+  for(const k of LEG_ORDINE)if(k==="qk"?qkVis():layerVis(k))
+    for(const [c,t,q] of LEGENDA[k])parti.push(`<span><i style="background:${c}${q?";border-radius:2px":""}"></i>${t}</span>`);
+  if(prevVis()){const o=$("#prevLayer").selectedOptions[0];
+    parti.push(`<span><i style="background:#c9a0dc;border-radius:2px"></i>ICON-2I ${esc(o?o.textContent:"")}</span>`);}
+  el.innerHTML="<b>CARTINA</b>"+(parti.length?parti.join(""):"<span>NESSUN LIVELLO ACCESO IN QUESTA VISTA</span>");
 }
 
 /* ---------------- topojson minimale → GeoJSON ---------------- */
@@ -1043,7 +1189,7 @@ function buildZoneLayer(){
       ly.bindPopup(`<b>${p["Nome zona"]}</b><br>`+
         RISKS.map(([k,s])=>s+": "+lvlText(lvlOf(p[k]||""))).join("<br>"));}
   });
-  if(S.layers.zone)zoneLayer.addTo(map);
+  if(layerVis("zone"))zoneLayer.addTo(map);
 }
 
 /* ---------------- allerta: pipeline del sito + DPC ---------------- */
@@ -1583,12 +1729,13 @@ function buildVolo(){
     const eli=v.etichette.includes("elicottero");
     const rot=Number.isFinite(v.rotta)?v.rotta:0;
     const html=eli
-      ?`<span class="acPin" style="color:${col}">✚</span>`
-      :`<span class="acPin" style="color:${col};display:inline-block;transform:rotate(${rot}deg)">➤</span>`;
+      ?`<span class="acHit"><span class="acPin" style="color:${col}">✚</span></span>`
+      :`<span class="acHit"><span class="acPin" style="color:${col};display:inline-block;transform:rotate(${rot}deg)">➤</span></span>`;
     const nome=esc(v.immatricolazione||v.volo||v.hex||"—");
     L.marker([v.lat,v.lon],{keyboard:true,
-      icon:L.divIcon({className:"",html,iconSize:[16,16],iconAnchor:[8,8]}),
+      icon:L.divIcon({className:"",html,iconSize:[24,24],iconAnchor:[12,12]}),
       alt:`Velivolo ${nome}`})
+      .on("add",ev=>{const el=ev.target.getElement();if(el)el.setAttribute("aria-label",`Velivolo ${nome}`);})
       .bindPopup(`<b>${nome}</b><br>${esc(v.modello||v.tipo_icao||"modello non dichiarato")}`+
         `<br>${esc(v.categoria)}`+
         `<br>${v.a_terra?"a terra":(Number.isFinite(v.quota_ft)?Math.round(v.quota_ft)+" ft":"quota N/D")}`+
@@ -1714,7 +1861,9 @@ async function ensureWorldGeo(){
     worldGeo=L.geoJSON(d,{pane:"worldGeoPane",
       style:{color:"#1c3040",weight:.7,fillColor:"#0d1826",fillOpacity:1},
       attribution:"Confini: Natural Earth (pubblico dominio)"});
-    if(map.hasLayer(worldLayer))worldGeo.addTo(map); // modalità mondo già attiva
+    // modalita' mondo ancora attiva E scala ancora "mondo": se nel frattempo si e'
+    // passati ad AREA, i confini non vanno sopra le tessere (rilievo di revisione)
+    if(map.hasLayer(worldLayer)&&S.emsScala==="mondo")worldGeo.addTo(map);
   }catch(e){}
   worldGeoBusy=false;
 }
@@ -1773,25 +1922,42 @@ function buildWorld(){
       .addTo(worldLayer);
   }
 }
+/* 🔴 EMERGENZE ha DUE scale (23/09/2026, rilievo di revisione): a zoom mondo i
+   mezzi aerei entro 400 km da Genzano sono un grumo illeggibile, e la vista
+   riportava al planisfero a ogni ingresso. "area" = Genzano a zoom 6 con le
+   tessere OSM (aerei, fuochi e pronto soccorso leggibili); "mondo" = planisfero
+   senza tessere con i confini Natural Earth (GDACS/EMS nel mondo). I marcatori
+   del mondo restano in entrambe. Scelta persistita in S.emsScala. */
+function emsScalaVista(){
+  const area=S.emsScala==="area";
+  map.setView(area?[GENZANO.lat,GENZANO.lon]:[24,10],area?6:2,{animate:false});
+}
+function emsScalaSfondo(){
+  const area=S.emsScala==="area";
+  if(area){ if(!map.hasLayer(baseTile))baseTile.addTo(map); if(worldGeo&&map.hasLayer(worldGeo))map.removeLayer(worldGeo); }
+  else { if(map.hasLayer(baseTile))map.removeLayer(baseTile); if(worldGeo){if(!map.hasLayer(worldGeo))worldGeo.addTo(map);} else ensureWorldGeo(); }
+}
+function emsScalaSet(v){
+  if((v!=="area"&&v!=="mondo")||v===S.emsScala)return;
+  S.emsScala=v; sideMapSync(); saveCfg();
+  if(inWorld()){emsScalaVista();emsScalaSfondo();}
+}
 function worldMode(on){
   const active=map.hasLayer(worldLayer);
   if(on&&!active){
     worldPrev={c:map.getCenter(),z:map.getZoom()};
-    if(map.hasLayer(baseTile))map.removeLayer(baseTile); // niente tile a zoom mondo
     if(map.hasLayer(qkLayer))map.removeLayer(qkLayer);   // i sismi qui sono nel layer mondo
     // vista SENZA animazione e PRIMA di aggiungere i marker: i marker inseriti
     // durante l'animazione di zoom restano in posizioni sbagliate (quirk Leaflet)
-    map.setView([24,10],2,{animate:false});
+    emsScalaVista();
     buildWorld(); worldLayer.addTo(map);
-    if(worldGeo)worldGeo.addTo(map); else ensureWorldGeo();
-    $("#worldLbl").style.display="block";
+    emsScalaSfondo();
   }else if(!on&&active){
     map.removeLayer(worldLayer);
     if(worldGeo&&map.hasLayer(worldGeo))map.removeLayer(worldGeo);
     if(!map.hasLayer(baseTile))baseTile.addTo(map);
-    if(S.layers.qk&&!map.hasLayer(qkLayer))qkLayer.addTo(map);
+    if(layerVis("qk")&&!map.hasLayer(qkLayer))qkLayer.addTo(map);
     if(worldPrev){map.setView(worldPrev.c,worldPrev.z,{animate:false});worldPrev=null;}
-    $("#worldLbl").style.display="none";
   }
 }
 
@@ -2442,7 +2608,7 @@ function viewEms(){
         voloCategorie().map(([c,n])=>`<button type="button" class="fchip" data-vf="cat:${esc(c)}" aria-pressed="${S.voloFiltro==="cat:"+c}">${esc(c.toUpperCase())}<span class="c">${n}</span></button>`).join("")+
       `</div></div>`+
       (sel.length?sel.slice(0,MAX).map(riga).join("")+
-          (sel.length>MAX?`<p style="margin:6px 0 0;color:var(--dim)">…e altri ${sel.length-MAX}. Attiva il livello VOLO sulla cartina per vederli tutti.</p>`:"")
+          (sel.length>MAX?`<p style="margin:6px 0 0;color:var(--dim)">…e altri ${sel.length-MAX}. Accendi «✈ MEZZI AEREI» nella striscia SULLA CARTINA, in testa a questo pannello, per vederli tutti sulla cartina.</p>`:"")
         :`<p style="margin:0">Nessun velivolo corrisponde a questo filtro in questo momento.</p>`)+
       `</div>`);
     }
@@ -2683,10 +2849,25 @@ function reOpen(){
   ws.onmessage=e=>{if(typeof e.data==="string")reOnText(e.data);else reOnBin(e.data)};
   ws.onerror=()=>reStatus("Errore di collegamento col ricevitore",true);
   ws.onclose=ev=>{if(RE.ws!==ws)return;RE.ws=null;RE.started=false;
-    if(S.radio.on)reStatus("Collegamento chiuso"+(ev.reason?" ("+ev.reason+")":"")+" — premi RICOLLEGA",true);};
+    if(!S.radio.on)return;
+    /* 🔴 Riconnessione automatica (23/09/2026). Un ricevitore lasciato acceso
+       per ore in sala perde il collegamento per un nulla (rete, riavvio del
+       server) e prima restava muto finche' qualcuno non premeva RICOLLEGA: e'
+       quello che il client ufficiale di OpenWebRX non fa, lui ricollega. Qui
+       si ritenta al massimo 5 volte con attesa crescente (3, 6, 12, 24, 30 s),
+       mai se il server ha detto di essere occupato (`backoff`), mai su una
+       chiusura chiesta da noi (reClose azzera onclose). Poi si torna a chiedere
+       all'operatore. */
+    const motivo=ev.reason?" ("+ev.reason+")":"";
+    RE.retry=(RE.retry||0)+1;
+    if(RE.noRetry||RE.retry>5){reStatus("Collegamento chiuso"+motivo+" — premi RICOLLEGA",true);return;}
+    const attesa=Math.min(30,3*Math.pow(2,RE.retry-1));
+    reStatus("Collegamento chiuso"+motivo+" — ricollego tra "+attesa+" s (tentativo "+RE.retry+" di 5)",true);
+    RE.retryT=setTimeout(()=>{RE.retryT=0;if(S.radio.on&&!RE.ws)reOpen();},attesa*1000);};
   reScopeInit(); reUtcStart(); rePalette(); reMetaShow(); reSrv();
 }
 function reClose(){
+  if(RE.retryT){clearTimeout(RE.retryT);RE.retryT=0;} RE.noRetry=false;
   if(RE.selTimer){clearTimeout(RE.selTimer);RE.selTimer=null;}
   reScanStop(); if(RE.rec)reRecStop(true);
   if(RE.ws){const w=RE.ws;RE.ws=null;try{w.onclose=null;w.close()}catch(e){}}
@@ -2728,7 +2909,7 @@ function reOnText(s){
     case "secondary_demod":reDecMsg(j.value);break;
     case "metadata":reMetaMsg(j.value||{});break;
     case "log_message":reStatus(String(j.value));break;
-    case "backoff":reStatus("Server occupato: "+String(j.reason||""),true);break;
+    case "backoff":RE.noRetry=true;reStatus("Server occupato: "+String(j.reason||"")+" — riprova più tardi con RICOLLEGA",true);break;
     case "sdr_error":case "demodulator_error":reStatus(String(j.value),true);break;
   }
 }
@@ -2754,7 +2935,7 @@ function reApply(){ // porta il ricevitore sulla frequenza del pannello, cambian
   if(bp){params.low_cut=bp[0];params.high_cut=bp[1];}
   if(S.radio.sec){if(bp&&(RE.secOff<bp[0]||RE.secOff>bp[1]))RE.secOff=bp[0]+Math.round((bp[1]-bp[0])/2);params.secondary_offset_freq=RE.secOff;}
   reSend({type:"dspcontrol",params:params});
-  if(!RE.started){RE.started=true;reSend({type:"dspcontrol",action:"start"});}
+  if(!RE.started){RE.started=true;RE.retry=0;reSend({type:"dspcontrol",action:"start"});}
   reStatusLine();reDecSync();reDirty();
 }
 function reTune(){if(S.radio.on&&RE.ws)reApply();}
@@ -3501,7 +3682,7 @@ function orbFascePresenti(){
 }
 
 async function orbCarica(tutti){
-  if(S.orb.busy)return; S.orb.busy=true;
+  if(S.orb.busy)return; S.orb.busy=true; S.orb.ultimoTentativo=Date.now();
   // cosa e' stato CHIESTO: serve alla riprova, perche' "tutti" resta falso
   // proprio quando il catalogo completo e' il gruppo che non e' arrivato.
   if(tutti)S.orb.chiesto=true;
@@ -3540,7 +3721,7 @@ async function orbCarica(tutti){
   tickUpd();
 }
 
-const mapLayerOn=k=>!!(S.layers&&S.layers[k]);
+const mapLayerOn=layerVis;
 /* 🔴 Le posizioni invecchiano in fretta: un satellite in orbita bassa percorre
    7,8 km al secondo, quindi in un minuto si sposta di quasi cinquecento
    chilometri. Si ricalcola ogni 15 secondi, ma SOLO quando serve davvero —
@@ -4078,7 +4259,7 @@ function viewMar(){
 
 function render(){
   document.body.classList.toggle("muro",S.view==="mia");
-  miaTab();
+  miaTab(); sideMapSync();
   try{navArrUpd()}catch(e){}   // nascondendo i livelli cambia cosa resta fuori dal riquadro
   ({all:viewAll,sis:viewSis,met:viewMet,map:viewMap,wnd:viewWnd,tra:viewTra,rad:viewRad,amb:viewAmb,ems:viewEms,orb:viewOrb,mar:viewMar,mia:viewMia,log:viewLog})[S.view]();miaDecora(S.view);windySync();traffSync();mareSync();radioSync();}
 
@@ -4101,7 +4282,7 @@ function newsUpd(){
   }).join('<span class="nsep">···</span>')+'<span class="nsep">···</span>';
   if(html===S.newsCache)return; // invariato: non riavviare lo scorrimento
   S.newsCache=html;
-  $("#newsTxt").innerHTML=html; $("#newsTxt2").innerHTML=html;
+  $("#newsTxt").innerHTML=html; $("#newsTxt2").innerHTML=html.replace(/<a /g,'<a tabindex="-1" ');
   const len=$("#newsTxt").textContent.length;
   $("#newsWrap").style.animationDuration=Math.max(30,Math.round(len/14))+"s";
 }
@@ -4127,7 +4308,7 @@ function tickUpd(){
   if(S.wx&&S.wx.current)parts.push("METEO GENZANO ORA: "+S.wx.current.temperature_2m.toFixed(0)+"°C · VENTO "+S.wx.current.wind_speed_10m.toFixed(0)+" KM/H");
   if(S.obs&&S.obs.list&&S.obs.list.length&&S.obs.list[0].temp!=null)
     parts.push("STAZIONE PIÙ VICINA ("+S.obs.list[0].nome.toUpperCase()+", "+S.obs.list[0].km+" KM): "+S.obs.list[0].temp.toFixed(1)+"°C");
-  if(S.layers.blitz)parts.push("FULMINI ITALIA ULTIMI 10 MIN: "+S.strikes.length+" (BLITZORTUNG)");
+  if(layerVis("blitz"))parts.push("FULMINI ITALIA ULTIMI 10 MIN: "+S.strikes.length+" (BLITZORTUNG)");
   if(S.aria&&S.aria.european_aqi!=null)parts.push("ARIA EAQI: "+S.aria.european_aqi+" ("+aqiTxt(S.aria.european_aqi)[0]+")");
   if(S.mare&&S.mare.wave_height!=null)parts.push("ONDA AL LARGO: "+S.mare.wave_height.toFixed(1)+" M");
   if(S.ems.length)parts.push("ATTIVAZIONI COPERNICUS EMS APERTE: "+S.ems.length);
@@ -4152,12 +4333,20 @@ function tickUpd(){
    così il link condiviso apre direttamente quella schermata. */
 const VIEW_SLUG={all:"allerta",sis:"sismico",met:"meteo",map:"carte",wnd:"windy",tra:"traffico",rad:"radio",amb:"aria-mare",ems:"emergenze-ue",orb:"satelliti",mar:"navi",mia:"mia-sala",log:"registro"};
 const SLUG_VIEW=Object.fromEntries(Object.entries(VIEW_SLUG).map(([k,v])=>[v,k]));
-function setView(v,fromHash){
+function setView(v,fromHash,daCiclo){
   if(!VIEW_SLUG[v])return;
+  /* 🔴 Una scelta MANUALE di vista (clic su un tab, tasti 1-9, indirizzo)
+     spegne il ciclo video-wall. Prima il ciclo continuava anche se l'operatore
+     aveva appena aperto RADIO o NAVI, e dopo 45 secondi la Sala saltava ad
+     ALLERTA da sola: «la radio si stacca senza aver toccato nulla», «il tab
+     navi si disconnette», «alcuni tab mi fanno uscire fuori» (23/09/2026).
+     Chi prende il comando ha il comando; il ciclo si riaccende col pulsante. */
+  if(S.cycle&&!daCiclo)cicloSet(false);
   S.view=v;
   document.querySelectorAll("#nav [data-v]").forEach(x=>x.classList.toggle("act",x.dataset.v===v));
   if(!fromHash)history.replaceState(null,"","#"+VIEW_SLUG[v]);
   worldMode(v==="ems");
+  applyLayers();   // 🔴 la cartina e' della vista: i livelli si rivalutano a ogni cambio
   render(); if(typeof saveCfg==="function")saveCfg();
 }
 window.addEventListener("hashchange",()=>{
@@ -4189,22 +4378,43 @@ if(navigator.share)$('#shareBar [data-sh="native"]').hidden=false;
 $("#nav").addEventListener("click",e=>{
   const b=e.target.closest("button");if(!b)return;
   if(b.dataset.v){setView(b.dataset.v);
-    if(innerWidth<=720)$("#side").classList.add("open");}
-  else if(b.dataset.l){S.layers[b.dataset.l]=!S.layers[b.dataset.l];
-    b.classList.toggle("act",S.layers[b.dataset.l]); applyLayers(); saveCfg();}
+    if(innerWidth<=720)pannelloApri(true);}
+  else if(b.id==="soloBtn")soloSet(!S.solo);
+});
+function soloSet(on){
+  S.solo=!!on;
+  const b=$("#soloBtn"); if(b)b.setAttribute("aria-pressed",String(S.solo));
+  applyLayers(); saveCfg();
+}
+// pastiglie SULLA CARTINA: accendono/spengono un livello DENTRO la sua vista
+// su telefono il pannello copre la cartina: dopo un comando di cartina si
+// chiude, cosi' l'effetto si vede subito (i menu ICON-2I no: sono due in fila)
+function pannelloMobileChiudi(){ if(innerWidth<=720)pannelloApri(false); }
+function pannelloApri(on){
+  // chiudendo, il fuoco non deve restare su un elemento che diventa invisibile:
+  // torna al pulsante PANNELLO, da cui si riapre (WCAG 2.4.3)
+  if(!on&&$("#side").contains(document.activeElement))$("#sideTgl").focus();
+  $("#side").classList.toggle("open",!!on);
+  $("#sideTgl").setAttribute("aria-expanded",String(!!on));
+}
+$("#sideMap").addEventListener("click",e=>{
+  const sc=e.target.closest("button[data-scala]");
+  if(sc){emsScalaSet(sc.dataset.scala);pannelloMobileChiudi();return;}
+  const b=e.target.closest("button[data-l]");if(!b)return;
+  S.layers[b.dataset.l]=!S.layers[b.dataset.l]; applyLayers(); saveCfg(); pannelloMobileChiudi();
 });
 $("#dayTgl").addEventListener("click",e=>{
   const b=e.target.closest("button");if(!b)return;
   S.day=b.dataset.d;
-  document.querySelectorAll("#dayTgl button").forEach(x=>x.classList.toggle("act",x===b));
-  buildZoneLayer();
+  document.querySelectorAll("#dayTgl button").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));
+  buildZoneLayer(); pannelloMobileChiudi();
 });
 $("#blackBtn").addEventListener("click",()=>{
   S.black=!S.black;document.body.classList.toggle("blackout",S.black);
   const b=$("#blackBtn");b.classList.toggle("on",S.black);
   b.textContent=S.black?"◉ OSCURITÀ ON":"◉ OSCURITÀ";b.setAttribute("aria-pressed",S.black);
 });
-$("#sideTgl").addEventListener("click",()=>$("#side").classList.toggle("open"));
+$("#sideTgl").addEventListener("click",()=>pannelloApri(!$("#side").classList.contains("open")));
 
 // Riduzione laterale del pannello (desktop): più spazio alla mappa
 function sideCollapse(on){
@@ -4233,15 +4443,16 @@ function navArrUpd(){
   // il menu continua, cosa che una freccia da sola non comunica.
   const box=navEl.getBoundingClientRect();
   let fuoriSx=0,fuoriDx=0;
-  navEl.querySelectorAll("button[data-v]").forEach(b=>{
+  navEl.querySelectorAll("button").forEach(b=>{
+    if(b.offsetParent===null)return; // nascosto (es. SOLO LA VISTA in modalita' muro)
     const r=b.getBoundingClientRect();
     if(r.right<box.left+34)fuoriSx++;
     else if(r.left>box.right-34)fuoriDx++;
   });
   $("#navLn").textContent=fuoriSx?fuoriSx:"";
   $("#navRn").textContent=fuoriDx?fuoriDx:"";
-  L.setAttribute("aria-label",fuoriSx?`Scorri il menu a sinistra: altri ${fuoriSx} pannelli`:"Scorri il menu a sinistra");
-  R.setAttribute("aria-label",fuoriDx?`Scorri il menu a destra: altri ${fuoriDx} pannelli`:"Scorri il menu a destra");
+  L.setAttribute("aria-label",fuoriSx?`Scorri il menu a sinistra: altre ${fuoriSx} voci`:"Scorri il menu a sinistra");
+  R.setAttribute("aria-label",fuoriDx?`Scorri il menu a destra: altre ${fuoriDx} voci`:"Scorri il menu a destra");
 }
 navEl.addEventListener("scroll",navArrUpd,{passive:true});
 window.addEventListener("resize",navArrUpd);
@@ -4265,7 +4476,7 @@ function refreshAll(man){
   loadSito(); loadINGV(); loadWX(); loadAmb(); loadMare(); loadEmsc(); loadEMS(); loadVolo(); loadPs(); loadMeteoalarm(); loadFirms(); loadSpazio(); loadSonde(); loadGdacs(); loadNews();
   loadUsgs(); loadEonet();
   if(S.obs||S.view==="met")loadObs();
-  if(S.layers.radar)radarRefresh();
+  if(layerVis("radar"))radarRefresh();
   // il bollettino DPC cambia poche volte al giorno e api.github.com ha rate
   // limit 60/h: lo si ricarica solo se l'ultimo tentativo ha più di 10 minuti
   if(Date.now()-(S.last.dpc||0)>10*60e3)loadDPC();
@@ -4290,7 +4501,7 @@ document.addEventListener("visibilitychange",()=>{
 // Scorciatoie da tastiera per la sala: 1-9 cambiano vista, R accende/spegne il radar
 document.addEventListener("keydown",e=>{
   if(e.altKey||e.ctrlKey||e.metaKey)return;
-  if(e.target&&e.target.matches&&e.target.matches("input,select,textarea"))return;
+  if(e.target&&e.target.matches&&e.target.matches("input,select,textarea,[contenteditable]"))return;
   /* 🔴 I tasti seguono la BARRA: il tasto N apre l'N-esimo tab, MIA SALA
      compresa. Prima erano una lista scritta a parte che non coincideva con
      l'ordine visibile — imparabile solo a memoria, e destinata a divergere a
@@ -4301,24 +4512,34 @@ document.addEventListener("keydown",e=>{
     const tab=document.querySelectorAll("#nav button[data-v]")[+e.key-1];
     if(tab)setView(tab.getAttribute("data-v"));
   }
-  else if(e.key==="r"||e.key==="R"){const b=document.querySelector('#nav [data-l="radar"]');if(b)b.click();}
+  else if(e.key==="r"||e.key==="R"){
+    // il radar e' un livello della vista METEO: con SOLO LA VISTA acceso, da
+    // un'altra vista il tasto porta in METEO CON il radar acceso (non lo
+    // inverte: partendo dal default acceso lo avrebbe spento proprio mentre
+    // apriva la vista, rilievo di revisione del 23/09/2026); dentro METEO,
+    // o a composizione libera, lo accende e lo spegne.
+    if(S.solo&&S.view!==VISTA_DI.radar){S.layers.radar=true;setView(VISTA_DI.radar);}
+    else {S.layers.radar=!S.layers.radar;applyLayers();saveCfg();}
+  }
 });
 
 // ▶ CICLO — modalità video-wall: rotazione automatica delle viste dati ogni 45 s
 // (salta WINDY, RADIO e REGISTRO, che sono viste di lavoro). Si spegne ripremendo.
+// Si spegne ripremendo il pulsante E a ogni scelta manuale di vista (vedi setView).
 let cycTimer=null;
-$("#cycBtn").addEventListener("click",()=>{
-  S.cycle=!S.cycle;
+function cicloSet(on){
+  S.cycle=!!on;
   const b=$("#cycBtn");
-  b.classList.toggle("on",S.cycle);b.setAttribute("aria-pressed",S.cycle);
+  b.classList.toggle("on",S.cycle);b.setAttribute("aria-pressed",String(S.cycle));
   b.textContent=S.cycle?"⏸ CICLO ON":"▶ CICLO";
   if(cycTimer){clearInterval(cycTimer);cycTimer=null;}
   if(S.cycle)cycTimer=setInterval(()=>{
     // stesse famiglie della barra, saltando le viste di lavoro
     const order=["all","met","amb","sis","ems","map"];
-    setView(order[(order.indexOf(S.view)+1)%order.length]);
+    setView(order[(order.indexOf(S.view)+1)%order.length],false,true);
   },45e3);
-});
+}
+$("#cycBtn").addEventListener("click",()=>cicloSet(!S.cycle));
 
 /* ---------------- configurazione persistente della postazione ----------------
    Layer mappa, previsioni ICON-2I, impostazioni Windy e sintonia radio (non
@@ -4326,7 +4547,7 @@ $("#cycBtn").addEventListener("click",()=>{
    riavvio del PC di sala. Solo localStorage, nessun dato inviato altrove. */
 function saveCfg(){
   try{localStorage.setItem("pcgz-monitor-cfg",JSON.stringify({
-    layers:S.layers,prevLayer:$("#prevLayer").value,prevTime:$("#prevTime").value,
+    v:2,layers:S.layers,solo:S.solo,emsScala:S.emsScala,prevLayer:$("#prevLayer").value,prevTime:$("#prevTime").value,
     windy:{ov:S.windy.ov,lvl:S.windy.lvl,prod:S.windy.prod,zoom:S.windy.zoom,detail:S.windy.detail},
     radio:{rx:S.radio.rx,hz:S.radio.hz,mod:S.radio.mod,sec:S.radio.sec,grp:S.radio.grp,band:S.radio.band,split:!!S.radio.split,
       pal:RE.pal,lvMode:RE.lvMode,lvMan:RE.lvMan,nr:RE.nr,nrDb:RE.nrDb,step:RE.step},
@@ -4337,10 +4558,15 @@ function saveCfg(){
   let c=null;
   try{c=JSON.parse(localStorage.getItem("pcgz-monitor-cfg")||"null")}catch(e){}
   if(!c)return;
-  if(c.layers)for(const k in S.layers)if(typeof c.layers[k]==="boolean"){
-    S.layers[k]=c.layers[k];
-    const b=document.querySelector(`#nav [data-l="${k}"]`);if(b)b.classList.toggle("act",S.layers[k]);
-  }
+  // 🔴 Le scelte di livello salvate PRIMA del 23/09/2026 (v<2) non si
+  //    riprendono: erano fatte con i livelli nella barra, mezzi fuori
+  //    schermo, e avevano orbite/aerei/mareografi spenti per non averli mai
+  //    visti. Con la cartina della vista i default nuovi sono quelli giusti;
+  //    da qui in poi le scelte si salvano e si ritrovano.
+  if(c.v>=2&&c.layers)for(const k in S.layers)if(typeof c.layers[k]==="boolean")S.layers[k]=c.layers[k];
+  if(typeof c.solo==="boolean")S.solo=c.solo;
+  if(c.emsScala==="area"||c.emsScala==="mondo")S.emsScala=c.emsScala;
+  $("#soloBtn").setAttribute("aria-pressed",String(S.solo));
   if(c.prevLayer!==undefined)$("#prevLayer").value=c.prevLayer;
   if(c.prevTime!==undefined)$("#prevTime").value=c.prevTime;
   if(c.windy)Object.assign(S.windy,{ov:c.windy.ov||S.windy.ov,lvl:c.windy.lvl||S.windy.lvl,
@@ -4352,7 +4578,7 @@ function saveCfg(){
     if(RE_PAL_LBL[q.pal])RE.pal=q.pal; if(["auto","rx","man"].includes(q.lvMode))RE.lvMode=q.lvMode;
     if(Array.isArray(q.lvMan)&&q.lvMan.length===2&&q.lvMan.every(x=>isFinite(+x)))RE.lvMan=[+q.lvMan[0],+q.lvMan[1]];
     RE.nr=!!q.nr; if(isFinite(+q.nrDb))RE.nrDb=Math.max(-20,Math.min(20,+q.nrDb)); if(isFinite(+q.step)&&+q.step>0)RE.step=+q.step;}
-  applyLayers(); applyPrev();
+  applyLayers();
   if(c.side&&innerWidth>720)sideCollapse(true);
   if(!location.hash&&c.view&&VIEW_SLUG[c.view])S.view=c.view;
 })();
