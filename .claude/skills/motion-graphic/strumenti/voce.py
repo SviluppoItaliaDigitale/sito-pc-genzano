@@ -93,19 +93,29 @@ def forma_base(parola):
 
 
 def dipi(parola, cache):
-    """Trascrizione del DiPI (Dizionario di pronuncia italiana, Canepari), con cache."""
+    """Trascrizione del DiPI (Dizionario di pronuncia italiana, Canepari), con cache.
+    Il DiPI distingue le maiuscole: «Verde» a inizio frase non c'è, «verde» sì; per i nomi
+    propri vale il contrario. Si prova la forma scritta e poi la minuscola."""
     parola = forma_base(parola)
     k = parola.lower()
-    if k not in cache:
+    if k in cache:
+        return cache[k]
+    trovate = None
+    for forma in dict.fromkeys([parola, parola.lower()]):
         try:
-            req = urllib.request.Request(DIPI, data=urllib.parse.urlencode({"lemma": parola}).encode(),
+            req = urllib.request.Request(DIPI, data=urllib.parse.urlencode({"lemma": forma}).encode(),
                                          headers={"User-Agent": "PCGenzano-motion/1.0 (protezionecivilegenzano.it)"})
             with urllib.request.urlopen(req, timeout=20) as r:
                 d = json.load(r)
-            cache[k] = [] if d.get("noResults") or d.get("errorOccurred") else d.get("transcriptions", [])
             time.sleep(1)  # una richiesta al secondo: servizio gratuito
         except Exception:
-            return None  # non in cache: si riprova la volta dopo
+            return None  # errore di rete: non si salva, si riprova la volta dopo
+        if d.get("errorOccurred"):
+            return None
+        if not d.get("noResults") and d.get("transcriptions"):
+            trovate = d["transcriptions"]
+            break
+    cache[k] = trovate or []
     return cache[k]
 
 
