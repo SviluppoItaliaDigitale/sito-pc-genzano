@@ -3,4 +3,4 @@ Verde: nessuna allerta. Non sono previsti fenomeni significativi.
 Allerta gialla: fenomeni localizzati, occasionale pericolo per le persone.
 Allerta arancione: fenomeni più intensi e diffusi, pericolo per le persone.
 Allerta rossa: fenomeni molto intensi e diffusi, grave pericolo per le persone.
-Controlla l'allerta della tua zona. Genzano di Roma è nella zona effe, Bacini Costieri Sud. Segui le allerte su protezione civile genzano punto it.
+Controlla l'allerta della tua zona. Genzano di Roma è nella zona effe, Bacini Costieri Sud. Segui le allerte su | protezione civile genzano punto it.
