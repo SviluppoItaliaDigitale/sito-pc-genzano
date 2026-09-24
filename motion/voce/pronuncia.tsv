@@ -1,0 +1,9 @@
+# Lessico di pronuncia per la voce fuori campo (Piper, it_IT-paola-medium).
+# Una riga per parola: parola<TAB>grafia da far leggere alla voce<TAB>fonte.
+# L'accento si forza scrivendolo: grave = vocale aperta o accento semplice
+# (àncora, pèsca), acuto = vocale chiusa (pésca). Verifica sempre sul
+# Vocabolario Treccani (treccani.it/vocabolario); per i nomi di luogo, che
+# Treccani online non accentua, sul DOP (Dizionario d'ortografia e di
+# pronunzia) o su una fonte locale verificata. Mai a orecchio.
+power	pàuer	pronuncia inglese resa a orecchio (skill motion-graphic)
+bank	banc	pronuncia inglese resa a orecchio (skill motion-graphic)
