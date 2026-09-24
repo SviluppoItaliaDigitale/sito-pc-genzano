@@ -81,12 +81,12 @@ def fonemi(modello):
         return None
 
 
-def da_controllare(parola, ipa):
+def da_controllare(parola, ipa, inizio_frase=False):
     """Parola non piana o nome proprio: i casi da verificare sul vocabolario."""
-    if parola[0].isupper():
+    if parola[0].isupper() and not inizio_frase:
         return True
     sillabe = re.findall(r"[aeiouɛɔəɪʊ]+", ipa.replace("ː", ""))
-    if len(sillabe) < 3 or "ˈ" not in ipa:
+    if len(sillabe) < 2 or "ˈ" not in ipa:
         return False
     dopo = ipa.split("ˈ", 1)[1]
     return len(re.findall(r"[aeiouɛɔəɪʊ]+", dopo)) != 2
@@ -106,6 +106,7 @@ def main():
     voce_pv = fonemi(modello)
     report = []
     durate = []
+    (cartella / "fonemi.txt").unlink(missing_ok=True)  # mai un report di un giro precedente
     for k, riga in enumerate(testi.read_text(encoding="utf-8").splitlines()):
         riga = riga.strip()
         wav = cartella / f"line_{k}.wav"
@@ -116,9 +117,11 @@ def main():
         parlato = applica_lessico(riga, voci)
         if voce_pv:
             report.append(f"## scena {k}: {parlato}")
-            for parola in re.findall(r"[A-Za-zÀ-ÿ']+", parlato):
+            for m in re.finditer(r"[A-Za-zÀ-ÿ']+", parlato):
+                parola = m.group(0)
+                inizio = not parlato[:m.start()].strip() or parlato[:m.start()].rstrip()[-1] in ".!?:"
                 ipa = "".join(sum(voce_pv.phonemize(parola), []))
-                segno = "!" if da_controllare(parola, ipa) else " "
+                segno = "!" if da_controllare(parola, ipa, inizio) else " "
                 report.append(f"{segno} {parola:20} {ipa}")
         subprocess.run([sys.executable, "-m", "piper", "-m", str(modello),
                         "--length-scale", a.length_scale, "--sentence-silence", "0.35",
