@@ -2,12 +2,18 @@
 # Una riga per parola: parola<TAB>grafia da far leggere alla voce<TAB>fonte.
 # L'accento si forza scrivendolo: grave = vocale aperta o accento semplice
 # (àncora, pèsca), acuto = vocale chiusa (pésca). Verifica sempre sul
-# Vocabolario Treccani (treccani.it/vocabolario); per i nomi di luogo, che
-# Treccani online non accentua, sulla trascrizione IPA di Wikipedia in
-# italiano o sul DOP (Dizionario d'ortografia e di pronunzia). Mai a orecchio.
+# DiPI (dipionline.it, interrogato in automatico da voce.py), poi sul
+# Vocabolario Treccani per le parole comuni e sulla trascrizione IPA di
+# Wikipedia in italiano per i nomi di luogo. Mai a orecchio.
 # Grafia uguale alla parola = pronuncia già verificata e corretta.
 power	pàuer	pronuncia inglese resa a orecchio (skill motion-graphic)
 bank	banc	pronuncia inglese resa a orecchio (skill motion-graphic)
 Genzano	Genzano	Wikipedia it, IPA /dʒenˈtsano/; Piper la legge già così (24/09/2026)
 Nemi	Nemi	Wikipedia it, IPA /ˈnɛmi/; Piper la legge già così (24/09/2026)
 Ariccia	Ariccia	Wikipedia it, IPA /aˈriʧʧa/; Piper la legge già così (24/09/2026)
+Gandolfo	Gandòlfo	DiPI /ɡanˈdɔlfo/ (Castel Gandolfo); Piper diceva ɡandˈolfo con o chiusa (24/09/2026)
+Velletri	Velletri	DiPI /velˈletri/; Piper la legge già così (24/09/2026)
+Lanuvio	Lanuvio	DiPI /laˈnuvjo/; Piper la legge già così (24/09/2026)
+Albano	Albano	DiPI /alˈbano/; Piper la legge già così (24/09/2026)
+Cecchina	Cecchina	DiPI /ʧekˈkina/; Piper la legge già così (24/09/2026)
+Lazio	Lazio	DiPI /ˈlaʦʦjo/; Piper la legge già così (24/09/2026)
