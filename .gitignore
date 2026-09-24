@@ -56,3 +56,4 @@ motion/out/
 motion/dist/
 motion/.cache/
 motion/voce/**/line_*.wav
+motion/voce/**/fonemi.txt

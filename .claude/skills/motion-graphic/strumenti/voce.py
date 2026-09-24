@@ -8,11 +8,21 @@ Legge  motion/voce/<nome>/testi.txt   una riga per scena, nello stesso ordine
 Scrive motion/voce/<nome>/line_<k>.wav (non committati)
        motion/voce/<nome>/durate.json  durata in secondi di ogni frase (null = nessuna)
 
+       motion/voce/<nome>/fonemi.txt   come Piper pronuncerà ogni parola (IPA, ˈ = accento)
+
 Regole di scrittura dei testi: numeri in lettere, parole inglesi scritte a
-orecchio («pàuer banc»), una frase per scena. L'audio NON si può ascoltare
-da qui: chiedere sempre all'utente di verificare la pronuncia.
+orecchio («pàuer banc»), una frase per scena.
+
+Pronuncia. L'audio NON si può ascoltare da qui, ma si può leggere come Piper
+pronuncerà ogni parola: fonemi.txt riporta la trascrizione IPA e segnala con
+«!» le parole che non sono piane (accento non sulla penultima) e i nomi propri,
+cioè i casi in cui la voce sbaglia più spesso. Per quelle parole si controlla
+l'accento sul Vocabolario Treccani (treccani.it/vocabolario) e, se la voce
+sbaglia, si forza l'accento scrivendolo: «àncora», «sùbito», «pésca». La
+correzione va nel lessico condiviso motion/voce/pronuncia.tsv, così vale per
+tutte le puntate. Si chiede comunque all'utente di ascoltare.
 """
-import argparse, json, subprocess, sys, urllib.request, wave
+import argparse, json, re, subprocess, sys, time, urllib.parse, urllib.request, wave
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[4]
@@ -36,6 +46,99 @@ def assicura_piper():
     return PIPER / MODELLO
 
 
+VOCALI = "aeiouàèéìíòóùú"
+
+
+def lessico():
+    """motion/voce/pronuncia.tsv: parola<TAB>grafia per la voce<TAB>fonte."""
+    f = MOTION / "voce" / "pronuncia.tsv"
+    voci = {}
+    if f.exists():
+        for riga in f.read_text(encoding="utf-8").splitlines():
+            if riga.strip() and not riga.startswith("#"):
+                parti = riga.split("\t")
+                if len(parti) >= 2:
+                    voci[parti[0].strip().lower()] = parti[1].strip()
+    return voci
+
+
+def applica_lessico(testo, voci):
+    def sost(m):
+        w = m.group(0)
+        g = voci.get(w.lower())
+        if not g:
+            return w
+        return g[0].upper() + g[1:] if w[0].isupper() else g
+    return re.sub(r"[A-Za-zÀ-ÿ']+", sost, testo)
+
+
+def fonemi(modello):
+    try:
+        from piper import PiperVoice
+        return PiperVoice.load(str(modello))
+    except Exception as e:  # il controllo è un aiuto, non blocca la voce
+        print(f"[voce] fonemi non disponibili: {e}")
+        return None
+
+
+DIPI = "https://www.dipionline.it/dizionario/api/trascrizione"
+CACHE_DIPI = MOTION / ".cache" / "dipi.json"
+
+
+def forma_base(parola):
+    """Toglie gli accenti forzati per la voce (Gandòlfo → Gandolfo), tranne quello finale (città)."""
+    import unicodedata
+    corpo = "".join(c for c in unicodedata.normalize("NFD", parola[:-1]) if unicodedata.category(c) != "Mn")
+    return unicodedata.normalize("NFC", corpo) + parola[-1:]
+
+
+def dipi(parola, cache):
+    """Trascrizione del DiPI (Dizionario di pronuncia italiana, Canepari), con cache."""
+    parola = forma_base(parola)
+    k = parola.lower()
+    if k not in cache:
+        try:
+            req = urllib.request.Request(DIPI, data=urllib.parse.urlencode({"lemma": parola}).encode(),
+                                         headers={"User-Agent": "PCGenzano-motion/1.0 (protezionecivilegenzano.it)"})
+            with urllib.request.urlopen(req, timeout=20) as r:
+                d = json.load(r)
+            cache[k] = [] if d.get("noResults") or d.get("errorOccurred") else d.get("transcriptions", [])
+            time.sleep(1)  # una richiesta al secondo: servizio gratuito
+        except Exception:
+            return None  # non in cache: si riprova la volta dopo
+    return cache[k]
+
+
+def norma(ipa):
+    """Riduce le due notazioni a un confronto di accento e timbro."""
+    t = re.sub(r"\([^)]*\)", "", ipa)  # varianti grafiche tra parentesi, es. (hôtel)
+    t = re.split(r"[,;◆\[]", t)[0].strip().strip("/*").lower()
+    for a, b in (("ʤ", "dʒ"), ("ʧ", "tʃ"), ("ʦ", "ts"), ("ʣ", "dz"), ("ɾ", "r"), ("ɪ", "i"), ("ʊ", "u"),
+                 ("ʲ", ""), ("ː", ""), ("ɡ", "g"), (" ", ""), (".", "")):
+        t = t.replace(a, b)
+    t = re.sub(r"([bcdfgklmnprstvzʃ])\1", r"\1", t)  # le doppie non interessano qui
+    t = re.sub(r"j(?=[aeiouɛɔ])", "i", t)
+    # accento principale = ultimo ˈ (nelle parole composte conta l'ultima parola);
+    # si confrontano: vocali dall'accento alla fine (posizione) e timbro della vocale accentata
+    acc = t.rfind("ˈ")
+    if acc < 0:
+        return (None, "", t)
+    coda = t[acc:]
+    vocale = next((c for c in coda if c in "aeiouɛɔ"), "")
+    return (len(re.findall(r"[aeiouɛɔ]", coda)), vocale, t.replace("ˈ", ""))
+
+
+def da_controllare(parola, ipa, inizio_frase=False):
+    """Parola non piana o nome proprio: i casi da verificare sul vocabolario."""
+    if parola[0].isupper() and not inizio_frase:
+        return True
+    sillabe = re.findall(r"[aeiouɛɔəɪʊ]+", ipa.replace("ː", ""))
+    if len(sillabe) < 2 or "ˈ" not in ipa:
+        return False
+    dopo = ipa.split("ˈ", 1)[1]
+    return len(re.findall(r"[aeiouɛɔəɪʊ]+", dopo)) != 2
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("nome")
@@ -46,7 +149,15 @@ def main():
     if not testi.exists():
         sys.exit(f"Manca {testi}: una riga per scena, '-' per le scene senza voce")
     modello = assicura_piper()
+    voci = lessico()
+    voce_pv = fonemi(modello)
+    try:
+        cache_dipi = json.loads(CACHE_DIPI.read_text()) if CACHE_DIPI.exists() else {}
+    except ValueError:
+        cache_dipi = {}
+    report = []
     durate = []
+    (cartella / "fonemi.txt").unlink(missing_ok=True)  # mai un report di un giro precedente
     for k, riga in enumerate(testi.read_text(encoding="utf-8").splitlines()):
         riga = riga.strip()
         wav = cartella / f"line_{k}.wav"
@@ -54,15 +165,47 @@ def main():
             durate.append(None)
             wav.unlink(missing_ok=True)
             continue
+        parlato = applica_lessico(riga, voci)
+        if voce_pv:
+            report.append(f"## scena {k}: {parlato}")
+            for m in re.finditer(r"[A-Za-zÀ-ÿ']+", parlato):
+                parola = m.group(0)
+                inizio = not parlato[:m.start()].strip() or parlato[:m.start()].rstrip()[-1] in ".!?:"
+                ipa = "".join(sum(voce_pv.phonemize(parola), []))
+                verificata = parola.lower() in voci or parola.lower() in {g.lower() for g in voci.values()}
+                segno = "✓" if verificata else "!" if da_controllare(parola, ipa, inizio) else " "
+                nota = ""
+                if segno == "!":
+                    rif = dipi(parola, cache_dipi)
+                    if rif:
+                        n_voce, n_rif = norma(ipa), norma(rif[0])
+                        if n_voce[:2] == n_rif[:2]:
+                            segno, nota = "=", f"DiPI {rif[0]}"
+                        else:
+                            segno, nota = "≠", f"DiPI {rif[0]}  ← accento o timbro diversi: correggere"
+                    elif rif == []:
+                        nota = "non nel DiPI: Treccani / Wikipedia"
+                    else:
+                        nota = "DiPI non raggiungibile"
+                report.append(f"{segno} {parola:20} {ipa:22} {nota}".rstrip())
         subprocess.run([sys.executable, "-m", "piper", "-m", str(modello),
                         "--length-scale", a.length_scale, "--sentence-silence", "0.35",
-                        "-f", str(wav)], input=riga, text=True, check=True,
+                        "-f", str(wav)], input=parlato, text=True, check=True,
                        capture_output=True)
         with wave.open(str(wav)) as w:
             d = round(w.getnframes() / w.getframerate(), 3)
         durate.append(d)
-        print(f"[voce] scena {k}: {d:.2f} s  «{riga}»")
+        print(f"[voce] scena {k}: {d:.2f} s  «{parlato}»")
     (cartella / "durate.json").write_text(json.dumps(durate))
+    if cache_dipi:
+        CACHE_DIPI.parent.mkdir(parents=True, exist_ok=True)
+        CACHE_DIPI.write_text(json.dumps(cache_dipi, ensure_ascii=False))
+    if report:
+        (cartella / "fonemi.txt").write_text(
+            "# = conferma il DiPI   ≠ il DiPI dice altro: correggere   ! da verificare a mano (Treccani, Wikipedia)   ✓ già nel lessico\n"
+            + "\n".join(report) + "\n", encoding="utf-8")
+        n = sum(1 for r in report if r[:1] in "!≠")
+        print(f"[voce] fonemi in {(cartella / 'fonemi.txt').relative_to(ROOT)}: {n} parole da verificare o correggere")
     print(f"[voce] durate in {(cartella / 'durate.json').relative_to(ROOT)}")
 
 
