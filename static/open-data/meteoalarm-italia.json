@@ -1,10 +1,10 @@
 {
  "_snapshot": {
-  "generato": "2026-09-24T20:31:21+00:00",
+  "generato": "2026-09-24T23:23:21+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 21,
-  "scaduti_scartati": 3,
+  "avvisi": 23,
+  "scaduti_scartati": 0,
   "in_corso": 5,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
@@ -225,6 +225,19 @@
    "evento_originale": "Yellow Wind Warning",
    "severita": "Moderate",
    "certezza": "Likely",
+   "inizio": "2026-09-26T00:00:00+00:00",
+   "fine": "2026-09-26T17:59:00+00:00",
+   "emesso": "2026-09-24T09:01:03+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.260924110103.037"
+  },
+  {
+   "in_corso": false,
+   "regione": "Puglia",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
    "inizio": "2026-09-25T00:00:00+00:00",
    "fine": "2026-09-25T23:59:00+00:00",
    "emesso": "2026-09-24T09:01:03+00:00",
@@ -242,6 +255,19 @@
    "fine": "2026-09-25T21:59:00+00:00",
    "emesso": "2026-09-24T09:01:03+00:00",
    "identificativo": "2.49.0.0.380.3.IT.260924110103.028"
+  },
+  {
+   "in_corso": false,
+   "regione": "Sicilia",
+   "fenomeno": "Temporali",
+   "livello": "gialla",
+   "evento_originale": "Yellow Thunderstorm Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-09-26T00:00:00+00:00",
+   "fine": "2026-09-26T05:59:00+00:00",
+   "emesso": "2026-09-24T09:01:03+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.260924110103.038"
   },
   {
    "in_corso": false,

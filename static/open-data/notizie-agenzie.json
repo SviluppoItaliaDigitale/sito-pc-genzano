@@ -5,11 +5,71 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-24T20:31:11+00:00",
+  "generato": "2026-09-24T23:23:10+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-24T22:33:46+00:00",
+   "fonte": "ANSA",
+   "titolo": "Regine del deserto da Genny. In passerella sfila Laila Hasanovich, la fidanzata di Sinner",
+   "url": "https://www.ansa.it/canale_lifestyle/notizie/moda/2026/09/24/regine-del-deserto-da-genny.-in-passerella-sfila-laila-hasanovich-la-fidanzata-di-sinner_751a8093-af67-4d2d-b123-3e04cb555094.html"
+  },
+  {
+   "data": "2026-09-24T22:15:55+00:00",
+   "fonte": "ANSA",
+   "titolo": "Prove generali di America's Cup, a Napoli parte lo spettacolo",
+   "url": "https://www.ansa.it/sito/notizie/sport/speciali/coppa-america-2027/2026/09/24/prove-generali-di-americas-cup-a-napoli-parte-lo-spettacolo_3bdd1213-35f3-47bd-9f66-690d939a26ef.html"
+  },
+  {
+   "data": "2026-09-24T22:04:13+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Meteo Italia, svolta da metà settimana: caldo fino a 30°C, poi doppio peggioramento",
+   "url": "https://www.adnkronos.com/cronaca/meteo-italia-previsioni-maltempo-autunno_2vK4TlSy2wYTEBajQI8Rt2"
+  },
+  {
+   "data": "2026-09-24T22:03:14+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Influenza, Bassetti: \"Stagione con meno casi ma più gravi, vaccino fondamentale\"",
+   "url": "https://www.adnkronos.com/cronaca/influenza-2026-sintomi-casi-bassetti-previsione_3yo0TIPcu5SZKH9KIcFzcY"
+  },
+  {
+   "data": "2026-09-24T22:02:43+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "\"Nessun allarme per Italia\", l'alert della Cia sull'attacco russo non esiste",
+   "url": "https://www.adnkronos.com/internazionale/esteri/italia-russia-attacco-putin-news-oggi_7APOk3LgrvZPo31eZJ68Py"
+  },
+  {
+   "data": "2026-09-24T22:02:24+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Scuola, via libera al decreto. Meloni: \"Evitiamo classi ghetto\". Dal burqa vietato al tetto per studenti stranieri, le misure",
+   "url": "https://www.adnkronos.com/politica/scuola-decreto-stranieri-cosa-dice-meloni_7qDglCBmXW1waql5FwqqXq"
+  },
+  {
+   "data": "2026-09-24T21:37:12+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Colosseo chiuso tre giorni per lutto, 7 indagati per la morte di un operaio",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/24/il-colosseo-chiuso-tre-giorni-per-lutto-7-indagati-per-la-morte-di-un-operaio_63b7089b-ae2f-447b-8e4d-1bb2a6c25f85.html"
+  },
+  {
+   "data": "2026-09-24T21:26:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Scontro Costamagna-Cruciani sul decreto Scuola: \"Propaganda razzista\", \"Non dire minch....\"",
+   "url": "https://www.adnkronos.com/politica/cruciani-contro-costamagna-dritto-e-rovescio_TKm1Ku4H3zm8YTC0gNxM0"
+  },
+  {
+   "data": "2026-09-24T21:23:56+00:00",
+   "fonte": "ANSA",
+   "titolo": "Netanyahu all'Assemblea Onu mezza vuota: 'Un codardo chi è uscito'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/24/arriva-netanyahu-la-sala-dellonu-si-svuota-il-premier-israeliano-codardi_234fa594-d5e0-405b-a53b-b6f7bae3ba88.html"
+  },
+  {
+   "data": "2026-09-24T21:02:21+00:00",
+   "fonte": "ANSA",
+   "titolo": "È morta Elena Pero, voce del tennis su Sky",
+   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/24/e-morta-elena-pero-voce-del-tennis-su-sky_7ba412d5-3a36-4c6e-979a-d37820a5220c.html"
+  },
   {
    "data": "2026-09-24T20:04:00+00:00",
    "fonte": "ADNKRONOS",
@@ -23,18 +83,6 @@
    "url": "https://www.adnkronos.com/sport/elena-pero-morta-malattia-sky-sport_6lt4d6vM7M3D1lTBjX18a8"
   },
   {
-   "data": "2026-09-24T19:43:34+00:00",
-   "fonte": "ANSA",
-   "titolo": "Netanyahu all'Assemblea Onu mezza vuota: 'Un codardo chi è uscito'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/24/arriva-netanyahu-la-sala-dellonu-si-svuota-il-premier-israeliano-codardi_234fa594-d5e0-405b-a53b-b6f7bae3ba88.html"
-  },
-  {
-   "data": "2026-09-24T19:43:26+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il Colosseo chiuso tre giorni per lutto, 7 indagati per la morte di un operaio",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/24/il-colosseo-chiuso-tre-giorni-per-lutto-7-indagati-per-la-morte-di-un-operaio_63b7089b-ae2f-447b-8e4d-1bb2a6c25f85.html"
-  },
-  {
    "data": "2026-09-24T19:36:41+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Accoltellata alle spalle da uno sconosciuto, grave una 20enne",
@@ -45,12 +93,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "La scomparsa di Emanuela Orlandi, c'è una terza indagata",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/24/lex-amica-di-accetti-mi-fece-fare-una-telefonata-dicevamo-di-sapere-dove_187465a7-1e14-41af-9fa5-1e32776c5081.html"
-  },
-  {
-   "data": "2026-09-24T19:27:52+00:00",
-   "fonte": "ANSA",
-   "titolo": "Regine del deserto da Genny. In passerella sfila Laila Hasanovich, la fidanzata di Sinner",
-   "url": "https://www.ansa.it/canale_lifestyle/notizie/moda/2026/09/24/regine-del-deserto-da-genny.-in-passerella-sfila-laila-hasanovich-la-fidanzata-di-sinner_751a8093-af67-4d2d-b123-3e04cb555094.html"
   },
   {
    "data": "2026-09-24T19:24:13+00:00",
@@ -137,58 +179,16 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/24/al-procuratore-nazionale-antimafia-poteri-anche-per-procedimenti-su-minori_5daa1e3b-0c92-46e5-8f12-e06aae8a9570.html"
   },
   {
-   "data": "2026-09-24T18:26:31+00:00",
-   "fonte": "ANSA",
-   "titolo": "Prove generali di America's Cup, a Napoli parte lo spettacolo",
-   "url": "https://www.ansa.it/sito/notizie/sport/speciali/coppa-america-2027/2026/09/24/prove-generali-di-americas-cup-a-napoli-parte-lo-spettacolo_3bdd1213-35f3-47bd-9f66-690d939a26ef.html"
-  },
-  {
    "data": "2026-09-24T18:25:41+00:00",
    "fonte": "ANSA",
    "titolo": "Gli U2 tornano con un nuovo album in studio, il primo della band dopo 9 anni",
    "url": "https://www.ansa.it/sito/notizie/cultura/musica/2026/09/24/u2-tornano-con-un-nuovo-album-in-studio-il-primo-della-band-dopo-9-anni_19b49d03-5e71-4f9c-812b-02313119852e.html"
   },
   {
-   "data": "2026-09-24T18:20:06+00:00",
+   "data": "2026-09-24T18:20:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Trump-Xi, vertice alla Casa Bianca: \"Coesistenza pacifica\" e cooperazione tra Usa e Cina",
+   "titolo": "Trump-Xi, vertice alla Casa Bianca: \"Nuovo accordo\" sul commercio tra Usa e Cina",
    "url": "https://www.adnkronos.com/internazionale/esteri/trump-xi-jinping-incontro-oggi_4PriR1BWiBzaMb2Pur3RpK"
-  },
-  {
-   "data": "2026-09-24T18:16:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Caos taxi a Roma Termini, blitz dell'assessore Onorato contro i furbetti: \"Spennano i turisti, che figura facciamo in tutto il mondo?\"",
-   "url": "https://www.adnkronos.com/cronaca/roma-termini-assessore-onorato-tassisti-disonesti-turisti-video-social-oggi_7nq5L70kbBrphKjPlbH1eY"
-  },
-  {
-   "data": "2026-09-24T18:10:36+00:00",
-   "fonte": "ANSA",
-   "titolo": "Melania sfida Donald: \"Ho avuto una bellissima infanzia sotto il comunismo\"",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/24/melania-ho-avuto-una-bellissima-infanzia-sotto-il-comunismo_0d1dff0b-4a5a-4685-9137-cab38f50b1c6.html"
-  },
-  {
-   "data": "2026-09-24T18:08:16+00:00",
-   "fonte": "ANSA",
-   "titolo": "In Gran Bretagna si allarga lo scandalo delle mastectomie, annunciata la revisione di 4500 casi",
-   "url": "https://www.ansa.it/donne/notizie/2026/09/24/in-gran-bretagna-lo-scandalo-delle-mastectomie-inutili-annunciata-la-revisione-di-4500-casi_0840648a-67e8-49c3-8115-8a903609b9b1.html"
-  },
-  {
-   "data": "2026-09-24T17:54:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Proteste all'Onu contro Netanyahu, fermata Susan Sarandon",
-   "url": "https://www.adnkronos.com/internazionale/esteri/netanyahu-onu-susan-sarandon-arrestata_5iUvbEim22YDs3cdmVoVe4"
-  },
-  {
-   "data": "2026-09-24T17:47:51+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Meloni: \"Avanti con il taglio delle tasse\". E sulla scuola: \"Nessuno vuole cacciare bambini\"",
-   "url": "https://www.adnkronos.com/politica/meloni-manovra-tasse-scuola-nucleare-migranti-centrosinistra_4mQ3Q5Nvx0gNrBdSRZTEza"
-  },
-  {
-   "data": "2026-09-24T17:44:46+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "#AccadeOggi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/23/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
   }
  ]
 }
