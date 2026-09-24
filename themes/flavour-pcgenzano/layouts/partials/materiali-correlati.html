@@ -64,8 +64,8 @@
         </h2>
         <p class="materiali-correlati-intro text-muted">
           Podcast da ascoltare, infografiche da condividere, presentazioni
-          per docenti, quiz e flashcard. Liberamente scaricabili
-          (CC&nbsp;BY-NC-SA&nbsp;4.0).
+          per docenti, quiz e flashcard. Liberamente scaricabili: la licenza
+          è indicata su ogni materiale.
         </p>
         <div class="row g-3">
           {{- range $materiali }}
@@ -90,6 +90,7 @@
                 <p class="small text-muted mb-2 flex-grow-1">{{ .descrizione }}</p>
                 {{ with .durata }}<small class="text-muted"><i class="bi bi-clock me-1" aria-hidden="true"></i>{{ . }}</small>{{ end }}
                 {{ with .dimensione }}<small class="text-muted ms-2">{{ . }}</small>{{ end }}
+                {{ with .licenza }}<small class="text-muted d-block mt-1">Licenza {{ . }}</small>{{ end }}
               </div>
             </a>
           </div>

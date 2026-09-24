@@ -4,7 +4,7 @@ description: "Podcast, infografiche, quiz e flashcard sui rischi del territorio.
 layout: "list"
 tts: true
 toc: true
-dataUltimaRevisione: "2026-08-31"
+dataUltimaRevisione: "2026-09-24"
 ---
 
 In questa pagina trovi **materiali multimediali pronti da scaricare e condividere**, organizzati per tema di Protezione Civile.
@@ -19,9 +19,14 @@ Sono redatti dal Gruppo Comunale Volontari di Protezione Civile di Genzano di Ro
 
 ## Licenza di uso
 
-Tutti i materiali sono pubblicati con licenza **Creative Commons BY-NC-SA 4.0**: puoi riutilizzarli liberamente per scopi **non commerciali** (didattica, divulgazione, formazione interna di volontari) citando la fonte ("Protezione Civile Genzano di Roma"). Le opere derivate devono usare la stessa licenza.
+Ogni materiale indica la propria licenza nella scheda. Le licenze sono due, e con entrambe puoi riutilizzare il materiale citando la fonte ("Protezione Civile Genzano di Roma"):
 
-Per uso commerciale o istituzionale fuori dal contesto della Protezione Civile, scrivi a segreteria@protezionecivilegenzano.it.
+- **Creative Commons BY-NC-SA 4.0** per la maggior parte dei materiali: podcast, infografiche, presentazioni, quiz e flashcard. Puoi riutilizzarli per scopi **non commerciali** (didattica, divulgazione, formazione interna di volontari) e le opere derivate devono usare la stessa licenza.
+- **Creative Commons BY 4.0** per i video realizzati dal Gruppo: puoi riutilizzarli anche in contesti commerciali, per esempio da parte di una testata giornalistica, sempre citando la fonte.
+
+Le condizioni di ciascuna licenza sono spiegate nelle [note legali](/note-legali/).
+
+Per usare un materiale con licenza BY-NC-SA in modo commerciale, o in un contesto istituzionale diverso dalla Protezione Civile, scrivi a segreteria@protezionecivilegenzano.it.
 
 ## Stiamo costruendo questa biblioteca
 

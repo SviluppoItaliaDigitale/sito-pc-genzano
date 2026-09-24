@@ -1,6 +1,6 @@
 ---
 title: "Cambiamento climatico: come cambia il lavoro della Protezione Civile"
-date: 2026-09-24
+date: 2026-09-24T00:01:00+02:00
 description: "Il cambiamento climatico aumenta la frequenza e l'intensità di eventi estremi. Questo ridefinisce priorità e strumenti della Protezione Civile italiana."
 badge: "Informazione"
 priorita: "normale"
