@@ -1,7 +1,7 @@
 ---
 
 title: "Rischio Incendi Boschivi"
-dataUltimaRevisione: "2026-05-21"
+dataUltimaRevisione: "2026-09-24"
 description: "Cosa fare per prevenire gli incendi boschivi e come comportarsi in caso di emergenza sul territorio di Genzano di Roma."
 tts: true
 lis_section: "rischio-incendio"
@@ -15,6 +15,41 @@ howto_dopo: "Non accedere alla zona percorsa dal fuoco: possono esserci tronchi 
 L'incendio boschivo divampa in aree vegetate — boschi, macchia mediterranea, terreni incolti — e si propaga rapidamente per effetto del vento, della siccità e della vegetazione secca. Nella grande maggioranza dei casi, comportamenti umani imprudenti o dolosi ne sono la causa.
 
 {{< emergenza-ora >}}
+
+{{< video src="/video/2026-09-24-incendi-boschivi-video.mp4"
+          poster="/video/2026-09-24-incendi-boschivi-video-poster.webp"
+          verticale="true"
+          titolo="Video con voce e sottotitoli: incendi boschivi, come nascono e come comportarsi"
+          caption="Come nasce un incendio boschivo e cosa fare, in meno di due minuti, per tutte le età. La versione orizzontale, per la proiezione a scuola, è nelle [Risorse pronte](/risorse-pronte/#tema-rischio-incendio). Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, sulle indicazioni della campagna «Io non rischio» del Dipartimento della Protezione Civile." >}}
+
+<details class="faq-item">
+<summary><strong>Trascrizione del video</strong></summary>
+
+Incendi boschivi: come nascono e come comportarsi. Un video per tutte le età.
+
+Un incendio boschivo nasce quasi sempre da una persona: un mozzicone, un fiammifero, un fuoco lasciato acceso, sterpaglie bruciate. Quelli naturali, come i fulmini, sono molto rari.
+
+Poi il fuoco cresce con l'erba secca, il caldo e il vento, che porta le scintille lontano e accende nuovi focolai. In salita corre ancora più veloce.
+
+Da noi il periodo più pericoloso va da giugno a settembre, quando fa caldo e piove poco.
+
+Per evitarlo: non gettare mozziconi o fiammiferi. Accendi il fuoco solo nelle aree attrezzate e spegnilo bene. Con il vento, mai. E non parcheggiare sull'erba secca: la marmitta scotta.
+
+Se vedi fiamme, o anche solo fumo, chiama subito il 112. Non pensare che l'abbia già fatto qualcun altro. Di' il Comune e il luogo preciso.
+
+Sei piccolo? Allontanati e avvisa subito un adulto. Se sei solo e il pericolo è vero, chiama tu il 112.
+
+Se il fuoco è vicino, cerca una via di fuga sicura, come una strada o un corso d'acqua. Non andare dove soffia il vento, e non scappare in salita.
+
+Se non puoi allontanarti, stenditi a terra in un punto senza vegetazione: il fumo sale, e così lo respiri meno.
+
+L'incendio non è uno spettacolo: non fermarti lungo la strada a guardare, intralci i soccorsi.
+
+Dopo, non entrare nella zona bruciata: sotto la cenere possono esserci braci ancora accese.
+
+Il bosco è di tutti: proteggerlo dipende anche da te. In emergenza chiama il 112.
+
+</details>
 
 ## <i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Perché è rilevante sul nostro territorio {#perche-rilevante}
 Genzano di Roma è parzialmente compresa nel Parco Regionale dei Castelli Romani, con ampie aree boschive e di macchia mediterranea. Il periodo di massimo rischio va da giugno a settembre: siccità prolungata e venti caldi possono trasformare una piccola fiamma in un incendio devastante. Il nostro Gruppo partecipa attivamente alle campagne antincendio boschivo (AIB).
