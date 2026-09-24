@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Incendi boschivi: come nascono e come comportarsi — Protezione Civile Genzano di Roma</title>
+<style>
+/*FONTS*/
+:root{--bg:#0a1220;--az:#2e90fa;--ar:#f59e0b;--tx:#eef2f7;--dim:#93a1b5;
+  --verde:#34b25a;--gialla:#ffcc00;--arancione:#ff8a00;--rossa:#ef4136;
+  --bosco:#2f8f5b;--bosco2:#1f6f4a;--terra:#13261d;--fumo:#93a1b5}
+html,body{margin:0;height:100%;background:#000;overflow:hidden}
+#stage{position:absolute;left:50%;top:50%;width:calc(var(--W)*1px);height:calc(var(--H)*1px);
+  background:radial-gradient(120% 60% at 50% 100%,#1a1410 0%,var(--bg) 60%);overflow:hidden;
+  font-family:'Titillium Web',sans-serif;color:var(--tx);-webkit-font-smoothing:antialiased}
+body.render #stage{left:0;top:0;transform:none!important}
+.scena{position:absolute;left:calc(var(--side)*1px);right:calc(var(--side)*1px);
+  top:calc(var(--top)*1px);bottom:calc((var(--H) - var(--bot))*1px);
+  display:flex;flex-direction:column;justify-content:center;gap:calc(26px*var(--k))}
+.txt{display:flex;flex-direction:column;gap:calc(22px*var(--k))}
+.ill{height:calc(var(--illh)*1px);flex:none;display:flex;align-items:center;justify-content:center}
+.ill svg{width:100%;height:100%;overflow:visible}
+[data-fmt="16x9"] .scena{flex-direction:row;align-items:center;gap:80px}
+[data-fmt="16x9"] .ill{order:2;width:46%;height:640px}
+[data-fmt="16x9"] .txt{order:1;width:54%}
+[data-fmt="16x9"] .grande{font-size:140px}
+[data-fmt="16x9"] .scena:last-child .txt{gap:14px}
+.chip{align-self:flex-start;font:700 calc(26px*var(--k)) 'Roboto Mono',monospace;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ar);border:3px solid var(--ar);border-radius:999px;padding:.35em .9em}
+h1{margin:0;font-weight:900;font-size:calc(var(--t)*1px);line-height:1.02;letter-spacing:-.01em}
+h1 .a{color:var(--ar)}
+.m{display:block;overflow:hidden;padding:.12em .22em;margin:-.12em -.22em}
+.m>.i{display:block;will-change:transform}
+.sotto{font-weight:600;font-size:calc(46px*var(--k));line-height:1.22;color:var(--dim);margin:0}
+.sotto b{color:var(--tx)}
+.lista{display:flex;flex-direction:column;gap:calc(16px*var(--k));margin:0;padding:0;list-style:none}
+.lista li{display:flex;align-items:center;gap:calc(22px*var(--k));font-weight:600;font-size:calc(42px*var(--k));line-height:1.18}
+.lista .ico{flex:none;width:calc(76px*var(--k));height:calc(76px*var(--k));border-radius:50%;background:rgba(245,158,11,.14);
+  display:flex;align-items:center;justify-content:center}
+.lista .ico svg{width:64%;height:64%}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:calc(22px*var(--k));width:100%}
+.tiles.t3{grid-template-columns:1fr 1fr 1fr}
+.tile{background:rgba(255,255,255,.05);border-radius:calc(26px*var(--k));padding:calc(18px*var(--k));
+  display:flex;flex-direction:column;align-items:center;gap:calc(10px*var(--k));text-align:center}
+.tile svg{width:calc(130px*var(--k));height:calc(130px*var(--k))}
+.tile span{font-weight:700;font-size:calc(34px*var(--k));line-height:1.1}
+.nota{font:700 calc(28px*var(--k)) 'Roboto Mono',monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin:0}
+.nota b{color:var(--ar)}
+.mesi{display:grid;grid-template-columns:repeat(6,1fr);gap:calc(14px*var(--k));width:100%}
+.mese{border-radius:calc(18px*var(--k));padding:calc(20px*var(--k)) 0;text-align:center;
+  font:700 calc(40px*var(--k)) 'Roboto Mono',monospace;background:rgba(255,255,255,.06);color:var(--dim)}
+.mese.on{background:var(--arancione);color:#0a1220}
+.grande{font-weight:900;font-size:calc(190px*var(--k));line-height:.9;color:var(--ar)}
+.fonte{font:500 calc(24px*var(--k)) 'Roboto Mono',monospace;letter-spacing:.04em;color:var(--dim);margin:0}
+#hud{position:absolute;left:calc(var(--hx)*1px);top:calc(var(--hy)*1px);height:72px;display:flex;
+  align-items:center;gap:22px;padding:0 30px;border-radius:999px;background:rgba(255,255,255,.07);
+  font:700 24px 'Roboto Mono',monospace;letter-spacing:.16em;color:var(--dim)}
+#hud .dots{display:flex;gap:10px}
+#hud .dot{width:14px;height:14px;border-radius:50%;background:#33415a}
+#wipe{position:absolute;width:40px;height:40px;margin:-20px 0 0 -20px;border-radius:50%;opacity:0;pointer-events:none}
+.banda{position:absolute;top:0;bottom:0;width:26%;opacity:0}
+#sub{position:absolute;left:calc(var(--side)*1px);right:calc(var(--side)*1px);bottom:calc((var(--H) - var(--subb))*1px);
+  background:rgba(10,18,32,.9);border:2px solid rgba(255,255,255,.12);border-radius:22px;padding:18px 26px;
+  font-weight:600;font-size:calc(43px*var(--ks));line-height:1.25;text-align:center;opacity:0}
+#ui{position:fixed;left:0;right:0;bottom:8px;display:flex;gap:8px;justify-content:center;font:600 14px system-ui}
+#ui a{color:#eef2f7;background:#1d2a40;border-radius:999px;padding:8px 14px;text-decoration:none}
+#ui a[aria-current]{background:#2e90fa;color:#0a1220}
+#avvio{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.6);
+  color:#fff;font:700 28px system-ui;border:0;width:100%;cursor:pointer}
+body.render #ui,body.render #avvio{display:none!important}
+</style>
+</head>
+<body>
+<div id="stage" role="img" aria-label="">
+  <div id="scene"></div>
+  <div id="wipe"></div>
+  <div id="bande"></div>
+  <div id="hud"><div class="dots"></div><span class="lab"></span></div>
+  <div id="sub" aria-hidden="true"></div>
+</div>
+<nav id="ui" aria-label="Formato"></nav>
+<button id="avvio" type="button">Tocca per avviare (con audio)</button>
+<script>
+/* ===================== CONFIG — testi, tempi ===================== */
+/* Fonti: DPC, «Rischio incendi boschivi. Il fenomeno» e «Sei preparato?» (rischi.protezionecivile.gov.it);
+   «Io non rischio — Incendi boschivi, cosa fare» (iononrischio.gov.it); pagina del sito
+   /rischi-prevenzione/rischio-incendio/ (periodo giugno–settembre, zona bruciata, 112 nel Lazio). */
+const CONFIG = {
+  titolo: "Incendi boschivi: come nascono e come comportarsi",
+  hud: "INCENDI BOSCHIVI",
+  posterT: 0,
+  scene: [
+    { ill: "bosco", illh: 520, dur: 5, chip: "Protezione Civile · Genzano di Roma",
+      righe: ["Incendi", "<span class='a'>boschivi</span>"], sotto: "Come nascono e come comportarsi.<br><b>Per tutte le età.</b>",
+      sottotitolo: "Incendi boschivi: come nascono e come comportarsi. Un video per tutte le età." },
+    { ill: "cause", illh: 470, dur: 7, chip: "Come nasce",
+      righe: ["Quasi sempre", "da una persona"], nota: "Fulmini e cause naturali: <b>molto rari</b>",
+      sottotitolo: "Un incendio boschivo nasce quasi sempre da una persona: un mozzicone, un fiammifero, un fuoco lasciato acceso, sterpaglie bruciate. Quelli naturali, come i fulmini, sono molto rari." },
+    { ill: "fattori", illh: 270, dur: 7, chip: "Come cresce",
+      righe: ["Erba secca,", "caldo e vento"], sotto: "Il vento porta le scintille lontano e accende <b>nuovi focolai</b>.",
+      nota: "In salita il fuoco <b>corre più veloce</b>",
+      sottotitolo: "Poi il fuoco cresce con l'erba secca, il caldo e il vento, che porta le scintille lontano e accende nuovi focolai. In salita corre ancora più veloce." },
+    { ill: "mesi", illh: 230, dur: 5, chip: "Quando",
+      righe: ["Da giugno", "a settembre"], sotto: "È il periodo <b>più pericoloso</b>: fa caldo e piove poco.",
+      sottotitolo: "Da noi il periodo più pericoloso va da giugno a settembre, quando fa caldo e piove poco." },
+    { ill: "falo", illh: 210, dur: 8, chip: "Per evitarlo",
+      righe: ["Previeni"], lista: [
+        ["sigaretta", "Non gettare mozziconi e fiammiferi"],
+        ["falo", "Fuoco solo nelle aree attrezzate, poi spegnilo bene"],
+        ["vento", "Se c'è vento, mai fuoco"],
+        ["auto", "Non parcheggiare sull'erba secca"] ],
+      sottotitolo: "Per evitarlo: non gettare mozziconi o fiammiferi. Accendi il fuoco solo nelle aree attrezzate e spegnilo bene. Con il vento, mai. E non parcheggiare sull'erba secca: la marmitta scotta." },
+    { ill: "telefono", illh: 280, dur: 7, chip: "Se lo vedi",
+      righe: ["Chiama il <span class='a'>112</span>"], lista: [
+        ["fumo", "Anche solo fumo: chiama subito"],
+        ["persone", "Non pensare che l'abbia già fatto qualcuno"],
+        ["pin", "Di' il Comune e il luogo preciso"] ],
+      sottotitolo: "Se vedi fiamme, o anche solo fumo, chiama subito il 112. Non pensare che l'abbia già fatto qualcun altro. Di' il Comune e il luogo preciso." },
+    { ill: "bambino", illh: 420, dur: 6, chip: "Per i più piccoli",
+      righe: ["Allontanati e", "avvisa un <span class='a'>adulto</span>"], sotto: "Sei solo e il pericolo è vero? <b>Chiama tu il 112.</b>",
+      sottotitolo: "Sei piccolo? Allontanati e avvisa subito un adulto. Se sei solo e il pericolo è vero, chiama tu il 112." },
+    { ill: "fuga", illh: 300, dur: 7, chip: "Se sei coinvolto",
+      righe: ["Via di fuga", "<span class='a'>sicura</span>"], lista: [
+        ["strada", "Verso una strada o un corso d'acqua"],
+        ["vento", "Non dove soffia il vento"],
+        ["salita", "Mai in salita"] ],
+      sottotitolo: "Se il fuoco è vicino, cerca una via di fuga sicura, come una strada o un corso d'acqua. Non andare dove soffia il vento, e non scappare in salita." },
+    { ill: "aterra", illh: 400, dur: 6, chip: "Se non puoi allontanarti",
+      righe: ["Stenditi", "a <span class='a'>terra</span>"], sotto: "In un punto senza vegetazione: <b>il fumo sale</b>, così lo respiri meno.",
+      sottotitolo: "Se non puoi allontanarti, stenditi a terra in un punto senza vegetazione: il fumo sale, e così lo respiri meno." },
+    { ill: "strada", illh: 400, dur: 6, chip: "Non è uno spettacolo",
+      righe: ["Non fermarti", "a <span class='a'>guardare</span>"], sotto: "Fermo lungo la strada <b>intralci i soccorsi</b>.",
+      sottotitolo: "L'incendio non è uno spettacolo: non fermarti lungo la strada a guardare, intralci i soccorsi." },
+    { ill: "dopo", illh: 380, dur: 6, chip: "Dopo",
+      righe: ["Non entrare nella", "zona <span class='a'>bruciata</span>"], sotto: "Sotto la cenere possono esserci <b>braci ancora accese</b>.",
+      sottotitolo: "Dopo, non entrare nella zona bruciata: sotto la cenere possono esserci braci ancora accese." },
+    { ill: "rinascita", illh: 200, dur: 7, chip: "Il bosco è di tutti", finale: true,
+      righe: ["Proteggerlo", "dipende anche", "da <span class='a'>te</span>"], sotto: "<b>protezionecivilegenzano.it</b>",
+      grande: "112", fonte: "Fonte: Dipartimento della Protezione Civile,<br>campagna «Io non rischio»",
+      sottotitolo: "Il bosco è di tutti: proteggerlo dipende anche da te. In emergenza chiama il 112." }
+  ]
+};
+const DUR = /*DUR*/[];
+const AUDIO = /*AUDIO*/"";
+
+/* ===================== FORMATI e zone sicure ===================== */
+const FORMATI = {
+  "9x16": { W:1080, H:1920, hx:96,  hy:212, side:96,  top:330, bot:1300, subb:1580, t:104, k:1,   ks:.93, illk:1   },
+  "4x5":  { W:1080, H:1350, hx:96,  hy:64,  side:96,  top:170, bot:1040, subb:1320, t:92,  k:.85, ks:.9,  illk:.55 },
+  "1x1":  { W:1080, H:1080, hx:80,  hy:56,  side:80,  top:150, bot:830,  subb:1060, t:80,  k:.78, ks:.85, illk:.4  },
+  "16x9": { W:1920, H:1080, hx:120, hy:56,  side:140, top:160, bot:890,  subb:1044, t:104, k:.95, ks:.9,  illk:1   }
+};
+const Q = new URLSearchParams(location.search);
+const RENDER = Q.get("render") === "1";
+const FMT = FORMATI[Q.get("fmt")] ? Q.get("fmt") : "9x16";
+const L = FORMATI[FMT];
+const $ = s => document.querySelector(s);
+const stage = $("#stage");
+document.documentElement.dataset.fmt = FMT;
+for (const k of ["W","H","side","top","bot","subb","hx","hy","t","k","ks"]) stage.style.setProperty("--" + k, L[k]);
+if (RENDER) document.body.classList.add("render");
+stage.setAttribute("aria-label", CONFIG.titolo);
+
+/* ===================== AIUTANTI (deterministici) ===================== */
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const prog = (u, s, d) => clamp((u - s) / d);
+const outCubic = x => 1 - Math.pow(1 - x, 3);
+const outQuart = x => 1 - Math.pow(1 - x, 4);
+const inOutCubic = x => x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const outBack = x => { const c = 1.70158, c3 = c + 1; return 1 + c3 * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+const hash = n => { const x = Math.sin(n * 12.9898 + 78.233) * 43758.5453; return x - Math.floor(x); };
+const lerp = (a, b, x) => a + (b - a) * x;
+function reveal(el, p) { el.style.transform = `translateY(${(1 - outQuart(p)) * 115}%)`; }
+function fadeUp(el, p, d = 40) { const e = outCubic(p); el.style.opacity = e; el.style.transform = `translateY(${(1 - e) * d}px)`; }
+function pop(el, p) { const e = p <= 0 ? 0 : outBack(p); el.style.opacity = clamp(p * 3); el.style.transform = `scale(${lerp(.6, 1, e)})`; }
+
+/* ===================== DISEGNI (SVG piatti, originali) ===================== */
+const FIAMMA = (x, y, s, cls = "fl") => `<g class="${cls}" transform="translate(${x} ${y}) scale(${s})"><g class="fx">
+  <path d="M0 0 C-34 -6 -40 -52 -14 -86 C-12 -60 4 -58 6 -74 C30 -48 40 -8 0 0Z" fill="#ef4136"/>
+  <path d="M0 -2 C-22 -6 -24 -36 -8 -58 C-6 -40 6 -40 8 -50 C22 -32 24 -8 0 -2Z" fill="#ff8a00"/>
+  <path d="M0 -4 C-10 -6 -12 -22 -3 -34 C0 -24 6 -24 7 -28 C14 -18 12 -6 0 -4Z" fill="#ffcc00"/></g></g>`;
+const ALBERO = (x, y, s, c = "var(--bosco)", c2 = "var(--bosco2)") => `<g transform="translate(${x} ${y}) scale(${s})">
+  <rect x="-7" y="-30" width="14" height="32" fill="#6b4a2b"/><path d="M0 -150 L-52 -24 L52 -24Z" fill="${c}"/>
+  <path d="M0 -150 L0 -24 L52 -24Z" fill="${c2}"/></g>`;
+const FUMO = (n, cls = "fumo") => `<g class="${cls}">${Array.from({ length: n }, () => `<circle r="10" fill="#93a1b5"/>`).join("")}</g>`;
+const PERSONA = (x, y, s, c = "#2e90fa", testa = "#f2c49b") => `<g transform="translate(${x} ${y}) scale(${s})">
+  <circle cx="0" cy="-118" r="22" fill="${testa}"/><rect x="-22" y="-92" width="44" height="58" rx="18" fill="${c}"/>
+  <rect x="-20" y="-40" width="16" height="42" rx="7" fill="#34435c"/><rect x="4" y="-40" width="16" height="42" rx="7" fill="#34435c"/></g>`;
+const ICONE = {
+  sigaretta: `<svg viewBox="0 0 100 100"><rect x="10" y="44" width="64" height="16" rx="3" fill="#eef2f7"/><rect x="74" y="44" width="16" height="16" rx="3" fill="#ff8a00"/><path d="M84 36 q-8 -10 2 -20" stroke="#93a1b5" stroke-width="5" fill="none" stroke-linecap="round"/></svg>`,
+  fiammifero: `<svg viewBox="0 0 100 100"><rect x="46" y="40" width="8" height="54" rx="3" fill="#e0b27a"/><circle cx="50" cy="38" r="9" fill="#ef4136"/><path d="M50 30 C38 24 42 8 50 2 C52 14 62 16 56 28Z" fill="#ffcc00"/></svg>`,
+  falo: `<svg viewBox="0 0 100 100"><rect x="18" y="74" width="64" height="12" rx="6" fill="#8a5a33" transform="rotate(-12 50 80)"/><rect x="18" y="74" width="64" height="12" rx="6" fill="#6b4a2b" transform="rotate(12 50 80)"/><path d="M50 72 C28 68 30 40 44 22 C46 38 54 36 56 28 C72 44 72 66 50 72Z" fill="#ff8a00"/><path d="M50 70 C40 66 42 52 48 44 C50 52 56 52 58 48 C62 58 60 68 50 70Z" fill="#ffcc00"/></svg>`,
+  sterpaglie: `<svg viewBox="0 0 100 100"><g stroke="#d9b54a" stroke-width="5" stroke-linecap="round"><path d="M20 88 L30 40"/><path d="M34 88 L38 30"/><path d="M48 88 L50 36"/><path d="M62 88 L66 34"/><path d="M76 88 L84 44"/></g><path d="M58 90 C40 86 44 66 54 56 C56 66 62 66 64 60 C74 70 72 86 58 90Z" fill="#ff8a00"/></svg>`,
+  fulmine: `<svg viewBox="0 0 100 100"><path d="M24 44 a22 20 0 0 1 40 -12 a16 14 0 0 1 16 24 H26 a14 12 0 0 1 -2 -12Z" fill="#5d6b80"/><path d="M52 58 L40 80 H52 L46 98 L66 72 H54 L62 58Z" fill="#ffcc00"/></svg>`,
+  erba: `<svg viewBox="0 0 100 100"><g stroke="#d9b54a" stroke-width="6" stroke-linecap="round" fill="none"><path d="M16 90 Q20 60 12 36"/><path d="M32 90 Q34 56 40 30"/><path d="M50 90 Q48 50 54 22"/><path d="M68 90 Q70 60 80 38"/><path d="M84 90 Q86 70 92 56"/></g></svg>`,
+  sole: `<svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="22" fill="#ffcc00"/><g stroke="#ffcc00" stroke-width="7" stroke-linecap="round">${Array.from({ length: 8 }, (_, i) => { const a = i * Math.PI / 4; return `<path d="M${50 + 32 * Math.cos(a)} ${50 + 32 * Math.sin(a)} L${50 + 44 * Math.cos(a)} ${50 + 44 * Math.sin(a)}"/>`; }).join("")}</g></svg>`,
+  vento: `<svg viewBox="0 0 100 100"><g stroke="#9fd0ff" stroke-width="7" stroke-linecap="round" fill="none"><path d="M10 36 H62 a12 12 0 1 0 -12 -12"/><path d="M10 56 H80 a12 12 0 1 1 -12 12"/><path d="M10 76 H48"/></g></svg>`,
+  auto: `<svg viewBox="0 0 100 100"><path d="M12 62 L20 42 Q24 34 34 34 H66 Q76 34 80 42 L88 62 Z" fill="#2e90fa"/><rect x="8" y="58" width="84" height="18" rx="6" fill="#2e90fa"/><circle cx="28" cy="78" r="9" fill="#0a1220"/><circle cx="72" cy="78" r="9" fill="#0a1220"/><g stroke="#d9b54a" stroke-width="5" stroke-linecap="round"><path d="M10 96 L14 86"/><path d="M40 96 L42 86"/><path d="M60 96 L58 86"/><path d="M88 96 L84 86"/></g></svg>`,
+  fumo: `<svg viewBox="0 0 100 100"><circle cx="40" cy="64" r="20" fill="#93a1b5"/><circle cx="58" cy="46" r="18" fill="#a9b5c6"/><circle cx="46" cy="28" r="13" fill="#c3ccd8"/></svg>`,
+  persone: `<svg viewBox="0 0 100 100"><circle cx="34" cy="34" r="12" fill="#f2c49b"/><rect x="20" y="48" width="28" height="38" rx="12" fill="#2e90fa"/><circle cx="66" cy="34" r="12" fill="#f2c49b"/><rect x="52" y="48" width="28" height="38" rx="12" fill="#f59e0b"/></svg>`,
+  pin: `<svg viewBox="0 0 100 100"><path d="M50 92 C30 64 22 52 22 38 a28 28 0 0 1 56 0 C78 52 70 64 50 92Z" fill="#ef4136"/><circle cx="50" cy="38" r="11" fill="#0a1220"/></svg>`,
+  strada: `<svg viewBox="0 0 100 100"><path d="M36 96 L46 8 H54 L64 96Z" fill="#5d6b80"/><g stroke="#eef2f7" stroke-width="4"><path d="M50 84 V70"/><path d="M50 58 V46"/><path d="M50 34 V24"/></g><path d="M70 96 Q84 60 74 30 Q70 16 80 6" stroke="#2e90fa" stroke-width="9" fill="none" stroke-linecap="round"/></svg>`,
+  salita: `<svg viewBox="0 0 100 100"><path d="M6 90 L94 20 V90Z" fill="#2f8f5b"/><path d="M40 70 L66 48" stroke="#eef2f7" stroke-width="7" stroke-linecap="round"/><path d="M58 44 L68 46 L66 56" stroke="#eef2f7" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/><g stroke="#ef4136" stroke-width="9" stroke-linecap="round"><path d="M22 18 L78 74"/><path d="M78 18 L22 74"/></g></svg>`
+};
+const tile = (ico, testo) => `<div class="tile">${ICONE[ico]}<span>${testo}</span></div>`;
+const ILL = {
+  bosco: () => `<svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid meet">
+    <path d="M-40 420 Q140 250 300 320 T640 300 V440 H-40Z" fill="var(--terra)"/>
+    ${ALBERO(90, 360, 1.05)}${ALBERO(185, 330, 1.25)}${ALBERO(300, 350, 1.1, "#2a7d50", "#1a5f3d")}${ALBERO(420, 318, 1.3)}${ALBERO(525, 340, 1.05, "#2a7d50", "#1a5f3d")}
+    ${FUMO(16)}${FIAMMA(430, 320, 1.15)}${FIAMMA(470, 330, .8)}${FIAMMA(395, 332, .7)}</svg>`,
+  cause: () => `<div class="tiles">${tile("sigaretta", "Mozzicone")}${tile("fiammifero", "Fiammifero")}${tile("falo", "Fuoco lasciato acceso")}${tile("sterpaglie", "Sterpaglie bruciate")}</div>`,
+  fattori: () => `<div class="tiles t3">${tile("erba", "Erba secca")}${tile("sole", "Caldo")}${tile("vento", "Vento")}</div>`,
+  mesi: () => `<div class="mesi">${["G", "F", "M", "A", "M", "G", "L", "A", "S", "O", "N", "D"].map((m, i) =>
+    `<div class="mese${i >= 5 && i <= 8 ? " on" : ""}">${m}</div>`).join("")}</div>`,
+  falo: () => `<svg viewBox="0 0 600 320" preserveAspectRatio="xMidYMid meet">
+    <circle cx="300" cy="230" r="120" fill="none" stroke="#5d6b80" stroke-width="10" stroke-dasharray="22 16"/>
+    <rect x="235" y="258" width="130" height="20" rx="10" fill="#8a5a33" transform="rotate(-10 300 268)"/>
+    <rect x="235" y="258" width="130" height="20" rx="10" fill="#6b4a2b" transform="rotate(10 300 268)"/>
+    ${FIAMMA(300, 262, 1.25)}${FUMO(10)}</svg>`,
+  telefono: () => `<svg viewBox="0 0 600 440" preserveAspectRatio="xMidYMid meet">
+    <g class="tel"><rect x="210" y="20" width="180" height="340" rx="30" fill="#1d2a40" stroke="#5d6b80" stroke-width="6"/>
+    <rect x="228" y="56" width="144" height="250" rx="10" fill="#0a1220"/>
+    <text x="300" y="200" text-anchor="middle" font-family="Titillium Web" font-weight="900" font-size="84" fill="#f59e0b">112</text>
+    <circle cx="300" cy="330" r="14" fill="#5d6b80"/></g>
+    <g class="onde" stroke="#f59e0b" stroke-width="10" fill="none" stroke-linecap="round">
+      <path d="M420 110 q30 60 0 120"/><path d="M450 80 q48 90 0 180"/><path d="M180 110 q-30 60 0 120"/><path d="M150 80 q-48 90 0 180"/></g></svg>`,
+  bambino: () => `<svg viewBox="0 0 600 460" preserveAspectRatio="xMidYMid meet">
+    <path d="M0 440 H600" stroke="#34435c" stroke-width="6"/>
+    ${ALBERO(70, 440, .9, "#2a7d50", "#1a5f3d")}${FUMO(8)}${FIAMMA(70, 372, .7)}
+    <g class="bimbo">${PERSONA(0, 0, .72, "#f59e0b")}</g>
+    ${PERSONA(470, 440, 1.25, "#2e90fa")}
+    <g class="fumetto"><rect x="330" y="90" width="120" height="84" rx="20" fill="#eef2f7"/><path d="M372 172 L360 200 L396 172Z" fill="#eef2f7"/>
+    <text x="390" y="150" text-anchor="middle" font-family="Titillium Web" font-weight="900" font-size="58" fill="#0a1220">!</text></g></svg>`,
+  fuga: () => `<svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid meet">
+    <rect x="0" y="0" width="600" height="420" rx="30" fill="#13261d"/>
+    <path d="M430 0 L470 0 L520 420 L470 420Z" fill="#5d6b80"/><path d="M455 30 V70 M462 120 V160 M469 210 V250 M476 300 V340" stroke="#eef2f7" stroke-width="6"/>
+    <path d="M560 0 Q600 120 560 220 Q530 320 580 420" stroke="#2e90fa" stroke-width="26" fill="none"/>
+    ${FIAMMA(70, 250, 1)}${FIAMMA(120, 300, .8)}${FIAMMA(60, 360, .9)}${FIAMMA(150, 380, .7)}${FUMO(12)}
+    <g class="ventofreccia" stroke="#9fd0ff" stroke-width="9" stroke-linecap="round" fill="none"><path d="M40 90 H200"/><path d="M180 72 L204 90 L180 108"/><path d="M60 140 H170"/></g>
+    <g class="corri">${PERSONA(0, 0, .8, "#f59e0b")}</g>
+    <path class="trat" d="M270 300 Q360 260 440 230" stroke="#eef2f7" stroke-width="6" stroke-dasharray="14 12" fill="none"/></svg>`,
+  aterra: () => `<svg viewBox="0 0 600 460" preserveAspectRatio="xMidYMid meet">
+    <rect x="40" y="370" width="520" height="30" rx="15" fill="#5d4a36"/>
+    <g class="sdraiato" transform="translate(300 356)"><circle cx="-120" cy="-4" r="22" fill="#f2c49b"/>
+      <rect x="-96" y="-24" width="130" height="42" rx="18" fill="#f59e0b"/><rect x="34" y="-18" width="100" height="16" rx="7" fill="#34435c"/><rect x="34" y="0" width="100" height="16" rx="7" fill="#34435c"/></g>
+    ${FUMO(18, "fumo alto")}
+    <g class="freccia" stroke="#eef2f7" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M520 300 V120"/><path d="M496 146 L520 118 L544 146"/></g></svg>`,
+  strada: () => `<svg viewBox="0 0 600 440" preserveAspectRatio="xMidYMid meet">
+    <path d="M0 440 L230 150 H370 L600 440Z" fill="#5d6b80"/><path d="M300 180 V220 M300 260 V310 M300 350 V420" stroke="#eef2f7" stroke-width="8"/>
+    ${FUMO(16)}
+    <g transform="translate(410 330)"><path d="M-80 20 L-64 -18 Q-58 -32 -40 -32 H40 Q58 -32 64 -18 L80 20Z" fill="#2e90fa"/><rect x="-86" y="14" width="172" height="36" rx="10" fill="#2e90fa"/>
+      <circle cx="-48" cy="52" r="16" fill="#0a1220"/><circle cx="48" cy="52" r="16" fill="#0a1220"/></g>
+    <g transform="translate(410 215)"><g class="divieto"><circle r="46" fill="#ef4136"/><rect x="-28" y="-8" width="56" height="16" rx="4" fill="#eef2f7"/></g></g></svg>`,
+  dopo: () => `<svg viewBox="0 0 600 440" preserveAspectRatio="xMidYMid meet">
+    <path d="M0 440 Q300 330 600 440Z" fill="#2a2522"/>
+    ${[120, 250, 380, 500].map((x, i) => `<g transform="translate(${x} ${390 - i % 2 * 10})"><rect x="-8" y="-150" width="16" height="152" fill="#221c18"/><path d="M0 -110 L-34 -140 M0 -80 L30 -112" stroke="#221c18" stroke-width="10" stroke-linecap="round"/></g>`).join("")}
+    <g class="braci">${Array.from({ length: 14 }, (_, i) => `<circle cx="${60 + i * 36 + (i % 3) * 7}" cy="${404 - (i % 4) * 7}" r="${6 + (i % 3) * 2}" fill="#ff8a00"/>`).join("")}</g>
+    <g class="nastro"><path d="M0 300 L600 250" stroke="#ffcc00" stroke-width="22"/><path d="M0 300 L600 250" stroke="#0a1220" stroke-width="22" stroke-dasharray="26 26"/></g></svg>`,
+  rinascita: () => `<svg viewBox="0 0 600 380" preserveAspectRatio="xMidYMid meet">
+    <path d="M-40 380 Q160 260 300 300 T640 280 V400 H-40Z" fill="#163a27"/>
+    ${[80, 190, 300, 410, 520].map((x, i) => `<g class="cresce" data-i="${i}">${ALBERO(x, 340 - (i % 2) * 18, 1.05 + (i % 2) * .2)}</g>`).join("")}</svg>`
+};
+
+/* ===================== SCENE ===================== */
+const durScena = (s, k) => (DUR.length && DUR[k] != null) ? 0.45 + DUR[k] + 0.75 : s.dur;
+const START = []; let acc = 0;
+CONFIG.scene.forEach((s, k) => { START[k] = acc; acc += durScena(s, k); });
+const TOTAL = acc;
+const VOICE_AT = CONFIG.scene.map((s, k) => (DUR.length && DUR[k] != null) ? START[k] + 0.45 : null);
+const SUBS = CONFIG.scene.map((s, k) => VOICE_AT[k] == null ? null :
+  { da: +VOICE_AT[k].toFixed(3), a: +(VOICE_AT[k] + DUR[k] + 0.2).toFixed(3), testo: s.sottotitolo }).filter(Boolean);
+
+const box = $("#scene"), NODI = [];
+const righe = arr => `<h1>${arr.map(r => `<span class="m"><span class="i">${r}</span></span>`).join("")}</h1>`;
+CONFIG.scene.forEach((s, k) => {
+  const el = document.createElement("section");
+  el.className = "scena"; el.style.opacity = 0;
+  el.style.setProperty("--illh", Math.round((s.illh || 400) * L.illk));
+  const lista = s.lista ? `<ul class="lista">${s.lista.map(([i, t]) => `<li><span class="ico">${ICONE[i]}</span><span>${t}</span></li>`).join("")}</ul>` : "";
+  el.innerHTML = `<div class="ill">${ILL[s.ill]()}</div><div class="txt"><span class="chip">${s.chip}</span>${righe(s.righe)}
+    ${s.sotto ? `<p class="sotto">${s.sotto}</p>` : ""}${lista}${s.nota ? `<p class="nota">${s.nota}</p>` : ""}
+    ${s.grande ? `<div class="grande">${s.grande}</div>` : ""}${s.fonte ? `<p class="fonte">${s.fonte}</p>` : ""}</div>`;
+  if (L.illk < .5 && s.lista) el.querySelector(".ill").style.display = "none";
+  box.appendChild(el); NODI.push(el);
+});
+const dots = $("#hud .dots");
+CONFIG.scene.forEach(() => dots.insertAdjacentHTML("beforeend", '<span class="dot"></span>'));
+$("#hud .lab").textContent = CONFIG.hud;
+["verde", "gialla", "arancione", "rossa"].forEach((c, i) =>
+  $("#bande").insertAdjacentHTML("beforeend", `<div class="banda" style="left:${i * 25 - .5}%;background:var(--${c})"></div>`));
+
+/* fiamme che tremolano e fumo che sale: tutto in funzione di t */
+function fiamme(el, t) {
+  el.querySelectorAll(".fl .fx").forEach((f, i) => {
+    const sx = 1 + .07 * Math.sin(t * 9 + i * 1.7), sy = 1 + .12 * Math.sin(t * 7.3 + i * 2.3) + .05 * Math.sin(t * 17 + i);
+    f.setAttribute("transform", `scale(${sx.toFixed(3)} ${sy.toFixed(3)})`);
+  });
+}
+function fumo(el, t, sx, sy, spread, alto) {
+  el.querySelectorAll(".fumo").forEach(g => {
+    const cs = g.querySelectorAll("circle"), n = cs.length;
+    cs.forEach((c, i) => {
+      const per = 3.2, a = ((t + hash(i + 3) * per) % per) / per;
+      const x = sx + (hash(i + 11) - .5) * spread + Math.sin(t * .8 + i) * 12 + a * 40;
+      const y = sy - a * alto;
+      c.setAttribute("cx", x.toFixed(1)); c.setAttribute("cy", y.toFixed(1));
+      c.setAttribute("r", (10 + a * 34 * (.7 + hash(i) * .6)).toFixed(1));
+      c.setAttribute("opacity", (Math.sin(a * Math.PI) * .45).toFixed(3));
+    });
+  });
+}
+const ANIM = {
+  bosco: (el, u, t) => { fiamme(el, t); fumo(el, t, 430, 250, 80, 240); },
+  falo: (el, u, t) => { fiamme(el, t); fumo(el, t, 300, 170, 30, 170); },
+  bambino: (el, u, t) => {
+    fiamme(el, t); fumo(el, t, 70, 320, 30, 200);
+    const p = inOutCubic(prog(u, .6, 1.6));
+    el.querySelector(".bimbo").setAttribute("transform", `translate(${lerp(170, 360, p).toFixed(1)} 440)`);
+    const f = el.querySelector(".fumetto"); f.style.opacity = prog(u, 2.2, .3); f.style.transformBox = "fill-box"; f.style.transformOrigin = "50% 100%";
+    f.style.transform = `scale(${lerp(.5, 1, outBack(prog(u, 2.2, .45)))})`;
+  },
+  fuga: (el, u, t) => {
+    fiamme(el, t); fumo(el, t, 100, 260, 90, 220);
+    const p = inOutCubic(prog(u, .8, 2.4));
+    el.querySelector(".corri").setAttribute("transform", `translate(${lerp(270, 450, p).toFixed(1)} ${lerp(330, 250, p).toFixed(1)})`);
+    el.querySelector(".trat").style.strokeDashoffset = (-t * 30).toFixed(1);
+    el.querySelector(".ventofreccia").setAttribute("transform", `translate(${(Math.sin(t * 3) * 8).toFixed(1)} 0)`);
+  },
+  aterra: (el, u, t) => {
+    fumo(el, t, 300, 300, 300, 220);
+    el.querySelector(".freccia").setAttribute("transform", `translate(0 ${(-Math.abs(Math.sin(t * 2.4)) * 14).toFixed(1)})`);
+  },
+  telefono: (el, u, t) => {
+    el.querySelectorAll(".onde path").forEach((p, i) => p.setAttribute("opacity", (.3 + .7 * Math.max(0, Math.sin(t * 5 - (i % 2) * 1.2))).toFixed(2)));
+  },
+  strada: (el, u, t) => { fumo(el, t, 300, 250, 240, 200); const d = el.querySelector(".divieto"); d.style.transformBox = "fill-box"; d.style.transformOrigin = "50% 50%"; d.style.transform = `scale(${outBack(prog(u, .8, .5))})`; },
+  dopo: (el, u, t) => { el.querySelectorAll(".braci circle").forEach((c, i) => c.setAttribute("opacity", (.45 + .55 * (.5 + .5 * Math.sin(t * 3 + i * 1.9))).toFixed(2))); },
+  rinascita: (el, u, t) => { el.querySelectorAll(".cresce").forEach((g, i) => { const p = outBack(prog(u, .3 + i * .18, .6)); g.style.transformBox = "fill-box"; g.style.transformOrigin = "50% 100%"; g.style.transform = `scale(${Math.max(0, p)})`; }); }
+};
+
+/* ===================== RENDER(t) — unica fonte di verità ===================== */
+const scenaDi = t => { let k = 0; while (k + 1 < START.length && t >= START[k + 1]) k++; return k; };
+function render(t) {
+  t = clamp(t, 0, TOTAL);
+  const k = scenaDi(t), s = CONFIG.scene[k], u = t - START[k], D = durScena(s, k);
+  NODI.forEach((n, i) => n.style.opacity = i === k ? 1 : 0);
+  const el = NODI[k];
+  el.style.opacity = k < CONFIG.scene.length - 1 ? 1 - prog(u, D - .35, .35) : 1;
+
+  dots.querySelectorAll(".dot").forEach((d, i) => {
+    d.style.background = i < k ? "var(--az)" : i === k ? "var(--ar)" : "#33415a";
+    d.style.transform = `scale(${i === k ? lerp(1, 1.45, outBack(prog(u, 0, .4))) : 1})`;
+  });
+
+  // transizione a cerchio dal pallino dell'HUD
+  const w = $("#wipe"), dp = dots.children[k];
+  if (k > 0 && !s.finale && u < .7) {
+    const r = stage.getBoundingClientRect(), b = dp.getBoundingClientRect(), sc = RENDER ? 1 : r.width / L.W;
+    w.style.left = ((b.left + b.width / 2 - r.left) / sc) + "px"; w.style.top = ((b.top + b.height / 2 - r.top) / sc) + "px";
+    w.style.background = "var(--ar)";
+    w.style.transform = `scale(${outCubic(prog(u, 0, .45)) * Math.hypot(L.W, L.H) / 18})`;
+    w.style.opacity = 1 - prog(u, .28, .4);
+  } else w.style.opacity = 0;
+
+  const primo = k === 0;
+  const q = x => primo ? 1 : x;  // il primo fotogramma è già completo (anteprima)
+  el.querySelectorAll("h1 .i").forEach((i, j) => reveal(i, q(prog(u, .15 + j * .1, .55))));
+  const chip = el.querySelector(".chip"); fadeUp(chip, q(prog(u, .1, .4)), 16);
+  el.querySelectorAll(".sotto").forEach((p, j) => fadeUp(p, primo ? 1 : prog(u, .7 + j * .3, .5)));
+  el.querySelectorAll(".lista li").forEach((li, j) => fadeUp(li, prog(u, .9 + j * .9, .5), 30));
+  el.querySelectorAll(".tile").forEach((ti, j) => pop(ti, prog(u, .5 + j * .45, .5)));
+  el.querySelectorAll(".mese").forEach((m, j) => pop(m, prog(u, .4 + j * .08, .4)));
+  const nota = el.querySelector(".nota"); if (nota) fadeUp(nota, prog(u, D * .55, .5), 20);
+  const g = el.querySelector(".grande"); if (g) pop(g, prog(u, 1.4, .5));
+  const fo = el.querySelector(".fonte"); if (fo) fadeUp(fo, prog(u, 1.9, .5), 16);
+  const ill = el.querySelector(".ill"); if (!primo && !s.lista) fadeUp(ill, prog(u, .2, .6), 30); else ill.style.opacity = 1;
+  if (ANIM[s.ill]) ANIM[s.ill](el, u, t);
+
+  // spazzata a 4 bande all'ingresso del finale
+  const sw = s.finale ? prog(u, 0, .9) : 1;
+  $("#bande").querySelectorAll(".banda").forEach((b, i) => {
+    const p = clamp(sw * 1.6 - i * .15);
+    b.style.opacity = sw < 1 ? 1 : 0;
+    b.style.transform = `translateY(${lerp(100, -100, inOutCubic(p))}%)`;
+  });
+
+  const sub = $("#sub"), cur = SUBS.find(x => t >= x.da - .1 && t <= x.a);
+  if (cur) { sub.textContent = cur.testo; sub.style.opacity = Math.min(prog(t, cur.da - .1, .2), 1 - prog(t, cur.a - .2, .2)); }
+  else sub.style.opacity = 0;
+}
+
+/* ===================== AVVIO ===================== */
+window.TOTAL = TOTAL;
+window.VOICE_AT = VOICE_AT;
+window.SUBS = SUBS;
+window.POSTER_T = CONFIG.posterT;
+window.KEYFRAMES = [0, ...START.map((s, k) => +(s + durScena(CONFIG.scene[k], k) * .85).toFixed(2))];
+window.renderFrame = render;
+Promise.all(["400", "600", "700", "900"].map(p => document.fonts.load(`${p} 40px "Titillium Web"`))
+  .concat(["500", "700"].map(p => document.fonts.load(`${p} 20px "Roboto Mono"`))))
+  .then(() => document.fonts.ready).then(() => { render(0); window.__ready = true; if (!RENDER) anteprima(); });
+
+function anteprima() {
+  const fit = () => { const s = Math.min(innerWidth / L.W, (innerHeight - 50) / L.H);
+    stage.style.transform = `translate(-50%,calc(-50% - 20px)) scale(${s})`; };
+  fit(); addEventListener("resize", fit);
+  for (const f in FORMATI) {
+    const a = document.createElement("a"); a.href = `?fmt=${f}`; a.textContent = f.replace("x", ":");
+    if (f === FMT) a.setAttribute("aria-current", "true"); $("#ui").appendChild(a);
+  }
+  const au = AUDIO ? new Audio(AUDIO) : null;
+  let t0 = null, pausa = false, tp = 0;
+  const ora = () => au ? au.currentTime : (performance.now() - t0) / 1000;
+  const giro = () => { if (!pausa) { let t = ora(); if (t >= TOTAL || (au && au.ended)) { if (au) { au.currentTime = 0; au.play(); } else t0 = performance.now(); t = 0; } render(t); } requestAnimationFrame(giro); };
+  const parti = () => { t0 = performance.now(); if (au) au.play(); requestAnimationFrame(giro); };
+  stage.addEventListener("click", () => {
+    pausa = !pausa;
+    if (au) pausa ? au.pause() : au.play();
+    else if (pausa) tp = ora(); else t0 = performance.now() - tp * 1000;
+  });
+  if (au) { const b = $("#avvio"); b.style.display = "flex"; b.onclick = () => { b.style.display = "none"; parti(); }; }
+  else parti();
+}
+</script>
+</body>
+</html>

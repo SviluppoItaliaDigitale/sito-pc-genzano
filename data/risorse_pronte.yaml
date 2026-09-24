@@ -69,10 +69,10 @@ materiali:
   tema_titolo: Allerta meteo
   tipo: video
   titolo: 'Video: i colori dell''allerta meteo'
-  descrizione: Video verticale senza audio (24 secondi) che spiega verde, gialla,
-    arancione e rossa. Pronto da condividere su WhatsApp e social.
+  descrizione: Video verticale con voce e sottotitoli (45 secondi) che spiega verde,
+    gialla, arancione e rossa. Pronto da condividere su WhatsApp e social.
   file_url: /video/2026-09-23-allerta-meteo-codici-colore.mp4
-  dimensione: 1.8 MB
+  dimensione: 3.0 MB
   data_pubblicazione: '2026-09-23'
   licenza: CC BY 4.0
 - id: allerta-meteo-video-cosa-fare-2026-09-23
@@ -80,11 +80,33 @@ materiali:
   tema_titolo: Allerta meteo
   tipo: video
   titolo: 'Video: allerta meteo, cosa fare colore per colore'
-  descrizione: Video verticale senza audio (31 secondi) con le azioni da fare per
-    ogni colore dell'allerta, dal verde al rosso.
+  descrizione: Video verticale con voce e sottotitoli (59 secondi) con le azioni da
+    fare per ogni colore dell'allerta, dal verde al rosso.
   file_url: /video/2026-09-23-allerta-meteo-cosa-fare.mp4
-  dimensione: 2.4 MB
+  dimensione: 4.1 MB
   data_pubblicazione: '2026-09-23'
+  licenza: CC BY 4.0
+- id: allerta-meteo-video-codici-colore-16x9-2026-09-24
+  tema: allerta-meteo
+  tema_titolo: Allerta meteo
+  tipo: video
+  titolo: 'Video orizzontale: i colori dell''allerta meteo'
+  descrizione: Lo stesso video in formato orizzontale (45 secondi, voce e sottotitoli),
+    per computer, televisione e proiezione a scuola o negli incontri.
+  file_url: /video/2026-09-23-allerta-meteo-codici-colore-16x9.mp4
+  dimensione: 3.4 MB
+  data_pubblicazione: '2026-09-24'
+  licenza: CC BY 4.0
+- id: allerta-meteo-video-cosa-fare-16x9-2026-09-24
+  tema: allerta-meteo
+  tema_titolo: Allerta meteo
+  tipo: video
+  titolo: 'Video orizzontale: allerta meteo, cosa fare colore per colore'
+  descrizione: Lo stesso video in formato orizzontale (59 secondi, voce e sottotitoli),
+    per computer, televisione e proiezione a scuola o negli incontri.
+  file_url: /video/2026-09-23-allerta-meteo-cosa-fare-16x9.mp4
+  dimensione: 4.4 MB
+  data_pubblicazione: '2026-09-24'
   licenza: CC BY 4.0
 - id: allerta-meteo-podcast-2026-03-25
   tema: allerta-meteo

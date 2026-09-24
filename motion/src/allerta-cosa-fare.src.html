@@ -74,13 +74,41 @@ html,body{margin:0;height:100%;background:#03060b;overflow:hidden}
   background:rgba(0,0,0,.6);color:#fff;font:600 14px/1 system-ui,sans-serif;opacity:0;transition:opacity .2s;pointer-events:none}
 .paused #pz{opacity:1}
 .render #pz{display:none}
+
+/* ---------- formati, sottotitoli, avvio con audio (24/09/2026) ---------- */
+.rain{width:100%!important;height:100%!important}
+#sweep{width:100%!important;height:100%!important}
+#sub{position:absolute;left:96px;right:96px;bottom:340px;z-index:11;background:rgba(10,18,32,.92);border:2px solid rgba(255,255,255,.16);
+  border-radius:22px;padding:18px 26px;font-weight:600;font-size:40px;line-height:1.25;text-align:center;color:#eef2f7;opacity:0}
+#avvio{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.6);
+  color:#fff;font:700 28px system-ui;border:0;width:100%;cursor:pointer;z-index:20}
+.render #avvio{display:none!important}
+html[data-fmt="16x9"] #stage{width:1920px;height:1080px}
+html[data-fmt="16x9"] #hud{left:120px;top:56px}
+html[data-fmt="16x9"] #sub{left:160px;right:160px;bottom:34px;font-size:36px}
+html[data-fmt="16x9"] .intro{left:160px;top:230px;width:1600px}
+html[data-fmt="16x9"] .content{left:160px;top:180px;width:1600px}
+html[data-fmt="16x9"] .card{position:absolute;right:0;top:40px;width:760px;height:394px}
+html[data-fmt="16x9"] .card svg{width:100%;height:100%}
+html[data-fmt="16x9"] .chip{margin-top:0}
+html[data-fmt="16x9"] .head,html[data-fmt="16x9"] .acts{max-width:780px}
+html[data-fmt="16x9"] .acts li{font-size:40px}
+html[data-fmt="16x9"] .outro{left:160px;top:200px;width:1600px;display:grid;grid-template-columns:860px 1fr;column-gap:100px;align-items:start}
+html[data-fmt="16x9"] .cap{grid-column:1;grid-row:1}
+html[data-fmt="16x9"] .o1{grid-column:1;grid-row:2}
+html[data-fmt="16x9"] .o2{grid-column:1;grid-row:3}
+html[data-fmt="16x9"] .o3{grid-column:1;grid-row:4}
+html[data-fmt="16x9"] .zone{grid-column:2;grid-row:2/4;margin-top:40px}
+html[data-fmt="16x9"] .src{grid-column:2;grid-row:4;margin-top:30px}
 </style>
 </head>
 <body>
 <div id="stage">
+  <div id="sub" aria-hidden="true"></div>
   <svg id="sweep" viewBox="0 0 1080 1920"><polygon/><polygon/><polygon/><polygon/></svg>
   <div id="hud"><div class="dots"></div><span>Cosa fare</span></div>
 </div>
+<button id="avvio" type="button">Tocca per avviare (con audio)</button>
 <div id="pz">In pausa · tocca per riprendere</div>
 
 <script>
@@ -114,6 +142,11 @@ const CONFIG = {
     url: 'protezionecivilegenzano.it',
     fonte: 'Fonte: Dipartimento della Protezione Civile,<br>campagna «Io non rischio»'
   },
+  // sottotitoli = testo parlato (voce/testi.txt) con i numeri in cifre
+  sottotitoli: ['Allerta meteo: cosa fare, dal verde al rosso. Colore per colore.',
+    'Codice verde: preparati prima. Conosci il piano del tuo Comune, scopri se abiti in zona a rischio e tieni pronto il kit di emergenza.',
+    'Allerta gialla: informati spesso. Segui gli avvisi ufficiali, evita le zone che si allagano e stai lontano da fossi e torrenti.',
+    'Allerta arancione: limita gli spostamenti. Niente sottopassi, argini e ponti. Non dormire nei seminterrati e proteggi i locali al piano strada.', "Allerta rossa: mettiti al sicuro. Sali ai piani alti, mai in cantina. Chiudi il gas e stacca la corrente. Non usare l'auto e segui le indicazioni delle autorità.", 'In emergenza chiama il 112. E aiuta anziani e persone fragili.'],
   tempi: { intro: 2.9, finale: 5.4, wipe: .62, sweep: .95 }
 };
 
@@ -128,11 +161,21 @@ const RAIN = [ null,
 /* ============================ motore ============================ */
 const RENDER = new URLSearchParams(location.search).has('render');
 if (RENDER) document.documentElement.classList.add('render');
+const FMT = new URLSearchParams(location.search).get('fmt') === '16x9' ? '16x9' : '9x16';
+const W = FMT === '16x9' ? 1920 : 1080, H = FMT === '16x9' ? 1080 : 1920;
+document.documentElement.dataset.fmt = FMT;
+const DUR = /*DUR*/[];   // durate delle frasi della voce (voce.py)
+const AUDIO = /*AUDIO*/"";
 const TT = CONFIG.tempi;
-const START = [0, TT.intro];
-CONFIG.livelli.forEach(L => START.push(START[START.length - 1] + L.durata));
-const TOTAL = START[5] + TT.finale;
+const BASE = [TT.intro, ...CONFIG.livelli.map(L => L.durata), TT.finale];
+// con la voce ogni scena dura almeno frase + 0,45 s prima + 0,75 s dopo
+const DURS = BASE.map((b, k) => DUR[k] != null ? Math.max(b, .45 + DUR[k] + .75) : b);
+const START = [0]; DURS.forEach(d => START.push(START[START.length - 1] + d));
+const TOTAL = START[6];                  // START[5] = inizio chiusura
 window.TOTAL = TOTAL;
+window.VOICE_AT = DURS.map((d, k) => DUR[k] != null ? +(START[k] + .45).toFixed(3) : null);
+window.SUBS = CONFIG.sottotitoli.map((testo, k) => DUR[k] != null ?
+  { da: +(START[k] + .45).toFixed(3), a: +(START[k] + .45 + DUR[k] + .2).toFixed(3), testo } : null).filter(Boolean);
 
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const lerp = (a, b, t) => a + (b - a) * t;
@@ -329,7 +372,7 @@ function build() {
   bands.forEach((b, j) => b.setAttribute('fill', C.livelli[3 - j].colore));
 
   const I = C.intro;
-  const a = node(`<section class="layer dark"><div class="glow"></div><canvas class="rain" width="1080" height="1920"></canvas>
+  const a = node(`<section class="layer dark"><div class="glow"></div><canvas class="rain" width="${W}" height="${H}"></canvas>
     <div class="intro"><div class="eyebrow">${I.eyebrow}</div>
       <span class="m w1"><span class="i">${I.w1}</span></span>
       <span class="m w2"><span class="i">${I.w2}</span></span>
@@ -342,7 +385,7 @@ function build() {
   C.livelli.forEach((L, k) => {
     const S = SCENES[L.scena];
     const s = node(`<section class="layer lvl" style="--c:${L.colore}"><div class="shade"></div>
-      <canvas class="rain" width="1080" height="1920"></canvas>
+      <canvas class="rain" width="${W}" height="${H}"></canvas>
       <div class="content"><div class="card">${S.svg()}</div>
         <div class="chip">${L.chip}</div>
         <div class="m head"><span class="i">${L.head}</span></div>
@@ -357,7 +400,7 @@ function build() {
   });
 
   const F = C.finale;
-  const o = node(`<section class="layer dark"><div class="glow"></div><canvas class="rain" width="1080" height="1920"></canvas>
+  const o = node(`<section class="layer dark"><div class="glow"></div><canvas class="rain" width="${W}" height="${H}"></canvas>
     <div class="outro"><div class="cap">${F.cap}</div>
       <span class="m o1"><span class="i">${F.o1}</span></span>
       <span class="m o2"><span class="i">${F.o2}</span></span>
@@ -370,11 +413,11 @@ function build() {
 }
 
 function measure() {
-  const st = stage.getBoundingClientRect(), sc = st.width / 1080;
+  const st = stage.getBoundingClientRect(), sc = st.width / W;
   dots.forEach((d, k) => {
     const r = d.el.getBoundingClientRect();
     const x = (r.left + r.width / 2 - st.left) / sc, y = (r.top + r.height / 2 - st.top) / sc;
-    Object.assign(lv[k], { ox:x, oy:y, rmax: Math.max(Math.hypot(x, y), Math.hypot(1080 - x, y), Math.hypot(x, 1920 - y), Math.hypot(1080 - x, 1920 - y)) + 30 });
+    Object.assign(lv[k], { ox:x, oy:y, rmax: Math.max(Math.hypot(x, y), Math.hypot(W - x, y), Math.hypot(x, H - y), Math.hypot(W - x, H - y)) + 30 });
   });
 }
 
@@ -384,7 +427,7 @@ function fadeUp(el, u, s, d = .5, dist = 36) {
   el.style.opacity = p.toFixed(3); el.style.transform = `translateY(${((1 - p) * dist).toFixed(2)}px)`;
 }
 function drawRain(ctx, cfg, t, seed) {
-  ctx.clearRect(0, 0, 1080, 1920);
+  ctx.clearRect(0, 0, W, H);
   if (!cfg) return;
   const tn = Math.tan(cfg.ang * Math.PI / 180);
   ctx.lineCap = 'round';
@@ -396,9 +439,9 @@ function drawRain(ctx, cfg, t, seed) {
     const n = Math.round(cfg.n * (far ? .6 : .4));
     for (let i = 0; i < n; i++) {
       const id = i * 2 + pass + seed * 1000, h1 = hash(id), h2 = hash(id + .37), h3 = hash(id + .71);
-      const sp = cfg.v * (far ? .7 : 1) * (.8 + .4 * h3), len = cfg.len * (far ? .65 : 1) * (.75 + .5 * h2), span = 1920 + len + 240;
+      const sp = cfg.v * (far ? .7 : 1) * (.8 + .4 * h3), len = cfg.len * (far ? .65 : 1) * (.75 + .5 * h2), span = H + len + 240;
       const y = ((h2 * span + sp * t) % span) - len - 120;
-      const x = h1 * (1600 + 2040 * tn) - 260 - (y + 120) * tn;
+      const x = h1 * (W + 520 + (H + 120) * tn) - 260 - (y + 120) * tn;
       ctx.moveTo(x, y); ctx.lineTo(x - len * tn, y + len);
     }
     ctx.stroke();
@@ -453,13 +496,13 @@ function renderOutro(t) {
   if (u < 0) { L.el.style.visibility = 'hidden'; sweep.style.visibility = 'hidden'; return; }
   L.el.style.visibility = 'visible';
   const p = E.inOutCubic(clamp(u / TT.sweep));
-  const K = 95, B = 92, yE = lerp(1920 + K + 4 * B + 10, -K - 10, p);
+  const K = 95, B = 92, yE = lerp(H + K + 4 * B + 10, -K - 10, p);
   if (p < 1) {
     sweep.style.visibility = 'visible';
-    L.el.style.clipPath = `polygon(0px ${(yE + K).toFixed(1)}px,1080px ${(yE - K).toFixed(1)}px,1080px 4000px,0px 4000px)`;
+    L.el.style.clipPath = `polygon(0px ${(yE + K).toFixed(1)}px,${W}px ${(yE - K).toFixed(1)}px,${W}px 4000px,0px 4000px)`;
     bands.forEach((b, j) => {
       const top = yE - (j + 1) * B - 1, bot = yE - j * B + 1;
-      b.setAttribute('points', `0,${(top + K).toFixed(1)} 1080,${(top - K).toFixed(1)} 1080,${(bot - K).toFixed(1)} 0,${(bot + K).toFixed(1)}`);
+      b.setAttribute('points', `0,${(top + K).toFixed(1)} ${W},${(top - K).toFixed(1)} ${W},${(bot - K).toFixed(1)} 0,${(bot + K).toFixed(1)}`);
     });
   } else { sweep.style.visibility = 'hidden'; L.el.style.clipPath = 'none'; }
   drawRain(L.ctx, RAIN_OUT, t, 7);
@@ -489,22 +532,39 @@ function renderHud(t) {
 
 function render(t) {
   t = clamp(t, 0, TOTAL);
+  renderSub(t);
   renderIntro(t);
   for (let k = 0; k < 4; k++) renderLevel(k, t);
   renderOutro(t);
   renderHud(t);
 }
+const subEl = document.getElementById('sub');
+function renderSub(t) {
+  const c = window.SUBS.find(x => t >= x.da - .1 && t <= x.a);
+  if (!c) { subEl.style.opacity = 0; return; }
+  if (subEl.textContent !== c.testo) subEl.textContent = c.testo;
+  subEl.style.opacity = Math.min(prog(t, c.da - .1, .2), 1 - prog(t, c.a - .2, .2)).toFixed(3);
+}
 window.renderFrame = t => { render(t); return true; };
 
-function fit() { const s = Math.min(innerWidth / 1080, innerHeight / 1920); stage.style.transform = `translate(-50%,-50%) scale(${s})`; }
+function fit() { const s = Math.min(innerWidth / W, innerHeight / H); stage.style.transform = `translate(-50%,-50%) scale(${s})`; }
 let t0 = null, paused = false, cur = 0;
 function loop(now) {
   if (!paused) { if (t0 === null) t0 = now; cur = ((now - t0) / 1000) % (TOTAL + 1.2); render(cur); }
   requestAnimationFrame(loop);
 }
-function toggle() { paused = !paused; document.documentElement.classList.toggle('paused', paused); if (!paused) t0 = performance.now() - cur * 1000; }
+function toggle() {
+  if (window.__au && window.__auOn) { const au = window.__au; if (au.paused) au.play(); else au.pause();
+    document.documentElement.classList.toggle('paused', au.paused); return; } paused = !paused; document.documentElement.classList.toggle('paused', paused); if (!paused) t0 = performance.now() - cur * 1000; }
+function loopAudio() {
+  const au = window.__au;
+  if (au.ended) { au.currentTime = 0; au.play(); }
+  render(clamp(au.currentTime, 0, TOTAL));
+  requestAnimationFrame(loopAudio);
+}
 async function boot() {
   build();
+  sweep.setAttribute('viewBox', `0 0 ${W} ${H}`);
   try {
     await Promise.all(['400 40px "Titillium Web"', '600 40px "Titillium Web"', '700 40px "Titillium Web"', '900 40px "Titillium Web"',
       '500 20px "Roboto Mono"', '700 20px "Roboto Mono"'].map(f => document.fonts.load(f)));
@@ -512,7 +572,12 @@ async function boot() {
   } catch (e) {}
   if (!RENDER) { fit(); addEventListener('resize', fit); addEventListener('pointerdown', toggle); }
   measure(); render(0); window.__ready = true;
-  if (!RENDER) requestAnimationFrame(loop);
+  if (!RENDER && AUDIO) {
+    const au = window.__au = new Audio(AUDIO), b = document.getElementById('avvio');
+    b.style.display = 'flex';
+    b.onclick = e => { e.stopPropagation(); b.style.display = 'none'; window.__auOn = true;
+      document.documentElement.classList.remove('paused'); au.play(); requestAnimationFrame(loopAudio); };
+  } else if (!RENDER) requestAnimationFrame(loop);
 }
 boot();
 </script>

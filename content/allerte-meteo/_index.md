@@ -50,11 +50,11 @@ L'assenza di allerta significa che **non sono previsti fenomeni significativi**,
 
 ### I colori dell'allerta in due video
 
-Due video brevi, senza audio, riassumono questa sezione: il primo spiega che cosa significa ogni colore, il secondo che cosa fare. Le stesse informazioni sono scritte qui sotto, colore per colore. Puoi scaricarli dalle [Risorse pronte](/risorse-pronte/) per condividerli.
+Due video brevi, con voce e sottotitoli, riassumono questa sezione: il primo spiega che cosa significa ogni colore, il secondo che cosa fare. Le stesse informazioni sono scritte qui sotto, colore per colore. Puoi scaricarli dalle [Risorse pronte](/risorse-pronte/), in verticale e in orizzontale, per condividerli.
 
 <div class="video-coppia">
-{{< video src="/video/2026-09-23-allerta-meteo-codici-colore.mp4" poster="/video/2026-09-23-allerta-meteo-codici-colore-poster.webp" verticale="true" titolo="Video senza audio: i quattro colori dell'allerta meteo e il loro significato" caption="Che cosa significano i quattro colori." >}}
-{{< video src="/video/2026-09-23-allerta-meteo-cosa-fare.mp4" poster="/video/2026-09-23-allerta-meteo-cosa-fare-poster.webp" verticale="true" titolo="Video senza audio: cosa fare con l'allerta verde, gialla, arancione e rossa" caption="Cosa fare, dal verde al rosso." >}}
+{{< video src="/video/2026-09-23-allerta-meteo-codici-colore.mp4" poster="/video/2026-09-23-allerta-meteo-codici-colore-poster.webp" verticale="true" titolo="Video con voce e sottotitoli: i quattro colori dell'allerta meteo e il loro significato" caption="Che cosa significano i quattro colori." >}}
+{{< video src="/video/2026-09-23-allerta-meteo-cosa-fare.mp4" poster="/video/2026-09-23-allerta-meteo-cosa-fare-poster.webp" verticale="true" titolo="Video con voce e sottotitoli: cosa fare con l'allerta verde, gialla, arancione e rossa" caption="Cosa fare, dal verde al rosso." >}}
 </div>
 
 ### <span class="badge badge-allerta-verde">VERDE</span> — Nessuna allerta

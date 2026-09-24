@@ -25,14 +25,14 @@ social_punti:
 
 L'autunno è la stagione delle piogge intense, e con loro tornano i bollettini con i codici colore. Per spiegarli in meno di un minuto abbiamo preparato **due brevi video verticali**, pensati per essere guardati dal telefono e girati a parenti e amici.
 
-Il primo spiega che cosa significa ogni colore. Il secondo dice che cosa fare, colore per colore. I video non hanno audio: tutto quello che mostrano è scritto anche in questa pagina.
+Il primo spiega che cosa significa ogni colore. Il secondo dice che cosa fare, colore per colore. Entrambi hanno una voce che legge i testi e i sottotitoli sempre visibili, così si capiscono anche senza audio. Tutto quello che dicono è scritto anche in questa pagina.
 
 ## Primo video: che cosa significano i colori
 
 {{< video src="/video/2026-09-23-allerta-meteo-codici-colore.mp4"
           poster="/video/2026-09-23-allerta-meteo-codici-colore-poster.webp"
           verticale="true"
-          titolo="Video senza audio: i quattro colori dell'allerta meteo e il loro significato"
+          titolo="Video con voce e sottotitoli: i quattro colori dell'allerta meteo e il loro significato"
           caption="I quattro livelli di allerta meteo, dal verde al rosso. Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
 Il colore dell'allerta non descrive che tempo farà. Descrive **gli effetti che la pioggia e i temporali possono avere sul territorio**: allagamenti, frane, piene di fossi e torrenti. Lo stabilisce il Centro Funzionale Regionale del Lazio nel bollettino quotidiano.
@@ -51,7 +51,7 @@ Il bollettino si legge per zona, non per comune. **Genzano di Roma rientra nella
 {{< video src="/video/2026-09-23-allerta-meteo-cosa-fare.mp4"
           poster="/video/2026-09-23-allerta-meteo-cosa-fare-poster.webp"
           verticale="true"
-          titolo="Video senza audio: cosa fare con l'allerta verde, gialla, arancione e rossa"
+          titolo="Video con voce e sottotitoli: cosa fare con l'allerta verde, gialla, arancione e rossa"
           caption="Le azioni di autoprotezione per ogni colore dell'allerta. Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, sulle indicazioni della campagna «Io non rischio» del Dipartimento della Protezione Civile." >}}
 
 Le azioni si sommano: quello che vale con il giallo vale anche con l'arancione e con il rosso.
@@ -85,7 +85,7 @@ In emergenza chiama il **112**, il Numero Unico Europeo. E, se puoi farlo senza 
 
 ## Dove trovi i video e lo stato dell'allerta
 
-Da oggi i due video sono anche nella pagina [Allerte meteo](/allerte-meteo/), accanto allo stato dell'allerta per Genzano aggiornato in automatico dai bollettini ufficiali. Chi vuole condividerli può scaricarli dalle [Risorse pronte](/risorse-pronte/), nella sezione dedicata all'allerta meteo.
+Da oggi i due video sono anche nella pagina [Allerte meteo](/allerte-meteo/), accanto allo stato dell'allerta per Genzano aggiornato in automatico dai bollettini ufficiali. Chi vuole condividerli può scaricarli dalle [Risorse pronte](/risorse-pronte/), nella sezione dedicata all'allerta meteo: ci sono la versione verticale per il telefono e quella orizzontale, per lo schermo del computer, la televisione o la proiezione a scuola.
 
 Per sapere che cosa cambia in concreto nel nostro territorio, con le zone più delicate e le azioni del Comune, c'è la scheda [Allerta meteo: cosa significa a Genzano, colore per colore](/allerte-meteo/cosa-significa-a-genzano/).
 

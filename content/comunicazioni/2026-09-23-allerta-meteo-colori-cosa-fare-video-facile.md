@@ -19,14 +19,14 @@ build:
 tts: true
 ---
 
-In autunno piove molto. A volte arriva un'allerta meteo. L'allerta ha un colore. Abbiamo fatto 2 video brevi per spiegare i colori. I video non hanno audio. Qui sotto trovi tutto scritto.
+In autunno piove molto. A volte arriva un'allerta meteo. L'allerta ha un colore. Abbiamo fatto 2 video brevi per spiegare i colori. Nei video c'è una voce che legge. Ci sono anche le scritte. Qui sotto trovi tutto scritto.
 
 ## Primo video: i 4 colori
 
 {{< video src="/video/2026-09-23-allerta-meteo-codici-colore.mp4"
           poster="/video/2026-09-23-allerta-meteo-codici-colore-poster.webp"
           verticale="true"
-          titolo="Video senza audio: i 4 colori dell'allerta meteo"
+          titolo="Video con voce e scritte: i 4 colori dell'allerta meteo"
           caption="I 4 colori dell'allerta meteo. Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
 Il colore dice quanto è forte il pericolo per la pioggia.
@@ -43,7 +43,7 @@ La Regione Lazio decide il colore ogni giorno. Il Lazio è diviso in zone. Genza
 {{< video src="/video/2026-09-23-allerta-meteo-cosa-fare.mp4"
           poster="/video/2026-09-23-allerta-meteo-cosa-fare-poster.webp"
           verticale="true"
-          titolo="Video senza audio: cosa fare con ogni colore dell'allerta"
+          titolo="Video con voce e scritte: cosa fare con ogni colore dell'allerta"
           caption="Cosa fare con ogni colore. Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 
 **Verde: preparati.**
