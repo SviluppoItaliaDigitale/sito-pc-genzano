@@ -58,7 +58,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add static/open-data/notizie-agenzie.json \
+          git add static/open-data/dpc-bollettino.json \
+                  static/open-data/notizie-agenzie.json \
                   static/open-data/gdacs-eventi.json \
                   static/open-data/ems-attivazioni.json \
                   static/open-data/volo-soccorso.json \
@@ -69,7 +70,7 @@ jobs:
             echo "Snapshot invariati: nessun commit."
             exit 0
           fi
-          git commit -m "[skip-dati-sala] Snapshot sala situazioni: notizie, GDACS, EMS, volo, MeteoAlarm, FIRMS"
+          git commit -m "[skip-dati-sala] Snapshot sala situazioni: bollettino DPC, notizie, GDACS, EMS, volo, MeteoAlarm, FIRMS"
           # anti non-fast-forward: altri workflow committano di frequente
           git pull --rebase origin main
           git push
