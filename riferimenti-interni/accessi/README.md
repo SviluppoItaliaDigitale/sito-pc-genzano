@@ -19,11 +19,39 @@ Questa cartella non è deployata (vedi rule 04c).
 | `IG_ACCESS_TOKEN` + `IG_USER_ID` | repo social | pubblicare post, caroselli e storie su Instagram; chiudere i commenti | **eliminare un contenuto** (serve `instagram_manage_contents`); modificare la didascalia di un post uscito (la piattaforma non lo consente a nessuno) |
 | `FB_PAGE_TOKEN` + `FB_PAGE_ID` | repo social | pubblicare sulla Pagina, riscrivere il testo di un post uscito, **eliminare un post** | cambiare le immagini di un post uscito (la piattaforma non lo consente) |
 
-**Permesso mancante da chiedere**: `instagram_manage_contents`. Non richiede la
-revisione di Meta, perché la Pagina e l'account sono nostri e per i propri asset
-basta l'accesso standard. Si aggiunge nel portale ripetendo l'autorizzazione e
-rigenerando il token. Lo strumento che lo userebbe è già pronto: il workflow
-«🗑️ Elimina un contenuto pubblicato» del repo social.
+**`instagram_manage_contents` concesso il 24/09/2026**, insieme al nuovo token
+della Pagina (vedi sotto). Serve al workflow «🗑️ Elimina un contenuto
+pubblicato» del repo social; non è ancora stato provato su un contenuto reale.
+
+## Quando i token scadono e quando no
+
+- **Token Instagram** (`IG_ACCESS_TOKEN`): dura 60 giorni, ma il workflow
+  «🔑 Rinnovo token social» lo rinnova da solo il 1 e il 16 di ogni mese.
+- **Token della Pagina** (`FB_PAGE_TOKEN`): ricavato da un token utente a lunga
+  durata, **non scade**. La data di scadenza che mostra il debugger di Meta (60
+  giorni) è quella del token utente intermedio, che dopo non serve più.
+- **Entrambi si invalidano** se cambia la password dell'account Facebook o se
+  Meta chiude le sessioni per sicurezza: errore `code 190` (sottocodice `460`
+  sulla Pagina). Nessun rinnovo automatico li recupera: vanno rigenerati a mano.
+  Successo il 23/09/2026, con tutta la pubblicazione ferma per una notte.
+
+## Rigenerare i token a mano (procedura del 24/09/2026)
+
+1. **Chrome**: consentire i popup a `[*.]facebook.com` e `[*.]instagram.com`
+   (`chrome://settings/content/popups`). Senza, «Genera token» non fa nulla.
+2. **Instagram**: developers.facebook.com → app **PC Genzano Publisher**
+   (`1120754493711097`) → Instagram → *Configurazione dell'API con Business
+   Login per Instagram* → riga `protezionecivilegenzano` → **Genera token** →
+   accesso e consenso → segreto `IG_ACCESS_TOKEN` del repo social.
+3. **Pagina Facebook**: Graph API Explorer → app PC Genzano Publisher → *Token
+   utente* con `pages_show_list`, `pages_read_engagement`, `pages_manage_posts`
+   (più `instagram_basic`, `instagram_manage_contents`) → *Generate Access
+   Token* → icona «i» → *Apri in Strumento token d'accesso* → **Extend Access
+   Token** → incollare il token lungo nell'Explorer → `GET
+   239709112708894?fields=access_token` → il valore è il token della Pagina →
+   segreto `FB_PAGE_TOKEN`.
+4. **Verifica**: workflow «🔑 Rinnovo token social» con `solo_verifica=true`,
+   poi un giro di «📣 Pubblicazione automatica social»: la coda riparte da sola.
 
 ## Pubblicazione del sito
 
