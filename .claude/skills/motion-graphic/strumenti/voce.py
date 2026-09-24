@@ -69,7 +69,7 @@ def applica_lessico(testo, voci):
         if not g:
             return w
         return g[0].upper() + g[1:] if w[0].isupper() else g
-    return re.sub(r"[A-Za-zÀ-ÿ']+", sost, testo)
+    return re.sub(r"[A-Za-zÀ-ÿ]+", sost, testo)
 
 
 def fonemi(modello):
@@ -110,22 +110,22 @@ def dipi(parola, cache):
 
 
 def norma(ipa):
-    """Riduce le due notazioni a un confronto di accento e timbro."""
-    t = re.sub(r"\([^)]*\)", "", ipa)  # varianti grafiche tra parentesi, es. (hôtel)
-    t = re.split(r"[,;◆\[]", t)[0].strip().strip("/*").lower()
+    """Riduce le due notazioni a (vocali dall'accento in poi, vocale accentata)."""
+    t = re.sub(r"\([^)]*\)", "", ipa)  # note tra parentesi: (-ó-, avv.), (hôtel)
+    t = re.split(r"[,;•◆\[]", t)[0].strip().strip("/*°").lower()
+    if "ˈ" not in t:
+        t = t.replace("ˌ", "ˈ")  # parole atone nel DiPI: vale l'accento secondario
     for a, b in (("ʤ", "dʒ"), ("ʧ", "tʃ"), ("ʦ", "ts"), ("ʣ", "dz"), ("ɾ", "r"), ("ɪ", "i"), ("ʊ", "u"),
-                 ("ʲ", ""), ("ː", ""), ("ɡ", "g"), (" ", ""), (".", "")):
+                 ("iʲ", "i"), ("ʲ", ""), ("ː", ""), ("ɡ", "g"), (" ", ""), (".", ""), ("ˌ", "")):
         t = t.replace(a, b)
-    t = re.sub(r"([bcdfgklmnprstvzʃ])\1", r"\1", t)  # le doppie non interessano qui
-    t = re.sub(r"j(?=[aeiouɛɔ])", "i", t)
-    # accento principale = ultimo ˈ (nelle parole composte conta l'ultima parola);
-    # si confrontano: vocali dall'accento alla fine (posizione) e timbro della vocale accentata
     acc = t.rfind("ˈ")
     if acc < 0:
-        return (None, "", t)
-    coda = t[acc:]
-    vocale = next((c for c in coda if c in "aeiouɛɔ"), "")
-    return (len(re.findall(r"[aeiouɛɔ]", coda)), vocale, t.replace("ˈ", ""))
+        return (None, "")
+    coda = t[acc + 1:]
+    tonica = re.search(r"[aeiouɛɔ]", coda)
+    # sillabe dall'accento alla fine = gruppi vocalici, senza le semivocali (dio/djo contano uguale)
+    gruppi = re.findall(r"[aeiouɛɔ]+", coda.replace("j", "").replace("w", ""))
+    return (len(gruppi), tonica.group(0) if tonica else "")
 
 
 def da_controllare(parola, ipa, inizio_frase=False):
@@ -136,7 +136,11 @@ def da_controllare(parola, ipa, inizio_frase=False):
     if len(sillabe) < 2 or "ˈ" not in ipa:
         return False
     dopo = ipa.split("ˈ", 1)[1]
-    return len(re.findall(r"[aeiouɛɔəɪʊ]+", dopo)) != 2
+    if len(re.findall(r"[aeiouɛɔəɪʊ]+", dopo)) != 2:
+        return True
+    # e/o accentate: aperta o chiusa cambia la parola (pèsca/pésca), si verifica il timbro
+    tonica = re.search(r"[aeiouɛɔ]", dopo)
+    return bool(tonica) and tonica.group(0) in "eoɛɔ"
 
 
 def main():
@@ -168,8 +172,10 @@ def main():
         parlato = applica_lessico(riga, voci)
         if voce_pv:
             report.append(f"## scena {k}: {parlato}")
-            for m in re.finditer(r"[A-Za-zÀ-ÿ']+", parlato):
+            for m in re.finditer(r"[A-Za-zÀ-ÿ]+", parlato):
                 parola = m.group(0)
+                if len(parola) < 3:  # articoli e congiunzioni: la voce li legge dentro la frase
+                    continue
                 inizio = not parlato[:m.start()].strip() or parlato[:m.start()].rstrip()[-1] in ".!?:"
                 ipa = "".join(sum(voce_pv.phonemize(parola), []))
                 verificata = parola.lower() in voci or parola.lower() in {g.lower() for g in voci.values()}
@@ -179,7 +185,7 @@ def main():
                     rif = dipi(parola, cache_dipi)
                     if rif:
                         n_voce, n_rif = norma(ipa), norma(rif[0])
-                        if n_voce[:2] == n_rif[:2]:
+                        if n_voce == n_rif:
                             segno, nota = "=", f"DiPI {rif[0]}"
                         else:
                             segno, nota = "≠", f"DiPI {rif[0]}  ← accento o timbro diversi: correggere"
