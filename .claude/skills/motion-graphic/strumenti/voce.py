@@ -121,7 +121,8 @@ def main():
                 parola = m.group(0)
                 inizio = not parlato[:m.start()].strip() or parlato[:m.start()].rstrip()[-1] in ".!?:"
                 ipa = "".join(sum(voce_pv.phonemize(parola), []))
-                segno = "!" if da_controllare(parola, ipa, inizio) else " "
+                verificata = parola.lower() in voci or parola.lower() in {g.lower() for g in voci.values()}
+                segno = "✓" if verificata else "!" if da_controllare(parola, ipa, inizio) else " "
                 report.append(f"{segno} {parola:20} {ipa}")
         subprocess.run([sys.executable, "-m", "piper", "-m", str(modello),
                         "--length-scale", a.length_scale, "--sentence-silence", "0.35",
@@ -134,7 +135,7 @@ def main():
     (cartella / "durate.json").write_text(json.dumps(durate))
     if report:
         (cartella / "fonemi.txt").write_text(
-            "# ! = da verificare sul Vocabolario Treccani (accento non sulla penultima o nome proprio)\n"
+            "# ! = da verificare (Treccani; nomi di luogo: IPA di Wikipedia)  ✓ = già nel lessico pronuncia.tsv\n"
             + "\n".join(report) + "\n", encoding="utf-8")
         n = sum(1 for r in report if r.startswith("!"))
         print(f"[voce] fonemi in {(cartella / 'fonemi.txt').relative_to(ROOT)}: {n} parole da verificare")
