@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Genera la voce fuori campo con Piper TTS (voce it_IT-paola-medium).
 
-    python3 .claude/skills/motion-graphic/strumenti/voce.py <nome> [--length-scale 1.08]
+    python3 .claude/skills/motion-graphic/strumenti/voce.py <nome> [--length-scale 1.15]
 
 Legge  motion/voce/<nome>/testi.txt   una riga per scena, nello stesso ordine
                                        di CONFIG.scene; "-" = scena senza voce.
@@ -12,7 +12,7 @@ Scrive motion/voce/<nome>/line_<k>.wav (non committati)
 
 Regole di scrittura dei testi: numeri in lettere, parole inglesi scritte a
 orecchio («pàuer banc»), una riga per scena. La punteggiatura decide le
-pause (tabella PAUSE: virgola 0,25 s, due punti 0,40, punto 0,60...);
+pause (tabella PAUSE: virgola 0,32 s, due punti 0,50, punto 0,85...);
 "|" = pausa di respiro senza segno scritto.
 
 Pronuncia. L'audio NON si può ascoltare da qui, ma si può leggere come Piper
@@ -86,8 +86,9 @@ def fonemi(modello):
 # Pause di lettura, in secondi, come le fa uno speaker: la voce di Piper da sola
 # quasi non si ferma sulla virgola (0-0,09 s misurati), poco sui due punti
 # (0,28) e per niente sui puntini. "|" = pausa di respiro senza segno scritto.
-PAUSE = {",": 0.25, ";": 0.40, ":": 0.40, "—": 0.35, "–": 0.35,
-         ".": 0.60, "?": 0.60, "!": 0.60, "…": 0.70, "|": 0.40}
+# Valori scelti a orecchio dall'utente il 24/09/2026 fra tre campioni (versione «B»).
+PAUSE = {",": 0.32, ";": 0.50, ":": 0.50, "—": 0.40, "–": 0.40,
+         ".": 0.85, "?": 0.85, "!": 0.85, "…": 0.90, "|": 0.45}
 SOGLIA = 500          # ampiezza sotto cui un tratto è silenzio (int16)
 FINESTRA = 0.01       # 10 ms
 
@@ -313,7 +314,7 @@ def da_controllare(parola, ipa, inizio_frase=False):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("nome")
-    ap.add_argument("--length-scale", default="1.08")
+    ap.add_argument("--length-scale", default="1.15")
     a = ap.parse_args()
     cartella = MOTION / "voce" / a.nome
     testi = cartella / "testi.txt"
