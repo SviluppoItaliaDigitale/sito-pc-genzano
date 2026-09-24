@@ -345,7 +345,7 @@ def main():
             report.append(f"## scena {k}: {parlato}")
             for m in re.finditer(r"[A-Za-zÀ-ÿ]+", parlato):
                 parola = m.group(0)
-                if len(parola) < 3:  # articoli e congiunzioni: la voce li legge dentro la frase
+                if len(parola) < 3 and not parola.isupper():  # articoli e congiunzioni sì, sigle (UE, PC) no
                     continue
                 inizio = not parlato[:m.start()].strip() or parlato[:m.start()].rstrip()[-1] in ".!?:"
                 ipa = "".join(sum(voce_pv.phonemize(parola), []))

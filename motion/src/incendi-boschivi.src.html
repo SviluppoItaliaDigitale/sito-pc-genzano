@@ -411,7 +411,7 @@ function anteprima() {
   const au = AUDIO ? new Audio(AUDIO) : null;
   let t0 = null, pausa = false, tp = 0;
   const ora = () => au ? au.currentTime : (performance.now() - t0) / 1000;
-  const giro = () => { if (!pausa) { let t = ora(); if (t >= TOTAL) { if (au) au.currentTime = 0; else t0 = performance.now(); t = 0; } render(t); } requestAnimationFrame(giro); };
+  const giro = () => { if (!pausa) { let t = ora(); if (t >= TOTAL || (au && au.ended)) { if (au) { au.currentTime = 0; au.play(); } else t0 = performance.now(); t = 0; } render(t); } requestAnimationFrame(giro); };
   const parti = () => { t0 = performance.now(); if (au) au.play(); requestAnimationFrame(giro); };
   stage.addEventListener("click", () => {
     pausa = !pausa;
