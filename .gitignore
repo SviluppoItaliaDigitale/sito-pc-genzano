@@ -49,3 +49,10 @@ gcpc-*_global_reports_*.xlsx
 # Playwright MCP scratch
 .playwright-mcp/
 static/pagefind/
+
+# Motion graphic (skill .claude/skills/motion-graphic): si committano solo
+# motion/src/ e i testi/tracce di motion/voce/; il resto si rigenera.
+motion/out/
+motion/dist/
+motion/.cache/
+motion/voce/**/line_*.wav

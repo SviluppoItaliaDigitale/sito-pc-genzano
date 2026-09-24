@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kit di emergenza</title>
+<style>
+/*FONTS*/
+:root{ --navy:#0a1220; --az:#2e90fa; --or:#f59e0b; --txt:#eef2f7; --mut:#93a1b5; }
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:#03060b;overflow:hidden}
+#stage{position:absolute;left:50%;top:50%;width:1080px;height:1920px;overflow:hidden;background:var(--navy);
+  transform:translate(-50%,-50%);transform-origin:50% 50%;
+  font-family:'Titillium Web',system-ui,sans-serif;color:var(--txt);-webkit-font-smoothing:antialiased}
+.render #stage{left:0;top:0;transform:none}
+.glow{position:absolute;inset:0;background:
+  radial-gradient(60% 34% at 50% 34%,rgba(46,144,250,.22),rgba(46,144,250,0) 70%),
+  radial-gradient(70% 40% at 90% 96%,rgba(245,158,11,.10),rgba(245,158,11,0) 70%)}
+#spot{position:absolute;left:190px;top:290px;width:700px;height:700px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,255,255,.07),rgba(255,255,255,0) 65%)}
+.layer{position:absolute;inset:0;visibility:hidden}
+.m{display:block;overflow:hidden;padding:.12em 0 .22em;margin:-.12em 0 -.22em}
+.i{display:block;transform:translateY(135%)}
+.num{position:absolute;left:96px;top:330px;font:700 30px/1 'Roboto Mono',monospace;letter-spacing:.12em;color:var(--or);opacity:0}
+.ill{position:absolute;left:96px;top:380px;width:888px;height:520px;transform-origin:50% 50%}
+.ill svg{width:888px;height:520px;overflow:visible}
+.txt{position:absolute;left:96px;top:950px;width:888px}
+.h{font-weight:900;font-size:104px;line-height:1;letter-spacing:-.01em}
+.h .a{color:var(--or)}
+.sub{position:absolute;left:96px;top:1238px;width:888px;padding:26px 32px;border-radius:26px;
+  background:rgba(238,242,247,.08);border:2px solid rgba(238,242,247,.14);
+  font-size:43px;font-weight:600;line-height:1.25;opacity:0}
+.big .h{font-size:132px;line-height:.95}
+.intro .sub{top:1300px}
+.tips{margin-top:40px}
+.tip{display:flex;align-items:center;gap:26px;margin-bottom:26px;font-size:50px;font-weight:700;line-height:1.1;opacity:0}
+.tip svg{flex:none;width:84px;height:84px}
+.zone{margin-top:48px;padding:30px 36px 34px;border-radius:28px;background:rgba(46,144,250,.10);border:2px solid rgba(46,144,250,.45);opacity:0}
+.zk{font:700 24px/1 'Roboto Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--az)}
+.uv{display:inline-block;margin-top:14px;font-weight:700;font-size:58px;line-height:1.25;color:var(--az)}
+.src{margin-top:34px;font-size:27px;line-height:1.35;color:var(--mut);opacity:0}
+
+#hud{position:absolute;left:96px;top:212px;height:72px;display:flex;align-items:center;gap:22px;padding:0 32px 0 24px;
+  background:rgba(10,18,32,.94);border:2px solid rgba(255,255,255,.14);border-radius:999px;
+  font:700 25px/1 'Roboto Mono',monospace;letter-spacing:.13em;text-transform:uppercase;color:var(--txt);z-index:10}
+.slots{display:flex;gap:12px}
+.slot{position:relative;width:30px;height:30px;border-radius:9px;border:3px solid rgba(238,242,247,.35)}
+.slot i{position:absolute;inset:-3px;border-radius:9px;background:var(--or);transform:scale(0)}
+#pz{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);padding:9px 16px;border-radius:999px;
+  background:rgba(0,0,0,.6);color:#fff;font:600 14px/1 system-ui,sans-serif;opacity:0;transition:opacity .2s;pointer-events:none}
+.paused #pz{opacity:1}
+.render #pz{display:none}
+#play{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(3,6,11,.55);
+  color:#fff;font:700 20px/1 system-ui,sans-serif;cursor:pointer}
+#play span{padding:18px 28px;border-radius:999px;background:#f59e0b;color:#0a1220}
+.render #play,.started #play{display:none}
+</style>
+</head>
+<body>
+<div id="stage">
+  <div class="glow"></div><div id="spot"></div>
+  <div id="hud"><svg width="30" height="34" viewBox="0 0 30 34"><rect x="2" y="7" width="26" height="25" rx="8" fill="#f59e0b"/><path d="M9 7 Q15 -1 21 7" stroke="#f59e0b" stroke-width="3.5" fill="none"/></svg><div class="slots"></div><span>Kit di emergenza</span></div>
+</div>
+<div id="pz">In pausa · tocca per riprendere</div>
+<div id="play"><span>▶ Tocca per avviare (con audio)</span></div>
+<audio id="aud" src="/*AUDIO*/" preload="auto"></audio>
+
+<script>
+/* durate delle frasi della voce (secondi) — generate automaticamente */
+const VOICE = [4.876, 6.329, 3.425, 3.46, 4.425, 5.191, 3.495, 5.122, 3.821];
+
+/* =====================================================================
+   CONFIG — testi e scene. Una scena per ogni frase della voce.
+   ===================================================================== */
+const SCENES = [
+  { tipo:'intro', h:'Il kit di <span class="a">emergenza</span>' },
+  { tipo:'item', ill:'acqua',     h:'Acqua e <span class="a">cibo</span>' },
+  { tipo:'item', ill:'torcia',    h:'Torcia e <span class="a">radio</span>' },
+  { tipo:'item', ill:'soccorso',  h:'Pronto <span class="a">soccorso</span>' },
+  { tipo:'item', ill:'documenti', h:'Documenti e <span class="a">contanti</span>' },
+  { tipo:'item', ill:'telefono',  h:'Telefono e <span class="a">fischietto</span>' },
+  { tipo:'item', ill:'vestiti',   h:'Vestiti e <span class="a">coperta</span>' },
+  { tipo:'consigli', h:'Tienilo <span class="a">pronto</span>',
+    tips:[['porta','Vicino all’uscita di casa'], ['calendario','Ogni 6 mesi: scadenze e batterie']] },
+  { tipo:'finale', h:'Preparalo <span class="a">oggi.</span>',
+    zonaK:'Protezione Civile · Genzano di Roma', url:'protezionecivilegenzano.it',
+    fonte:'Fonte: Dipartimento della Protezione Civile,<br>campagna «Io non rischio»' }
+];
+const SUBS = [
+  'Il kit di emergenza: uno zaino sempre pronto, per affrontare le prime 72 ore.',
+  'Acqua potabile e cibo a lunga conservazione, per almeno 3 giorni. Non dimenticare l’apriscatole.',
+  'Una torcia e una radio a pile, con le batterie di ricambio.',
+  'Il kit di pronto soccorso e i medicinali che prendi ogni giorno.',
+  'Le copie dei documenti in una busta impermeabile. E un po’ di contanti.',
+  'Il telefono, con caricabatterie e power bank. E un fischietto, per farti sentire.',
+  'Vestiti di ricambio, una coperta e il cibo per i tuoi animali.',
+  'Tieni lo zaino vicino all’uscita. E ogni sei mesi controlla scadenze e batterie.',
+  'Preparalo oggi.'
+];
+const LEAD = .45, TAIL = .75, EXIT = .5;   // anticipo prima della voce, pausa dopo, volo nello zaino
+
+/* ============================ motore ============================ */
+const RENDER = new URLSearchParams(location.search).has('render');
+if (RENDER) document.documentElement.classList.add('render');
+const START = [0], DUR = SCENES.map((s, k) => VOICE[k] + LEAD + TAIL + (s.tipo === 'item' ? EXIT : 0) + (k === 8 ? 1.6 : 0));
+DUR.forEach(d => START.push(START[START.length - 1] + d));
+const TOTAL = START[SCENES.length];
+window.TOTAL = TOTAL;
+window.VOICE_AT = START.slice(0, -1).map(s => +(s + LEAD).toFixed(3));   // per il montaggio audio
+window.SUBS = SUBS.map((testo, k) => ({ da: +(START[k] + LEAD).toFixed(3), a: +(START[k] + LEAD + VOICE[k] + .2).toFixed(3), testo }));   // per il file .vtt
+
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const prog = (u, s, d) => clamp((u - s) / d);
+const E = {
+  outCubic: t => 1 - Math.pow(1 - t, 3), outQuart: t => 1 - Math.pow(1 - t, 4),
+  inOutCubic: t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2,
+  inCubic: t => t * t * t,
+  outBack: t => { const c1 = 1.70158, c3 = c1 + 1; return 1 + c3 * Math.pow(t - 1, 3) + c1 * Math.pow(t - 1, 2); }
+};
+const stage = document.getElementById('stage'), hud = document.getElementById('hud');
+const node = h => { const t = document.createElement('template'); t.innerHTML = h.trim(); return t.content.firstElementChild; };
+
+/* ---------------- illustrazioni ---------------- */
+const INK = '#0a1220', AZ = '#2e90fa', OR = '#f59e0b', LB = '#bfe0ff', GR = '#93a1b5', W = '#ffffff', GN = '#34b25a';
+const S = `stroke="${INK}" stroke-width="8" stroke-linejoin="round"`;
+const ZAINO = (s = 1) => `<g transform="translate(444 290) scale(${s}) translate(-444 -290)">
+  <path d="M384 128 Q444 58 504 128" fill="none" stroke="${INK}" stroke-width="30" stroke-linecap="round"/>
+  <path d="M384 128 Q444 58 504 128" fill="none" stroke="${OR}" stroke-width="14" stroke-linecap="round"/>
+  <rect x="284" y="118" width="320" height="372" rx="78" fill="${OR}" ${S} stroke-width="10"/>
+  <rect x="284" y="200" width="320" height="26" fill="${W}" opacity=".9"/>
+  <rect x="330" y="300" width="228" height="150" rx="38" fill="#d98200" ${S}/>
+  <path d="M352 336 H536" stroke="${INK}" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="536" cy="336" r="9" fill="${INK}"/></g>`;
+const ILL = {
+  acqua: () => `<svg viewBox="0 0 888 520">
+    ${[190, 300].map(x => `<g class="bottle"><rect x="${x - 18}" y="92" width="36" height="34" rx="7" fill="${AZ}" ${S}/>
+      <rect x="${x - 44}" y="124" width="88" height="300" rx="28" fill="${LB}" ${S}/>
+      <clipPath id="c${x}"><rect x="${x - 40}" y="128" width="80" height="292" rx="24"/></clipPath>
+      <path class="wl" data-x="${x}" clip-path="url(#c${x})" fill="${AZ}"/>
+      <rect x="${x - 44}" y="240" width="88" height="54" fill="${W}" stroke="${INK}" stroke-width="6"/></g>`).join('')}
+    ${[[520, 250], [660, 290]].map(([x, y]) => `<g><rect x="${x - 60}" y="${y}" width="120" height="${424 - y}" rx="16" fill="${GR}" ${S}/>
+      <rect x="${x - 60}" y="${y + 40}" width="120" height="${(424 - y) * .45}" fill="${OR}" stroke="${INK}" stroke-width="6"/>
+      <ellipse cx="${x}" cy="${y}" rx="60" ry="14" fill="#cfd8e3" ${S}/></g>`).join('')}
+    <g transform="translate(770 380) rotate(-30)"><rect x="-14" y="-60" width="28" height="100" rx="12" fill="${OR}" ${S}/><path d="M0 -60 L22 -92 L10 -60Z" fill="${GR}" ${S}/></g>
+  </svg>`,
+  torcia: () => `<svg viewBox="0 0 888 520">
+    <line x1="400" y1="170" x2="470" y2="60" stroke="${INK}" stroke-width="12" stroke-linecap="round"/><circle cx="470" cy="60" r="14" fill="${INK}"/>
+    <g class="waves" fill="none" stroke="${LB}" stroke-width="8" stroke-linecap="round"><path d="M500 40 a40 40 0 0 1 0 50"/><path d="M526 20 a70 70 0 0 1 0 90"/></g>
+    <rect x="110" y="170" width="340" height="230" rx="34" fill="${OR}" ${S}/>
+    <circle cx="210" cy="285" r="70" fill="${INK}"/>
+    <g fill="${GR}">${[-36, 0, 36].flatMap(dx => [-36, 0, 36].map(dy => `<circle cx="${210 + dx}" cy="${285 + dy}" r="9"/>`)).join('')}</g>
+    <rect x="310" y="220" width="110" height="46" rx="10" fill="${LB}" ${S} stroke-width="6"/><rect class="needle" x="340" y="226" width="6" height="34" fill="${INK}"/>
+    <circle cx="335" cy="330" r="22" fill="${W}" ${S} stroke-width="6"/><circle cx="395" cy="330" r="22" fill="${W}" ${S} stroke-width="6"/>
+    <g transform="translate(610 330) rotate(-22)">
+      <polygon class="beam" points="170,-60 470,-190 470,190 170,60" fill="#fff3c4" opacity=".35"/>
+      <rect x="-80" y="-38" width="190" height="76" rx="20" fill="${GR}" ${S}/>
+      <path d="M108 -52 L172 -70 L172 70 L108 52Z" fill="${AZ}" ${S}/>
+      <rect x="-30" y="-12" width="40" height="24" rx="8" fill="${OR}" stroke="${INK}" stroke-width="5"/></g>
+    ${[560, 620].map(x => `<g><rect x="${x}" y="440" width="40" height="70" rx="8" fill="${GN}" ${S} stroke-width="6"/><rect x="${x + 12}" y="430" width="16" height="12" rx="3" fill="${GR}" stroke="${INK}" stroke-width="5"/></g>`).join('')}
+  </svg>`,
+  soccorso: () => `<svg viewBox="0 0 888 520">
+    <path d="M300 150 V118 a20 20 0 0 1 20 -20 H420 a20 20 0 0 1 20 20 V150" fill="none" stroke="${INK}" stroke-width="14"/>
+    <rect x="200" y="150" width="340" height="270" rx="34" fill="${AZ}" ${S}/>
+    <rect x="200" y="210" width="340" height="12" fill="${INK}" opacity=".25"/>
+    <g class="plus"><rect x="340" y="240" width="60" height="150" rx="10" fill="${W}"/><rect x="295" y="285" width="150" height="60" rx="10" fill="${W}"/></g>
+    <g transform="translate(600 170) rotate(10)"><rect width="190" height="130" rx="22" fill="${W}" ${S}/>
+      ${[0, 1, 2].flatMap(c => [0, 1].map(r => `<ellipse cx="${40 + c * 55}" cy="${40 + r * 50}" rx="20" ry="14" fill="${OR}" stroke="${INK}" stroke-width="5"/>`)).join('')}</g>
+    <g transform="translate(640 340)"><rect x="0" y="0" width="100" height="120" rx="18" fill="${OR}" ${S}/><rect x="-6" y="-30" width="112" height="38" rx="10" fill="${W}" ${S}/><rect x="16" y="40" width="68" height="44" rx="6" fill="${W}"/></g>
+  </svg>`,
+  documenti: () => `<svg viewBox="0 0 888 520">
+    <g transform="rotate(-6 360 280)">
+      <rect x="220" y="150" width="270" height="330" rx="14" fill="${W}" ${S}/>
+      ${[200, 240, 280, 320].map(y => `<rect x="250" y="${y}" width="${y === 320 ? 120 : 200}" height="14" rx="7" fill="${GR}"/>`).join('')}
+      <g transform="translate(250 360)"><rect width="210" height="96" rx="12" fill="${LB}" stroke="${INK}" stroke-width="6"/><circle cx="46" cy="48" r="26" fill="${AZ}"/><rect x="88" y="30" width="100" height="12" rx="6" fill="${INK}"/><rect x="88" y="56" width="70" height="12" rx="6" fill="${INK}"/></g></g>
+    <rect x="180" y="110" width="360" height="400" rx="26" fill="${LB}" opacity=".28" stroke="${LB}" stroke-width="8"/>
+    <rect x="180" y="110" width="360" height="30" rx="12" fill="${AZ}" stroke="${INK}" stroke-width="6"/>
+    <g class="cash">${[0, 1, 2].map(k => `<g transform="translate(${600 + k * 10} ${190 + k * 70}) rotate(${-8 + k * 8})"><rect width="210" height="110" rx="12" fill="${GN}" ${S}/><circle cx="105" cy="55" r="32" fill="#8fdca8" stroke="${INK}" stroke-width="6"/><text x="105" y="70" text-anchor="middle" font-family="Titillium Web" font-weight="900" font-size="44" fill="${INK}">€</text></g>`).join('')}</g>
+  </svg>`,
+  telefono: () => `<svg viewBox="0 0 888 520">
+    <rect x="170" y="80" width="190" height="370" rx="34" fill="${INK}" stroke="${GR}" stroke-width="8"/>
+    <rect x="188" y="116" width="154" height="300" rx="14" fill="${AZ}"/>
+    <rect x="228" y="210" width="74" height="120" rx="12" fill="none" stroke="${W}" stroke-width="8"/><rect x="250" y="198" width="30" height="12" rx="4" fill="${W}"/>
+    <rect class="charge" x="238" y="220" width="54" height="100" rx="6" fill="${W}"/>
+    <path d="M265 450 C265 500 420 500 440 430" fill="none" stroke="${INK}" stroke-width="12" stroke-linecap="round"/>
+    <rect x="400" y="240" width="150" height="200" rx="26" fill="${GR}" ${S}/>
+    ${[0, 1, 2, 3].map(k => `<circle class="led" cx="${440 + k * 24}" cy="280" r="8" fill="${GN}"/>`).join('')}
+    <g transform="translate(700 250) rotate(-12)">
+      <path d="M-80 -40 H40 a40 40 0 0 1 0 80 H-20 a60 60 0 0 1 -60 -60 Z" fill="${OR}" ${S}/>
+      <circle cx="30" cy="0" r="18" fill="${INK}"/><rect x="-100" y="-44" width="30" height="36" rx="8" fill="${OR}" ${S} stroke-width="6"/>
+      <g class="sound" fill="none" stroke="${LB}" stroke-width="8" stroke-linecap="round"><path d="M-120 -60 a60 60 0 0 0 -30 -40"/><path d="M-130 -20 a80 80 0 0 0 -60 -10"/></g></g>
+    <path d="M700 290 C700 380 620 420 600 470" fill="none" stroke="${AZ}" stroke-width="8" stroke-linecap="round"/>
+  </svg>`,
+  vestiti: () => `<svg viewBox="0 0 888 520">
+    ${[[AZ, 400], [W, 330], [OR, 260]].map(([c, y]) => `<rect x="110" y="${y}" width="250" height="70" rx="20" fill="${c}" ${S}/>`).join('')}
+    <path d="M150 260 L180 230 H290 L320 260" fill="${OR}" ${S}/>
+    <g class="roll" transform="translate(520 360)"><circle r="100" fill="${GN}" ${S}/><circle r="68" fill="none" stroke="${INK}" stroke-width="7"/><circle r="36" fill="none" stroke="${INK}" stroke-width="7"/><circle r="10" fill="${INK}"/></g>
+    <path d="M620 460 H700" stroke="${INK}" stroke-width="8"/>
+    <g transform="translate(720 390)"><path d="M-80 0 H80 L60 70 H-60Z" fill="${AZ}" ${S}/><ellipse cx="0" cy="0" rx="80" ry="16" fill="#8a5a2b" ${S} stroke-width="6"/></g>
+    <g class="paw" transform="translate(720 230)" fill="${W}"><ellipse cx="0" cy="18" rx="34" ry="28"/><circle cx="-36" cy="-20" r="14"/><circle cx="-12" cy="-40" r="14"/><circle cx="14" cy="-40" r="14"/><circle cx="38" cy="-20" r="14"/></g>
+  </svg>`,
+  zaino: () => `<svg viewBox="0 0 888 520">${ZAINO(1)}</svg>`,
+  pieno: () => `<svg viewBox="0 0 888 520">${ZAINO(.92)}
+    <g class="orbit">${['💧', '🔦', '➕', '📄', '📱', '🧥'].map((e, k) => '').join('')}</g></svg>`
+};
+const TIPICON = {
+  porta: `<svg viewBox="0 0 84 84"><rect x="16" y="6" width="44" height="74" rx="4" fill="${OR}" stroke="${W}" stroke-width="5"/><circle cx="50" cy="44" r="4" fill="${INK}"/><path d="M62 42 H80 M72 34 L80 42 L72 50" stroke="${W}" stroke-width="5" fill="none" stroke-linecap="round"/></svg>`,
+  calendario: `<svg viewBox="0 0 84 84"><rect x="6" y="14" width="72" height="64" rx="10" fill="${AZ}" stroke="${W}" stroke-width="5"/><rect x="6" y="14" width="72" height="18" fill="${W}"/><text x="42" y="68" text-anchor="middle" font-family="Titillium Web" font-weight="900" font-size="34" fill="${W}">6</text><rect x="20" y="4" width="8" height="18" rx="4" fill="${W}"/><rect x="56" y="4" width="8" height="18" rx="4" fill="${W}"/></svg>`
+};
+
+/* ---------------- costruzione ---------------- */
+const L = [], slots = [];
+function build() {
+  const sw = hud.querySelector('.slots');
+  for (let k = 0; k < 6; k++) { const s = node('<div class="slot"><i></i></div>'); sw.appendChild(s); slots.push(s.querySelector('i')); }
+  SCENES.forEach((sc, k) => {
+    let inner = '';
+    if (sc.tipo === 'item') inner = `<div class="num">0${k} / 06</div><div class="ill">${ILL[sc.ill]()}</div>
+      <div class="txt"><div class="m h"><span class="i">${sc.h}</span></div></div>`;
+    if (sc.tipo === 'intro') inner = `<div class="ill">${ILL.zaino()}</div><div class="txt big"><div class="m h"><span class="i">Il kit di</span></div><div class="m h"><span class="i"><span class="a">emergenza</span></span></div></div>`;
+    if (sc.tipo === 'consigli') inner = `<div class="ill">${ILL.zaino()}</div><div class="txt"><div class="m h"><span class="i">${sc.h}</span></div>
+      <div class="tips">${sc.tips.map(([ic, t]) => `<div class="tip">${TIPICON[ic]}<span>${t}</span></div>`).join('')}</div></div>`;
+    if (sc.tipo === 'finale') inner = `<div class="ill">${ILL.zaino()}</div><div class="txt big"><div class="m h"><span class="i">${sc.h}</span></div>
+      <div class="zone"><div class="zk">${sc.zonaK}</div><span class="uv">${sc.url}</span></div><div class="src">${sc.fonte}</div></div>`;
+    const showSub = sc.tipo !== 'finale' && sc.tipo !== 'consigli';
+    const el = node(`<section class="layer${k === 0 ? ' intro' : ''}">${inner}${showSub ? `<div class="sub">${SUBS[k]}</div>` : ''}</section>`);
+    stage.insertBefore(el, hud);
+    const q = s => el.querySelector(s), qa = s => [...el.querySelectorAll(s)];
+    L.push({ el, sc, q, qa, ill:q('.ill'), num:q('.num'), heads:qa('.h .i'), sub:q('.sub'), tips:qa('.tip'),
+      zone:q('.zone'), src:q('.src'), txt:q('.txt') });
+  });
+}
+function measure() {
+  const st = stage.getBoundingClientRect(), sc = st.width / 1080;
+  L.forEach(l => { l.cx = 540; l.cy = 640; });
+  slots.forEach((s, k) => { const r = s.parentElement.getBoundingClientRect();
+    L[k + 1].tx = (r.left + r.width / 2 - st.left) / sc - 540; L[k + 1].ty = (r.top + r.height / 2 - st.top) / sc - 640; });
+}
+function reveal(el, u, s, d = .62) { const p = E.outQuart(prog(u, s, d)); el.style.transform = `translateY(${((1 - p) * 135).toFixed(2)}%)`; }
+function fadeUp(el, u, s, d = .5, dist = 36) { const p = E.outCubic(prog(u, s, d)); el.style.opacity = p.toFixed(3); el.style.transform = `translateY(${((1 - p) * dist).toFixed(2)}px)`; }
+const wave = (x0, x1, y, amp, len, ph, bottom) => { let d = `M${x0} ${bottom} L${x0} ${y}`; for (let x = x0; x <= x1 + 8; x += 8) d += ` L${x} ${(y + Math.sin(x / len * 6.283 + ph) * amp).toFixed(1)}`; return d + ` L${x1 + 8} ${bottom}Z`; };
+
+function idle(l, u) {
+  const q = l.q, qa = l.qa;
+  qa('.wl').forEach((p, j) => { const x = +p.dataset.x; p.setAttribute('d', wave(x - 44, x + 44, 190 + Math.sin(u * 2 + j) * 4, 5, 60, u * 5 + j, 430)); });
+  const b = q('.beam'); if (b) b.setAttribute('opacity', (.28 + .12 * Math.sin(u * 9) + .1 * Math.sin(u * 23)).toFixed(3));
+  const w = q('.waves'); if (w) w.setAttribute('opacity', (.5 + .5 * Math.sin(u * 5)).toFixed(3));
+  const n = q('.needle'); if (n) n.setAttribute('x', (340 + 60 * (.5 + .5 * Math.sin(u * 1.3))).toFixed(1));
+  const pl = q('.plus'); if (pl) pl.setAttribute('transform', `translate(370 315) scale(${(1 + .05 * Math.sin(u * 4)).toFixed(4)}) translate(-370 -315)`);
+  const c = q('.charge'); if (c) { const f = (u * .45) % 1; c.setAttribute('y', (220 + 100 * (1 - f)).toFixed(1)); c.setAttribute('height', (100 * f).toFixed(1)); }
+  qa('.led').forEach((e, j) => e.setAttribute('opacity', ((u * 3) % 4 > j ? 1 : .25)));
+  const s = q('.sound'); if (s) s.setAttribute('opacity', (Math.sin(u * 8) > 0 ? 1 : .2));
+  const r = q('.roll'); if (r) r.setAttribute('transform', `translate(520 360) rotate(${(u * 40).toFixed(1)})`);
+  const p = q('.paw'); if (p) p.setAttribute('transform', `translate(720 ${(230 + Math.sin(u * 3) * 8).toFixed(1)})`);
+  const cs = q('.cash'); if (cs) cs.setAttribute('transform', `translate(0 ${(Math.sin(u * 2.5) * 6).toFixed(1)})`);
+}
+
+function renderScene(k, t) {
+  const l = L[k], s = START[k], d = DUR[k], u = t - s;
+  const X = .45;                                   // dissolvenza tra le scene
+  if (t < s - .01 || t >= s + d + (k === SCENES.length - 1 ? 1 : X)) { l.el.style.visibility = 'hidden'; return; }
+  l.el.style.visibility = 'visible';
+  const out = k < SCENES.length - 1 ? E.inOutCubic(prog(u, d, X)) : 0;
+  const isItem = l.sc.tipo === 'item';
+
+  // illustrazione: entra, galleggia, e (per gli oggetti) vola nello zaino in alto
+  const pi = k === 0 ? 1 : prog(u, .05, .7), ei = E.outBack(pi);
+  let tr = `translateY(${(Math.sin(u * 1.8) * 8).toFixed(2)}px) scale(${(.55 + .45 * ei).toFixed(4)})`;
+  let op = clamp(pi * 3);
+  if (isItem) {
+    const f = E.inCubic(prog(u, d - EXIT, EXIT + .1));
+    tr = `translate(${(l.tx * f).toFixed(1)}px,${(l.ty * f).toFixed(1)}px) scale(${((.55 + .45 * ei) * (1 - .93 * f)).toFixed(4)}) rotate(${(f * -20).toFixed(1)}deg)`;
+    op *= 1 - clamp((f - .85) / .15);
+  } else op *= 1 - out;
+  if (l.sc.tipo !== 'intro' && !isItem) tr += ` scale(${k === 7 ? .7 : .58})`, l.ill.style.transformOrigin = '50% 20%';
+  l.ill.style.transform = tr; l.ill.style.opacity = op.toFixed(3);
+  idle(l, u);
+
+  if (l.num) fadeUp(l.num, u, .2, .4, 16);
+  l.heads.forEach((h, j) => reveal(h, u, k === 0 ? -1 + j * 1.25 : .3 + j * .12));
+  if (l.sub) fadeUp(l.sub, u, LEAD - .05, .4, 20);
+  l.tips.forEach((tp, j) => fadeUp(tp, u, LEAD + .8 + j * 1.4, .5, 26));
+  if (l.zone) fadeUp(l.zone, u, 1.1, .55, 30);
+  if (l.src) fadeUp(l.src, u, 1.5, .5, 16);
+  if (l.txt) { l.txt.style.opacity = (1 - out).toFixed(3); l.txt.style.transform = `translateY(${(-50 * out).toFixed(1)}px)`; }
+  if (l.sub) l.sub.style.opacity = (Math.min(+l.sub.style.opacity, 1 - out)).toFixed(3);
+  if (l.num) l.num.style.opacity = (Math.min(+l.num.style.opacity, 1 - out)).toFixed(3);
+  // posizioni: nelle scene finali lo zaino sta più in alto e il testo scende
+  if (k >= 7) l.txt.style.top = k === 7 ? '870px' : '800px';
+}
+function renderHud(t) {
+  slots.forEach((s, k) => { const a = START[k + 2] - .08; s.style.transform = `scale(${E.outBack(prog(t, a, .35)).toFixed(4)})`; });
+}
+function render(t) { t = clamp(t, 0, TOTAL); for (let k = 0; k < SCENES.length; k++) renderScene(k, t); renderHud(t); }
+window.renderFrame = t => { render(t); return true; };
+
+/* anteprima nel browser, con la voce */
+function fit() { const s = Math.min(innerWidth / 1080, innerHeight / 1920); stage.style.transform = `translate(-50%,-50%) scale(${s})`; }
+const aud = document.getElementById('aud');
+let t0 = null, paused = false, cur = 0;
+function loop(now) {
+  if (!paused) { if (t0 === null) t0 = now; cur = (now - t0) / 1000; if (cur > TOTAL + 1.5) { t0 = now; cur = 0; try { aud.currentTime = 0; aud.play(); } catch (e) {} } render(cur); }
+  requestAnimationFrame(loop);
+}
+function start() { document.documentElement.classList.add('started'); try { aud.currentTime = 0; aud.play().catch(() => {}); } catch (e) {} t0 = null; requestAnimationFrame(loop); }
+function toggle() {
+  if (!document.documentElement.classList.contains('started')) return start();
+  paused = !paused; document.documentElement.classList.toggle('paused', paused);
+  if (paused) aud.pause(); else { t0 = performance.now() - cur * 1000; aud.currentTime = cur; aud.play().catch(() => {}); }
+}
+async function boot() {
+  build();
+  try { await Promise.all(['400 40px "Titillium Web"', '600 40px "Titillium Web"', '700 40px "Titillium Web"', '900 40px "Titillium Web"',
+    '500 20px "Roboto Mono"', '700 20px "Roboto Mono"'].map(f => document.fonts.load(f))); await document.fonts.ready; } catch (e) {}
+  measure(); render(0); window.__ready = true;
+  if (!RENDER) { fit(); addEventListener('resize', fit); addEventListener('pointerdown', toggle); }
+}
+boot();
+</script>
+</body>
+</html>

@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Allerta meteo in 4 colori</title>
+<style>
+/*FONTS*/
+:root{
+  --navy:#0a1220; --az:#2e90fa; --txt:#eef2f7; --mut:#93a1b5;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:#03060b;overflow:hidden}
+#stage{position:absolute;left:50%;top:50%;width:1080px;height:1920px;overflow:hidden;background:var(--navy);
+  transform:translate(-50%,-50%);transform-origin:50% 50%;
+  font-family:'Titillium Web',system-ui,sans-serif;color:var(--txt);-webkit-font-smoothing:antialiased}
+.render #stage{left:0;top:0;transform:none}
+.layer{position:absolute;inset:0;overflow:hidden;visibility:hidden}
+.rain{position:absolute;left:0;top:0;width:1080px;height:1920px}
+/* maschera per le scritte che salgono dal basso */
+.m{display:block;overflow:hidden;padding:.12em 0 .22em;margin:-.12em 0 -.22em}
+.i{display:block;transform:translateY(135%)}
+
+/* ---------- apertura e chiusura (fondo blu notte) ---------- */
+.dark{background:var(--navy)}
+.glow{position:absolute;inset:0;background:
+  radial-gradient(75% 42% at 18% 24%,rgba(46,144,250,.24),rgba(46,144,250,0) 70%),
+  radial-gradient(70% 40% at 95% 96%,rgba(46,144,250,.13),rgba(46,144,250,0) 70%)}
+.intro{position:absolute;left:96px;top:450px;width:888px}
+.eyebrow{font:700 27px/1 'Roboto Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--az);margin-bottom:38px;opacity:0}
+.w{font-weight:900;font-size:170px;line-height:.98;letter-spacing:-.02em}
+.q{margin-top:44px;font-weight:700;font-size:78px;line-height:1.05}
+
+/* ---------- i quattro livelli ---------- */
+.lvl{background:var(--c)}
+.shade{position:absolute;inset:0;background:
+  radial-gradient(110% 60% at 12% 8%,rgba(255,255,255,.30),rgba(255,255,255,0) 60%),
+  radial-gradient(90% 55% at 95% 100%,rgba(10,18,32,.20),rgba(10,18,32,0) 65%)}
+.content{position:absolute;left:96px;top:430px;width:888px;color:var(--navy);transform-origin:0 40%}
+.ico{display:block;width:300px;height:300px;margin-left:-16px;overflow:visible;transform-origin:50% 50%;opacity:0}
+.chip{display:inline-flex;align-items:center;gap:14px;margin-top:30px;background:var(--navy);color:var(--c);
+  font:700 29px/1 'Roboto Mono',monospace;letter-spacing:.08em;text-transform:uppercase;
+  padding:18px 28px 18px 24px;border-radius:999px;transform-origin:0 50%;opacity:0}
+.chip::before{content:"";width:16px;height:16px;border-radius:50%;background:var(--c)}
+.title{margin-top:30px}
+.t1{font-weight:700;font-size:112px;line-height:1}
+.t2{font-weight:900;font-size:190px;line-height:.9;letter-spacing:-.02em}
+.rule{width:150px;height:10px;border-radius:5px;background:var(--navy);margin:54px 0 30px;transform-origin:0 50%;transform:scaleX(0)}
+.desc{margin:0;font-size:50px;line-height:1.24}
+.desc span{display:block;opacity:0}
+.d1{font-weight:600}.d2{font-weight:700}
+.flash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none}
+
+/* ---------- chiusura ---------- */
+.outro{position:absolute;left:96px;top:440px;width:888px}
+.cap{font:700 24px/1 'Roboto Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-bottom:20px;opacity:0}
+.bar{display:flex;gap:8px;height:26px}
+.bar i{flex:1;border-radius:6px;transform-origin:0 50%;transform:scaleX(0)}
+.bar i:first-child{border-radius:13px 6px 6px 13px}
+.bar i:last-child{border-radius:6px 13px 13px 6px}
+.lbl{display:flex;gap:8px;margin-top:16px}
+.lbl span{flex:1;font:500 26px/1 'Roboto Mono',monospace;color:var(--txt);opacity:0}
+.head{margin:84px 0 0}
+.h1{font-weight:900;font-size:98px;line-height:1;letter-spacing:-.01em}
+.h2{font-weight:600;font-size:58px;line-height:1.15}
+.zone{margin-top:56px;padding:30px 36px 34px;border-radius:28px;background:rgba(46,144,250,.10);border:2px solid rgba(46,144,250,.45);opacity:0}
+.zk{font:700 24px/1 'Roboto Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--az)}
+.zv{margin-top:18px;font-weight:600;font-size:50px;line-height:1.1}
+.zv b{font-weight:900}
+.url{margin-top:56px;opacity:0}
+.uk{display:block;font-size:36px;color:var(--mut)}
+.uv{display:inline-block;position:relative;font-weight:700;font-size:60px;line-height:1.25;color:var(--az)}
+.uv::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;border-radius:3px;background:var(--az);
+  transform-origin:0 50%;transform:scaleX(var(--u,0))}
+.src{margin-top:44px;font-size:27px;color:var(--mut);opacity:0}
+
+/* ---------- barra in alto con i quattro pallini ---------- */
+#hud{position:absolute;left:96px;top:212px;height:72px;display:flex;align-items:center;gap:26px;padding:0 32px 0 21px;
+  background:rgba(10,18,32,.94);border:2px solid rgba(255,255,255,.14);border-radius:999px;
+  box-shadow:0 12px 34px rgba(10,18,32,.28);font:700 25px/1 'Roboto Mono',monospace;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--txt);opacity:0;z-index:10}
+.dots{display:flex;gap:20px}
+.dot{position:relative;width:34px;height:34px}
+.dot .f{position:absolute;inset:0;border-radius:50%;background:var(--c);transform:scale(0)}
+.dot .r{position:absolute;inset:-9px;border-radius:50%;border:4px solid #fff;opacity:0}
+#sweep{position:absolute;left:0;top:0;width:1080px;height:1920px;pointer-events:none;visibility:hidden;z-index:5}
+
+#pz{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);padding:9px 16px;border-radius:999px;
+  background:rgba(0,0,0,.6);color:#fff;font:600 14px/1 system-ui,sans-serif;opacity:0;transition:opacity .2s;pointer-events:none}
+.paused #pz{opacity:1}
+.render #pz{display:none}
+</style>
+</head>
+<body>
+<div id="stage">
+  <svg id="sweep" viewBox="0 0 1080 1920"><polygon/><polygon/><polygon/><polygon/></svg>
+  <div id="hud"><div class="dots"></div><span>Allerta meteo</span></div>
+</div>
+<div id="pz">In pausa · tocca per riprendere</div>
+
+<script>
+/* =====================================================================
+   CONFIG — per fare un nuovo video basta cambiare testi, colori e tempi
+   ===================================================================== */
+const CONFIG = {
+  intro: {
+    eyebrow: 'Protezione Civile · Genzano di Roma',
+    words: ['Verde,', 'gialla,', 'arancione,', 'rossa.'],
+    question: 'Sai cosa significano?'
+  },
+  livelli: [
+    { colore:'#34b25a', chip:'Nessuna criticità',   t1:'Nessuna', t2:'allerta',
+      d1:'Non sono previsti', d2:'fenomeni significativi.', icona:'sole' },
+    { colore:'#ffcc00', chip:'Criticità ordinaria', t1:'Allerta', t2:'gialla',
+      d1:'Fenomeni localizzati.', d2:'Occasionale pericolo per le persone.', icona:'pioggia' },
+    { colore:'#ff8a00', chip:'Criticità moderata',  t1:'Allerta', t2:'arancione',
+      d1:'Fenomeni più intensi e diffusi.', d2:'Pericolo per le persone.', icona:'pioggiaForte' },
+    { colore:'#ef4136', chip:'Criticità elevata',   t1:'Allerta', t2:'rossa',
+      d1:'Fenomeni molto intensi e diffusi.', d2:'Grave pericolo per le persone.', icona:'temporale' }
+  ],
+  finale: {
+    didascalia: 'Livello di criticità',
+    scala: ['Nessuna', 'Ordinaria', 'Moderata', 'Elevata'],
+    h1: 'Controlla l’allerta',
+    h2: 'della tua zona.',
+    zonaK: 'Genzano di Roma',
+    zonaV: '<b>Zona F</b> · Bacini Costieri Sud',
+    urlK: 'Segui le allerte su',
+    url: 'protezionecivilegenzano.it',
+    fonte: 'Fonte: Dipartimento della Protezione Civile'
+  },
+  // secondi
+  tempi: { intro: 2.7, livello: 3.8, finale: 5.6, wipe: .62, sweep: .95 }
+};
+
+/* pioggia sullo sfondo: quantità, velocità, lunghezza, inclinazione, opacità */
+const AZ = '46,144,250', NV = '10,18,32';
+const RAIN_INTRO = { rgb:AZ, a:.30, n:90,  v:1500, len:70,  ang:12, w:3 };
+const RAIN_OUT   = { rgb:AZ, a:.18, n:60,  v:1300, len:60,  ang:12, w:3 };
+const RAIN = [ null,
+  { rgb:NV, a:.16, n:55,  v:1250, len:55,  ang:10, w:3 },
+  { rgb:NV, a:.20, n:130, v:1750, len:75,  ang:15, w:3.2 },
+  { rgb:NV, a:.24, n:230, v:2300, len:100, ang:19, w:3.4 } ];
+
+/* ============================ motore ============================ */
+const RENDER = new URLSearchParams(location.search).has('render');
+if (RENDER) document.documentElement.classList.add('render');
+
+const TT = CONFIG.tempi;
+const START = [0, TT.intro];
+for (let k = 0; k < 4; k++) START.push(START[START.length - 1] + TT.livello);
+const TOTAL = START[5] + TT.finale;       // START[5] = inizio chiusura
+window.TOTAL = TOTAL;
+
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const lerp = (a, b, t) => a + (b - a) * t;
+const prog = (u, s, d) => clamp((u - s) / d);
+const E = {
+  outCubic: t => 1 - Math.pow(1 - t, 3),
+  outQuart: t => 1 - Math.pow(1 - t, 4),
+  inOutCubic: t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2,
+  outBack: t => { const c1 = 1.70158, c3 = c1 + 1; return 1 + c3 * Math.pow(t - 1, 3) + c1 * Math.pow(t - 1, 2); }
+};
+const pulse = (u, t0, up, down) => u < t0 ? 0 : (u - t0 < up ? (u - t0) / up : Math.max(0, 1 - (u - t0 - up) / down));
+const hash = n => { const x = Math.sin(n * 12.9898 + 78.233) * 43758.5453; return x - Math.floor(x); };
+
+const stage = document.getElementById('stage');
+const sweep = document.getElementById('sweep');
+const hud = document.getElementById('hud');
+const node = h => { const t = document.createElement('template'); t.innerHTML = h.trim(); return t.content.firstElementChild; };
+
+/* ---------- icone (SVG disegnati a mano) ---------- */
+const INK = '#0a1220';
+const CLOUD = '<circle cx="105" cy="165" r="45"/><circle cx="160" cy="128" r="62"/><circle cx="218" cy="170" r="40"/><rect x="60" y="160" width="198" height="50" rx="25"/>';
+function drops(xs, len) {
+  return `<g stroke="${INK}" stroke-width="13" stroke-linecap="round">` +
+    xs.map(x => `<line class="drop" x1="${x}" y1="228" x2="${x - len * .22}" y2="${228 + len}"/>`).join('') + '</g>';
+}
+const ICONS = {
+  sole() {
+    let rays = '';
+    for (let k = 0; k < 8; k++) {
+      const a = k * Math.PI / 4, c = Math.cos(a), s = Math.sin(a);
+      rays += `<line x1="${(190 + 66 * c).toFixed(1)}" y1="${(108 + 66 * s).toFixed(1)}" x2="${(190 + 90 * c).toFixed(1)}" y2="${(108 + 90 * s).toFixed(1)}"/>`;
+    }
+    return `<svg class="ico" viewBox="0 0 300 300">
+      <g class="sun"><circle cx="190" cy="108" r="46" fill="${INK}"/><g stroke="${INK}" stroke-width="14" stroke-linecap="round">${rays}</g></g>
+      <g class="bob"><g transform="translate(-22 58) scale(.92)">
+        <g style="fill:var(--c);stroke:var(--c)" stroke-width="28" stroke-linejoin="round">${CLOUD}</g>
+        <g fill="${INK}">${CLOUD}</g></g></g></svg>`;
+  },
+  pioggia() {
+    return `<svg class="ico" viewBox="0 0 300 300">${drops([112, 158, 204], 30)}<g class="bob"><g fill="${INK}">${CLOUD}</g></g></svg>`;
+  },
+  pioggiaForte() {
+    return `<svg class="ico" viewBox="0 0 300 300">${drops([94, 128, 162, 196, 230], 40)}<g class="bob"><g fill="${INK}">${CLOUD}</g></g></svg>`;
+  },
+  temporale() {
+    return `<svg class="ico" viewBox="0 0 300 300">${drops([90, 120, 218, 248], 40)}<g class="bob"><g fill="${INK}">${CLOUD}</g>
+      <path class="bolt" d="M166 172 L128 248 L160 248 L141 298 L209 212 L174 212 L196 172 Z" fill="#fff" stroke="${INK}" stroke-width="8" stroke-linejoin="round"/></g></svg>`;
+  }
+};
+
+/* ---------- costruzione delle scene ---------- */
+let L0, L5, lv = [], dots = [], bands = [];
+function build() {
+  const C = CONFIG;
+  // pallini della barra in alto
+  const dwrap = hud.querySelector('.dots');
+  C.livelli.forEach(L => {
+    const d = node(`<div class="dot" style="--c:${L.colore}"><div class="f"></div><div class="r"></div></div>`);
+    dwrap.appendChild(d);
+    dots.push({ el:d, f:d.querySelector('.f'), r:d.querySelector('.r') });
+  });
+  // bande colorate della transizione finale (dalla più vicina al blu: rossa → verde)
+  bands = [...sweep.querySelectorAll('polygon')];
+  bands.forEach((b, j) => b.setAttribute('fill', C.livelli[3 - j].colore));
+
+  // apertura
+  const a = node(`<section class="layer dark"><div class="glow"></div><canvas class="rain" width="1080" height="1920"></canvas>
+    <div class="intro"><div class="eyebrow">${C.intro.eyebrow}</div>
+      <div class="words">${C.intro.words.map((w, k) => `<span class="m w"><span class="i" style="color:${C.livelli[k].colore}">${w}</span></span>`).join('')}</div>
+      <div class="m q"><span class="i">${C.intro.question}</span></div></div></section>`);
+  stage.insertBefore(a, sweep);
+  L0 = { el:a, ctx:a.querySelector('canvas').getContext('2d'), box:a.querySelector('.intro'),
+         eyebrow:a.querySelector('.eyebrow'), words:[...a.querySelectorAll('.w .i')], q:a.querySelector('.q .i') };
+
+  // livelli
+  C.livelli.forEach((L, k) => {
+    const s = node(`<section class="layer lvl" style="--c:${L.colore}"><div class="shade"></div>
+      <canvas class="rain" width="1080" height="1920"></canvas>
+      <div class="content">${ICONS[L.icona]()}
+        <div class="chip">${L.chip}</div>
+        <div class="title"><span class="m t1"><span class="i">${L.t1}</span></span><span class="m t2"><span class="i">${L.t2}</span></span></div>
+        <div class="rule"></div>
+        <p class="desc"><span class="d1">${L.d1}</span><span class="d2">${L.d2}</span></p>
+      </div>${k === 3 ? '<div class="flash"></div>' : ''}</section>`);
+    stage.insertBefore(s, sweep);
+    lv.push({ el:s, ctx:s.querySelector('canvas').getContext('2d'), content:s.querySelector('.content'),
+      icon:s.querySelector('.ico'), chip:s.querySelector('.chip'), t1:s.querySelector('.t1 .i'), t2:s.querySelector('.t2 .i'),
+      rule:s.querySelector('.rule'), d1:s.querySelector('.d1'), d2:s.querySelector('.d2'),
+      bob:s.querySelector('.bob'), sun:s.querySelector('.sun'), drops:[...s.querySelectorAll('.drop')],
+      bolt:s.querySelector('.bolt'), flash:s.querySelector('.flash') });
+  });
+
+  // chiusura
+  const F = C.finale;
+  const o = node(`<section class="layer dark"><div class="glow"></div><canvas class="rain" width="1080" height="1920"></canvas>
+    <div class="outro"><div class="cap">${F.didascalia}</div>
+      <div class="bar">${C.livelli.map(L => `<i style="background:${L.colore}"></i>`).join('')}</div>
+      <div class="lbl">${F.scala.map(x => `<span>${x}</span>`).join('')}</div>
+      <h2 class="head" style="font-weight:inherit"><span class="m h1"><span class="i">${F.h1}</span></span><span class="m h2"><span class="i">${F.h2}</span></span></h2>
+      <div class="zone"><div class="zk">${F.zonaK}</div><div class="zv">${F.zonaV}</div></div>
+      <div class="url"><span class="uk">${F.urlK}</span><span class="uv">${F.url}</span></div>
+      <div class="src">${F.fonte}</div></div></section>`);
+  stage.insertBefore(o, sweep);
+  L5 = { el:o, ctx:o.querySelector('canvas').getContext('2d'), cap:o.querySelector('.cap'),
+    segs:[...o.querySelectorAll('.bar i')], lbls:[...o.querySelectorAll('.lbl span')],
+    h1:o.querySelector('.h1 .i'), h2:o.querySelector('.h2 .i'), zone:o.querySelector('.zone'),
+    url:o.querySelector('.url'), uv:o.querySelector('.uv'), src:o.querySelector('.src') };
+}
+
+/* centro di ogni pallino: da lì parte il cerchio di colore */
+function measure() {
+  const st = stage.getBoundingClientRect(), sc = st.width / 1080;
+  dots.forEach((d, k) => {
+    const r = d.el.getBoundingClientRect();
+    const x = (r.left + r.width / 2 - st.left) / sc, y = (r.top + r.height / 2 - st.top) / sc;
+    lv[k].ox = x; lv[k].oy = y;
+    lv[k].rmax = Math.max(Math.hypot(x, y), Math.hypot(1080 - x, y), Math.hypot(x, 1920 - y), Math.hypot(1080 - x, 1920 - y)) + 30;
+  });
+}
+
+/* ---------- piccoli aiutanti di animazione ---------- */
+function reveal(el, u, s, d = .62) { const p = E.outQuart(prog(u, s, d)); el.style.transform = `translateY(${((1 - p) * 135).toFixed(2)}%)`; }
+function fadeUp(el, u, s, d = .5, dist = 36) {
+  const p = E.outCubic(prog(u, s, d));
+  el.style.opacity = p.toFixed(3); el.style.transform = `translateY(${((1 - p) * dist).toFixed(2)}px)`;
+}
+function drawRain(ctx, cfg, t, seed) {
+  ctx.clearRect(0, 0, 1080, 1920);
+  if (!cfg) return;
+  const tn = Math.tan(cfg.ang * Math.PI / 180);
+  ctx.lineCap = 'round';
+  for (let pass = 0; pass < 2; pass++) {
+    const far = pass === 0;
+    ctx.lineWidth = far ? cfg.w * .6 : cfg.w;
+    ctx.strokeStyle = `rgba(${cfg.rgb},${far ? cfg.a * .55 : cfg.a})`;
+    ctx.beginPath();
+    const n = Math.round(cfg.n * (far ? .6 : .4));
+    for (let i = 0; i < n; i++) {
+      const id = i * 2 + pass + seed * 1000;
+      const h1 = hash(id), h2 = hash(id + .37), h3 = hash(id + .71);
+      const sp = cfg.v * (far ? .7 : 1) * (.8 + .4 * h3);
+      const len = cfg.len * (far ? .65 : 1) * (.75 + .5 * h2);
+      const span = 1920 + len + 240;
+      const y = ((h2 * span + sp * t) % span) - len - 120;
+      const x = h1 * (1600 + 2040 * tn) - 260 - (y + 120) * tn;
+      ctx.moveTo(x, y); ctx.lineTo(x - len * tn, y + len);
+    }
+    ctx.stroke();
+  }
+}
+const flashAt = u => Math.min(1, pulse(u, 1.55, .04, .14) + .7 * pulse(u, 1.74, .04, .4) + .55 * pulse(u, 2.95, .04, .35));
+
+/* ---------- scene ---------- */
+function renderIntro(t) {
+  const L = L0;
+  if (t >= START[1] + TT.wipe) { L.el.style.visibility = 'hidden'; return; }
+  L.el.style.visibility = 'visible';
+  drawRain(L.ctx, RAIN_INTRO, t, 1);
+  // il primo fotogramma è già "pieno" (fa da anteprima su WhatsApp & co.)
+  fadeUp(L.eyebrow, t, -1, .5, 26);
+  L.words.forEach((w, k) => reveal(w, t, k === 0 ? -1 : -.1 + k * .18));
+  reveal(L.q, t, .95);
+  const ex = E.inOutCubic(prog(t, START[1], TT.wipe));
+  L.box.style.transform = `translateY(${(-60 * ex).toFixed(2)}px)`;
+}
+
+function renderLevel(k, t) {
+  const L = lv[k], s = START[k + 1], next = START[k + 2], u = t - s;
+  const hideAt = next + (k < 3 ? TT.wipe : TT.sweep);
+  if (t < s || t >= hideAt) { L.el.style.visibility = 'hidden'; return; }
+  L.el.style.visibility = 'visible';
+
+  // cerchio di colore che parte dal pallino
+  const pw = prog(u, 0, TT.wipe);
+  L.el.style.clipPath = pw < 1 ? `circle(${(17 + (L.rmax - 17) * E.inOutCubic(pw)).toFixed(1)}px at ${L.ox.toFixed(1)}px ${L.oy.toFixed(1)}px)` : 'none';
+
+  drawRain(L.ctx, RAIN[k], t, k + 2);
+
+  // ingresso dei contenuti
+  const pc = E.outCubic(prog(u, .1, .9));
+  const ex = E.inOutCubic(prog(t, next, .6));
+  L.content.style.transform = `translateY(${(-70 * ex).toFixed(2)}px) scale(${(1.05 - .05 * pc - .02 * ex).toFixed(4)})`;
+
+  const pi = prog(u, .22, .7), ei = E.outBack(pi);
+  const bobY = Math.sin(u * 2 * Math.PI / 2.6) * 7;
+  L.icon.style.opacity = clamp(pi * 3).toFixed(3);
+  L.icon.style.transform = `scale(${(.4 + .6 * ei).toFixed(4)}) rotate(${((1 - ei) * -12).toFixed(2)}deg)`;
+  L.bob.setAttribute('transform', `translate(0 ${bobY.toFixed(2)})`);
+  if (L.sun) L.sun.setAttribute('transform', `rotate(${(u * 18).toFixed(2)} 190 108)`);
+  const per = [0, .95, .62, .5][k], dist = [0, 34, 44, 44][k];
+  L.drops.forEach((d, j) => {
+    const c = ((u / per) + j * .37) % 1;
+    d.setAttribute('transform', `translate(${(-c * dist * .22).toFixed(2)} ${(c * dist).toFixed(2)})`);
+    d.setAttribute('opacity', Math.sin(Math.PI * c).toFixed(3));
+  });
+
+  const pch = prog(u, .38, .45), ech = E.outBack(pch);
+  L.chip.style.opacity = clamp(pch * 2.5).toFixed(3);
+  L.chip.style.transform = `translateX(${((1 - ech) * -30).toFixed(2)}px) scale(${(.85 + .15 * ech).toFixed(4)})`;
+  reveal(L.t1, u, .44);
+  reveal(L.t2, u, .54);
+  L.rule.style.transform = `scaleX(${E.outQuart(prog(u, .82, .5)).toFixed(4)})`;
+  fadeUp(L.d1, u, .92, .5, 30);
+  fadeUp(L.d2, u, 1.04, .5, 30);
+
+  if (L.flash) {                                   // lampo nel livello rosso
+    const f = flashAt(u);
+    L.flash.style.opacity = (.30 * f).toFixed(3);
+    L.bolt.setAttribute('transform', `translate(168 235) scale(${(1 + .12 * f).toFixed(4)}) translate(-168 -235)`);
+  }
+}
+
+function renderOutro(t) {
+  const L = L5, u = t - START[5];
+  if (u < 0) { L.el.style.visibility = 'hidden'; sweep.style.visibility = 'hidden'; return; }
+  L.el.style.visibility = 'visible';
+
+  // transizione: le quattro bande di colore salgono e lasciano il blu
+  const p = E.inOutCubic(clamp(u / TT.sweep));
+  const K = 95, B = 92, yE = lerp(1920 + K + 4 * B + 10, -K - 10, p);
+  if (p < 1) {
+    sweep.style.visibility = 'visible';
+    L.el.style.clipPath = `polygon(0px ${(yE + K).toFixed(1)}px,1080px ${(yE - K).toFixed(1)}px,1080px 4000px,0px 4000px)`;
+    bands.forEach((b, j) => {
+      const top = yE - (j + 1) * B - 1, bot = yE - j * B + 1;
+      b.setAttribute('points', `0,${(top + K).toFixed(1)} 1080,${(top - K).toFixed(1)} 1080,${(bot - K).toFixed(1)} 0,${(bot + K).toFixed(1)}`);
+    });
+  } else { sweep.style.visibility = 'hidden'; L.el.style.clipPath = 'none'; }
+
+  drawRain(L.ctx, RAIN_OUT, t, 7);
+  fadeUp(L.cap, u, .55, .4, 20);
+  L.segs.forEach((s, j) => s.style.transform = `scaleX(${E.outQuart(prog(u, .6 + j * .09, .45)).toFixed(4)})`);
+  L.lbls.forEach((s, j) => fadeUp(s, u, .8 + j * .09, .4, 14));
+  reveal(L.h1, u, .78);
+  reveal(L.h2, u, .9);
+  fadeUp(L.zone, u, 1.25, .55, 34);
+  fadeUp(L.url, u, 1.6, .55, 34);
+  L.uv.style.setProperty('--u', E.outQuart(prog(u, 1.95, .5)).toFixed(4));
+  fadeUp(L.src, u, 2.15, .5, 16);
+}
+
+function renderHud(t) {
+  hud.style.opacity = 1;
+  dots.forEach((d, k) => {
+    const ph = k === 0 ? 1 : prog(t, .16 + (k - 1) * .18, .5);
+    let s = ph > 0 ? E.outBack(ph) : 0;
+    const a0 = START[k + 1], a1 = START[k + 2];
+    const act = (t >= a0 && t < a1 + .25) ? clamp(Math.min(E.outBack(prog(t, a0, .4)), 1 - prog(t, a1, .25)), 0, 1.1) : 0;
+    s *= 1 + .14 * act + .22 * Math.sin(Math.PI * prog(t, a0, .35));
+    s *= 1 + .28 * Math.sin(Math.PI * prog(t, START[5] + 2.4 + k * .1, .4));   // onda finale
+    d.f.style.transform = `scale(${s.toFixed(4)})`;
+    d.r.style.opacity = clamp(act).toFixed(3);
+    d.r.style.transform = `scale(${(.5 + .5 * act).toFixed(4)})`;
+  });
+}
+
+function render(t) {
+  t = clamp(t, 0, TOTAL);
+  renderIntro(t);
+  for (let k = 0; k < 4; k++) renderLevel(k, t);
+  renderOutro(t);
+  renderHud(t);
+}
+window.renderFrame = t => { render(t); return true; };
+
+/* ---------- anteprima nel browser: si adatta allo schermo e va in loop ---------- */
+function fit() {
+  const s = Math.min(innerWidth / 1080, innerHeight / 1920);
+  stage.style.transform = `translate(-50%,-50%) scale(${s})`;
+}
+let t0 = null, paused = false, cur = 0;
+function loop(now) {
+  if (!paused) {
+    if (t0 === null) t0 = now;
+    cur = ((now - t0) / 1000) % (TOTAL + 1.2);
+    render(cur);
+  }
+  requestAnimationFrame(loop);
+}
+function toggle() {
+  paused = !paused;
+  document.documentElement.classList.toggle('paused', paused);
+  if (!paused) t0 = performance.now() - cur * 1000;
+}
+
+async function boot() {
+  build();
+  try {
+    await Promise.all(['400 40px "Titillium Web"', '600 40px "Titillium Web"', '700 40px "Titillium Web"', '900 40px "Titillium Web"',
+      '500 20px "Roboto Mono"', '700 20px "Roboto Mono"'].map(f => document.fonts.load(f)));
+    await document.fonts.ready;
+  } catch (e) {}
+  if (!RENDER) { fit(); addEventListener('resize', fit); addEventListener('pointerdown', toggle); }
+  measure();
+  render(0);
+  window.__ready = true;
+  if (!RENDER) requestAnimationFrame(loop);
+}
+boot();
+</script>
+</body>
+</html>
