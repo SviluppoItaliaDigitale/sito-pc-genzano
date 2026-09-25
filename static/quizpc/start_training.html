@@ -101,7 +101,10 @@
           return;
         }
 
-        safeStorage.set('trainingCategories', JSON.stringify(selectedCategories));
+        if (!safeStorage.set('trainingCategories', JSON.stringify(selectedCategories))) {
+          safeStorage.avviso(this);
+          return;
+        }
         window.location.href = 'training.html';
       });
     });
