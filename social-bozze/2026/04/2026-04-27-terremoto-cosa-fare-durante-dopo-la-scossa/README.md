@@ -11,7 +11,7 @@ Il numero del carosello è l'ordine di caricamento.
 
 | File | Dove si pubblica |
 |---|---|
-| `feed-post.jpg` | FEED Instagram + Facebook — post con una sola immagine (1080×1350) |
+| `feed-carosello-1.jpg`, `feed-carosello-2.jpg` | FEED Instagram + Facebook — carosello: caricale **tutte, in ordine** (1080×1350) |
 | `storia.jpg` | STORIE Instagram + Facebook — verticale, sparisce dopo 24h (1080×1920) |
 | `instagram.txt` | testo per Instagram |
 | `facebook.txt` | testo per Facebook (anteprima OG dall'URL) |
