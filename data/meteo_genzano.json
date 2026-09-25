@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-09-25T01:03",
+  "aggiornato": "2026-09-25T02:02",
   "data_lunga": "venerdì 25 settembre 2026",
-  "aggiornato_label": "venerdì 25 settembre 2026, ore 01:03",
+  "aggiornato_label": "venerdì 25 settembre 2026, ore 02:02",
   "alba": "06:59",
   "tramonto": "19:01",
   "corrente": {
-    "temp": 18.7,
-    "percepita": 19.9,
+    "temp": 18.3,
+    "percepita": 20.0,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 85,
-    "vento": 6,
-    "raffiche": 20
+    "umidita": 88,
+    "vento": 3,
+    "raffiche": 24
   },
   "giorni": [
     {
@@ -21,8 +21,8 @@
       "tmax": 24,
       "tmin": 17,
       "pioggia": 28,
-      "pioggia_mm": 0.3,
-      "raffiche": 42,
+      "pioggia_mm": 1.1,
+      "raffiche": 36,
       "uv": 6,
       "uv_label": "alto"
     },
@@ -47,8 +47,8 @@
       "pioggia": 0,
       "pioggia_mm": 0,
       "raffiche": 28,
-      "uv": 6,
-      "uv_label": "alto"
+      "uv": 5,
+      "uv_label": "moderato"
     },
     {
       "label": "Lun 28",
