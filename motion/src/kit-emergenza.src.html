@@ -54,6 +54,20 @@ html,body{margin:0;height:100%;background:#03060b;overflow:hidden}
   color:#fff;font:700 20px/1 system-ui,sans-serif;cursor:pointer}
 #play span{padding:18px 28px;border-radius:999px;background:#f59e0b;color:#0a1220}
 .render #play,.started #play{display:none}
+
+/* ---------- 16:9 (1920x1080): testo a sinistra, illustrazione a destra ---------- */
+html[data-fmt="16x9"] #stage{width:1920px;height:1080px}
+html[data-fmt="16x9"] #hud{left:120px;top:56px}
+html[data-fmt="16x9"] #spot{left:966px;top:110px}
+html[data-fmt="16x9"] .glow{background:
+  radial-gradient(40% 50% at 68% 42%,rgba(46,144,250,.22),rgba(46,144,250,0) 70%),
+  radial-gradient(50% 40% at 96% 96%,rgba(245,158,11,.10),rgba(245,158,11,0) 70%)}
+html[data-fmt="16x9"] .num{left:160px;top:250px}
+html[data-fmt="16x9"] .ill{left:872px;top:190px}
+html[data-fmt="16x9"] .txt{left:160px;top:310px;width:700px}
+html[data-fmt="16x9"] .sub,html[data-fmt="16x9"] .intro .sub{left:160px;top:800px;width:1600px;font-size:38px;padding:22px 30px}
+html[data-fmt="16x9"] .tip{font-size:44px}
+html[data-fmt="16x9"] .uv{font-size:50px}
 </style>
 </head>
 <body>
@@ -67,7 +81,14 @@ html,body{margin:0;height:100%;background:#03060b;overflow:hidden}
 
 <script>
 /* durate delle frasi della voce (secondi) — generate automaticamente */
-const VOICE = [4.876, 6.329, 3.425, 3.46, 4.425, 5.191, 3.495, 5.122, 3.821];
+const VOICE_DUR = /*DUR*/[];   // da motion/voce/kit-emergenza/durate.json (voce.py)
+const VOICE = VOICE_DUR.length ? VOICE_DUR : [4.9, 6.4, 3.5, 3.5, 4.5, 5.2, 3.5, 5.2, 3.8];
+
+/* formato: 9:16 (predefinito) o 16:9 */
+const FMT = new URLSearchParams(location.search).get('fmt') === '16x9' ? '16x9' : '9x16';
+const SW = FMT === '16x9' ? 1920 : 1080, SH = FMT === '16x9' ? 1080 : 1920;
+document.documentElement.dataset.fmt = FMT;
+const CX = FMT === '16x9' ? 1316 : 540, CY = FMT === '16x9' ? 450 : 640;   // centro dell'illustrazione
 
 /* =====================================================================
    CONFIG — testi e scene. Una scena per ogni frase della voce.
@@ -84,17 +105,17 @@ const SCENES = [
     tips:[['porta','Vicino all’uscita di casa'], ['calendario','Ogni 6 mesi: scadenze e batterie']] },
   { tipo:'finale', h:'Preparalo <span class="a">oggi.</span>',
     zonaK:'Protezione Civile · Genzano di Roma', url:'protezionecivilegenzano.it',
-    fonte:'Fonte: Dipartimento della Protezione Civile,<br>campagna «Io non rischio»' }
+    fonte:'Fonti: Dipartimento della Protezione Civile, «Io non rischio»;<br>Commissione europea per le 72 ore' }
 ];
 const SUBS = [
-  'Il kit di emergenza: uno zaino sempre pronto, per affrontare le prime 72 ore.',
+  'Il kit di emergenza: l’essenziale sempre pronto, per affrontare le prime 72 ore.',
   'Acqua potabile e cibo a lunga conservazione, per almeno 3 giorni. Non dimenticare l’apriscatole.',
   'Una torcia e una radio a pile, con le batterie di ricambio.',
   'Il kit di pronto soccorso e i medicinali che prendi ogni giorno.',
   'Le copie dei documenti in una busta impermeabile. E un po’ di contanti.',
   'Il telefono, con caricabatterie e power bank. E un fischietto, per farti sentire.',
   'Vestiti di ricambio, una coperta e il cibo per i tuoi animali.',
-  'Tieni lo zaino vicino all’uscita. E ogni sei mesi controlla scadenze e batterie.',
+  'Tieni il kit vicino all’uscita. E ogni sei mesi controlla scadenze e batterie.',
   'Preparalo oggi.'
 ];
 const LEAD = .45, TAIL = .75, EXIT = .5;   // anticipo prima della voce, pausa dopo, volo nello zaino
@@ -107,6 +128,7 @@ DUR.forEach(d => START.push(START[START.length - 1] + d));
 const TOTAL = START[SCENES.length];
 window.TOTAL = TOTAL;
 window.VOICE_AT = START.slice(0, -1).map(s => +(s + LEAD).toFixed(3));   // per il montaggio audio
+window.KEYFRAMES = START.slice(0, -1).map((s, k) => +(s + DUR[k] * .6).toFixed(2));
 window.SUBS = SUBS.map((testo, k) => ({ da: +(START[k] + LEAD).toFixed(3), a: +(START[k] + LEAD + VOICE[k] + .2).toFixed(3), testo }));   // per il file .vtt
 
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
@@ -221,7 +243,7 @@ function build() {
       <div class="tips">${sc.tips.map(([ic, t]) => `<div class="tip">${TIPICON[ic]}<span>${t}</span></div>`).join('')}</div></div>`;
     if (sc.tipo === 'finale') inner = `<div class="ill">${ILL.zaino()}</div><div class="txt big"><div class="m h"><span class="i">${sc.h}</span></div>
       <div class="zone"><div class="zk">${sc.zonaK}</div><span class="uv">${sc.url}</span></div><div class="src">${sc.fonte}</div></div>`;
-    const showSub = sc.tipo !== 'finale' && sc.tipo !== 'consigli';
+    const showSub = sc.tipo !== 'finale';   // nel finale il titolo dice già le stesse parole
     const el = node(`<section class="layer${k === 0 ? ' intro' : ''}">${inner}${showSub ? `<div class="sub">${SUBS[k]}</div>` : ''}</section>`);
     stage.insertBefore(el, hud);
     const q = s => el.querySelector(s), qa = s => [...el.querySelectorAll(s)];
@@ -230,10 +252,10 @@ function build() {
   });
 }
 function measure() {
-  const st = stage.getBoundingClientRect(), sc = st.width / 1080;
-  L.forEach(l => { l.cx = 540; l.cy = 640; });
+  const st = stage.getBoundingClientRect(), sc = st.width / SW;
+  L.forEach(l => { l.cx = CX; l.cy = CY; });
   slots.forEach((s, k) => { const r = s.parentElement.getBoundingClientRect();
-    L[k + 1].tx = (r.left + r.width / 2 - st.left) / sc - 540; L[k + 1].ty = (r.top + r.height / 2 - st.top) / sc - 640; });
+    L[k + 1].tx = (r.left + r.width / 2 - st.left) / sc - CX; L[k + 1].ty = (r.top + r.height / 2 - st.top) / sc - CY; });
 }
 function reveal(el, u, s, d = .62) { const p = E.outQuart(prog(u, s, d)); el.style.transform = `translateY(${((1 - p) * 135).toFixed(2)}%)`; }
 function fadeUp(el, u, s, d = .5, dist = 36) { const p = E.outCubic(prog(u, s, d)); el.style.opacity = p.toFixed(3); el.style.transform = `translateY(${((1 - p) * dist).toFixed(2)}px)`; }
@@ -271,7 +293,10 @@ function renderScene(k, t) {
     tr = `translate(${(l.tx * f).toFixed(1)}px,${(l.ty * f).toFixed(1)}px) scale(${((.55 + .45 * ei) * (1 - .93 * f)).toFixed(4)}) rotate(${(f * -20).toFixed(1)}deg)`;
     op *= 1 - clamp((f - .85) / .15);
   } else op *= 1 - out;
-  if (l.sc.tipo !== 'intro' && !isItem) tr += ` scale(${k === 7 ? .7 : .58})`, l.ill.style.transformOrigin = '50% 20%';
+  if (l.sc.tipo !== 'intro' && !isItem) {
+    if (FMT === '16x9') tr += ' scale(.86)', l.ill.style.transformOrigin = '50% 50%';
+    else tr += ' scale(.5)', l.ill.style.transformOrigin = '50% 20%';
+  }
   l.ill.style.transform = tr; l.ill.style.opacity = op.toFixed(3);
   idle(l, u);
 
@@ -285,7 +310,7 @@ function renderScene(k, t) {
   if (l.sub) l.sub.style.opacity = (Math.min(+l.sub.style.opacity, 1 - out)).toFixed(3);
   if (l.num) l.num.style.opacity = (Math.min(+l.num.style.opacity, 1 - out)).toFixed(3);
   // posizioni: nelle scene finali lo zaino sta più in alto e il testo scende
-  if (k >= 7) l.txt.style.top = k === 7 ? '870px' : '800px';
+  if (k >= 7) l.txt.style.top = FMT === '16x9' ? (k === 7 ? '270px' : '250px') : '720px';
 }
 function renderHud(t) {
   slots.forEach((s, k) => { const a = START[k + 2] - .08; s.style.transform = `scale(${E.outBack(prog(t, a, .35)).toFixed(4)})`; });
@@ -294,7 +319,7 @@ function render(t) { t = clamp(t, 0, TOTAL); for (let k = 0; k < SCENES.length; 
 window.renderFrame = t => { render(t); return true; };
 
 /* anteprima nel browser, con la voce */
-function fit() { const s = Math.min(innerWidth / 1080, innerHeight / 1920); stage.style.transform = `translate(-50%,-50%) scale(${s})`; }
+function fit() { const s = Math.min(innerWidth / SW, innerHeight / SH); stage.style.transform = `translate(-50%,-50%) scale(${s})`; }
 const aud = document.getElementById('aud');
 let t0 = null, paused = false, cur = 0;
 function loop(now) {
