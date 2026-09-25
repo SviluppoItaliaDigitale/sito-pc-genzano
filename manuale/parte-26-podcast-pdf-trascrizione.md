@@ -118,7 +118,22 @@ Dopo il deploy, verifica:
 4. Clic su "Leggi ad alta voce" → la voce italiana inizia a leggere; cambia velocità con il selettore; ferma con il bottone "Ferma lettura".
 5. La voce menu "Podcast" è presente in "Risorse" sia nelle pagine Hugo sia nelle pagine HTML statiche (es. giochi, schede stampabili) — vincolo sync `site-chrome.js`.
 
-## 26.9 Riferimenti
+## 26.9 Metadati dei file audio
+
+I file `.m4a` in `static/podcast/episodi/` portano nei metadati il nome del programma che li ha prodotti (`encoder`, `handler_name`). L'audit esterno del 25/09/2026 (rilievo F14) li ha segnalati: sul sito non deve restare alcun riferimento agli strumenti di produzione, e i metadati di un file pubblicato sono parte del sito.
+
+**Regola dal 26/09/2026:** ogni episodio nuovo si carica **senza metadati**. Prima del commit:
+
+```bash
+ffmpeg -i episodio-originale.m4a -c copy -map_metadata -1 episodio.m4a
+ffprobe -v error -show_entries format_tags -of default=nw=1 episodio.m4a   # deve essere vuoto
+```
+
+`-c copy` non ricodifica (qualità invariata, pochi secondi), `-map_metadata -1` scarta tutti i tag. Il workflow `comprimi-podcast.yml` applica la stessa opzione quando ricomprime gli episodi, quindi ogni file che passa da lì esce pulito.
+
+**I 18 episodi già pubblicati non sono stati ricaricati**: sono ~500 MB di binari, e riscriverli nella storia git per cambiare soli metadati farebbe crescere il repository (già 1,7 GB) senza vantaggi per il cittadino. Si puliscono alla prossima occasione in cui vanno comunque ricompressi o sostituiti (lancio manuale di `comprimi-podcast.yml`), episodio per episodio. La dichiarazione «letta da una voce sintetica» nelle pagine degli episodi resta: è una nota di trasparenza dovuta a chi ascolta, non un riferimento a uno strumento.
+
+## 26.10 Riferimenti
 
 - **Web Speech API** (MDN): <https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API>
 - **W3C Web Speech API spec**: <https://wicg.github.io/speech-api/>
