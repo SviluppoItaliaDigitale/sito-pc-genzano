@@ -15,11 +15,16 @@ window.safeStorage = {
             return null;
         }
     },
+    // Restituisce true se il valore è stato salvato, false altrimenti.
+    // Chi salva dati che servono alla pagina successiva DEVE controllare
+    // l'esito: proseguire dopo una scrittura fallita porta a una pagina che
+    // non trova i dati e rimanda indietro, perdendo ciò che l'utente ha fatto.
     set: function (key, value) {
         try {
             window.localStorage.setItem(key, value);
+            return true;
         } catch (e) {
-            // Nessuna memoria disponibile: si prosegue senza salvare.
+            return false;
         }
     },
     remove: function (key) {
@@ -36,5 +41,23 @@ window.safeStorage = {
         for (var i = 0; i < keys.length; i++) {
             this.remove(keys[i]);
         }
+    },
+    // Messaggio da mostrare quando il browser non consente di salvare:
+    // dice che cosa succede e come rimediare, invece di un rimando muto.
+    MESSAGGIO: 'Il browser non consente di salvare i dati del quiz, quindi non si può proseguire. ' +
+        'Succede di solito in navigazione privata o quando i dati dei siti sono bloccati: ' +
+        'apri la pagina in una finestra normale oppure consenti i dati per questo sito, poi riprova.',
+    // Inserisce (una sola volta) un avviso role="alert" subito dopo l'elemento indicato.
+    avviso: function (dopo, testo) {
+        var esistente = document.getElementById('storageError');
+        if (esistente) { esistente.textContent = testo || this.MESSAGGIO; esistente.focus(); return; }
+        var box = document.createElement('div');
+        box.id = 'storageError';
+        box.className = 'alert alert-warning mt-3';
+        box.setAttribute('role', 'alert');
+        box.setAttribute('tabindex', '-1');
+        box.textContent = testo || this.MESSAGGIO;
+        dopo.insertAdjacentElement('afterend', box);
+        box.focus();
     }
 };

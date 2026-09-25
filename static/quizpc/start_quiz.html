@@ -141,9 +141,15 @@
 
         if (hasError) return;
 
-        safeStorage.set('candidateName', name);
-        safeStorage.set('candidateId', id);
-        safeStorage.set('selectedCategories', JSON.stringify(selectedCategories));
+        var salvato = safeStorage.set('candidateName', name) &&
+          safeStorage.set('candidateId', id) &&
+          safeStorage.set('selectedCategories', JSON.stringify(selectedCategories));
+        if (!salvato) {
+          // Niente dati a metà: il quiz li troverebbe incompleti e rimanderebbe qui.
+          safeStorage.removeMany(['candidateName', 'candidateId', 'selectedCategories']);
+          safeStorage.avviso(this);
+          return;
+        }
         window.location.href = 'quiz.html';
       });
 

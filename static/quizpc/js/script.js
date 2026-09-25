@@ -17,8 +17,8 @@ function showConfirmModal(message, onConfirm) {
 function confirmExit(event, url) {
     event.preventDefault();
     showConfirmModal("Sei sicuro di voler abbandonare il quiz? I tuoi progressi andranno persi.", function() {
-        safeStorage.remove('quizResults');
-        safeStorage.remove('selectedCategories');
+        // Chi abbandona il quiz non lascia nome e matricola nel browser.
+        safeStorage.removeMany(['candidateName', 'candidateId', 'quizResults', 'selectedCategories']);
         window.location.href = url;
     });
 }
@@ -200,7 +200,24 @@ document.addEventListener('DOMContentLoaded', function () {
             userChoices: userChoices
         };
 
-        safeStorage.set('quizResults', JSON.stringify(results));
+        if (!safeStorage.set('quizResults', JSON.stringify(results))) {
+            // La pagina di riepilogo legge i risultati dalla memoria del browser:
+            // se non si possono salvare, l'esito si mostra qui invece di perderlo.
+            safeStorage.removeMany(['candidateName', 'candidateId', 'selectedCategories']);
+            var main = document.getElementById('main-content') || document.body;
+            var esito = 'Quiz concluso: ' + correctAnswers + ' risposte corrette su ' + totalQuestionsInQuiz +
+                ' (' + Math.round(results.score) + '%). Esito: ' + (pass ? 'superato' : 'non superato') + '. ' +
+                'Il browser non consente di salvare i risultati, quindi la pagina di riepilogo con le correzioni non si può aprire. ' +
+                'Codice del tentativo: ' + uniqueId + '.';
+            var box = document.createElement('div');
+            box.className = 'alert alert-info m-3';
+            box.setAttribute('role', 'alert');
+            box.setAttribute('tabindex', '-1');
+            box.textContent = esito;
+            main.insertBefore(box, main.firstChild);
+            box.focus();
+            return;
+        }
         window.location.href = 'results.html';
     }
 
