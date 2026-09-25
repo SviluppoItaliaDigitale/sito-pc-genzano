@@ -4,7 +4,7 @@ description: "Dichiarazione di accessibilità AGID: stato di conformità, conten
 layout: "single"
 toc: true
 tts: true
-dataUltimaRevisione: "2026-09-21"
+dataUltimaRevisione: "2026-09-26"
 aliases:
   - /dichiarazione-accessibilita.html
 ---
@@ -28,7 +28,7 @@ Il sito è **parzialmente conforme** ai requisiti dello standard europeo armoniz
 - **Focus visibile**: ogni elemento interattivo ha outline visibile (3px) al focus.
 - **Skip link**: "Vai al contenuto principale" presente in cima alle pagine generate dal sito; sulle mini-app interattive è fornito via JavaScript insieme al resto dell'intestazione.
 - **Landmark ARIA**: header/nav/main/footer presenti nativamente sulle pagine generate dal sito; sulle mini-app interattive (giochi, quiz, schede stampabili) sono iniettati via JavaScript e richiedono quindi JavaScript attivo.
-- **Alt text**: le immagini informative hanno descrizione testuale e le decorative `alt=""`; la copertura è controllata da una verifica automatica settimanale sull'intero repository (`audit-sito.yml`, check `image_alt`) e a campione in revisione editoriale.
+- **Alt text**: le immagini informative hanno descrizione testuale e le decorative `alt=""`; la copertura è controllata da una verifica automatica ogni 6 ore sull'intero repository (`audit-sito.yml`, check `image_alt`) e a campione in revisione editoriale.
 - **Lingua dichiarata**: ogni pagina dichiara `<html lang>` correttamente, anche per le 7 traduzioni.
 - **`<th scope="col">` automatico**: tutte le 400+ tabelle Markdown del sito sono rese con intestazioni accessibili.
 - **Pittogrammi standardizzati**: 46 segnali ISO 7010 + 125 ARASAAC integrati per supportare comprensione cognitiva (bambini, anziani, italiano L2, persone con disabilità cognitive).
@@ -64,7 +64,7 @@ Le seguenti aree del sito **non sono pienamente accessibili** per i motivi indic
 
 - **Dichiarazione redatta il**: 10 maggio 2026.
 - **Metodo di redazione**: **autovalutazione** condotta dal soggetto ai sensi dell'art. 3, comma 1, della Decisione di esecuzione (UE) 2018/1523.
-- **Data ultima revisione**: 21 settembre 2026 (aggiornato il conteggio dei PDF pubblicati — 51 → 54, con l'aggiunta di 3 ordinanze comunali — a seguito del nuovo audit automatico dello stesso giorno; la revisione precedente, del 15 settembre 2026, aveva allineato alla realtà la descrizione dei contenuti di terze parti e lo stato del controllo automatico).
+- **Data ultima revisione**: 26 settembre 2026 (obiettivi 2026-2027 riordinati in una sequenza coerente, con l'audit di terzi prima della piena conformità; obiettivo sui video riferito ai video pubblicati sul sito; frequenza dei controlli automatici allineata a quella reale; elenco reale delle pagine tradotte; la revisione precedente, del 21 settembre 2026, aveva aggiornato il conteggio dei PDF pubblicati — 51 → 54, con l'aggiunta di 3 ordinanze comunali — a seguito del nuovo audit automatico dello stesso giorno).
 - **Dichiarazione sul portale AGID**: il deposito tramite la procedura ufficiale ([form.agid.gov.it](https://form.agid.gov.it/)) è in capo al **Comune di Genzano di Roma**, ente titolare del servizio: il Gruppo Comunale è una sua articolazione di volontariato e non dispone di un'utenza autonoma sul portale. Questa pagina è la dichiarazione nella sua forma sostanziale — contenuti non accessibili, metodo di valutazione, meccanismo di feedback e recapiti — e resta il riferimento pubblico finché il deposito formale non è completato. Il collegamento verrà aggiunto qui e nel piè di pagina non appena disponibile.
 - **Riesame**: questa pagina viene riesaminata e aggiornata **a ogni modifica sostanziale del sito**, oltre che con cadenza almeno annuale, come mostra la data di ultima revisione qui sopra. Il calendario formale degli adempimenti segue il deposito sul portale AgID e decorre da quello.
 - **Frequenza dei test automatici**: ogni 6 ore (workflow `audit-sito.yml`: integrità, ancore, parità dei materiali), due volte al giorno (workflow `lighthouse-audit.yml`) e a ogni proposta di modifica (workflow `pa11y-ci.yml`, verifica axe prima della pubblicazione).
@@ -85,7 +85,7 @@ L'autovalutazione è stata condotta combinando strumenti automatici e test manua
 ### Strumenti automatici
 - **Google Lighthouse 12** (Chrome DevTools + GitHub Actions), audit Performance / Accessibilità / Best Practices / SEO con configurazione `lighthouserc.json` (3 run × 3 URL, mediana, mobile).
 - **axe-core** (integrato in Lighthouse) per validazione WCAG 2.2 AA.
-- **Workflow GitHub Actions**: audit settimanale `audit-sito.yml` (oltre 40 sezioni di controllo), audit post-deploy `lighthouse-audit.yml`, link checker `check-links-sito.yml` (lychee).
+- **Workflow GitHub Actions**: audit ogni 6 ore `audit-sito.yml` (oltre 40 sezioni di controllo), audit `lighthouse-audit.yml` due volte al giorno, verifica axe `pa11y-ci.yml` a ogni proposta di modifica, link checker settimanale `check-links-sito.yml` (lychee).
 
 ### Test manuali
 - **Navigazione completa da tastiera**: percorsi di Tab/Shift+Tab/Enter/Esc su home, articoli, archivio, mappa, assistente guidato, modulo cerca, toolbar accessibilità, modale SOS-112.
@@ -103,14 +103,15 @@ Home, archivio comunicazioni, articolo singolo, numeri utili, contatti, accessib
 
 ## Obiettivi di accessibilità (2026-2027)
 
-Il Gruppo si impegna a raggiungere la **piena conformità WCAG 2.2 AA** entro il 10 maggio 2027 attraverso i seguenti obiettivi:
+Il Gruppo si impegna a raggiungere la **piena conformità WCAG 2.2 AA** entro il **31 dicembre 2027**. La dichiarazione di piena conformità arriverà **dopo** l'audit di terzi, non prima: un'autovalutazione, per quanto accurata, non basta a dichiararla. Gli obiettivi sono in ordine di scadenza e vengono riesaminati e ripubblicati **entro il 31 marzo di ogni anno**, come previsto dal calendario AgID per gli obiettivi di accessibilità.
 
 1. **Audit completo dei PDF storici** dell'Area Download: rigenerazione con OCR completo e tag PDF/UA per i documenti pre-2022 che lo richiedano. Scadenza: 31 dicembre 2026.
-2. **Trascrizione testuale** di eventuali video YouTube/Vimeo embed presenti nel sito. Scadenza: continua, all'atto della pubblicazione.
-3. **Mantenimento Lighthouse A11y = 100/100** verificato dall'audit automatico settimanale; in caso di regressione, intervento entro 7 giorni.
+2. **Testo equivalente per ogni video pubblicato**. I video sono ospitati sul sito e riprodotti con il player accessibile di Bootstrap Italia (controlli da tastiera, nessun avvio automatico); non ci sono video incorporati da piattaforme esterne. I video informativi hanno voce narrante e sottotitoli sempre visibili, e tutto ciò che dicono è scritto nella pagina che li ospita; i video degli interventi, senza parlato, hanno una didascalia che descrive ciò che mostrano. I video di altri enti ripubblicati sul sito (campagna della Regione Lazio, Agenzia Spaziale Europea) sono accompagnati da una descrizione nel testo o hanno i sottotitoli impressi; dove manca un testo equivalente, lo aggiungiamo. Scadenza: continua, all'atto della pubblicazione.
+3. **Mantenimento Lighthouse Accessibilità = 100/100**, verificato dai controlli automatici (`audit-sito.yml` ogni 6 ore, `lighthouse-audit.yml` due volte al giorno, `pa11y-ci.yml` a ogni proposta di modifica); in caso di regressione, intervento entro 7 giorni.
 4. **Sostituzione progressiva dei widget di terze parti** non accessibili con alternative native quando disponibili (es. mappe self-hosted con tile OpenStreetMap per ridurre dipendenza da Windy/altri).
 5. **Formazione annuale** dei volontari redattori su scrittura inclusiva AGID, WCAG 2.2 e linguaggio della PA. Riferimenti: Designers Italia, Writing Toolkit, Content Toolkit.
-6. **Audit di accessibilità di terzi qualificati** entro il 31 dicembre 2027 per validare l'autovalutazione.
+6. **Audit di accessibilità di terzi qualificati** entro il 30 giugno 2027, per validare l'autovalutazione e individuare ciò che le verifiche interne non vedono.
+7. **Piena conformità WCAG 2.2 AA** entro il 31 dicembre 2027, dopo aver corretto quanto emerso dall'audit di terzi, e aggiornamento di questa dichiarazione.
 
 ## Criteri adottati
 
@@ -246,7 +247,7 @@ La versione facile è opt-in per articolo: se non vedi il banner giallo, signifi
 
 ### Otto versioni curate dal Gruppo
 
-Il sito offre **otto versioni curate** delle pagine essenziali (numeri utili, cosa fare in emergenza, piano familiare, accessibilità), tradotte e revisionate dai volontari del Gruppo:
+Il sito offre **otto versioni curate** di quattro pagine essenziali — la pagina di ingresso di ogni lingua, **cosa fare adesso**, **numeri utili** e **piano familiare** — tradotte e revisionate dai volontari del Gruppo:
 
 - 🇮🇹 italiano (lingua principale)
 - 🇬🇧 english
@@ -257,7 +258,7 @@ Il sito offre **otto versioni curate** delle pagine essenziali (numeri utili, co
 - 🇷🇴 română
 - 🌍 esperanto
 
-Ogni pagina dichiara correttamente la lingua nel markup HTML (`<html lang>`) e nei meta Open Graph (`og:locale`), così screen reader, motori di ricerca e crawler la riconoscono.
+Ogni pagina dichiara correttamente la lingua nel markup HTML (`<html lang>`) e nei meta Open Graph (`og:locale`), così screen reader, motori di ricerca e crawler la riconoscono. Questa dichiarazione di accessibilità è disponibile solo in italiano.
 
 ### Traduzione automatica del browser
 
