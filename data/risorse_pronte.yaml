@@ -152,6 +152,28 @@ materiali:
   dimensione: 16.0 MB
   data_pubblicazione: '2026-03-25'
   licenza: CC BY-NC-SA 4.0
+- id: kit-emergenza-video-2026-09-25
+  tema: kit-emergenza
+  tema_titolo: Kit emergenza famiglia
+  tipo: video
+  titolo: 'Video: il kit di emergenza'
+  descrizione: Video verticale con voce e sottotitoli (meno di un minuto) su cosa
+    mettere nel kit di emergenza. Pronto da condividere su WhatsApp e social.
+  file_url: /video/2026-09-25-kit-emergenza-video.mp4
+  dimensione: 1.9 MB
+  data_pubblicazione: '2026-09-25'
+  licenza: CC BY 4.0
+- id: kit-emergenza-video-16x9-2026-09-25
+  tema: kit-emergenza
+  tema_titolo: Kit emergenza famiglia
+  tipo: video
+  titolo: 'Video orizzontale: il kit di emergenza'
+  descrizione: Lo stesso video in formato orizzontale (meno di un minuto, voce e sottotitoli),
+    per computer, televisione e proiezione a scuola o negli incontri.
+  file_url: /video/2026-09-25-kit-emergenza-video-16x9.mp4
+  dimensione: 1.9 MB
+  data_pubblicazione: '2026-09-25'
+  licenza: CC BY 4.0
 - id: kit-emergenza-podcast-2026-04-17
   tema: kit-emergenza
   tema_titolo: Kit emergenza famiglia
