@@ -29,10 +29,20 @@
        NON richiedono manutenzione: aggiungendo una nuova sottocartella con
        index.html, comparirà automaticamente nel sitemap al prossimo build. */}}
 
-  {{- /* 1. Schede stampabili: tutte le sottocartelle di /static/formazione/schede-stampabili/ tranne 'assets' */ -}}
+  {{- /* 1. Schede stampabili: le sottocartelle di /static/formazione/schede-stampabili/
+       che hanno un index.html indicizzabile. Escluse (audit 25/09/2026, F22):
+       le cartelle senza index.html (es. pacchetti/, che risponde 403) e le
+       pagine di reindirizzamento o noindex (canonical verso un'altra pagina):
+       in sitemap vanno solo URL canoniche che rispondono 200. */ -}}
   {{- with os.ReadDir "static/formazione/schede-stampabili" }}
     {{- range . }}
-      {{- if and .IsDir (ne .Name "assets") }}
+      {{- $idx := printf "static/formazione/schede-stampabili/%s/index.html" .Name }}
+      {{- $ok := false }}
+      {{- if and .IsDir (ne .Name "assets") (fileExists $idx) }}
+        {{- $c := readFile $idx }}
+        {{- $ok = not (or (findRE `<meta[^>]+name="robots"[^>]+noindex` $c 1) (findRE `http-equiv="refresh"` $c 1)) }}
+      {{- end }}
+      {{- if $ok }}
   <url>
     <loc>{{ printf "%s/formazione/schede-stampabili/%s/" (strings.TrimRight "/" $prodBase) .Name | safeHTML }}</loc>
     <changefreq>monthly</changefreq>
@@ -80,12 +90,17 @@
   </url>
   {{- end }}
 
-  {{- /* 5. Quiz Formativo PC e Formazione PC: file .html (non directory) */ -}}
+  {{- /* 5. Quiz Formativo PC e Formazione PC: file .html (non directory).
+       index.html è escluso: la stessa pagina è già elencata con lo slash
+       finale fra gli hub (punto 4), e /quizpc/index.html reindirizza.
+       Escluse anche le pagine noindex: quiz in corso, esito e allenamento
+       funzionano solo dentro una sessione e senza dati tornano all'inizio. */ -}}
   {{- range slice "quizpc" "formazionepc" }}
     {{- $dir := . }}
     {{- with os.ReadDir (printf "static/%s" $dir) }}
       {{- range . }}
-        {{- if and (not .IsDir) (strings.HasSuffix .Name ".html") }}
+        {{- $f := printf "static/%s/%s" $dir .Name }}
+        {{- if and (not .IsDir) (strings.HasSuffix .Name ".html") (ne .Name "index.html") (not (findRE `<meta[^>]+name="robots"[^>]+noindex` (readFile $f) 1)) }}
   <url>
     <loc>{{ printf "%s/%s/%s" (strings.TrimRight "/" $prodBase) $dir .Name | safeHTML }}</loc>
     <changefreq>monthly</changefreq>

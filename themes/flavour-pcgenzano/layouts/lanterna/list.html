@@ -15,6 +15,11 @@
 <title>Modalità Lanterna — Protezione Civile Genzano di Roma</title>
 <meta name="description" content="Strumenti di sopravvivenza: torcia, bussola, schermo sempre acceso, 112. Pagina ultra-leggera per le emergenze.">
 <meta name="robots" content="index,follow">
+{{- /* Canonical verso la produzione (audit 25/09/2026, F22): la pagina è
+       standalone e non passa da baseof.html, che lo emette per tutte le altre. */ -}}
+{{- $prodBase := .Site.Params.productionBaseURL | default .Site.BaseURL -}}
+{{- $basePath := (urls.Parse .Site.BaseURL).Path | default "/" -}}
+<link rel="canonical" href="{{ printf "%s/%s" (strings.TrimRight "/" $prodBase) (strings.TrimPrefix $basePath .RelPermalink) }}">
 <style>
 :root{color-scheme:dark}
 *{box-sizing:border-box;margin:0;padding:0}
