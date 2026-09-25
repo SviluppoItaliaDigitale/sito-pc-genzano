@@ -72,6 +72,7 @@
       </div>
     </div>
   </main>
+  <script src="js/safe-storage.js"></script>
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
   <script src="js/banco_domande/1_principi_e_organizzazione.js"></script>
@@ -83,8 +84,8 @@
   <script src="js/main_loader.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      localStorage.removeItem('quizResults');
-      localStorage.removeItem('selectedCategories');
+      safeStorage.remove('quizResults');
+      safeStorage.remove('selectedCategories');
 
       var categoriesContainer = document.getElementById('categoriesContainer');
       var selectAllCheckbox = document.getElementById('selectAllCheckbox');
@@ -140,9 +141,9 @@
 
         if (hasError) return;
 
-        localStorage.setItem('candidateName', name);
-        localStorage.setItem('candidateId', id);
-        localStorage.setItem('selectedCategories', JSON.stringify(selectedCategories));
+        safeStorage.set('candidateName', name);
+        safeStorage.set('candidateId', id);
+        safeStorage.set('selectedCategories', JSON.stringify(selectedCategories));
         window.location.href = 'quiz.html';
       });
 

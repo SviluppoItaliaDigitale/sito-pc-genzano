@@ -17,8 +17,8 @@ function showConfirmModal(message, onConfirm) {
 function confirmExit(event, url) {
     event.preventDefault();
     showConfirmModal("Sei sicuro di voler abbandonare il quiz? I tuoi progressi andranno persi.", function() {
-        localStorage.removeItem('quizResults');
-        localStorage.removeItem('selectedCategories');
+        safeStorage.remove('quizResults');
+        safeStorage.remove('selectedCategories');
         window.location.href = url;
     });
 }
@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
     var MAX_QUIZ_LENGTH = 60;
     var QUIZ_DURATION_MINUTES = 45;
 
-    var candidateName = localStorage.getItem('candidateName');
-    var selectedCategoriesJSON = localStorage.getItem('selectedCategories');
+    var candidateName = safeStorage.get('candidateName');
+    var selectedCategoriesJSON = safeStorage.get('selectedCategories');
 
     if (!candidateName || !selectedCategoriesJSON) {
         window.location.href = 'start_quiz.html';
@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var now = new Date();
         var dateStr = now.getFullYear().toString() + String(now.getMonth() + 1).padStart(2, '0') + String(now.getDate()).padStart(2, '0');
         var timeStr = String(now.getHours()).padStart(2, '0') + String(now.getMinutes()).padStart(2, '0');
-        var nameInitials = (localStorage.getItem('candidateName') || 'XX').split(' ').map(function(n) { return n[0]; }).join('').toUpperCase();
+        var nameInitials = (safeStorage.get('candidateName') || 'XX').split(' ').map(function(n) { return n[0]; }).join('').toUpperCase();
         var uniqueId = 'PCGZ-' + dateStr + '-' + timeStr + '-' + nameInitials + '-' + correctAnswers;
 
         var results = {
@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function () {
             userChoices: userChoices
         };
 
-        localStorage.setItem('quizResults', JSON.stringify(results));
+        safeStorage.set('quizResults', JSON.stringify(results));
         window.location.href = 'results.html';
     }
 

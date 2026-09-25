@@ -1,8 +1,15 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const selectedCategoriesJSON = localStorage.getItem('trainingCategories');
+    const selectedCategoriesJSON = safeStorage.get('trainingCategories');
+    // Un valore non leggibile vale come assente
+    let selectedCategoriesSalvate = null;
+    try {
+        selectedCategoriesSalvate = JSON.parse(selectedCategoriesJSON);
+    } catch (e) {
+        selectedCategoriesSalvate = null;
+    }
 
     // Se non ci sono categorie selezionate, torna alla pagina di configurazione
-    if (!selectedCategoriesJSON) {
+    if (!selectedCategoriesJSON || !Array.isArray(selectedCategoriesSalvate)) {
         window.location.href = 'start_training.html';
         return;
     }
@@ -35,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Funzione per avviare l'allenamento
     function startTraining() {
-        const selectedCategories = JSON.parse(selectedCategoriesJSON);
+        const selectedCategories = selectedCategoriesSalvate;
         
         const availableQuestions = FULL_QUESTION_BANK.filter(q => selectedCategories.includes(q.category));
         
