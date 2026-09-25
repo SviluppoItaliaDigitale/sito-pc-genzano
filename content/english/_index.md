@@ -28,9 +28,9 @@ sitemap:
   align-items: center;
   gap: 0.5rem;
 }
-.en-tel {
+.article-body a.en-tel, .en-tel {
   background: #dc3545;
-  color: #fff;
+  color: #fff !important; /* batte .article-body a:not(.btn) (#003366 su rosso = 2,78:1) */
   padding: 0.6rem 1rem;
   border-radius: 8px;
   font-weight: 700;
@@ -39,9 +39,9 @@ sitemap:
   display: inline-block;
   margin: 0.4rem 0;
 }
-.en-tel:hover, .en-tel:focus {
+.article-body a.en-tel:hover, .article-body a.en-tel:focus, .en-tel:hover, .en-tel:focus {
   background: #b02a37;
-  color: #fff;
+  color: #fff !important;
   outline: 3px solid #ffbe2e;
   outline-offset: 2px;
 }

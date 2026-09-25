@@ -30,11 +30,13 @@
   a:focus,.call:focus{outline:3px solid #ffbe2e;outline-offset:2px}
   .lite-skip{position:absolute;left:-999px}
   .lite-skip:focus{position:static;display:inline-block;margin:.3rem 0}
+  .lite-h1{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 </style>
 </head>
 <body>
 <a class="lite-skip" href="#main">Vai al contenuto</a>
 <main id="main">
+<h1 class="lite-h1">{{ .Title }} — chiama il 112 in caso di pericolo</h1>
 {{ .Content }}
 </main>
 </body>

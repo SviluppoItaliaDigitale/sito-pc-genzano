@@ -46,7 +46,7 @@ Le seguenti aree del sito **non sono pienamente accessibili** per i motivi indic
 
 ### Widget di terze parti
 - **Strumenti meteo embed**: Windy.com, MeteoAM, Blitzortung e la mappa di terremoti.ingv.it sono caricati con sistema **click-to-load** (l'utente sceglie esplicitamente di attivarli). Le mappe dati del [Cruscotto](/cruscotto/) e il radar del Dipartimento della Protezione Civile si caricano invece all'apertura della pagina, perché mostrano dati che cambiano di continuo. In entrambi i casi l'interfaccia dipende dal fornitore esterno e non è sotto il nostro controllo.
-- **Motivazione**: contenuto di terze parti (art. 3, comma 6, Direttiva UE 2016/2102 — esenzione per contenuti di terzi non sviluppati né finanziati né controllati).
+- **Motivazione**: contenuto di terze parti (art. 1, par. 4, lett. e), Direttiva UE 2016/2102 — esclusione dei contenuti di terzi non finanziati, sviluppati né controllati dall'ente).
 - **Mitigazione**: per ogni widget è disponibile un link al sito ufficiale del fornitore, dove il cittadino può accedere ai contenuti con le opzioni di accessibilità del fornitore stesso.
 
 ### Documenti PDF pubblicati sul sito
@@ -67,7 +67,7 @@ Le seguenti aree del sito **non sono pienamente accessibili** per i motivi indic
 - **Data ultima revisione**: 21 settembre 2026 (aggiornato il conteggio dei PDF pubblicati — 51 → 54, con l'aggiunta di 3 ordinanze comunali — a seguito del nuovo audit automatico dello stesso giorno; la revisione precedente, del 15 settembre 2026, aveva allineato alla realtà la descrizione dei contenuti di terze parti e lo stato del controllo automatico).
 - **Dichiarazione sul portale AGID**: il deposito tramite la procedura ufficiale ([form.agid.gov.it](https://form.agid.gov.it/)) è in capo al **Comune di Genzano di Roma**, ente titolare del servizio: il Gruppo Comunale è una sua articolazione di volontariato e non dispone di un'utenza autonoma sul portale. Questa pagina è la dichiarazione nella sua forma sostanziale — contenuti non accessibili, metodo di valutazione, meccanismo di feedback e recapiti — e resta il riferimento pubblico finché il deposito formale non è completato. Il collegamento verrà aggiunto qui e nel piè di pagina non appena disponibile.
 - **Riesame**: questa pagina viene riesaminata e aggiornata **a ogni modifica sostanziale del sito**, oltre che con cadenza almeno annuale, come mostra la data di ultima revisione qui sopra. Il calendario formale degli adempimenti segue il deposito sul portale AgID e decorre da quello.
-- **Frequenza dei test automatici**: settimanale (workflow `audit-sito.yml` ogni lunedì) + post-deploy (workflow `lighthouse-audit.yml` dopo ogni pubblicazione).
+- **Frequenza dei test automatici**: ogni 6 ore (workflow `audit-sito.yml`: integrità, ancore, parità dei materiali), due volte al giorno (workflow `lighthouse-audit.yml`) e a ogni proposta di modifica (workflow `pa11y-ci.yml`, verifica axe prima della pubblicazione).
 
 ## Informazioni sul sito
 
@@ -291,7 +291,7 @@ Puoi nascondere il bottone dal pannello **Strumenti di accessibilità** se lo tr
 
 In basso a sinistra, accanto al pannello accessibilità, trovi un bottone **Assistente virtuale**. Apre una pagina che ti guida con **domande semplici** fino alla risposta giusta sulla tua emergenza: terremoto in casa, incendio, allerta meteo, evacuazione, IT-alert ricevuto, dubbio sui numeri da chiamare, ecc.
 
-L'assistente è un **albero decisionale deterministico in JavaScript**: niente intelligenza artificiale, niente cloud, nessuna risposta inventata. Tutte le indicazioni sono pre-scritte dal Gruppo e validate sulle linee guida del Dipartimento di Protezione Civile.
+L'assistente è un **albero decisionale deterministico in JavaScript**: nessun servizio esterno, niente cloud, nessuna risposta generata: solo percorsi pre-scritti. Tutte le indicazioni sono pre-scritte dal Gruppo e validate sulle linee guida del Dipartimento di Protezione Civile.
 
 ## Glossario e supporti alla lettura
 
@@ -377,12 +377,12 @@ Cercheremo di rispondere entro 30 giorni.
 
 Ai sensi dell'art. 3-quinquies della Legge 9 gennaio 2004 n. 4, in caso di risposta assente o insoddisfacente entro 30 giorni dalla segnalazione, puoi rivolgerti al **Difensore civico per il digitale** dell'Agenzia per l'Italia Digitale (AGID), che è l'autorità di vigilanza preposta al monitoraggio della conformità all'accessibilità delle pubbliche amministrazioni italiane.
 
-- **Sito ufficiale**: [agid.gov.it — Difensore civico per il digitale](https://www.agid.gov.it/it/design-servizi/accessibilita/difensore-civico-digitale)
+- **Sito ufficiale**: [agid.gov.it — Difensore civico per il digitale](https://www.agid.gov.it/it/agenzia/difensore-civico-per-il-digitale)
 - **Modulo di reclamo**: disponibile sul portale AGID con istruzioni per il deposito.
 
 ## Risorse utili
 
-- [AGID — Accessibilità](https://www.agid.gov.it/it/design-servizi/accessibilita)
+- [AGID — Accessibilità](https://www.agid.gov.it/it/ambiti-intervento/accessibilita-usabilita)
 - [Designers Italia](https://designers.italia.it/)
 - [W3C Web Accessibility Initiative](https://www.w3.org/WAI/)
 - [WCAG 2.2](https://www.w3.org/TR/WCAG22/)

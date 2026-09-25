@@ -11,9 +11,7 @@ Sitemap: https://www.protezionecivilegenzano.it/news-sitemap.xml
 # Lasciandole accessibili al crawler, Google segue il 301 server-side e
 # aggiorna l'indice in 1-2 cicli di scansione.
 
-# Cartelle infrastrutturali del vecchio CMS Joomla — non contengono
-# contenuto editoriale e non hanno corrispondenza nel nuovo sito.
-# Vere e proprie cartelle vuote o di sistema, blocco preventivo.
-Disallow: /cache/
-Disallow: /sito_pc/
-Disallow: /sitovecchio/
+# Cartelle infrastrutturali del vecchio CMS Joomla (/cache/, /sito_pc/,
+# /sitovecchio/): rispondono già con un 301 verso la home dal .htaccess.
+# Non vanno bloccate qui, altrimenti Googlebot non può seguire il redirect
+# e le URL restano "bloccate da robots.txt" in Search Console (audit 25/09/2026).

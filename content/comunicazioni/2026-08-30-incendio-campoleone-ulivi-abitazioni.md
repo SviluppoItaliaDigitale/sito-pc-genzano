@@ -66,7 +66,7 @@ L'ulivo, per contro, resiste meglio di quanto sembri. Anche con la chioma distru
 
 Sullo stesso fronte hanno lavorato squadre di comuni e province diverse: il nostro Gruppo da Genzano, l'ALFA da Aprilia (provincia di Latina), la Protezione Civile di Lanuvio. È il funzionamento ordinario del **Servizio nazionale della Protezione Civile**: la Sala Operativa regionale valuta l'evento e chiama le squadre disponibili più vicine, senza guardare ai confini comunali. Il coordinamento sul posto resta ai **Vigili del Fuoco**.
 
-Siamo ancora dentro il **periodo di massima pericolosità** per gli incendi boschivi dichiarato dalla Regione Lazio, che si chiude il 30 settembre. Genzano di Roma ricade nella **Zona di allerta AIB 9 — Castelli Romani**.
+Siamo ancora dentro il **periodo di massima pericolosità** per gli incendi boschivi dichiarato dalla Regione Lazio, che si chiude il 15 ottobre 2026. Genzano di Roma ricade nella **Zona di allerta AIB 9 — Castelli Romani**.
 
 ## Se vedi fumo o fiamme
 

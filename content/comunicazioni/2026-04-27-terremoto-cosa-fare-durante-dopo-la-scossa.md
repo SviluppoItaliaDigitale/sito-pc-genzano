@@ -25,7 +25,7 @@ Un terremoto dura pochi secondi, al massimo qualche decina. La regola d'oro è *
 
 ### Se sei in un edificio
 
-1. **Ripàrati sotto un tavolo o un letto robusti**, oppure sotto l'architrave di una porta interna o contro un muro portante.
+1. **Ripàrati sotto un tavolo o un letto robusti**, oppure nel vano di una porta inserita in un muro portante (quello più spesso) o contro un muro portante.
 2. **Allontànati da mobili pesanti**, librerie, quadri, finestre, specchi, oggetti che possono cadere.
 3. **Non uscire di corsa in strada**: le scale sono il punto più pericoloso; gli oggetti possono cadere da finestre e balconi sopra di te.
 4. **Non usare l'ascensore**, mai, nemmeno nei piani alti.
