@@ -93,7 +93,7 @@ Nei nostri corsi impariamo come aiutare i bambini in emergenza. Impariamo a parl
 - [Piano familiare in 5 passi](/comunicazioni/2026-04-26-piano-emergenza-familiare-5-passi/)
 - [Kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/)
 - [Aiutare anziani e vicini fragili](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/)
-- [Nazioni Unite — Giornata dei bambini vittime](https://www.un.org/en/observances/children-victims-day)
+- [Nazioni Unite — Giornata dei bambini vittime](https://www.un.org/en/observances/child-victim-day)
 - [Io Non Rischio — Materiali per famiglie](https://iononrischio.protezionecivile.it/)
 
 I bambini in emergenza hanno bisogno di attenzione speciale. Ogni famiglia può prepararsi. Ogni volontario può imparare.

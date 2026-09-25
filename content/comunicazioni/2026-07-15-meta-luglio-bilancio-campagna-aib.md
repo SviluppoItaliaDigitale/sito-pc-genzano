@@ -147,6 +147,6 @@ Come si ripete spesso nelle sale operative regionali, il peggior nemico a metà 
 - Articolo: [Canadair ed elicotteri in AIB](/comunicazioni/2026-07-13-mezzi-aerei-aib-canadair-elicotteri/)
 - Articolo: [Corpo Forestale Carabinieri](/comunicazioni/2026-07-06-corpo-forestale-carabinieri-ruolo/)
 - Pagina: [Rischio incendio boschivo](/rischi-prevenzione/rischio-incendio/)
-- [DPC — Rischio incendi](https://www.protezionecivile.gov.it/it/rischi/rischio-incendi)
+- [DPC — Rischio incendi](https://rischi.protezionecivile.gov.it/it/incendi-boschivi-0/)
 
 Metà campagna è un momento di **verifica**, non di riposo. Il secondo tempo è di solito più duro del primo: il sistema, la rete dei volontari e i cittadini devono restare pronti.

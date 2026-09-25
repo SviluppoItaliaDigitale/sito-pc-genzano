@@ -95,5 +95,5 @@ Quando una scossa significativa colpisce un'area, il sistema attiva il **soccors
 ## Per approfondire — fonti istituzionali
 
 - [INGV — Mappa di pericolosità sismica](https://esse1.mi.ingv.it/) e [Zone sismiche](https://zonesismiche.mi.ingv.it/) (Istituto Nazionale di Geofisica e Vulcanologia).
-- [DPC — Rischio sismico](https://www.protezionecivile.gov.it/it/rischi/rischio-sismico) (Dipartimento della Protezione Civile).
+- [DPC — Rischio sismico](https://rischi.protezionecivile.gov.it/it/sismico/) (Dipartimento della Protezione Civile).
 - [CNR — Centro per la Microzonazione Sismica](https://www.cnr.it/) (Consiglio Nazionale delle Ricerche).

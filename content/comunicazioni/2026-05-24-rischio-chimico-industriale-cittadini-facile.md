@@ -96,6 +96,6 @@ Sul nostro sito:
 
 Fonti ufficiali:
 
-- [ISPRA — Rischio industriale](https://www.isprambiente.gov.it/it/attivita/rischio-industriale)
-- [Dipartimento della Protezione Civile — Rischio chimico](https://www.protezionecivile.gov.it/it/pagina/rischio-chimico-industriale)
+- [ISPRA — Rischio industriale](https://www.isprambiente.gov.it/it/attivita/controlli-e-ispezioni/rischio-industriale-e-direttive-seveso-1)
+- [Dipartimento della Protezione Civile — Rischio chimico](https://rischi.protezionecivile.gov.it/it/industriale/)
 - [IT-alert — sito ufficiale](https://www.it-alert.gov.it/)

@@ -129,7 +129,7 @@ Sul nostro sito:
 Fonti istituzionali:
 
 - [INGV — Istituto Nazionale Geofisica e Vulcanologia](https://www.ingv.it/).
-- [Dipartimento Protezione Civile — Rischio sismico](https://www.protezionecivile.gov.it/it/pagina/rischio-sismico).
+- [Dipartimento Protezione Civile — Rischio sismico](https://rischi.protezionecivile.gov.it/it/sismico/).
 - [Regione Emilia-Romagna — Ricostruzione post-sisma 2012](https://www.regione.emilia-romagna.it/terremoto).
 
 Memoria, preparazione, comunità: tre pilastri della Protezione Civile che il 29 maggio richiama con forza.

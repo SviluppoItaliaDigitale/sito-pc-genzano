@@ -90,7 +90,7 @@ Sul nostro sito:
 
 Fonti istituzionali:
 
-- [Dipartimento Protezione Civile — Rischio sismico](https://www.protezionecivile.gov.it/it/pagina/rischio-sismico).
+- [Dipartimento Protezione Civile — Rischio sismico](https://rischi.protezionecivile.gov.it/it/sismico/).
 - [INGV — Istituto Nazionale di Geofisica e Vulcanologia](https://www.ingv.it/).
 - [Regione Abruzzo — Ricostruzione post-sisma 2009](https://www.regione.abruzzo.it/).
 

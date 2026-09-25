@@ -180,7 +180,7 @@ Queste attività sono **urgenti** e richiedono squadre **reattive**.
 - Articolo: [Allerte meteo codici colore](/allerte-meteo/)
 - Articolo: [Rischio idrogeologico estivo](/comunicazioni/2026-06-22-rischio-idrogeologico-estivo-siccita-piogge/)
 - Pagina: [Temporali intensi](/rischi-prevenzione/temporali-intensi/)
-- [Protezione Civile — Temporali](https://www.protezionecivile.gov.it/it/rischi/rischio-meteo-idro)
+- [Protezione Civile — Temporali](https://rischi.protezionecivile.gov.it/it/meteo-idro-0/)
 - [ARPA Lazio](https://www.arpalazio.it/)
 
 Un chicco di grandine di 3 cm cade a 100 km/h. Conoscere il rischio serve a non farsi trovare impreparati quando il cielo si fa minaccioso.

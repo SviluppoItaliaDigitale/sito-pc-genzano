@@ -158,7 +158,7 @@ Un piano non esercitato è metà piano. In estate:
 - Articolo: [Kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/)
 - Articolo: [Ondate di calore: proteggere gli anziani](/comunicazioni/2026-06-15-ondate-calore-anziani-fragili-proteggere/)
 - Articolo: [Temporali estivi Castelli](/comunicazioni/2026-06-13-temporali-estivi-castelli-romani/)
-- [DPC — Piano di famiglia](https://www.protezionecivile.gov.it/it/app/io-non-rischio)
+- [DPC — Campagna "Io non rischio"](https://iononrischio.protezionecivile.gov.it/it/)
 - [IT-alert](https://www.it-alert.gov.it/)
 
 Un piano di famiglia è un regalo che fate a voi stessi. Non costa nulla ed è sempre disponibile quando serve.

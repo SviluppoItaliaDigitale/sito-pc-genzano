@@ -111,3 +111,16 @@ jobs:
             manutenzione
             link-rotti
             automatico
+
+      # I 404 degli enti pubblici non sono errori passeggeri: sono pagine
+      # spostate, e il cittadino trova una pagina d'errore dove gli avevamo
+      # promesso la fonte ufficiale (audit esterno 25/09/2026, rilievo F13).
+      # Lychee resta con `fail: false` per timeout, 5xx e anti-bot; questo
+      # passo rende ROSSO il run solo per i 404/410 istituzionali, così il
+      # watchdog in aggiorna-stato-sistema.yml lo vede. Il passo gira dopo
+      # l'apertura dell'issue, che quindi contiene comunque l'elenco completo.
+      # Le issue di lychee (label manutenzione/link-rotti/automatico) NON
+      # rientrano fra quelle che stale-issues.yml chiude da solo.
+      - name: "🏛️ Blocca sui 404 dei domini istituzionali"
+        if: always()
+        run: python3 scripts/check-404-istituzionali.py ./lychee-report.md

@@ -86,7 +86,7 @@ Sul nostro sito:
 Fonti istituzionali:
 
 - [Copernicus Climate Change Service](https://climate.copernicus.eu/).
-- [ISPRA — Clima e cambiamenti climatici](https://www.isprambiente.gov.it/it/attivita/clima).
+- [ISPRA — Clima e cambiamenti climatici](https://www.isprambiente.gov.it/it/attivita/cambiamenti-climatici).
 - [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).
 - [Ministero della Salute — Caldo e salute](https://www.salute.gov.it/new/it/tema/ondate-di-calore).
 - [CMCC — Centro euro-Mediterraneo cambiamenti climatici](https://www.cmcc.it/).

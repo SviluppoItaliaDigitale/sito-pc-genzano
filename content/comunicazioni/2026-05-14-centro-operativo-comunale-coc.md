@@ -15,7 +15,7 @@ versione_facile: "2026-05-14-centro-operativo-comunale-coc-facile"
 draft: false
 ---
 
-In caso di emergenza sul territorio comunale, il [Codice della Protezione Civile](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/) (D.Lgs. 1/2018) assegna al **Sindaco** il ruolo di **Autorità territoriale di Protezione Civile**. Lo strumento operativo con cui il Sindaco coordina la risposta locale è il **Centro Operativo Comunale (COC)**. Conoscerlo è utile a ogni cittadino: aiuta a capire chi decide, chi interviene e da quali canali arrivano le informazioni ufficiali.
+In caso di emergenza sul territorio comunale, il [Codice della Protezione Civile](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n-1-del-2-gennaio-2018--codice-della-protezione-civile/) (D.Lgs. 1/2018) assegna al **Sindaco** il ruolo di **Autorità territoriale di Protezione Civile**. Lo strumento operativo con cui il Sindaco coordina la risposta locale è il **Centro Operativo Comunale (COC)**. Conoscerlo è utile a ogni cittadino: aiuta a capire chi decide, chi interviene e da quali canali arrivano le informazioni ufficiali.
 
 ## Cos'è il COC
 
@@ -109,8 +109,8 @@ Sul nostro sito:
 
 Fonti istituzionali:
 
-- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/).
-- [Dipartimento della Protezione Civile — Sistema nazionale](https://www.protezionecivile.gov.it/it/sistema-nazionale).
+- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n-1-del-2-gennaio-2018--codice-della-protezione-civile/).
+- [Dipartimento della Protezione Civile — Sistema nazionale](https://servizio-nazionale.protezionecivile.gov.it/it/).
 - [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it).
 
 Il COC non è solo una sigla tecnica: è la struttura che permette al Comune di coordinare informazioni, risorse e decisioni durante un evento. Conoscerne il funzionamento aiuta i cittadini a seguire le indicazioni corrette e a usare i canali giusti.

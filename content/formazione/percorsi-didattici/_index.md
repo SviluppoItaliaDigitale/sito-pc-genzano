@@ -245,7 +245,7 @@ Il formato più richiesto dai docenti. Affronta un tema in modo strutturato e la
 - **Terremoto + Piano famiglia** (2 ore, primaria IV-V e sec I) — Lezione 1 del [Percorso 3](#percorso-3) (DROP-COVER-HOLD ON) + Lezione 1 del [Percorso 4](#percorso-4) (introduzione al piano familiare). Cosa fare e dove ritrovarsi.
 - **Allerta meteo + IT-alert** (2 ore, sec I) — Ora 1 del [Percorso 2](#percorso-2) (codici colore) + Ora 2 del [Percorso 5](#percorso-5) (IT-alert e Cell Broadcast). Come arrivano le informazioni e come distinguerle dal phishing.
 - **Incendi boschivi (campagna AIB estiva)** (2 ore, primaria-sec, da svolgere fra giugno e settembre) — i Castelli Romani sono **Zona AIB 9** del Lazio. Comportamenti corretti in passeggiata e in casa, ruolo del 112, riferimento al [Bollettino di pericolosità incendi](https://protezionecivile.regione.lazio.it/bollettini/rischi-incendi) del **Centro Funzionale Regionale Lazio**.
-- **Ondate di calore e salute** (2 ore, primaria-sec, da svolgere fra giugno e agosto) — autoprotezione, anziani fragili, riconoscere un colpo di calore. Riferimenti: [Piano nazionale prevenzione caldo](https://www.salute.gov.it/new/it/tema/ondate-di-calore) del **Ministero della Salute** e [WHO Heat-Health Action Plans](https://www.who.int/europe/news-room/fact-sheets/item/heat-and-health). Adatto come "lezione di servizio" prima della pausa estiva.
+- **Ondate di calore e salute** (2 ore, primaria-sec, da svolgere fra giugno e agosto) — autoprotezione, anziani fragili, riconoscere un colpo di calore. Riferimenti: [Piano nazionale prevenzione caldo](https://www.salute.gov.it/new/it/tema/ondate-di-calore) del **Ministero della Salute** e [WHO Heat-Health Action Plans](https://www.who.int/news-room/fact-sheets/detail/climate-change-heat-and-health). Adatto come "lezione di servizio" prima della pausa estiva.
 
 ### Se vuoi fare un progetto completo {#tempo-progetto}
 
@@ -864,7 +864,7 @@ Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-val
 |---|---|---|
 | 1 | Il "nostro" vulcano: i Colli Albani come sistema quiescente. Storia geologica, i laghi craterici di Albano e Nemi | Pagina [Rischio vulcanico](/rischi-prevenzione/rischio-vulcanico/) + articolo [Sicurezza sui laghi di Nemi e Albano](/comunicazioni/2026-05-19-sicurezza-laghi-nemi-albano/) |
 | 2 | I tre giganti italiani: Vesuvio, Campi Flegrei, Etna. Tipologie eruttive e pericoli | Schede [Vulcani d'Italia — Secondaria](/formazione/schede-stampabili/caso-vulcani-italia-secondaria/) e [Campi Flegrei — Secondaria](/formazione/schede-stampabili/caso-campi-flegrei-secondaria/) |
-| 3 | Pianificazione e allertamento: zona rossa/gialla del Vesuvio, esercitazione 2024 ai Campi Flegrei, ruolo di IT-alert | Sito [DPC — Rischio vulcanico](https://www.protezionecivile.gov.it/it/rischi/rischio-vulcanico/) + articolo [IT-alert: storia, tecnologia, accessibilità](/comunicazioni/2026-05-19-it-alert-tecnologia-accessibilita-falsi-miti/) |
+| 3 | Pianificazione e allertamento: zona rossa/gialla del Vesuvio, esercitazione 2024 ai Campi Flegrei, ruolo di IT-alert | Sito [DPC — Rischio vulcanico](https://rischi.protezionecivile.gov.it/it/vulcanico/) + articolo [IT-alert: storia, tecnologia, accessibilità](/comunicazioni/2026-05-19-it-alert-tecnologia-accessibilita-falsi-miti/) |
 
 <details class="faq-item percorso-dettagli">
 <summary>Prerequisiti, obiettivi, competenze, valutazione</summary>
