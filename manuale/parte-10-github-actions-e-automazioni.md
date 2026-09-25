@@ -13,7 +13,7 @@ Il repository ha **9 workflow** attivi che automatizzano deploy, controlli, aggi
 | Pubblicazione programmata | `pubblica-programmata.yml` | giornaliero (06:00 UTC), manuale | Riavvia il deploy per pubblicare articoli a data futura |
 | Audit Accessibilità | `lighthouse-audit.yml` | dopo ogni deploy, manuale | Lighthouse su home e 5 pagine chiave |
 | Smoke test post-deploy | `smoke-test-post-deploy.yml` | dopo ogni deploy, manuale | Verifica live di 20 pagine + 7 lingue + mini-app + 11 marker JS + 2 header sicurezza. Logica in `scripts/smoke-test-live.sh` |
-| Aggiorna Bootstrap Italia | `update-bootstrap-italia.yml` | lunedì 06:00 UTC, manuale | Verifica nuove release Bootstrap Italia, apre PR |
+| Aggiorna Bootstrap Italia | `update-bootstrap-italia.yml` | lunedì 06:00 UTC, manuale | Verifica nuove release Bootstrap Italia, ne controlla l'integrità contro il pacchetto npm, apre PR |
 | Aggiornamento MANUALE | `aggiorna-manuale.yml` | lunedì 06:00 UTC, manuale | Confronta hash fonti AGID/DI, apre Issue se cambiate |
 | **Audit completo sito** | `audit-sito.yml` | lunedì 09:00 UTC, manuale | **Sezioni**: contenuti (1-15) + codice/template (16-22) + governance docs (23-32) + audit aggiuntivo (33-37) + link critici normativa (38). Fuso da `coerenza-docs.yml` + `check-normativa-links.yml` il 26 aprile 2026 |
 | Verifica link sito completo | `check-links-sito.yml` | lunedì 10:00 UTC, manuale | Crawl completo con **lychee**: tutti i link interni + esterni del sito, apre issue automatica su 404/drift |
@@ -140,11 +140,15 @@ Dopo i tre script, lo step di commit:
 **Trigger**: cron settimanale (lunedì 06:00 UTC), manuale.
 
 **Cosa fa:**
-1. Interroga la release più recente del repository `italia/bootstrap-italia`.
-2. Confronta con la versione usata nel sito (nel template base `layouts/_default/baseof.html` o nel config).
-3. Se c'è una nuova release, apre una PR con l'aggiornamento del riferimento CDN/asset e un commento con il changelog ufficiale.
+1. Legge le release di `italia/bootstrap-italia` e ricava l'ultima **stabile** (esclude le prerelease anche quando il maintainer dimentica il flag) e la versione installata (`.bootstrap-italia-version`).
+2. Se la stabile è una nuova **major**, o se esce una prerelease più recente, apre una issue per la migrazione manuale e non aggiorna nulla.
+3. Se è un aggiornamento nella stessa major, scarica lo zip della release e **ne verifica l'integrità** (dal 26/09/2026, audit esterno F09): scarica anche il pacchetto npm della stessa versione, lo controlla contro l'impronta sha512 pubblicata dal registry, e confronta file per file lo zip con il pacchetto. Se non coincidono, o se il registry non risponde, si ferma e apre una issue `automazione` + `urgente`.
+4. Installa i file in `static/vendor/bootstrap-italia/`, controlla che lo sprite `svg/sprites.svg` sia al suo posto e fa una build Hugo di prova.
+5. Apre una **pull request** sul branch `bot/bootstrap-italia-<versione>`. Non fa più push diretto su `main`: il merge resta umano.
 
-**Permessi**: `contents: write`.
+**Permessi**: `contents: write`, `issues: write`, `pull-requests: write`.
+
+**Nota sui controlli della PR**: una PR aperta con il `GITHUB_TOKEN` non fa partire `validate-pr.yml` e `pa11y-ci.yml`. Per averli, configura il secret facoltativo `BOOTSTRAP_PR_TOKEN` (un token con permesso di scrittura sulle PR di questo repository); senza, valgono la verifica d'integrità e la build di prova fatte dal workflow.
 
 **Cosa fare quando apre una PR:**
 1. Leggi il changelog della release (linkato nella PR).
