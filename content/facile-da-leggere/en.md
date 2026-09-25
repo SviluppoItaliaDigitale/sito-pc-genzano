@@ -162,7 +162,7 @@ hreflang_xdefault: "/facile-da-leggere/"
 </ul>
 <p><strong>Do not do these things:</strong></p>
 <ul class="facile-elenco no">
-<li>do not light candles alone;</li>
+<li>do not light candles: use only a torch with batteries;</li>
 <li>do not take the lift;</li>
 <li>do not use a barbecue or a brazier inside the house.</li>
 </ul>

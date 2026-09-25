@@ -230,5 +230,26 @@ FileETag None
   AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json application/rss+xml application/xml text/xml image/svg+xml
 </IfModule>
 
+# File di stato dell'action FTP-Deploy e residui tecnici: mai serviti via HTTP.
+# I due .ftp-deploy-sync-state*.json (2 + 4 MB) erano leggibili da chiunque ed
+# elencavano ogni file dello spazio web con hash (audit 25/09/2026). L'action
+# li legge via FTP, non via HTTP: negarli non tocca il deploy.
+<IfModule mod_authz_core.c>
+  <FilesMatch "^(\.ftp-deploy-sync-state.*\.json|\.gitkeep|CNAME|PROVENANCE-.*\.md)$">
+    Require all denied
+  </FilesMatch>
+</IfModule>
+<IfModule !mod_authz_core.c>
+  <FilesMatch "^(\.ftp-deploy-sync-state.*\.json|\.gitkeep|CNAME|PROVENANCE-.*\.md)$">
+    Order allow,deny
+    Deny from all
+  </FilesMatch>
+</IfModule>
+
+# Charset esplicito nell'header Content-Type (le pagine sono già UTF-8 nel
+# <meta charset>, ma senza questa riga i client che seguono la RFC leggono
+# ISO-8859-1 e i feed/JSON senza meta risultano con accenti corrotti).
+AddDefaultCharset UTF-8
+
 # Errore 404 personalizzato
 ErrorDocument 404 /404.html

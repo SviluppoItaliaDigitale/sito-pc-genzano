@@ -185,7 +185,7 @@ I 4 loghi ufficiali per le grafiche del Gruppo (cover articoli, slide social, sc
 
 ### I 4 loghi standard per ogni grafica
 
-| # | Logo | URL diretto (pronto per AI esterne / Canva / stampa) | Formato |
+| # | Logo | URL diretto (pronto per grafiche, Canva e stampa) | Formato |
 |---|---|---|---|
 | 1 | **PC Genzano** (firma) | <https://www.protezionecivilegenzano.it/images/logo-pc-genzano.webp> | WebP |
 | 1 | **PC Genzano hi-res** (stampa, gadget, mezzi) | <https://www.protezionecivilegenzano.it/images/logo-pc-genzano-hires.png> | PNG hi-res |

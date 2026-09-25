@@ -151,7 +151,7 @@ In Italia, la **responsabilità** dello sgombero neve/ghiaccio davanti alla prop
 - **durata** possibile se linee cadono per peso neve;
 - **riscaldamento** alternativo senza CO;
 - **frigo chiuso** mantiene freddo per ore;
-- **candele** con estrema cautela;
+- **niente candele**: solo torce a pile o lampade a LED (rischio incendio);
 - **contatti** con E-Distribuzione o gestore locale per segnalazioni.
 
 ### Isolamento frazione

@@ -313,17 +313,17 @@ Più ti alleni prima, **meglio funzioni** durante l'evento reale. E se sei ben p
 
 Da tenere aggiornata e da verificare **ogni 6 mesi**:
 
-- [ ] Zaino personale 72 ore completo (documenti, abbigliamento, igiene, medico)
-- [ ] Acqua: 3-4 L + purificatore
-- [ ] Alimenti: 6 pasti + snack ipercalorici
-- [ ] Apparati personali: palmare VHF/UHF, cuffia, 2 batterie cariche, carica
-- [ ] Cavi: almeno un coassiale 10 m, un'antenna di emergenza arrotolabile
-- [ ] Documenti: ID, tessera, patente radio, copie prescrizioni mediche
-- [ ] Farmaci personali: 14 giorni
-- [ ] Strumenti: torcia frontale, fischietto, stick luminoso, coltellino
-- [ ] Abbigliamento stagionale + 2 cambi biancheria
-- [ ] Sacco a pelo + tappi + mascherina + cuscino
-- [ ] Modulistica: moduli messaggio, registro stazione, alfabeto NATO, frequenze
+- ☐ Zaino personale 72 ore completo (documenti, abbigliamento, igiene, medico)
+- ☐ Acqua: 3-4 L + purificatore
+- ☐ Alimenti: 6 pasti + snack ipercalorici
+- ☐ Apparati personali: palmare VHF/UHF, cuffia, 2 batterie cariche, carica
+- ☐ Cavi: almeno un coassiale 10 m, un'antenna di emergenza arrotolabile
+- ☐ Documenti: ID, tessera, patente radio, copie prescrizioni mediche
+- ☐ Farmaci personali: 14 giorni
+- ☐ Strumenti: torcia frontale, fischietto, stick luminoso, coltellino
+- ☐ Abbigliamento stagionale + 2 cambi biancheria
+- ☐ Sacco a pelo + tappi + mascherina + cuscino
+- ☐ Modulistica: moduli messaggio, registro stazione, alfabeto NATO, frequenze
 
 ## Leggi anche
 

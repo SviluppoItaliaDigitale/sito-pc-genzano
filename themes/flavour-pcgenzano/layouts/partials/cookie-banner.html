@@ -20,11 +20,18 @@
   (function() {
     var banner = document.getElementById('cookie-banner');
     var acceptBtn = document.getElementById('cookie-accept');
-    if (!localStorage.getItem('cookie_consent')) {
+    if (!banner || !acceptBtn) return;
+    /* localStorage sempre in try/catch (vincolo del progetto): con storage
+       bloccato (navigazione privata restrittiva, policy aziendali) l'accesso
+       lancia un'eccezione che fermerebbe questo script. In quel caso il
+       banner si mostra e si chiude per la sessione corrente. */
+    var letto = null;
+    try { letto = localStorage.getItem('cookie_consent'); } catch (e) { letto = null; }
+    if (!letto) {
       banner.style.display = 'block';
     }
     acceptBtn.addEventListener('click', function() {
-      localStorage.setItem('cookie_consent', 'accepted');
+      try { localStorage.setItem('cookie_consent', 'accepted'); } catch (e) { /* storage non disponibile */ }
       banner.style.display = 'none';
     });
   })();
