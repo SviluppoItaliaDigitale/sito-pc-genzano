@@ -1,8 +1,11 @@
-[INFORMAZIONE] Il satellite NISAR, nato dalla collaborazione tra NASA e ISRO, ha reso pubblici i suoi dati dal 20 luglio 2026. Questo innovativo radar è capace di penetrare la vegetazione e le nuvole, fornendo informazioni cruciali per il monitoraggio del territorio.
-I dati NISAR sono ora gratuiti e accessibili a tutti, rappresentando un nuovo strumento per analizzare i movimenti del suolo, le frane e gli effetti dei terremoti, anche qui in Italia. Un passo avanti per la Protezione Civile e la sicurezza del nostro territorio.
+[INFORMAZIONE] Dal 20 luglio 2026 i dati del satellite radar NISAR, costruito da NASA e dall'agenzia spaziale indiana ISRO, sono pubblici e gratuiti, anche per l'Italia.
+
+Le sue onde radar lunghe attraversano le nuvole e, in buona parte, la chioma degli alberi. Così misurano il terreno anche nei boschi, dove spesso si muovono le frane lente. Ogni 12 giorni NISAR riprende tutte le terre emerse e misura spostamenti del suolo fino a un centimetro.
+
+Un esempio: dopo i terremoti del 24 giugno in Venezuela, i suoi dati hanno mostrato il suolo spostato fino a 60 centimetri.
+
+NISAR non è un sistema di allerta e non prevede i terremoti: per le allerte fa fede il bollettino della Regione Lazio, e in caso di pericolo si chiama il 112.
 
 Link in bio.
 
-
-
-#PCGenzano #Genzano #ProtezioneCivile #GenzanoDiRoma #CastelliRomani
+#PCGenzano #Genzano #ProtezioneCivile #CastelliRomani
