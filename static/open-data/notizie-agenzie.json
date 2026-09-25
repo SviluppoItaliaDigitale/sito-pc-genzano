@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-25T12:17:42+00:00",
+  "generato": "2026-09-25T17:18:56+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-25T12:09:06+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Musei, 'Pegaso - Il Cavallo alato' di Bonanno Conti al Magma di Catania grazie a Fondazione Antonio Presti",
-   "url": "https://www.adnkronos.com/cultura/musei-pegaso-il-cavallo-alato-di-bonanno-conti-al-magma-di-catania-grazie-a-fondazione-antonio-presti_1SmRNkpIdqMZGL1oMsf8Io"
-  },
-  {
-   "data": "2026-09-25T12:01:05+00:00",
+   "data": "2026-09-25T17:15:09+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Pianifica aggressione a docente, madre 'non l'avrebbe accoltellata, chiede scusa'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/25/pianifica-aggressione-a-docente-madre-non-lavrebbe-accoltellata-chiede-scusa_7f2c69b5-0351-4ae8-93e2-98467d4620a1.html"
+   "titolo": "Carlos arrivato dal Nicaragua e rifiutato da cinque scuole",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/25/carlos-arrivato-dal-nicaragua-e-rifiutato-da-cinque-scuole_a88e5808-7068-44e7-a498-df84eb4f8094.html"
   },
   {
-   "data": "2026-09-25T11:57:49+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Papa: \"Stop a corsa armamenti, possesso armi nucleari non è garanzia di sicurezza\". Macron: \"La Francia è dalla parte della pace\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/papa-leone-francia-macron_2gAD1gBPH0seWqQfrHfmr3"
-  },
-  {
-   "data": "2026-09-25T11:56:18+00:00",
+   "data": "2026-09-25T17:14:50+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Bimbo di 6 anni trovato con coltello di 13 centimetri nello zaino a scuola",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/25/bimbo-di-6-anni-trovato-con-coltello-di-13-centimetri-nello-zaino-a-scuola_54a24b6b-90f9-46ec-a0f2-10878ccb67c0.html"
+   "titolo": "La studentessa col niqab in classe, 'qui mi sento integrata'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/25/la-studentessa-col-niqab-in-classe-qui-mi-sento-integrata_522b0b27-96a0-46df-a07b-9a834ffb2e50.html"
   },
   {
-   "data": "2026-09-25T11:55:59+00:00",
-   "fonte": "ANSA",
-   "titolo": "L'Ue fissa a 2 euro la commissione di gestione sui pacchi extra-Ue",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/25/lue-fissa-a-2-euro-la-commissione-di-gestione-sui-pacchi-extra-ue_148c1977-a1e7-4d17-92c2-b2fb531540f8.html"
-  },
-  {
-   "data": "2026-09-25T11:53:59+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Malagò su caso tesseramento: \"Situazione che ha poco a che fare con sport\"",
-   "url": "https://www.adnkronos.com/sport/malago-caso-tesseramento-risposta-abodi-galliani_36nHyEg3srYwkGk84FXm8E"
-  },
-  {
-   "data": "2026-09-25T11:48:37+00:00",
-   "fonte": "ANSA",
-   "titolo": "Morta a Roma la sceneggiatrice e produttrice Silvia d'Amico, figlia di Suso Cecchi",
-   "url": "https://www.ansa.it/sito/notizie/cultura/cinema/2026/09/25/morta-a-roma-la-sceneggiatrice-e-produttrice-silvia-damico-figlia-di-suso-cecchi_5c7fbe26-b043-49e3-a112-bb5d5ffaf9d4.html"
-  },
-  {
-   "data": "2026-09-25T11:48:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Campagna itinerante di Legambiente ad Anzola dell’Emilia, 46ma tappa insieme al Conou",
-   "url": "https://www.adnkronos.com/cronaca/campagna-itinerante-di-legambiente-ad-anzola-dellemilia-46ma-tappa-insieme-al-conou_2sR8bBIOyM4hODdsUwvh7G"
-  },
-  {
-   "data": "2026-09-25T11:44:20+00:00",
-   "fonte": "ANSA",
-   "titolo": "Bimbo di 6 anni trovato con un coltello da 13 centimetri nello zaino a scuola",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/25/bimbo-di-6-anni-trovato-con-un-coltello-da-13-centimetri-nello-zaino-a-scuola_db167632-95e8-4b04-aee6-8d427671583e.html"
-  },
-  {
-   "data": "2026-09-25T11:40:57+00:00",
-   "fonte": "ANSA",
-   "titolo": "Valditara: 'Il tema dei troppi stranieri in classe mai risolto da nessuno. Non sappiamo quanti sono'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/25/valditara-il-tema-dei-troppi-stranieri-in-classe-mai-risolto-da-nessuno.-non_c9ad1fae-9fa8-4752-ab02-56970182f3fa.html"
-  },
-  {
-   "data": "2026-09-25T11:40:01+00:00",
+   "data": "2026-09-25T17:09:04+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "La Digos rimuove uno striscione contro il tetto di stranieri a scuola, polemica a Genova",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/25/la-digos-rimuove-uno-striscione-contro-il-tetto-di-stranieri-a-scuola-polemica-a-genova_1294232a-4438-42f5-a006-ca2f4fb66dea.html"
+   "titolo": "#AccadeOggi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/25/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
   },
   {
-   "data": "2026-09-25T11:32:12+00:00",
+   "data": "2026-09-25T17:07:48+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "'Il tempo è scaduto, vi uccido', le minacce all'ex e ai figli",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/25/il-tempo-e-scaduto-vi-uccido-le-minacce-allex-e-ai-figli_e8eb37f4-f9c1-4372-a13f-ddc8831afadf.html"
+  },
+  {
+   "data": "2026-09-25T17:07:00+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Tentò di uccidere la moglie con la roncola, condannato a 16 anni",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/25/tento-di-uccidere-la-moglie-con-la-roncola-condannato-a-16-anni_ded23527-01c3-4300-b187-80da1ff4c516.html"
+  },
+  {
+   "data": "2026-09-25T17:02:53+00:00",
    "fonte": "ANSA",
-   "titolo": "Alla scoperta di Silo, Laggiù qualcuno mi ama e Erica - Una detective per caso",
-   "url": "https://www.ansa.it/sito/podcast/siamo_serie/2026/09/25/alla-scoperta-di-silo-laggiu-qualcuno-mi-ama-e-erica-una-detective-per_f28819b2-124d-44a3-982e-34bd1bae6828.html"
+   "titolo": "Nuovi guai per la Volkswagen, richiama 2,9 milioni di auto",
+   "url": "https://www.ansa.it/canale_motori/notizie/industria_analisi/2026/09/25/nuovi-guai-per-la-volkswagen-richiama-29-milioni-di-auto-_328c6c57-35f3-41d4-a741-70ead4fd6c73.html"
   },
   {
-   "data": "2026-09-25T11:29:50+00:00",
-   "fonte": "ANSA",
-   "titolo": "Gaza, allo zoo la nuova attrazione è una \"finta zebra\"",
-   "url": "https://www.ansa.it/sito/videogallery/mondo/2026/09/25/gaza-allo-zoo-la-nuova-attrazione-e-una-finta-zebra_2f41926d-0d2e-40c0-a82b-2282e8c18bc8.html"
-  },
-  {
-   "data": "2026-09-25T11:29:15+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Formula 1, oggi qualifiche Gp Baku - Diretta",
-   "url": "https://www.adnkronos.com/sport/diretta-gp-baku-oggi-qualifiche-formula-1-live-griglia-partenza_1cnivfHq0H3o7NOGn37KGI"
-  },
-  {
-   "data": "2026-09-25T11:28:32+00:00",
+   "data": "2026-09-25T17:02:10+00:00",
    "fonte": "ANSA",
    "titolo": "Papa Leone alla Francia: 'Dialogo urgente per prevenire derive autoritarie'",
    "url": "https://www.ansa.it/vaticano/notizie/2026/09/25/il-papa-in-francia-oggi-a-parigi-tra-leliseo-lunesco-e-notre-dame_ff8b8f8e-c0fd-4908-ab1e-1b748b91c76c.html"
   },
   {
-   "data": "2026-09-25T11:28:10+00:00",
+   "data": "2026-09-25T17:01:52+00:00",
+   "fonte": "ANSA",
+   "titolo": "Multe e bollo auto 'rottamabili' in 1.500 enti locali, online l'elenco",
+   "url": "https://www.ansa.it/canale_motori/notizie/istituzioni/2026/09/25/multe-e-bollo-auto-rottamabili-in-1.500-enti-locali-online-lelenco_72f2ccf0-b08a-43be-a78f-44915fea20ae.html"
+  },
+  {
+   "data": "2026-09-25T17:00:48+00:00",
+   "fonte": "ANSA",
+   "titolo": "Esaltavano suprematisti e proponevano attentati, 14 minori perquisiti",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/25/esaltavano-suprematisti-e-proponevano-attentati-14-minori-perquisiti_0dc34236-793e-4c32-bd95-1e067fbd1e19.html"
+  },
+  {
+   "data": "2026-09-25T16:59:26+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Desario risponde alle accuse di Salvini: \"Nessuna fake news sui carburanti, l'Adnkronos fa informazione corretta\"",
+   "url": "https://www.adnkronos.com/politica/desario-replica-video-salvini-fake-news_23jWrGwhMWkBZa4O7sZSOM"
+  },
+  {
+   "data": "2026-09-25T16:56:40+00:00",
+   "fonte": "ANSA",
+   "titolo": "Giuli: \"Il Colosseo domani riaprirà, coesi per sicurezza e giustizia\"",
+   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/25/giuli-il-colosseo-domani-riaprira-coesi-per-sicurezza-e-giustizia_fd441016-31bc-423b-876e-4a6b73f5049a.html"
+  },
+  {
+   "data": "2026-09-25T16:55:56+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Mauro Icardi, patente sospesa fino al 2099 in Argentina. Lui attacca: \"Pensate a sistemare le strade\"",
+   "url": "https://www.adnkronos.com/sport/mauro-icardi-patente-sospesa-cosa-e-successo_10qHy5yXhrjzTlC5DPU5bq"
+  },
+  {
+   "data": "2026-09-25T16:55:29+00:00",
+   "fonte": "ANSA",
+   "titolo": "'Gli Houthi promettono di non prendere di mira le navi europee'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/25/gli-houthi-promettono-di-non-prendere-di-mira-le-navi-europee_9a16c2c0-14e3-43d8-8a9b-4ba6e60d9a82.html"
+  },
+  {
+   "data": "2026-09-25T16:48:17+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Morta dopo tre interventi chirurgici, il pm chiede la condanna dei medici",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/25/morta-dopo-tre-interventi-chirurgici-il-pm-chiede-la-condanna-dei-medici_08b3d8ca-fd82-48a5-b02f-537ba653e4fe.html"
+   "titolo": "Ranucci in Tribunale contro la Rai, udienza per il reintegro",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/25/ranucci-in-tribunale-contro-la-rai-udienza-per-il-reintegro_60d687ec-56a3-4f41-81e4-0edc48e2f5f2.html"
   },
   {
-   "data": "2026-09-25T11:28:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Roberto Floreani alla Galleria d'Arte Sacra dei Contemporanei di Milano, viaggio nella spiritualità: \"L'Arte per raggiungere stati superiori di coscienza\"",
-   "url": "https://www.adnkronos.com/cultura/roberto-floreani-mostra-galleria-darte-sacra-dei-contemporanei_32x76EePV1eLEkJOie9p3O"
-  },
-  {
-   "data": "2026-09-25T11:26:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Neurochirurgia, Fornari: \"Tecnologia e pazienti consapevoli migliorano la cura\"",
-   "url": "https://www.adnkronos.com/cronaca/neurochirurgia-fornari-tecnologia-e-pazienti-consapevoli-migliorano-la-cura_6Lx1nDYVmngM7MHnaySqV2"
-  },
-  {
-   "data": "2026-09-25T11:25:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Garbossa (Molinette): \"Ai preziosa in Neuroncologia, ma decide il chirurgo\"",
-   "url": "https://www.adnkronos.com/cronaca/garbossa-molinette-ai-preziosa-in-neuroncologia-ma-decide-il-chirurgo_4ZkQB2pm1tWane81XawIac"
-  },
-  {
-   "data": "2026-09-25T11:24:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Tumori della base cranica, Zoia (Sinch): \"L'endoscopia è ormai lo standard\"",
-   "url": "https://www.adnkronos.com/cronaca/tumori-della-base-cranica-zoia-sinch-lendoscopia-e-ormai-lo-standard_6jBtJDnP76Txy33BCHIMLS"
-  },
-  {
-   "data": "2026-09-25T11:22:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Tumori cerebrali, Telera (Sinch): \"L nuova classificazione ha cambiato la cura\"",
-   "url": "https://www.adnkronos.com/cronaca/tumori-cerebrali-telera-sinch-l-nuova-classificazione-ha-cambiato-la-cura_1xe9V9XTH5XtdwujOcVdB6"
-  },
-  {
-   "data": "2026-09-25T11:19:41+00:00",
+   "data": "2026-09-25T16:47:17+00:00",
    "fonte": "ANSA",
-   "titolo": "Media, ritiro Vw e Audi da quasi 1 milione di veicoli in Germania",
-   "url": "https://www.ansa.it/canale_motori/notizie/mondo_motori/2026/09/25/media-ritiro-vw-e-audi-da-quasi-1-milione-di-veicoli-in-germania_328c6c57-35f3-41d4-a741-70ead4fd6c73.html"
+   "titolo": "Valditara: 'Il tema dei troppi stranieri in classe mai risolto da nessuno. Non sappiamo quanti sono'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/25/valditara-il-tema-dei-troppi-stranieri-in-classe-mai-risolto-da-nessuno.-non_c9ad1fae-9fa8-4752-ab02-56970182f3fa.html"
   },
   {
-   "data": "2026-09-25T11:17:00+00:00",
+   "data": "2026-09-25T16:46:35+00:00",
+   "fonte": "ANSA",
+   "titolo": "Da Bankitalia richieste a Ifis e via libera a fusione illimity",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/25/da-bankitalia-richieste-a-ifis-e-via-libera-a-fusione-illimity_8adb6342-bd54-41ba-8bc1-48157a100f44.html"
+  },
+  {
+   "data": "2026-09-25T16:40:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Congresso nazionale ingegneri nel 2027 a Roma",
-   "url": "https://www.adnkronos.com/economia/congresso-nazionale-ingegneri-nel-2027-a-roma_73kq4It1b82LEhcY5AER60"
+   "titolo": "Monti (Montieco): \"Ampliamento stoccaggio per raccolta oli più capillare con Conou\"",
+   "url": "https://www.adnkronos.com/cronaca/monti-montieco-ampliamento-stoccaggio-per-raccolta-oli-piu-capillare-con-conou_25zDS4XTWhFFTpJahFT0Rq"
   },
   {
-   "data": "2026-09-25T11:12:19+00:00",
+   "data": "2026-09-25T16:39:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Alice Mangione ricoverata in ospedale, come sta la comica: \"Pensavo fosse una cistite\"",
-   "url": "https://www.adnkronos.com/spettacoli/alice-mangione-ricoverata-infiammazione-reni-cistite-come-sta_3Yw29cQ2lIEszFtNlBOoqs"
+   "titolo": "Occhipinti (Legambiente E-R): \"L'attività di Montieco contribuisce alla transizione ecologica\"",
+   "url": "https://www.adnkronos.com/cronaca/occhipinti-legambiente-e-r-lattivita-di-montieco-contribuisce-alla-transizione-ecologica_za5RgodjeULavy32NuFmg"
   },
   {
-   "data": "2026-09-25T11:08:47+00:00",
+   "data": "2026-09-25T16:37:41+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Aggressione omofoba in centro a Bologna, 2 giovani picchiati da un gruppo",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/25/aggressione-omofoba-in-centro-a-bologna-2-giovani-picchiati-da-un-gruppo_3c660254-bf62-4151-9322-404cc346fff2.html"
+   "titolo": "La Digos rimuove uno striscione contro il tetto di stranieri a scuola, polemica a Genova",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/25/la-digos-rimuove-uno-striscione-contro-il-tetto-di-stranieri-a-scuola-polemica-a-genova_1294232a-4438-42f5-a006-ca2f4fb66dea.html"
   },
   {
-   "data": "2026-09-25T11:08:28+00:00",
+   "data": "2026-09-25T16:35:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Giuli: \"Domani riapre il Colosseo, coesi per sicurezza e giustizia\"",
+   "url": "https://www.adnkronos.com/cronaca/domani-riapre-il-colosseo-quando-morte-andrea-moretti_5ZFTXeBJM4gViZf8e6Yi4E"
+  },
+  {
+   "data": "2026-09-25T16:34:49+00:00",
    "fonte": "ANSA",
-   "titolo": "Sinner salta anche Pechino: 'Non sono in grado di competere'",
-   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/25/sinner-salta-anche-pechino-non-sono-in-grado-di-competere_f8737993-c93b-41a7-bc48-1ab2416232be.html"
+   "titolo": "Da stop al fumo a meno sale, le 5 regole per la salute del cuore",
+   "url": "https://www.ansa.it/canale_saluteebenessere/notizie/medicina/2026/09/25/da-stop-al-fumo-a-meno-sale-le-5-regole-per-la-salute-del-cuore_131b800c-9d37-4430-b0c8-aa2b5149703b.html"
   },
   {
-   "data": "2026-09-25T10:57:54+00:00",
+   "data": "2026-09-25T16:26:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Tumori intramidollari, Barbanera (Sinch): \"Multidisciplinarietà chiave in chirurgia\"",
+   "url": "https://www.adnkronos.com/cronaca/tumori-intramidollari-barbanera-sinch-multidisciplinarieta-chiave-in-chirurgia_3k4cWnJGzhzM8aIWYmw2WQ"
+  },
+  {
+   "data": "2026-09-25T16:25:37+00:00",
    "fonte": "ANSA",
-   "titolo": "L'economia invisibile vale 197,6 miliardi, 'ruba 3.350 euro a ogni italiano'",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/25/leconomia-invisibile-vale-1976-miliardi-ruba-3.350-euro-a-ogni-italiano_0a6a163d-b29c-4681-833d-953a1737d8ca.html"
+   "titolo": "Minorenne alla guida di un'auto rubata sperona un'altra vettura",
+   "url": "https://www.ansa.it/sito/videogallery/italia/2026/09/25/minorenne-alla-guida-di-unauto-rubata-sperona-unaltra-vettura_77dd307d-9748-4c70-ac2e-41b32c9bfe01.html"
   },
   {
-   "data": "2026-09-25T10:50:05+00:00",
+   "data": "2026-09-25T16:24:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Tumori della base cranica, Santoro (Sapienza): \"Nuove tecniche hanno ridotto le complicanze\"",
+   "url": "https://www.adnkronos.com/cronaca/tumori-della-base-cranica-santoro-sapienza-nuove-tecniche-hanno-ridotto-le-complicanze_29cozmlSeLtM5uJe8N50UM"
+  },
+  {
+   "data": "2026-09-25T16:23:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Fontanella (Spedali Civili): \"Ai nella Neurochirurgia nuova alleata per medici e pazienti\"",
+   "url": "https://www.adnkronos.com/cronaca/fontanella-spedali-civili-ai-nella-neurochirurgia-nuova-alleata-per-medici-e-pazienti_4SOV410J1mrEiDyjonw1Pq"
+  },
+  {
+   "data": "2026-09-25T16:22:53+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Morta dopo 3 interventi estetici, chiesta la condanna dei medici",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/25/morta-dopo-3-interventi-estetici-chiesta-la-condanna-dei-medici-_08b3d8ca-fd82-48a5-b02f-537ba653e4fe.html"
+  },
+  {
+   "data": "2026-09-25T16:20:03+00:00",
+   "fonte": "ANSA",
+   "titolo": "F1: Antonelli sbatte, Russell vola e si prende la pole a Baku",
+   "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/09/25/f1-gp-azerbaijan-russell-in-pole-davanti-a-leclerc.-antonelli-a-muro-in-q1-partira-16o-in-gara_ab38e02f-31b9-4be8-9535-5084a292fc56.html"
+  },
+  {
+   "data": "2026-09-25T16:19:22+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Brasile, i giocatori ridono durante rito indigeno prima della sfida con l'Australia: cos'è successo",
+   "url": "https://www.adnkronos.com/sport/brasile-calciatori-nazionale-ridono-prima-partita-australia-video_23wVi4TaGspwbL4krQ41kc"
+  },
+  {
+   "data": "2026-09-25T16:10:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Riarmo, pressione fiscale e le parole sbagliate della politica. Di Gregorio: \"Come ti è cambiata la vita?\"",
+   "url": "https://www.adnkronos.com/politica/riarmo-pressione-fiscale-e-le-parole-sbagliate-della-politica-di-gregorio-come-ti-e-cambiata-la-vita_79tGWCzSJOUlvatjCz49AY"
+  },
+  {
+   "data": "2026-09-25T16:07:29+00:00",
    "fonte": "ANSA",
    "titolo": "Dal 19 a 23 ottobre primo collocamento 'doppio' Btp Valore e Btp Valore Insieme",
    "url": "https://www.ansa.it/sito/notizie/economia/2026/09/25/dal-19-a-23-ottobre-primo-collocamento-doppio-btp-valore-e-btp-valore-insieme_c0f5300f-0195-406f-9fe7-87a396219366.html"
-  },
-  {
-   "data": "2026-09-25T10:49:31+00:00",
-   "fonte": "ANSA",
-   "titolo": "Zelensky: 'Ok di Trump alle licenze per i Patriot'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/25/raid-russi-sullucraina-colpite-anche-kiev-e-odessa_e83b794c-570d-46e7-9e96-5b4be357e783.html"
-  },
-  {
-   "data": "2026-09-25T10:48:37+00:00",
-   "fonte": "ANSA",
-   "titolo": "Infrazione Ue a 26 Paesi su gas e idrogeno, l'Italia l'unica in regola",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/25/infrazione-ue-a-26-paesi-su-gas-e-idrogeno-litalia-lunica-in-regola_ad353f22-41ac-4961-a263-8af9327511bd.html"
   }
  ]
 }
