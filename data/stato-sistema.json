@@ -1,47 +1,47 @@
 {
-  "aggiornato": "2026-09-24T10:23:32+00:00",
+  "aggiornato": "2026-09-25T10:26:50+00:00",
   "nota": "File aggiornato automaticamente dal workflow aggiorna-stato-sistema.yml. Stato dei workflow critici di manutenzione del sito.",
   "workflow": [
     {
       "nome": "Pubblicazione del sito",
       "file": "deploy.yml",
       "stato": "success",
-      "ultimo_run": "2026-09-24T09:11:34Z",
+      "ultimo_run": "2026-09-25T09:08:45Z",
       "descrizione": "Costruisce e pubblica il sito a ogni modifica approvata."
     },
     {
       "nome": "Controllo allerta meteo",
       "file": "check-allerta.yml",
       "stato": "success",
-      "ultimo_run": "2026-09-24T10:20:41Z",
+      "ultimo_run": "2026-09-25T10:25:25Z",
       "descrizione": "Verifica i bollettini della Regione Lazio e aggiorna lo stato di allerta."
     },
     {
       "nome": "Audit settimanale del sito",
       "file": "audit-sito.yml",
       "stato": "success",
-      "ultimo_run": "2026-09-24T01:52:31Z",
+      "ultimo_run": "2026-09-25T02:09:12Z",
       "descrizione": "Controlla contenuti, link, accessibilita e coerenza ogni lunedi."
     },
     {
       "nome": "Verifica dopo la pubblicazione",
       "file": "smoke-test-post-deploy.yml",
       "stato": "success",
-      "ultimo_run": "2026-09-24T05:08:43Z",
+      "ultimo_run": "2026-09-25T08:20:24Z",
       "descrizione": "Controlla che le pagine principali rispondano dopo ogni pubblicazione."
     },
     {
       "nome": "Allineamento delle pagine online",
       "file": "verifica-deploy-aruba.yml",
       "stato": "success",
-      "ultimo_run": "2026-09-24T05:08:43Z",
+      "ultimo_run": "2026-09-25T08:20:24Z",
       "descrizione": "Verifica che tutte le pagine online mostrino l'ultima versione pubblicata, senza pagine rimaste indietro."
     },
     {
       "nome": "Audit prestazioni e accessibilita",
       "file": "lighthouse-audit.yml",
       "stato": "success",
-      "ultimo_run": "2026-09-23T21:32:07Z",
+      "ultimo_run": "2026-09-24T21:33:05Z",
       "descrizione": "Misura velocita, accessibilita e SEO con Lighthouse dopo ogni pubblicazione."
     }
   ]
