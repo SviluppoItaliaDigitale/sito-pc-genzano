@@ -72,5 +72,10 @@ jobs:
           fi
           git commit -m "[skip-dati-sala] Snapshot sala situazioni: bollettino DPC, notizie, GDACS, EMS, volo, MeteoAlarm, FIRMS"
           # anti non-fast-forward: altri workflow committano di frequente
-          git pull --rebase origin main
-          git push
+          for try in 1 2 3; do
+            if git pull --rebase --autostash origin main && git push origin HEAD:main; then
+              echo "Snapshot pubblicati (tentativo $try)."; exit 0
+            fi
+            echo "Push fallito, ritento ($try)..."; sleep 6
+          done
+          echo "::warning::Snapshot non pubblicati dopo 3 tentativi (main troppo attivo): il giro successivo li riprende."

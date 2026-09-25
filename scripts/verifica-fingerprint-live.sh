@@ -5,13 +5,16 @@
 # allerte-meteo di maggio, home di luglio) perché il sync-state FTP salta
 # alcuni file.
 #
-# Come funziona: legge il fingerprint <meta name="pc-build-sha"> (+ pc-build-time)
-# di N pagine campione, con cache-buster + header no-cache per bypassare le
-# cache intermedie. Poi:
+# Come funziona: legge il fingerprint <meta name="pc-build-sha"> di N pagine
+# campione, con cache-buster + header no-cache per bypassare le cache
+# intermedie, e l'orario dell'ultima build da /build-info.js (output format
+# BUILDINFO di Hugo: `window.SITE_BUILD_TIME = "<ISO 8601>"`, un solo file
+# per deploy — dal 25/09/2026 le pagine non portano più la meta
+# pc-build-time: l'orario sta in un file solo, non in ogni pagina). Poi:
 #   - se le pagine servono >1 SHA distinto  → DRIFT (file stantii) → FALLISCE
 #   - se una pagina non ha affatto la meta   → build pre-guardia stantia → FALLISCE
 #   - se una pagina non risponde 200         → FALLISCE
-#   - se la build più recente è troppo vecchia (default 12h) → FROZEN → FALLISCE
+#   - se /build-info.js è troppo vecchio (default 12h) → FROZEN → FALLISCE
 # Ripete il campionamento (retry) per assorbire il ritardo di propagazione
 # subito dopo un deploy: si ferma appena tutto è coerente e recente.
 #
@@ -57,7 +60,7 @@ PAGES="/ /allerte-meteo/ /chi-siamo/ /numeri-utili/ /contatti/ \
        /diventa-volontario/ /area-download/ /formazione/ /comunicazioni/ \
        /piano-emergenza/ /faq/ /glossario/"
 
-# Estrae il valore di content="" dalla meta pc-build-sha / pc-build-time,
+# Estrae il valore di content="" dalla meta pc-build-sha,
 # indipendente dall'ordine degli attributi (Hugo minify può riordinarli).
 _meta() {
   # $1 = html, $2 = nome meta → stampa il content (vuoto se assente)
@@ -66,8 +69,8 @@ _meta() {
 }
 
 fetch_fp() {
-  # $1 = path → stampa "http_status|sha|time"
-  local path="$1" cb html status sha t
+  # $1 = path → stampa "http_status|sha"
+  local path="$1" cb html status sha
   cb="cb=$(date +%s)$RANDOM"
   html=$(curl -s --max-time 20 \
               -H 'Cache-Control: no-cache' -H 'Pragma: no-cache' \
@@ -76,8 +79,18 @@ fetch_fp() {
               -H 'Cache-Control: no-cache' -H 'Pragma: no-cache' \
               "$BASE$path?$cb" 2>/dev/null)
   sha=$(_meta "$html" 'pc-build-sha')
-  t=$(_meta "$html" 'pc-build-time')
-  printf '%s|%s|%s' "${status:-000}" "${sha:-MANCANTE}" "${t:-}"
+  printf '%s|%s' "${status:-000}" "${sha:-MANCANTE}"
+}
+
+# Orario dell'ultima build servita: /build-info.js (BUILDINFO, un file solo).
+fetch_build_time() {
+  local cb js
+  cb="cb=$(date +%s)$RANDOM"
+  js=$(curl -s --max-time 20 \
+            -H 'Cache-Control: no-cache' -H 'Pragma: no-cache' \
+            "$BASE/build-info.js?$cb" 2>/dev/null)
+  printf '%s' "$js" | grep -oE 'SITE_BUILD_TIME *= *"[^"]*"' | head -1 \
+    | sed -E 's/.*"([^"]*)"/\1/'
 }
 
 echo "=== Verifica fingerprint build live: $BASE ==="
@@ -86,14 +99,14 @@ echo ""
 
 PENDING="$PAGES"
 attempt=0
-declare -A SHA_OF TIME_OF STATUS_OF
+declare -A SHA_OF STATUS_OF
 
 while :; do
   attempt=$((attempt+1))
   NEXT_PENDING=""
   for path in $PENDING; do
-    IFS='|' read -r st sha t <<< "$(fetch_fp "$path")"
-    STATUS_OF[$path]="$st"; SHA_OF[$path]="$sha"; TIME_OF[$path]="$t"
+    IFS='|' read -r st sha <<< "$(fetch_fp "$path")"
+    STATUS_OF[$path]="$st"; SHA_OF[$path]="$sha"
     if [ "$st" = "200" ] && [ "$sha" != "MANCANTE" ] && [ -n "$sha" ]; then
       : # risolto per questa pagina
     else
@@ -115,8 +128,10 @@ done
 echo ""
 echo "## Fingerprint rilevati"
 for path in $PAGES; do
-  printf '  %-24s status=%s  sha=%s  time=%s\n' "$path" "${STATUS_OF[$path]}" "${SHA_OF[$path]}" "${TIME_OF[$path]}"
+  printf '  %-24s status=%s  sha=%s\n' "$path" "${STATUS_OF[$path]}" "${SHA_OF[$path]}"
 done
+BUILD_TIME="$(fetch_build_time)"
+echo "  build-info.js: ultima build ${BUILD_TIME:-NON LEGGIBILE}"
 
 if [ "$DIAG" = "true" ]; then
   echo ""
@@ -157,24 +172,22 @@ if [ "${N_DISTINCT:-0}" -gt 1 ]; then
   echo "   Build corrente prevalente: $MAJORITY. Pagine in ritardo:"
   for p in $PAGES; do
     [ "${STATUS_OF[$p]}" = "200" ] && [ "${SHA_OF[$p]}" != "MANCANTE" ] && [ "${SHA_OF[$p]}" != "$MAJORITY" ] \
-      && echo "     $p → ${SHA_OF[$p]} (build ${TIME_OF[$p]})"
+      && echo "     $p → ${SHA_OF[$p]}"
   done
 fi
 
-# Freschezza: la build più recente osservata deve essere entro STALE_HOURS.
-NEWEST_TS=0; NEWEST_ISO=""
-for p in $PAGES; do
-  t="${TIME_OF[$p]}"; [ -z "$t" ] && continue
-  ts=$(date -u -d "$t" +%s 2>/dev/null || echo 0)
-  if [ "$ts" -gt "$NEWEST_TS" ]; then NEWEST_TS="$ts"; NEWEST_ISO="$t"; fi
-done
+# Freschezza: l'ultima build servita (/build-info.js) deve essere entro STALE_HOURS.
+NEWEST_TS=0
+[ -n "$BUILD_TIME" ] && NEWEST_TS=$(date -u -d "$BUILD_TIME" +%s 2>/dev/null || echo 0)
 if [ "$NEWEST_TS" -gt 0 ]; then
   AGE_H=$(( ($(date -u +%s) - NEWEST_TS) / 3600 ))
-  echo "ℹ️  Build più recente osservata: $NEWEST_ISO (${AGE_H}h fa)"
+  echo "ℹ️  Ultima build servita (build-info.js): $BUILD_TIME (${AGE_H}h fa)"
   if [ "$AGE_H" -gt "$STALE_HOURS" ]; then
     ERRORS=$((ERRORS+1))
-    echo "❌ SITO CONGELATO: la build più recente ha ${AGE_H}h (> ${STALE_HOURS}h). Deploy fermo o upload FTP bloccato."
+    echo "❌ SITO CONGELATO: l'ultima build servita ha ${AGE_H}h (> ${STALE_HOURS}h). Deploy fermo o upload FTP bloccato."
   fi
+else
+  echo "⚠️  /build-info.js non leggibile: freschezza della build non verificabile in questo giro."
 fi
 
 LIVE_SHA=$(printf '%s\n' "$DISTINCT_LIST" | head -1 | awk '{print $2}')
@@ -187,6 +200,6 @@ if [ "$ERRORS" = "0" ]; then
   echo "✅ Tutte le pagine campione servono la stessa build recente. Nessun drift."
   exit 0
 else
-  echo "❌ Guardia anti-stale: $ERRORS problema/i. Serve un re-upload integrale (bump state-name in deploy.yml) o un redeploy."
+  echo "❌ Guardia anti-stale: $ERRORS problema/i. Rimedio MIRATO sulle pagine in ritardo (cache-bust del sorgente _index.md o cancellazione del file lato server, rule 05): MAI il bump di state-name in deploy.yml (re-upload integrale che non completa e congela il sito, 03/07/2026)."
   exit 1
 fi
