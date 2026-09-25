@@ -91,6 +91,9 @@ fetch_build_time() {
             "$BASE/build-info.js?$cb" 2>/dev/null)
   printf '%s' "$js" | grep -oE 'SITE_BUILD_TIME *= *"[^"]*"' | head -1 \
     | sed -E 's/.*"([^"]*)"/\1/'
+  printf '|'
+  printf '%s' "$js" | grep -oE 'SITE_BUILD_SHA *= *"[^"]*"' | head -1 \
+    | sed -E 's/.*"([^"]*)"/\1/'
 }
 
 echo "=== Verifica fingerprint build live: $BASE ==="
@@ -130,7 +133,9 @@ echo "## Fingerprint rilevati"
 for path in $PAGES; do
   printf '  %-24s status=%s  sha=%s\n' "$path" "${STATUS_OF[$path]}" "${SHA_OF[$path]}"
 done
-BUILD_TIME="$(fetch_build_time)"
+BUILD_INFO="$(fetch_build_time)"
+BUILD_TIME="${BUILD_INFO%%|*}"
+BUILD_SHA="${BUILD_INFO#*|}"
 echo "  build-info.js: ultima build ${BUILD_TIME:-NON LEGGIBILE}"
 
 if [ "$DIAG" = "true" ]; then
@@ -191,6 +196,18 @@ else
 fi
 
 LIVE_SHA=$(printf '%s\n' "$DISTINCT_LIST" | head -1 | awk '{print $2}')
+
+# L'orario di build-info.js vale per le pagine solo se è della stessa build:
+# un upload che aggiorna build-info.js ma nessun HTML campione lascerebbe
+# pagine tutte coerenti fra loro, ferme alla build prima, con un orario
+# fresco. Il confronto dello SHA lo intercetta (revisione del 26/09/2026).
+if [ -n "$BUILD_SHA" ] && [ -n "$LIVE_SHA" ] && [ "$BUILD_SHA" != "$LIVE_SHA" ]; then
+  ERRORS=$((ERRORS+1))
+  echo "❌ BUILD NON ALLINEATA: build-info.js è della build $BUILD_SHA, le pagine campione della $LIVE_SHA."
+  echo "   L'orario di build-info.js non descrive le pagine servite: upload FTP incompleto o fermo."
+elif [ -z "$BUILD_SHA" ] && [ -n "$BUILD_TIME" ]; then
+  echo "ℹ️  build-info.js senza SHA (build precedente al 26/09/2026): confronto con le pagine non possibile in questo giro."
+fi
 [ -n "$EXPECTED_SHA" ] && [ -n "$LIVE_SHA" ] && [ "$EXPECTED_SHA" != "$LIVE_SHA" ] \
   && echo "ℹ️  SHA live ($LIVE_SHA) ≠ SHA atteso ($EXPECTED_SHA): può essere un deploy successivo (non è di per sé un errore)."
 

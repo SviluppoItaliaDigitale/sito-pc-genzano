@@ -78,4 +78,8 @@ jobs:
             fi
             echo "Push fallito, ritento ($try)..."; sleep 6
           done
-          echo "::warning::Snapshot non pubblicati dopo 3 tentativi (main troppo attivo): il giro successivo li riprende."
+          # Rosso, non giallo: un run verde con gli snapshot mai arrivati su main
+          # nasconderebbe al watchdog (che legge solo i run falliti) una Sala
+          # ferma a tempo indeterminato (revisione del 26/09/2026).
+          echo "::error::Snapshot non pubblicati dopo 3 tentativi: il run fallisce perché il watchdog lo veda."
+          exit 1
