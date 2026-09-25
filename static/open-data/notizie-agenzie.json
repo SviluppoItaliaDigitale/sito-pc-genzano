@@ -5,28 +5,130 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-25T20:32:43+00:00",
+  "generato": "2026-09-25T23:29:12+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
+   "data": "2026-09-25T22:32:12+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Fine vita, legge nella 'palude' del Senato. Fdi: \"Nodo tecnico\". Pd accusa: \"Presa in giro\"",
+   "url": "https://www.adnkronos.com/politica/fine-vita-legge-cosa-sta-succedendo-ultime-notizie_8usqacHjCprcaFL6znea0"
+  },
+  {
+   "data": "2026-09-25T22:23:57+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Covid, arriva la pillola per la Pep. Esperti: \"Nuova arma di prevenzione\"",
+   "url": "https://www.adnkronos.com/salute/pep-contro-covid-cose-come-funziona_5vfsCKdUrAVIcherBknOKk"
+  },
+  {
+   "data": "2026-09-25T22:22:29+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Carburanti, da oggi il taglio delle accise scende a 5 centesimi: \"Pieno di gasolio costerà 3 euro in più\"",
+   "url": "https://www.adnkronos.com/economia/carburanti-taglio-accise-dimezzato-oggi-codacons_4841IBbBrx20vmkVTVABOE"
+  },
+  {
+   "data": "2026-09-25T22:21:37+00:00",
+   "fonte": "ANSA",
+   "titolo": "Moody's, Italia resiliente a shock energia, quest'anno pil +0,8%",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/25/moodys-italia-resiliente-a-shock-energia-questanno-pil-08_84306d2a-f8c6-462b-9347-ab0f655f9d1b.html"
+  },
+  {
+   "data": "2026-09-25T22:19:07+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Gf Vip, Marina La Rosa ricorda Pietro Taricone: \"Aveva una luce incredibile negli occhi\"",
+   "url": "https://www.adnkronos.com/spettacoli/marina-la-rosa-pietro-taricone-grande-fratello-vip_2CwTjFsOeYZVsFKE0O3Fgg"
+  },
+  {
+   "data": "2026-09-25T22:14:34+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Caro carburanti, Eni fissa un tetto al prezzo di benzina e gasolio. Il governo: \"Atto lodevole\"",
+   "url": "https://www.adnkronos.com/politica/caro-carburanti-price-cap-tetto-al-prezzo-gasolio-benzina_1Pl1bNBPM2AGzy4VyGV92A"
+  },
+  {
+   "data": "2026-09-25T22:12:16+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Putin: \"Russia non vuole attaccare Europa. Ero pronto a colloqui, poi Ucraina ha colpito Mosca\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/putin-russia-europa-guerra-nato-news-oggi_6xXFSOHq3wJy69dbOCvwnK"
+  },
+  {
+   "data": "2026-09-25T22:03:59+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Grecia, crolla palazzina ad Atene: 6 dispersi tra cui 4 turisti",
+   "url": "https://www.adnkronos.com/internazionale/esteri/grecia-atene-esplosione-edificio-fuga-gas_1jWsLoXve3tU6dCDRpiFN6"
+  },
+  {
+   "data": "2026-09-25T21:46:56+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Morte di Michele Merlo, nessun risarcimento ai familiari",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/24/morte-di-michele-merlo-nessun-risarcimento-ai-familiari_e699a84d-715f-40b5-87b9-4b20d1148d0a.html"
+  },
+  {
+   "data": "2026-09-25T21:45:40+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "La scomparsa di Emanuela Orlandi, c'è una terza indagata",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/24/lex-amica-di-accetti-mi-fece-fare-una-telefonata-dicevamo-di-sapere-dove_187465a7-1e14-41af-9fa5-1e32776c5081.html"
+  },
+  {
+   "data": "2026-09-25T21:31:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Conti pubblici, Moody's: \"Deficit dell'Italia al 3% nel 2026, al 2,9% nel 2027\"",
+   "url": "https://www.adnkronos.com/economia/conti-pubblici-deficit-italia-dati-numeri_7lt7Nq11RDbLt3jpGIALfG"
+  },
+  {
+   "data": "2026-09-25T21:14:42+00:00",
+   "fonte": "ANSA",
+   "titolo": "È ancora azzurro tenebra, neanche Mancini rianima l'Italia",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/25/e-ancora-azzurro-tenebra-neanche-mancini-rianima-litalia-_8f217ba7-1e9e-4bcf-aa96-35b730498f0b.html"
+  },
+  {
+   "data": "2026-09-25T21:05:06+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Simone Annicchiarico squalificato dal Gf Vip, le scuse in diretta: \"Mi sono sentito tradito da me stesso\"",
+   "url": "https://www.adnkronos.com/spettacoli/simone-annicchiarico-grande-fratello-vip-squalifica_6UUXQwzJTmvIkAAgaD32Da"
+  },
+  {
+   "data": "2026-09-25T21:01:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Italia-Belgio 0-2, rissa tra Donnarumma e Lukaku al fischio finale: cos'è successo",
+   "url": "https://www.adnkronos.com/sport/rissa-donnarumma-lukaku-italia-belgio-cose-successo-nations-league_2A0gxPJa4BdaJ5D4BZf7q8"
+  },
+  {
+   "data": "2026-09-25T20:51:04+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Italia, Mancini incassa i fischi: \"Quando si perde sono meritati...\"",
+   "url": "https://www.adnkronos.com/sport/italia-mancini-belgio-fischi_4wFy9Nxwt1R6DOrCta24Qg"
+  },
+  {
+   "data": "2026-09-25T20:49:51+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Incendio in un ristorante nel centro di Venezia",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/25/incendio-in-un-ristorante-nel-centro-di-venezia_4909d803-bff3-4ce5-a8fd-526b34b6df63.html"
+  },
+  {
+   "data": "2026-09-25T20:36:11+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "La rete dei minorenni suprematisti, 'attentati anche a scuola'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/25/la-rete-dei-minorenni-suprematisti-attentati-anche-a-scuola-_0dc34236-793e-4c32-bd95-1e067fbd1e19.html"
+  },
+  {
+   "data": "2026-09-25T20:35:58+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Gaffe al Gf Vip, Ilary Blasi sbaglia il numero delle regioni italiane: \"Sono 21\"",
+   "url": "https://www.adnkronos.com/spettacoli/grande-fratello-vip-gaffe-ilary-blasi-quante-regioni-in-italia_6cChFTIWhh61d0VhhgKrkE"
+  },
+  {
+   "data": "2026-09-25T20:33:48+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Strage di Viareggio, la società vuole donare il carro cisterna per realizzare un memoriale",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/25/strage-di-viareggio-la-societa-gatx-e-pronta-a-donare-il-carro-cisterna_b451f531-54fc-4ae6-8bef-e83f60792e42.html"
+  },
+  {
    "data": "2026-09-25T20:27:30+00:00",
    "fonte": "ANSA",
    "titolo": "Ucciso e fatto a pezzi a Torino, fermate tre persone",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/25/ucciso-e-fatto-a-pezzi-a-torino-fermate-tre-persone_c2ab923a-e30d-4fa4-a689-0500dac697f5.html"
-  },
-  {
-   "data": "2026-09-25T20:22:14+00:00",
-   "fonte": "ANSA",
-   "titolo": "++ Ucciso e fatto a pezzi a Torino, fermate tre persone ++",
-   "url": "https://www.ansa.it/sito/notizie/flash/2026/09/25/-ucciso-e-fatto-a-pezzi-a-torino-fermate-tre-persone-_c29492fa-acbf-4a46-813a-51a8a28310d0.html"
-  },
-  {
-   "data": "2026-09-25T20:17:12+00:00",
-   "fonte": "ANSA",
-   "titolo": "Nations League: Italia-Belgio 0-2 DIRETTA GOL e FOTO",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/25/nations-league-italia-belgio-0-2-diretta-gol-e-foto_8f217ba7-1e9e-4bcf-aa96-35b730498f0b.html"
   },
   {
    "data": "2026-09-25T20:12:50+00:00",
@@ -53,12 +155,6 @@
    "url": "https://www.ansa.it/sito/notizie/economia/2026/09/25/sale-il-costo-del-gasolio-ma-leni-mette-un-tetto-ai-prezzi_94d83426-2bbc-400c-a017-36aab3b4da40.html"
   },
   {
-   "data": "2026-09-25T19:49:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "SuperEnalotto, estrazione 25 settembre 2026: centrato '5+1' da oltre 417mila euro",
-   "url": "https://www.adnkronos.com/cronaca/superenalotto-numeri-vincenti-vinti-417mila-euro-oggi-estrazione_4wNX6KDqPZvNizXL4SS8JO"
-  },
-  {
    "data": "2026-09-25T19:48:13+00:00",
    "fonte": "ANSA",
    "titolo": "Giuli annuncia la riapertura del Colosseo, sindacati contro i subappalti",
@@ -83,12 +179,6 @@
    "url": "https://www.ansa.it/sito/videogallery/italia/2026/09/25/il-premier-ungherese-in-vespa-a-roma-poi-canta-e-balla-a-trastevere_c61a7826-a9d7-494c-8ca2-28912e741dbf.html"
   },
   {
-   "data": "2026-09-25T19:38:29+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "'Inventare la natura. Leonardo, Arcimboldo, Caravaggio': la mostra a Palazzo Te a Mantova",
-   "url": "https://www.adnkronos.com/cultura/inventare-la-natura-leonardo-arcimboldo-caravaggio-la-mostra-a-palazzo-te-a-mantova_TZEAo8vNikXW0dzBNjhdC"
-  },
-  {
    "data": "2026-09-25T19:38:25+00:00",
    "fonte": "ANSA",
    "titolo": "Incidente per militari italiani in esercitazione in Lettonia, 4 feriti",
@@ -99,96 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Stop alle pietre di inciampo in un comune della Sassonia, Cdu vota con Afd",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/25/stop-alle-pietre-di-inciampo-in-un-comune-della-sassonia-si-di-cdu-e-afd_6fc23e0b-d79d-45c9-af7e-9aa57e465258.html"
-  },
-  {
-   "data": "2026-09-25T19:12:07+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Truffa da 39,5 milioni all'ex capo di Fideuram, un indagato",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/25/truffa-da-395-milioni-allex-capo-di-fideuram-un-indagato_f747847d-aaa5-4f5f-9bee-1d476b6bea1e.html"
-  },
-  {
-   "data": "2026-09-25T19:12:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Italia, fischi all'Olimpico durante l'inno belga",
-   "url": "https://www.adnkronos.com/sport/fischi-inno-belga-choc-olimpico-italia-belgio_4wluhGpNl0hKR92mC2u4f6"
-  },
-  {
-   "data": "2026-09-25T19:09:15+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il decreto non ancora al Colle. Sala: 'Costretti a chiudere qualche scuola'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/25/il-decreto-non-ancora-al-colle.-sala-costretti-a-chiudere-qualche-scuola_c9ad1fae-9fa8-4752-ab02-56970182f3fa.html"
-  },
-  {
-   "data": "2026-09-25T19:05:27+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trump esalta i progressi con Xi, ma dal vertice è fumata grigia",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/25/trump-esalta-i-progressi-con-xi-ma-dal-vertice-e-fumata-grigia_fb1d1280-6209-44eb-b55d-450976f1aae5.html"
-  },
-  {
-   "data": "2026-09-25T18:50:43+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Un Prof segnala chi non sa l'italiano, il preside chiede il docente in più",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/25/un-prof-segnala-chi-non-sa-litaliano-il-preside-chiede-il-docente-in-piu_fe21f3ba-e0c3-4998-b912-8b7fc0472752.html"
-  },
-  {
-   "data": "2026-09-25T18:39:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Caso Garlasco, Tg1: i pm sentono il generale Garofano e gli ex del Ris",
-   "url": "https://www.adnkronos.com/cronaca/caso-garlasco-colpo-di-scena-generale-luciano-garofano_4ckfuUoMnKWfHQYVQnqTLa"
-  },
-  {
-   "data": "2026-09-25T18:36:31+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Formula 1, Verstappen furioso con la Red Bull: \"Li ho mandati a fan***o\"",
-   "url": "https://www.adnkronos.com/sport/verstappen-furiosa-red-bull-qualifiche-gp-azerbaigian_5PshtBtNesqM0K3LCBBwLu"
-  },
-  {
-   "data": "2026-09-25T18:24:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Quattro soldati italiani feriti nell'esercitazione Nato in Lettonia",
-   "url": "https://www.adnkronos.com/internazionale/esteri/soldati-italiani-feriti-nato-lettonia_4kdgE9ICZYgBSLyMEvAdHW"
-  },
-  {
-   "data": "2026-09-25T18:23:23+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Incendio a Lucca, due morti e bambini intossicati",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/25/incendio-a-lucca-due-morti-e-bambini-intossicati_7672299e-b697-4b68-8865-af36783e536b.html"
-  },
-  {
-   "data": "2026-09-25T18:18:10+00:00",
-   "fonte": "ANSA",
-   "titolo": "La rete dei minorenni suprematisti, 'attentati anche a scuola'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/25/la-rete-dei-minorenni-suprematisti-attentati-anche-a-scuola-_0dc34236-793e-4c32-bd95-1e067fbd1e19.html"
-  },
-  {
-   "data": "2026-09-25T18:12:49+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Alcaraz scatenato in Laver Cup, la reazione show dopo il match point",
-   "url": "https://www.adnkronos.com/sport/alcaraz-show-laver-cup-reazione-match-point_3qiL6kWcg9qVl4LSn2DQEk"
-  },
-  {
-   "data": "2026-09-25T18:08:29+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Caltanissetta, sorelline trasferite in comunità. Parla il padre: \"Vogliono tornare a casa\"",
-   "url": "https://www.adnkronos.com/cronaca/sorelline-comunita-fratelli_2c5KLnTy9EhvqYs4Gaa2Di"
-  },
-  {
-   "data": "2026-09-25T18:04:14+00:00",
-   "fonte": "ANSA",
-   "titolo": "Amanda Knox: 'La famiglia di Meredith si sente ferita dalla persona sbagliata'",
-   "url": "https://www.ansa.it/umbria/notizie/2026/09/25/amanda-knox-la-famiglia-di-meredith-si-sente-ferita-dalla-persona-sbagliata_9f216e58-1bef-4621-beae-4cc0f08bba72.html"
-  },
-  {
-   "data": "2026-09-25T17:59:20+00:00",
-   "fonte": "ANSA",
-   "titolo": "Reggio Calabria, il sindaco Cannizzaro replica a Vannacci: “Cornuto sei tu”",
-   "url": "https://www.ansa.it/sito/videogallery/short_video/2026/09/25/reggio-calabria-il-sindaco-cannizzaro-replica-a-vannacci-cornuto-sei-tu_9da6f4a1-2759-4dc2-9ff0-9de6610c2457.html"
-  },
-  {
-   "data": "2026-09-25T17:57:36+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "America's Cup, Luna Rossa in testa dopo regate preliminari a Napoli",
-   "url": "https://www.adnkronos.com/sport/americas-cup-luna-rossa-testa-napoli-regate-preliminari_5D8TLGHVsjkE3GfxBjCXLW"
   }
  ]
 }
