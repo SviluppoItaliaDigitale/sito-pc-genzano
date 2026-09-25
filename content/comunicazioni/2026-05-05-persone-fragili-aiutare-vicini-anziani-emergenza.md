@@ -106,7 +106,7 @@ Sul nostro sito:
 
 Fonti istituzionali:
 
-- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/).
+- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n-1-del-2-gennaio-2018--codice-della-protezione-civile/).
 - [HelpAge International](https://www.helpage.org/) — buone pratiche per anziani in emergenza.
 
 La **prossimità** non è un servizio pubblico, è una virtù civile. In un paese come Genzano, dove molti si conoscono da sempre, coltivarla è più facile che in una grande città. Farlo è già un gesto di Protezione Civile.

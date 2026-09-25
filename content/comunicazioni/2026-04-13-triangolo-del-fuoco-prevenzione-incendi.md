@@ -156,7 +156,7 @@ Sul nostro sito:
 Fonti istituzionali:
 
 - [Vigili del Fuoco](https://www.vigilfuoco.it/).
-- [Dipartimento Protezione Civile — Rischio incendi](https://www.protezionecivile.gov.it/it/pagina/rischio-incendi-boschivi).
+- [Dipartimento Protezione Civile — Rischio incendi](https://rischi.protezionecivile.gov.it/it/incendi-boschivi-0/).
 - [Carabinieri Forestali](https://www.carabinieri.it/).
 
 ---

@@ -19,7 +19,7 @@ Il **23 aprile** è la festa di **San Giorgio**, patrono dello scoutismo. Robert
 
 {{< foto src="/images/2026-04-23-scout-protezione-civile-storia-servizio-san-giorgio-raffaello.webp"
          alt="San Giorgio e il drago, dipinto di Raffaello Sanzio del 1506"
-         caption="San Giorgio e il drago di Raffaello Sanzio (1506), National Gallery of Art, Washington. Il santo cavaliere che protegge gli indifesi è patrono dei movimenti scout di tutto il mondo. Foto: Wikimedia Commons — Public domain. [Fonte originale](https://commons.wikimedia.org/wiki/File:Saint_George_and_the_Dragon_(Raphael)_-_Mauritshuis_843.jpg)." >}}
+         caption="San Giorgio e il drago di Raffaello Sanzio (1506), National Gallery of Art, Washington. Il santo cavaliere che protegge gli indifesi è patrono dei movimenti scout di tutto il mondo. Foto: National Gallery of Art via Wikimedia Commons — Public domain (CC0). [Fonte originale](https://commons.wikimedia.org/wiki/File:Raphael,_Saint_George_and_the_Dragon,_c._1506,_NGA_28.jpg)." >}}
 
 {{< foto src="/images/2026-04-23-baden-powell-fondatore-scout.webp"
          alt="Ritratto di Robert Baden-Powell, fondatore del movimento scout, in uniforme da capo scout"

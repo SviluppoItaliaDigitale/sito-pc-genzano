@@ -74,5 +74,5 @@ Tutte le indicazioni, prima, durante e dopo, sono nella nostra pagina [Rischio s
 **Fonti istituzionali**
 
 - [INGV — Terremoti in tempo reale](https://terremoti.ingv.it/) — i dati sismologici ufficiali in Italia.
-- [Android Earthquake Alerts System — Google](https://www.android.com/earthquakes/) — come funziona il sistema di allerta sismica degli smartphone.
+- [Android Earthquake Alerts System — Google](https://crisisresilience.google/android-early-earthquake-warnings) — come funziona il sistema di allerta sismica degli smartphone.
 - [USGS — Earthquake Early Warning (ShakeAlert)](https://www.usgs.gov/programs/earthquake-hazards/science/earthquake-early-warning-overview) — come l'allerta precoce «corre davanti» alle onde sismiche, spiegato dal servizio geologico statunitense (in inglese).

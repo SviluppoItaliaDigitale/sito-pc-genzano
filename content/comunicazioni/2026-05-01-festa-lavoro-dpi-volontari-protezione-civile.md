@@ -60,6 +60,6 @@ Fonti istituzionali:
 - [Costituzione italiana (testo ufficiale)](https://www.senato.it/istituzione/la-costituzione).
 - [D.Lgs. 81/2008 — Testo Unico sulla sicurezza sul lavoro](https://www.gazzettaufficiale.it/eli/id/2008/04/30/008G0104/sg).
 - [INAIL — Pubblicazioni](https://www.inail.it/cs/internet/comunicazione/pubblicazioni.html).
-- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/).
+- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n-1-del-2-gennaio-2018--codice-della-protezione-civile/).
 
 **Buon primo maggio.** A chi lavora ogni giorno per la sicurezza degli altri e a chi, come volontario, sceglie di dedicare tempo gratuito alla comunità.

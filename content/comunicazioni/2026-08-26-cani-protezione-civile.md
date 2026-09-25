@@ -69,7 +69,7 @@ Per chi avesse un cane adatto e voglia di un percorso impegnativo, le opzioni so
 
 ## Per saperne di più
 
-- [Dipartimento di Protezione Civile — Volontariato](https://www.protezionecivile.gov.it/it/normative/volontariato/) — Riferimenti normativi sul volontariato, comprese le unità cinofile.
+- [Dipartimento di Protezione Civile — Volontariato](https://volontariato.protezionecivile.gov.it/it/volontari/linee-guida-e-indicazioni-operative/standard-cinofilia/) — Riferimenti normativi sul volontariato, comprese le unità cinofile.
 - [Registro Nazionale dei Cani da Soccorso (RNCC)](https://rncc.it/) — Standard nazionali, prove di idoneità.
 - [ENCI Soccorso](https://www.enci.it/) — Sezione dedicata alle prove e ai brevetti per cani da soccorso.
 

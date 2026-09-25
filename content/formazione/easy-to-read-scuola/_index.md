@@ -202,7 +202,7 @@ Le schede possono essere usate in lezioni da 30-45 minuti e abbinate alle attivi
 - [Inclusion Europe — Information for All](https://www.inclusion-europe.eu/easy-to-read/)
 - [ANFFAS](https://www.anffas.net/)
 - [AIPD — Associazione Italiana Persone Down](https://www.aipd.it/)
-- [MIM — Inclusione scolastica](https://www.mim.gov.it/web/guest/inclusione-e-nuovo-pei)
+- [MIM — Inclusione scolastica](https://www.mim.gov.it/alunni-con-disabilita)
 
 ## Vedi anche
 

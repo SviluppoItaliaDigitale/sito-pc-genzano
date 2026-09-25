@@ -103,7 +103,7 @@ Sul nostro sito:
 
 Fonti istituzionali:
 
-- [INGV — Centro Allerta Tsunami (CAT)](https://www.ingv.it/cat/).
+- [INGV — Centro Allerta Tsunami (CAT)](https://cat.ingv.it/it/).
 - [Dipartimento Protezione Civile — Rischio maremoto e SiAM](https://rischi.protezionecivile.gov.it/it/maremoto-0/).
 - [UNESCO-IOC — Tsunami Programme](https://www.ioc-tsunami.org/).
 - [NEAMTWS — Tsunami Warning System Mediterraneo e Atlantico](https://www.ioc-tsunami.org/).

@@ -160,7 +160,7 @@ Chi non si esercita, **non è operativamente pronto** anche se ha seguito tutti 
 - Articolo: [Corso base volontari PC](/comunicazioni/2026-04-19-formazione-regionale-sala-operativa-lazio-nuovi-volontari/)
 - Articolo: [DPI del volontario PC](/comunicazioni/2026-06-17-dpi-volontari-cosa-sono-perche-importanti/)
 - Articolo: [Coordinamento sovracomunale](/comunicazioni/2026-07-07-protezione-civile-sconfinamenti-provinciali/)
-- [DPC — Esercitazioni](https://www.protezionecivile.gov.it/it/formazione-ed-esercitazioni)
-- [Campagna "Io non rischio"](https://www.protezionecivile.gov.it/it/app/io-non-rischio)
+- [DPC — Esercitazioni](https://servizio-nazionale.protezionecivile.gov.it/it/approfondimento/esercitazioni-di-protezione-civile/)
+- [Campagna "Io non rischio"](https://iononrischio.protezionecivile.gov.it/it/)
 
 Esercitarsi non è un gioco. È il modo più serio per essere pronti il giorno in cui non sarà più una simulazione.

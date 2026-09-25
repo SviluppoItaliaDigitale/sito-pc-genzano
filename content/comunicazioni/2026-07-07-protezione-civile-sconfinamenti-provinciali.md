@@ -141,7 +141,7 @@ In eventi estesi collaborano:
 
 - Articolo: [Piano Comunale di PC](/piano-emergenza/)
 - Articolo: [Cartografia operativa del Piano](/comunicazioni/2026-06-25-cartografia-operativa-piano-comunale/)
-- [DPC — Sistema PC](https://www.protezionecivile.gov.it/it/sistema-nazionale)
+- [DPC — Sistema PC](https://servizio-nazionale.protezionecivile.gov.it/it/)
 - [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it/)
 - [Prefettura di Roma](https://www.prefettura.it/roma)
 

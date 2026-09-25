@@ -99,4 +99,4 @@ Segui le istruzioni ufficiali. Non intralciare i soccorsi.
 
 - [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/) — cosa fare prima, durante e dopo
 - [Allerte meteo del nostro territorio](/allerte-meteo/)
-- [Campagna "Io Non Rischio" — Alluvione](https://iononrischio.protezionecivile.it/alluvione/)
+- [Campagna "Io Non Rischio" — Alluvione](https://iononrischio.protezionecivile.gov.it/it/preparati/alluvione/)
