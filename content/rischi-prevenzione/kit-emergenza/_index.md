@@ -7,12 +7,43 @@ type: "page"
 layout: "single"
 toc: true
 lis_section: "kit-emergenza"
-dataUltimaRevisione: "2026-05-06"
+dataUltimaRevisione: "2026-09-25"
 ---
 
 Preparare un kit di emergenza non significa vivere nella paura. Significa avere a disposizione le cose essenziali se un terremoto, un'alluvione, un blackout, un incendio o un'evacuazione interrompono la normalità.
 
 Questa pagina distingue tre kit diversi, perché non tutte le emergenze richiedono la stessa risposta.
+
+{{< video src="/video/2026-09-25-kit-emergenza-video.mp4"
+          poster="/video/2026-09-25-kit-emergenza-video-poster.webp"
+          verticale="true"
+          titolo="Video con voce e sottotitoli: il kit di emergenza"
+          caption="Cosa mettere nel kit di emergenza, in meno di un minuto. La versione orizzontale, per la proiezione a scuola, è nelle [Risorse pronte](/risorse-pronte/#tema-kit-emergenza). Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, sulle indicazioni della campagna «Io non rischio» del Dipartimento della Protezione Civile." >}}
+
+<details class="faq-item">
+<summary><strong>Trascrizione del video</strong></summary>
+
+Il kit di emergenza: l'essenziale sempre pronto, per affrontare le prime 72 ore.
+
+Acqua potabile e cibo a lunga conservazione, per almeno 3 giorni. Non dimenticare l'apriscatole.
+
+Una torcia e una radio a pile, con le batterie di ricambio.
+
+Il kit di pronto soccorso e i medicinali che prendi ogni giorno.
+
+Le copie dei documenti in una busta impermeabile. E un po' di contanti.
+
+Il telefono, con caricabatterie e power bank. E un fischietto, per farti sentire.
+
+Vestiti di ricambio, una coperta e il cibo per i tuoi animali.
+
+Tieni il kit vicino all'uscita. E ogni sei mesi controlla scadenze e batterie.
+
+Preparalo oggi.
+
+Fonti: Dipartimento della Protezione Civile, campagna «Io non rischio»; [Commissione europea, Strategia dell'Unione per la preparazione](https://ec.europa.eu/commission/presscorner/detail/it/ip_25_856) (25 marzo 2025) per le 72 ore.
+
+</details>
 
 ## I tre kit da preparare
 
