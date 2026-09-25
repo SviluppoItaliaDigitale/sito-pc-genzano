@@ -222,7 +222,8 @@ const ILL = {
     <path d="M200 410 H540" stroke="#34435c" stroke-width="8"/></svg>`,
   pericolo: () => `<div class="tiles">${tile("cantina", "Cantine e seminterrati")}${tile("pianoterra", "Piani terra")}${tile("sottopasso", "Sottopassi")}${tile("ponte", "Argini e ponti")}</div>`,
   prima: () => `<svg viewBox="0 0 600 260" preserveAspectRatio="xMidYMid meet">
-    <rect x="40" y="10" width="520" height="240" rx="26" fill="#101c2e"/>${PIOGGIA(24, 520, 240)}
+    <defs><clipPath id="pr"><rect x="40" y="10" width="520" height="240" rx="26"/></clipPath></defs>
+    <rect x="40" y="10" width="520" height="240" rx="26" fill="#101c2e"/><g clip-path="url(#pr)"><g transform="translate(60 0)">${PIOGGIA(24, 560, 240)}</g></g>
     <g transform="translate(300 150)"><path d="M-110 90 V-10 L0 -90 L110 -10 V90Z" fill="#c9d4e2"/><path d="M-130 -2 L0 -104 L130 -2" stroke="#5d6b80" stroke-width="14" fill="none" stroke-linejoin="round"/>
     <rect x="-24" y="30" width="48" height="60" fill="#5d6b80"/><rect x="-86" y="0" width="40" height="36" fill="#8fb8e0"/><rect x="46" y="0" width="40" height="36" fill="#8fb8e0"/></g></svg>`,
   allerta: () => `<svg viewBox="0 0 600 260" preserveAspectRatio="xMidYMid meet">
@@ -231,7 +232,8 @@ const ILL = {
     ${["#34b25a", "#ffcc00", "#ff8a00", "#ef4136"].map((c, i) => `<circle class="led" cx="${-150 + i * 100}" cy="0" r="38" fill="${c}"/>`).join("")}</g></svg>`,
   casa: () => `<svg viewBox="0 0 600 520" preserveAspectRatio="xMidYMid meet">
     <defs><clipPath id="hc"><rect x="90" y="120" width="420" height="380"/></clipPath></defs>
-    <rect x="40" y="0" width="520" height="520" rx="30" fill="#101c2e"/>${PIOGGIA(30, 520, 140, "pioggia alta")}
+    <clipPath id="hr"><rect x="40" y="0" width="520" height="520" rx="30"/></clipPath>
+    <rect x="40" y="0" width="520" height="520" rx="30" fill="#101c2e"/><g clip-path="url(#hr)"><g transform="translate(60 0)">${PIOGGIA(30, 560, 140, "pioggia alta")}</g></g>
     <path d="M70 130 L300 20 L530 130" stroke="#c9d4e2" stroke-width="18" fill="none" stroke-linejoin="round"/>
     <rect x="90" y="120" width="420" height="380" fill="#1d2a40"/>
     <g stroke="#5d6b80" stroke-width="8"><path d="M90 240 H510"/><path d="M90 370 H510"/></g>
