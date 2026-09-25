@@ -223,7 +223,7 @@ date: 2026-04-30T00:01:00+02:00
 date: 2026-04-30T00:02:00+02:00
 ```
 
-**Perché orari minimi (00:01, 00:02…) e non semantici:** l'orario non è mai mostrato (il template formatta solo "30 aprile 2026"), serve solo come tie-break per l'ordering `Date desc`. Orari minimi evitano che gli articoli del **giorno corrente** risultino "futuri" per Hugo (esclusi dal build fino al rebuild di `pubblica-programmata.yml`, 06:00 UTC).
+**Perché orari minimi (00:01, 00:02…) e non semantici:** l'orario non è mai mostrato (il template formatta solo "30 aprile 2026"), serve solo come tie-break per l'ordering `Date desc`. Orari minimi evitano che gli articoli del **giorno corrente** risultino "futuri" per Hugo (esclusi dal build fino al rebuild di `pubblica-programmata.yml`, 06:07 UTC).
 
 **Perché la regola esiste:** ad aprile 2026 si è scoperto che con due articoli a `date: AAAA-MM-GG` identico Hugo usa come tie-break l'ordine alfabetico del filename, non quello di pubblicazione: 47 giornate avevano articoli in ordine arbitrario. L'orario crescente risolve.
 
@@ -272,7 +272,7 @@ date: 2026-04-30T00:02:00+02:00
 
 ## Sincronizzazione automatica con gli aggiornamenti AGID
 
-Le linee guida AGID/Designers Italia si aggiornano nel tempo. Il workflow `.github/workflows/aggiorna-manuale.yml` (lunedì 06:00 UTC) monitora le 10 fonti ufficiali (Linee guida design PA, Designers Italia + Writing/Content Toolkit + UI Kit, Bootstrap Italia, Accessibilità AGID, Dichiarazione accessibilità, DPC) via hash SHA-256 (BeautifulSoup).
+Le linee guida AGID/Designers Italia si aggiornano nel tempo. Il workflow `.github/workflows/aggiorna-manuale.yml` (lunedì 06:04 UTC) monitora le 10 fonti ufficiali (Linee guida design PA, Designers Italia + Writing/Content Toolkit + UI Kit, Bootstrap Italia, Accessibilità AGID, Dichiarazione accessibilità, DPC) via hash SHA-256 (BeautifulSoup).
 
 Quando una fonte cambia, apre un'issue (label `manuale + documentazione + revisione`) con checklist a 3 sezioni: **(A)** aggiornare il manuale operativo (`manuale/parte-02`, `03`, `11`, `12`, `MANUALE-SITO.md`); **(B)** aggiornare in coerenza `.claude/rules/`, `CLAUDE.md` e gli agent `pc-article-reviewer`/`pc-social-publisher`/`pc-deploy-validator`; **(C)** verifica finale (build, grep date, chiusura issue).
 
