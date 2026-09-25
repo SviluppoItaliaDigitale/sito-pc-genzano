@@ -1,40 +1,14 @@
 {
  "_snapshot": {
-  "generato": "2026-09-25T01:45:46+00:00",
+  "generato": "2026-09-25T06:41:14+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 19,
-  "scaduti_scartati": 4,
-  "in_corso": 16,
+  "avvisi": 13,
+  "scaduti_scartati": 10,
+  "in_corso": 10,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
-  {
-   "in_corso": true,
-   "regione": "Abruzzo",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-09-25T00:00:00+00:00",
-   "fine": "2026-09-25T05:59:00+00:00",
-   "emesso": "2026-09-24T09:01:03+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.260924110103.025"
-  },
-  {
-   "in_corso": true,
-   "regione": "Abruzzo",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-09-25T00:00:00+00:00",
-   "fine": "2026-09-25T05:59:00+00:00",
-   "emesso": "2026-09-24T09:01:03+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.260924110103.023"
-  },
   {
    "in_corso": true,
    "regione": "Basilicata",
@@ -47,19 +21,6 @@
    "fine": "2026-09-25T21:59:00+00:00",
    "emesso": "2026-09-24T09:01:03+00:00",
    "identificativo": "2.49.0.0.380.3.IT.260924110103.029"
-  },
-  {
-   "in_corso": true,
-   "regione": "Basilicata",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-09-25T00:00:00+00:00",
-   "fine": "2026-09-25T05:59:00+00:00",
-   "emesso": "2026-09-24T09:01:03+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.260924110103.024"
   },
   {
    "in_corso": true,
@@ -112,45 +73,6 @@
    "fine": "2026-09-25T21:59:00+00:00",
    "emesso": "2026-09-24T09:01:03+00:00",
    "identificativo": "2.49.0.0.380.3.IT.260924110103.027"
-  },
-  {
-   "in_corso": true,
-   "regione": "Emilia e Romagna",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-09-25T00:00:00+00:00",
-   "fine": "2026-09-25T05:59:00+00:00",
-   "emesso": "2026-09-24T09:01:03+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.260924110103.022"
-  },
-  {
-   "in_corso": true,
-   "regione": "Marche",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-09-25T00:00:00+00:00",
-   "fine": "2026-09-25T05:59:00+00:00",
-   "emesso": "2026-09-24T09:01:03+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.260924110103.021"
-  },
-  {
-   "in_corso": true,
-   "regione": "Marche",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-09-24T18:00:00+00:00",
-   "fine": "2026-09-25T05:59:00+00:00",
-   "emesso": "2026-09-24T09:01:03+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.260924110103.020"
   },
   {
    "in_corso": true,
