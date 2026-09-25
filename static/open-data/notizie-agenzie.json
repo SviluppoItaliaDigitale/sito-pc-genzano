@@ -5,11 +5,17 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-24T23:23:10+00:00",
+  "generato": "2026-09-25T01:45:36+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-25T01:23:42+00:00",
+   "fonte": "ANSA",
+   "titolo": "Xi e Trump ostentano amicizia: 'Dobbiamo coesistere'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/24/xi-in-visita-negli-usa.-dovremmo-essere-partner-non-rivali.-trump-grande_f5995ac9-d14b-4d27-8567-50c599dca1e8.html"
+  },
   {
    "data": "2026-09-24T22:33:46+00:00",
    "fonte": "ANSA",
@@ -117,12 +123,6 @@
    "fonte": "ANSA",
    "titolo": "Scuola, multe per il burqa e ai genitori che non sanno l'italiano. Meloni: 'Con il tetto evitiamo le classi-ghetto'",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/09/24/scuola-multe-per-il-burqa-e-ai-genitori-che-non-sanno-litaliano.-meloni_39a231c7-1897-4df4-bfd9-a0e0bb8f798b.html"
-  },
-  {
-   "data": "2026-09-24T19:14:47+00:00",
-   "fonte": "ANSA",
-   "titolo": "Xi e Trump ostentano amicizia: 'Dobbiamo coesistere'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/24/xi-in-visita-negli-usa.-dovremmo-essere-partner-non-rivali.-trump-grande_f5995ac9-d14b-4d27-8567-50c599dca1e8.html"
   },
   {
    "data": "2026-09-24T19:13:28+00:00",

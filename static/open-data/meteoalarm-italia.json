@@ -1,42 +1,16 @@
 {
  "_snapshot": {
-  "generato": "2026-09-24T23:23:21+00:00",
+  "generato": "2026-09-25T01:45:46+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 23,
-  "scaduti_scartati": 0,
-  "in_corso": 5,
+  "avvisi": 19,
+  "scaduti_scartati": 4,
+  "in_corso": 16,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
   {
    "in_corso": true,
-   "regione": "Lombardia",
-   "fenomeno": "Vento",
-   "livello": "arancione",
-   "evento_originale": "Orange Wind Warning",
-   "severita": "Severe",
-   "certezza": "Likely",
-   "inizio": "2026-09-24T08:00:00+00:00",
-   "fine": "2026-09-24T23:59:00+00:00",
-   "emesso": "2026-09-24T09:01:03+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.260924110103.016"
-  },
-  {
-   "in_corso": true,
-   "regione": "Trentino Alto Adige",
-   "fenomeno": "Vento",
-   "livello": "arancione",
-   "evento_originale": "Orange Wind Warning",
-   "severita": "Severe",
-   "certezza": "Likely",
-   "inizio": "2026-09-24T08:00:00+00:00",
-   "fine": "2026-09-24T23:59:00+00:00",
-   "emesso": "2026-09-24T09:01:03+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.260924110103.017"
-  },
-  {
-   "in_corso": false,
    "regione": "Abruzzo",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -49,7 +23,7 @@
    "identificativo": "2.49.0.0.380.3.IT.260924110103.025"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Abruzzo",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -62,7 +36,7 @@
    "identificativo": "2.49.0.0.380.3.IT.260924110103.023"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Basilicata",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -75,7 +49,7 @@
    "identificativo": "2.49.0.0.380.3.IT.260924110103.029"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Basilicata",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -88,7 +62,7 @@
    "identificativo": "2.49.0.0.380.3.IT.260924110103.024"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Calabria",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -101,7 +75,7 @@
    "identificativo": "2.49.0.0.380.3.IT.260924110103.035"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Calabria",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -114,7 +88,7 @@
    "identificativo": "2.49.0.0.380.3.IT.260924110103.033"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Campania",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -127,7 +101,7 @@
    "identificativo": "2.49.0.0.380.3.IT.260924110103.031"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Campania",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -140,7 +114,7 @@
    "identificativo": "2.49.0.0.380.3.IT.260924110103.027"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Emilia e Romagna",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -154,19 +128,6 @@
   },
   {
    "in_corso": true,
-   "regione": "Emilia e Romagna",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-09-24T18:00:00+00:00",
-   "fine": "2026-09-24T23:59:00+00:00",
-   "emesso": "2026-09-24T09:01:03+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.260924110103.019"
-  },
-  {
-   "in_corso": false,
    "regione": "Marche",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -192,7 +153,7 @@
    "identificativo": "2.49.0.0.380.3.IT.260924110103.020"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Molise",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -205,7 +166,7 @@
    "identificativo": "2.49.0.0.380.3.IT.260924110103.030"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Molise",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -231,7 +192,7 @@
    "identificativo": "2.49.0.0.380.3.IT.260924110103.037"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Puglia",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -244,7 +205,7 @@
    "identificativo": "2.49.0.0.380.3.IT.260924110103.032"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Puglia",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -283,7 +244,7 @@
    "identificativo": "2.49.0.0.380.3.IT.260924110103.036"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Sicilia",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -294,19 +255,6 @@
    "fine": "2026-09-25T23:59:00+00:00",
    "emesso": "2026-09-24T09:01:03+00:00",
    "identificativo": "2.49.0.0.380.3.IT.260924110103.034"
-  },
-  {
-   "in_corso": true,
-   "regione": "Veneto",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-09-24T08:00:00+00:00",
-   "fine": "2026-09-24T23:59:00+00:00",
-   "emesso": "2026-09-24T09:01:03+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.260924110103.018"
   }
  ]
 }
