@@ -5,11 +5,77 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-25T01:45:36+00:00",
+  "generato": "2026-09-25T06:41:04+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-25T06:26:19+00:00",
+   "fonte": "ANSA",
+   "titolo": "'L'Iran ha proposto agli Usa un piano da 7 giorni per la tregua'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/25/liran-ha-proposto-agli-usa-un-piano-da-7-giorni-per-la-tregua_abfcce73-5c3c-4c55-93df-efa91e3c3202.html"
+  },
+  {
+   "data": "2026-09-25T06:08:34+00:00",
+   "fonte": "ANSA",
+   "titolo": "PRIME PAGINE | Scuola, multe per il burqa e ai genitori che non sanno l'Italiano",
+   "url": "https://www.ansa.it/sito/podcast/ansa_voice_daily/2026/09/25/prime-pagine-scuola-multe-per-il-burqa-e-ai-genitori-che-non-sanno_f107c0a4-5a18-4750-9e92-6c74ae0a98d4.html"
+  },
+  {
+   "data": "2026-09-25T06:01:23+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "All'esame per la patente con auricolari e telefonini, 41 a giudizio",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/25/allesame-per-la-patente-con-auricolari-e-telefonini-41-a-giudizio_fd065f07-5e39-4124-a2ea-625ffa3d5b26.html"
+  },
+  {
+   "data": "2026-09-25T05:28:04+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Emicrania, un bambino su 10 ne soffre con effetti sul rendimento: \"Farmaci ci sono ma solo per adulti\"",
+   "url": "https://www.adnkronos.com/cronaca/emicrania-bambini-mal-di-testa-farmazi_4dkkPDUwnVu5T6P9WDlfxq"
+  },
+  {
+   "data": "2026-09-25T05:22:30+00:00",
+   "fonte": "ANSA",
+   "titolo": "Prove generali di America's Cup, a Napoli parte lo spettacolo",
+   "url": "https://www.ansa.it/sito/notizie/sport/speciali/coppa-america-2027/2026/09/24/prove-generali-di-americas-cup-a-napoli-parte-lo-spettacolo_3bdd1213-35f3-47bd-9f66-690d939a26ef.html"
+  },
+  {
+   "data": "2026-09-25T05:20:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Xi alla cena di Stato di Trump dopo il vertice: \"Nuovo modello di convivenza, la storia non si ferma\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/trump-xi-cena-stato-casa-bianca_9hZncIP039jBhdNUpvX9G"
+  },
+  {
+   "data": "2026-09-25T05:12:18+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Laver Cup al via, oggi i primi match: programma, orari e dove vederli in chiaro",
+   "url": "https://www.adnkronos.com/sport/laver-cup-2026-oggi-match-orario-programma-dove-vederli-chiaro_2h0XB7SIOK3HGOXtDTrUyk"
+  },
+  {
+   "data": "2026-09-25T04:52:01+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Nations League, oggi Italia-Belgio: orario, probabili formazioni e dove vederla in tv (in chiaro)",
+   "url": "https://www.adnkronos.com/sport/italia-belgio-oggi-nations-league-orario-dove-vederla-tv-probabili-formazioni_gkWFy4srDQXLxqlfmPHw8"
+  },
+  {
+   "data": "2026-09-25T04:43:54+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Papa Leone, oggi comincia il suo viaggio apostolico in Francia: cuore della laicità, Macron non parteciperà alle messe",
+   "url": "https://www.adnkronos.com/internazionale/esteri/viaggio-apostolico-papa-leone-francia-macron_5xPe5ECiZGnjUDoF5EdmyN"
+  },
+  {
+   "data": "2026-09-25T04:38:45+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Morbillo, l'appello di Pregliasco: \"Può avere effetti gravi, bisogna prevenire contagio\"",
+   "url": "https://www.adnkronos.com/salute/morbillo-allarme-pregliasco-cosa-rischia-come-prevenire-contagio_6iyETSt2Vnpt63nkjjsecc"
+  },
+  {
+   "data": "2026-09-25T04:32:55+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Formula 1, oggi qualifiche Gp Azerbaigian: orario e dove vederle",
+   "url": "https://www.adnkronos.com/sport/f1-oggi-qualifiche-gp-azerbaigian-orario-e-dove-vederle_16CaAdEZsM7gN7GXS5N8nK"
+  },
   {
    "data": "2026-09-25T01:23:42+00:00",
    "fonte": "ANSA",
@@ -21,12 +87,6 @@
    "fonte": "ANSA",
    "titolo": "Regine del deserto da Genny. In passerella sfila Laila Hasanovich, la fidanzata di Sinner",
    "url": "https://www.ansa.it/canale_lifestyle/notizie/moda/2026/09/24/regine-del-deserto-da-genny.-in-passerella-sfila-laila-hasanovich-la-fidanzata-di-sinner_751a8093-af67-4d2d-b123-3e04cb555094.html"
-  },
-  {
-   "data": "2026-09-24T22:15:55+00:00",
-   "fonte": "ANSA",
-   "titolo": "Prove generali di America's Cup, a Napoli parte lo spettacolo",
-   "url": "https://www.ansa.it/sito/notizie/sport/speciali/coppa-america-2027/2026/09/24/prove-generali-di-americas-cup-a-napoli-parte-lo-spettacolo_3bdd1213-35f3-47bd-9f66-690d939a26ef.html"
   },
   {
    "data": "2026-09-24T22:04:13+00:00",
@@ -65,28 +125,16 @@
    "url": "https://www.adnkronos.com/politica/cruciani-contro-costamagna-dritto-e-rovescio_TKm1Ku4H3zm8YTC0gNxM0"
   },
   {
-   "data": "2026-09-24T21:23:56+00:00",
-   "fonte": "ANSA",
-   "titolo": "Netanyahu all'Assemblea Onu mezza vuota: 'Un codardo chi è uscito'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/24/arriva-netanyahu-la-sala-dellonu-si-svuota-il-premier-israeliano-codardi_234fa594-d5e0-405b-a53b-b6f7bae3ba88.html"
-  },
-  {
    "data": "2026-09-24T21:02:21+00:00",
    "fonte": "ANSA",
    "titolo": "È morta Elena Pero, voce del tennis su Sky",
    "url": "https://www.ansa.it/sito/notizie/sport/2026/09/24/e-morta-elena-pero-voce-del-tennis-su-sky_7ba412d5-3a36-4c6e-979a-d37820a5220c.html"
   },
   {
-   "data": "2026-09-24T20:04:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Operaio morto al Colosseo, 7 persone indagate per il decesso di Andrea Moretti",
-   "url": "https://www.adnkronos.com/cronaca/operaio-morto-colosseo-inchiesta_2wjK5ipNL9pBVhpe3Z5noE"
-  },
-  {
-   "data": "2026-09-24T19:45:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "E' morta Elena Pero, la giornalista di Sky Sport e voce del tennis aveva 60 anni",
-   "url": "https://www.adnkronos.com/sport/elena-pero-morta-malattia-sky-sport_6lt4d6vM7M3D1lTBjX18a8"
+   "data": "2026-09-24T20:29:50+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'Italia di Mancini riparte dal Belgio: 'L'unica medicina e' il bel gioco'",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/24/litalia-di-mancini-riparte-dal-belgio-lunica-medicina-e-il-bel-gioco_8f217ba7-1e9e-4bcf-aa96-35b730498f0b.html"
   },
   {
    "data": "2026-09-24T19:36:41+00:00",
@@ -131,24 +179,6 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/24/mosca-vuole-colpire-italia-francia-e-spagna.-roma-smorza-lallarme_f3970154-cd44-45da-9d7a-0f7ce91c9725.html"
   },
   {
-   "data": "2026-09-24T19:12:30+00:00",
-   "fonte": "ANSA",
-   "titolo": "Damiano David e Dove Cameron sposi, applausi in piazza a Montalcino",
-   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/24/damiano-david-e-dove-cameron-sposi-applausi-in-piazza-a-montalcino_a9335da0-fcb2-4563-9b90-c0ba4730f286.html"
-  },
-  {
-   "data": "2026-09-24T19:12:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Caso Orlandi-Gregori, morto l'ex giudice istruttore Ilario Martella",
-   "url": "https://www.adnkronos.com/cronaca/ilario-martello-ex-giudice-istruttore-emanuela-orlandi-mirella-gregori_6WYqKl6D6T65bgIWJANVx3"
-  },
-  {
-   "data": "2026-09-24T19:06:30+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Emporio Armani, il tempo lascia il segno nell’ultima collezione di Silvana Armani e Leo Dell’Orco",
-   "url": "https://www.adnkronos.com/moda/emporio-armani-il-tempo-lascia-il-segno-nellultima-collezione-di-silvana-armani-e-leo-dellorco_73T7r1h8o0Yb26GCKmSo3u"
-  },
-  {
    "data": "2026-09-24T19:00:30+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Anziano colpito con un calcio da un ragazzo, amico girava video",
@@ -159,36 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Gerbera, il drone russo a basso costo che vola per 600 km",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/24/due-metri-di-lunghezza-e-160-chilometri-orari-di-velocita-cose-un-drone-russo_b6f3e53d-87d2-4a8b-a6f1-8e682eccdfbc.html"
-  },
-  {
-   "data": "2026-09-24T18:40:11+00:00",
-   "fonte": "ANSA",
-   "titolo": "Schiaffo a Trump, il giudice riapre la Casa Bianca a Cnn e tv",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/24/schiaffo-a-trump-il-giudice-riapre-la-casa-bianca-a-cnn-e-tv_bb6a6aeb-955c-48cd-89db-41a757f0f22c.html"
-  },
-  {
-   "data": "2026-09-24T18:37:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Mancini verso l'esordio contro il Belgio: \"Sensazioni positive. Italia, ora dipende da noi\"",
-   "url": "https://www.adnkronos.com/sport/mancini-conferenza-italia-belgio-formazione-azzurri_4uY0BGNulAkI2ZjFExAs6k"
-  },
-  {
-   "data": "2026-09-24T18:29:18+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Allarme reati dei minori, poteri al Procuratore nazionale antimafia",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/24/al-procuratore-nazionale-antimafia-poteri-anche-per-procedimenti-su-minori_5daa1e3b-0c92-46e5-8f12-e06aae8a9570.html"
-  },
-  {
-   "data": "2026-09-24T18:25:41+00:00",
-   "fonte": "ANSA",
-   "titolo": "Gli U2 tornano con un nuovo album in studio, il primo della band dopo 9 anni",
-   "url": "https://www.ansa.it/sito/notizie/cultura/musica/2026/09/24/u2-tornano-con-un-nuovo-album-in-studio-il-primo-della-band-dopo-9-anni_19b49d03-5e71-4f9c-812b-02313119852e.html"
-  },
-  {
-   "data": "2026-09-24T18:20:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Trump-Xi, vertice alla Casa Bianca: \"Nuovo accordo\" sul commercio tra Usa e Cina",
-   "url": "https://www.adnkronos.com/internazionale/esteri/trump-xi-jinping-incontro-oggi_4PriR1BWiBzaMb2Pur3RpK"
   }
  ]
 }
