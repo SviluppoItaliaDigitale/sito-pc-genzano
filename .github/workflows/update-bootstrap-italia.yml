@@ -3,6 +3,16 @@
 # Si attiva:
 #   - Ogni lunedì alle 06:00 UTC (08:00 ora italiana)
 #   - Manualmente dal tab "Actions" su GitHub
+#
+# Dal 26/09/2026 (audit esterno 25/09, rilievo F09):
+#   - la release scaricata da GitHub si confronta, file per file, con il
+#     pacchetto npm della stessa versione, a sua volta verificato contro
+#     l'impronta sha512 pubblicata dal registry. Se non coincidono, niente
+#     aggiornamento e una issue urgente;
+#   - niente più push diretto su main: l'aggiornamento arriva come pull
+#     request (branch bot/bootstrap-italia-<versione>) e il merge resta umano,
+#     come per le PR di Dependabot. Prima di aprirla il workflow fa una build
+#     Hugo di prova.
 # ============================================================
 name: "🔄 Aggiorna Bootstrap Italia"
 
@@ -17,6 +27,7 @@ on:
 permissions:
   contents: write
   issues: write
+  pull-requests: write
 
 jobs:
   check-and-update:
@@ -175,6 +186,7 @@ jobs:
 
       # Passo 4: Applica l'aggiornamento stabile se necessario e sicuro
       - name: "⬆️ Aggiorna Bootstrap Italia"
+        id: update
         if: steps.current.outputs.version != steps.releases.outputs.stable && steps.gate.outputs.safe == 'true'
         run: |
           NEW_VERSION="${{ steps.releases.outputs.stable }}"
@@ -187,13 +199,58 @@ jobs:
           # Scarica la nuova versione
           DOWNLOAD_URL="https://github.com/italia/bootstrap-italia/releases/download/v${NEW_VERSION}/bootstrap-italia.zip"
           echo "📥 Download da: $DOWNLOAD_URL"
-          curl -L -o /tmp/bootstrap-italia.zip "$DOWNLOAD_URL"
+          curl -fsSL --max-time 120 -o /tmp/bootstrap-italia.zip "$DOWNLOAD_URL"
 
           # Verifica che il download sia andato a buon fine
           if [ ! -s /tmp/bootstrap-italia.zip ]; then
             echo "❌ ERRORE: Download fallito!"
             exit 1
           fi
+
+          # ── Verifica d'integrità (audit 25/09/2026, F09) ──
+          # 1. Il pacchetto npm della stessa versione si verifica contro
+          #    l'impronta sha512 che il registry pubblica (dist.integrity).
+          # 2. Ogni file dello zip GitHub deve esistere, identico, in
+          #    package/dist del pacchetto npm (stessa struttura, verificato
+          #    sulla v2.18.3). Due canali di distribuzione indipendenti che
+          #    coincidono: un asset alterato su uno solo dei due si ferma qui.
+          META=$(curl -fsS --max-time 30 "https://registry.npmjs.org/bootstrap-italia/${NEW_VERSION}") || {
+            echo "npm_ko=true" >> "$GITHUB_OUTPUT"
+            echo "❌ Registry npm non raggiungibile: senza verifica d'integrità non si aggiorna."
+            exit 1
+          }
+          TARBALL=$(printf '%s' "$META" | jq -r '.dist.tarball // empty')
+          INTEGRITY=$(printf '%s' "$META" | jq -r '.dist.integrity // empty')
+          if [ -z "$TARBALL" ] || [ "${INTEGRITY#sha512-}" = "$INTEGRITY" ]; then
+            echo "integrita_ko=true" >> "$GITHUB_OUTPUT"
+            echo "❌ Metadati npm senza tarball o impronta sha512."
+            exit 1
+          fi
+          curl -fsSL --max-time 120 -o /tmp/bi-npm.tgz "$TARBALL"
+          CALCOLATA="sha512-$(openssl dgst -sha512 -binary /tmp/bi-npm.tgz | base64 -w0)"
+          if [ "$CALCOLATA" != "$INTEGRITY" ]; then
+            echo "integrita_ko=true" >> "$GITHUB_OUTPUT"
+            echo "❌ Il pacchetto npm non corrisponde all'impronta del registry."
+            exit 1
+          fi
+          rm -rf /tmp/bi-npm /tmp/bi-zip && mkdir -p /tmp/bi-npm /tmp/bi-zip
+          tar -xzf /tmp/bi-npm.tgz -C /tmp/bi-npm
+          unzip -q -o /tmp/bootstrap-italia.zip -d /tmp/bi-zip
+          DIVERSI=0
+          while IFS= read -r -d '' f; do
+            rel="${f#/tmp/bi-zip/}"
+            if ! cmp -s "$f" "/tmp/bi-npm/package/dist/$rel"; then
+              echo "  ✗ $rel diverso o assente nel pacchetto npm"
+              DIVERSI=$((DIVERSI+1))
+            fi
+          done < <(find /tmp/bi-zip -type f -print0)
+          if [ "$DIVERSI" -gt 0 ]; then
+            echo "integrita_ko=true" >> "$GITHUB_OUTPUT"
+            echo "❌ $DIVERSI file dello zip GitHub non coincidono con il pacchetto npm."
+            exit 1
+          fi
+          echo "✅ Integrità verificata: impronta npm e $(find /tmp/bi-zip -type f | wc -l) file coincidenti."
+          echo "integrita=$CALCOLATA" >> "$GITHUB_OUTPUT"
 
           # Rimuovi la vecchia versione
           rm -rf static/vendor/bootstrap-italia
@@ -237,7 +294,8 @@ jobs:
           echo "$NEW_VERSION" > .bootstrap-italia-version
 
           # Pulizia
-          rm -f /tmp/bootstrap-italia.zip
+          rm -f /tmp/bootstrap-italia.zip /tmp/bi-npm.tgz
+          rm -rf /tmp/bi-npm /tmp/bi-zip
 
           # Verifica che i file essenziali esistano
           echo ""
@@ -247,23 +305,91 @@ jobs:
           echo ""
           echo "✅ Aggiornamento completato a v$NEW_VERSION"
 
-      # Passo 5: Committa e pusha le modifiche
-      - name: "📤 Commit e Push aggiornamento"
-        if: steps.current.outputs.version != steps.releases.outputs.stable && steps.gate.outputs.safe == 'true'
+      # Passo 5a: verifica d'integrità fallita o registry giù → issue urgente,
+      # nessun aggiornamento (il job è già fallito al passo 4).
+      - name: "🚨 Issue: verifica d'integrità non superata"
+        if: failure() && steps.update.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "GitHub Actions Bot"
-          git add -A
-          git commit -m "⬆️ Aggiorna Bootstrap Italia da v${{ steps.current.outputs.version }} a v${{ steps.releases.outputs.stable }}" \
-                     -m "Aggiornamento automatico eseguito da GitHub Actions." \
-                     -m "Release: https://github.com/italia/bootstrap-italia/releases/tag/v${{ steps.releases.outputs.stable }}"
-          # Retry+rebase per evitare conflitti di concorrenza con altri workflow
-          for tentativo in 1 2 3; do
-            if git push 2>&1; then break; fi
-            echo "Push fallito (tentativo $tentativo), rebase..."
-            git pull --rebase origin main || { echo "Rebase fallito"; exit 1; }
-            if [ "$tentativo" = "3" ]; then echo "Push fallito dopo 3 tentativi"; exit 1; fi
-          done
+          TITOLO="🚨 Bootstrap Italia v${{ steps.releases.outputs.stable }}: aggiornamento non applicato"
+          if [ "${{ steps.update.outputs.npm_ko }}" = "true" ]; then
+            MOTIVO="il registry npm non ha risposto, quindi non è stato possibile confrontare la release con il pacchetto npm. Nessun file è stato toccato: il workflow riproverà lunedì prossimo."
+          elif [ "${{ steps.update.outputs.integrita_ko }}" = "true" ]; then
+            MOTIVO="**lo zip della release GitHub non coincide con il pacchetto npm della stessa versione**, oppure il pacchetto npm non corrisponde alla sua impronta sha512. Nessun file è stato toccato. Va verificato a mano prima di qualunque aggiornamento: potrebbe essere una release ripubblicata, un errore del maintainer o un asset alterato."
+          else
+            MOTIVO="un passo dell'aggiornamento è fallito (vedi il log). Nessun commit è stato fatto."
+          fi
+          ESISTENTE=$(gh issue list --state open --search "$TITOLO in:title" --json number --jq '.[0].number' || echo "")
+          CORPO="L'aggiornamento automatico di Bootstrap Italia a v${{ steps.releases.outputs.stable }} (installata: v${{ steps.current.outputs.version }}) si è fermato: $MOTIVO
+
+          Log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          if [ -n "$ESISTENTE" ] && [ "$ESISTENTE" != "null" ]; then
+            gh issue comment "$ESISTENTE" --body "$CORPO"
+          else
+            gh issue create --title "$TITOLO" --label "automazione,urgente" --body "$CORPO"
+          fi
+
+      # Passo 5b: build di prova. Le PR aperte con il GITHUB_TOKEN non fanno
+      # partire i workflow pull_request (validate-pr, pa11y-ci): il minimo
+      # indispensabile si controlla qui, prima di aprirla.
+      - name: "⚙️ Setup Hugo (build di prova)"
+        if: steps.update.outcome == 'success'
+        uses: peaceiris/actions-hugo@2752ce1d29631191ea3f27c23495fa06139a5b78 # v3.2.1
+        with:
+          hugo-version: '0.154.5'
+          extended: true
+
+      - name: "🏗️ Build di prova con la nuova versione"
+        if: steps.update.outcome == 'success'
+        run: |
+          set -o pipefail
+          hugo --minify --baseURL "https://www.protezionecivilegenzano.it/" -d /tmp/public-prova 2>&1 | tee /tmp/build.log
+          if grep -E "^ERROR" /tmp/build.log; then
+            echo "::error::La build Hugo con Bootstrap Italia v${{ steps.releases.outputs.stable }} produce errori"
+            exit 1
+          fi
+          rm -rf /tmp/public-prova
+
+      # Passo 5c: pull request invece del push su main. Il merge resta umano.
+      # Token: BOOTSTRAP_PR_TOKEN (facoltativo, un token con permesso sulle
+      # PR) fa partire anche validate-pr e pa11y-ci sulla PR; senza, si usa
+      # il GITHUB_TOKEN e valgono i controlli fatti qui sopra.
+      - name: "📤 Apri la pull request di aggiornamento"
+        if: steps.update.outcome == 'success'
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
+        with:
+          token: ${{ secrets.BOOTSTRAP_PR_TOKEN || secrets.GITHUB_TOKEN }}
+          branch: bot/bootstrap-italia-${{ steps.releases.outputs.stable }}
+          base: main
+          delete-branch: true
+          add-paths: |
+            static/vendor/bootstrap-italia
+            .bootstrap-italia-version
+          commit-message: |
+            ⬆️ Aggiorna Bootstrap Italia da v${{ steps.current.outputs.version }} a v${{ steps.releases.outputs.stable }}
+
+            Release: https://github.com/italia/bootstrap-italia/releases/tag/v${{ steps.releases.outputs.stable }}
+          committer: GitHub Actions Bot <github-actions[bot]@users.noreply.github.com>
+          author: GitHub Actions Bot <github-actions[bot]@users.noreply.github.com>
+          title: "⬆️ Bootstrap Italia v${{ steps.releases.outputs.stable }} (da v${{ steps.current.outputs.version }})"
+          labels: |
+            automazione
+            manutenzione
+          body: |
+            Aggiornamento di **Bootstrap Italia** da v${{ steps.current.outputs.version }} a **v${{ steps.releases.outputs.stable }}** (stessa major).
+
+            **Verifiche già fatte dal workflow**
+            - Pacchetto npm `bootstrap-italia@${{ steps.releases.outputs.stable }}` verificato contro l'impronta del registry: `${{ steps.update.outputs.integrita }}`.
+            - Ogni file dello zip della release GitHub coincide con il pacchetto npm.
+            - `svg/sprites.svg` presente al suo posto.
+            - Build Hugo di prova senza errori.
+
+            **Prima del merge**
+            - Controlla a vista header, menu mobile, footer e icone su una pagina di prova.
+            - Se la PR non mostra i controlli `validate-pr` e `pa11y-ci`, è perché è stata aperta con il token del workflow: aggiorna il branch da GitHub oppure configura il secret `BOOTSTRAP_PR_TOKEN`.
+
+            Note di rilascio: https://github.com/italia/bootstrap-italia/releases/tag/v${{ steps.releases.outputs.stable }}
 
       # Passo 6: Nessun aggiornamento stabile necessario
       - name: "✅ Nessun aggiornamento stabile necessario"
@@ -286,7 +412,7 @@ jobs:
           if [ "${{ steps.current.outputs.version }}" == "${{ steps.releases.outputs.stable }}" ]; then
             echo "| **Azione (stabile)** | Nessun aggiornamento necessario |" >> $GITHUB_STEP_SUMMARY
           elif [ "${{ steps.gate.outputs.safe }}" == "true" ]; then
-            echo "| **Azione (stabile)** | ✅ **Aggiornato!** |" >> $GITHUB_STEP_SUMMARY
+            echo "| **Azione (stabile)** | ✅ **Pull request di aggiornamento aperta** (merge umano) |" >> $GITHUB_STEP_SUMMARY
           else
             echo "| **Azione (stabile)** | 🛑 **Bloccato dal gate di sicurezza** (major) — aperta issue per migrazione manuale |" >> $GITHUB_STEP_SUMMARY
           fi
