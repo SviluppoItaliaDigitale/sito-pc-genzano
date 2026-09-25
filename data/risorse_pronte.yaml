@@ -306,6 +306,28 @@ materiali:
   dimensione: 4.5 MB
   data_pubblicazione: '2026-03-21'
   licenza: CC BY-NC-SA 4.0
+- id: rischio-idrogeologico-video-2026-09-25
+  tema: rischio-idrogeologico
+  tema_titolo: Rischio idrogeologico
+  tipo: video
+  titolo: 'Video: alluvione e forti piogge, come comportarsi'
+  descrizione: Video verticale con voce e sottotitoli (circa 2 minuti) su cosa fare
+    prima, durante e dopo un'alluvione. Pronto da condividere su WhatsApp e social.
+  file_url: /video/2026-09-25-alluvione-forti-piogge-video.mp4
+  dimensione: 4.3 MB
+  data_pubblicazione: '2026-09-25'
+  licenza: CC BY 4.0
+- id: rischio-idrogeologico-video-16x9-2026-09-25
+  tema: rischio-idrogeologico
+  tema_titolo: Rischio idrogeologico
+  tipo: video
+  titolo: 'Video orizzontale: alluvione e forti piogge, come comportarsi'
+  descrizione: Lo stesso video in formato orizzontale (circa 2 minuti, voce e sottotitoli),
+    per computer, televisione e proiezione a scuola o negli incontri.
+  file_url: /video/2026-09-25-alluvione-forti-piogge-video-16x9.mp4
+  dimensione: 4.6 MB
+  data_pubblicazione: '2026-09-25'
+  licenza: CC BY 4.0
 - id: rischio-idrogeologico-podcast-2026-04-08
   tema: rischio-idrogeologico
   tema_titolo: Rischio idrogeologico

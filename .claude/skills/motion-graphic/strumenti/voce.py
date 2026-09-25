@@ -89,6 +89,13 @@ def fonemi(modello):
 # Valori scelti a orecchio dall'utente il 24/09/2026 fra tre campioni (versione «B»).
 PAUSE = {",": 0.32, ";": 0.50, ":": 0.50, "—": 0.40, "–": 0.40,
          ".": 0.85, "?": 0.85, "!": 0.85, "…": 0.90, "|": 0.45}
+# Dentro la frase (virgola, due punti, trattino) la pausa si allunga solo se la
+# voce fa già un respiro naturale di almeno GAP_NATURALE secondi: dove lega le
+# parole, un silenzio infilato a forza suona come un inceppo (segnalato
+# ascoltando il video sull'alluvione, 25/09/2026). A fine frase e con "|" si
+# allunga sempre.
+GAP_NATURALE = 0.06
+FINE_FRASE = set(".?!…|")
 SOGLIA = 500          # ampiezza sotto cui un tratto è silenzio (int16)
 FINESTRA = 0.01       # 10 ms
 
@@ -156,14 +163,14 @@ def confini(testo):
     pulito, out, i = "", [], 0
     while i < len(testo):
         if testo[i] == "|":
-            out.append((len(pulito), PAUSE["|"]))
+            out.append((len(pulito), PAUSE["|"], "|"))
             if pulito:
                 pulito += " "
             i += 1
             continue
         if testo.startswith("...", i):
             pulito += "..."
-            out.append((len(pulito), PAUSE["…"]))
+            out.append((len(pulito), PAUSE["…"], "…"))
             i += 3
             continue
         c = testo[i]
@@ -172,10 +179,13 @@ def confini(testo):
             dopo = testo[i + 1:i + 2]
             # il punto dentro una sigla o un numero non è una pausa
             if not (c in ".," and dopo and not dopo.isspace() and dopo != "|"):
-                out.append((len(pulito), PAUSE[c]))
+                out.append((len(pulito), PAUSE[c], c))
         i += 1
     fine = len(pulito.rstrip())
-    return pulito.strip(), [(p, d) for p, d in out if 0 < p < fine]   # il segno finale chiude la riga
+    return pulito.strip(), [(p, d, c) for p, d, c in out if 0 < p < fine]   # il segno finale chiude la riga
+
+
+APPLICATE = []   # posizioni nel testo dove l'ultima chiamata ha allungato la pausa (per le verifiche)
 
 
 def leggi_con_pause(voce, testo, cfg):
@@ -190,7 +200,9 @@ def leggi_con_pause(voce, testo, cfg):
     x, sr = _sintesi(voce, pulito, cfg)
     e = _energia(x, sr)
     tagli, note = [], []
-    for pos, voluta in segni:
+    APPLICATE.clear()
+    for pos, voluta, segno in segni:
+        forte = segno in FINE_FRASE
         prefisso, _ = _sintesi(voce, pulito[:pos], cfg)
         t = _fine_in_frase(prefisso, x, sr)
         c = int(round(t / FINESTRA))
@@ -211,9 +223,11 @@ def leggi_con_pause(voce, testo, cfg):
                 if migliore is None or cand > migliore:
                     migliore = cand
                 run = 0
+        if not forte and (migliore is None or migliore[1] * FINESTRA < GAP_NATURALE):
+            continue   # la voce lega le parole: si lascia scorrere
         if migliore is None:
-            # la voce lega le parole senza fermarsi: si taglia nel punto di
-            # minima energia a ridosso della fine allineata, con dissolvenze
+            # solo "|": si taglia nel punto di minima energia a ridosso della
+            # fine allineata, con dissolvenze
             lo2, hi2 = max(0, c - 5), min(len(e), c + 6)
             j = lo2 + int(np.argmin(e[lo2:hi2]))
             if e[j] > e.max() * 0.35:
@@ -226,6 +240,7 @@ def leggi_con_pause(voce, testo, cfg):
         aggiunta = max(0.0, voluta - esistente)
         if aggiunta > 0.005:
             tagli.append((int(centro * FINESTRA * sr), int(aggiunta * sr)))
+            APPLICATE.append(pos)
     pezzi, ultimo = [], 0
     f = int(sr * 0.008)                      # dissolvenze di 8 ms: nessun clic sul taglio
     y = x.astype(float)

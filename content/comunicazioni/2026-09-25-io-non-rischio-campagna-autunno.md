@@ -1,6 +1,6 @@
 ---
 title: "Io Non Rischio: torna la campagna nazionale di volontariato per il rischio"
-date: 2026-09-25
+date: 2026-09-25T00:01:00+02:00
 description: "Ogni autunno Io Non Rischio porta migliaia di volontari nelle piazze italiane per parlare di rischi e autoprotezione. Come funziona e cosa può fare ognuno."
 badge: "Volontariato"
 priorita: "normale"

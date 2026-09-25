@@ -57,6 +57,8 @@ Due video brevi, con voce e sottotitoli, riassumono questa sezione: il primo spi
 {{< video src="/video/2026-09-23-allerta-meteo-cosa-fare.mp4" poster="/video/2026-09-23-allerta-meteo-cosa-fare-poster.webp" verticale="true" titolo="Video con voce e sottotitoli: cosa fare con l'allerta verde, gialla, arancione e rossa" caption="Cosa fare, dal verde al rosso." >}}
 </div>
 
+Cosa fare se l'acqua arriva davvero, in casa, all'aperto e in auto, lo spiega un terzo video nella pagina [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/).
+
 ### <span class="badge badge-allerta-verde">VERDE</span> — Nessuna allerta
 
 {{< pittogramma src="/pittogrammi/arasaac/calma.png" alt="Pittogramma: situazione di calma" size="small" inline="true" >}} Non sono previsti fenomeni significativi.

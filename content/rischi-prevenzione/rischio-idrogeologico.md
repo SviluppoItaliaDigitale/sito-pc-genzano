@@ -1,7 +1,7 @@
 ---
 
 title: "Rischio Idrogeologico"
-dataUltimaRevisione: "2026-05-21"
+dataUltimaRevisione: "2026-09-25"
 description: "Le norme di comportamento da adottare in caso di alluvioni, frane e temporali intensi sul territorio di Genzano di Roma."
 tts: true
 lis_section: "rischio-idrogeologico"
@@ -16,6 +16,41 @@ howto_dopo: "Non rientrare in casa finché le autorità non lo autorizzano. Non 
 Il rischio idrogeologico riguarda alluvioni, allagamenti, frane e smottamenti. Piogge intense e persistenti possono innescarli anche in poche ore.
 
 {{< emergenza-ora >}}
+
+{{< video src="/video/2026-09-25-alluvione-forti-piogge-video.mp4"
+          poster="/video/2026-09-25-alluvione-forti-piogge-video-poster.webp"
+          verticale="true"
+          titolo="Video con voce e sottotitoli: alluvione e forti piogge, come comportarsi"
+          caption="Cosa fare prima, durante e dopo un'alluvione, in circa due minuti. La versione orizzontale, per la proiezione a scuola, è nelle [Risorse pronte](/risorse-pronte/#tema-rischio-idrogeologico). Video: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, sulle indicazioni della campagna «Io non rischio» del Dipartimento della Protezione Civile." >}}
+
+<details class="faq-item">
+<summary><strong>Trascrizione del video</strong></summary>
+
+Alluvione e forti piogge: come comportarsi.
+
+In un'alluvione l'acqua può salire all'improvviso, anche di uno o due metri in pochi minuti.
+
+I punti più pericolosi: in casa, cantine, seminterrati e piani terra. Fuori, sottopassi, argini, ponti e le zone più basse.
+
+Prima: informati sul piano di protezione civile del tuo Comune e segui le allerte. Prepara il kit di emergenza, e non tenere oggetti di valore in cantina.
+
+Con l'allerta, non dormire nei seminterrati. Se devi spostarti, scegli un percorso lontano dalle zone che si allagano.
+
+Se l'acqua arriva, non scendere in cantina o in garage per salvare le tue cose: rischi la vita. Sali ai piani alti, senza ascensore.
+
+Chiudi il gas e stacca la corrente, ma non toccare gli impianti con mani o piedi bagnati. Non bere l'acqua del rubinetto: potrebbe essere contaminata.
+
+Se sei all'aperto, allontanati dall'acqua: per la velocità con cui scorre, anche pochi centimetri possono farti cadere. Raggiungi un punto più alto, lontano da pendii e scarpate che possono franare.
+
+Non usare l'auto: pochi centimetri d'acqua possono farti perdere il controllo o spegnere il motore. Evita sottopassi, argini e ponti.
+
+Aiuta gli anziani e le persone con disabilità del tuo palazzo. Usa poco il cellulare: le linee libere servono ai soccorsi.
+
+Dopo, segui le indicazioni delle autorità prima di rientrare o spalare il fango. Stai lontano dalle strade allagate: possono nascondere buche e tombini aperti. Bevi l'acqua del rubinetto solo se il Comune non lo vieta.
+
+Segui solo le fonti ufficiali. Genzano di Roma è nella zona di allerta F. In emergenza chiama il 112.
+
+</details>
 
 ## <i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Perché è rilevante sul nostro territorio {#perche-rilevante}
 Genzano di Roma sorge sul bordo di un antico cratere vulcanico del **Vulcano Laziale**: il paese affaccia sul **lago di Nemi**, ospitato in una conca craterica dai versanti ripidi. Questa morfologia — pendii acclivi, terreni piroclastici, conche chiuse che raccolgono l'acqua — rende il territorio sensibile sia alle **frane e agli smottamenti** sui versanti, sia agli **allagamenti** nelle zone basse e lungo i fossi quando le piogge sono intense e prolungate. L'impermeabilizzazione delle aree urbanizzate accelera il deflusso e aumenta il rischio di allagamenti improvvisi. Il rischio cresce nei periodi autunnali e primaverili, quando il terreno è più saturo.
