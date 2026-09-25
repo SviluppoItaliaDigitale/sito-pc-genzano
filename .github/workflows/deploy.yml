@@ -179,6 +179,12 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          # FTPS esplicito (AUTH TLS sulla porta 21): senza questa riga l'action
+          # usa FTP in chiaro e credenziali + contenuti viaggiano non cifrati a
+          # ogni deploy (audit 25/09/2026, rilievo F01). Se Aruba rifiutasse la
+          # negoziazione TLS, provare `ftps-legacy`; in ogni caso ruotare la
+          # password FTP dopo il primo deploy cifrato riuscito.
+          protocol: ftps
           local-dir: ./public/
           server-dir: /www.protezionecivilegenzano.it/
           dangerous-clean-slate: false
