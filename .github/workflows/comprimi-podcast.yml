@@ -34,7 +34,7 @@ jobs:
           shopt -s nullglob
           for f in static/podcast/episodi/*.m4a; do
             tmp="${f%.m4a}.tmp.m4a"
-            ffmpeg -y -loglevel error -i "$f" -c:a aac -b:a 64k -ac 1 -map_metadata -1 -movflags +faststart "$tmp"
+            ffmpeg -y -loglevel error -i "$f" -c:a aac -b:a 64k -ac 1 -map_metadata -1 -map_metadata:s:a -1 -fflags +bitexact -flags:a +bitexact -movflags +faststart "$tmp"
             orig=$(stat -c%s "$f"); new=$(stat -c%s "$tmp")
             # verifica durata preservata (entro 2 secondi) per non rovinare l'audio
             d1=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$f" | cut -d. -f1)

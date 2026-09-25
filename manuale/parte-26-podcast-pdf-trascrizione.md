@@ -125,11 +125,22 @@ I file `.m4a` in `static/podcast/episodi/` portano nei metadati il nome del prog
 **Regola dal 26/09/2026:** ogni episodio nuovo si carica **senza metadati**. Prima del commit:
 
 ```bash
-ffmpeg -i episodio-originale.m4a -c copy -map_metadata -1 episodio.m4a
-ffprobe -v error -show_entries format_tags -of default=nw=1 episodio.m4a   # deve essere vuoto
+ffmpeg -i episodio-originale.m4a -c:a aac -b:a 64k -ac 1 \
+  -map_metadata -1 -map_metadata:s:a -1 -fflags +bitexact -flags:a +bitexact \
+  -movflags +faststart episodio.m4a
+ffprobe -v error -show_entries format_tags:stream_tags -of default=nw=1 episodio.m4a
+strings episodio.m4a | grep -iE 'lavf|lavc|google|encoder'   # non deve stampare nulla
 ```
 
-`-c copy` non ricodifica (qualità invariata, pochi secondi), `-map_metadata -1` scarta tutti i tag. Il workflow `comprimi-podcast.yml` applica la stessa opzione quando ricomprime gli episodi, quindi ogni file che passa da lì esce pulito.
+Tre opzioni servono tutte, e sono state provate su un episodio vero il 26/09/2026:
+
+- `-map_metadata -1` e `-map_metadata:s:a -1` scartano i tag del file e quelli dello stream audio;
+- `-fflags +bitexact` impedisce a FFmpeg di scrivere la propria firma (`Lavf…`) nel contenitore;
+- `-flags:a +bitexact` impedisce all'encoder di scriverla (`Lavc…`) dentro l'audio.
+
+🔴 **La sola copia del flusso (`-c copy`) non basta**: toglie i tag del contenitore, ma la firma dell'encoder originale è scritta *dentro* i dati audio e sopravvive, verificato con `strings`. Serve la ricodifica. A 64 kbps mono una voce parlata non perde nulla di udibile.
+
+Resta `handler_name: SoundHandler`, il nome generico che ogni file MP4 porta per la traccia audio: non identifica alcuno strumento. La verifica con `ffprobe` va fatta su **`format_tags` e `stream_tags`** insieme, perché i tag dello stream sfuggono al solo `format_tags`. Il workflow `comprimi-podcast.yml` usa le stesse opzioni quando ricomprime gli episodi.
 
 **I 18 episodi già pubblicati non sono stati ricaricati**: sono ~500 MB di binari, e riscriverli nella storia git per cambiare soli metadati farebbe crescere il repository (già 1,7 GB) senza vantaggi per il cittadino. Si puliscono alla prossima occasione in cui vanno comunque ricompressi o sostituiti (lancio manuale di `comprimi-podcast.yml`), episodio per episodio. La dichiarazione «letta da una voce sintetica» nelle pagine degli episodi resta: è una nota di trasparenza dovuta a chi ascolta, non un riferimento a uno strumento.
 
