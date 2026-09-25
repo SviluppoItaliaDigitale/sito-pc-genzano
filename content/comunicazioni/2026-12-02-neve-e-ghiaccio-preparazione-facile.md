@@ -119,7 +119,7 @@ Si forma di notte, quando fa freddo dopo la pioggia.
 
 - Usa coperte e vestiti caldi.
 - Non aprire il frigorifero spesso. Tiene il freddo più a lungo.
-- Usa le candele con molta attenzione. Non lasciarle sole accese.
+- Non usare le candele. Usa una torcia con le pile.
 - Chiama il tuo gestore di luce per segnalare il guasto.
 
 ### Cadi sul ghiaccio

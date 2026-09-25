@@ -162,7 +162,7 @@ hreflang_xdefault: "/facile-da-leggere/"
 </ul>
 <p><strong>Nu face aceste lucruri:</strong></p>
 <ul class="facile-elenco no">
-<li>nu aprinde lumânări singur;</li>
+<li>nu aprinde lumânări: folosește doar lanterna cu baterii;</li>
 <li>nu folosi liftul;</li>
 <li>nu folosi grătar sau jăratic în casă.</li>
 </ul>

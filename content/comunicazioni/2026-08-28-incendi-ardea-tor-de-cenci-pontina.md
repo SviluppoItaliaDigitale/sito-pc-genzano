@@ -62,7 +62,7 @@ Sul posto lavorano anche i **Vigili del Fuoco**. Lo spegnimento e la bonifica im
          caption="La manichetta stesa attraverso la carreggiata per raggiungere il fronte di fuoco. Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma." >}}
 {{< /galleria >}}
 
-Il Gruppo non si attiva mai su chiamata diretta dei cittadini: interviene su **attivazione della Sala Operativa regionale**, che durante la campagna estiva antincendio coordina squadre e mezzi insieme ai Vigili del Fuoco. Siamo ancora nel **periodo di massima pericolosità** dichiarato dalla Regione Lazio, dal 15 giugno al 30 settembre: con vegetazione secca e vento, qualsiasi scintilla può trasformarsi in un fronte di fuoco.
+Il Gruppo non si attiva mai su chiamata diretta dei cittadini: interviene su **attivazione della Sala Operativa regionale**, che durante la campagna estiva antincendio coordina squadre e mezzi insieme ai Vigili del Fuoco. Siamo ancora nel **periodo di massima pericolosità** dichiarato dalla Regione Lazio, dal 15 giugno al 15 ottobre 2026: con vegetazione secca e vento, qualsiasi scintilla può trasformarsi in un fronte di fuoco.
 
 ## Se vedi fumo o fiamme
 

@@ -14,8 +14,8 @@ sitemap:
 <style>
 .en-card{background:#fff;border-left:5px solid #003366;border-radius:8px;padding:1.1rem 1.3rem;margin:1rem 0;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
 .en-card h2{color:#003366;font-size:1.3rem;margin:0 0 0.6rem 0;display:flex;align-items:center;gap:0.5rem}
-.en-tel{background:#dc3545;color:#fff;padding:0.6rem 1rem;border-radius:8px;font-weight:700;font-size:1.4rem;text-decoration:none;display:inline-block;margin:0.4rem 0}
-.en-tel:hover,.en-tel:focus{background:#b02a37;color:#fff;outline:3px solid #ffbe2e;outline-offset:2px}
+.article-body a.en-tel,.en-tel{background:#dc3545;color:#fff!important;padding:0.6rem 1rem;border-radius:8px;font-weight:700;font-size:1.4rem;text-decoration:none;display:inline-block;margin:0.4rem 0}
+.article-body a.en-tel:hover,.article-body a.en-tel:focus,.en-tel:hover,.en-tel:focus{background:#b02a37;color:#fff!important;outline:3px solid #ffbe2e;outline-offset:2px}
 .en-list{padding-left:1.4rem}
 .en-list li{margin-bottom:0.35rem}
 </style>

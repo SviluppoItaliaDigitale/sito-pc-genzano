@@ -111,12 +111,19 @@
        visivamente identico, ma viene dipinto nella prima ondata di rendering.
        In fondo al DOM era l'elemento LCP con Render Delay ~6s su mobile
        (Lighthouse 10/06/2026): il parser lo raggiungeva per ultimo. */}}
-  {{ partial "cookie-banner.html" . }}
+  {{/* Lingua delle parti (WCAG 3.1.2): nelle pagine dichiarate in un'altra
+       lingua (english, francais, …) header, footer, barra rapida e pulsanti
+       flottanti restano in italiano e vanno marcati lang="it", altrimenti lo
+       screen reader li legge con la pronuncia della lingua della pagina
+       (audit 25/09/2026). */}}
+  {{- $chromeLang := "" -}}
+  {{- with .Params.language }}{{ if ne . "it" }}{{ $chromeLang = " lang=\"it\"" }}{{ end }}{{ end -}}
+  <div{{ $chromeLang | safeHTMLAttr }}>{{ partial "cookie-banner.html" . }}</div>
   {{/* <header> = landmark "banner" unico che racchiude slim header + navbar
        (brand, ricerca, menu). Prima solo la barra slim aveva role="banner" e
        logo/testo brand/zona ricerca restavano fuori da ogni landmark (rilievo
        axe "region", audit 01/09/2026). Speculare in static/app-shared/site-chrome.js. */}}
-  <header class="site-header">
+  <header class="site-header"{{ $chromeLang | safeHTMLAttr }}>
     {{ partial "slim-header.html" . }}
     {{ partial "navbar.html" . }}
   </header>
@@ -136,6 +143,7 @@
         data-pagefind-filter="Sezione:{{ cond (eq .Section "") "Sito" (.Section | replaceRE "-" " " | title) }}">
     {{ block "main" . }}{{ end }}
   </main>
+  <div{{ $chromeLang | safeHTMLAttr }}>
   {{ partial "utility-bar.html" . }}
   {{ partial "footer.html" . }}
 
@@ -151,6 +159,7 @@
     <i class="bi bi-arrow-up" aria-hidden="true"></i>
     <span class="back-to-top-label visually-hidden" data-default="Torna in cima alla pagina" data-toc="Torna all'indice">Torna in cima alla pagina</span>
   </button>
+  </div>
   {{- /* video.js: runtime del Video Player BI, caricato SOLO sulle pagine
        che usano lo shortcode video (flag Store). Deve precedere il bundle
        BI, che aggancia window.videojs sugli elementi [data-bs-video]. */}}

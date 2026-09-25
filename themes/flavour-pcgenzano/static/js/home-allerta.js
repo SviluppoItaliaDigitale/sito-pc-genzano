@@ -98,12 +98,35 @@
      un avviso esplicito che rimanda alla fonte ufficiale (rule 06 — mai
      spacciare per attuale un dato che non lo è). Con dato più fresco di
      6 ore non fa nulla: il timestamp già mostrato è onesto. */
+  /* Stato neutro "non verificato": quando l'ultimo controllo riuscito ha
+     più di 6 ore e il visitatore non riesce a leggere i bollettini, il
+     colore e il titolo della barra non possono continuare a rassicurare
+     (il verde resta il messaggio più forte della pagina). La barra passa
+     al grigio e rimanda al bollettino ufficiale; la riga "Verificato"
+     conserva l'ora dell'ultimo controllo riuscito (audit 25/09/2026). */
+  function impostaStatoNonVerificato(bar) {
+    var classi = bar.className.split(/\s+/);
+    for (var i = 0; i < classi.length; i++) {
+      if (classi[i].indexOf('allerta-bar-') === 0 && classi[i] !== 'allerta-bar-loading') {
+        bar.classList.remove(classi[i]);
+      }
+    }
+    bar.classList.add('allerta-bar-nonverificato');
+    var t = document.getElementById('allerta-titolo');
+    var d = document.getElementById('allerta-desc');
+    var ic = document.getElementById('allerta-icon');
+    if (t) t.textContent = 'STATO ALLERTA NON VERIFICATO';
+    if (d) d.textContent = '\u2014 consulta il bollettino ufficiale del Centro Funzionale regionale.';
+    if (ic) ic.className = 'bi bi-question-circle-fill me-2';
+  }
+
   function segnalaDatoNonRecente(bar) {
     var iso = bar.getAttribute('data-controllo');
     if (!iso) return;
     var t = new Date(iso);
     if (isNaN(t.getTime())) return;
     if (Date.now() - t.getTime() < 6 * 60 * 60 * 1000) return;
+    impostaStatoNonVerificato(bar);
     var ck = document.getElementById('allerta-controllo');
     if (!ck) return;
     var mesi = ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre'];

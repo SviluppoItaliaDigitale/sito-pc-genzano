@@ -49,7 +49,7 @@ Dicono, prima di tutto, che ad agosto **il telefono ha squillato quasi ogni gior
 
 Dicono anche che la macchina regge quando i Comuni collaborano. Quasi tutti gli interventi di agosto hanno visto in campo, insieme a noi, i **Vigili del Fuoco** e i Gruppi comunali dei paesi vicini.
 
-E dicono, infine, una cosa che riguarda chi legge: **la maggior parte di questi incendi si poteva evitare**. Sterpaglie non tagliate, terreni incolti a ridosso delle case, fuochi accesi nei giorni sbagliati. Il periodo di massima pericolosità dichiarato dalla Regione Lazio resta in vigore **fino al 30 settembre**.
+E dicono, infine, una cosa che riguarda chi legge: **la maggior parte di questi incendi si poteva evitare**. Sterpaglie non tagliate, terreni incolti a ridosso delle case, fuochi accesi nei giorni sbagliati. Il periodo di massima pericolosità dichiarato dalla Regione Lazio resta in vigore **fino al 15 ottobre 2026**.
 
 ## Se vedi fumo o fiamme
 

@@ -35,7 +35,7 @@ Solo pochi incendi nascono da cause naturali, come i fulmini.
 
 ## Cosa NON fare
 
-- Non accendere fuochi nei boschi dal 15 giugno al 30 settembre.
+- Non accendere fuochi nei boschi dal 15 giugno al 15 ottobre.
 - Non gettare mozziconi per strada o nel bosco.
 - Non lasciare rifiuti in natura. Il vetro al sole può far partire un incendio.
 - Non cercare di spegnere fiamme grandi da solo. È molto pericoloso.

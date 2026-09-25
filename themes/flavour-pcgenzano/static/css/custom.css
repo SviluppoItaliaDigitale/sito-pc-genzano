@@ -89,6 +89,8 @@ body { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; 
 .allerta-bar-gialla { background: #ffc107 !important; color: #000 !important; }
 .allerta-bar-arancione { background: #fd7e14 !important; color: #000 !important; } /* testo nero: WCAG AA 8.17:1 (bianco era 2.57:1, FAIL) */
 .allerta-bar-rossa { background: #dc3545 !important; color: #fff !important; }
+.allerta-bar-nonverificato { background: #5c6f7b !important; color: #fff !important; } /* stato neutro dopo 6 h senza verifica — WCAG AA 5.2:1 */
+.allerta-bar-nonverificato .allerta-bar-btn { color: #fff; border-color: rgba(255,255,255,0.7); }
 
 .allerta-bar-gialla,
 .allerta-bar-arancione,

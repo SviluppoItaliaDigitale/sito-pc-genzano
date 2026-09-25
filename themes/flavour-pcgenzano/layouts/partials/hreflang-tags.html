@@ -25,6 +25,14 @@
 {{- $parts := split $path "/" -}}
 {{- $slug := index $parts (sub (len $parts) 1) -}}
 
+{{- /* Home di lingua (/english/, /francais/, …): lo slug terminale è il nome
+       della cartella lingua, ma la pagina equivalente è la home italiana. Senza
+       questo passaggio le 7 home in lingua non emettevano alcun hreflang e il
+       cluster della home restava senza link di ritorno (audit 25/09/2026). */ -}}
+{{- if and (eq (len $parts) 1) (in (slice "english" "francais" "deutsch" "espanol" "portugues" "romana" "esperanto") $slug) -}}
+  {{- $slug = "" -}}
+{{- end -}}
+
 {{- /* Lingue supportate dal sito (codice → cartella) */ -}}
 {{- $langMap := dict "it" "" "en" "english" "fr" "francais" "de" "deutsch" "es" "espanol" "pt" "portugues" "ro" "romana" "eo" "esperanto" -}}
 

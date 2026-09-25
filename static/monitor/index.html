@@ -1339,7 +1339,7 @@ async function loadINGV(){
     for(const q of S.quakes){
       L.circleMarker([q.lat,q.lon],{pane:"qkPane",radius:Math.max(3,q.mag*2),
         color:q.col,weight:1.4,fillColor:q.col,fillOpacity:.35})
-       .bindPopup(`<b>M ${q.mag.toFixed(1)} — ${q.place||""}</b><br>${fmtT(q.time)} · prof. ${q.dep!=null?q.dep.toFixed(0):"?"} km<br>${q.km} km da Genzano`)
+       .bindPopup(`<b>M ${q.mag.toFixed(1)} — ${esc(q.place||"")}</b><br>${fmtT(q.time)} · prof. ${q.dep!=null?q.dep.toFixed(0):"?"} km<br>${q.km} km da Genzano`)
        .addTo(qkLayer);
       // eventi delle ultime 6 ore: anelli pulsanti anche sulla mappa Italia
       if(Date.now()-utcMs(q.time)<6*36e5){
@@ -1978,7 +1978,7 @@ feed.addEventListener("click",e=>{
   buildVolo();
   render();
 });
-const esc=s=>String(s??"").replace(/[<>&"]/g,c=>({"<":"&lt;",">":"&gt;","&":"&amp;",'"':"&quot;"}[c]));
+const esc=s=>String(s??"").replace(/[<>&"']/g,c=>({"<":"&lt;",">":"&gt;","&":"&amp;",'"':"&quot;","'":"&#39;"}[c]));
 // aggiunge la Z (UTC) solo se il timestamp non dichiara già un fuso:
 // i tempi INGV/EMS sono UTC senza suffisso, quelli del sito hanno +02:00
 const fmtT=iso=>{const d=new Date(utcMs(iso));

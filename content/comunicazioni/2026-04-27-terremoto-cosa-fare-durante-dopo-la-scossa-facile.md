@@ -30,7 +30,7 @@ Un terremoto dura pochi secondi. La regola più importante è questa: **non corr
 ### Sei in un edificio
 
 - Vai sotto un tavolo solido o un letto robusto.
-- Oppure mettiti sotto la porta di una parete interna.
+- Oppure mettiti sotto una porta che sta in un muro spesso (un muro portante).
 - Allontanati da mobili alti, finestre, specchi.
 - Non uscire di corsa: le scale sono pericolose.
 - Non usare l'ascensore, mai.

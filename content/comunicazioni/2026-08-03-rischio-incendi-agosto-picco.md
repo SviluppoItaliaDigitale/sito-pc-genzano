@@ -15,7 +15,7 @@ versione_facile: "2026-08-03-rischio-incendi-agosto-picco-facile"
 tts: true
 ---
 
-La campagna regionale **Anti Incendi Boschivi (AIB)** del Lazio prevede il periodo di **massima pericolosità dal 15 giugno al 30 settembre**. Il picco statistico cade in agosto: temperature alte, vegetazione secca, venti occidentali e presenza turistica elevata. Una combinazione di fattori che richiede attenzione da parte di tutti.
+La campagna regionale **Anti Incendi Boschivi (AIB)** del Lazio prevede il periodo di **massima pericolosità dal 15 giugno al 15 ottobre 2026**. Il picco statistico cade in agosto: temperature alte, vegetazione secca, venti occidentali e presenza turistica elevata. Una combinazione di fattori che richiede attenzione da parte di tutti.
 
 ## Le cause più frequenti
 
@@ -32,7 +32,7 @@ Solo una minoranza degli incendi è riconducibile a cause naturali (fulmini).
 
 ## Cosa fare (e non fare)
 
-- **Non accendere** fuochi nei boschi e nelle aree agricole dal 15 giugno al 30 settembre, come previsto dalle ordinanze regionali.
+- **Non accendere** fuochi nei boschi e nelle aree agricole dal 15 giugno al 15 ottobre 2026, come previsto dalla dichiarazione regionale di massima pericolosità e dall'[ordinanza sindacale](/comunicazioni/2026-06-18-ordinanza-sindacale-incendi-boschivi-2026/).
 - **Non gettare** mozziconi da veicoli o camminando.
 - **Non abbandonare** rifiuti in aree naturali: vetro e plastica possono provocare inneschi al sole.
 - **Segnalare** subito al **112** qualsiasi principio di incendio o fumo sospetto.

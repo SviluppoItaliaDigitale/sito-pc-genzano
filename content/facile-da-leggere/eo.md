@@ -162,7 +162,7 @@ hreflang_xdefault: "/facile-da-leggere/"
 </ul>
 <p><strong>Ne faru ĉi tion:</strong></p>
 <ul class="facile-elenco no">
-<li>ne bruligu kandelojn sola;</li>
+<li>ne bruligu kandelojn: uzu nur poŝlampon kun piloj;</li>
 <li>ne uzu la lifton;</li>
 <li>ne uzu kradrostilon aŭ braĝujon ene de la domo.</li>
 </ul>

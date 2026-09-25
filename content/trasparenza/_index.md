@@ -7,7 +7,7 @@ tts: true
 dataUltimaRevisione: "2026-05-21"
 ---
 
-Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** è un'**articolazione operativa del Comune** costituita ai sensi della **Legge Regionale Lazio 26 febbraio 2014, n. 2** (art. 10, che autorizza i Comuni a istituire gruppi comunali di volontariato di protezione civile) e del **D.Lgs. 2 gennaio 2018 n. 1** (Codice della Protezione Civile).
+Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** è un'**articolazione operativa del Comune**, istituito nel 1991 con delibera del Consiglio Comunale e oggi disciplinato dalla **Legge Regionale Lazio 26 febbraio 2014, n. 2** (art. 10, che autorizza i Comuni a istituire gruppi comunali di volontariato di protezione civile) e dal **D.Lgs. 2 gennaio 2018 n. 1** (Codice della Protezione Civile, art. 35).
 
 Dal **28 ottobre 2024** il Gruppo è anche **iscritto al RUNTS** (Registro Unico Nazionale del Terzo Settore) — sezione *"Altri Enti del Terzo Settore"* — con **determina n. G14230**.
 
@@ -15,8 +15,9 @@ Dal **28 ottobre 2024** il Gruppo è anche **iscritto al RUNTS** (Registro Unico
 
 | Aspetto | Riferimento |
 |---|---|
-| Anno di costituzione | 1981 |
-| Soggetto costituente | Consiglio Comunale di Genzano di Roma |
+| Istituzione del Gruppo Comunale | 1991, con delibera del Consiglio Comunale di Genzano di Roma (sindaco Gino Cesaroni) |
+| Origini del volontariato locale | 23 luglio 1981: Comitato di Protezione Civile e Sicurezza, dal 1985 CB Genzano (vedi [la nostra storia](/chi-siamo/#la-nostra-storia)) |
+| Regolamento vigente | Delibera C.C. n. 31 del 31/07/2023 (art. 35 D.Lgs. 1/2018) |
 | Forma giuridica | Ente del Terzo Settore (ETS) — articolazione del Comune di Genzano di Roma |
 | Iscrizione RUNTS | Sezione *"Altri Enti del Terzo Settore"*, determina n. G14230 del 28/10/2024 |
 | Coordinamento operativo | 14° COI — Centro Operativo Intercomunale della Provincia di Roma |

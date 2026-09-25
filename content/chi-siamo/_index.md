@@ -16,7 +16,7 @@ dataUltimaRevisione: "2026-07-15"
 <div class="row align-items-center">
 <div class="col-md-8">
 <h2 class="h4 text-primary mb-3">Il Gruppo Comunale Volontari di Protezione Civile</h2>
-<p class="mb-0">Il Gruppo opera dal 1981 a servizio della comunità di Genzano di Roma. Svolge attività di prevenzione, supporto operativo, assistenza alla popolazione e informazione sui rischi, sempre nel quadro del sistema istituzionale di protezione civile.</p>
+<p class="mb-0">Il Gruppo Comunale è stato istituito nel 1991 dal Consiglio Comunale e raccoglie l'esperienza dei volontari attivi a Genzano di Roma dal 1981. Svolge attività di prevenzione, supporto operativo, assistenza alla popolazione e informazione sui rischi, sempre nel quadro del sistema istituzionale di protezione civile.</p>
 </div>
 <div class="col-md-4 text-center">
 <i class="bi bi-shield-check" style="font-size:5rem;color:var(--pc-primary);opacity:0.3;" aria-hidden="true"></i>

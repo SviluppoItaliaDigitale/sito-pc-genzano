@@ -244,7 +244,7 @@ hreflang_xdefault: "/facile-da-leggere/"
 </ul>
 <p><strong>Non fare queste cose:</strong></p>
 <ul class="facile-elenco no">
-<li>non accendere candele da solo;</li>
+<li>non accendere candele: usa solo la torcia con le pile;</li>
 <li>non prendere l'ascensore;</li>
 <li>non usare barbecue o bracieri dentro casa.</li>
 </ul>

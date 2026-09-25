@@ -103,8 +103,8 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 .ms-card.ms-edu { border-left-color: #7c3aed; }
 .ms-card.ms-edu .ms-card-icon, .ms-card.ms-edu .ms-card-title, .ms-card.ms-edu .ms-card-arrow { color: #7c3aed; }
 /* Variante per "strumenti" */
-.ms-card.ms-tool { border-left-color: #0891b2; }
-.ms-card.ms-tool .ms-card-icon, .ms-card.ms-tool .ms-card-title, .ms-card.ms-tool .ms-card-arrow { color: #0891b2; }
+.ms-card.ms-tool { border-left-color: #0e7490; }
+.ms-card.ms-tool .ms-card-icon, .ms-card.ms-tool .ms-card-title, .ms-card.ms-tool .ms-card-arrow { color: #0e7490; }
 /* Variante per "comunicazione" */
 .ms-card.ms-comm { border-left-color: #15803d; }
 .ms-card.ms-comm .ms-card-icon, .ms-card.ms-comm .ms-card-title, .ms-card.ms-comm .ms-card-arrow { color: #15803d; }
@@ -667,7 +667,7 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 </a>
 </div>
 
-<div class="ms-section"><span class="ms-section-icon" style="background:#0891b2"><i class="bi bi-grid-3x3-gap-fill"></i></span><h2>Strumenti, risorse, download</h2></div>
+<div class="ms-section"><span class="ms-section-icon" style="background:#0e7490"><i class="bi bi-grid-3x3-gap-fill"></i></span><h2>Strumenti, risorse, download</h2></div>
 
 <div class="ms-grid">
 <a class="ms-card ms-tool" href="/strumenti/">

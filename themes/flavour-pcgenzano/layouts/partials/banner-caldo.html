@@ -1,13 +1,17 @@
 {{/* ─────────────────────────────────────────────────────────────
      STRISCIA STAGIONALE "CONSIGLI CALDO" (homepage)
-     Visibile automaticamente da GIUGNO a SETTEMBRE (gate su now.Month
+     Visibile automaticamente dal 1° GIUGNO al 15 SETTEMBRE (gate su now
      al build; il sito rigenera ogni giorno → on/off stagionale auto).
      Rimanda a /rischi-prevenzione/ondate-di-calore/ (consigli + infografica
      Ministero della Salute). Per disattivarla: rimuovere la chiamata a
      questo partial in layouts/index.html.
      ───────────────────────────────────────────────────────────── */}}
 {{ $m := int (now.Format "1") }}
-{{ if and (ge $m 6) (le $m 9) }}
+{{ $d := int (now.Format "2") }}
+{{/* Attiva dal 1° giugno al 15 settembre: il sistema nazionale di previsione
+     delle ondate di calore del Ministero della Salute chiude a metà settembre
+     e dal 16 la home pubblica già i contenuti d'autunno (audit 25/09/2026). */}}
+{{ if or (and (ge $m 6) (le $m 8)) (and (eq $m 9) (le $d 15)) }}
 <div class="caldo-strip" role="region" aria-label="Consigli per il caldo estivo">
   <div class="container">
     <i class="bi bi-thermometer-sun caldo-strip-icon" aria-hidden="true"></i>
