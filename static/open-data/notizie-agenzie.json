@@ -5,11 +5,83 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-25T23:29:12+00:00",
+  "generato": "2026-09-26T07:11:27+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-26T07:08:27+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Oltre 2300 piante di canapa scoperte nella Locride, valore 2 milioni",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/oltre-2300-piante-di-canapa-scoperte-nella-locride-valore-2-milioni_e19ddf62-772d-4f40-8b5b-8b8abd57ea96.html"
+  },
+  {
+   "data": "2026-09-26T07:02:39+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sindaco Murari: \"Con ‘Inventare la natura’ a Mantova la cultura è viva\"",
+   "url": "https://www.adnkronos.com/cultura/sindaco-murari-con-inventare-la-natura-a-mantova-la-cultura-e-viva_3xs17OWMTUtFAIKDEaC3e8"
+  },
+  {
+   "data": "2026-09-26T06:51:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "‘Inventare la natura’, Rebecchini: \"A Palazzo Te in mostra il rapporto tra uomo e potere creatore\"",
+   "url": "https://www.adnkronos.com/cultura/inventare-la-natura-rebecchini-a-palazzo-te-in-mostra-il-rapporto-tra-uomo-e-potere-creatore_1jKtgj5NYP7qNUFjmRkMQw"
+  },
+  {
+   "data": "2026-09-26T06:41:17+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il viaggio del Papa in Francia. Oggi messa a Parigi, poi vola a Lourdes",
+   "url": "https://www.ansa.it/vaticano/notizie/2026/09/26/il-viaggio-del-papa.-oggi-messa-a-parigi-poi-vola-a-lourdes_902d673e-03d3-4ce4-a952-2a96283b0241.html"
+  },
+  {
+   "data": "2026-09-26T06:30:19+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "'Inventare la natura’, Furlotti: \"Palazzo Te perfetto per la mostra\"",
+   "url": "https://www.adnkronos.com/cultura/inventare-la-natura-furlotti-palazzo-te-perfetto-per-la-mostra_wZNkn34ucVfhfzu8c4aso"
+  },
+  {
+   "data": "2026-09-26T06:07:41+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Baia Curioni (Fondazione Palazzo Te): \"Con la mostra ‘Inventare la natura’ vogliamo suscitare meraviglia\"",
+   "url": "https://www.adnkronos.com/cultura/baia-curioni-fondazione-palazzo-te-con-la-mostra-inventare-la-natura-vogliamo-suscitare-meraviglia_4ooZ6GbTr3nBrZvdbQnY7u"
+  },
+  {
+   "data": "2026-09-26T05:41:26+00:00",
+   "fonte": "ANSA",
+   "titolo": "Amanda Knox: 'La famiglia di Meredith si sente ferita dalla persona sbagliata'",
+   "url": "https://www.ansa.it/umbria/notizie/2026/09/25/amanda-knox-la-famiglia-di-meredith-si-sente-ferita-dalla-persona-sbagliata_9f216e58-1bef-4621-beae-4cc0f08bba72.html"
+  },
+  {
+   "data": "2026-09-26T05:21:14+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Billie Jean King Cup, oggi semifinale Italia-Ucraina: orario match e dove vederli in chiaro",
+   "url": "https://www.adnkronos.com/sport/billie-jean-king-cup-italia-ucraina-oggi-dove-vederla_6ayqZzMhtytDWEyiGD3ZFK"
+  },
+  {
+   "data": "2026-09-26T05:18:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Trump respinge la tregua proposta dall’Iran: nuovi attacchi dopo midterm. Teheran apre sul nucleare",
+   "url": "https://www.adnkronos.com/internazionale/esteri/iran-trump-guerra-tregua-news-oggi-26-settembre-2026_5NBdTqRzE4BUBuEwD6oJy"
+  },
+  {
+   "data": "2026-09-26T05:14:04+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Verissimo, sabato 26 settembre: gli ospiti e le interviste di oggi",
+   "url": "https://www.adnkronos.com/spettacoli/verissimo-oggi-ospiti-interviste_KZCRVThmA6MUFhxvkN7cc"
+  },
+  {
+   "data": "2026-09-26T04:51:53+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Formula 1, oggi Gp Baku: orario, griglia di partenza e dove vederlo in chiaro",
+   "url": "https://www.adnkronos.com/sport/gp-baku-oggi-formula-1-orario-griglia-partenza-dove-vederlo-chiaro_4jP3eHR8gqU8XYLhFIqXxK"
+  },
+  {
+   "data": "2026-09-26T00:54:46+00:00",
+   "fonte": "ANSA",
+   "titolo": "'Trump ha respinto la proposta dell'Iran, nuovi attacchi dopo le midterm'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/26/trump-ha-respinto-la-proposta-delliran-nuovi-attacchi-dopo-le-midterm_4c47d3f5-794e-47cd-bd5b-d91596797e92.html"
+  },
   {
    "data": "2026-09-25T22:32:12+00:00",
    "fonte": "ADNKRONOS",
@@ -41,24 +113,6 @@
    "url": "https://www.adnkronos.com/spettacoli/marina-la-rosa-pietro-taricone-grande-fratello-vip_2CwTjFsOeYZVsFKE0O3Fgg"
   },
   {
-   "data": "2026-09-25T22:14:34+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Caro carburanti, Eni fissa un tetto al prezzo di benzina e gasolio. Il governo: \"Atto lodevole\"",
-   "url": "https://www.adnkronos.com/politica/caro-carburanti-price-cap-tetto-al-prezzo-gasolio-benzina_1Pl1bNBPM2AGzy4VyGV92A"
-  },
-  {
-   "data": "2026-09-25T22:12:16+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Putin: \"Russia non vuole attaccare Europa. Ero pronto a colloqui, poi Ucraina ha colpito Mosca\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/putin-russia-europa-guerra-nato-news-oggi_6xXFSOHq3wJy69dbOCvwnK"
-  },
-  {
-   "data": "2026-09-25T22:03:59+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Grecia, crolla palazzina ad Atene: 6 dispersi tra cui 4 turisti",
-   "url": "https://www.adnkronos.com/internazionale/esteri/grecia-atene-esplosione-edificio-fuga-gas_1jWsLoXve3tU6dCDRpiFN6"
-  },
-  {
    "data": "2026-09-25T21:46:56+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Morte di Michele Merlo, nessun risarcimento ai familiari",
@@ -71,34 +125,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/24/lex-amica-di-accetti-mi-fece-fare-una-telefonata-dicevamo-di-sapere-dove_187465a7-1e14-41af-9fa5-1e32776c5081.html"
   },
   {
-   "data": "2026-09-25T21:31:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Conti pubblici, Moody's: \"Deficit dell'Italia al 3% nel 2026, al 2,9% nel 2027\"",
-   "url": "https://www.adnkronos.com/economia/conti-pubblici-deficit-italia-dati-numeri_7lt7Nq11RDbLt3jpGIALfG"
-  },
-  {
    "data": "2026-09-25T21:14:42+00:00",
    "fonte": "ANSA",
    "titolo": "È ancora azzurro tenebra, neanche Mancini rianima l'Italia",
    "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/25/e-ancora-azzurro-tenebra-neanche-mancini-rianima-litalia-_8f217ba7-1e9e-4bcf-aa96-35b730498f0b.html"
-  },
-  {
-   "data": "2026-09-25T21:05:06+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Simone Annicchiarico squalificato dal Gf Vip, le scuse in diretta: \"Mi sono sentito tradito da me stesso\"",
-   "url": "https://www.adnkronos.com/spettacoli/simone-annicchiarico-grande-fratello-vip-squalifica_6UUXQwzJTmvIkAAgaD32Da"
-  },
-  {
-   "data": "2026-09-25T21:01:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Italia-Belgio 0-2, rissa tra Donnarumma e Lukaku al fischio finale: cos'è successo",
-   "url": "https://www.adnkronos.com/sport/rissa-donnarumma-lukaku-italia-belgio-cose-successo-nations-league_2A0gxPJa4BdaJ5D4BZf7q8"
-  },
-  {
-   "data": "2026-09-25T20:51:04+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Italia, Mancini incassa i fischi: \"Quando si perde sono meritati...\"",
-   "url": "https://www.adnkronos.com/sport/italia-mancini-belgio-fischi_4wFy9Nxwt1R6DOrCta24Qg"
   },
   {
    "data": "2026-09-25T20:49:51+00:00",
@@ -111,12 +141,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "La rete dei minorenni suprematisti, 'attentati anche a scuola'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/25/la-rete-dei-minorenni-suprematisti-attentati-anche-a-scuola-_0dc34236-793e-4c32-bd95-1e067fbd1e19.html"
-  },
-  {
-   "data": "2026-09-25T20:35:58+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Gaffe al Gf Vip, Ilary Blasi sbaglia il numero delle regioni italiane: \"Sono 21\"",
-   "url": "https://www.adnkronos.com/spettacoli/grande-fratello-vip-gaffe-ilary-blasi-quante-regioni-in-italia_6cChFTIWhh61d0VhhgKrkE"
   },
   {
    "data": "2026-09-25T20:33:48+00:00",
@@ -143,12 +167,6 @@
    "url": "https://www.ansa.it/sito/notizie/economia/2026/09/25/poste-all8582-di-tim-al-termine-delle-adesioni-allofferta_be8b8130-21bd-485a-8efd-ac51e8f1c7b6.html"
   },
   {
-   "data": "2026-09-25T20:07:58+00:00",
-   "fonte": "ANSA",
-   "titolo": "Fine vita, riarmo, laicità, Papa Leone richiama la Francia",
-   "url": "https://www.ansa.it/vaticano/notizie/2026/09/25/fine-vita-riarmo-laicita-papa-leone-richiama-la-francia_ff8b8f8e-c0fd-4908-ab1e-1b748b91c76c.html"
-  },
-  {
    "data": "2026-09-25T20:03:49+00:00",
    "fonte": "ANSA",
    "titolo": "Sale il costo del gasolio, ma l'Eni mette un tetto ai prezzi",
@@ -171,24 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Caso Garlasco, i pm sentono Garofano e gli ex del Ris. L'ex generale: 'Non commento l'indagine'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/25/caso-garlasco-i-pm-sentono-garofano-e-gli-ex-del-ris.-lex-generale-non_7030502d-e8e4-4b8f-8f24-64eaa58d35ea.html"
-  },
-  {
-   "data": "2026-09-25T19:40:29+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il premier ungherese in vespa a Roma, poi canta e balla a Trastevere",
-   "url": "https://www.ansa.it/sito/videogallery/italia/2026/09/25/il-premier-ungherese-in-vespa-a-roma-poi-canta-e-balla-a-trastevere_c61a7826-a9d7-494c-8ca2-28912e741dbf.html"
-  },
-  {
-   "data": "2026-09-25T19:38:25+00:00",
-   "fonte": "ANSA",
-   "titolo": "Incidente per militari italiani in esercitazione in Lettonia, 4 feriti",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/25/-incidente-per-militari-italiani-in-lettonia-durante-esercitazione-4-feriti-_aad36c78-16fd-466a-9424-d488e9c86ae7.html"
-  },
-  {
-   "data": "2026-09-25T19:36:31+00:00",
-   "fonte": "ANSA",
-   "titolo": "Stop alle pietre di inciampo in un comune della Sassonia, Cdu vota con Afd",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/25/stop-alle-pietre-di-inciampo-in-un-comune-della-sassonia-si-di-cdu-e-afd_6fc23e0b-d79d-45c9-af7e-9aa57e465258.html"
   }
  ]
 }
