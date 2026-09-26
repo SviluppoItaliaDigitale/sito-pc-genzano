@@ -19,9 +19,10 @@ import re
 import sys
 import glob
 import datetime
+from zoneinfo import ZoneInfo
 
 DIR = "content/comunicazioni"
-OGGI = datetime.date.today()
+OGGI = datetime.datetime.now(ZoneInfo("Europe/Rome")).date()  # ora italiana, come Hugo (F31)
 SOGLIA_CON_SEGNALI = 548   # ~18 mesi
 SOGLIA_ASSOLUTA = 913      # ~30 mesi
 CAP = 60                   # max voci nel report

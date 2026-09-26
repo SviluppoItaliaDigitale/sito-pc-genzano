@@ -1,0 +1,8 @@
+{{- /* Titolo della pagina come va mostrato al lettore. Hugo dà alla pagina 404
+     il titolo fisso inglese "404 Page not found" e non consente di cambiarlo
+     da un file di contenuto (content/404.md crea una pagina /404/ in più):
+     qui lo si sostituisce con l'italiano (audit 25/09/2026). Tutte le altre
+     pagine restituiscono il proprio .Title invariato. */ -}}
+{{- $titolo := .Title -}}
+{{- if eq .Kind "404" -}}{{- $titolo = "Pagina non trovata" -}}{{- end -}}
+{{- return $titolo -}}

@@ -3,7 +3,10 @@ license = "BSD-3-Clause"
 licenselink = "https://opensource.org/licenses/BSD-3-Clause"
 description = "Tema Hugo con Bootstrap Italia 2.x per la Protezione Civile di Genzano di Roma"
 tags = ["bootstrap-italia", "protezione-civile", "italia", "PA"]
-min_version = "0.100.0"
+# Versione con cui il tema è costruito e provato in CI (deploy.yml). Sotto la
+# 0.145 il front matter `build:` delle versioni facili non è supportato come
+# serve e il render hook delle tabelle richiede almeno la 0.142 (audit F31).
+min_version = "0.154.5"
 
 [author]
   name = "Alessandro IU0QVW"

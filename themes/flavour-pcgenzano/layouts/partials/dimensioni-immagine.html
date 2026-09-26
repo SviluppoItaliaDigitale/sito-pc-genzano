@@ -1,0 +1,18 @@
+{{- /* Attributi width/height di un'immagine statica, letti dal file con
+     imageConfig come nello shortcode foto. Riservano lo spazio prima che
+     l'immagine arrivi ed evitano il salto della pagina (layout shift; audit
+     25/09/2026, F23). Riceve il percorso con la barra iniziale
+     ("/images/x.webp"); per SVG, formati sconosciuti o file mancanti non
+     restituisce nulla. Uso: <img src="…" {{ partial "dimensioni-immagine.html" $src }}> */ -}}
+{{- $attr := "" -}}
+{{- with . -}}
+  {{- $src := . -}}
+  {{- $ext := lower (path.Ext $src) -}}
+  {{- $file := printf "static/%s" (strings.TrimPrefix "/" $src) -}}
+  {{- if and (in (slice ".webp" ".jpg" ".jpeg" ".png" ".gif") $ext) (fileExists $file) -}}
+    {{- with imageConfig $file -}}
+      {{- $attr = printf "width=\"%d\" height=\"%d\"" .Width .Height -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return (safeHTMLAttr $attr) -}}

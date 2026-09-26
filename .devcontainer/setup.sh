@@ -60,11 +60,23 @@ azzurro "Hugo extended ${HUGO_VERSION}"
 if hugo version 2>/dev/null | grep -q "v${HUGO_VERSION}"; then
   ok "già presente"
 else
-  DEB="/tmp/hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
-  curl -sSL "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb" -o "$DEB"
-  sudo dpkg -i "$DEB" >/dev/null 2>&1 || sudo apt-get install -f -y -qq >/dev/null
-  rm -f "$DEB"
-  ok "$(hugo version | head -1)"
+  REL="https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}"
+  NOME="hugo_extended_${HUGO_VERSION}_linux-amd64.deb"
+  DEB="/tmp/${NOME}"
+  curl -fsSL "${REL}/${NOME}" -o "$DEB"
+  # Si installa solo se l'impronta coincide con quella pubblicata nella stessa
+  # release (audit 25/09/2026, F31: prima il pacchetto si installava senza controllo).
+  if curl -fsSL "${REL}/hugo_${HUGO_VERSION}_checksums.txt" | grep " ${NOME}\$" \
+       | (cd /tmp && sha256sum -c --quiet -); then
+    sudo dpkg -i "$DEB" >/dev/null 2>&1 || sudo apt-get install -f -y -qq >/dev/null
+    rm -f "$DEB"
+    ok "$(hugo version | head -1)"
+  else
+    # Senza Hugo l'ambiente non serve: meglio fermarsi che dichiararlo pronto.
+    rm -f "$DEB"
+    echo "Impronta del pacchetto Hugo ${HUGO_VERSION} non verificata: installazione interrotta." >&2
+    exit 1
+  fi
 fi
 
 # -----------------------------------------------------------------------------

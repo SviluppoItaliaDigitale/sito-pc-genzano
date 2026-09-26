@@ -39,7 +39,9 @@ L'**INGV** è il Centro di competenza per il rischio vulcanico e sorveglia i vul
 
 ## 7.2.4 La pianificazione: i livelli di allerta
 
-Per i vulcani napoletani il Dipartimento della Protezione Civile mantiene **piani nazionali di emergenza** (Vesuvio e Campi Flegrei) costruiti su una **zonazione del territorio** — la *zona rossa* dell'evacuazione preventiva, la *zona gialla* della ricaduta di cenere — e su un sistema di **livelli di allerta a colori** (base, attenzione, preallarme, allarme) deciso dal Dipartimento sulla base della valutazione tecnica dell'INGV. La logica è la stessa dell'allertamento meteo: i livelli scandiscono il passaggio dalla sorveglianza ordinaria alle misure di protezione della popolazione, fino all'allontanamento preventivo.
+Per cinque vulcani — **Vesuvio, Campi Flegrei, Etna, Stromboli e Vulcano** — il Dipartimento della Protezione Civile dichiara **livelli di allerta** a quattro colori (verde, giallo, arancione, rosso). Il livello descrive lo stato di attività del vulcano, cioè se il sistema si trova in una condizione di equilibrio o di disequilibrio, e ne indica la possibile evoluzione. Il Dipartimento lo dichiara in stretto raccordo con la struttura di protezione civile della Regione, sulla base delle segnalazioni e delle valutazioni di pericolosità dell'INGV e degli altri Centri di competenza; per il Vesuvio e i Campi Flegrei è sentita anche la Commissione Grandi Rischi. Per **Ischia** i livelli sono in via di definizione; per **Colli Albani, Panarea, Lipari e Pantelleria** non sono stati definiti. Da settembre 2026 i livelli in vigore sono riuniti in una [mappa del Dipartimento](https://mappe.protezionecivile.gov.it/it/mappe-e-dashboard-rischi/mappa-livelli-di-allerta-vulcani-italia/).
+
+Dai livelli discendono le **fasi operative** — attenzione, preallarme, allarme — che stabiliscono le azioni del Servizio nazionale; per i Campi Flegrei le fasi di preallarme e allarme sono dichiarate dal Presidente del Consiglio dei Ministri. Per il Vesuvio e i Campi Flegrei i **piani nazionali di emergenza** poggiano anche su una **zonazione del territorio**: la *zona rossa* dell'allontanamento preventivo e la *zona gialla* della ricaduta di cenere. Il passaggio da un livello all'altro non è necessariamente graduale, e alcuni fenomeni sono improvvisi (esplosioni violente all'Etna e allo Stromboli, esplosioni freatiche ed emissioni di gas a Vulcano): anche con il livello verde il rischio non è mai assente.
 
 Per le indicazioni operative e per il profilo del nostro territorio si vedano la scheda [Rischio vulcanico (Colli Albani)](/rischi-prevenzione/rischio-vulcanico/) e la **Parte XIV** del manuale.
 
@@ -48,7 +50,7 @@ Per le indicazioni operative e per il profilo del nostro territorio si vedano la
 ## Fonti
 
 1. **INGV** — Osservatorio Vesuviano e Osservatorio Etneo: sorveglianza dei vulcani attivi italiani.
-2. **Dipartimento della Protezione Civile** — Piani nazionali di emergenza per il Vesuvio e per i Campi Flegrei; livelli di allerta vulcanica.
+2. **Dipartimento della Protezione Civile** — Piani nazionali di emergenza per il Vesuvio e per i Campi Flegrei; [Rischio vulcanico. Le attività](https://rischi.protezionecivile.gov.it/it/vulcanico/attivita/) (previsione, livelli di allerta, pianificazione); [Mappa dei livelli di allerta dei vulcani in Italia](https://mappe.protezionecivile.gov.it/it/mappe-e-dashboard-rischi/mappa-livelli-di-allerta-vulcani-italia/).
 3. **Portale Rischi — Dipartimento della Protezione Civile**, sezione rischio vulcanico — [rischi.protezionecivile.gov.it](https://rischi.protezionecivile.gov.it/it/).
 4. Codice della protezione civile, d.lgs. 1/2018, art. 16 — [Normattiva](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1).
 

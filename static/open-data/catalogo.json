@@ -1,0 +1,110 @@
+{
+  "titolare": "Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma",
+  "licenza": {
+    "nome": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/deed.it"
+  },
+  "dataset": [
+    {
+      "id": "aree-emergenza",
+      "titolo": "Aree di emergenza del Piano comunale di Protezione Civile",
+      "descrizione": "Aree di attesa della popolazione (AA), aree di ricovero (AR) e aree di ammassamento dei soccorritori (AS), con coordinate GPS.",
+      "fonte": "Piano di Protezione Civile del Comune di Genzano di Roma; coordinate verificate sul campo dal Gruppo Comunale Volontari di Protezione Civile.",
+      "titolare": "Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma",
+      "licenza": {
+        "nome": "CC BY 4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/deed.it"
+      },
+      "aggiornato_il": "2026-09-25",
+      "record": 16,
+      "campi": [
+        "id",
+        "tipo",
+        "nome",
+        "indirizzo",
+        "lat",
+        "lon",
+        "verified"
+      ],
+      "file": {
+        "csv": "/open-data/aree-emergenza.csv",
+        "json": "/open-data/aree-emergenza.json"
+      }
+    },
+    {
+      "id": "numeri-utili-emergenza",
+      "titolo": "Numeri utili di emergenza (validi nel Lazio)",
+      "descrizione": "Numeri da chiamare in emergenza nel Lazio.",
+      "fonte": "Regione Lazio (Numero Unico Emergenza 112) e Agenzia regionale di Protezione Civile del Lazio (Sala Operativa, 803 555).",
+      "titolare": "Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma",
+      "licenza": {
+        "nome": "CC BY 4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/deed.it"
+      },
+      "aggiornato_il": "2026-09-25",
+      "record": 2,
+      "campi": [
+        "numero",
+        "nome",
+        "descrizione",
+        "principale"
+      ],
+      "file": {
+        "csv": "/open-data/numeri-utili-emergenza.csv",
+        "json": "/open-data/numeri-utili-emergenza.json"
+      }
+    },
+    {
+      "id": "codici-colore-allerta",
+      "titolo": "Codici colore dell'allerta meteo (Regione Lazio)",
+      "descrizione": "Significato dei livelli di allerta verde, giallo, arancione e rosso e comportamenti raccomandati.",
+      "fonte": "Dipartimento della Protezione Civile e Centro Funzionale Regionale del Lazio (sistema di allertamento meteo-idrogeologico).",
+      "titolare": "Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma",
+      "licenza": {
+        "nome": "CC BY 4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/deed.it"
+      },
+      "aggiornato_il": "2026-09-25",
+      "record": 4,
+      "campi": [
+        "livello",
+        "titolo",
+        "significato",
+        "cosa_fare",
+        "colore_bg"
+      ],
+      "file": {
+        "csv": "/open-data/codici-colore-allerta.csv",
+        "json": "/open-data/codici-colore-allerta.json"
+      }
+    },
+    {
+      "id": "eventi-storici-castelli-romani",
+      "titolo": "Timeline storica del rischio nei Castelli Romani",
+      "descrizione": "Eventi geologici, sismici, idrogeologici e normativi che riguardano i Castelli Romani.",
+      "fonte": "Fonti istituzionali indicate per ciascun evento nei campi fonte e fonte_url.",
+      "titolare": "Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma",
+      "licenza": {
+        "nome": "CC BY 4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/deed.it"
+      },
+      "aggiornato_il": "2026-09-25",
+      "record": 12,
+      "campi": [
+        "ordine",
+        "anno",
+        "tipo",
+        "titolo",
+        "luogo",
+        "descrizione",
+        "lezione",
+        "fonte",
+        "fonte_url"
+      ],
+      "file": {
+        "csv": "/open-data/eventi-storici-castelli-romani.csv",
+        "json": "/open-data/eventi-storici-castelli-romani.json"
+      }
+    }
+  ]
+}

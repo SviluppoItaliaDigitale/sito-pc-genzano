@@ -23,9 +23,10 @@ import re
 import sys
 import glob
 import datetime
+from zoneinfo import ZoneInfo
 
 DIR = "content/comunicazioni"
-OGGI = datetime.date.today()
+OGGI = datetime.datetime.now(ZoneInfo("Europe/Rome")).date()  # ora italiana, come Hugo (F31)
 FINESTRA = 14   # giorni di lookahead (default; sovrascrivibile con --giorni)
 CAP = 60        # max voci nel report
 
