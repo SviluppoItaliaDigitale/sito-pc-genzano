@@ -54,7 +54,7 @@
           <button class="btn btn-success btn-lg" onclick="window.print();" aria-label="Stampa l'attestato"><i class="bi bi-printer-fill me-2" aria-hidden="true"></i>Stampa Attestato</button>
           <button class="btn btn-primary btn-lg" id="reviewQuizBtn" aria-expanded="false" aria-controls="review-container"><i class="bi bi-search me-2" aria-hidden="true"></i>Rivedi il Quiz</button>
           <button class="btn btn-outline-secondary btn-lg" id="shareBtn"><i class="bi bi-share-fill me-2" aria-hidden="true"></i>Condividi</button>
-          <a href="index.html" class="btn btn-outline-primary btn-lg" onclick="localStorage.clear();"><i class="bi bi-arrow-repeat me-2" aria-hidden="true"></i>Nuovo Quiz</a>
+          <a href="index.html" class="btn btn-outline-primary btn-lg" onclick="safeStorage.removeMany(['candidateName','candidateId','quizResults','selectedCategories']);"><i class="bi bi-arrow-repeat me-2" aria-hidden="true"></i>Nuovo Quiz</a>
         </div>
 
         <div id="summary-container" class="mt-5">
@@ -85,6 +85,7 @@
       </div>
     </div>
   </main>
+  <script src="js/safe-storage.js"></script>
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
   <script src="js/banco_domande/1_principi_e_organizzazione.js"></script>
