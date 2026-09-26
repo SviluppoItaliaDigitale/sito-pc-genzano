@@ -16,14 +16,47 @@ import re
 import sys
 from urllib.parse import urlparse
 
-# Domini istituzionali: enti pubblici italiani, UE e organismi internazionali.
-ISTITUZIONALI = re.compile(
-    r"(\.gov\.it|\.europa\.eu|\.gov|\.gov\.uk|\.int|\.un\.org|^un\.org"
-    r"|regione\.[a-z-]+\.it|\.regione\.[a-z-]+\.it|comune\.[a-z-]+\.[a-z.]+"
-    r"|ingv\.it|cnr\.it|istat\.it|normattiva\.it|gazzettaufficiale\.it"
-    r"|camera\.it|senato\.it|quirinale\.it|cortecostituzionale\.it"
-    r"|protezionecivile\.it|iononrischio\.it|it-alert\.it)$"
+# Domini istituzionali. Due livelli, entrambi da tenere aggiornati quando il
+# sito comincia a citare un ente nuovo (revisione del 26/09/2026: la prima
+# versione lasciava fuori Vigili del Fuoco, ARPA Lazio, ASL Roma 6, INAIL).
+#
+# 1) Suffissi e schemi che identificano da soli un soggetto pubblico.
+SCHEMI_PUBBLICI = re.compile(
+    r"(\.gov\.it|\.europa\.eu|\.gov|\.gov\.uk|\.int|\.un\.org|^un\.org|\.edu\.it"
+    r"|(^|\.)regione\.[a-z-]+\.it|(^|\.)provincia\.[a-z-]+\.it"
+    r"|(^|\.)comune\.[a-z-]+\.[a-z.]+|(^|\.)protezionecivile\.[a-z-]+\.it"
+    r"|(^|\.)(asl|ausl|ats|asst|aou|arpa|areu)[a-z0-9-]*\.[a-z.]*it)$"
 )
+# 2) Enti pubblici con dominio proprio, che nessuno schema riconosce.
+#    Vale anche per i sottodomini (es. opendata.vigilfuoco.it).
+ENTI_PUBBLICI = {
+    # Stato, organi e autorità
+    "normattiva.it", "gazzettaufficiale.it", "camera.it", "senato.it",
+    "quirinale.it", "cortecostituzionale.it", "garanteprivacy.it", "arera.it",
+    "designers.italia.it", "prefettura.it", "beniculturali.it", "minambiente.it",
+    # Protezione civile e soccorso
+    "protezionecivile.it", "iononrischio.it", "it-alert.it", "vigilfuoco.it",
+    "112lazio.it", "areu.lombardia.it", "commissariatodips.it",
+    # Forze dell'ordine e Difesa
+    "poliziadistato.it", "carabinieri.it", "meteoam.it",
+    # Enti di ricerca e agenzie
+    "ingv.it", "cnr.it", "istat.it", "iss.it", "isprambiente.it", "snpambiente.it",
+    "enea.it", "inaf.it", "asi.it", "isinucleare.it", "agenziaitaliameteo.it",
+    "inail.it", "inps.it", "centronazionalesangue.it",
+    # Territorio
+    "arpalazio.it", "aslroma6.it", "cittametropolitanaroma.it",
+    "parcocastelliromani.it", "parchilazio.it",
+    "autoritadistrettoappenninocentrale.it", "autoritabacino.it",
+}
+
+
+def istituzionale(host: str) -> bool:
+    host = host.lower().removeprefix("www.")
+    if SCHEMI_PUBBLICI.search(host):
+        return True
+    return any(host == d or host.endswith("." + d) for d in ENTI_PUBBLICI)
+
+
 RIGA = re.compile(r"\[(404|410)\][^\n]*?(https?://[^\s<>|)\]]+)")
 
 
@@ -36,7 +69,7 @@ def main(percorso: str) -> int:
     trovati = []
     for codice, url in RIGA.findall(testo):
         host = (urlparse(url).hostname or "").lower()
-        if ISTITUZIONALI.search(host):
+        if istituzionale(host):
             trovati.append((codice, url))
     trovati = sorted(set(trovati))
     if not trovati:
