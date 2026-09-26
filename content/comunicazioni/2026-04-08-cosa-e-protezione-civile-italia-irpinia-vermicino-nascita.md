@@ -161,7 +161,7 @@ Sul nostro sito:
 Fonti istituzionali:
 
 - [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).
-- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/).
+- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n-1-del-2-gennaio-2018--codice-della-protezione-civile/).
 - [Legge 225/1992 — Servizio Nazionale](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1992-02-24;225).
 
 *Fonti: Dipartimento della Protezione Civile (protezionecivile.gov.it), D.Lgs. 2 gennaio 2018 n. 1, Legge 24 febbraio 1992 n. 225, archivi RAI e testimonianze dirette del volontariato italiano.*

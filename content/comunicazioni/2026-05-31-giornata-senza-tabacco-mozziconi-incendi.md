@@ -119,6 +119,6 @@ Fonti istituzionali:
 - [Ministero della Salute — Dipendenza da tabacco](https://www.salute.gov.it/).
 - [Istituto Superiore di Sanità — Tabagismo](https://www.iss.it/).
 - [Carabinieri Forestali](https://www.carabinieri.it/) — competenti su incendi boschivi.
-- [Dipartimento della Protezione Civile — Rischio incendi](https://www.protezionecivile.gov.it/it/pagina/rischio-incendi-boschivi).
+- [Dipartimento della Protezione Civile — Rischio incendi](https://rischi.protezionecivile.gov.it/it/incendi-boschivi-0/).
 
 Prendersi cura della propria salute e del proprio territorio sono **facce della stessa medaglia**: la responsabilità per la comunità in cui si vive.

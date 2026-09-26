@@ -65,4 +65,4 @@ In caso di **allerta arancione o rossa per rischio idrogeologico**, le indicazio
 
 - [Memoria dell'alluvione della Versilia — Comune di Stazzema](https://www.comune.stazzema.lu.it/)
 - [Piano di Assetto Idrogeologico (PAI) — Autorità di Bacino](https://www.autoritabacino.it/)
-- Voce Wikipedia: [Alluvione della Versilia del 1996](https://it.wikipedia.org/wiki/Alluvione_della_Versilia_del_1996)
+- Voce Wikipedia: [Alluvione della Versilia del 19 giugno 1996](https://it.wikipedia.org/wiki/Alluvione_della_Versilia_del_19_giugno_1996)

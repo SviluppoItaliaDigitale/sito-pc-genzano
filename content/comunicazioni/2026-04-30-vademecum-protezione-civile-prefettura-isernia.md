@@ -124,5 +124,5 @@ Fonti istituzionali:
 
 - [Vademecum di Protezione Civile — Prefettura di Isernia (2024, PDF)](https://prefettura.interno.gov.it/sites/default/files/11/2024-09/vademecum_di_protezione_civile_0.pdf).
 - [Ministero dell'Interno — Prefetture](https://www.interno.gov.it/).
-- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/).
+- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n-1-del-2-gennaio-2018--codice-della-protezione-civile/).
 - [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).

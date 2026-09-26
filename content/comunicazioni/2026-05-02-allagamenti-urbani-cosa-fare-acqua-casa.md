@@ -105,7 +105,7 @@ Sul nostro sito:
 
 Fonti istituzionali:
 
-- [Io Non Rischio — Alluvione](https://iononrischio.protezionecivile.it/alluvione/).
+- [Io Non Rischio — Alluvione](https://iononrischio.protezionecivile.gov.it/it/preparati/alluvione/).
 - [ISPRA — Dissesto idrogeologico](https://www.isprambiente.gov.it/it/attivita/suolo-e-territorio/dissesto-idrogeologico).
 - [Regione Lazio — Centro Funzionale](https://protezionecivile.regione.lazio.it).
 - [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).

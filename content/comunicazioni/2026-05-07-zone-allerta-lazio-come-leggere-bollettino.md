@@ -119,7 +119,7 @@ Sul nostro sito:
 Fonti istituzionali:
 
 - [Regione Lazio — Centro Funzionale](https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti).
-- [Dipartimento Protezione Civile — Rischio meteo](https://www.protezionecivile.gov.it/it/pagina/rischio-meteo-idrogeologico-e-idraulico).
+- [Dipartimento Protezione Civile — Rischio meteo](https://rischi.protezionecivile.gov.it/it/meteo-idro-0/).
 - [DGR Lazio 865/2019 — Tabella zone allerta](https://protezionecivile.regione.lazio.it/sites/default/files/2021-10/2-Tabella%20Zone%20Allerta%20per%20Comuni%20DGR%20865%202019_0.pdf).
 
 Un bollettino, letto correttamente, vale più di una consultazione rapida di un'app meteo. Il sistema di allertamento italiano è **uno dei migliori al mondo**: imparare a usarlo è un investimento in sicurezza personale e familiare.

@@ -33,7 +33,7 @@ Una delle immagini più drammatiche del sisma 2012 furono i **capannoni industri
 
 {{< foto src="/images/2026-05-20-terremoto-emilia-2012-memoria-resilienza-mirandola-emilia-2012.webp"
          alt="Cartolina d'epoca in bianco e nero del Castello dei Pico a Mirandola, con l'iscrizione originale «Mirandola - Castello Pico»"
-         caption="Il Castello dei Pico a Mirandola (Modena) in una cartolina d'epoca, prima dei danni: simbolo del comune, fu gravemente danneggiato dal terremoto dell'Emilia del 20 e 29 maggio 2012 e riaperto al pubblico nel 2018 dopo i lavori di consolidamento. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Castello_di_Mirandola.JPG)." >}}
+         caption="Il Castello dei Pico a Mirandola (Modena) in una cartolina d'epoca, prima dei danni: simbolo del comune, fu gravemente danneggiato dal terremoto dell'Emilia del 20 e 29 maggio 2012 e riaperto al pubblico nel 2018 dopo i lavori di consolidamento. Foto: Wikimedia Commons — Public domain. [Fonte originale](https://commons.wikimedia.org/wiki/File:Castello_Pico,_Mirandola.jpg)." >}}
 
 
 Durante la scossa, le travi "saltarono via" dai pilastri e i tetti caddero. Il contesto lavorativo — operai e macchinari all'interno — rese la tragedia particolarmente grave.
@@ -98,7 +98,7 @@ Sul nostro sito:
 Fonti istituzionali:
 
 - [INGV — Istituto Nazionale di Geofisica e Vulcanologia](https://www.ingv.it/).
-- [Dipartimento della Protezione Civile — Rischio sismico](https://www.protezionecivile.gov.it/it/pagina/rischio-sismico).
+- [Dipartimento della Protezione Civile — Rischio sismico](https://rischi.protezionecivile.gov.it/it/sismico/).
 - [Regione Emilia-Romagna — Sisma 2012](https://sismacentro.regione.emilia-romagna.it/).
 
 *In memoria delle vittime del sisma emiliano.*

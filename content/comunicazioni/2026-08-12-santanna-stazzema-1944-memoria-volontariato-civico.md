@@ -64,5 +64,5 @@ Per partecipare oggi a questa tradizione, vedi come [diventare volontario](/dive
 ## Per saperne di più
 
 - [Museo Storico della Resistenza di Sant'Anna di Stazzema](https://www.santannadistazzema.org/)
-- [Parco Nazionale della Pace](https://www.santannadistazzema.org/il-parco-nazionale-della-pace/)
+- [Parco Nazionale della Pace](https://santannadistazzema.org/)
 - Voce Wikipedia: [Eccidio di Sant'Anna di Stazzema](https://it.wikipedia.org/wiki/Eccidio_di_Sant%27Anna_di_Stazzema)

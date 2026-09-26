@@ -82,4 +82,4 @@ Il Gruppo non si attiva mai su chiamata diretta dei cittadini: interviene su **a
 **Fonti istituzionali:**
 
 - [Regione Lazio — Protezione Civile: campagna antincendio boschivo](https://protezionecivile.regione.lazio.it/)
-- [Dipartimento della Protezione Civile — rischio incendi](https://www.protezionecivile.gov.it/it/rischio/rischio-incendi-e-interfaccia/)
+- [Dipartimento della Protezione Civile — rischio incendi](https://rischi.protezionecivile.gov.it/it/incendi-boschivi-0/)

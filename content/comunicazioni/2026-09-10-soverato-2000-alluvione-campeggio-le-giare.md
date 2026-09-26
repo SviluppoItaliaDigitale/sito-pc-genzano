@@ -60,4 +60,4 @@ Il nostro [Piano di Emergenza](/piano-emergenza/) considera questi aspetti.
 
 - [Piano di Assetto Idrogeologico — Autorità di Bacino Distrettuali](https://www.autoritabacino.it/)
 - [AISM — Associazione Italiana Sclerosi Multipla](https://www.aism.it/)
-- Voce Wikipedia: [Alluvione di Soverato del 2000](https://it.wikipedia.org/wiki/Alluvione_di_Soverato_del_2000)
+- Voce Wikipedia: [Soverato](https://it.wikipedia.org/wiki/Soverato) (la sezione sulla storia ricorda l'alluvione del 2000)
