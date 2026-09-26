@@ -1,8 +1,8 @@
-# Immagini e testi social per «Il Vademecum di Protezione Civile della Prefettura di Isernia: uno strumento utile anche per i cittadini»
+# Immagini e testi social per «Turni di avvistamento AIB: come funzionano nel Lazio»
 
-- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-04-30-vademecum-protezione-civile-prefettura-isernia/
-- **Data**: 2026-04-30
-- **Badge**: Informazione
+- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-07-04-turni-avvistamento-aib-come-funzionano/
+- **Data**: 2026-07-04
+- **Badge**: Volontariato
 
 ## Dove va ogni file (a prova di errore)
 

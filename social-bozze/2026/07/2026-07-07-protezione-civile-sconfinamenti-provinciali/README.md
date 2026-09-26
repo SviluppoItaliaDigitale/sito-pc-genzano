@@ -1,7 +1,7 @@
-# Immagini e testi social per «Il Vademecum di Protezione Civile della Prefettura di Isernia: uno strumento utile anche per i cittadini»
+# Immagini e testi social per «Cosa fa la PC quando un'emergenza supera i confini comunali»
 
-- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-04-30-vademecum-protezione-civile-prefettura-isernia/
-- **Data**: 2026-04-30
+- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-07-07-protezione-civile-sconfinamenti-provinciali/
+- **Data**: 2026-07-07
 - **Badge**: Informazione
 
 ## Dove va ogni file (a prova di errore)

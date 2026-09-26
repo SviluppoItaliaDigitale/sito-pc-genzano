@@ -1,8 +1,8 @@
-# Immagini e testi social per «Il Vademecum di Protezione Civile della Prefettura di Isernia: uno strumento utile anche per i cittadini»
+# Immagini e testi social per «Le esercitazioni di Protezione Civile: a cosa servono davvero»
 
-- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-04-30-vademecum-protezione-civile-prefettura-isernia/
-- **Data**: 2026-04-30
-- **Badge**: Informazione
+- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-07-09-esercitazioni-pc-a-cosa-servono/
+- **Data**: 2026-07-09
+- **Badge**: Esercitazione
 
 ## Dove va ogni file (a prova di errore)
 

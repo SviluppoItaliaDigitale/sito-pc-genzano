@@ -1,8 +1,8 @@
-# Immagini e testi social per «Il Vademecum di Protezione Civile della Prefettura di Isernia: uno strumento utile anche per i cittadini»
+# Immagini e testi social per «Rischio idrogeologico estivo: siccità e piogge brevi intense»
 
-- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-04-30-vademecum-protezione-civile-prefettura-isernia/
-- **Data**: 2026-04-30
-- **Badge**: Informazione
+- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-06-22-rischio-idrogeologico-estivo-siccita-piogge/
+- **Data**: 2026-06-22
+- **Badge**: Prevenzione
 
 ## Dove va ogni file (a prova di errore)
 

@@ -1,8 +1,8 @@
-# Immagini e testi social per «Il Vademecum di Protezione Civile della Prefettura di Isernia: uno strumento utile anche per i cittadini»
+# Immagini e testi social per «Primo mese di campagna AIB: il punto al 30 giugno»
 
-- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-04-30-vademecum-protezione-civile-prefettura-isernia/
-- **Data**: 2026-04-30
-- **Badge**: Informazione
+- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-06-30-bilancio-primo-mese-aib-2026/
+- **Data**: 2026-06-30
+- **Badge**: Aggiornamento
 
 ## Dove va ogni file (a prova di errore)
 

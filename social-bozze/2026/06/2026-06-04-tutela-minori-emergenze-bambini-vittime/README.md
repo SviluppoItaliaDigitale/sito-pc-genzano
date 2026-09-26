@@ -1,7 +1,7 @@
-# Immagini e testi social per «Il Vademecum di Protezione Civile della Prefettura di Isernia: uno strumento utile anche per i cittadini»
+# Immagini e testi social per «4 giugno: tutela dei minori in emergenza»
 
-- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-04-30-vademecum-protezione-civile-prefettura-isernia/
-- **Data**: 2026-04-30
+- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-06-04-tutela-minori-emergenze-bambini-vittime/
+- **Data**: 2026-06-04
 - **Badge**: Informazione
 
 ## Dove va ogni file (a prova di errore)
