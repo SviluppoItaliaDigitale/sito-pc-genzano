@@ -529,6 +529,10 @@ HEAD = """<!DOCTYPE html>
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
   <style>
+    /* Un solo h1 nel fascicolo (WCAG 1.3.1, audit 25/09/2026 F11): i titoli
+       degli esperimenti sono h2, le loro sezioni h3 con la stessa classe e lo
+       stesso aspetto di prima. L'h1 sta nell'introduzione a schermo. */
+    .esp-intro .esp-h1 {{ font-size: 1.15rem; color: var(--scheda-blu); margin: 0 0 0.35rem; }}
     .esp-intro {{
       max-width: 21cm; margin: 1rem auto 0; padding: 0.8rem 1.2rem;
       background: #eaf2fb; border-left: 4px solid var(--scheda-blu);
@@ -663,6 +667,7 @@ HEAD = """<!DOCTYPE html>
   </div>
 
   <div class="esp-intro no-print">
+    <h1 class="esp-h1">Esperimenti di protezione civile: {n} schede A4</h1>
     <strong>Un esperimento per foglio.</strong> Puoi stampare tutto il fascicolo oppure, dalla finestra di stampa, scegliere <strong>solo le pagine</strong> che ti servono. Ogni scheda indica età consigliata, materiali, procedura, cosa si impara e le note di sicurezza. Versione completa e interattiva: <a href="/formazione/esperimenti/">Esperimenti e attività di protezione civile</a>.
   </div>
 """
@@ -697,7 +702,7 @@ PAGE = """
       <div class="scheda-logo" aria-hidden="true">PC</div>
       <div class="scheda-intestazione">
         <div class="scheda-ente">Protezione Civile &mdash; Genzano di Roma</div>
-        <h1 class="scheda-titolo-principale">{titolo}</h1>
+        <h2 class="scheda-titolo-principale">{titolo}</h2>
         <div class="scheda-sottotitolo">Esperimento di protezione civile &mdash; {tema}</div>
       </div>
     </header>
@@ -709,7 +714,7 @@ PAGE = """
 
 {domanda}{figura_alto}    <div class="esp-block"><span class="et">Materiali.</span> {materiali}</div>
 
-    <h2 class="scheda-h2">Come si fa</h2>
+    <h3 class="scheda-h2">Come si fa</h3>
     <ol class="esp-passi">
 {passi}
     </ol>
@@ -718,7 +723,7 @@ PAGE = """
 {limite}
     <div class="esp-pc"><strong>In chiave protezione civile.</strong> {pc}</div>
 {sicurezza}
-    <h2 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h2>
+    <h3 class="scheda-h2">&#9999;&#65039; Cosa ho osservato</h3>
     <div class="esp-osserva">{figura_basso}<div class="scheda-box-disegno" style="min-height: 4.5rem;"></div></div>
 
     <footer class="scheda-footer">
