@@ -1,16 +1,16 @@
 {
  "_snapshot": {
-  "generato": "2026-09-25T20:32:51+00:00",
+  "generato": "2026-09-26T01:51:11+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 8,
-  "scaduti_scartati": 12,
+  "avvisi": 5,
+  "scaduti_scartati": 15,
   "in_corso": 3,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Calabria",
    "fenomeno": "Vento",
    "livello": "gialla",
@@ -23,7 +23,7 @@
    "identificativo": "2.49.0.0.380.3.IT.260925102045.032"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Calabria",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -34,19 +34,6 @@
    "fine": "2026-09-26T17:59:00+00:00",
    "emesso": "2026-09-25T08:20:46+00:00",
    "identificativo": "2.49.0.0.380.3.IT.260925102045.031"
-  },
-  {
-   "in_corso": true,
-   "regione": "Calabria",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-09-25T08:00:00+00:00",
-   "fine": "2026-09-25T23:59:00+00:00",
-   "emesso": "2026-09-25T08:20:46+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.260925102045.027"
   },
   {
    "in_corso": false,
@@ -62,19 +49,6 @@
    "identificativo": "2.49.0.0.380.3.IT.260925102045.029"
   },
   {
-   "in_corso": true,
-   "regione": "Campania",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-09-25T08:00:00+00:00",
-   "fine": "2026-09-25T23:59:00+00:00",
-   "emesso": "2026-09-25T08:20:45+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.260925102045.024"
-  },
-  {
    "in_corso": false,
    "regione": "Puglia",
    "fenomeno": "Vento",
@@ -88,7 +62,7 @@
    "identificativo": "2.49.0.0.380.3.IT.260925102045.030"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Sicilia",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -99,19 +73,6 @@
    "fine": "2026-09-26T17:59:00+00:00",
    "emesso": "2026-09-25T08:20:46+00:00",
    "identificativo": "2.49.0.0.380.3.IT.260925102045.033"
-  },
-  {
-   "in_corso": true,
-   "regione": "Sicilia",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-09-25T08:00:00+00:00",
-   "fine": "2026-09-25T23:59:00+00:00",
-   "emesso": "2026-09-25T08:20:46+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.260925102045.028"
   }
  ]
 }
