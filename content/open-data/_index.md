@@ -15,14 +15,14 @@ I seguenti dataset sono pubblicati **ora**, con dati reali e verificati, in form
 
 | Dataset | Contenuto | Record | Scarica |
 |---|---|---|---|
-| **Aree di emergenza** | Aree di attesa della popolazione e di ammassamento soccorritori del Piano comunale, con coordinate GPS verificate sul campo | 16 | [CSV](/open-data/aree-emergenza.csv) · [JSON](/open-data/aree-emergenza.json) |
+| **Aree di emergenza** | Aree di attesa della popolazione, aree di ricovero e aree di ammassamento dei soccorritori del Piano comunale, con coordinate GPS verificate sul campo | 16 | [CSV](/open-data/aree-emergenza.csv) · [JSON](/open-data/aree-emergenza.json) |
 | **Numeri utili di emergenza** | Numeri di emergenza validi nel Lazio | 2 | [CSV](/open-data/numeri-utili-emergenza.csv) · [JSON](/open-data/numeri-utili-emergenza.json) |
 | **Codici colore allerta** | Significato e comportamenti dei livelli di allerta meteo della Regione Lazio | 4 | [CSV](/open-data/codici-colore-allerta.csv) · [JSON](/open-data/codici-colore-allerta.json) |
 | **Timeline storica del rischio** | Eventi geologici, sismici, idrogeologici, normativi dei Castelli Romani, ognuno con fonte istituzionale | 12 | [CSV](/open-data/eventi-storici-castelli-romani.csv) · [JSON](/open-data/eventi-storici-castelli-romani.json) |
 
-> Il dataset **Aree di emergenza** è il riferimento per altri Comuni, enti e applicazioni di terzi: contiene le coordinate GPS, verificate sul campo, dei punti del Piano comunale (aree di attesa della popolazione e aree di ammassamento dei soccorritori).
+> Il dataset **Aree di emergenza** è il riferimento per altri Comuni, enti e applicazioni di terzi: contiene le coordinate GPS, verificate sul campo, dei punti del Piano comunale (aree di attesa della popolazione, aree di ricovero e aree di ammassamento dei soccorritori).
 
-I file sono rigenerati automaticamente a partire dai dati strutturati del sito.
+I file sono rigenerati automaticamente a partire dai dati strutturati del sito. Titolo, fonte, licenza e data di aggiornamento di ciascun dataset sono raccolti nel [catalogo dei dataset](/open-data/catalogo.json) (JSON): i file di dati restano semplici elenchi, così chi li riusa non deve cambiare nulla.
 
 ### Feed allerta in tempo reale (CAP)
 

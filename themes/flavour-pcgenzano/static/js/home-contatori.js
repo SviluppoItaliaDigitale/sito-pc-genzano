@@ -15,7 +15,9 @@
       if (!e.isIntersecting) return;
       var el = e.target;
       var target = parseInt(el.getAttribute('data-count'), 10);
-      var suffix = (target === 20 || target === 10 ? '+' : '');
+      // Il suffisso (es. "+") si legge dal testo già scritto nel template,
+      // così un numero cambiato non perde né guadagna il "+" per sbaglio.
+      var suffix = (el.textContent.match(/\D+$/) || [''])[0];
       var start = 0, step = Math.ceil(target / 50);
       el.textContent = '0' + suffix;
       var timer = setInterval(function () {
