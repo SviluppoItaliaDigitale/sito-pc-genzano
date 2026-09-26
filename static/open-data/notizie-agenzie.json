@@ -5,11 +5,77 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-26T19:18:58+00:00",
+  "generato": "2026-09-26T22:07:03+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-26T20:52:16+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'IA di OpenAI 'fuori controllo', ha interferito anche col governo Usa",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/26/lia-di-openai-fuori-controllo-ha-interferito-anche-col-governo-usa_cb4200a0-c71d-44c3-9329-0504ce74f609.html"
+  },
+  {
+   "data": "2026-09-26T20:50:16+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Matteo Bassetti sfida il contestatore di Futuro Nazionale: \"Scienziati liberi, nessun partito può zittirci\"",
+   "url": "https://www.adnkronos.com/cronaca/futuro-nazionale-roberto-vannacci-scontro-matteo-bassetti_kPVBJzMS1TNG1hzEpoAVW"
+  },
+  {
+   "data": "2026-09-26T20:44:04+00:00",
+   "fonte": "ANSA",
+   "titolo": "Brasile al voto, l'ombra di Trump sulla sfida tra Lula e Bolsonaro Jr",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/26/brasile-al-voto-lombra-di-trump-sulla-sfida-tra-lula-e-bolsonaro-jr_0edff505-36d6-4e2b-8aa9-31bd2161e9e1.html"
+  },
+  {
+   "data": "2026-09-26T20:28:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Siracusano-Vannacci, il blog Iacchite' chiarisce: \"La foto non è stata realizzata da noi, ma dall'IA\"",
+   "url": "https://www.adnkronos.com/politica/siracusano-vannacci-foto-ia-blog-iacchite-oggi_5MZGVSAnIoHq3R7JG6ZG8c"
+  },
+  {
+   "data": "2026-09-26T20:17:53+00:00",
+   "fonte": "ANSA",
+   "titolo": "È morto a Bari il fotoreporter Luca Turi, documentò lo sbarco della Vlora",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/e-morto-a-bari-il-fotoreporter-luca-turi-documento-lo-sbarco-della-vlora_5e2d90c6-9666-48ca-a53f-4a78a6de7f62.html"
+  },
+  {
+   "data": "2026-09-26T19:44:06+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il contestato match con Israele, ma l'Irlanda deve giocare",
+   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/26/il-contestato-match-con-israele-ma-lirlanda-deve-giocare_9c612d9f-b9d2-4cc0-a906-f5aa352a9d5a.html"
+  },
+  {
+   "data": "2026-09-26T19:38:10+00:00",
+   "fonte": "ANSA",
+   "titolo": "Mondiali di ciclismo: Elisa Longo Borghini ancora sul podio, è bronzo",
+   "url": "https://www.ansa.it/sito/notizie/sport/ciclismo/2026/09/26/mondiali-di-ciclismo-elisa-longo-borghini-ancora-sul-podio-e-bronzo_a05bd09b-64ed-4e62-a3ef-4d69deaa3047.html"
+  },
+  {
+   "data": "2026-09-26T19:34:04+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Cenere lavica dell'Etna, altro stop e disagi all'aeroporto di Catania",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/forte-temporale-e-cenere-lavica-delletna-disagi-allaeroporto-di-catania_fe7f6622-6cd5-44e2-b57c-01f7d28c8121.html"
+  },
+  {
+   "data": "2026-09-26T19:25:18+00:00",
+   "fonte": "ANSA",
+   "titolo": "Papa Leone star sugli Champs-Elysees, in 800mila alla messa. Ora a Lourdes",
+   "url": "https://www.ansa.it/vaticano/notizie/2026/09/26/papa-leone-star-sugli-champs-elysees-in-800mila-alla-messa.-ora_902d673e-03d3-4ce4-a952-2a96283b0241.html"
+  },
+  {
+   "data": "2026-09-26T19:22:44+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "La difesa di Sempio: \"Attendiamo di leggere le nuove prove della Procura\"",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/la-difesa-di-sempio-attendiamo-di-leggere-le-nuove-prove-della-procura_aacd994f-b23f-460b-8cff-f318a0c10883.html"
+  },
+  {
+   "data": "2026-09-26T19:12:45+00:00",
+   "fonte": "ANSA",
+   "titolo": "'Da giorni sotto l'effetto di droghe: il festino, la lite e l'omicidio'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/omicidio-di-torino-la-madre-del-fermato-piangeva-era-sconvolto-_dfe8e53a-0135-4ecc-828a-3bdb360f920c.html"
+  },
   {
    "data": "2026-09-26T19:12:10+00:00",
    "fonte": "ANSA CRONACA",
@@ -53,18 +119,6 @@
    "url": "https://www.ansa.it/sito/videogallery/mondo/2026/09/26/crisi-abitativa-in-spagna-manifestazione-a-madrid-contro-gli-sfratti_f6845c31-6b3e-4296-a1b3-0df4dc6c7944.html"
   },
   {
-   "data": "2026-09-26T19:04:32+00:00",
-   "fonte": "ANSA",
-   "titolo": "'Da giorni sotto l'effetto di droghe poi la lite e l'omicidio'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/omicidio-di-torino-la-madre-del-fermato-piangeva-era-sconvolto-_dfe8e53a-0135-4ecc-828a-3bdb360f920c.html"
-  },
-  {
-   "data": "2026-09-26T18:40:24+00:00",
-   "fonte": "ANSA",
-   "titolo": "Papa Leone star sugli Champs-Elysees, in 800mila alla messa. Ora a Lourdes",
-   "url": "https://www.ansa.it/vaticano/notizie/2026/09/26/papa-leone-star-sugli-champs-elysees-in-800mila-alla-messa.-ora_902d673e-03d3-4ce4-a952-2a96283b0241.html"
-  },
-  {
    "data": "2026-09-26T18:39:12+00:00",
    "fonte": "ANSA",
    "titolo": "America's Cup: spettacolo Luna Rossa e La Roche-Posay, boom di presenze",
@@ -87,12 +141,6 @@
    "fonte": "ANSA",
    "titolo": "Lavrov accusa l'Europa ma all'Onu vede il ministro tedesco",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/26/lavrov-accusa-leuropa-ma-allonu-vede-il-ministro-tedesco_7228533a-05e3-42d2-920d-f026fb1f727a.html"
-  },
-  {
-   "data": "2026-09-26T18:25:05+00:00",
-   "fonte": "ANSA",
-   "titolo": "Mondiali di ciclismo: bronzo di Longo Borghini nella gara in linea, oro a Vollering",
-   "url": "https://www.ansa.it/sito/notizie/sport/ciclismo/2026/09/26/mondiali-ciclismo-bronzo-di-longo-borghini-nella-gara-in-linea-oro-vollering_a05bd09b-64ed-4e62-a3ef-4d69deaa3047.html"
   },
   {
    "data": "2026-09-26T18:15:55+00:00",
@@ -137,58 +185,10 @@
    "url": "https://www.adnkronos.com/cronaca/delitto-torino-39enne-fatto-a-pezzi-droga-alcol-oggi_2Yd5cf4747wYdAIBuZr0Jv"
   },
   {
-   "data": "2026-09-26T17:00:06+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trapianti, 32 anni fa la morte di Nicholas Green diventato simbolo del dono",
-   "url": "https://www.ansa.it/canale_saluteebenessere/notizie/medicina/2026/09/26/trapianti-32-anni-fa-la-morte-di-nicholas-greeen-diventato-simbolo-del-dono_cbb9830e-82fe-4994-9682-426db6c07ced.html"
-  },
-  {
    "data": "2026-09-26T16:59:03+00:00",
    "fonte": "ANSA",
    "titolo": "La stravaganza siciliana di Dolce e Gabbana / LA SFILATA",
    "url": "https://www.ansa.it/canale_lifestyle/notizie/moda/2026/09/26/la-stravaganza-siciliana-di-dolce-e-gabbana-_02febc60-2764-4fff-b7c6-66ec2a78df9c.html"
-  },
-  {
-   "data": "2026-09-26T16:56:37+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Omicidio Torino, il fermato 'non riuscivo più a sezionare il corpo'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/omicidio-torino-il-fermato-non-riuscivo-piu-a-sezionare-il-corpo_cb5ed330-843b-4b84-9658-23104eed1bac.html"
-  },
-  {
-   "data": "2026-09-26T16:54:17+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Omicidio Torino, 'l'ho ucciso ma non ricordo lo strangolamento'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/omicidio-torino-lho-ucciso-ma-non-ricordo-lo-strangolamento_e608f45b-4e73-4559-a9e0-9f74c9e4c383.html"
-  },
-  {
-   "data": "2026-09-26T16:44:24+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "America's Cup, Luna Rossa ancora in testa dopo seconda giornata regate preliminari",
-   "url": "https://www.adnkronos.com/sport/americas-cup-oggi-regate-preliminari-risultati-luna-rossa_QhuKr00T6WZZqq4m2L8Yo"
-  },
-  {
-   "data": "2026-09-26T16:38:05+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Francesca Lollobrigida aspetta un bambino, il gender reveal a Verissimo",
-   "url": "https://www.adnkronos.com/spettacoli/francesca-lollobrigida-verissimo-maschietto_6Bfzva8QMKuDtNAXx0jQIE"
-  },
-  {
-   "data": "2026-09-26T16:33:52+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Incidente a Cumiana nel Torinese, morto un paracadutista",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/incidente-a-cumiana-nel-torinese-morto-un-paracadutista_bf9b899e-8f07-48b3-9207-6ec373355d50.html"
-  },
-  {
-   "data": "2026-09-26T16:29:16+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Omicidio Torino, avvocato indagato 'nella casa consumata ogni tipo di droga'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/omicidio-torino-avvocato-indagato-nella-casa-consumata-ogni-tipo-di-droga_758ad8d9-04a5-4886-a534-7cc749210c1f.html"
-  },
-  {
-   "data": "2026-09-26T16:28:07+00:00",
-   "fonte": "ANSA",
-   "titolo": "Prenotazioni a pagamento per gli abbonati Alta velocità, ma il canone scende",
-   "url": "https://www.ansa.it/sito/notizie/economia/mobilita_infrastrutture/2026/09/26/cambia-abbonamento-a-av-trenitalia-meno-caro-ma-prenotazione-diventa-a-pagamento_70e9e3e1-73a2-4bf1-b777-8f9ad7946bdb.html"
   }
  ]
 }
