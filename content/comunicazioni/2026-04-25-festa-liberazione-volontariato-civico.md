@@ -19,7 +19,7 @@ Il 25 aprile è la [Festa della Liberazione](https://www.quirinale.it/). Non è 
 
 L'articolo 118 della Costituzione riconosce e favorisce "**l'autonoma iniziativa dei cittadini, singoli e associati, per lo svolgimento di attività di interesse generale**". È il principio di **sussidiarietà**: quando i cittadini si organizzano per risolvere problemi collettivi, le istituzioni sostengono e non sostituiscono.
 
-Il volontariato di Protezione Civile è uno degli esempi più concreti di questo principio. Non è un'attività "in più" rispetto al servizio pubblico: è parte integrante del sistema nazionale, riconosciuta dal [Codice della Protezione Civile](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/) (D.Lgs. 1/2018).
+Il volontariato di Protezione Civile è uno degli esempi più concreti di questo principio. Non è un'attività "in più" rispetto al servizio pubblico: è parte integrante del sistema nazionale, riconosciuta dal [Codice della Protezione Civile](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n-1-del-2-gennaio-2018--codice-della-protezione-civile/) (D.Lgs. 1/2018).
 
 ## Cosa significa essere volontari oggi
 

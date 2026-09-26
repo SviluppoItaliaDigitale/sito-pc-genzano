@@ -123,10 +123,10 @@ Sul nostro sito:
 
 Fonti istituzionali:
 
-- [ISPRA — Rischio industriale](https://www.isprambiente.gov.it/it/attivita/rischio-industriale).
+- [ISPRA — Rischio industriale](https://www.isprambiente.gov.it/it/attivita/controlli-e-ispezioni/rischio-industriale-e-direttive-seveso-1).
 - [Ministero dell'Ambiente — Direttiva Seveso](https://www.mase.gov.it/).
 - [IT-alert — sito ufficiale del DPC](https://www.it-alert.gov.it/).
-- [Dipartimento della Protezione Civile — Rischio industriale](https://www.protezionecivile.gov.it/it/pagina/rischio-chimico-industriale).
+- [Dipartimento della Protezione Civile — Rischio industriale](https://rischi.protezionecivile.gov.it/it/industriale/).
 - [D.Lgs. 105/2015 — recepimento Seveso III](https://www.gazzettaufficiale.it/eli/id/2015/07/14/15G00121/sg).
 
 Approfondimenti divulgativi (Geopop):

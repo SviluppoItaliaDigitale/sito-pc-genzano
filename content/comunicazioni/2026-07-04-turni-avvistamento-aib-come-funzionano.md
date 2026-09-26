@@ -150,6 +150,6 @@ Se sei cittadino interessato a diventare volontario, [contatta il Gruppo](/diven
 - Articolo: [DPI del volontario PC](/comunicazioni/2026-06-17-dpi-volontari-cosa-sono-perche-importanti/)
 - Pagina: [Diventa volontario](/diventa-volontario/)
 - [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it/)
-- [DPC — Rischio incendi boschivi](https://www.protezionecivile.gov.it/it/rischi/rischio-incendi)
+- [DPC — Rischio incendi boschivi](https://rischi.protezionecivile.gov.it/it/incendi-boschivi-0/)
 
 Ogni ora di avvistamento è un contributo concreto alla sicurezza del territorio. Anche restare seduti in una postazione fresca, con un binocolo in mano, è un gesto di cittadinanza.

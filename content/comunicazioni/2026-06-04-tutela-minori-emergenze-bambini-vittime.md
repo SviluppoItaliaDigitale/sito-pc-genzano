@@ -14,7 +14,7 @@ draft: false
 versione_facile: "2026-06-04-tutela-minori-emergenze-bambini-vittime-facile"
 ---
 
-Il **4 giugno** è la [Giornata internazionale dei bambini vittime innocenti di aggressione](https://www.un.org/en/observances/children-victims-day) istituita dalle **Nazioni Unite** nel 1982. La ricorrenza nasce per sensibilizzare sulle sofferenze dei bambini coinvolti in conflitti e situazioni di violenza. La cornice è molto ampia, ma tocca anche un tema di Protezione Civile: la **tutela specifica dei minori negli scenari di emergenza**.
+Il **4 giugno** è la [Giornata internazionale dei bambini vittime innocenti di aggressione](https://www.un.org/en/observances/child-victim-day) istituita dalle **Nazioni Unite** nel 1982. La ricorrenza nasce per sensibilizzare sulle sofferenze dei bambini coinvolti in conflitti e situazioni di violenza. La cornice è molto ampia, ma tocca anche un tema di Protezione Civile: la **tutela specifica dei minori negli scenari di emergenza**.
 
 ## Perché i minori richiedono un'attenzione diversa
 
@@ -91,7 +91,7 @@ Nei nostri corsi di formazione trattiamo specificamente la **comunicazione con i
 - Articolo: [Piano familiare in 5 passi](/comunicazioni/2026-04-26-piano-emergenza-familiare-5-passi/)
 - Articolo: [Kit di emergenza domestico](/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica/)
 - Articolo: [Persone fragili — aiutare anziani e vicini](/comunicazioni/2026-05-05-persone-fragili-aiutare-vicini-anziani-emergenza/)
-- [UN — Children victims of aggression](https://www.un.org/en/observances/children-victims-day)
+- [UN — Children victims of aggression](https://www.un.org/en/observances/child-victim-day)
 - [Io Non Rischio — Materiali per famiglie](https://iononrischio.protezionecivile.it/)
 
 I bambini non sono "piccoli adulti" in emergenza. Meritano preparazione e attenzione specifiche — da ogni famiglia, da ogni volontario, da ogni comunità.

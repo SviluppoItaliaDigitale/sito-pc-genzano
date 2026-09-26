@@ -17,7 +17,7 @@ draft: false
 
 Il Lazio è una regione a **sismicità media**. Non è un territorio a rischio estremo come l'Appennino centrale, ma eventi percepibili avvengono regolarmente e in passato il territorio ha vissuto scosse significative. Conoscere i comportamenti corretti **prima** della scossa è fondamentale: quando il terremoto arriva, non c'è tempo per pensarci.
 
-In questo articolo riassumiamo le indicazioni ufficiali del [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/it/pagina/rischio-sismico).
+In questo articolo riassumiamo le indicazioni ufficiali del [Dipartimento della Protezione Civile](https://rischi.protezionecivile.gov.it/it/sismico/).
 
 ## Durante la scossa
 
@@ -87,7 +87,7 @@ Sul nostro sito:
 
 Fonti istituzionali:
 
-- [Dipartimento Protezione Civile — Rischio sismico](https://www.protezionecivile.gov.it/it/pagina/rischio-sismico).
+- [Dipartimento Protezione Civile — Rischio sismico](https://rischi.protezionecivile.gov.it/it/sismico/).
 - [INGV — Istituto Nazionale Geofisica e Vulcanologia](https://www.ingv.it/).
 - [Mappe di pericolosità sismica INGV](https://zonesismiche.mi.ingv.it/).
 - [Centro Microzonazione Sismica](https://www.centromicrozonazionesismica.it/).

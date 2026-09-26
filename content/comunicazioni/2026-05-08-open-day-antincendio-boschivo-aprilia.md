@@ -59,4 +59,4 @@ Fonti istituzionali:
 
 - [Vigili del Fuoco](https://www.vigilfuoco.it/).
 - [Regione Lazio — AIB](https://protezionecivile.regione.lazio.it).
-- [Dipartimento Protezione Civile — Rischio incendi](https://www.protezionecivile.gov.it/it/pagina/rischio-incendi-boschivi).
+- [Dipartimento Protezione Civile — Rischio incendi](https://rischi.protezionecivile.gov.it/it/incendi-boschivi-0/).

@@ -128,7 +128,7 @@ Questa è una rete di vicinato attivo. Non costa nulla, non richiede strutture, 
 
 - Articolo: [Ondate di calore: anziani e fragili](/comunicazioni/2026-06-15-ondate-calore-anziani-fragili-proteggere/)
 - Articolo: [Piano di famiglia per l'estate](/comunicazioni/2026-06-26-piano-famiglia-estate-emergenze/)
-- [DPC — "Io non rischio"](https://www.protezionecivile.gov.it/it/app/io-non-rischio)
+- [DPC — "Io non rischio"](https://iononrischio.protezionecivile.gov.it/it/)
 - [Progetti di resilienza urbana](https://www.protezionecivile.gov.it/)
 
 Chi conosce il proprio vicinato conosce la prima linea di risposta della sua comunità. È un sapere che si costruisce nel tempo, con semplicità.

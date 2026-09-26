@@ -107,5 +107,5 @@ Fonti istituzionali:
 - [INGV — Istituto Nazionale Geofisica e Vulcanologia](https://www.ingv.it/).
 - [Dipartimento Protezione Civile — Rischio sismico](https://rischi.protezionecivile.gov.it/it/sismico/).
 - [Mappe di pericolosità sismica INGV](https://zonesismiche.mi.ingv.it/).
-- [INGV — Centro Allerta Tsunami](https://www.ingv.it/cat/).
+- [INGV — Centro Allerta Tsunami](https://cat.ingv.it/it/).
 - [Comune di Messina](https://www.comune.messina.it/).

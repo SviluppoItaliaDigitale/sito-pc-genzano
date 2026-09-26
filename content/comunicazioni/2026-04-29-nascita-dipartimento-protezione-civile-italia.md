@@ -133,7 +133,7 @@ Fonti istituzionali:
 - [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).
 - [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1).
 - [Legge 225/1992 — Servizio Nazionale](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1992-02-24;225).
-- [Storia della Protezione Civile italiana — Dipartimento](https://www.protezionecivile.gov.it/it/dipartimento/).
+- [Storia della Protezione Civile italiana — Dipartimento](https://servizio-nazionale.protezionecivile.gov.it/it/storia/).
 
 ---
 

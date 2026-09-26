@@ -211,6 +211,6 @@ Sul nostro sito:
 
 Fonti istituzionali:
 
-- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/).
+- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n-1-del-2-gennaio-2018--codice-della-protezione-civile/).
 - [Metodo Augustus — Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).
 - [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).

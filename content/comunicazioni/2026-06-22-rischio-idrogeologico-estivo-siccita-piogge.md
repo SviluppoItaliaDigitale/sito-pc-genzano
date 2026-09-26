@@ -127,7 +127,7 @@ La segnalazione precoce può prevenire danni.
 - Articolo: [Temporali estivi nei Castelli Romani](/comunicazioni/2026-06-13-temporali-estivi-castelli-romani/)
 - Articolo: [Come si legge un'allerta meteo](/allerte-meteo/)
 - Pagina: [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/)
-- [DPC — Rischio idrogeologico](https://www.protezionecivile.gov.it/it/rischi/rischio-idrogeologico)
+- [DPC — Rischio idrogeologico](https://rischi.protezionecivile.gov.it/it/meteo-idro-0/)
 - [ISPRA — Dissesto idrogeologico](https://www.isprambiente.gov.it/)
 
 Il suolo dei Castelli è un corpo vivo: rispetta i suoi tempi e le sue reazioni. L'estate può sorprendere chi non lo considera.

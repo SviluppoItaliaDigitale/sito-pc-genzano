@@ -92,4 +92,4 @@ Fonti istituzionali:
 - [ISIN — Ispettorato Nazionale per la Sicurezza Nucleare e la Radioprotezione](https://www.isinucleare.it/).
 - [ISS — Sistema RESORAD](https://www.iss.it/).
 - [IAEA — The Chernobyl Accident](https://www.iaea.org/topics/chornobyl).
-- [Piano nazionale emergenze radiologiche e nucleari (2022)](https://www.protezionecivile.gov.it/it/normativa/piano-nazionale-la-gestione-delle-emergenze-radiologiche-e-nucleari/).
+- [Piano nazionale emergenze radiologiche e nucleari (2022)](https://rischi.protezionecivile.gov.it/it/nucleare/attivita/).
