@@ -2,7 +2,7 @@
 title: "Social Media Policy"
 description: "Come il Gruppo PC di Genzano di Roma comunica sui social: canali ufficiali, orari di presìdio, netiquette, moderazione e licenza dei contenuti."
 layout: "single"
-dataUltimaRevisione: "2026-09-22"
+dataUltimaRevisione: "2026-09-26"
 toc: true
 ---
 
@@ -32,7 +32,7 @@ I contenuti sono redatti da volontari del Gruppo, coordinati da un Referente per
 
 I canali social del Gruppo sono presidiati, in tempo ordinario, **dal lunedì al venerdì, indicativamente dalle 9 alle 18**. Nei fine settimana e nei giorni festivi il presìdio è discontinuo.
 
-Dal 20 settembre 2026 **Instagram** e **Facebook** pubblicano anche in **automatico**: il post esce insieme all'articolo, appena la sua pagina è online sul sito. Se escono più articoli nello stesso momento, i post si distanziano di mezz'ora. Il testo del post nasce dall'articolo, che la redazione ha già rivisto. Non sono mai pubblicati in questo modo i contenuti con badge **Allerta** o **Emergenza** (restano decisi e pubblicati a mano, nel momento in cui servono) né le versioni in italiano semplice. Sui soli post usciti in automatico i **commenti sono disattivati**, perché possono uscire anche fuori dagli orari di presìdio indicati sopra: la lettura e l'eventuale correzione dei contenuti restano comunque a cura della redazione, secondo le stesse regole di questa policy. **X (Twitter)** resta pubblicato a mano dalla redazione; su **Telegram** escono in automatico gli avvisi di allerta e gli articoli urgenti.
+Dal 20 settembre 2026 **Instagram** e **Facebook** hanno anche una **pubblicazione programmata**: il post esce insieme all'articolo, appena la sua pagina è online sul sito. Se escono più articoli nello stesso momento, i post si distanziano di mezz'ora. Il testo del post nasce dall'articolo, che la redazione ha già rivisto. Non sono mai pubblicati in questo modo i contenuti con badge **Allerta** o **Emergenza** (restano decisi e pubblicati a mano, nel momento in cui servono) né le versioni in italiano semplice. Sui soli post programmati i **commenti sono disattivati**, perché possono uscire anche fuori dagli orari di presìdio indicati sopra: la lettura e l'eventuale correzione dei contenuti restano comunque a cura della redazione, secondo le stesse regole di questa policy. **X (Twitter)** resta pubblicato a mano dalla redazione; **Telegram** riceve gli avvisi di allerta e gli articoli urgenti che la redazione pubblica immediatamente sul sito.
 
 Durante eventi di **allerta** o **emergenza**, il canale Telegram ufficiale viene aggiornato in tempo reale 24 ore su 24 fino al termine dell'evento. Gli altri canali (Instagram, Facebook, X) vengono aggiornati a cadenza regolare durante le stesse fasi, sempre a cura della redazione.
 
@@ -208,9 +208,11 @@ Per segnalazioni sulla policy, richieste di chiarimento o ricorsi sulla moderazi
 
 ## Versione e aggiornamenti
 
-Versione pubblicata il **22 aprile 2026**, aggiornata il **27 aprile 2026** e il **21 settembre 2026**. La policy viene rivista almeno una volta all'anno. Le modifiche significative sono annotate in fondo alla pagina con data e sintesi.
+Versione pubblicata il **22 aprile 2026**, aggiornata il **27 aprile 2026**, il **21 settembre 2026** e il **26 settembre 2026**. La policy viene rivista almeno una volta all'anno. Le modifiche significative sono annotate in fondo alla pagina con data e sintesi.
 
-**21 settembre 2026** — aggiunta in *"Orari di presìdio"* la descrizione della pubblicazione automatica su Instagram e Facebook (due post al giorno da bozze già scritte dalla redazione, mai per Allerta/Emergenza né per le versioni facili, commenti disattivati sui soli post automatici); X e Telegram restano pubblicati a mano.
+**26 settembre 2026** — riallineata la nota del 21 settembre alla regola in vigore: un post per articolo, appena la pagina è online sul sito (non più due post al giorno); se escono più articoli insieme, i post si distanziano di mezz'ora. Telegram riceve gli avvisi di allerta e gli articoli urgenti appena pubblicati.
+
+**21 settembre 2026** — aggiunta in *"Orari di presìdio"* la descrizione della pubblicazione programmata su Instagram e Facebook (un post per articolo, appena la pagina è online, mai per Allerta/Emergenza né per le versioni facili, commenti disattivati sui soli post programmati); X resta pubblicato a mano.
 
 **27 aprile 2026** — aggiunta la sezione *"Comunicazione di crisi sui social"* con struttura standard del messaggio di allerta, policy degli hashtag, monitoraggio della disinformazione, ridondanza tra canali e accessibilità dei post. Riferimenti normativi riorganizzati in 5 livelli con gerarchia di prevalenza esplicita: italiano vincolante (AGID + DPC) → scientifico italiano (CNR, ISPRA) → tecnico-operativo europeo (EENA, CWA CEN/CENELEC) → standard internazionali (ISO 22329:2021, WCAG 2.2 AA) → normativa orizzontale. **DPC** elevato a riferimento principale insieme ad AGID.
 
