@@ -61,7 +61,7 @@
               {{- /* alt vuoto: cover decorativa, titolo già nel link adiacente
                     (il vecchio $.Params.image_alt era il contesto della pagina
                     lista, non dell'articolo). */ -}}
-              {{ with .Params.image }}<img src="{{ . | relURL }}" alt="" aria-hidden="true" loading="lazy">
+              {{ with .Params.image }}<img src="{{ . | relURL }}" alt="" aria-hidden="true" {{ partial "dimensioni-immagine.html" . }} loading="lazy">
               {{ else }}<img src="{{ "images/notizia-default.svg" | relURL }}" alt="" aria-hidden="true" loading="lazy">{{ end }}
             </div>
           </div>
