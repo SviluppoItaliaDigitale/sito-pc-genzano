@@ -4,6 +4,16 @@
   niente immagini pesanti, niente JS oltre quello essenziale per leggere
   data/allerta.json. Caricabile anche con rete satura/debolissima.
 
+  Aggiornamento dello stato allerta (audit 25/09/2026, F27): la pagina è
+  statica e mostra lo stato dell'ultima pubblicazione. Uno script inline di
+  poche righe chiede /allerta-stato/index.json (stessa origine, una richiesta,
+  timeout 4 s) e, SOLO se il suo ultimo_controllo è più recente di quello
+  scritto nella pagina, aggiorna livello, titolo, descrizione, riga
+  "Verificato", pre-allerta di domani e banner di emergenza. Se la rete non
+  risponde, se il dato non è leggibile o se è più vecchio, non tocca nulla:
+  resta il valore statico, con la nota "dato dell'ultima pubblicazione".
+  Mai retrocedere a un dato più vecchio (rule 06, rule 09 § 15).
+
   Contenuto in ordine di priorita' decrescente:
   1. 112 grande, immediato
   2. Stato allerta meteo dinamico (da data/allerta.json)
@@ -58,7 +68,7 @@
 </p>
 
 {{- if and $emergenza $emergenza.attiva }}
-<div class="lite-emergenza-on" role="alert">
+<div class="lite-emergenza-on" id="lite-emergenza" role="alert">
   <strong>⚠️ EMERGENZA IN CORSO:</strong> {{ $emergenza.titolo }}<br>
   {{ $emergenza.descrizione }}
 </div>
@@ -83,9 +93,9 @@
 {{- $livRaw := lower (string (.livello | default "verde")) -}}
 {{- $liv := index $norm $livRaw | default $livRaw -}}
 {{- if not (in (slice "verde" "gialla" "arancione" "rossa") $liv) -}}{{- $liv = "verde" -}}{{- end -}}
-<div class="lite-allerta lite-allerta-{{ $liv }}" role="region" aria-label="Stato allerta meteo">
-  <strong>Stato allerta meteo: {{ .titolo }}</strong> <span style="font-size: 0.9rem;">(livello {{ $liv }})</span>
-  <p style="margin: 0.4rem 0 0;">{{ .descrizione }}</p>
+<div class="lite-allerta lite-allerta-{{ $liv }}" id="lite-allerta" role="region" aria-label="Stato allerta meteo" data-controllo="{{ $controllo }}">
+  <strong id="lite-allerta-titolo">Stato allerta meteo: {{ .titolo }}</strong> <span id="lite-allerta-liv" style="font-size: 0.9rem;">(livello {{ $liv }})</span>
+  <p id="lite-allerta-desc" style="margin: 0.4rem 0 0;">{{ .descrizione }}</p>
   {{- with .domani }}
   {{- $dl := index $norm (lower (string (.livello | default "verde"))) | default (lower (string (.livello | default "verde"))) -}}
   {{- if and (in (slice "gialla" "arancione" "rossa") $dl) .titolo }}
@@ -100,10 +110,10 @@
       {{- $domaniDataLeg = printf "%d %s %d" $td.Day (index $mesi (int $td.Month)) $td.Year -}}
     {{- end -}}
   {{- end -}}
-  <p class="lite-domani lite-domani-{{ $dl }}" role="status"><strong>Previsto domani{{ if $domaniDataLeg }} ({{ $domaniDataLeg }}){{ end }}:</strong> allerta {{ $dl }}{{ with .rischi }} — {{ delimit . ", " }}{{ end }}</p>
+  <p class="lite-domani lite-domani-{{ $dl }}" id="lite-domani" role="status"><strong>Previsto domani{{ if $domaniDataLeg }} ({{ $domaniDataLeg }}){{ end }}:</strong> allerta {{ $dl }}{{ with .rischi }} — {{ delimit . ", " }}{{ end }}</p>
   {{- end }}
   {{- end }}
-  <p style="margin: 0.4rem 0 0; font-size: 0.85rem;">Verificato: {{ printf "%d %s %d, %02d:%02d" $t.Day (index $mesi (int $t.Month)) $t.Year $t.Hour $t.Minute }} · Fonte: <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Lazio</a></p>
+  <p style="margin: 0.4rem 0 0; font-size: 0.85rem;">Verificato: <span id="lite-allerta-ver">{{ printf "%d %s %d, %02d:%02d" $t.Day (index $mesi (int $t.Month)) $t.Year $t.Hour $t.Minute }}</span> <span id="lite-allerta-nota">(dato dell'ultima pubblicazione del sito)</span> · Fonte: <a href="https://protezionecivile.regione.lazio.it/gestione-emergenze/centro-funzionale/bollettini-allertamenti" target="_blank" rel="noopener noreferrer">Centro Funzionale Lazio</a></p>
 </div>
 {{- end }}
 
@@ -146,3 +156,33 @@
 </p>
 
 </div>
+<script>
+(function(){try{
+var box=document.getElementById("lite-allerta");if(!box||!window.fetch)return;
+var prima=Date.parse(box.getAttribute("data-controllo"));
+var ac=window.AbortController?new AbortController():null;if(ac)setTimeout(function(){ac.abort()},4000);
+fetch({{ "allerta-stato/index.json" | relURL | jsonify | safeJS }},{cache:"no-store",signal:ac?ac.signal:undefined}).then(function(r){return r.ok?r.json():null}).then(function(j){
+if(!j)return;var ora=Date.parse(j.ultimo_controllo||j.ultimo_aggiornamento);
+if(!(ora>prima))return;
+var N={giallo:"gialla",rosso:"rossa"},L=["verde","gialla","arancione","rossa"];
+function lv(x){x=String(x||"verde").toLowerCase();x=N[x]||x;return L.indexOf(x)<0?"verde":x}
+var v=lv(j.livello);box.className="lite-allerta lite-allerta-"+v;
+document.getElementById("lite-allerta-titolo").textContent="Stato allerta meteo: "+(j.titolo||"");
+document.getElementById("lite-allerta-liv").textContent="(livello "+v+")";
+document.getElementById("lite-allerta-desc").textContent=j.descrizione||"";
+var d=new Date(ora);
+document.getElementById("lite-allerta-ver").textContent=d.toLocaleDateString("it-IT",{timeZone:"Europe/Rome",day:"numeric",month:"long",year:"numeric"})+", "+d.toLocaleTimeString("it-IT",{timeZone:"Europe/Rome",hour:"2-digit",minute:"2-digit"});
+var n=document.getElementById("lite-allerta-nota");if(n)n.remove();
+var old=document.getElementById("lite-domani");if(old)old.remove();
+var dm=j.domani||{},dl=lv(dm.livello);
+if(dl!=="verde"&&dm.titolo){var p=document.createElement("p");p.id="lite-domani";p.className="lite-domani lite-domani-"+dl;p.setAttribute("role","status");
+var s=document.createElement("strong");s.textContent="Previsto domani:";p.appendChild(s);
+p.appendChild(document.createTextNode(" allerta "+dl+(dm.rischi&&dm.rischi.length?" \u2014 "+dm.rischi.join(", "):"")));
+box.insertBefore(p,document.getElementById("lite-allerta-ver").parentNode)}
+var em=document.getElementById("lite-emergenza");
+if(j.emergenza_attiva&&!em){em=document.createElement("div");em.id="lite-emergenza";em.className="lite-emergenza-on";em.setAttribute("role","alert");
+var b=document.createElement("strong");b.textContent="\u26a0\ufe0f EMERGENZA IN CORSO: ";em.appendChild(b);em.appendChild(document.createTextNode(j.emergenza_titolo||""));
+var q=document.querySelector(".lite-112");q.parentNode.insertBefore(em,q)}
+else if(!j.emergenza_attiva&&em)em.remove();
+}).catch(function(){})}catch(e){}})();
+</script>
