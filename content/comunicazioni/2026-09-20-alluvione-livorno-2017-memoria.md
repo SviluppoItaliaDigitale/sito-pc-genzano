@@ -26,7 +26,7 @@ Nella notte del **9-10 settembre 2017**, un violento temporale scaricò sulla ci
 
 {{< foto src="/images/2026-09-20-alluvione-livorno-2017-memoria-livorno-mascagni.webp"
          alt="La Terrazza Mascagni a Livorno, simbolo della città"
-         caption="La Terrazza Mascagni a Livorno: la città fu colpita dall'alluvione del 9-10 settembre 2017 con l'esondazione dei rii Maggiore e Ardenza. 8 vittime. Foto: Wikimedia Commons." >}}
+         caption="La Terrazza Mascagni a Livorno: la città fu colpita dall'alluvione del 9-10 settembre 2017 con l'esondazione dei rii Maggiore e Ardenza. 8 vittime. Foto: Eric Perrone via Wikimedia Commons — CC BY 2.0. [Fonte originale](https://commons.wikimedia.org/wiki/File:Livorno01.jpg)." >}}
 
 
 ## Le lezioni
