@@ -21,7 +21,7 @@ build:
 
 Il Lazio può avere terremoti. Non sono frequenti, ma possono succedere. Sapere cosa fare è importante.
 
-Queste regole vengono dal [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/it/pagina/rischio-sismico).
+Queste regole vengono dal [Dipartimento della Protezione Civile](https://rischi.protezionecivile.gov.it/it/sismico/).
 
 ## Durante la scossa
 

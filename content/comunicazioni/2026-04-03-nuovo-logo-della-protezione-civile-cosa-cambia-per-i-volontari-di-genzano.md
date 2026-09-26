@@ -63,5 +63,5 @@ Sul nostro sito:
 Fonti istituzionali:
 
 - [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/).
-- [Servizio Nazionale della Protezione Civile](https://www.protezionecivile.gov.it/it/sistema-nazionale).
-- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/).
+- [Servizio Nazionale della Protezione Civile](https://servizio-nazionale.protezionecivile.gov.it/it/).
+- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n-1-del-2-gennaio-2018--codice-della-protezione-civile/).

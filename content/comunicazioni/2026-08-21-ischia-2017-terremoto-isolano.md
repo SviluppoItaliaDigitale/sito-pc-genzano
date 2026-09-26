@@ -62,4 +62,4 @@ Per chi non sa da dove partire: il [Comune di Genzano](https://www.comune.genzan
 
 - [Sequenza sismica di Casamicciola — Dipartimento Protezione Civile](https://www.protezionecivile.gov.it/)
 - [INGV — Terremoti d'Italia](https://terremoti.ingv.it/)
-- Voce Wikipedia: [Terremoto di Ischia del 2017](https://it.wikipedia.org/wiki/Terremoto_di_Ischia_del_2017)
+- Voce Wikipedia: [Terremoto di Casamicciola Terme del 2017](https://it.wikipedia.org/wiki/Terremoto_di_Casamicciola_Terme_del_2017)

@@ -103,7 +103,7 @@ Parlare di microzonazione non significa vivere in perenne allarme. Significa **c
 - Pagina: [Rischio sismico](/rischi-prevenzione/rischio-sismico/)
 - [INGV — Mappa pericolosità sismica](https://esse1.mi.ingv.it/)
 - [CNR — Centro Microzonazione Sismica](https://www.cnr.it/)
-- [DPC — Rischio sismico](https://www.protezionecivile.gov.it/it/rischi/rischio-sismico)
+- [DPC — Rischio sismico](https://rischi.protezionecivile.gov.it/it/sismico/)
 - [Agenzia delle Entrate — Sismabonus](https://www.agenziaentrate.gov.it/)
 
 Conoscere il proprio suolo è il primo passo per abitarlo in sicurezza. I Castelli Romani non fanno eccezione.

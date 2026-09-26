@@ -103,9 +103,13 @@
     var radar = L.tileLayer(urlFor(prodotto), { opacity: 0.78, maxZoom: 11, maxNativeZoom: 9, tileSize: 256, bounds: ITALIA });
     radar.addTo(map);
 
-    L.marker(GENZANO, { keyboard: true, icon: L.divIcon({ className: 'radar-dpc-stella',
+    var stella = L.marker(GENZANO, { keyboard: true, icon: L.divIcon({ className: 'radar-dpc-stella',
       html: '<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M13 1l3.4 7.6L24 9.3l-5.8 5 1.8 7.9L13 18.4 5.9 22.2l1.8-7.9L2 9.3l7.6-.7z" fill="#ffd166" stroke="#0b1622" stroke-width="1.4"/></svg>',
       iconSize: [26,26], iconAnchor: [13,13] }) }).bindPopup('<strong>Genzano di Roma</strong>').addTo(map);
+    /* Leaflet con keyboard:true rende il segnaposto un role="button" senza
+       nome: gli si dà un nome accessibile (WCAG 4.1.2, audit 25/09/2026 F11). */
+    (function(){ var el = stella.getElement && stella.getElement();
+      if (el) el.setAttribute('aria-label', 'Genzano di Roma: mostra l\'etichetta sulla mappa'); })();
 
     function aggiornaOrario(){
       var tipo = prodotto.split(':')[1].toUpperCase();

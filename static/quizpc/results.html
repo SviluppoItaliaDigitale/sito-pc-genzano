@@ -4,8 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Esito del Quiz — Protezione Civile</title>
+  <meta name="description" content="Esito del quiz di verifica per i volontari di protezione civile, con attestato di partecipazione. Si apre al termine del quiz.">
   <link rel="canonical" href="https://www.protezionecivilegenzano.it/quizpc/results.html">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="noindex, follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
   <link rel="stylesheet" href="/vendor/bootstrap-italia/css/bootstrap-italia.min.css">
@@ -54,7 +55,7 @@
           <button class="btn btn-success btn-lg" onclick="window.print();" aria-label="Stampa l'attestato"><i class="bi bi-printer-fill me-2" aria-hidden="true"></i>Stampa Attestato</button>
           <button class="btn btn-primary btn-lg" id="reviewQuizBtn" aria-expanded="false" aria-controls="review-container"><i class="bi bi-search me-2" aria-hidden="true"></i>Rivedi il Quiz</button>
           <button class="btn btn-outline-secondary btn-lg" id="shareBtn"><i class="bi bi-share-fill me-2" aria-hidden="true"></i>Condividi</button>
-          <a href="index.html" class="btn btn-outline-primary btn-lg" onclick="localStorage.clear();"><i class="bi bi-arrow-repeat me-2" aria-hidden="true"></i>Nuovo Quiz</a>
+          <a href="index.html" class="btn btn-outline-primary btn-lg" onclick="safeStorage.removeMany(['candidateName','candidateId','quizResults','selectedCategories']);"><i class="bi bi-arrow-repeat me-2" aria-hidden="true"></i>Nuovo Quiz</a>
         </div>
 
         <div id="summary-container" class="mt-5">
@@ -85,6 +86,7 @@
       </div>
     </div>
   </main>
+  <script src="js/safe-storage.js"></script>
   <script src="/vendor/bootstrap-italia/js/bootstrap-italia.bundle.min.js"></script>
   <script src="/app-shared/site-chrome.js"></script>
   <script src="js/banco_domande/1_principi_e_organizzazione.js"></script>

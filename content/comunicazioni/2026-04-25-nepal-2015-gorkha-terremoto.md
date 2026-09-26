@@ -73,4 +73,4 @@ Fonti istituzionali:
 - [Sendai Framework — UNDRR](https://www.undrr.org/implementing-sendai-framework).
 - [INGV — Istituto Nazionale Geofisica e Vulcanologia](https://www.ingv.it/).
 - [USGS Earthquake Hazards Program](https://earthquake.usgs.gov/).
-- Voce Wikipedia: [Terremoto del Nepal del 2015](https://it.wikipedia.org/wiki/Terremoto_del_Nepal_del_2015).
+- Voce Wikipedia: [Terremoto del Nepal del 25 aprile 2015](https://it.wikipedia.org/wiki/Terremoto_del_Nepal_del_25_aprile_2015).

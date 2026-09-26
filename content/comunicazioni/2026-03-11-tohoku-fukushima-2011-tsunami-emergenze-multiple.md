@@ -93,9 +93,9 @@ Quindici anni dopo, il messaggio di Tōhoku è semplice: **anche le società pi�
 
 ## Per approfondire (fonti istituzionali)
 
-- [INGV — Centro Allerta Tsunami (CAT)](https://www.ingv.it/cat/)
+- [INGV — Centro Allerta Tsunami (CAT)](https://cat.ingv.it/it/)
 - [Dipartimento di Protezione Civile — Rischio maremoto](https://rischi.protezionecivile.gov.it/it/maremoto-0/)
-- [JMA — Japan Meteorological Agency (in inglese)](https://www.jma.go.jp/jma/en/)
+- [JMA — Japan Meteorological Agency (in inglese)](https://www.jma.go.jp/jma/indexe.html)
 - [IAEA — Fukushima Daiichi Accident](https://www.iaea.org/topics/response/fukushima-daiichi-nuclear-accident)
 - [UNESCO-IOC — Sistema globale di allerta tsunami](https://www.ioc-tsunami.org/)
 - [SiAM — Sistema italiano di allertamento maremoto](https://www.protezionecivile.gov.it/)

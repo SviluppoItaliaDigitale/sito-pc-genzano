@@ -299,6 +299,6 @@ Sul nostro sito:
 
 Fonti istituzionali:
 
-- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/).
+- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n-1-del-2-gennaio-2018--codice-della-protezione-civile/).
 - [Meccanismo Europeo di Protezione Civile (ERCC)](https://civil-protection-humanitarian-aid.ec.europa.eu/).
 - [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it).

@@ -146,7 +146,7 @@ Se sei volontario del Gruppo di Genzano di Roma e ti interessa la dimensione sov
 
 - Articolo: [Corso base volontari PC](/comunicazioni/2026-04-19-formazione-regionale-sala-operativa-lazio-nuovi-volontari/)
 - Articolo: [Coordinamento sovracomunale](/comunicazioni/2026-07-07-protezione-civile-sconfinamenti-provinciali/)
-- [DPC — Volontariato](https://www.protezionecivile.gov.it/it/volontariato)
+- [DPC — Volontariato](https://volontariato.protezionecivile.gov.it/it/)
 - [Croce Rossa Italiana](https://www.cri.it/)
 - [ANPAS](https://www.anpas.org/)
 

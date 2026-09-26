@@ -99,7 +99,7 @@ Sul nostro sito:
 
 Fonti istituzionali:
 
-- [Regione Emilia-Romagna — Alluvione maggio 2023](https://www.regione.emilia-romagna.it/alluvione-2023).
+- [Regione Emilia-Romagna — Alluvione maggio 2023](https://territoriosicuro.regione.emilia-romagna.it/it).
 - [Dipartimento di Protezione Civile](https://www.protezionecivile.gov.it/).
 - [Autorità di Bacino Distrettuale del Fiume Po — PGRA](https://www.adbpo.it/).
 - [ISPRA — Dissesto idrogeologico in Italia](https://www.isprambiente.gov.it/).

@@ -33,7 +33,7 @@ on:
     # Ogni 6 ore (frequenza alzata da settimanale con PR #221).
     # L'issue dei findings è UNICA e aggiornata in-place a ogni run
     # (titolo stabile senza data): niente issue duplicate.
-    - cron: '0 */6 * * *'
+    - cron: '5 */6 * * *'
   workflow_dispatch:
 
 permissions:

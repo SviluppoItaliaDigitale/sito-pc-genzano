@@ -14,8 +14,10 @@ name: "🔁 Verifica allineamento Aruba (anti-stale)"
 # nulla su Telegram: quello è il canale PUBBLICO dei cittadini — gli alert
 # tecnici interni passano per le issue (stessa scelta di notifica-ci-fallita.yml).
 #
-# Rimedio quando scatta: bump del `state-name` in deploy.yml (re-upload
-# integrale, rule 05 § "reset del sync-state").
+# Rimedio quando scatta: fix MIRATO sulle pagine in ritardo (cache-bust del
+# sorgente _index.md o cancellazione del file stantio lato server, rule 05).
+# MAI il bump dello `state-name` in deploy.yml: il re-upload integrale non
+# completa e congela il sito (incidente 03/07/2026).
 
 on:
   workflow_run:
@@ -78,7 +80,7 @@ jobs:
           TITLE="🔁 Drift di deploy su Aruba — pagine stantie"
           RUN_URL="https://github.com/$REPO/actions/runs/${{ github.run_id }}"
           ESITO=$(sed 's/`/´/g' /tmp/verifica.txt | tail -60)
-          RIMEDIO='**Rimedio (rule 05 § reset del sync-state):** cambia lo `state-name` nello step FTP di `deploy.yml` con una nuova data (es. `.ftp-deploy-sync-state-AAAA-MM-GG.json`) e fai partire un deploy: forza un re-upload integrale senza cancellare la cartella `/documenti/`. Dopo il rientro, questa issue si chiude da sola al prossimo controllo verde.'
+          RIMEDIO='**Rimedio (rule 05 § "Strategia cache-bust"):** intervento **mirato** sulle sole pagine in ritardo: aggiungi o aggiorna il commento `<!-- cache-bust: AAAA-MM-GG -->` nel loro `_index.md` e fai partire un deploy, oppure cancella via FTP il file stantio così che il deploy successivo lo ricarichi. **Mai** cambiare lo `state-name` nello step FTP di `deploy.yml`: il re-upload integrale supera il timeout e congela il sito (incidente del 03/07/2026). Dopo il rientro, questa issue si chiude da sola al prossimo controllo verde.'
           BODY=$(printf '_Rilevato il %s UTC dalla guardia anti-stale (verifica-deploy-aruba.yml). Issue unica, si chiude da sola al rientro._\n\nLe pagine campione su **www.protezionecivilegenzano.it** non servono tutte la stessa build recente: alcuni file sono rimasti stantii su Aruba (il sync-state FTP ha saltato dei file).\n\n%s\n\n**Esito del campionamento:**\n\n```\n%s\n```\n\n[Log completo del run](%s)\n' "$(date -u +%Y-%m-%d\ %H:%M)" "$RIMEDIO" "$ESITO" "$RUN_URL")
           NUM=$(gh issue list --repo "$REPO" --state open --limit 100 \
                   --json number,title \

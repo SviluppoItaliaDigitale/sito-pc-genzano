@@ -78,6 +78,13 @@
         searching: "Ricerca di [SEARCH_TERM]…"
       }
     });
+    // Il campo di Pagefind UI ha solo il title: etichetta esplicita
+    // (WCAG 4.1.2 / 3.3.2, audit 25/09/2026 F11).
+    (function etichetta(tentativi) {
+      var campo = document.querySelector("#pcg-ricerca-page .pagefind-ui__search-input");
+      if (campo) { if (!campo.getAttribute("aria-label")) campo.setAttribute("aria-label", "Cerca nel sito"); return; }
+      if (tentativi > 0) setTimeout(function () { etichetta(tentativi - 1); }, 100);
+    })(10);
     // Ricerca diretta da URL: /cerca/?q=termine — usata dal form della
     // pagina 404, da OpenSearch (static/opensearch.xml) e da link esterni.
     // PagefindUI non legge da solo la query string.
