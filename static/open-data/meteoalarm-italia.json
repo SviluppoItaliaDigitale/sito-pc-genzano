@@ -1,27 +1,14 @@
 {
  "_snapshot": {
-  "generato": "2026-09-26T12:15:18+00:00",
+  "generato": "2026-09-26T19:19:07+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 5,
-  "scaduti_scartati": 12,
-  "in_corso": 4,
+  "avvisi": 2,
+  "scaduti_scartati": 15,
+  "in_corso": 1,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
-  {
-   "in_corso": true,
-   "regione": "Basilicata",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-09-26T12:00:00+00:00",
-   "fine": "2026-09-26T17:59:00+00:00",
-   "emesso": "2026-09-26T08:08:57+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.260926100857.009"
-  },
   {
    "in_corso": false,
    "regione": "Calabria",
@@ -47,32 +34,6 @@
    "fine": "2026-09-26T23:59:00+00:00",
    "emesso": "2026-09-26T08:08:57+00:00",
    "identificativo": "2.49.0.0.380.3.IT.260926100857.010"
-  },
-  {
-   "in_corso": true,
-   "regione": "Campania",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-09-26T12:00:00+00:00",
-   "fine": "2026-09-26T17:59:00+00:00",
-   "emesso": "2026-09-26T08:08:57+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.260926100857.007"
-  },
-  {
-   "in_corso": true,
-   "regione": "Puglia",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-09-26T12:00:00+00:00",
-   "fine": "2026-09-26T17:59:00+00:00",
-   "emesso": "2026-09-26T08:08:57+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.260926100857.008"
   }
  ]
 }

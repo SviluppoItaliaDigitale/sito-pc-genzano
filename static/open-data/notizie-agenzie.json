@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-26T16:26:52+00:00",
+  "generato": "2026-09-26T19:18:58+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-26T16:22:37+00:00",
+   "data": "2026-09-26T19:12:10+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "#AccadeOggi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
+  },
+  {
+   "data": "2026-09-26T19:10:13+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "SuperEnalotto, estrazione di oggi 26 settembre 2026: numeri vincenti",
+   "url": "https://www.adnkronos.com/cronaca/superenalotto-estrazione-concorso-numeri-vincenti_aBEb9PiUCAmeh5MyNG2vi"
+  },
+  {
+   "data": "2026-09-26T19:09:27+00:00",
    "fonte": "ANSA",
+   "titolo": "Domani si vota alle suppletive a Reggio, tempesta su Vannacci per la foto fake di Matilde Siracusano",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/26/bufera-per-la-foto-modificata-di-siracusano-rilanciata-da-vannacci_f4bf9e8a-edc2-49a5-b090-6cd8df138b96.html"
+  },
+  {
+   "data": "2026-09-26T19:09:13+00:00",
+   "fonte": "ANSA",
+   "titolo": "Forza Italia canta vittoria sui carburanti, la Lega all'attacco rilancia sulle banche",
+   "url": "https://www.ansa.it/sito/notizie/economia/aziende/2026/09/26/forza-italia-canta-vittoria-sui-carburanti-la-lega-allattacco-rilancia-sulle_c3c9592d-e01e-47a7-bfbb-b4d6a28a3711.html"
+  },
+  {
+   "data": "2026-09-26T19:08:13+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Il Colosseo riapre al pubblico dopo la morte di Andrea Moretti",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/il-colosseo-riapre-al-pubblico-dopo-la-morte-di-andrea-moretti_4f685d0a-41a6-4b78-9594-af459405312a.html"
+  },
+  {
+   "data": "2026-09-26T19:06:35+00:00",
+   "fonte": "ANSA",
+   "titolo": "Quindicenne folgorato su traliccio a Lodi, si ipotizza una sfida social",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/morto-a-15-anni-folgorato-su-un-traliccio-lipotesi-della-sfida-sui-social_a994ba58-a0fb-4760-9755-e0fe4470fe03.html"
+  },
+  {
+   "data": "2026-09-26T19:05:12+00:00",
+   "fonte": "ANSA",
+   "titolo": "Crisi abitativa in Spagna, manifestazione a Madrid contro gli sfratti",
+   "url": "https://www.ansa.it/sito/videogallery/mondo/2026/09/26/crisi-abitativa-in-spagna-manifestazione-a-madrid-contro-gli-sfratti_f6845c31-6b3e-4296-a1b3-0df4dc6c7944.html"
+  },
+  {
+   "data": "2026-09-26T19:04:32+00:00",
+   "fonte": "ANSA",
+   "titolo": "'Da giorni sotto l'effetto di droghe poi la lite e l'omicidio'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/omicidio-di-torino-la-madre-del-fermato-piangeva-era-sconvolto-_dfe8e53a-0135-4ecc-828a-3bdb360f920c.html"
+  },
+  {
+   "data": "2026-09-26T18:40:24+00:00",
+   "fonte": "ANSA",
+   "titolo": "Papa Leone star sugli Champs-Elysees, in 800mila alla messa. Ora a Lourdes",
+   "url": "https://www.ansa.it/vaticano/notizie/2026/09/26/papa-leone-star-sugli-champs-elysees-in-800mila-alla-messa.-ora_902d673e-03d3-4ce4-a952-2a96283b0241.html"
+  },
+  {
+   "data": "2026-09-26T18:39:12+00:00",
+   "fonte": "ANSA",
+   "titolo": "America's Cup: spettacolo Luna Rossa e La Roche-Posay, boom di presenze",
+   "url": "https://www.ansa.it/sito/notizie/sport/speciali/coppa-america-2027/2026/09/26/americas-cup-spettacolo-luna-rossa-e-la-roche-posay-boom-di-presenze_7692de7b-ddfc-42c7-a565-6603af4498c0.html"
+  },
+  {
+   "data": "2026-09-26T18:37:05+00:00",
+   "fonte": "ANSA",
+   "titolo": "Trump dice no al piano iraniano e pensa a nuovi raid dopo le midterm",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/26/trump-dice-no-al-piano-iraniano-e-pensa-a-nuovi-raid-dopo-le-midterm_4c47d3f5-794e-47cd-bd5b-d91596797e92.html"
+  },
+  {
+   "data": "2026-09-26T18:35:56+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Trovato cadavere di una 78enne scomparsa in Calabria il 27 agosto",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/trovato-cadavere-di-una-78enne-scomparsa-in-calabria-il-27-agosto_2a4a2f05-536a-4b9f-84c5-679d4adec508.html"
+  },
+  {
+   "data": "2026-09-26T18:35:38+00:00",
+   "fonte": "ANSA",
+   "titolo": "Lavrov accusa l'Europa ma all'Onu vede il ministro tedesco",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/26/lavrov-accusa-leuropa-ma-allonu-vede-il-ministro-tedesco_7228533a-05e3-42d2-920d-f026fb1f727a.html"
+  },
+  {
+   "data": "2026-09-26T18:25:05+00:00",
+   "fonte": "ANSA",
+   "titolo": "Mondiali di ciclismo: bronzo di Longo Borghini nella gara in linea, oro a Vollering",
+   "url": "https://www.ansa.it/sito/notizie/sport/ciclismo/2026/09/26/mondiali-ciclismo-bronzo-di-longo-borghini-nella-gara-in-linea-oro-vollering_a05bd09b-64ed-4e62-a3ef-4d69deaa3047.html"
+  },
+  {
+   "data": "2026-09-26T18:15:55+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Prof, 'corsi di italiano li tiene ex alunno di origine indiana'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/prof-corsi-di-italiano-li-tiene-ex-alunno-di-origine-indiana_79702acb-0a89-45ed-a725-071749f48638.html"
+  },
+  {
+   "data": "2026-09-26T18:06:03+00:00",
+   "fonte": "ANSA CRONACA",
    "titolo": "Una donna getta dell'acido al suo avvocato, il legale è in prognosi riservata",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/donna-getta-acido-al-suo-avvocato-a-messina-legale-ricoverato_f6ffe7d9-7664-4ed8-9dec-1f7f960942ea.html"
   },
   {
-   "data": "2026-09-26T16:21:51+00:00",
+   "data": "2026-09-26T17:53:55+00:00",
    "fonte": "ANSA",
-   "titolo": "F1: Russell volata vincente a Baku, Antonelli 5/o ancora in rimonta",
-   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/26/f1-russell-volata-vincente-a-baku-antonelli-5o-ancora-in-rimonta_7c2ccad1-fd34-4355-80a4-1ba4d6413837.html"
-  },
-  {
-   "data": "2026-09-26T16:20:35+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "America's Cup: assessora Armato, a Napoli circa 800 mila turisti in pochi giorni",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/americas-cup-assessora-armato-a-napoli-circa-800-mila-turisti-in-pochi_7bef28c8-77d2-4f45-ba75-c8870e004484.html"
-  },
-  {
-   "data": "2026-09-26T16:17:20+00:00",
-   "fonte": "ANSA",
-   "titolo": "È morto a Bari il fotoreporter Luca Turi, documentò lo sbarco della Vlora",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/e-morto-a-bari-il-fotoreporter-luca-turi-documento-lo-sbarco-della-vlora_5e2d90c6-9666-48ca-a53f-4a78a6de7f62.html"
-  },
-  {
-   "data": "2026-09-26T16:13:56+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Lodi, 15enne morto folgorato ai piedi di un traliccio dell'alta tensione: ipotesi sfida social",
-   "url": "https://www.adnkronos.com/cronaca/15enne-morto-folgorato-cadavere-piedi-traliccio-ipotesi-sfida-social_4BsSi34A5mdqaJHPhPAz7K"
-  },
-  {
-   "data": "2026-09-26T16:13:27+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Morto a 15 anni folgorato su un traliccio, ipotesi sfida social",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/morto-a-15-anni-folgorato-su-un-traliccio-ipotesi-sfida-social_8ffe9c65-a059-45da-8129-f58edb9937f7.html"
-  },
-  {
-   "data": "2026-09-26T16:13:15+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Decreto scuola, Osa 'non staremo a guardare il 28 nuova mobilitazione'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/decreto-scuola-osa-non-staremo-a-guardare-il-28-nuova-mobilitazione_25daf2b7-1250-46ef-ad95-4438878613af.html"
-  },
-  {
-   "data": "2026-09-26T16:12:36+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Pelle con testa di tigre lasciata in uno scatolone davanti a un museo a Camerino",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/pelle-con-testa-di-tigre-lasciata-in-uno-scatolone-davanti-a-un-museo-a-camerino_3d1fc8a5-9e0c-447c-a4e8-847a5930f661.html"
-  },
-  {
-   "data": "2026-09-26T16:07:00+00:00",
-   "fonte": "ANSA",
-   "titolo": "Omicidio di Torino, la madre del fermato: 'Piangeva, era sconvolto'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/omicidio-di-torino-la-madre-del-fermato-piangeva-era-sconvolto-_dfe8e53a-0135-4ecc-828a-3bdb360f920c.html"
-  },
-  {
-   "data": "2026-09-26T16:04:19+00:00",
-   "fonte": "ANSA",
-   "titolo": "Prenotazioni a pagamento per gli abbonati Alta velocità, ma il canone scende",
-   "url": "https://www.ansa.it/sito/notizie/economia/mobilita_infrastrutture/2026/09/26/cambia-abbonamento-a-av-trenitalia-meno-caro-ma-prenotazione-diventa-a-pagamento_70e9e3e1-73a2-4bf1-b777-8f9ad7946bdb.html"
-  },
-  {
-   "data": "2026-09-26T16:02:35+00:00",
-   "fonte": "ANSA",
-   "titolo": "El Niño ospite indesiderato degli chef, i ristoranti si scoprono vulnerabili",
-   "url": "https://www.ansa.it/canale_terraegusto/notizie/in_breve/2026/09/26/el-nino-ospite-indesiderato-degli-chef-i-ristoranti-si-scoprono-vulnerabili_1edc08d9-e741-4892-8ae1-41440db3093d.html"
-  },
-  {
-   "data": "2026-09-26T16:01:12+00:00",
-   "fonte": "ANSA",
-   "titolo": "America's Cup: regate preliminari, Luna Rossa al comando dopo due giornate",
-   "url": "https://www.ansa.it/sito/notizie/sport/speciali/coppa-america-2027/2026/09/26/americas-cup-regate-preliminari-luna-rossa-al-comando-dopo-due-giornate_69a05dac-35a3-4ccf-b0b4-75c70b4a7cde.html"
-  },
-  {
-   "data": "2026-09-26T15:59:35+00:00",
-   "fonte": "ANSA",
-   "titolo": "Morto a 15 anni folgorato su un traliccio, l'ipotesi della sfida sui social",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/morto-a-15-anni-folgorato-su-un-traliccio-lipotesi-della-sfida-sui-social_a994ba58-a0fb-4760-9755-e0fe4470fe03.html"
-  },
-  {
-   "data": "2026-09-26T15:59:04+00:00",
-   "fonte": "ANSA",
-   "titolo": "Alla messa del Papa a Parigi 800mila fedeli. Leone ai francesi: 'Non nascondete la vostra fede'",
-   "url": "https://www.ansa.it/vaticano/notizie/2026/09/26/il-viaggio-del-papa.-oggi-messa-a-parigi-poi-vola-a-lourdes_902d673e-03d3-4ce4-a952-2a96283b0241.html"
-  },
-  {
-   "data": "2026-09-26T15:58:22+00:00",
-   "fonte": "ANSA",
-   "titolo": "Fiorello torna a sorpresa su Rai1, l'annuncio sui social in stile Brad Pitt",
-   "url": "https://www.ansa.it/sito/notizie/cultura/2026/09/26/fiorello-torna-a-sorpresa-su-rai1-lannuncio-sui-social-in-stile-brad-pitt_47675ac2-9723-4a0c-8ccd-0999bea19db5.html"
-  },
-  {
-   "data": "2026-09-26T15:51:41+00:00",
-   "fonte": "ANSA",
-   "titolo": "Tajani a Vannacci: \"Disonorevole aver ritoccato la foto di Matilde Siracusano\"",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/26/tajani-a-vannacci-disonorevole-aver-ritoccato-la-foto-di-matilde-siracusano_f4bf9e8a-edc2-49a5-b090-6cd8df138b96.html"
-  },
-  {
-   "data": "2026-09-26T15:45:12+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Raimondo Todaro, la nuova fase di vita: \"Sono felice, al mio fianco ora c'è Giorgia\"",
-   "url": "https://www.adnkronos.com/spettacoli/raimondo-todaro-francesca-tocca-separazione-verissimo-oggi_4fdmO8mPEIwtnWWXOpRWq0"
-  },
-  {
-   "data": "2026-09-26T15:43:49+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Manchester City, caos fair play finanziario: dal rischio retrocessione alla Champions 2023 vinta contro l'Inter, cosa può succedere",
-   "url": "https://www.adnkronos.com/sport/manchester-city-rischio-retrocessione-champions-2023-inter-possibili-sanzioni_ZmcIqcJ8071Fj7fd1I6Ks"
-  },
-  {
-   "data": "2026-09-26T15:36:50+00:00",
-   "fonte": "ANSA",
-   "titolo": "Stretta contro il greenwashing, da domani al via le nuove norme Ue",
-   "url": "https://www.ansa.it/ansa2030/notizie/finanza_impresa/2026/09/26/stretta-contro-il-greenwashing-da-domani-al-via-le-nuove-norme-ue_393897c0-be26-4dfc-b100-52a5e01e8adf.html"
-  },
-  {
-   "data": "2026-09-26T15:31:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Tajani: \"Magistrati siano più rigidi su arresti, colpirne uno per educarne cento\". Anm: \"Parole contrarie a Stato di diritto\"",
-   "url": "https://www.adnkronos.com/politica/sicurezza-tajani-magistrati-anm_tQDUlTg4VaLPQ5649Jh6Y"
-  },
-  {
-   "data": "2026-09-26T15:30:56+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trump non ci sta e vieta alla Cnn di salire sull'Air Force One",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/26/trump-fake-news-non-accedano-alla-casa-bianca-e-luogo-sacro_a582d17c-ad26-4234-b61d-cae3c1b2a0f6.html"
-  },
-  {
-   "data": "2026-09-26T15:28:11+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Oasis a Roma, Liam Gallagher scatenato sui social: le risposte (surreali) ai fan",
-   "url": "https://www.adnkronos.com/spettacoli/oasis-biglietti-liam-gallagher-risponde-x_1bDE666jy5wiXhx8kRhkLy"
-  },
-  {
-   "data": "2026-09-26T15:27:27+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Elisabetta Canalis: \"Lasciare l'Italia mi ha portato serenità. L'amore? Sono un'eterna single \"",
-   "url": "https://www.adnkronos.com/spettacoli/elisabetta-canalis-verissimo-figlia-skyler-ex-marito-brian-perri_71UgxZtwsxe4ncE7kvMKde"
-  },
-  {
-   "data": "2026-09-26T15:25:57+00:00",
-   "fonte": "ANSA",
-   "titolo": "Tajani: 'Magistrati 'perdonisti' rimettono troppi in libertà, la sicurezza è diritto'",
+   "titolo": "Tajani: 'Magistrati perdonisti, abbiano coscienza'. È scontro con l'Anm",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/09/26/anm-a-tajani-la-responsabilita-sulla-sicurezza-non-si-scarica-sui-magistrati_2ef91653-9a51-4252-83d2-12153bd223b7.html"
   },
   {
-   "data": "2026-09-26T15:17:36+00:00",
-   "fonte": "ANSA",
-   "titolo": "Stretto di Messina: il direttore tecnico Mele passa ad Anas, il progetto del Ponte pronto per il Cipess",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/26/stretto-di-messina-mele-passa-ad-anas-progetto-del-ponte-pronto-per_02433380-3623-4b78-8f67-f76fc90a3784.html"
-  },
-  {
-   "data": "2026-09-26T15:11:26+00:00",
+   "data": "2026-09-26T17:53:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Roberto Carlos choc: \"Ho perso il 99% dei soldi guadagnati con il calcio\"",
-   "url": "https://www.adnkronos.com/sport/roberto-carlos-ho-perso-il-99-di-quanto-guadagnato-con-il-calcio_6W3Zdc3pPKVmzEJQPLMCTK"
+   "titolo": "World Contraception Day, Gedeon Richter Italia lancia patto sulla contraccezione",
+   "url": "https://www.adnkronos.com/salute/world-contraception-day-gedeon-richter-italia-lancia-patto-sulla-contraccezione_3ira2Mn3o5udGERhPGEZc0"
   },
   {
-   "data": "2026-09-26T15:11:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Roberto Vannacci nella bufera, foto ritoccata di Matilde Siracusano: via il top, resta la scollatura. Lei: \"Squallido usare l'IA per spogliare una donna, valuto la denuncia\"",
-   "url": "https://www.adnkronos.com/politica/matilde-siracusano-post-foto-ritoccata-ai-fake_3BWSuxpUZl4k99BHdYNcPW"
-  },
-  {
-   "data": "2026-09-26T15:05:57+00:00",
+   "data": "2026-09-26T17:45:32+00:00",
    "fonte": "ANSA",
-   "titolo": "Giovane italiana muore scivolando da una cascata nello Sri Lanka",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/giovane-italiana-muore-scivolando-da-una-cascata-nello-sri-lanka_7529d58e-bc83-4b7d-a620-1202f7f3a9ae.html"
+   "titolo": "Numeri e coperture finanziarie, si lavora al decreto scuola. Proteste in tutta Italia",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/26/numeri-e-coperture-finanziarie-si-lavora-al-decreto-scuola.-proteste-in-tutta-italia_456e30f2-ddbf-4943-9623-cdeddc706594.html"
   },
   {
-   "data": "2026-09-26T15:01:17+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trump conferma: 'Ho respinto la proposta dell'Iran'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/26/trump-conferma-ho-respinto-la-proposta-delliran_4c47d3f5-794e-47cd-bd5b-d91596797e92.html"
+   "data": "2026-09-26T17:39:38+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Frana a Castellammare, liberata galleria ma resta la paura",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/frana-a-castellammare-liberata-galleria-ma-resta-la-paura_e99ad2b7-95e6-4fd5-bfe7-b4bd093bac60.html"
   },
   {
-   "data": "2026-09-26T14:56:55+00:00",
+   "data": "2026-09-26T17:39:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Vasseur: \"Ci aspettavamo di più, il nostro obiettivo è vincere\"",
-   "url": "https://www.adnkronos.com/sport/vasseur-a-baku-ci-aspettavamo-di-piu_2Pdvb2EU2pA69N4y9FwMkw"
+   "titolo": "Torino, uomo ucciso e fatto a pezzi. Il 26enne accusato dell'omicidio: \"Eravamo sotto effetto di droghe, volevamo buttarlo nel fiume\"",
+   "url": "https://www.adnkronos.com/cronaca/delitto-torino-39enne-fatto-a-pezzi-droga-alcol-oggi_2Yd5cf4747wYdAIBuZr0Jv"
+  },
+  {
+   "data": "2026-09-26T17:00:06+00:00",
+   "fonte": "ANSA",
+   "titolo": "Trapianti, 32 anni fa la morte di Nicholas Green diventato simbolo del dono",
+   "url": "https://www.ansa.it/canale_saluteebenessere/notizie/medicina/2026/09/26/trapianti-32-anni-fa-la-morte-di-nicholas-greeen-diventato-simbolo-del-dono_cbb9830e-82fe-4994-9682-426db6c07ced.html"
+  },
+  {
+   "data": "2026-09-26T16:59:03+00:00",
+   "fonte": "ANSA",
+   "titolo": "La stravaganza siciliana di Dolce e Gabbana / LA SFILATA",
+   "url": "https://www.ansa.it/canale_lifestyle/notizie/moda/2026/09/26/la-stravaganza-siciliana-di-dolce-e-gabbana-_02febc60-2764-4fff-b7c6-66ec2a78df9c.html"
+  },
+  {
+   "data": "2026-09-26T16:56:37+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Omicidio Torino, il fermato 'non riuscivo più a sezionare il corpo'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/omicidio-torino-il-fermato-non-riuscivo-piu-a-sezionare-il-corpo_cb5ed330-843b-4b84-9658-23104eed1bac.html"
+  },
+  {
+   "data": "2026-09-26T16:54:17+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Omicidio Torino, 'l'ho ucciso ma non ricordo lo strangolamento'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/omicidio-torino-lho-ucciso-ma-non-ricordo-lo-strangolamento_e608f45b-4e73-4559-a9e0-9f74c9e4c383.html"
+  },
+  {
+   "data": "2026-09-26T16:44:24+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "America's Cup, Luna Rossa ancora in testa dopo seconda giornata regate preliminari",
+   "url": "https://www.adnkronos.com/sport/americas-cup-oggi-regate-preliminari-risultati-luna-rossa_QhuKr00T6WZZqq4m2L8Yo"
+  },
+  {
+   "data": "2026-09-26T16:38:05+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Francesca Lollobrigida aspetta un bambino, il gender reveal a Verissimo",
+   "url": "https://www.adnkronos.com/spettacoli/francesca-lollobrigida-verissimo-maschietto_6Bfzva8QMKuDtNAXx0jQIE"
+  },
+  {
+   "data": "2026-09-26T16:33:52+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Incidente a Cumiana nel Torinese, morto un paracadutista",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/incidente-a-cumiana-nel-torinese-morto-un-paracadutista_bf9b899e-8f07-48b3-9207-6ec373355d50.html"
+  },
+  {
+   "data": "2026-09-26T16:29:16+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Omicidio Torino, avvocato indagato 'nella casa consumata ogni tipo di droga'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/omicidio-torino-avvocato-indagato-nella-casa-consumata-ogni-tipo-di-droga_758ad8d9-04a5-4886-a534-7cc749210c1f.html"
+  },
+  {
+   "data": "2026-09-26T16:28:07+00:00",
+   "fonte": "ANSA",
+   "titolo": "Prenotazioni a pagamento per gli abbonati Alta velocità, ma il canone scende",
+   "url": "https://www.ansa.it/sito/notizie/economia/mobilita_infrastrutture/2026/09/26/cambia-abbonamento-a-av-trenitalia-meno-caro-ma-prenotazione-diventa-a-pagamento_70e9e3e1-73a2-4bf1-b777-8f9ad7946bdb.html"
   }
  ]
 }
