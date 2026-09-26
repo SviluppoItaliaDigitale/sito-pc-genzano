@@ -20,7 +20,13 @@ un blocco "domani" separato come pre-allerta (solo se data_validita_inizio
 strettamente futura rispetto a today).
 
 Output GH:
-- changed=true|false
+- changed=true|false      → il file data/allerta.json è stato riscritto
+- sostanziale=true|false  → è cambiato il livello di oggi o la pre-allerta
+                            "domani" (=> deploy urgente). Falso per il solo
+                            heartbeat di `ultimo_controllo` (ogni ≥5h45'),
+                            che il workflow committa ma NON deploya in
+                            urgenza: lo raccoglie deploy-coalescer.yml
+                            (audit 25/09/2026, F19).
 - old_level / new_level
 - descrizione / motivo
 - level_changed=true|false
@@ -354,7 +360,7 @@ def main():
             source = "pdf-regione-lazio"
         else:
             print("::warning::Anche il fallback PDF ha fallito. Non aggiorno allerta.json")
-            gh_output(changed="false", source="none")
+            gh_output(changed="false", sostanziale="false", source="none")
             sys.exit(0)
     elif len(bollettini) < 2:
         # Solo uno dei due CSV è arrivato. Tentiamo di completare via PDF
@@ -385,7 +391,7 @@ def main():
             print(f"::warning::Nessun bollettino in finestra di validità, uso {fallback_key} come fallback")
 
     if not attivi:
-        gh_output(changed="false", source=source)
+        gh_output(changed="false", sostanziale="false", source=source)
         sys.exit(0)
 
     # ── 3. MAX livello combinando i bollettini attivi ──
@@ -490,7 +496,7 @@ def main():
 
     if not level_changed and not domani_level_changed and not stale_check:
         print(f"✅ Livello invariato (oggi={livello}, domani={new_domani_level}) e ultimo controllo recente: skip commit")
-        gh_output(changed="false", source=source)
+        gh_output(changed="false", sostanziale="false", source=source)
         sys.exit(0)
 
     # ── 6. Aggiorna allerta.json ──
@@ -514,9 +520,14 @@ def main():
     if domani_block:
         new_data["domani"] = domani_block
 
-    # Preserva avviso_meteo se esiste già (script avvisi-meteo lo gestisce separatamente)
-    if current.get("avviso_meteo"):
-        new_data["avviso_meteo"] = current["avviso_meteo"]
+    # Preserva avviso_meteo e rischio_incendi se esistono già: li gestiscono
+    # check-avvisi-meteo.py e check-rischi-incendi.py, che girano DOPO questo
+    # script nello stesso job. Senza questa copia l'heartbeat cancellerebbe il
+    # blocco AIB e lo script successivo lo riscriverebbe come "cambiato",
+    # facendo passare per sostanziale un controllo periodico.
+    for chiave in ("avviso_meteo", "rischio_incendi"):
+        if current.get(chiave):
+            new_data[chiave] = current[chiave]
 
     with open(ALLERTA_PATH, "w", encoding="utf-8") as f:
         json.dump(new_data, f, indent=2, ensure_ascii=False)
@@ -530,6 +541,7 @@ def main():
         descrizione=descrizione,
         motivo=motivo,
         level_changed=("true" if level_changed else "false"),
+        sostanziale=("true" if (level_changed or domani_level_changed) else "false"),
         source=source,
     )
     return 0

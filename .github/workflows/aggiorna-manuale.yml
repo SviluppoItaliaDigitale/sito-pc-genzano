@@ -6,7 +6,7 @@ name: "Aggiornamento MANUALE-SITO.md"
 on:
   schedule:
     # Ogni lunedi alle 06:00 UTC (08:00 Europe/Rome in ora legale, 07:00 in ora solare)
-    - cron: "0 6 * * 1"
+    - cron: "4 6 * * 1"
   workflow_dispatch:
 
 permissions:
