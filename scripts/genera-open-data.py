@@ -22,6 +22,7 @@ import json
 import subprocess
 import sys
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import yaml
 
@@ -102,15 +103,22 @@ TITOLARE = "Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma"
 
 def _aggiornato_il(src: Path) -> str:
     """Data dell'ultimo commit del file sorgente: stabile fra un'esecuzione e
-    l'altra, così il catalogo cambia solo quando cambiano i dati."""
+    l'altra, così il catalogo cambia solo quando cambiano i dati. Se il file
+    ha modifiche non ancora committate (o non è tracciato) i dati pubblicati
+    sono quelli nuovi, e la data giusta è oggi, in ora italiana."""
+    oggi = dt.datetime.now(ZoneInfo("Europe/Rome")).date().isoformat()
     try:
+        stato = subprocess.run(["git", "status", "--porcelain", "--", str(src)],
+                               cwd=ROOT, capture_output=True, text=True, check=True)
+        if stato.stdout.strip():
+            return oggi
         out = subprocess.run(["git", "log", "-1", "--format=%cs", "--", str(src)],
                              cwd=ROOT, capture_output=True, text=True, check=True)
         if out.stdout.strip():
             return out.stdout.strip()
     except (OSError, subprocess.CalledProcessError):
         pass
-    return dt.date.today().isoformat()
+    return oggi
 
 
 def main() -> int:

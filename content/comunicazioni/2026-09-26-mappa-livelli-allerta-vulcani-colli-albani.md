@@ -43,7 +43,7 @@ Per **Ischia** i livelli sono in via di definizione. Per **Colli Albani, Panarea
 
 Il colore descrive lo **stato di attività** del vulcano: se il sistema è in equilibrio o si sta allontanando dall'equilibrio. Verde, giallo, arancione e rosso indicano come quello stato potrebbe evolvere. Nasce dall'incrocio fra i dati del monitoraggio e gli eventuali fenomeni in corso.
 
-A dichiararlo è il Dipartimento, insieme alla protezione civile della Regione interessata. Si basa sulle segnalazioni e sulle valutazioni dell'**INGV** e degli altri Centri di competenza. Per i vulcani siciliani contribuisce anche il Dipartimento di Scienze della Terra dell'Università di Firenze.
+A dichiararlo è il Dipartimento, insieme alla protezione civile della Regione interessata. Si basa sulle segnalazioni e sulle valutazioni dell'Istituto Nazionale di Geofisica e Vulcanologia (**INGV**) e degli altri Centri di competenza. Per i vulcani siciliani contribuisce anche il Dipartimento di Scienze della Terra dell'Università di Firenze.
 
 Tre precisazioni del Dipartimento aiutano a leggerlo bene:
 

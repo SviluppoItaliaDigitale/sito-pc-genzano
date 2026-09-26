@@ -69,11 +69,14 @@ else
   if curl -fsSL "${REL}/hugo_${HUGO_VERSION}_checksums.txt" | grep " ${NOME}\$" \
        | (cd /tmp && sha256sum -c --quiet -); then
     sudo dpkg -i "$DEB" >/dev/null 2>&1 || sudo apt-get install -f -y -qq >/dev/null
+    rm -f "$DEB"
     ok "$(hugo version | head -1)"
   else
-    nota "impronta del pacchetto Hugo non verificata: installazione saltata"
+    # Senza Hugo l'ambiente non serve: meglio fermarsi che dichiararlo pronto.
+    rm -f "$DEB"
+    echo "Impronta del pacchetto Hugo ${HUGO_VERSION} non verificata: installazione interrotta." >&2
+    exit 1
   fi
-  rm -f "$DEB"
 fi
 
 # -----------------------------------------------------------------------------
