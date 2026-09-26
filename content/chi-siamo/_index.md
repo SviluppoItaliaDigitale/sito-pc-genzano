@@ -128,6 +128,7 @@ Con l'evoluzione della normativa sul Terzo Settore, alla fine del **2023** il Gr
 {{< mezzo-card icona="bi-house" colore="info" nome="Tenda sociale" descrizione="Tenda pneumatica da 35 mq per l'assistenza alla popolazione." >}}
 {{< mezzo-card icona="bi-droplet" nome="Vasca mobile" descrizione="Vasca da 8.000 litri per il rifornimento degli elicotteri antincendio." >}}
 {{< mezzo-card nome="Fiat Doblò" descrizione="Mezzo per trasporto persone, unità droni e attrezzature." >}}
+{{< mezzo-card nome="Iveco Stralis" descrizione="Autocarro di proprietà del Coordinamento FE.P.I.VOL., in deposito presso il Gruppo e a disposizione delle organizzazioni del coordinamento che lo richiedono." >}}
 {{< mezzo-card icona="bi-display" colore="info" nome="Iveco Cacciamali" descrizione="In allestimento come sala operativa mobile." corsivo="true" >}}
 {{< mezzo-card colore="success" nome="Astra BM201" descrizione="In allestimento." corsivo="true" >}}
 </div>

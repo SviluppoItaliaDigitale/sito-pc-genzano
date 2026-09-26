@@ -4,7 +4,7 @@ description: "Natura giuridica del Gruppo PC di Genzano di Roma, iscrizione al R
 layout: "single"
 toc: true
 tts: true
-dataUltimaRevisione: "2026-05-21"
+dataUltimaRevisione: "2026-09-26"
 ---
 
 Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** è un'**articolazione operativa del Comune**, istituito nel 1991 con delibera del Consiglio Comunale e oggi disciplinato dalla **Legge Regionale Lazio 26 febbraio 2014, n. 2** (art. 10, che autorizza i Comuni a istituire gruppi comunali di volontariato di protezione civile) e dal **D.Lgs. 2 gennaio 2018 n. 1** (Codice della Protezione Civile, art. 35).
@@ -20,6 +20,7 @@ Dal **28 ottobre 2024** il Gruppo è anche **iscritto al RUNTS** (Registro Unico
 | Regolamento vigente | Delibera C.C. n. 31 del 31/07/2023 (art. 35 D.Lgs. 1/2018) |
 | Forma giuridica | Ente del Terzo Settore (ETS) — articolazione del Comune di Genzano di Roma |
 | Iscrizione RUNTS | Sezione *"Altri Enti del Terzo Settore"*, determina n. G14230 del 28/10/2024 |
+| Registro regionale | Iscritto al Registro Regionale del Volontariato di Protezione Civile del Lazio con il n. 184 |
 | Coordinamento operativo | 14° COI — Centro Operativo Intercomunale della Provincia di Roma |
 | Coordinamento regionale | Aderente al coordinamento **FEPIVOL** |
 | Quadro normativo | D.Lgs. 117/2017 (Codice del Terzo Settore) + D.Lgs. 1/2018 (Codice della Protezione Civile) + L.R. Lazio 2/2014 + Direttiva PCM 30/04/2021 |
