@@ -13,6 +13,14 @@ RewriteEngine On
 RewriteCond %{THE_REQUEST} \s/+(.+/)?index\.html[?\s]
 RewriteRule ^(.*/)?index\.html$ https://www.protezionecivilegenzano.it/$1 [R=301,L]
 
+# Dominio senza www → https://www in UN solo salto (audit 25/09/2026, F30:
+# http://protezionecivilegenzano.it/ faceva due salti, prima verso http://www
+# e poi verso https://www). Se il primo salto lo fa il pannello Aruba prima di
+# leggere questo file, la regola resta innocua; il salto doppio va allora
+# corretto nel pannello (reindirizzamento del dominio verso https://www).
+RewriteCond %{HTTP_HOST} ^protezionecivilegenzano\.it$ [NC]
+RewriteRule ^ https://www.protezionecivilegenzano.it%{REQUEST_URI} [L,R=301]
+
 # Forza HTTPS su tutto il resto — così nessuna richiesta http può generare
 # un hop intermedio insicuro verso le pagine nuove.
 RewriteCond %{HTTPS} off
@@ -53,10 +61,12 @@ Redirect 301 /formazione/kit-calamita-bambini/16-origami-cappello.html https://w
 Redirect 301 /comunicazioni/2026-05-16-infiorata-genzano-2026/ https://www.protezionecivilegenzano.it/comunicazioni/2026-05-30-infiorata-genzano-2026/
 Redirect 301 /comunicazioni/2026-05-16-infiorata-genzano-2026.html https://www.protezionecivilegenzano.it/comunicazioni/2026-05-30-infiorata-genzano-2026/
 
-# Cartelle vecchie → nuove
-Redirect 301 /assets/ https://www.protezionecivilegenzano.it/
-Redirect 301 /cache/ https://www.protezionecivilegenzano.it/
-Redirect 301 /immagini_web/ https://www.protezionecivilegenzano.it/
+# Cartelle vecchie → nuove. RedirectMatch con destinazione FISSA: la direttiva
+# Redirect accoda il resto del percorso, e /assets/images/logo.png finiva su
+# /images/logo.png, cioè un 404 (audit 25/09/2026, F30).
+RedirectMatch 301 ^/assets/ https://www.protezionecivilegenzano.it/
+RedirectMatch 301 ^/cache/ https://www.protezionecivilegenzano.it/
+RedirectMatch 301 ^/immagini_web/ https://www.protezionecivilegenzano.it/
 
 # 410 Gone esplicito per i .php legacy del vecchio pannello admin Joomla
 # DEVE venire PRIMA del Redirect 301 della cartella /piano_protezione_civile/
@@ -67,9 +77,9 @@ Redirect 301 /immagini_web/ https://www.protezionecivilegenzano.it/
 # 7+ URL elimina.php?file=...&index=N classificati come Soft 404.
 RedirectMatch 410 ^/piano_protezione_civile/(elimina|aree|funzioni|scenari|genera_pdf|salva|modifica|carica)\.php(\?.*)?$
 
-Redirect 301 /piano_protezione_civile/ https://www.protezionecivilegenzano.it/piano-emergenza/
-Redirect 301 /sito_pc/ https://www.protezionecivilegenzano.it/
-Redirect 301 /sitovecchio/ https://www.protezionecivilegenzano.it/
+RedirectMatch 301 ^/piano_protezione_civile/ https://www.protezionecivilegenzano.it/piano-emergenza/
+RedirectMatch 301 ^/sito_pc/ https://www.protezionecivilegenzano.it/
+RedirectMatch 301 ^/sitovecchio/ https://www.protezionecivilegenzano.it/
 
 # /documenti/normativa/ → /area-download/normativa/ (file duplicati lì)
 # /documenti/download/ NON reindirizzato — i PDF sono serviti direttamente
@@ -122,7 +132,15 @@ RedirectMatch 410 ^/areefiltrate\.html$
   # geolocation: consentita al nostro stesso dominio (per "Centra sulla mia
   # posizione" sulla mappa cartografia). microphone e camera restano negati.
   Header always set Permissions-Policy "geolocation=(self), microphone=(), camera=()"
-  Header always set X-XSS-Protection "1; mode=block"
+  # X-XSS-Protection rimosso (audit 25/09/2026, F30): i browser attuali lo
+  # ignorano e il filtro che attivava in quelli vecchi era esso stesso una
+  # fonte di vulnerabilità. La protezione vera è la Content-Security-Policy.
+  Header always unset X-XSS-Protection
+  # Isola la finestra del sito da quelle aperte da altre origini. La variante
+  # "allow-popups" lascia funzionare le finestre che apriamo noi (condivisione,
+  # ricevitori SDR, mappe esterne). CORP non si imposta: impedirebbe ad altri
+  # siti (Comune, scuole, testate) di mostrare le nostre immagini e i dati aperti.
+  Header always set Cross-Origin-Opener-Policy "same-origin-allow-popups"
   # HSTS: forza HTTPS per 1 anno, include sottodomini.
   # Il sito è già full-HTTPS (RewriteRule sopra fa 301 da http a https).
   # Aggiunto 2026-05-06 dopo audit security ChatGPT.
@@ -137,11 +155,13 @@ RedirectMatch 410 ^/areefiltrate\.html$
   Header always set Link "<https://creativecommons.org/licenses/by/4.0/>; rel=\"license\"" env=!ARASAAC_ASSET
   Header always set Link "<https://creativecommons.org/licenses/by-nc-sa/4.0/>; rel=\"license\"" env=ARASAAC_ASSET
 
-  # TDM Reservation Protocol (W3C TDMRep / Direttiva UE 2019/790 art. 4):
-  # DICHIARAZIONE DI POLICY, non divieto — coerente con la scelta open del
-  # sito (CC BY 4.0 + llms.txt): il text-and-data-mining è consentito nei
-  # termini della licenza dichiarata in /note-legali/ (attribuzione
-  # obbligatoria). Speculare a /.well-known/tdmrep.json.
+  # TDM Reservation Protocol (W3C TDMRep / Direttiva UE 2019/790 art. 4).
+  # Che cosa dice davvero: "TDM-Reservation: 1" RISERVA i diritti di text and
+  # data mining, e "TDM-Policy" indica dove sono le condizioni alle quali il
+  # mining è consentito, cioè /note-legali/ (licenza CC BY 4.0, attribuzione
+  # obbligatoria). È una riserva con licenza offerta, non un'assenza di
+  # riserva: chi vuole dichiarare "nessuna riserva" usa il valore 0 (audit
+  # 25/09/2026, F30). Speculare a /.well-known/tdmrep.json.
   Header always set TDM-Reservation "1"
   Header always set TDM-Policy "https://www.protezionecivilegenzano.it/note-legali/"
 
@@ -227,7 +247,7 @@ FileETag None
 # Aggiunti anche application/rss+xml, application/xml, text/xml per
 # comprimere i 39 feed RSS auto-generati da Hugo.
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json application/rss+xml application/xml text/xml image/svg+xml
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json application/rss+xml application/xml text/xml image/svg+xml text/plain text/csv application/ld+json application/geo+json application/manifest+json
 </IfModule>
 
 # File di stato dell'action FTP-Deploy e residui tecnici: mai serviti via HTTP.
@@ -251,5 +271,9 @@ FileETag None
 # ISO-8859-1 e i feed/JSON senza meta risultano con accenti corrotti).
 AddDefaultCharset UTF-8
 
-# Errore 404 personalizzato
+# Pagine di errore: la stessa pagina di recupero (ricerca, link rapidi, 112)
+# anche per 403 e 410, invece della pagina grezza del server (audit 25/09/2026, F30).
+# Il codice di stato resta quello originale.
 ErrorDocument 404 /404.html
+ErrorDocument 403 /404.html
+ErrorDocument 410 /404.html

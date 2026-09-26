@@ -21,7 +21,7 @@
 {{- if .IsHome -}}
   {{- $title = .Site.Title -}}
 {{- else -}}
-  {{- $title = printf "%s — %s" .Title .Site.Title -}}
+  {{- $title = printf "%s — %s" (partial "titolo-pagina.html" .) .Site.Title -}}
 {{- end -}}
 {{- $desc := default .Site.Params.description .Description -}}
 
@@ -46,7 +46,7 @@
 {{- else if .Params.image_alt -}}
   {{- $imgAlt = .Params.image_alt -}}
 {{- else -}}
-  {{- $imgAlt = .Title -}}
+  {{- $imgAlt = partial "titolo-pagina.html" . -}}
 {{- end -}}
 
 {{- $ext := lower (path.Ext $imgPath) -}}

@@ -7,8 +7,9 @@
        caratteri il suffisso si accorcia in "PC Genzano di Roma", così i
        motori di ricerca mostrano il titolo della pagina invece di troncarlo
        (audit 25/09/2026, F22: 663 titoli oltre i 70 caratteri). */}}
-  {{- $titoloPieno := printf "%s — %s" .Title .Site.Title }}
-  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else if gt (strings.RuneCount $titoloPieno) 70 }}{{ .Title }} — PC Genzano di Roma{{ else }}{{ $titoloPieno }}{{ end }}</title>
+  {{- $titoloPagina := partial "titolo-pagina.html" . }}
+  {{- $titoloPieno := printf "%s — %s" $titoloPagina .Site.Title }}
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else if gt (strings.RuneCount $titoloPieno) 70 }}{{ $titoloPagina }} — PC Genzano di Roma{{ else }}{{ $titoloPieno }}{{ end }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   <meta name="author" content="{{ .Site.Params.author }}">
   <meta name="theme-color" content="#003366">

@@ -32,6 +32,7 @@ import subprocess
 import sys
 import time
 from datetime import datetime, date, timezone
+from zoneinfo import ZoneInfo
 from pathlib import Path
 
 import yaml  # PyYAML — installato dal workflow
@@ -95,22 +96,30 @@ def parse_frontmatter(text: str) -> dict | None:
         return None
 
 
+def oggi_roma() -> date:
+    """Data di oggi in ora italiana. Il runner è in UTC: con date.today(), fra
+    mezzanotte e le 02:00 italiane un articolo del giorno risultava futuro
+    (audit 25/09/2026, F31). Hugo usa Europe/Rome, e così questo controllo."""
+    return datetime.now(ZoneInfo("Europe/Rome")).date()
+
+
 def data_articolo_passata(date_field) -> bool:
     """Verifica che la `date` del frontmatter sia passata (= articolo già live)."""
+    oggi = oggi_roma()
     if date_field is None:
         return False
     if isinstance(date_field, datetime):
-        return date_field.date() <= date.today()
+        return date_field.date() <= oggi
     if isinstance(date_field, date):
-        return date_field <= date.today()
+        return date_field <= oggi
     if isinstance(date_field, str):
         s = date_field.strip()
         try:
             d = datetime.fromisoformat(s.replace("Z", "+00:00"))
-            return d.date() <= date.today()
+            return d.date() <= oggi
         except ValueError:
             try:
-                return datetime.strptime(s[:10], "%Y-%m-%d").date() <= date.today()
+                return datetime.strptime(s[:10], "%Y-%m-%d").date() <= oggi
             except ValueError:
                 return False
     return False

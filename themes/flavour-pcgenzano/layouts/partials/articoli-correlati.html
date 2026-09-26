@@ -39,7 +39,7 @@
          aria-label="Leggi l'articolo: {{ .Title }}">
         {{ with .Params.image }}
         <div class="articolo-correlato-img">
-          <img src="{{ . | relURL }}" alt="" aria-hidden="true" loading="lazy">
+          <img src="{{ . | relURL }}" alt="" aria-hidden="true" {{ partial "dimensioni-immagine.html" . }} loading="lazy">
         </div>
         {{ end }}
         <div class="articolo-correlato-body">

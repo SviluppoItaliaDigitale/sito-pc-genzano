@@ -55,6 +55,14 @@ import sys
 import urllib.parse
 import urllib.request
 from datetime import date, datetime, timedelta, timezone
+from zoneinfo import ZoneInfo
+
+ROMA = ZoneInfo("Europe/Rome")
+
+
+def oggi_roma() -> date:
+    """Data di oggi in ora italiana (il runner è in UTC; audit 25/09/2026, F31)."""
+    return datetime.now(ROMA).date()
 from urllib.parse import quote_plus
 
 UA = "PCGenzanoBot/1.0 (+https://www.protezionecivilegenzano.it/)"
@@ -392,7 +400,7 @@ def fetch_normattiva(cutoff, errori):
     out = []
     cli = Cliente()
     try:
-        anno = date.today().year
+        anno = oggi_roma().year
         pagina = cli.get(f'{NORMATTIVA_BASE}/ricerca/elencoPerData/anno/{anno}')
         blocchi = re.findall(r'<div id="collapseDiv_\d+" class="collapse-div boxAtto[^"]*"[^>]*>(.*?)(?=<div id="collapseDiv_|<!-- fine lista|</section>)', pagina, flags=re.S)
         if not blocchi:
@@ -444,7 +452,7 @@ def fetch_burl(cutoff, errori):
         if 'BL_ID' not in nascosti:
             raise RuntimeError('form di ricerca senza campi nascosti: struttura cambiata?')
         da = cutoff.strftime('%d/%m/%Y')
-        a = date.today().strftime('%d/%m/%Y')
+        a = oggi_roma().strftime('%d/%m/%Y')
         for parola in BURL_PAROLE:
             dati = dict(nascosti)
             dati.update({'BL_ACTION': 'CERCA', 'BL_PAR_OGGETTO_ATTO_0': parola,
@@ -639,7 +647,7 @@ def corpo_issue(output):
     hits = output['novita']
     primarie = [h for h in hits if h['fonte_tipo'] == 'primaria']
     news = [h for h in hits if h['fonte_tipo'] == 'news']
-    oggi = datetime.now().strftime('%d/%m/%Y')
+    oggi = datetime.now(ROMA).strftime('%d/%m/%Y')
     righe = []
     if primarie:
         righe.append(f"# Rassegna normativa e albo pretorio — {oggi}\n")
@@ -713,7 +721,7 @@ def main():
     ap.add_argument('--solo-rilevanti', action='store_true', default=True, help=argparse.SUPPRESS)
     args = ap.parse_args()
 
-    cutoff = date.today() - timedelta(days=args.days)
+    cutoff = oggi_roma() - timedelta(days=args.days)
     errori = []
     hits = []
     fonti_lette = []
