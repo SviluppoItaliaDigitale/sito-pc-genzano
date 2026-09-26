@@ -24,7 +24,7 @@ sezioni:
 {{< dossier-dati id="numeri" >}}
 {{< dossier-dato da="1981" unita=" anni" label="Al servizio di Genzano, **senza interruzioni dal 1981**" >}}
 {{< dossier-dato to="6" label="**Settori operativi**: AIB, rischio idraulico, radio, droni, scuole, comunicazione" >}}
-{{< dossier-dato to="11" label="**Mezzi e attrezzature** in dotazione, dall'autobotte alla tenda sociale" >}}
+{{< dossier-dato to="12" label="**Mezzi e attrezzature** a disposizione, dall'autobotte alla tenda sociale" >}}
 {{< dossier-dato to="9" label="La nostra **Zona di allerta incendi** dei Castelli Romani (Regione Lazio)" >}}
 {{< /dossier-dati >}}
 
