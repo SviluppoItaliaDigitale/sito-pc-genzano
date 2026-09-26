@@ -9,7 +9,7 @@ name: "🔄 Aggiorna Bootstrap Italia"
 on:
   # Esecuzione programmata: ogni lunedì alle 06:00 UTC (08:00 CEST)
   schedule:
-    - cron: '0 6 * * 1'
+    - cron: '11 6 * * 1'
 
   # Permette l'esecuzione manuale dal pannello Actions di GitHub
   workflow_dispatch:

@@ -11,7 +11,7 @@ name: "🔗 Verifica link sito completo"
 
 on:
   schedule:
-    - cron: "0 10 * * 1"
+    - cron: "2 10 * * 1"
   workflow_dispatch:
 
 permissions:

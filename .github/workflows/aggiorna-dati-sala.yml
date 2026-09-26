@@ -72,5 +72,14 @@ jobs:
           fi
           git commit -m "[skip-dati-sala] Snapshot sala situazioni: bollettino DPC, notizie, GDACS, EMS, volo, MeteoAlarm, FIRMS"
           # anti non-fast-forward: altri workflow committano di frequente
-          git pull --rebase origin main
-          git push
+          for try in 1 2 3; do
+            if git pull --rebase --autostash origin main && git push origin HEAD:main; then
+              echo "Snapshot pubblicati (tentativo $try)."; exit 0
+            fi
+            echo "Push fallito, ritento ($try)..."; sleep 6
+          done
+          # Rosso, non giallo: un run verde con gli snapshot mai arrivati su main
+          # nasconderebbe al watchdog (che legge solo i run falliti) una Sala
+          # ferma a tempo indeterminato (revisione del 26/09/2026).
+          echo "::error::Snapshot non pubblicati dopo 3 tentativi: il run fallisce perché il watchdog lo veda."
+          exit 1

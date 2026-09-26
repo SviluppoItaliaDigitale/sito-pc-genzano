@@ -16,7 +16,7 @@ name: "📄 Controllo settimanale documenti scaricabili"
 
 on:
   schedule:
-    - cron: "0 11 * * 1"
+    - cron: "7 11 * * 1"
   workflow_dispatch:
 
 permissions:
