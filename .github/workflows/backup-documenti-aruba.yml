@@ -10,7 +10,7 @@ name: "💾 Backup documenti solo-Aruba"
 on:
   schedule:
     # 1° del mese, 04:00 UTC — orario tranquillo, nessuna collisione
-    - cron: "0 4 1 * *"
+    - cron: "14 4 1 * *"
   workflow_dispatch:
 
 permissions:

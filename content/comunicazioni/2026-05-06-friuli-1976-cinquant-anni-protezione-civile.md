@@ -142,4 +142,4 @@ Fonti istituzionali:
 - [INGV Terremoti — Speciale Friuli 1976](https://ingvterremoti.com/2014/05/06/speciale-i-terremoti-del-900-il-terremoto-del-friuli-6-maggio-1976/).
 - [Vigili del Fuoco — Memoria storica del terremoto del Friuli](https://www.vigilfuoco.it/chi-siamo/memoria-storica/notizie-storiche/il-terremoto-del-friuli-del-maggio-1976).
 - [Legge 24 febbraio 1992, n. 225 — Normattiva](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1992-02-24;225).
-- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/).
+- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n-1-del-2-gennaio-2018--codice-della-protezione-civile/).

@@ -17,7 +17,7 @@ Il 28 aprile è la [Giornata mondiale per la salute e la sicurezza sul lavoro](h
 
 ## La sicurezza dei volontari è una responsabilità del sistema
 
-Il volontariato di Protezione Civile non è "lavoro" in senso contrattuale: è un servizio gratuito. Ma in emergenza i volontari svolgono attività che, nel mondo del lavoro, richiedono formazione specialistica e **dispositivi di protezione individuale (DPI)**. Per questo il [Codice della Protezione Civile](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/) (D.Lgs. 1/2018) e le disposizioni regionali prevedono standard precisi:
+Il volontariato di Protezione Civile non è "lavoro" in senso contrattuale: è un servizio gratuito. Ma in emergenza i volontari svolgono attività che, nel mondo del lavoro, richiedono formazione specialistica e **dispositivi di protezione individuale (DPI)**. Per questo il [Codice della Protezione Civile](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n-1-del-2-gennaio-2018--codice-della-protezione-civile/) (D.Lgs. 1/2018) e le disposizioni regionali prevedono standard precisi:
 
 - **Formazione obbligatoria di base** prima dell'impiego operativo.
 - **Formazione specialistica** per i ruoli tecnici (AIB, ricerca dispersi, logistica).
@@ -85,6 +85,6 @@ Fonti istituzionali:
 - [ILO — World Day for Safety and Health at Work](https://www.ilo.org/global/topics/safety-and-health-at-work/events-training/events-meetings/world-day-for-safety/lang--en/index.htm).
 - [INAIL](https://www.inail.it/).
 - [D.Lgs. 81/2008 — Testo Unico Sicurezza sul Lavoro](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2008-04-09;81).
-- [Dipartimento Protezione Civile — Formazione](https://www.protezionecivile.gov.it/it/pagina/la-formazione-del-volontariato).
+- [Dipartimento Protezione Civile — Formazione](https://formazione.protezionecivile.gov.it/it/approfondimento/formazione/).
 
 Ricordare il 28 aprile è dire una cosa semplice: **si torna a casa, dopo ogni intervento**. E si torna a casa tutti.

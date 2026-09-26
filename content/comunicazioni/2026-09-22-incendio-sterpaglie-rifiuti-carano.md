@@ -73,4 +73,4 @@ Con questa uscita salgono a **168 gli interventi registrati dal 4 aprile**, data
 **Fonti istituzionali:**
 
 - [Regione Lazio — Protezione Civile](https://www.regione.lazio.it/protezione-civile)
-- [Dipartimento della Protezione Civile — Rischio incendi boschivi](https://www.protezionecivile.gov.it/it/rischio/rischio-incendi-boschivi/)
+- [Dipartimento della Protezione Civile — Rischio incendi boschivi](https://rischi.protezionecivile.gov.it/it/incendi-boschivi-0/)

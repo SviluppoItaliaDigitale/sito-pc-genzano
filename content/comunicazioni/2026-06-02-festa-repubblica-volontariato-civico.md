@@ -92,6 +92,6 @@ Buona Festa della Repubblica a tutti.
 
 - Pagina: [Chi siamo — Storia del Gruppo](/chi-siamo/)
 - Pagina: [Diventa Volontario](/diventa-volontario/)
-- [Costituzione della Repubblica Italiana](https://www.governo.it/it/costituzione-italiana)
+- [Costituzione della Repubblica Italiana](https://www.governo.it/it/costituzione-italiana/2836)
 - [Codice della Protezione Civile (D.Lgs. 1/2018)](https://www.normattiva.it/)
 - [Dipartimento Protezione Civile — Il Sistema nazionale](https://www.protezionecivile.gov.it/)

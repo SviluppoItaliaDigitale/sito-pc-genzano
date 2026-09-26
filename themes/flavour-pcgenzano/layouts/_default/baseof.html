@@ -3,22 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ if not .IsHome }}{{ .Title }} — {{ end }}{{ .Site.Title }}</title>
+  {{- /* Titolo: "Pagina — Protezione Civile Genzano di Roma". Oltre i 70
+       caratteri il suffisso si accorcia in "PC Genzano di Roma", così i
+       motori di ricerca mostrano il titolo della pagina invece di troncarlo
+       (audit 25/09/2026, F22: 663 titoli oltre i 70 caratteri). */}}
+  {{- $titoloPieno := printf "%s — %s" .Title .Site.Title }}
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else if gt (strings.RuneCount $titoloPieno) 70 }}{{ .Title }} — PC Genzano di Roma{{ else }}{{ $titoloPieno }}{{ end }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   <meta name="author" content="{{ .Site.Params.author }}">
   <meta name="theme-color" content="#003366">
   {{/* Fingerprint di build (guardia anti-stale). Ogni pagina generata da
-       Hugo porta lo SHA + timestamp della build che l'ha prodotta, letti da
+       Hugo porta lo SHA della build che l'ha prodotta, letto da
        data/buildinfo.json (scritto in CI da deploy.yml; segnaposto "dev" in
-       locale). Il workflow verifica-deploy-aruba.yml campiona queste meta
+       locale). Il workflow verifica-deploy-aruba.yml campiona questa meta
        sulle pagine live e rileva il "drift di generazioni" — il bug per cui
        su Aruba convivevano pagine di build diverse (chi-siamo di aprile,
        allerte-meteo di maggio, home di luglio). Se una pagina live non ha
        affatto questa meta, è servita da una build precedente a questa
-       guardia → anch'essa un segnale di file stantio. */}}
+       guardia → anch'essa un segnale di file stantio.
+       SOLO lo SHA, non l'orario (audit 25/09/2026, F19): l'orario dell'ultima
+       build sta in /build-info.js (output BUILDINFO) e in data/buildinfo.json,
+       un file solo. Attenzione: da solo questo non basta a evitare che ogni
+       build riscriva ~1.000 HTML, perché la utility-bar stampa l'ora della
+       build ("Sito aggiornato il … alle HH:MM") e lo SHA cambia a ogni commit,
+       anche solo di dati. Ridurre davvero il ricaricamento FTP richiede di
+       togliere l'ora dalla utility-bar (la legge già site-chrome.js da
+       /build-info.js) e di aggiornare il marker 4 di audit-sito § 43. */}}
   {{- with site.Data.buildinfo }}
   <meta name="pc-build-sha" content="{{ .sha }}">
-  <meta name="pc-build-time" content="{{ .time }}">
   {{- end }}
   {{- $prodBase := .Site.Params.productionBaseURL | default .Site.BaseURL -}}
   {{- $basePath := (urls.Parse .Site.BaseURL).Path | default "/" -}}

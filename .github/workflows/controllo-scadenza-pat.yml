@@ -17,7 +17,7 @@ name: "🔑 Controllo scadenza PAT cron-job.org"
 on:
   schedule:
     # Primo giorno del mese alle 09:00 UTC = 11:00 italiana (estate)
-    - cron: '0 9 1 * *'
+    - cron: '12 9 1 * *'
   workflow_dispatch:
 
 permissions:

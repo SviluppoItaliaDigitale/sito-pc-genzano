@@ -326,7 +326,8 @@ h1.scheda-h1 {
   color: var(--scheda-blu);
   margin: 0 0 0.5rem 0;
 }
-h2.scheda-h2 {
+h2.scheda-h2,
+h3.scheda-h2 {
   font-size: 1.1rem;
   color: var(--scheda-blu);
   margin: 1rem 0 0.5rem 0;

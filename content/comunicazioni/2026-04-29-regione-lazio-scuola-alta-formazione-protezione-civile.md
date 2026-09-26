@@ -62,7 +62,7 @@ Fonti istituzionali:
 
 - [Regione Lazio — Protezione Civile](https://protezionecivile.regione.lazio.it).
 - [Notizia ufficiale Regione Lazio](https://protezionecivile.regione.lazio.it/notizie/protezione-civile-nel-lazio-dopo-12-anni-parte-un-nuovo-modello-di-formazione).
-- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/).
+- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n-1-del-2-gennaio-2018--codice-della-protezione-civile/).
 - [L.R. Lazio 2/2014 — Sistema integrato di Protezione Civile](https://www.regione.lazio.it/).
 
 ---

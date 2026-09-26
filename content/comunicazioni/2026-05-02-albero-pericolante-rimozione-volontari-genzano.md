@@ -68,7 +68,7 @@ Sul nostro sito:
 
 Fonti istituzionali:
 
-- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/dlgs-n-1-del-2-gennaio-2018/).
+- [Codice della Protezione Civile — D.Lgs. 1/2018](https://www.protezionecivile.gov.it/it/normativa/decreto-legislativo-n-1-del-2-gennaio-2018--codice-della-protezione-civile/).
 - [Vigili del Fuoco](https://www.vigilfuoco.it/) — competenti per gli interventi su alberi pericolanti su pubblica via.
 
 La collaborazione quotidiana fra **Polizia Locale** e **Gruppo Comunale di Protezione Civile** è uno strumento ordinario del sistema comunale per gestire situazioni che richiedono risorse aggiuntive sul territorio. Funziona perché ognuno fa la propria parte: la Polizia Locale **valuta e coordina**, i volontari **eseguono il supporto operativo** sotto le sue indicazioni.

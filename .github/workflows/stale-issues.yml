@@ -18,7 +18,7 @@ name: 🧹 Pulizia issue automatiche stale
 on:
   schedule:
     # Ogni giorno alle 04:00 UTC (orario calmo, prima del check-allerta orario)
-    - cron: '0 4 * * *'
+    - cron: '9 4 * * *'
   workflow_dispatch:
 
 permissions:

@@ -101,6 +101,20 @@ jobs:
           fi
           MSG_HEAD=$(IFS=' + '; echo "${MSG_PARTS[*]}")
           [ -z "$MSG_HEAD" ] && MSG_HEAD="aggiornamento periodico"
+          # Cambio SOSTANZIALE = livello oggi, pre-allerta domani, avviso
+          # meteo o rischio incendi. Il solo heartbeat di `ultimo_controllo`
+          # (check-allerta.py, ogni ≥5h45') si committa ma NON merita un
+          # deploy urgente: ogni dispatch urgent annulla l'upload FTP in
+          # corso (concurrency di deploy.yml) e lasciava il sito a pezzi
+          # ~4 volte al giorno senza che nulla fosse cambiato per il
+          # cittadino (audit 25/09/2026, F19). Lo raccoglie deploy-coalescer.yml.
+          SOSTANZIALE=false
+          if [ "${{ steps.check.outputs.sostanziale }}" = "true" ] \
+             || [ "${{ steps.avvisi.outputs.changed }}" = "true" ] \
+             || [ "${{ steps.incendi.outputs.changed }}" = "true" ]; then
+            SOSTANZIALE=true
+          fi
+          echo "sostanziale=$SOSTANZIALE" >> "$GITHUB_OUTPUT"
           git commit -m "Allerta meteo: $MSG_HEAD" \
                      -m "Aggiornamento automatico da bollettino DPC (opendatasicilia), avvisi meteo e bollettino AIB Regione Lazio."
           # Retry+rebase per evitare conflitti di concorrenza con altri workflow
@@ -112,13 +126,24 @@ jobs:
           done
           echo "committed=true" >> "$GITHUB_OUTPUT"
 
-      - name: "🚀 Avvia deploy"
-        if: steps.commit.outputs.committed == 'true'
+      # Deploy URGENTE (preempta l'upload in corso) SOLO al cambio di stato:
+      # livello, pre-allerta domani, avviso meteo, rischio incendi. Latenza
+      # invariata (~15 s dal bollettino DPC al dispatch).
+      - name: "🚀 Avvia deploy urgente (solo al cambio di stato)"
+        if: steps.commit.outputs.committed == 'true' && steps.commit.outputs.sostanziale == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "Triggering deploy workflow..."
           gh workflow run deploy.yml --ref main -f priority=urgent
+
+      # Heartbeat (solo `ultimo_controllo` aggiornato): nessun dispatch.
+      # deploy-coalescer.yml vede il commit non deployato e lancia un deploy
+      # `background` che si accoda senza annullare nulla (entro ~30 min).
+      - name: "💤 Heartbeat: nessun deploy urgente"
+        if: steps.commit.outputs.committed == 'true' && steps.commit.outputs.sostanziale != 'true'
+        run: |
+          echo "Commit di solo controllo periodico: il deploy lo raccoglie deploy-coalescer.yml (priorità background)."
 
       # I push fatti con il GITHUB_TOKEN NON auto-triggerano i workflow `push`:
       # notifica-telegram.yml ascolta su push -> data/allerta.json, ma non si

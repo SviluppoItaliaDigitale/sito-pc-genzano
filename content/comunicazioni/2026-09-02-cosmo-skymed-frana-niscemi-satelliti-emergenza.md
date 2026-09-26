@@ -101,4 +101,4 @@ I satelliti misurano i versanti. Le crepe in casa le vedi solo tu.
 
 - [ASI — Frana di Niscemi: i satelliti di COSMO-SkyMed in aiuto della Protezione civile](https://www.asi.it/2026/01/frana-di-niscemi-i-satelliti-di-cosmo-skymed-in-aiuto-della-protezione-civile/)
 - [ASI — Il programma COSMO-SkyMed](https://www.asi.it/scienze-della-terra/cosmo-skymed/)
-- [Dipartimento della Protezione Civile — Rischio frane](https://www.protezionecivile.gov.it/it/rischio/rischio-frane/)
+- [Dipartimento della Protezione Civile — Rischio frane](https://www.protezionecivile.gov.it/it/approfondimento/frane/)

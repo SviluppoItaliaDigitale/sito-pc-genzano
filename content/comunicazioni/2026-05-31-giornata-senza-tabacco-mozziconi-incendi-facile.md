@@ -92,4 +92,4 @@ Fonti ufficiali:
 
 - [OMS — Giornata senza tabacco](https://www.who.int/campaigns/world-no-tobacco-day)
 - [Ministero della Salute](https://www.salute.gov.it/)
-- [Dipartimento della Protezione Civile — Rischio incendi](https://www.protezionecivile.gov.it/it/pagina/rischio-incendi-boschivi)
+- [Dipartimento della Protezione Civile — Rischio incendi](https://rischi.protezionecivile.gov.it/it/incendi-boschivi-0/)

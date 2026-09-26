@@ -163,7 +163,7 @@ Queste attività richiedono **formazione specifica** e DPI adeguati.
 - Articolo: [Temporali estivi Castelli](/comunicazioni/2026-06-13-temporali-estivi-castelli-romani/)
 - Articolo: [Come si legge un'allerta meteo](/allerte-meteo/)
 - Pagina: [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/)
-- [DPC — Rischio idrogeologico](https://www.protezionecivile.gov.it/it/rischi/rischio-idrogeologico)
+- [DPC — Rischio idrogeologico](https://rischi.protezionecivile.gov.it/it/meteo-idro-0/)
 - [ISPRA — Alluvioni](https://www.isprambiente.gov.it/)
 
 Il cambiamento climatico renderà gli eventi alluvionali più frequenti. Conoscerli oggi significa evitarli domani.

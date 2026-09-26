@@ -1,6 +1,6 @@
 name: "🗓️ Pubblicazione programmata articoli"
 
-# Rilancia il deploy ogni mattina alle 06:00 UTC (08:00 ora italiana legale / 07:00 solare).
+# Rilancia il deploy ogni mattina alle 06:07 UTC (minuto 7: il minuto 0 è il più ritardato dallo scheduler di GitHub, audit 25/09/2026) (08:00 ora italiana legale / 07:00 solare).
 # Serve per pubblicare automaticamente gli articoli con date futura:
 # Hugo esclude dal build gli articoli con `date` > oggi, quindi al passaggio di mezzanotte
 # basta rifare il build perché gli articoli del giorno entrino nel sito.
@@ -11,7 +11,7 @@ name: "🗓️ Pubblicazione programmata articoli"
 
 on:
   schedule:
-    - cron: "0 6 * * *"
+    - cron: "7 6 * * *"
   workflow_dispatch:
 
 permissions:

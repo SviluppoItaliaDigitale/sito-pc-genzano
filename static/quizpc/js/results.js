@@ -1,12 +1,29 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const resultsData = JSON.parse(localStorage.getItem('quizResults'));
-    const candidateName = localStorage.getItem('candidateName');
-    const candidateId = localStorage.getItem('candidateId');
+    // Dati del quiz: un valore assente o non leggibile vale come assente
+    // (la pagina torna all'indice, come senza dati).
+    let resultsData = null;
+    try {
+        resultsData = JSON.parse(safeStorage.get('quizResults'));
+    } catch (e) {
+        resultsData = null;
+    }
+    const candidateName = safeStorage.get('candidateName');
+    const candidateId = safeStorage.get('candidateId');
 
     if (!resultsData || !candidateName) {
         window.location.href = 'index.html';
         return;
     }
+
+    // Privacy: nome e matricola del candidato, risultati e categorie servono
+    // solo a comporre questa pagina. Una volta resi, si cancellano dalla memoria
+    // del browser (subito dopo il rendering e comunque all'uscita dalla pagina):
+    // il ricaricamento di results.html senza dati torna all'indice.
+    const CHIAVI_SESSIONE = ['candidateName', 'candidateId', 'quizResults', 'selectedCategories'];
+    function cancellaDatiSessione() {
+        safeStorage.removeMany(CHIAVI_SESSIONE);
+    }
+    window.addEventListener('pagehide', cancellaDatiSessione);
 
     // --- POPOLAMENTO ATTESTATO ---
     document.getElementById('cert-candidate-name').textContent = candidateName;
@@ -115,7 +132,11 @@ document.addEventListener('DOMContentLoaded', function () {
             alert("Testo del risultato copiato negli appunti!");
         }
     });
-    
+
+    // Rendering completato: i dati restano solo in memoria (resultsData) per
+    // revisione e condivisione, non più nel browser.
+    cancellaDatiSessione();
+
     function generateReview() {
         resultsData.quizQuestions.forEach((question, index) => {
             const card = document.createElement('div');
