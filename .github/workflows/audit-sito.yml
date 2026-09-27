@@ -631,7 +631,13 @@ jobs:
           # - "CCV-MB", "Monza-Brianza" come fonte di articoli
           #   (regola: niente nomi di enti locali non pertinenti nel testo)
           RESIDUI=""
-          PAT_INDEX=$(grep -rn '/index\.html"' "$CONTENT_GLOB/" "$THEME_GLOB/layouts/" 2>/dev/null | head -5 || true)
+          # Esclude i path filesystem interni tipo "static/.../index.html" usati
+          # con fileExists/readFile/os.ReadDir (es. sitemap.xml § auto-discovery
+          # schede stampabili, audit 25/09/2026 F22): quei path non hanno mai lo
+          # slash iniziale di un href/URL residuo (che sarebbe "/quizpc/index.html"),
+          # partono sempre da "static/" perché Hugo li legge dal filesystem, non
+          # li serve a quell'URL. Falso positivo trovato il 27/09/2026 (issue #1158).
+          PAT_INDEX=$(grep -rn '/index\.html"' "$CONTENT_GLOB/" "$THEME_GLOB/layouts/" 2>/dev/null | grep -v '"static/' | head -5 || true)
           [ -n "$PAT_INDEX" ] && RESIDUI="${RESIDUI}**/index.html nei contenuti/template:**\n\`\`\`\n$PAT_INDEX\n\`\`\`\n"
           PAT_LOMB=$(grep -rin "intercomunale lombard\|manuale originale\|imbersago" "$CONTENT_GLOB/" "$THEME_GLOB/layouts/" 2>/dev/null || true)
           [ -n "$PAT_LOMB" ] && RESIDUI="${RESIDUI}**Riferimenti al manuale lombardo:**\n\`\`\`\n$PAT_LOMB\n\`\`\`\n"
