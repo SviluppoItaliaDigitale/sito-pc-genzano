@@ -5,11 +5,119 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-27T19:36:44+00:00",
+  "generato": "2026-09-27T22:35:06+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-27T22:23:07+00:00",
+   "fonte": "ANSA",
+   "titolo": "Casa Milan, vandalizzato il murales dedicato a Franco Baresi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/28/casa-milan-vandalizzato-il-murales-dedicato-a-franco-baresi_897edd2a-71e9-4916-86ce-ac35fdddc3f4.html"
+  },
+  {
+   "data": "2026-09-27T22:11:34+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Papa alle vittime di abusi: 'Il mio impegno perché non si ripeta'",
+   "url": "https://www.ansa.it/vaticano/notizie/2026/09/27/il-papa-alle-vittime-di-abusi-il-mio-impegno-perche-non-si-ripeta_5764dd52-00c0-41b4-9e1f-d03516069f0c.html"
+  },
+  {
+   "data": "2026-09-27T22:10:45+00:00",
+   "fonte": "ANSA",
+   "titolo": "Nations League: Italia già a un bivio in Turchia, Mancini: 'Troppa agitazione, tranquilli'",
+   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/27/nations-league-mancini-divide-il-gruppo-10-azzurri-non-partono-per-la-turchia_da450839-4940-4c84-b2d6-30c73abdcb79.html"
+  },
+  {
+   "data": "2026-09-27T21:59:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Baresi, a Milano vandalizzato il murales per il capitano del Milan",
+   "url": "https://www.adnkronos.com/sport/baresi-milan-murales-milano-foto_1QOotRJYMshMdbRlUu0O9i"
+  },
+  {
+   "data": "2026-09-27T21:58:44+00:00",
+   "fonte": "ANSA",
+   "titolo": "Ip segue Eni sui prezzi dei carburanti. Meloni assicura un sostegno alle famiglie",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/27/ip-segue-eni-sui-prezzi-dei-carburanti.-meloni-assicura-un-sostegno-alle_bfbacf1c-8ee9-45a5-b566-fa815a21f0da.html"
+  },
+  {
+   "data": "2026-09-27T21:26:45+00:00",
+   "fonte": "ANSA",
+   "titolo": "Bloccò la strada Milano-Meda per un video, espulso il trapper Bratan",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/27/blocco-la-strada-milano-meda-per-un-video-espulso-il-trapper-bratan_9fdec40b-636c-4b68-882c-c70eeb849b8c.html"
+  },
+  {
+   "data": "2026-09-27T21:13:27+00:00",
+   "fonte": "ANSA",
+   "titolo": "Aggredisce una donna e investe due persone a Reggio Emilia, arrestato",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/27/aggredisce-una-donna-e-investe-due-persone-a-reggio-emilia-arrestato_eae1d70a-f8b9-4cb6-a57f-243f9791ab74.html"
+  },
+  {
+   "data": "2026-09-27T21:12:28+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Il sindaco di Reggio Emilia, rabbia e costernazione per l'aggressione al distributore",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/27/il-sindaco-di-reggio-emilia-rabbia-e-costernazione-per-laggressione-al-distributore_00ac7aa3-4238-488e-8b86-d99c9a465917.html"
+  },
+  {
+   "data": "2026-09-27T21:11:34+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Trump, cena privata alla Casa Bianca con il capo di Anthropic Amodei: disgelo sull’AI?",
+   "url": "https://www.adnkronos.com/internazionale/esteri/trumo-ai-cena-amodei-anthropic_ZvDmo3FUnVPQwJH7PWfeY"
+  },
+  {
+   "data": "2026-09-27T21:05:22+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Carburanti, Cgia accoglie sconto Eni ma avverte: \"Rincari record, intervenga la Ue\"",
+   "url": "https://www.adnkronos.com/economia/sconto-eni-carburanti-come-cambia-prezzo-benzina_1AGotN4WG9wXKgZHxMPAPS"
+  },
+  {
+   "data": "2026-09-27T21:05:17+00:00",
+   "fonte": "ANSA",
+   "titolo": "Allarme terrorismo in una base Raf usata da bombardieri Usa contro l'Iran",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/27/allarme-terrorismo-in-una-base-raf-usata-da-bombardieri-usa-contro-liran_91d9e309-9fb5-4940-99e1-9370a923d619.html"
+  },
+  {
+   "data": "2026-09-27T21:04:15+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Allarme terrorismo a base RAF Fairford, situazione sotto controllo: cinque arresti e indagini sul possibile ruolo dell’Iran",
+   "url": "https://www.adnkronos.com/internazionale/esteri/allarme-terrorismo-base-usa-fairford-cosa-sappiamo_17JRLwkx0cRc13PAAckmSg"
+  },
+  {
+   "data": "2026-09-27T20:53:33+00:00",
+   "fonte": "ANSA",
+   "titolo": "Madonna, Taylor Swift e soliti imprevisti per gli Mtv Awards a Los Angeles",
+   "url": "https://www.ansa.it/sito/notizie/cultura/musica/2026/09/26/madonna-taylor-swift-e-soliti-imprevisti-per-gli-mtv-awards-a-los_9410ba54-088b-4363-91f4-16ba71da2f28.html"
+  },
+  {
+   "data": "2026-09-27T20:51:02+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Whitney celebra il padre dei fumetti pop, retrospettiva su Roy Lichtenstein",
+   "url": "https://www.ansa.it/sito/notizie/cultura/arte/2026/09/27/il-whitney-celebra-il-padre-dei-fumetti-pop-retrospettiva-su-roy-lichtenstein_07dc6b85-7498-473d-9b76-2029dd210177.html"
+  },
+  {
+   "data": "2026-09-27T19:51:06+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Aggredisce donna e investe due persone a Reggio Emilia, arrestato",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/27/aggredisce-donna-e-investe-due-persone-a-reggio-emilia-arrestato_07914102-6d3d-4604-b146-b93462f821c5.html"
+  },
+  {
+   "data": "2026-09-27T19:50:56+00:00",
+   "fonte": "ANSA",
+   "titolo": "Axios: 'Trump terrà una cena privata alla Casa Bianca con il ceo di Anthropic'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/27/axios-trump-terra-cena-privata-alla-casa-bianca-con-il-ceo_aca63136-c974-4a3f-8c66-63ee65195ce2.html"
+  },
+  {
+   "data": "2026-09-27T19:45:45+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Il Papa alle vittime di abusi, 'il mio impegno perché non si ripeta'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/27/il-papa-alle-vittime-di-abusi-il-mio-impegno-perche-non-si-ripeta_beb44212-d9c7-4ab4-babf-bbe48796883c.html"
+  },
+  {
+   "data": "2026-09-27T19:38:54+00:00",
+   "fonte": "ANSA",
+   "titolo": "I mosaici di Rupnik a Lourdes, il velo per il rispetto alle vittime",
+   "url": "https://www.ansa.it/vaticano/notizie/2026/09/27/i-mosaici-di-rupnik-a-lourdes-il-velo-per-il-rispetto-alle-vittime_bf62b968-0a96-4d7f-986d-4b2c4d2a411f.html"
+  },
   {
    "data": "2026-09-27T19:33:02+00:00",
    "fonte": "ADNKRONOS",
@@ -17,10 +125,22 @@
    "url": "https://www.adnkronos.com/sport/mondiali-ciclismo-mcnulty-vince-oro-stati-uniti-ciccone-podio_3qTRF2VgxdLsnK4V1WRRIk"
   },
   {
-   "data": "2026-09-27T19:22:03+00:00",
+   "data": "2026-09-27T19:22:00+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Reggio Emilia, aggredisce donna con cacciavite e investe due persone: fermato 26enne",
    "url": "https://www.adnkronos.com/cronaca/reggio-emilia-aggredisce-donna-cacciavite-investe-due-persone_9eMYzjhaCQoQ7rLAMkfu8"
+  },
+  {
+   "data": "2026-09-27T19:17:37+00:00",
+   "fonte": "ANSA",
+   "titolo": "A Napoli il trionfo di Luna Rossa, ora l'America's Cup non è più un sogno",
+   "url": "https://www.ansa.it/sito/notizie/sport/speciali/coppa-america-2027/2026/09/27/a-napoli-il-trionfo-di-luna-rossa-ora-lamericas-cup-non-e-piu-un-sogno_feb106a9-89db-43bb-9816-acbbbe5f584a.html"
+  },
+  {
+   "data": "2026-09-27T19:17:23+00:00",
+   "fonte": "ANSA",
+   "titolo": "Ucciso il terrorista che rapì Noa, ostaggio simbolo del 7 ottobre",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/27/ucciso-il-terrorista-che-rapi-noa-ostaggio-simbolo-del-7-ottobre_26ba9de2-4d50-4f51-8b44-e0c0e9bfe272.html"
   },
   {
    "data": "2026-09-27T19:10:29+00:00",
@@ -29,34 +149,16 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/27/i-repubblicani-tremano-per-il-voto-vacillano-i-collegi-sicuri_d4d72633-ffb8-4c8f-a407-4d705d991d4a.html"
   },
   {
-   "data": "2026-09-27T19:10:02+00:00",
-   "fonte": "ANSA",
-   "titolo": "Aggredisce una donna e investe due persone a Reggio Emilia, arrestato",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/27/aggredisce-una-donna-e-investe-due-persone-a-reggio-emilia-arrestato_eae1d70a-f8b9-4cb6-a57f-243f9791ab74.html"
-  },
-  {
    "data": "2026-09-27T18:58:19+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "#AccadeOggi",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/27/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
   },
   {
-   "data": "2026-09-27T18:54:17+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il Papa alle vittime di abusi: 'Il mio impegno perché non si ripeta'",
-   "url": "https://www.ansa.it/vaticano/notizie/2026/09/27/il-papa-alle-vittime-di-abusi-il-mio-impegno-perche-non-si-ripeta_5764dd52-00c0-41b4-9e1f-d03516069f0c.html"
-  },
-  {
-   "data": "2026-09-27T18:50:26+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ip segue Eni sui prezzi dei carburanti. Meloni assicura un sostegno alle famiglie",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/27/ip-segue-eni-sui-prezzi-dei-carburanti.-meloni-assicura-un-sostegno-alle_bfbacf1c-8ee9-45a5-b566-fa815a21f0da.html"
-  },
-  {
-   "data": "2026-09-27T18:47:57+00:00",
-   "fonte": "ANSA",
-   "titolo": "Nations League: Italia già a un bivio in Turchia, Mancini: 'Troppa agitazione, tranquilli'",
-   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/27/nations-league-mancini-divide-il-gruppo-10-azzurri-non-partono-per-la-turchia_da450839-4940-4c84-b2d6-30c73abdcb79.html"
+   "data": "2026-09-27T18:51:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Caro carburanti, anche IP mette un tetto ai prezzi dopo Eni. Meloni: \"Segnale importante\"",
+   "url": "https://www.adnkronos.com/economia/caro-carburanti-benzina-diesel-prezzo-ip-eni-sconto_5f2YZKiYG82s1Mnw2e30LO"
   },
   {
    "data": "2026-09-27T18:39:09+00:00",
@@ -87,108 +189,6 @@
    "fonte": "ANSA",
    "titolo": "La politica riflette su limiti all'Ia, ma Vannacci provoca: 'Grazie della pubblicità'",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/09/27/la-politica-riflette-su-limiti-allia-ma-vannacci-provoca-grazie-della-pubblicita_1e81626d-d863-4375-90cc-73855f9df542.html"
-  },
-  {
-   "data": "2026-09-27T18:14:40+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il 15enne morto folgorato, la madre: 'Non è stata una sfida social'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/27/il-15enne-morto-folgorato-la-madre-non-e-stata-una-sfida-social_3254b03a-e9b1-4c9b-9366-3397c0663d3a.html"
-  },
-  {
-   "data": "2026-09-27T18:11:56+00:00",
-   "fonte": "ANSA",
-   "titolo": "A Napoli il trionfo di Luna Rossa, ora l'America's Cup non è più un sogno",
-   "url": "https://www.ansa.it/sito/notizie/sport/speciali/coppa-america-2027/2026/09/27/a-napoli-il-trionfo-di-luna-rossa-ora-lamericas-cup-non-e-piu-un-sogno_feb106a9-89db-43bb-9816-acbbbe5f584a.html"
-  },
-  {
-   "data": "2026-09-27T18:10:23+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Ucciso e fatto a pezzi a Torino, restano in carcere i tre accusati",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/27/ucciso-e-fatto-a-pezzi-a-torino-restano-in-carcere-i-tre-accusati_915cdf9d-9adf-4f09-a730-61e6269ba903.html"
-  },
-  {
-   "data": "2026-09-27T18:06:33+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "'Da giorni sotto l'effetto di droghe: il festino, la lite e l'omicidio'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/omicidio-di-torino-la-madre-del-fermato-piangeva-era-sconvolto-_dfe8e53a-0135-4ecc-828a-3bdb360f920c.html"
-  },
-  {
-   "data": "2026-09-27T18:04:51+00:00",
-   "fonte": "ANSA",
-   "titolo": "Picchiata, torturata e quasi annegata, arrestato un 38enne",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/27/picchiata-torturata-e-quasi-annegata-arrestato-un-38enne_643b5a66-5c1e-48eb-937b-c01309788196.html"
-  },
-  {
-   "data": "2026-09-27T18:01:51+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Zverev, Agassi lo prende in giro: \"Ora con due Slam smetterai di lamentarti\"",
-   "url": "https://www.adnkronos.com/sport/agassi-zverev-laver-cup_2u0Cc1nxv9i5gzCrH1SpXW"
-  },
-  {
-   "data": "2026-09-27T17:58:33+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Power bank prende fuoco su volo di Lufthansa: volo Francoforte-Lisbona dirottato a Lione",
-   "url": "https://www.adnkronos.com/internazionale/esteri/aereo-lufthansa-dirottato-incendio-power-bank_YniAzRphG2WeqKdbYHkJu"
-  },
-  {
-   "data": "2026-09-27T17:57:37+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ucciso il terrorista che rapì Noa, ostaggio simbolo del 7 ottobre",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/27/ucciso-il-terrorista-che-rapi-noa-ostaggio-simbolo-del-7-ottobre_26ba9de2-4d50-4f51-8b44-e0c0e9bfe272.html"
-  },
-  {
-   "data": "2026-09-27T17:55:10+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Investe bimbo di 5 anni e fugge, fermata la ex del padre",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/27/investe-bimbo-di-5-anni-e-fugge-fermata-la-ex-del-padre_cf769303-383d-40d2-8cf8-32a267410ba0.html"
-  },
-  {
-   "data": "2026-09-27T17:53:13+00:00",
-   "fonte": "ANSA",
-   "titolo": "A Madrid tornano gli 'indignados', lotta contro gli sfratti",
-   "url": "https://www.ansa.it/sito/notizie/mondo/europa/2026/09/27/a-madrid-tornano-gli-indignados-lotta-contro-gli-sfratti-_91293b9c-2dae-4b6c-a653-859e5c91dbbf.html"
-  },
-  {
-   "data": "2026-09-27T17:47:36+00:00",
-   "fonte": "ANSA",
-   "titolo": "L'allarme sull'IA: 'Sono decine di migliaia gli incidenti'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/27/axios-indagine-openai-e-anthropic-su-decine-di-migliaia-di-incidenti-di-sicurezza_c3aef7f9-3ae8-43b9-a6e9-df5f262707e9.html"
-  },
-  {
-   "data": "2026-09-27T17:47:29+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Parma, Cuesta non è più l'allenatore: tutti i nomi per la panchina",
-   "url": "https://www.adnkronos.com/sport/cuesta-parma-allenatore-chi-gilardino-pioli-tudor-nomi_6SmfZUwy9TDB2VScGqPlyB"
-  },
-  {
-   "data": "2026-09-27T17:40:45+00:00",
-   "fonte": "ANSA",
-   "titolo": "Marcia degli unionisti, alta tensione in Irlanda del Nord",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/27/-marcia-degli-unionisti-alta-tensione-in-irlanda-del-nord_a2342b93-1e1f-4eb6-825b-bc2d5a95afbd.html"
-  },
-  {
-   "data": "2026-09-27T17:40:06+00:00",
-   "fonte": "ANSA",
-   "titolo": "Allarme terrorismo in una base Raf usata da bombardieri Usa contro l'Iran",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/27/allarme-terrorismo-in-una-base-raf-usata-da-bombardieri-usa-contro-liran_91d9e309-9fb5-4940-99e1-9370a923d619.html"
-  },
-  {
-   "data": "2026-09-27T17:37:37+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Associazioni e comitati a Mattarella 'non firmi il decreto sulla scuola'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/27/associazioni-e-comitati-a-mattarella-non-firmi-il-decreto-sulla-scuola_45a541f2-86c0-4842-87ea-2c8fc8eeb299.html"
-  },
-  {
-   "data": "2026-09-27T17:34:01+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Corre una maratona... con le Crocs, la follia dell'atleta russo a Berlino",
-   "url": "https://www.adnkronos.com/sport/maratona-berlino-crocs-atleta-russo_3t3zdI2sfB6mJRlNLV64KQ"
-  },
-  {
-   "data": "2026-09-27T17:26:18+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Scontro tra moto, morti due centauri in Salento",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/27/scontro-tra-moto-morti-due-centauri-in-salento_2925a676-5991-4d90-9ea7-a7149e7e139c.html"
   }
  ]
 }
