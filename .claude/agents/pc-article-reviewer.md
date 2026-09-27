@@ -193,6 +193,18 @@ Agent({
 
 **Esecuzione minima senza Agent tool**: per ogni dato, apri tu la fonte primaria con WebFetch/Firecrawl e compila la tabella affermazione → fonte → verdetto descritta in `.claude/agents/pc-fact-checker.md`. Niente fonte, niente dato.
 
+### 13. 🔴 GATE DEL CALENDARIO — data di uscita coerente
+
+**Su ogni articolo con `date` futura** (programmato) e su ogni articolo in cui è cambiata una data, un termine o una scadenza, esegui:
+
+```bash
+python3 scripts/check-data-uscita.py content/comunicazioni/<file>.md
+```
+
+Deve rispondere `OK`. Se segnala un problema, invoca `pc-calendario-editoriale` (sposta la data di uscita vicino al fatto o riscrive l'attacco al futuro). Oltre allo script, rileggi tu «oggi», «domani», «è in corso», «da lunedì» e i testi social: devono essere veri **il giorno in cui l'articolo esce**, non il giorno in cui lo scrivi.
+
+**Perché esiste (28 settembre 2026)**: «15 ottobre: si chiude la stagione di grave pericolosità AIB» è uscito il 28 settembre. Un audit aveva corretto il termine dentro l'articolo (da 30 settembre a 15 ottobre) senza spostare la data di uscita, e il sito ha detto ai cittadini che i divieti antincendio finivano diciassette giorni prima del vero.
+
 ## Anti-pattern editoriali che riconosci da lontano
 
 - **"Si comunica che..."** in apertura: nominalizzazione tipica del burocratese. Sostituisci con apertura attiva ("La protezione civile interviene...", "Da lunedì 6 maggio...").
