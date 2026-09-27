@@ -5,11 +5,41 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-26T22:07:03+00:00",
+  "generato": "2026-09-27T00:37:51+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-26T22:25:56+00:00",
+   "fonte": "ANSA",
+   "titolo": "Confessione choc di Roberto Carlos, perso il 99% di quanto guadagnato con il calcio",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/26/confessione-choc-di-roberto-carlos-perso-il-99-di-quanto-guadagnato-con-il-calcio_82648871-f6fd-4a12-ad5a-f6695eea85bf.html"
+  },
+  {
+   "data": "2026-09-26T22:21:27+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "\"I geni non sono destino\", essere attivi e ridurre cibi ultraprocessati taglia rischio diabete",
+   "url": "https://www.adnkronos.com/cronaca/geni-cosa-dice-studio-rischio-diabete_3wvq0gjMMUmZiVGs6FstOE"
+  },
+  {
+   "data": "2026-09-26T22:16:51+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Trump: \"Accordo Ucraina-Russia possibile presto\". Zelensky: \"Putin non si ferma\". Lavrov: \"Europa si prepara alla guerra\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-trump-accordo-putin-zelensky_6e3KZROqhkPYMxfB4Pcxte"
+  },
+  {
+   "data": "2026-09-26T22:07:54+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Usa, tempesta flagella nord-est Paese: voli cancellati, blackout e allerta inondazioni",
+   "url": "https://www.adnkronos.com/internazionale/esteri/usa-tempesta-stati-uniti-voli-cancellati-rischio-b_2ngSpW7LOa3qyXNGfT2hN6"
+  },
+  {
+   "data": "2026-09-26T21:45:41+00:00",
+   "fonte": "ANSA",
+   "titolo": "Papa Leone star sugli Champs-Elysees, in 800mila alla messa. Ora a Lourdes",
+   "url": "https://www.ansa.it/vaticano/notizie/2026/09/26/papa-leone-star-sugli-champs-elysees-in-800mila-alla-messa.-ora_902d673e-03d3-4ce4-a952-2a96283b0241.html"
+  },
   {
    "data": "2026-09-26T20:52:16+00:00",
    "fonte": "ANSA",
@@ -57,12 +87,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Cenere lavica dell'Etna, altro stop e disagi all'aeroporto di Catania",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/forte-temporale-e-cenere-lavica-delletna-disagi-allaeroporto-di-catania_fe7f6622-6cd5-44e2-b57c-01f7d28c8121.html"
-  },
-  {
-   "data": "2026-09-26T19:25:18+00:00",
-   "fonte": "ANSA",
-   "titolo": "Papa Leone star sugli Champs-Elysees, in 800mila alla messa. Ora a Lourdes",
-   "url": "https://www.ansa.it/vaticano/notizie/2026/09/26/papa-leone-star-sugli-champs-elysees-in-800mila-alla-messa.-ora_902d673e-03d3-4ce4-a952-2a96283b0241.html"
   },
   {
    "data": "2026-09-26T19:22:44+00:00",
@@ -165,30 +189,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "World Contraception Day, Gedeon Richter Italia lancia patto sulla contraccezione",
    "url": "https://www.adnkronos.com/salute/world-contraception-day-gedeon-richter-italia-lancia-patto-sulla-contraccezione_3ira2Mn3o5udGERhPGEZc0"
-  },
-  {
-   "data": "2026-09-26T17:45:32+00:00",
-   "fonte": "ANSA",
-   "titolo": "Numeri e coperture finanziarie, si lavora al decreto scuola. Proteste in tutta Italia",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/26/numeri-e-coperture-finanziarie-si-lavora-al-decreto-scuola.-proteste-in-tutta-italia_456e30f2-ddbf-4943-9623-cdeddc706594.html"
-  },
-  {
-   "data": "2026-09-26T17:39:38+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Frana a Castellammare, liberata galleria ma resta la paura",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/frana-a-castellammare-liberata-galleria-ma-resta-la-paura_e99ad2b7-95e6-4fd5-bfe7-b4bd093bac60.html"
-  },
-  {
-   "data": "2026-09-26T17:39:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Torino, uomo ucciso e fatto a pezzi. Il 26enne accusato dell'omicidio: \"Eravamo sotto effetto di droghe, volevamo buttarlo nel fiume\"",
-   "url": "https://www.adnkronos.com/cronaca/delitto-torino-39enne-fatto-a-pezzi-droga-alcol-oggi_2Yd5cf4747wYdAIBuZr0Jv"
-  },
-  {
-   "data": "2026-09-26T16:59:03+00:00",
-   "fonte": "ANSA",
-   "titolo": "La stravaganza siciliana di Dolce e Gabbana / LA SFILATA",
-   "url": "https://www.ansa.it/canale_lifestyle/notizie/moda/2026/09/26/la-stravaganza-siciliana-di-dolce-e-gabbana-_02febc60-2764-4fff-b7c6-66ec2a78df9c.html"
   }
  ]
 }
