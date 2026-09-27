@@ -3,7 +3,7 @@ _[Indice manuale](README.md)_
 # Parte 19 — Agenti specializzati Claude Code (maggio 2026)
 
 A maggio 2026 sono stati installati nel repo **agenti specializzati**
-in `.claude/agents/` (**sedici a maggio 2026, trentaquattro dal 6 settembre 2026**). Sono profili professionali
+in `.claude/agents/` (**sedici a maggio 2026, trentaquattro dal 6 settembre 2026, trentacinque dal 28 settembre 2026**). Sono profili professionali
 virtuali con cui Claude Code ti aiuta nei compiti ricorrenti del Gruppo,
 ognuno con un'expertise mirata. La progressione:
 
@@ -13,6 +13,7 @@ ognuno con un'expertise mirata. La progressione:
 - **1 agent aggiunto ad agosto 2026**: `pc-revisore-linguistico` (gate linguistico obbligato: script deterministici + lettura sintattica per articoli mancanti, accordi e reggenze — nasce il 19/08/2026 dopo che «L'Italia ha rete ben strutturata», «nella immagine» e «superficiale.Il» erano andati live superando tutti i controlli).
 - **1 agent aggiunto a maggio 2026**: `pc-correttore-bozze` (correttore di bozze deterministico — caccia refusi e errori ortografici/grammaticali su QUALSIASI contenuto, incluse le schede statiche HTML, il punto cieco da cui era passato "cuoperti"→"copriti").
 - **17 agent aggiunti il 6 settembre 2026 — il sistema di affidabilità interno.** Un audit esterno aveva trovato 24 rilievi (11 P1) tutti fondati con i gate del sito tutti verdi: fatti sbagliati su Rigopiano, istruzioni per bambini da correggere, rubriche che valutavano la paura, esercizi che spacciavano ipotesi per legge, dati diversi dal dataset, note perse in stampa, pacchetti non paritari, ZIP inutilizzabili offline, privacy e accessibilità da riallineare, favicon vuota, ancore rotte. L'istruzione dell'utente: *«queste cose non devono mai più capitare: non devo più rivolgermi ad altre intelligenze artificiali per fare un audit»*. Da qui i gate dei **fatti** (`pc-fact-checker`), dei **materiali scolastici** (`pc-didattica-reviewer`), della **scienza** (`pc-revisore-scientifico`), della **cronaca** (`pc-desk-giornalistico`), della **conformità legale**, dell'**integrità tecnica**, della **coerenza trasversale**, del **codice**, delle **automazioni**, della **sicurezza**, delle **traduzioni**, dei **dati e feed**, dell'**esercitazione di emergenza**, della **verifica visiva**, dell'**usabilità**, della **documentazione**, e il direttore dell'**audit interno mensile** (`pc-audit-completo`). Sezioni 18-34 di questa Parte.
+- **1 agent aggiunto il 28 settembre 2026**: `pc-calendario-editoriale` (gate del calendario: la data di uscita di un articolo programmato deve essere coerente con ciò che annuncia — nasce dopo che «15 ottobre: si chiude la stagione AIB» è uscito il 28 settembre, perché un audit aveva corretto la data nel testo senza spostare la data di uscita). Sezione 35.
 
 **La parte importante:** non devi ricordare nessun nome tecnico. **Scrivi a
 Claude in italiano normale**, dicendo cosa vuoi fare, e Claude attiva da solo
@@ -547,6 +548,18 @@ push) e dall'audit settimanale automatico `audit-sito.yml`.
 
 ---
 
+### 35. Caporedattore del calendario
+
+**Quando lo attivi**: su ogni articolo programmato nuovo o modificato, ogni volta che correggi una data o un termine dentro un articolo in coda, quando il workflow `controllo-data-uscita.yml` apre la sua issue, o *"cosa esce questa settimana? è tutto a posto?"*.
+
+**Cosa fa**: controlla che il giorno di uscita sia coerente con ciò che l'articolo annuncia. Un titolo come «15 ottobre: si chiude la stagione AIB» deve uscire il 15 ottobre, oppure essere scritto al futuro («si chiuderà», «fino al»). Esegue `scripts/check-data-uscita.py`, rilegge espressioni come «oggi», «domani», «è in corso», i testi social e il campo `scadenza:`, e corregge spostando la data di uscita (con rinomina del file, dei link, della cover e del QR) o riscrivendo l'attacco.
+
+**Perché esiste (28 settembre 2026)**: un audit aveva corretto il termine della stagione AIB da 30 settembre a 15 ottobre dentro un articolo programmato per il 28 settembre, ma aveva lasciato la data di uscita. L'articolo è uscito a mezzanotte dicendo che i divieti antincendio finivano, diciassette giorni prima del vero. Tre controlli ora lo impediscono: la PR si blocca (`validate-pr.yml`), ogni sera alle 19:23 un workflow guarda i dieci giorni successivi (`controllo-data-uscita.yml`), e il gate dell'articolo invoca questo agente.
+
+**Identità tecnica**: `pc-calendario-editoriale`.
+
+---
+
 ## 19.2 Esempi di workflow tipici
 
 ### Pubblicare un articolo nuovo (sequenza ideale)
@@ -659,6 +672,7 @@ problema"* — e Claude corregge.
 | `.claude/agents/pc-usabilita.md` | Usabilità e IA | 14 anni UX researcher e information architect, kit Designers Italia |
 | `.claude/agents/pc-documentazione.md` | Documentazione | 13 anni technical writer e knowledge base docs-as-code |
 | `.claude/agents/pc-audit-completo.md` | Direttore audit interno | 20 anni audit di sistemi pubblici (ISO 19011/27001/22301) e verifiche accessibilità |
+| `.claude/agents/pc-calendario-editoriale.md` | Caporedattore del calendario | anni al desk agenda di un quotidiano regionale: ogni titolo riletto accanto alla data in testata |
 
 I background sono "personae" usati per ancorare le valutazioni a standard
 verificabili (linee guida AGID, ISO 22329, WCAG, CWA, ecc.). Non sono persone
