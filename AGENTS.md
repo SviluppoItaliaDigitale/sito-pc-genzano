@@ -446,7 +446,7 @@ python3 scripts/fix-ordering-articoli-stesso-giorno.py
 
 ## 7. Agenti specializzati esistenti (riferimento)
 
-In `.claude/agents/` ci sono **34 agenti custom** ottimizzati per Claude Code (i 17 aggiunti il 6 settembre 2026, dopo un audit esterno, formano il sistema di affidabilità interno — fatti, materiali scolastici, scienza, cronaca, conformità legale, integrità tecnica, coerenza trasversale, codice, automazioni, sicurezza, traduzioni, dati e feed, esercitazione di emergenza, verifica visiva, usabilità, documentazione, audit interno mensile). **ChatGPT/Codex ha il suo sistema di sub-agenti diverso** e non li può richiamare direttamente, ma può **emulare il loro lavoro** seguendo le specifiche descritte. Le specifiche complete (system prompt + workflow + esempi) sono in `manuale/parte-19-agenti-specializzati.md`.
+In `.claude/agents/` ci sono **35 agenti custom** (dal 28/09/2026 anche `pc-calendario-editoriale`, il gate della data di uscita degli articoli programmati) ottimizzati per Claude Code (i 17 aggiunti il 6 settembre 2026, dopo un audit esterno, formano il sistema di affidabilità interno — fatti, materiali scolastici, scienza, cronaca, conformità legale, integrità tecnica, coerenza trasversale, codice, automazioni, sicurezza, traduzioni, dati e feed, esercitazione di emergenza, verifica visiva, usabilità, documentazione, audit interno mensile). **ChatGPT/Codex ha il suo sistema di sub-agenti diverso** e non li può richiamare direttamente, ma può **emulare il loro lavoro** seguendo le specifiche descritte. Le specifiche complete (system prompt + workflow + esempi) sono in `manuale/parte-19-agenti-specializzati.md`.
 
 | Agent | Trigger naturali | Cosa fa (sintesi) |
 |---|---|---|

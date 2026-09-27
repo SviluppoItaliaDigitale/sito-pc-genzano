@@ -36,6 +36,7 @@ python3 scripts/check-refusi.py                            # sweep completo
 python3 scripts/audit-grammatica-italiana.py
 python3 scripts/check-freshness.py
 python3 scripts/check-articoli-programmati.py
+python3 scripts/check-data-uscita.py --giorni 30   # data di uscita coerente con la data annunciata
 python3 scripts/check-fonti-cruscotto.py
 python3 scripts/genera-chrome-menu.py --check
 python3 scripts/genera-pacchetti-schede.py && git diff --quiet -- static/formazione/schede-stampabili/pacchetti/ || echo "PACCHETTI STANTII"
