@@ -5,11 +5,53 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-27T00:37:51+00:00",
+  "generato": "2026-09-27T05:49:50+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-27T05:38:26+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Capello: \"Così nacque il grande Milan di Berlusconi. Quella volta in cui mi chiese di Ronaldo...\"",
+   "url": "https://www.adnkronos.com/sport/fabio-capello-ricorda-silvio-berlusconi-90-anni-milan_3dqOz9cdge2OV9fRZmef9K"
+  },
+  {
+   "data": "2026-09-27T05:35:42+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Domenica In, al via la nuova stagione: da Pausini a Bova, tutti gli ospiti di Mara Venier",
+   "url": "https://www.adnkronos.com/spettacoli/domenica-in-oggi-domenica-mara-venier-ospiti_7mxoZadswqJpDBRrTvqsvG"
+  },
+  {
+   "data": "2026-09-27T05:29:05+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Nations League, oggi Norvegia-Portogallo: orario, probabili formazioni e dove vederla in tv",
+   "url": "https://www.adnkronos.com/sport/oggi-norvegia-portogallo-di-nations-league-formazioni-e-dove-vederal-in-tv_2C7iiIh30SssQPaI0Q8qSI"
+  },
+  {
+   "data": "2026-09-27T05:05:53+00:00",
+   "fonte": "ANSA",
+   "titolo": "Oggi si vota alle suppletive a Reggio, tempesta su Vannacci per la foto fake di Matilde Siracusano",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/26/bufera-per-la-foto-modificata-di-siracusano-rilanciata-da-vannacci_f4bf9e8a-edc2-49a5-b090-6cd8df138b96.html"
+  },
+  {
+   "data": "2026-09-27T04:48:22+00:00",
+   "fonte": "ANSA",
+   "titolo": "La democrazia è viva",
+   "url": "https://www.ansa.it/sito/podcast/la_scelta_del_direttore/2026/09/25/la-democrazia-e-viva_45f289d0-03a0-44da-a5dd-b73a0e147886.html"
+  },
+  {
+   "data": "2026-09-26T22:59:26+00:00",
+   "fonte": "ANSA",
+   "titolo": "'Da giorni sotto l'effetto di droghe: il festino, la lite e l'omicidio'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/omicidio-di-torino-la-madre-del-fermato-piangeva-era-sconvolto-_dfe8e53a-0135-4ecc-828a-3bdb360f920c.html"
+  },
+  {
+   "data": "2026-09-26T22:39:18+00:00",
+   "fonte": "ANSA",
+   "titolo": "Papa Leone star sugli Champs-Elysees. Poi a Lourdes alla Grotta delle apparizioni",
+   "url": "https://www.ansa.it/vaticano/notizie/2026/09/27/papa-leone-star-sugli-champs-elysees.-poi-a-lourdes-alla-grotta_902d673e-03d3-4ce4-a952-2a96283b0241.html"
+  },
   {
    "data": "2026-09-26T22:25:56+00:00",
    "fonte": "ANSA",
@@ -33,12 +75,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Usa, tempesta flagella nord-est Paese: voli cancellati, blackout e allerta inondazioni",
    "url": "https://www.adnkronos.com/internazionale/esteri/usa-tempesta-stati-uniti-voli-cancellati-rischio-b_2ngSpW7LOa3qyXNGfT2hN6"
-  },
-  {
-   "data": "2026-09-26T21:45:41+00:00",
-   "fonte": "ANSA",
-   "titolo": "Papa Leone star sugli Champs-Elysees, in 800mila alla messa. Ora a Lourdes",
-   "url": "https://www.ansa.it/vaticano/notizie/2026/09/26/papa-leone-star-sugli-champs-elysees-in-800mila-alla-messa.-ora_902d673e-03d3-4ce4-a952-2a96283b0241.html"
   },
   {
    "data": "2026-09-26T20:52:16+00:00",
@@ -95,12 +131,6 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/la-difesa-di-sempio-attendiamo-di-leggere-le-nuove-prove-della-procura_aacd994f-b23f-460b-8cff-f318a0c10883.html"
   },
   {
-   "data": "2026-09-26T19:12:45+00:00",
-   "fonte": "ANSA",
-   "titolo": "'Da giorni sotto l'effetto di droghe: il festino, la lite e l'omicidio'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/omicidio-di-torino-la-madre-del-fermato-piangeva-era-sconvolto-_dfe8e53a-0135-4ecc-828a-3bdb360f920c.html"
-  },
-  {
    "data": "2026-09-26T19:12:10+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "#AccadeOggi",
@@ -111,12 +141,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "SuperEnalotto, estrazione di oggi 26 settembre 2026: numeri vincenti",
    "url": "https://www.adnkronos.com/cronaca/superenalotto-estrazione-concorso-numeri-vincenti_aBEb9PiUCAmeh5MyNG2vi"
-  },
-  {
-   "data": "2026-09-26T19:09:27+00:00",
-   "fonte": "ANSA",
-   "titolo": "Domani si vota alle suppletive a Reggio, tempesta su Vannacci per la foto fake di Matilde Siracusano",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/26/bufera-per-la-foto-modificata-di-siracusano-rilanciata-da-vannacci_f4bf9e8a-edc2-49a5-b090-6cd8df138b96.html"
   },
   {
    "data": "2026-09-26T19:09:13+00:00",
@@ -165,30 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Lavrov accusa l'Europa ma all'Onu vede il ministro tedesco",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/26/lavrov-accusa-leuropa-ma-allonu-vede-il-ministro-tedesco_7228533a-05e3-42d2-920d-f026fb1f727a.html"
-  },
-  {
-   "data": "2026-09-26T18:15:55+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Prof, 'corsi di italiano li tiene ex alunno di origine indiana'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/prof-corsi-di-italiano-li-tiene-ex-alunno-di-origine-indiana_79702acb-0a89-45ed-a725-071749f48638.html"
-  },
-  {
-   "data": "2026-09-26T18:06:03+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Una donna getta dell'acido al suo avvocato, il legale è in prognosi riservata",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/26/donna-getta-acido-al-suo-avvocato-a-messina-legale-ricoverato_f6ffe7d9-7664-4ed8-9dec-1f7f960942ea.html"
-  },
-  {
-   "data": "2026-09-26T17:53:55+00:00",
-   "fonte": "ANSA",
-   "titolo": "Tajani: 'Magistrati perdonisti, abbiano coscienza'. È scontro con l'Anm",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/26/anm-a-tajani-la-responsabilita-sulla-sicurezza-non-si-scarica-sui-magistrati_2ef91653-9a51-4252-83d2-12153bd223b7.html"
-  },
-  {
-   "data": "2026-09-26T17:53:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "World Contraception Day, Gedeon Richter Italia lancia patto sulla contraccezione",
-   "url": "https://www.adnkronos.com/salute/world-contraception-day-gedeon-richter-italia-lancia-patto-sulla-contraccezione_3ira2Mn3o5udGERhPGEZc0"
   }
  ]
 }
