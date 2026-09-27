@@ -136,7 +136,7 @@ La **logistica** non è visibile ma è essenziale: senza acqua, ricambi, carbura
 
 ## Il secondo tempo della campagna
 
-La campagna AIB durerà ancora fino al **30 settembre 2026** (eventualmente prorogabile). Restano **due mesi e mezzo** di attività. Il sistema è **pronto** ma serve **continuità** di attenzione.
+La campagna AIB durerà ancora fino al **15 ottobre 2026**, come fissato dalla [campagna antincendio boschivo nazionale](/comunicazioni/2026-06-08-campagna-antincendio-boschivo-2026/). Restano **tre mesi** di attività. Il sistema è **pronto** ma serve **continuità** di attenzione.
 
 Come si ripete spesso nelle sale operative regionali, il peggior nemico a metà campagna è la stanchezza. La guardia va tenuta alta fino all'ultimo giorno.
 

@@ -197,6 +197,19 @@ jobs:
           done
           exit $fail
 
+      # 28/09/2026: un articolo programmato per il 28 settembre titolava «15 ottobre:
+      # si chiude la stagione AIB». Il testo era stato corretto, la data di uscita no.
+      # Blocca la PR se titolo, descrizione o primo paragrafo raccontano al presente
+      # una data lontana dal giorno di uscita. Agente: pc-calendario-editoriale.
+      - name: "📅 Data di uscita coerente con la data annunciata"
+        run: |
+          changed=$(git diff --name-only --diff-filter=AM origin/${{ github.base_ref }}...HEAD -- 'content/comunicazioni/*.md' 2>/dev/null || true)
+          if [ -z "$changed" ]; then
+            echo "Nessun articolo modificato"
+            exit 0
+          fi
+          python3 scripts/check-data-uscita.py $changed
+
   italiano:
     name: "Italiano — refusi e grammatica"
     runs-on: ubuntu-latest
