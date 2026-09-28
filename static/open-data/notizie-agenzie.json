@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-28T06:56:30+00:00",
+  "generato": "2026-09-28T15:04:51+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-28T06:50:22+00:00",
+   "data": "2026-09-28T14:54:15+00:00",
    "fonte": "ANSA",
-   "titolo": "La politica riflette su limiti all'Ia, ma Vannacci provoca: 'Grazie della pubblicità'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/27/la-politica-riflette-su-limiti-allia-ma-vannacci-provoca-grazie-della-pubblicita_1e81626d-d863-4375-90cc-73855f9df542.html"
+   "titolo": "Strage di Ustica: la Francia è pronta a collaborare, i pm verso il ritiro dell'archiviazione",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/28/strage-di-ustica-francia-pronta-a-collaborare-i-pm-verso-il-ritiro-archiviazione_e78ac833-95d5-4598-a57a-8a748dacdcd9.html"
   },
   {
-   "data": "2026-09-28T06:39:16+00:00",
-   "fonte": "ANSA",
-   "titolo": "Terzo giorno di stop ai voli all'aeroporto di Catania per l'emissione di cenere dall'Etna",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/28/emissione-cenere-dalletna-terzo-giorno-di-stop-ai-voli-a-catania_bb2cf5f3-101e-4f1c-8e18-e9422cf45fc1.html"
+   "data": "2026-09-28T14:53:02+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Pm, 'Dna su pedali non di Chiara ma dato non finì nel processo Stasi'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/28/pm-dna-su-pedali-non-di-chiara-ma-dato-non-fini-nel-processo-stasi_c0b028a2-a9a8-414c-b6f4-d76a01635f09.html"
   },
   {
-   "data": "2026-09-28T06:35:06+00:00",
-   "fonte": "ANSA",
-   "titolo": "'7 ottobre, 007 Egitto chiamarono Netanyahu dopo due avvisi inascoltati'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/28/media-7-ottobre-007-egitto-chiamarono-netanyahu-dopo-due-avvisi-inascoltati_57b11b8b-1489-4b89-b2da-cfb38c40f22d.html"
+   "data": "2026-09-28T14:52:20+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Ustica: Bonfietti, il governo si è mosso e si vedono i risultati",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/28/ustica-bonfietti-il-governo-si-e-mosso-e-si-vedono-i-risultati_3142bff3-a115-4669-bd8f-0326f5070063.html"
   },
   {
-   "data": "2026-09-28T06:32:11+00:00",
-   "fonte": "ANSA",
-   "titolo": "La morte di Giulio Regeni, oggi la sentenza per gli 007 egiziani",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/28/la-morte-di-giulio-regeni-oggi-la-sentenza-per-gli-007-egiziani_64ef9a1a-bafc-462b-a8c9-eb196acca780.html"
-  },
-  {
-   "data": "2026-09-28T06:25:50+00:00",
-   "fonte": "ANSA",
-   "titolo": "Madonna regina dei Video Music Awards a Los Angeles, Taylor Swift ancora da record",
-   "url": "https://www.ansa.it/sito/notizie/cultura/musica/2026/09/28/madonna-regina-dei-video-music-awards-a-los-angeles-taylor-swift_d5dc99d2-c14d-4929-98bc-d5a5ce5692d7.html"
-  },
-  {
-   "data": "2026-09-28T06:22:42+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Etna, ancora cenere dal vulcano: stop ai voli all'aeroporto Catania",
-   "url": "https://www.adnkronos.com/cronaca/etna-stop-voli-aeroporto-catania-cosa-cambia-oggi-quando-riapre_2IW5XeVEoYYK79MBCT2FCc"
-  },
-  {
-   "data": "2026-09-28T05:59:41+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Irlanda, la protesta contro Israele: niente strette di mano, testa bassa durante inno e lutto al braccio per Gaza",
-   "url": "https://www.adnkronos.com/sport/irlanda-israele-protesta-stretta-mano-testa-bassa-lutto-gaza_49lfs1ELCEjCEIr563mzyi"
-  },
-  {
-   "data": "2026-09-28T05:51:44+00:00",
-   "fonte": "ANSA",
-   "titolo": "PRIME PAGINE | Limiti ai prezzi dei carburanti, dopo Eni anche Ip fissa un tetto",
-   "url": "https://www.ansa.it/sito/podcast/ansa_voice_daily/2026/09/28/prime-pagine-limiti-ai-prezzi-dei-carburanti-dopo-eni-anche-ip-fissa_16a2f98e-54b0-4928-98c5-f61c974191ba.html"
-  },
-  {
-   "data": "2026-09-28T05:40:17+00:00",
+   "data": "2026-09-28T14:51:50+00:00",
    "fonte": "ANSA",
    "titolo": "Bill Gates: 'Gli Usa prendano la guida sulla regolamentazione dell'IA'",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/28/bill-gates-gli-usa-prendano-la-guida-sulla-regolamentazione-dellia_da33d106-fbe2-4c4d-aaba-fc83bb584507.html"
   },
   {
-   "data": "2026-09-28T05:31:57+00:00",
+   "data": "2026-09-28T14:49:30+00:00",
    "fonte": "ANSA",
-   "titolo": "Suppletive Reggio Calabria, seggi aperti alle 7, chiudono alle 15",
+   "titolo": "C'è un nuovo indagato per l'omicidio di Denis Bergamini",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/28/nuovo-indagato-per-omicidio-denis-bergamini-notificato-avviso_991dbd84-1031-4eb5-b25a-15831f0d47fd.html"
+  },
+  {
+   "data": "2026-09-28T14:46:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Elezioni suppletive a Reggio Calabria, Roscioli in testa. Occhiuto esulta sui social: \"Vittoria\"",
+   "url": "https://www.adnkronos.com/politica/elezioni-suppletive-reggio-calabria-risultati-camera-oggi_A2TrbiczVtZOY3a3bzWWK"
+  },
+  {
+   "data": "2026-09-28T14:44:55+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Federica Pellegrini nella bufera, \"arrogante e prepotente\": le critiche dopo 'Physical'",
+   "url": "https://www.adnkronos.com/sport/pellegrini-eliminata-physical-abou-polemica-cosa-e-successo_p3XZtIgH9GshvC06upreO"
+  },
+  {
+   "data": "2026-09-28T14:43:16+00:00",
+   "fonte": "ANSA",
+   "titolo": "Garlasco, chiuse le indagini. 'La scarpa del killer è compatibile con il piede di Sempio'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/28/garlasco-chiuse-le-indagini-su-sempio.-la-scarpa-del-killer-e-compatibile-con-il-piede_e216f5f1-0c02-4fcb-b48b-3e912ccd28dd.html"
+  },
+  {
+   "data": "2026-09-28T14:43:09+00:00",
+   "fonte": "ANSA",
+   "titolo": "Suppletive Reggio Calabria, scrutinio in corso. Roscioli avanti, Roberto Occhiuto esulta su X: 'Vittoria!'",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/09/28/suppletive-reggio-calabria-seggi-aperti-alle-7-chiudono-alle-15_a63e6693-4c61-4c65-82d4-be0b74ae1210.html"
   },
   {
-   "data": "2026-09-28T05:31:00+00:00",
+   "data": "2026-09-28T14:39:07+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Israele, Wsj: \"Egitto avvertì Netanyahu di un imminente attacco prima del 7 ottobre\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/egitto-israele-attacco-7-ottobre-netanyahu_2j2U0nacnoDnT3lpOwraJe"
+   "titolo": "Nations League, l'Italia cerca il riscatto: perché la Turchia diventa un test chiave",
+   "url": "https://www.adnkronos.com/sport/italia-rischio-quarto-posto-in-nations-league_nqT3FYLrMDY5mANmzA5pi"
   },
   {
-   "data": "2026-09-28T05:03:35+00:00",
+   "data": "2026-09-28T14:36:45+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Scioperi ottobre 2026, si apre e si chiude con due 'generali': dalla scuola ai trasporti, tutte le date",
-   "url": "https://www.adnkronos.com/cronaca/scioperi-ottobre-protesta-trasporti-scuola-aerei_6G5971mOYfDofqMFqZzLty"
+   "titolo": "La provocazione di McEnroe: \"I giocatori dovrebbero boicottare gli Slam, solo così avranno più soldi\"",
+   "url": "https://www.adnkronos.com/sport/mcenroe-i-tennisti-dovrebbero-boicottare-i-grandi-slam_4OPqBmUmt7gyki74QLXQEI"
   },
   {
-   "data": "2026-09-28T05:02:00+00:00",
+   "data": "2026-09-28T14:23:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Nations League, oggi Turchia-Italia: orario, probabili formazioni e dove vederla in tv (in chiaro)",
-   "url": "https://www.adnkronos.com/sport/turchia-italia-oggi-nations-league-orario-dove-vederla-tv-probabili-formazioni_57ZvrPFKpbSOnooimxJO64"
+   "titolo": "Francesca Pascale e i compleanni con Berlusconi: \"La prima festa insieme per i 70. Manca il suo carisma, sarebbe bello Arcore luogo della memoria\"",
+   "url": "https://www.adnkronos.com/politica/francesca-pascale-compleanni-berlusconi-intervista-ricordo-silvio-90-anni_7aDHIVNVl4t7fzFkhY37zC"
   },
   {
-   "data": "2026-09-28T05:01:13+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Caro carburanti, scatta il tetto ai prezzi: Eni e IP abbassano benzina e diesel",
-   "url": "https://www.adnkronos.com/cronaca/caro-benzina-diesel-prezzi-carburanti-eni-ip_1x8AwFfZesdpjBoyFPkn5q"
-  },
-  {
-   "data": "2026-09-27T22:23:07+00:00",
-   "fonte": "ANSA",
-   "titolo": "Casa Milan, vandalizzato il murales dedicato a Franco Baresi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/28/casa-milan-vandalizzato-il-murales-dedicato-a-franco-baresi_897edd2a-71e9-4916-86ce-ac35fdddc3f4.html"
-  },
-  {
-   "data": "2026-09-27T22:10:45+00:00",
-   "fonte": "ANSA",
-   "titolo": "Nations League: Italia già a un bivio in Turchia, Mancini: 'Troppa agitazione, tranquilli'",
-   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/27/nations-league-mancini-divide-il-gruppo-10-azzurri-non-partono-per-la-turchia_da450839-4940-4c84-b2d6-30c73abdcb79.html"
-  },
-  {
-   "data": "2026-09-27T21:59:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Baresi, a Milano vandalizzato il murales per il capitano del Milan",
-   "url": "https://www.adnkronos.com/sport/baresi-milan-murales-milano-foto_1QOotRJYMshMdbRlUu0O9i"
-  },
-  {
-   "data": "2026-09-27T21:58:44+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ip segue Eni sui prezzi dei carburanti. Meloni assicura un sostegno alle famiglie",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/27/ip-segue-eni-sui-prezzi-dei-carburanti.-meloni-assicura-un-sostegno-alle_bfbacf1c-8ee9-45a5-b566-fa815a21f0da.html"
-  },
-  {
-   "data": "2026-09-27T21:26:45+00:00",
-   "fonte": "ANSA",
-   "titolo": "Bloccò la strada Milano-Meda per un video, espulso il trapper Bratan",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/27/blocco-la-strada-milano-meda-per-un-video-espulso-il-trapper-bratan_9fdec40b-636c-4b68-882c-c70eeb849b8c.html"
-  },
-  {
-   "data": "2026-09-27T21:13:27+00:00",
-   "fonte": "ANSA",
-   "titolo": "Aggredisce una donna e investe due persone a Reggio Emilia, arrestato",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/27/aggredisce-una-donna-e-investe-due-persone-a-reggio-emilia-arrestato_eae1d70a-f8b9-4cb6-a57f-243f9791ab74.html"
-  },
-  {
-   "data": "2026-09-27T21:12:28+00:00",
+   "data": "2026-09-28T14:20:47+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Il sindaco di Reggio Emilia, rabbia e costernazione per l'aggressione al distributore",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/27/il-sindaco-di-reggio-emilia-rabbia-e-costernazione-per-laggressione-al-distributore_00ac7aa3-4238-488e-8b86-d99c9a465917.html"
+   "titolo": "Spara e uccide ladro: domani la perizia balistica a Baldissero d'Alba",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/28/spara-e-uccide-ladro-domani-la-perizia-balistica-a-baldissero-dalba_d5576d75-8bb3-480c-bc21-007abd7ebf7e.html"
   },
   {
-   "data": "2026-09-27T21:11:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Trump, cena privata alla Casa Bianca con il capo di Anthropic Amodei: disgelo sull’AI?",
-   "url": "https://www.adnkronos.com/internazionale/esteri/trumo-ai-cena-amodei-anthropic_ZvDmo3FUnVPQwJH7PWfeY"
-  },
-  {
-   "data": "2026-09-27T21:05:22+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Carburanti, Cgia accoglie sconto Eni ma avverte: \"Rincari record, intervenga la Ue\"",
-   "url": "https://www.adnkronos.com/economia/sconto-eni-carburanti-come-cambia-prezzo-benzina_1AGotN4WG9wXKgZHxMPAPS"
-  },
-  {
-   "data": "2026-09-27T21:05:17+00:00",
-   "fonte": "ANSA",
-   "titolo": "Allarme terrorismo in una base Raf usata da bombardieri Usa contro l'Iran",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/27/allarme-terrorismo-in-una-base-raf-usata-da-bombardieri-usa-contro-liran_91d9e309-9fb5-4940-99e1-9370a923d619.html"
-  },
-  {
-   "data": "2026-09-27T21:04:15+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Allarme terrorismo a base RAF Fairford, situazione sotto controllo: cinque arresti e indagini sul possibile ruolo dell’Iran",
-   "url": "https://www.adnkronos.com/internazionale/esteri/allarme-terrorismo-base-usa-fairford-cosa-sappiamo_17JRLwkx0cRc13PAAckmSg"
-  },
-  {
-   "data": "2026-09-27T20:51:02+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il Whitney celebra il padre dei fumetti pop, retrospettiva su Roy Lichtenstein",
-   "url": "https://www.ansa.it/sito/notizie/cultura/arte/2026/09/27/il-whitney-celebra-il-padre-dei-fumetti-pop-retrospettiva-su-roy-lichtenstein_07dc6b85-7498-473d-9b76-2029dd210177.html"
-  },
-  {
-   "data": "2026-09-27T19:51:06+00:00",
+   "data": "2026-09-28T14:19:45+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Aggredisce donna e investe due persone a Reggio Emilia, arrestato",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/27/aggredisce-donna-e-investe-due-persone-a-reggio-emilia-arrestato_07914102-6d3d-4604-b146-b93462f821c5.html"
+   "titolo": "Lanciato Starship, primo test in orbita",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/28/lanciato-starship-primo-test-in-orbita_74875f1e-73d2-4d30-a6ff-97ca622cb953.html"
   },
   {
-   "data": "2026-09-27T19:45:45+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Il Papa alle vittime di abusi, 'il mio impegno perché non si ripeta'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/27/il-papa-alle-vittime-di-abusi-il-mio-impegno-perche-non-si-ripeta_beb44212-d9c7-4ab4-babf-bbe48796883c.html"
-  },
-  {
-   "data": "2026-09-27T19:38:54+00:00",
-   "fonte": "ANSA",
-   "titolo": "I mosaici di Rupnik a Lourdes, il velo per il rispetto alle vittime",
-   "url": "https://www.ansa.it/vaticano/notizie/2026/09/27/i-mosaici-di-rupnik-a-lourdes-il-velo-per-il-rispetto-alle-vittime_bf62b968-0a96-4d7f-986d-4b2c4d2a411f.html"
-  },
-  {
-   "data": "2026-09-27T19:33:02+00:00",
+   "data": "2026-09-28T14:17:59+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Ciclismo, McNulty vince i Mondiali e regala l'oro agli Stati Uniti",
-   "url": "https://www.adnkronos.com/sport/mondiali-ciclismo-mcnulty-vince-oro-stati-uniti-ciccone-podio_3qTRF2VgxdLsnK4V1WRRIk"
+   "titolo": "Torino, investe il figlio dell'amante dell'ex. Il legale: \"La donna è traumatizzata e sotto choc, non voleva\"",
+   "url": "https://www.adnkronos.com/cronaca/bambino-figlio-amante-ex-investito-donna-difesa-legale_5JQD6vv93XL0XKJu1Yg3OP"
+  },
+  {
+   "data": "2026-09-28T14:16:57+00:00",
+   "fonte": "ANSA",
+   "titolo": "Carburanti, scatta il tetto nei distributori Eni e Ip, gli autotrasportatori siciliani annunciano lo stop",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/28/carburanti-scatta-il-tetto-nei-distributori-eni_acc62c40-30c5-43ee-b52a-9061d52e8aaf.html"
+  },
+  {
+   "data": "2026-09-28T14:15:07+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Pm Pavia, da nuove analisi scarpa killer compatibile con piede Sempio",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/28/pm-pavia-da-nuove-analisi-scarpa-killer-compatibile-con-piede-sempio_dd2bb1e4-da18-4bd7-a1bc-66df7c95fa9e.html"
+  },
+  {
+   "data": "2026-09-28T14:14:18+00:00",
+   "fonte": "ANSA",
+   "titolo": "Lagarde: 'I tassi a lungo termine freneranno la crescita'",
+   "url": "https://www.ansa.it/sito/notizie/economia/aziende/2026/09/28/lagarde-i-tassi-a-lungo-termine-freneranno-la-crescita_aee0adda-4612-4ff9-8754-7a2781edb6f9.html"
+  },
+  {
+   "data": "2026-09-28T14:03:38+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Giungla golf car a Roma, l'assessore Patanè: \"Solo il 10% dei mezzi è autorizzato, serve una regolamentazione regionale\"",
+   "url": "https://www.adnkronos.com/cronaca/giungla-golf-car-patane-roma-autorizzati-10-mezzi-regione-regolamentazione_22Xw2iJKCe27VoQ2jGV12"
+  },
+  {
+   "data": "2026-09-28T14:00:34+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ascolti record per il film su 'Carlo Acutis', Clerici elogia Canale 5: \"I successi bisogna riconoscerli\"",
+   "url": "https://www.adnkronos.com/spettacoli/clerici-e-sempre-mezzogiorno-carlo-acutis-oggi-film-canale-5_3QWPscg6nJCJF0Lm3RHFxw"
+  },
+  {
+   "data": "2026-09-28T13:54:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ustica, Francia pronta a collaborare: procura di Roma verso ritiro richiesta archiviazione",
+   "url": "https://www.adnkronos.com/cronaca/strage-ustica-documenti-francia_4AyWT1hHXwuntg1Ug7L80I"
+  },
+  {
+   "data": "2026-09-28T13:53:02+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Valditara, sì ai compiti sul diario, stop a più verifiche nello stesso giorno",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/28/valditara-si-ai-compiti-sul-diario-stop-a-piu-verifiche-nello-stesso-giorno_46294e1f-9eca-416d-bfd4-79c8a6c830df.html"
+  },
+  {
+   "data": "2026-09-28T13:52:25+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Bimbo investito a Torino, legale arrestata 'non è stato un gesto voluto'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/28/bimbo-investito-a-torino-legale-arrestata-non-e-stato-un-gesto-voluto_e9a3acaa-816f-4fcc-8618-d18afadc3113.html"
+  },
+  {
+   "data": "2026-09-28T13:41:06+00:00",
+   "fonte": "ANSA",
+   "titolo": "Madonna regina dei Video Music Awards a Los Angeles, Taylor Swift ancora da record",
+   "url": "https://www.ansa.it/sito/notizie/cultura/musica/2026/09/28/madonna-regina-dei-video-music-awards-a-los-angeles-taylor-swift_d5dc99d2-c14d-4929-98bc-d5a5ce5692d7.html"
+  },
+  {
+   "data": "2026-09-28T13:39:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ddl antisemitismo, appello di Segre ai partiti: \"Chiedo uno sforzo unitario per il paese\"",
+   "url": "https://www.adnkronos.com/politica/segre-legge-antisemitismo-appello-partiti_35uScbAxG73ZoAYBgqMbwe"
+  },
+  {
+   "data": "2026-09-28T13:38:56+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Eva Henger, la malattia della madre: \"È stato difficile, una volta è sparita per tre giorni\"",
+   "url": "https://www.adnkronos.com/spettacoli/eva-henger-la-volta-buona-madre-malattia-oggi_3Gr3OlDWiVu716grGGXiy"
+  },
+  {
+   "data": "2026-09-28T13:38:51+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Investe bimbo di 5 anni e fugge, fermata la ex del padre",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/27/investe-bimbo-di-5-anni-e-fugge-fermata-la-ex-del-padre_6ce9ae43-9339-438c-aa51-cc5c65412bbe.html"
+  },
+  {
+   "data": "2026-09-28T13:38:29+00:00",
+   "fonte": "ANSA",
+   "titolo": "Taglio ai consumi e luci spente di notte: quali misure raccomanda l'Ue contro il caro-prezzi",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/28/taglio-ai-consumi-e-luci-spente-di-notte-le-misure-ue-contro-caro-prezzi_438e693f-41d1-49c6-bd43-8e923593eb6a.html"
+  },
+  {
+   "data": "2026-09-28T13:38:09+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Giallo di Pietracatella, concluse le analisi su pc e chiavette Usb: i risultati tra 60 giorni",
+   "url": "https://www.adnkronos.com/cronaca/giallo-pietracatella-ricina-analisi-pc-chiavette-usb_7qLfU8DtbgreHhNEWfbGAy"
+  },
+  {
+   "data": "2026-09-28T13:36:36+00:00",
+   "fonte": "ANSA",
+   "titolo": "Media: 'Più raid con droni in centro a Kiev, colpito anche il ministero della Scienza'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/28/media-piu-raid-con-droni-in-centro-a-kiev-colpito-anche-il-ministero_289b314b-ae1f-4c11-85dd-effb3509de01.html"
   }
  ]
 }
