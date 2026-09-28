@@ -5,8 +5,8 @@
 # Usato dal partial Hugo `video-correlati.html` per renderizzare la
 # sezione 'Approfondimenti video' in fondo agli articoli pertinenti.
 #
-# Pagine coperte: 308 / Video unici usati: 267 /
-# Link totali: 1032 (max 5 per pagina,
+# Pagine coperte: 314 / Video unici usati: 268 /
+# Link totali: 1058 (max 5 per pagina,
 # soglia score >= 2.0).
 
 canali:
@@ -29,7 +29,7 @@ canali:
     nome: CMCC — Centro Euro-Mediterraneo sui Cambiamenti Climatici
     tematico_pc: false
     url: https://www.youtube.com/@CMCCvideo/videos
-    video_count: 944
+    video_count: 950
   cnsas:
     nome: CNSAS — Corpo Nazionale Soccorso Alpino e Speleologico
     tematico_pc: true
@@ -49,7 +49,7 @@ canali:
     nome: Geopop — divulgazione scientifica
     tematico_pc: false
     url: https://www.youtube.com/@geopop/videos
-    video_count: 1350
+    video_count: 1360
   ingv-terremoti:
     nome: INGV — Istituto Nazionale di Geofisica e Vulcanologia
     tematico_pc: true
@@ -74,12 +74,12 @@ canali:
     nome: Link4Universe — Adrian Fartade
     tematico_pc: false
     url: https://www.youtube.com/@link4universe/videos
-    video_count: 1234
+    video_count: 1235
   natgeo-italia:
     nome: National Geographic Italia
     tematico_pc: false
     url: https://www.youtube.com/@natgeoit/videos
-    video_count: 646
+    video_count: 647
   rai-cultura:
     nome: Rai Cultura (documentari)
     tematico_pc: false
@@ -89,7 +89,7 @@ canali:
     nome: Rai News
     tematico_pc: false
     url: https://www.youtube.com/@RaiNews/videos
-    video_count: 1832
+    video_count: 1847
   solarino-sismologo:
     nome: Stefano Solarino — sismologo INGV (divulgazione sismica)
     tematico_pc: true
@@ -1342,7 +1342,7 @@ pagine:
       - irpinia
       - sismico
       - terremoto
-      score: 2.8
+      score: 3.2
       titolo: 'SHAKEMOVIE: propagazione onde sismiche del terremoto Mw 6.9 del 23/11/1980 in Irpinia e Basilicata'
       url: https://youtu.be/NfgA9KZ3IWo
   comunicazioni/2026-05-01-rete-zamberletti-499-esercitazione-radio:
@@ -6164,7 +6164,7 @@ pagine:
       - base
       - chicchi
       - grandine
-      score: 7.2
+      score: 7.6
       titolo: In base a cosa cambia la dimensione dei chicchi di grandine?
       url: https://youtu.be/9BeGPf1AX2Q
     - anchored:
@@ -6499,6 +6499,18 @@ pagine:
     - anchored:
       - esercitazione
       canale: dpc-gov
+      id: 6ImZj3WaeQY
+      is_lis: false
+      overlap:
+      - esercitazione
+      - rischio
+      - sismico
+      score: 7.2
+      titolo: 'MODEX SICILY 2019: esercitazione internazionale sul rischio sismico'
+      url: https://youtu.be/6ImZj3WaeQY
+    - anchored:
+      - esercitazione
+      canale: dpc-gov
       id: Qdr1TEgicd8
       is_lis: false
       overlap:
@@ -6511,26 +6523,15 @@ pagine:
     - anchored:
       - esercitazione
       canale: dpc-gov
-      id: _AYUUv69F3U
+      id: UIpzlwhK2ik
       is_lis: false
       overlap:
       - esercitazione
       - rischio
-      - vulcanico
+      - sismico
       score: 7.2
-      titolo: L'esercitazione nazionale di protezione civile sul rischio vulcanico – Esercitazione VULCANO 2022
-      url: https://youtu.be/_AYUUv69F3U
-    - anchored:
-      - esercitazione
-      canale: dpc-gov
-      id: YInihWkOdI0
-      is_lis: false
-      overlap:
-      - esercitazione
-      - flegrei
-      score: 7.0
-      titolo: Esercitazione nazionale "Exe Flegrei 2024"
-      url: https://youtu.be/YInihWkOdI0
+      titolo: 'CALABRIA 2011: esercitazione nazionale sul rischio sismico'
+      url: https://youtu.be/UIpzlwhK2ik
   comunicazioni/2026-09-19-giornata-aggiornamento-volontari:
     title: Giornata di aggiornamento per i volontari attivi
     url: /comunicazioni/2026-09-19-giornata-aggiornamento-volontari/
@@ -6632,6 +6633,224 @@ pagine:
       score: 12.0
       titolo: Oro blu  Storie di acqua e cambiamento climatico
       url: https://youtu.be/1sZMQqicYI0
+  comunicazioni/2026-09-24-incendi-boschivi-video:
+    title: 'Incendi boschivi in un video: come nascono e come comportarsi'
+    url: /comunicazioni/2026-09-24-incendi-boschivi-video/
+    video:
+    - anchored:
+      - boschivo
+      canale: io-non-rischio
+      id: 9tYSNBQY7OY
+      is_lis: true
+      overlap:
+      - boschivo
+      - incendio
+      - rischio
+      - subito
+      score: 2.8
+      titolo: Io non rischio Incendi Boschivi – Cosa sapere e cosa fare fin da subito
+      url: https://youtu.be/9tYSNBQY7OY
+    - anchored:
+      - boschivo
+      canale: dpc-gov
+      id: 4UBxxIfaGL4
+      is_lis: false
+      overlap:
+      - boschivo
+      - incendio
+      - rischio
+      score: 2.6
+      titolo: Spot 2006 sul rischio incendi boschivi
+      url: https://youtu.be/4UBxxIfaGL4
+    - anchored:
+      - boschivo
+      canale: dpc-gov
+      id: 53yYyLsFW3Q
+      is_lis: false
+      overlap:
+      - boschivo
+      - incendio
+      - rischio
+      score: 2.6
+      titolo: Spot 2012 sul rischio incendi boschivi
+      url: https://youtu.be/53yYyLsFW3Q
+    - anchored:
+      - boschivo
+      canale: io-non-rischio
+      id: pvk-P_5WBBw
+      is_lis: true
+      overlap:
+      - boschivo
+      - incendio
+      - rischio
+      score: 2.6
+      titolo: Io non rischio Incendi Boschivi – Domande e risposte
+      url: https://youtu.be/pvk-P_5WBBw
+    - anchored:
+      - boschivo
+      canale: io-non-rischio
+      id: qxQJQEjzRwc
+      is_lis: true
+      overlap:
+      - boschivo
+      - incendio
+      - rischio
+      score: 2.6
+      titolo: Io non rischio Incendi boschivi - Cosa fare per evitare, se avvisti, se sei coinvolto in un incendio
+      url: https://youtu.be/qxQJQEjzRwc
+  comunicazioni/2026-09-24-incendi-boschivi-video-facile:
+    title: 'Incendi boschivi in un video: come nascono e cosa fare'
+    url: /comunicazioni/2026-09-24-incendi-boschivi-video-facile/
+    video:
+    - anchored:
+      - boschivo
+      canale: io-non-rischio
+      id: 9tYSNBQY7OY
+      is_lis: true
+      overlap:
+      - boschivo
+      - incendio
+      - rischio
+      - subito
+      score: 2.8
+      titolo: Io non rischio Incendi Boschivi – Cosa sapere e cosa fare fin da subito
+      url: https://youtu.be/9tYSNBQY7OY
+    - anchored:
+      - boschivo
+      canale: dpc-gov
+      id: 4UBxxIfaGL4
+      is_lis: false
+      overlap:
+      - boschivo
+      - incendio
+      - rischio
+      score: 2.6
+      titolo: Spot 2006 sul rischio incendi boschivi
+      url: https://youtu.be/4UBxxIfaGL4
+    - anchored:
+      - boschivo
+      canale: dpc-gov
+      id: 53yYyLsFW3Q
+      is_lis: false
+      overlap:
+      - boschivo
+      - incendio
+      - rischio
+      score: 2.6
+      titolo: Spot 2012 sul rischio incendi boschivi
+      url: https://youtu.be/53yYyLsFW3Q
+    - anchored:
+      - boschivo
+      canale: io-non-rischio
+      id: pvk-P_5WBBw
+      is_lis: true
+      overlap:
+      - boschivo
+      - incendio
+      - rischio
+      score: 2.6
+      titolo: Io non rischio Incendi Boschivi – Domande e risposte
+      url: https://youtu.be/pvk-P_5WBBw
+    - anchored:
+      - boschivo
+      canale: io-non-rischio
+      id: qxQJQEjzRwc
+      is_lis: true
+      overlap:
+      - boschivo
+      - incendio
+      - rischio
+      score: 2.6
+      titolo: Io non rischio Incendi boschivi - Cosa fare per evitare, se avvisti, se sei coinvolto in un incendio
+      url: https://youtu.be/qxQJQEjzRwc
+  comunicazioni/2026-09-24-nisar-radar-nasa-isro-suolo:
+    title: 'NISAR, il radar che vede sotto la vegetazione: cosa cambia per frane e terremoti'
+    url: /comunicazioni/2026-09-24-nisar-radar-nasa-isro-suolo/
+    video:
+    - anchored:
+      - dati
+      - frana
+      canale: geopop
+      id: Lu7IXn90TBQ
+      is_lis: false
+      overlap:
+      - dati
+      - frana
+      score: 7.2
+      titolo: 'La mappa delle frane in Italia: i territori più a rischio e i dati sul dissesto idrogeologico'
+      url: https://youtu.be/Lu7IXn90TBQ
+    - anchored:
+      - frana
+      canale: cima-foundation
+      id: gsBgcnO6qfc
+      is_lis: false
+      overlap:
+      - frana
+      score: 6.0
+      titolo: Frana di Arenzano 2016
+      url: https://youtu.be/gsBgcnO6qfc
+    - anchored:
+      - frana
+      canale: dpc-gov
+      id: 6eeYoCoFn5M
+      is_lis: false
+      overlap:
+      - frana
+      score: 6.0
+      titolo: Le attività operative in corso – Frana Niscemi 2026
+      url: https://youtu.be/6eeYoCoFn5M
+    - anchored:
+      - frana
+      canale: dpc-gov
+      id: 9olWlF0VMDM
+      is_lis: false
+      overlap:
+      - frana
+      score: 6.0
+      titolo: Il Capo Dipartimento fa il punto sulle attività in corso – Frana Niscemi 2026
+      url: https://youtu.be/9olWlF0VMDM
+    - anchored:
+      - frana
+      canale: dpc-gov
+      id: L98tBMJZn0k
+      is_lis: false
+      overlap:
+      - frana
+      score: 6.0
+      titolo: Il Professor Casagli illustra le caratteristiche della frana – Frana Niscemi 2026
+      url: https://youtu.be/L98tBMJZn0k
+  comunicazioni/2026-09-25-alluvione-forti-piogge-video:
+    title: 'Alluvione e forti piogge in un video: come comportarsi'
+    url: /comunicazioni/2026-09-25-alluvione-forti-piogge-video/
+    video:
+    - anchored:
+      - alluvione
+      canale: io-non-rischio
+      id: DbGSeVbDLCg
+      is_lis: true
+      overlap:
+      - allerta
+      - alluvione
+      - rischio
+      score: 2.2
+      titolo: Io non rischio Alluvione – Cosa fare durante un’allerta, durante e dopo un’alluvione
+      url: https://youtu.be/DbGSeVbDLCg
+  comunicazioni/2026-09-25-alluvione-forti-piogge-video-facile:
+    title: 'Alluvione e forti piogge in un video: cosa fare'
+    url: /comunicazioni/2026-09-25-alluvione-forti-piogge-video-facile/
+    video:
+    - anchored:
+      - alluvione
+      canale: io-non-rischio
+      id: DbGSeVbDLCg
+      is_lis: true
+      overlap:
+      - allerta
+      - alluvione
+      - rischio
+      score: 2.2
+      titolo: Io non rischio Alluvione – Cosa fare durante un’allerta, durante e dopo un’alluvione
+      url: https://youtu.be/DbGSeVbDLCg
   comunicazioni/2026-09-26-bls-d-defibrillatore-formazione:
     title: 'BLS-D e defibrillatore: ogni cittadino può imparare a salvare una vita'
     url: /comunicazioni/2026-09-26-bls-d-defibrillatore-formazione/
@@ -6646,6 +6865,68 @@ pagine:
       score: 6.0
       titolo: Cosa succede al cuore dal punto di vista tecnico quando usi un defibrillatore
       url: https://youtu.be/3mgqw3BCeWw
+  comunicazioni/2026-09-26-mappa-livelli-allerta-vulcani-colli-albani:
+    title: 'Vulcani italiani, online la mappa dei livelli di allerta: il caso dei Colli Albani'
+    url: /comunicazioni/2026-09-26-mappa-livelli-allerta-vulcani-colli-albani/
+    video:
+    - anchored:
+      - vulcano
+      canale: ingv-vulcani
+      id: VXsy3q9Bq3Y
+      is_lis: false
+      overlap:
+      - isola
+      - monitoraggio
+      - vulcano
+      score: 8.0
+      titolo: Attività di monitoraggio sull'isola di Vulcano, ottobre 2020
+      url: https://youtu.be/VXsy3q9Bq3Y
+    - anchored:
+      - vulcano
+      canale: ingv-vulcani
+      id: doJOni-e2BE
+      is_lis: false
+      overlap:
+      - campi
+      - flegrei
+      - vulcano
+      score: 8.0
+      titolo: Campi Flegrei - Nel sonno del vulcano
+      url: https://youtu.be/doJOni-e2BE
+    - anchored:
+      - vulcano
+      canale: dpc-gov
+      id: _AYUUv69F3U
+      is_lis: false
+      overlap:
+      - rischio
+      - vulcanico
+      - vulcano
+      score: 7.2
+      titolo: L'esercitazione nazionale di protezione civile sul rischio vulcanico – Esercitazione VULCANO 2022
+      url: https://youtu.be/_AYUUv69F3U
+    - anchored:
+      - vulcano
+      canale: geopop
+      id: SHl690TWTSo
+      is_lis: false
+      overlap:
+      - caratteristiche
+      - vulcano
+      score: 7.0
+      titolo: 'I vulcani lineari non hanno la forma a "cono": cosa sono, dove si trovano e le caratteristiche'
+      url: https://youtu.be/SHl690TWTSo
+    - anchored:
+      - vulcano
+      canale: geopop
+      id: XAHnSyWIeOU
+      is_lis: false
+      overlap:
+      - vesuvio
+      - vulcano
+      score: 7.0
+      titolo: SAI CHE IN QUESTA IMMAGINE DEL VESUVIO CI SONO DUE VULCANI?
+      url: https://youtu.be/XAHnSyWIeOU
   comunicazioni/2026-09-26-marche-umbria-1997-basilica-assisi:
     title: 'Marche-Umbria, 26 settembre 1997: il terremoto che fece crollare la volta della Basilica di Assisi'
     url: /comunicazioni/2026-09-26-marche-umbria-1997-basilica-assisi/
@@ -6677,6 +6958,71 @@ pagine:
       score: 2.6
       titolo: 'Incendi boschivi Sardegna: Curcio fa il punto della situazione'
       url: https://youtu.be/FPLoljB20QA
+  comunicazioni/2026-09-28-incendi-boschivi-divieti-fino-15-ottobre:
+    title: 'Incendi boschivi: a Genzano i divieti restano in vigore fino al 15 ottobre'
+    url: /comunicazioni/2026-09-28-incendi-boschivi-divieti-fino-15-ottobre/
+    video:
+    - anchored:
+      - boschivo
+      canale: abili-a-proteggere
+      id: GVKQznWv4eE
+      is_lis: true
+      overlap:
+      - antincendio
+      - boschivo
+      - campagna
+      score: 3.0
+      titolo: 'Glossario in LIS: CAMPAGNA ANTINCENDIO BOSCHIVO ESTIVA'
+      url: https://youtu.be/GVKQznWv4eE
+    - anchored:
+      - boschivo
+      canale: io-non-rischio
+      id: 9tYSNBQY7OY
+      is_lis: true
+      overlap:
+      - boschivo
+      - incendio
+      - rischio
+      - subito
+      score: 2.8
+      titolo: Io non rischio Incendi Boschivi – Cosa sapere e cosa fare fin da subito
+      url: https://youtu.be/9tYSNBQY7OY
+    - anchored:
+      - boschivo
+      canale: dpc-gov
+      id: 4UBxxIfaGL4
+      is_lis: false
+      overlap:
+      - boschivo
+      - incendio
+      - rischio
+      score: 2.6
+      titolo: Spot 2006 sul rischio incendi boschivi
+      url: https://youtu.be/4UBxxIfaGL4
+    - anchored:
+      - boschivo
+      canale: dpc-gov
+      id: 53yYyLsFW3Q
+      is_lis: false
+      overlap:
+      - boschivo
+      - incendio
+      - rischio
+      score: 2.6
+      titolo: Spot 2012 sul rischio incendi boschivi
+      url: https://youtu.be/53yYyLsFW3Q
+    - anchored:
+      - boschivo
+      canale: io-non-rischio
+      id: pvk-P_5WBBw
+      is_lis: true
+      overlap:
+      - boschivo
+      - incendio
+      - rischio
+      score: 2.6
+      titolo: Io non rischio Incendi Boschivi – Domande e risposte
+      url: https://youtu.be/pvk-P_5WBBw
   comunicazioni/2026-09-29-parco-castelli-romani-collaborazione:
     title: 'Il Parco dei Castelli Romani: un alleato della Protezione Civile'
     url: /comunicazioni/2026-09-29-parco-castelli-romani-collaborazione/
@@ -7842,7 +8188,7 @@ pagine:
       - irpinia
       - sismico
       - terremoto
-      score: 8.2
+      score: 8.6
       titolo: 'SHAKEMOVIE: propagazione onde sismiche del terremoto Mw 6.9 del 23/11/1980 in Irpinia e Basilicata'
       url: https://youtu.be/NfgA9KZ3IWo
   comunicazioni/2026-11-30-ischia-2022-frana-casamicciola:
@@ -8778,6 +9124,16 @@ pagine:
     - anchored:
       - nucleare
       canale: geopop
+      id: GmAKhMSDj3A
+      is_lis: false
+      overlap:
+      - nucleare
+      score: 6.0
+      titolo: Sta davvero tornando il nucleare in Italia? La spiegazione semplice della legge delega
+      url: https://youtu.be/GmAKhMSDj3A
+    - anchored:
+      - nucleare
+      canale: geopop
       id: gMJqtGZ9MmU
       is_lis: false
       overlap:
@@ -8795,16 +9151,6 @@ pagine:
       score: 6.0
       titolo: 'Chernobyl 35 anni dopo: come il disastro nucleare ha cambiato oggi la nostra concezione del nucleare'
       url: https://youtu.be/ogsZv_kQVZ4
-    - anchored:
-      - nucleare
-      canale: wired-italia
-      id: _rMxsOBvXVY
-      is_lis: false
-      overlap:
-      - nucleare
-      score: 6.0
-      titolo: Uno storico del nucleare risponde alle domande sulla guerra nucleare | Tech Support | Wired Italia
-      url: https://youtu.be/_rMxsOBvXVY
   conoscere/catalogo-dei-rischi/rischio-sanitario:
     title: 'Il rischio sanitario: emergenze, epidemie e pandemie'
     url: /conoscere/catalogo-dei-rischi/rischio-sanitario/
@@ -9213,6 +9559,20 @@ pagine:
     url: /dossier/genzano-castelli-i-nostri-rischi/
     video:
     - anchored:
+      - sismico
+      - vulcanico
+      canale: geopop
+      id: KG8xHth3n_8
+      is_lis: false
+      overlap:
+      - rischio
+      - sismico
+      - terremoto
+      - vulcanico
+      score: 4.8
+      titolo: '▶️ETNA vs VESUVIO: terremoti e #prevenzione del rischio vulcanico e sismico *Parte 2* |GeologiaPOP🌍'
+      url: https://youtu.be/KG8xHth3n_8
+    - anchored:
       - vulcanico
       - vulcano
       canale: dpc-gov
@@ -9225,20 +9585,6 @@ pagine:
       score: 4.6
       titolo: L'esercitazione nazionale di protezione civile sul rischio vulcanico – Esercitazione VULCANO 2022
       url: https://youtu.be/_AYUUv69F3U
-    - anchored:
-      - sismico
-      - vulcanico
-      canale: geopop
-      id: KG8xHth3n_8
-      is_lis: false
-      overlap:
-      - rischio
-      - sismico
-      - terremoto
-      - vulcanico
-      score: 4.0
-      titolo: '▶️ETNA vs VESUVIO: terremoti e #prevenzione del rischio vulcanico e sismico *Parte 2* |GeologiaPOP🌍'
-      url: https://youtu.be/KG8xHth3n_8
     - anchored:
       - laghi
       - vulcanico
@@ -9649,6 +9995,18 @@ pagine:
       url: https://youtu.be/yoTTJ9BJYIM
     - anchored:
       - chernobyl
+      - fukushima
+      canale: geopop
+      id: fvGJjZvwMH8
+      is_lis: false
+      overlap:
+      - chernobyl
+      - fukushima
+      score: 4.0
+      titolo: Qualcuno associa Chernobyl a Fukushima, ma ci sono differenze fondamentali tra i due eventi.
+      url: https://youtu.be/fvGJjZvwMH8
+    - anchored:
+      - chernobyl
       - nucleare
       canale: geopop
       id: ogsZv_kQVZ4
@@ -9682,17 +10040,6 @@ pagine:
       score: 3.0
       titolo: '"La lezione di Fukushima": Margherita Fronte al XII Convegno Nazionale del Cicap'
       url: https://youtu.be/Xw_qqKMOEnQ
-    - anchored:
-      - chernobyl
-      canale: geopop
-      id: 4G-cqJy_6_o
-      is_lis: false
-      overlap:
-      - chernobyl
-      - reattore
-      score: 3.0
-      titolo: La ricostruzione del disastro di Chernobyl, come e perché si è arrivati all'esplosione del reattore
-      url: https://youtu.be/4G-cqJy_6_o
   dossier/prove-generali-del-disastro:
     title: Prove generali del disastro
     url: /dossier/prove-generali-del-disastro/
@@ -11355,7 +11702,7 @@ pagine:
       - sismico
       - vesuvio
       - vulcanico
-      score: 10.2
+      score: 10.6
       titolo: '▶️ETNA vs VESUVIO: terremoti e #prevenzione del rischio vulcanico e sismico *Parte 2* |GeologiaPOP🌍'
       url: https://youtu.be/KG8xHth3n_8
     - anchored:
@@ -11741,6 +12088,16 @@ pagine:
     - anchored:
       - nucleare
       canale: geopop
+      id: GmAKhMSDj3A
+      is_lis: false
+      overlap:
+      - nucleare
+      score: 6.0
+      titolo: Sta davvero tornando il nucleare in Italia? La spiegazione semplice della legge delega
+      url: https://youtu.be/GmAKhMSDj3A
+    - anchored:
+      - nucleare
+      canale: geopop
       id: gMJqtGZ9MmU
       is_lis: false
       overlap:
@@ -11768,16 +12125,6 @@ pagine:
       score: 6.0
       titolo: Il disastro nucleare di Fukushima - molto diverso da Chernobyl
       url: https://youtu.be/yoTTJ9BJYIM
-    - anchored:
-      - nucleare
-      canale: wired-italia
-      id: _rMxsOBvXVY
-      is_lis: false
-      overlap:
-      - nucleare
-      score: 6.0
-      titolo: Uno storico del nucleare risponde alle domande sulla guerra nucleare | Tech Support | Wired Italia
-      url: https://youtu.be/_rMxsOBvXVY
   manuale/720-rischio-idrico-siccita:
     title: 'Il rischio idrico: la siccità e la scarsità d''acqua'
     url: /manuale/720-rischio-idrico-siccita/
@@ -11930,21 +12277,6 @@ pagine:
       score: 2.0
       titolo: 'Blackout a Mosca: la città senza internet'
       url: https://youtu.be/aG-JNELt430
-  rischi-prevenzione/kit-emergenza:
-    title: 'Kit di emergenza: casa, evacuazione e auto'
-    url: /rischi-prevenzione/kit-emergenza/
-    video:
-    - anchored:
-      - evacuazione
-      canale: abili-a-proteggere
-      id: Ia_Uf9i6BTk
-      is_lis: false
-      overlap:
-      - disabilità
-      - evacuazione
-      score: 2.8
-      titolo: Esercitazione TWIST 2013 - Evacuazione di una persona con disabilità motoria - Procedure SAF
-      url: https://youtu.be/Ia_Uf9i6BTk
   rischi-prevenzione/maremoto:
     title: 'Maremoto: Cosa Fare al Mare'
     url: /rischi-prevenzione/maremoto/
@@ -12155,30 +12487,41 @@ pagine:
       url: https://youtu.be/fpeEmFI5G8s
     - anchored:
       - frana
+      canale: cima-foundation
+      id: gsBgcnO6qfc
+      is_lis: false
+      overlap:
+      - frana
+      score: 2.0
+      titolo: Frana di Arenzano 2016
+      url: https://youtu.be/gsBgcnO6qfc
+    - anchored:
+      - frana
       canale: dpc-gov
       id: 6eeYoCoFn5M
       is_lis: false
       overlap:
-      - corso
       - frana
-      score: 2.6
+      score: 2.0
       titolo: Le attività operative in corso – Frana Niscemi 2026
       url: https://youtu.be/6eeYoCoFn5M
-    - anchored:
-      - frana
-      canale: dpc-gov
-      id: 9olWlF0VMDM
-      is_lis: false
-      overlap:
-      - corso
-      - frana
-      score: 2.6
-      titolo: Il Capo Dipartimento fa il punto sulle attività in corso – Frana Niscemi 2026
-      url: https://youtu.be/9olWlF0VMDM
   rischi-prevenzione/rischio-incendio:
     title: Rischio Incendi Boschivi
     url: /rischi-prevenzione/rischio-incendio/
     video:
+    - anchored:
+      - boschivo
+      canale: io-non-rischio
+      id: 9tYSNBQY7OY
+      is_lis: true
+      overlap:
+      - boschivo
+      - incendio
+      - rischio
+      - subito
+      score: 3.2
+      titolo: Io non rischio Incendi Boschivi – Cosa sapere e cosa fare fin da subito
+      url: https://youtu.be/9tYSNBQY7OY
     - anchored:
       - boschivo
       canale: abili-a-proteggere
@@ -12218,18 +12561,6 @@ pagine:
     - anchored:
       - boschivo
       canale: io-non-rischio
-      id: 9tYSNBQY7OY
-      is_lis: true
-      overlap:
-      - boschivo
-      - incendio
-      - rischio
-      score: 3.0
-      titolo: Io non rischio Incendi Boschivi – Cosa sapere e cosa fare fin da subito
-      url: https://youtu.be/9tYSNBQY7OY
-    - anchored:
-      - boschivo
-      canale: io-non-rischio
       id: pvk-P_5WBBw
       is_lis: true
       overlap:
@@ -12257,6 +12588,17 @@ pagine:
     title: 'Rischio Nucleare e Radiologico: Cosa Fare'
     url: /rischi-prevenzione/rischio-nucleare-radiologico/
     video:
+    - anchored:
+      - nucleare
+      canale: geopop
+      id: GmAKhMSDj3A
+      is_lis: false
+      overlap:
+      - nucleare
+      - spiegazione
+      score: 7.0
+      titolo: Sta davvero tornando il nucleare in Italia? La spiegazione semplice della legge delega
+      url: https://youtu.be/GmAKhMSDj3A
     - anchored:
       - nucleare
       canale: geopop
@@ -12297,16 +12639,6 @@ pagine:
       score: 6.0
       titolo: Il disastro nucleare di Fukushima - molto diverso da Chernobyl
       url: https://youtu.be/yoTTJ9BJYIM
-    - anchored:
-      - nucleare
-      canale: wired-italia
-      id: _rMxsOBvXVY
-      is_lis: false
-      overlap:
-      - nucleare
-      score: 6.0
-      titolo: Uno storico del nucleare risponde alle domande sulla guerra nucleare | Tech Support | Wired Italia
-      url: https://youtu.be/_rMxsOBvXVY
   rischi-prevenzione/rischio-sismico:
     title: 'Rischio Sismico: Cosa Fare'
     url: /rischi-prevenzione/rischio-sismico/
@@ -12403,7 +12735,7 @@ pagine:
       - rischio
       - sismico
       - vulcanico
-      score: 7.4
+      score: 7.8
       titolo: '▶️ETNA vs VESUVIO: terremoti e #prevenzione del rischio vulcanico e sismico *Parte 2* |GeologiaPOP🌍'
       url: https://youtu.be/KG8xHth3n_8
     - anchored:
@@ -12852,7 +13184,7 @@ pagine:
       overlap:
       - earthquake
       - sismico
-      score: 3.2
+      score: 4.0
       titolo: Dove registriamo gli sciami sismici? Where do we record earthquake swarms?
       url: https://youtu.be/0GhmsBHH3XI
     - anchored:

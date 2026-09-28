@@ -3,7 +3,7 @@
 # Aggiornato periodicamente; usato da scripts/genera-video-correlati.py
 # per il cross-match con i contenuti del sito.
 #
-# Totale: 8859 video (18 canali).
+# Totale: 8892 video (18 canali).
 
 canali:
   abili-a-proteggere:
@@ -25,7 +25,7 @@ canali:
     nome: CMCC — Centro Euro-Mediterraneo sui Cambiamenti Climatici
     tematico_pc: false
     url: https://www.youtube.com/@CMCCvideo/videos
-    video_count: 944
+    video_count: 950
   cnsas:
     nome: CNSAS — Corpo Nazionale Soccorso Alpino e Speleologico
     tematico_pc: true
@@ -45,7 +45,7 @@ canali:
     nome: Geopop — divulgazione scientifica
     tematico_pc: false
     url: https://www.youtube.com/@geopop/videos
-    video_count: 1350
+    video_count: 1360
   ingv-terremoti:
     nome: INGV — Istituto Nazionale di Geofisica e Vulcanologia
     tematico_pc: true
@@ -70,12 +70,12 @@ canali:
     nome: Link4Universe — Adrian Fartade
     tematico_pc: false
     url: https://www.youtube.com/@link4universe/videos
-    video_count: 1234
+    video_count: 1235
   natgeo-italia:
     nome: National Geographic Italia
     tematico_pc: false
     url: https://www.youtube.com/@natgeoit/videos
-    video_count: 646
+    video_count: 647
   rai-cultura:
     nome: Rai Cultura (documentari)
     tematico_pc: false
@@ -85,7 +85,7 @@ canali:
     nome: Rai News
     tematico_pc: false
     url: https://www.youtube.com/@RaiNews/videos
-    video_count: 1832
+    video_count: 1847
   solarino-sismologo:
     nome: Stefano Solarino — sismologo INGV (divulgazione sismica)
     tematico_pc: true
@@ -5312,6 +5312,11 @@ video:
     id: BgEoX_Jqsmw
     titolo: 'Marta Vicarelli: On the cost-effectiveness of Nature-based Solutions for reducing disaster risk'
     url: https://youtu.be/BgEoX_Jqsmw
+  cmcc-BiajUOmcTW4:
+    canale: cmcc
+    id: BiajUOmcTW4
+    titolo: 'The just transition: Equity, nutrition, and food security in a changing climate'
+    url: https://youtu.be/BiajUOmcTW4
   cmcc-BlS_Bwzdb8c:
     canale: cmcc
     id: BlS_Bwzdb8c
@@ -5442,6 +5447,11 @@ video:
     id: DPhaSbSLlaU
     titolo: The operator is the Model
     url: https://youtu.be/DPhaSbSLlaU
+  cmcc-DV72G1pzAsE:
+    canale: cmcc
+    id: DV72G1pzAsE
+    titolo: 'CLIMAAX CoP | Shaping regional resilience: Climate risk management in action | Voices from the field'
+    url: https://youtu.be/DV72G1pzAsE
   cmcc-DVPRdhmGX9E:
     canale: cmcc
     id: DVPRdhmGX9E
@@ -6287,6 +6297,11 @@ video:
     id: OLssiIwhT4I
     titolo: 'The macroeconomics of adaptation: lessons learned from the 3 projects'
     url: https://youtu.be/OLssiIwhT4I
+  cmcc-OR3i6dAcPKg:
+    canale: cmcc
+    id: OR3i6dAcPKg
+    titolo: 'At first glance: How visualising climate can change the game'
+    url: https://youtu.be/OR3i6dAcPKg
   cmcc-OSl2Vs6QHLs:
     canale: cmcc
     id: OSl2Vs6QHLs
@@ -7447,6 +7462,11 @@ video:
     id: eTWOOubfggo
     titolo: Raymond KOPP - Domestic and International Initiatives in Climate Policy
     url: https://youtu.be/eTWOOubfggo
+  cmcc-e_Ao7qzaWfk:
+    canale: cmcc
+    id: e_Ao7qzaWfk
+    titolo: The financial risks of extreme environmental events
+    url: https://youtu.be/e_Ao7qzaWfk
   cmcc-ehfx257wxTk:
     canale: cmcc
     id: ehfx257wxTk
@@ -7862,6 +7882,11 @@ video:
     id: jatwanx5e3E
     titolo: '180227 - Informing and supporting climate policy: the European Topic Centre ETC/CCA'
     url: https://youtu.be/jatwanx5e3E
+  cmcc-ji1qZNtmyro:
+    canale: cmcc
+    id: ji1qZNtmyro
+    titolo: 'From climate pathways to action: Next-Generation future climate information for resilience'
+    url: https://youtu.be/ji1qZNtmyro
   cmcc-jjHz7TbN0Zg:
     canale: cmcc
     id: jjHz7TbN0Zg
@@ -8812,6 +8837,11 @@ video:
     id: vXTa5FskNq4
     titolo: Cosa accadrà. Gli impatti futuri dei cambiamenti climatici, dal rapporto IPCC
     url: https://youtu.be/vXTa5FskNq4
+  cmcc-veKi6DA8jtA:
+    canale: cmcc
+    id: veKi6DA8jtA
+    titolo: Are Biochar Co-benefits Valued in The Voluntary Carbon Market?
+    url: https://youtu.be/veKi6DA8jtA
   cmcc-vlP1ljKOJ4w:
     canale: cmcc
     id: vlP1ljKOJ4w
@@ -12662,6 +12692,11 @@ video:
     id: 4hKC58n1LAQ
     titolo: Who the Vikings really were and why they’re so different from how we imagine them
     url: https://youtu.be/4hKC58n1LAQ
+  geopop-4jkmfE84WYw:
+    canale: geopop
+    id: 4jkmfE84WYw
+    titolo: Perché l'autunno quest'anno inizia il 23 settembre e non il 21?
+    url: https://youtu.be/4jkmfE84WYw
   geopop-4oYfs5_2JhM:
     canale: geopop
     id: 4oYfs5_2JhM
@@ -13142,6 +13177,11 @@ video:
     id: 94d3DtXMx1w
     titolo: 'Chemtrails behind the flood in Emilia-Romagna: a few words on conspiracy theories'
     url: https://youtu.be/94d3DtXMx1w
+  geopop-9578Qxaclp0:
+    canale: geopop
+    id: 9578Qxaclp0
+    titolo: Gas Nervino a Tokyo, la ricostruzione 3D dell’attentato alla metropolitana del 1995
+    url: https://youtu.be/9578Qxaclp0
   geopop-98DEfvmZy24:
     canale: geopop
     id: 98DEfvmZy24
@@ -13562,6 +13602,11 @@ video:
     id: DE7ZtZdEo40
     titolo: 'Polemica Cannabis e codice della strada: cosa succede quando fumiamo? Gli effetti della marijuana'
     url: https://youtu.be/DE7ZtZdEo40
+  geopop-DEaTs0Ws4ak:
+    canale: geopop
+    id: DEaTs0Ws4ak
+    titolo: Trovare un donatore di midollo compatibile è rarissimo, ma salva vite.
+    url: https://youtu.be/DEaTs0Ws4ak
   geopop-DGA46S82EMw:
     canale: geopop
     id: DGA46S82EMw
@@ -13897,6 +13942,11 @@ video:
     id: GlPwhmxyEzg
     titolo: 'We are not machines, but we evaluate ourselves based on efficiency and performance: the question ...'
     url: https://youtu.be/GlPwhmxyEzg
+  geopop-GmAKhMSDj3A:
+    canale: geopop
+    id: GmAKhMSDj3A
+    titolo: Sta davvero tornando il nucleare in Italia? La spiegazione semplice della legge delega
+    url: https://youtu.be/GmAKhMSDj3A
   geopop-GmZCO7TZd9U:
     canale: geopop
     id: GmZCO7TZd9U
@@ -14652,6 +14702,11 @@ video:
     id: NZ44-eJSABc
     titolo: 7.4 Earthquake in Colombia - The Geological Explanation
     url: https://youtu.be/NZ44-eJSABc
+  geopop-NaZ-9MCtKgA:
+    canale: geopop
+    id: NaZ-9MCtKgA
+    titolo: Il surriscaldamento globale è come un cicchetto di troppo in un calice già pieno. Guardate qui
+    url: https://youtu.be/NaZ-9MCtKgA
   geopop-Nr0Tiej5dBQ:
     canale: geopop
     id: Nr0Tiej5dBQ
@@ -15812,6 +15867,11 @@ video:
     id: Y01Ap34a1m8
     titolo: The Absurd Story of the Man Who Survived an Iron Rod Through His Skull and Changed Personality
     url: https://youtu.be/Y01Ap34a1m8
+  geopop-Y3b8egQvI0A:
+    canale: geopop
+    id: Y3b8egQvI0A
+    titolo: 'Intervento alla cataratta: vi spieghiamo cosa succede con delle animazioni 3D'
+    url: https://youtu.be/Y3b8egQvI0A
   geopop-Y9E4A6bAtFQ:
     canale: geopop
     id: Y9E4A6bAtFQ
@@ -16007,6 +16067,11 @@ video:
     id: _Z_3_o9jafg
     titolo: '"Few charging stations and long charging times": challenging the prejudices by testing a 100% ele...'
     url: https://youtu.be/_Z_3_o9jafg
+  geopop-_kuPzNXF91U:
+    canale: geopop
+    id: _kuPzNXF91U
+    titolo: L’AI ci ucciderà tutti? Cosa vuol dire e perché, il vero pericolo, è l’uomo
+    url: https://youtu.be/_kuPzNXF91U
   geopop-_nJktGT9pk4:
     canale: geopop
     id: _nJktGT9pk4
@@ -16642,6 +16707,11 @@ video:
     id: fpeEmFI5G8s
     titolo: Alluvione di Sarno del 5 maggio 1998, le cause della frana e la ricostruzione della tragedia
     url: https://youtu.be/fpeEmFI5G8s
+  geopop-fvGJjZvwMH8:
+    canale: geopop
+    id: fvGJjZvwMH8
+    titolo: Qualcuno associa Chernobyl a Fukushima, ma ci sono differenze fondamentali tra i due eventi.
+    url: https://youtu.be/fvGJjZvwMH8
   geopop-fwJl4LRKm1k:
     canale: geopop
     id: fwJl4LRKm1k
@@ -17442,6 +17512,11 @@ video:
     id: nIWDMpSU6iI
     titolo: Recycling of used batteries and car batteries
     url: https://youtu.be/nIWDMpSU6iI
+  geopop-nK_WzU9sQOM:
+    canale: geopop
+    id: nK_WzU9sQOM
+    titolo: 'Polpa di pomodoro: il lavoro che c''è dietro'
+    url: https://youtu.be/nK_WzU9sQOM
   geopop-nLtALgwioZY:
     canale: geopop
     id: nLtALgwioZY
@@ -17777,6 +17852,11 @@ video:
     id: q_2i_zT_NVg
     titolo: Perché si formano le crepe nei muri e cosa c’entrano le resine espandenti
     url: https://youtu.be/q_2i_zT_NVg
+  geopop-qbeXqZOrS80:
+    canale: geopop
+    id: qbeXqZOrS80
+    titolo: Donare il midollo osseo fa male? Come funzionano la donazione e il trapianto
+    url: https://youtu.be/qbeXqZOrS80
   geopop-qeqVDHOEzaE:
     canale: geopop
     id: qeqVDHOEzaE
@@ -25862,6 +25942,11 @@ video:
     id: jkcoh2Q0ljw
     titolo: Come colonizzare un altro mondo - Parte 1 (Planetbase)
     url: https://youtu.be/jkcoh2Q0ljw
+  link4universe-jr-LjHWCQbk:
+    canale: link4universe
+    id: jr-LjHWCQbk
+    titolo: LIVE - STARSHIP / SPACEX - Lancio 14
+    url: https://youtu.be/jr-LjHWCQbk
   link4universe-jsu1jDJ9GHs:
     canale: link4universe
     id: jsu1jDJ9GHs
@@ -29882,6 +29967,11 @@ video:
     id: mZjRsfruypA
     titolo: Wild America - La costa
     url: https://youtu.be/mZjRsfruypA
+  natgeo-italia-mgy3mG4X7uQ:
+    canale: natgeo-italia
+    id: mgy3mG4X7uQ
+    titolo: Ippopotamo nel fiume Lugenda
+    url: https://youtu.be/mgy3mG4X7uQ
   natgeo-italia-mjzY5_Qweb4:
     canale: natgeo-italia
     id: mjzY5_Qweb4
@@ -30882,6 +30972,11 @@ video:
     id: 0xm_KIjGPQU
     titolo: '"Videogiochi italiani, tra Dino Path Trail e Bologna Game Farm"'
     url: https://youtu.be/0xm_KIjGPQU
+  rai-news-1-H6E3_nfAM:
+    canale: rai-news
+    id: 1-H6E3_nfAM
+    titolo: 'Giulio Regeni, il verdetto: tre 007 egiziani condannati a 10 anni per sequestro, uno assolto'
+    url: https://youtu.be/1-H6E3_nfAM
   rai-news-12z7E3HJqLY:
     canale: rai-news
     id: 12z7E3HJqLY
@@ -31442,6 +31537,11 @@ video:
     id: 4xnPrejSYFU
     titolo: '"Here’s why Europe and the US are drifting apart on defense and innovation." Adrian Wooldridge sp...'
     url: https://youtu.be/4xnPrejSYFU
+  rai-news-4yu-h2Ap3qY:
+    canale: rai-news
+    id: 4yu-h2Ap3qY
+    titolo: L’orrore al distributore, aggredisce una passante e travolge la coppia che cercava di salvarla
+    url: https://youtu.be/4yu-h2Ap3qY
   rai-news-4yukKmY_Fa0:
     canale: rai-news
     id: 4yukKmY_Fa0
@@ -31817,6 +31917,11 @@ video:
     id: 7Z3psUP8rVE
     titolo: 'Ritratti, Annalisa: "Voglio godermi questo momento. Si stanno realizzando molti dei miei sogni"'
     url: https://youtu.be/7Z3psUP8rVE
+  rai-news-7_kSNOtwJ3s:
+    canale: rai-news
+    id: 7_kSNOtwJ3s
+    titolo: L'uomo che in 28 anni ha quasi finito il giro del mondo a piedi
+    url: https://youtu.be/7_kSNOtwJ3s
   rai-news-7dE8e_5LH9o:
     canale: rai-news
     id: 7dE8e_5LH9o
@@ -32407,6 +32512,11 @@ video:
     id: BaFBdrNAdEA
     titolo: 'MappaMondi: Laboratorio Minneapolis'
     url: https://youtu.be/BaFBdrNAdEA
+  rai-news-BdvThHrekWk:
+    canale: rai-news
+    id: BdvThHrekWk
+    titolo: L'azienda che fa utili rispettando tutte le regole
+    url: https://youtu.be/BdvThHrekWk
   rai-news-BkOJkAteLKg:
     canale: rai-news
     id: BkOJkAteLKg
@@ -33802,6 +33912,11 @@ video:
     id: Kj6QO8bmRtQ
     titolo: 'L''aereo di Air India decolla e poi si schianta: il video delle telecamere a circuito chiuso'
     url: https://youtu.be/Kj6QO8bmRtQ
+  rai-news-Kpp2Z7DeQsE:
+    canale: rai-news
+    id: Kpp2Z7DeQsE
+    titolo: 'Distributori Eni: il momento in cui si aggiornano le tariffe'
+    url: https://youtu.be/Kpp2Z7DeQsE
   rai-news-Kv5X1TdvEnw:
     canale: rai-news
     id: Kv5X1TdvEnw
@@ -34737,6 +34852,11 @@ video:
     id: QulTAJnbhsg
     titolo: 'SANREMO 2026: All the Cover Songs, Part 1'
     url: https://youtu.be/QulTAJnbhsg
+  rai-news-QvIjL9KdAyM:
+    canale: rai-news
+    id: QvIjL9KdAyM
+    titolo: 'Il fuori programma di Papa Leone XIV: sul volo in Francia siede in cabina di pilotaggio'
+    url: https://youtu.be/QvIjL9KdAyM
   rai-news-QygG2ei7Ftw:
     canale: rai-news
     id: QygG2ei7Ftw
@@ -35207,6 +35327,11 @@ video:
     id: UKElR3tXYm8
     titolo: Treviso shocked by the arrest of a teacher accused of pedophilia along with her partner.
     url: https://youtu.be/UKElR3tXYm8
+  rai-news-UNO_NKtH4Ag:
+    canale: rai-news
+    id: UNO_NKtH4Ag
+    titolo: 'Morte David Rossi, la commissione parlamentare d''inchiesta: "Fu omicidio"'
+    url: https://youtu.be/UNO_NKtH4Ag
   rai-news-UXWAFjZ756g:
     canale: rai-news
     id: UXWAFjZ756g
@@ -35447,6 +35572,11 @@ video:
     id: WA0ALhEq4zA
     titolo: Sanremo 2026 -  Raf alle prove con l'orchestra
     url: https://youtu.be/WA0ALhEq4zA
+  rai-news-WA7LNB9rWsA:
+    canale: rai-news
+    id: WA7LNB9rWsA
+    titolo: 'Tetto ai prezzi dei carburanti ai distributori Eni: il momento in cui si aggiornano le tariffe'
+    url: https://youtu.be/WA7LNB9rWsA
   rai-news-WBFqJ3NmKZQ:
     canale: rai-news
     id: WBFqJ3NmKZQ
@@ -36797,6 +36927,11 @@ video:
     id: esbklshyx0M
     titolo: 'The Housing Plan has been launched, Meloni: "100,000 public housing units at affordable prices wi...'
     url: https://youtu.be/esbklshyx0M
+  rai-news-esu7eAB3hhQ:
+    canale: rai-news
+    id: esu7eAB3hhQ
+    titolo: 'Difendersi dall''IA con l''IA: la strategia di un''azienda italiana'
+    url: https://youtu.be/esu7eAB3hhQ
   rai-news-eu8J20f9P0g:
     canale: rai-news
     id: eu8J20f9P0g
@@ -36997,6 +37132,11 @@ video:
     id: g3dECikLST0
     titolo: 'Modena, El Koudri: the rage, the psychiatric disorders, the exemplary academic career'
     url: https://youtu.be/g3dECikLST0
+  rai-news-g5FJjH_KPHI:
+    canale: rai-news
+    id: g5FJjH_KPHI
+    titolo: 'Attacco sventato a base Raf: cinque arrestati, tutti britannici'
+    url: https://youtu.be/g5FJjH_KPHI
   rai-news-g6WdCLgwMms:
     canale: rai-news
     id: g6WdCLgwMms
@@ -37042,6 +37182,11 @@ video:
     id: gNuqNi5Ld4Y
     titolo: Sparatoria al rave in Svizzera, fermato un 43enne
     url: https://youtu.be/gNuqNi5Ld4Y
+  rai-news-gNw6WRafXTM:
+    canale: rai-news
+    id: gNw6WRafXTM
+    titolo: 'I Nirvana premiati agli Mtv Awards. Krist Novoselic: "C''è ancora fame di autenticità"'
+    url: https://youtu.be/gNw6WRafXTM
   rai-news-gTJWQyP5sTI:
     canale: rai-news
     id: gTJWQyP5sTI
@@ -38147,6 +38292,11 @@ video:
     id: oOP5axy2epk
     titolo: '"Il tunnel centro di comando di Hamas sotto l''ospedale a Khan Younis" - l''Idf pubblica le immagini'
     url: https://youtu.be/oOP5axy2epk
+  rai-news-oQQcL47Tb7g:
+    canale: rai-news
+    id: oQQcL47Tb7g
+    titolo: A Polignano i tuffi da brivido dal balcone a picco sul mare
+    url: https://youtu.be/oQQcL47Tb7g
   rai-news-oQdNNE9WPVQ:
     canale: rai-news
     id: oQdNNE9WPVQ
@@ -38442,6 +38592,11 @@ video:
     id: qHVDJQqlXA8
     titolo: 'Cecilia Sala arrested in Iran. Calabresi (Chora Media): "She had a regular journalist visa"'
     url: https://youtu.be/qHVDJQqlXA8
+  rai-news-qJyDM7YEmoA:
+    canale: rai-news
+    id: qJyDM7YEmoA
+    titolo: 'Madonna artista dell''anno agli Mtv Awards: "Ritrovate voi stessi e credete in voi per tutta la vita"'
+    url: https://youtu.be/qJyDM7YEmoA
   rai-news-qNi6yOF1yHQ:
     canale: rai-news
     id: qNi6yOF1yHQ
@@ -39062,6 +39217,11 @@ video:
     id: uLWoc7-LmL8
     titolo: '23-year-old beaten to death by Antifa: outrage and protests in France'
     url: https://youtu.be/uLWoc7-LmL8
+  rai-news-uPCCqL_fYyM:
+    canale: rai-news
+    id: uPCCqL_fYyM
+    titolo: 'I tuffi dal balcone a picco sul mare: a Polignano l''ultima tappa del Cliff Diving World Series'
+    url: https://youtu.be/uPCCqL_fYyM
   rai-news-uRn0iy_YRJs:
     canale: rai-news
     id: uRn0iy_YRJs
@@ -39587,6 +39747,11 @@ video:
     id: y_Uwi2lSPaE
     titolo: Anarchists killed in Rome, a TGR Lazio news crew attacked. Investigations into the farmhouse cont...
     url: https://youtu.be/y_Uwi2lSPaE
+  rai-news-yc4UqWUjEdQ:
+    canale: rai-news
+    id: yc4UqWUjEdQ
+    titolo: 'Morte David Rossi, Vinci: "Fu omicidio"'
+    url: https://youtu.be/yc4UqWUjEdQ
   rai-news-ycsa8xCVqVY:
     canale: rai-news
     id: ycsa8xCVqVY
