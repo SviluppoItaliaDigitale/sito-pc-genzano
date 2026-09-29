@@ -24,7 +24,7 @@ Le schede sono ispirate a materiali su servizi sanitari essenziali in emergenza,
 
 - WHO Health Cluster — Essential Health Services in Emergencies
 - Sphere Standards — Health Systems / Essential health services
-- Direttiva PCM 24 giugno 2016 — sanitario in emergenza
+- Direttiva PCM 24 giugno 2016 (GU n. 194 del 20/8/2016) — Centrale Remota Operazioni Soccorso Sanitario (CROSS) e referenti sanitari regionali in emergenza nazionale
 - Ministero della Salute — assistenza in emergenza sanitaria
 - ARERA — agevolazioni e registri collegati a dispositivi elettromedicali essenziali
 - SIN, AIOM, AIPO-ITS, CNT, UNIAMO, Telethon e reti regionali malattie rare — riferimenti specialistici
