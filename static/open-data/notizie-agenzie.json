@@ -5,11 +5,119 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-29T01:00:38+00:00",
+  "generato": "2026-09-29T06:44:22+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-29T06:39:03+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Meteo, inizio ottobre all'insegna del caldo anomalo: valori fino a 31 gradi ma attenzione alle escursioni termiche",
+   "url": "https://www.adnkronos.com/cronaca/previsioni-meteo-29-settembre-caldo-anomalo_7kkHHK8jUw5MoZfwg35XCs"
+  },
+  {
+   "data": "2026-09-29T06:31:18+00:00",
+   "fonte": "ANSA",
+   "titolo": "La settima Giornata contro lo spreco alimentare, la sfida parte da casa",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/29/la-settima-giornata-contro-lo-spreco-alimentare-la-sfida-parte-da-casa_571d742b-c12c-4bc0-af12-ac64e3f2cbaf.html"
+  },
+  {
+   "data": "2026-09-29T06:26:45+00:00",
+   "fonte": "ANSA",
+   "titolo": "Araghchi a Trump: 'Ci aspettiamo per oggi una risposta su Hormuz'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/29/araghchi-a-trump-ci-aspettiamo-per-oggi-una-risposta-su-hormuz_b93cc2e6-8fe2-461e-8ed2-eb04065726e9.html"
+  },
+  {
+   "data": "2026-09-29T06:18:14+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Caro carburante, controlli ai distributori a Roma: sequestrati 26mila litri prodotto non conforme",
+   "url": "https://www.adnkronos.com/cronaca/carburante-operazione-distributori-roma-sequestri_1MgIIDwEPwqyq9GoM1keO0"
+  },
+  {
+   "data": "2026-09-29T06:15:43+00:00",
+   "fonte": "ANSA",
+   "titolo": "I novant'anni di Silvio Berlusconi, la famiglia si riunisce a Villa Certosa",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/28/i-novantanni-di-silvio-berlusconi-la-famiglia-si-riunisce-a-villa-certosa_ae566426-5eb5-4833-951f-a2971bffa5d2.html"
+  },
+  {
+   "data": "2026-09-29T06:08:55+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "66° Salone Nautico Internazionale, tutto pronto per edizione che guarda al futuro dell’industria",
+   "url": "https://www.adnkronos.com/economia/66-salone-nautico-internazionale-tutto-pronto-per-edizione-che-guarda-al-futuro-dellindustria_1yy87dXCYNgtSUeAeE6D0K"
+  },
+  {
+   "data": "2026-09-29T06:01:36+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Non mangiava da giorni e viveva in condizioni di degrado a Fiuggi: poliziotti le comprano cibo",
+   "url": "https://www.adnkronos.com/cronaca/fiuggi-non-mangiava-degrado-polizia-compra-cibo_5GAtBDlXRWlLcS08tLmyHO"
+  },
+  {
+   "data": "2026-09-29T05:59:18+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Emissione di cenere dall'Etna, nube eruttiva alta 4 chilometri",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/29/emissione-di-cenere-dalletna-nube-eruttiva-alta-4-chilometri_4a8944e6-4a0a-4c76-8d8e-dacd5d9ddb64.html"
+  },
+  {
+   "data": "2026-09-29T05:58:29+00:00",
+   "fonte": "ANSA",
+   "titolo": "PRIME PAGINE |  Giulio Regeni, dieci anni a tre 007 ma non per l'omicidio",
+   "url": "https://www.ansa.it/sito/podcast/ansa_voice_daily/2026/09/29/prime-pagine-giulio-regeni-dieci-anni-a-tre-007-ma-non-per_5a5dde68-36c4-4140-b473-b19613cba4dd.html"
+  },
+  {
+   "data": "2026-09-29T05:38:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Intelligenza artificiale, OpenAI cancella il lancio dell'ultimo modello di Gpt: \"Problemi di sicurezza\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/openai-cancella-lancio-gpt-problemi-sicurezza_1XkyMICH3BgC5e8K0r4Ah6"
+  },
+  {
+   "data": "2026-09-29T05:14:40+00:00",
+   "fonte": "ANSA",
+   "titolo": "Scontri tra coloni e forze di sicurezza israeliane in Cisgiordania",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/29/scontri-tra-coloni-e-forze-di-sicurezza-israeliane-in-cisgiordania_b40285b0-97a1-4939-9dea-034f730dee00.html"
+  },
+  {
+   "data": "2026-09-29T05:10:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina, attacco nella notte a Kiev: danni e incendi. Zelensky: \"8000 truppe nordcoreane in Russia\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/guerra-russia-ucraina-29-settembre-ultime-notizie_36Wtb2pR5U4hfRXOHQaQwW"
+  },
+  {
+   "data": "2026-09-29T04:41:27+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Nations League, oggi Spagna-Croazia: orario, probabili formazioni e dove vederla in tv in chiaro",
+   "url": "https://www.adnkronos.com/sport/nations-league-spagna-croazia-orario-e-dove-vederla-in-tv_7n63dPgh7jC35o2lsWgyTa"
+  },
+  {
+   "data": "2026-09-29T04:40:55+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Nations League, oggi Repubblica Ceca-Inghilterra: orario, probabili formazioni e dove vederla",
+   "url": "https://www.adnkronos.com/sport/repubblica-ceca-inghilterra-oggi-nations-league-orario-formazioni-dove-vederla_5iAVSWdiQvLj27u9CA4tI8"
+  },
+  {
+   "data": "2026-09-29T04:40:22+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Modello 730, cosa succede se non si presenta la dichiarazione dei redditi? La guida",
+   "url": "https://www.adnkronos.com/economia/modello-730-scadenza-cosa-succede-dichiarazione_3ww35CIa6SA7ScLwoSeUt4"
+  },
+  {
+   "data": "2026-09-29T04:38:21+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Usa venderanno armi alla Cina? A Washington negano esistenza piani e Pechino glissa",
+   "url": "https://www.adnkronos.com/internazionale/esteri/usa-vendera-armi-cina-piano-trump-xi_3YigN2IAir1fJo4DLWlgvG"
+  },
+  {
+   "data": "2026-09-29T04:38:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Alessandro Di Battista torna in tv, oggi ospite di Floris a DiMartedì",
+   "url": "https://www.adnkronos.com/spettacoli/dimartedi-di-battista-ospite-oggi_zv8BFPhThPpezSwtjEMzW"
+  },
+  {
+   "data": "2026-09-29T04:37:12+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Mondadori, Milan, Mediaset: il racconto del 'milanesone' Berlusconi nella sua città",
+   "url": "https://www.adnkronos.com/politica/berlusconi-milanesone-90-anni-cav_30sWzdcWhKAAbHjdjMojvK"
+  },
   {
    "data": "2026-09-28T22:34:18+00:00",
    "fonte": "ANSA",
@@ -17,94 +125,10 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/29/openai-rinuncia-al-lancio-del-suo-ultimo-modello-ia-per-timori-sicurezza_0e342218-b954-4ce1-a2ba-d2712166054a.html"
   },
   {
-   "data": "2026-09-28T22:33:22+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Farmaci carenti in Italia, l'Aifa rassicura: \"Per oltre 2mila e seicento ci sono alternative\"",
-   "url": "https://www.adnkronos.com/salute/aifa-farmaci-introvabili-quanti-sono-prodotti-carenti_R1YFkQmn4iGKOTXFoZaD8"
-  },
-  {
-   "data": "2026-09-28T22:21:28+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Spreco alimentare, non basta guardare la data: i 5 controlli prima di buttare il cibo",
-   "url": "https://www.adnkronos.com/cronaca/cibo-scadenza-spreco-alimentare-etichetta_4MDoThjy3VItoG4OfM9ivU"
-  },
-  {
-   "data": "2026-09-28T22:19:50+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Stress e glicemia, gli esami fanno impennare i valori: cosa svela ricerca",
-   "url": "https://www.adnkronos.com/salute/stress-da-esame-glicemia-persone-sane-la-ricerca_22b1r6Kgi7j33dyFlN472O"
-  },
-  {
-   "data": "2026-09-28T22:15:36+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Garlasco, la procura: \"Nascoste prove a favore di Stasi già nel 2007\". Revisione del processo più vicina",
-   "url": "https://www.adnkronos.com/cronaca/garlasco-stasi-contro-analisi-dna-chiara-poggi-pedali-bici-prove-nascoste_7nlEGIp9dEdY563KLhtgbE"
-  },
-  {
-   "data": "2026-09-28T22:11:45+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Suppletive, centrodestra esulta per Roscioli: \"Vinto senza Vannacci\". Meloni: \"Ci siamo imposti sul campo larghissimo\"",
-   "url": "https://www.adnkronos.com/politica/elezioni-suppletive-reggio-calabria-vittoria-centrodestra_41X87BnmVZqS4hXw5NCQZ4"
-  },
-  {
-   "data": "2026-09-28T22:09:25+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Fiscal drag, chi perde e chi guadagna con la 'tassa invisibile': le simulazioni",
-   "url": "https://www.adnkronos.com/economia/fiscal-drag-tassa-invisibile-cosa-e-quanto-incide-stipendi-pensioni_1v1MaRaSoo6X1GrEmbDAJm"
-  },
-  {
-   "data": "2026-09-28T22:08:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Garlasco, numero di scarpa compatibile con quella del killer e impronta 33: Sempio verso il rinvio a giudizio",
-   "url": "https://www.adnkronos.com/cronaca/caso-garlasco-chiusura-indagini-sempio-indizi-procura_6S8wT8qv23zvRGOndvR53A"
-  },
-  {
-   "data": "2026-09-28T22:06:52+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Win for Italia Team, vinto a Roma jackpot da oltre 1,2 milioni di euro",
-   "url": "https://www.adnkronos.com/cronaca/win-for-italia-team-vinto-jackpot-oltre-un-milione-euro_3YL9MAcoNWF5oKPKi2Xp5y"
-  },
-  {
-   "data": "2026-09-28T21:41:21+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il Papa avverte: \"L'estrema destra non è espressione del cristianesimo\"",
-   "url": "https://www.ansa.it/vaticano/notizie/2026/09/28/il-papa-avverte-lestrema-destra-non-e-espressione-del-cristianesimo_06597c50-7157-4995-92b0-56d3c06016a3.html"
-  },
-  {
    "data": "2026-09-28T21:02:45+00:00",
    "fonte": "ANSA",
    "titolo": "Nations League: un'altra Italia in Turchia, gioca domina e vince coi giovani di Mancini",
    "url": "https://www.ansa.it/sito/notizie/sport/2026/09/28/nations-league-unaltra-italia-in-turchia-gioca-domina-e-vince-coi-giovani_270d1b30-d3fd-42cf-9020-5812108b0e17.html"
-  },
-  {
-   "data": "2026-09-28T20:58:28+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Vertice leader centrodestra 'chez' Meloni, partita aperta sul sindaco di Milano. Tajani: \"Al vaglio tutte le possibilità\"",
-   "url": "https://www.adnkronos.com/politica/sindaco-milano-stallo-centrodestra-candidato-vertice-meloni_5UsRShQMw8WEtK1WL2MeTg"
-  },
-  {
-   "data": "2026-09-28T20:25:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "\"Pio o Sebastiano?\", Turchia-Italia e il 'giallo' della sostituzione sbagliata dei fratelli Esposito",
-   "url": "https://www.adnkronos.com/sport/pio-sebastiano-turchia-italia-sostituzione-esposito-sbagliata_4XLnVDlFAoXbpUAQ0asozG"
-  },
-  {
-   "data": "2026-09-28T20:17:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Gianni Letta: \"Meloni? Sempre ammirata per intelligenza, sul futuro dell'Italia sono ottimista\"",
-   "url": "https://www.adnkronos.com/politica/gianni-letta-meloni-prix-italia_3aaIQhHoA3v9etTrMy3Lui"
-  },
-  {
-   "data": "2026-09-28T19:53:04+00:00",
-   "fonte": "ANSA",
-   "titolo": "Missione di Netanyahu ad Abu Dhabi_ \"Smentite di avermi avvisato sul 7 ottobre\"",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/28/media-7-ottobre-007-egitto-chiamarono-netanyahu-dopo-due-avvisi-inascoltati_57b11b8b-1489-4b89-b2da-cfb38c40f22d.html"
-  },
-  {
-   "data": "2026-09-28T19:50:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Italia avanti 3-0 a fine primo tempo, i tifosi della Turchia contro Montella: \"Dimissioni\"",
-   "url": "https://www.adnkronos.com/sport/dimissioni-coro-tifosi-turchia-montella-italia-nations-league_5DHAQ5mKg8b4qO8Gt8az4M"
   },
   {
    "data": "2026-09-28T19:39:13+00:00",
@@ -143,12 +167,6 @@
    "url": "https://www.ansa.it/sito/notizie/politica/2026/09/28/segre-approvare-allunanimita-il-ddl-antisemitismo-anche-con-modifiche_c0939e1f-2618-4e5e-a853-bf2587605079.html"
   },
   {
-   "data": "2026-09-28T19:09:29+00:00",
-   "fonte": "ANSA",
-   "titolo": "Sventato attacco alla base Raf, liberi su cauzione i 5 britannici arrestati",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/28/sventato-attacco-alla-base-raf-liberi-su-cauzione-i-5-britannici-arrestati_a7b1b247-2c4a-4802-909c-61a017a922b9.html"
-  },
-  {
    "data": "2026-09-28T19:05:40+00:00",
    "fonte": "ANSA",
    "titolo": "Ricerca e innovazione, Astrazeneca presenta strategia per competitività e crescita",
@@ -171,24 +189,6 @@
    "fonte": "ANSA",
    "titolo": "La svolta della Francia su Ustica: 'Pronta a collaborare'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/28/la-svolta-della-francia-su-ustica-pronta-a-collaborare_e78ac833-95d5-4598-a57a-8a748dacdcd9.html"
-  },
-  {
-   "data": "2026-09-28T18:49:52+00:00",
-   "fonte": "ANSA",
-   "titolo": "Sempio verso il processo: 'Su Stasi nascoste prove a favore'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/28/garlasco-chiuse-le-indagini-su-sempio.-la-scarpa-del-killer-e-compatibile-con-il-piede_e216f5f1-0c02-4fcb-b48b-3e912ccd28dd.html"
-  },
-  {
-   "data": "2026-09-28T18:37:40+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Il Comune di Brescia toglie la cittadinanza onoraria a Mussolini",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/28/il-comune-di-brescia-toglie-la-cittadinanza-onoraria-a-mussolini_d8a3c8d8-4008-4b7b-9f79-d4539cf7778e.html"
-  },
-  {
-   "data": "2026-09-28T18:36:11+00:00",
-   "fonte": "ANSA",
-   "titolo": "Drone e fiamme sull'Accademia delle Scienze, colpito il cuore storico di Kiev",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/28/media-piu-raid-con-droni-in-centro-a-kiev-colpito-anche-il-ministero_289b314b-ae1f-4c11-85dd-effb3509de01.html"
   }
  ]
 }
