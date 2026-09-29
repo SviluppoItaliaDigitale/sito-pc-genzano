@@ -5,46 +5,142 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-29T18:48:47+00:00",
+  "generato": "2026-09-29T22:41:54+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-29T18:44:43+00:00",
+   "data": "2026-09-29T22:19:27+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Tumori, al via studio per ridurre rischio recidive da cancro al seno",
+   "url": "https://www.adnkronos.com/salute/studio-cancro-seno-ridurre-recidiva-tumore_2elMJWvFieO0pSjlorW6RS"
+  },
+  {
+   "data": "2026-09-29T22:18:17+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Diabete, l'Ai ascolta la tua voce e scopre il rischio: bastano 20 secondi",
+   "url": "https://www.adnkronos.com/cronaca/diabete-tipo-2-voce-intelligenza-articiale-lo-studio_2Xy2D66FagjqOExmuH2S4k"
+  },
+  {
+   "data": "2026-09-29T22:14:01+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Centrosinistra, Renzi apre a Conte: \"Se vince le primarie lo sosterrò\"",
+   "url": "https://www.adnkronos.com/politica/renzi-primarie-conte-calenda-oggi-centrosinistra_7LEblDq6LGta96BFzS30rE"
+  },
+  {
+   "data": "2026-09-29T22:08:15+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Bollette, Eni taglia 30% su luce-gas. Enel, già da aprile sconto del 50% su elettricità. Meloni: \"Anche altri attori diano una mano\"",
+   "url": "https://www.adnkronos.com/economia/bollette-luce-gas-enel-eni-sconti-offerte_6d3OvZYqgKPVk8BDJ3S8gW"
+  },
+  {
+   "data": "2026-09-29T21:57:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "\"L'IA è la cosa più grande che ci sia\", Trump accelera e la ribattezza Super intelligenza",
+   "url": "https://www.adnkronos.com/internazionale/esteri/intelligenza-artificiale-trump-super-intelligenza_6DYvNOYoBgwGYfLTwXtK2u"
+  },
+  {
+   "data": "2026-09-29T21:37:36+00:00",
+   "fonte": "ANSA",
+   "titolo": "Di Battista: 'Mi hanno asportato un tumore, ora mi devo curare'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/29/di-battista-mi-hanno-asportato-un-tumore-ora-mi-devo-curare_7339e2ad-f004-4961-8e5e-ec0ca849671b.html"
+  },
+  {
+   "data": "2026-09-29T20:45:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Di Battista: \"Sono stato operato per un tumore al cervello, mi sto curando\"",
+   "url": "https://www.adnkronos.com/politica/di-battista-tumore-operazione-cuba_3fmLSXWwdIkyQcS9Vj520G"
+  },
+  {
+   "data": "2026-09-29T20:37:41+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "SuperEnalotto, estrazione di oggi 29 settembre 2026: numeri vincenti",
+   "url": "https://www.adnkronos.com/cronaca/superenalotto-numeri-vincenti-oggi-29-settembre_90YJluRMXIzOGfbSsfYxe"
+  },
+  {
+   "data": "2026-09-29T20:26:18+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Grillo vede Stroppa a Roma e pensa al futuro: IA e giovani al centro del progetto",
+   "url": "https://www.adnkronos.com/politica/beppe-grillo-andrea-stroppa-roma-progetto_4KWfqo1hcxTdEQmjXEPcSU"
+  },
+  {
+   "data": "2026-09-29T20:14:23+00:00",
+   "fonte": "ANSA",
+   "titolo": "'Timori per la sicurezza', OpenAi ferma l'ultimo modello",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/29/timori-per-la-sicurezza-openai-ferma-lultimo-modello_92464740-3325-472e-8e9a-ab5df61bb9d6.html"
+  },
+  {
+   "data": "2026-09-29T20:03:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Caso Garlasco, Marino (Ris): \"Esito nullo su pedali bici? Presumo di averlo detto a Garofano\"",
+   "url": "https://www.adnkronos.com/cronaca/caso-garlasco-marino-ris-dna-pedali_1N0lqrKAy7whVe80ZekDxw"
+  },
+  {
+   "data": "2026-09-29T19:51:02+00:00",
+   "fonte": "ANSA",
+   "titolo": "Eni, tetto pure alle bollette. Polemica con Enel e A2A, L'appello di Meloni sull'energia",
+   "url": "https://www.ansa.it/sito/notizie/economia/aziende/2026/09/29/da-eni-tetto-alle-bollette-sconto-del-30-rispetto-allofferta-base_fe093fda-3737-4bd8-8211-b569e1eb5bca.html"
+  },
+  {
+   "data": "2026-09-29T19:39:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sanremo, Di Liberatore: \"Più show, tre 'finali' e spazio ai giovani: così è il Festival di De Martino\"",
+   "url": "https://www.adnkronos.com/spettacoli/festival-sanremo-stefano-de-martino-anticipazioni_4dHT80Y8oqayXMpvhoiVmy"
+  },
+  {
+   "data": "2026-09-29T19:34:49+00:00",
+   "fonte": "ANSA",
+   "titolo": "Oltre 400 fermi in Francia per le proteste studentesche, molti minorenni",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/29/oltre-400-fermi-in-francia-per-le-proteste-studentesche-molti-minorenni_b900d559-d260-4a0f-893d-acaddb01d13d.html"
+  },
+  {
+   "data": "2026-09-29T19:26:08+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Sondaggio politico, Fratelli d'Italia cresce e allunga: giù Pd e M5S",
+   "url": "https://www.adnkronos.com/politica/sondaggio-elezioni-porta-a-porta-oggi-voto_6uHXwbVBEmMhMZ78XMECVk"
+  },
+  {
+   "data": "2026-09-29T19:20:14+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Classifica social dei leader, Meloni regina di like e views. Renzi continua la ripresa",
+   "url": "https://www.adnkronos.com/politica/giorgia-meloni-matteo-renzi-classifica-social_4VXaAUAHmCJzfd9HrHqEuw"
+  },
+  {
+   "data": "2026-09-29T19:18:10+00:00",
+   "fonte": "ANSA",
+   "titolo": "Scontro su Tajani per Regeni. Meloni: 'Chiudere i canali con l'Egitto non aiuta'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/29/scontro-su-tajani-per-regeni.-meloni-chiudere-i-canali-con-legitto-non_f837010a-3cba-4fa7-90a0-da01db282440.html"
+  },
+  {
+   "data": "2026-09-29T19:18:04+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "L'omicidio di Giulio Regeni, la difesa degli 007 pronta al ricorso",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/29/lomicidio-di-giulio-regeni-la-difesa-degli-007-pronta-al-ricorso_bb681f63-e6c8-4e39-a177-e17c3a2329a2.html"
+  },
+  {
+   "data": "2026-09-29T18:53:44+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'Eurocamera dedica un edificio a Sassoli. Schlein: 'Sostegno a Kiev'",
+   "url": "https://www.ansa.it/europa/notizie/rubriche/altrenews/2026/09/29/ansa-focusleurocamera-dedica-un-edificio-a-sassoli.-schlein-sostegno-a-kiev_033013ea-dac5-42ee-b5b9-f68dddf1fef9.html"
+  },
+  {
+   "data": "2026-09-29T18:50:23+00:00",
    "fonte": "ANSA",
    "titolo": "'Niente esplosivi', è nebbia fitta sul presunto attacco alla base della Raf",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/29/niente-esplosivi-e-nebbia-fitta-sul-presunto-attacco-alla-base-della_450c947b-0d50-4107-a1f0-bb49729a5bb7.html"
   },
   {
-   "data": "2026-09-29T18:42:31+00:00",
+   "data": "2026-09-29T18:49:35+00:00",
    "fonte": "ANSA",
-   "titolo": "Timori per la sicurezza', OpenAi ferma l'ultimo modello",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/29/timori-per-la-sicurezza-openai-ferma-lultimo-modello_92464740-3325-472e-8e9a-ab5df61bb9d6.html"
-  },
-  {
-   "data": "2026-09-29T18:36:15+00:00",
-   "fonte": "ANSA",
-   "titolo": "Eni, tetto pure alle bollette. È polemica con Enel e A2A, nostre già più basse",
-   "url": "https://www.ansa.it/sito/notizie/economia/aziende/2026/09/29/da-eni-tetto-alle-bollette-sconto-del-30-rispetto-allofferta-base_fe093fda-3737-4bd8-8211-b569e1eb5bca.html"
+   "titolo": "Spread a 100 e costo-Btp ai massimi, sulla manovra arriva l'effetto-Trump",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/29/spread-btp-bund-oltre-quota-100-per-la-prima-volta-dalla_28d6f012-e908-49b0-a099-7dbbc25ec9de.html"
   },
   {
    "data": "2026-09-29T18:36:04+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "I timori di Nessy Guerra, 'sono ancora bloccata in casa'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/29/i-timori-di-nessy-guerra-sono-ancora-bloccata-in-casa_d69e7d9a-2643-40a6-b119-449fa5be3ec7.html"
-  },
-  {
-   "data": "2026-09-29T18:36:01+00:00",
-   "fonte": "ANSA",
-   "titolo": "Regeni, Meloni: 'Chiudere i canali con l'Egitto rischia di allontanarci dall'obiettivo'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/29/regeni-meloni-chiudere-i-canali-con-legitto-rischia-di-allontanarci-dallobiettivo_bb681f63-e6c8-4e39-a177-e17c3a2329a2.html"
-  },
-  {
-   "data": "2026-09-29T18:32:53+00:00",
-   "fonte": "ANSA",
-   "titolo": "Spread a 100 e costo-Btp ai massimi, sulla manovra arriva l'effetto-Trump",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/29/spread-btp-bund-oltre-quota-100-per-la-prima-volta-dalla_28d6f012-e908-49b0-a099-7dbbc25ec9de.html"
   },
   {
    "data": "2026-09-29T18:31:04+00:00",
@@ -83,112 +179,16 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/29/anche-lex-sindaca-di-barcellona-vittima-del-caro-affitti-lascia-casa_1ec52dcb-69c3-448e-bff2-d3058db228cd.html"
   },
   {
-   "data": "2026-09-29T18:09:15+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Roma, pino secolare cade su un palazzo in zona Salaria: residenti bloccati",
-   "url": "https://www.adnkronos.com/cronaca/pino-cade-roma-salaria-residenti-bloccati_RrnQ2txP4y7KqiPhNub3u"
-  },
-  {
-   "data": "2026-09-29T18:06:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Caso Garlasco, Garofano: \"Nessun complotto per incastrare Stasi\"",
-   "url": "https://www.adnkronos.com/cronaca/caso-garlasco-garofano-dna-chiara-pedali-bici-stasi_4UTAd6GX0JidaxVRaUvv12"
-  },
-  {
    "data": "2026-09-29T18:02:06+00:00",
    "fonte": "ANSA",
    "titolo": "Il giallo della ricina, perquisiti gli studi di Gianni Di Vita",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/29/madre-e-figlie-avvelenate-con-la-ricina.-gianni-di-vita-in-questura-perquisiti-i-suoi_016113bb-edba-43dd-a287-648c26701c52.html"
   },
   {
-   "data": "2026-09-29T17:58:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Manchester City, giornalista contro il dg Soriano: \"Vuole scusarsi con i tifosi di calcio?\"",
-   "url": "https://www.adnkronos.com/sport/manchester-city-giornalista-dirigente-accuse-premier-league_5sybl2EG3djv8NFdXEF5rA"
-  },
-  {
-   "data": "2026-09-29T17:52:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "AstraZeneca, in Italia programma investimenti in ricerca da 66,2 milioni in 3 anni",
-   "url": "https://www.adnkronos.com/economia/astrazeneca-in-italia-programma-investimenti-in-ricerca-da-66-2-milioni-in-3-anni_54MI1kXMc7sGQpnNMKm3jK"
-  },
-  {
    "data": "2026-09-29T17:49:04+00:00",
    "fonte": "ANSA",
    "titolo": "La famiglia e il popolo di Fi commemorano i 90 anni di Berlusconi",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/09/29/la-famiglia-e-il-popolo-di-fi-commemorano-i-90-anni-di-berlusconi_98d09da3-80ff-44e2-acde-3d18c181efb9.html"
-  },
-  {
-   "data": "2026-09-29T17:47:20+00:00",
-   "fonte": "ANSA",
-   "titolo": "La Premier League: 'City colpevole', ha gonfiato ricavi per 900 milioni",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/09/29/la-premier-ufficializza-city-colpevole.-il-club-annuncia-il-ricorso_8f36df89-47b6-4dee-84f9-a32a34381254.html"
-  },
-  {
-   "data": "2026-09-29T17:45:39+00:00",
-   "fonte": "ANSA",
-   "titolo": "Tom Cruise: 'Io Digger, ricco bullo senza nessuna umanità'",
-   "url": "https://www.ansa.it/sito/notizie/cultura/cinema/2026/09/29/tom-cruise-io-digger-ricco-bullo-senza-nessuna-umanita_82e0d861-802b-4243-b434-b37468db3f5e.html"
-  },
-  {
-   "data": "2026-09-29T17:41:28+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "L'omicidio di Giulio Regeni, la difesa degli 007 pronta al ricorso",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/29/lomicidio-di-giulio-regeni-la-difesa-degli-007-pronta-al-ricorso_924c2eb3-1fa9-4f1e-9dea-389311a3ba77.html"
-  },
-  {
-   "data": "2026-09-29T17:40:45+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Juventus, Ginevra Elkann potrebbe diventare presidente. Chi è la sorella di John",
-   "url": "https://www.adnkronos.com/sport/ginevra-elkann-presidente-juventus-chi-e-sorella-john_2MMod3FRhOcs6Cp1MLUrx0"
-  },
-  {
-   "data": "2026-09-29T17:32:12+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Influenza, prevenzione parte dai bambini: vaccini pediatrici a 'passo lento' rispetto a quelli degli adulti",
-   "url": "https://www.adnkronos.com/salute/sanita/influenza-bambini-prevenzione-vaccini-adulti_2CKWiJNHTa4PBzgE2sfB4M"
-  },
-  {
-   "data": "2026-09-29T17:31:24+00:00",
-   "fonte": "ANSA",
-   "titolo": "Le carte su Ustica, la Procura deposita la nota della Francia",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/29/domani-udienza-del-gip-su-ustica-il-pm-chiedera-il-ritiro-dellarchiviazione_ec0d26d9-e9dc-4839-ad77-0595469c045d.html"
-  },
-  {
-   "data": "2026-09-29T17:30:29+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "'Operazione concordata Usa-Uk-Francia, su Ustica Parigi opaca'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/29/operazione-concordata-usa-uk-francia-su-ustica-parigi-opaca_baba425d-c918-466b-b665-adf475264bd9.html"
-  },
-  {
-   "data": "2026-09-29T17:21:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Tajani: \"Governo stabile attrae investimenti\"",
-   "url": "https://www.adnkronos.com/cronaca/tajani-governo-stabile-attrae-investimenti_Bkt1ikTmvNCJRnGDgfNKQ"
-  },
-  {
-   "data": "2026-09-29T17:16:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Khalil (Lilly): \"Con le istituzioni per equo accesso all'innovazione\"",
-   "url": "https://www.adnkronos.com/cronaca/khalil-lilly-con-le-istituzioni-per-equo-accesso-allinnovazione_4adpIKBZ7DOQY85IJO7dw8"
-  },
-  {
-   "data": "2026-09-29T17:14:36+00:00",
-   "fonte": "ANSA",
-   "titolo": "Luci e ombre dell'agenda von der Leyen al Forum di ANSA Europa con Zingaretti",
-   "url": "https://www.ansa.it/europa/notizie/rubriche/altrenews/2026/09/29/luci-e-ombre-dellagenda-von-der-leyen-al-forum-di-ansa-europa-con_dd892fa6-497a-4533-9f13-1edb60c0fd01.html"
-  },
-  {
-   "data": "2026-09-29T17:12:44+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Ha paura di volare e viene licenziato, ma vince in appello",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/29/ha-paura-di-volare-e-viene-licenziato-ma-vince-in-appello_fb0f7fce-0747-46da-a5ec-256819fc9176.html"
-  },
-  {
-   "data": "2026-09-29T17:10:21+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "#AccadeOggi",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/29/accadeoggi_dd38a7d3-309c-4e12-a6b9-d7b1590e0cf6.html"
   }
  ]
 }
