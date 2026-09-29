@@ -76,5 +76,5 @@ Genzano non ha la specificità geografica di Genova (versanti scoscesi al mare, 
 ## Per saperne di più
 
 - [Memoria dell'alluvione di Genova 1970 — Comune di Genova](https://www.comune.genova.it/)
-- [PAI — Autorità di Bacino Distrettuale dell'Appennino Settentrionale](https://www.adbarno.it/)
-- Voce Wikipedia: [Alluvione di Genova del 1970](https://it.wikipedia.org/wiki/Alluvione_di_Genova_del_1970)
+- [PAI — Autorità di Bacino Distrettuale dell'Appennino Settentrionale](http://www.adbarno.it/adb/)
+- Voce Wikipedia: [Alluvione di Genova del 7 ottobre 1970](https://it.wikipedia.org/wiki/Alluvione_di_Genova_del_7_ottobre_1970)
