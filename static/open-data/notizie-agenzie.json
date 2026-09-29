@@ -5,11 +5,71 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-28T21:12:17+00:00",
+  "generato": "2026-09-29T01:00:38+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-09-28T22:34:18+00:00",
+   "fonte": "ANSA",
+   "titolo": "OpenAi rinuncia al lancio del suo ultimo modello Ia \"per timori sulla sicurezza\"",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/29/openai-rinuncia-al-lancio-del-suo-ultimo-modello-ia-per-timori-sicurezza_0e342218-b954-4ce1-a2ba-d2712166054a.html"
+  },
+  {
+   "data": "2026-09-28T22:33:22+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Farmaci carenti in Italia, l'Aifa rassicura: \"Per oltre 2mila e seicento ci sono alternative\"",
+   "url": "https://www.adnkronos.com/salute/aifa-farmaci-introvabili-quanti-sono-prodotti-carenti_R1YFkQmn4iGKOTXFoZaD8"
+  },
+  {
+   "data": "2026-09-28T22:21:28+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Spreco alimentare, non basta guardare la data: i 5 controlli prima di buttare il cibo",
+   "url": "https://www.adnkronos.com/cronaca/cibo-scadenza-spreco-alimentare-etichetta_4MDoThjy3VItoG4OfM9ivU"
+  },
+  {
+   "data": "2026-09-28T22:19:50+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Stress e glicemia, gli esami fanno impennare i valori: cosa svela ricerca",
+   "url": "https://www.adnkronos.com/salute/stress-da-esame-glicemia-persone-sane-la-ricerca_22b1r6Kgi7j33dyFlN472O"
+  },
+  {
+   "data": "2026-09-28T22:15:36+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Garlasco, la procura: \"Nascoste prove a favore di Stasi già nel 2007\". Revisione del processo più vicina",
+   "url": "https://www.adnkronos.com/cronaca/garlasco-stasi-contro-analisi-dna-chiara-poggi-pedali-bici-prove-nascoste_7nlEGIp9dEdY563KLhtgbE"
+  },
+  {
+   "data": "2026-09-28T22:11:45+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Suppletive, centrodestra esulta per Roscioli: \"Vinto senza Vannacci\". Meloni: \"Ci siamo imposti sul campo larghissimo\"",
+   "url": "https://www.adnkronos.com/politica/elezioni-suppletive-reggio-calabria-vittoria-centrodestra_41X87BnmVZqS4hXw5NCQZ4"
+  },
+  {
+   "data": "2026-09-28T22:09:25+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Fiscal drag, chi perde e chi guadagna con la 'tassa invisibile': le simulazioni",
+   "url": "https://www.adnkronos.com/economia/fiscal-drag-tassa-invisibile-cosa-e-quanto-incide-stipendi-pensioni_1v1MaRaSoo6X1GrEmbDAJm"
+  },
+  {
+   "data": "2026-09-28T22:08:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Garlasco, numero di scarpa compatibile con quella del killer e impronta 33: Sempio verso il rinvio a giudizio",
+   "url": "https://www.adnkronos.com/cronaca/caso-garlasco-chiusura-indagini-sempio-indizi-procura_6S8wT8qv23zvRGOndvR53A"
+  },
+  {
+   "data": "2026-09-28T22:06:52+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Win for Italia Team, vinto a Roma jackpot da oltre 1,2 milioni di euro",
+   "url": "https://www.adnkronos.com/cronaca/win-for-italia-team-vinto-jackpot-oltre-un-milione-euro_3YL9MAcoNWF5oKPKi2Xp5y"
+  },
+  {
+   "data": "2026-09-28T21:41:21+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Papa avverte: \"L'estrema destra non è espressione del cristianesimo\"",
+   "url": "https://www.ansa.it/vaticano/notizie/2026/09/28/il-papa-avverte-lestrema-destra-non-e-espressione-del-cristianesimo_06597c50-7157-4995-92b0-56d3c06016a3.html"
+  },
   {
    "data": "2026-09-28T21:02:45+00:00",
    "fonte": "ANSA",
@@ -41,16 +101,10 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/28/media-7-ottobre-007-egitto-chiamarono-netanyahu-dopo-due-avvisi-inascoltati_57b11b8b-1489-4b89-b2da-cfb38c40f22d.html"
   },
   {
-   "data": "2026-09-28T19:50:45+00:00",
+   "data": "2026-09-28T19:50:00+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Italia avanti 3-0 a fine primo tempo, i tifosi della Turchia contro Montella: \"Dimissioni\"",
    "url": "https://www.adnkronos.com/sport/dimissioni-coro-tifosi-turchia-montella-italia-nations-league_5DHAQ5mKg8b4qO8Gt8az4M"
-  },
-  {
-   "data": "2026-09-28T19:43:38+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Renzi e il centrosinistra alle elezioni: \"Se qualcuno metterà un veto su di noi, perderà\"",
-   "url": "https://www.adnkronos.com/politica/renzi-otto-e-mezzo-gruber-elezioni_6PRWM5dvhvyIKBJqzunAqw"
   },
   {
    "data": "2026-09-28T19:39:13+00:00",
@@ -101,12 +155,6 @@
    "url": "https://www.ansa.it/sito/notizie/eventi/2026/09/28/ricerca-e-innovazione-astrazeneca-presenta-strategia-per-competitivita-e-crescita_e84f04b7-6f1f-4d9e-b43a-f83afac97b0c.html"
   },
   {
-   "data": "2026-09-28T18:59:27+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Inchiesta Lazio, il legale di Lotito: \"Nessun rapporto con Bisignani, trattativa con J.P. Morgan invenzione\"",
-   "url": "https://www.adnkronos.com/sport/inchiesta-lazio-legale-lotito-nessun-rapporto-bisignani-jp-morgan-invenzione_7xm0aPliZb6YePYeUglRBy"
-  },
-  {
    "data": "2026-09-28T18:57:32+00:00",
    "fonte": "ANSA",
    "titolo": "'David Rossi picchiato da più persone, tentò di difendersi'",
@@ -117,12 +165,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Il Tribunale di Roma: 'Sostegno al giudice di Ranucci'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/28/il-tribunale-di-roma-sostegno-al-giudice-di-ranucci_801a9e65-dcca-4b16-84e2-bd58824e3ae3.html"
-  },
-  {
-   "data": "2026-09-28T18:53:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Vespa: \"Bruttissima caduta in casa mentre facevo ginnastica, ma sono stato fortunato\"",
-   "url": "https://www.adnkronos.com/spettacoli/bruno-vespa-caduta-incidente-operazione_4AGIyhvJVXKXZ3mBABkPh0"
   },
   {
    "data": "2026-09-28T18:51:51+00:00",
@@ -137,12 +179,6 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/28/garlasco-chiuse-le-indagini-su-sempio.-la-scarpa-del-killer-e-compatibile-con-il-piede_e216f5f1-0c02-4fcb-b48b-3e912ccd28dd.html"
   },
   {
-   "data": "2026-09-28T18:41:25+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Cgil, celebrazioni per i 120 anni a Milano: due giorni per guardare al futuro del lavoro",
-   "url": "https://www.adnkronos.com/economia/cgil-celebrazioni-per-i-120-anni-a-milano-due-giorni-per-guardare-al-futuro-del-lavoro_2Yrd4R56IOgazMlkxEUgi8"
-  },
-  {
    "data": "2026-09-28T18:37:40+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Il Comune di Brescia toglie la cittadinanza onoraria a Mussolini",
@@ -153,42 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Drone e fiamme sull'Accademia delle Scienze, colpito il cuore storico di Kiev",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/28/media-piu-raid-con-droni-in-centro-a-kiev-colpito-anche-il-ministero_289b314b-ae1f-4c11-85dd-effb3509de01.html"
-  },
-  {
-   "data": "2026-09-28T18:31:15+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trump ignora l'allarme sull'IA: \"Niente regole, non servono\". Bill Gates: \"Gli Usa se ne occupino\"",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/28/trump-ignora-lallarme-sullia-niente-regole-non-servono.-bill-gates_da33d106-fbe2-4c4d-aaba-fc83bb584507.html"
-  },
-  {
-   "data": "2026-09-28T18:30:39+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Il silenzio del Cairo, per l'Egitto il caso Regeni era già chiuso",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/28/il-silenzio-del-cairo-per-legitto-il-caso-regeni-era-gia-chiuso_18ca2e07-b14f-4aa1-a6ef-c7217efa7ae5.html"
-  },
-  {
-   "data": "2026-09-28T18:28:40+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Italia, i fratelli Esposito in campo insieme contro la Turchia",
-   "url": "https://www.adnkronos.com/sport/italia-fratelli-pio-sebastiano-insieme-nazionale-turchia-chi-sono_JwxT1azKcyMAiyrZTw6BC"
-  },
-  {
-   "data": "2026-09-28T18:23:02+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sondaggio politico, Fratelli d'Italia cresce e Pd cala. Vannacci si ferma",
-   "url": "https://www.adnkronos.com/politica/sondaggio-tg-la7-elezioni-voto-oggi-28-settembre_vySlHZZM90YHiJC2zoklK"
-  },
-  {
-   "data": "2026-09-28T18:21:36+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Garlasco: perché ora la revisione per Stasi è più vicina",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/28/perche-ora-la-revisione-per-stasi-e-piu-vicina_9b669660-0cd1-4f8e-8c94-55e0186772c1.html"
-  },
-  {
-   "data": "2026-09-28T18:21:31+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Omar Chessa è il nuovo rettore dell'Università di Sassari",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/28/omar-chessa-e-il-nuovo-rettore-delluniversita-di-sassari_7c6afc0a-9245-49eb-891c-f819685c2cd2.html"
   }
  ]
 }
