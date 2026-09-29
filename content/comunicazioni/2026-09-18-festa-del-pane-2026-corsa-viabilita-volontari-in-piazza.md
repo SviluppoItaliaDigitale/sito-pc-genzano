@@ -7,7 +7,8 @@ priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-18-festa-del-pane-2026-corsa-viabilita-volontari-in-piazza.webp"
 image_alt: "Cover dell'articolo: Festa del Pane 2026 e Corsa del Pane, strade chiuse, percorsi alternativi e i volontari in piazza"
-scadenza: "2026-09-21"
+scadenza: ""
+archiviato: true
 area: "Genzano di Roma"
 allegati:
   - titolo: "Ordinanza sindacale n. 19 del 14 settembre 2026 — Attivazione del Centro Operativo Comunale (COC) per la Festa del Pane 2026"

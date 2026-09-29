@@ -48,7 +48,9 @@ jobs:
         with:
           # --cache           riutilizza risultati recenti (risparmia richieste a fornitori esterni)
           # --max-cache-age   risultati validi 1 giorno
-          # --accept          403 incluso (alcuni PA bloccano bot ma link funziona umani)
+          # --accept          403 incluso (alcuni PA bloccano bot ma link funziona umani);
+          #                   202 incluso (eur-lex.europa.eu e cnsas.it rispondono 202 Accepted,
+          #                   status di successo per richieste asincrone, non un errore — issue #1170)
           # --timeout         20s per URL (PA sites sono lenti)
           # --max-retries     3 tentativi prima di dichiarare morto
           # --retry-wait-time attesa tra retry (gestisce rate-limiting)
@@ -77,7 +79,7 @@ jobs:
             --max-cache-age 1d
             --verbose
             --no-progress
-            --accept 200,201,204,206,301,302,307,308,403,429
+            --accept 200,201,202,204,206,301,302,307,308,403,429
             --timeout 20
             --max-retries 3
             --retry-wait-time 5
