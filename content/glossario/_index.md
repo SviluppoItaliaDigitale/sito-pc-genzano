@@ -485,6 +485,10 @@ Net Control Station. La stazione radio che dirige una maglia di emergenza: nessu
 ### NCTSN {#nctsn}
 National Child Traumatic Stress Network. Rete statunitense di centri specializzati nello stress traumatico di bambini e adolescenti; le sue linee guida di primo soccorso psicologico per l'infanzia sono citate nei kit di questo sito.
 
+### NISAR {#nisar}
+NASA-ISRO Synthetic Aperture Radar. Satellite radar costruito insieme dalla NASA e dall'agenzia spaziale indiana ISRO, lanciato il 30 luglio 2025. Osserva la Terra di giorno e di notte, anche attraverso nuvole e vegetazione, e misura gli spostamenti minimi del suolo: utile per frane, terremoti e aree vulcaniche.
+*Approfondisci: [NISAR, il radar che vede sotto la vegetazione](/comunicazioni/2026-09-24-nisar-radar-nasa-isro-suolo/).*
+
 ### NOAA {#noaa}
 Agenzia federale degli Stati Uniti per gli oceani e l'atmosfera (National Oceanic and Atmospheric Administration). Studia meteo e uragani; pubblica immagini e dati liberi.
 

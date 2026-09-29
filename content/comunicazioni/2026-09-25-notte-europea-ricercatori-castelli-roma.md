@@ -7,7 +7,8 @@ priorita: normale
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-09-25-notte-europea-ricercatori-castelli-roma.webp"
 image_alt: "Cover dell'articolo: Notte europea dei ricercatori: gli appuntamenti tra Frascati e Roma"
-scadenza: "2026-09-27"
+scadenza: ""
+archiviato: true
 area: "Frascati e Roma"
 allegati: []
 draft: false
