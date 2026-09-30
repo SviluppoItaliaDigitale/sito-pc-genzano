@@ -850,9 +850,12 @@ jobs:
           # generano warning di "mixed content" sui browser moderni e
           # alcune risorse vengono bloccate. Eccezioni note (siti senza
           # HTTPS lato fornitore): parcocastelliromani.it, idrografico.roma.it,
-          # zonesismiche.mi.ingv.it. Tutti gli altri http:// vanno aggiornati.
+          # zonesismiche.mi.ingv.it, adbarno.it (TLS handshake fallisce con
+          # "unsupported protocol" sia in 1.2 che 1.3, verificato 30/09/2026
+          # — non un problema del client, il server non serve HTTPS valido).
+          # Tutti gli altri http:// vanno aggiornati.
           MIXED=$(grep -rn 'http://[a-zA-Z]' "$CONTENT_GLOB"/ 2>/dev/null \
-            | grep -vE 'parcocastelliromani\.it|idrografico\.roma\.it|zonesismiche\.mi\.ingv\.it|protezionecivile-imbersago|schema\.org|w3\.org|<!--' \
+            | grep -vE 'parcocastelliromani\.it|idrografico\.roma\.it|zonesismiche\.mi\.ingv\.it|adbarno\.it|protezionecivile-imbersago|schema\.org|w3\.org|<!--' \
             | head -10 || true)
           if [ -n "$MIXED" ]; then
             err "Link \`http://\` su siti che potrebbero supportare HTTPS (verifica con curl HEAD e aggiorna):"
