@@ -5,16 +5,172 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-30T19:21:42+00:00",
+  "generato": "2026-09-30T23:09:59+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-30T19:18:55+00:00",
+   "data": "2026-09-30T22:42:57+00:00",
    "fonte": "ANSA",
-   "titolo": "Paura in volo, copilota accoltella comandante. Israele evoca l'11/9 Katz: 'Tentato attacco jihadista'",
+   "titolo": "Vittorio Sgarbi ricoverato in terapia intensiva al Gemelli di Roma",
+   "url": "https://www.ansa.it/sito/notizie/cultura/2026/10/01/vittorio-sgarbi-ricoverato-in-terapia-intensiva-al-gemelli-di-roma_6894d528-7aab-4afb-9082-4e0533d05c8a.html"
+  },
+  {
+   "data": "2026-09-30T22:38:07+00:00",
+   "fonte": "ANSA",
+   "titolo": "++ Vittorio Sgarbi ricoverato al Gemelli di Roma ++",
+   "url": "https://www.ansa.it/sito/notizie/flash/2026/10/01/-vittorio-sgarbi-ricoverato-al-gemelli-di-roma-_05143b32-86a9-4234-b329-adbd3c0efb71.html"
+  },
+  {
+   "data": "2026-09-30T22:29:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Vittorio Sgarbi è ricoverato al Policlinico Gemelli",
+   "url": "https://www.adnkronos.com/cronaca/vittorio-sgarbi-ricoverato-gemelli_6Aj6BLmWe2wqC4Usc5H74u"
+  },
+  {
+   "data": "2026-09-30T22:20:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Volo Dubai-Tel Aviv, l'attacco e l'incubo. Netanyahu: \"Il pilota eroe ha salvato 174 persone\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/volo-dubai-tel-aviv-attentato-pilota-netanyahu_2Pti1LKj4L2hUIEEzRMXX4"
+  },
+  {
+   "data": "2026-09-30T22:17:14+00:00",
+   "fonte": "ANSA",
+   "titolo": "Raid russo su Kiev, colpita anche Odessa",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/01/raid-russo-su-kiev-colpita-anche-odessa_2c91ffa4-8226-423c-868d-4970afc2859e.html"
+  },
+  {
+   "data": "2026-09-30T22:15:10+00:00",
+   "fonte": "ANSA",
+   "titolo": "Detenuti in rivolta nel carcere di Pisa, scontri con gli agenti",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/30/detenuti-in-rivolta-a-pisa-hanno-trovato-microspie-nelle-celle_27b34c45-def5-46b2-a5f1-d5505ec76841.html"
+  },
+  {
+   "data": "2026-09-30T22:13:42+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Afghanistan, Zahra Joya: \"Per noi donne è una prigione a cielo aperto, serve guerra civile tutta al femminile\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/afghanistan-zahra-joya-donne-guerra-civile_7HsLBlTVyB9Zl5vOjb2QaK"
+  },
+  {
+   "data": "2026-09-30T22:13:01+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Bollette, ecco le 10 regole per confrontare prezzi luce e gas",
+   "url": "https://www.adnkronos.com/economia/sconti-bollette-luce-gas-come-scegliere-10-regole-risparmiare_4RnqRXbaqF6eRejiZxCcug"
+  },
+  {
+   "data": "2026-09-30T22:12:08+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Brexit, svolta nel Regno Unito: Burnham apre al rientro nell'Ue. Macron: \"Sareste i benvenuti\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/brexit-burnham-oggi-regno-unito-ue-macron_5h60iNcIb5u9QVZE1hCxNy"
+  },
+  {
+   "data": "2026-09-30T22:10:17+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Pd, riunione con Schlein: il programma con M5S, Avs e centristi. Poi le primarie: \"Pronti a vincerle\"",
+   "url": "https://www.adnkronos.com/politica/pd-elezioni-schein-programma-conte-renzi-primarie_2U6EHXA9407pgoFHrFdnWW"
+  },
+  {
+   "data": "2026-09-30T21:54:42+00:00",
+   "fonte": "ANSA",
+   "titolo": "Via libera alla maxi acquisizione di Warner da parte di Paramount",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/30/un-giudice-sblocca-la-maxi-acquisizione-di-warner-da-parte-di-paramount_3f7b5cca-3dac-474d-8f80-7a89ef68f65d.html"
+  },
+  {
+   "data": "2026-09-30T21:37:14+00:00",
+   "fonte": "ANSA",
+   "titolo": "Nuovo stop a Schengen con la Spagna, Madrid risponde con altri 15 giorni di controlli",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/30/nuovo-stop-a-schengen-con-la-spagna-madrid-risponde-con-altri-15-giorni_273398e5-c4e2-4429-b5ff-3834783ad0e6.html"
+  },
+  {
+   "data": "2026-09-30T21:29:28+00:00",
+   "fonte": "ANSA",
+   "titolo": "Legge elettorale alla prova dell'Aula, voto finale segreto tra il 7 e l'8",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/30/legge-elettorale-alla-prova-dellaula-voto-finale-segreto-tra-il-7-e-l8_afc2a0af-fc7e-4d3d-97eb-4fcafc26cbb0.html"
+  },
+  {
+   "data": "2026-09-30T21:27:01+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Trump: \"Un idraulico ha salvato tutti sul volo Dubai-Tel Aviv\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/volo-flydubai-dubai-tel-aviv-trump_1BHbXMbQOJlvdFjFGpWqtm"
+  },
+  {
+   "data": "2026-09-30T21:26:00+00:00",
+   "fonte": "ANSA",
+   "titolo": "Arriva il parental control su WhatsApp, serve un Pin per modificarlo",
+   "url": "https://www.ansa.it/canale_tecnologia/notizie/web_social/2026/09/30/arriva-il-parental-control-per-i-teenager-su-whatsapp-anche-in-italia_127783fe-26f4-4b74-a9de-7962555b01ba.html"
+  },
+  {
+   "data": "2026-09-30T21:20:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Pisa, detenuti in rivolta in diretta su TikTok al carcere Don Bosco",
+   "url": "https://www.adnkronos.com/cronaca/carcere-rivolta-diretta-tiktok-microspie-celle_2Cx3jsCqUzRo1UgIn5c5Hs"
+  },
+  {
+   "data": "2026-09-30T21:18:48+00:00",
+   "fonte": "ANSA",
+   "titolo": "Schlein riunisce la segreteria del Pd. 'Il programma si scrive anche insieme ai centristi'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/30/schlein-riunisce-la-segreteria-del-pd.-il-programma-si-scrive-anche-insieme-ai-centristi_80fc4ec6-d75b-479c-8b5a-7f959b55cacb.html"
+  },
+  {
+   "data": "2026-09-30T20:21:43+00:00",
+   "fonte": "ANSA",
+   "titolo": "Attacco sul volo Dubai-Tel Aviv, Israele evoca l'11 settembre",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/30/paura-in-volo-copilota-accoltella-comandante.-israele-evoca-l119-katz-tentato_ba82b692-fb5f-4d67-98ba-c75431c1bda0.html"
+  },
+  {
+   "data": "2026-09-30T20:10:39+00:00",
+   "fonte": "ANSA",
+   "titolo": "Troppi social e chat, no dei pediatri allo smartphone personale sotto 13 anni",
+   "url": "https://www.ansa.it/canale_saluteebenessere/notizie/salute_bambini/notizie_dai_pediatri/2026/09/30/pediatri-contro-dipendenze-da-social-e-chat-no-smartphone-personale-sotto-13-anni_aee0c72f-ea6a-4ea0-84db-78c9cfa7b8c1.html"
+  },
+  {
+   "data": "2026-09-30T20:01:46+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Trump e il mea culpa: \"Usa volano e non l'ho spiegato, ho fatto un pessimo lavoro\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/usa-trump-economia-dati-2026_6FJVL4Qdi9NHSh22nB0uKU"
+  },
+  {
+   "data": "2026-09-30T19:58:33+00:00",
+   "fonte": "ANSA",
+   "titolo": "Netanyahu incontra uno dei passeggeri del volo FlyDubai che ha bloccato l'aggressore",
+   "url": "https://www.ansa.it/sito/videogallery/mondo/2026/09/30/netanyahu-incontra-uno-dei-passeggeri-del-volo-flydubai-che-ha-bloccato_d836db3d-8b21-44ff-ae54-4dc455843b53.html"
+  },
+  {
+   "data": "2026-09-30T19:54:13+00:00",
+   "fonte": "ANSA",
+   "titolo": "La rotta del volo Flydubai, dalla picchiata alla ripresa verso Tabuk",
+   "url": "https://www.ansa.it/sito/videogallery/mondo/2026/09/30/la-rotta-del-volo-flydubai-dalla-picchiata-alla-ripresa-verso-tabuk_20d084bd-1bc5-423d-bfb6-a8ac6fd3ed3c.html"
+  },
+  {
+   "data": "2026-09-30T19:41:51+00:00",
+   "fonte": "ANSA",
+   "titolo": "A Roma la presentazione della nuova stagione del podcast dell'ANSA 'Frida - Contro la violenza di genere'",
+   "url": "https://www.ansa.it/donne/notizie/2026/09/30/a-roma-la-presentazione-della-nuova-stagione-del-podcast-dellansa-frida-contro_b8de2cab-58c0-4b33-b391-65610e179f86.html"
+  },
+  {
+   "data": "2026-09-30T19:41:12+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ferrara, entra armato nel liceo e tenta di colpire un 15enne: arrestato",
+   "url": "https://www.adnkronos.com/cronaca/ferrara-scuola-armato-attacca-studente-coltello_438VNjv3Kx2Zh1uhjS9cv0"
+  },
+  {
+   "data": "2026-09-30T19:39:21+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "15enne ferito a coltellate a scuola, arrestato un ragazzo",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/30/15enne-ferito-a-coltellate-a-scuola-arrestato-un-18enne_63478cd9-15b3-44be-90db-4533424647ec.html"
+  },
+  {
+   "data": "2026-09-30T19:32:53+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Tentata aggressione in un liceo a Ferrara, arrestato ragazzo",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/30/tentata-aggressione-in-un-liceo-a-ferrara-arrestato-ragazzo_92f0b1bd-2652-49b0-8b9c-634043f76ff4.html"
+  },
+  {
+   "data": "2026-09-30T19:29:27+00:00",
+   "fonte": "ANSA",
+   "titolo": "Piloti fuori servizio e passeggeri, gli eroi del volo FZ1073",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/30/piloti-fuori-servizio-e-passeggeri-gli-eroi-del-volo-fz1073_ced653ec-5b52-4152-86ea-be02a6823156.html"
   },
   {
    "data": "2026-09-30T19:14:42+00:00",
@@ -33,162 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Mattarella emana il decreto legge sulla Scuola",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/09/30/mattarella-emana-il-decreto-legge-sulla-scuola_0e4e12a5-557a-4f8e-b84d-f6ecf57d5925.html"
-  },
-  {
-   "data": "2026-09-30T19:11:30+00:00",
-   "fonte": "ANSA",
-   "titolo": "Cristiano Ronaldo lascia il ritiro, è rottura con il Portogallo",
-   "url": "https://www.ansa.it/sito/notizie/sport/2026/09/30/rottura-fra-cr7-e-il-ct-del-portogallo-lattaccante-lascia-la-squadra_d37e4a0d-2d82-474d-88a6-c6708259e461.html"
-  },
-  {
-   "data": "2026-09-30T19:08:37+00:00",
-   "fonte": "ANSA",
-   "titolo": "Governo: 'Risarcimento dopo la Cassazione su Regeni'. L'opposizione attacca",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/30/i-media-egiziani-telefonata-roma-cairo-prima-della-sentenza-regeni.-palazzo_e9edcd01-b12e-42a3-ac02-4dcfbad8f03f.html"
-  },
-  {
-   "data": "2026-09-30T19:08:18+00:00",
-   "fonte": "ANSA",
-   "titolo": "L'inflazione vola al 4,2%. Meloni annuncia una lettera all'Ue: 'Serve più flessibilità'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/30/meloni-scrive-a-von-der-leyen-a-causa-dellinflazione-serve-piu-flessibilita_4ed9a78c-fe6a-4675-8c59-ed9737590b3c.html"
-  },
-  {
-   "data": "2026-09-30T19:05:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "\"Il pilota è ferito, aiutateci\", l'appello del passeggero sul volo Dubai-Tel Aviv",
-   "url": "https://www.adnkronos.com/internazionale/esteri/aereo-dubai-tel-aviv-video-passeggero_8VcmQScC2YCjAHwJ17TOk"
-  },
-  {
-   "data": "2026-09-30T19:03:59+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Carburanti, sconto sui prezzi anche per Tamoil: palazzo Chigi ha avviato interlocuzioni con la Libia",
-   "url": "https://www.adnkronos.com/politica/sconto-benzina-tamoil-come-possono-cambiare-prezzi_2gfkwb9RsaZYIB3ZEtw0l4"
-  },
-  {
-   "data": "2026-09-30T18:59:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Diana Bianchedi rassegna le dimissioni da Capo delegazione della Nazionale",
-   "url": "https://www.adnkronos.com/sport/diana-bianchedi-dimissioni-capo-delegazione-nazionale-malago-figc_3dPgpWQkJAIXZ5UNPmsgxC"
-  },
-  {
-   "data": "2026-09-30T18:57:38+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Nascosto nel doppiofondo dell'armadio, preso uno dei capi del clan Mazzarella",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/30/nascosto-nel-doppiofondo-dellarmadio-preso-uno-dei-capi-del-clan_b4437ac8-7837-4567-bac0-c55813cb441e.html"
-  },
-  {
-   "data": "2026-09-30T18:56:02+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Volo Dubai-Tel Aviv, passeggeri in festa dopo attacco sventato",
-   "url": "https://www.adnkronos.com/internazionale/esteri/aereo-dubai-tel-aviv-volo-attacco-pilota_4XLYVJUYdwLhDVL84Dn3RG"
-  },
-  {
-   "data": "2026-09-30T18:51:42+00:00",
-   "fonte": "ANSA",
-   "titolo": "Price cap anche per Tamoil, avviato dialogo Italia-Libia",
-   "url": "https://www.ansa.it/canale_motori/notizie/mondo_motori/2026/09/30/prezzi-dei-carburanti-in-calo-ma-resta-il-divario-col-price-cap_fb62cde6-521e-4ea9-94d1-ffae4befddc2.html"
-  },
-  {
-   "data": "2026-09-30T18:46:15+00:00",
-   "fonte": "ANSA",
-   "titolo": "Nuovo stop a Schengen con la Spagna, ancora una proroga di 15 giorni",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/30/viminale-prorogato-di-15-giorni-lo-stop-a-schengen-con-la-spagna_273398e5-c4e2-4429-b5ff-3834783ad0e6.html"
-  },
-  {
-   "data": "2026-09-30T18:28:53+00:00",
-   "fonte": "ANSA",
-   "titolo": "A Roma la presentazione della nuova stagione del podcast dell'ANSA 'Frida - Contro la violenza di genere'",
-   "url": "https://www.ansa.it/donne/notizie/2026/09/30/a-roma-la-presentazione-della-nuova-stagione-del-podcast-dellansa-frida-contro_b8de2cab-58c0-4b33-b391-65610e179f86.html"
-  },
-  {
-   "data": "2026-09-30T18:22:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "FlyDubai, la testimonianza del passeggero eroe: \"Ho bloccato il terrorista in cabina e pilotato l'aereo\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/flydubay-testimonianza-passeggero-eroe-oggi_IAYVNrUVSVpqHUzUTyCwO"
-  },
-  {
-   "data": "2026-09-30T18:16:27+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Sindaco nega la cittadinanza a una donna: 'Non sa l'italiano'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/30/sindaco-cadoneghe-la-donna-marocchina-scartata-su-4-candidate-alla-cittadinanza_a8e7dd2a-deb2-4fea-a454-857724e480fa.html"
-  },
-  {
-   "data": "2026-09-30T18:16:12+00:00",
-   "fonte": "ANSA",
-   "titolo": "Un passeggero cerca di fermare l'aggressore sul volo FlyDubai, la foto con il sangue sulla t-shirt",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/30/passeggero-cerca-di-fermare-rissa-tra-piloti-volo-flydubai-foto-con_bb302a75-1440-42dd-b811-3ccc860a2710.html"
-  },
-  {
-   "data": "2026-09-30T18:13:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Migranti, ancora stop a Schengen con la Spagna: proroga per altri 15 giorni",
-   "url": "https://www.adnkronos.com/cronaca/italia-controlli-frontiere-spagna-15-giorni-migranti-ceuta_1HH0SLqn3Om41PLoRbVvL4"
-  },
-  {
-   "data": "2026-09-30T18:07:49+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Colpito da lacrimogeno a corteo Pro Pal, 'no all'archiviazione'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/30/colpito-da-lacrimogeno-a-corteo-pro-pal-no-allarchiviazione_e8740c8a-b935-4d0e-be0d-e841023396bd.html"
-  },
-  {
-   "data": "2026-09-30T18:02:10+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Viminale, prorogato di 15 giorni lo stop a Schengen con la Spagna",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/30/viminale-prorogato-di-15-giorni-lo-stop-a-schengen-con-la-spagna_69bb1129-788a-4b99-80d3-6fbd233a0200.html"
-  },
-  {
-   "data": "2026-09-30T17:54:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Portogallo, Ronaldo lascia il ritiro: scoppia il caso. Il ct: \"Decido io se gioca\"",
-   "url": "https://www.adnkronos.com/sport/cristiano-ronaldo-choc-ct-portogalloo-lite-fuga-cose-successo_1RoTnPGxQqnB1iyUbys3nI"
-  },
-  {
-   "data": "2026-09-30T17:34:28+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "14enne ferito a coltellate a scuola, aggredito da coetaneo in fuga",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/30/14enne-ferisce-un-coetaneo-con-un-coltello-a-scuola-non-e-grave_63478cd9-15b3-44be-90db-4533424647ec.html"
-  },
-  {
-   "data": "2026-09-30T17:34:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Mps, Tognoli (Cfo Sim): \"Distribuzione azioni Generali? Rischia di rendere Leone più contendibile\"",
-   "url": "https://www.adnkronos.com/finanza/mps-azioni-generali-distribuzione-tognoli_2htoanvBDjvQGrvxOTmzoE"
-  },
-  {
-   "data": "2026-09-30T17:31:21+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Giovane precipita per 15 metri e muore in centro a Milano",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/30/giovane-precipita-per-15-metri-e-muore-in-piazza-gae-aulenti-a-milano_fa408e77-8a21-415e-b133-d289dbe59bc0.html"
-  },
-  {
-   "data": "2026-09-30T17:29:03+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Euro 2032, trasmessi dalla Figc alla Uefa i dossier di 13 città e 14 stadi, Roma con Olimpico e Pietralata",
-   "url": "https://www.adnkronos.com/sport/figc-stadi-euro-2032-uefa-malago-dossier-roma-pietralata-olimpico_5cdHYk1Tku4KbEC0Y3zn3m"
-  },
-  {
-   "data": "2026-09-30T17:27:22+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Al via il processo per la strage di Brandizzo: 'Vergogna'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/30/strage-brandizzo-aggiornata-al-28-ottobre-ludienza-preliminare_030fb1ad-3318-4867-ab62-7b91887cc24a.html"
-  },
-  {
-   "data": "2026-09-30T17:25:13+00:00",
-   "fonte": "ANSA",
-   "titolo": "Arriva il parental control su WhatsApp, serve un Pin per modificarlo",
-   "url": "https://www.ansa.it/canale_tecnologia/notizie/web_social/2026/09/30/arriva-il-parental-control-per-i-teenager-su-whatsapp-anche-in-italia_127783fe-26f4-4b74-a9de-7962555b01ba.html"
-  },
-  {
-   "data": "2026-09-30T17:25:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "'Salute e Costituzione', a Roma confronto tra Europa e Italia sulle sfide del SSn",
-   "url": "https://www.adnkronos.com/cronaca/salute-e-costituzione-a-roma-confronto-tra-europa-e-italia-sulle-sfide-del-ssn_5JlKBLiM0i9cxGjGJE6yD0"
-  },
-  {
-   "data": "2026-09-30T17:18:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Malattia renale cronica, roadmap per rendere sistematico il test dell'uACR",
-   "url": "https://www.adnkronos.com/cronaca/malattia-renale-cronica-roadmap-per-rendere-sistematico-il-test-delluacr_6YlmBPVSoak2t0zhTvsxC2"
   }
  ]
 }
