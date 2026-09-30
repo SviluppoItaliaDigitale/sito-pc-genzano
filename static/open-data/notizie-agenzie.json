@@ -5,64 +5,118 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-09-29T22:41:54+00:00",
+  "generato": "2026-09-30T07:30:09+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-09-29T22:19:27+00:00",
+   "data": "2026-09-30T07:22:49+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Tumori, al via studio per ridurre rischio recidive da cancro al seno",
-   "url": "https://www.adnkronos.com/salute/studio-cancro-seno-ridurre-recidiva-tumore_2elMJWvFieO0pSjlorW6RS"
+   "titolo": "Cgil, Landini: \"La nostra storia al servizio del presente\"",
+   "url": "https://www.adnkronos.com/economia/cgil-landini-la-nostra-storia-al-servizio-del-presente_7b3hhrECk6CKUgWZj8P33S"
   },
   {
-   "data": "2026-09-29T22:18:17+00:00",
+   "data": "2026-09-30T07:20:13+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Diabete, l'Ai ascolta la tua voce e scopre il rischio: bastano 20 secondi",
-   "url": "https://www.adnkronos.com/cronaca/diabete-tipo-2-voce-intelligenza-articiale-lo-studio_2Xy2D66FagjqOExmuH2S4k"
+   "titolo": "Cgil, dall’ia alla transizione energetica, governare il cambiamento",
+   "url": "https://www.adnkronos.com/economia/cgil-dallia-alla-transizione-energetica-governare-il-cambiamento_3faUOzHqVrmq28cbillbXC"
   },
   {
-   "data": "2026-09-29T22:14:01+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Centrosinistra, Renzi apre a Conte: \"Se vince le primarie lo sosterrò\"",
-   "url": "https://www.adnkronos.com/politica/renzi-primarie-conte-calenda-oggi-centrosinistra_7LEblDq6LGta96BFzS30rE"
+   "data": "2026-09-30T07:11:27+00:00",
+   "fonte": "ANSA",
+   "titolo": "Media Israele, 'emergenza su volo da Dubai a Tel Aviv, decollati jet israeliani'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/30/media-israele-emergenza-su-volo-da-dubai-a-tel-aviv-decollati-jet-israeliani_ba82b692-fb5f-4d67-98ba-c75431c1bda0.html"
   },
   {
-   "data": "2026-09-29T22:08:15+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Bollette, Eni taglia 30% su luce-gas. Enel, già da aprile sconto del 50% su elettricità. Meloni: \"Anche altri attori diano una mano\"",
-   "url": "https://www.adnkronos.com/economia/bollette-luce-gas-enel-eni-sconti-offerte_6d3OvZYqgKPVk8BDJ3S8gW"
-  },
-  {
-   "data": "2026-09-29T21:57:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "\"L'IA è la cosa più grande che ci sia\", Trump accelera e la ribattezza Super intelligenza",
-   "url": "https://www.adnkronos.com/internazionale/esteri/intelligenza-artificiale-trump-super-intelligenza_6DYvNOYoBgwGYfLTwXtK2u"
-  },
-  {
-   "data": "2026-09-29T21:37:36+00:00",
+   "data": "2026-09-30T07:10:01+00:00",
    "fonte": "ANSA",
    "titolo": "Di Battista: 'Mi hanno asportato un tumore, ora mi devo curare'",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/09/29/di-battista-mi-hanno-asportato-un-tumore-ora-mi-devo-curare_7339e2ad-f004-4961-8e5e-ec0ca849671b.html"
   },
   {
-   "data": "2026-09-29T20:45:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Di Battista: \"Sono stato operato per un tumore al cervello, mi sto curando\"",
-   "url": "https://www.adnkronos.com/politica/di-battista-tumore-operazione-cuba_3fmLSXWwdIkyQcS9Vj520G"
+   "data": "2026-09-30T07:09:05+00:00",
+   "fonte": "ANSA",
+   "titolo": "La figura e la smisurata eredità di Francesco si fanno Enciclopedia grazie a Treccani",
+   "url": "https://www.ansa.it/sito/notizie/cultura/libri/altre_proposte/2026/09/29/la-figura-e-la-smisurata-eredita-di-francesco-si-fanno-enciclopedia-grazie-a-treccani_65858155-22be-48e7-9606-4d11872a3ce7.html"
   },
   {
-   "data": "2026-09-29T20:37:41+00:00",
+   "data": "2026-09-30T07:06:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "SuperEnalotto, estrazione di oggi 29 settembre 2026: numeri vincenti",
-   "url": "https://www.adnkronos.com/cronaca/superenalotto-numeri-vincenti-oggi-29-settembre_90YJluRMXIzOGfbSsfYxe"
+   "titolo": "Volo Flydubai per Tel Aviv atterra in Arabia Saudita, media: escluso dirottamento dopo l'emergenza",
+   "url": "https://www.adnkronos.com/internazionale/esteri/volo-dubai-tel-aviv-israele-news-oggi_298Qm7ZPcPoJ1M6GiFIqsA"
   },
   {
-   "data": "2026-09-29T20:26:18+00:00",
+   "data": "2026-09-30T06:38:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Grillo vede Stroppa a Roma e pensa al futuro: IA e giovani al centro del progetto",
-   "url": "https://www.adnkronos.com/politica/beppe-grillo-andrea-stroppa-roma-progetto_4KWfqo1hcxTdEQmjXEPcSU"
+   "titolo": "AI, chatbot cinesi rivelano come fabbricare armi biologiche: avviata indagine interna",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ia-chatbot-armi-biologiche-cina_1N9uRvuqkzIRBoYFPDgJy4"
+  },
+  {
+   "data": "2026-09-30T06:31:46+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Rubano 39 chili di cocaina custodita dalla polizia e la sostituiscono con farina, il furto alle Figi",
+   "url": "https://www.adnkronos.com/cronaca/cociana-furto-polizia-farina-figi_16iCnxz3fY4cbVOE7Z5HGA"
+  },
+  {
+   "data": "2026-09-30T06:15:05+00:00",
+   "fonte": "ANSA",
+   "titolo": "Eni, tetto pure alle bollette. È polemica con Enel e A2A",
+   "url": "https://www.ansa.it/sito/podcast/ansa_voice_daily/2026/09/30/eni-tetto-pure-alle-bollette.-e-polemica-con-enel-e-a2a_dee4c6f9-5c3c-4723-8963-0298713c58c3.html"
+  },
+  {
+   "data": "2026-09-30T06:07:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Il piano di Trump, meno sanzioni se Putin libera prigionieri politici",
+   "url": "https://www.adnkronos.com/internazionale/esteri/trump-piano-usa-russia-putin-accordo_5gvFvDPkszT6upImkZlLg0"
+  },
+  {
+   "data": "2026-09-30T05:48:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Iran, Axios: \"Sempre più probabile nuovo conflitto militare con gli Usa\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/iran-usa-guerra-negoziati-news-oggi-30-settembre_5LAZrWWXz9PV4oW4yMb5u4"
+  },
+  {
+   "data": "2026-09-30T05:36:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina, Kiev ancora sotto attacco: missili e droni russi contro la capitale",
+   "url": "https://www.adnkronos.com/internazionale/esteri/guerra-ucraina-russia-news-oggi-30-settembre_PEfbP1eHWYEzalgrtX62o"
+  },
+  {
+   "data": "2026-09-30T05:30:06+00:00",
+   "fonte": "ANSA",
+   "titolo": "Missili e droni sulla regione di Kiev, uccisi un bambino e una donna",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/30/missili-e-droni-su-regione-di-kiev-uccisi-un-bambino-e-una-donna_1ff1313b-a1de-486d-a7ad-e0aac73d5a48.html"
+  },
+  {
+   "data": "2026-09-30T05:19:03+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Di Battista e il tumore al cervello, in Italia circa 6mila diagnosi ogni anno: quali sono i sintomi 'spia'",
+   "url": "https://www.adnkronos.com/politica/di-battista-tumore-cervello-dati-italia-sintomi_2bXW8C7FZjSlPA33mtj9qO"
+  },
+  {
+   "data": "2026-09-30T04:32:50+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Scuola, è caro ripetizioni: quanto costano le lezioni private, materia per materia",
+   "url": "https://www.adnkronos.com/economia/scuola-caro-ripetizioni-quando-costano-in-italia_64wkoh1EtV1tVI8Oks0Iug"
+  },
+  {
+   "data": "2026-09-29T22:19:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Tumori, al via studio per ridurre rischio recidive da cancro al seno",
+   "url": "https://www.adnkronos.com/salute/studio-cancro-seno-ridurre-recidiva-tumore_2elMJWvFieO0pSjlorW6RS"
+  },
+  {
+   "data": "2026-09-29T22:18:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Diabete, l'Ai ascolta la tua voce e scopre il rischio: bastano 20 secondi",
+   "url": "https://www.adnkronos.com/cronaca/diabete-tipo-2-voce-intelligenza-articiale-lo-studio_2Xy2D66FagjqOExmuH2S4k"
+  },
+  {
+   "data": "2026-09-29T20:30:32+00:00",
+   "fonte": "ANSA",
+   "titolo": "Al Premio Tenco 2026 spazio al rock d'autore e alle nuove generazioni",
+   "url": "https://www.ansa.it/sito/notizie/cultura/musica/2026/09/29/al-premio-tenco-2026-spazio-al-rock-dautore-e-alle-nuove-generazioni_6edef398-6235-4587-a258-79be1ecc4d60.html"
   },
   {
    "data": "2026-09-29T20:14:23+00:00",
@@ -71,40 +125,16 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/29/timori-per-la-sicurezza-openai-ferma-lultimo-modello_92464740-3325-472e-8e9a-ab5df61bb9d6.html"
   },
   {
-   "data": "2026-09-29T20:03:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Caso Garlasco, Marino (Ris): \"Esito nullo su pedali bici? Presumo di averlo detto a Garofano\"",
-   "url": "https://www.adnkronos.com/cronaca/caso-garlasco-marino-ris-dna-pedali_1N0lqrKAy7whVe80ZekDxw"
-  },
-  {
    "data": "2026-09-29T19:51:02+00:00",
    "fonte": "ANSA",
    "titolo": "Eni, tetto pure alle bollette. Polemica con Enel e A2A, L'appello di Meloni sull'energia",
    "url": "https://www.ansa.it/sito/notizie/economia/aziende/2026/09/29/da-eni-tetto-alle-bollette-sconto-del-30-rispetto-allofferta-base_fe093fda-3737-4bd8-8211-b569e1eb5bca.html"
   },
   {
-   "data": "2026-09-29T19:39:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sanremo, Di Liberatore: \"Più show, tre 'finali' e spazio ai giovani: così è il Festival di De Martino\"",
-   "url": "https://www.adnkronos.com/spettacoli/festival-sanremo-stefano-de-martino-anticipazioni_4dHT80Y8oqayXMpvhoiVmy"
-  },
-  {
    "data": "2026-09-29T19:34:49+00:00",
    "fonte": "ANSA",
    "titolo": "Oltre 400 fermi in Francia per le proteste studentesche, molti minorenni",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/29/oltre-400-fermi-in-francia-per-le-proteste-studentesche-molti-minorenni_b900d559-d260-4a0f-893d-acaddb01d13d.html"
-  },
-  {
-   "data": "2026-09-29T19:26:08+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sondaggio politico, Fratelli d'Italia cresce e allunga: giù Pd e M5S",
-   "url": "https://www.adnkronos.com/politica/sondaggio-elezioni-porta-a-porta-oggi-voto_6uHXwbVBEmMhMZ78XMECVk"
-  },
-  {
-   "data": "2026-09-29T19:20:14+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Classifica social dei leader, Meloni regina di like e views. Renzi continua la ripresa",
-   "url": "https://www.adnkronos.com/politica/giorgia-meloni-matteo-renzi-classifica-social_4VXaAUAHmCJzfd9HrHqEuw"
   },
   {
    "data": "2026-09-29T19:18:10+00:00",
@@ -129,12 +159,6 @@
    "fonte": "ANSA",
    "titolo": "'Niente esplosivi', è nebbia fitta sul presunto attacco alla base della Raf",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/29/niente-esplosivi-e-nebbia-fitta-sul-presunto-attacco-alla-base-della_450c947b-0d50-4107-a1f0-bb49729a5bb7.html"
-  },
-  {
-   "data": "2026-09-29T18:49:35+00:00",
-   "fonte": "ANSA",
-   "titolo": "Spread a 100 e costo-Btp ai massimi, sulla manovra arriva l'effetto-Trump",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/09/29/spread-btp-bund-oltre-quota-100-per-la-prima-volta-dalla_28d6f012-e908-49b0-a099-7dbbc25ec9de.html"
   },
   {
    "data": "2026-09-29T18:36:04+00:00",
@@ -165,30 +189,6 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Morte di David Rossi, periti: 'Nessun elemento fa ipotizzare il suicidio'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/29/morte-di-david-rossi-periti-nessun-elemento-fa-ipotizzare-il-suicidio_582ee957-7e1e-4f32-acc6-fa57b111cef8.html"
-  },
-  {
-   "data": "2026-09-29T18:26:05+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Spara e uccide ladro, 'i colpi da non più di 14 metri'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/29/spara-e-uccide-il-ladro-la-perizia-colpi-esplosi-da-non-piu-di-14-metri_a9c6f925-9450-4f05-91ea-452563e4bfaf.html"
-  },
-  {
-   "data": "2026-09-29T18:13:13+00:00",
-   "fonte": "ANSA",
-   "titolo": "Effetto 'Maricarmen', Madrid vara il maxi decreto sulla casa",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/09/29/anche-lex-sindaca-di-barcellona-vittima-del-caro-affitti-lascia-casa_1ec52dcb-69c3-448e-bff2-d3058db228cd.html"
-  },
-  {
-   "data": "2026-09-29T18:02:06+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il giallo della ricina, perquisiti gli studi di Gianni Di Vita",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/09/29/madre-e-figlie-avvelenate-con-la-ricina.-gianni-di-vita-in-questura-perquisiti-i-suoi_016113bb-edba-43dd-a287-648c26701c52.html"
-  },
-  {
-   "data": "2026-09-29T17:49:04+00:00",
-   "fonte": "ANSA",
-   "titolo": "La famiglia e il popolo di Fi commemorano i 90 anni di Berlusconi",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/29/la-famiglia-e-il-popolo-di-fi-commemorano-i-90-anni-di-berlusconi_98d09da3-80ff-44e2-acde-3d18c181efb9.html"
   }
  ]
 }
