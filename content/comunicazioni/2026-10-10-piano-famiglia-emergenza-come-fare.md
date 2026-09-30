@@ -71,7 +71,7 @@ Per ciascun familiare:
 Dove sono conservati:
 
 - carte d'identità, passaporti, tessere sanitarie;
-- libretto immobile, patenti;
+- libretto dell'immobile, patenti;
 - documenti assicurativi;
 - copie digitali su cloud o chiavetta USB.
 
