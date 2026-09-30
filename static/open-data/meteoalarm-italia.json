@@ -1,6 +1,6 @@
 {
  "_snapshot": {
-  "generato": "2026-09-29T22:42:04+00:00",
+  "generato": "2026-09-30T14:08:10+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
   "avvisi": 2,
@@ -18,9 +18,9 @@
    "severita": "Moderate",
    "certezza": "Likely",
    "inizio": "2026-10-01T00:00:00+00:00",
-   "fine": "2026-10-01T21:59:00+00:00",
-   "emesso": "2026-09-29T08:22:23+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.260929102223.003"
+   "fine": "2026-10-02T21:59:00+00:00",
+   "emesso": "2026-09-30T08:41:44+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.260930104144.004"
   },
   {
    "in_corso": false,
@@ -31,9 +31,9 @@
    "severita": "Moderate",
    "certezza": "Likely",
    "inizio": "2026-10-01T00:00:00+00:00",
-   "fine": "2026-10-01T21:59:00+00:00",
-   "emesso": "2026-09-29T08:22:23+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.260929102223.002"
+   "fine": "2026-10-02T21:59:00+00:00",
+   "emesso": "2026-09-30T08:41:44+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.260930104144.003"
   }
  ]
 }
