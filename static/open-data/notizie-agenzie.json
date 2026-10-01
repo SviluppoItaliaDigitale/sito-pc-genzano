@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-01T08:58:18+00:00",
+  "generato": "2026-10-01T16:05:48+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-01T08:55:14+00:00",
+   "data": "2026-10-01T15:49:11+00:00",
+   "fonte": "ANSA",
+   "titolo": "Casa a Montecarlo, il pg della Corte di Appello chiede la prescrizione per Fini e i Tulliani",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/01/casa-a-montecarlo-il-pg-della-corte-di-appello-chiede-la-prescrizione-per-fini-e-i-tulliani_fe239a41-c805-4b7c-953e-f05748a77d37.html"
+  },
+  {
+   "data": "2026-10-01T15:48:08+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Philip Morris Italia, nuove nomine al vertice del dipartimento commerciale",
-   "url": "https://www.adnkronos.com/economia/philip-morris-italia-nuove-nomine-al-vertice-del-dipartimento-commerciale_4RQF00nYAgbMI08A1kwaHi"
+   "titolo": "Pistoia, cade dal tetto di un capannone: operaio muore a 43 anni",
+   "url": "https://www.adnkronos.com/cronaca/incidente-sul-lavoro-morto-operaio-pistoia_208Aym6bN30uOADHmtzBwU"
   },
   {
-   "data": "2026-10-01T08:49:51+00:00",
+   "data": "2026-10-01T15:43:39+00:00",
+   "fonte": "ANSA",
+   "titolo": "'Qui niente più woke, ciccioni e trans': le parole di Hegseth fanno il giro del web",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/01/qui-niente-piu-woke-ciccioni-e-trans-parole-di-hegseth-fanno-il-giro_e1d36304-2993-4264-ac66-c0b6e3835ce5.html"
+  },
+  {
+   "data": "2026-10-01T15:40:36+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Minaccia con coltello medici e infermieri in ospedale, disarmato dai carabinieri",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/01/minaccia-con-coltello-medici-e-infermieri-in-ospedale-disarmato-dai-carabinieri_e3276599-a9a1-4565-bf8d-e80c65b62c1e.html"
+  },
+  {
+   "data": "2026-10-01T15:38:38+00:00",
+   "fonte": "ANSA",
+   "titolo": "Tamoil segue Eni, Ip e Q8: 'Fino al 31 ottobre misure per mitigare il prezzo dei carburanti'",
+   "url": "https://www.ansa.it/sito/notizie/economia/aziende/2026/10/01/tamoil-fino-al-31-ottobre-misure-per-mitigare-il-prezzo-dei-carburanti_aeccd963-6814-4300-9b43-d37974b99c55.html"
+  },
+  {
+   "data": "2026-10-01T15:35:49+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'Ue: 'Abbiamo già dato più flessibilità, la lettera di Meloni non è ancora arrivata'",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/01/lue-abbiamo-gia-dato-piu-flessibilita-la-lettera-di-meloni-non-e-ancora_c461cfeb-1f8a-498a-878e-2c5ebb6f7005.html"
+  },
+  {
+   "data": "2026-10-01T15:35:19+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Strade Sicure: via libera in commissione alla Camera, 10mila soldati impegnati",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/01/strade-sicure-via-libera-in-commissione-alla-camera-10mila-soldati-in-strada_7f9e22ef-7549-4e29-9608-9dc71c27a873.html"
+  },
+  {
+   "data": "2026-10-01T15:28:10+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Tale e Quale Show, per i social 'vince' Anna Pettinelli: \"Solo Carmen Di Pietro ha fatto di peggio\"",
-   "url": "https://www.adnkronos.com/spettacoli/anna-pettinelli-tale-e-quale-show-imitazione-ditonellapiaga_2nQf83QOvIQDMNrfbtLSUa"
+   "titolo": "Giungla golf car a Roma, Usb Taxi: \"Bene controlli ma indagare su società che scompaiono al fisco\"",
+   "url": "https://www.adnkronos.com/cronaca/golf-car-roma-usb-taxi-riccardo-cacchione_3JuSnH1GaBEaYkiU0obz4o"
   },
   {
-   "data": "2026-10-01T08:49:00+00:00",
+   "data": "2026-10-01T15:27:56+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Caffé, Cial: anche le capsule in alluminio possono tornare a nuova vita",
-   "url": "https://www.adnkronos.com/economia/caffe-cial-anche-le-capsule-in-alluminio-possono-tornare-a-nuova-vita_4BURHYR7ocO6sCMRKzBtb4"
+   "titolo": "Operaio morto al Colosseo, folla ai funerali di Andrea Moretti: presente anche il ministro Giuli",
+   "url": "https://www.adnkronos.com/cronaca/andrea-moretti-funerale-giuli_2srMNoGz3CPOVFmNuz4kiK"
   },
   {
-   "data": "2026-10-01T08:43:46+00:00",
+   "data": "2026-10-01T15:27:33+00:00",
    "fonte": "ANSA",
-   "titolo": "Gli Emirati Arabi Uniti aprono una indagine sul volo FlyDubai",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/01/gli-emirati-arabi-uniti-aprono-una-indagine-sul-volo-flydubai_28548fa0-3e1a-4da2-b61d-3461cc25cb5e.html"
-  },
-  {
-   "data": "2026-10-01T08:40:51+00:00",
-   "fonte": "ANSA",
-   "titolo": "Asse Roma-Praga, \"misure temporanee sull'Ets contro shock prezzi energia\"",
-   "url": "https://www.ansa.it/sito/notizie/economia/aziende/2026/10/01/asse-roma-praga-misure-temporanee-sullets-contro-shock-prezzi-energia_c461cfeb-1f8a-498a-878e-2c5ebb6f7005.html"
-  },
-  {
-   "data": "2026-10-01T08:34:11+00:00",
-   "fonte": "ANSA",
-   "titolo": "In Gazzetta l'aggiornamento dei Livelli assistenza, 800 fra nuovi servizi e cure",
-   "url": "https://www.ansa.it/canale_saluteebenessere/notizie/sanita/2026/10/01/in-gazzetta-laggiornamento-dei-livelli-assistenza-800-fra-nuovi-servizi-e-cure_1f278fc8-75be-4d8d-9631-69b0abc430af.html"
-  },
-  {
-   "data": "2026-10-01T08:31:36+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Cassazione sul processo a Irene Pivetti, 'è stata svalutata la sua difesa'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/01/cassazione-sul-processo-a-irene-pivetti-e-stata-svalutata-la-sua-difesa_f8a6f400-0a28-46ab-9cb2-efbd6f638fb1.html"
-  },
-  {
-   "data": "2026-10-01T08:31:36+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "'Chi ben comincia', prevenire significa fare comunità: la campagna di Acri e Assiferro",
-   "url": "https://www.adnkronos.com/economia/chi-ben-comincia-prevenire-significa-fare-comunita-la-campagna-di-acri-e-assiferro_3qhktc87Yv3r0w1YEdpcsG"
-  },
-  {
-   "data": "2026-10-01T08:22:03+00:00",
-   "fonte": "ANSA",
-   "titolo": "Drone russo colpisce una scuola a Kiev: strage sfiorata, illesi i bambini",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/01/drone-russo-colpisce-una-scuola-a-kiev-strage-sfiorata-illesi-i-bambini_2092ecf4-11f9-47f3-93ac-0861513698ea.html"
-  },
-  {
-   "data": "2026-10-01T08:19:19+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Sgombero 'Bosco Ospizio', attivisti imbrattano la sede Conad a Bologna",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/01/sgombero-bosco-ospizio-attivisti-imbrattano-la-sede-conad-a-bologna_c41f6b53-0aa3-4738-8058-d2483f936f5d.html"
-  },
-  {
-   "data": "2026-10-01T08:18:41+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Lavoro 'in nero' e turni massacranti, sequestrate due aziende",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/01/lavoro-in-nero-e-turni-massacranti-sequestrate-due-aziende_08fc1aa7-147e-438f-a31f-eb1260e49e35.html"
-  },
-  {
-   "data": "2026-10-01T08:06:50+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "\"Truffa con riti purificatori e diagnosi\", arrestata cartomante a Pisa",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/01/arrestata-cartomante-a-pisa-truffa-con-riti-purificatori-e-diagnosi_ca0f0479-2544-4dc0-89f3-46c21ea69dcc.html"
-  },
-  {
-   "data": "2026-10-01T08:00:55+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Istigazione all'odio in chat neofascista, indagata 20enne salentina",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/01/istigazione-allodio-in-chat-neofascista-indagata-20enne-salentina_c854002f-2e38-43b8-a1a2-21adf545c97b.html"
-  },
-  {
-   "data": "2026-10-01T07:57:00+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "In Gazzetta aggiornamento Livelli assistenza, 800 fra nuovi servizi e cure",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/01/in-gazzetta-aggiornamento-livelli-assistenza-800-fra-nuovi-servizi-e-cure_e3c08f1d-ae67-4c42-9639-2c9424aea009.html"
-  },
-  {
-   "data": "2026-10-01T07:54:07+00:00",
-   "fonte": "ANSA",
-   "titolo": "Borsa: l'Europa scivola con i bond, T-Bond ai massimi dal 2002",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/01/piazza-affari-scivola-1-con-i-btp-lo-spread-a-106_4d97f05d-e664-4891-8b3f-8f2ce5ebe2ae.html"
-  },
-  {
-   "data": "2026-10-01T07:53:30+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Nasconde 20 chili di hascisc nel freezer, arrestato a Cagliari",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/01/nasconde-20-chili-di-hascisc-nel-freezer-arrestato-a-cagliari_5eb8471e-69d1-42e7-872d-f63473ddcdaf.html"
-  },
-  {
-   "data": "2026-10-01T07:52:24+00:00",
-   "fonte": "ANSA",
-   "titolo": "Morta Silvia Bernardocchi, moglie dello chef Giancarlo Perbellini",
-   "url": "https://www.ansa.it/canale_terraegusto/notizie/in_breve/2026/09/30/morta-la-moglie-dello-chef-giancarlo-perbellini-era-malata-da-tempo_b8de77ba-8db0-4d80-858b-988939d4f995.html"
-  },
-  {
-   "data": "2026-10-01T07:50:06+00:00",
-   "fonte": "ANSA",
-   "titolo": "Christa Pike, fallita l'esecuzione con iniezione letale in Tennessee",
+   "titolo": "Christa Pike, fallita la doppia iniezione letale in Tennessee",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/01/fallita-lesecuzione-capitale-di-christa-pike-in-tennessee_081e457a-3905-4351-9a1a-30686aaf1a9b.html"
   },
   {
-   "data": "2026-10-01T07:49:45+00:00",
+   "data": "2026-10-01T15:27:14+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Ancora un incendio in Costiera amalfitana, fiamme tra Positano e Vico Equense",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/01/ancora-un-incendio-in-costiera-amalfitana-fiamme-tra-positano-e-vico-equense_c597630c-4adc-41be-a235-7da8df93ea64.html"
+   "titolo": "Garlasco, Garofano 'tutti i dati sul Dna messi a disposizione delle parti'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/01/garlasco-garofano-tutti-i-dati-sul-dna-messi-a-disposizione-delle-parti_7b7685f8-24dc-4c33-8c00-3fdd222b3383.html"
   },
   {
-   "data": "2026-10-01T07:48:03+00:00",
+   "data": "2026-10-01T15:26:36+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Farmaci illeciti per ridurre l'appetito, Gdf Treviso sequestra 143 fiale",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/01/farmaci-illeciti-per-ridurre-lappetito-gdf-treviso-sequestra-143-fiale_2e18d762-c295-4bc1-8617-2af7ef17c2a6.html"
+   "titolo": "Collettivo liceo Milano: 'Studente picchiato da militanti di Blocco Studentesco'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/01/collettivo-liceo-milano-studente-picchiato-da-militanti-di-blocco-studentesco_65ff3e56-c027-4585-a298-899aa316e319.html"
   },
   {
-   "data": "2026-10-01T07:47:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Vittorio Sgarbi ricoverato al Gemelli, la preoccupazione della figlia Evelina: \"La sofferenza è evidente\"",
-   "url": "https://www.adnkronos.com/spettacoli/vittorio-sgarbi-ricoverato-figlia-evelina_6TgIfLHDranGUf3UvpTboS"
-  },
-  {
-   "data": "2026-10-01T07:45:55+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Abusi sessuali e riduzione in schiavitù, scoperta pseudo setta a Torino: arrestato 59enne",
-   "url": "https://www.adnkronos.com/cronaca/torino-abusi-schiavitu-pseudo-setta-indagini_4tXg1sDqeol8Sq9OweDxlE"
-  },
-  {
-   "data": "2026-10-01T07:42:13+00:00",
+   "data": "2026-10-01T15:25:38+00:00",
    "fonte": "ANSA",
-   "titolo": "Kasparov: 'Avvisato dai servizi lituani e Usa che la mia vita è in pericolo'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/01/kasparov-avvisato-dai-servizi-lituani-e-usa-che-la-mia-vita-e-in-pericolo_3ee90f28-dbef-4535-b7da-0efb0770ffa0.html"
+   "titolo": "Saturno è senza rivali nel cielo di ottobre",
+   "url": "https://www.ansa.it/canale_scienza/notizie/spazio_astronomia/2026/10/01/saturno-e-senza-rivali-nel-cielo-di-ottobre_7ca352b6-3dba-4b09-97df-f337fadc7746.html"
   },
   {
-   "data": "2026-10-01T07:34:28+00:00",
+   "data": "2026-10-01T15:24:38+00:00",
+   "fonte": "ANSA",
+   "titolo": "Garlasco, la famiglia Poggi non sarà parte civile contro Andrea Sempio",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/01/garlasco-la-famiglia-poggi-non-sara-parte-civile-contro-andrea-sempio_d760eac6-f6b6-4fd9-9f8a-980d9a4429ce.html"
+  },
+  {
+   "data": "2026-10-01T15:19:46+00:00",
+   "fonte": "ANSA",
+   "titolo": "Violenze e scontri in Francia per le proteste degli studenti, preside aggredito e cosparso di benzina",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/01/violenze-e-scontri-in-francia-per-le-proteste-degli-studenti-preside-aggredito-e-cosparso_e1f80173-ca9a-4a1e-8362-a8dc2efd4ee2.html"
+  },
+  {
+   "data": "2026-10-01T15:15:28+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Cremlino: 'Su Kaliningrad non cerchiamo il conflitto'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/01/drone-russo-colpisce-una-scuola-a-kiev-strage-sfiorata-illesi-i-bambini_2092ecf4-11f9-47f3-93ac-0861513698ea.html"
+  },
+  {
+   "data": "2026-10-01T15:11:56+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Amato (Atletica Teatro alla Scala): \"Campi di atletica il 'palcoscenico' degli atleti del futuro\"",
+   "url": "https://www.adnkronos.com/sport/amato-atletica-teatro-alla-scala-campi-di-atletica-il-palcoscenico-degli-atleti-del-futuro_5G2ffKIt2dYeVWR2n2qR6c"
+  },
+  {
+   "data": "2026-10-01T15:08:32+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Sfruttamento e paghe da due euro l'ora nel Monferrato, tre denunciati",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/01/sfruttamento-e-paghe-da-due-euro-lora-nel-monferrato-tre-denunciati_816ff226-3ab2-4597-ab85-c1cd46212ee8.html"
+   "titolo": "Escursionista precipita da un sentiero e muore nel Bellunese",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/01/escursionista-precipita-da-un-sentiero-e-muore-nel-bellunese_da859e90-868d-48a2-b081-ae70dbcbe695.html"
   },
   {
-   "data": "2026-10-01T07:30:51+00:00",
-   "fonte": "ANSA",
-   "titolo": "Oggi la Giornata Internazionale del Caffè, un mercato da 34 miliardi di dollari",
-   "url": "https://www.ansa.it/canale_terraegusto/notizie/fiere_eventi/2026/09/29/fao-celebra-prima-giornata-internazionale-del-caffe-un-mercato-da-34-miliardi-dollari_96875c0f-d6a6-4a00-90cf-1987c600e0c5.html"
-  },
-  {
-   "data": "2026-10-01T07:30:28+00:00",
-   "fonte": "ANSA",
-   "titolo": "Eni, completato riassetto Plenitude con aumento capitale da 1,56 miliardi",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/01/eni-completato-riassetto-plenitude-con-aumento-capitale-da-156-miliardi_3f89c541-8598-49d0-a17f-b287f98cacce.html"
-  },
-  {
-   "data": "2026-10-01T07:23:41+00:00",
-   "fonte": "ANSA",
-   "titolo": "Legge elettorale alla prova dell'Aula, voto finale segreto tra il 7 e l'8",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/09/30/legge-elettorale-alla-prova-dellaula-voto-finale-segreto-tra-il-7-e-l8_afc2a0af-fc7e-4d3d-97eb-4fcafc26cbb0.html"
-  },
-  {
-   "data": "2026-10-01T07:15:06+00:00",
-   "fonte": "ANSA",
-   "titolo": "Attiviste polacche lanciano a Varsavia il primo distributore di pillole abortive",
-   "url": "https://www.ansa.it/donne/notizie/2026/09/30/attiviste-polacche-lanciano-a-varsavia-il-primo-distributore-di-pillole-abortive_fde2988e-3689-4815-a604-0a07c169951e.html"
-  },
-  {
-   "data": "2026-10-01T07:15:00+00:00",
+   "data": "2026-10-01T15:07:09+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Volo FlyDubai, Netanyahu: \"Presto per parlare di coinvolgimento Iran\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/volo-dubai-dirottamento-aereo-iran-cosa-sappiamo-news-oggi_721FFQ1AcrSICyfjOT9mps"
+   "titolo": "Nba, la canotta indossata da Jordan in Gara-3 delle Finals '98 venduta all'asta per 12,3 milioni",
+   "url": "https://www.adnkronos.com/sport/maglia-jordan-finals-98-battuta-allasta-per-oltre-12-milioni-di-dollari_6UwrTIxlf5kU16nZO4bkcA"
   },
   {
-   "data": "2026-10-01T07:09:13+00:00",
+   "data": "2026-10-01T15:00:18+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Caso Garlasco, la famiglia di Chiara Poggi non sarà parte civile contro Andrea Sempio",
+   "url": "https://www.adnkronos.com/cronaca/garlasco-poggi-parte-civile-sempio_6TwCxOzDu5Eutt3g8iT2Qy"
+  },
+  {
+   "data": "2026-10-01T14:59:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Spread, De Felice (Intesa Sanpaolo): “L’Italia ha fondamentali solidi, le tensioni arrivano dalla Francia”",
+   "url": "https://www.adnkronos.com/economia/spread-francia-oat-gregorio-de-felice_5BLhsOZg9kzO1dLqRM92zg"
+  },
+  {
+   "data": "2026-10-01T14:55:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Malattie rare, Benincasa (Amgen): \"Al via campagna sensibilizzazione su malattia IgG4-correlata\"",
+   "url": "https://www.adnkronos.com/cronaca/malattie-rare-benincasa-amgen-al-via-campagna-sensibilizzazione-su-malattia-igg4-correlata_Df8xS4RlrH23ZQliMOMDy"
+  },
+  {
+   "data": "2026-10-01T14:53:48+00:00",
    "fonte": "ANSA",
-   "titolo": "Le mostre del weekend, dai Brueghel a Matisse e Bacon",
-   "url": "https://www.ansa.it/canale_viaggi/notizie/arte/2026/09/30/le-mostre-del-weekend-dai-brueghel-a-matisse-e-bacon_b9005693-89cc-498c-ac7e-88456c228834.html"
+   "titolo": "Meloni inaugura il Salone nautico a Genova, Salis esclusa dal palco ed è polemica",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/01/meloni-inaugura-il-salone-nautico-a-genova-salis-esclusa-dal-palco-ed-e-polemica_019c9bca-993e-453a-b779-5c44fc74c114.html"
+  },
+  {
+   "data": "2026-10-01T14:44:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Malattie rare: Celano (Apmarr), 'per diagnosi rapida informare su malattia IgG4-correlata'",
+   "url": "https://www.adnkronos.com/cronaca/malattie-rare-celano-apmarr-per-diagnosi-rapida-informare-su-malattia-igg4-correlata_VjPeOYJ37FRkl83YEji9C"
+  },
+  {
+   "data": "2026-10-01T14:42:14+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Maxi incendio a Malo, fiamme in una fabbrica di laterizi: \"Mantenere chiuse porte e finestre\"",
+   "url": "https://www.adnkronos.com/cronaca/incendio-malo-comune-cosa-sappiamo_7smvUetnYn3xc0mVFn9Jmq"
+  },
+  {
+   "data": "2026-10-01T14:39:23+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Hamilton difende Vasseur: \"E' la persona giusta, puntate il dito su chi è più in alto\"",
+   "url": "https://www.adnkronos.com/sport/hamilton-vasseur-ferrari-gp-bahrain_1PFf30GqRKCNXTox5QAG1u"
+  },
+  {
+   "data": "2026-10-01T14:39:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Di Battista e il tumore al cervello, il neurochirurgo: \"Non è una diagnosi senza speranza\"",
+   "url": "https://www.adnkronos.com/cronaca/di-battista-tumore-cerebrale-neurochirurgo-cure_4F52c2klCIlb7mXOJ8oU6S"
+  },
+  {
+   "data": "2026-10-01T14:34:51+00:00",
+   "fonte": "ANSA",
+   "titolo": "Costruire insieme il lavoro che verrà, il convegno al Cnel",
+   "url": "https://www.ansa.it/sito/notizie/eventi/2026/09/30/costruire-insieme-il-lavoro-che-verra-il-convegno-al-cnel_7039c7b5-c7a6-44ca-aaa9-843e629c5c7f.html"
+  },
+  {
+   "data": "2026-10-01T14:17:01+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Operaio muore cadendo dal tetto di un capannone a Pistoia",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/01/operaio-muore-cadendo-dal-tetto-di-un-capannone-a-pistoia_692fc498-d65e-4e2e-bc5d-29eab0d569ed.html"
+  },
+  {
+   "data": "2026-10-01T14:15:04+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Recuperata anche l' alpinista bloccata sul Dente del Gigante",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/01/recuperata-anche-l-alpinista-bloccata-sul-dente-del-gigante_2a5fad2f-5930-4abc-8703-6faa0f9bb41c.html"
   }
  ]
 }
