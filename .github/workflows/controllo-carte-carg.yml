@@ -5,7 +5,8 @@ name: "🗺️ Controllo carte geologiche CARG"
 # Romani) con i record dell'archivio aperto dell'ISPRA: nuova versione del
 # record o checksum del file diverso = la nostra copia è vecchia. Apre o
 # aggiorna 1 issue in-place che si chiude da sola quando le copie tornano
-# allineate. Non scarica né modifica nulla: la sostituzione si fa in
+# allineate. Cerca anche le carte NUOVE della nostra zona (fogli 374, 375,
+# 387, 388 o luoghi dei Castelli nel titolo) non ancora note allo script. Non scarica né modifica nulla: la sostituzione si fa in
 # sessione. Nasce il 01/10/2026 con la pubblicazione delle copie, su
 # richiesta dell'utente («c'è qualcuno che controlla se aggiornano le
 # cartine?»).
@@ -46,14 +47,14 @@ jobs:
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
 
-      - name: "🚨 Apri/aggiorna issue se una copia è vecchia"
+      - name: "🚨 Apri/aggiorna issue se una copia è vecchia o c'è una carta nuova"
         if: ${{ steps.check.outputs.rc != '0' }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
         run: |
           set -uo pipefail
-          TITLE="🗺️ Carte geologiche CARG: l'ISPRA ha aggiornato un foglio copiato sul sito"
+          TITLE="🗺️ Carte geologiche CARG: novità sull'archivio ISPRA per i fogli dei Castelli"
           RUN_URL="https://github.com/$REPO/actions/runs/${{ github.run_id }}"
           BODY=$(printf '_Rilevato il %s UTC da controllo-carte-carg.yml. Issue unica, si chiude da sola quando le copie tornano allineate._\n\n%s\n[Log del run](%s)\n' "$(date -u +%Y-%m-%d\ %H:%M)" "$(cat /tmp/corpo.md)" "$RUN_URL")
           NUM=$(gh issue list --repo "$REPO" --state open --limit 100 \
@@ -75,7 +76,7 @@ jobs:
           REPO: ${{ github.repository }}
         run: |
           set -uo pipefail
-          TITLE="🗺️ Carte geologiche CARG: l'ISPRA ha aggiornato un foglio copiato sul sito"
+          TITLE="🗺️ Carte geologiche CARG: novità sull'archivio ISPRA per i fogli dei Castelli"
           NUM=$(gh issue list --repo "$REPO" --state open --limit 100 \
                   --json number,title \
                   --jq ".[] | select(.title == \"$TITLE\") | .number" | head -1 || true)
