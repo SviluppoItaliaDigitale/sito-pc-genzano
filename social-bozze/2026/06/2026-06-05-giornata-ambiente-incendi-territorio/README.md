@@ -1,7 +1,7 @@
-# Immagini e testi social per «Giornata mondiale dei monumenti: tutela del patrimonio nelle emergenze»
+# Immagini e testi social per «5 giugno: Giornata mondiale dell'ambiente e tutela del territorio»
 
-- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-04-18-giornata-monumenti-patrimonio-emergenze/
-- **Data**: 2026-04-18
+- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-06-05-giornata-ambiente-incendi-territorio/
+- **Data**: 2026-06-05
 - **Badge**: Informazione
 
 ## Dove va ogni file (a prova di errore)

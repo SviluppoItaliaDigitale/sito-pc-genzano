@@ -1,7 +1,7 @@
-# Immagini e testi social per «Giornata mondiale dei monumenti: tutela del patrimonio nelle emergenze»
+# Immagini e testi social per «La Carta naturalistica dei Castelli Romani: leggere il vulcano su cui viviamo»
 
-- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-04-18-giornata-monumenti-patrimonio-emergenze/
-- **Data**: 2026-04-18
+- **Articolo**: https://www.protezionecivilegenzano.it/comunicazioni/2026-09-14-carta-naturalistica-castelli-romani-latium-volcano/
+- **Data**: 2026-09-14
 - **Badge**: Informazione
 
 ## Dove va ogni file (a prova di errore)
@@ -11,7 +11,7 @@ Il numero del carosello è l'ordine di caricamento.
 
 | File | Dove si pubblica |
 |---|---|
-| `feed-carosello-1.jpg`, `feed-carosello-2.jpg` | FEED Instagram + Facebook — carosello: caricale **tutte, in ordine** (1080×1350) |
+| `feed-carosello-1.jpg`, `feed-carosello-2.jpg`, `feed-carosello-3.jpg`, `feed-carosello-4.jpg` | FEED Instagram + Facebook — carosello: caricale **tutte, in ordine** (1080×1350) |
 | `storia.jpg` | STORIE Instagram + Facebook — verticale, sparisce dopo 24h (1080×1920) |
 | `instagram.txt` | testo per Instagram |
 | `facebook.txt` | testo per Facebook (anteprima OG dall'URL) |
