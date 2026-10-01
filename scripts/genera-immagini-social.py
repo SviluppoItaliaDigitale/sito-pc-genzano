@@ -30,6 +30,10 @@ Uso:
   python3 scripts/genera-immagini-social.py content/comunicazioni/2026-04-20-articolo.md
   python3 scripts/genera-immagini-social.py --all
   python3 scripts/genera-immagini-social.py --force <articolo>
+  python3 scripts/genera-immagini-social.py --out-dir /tmp/prove <articolo>   # prova
+
+Ogni immagine porta lungo i bordi una cornice di microtesto con la provenienza
+(scripts/microtesto_cornice.py): invisibile da lontano, leggibile ingrandendo.
 
 Dipendenze: Pillow (pip install Pillow), font-liberation (apt: fonts-liberation).
 """
@@ -44,6 +48,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import social_comune  # noqa: E402
+from microtesto_cornice import cornice_microtesto  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT_COMUNICAZIONI = ROOT / "content" / "comunicazioni"
@@ -283,6 +288,16 @@ def _barra_brand(base: Image.Image, W: int) -> None:
 # prima pubblicazione automatica. Non rimettere progressive=True.
 
 
+def _salva_jpeg(base: Image.Image, out_path: Path, quality: int = 92, **extra) -> None:
+    """Applica la cornice di microtesto sui bordi dell'immagine composta (mai
+    sopra le foto, che stanno sempre ad almeno 60 px dal bordo) e salva il
+    JPEG baseline. Cornice decorativa: provenienza del Gruppo + dominio + anno."""
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    img = cornice_microtesto(base.convert("RGB"), corpo=8)
+    img.save(out_path, "JPEG", quality=quality, optimize=True,
+             progressive=False, **extra)
+
+
 def crea_slide_titolo(titolo: str, badge: str, out_path: Path,
                       W: int = 1080, H: int = 1350) -> Path:
     """Slide 1 del carosello / post singolo: card-titolo verticale nativa 4:5.
@@ -319,8 +334,7 @@ def crea_slide_titolo(titolo: str, badge: str, out_path: Path,
     d.text((60, H - 92), "protezionecivilegenzano.it",
            font=ImageFont.truetype(str(find_font("Bold")), 30), fill=WHITE)
 
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    base.convert("RGB").save(out_path, "JPEG", quality=92, optimize=True, progressive=False)
+    _salva_jpeg(base, out_path)
     return out_path
 
 
@@ -346,8 +360,7 @@ def crea_slide_foto(foto_path: Path, out_path: Path,
         (60, H - 92), "protezionecivilegenzano.it",
         font=ImageFont.truetype(str(find_font("Bold")), 30), fill=WHITE)
 
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    base.convert("RGB").save(out_path, "JPEG", quality=92, optimize=True, progressive=False)
+    _salva_jpeg(base, out_path)
     return out_path
 
 
@@ -384,8 +397,7 @@ def crea_slide_citazione(testo: str, out_path: Path,
     base.alpha_composite(scrim(W, 170, dall_alto=False, alpha_max=150), (0, H - 170))
     d.text((60, H - 92), "protezionecivilegenzano.it",
            font=ImageFont.truetype(str(find_font("Bold")), 30), fill=WHITE)
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    base.convert("RGB").save(out_path, "JPEG", quality=92, optimize=True, progressive=False)
+    _salva_jpeg(base, out_path)
     return out_path
 
 
@@ -411,8 +423,7 @@ def crea_slide_punti(punti: list, out_path: Path,
     base.alpha_composite(scrim(W, 170, dall_alto=False, alpha_max=150), (0, H - 170))
     d.text((60, H - 92), "protezionecivilegenzano.it",
            font=ImageFont.truetype(str(find_font("Bold")), 30), fill=WHITE)
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    base.convert("RGB").save(out_path, "JPEG", quality=92, optimize=True, progressive=False)
+    _salva_jpeg(base, out_path)
     return out_path
 
 
@@ -490,9 +501,8 @@ def crea_slide_affiliazioni(out_path: Path,
     d.text((60, H - 92), "protezionecivilegenzano.it",
            font=ImageFont.truetype(str(find_font("Bold")), 30), fill=WHITE)
 
-    out_path.parent.mkdir(parents=True, exist_ok=True)
     # JPEG quality 95 (era 92) per ridurre artifact su dettagli fini dei loghi
-    base.convert("RGB").save(out_path, "JPEG", quality=95, optimize=True, progressive=False, subsampling=0)
+    _salva_jpeg(base, out_path, quality=95, subsampling=0)
     return out_path
 
 
@@ -558,8 +568,7 @@ def crea_story_verticale(cover_path: Path, titolo: str, descrizione: str,
     d.text((70, H - 100), "protezionecivilegenzano.it",
            font=ImageFont.truetype(str(find_font("Regular")), 30), fill=(223, 234, 245))
 
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    base.convert("RGB").save(out_path, "JPEG", quality=92, optimize=True, progressive=False)
+    _salva_jpeg(base, out_path)
     return out_path
 
 
@@ -738,7 +747,12 @@ def main() -> int:
     parser.add_argument("articolo", nargs="?", help="Path .md singolo")
     parser.add_argument("--all", action="store_true", help="Tutti pubblicati")
     parser.add_argument("--force", action="store_true", help="Sovrascrivi esistenti")
+    parser.add_argument("--out-dir", type=Path, default=None,
+                        help="Cartella base alternativa al posto di social-bozze/ (prove)")
     args = parser.parse_args()
+    if args.out_dir:
+        global BOZZE_DIR
+        BOZZE_DIR = args.out_dir
 
     if args.articolo:
         articoli = [Path(args.articolo)]

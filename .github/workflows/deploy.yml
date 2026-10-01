@@ -14,7 +14,7 @@ permissions:
   contents: read
   pages: write
   id-token: write
-  actions: write  # per chiamare genera-social-bozze.yml a fine caricamento
+  actions: write  # per chiamare genera-social-bozze.yml e archivia-wayback.yml a fine caricamento
 
 concurrency:
   group: "pages"
@@ -227,6 +227,24 @@ jobs:
         run: |
           gh workflow run genera-social-bozze.yml --repo "$GITHUB_REPOSITORY" --ref main -f recupero=true \
             || echo "::warning::Chiamata al materiale social non riuscita: ci pensa il giro orario."
+
+      - name: "🗄️ Copia d'archivio degli articoli appena online"
+        # Stesso istante e stesso motivo del passo precedente: appena caricato
+        # su Aruba, un articolo nuovo o corretto si fa archiviare dalla Wayback
+        # Machine, che ne data la prima pubblicazione in modo indipendente.
+        # Il giro giornaliero di archivia-wayback.yml fa da rete. Non blocca
+        # mai il deploy.
+        # Solo per i deploy di contenuti (merge, pubblicazione programmata,
+        # allerta): quelli di sfondo del coalescer arrivano ogni mezz'ora per
+        # meteo e QR e chiederebbero a Internet Archive le stesse verifiche
+        # decine di volte al giorno. Stessa condizione della concurrency.
+        if: ${{ (github.event_name == 'push' && !contains(github.event.head_commit.message, '[skip-')) || (github.event_name == 'workflow_dispatch' && github.event.inputs.priority != 'background') }}
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run archivia-wayback.yml --repo "$GITHUB_REPOSITORY" --ref main \
+            || echo "::warning::Chiamata alla copia d'archivio non riuscita: ci pensa il giro giornaliero."
 
       - name: "🏗️ Build per GitHub Pages"
         env:

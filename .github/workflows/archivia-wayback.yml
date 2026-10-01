@@ -1,0 +1,54 @@
+name: "🗄️ Copia d'archivio su Wayback Machine"
+
+# Fa salvare dalla Wayback Machine di Internet Archive gli articoli appena
+# usciti o corretti: una copia datata da un ente indipendente, consultabile da
+# chiunque, è la prova di prima pubblicazione quando un nostro testo compare
+# altrove. Logica e limiti in scripts/archivia-wayback.py.
+#
+# Inneschi:
+#   - deploy.yml lo chiama al termine di ogni caricamento su Aruba (è
+#     l'istante in cui un articolo diventa online);
+#   - un giro al giorno di rete, alle 06:37 UTC, per ciò che un deploy
+#     interrotto o un 429 di Internet Archive hanno lasciato indietro.
+#
+# Non tocca il repository e non apre issue: una copia mancata si recupera al
+# giro successivo, finché l'articolo resta nella finestra dei tre giorni.
+#
+# Secret facoltativi IA_S3_ACCESS / IA_S3_SECRET: chiavi gratuite di un
+# account archive.org (https://archive.org/account/s3.php). Senza, lo script
+# usa il salvataggio anonimo, più lento (3 al minuto).
+
+on:
+  schedule:
+    - cron: '37 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  # Un giro alla volta: i deploy ravvicinati lo chiamano più volte, e due giri
+  # in parallelo chiederebbero due volte le stesse pagine. Un giro in corso
+  # non si annulla mai.
+  group: archivia-wayback
+  cancel-in-progress: false
+
+jobs:
+  archivia:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          # Serve la storia completa: l'ultima modifica di un articolo è la
+          # data del suo ultimo commit.
+          fetch-depth: 0
+
+      - name: Archivia gli articoli usciti o cambiati di recente
+        env:
+          TZ: Europe/Rome
+          IA_S3_ACCESS: ${{ secrets.IA_S3_ACCESS }}
+          IA_S3_SECRET: ${{ secrets.IA_S3_SECRET }}
+        # Lo script esce sempre con 0: gli errori di rete finiscono nel log.
+        run: python3 scripts/archivia-wayback.py --giorni 3 --max 10
