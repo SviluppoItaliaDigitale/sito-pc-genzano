@@ -19,7 +19,10 @@
 {{ $altUrl := .altUrl }}
 {{ $altLabel := .altLabel }}
 {{ $fallbackText := .fallbackText }}
-{{ $widgetId := default (printf "ext-widget-%d" now.UnixNano) .widgetId }}
+{{/* Id deterministico: derivato dall'URL del widget, non da now.UnixNano
+     (dal 01/10/2026): con l'orario, le 3 pagine col widget cambiavano a
+     ogni build e venivano ricaricate su Aruba senza motivo. */}}
+{{ $widgetId := default (printf "ext-widget-%s" (substr (md5 (printf "%s" .src)) 0 10)) .widgetId }}
 {{ $headingId := printf "%s-heading" $widgetId }}
 
 <section id="{{ $widgetId }}" class="ext-widget-section" aria-labelledby="{{ $headingId }}">
