@@ -32,7 +32,7 @@ Lavora **su una copia** dei data file, mai su `main` con dati finti: `cp data/al
 
 ### Verifica in produzione (solo lettura)
 
-`bash scripts/smoke-test-live.sh`, `bash scripts/verifica-fingerprint-live.sh`, `curl` di `/allerta-cap.xml` e `/allerta-stato/` live, coerenza con `data/allerta.json` su `main`, orario dell'ultimo `check-allerta.yml` (in ora italiana).
+`bash scripts/smoke-test-live.sh`, `python3 scripts/verifica-deploy-aruba.py`, `curl` di `/allerta-cap.xml` e `/allerta-stato/` live, coerenza con `data/allerta.json` su `main`, orario dell'ultimo `check-allerta.yml` (in ora italiana).
 
 ### Correzioni
 
