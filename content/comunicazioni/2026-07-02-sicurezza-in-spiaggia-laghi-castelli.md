@@ -30,7 +30,7 @@ La maggior parte degli annegamenti è **evitabile** con comportamenti prudenti.
 ## I laghi dei Castelli
 
 I laghi di **Nemi** e **Albano** sono ambienti specifici:
-- **Origine vulcanica** — formati in crateri spenti.
+- **Origine vulcanica** — occupano antichi crateri di un vulcano quiescente, cioè in pausa.
 - **Profondità notevoli** (Nemi 33 m, Albano fino a 170 m).
 - **Acque fredde** anche d'estate sotto il primo metro.
 - **Aree sorvegliate** limitate a stabilimenti ed eventi.

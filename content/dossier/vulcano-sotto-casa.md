@@ -35,7 +35,7 @@ Non è un singolo cono, ma un grande **apparato esplosivo**: un bordo esterno �
 {{< /dossier-scena >}}
 
 {{< dossier-dati id="numeri" >}}
-{{< dossier-dato to="36" unita=" mila" label="**Anni** dall'ultima eruzione secondo la datazione classica: da allora il vulcano è in pausa (cifra dibattuta)" >}}
+{{< dossier-dato to="36" unita=" mila" label="**Anni** dall'ultima eruzione secondo l'INGV: da allora il vulcano è in pausa" >}}
 {{< dossier-dato to="2" unita=" mm/anno" label="Il **sollevamento** del suolo rilevato dallo studio Marra 2016: possibile ricarica su tempi geologici" >}}
 {{< dossier-dato to="6200" unita=" m²" label="L'area di **degassamento** anomalo monitorata a Cava dei Selci, sul versante nord del distretto" >}}
 {{< dossier-dato to="110" label="I **punti fissi** di misura del flusso di CO₂ dal suolo a Cava dei Selci" >}}
