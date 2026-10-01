@@ -25,11 +25,11 @@
     "ordine": 1806,
     "anno": "26 agosto 1806",
     "tipo": "sismico",
-    "titolo": "Terremoto dei Castelli Romani — il sisma di riferimento",
-    "luogo": "Castelli Romani, danni rilevanti a Genzano",
-    "descrizione": "Il 26 agosto 1806 un forte terremoto colpisce l'area dei Castelli Romani con epicentro stimato fra Rocca di Papa e Genzano. A Genzano l'intensità macrosismica raggiunge il grado VIII MCS: crolli e danni gravi documentati a Palazzo Sforza Cesarini e alla Chiesa della SS. Trinità (Chiesa della Cima). È il sisma di riferimento (benchmark) per il rischio sismico massimo storico del nostro territorio comunale.",
-    "lezione": "Vivere in zona sismica 2B non è un'astrazione amministrativa: è la memoria di eventi accaduti. Le moderne norme antisismiche (NTC 2018) sono calibrate proprio sulla sismicità storica come questa.",
-    "fonte": "INGV — Catalogo Parametrico dei Terremoti Italiani CPTI15 e Database Macrosismico DBMI15",
+    "titolo": "Terremoto dei Castelli Romani del 1806",
+    "luogo": "Castelli Romani, danni gravi a Genzano",
+    "descrizione": "Il 26 agosto 1806, alle 7:35 (ora di Greenwich), un forte terremoto colpisce i Colli Albani. L'INGV (CPTI15) ne stima la magnitudo momento in 5,6. A Genzano il Database Macrosismico Italiano (DBMI15) registra l'intensità VIII MCS: il catalogo CFTI5Med parla di gravi danni, con morti e feriti. Gli effetti massimi toccano anche Rocca di Papa e Velletri. A Genzano è l'intensità più alta registrata nel DBMI15. Altri terremoti dei Colli Albani vi sono stati sentiti con intensità VII nel 1892 e nel 1927, VI nel 1829 e nel 1899.",
+    "lezione": "Vivere in zona sismica 2B non è un'astrazione amministrativa: dietro la classificazione c'è la storia sismica documentata dall'INGV, con danni gravi anche a Genzano.",
+    "fonte": "INGV — Catalogo Parametrico dei Terremoti Italiani CPTI15 v4.0 e Database Macrosismico DBMI15 v4.0; INGV — CFTI5Med, Catalogo dei Forti Terremoti in Italia",
     "fonte_url": "https://emidius.mi.ingv.it/CPTI15-DBMI15/"
   },
   {

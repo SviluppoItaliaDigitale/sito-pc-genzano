@@ -8,7 +8,7 @@ weight: 9
 toc: true
 # Schema.org HowTo — 3 step PRIMA/DURANTE/DOPO per rich result Google.
 howto_prima: "Conosci il tuo territorio: se vivi vicino a Cava dei Selci o ad altre aree note, informati presso il Comune e l'ARPA Lazio. Aera cantine, scantinati e seminterrati prima di entrarci dopo periodi di chiusura prolungata. Mai entrare in pozzi senza autorizzazione e senza personale specializzato con strumentazione (ossimetro). Mantieni ventilate caldaie, scaldabagni a gas, ambienti dove si bruciano combustibili. Per chi ha bambini o animali domestici, tieni sempre chiuse le cantine non aerate."
-howto_durante: "Esci immediatamente all'aria aperta se senti odore strano o malessere. Non tornare indietro a controllare meglio. Non aiutare una persona priva di sensi entrando dentro: sarebbe la seconda vittima (molte vittime in spazi confinati sono proprio soccorritori improvvisati senza protezione). Chiama il 112 specificando 'sospetto di gas in spazio confinato': arriveranno i Vigili del Fuoco con autorespiratori. Mantieni l'area isolata. Se sei in casa, apri tutte le finestre, esci, chiama il 112."
+howto_durante: "Esci immediatamente all'aria aperta se senti odore strano o malessere. Non tornare indietro a controllare meglio. Non entrare a soccorrere una persona priva di sensi: senza attrezzatura e addestramento rischi di diventare a tua volta una vittima. Chiama il 112 specificando 'sospetto di gas in spazio confinato': arriveranno i Vigili del Fuoco con autorespiratori. Mantieni l'area isolata. Se sei in casa, apri tutte le finestre, esci, chiama il 112."
 howto_dopo: "Segnala al Comune e all'ARPA Lazio la presenza di anomalie ambientali persistenti (animali morti, vegetazione secca a macchia, bolle in sorgenti) per attivare il monitoraggio scientifico. Per il sistema sismico consulta INGV su terremoti.ingv.it per verificare se la scossa è stata registrata. Verifica eventuali danni strutturali alla casa (crepe nuove, infissi disallineati). Non entrare in cantine, pozzi, scantinati o spazi confinati non aerati. Non tentare il soccorso entrando in uno spazio confinato senza autorespiratore."
 ---
 
@@ -41,6 +41,8 @@ I fenomeni che il cittadino può effettivamente incontrare oggi sono **due**:
 
 ## <i class="bi bi-droplet-half text-primary me-2" aria-hidden="true"></i>Le emissioni di CO₂ — il fenomeno principale di interesse pratico {#emissioni-co2}
 L'**anidride carbonica (CO₂)** è un gas **incolore, inodore, più pesante dell'aria**. In concentrazioni elevate è **pericolosa** perché soffoca, sostituendo l'ossigeno respirabile. Negli spazi confinati o nelle depressioni del terreno (cantine, pozzi, scantinati, fossi, dossi naturali) la CO₂ può accumularsi a livelli letali per esseri umani e animali, anche se l'aria all'aperto immediatamente sopra è respirabile.
+
+**Episodi documentati.** A Cava dei Selci, nel Comune di Marino, il gas ha ucciso 29 mucche il 18 settembre 1999 e 6 pecore l'11 marzo 2000. Il 30 dicembre 2000 nella stessa zona è morto un uomo per asfissia da gas ([Carapezza et al., INGV, 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC10014802/)).
 
 **Aree note di emissione** (non esaustivo). Secondo il Dipartimento della Protezione Civile i principali punti sono Cava dei Selci, Santa Maria delle Mole, Marino, Frattocchie, Ciampino e Tor Caldara. Secondo la sorveglianza dell'INGV emissioni anomale arrivano anche dal fondo del lago Albano e dalle zone periferiche di Solforata, Ardea e Tor Caldara. La presenza di emissioni in luoghi specifici è oggetto di studio continuo da parte di INGV e dell'ARPA Lazio.
 
@@ -78,7 +80,7 @@ L'aria all'aperto, ventilata, **non** è un problema: il pericolo è confinato.
 Se entrando in uno spazio confinato senti **mancanza d'aria, capogiro, nausea, mal di testa improvviso**, oppure trovi un animale morto o una persona priva di sensi:
 
 - **Esci immediatamente** all'aria aperta. Non tornare indietro a "controllare meglio".
-- **Non soccorrere** una persona priva di sensi entrando nello spazio confinato: diventeresti la seconda vittima. Una parte rilevante delle vittime nei pozzi e negli spazi confinati sono proprio soccorritori improvvisati, entrati senza protezione respiratoria.
+- **Non soccorrere** una persona priva di sensi entrando nello spazio confinato: diventeresti la seconda vittima, come avverte il [manuale di INAIL e Ministero del Lavoro sugli ambienti confinati](https://www.lavoro.gov.it/temi-e-priorita/salute-e-sicurezza/focus-on/commissione-consultiva-permanente/Documents/manuale-ambienti-confinati.pdf) per chi soccorre senza addestramento. Chiama il 112: arrivano i Vigili del Fuoco con gli autorespiratori.
 - Chiama il **112** specificando "sospetto di gas in spazio confinato": arriveranno i Vigili del Fuoco con autorespiratori.
 - Mantieni l'area **isolata** e allontana le persone curiose. Nessuno deve entrare.
 - Se sei in casa e senti odore strano: apri tutte le finestre, esci, chiama il 112. Potrebbe essere monossido di carbonio (CO) da caldaia, anch'esso pericoloso.
@@ -115,6 +117,7 @@ Per i comportamenti completi vedi la pagina dedicata: [Rischio Sismico — cosa 
 - [Dipartimento di Protezione Civile — Colli Albani](https://rischi.protezionecivile.gov.it/it/vulcanico/vulcani-italia/colli-albani/) — scheda del vulcano, storia eruttiva e rischio gas
 - [INGV — terremoti recenti](https://terremoti.ingv.it/) — dati sismici in tempo reale, anche di bassa magnitudo
 - [CNR-IGAG](https://www.igag.cnr.it/) — Istituto di Geologia Ambientale e Geoingegneria
+- [INGV e Servizio sanitario regionale del Lazio — «Health impact of natural gas emission at Cava dei Selci residential zone», *Environmental Geochemistry and Health*, 2022](https://pmc.ncbi.nlm.nih.gov/articles/PMC10014802/) — episodi di morte per gas a Cava dei Selci e misure delle concentrazioni
 - [ISPRA — IdroGEO](https://idrogeo.isprambiente.it/) — mappa nazionale di pericolosità geologica
 - [ARPA Lazio](https://www.arpalazio.it/) — qualità dell'aria e monitoraggio ambientale regionale
 - [Dipartimento di Protezione Civile — Rischio vulcanico](https://rischi.protezionecivile.gov.it/it/vulcanico/) — quadro nazionale dei vulcani italiani

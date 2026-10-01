@@ -191,3 +191,21 @@ dati:
         perche: "Per la Regione Lazio la sottozona 2B di Genzano è a sismicità media, non medio-alta."
         contesto: '2B|[Zz]ona\s+(?:sismica\s+)?2\b'
         stessa_frase: true
+
+  - id: terremoto-1806-genzano
+    dato: "Terremoto del 26 agosto 1806 e intensità a Genzano di Roma"
+    valore: "Colli Albani, Mw 5,6 (CPTI15 v4.0); intensità VIII MCS a Genzano (DBMI15 v4.0); «gravi danni con morti e feriti» (CFTI5Med). Altri terremoti dei Colli Albani a Genzano: VII nel 1892 e nel 1927, VI nel 1829 e nel 1899"
+    fonti:
+      - nome: "INGV, DBMI15 v4.0 (record «Genzano di Roma») e CPTI15 v4.0"
+        url: "https://emidius.mi.ingv.it/CPTI15-DBMI15/"
+      - nome: "INGV, CFTI5Med, terremoto del 26 agosto 1806 (Colli Albani)"
+        url: "https://storing.ingv.it/cfti/cfti5/"
+    vietati:
+      - regex: 'Palazzo Sforza|Chiesa della (?:SS\.|Santissima) Trinit|Chiesa della Cima'
+        perche: "Il CFTI5Med non cita danni a Palazzo Sforza Cesarini né alla chiesa della Trinità nel 1806: per Genzano parla di «gravi danni, con morti e feriti»."
+        contesto: '1806'
+        finestra: 250
+      - regex: 'epicentro stimato fra Rocca di Papa e Genzano'
+        perche: "L'epicentro calcolato dal CFTI5Med e dal CPTI15 è nei Colli Albani (circa 41,72 N, 12,73 E), senza una collocazione «fra Rocca di Papa e Genzano»."
+        contesto: '1806'
+        finestra: 250

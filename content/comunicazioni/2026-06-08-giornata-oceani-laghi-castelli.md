@@ -6,7 +6,7 @@ badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
 image: "/images/2026-06-08-giornata-oceani-laghi-castelli.webp"
-image_alt: "Lago di Nemi visto dall'alto in una mattinata limpida, con il borgo affacciato sulla caldera"
+image_alt: "Cover dell'articolo: 8 giugno: Giornata mondiale degli oceani e la lezione per i nostri laghi"
 scadenza: ""
 area: "Genzano di Roma"
 allegati: []

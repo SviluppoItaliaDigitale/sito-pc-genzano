@@ -32,7 +32,7 @@ La maggior parte degli annegamenti è **evitabile** con comportamenti prudenti.
 I laghi di **Nemi** e **Albano** sono ambienti specifici:
 - **Origine vulcanica** — occupano antichi crateri di un vulcano quiescente, cioè in pausa.
 - **Profondità notevoli** (Nemi 33 m, Albano fino a 168 m).
-- **Acque fredde** anche d'estate sotto il primo metro.
+- **Acque più fredde** in profondità, anche d'estate.
 - **Aree sorvegliate** limitate a stabilimenti ed eventi.
 - **Correnti** generalmente assenti, ma vento sul Lago Albano può generare onde.
 
