@@ -277,11 +277,18 @@ def testo_html(sorgente: str) -> str:
     return " ".join(p.parti)
 
 
+RE_CORNICE = re.compile(r"<(header|nav|footer|aside)\b.*?</\1\s*>", flags=re.S | re.I)
+
+
 def regione_articolo(sorgente: str) -> str:
-    """Il blocco <article> se c'è (esclude menu, barre laterali e piè di
-    pagina, dove un link al nostro sito non direbbe nulla su questa notizia)."""
-    m = re.search(r"<article\b.*?</article>", sorgente, flags=re.S | re.I)
-    return m.group(0) if m and len(m.group(0)) > 2000 else sorgente
+    """Il contenuto della notizia, senza menu, barre laterali e piè di pagina:
+    un link al nostro sito lì non dice nulla su questa notizia. Si prende il
+    blocco <article> più lungo, anche se breve (una notizia di poche righe resta
+    una notizia); senza <article> si toglie la cornice dalla pagina intera."""
+    blocchi = re.findall(r"<article\b.*?</article>", sorgente, flags=re.S | re.I)
+    if blocchi:
+        return max(blocchi, key=len)
+    return RE_CORNICE.sub(" ", sorgente)
 
 
 # ──────────────────────────────────────────────────────────────
@@ -461,6 +468,16 @@ def confronta(testo: str, indice: dict[str, set[str]]) -> dict[str, tuple[int, l
             for slug, pos in per_slug.items() if len(pos) >= SOGLIA_FRAMMENTI}
 
 
+def uscita_prima(data_notizia: dt.datetime | None, nostro: dt.datetime | None) -> bool:
+    """Vero solo se la notizia esterna è di un giorno precedente al nostro.
+    La data dei nostri articoli è il giorno (mezzanotte, o 00:01, 00:02…),
+    mentre la pagina va online al primo deploy utile: dentro lo stesso giorno
+    l'ordine non si conosce, e non si dichiara una precedenza che non si sa."""
+    if not data_notizia or not nostro:
+        return False
+    return data_notizia.astimezone(S.TZ).date() < nostro.astimezone(S.TZ).date()
+
+
 def parte_feed(nostri: list[dict], ora: dt.datetime) -> dict:
     indice: dict[str, set[str]] = defaultdict(set)
     parole_nostre: set[str] = {"genzano"}
@@ -534,7 +551,7 @@ def parte_feed(nostri: list[dict], ora: dt.datetime) -> dict:
                 # Una notizia uscita prima del nostro articolo non lo ha
                 # ripreso: il testo in comune viene da una fonte comune
                 # (programma di un evento, comunicato di un ente).
-                "precedente": bool(v["data"] and v["data"] < usciti.get(slug, v["data"])),
+                "precedente": uscita_prima(v["data"], usciti.get(slug)),
             })
     log(f"Pagine scaricate: {esito['pagine']}; notizie confrontate sul solo feed: {esito['solo_feed']}")
     return esito
