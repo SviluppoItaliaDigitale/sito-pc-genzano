@@ -7,7 +7,10 @@ name: "🗺️ Controllo carte geologiche CARG"
 # aggiorna 1 issue in-place che si chiude da sola quando le copie tornano
 # allineate. Cerca anche le carte NUOVE della nostra zona (fogli 374, 375,
 # 387, 388 o luoghi dei Castelli nel titolo) non ancora note allo script. Non scarica né modifica nulla: la sostituzione si fa in
-# sessione. Nasce il 01/10/2026 con la pubblicazione delle copie, su
+# sessione. Exit 2 dello script = esito indeterminato (archivio ISPRA
+# irraggiungibile): non si apre né si chiude nulla, perché un disservizio
+# della fonte non è né una carta cambiata né una «risoluzione».
+# Nasce il 01/10/2026 con la pubblicazione delle copie, su
 # richiesta dell'utente («c'è qualcuno che controlla se aggiornano le
 # cartine?»).
 
@@ -48,12 +51,12 @@ jobs:
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: "🚨 Apri/aggiorna issue se una copia è vecchia o c'è una carta nuova"
-        if: ${{ steps.check.outputs.rc != '0' }}
+        if: ${{ steps.check.outputs.rc != '0' && steps.check.outputs.rc != '2' }}
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
         run: |
-          set -uo pipefail
+          set -euo pipefail
           TITLE="🗺️ Carte geologiche CARG: novità sull'archivio ISPRA per i fogli dei Castelli"
           RUN_URL="https://github.com/$REPO/actions/runs/${{ github.run_id }}"
           BODY=$(printf '_Rilevato il %s UTC da controllo-carte-carg.yml. Issue unica, si chiude da sola quando le copie tornano allineate._\n\n%s\n[Log del run](%s)\n' "$(date -u +%Y-%m-%d\ %H:%M)" "$(cat /tmp/corpo.md)" "$RUN_URL")
@@ -75,7 +78,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
         run: |
-          set -uo pipefail
+          set -euo pipefail
           TITLE="🗺️ Carte geologiche CARG: novità sull'archivio ISPRA per i fogli dei Castelli"
           NUM=$(gh issue list --repo "$REPO" --state open --limit 100 \
                   --json number,title \
@@ -87,3 +90,8 @@ jobs:
           else
             echo "Copie allineate, nessuna issue aperta."
           fi
+
+      - name: "⏸️ Esito indeterminato: archivio ISPRA irraggiungibile"
+        if: ${{ steps.check.outputs.rc == '2' }}
+        run: |
+          echo "::warning::L'archivio ISPRA non ha risposto: controllo rimandato al prossimo giro, issue lasciata com'è."

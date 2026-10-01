@@ -27,8 +27,10 @@ nostra zona».
 Non scarica nulla e non modifica nulla: la sostituzione della copia e
 l'aggiornamento dell'articolo si fanno in sessione, dopo aver letto cosa è
 cambiato. Exit code = numero di segnalazioni (0 = tutto allineato); in
-caso di fonte irraggiungibile su tutti i record esce 0 ma lo scrive, perché
-un archivio giù per un'ora non è una carta cambiata.
+caso di fonte irraggiungibile (nessun record letto, o ricerca delle carte
+nuove non eseguibile) esce 2 = esito INDETERMINATO: un archivio giù per
+un'ora non è una carta cambiata, ma non è nemmeno un «tutto allineato», e
+il workflow in quel caso non apre né chiude l'issue.
 
 Uso:
   python3 scripts/check-carte-carg.py [--issue-body corpo.md]
@@ -187,12 +189,15 @@ def main(argv: list[str]) -> int:
     else:
         print("❗ ricerca di carte nuove della zona: l'archivio non ha risposto")
     fonte_giu = raggiunti == 0
+    indeterminato = fonte_giu or not ricerca_ok
     if fonte_giu:
-        print("\n❗ L'archivio ISPRA non ha risposto per nessun record: controllo non eseguibile, nessuna segnalazione.")
+        print("\n❗ L'archivio ISPRA non ha risposto per nessun record: controllo non eseguibile (esito indeterminato, exit 2).")
     elif segnalazioni:
         print(f"\n{len(segnalazioni)} segnalazioni: le copie in static/manuali/carg/ vanno riviste.")
     else:
         print("\nTutte le copie coincidono con l'archivio ISPRA (nessuna nuova versione, stessi checksum).")
+    if indeterminato and not fonte_giu and not segnalazioni:
+        print("Esito indeterminato (exit 2): copie allineate ma ricerca delle carte nuove non eseguita.")
     if a.issue_body and segnalazioni and not fonte_giu:
         corpo = ["Confronto fra le copie in `static/manuali/carg/` e i record dell'archivio aperto dell'ISPRA "
                  "(`openaccessrepository.it`, API InvenioRDM: versione del record e checksum md5 del file), più la "
@@ -205,7 +210,9 @@ def main(argv: list[str]) -> int:
                   "(`scripts/audit-pdf-accessibilita.py --write`). Se il record ha una nuova versione, aggiornare anche "
                   "l'id in `scripts/check-carte-carg.py`."]
         Path(a.issue_body).write_text("\n".join(corpo) + "\n", encoding="utf-8")
-    return 0 if fonte_giu else len(segnalazioni)
+    if fonte_giu or (indeterminato and not segnalazioni):
+        return 2
+    return len(segnalazioni)
 
 
 if __name__ == "__main__":
