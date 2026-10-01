@@ -1,6 +1,6 @@
 ---
 title: "Alberi e rami in via Lenin e via Garibaldi: gli interventi del 24 e 25 settembre"
-date: 2026-09-26T00:04:00+02:00
+date: 2026-10-01T00:03:00+02:00
 description: "Rami sulla strada in via Lenin, un albero divelto da un'autovettura e un grosso albero pericolante in via Garibaldi: gli interventi dal 24 al 26 settembre."
 badge: "Attività"
 priorita: "normale"
