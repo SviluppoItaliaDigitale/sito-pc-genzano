@@ -1,0 +1,67 @@
+name: Controllo settimanale delle copie
+
+# Cerca le riprese dei nostri articoli fuori dal sito, in tre modi:
+#   (1) feed RSS delle testate locali (Castelli Romani, Roma, litorale e
+#       Pontino): notizie degli ultimi 14 giorni confrontate per frammenti di
+#       8 parole con i nostri articoli degli ultimi 30;
+#   (2) feed RSS di Google News: ricerca della frase esatta per due frasi
+#       caratteristiche di ogni articolo degli ultimi 14 giorni;
+#   (3) link di ricerca esatta su Google, Bing e DuckDuckGo, da aprire a mano.
+# Logica, testate e filtri in scripts/controllo-copie.py.
+#
+# Apre o aggiorna UNA sola issue in-place (titolo stabile): il corpo si
+# riscrive a ogni giro, così l'issue dice sempre lo stato della settimana e
+# non accumula commenti. Non tocca il sito, non fa deploy.
+#
+# Scaglionato lunedì 07:47 UTC (fuori dagli altri controlli del lunedì).
+
+on:
+  schedule:
+    - cron: '47 7 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  controllo-copie:
+    runs-on: ubuntu-latest
+    # Limiti interni allo script: 45 s di feed per testata (16 testate), 15
+    # minuti di pagine, 60 ricerche su Google News a 3 s l'una. 40 minuti
+    # lasciano margine.
+    timeout-minutes: 40
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Cerca le copie degli articoli recenti
+        env:
+          TZ: Europe/Rome
+        # Lo script esce sempre con 0: testate o pagine che non rispondono
+        # finiscono annotate nell'issue.
+        run: python3 scripts/controllo-copie.py --issue-body /tmp/controllo-copie.md
+
+      - name: Apri o aggiorna l'issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          TITLE="Controllo settimanale delle copie degli articoli"
+          # Label garantita (idempotente): senza, gh issue create fallisce
+          # con "could not add label" e il job muore (audit 10/06/2026).
+          gh label create "automazione" --color "ededed" \
+            --description "Aperta da un workflow" 2>/dev/null || true
+          gh label create "copie" --color "5319E7" \
+            --description "Riprese dei nostri articoli fuori dal sito" 2>/dev/null || true
+          EXISTING=$(gh issue list --label "automazione" --label "copie" --state open \
+            --json number --jq '.[0].number // empty')
+          if [ -n "$EXISTING" ]; then
+            gh issue edit "$EXISTING" --title "$TITLE" --body-file /tmp/controllo-copie.md
+          else
+            gh issue create \
+              --title "$TITLE" \
+              --body-file /tmp/controllo-copie.md \
+              --label "automazione" \
+              --label "copie"
+          fi

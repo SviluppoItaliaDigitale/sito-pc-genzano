@@ -253,6 +253,8 @@ Genera bozze post social (X, Facebook, Instagram, Telegram) + immagini per il **
 - **Foto** — immagine inline `{{< foto >}}` mostrata **intera, mai tagliata** (fit-contain) su sfondo sfocato di se stessa, card con angoli arrotondati + ombra.
 - **Storia** (9:16) — foto reale in evidenza (o titolo) + descrizione + CTA "Leggi sul sito".
 
+**Cornice di microtesto (01/10/2026):** cover tipografiche (`genera-cover.py`) e immagini social (`genera-immagini-social.py`) portano lungo i quattro bordi la provenienza del Gruppo in caratteri di 8 px a bassa opacità (`scripts/microtesto_cornice.py`, stessa idea della cartina meteo): invisibile da lontano, leggibile ingrandendo, mai sopra le foto. Vale per le immagini generate da quella data; le esistenti non si rigenerano.
+
 Ordine carosello: **title card → citazione → punti → foto** (max 10 slide). Se l'articolo ha `social_video` nel frontmatter, al posto del carosello esce quel video (Reel su Instagram, video su Facebook; rule 10 § "Pubblicazione automatica social"). Citazione e punti compaiono **solo se** i campi `social_citazione`/`social_punti` sono compilati nel frontmatter. Per CLAUDE.md § "Automatismo totale", Claude li compila **dal testo dell'articolo** quando lo scrive (mai inventati); il gate `pc-article-reviewer` ne verifica presenza e fedeltà. Le versioni "facile" (A2) sono escluse dalla generazione social.
 
 **Cartelle e nomi file (a prova di errore — la destinazione è nel nome):**

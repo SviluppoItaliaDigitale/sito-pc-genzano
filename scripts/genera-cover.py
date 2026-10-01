@@ -14,6 +14,10 @@ Uso:
     python3 scripts/genera-cover.py content/comunicazioni/2026-04-21-kit-emergenza-domestico-guida-pratica.md
     python3 scripts/genera-cover.py --all
     python3 scripts/genera-cover.py --all --force
+    python3 scripts/genera-cover.py --out-dir /tmp/prove <articolo.md>   # prova, non tocca static/
+
+Ogni cover porta lungo i bordi una cornice di microtesto con la provenienza
+(scripts/microtesto_cornice.py): invisibile da lontano, leggibile ingrandendo.
 """
 
 import argparse
@@ -22,6 +26,9 @@ import sys
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from microtesto_cornice import cornice_microtesto  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT_DIR = ROOT / "content" / "comunicazioni"
@@ -173,11 +180,12 @@ def slug_from_filename(path: Path) -> str:
     return path.stem
 
 
-def output_path(md_path: Path) -> Path:
-    return IMAGES_DIR / f"{md_path.stem}.webp"
+def output_path(md_path: Path, out_dir: Path | None = None) -> Path:
+    return (out_dir or IMAGES_DIR) / f"{md_path.stem}.webp"
 
 
-def generate_cover(md_path: Path, force: bool = False) -> Path | None:
+def generate_cover(md_path: Path, force: bool = False,
+                   out_dir: Path | None = None) -> Path | None:
     fm = parse_frontmatter(md_path)
     if not fm:
         print(f"[skip] {md_path.name}: no frontmatter")
@@ -185,7 +193,7 @@ def generate_cover(md_path: Path, force: bool = False) -> Path | None:
 
     title = fm.get("title", md_path.stem)
     badge = fm.get("badge", "Informazione")
-    out = output_path(md_path)
+    out = output_path(md_path, out_dir)
 
     if out.exists() and not force:
         print(f"[exists] {out.name}")
@@ -246,6 +254,10 @@ def generate_cover(md_path: Path, force: bool = False) -> Path | None:
         logo = Image.open(LOGO).convert("RGBA").resize((72, 72))
         img.paste(logo, (90, H - BAND_H + 15), logo)
 
+    # Cornice di microtesto anti-appropriazione sui 4 bordi (decorativa,
+    # fuori dall'area del titolo, della banda testuale e del logo).
+    img = cornice_microtesto(img, corpo=8)
+
     # Export WebP, ricomprimi progressivamente se supera 200 KB
     quality = 85
     img.save(out, "WEBP", quality=quality, method=6)
@@ -262,7 +274,11 @@ def main():
     ap.add_argument("paths", nargs="*", help="md files (if empty, use --all)")
     ap.add_argument("--all", action="store_true", help="process every article")
     ap.add_argument("--force", action="store_true", help="regenerate existing")
+    ap.add_argument("--out-dir", type=Path, default=None,
+                    help="cartella di uscita alternativa (prove); default static/images")
     args = ap.parse_args()
+    if args.out_dir:
+        args.out_dir.mkdir(parents=True, exist_ok=True)
 
     if args.all:
         targets = sorted(CONTENT_DIR.glob("*.md"))
@@ -277,7 +293,7 @@ def main():
         if not md.exists():
             print(f"[skip] {md} not found")
             continue
-        generate_cover(md, force=args.force)
+        generate_cover(md, force=args.force, out_dir=args.out_dir)
 
 
 if __name__ == "__main__":
