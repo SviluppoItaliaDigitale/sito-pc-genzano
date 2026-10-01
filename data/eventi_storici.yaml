@@ -70,7 +70,7 @@ eventi:
       riferimento (benchmark) per il rischio sismico massimo storico
       del nostro territorio comunale.
     lezione: >-
-      Vivere in Zona sismica 2 non è un'astrazione amministrativa: è
+      Vivere in zona sismica 2B non è un'astrazione amministrativa: è
       la memoria di eventi accaduti. Le moderne norme antisismiche (NTC
       2018) sono calibrate proprio sulla sismicità storica come questa.
     fonte: "INGV — Catalogo Parametrico dei Terremoti Italiani CPTI15 e Database Macrosismico DBMI15"
@@ -143,16 +143,17 @@ eventi:
     luogo: "Genzano di Roma e Castelli Romani"
     descrizione: >-
       Con l'OPCM 20 marzo 2003 n. 3274 e il recepimento regionale,
-      Genzano di Roma e i Castelli Romani sono classificati in Zona
-      sismica 2 (sismicità medio-alta, ag = 0,15–0,25 g). La
-      classificazione vincola le Norme Tecniche di Costruzione
+      Genzano di Roma è classificata in zona sismica 2 (ag tra 0,15 e
+      0,25 g). Con la DGR n. 387 del 22 maggio 2009 la Regione Lazio
+      divide la zona in due sottozone: Genzano è nella 2B (ag tra 0,15
+      e 0,20 g, sismicità media). La classificazione vincola le Norme Tecniche di Costruzione
       antisismiche per nuove edificazioni e ristrutturazioni.
     lezione: >-
-      Vivere in Zona 2 significa progettare e costruire tenendo conto
+      Vivere in zona 2B significa progettare e costruire tenendo conto
       del terremoto. Non è solo burocrazia: è prevenzione che salva
       vite e patrimonio.
     fonte: "Regione Lazio — DGR n. 387/2009 (classificazione sismica); OPCM 3274/2003"
-    fonte_url: "https://www.regione.lazio.it/"
+    fonte_url: "https://www.regione.lazio.it/sites/default/files/documentazione/AMB_DGR_387_22_05_2009_Allegato1.pdf"
 
   - anno: "novembre 2014"
     ordine: 2014

@@ -75,7 +75,7 @@ Le immagini di Amatrice sono diventate il simbolo di quanto un evento naturale p
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="castelli" image="/images/dossier/vulcano-montecavo.webp" alt="Monte Cavo, la cima boscosa del Vulcano Laziale dei Castelli Romani, si alza sopra le sponde verdi e le acque scure del Lago Albano, con cielo azzurro e nuvole" align="top" kicker="Vicino a casa" title="La sismicità<br>dei Castelli Romani" credito="Monte Cavo · foto NikonZ7II · CC BY-SA 4.0 (Wikimedia Commons)" >}}
-I Castelli Romani sorgono su un vulcano quiescente, il **Vulcano Laziale**, e sono in **zona sismica 2** (medio-alta). La loro sismicità è fatta soprattutto di **scosse deboli e frequenti**, di tipo vulcano-tettonico: di rado i terremoti dell'area sono stati forti.
+I Castelli Romani sorgono su un vulcano quiescente, il **Vulcano Laziale**, e Genzano è in **zona sismica 2B** (sismicità media). La loro sismicità è fatta soprattutto di **scosse deboli e frequenti**, di tipo vulcano-tettonico: di rado i terremoti dell'area sono stati forti.
 
 Non vivremo i terremoti distruttivi di Messina o dell'Irpinia: sono eventi di un'altra natura, lontani da qui. Ma la memoria locale resta viva: il **26 agosto 1806** un terremoto causò danni proprio a **Genzano**, Rocca di Papa e Velletri. Un richiamo a non considerarci immuni.
 {{< /dossier-scena >}}
@@ -83,7 +83,7 @@ Non vivremo i terremoti distruttivi di Messina o dell'Irpinia: sono eventi di un
 {{< dossier-dati id="numeri" >}}
 {{< dossier-dato to="7896" label="I **comuni italiani**, tutti classificati in zona sismica: nessun territorio è a rischio zero (ISTAT 2025)" >}}
 {{< dossier-dato to="4" label="Le **zone sismiche** in cui è diviso il Paese" >}}
-{{< dossier-dato to="2" label="La **zona sismica** dei Castelli Romani (medio-alta)" >}}
+{{< dossier-dato to="2" label="La **zona sismica** di Genzano: zona 2, sottozona **B**, sismicità media (Regione Lazio, 2009)" >}}
 {{< dossier-dato da="1806" label="Gli **anni** dal terremoto storico che colpì Genzano" >}}
 {{< /dossier-dati >}}
 

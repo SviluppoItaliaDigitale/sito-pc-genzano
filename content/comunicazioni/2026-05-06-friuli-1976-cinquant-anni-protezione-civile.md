@@ -111,7 +111,7 @@ Chi vive in zona sismica — e in Italia significa quasi tutti, comprese le aree
 
 ## Genzano e il rischio sismico
 
-Genzano di Roma è in **zona sismica 2B** (sismicità media), classificazione introdotta dall'OPCM 3274/2003. Significa che possono verificarsi terremoti di magnitudo significativa con tempi di ritorno lunghi: non frequenti, ma documentati storicamente. Le costruzioni nuove — successive alle NTC 2008 e in particolare alle NTC 2018 — sono progettate per resistere a sismi attesi con probabilità del 10% in 50 anni.
+Genzano di Roma è in **zona sismica 2B** (sismicità media), secondo la classificazione della Regione Lazio del 2009, nata dai criteri dell'OPCM 3274/2003. Significa che possono verificarsi terremoti di magnitudo significativa con tempi di ritorno lunghi: non frequenti, ma documentati storicamente. Le costruzioni nuove — successive alle NTC 2008 e in particolare alle NTC 2018 — sono progettate per resistere a sismi attesi con probabilità del 10% in 50 anni.
 
 Per i comportamenti di autoprotezione e per la mappa delle aree di attesa del Comune vedi:
 

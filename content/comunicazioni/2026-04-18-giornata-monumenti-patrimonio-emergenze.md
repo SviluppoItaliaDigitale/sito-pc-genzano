@@ -95,7 +95,7 @@ I rischi principali per il patrimonio dei Castelli Romani sono:
 
 ### Rischio sismico
 
-Il Lazio è in zona sismica 2. Anche se la sismicità è **medio-bassa**, un evento significativo può danneggiare edifici storici non adeguati alla normativa antisismica moderna.
+Genzano di Roma è in zona sismica 2B, a sismicità media secondo la Regione Lazio. Un evento significativo può danneggiare edifici storici non adeguati alla normativa antisismica moderna.
 
 ### Incendi
 

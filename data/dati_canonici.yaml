@@ -175,3 +175,19 @@ dati:
       # il vero/falso del kit primaria e la soluzione del cruciverba.
       - "content/formazione/kit-scuola-primaria.md"
       - "static/formazione/schede-stampabili/cruciverba-secondaria2/index.html"
+
+  - id: genzano-zona-sismica
+    dato: "Classificazione sismica di Genzano di Roma"
+    valore: "zona sismica 2, sottozona 2B: ag tra 0,15 e 0,20 g, sismicità media"
+    fonti:
+      - nome: "Regione Lazio, DGR n. 387 del 22 maggio 2009, Allegato 1 «Nuova classificazione sismica del territorio della Regione Lazio»"
+        url: "https://www.regione.lazio.it/sites/default/files/documentazione/AMB_DGR_387_22_05_2009_Allegato1.pdf"
+    vietati:
+      - regex: '\bzon[ae]\s+(?:sismic[ah]\s+)?2\s*[-–]\s*3\b|\bZ2-3\b'
+        perche: "Genzano non è «al confine» fra due zone: è in zona 2, sottozona 2B."
+        contesto: 'Genzano|Castelli|Colli Albani'
+        finestra: 200
+      - regex: '\b(?:pericolosità|sismicità|rischio)\s+medio[- ]alt[oa]\b'
+        perche: "Per la Regione Lazio la sottozona 2B di Genzano è a sismicità media, non medio-alta."
+        contesto: '2B|[Zz]ona\s+(?:sismica\s+)?2\b'
+        stessa_frase: true
