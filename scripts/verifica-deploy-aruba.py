@@ -98,20 +98,42 @@ def url_di(base: str, rel: str) -> str:
     return base + "/" + rel
 
 
+class _SenzaRedirect(urllib.request.HTTPRedirectHandler):
+    """Non seguire i redirect: un 3xx è una regola del server, non il file."""
+
+    def redirect_request(self, req, fp, code, msg, headers, newurl):  # noqa: D401
+        return None
+
+
+_APRI = urllib.request.build_opener(_SenzaRedirect)
+
+
 def scarica(url: str, timeout: int = 25) -> tuple[int, bytes]:
-    """GET senza cache. Restituisce (status, corpo); status 0 = nessuna risposta."""
+    """GET senza cache e SENZA seguire i redirect. Restituisce (status, corpo);
+    status 0 = nessuna risposta, 3xx = il server reindirizza altrove.
+
+    I redirect non si seguono perché .htaccess reindirizza i vecchi URL del
+    sito Joomla (`/pianodiemergenza.html` → `/piano-emergenza/`) che Hugo
+    genera anche come pagine alias: seguendo il 301 si confrontava la pagina
+    di arrivo con l'impronta dell'alias e il file risultava «diverso» pur
+    essendo quello della build (falso positivo del 01/10/2026).
+    """
     sep = "&" if "?" in url else "?"
     req = urllib.request.Request(
         f"{url}{sep}cb={int(time.time())}{random.randint(1000, 9999)}",
         headers={"User-Agent": UA, "Cache-Control": "no-cache", "Pragma": "no-cache",
                  "Accept-Encoding": "identity"})
     try:
-        with urllib.request.urlopen(req, timeout=timeout) as r:
+        with _APRI.open(req, timeout=timeout) as r:
             return r.status, r.read()
     except urllib.error.HTTPError as e:
         return e.code, b""
     except (urllib.error.URLError, OSError, ValueError):
         return 0, b""
+
+
+def reindirizzato(st: int) -> bool:
+    return st in (301, 302, 303, 307, 308)
 
 
 def verificabile(rel: str) -> bool:
@@ -180,19 +202,48 @@ def apri_ftps() -> tuple[FTPS, str] | None:
     if ":" in server:
         server, p = server.rsplit(":", 1)
         porta = int(p)
-    ctx = ssl.create_default_context()
-    if os.environ.get("FTP_TLS_INSECURE") == "1":  # solo per il server di prova locale
-        ctx.check_hostname = False
-        ctx.verify_mode = ssl.CERT_NONE
-    try:
-        ftp = FTPS(context=ctx, timeout=60)
-        ftp.connect(server, porta)
-        ftp.login(utente, password)
-        ftp.prot_p()
-        ftp.set_pasv(True)
-        ftp.cwd(cartella)
-    except ftplib.all_errors as e:  # all_errors è già una tupla e comprende OSError
-        log(f"⚠️  Connessione FTPS non riuscita: {type(e).__name__}: {e}")
+    # Tre livelli di verifica TLS, dal più severo in giù: (1) catena + nome
+    # host; (2) solo catena, perché il certificato dell'FTP di Aruba è
+    # emesso per un nome diverso da quello con cui ci si collega (verificato
+    # il 01/10/2026: «Hostname mismatch»); (3) nessuna verifica, cioè la
+    # stessa posizione dell'action FTP-Deploy (`security: loose`, il suo
+    # default) che carica il sito da mesi. Il canale resta cifrato in tutti
+    # e tre i casi; si scrive nel log a quale livello ci si è fermati.
+    livelli: list[tuple[str, ssl.SSLContext]] = []
+    if os.environ.get("FTP_TLS_INSECURE") != "1":  # il server di prova locale è autofirmato
+        pieno = ssl.create_default_context()
+        livelli.append(("verifica piena", pieno))
+        senza_nome = ssl.create_default_context()
+        senza_nome.check_hostname = False
+        livelli.append(("catena verificata, nome host non controllato", senza_nome))
+    nessuna = ssl.create_default_context()
+    nessuna.check_hostname = False
+    nessuna.verify_mode = ssl.CERT_NONE
+    livelli.append(("senza verifica del certificato, come l'action FTP-Deploy", nessuna))
+    ftp = None
+    ultimo = ""
+    for nome, ctx in livelli:
+        try:
+            ftp = FTPS(context=ctx, timeout=60)
+            ftp.connect(server, porta)
+            ftp.login(utente, password)
+            ftp.prot_p()
+            ftp.set_pasv(True)
+            ftp.cwd(cartella)
+            if nome != "verifica piena":
+                log(f"⚠️  FTPS collegato con: {nome}.")
+            break
+        except ftplib.all_errors as e:  # all_errors è già una tupla e comprende OSError
+            ultimo = f"{type(e).__name__}: {e}"
+            try:
+                ftp.close()  # type: ignore[union-attr]
+            except Exception:
+                pass
+            ftp = None
+            if "CERTIFICATE_VERIFY_FAILED" not in ultimo and "SSL" not in type(e).__name__:
+                break  # credenziali, cartella, rete: un livello più basso non aiuta
+    if ftp is None:
+        log(f"⚠️  Connessione FTPS non riuscita: {ultimo}")
         return None
     return ftp, cartella
 
@@ -351,6 +402,10 @@ def main() -> int:
                 continue
             if st == 0:
                 esiti[rel] = "irraggiungibile"
+            elif reindirizzato(st):
+                # Il server manda altrove (regola .htaccess): il file della build
+                # non è confrontabile da fuori, e non è un file rimasto vecchio.
+                esiti[rel] = f"ok(redirect {st})"
             elif st != 200:
                 esiti[rel] = f"assente({st})"
             else:
@@ -371,7 +426,7 @@ def main() -> int:
     pendenti = elenco
     for tentativo in range(1, max(1, a.tentativi) + 1):
         esiti.update(controlla(pendenti))
-        pendenti = [r for r in elenco if esiti.get(r) != "ok"]
+        pendenti = [r for r in elenco if not esiti.get(r, "").startswith("ok")]
         if a.diagnostica or not pendenti or tentativo == a.tentativi:
             break
         log(f"Tentativo {tentativo}: {len(pendenti)} file non coincidono, riprovo fra {a.attesa}s…")
@@ -411,7 +466,7 @@ def main() -> int:
                 log(f"Sistemati {caricati}/{len(da_caricare) + len(da_togliere)}. Ricontrollo…")
                 time.sleep(5)
                 esiti.update(controlla(pendenti))
-                pendenti = [r for r in elenco if esiti.get(r) != "ok"]
+                pendenti = [r for r in elenco if not esiti.get(r, "").startswith("ok")]
 
     # 6. Esito.
     log("")
@@ -419,7 +474,10 @@ def main() -> int:
     for rel in pendenti:
         log(f"  ❌ {esiti[rel]:16s} {rel}  [{da_controllare.get(rel, 'manifesto')}]")
     ok = len(elenco) - len(pendenti)
+    redir = [r for r in elenco if esiti.get(r, "").startswith("ok(redirect")]
     log(f"  {ok}/{len(elenco)} file coincidono con il manifesto della build.")
+    for rel in redir:
+        log(f"  ℹ️  {rel}: il server reindirizza ({esiti[rel]}), regola .htaccess — non confrontabile, non è un file vecchio.")
     for e in errori:
         log(f"  ❌ {e}")
     if sha_live and manifesto.get("sha") and sha_live != manifesto["sha"] and not pendenti and not a.manifesto:
