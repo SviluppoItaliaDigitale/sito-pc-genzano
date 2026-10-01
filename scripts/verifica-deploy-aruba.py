@@ -14,13 +14,15 @@ Che cosa controlla:
   - sempre: /build-info.js, /build-manifest.json e le pagine critiche
     (home, allerte, numeri utili, emergenza, archivio, ultimo articolo…);
   - con --precedente <manifesto della build prima>: tutti i file che il
-    deploy doveva cambiare (al massimo --max-cambiati, poi un campione);
+    deploy doveva cambiare (al massimo --max-cambiati, poi un campione) e
+    quelli che doveva togliere, che devono rispondere con un errore;
   - con --campione N: N pagine HTML scelte a caso nel manifesto (semino
     con --seme, così ogni giro controlla pagine diverse);
   - con --pagine /a/ /b/: pagine indicate a mano.
 
 Riparazione (--ripara): i file diversi vengono ricaricati via FTPS dalla
-build locale (--public), poi ricontrollati. Credenziali da FTP_SERVER,
+build locale (--public), quelli tolti dalla build cancellati dal server,
+poi tutto ricontrollato. Credenziali da FTP_SERVER,
 FTP_USERNAME, FTP_PASSWORD (le stesse di deploy.yml), cartella remota
 FTP_SERVER_DIR. Mai la cartella documenti/, gestita a mano sul server.
 
@@ -189,7 +191,7 @@ def apri_ftps() -> tuple[FTPS, str] | None:
         ftp.prot_p()
         ftp.set_pasv(True)
         ftp.cwd(cartella)
-    except (ftplib.all_errors, OSError) as e:  # type: ignore[misc]
+    except ftplib.all_errors as e:  # all_errors è già una tupla e comprende OSError
         log(f"⚠️  Connessione FTPS non riuscita: {type(e).__name__}: {e}")
         return None
     return ftp, cartella
@@ -212,9 +214,29 @@ def carica(ftp: FTPS, radice_remota: str, public: Path, rel: str) -> bool:
         with locale.open("rb") as f:
             ftp.storbinary(f"STOR {parti[-1]}", f)
         return True
-    except (ftplib.all_errors, OSError) as e:  # type: ignore[misc]
+    except ftplib.all_errors as e:  # all_errors è già una tupla e comprende OSError
         log(f"   ✗ {rel}: caricamento fallito ({type(e).__name__}: {e})")
         return False
+
+
+def cancella(ftp: FTPS, radice_remota: str, rel: str) -> bool:
+    """Toglie dal server un file che la build non contiene più."""
+    try:
+        ftp.cwd(radice_remota)
+        ftp.delete(rel)
+    except ftplib.all_errors as e:
+        log(f"   ✗ {rel}: cancellazione fallita ({type(e).__name__}: {e})")
+        return False
+    # Le cartelle rimaste vuote si tolgono (una cartella vuota risponderebbe
+    # ancora, con 403 o con un elenco, invece del 404 che la build prevede).
+    parti = rel.split("/")[:-1]
+    while parti:
+        try:
+            ftp.rmd("/".join(parti))
+        except ftplib.all_errors:
+            break
+        parti.pop()
+    return True
 
 
 # ──────────────────────────────────────────────────────────────
@@ -260,7 +282,13 @@ def main() -> int:
     sha_live, time_live = leggi_build_info(base)
     if a.sha_atteso and manifesto.get("sha") and not a.sha_atteso.startswith(manifesto["sha"]) \
             and not manifesto["sha"].startswith(a.sha_atteso):
-        errori.append(f"il manifesto servito è della build {manifesto['sha']}, non della {a.sha_atteso} attesa: caricamento incompleto o deploy successivo")
+        # Non è un errore: con due deploy ravvicinati il controllo del primo
+        # parte quando il secondo è già online (i controlli si accodano). Si
+        # verifica il sito contro ciò che dichiara di servire; se il manifesto
+        # fosse vecchio per un caricamento a metà, lo dice il confronto con
+        # build-info.js in fondo.
+        log(f"ℹ️  Il manifesto servito è della build {manifesto['sha']}, non della {a.sha_atteso} attesa: "
+            "probabile deploy successivo già online; verifico contro quello.")
     if time_live:
         try:
             t = dt.datetime.fromisoformat(time_live.replace("Z", "+00:00"))
@@ -289,10 +317,12 @@ def main() -> int:
             da_controllare[rel] = "richiesta"
         else:
             errori.append(f"{p}: non è nel manifesto della build")
+    rimossi: list[str] = []  # nel manifesto precedente, non più nella build: devono sparire dal sito
     if a.precedente:
         prima = leggi_manifesto_locale(Path(a.precedente)).get("file") or {}
         cambiati = sorted(k for k, v in file.items() if prima.get(k) != v and verificabile(k))
-        log(f"File che questo deploy doveva cambiare o aggiungere: {len(cambiati)}")
+        rimossi = sorted(k for k in prima if k not in file and verificabile(k))
+        log(f"File che questo deploy doveva cambiare o aggiungere: {len(cambiati)}; da togliere: {len(rimossi)}")
         if len(cambiati) > a.max_cambiati:
             rnd = random.Random(a.seme or None)
             scelti = rnd.sample(cambiati, a.max_cambiati)
@@ -315,6 +345,10 @@ def main() -> int:
         esiti = {}
         for rel in rels:
             st, corpo = scarica(url_di(base, rel))
+            if rel in rimossi_set:
+                # Deve NON esserci più: qualunque risposta diversa da 200 va bene.
+                esiti[rel] = "irraggiungibile" if st == 0 else ("ok" if st != 200 else "ancora online")
+                continue
             if st == 0:
                 esiti[rel] = "irraggiungibile"
             elif st != 200:
@@ -327,6 +361,9 @@ def main() -> int:
                     esiti[rel] = "ok" if sha256(corpo) == atteso else "diverso"
         return esiti
 
+    rimossi_set = set(rimossi[: a.max_cambiati])
+    for k in rimossi_set:
+        da_controllare[k] = "tolto dalla build"
     elenco = sorted(da_controllare)
     if manifesto_locale_bytes:
         elenco.append(MANIFESTO)
@@ -352,8 +389,9 @@ def main() -> int:
             log("⚠️  --ripara richiede --public (la build locale da cui ricaricare).")
         else:
             public = Path(a.public)
-            da_caricare = [r for r in pendenti if not esiti[r].startswith("irraggiungibile")]
-            log(f"Riparazione: ricarico via FTPS {len(da_caricare)} file…")
+            da_caricare = [r for r in pendenti if not esiti[r].startswith("irraggiungibile") and r not in rimossi_set]
+            da_togliere = [r for r in pendenti if esiti[r] == "ancora online"]
+            log(f"Riparazione: ricarico via FTPS {len(da_caricare)} file, ne tolgo {len(da_togliere)}…")
             conn = apri_ftps()
             if conn:
                 ftp, radice = conn
@@ -362,11 +400,15 @@ def main() -> int:
                     if carica(ftp, radice, public, rel):
                         caricati += 1
                         log(f"   ↑ {rel}")
+                for rel in da_togliere:
+                    if cancella(ftp, radice, rel):
+                        caricati += 1
+                        log(f"   ✕ {rel}")
                 try:
                     ftp.quit()
-                except (ftplib.all_errors, OSError):  # type: ignore[misc]
+                except ftplib.all_errors:
                     pass
-                log(f"Ricaricati {caricati}/{len(da_caricare)}. Ricontrollo…")
+                log(f"Sistemati {caricati}/{len(da_caricare) + len(da_togliere)}. Ricontrollo…")
                 time.sleep(5)
                 esiti.update(controlla(pendenti))
                 pendenti = [r for r in elenco if esiti.get(r) != "ok"]

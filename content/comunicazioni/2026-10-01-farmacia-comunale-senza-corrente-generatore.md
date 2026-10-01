@@ -24,7 +24,7 @@ La **Farmacia comunale n. 3**, in **via Emilia Romagna**, è rimasta senza corre
 
 ## Perché la corrente serve ai farmaci
 
-Molti farmaci vanno conservati in frigorifero, di norma tra 2 e 8 °C: lo indica la confezione. Senza corrente il frigorifero si scalda e, se la temperatura sale troppo a lungo, il farmaco può perdere efficacia.
+Alcuni farmaci vanno conservati in frigorifero. Il foglio illustrativo riporta le modalità e la temperatura esatte: per l'insulina, ad esempio, l'AIFA indica una temperatura controllata tra 2 e 8 °C. Anche i farmaci per la tiroide e quelli a base ormonale sono sensibili alle variazioni di temperatura. Senza corrente il frigorifero si scalda, e quei farmaci vanno protetti dal caldo.
 
 {{< foto src="/images/2026-10-01-farmacia-comunale-frigorifero-farmaci.webp"
          alt="Interno della farmacia: un frigorifero con le ante di vetro e gli scaffali con confezioni di farmaci, con un cartello scritto a mano Chiudere bene il frigo. Sul pavimento un cavo nero arriva da un avvolgicavo arancione. A sinistra, visto di lato, un volontario con la maglietta blu scura con la scritta Protezione civile."
@@ -72,5 +72,6 @@ Il Gruppo Comunale non può essere attivato direttamente dai cittadini. Per un'e
 
 **Fonti istituzionali:**
 
+- [AIFA — L'estate è arrivata: i suggerimenti per conservare e utilizzare correttamente i medicinali](https://www.aifa.gov.it/-/l-estate-%C3%A8-arrivata-i-suggerimenti-di-aifa-per-conservare-e-utilizzare-correttamente-i-medicinali) (12 luglio 2024)
 - [Dipartimento della Protezione Civile](https://www.protezionecivile.gov.it/)
 - [Protezione Civile Regione Lazio](https://www.regione.lazio.it/protezione-civile)

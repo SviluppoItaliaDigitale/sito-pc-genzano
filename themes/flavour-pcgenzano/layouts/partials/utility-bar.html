@@ -46,6 +46,19 @@
   }
   aggiorna();
   setInterval(aggiorna,30000);
+  // L'etichetta dice «ora italiana»: si formatta nel fuso Europe/Rome, non in
+  // quello del dispositivo del visitatore (vicino a mezzanotte cambierebbe
+  // anche il giorno). Senza Intl si ripiega sul fuso locale.
+  function oraItaliana(d){
+    try{
+      var parti={};
+      new Intl.DateTimeFormat('it-IT',{timeZone:'Europe/Rome',day:'numeric',month:'long',year:'numeric',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(d).forEach(function(x){parti[x.type]=x.value;});
+      if(parti.day&&parti.month&&parti.year&&parti.hour&&parti.minute){
+        return parti.day+' '+parti.month+' '+parti.year+' alle '+parti.hour+':'+parti.minute;
+      }
+    }catch(e){}
+    return d.getDate()+' '+mesi[d.getMonth()]+' '+d.getFullYear()+' alle '+String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0');
+  }
   var item=document.getElementById('site-build-item');
   var build=document.getElementById('site-build-time');
   if(!item||!build)return;
@@ -54,11 +67,9 @@
     if(!raw)return;
     var d=new Date(raw);
     if(isNaN(d.getTime()))return;
-    var ore=String(d.getHours()).padStart(2,'0');
-    var min=String(d.getMinutes()).padStart(2,'0');
     var t=document.createElement('time');
     t.setAttribute('datetime',raw);
-    t.textContent=d.getDate()+' '+mesi[d.getMonth()]+' '+d.getFullYear()+' alle '+ore+':'+min+' (ora italiana)';
+    t.textContent=oraItaliana(d)+' (ora italiana)';
     build.textContent='Sito aggiornato il ';
     build.appendChild(t);
     item.hidden=false;
