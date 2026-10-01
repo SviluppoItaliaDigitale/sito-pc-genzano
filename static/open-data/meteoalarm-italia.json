@@ -1,39 +1,12 @@
 {
  "_snapshot": {
-  "generato": "2026-10-01T02:10:40+00:00",
+  "generato": "2026-10-01T16:05:57+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 2,
+  "avvisi": 0,
   "scaduti_scartati": 0,
-  "in_corso": 2,
+  "in_corso": 0,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
- "avvisi": [
-  {
-   "in_corso": true,
-   "regione": "Piemonte",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-01T00:00:00+00:00",
-   "fine": "2026-10-02T21:59:00+00:00",
-   "emesso": "2026-09-30T08:41:44+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.260930104144.004"
-  },
-  {
-   "in_corso": true,
-   "regione": "Valle d'Aosta",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-01T00:00:00+00:00",
-   "fine": "2026-10-02T21:59:00+00:00",
-   "emesso": "2026-09-30T08:41:44+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.260930104144.003"
-  }
- ]
+ "avvisi": []
 }
