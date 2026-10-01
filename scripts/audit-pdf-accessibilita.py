@@ -76,6 +76,8 @@ ORIGINE_PATTERNS = [
      ["cna-"]),
     ("TERZO", "Salone del Libro Torino",
      ["salone-del-libro", "salone_libro"]),
+    ("TERZO", "ISPRA — Servizio Geologico d'Italia (Carta geologica CARG, CC BY 4.0)",
+     ["carg-foglio-", "ispra-"]),
     # GRUPPO — documenti prodotti da noi (presentazioni, moduli, locandine)
     ("GRUPPO", "Presentazione tematica generata da scripts/genera-presentazione.py",
      ["-presentazione-pdf", "presentazione-struttura-sito"]),

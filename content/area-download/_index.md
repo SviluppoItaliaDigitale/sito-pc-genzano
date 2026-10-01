@@ -46,6 +46,17 @@ In questa sezione puoi consultare e scaricare documenti relativi all'attività d
 
 Realizzata da **Latium Volcano APS — Associazione ecologica ambientale** di Rocca Priora (anno 2012, terza ristampa). I diritti sulla carta appartengono all'associazione: per usi diversi dalla consultazione personale rivolgersi a [www.latiumvolcano.it](https://www.latiumvolcano.it/). Ne parliamo nell'articolo [La Carta naturalistica dei Castelli Romani: leggere il vulcano su cui viviamo](/comunicazioni/2026-09-14-carta-naturalistica-castelli-romani-latium-volcano/).
 
+## Carta geologica d'Italia 1:50.000 — fogli dei Castelli Romani (ISPRA, Progetto CARG)
+
+I quattro fogli della nuova Carta geologica d'Italia che coprono i Castelli Romani, con le note illustrative. Autore: Servizio Geologico d'Italia (ISPRA), licenza CC BY 4.0. Il file che fa fede è quello sull'[archivio aperto dell'ISPRA](https://www.openaccessrepository.it/); qui c'è una copia identica, da usare se l'archivio non risponde. File pesanti: scaricali con una buona connessione. Come leggerli e che cosa dicono di Genzano è nell'articolo [La nuova Carta geologica d'Italia: i fogli che descrivono Genzano](/comunicazioni/2026-10-01-carta-geologica-italia-carg-fogli-genzano/).
+
+| Foglio | Carta geologica | Note illustrative |
+|---|---|---|
+| 374 «Roma» | [Carta (PDF, 19 MB)](/manuali/carg/carg-foglio-374-roma-carta.pdf) · [ISPRA](https://doi.org/10.15161/oar.it/76970) | [Note (PDF, 6 MB)](/manuali/carg/carg-foglio-374-roma-note.pdf) · [ISPRA](https://doi.org/10.15161/oar.it/76975) |
+| 375 «Tivoli» | [Carta (PDF, 11 MB)](/manuali/carg/carg-foglio-375-tivoli-carta.pdf) · [ISPRA](https://doi.org/10.15161/oar.it/j4z30-75560) | [Note (PDF, 49 MB)](/manuali/carg/carg-foglio-375-tivoli-note.pdf) · [ISPRA](https://doi.org/10.15161/oar.it/bjed8-3mg96) |
+| 387 «Albano Laziale» | [Carta (PDF, 22 MB)](/manuali/carg/carg-foglio-387-albano-laziale-carta.pdf) · [ISPRA](https://doi.org/10.15161/oar.it/73sy6-ztb78) | [Note (PDF, 25 MB)](/manuali/carg/carg-foglio-387-albano-laziale-note.pdf) · [ISPRA](https://doi.org/10.15161/oar.it/3qrfn-yk004) |
+| 388 «Velletri» (Genzano) | [Carta (PDF, 10 MB)](/manuali/carg/carg-foglio-388-velletri-carta.pdf) · [ISPRA](https://doi.org/10.15161/oar.it/va3pg-a7z40) | [Note (PDF, 13 MB)](/manuali/carg/carg-foglio-388-velletri-note.pdf) · [ISPRA](https://doi.org/10.15161/oar.it/vdxbr-xhj22) |
+
 ## Documenti Operativi e Regolamenti
 
 | Documento | Formato |
