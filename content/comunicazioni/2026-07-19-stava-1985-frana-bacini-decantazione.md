@@ -75,7 +75,7 @@ Ne abbiamo parlato anche nell'articolo [Dighe e sicurezza, grandi opere](/comuni
 
 ## Genzano e il rischio "bacino"
 
-Genzano si trova accanto al **Lago di Nemi** e al **Lago Albano**, due laghi vulcanici naturali. Non sono "dighe" nel senso tecnico, ma il livello dei laghi è regolato dall'**Emissario di Albano** (galleria romana di drenaggio del lago Albano) e da quello di Nemi: opere idrauliche storiche di rilevanza idrogeologica.
+Genzano si trova accanto al **Lago di Nemi** e al **Lago Albano**, due laghi vulcanici naturali. Non sono "dighe" nel senso tecnico, ma il loro livello è oggi determinato soprattutto da piogge, prelievi ed evaporazione, perché non hanno immissari né emissari naturali (ISS). Esistono però gallerie di drenaggio antiche, come l'**Emissario di Albano** di epoca romana: opere idrauliche storiche di rilevanza idrogeologica.
 
 Il rischio "ondata di piena" per un evento di rottura artificiale dei laghi vulcanici è considerato **estremamente improbabile**, ma rientra nelle valutazioni del **Piano di Emergenza Comunale** e del **Piano Stralcio per l'Assetto Idrogeologico** dell'Autorità di Bacino del Tevere. Per altri rischi del territorio vedi [Rischi e Prevenzione](/rischi-prevenzione/).
 

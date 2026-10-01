@@ -167,7 +167,7 @@ Genzano di Roma sorge sui **Colli Albani**, un complesso vulcanico quiescente si
 | **Idrogeologico** | Medio-alto in alcune zone | Fossi, impluvi e versanti collinari soggetti a frane e allagamenti localizzati |
 | **Incendio boschivo** | Alto in estate | Vasta copertura boschiva, periodo critico giugno-settembre |
 | **Meteorologico** | Variabile | Temporali intensi, grandinate, vento forte, ondate di calore |
-| **Vulcanico** | Basso (monitorato) | Colli Albani quiescenti, monitoraggio continuo dell'INGV |
+| **Vulcanico** | Vulcano quiescente (non spento), monitorato | Colli Albani quiescenti, sorvegliati dall'INGV; per il DPC il pericolo concreto oggi sono le emissioni di gas dal suolo, non l'eruzione |
 
 ### Attività: analisi del Piano di Protezione Civile
 
@@ -803,7 +803,7 @@ Materiale integrativo per il docente che vuole offrire esempi **concreti, recent
 **Domande-guida**:
 - Cosa significa "bradisismo"?
 - Perché i Campi Flegrei sono considerati tra i vulcani più pericolosi del mondo?
-- Esiste un piano simile per i Colli Albani? Cosa dice?
+- Esiste un piano simile per i Colli Albani? Cosa dice? *(Risposta guida per il docente: per i Colli Albani il DPC non ha definito livelli di allerta; il pericolo concreto indicato oggi dal DPC sono i gas che risalgono dal suolo.)*
 - Come comunica l'INGV ai cittadini le sue osservazioni scientifiche?
 
 ### Attività: simulazione di comunicazione di crisi

@@ -7,43 +7,44 @@ lis_section: "rischio-vulcanico"
 weight: 9
 toc: true
 # Schema.org HowTo — 3 step PRIMA/DURANTE/DOPO per rich result Google.
-howto_prima: "Conosci il tuo territorio: se vivi vicino a Cava dei Selci, Solforata di Pomezia o aree note, informati presso il Comune e l'ARPA Lazio. Aera cantine, scantinati e seminterrati prima di entrarci dopo periodi di chiusura prolungata. Mai entrare in pozzi senza autorizzazione e senza personale specializzato con strumentazione (ossimetro). Mantieni ventilate caldaie, scaldabagni a gas, ambienti dove si bruciano combustibili. Per chi ha bambini o animali domestici, tieni sempre chiuse le cantine non aerate."
+howto_prima: "Conosci il tuo territorio: se vivi vicino a Cava dei Selci o ad altre aree note, informati presso il Comune e l'ARPA Lazio. Aera cantine, scantinati e seminterrati prima di entrarci dopo periodi di chiusura prolungata. Mai entrare in pozzi senza autorizzazione e senza personale specializzato con strumentazione (ossimetro). Mantieni ventilate caldaie, scaldabagni a gas, ambienti dove si bruciano combustibili. Per chi ha bambini o animali domestici, tieni sempre chiuse le cantine non aerate."
 howto_durante: "Esci immediatamente all'aria aperta se senti odore strano o malessere. Non tornare indietro a controllare meglio. Non aiutare una persona priva di sensi entrando dentro: sarebbe la seconda vittima (molte vittime in spazi confinati sono proprio soccorritori improvvisati senza protezione). Chiama il 112 specificando 'sospetto di gas in spazio confinato': arriveranno i Vigili del Fuoco con autorespiratori. Mantieni l'area isolata. Se sei in casa, apri tutte le finestre, esci, chiama il 112."
 howto_dopo: "Segnala al Comune e all'ARPA Lazio la presenza di anomalie ambientali persistenti (animali morti, vegetazione secca a macchia, bolle in sorgenti) per attivare il monitoraggio scientifico. Per il sistema sismico consulta INGV su terremoti.ingv.it per verificare se la scossa è stata registrata. Verifica eventuali danni strutturali alla casa (crepe nuove, infissi disallineati). Non entrare in cantine, pozzi, scantinati o spazi confinati non aerati. Non tentare il soccorso entrando in uno spazio confinato senza autorespiratore."
 ---
 
-Il **Vulcano Laziale** dei **Colli Albani** è **quiescente**, non spento. Secondo l'**INGV** e il **CNR**, la sua ultima fase eruttiva risale a circa 36.000 anni fa. Il sistema è tuttora **monitorato**: mostra sismicità di bassa magnitudo, deformazioni del suolo ed emissioni di gas in aree localizzate.
+Il **Vulcano Laziale** dei **Colli Albani** è **quiescente**, non spento. Secondo l'**INGV** e il **Dipartimento della Protezione Civile**, la sua ultima fase eruttiva risale a circa 36.000 anni fa. Il sistema è tuttora **monitorato**: mostra sismicità di bassa magnitudo, deformazioni del suolo ed emissioni di gas in aree localizzate.
 
 Questa pagina descrive i fenomeni concreti che il cittadino può incontrare — in particolare le **emissioni di anidride carbonica (CO₂)** — e cosa fare.
 
 {{< emergenza-ora >}}
 
 ## <i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Perché è rilevante sul nostro territorio {#perche-rilevante}
-Il **Vulcano Laziale** ha una storia eruttiva di oltre 600.000 anni. Le sue eruzioni hanno costruito tutto il paesaggio dei Castelli Romani: i rilievi del **Tuscolano-Artemisio**, le caldere di **Albano** e **Nemi** (oggi laghi), la **Faete**, i banchi di tufo su cui sorgono Genzano, Ariccia, Velletri.
+Il **Vulcano Laziale** ha una storia eruttiva di oltre 600.000 anni. Le sue eruzioni hanno costruito tutto il paesaggio dei Castelli Romani: i rilievi del **Tuscolano-Artemisio**, i crateri di **Albano** e **Nemi** (oggi laghi), la **Faete**, i depositi vulcanici su cui sorgono i paesi dei Castelli.
 
-Il sistema è classificato dall'INGV come:
+Secondo le schede dell'INGV e del Dipartimento della Protezione Civile il vulcano è:
 
-- **Quiescente** — non in eruzione, ma con attività residua.
-- **Monitorato** — sismicità, deformazioni del suolo (gravimetria, GPS), gas vulcanici.
-- A **bassa probabilità** di ripresa eruttiva nel breve-medio termine, secondo gli scenari scientifici disponibili.
+- **Quiescente** — non in eruzione, ma con attività residua (circolazione idrotermale, sismicità, sollevamento del suolo, emissioni di gas).
+- **Monitorato** — sismicità, deformazioni del suolo (GPS e dati satellitari InSAR), gas.
+
+Per i Colli Albani il Dipartimento della Protezione Civile **non ha definito livelli di allerta** (quelli esistono per Vesuvio, Campi Flegrei, Etna, Stromboli e Vulcano). Nessuna fonte ufficiale consultata indica una ripresa eruttiva imminente; il vulcano però non è estinto, e per questo è sorvegliato.
 
 I fenomeni che il cittadino può effettivamente incontrare oggi sono **due**:
 
-1. **Sismicità di bassa magnitudo** — scosse di origine vulcano-tettonica, generalmente M < 3.0, spesso non avvertite dalla popolazione. Per i comportamenti da tenere si rimanda alla pagina [Rischio Sismico](/rischi-prevenzione/rischio-sismico/) (Genzano è in zona sismica **2B**).
+1. **Sismicità di bassa magnitudo** — sciami di scosse poco profonde (2-7 km), di magnitudo generalmente inferiore a 4 secondo l'INGV. Per i comportamenti da tenere si rimanda alla pagina [Rischio Sismico](/rischi-prevenzione/rischio-sismico/) (Genzano è in zona sismica **2B**).
 2. **Emissioni naturali di CO₂** — in aree localizzate del territorio dei Castelli Romani sono note emanazioni di anidride carbonica dal sottosuolo, fenomeno chiamato **degassamento**. È una manifestazione comune nei sistemi vulcanici quiescenti.
 
-> **Riferimenti scientifici di base**: INGV — Osservatorio Vesuviano e Sezione di Roma 1; CNR-IGAG (Geologia Ambientale e Geoingegneria); ISPRA. Le mappe ufficiali della pericolosità vulcanica nazionale e i bollettini di sorveglianza si consultano sui portali istituzionali (vedi sezione "Fonti" in fondo alla pagina).
+> **Riferimenti scientifici di base**: INGV — Sezione di Roma, che sorveglia i Colli Albani; CNR-IGAG (Geologia Ambientale e Geoingegneria); ISPRA. Le mappe ufficiali della pericolosità vulcanica nazionale e i bollettini di sorveglianza si consultano sui portali istituzionali (vedi sezione "Fonti" in fondo alla pagina).
 
 {{< foto src="/images/colli-albani-lago-nemi-vulcanico.webp"
          alt="Vista satellitare dalla Stazione Spaziale Internazionale del distretto vulcanico dei Colli Albani: si riconoscono i due laghi craterici del Lago Albano (in alto a destra, più grande) e del Lago di Nemi (al centro destra, più piccolo), immersi nei rilievi collinari e negli abitati dei Castelli Romani."
-         caption="Il distretto vulcanico dei Colli Albani visto dalla ISS a 400 km di quota (8 settembre 2017): i due laghi craterici, Lago Albano e Lago di Nemi, sono le caldere del sistema vulcanico quiescente su cui sorge Genzano di Roma. Foto: Earth Science and Remote Sensing Unit, NASA Johnson Space Center — pubblico dominio, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:ISS053-E-6940_-_View_of_Earth.jpg)." >}}
+         caption="Il distretto vulcanico dei Colli Albani visto dalla ISS a 400 km di quota (8 settembre 2017): i due laghi craterici, Lago Albano e Lago di Nemi, occupano due crateri del sistema vulcanico quiescente su cui sorge Genzano di Roma. Foto: Earth Science and Remote Sensing Unit, NASA Johnson Space Center — pubblico dominio, via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:ISS053-E-6940_-_View_of_Earth.jpg)." >}}
 
 ## <i class="bi bi-droplet-half text-primary me-2" aria-hidden="true"></i>Le emissioni di CO₂ — il fenomeno principale di interesse pratico {#emissioni-co2}
 L'**anidride carbonica (CO₂)** è un gas **incolore, inodore, più pesante dell'aria**. In concentrazioni elevate è **pericolosa** perché soffoca, sostituendo l'ossigeno respirabile. Negli spazi confinati o nelle depressioni del terreno (cantine, pozzi, scantinati, fossi, dossi naturali) la CO₂ può accumularsi a livelli letali per esseri umani e animali, anche se l'aria all'aperto immediatamente sopra è respirabile.
 
-**Aree note di emissione nel territorio dei Castelli Romani** (riferimento storico-scientifico, non esaustivo): Cava dei Selci a Marino, Solforata di Pomezia, alcune aree minori vicino al Lago Albano e al Lago di Nemi. La presenza di emissioni in luoghi specifici è oggetto di studio continuo da parte di INGV e dell'ARPA Lazio.
+**Aree note di emissione** (non esaustivo). Secondo il Dipartimento della Protezione Civile i principali punti sono Cava dei Selci, Santa Maria delle Mole, Marino, Frattocchie, Ciampino e Tor Caldara. Secondo la sorveglianza dell'INGV emissioni anomale arrivano anche dal fondo del lago Albano e dalle zone periferiche di Solforata, Ardea e Tor Caldara. La presenza di emissioni in luoghi specifici è oggetto di studio continuo da parte di INGV e dell'ARPA Lazio.
 
-**Genzano di Roma** non è in un'area di emanazione documentata di rilievo abitativo, ma il principio di prevenzione vale comunque sull'intero territorio dei Castelli per cantine, pozzi, scantinati, fossi profondi.
+**Genzano di Roma** non compare fra i principali punti di emanazione indicati dal Dipartimento della Protezione Civile e dall'INGV. Il principio di prevenzione vale comunque su tutto il territorio dei Castelli, per cantine, pozzi, scantinati e fossi profondi.
 
 ## <i class="bi bi-eye-fill text-primary me-2" aria-hidden="true"></i>Segnali e situazioni tipiche {#segnali}
 ### Riconoscere un'area di accumulo di CO₂
@@ -66,9 +67,9 @@ L'aria all'aperto, ventilata, **non** è un problema: il pericolo è confinato.
 > 🎒 **Kit consigliato per questo rischio**: il [Kit "Vai"](/rischi-prevenzione/kit-emergenza/#kit-vai) per un'eventuale evacuazione preventiva e il [Kit "Casa 72 ore"](/rischi-prevenzione/kit-emergenza/#kit-casa) per restare autonomi se la situazione lo richiede. Per il controllo periodico stampa la [Checklist A4 da frigorifero](/formazione/schede-stampabili/checklist-kit-emergenza/).
 
 ## <i class="bi bi-clipboard-check-fill text-primary me-2" aria-hidden="true"></i>Cosa fare PRIMA {#cosa-fare-prima}
-- Conosci il tuo territorio: se vivi o lavori vicino a Cava dei Selci, Solforata di Pomezia o aree note, informati presso il Comune e l'ARPA Lazio.
+- Conosci il tuo territorio: se vivi o lavori vicino a Cava dei Selci o ad altre aree note, informati presso il Comune e l'ARPA Lazio.
 - **Areare cantine, scantinati e seminterrati** prima di entrarci dopo periodi di chiusura prolungata. Non entrare in spazi sigillati senza aerare prima.
-- **Non entrare mai in pozzi** senza autorizzazione e senza personale specializzato con ossimetro. Le morti in pozzo sono spesso da CO₂, non da affogamento.
+- **Non entrare mai in pozzi** senza autorizzazione e senza personale specializzato con ossimetro. In un pozzo il pericolo può essere un gas asfissiante come la CO₂, non solo l'acqua.
 - Mantieni ben ventilate le caldaie, gli scaldabagni a gas e gli ambienti dove si bruciano combustibili: la CO₂ di origine antropica si somma a qualsiasi residuo geologico.
 - Segna nel piano familiare la presenza di scantinati o cantine e tieni il **112** sempre a portata.
 - Se hai bambini piccoli o animali domestici: tieni sempre chiuse le cantine non aerate.
@@ -83,7 +84,7 @@ Se entrando in uno spazio confinato senti **mancanza d'aria, capogiro, nausea, m
 - Se sei in casa e senti odore strano: apri tutte le finestre, esci, chiama il 112. Potrebbe essere monossido di carbonio (CO) da caldaia, anch'esso pericoloso.
 
 ## <i class="bi bi-activity text-primary me-2" aria-hidden="true"></i>Cosa fare DURANTE — sospetto di scossa sismica {#durante-sismico}
-Le scosse di origine vulcano-tettonica del Vulcano Laziale sono in larghissima maggioranza di **magnitudo bassa** (M < 3.0). I comportamenti corretti sono quelli del rischio sismico:
+Le scosse del Vulcano Laziale sono in genere di **magnitudo bassa**: nel catalogo INGV, dal 1985 a oggi, le scosse più forti entro 30 km da Genzano hanno magnitudo 3.9 (aprile 1987, ottobre 1989 e aprile 2008). I comportamenti corretti sono quelli del rischio sismico:
 
 - Durante la scossa: **DROP-COVER-HOLD ON** (a terra, sotto a un riparo solido, mantieni la posizione).
 - Non correre fuori durante la scossa: la maggior parte degli infortuni avviene così.
@@ -107,9 +108,11 @@ Per i comportamenti completi vedi la pagina dedicata: [Rischio Sismico — cosa 
 
 ## <i class="bi bi-bookmark-star-fill text-primary me-2" aria-hidden="true"></i>Fonti istituzionali e scientifiche {#fonti}
 
-**Approfondisci la materia:** [Il vulcanismo dei Colli Albani](/conoscere/rischio-vulcanico-colli-albani/) — storia eruttiva, i laghi di Albano e Nemi come crateri, le emissioni di gas e il monitoraggio dell'INGV.
+**Approfondisci la materia:** [Il vulcanismo dei Colli Albani](/conoscere/rischio-vulcanico-colli-albani/) — storia eruttiva, i laghi di Albano e Nemi come crateri, le emissioni di gas e il monitoraggio dell'INGV. Le rocce del sottosuolo di Genzano sono nell'articolo sulla [Carta geologica d'Italia (CARG)](/comunicazioni/2026-10-01-carta-geologica-italia-carg-fogli-genzano/).
 
 - [INGV — Istituto Nazionale di Geofisica e Vulcanologia](https://www.ingv.it/) — riferimento nazionale per la sismologia e la vulcanologia
+- [INGV — scheda Colli Albani](https://www.ingv.it/colli-albani) e [sorveglianza dei vulcani Colli Albani](https://www.ingv.it/monitoraggio-e-infrastrutture/sorveglianza/servizio-sorveglianza-vulcani-attivi/sorveglianza-vulcani-colli-albani) — stato del vulcano, rete GPS, misure dei gas
+- [Dipartimento di Protezione Civile — Colli Albani](https://rischi.protezionecivile.gov.it/it/vulcanico/vulcani-italia/colli-albani/) — scheda del vulcano, storia eruttiva e rischio gas
 - [INGV — terremoti recenti](https://terremoti.ingv.it/) — dati sismici in tempo reale, anche di bassa magnitudo
 - [CNR-IGAG](https://www.igag.cnr.it/) — Istituto di Geologia Ambientale e Geoingegneria
 - [ISPRA — IdroGEO](https://idrogeo.isprambiente.it/) — mappa nazionale di pericolosità geologica

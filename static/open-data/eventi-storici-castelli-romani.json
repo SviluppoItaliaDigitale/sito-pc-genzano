@@ -1,25 +1,25 @@
 [
   {
-    "ordine": -300000,
-    "anno": "~300.000 anni fa",
+    "ordine": -270000,
+    "anno": "Tra 270.000 e 36.000 anni fa",
     "tipo": "geologico",
-    "titolo": "Formazione del cratere di Nemi — Fase delle Faete",
-    "luogo": "Bacino del Lago di Nemi, Vulcano Laziale",
-    "descrizione": "Il cratere di Nemi si forma durante la fase eruttiva del Vulcano delle Faete (circa 308.000–250.000 anni fa), una delle tappe dell'attività del Vulcano Laziale (Colli Albani). Lo stesso apparato ha generato i crateri gemelli di Albano e Ariccia. È la storia geologica che spiega perché viviamo su un territorio fertile ma sismicamente attivo.",
-    "lezione": "Il paesaggio dei Castelli Romani — i laghi craterici, le colline di tufo, i suoli vulcanici — è il risultato di un'attività eruttiva potente. Il vulcano oggi è classificato \"quiescente\": non spento, ma non in eruzione. Monitorarlo è parte del sistema nazionale.",
-    "fonte": "INGV — Sezione Vulcani; pubblicazioni scientifiche su Vulcano Laziale (Fase delle Faete)",
-    "fonte_url": "https://www.ingv.it/"
+    "titolo": "Nascono i laghi-cratere di Albano e Nemi — fase idromagmatica",
+    "luogo": "Lago Albano e Lago di Nemi, Vulcano Laziale",
+    "descrizione": "Nell'ultima fase del Vulcano Laziale, detta idromagmatica, il magma incontra l'acqua di falda ed esplode. Le esplosioni scavano crateri ampi e poco rilevati (maar): nel settore occidentale si formano i centri di Albano e Giuntura e, quasi contemporaneamente, quelli di Ariccia e Nemi. I laghi di Albano e di Nemi occupano questi crateri. Prima, tra 350.000 e 270.000 anni fa, la fase delle Faete aveva costruito il cono dentro la caldera.",
+    "lezione": "Il paesaggio dei Castelli Romani — i laghi craterici, le colline di tufo, i suoli vulcanici — è il risultato di un'attività eruttiva potente, terminata circa 36.000 anni fa. Il vulcano oggi è classificato \"quiescente\": non spento, ma non in eruzione. Monitorarlo è parte del sistema nazionale.",
+    "fonte": "Dipartimento della Protezione Civile, «Colli Albani — Storia eruttiva»; INGV, scheda «Colli Albani»",
+    "fonte_url": "https://rischi.protezionecivile.gov.it/it/vulcanico/vulcani-italia/colli-albani/"
   },
   {
     "ordine": -400,
-    "anno": "V–IV secolo a.C.",
+    "anno": "Circa 2.500 anni fa",
     "tipo": "idrogeologico",
     "titolo": "L'Emissario antico del Lago di Nemi",
     "luogo": "Lago di Nemi",
-    "descrizione": "Già in epoca pre-romana (V–IV secolo a.C.) viene realizzato un cunicolo emissario sotterraneo per regolare il livello del Lago di Nemi ed evitare esondazioni delle terre coltivabili a valle. È fra le più antiche opere documentate di ingegneria idraulica per la prevenzione del rischio idrogeologico in Italia centrale.",
+    "descrizione": "Circa 2.500 anni fa viene scavato un emissario sotterraneo, lungo 1.653 metri, che porta le acque del Lago di Nemi verso la Valle Ariccia e poi al mare. Lo realizzano due squadre partite dalle due estremità, sotto 80-100 metri di roccia, che si incontrano sbagliando di pochi metri. Chi lo scavò e in quale anno preciso resta oggetto di studio: alcuni studiosi lo collocano agli inizi del IV secolo a.C. Oggi l'imbocco è all'asciutto, perché il lago si trova almeno tre metri più in basso.",
     "lezione": "Il controllo dei bacini lacustri è prevenzione, non magia: chi viveva qui 2.500 anni fa lo sapeva e costruiva opere mirate. La cultura del rischio idrogeologico è antica.",
-    "fonte": "Soprintendenza Speciale di Roma; ISPRA — Carta geologica e archeologica del territorio dei Colli Albani",
-    "fonte_url": "https://www.isprambiente.gov.it/"
+    "fonte": "Parco Regionale dei Castelli Romani, «Lago di Nemi: un tunnel lungo 25 secoli»; Lamberto Ferri Ricchi, «Le navi di Nemi e l'emissario del lago»",
+    "fonte_url": "https://www.parchilazio.it/schede-589-emissario_di_nemi"
   },
   {
     "ordine": 1806,
@@ -28,7 +28,7 @@
     "titolo": "Terremoto dei Castelli Romani — il sisma di riferimento",
     "luogo": "Castelli Romani, danni rilevanti a Genzano",
     "descrizione": "Il 26 agosto 1806 un forte terremoto colpisce l'area dei Castelli Romani con epicentro stimato fra Rocca di Papa e Genzano. A Genzano l'intensità macrosismica raggiunge il grado VIII MCS: crolli e danni gravi documentati a Palazzo Sforza Cesarini e alla Chiesa della SS. Trinità (Chiesa della Cima). È il sisma di riferimento (benchmark) per il rischio sismico massimo storico del nostro territorio comunale.",
-    "lezione": "Vivere in Zona sismica 2 non è un'astrazione amministrativa: è la memoria di eventi accaduti. Le moderne norme antisismiche (NTC 2018) sono calibrate proprio sulla sismicità storica come questa.",
+    "lezione": "Vivere in zona sismica 2B non è un'astrazione amministrativa: è la memoria di eventi accaduti. Le moderne norme antisismiche (NTC 2018) sono calibrate proprio sulla sismicità storica come questa.",
     "fonte": "INGV — Catalogo Parametrico dei Terremoti Italiani CPTI15 e Database Macrosismico DBMI15",
     "fonte_url": "https://emidius.mi.ingv.it/CPTI15-DBMI15/"
   },
@@ -38,10 +38,10 @@
     "tipo": "idrogeologico",
     "titolo": "Abbassamento del Lago di Nemi — recupero delle Navi di Caligola",
     "luogo": "Lago di Nemi",
-    "descrizione": "Fra il 1928 e il 1932 il livello del Lago di Nemi viene abbassato di oltre 20 metri per recuperare le due navi monumentali di Caligola (I secolo d.C.) dal fondale. L'operazione ha conseguenze idrogeologiche dirette: la repentina variazione del livello destabilizza le pareti del cratere e i versanti sotto l'abitato di Nemi e Genzano. È l'inizio del monitoraggio sistematico dei versanti a rischio frana.",
-    "lezione": "Ogni modifica antropica significativa dei bacini lacustri ha ripercussioni sulla stabilità dei versanti. Il rischio idrogeologico locale è figlio anche di scelte umane, non solo di natura.",
-    "fonte": "ISPRA — Carta nazionale del dissesto idrogeologico (versanti Colli Albani); Museo delle Navi Romane",
-    "fonte_url": "https://www.isprambiente.gov.it/"
+    "descrizione": "Fra il 1928 e il 1932 il livello del Lago di Nemi viene abbassato di circa 22 metri, con idrovore avviate il 20 ottobre 1928, per recuperare le due navi monumentali di Caligola (I secolo d.C.) dal fondale. Durante i lavori la sponda e il fondale intorno al cantiere cedono più volte (1929 e agosto 1931): le pompe vanno spostate su un pontone galleggiante e il pompaggio viene sospeso per non danneggiare la seconda nave. Le fonti consultate non attribuiscono a quei lavori frane sui versanti sotto l'abitato di Nemi e di Genzano.",
+    "lezione": "Intervenire in fretta sul livello di un bacino chiuso in un cratere mette sotto sforzo sponde e terreno: l'equilibrio delle acque va capito prima di essere toccato.",
+    "fonte": "Guido Ucelli, «Le navi di Nemi» (1940), nella sintesi dell'Encyclopaedia Romana (University of Chicago); Treccani, Enciclopedia dell'Arte Antica, «Nemi, Lago di»; Comune di Nemi, «Storia»",
+    "fonte_url": "https://penelope.uchicago.edu/encyclopaedia_romana/miscellanea/nemi/nemiships.html"
   },
   {
     "ordine": 1989,
@@ -49,8 +49,8 @@
     "tipo": "sismico",
     "titolo": "Crisi sismica dei Colli Albani",
     "luogo": "Colli Albani, Castelli Romani",
-    "descrizione": "Fra il 1989 e il 1990 i Colli Albani sono interessati da uno sciame sismico di migliaia di scosse, generalmente di bassa magnitudo ma percepite dalla popolazione. L'evento principale è del 14 aprile 1989 con magnitudo M 4.2. La crisi attiva sul territorio comunale il primo nucleo operativo di volontariato di Protezione Civile: monitoraggio degli edifici, censimento dei danni minori, assistenza alla popolazione preoccupata.",
-    "lezione": "Le crisi sismiche non sono sempre eventi singoli: anche sciami prolungati di scosse piccole richiedono organizzazione, presidio degli edifici scolastici, comunicazione costante con i cittadini. Da qui nasce concretamente la PC comunale di Genzano.",
+    "descrizione": "Fra il 1989 e il 1990 i Colli Albani sono interessati da uno sciame sismico di scosse generalmente di bassa magnitudo, ma percepite dalla popolazione. Le scosse più forti del catalogo INGV sono due, del 19 e del 23 ottobre 1989, entrambe di magnitudo Md 3.9. A Genzano erano già attivi dal 1981 i volontari che nel 1991 il Consiglio Comunale avrebbe riunito nel Gruppo Comunale di Protezione Civile.",
+    "lezione": "Le crisi sismiche non sono sempre eventi singoli: anche sciami prolungati di scosse piccole richiedono organizzazione, presidio degli edifici scolastici, comunicazione costante con i cittadini.",
     "fonte": "INGV — Bollettino sismico storico; ISIDe — Italian Seismological Instrumental and parametric Database",
     "fonte_url": "https://terremoti.ingv.it/"
   },
@@ -71,10 +71,10 @@
     "tipo": "normativo",
     "titolo": "Genzano classificata in Zona sismica 2",
     "luogo": "Genzano di Roma e Castelli Romani",
-    "descrizione": "Con l'OPCM 20 marzo 2003 n. 3274 e il recepimento regionale, Genzano di Roma e i Castelli Romani sono classificati in Zona sismica 2 (sismicità medio-alta, ag = 0,15–0,25 g). La classificazione vincola le Norme Tecniche di Costruzione antisismiche per nuove edificazioni e ristrutturazioni.",
-    "lezione": "Vivere in Zona 2 significa progettare e costruire tenendo conto del terremoto. Non è solo burocrazia: è prevenzione che salva vite e patrimonio.",
+    "descrizione": "Con l'OPCM 20 marzo 2003 n. 3274 e il recepimento regionale, Genzano di Roma è classificata in zona sismica 2 (ag tra 0,15 e 0,25 g). Con la DGR n. 387 del 22 maggio 2009 la Regione Lazio divide la zona in due sottozone: Genzano è nella 2B (ag tra 0,15 e 0,20 g, sismicità media). La classificazione vincola le Norme Tecniche di Costruzione antisismiche per nuove edificazioni e ristrutturazioni.",
+    "lezione": "Vivere in zona 2B significa progettare e costruire tenendo conto del terremoto. Non è solo burocrazia: è prevenzione che salva vite e patrimonio.",
     "fonte": "Regione Lazio — DGR n. 387/2009 (classificazione sismica); OPCM 3274/2003",
-    "fonte_url": "https://www.regione.lazio.it/"
+    "fonte_url": "https://www.regione.lazio.it/sites/default/files/documentazione/AMB_DGR_387_22_05_2009_Allegato1.pdf"
   },
   {
     "ordine": 2014,

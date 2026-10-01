@@ -48,7 +48,7 @@ Una scossa che altrove si tradurrebbe in poco danno può, in aree con amplificaz
 
 ## I dati di riferimento
 
-- La [**Mappa di pericolosità sismica nazionale**](https://esse1.mi.ingv.it/) dell'**INGV** colloca i Castelli in zona 2-3 (pericolosità moderata).
+- La [**Mappa di pericolosità sismica nazionale**](https://esse1.mi.ingv.it/) dell'**INGV** mostra per i Castelli una pericolosità media. Sulla sua base la Regione Lazio classifica Genzano di Roma in **zona sismica 2B** (sismicità media).
 - Il **Piano regolatore** del Comune di Genzano di Roma recepisce gli studi di microzonazione disponibili.
 - Le **Norme tecniche per le costruzioni (NTC 2018)** impongono ai progettisti di considerare la MS nei calcoli antisismici.
 

@@ -23,14 +23,14 @@ I **laghi di Nemi** e di **Albano** sono un patrimonio naturale unico dei Castel
 - **Profondità massima**: circa 33 metri.
 - **Superficie**: circa 1,67 km².
 - **Quota**: 316 metri s.l.m.
-- **Origine**: caldera vulcanica.
+- **Origine**: cratere vulcanico (maar).
 
 ### Lago di Albano
 
-- **Profondità massima**: circa 170 metri (uno dei laghi più profondi d'Italia).
+- **Profondità massima**: circa 168 metri (uno dei laghi più profondi d'Italia).
 - **Superficie**: circa 6 km².
 - **Quota**: 293 metri s.l.m.
-- **Origine**: caldera vulcanica complessa.
+- **Origine**: cratere vulcanico complesso, nato da più esplosioni.
 
 Entrambi sono **molto profondi in prossimità delle sponde**: bastano pochi metri dalla riva per trovare acque alte. Questa è la prima cosa da sapere.
 
@@ -133,5 +133,6 @@ Fonti istituzionali:
 
 - [Comune di Genzano di Roma](https://www.comune.genzanodiroma.roma.it/).
 - [Parco Regionale dei Castelli Romani](https://www.parcocastelliromani.it/).
+- [Istituto Superiore di Sanità — Rapporti ISTISAN 07/8, «Le acque del Parco Naturale Regionale dei Castelli Romani»](https://www.iss.it/documents/20126/45616/07-8.1180687096.pdf/ea8402d3-719d-20e0-079a-1f9bc3a759ea?t=1581098399169) (quota, estensione e profondità dei laghi).
 
 I laghi sono un privilegio del nostro territorio: preservarli e frequentarli con rispetto è la **prima forma di Protezione Civile** ambientale.
