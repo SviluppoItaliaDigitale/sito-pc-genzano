@@ -1,10 +1,10 @@
-ultimo_audit: '2026-09-21'
-totale: 54
+ultimo_audit: '2026-10-01'
+totale: 62
 riepilogo:
   ACCESSIBILE: 2
   PARZIALE: 15
   NON_ACCESSIBILE: 18
-  TERZO: 19
+  TERZO: 27
   ERRORE: 0
 documenti:
 - path: /allegati/2026/2026-05-08-dpc-art-39-rimborsi-volontari-lavoratori-autonomi.pdf
@@ -241,6 +241,118 @@ documenti:
   origine: TERZO
   origine_descrizione: Fondazione Barilla
   verdict: TERZO
+- path: /manuali/carg/carg-foglio-374-roma-carta.pdf
+  file: carg-foglio-374-roma-carta.pdf
+  size_kb: 18672.0
+  searchable: false
+  tagged: false
+  language: null
+  title: null
+  pages: 1
+  errors: []
+  text_chars_sample: 0
+  origine: TERZO
+  origine_descrizione: ISPRA — Servizio Geologico d'Italia (Carta geologica CARG,
+    CC BY 4.0)
+  verdict: TERZO
+- path: /manuali/carg/carg-foglio-374-roma-note.pdf
+  file: carg-foglio-374-roma-note.pdf
+  size_kb: 5554.7
+  searchable: true
+  tagged: true
+  language: null
+  title: null
+  pages: 160
+  errors: []
+  text_chars_sample: 4815
+  origine: TERZO
+  origine_descrizione: ISPRA — Servizio Geologico d'Italia (Carta geologica CARG,
+    CC BY 4.0)
+  verdict: TERZO
+- path: /manuali/carg/carg-foglio-375-tivoli-carta.pdf
+  file: carg-foglio-375-tivoli-carta.pdf
+  size_kb: 10637.6
+  searchable: false
+  tagged: false
+  language: null
+  title: F375_Tivoli_Stampa.indd
+  pages: 1
+  errors: []
+  text_chars_sample: 0
+  origine: TERZO
+  origine_descrizione: ISPRA — Servizio Geologico d'Italia (Carta geologica CARG,
+    CC BY 4.0)
+  verdict: TERZO
+- path: /manuali/carg/carg-foglio-375-tivoli-note.pdf
+  file: carg-foglio-375-tivoli-note.pdf
+  size_kb: 47634.8
+  searchable: true
+  tagged: false
+  language: it-IT
+  title: null
+  pages: 192
+  errors: []
+  text_chars_sample: 5184
+  origine: TERZO
+  origine_descrizione: ISPRA — Servizio Geologico d'Italia (Carta geologica CARG,
+    CC BY 4.0)
+  verdict: TERZO
+- path: /manuali/carg/carg-foglio-387-albano-laziale-carta.pdf
+  file: carg-foglio-387-albano-laziale-carta.pdf
+  size_kb: 21110.0
+  searchable: false
+  tagged: false
+  language: null
+  title: null
+  pages: 1
+  errors: []
+  text_chars_sample: 0
+  origine: TERZO
+  origine_descrizione: ISPRA — Servizio Geologico d'Italia (Carta geologica CARG,
+    CC BY 4.0)
+  verdict: TERZO
+- path: /manuali/carg/carg-foglio-387-albano-laziale-note.pdf
+  file: carg-foglio-387-albano-laziale-note.pdf
+  size_kb: 24565.2
+  searchable: true
+  tagged: false
+  language: null
+  title: null
+  pages: 149
+  errors: []
+  text_chars_sample: 4773
+  origine: TERZO
+  origine_descrizione: ISPRA — Servizio Geologico d'Italia (Carta geologica CARG,
+    CC BY 4.0)
+  verdict: TERZO
+- path: /manuali/carg/carg-foglio-388-velletri-carta.pdf
+  file: carg-foglio-388-velletri-carta.pdf
+  size_kb: 10190.8
+  searchable: false
+  tagged: false
+  language: null
+  title: F388_Velletri_Stampa.indd
+  pages: 1
+  errors: []
+  text_chars_sample: 0
+  origine: TERZO
+  origine_descrizione: ISPRA — Servizio Geologico d'Italia (Carta geologica CARG,
+    CC BY 4.0)
+  verdict: TERZO
+- path: /manuali/carg/carg-foglio-388-velletri-note.pdf
+  file: carg-foglio-388-velletri-note.pdf
+  size_kb: 12940.4
+  searchable: true
+  tagged: false
+  language: it-IT
+  title: null
+  pages: 142
+  errors: []
+  text_chars_sample: 4675
+  origine: TERZO
+  origine_descrizione: ISPRA — Servizio Geologico d'Italia (Carta geologica CARG,
+    CC BY 4.0)
+  verdict: TERZO
 - path: /manuali/carta-naturalistica-castelli-romani-latium-volcano.pdf
   file: carta-naturalistica-castelli-romani-latium-volcano.pdf
   size_kb: 1807.1
@@ -309,7 +421,7 @@ documenti:
   verdict: PARZIALE
 - path: /manuali/manuale-protezione-civile.pdf
   file: manuale-protezione-civile.pdf
-  size_kb: 695.6
+  size_kb: 702.3
   searchable: true
   tagged: false
   language: it
@@ -317,7 +429,7 @@ documenti:
     per articolo, del Codice della protezione civile. — Manuale di Protezione Civile
   pages: 127
   errors: []
-  text_chars_sample: 3567
+  text_chars_sample: 3549
   origine: GRUPPO
   origine_descrizione: Classificazione di default (assumiamo nostro produzione)
   verdict: PARZIALE
@@ -349,7 +461,7 @@ documenti:
   verdict: TERZO
 - path: /manuali/presentazione-struttura-sito.pdf
   file: presentazione-struttura-sito.pdf
-  size_kb: 2475.1
+  size_kb: 2478.3
   searchable: true
   tagged: true
   language: it-IT
