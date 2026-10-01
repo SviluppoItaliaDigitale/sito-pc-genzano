@@ -18,7 +18,7 @@ Pochi sanno che i Castelli Romani sorgono su un vulcano. Non è spento: è **qui
 
 I **Colli Albani** — chiamati anche **Vulcano Laziale** — sono un complesso vulcanico dell'Italia centrale, circa 20 chilometri a sud-est di Roma. Sono la struttura più meridionale di una catena di vulcani che si sviluppa lungo la costa tirrenica del Lazio.
 
-Non si tratta di un singolo cono, ma di un **apparato centrale complesso**, frutto di un'attività prevalentemente esplosiva alternata a lunghe fasi di inattività. La sua morfologia ricorda quella del Somma-Vesuvio: un bordo esterno racchiude un'area pianeggiante di circa 8 chilometri di diametro, al cui interno è cresciuto un vulcano più recente. Il bordo esterno corrisponde ai **Monti Tuscolani** e all'**Artemisio**; il vulcano interno è il **cono delle Faete**, alto 932 metri, che degrada verso sud-ovest fino ai crateri che oggi ospitano i laghi di Albano e di Nemi.
+Non si tratta di un singolo cono, ma di un **apparato centrale complesso**, frutto di un'attività prevalentemente esplosiva alternata a lunghe fasi di inattività. La sua morfologia ricorda quella del Somma-Vesuvio: un bordo esterno racchiude un'area pianeggiante di circa 8 chilometri di diametro, al cui interno è cresciuto un vulcano più recente. Il bordo esterno corrisponde ai **Monti Tuscolani** e all'**Artemisio**; il vulcano interno è il **cono delle Faete**, alto 932 metri secondo il Dipartimento della Protezione Civile. Il cono degrada verso sud-ovest fino ai crateri che oggi ospitano i laghi di Albano e di Nemi. La vetta più alta dei Colli Albani, il Maschio delle Faete, misura 956 metri secondo il Parco regionale dei Castelli Romani; Monte Cavo è a 949 metri (INGV).
 
 L'area appartiene alla cosiddetta «provincia magmatica potassica e ultrapotassica romana», una caratteristica chimica dei magmi di questo tratto della penisola.
 
@@ -62,7 +62,7 @@ Fonte: Dipartimento della Protezione Civile, [Colli Albani](https://rischi.prote
 
 ## Sismicità e sollevamento del suolo
 
-L'area è interessata da **sismicità ricorrente di bassa energia**. Un esempio recente e documentato: tra il **28 e il 29 agosto 2020** l'INGV registrò nei Colli Albani **15 eventi di magnitudo compresa tra 1.2 e 3.0** nell'arco di poche ore — una sequenza tipica per questo tipo di vulcano quiescente.
+L'area è interessata da **sismicità ricorrente di bassa energia**. Un esempio recente e documentato: tra il **28 e il 29 agosto 2020** l'INGV registrò nei Colli Albani **15 eventi di magnitudo compresa tra 1,2 e 3,0**, concentrati in circa un giorno nella zona di Lariano. È una sequenza di bassa energia, come quelle che l'INGV descrive per quest'area.
 
 Le deformazioni del suolo sono misurate dall'INGV con tecniche di altissima precisione (livellazioni, **GPS** e dati satellitari **InSAR**). Gli studi pubblicati mostrano un quadro complesso: accanto a fenomeni di **sollevamento** del terreno si osservano anche aree in **subsidenza** (abbassamento). Secondo la ricerca scientifica dell'INGV, la combinazione di sollevamento e subsidenza è compatibile con una **ricarica di magma** in profondità nei pressi di Roma (Trasatti et al., 2018) — un motivo in più per mantenere la sorveglianza, non un segnale di eruzione imminente.
 
@@ -86,7 +86,7 @@ La struttura responsabile della sorveglianza è la **Sezione di Roma dell'INGV**
 
 - **Rete sismica** — registra i terremoti dell'area, anche i più piccoli.
 - **Rete geodetica (GPS + InSAR)** — misura i movimenti del suolo. La rete GPS dei Colli Albani è attiva dal 1990 ed è diventata ad acquisizione continua dal 2007, con stazioni a Albano-Pavona, Lariano, Marino, Nemi, Rocca di Papa, Monte Porzio Catone e Rocca Priora, integrate nella rete nazionale RING.
-- **Monitoraggio geochimico** — stazioni in continuo per il flusso di CO₂ dal suolo e per il radon a Cava dei Selci, più campionamenti periodici di acque e gas, anche nel lago Albano.
+- **Monitoraggio geochimico** — a Cava dei Selci il programma dell'INGV prevede una stazione in continuo per il flusso di CO₂ dal suolo, una sonda radon e misure periodiche su un'area di circa 6.000 m². Si aggiungono campionamenti dei gas e, sul lago Albano, campagne semestrali di misura delle acque.
 
 Questo permette di seguire nel tempo lo stato del vulcano e di cogliere per tempo eventuali variazioni significative.
 

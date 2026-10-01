@@ -12,7 +12,7 @@ Un manuale di protezione civile si misura anche sulla capacità di calarsi nel p
 
 ## 14.1 Il Distretto Vulcanico dei Colli Albani
 
-I **Colli Albani** — o **Vulcano Laziale** — sono un complesso vulcanico dell'Italia centrale, circa venti chilometri a sud-est di Roma, la struttura più meridionale di una catena di vulcani lungo la costa tirrenica del Lazio. Non è un singolo cono, ma un **apparato centrale complesso**, frutto di un'attività prevalentemente esplosiva alternata a lunghe fasi di inattività. La sua morfologia ricorda quella del Somma-Vesuvio: un bordo esterno — i **Monti Tuscolani** e l'**Artemisio** — racchiude un'ampia area pianeggiante, al cui interno è cresciuto un vulcano più recente, il **cono delle Faete** (932 metri), che degrada verso i crateri di Albano e Nemi.
+I **Colli Albani** — o **Vulcano Laziale** — sono un complesso vulcanico dell'Italia centrale, circa venti chilometri a sud-est di Roma, la struttura più meridionale di una catena di vulcani lungo la costa tirrenica del Lazio. Non è un singolo cono, ma un **apparato centrale complesso**, frutto di un'attività prevalentemente esplosiva alternata a lunghe fasi di inattività. La sua morfologia ricorda quella del Somma-Vesuvio: un bordo esterno — i **Monti Tuscolani** e l'**Artemisio** — racchiude un'ampia area pianeggiante, al cui interno è cresciuto un vulcano più recente, il **cono delle Faete** (932 metri secondo il Dipartimento della Protezione Civile; la vetta più alta dei Colli Albani, il Maschio delle Faete, misura 956 metri secondo il Parco regionale dei Castelli Romani), che degrada verso i crateri di Albano e Nemi.
 
 ## 14.2 I laghi di Albano e Nemi: crateri pieni d'acqua
 

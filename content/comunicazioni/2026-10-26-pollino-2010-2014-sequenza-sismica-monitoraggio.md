@@ -65,7 +65,7 @@ L'esperienza del Pollino è una lezione importante per noi: anche zone considera
 ## Sul nostro sito
 
 - [Rischio sismico](/rischi-prevenzione/rischio-sismico/) — La sismicità nei Castelli Romani, il sistema vulcanico dei Colli Albani e cosa fare in caso di scossa.
-- [Rischio vulcanico](/rischi-prevenzione/rischio-vulcanico/) — Il vulcanismo dei Colli Albani: attività bradisismica e monitoraggio INGV nel nostro territorio.
+- [Rischio vulcanico](/rischi-prevenzione/rischio-vulcanico/) — Il vulcanismo dei Colli Albani: deformazioni del suolo, emissioni di gas e monitoraggio INGV nel nostro territorio.
 
 ## Per saperne di più
 

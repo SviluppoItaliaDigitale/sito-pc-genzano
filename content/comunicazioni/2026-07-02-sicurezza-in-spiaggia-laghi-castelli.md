@@ -161,5 +161,6 @@ Se porti il cane:
 - Articolo: [Primo soccorso estivo](/comunicazioni/2026-06-29-primo-soccorso-estivo-caldo-traumi/)
 - [ARPA Lazio — Balneazione](https://www.arpalazio.it/)
 - [Federazione Italiana Nuoto](https://www.federnuoto.it/)
+- [Istituto Superiore di Sanità — Rapporti ISTISAN 07/8, «Le acque del Parco Naturale Regionale dei Castelli Romani»](https://www.iss.it/documents/20126/45616/07-8.1180687096.pdf/ea8402d3-719d-20e0-079a-1f9bc3a759ea?t=1581098399169) (quota, estensione e profondità dei laghi)
 
 I laghi sono un tesoro del territorio. Vederli con rispetto e prudenza vuol dire poterli vivere per una vita intera.

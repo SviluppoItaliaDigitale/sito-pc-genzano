@@ -70,7 +70,7 @@ Conoscere la forma del territorio — vista dall'alto — aiuta a capire **dove 
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="territorio" image="/images/dossier/duelaghi.webp" alt="I due laghi di cratere dei Castelli Romani visti dalla Stazione Spaziale: a sinistra il più piccolo Lago di Nemi, a destra il più ampio Lago Albano, dentro gli antichi crateri del vulcano" align="top" kicker="I nostri due crateri" title="Albano e Nemi, dall'orbita" credito="NASA · Stazione Spaziale Internazionale (2021) · pubblico dominio" >}}
-I **due occhi del Vulcano Laziale**, fianco a fianco: a **sinistra** il **Lago di Nemi**, sul cui orlo si affaccia **Genzano**; a **destra** il più ampio **Lago Albano**, il lago più profondo del Lazio. Due crateri riempiti d'acqua, scavati da eruzioni di decine di migliaia di anni fa.
+I **due occhi del Vulcano Laziale**, fianco a fianco: a **sinistra** il **Lago di Nemi**, sul cui orlo si affaccia **Genzano**; a **destra** il più ampio **Lago Albano**, il lago più profondo del Lazio. Due crateri riempiti d'acqua, scavati da esplosioni vulcaniche avvenute tra circa 270.000 e 36.000 anni fa (Dipartimento della Protezione Civile).
 {{< /dossier-scena >}}
 
 {{< dossier-hotspot id="casa-dettaglio" image="/images/dossier/castelli-sat.webp" alt="Vista satellitare dall'alto dei Castelli Romani: a sinistra il Lago Albano e più in basso il piccolo Lago di Nemi, due laghi di cratere scuri circondati dal bosco del vulcano e dai paesi" titolo="Esplora i crateri dei Castelli" testo="Tocca i cinque punti per scoprire cosa stai guardando dall'alto. *(Immagine: Castelli Romani, dati Copernicus Sentinel-2 / ESA, CC BY.)*" >}}

@@ -45,13 +45,13 @@ Vivere qui significa conoscere questa doppia natura: la bellezza e il rischio na
 {{< dossier-scena id="vulcano" image="/images/dossier/castelli-lago-albano.webp" alt="Il Lago Albano visto dall'alto da Monte Cavo: il lago profondo dentro il cratere, le pareti boscate e la pianura romana che si stende oltre, nella foschia" align="right" kicker="Il Vulcano Laziale" title="Un vulcano<br>che dorme" credito="Foto: Deblu68 · pubblico dominio, via Wikimedia Commons" >}}
 I Colli Albani sono un **vulcano quiescente**: non erutta da decine di migliaia di anni, ma non è morto. Lo dicono i segni che gli scienziati misurano ancora oggi: **circolazione idrotermale**, piccoli terremoti, lenti **sollevamenti del suolo**.
 
-A sorvegliarlo è l'**Istituto Nazionale di Geofisica e Vulcanologia (INGV)**, con la sua sezione di Roma. Non c'è un'eruzione all'orizzonte, ma il monitoraggio è continuo: è così che un vulcano si tiene sotto controllo.
+A sorvegliarlo è l'**Istituto Nazionale di Geofisica e Vulcanologia (INGV)**, con la sua sezione di Roma. Per l'INGV lo stato di attività è «quiescente»; il monitoraggio è continuo, ed è così che un vulcano si tiene sotto controllo.
 
 Il Lago Albano, il più profondo, custodisce parte di questa storia: i geologi ne studiano i gas e le acque profonde.
 {{< /dossier-scena >}}
 
 {{< dossier-dati id="gas" image="/images/dossier/castelli-lago-albano.webp" alt="Il Lago Albano nel cratere dei Colli Albani" >}}
-{{< dossier-dato to="1989" label="Lo **sciame sismico** del 1989–1990 nei Colli Albani: oltre **tremila** piccole scosse, accompagnate da rilascio di gas dal sottosuolo" >}}
+{{< dossier-dato to="1989" label="Lo **sciame sismico** del 1989–1990 nei Colli Albani: oltre **tremila** scosse rilevate tra aprile 1989 e marzo 1990 dalla rete sismica temporanea (Amato e colleghi, 1994), la più forte di magnitudo 3,9 nel catalogo INGV: lo sciame spinse a studiare anche i gas del Lago Albano" >}}
 {{< dossier-dato da="2000" label="Da oltre vent'anni l'INGV monitora i **gas del distretto** — anidride carbonica (CO₂) e idrogeno solforato — che per la Protezione Civile sono il **pericolo naturale principale** dell'area" >}}
 {{< dossier-dato to="1" unita=" regola" label="In presenza di emissioni di gas, la regola è semplice: non sostare in **avvallamenti, cantine o pozzi** dove la CO₂, più pesante dell'aria, può accumularsi" >}}
 {{< /dossier-dati >}}
@@ -112,7 +112,7 @@ E quando il pericolo è davanti a te, qui come ovunque, il numero è il **112**.
 
 {{< dossier-fonti >}}
 - **Immagini:** Genzano e il Lago di Nemi al tramonto (Deblu68, pubblico dominio) · Lago di Nemi dal bordo del cratere (Deblu68, pubblico dominio) · Lago Albano da Monte Cavo (Deblu68, pubblico dominio) · Castelli Romani dal satellite (dati Copernicus Sentinel-2 / ESA · CC BY) · i due laghi di cratere dalla Stazione Spaziale (NASA · pubblico dominio) · il Lago di Nemi da Genzano (Kleuske · CC BY-SA 3.0) · versante boscato dei Castelli (Nicholas Gemini · CC BY-SA 3.0) · danni da temporale nei Castelli (MeteoNetwork.it · CC BY-SA 4.0). Via Wikimedia Commons.
-- **Fonti:** [INGV — Colli Albani](https://www.ingv.it/colli-albani) · [Protezione Civile — Vulcano Colli Albani](https://rischi.protezionecivile.gov.it/it/vulcanico/vulcani-italia/colli-albani/) · [INGV Ambiente — Il rischio nascosto del Lago Albano](https://ingvambiente.com/2022/11/09/il-rischio-nascosto-tra-le-profondita-del-lago-di-albano/) · Centro Funzionale Regionale Lazio · zone di allerta AIB della Regione Lazio.
+- **Fonti:** [INGV — Colli Albani](https://www.ingv.it/colli-albani) · [Protezione Civile — Vulcano Colli Albani](https://rischi.protezionecivile.gov.it/it/vulcanico/vulcani-italia/colli-albani/) · [INGV Ambiente — Il rischio nascosto del Lago Albano](https://ingvambiente.com/2022/11/09/il-rischio-nascosto-tra-le-profondita-del-lago-di-albano/) · Amato et al., «The 1989–1990 seismic swarm in the Alban Hills volcanic area», *Journal of Volcanology and Geothermal Research* 61 (1994) · Centro Funzionale Regionale Lazio · zone di allerta AIB della Regione Lazio.
 - **Sul nostro sito:** [Rischi e prevenzione](/rischi-prevenzione/) · [Rischio vulcanico](/rischi-prevenzione/rischio-vulcanico/) · [Rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/) · [Rischio incendio](/rischi-prevenzione/rischio-incendio/) · [Allerte meteo](/allerte-meteo/) · [Diventa volontario](/diventa-volontario/).
 - Dossier a cura del **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma**. Guida divulgativa a scopo informativo: per i dati scientifici sul vulcano la fonte è l'INGV. In emergenza chiama il **112**.
 {{< /dossier-fonti >}}

@@ -34,7 +34,7 @@ I Colli Albani sono un **patrimonio naturalistico** di rilievo europeo: una cald
 - **Abbandono** di pratiche agricole tradizionali che mantenevano i versanti.
 - **Incendi ricorrenti** nei mesi estivi.
 - **Piogge intense** che causano erosione localizzata.
-- **Presenza di cavità sotterranee** (grotte, condotti vulcanici) con rischi di crollo.
+- **Presenza di cavità sotterranee** (grotte, cave e cunicoli nel tufo) con rischi di crollo.
 
 Il [Parco Regionale dei Castelli Romani](https://www.parcocastelliromani.it/) svolge un ruolo chiave nella gestione di queste fragilità.
 
@@ -51,7 +51,7 @@ L'ambiente è una **res publica**: appartiene a tutti, richiede cura di tutti. A
 
 ## Acqua: una risorsa da difendere
 
-I laghi di **Nemi** e **Albano** sono il cuore idrico dei Castelli. Il loro livello è monitorato da decenni e mostra una tendenza di **abbassamento** legata a prelievi e cambiamenti climatici. Per i cittadini:
+I laghi di **Nemi** e **Albano** sono il cuore idrico dei Castelli. Secondo l'Autorità di bacino distrettuale dell'Appennino Centrale il loro livello è in progressivo **calo** da molti anni, per prelievi, clima e consumo di suolo. Per i cittadini:
 
 - **Risparmiare acqua** a casa (docce brevi, riparazione perdite).
 - **Raccogliere l'acqua piovana** per usi non potabili.

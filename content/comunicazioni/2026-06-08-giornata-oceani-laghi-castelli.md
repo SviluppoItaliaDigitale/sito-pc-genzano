@@ -30,7 +30,7 @@ Per un Gruppo di Protezione Civile, i laghi sono anche **scenari operativi**. Al
 - **Piene del lago** in seguito a piogge intense che riversano acqua e detriti.
 - **Incendi nelle aree boschive** circostanti, con possibili chiusure di strade lacustri.
 - **Dispersione di escursionisti** sui sentieri del Parco.
-- **Rischio sismico** legato alla natura vulcanica della caldera.
+- **Rischio sismico** legato alla natura vulcanica dei Colli Albani.
 
 Ne abbiamo parlato dettagliatamente nell'articolo sulla [sicurezza sui laghi di Nemi e Albano](/comunicazioni/2026-05-19-sicurezza-laghi-nemi-albano/).
 
@@ -49,12 +49,9 @@ I **Vigili del Fuoco** operano in caso di emergenza sui laghi. Il numero unico d
 
 ## Cambiamento climatico e laghi
 
-I dati ARPA degli ultimi decenni mostrano:
+Secondo l'Autorità di bacino distrettuale dell'Appennino Centrale, il livello dei laghi di Albano e di Nemi cala da molti anni. Pesano insieme temperature più alte, piogge diverse dal passato, più abitanti e più suolo impermeabilizzato. Per il Lago Albano l'INGV riporta una discesa di circa 3,5 metri dal 1960 al 2005.
 
-- **Abbassamento** del livello dei laghi di Nemi e Albano negli ultimi 30 anni.
-- **Aumento** della temperatura media dell'acqua, con ripercussioni sulla fauna ittica.
-- **Maggiore frequenza** di eventi di alga (cianobatteri) tossici.
-- **Stagione balneare** più lunga ma con periodi di chiusura per rischi sanitari.
+Un lago che si abbassa e si scalda può avere più fioriture di alghe, compresi i cianobatteri, e quindi periodi di divieto di balneazione: è un rischio da seguire sui dati ufficiali dell'ARPA Lazio e dell'ASL, non una misura che qui si possa quantificare.
 
 Questi dati non sono allarmi, sono descrizioni. Ma richiedono **monitoraggio continuo** e **politiche di gestione**.
 
@@ -93,5 +90,6 @@ Nemi e Albano non sono "piccoli laghi qualsiasi". Sono **patrimoni ambientali, a
 - [UN — World Oceans Day](https://www.un.org/en/observances/oceans-day)
 - [ARPA Lazio — Qualità delle acque](https://www.arpalazio.it/)
 - [Parco dei Castelli Romani](https://www.parcocastelliromani.it/)
+- [Istituto Superiore di Sanità — Rapporti ISTISAN 07/8, «Le acque del Parco Naturale Regionale dei Castelli Romani»](https://www.iss.it/documents/20126/45616/07-8.1180687096.pdf/ea8402d3-719d-20e0-079a-1f9bc3a759ea?t=1581098399169) (quota, estensione e profondità dei laghi)
 
-Vista dalla nostra caldera, la Giornata degli oceani è una giornata dei laghi. E dei sistemi idrici che ci sostengono.
+Vista dal nostro vulcano, la Giornata degli oceani è una giornata dei laghi. E dei sistemi idrici che ci sostengono.

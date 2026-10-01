@@ -17,7 +17,7 @@ La siccità non arriva con un boato: è un **rischio lento**, fatto di mesi con 
 
 ## <i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Perché è rilevante sul nostro territorio {#perche-rilevante}
 
-I Castelli Romani dipendono in larga parte dalla **falda vulcanica dei Colli Albani**, alimentata solo dalle piogge: anni di precipitazioni scarse e prelievi elevati ne abbassano il livello, come mostra anche il calo storico dei laghi di **Albano** e di **Nemi**, documentato dagli enti di ricerca. Le crisi idriche del 2017 e degli anni successivi hanno interessato anche il Lazio, con misure di contenimento dei consumi.
+I Castelli Romani dipendono in larga parte dalla **falda vulcanica dei Colli Albani**, alimentata dalle piogge: anni di precipitazioni scarse e prelievi elevati ne abbassano il livello, come mostra anche il calo storico dei laghi di **Albano** e di **Nemi**, documentato dagli enti di ricerca. Le crisi idriche del 2017 e degli anni successivi hanno interessato anche il Lazio, con misure di contenimento dei consumi.
 
 Con il cambiamento climatico le estati diventano più calde e le piogge più irregolari: gli scenari del CMCC indicano per il Mediterraneo un aumento della frequenza delle siccità. Per la spiegazione scientifica del fenomeno leggi la pagina materia [Il rischio da deficit idrico](/conoscere/catalogo-dei-rischi/rischio-siccita/).
 

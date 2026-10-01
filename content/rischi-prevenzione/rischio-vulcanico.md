@@ -19,17 +19,18 @@ Questa pagina descrive i fenomeni concreti che il cittadino può incontrare — 
 {{< emergenza-ora >}}
 
 ## <i class="bi bi-info-circle-fill text-primary me-2" aria-hidden="true"></i>Perché è rilevante sul nostro territorio {#perche-rilevante}
-Il **Vulcano Laziale** ha una storia eruttiva di oltre 600.000 anni. Le sue eruzioni hanno costruito tutto il paesaggio dei Castelli Romani: i rilievi del **Tuscolano-Artemisio**, i crateri di **Albano** e **Nemi** (oggi laghi), la **Faete**, i banchi di tufo su cui sorgono Genzano, Ariccia, Velletri.
+Il **Vulcano Laziale** ha una storia eruttiva di oltre 600.000 anni. Le sue eruzioni hanno costruito tutto il paesaggio dei Castelli Romani: i rilievi del **Tuscolano-Artemisio**, i crateri di **Albano** e **Nemi** (oggi laghi), la **Faete**, i depositi vulcanici su cui sorgono i paesi dei Castelli.
 
-Il sistema è classificato dall'INGV come:
+Secondo le schede dell'INGV e del Dipartimento della Protezione Civile il vulcano è:
 
-- **Quiescente** — non in eruzione, ma con attività residua.
-- **Monitorato** — sismicità, deformazioni del suolo (gravimetria, GPS), gas vulcanici.
-- A **bassa probabilità** di ripresa eruttiva nel breve-medio termine, secondo gli scenari scientifici disponibili.
+- **Quiescente** — non in eruzione, ma con attività residua (circolazione idrotermale, sismicità, sollevamento del suolo, emissioni di gas).
+- **Monitorato** — sismicità, deformazioni del suolo (GPS e dati satellitari InSAR), gas.
+
+Per i Colli Albani il Dipartimento della Protezione Civile **non ha definito livelli di allerta** (quelli esistono per Vesuvio, Campi Flegrei, Etna, Stromboli e Vulcano). Nessuna fonte ufficiale consultata indica una ripresa eruttiva imminente; il vulcano però non è estinto, e per questo è sorvegliato.
 
 I fenomeni che il cittadino può effettivamente incontrare oggi sono **due**:
 
-1. **Sismicità di bassa magnitudo** — scosse di origine vulcano-tettonica, generalmente M < 3.0, spesso non avvertite dalla popolazione. Per i comportamenti da tenere si rimanda alla pagina [Rischio Sismico](/rischi-prevenzione/rischio-sismico/) (Genzano è in zona sismica **2B**).
+1. **Sismicità di bassa magnitudo** — sciami di scosse poco profonde (2-7 km), di magnitudo generalmente inferiore a 4 secondo l'INGV. Per i comportamenti da tenere si rimanda alla pagina [Rischio Sismico](/rischi-prevenzione/rischio-sismico/) (Genzano è in zona sismica **2B**).
 2. **Emissioni naturali di CO₂** — in aree localizzate del territorio dei Castelli Romani sono note emanazioni di anidride carbonica dal sottosuolo, fenomeno chiamato **degassamento**. È una manifestazione comune nei sistemi vulcanici quiescenti.
 
 > **Riferimenti scientifici di base**: INGV — Sezione di Roma, che sorveglia i Colli Albani; CNR-IGAG (Geologia Ambientale e Geoingegneria); ISPRA. Le mappe ufficiali della pericolosità vulcanica nazionale e i bollettini di sorveglianza si consultano sui portali istituzionali (vedi sezione "Fonti" in fondo alla pagina).
@@ -43,7 +44,7 @@ L'**anidride carbonica (CO₂)** è un gas **incolore, inodore, più pesante del
 
 **Aree note di emissione** (non esaustivo). Secondo il Dipartimento della Protezione Civile i principali punti sono Cava dei Selci, Santa Maria delle Mole, Marino, Frattocchie, Ciampino e Tor Caldara. Secondo la sorveglianza dell'INGV emissioni anomale arrivano anche dal fondo del lago Albano e dalle zone periferiche di Solforata, Ardea e Tor Caldara. La presenza di emissioni in luoghi specifici è oggetto di studio continuo da parte di INGV e dell'ARPA Lazio.
 
-**Genzano di Roma** non è in un'area di emanazione documentata di rilievo abitativo, ma il principio di prevenzione vale comunque sull'intero territorio dei Castelli per cantine, pozzi, scantinati, fossi profondi.
+**Genzano di Roma** non compare fra i principali punti di emanazione indicati dal Dipartimento della Protezione Civile e dall'INGV. Il principio di prevenzione vale comunque su tutto il territorio dei Castelli, per cantine, pozzi, scantinati e fossi profondi.
 
 ## <i class="bi bi-eye-fill text-primary me-2" aria-hidden="true"></i>Segnali e situazioni tipiche {#segnali}
 ### Riconoscere un'area di accumulo di CO₂
@@ -68,7 +69,7 @@ L'aria all'aperto, ventilata, **non** è un problema: il pericolo è confinato.
 ## <i class="bi bi-clipboard-check-fill text-primary me-2" aria-hidden="true"></i>Cosa fare PRIMA {#cosa-fare-prima}
 - Conosci il tuo territorio: se vivi o lavori vicino a Cava dei Selci o ad altre aree note, informati presso il Comune e l'ARPA Lazio.
 - **Areare cantine, scantinati e seminterrati** prima di entrarci dopo periodi di chiusura prolungata. Non entrare in spazi sigillati senza aerare prima.
-- **Non entrare mai in pozzi** senza autorizzazione e senza personale specializzato con ossimetro. Le morti in pozzo sono spesso da CO₂, non da affogamento.
+- **Non entrare mai in pozzi** senza autorizzazione e senza personale specializzato con ossimetro. In un pozzo il pericolo può essere un gas asfissiante come la CO₂, non solo l'acqua.
 - Mantieni ben ventilate le caldaie, gli scaldabagni a gas e gli ambienti dove si bruciano combustibili: la CO₂ di origine antropica si somma a qualsiasi residuo geologico.
 - Segna nel piano familiare la presenza di scantinati o cantine e tieni il **112** sempre a portata.
 - Se hai bambini piccoli o animali domestici: tieni sempre chiuse le cantine non aerate.
@@ -83,7 +84,7 @@ Se entrando in uno spazio confinato senti **mancanza d'aria, capogiro, nausea, m
 - Se sei in casa e senti odore strano: apri tutte le finestre, esci, chiama il 112. Potrebbe essere monossido di carbonio (CO) da caldaia, anch'esso pericoloso.
 
 ## <i class="bi bi-activity text-primary me-2" aria-hidden="true"></i>Cosa fare DURANTE — sospetto di scossa sismica {#durante-sismico}
-Le scosse di origine vulcano-tettonica del Vulcano Laziale sono in larghissima maggioranza di **magnitudo bassa** (M < 3.0). I comportamenti corretti sono quelli del rischio sismico:
+Le scosse del Vulcano Laziale sono in genere di **magnitudo bassa**: nel catalogo INGV, dal 1985 a oggi, le scosse più forti entro 30 km da Genzano hanno magnitudo 3.9 (aprile 1987, ottobre 1989 e aprile 2008). I comportamenti corretti sono quelli del rischio sismico:
 
 - Durante la scossa: **DROP-COVER-HOLD ON** (a terra, sotto a un riparo solido, mantieni la posizione).
 - Non correre fuori durante la scossa: la maggior parte degli infortuni avviene così.

@@ -35,23 +35,26 @@ eventi:
     fonte: "Dipartimento della Protezione Civile, «Colli Albani — Storia eruttiva»; INGV, scheda «Colli Albani»"
     fonte_url: "https://rischi.protezionecivile.gov.it/it/vulcanico/vulcani-italia/colli-albani/"
 
-  - anno: "V–IV secolo a.C."
+  - anno: "Circa 2.500 anni fa"
     ordine: -400
     tipo: "idrogeologico"
     titolo: "L'Emissario antico del Lago di Nemi"
     luogo: "Lago di Nemi"
     descrizione: >-
-      Già in epoca pre-romana (V–IV secolo a.C.) viene realizzato un
-      cunicolo emissario sotterraneo per regolare il livello del Lago
-      di Nemi ed evitare esondazioni delle terre coltivabili a valle.
-      È fra le più antiche opere documentate di ingegneria idraulica per
-      la prevenzione del rischio idrogeologico in Italia centrale.
+      Circa 2.500 anni fa viene scavato un emissario sotterraneo,
+      lungo 1.653 metri, che porta le acque del Lago di Nemi verso la
+      Valle Ariccia e poi al mare. Lo realizzano due squadre partite
+      dalle due estremità, sotto 80-100 metri di roccia, che si
+      incontrano sbagliando di pochi metri. Chi lo scavò e in quale anno
+      preciso resta oggetto di studio: alcuni studiosi lo collocano agli
+      inizi del IV secolo a.C. Oggi l'imbocco è all'asciutto, perché il
+      lago si trova almeno tre metri più in basso.
     lezione: >-
       Il controllo dei bacini lacustri è prevenzione, non magia: chi
       viveva qui 2.500 anni fa lo sapeva e costruiva opere mirate.
       La cultura del rischio idrogeologico è antica.
-    fonte: "Soprintendenza Speciale di Roma; ISPRA — Carta geologica e archeologica del territorio dei Colli Albani"
-    fonte_url: "https://www.isprambiente.gov.it/"
+    fonte: "Parco Regionale dei Castelli Romani, «Lago di Nemi: un tunnel lungo 25 secoli»; Lamberto Ferri Ricchi, «Le navi di Nemi e l'emissario del lago»"
+    fonte_url: "https://www.parchilazio.it/schede-589-emissario_di_nemi"
 
   - anno: "26 agosto 1806"
     ordine: 1806
@@ -80,19 +83,20 @@ eventi:
     luogo: "Lago di Nemi"
     descrizione: >-
       Fra il 1928 e il 1932 il livello del Lago di Nemi viene abbassato
-      di oltre 20 metri per recuperare le due navi monumentali di
-      Caligola (I secolo d.C.) dal fondale. L'operazione ha conseguenze
-      idrogeologiche dirette: la repentina variazione del livello
-      destabilizza le pareti del cratere e i versanti sotto l'abitato
-      di Nemi e Genzano. È l'inizio del monitoraggio sistematico dei
-      versanti a rischio frana.
+      di circa 22 metri, con idrovore avviate il 20 ottobre 1928, per
+      recuperare le due navi monumentali di Caligola (I secolo d.C.) dal
+      fondale. Durante i lavori la sponda e il fondale intorno al
+      cantiere cedono più volte (1929 e agosto 1931): le pompe vanno
+      spostate su un pontone galleggiante e il pompaggio viene sospeso
+      per non danneggiare la seconda nave. Le fonti consultate non
+      attribuiscono a quei lavori frane sui versanti sotto l'abitato di
+      Nemi e di Genzano.
     lezione: >-
-      Ogni modifica antropica significativa dei bacini lacustri ha
-      ripercussioni sulla stabilità dei versanti. Il rischio
-      idrogeologico locale è figlio anche di scelte umane, non solo
-      di natura.
-    fonte: "ISPRA — Carta nazionale del dissesto idrogeologico (versanti Colli Albani); Museo delle Navi Romane"
-    fonte_url: "https://www.isprambiente.gov.it/"
+      Intervenire in fretta sul livello di un bacino chiuso in un
+      cratere mette sotto sforzo sponde e terreno: l'equilibrio delle
+      acque va capito prima di essere toccato.
+    fonte: "Guido Ucelli, «Le navi di Nemi» (1940), nella sintesi dell'Encyclopaedia Romana (University of Chicago); Treccani, Enciclopedia dell'Arte Antica, «Nemi, Lago di»; Comune di Nemi, «Storia»"
+    fonte_url: "https://penelope.uchicago.edu/encyclopaedia_romana/miscellanea/nemi/nemiships.html"
 
   - anno: "1989–1990"
     ordine: 1989
@@ -101,17 +105,16 @@ eventi:
     luogo: "Colli Albani, Castelli Romani"
     descrizione: >-
       Fra il 1989 e il 1990 i Colli Albani sono interessati da uno
-      sciame sismico di migliaia di scosse, generalmente di bassa
-      magnitudo ma percepite dalla popolazione. L'evento principale è
-      del 14 aprile 1989 con magnitudo M 4.2. La crisi attiva sul
-      territorio comunale il primo nucleo operativo di volontariato di
-      Protezione Civile: monitoraggio degli edifici, censimento dei
-      danni minori, assistenza alla popolazione preoccupata.
+      sciame sismico di scosse generalmente di bassa magnitudo, ma
+      percepite dalla popolazione. Le scosse più forti del
+      catalogo INGV sono due, del 19 e del 23 ottobre 1989, entrambe di
+      magnitudo Md 3.9. A Genzano erano già attivi dal 1981 i volontari
+      che nel 1991 il Consiglio Comunale avrebbe riunito nel Gruppo
+      Comunale di Protezione Civile.
     lezione: >-
       Le crisi sismiche non sono sempre eventi singoli: anche sciami
       prolungati di scosse piccole richiedono organizzazione, presidio
       degli edifici scolastici, comunicazione costante con i cittadini.
-      Da qui nasce concretamente la PC comunale di Genzano.
     fonte: "INGV — Bollettino sismico storico; ISIDe — Italian Seismological Instrumental and parametric Database"
     fonte_url: "https://terremoti.ingv.it/"
 
