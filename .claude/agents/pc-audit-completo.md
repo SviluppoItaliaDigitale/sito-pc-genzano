@@ -40,7 +40,7 @@ python3 scripts/check-data-uscita.py --giorni 30   # data di uscita coerente con
 python3 scripts/check-fonti-cruscotto.py
 python3 scripts/genera-chrome-menu.py --check
 python3 scripts/genera-pacchetti-schede.py && git diff --quiet -- static/formazione/schede-stampabili/pacchetti/ || echo "PACCHETTI STANTII"
-bash scripts/verifica-fingerprint-live.sh                  # drift di build sul live
+python3 scripts/verifica-deploy-aruba.py                  # drift di build sul live
 bash scripts/smoke-test-live.sh                            # pagine chiave live
 ```
 

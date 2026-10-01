@@ -512,8 +512,22 @@
         if (!raw) return;
         var d = new Date(raw);
         if (isNaN(d.getTime())) return;
-        var label = 'Sito aggiornato il ' + d.getDate() + ' ' + mesi[d.getMonth()] + ' ' + d.getFullYear() +
-                    ' alle ' + String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0');
+        // Fuso Europe/Rome esplicito, come nella utility-bar delle pagine Hugo
+        // (01/10/2026): l'ora è quella italiana anche per chi legge da fuori.
+        var testo = '';
+        try {
+          var parti = {};
+          new Intl.DateTimeFormat('it-IT', { timeZone: 'Europe/Rome', day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false })
+            .formatToParts(d).forEach(function (x) { parti[x.type] = x.value; });
+          if (parti.day && parti.month && parti.year && parti.hour && parti.minute) {
+            testo = parti.day + ' ' + parti.month + ' ' + parti.year + ' alle ' + parti.hour + ':' + parti.minute;
+          }
+        } catch (e) { testo = ''; }
+        if (!testo) {
+          testo = d.getDate() + ' ' + mesi[d.getMonth()] + ' ' + d.getFullYear() +
+                  ' alle ' + String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0');
+        }
+        var label = 'Sito aggiornato il ' + testo + ' (ora italiana)';
         buildEl.innerHTML = '<time datetime="' + raw + '">' + label + '</time>';
       }
       if (window.SITE_BUILD_TIME) {

@@ -13,26 +13,15 @@
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   <meta name="author" content="{{ .Site.Params.author }}">
   <meta name="theme-color" content="#003366">
-  {{/* Fingerprint di build (guardia anti-stale). Ogni pagina generata da
-       Hugo porta lo SHA della build che l'ha prodotta, letto da
-       data/buildinfo.json (scritto in CI da deploy.yml; segnaposto "dev" in
-       locale). Il workflow verifica-deploy-aruba.yml campiona questa meta
-       sulle pagine live e rileva il "drift di generazioni" — il bug per cui
-       su Aruba convivevano pagine di build diverse (chi-siamo di aprile,
-       allerte-meteo di maggio, home di luglio). Se una pagina live non ha
-       affatto questa meta, è servita da una build precedente a questa
-       guardia → anch'essa un segnale di file stantio.
-       SOLO lo SHA, non l'orario (audit 25/09/2026, F19): l'orario dell'ultima
-       build sta in /build-info.js (output BUILDINFO) e in data/buildinfo.json,
-       un file solo. Attenzione: da solo questo non basta a evitare che ogni
-       build riscriva ~1.000 HTML, perché la utility-bar stampa l'ora della
-       build ("Sito aggiornato il … alle HH:MM") e lo SHA cambia a ogni commit,
-       anche solo di dati. Ridurre davvero il ricaricamento FTP richiede di
-       togliere l'ora dalla utility-bar (la legge già site-chrome.js da
-       /build-info.js) e di aggiornare il marker 4 di audit-sito § 43. */}}
-  {{- with site.Data.buildinfo }}
-  <meta name="pc-build-sha" content="{{ .sha }}">
-  {{- end }}
+  {{/* Nessun fingerprint di build nelle pagine (dal 01/10/2026). Fino a quel
+       giorno ogni pagina portava <meta name="pc-build-sha"> con lo SHA del
+       deploy: cambiava a ogni commit, quindi ~1.100 HTML venivano ricaricati
+       su Aruba a ogni deploy (17 minuti anche per un solo articolo). La
+       guardia anti-stale ora confronta le pagine live con
+       /build-manifest.json (impronta sha256 di ogni file della build, scritto
+       da scripts/genera-manifest-build.py): è più precisa — vede qualunque
+       differenza, non solo lo SHA — e non costringe le pagine a cambiare.
+       SHA e orario della build stanno in /build-info.js e data/buildinfo.json. */}}
   {{- $prodBase := .Site.Params.productionBaseURL | default .Site.BaseURL -}}
   {{- $basePath := (urls.Parse .Site.BaseURL).Path | default "/" -}}
   {{- $pagePath := strings.TrimPrefix $basePath .RelPermalink -}}

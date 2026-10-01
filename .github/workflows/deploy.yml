@@ -58,12 +58,14 @@ jobs:
         with:
           node-version: '20'
 
-      - name: "🔖 Scrivi il fingerprint di build (guardia anti-stale)"
-        # Ogni pagina generata da Hugo porterà <meta name="pc-build-sha"> con
-        # lo SHA di QUESTO deploy. verifica-deploy-aruba.yml lo campiona sulle
-        # pagine live e rileva il "drift di generazioni" (pagine di build
-        # diverse convivono su Aruba). Scritto PRIMA di entrambe le build
-        # (Aruba + GitHub Pages), non committato: è un artefatto di build.
+      - name: "🔖 Scrivi le informazioni di build (data/buildinfo.json)"
+        # SHA e orario di QUESTO deploy: finiscono in /build-info.js (output
+        # BUILDINFO, un file solo, letto dal browser per «Sito aggiornato il…»)
+        # e in /build-manifest.json. Dal 01/10/2026 le pagine NON portano più
+        # la meta pc-build-sha: cambiava a ogni commit e costringeva l'FTP a
+        # ricaricare ~1.100 pagine a ogni deploy. La guardia anti-stale
+        # confronta ora le pagine live con il manifesto delle impronte.
+        # Scritto PRIMA di entrambe le build, non committato: artefatto di build.
         run: |
           set -euo pipefail
           cat > data/buildinfo.json <<EOF
@@ -173,6 +175,24 @@ jobs:
       - name: "🔎 Estendi indice cerca con pagine HTML statiche (Aruba)"
         run: python3 scripts/aggiungi-pagine-statiche-al-cerca.py
 
+      - name: "📜 Manifesto della build e manifesto servito prima del caricamento"
+        # build-manifest.json = impronta sha256 di ogni file di public/
+        # (scripts/genera-manifest-build.py). È il riferimento della guardia
+        # anti-stale: una pagina live con impronta diversa è rimasta vecchia.
+        # Prima di caricare, si scarica il manifesto che il sito serve ADESSO:
+        # il confronto fra i due dice esattamente quali file questo deploy
+        # deve cambiare, e sono quelli che lo step di verifica ricontrolla
+        # uno per uno dopo l'FTP. Al primo deploy con manifesto non esiste:
+        # si verificano solo le pagine critiche.
+        run: |
+          set -euo pipefail
+          python3 scripts/genera-manifest-build.py public
+          curl -fsSL --max-time 30 -H 'Cache-Control: no-cache' \
+            "https://www.protezionecivilegenzano.it/build-manifest.json?cb=$RANDOM$RANDOM" \
+            -o /tmp/manifesto-precedente.json \
+            && python3 -c "import json; m=json.load(open('/tmp/manifesto-precedente.json')); print('Manifesto live precedente: build', m.get('sha'), m.get('time'))" \
+            || { echo "::notice::Nessun manifesto precedente sul sito: si controllano le pagine critiche."; rm -f /tmp/manifesto-precedente.json; }
+
       - name: "📤 Deploy FTP su Aruba"
         uses: SamKirkland/FTP-Deploy-Action@110f9186c050f71550953127052e77650219c287 # v4.4.0
         with:
@@ -210,6 +230,44 @@ jobs:
           log-level: verbose
           exclude: |
             **/documenti/**
+
+      - name: "🔁 Verifica il sito live contro la build e ripara i file rimasti vecchi"
+        # Guardia anti-stale, dentro il deploy (01/10/2026). Confronta con il
+        # manifesto: build-info.js, le pagine critiche, l'ultimo articolo, TUTTI
+        # i file che questo deploy doveva cambiare (fino a 250, poi un
+        # campione) e 30 pagine a caso. Un file diverso viene ricaricato subito
+        # via FTPS dalla build appena fatta e ricontrollato: è la risposta
+        # all'incidente del 01/07/2026 (lo stato di sincronizzazione credeva
+        # aggiornate pagine rimaste vecchie per mesi) senza mai ricaricare
+        # tutto il sito. Non ferma il deploy: se la riparazione non basta lo
+        # dice qui, e verifica-deploy-aruba.yml, che gira dopo in modo
+        # indipendente, apre l'issue.
+        continue-on-error: true
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_SERVER_DIR: /www.protezionecivilegenzano.it/
+        run: |
+          set -uo pipefail
+          ARGS=""
+          [ -s /tmp/manifesto-precedente.json ] && ARGS="--precedente /tmp/manifesto-precedente.json"
+          python3 scripts/verifica-deploy-aruba.py \
+            --manifesto public/build-manifest.json --public public \
+            --sha-atteso "${GITHUB_SHA:0:7}" $ARGS \
+            --campione 30 --seme "$GITHUB_RUN_ID" \
+            --tentativi 3 --attesa 20 --ripara | tee /tmp/verifica-deploy.txt
+          rc=${PIPESTATUS[0]}
+          {
+            echo "### Verifica del sito live contro la build"
+            echo '```'
+            tail -40 /tmp/verifica-deploy.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          if [ "$rc" != "0" ]; then
+            echo "::error::Alcuni file su Aruba non coincidono con la build anche dopo la riparazione: vedi il riepilogo. verifica-deploy-aruba.yml aprirà l'issue."
+          fi
+          exit "$rc"
 
       - name: "📣 Materiale social per gli articoli appena online"
         # Il sito è appena stato caricato su Aruba: è l'istante in cui un
@@ -265,6 +323,11 @@ jobs:
 
       - name: "🔎 Estendi indice cerca con pagine HTML statiche (GitHub Pages)"
         run: python3 scripts/aggiungi-pagine-statiche-al-cerca.py
+
+      - name: "📜 Manifesto della build (GitHub Pages)"
+        # Stesso manifesto per la copia su GitHub Pages: permette di provare la
+        # guardia anche contro quell'ambiente (--base https://sviluppoitaliadigitale.github.io/sito-pc-genzano).
+        run: python3 scripts/genera-manifest-build.py public
 
       - name: "📦 Upload artifact GitHub Pages"
         uses: actions/upload-pages-artifact@v5

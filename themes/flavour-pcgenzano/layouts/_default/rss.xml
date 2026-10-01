@@ -38,10 +38,16 @@
     {{- with site.Copyright }}
     <copyright>{{ . }}</copyright>
     {{- end }}
-    {{- /* lastBuildDate = momento della build: il feed cambia anche quando
-         un articolo già pubblicato viene modificato, e i lettori RSS usano
-         questa data per capire se il documento è cambiato (review 02/09/2026) */}}
-    <lastBuildDate>{{ now.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
+    {{- /* lastBuildDate = ultima modifica fra le voci del feed (Lastmod git),
+         non l'ora della build: così il file cambia solo quando cambia un
+         articolo — anche se già pubblicato e solo corretto (review 02/09/2026)
+         — e non a ogni deploy (dal 01/10/2026: con `now` i 40 feed venivano
+         ricaricati su Aruba a ogni build). */}}
+    {{- $ultima := time.AsTime "0001-01-01" -}}
+    {{- range $pages }}{{ with .Lastmod }}{{ if gt . $ultima }}{{ $ultima = . }}{{ end }}{{ end }}{{ end -}}
+    {{- if gt $ultima (time.AsTime "0001-01-02") }}
+    <lastBuildDate>{{ $ultima.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>
+    {{- end }}
     {{- with .OutputFormats.Get "RSS" }}
     {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{- end }}

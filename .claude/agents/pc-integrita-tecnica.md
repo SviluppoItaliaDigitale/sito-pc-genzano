@@ -26,7 +26,7 @@ python3 scripts/check-parita-schede.py                               # kit ↔ S
 python3 scripts/check-jsonld.py /tmp/public                          # dati strutturati
 python3 scripts/check-dati-schede.py                                 # tabelle vs dataset
 bash scripts/smoke-test-live.sh                                      # (solo se serve verificare il live)
-bash scripts/verifica-fingerprint-live.sh                            # (drift di build fra pagine)
+python3 scripts/verifica-deploy-aruba.py                            # (drift di build fra pagine)
 ```
 
 Ogni errore restituito è un difetto da correggere, non un avviso da leggere. Prima di correggere, riproduci: apri il file, decodificalo, segui il link.

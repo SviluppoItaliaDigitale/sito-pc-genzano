@@ -1131,173 +1131,89 @@ jobs:
           # non ci sono più numeri da allineare.
 
           # ----------------------------------------------------------------
-          section "43. Stale FTP files detection — Last-Modified + 4 marker semantici"
-          # Il deploy FTP usa `dangerous-clean-slate: false`: i file su Aruba che
-          # NON cambiano fra due build non vengono ricaricati. In caso di deploy
-          # falliti consecutivi (es. bug `_build`/`build` frontmatter del 12 maggio
-          # 2026, 4 deploy falliti consecutivi che hanno bloccato l'upload per
-          # ~7 ore), alcune pagine restavano stantie con vecchio header/footer.
+          section "43. File stantii su Aruba — confronto con il manifesto della build + 3 marker semantici"
+          # Il deploy FTP usa `dangerous-clean-slate: false`: carica solo i file
+          # cambiati rispetto allo stato di sincronizzazione. Se lo stato è
+          # sbagliato o un caricamento si interrompe, alcune pagine restano
+          # vecchie su Aruba (incidenti 12-13/05/2026 e 01/07/2026).
           #
-          # Questa sezione fa per ciascuna delle 8 pagine campione DUE check:
+          # Dal 01/10/2026 il controllo è scripts/verifica-deploy-aruba.py:
+          # confronta l'impronta sha256 delle pagine servite con
+          # /build-manifest.json (scritto da deploy.yml per ogni build): pagine
+          # critiche, ultimo articolo, build-info.js e 40 pagine a caso, diverse
+          # a ogni giro. Prima si guardava il Last-Modified HTTP e il marker
+          # «Sito aggiornato il»: non valgono più, perché una pagina il cui
+          # contenuto non cambia NON viene più ricaricata (ed è giusto così: è
+          # ciò che ha portato il deploy da 20 a ~5 minuti).
           #
-          # (a) Last-Modified HTTP entro 2h dall'ultimo deploy `success`.
-          #     Soglia 2h copre il tempo di upload FTP (10-15 min) + ritardi
-          #     occasionali senza falsi positivi.
-          #
-          # (b) 4 marker semantici nel body (catturano i casi in cui Last-Modified
-          #     è recente ma il contenuto è stantio — es. cache CDN intermedia,
-          #     proxy che serve versione vecchia, file modificato fuori dal repo):
+          # Restano 3 marker semantici di contenuto sul campione di pagine
+          # (regressioni di template che un confronto di impronte non vede):
           #     1. canonical-dropdown ≥ 1 (header canonico Hugo presente)
           #     2. giochi-legacy = 0 (niente voce menu flat ">Giochi</a>"
           #        rimossa nel refactoring menu del 10 maggio 2026)
           #     3. tel-encoding-bug = 0 (niente "tel:+39%20..." o "tel:+39 ...",
           #        atteso "tel:+39069362600" senza spazi — vedi fix 29 apr 2026
           #        commit 72ec3aa con `printf "tel:%s" ... | safeURL`)
-          #     4. Sito aggiornato il entro 24h dal momento dell'audit
           #
-          # Specifiche: rule 05-github-aruba-deploy.md § "File stantii su Aruba —
-          # strategia cache-bust dopo modifiche al chrome".
-          #
-          # Sono escluse le pagine HTML statiche sotto static/ (es.
-          # /abili-a-proteggere/, /giochi/, kit-calamita stampabili): hanno l'header
-          # iniettato lato client da site-chrome.js, il loro Last-Modified può essere
-          # vecchio senza che sia un bug (il chrome JS si aggiorna automaticamente).
-          STALE_PAGES=""
-          SEMANTIC_FAIL=""
-          if command -v gh >/dev/null 2>&1; then
-            # Recupera timestamp dell'ultimo deploy success (UTC ISO 8601)
-            LATEST_DEPLOY=$(gh run list --workflow=deploy.yml --status=success --limit=1 --json updatedAt --jq '.[0].updatedAt' 2>/dev/null || echo "")
-            if [ -n "$LATEST_DEPLOY" ]; then
-              LATEST_DEPLOY_EPOCH=$(date -u -d "$LATEST_DEPLOY" +%s 2>/dev/null || echo "0")
-              THRESHOLD=7200      # 2h per Last-Modified HTTP
-              SEM_THRESHOLD_H=24  # 24h per Sito aggiornato il (semantico)
-              NOW_EPOCH=$(date -u +%s)
-              # 21 pagine Hugo critiche (NON statiche) + 1 articolo dinamico
-              # (totale 22 URL). Tutte dovrebbero essere ri-deployate ad ogni
-              # cambio del chrome (navbar/footer/utility-bar). Allargato da 8 a
-              # 20 il 12 maggio 2026 per coprire l'intero campione di smoke test
-              # raccomandato dalla rule 05 (homepage, sezioni servizi, pagine
-              # legali/istituzionali, archivio, articolo singolo). Ulteriormente
-              # allargato a 22 il 28 maggio 2026 dopo audit ChatGPT che ha
-              # rilevato /emergenza/ con data/allerta.json ultimo_controllo
-              # stantio (22/05 vs 28/05 reale) e /podcast/ con link episodi 404
-              # da slug ridistribuiti.
-              SAMPLE_URLS="https://www.protezionecivilegenzano.it/
-              https://www.protezionecivilegenzano.it/accessibilita/
-              https://www.protezionecivilegenzano.it/cosa-fare-adesso/
-              https://www.protezionecivilegenzano.it/formazione/
-              https://www.protezionecivilegenzano.it/comunicazioni/
-              https://www.protezionecivilegenzano.it/allerte-meteo/
-              https://www.protezionecivilegenzano.it/piano-emergenza/
-              https://www.protezionecivilegenzano.it/piano-familiare/
-              https://www.protezionecivilegenzano.it/numeri-utili/
-              https://www.protezionecivilegenzano.it/chi-siamo/
-              https://www.protezionecivilegenzano.it/contatti/
-              https://www.protezionecivilegenzano.it/rischi-prevenzione/
-              https://www.protezionecivilegenzano.it/cartografia/
-              https://www.protezionecivilegenzano.it/diventa-volontario/
-              https://www.protezionecivilegenzano.it/faq/
-              https://www.protezionecivilegenzano.it/strumenti/
-              https://www.protezionecivilegenzano.it/area-download/
-              https://www.protezionecivilegenzano.it/normativa/
-              https://www.protezionecivilegenzano.it/glossario/
-              https://www.protezionecivilegenzano.it/emergenza/
-              https://www.protezionecivilegenzano.it/podcast/"
-              # Aggiunge dinamicamente un articolo recente come 20° URL (estratto
-              # dal primo path articolo trovato nell'indice /comunicazioni/).
-              # Pattern resiliente alle variazioni di Hugo minify (con/senza
-              # virgolette negli href, URL relative/assolute, ecc.):
-              # cerchiamo direttamente il path "/comunicazioni/AAAA-MM-GG-slug/"
-              # ovunque appaia nell'HTML. Se l'estrazione fallisce, il 20° URL
-              # viene skippato senza errore.
-              SAMPLE_ARTICLE=$(curl -sL --max-time 10 "https://www.protezionecivilegenzano.it/comunicazioni/" 2>/dev/null | grep -oE '/comunicazioni/2[0-9]{3}-[0-9]{2}-[0-9]{2}-[a-z0-9-]+/' | head -1)
-              if [ -n "$SAMPLE_ARTICLE" ]; then
-                SAMPLE_URLS="${SAMPLE_URLS}
-              https://www.protezionecivilegenzano.it${SAMPLE_ARTICLE}"
-              fi
-              for url in $SAMPLE_URLS; do
-                short=$(echo "$url" | sed 's|https://www.protezionecivilegenzano.it||')
-
-                # /emergenza/ è la pagina LITE: per design non ha chrome
-                # (niente navbar/footer/utility-bar, shortcode
-                # pagina-emergenza-lite) e si rigenera SOLO quando cambia
-                # data/allerta.json — non a ogni deploy. Quindi: niente
-                # marker chrome e finestra Last-Modified di 26h (deve
-                # comunque rinfrescarsi almeno ~4 volte/giorno con i commit
-                # ultimo_controllo di check-allerta). Fix falso positivo
-                # ricorrente del 10/06/2026.
-                IS_LITE=0
-                [ "$short" = "/emergenza/" ] && IS_LITE=1
-
-                # === (a) Last-Modified HTTP check ===
-                lm=$(curl -sI --max-time 10 -H "Cache-Control: no-cache" "$url" 2>/dev/null | grep -i "^last-modified:" | sed 's/last-modified: *//I' | tr -d '\r' | head -1)
-                if [ -n "$lm" ]; then
-                  lm_epoch=$(date -u -d "$lm" +%s 2>/dev/null || echo "0")
-                  if [ "$lm_epoch" -gt 0 ]; then
-                    if [ "$IS_LITE" = "1" ]; then
-                      # confronto con ADESSO (non con l'ultimo deploy): basta
-                      # che la pagina si sia rigenerata nelle ultime 26 ore
-                      delta=$((NOW_EPOCH - lm_epoch))
-                      if [ "$delta" -gt 93600 ]; then
-                        hrs=$((delta / 3600))
-                        STALE_PAGES="${STALE_PAGES}- \`$short\` (pagina lite) Last-Modified \`$lm\` (~${hrs}h fa: la pagina dovrebbe rigenerarsi a ogni commit di check-allerta, qualcosa è fermo).\n"
-                      fi
-                    else
-                      delta=$((LATEST_DEPLOY_EPOCH - lm_epoch))
-                      if [ "$delta" -gt "$THRESHOLD" ]; then
-                        hrs=$((delta / 3600))
-                        STALE_PAGES="${STALE_PAGES}- \`$short\` Last-Modified \`$lm\` (~${hrs}h prima dell'ultimo deploy success). Probabile file stantio su Aruba.\n"
-                      fi
-                    fi
-                  fi
-                fi
-
-                # === (b) 4 marker semantici nel body ===
-                body=$(curl -sL --max-time 10 -H "Cache-Control: no-cache" "$url" 2>/dev/null)
-                if [ -n "$body" ]; then
-                  # 1. canonical-dropdown: deve esserci il dropdown "Per il Cittadino"
-                  #    (skip sulla pagina lite: per design non ha la navbar)
-                  if [ "$IS_LITE" = "0" ] && [ "$(echo "$body" | grep -c 'navDropdown-per-il-cittadino')" -lt 1 ]; then
-                    SEMANTIC_FAIL="${SEMANTIC_FAIL}- \`$short\` manca \`navDropdown-per-il-cittadino\` nel body (header canonico Hugo non renderizzato — refactoring menu del 10 maggio 2026 non riflesso).\n"
-                  fi
-                  # 2. giochi-legacy: NON deve esserci la voce menu flat "Giochi"
-                  if [ "$(echo "$body" | grep -c '>Giochi</a>')" -gt 0 ]; then
-                    SEMANTIC_FAIL="${SEMANTIC_FAIL}- \`$short\` contiene voce menu legacy \`>Giochi</a>\` (rimossa nel refactoring del 10 maggio 2026 — indica file stantio).\n"
-                  fi
-                  # 3. tel encoding bug: NON deve esserci tel:+39%20 o tel:+39 (con spazio)
-                  if [ "$(echo "$body" | grep -cE 'tel:\+39%20|tel:\+39 [0-9]')" -gt 0 ]; then
-                    SEMANTIC_FAIL="${SEMANTIC_FAIL}- \`$short\` contiene \`tel:\` con spazi encoded (atteso \`tel:+39069362600\` senza spazi — vedi fix 29 aprile 2026 commit 72ec3aa).\n"
-                  fi
-                  # 4. Sito aggiornato il — entro 24h dal momento dell'audit
-                  aggiornato_dt=$(echo "$body" | grep -oE 'Sito aggiornato il[^<]*<time[^>]*datetime="[^"]+"' | head -1 | grep -oE 'datetime="[^"]+"' | sed 's/datetime="//;s/"//')
-                  if [ -n "$aggiornato_dt" ]; then
-                    aggiornato_epoch=$(date -u -d "$aggiornato_dt" +%s 2>/dev/null || echo "0")
-                    if [ "$aggiornato_epoch" -gt 0 ]; then
-                      diff_h=$(( (NOW_EPOCH - aggiornato_epoch) / 3600 ))
-                      if [ "$diff_h" -gt "$SEM_THRESHOLD_H" ]; then
-                        SEMANTIC_FAIL="${SEMANTIC_FAIL}- \`$short\` \"Sito aggiornato il\" mostra \`$aggiornato_dt\` (~${diff_h}h fa, atteso entro ${SEM_THRESHOLD_H}h).\n"
-                      fi
-                    fi
-                  fi
-                fi
-              done
-
-              if [ -n "$STALE_PAGES" ]; then
-                err "Pagine Hugo con Last-Modified HTTP stantio rispetto all'ultimo deploy \`success\` (\`$LATEST_DEPLOY\`). Applicare cache-bust nei \`_index.md\` (vedi rule 05-github-aruba-deploy.md § \"File stantii su Aruba\"):"
-                printf "%b" "$STALE_PAGES" >> "$REPORT"
-              fi
-              if [ -n "$SEMANTIC_FAIL" ]; then
-                err "Pagine Hugo con marker semantici inconsistenti (file deployato ma contenuto stantio, cache CDN intermedia, o regressione template):"
-                printf "%b" "$SEMANTIC_FAIL" >> "$REPORT"
-              fi
-              if [ -z "$STALE_PAGES" ] && [ -z "$SEMANTIC_FAIL" ]; then
-                ok "Tutte le pagine Hugo campione (21 fisse + 1 articolo dinamico = 22 URL): Last-Modified entro 2h dall'ultimo deploy + 4 marker semantici tutti OK (canonical-dropdown ≥ 1, niente Giochi legacy, niente tel: con spazi encoded, Sito aggiornato il entro 24h)."
-              fi
-            else
-              warn "Impossibile recuperare timestamp ultimo deploy success via gh CLI: check § 43 saltato."
-            fi
+          # Specifiche: rule 05-github-aruba-deploy.md § "File stantii su Aruba".
+          # Sono escluse le pagine HTML statiche sotto static/ (chrome iniettato
+          # lato client da site-chrome.js).
+          if python3 scripts/verifica-deploy-aruba.py --campione 40 --seme "$(date -u +%s)" \
+               --tentativi 2 --attesa 30 --ore-massime 26 > /tmp/verifica-aruba.txt 2>&1; then
+            ok "Pagine live coincidenti con il manifesto della build (pagine critiche + ultimo articolo + 40 a caso): $(grep -oE '[0-9]+/[0-9]+ file coincidono' /tmp/verifica-aruba.txt | head -1)."
           else
-            warn "gh CLI non disponibile sul runner: check § 43 saltato."
+            err "Pagine su Aruba diverse dalla build pubblicata (rilancia il deploy: lo step «Verifica e ripara» ricarica i soli file diversi; mai il bump dello state-name):"
+            grep -E '^\s+❌' /tmp/verifica-aruba.txt | sed 's/^ *❌ */- /' >> "$REPORT" || true
+          fi
+
+          SEMANTIC_FAIL=""
+          SAMPLE_URLS="https://www.protezionecivilegenzano.it/
+          https://www.protezionecivilegenzano.it/accessibilita/
+          https://www.protezionecivilegenzano.it/cosa-fare-adesso/
+          https://www.protezionecivilegenzano.it/formazione/
+          https://www.protezionecivilegenzano.it/comunicazioni/
+          https://www.protezionecivilegenzano.it/allerte-meteo/
+          https://www.protezionecivilegenzano.it/piano-emergenza/
+          https://www.protezionecivilegenzano.it/piano-familiare/
+          https://www.protezionecivilegenzano.it/numeri-utili/
+          https://www.protezionecivilegenzano.it/chi-siamo/
+          https://www.protezionecivilegenzano.it/contatti/
+          https://www.protezionecivilegenzano.it/rischi-prevenzione/
+          https://www.protezionecivilegenzano.it/cartografia/
+          https://www.protezionecivilegenzano.it/diventa-volontario/
+          https://www.protezionecivilegenzano.it/faq/
+          https://www.protezionecivilegenzano.it/strumenti/
+          https://www.protezionecivilegenzano.it/area-download/
+          https://www.protezionecivilegenzano.it/normativa/
+          https://www.protezionecivilegenzano.it/glossario/
+          https://www.protezionecivilegenzano.it/podcast/"
+          SAMPLE_ARTICLE=$(curl -sL --max-time 10 "https://www.protezionecivilegenzano.it/comunicazioni/" 2>/dev/null | grep -oE '/comunicazioni/2[0-9]{3}-[0-9]{2}-[0-9]{2}-[a-z0-9-]+/' | head -1)
+          if [ -n "$SAMPLE_ARTICLE" ]; then
+            SAMPLE_URLS="${SAMPLE_URLS}
+          https://www.protezionecivilegenzano.it${SAMPLE_ARTICLE}"
+          fi
+          for url in $SAMPLE_URLS; do
+            short=$(echo "$url" | sed 's|https://www.protezionecivilegenzano.it||')
+            body=$(curl -sL --max-time 10 -H "Cache-Control: no-cache" "$url" 2>/dev/null)
+            [ -z "$body" ] && continue
+            # 1. canonical-dropdown: deve esserci il dropdown "Per il Cittadino"
+            if [ "$(echo "$body" | grep -c 'navDropdown-per-il-cittadino')" -lt 1 ]; then
+              SEMANTIC_FAIL="${SEMANTIC_FAIL}- \`$short\` manca \`navDropdown-per-il-cittadino\` nel body (header canonico Hugo non renderizzato — refactoring menu del 10 maggio 2026 non riflesso).\n"
+            fi
+            # 2. giochi-legacy: NON deve esserci la voce menu flat "Giochi"
+            if [ "$(echo "$body" | grep -c '>Giochi</a>')" -gt 0 ]; then
+              SEMANTIC_FAIL="${SEMANTIC_FAIL}- \`$short\` contiene voce menu legacy \`>Giochi</a>\` (rimossa nel refactoring del 10 maggio 2026 — indica file stantio).\n"
+            fi
+            # 3. tel encoding bug: NON deve esserci tel:+39%20 o tel:+39 (con spazio)
+            if [ "$(echo "$body" | grep -cE 'tel:\+39%20|tel:\+39 [0-9]')" -gt 0 ]; then
+              SEMANTIC_FAIL="${SEMANTIC_FAIL}- \`$short\` contiene \`tel:\` con spazi encoded (atteso \`tel:+39069362600\` senza spazi — vedi fix 29 aprile 2026 commit 72ec3aa).\n"
+            fi
+          done
+          if [ -n "$SEMANTIC_FAIL" ]; then
+            err "Pagine Hugo con marker semantici inconsistenti (regressione di template o file stantio):"
+            printf "%b" "$SEMANTIC_FAIL" >> "$REPORT"
+          else
+            ok "Marker semantici OK su 20 pagine campione + 1 articolo (canonical-dropdown ≥ 1, niente Giochi legacy, niente tel: con spazi encoded)."
           fi
 
           # ----------------------------------------------------------------

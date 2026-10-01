@@ -1,8 +1,13 @@
 {{/* Barra utility — data/ora live + ultimo aggiornamento sito
      Posizionata tra main e footer su tutte le pagine
      Data/ora corrente: aggiornata via JS ogni 30 secondi
-     Ultimo aggiornamento: usa "now" di Hugo = momento della build
-     Si aggiorna automaticamente ad ogni git push / deploy */}}
+     Ultimo aggiornamento: letto dal browser da /build-info.js (output format
+     BUILDINFO, un file solo per deploy), come già fanno le pagine statiche
+     tramite site-chrome.js. Fino al 01/10/2026 era `now` di Hugo scritto in
+     ogni pagina: l'ora cambiava a ogni build, quindi OGNI pagina del sito
+     cambiava a ogni build e il caricamento FTP su Aruba sostituiva ~1.100
+     file (17 minuti) anche per un solo articolo nuovo. Ora cambiano solo le
+     pagine il cui contenuto è cambiato davvero. */}}
 <aside class="utility-bar" aria-label="Informazioni di aggiornamento">
   <div class="container">
     <div class="d-flex flex-wrap justify-content-between align-items-center">
@@ -13,22 +18,24 @@
           <noscript>Abilita JavaScript per visualizzare data e ora</noscript>
         </span>
       </div>
-      {{/* Ultimo aggiornamento sito = data e ora della build Hugo */}}
-      <div class="utility-bar-item">
+      {{/* Ultimo aggiornamento sito = ora dell'ultima build, da /build-info.js.
+           Il blocco resta nascosto finché il browser non l'ha letta: senza
+           JavaScript non compare nulla, mai un'icona senza testo. */}}
+      <div class="utility-bar-item" id="site-build-item" data-build-info="{{ "build-info.js" | relURL }}" hidden>
         <i class="bi bi-arrow-repeat me-1" aria-hidden="true"></i>
-        Sito aggiornato il&nbsp;<time datetime="{{ now.Format "2006-01-02T15:04:05Z07:00" }}">{{ now | time.Format ":date_long" }} alle {{ now.Format "15:04" }} (ora italiana)</time>
+        <span id="site-build-time"></span>
       </div>
     </div>
   </div>
 </aside>
 <script>
 (function(){
+  var giorni=['domenica','lunedì','martedì','mercoledì','giovedì','venerdì','sabato'];
+  var mesi=['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
   var el=document.getElementById('live-datetime');
   if(!el)return;
   function aggiorna(){
     var now=new Date();
-    var giorni=['domenica','lunedì','martedì','mercoledì','giovedì','venerdì','sabato'];
-    var mesi=['gennaio','febbraio','marzo','aprile','maggio','giugno','luglio','agosto','settembre','ottobre','novembre','dicembre'];
     var g=giorni[now.getDay()];
     var d=now.getDate();
     var m=mesi[now.getMonth()];
@@ -39,5 +46,37 @@
   }
   aggiorna();
   setInterval(aggiorna,30000);
+  // L'etichetta dice «ora italiana»: si formatta nel fuso Europe/Rome, non in
+  // quello del dispositivo del visitatore (vicino a mezzanotte cambierebbe
+  // anche il giorno). Senza Intl si ripiega sul fuso locale.
+  function oraItaliana(d){
+    try{
+      var parti={};
+      new Intl.DateTimeFormat('it-IT',{timeZone:'Europe/Rome',day:'numeric',month:'long',year:'numeric',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(d).forEach(function(x){parti[x.type]=x.value;});
+      if(parti.day&&parti.month&&parti.year&&parti.hour&&parti.minute){
+        return parti.day+' '+parti.month+' '+parti.year+' alle '+parti.hour+':'+parti.minute;
+      }
+    }catch(e){}
+    return d.getDate()+' '+mesi[d.getMonth()]+' '+d.getFullYear()+' alle '+String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0');
+  }
+  var item=document.getElementById('site-build-item');
+  var build=document.getElementById('site-build-time');
+  if(!item||!build)return;
+  function mostraBuild(){
+    var raw=window.SITE_BUILD_TIME;
+    if(!raw)return;
+    var d=new Date(raw);
+    if(isNaN(d.getTime()))return;
+    var t=document.createElement('time');
+    t.setAttribute('datetime',raw);
+    t.textContent=oraItaliana(d)+' (ora italiana)';
+    build.textContent='Sito aggiornato il ';
+    build.appendChild(t);
+    item.hidden=false;
+  }
+  var bi=document.createElement('script');
+  bi.src=item.getAttribute('data-build-info');
+  bi.onload=mostraBuild;
+  document.head.appendChild(bi);
 })();
 </script>

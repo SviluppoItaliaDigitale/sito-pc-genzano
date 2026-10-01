@@ -1,23 +1,32 @@
 name: "🔁 Verifica allineamento Aruba (anti-stale)"
 
-# Guardia anti-stale. Dopo ogni deploy riuscito, campiona le pagine ad alto
-# traffico su Aruba e verifica che servano TUTTE la stessa build recente,
-# leggendo il fingerprint <meta name="pc-build-sha"> iniettato da deploy.yml.
+# Guardia anti-stale, indipendente dal deploy. Dopo ogni deploy riuscito
+# confronta le pagine servite da Aruba con /build-manifest.json, il
+# manifesto delle impronte sha256 di ogni file della build
+# (scripts/genera-manifest-build.py, scritto da deploy.yml): le pagine
+# critiche, l'ultimo articolo, build-info.js e 60 pagine a caso, diverse a
+# ogni giro. Un file con impronta diversa è rimasto vecchio su Aruba,
+# qualunque ne sia la causa.
 #
-# Rileva il bug ricorrente per cui il sync-state FTP salta alcuni file e su
-# Aruba convivono più "generazioni" del sito (audit 01/07/2026: chi-siamo di
-# aprile, allerte-meteo di maggio, home di luglio — con un semaforo allerta
-# stantio, che è la cosa più pericolosa su un sito di protezione civile).
+# Dal 01/10/2026 sostituisce il campionamento della meta pc-build-sha: quella
+# meta costringeva a ricaricare tutte le pagine a ogni deploy (17 minuti per
+# un articolo) e diceva solo «quale build», non se il contenuto fosse quello
+# costruito. Il bug che cerca è quello dell'audit 01/07/2026: su Aruba
+# convivevano chi-siamo di aprile, allerte-meteo di maggio e la home di
+# luglio, con un semaforo di allerta vecchio — la cosa più pericolosa su un
+# sito di protezione civile.
 #
-# Su drift/staleness apre/aggiorna 1 ISSUE (label automazione + urgente) che
-# arriva via email al proprietario e si chiude da sola al rientro. NON manda
-# nulla su Telegram: quello è il canale PUBBLICO dei cittadini — gli alert
-# tecnici interni passano per le issue (stessa scelta di notifica-ci-fallita.yml).
+# La riparazione la fa già deploy.yml nello step «Verifica e ripara», subito
+# dopo l'FTP, ricaricando i soli file diversi. Questo workflow è la seconda
+# rete: se qualcosa resta diverso apre/aggiorna 1 ISSUE (label automazione +
+# urgente), che arriva via email al proprietario e si chiude da sola al
+# rientro. NON manda nulla su Telegram: quello è il canale PUBBLICO dei
+# cittadini (stessa scelta di notifica-ci-fallita.yml).
 #
-# Rimedio quando scatta: fix MIRATO sulle pagine in ritardo (cache-bust del
-# sorgente _index.md o cancellazione del file stantio lato server, rule 05).
-# MAI il bump dello `state-name` in deploy.yml: il re-upload integrale non
-# completa e congela il sito (incidente 03/07/2026).
+# Rimedio quando scatta: rilanciare il deploy (Actions → Build e Deploy →
+# Run workflow): lo step di riparazione ricarica i soli file diversi. MAI il
+# bump dello `state-name` in deploy.yml: il re-upload integrale non completa
+# e congela il sito (incidente 03/07/2026).
 
 on:
   workflow_run:
@@ -48,7 +57,7 @@ jobs:
       - name: "📥 Checkout"
         uses: actions/checkout@v7
 
-      - name: "🔁 Campiona i fingerprint live su Aruba"
+      - name: "🔁 Confronta le pagine live con il manifesto della build"
         id: check
         run: |
           set -uo pipefail
@@ -56,10 +65,12 @@ jobs:
           EXPECTED="${EXPECTED:0:7}"
           [ -z "$EXPECTED" ] && EXPECTED="${{ github.event.inputs.sha }}"
           ARGS=""
-          [ -n "$EXPECTED" ] && ARGS="--sha $EXPECTED"
-          # Retry ampi: assorbono la propagazione FTP/cache subito dopo il deploy.
+          [ -n "$EXPECTED" ] && ARGS="--sha-atteso $EXPECTED"
+          # Ritentativi ampi: assorbono la coda del caricamento FTP subito dopo il deploy.
           set +e
-          bash scripts/verifica-fingerprint-live.sh $ARGS --retries 8 --wait 75 --stale-hours 12 \
+          python3 scripts/verifica-deploy-aruba.py $ARGS \
+            --campione 60 --seme "${{ github.run_id }}" \
+            --tentativi 6 --attesa 60 --ore-massime 12 \
             | tee /tmp/verifica.txt
           echo "rc=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
           set -e
@@ -80,8 +91,8 @@ jobs:
           TITLE="🔁 Drift di deploy su Aruba — pagine stantie"
           RUN_URL="https://github.com/$REPO/actions/runs/${{ github.run_id }}"
           ESITO=$(sed 's/`/´/g' /tmp/verifica.txt | tail -60)
-          RIMEDIO='**Rimedio (rule 05 § "Strategia cache-bust"):** intervento **mirato** sulle sole pagine in ritardo: aggiungi o aggiorna il commento `<!-- cache-bust: AAAA-MM-GG -->` nel loro `_index.md` e fai partire un deploy, oppure cancella via FTP il file stantio così che il deploy successivo lo ricarichi. **Mai** cambiare lo `state-name` nello step FTP di `deploy.yml`: il re-upload integrale supera il timeout e congela il sito (incidente del 03/07/2026). Dopo il rientro, questa issue si chiude da sola al prossimo controllo verde.'
-          BODY=$(printf '_Rilevato il %s UTC dalla guardia anti-stale (verifica-deploy-aruba.yml). Issue unica, si chiude da sola al rientro._\n\nLe pagine campione su **www.protezionecivilegenzano.it** non servono tutte la stessa build recente: alcuni file sono rimasti stantii su Aruba (il sync-state FTP ha saltato dei file).\n\n%s\n\n**Esito del campionamento:**\n\n```\n%s\n```\n\n[Log completo del run](%s)\n' "$(date -u +%Y-%m-%d\ %H:%M)" "$RIMEDIO" "$ESITO" "$RUN_URL")
+          RIMEDIO='**Rimedio:** rilancia il deploy (Actions → «🚀 Build e Deploy» → Run workflow): lo step «Verifica e ripara» ricarica via FTPS i soli file che non coincidono con la build e li ricontrolla. Se anche così resta diverso, controlla nel log di quello step se il collegamento FTPS è riuscito (credenziali, cartella remota). In alternativa, da una sessione con le credenziali FTP: `python3 scripts/verifica-deploy-aruba.py --manifesto public/build-manifest.json --public public --ripara`. **Mai** cambiare lo `state-name` nello step FTP di `deploy.yml`: il re-upload integrale supera il timeout e congela il sito (incidente del 03/07/2026). Dopo il rientro, questa issue si chiude da sola al prossimo controllo verde.'
+          BODY=$(printf '_Rilevato il %s UTC dalla guardia anti-stale (verifica-deploy-aruba.yml). Issue unica, si chiude da sola al rientro._\n\nAlcune pagine di **www.protezionecivilegenzano.it** non coincidono con la build appena pubblicata (confronto con `/build-manifest.json`): sono rimaste vecchie su Aruba.\n\n%s\n\n**Esito del controllo:**\n\n```\n%s\n```\n\n[Log completo del run](%s)\n' "$(date -u +%Y-%m-%d\ %H:%M)" "$RIMEDIO" "$ESITO" "$RUN_URL")
           NUM=$(gh issue list --repo "$REPO" --state open --limit 100 \
                   --json number,title \
                   --jq ".[] | select(.title == \"$TITLE\") | .number" | head -1 || true)
@@ -108,7 +119,7 @@ jobs:
                   --jq ".[] | select(.title == \"$TITLE\") | .number" | head -1 || true)
           if [ -n "$NUM" ]; then
             gh issue close "$NUM" --repo "$REPO" \
-              --comment "Verifica del $(date -u +%Y-%m-%d\ %H:%M) UTC: tutte le pagine campione servono la stessa build recente. Drift rientrato."
+              --comment "Verifica del $(date -u +%Y-%m-%d\ %H:%M) UTC: le pagine controllate coincidono con la build pubblicata. Drift rientrato."
             echo "Issue #$NUM chiusa."
           else
             echo "Nessun drift e nessuna issue aperta — tutto ok."
