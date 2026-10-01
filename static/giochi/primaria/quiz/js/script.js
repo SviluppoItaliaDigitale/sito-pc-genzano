@@ -706,7 +706,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 { text: 'Una zona di montagna con neve tutto l\'anno', correct: false },
                 { text: 'Una zona di mare', correct: false }
             ],
-            explanation: 'I Colli Albani sono un antico complesso vulcanico. I laghi di Nemi e Albano si sono formati nei crateri spenti. Il territorio è soggetto a rischio idrogeologico e sismico.'
+            explanation: 'I Colli Albani sono un complesso vulcanico in pausa: l\'ultima eruzione risale a circa 36.000 anni fa. I laghi di Nemi e Albano riempiono antichi crateri. Il territorio è soggetto a rischio idrogeologico e sismico.'
         },
         {
             category: 'protezione-civile',
