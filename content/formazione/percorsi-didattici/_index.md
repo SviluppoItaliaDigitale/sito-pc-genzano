@@ -878,7 +878,7 @@ Rubrica [Ed. Civica — Secondaria II](/formazione/schede-stampabili/rubrica-val
 #### Obiettivi di apprendimento
 
 - Sa che il **distretto vulcanico dei Colli Albani** è **quiescente**, non spento: l'attività eruttiva si è concentrata fra 600.000 e 36.000 anni fa, ma il sistema non è considerato estinto. Il Lago Albano e il Lago di Nemi sono **crateri di esplosione** della fase finale dell'attività.
-- Riconosce i **fenomeni di tipo secondario** osservati nell'area (emissioni di anidride carbonica dal suolo, lieve sismicità periodica, deformazioni del terreno) e il monitoraggio condotto dall'**INGV — Osservatorio Vesuviano**.
+- Riconosce i **fenomeni di tipo secondario** osservati nell'area (emissioni di anidride carbonica dal suolo, lieve sismicità periodica, deformazioni del terreno) e il monitoraggio condotto dall'**INGV** (Sezione di Roma).
 - Conosce i **tre grandi vulcani attivi italiani**: Vesuvio, Campi Flegrei, Etna (più Stromboli e Vulcano).
 - Sa cos'è la **zona rossa** e la **zona gialla** del Piano nazionale Vesuvio, e come funziona l'evacuazione preventiva.
 - Riconosce il ruolo di **IT-alert** come canale di allerta in caso di evento vulcanico (testato a Stromboli e in esercitazione Campi Flegrei nel 2024).

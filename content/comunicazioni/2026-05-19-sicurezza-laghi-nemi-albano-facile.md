@@ -23,7 +23,7 @@ I laghi di Nemi e di Albano sono vicino a Genzano di Roma. Sono laghi molto bell
 
 ## I laghi sono profondi
 
-Il lago di Nemi è profondo fino a 33 metri. Il lago di Albano è profondo fino a 170 metri. Vicino alla riva, il fondo scende subito in basso. Stai attento anche se sei a pochi passi dall'acqua.
+Il lago di Nemi è profondo fino a 33 metri. Il lago di Albano è profondo fino a 168 metri. Vicino alla riva, il fondo scende subito in basso. Stai attento anche se sei a pochi passi dall'acqua.
 
 ## Pericoli in acqua
 

@@ -49,6 +49,14 @@ dati:
         perche: "I Colli Albani sono un vulcano quiescente: «spento» dice il contrario."
         contesto: 'Albani|Albano|Nemi|Laziale|Castelli'
         finestra: 250
+      - regex: 'quiescent[ei]\s+ma\s+attiv[oaie]'
+        perche: "Per il DPC gli unici vulcani attivi sono Etna e Stromboli: i Colli Albani sono quiescenti, non «quiescenti ma attivi»."
+        contesto: 'Colli Albani|Vulcano Laziale|Albani|Laziale'
+        finestra: 250
+      - regex: '(?<!non )(?<!Non )(?<!non è )(?<!né )(?<!≠ )\bspent[oi]\b'
+        perche: "I Colli Albani sono un vulcano quiescente, non spento. Vale per il vulcano e per i suoi crateri-lago."
+        contesto: 'Colli Albani|Vulcano Laziale|apparato vulcanico|cratere|crateri|distretto vulcanico'
+        stessa_frase: true
 
   - id: colli-albani-sorveglianza
     dato: "Chi sorveglia i Colli Albani"
@@ -59,8 +67,12 @@ dati:
     vietati:
       - regex: 'Osservatorio Vesuviano|INGV[- ]OV\b'
         perche: "L'Osservatorio Vesuviano sorveglia Vesuvio, Campi Flegrei e Ischia, non i Colli Albani."
+        # Il soggetto può stare nella voce accanto dello stesso elenco
+        # («nell'area»); se la frase stessa parla di altri vulcani,
+        # l'attribuzione è corretta.
         contesto: 'Colli Albani|Vulcano Laziale'
-        stessa_frase: true
+        stesso_paragrafo: true
+        salvo_se_frase: 'Vesuvio|Campi Flegrei|Ischia|vesuvian|campan|Etna|Etneo|Stromboli'
 
   - id: lago-albano-profondita
     dato: "Profondità massima del Lago Albano"
@@ -73,6 +85,36 @@ dati:
         perche: "L'INGV indica 168 metri."
         contesto: 'Albano'
         finestra: 80
+      - regex: '\b170\s*(?:m\b|metri)|\b(?:circa|oltre|fino\s+a|supera(?:no)?\s+i)\s+170\b'
+        perche: "L'INGV indica 168 metri per il Lago Albano: 170 è un arrotondamento che nelle pagine diventava «oltre 170»."
+        contesto: 'Albano'
+        finestra: 80
+
+  - id: laghi-albano-nemi-origine
+    dato: "Origine dei laghi di Albano e di Nemi"
+    valore: "crateri vulcanici (maar) della fase idromagmatica; la caldera è quella dell'intero vulcano"
+    fonti:
+      - nome: "Dipartimento della Protezione Civile, «Colli Albani — Storia eruttiva»"
+        url: "https://rischi.protezionecivile.gov.it/it/vulcanico/vulcani-italia/colli-albani/"
+      - nome: "ISPRA, Carta geologica d'Italia, note illustrative del foglio 388 «Velletri»"
+        url: "https://progetto-carg.isprambiente.it/cartografiaCARG/index.php?source=cartageologica"
+    vietati:
+      - regex: '\bcaldere\s+di\s+(?:Albano|Nemi)|\bsono\s+le\s+caldere\b|[Oo]rigine\W+(?:vulcanica\W+)?(?:a\s+)?caldera'
+        perche: "I laghi di Albano e di Nemi occupano crateri (maar), non caldere: la caldera è il collasso dell'intero apparato."
+        contesto: 'Albano|Nemi|lago|laghi'
+        finestra: 150
+
+  - id: cava-dei-selci-area
+    dato: "Area di monitoraggio del flusso di CO2 a Cava dei Selci"
+    valore: "6.000 m² (area target INGV)"
+    fonti:
+      - nome: "INGV, «Sorveglianza vulcani Colli Albani»"
+        url: "https://www.ingv.it/monitoraggio-e-infrastrutture/sorveglianza/servizio-sorveglianza-vulcani-attivi/sorveglianza-vulcani-colli-albani"
+    vietati:
+      - regex: '6\.?200\s*(?:m²|m2|metri\s+quadr)'
+        perche: "L'INGV indica un'area target di 6.000 m² a Cava dei Selci."
+        contesto: 'Cava dei Selci|degassamento'
+        finestra: 250
 
   - id: numero-emergenza-112
     dato: "Numero da chiamare in emergenza nel Lazio"
@@ -81,8 +123,13 @@ dati:
       - nome: "Regola del sito 06, § Numeri di emergenza; NUE 112 attivo nel Lazio dal 2017"
         url: "https://www.protezionecivilegenzano.it/numeri-utili/"
     vietati:
-      - regex: '(?<![Nn]on )\bchiam(?:a|are|ate|ando)\s+(?:subito\s+)?(?:il\s+)?(?:115|118|1515)\b'
+      - regex: '\bchiam(?:a|are|ate|ando)\s+(?:subito\s+)?(?:il\s+)?(?:115|118|1515)\b'
         perche: "Nel Lazio si chiama il 112: il cittadino deve ricordare un solo numero."
+        # «Non chiamare», «Non devi chiamare», «Evita di chiamare»: la frase
+        # ribadisce proprio la regola del 112.
+        # Solo verbi di servizio fra la negazione e «chiama»: «Se non respira
+        # chiama il 118» resta un errore.
+        salvo_se_prima: '\b(?:non|mai|evita(?:re|te)?|niente)\s+(?:(?:devi|dovete|deve|si|più|di|bisogna|occorre|serve)\s+){0,2}$'
     escludi:
       # Esercizi che citano il vecchio numero per insegnare che è sbagliato:
       # il vero/falso del kit primaria e la soluzione del cruciverba.

@@ -28,7 +28,7 @@ Fonte: Dipartimento della Protezione Civile, [Colli Albani](https://rischi.prote
 
 I due laghi dei Castelli non sono laghi qualsiasi: sono **crateri vulcanici** riempitisi d'acqua. Si sono formati nell'ultima fase di attività del vulcano, quella **idromagmatica**, quando il contatto tra magma e acqua sotterranea ha prodotto violente esplosioni. Questo tipo di eruzione, di breve durata, genera crateri ampi e con i bordi poco rilevati, chiamati *maar*, il cui fondo resta più basso del territorio circostante: condizioni ideali perché vi si raccolga l'acqua.
 
-Le numerose esplosioni di questa fase hanno creato vari crateri, alcuni dei quali sono poi diventati bacini lacustri: nel settore occidentale del distretto si sono formati i centri di **Albano** e di **Nemi**, e quasi contemporaneamente quello di **Ariccia**.
+Le numerose esplosioni di questa fase hanno creato vari crateri, alcuni dei quali sono poi diventati bacini lacustri: nel settore occidentale del distretto si sono formati i centri di **Albano** e di **Giuntura** e, quasi contemporaneamente, quelli di **Ariccia** e di **Nemi**.
 
 Fonte: Dipartimento della Protezione Civile, [Colli Albani — Storia eruttiva](https://rischi.protezionecivile.gov.it/it/vulcanico/vulcani-italia/colli-albani/).
 
@@ -86,7 +86,7 @@ La struttura responsabile della sorveglianza è la **Sezione di Roma dell'INGV**
 
 - **Rete sismica** — registra i terremoti dell'area, anche i più piccoli.
 - **Rete geodetica (GPS + InSAR)** — misura i movimenti del suolo. La rete GPS dei Colli Albani è attiva dal 1990 ed è diventata ad acquisizione continua dal 2007, con stazioni a Albano-Pavona, Lariano, Marino, Nemi, Rocca di Papa, Monte Porzio Catone e Rocca Priora, integrate nella rete nazionale RING.
-- **Monitoraggio geochimico** — stazioni in continuo per il flusso di CO₂ dal suolo e per il radon a Cava dei Selci, più campionamenti periodici di acque e gas, anche nei laghi di Albano e Nemi.
+- **Monitoraggio geochimico** — stazioni in continuo per il flusso di CO₂ dal suolo e per il radon a Cava dei Selci, più campionamenti periodici di acque e gas, anche nel lago Albano.
 
 Questo permette di seguire nel tempo lo stato del vulcano e di cogliere per tempo eventuali variazioni significative.
 
@@ -98,10 +98,12 @@ Fonte: INGV, [Sorveglianza vulcani Colli Albani](https://www.ingv.it/monitoraggi
 - [Le quattro fasi della protezione civile](/conoscere/le-quattro-fasi/) — previsione, prevenzione, soccorso, superamento.
 - [Previsione: sapere prima cosa può accadere](/conoscere/le-quattro-fasi/previsione/) — il monitoraggio come strumento di previsione.
 - [Sicurezza sui laghi di Nemi e Albano](/comunicazioni/2026-05-19-sicurezza-laghi-nemi-albano/).
+- [La nuova Carta geologica d'Italia e i fogli di Genzano](/comunicazioni/2026-10-01-carta-geologica-italia-carg-fogli-genzano/) — le rocce del vulcano e il portale CARG dell'ISPRA.
 
 ## Per approfondire — fonti istituzionali
 
 - Dipartimento della Protezione Civile — [Colli Albani](https://rischi.protezionecivile.gov.it/it/vulcanico/vulcani-italia/colli-albani/)
+- INGV — [Colli Albani](https://www.ingv.it/colli-albani) (scheda del vulcano)
 - INGV — [Sorveglianza vulcani Colli Albani](https://www.ingv.it/monitoraggio-e-infrastrutture/sorveglianza/servizio-sorveglianza-vulcani-attivi/sorveglianza-vulcani-colli-albani)
 - INGV — [portale terremoti (sismicità in tempo reale)](https://terremoti.ingv.it/)
 - INGVvulcani — [blog scientifico divulgativo dell'INGV](https://ingvvulcani.com/)

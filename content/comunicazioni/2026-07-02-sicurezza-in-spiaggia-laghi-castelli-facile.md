@@ -36,7 +36,7 @@ La maggior parte degli incidenti si può evitare.
 
 ## Cosa devi sapere sui laghi di Nemi e Albano
 
-Questi laghi sono molto profondi. Il lago di Nemi è profondo 33 metri. Il lago Albano è profondo fino a 170 metri. L'acqua sotto la superficie è molto fredda anche d'estate. Non tutti i punti del lago hanno un bagnino.
+Questi laghi sono molto profondi. Il lago di Nemi è profondo 33 metri. Il lago Albano è profondo fino a 168 metri. L'acqua sotto la superficie è molto fredda anche d'estate. Non tutti i punti del lago hanno un bagnino.
 
 ## Regole prima di entrare in acqua
 

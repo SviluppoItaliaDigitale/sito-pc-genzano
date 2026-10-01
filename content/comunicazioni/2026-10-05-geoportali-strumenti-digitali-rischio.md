@@ -94,5 +94,7 @@ I geoportali forniscono **informazioni di base**, non **perizie**. Per decisioni
 - [Cartografia e orientamento](/comunicazioni/2026-09-13-cartografia-orientamento-esercitazione/)
 - [App di Protezione Civile](/comunicazioni/2026-09-14-app-protezione-civile-fonti-ufficiali/)
 - [ISPRA — IdroGeo](https://idrogeo.isprambiente.it/)
+- [La nuova Carta geologica d'Italia e i fogli di Genzano](/comunicazioni/2026-10-01-carta-geologica-italia-carg-fogli-genzano/)
+- [ISPRA — CARG-Gate, Carta geologica d'Italia 1:50.000](https://progetto-carg.isprambiente.it/cartografiaCARG/index.php?source=cartageologica)
 
 In emergenza: **112**.

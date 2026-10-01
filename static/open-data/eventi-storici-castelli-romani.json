@@ -1,14 +1,14 @@
 [
   {
-    "ordine": -300000,
-    "anno": "~300.000 anni fa",
+    "ordine": -270000,
+    "anno": "Tra 270.000 e 36.000 anni fa",
     "tipo": "geologico",
-    "titolo": "Formazione del cratere di Nemi — Fase delle Faete",
-    "luogo": "Bacino del Lago di Nemi, Vulcano Laziale",
-    "descrizione": "Il cratere di Nemi si forma durante la fase eruttiva del Vulcano delle Faete (circa 308.000–250.000 anni fa), una delle tappe dell'attività del Vulcano Laziale (Colli Albani). Lo stesso apparato ha generato i crateri gemelli di Albano e Ariccia. È la storia geologica che spiega perché viviamo su un territorio fertile ma sismicamente attivo.",
-    "lezione": "Il paesaggio dei Castelli Romani — i laghi craterici, le colline di tufo, i suoli vulcanici — è il risultato di un'attività eruttiva potente. Il vulcano oggi è classificato \"quiescente\": non spento, ma non in eruzione. Monitorarlo è parte del sistema nazionale.",
-    "fonte": "INGV — Sezione Vulcani; pubblicazioni scientifiche su Vulcano Laziale (Fase delle Faete)",
-    "fonte_url": "https://www.ingv.it/"
+    "titolo": "Nascono i laghi-cratere di Albano e Nemi — fase idromagmatica",
+    "luogo": "Lago Albano e Lago di Nemi, Vulcano Laziale",
+    "descrizione": "Nell'ultima fase del Vulcano Laziale, detta idromagmatica, il magma incontra l'acqua di falda ed esplode. Le esplosioni scavano crateri ampi e poco rilevati (maar): nel settore occidentale si formano i centri di Albano e Giuntura e, quasi contemporaneamente, quelli di Ariccia e Nemi. I laghi di Albano e di Nemi occupano questi crateri. Prima, tra 350.000 e 270.000 anni fa, la fase delle Faete aveva costruito il cono dentro la caldera.",
+    "lezione": "Il paesaggio dei Castelli Romani — i laghi craterici, le colline di tufo, i suoli vulcanici — è il risultato di un'attività eruttiva potente, terminata circa 36.000 anni fa. Il vulcano oggi è classificato \"quiescente\": non spento, ma non in eruzione. Monitorarlo è parte del sistema nazionale.",
+    "fonte": "Dipartimento della Protezione Civile, «Colli Albani — Storia eruttiva»; INGV, scheda «Colli Albani»",
+    "fonte_url": "https://rischi.protezionecivile.gov.it/it/vulcanico/vulcani-italia/colli-albani/"
   },
   {
     "ordine": -400,

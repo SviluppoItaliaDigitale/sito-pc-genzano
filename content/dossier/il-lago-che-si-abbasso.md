@@ -50,7 +50,7 @@ Restò in funzione fino al Novecento inoltrato. Dice molto del territorio: già 
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="albano" image="/images/dossier/nemi-albano-emissario.webp" alt="Veduta panoramica del Lago Albano nel suo cratere vulcanico vista da Monte Cavo, con l'abitato di Castel Gandolfo sul ciglio del cratere e la pianura in lontananza" align="right" kicker="398 a.C. · a pochi chilometri" title="Albano,<br>il gemello romano" credito="Lago Albano da Monte Cavo · foto Deblu68 · pubblico dominio" >}}
-Il cratere accanto custodisce un'opera ancora più antica. Il **Lago Albano** — il più profondo del Lazio, circa **170 metri** — ha un emissario scavato dai Romani nel **398–396 a.C.**: circa **1.400 metri** di galleria scavati nella roccia (Parco dei Castelli Romani), tra le opere idrauliche più antiche dopo la Cloaca Maxima.
+Il cratere accanto custodisce un'opera ancora più antica. Il **Lago Albano** — il più profondo del Lazio, circa **168 metri** — ha un emissario scavato dai Romani nel **398–396 a.C.**: circa **1.400 metri** di galleria scavati nella roccia (Parco dei Castelli Romani), tra le opere idrauliche più antiche dopo la Cloaca Maxima.
 
 Tito Livio lo lega all'assedio di Veio. Due crateri vicini, la stessa idea: tenere sotto controllo l'acqua di un bacino che non ha uno sbocco naturale. Gli stessi versanti, gli stessi problemi che riguardano Genzano.
 {{< /dossier-scena >}}

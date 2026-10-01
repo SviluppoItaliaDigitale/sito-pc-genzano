@@ -19,7 +19,7 @@ L'**8 giugno** è la [Giornata mondiale degli oceani](https://www.un.org/en/obse
 
 I laghi sono ecosistemi completi ma **chiusi**: ogni insulto al loro equilibrio resta e si accumula. Plastiche, nutrienti agricoli, reflui civili, invasioni di specie aliene incidono velocemente.
 
-Il **Lago di Nemi**, di origine vulcanica a caldera, ha profondità di oltre 30 metri e copre circa 1,7 km². Il **Lago Albano** è più grande (6 km²) e profondo (170 metri). Entrambi sono monitorati da **ARPA Lazio** per qualità delle acque, fioriture algali e presenza di contaminanti.
+Il **Lago di Nemi**, in un cratere vulcanico, ha profondità di oltre 30 metri e copre circa 1,7 km². Il **Lago Albano** è più grande (6 km²) e profondo (168 metri). Entrambi sono monitorati da **ARPA Lazio** per qualità delle acque, fioriture algali e presenza di contaminanti.
 
 ## Rischi naturali legati ai laghi
 

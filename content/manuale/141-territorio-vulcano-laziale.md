@@ -16,7 +16,7 @@ I **Colli Albani** — o **Vulcano Laziale** — sono un complesso vulcanico del
 
 ## 14.2 I laghi di Albano e Nemi: crateri pieni d'acqua
 
-I due laghi dei Castelli non sono laghi qualsiasi: sono **crateri vulcanici** riempitisi d'acqua. Si sono formati nell'ultima fase di attività del vulcano, quella **idromagmatica**, quando il contatto tra magma e acqua sotterranea ha prodotto violente esplosioni. Questo tipo di eruzione genera crateri ampi e con i bordi poco rilevati, chiamati *maar*, il cui fondo resta più basso del territorio circostante: condizioni ideali perché vi si raccolga l'acqua. Nel settore occidentale del distretto si sono così formati i bacini di **Albano**, di **Nemi** e, quasi contemporaneamente, di **Ariccia**.
+I due laghi dei Castelli non sono laghi qualsiasi: sono **crateri vulcanici** riempitisi d'acqua. Si sono formati nell'ultima fase di attività del vulcano, quella **idromagmatica**, quando il contatto tra magma e acqua sotterranea ha prodotto violente esplosioni. Questo tipo di eruzione genera crateri ampi e con i bordi poco rilevati, chiamati *maar*, il cui fondo resta più basso del territorio circostante: condizioni ideali perché vi si raccolga l'acqua. Nel settore occidentale del distretto si sono così formati i centri di **Albano** e di **Giuntura** e, quasi contemporaneamente, quelli di **Ariccia** e di **Nemi**.
 
 ## 14.3 Quiescente, non spento
 
@@ -40,8 +40,9 @@ Vivere su un vulcano quiescente non deve generare allarme, ma **consapevolezza**
 
 ## Fonti
 
-1. **INGV — Istituto Nazionale di Geofisica e Vulcanologia**, sorveglianza del Distretto Vulcanico dei Colli Albani.
-2. Dipartimento della Protezione Civile e Regione Lazio per il quadro dei rischi del territorio dei Castelli Romani.
-3. Piano di Emergenza Comunale di Protezione Civile di Genzano di Roma (vedi [Area Download](/area-download/)).
+1. **INGV — Istituto Nazionale di Geofisica e Vulcanologia**, [scheda Colli Albani](https://www.ingv.it/colli-albani) e [sorveglianza del Distretto Vulcanico dei Colli Albani](https://www.ingv.it/monitoraggio-e-infrastrutture/sorveglianza/servizio-sorveglianza-vulcani-attivi/sorveglianza-vulcani-colli-albani).
+2. Dipartimento della Protezione Civile, [Colli Albani](https://rischi.protezionecivile.gov.it/it/vulcanico/vulcani-italia/colli-albani/), e Regione Lazio per il quadro dei rischi del territorio dei Castelli Romani.
+3. ISPRA, Progetto CARG: [i fogli della Carta geologica d'Italia che descrivono Genzano](/comunicazioni/2026-10-01-carta-geologica-italia-carg-fogli-genzano/).
+4. Piano di Emergenza Comunale di Protezione Civile di Genzano di Roma (vedi [Area Download](/area-download/)).
 
 </div>

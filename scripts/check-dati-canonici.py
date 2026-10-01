@@ -8,7 +8,11 @@ content/, dati YAML in data/, pagine e script statici in static/ e nei layout
 del tema. Una variante conta solo se nel raggio di "finestra" caratteri compare
 anche il "contesto" della regola (per esempio «Colli Albani»), così «20.000
 anni» riferito a un altro vulcano non fa scattare nulla. Con "stessa_frase:
-true" il contesto deve stare nella stessa frase della variante.
+true" il contesto deve stare nella stessa frase della variante, con
+"stesso_paragrafo: true" nello stesso paragrafo o elenco. Due eccezioni
+per i casi legittimi: "salvo_se_frase" (la frase della variante parla di
+altro, per esempio del Vesuvio) e "salvo_se_prima" (subito prima della
+variante c'è una negazione: «Non devi chiamare il 118»).
 
 Nasce il 01/10/2026: l'ultima eruzione dei Colli Albani compariva con tre
 valori diversi e l'Osservatorio Vesuviano era indicato come ente di
@@ -54,16 +58,26 @@ ESCLUSI = [
     "themes/flavour-pcgenzano/static/vendor/*",
 ]
 
-RE_TAG = re.compile(r"<[^>]+>")
-RE_FINE_FRASE = re.compile(r"[.!?;]\s|\n\s*\n|\|")
+# Solo i tag HTML veri (iniziano con lettera, «/» o «!»): gli shortcode Hugo
+# «{{< nome attr="…" >}}» restano, perché i loro attributi sono testo pubblicato.
+RE_TAG = re.compile(r"(?<!\{)<[A-Za-z/!][^>]*>")
+RE_FINE_FRASE = re.compile(r"[.!?;]\s|\n\s*\n|\||\{\{[<%]|[>%]\}\}")
+RE_FINE_PARAGRAFO = re.compile(r"\n\s*\n|\{\{[<%]|[>%]\}\}")
+
+
+def tratto_intorno(testo: str, inizio: int, fine: int, confine: re.Pattern) -> tuple[int, int]:
+    """Inizio e fine del tratto (frase o paragrafo) che contiene [inizio, fine)."""
+    sinistra = max((m.end() for m in confine.finditer(testo, 0, inizio)), default=0)
+    destra = confine.search(testo, fine)
+    return sinistra, destra.start() if destra else len(testo)
 
 
 def frase_intorno(testo: str, inizio: int, fine: int) -> str:
     """La frase che contiene il tratto [inizio, fine): dal segno di fine frase
-    precedente al successivo (punto, punto e virgola, riga vuota, cella)."""
-    sinistra = max((m.end() for m in RE_FINE_FRASE.finditer(testo, 0, inizio)), default=0)
-    destra = RE_FINE_FRASE.search(testo, fine)
-    return testo[sinistra: destra.start() if destra else len(testo)]
+    precedente al successivo (punto, punto e virgola, riga vuota, cella,
+    confine di uno shortcode)."""
+    a, b = tratto_intorno(testo, inizio, fine, RE_FINE_FRASE)
+    return testo[a:b]
 
 
 def testo_confrontabile(sorgente: str) -> str:
@@ -112,9 +126,24 @@ def main(argv: list[str]) -> int:
                     if contesto:
                         if regola.get("stessa_frase"):
                             intorno = frase_intorno(testo, m.start(), m.end())
+                        elif regola.get("stesso_paragrafo"):
+                            a, b = tratto_intorno(testo, m.start(), m.end(), RE_FINE_PARAGRAFO)
+                            intorno = testo[a:b]
                         else:
                             intorno = testo[max(0, m.start() - finestra): m.end() + finestra]
                         if not re.search(contesto, intorno):
+                            continue
+                    salvo = regola.get("salvo_se_frase")
+                    if salvo:
+                        a, b = tratto_intorno(testo, m.start(), m.end(), RE_FINE_FRASE)
+                        # La variante stessa non conta: «Osservatorio Vesuviano»
+                        # contiene già la parola che renderebbe legittima la frase.
+                        if re.search(salvo, testo[a: m.start()] + " " + testo[m.end(): b]):
+                            continue
+                    prima = regola.get("salvo_se_prima")
+                    if prima:
+                        a, _ = tratto_intorno(testo, m.start(), m.end(), RE_FINE_FRASE)
+                        if re.search(prima, testo[a: m.start()], re.I):
                             continue
                     riga = testo.count("\n", 0, m.start()) + 1
                     estratto = " ".join(testo[max(0, m.start() - 60): m.end() + 60].split())

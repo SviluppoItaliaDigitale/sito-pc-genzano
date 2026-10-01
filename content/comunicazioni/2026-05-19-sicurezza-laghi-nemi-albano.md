@@ -23,14 +23,14 @@ I **laghi di Nemi** e di **Albano** sono un patrimonio naturale unico dei Castel
 - **Profondità massima**: circa 33 metri.
 - **Superficie**: circa 1,67 km².
 - **Quota**: 316 metri s.l.m.
-- **Origine**: caldera vulcanica.
+- **Origine**: cratere vulcanico (maar).
 
 ### Lago di Albano
 
-- **Profondità massima**: circa 170 metri (uno dei laghi più profondi d'Italia).
+- **Profondità massima**: circa 168 metri (uno dei laghi più profondi d'Italia).
 - **Superficie**: circa 6 km².
 - **Quota**: 293 metri s.l.m.
-- **Origine**: caldera vulcanica complessa.
+- **Origine**: cratere vulcanico complesso, nato da più esplosioni.
 
 Entrambi sono **molto profondi in prossimità delle sponde**: bastano pochi metri dalla riva per trovare acque alte. Questa è la prima cosa da sapere.
 
