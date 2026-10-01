@@ -98,6 +98,15 @@ jobs:
         # che dichiarava di usare, con media e conclusioni sbagliate.
         run: python3 scripts/check-dati-schede.py
 
+      - name: "🧭 Dati canonici uguali in tutto il sito"
+        # 01/10/2026: l'ultima eruzione dei Colli Albani compariva con tre
+        # valori diversi e l'Osservatorio Vesuviano come ente di sorveglianza.
+        # Il registro data/dati_canonici.yaml tiene valore, fonte ufficiale e
+        # varianti sbagliate; una variante in qualsiasi file blocca la PR.
+        run: |
+          pip install --quiet pyyaml
+          python3 scripts/check-dati-canonici.py
+
   fascicolo-esperimenti:
     name: "Fascicolo esperimenti: un foglio per esperimento"
     runs-on: ubuntu-latest

@@ -1,0 +1,90 @@
+# Registro dei dati canonici del sito.
+#
+# Ogni voce è un dato che compare in più pagine e deve essere uguale
+# dappertutto: valore ufficiale, fonte, e le varianti sbagliate già trovate
+# (o prevedibili) da cercare. Lo legge scripts/check-dati-canonici.py, che
+# gira su ogni pull request (validate-pr.yml) e blocca se trova una variante.
+#
+# Come si aggiunge un dato:
+#   1. valore e fonte si prendono da una fonte primaria (INGV, DPC, ISPRA,
+#      Normattiva, dataset del sito), mai a memoria;
+#   2. "vietati" elenca espressioni regolari che descrivono il dato SBAGLIATO,
+#      non quello giusto; "contesto" restringe la ricerca ai passaggi che
+#      parlano davvero di quel soggetto (stessa finestra di caratteri);
+#   3. prima del commit: python3 scripts/check-dati-canonici.py deve dare 0,
+#      correggendo le pagine o, se il caso è legittimo, aggiungendo il file
+#      a "escludi" con il motivo in un commento;
+#   4. "stessa_frase: true" chiede che il contesto stia nella stessa frase
+#      della variante, invece che entro "finestra" caratteri.
+#
+# Nasce il 01/10/2026: lo stesso dato sui Colli Albani compariva sul sito con
+# tre valori diversi (36.000, 19.000 e «5.000 anni» di attività recente) e
+# l'Osservatorio Vesuviano indicato come ente di sorveglianza.
+
+dati:
+  - id: colli-albani-ultima-eruzione
+    dato: "Ultima eruzione dei Colli Albani"
+    valore: "circa 36.000 anni fa"
+    fonti:
+      - nome: "INGV, scheda «Colli Albani»"
+        url: "https://www.ingv.it/colli-albani"
+      - nome: "Dipartimento della Protezione Civile, «Colli Albani»"
+        url: "https://rischi.protezionecivile.gov.it/it/vulcanico/vulcani-italia/colli-albani/"
+      - nome: "INGVvulcani, «Le eruzioni recenti ai Colli Albani: un mito moderno» (07/07/2020)"
+        url: "https://ingvvulcani.com/2020/07/07/le-eruzioni-recenti-ai-colli-albani-un-mito-moderno/"
+    vietati:
+      - regex: '\b(?:5|19|20|23|30)\.?000\s+anni'
+        perche: "Età diversa dai 36.000 anni dell'INGV. Le età di circa 5.000 anni venivano da datazioni su paleosuoli, smentite dall'INGV."
+        contesto: 'Colli Albani|Vulcano Laziale|[Ll]ago Albano|[Ll]ago di Albano|[Ll]ago di Nemi|maar'
+        finestra: 200
+
+  - id: colli-albani-stato
+    dato: "Stato di attività dei Colli Albani"
+    valore: "quiescente (non spento, non estinto)"
+    fonti:
+      - nome: "Dipartimento della Protezione Civile, «I vulcani in Italia»"
+        url: "https://rischi.protezionecivile.gov.it/it/vulcanico/vulcani-italia/"
+    vietati:
+      - regex: 'crateri\s+spenti|cratere\s+spento|spento\s+ma\s+(?:monitorato|sorvegliato)'
+        perche: "I Colli Albani sono un vulcano quiescente: «spento» dice il contrario."
+        contesto: 'Albani|Albano|Nemi|Laziale|Castelli'
+        finestra: 250
+
+  - id: colli-albani-sorveglianza
+    dato: "Chi sorveglia i Colli Albani"
+    valore: "INGV (rete GPS, misure di CO2 e radon, controlli sul Lago Albano)"
+    fonti:
+      - nome: "INGV, «Sorveglianza vulcani Colli Albani»"
+        url: "https://www.ingv.it/monitoraggio-e-infrastrutture/sorveglianza/servizio-sorveglianza-vulcani-attivi/sorveglianza-vulcani-colli-albani"
+    vietati:
+      - regex: 'Osservatorio Vesuviano|INGV[- ]OV\b'
+        perche: "L'Osservatorio Vesuviano sorveglia Vesuvio, Campi Flegrei e Ischia, non i Colli Albani."
+        contesto: 'Colli Albani|Vulcano Laziale'
+        stessa_frase: true
+
+  - id: lago-albano-profondita
+    dato: "Profondità massima del Lago Albano"
+    valore: "168 m"
+    fonti:
+      - nome: "INGV, scheda «Colli Albani»"
+        url: "https://www.ingv.it/colli-albani"
+    vietati:
+      - regex: '\b167(?:\s*(?:m\b|metri)|")'
+        perche: "L'INGV indica 168 metri."
+        contesto: 'Albano'
+        finestra: 80
+
+  - id: numero-emergenza-112
+    dato: "Numero da chiamare in emergenza nel Lazio"
+    valore: "112 (NUE); i vecchi 115, 118 e 1515 non si comunicano come numeri da chiamare"
+    fonti:
+      - nome: "Regola del sito 06, § Numeri di emergenza; NUE 112 attivo nel Lazio dal 2017"
+        url: "https://www.protezionecivilegenzano.it/numeri-utili/"
+    vietati:
+      - regex: '(?<![Nn]on )\bchiam(?:a|are|ate|ando)\s+(?:subito\s+)?(?:il\s+)?(?:115|118|1515)\b'
+        perche: "Nel Lazio si chiama il 112: il cittadino deve ricordare un solo numero."
+    escludi:
+      # Esercizi che citano il vecchio numero per insegnare che è sbagliato:
+      # il vero/falso del kit primaria e la soluzione del cruciverba.
+      - "content/formazione/kit-scuola-primaria.md"
+      - "static/formazione/schede-stampabili/cruciverba-secondaria2/index.html"

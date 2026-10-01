@@ -48,7 +48,7 @@ Su questo vulcano vivono oggi centinaia di migliaia di persone. Conoscerne la fo
 {{< /dossier-scena >}}
 
 {{< dossier-hotspot id="esplora" image="/images/dossier/vulcano-sat.webp" alt="Vista satellitare dall'alto del vulcano dei Colli Albani: a sinistra il Lago Albano, in basso il Lago di Nemi, al centro il cono boscoso delle Faete e tutt'intorno l'orlo della caldera" titolo="Esplora il vulcano dall'alto" testo="Tocca i cinque punti per riconoscere le parti del vulcano. *(Immagine: dati Copernicus Sentinel-2 / ESA, CC BY.)*" >}}
-{{< dossier-punto x="33" y="49" titolo="Lago Albano" >}}Un **cratere riempito d'acqua** (un *maar*), nato dall'incontro esplosivo tra magma e acqua. Profondo fino a circa **167 metri**, è il lago più profondo del Lazio.{{< /dossier-punto >}}
+{{< dossier-punto x="33" y="49" titolo="Lago Albano" >}}Un **cratere riempito d'acqua** (un *maar*), nato dall'incontro esplosivo tra magma e acqua. Profondo fino a circa **168 metri**, è il lago più profondo del Lazio.{{< /dossier-punto >}}
 {{< dossier-punto x="48" y="73" titolo="Lago di Nemi" >}}L'**altro cratere**, più piccolo. **Genzano di Roma** si affaccia proprio sul suo orlo.{{< /dossier-punto >}}
 {{< dossier-punto x="57" y="42" titolo="Il cono delle Faete" >}}Il **vulcano più giovane**, cresciuto dentro la caldera. La sua cima più alta è il **Maschio delle Faete** (956 m); accanto, **Monte Cavo** (949 m). Oggi è una montagna boscosa e tranquilla.{{< /dossier-punto >}}
 {{< dossier-punto x="74" y="27" titolo="L'orlo della caldera" >}}L'anello di rilievi — **Monti Tuscolani** e **Artemisio** — è il **bordo del vulcano antico**, collassato dopo le grandi eruzioni di centinaia di migliaia di anni fa.{{< /dossier-punto >}}
