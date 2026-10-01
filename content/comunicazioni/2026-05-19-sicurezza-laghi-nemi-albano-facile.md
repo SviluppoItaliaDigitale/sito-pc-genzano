@@ -29,7 +29,7 @@ Il lago di Nemi è profondo fino a 33 metri. Il lago di Albano è profondo fino 
 
 ### L'acqua fredda fa male se entri veloce
 
-Anche in estate, l'acqua del lago è fredda. Se entri veloce dopo aver preso il sole, puoi avere uno shock. Lo shock si chiama **idrocuzione**. Puoi avere crampi o sentirti male.
+In estate l'acqua in superficie si scalda. Sotto la superficie l'acqua resta molto fredda. Se entri veloce dopo aver preso il sole, puoi avere uno shock. Lo shock si chiama **idrocuzione**. Puoi avere crampi o sentirti male.
 
 Cosa devi fare:
 

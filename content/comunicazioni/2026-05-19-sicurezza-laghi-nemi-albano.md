@@ -14,7 +14,7 @@ draft: false
 versione_facile: "2026-05-19-sicurezza-laghi-nemi-albano-facile"
 ---
 
-I **laghi di Nemi** e di **Albano** sono un patrimonio naturale unico dei Castelli Romani. Conche vulcaniche profonde, con acque fredde anche d'estate, sponde ricche di vegetazione. Con l'arrivo del caldo cresce la frequentazione e, con essa, la necessità di conoscere **le regole di sicurezza** specifiche di questi ambienti.
+I **laghi di Nemi** e di **Albano** sono un patrimonio naturale unico dei Castelli Romani. Conche vulcaniche profonde, con acque che in profondità restano fredde anche d'estate, sponde ricche di vegetazione. Con l'arrivo del caldo cresce la frequentazione e, con essa, la necessità di conoscere **le regole di sicurezza** specifiche di questi ambienti.
 
 ## Caratteristiche dei due laghi
 
@@ -38,7 +38,7 @@ Entrambi sono **molto profondi in prossimità delle sponde**: bastano pochi metr
 
 ### Sbalzo termico
 
-Anche in agosto, la temperatura superficiale dei laghi raramente supera i 22-24 °C. In profondità scende rapidamente. Entrare in acqua in una giornata calda, dopo esposizione al sole, può causare un'**idrocuzione** (shock termico): crampi, perdita di coordinazione, nei casi gravi arresto cardiaco.
+In estate l'acqua dei laghi si stratifica: lo strato superficiale si scalda al sole, mentre in profondità resta molto più fredda. Lo descrive lo studio dell'Istituto Superiore di Sanità sul lago Albano (ISTISAN 07/8). Chi nuota passa quindi da acqua tiepida ad acqua fredda in pochi colpi. Entrare in acqua in una giornata calda, dopo esposizione al sole, può causare un'**idrocuzione** (shock termico): crampi, perdita di coordinazione, nei casi gravi arresto cardiaco.
 
 **Prevenzione**: entrare **gradualmente**, bagnandosi prima viso, nuca, polsi. Non immergersi di corsa.
 
