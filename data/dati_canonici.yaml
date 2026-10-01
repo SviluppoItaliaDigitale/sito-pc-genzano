@@ -1,0 +1,193 @@
+# Registro dei dati canonici del sito.
+#
+# Ogni voce è un dato che compare in più pagine e deve essere uguale
+# dappertutto: valore ufficiale, fonte, e le varianti sbagliate già trovate
+# (o prevedibili) da cercare. Lo legge scripts/check-dati-canonici.py, che
+# gira su ogni pull request (validate-pr.yml) e blocca se trova una variante.
+#
+# Come si aggiunge un dato:
+#   1. valore e fonte si prendono da una fonte primaria (INGV, DPC, ISPRA,
+#      Normattiva, dataset del sito), mai a memoria;
+#   2. "vietati" elenca espressioni regolari che descrivono il dato SBAGLIATO,
+#      non quello giusto; "contesto" restringe la ricerca ai passaggi che
+#      parlano davvero di quel soggetto (stessa finestra di caratteri);
+#   3. prima del commit: python3 scripts/check-dati-canonici.py deve dare 0,
+#      correggendo le pagine o, se il caso è legittimo, aggiungendo il file
+#      a "escludi" con il motivo in un commento;
+#   4. "stessa_frase: true" chiede che il contesto stia nella stessa frase
+#      della variante, invece che entro "finestra" caratteri.
+#
+# Nasce il 01/10/2026: lo stesso dato sui Colli Albani compariva sul sito con
+# tre valori diversi (36.000, 19.000 e «5.000 anni» di attività recente) e
+# l'Osservatorio Vesuviano indicato come ente di sorveglianza.
+
+dati:
+  - id: colli-albani-ultima-eruzione
+    dato: "Ultima eruzione dei Colli Albani"
+    valore: "circa 36.000 anni fa"
+    fonti:
+      - nome: "INGV, scheda «Colli Albani»"
+        url: "https://www.ingv.it/colli-albani"
+      - nome: "Dipartimento della Protezione Civile, «Colli Albani»"
+        url: "https://rischi.protezionecivile.gov.it/it/vulcanico/vulcani-italia/colli-albani/"
+      - nome: "INGVvulcani, «Le eruzioni recenti ai Colli Albani: un mito moderno» (07/07/2020)"
+        url: "https://ingvvulcani.com/2020/07/07/le-eruzioni-recenti-ai-colli-albani-un-mito-moderno/"
+    vietati:
+      - regex: '\b(?:5|19|20|23|30)\.?000\s+anni'
+        perche: "Età diversa dai 36.000 anni dell'INGV. Le età di circa 5.000 anni venivano da datazioni su paleosuoli, smentite dall'INGV."
+        contesto: 'Colli Albani|Vulcano Laziale|[Ll]ago Albano|[Ll]ago di Albano|[Ll]ago di Nemi|maar'
+        finestra: 200
+
+  - id: colli-albani-stato
+    dato: "Stato di attività dei Colli Albani"
+    valore: "quiescente (non spento, non estinto)"
+    fonti:
+      - nome: "Dipartimento della Protezione Civile, «I vulcani in Italia»"
+        url: "https://rischi.protezionecivile.gov.it/it/vulcanico/vulcani-italia/"
+    vietati:
+      - regex: 'crateri\s+spenti|cratere\s+spento|spento\s+ma\s+(?:monitorato|sorvegliato)'
+        perche: "I Colli Albani sono un vulcano quiescente: «spento» dice il contrario."
+        contesto: 'Albani|Albano|Nemi|Laziale|Castelli'
+        finestra: 250
+      - regex: 'quiescent[ei]\s+ma\s+attiv[oaie]'
+        perche: "Per il DPC gli unici vulcani attivi sono Etna e Stromboli: i Colli Albani sono quiescenti, non «quiescenti ma attivi»."
+        contesto: 'Colli Albani|Vulcano Laziale|Albani|Laziale'
+        finestra: 250
+      - regex: '(?<!non )(?<!Non )(?<!non è )(?<!né )(?<!≠ )\bspent[oi]\b'
+        perche: "I Colli Albani sono un vulcano quiescente, non spento. Vale per il vulcano e per i suoi crateri-lago."
+        contesto: 'Colli Albani|Vulcano Laziale|apparato vulcanico|cratere|crateri|distretto vulcanico'
+        stessa_frase: true
+
+  - id: colli-albani-sorveglianza
+    dato: "Chi sorveglia i Colli Albani"
+    valore: "INGV (rete GPS, misure di CO2 e radon, controlli sul Lago Albano)"
+    fonti:
+      - nome: "INGV, «Sorveglianza vulcani Colli Albani»"
+        url: "https://www.ingv.it/monitoraggio-e-infrastrutture/sorveglianza/servizio-sorveglianza-vulcani-attivi/sorveglianza-vulcani-colli-albani"
+    vietati:
+      - regex: 'Osservatorio Vesuviano|INGV[- ]OV\b'
+        perche: "L'Osservatorio Vesuviano sorveglia Vesuvio, Campi Flegrei e Ischia, non i Colli Albani."
+        # Il soggetto può stare nella voce accanto dello stesso elenco
+        # («nell'area»); se la frase stessa parla di altri vulcani,
+        # l'attribuzione è corretta.
+        contesto: 'Colli Albani|Vulcano Laziale'
+        stesso_paragrafo: true
+        salvo_se_frase: 'Vesuvio|Campi Flegrei|Ischia|vesuvian|campan|Etna|Etneo|Stromboli'
+
+  - id: lago-albano-profondita
+    dato: "Profondità massima del Lago Albano"
+    valore: "168 m"
+    fonti:
+      - nome: "INGV, scheda «Colli Albani»"
+        url: "https://www.ingv.it/colli-albani"
+    vietati:
+      - regex: '\b167(?:\s*(?:m\b|metri)|")'
+        perche: "L'INGV indica 168 metri."
+        contesto: 'Albano'
+        finestra: 80
+      - regex: '\b170\s*(?:m\b|metri)|\b(?:circa|oltre|fino\s+a|supera(?:no)?\s+i)\s+170\b'
+        perche: "L'INGV indica 168 metri per il Lago Albano: 170 è un arrotondamento che nelle pagine diventava «oltre 170»."
+        contesto: 'Albano'
+        finestra: 80
+
+  - id: lago-nemi-profondita
+    dato: "Profondità massima del Lago di Nemi"
+    valore: "33 m (quota 316 m s.l.m., superficie 1,67 km²)"
+    fonti:
+      - nome: "Istituto Superiore di Sanità, Rapporti ISTISAN 07/8, «Le acque del Parco Naturale Regionale dei Castelli Romani» (2007)"
+        url: "https://www.iss.it/documents/20126/45616/07-8.1180687096.pdf/ea8402d3-719d-20e0-079a-1f9bc3a759ea?t=1581098399169"
+    vietati:
+      # Il Comune di Nemi indica 32 m e un testo di Ferri Ricchi 34 m nel corpo
+      # (33 m nella didascalia): il sito segue l'ISS, fonte scientifica citata.
+      - regex: '\b(?:32|34)\s*(?:m\b|metri)'
+        perche: "L'ISS (Rapporti ISTISAN 07/8) indica 33 metri di profondità massima per il Lago di Nemi."
+        contesto: 'Nemi'
+        finestra: 80
+
+  - id: laghi-albano-nemi-origine
+    dato: "Origine dei laghi di Albano e di Nemi"
+    valore: "crateri vulcanici (maar) della fase idromagmatica; la caldera è quella dell'intero vulcano"
+    fonti:
+      - nome: "Dipartimento della Protezione Civile, «Colli Albani — Storia eruttiva»"
+        url: "https://rischi.protezionecivile.gov.it/it/vulcanico/vulcani-italia/colli-albani/"
+      - nome: "ISPRA, Carta geologica d'Italia, note illustrative del foglio 388 «Velletri»"
+        url: "https://progetto-carg.isprambiente.it/cartografiaCARG/index.php?source=cartageologica"
+    vietati:
+      - regex: '\bcaldere\s+di\s+(?:Albano|Nemi)|\bsono\s+le\s+caldere\b|[Oo]rigine\W+(?:vulcanica\W+)?(?:a\s+)?caldera'
+        perche: "I laghi di Albano e di Nemi occupano crateri (maar), non caldere: la caldera è il collasso dell'intero apparato."
+        contesto: 'Albano|Nemi|lago|laghi'
+        finestra: 150
+
+  - id: cava-dei-selci-area
+    dato: "Area di monitoraggio del flusso di CO2 a Cava dei Selci"
+    valore: "6.000 m² (area target INGV)"
+    fonti:
+      - nome: "INGV, «Sorveglianza vulcani Colli Albani»"
+        url: "https://www.ingv.it/monitoraggio-e-infrastrutture/sorveglianza/servizio-sorveglianza-vulcani-attivi/sorveglianza-vulcani-colli-albani"
+    vietati:
+      - regex: '6\.?200\s*(?:m²|m2|metri\s+quadr)'
+        perche: "L'INGV indica un'area target di 6.000 m² a Cava dei Selci."
+        contesto: 'Cava dei Selci|degassamento'
+        finestra: 250
+
+  - id: colli-albani-sciame-1989-magnitudo
+    dato: "Magnitudo massima della crisi sismica 1989-1990 dei Colli Albani"
+    valore: "Md 3,9 (19 e 23 ottobre 1989, catalogo INGV); più di 3.000 scosse rilevate in circa un anno, circa 1.100 localizzate, fino a MD ~4,0 (Amato et al., 1994)"
+    fonti:
+      - nome: "INGV, servizio FDSN event (catalogo ISIDe, eventi 1989-1990 entro 25 km dai Colli Albani)"
+        url: "https://webservices.ingv.it/fdsnws/event/1/query?starttime=1989-01-01&endtime=1990-12-31&lat=41.74&lon=12.70&maxradiuskm=25&minmag=3.0&orderby=magnitude&format=text"
+      - nome: "Amato A., Chiarabba C., Cocco M., Di Bona M., Selvaggi G. (1994), «The 1989-1990 seismic swarm in the Alban Hills volcanic area, central Italy», J. Volcanol. Geotherm. Res. 61, 225-237"
+        url: "https://doi.org/10.1016/0377-0273(94)90005-1"
+    vietati:
+      - regex: '\bM(?:agnitudo|d|L|w)?\s*(?:4[.,][1-9]|[5-9][.,]\d)|\bmagnitudo\s+(?:di\s+)?(?:4[.,][1-9]|[5-9][.,]\d)'
+        perche: "La scossa più forte della crisi 1989-1990 ha Md 3,9 nel catalogo INGV (circa 4,0 nel lavoro di Amato et al.): non esiste un evento di magnitudo 4,2 del 14 aprile 1989."
+        contesto: 'sciame sismic[oa]\W+(?:del\s+)?1989|crisi (?:sismica )?(?:dei )?Colli Albani\W+1989|1989\W{1,3}(?:19)?90'
+        finestra: 160
+
+  - id: colli-albani-genzano-posizione
+    dato: "Posizione di Genzano rispetto al vulcano"
+    valore: "Genzano sorge sul vulcano, sul bordo esterno del cratere del Lago di Nemi"
+    fonti:
+      - nome: "ISPRA, Carta geologica d'Italia 1:50.000, foglio 388 «Velletri» (il centro di Genzano e il Lago di Nemi cadono nel foglio)"
+        url: "https://progetto-carg.isprambiente.it/cartografiaCARG/index.php?source=cartageologica"
+    vietati:
+      - regex: 'ai piedi (?:di un|del|dei) (?:complesso )?(?:<strong>)?(?:vulcan|Colli Albani)|alle spalle di Genzano|dietro Genzano|Genzano[^.\n]{0,40}(?:sorge|si trova|è)[^.\n]{0,20}su una caldera'
+        perche: "Genzano non sta «ai piedi» o «dietro» il vulcano: sorge sull'apparato vulcanico, sul bordo del cratere di Nemi."
+        contesto: 'Genzano'
+        finestra: 120
+
+  - id: numero-emergenza-112
+    dato: "Numero da chiamare in emergenza nel Lazio"
+    valore: "112 (NUE); i vecchi 115, 118 e 1515 non si comunicano come numeri da chiamare"
+    fonti:
+      - nome: "Regola del sito 06, § Numeri di emergenza; NUE 112 attivo nel Lazio dal 2017"
+        url: "https://www.protezionecivilegenzano.it/numeri-utili/"
+    vietati:
+      - regex: '\bchiam(?:a|are|ate|ando)\s+(?:subito\s+)?(?:il\s+)?(?:115|118|1515)\b'
+        perche: "Nel Lazio si chiama il 112: il cittadino deve ricordare un solo numero."
+        # «Non chiamare», «Non devi chiamare», «Evita di chiamare»: la frase
+        # ribadisce proprio la regola del 112.
+        # Solo verbi di servizio fra la negazione e «chiama»: «Se non respira
+        # chiama il 118» resta un errore.
+        salvo_se_prima: '\b(?:non|mai|evita(?:re|te)?|niente)\s+(?:(?:devi|dovete|deve|si|più|di|bisogna|occorre|serve)\s+){0,2}$'
+    escludi:
+      # Esercizi che citano il vecchio numero per insegnare che è sbagliato:
+      # il vero/falso del kit primaria e la soluzione del cruciverba.
+      - "content/formazione/kit-scuola-primaria.md"
+      - "static/formazione/schede-stampabili/cruciverba-secondaria2/index.html"
+
+  - id: genzano-zona-sismica
+    dato: "Classificazione sismica di Genzano di Roma"
+    valore: "zona sismica 2, sottozona 2B: ag tra 0,15 e 0,20 g, sismicità media"
+    fonti:
+      - nome: "Regione Lazio, DGR n. 387 del 22 maggio 2009, Allegato 1 «Nuova classificazione sismica del territorio della Regione Lazio»"
+        url: "https://www.regione.lazio.it/sites/default/files/documentazione/AMB_DGR_387_22_05_2009_Allegato1.pdf"
+    vietati:
+      - regex: '\bzon[ae]\s+(?:sismic[ah]\s+)?2\s*[-–]\s*3\b|\bZ2-3\b'
+        perche: "Genzano non è «al confine» fra due zone: è in zona 2, sottozona 2B."
+        contesto: 'Genzano|Castelli|Colli Albani'
+        finestra: 200
+      - regex: '\b(?:pericolosità|sismicità|rischio)\s+medio[- ]alt[oa]\b'
+        perche: "Per la Regione Lazio la sottozona 2B di Genzano è a sismicità media, non medio-alta."
+        contesto: '2B|[Zz]ona\s+(?:sismica\s+)?2\b'
+        stessa_frase: true

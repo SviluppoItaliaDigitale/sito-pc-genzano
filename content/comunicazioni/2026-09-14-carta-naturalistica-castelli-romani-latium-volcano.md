@@ -39,7 +39,7 @@ Le date delle tre fasi e lo stato attuale del vulcano, che l'INGV definisce **qu
 
 ## I laghi misurati
 
-Il retro riporta i parametri fisici delle acque, frutto di monitoraggi dell'associazione tra il 2004 e il 2007. Per il **lago di Nemi**: pH 8,7, residuo secco 160 milligrammi per litro, conducibilità 325 microsiemens per centimetro. Per il **lago Albano**: pH 8,5, residuo secco 240 milligrammi per litro, conducibilità 490 microsiemens per centimetro. Il lago Albano supera i 170 metri di profondità e non ha emissari naturali: è un invaso chiuso, sorvegliato per i suoi equilibri idrologici.
+Il retro riporta i parametri fisici delle acque, frutto di monitoraggi dell'associazione tra il 2004 e il 2007. Per il **lago di Nemi**: pH 8,7, residuo secco 160 milligrammi per litro, conducibilità 325 microsiemens per centimetro. Per il **lago Albano**: pH 8,5, residuo secco 240 milligrammi per litro, conducibilità 490 microsiemens per centimetro. Il lago Albano è profondo circa 168 metri e non ha emissari naturali: è un invaso chiuso, sorvegliato per i suoi equilibri idrologici.
 
 Sulla carta compaiono anche sei **siti di interesse idrico**: sorgenti stagionali con i loro valori di pH e conducibilità, i pozzi della Doganella e la fonte Regilla. C'è anche la **mofeta** della Sorgente degli Angeli, un punto in cui il suolo emette anidride carbonica. Le emissioni di gas sono uno dei segnali di vita profonda del vulcano che spieghiamo nella pagina dedicata.
 

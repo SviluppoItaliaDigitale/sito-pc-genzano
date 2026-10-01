@@ -53,6 +53,8 @@ Contraddizioni tipiche da cercare:
 
 Correggi **ogni** occorrenza difforme alla fonte canonica, in tutti i formati (Markdown, HTML statico, YAML, JS dell'assistente, versione facile, traduzioni). Poi esegui la grep di verifica che dimostra l'assenza di residui (rule 07). Se la correzione tocca schede stampabili, rigenera i pacchetti (`genera-pacchetti-schede.py`, `genera-pacchetti-kit.py`) e lancia `check-parita-schede.py`.
 
+Chiudi ogni allineamento **aggiungendo il dato a `data/dati_canonici.yaml`** (valore, fonte ufficiale, varianti sbagliate trovate, contesto) e lanciando `python3 scripts/check-dati-canonici.py`, che deve dare 0. Da quel momento il controllo blocca su ogni pull request chi reintroduce la variante: senza questo passo la stessa discrepanza ritorna alla prossima pagina scritta a mano (dal 01/10/2026).
+
 Se una famiglia è ripetuta in più di 5 file, applica il **checkpoint pre-batch** di rule 07 prima di modificare (cosa, quali rules, perché) e procedi solo con conferma, salvo autorizzazione già data.
 
 ### 4. Proponi la fonte unica dove manca

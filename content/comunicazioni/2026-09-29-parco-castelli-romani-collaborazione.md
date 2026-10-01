@@ -64,7 +64,7 @@ Ogni Comune pianifica per il proprio territorio; l'Ente Parco è uno degli inter
 
 I **due laghi vulcanici** sono ecosistemi delicati e punti di attenzione per la PC:
 
-- **Albano**: profondo oltre 170 metri, è un **invaso naturale**, oggetto di monitoraggio per equilibri idrologici;
+- **Albano**: profondo circa 168 metri, è un **invaso naturale**, oggetto di monitoraggio per equilibri idrologici;
 - **Nemi**: più piccolo, con vulnerabilità idrogeologiche del cratere.
 
 Genzano di Roma si affaccia sul cratere del lago di Nemi: i versanti che scendono verso il lago sono tra le aree del territorio comunale più esposte a frane e ruscellamento, come descritto nella pagina sul [rischio idrogeologico](/rischi-prevenzione/rischio-idrogeologico/).

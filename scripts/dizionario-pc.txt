@@ -2053,3 +2053,9 @@ eclipse
 turbo
 geotematica
 freatomagmatiche
+teleidrometro
+doi
+volcanic
+seismic
+swarm
+sottozona

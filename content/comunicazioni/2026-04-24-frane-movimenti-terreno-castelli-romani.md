@@ -14,7 +14,7 @@ draft: false
 versione_facile: "2026-04-24-frane-movimenti-terreno-castelli-romani-facile"
 ---
 
-Il territorio dei [Castelli Romani](https://it.wikipedia.org/wiki/Castelli_Romani) è un ex apparato vulcanico spento da decine di migliaia di anni. Le rocce sono prevalentemente di origine piroclastica, leggere, porose, facili da erodere. Questa stessa caratteristica che rende il paesaggio unico può, in condizioni particolari, favorire fenomeni di **dissesto e frane**.
+Il territorio dei [Castelli Romani](https://it.wikipedia.org/wiki/Castelli_Romani) sorge su un apparato vulcanico quiescente: l'ultima eruzione risale a circa 36.000 anni fa. Le rocce sono prevalentemente di origine piroclastica, leggere, porose, facili da erodere. Questa stessa caratteristica che rende il paesaggio unico può, in condizioni particolari, favorire fenomeni di **dissesto e frane**.
 
 In questo articolo raccontiamo, in modo chiaro e non allarmistico, di cosa si tratta e cosa può fare ogni cittadino.
 
@@ -74,6 +74,7 @@ Sul nostro sito:
 - [Sicurezza sui laghi di Nemi e Albano](/comunicazioni/2026-05-19-sicurezza-laghi-nemi-albano/).
 - [Sarno 1998](/comunicazioni/2026-05-05-sarno-frana-1998-rischio-idrogeologico-italia/).
 - [Frana costone Nemi: chiusura via Nemorense](/comunicazioni/2026-04-15-frana-costone-nemi-chiusura-via-nemorense/).
+- [La nuova Carta geologica d'Italia e i fogli di Genzano](/comunicazioni/2026-10-01-carta-geologica-italia-carg-fogli-genzano/).
 - [Conoscere la Protezione Civile: la prevenzione](/conoscere/le-quattro-fasi/prevenzione/).
 
 Fonti istituzionali:

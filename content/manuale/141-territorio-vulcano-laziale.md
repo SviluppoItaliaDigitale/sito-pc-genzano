@@ -12,11 +12,11 @@ Un manuale di protezione civile si misura anche sulla capacità di calarsi nel p
 
 ## 14.1 Il Distretto Vulcanico dei Colli Albani
 
-I **Colli Albani** — o **Vulcano Laziale** — sono un complesso vulcanico dell'Italia centrale, circa venti chilometri a sud-est di Roma, la struttura più meridionale di una catena di vulcani lungo la costa tirrenica del Lazio. Non è un singolo cono, ma un **apparato centrale complesso**, frutto di un'attività prevalentemente esplosiva alternata a lunghe fasi di inattività. La sua morfologia ricorda quella del Somma-Vesuvio: un bordo esterno — i **Monti Tuscolani** e l'**Artemisio** — racchiude un'ampia area pianeggiante, al cui interno è cresciuto un vulcano più recente, il **cono delle Faete** (932 metri), che degrada verso i crateri di Albano e Nemi.
+I **Colli Albani** — o **Vulcano Laziale** — sono un complesso vulcanico dell'Italia centrale, circa venti chilometri a sud-est di Roma, la struttura più meridionale di una catena di vulcani lungo la costa tirrenica del Lazio. Non è un singolo cono, ma un **apparato centrale complesso**, frutto di un'attività prevalentemente esplosiva alternata a lunghe fasi di inattività. La sua morfologia ricorda quella del Somma-Vesuvio: un bordo esterno — i **Monti Tuscolani** e l'**Artemisio** — racchiude un'ampia area pianeggiante, al cui interno è cresciuto un vulcano più recente, il **cono delle Faete** (932 metri secondo il Dipartimento della Protezione Civile; la vetta più alta dei Colli Albani, il Maschio delle Faete, misura 956 metri secondo il Parco regionale dei Castelli Romani), che degrada verso i crateri di Albano e Nemi.
 
 ## 14.2 I laghi di Albano e Nemi: crateri pieni d'acqua
 
-I due laghi dei Castelli non sono laghi qualsiasi: sono **crateri vulcanici** riempitisi d'acqua. Si sono formati nell'ultima fase di attività del vulcano, quella **idromagmatica**, quando il contatto tra magma e acqua sotterranea ha prodotto violente esplosioni. Questo tipo di eruzione genera crateri ampi e con i bordi poco rilevati, chiamati *maar*, il cui fondo resta più basso del territorio circostante: condizioni ideali perché vi si raccolga l'acqua. Nel settore occidentale del distretto si sono così formati i bacini di **Albano**, di **Nemi** e, quasi contemporaneamente, di **Ariccia**.
+I due laghi dei Castelli non sono laghi qualsiasi: sono **crateri vulcanici** riempitisi d'acqua. Si sono formati nell'ultima fase di attività del vulcano, quella **idromagmatica**, quando il contatto tra magma e acqua sotterranea ha prodotto violente esplosioni. Questo tipo di eruzione genera crateri ampi e con i bordi poco rilevati, chiamati *maar*, il cui fondo resta più basso del territorio circostante: condizioni ideali perché vi si raccolga l'acqua. Nel settore occidentale del distretto si sono così formati i centri di **Albano** e di **Giuntura** e, quasi contemporaneamente, quelli di **Ariccia** e di **Nemi**.
 
 ## 14.3 Quiescente, non spento
 
@@ -40,8 +40,9 @@ Vivere su un vulcano quiescente non deve generare allarme, ma **consapevolezza**
 
 ## Fonti
 
-1. **INGV — Istituto Nazionale di Geofisica e Vulcanologia**, sorveglianza del Distretto Vulcanico dei Colli Albani.
-2. Dipartimento della Protezione Civile e Regione Lazio per il quadro dei rischi del territorio dei Castelli Romani.
-3. Piano di Emergenza Comunale di Protezione Civile di Genzano di Roma (vedi [Area Download](/area-download/)).
+1. **INGV — Istituto Nazionale di Geofisica e Vulcanologia**, [scheda Colli Albani](https://www.ingv.it/colli-albani) e [sorveglianza del Distretto Vulcanico dei Colli Albani](https://www.ingv.it/monitoraggio-e-infrastrutture/sorveglianza/servizio-sorveglianza-vulcani-attivi/sorveglianza-vulcani-colli-albani).
+2. Dipartimento della Protezione Civile, [Colli Albani](https://rischi.protezionecivile.gov.it/it/vulcanico/vulcani-italia/colli-albani/), e Regione Lazio per il quadro dei rischi del territorio dei Castelli Romani.
+3. ISPRA, Progetto CARG: [i fogli della Carta geologica d'Italia che descrivono Genzano](/comunicazioni/2026-10-01-carta-geologica-italia-carg-fogli-genzano/).
+4. Piano di Emergenza Comunale di Protezione Civile di Genzano di Roma (vedi [Area Download](/area-download/)).
 
 </div>

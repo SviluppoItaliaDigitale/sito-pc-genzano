@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { w: 'ALLERTA', cat: 'Avviso', hint: 'Annuncio che un pericolo è atteso',
         explain: 'L\'allerta meteo del Centro Funzionale Regionale Lazio ha 4 livelli: verde, giallo, arancione, rosso.' },
       { w: 'NEMI', cat: 'Castelli Romani', hint: 'Lago di Genzano dentro un cratere',
-        explain: 'Il lago di Nemi è in un cratere vulcanico spento dei Colli Albani: zona di rischio frana per i versanti ripidi.' },
+        explain: 'Il lago di Nemi è in un cratere vulcanico dei Colli Albani, un vulcano quiescente (in pausa, non spento): zona di rischio frana per i versanti ripidi.' },
       { w: 'ELMETTO', cat: 'Dispositivo di protezione', hint: 'Copre la testa in cantiere',
         explain: 'L\'elmetto giallo dei volontari di PC è certificato CE: protegge da scarpe, mattoni e calcinacci.' },
       { w: 'USCITA', cat: 'Via di fuga', hint: 'Dove si va quando suona l\'allarme',

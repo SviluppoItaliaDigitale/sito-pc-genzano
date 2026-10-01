@@ -51,7 +51,7 @@ Sulla base della pericolosità, il territorio italiano è suddiviso in quattro *
 | **3A / 3B** | Bassa-media | aree pianeggianti e costiere |
 | **4** | Bassa | poche aree |
 
-**Genzano di Roma**, come la maggior parte dei Castelli Romani, è classificata in **zona 2B**: non la classe più alta d'Italia (la 1), ma nemmeno trascurabile. La classificazione tiene conto dell'origine vulcanica del territorio, di una sismicità storica documentata (con terremoti di magnitudo anche intorno a 5.0 nel passato) e della vulnerabilità del patrimonio edilizio storico. Il terremoto più recente di un certo rilievo nell'area risale al **2 febbraio 1975**, con epicentro in zona Villa Senni e magnitudo intorno a 3.8.
+**Genzano di Roma**, come la maggior parte dei Castelli Romani, è classificata in **zona 2B**: non la classe più alta d'Italia (la 1), ma nemmeno trascurabile. La classificazione tiene conto dell'origine vulcanica del territorio, di una sismicità storica documentata (con terremoti di magnitudo anche intorno a 5.0 nel passato) e della vulnerabilità del patrimonio edilizio storico. Nel catalogo strumentale dell'INGV, dal 1985 a oggi, le scosse più forti entro 30 chilometri da Genzano hanno magnitudo **3.9** (aprile 1987, ottobre 1989 e aprile 2008). I terremoti storici con danni nei paesi dei Colli Albani, di magnitudo stimata intorno a 5, risalgono al 1806, 1829, 1899 e 1927 (INGV).
 
 In zona 2B le norme impongono la **progettazione antisismica** per i nuovi edifici e l'**adeguamento** o il **miglioramento** per scuole, ospedali e opere strategiche.
 

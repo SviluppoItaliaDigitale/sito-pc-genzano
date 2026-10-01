@@ -120,6 +120,7 @@ Il Gruppo collabora con le scuole su questi temi: [contattaci](/contatti/) per o
 - [UNESCO International Day of Mathematics](https://www.idm314.org/)
 - [INGV — Mappe di pericolosità sismica](https://www.ingv.it/)
 - [ISPRA — Dati ambientali](https://www.isprambiente.gov.it/)
+- [Istituto Superiore di Sanità — Rapporti ISTISAN 07/8, «Le acque del Parco Naturale Regionale dei Castelli Romani»](https://www.iss.it/documents/20126/45616/07-8.1180687096.pdf/ea8402d3-719d-20e0-079a-1f9bc3a759ea?t=1581098399169) (quota e profondità del Lago di Nemi)
 - Articolo: [Zone di allerta Lazio: come leggere il bollettino](/comunicazioni/2026-05-07-zone-allerta-lazio-come-leggere-bollettino/)
 
 Conoscere i numeri è la prima difesa contro le paure irrazionali e le sottovalutazioni pericolose.

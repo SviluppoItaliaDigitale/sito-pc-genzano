@@ -172,7 +172,7 @@ I dati live di questa pagina dicono *cosa sta succedendo adesso*. Per il quadro 
 ## Le fonti del cruscotto
 
 - **Terremoti** — [INGV](https://terremoti.ingv.it/) (Istituto Nazionale di Geofisica e Vulcanologia), servizio FDSN open data, ultimi 7 giorni in Italia.
-- **Vulcani** — [INGV](https://terremoti.ingv.it/): sismicità degli ultimi 30 giorni nel Distretto Vulcanico dei Colli Albani, la caldera quiescente su cui sorge Genzano di Roma.
+- **Vulcani** — [INGV](https://terremoti.ingv.it/): sismicità degli ultimi 30 giorni nel Distretto Vulcanico dei Colli Albani, il vulcano quiescente su cui sorge Genzano di Roma.
 - **Radar pioggia** — [Radar-DPC](https://mappe.protezionecivile.gov.it/it/mappe-e-dashboard-rischi/piattaforma-radar/) (Dipartimento della Protezione Civile), servizi WMTS open data.
 - **Radar ItaliaMeteo** — [Agenzia ItaliaMeteo](https://www.agenziaitaliameteo.it/meteo/dati-osservati/radar/) (prodotto SRI, intensità di pioggia al suolo), cartine WMS da [MeteoHub](https://meteohub.agenziaitaliameteo.it/), licenza CC BY 4.0. Complementare al radar DPC.
 - **Satellite (EUMETSAT)** — [EUMETSAT](https://www.eumetsat.int/) (Meteosat, nuvole a colori naturali aggiornate ogni 10 minuti) e [NASA GIBS](https://worldview.earthdata.nasa.gov/) (immagine true-color del giorno).

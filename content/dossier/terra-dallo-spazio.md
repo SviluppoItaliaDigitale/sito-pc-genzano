@@ -70,11 +70,11 @@ Conoscere la forma del territorio — vista dall'alto — aiuta a capire **dove 
 {{< /dossier-scena >}}
 
 {{< dossier-scena id="territorio" image="/images/dossier/duelaghi.webp" alt="I due laghi di cratere dei Castelli Romani visti dalla Stazione Spaziale: a sinistra il più piccolo Lago di Nemi, a destra il più ampio Lago Albano, dentro gli antichi crateri del vulcano" align="top" kicker="I nostri due crateri" title="Albano e Nemi, dall'orbita" credito="NASA · Stazione Spaziale Internazionale (2021) · pubblico dominio" >}}
-I **due occhi del Vulcano Laziale**, fianco a fianco: a **sinistra** il **Lago di Nemi**, sul cui orlo si affaccia **Genzano**; a **destra** il più ampio **Lago Albano**, il lago più profondo del Lazio. Due crateri riempiti d'acqua, scavati da eruzioni di decine di migliaia di anni fa.
+I **due occhi del Vulcano Laziale**, fianco a fianco: a **sinistra** il **Lago di Nemi**, sul cui orlo si affaccia **Genzano**; a **destra** il più ampio **Lago Albano**, il lago più profondo del Lazio. Due crateri riempiti d'acqua, scavati da esplosioni vulcaniche avvenute tra circa 270.000 e 36.000 anni fa (Dipartimento della Protezione Civile).
 {{< /dossier-scena >}}
 
 {{< dossier-hotspot id="casa-dettaglio" image="/images/dossier/castelli-sat.webp" alt="Vista satellitare dall'alto dei Castelli Romani: a sinistra il Lago Albano e più in basso il piccolo Lago di Nemi, due laghi di cratere scuri circondati dal bosco del vulcano e dai paesi" titolo="Esplora i crateri dei Castelli" testo="Tocca i cinque punti per scoprire cosa stai guardando dall'alto. *(Immagine: Castelli Romani, dati Copernicus Sentinel-2 / ESA, CC BY.)*" >}}
-{{< dossier-punto x="28" y="50" titolo="Lago Albano" >}}Lo specchio d'acqua scuro a sinistra riempie il fondo di un **cratere vulcanico**: è il **Lago di Albano**, fino a **167 metri** di profondità, il più profondo del Lazio.{{< /dossier-punto >}}
+{{< dossier-punto x="28" y="50" titolo="Lago Albano" >}}Lo specchio d'acqua scuro a sinistra riempie il fondo di un **cratere vulcanico**: è il **Lago di Albano**, fino a **168 metri** di profondità, il più profondo del Lazio.{{< /dossier-punto >}}
 {{< dossier-punto x="40" y="74" titolo="Lago di Nemi" >}}Il lago più piccolo, in basso, è il **Lago di Nemi**. **Genzano di Roma** si affaccia proprio sull'orlo del suo cratere.{{< /dossier-punto >}}
 {{< dossier-punto x="54" y="30" titolo="L'orlo del cratere" >}}Il bordo rialzato e boscoso è il **recinto del vulcano**. Su questi versanti ripidi la pioggia scende veloce: è il **rischio idrogeologico** che teniamo d'occhio.{{< /dossier-punto >}}
 {{< dossier-punto x="62" y="54" titolo="Un vulcano che dorme" >}}La grande macchia verde è il **Vulcano Laziale**, un **vulcano quiescente**. L'ultima attività risale a **circa 36.000 anni fa** e l'**INGV** ne sorveglia terremoti e gas.{{< /dossier-punto >}}
@@ -82,7 +82,7 @@ I **due occhi del Vulcano Laziale**, fianco a fianco: a **sinistra** il **Lago d
 {{< /dossier-hotspot >}}
 
 {{< dossier-dati id="numeri-castelli" >}}
-{{< dossier-dato to="167" unita=" m" label="Profondità del **Lago di Albano**, il più profondo del Lazio" >}}
+{{< dossier-dato to="168" unita=" m" label="Profondità del **Lago di Albano**, il più profondo del Lazio" >}}
 {{< dossier-dato to="36" unita=" mila" label="Anni (circa) dall'ultima attività del **Vulcano Laziale**" >}}
 {{< dossier-dato to="2" label="I laghi nei crateri dei **Colli Albani**: Albano e Nemi" >}}
 {{< dossier-dato to="5" unita=" giorni" label="Ogni quanto i satelliti **rivedono** il nostro territorio" >}}
