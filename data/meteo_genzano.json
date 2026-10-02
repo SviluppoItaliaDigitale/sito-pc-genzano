@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-10-02T17:04",
+  "aggiornato": "2026-10-02T18:03",
   "data_lunga": "venerdì 2 ottobre 2026",
-  "aggiornato_label": "venerdì 2 ottobre 2026, ore 17:04",
+  "aggiornato_label": "venerdì 2 ottobre 2026, ore 18:03",
   "alba": "07:07",
   "tramonto": "18:49",
   "corrente": {
-    "temp": 22.6,
-    "percepita": 22.5,
+    "temp": 21.6,
+    "percepita": 22.9,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 58,
-    "vento": 9,
-    "raffiche": 27
+    "umidita": 72,
+    "vento": 6,
+    "raffiche": 23
   },
   "giorni": [
     {
@@ -22,7 +22,7 @@
       "tmin": 16,
       "pioggia": 0,
       "pioggia_mm": 0,
-      "raffiche": 30,
+      "raffiche": 29,
       "uv": 5,
       "uv_label": "moderato"
     },
@@ -31,8 +31,8 @@
       "icona": "<g><g><ellipse cx=\"16.0\" cy=\"19.1\" rx=\"14.5\" ry=\"7.0\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"9.7\" cy=\"16.0\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.9\" cy=\"14.7\" r=\"5.6\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"11.9\" r=\"6.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
       "cielo": "Coperto",
       "tmax": 24,
-      "tmin": 17,
-      "pioggia": 0,
+      "tmin": 18,
+      "pioggia": 3,
       "pioggia_mm": 0,
       "raffiche": 28,
       "uv": 5,
@@ -56,7 +56,7 @@
       "cielo": "Coperto",
       "tmax": 23,
       "tmin": 16,
-      "pioggia": 15,
+      "pioggia": 10,
       "pioggia_mm": 0,
       "raffiche": 31,
       "uv": 5,
