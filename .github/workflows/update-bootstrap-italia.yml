@@ -13,6 +13,18 @@
 #     request (branch bot/bootstrap-italia-<versione>) e il merge resta umano,
 #     come per le PR di Dependabot. Prima di aprirla il workflow fa una build
 #     Hugo di prova.
+#
+# Dal 02/10/2026: la ricerca della issue esistente per evitare duplicati
+# usa `in:title "$TITOLO"` (frase esatta tra virgolette), non più
+# `$TITOLO in:title` senza virgolette. Senza le virgolette la ricerca
+# GitHub tokenizza il titolo e trova come "già aperta" qualunque issue che
+# condivida le parole comuni ("Bootstrap Italia ... disponibile — richiede
+# migrazione manuale"), anche con un numero di versione diverso: la issue
+# #785 (v3.0.0-beta.4, 10/08/2026) è rimasta aperta e mai sostituita
+# mentre uscivano beta.5, beta.6 e beta.7 perché il workflow la trovava
+# come "duplicato" di ciascuna nuova beta e non ne apriva una nuova.
+# Convenzione già in uso in normativa-watcher.yml e
+# promemoria-export-interventi.yml.
 # ============================================================
 name: "🔄 Aggiorna Bootstrap Italia"
 
@@ -142,7 +154,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           TITOLO="⬆️ Bootstrap Italia v${{ steps.releases.outputs.stable }} disponibile — richiede migrazione manuale"
-          ESISTENTE=$(gh issue list --state open --search "$TITOLO in:title" --json number --jq '.[0].number' || echo "")
+          ESISTENTE=$(gh issue list --state open --search "in:title \"$TITOLO\"" --json number --jq '.[0].number' || echo "")
           if [ -n "$ESISTENTE" ] && [ "$ESISTENTE" != "null" ]; then
             echo "Issue #$ESISTENTE già aperta, nessun duplicato."
             exit 0
@@ -168,7 +180,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           TITOLO="⬆️ Bootstrap Italia v${{ steps.releases.outputs.overall }} disponibile — richiede migrazione manuale"
-          ESISTENTE=$(gh issue list --state open --search "$TITOLO in:title" --json number --jq '.[0].number' || echo "")
+          ESISTENTE=$(gh issue list --state open --search "in:title \"$TITOLO\"" --json number --jq '.[0].number' || echo "")
           if [ -n "$ESISTENTE" ] && [ "$ESISTENTE" != "null" ]; then
             echo "Issue #$ESISTENTE già aperta, nessun duplicato."
             exit 0
@@ -320,7 +332,7 @@ jobs:
           else
             MOTIVO="un passo dell'aggiornamento è fallito (vedi il log). Nessun commit è stato fatto."
           fi
-          ESISTENTE=$(gh issue list --state open --search "$TITOLO in:title" --json number --jq '.[0].number' || echo "")
+          ESISTENTE=$(gh issue list --state open --search "in:title \"$TITOLO\"" --json number --jq '.[0].number' || echo "")
           CORPO="L'aggiornamento automatico di Bootstrap Italia a v${{ steps.releases.outputs.stable }} (installata: v${{ steps.current.outputs.version }}) si è fermato: $MOTIVO
 
           Log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
