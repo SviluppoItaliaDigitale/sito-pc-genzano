@@ -180,7 +180,7 @@ I workflow di **sfondo committano soltanto** (niente più `gh workflow run deplo
 ## Key operational notes
 
 - **To activate emergency mode**: set `"attiva": true` in `data/emergenza.json` and fill `tipo`, `titolo`, `descrizione`. Reset to `false` when done.
-- **To set weather alert**: edit `data/allerta.json` — change `livello` to `verde/giallo/arancione/rosso`.
+- **To set weather alert**: edit `data/allerta.json` — change `livello` to `verde/giallo/arancione/rosso` **and, in the same edit, `titolo` and `descrizione`**. The homepage bar, `/emergenza/`, `/allerta-stato/index.json` and the CAP feed (`<headline>`, `<event>`) take the text from `titolo`, while colour and `<severity>` come from `livello`: changing `livello` alone publishes an orange bar and a CAP «Severe» alert that both read «NESSUNA ALLERTA» (verified in a local drill, internal audit 03/10/2026). Normally `check-allerta.py` writes the three fields together; the manual edit is for exceptional cases only.
 - **Draft posts**: set `draft: true` in front matter. They appear locally with `hugo server -D` but are not published. **Regola progetto**: niente articoli in `draft: true` — solo immediato (`date` passata) o calendarizzato (`date` futura).
 - **CI deploy**: pushing to `main` triggers `.github/workflows/deploy.yml` which builds twice (once per baseURL) and deploys via FTP to Aruba and via GitHub Pages API. Monitor at the Actions tab.
 - **FTP credentials** are stored as GitHub secrets (`FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`).
