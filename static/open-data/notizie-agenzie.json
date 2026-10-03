@@ -5,11 +5,41 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-02T22:06:59+00:00",
+  "generato": "2026-10-03T01:13:08+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-10-02T22:43:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Zhang Weiwei sorride e affonda l’Europa: “Leadership debole, dipendenza dagli Usa e paura irrazionale della Russia”",
+   "url": "https://www.adnkronos.com/internazionale/esteri/zhang-weiwei-sorride-e-affonda-leuropa-leadership-debole-dipendenza-dagli-usa-e-paura-irrazionale-della-russia_5KvedTfBBrqdiCxV1eUYp6"
+  },
+  {
+   "data": "2026-10-02T22:23:37+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Gp Malesia, oggi le qualifiche: orario e dove vederle (anche in chiaro)",
+   "url": "https://www.adnkronos.com/sport/gp-malesia-oggi-qualifiche-formula-1-orario-dove-vederle-tv-streaming_6gXRoj9xgDXamluYeLFthM"
+  },
+  {
+   "data": "2026-10-02T22:22:52+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Atp Tokyo, oggi Berrettini-Vallejo: orario, precedenti e dove vederla in tv",
+   "url": "https://www.adnkronos.com/sport/atp-tokyp-berrettini-vallejo_2iUSnvQZo5LyDnyr7bnWVs"
+  },
+  {
+   "data": "2026-10-02T22:16:31+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina-Russia, Putin non avanza più e perde terreno: l'analisi",
+   "url": "https://www.adnkronos.com/internazionale/esteri/guerra-ucraina-russia-putin-news-oggi-3-ottobre_2GFehCNc4eBHIaWdtJu64q"
+  },
+  {
+   "data": "2026-10-02T22:10:46+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "\"Meloni mi è sempre piaciuta, rapporto molto buono\": il messaggio a sorpresa di Trump",
+   "url": "https://www.adnkronos.com/internazionale/esteri/trump-meloni-ricuce-rapporto-usa-italia_1VdYeKDrjsuT3ymqCuTqCC"
+  },
   {
    "data": "2026-10-02T21:53:07+00:00",
    "fonte": "ANSA",
@@ -159,36 +189,6 @@
    "fonte": "ANSA",
    "titolo": "La fuga dei medici dagli ospedali, è boom di dimissioni",
    "url": "https://www.ansa.it/canale_saluteebenessere/notizie/sanita/2026/10/02/medici-nel-2025-aumentate-del-150-le-dimissioni.-superati-i-pensionamenti_8ea505cc-177c-4b4e-9d51-1b80d1073555.html"
-  },
-  {
-   "data": "2026-10-02T17:46:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Nations League, Francia-Italia 1-1: Bastoni risponde a Olise",
-   "url": "https://www.adnkronos.com/sport/italia-francia-nations-league-bastoni-olise_3ZlGT9l9MfxFCu7AX2zgKu"
-  },
-  {
-   "data": "2026-10-02T17:44:16+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Gasperini lancia la sfida all'Inter: \"C'è la sensazione di esserci avvicinati\"",
-   "url": "https://www.adnkronos.com/sport/gasperini-roma-inter-dybala-malen_1KRJMfRoBxlCTR67fUFGwG"
-  },
-  {
-   "data": "2026-10-02T17:38:30+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "La protesta nelle scuole, mobilitazione anche in Italia",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/02/la-protesta-nelle-scuole-mobilitazione-anche-in-italia_7e25b357-693c-4e86-a98b-c3ff94703f41.html"
-  },
-  {
-   "data": "2026-10-02T17:35:42+00:00",
-   "fonte": "ANSA",
-   "titolo": "Trump pronto all'escalation, una terza portaerei verso l'Iran",
-   "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/10/02/trump-pronto-allescalation-una-terza-portaerei-verso-liran-_4841915d-2326-4f25-90ac-eeb03cc56b4e.html"
-  },
-  {
-   "data": "2026-10-02T17:35:14+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Collettivi universitari, presidio per i cambi di residenza Edisu",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/02/collettivi-universitari-presidio-per-i-cambi-di-residenza-edisu_d2583074-db7a-4cdd-b3eb-607854f258c4.html"
   }
  ]
 }
