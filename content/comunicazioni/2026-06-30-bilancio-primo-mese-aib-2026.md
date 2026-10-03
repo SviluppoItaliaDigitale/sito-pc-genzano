@@ -27,7 +27,7 @@ Le statistiche definitive del mese arrivano tipicamente a inizio luglio, integra
 ## Cosa fa la Regione Lazio
 
 Durante la campagna la Regione attiva:
-- **Sala Operativa Unificata Permanente** (SOUP) h24 dal 15 giugno al 15 settembre.
+- **Sala Operativa Unificata Permanente** (SOUP) h24 dal 15 giugno al 30 settembre.
 - **Squadre a terra** permanenti nelle aree forestali.
 - **Elicotteri regionali** (tipicamente 2-3 nel Lazio centrale).
 - **Canadair** su chiamata (flotta nazionale coordinata dal DPC).

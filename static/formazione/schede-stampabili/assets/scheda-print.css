@@ -8,10 +8,10 @@
 :root {
   --scheda-blu: #003366;
   --scheda-oro: #b45309;
-  --scheda-verde: #198754;
-  --scheda-rosso: #dc3545;
+  --scheda-verde: #146c43; /* era #198754: 3,49:1 sul verde chiaro dei box docente (audit interno 03/10/2026) */
+  --scheda-rosso: #b02a37; /* era #dc3545: 4,23:1 sul rosa chiaro degli avvisi di sicurezza (audit interno 03/10/2026) */
   --scheda-giallo: #ffc107;
-  --scheda-grigio: #6c757d;
+  --scheda-grigio: #5a6169; /* era #6c757d: 4,36:1 sui fondi chiari delle schede, sotto AA (audit interno 03/10/2026) */
   --scheda-bordo: #adb5bd;
 }
 

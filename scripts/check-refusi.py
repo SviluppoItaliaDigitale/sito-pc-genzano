@@ -85,6 +85,7 @@ def strip_markdown(t):
 
 def strip_html(t):
     t = re.sub(r"(?is)<(script|style)[^>]*>.*?</\1>", " ", t)
+    t = re.sub(r"(?m)^(?:[A-Za-z0-9+/]{40,}={0,2}|[A-Za-z0-9+/]+={1,2})\s*$", " ", t)  # immagini in base64 (es. dentro <textarea>)
     t = re.sub(r"<[^>]+>", " ", t)
     t = html.unescape(t)
     t = re.sub(r"https?://\S+", " ", t)

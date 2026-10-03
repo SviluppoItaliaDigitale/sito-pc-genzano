@@ -33,7 +33,7 @@ Se hai un terreno, devi rispettare queste regole:
 
 - Taglia l'erba secca e i rovi.
 - Mantieni una fascia pulita vicino ai boschi e alle strade.
-- Dal 15 giugno al 30 settembre **non puoi bruciare** rami e sterpaglie.
+- Nel 2026, dal 17 giugno al 15 ottobre, **non puoi bruciare** rami e sterpaglie senza il permesso dei Carabinieri Forestali.
 - Taglia i rami di alberi pericolanti.
 
 Se non rispetti queste regole, puoi pagare una multa. Se dal tuo terreno parte un incendio, puoi rispondere dei danni.

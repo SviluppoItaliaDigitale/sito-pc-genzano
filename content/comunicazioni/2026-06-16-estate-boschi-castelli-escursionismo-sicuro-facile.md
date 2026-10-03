@@ -34,7 +34,7 @@ Fai queste cose prima di uscire:
 
 ## Regole nel bosco in estate
 
-Dal 1 giugno al 30 settembre c'è la campagna AIB (campagna per la prevenzione degli incendi boschivi). In questo periodo:
+Nel 2026, dal 17 giugno al 15 ottobre, c'è più pericolo di incendi nei boschi. Lo dice un'ordinanza del Sindaco. In questo periodo:
 
 - Non accendere fuochi nel bosco.
 - Non fumare nel bosco.
