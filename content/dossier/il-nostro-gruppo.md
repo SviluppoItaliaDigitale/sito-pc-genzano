@@ -31,7 +31,7 @@ sezioni:
 {{< dossier-scena id="storia" image="/images/storica-gruppo-volontari-anni-90.webp" alt="Foto storica: volontari del Gruppo in divisa azzurra davanti agli automezzi del Comune di Genzano, anni Novanta" align="left" kicker="Da dove veniamo" title="Oltre quarant'anni<br>di volontariato" credito="Foto d'archivio del Gruppo (anni Novanta)." >}}
 Il Gruppo nasce il **23 luglio 1981** come "Comitato di Protezione Civile e Sicurezza". Nel **1991** diventa **Gruppo Comunale di Protezione Civile** con delibera del Consiglio Comunale, durante l'amministrazione del sindaco Gino Cesaroni.
 
-Alla fine del **2023**, con la riforma del Terzo Settore, il Gruppo rinnova Statuto e Regolamento, istituisce Direttivo e Assemblea dei volontari e viene iscritto al **RUNTS** come Ente del Terzo Settore.
+Alla fine del **2023**, con la riforma del Terzo Settore, il Gruppo rinnova Statuto e Regolamento e istituisce Direttivo e Assemblea dei volontari. Il **28 ottobre 2024** viene iscritto al **RUNTS** come Ente del Terzo Settore.
 
 Negli anni i volontari hanno dato supporto in molte emergenze nazionali: dal terremoto di **Umbria-Marche (1997)** alla frana di **Sarno (1998)**, dal sisma dell'**Aquila (2009)** al **Centro Italia (2016)**, fino all'emergenza **COVID-19** e al **Giubileo dei Giovani (2025)**.
 {{< /dossier-scena >}}

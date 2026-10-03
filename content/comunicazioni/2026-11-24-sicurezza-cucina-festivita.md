@@ -121,7 +121,7 @@ In una cucina "sicura" dovrebbero esserci:
 4. **"stop-drop-roll"** è la sequenza standardizzata.
 
 ### Ustione
-1. **raffreddare** sotto acqua corrente fresca per 15-20 minuti;
+1. **raffreddare** sotto acqua corrente fresca per almeno 20 minuti;
 2. **non applicare** burro, olio, dentifricio, ghiaccio;
 3. **coprire** con garza sterile non aderente;
 4. **chiamare 112** se estesa, profonda, su viso/mani/genitali/piedi.

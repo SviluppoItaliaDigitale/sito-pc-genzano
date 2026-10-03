@@ -125,14 +125,14 @@ La PA1 è fondamentale per la rimozione di **rami pericolanti in alto**, l'acces
 
 ## 2023: la riforma del Terzo Settore e il nuovo governo interno
 
-Il **2023** porta una trasformazione non tecnica ma organizzativa, altrettanto importante. Con l'entrata in vigore del **Codice del Terzo Settore** (D.Lgs. 3 luglio 2017 n. 117) e l'iscrizione al RUNTS (Registro Unico Nazionale del Terzo Settore), il Gruppo aggiorna radicalmente il proprio assetto gestionale.
+Il **2023** porta una trasformazione non tecnica ma organizzativa, altrettanto importante. Per adeguarsi al **Codice del Terzo Settore** (D.Lgs. 3 luglio 2017 n. 117) e preparare l'iscrizione al RUNTS (Registro Unico Nazionale del Terzo Settore), il Gruppo aggiorna radicalmente il proprio assetto gestionale. L'iscrizione arriva il **28 ottobre 2024**, con determina n. G14230.
 
 Lo **Statuto** e il **Regolamento interno**, in vigore dagli anni Ottanta con piccoli aggiornamenti, vengono completamente riscritti. Nasce una struttura di governo bicefala:
 
 - un **Direttivo** eletto, responsabile della conduzione ordinaria e delle scelte operative
 - un'**Assemblea dei Volontari**, organo sovrano che approva bilanci, indirizzi e modifiche statutarie
 
-È la fine di un'epoca e l'inizio di un'altra. Il Gruppo, pur restando un'articolazione del Comune di Genzano di Roma, è anche — de facto — un Ente del Terzo Settore iscritto al RUNTS, con un assetto interno più strutturato (Statuto, Regolamento, Direttivo), al servizio del Sindaco ai fini della protezione civile.
+È la fine di un'epoca e l'inizio di un'altra. Il Gruppo, pur restando un'articolazione del Comune di Genzano di Roma, è anche, dall'ottobre 2024, un Ente del Terzo Settore iscritto al RUNTS, con un assetto interno più strutturato (Statuto, Regolamento, Direttivo), al servizio del Sindaco ai fini della protezione civile.
 
 ---
 

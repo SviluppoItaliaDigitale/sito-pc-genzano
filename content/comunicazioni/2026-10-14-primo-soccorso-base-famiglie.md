@@ -38,7 +38,7 @@ Prima di ogni azione:
 ## Ustioni
 
 ### Ustioni di I grado (arrossamento)
-- **raffreddare** con acqua corrente fresca (non gelata) per almeno 15-20 minuti;
+- **raffreddare** con acqua corrente fresca (non gelata) per almeno 20 minuti;
 - **coprire** con garza;
 - **non forare** eventuali vescichette;
 - **non applicare** creme, olio, dentifricio, burro (rimedi della nonna dannosi).

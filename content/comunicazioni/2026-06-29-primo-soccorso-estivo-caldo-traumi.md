@@ -94,7 +94,7 @@ Cosa fare:
 ## Ustioni
 
 ### Ustioni lievi (rossore, nessuna bolla)
-- **Acqua fresca corrente** per 10-15 minuti.
+- **Acqua fresca corrente** per almeno 20 minuti.
 - **Copri** con garza pulita non aderente.
 - **Non applicare** pomate, burro, oli, dentifricio.
 
