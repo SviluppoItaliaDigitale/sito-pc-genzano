@@ -149,8 +149,22 @@ def leggi_manifesto_locale(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def scarica_con_riprova(url: str, prove: int = 3, pausa: int = 5) -> tuple[int, bytes]:
+    """Come scarica(), ma ritenta quando non arriva nessuna risposta (status 0:
+    connessione azzerata, timeout). Un solo inciampo di rete su questi due file
+    faceva dichiarare il sito «non leggibile» senza aver guardato le pagine."""
+    st, corpo = 0, b""
+    for i in range(prove):
+        st, corpo = scarica(url)
+        if st != 0:
+            break
+        if i < prove - 1:
+            time.sleep(pausa)
+    return st, corpo
+
+
 def leggi_manifesto_live(base: str) -> tuple[dict | None, bytes]:
-    st, corpo = scarica(f"{base}/{MANIFESTO}")
+    st, corpo = scarica_con_riprova(f"{base}/{MANIFESTO}")
     if st != 200 or not corpo:
         return None, b""
     try:
@@ -161,7 +175,7 @@ def leggi_manifesto_live(base: str) -> tuple[dict | None, bytes]:
 
 def leggi_build_info(base: str) -> tuple[str, str]:
     """(sha, time) da /build-info.js, vuoti se illeggibile."""
-    st, corpo = scarica(f"{base}/{BUILD_INFO}")
+    st, corpo = scarica_con_riprova(f"{base}/{BUILD_INFO}")
     if st != 200:
         return "", ""
     testo = corpo.decode("utf-8", "replace")

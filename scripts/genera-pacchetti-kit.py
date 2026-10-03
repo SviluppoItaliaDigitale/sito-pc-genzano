@@ -43,6 +43,9 @@ KITS = {
 CONTENT_BASE = ROOT / "content" / "formazione"
 SCHEDE_BASE = ROOT / "static" / "formazione" / "schede-stampabili"
 OUTPUT_DIR = ROOT / "static" / "formazione" / "pacchetti"
+# Data scritta in ogni voce degli ZIP: fissa, perché lo stesso contenuto dia
+# sempre lo stesso archivio (vedi costruisci_pacchetto).
+ZIP_DATA_FISSA = (2026, 1, 1, 0, 0, 0)
 
 
 def estrai_titolo_kit(md_path: Path) -> str:
@@ -513,8 +516,16 @@ def costruisci_pacchetto(slug: str, md_filename: str) -> tuple[int, int, list[st
             with zipfile.ZipFile(zip_path, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as zf:
                 for path in sorted(tmp.rglob("*")):
                     if path.is_file():
-                        arcname = path.relative_to(tmp)
-                        zf.write(path, arcname)
+                        arcname = path.relative_to(tmp).as_posix()
+                        # Data fissa nelle voci dell'archivio: con zf.write()
+                        # ogni voce prendeva l'ora di copia nella cartella
+                        # temporanea, e due esecuzioni con lo stesso contenuto
+                        # davano ZIP diversi byte per byte (commit inutili del
+                        # workflow e file ricaricati su Aruba a ogni deploy).
+                        info = zipfile.ZipInfo(arcname, date_time=ZIP_DATA_FISSA)
+                        info.compress_type = zipfile.ZIP_DEFLATED
+                        info.external_attr = 0o644 << 16
+                        zf.writestr(info, path.read_bytes(), compresslevel=9)
             size_kb = zip_path.stat().st_size // 1024
             if not aggiorna_dimensione_dichiarata(md_path, zip_path.name, size_kb):
                 # il numero scritto nel kit coincide già con lo ZIP appena
