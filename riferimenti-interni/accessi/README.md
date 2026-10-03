@@ -17,40 +17,56 @@ Questa cartella non è deployata (vedi rule 04c).
 | Credenziale | Dove | Abilita | NON abilita |
 |---|---|---|---|
 | `IG_ACCESS_TOKEN` + `IG_USER_ID` | repo social | pubblicare post, caroselli e storie su Instagram; chiudere i commenti | **eliminare un contenuto** (serve `instagram_manage_contents`); modificare la didascalia di un post uscito (la piattaforma non lo consente a nessuno) |
-| `FB_PAGE_TOKEN` + `FB_PAGE_ID` | repo social | pubblicare sulla Pagina, riscrivere il testo di un post uscito, **eliminare un post** | cambiare le immagini di un post uscito (la piattaforma non lo consente) |
+| `FB_PAGE_TOKEN` + `FB_PAGE_ID` | repo social | sulla Pagina: pubblicare, riscrivere il testo di un post uscito, **eliminare un post**, commenti, messaggi Messenger, statistiche, impostazioni. Su Instagram (API con login Facebook): **eliminare contenuti**, commenti, messaggi diretti, statistiche | cambiare le immagini di un post uscito (la piattaforma non lo consente); gestire amministratori, persone e risorse del portfolio (manca `business_management`, di proposito); inserzioni |
 
-**`instagram_manage_contents` concesso il 24/09/2026**, insieme al nuovo token
-della Pagina (vedi sotto). Serve al workflow «🗑️ Elimina un contenuto
-pubblicato» del repo social; non è ancora stato provato su un contenuto reale.
+**Dal 03/10/2026 `FB_PAGE_TOKEN` viene dall'utente di sistema `sito-web`**
+(ID 61594965425134, Admin) del portfolio «Protezione Civile Genzano»: Pagina e
+account Instagram in accesso completo, app «PC Genzano Publisher»
+(`1120754493711097`) con ruolo «Sviluppa l'app». Non dipende più dal profilo
+personale di Alessandro.
+
+Permessi concessi: `pages_show_list`, `pages_read_engagement`,
+`pages_read_user_content`, `pages_manage_posts`, `pages_manage_engagement`,
+`pages_manage_metadata`, `pages_messaging`, `read_insights`,
+`instagram_basic`, `instagram_content_publish`, `instagram_manage_contents`,
+`instagram_manage_comments`, `instagram_manage_insights`,
+`instagram_manage_messages`.
+
+Esclusi di proposito: `business_management` (aggiungere o togliere
+amministratori, persone e risorse del portfolio resta solo ad Alessandro), i
+permessi pubblicitari (`ads_*`, `pages_manage_ads`) e quelli di negozio e
+contenuti sponsorizzati.
 
 ## Quando i token scadono e quando no
 
 - **Token Instagram** (`IG_ACCESS_TOKEN`): dura 60 giorni, ma il workflow
   «🔑 Rinnovo token social» lo rinnova da solo il 1 e il 16 di ogni mese.
-- **Token della Pagina** (`FB_PAGE_TOKEN`): ricavato da un token utente a lunga
-  durata, **non scade**. La data di scadenza che mostra il debugger di Meta (60
-  giorni) è quella del token utente intermedio, che dopo non serve più.
-- **Entrambi si invalidano** se cambia la password dell'account Facebook o se
-  Meta chiude le sessioni per sicurezza: errore `code 190` (sottocodice `460`
-  sulla Pagina). Nessun rinnovo automatico li recupera: vanno rigenerati a mano.
-  Successo il 23/09/2026, con tutta la pubblicazione ferma per una notte.
+  Serve a pubblicare; non è stato toccato il 03/10/2026.
+- **Token della Pagina** (`FB_PAGE_TOKEN`): token dell'utente di sistema con
+  scadenza «Mai», **non scade**. Non essendo legato a un profilo personale,
+  non si invalida se cambia la password dell'account Facebook di Alessandro
+  (era successo il 23/09/2026 con il vecchio token, con la pubblicazione ferma
+  per una notte). Si invalida solo se il token viene revocato o se sito-web
+  perde l'accesso alla Pagina o all'app.
 
-## Rigenerare i token a mano (procedura del 24/09/2026)
+## Rigenerare i token a mano
 
-1. **Chrome**: consentire i popup a `[*.]facebook.com` e `[*.]instagram.com`
-   (`chrome://settings/content/popups`). Senza, «Genera token» non fa nulla.
-2. **Instagram**: developers.facebook.com → app **PC Genzano Publisher**
-   (`1120754493711097`) → Instagram → *Configurazione dell'API con Business
-   Login per Instagram* → riga `protezionecivilegenzano` → **Genera token** →
-   accesso e consenso → segreto `IG_ACCESS_TOKEN` del repo social.
-3. **Pagina Facebook**: Graph API Explorer → app PC Genzano Publisher → *Token
-   utente* con `pages_show_list`, `pages_read_engagement`, `pages_manage_posts`
-   (più `instagram_basic`, `instagram_manage_contents`) → *Generate Access
-   Token* → icona «i» → *Apri in Strumento token d'accesso* → **Extend Access
-   Token** → incollare il token lungo nell'Explorer → `GET
-   239709112708894?fields=access_token` → il valore è il token della Pagina →
-   segreto `FB_PAGE_TOKEN`.
-4. **Verifica**: workflow «🔑 Rinnovo token social» con `solo_verifica=true`,
+1. **Pagina Facebook** (procedura del 03/10/2026): business.facebook.com →
+   portfolio «Protezione Civile Genzano» → Impostazioni → Utenti → **Utenti di
+   sistema** → sito-web → **Genera token** → app PC Genzano Publisher →
+   scadenza **Mai** → i permessi elencati sopra (senza `business_management`)
+   → Genera token → Copia. Poi si ricava il token della Pagina (vedi «Il token
+   della Pagina non si ottiene da /me/accounts») e si aggiorna il segreto
+   `FB_PAGE_TOKEN` del repo social. Il token non va mai incollato in chat né
+   nei file.
+2. **Instagram** (procedura del 24/09/2026): Chrome deve consentire i popup a
+   `[*.]facebook.com` e `[*.]instagram.com`
+   (`chrome://settings/content/popups`), altrimenti «Genera token» non fa
+   nulla. developers.facebook.com → app **PC Genzano Publisher** → Instagram →
+   *Configurazione dell'API con Business Login per Instagram* → riga
+   `protezionecivilegenzano` → **Genera token** → accesso e consenso → segreto
+   `IG_ACCESS_TOKEN` del repo social.
+3. **Verifica**: workflow «🔑 Rinnovo token social» con `solo_verifica=true`,
    poi un giro di «📣 Pubblicazione automatica social»: la coda riparte da sola.
 
 ## Pubblicazione del sito
@@ -115,9 +131,10 @@ lo è.
 ## Il token della Pagina non si ottiene da /me/accounts
 
 Su questo portafoglio business `GET /me/accounts` risponde con una lista
-**vuota**, pur avendo `pages_show_list` concesso. Il token della Pagina si
+**vuota**, pur avendo `pages_show_list` concesso (anche con il token
+dell'utente di sistema). Il token della Pagina si
 ricava invece chiedendolo alla Pagina per identificativo:
 
 ```bash
-curl -s "https://graph.facebook.com/v23.0/239709112708894?fields=access_token&access_token=TOKEN_UTENTE_LUNGA_DURATA"
+curl -s "https://graph.facebook.com/v23.0/239709112708894?fields=access_token&access_token=TOKEN_UTENTE_DI_SISTEMA"
 ```
