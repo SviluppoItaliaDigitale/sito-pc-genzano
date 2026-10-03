@@ -5,11 +5,131 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-03T01:13:08+00:00",
+  "generato": "2026-10-03T06:35:09+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-10-03T06:24:20+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Cocaina alla fragola al cocco e al melone, sequestro nel Varesotto",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/03/cocaina-alla-fragola-al-cocco-e-al-melone-sequestro-nel-varesotto_a3e92fad-cb58-4dcf-8590-fee41a046cf5.html"
+  },
+  {
+   "data": "2026-10-03T06:11:49+00:00",
+   "fonte": "ANSA",
+   "titolo": "Regole per bombe nel cellulare: arrestato anarchico, accusa di terrorismo",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/03/regole-per-bombe-nel-cellulare-arrestato-anarchico-accusa-di-terrorismo_40d7ce04-5f2c-48f3-bf87-140987574ae1.html"
+  },
+  {
+   "data": "2026-10-03T06:03:37+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Regole per bombe nel cellulare arrestato anarchico, l'accusa di terrorismo",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/03/regole-per-bombe-nel-cellulare-arrestato-anarchico-laccusa-di-terrorismo_6c0edaf6-8d90-49fd-a51f-6bebd7988423.html"
+  },
+  {
+   "data": "2026-10-03T06:00:14+00:00",
+   "fonte": "ANSA",
+   "titolo": "'Immagini di matrice terroristica sui social del sospettato della FlyDubai'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/03/immagini-di-matrice-terroristica-sui-social-del-sospettato-della-flydubai_0e2f2a0a-fbfc-4cb5-8f90-04940a2f6b4a.html"
+  },
+  {
+   "data": "2026-10-03T05:48:21+00:00",
+   "fonte": "ANSA",
+   "titolo": "Trump: 'Il mio rapporto con Meloni è molto buono, mi è sempre piaciuta'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/02/trump-il-mio-rapporto-con-meloni-e-molto-buono-mi-e-sempre-piaciuta_98704d8c-e929-4685-9c35-d7a125b978ff.html"
+  },
+  {
+   "data": "2026-10-03T05:46:28+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Carte d’identità elettroniche 'decapitate' del microchip: scoperti 3 casi in pochi giorni a Napoli",
+   "url": "https://www.adnkronos.com/cronaca/carta-identita-microchip-frode-napoli_1rAPHNR3K5L3QHWvogZ7MM"
+  },
+  {
+   "data": "2026-10-03T05:25:23+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Iran, la promessa di Trump: \"La guerra finirà dopo le elezioni di midterm\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/guerra-in-iran-3-ottobre-trump-ultime-notizie_21BBTQ17QFb1CO4zJhpmkI"
+  },
+  {
+   "data": "2026-10-03T05:20:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "MotoGp, Marquez vince la gara Sprint del Gp del Giappone davanti a Moreira e Martin",
+   "url": "https://www.adnkronos.com/sport/diretta-gara-sprint-motogp-gp-giappone-live_1L12zasg7MpbT053kaM0AI"
+  },
+  {
+   "data": "2026-10-03T04:51:21+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Verissimo, sabato 3 ottobre: gli ospiti e le anticipazioni di oggi",
+   "url": "https://www.adnkronos.com/spettacoli/verissimo-oggi-ospiti-interviste_7uGM1hpJZHog5xvAjZZ6r0"
+  },
+  {
+   "data": "2026-10-03T04:50:41+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "'Tu Si Que Vales', al via stasera sabato 3 ottobre: conduzione, cast e ritorno di Belen",
+   "url": "https://www.adnkronos.com/spettacoli/tu-si-que-vales-stasera-canale-5-ospiti-anticipazioni_4UzE0pyNoLJFkLkqr1CspI"
+  },
+  {
+   "data": "2026-10-03T04:50:09+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ciao Maschio, oggi parte la nuova stagione di Nunzia De Girolamo",
+   "url": "https://www.adnkronos.com/spettacoli/ciao-maschio-nunzia-de-girolamo-sabato-3-ottobre_1t89YFDtLooyx58zQ9W7iO"
+  },
+  {
+   "data": "2026-10-03T04:49:24+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "'Ballando con le stelle', al via da stasera: la nuova era dello show di Milly Carlucci",
+   "url": "https://www.adnkronos.com/spettacoli/ballando-con-le-stelle-stasera-cast-ballerini-milly-carlucci-rai-1_6yDO6T035xsn7MrTOyS0ug"
+  },
+  {
+   "data": "2026-10-03T04:48:07+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Centrosinistra, il messaggio di Schlein: \"Uno non vale uno\". Conte: \"Si va alle primarie\"",
+   "url": "https://www.adnkronos.com/politica/pd-m5s-schlein-conte-sfida-primarie-premier_27rDkt3vaQo4M80cQpB7rs"
+  },
+  {
+   "data": "2026-10-03T04:48:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Covid, torna a crescere il virus in Europa? L'esperto: \"Attenzione alla nuova PJ.2.1, è l'osservata speciale\"",
+   "url": "https://www.adnkronos.com/cronaca/covid-virus-francia-europa-esperto_8fW1Dw7aowAFsGv18kIzq"
+  },
+  {
+   "data": "2026-10-03T04:46:31+00:00",
+   "fonte": "ANSA",
+   "titolo": "La Russia colpisce un altro importante ponte di Kiev",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/03/la-russia-colpisce-un-altro-importante-ponte-di-kiev_56200a97-785e-4e6d-b43a-d0b4c6b6621e.html"
+  },
+  {
+   "data": "2026-10-03T03:12:31+00:00",
+   "fonte": "ANSA",
+   "titolo": "Trump ribadisce: 'Bonus da 5.000 dollari  se vinciamo le midterm ma da spendere negli Usa'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/03/trump-ribadisce-bonus-da-5.000-dollari-a-ogni-americano-se-vinciamo-le-midterm_b1656fa8-4946-4b7a-8f00-46066e12caf9.html"
+  },
+  {
+   "data": "2026-10-03T02:52:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "MotoGp, Martin si prende la pole in Giappone davanti a Marquez e Acosta",
+   "url": "https://www.adnkronos.com/sport/martin-pole-motogp-marquez-qualifiche-gp-giappone-griglia-partenza_5ZcSDn5juVIyAJDoZWnH98"
+  },
+  {
+   "data": "2026-10-03T02:47:07+00:00",
+   "fonte": "ANSA",
+   "titolo": "Musk interrompe 'bruscamente' la relazione con la madre di quattro dei suoi figli",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/03/musk-interrompe-bruscamente-la-relazione-con-la-madre-di-quattro-dei-suoi-figli_8794482e-823a-4909-8ab3-a76e3a058989.html"
+  },
+  {
+   "data": "2026-10-03T02:36:14+00:00",
+   "fonte": "ANSA",
+   "titolo": "Una donna è morta di peste in Siberia, 200 persone in quarantena",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/03/una-donna-e-morta-di-peste-in-siberia-200-persone-in-quarantena_6ec9fb81-4922-4d09-8ebf-068ebc5af8c7.html"
+  },
+  {
+   "data": "2026-10-03T02:32:50+00:00",
+   "fonte": "ANSA",
+   "titolo": "Raid israeliano su Gaza City, colpito un condominio, 5 morti",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/03/raid-israeliano-su-gaza-city-colpito-un-condominio-5-morti_3b16441c-7071-47dd-a55f-a8d98fb512c9.html"
+  },
   {
    "data": "2026-10-02T22:43:00+00:00",
    "fonte": "ADNKRONOS",
@@ -23,40 +143,10 @@
    "url": "https://www.adnkronos.com/sport/gp-malesia-oggi-qualifiche-formula-1-orario-dove-vederle-tv-streaming_6gXRoj9xgDXamluYeLFthM"
   },
   {
-   "data": "2026-10-02T22:22:52+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Atp Tokyo, oggi Berrettini-Vallejo: orario, precedenti e dove vederla in tv",
-   "url": "https://www.adnkronos.com/sport/atp-tokyp-berrettini-vallejo_2iUSnvQZo5LyDnyr7bnWVs"
-  },
-  {
-   "data": "2026-10-02T22:16:31+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Ucraina-Russia, Putin non avanza più e perde terreno: l'analisi",
-   "url": "https://www.adnkronos.com/internazionale/esteri/guerra-ucraina-russia-putin-news-oggi-3-ottobre_2GFehCNc4eBHIaWdtJu64q"
-  },
-  {
-   "data": "2026-10-02T22:10:46+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "\"Meloni mi è sempre piaciuta, rapporto molto buono\": il messaggio a sorpresa di Trump",
-   "url": "https://www.adnkronos.com/internazionale/esteri/trump-meloni-ricuce-rapporto-usa-italia_1VdYeKDrjsuT3ymqCuTqCC"
-  },
-  {
    "data": "2026-10-02T21:53:07+00:00",
    "fonte": "ANSA",
    "titolo": "Italia a testa alta, pari in tutto con la Francia in casa Zidane",
    "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/02/nations-league-francia-italia-1-1_45a99c29-160e-4f2c-a176-241c67b445f3.html"
-  },
-  {
-   "data": "2026-10-02T21:38:32+00:00",
-   "fonte": "ANSA",
-   "titolo": "Le indagini sul volo FlyDubai e il racconto del pilota-eroe",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/02/il-racconto-del-pilota-eroe-del-flydubai-ho-aperto-la-porta-della-cabina_b8a96915-bfb4-49aa-a346-3c7f9bfc4f44.html"
-  },
-  {
-   "data": "2026-10-02T21:15:41+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il G7 libera 100 milioni di barili dalle scorte per frenare i prezzi",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/02/il-g7-libera-100-milioni-di-barili-dalle-scorte-per-frenare-i-prezzi_315d7d2d-4de9-4357-82a5-5f44cb8fea40.html"
   },
   {
    "data": "2026-10-02T21:14:59+00:00",
@@ -65,40 +155,10 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/02/un-mese-dalle-midterm-lamerica-di-trump-a-un-bivio_f59a142d-5bd5-4912-90f7-77ed47dc233e.html"
   },
   {
-   "data": "2026-10-02T21:00:11+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Mancini promuove gli azzurri: \"Abbiamo difeso e attaccato da squadra\"",
-   "url": "https://www.adnkronos.com/sport/mancini-azzurri-italia-francia-nations-league_34gxVnoSuDHAvJeLnbZiAs"
-  },
-  {
-   "data": "2026-10-02T20:46:23+00:00",
-   "fonte": "ANSA",
-   "titolo": "La vita di Christa Pike appesa a un filo dopo l'esecuzione fallita",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/02/christa-pike-senza-conoscenza-e-attaccata-al-respiratore-artificiale_23620c72-3b86-4393-800d-27413950d0fb.html"
-  },
-  {
    "data": "2026-10-02T20:18:39+00:00",
    "fonte": "ANSA",
    "titolo": "Scostamento da 29 miliardi. Giorgetti: 'Più prudenza sulla manovra'",
    "url": "https://www.ansa.it/sito/notizie/economia/2026/10/02/via-libera-del-consiglio-dei-ministri-al-dpfp-e-a-scostamento-per-energia_8463ed4f-c10a-459f-8be8-a56ee2f0b01a.html"
-  },
-  {
-   "data": "2026-10-02T19:59:03+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Christa Pike sopravvive a due iniezioni letali, ma è in fin di vita: è incosciente, attaccata al respiratore con le braccia ustionate",
-   "url": "https://www.adnkronos.com/internazionale/esteri/christa-pike-iniezioni-letali-fallite-ricovero-ospedale_43UH2s8GsRqFeQHIT0LCZA"
-  },
-  {
-   "data": "2026-10-02T19:45:07+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Pino Daniele, la figlia Sofia gli dedica la tesi di laurea: \"Custode dei miei sogni\"",
-   "url": "https://www.adnkronos.com/spettacoli/pino-daniele-figlia-sara-laurea-tesi-dedica-papa_51VEVYGY1p4ZRNQUfBVOXa"
-  },
-  {
-   "data": "2026-10-02T19:35:07+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "SuperEnalotto, estrazione di oggi 2 ottobre 2026: numeri vincenti",
-   "url": "https://www.adnkronos.com/cronaca/superenalotto-estrazione-2-ottobre-quote-concorso_3O4PR3NJ1uitGU9LexXbw6"
   },
   {
    "data": "2026-10-02T19:19:40+00:00",
@@ -114,15 +174,9 @@
   },
   {
    "data": "2026-10-02T19:11:56+00:00",
-   "fonte": "ANSA",
+   "fonte": "ANSA CRONACA",
    "titolo": "Ancora interrogatori sul caso ricina, due donne in Questura",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/02/morte-avvelenate-due-donne-convocate-in-questura-per-essere-sentite_f871413f-25fa-4f42-ac10-33c01dbb1dd1.html"
-  },
-  {
-   "data": "2026-10-02T19:11:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Manovra, scostamento da 29 miliardi. Giorgetti: \"Serve un approccio più prudente\"",
-   "url": "https://www.adnkronos.com/economia/manovra-scostamento-giorgetti-dpfp_4l31UgN2Rk7qwQfkOUV4UI"
   },
   {
    "data": "2026-10-02T18:58:35+00:00",
@@ -135,60 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Elezioni ad alta tensione in Brasile, rissa tra Lula e Bolsonaro jr",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/02/elezioni-ad-alta-tensione-in-brasile-rissa-tra-lula-e-bolsonaro-jr_d39a4875-7216-4b08-9221-eb6d567f5033.html"
-  },
-  {
-   "data": "2026-10-02T18:35:43+00:00",
-   "fonte": "ANSA",
-   "titolo": "La protesta non si ferma, ancora scontri e violenze in Francia",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/02/la-protesta-non-si-ferma-ancora-scontri-e-violenze-in-francia_2e743a4c-5240-49ae-ba87-3f72889a05be.html"
-  },
-  {
-   "data": "2026-10-02T18:26:21+00:00",
-   "fonte": "ANSA",
-   "titolo": "Giuseppe Graviano in aula, 'mio nonno in società con il Cav'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/02/giuseppe-graviano-mio-nonno-fece-una-societa-con-berlusconi_fd295e4f-87bd-4e98-ba02-157182314b64.html"
-  },
-  {
-   "data": "2026-10-02T18:14:15+00:00",
-   "fonte": "ANSA",
-   "titolo": "'M - Il figlio del secolo' e 'Techegram', doppietta italiana al Prix Italia",
-   "url": "https://www.ansa.it/sito/notizie/cultura/cinema/2026/10/02/m-il-figlio-del-secolo-e-techegram-doppietta-italiana-al-prix-italia_24709ea6-9f47-4005-8a2f-9575699db006.html"
-  },
-  {
-   "data": "2026-10-02T18:11:37+00:00",
-   "fonte": "ANSA",
-   "titolo": "Andrea Sempio: 'Non ci sono le prove per mandarmi a processo'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/02/andrea-sempio-non-ci-sono-le-prove-per-mandarmi-a-processo_0819d433-49a8-4d9d-bccf-874286a446d2.html"
-  },
-  {
-   "data": "2026-10-02T18:10:05+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Attentato di Modena, El Koudri in aula di fronte alle vittime",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/02/attentato-di-modena-el-koudri-in-aula-di-fronte-alle-vittime_6f602111-4730-4e27-a5e4-84ea75b44dde.html"
-  },
-  {
-   "data": "2026-10-02T18:05:49+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Morte avvelenate, la procura 'nessuna scoperta su pc e ricina'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/02/morte-avvelenate-la-procura-nessuna-scoperta-su-pc-e-ricina_f8d75e0f-7b14-4535-a104-76b48549914c.html"
-  },
-  {
-   "data": "2026-10-02T17:56:58+00:00",
-   "fonte": "ANSA",
-   "titolo": "Vecchioni al Brancaccio: 'Statemi vicino, non canterò per mesi', poi su Ig: 'Non lascio'",
-   "url": "https://www.ansa.it/sito/notizie/cultura/musica/2026/10/02/vecchioni-al-brancaccio-statemi-vicino-non-cantero-per-mesi-poi-su-ig-non_b7830f57-eb7d-4908-9335-a80c2440092e.html"
-  },
-  {
-   "data": "2026-10-02T17:56:52+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Stop a internet, disagi sull'isola di Capri",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/02/stop-a-internet-disagi-sullisola-di-capri_b1a3643a-0e99-4787-a3b4-a28121c3ce73.html"
-  },
-  {
-   "data": "2026-10-02T17:48:28+00:00",
-   "fonte": "ANSA",
-   "titolo": "La fuga dei medici dagli ospedali, è boom di dimissioni",
-   "url": "https://www.ansa.it/canale_saluteebenessere/notizie/sanita/2026/10/02/medici-nel-2025-aumentate-del-150-le-dimissioni.-superati-i-pensionamenti_8ea505cc-177c-4b4e-9d51-1b80d1073555.html"
   }
  ]
 }
