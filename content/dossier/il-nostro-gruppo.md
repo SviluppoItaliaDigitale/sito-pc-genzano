@@ -3,7 +3,7 @@ title: "Il nostro Gruppo"
 date: 2026-07-03
 type: "dossier"
 tema: "gruppo"
-description: "Chi siamo, la nostra storia, i campi di intervento e i mezzi del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Al servizio della comunità dal 1981."
+description: "Chi siamo, la nostra storia, i campi di intervento e i mezzi del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma, al servizio dal 1981."
 image: "/images/storica-gruppo-volontari-anni-90.webp"
 image_alt: "Volontari del Gruppo Comunale di Protezione Civile di Genzano di Roma in divisa, schierati davanti agli automezzi di servizio"
 autore: "Gruppo Comunale Volontari PC Genzano"
