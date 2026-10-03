@@ -28,7 +28,7 @@ I boschi dei **Colli Albani** sono un patrimonio naturalistico tra i più apprez
 
 ## Regole in periodo AIB
 
-Nella campagna antincendio (1 giugno - 30 settembre) nei boschi:
+Durante il periodo di grave pericolosità per gli incendi (a Genzano, nel 2026, [dal 17 giugno al 15 ottobre](/comunicazioni/2026-06-18-ordinanza-sindacale-incendi-boschivi-2026/)) nei boschi:
 - **Non accendere fuochi** in nessun caso.
 - **Non fumare** nelle aree boschive.
 - **Non abbandonare rifiuti**, nemmeno organici.

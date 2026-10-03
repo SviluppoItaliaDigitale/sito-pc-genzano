@@ -62,7 +62,7 @@ Il responsabile del Centro Operativo Sorveglianza Ambientale di ISPRA, **Roberto
 
 ## Perché riguarda anche i Castelli Romani
 
-Genzano di Roma rientra nella **Zona di allerta AIB 9 — Castelli Romani**. Il periodo di massimo rischio di incendio boschivo nel Lazio va dal **15 giugno al 30 settembre**: in quei mesi tutto il territorio regionale è considerato area a rischio. La prevenzione di cui parla ISPRA passa anche dai gesti quotidiani di ciascuno:
+Genzano di Roma rientra nella **Zona di allerta AIB 9 — Castelli Romani**. Nel 2026 l'ordinanza del Sindaco dichiara a Genzano lo **stato di grave pericolosità** per gli incendi boschivi [dal 17 giugno al 15 ottobre](/comunicazioni/2026-06-18-ordinanza-sindacale-incendi-boschivi-2026/). La prevenzione di cui parla ISPRA passa anche dai gesti quotidiani di ciascuno:
 
 - non bruciare sterpaglie nelle giornate calde e ventose;
 - non gettare mozziconi;

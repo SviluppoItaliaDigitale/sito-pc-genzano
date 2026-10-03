@@ -53,7 +53,7 @@ Abbiamo dedicato un articolo al [triangolo del fuoco](/comunicazioni/2026-04-13-
 
 ## I comportamenti vietati in periodo AIB
 
-Ricordiamo gli obblighi in vigore dal 1 giugno al 30 settembre nei boschi del Lazio:
+Ricordiamo gli obblighi in vigore a Genzano nel periodo di grave pericolosità, che nel 2026 va [dal 17 giugno al 15 ottobre](/comunicazioni/2026-06-18-ordinanza-sindacale-incendi-boschivi-2026/):
 
 - **Vietato** accendere fuochi all'aperto.
 - **Vietato** bruciare stoppie, sterpaglie, residui di potatura.

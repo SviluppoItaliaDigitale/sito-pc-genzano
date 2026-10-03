@@ -17,7 +17,7 @@ social_citazione: "È la scena che si ripete ogni estate: sfalci e potature lasc
 social_punti:
   - "Martedì 8 settembre 2026, in serata, primo incendio di sterpaglie nella zona della Falcognana: Atego e Defender attivati dalla Sala Operativa regionale."
   - "Mercoledì 9 settembre tre uscite di seguito: via delle Noci ad Albano Laziale, di nuovo la Falcognana con canneto e sterpi spinti dal vento, poi la zona industriale di Genzano."
-  - "Ad Albano il fuoco è partito da sfalci e potature bruciati: fino al 30 settembre accendere fuochi è vietato."
+  - "Ad Albano il fuoco è partito da sfalci e potature bruciati: fino al 15 ottobre accendere fuochi è vietato."
   - "Se vedi fumo o fiamme chiama il 112, non provare a spegnere da solo."
 ---
 
@@ -41,7 +41,7 @@ Con queste quattro attivazioni gli interventi registrati dal 4 aprile salgono a 
 
 ## Bruciare gli sfalci non è "un fuocherello"
 
-Due dei quattro incendi di questi giorni partono da fuochi accesi in terreni privati. Fino al **30 settembre** il Lazio è nel **periodo di massima pericolosità** per gli incendi boschivi dichiarato dalla Regione. In queste settimane bruciare residui vegetali è vietato: con l'erba secca e un filo di vento, una fiamma "controllata" diventa un incendio in pochi secondi. La regola vale per chiunque, in ogni terreno: chi appicca un fuoco, anche solo per bruciare sfalci, può essere chiamato a risponderne.
+Due dei quattro incendi di questi giorni partono da fuochi accesi in terreni privati. Fino al **15 ottobre** resta in vigore lo **stato di grave pericolosità** per gli incendi boschivi: a Genzano lo dichiara l'[ordinanza del Sindaco n. 14](/comunicazioni/2026-06-18-ordinanza-sindacale-incendi-boschivi-2026/), in linea con il Piano regionale antincendio. In queste settimane bruciare residui vegetali è vietato: con l'erba secca e un filo di vento, una fiamma "controllata" diventa un incendio in pochi secondi. La regola vale per chiunque, in ogni terreno: chi appicca un fuoco, anche solo per bruciare sfalci, può essere chiamato a risponderne.
 
 ## Cosa puoi fare tu
 

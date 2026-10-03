@@ -28,7 +28,7 @@ Entrambe coesistono; nella comunicazione ufficiale si usano a seconda del contes
 Il rischio da temperature estreme si **riduce progressivamente** ma non scompare: settembre può ancora portare giornate molto calde, anche sopra i 30°C. La fine di agosto segna la fine del periodo più critico, non la fine del rischio.
 
 ### Rischio incendi boschivi
-Il **periodo di massima pericolosità** (DPGR Lazio) si chiude spesso a fine settembre, ma l'attenzione resta alta **tutto l'autunno**, soprattutto nelle giornate ventose e asciutte.
+Il **periodo di grave pericolosità** non finisce con l'estate: nel 2026 a Genzano resta in vigore [fino al 15 ottobre](/comunicazioni/2026-06-18-ordinanza-sindacale-incendi-boschivi-2026/), e l'attenzione resta alta **tutto l'autunno**, soprattutto nelle giornate ventose e asciutte.
 
 ### Rischio idrogeologico
 Le **prime piogge autunnali** su terreno secco sono spesso le più pericolose: la pioggia scorre in superficie invece di essere assorbita, causando **alluvioni lampo** (*flash flood*) e **allagamenti urbani**. Primi segnali tipici:
