@@ -1,7 +1,7 @@
 ---
 title: "Genova, 7 ottobre 1970: l'alluvione storica più grave del Novecento ligure"
 date: 2026-10-07T00:02:00+02:00
-description: "Tra il 7 e l'8 ottobre 1970 una bomba d'acqua eccezionale colpì Genova: il rio Bisagno esondò, uccidendo 44 persone."
+description: "Tra il 7 e l'8 ottobre 1970 piogge eccezionali colpirono Genova: esondarono Bisagno, Fereggiano e Leira. 35 morti e 8 dispersi."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -13,9 +13,9 @@ allegati: []
 draft: false
 ---
 
-Tra il **7 e l'8 ottobre 1970** una pioggia di intensità eccezionale si abbatté sulla Liguria centrale. A Genova furono registrati **oltre 900 millimetri di pioggia in 24 ore** in alcune stazioni del bacino del Bisagno — più di quanto cade normalmente in mezzo anno. Il **torrente Bisagno**, che attraversa Genova in gran parte tombato sotto la città, esondò violentemente.
+Tra il **7 e l'8 ottobre 1970** una pioggia di intensità eccezionale si abbatté sulla Liguria centrale. A **Bolzaneto**, in Val Polcevera, una stazione amatoriale registrò **fino a 948 millimetri di pioggia** tra la sera del 7 e il pomeriggio dell'8 ottobre. Esondarono il **Leira** a Voltri, poi il **Bisagno** e il **Fereggiano**; andarono in piena anche Sturla e Polcevera. Il **torrente Bisagno**, che attraversa Genova in gran parte tombato sotto la città, fu quello che fece più danni.
 
-Bilancio: **44 morti** in città, **22 dispersi**, **2.000 senzatetto**, **8.000 vittime indirette di danni** secondo i registri comunali dell'epoca. È stata la **più grave alluvione del Novecento ligure**.
+Bilancio secondo il CNR-IRPI: **35 morti**, **8 dispersi** e **oltre 2.000 sfollati**. Solo a Voltri l'esondazione del Leira costò 13 vittime. È una delle **alluvioni più gravi del Novecento ligure**.
 
 ## Una città pianificata sul rischio
 
@@ -23,10 +23,10 @@ Genova è città di torrenti e versanti scoscesi. La sua urbanizzazione storica 
 
 {{< foto src="/images/2026-10-07-genova-1970-alluvione-storica-piu-grave-fonte-wikipedia.webp"
          alt="Foto a colori del ponte di Sant'Agata a Genova, un antico ponte in pietra a più arcate sul greto asciutto di un torrente, con edifici color pastello e alberi sullo sfondo"
-         caption="Il ponte di Sant'Agata a Genova, sul percorso di uno dei torrenti che nella notte del 7 ottobre 1970 esondarono devastando la città: 44 morti, la più grave alluvione del Novecento ligure. Foto: (non specificato) — CC BY 2.5 — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Ponte_di_Sant%27Agata_5.jpg)." >}}
+         caption="Il ponte di Sant'Agata a Genova, sul percorso di uno dei torrenti che nella notte del 7 ottobre 1970 esondarono devastando la città: 35 morti e 8 dispersi. Foto: (non specificato) — CC BY 2.5 — via Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Ponte_di_Sant%27Agata_5.jpg)." >}}
 
 
-- Il **Bisagno**, principale torrente della città, si gonfiò di acqua e detriti dai versanti deforestati a monte
+- Il **Bisagno**, principale torrente della città, si gonfiò di acqua e detriti scesi dai versanti
 - Le **tombinature** non riuscirono a smaltire la portata, l'acqua esplose dalle griglie stradali
 - I **piani interrati** di edifici residenziali furono sommersi in pochi minuti, con vittime intrappolate
 - L'**area di Brignole** e i quartieri della valle del Bisagno furono i più colpiti
@@ -37,7 +37,7 @@ L'alluvione del 1970 e quella del **4 novembre 2011** (vedi [articolo](/comunica
 
 {{< foto src="/images/2026-10-07-genova-1970-alluvione-storica-piu-grave-bisagno-fiume.webp"
          alt="Il torrente Bisagno a Genova"
-         caption="Il torrente Bisagno attraversa Genova in gran parte tombato sotto la città. La sua esondazione del 1970 fece 44 morti e segnò la storia urbanistica genovese. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Torrente_Bisagno_Genova_01.jpg)." >}}
+         caption="Il torrente Bisagno attraversa Genova in gran parte tombato sotto la città. La sua esondazione del 1970 fu la più distruttiva di quella notte e segnò la storia urbanistica genovese. Foto: Wikimedia Commons. [Fonte originale](https://commons.wikimedia.org/wiki/File:Torrente_Bisagno_Genova_01.jpg)." >}}
 
 
 **Cosa è cambiato (in meglio):**
@@ -77,4 +77,5 @@ Genzano non ha la specificità geografica di Genova (versanti scoscesi al mare, 
 
 - [Memoria dell'alluvione di Genova 1970 — Comune di Genova](https://www.comune.genova.it/)
 - [PAI — Autorità di Bacino Distrettuale dell'Appennino Settentrionale](http://www.adbarno.it/adb/)
+- [Genova e i suoi torrenti: una lunga storia di alluvioni, danni e vittime — CNR-IRPI, Polaris](https://polaris.irpi.cnr.it/genova-e-i-suoi-torrenti-una-lunga-storia-di-alluvioni-danni-e-vittime/)
 - Voce Wikipedia: [Alluvione di Genova del 7 ottobre 1970](https://it.wikipedia.org/wiki/Alluvione_di_Genova_del_7_ottobre_1970)

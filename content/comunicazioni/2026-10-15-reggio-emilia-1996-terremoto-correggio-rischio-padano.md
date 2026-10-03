@@ -1,7 +1,7 @@
 ---
 title: "Reggio Emilia, 15 ottobre 1996: il terremoto che ha riportato la Pianura Padana sulla mappa sismica"
 date: 2026-10-15
-description: "Magnitudo 4.9 a Correggio (Reggio Emilia, 1996): un campanello d'allarme sulla sismicità della Pianura Padana, sottovalutata fino al 2012."
+description: "Magnitudo 5.4 tra Correggio e Bagnolo in Piano (Reggio Emilia, 1996): un campanello d'allarme sulla sismicità della Pianura Padana, sottovalutata fino al 2012."
 badge: "Informazione"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -13,7 +13,7 @@ allegati: []
 draft: false
 ---
 
-Alle **11:56 del 15 ottobre 1996** una scossa di **magnitudo 4.9** colpì la pianura tra **Correggio**, **Carpi** e **Reggio Emilia**. Profondità ipocentrale **27 chilometri**. Nessun morto, alcuni feriti lievi, **circa 100 edifici** dichiarati inagibili (soprattutto chiese e edifici storici).
+Alle **11:56 del 15 ottobre 1996** una scossa di **magnitudo 5.4** colpì la pianura tra **Correggio**, **Bagnolo in Piano** e **Reggio Emilia**. È il valore di magnitudo momento del catalogo CPTI15 dell'INGV, che le attribuisce un'**intensità epicentrale del VII grado** della scala Mercalli-Cancani-Sieberg (MCS): danni diffusi, soprattutto agli edifici più vecchi e vulnerabili. Le osservazioni macrosismiche raccolte dall'INGV riguardano 135 località.
 
 Per i parametri di magnitudo, fu un evento **di rilievo medio** nella scala dei terremoti italiani. Per la **Pianura Padana**, fu un campanello d'allarme: ricordò che **anche la pianura è zona sismica**, contro la percezione diffusa di "tranquillità sismica" che caratterizzava la valle del Po.
 
@@ -21,11 +21,11 @@ Per i parametri di magnitudo, fu un evento **di rilievo medio** nella scala dei 
 
 Fino agli anni Novanta, la Pianura Padana era considerata una **zona sismicamente tranquilla**. Le mappe di pericolosità del territorio italiano la classificavano in fascia bassa o non classificavano affatto. Le **norme antisismiche** non erano applicate alla maggior parte del costruito padano.
 
-Il terremoto del 1996 ricordò che esiste una **fascia sismica padana** legata alle pieghe sepolte dell'Appennino settentrionale (il cosiddetto **fronte appenninico sepolto**). I dati storici lo confermavano (terremoti del 1547, 1671, 1796, 1810 nella stessa zona), ma la **memoria collettiva** li aveva dimenticati.
+Il terremoto del 1996 ricordò che esiste una **fascia sismica padana** legata alle pieghe sepolte dell'Appennino settentrionale (il cosiddetto **fronte appenninico sepolto**). I dati storici lo confermavano (terremoti del 1547, del 1671 e del 1810 fra Reggiano e Modenese, tutti registrati nel catalogo CPTI15), ma la **memoria collettiva** li aveva dimenticati.
 
 ## La conferma del 2012
 
-**16 anni dopo**, il **20 maggio 2012**, una scossa di **magnitudo 6.1** colpì la pianura emiliana esattamente nella stessa zona del 1996. Vedi [articolo](/comunicazioni/2026-05-20-terremoto-emilia-2012-memoria-resilienza/).
+**16 anni dopo**, il **20 maggio 2012**, una scossa di **magnitudo 6.1** (magnitudo momento del catalogo CPTI15; il bollettino sismico INGV riporta 5.8) colpì la stessa fascia della pianura emiliana, una quarantina di chilometri più a est, presso Finale Emilia. Vedi [articolo](/comunicazioni/2026-05-20-terremoto-emilia-2012-memoria-resilienza/).
 
 {{< foto src="/images/2026-evento-emilia-2012-mirandola.webp"
          alt="ShakeMap INGV del terremoto dell'Emilia del 20 maggio 2012, magnitudo 5.8 a 7 km nord-ovest di Finale Emilia"
@@ -69,4 +69,4 @@ Il caso emiliano è importante per noi perché dimostra che **la classificazione
 
 - [INGV — Catalogo Sismico Italiano](https://terremoti.ingv.it/)
 - [Sismabonus — Agenzia delle Entrate](https://www.agenziaentrate.gov.it/portale/web/guest/agevolazioni-sisma)
-- Voce Wikipedia: [Terremoto di Reggio Emilia del 1996](https://it.wikipedia.org/wiki/Terremoto_di_Reggio_Emilia_del_1996)
+- [CPTI15 e DBMI15 v4.0 — Catalogo parametrico e database macrosismico dei terremoti italiani, INGV](https://emidius.mi.ingv.it/CPTI15-DBMI15/)

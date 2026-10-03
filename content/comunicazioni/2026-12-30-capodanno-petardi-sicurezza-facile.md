@@ -86,7 +86,7 @@ Se il tuo cane o gatto scappa per paura, chiama subito il canile municipale. Con
 
 ## Se qualcuno si fa male
 
-**Ustione da petardo**: metti subito acqua fresca per 10-15 minuti. Non usare olio o dentifricio. Copri con una garza pulita.
+**Ustione da petardo**: metti subito acqua fresca per almeno 20 minuti. Non usare olio o dentifricio. Copri con una garza pulita.
 
 **Mano o dito colpiti dall'esplosione**: non togliere nulla dalla ferita. Premi con un panno pulito. Chiama il 112, il numero unico di emergenza.
 

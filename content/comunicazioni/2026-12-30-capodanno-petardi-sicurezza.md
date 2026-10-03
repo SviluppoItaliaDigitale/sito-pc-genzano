@@ -182,7 +182,7 @@ Se il tuo cane/gatto **scappa** per paura:
 
 ### Primo soccorso
 **Ustione da petardo**:
-- **acqua** fresca (non ghiacciata) per 10-15 min;
+- **acqua** fresca (non ghiacciata) per almeno 20 minuti;
 - **no** olio, dentifricio, rimedi casalinghi;
 - **coprire** con garza sterile o panno pulito;
 - **no** bucare eventuali bolle.

@@ -83,7 +83,7 @@ Puoi fare fare ai bambini cose sicure. Per esempio: apparecchiare la tavola o me
 
 ### Ustione
 
-1. Metti la parte bruciata sotto acqua fredda corrente per 15 minuti.
+1. Metti la parte bruciata sotto acqua fresca corrente per 20 minuti.
 2. Non mettere burro né olio né ghiaccio.
 3. Copri con una garza pulita.
 4. Chiama il 112 se l'ustione è grande o profonda.

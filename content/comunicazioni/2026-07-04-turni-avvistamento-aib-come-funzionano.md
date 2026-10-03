@@ -53,7 +53,7 @@ Il sistema umano e quello tecnologico si **integrano**.
 ## Chi coordina nel Lazio
 
 La Regione Lazio coordina attraverso:
-- **Sala Operativa Unificata Permanente (SOUP)** — attiva dal 15 giugno al 15 settembre h24.
+- **Sala Operativa Unificata Permanente (SOUP)** — attiva dal 15 giugno al 30 settembre h24.
 - **Centri Operativi Misti (COM)** territoriali.
 - **Comuni** attraverso i Centri Operativi Comunali (COC) se attivati.
 - **Associazioni e Gruppi** di volontariato aderenti al sistema regionale.
