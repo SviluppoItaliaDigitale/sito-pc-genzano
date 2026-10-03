@@ -209,3 +209,41 @@ dati:
         perche: "L'epicentro calcolato dal CFTI5Med e dal CPTI15 è nei Colli Albani (circa 41,72 N, 12,73 E), senza una collocazione «fra Rocca di Papa e Genzano»."
         contesto: '1806'
         finestra: 250
+
+  - id: aib-2026-grave-pericolosita
+    dato: "Periodo di grave pericolosità per gli incendi boschivi a Genzano nel 2026"
+    valore: "dal 17 giugno al 15 ottobre 2026 (Ordinanza sindacale n. 14 del 17/06/2026); campagna antincendio boschivo dal 15 giugno al 15 ottobre 2026. La configurazione SOUP della Sala Operativa Regionale (15 giugno–30 settembre di ogni anno) è un'altra cosa e non segna la fine dei divieti"
+    fonti:
+      - nome: "Comune di Genzano di Roma, Ordinanza sindacale n. 14 del 17 giugno 2026"
+        url: "https://www.protezionecivilegenzano.it/area-download/normativa/Ordinanza_Sindacale_AIB_2026.pdf"
+      - nome: "Regione Lazio, «Sala Operativa Regionale» (configurazione SOR/SOUP)"
+        url: "https://www.regione.lazio.it/protezione-civile/sala-operativa-regionale"
+    # Gli articoli del 2025 raccontano la campagna di quell'anno.
+    escludi:
+      - "content/comunicazioni/2025-*"
+    vietati:
+      - regex: '(?:\bal|\bfino\s+al|\bentro\s+il|[-–])\s*30\s+settembre'
+        perche: "Nel 2026 lo stato di grave pericolosità e i divieti valgono fino al 15 ottobre: il 30 settembre chiude solo la configurazione SOUP della sala regionale."
+        contesto: 'incendi|AIB|abbruc|bruciar|fuochi|pericolosit'
+        stessa_frase: true
+        salvo_se_frase: 'SOUP|Sala Operativa|configurazione'
+      - regex: '\b1\s*(?:°\s*)?giugno\s*(?:al|[-–])\s*30\s+settembre'
+        perche: "Nessuna fonte fissa al 1° giugno l'inizio del periodo AIB nel Lazio: la campagna 2026 parte il 15 giugno, l'ordinanza di Genzano il 17 giugno."
+        contesto: 'incendi|AIB|boschi|fuochi'
+        finestra: 200
+
+  - id: ustione-raffreddamento
+    dato: "Quanto raffreddare un'ustione termica con acqua"
+    valore: "acqua corrente fresca, non gelata, per almeno 20 minuti"
+    fonti:
+      - nome: "Pagina canonica del sito «Emorragie, ustioni e traumi» (/formazione/primo-soccorso/emorragie-ustioni-traumi/), basata sulle Linee guida IRC"
+        url: "https://www.protezionecivilegenzano.it/formazione/primo-soccorso/emorragie-ustioni-traumi/"
+      - nome: "Ospedale Pediatrico Bambino Gesù, «Bambini e incidenti: cosa fare nei primi 5 minuti»"
+        url: "https://www.ospedalebambinogesu.it/bambini-e-incidenti-cosa-fare-nei-primi-5-minuti-109751/"
+    vietati:
+      - regex: '\b(?:1|5|10|15)(?:\s*[-–]\s*(?:15|20))?\s*min(?:uti)?\b'
+        perche: "Le schede e la pagina canonica indicano almeno 20 minuti di acqua corrente fresca sull'ustione."
+        contesto: '[Uu]stion|[Ss]cottat|parte bruciata'
+        stessa_frase: true
+        salvo_se_frase: 'chimic|attendi|aspetta|riavvicin|dura|minuti di cammino|occhi'
+        salvo_se_prima: '(?:primi|non tocco)\s*$'

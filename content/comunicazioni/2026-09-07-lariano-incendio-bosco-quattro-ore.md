@@ -38,7 +38,7 @@ Con questo intervento, il totale registrato dal 4 aprile sale a **142**: oltre *
 ## Cosa puoi fare tu
 
 - **Chiama il 112** appena vedi fumo o fiamme, anche in aperta campagna e anche se il fuoco ti sembra lontano.
-- **Non accendere fuochi** per residui di potatura o sterpaglie: fino al 30 settembre siamo nel periodo di massima pericolosità dichiarato dalla Regione Lazio.
+- **Non accendere fuochi** per residui di potatura o sterpaglie: fino al 15 ottobre resta in vigore lo stato di grave pericolosità dichiarato dall'[ordinanza del Sindaco](/comunicazioni/2026-06-18-ordinanza-sindacale-incendi-boschivi-2026/).
 - **Se hai un terreno confinante con un bosco**, tieni pulita la fascia di rispetto: erba tagliata, ramaglie rimosse.
 - **Se hai animali**, prepara in anticipo un modo per spostarli o aprire i recinti in sicurezza.
 - **Non avvicinarti** all'area dell'incendio per curiosità: intralci i mezzi e ti esponi al fumo.

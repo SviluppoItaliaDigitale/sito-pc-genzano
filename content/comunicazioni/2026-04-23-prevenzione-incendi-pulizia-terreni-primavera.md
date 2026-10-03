@@ -36,7 +36,7 @@ Gli obblighi principali per i proprietari di terreni sono:
 
 1. **Pulizia dei fondi incolti** da erba secca, rovi, sterpi e rifiuti vegetali.
 2. **Mantenimento di fasce di rispetto** lungo strade, ferrovie, linee elettriche e confini con aree boscate.
-3. **Divieto di abbruciamento** di residui vegetali nei periodi ad alto rischio (in genere dal 15 giugno al 30 settembre).
+3. **Divieto di abbruciamento** di residui vegetali nel periodo di grave pericolosità, che il Sindaco dichiara ogni anno con un'ordinanza (nel 2026 [dal 17 giugno al 15 ottobre](/comunicazioni/2026-06-18-ordinanza-sindacale-incendi-boschivi-2026/)). In quel periodo si brucia solo con l'autorizzazione del Comando Carabinieri Forestale.
 4. **Cura di alberi pericolanti** che potrebbero cadere o propagare fiamme.
 
 Chi non rispetta queste regole può essere sanzionato e, in caso di incendio partito dal proprio terreno, può rispondere dei danni causati.

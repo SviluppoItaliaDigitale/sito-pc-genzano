@@ -16,7 +16,7 @@ lis_section: "gestione-emergenza"
 social_citazione: "Quando un nostro mezzo esce per un incendio, la chiamata è partita quasi sempre da qui: la Sala Operativa Regionale."
 social_punti:
   - "L'803 555 è il numero verde della Sala Operativa Regionale della Protezione Civile del Lazio, attiva 24 ore su 24."
-  - "Dal 15 giugno al 30 settembre la Sala diventa SOUP, Sala Operativa Unificata Permanente, con Vigili del Fuoco, Carabinieri Forestali e volontari."
+  - "Ogni anno, dal 15 giugno al 30 settembre, la Sala diventa SOUP, Sala Operativa Unificata Permanente, con Vigili del Fuoco, Carabinieri Forestali e volontari."
   - "La Sala attiva i Gruppi comunali e ne segue gli interventi con un software di sala e l'app AlerTeam."
   - "In emergenza il numero da chiamare resta il 112; l'803 555 è per le segnalazioni non urgenti."
 ---
@@ -35,7 +35,9 @@ La composizione della Sala cambia con la stagione.
 
 Dal **1° ottobre al 14 giugno** in sala lavorano gli operatori regionali, affiancati da un Vigile del Fuoco. Un funzionario coordina l'attività nei giorni feriali; nelle altre ore il responsabile di sala è reperibile.
 
-Dal **15 giugno al 30 settembre**, il periodo di massima pericolosità per gli incendi boschivi, la Sala diventa **SOUP**, Sala Operativa Unificata Permanente. Agli operatori regionali si aggiungono tre unità dei **Vigili del Fuoco**, una dei **Carabinieri Forestali** e una della protezione civile di Roma Capitale. Si aggiungono anche due **volontari** dedicati alle comunicazioni radio. Il funzionario di coordinamento è presente tutti i giorni dalle 8 alle 20.
+Ogni anno, dal **15 giugno al 30 settembre**, la Regione porta la Sala nella configurazione **SOUP**, Sala Operativa Unificata Permanente. Agli operatori regionali si aggiungono tre unità dei **Vigili del Fuoco**, una dei **Carabinieri Forestali** e una della protezione civile di Roma Capitale. Si aggiungono anche due **volontari** dedicati alle comunicazioni radio. Il funzionario di coordinamento è presente tutti i giorni dalle 8 alle 20.
+
+La configurazione della sala non coincide con i divieti: a Genzano lo stato di grave pericolosità per gli incendi boschivi resta in vigore [fino al 15 ottobre 2026](/comunicazioni/2026-09-28-incendi-boschivi-divieti-fino-15-ottobre/).
 
 ## Come arriva una chiamata al Gruppo
 

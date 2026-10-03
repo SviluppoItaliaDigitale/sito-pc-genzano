@@ -29,7 +29,7 @@ Nel Lazio, più del 70% degli incendi succede tra giugno e settembre. I mesi peg
 
 ## Cosa non puoi fare nei boschi
 
-Dal 1 giugno al 30 settembre nei boschi del Lazio è vietato:
+Nel 2026, dal 17 giugno al 15 ottobre, a Genzano è vietato:
 
 - Accendere fuochi all'aperto.
 - Bruciare erba secca o rami.

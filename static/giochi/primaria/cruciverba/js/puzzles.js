@@ -354,7 +354,7 @@ window.CRUCIVERBA_PUZZLES = {
           explain: 'Il casco AIB (Anti Incendio Boschivo) è ignifugo, con visiera e protezione collo. Obbligatorio sul fronte fuoco.' },
         { n: 4, dir: 'D', row: 0, col: 3, answer: 'ESTATE',
           clue: 'Stagione più calda dell\'anno e più pericolosa per gli incendi',
-          explain: 'Periodo di massima pericolosità AIB nel Lazio: 15 giugno - 30 settembre. Allerta caldo + secco = rischio massimo.' },
+          explain: 'Il periodo di grave pericolosità per gli incendi lo dichiara ogni anno il Sindaco: a Genzano, nel 2026, dal 17 giugno al 15 ottobre. Caldo + secco = rischio massimo.' },
         { n: 5, dir: 'D', row: 0, col: 4, answer: 'NORMA',
           clue: 'Regola scritta: la legge quadro sugli incendi è la 353/2000',
           explain: 'Legge 353/2000: chi causa un incendio boschivo (anche colposo) rischia carcere fino a 7 anni e perdita del terreno.' },
