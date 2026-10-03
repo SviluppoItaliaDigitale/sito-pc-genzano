@@ -53,7 +53,7 @@ Hai toccato qualcosa di caldo? Hai una bruciatura?
 
 Fai così subito:
 
-- Metti acqua fresca sulla parte bruciata. Non usare acqua ghiacciata. Lascia l'acqua per 15-20 minuti.
+- Metti acqua fresca sulla parte bruciata. Non usare acqua ghiacciata. Lascia l'acqua per almeno 20 minuti.
 - Copri con una garza.
 - Non bucare le vesciche.
 - Non mettere crema, olio o burro sulla bruciatura.

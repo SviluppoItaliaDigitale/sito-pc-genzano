@@ -28,7 +28,7 @@ Il principale riferimento è il **D.Lgs. 1/2018** (Codice della Protezione Civil
 ## I benefici al volontario attivato
 
 ### Mantenimento del posto di lavoro
-Il volontario **impegnato in attività ufficiali di PC** (emergenza, esercitazione, formazione riconosciuta) ha diritto a:
+Il volontario di un'organizzazione iscritta nell'Elenco nazionale del volontariato di protezione civile, **attivato con apposita comunicazione** del Dipartimento o della Regione (emergenza, esercitazione, formazione autorizzata), ha diritto a:
 
 - **mantenere il posto di lavoro**;
 - **mantenere la retribuzione** durante il periodo di attività;
@@ -39,17 +39,17 @@ Questo vale sia per **dipendenti pubblici** sia per **dipendenti privati**.
 ### Limite temporale
 Il beneficio è riconosciuto:
 
-- fino a **30 giorni continuativi**, **massimo 90 giorni nell'anno**, per emergenze dichiarate;
-- fino a **10 giorni continuativi**, **massimo 30 giorni nell'anno**, per esercitazioni e altre attività pianificate;
-- **prorogabili** in casi eccezionali di emergenza nazionale.
+- fino a **30 giorni continuativi**, **massimo 90 giorni nell'anno**, per le attività di soccorso e assistenza in vista o in occasione di un evento (art. 39, comma 1);
+- fino a **10 giorni continuativi**, **massimo 30 giorni nell'anno**, per pianificazione, addestramento, formazione e diffusione della cultura di protezione civile (art. 39, comma 3);
+- **elevabili** fino a **60 giorni continuativi** e **180 giorni nell'anno** nelle emergenze di rilievo nazionale, su autorizzazione del Dipartimento della Protezione Civile e per i casi di effettiva necessità (art. 39, comma 2).
 
 ### Rimborso al datore di lavoro
-Il **datore di lavoro privato** che versa la retribuzione al volontario attivato può chiedere il **rimborso** al Dipartimento della Protezione Civile attraverso una procedura ufficiale.
+Il **datore di lavoro pubblico o privato** che versa la retribuzione al volontario attivato può chiedere il **rimborso** dell'equivalente degli emolumenti, nei limiti delle risorse disponibili e con la procedura dell'articolo 40. In alternativa il rimborso può essere riconosciuto come credito d'imposta (art. 39, comma 4).
 
-Il **datore di lavoro autonomo** (libero professionista, artigiano) ha diritto a un **rimborso** forfettario per i giorni di attivazione.
+Il **volontario lavoratore autonomo** (libero professionista, artigiano) può chiedere il **rimborso del mancato guadagno** giornaliero, calcolato sulla dichiarazione dei redditi dell'anno precedente ed entro un limite giornaliero aggiornato ogni tre anni (art. 39, comma 5).
 
 ### Copertura assicurativa
-Durante l'attività, il volontario è coperto da **assicurazione infortuni e responsabilità civile** stipulata dal Gruppo di appartenenza, con oneri a carico della Regione o del Dipartimento.
+Durante l'attività, il volontario ha la **copertura assicurativa** prevista dall'articolo 18 del Codice del Terzo settore (D.Lgs. 117/2017). Nelle emergenze di rilievo nazionale di lunga durata e negli interventi all'estero il Dipartimento o la Regione possono attivare polizze integrative (art. 39, comma 1, lettera c).
 
 ## Come funziona l'attivazione
 
@@ -93,7 +93,7 @@ L'attestazione dell'attivazione da consegnare al datore di lavoro è rilasciata 
 
 ## Per approfondire
 
-- [D.Lgs. 1/2018 — Codice della PC](https://www.protezionecivile.gov.it/)
+- [D.Lgs. 1/2018 — Codice della protezione civile, articoli 39 e 40 (Normattiva)](https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1~art39)
 - [Diventa volontario](/diventa-volontario/)
 - [Corso base — iscrizioni aperte](/comunicazioni/2026-09-07-corso-base-volontari-apertura-iscrizioni/)
 

@@ -105,7 +105,7 @@ Un'ustione lieve è quando la pelle è rossa ma non ci sono bolle.
 
 Cosa fare:
 
-1. Metti acqua fresca corrente per 10-15 minuti.
+1. Metti acqua fresca corrente per almeno 20 minuti.
 2. Copri con una garza pulita.
 3. Non mettere burro, olio o dentifricio sulla ferita.
 

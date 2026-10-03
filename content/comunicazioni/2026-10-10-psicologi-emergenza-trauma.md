@@ -1,7 +1,7 @@
 ---
 title: "Il supporto psicologico nelle emergenze: per chi le subisce e per chi soccorre"
 date: 2026-10-10T00:02:00+02:00
-description: "Lo psicologo dell'emergenza nella Protezione Civile italiana: ruolo, linee guida CNOP, sostegno alle popolazioni colpite e ai volontari."
+description: "Lo psicologo dell'emergenza nella Protezione Civile italiana: ruolo, criteri del Dipartimento, sostegno alle popolazioni colpite e ai volontari."
 
 badge: "Informazione"
 priorita: "normale"
@@ -26,7 +26,7 @@ La **psicologia dell'emergenza** è una disciplina specifica della psicologia cl
 - Affiancare chi opera nei soccorsi, esposto in modo ripetuto a scene difficili.
 - Supportare il sistema (operatori, dirigenti, comunicazione di crisi) nella gestione corretta delle informazioni.
 
-In Italia il riferimento normativo principale è il **Codice della Protezione Civile** (D.Lgs. 1/2018), che riconosce il supporto psicologico tra le attività di soccorso, e le **Linee Guida del Consiglio Nazionale dell'Ordine degli Psicologi** (CNOP) sull'intervento psicosociale nelle emergenze.
+In Italia il riferimento operativo sono i **Criteri di massima sugli interventi psicosociali da attuare nelle catastrofi**, adottati nel 2006 dal [Dipartimento della Protezione Civile](https://rischi.protezionecivile.gov.it/it/sanitario/attivita/): fissano obiettivi e schemi organizzativi comuni per l'assistenza psicologica e psichiatrica. Il **Codice della Protezione Civile** (D.Lgs. 1/2018) inquadra le attività di soccorso e assistenza alla popolazione in cui questi interventi si inseriscono.
 
 ## Cosa fa lo psicologo durante un'emergenza
 
@@ -74,7 +74,7 @@ In Italia, la **Croce Rossa Italiana**, il **Corpo Nazionale dei Vigili del Fuoc
 - **PFA** — Psychological First Aid (Primo Soccorso Psicologico). Standard OMS.
 - **PTSD** — Post-Traumatic Stress Disorder (Disturbo da Stress Post-Traumatico). Diagnosi clinica strutturata.
 - **EMDR** — Eye Movement Desensitization and Reprocessing. Tecnica terapeutica validata per traumi.
-- **CNOP** — Consiglio Nazionale dell'Ordine degli Psicologi. Riferimento normativo italiano.
+- **CNOP** — Consiglio Nazionale dell'Ordine degli Psicologi, l'ente che rappresenta la professione in Italia.
 - **EPE** — Équipe Psicosociale per l'Emergenza. Squadre regionali specializzate.
 
 ## Per il volontario di PC: attenzione ai segnali
