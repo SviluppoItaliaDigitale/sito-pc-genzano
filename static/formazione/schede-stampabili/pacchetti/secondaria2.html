@@ -321,7 +321,7 @@
     .dati-tabella th { background: var(--scheda-blu); color: #fff; font-weight: 700; }
     .dati-tabella td.num { text-align: right; font-family: "Courier New", monospace; font-weight: 700; }
     .dati-tabella tbody tr:nth-child(even) { background: #f4f7fb; }
-    .grafico-vuoto { background: #f4f7fb; border: 2px dashed var(--scheda-blu); border-radius: 8px; padding: 0.5rem; margin: 0.4rem 0; min-height: 7rem; display: flex; align-items: center; justify-content: center; color: #ced4da; font-style: italic; font-size: 0.85rem; }
+    .grafico-vuoto { background: #f4f7fb; border: 2px dashed var(--scheda-blu); border-radius: 8px; padding: 0.5rem; margin: 0.4rem 0; min-height: 7rem; display: flex; align-items: center; justify-content: center; color: #495057; font-style: italic; font-size: 0.85rem; }
     .domanda-card { padding: 0.55rem 0.75rem; background: #fff; border: 1.5px solid var(--scheda-bordo); border-radius: 6px; margin: 0.4rem 0; }
     .domanda-card .header { display: flex; gap: 0.5rem; margin-bottom: 0.3rem; }
     .domanda-card .num-q { width: 1.6rem; height: 1.6rem; background: var(--scheda-blu); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
@@ -490,7 +490,7 @@
       border-radius: 8px; padding: 0.5rem;
       margin: 0.4rem 0; min-height: 7rem;
       display: flex; align-items: center; justify-content: center;
-      color: #ced4da; font-style: italic; font-size: 0.85rem;
+      color: #495057; font-style: italic; font-size: 0.85rem;
     }
 
     .domanda-card {
@@ -3341,7 +3341,7 @@ e canali ufficiali del Comune.</div>
         <tr><td>Alluvione Sardegna (Olbia)</td><td class="num">2013</td><td>Pioggia intensa</td><td>440 mm in 12h, ciclone tropical-like</td></tr>
         <tr><td>Tempesta Vaia (Triveneto)</td><td class="num">2018</td><td>Vento</td><td>Raffiche &gt; 200 km/h, 14 milioni di alberi caduti</td></tr>
         <tr><td>Acqua Granda (Venezia)</td><td class="num">2019</td><td>Acqua alta</td><td>187 cm: 2° valore storico</td></tr>
-        <tr><td>Marmolada (crollo seracco)</td><td class="num">2022</td><td>Caldo</td><td>+10 °C sulla cima rispetto alla media</td></tr>
+        <tr><td>Marmolada (crollo seracco)</td><td class="num">2022</td><td>Caldo</td><td>10 °C sulla vetta il giorno prima: la temperatura più alta mai registrata lassù</td></tr>
         <tr><td>Alluvione Emilia-Romagna</td><td class="num">2023</td><td>Pioggia intensa</td><td>500 mm in 36h dopo siccità prolungata</td></tr>
         <tr><td>Alluvione Toscana</td><td class="num">2023</td><td>Pioggia intensa</td><td>tempesta Ciaran, > 100 mm/h locale</td></tr>
       </tbody>
@@ -3349,8 +3349,9 @@ e canali ufficiali del Comune.</div>
 
     <div class="sez-titolo"><span class="num">3</span><h2>Costruisci il grafico</h2></div>
     <p class="scheda-intro" style="margin: 0.2rem 0 0.4rem 0;">
-      Disegna un grafico a punti: anno (X) vs numero di alluvioni significative documentate dall'ISPRA
-      (Y, valori indicativi: 2010=8, 2013=14, 2015=16, 2018=22, 2020=25, 2022=29, 2023=37).
+      Disegna un grafico a punti con questi <strong>dati di esercizio</strong>: anno (X) e numero di eventi alluvionali (Y):
+      2010=8, 2013=14, 2015=16, 2018=22, 2020=25, 2022=29, 2023=37. <em>Sono numeri inventati per allenarsi a leggere una tendenza, non dati ufficiali:</em>
+      i dati veri sugli eventi alluvionali in Italia si trovano nel rapporto ISPRA «Dissesto idrogeologico in Italia» e nel portale IdroGEO.
       Traccia la <strong>linea di tendenza</strong>.
     </p>
     <div class="grafico-vuoto">[ Spazio per il grafico — asse X: anni 2010-2023, asse Y: numero alluvioni ]</div>
@@ -6266,7 +6267,7 @@ e canali ufficiali del Comune.</div>
     </div>
 
     <p style="font-size: 0.85rem; margin: 0.4rem 0; color: #6c757d;">Disegna nella griglia qui sotto. Aggiungi nord, scala approssimativa e legenda.</p>
-    <div class="area-disegno" aria-label="Area di disegno della mappa"></div>
+    <div class="area-disegno" role="img" aria-label="Area di disegno della mappa"></div>
 
     <h2 class="scheda-h2">✏️ Analisi e mitigazione</h2>
 
@@ -6366,7 +6367,7 @@ e canali ufficiali del Comune.</div>
 
     <h2 class="scheda-h2">2. Mappa con vie di fuga</h2>
     <p style="font-size: 0.88rem; margin-bottom: 0.3rem;">Disegna la pianta di un piano. Indica: <strong>uscite di emergenza (frecce verdi)</strong>, <strong>punti di raccolta esterni (cerchio blu)</strong>, <strong>presidi antincendio (estintore, idrante)</strong>, <strong>aree di rischio</strong> (gas, elettrico).</p>
-    <div class="area-disegno" aria-label="Area di disegno della pianta"></div>
+    <div class="area-disegno" role="img" aria-label="Area di disegno della pianta"></div>
 
     <h2 class="scheda-h2">3. Ruoli e responsabilità</h2>
     <p style="font-size: 0.88rem; margin-bottom: 0.3rem;">In un edificio occorre che qualcuno coordini. Definisci i ruoli operativi:</p>
@@ -6613,7 +6614,7 @@ e canali ufficiali del Comune.</div>
 
     <h2 class="scheda-h2">2. Pianta con vie di fuga (1 piano significativo)</h2>
     <p style="font-size: 0.88rem; margin-bottom: 0.3rem;">Disegna in scala 1:200 circa. Indicare: vie di fuga primaria/secondaria, scale di sicurezza, luogo sicuro temporaneo per persone con mobilità ridotta (ZONA RIFUGIO), presidi antincendio, segnaletica.</p>
-    <div class="area-disegno" aria-label="Area disegno pianta"></div>
+    <div class="area-disegno" role="img" aria-label="Area disegno pianta"></div>
 
     <h2 class="scheda-h2">3. Calcoli di dimensionamento (DM 3/8/2015)</h2>
     <table class="pe-tabella">
