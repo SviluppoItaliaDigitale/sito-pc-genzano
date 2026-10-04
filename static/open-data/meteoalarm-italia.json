@@ -1,11 +1,11 @@
 {
  "_snapshot": {
-  "generato": "2026-10-04T13:47:27+00:00",
+  "generato": "2026-10-04T20:59:41+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 7,
-  "scaduti_scartati": 0,
-  "in_corso": 2,
+  "avvisi": 5,
+  "scaduti_scartati": 2,
+  "in_corso": 0,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
@@ -60,32 +60,6 @@
    "fine": "2026-10-05T23:59:00+00:00",
    "emesso": "2026-10-04T09:43:38+00:00",
    "identificativo": "2.49.0.0.380.3.IT.261004114338.008"
-  },
-  {
-   "in_corso": true,
-   "regione": "Sardegna",
-   "fenomeno": "Vento",
-   "livello": "gialla",
-   "evento_originale": "Yellow Wind Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-04T09:00:00+00:00",
-   "fine": "2026-10-04T17:59:00+00:00",
-   "emesso": "2026-10-04T09:43:38+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261004114338.007"
-  },
-  {
-   "in_corso": true,
-   "regione": "Sardegna",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-04T09:00:00+00:00",
-   "fine": "2026-10-04T17:59:00+00:00",
-   "emesso": "2026-10-04T09:43:38+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261004114338.006"
   },
   {
    "in_corso": false,
