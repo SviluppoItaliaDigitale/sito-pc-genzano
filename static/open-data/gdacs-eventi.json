@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://www.gdacs.org/gdacsapi/api/events/geteventlist/EVENTS4APP",
-  "generato": "2026-10-04T13:47:18+00:00",
+  "generato": "2026-10-04T17:53:03+00:00",
   "licenza": "GDACS — Global Disaster Alert and Coordination System (dati pubblici UE/ONU)",
   "nota": "Copia locale per lettura same-origin dalla Sala situazioni."
  },
@@ -41,6 +41,53 @@
   },
   {
    "alertlevel": "Green",
+   "country": "Mexico",
+   "datemodified": "2026-10-04T17:43:37",
+   "description": "Tropical Cyclone RACHEL-26",
+   "episodeid": 30,
+   "eventid": 1001329,
+   "eventname": "RACHEL-26",
+   "eventtype": "TC",
+   "fromdate": "2026-09-27T09:00:00",
+   "lat": 20.2,
+   "lon": -113.8,
+   "name": "Tropical Cyclone RACHEL-26",
+   "severitytext": "Hurricane/Typhoon > 74 mph (maximum wind speed of 194 km/h)",
+   "todate": "2026-10-04T15:00:00"
+  },
+  {
+   "alertlevel": "Green",
+   "country": "United States",
+   "datemodified": "2026-10-04T15:00:20",
+   "description": "Tropical Cyclone NOLO-26",
+   "episodeid": 56,
+   "eventid": 1001321,
+   "eventname": "NOLO-26",
+   "eventtype": "TC",
+   "fromdate": "2026-09-13T21:00:00",
+   "lat": 23.8,
+   "lon": -178.5,
+   "name": "Tropical Cyclone NOLO-26",
+   "severitytext": "Hurricane/Typhoon > 74 mph (maximum wind speed of 250 km/h)",
+   "todate": "2026-10-04T15:00:00"
+  },
+  {
+   "alertlevel": "Green",
+   "country": "South Of Panama",
+   "datemodified": "2026-10-04T14:31:24",
+   "description": "Earthquake in South Of Panama",
+   "episodeid": 1737693,
+   "eventid": 1569463,
+   "eventtype": "EQ",
+   "fromdate": "2026-10-04T14:06:10",
+   "lat": 5.3695,
+   "lon": -82.7171,
+   "name": "Earthquake in South Of Panama",
+   "severitytext": "Magnitude 5M, Depth:10km",
+   "todate": "2026-10-04T14:06:10"
+  },
+  {
+   "alertlevel": "Green",
    "country": "Indonesia",
    "datemodified": "2026-10-04T13:17:03",
    "description": "Earthquake in Indonesia",
@@ -54,6 +101,23 @@
    "name": "Earthquake in Indonesia",
    "severitytext": "Magnitude 4.6M, Depth:52.773km",
    "todate": "2026-10-04T12:36:47"
+  },
+  {
+   "alertlevel": "Green",
+   "country": "Guam, Northern Mariana Islands",
+   "datemodified": "2026-10-04T17:44:43",
+   "description": "Tropical Cyclone CHOI-WAN-26",
+   "episodeid": 19,
+   "eventid": 1001332,
+   "eventname": "CHOI-WAN-26",
+   "eventtype": "TC",
+   "fromdate": "2026-09-30T00:00:00",
+   "iso3": "GUM",
+   "lat": 23.3,
+   "lon": 146.9,
+   "name": "Tropical Cyclone CHOI-WAN-26",
+   "severitytext": "Hurricane/Typhoon > 74 mph (maximum wind speed of 250 km/h)",
+   "todate": "2026-10-04T12:00:00"
   },
   {
    "alertlevel": "Green",
@@ -168,55 +232,6 @@
   },
   {
    "alertlevel": "Green",
-   "country": "Mexico",
-   "datemodified": "2026-10-04T12:59:18",
-   "description": "Tropical Cyclone RACHEL-26",
-   "episodeid": 29,
-   "eventid": 1001329,
-   "eventname": "RACHEL-26",
-   "eventtype": "TC",
-   "fromdate": "2026-09-27T09:00:00",
-   "lat": 20.2,
-   "lon": -113.2,
-   "name": "Tropical Cyclone RACHEL-26",
-   "severitytext": "Hurricane/Typhoon > 74 mph (maximum wind speed of 194 km/h)",
-   "todate": "2026-10-04T09:00:00"
-  },
-  {
-   "alertlevel": "Green",
-   "country": "United States",
-   "datemodified": "2026-10-04T13:00:16",
-   "description": "Tropical Cyclone NOLO-26",
-   "episodeid": 55,
-   "eventid": 1001321,
-   "eventname": "NOLO-26",
-   "eventtype": "TC",
-   "fromdate": "2026-09-13T21:00:00",
-   "lat": 23.6,
-   "lon": -176.7,
-   "name": "Tropical Cyclone NOLO-26",
-   "severitytext": "Hurricane/Typhoon > 74 mph (maximum wind speed of 250 km/h)",
-   "todate": "2026-10-04T09:00:00"
-  },
-  {
-   "alertlevel": "Green",
-   "country": "Guam, Northern Mariana Islands",
-   "datemodified": "2026-10-04T13:00:54",
-   "description": "Tropical Cyclone CHOI-WAN-26",
-   "episodeid": 18,
-   "eventid": 1001332,
-   "eventname": "CHOI-WAN-26",
-   "eventtype": "TC",
-   "fromdate": "2026-09-30T00:00:00",
-   "iso3": "GUM",
-   "lat": 22.9,
-   "lon": 147.0,
-   "name": "Tropical Cyclone CHOI-WAN-26",
-   "severitytext": "Hurricane/Typhoon > 74 mph (maximum wind speed of 241 km/h)",
-   "todate": "2026-10-04T06:00:00"
-  },
-  {
-   "alertlevel": "Green",
    "country": "Myanmar",
    "datemodified": "2026-10-04T06:35:25",
    "description": "Earthquake in Myanmar",
@@ -265,7 +280,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-04T11:09:34",
+   "datemodified": "2026-10-04T15:08:40",
    "description": "Forest fires in Australia",
    "episodeid": 1,
    "eventid": 1032561,
@@ -281,7 +296,7 @@
   {
    "alertlevel": "Green",
    "country": "Indonesia",
-   "datemodified": "2026-10-04T11:08:32",
+   "datemodified": "2026-10-04T15:06:45",
    "description": "Forest fires in Indonesia",
    "episodeid": 1,
    "eventid": 1032560,
@@ -297,23 +312,23 @@
   {
    "alertlevel": "Green",
    "country": "Papua New Guinea",
-   "datemodified": "2026-10-04T11:06:22",
+   "datemodified": "2026-10-04T15:04:20",
    "description": "Forest fires in Papua New Guinea",
-   "episodeid": 1,
+   "episodeid": 2,
    "eventid": 1032559,
    "eventtype": "WF",
    "fromdate": "2026-09-26T00:00:00",
    "iso3": "PNG",
-   "lat": -9.8125,
-   "lon": 149.2997,
+   "lat": -9.8118,
+   "lon": 149.3024,
    "name": "Forest fires in Papua New Guinea",
-   "severitytext": "Green impact for forestfire in 5035 ha",
+   "severitytext": "Green impact for forestfire in 5357 ha",
    "todate": "2026-10-04T00:00:00"
   },
   {
    "alertlevel": "Green",
    "country": "Indonesia",
-   "datemodified": "2026-10-04T11:05:24",
+   "datemodified": "2026-10-04T15:03:54",
    "description": "Forest fires in Indonesia",
    "episodeid": 1,
    "eventid": 1032558,
@@ -329,7 +344,7 @@
   {
    "alertlevel": "Green",
    "country": "Indonesia",
-   "datemodified": "2026-10-04T11:01:24",
+   "datemodified": "2026-10-04T15:01:27",
    "description": "Forest fires in Indonesia",
    "episodeid": 1,
    "eventid": 1032557,
@@ -345,7 +360,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-04T11:00:26",
+   "datemodified": "2026-10-04T15:00:50",
    "description": "Forest fires in Australia",
    "episodeid": 1,
    "eventid": 1032556,
@@ -361,7 +376,7 @@
   {
    "alertlevel": "Green",
    "country": "Papua New Guinea",
-   "datemodified": "2026-10-04T11:12:03",
+   "datemodified": "2026-10-04T15:10:24",
    "description": "Forest fires in Papua New Guinea",
    "episodeid": 3,
    "eventid": 1032554,
@@ -377,7 +392,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-04T11:00:47",
+   "datemodified": "2026-10-04T15:01:02",
    "description": "Forest fires in Australia",
    "episodeid": 2,
    "eventid": 1032553,
@@ -393,7 +408,7 @@
   {
    "alertlevel": "Green",
    "country": "Brazil",
-   "datemodified": "2026-10-04T11:17:37",
+   "datemodified": "2026-10-04T15:16:41",
    "description": "Forest fires in Brazil",
    "episodeid": 6,
    "eventid": 1032551,
@@ -409,7 +424,7 @@
   {
    "alertlevel": "Green",
    "country": "Papua New Guinea",
-   "datemodified": "2026-10-04T11:13:06",
+   "datemodified": "2026-10-04T15:11:27",
    "description": "Forest fires in Papua New Guinea",
    "episodeid": 2,
    "eventid": 1032550,
@@ -425,7 +440,7 @@
   {
    "alertlevel": "Green",
    "country": "Indonesia",
-   "datemodified": "2026-10-04T11:08:36",
+   "datemodified": "2026-10-04T15:05:35",
    "description": "Forest fires in Indonesia",
    "episodeid": 4,
    "eventid": 1032549,
@@ -441,7 +456,7 @@
   {
    "alertlevel": "Green",
    "country": "Papua New Guinea",
-   "datemodified": "2026-10-04T11:06:39",
+   "datemodified": "2026-10-04T15:04:56",
    "description": "Forest fires in Papua New Guinea",
    "episodeid": 3,
    "eventid": 1032548,
@@ -457,7 +472,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-04T11:03:55",
+   "datemodified": "2026-10-04T15:03:03",
    "description": "Forest fires in Australia",
    "episodeid": 2,
    "eventid": 1032547,
@@ -473,7 +488,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-04T11:01:30",
+   "datemodified": "2026-10-04T15:01:40",
    "description": "Forest fires in Australia",
    "episodeid": 3,
    "eventid": 1032546,
@@ -489,7 +504,7 @@
   {
    "alertlevel": "Green",
    "country": "Indonesia",
-   "datemodified": "2026-10-04T11:04:16",
+   "datemodified": "2026-10-04T15:03:20",
    "description": "Forest fires in Indonesia",
    "episodeid": 3,
    "eventid": 1032545,
@@ -505,7 +520,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-04T11:02:04",
+   "datemodified": "2026-10-04T15:01:31",
    "description": "Forest fires in Australia",
    "episodeid": 4,
    "eventid": 1032544,
@@ -521,7 +536,7 @@
   {
    "alertlevel": "Green",
    "country": "Indonesia",
-   "datemodified": "2026-10-04T11:17:24",
+   "datemodified": "2026-10-04T15:15:40",
    "description": "Forest fires in Indonesia",
    "episodeid": 4,
    "eventid": 1032543,
@@ -537,7 +552,7 @@
   {
    "alertlevel": "Green",
    "country": "Indonesia",
-   "datemodified": "2026-10-04T11:11:01",
+   "datemodified": "2026-10-04T15:09:27",
    "description": "Forest fires in Indonesia",
    "episodeid": 7,
    "eventid": 1032542,
@@ -553,7 +568,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-04T11:01:52",
+   "datemodified": "2026-10-04T15:01:20",
    "description": "Forest fires in Australia",
    "episodeid": 6,
    "eventid": 1032538,
@@ -569,7 +584,7 @@
   {
    "alertlevel": "Green",
    "country": "Indonesia",
-   "datemodified": "2026-10-04T11:03:20",
+   "datemodified": "2026-10-04T15:01:56",
    "description": "Forest fires in Indonesia",
    "episodeid": 9,
    "eventid": 1032536,
@@ -585,7 +600,7 @@
   {
    "alertlevel": "Green",
    "country": "Indonesia",
-   "datemodified": "2026-10-04T11:11:35",
+   "datemodified": "2026-10-04T15:08:44",
    "description": "Forest fires in Indonesia",
    "episodeid": 6,
    "eventid": 1032534,
@@ -601,7 +616,7 @@
   {
    "alertlevel": "Green",
    "country": "Papua New Guinea",
-   "datemodified": "2026-10-04T11:12:34",
+   "datemodified": "2026-10-04T15:10:34",
    "description": "Forest fires in Papua New Guinea",
    "episodeid": 4,
    "eventid": 1032529,
@@ -617,7 +632,7 @@
   {
    "alertlevel": "Green",
    "country": "Indonesia",
-   "datemodified": "2026-10-04T11:10:44",
+   "datemodified": "2026-10-04T15:09:10",
    "description": "Forest fires in Indonesia",
    "episodeid": 6,
    "eventid": 1032528,
@@ -633,7 +648,7 @@
   {
    "alertlevel": "Green",
    "country": "Papua New Guinea, Indonesia",
-   "datemodified": "2026-10-04T11:11:24",
+   "datemodified": "2026-10-04T15:09:44",
    "description": "Forest fires in Papua New Guinea, Indonesia",
    "episodeid": 5,
    "eventid": 1032527,
@@ -649,7 +664,7 @@
   {
    "alertlevel": "Green",
    "country": "Indonesia",
-   "datemodified": "2026-10-04T11:11:09",
+   "datemodified": "2026-10-04T15:09:36",
    "description": "Forest fires in Indonesia",
    "episodeid": 8,
    "eventid": 1032526,
@@ -665,7 +680,7 @@
   {
    "alertlevel": "Green",
    "country": "Indonesia",
-   "datemodified": "2026-10-04T11:08:05",
+   "datemodified": "2026-10-04T15:07:14",
    "description": "Forest fires in Indonesia",
    "episodeid": 12,
    "eventid": 1032521,
@@ -681,7 +696,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-04T11:03:39",
+   "datemodified": "2026-10-04T15:02:59",
    "description": "Forest fires in Australia",
    "episodeid": 11,
    "eventid": 1032518,
@@ -697,7 +712,7 @@
   {
    "alertlevel": "Green",
    "country": "Brazil",
-   "datemodified": "2026-10-04T11:01:20",
+   "datemodified": "2026-10-04T15:01:16",
    "description": "Forest fires in Brazil",
    "episodeid": 8,
    "eventid": 1032517,
@@ -713,7 +728,7 @@
   {
    "alertlevel": "Green",
    "country": "Brazil",
-   "datemodified": "2026-10-04T11:17:02",
+   "datemodified": "2026-10-04T15:17:19",
    "description": "Forest fires in Brazil",
    "episodeid": 8,
    "eventid": 1032515,
@@ -729,7 +744,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-04T11:03:29",
+   "datemodified": "2026-10-04T15:02:42",
    "description": "Forest fires in Australia",
    "episodeid": 12,
    "eventid": 1032508,
@@ -745,7 +760,7 @@
   {
    "alertlevel": "Green",
    "country": "Brazil",
-   "datemodified": "2026-10-04T11:02:18",
+   "datemodified": "2026-10-04T15:01:45",
    "description": "Forest fires in Brazil",
    "episodeid": 15,
    "eventid": 1032507,
@@ -761,7 +776,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-04T11:02:54",
+   "datemodified": "2026-10-04T15:02:46",
    "description": "Forest fires in Australia",
    "episodeid": 12,
    "eventid": 1032506,
@@ -777,7 +792,7 @@
   {
    "alertlevel": "Green",
    "country": "Tanzania",
-   "datemodified": "2026-10-04T11:19:25",
+   "datemodified": "2026-10-04T15:15:44",
    "description": "Forest fires in Tanzania",
    "episodeid": 6,
    "eventid": 1032505,
@@ -793,7 +808,7 @@
   {
    "alertlevel": "Green",
    "country": "Papua New Guinea",
-   "datemodified": "2026-10-04T11:13:31",
+   "datemodified": "2026-10-04T15:11:38",
    "description": "Forest fires in Papua New Guinea",
    "episodeid": 11,
    "eventid": 1032503,
@@ -809,7 +824,7 @@
   {
    "alertlevel": "Green",
    "country": "Indonesia",
-   "datemodified": "2026-10-04T11:08:08",
+   "datemodified": "2026-10-04T15:06:15",
    "description": "Forest fires in Indonesia",
    "episodeid": 11,
    "eventid": 1032502,
@@ -825,7 +840,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-04T11:02:31",
+   "datemodified": "2026-10-04T15:02:27",
    "description": "Forest fires in Australia",
    "episodeid": 15,
    "eventid": 1032498,
@@ -841,7 +856,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-04T11:02:49",
+   "datemodified": "2026-10-04T15:02:37",
    "description": "Forest fires in Australia",
    "episodeid": 14,
    "eventid": 1032497,
@@ -857,7 +872,7 @@
   {
    "alertlevel": "Green",
    "country": "Indonesia",
-   "datemodified": "2026-10-04T11:10:57",
+   "datemodified": "2026-10-04T15:09:22",
    "description": "Forest fires in Indonesia",
    "episodeid": 10,
    "eventid": 1032481,
@@ -873,7 +888,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-04T11:02:41",
+   "datemodified": "2026-10-04T15:02:14",
    "description": "Forest fires in Australia",
    "episodeid": 18,
    "eventid": 1032478,
@@ -889,7 +904,7 @@
   {
    "alertlevel": "Green",
    "country": "Papua New Guinea, Indonesia",
-   "datemodified": "2026-10-04T11:13:42",
+   "datemodified": "2026-10-04T15:11:49",
    "description": "Forest fires in Papua New Guinea, Indonesia",
    "episodeid": 14,
    "eventid": 1032475,
@@ -905,7 +920,7 @@
   {
    "alertlevel": "Green",
    "country": "Indonesia",
-   "datemodified": "2026-10-04T11:12:13",
+   "datemodified": "2026-10-04T15:10:58",
    "description": "Forest fires in Indonesia",
    "episodeid": 9,
    "eventid": 1032457,
@@ -921,7 +936,7 @@
   {
    "alertlevel": "Green",
    "country": "Indonesia",
-   "datemodified": "2026-10-04T11:18:13",
+   "datemodified": "2026-10-04T15:16:17",
    "description": "Forest fires in Indonesia",
    "episodeid": 22,
    "eventid": 1032448,
@@ -937,7 +952,7 @@
   {
    "alertlevel": "Green",
    "country": "Paraguay",
-   "datemodified": "2026-10-04T11:09:48",
+   "datemodified": "2026-10-04T15:08:20",
    "description": "Forest fires in Paraguay",
    "episodeid": 19,
    "eventid": 1032446,
@@ -953,23 +968,23 @@
   {
    "alertlevel": "Green",
    "country": "Tanzania",
-   "datemodified": "2026-10-04T11:07:11",
+   "datemodified": "2026-10-04T15:06:34",
    "description": "Forest fires in Tanzania",
-   "episodeid": 19,
+   "episodeid": 20,
    "eventid": 1032435,
    "eventtype": "WF",
    "fromdate": "2026-09-25T00:00:00",
    "iso3": "TZA",
    "lat": -2.9891,
-   "lon": 37.2787,
+   "lon": 37.2793,
    "name": "Forest fires in Tanzania",
-   "severitytext": "Green impact for forestfire in 22189 ha",
+   "severitytext": "Green impact for forestfire in 22279 ha",
    "todate": "2026-10-04T00:00:00"
   },
   {
    "alertlevel": "Green",
    "country": "Papua New Guinea",
-   "datemodified": "2026-10-04T11:13:11",
+   "datemodified": "2026-10-04T15:11:23",
    "description": "Forest fires in Papua New Guinea",
    "episodeid": 19,
    "eventid": 1032423,
@@ -985,7 +1000,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-04T11:12:20",
+   "datemodified": "2026-10-04T15:11:08",
    "description": "Forest fires in Australia",
    "episodeid": 21,
    "eventid": 1032406,
@@ -1001,7 +1016,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-04T11:12:41",
+   "datemodified": "2026-10-04T15:10:48",
    "description": "Forest fires in Australia",
    "episodeid": 23,
    "eventid": 1032385,
@@ -1017,7 +1032,7 @@
   {
    "alertlevel": "Green",
    "country": "Brazil",
-   "datemodified": "2026-10-04T11:14:09",
+   "datemodified": "2026-10-04T15:14:28",
    "description": "Forest fires in Brazil",
    "episodeid": 24,
    "eventid": 1032365,
@@ -1253,7 +1268,7 @@
   {
    "alertlevel": "Green",
    "country": "Indonesia",
-   "datemodified": "2026-10-04T11:12:56",
+   "datemodified": "2026-10-04T15:12:11",
    "description": "Forest fires in Indonesia",
    "episodeid": 1,
    "eventid": 1032555,
@@ -1269,7 +1284,7 @@
   {
    "alertlevel": "Green",
    "country": "The Democratic Republic of Congo",
-   "datemodified": "2026-10-04T11:00:42",
+   "datemodified": "2026-10-04T15:00:57",
    "description": "Forest fires in The Democratic Republic of Congo",
    "episodeid": 1,
    "eventid": 1032552,
@@ -1301,7 +1316,7 @@
   {
    "alertlevel": "Green",
    "country": "Brazil",
-   "datemodified": "2026-10-04T11:16:51",
+   "datemodified": "2026-10-04T15:15:36",
    "description": "Forest fires in Brazil",
    "episodeid": 6,
    "eventid": 1032531,
@@ -1317,7 +1332,7 @@
   {
    "alertlevel": "Green",
    "country": "Australia",
-   "datemodified": "2026-10-04T11:04:41",
+   "datemodified": "2026-10-04T15:02:53",
    "description": "Forest fires in Australia",
    "episodeid": 4,
    "eventid": 1032523,
@@ -1381,7 +1396,7 @@
   {
    "alertlevel": "Green",
    "country": "Brazil",
-   "datemodified": "2026-10-04T11:08:29",
+   "datemodified": "2026-10-04T15:07:08",
    "description": "Forest fires in Brazil",
    "episodeid": 17,
    "eventid": 1032445,
@@ -1397,7 +1412,7 @@
   {
    "alertlevel": "Green",
    "country": "Papua New Guinea",
-   "datemodified": "2026-10-04T11:18:22",
+   "datemodified": "2026-10-04T15:16:27",
    "description": "Forest fires in Papua New Guinea",
    "episodeid": 21,
    "eventid": 1032394,
@@ -1583,22 +1598,6 @@
    "name": "Earthquake in Off East Coast Of Kamchatka",
    "severitytext": "Magnitude 5M, Depth:10km",
    "todate": "2026-10-02T18:25:20"
-  },
-  {
-   "alertlevel": "Green",
-   "country": "Myanmar",
-   "datemodified": "2026-10-03T21:19:24",
-   "description": "Earthquake in Myanmar",
-   "episodeid": 1737519,
-   "eventid": 1569305,
-   "eventtype": "EQ",
-   "fromdate": "2026-10-02T16:55:33",
-   "iso3": "MMR",
-   "lat": 23.1453,
-   "lon": 94.5469,
-   "name": "Earthquake in Myanmar",
-   "severitytext": "Magnitude 4.5M, Depth:103.866km",
-   "todate": "2026-10-02T16:55:33"
   }
  ]
 }
