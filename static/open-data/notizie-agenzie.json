@@ -5,15 +5,63 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-04T20:59:33+00:00",
+  "generato": "2026-10-04T23:53:35+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
+   "data": "2026-10-04T23:17:42+00:00",
+   "fonte": "ANSA",
+   "titolo": "Bolsonaro avanti su Lula, con l'85% dei voti scrutinati Bolsonaro al 48% e Lula al 43% ballottaggio il 25 ottobre",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/05/bolsonaro-avanti-su-lula-con-l85-dei-voti-scrutinati-bolsonaro-al-48-e-lula_bef2f600-8fd3-4a6b-8402-5f40da9c9da1.html"
+  },
+  {
+   "data": "2026-10-04T22:05:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina, Zelensky: \"Putin cerca escalation a tutti i costi\". Usa vogliono colloqui con Kiev e Mosca a ottobre",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-guerra-news-5-ottobre_1wNHHErBRHSRyUjITsaGsG"
+  },
+  {
+   "data": "2026-10-04T22:04:41+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Renzi, il messaggio al campo largo: \"Uniti o Meloni si prende tutto e va al Colle\"",
+   "url": "https://www.adnkronos.com/politica/renzi-m5s-pd-conte-schlein-appello_27DgKsel8yOFzUA80yK2Rs"
+  },
+  {
+   "data": "2026-10-04T22:04:03+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Caso di peste polmonare in Russia, Casa Bianca \"monitora i report\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/russia-peste-polmonare-allerta-usa_13hDpd7estYzcWLiChUfR8"
+  },
+  {
+   "data": "2026-10-04T21:30:05+00:00",
+   "fonte": "ANSA",
+   "titolo": "Pressing del Psoe e del governo, Sanchez verso il voto anticipato",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/04/pressing-del-psoe-e-del-governo-sanchez-verso-il-voto-anticipato_0f102696-6238-428d-bf07-dcb94b23dee9.html"
+  },
+  {
+   "data": "2026-10-04T21:28:49+00:00",
+   "fonte": "ANSA",
+   "titolo": "Ucraina: Merz a sorpresa a Kiev sotto le bombe, 'Putin fermi la guerra'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/04/ucraina-merz-a-sorpresa-a-kiev-sotto-le-bombe-putin-fermi-la-guerra_150970cb-bce6-4ca9-a327-1f55553bc772.html"
+  },
+  {
+   "data": "2026-10-04T21:04:13+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Spagna, Sanchez verso elezioni anticipate",
+   "url": "https://www.adnkronos.com/internazionale/esteri/spagna-governo-sanchez-elezioni-anticipate_4f6Yrvw59E0LiehnUUcrbQ"
+  },
+  {
+   "data": "2026-10-04T21:02:15+00:00",
+   "fonte": "ANSA",
+   "titolo": "Bloccato dopo un inseguimento, ha un malore e muore negli uffici della Polizia",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/04/bloccato-dopo-un-inseguimento-ha-un-malore-e-muore-negli-uffici-della-polizia_13efccd6-df0d-4964-8908-c27d3932299b.html"
+  },
+  {
    "data": "2026-10-04T20:31:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Elezioni presidenziali in Brasile, duello Lula-Bolsonaro jr: seggi chiusi, i risultati",
+   "titolo": "Elezioni presidenziali in Brasile, Bolsonaro e Lula al ballottaggio",
    "url": "https://www.adnkronos.com/internazionale/esteri/elezioni-brasile-presidente-lula-bolsonaro-risultati_mC85fa8qqm6vUBVDpEY6m"
   },
   {
@@ -53,12 +101,6 @@
    "url": "https://www.ansa.it/sito/notizie/economia/2026/10/04/la-lente-del-mercato-sullaffondo-di-intesa-sanpaolo-su-mps_362a0a54-bbfb-4cfa-b367-e4483904f2f7.html"
   },
   {
-   "data": "2026-10-04T19:03:15+00:00",
-   "fonte": "ANSA",
-   "titolo": "Pressing dei socialisti sul voto, Sanchez tira le somme",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/04/il-psoe-spinge-sanchez-al-voto-proteste-per-la-casa-unopportunita_0f102696-6238-428d-bf07-dcb94b23dee9.html"
-  },
-  {
    "data": "2026-10-04T18:47:18+00:00",
    "fonte": "ANSA",
    "titolo": "Mattarella ad Assisi, 'il mondo si illumini e indichi la via della pace",
@@ -66,7 +108,7 @@
   },
   {
    "data": "2026-10-04T18:37:00+00:00",
-   "fonte": "ANSA",
+   "fonte": "ANSA CRONACA",
    "titolo": "Tenta di uccidere la compagna, salva perché creduta morta",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/04/tenta-di-uccidere-la-compagna-poi-si-suicida-dopo-averle-fatto-perdere-i-sensi_ad11c40c-eee0-438a-a194-a23b73d8cc10.html"
   },
@@ -81,12 +123,6 @@
    "fonte": "ANSA",
    "titolo": "Il Cinnamon bun, la girella alla cannella che fa impazzire gli svedesi (e non solo)",
    "url": "https://www.ansa.it/canale_lifestyle/notizie/food/2026/10/04/il-cinnamon-bun-la-girella-alla-cannella-che-fa-impazzire-gli-svedesi-e-non_c2ec0206-751a-4ca0-9c86-16a5075a5deb.html"
-  },
-  {
-   "data": "2026-10-04T18:15:08+00:00",
-   "fonte": "ANSA",
-   "titolo": "Brasile al voto, scintille ai seggi tra Lula e Bolsonaro",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/04/brasile-al-voto-scintille-ai-seggi-tra-lula-e-bolsonaro_bef2f600-8fd3-4a6b-8402-5f40da9c9da1.html"
   },
   {
    "data": "2026-10-04T18:03:56+00:00",
@@ -111,12 +147,6 @@
    "fonte": "ANSA",
    "titolo": "L'appello di Renzi ai centristi e ai riformisti di Fi, 'venite con noi'",
    "url": "https://www.ansa.it/sito/notizie/politica/2026/10/04/renzi-appello-a-centristi-e-ai-riformisti-di-forza-italia-venite-con-noi_c456b782-516c-4c5e-b706-17e902aa68bd.html"
-  },
-  {
-   "data": "2026-10-04T17:46:11+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ucraina: Merz a sorpresa a Kiev sotto le bombe, 'Putin fermi la guerra'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/04/ucraina-merz-a-sorpresa-a-kiev-sotto-le-bombe-putin-fermi-la-guerra_150970cb-bce6-4ca9-a327-1f55553bc772.html"
   },
   {
    "data": "2026-10-04T17:45:29+00:00",
@@ -159,36 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Il Papa: 'Cessino le guerre, in Terra Santa vittime innocenti'",
    "url": "https://www.ansa.it/vaticano/notizie/2026/10/04/il-papa-in-terra-santa-vittime-innocenti-della-guerra_540f1e8b-09e1-4325-a4de-6f78642eca04.html"
-  },
-  {
-   "data": "2026-10-04T16:44:05+00:00",
-   "fonte": "ANSA",
-   "titolo": "Rebus risorse per la manovra dopo il Dpfp, le misure in bilico",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/04/rebus-risorse-per-la-manovra-dopo-il-dpfp-le-misure-in-bilico_3a89ec48-7a66-499a-bd0c-572c7d7c4336.html"
-  },
-  {
-   "data": "2026-10-04T16:40:17+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Feltri: \"Solo un idiota pensa che Alberto Stasi sia colpevole\"",
-   "url": "https://www.adnkronos.com/cronaca/garlasco-stasi-omicidio-poggi-feltri-domenica-in_3osLl6SBJm2hhRTrk0nzFE"
-  },
-  {
-   "data": "2026-10-04T16:27:16+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Morto l'operaio lasciato in strada, la moglie: 'Voglio giustizia'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/04/operaio-edile-morto-in-ospedale-stava-lavorando-in-nero-su-tetto-capannone_e247d139-6bcb-4859-8475-8ac5bfd697de.html"
-  },
-  {
-   "data": "2026-10-04T16:23:53+00:00",
-   "fonte": "ANSA",
-   "titolo": "Arrivano i Nobel, per la pace c'è anche la Stazione Spaziale",
-   "url": "https://www.ansa.it/canale_scienza/notizie/ricerca_istituzioni/2026/10/04/arrivano-i-nobel-per-la-pace-ce-anche-la-stazione-spaziale_3e2f615b-2708-49be-96ff-18a7c76a8649.html"
-  },
-  {
-   "data": "2026-10-04T16:21:28+00:00",
-   "fonte": "ANSA",
-   "titolo": "Rogo nel camping a Peschiera del Garda, feriti e intossicati",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/04/vasto-incendio-in-un-camping-sul-garda-intervenuti-4-pompieri-tedeschi-in-vacanza_f465a36b-15b0-4903-ac8a-5309989969eb.html"
   }
  ]
 }
