@@ -5,11 +5,35 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-03T22:20:57+00:00",
+  "generato": "2026-10-04T01:52:46+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-10-03T22:40:53+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ballando, lo sfogo (e le lacrime) di Noemi Bocchi: \"Sono schiacciata dal personaggio Totti\"",
+   "url": "https://www.adnkronos.com/spettacoli/noemi-bocchi-ballando-con-le-stelle-francesco-totti_zmu7emZg9xORIBYgfqF5M"
+  },
+  {
+   "data": "2026-10-03T22:22:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Ucraina, nei negoziati Usa-Russia spunta il maxi affare Lukoil. Ma Zelensky ora mira alle raffinerie di Mosca",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-trump-putin-petrolio-zelensky_2LOxOtMEViMctkqWKEuqFu"
+  },
+  {
+   "data": "2026-10-03T22:21:20+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "\"Nei post due calici per fingere di non essere soli\", sui social la coppia che non c'è",
+   "url": "https://www.adnkronos.com/cronaca/coppia-invisibile-fenomeno-social-foto-post_7szKTAChHCmW1GwJR4J3WQ"
+  },
+  {
+   "data": "2026-10-03T22:19:12+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Israele, i due volti del 7 ottobre: sopravvissuti e familiari si riuniscono il giorno del massacro, il governo il 5",
+   "url": "https://www.adnkronos.com/internazionale/esteri/israele-massacro-7-ottobre-commemorazioni-vittime_3JWPqw7zmBTVOT2e0h9FYS"
+  },
   {
    "data": "2026-10-03T22:14:53+00:00",
    "fonte": "ADNKRONOS",
@@ -101,12 +125,6 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/03/rimozione-bomba-daereo-inesplosa-il-4-ottobre-vicino-a-orbetello_49d13827-9a1a-4b89-b3b4-a2809d69ff4e.html"
   },
   {
-   "data": "2026-10-03T18:54:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Incidente alla festa di nozze a Vieste, padre e figlio precipitano da un balcone: feriti",
-   "url": "https://www.adnkronos.com/cronaca/vieste-incidente-padre-figlio-matrimonio_6faao29erGXE7tBg9CBCeM"
-  },
-  {
    "data": "2026-10-03T18:47:25+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Ferì arrestato in fuga da ospedale Prato, agente interdetto per 4 mesi",
@@ -123,12 +141,6 @@
    "fonte": "ANSA",
    "titolo": "Intesa rilancia sull'Opas Mps, aumenta la componente cash di 0,25 euro",
    "url": "https://www.ansa.it/sito/notizie/economia/2026/10/03/intesa-con-il-via-libera-alle-offerte-mps-lopas-diventera-inefficace_649702eb-a54c-46d5-a26b-869245b27bf1.html"
-  },
-  {
-   "data": "2026-10-03T18:22:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Campiello, Marcello Fois vince l'edizione 2026 con 'L'immensa distrazione'. La dedica a Murgia: \"Una donna bellissima\"",
-   "url": "https://www.adnkronos.com/cultura/premio-campiello-2026-marcello-fois_3pcOV1Yz7411Emf2k93Pg6"
   },
   {
    "data": "2026-10-03T18:15:35+00:00",
@@ -177,18 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Legali di Stasi: 'Non solo il dna ma altri elementi faranno scalpore'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/03/legale-di-stasi-un-altro-elemento-fara-scalpore-e-non-riguarda-2007_5d7016b0-72f5-4af8-918a-7506938b6ede.html"
-  },
-  {
-   "data": "2026-10-03T17:15:01+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Verissimo, Anna Tatangelo ricorda la mamma Palmira: \"I miei figli hanno i suoi occhi\"",
-   "url": "https://www.adnkronos.com/spettacoli/anna-tatangelo-verissimo-figlio-andrea_4P67p4VdkEjgzDrkEEnjNU"
-  },
-  {
-   "data": "2026-10-03T16:45:02+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Milo Infante: \"Assorbo il dolore degli altri, penso a Piera Maggio e mi sento in colpa\"",
-   "url": "https://www.adnkronos.com/spettacoli/milo-infante-verissimo-moglie-sara-figlio-daniele_2HgvlumgAxnFJNoF4rLFW2"
   }
  ]
 }
