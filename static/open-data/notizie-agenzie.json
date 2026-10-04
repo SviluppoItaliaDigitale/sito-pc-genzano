@@ -5,11 +5,119 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-04T17:53:01+00:00",
+  "generato": "2026-10-04T20:59:33+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
+  {
+   "data": "2026-10-04T20:31:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Elezioni presidenziali in Brasile, duello Lula-Bolsonaro jr: seggi chiusi, i risultati",
+   "url": "https://www.adnkronos.com/internazionale/esteri/elezioni-brasile-presidente-lula-bolsonaro-risultati_mC85fa8qqm6vUBVDpEY6m"
+  },
+  {
+   "data": "2026-10-04T20:18:50+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Francia, scuola ancora in tilt: 500 licei chiusi dopo protesta violenta",
+   "url": "https://www.adnkronos.com/internazionale/esteri/francia-studenti-protesta-scuole-chiuse_1OetJrKQIe1Bs8Rx8O3QFA"
+  },
+  {
+   "data": "2026-10-04T20:06:31+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "'Niente più morti in bicicletta', il Bike Pride Torino dedicato a Nicolò",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/04/niente-piu-morti-in-bicicletta-il-bike-pride-torino-dedicato-a-nicolo_ad3a3a30-69e4-4695-8adc-c62ac5102af5.html"
+  },
+  {
+   "data": "2026-10-04T19:51:24+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Frana sulle Tofane, escursionista salvata da eliambulanza",
+   "url": "https://www.adnkronos.com/cronaca/dolomiti-tofane-frana-oggi-4-ottobre_3aAA39v2UkFDDMMUwo4ufM"
+  },
+  {
+   "data": "2026-10-04T19:45:47+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Bloccato dopo inseguimento, ha malore e muore in uffici della polizia",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/04/bloccato-dopo-inseguimento-ha-malore-e-muore-in-uffici-della-polizia_7c294331-98ae-4d16-83a4-ae326f3ecd9a.html"
+  },
+  {
+   "data": "2026-10-04T19:28:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Intesa Sanpaolo, Delfin sostiene l'Opas su Mps",
+   "url": "https://www.adnkronos.com/economia/intesa-sanpaolo-delfin-opas-mps_40ZHMjmjDRyz7gcZPCxSUA"
+  },
+  {
+   "data": "2026-10-04T19:06:22+00:00",
+   "fonte": "ANSA",
+   "titolo": "La lente del mercato sull'affondo di Intesa Sanpaolo su Mps",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/04/la-lente-del-mercato-sullaffondo-di-intesa-sanpaolo-su-mps_362a0a54-bbfb-4cfa-b367-e4483904f2f7.html"
+  },
+  {
+   "data": "2026-10-04T19:03:15+00:00",
+   "fonte": "ANSA",
+   "titolo": "Pressing dei socialisti sul voto, Sanchez tira le somme",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/04/il-psoe-spinge-sanchez-al-voto-proteste-per-la-casa-unopportunita_0f102696-6238-428d-bf07-dcb94b23dee9.html"
+  },
+  {
+   "data": "2026-10-04T18:47:18+00:00",
+   "fonte": "ANSA",
+   "titolo": "Mattarella ad Assisi, 'il mondo si illumini e indichi la via della pace",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/04/mattarella-ad-assisi-il-mondo-si-illumini-e-indichi-la-via-della-pace_9bd6a1a6-d122-438a-918d-1082646e670f.html"
+  },
+  {
+   "data": "2026-10-04T18:37:00+00:00",
+   "fonte": "ANSA",
+   "titolo": "Tenta di uccidere la compagna, salva perché creduta morta",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/04/tenta-di-uccidere-la-compagna-poi-si-suicida-dopo-averle-fatto-perdere-i-sensi_ad11c40c-eee0-438a-a194-a23b73d8cc10.html"
+  },
+  {
+   "data": "2026-10-04T18:27:14+00:00",
+   "fonte": "ANSA",
+   "titolo": "Trump minaccia ma l'Iran resta fermo sulle sue sette condizioni",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/04/trump-minaccia-ma-liran-resta-fermo-sulle-sue-sette-condizioni-_ce01351f-b238-42c5-a841-fa84e83fd8a6.html"
+  },
+  {
+   "data": "2026-10-04T18:18:24+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il Cinnamon bun, la girella alla cannella che fa impazzire gli svedesi (e non solo)",
+   "url": "https://www.ansa.it/canale_lifestyle/notizie/food/2026/10/04/il-cinnamon-bun-la-girella-alla-cannella-che-fa-impazzire-gli-svedesi-e-non_c2ec0206-751a-4ca0-9c86-16a5075a5deb.html"
+  },
+  {
+   "data": "2026-10-04T18:15:08+00:00",
+   "fonte": "ANSA",
+   "titolo": "Brasile al voto, scintille ai seggi tra Lula e Bolsonaro",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/04/brasile-al-voto-scintille-ai-seggi-tra-lula-e-bolsonaro_bef2f600-8fd3-4a6b-8402-5f40da9c9da1.html"
+  },
+  {
+   "data": "2026-10-04T18:03:56+00:00",
+   "fonte": "ANSA",
+   "titolo": "Garlasco, i genitori di Chiara: 'Se ci sarà un nuovo colpevole ne prenderemo atto'",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/04/garlasco-genitori-di-chiara-poggi-prenderemo-atto-se-la-giustizia-dara-un-altro-colpevole_ebee0c95-ada8-4f77-9669-bc60564a79ed.html"
+  },
+  {
+   "data": "2026-10-04T18:02:14+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Operaio morto a Caivano, era stato assunto il giorno prima. La moglie: \"Lo hanno abbandonato\"",
+   "url": "https://www.adnkronos.com/cronaca/operaio-morto-caivano-inchiesta_1ZSLSp3KSsPCKpmw0SMy5c"
+  },
+  {
+   "data": "2026-10-04T17:59:41+00:00",
+   "fonte": "ANSA",
+   "titolo": "'Il copilota di FlyDubai voleva schiantarsi sul Ben Gurion'. E' scontro sui controlli",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/04/il-copilota-voleva-schiantare-il-volo-flydubai-sullaeroporto-ben-gurion-_e29b1b93-cf3a-4b85-a4ed-efc6ec2e0183.html"
+  },
+  {
+   "data": "2026-10-04T17:58:26+00:00",
+   "fonte": "ANSA",
+   "titolo": "L'appello di Renzi ai centristi e ai riformisti di Fi, 'venite con noi'",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/04/renzi-appello-a-centristi-e-ai-riformisti-di-forza-italia-venite-con-noi_c456b782-516c-4c5e-b706-17e902aa68bd.html"
+  },
+  {
+   "data": "2026-10-04T17:46:11+00:00",
+   "fonte": "ANSA",
+   "titolo": "Ucraina: Merz a sorpresa a Kiev sotto le bombe, 'Putin fermi la guerra'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/04/ucraina-merz-a-sorpresa-a-kiev-sotto-le-bombe-putin-fermi-la-guerra_150970cb-bce6-4ca9-a327-1f55553bc772.html"
+  },
   {
    "data": "2026-10-04T17:45:29+00:00",
    "fonte": "ADNKRONOS",
@@ -17,19 +125,13 @@
    "url": "https://www.adnkronos.com/internazionale/esteri/turchia-4-scosse-di-terremoto-nella-zona-di-adana_27fIEt0G7cCB3ig3tdQ5hE"
   },
   {
-   "data": "2026-10-04T17:41:03+00:00",
+   "data": "2026-10-04T17:12:34+00:00",
    "fonte": "ANSA",
-   "titolo": "La destra si vede già alla Moncloa, può sdoganare Vox al governo",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/04/la-destra-si-vede-gia-alla-moncloa-puo-sdoganare-vox-al-governo_8575c9e1-ab15-4db6-8540-e15041fd0bff.html"
+   "titolo": "Trump nomina lo zar dell'Ia, è il capo dell'intelligence",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/04/trump-nomina-lo-zar-dellia-e-il-capo-dellintelligence_0f13aee6-fcac-46cd-ad9e-8d892ef6c0a7.html"
   },
   {
-   "data": "2026-10-04T17:19:47+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ucraina: Merz a sorpresa a Kiev sotto le bombe, 'Putin fermi la guerra'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/04/ucraina-merz-a-sorpresa-a-kiev-sotto-le-bombe-putin-fermi-la-guerra_150970cb-bce6-4ca9-a327-1f55553bc772.html"
-  },
-  {
-   "data": "2026-10-04T17:07:54+00:00",
+   "data": "2026-10-04T17:07:00+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Malan e Bignami scrivono al M5S: \"Sostituite Scarpinato in commissione Antimafia\"",
    "url": "https://www.adnkronos.com/politica/scarpinato-commissione-antimafia-m5s_6YFTeyHywjepscyy0ojg8i"
@@ -47,28 +149,10 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/04/christa-pike-resta-in-condizioni-critiche-dopo-essere-sopravvissuta-allesecuzione_9af7ddc2-42da-4d74-a8a9-7ba2be681af5.html"
   },
   {
-   "data": "2026-10-04T17:04:10+00:00",
-   "fonte": "ANSA",
-   "titolo": "F1: Verstappen re a Sepang, Antonelli secondo vede titolo, Hamilton sul podio CLASSIFICHE",
-   "url": "https://www.ansa.it/sito/notizie/sport/f1/2026/10/04/f1-verstappen-vince-il-gp-bahrain-poi-antonelli-e-hamilton_8ed57b9f-048e-4cad-80d0-0d92fcf8bb4b.html"
-  },
-  {
-   "data": "2026-10-04T16:55:47+00:00",
-   "fonte": "ANSA",
-   "titolo": "Brasile al voto, scintille ai seggi tra Lula e Bolsonaro",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/04/brasile-al-voto-scintille-ai-seggi-tra-lula-e-bolsonaro_bef2f600-8fd3-4a6b-8402-5f40da9c9da1.html"
-  },
-  {
    "data": "2026-10-04T16:51:33+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Insulti e minacce a don Coluccia alla periferia di Roma",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/04/insulti-e-minacce-a-don-coluccia-alla-periferia-di-roma_79a705fc-b8fe-46e2-a7ab-63fd63782654.html"
-  },
-  {
-   "data": "2026-10-04T16:49:20+00:00",
-   "fonte": "ANSA",
-   "titolo": "Garlasco, i genitori: 'Chiara dopo 19 anni ha il diritto di riposare in pace'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/04/garlasco-genitori-di-chiara-poggi-prenderemo-atto-se-la-giustizia-dara-un-altro-colpevole_ebee0c95-ada8-4f77-9669-bc60564a79ed.html"
   },
   {
    "data": "2026-10-04T16:48:55+00:00",
@@ -105,90 +189,6 @@
    "fonte": "ANSA",
    "titolo": "Rogo nel camping a Peschiera del Garda, feriti e intossicati",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/04/vasto-incendio-in-un-camping-sul-garda-intervenuti-4-pompieri-tedeschi-in-vacanza_f465a36b-15b0-4903-ac8a-5309989969eb.html"
-  },
-  {
-   "data": "2026-10-04T16:04:20+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "I genitori, 'dopo 19 anni Chiara ha diritto di riposare in pace'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/04/i-genitori-dopo-19-anni-chiara-ha-diritto-di-riposare-in-pace_7e1a9f8c-bfb2-40ad-88ab-9f6b9b9a6662.html"
-  },
-  {
-   "data": "2026-10-04T16:03:10+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Milano, anziana muore nell'incendio dell'appartamento",
-   "url": "https://www.adnkronos.com/cronaca/milano-incendio-donna-morta-4-ottobre_4EqMHilJx1k7EpptDQiWls"
-  },
-  {
-   "data": "2026-10-04T15:57:48+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Storico ristoratore euganeo muore in un incidente stradale",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/04/storico-ristoratore-euganeo-muore-in-un-incidente-stradale_dd10e005-7b17-4e79-91af-c15e5acd7149.html"
-  },
-  {
-   "data": "2026-10-04T15:46:27+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Genitori Chiara Poggi, 'prenderemo atto se giustizia darà altro colpevole'",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/04/genitori-chiara-poggi-prenderemo-atto-se-giustizia-dara-altro-colpevole_e67c3ac6-38c4-4bb3-be3e-4983a7a8646b.html"
-  },
-  {
-   "data": "2026-10-04T15:37:31+00:00",
-   "fonte": "ANSA",
-   "titolo": "La nuova mania del tycoon, 'l'ora legale per giocare a golf'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/04/la-nuova-mania-del-tycoon-lora-legale-per-giocare-a-golf_215ed2c8-cbe8-46f7-9686-dc23451b34b4.html"
-  },
-  {
-   "data": "2026-10-04T15:33:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Garlasco, i genitori di Chiara Poggi a Verissimo: \"Per noi il colpevole è Stasi. Se la giustizia ci darà un altro nome, prenderemo atto\"",
-   "url": "https://www.adnkronos.com/cronaca/garlasco-genitori-chiara-poggi-stasi-verissimo_7MIMSG47I27bThGIsRjuNs"
-  },
-  {
-   "data": "2026-10-04T15:19:16+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Filippo Bisciglia a Verissimo: \"Quando è finita con Pamela Camassa è stato difficile restare solo\"",
-   "url": "https://www.adnkronos.com/spettacoli/filippo-bisciglia-tempation-island-verissimo_5aU7kPh9puURkIE4lEL2C6"
-  },
-  {
-   "data": "2026-10-04T15:12:21+00:00",
-   "fonte": "ANSA",
-   "titolo": "Assisi, Mattarella: 'Da San Francesco una lezione per l'oggi'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/04/festa-di-san-francesco-mattarella-da-s.-francesco-una-lezione-per-loggi_9bd6a1a6-d122-438a-918d-1082646e670f.html"
-  },
-  {
-   "data": "2026-10-04T15:03:18+00:00",
-   "fonte": "ANSA",
-   "titolo": "Case più care in Ue, governo pensa a intervento in manovra per i giovani",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/04/case-piu-care-in-ue-governo-pensa-a-intervento-in-manovra-per-i-giovani_4f6606f5-5cea-4317-9cf9-7011e2bbd281.html"
-  },
-  {
-   "data": "2026-10-04T15:00:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Renzi chiama i riformisti: \"Lasciate il centrodestra\". Tajani: \"Solo Forza Italia è il centro\"",
-   "url": "https://www.adnkronos.com/politica/renzi-chiama-i-riformisti-lasciate-il-centrodestra-tajani-solo-forza-italia-e-il-centro_25ycmcw0iBoTcO9tJPtiky"
-  },
-  {
-   "data": "2026-10-04T14:34:23+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Frana di grandi dimensioni si stacca dalle Tofane",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/04/frana-di-grandi-dimensioni-si-stacca-dalle-tofane_cecf007f-74df-4445-a862-c005a22cc514.html"
-  },
-  {
-   "data": "2026-10-04T14:24:56+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Incendio in un magazzino di scarpe nel Trevigiano",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/04/incendio-in-un-magazzino-di-scarpe-nel-trevigiano_bd75c22a-064e-4ac1-ba29-9a196e6c6444.html"
-  },
-  {
-   "data": "2026-10-04T14:15:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Atp Pechino, Djokovic batte Zverev nei quarti e fa un favore a Sinner",
-   "url": "https://www.adnkronos.com/sport/djokovic-zverev-pechino-sinner_3R1Tgz4yMaItCnqgNLynY6"
-  },
-  {
-   "data": "2026-10-04T14:14:33+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Il Brasile al voto, scintille ai seggi tra Lula e Bolsonaro",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/04/il-brasile-al-voto-scintille-ai-seggi-tra-lula-e-bolsonaro_87cfeb3d-8e5a-4fc2-9519-321f0fb1a8c4.html"
   }
  ]
 }
