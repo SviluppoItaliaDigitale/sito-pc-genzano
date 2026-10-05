@@ -15,6 +15,12 @@ FONTI PRIMARIE (lette direttamente, ogni giorno) — "--fonti primarie"
   data di emanazione (versione multivigente).
 - BURL — Bollettino Ufficiale della Regione Lazio (sicer.regione.lazio.it):
   ricerca per parola nell'oggetto nella finestra di edizione.
+- Consiglio regionale del Lazio, archivio notizie (consiglio.regione.lazio.it,
+  dal 05/10/2026): notizie di Aula e Commissioni — proposte di legge,
+  audizioni, approvazioni. Fino a quel giorno il lavoro delle Commissioni
+  arrivava solo dalla rassegna stampa del lunedì: l'audizione del 1° ottobre
+  sulla PL 281 (parte civile della Regione anche per i volontari di PC) è
+  stata vista quattro giorni dopo.
 
 FONTI SECONDARIE (rassegna stampa, di norma settimanale) — "--fonti news"
 - Google News RSS con query tematiche e site:
@@ -491,6 +497,60 @@ def fetch_burl(cutoff, errori):
 
 
 # ---------------------------------------------------------------------------
+# FONTE PRIMARIA 5 — Consiglio regionale del Lazio, archivio notizie
+# ---------------------------------------------------------------------------
+
+CRL_BASE = 'https://www.consiglio.regione.lazio.it/consiglio-regionale/'
+CRL_ELENCO = CRL_BASE + '?vw=newselenco'
+CRL_MAX_DETTAGLI = 25   # quante notizie nella finestra si aprono per leggere il testo
+
+
+def fetch_consiglio_lazio(cutoff, errori):
+    """Notizie del Consiglio regionale (Aula + Commissioni) nella finestra.
+
+    L'elenco (`?vw=newselenco`) è una lista `<li>GG/MM/AAAA - <a href='?vw=newsDettaglio&id=…'>`.
+    Il titolo da solo spesso non nomina la protezione civile («Tutela di
+    sanitari, trasportatori e volontari…»): per ogni notizia nella finestra
+    si apre la pagina di dettaglio e si classifica anche il testo.
+    """
+    out = []
+    cli = Cliente()
+    try:
+        pagina = cli.get(CRL_ELENCO)
+        righe = re.findall(r"<li>\s*(\d{2}/\d{2}/\d{4})\s*-\s*<a href='([^']+)'[^>]*>(.*?)</a>", pagina, flags=re.S)
+        if not righe:
+            raise RuntimeError('nessuna notizia trovata: struttura della pagina cambiata?')
+        aperte = 0
+        for data_txt, href, titolo_html in righe:
+            d = parse_data_it(data_txt)
+            if not d or d < cutoff:
+                continue
+            titolo = solo_testo(titolo_html)
+            link = CRL_BASE + htmllib.unescape(href).lstrip('/')
+            sommario = ''
+            if aperte < CRL_MAX_DETTAGLI:
+                aperte += 1
+                try:
+                    dett = cli.get(link, referer=CRL_ELENCO)
+                    corpo = solo_testo(dett)
+                    fine = corpo.find('A cura dell')
+                    if fine > 0:
+                        corpo = corpo[:fine]
+                    i = corpo.rfind(titolo)   # l'ultima occorrenza: prima ci sono menu e briciole
+                    sommario = corpo[i + len(titolo):i + len(titolo) + 4000] if i >= 0 else corpo[:4000]
+                except Exception as e:  # noqa: BLE001
+                    print(f'  [warn] consiglio regionale: dettaglio non letto ({e})', file=sys.stderr)
+            v = voce('Consiglio regionale del Lazio — notizie', 'primaria', titolo, link, d,
+                     tipo_atto='Notizia Aula/Commissioni', ente='Consiglio regionale del Lazio', sommario=sommario)
+            if v['rilevanza']:
+                out.append(v)
+    except Exception as e:  # noqa: BLE001
+        errori.append(f'Consiglio regionale del Lazio: {e}')
+        print(f'  [error] consiglio regionale: {e}', file=sys.stderr)
+    return out
+
+
+# ---------------------------------------------------------------------------
 # FONTI SECONDARIE — Google News, RSS istituzionali, DPC via Firecrawl
 # ---------------------------------------------------------------------------
 
@@ -674,7 +734,7 @@ def corpo_issue(output):
                 estremi = ' · '.join(x for x in [it.get('tipo_atto'), it.get('numero'), it.get('ente')] if x)
                 righe.append(f"- **{data}** — {it['fonte']}{' · ' + estremi if estremi else ''}\n  [{t}]({it['link']})\n  <sub>parole chiave: {', '.join(it['motivi'])}</sub>")
 
-    blocco(primarie, "Atti dalle fonti primarie (albo pretorio · Gazzetta Ufficiale · Normattiva · BURL)")
+    blocco(primarie, "Atti dalle fonti primarie (albo pretorio · Gazzetta Ufficiale · Normattiva · BURL · Consiglio regionale)")
     if news:
         righe.append(f"\n## Rassegna stampa e feed ({len(news)})\n")
         righe.append("Le voci sotto vengono da Google News e feed: **verificare sempre la fonte originale** (possono essere riprese non istituzionali).\n")
@@ -713,7 +773,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('--days', type=int, default=2, help='Finestra temporale in giorni (default 2)')
     ap.add_argument('--fonti', choices=['primarie', 'news', 'tutte'], default='tutte',
-                    help='primarie = albo/GU/Normattiva/BURL; news = Google News/RSS/Firecrawl; tutte (default)')
+                    help='primarie = albo/GU/Normattiva/BURL/Consiglio regionale; news = Google News/RSS/Firecrawl; tutte (default)')
     ap.add_argument('--out', default='-', help='File output JSON (default stdout)')
     ap.add_argument('--issue-body', default=None, help='Scrive il corpo Markdown della issue in questo file')
     ap.add_argument('--dedup-issues', action='store_true', help='Scarta gli URL già comparsi nelle issue normativa-watcher (richiede gh)')
@@ -743,7 +803,8 @@ def main():
         for nome, fn in [('Albo pretorio Genzano di Roma', fetch_albo_genzano),
                          ('Gazzetta Ufficiale (Serie Generale)', fetch_gazzetta_ufficiale),
                          ('Normattiva', fetch_normattiva),
-                         ('BURL Lazio', fetch_burl)]:
+                         ('BURL Lazio', fetch_burl),
+                         ('Consiglio regionale del Lazio (notizie)', fetch_consiglio_lazio)]:
             fonti_lette.append(nome)
             aggiungi(fn(cutoff, errori), nome)
 
