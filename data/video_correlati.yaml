@@ -5,8 +5,8 @@
 # Usato dal partial Hugo `video-correlati.html` per renderizzare la
 # sezione 'Approfondimenti video' in fondo agli articoli pertinenti.
 #
-# Pagine coperte: 305 / Video unici usati: 260 /
-# Link totali: 1035 (max 5 per pagina,
+# Pagine coperte: 305 / Video unici usati: 262 /
+# Link totali: 1034 (max 5 per pagina,
 # soglia score >= 2.0).
 
 canali:
@@ -24,7 +24,7 @@ canali:
     nome: CIMA Research Foundation
     tematico_pc: true
     url: https://www.youtube.com/@CIMAfondazione/videos
-    video_count: 89
+    video_count: 94
   cmcc:
     nome: CMCC — Centro Euro-Mediterraneo sui Cambiamenti Climatici
     tematico_pc: false
@@ -34,22 +34,22 @@ canali:
     nome: CNSAS — Corpo Nazionale Soccorso Alpino e Speleologico
     tematico_pc: true
     url: https://www.youtube.com/@CnsasCanaleUfficiale/videos
-    video_count: 56
+    video_count: 58
   dario-bressanini:
     nome: Dario Bressanini — chimica e scienza dell'alimentazione
     tematico_pc: false
     url: https://www.youtube.com/@dariobressanini/videos
-    video_count: 138
+    video_count: 144
   dpc-gov:
     nome: Dipartimento della Protezione Civile (PCM)
     tematico_pc: true
     url: https://www.youtube.com/@DPCgov/videos
-    video_count: 390
+    video_count: 391
   geopop:
     nome: Geopop — divulgazione scientifica
     tematico_pc: false
     url: https://www.youtube.com/@geopop/videos
-    video_count: 1333
+    video_count: 1342
   ingv-terremoti:
     nome: INGV — Istituto Nazionale di Geofisica e Vulcanologia
     tematico_pc: true
@@ -74,12 +74,12 @@ canali:
     nome: Link4Universe — Adrian Fartade
     tematico_pc: false
     url: https://www.youtube.com/@link4universe/videos
-    video_count: 1217
+    video_count: 1232
   natgeo-italia:
     nome: National Geographic Italia
     tematico_pc: false
     url: https://www.youtube.com/@natgeoit/videos
-    video_count: 634
+    video_count: 647
   rai-cultura:
     nome: Rai Cultura (documentari)
     tematico_pc: false
@@ -89,17 +89,17 @@ canali:
     nome: Rai News
     tematico_pc: false
     url: https://www.youtube.com/@RaiNews/videos
-    video_count: 1880
+    video_count: 1895
   solarino-sismologo:
     nome: Stefano Solarino — sismologo INGV (divulgazione sismica)
     tematico_pc: true
     url: https://www.youtube.com/@solarinosismologo/videos
-    video_count: 116
+    video_count: 119
   wired-italia:
     nome: Wired Italia
     tematico_pc: false
     url: https://www.youtube.com/@WiredItalia/videos
-    video_count: 799
+    video_count: 802
 pagine:
   cartografia:
     title: Cartografia operativa del Piano di emergenza
@@ -386,16 +386,6 @@ pagine:
       score: 2.0
       titolo: Sicuri in Montagna - Come chiamare i soccorsi in ambiente impervio
       url: https://youtu.be/-mLtpjwaJVQ
-    - anchored:
-      - montagna
-      canale: cnsas
-      id: 0ntHvTt1IuQ
-      is_lis: false
-      overlap:
-      - montagna
-      score: 2.0
-      titolo: Sicuri in Montagna - Estote parati... Anche in montagna!
-      url: https://youtu.be/0ntHvTt1IuQ
   comunicazioni/2026-01-31-neve-castelli-romani-organizzazione-facile:
     title: 'Neve ai Castelli Romani: cosa fare'
     url: /comunicazioni/2026-01-31-neve-castelli-romani-organizzazione-facile/
@@ -2317,6 +2307,20 @@ pagine:
       url: https://youtu.be/7NKVJqnbt8c
     - anchored:
       - montagna
+      - sentiero
+      - sicuri
+      canale: cnsas
+      id: JEhyPLmVrEc
+      is_lis: false
+      overlap:
+      - montagna
+      - sentiero
+      - sicuri
+      score: 10.0
+      titolo: 'Sicuri sul Sentiero 2022 - Quando il Paese fa rete: montagna e sicurezza'
+      url: https://youtu.be/JEhyPLmVrEc
+    - anchored:
+      - montagna
       - sicuri
       canale: cnsas
       id: ka1TVa3ZAUw
@@ -2343,19 +2347,6 @@ pagine:
       score: 9.2
       titolo: 'Sicuri in Montagna - Freeride: free... Ma con delle regole'
       url: https://youtu.be/YMfRmwyiQv4
-    - anchored:
-      - montagna
-      - sicuri
-      canale: cnsas
-      id: IWz8cJyJWsQ
-      is_lis: false
-      overlap:
-      - montagna
-      - salita
-      - sicuri
-      score: 9.0
-      titolo: 'Sicuri in Montagna: scialpinismo, la salita'
-      url: https://youtu.be/IWz8cJyJWsQ
   comunicazioni/2026-05-30-escursioni-estive-sicurezza-montagna-castelli-facile:
     title: 'Escursioni in montagna: come stare al sicuro'
     url: /comunicazioni/2026-05-30-escursioni-estive-sicurezza-montagna-castelli-facile/
@@ -5980,6 +5971,17 @@ pagine:
       url: https://youtu.be/MXnPOoJ9y0c
     - anchored:
       - satellite
+      canale: link4universe
+      id: T-wp_8A2eRE
+      is_lis: false
+      overlap:
+      - lancio
+      - satellite
+      score: 7.0
+      titolo: LIVE - Lancio RocketLab - satellite MIKURA-I
+      url: https://youtu.be/T-wp_8A2eRE
+    - anchored:
+      - satellite
       canale: ingv-vulcani
       id: -7lSBNfnToM
       is_lis: false
@@ -6008,16 +6010,6 @@ pagine:
       score: 6.0
       titolo: Etna, 7 marzo 2021 – L’eruzione vista dal satellite (2)
       url: https://youtu.be/1HBw30dCsQU
-    - anchored:
-      - satellite
-      canale: ingv-vulcani
-      id: 3oFaI9yE7nQ
-      is_lis: false
-      overlap:
-      - satellite
-      score: 6.0
-      titolo: Etna, 18 febbraio 2021 – L’eruzione vista dal satellite (2)
-      url: https://youtu.be/3oFaI9yE7nQ
   comunicazioni/2026-09-04-fulmini-protezione-civile-autoprotezione-facile:
     title: 'Fulmini: cosa fare per stare al sicuro'
     url: /comunicazioni/2026-09-04-fulmini-protezione-civile-autoprotezione-facile/
@@ -7151,6 +7143,20 @@ pagine:
     - anchored:
       - emilia
       canale: dpc-gov
+      id: 4-r2rPCOEPM
+      is_lis: false
+      overlap:
+      - danni
+      - emilia
+      - finale
+      - scossa
+      - terremoto
+      score: 9.2
+      titolo: Finale Emilia, i danni dopo la scossa del 20 maggio – Terremoto Emilia
+      url: https://youtu.be/4-r2rPCOEPM
+    - anchored:
+      - emilia
+      canale: dpc-gov
       id: 0--y1oKrz-4
       is_lis: false
       overlap:
@@ -7161,19 +7167,6 @@ pagine:
       score: 8.2
       titolo: San Carlo, i danni dopo la scossa del 20 maggio – Terremoto Emilia
       url: https://youtu.be/0--y1oKrz-4
-    - anchored:
-      - emilia
-      canale: dpc-gov
-      id: 4-r2rPCOEPM
-      is_lis: false
-      overlap:
-      - danni
-      - emilia
-      - scossa
-      - terremoto
-      score: 8.2
-      titolo: Finale Emilia, i danni dopo la scossa del 20 maggio – Terremoto Emilia
-      url: https://youtu.be/4-r2rPCOEPM
     - anchored:
       - emilia
       canale: dpc-gov
@@ -9848,6 +9841,18 @@ pagine:
       url: https://youtu.be/yoTTJ9BJYIM
     - anchored:
       - chernobyl
+      - fukushima
+      canale: geopop
+      id: fvGJjZvwMH8
+      is_lis: false
+      overlap:
+      - chernobyl
+      - fukushima
+      score: 4.0
+      titolo: Qualcuno associa Chernobyl a Fukushima, ma ci sono differenze fondamentali tra i due eventi.
+      url: https://youtu.be/fvGJjZvwMH8
+    - anchored:
+      - chernobyl
       - nucleare
       canale: geopop
       id: ogsZv_kQVZ4
@@ -9881,17 +9886,6 @@ pagine:
       score: 3.0
       titolo: '"La lezione di Fukushima": Margherita Fronte al XII Convegno Nazionale del Cicap'
       url: https://youtu.be/Xw_qqKMOEnQ
-    - anchored:
-      - chernobyl
-      canale: geopop
-      id: 4G-cqJy_6_o
-      is_lis: false
-      overlap:
-      - chernobyl
-      - reattore
-      score: 3.0
-      titolo: Ricostruzione del disastro di Chernobyl, come e perché si è arrivati all'esplosione del reattore 4
-      url: https://youtu.be/4G-cqJy_6_o
   dossier/prove-generali-del-disastro:
     title: Prove generali del disastro
     url: /dossier/prove-generali-del-disastro/
