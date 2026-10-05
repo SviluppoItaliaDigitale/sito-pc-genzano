@@ -1,11 +1,11 @@
 {
  "_snapshot": {
-  "generato": "2026-10-05T11:52:46+00:00",
+  "generato": "2026-10-05T20:21:11+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
   "avvisi": 23,
   "scaduti_scartati": 1,
-  "in_corso": 2,
+  "in_corso": 5,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
@@ -127,7 +127,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261005115746.034"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Lazio",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -140,7 +140,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261005115746.046"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Lazio",
    "fenomeno": "Pioggia",
    "livello": "gialla",
@@ -257,7 +257,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261005115746.063"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Toscana",
    "fenomeno": "Temporali",
    "livello": "gialla",
