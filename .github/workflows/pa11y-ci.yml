@@ -46,9 +46,16 @@ jobs:
           node-version: '20'
 
       - name: "📦 Installa http-server + axe-core + puppeteer"
+        # axe-core è fissato alla versione su cui il gate è stato tarato: il
+        # 05/10/2026 la 4.14.0, uscita alle 19:43 italiane, ha acceso la regola
+        # «label-content-name-mismatch» (WCAG 2.5.3) e ha fatto fallire una PR
+        # di sola documentazione con 57 nodi su 10 pagine, 80 minuti dopo un
+        # gate verde con la 4.13.0. Un gate che cambia da solo non è un gate.
+        # L'aggiornamento si fa con una PR dedicata, dopo aver corretto i nodi
+        # che la nuova versione segnala (issue aperta lo stesso giorno).
         run: |
           npm install -g http-server
-          npm install puppeteer axe-core
+          npm install puppeteer axe-core@4.13.0
 
       - name: "🌐 Avvia server locale e attendi"
         run: |
