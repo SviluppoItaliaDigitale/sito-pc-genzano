@@ -1,6 +1,6 @@
 ---
 title: "Geoportali: come leggere le mappe di rischio del proprio territorio"
-date: 2026-10-05
+date: 2026-10-05T00:01:00+02:00
 description: "I geoportali pubblici mettono a disposizione mappe di rischio sismico, idrogeologico, AIB. Uno strumento civico utile anche al singolo cittadino."
 badge: "Informazione"
 priorita: "normale"
