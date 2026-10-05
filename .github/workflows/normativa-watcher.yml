@@ -1,7 +1,8 @@
 name: 📰 Normativa Watcher (rassegna quotidiana + digest settimanale)
 
 # Legge ogni giorno le FONTI PRIMARIE (albo pretorio di Genzano di Roma,
-# Gazzetta Ufficiale, Normattiva, BURL Lazio) e il lunedì aggiunge la
+# Gazzetta Ufficiale, Normattiva, BURL Lazio, notizie del Consiglio
+# regionale del Lazio) e il lunedì aggiunge la
 # rassegna stampa (Google News, feed, DPC via Firecrawl). Apre una issue con
 # gli atti a rilevanza diretta/indiretta: la Routine "Rassegna normativa e
 # albo pretorio" (rule 10) la lavora e pubblica gli articoli fino a live.
