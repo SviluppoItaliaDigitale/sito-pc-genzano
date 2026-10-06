@@ -49,7 +49,7 @@ Questi 8 file sono importati automaticamente da `CLAUDE.md` e definiscono le reg
 **18 storie di qualità letteraria** per bambini 3-11 anni, distribuite per fascia d'età:
 
 - **3-5 anni** (6 fiabe brevi, mascotte Tina la Tartaruga): autoprotezione di base con linguaggio semplice
-- **6-8 anni** (6 racconti, protagonista Flavio o Flavia, attimo decisivo ispirato a campagna DPC *Attimo Decisivo*)
+- **6-8 anni** (6 racconti, protagonista Flavio, attimo decisivo ispirato a campagna DPC *Attimo Decisivo*)
 - **9-11 anni** (6 racconti più letterari su memoria, ricostruzione, volontariato tecnico, lessico PC)
 
 Ogni storia ha:

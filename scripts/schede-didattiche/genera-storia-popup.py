@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Costruisce «Flavia, Flavio e lo zaino rosso», il libro pop-up con la storia.
+"""Costruisce «Flavio e lo zaino rosso», il libro pop-up con la storia.
 
 Com'è fatto il libro (e perché):
 
@@ -45,9 +45,9 @@ sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from libro_popup_dati import TAVOLE
 from storia_popup_dati import CAPITOLI, RITORNELLO, SOTTOTITOLO, TITOLO
 
-REV = "Rev. 1 · 16/09/2026"
+REV = "Rev. 2 · 06/10/2026"
 USCITA = pathlib.Path(__file__).resolve().parents[2] / (
-    "static/formazione/schede-stampabili/flavia-libro-popup/index.html")
+    "static/formazione/schede-stampabili/flavio-libro-popup/index.html")
 
 W, H = 287, 182            # foglio utile, mm (200 - banda 13 - respiro 5)
 PIEGA = 143.5              # la piega del libro
@@ -374,7 +374,7 @@ def foglio_capitolo(n, c, totale):
         <ul>{regole}</ul>
       </aside>
       <p class="st-crediti">{crediti}</p>
-      <p class="st-piede"><span>protezionecivilegenzano.it</span><span>FLAVIA-POPUP · Foglio {n + 2} di {totale} · {REV}</span></p>
+      <p class="st-piede"><span>protezionecivilegenzano.it</span><span>FLAVIO-POPUP · Foglio {n + 2} di {totale} · {REV}</span></p>
       {BANDA}
     </div>
   </article>'''
@@ -405,9 +405,9 @@ def foglio_copertina(totale):
       </div>
       <div class="st-retro">
         <h2>Per chi legge ad alta voce</h2>
-        <p>Dodici capitoli, un anno nella vita di Flavia e Flavio. In ogni capitolo succede una
-        cosa che può succedere davvero — la terra che trema, il fumo, il caldo, la luce che va
-        via — e i due fratelli fanno la cosa giusta. Il ritornello è sempre lo stesso:
+        <p>Dodici capitoli, un anno nella vita di Flavio, della sua famiglia e della sua amica
+        Silvia. In ogni capitolo succede una cosa che può succedere davvero — la terra che trema,
+        il fumo, il caldo, la luce che va via — e Flavio impara a fare la cosa giusta. Il ritornello è sempre lo stesso:
         <strong>«{html.escape(RITORNELLO)}»</strong> Non dice di non avere paura. Dice che cosa
         fare con la paura.</p>
         <p>Le regole in fondo a ogni capitolo sono le stesse delle pagine sui rischi del nostro
@@ -428,7 +428,7 @@ def foglio_copertina(totale):
         </div>
       </div>
       <p class="st-crediti">{CREDITI_ARASAAC}</p>
-      <p class="st-piede"><span>protezionecivilegenzano.it</span><span>FLAVIA-POPUP · Foglio 1 di {totale} · {REV}</span></p>
+      <p class="st-piede"><span>protezionecivilegenzano.it</span><span>FLAVIO-POPUP · Foglio 1 di {totale} · {REV}</span></p>
       {BANDA}
     </div>
   </article>'''
@@ -507,7 +507,7 @@ def foglio_guida(totale):
       seduto e sorvegliato, con la punta arrotondata. Carta normale della stampante va bene; su
       cartoncino leggero le scene stanno su meglio.</p>
       </div>
-      <p class="st-piede"><span>protezionecivilegenzano.it</span><span>FLAVIA-POPUP · Foglio 2 di {totale} · {REV}</span></p>
+      <p class="st-piede"><span>protezionecivilegenzano.it</span><span>FLAVIO-POPUP · Foglio 2 di {totale} · {REV}</span></p>
       {BANDA}
     </div>
   </article>'''
@@ -625,7 +625,7 @@ def main():
   <meta name="description" content="Un libro pop-up già pronto, con una storia: {html.escape(TITOLO)}. Dodici capitoli, un anno di piccole emergenze — terremoto, temporale, vento, alluvione, incendio, fumo, caldo, blackout, gas nei posti chiusi, evacuazione a scuola, la telefonata al 112. Il genitore taglia due righe e la scena si alza dal centro del libro. Da leggere insieme dai 4 anni.">
   <meta name="robots" content="index, follow">
   <!-- URL preferito: la copia su GitHub Pages rimanda alla produzione. -->
-  <link rel="canonical" href="https://www.protezionecivilegenzano.it/formazione/schede-stampabili/flavia-libro-popup/">
+  <link rel="canonical" href="https://www.protezionecivilegenzano.it/formazione/schede-stampabili/flavio-libro-popup/">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
   <style>{CSS}</style>
