@@ -1,7 +1,7 @@
 ---
 title: "Volontari civici davanti alle scuole: il Comune cerca candidati entro il 20 ottobre"
 date: 2026-10-05T00:03:00+02:00
-description: "Il Comune di Genzano cerca volontari civici per la sorveglianza degli alunni all'entrata e all'uscita da scuola. Domande entro il 20 ottobre 2026: requisiti e modulo."
+description: "Il Comune di Genzano cerca volontari civici per la sorveglianza di alunni all'entrata e uscita da scuola. Domande entro il 20 ottobre: requisiti e modulo."
 badge: "Avviso"
 priorita: "normale"
 autore: "Gruppo Comunale Volontari PC Genzano"
