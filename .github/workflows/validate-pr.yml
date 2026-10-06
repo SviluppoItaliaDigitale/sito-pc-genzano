@@ -79,6 +79,12 @@ jobs:
         # senza elencarla nello script se ne accorge qui, non fra sei mesi.
         run: python3 scripts/aggiungi-canonical-statiche.py --check
 
+      - name: "🧪 Qualità delle pagine (titolo, h1, testo alternativo)"
+        # Proposta «controllo qualità» del 06/10/2026: tutte le pagine del
+        # sito compilato, non un campione. Bloccano la pagina senza titolo,
+        # senza h1 o con un'immagine senza alt; più h1 e titoli doppi sono avvisi.
+        run: python3 scripts/check-qualita-pagine.py public
+
       - name: "📊 Statistiche build"
         run: |
           echo "Pagine generate: $(find public -name '*.html' | wc -l)"
@@ -124,6 +130,39 @@ jobs:
         run: |
           pip install --quiet pyyaml
           python3 scripts/check-dati-canonici.py
+
+  fogli-stampa:
+    name: "Fogli di stampa: niente fogli bianchi o quasi vuoti"
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: "⚙️ Setup Hugo"
+        uses: peaceiris/actions-hugo@2752ce1d29631191ea3f27c23495fa06139a5b78 # v3.2.1
+        with:
+          hugo-version: '0.154.5'
+          extended: true
+
+      - name: "🏗️ Build"
+        run: hugo --minify --quiet --baseURL "https://www.protezionecivilegenzano.it/"
+
+      - name: "🌐 Browser e lettore PDF"
+        run: |
+          pip install --quiet playwright pymupdf
+          playwright install --with-deps chromium
+
+      - name: "🖨️ Stampa le pagine toccate dalla PR e guarda i fogli"
+        # 06/10/2026: 49 schede mandavano la sola fascia delle affiliazioni o
+        # una riga di fonti su un foglio in più, quattro pagine del sito e la
+        # homepage stampavano fogli bianchi. Si vede solo stampando. Qui si
+        # stampano le schede, i kit e le storie modificati (tutta la famiglia
+        # se cambia il loro foglio di stile) più un campione di pagine del
+        # sito; il controllo completo gira ogni lunedì (controllo-fogli-stampa.yml).
+        run: python3 scripts/check-fogli-stampa.py --da-git "origin/${{ github.base_ref }}"
 
   fascicolo-esperimenti:
     name: "Fascicolo esperimenti: un foglio per esperimento"

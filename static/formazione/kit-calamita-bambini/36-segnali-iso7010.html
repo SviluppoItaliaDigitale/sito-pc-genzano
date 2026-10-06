@@ -12,6 +12,10 @@
   .segn-nome { font-size: 9pt; font-weight: 700; color: var(--pc-blue); line-height: 1.2; }
   .segn-cat { font-size: 7.5pt; color: #666; }
 </style>
+  <!-- Stampa: un 12% in meno tiene l'ultimo foglio pieno; senza, la fascia
+       delle affiliazioni o la riga finale andavano da sole su un foglio in più
+       (controllo fogli di stampa, 06/10/2026). -->
+  <style>@media print { .scheda { zoom: 0.88; } }</style>
 </head>
 <body>
 <button class="btn-stampa no-print" onclick="window.print()">🖨️ Stampa A4</button>

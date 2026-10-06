@@ -526,6 +526,18 @@ table tr:hover { background: #e8f4fd; }
 /* ── ANIMATIONS ── */
 .fade-in-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .fade-in-up.visible { opacity: 1; transform: translateY(0); }
+/* Le sezioni si mostrano solo quando lo script le vede entrare nello schermo.
+   Dove lo script non agisce restavano invisibili: in stampa (sei fogli bianchi
+   su nove stampando la homepage, controllo fogli di stampa 06/10/2026), senza
+   JavaScript (vedi il <noscript> in baseof.html), con il movimento ridotto e
+   con la pausa animazioni della barra di accessibilità. */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-up { opacity: 1; transform: none; transition: none; }
+}
+html.a11y-pause-animations .fade-in-up { opacity: 1; transform: none; transition: none; }
+@media print {
+  .fade-in-up { opacity: 1 !important; transform: none !important; }
+}
 
 /* ── FOOTER LINK ── */
 /* L'indirizzo email della colonna contatti è una stringa lunga senza punti
@@ -7698,6 +7710,13 @@ html.a11y-contrast-blue-cream .barra-lettura-fill { background: #003366; }
   body.has-bottomnav .back-to-top { bottom: calc(2rem + 64px + env(safe-area-inset-bottom, 0px)); }
   body.has-bottomnav .a11y-fab { bottom: calc(2rem + 64px + env(safe-area-inset-bottom, 0px)); }
   body.has-bottomnav .assistente-fab { bottom: calc(5.5rem + 64px + env(safe-area-inset-bottom, 0px)); }
+}
+/* In stampa il foglio A4 è più stretto di 992px, quindi la regola sopra
+   valeva anche lì: i 64px riservati alla barra (che in stampa non c'è)
+   mandavano un foglio bianco in coda alle pagine che finivano vicino al
+   bordo (controllo fogli di stampa, 06/10/2026). */
+@media print {
+  body.has-bottomnav { padding-bottom: 0 !important; }
 }
 @media (max-width: 575.98px) {
   body.has-bottomnav .a11y-fab { bottom: calc(1.25rem + 64px + env(safe-area-inset-bottom, 0px)); }
