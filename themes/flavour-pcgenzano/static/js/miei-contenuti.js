@@ -124,6 +124,9 @@
       scrivi([]);
       stato.textContent = 'Hai tolto tutte le pagine salvate.';
       disegna();
+      // il pulsante premuto ora è nascosto: il fuoco va al titolo dell'elenco
+      var titolo = document.getElementById('miei-contenuti-titolo');
+      if (titolo) titolo.focus();
     });
     if (!memoriaDisponibile()) {
       vuoto.textContent = 'Questo browser non permette di salvare pagine (succede, per esempio, in navigazione privata). Puoi usare i preferiti del browser.';
