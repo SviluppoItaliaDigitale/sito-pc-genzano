@@ -63,6 +63,10 @@ Non sai da dove partire? Scegli la tua situazione: ogni scelta ti porta ai mater
 {{< link-card url="/assistente/" icon="bi-chat-dots" titolo="Non sai cosa cercare?" desc="L'assistente guidato ti porta alla risposta giusta con poche domande." >}}
 </div>
 
+{{< callout tipo="info" titolo="Proietta le pagine in classe con la Modalità Aula" >}}
+Nelle pagine con più sezioni, in cima, accanto al tempo di lettura o nel riquadro «Leggi questa pagina in altri modi», trovi il pulsante **Modalità Aula**. La pagina diventa una serie di schermate a tutto schermo, con testo grande e senza menu: una per sezione. Vai avanti e indietro con i pulsanti o con le frecce della tastiera, ingrandisci il testo con A+ ed esci con Esc. Provala sulla pagina del [rischio sismico](/rischi-prevenzione/rischio-sismico/).
+{{< /callout >}}
+
 ### Kit per fascia d'età {#kit}
 
 | Kit | Età | Contenuti principali |
