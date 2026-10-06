@@ -637,6 +637,8 @@ Pagina interattiva che guida il cittadino con domande semplici fino a una rispos
 - **Accessibilità**: `aria-live="polite"`, focus sul `<h2>` ad ogni render, tastiera nativa, banner rosso 112, fallback `<noscript>`.
 - **Deep link**: stato in `location.hash` (es. `/assistente/#terremoto_casa`). **Homepage**: card "Cosa devo fare?" in `data/quick_links.yaml` → `servizi[0]`.
 
+**Copertura obbligatoria (dal 06/10/2026)**: l'assistente porta a ogni voce del menu e del piè di pagina, e ogni collegamento porta a una pagina che esiste. Lo controlla `scripts/check-navigazione.py` (bloccante in `validate-pr.yml`, rule 04b § menu): una voce di menu nuova senza la sua risposta nell'assistente non passa.
+
 **Per aggiungere un nuovo percorso**: aggiungere un nodo `question` collegato da `start.options`, poi le relative `answer` referenziate da `options[n].next`. Rispettare il criterio `emergency: true` solo per situazioni operative reali (coerenza con regola `06-protezione-civile-scientifica.md` sul tono di comunicazione del rischio). Ogni nodo `answer` può avere un `pittogramma` opzionale (es. `'arasaac/terremoto.png'`) renderizzato come `<figure>` accessibile sopra il corpo della risposta.
 
 ## Partial `structured-data` (JSON-LD Schema.org)

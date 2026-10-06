@@ -69,7 +69,8 @@ Il numero totale di voci di primo livello è 8 (Home + 5 dropdown + Comunicazion
 2. Decidi se è di primo livello (rara: solo se è un'azione fondamentale) o sotto un dropdown esistente.
 3. Niente modifiche al template Hugo: rendering automatico per le pagine generate da Hugo.
 4. **Aggiorna anche `static/app-shared/site-chrome.js`** (vedi sezione successiva): il menu è hardcoded lì per le pagine statiche fuori da Hugo (giochi, schede stampabili, abili-a-proteggere, ecc.).
-5. Verifica con `hugo --quiet --minify` che la build resti pulita.
+5. 🔴 **Aggiungi la voce anche all'assistente virtuale** (`themes/flavour-pcgenzano/layouts/assistente/list.html`: un'opzione nella macro-area giusta più una risposta con il collegamento) **e alla mappa del sito** (`content/mappa-sito/_index.md`). Vale anche per le voci del piè di pagina. `scripts/check-navigazione.py --public public` lo verifica in `validate-pr.yml` e blocca la PR: ogni voce del menu e del piè di pagina deve stare in entrambi, l'albero dell'assistente deve essere integro (nessun «next» verso risposte inesistenti, nessuna risposta irraggiungibile) e ogni collegamento dei due deve portare a una pagina o a un'ancora della build. Nasce il 06/10/2026: all'assistente mancavano 19 voci e due collegamenti portavano a pagine inesistenti, alla mappa ne mancavano 7.
+6. Verifica con `hugo --quiet --minify` che la build resti pulita.
 
 Non aggiungere voci di primo livello senza valutarne l'impatto sul mobile: il limite di sicurezza è 6-7 voci visibili contemporaneamente.
 

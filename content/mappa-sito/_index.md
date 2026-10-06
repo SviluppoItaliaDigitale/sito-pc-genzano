@@ -189,6 +189,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
 <div class="ms-section"><span class="ms-section-icon" style="background:#dc3545"><i class="bi bi-bookmark-star-fill"></i></span><h2>Cosa fare in caso di…</h2></div>
 
 <div class="ms-grid">
+<a class="ms-card ms-emerg" href="/rischi-prevenzione/">
+  <div class="ms-card-icon"><i class="bi bi-shield-exclamation"></i></div>
+  <p class="ms-card-title">Rischi e prevenzione</p>
+  <p class="ms-card-desc">Tutti i rischi del territorio in una pagina: cosa fare prima, durante e dopo, e le schede di consultazione rapida.</p>
+</a>
 <a class="ms-card ms-emerg" href="/rischi-prevenzione/rischio-sismico/">
   <div class="ms-card-icon"><i class="bi bi-activity"></i></div>
   <p class="ms-card-title">Terremoto</p>
@@ -639,6 +644,21 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Diventa Volontario</p>
   <p class="ms-card-desc">Come iscriversi al Gruppo, requisiti, formazione obbligatoria, cosa puoi fare.</p>
 </a>
+<a class="ms-card" href="/campagna-volontari/">
+  <div class="ms-card-icon"><i class="bi bi-megaphone"></i></div>
+  <p class="ms-card-title">La campagna social</p>
+  <p class="ms-card-desc">«Non c'è Protezione Civile senza di te»: spot, caroselli, storie e video della campagna della Regione Lazio per nuovi volontari.</p>
+</a>
+<a class="ms-card" href="/per-gli-enti/">
+  <div class="ms-card-icon"><i class="bi bi-diagram-3"></i></div>
+  <p class="ms-card-title">Per gli enti e le scuole</p>
+  <p class="ms-card-desc">Come il Gruppo collabora con le scuole, con il Comune e con gli altri gruppi di protezione civile dei Castelli Romani.</p>
+</a>
+<a class="ms-card" href="/san-pio-da-pietrelcina/">
+  <div class="ms-card-icon"><i class="bi bi-star"></i></div>
+  <p class="ms-card-title">Il nostro patrono</p>
+  <p class="ms-card-desc">San Pio da Pietrelcina, patrono dei volontari della protezione civile italiana: biografia e motivi della proclamazione.</p>
+</a>
 </div>
 
 <div class="ms-section"><span class="ms-section-icon" style="background:#003366"><i class="bi bi-journals"></i></span><h2>Normativa di Protezione Civile</h2></div>
@@ -705,6 +725,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Siti utili</p>
   <p class="ms-card-desc">Link a istituzioni di Protezione Civile: DPC, Regione Lazio, INGV, ISPRA, Comune.</p>
 </a>
+<a class="ms-card ms-tool" href="/dossier/">
+  <div class="ms-card-icon"><i class="bi bi-journal-richtext"></i></div>
+  <p class="ms-card-title">Dossier interattivi</p>
+  <p class="ms-card-desc">Racconti visivi della protezione civile: storie da scorrere con immagini, dati animati e mappe da esplorare.</p>
+</a>
 </div>
 
 <div class="ms-section"><span class="ms-section-icon" style="background:#b45309"><i class="bi bi-universal-access-circle"></i></span><h2>Versioni speciali e accessibilità</h2></div>
@@ -745,6 +770,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Social Media Policy</p>
   <p class="ms-card-desc">Linee guida e regole di comportamento sui canali social ufficiali del Gruppo.</p>
 </a>
+<a class="ms-card ms-doc" href="/metodo-editoriale/">
+  <div class="ms-card-icon"><i class="bi bi-patch-check"></i></div>
+  <p class="ms-card-title">Metodo editoriale</p>
+  <p class="ms-card-desc">Come scriviamo e verifichiamo i contenuti: fonti ufficiali, controllo delle norme, aggiornamento, accessibilità e correzioni.</p>
+</a>
 </div>
 
 ---
@@ -761,6 +791,7 @@ Se trovi un link rotto o una pagina mancante, segnalacelo a
 La protezione civile spiegata come materia.
 
 - [Conoscere la Protezione Civile](/conoscere/) — la panoramica della sezione
+- [Manuale di Protezione Civile](/manuale/) — il manuale completo, online e in PDF
 - [Il catalogo dei rischi](/conoscere/catalogo-dei-rischi/) — i rischi naturali e di origine umana, spiegati come materia
 - [Il Servizio Nazionale](/conoscere/servizio-nazionale/)
 - [Le quattro fasi](/conoscere/le-quattro-fasi/)

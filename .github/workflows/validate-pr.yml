@@ -85,6 +85,14 @@ jobs:
         # senza h1 o con un'immagine senza alt; più h1 e titoli doppi sono avvisi.
         run: python3 scripts/check-qualita-pagine.py public
 
+      - name: "🧭 Assistente virtuale e mappa del sito: tutte le voci, nessun collegamento rotto"
+        # 06/10/2026: all'assistente mancavano 19 voci del menu e due
+        # collegamenti portavano a pagine inesistenti; alla mappa ne mancavano
+        # 7. Ogni voce del menu e del piè di pagina deve stare in entrambi,
+        # l'albero dell'assistente deve essere integro e ogni collegamento
+        # deve portare a una pagina della build.
+        run: python3 scripts/check-navigazione.py --public public
+
       - name: "📊 Statistiche build"
         run: |
           echo "Pagine generate: $(find public -name '*.html' | wc -l)"
