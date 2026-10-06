@@ -1,7 +1,7 @@
 {
  "_snapshot": {
   "fonte": "https://rapidmapping.emergency.copernicus.eu/backend/dashboard-api/public-activations-info/",
-  "generato": "2026-10-06T20:02:36+00:00",
+  "generato": "2026-10-06T23:44:52+00:00",
   "licenza": "Copernicus Emergency Management Service — dati pubblici",
   "nota": "Copia locale: l'API non espone CORS, il browser non può leggerla direttamente."
  },
@@ -18,7 +18,7 @@
    ],
    "eventTime": "2026-10-01T07:00:00",
    "gdacsId": null,
-   "lastUpdate": "2026-10-06T19:57:35.522563",
+   "lastUpdate": "2026-10-06T20:43:17.363492",
    "n_aois": 8,
    "n_products": 14,
    "name": "Flood in Crete, Greece"
