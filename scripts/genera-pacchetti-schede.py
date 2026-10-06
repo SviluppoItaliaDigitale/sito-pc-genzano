@@ -235,6 +235,10 @@ def _scope_regola(prelude: str, corpo: str, sezione: str) -> str:
                 radice_html = radice_html or not sel.startswith("body")
             else:
                 dentro.append(f"{sezione}{resto}" if resto[0] in " >~+" else f"{sezione} {resto.strip()}")
+        elif re.match(r"\.pacchetto-scheda(?![\w-])", sel):
+            # La scheda ha regole scritte apposta per il pacchetto: la classe
+            # sta sulla sezione stessa, non su un suo discendente.
+            dentro.append(f"{sezione}{sel}")
         else:
             dentro.append(f"{sezione} {sel}")
     out = []
@@ -261,9 +265,17 @@ def _scope_regola(prelude: str, corpo: str, sezione: str) -> str:
     return "\n".join(out)
 
 
-def scope_css(css: str, slug: str) -> str:
-    """Riscrive un foglio di stile di scheda perché valga solo nella sua sezione."""
+def scope_css(css: str, slug: str, regole_pacchetto: bool | None = None) -> str:
+    """Riscrive un foglio di stile di scheda perché valga solo nella sua sezione.
+
+    regole_pacchetto: la scheda ha già regole proprie per «Stampa tutto»
+    (selettori .pacchetto-scheda, per esempio il libro pop-up che ruota il
+    foglio orizzontale nella pagina verticale). In quel caso non si aggiunge
+    la riduzione automatica delle schede orizzontali. None = lo si ricava dal
+    foglio stesso."""
     sezione = f':where([id="scheda-{slug}"])'
+    if regole_pacchetto is None:
+        regole_pacchetto = bool(re.search(r"\.pacchetto-scheda(?![\w-])", css))
     out: list[str] = []
     i, n = 0, len(css)
     while i < n:
@@ -281,11 +293,10 @@ def scope_css(css: str, slug: str) -> str:
         corpo = css[j + 1:fine]
         testa = re.sub(r"/\*.*?\*/", "", prelude, flags=re.S).strip()
         if testa.lower().startswith(_AT_CON_REGOLE):
-            out.append(f"{testa} {{\n{scope_css(corpo, slug)}\n}}")
+            out.append(f"{testa} {{\n{scope_css(corpo, slug, regole_pacchetto)}\n}}")
         elif re.fullmatch(r"@page", testa, flags=re.I):
-            # Pagina senza nome della scheda (di solito il margine): diventa una
-            # pagina con nome riservata alla sua sezione, così il margine vale
-            # solo per lei. Il formato resta quello del pacchetto (A4 verticale).
+            # Pagina senza nome della scheda: non passa al pacchetto, che ha il
+            # suo formato (A4 verticale, margine 5 mm).
             decl = [d.strip() for d in corpo.split(";") if ":" in d]
             orizzontale = any(
                 d.split(":", 1)[0].strip().lower() == "size" and "landscape" in d.lower()
@@ -294,7 +305,7 @@ def scope_css(css: str, slug: str) -> str:
             # schede stampano con il margine del pacchetto (5 mm). Le pagine con
             # nome lo permetterebbero, ma Chromium le impagina male (provato il
             # 06/10/2026: un'immagine a tutta pagina scivolava sul foglio dopo).
-            if orizzontale:
+            if orizzontale and not regole_pacchetto:
                 # Il browser stampa un documento in un solo formato: una scheda
                 # pensata in orizzontale (i libri pop-up) sporgerebbe dal foglio
                 # verticale e lui rimpicciolirebbe TUTTO il pacchetto per farla
@@ -602,7 +613,8 @@ def costruisci_pacchetto(
     # Stili di ogni scheda isolati nella sua sezione (vedi scope_css).
     all_styles: list[str] = []
     for slug, _, styles, _ in schede:
-        scoped = "\n".join(scope_css(s, slug) for s in styles).strip()
+        proprie = any(re.search(r"\.pacchetto-scheda(?![\w-])", s) for s in styles)
+        scoped = "\n".join(scope_css(s, slug, proprie) for s in styles).strip()
         if scoped:
             all_styles.append(scoped)
 

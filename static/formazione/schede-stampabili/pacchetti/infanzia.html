@@ -235,10 +235,9 @@
       border-radius: 5px; color: var(--scheda-blu); text-decoration: none; font-size: 0.85rem; }
 :where([id="scheda-flavia-libro-popup"]) .st-indice a:hover, :where([id="scheda-flavia-libro-popup"]) .st-indice a:focus { background: var(--scheda-blu); color: #fff; outline: 2px solid #ffbe2e; outline-offset: 2px; }
 @media print {
-@media print { :where([id="scheda-flavia-libro-popup"]) { zoom: 0.697; } }
 :where([id="scheda-flavia-libro-popup"]) .scheda-page:has(> .st-foglio) { width: 287mm; min-height: auto; padding: 0; margin: 0; }
-:where([id="scheda-flavia-libro-popup"]) .pacchetto-scheda .scheda-page:has(> .st-foglio) { width: 200mm; height: 287mm; overflow: hidden; }
-:where([id="scheda-flavia-libro-popup"]) .pacchetto-scheda .scheda-page:has(> .st-foglio) > .st-foglio { transform: translateX(195mm) rotate(90deg); transform-origin: 0 0; }
+:where([id="scheda-flavia-libro-popup"]).pacchetto-scheda .scheda-page:has(> .st-foglio) { width: 200mm; height: 287mm; overflow: hidden; }
+:where([id="scheda-flavia-libro-popup"]).pacchetto-scheda .scheda-page:has(> .st-foglio) > .st-foglio { transform: translateX(195mm) rotate(90deg); transform-origin: 0 0; }
 }
 @media screen and (max-width: 300mm) {
 :where([id="scheda-flavia-libro-popup"]) .scheda-page:has(> .st-foglio) { width: 100%; min-height: 0; padding: 2mm; overflow-x: auto; }

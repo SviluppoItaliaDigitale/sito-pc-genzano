@@ -59,9 +59,11 @@ solito è l'immagine: si riduce di un paio di millimetri e si ricontrolla.
 Nel pacchetto «Stampa tutto» la scheda deve dare **lo stesso numero di fogli**
 che dà stampata da sola. Dal 6 ottobre 2026 `genera-pacchetti-schede.py` isola
 gli stili di ogni scheda nella sua sezione: una scala di stampa o un margine
-scritti per una scheda non toccano più le altre, e il libro pop-up pensato in
-orizzontale viene ridotto in proporzione invece di far rimpicciolire tutto il
-pacchetto. Per controllarlo si stampa il pacchetto lasciando visibile solo la
+scritti per una scheda non toccano più le altre. Il libro pop-up pensato in
+orizzontale ha regole sue per il pacchetto (`.pacchetto-scheda`): ogni foglio
+ruota di 90 gradi ed entra intero nella pagina verticale, senza far
+rimpicciolire il resto. Una scheda orizzontale senza regole proprie viene
+invece ridotta in proporzione. Per controllarlo si stampa il pacchetto lasciando visibile solo la
 sezione della scheda (le altre nascoste, tutto il CSS al suo posto) e si
 contano le pagine.
 

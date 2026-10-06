@@ -189,12 +189,17 @@ def modo_tutti(dal: str, massimo: int, prova: bool) -> int:
             c.correggi("PATCH", f"{base}/pulls/comments/{o['id']}", "body", o.get("body") or "", f"commento di revisione {o['id']}")
 
     print("Descrizioni di PR e issue, e revisioni")
+    interrotto = False
     for o in elenco(f"{base}/issues?state=all&since={since}"):
         n = o["number"]
         if "pull_request" in o:
             if dell_account(o):
                 c.correggi("PATCH", f"{base}/pulls/{n}", "body", o.get("body") or "", f"descrizione PR #{n}")
             if c.esaurito() and not prova:
+                # Giro pieno: inutile leggere le revisioni delle PR restanti.
+                # Il resto non è contato, quindi si segnala che il lavoro non
+                # è finito e il giro successivo riprende.
+                interrotto = True
                 break
             for r in elenco(f"{base}/pulls/{n}/reviews", massimo_pagine=3):
                 if dell_account(r):
@@ -203,8 +208,13 @@ def modo_tutti(dal: str, massimo: int, prova: bool) -> int:
             c.correggi("PATCH", f"{base}/issues/{n}", "body", o.get("body") or "", f"descrizione issue #{n}")
 
     resto = c.trovati - c.fatti
+    if interrotto:
+        # Il giro si è fermato prima di vedere tutto: quanto resta non si sa,
+        # ma non è zero finché un giro non arriva in fondo.
+        resto = max(resto, 1)
     print(f"\ntesti con la firma: {c.trovati} · {'da correggere (prova)' if prova else 'corretti'}: {c.fatti}"
-          + (f" · rimasti per il prossimo giro: {resto}" if resto > 0 else ""))
+          + (" · giro interrotto al limite, il prossimo riprende" if interrotto
+             else f" · rimasti per il prossimo giro: {resto}" if resto > 0 else ""))
     return resto
 
 
