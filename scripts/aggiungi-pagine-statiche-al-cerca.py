@@ -190,6 +190,9 @@ def main():
                 print(f'  SKIP {html_file}: {e}')
                 continue
 
+            if re.search(r'http-equiv=["\']refresh["\']', content, re.IGNORECASE):
+                continue  # pagina di rimando a un indirizzo nuovo: non è un contenuto
+
             title = extract_title(content)
             if not title:
                 continue  # senza titolo non vale la pena indicizzare
