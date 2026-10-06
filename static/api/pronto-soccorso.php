@@ -13,7 +13,7 @@ declare(strict_types=1);
    niente da aggiungere alla CSP, nessun servizio esterno che sappia chi sta
    guardando. E' lo stesso ponte gia' in uso per i mezzi aerei; le ragioni per
    cui questa e' l'unica eccezione al sito statico stanno in
-   .claude/rules/05-github-aruba-deploy.md § "L'unica eccezione al sito statico".
+   la documentazione interna del deploy, sezione "L'unica eccezione al sito statico".
 
    LICENZA E RIUSO. Il dato e' pubblicato dalla Regione Lazio come open data
    ("Pronto Soccorso - Accessi in tempo reale", dati.lazio.it) sotto Creative
