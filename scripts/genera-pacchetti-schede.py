@@ -142,6 +142,178 @@ def estrai_styles_articoli_titolo(
     return styles, pagine, titolo
 
 
+# ---------------------------------------------------------------------------
+# Isolamento degli stili delle schede dentro il pacchetto (06/10/2026)
+#
+# Ogni scheda porta i suoi <style>. Concatenati nell'intestazione del
+# pacchetto valevano per tutte le schede: vinceva l'ultima regola, e una
+# scala di stampa su html (o un .scheda-footer senza margini) scritta per una
+# scheda cambiava l'impaginazione di tutte le altre. Ora ogni regola vale solo
+# dentro la <section> della sua scheda:
+#   - i selettori ricevono il prefisso :where([id="scheda-<slug>"]), che non
+#     aggiunge specificità: dentro la sezione la scheda si comporta come
+#     stampata da sola rispetto a scheda-print.css;
+#   - html { font-size: N% } (la scala di stampa della scheda) diventa
+#     zoom: N/100 sulla sola sezione, perché le dimensioni in rem dipendono
+#     dalla radice del documento e non si possono ridurre per una sezione;
+#   - body tiene solo font-size (lo sfondo è del pacchetto);
+#   - @page senza nome della scheda non passa al pacchetto, che stampa tutto
+#     in A4 verticale con margine di 5 mm: il browser usa un solo formato per
+#     documento. Le schede pensate in orizzontale (i libri pop-up) si riducono
+#     in proporzione per entrare nel foglio, altrimenti sporgerebbero e il
+#     browser rimpicciolirebbe l'intero pacchetto. Pagine con nome e
+#     @font-face restano come sono.
+# ---------------------------------------------------------------------------
+
+_AT_CON_REGOLE = ("@media", "@supports", "@container", "@layer", "@document")
+
+
+def _salta_fino(css: str, i: int, stop: str) -> int:
+    """Indice del primo carattere in `stop` a partire da i, saltando commenti
+    e stringhe (le schede usano content: "{" e simili). len(css) se assente."""
+    n = len(css)
+    while i < n:
+        c = css[i]
+        if c == "/" and css.startswith("/*", i):
+            j = css.find("*/", i + 2)
+            i = n if j < 0 else j + 2
+            continue
+        if c in "\"'":
+            j = i + 1
+            while j < n and css[j] != c:
+                j += 2 if css[j] == "\\" else 1
+            i = j + 1
+            continue
+        if c in stop:
+            return i
+        i += 1
+    return n
+
+
+def _blocco(css: str, i: int) -> int:
+    """Dato l'indice dopo una '{', restituisce l'indice della '}' che la chiude."""
+    livello = 1
+    while True:
+        i = _salta_fino(css, i, "{}")
+        if i >= len(css):
+            return len(css)
+        livello += 1 if css[i] == "{" else -1
+        if livello == 0:
+            return i
+        i += 1
+
+
+def _dividi_selettori(prelude: str) -> list[str]:
+    parti, prof, cur = [], 0, []
+    for c in prelude:
+        if c in "([":
+            prof += 1
+        elif c in ")]":
+            prof -= 1
+        if c == "," and prof == 0:
+            parti.append("".join(cur))
+            cur = []
+        else:
+            cur.append(c)
+    parti.append("".join(cur))
+    return [s.strip() for s in parti if s.strip()]
+
+
+_RE_RADICE = re.compile(r"^(?:html|:root)(?:\s+body)?(?![\w-])|^body(?![\w-])")
+
+
+def _scope_regola(prelude: str, corpo: str, sezione: str) -> str:
+    selettori = _dividi_selettori(re.sub(r"/\*.*?\*/", "", prelude, flags=re.S))
+    sulla_sezione, dentro = [], []
+    radice_html = False
+    for sel in selettori:
+        m = _RE_RADICE.match(sel)
+        if m:
+            resto = sel[m.end():]
+            if not resto.strip():
+                sulla_sezione.append(sel)
+                radice_html = radice_html or not sel.startswith("body")
+            else:
+                dentro.append(f"{sezione}{resto}" if resto[0] in " >~+" else f"{sezione} {resto.strip()}")
+        else:
+            dentro.append(f"{sezione} {sel}")
+    out = []
+    if dentro:
+        out.append(f"{', '.join(dentro)} {{{corpo}}}")
+    if sulla_sezione:
+        # Della radice si tiene solo la dimensione del testo: su html diventa
+        # zoom della sezione (scala di stampa), su body resta font-size.
+        decl = []
+        for d in corpo.split(";"):
+            if ":" not in d:
+                continue
+            k, v = d.split(":", 1)
+            k, v = k.strip().lower(), v.strip()
+            if k != "font-size":
+                continue
+            mp = re.fullmatch(r"(\d+(?:\.\d+)?)%\s*(!important)?", v)
+            if radice_html and mp:
+                decl.append(f"zoom: {float(mp.group(1)) / 100:g}")
+            elif not radice_html:
+                decl.append(f"font-size: {v}")
+        if decl:
+            out.append(f"{sezione} {{ {'; '.join(decl)}; }}")
+    return "\n".join(out)
+
+
+def scope_css(css: str, slug: str) -> str:
+    """Riscrive un foglio di stile di scheda perché valga solo nella sua sezione."""
+    sezione = f':where([id="scheda-{slug}"])'
+    out: list[str] = []
+    i, n = 0, len(css)
+    while i < n:
+        j = _salta_fino(css, i, "{};")
+        prelude = css[i:j].strip()
+        if j >= n:
+            break
+        if css[j] == ";":                      # @import, @charset: non servono
+            i = j + 1
+            continue
+        if css[j] == "}":                      # graffa orfana: si ignora
+            i = j + 1
+            continue
+        fine = _blocco(css, j + 1)
+        corpo = css[j + 1:fine]
+        testa = re.sub(r"/\*.*?\*/", "", prelude, flags=re.S).strip()
+        if testa.lower().startswith(_AT_CON_REGOLE):
+            out.append(f"{testa} {{\n{scope_css(corpo, slug)}\n}}")
+        elif re.fullmatch(r"@page", testa, flags=re.I):
+            # Pagina senza nome della scheda (di solito il margine): diventa una
+            # pagina con nome riservata alla sua sezione, così il margine vale
+            # solo per lei. Il formato resta quello del pacchetto (A4 verticale).
+            decl = [d.strip() for d in corpo.split(";") if ":" in d]
+            orizzontale = any(
+                d.split(":", 1)[0].strip().lower() == "size" and "landscape" in d.lower()
+                for d in decl)
+            # Il margine della scheda non si porta nel pacchetto: tutte le
+            # schede stampano con il margine del pacchetto (5 mm). Le pagine con
+            # nome lo permetterebbero, ma Chromium le impagina male (provato il
+            # 06/10/2026: un'immagine a tutta pagina scivolava sul foglio dopo).
+            if orizzontale:
+                # Il browser stampa un documento in un solo formato: una scheda
+                # pensata in orizzontale (i libri pop-up) sporgerebbe dal foglio
+                # verticale e lui rimpicciolirebbe TUTTO il pacchetto per farla
+                # entrare. Si riduce invece la sola scheda, in proporzione.
+                mm = 5.0
+                for d in decl:
+                    k, v = d.split(":", 1)
+                    mv = re.fullmatch(r"\s*(\d+(?:\.\d+)?)mm\s*", v)
+                    if k.strip().lower() == "margin" and mv:
+                        mm = float(mv.group(1))
+                out.append(f"@media print {{ {sezione} {{ zoom: {(210 - 2 * mm) / (297 - 2 * mm):.3f}; }} }}")
+        elif testa.startswith("@"):            # @page con nome, @font-face, @keyframes
+            out.append(f"{testa} {{{corpo}}}")
+        elif testa:
+            out.append(_scope_regola(testa, corpo, sezione))
+        i = fine + 1
+    return "\n".join(x for x in out if x.strip())
+
+
 def reindirizza_path_relativi(html: str, slug: str) -> str:
     """
     Riscrive src/href relativi in path assoluti dipendenti dalla cartella
@@ -349,9 +521,9 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 __STYLES_SCHEDE__
   </style>
   <style>
-    /* Ultima parola sul formato di pagina: le schede portano le proprie regole @page (anche
-       orizzontali, come il libro pop-up con la storia) e, concatenate qui sopra, l'ultima
-       vincerebbe su tutto il pacchetto. Il pacchetto stampa sempre in verticale. */
+    /* Formato del pacchetto: A4 verticale, margine 5 mm, per tutte le schede. Le regole
+       @page delle schede non passano al pacchetto; le schede orizzontali (il libro pop-up
+       con la storia) sono ridotte in proporzione per entrare nel foglio. */
     @media print { @page { size: A4; margin: 5mm; } }
   </style>
 </head>
@@ -427,14 +599,12 @@ def costruisci_pacchetto(
     n = len(schede)
     n_pagine = sum(len(pagine) for _, _, _, pagine in schede)
 
-    seen_styles: set[str] = set()
+    # Stili di ogni scheda isolati nella sua sezione (vedi scope_css).
     all_styles: list[str] = []
-    for _, _, styles, _ in schede:
-        for s in styles:
-            key = s.strip()
-            if key and key not in seen_styles:
-                seen_styles.add(key)
-                all_styles.append(s)
+    for slug, _, styles, _ in schede:
+        scoped = "\n".join(scope_css(s, slug) for s in styles).strip()
+        if scoped:
+            all_styles.append(scoped)
 
     toc_items: list[str] = []
     for slug, titolo, _, pagine in schede:
@@ -466,10 +636,7 @@ def costruisci_pacchetto(
         )
     articoli_aggregati = "\n\n".join(schede_html)
 
-    styles_concat = "\n\n".join(
-        f"/* === stili scheda {i+1} === */\n{s}"
-        for i, s in enumerate(all_styles)
-    )
+    styles_concat = "\n\n".join(all_styles)
 
     return (HTML_TEMPLATE
         .replace("__LABEL__", info["label"])
