@@ -1,11 +1,11 @@
 {
  "_snapshot": {
-  "generato": "2026-10-06T01:23:53+00:00",
+  "generato": "2026-10-06T14:50:48+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 44,
-  "scaduti_scartati": 3,
-  "in_corso": 11,
+  "avvisi": 43,
+  "scaduti_scartati": 0,
+  "in_corso": 18,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
@@ -18,9 +18,9 @@
    "severita": "Severe",
    "certezza": "Likely",
    "inizio": "2026-10-06T18:00:00+00:00",
-   "fine": "2026-10-07T21:59:00+00:00",
-   "emesso": "2026-10-05T09:57:47+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.054"
+   "fine": "2026-10-07T17:59:00+00:00",
+   "emesso": "2026-10-06T09:32:10+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.110"
   },
   {
    "in_corso": false,
@@ -31,9 +31,9 @@
    "severita": "Severe",
    "certezza": "Likely",
    "inizio": "2026-10-06T18:00:00+00:00",
-   "fine": "2026-10-07T21:59:00+00:00",
-   "emesso": "2026-10-05T09:57:47+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.053"
+   "fine": "2026-10-07T17:59:00+00:00",
+   "emesso": "2026-10-06T09:32:10+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.109"
   },
   {
    "in_corso": false,
@@ -44,9 +44,9 @@
    "severita": "Severe",
    "certezza": "Likely",
    "inizio": "2026-10-07T12:00:00+00:00",
-   "fine": "2026-10-07T21:59:00+00:00",
-   "emesso": "2026-10-05T09:57:47+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.031"
+   "fine": "2026-10-08T21:59:00+00:00",
+   "emesso": "2026-10-06T09:32:09+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.078"
   },
   {
    "in_corso": false,
@@ -57,9 +57,9 @@
    "severita": "Severe",
    "certezza": "Likely",
    "inizio": "2026-10-07T12:00:00+00:00",
-   "fine": "2026-10-07T21:59:00+00:00",
-   "emesso": "2026-10-05T09:57:46+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.030"
+   "fine": "2026-10-08T21:59:00+00:00",
+   "emesso": "2026-10-06T09:32:09+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.077"
   },
   {
    "in_corso": true,
@@ -69,10 +69,10 @@
    "evento_originale": "Orange Thunderstorm Warning",
    "severita": "Severe",
    "certezza": "Likely",
-   "inizio": "2026-10-06T00:00:00+00:00",
-   "fine": "2026-10-07T11:59:00+00:00",
-   "emesso": "2026-10-05T09:57:47+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.048"
+   "inizio": "2026-10-06T08:00:00+00:00",
+   "fine": "2026-10-07T05:59:00+00:00",
+   "emesso": "2026-10-06T09:32:10+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.097"
   },
   {
    "in_corso": true,
@@ -82,10 +82,10 @@
    "evento_originale": "Orange Rain Warning",
    "severita": "Severe",
    "certezza": "Likely",
-   "inizio": "2026-10-06T00:00:00+00:00",
-   "fine": "2026-10-07T11:59:00+00:00",
-   "emesso": "2026-10-05T09:57:47+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.047"
+   "inizio": "2026-10-06T08:00:00+00:00",
+   "fine": "2026-10-07T05:59:00+00:00",
+   "emesso": "2026-10-06T09:32:10+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.096"
   },
   {
    "in_corso": false,
@@ -96,9 +96,9 @@
    "severita": "Severe",
    "certezza": "Likely",
    "inizio": "2026-10-07T12:00:00+00:00",
-   "fine": "2026-10-07T21:59:00+00:00",
-   "emesso": "2026-10-05T09:57:47+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.033"
+   "fine": "2026-10-08T21:59:00+00:00",
+   "emesso": "2026-10-06T09:32:09+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.082"
   },
   {
    "in_corso": false,
@@ -109,9 +109,35 @@
    "severita": "Severe",
    "certezza": "Likely",
    "inizio": "2026-10-07T12:00:00+00:00",
-   "fine": "2026-10-07T21:59:00+00:00",
-   "emesso": "2026-10-05T09:57:47+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.032"
+   "fine": "2026-10-08T21:59:00+00:00",
+   "emesso": "2026-10-06T09:32:09+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.081"
+  },
+  {
+   "in_corso": false,
+   "regione": "Lombardia",
+   "fenomeno": "Pioggia",
+   "livello": "arancione",
+   "evento_originale": "Orange Rain Warning",
+   "severita": "Severe",
+   "certezza": "Likely",
+   "inizio": "2026-10-07T18:00:00+00:00",
+   "fine": "2026-10-08T21:59:00+00:00",
+   "emesso": "2026-10-06T09:32:09+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.063"
+  },
+  {
+   "in_corso": false,
+   "regione": "Lombardia",
+   "fenomeno": "Temporali",
+   "livello": "arancione",
+   "evento_originale": "Orange Thunderstorm Warning",
+   "severita": "Severe",
+   "certezza": "Likely",
+   "inizio": "2026-10-07T18:00:00+00:00",
+   "fine": "2026-10-08T21:59:00+00:00",
+   "emesso": "2026-10-06T09:32:09+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.064"
   },
   {
    "in_corso": false,
@@ -122,9 +148,9 @@
    "severita": "Severe",
    "certezza": "Likely",
    "inizio": "2026-10-07T12:00:00+00:00",
-   "fine": "2026-10-07T21:59:00+00:00",
-   "emesso": "2026-10-05T09:57:46+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.027"
+   "fine": "2026-10-08T05:59:00+00:00",
+   "emesso": "2026-10-06T09:32:09+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.059"
   },
   {
    "in_corso": false,
@@ -135,9 +161,9 @@
    "severita": "Severe",
    "certezza": "Likely",
    "inizio": "2026-10-07T12:00:00+00:00",
-   "fine": "2026-10-07T21:59:00+00:00",
-   "emesso": "2026-10-05T09:57:46+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.026"
+   "fine": "2026-10-08T05:59:00+00:00",
+   "emesso": "2026-10-06T09:32:09+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.058"
   },
   {
    "in_corso": true,
@@ -147,10 +173,10 @@
    "evento_originale": "Orange Thunderstorm Warning",
    "severita": "Severe",
    "certezza": "Likely",
-   "inizio": "2026-10-06T00:00:00+00:00",
+   "inizio": "2026-10-06T08:00:00+00:00",
    "fine": "2026-10-06T17:59:00+00:00",
-   "emesso": "2026-10-05T09:57:47+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.058"
+   "emesso": "2026-10-06T09:32:10+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.122"
   },
   {
    "in_corso": true,
@@ -160,10 +186,10 @@
    "evento_originale": "Orange Rain Warning",
    "severita": "Severe",
    "certezza": "Likely",
-   "inizio": "2026-10-06T00:00:00+00:00",
+   "inizio": "2026-10-06T08:00:00+00:00",
    "fine": "2026-10-06T17:59:00+00:00",
-   "emesso": "2026-10-05T09:57:47+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.057"
+   "emesso": "2026-10-06T09:32:10+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.121"
   },
   {
    "in_corso": false,
@@ -173,10 +199,10 @@
    "evento_originale": "Orange Thunderstorm Warning",
    "severita": "Severe",
    "certezza": "Likely",
-   "inizio": "2026-10-07T18:00:00+00:00",
-   "fine": "2026-10-07T21:59:00+00:00",
-   "emesso": "2026-10-05T09:57:47+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.038"
+   "inizio": "2026-10-07T12:00:00+00:00",
+   "fine": "2026-10-08T21:59:00+00:00",
+   "emesso": "2026-10-06T09:32:09+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.085"
   },
   {
    "in_corso": false,
@@ -186,62 +212,36 @@
    "evento_originale": "Orange Rain Warning",
    "severita": "Severe",
    "certezza": "Likely",
-   "inizio": "2026-10-07T18:00:00+00:00",
-   "fine": "2026-10-07T21:59:00+00:00",
-   "emesso": "2026-10-05T09:57:47+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.037"
+   "inizio": "2026-10-07T12:00:00+00:00",
+   "fine": "2026-10-08T21:59:00+00:00",
+   "emesso": "2026-10-06T09:32:09+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.084"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Abruzzo",
    "fenomeno": "Temporali",
    "livello": "gialla",
    "evento_originale": "Yellow Thunderstorm Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-10-07T06:00:00+00:00",
-   "fine": "2026-10-07T11:59:00+00:00",
-   "emesso": "2026-10-05T09:57:47+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.050"
+   "inizio": "2026-10-06T08:00:00+00:00",
+   "fine": "2026-10-07T17:59:00+00:00",
+   "emesso": "2026-10-06T09:32:10+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.102"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Abruzzo",
    "fenomeno": "Pioggia",
    "livello": "gialla",
    "evento_originale": "Yellow Rain Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-10-07T06:00:00+00:00",
-   "fine": "2026-10-07T11:59:00+00:00",
-   "emesso": "2026-10-05T09:57:47+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.049"
-  },
-  {
-   "in_corso": false,
-   "regione": "Abruzzo",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-06T12:00:00+00:00",
-   "fine": "2026-10-07T21:59:00+00:00",
-   "emesso": "2026-10-05T09:57:47+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.044"
-  },
-  {
-   "in_corso": false,
-   "regione": "Abruzzo",
-   "fenomeno": "Pioggia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Rain Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-06T12:00:00+00:00",
-   "fine": "2026-10-07T21:59:00+00:00",
-   "emesso": "2026-10-05T09:57:47+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.043"
+   "inizio": "2026-10-06T08:00:00+00:00",
+   "fine": "2026-10-07T17:59:00+00:00",
+   "emesso": "2026-10-06T09:32:10+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.101"
   },
   {
    "in_corso": false,
@@ -251,10 +251,10 @@
    "evento_originale": "Yellow Thunderstorm Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-10-07T00:00:00+00:00",
-   "fine": "2026-10-07T21:59:00+00:00",
-   "emesso": "2026-10-05T09:57:47+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.061"
+   "inizio": "2026-10-07T08:00:00+00:00",
+   "fine": "2026-10-07T23:59:00+00:00",
+   "emesso": "2026-10-06T09:32:10+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.117"
   },
   {
    "in_corso": false,
@@ -264,10 +264,10 @@
    "evento_originale": "Yellow Rain Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-10-07T00:00:00+00:00",
-   "fine": "2026-10-07T21:59:00+00:00",
-   "emesso": "2026-10-05T09:57:47+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.060"
+   "inizio": "2026-10-07T08:00:00+00:00",
+   "fine": "2026-10-07T23:59:00+00:00",
+   "emesso": "2026-10-06T09:32:10+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.116"
   },
   {
    "in_corso": false,
@@ -277,23 +277,23 @@
    "evento_originale": "Yellow Thunderstorm Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-10-07T00:00:00+00:00",
-   "fine": "2026-10-07T21:59:00+00:00",
-   "emesso": "2026-10-05T09:57:47+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.062"
+   "inizio": "2026-10-07T12:00:00+00:00",
+   "fine": "2026-10-07T17:59:00+00:00",
+   "emesso": "2026-10-06T09:32:10+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.118"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Emilia e Romagna",
    "fenomeno": "Temporali",
    "livello": "gialla",
    "evento_originale": "Yellow Thunderstorm Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-10-06T12:00:00+00:00",
-   "fine": "2026-10-06T23:59:00+00:00",
-   "emesso": "2026-10-05T09:57:47+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.034"
+   "inizio": "2026-10-06T08:00:00+00:00",
+   "fine": "2026-10-06T17:59:00+00:00",
+   "emesso": "2026-10-06T09:32:09+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.076"
   },
   {
    "in_corso": false,
@@ -304,9 +304,9 @@
    "severita": "Moderate",
    "certezza": "Likely",
    "inizio": "2026-10-07T18:00:00+00:00",
-   "fine": "2026-10-07T21:59:00+00:00",
-   "emesso": "2026-10-05T09:57:46+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.023"
+   "fine": "2026-10-07T23:59:00+00:00",
+   "emesso": "2026-10-06T09:32:09+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.069"
   },
   {
    "in_corso": false,
@@ -317,9 +317,22 @@
    "severita": "Moderate",
    "certezza": "Likely",
    "inizio": "2026-10-07T18:00:00+00:00",
-   "fine": "2026-10-07T21:59:00+00:00",
-   "emesso": "2026-10-05T09:57:46+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.022"
+   "fine": "2026-10-07T23:59:00+00:00",
+   "emesso": "2026-10-06T09:32:09+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.068"
+  },
+  {
+   "in_corso": true,
+   "regione": "Lazio",
+   "fenomeno": "Vento",
+   "livello": "gialla",
+   "evento_originale": "Yellow Wind Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-06T08:00:00+00:00",
+   "fine": "2026-10-06T23:59:00+00:00",
+   "emesso": "2026-10-06T09:32:10+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.100"
   },
   {
    "in_corso": true,
@@ -329,36 +342,10 @@
    "evento_originale": "Yellow Thunderstorm Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-10-06T00:00:00+00:00",
+   "inizio": "2026-10-06T08:00:00+00:00",
    "fine": "2026-10-06T17:59:00+00:00",
-   "emesso": "2026-10-05T09:57:47+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.035"
-  },
-  {
-   "in_corso": false,
-   "regione": "Lombardia",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-07T12:00:00+00:00",
-   "fine": "2026-10-07T21:59:00+00:00",
-   "emesso": "2026-10-05T09:57:46+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.029"
-  },
-  {
-   "in_corso": false,
-   "regione": "Lombardia",
-   "fenomeno": "Pioggia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Rain Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-07T12:00:00+00:00",
-   "fine": "2026-10-07T21:59:00+00:00",
-   "emesso": "2026-10-05T09:57:46+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.028"
+   "emesso": "2026-10-06T09:32:09+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.080"
   },
   {
    "in_corso": true,
@@ -368,36 +355,36 @@
    "evento_originale": "Yellow Thunderstorm Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-10-06T00:00:00+00:00",
-   "fine": "2026-10-06T23:59:00+00:00",
-   "emesso": "2026-10-05T09:57:46+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.018"
+   "inizio": "2026-10-06T08:00:00+00:00",
+   "fine": "2026-10-06T17:59:00+00:00",
+   "emesso": "2026-10-06T09:32:09+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.062"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Marche",
    "fenomeno": "Temporali",
    "livello": "gialla",
    "evento_originale": "Yellow Thunderstorm Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-10-06T12:00:00+00:00",
-   "fine": "2026-10-07T21:59:00+00:00",
-   "emesso": "2026-10-05T09:57:47+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.042"
+   "inizio": "2026-10-06T08:00:00+00:00",
+   "fine": "2026-10-06T17:59:00+00:00",
+   "emesso": "2026-10-06T09:32:09+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.087"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Marche",
    "fenomeno": "Pioggia",
    "livello": "gialla",
    "evento_originale": "Yellow Rain Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-10-06T12:00:00+00:00",
-   "fine": "2026-10-07T21:59:00+00:00",
-   "emesso": "2026-10-05T09:57:47+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.041"
+   "inizio": "2026-10-06T08:00:00+00:00",
+   "fine": "2026-10-06T17:59:00+00:00",
+   "emesso": "2026-10-06T09:32:09+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.086"
   },
   {
    "in_corso": false,
@@ -407,10 +394,10 @@
    "evento_originale": "Yellow Thunderstorm Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-10-07T06:00:00+00:00",
-   "fine": "2026-10-07T11:59:00+00:00",
-   "emesso": "2026-10-05T09:57:47+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.052"
+   "inizio": "2026-10-07T00:00:00+00:00",
+   "fine": "2026-10-07T17:59:00+00:00",
+   "emesso": "2026-10-06T09:32:10+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.106"
   },
   {
    "in_corso": false,
@@ -420,10 +407,10 @@
    "evento_originale": "Yellow Rain Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-10-07T06:00:00+00:00",
-   "fine": "2026-10-07T11:59:00+00:00",
-   "emesso": "2026-10-05T09:57:47+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.051"
+   "inizio": "2026-10-07T00:00:00+00:00",
+   "fine": "2026-10-07T17:59:00+00:00",
+   "emesso": "2026-10-06T09:32:10+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.105"
   },
   {
    "in_corso": true,
@@ -433,10 +420,10 @@
    "evento_originale": "Yellow Thunderstorm Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-10-06T00:00:00+00:00",
+   "inizio": "2026-10-06T08:00:00+00:00",
    "fine": "2026-10-06T23:59:00+00:00",
-   "emesso": "2026-10-05T09:57:46+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.017"
+   "emesso": "2026-10-06T09:32:09+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.057"
   },
   {
    "in_corso": false,
@@ -446,36 +433,23 @@
    "evento_originale": "Yellow Thunderstorm Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-10-07T00:00:00+00:00",
-   "fine": "2026-10-07T21:59:00+00:00",
-   "emesso": "2026-10-05T09:57:47+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.059"
+   "inizio": "2026-10-07T12:00:00+00:00",
+   "fine": "2026-10-07T17:59:00+00:00",
+   "emesso": "2026-10-06T09:32:10+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.113"
   },
   {
-   "in_corso": true,
-   "regione": "Sardegna",
+   "in_corso": false,
+   "regione": "Sicilia",
    "fenomeno": "Temporali",
    "livello": "gialla",
    "evento_originale": "Yellow Thunderstorm Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-10-05T00:00:00+00:00",
-   "fine": "2026-10-07T21:59:00+00:00",
-   "emesso": "2026-10-05T09:57:47+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.056"
-  },
-  {
-   "in_corso": true,
-   "regione": "Sardegna",
-   "fenomeno": "Pioggia",
-   "livello": "gialla",
-   "evento_originale": "Yellow Rain Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-05T00:00:00+00:00",
-   "fine": "2026-10-07T21:59:00+00:00",
-   "emesso": "2026-10-05T09:57:47+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.055"
+   "inizio": "2026-10-07T12:00:00+00:00",
+   "fine": "2026-10-07T17:59:00+00:00",
+   "emesso": "2026-10-06T09:32:10+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.120"
   },
   {
    "in_corso": true,
@@ -485,10 +459,23 @@
    "evento_originale": "Yellow Thunderstorm Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-10-06T00:00:00+00:00",
-   "fine": "2026-10-07T21:59:00+00:00",
-   "emesso": "2026-10-05T09:57:47+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.063"
+   "inizio": "2026-10-06T08:00:00+00:00",
+   "fine": "2026-10-06T23:59:00+00:00",
+   "emesso": "2026-10-06T09:32:10+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.119"
+  },
+  {
+   "in_corso": true,
+   "regione": "Toscana",
+   "fenomeno": "Temporali",
+   "livello": "gialla",
+   "evento_originale": "Yellow Thunderstorm Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-06T08:00:00+00:00",
+   "fine": "2026-10-06T17:59:00+00:00",
+   "emesso": "2026-10-06T09:32:09+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.083"
   },
   {
    "in_corso": false,
@@ -499,9 +486,9 @@
    "severita": "Moderate",
    "certezza": "Likely",
    "inizio": "2026-10-07T18:00:00+00:00",
-   "fine": "2026-10-07T21:59:00+00:00",
-   "emesso": "2026-10-05T09:57:46+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.021"
+   "fine": "2026-10-08T17:59:00+00:00",
+   "emesso": "2026-10-06T09:32:09+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.067"
   },
   {
    "in_corso": false,
@@ -512,9 +499,9 @@
    "severita": "Moderate",
    "certezza": "Likely",
    "inizio": "2026-10-07T18:00:00+00:00",
-   "fine": "2026-10-07T21:59:00+00:00",
-   "emesso": "2026-10-05T09:57:46+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.020"
+   "fine": "2026-10-08T17:59:00+00:00",
+   "emesso": "2026-10-06T09:32:09+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.066"
   },
   {
    "in_corso": true,
@@ -524,26 +511,26 @@
    "evento_originale": "Yellow Thunderstorm Warning",
    "severita": "Moderate",
    "certezza": "Likely",
-   "inizio": "2026-10-06T00:00:00+00:00",
+   "inizio": "2026-10-06T08:00:00+00:00",
+   "fine": "2026-10-06T17:59:00+00:00",
+   "emesso": "2026-10-06T09:32:09+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.065"
+  },
+  {
+   "in_corso": true,
+   "regione": "Umbria",
+   "fenomeno": "Temporali",
+   "livello": "gialla",
+   "evento_originale": "Yellow Thunderstorm Warning",
+   "severita": "Moderate",
+   "certezza": "Likely",
+   "inizio": "2026-10-06T12:00:00+00:00",
    "fine": "2026-10-06T23:59:00+00:00",
-   "emesso": "2026-10-05T09:57:46+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.019"
+   "emesso": "2026-10-06T09:32:10+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.092"
   },
   {
-   "in_corso": false,
-   "regione": "Umbria",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-06T12:00:00+00:00",
-   "fine": "2026-10-07T21:59:00+00:00",
-   "emesso": "2026-10-05T09:57:47+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.040"
-  },
-  {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Umbria",
    "fenomeno": "Pioggia",
    "livello": "gialla",
@@ -551,9 +538,9 @@
    "severita": "Moderate",
    "certezza": "Likely",
    "inizio": "2026-10-06T12:00:00+00:00",
-   "fine": "2026-10-07T21:59:00+00:00",
-   "emesso": "2026-10-05T09:57:47+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.039"
+   "fine": "2026-10-06T23:59:00+00:00",
+   "emesso": "2026-10-06T09:32:10+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.091"
   },
   {
    "in_corso": false,
@@ -564,9 +551,9 @@
    "severita": "Moderate",
    "certezza": "Likely",
    "inizio": "2026-10-07T18:00:00+00:00",
-   "fine": "2026-10-07T21:59:00+00:00",
-   "emesso": "2026-10-05T09:57:46+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.025"
+   "fine": "2026-10-07T23:59:00+00:00",
+   "emesso": "2026-10-06T09:32:09+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.073"
   },
   {
    "in_corso": false,
@@ -577,9 +564,9 @@
    "severita": "Moderate",
    "certezza": "Likely",
    "inizio": "2026-10-07T18:00:00+00:00",
-   "fine": "2026-10-07T21:59:00+00:00",
-   "emesso": "2026-10-05T09:57:46+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261005115746.024"
+   "fine": "2026-10-07T23:59:00+00:00",
+   "emesso": "2026-10-06T09:32:09+00:00",
+   "identificativo": "2.49.0.0.380.3.IT.261006113209.072"
   }
  ]
 }
