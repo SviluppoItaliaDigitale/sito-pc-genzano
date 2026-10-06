@@ -369,7 +369,7 @@ Da maggio 2026 **tutte le pagine** del sito (articoli, sezioni con `_index.md`, 
 
 **Box sotto il corpo** — `.strumenti-articolo.strumenti-azione`:
 - Header: *"ℹ️ Condividi e scarica"*
-- Contenuto: data ultimo aggiornamento + Stampa + QR (auto-nascosto se file manca) + share buttons (WhatsApp/Telegram/FB/X/LinkedIn/Email/Copia/Altre app via Web Share API)
+- Contenuto: data ultimo aggiornamento + Stampa + QR (auto-nascosto se file manca) + **«Salva tra i miei contenuti»** (dal 06/10/2026: salva la pagina solo nel browser, `js/miei-contenuti.js`, chiave `pcgenzano-miei-contenuti`, elenco su `/i-miei-contenuti/`; pulsante nascosto finché lo script non verifica che il browser possa salvare, mai su home e sulla pagina dell'elenco; link nel piè di pagina in `hugo.toml` **e** `site-chrome.js`; informativa privacy § «Dati che restano solo nel tuo browser») + share buttons (WhatsApp/Telegram/FB/X/LinkedIn/Email/Copia/Altre app via Web Share API)
 - Renderizzato da `partials/page-tools.html` (riusato anche su pagine non-articolo: rischio, piano, pittogrammi, articoli-da-ascoltare)
 - Logica WCAG: gli strumenti di **azione post-lettura** (stampa, QR, condivisione) si usano DOPO aver letto l'articolo, non prima.
 
