@@ -1,0 +1,4810 @@
+{
+ "temi": {
+  "terremoto": {
+   "etichetta": "Terremoto",
+   "intro": "/rischi-prevenzione/rischio-sismico/"
+  },
+  "vulcani": {
+   "etichetta": "Vulcani",
+   "intro": "/rischi-prevenzione/rischio-vulcanico/"
+  },
+  "acqua": {
+   "etichetta": "Alluvioni, frane e maremoti",
+   "intro": "/rischi-prevenzione/rischio-idrogeologico/"
+  },
+  "incendi": {
+   "etichetta": "Incendi",
+   "intro": "/rischi-prevenzione/rischio-incendio/"
+  },
+  "meteo": {
+   "etichetta": "Allerte meteo, temporali e vento",
+   "intro": "/allerte-meteo/"
+  },
+  "caldo": {
+   "etichetta": "Caldo, clima e siccità",
+   "intro": "/rischi-prevenzione/ondate-di-calore/"
+  },
+  "112": {
+   "etichetta": "Chiamare il 112",
+   "intro": "/numeri-utili/"
+  },
+  "casa": {
+   "etichetta": "Casa sicura, kit e piano familiare",
+   "intro": "/piano-familiare/"
+  },
+  "natura": {
+   "etichetta": "Natura e oggetti da non toccare",
+   "intro": ""
+  },
+  "volontariato": {
+   "etichetta": "Protezione civile e volontariato",
+   "intro": "/conoscere/"
+  },
+  "informazione": {
+   "etichetta": "Informazione, notizie e fake news",
+   "intro": ""
+  },
+  "primo-soccorso": {
+   "etichetta": "Primo soccorso",
+   "intro": "/formazione/primo-soccorso/"
+  }
+ },
+ "materiali": [
+  {
+   "tipo": "valutazione",
+   "titolo": "Griglia osservazione — Infanzia",
+   "url": "/formazione/schede-stampabili/rubrica-valutativa-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "Griglia di osservazione descrittiva (no voto) per i Campi di Esperienza, sugli indicatori chiave PC × livelli (sta scoprendo, sta imparando, ha consolidato).",
+   "facilitata": false
+  },
+  {
+   "tipo": "valutazione",
+   "titolo": "Rubrica valutativa — Primaria",
+   "url": "/formazione/schede-stampabili/rubrica-valutativa-primaria/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "Rubrica per il giudizio descrittivo dell'Educazione Civica primaria. Indicatori × livelli (in via di prima acquisizione → avanzato), con esempio di sintesi descrittiva.",
+   "facilitata": false
+  },
+  {
+   "tipo": "valutazione",
+   "titolo": "Rubrica valutativa — Sec I",
+   "url": "/formazione/schede-stampabili/rubrica-valutativa-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": null,
+   "temi": [
+    "casa"
+   ],
+   "desc": "Rubrica per il voto in decimi dell'Ed. Civica secondaria di primo grado. Conversione livelli 4-5/6/7-8/9-10. Coerente con UdA del kit didattico.",
+   "facilitata": false
+  },
+  {
+   "tipo": "valutazione",
+   "titolo": "Rubrica valutativa — Sec II",
+   "url": "/formazione/schede-stampabili/rubrica-valutativa-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "Rubrica per il voto in decimi della Sec II. Compatibile con valutazione PCTO e dossier Esame di Stato. Indicatori esperti (lessico tecnico, GIS, normativa avanzata).",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Esperimenti di protezione civile",
+   "url": "/formazione/schede-stampabili/esperimenti-protezione-civile/?autoprint=1/",
+   "fasce": [
+    "infanzia",
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto",
+    "vulcani",
+    "acqua",
+    "incendi",
+    "meteo",
+    "caldo"
+   ],
+   "desc": "Vulcani, terremoti, frane, alluvioni, maremoti, incendi, caldo, neve, vento, temporali, siccità e rischi antropici. Ogni scheda: età, materiali, procedura, cosa si impara, sicurezza e spazio «Cosa ho osservato».",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Tre azioni che mi proteggono",
+   "url": "/formazione/schede-stampabili/oggetti-tre-azioni-che-mi-proteggono-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 10,
+   "temi": [
+    "natura"
+   ],
+   "desc": "Ripetere la sequenza con parole, gesti o immagini. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "La storia di Elio al parco",
+   "url": "/formazione/schede-stampabili/oggetti-la-storia-di-elio-al-parco-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 15,
+   "temi": [
+    "natura"
+   ],
+   "desc": "Raccontare una scelta prudente senza avvicinarsi all’oggetto. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Le persone che mi aiutano",
+   "url": "/formazione/schede-stampabili/oggetti-le-persone-che-mi-aiutano-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 10,
+   "temi": [
+    "natura"
+   ],
+   "desc": "Individuare gli adulti di riferimento e chiedere aiuto dopo un errore. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Prima di raccogliere",
+   "url": "/formazione/schede-stampabili/oggetti-prima-di-raccogliere-primaria/",
+   "fasce": [
+    "primaria-bassa"
+   ],
+   "minuti": 15,
+   "temi": [
+    "natura"
+   ],
+   "desc": "Distinguere un’attività guidata da un ritrovamento sconosciuto. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Non tutto si può assaggiare",
+   "url": "/formazione/schede-stampabili/oggetti-non-tutto-si-puo-assaggiare-primaria/",
+   "fasce": [
+    "primaria-bassa"
+   ],
+   "minuti": 15,
+   "temi": [
+    "natura"
+   ],
+   "desc": "Lasciare stare cibo, bevande e piccoli oggetti trovati. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Una bottiglia con un forellino",
+   "url": "/formazione/schede-stampabili/oggetti-una-bottiglia-con-un-forellino-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 20,
+   "temi": [
+    "natura"
+   ],
+   "desc": "Segnalare una confezione danneggiata senza fare prove sul contenuto. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Una segnalazione chiara",
+   "url": "/formazione/schede-stampabili/oggetti-una-segnalazione-chiara-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 20,
+   "temi": [
+    "natura"
+   ],
+   "desc": "Riferire luogo e fatti senza avvicinarsi per raccogliere dettagli. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Petardi e oggetti metallici",
+   "url": "/formazione/schede-stampabili/oggetti-petardi-e-oggetti-metallici-secondaria1/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 20,
+   "temi": [
+    "natura"
+   ],
+   "desc": "Riconoscere quando fermarsi senza tentare identificazioni o prove. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Una sfida da rifiutare",
+   "url": "/formazione/schede-stampabili/oggetti-una-sfida-da-rifiutare-secondaria1/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 20,
+   "temi": [
+    "natura"
+   ],
+   "desc": "Rifiutare una pressione del gruppo e cercare un adulto. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Segnali e supposizioni",
+   "url": "/formazione/schede-stampabili/oggetti-segnali-e-supposizioni-secondaria1/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 20,
+   "temi": [
+    "natura"
+   ],
+   "desc": "Separare un’osservazione da una conclusione non dimostrata. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "A chi chiedere aiuto",
+   "url": "/formazione/schede-stampabili/oggetti-a-chi-chiedere-aiuto-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": 25,
+   "temi": [
+    "natura"
+   ],
+   "desc": "Distinguere una segnalazione ordinaria da una richiesta urgente di soccorso. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Una notizia che fa paura",
+   "url": "/formazione/schede-stampabili/oggetti-una-notizia-che-fa-paura-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": 25,
+   "temi": [
+    "natura",
+    "informazione"
+   ],
+   "desc": "Verificare un messaggio allarmistico senza amplificarlo. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Pulire il parco in sicurezza",
+   "url": "/formazione/schede-stampabili/oggetti-pulire-il-parco-in-sicurezza-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": 25,
+   "temi": [
+    "natura"
+   ],
+   "desc": "Riconoscere i limiti di una raccolta rifiuti organizzata. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Se non so che cosa è",
+   "url": "/formazione/schede-stampabili/oggetti-se-non-so-che-cosa-e-facilitata/",
+   "fasce": [
+    "infanzia",
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": 10,
+   "temi": [
+    "natura"
+   ],
+   "desc": "Chiedere aiuto attraverso il proprio modo di comunicare. Stampatello, una consegna alla volta, risposta anche con gesti o comunicatore.",
+   "facilitata": true
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Una bevanda trovata",
+   "url": "/formazione/schede-stampabili/oggetti-una-bevanda-trovata-facilitata/",
+   "fasce": [
+    "infanzia",
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": 10,
+   "temi": [
+    "natura"
+   ],
+   "desc": "Lasciare una bevanda sconosciuta e chiedere aiuto. Stampatello, una consegna alla volta, risposta anche con gesti o comunicatore.",
+   "facilitata": true
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Guardo con gli occhi",
+   "url": "/formazione/schede-stampabili/natura-guardo-con-gli-occhi-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 10,
+   "temi": [
+    "natura"
+   ],
+   "desc": "Ripetere la sequenza davanti a bacche, fiori e funghi sconosciuti. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Silvia e il cane al parco",
+   "url": "/formazione/schede-stampabili/natura-silvia-e-il-cane-al-parco-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 15,
+   "temi": [
+    "natura"
+   ],
+   "desc": "Chiedere al padrone prima di avvicinarsi a un cane. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Piccoli animali, mani ferme",
+   "url": "/formazione/schede-stampabili/natura-piccoli-animali-mani-ferme-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 10,
+   "temi": [
+    "natura"
+   ],
+   "desc": "Restare calmi davanti a un insetto e non toccare i bruchi in fila. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Bacche e funghi: vero o falso",
+   "url": "/formazione/schede-stampabili/natura-bacche-e-funghi-vero-o-falso-primaria/",
+   "fasce": [
+    "primaria-bassa"
+   ],
+   "minuti": 15,
+   "temi": [
+    "natura"
+   ],
+   "desc": "Distinguere ciò che si può fare da ciò che non si fa con bacche e funghi. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "La fila di bruchi",
+   "url": "/formazione/schede-stampabili/natura-la-fila-di-bruchi-primaria/",
+   "fasce": [
+    "primaria-bassa"
+   ],
+   "minuti": 15,
+   "temi": [],
+   "desc": "Riconoscere la regola per la processionaria: non toccare, non passare sotto, avvisare. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Dopo la passeggiata: il controllo",
+   "url": "/formazione/schede-stampabili/natura-dopo-la-passeggiata-il-controllo-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 20,
+   "temi": [
+    "casa"
+   ],
+   "desc": "Mettere in ordine le azioni contro le zecche, prima e dopo un’uscita. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Vespe a merenda",
+   "url": "/formazione/schede-stampabili/natura-vespe-a-merenda-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 20,
+   "temi": [
+    "112"
+   ],
+   "desc": "Comportarsi con calma davanti a vespe e calabroni e riconoscere i segnali che richiedono il 112. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Serpenti: fatto o supposizione",
+   "url": "/formazione/schede-stampabili/natura-serpenti-fatto-o-supposizione-secondaria1/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 20,
+   "temi": [],
+   "desc": "Separare ciò che si è visto da ciò che si suppone e ricordare cosa fare in caso di morso. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Il fungo che sembra buono",
+   "url": "/formazione/schede-stampabili/natura-il-fungo-che-sembra-buono-secondaria1/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 20,
+   "temi": [
+    "natura"
+   ],
+   "desc": "Riformulare in modo prudente le scorciatoie sul riconoscimento dei funghi. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Una chiamata al Centro Antiveleni",
+   "url": "/formazione/schede-stampabili/natura-una-chiamata-al-centro-antiveleni-secondaria1/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 20,
+   "temi": [
+    "112"
+   ],
+   "desc": "Preparare le informazioni utili per una chiamata al Centro Antiveleni. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "A chi chiedere aiuto",
+   "url": "/formazione/schede-stampabili/natura-a-chi-chiedere-aiuto-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": 25,
+   "temi": [],
+   "desc": "Distinguere una segnalazione ordinaria da una richiesta urgente di soccorso. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Rimedi che circolano",
+   "url": "/formazione/schede-stampabili/natura-rimedi-che-circolano-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": 25,
+   "temi": [],
+   "desc": "Verificare i rimedi «sentiti dire» e rispondere in modo utile in una chat. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Uscita nel Parco: il piano del gruppo",
+   "url": "/formazione/schede-stampabili/natura-uscita-nel-parco-il-piano-del-gruppo-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": 25,
+   "temi": [
+    "casa"
+   ],
+   "desc": "Completare il piano di sicurezza di un’escursione, prima, durante e dopo. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Guardo, non tocco",
+   "url": "/formazione/schede-stampabili/natura-guardo-non-tocco-facilitata/",
+   "fasce": [
+    "infanzia",
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": 10,
+   "temi": [
+    "natura"
+   ],
+   "desc": "Chiedere aiuto davanti a una pianta o a un animale sconosciuto. Stampatello, una consegna alla volta, risposta anche con gesti o comunicatore.",
+   "facilitata": true
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Un insetto vola vicino",
+   "url": "/formazione/schede-stampabili/natura-un-insetto-vola-vicino-facilitata/",
+   "fasce": [
+    "infanzia",
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": 10,
+   "temi": [],
+   "desc": "Restare calmi con un insetto vicino e segnalare subito una puntura. Stampatello, una consegna alla volta, risposta anche con gesti o comunicatore.",
+   "facilitata": true
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Le cose che non si aprono",
+   "url": "/formazione/schede-stampabili/casa-le-cose-che-non-si-aprono-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 10,
+   "temi": [],
+   "desc": "Ripetere la sequenza davanti a flaconi, scatole e medicine. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Maria e la pentola",
+   "url": "/formazione/schede-stampabili/casa-maria-e-la-pentola-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 15,
+   "temi": [
+    "casa"
+   ],
+   "desc": "Stare lontani dalle cose calde e chiamare un adulto. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Chi mi aiuta in casa",
+   "url": "/formazione/schede-stampabili/casa-chi-mi-aiuta-in-casa-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 10,
+   "temi": [],
+   "desc": "Individuare gli adulti di riferimento e chiedere aiuto dopo un errore. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Sembra una caramella",
+   "url": "/formazione/schede-stampabili/casa-sembra-una-caramella-primaria/",
+   "fasce": [
+    "primaria-bassa"
+   ],
+   "minuti": 15,
+   "temi": [
+    "natura"
+   ],
+   "desc": "Distinguere un’attività autorizzata dall’adulto da un oggetto trovato in casa. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Pile piccole e calamite",
+   "url": "/formazione/schede-stampabili/casa-pile-piccole-e-calamite-primaria/",
+   "fasce": [
+    "primaria-bassa"
+   ],
+   "minuti": 15,
+   "temi": [],
+   "desc": "Lasciare stare pile a bottone e magneti e segnalare subito un’ingestione. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Acqua ed elettricità non vanno d’accordo",
+   "url": "/formazione/schede-stampabili/casa-acqua-ed-elettricita-non-vanno-d-accordo-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 20,
+   "temi": [],
+   "desc": "Trovare gli errori in una descrizione e riscriverli in modo sicuro. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Una scottatura",
+   "url": "/formazione/schede-stampabili/casa-una-scottatura-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 20,
+   "temi": [],
+   "desc": "Riscrivere in modo corretto i consigli sbagliati sulle ustioni. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "La padella prende fuoco",
+   "url": "/formazione/schede-stampabili/casa-la-padella-prende-fuoco-secondaria1/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 20,
+   "temi": [
+    "incendi"
+   ],
+   "desc": "Riconoscere le azioni corrette davanti a un principio di incendio in cucina. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Non si mescolano",
+   "url": "/formazione/schede-stampabili/casa-non-si-mescolano-secondaria1/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 20,
+   "temi": [],
+   "desc": "Separare un fatto osservato da una supposizione sui prodotti per la pulizia. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Una chiamata chiara",
+   "url": "/formazione/schede-stampabili/casa-una-chiamata-chiara-secondaria1/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 20,
+   "temi": [
+    "112"
+   ],
+   "desc": "Preparare le informazioni utili per il Centro Antiveleni o il 112. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "A chi chiedere aiuto",
+   "url": "/formazione/schede-stampabili/casa-a-chi-chiedere-aiuto-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": 25,
+   "temi": [],
+   "desc": "Distinguere una segnalazione ordinaria da una richiesta urgente di soccorso. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Miti in casa",
+   "url": "/formazione/schede-stampabili/casa-miti-in-casa-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": 25,
+   "temi": [],
+   "desc": "Verificare i rimedi «sentiti dire» e rispondere in modo utile in una chat. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Io e i più piccoli",
+   "url": "/formazione/schede-stampabili/casa-io-e-i-piu-piccoli-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": 25,
+   "temi": [],
+   "desc": "Preparare la casa quando si resta con fratelli o cugini piccoli. Con nota per l'adulto e soluzione capovolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Non apro, chiedo",
+   "url": "/formazione/schede-stampabili/casa-non-apro-chiedo-facilitata/",
+   "fasce": [
+    "infanzia",
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": 10,
+   "temi": [],
+   "desc": "Chiedere aiuto davanti a una bottiglia o a una scatola sconosciuta. Stampatello, una consegna alla volta, risposta anche con gesti o comunicatore.",
+   "facilitata": true
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Caldo: non tocco",
+   "url": "/formazione/schede-stampabili/casa-caldo-non-tocco-facilitata/",
+   "fasce": [
+    "infanzia",
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": 10,
+   "temi": [
+    "caldo"
+   ],
+   "desc": "Stare lontani dalle cose calde e chiamare un adulto dopo una scottatura. Stampatello, una consegna alla volta, risposta anche con gesti o comunicatore.",
+   "facilitata": true
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "La mia voce arriva anche senza parole",
+   "url": "/formazione/schede-stampabili/la-mia-voce-arriva-anche-senza-parole-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 15,
+   "temi": [],
+   "desc": "Esprimere un bisogno con parole, gesti o disegni. Con spazi per le risposte e guida docente.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Prima ti chiedo",
+   "url": "/formazione/schede-stampabili/prima-ti-chiedo-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 15,
+   "temi": [],
+   "desc": "Offrire aiuto rispettando la scelta altrui. Con spazi per le risposte e guida docente.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "La consegna si può ripetere",
+   "url": "/formazione/schede-stampabili/la-consegna-si-puo-ripetere-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 15,
+   "temi": [],
+   "desc": "Chiedere una spiegazione invece di indovinare. Con spazi per le risposte e guida docente.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Il rumore che scegliamo",
+   "url": "/formazione/schede-stampabili/il-rumore-che-scegliamo-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 15,
+   "temi": [],
+   "desc": "Comunicare quando uno stimolo è fastidioso. Con spazi per le risposte e guida docente.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Due modi per raccontare",
+   "url": "/formazione/schede-stampabili/due-modi-per-raccontare-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 20,
+   "temi": [],
+   "desc": "Riconoscere che lo stesso messaggio può avere forme diverse. Con spazi per le risposte e guida docente.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "La tartaruga chiede aiuto",
+   "url": "/formazione/schede-stampabili/la-tartaruga-chiede-aiuto-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 20,
+   "temi": [],
+   "desc": "Chiedere aiuto e collaborare con un adulto. Con spazi per le risposte e guida docente.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Intrecci di carta, insieme",
+   "url": "/formazione/schede-stampabili/intrecci-di-carta-insieme-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 20,
+   "temi": [],
+   "desc": "Chiedere aiuto e collaborare con un adulto. Con spazi per le risposte e guida docente.",
+   "facilitata": false
+  },
+  {
+   "tipo": "colorare",
+   "titolo": "I pericoli naturali",
+   "url": "/formazione/schede-stampabili/pericoli-naturali-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto",
+    "vulcani",
+    "acqua",
+    "incendi",
+    "meteo"
+   ],
+   "desc": "Scheda introduttiva con 6 disegni line-art che fanno conoscere ai bambini i principali pericoli naturali: terremoto, alluvione, frana, temporale, eruzione vulcanica, incendio boschivo. Da fare prima delle schede operative «Cosa faccio se…».",
+   "facilitata": false
+  },
+  {
+   "tipo": "colorare",
+   "titolo": "Allerta e comunicazioni",
+   "url": "/formazione/schede-stampabili/allerta-comunicazioni-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [
+    "meteo",
+    "112",
+    "casa",
+    "informazione"
+   ],
+   "desc": "Scheda propedeutica con 6 disegni: ascolta le notizie e le allerte, ricevi informazioni dai canali ufficiali, parla in famiglia, conosci le vie di fuga e i punti di ritrovo, prepara lo zaino dell'indispensabile, chiama il 112 in caso di emergenza.",
+   "facilitata": false
+  },
+  {
+   "tipo": "colorare",
+   "titolo": "Il mio zainetto di emergenza",
+   "url": "/formazione/schede-stampabili/zainetto-emergenza-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [
+    "112",
+    "casa",
+    "natura"
+   ],
+   "desc": "Lo zainetto personale del bambino con 6 oggetti essenziali da colorare: acqua, torcia, fischietto, copertina, quadernino con il 112, peluche rassicurante. Aiuta i piccoli a familiarizzare con il concetto di kit di emergenza e a sentirsi protagonisti della propria sicurezza.",
+   "facilitata": false
+  },
+  {
+   "tipo": "colorare",
+   "titolo": "Cosa faccio quando trema la terra?",
+   "url": "/formazione/schede-stampabili/colorare-terremoto-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto"
+   ],
+   "desc": "6 passi illustrati in stile colorabile: sotto al tavolo, mani sulla testa, aspetta come la tartaruga, esci in fila, niente ascensore, punto di raccolta. Filastrocca della Tartaruga in piè di pagina.",
+   "facilitata": false
+  },
+  {
+   "tipo": "colorare",
+   "titolo": "Cosa faccio se c'è una grande pioggia?",
+   "url": "/formazione/schede-stampabili/colorare-alluvione-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [
+    "acqua",
+    "112"
+   ],
+   "desc": "6 passi illustrati: salgo al piano alto, non passo nei sottopassi, niente cantina, l'adulto stacca la corrente, chiamo il 112 se serve, aspetto al sicuro i soccorsi.",
+   "facilitata": false
+  },
+  {
+   "tipo": "colorare",
+   "titolo": "Cosa faccio se vedo una frana?",
+   "url": "/formazione/schede-stampabili/colorare-frana-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [
+    "acqua",
+    "volontariato"
+   ],
+   "desc": "6 passi illustrati: vedo i sassi cadere, mi allontano, avviso un adulto, non torno indietro, sto al sicuro a casa, arrivano i volontari.",
+   "facilitata": false
+  },
+  {
+   "tipo": "colorare",
+   "titolo": "Cosa faccio se vedo del fumo?",
+   "url": "/formazione/schede-stampabili/colorare-incendio-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [
+    "incendi"
+   ],
+   "desc": "6 passi illustrati: avviso un adulto, chiudo la porta, resto basso sotto il fumo, esco seguendo il cartello verde, non torno indietro, raggiungo il punto di raccolta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "colorare",
+   "titolo": "Cosa faccio se c'è un temporale?",
+   "url": "/formazione/schede-stampabili/colorare-temporale-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [
+    "meteo"
+   ],
+   "desc": "6 passi illustrati: torno a casa, l'adulto stacca la TV, niente sotto gli alberi, niente piscine o laghi, aspetto in casa, niente pozzanghere durante un fulmine.",
+   "facilitata": false
+  },
+  {
+   "tipo": "colorare",
+   "titolo": "Cosa faccio se c'è vento forte?",
+   "url": "/formazione/schede-stampabili/colorare-vento-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [
+    "meteo"
+   ],
+   "desc": "6 passi illustrati: sto in casa, chiudo le finestre, niente sotto gli alberi, niente sul balcone, metto i giochi al riparo, aspetto che il vento passi.",
+   "facilitata": false
+  },
+  {
+   "tipo": "colorare",
+   "titolo": "Cosa faccio se nevica forte?",
+   "url": "/formazione/schede-stampabili/colorare-neve-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [
+    "meteo",
+    "caldo",
+    "112"
+   ],
+   "desc": "6 passi illustrati: mi vesto bene caldo, cammino piano sul ghiaccio, non gioco in strada, sto a casa al caldo, aiuto a spalare, se serve chiamo il 112.",
+   "facilitata": false
+  },
+  {
+   "tipo": "colorare",
+   "titolo": "Cosa faccio se fa molto caldo?",
+   "url": "/formazione/schede-stampabili/ondata-calore-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [
+    "caldo"
+   ],
+   "desc": "6 buone abitudini con il caldo: bevo spesso acqua, sto all'ombra e mi riposo, metto il cappellino, non corro sotto il sole, aiuto i nonni e le persone anziane, cerco sempre un posto fresco. Riquadro finale 'Con piccole attenzioni il caldo non è un problema'.",
+   "facilitata": false
+  },
+  {
+   "tipo": "colorare",
+   "titolo": "Come chiamo il 112",
+   "url": "/formazione/schede-stampabili/colorare-112-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [
+    "112"
+   ],
+   "desc": "6 passi illustrati per memorizzare la chiamata: vedo l'emergenza, prendo il telefono, faccio 1-1-2, dico il nome, dico dove sono, aspetto i soccorsi.",
+   "facilitata": false
+  },
+  {
+   "tipo": "colorare",
+   "titolo": "Cosa faccio se mi perdo?",
+   "url": "/formazione/schede-stampabili/se-mi-perdo-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "6 regole semplici se il bambino si perde: si ferma e non corre via, cerca un adulto in divisa, dice nome e cognome, resta in un posto sicuro e aspetta, chiama aiuto o fa chiamare, aspetta i soccorsi restando calmo. Riquadro finale rassicurante.",
+   "facilitata": false
+  },
+  {
+   "tipo": "colorare",
+   "titolo": "Cosa faccio se sento odore di gas?",
+   "url": "/formazione/schede-stampabili/odore-gas-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [
+    "incendi",
+    "112",
+    "casa"
+   ],
+   "desc": "6 regole se senti odore di gas in casa: non accendere luci né premere interruttori, apri le finestre con un adulto, esci di casa e vai all'aperto, avvisa subito un adulto, niente fiamme accendini o fiammiferi, chiama aiuto e il 112. Riquadro finale rassicurante.",
+   "facilitata": false
+  },
+  {
+   "tipo": "colorare",
+   "titolo": "Il volontario e gli animali",
+   "url": "/formazione/schede-stampabili/volontario-animali-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [
+    "112",
+    "natura",
+    "volontariato"
+   ],
+   "desc": "6 disegni con le regole per aiutare gli animali in sicurezza: aiuta un cane spaventato, porta acqua a un gatto, non toccare animali sconosciuti da solo, avvisa un adulto, chiama il 112 se serve, il volontario mette l'animale al sicuro nel trasportino.",
+   "facilitata": false
+  },
+  {
+   "tipo": "colorare",
+   "titolo": "A scuola in sicurezza",
+   "url": "/formazione/schede-stampabili/a-scuola-in-sicurezza-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [
+    "casa"
+   ],
+   "desc": "6 regole per stare a scuola in sicurezza: cammino in fila senza spingere, ascolto la maestra, conosco l'uscita di emergenza, vado al punto di raccolta, non spingo e non corro, sono calmo e aiuto i compagni. Riquadro finale 'Insieme siamo più sicuri'.",
+   "facilitata": false
+  },
+  {
+   "tipo": "colorare",
+   "titolo": "Trova la strada per il punto di raccolta",
+   "url": "/formazione/schede-stampabili/labirinto-punto-raccolta-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [
+    "incendi",
+    "casa"
+   ],
+   "desc": "Gioco-labirinto in cui il bambino deve raggiungere il punto di raccolta evitando 5 pericoli: ascensore (in emergenza non si usa), fumo, pozzanghera, albero caduto, transenne. Allena il pensiero in emergenza e rinforza il concetto di percorso sicuro.",
+   "facilitata": false
+  },
+  {
+   "tipo": "colorare",
+   "titolo": "Il mio amico volontario",
+   "url": "/formazione/schede-stampabili/colorare-volontario-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [
+    "volontariato",
+    "informazione"
+   ],
+   "desc": "6 disegni line-art: il giubbino arancione, il casco e la radio, aiuta gli anziani, distribuisce acqua e cibo, arriva con il furgone, monta le tende.",
+   "facilitata": false
+  },
+  {
+   "tipo": "colorare",
+   "titolo": "Il mio amico pompiere",
+   "url": "/formazione/schede-stampabili/colorare-pompiere-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [
+    "112"
+   ],
+   "desc": "6 disegni line-art: il casco rosso, gli stivali grandi, il giubbino a strisce, l'idrante, il pompiere che salva, chiamarlo con il 112.",
+   "facilitata": false
+  },
+  {
+   "tipo": "colorare",
+   "titolo": "I mezzi della protezione civile",
+   "url": "/formazione/schede-stampabili/disegni-mezzi-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [
+    "informazione"
+   ],
+   "desc": "Album da colorare, un mezzo grande per foglio: autopompa, ambulanza, camion, furgone accessibile, auto, elicottero, aereo, gommone, drone, radio, la nevicata. Sotto ogni disegno una riga che dice a cosa serve.",
+   "facilitata": false
+  },
+  {
+   "tipo": "colorare",
+   "titolo": "Le persone che aiutano",
+   "url": "/formazione/schede-stampabili/disegni-persone-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [
+    "incendi",
+    "natura",
+    "volontariato"
+   ],
+   "desc": "Album da colorare: volontari, vigile del fuoco, medico, infermiera, cane da soccorso, chi risponde al telefono, la mano dell'adulto, la famiglia, il gatto di casa, la tenda, l'acqua, il cortile della scuola.",
+   "facilitata": false
+  },
+  {
+   "tipo": "colorare",
+   "titolo": "Le giornate insieme",
+   "url": "/formazione/schede-stampabili/disegni-momenti-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [
+    "meteo"
+   ],
+   "desc": "Album da colorare sulle cose che si fanno stando insieme: il campo, la cucina, la lettura, il disegno, il gioco, il pallone, la lettera, la scuola, le strisce, il temporale, il sole, il cuore.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Flavio e lo zaino rosso — il libro pop-up con la storia",
+   "url": "/formazione/schede-stampabili/flavio-libro-popup/",
+   "fasce": [
+    "infanzia",
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": 5,
+   "temi": [
+    "acqua",
+    "incendi",
+    "meteo",
+    "caldo",
+    "casa"
+   ],
+   "desc": "Un libro già scritto e già disegnato: dodici capitoli, un anno di piccole emergenze — la terra che trema, il temporale, il vento, l'alluvione, il fumo, il caldo, il buio — e Flavio, con la sua amica Silvia, che impara che cosa fare. In ogni doppia pagina il pop-up è già nel disegno: il genitore piega, taglia due righe dalla piega, e la scena si alza dal centro del libro.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Il libro pop-up della protezione civile",
+   "url": "/formazione/schede-stampabili/libro-popup-protezione-civile/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": 20,
+   "temi": [
+    "terremoto",
+    "acqua",
+    "incendi",
+    "meteo",
+    "caldo",
+    "112",
+    "casa"
+   ],
+   "desc": "Tredici tavole che si alzano dalla pagina — terremoto, alluvione, temporale, vento forte, incendio nel bosco, fumo in casa, caldo, blackout, gas nei posti chiusi, evacuazione a scuola, zaino di emergenza e chiamata al 112 — e tutte si montano allo stesso modo: due tagli e una spinta, senza colla. Si sceglie quali tavole stampare.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Memory della protezione civile",
+   "url": "/formazione/schede-stampabili/memory-protezione-civile-infanzia/",
+   "fasce": [
+    "infanzia",
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": 30,
+   "temi": [
+    "incendi",
+    "casa",
+    "informazione"
+   ],
+   "desc": "Tessere da colorare e ritagliare, tutte diverse: si abbinano a due a due perché le due cose vanno insieme (il vigile del fuoco e l'autopompa, il drone e il radiocomando, lo zaino e l'acqua). Si abbina per significato, non per forma. Con il retro da incollare e le regole.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Il gioco dell'oca della protezione civile",
+   "url": "/formazione/schede-stampabili/gioco-oca-protezione-civile/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1"
+   ],
+   "minuti": 40,
+   "temi": [],
+   "desc": "Tabellone a spirale con le caselle numerate, carte imprevisto e carte emergenza da ritagliare, pedine e regole. Sulle caselle rosse si pesca una situazione e si risponde ad alta voce per proseguire; chi non sa rispondere non torna indietro, si legge insieme la risposta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "colorare",
+   "titolo": "Aiuto e solidarietà",
+   "url": "/formazione/schede-stampabili/aiuto-solidarieta-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [
+    "volontariato"
+   ],
+   "desc": "6 disegni con i valori della Protezione Civile: saluta e sii gentile, prenditi cura delle persone in bisogno, ascolta e offri aiuto, lavora insieme agli altri volontari, comunica con chiarezza e rispetto, aiutare è un gesto di amore — insieme siamo più forti.",
+   "facilitata": false
+  },
+  {
+   "tipo": "colorare",
+   "titolo": "Volontariato e ambiente",
+   "url": "/formazione/schede-stampabili/volontariato-ambiente-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [
+    "volontariato"
+   ],
+   "desc": "6 disegni con gesti di rispetto per l'ambiente: raccogli i rifiuti e non abbandonarli, pianta alberi e aiuta la natura, separa i rifiuti e ricicla (carta, plastica, vetro), prenditi cura delle piante e non sprecare l'acqua, lavora insieme per un ambiente pulito, ognuno di noi può proteggere il pianeta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "colorare",
+   "titolo": "I nodi che salvano",
+   "url": "/formazione/schede-stampabili/nodi-che-salvano-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "6 disegni illustrati per imparare a fare un nodo semplice: scegli una corda resistente, fai un anello, passa l'estremità libera dentro l'anello, tira per stringere, il nodo è forte e sicuro, usalo per aiutare e mettere in sicurezza. Attività manuale propedeutica.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Pregrafismo — Le linee della PC",
+   "url": "/formazione/schede-stampabili/pregrafismo-linee-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 15,
+   "temi": [
+    "acqua",
+    "incendi",
+    "meteo"
+   ],
+   "desc": "4 esercizi di pregrafismo: linee dritte (pompiere→fuoco), zigzag (pioggia), ondulate (vento), spirali (sirena). Ripassare con la matita.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "ABC delle Vocali — Le parole che salvano",
+   "url": "/formazione/schede-stampabili/abc-vocali-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 20,
+   "temi": [
+    "casa"
+   ],
+   "desc": "Le 5 vocali abbinate a parole della Protezione Civile (A→AIUTO, E→ELMETTO, I→IDRANTE, O→OSPEDALE, U→USCITA). Lettera da ricalcare, parola da ricopiare, esercizio finale di riconoscimento.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "L'Alfabetiere della Sicurezza",
+   "url": "/formazione/schede-stampabili/alfabetiere-pc-infanzia/",
+   "fasce": [
+    "infanzia",
+    "primaria-bassa"
+   ],
+   "minuti": 30,
+   "temi": [
+    "terremoto",
+    "meteo"
+   ],
+   "desc": "Tutte le lettere su un foglio solo: per ognuna il disegno da colorare, la parola della protezione civile (A→ALLERTA, C→CASCO, T→TERREMOTO…) e la lettera da ricalcare. Si usa come poster da appendere o come foglio di lavoro.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "A come Allerta, Z come Zaino",
+   "url": "/formazione/schede-stampabili/alfabetiere-az-infanzia/",
+   "fasce": [
+    "infanzia",
+    "primaria-bassa"
+   ],
+   "minuti": 30,
+   "temi": [
+    "meteo",
+    "casa"
+   ],
+   "desc": "L'alfabetiere in forma di quaderno: una lettera per foglio. Disegno da colorare, lettera da ricalcare in stampatello maiuscolo e minuscolo e in corsivo maiuscolo e minuscolo, parola da copiare. Dalla finestra di stampa si scelgono solo le pagine che servono.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Riconosci l'Iniziale",
+   "url": "/formazione/schede-stampabili/riconosci-iniziale-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 20,
+   "temi": [
+    "incendi",
+    "casa",
+    "informazione"
+   ],
+   "desc": "Per ogni immagine il bambino cerchia la lettera con cui inizia la parola, scelta fra tre opzioni. 10 parole della Protezione Civile (CASCO, SIRENA, FUOCO, RADIO, MAPPA, USCITA…).",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Collega la Parola all'Immagine",
+   "url": "/formazione/schede-stampabili/collega-parola-immagine-infanzia/",
+   "fasce": [
+    "infanzia",
+    "primaria-bassa"
+   ],
+   "minuti": 15,
+   "temi": [],
+   "desc": "8 parole in stampatello da collegare con una linea alle 8 immagini in colonna a destra (in ordine sparso). Esercizio di lettura globale e associazione.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "I Numeri della Protezione Civile",
+   "url": "/formazione/schede-stampabili/numeri-pc-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 20,
+   "temi": [
+    "112",
+    "natura",
+    "volontariato"
+   ],
+   "desc": "Numeri da 1 a 5 abbinati agli oggetti della PC: 1 telefono, 2 caschi, 3 sirene, 4 torce, 5 volontari. Cifra da ricalcare e riscrivere. In fondo, il 112 in rosso.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Conta i Puntini 1-3",
+   "url": "/formazione/schede-stampabili/conta-puntini-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 15,
+   "temi": [
+    "natura",
+    "volontariato"
+   ],
+   "desc": "6 quadrati con oggetti PC da contare (caschi, sirene, torce, uscite, volontari, pompieri). Cerchia il numero giusto fra 1, 2, 3.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Riconosci le Forme dei Cartelli",
+   "url": "/formazione/schede-stampabili/riconosci-forme-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 20,
+   "temi": [],
+   "desc": "Le 3 forme dei cartelli di sicurezza (cerchio rosso, quadrato verde, triangolo giallo). Riconoscere, cerchiare, disegnare.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Trova le Coppie",
+   "url": "/formazione/schede-stampabili/trova-coppie-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 20,
+   "temi": [
+    "natura"
+   ],
+   "desc": "8 coppie di immagini da collegare con una linea: oggetto-azione, pericolo-cosa fare. Sviluppa l'associazione visiva.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "I Punti Cardinali",
+   "url": "/formazione/schede-stampabili/punti-cardinali-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 20,
+   "temi": [],
+   "desc": "Rosa dei venti semplificata con N, S, E, O. Riconoscere dove sorge e tramonta il sole. Una rosa dei venti vuota da completare. Riferimento al territorio di Genzano.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Vero o Falso con le Faccine",
+   "url": "/formazione/schede-stampabili/vero-falso-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 20,
+   "temi": [
+    "terremoto",
+    "112"
+   ],
+   "desc": "8 affermazioni con due faccine da colorare: 😊 se vero, 😟 se falso. Per i comportamenti corretti in caso di terremoto, allarme e quando chiamare il 112.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Il Labirinto dell'Uscita",
+   "url": "/formazione/schede-stampabili/labirinto-uscita/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 15,
+   "temi": [
+    "incendi",
+    "casa"
+   ],
+   "desc": "Il bambino traccia il percorso dal punto di partenza 🧒 al cartello uscita 🚪, evitando muri, zaini e fuoco. Per imparare a non correre.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Riordina l'Evacuazione",
+   "url": "/formazione/schede-stampabili/riordina-vignette-evacuazione-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 15,
+   "temi": [
+    "casa"
+   ],
+   "desc": "4 vignette di un'evacuazione scolastica (sirena, fila, uscita, punto di raccolta) in ordine sparso. Numerare da 1 a 4. Ripasso dei comportamenti corretti.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Quando va via la luce",
+   "url": "/formazione/schede-stampabili/blackout-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 20,
+   "temi": [
+    "casa"
+   ],
+   "desc": "Cosa facciamo quando va via la corrente: la torcia (non le candele), stare con un adulto, aspettare tranquilli. Pittogrammi ARASAAC, attività da cerchiare e colorare, soluzioni capovolte per l'insegnante.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Le Regole della Tartaruga Saggia",
+   "url": "/formazione/schede-stampabili/tartaruga-saggia-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto"
+   ],
+   "desc": "Poster con le 4 regole della Tartaruga in caso di terremoto, una filastrocca da memorizzare e cosa NON fare. Da appendere in classe.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Filastrocca della Tartaruga — illustrata",
+   "url": "/formazione/schede-stampabili/filastrocca-illustrata-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 20,
+   "temi": [],
+   "desc": "La filastrocca della Tartaruga in 6 versi illustrati con emoji + tartaruga grande da colorare. Memorizzazione per i più piccoli.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Il Ciclo dell'Acqua",
+   "url": "/formazione/schede-stampabili/ciclo-acqua-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 20,
+   "temi": [
+    "acqua",
+    "meteo"
+   ],
+   "desc": "4 vignette in ordine sparso (sole/vapore/nuvola/pioggia) da numerare. Capire da dove arriva la pioggia. Collegamento al rischio idrogeologico dei Castelli.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Cosa Serve al Fuoco — Il Triangolo",
+   "url": "/formazione/schede-stampabili/triangolo-fuoco-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 20,
+   "temi": [
+    "incendi",
+    "caldo"
+   ],
+   "desc": "I 3 elementi del fuoco (legna, aria, calore) presentati come un triangolo. Esercizio: cosa toglie il pompiere quando spegne con l'acqua? Spazio per disegnare un pompiere.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "I Cartelli della Sicurezza",
+   "url": "/formazione/schede-stampabili/cartelli-sicurezza-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 20,
+   "temi": [
+    "casa"
+   ],
+   "desc": "I 4 cartelli base disegnati in SVG (uscita verde, idrante rosso, divieto, pericolo giallo): riconoscere, abbinare al significato, disegnarne uno della propria scuola.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "I Colori dei Mezzi di Soccorso",
+   "url": "/formazione/schede-stampabili/colori-mezzi-soccorso-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 20,
+   "temi": [
+    "112",
+    "volontariato"
+   ],
+   "desc": "Pompieri rosso, ambulanza bianca, volontari arancione. Sagome dei mezzi da colorare con il colore giusto. Ripasso del 112.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Disegna il tuo Aiutante",
+   "url": "/formazione/schede-stampabili/disegna-aiutante-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 20,
+   "temi": [
+    "volontariato",
+    "informazione"
+   ],
+   "desc": "Silhouette di volontario PC con casco, giubbotto, radio, scarponcini tratteggiati. Pregrafismo (ricalca) + colorazione guidata (giubbotto arancione).",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Una consegna, due interpretazioni",
+   "url": "/formazione/schede-stampabili/una-consegna-due-interpretazioni-primaria/",
+   "fasce": [
+    "primaria-bassa"
+   ],
+   "minuti": 25,
+   "temi": [
+    "informazione"
+   ],
+   "desc": "Rendere precisa una comunicazione. Con spazi per le risposte e guida docente.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Il magazzino della solidarietà",
+   "url": "/formazione/schede-stampabili/il-magazzino-della-solidarieta-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 35,
+   "temi": [],
+   "desc": "Contare materiali e comunicare una mancanza. Con spazi per le risposte e guida docente.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "L’avviso che tutti capiscono",
+   "url": "/formazione/schede-stampabili/lavviso-che-tutti-capiscono-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 30,
+   "temi": [],
+   "desc": "Scrivere un avviso comprensibile. Con spazi per le risposte e guida docente.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Il registro delle torce",
+   "url": "/formazione/schede-stampabili/il-registro-delle-torce-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 30,
+   "temi": [],
+   "desc": "Distinguere osservazione e ipotesi. Con spazi per le risposte e guida docente.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Una mappa deve farsi capire",
+   "url": "/formazione/schede-stampabili/una-mappa-deve-farsi-capire-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 40,
+   "temi": [],
+   "desc": "Costruire una legenda e verificarne la comprensione. Con spazi per le risposte e guida docente.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Sillabe della Protezione Civile",
+   "url": "/formazione/schede-stampabili/sillabe-protezione-civile-primaria/",
+   "fasce": [
+    "primaria-bassa"
+   ],
+   "minuti": 30,
+   "temi": [],
+   "desc": "Parole-chiave divise in sillabe (CA·SCO, SI·RE·NA, POM·PIE·RE…). Esercizio di divisione, ricomposizione di puzzle sillabici e copiatura di una frase. Soluzioni per il docente.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Completa la Parola",
+   "url": "/formazione/schede-stampabili/completa-parola-primaria/",
+   "fasce": [
+    "primaria-bassa"
+   ],
+   "minuti": 30,
+   "temi": [],
+   "desc": "10 parole con una lettera mancante (C__SCO, S_R_NA…) da completare usando la \"banca delle lettere\". Seconda sezione: scrivi tu la parola intera dato l'indizio. Soluzioni incluse.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Ricalca e Scrivi le Parole",
+   "url": "/formazione/schede-stampabili/ricalca-scrivi-parole-primaria/",
+   "fasce": [
+    "primaria-bassa"
+   ],
+   "minuti": 30,
+   "temi": [
+    "112",
+    "casa"
+   ],
+   "desc": "L'alunno ricalca la parola tratteggiata (CASA, ACQUA, 112, ZAINO, CASCO…) e poi la riscrive da solo sulla riga. Per imparare a scrivere in stampatello.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Maiuscolo e Minuscolo",
+   "url": "/formazione/schede-stampabili/maiuscolo-minuscolo-primaria/",
+   "fasce": [
+    "primaria-bassa"
+   ],
+   "minuti": 20,
+   "temi": [],
+   "desc": "Collega ogni lettera grande alla sua piccola, scrivi la minuscola accanto alla maiuscola e scopri che CASCO e casco sono la stessa parola. Soluzioni incluse.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Dettato Illustrato",
+   "url": "/formazione/schede-stampabili/dettato-illustrato-primaria/",
+   "fasce": [
+    "primaria-bassa"
+   ],
+   "minuti": 30,
+   "temi": [
+    "natura"
+   ],
+   "desc": "Guarda la figura e scrivi da solo il nome dell'oggetto della sicurezza (pompiere, ambulanza, casco…). C'è la prima lettera come aiuto. Soluzioni incluse.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Le Prime Frasi della Sicurezza",
+   "url": "/formazione/schede-stampabili/prime-frasi-sicurezza-primaria/",
+   "fasce": [
+    "primaria-bassa"
+   ],
+   "minuti": 30,
+   "temi": [
+    "112"
+   ],
+   "desc": "Rimetti in ordine le parole e scrivi frasi vere di autoprotezione (\"Chiamo il 112.\", \"Metto il casco.\"), con maiuscola e punto. Soluzioni incluse.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Dallo Stampatello al Corsivo",
+   "url": "/formazione/schede-stampabili/corsivo-parole-primaria/",
+   "fasce": [
+    "primaria-bassa"
+   ],
+   "minuti": 30,
+   "temi": [
+    "casa"
+   ],
+   "desc": "Leggi la parola della sicurezza in stampatello (CASA, ACQUA, ZAINO…) e riscrivila in corsivo sulle righe guida. Il passaggio dallo stampatello al corsivo.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Le Prime Frasi in Corsivo",
+   "url": "/formazione/schede-stampabili/corsivo-frasi-primaria/",
+   "fasce": [
+    "primaria-bassa"
+   ],
+   "minuti": 30,
+   "temi": [
+    "112"
+   ],
+   "desc": "Ricopia in corsivo, sulle righe guida, frasi vere di autoprotezione (\"Chiamo il 112.\", \"Resto calmo.\", \"Vado al punto di raccolta.\"). Con maiuscola e punto.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Dettato di Frasi Brevi",
+   "url": "/formazione/schede-stampabili/dettato-frasi-brevi-primaria/",
+   "fasce": [
+    "primaria-bassa"
+   ],
+   "minuti": 30,
+   "temi": [],
+   "desc": "L'insegnante detta 5 brevi frasi sulla sicurezza e l'alunno le scrive sulle righe. Elenco frasi e parole difficili nel riquadro per il docente.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Copia la Frase — Le Parole della Sicurezza",
+   "url": "/formazione/schede-stampabili/copia-frase-primaria/",
+   "fasce": [
+    "primaria-bassa"
+   ],
+   "minuti": 35,
+   "temi": [
+    "112",
+    "casa",
+    "volontariato"
+   ],
+   "desc": "5 frasi semplici sulle regole della Protezione Civile (chiamata 112, posizione tartaruga, evacuazione, volontariato) da ricopiare in stampatello su righe con linea-guida.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Riordina le Frasi — Una Giornata di Allerta",
+   "url": "/formazione/schede-stampabili/riordina-frasi-allerta-primaria/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": 25,
+   "temi": [
+    "meteo",
+    "volontariato"
+   ],
+   "desc": "6 frasi su una giornata di allerta meteo arancione (bollettino, COC, IT-alert, volontari) da numerare in ordine cronologico. Domanda extra sul Centro Funzionale.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Leggi e Rispondi — Flavio e il Pompiere",
+   "url": "/formazione/schede-stampabili/leggi-rispondi-pompiere-primaria/",
+   "fasce": [
+    "primaria-bassa"
+   ],
+   "minuti": 30,
+   "temi": [
+    "incendi",
+    "112",
+    "casa"
+   ],
+   "desc": "Mini-racconto di una piccola emergenza domestica (fiammata in cucina) + domande di comprensione (chi, cosa, dove, numero chiamato, scelta multipla finale). Soluzioni incluse.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Comprensione Testo — Amatrice 2016",
+   "url": "/formazione/schede-stampabili/comprensione-testo-amatrice-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 60,
+   "temi": [
+    "terremoto"
+   ],
+   "desc": "Brano semplificato sul terremoto di Amatrice (data, magnitudo, regioni colpite, soccorsi, IT-alert) + domande di comprensione del testo.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Il Triangolo del Fuoco — Esperimenti",
+   "url": "/formazione/schede-stampabili/triangolo-fuoco-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [
+    "incendi",
+    "caldo"
+   ],
+   "desc": "I 3 elementi del fuoco (combustibile, comburente, calore) con triangolo SVG, 2 esperimenti sicuri condotti dall'insegnante (soffocamento + allontanamento combustibile), applicazione alle 3 tecniche dei vigili del fuoco, quiz V/F e domanda di ragionamento. Soluzioni incluse.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Problemi Matematici della PC",
+   "url": "/formazione/schede-stampabili/problemi-matematici-pc-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 50,
+   "temi": [
+    "terremoto",
+    "acqua",
+    "casa",
+    "volontariato"
+   ],
+   "desc": "6 problemi con dati reali: pioggia in mm, evacuazione, kit, divisione volontari, raggio di emergenza, magnitudo. Spazio per il calcolo + risposta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Geografia Sismica dell'Italia",
+   "url": "/formazione/schede-stampabili/geografia-sismica-italia-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 40,
+   "temi": [
+    "terremoto"
+   ],
+   "desc": "Mappa SVG dell'Italia con le 4 zone sismiche colorate. Abbina regione/zona, identifica Genzano, riflessione sul perché la Sardegna ha quasi zero sismi.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Gli Strumenti del Meteorologo",
+   "url": "/formazione/schede-stampabili/strumenti-meteo-primaria/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": 30,
+   "temi": [
+    "meteo"
+   ],
+   "desc": "strumenti (termometro, pluviometro, anemometro, barometro, igrometro), cosa misurano e in quale unità. Esercizi: collega, indovina lo strumento dato l'indizio.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "La mia città sicura (Agenda 2030)",
+   "url": "/formazione/schede-stampabili/citta-sicura-agenda2030-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 60,
+   "temi": [],
+   "desc": "L'obiettivo 11 dell'Agenda 2030 spiegato ai bambini: caccia agli indizi di sicurezza nel quartiere, abbinamento fra gesti e obiettivi, la mia idea per una città più sicura.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "La Mappa del Mio Quartiere",
+   "url": "/formazione/schede-stampabili/mappa-cieca-quartiere-primaria/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": 40,
+   "temi": [],
+   "desc": "Mappa SVG di un quartiere con 6 luoghi numerati (scuola, ospedale, farmacia, area di attesa, idrante, piazza). Etichette da scrivere + domande di comprensione.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "I Codici di Allerta Meteo",
+   "url": "/formazione/schede-stampabili/codici-allerta-numeri-primaria/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": 30,
+   "temi": [
+    "meteo"
+   ],
+   "desc": "I 4 codici colore della Regione Lazio (verde 1, giallo 2, arancione 3, rosso 4). Ordina per gravità, colora i bollini, vero/falso. Tabella di riferimento con significato.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Chiamo il 112",
+   "url": "/formazione/schede-stampabili/chiamo-112/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 30,
+   "temi": [
+    "112"
+   ],
+   "desc": "Gioco di ruolo scritto della chiamata al Numero Unico di Emergenza. Lo studente compila i propri dati, poi risponde all'operatore in 5 dialoghi guidati.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Il Numero 112 — Tutto sull'emergenza",
+   "url": "/formazione/schede-stampabili/il-numero-112-primaria/",
+   "fasce": [
+    "primaria-bassa"
+   ],
+   "minuti": 30,
+   "temi": [
+    "112"
+   ],
+   "desc": "Ricalca le tre cifre del 112 in rosso, scrivilo in lettere (\"uno-uno-due\"), mini-somma 1+1+2, scelta multipla su quando chiamare, le 3 cose da dire all'operatore.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Chiamo il 112 — Gioco di ruolo scritto",
+   "url": "/formazione/schede-stampabili/chiamo-112-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 30,
+   "temi": [
+    "incendi",
+    "112"
+   ],
+   "desc": "Due dialoghi guidati con l'operatore 112 (caduta nonna, fumo dal vicino) da completare con le proprie informazioni. Le 4 cose da ricordare quando si chiama. Versione approfondita di \"Chiamo il 112\".",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Piano di Emergenza Familiare",
+   "url": "/formazione/schede-stampabili/piano-familiare-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 30,
+   "temi": [
+    "casa"
+   ],
+   "desc": "Modello da compilare a casa: famiglia, contatti d'emergenza, punti di ritrovo, kit di emergenza. Da attaccare al frigorifero, aggiornare ogni 6 mesi.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Ondate di Calore",
+   "url": "/formazione/schede-stampabili/ondate-calore-primaria/",
+   "fasce": [
+    "primaria-alta",
+    "secondaria1"
+   ],
+   "minuti": 40,
+   "temi": [
+    "caldo",
+    "casa",
+    "natura"
+   ],
+   "desc": "Proteggere bambini, anziani, lavoratori all'aperto e animali domestici dal caldo: box \"Ore calde / Acqua e alimenti / Casa / Mai in auto\", semaforo del caldo (verde-giallo-rosso), mini-rubrica delle persone fragili e mini quiz.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "I colori dell'allerta meteo",
+   "url": "/formazione/schede-stampabili/decodifica-bollettino-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 25,
+   "temi": [
+    "meteo"
+   ],
+   "desc": "Abbinamento codice colore (verde/giallo/arancione/rosso) → comportamento giusto. Versione semplificata della \"Decodifica bollettino\" per la Primaria. Soluzioni incluse.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Le due vie di fuga della scuola",
+   "url": "/formazione/schede-stampabili/labirinto-evacuazione-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 40,
+   "temi": [
+    "casa"
+   ],
+   "desc": "Pianta-tipo della scuola con aule e corridoi: lo studente colora di verde la via principale e di arancione quella di emergenza, segna il punto di raccolta esterno. Checklist finale con la maestra.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Comunicare con i simboli in emergenza (CAA)",
+   "url": "/formazione/schede-stampabili/tabella-caa-emergenza-primaria/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": 40,
+   "temi": [
+    "informazione"
+   ],
+   "desc": "Tabella di Comunicazione Aumentativa Alternativa con 12 pittogrammi ARASAAC da indicare quando in emergenza non si riesce a parlare. Attività di abbinamento e guida alla CAA per il docente.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "IT-alert: il messaggio che ti avvisa del pericolo",
+   "url": "/formazione/schede-stampabili/it-alert-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 30,
+   "temi": [],
+   "desc": "Che cos'è IT-alert, il sistema nazionale di allarme pubblico: come riconoscere il messaggio sul telefono e cosa fare quando arriva. Con vero/falso e riordino dei passi.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Maremoto: cosa faccio se sono al mare",
+   "url": "/formazione/schede-stampabili/maremoto-comportamenti-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 40,
+   "temi": [
+    "acqua"
+   ],
+   "desc": "I tre segnali del maremoto e i comportamenti della campagna «Io non rischio»: allontanarsi dalla costa e salire in alto. Con esercizi vero/falso e soluzioni per il docente.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "In sicurezza sullo scuolabus",
+   "url": "/formazione/schede-stampabili/sicurezza-scuolabus-primaria/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": 30,
+   "temi": [],
+   "desc": "Le regole per viaggiare sicuri sullo scuolabus: alla fermata, a bordo, alla discesa e cosa fare in emergenza ascoltando l'autista. Con vero/falso e riordino dei passi della discesa sicura.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Blackout: la casa senza corrente",
+   "url": "/formazione/schede-stampabili/blackout-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 40,
+   "temi": [
+    "casa",
+    "informazione"
+   ],
+   "desc": "Cosa fare quando manca la corrente elettrica: torcia pronta nel kit, frigo chiuso, niente candele, ascensore da evitare, radio a pile. Con vero/falso, completa la frase e soluzioni capovolte.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Vento forte: cosa faccio",
+   "url": "/formazione/schede-stampabili/vento-forte-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 30,
+   "temi": [
+    "meteo"
+   ],
+   "desc": "Cosa fare nelle giornate di vento forte ai Castelli Romani: lontano da alberi e impalcature, in casa lontano dalle finestre, vasi e giochi al riparo. Con quiz, vero/falso e soluzioni capovolte.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Temporali intensi: cosa faccio",
+   "url": "/formazione/schede-stampabili/temporali-intensi-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 40,
+   "temi": [
+    "meteo"
+   ],
+   "desc": "Cosa fare durante un temporale forte ai Castelli Romani: al riparo dentro un edificio, lontano da alberi e fili elettrici, niente telefono con filo durante i fulmini. Con quiz, vero/falso e soluzioni capovolte.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Alluvioni e frane: cosa faccio",
+   "url": "/formazione/schede-stampabili/rischio-idrogeologico-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 40,
+   "temi": [
+    "acqua"
+   ],
+   "desc": "Cosa fare in caso di alluvione o frana ai Castelli Romani: salire ai piani alti, non scendere in cantina, non attraversare strade allagate, stare lontano da fossi e pendii. Con quiz, vero/falso e soluzioni capovolte.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Incendio boschivo: cosa faccio",
+   "url": "/formazione/schede-stampabili/incendio-boschivo-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 40,
+   "temi": [
+    "incendi",
+    "112"
+   ],
+   "desc": "Cosa fare in caso di incendio boschivo ai Castelli Romani: chiamare il 112, non accendere fuochi nel bosco, allontanarsi in direzione opposta al fumo. Con quiz, vero/falso e soluzioni capovolte.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "La Costituzione e la PC",
+   "url": "/formazione/schede-stampabili/costituzione-pc-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 45,
+   "temi": [
+    "volontariato"
+   ],
+   "desc": "Articoli 32, 117, 118 spiegati in linguaggio semplice. Diritto alla salute, Stato/Regioni, principio di sussidiarietà. Riflessione su volontariato.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Eventi che hanno fatto la PC italiana",
+   "url": "/formazione/schede-stampabili/eventi-pc-italiani-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 50,
+   "temi": [
+    "terremoto",
+    "acqua",
+    "meteo"
+   ],
+   "desc": "6 eventi storici (Vajont, Friuli, Irpinia, Sarno, L'Aquila, Amatrice) da abbinare all'anno e riordinare cronologicamente. Quale evento ha portato a quale legge.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Intervista al Volontario PC",
+   "url": "/formazione/schede-stampabili/intervista-volontario-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [
+    "volontariato",
+    "informazione"
+   ],
+   "desc": "Compito di realtà: prepara domande (5 suggerite + 5 personali), intervista un volontario, scrivi il testo giornalistico. Coordinabile con segreteria.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Diventa Giornalista della PC",
+   "url": "/formazione/schede-stampabili/diventa-giornalista-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 60,
+   "temi": [
+    "informazione"
+   ],
+   "desc": "Anatomia di un articolo (occhiello/titolo/lead/corpo) con esempio modello, scrivi tu un articolo per il giornalino di classe + un post Instagram con hashtag.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Cruciverba della Sicurezza",
+   "url": "/formazione/schede-stampabili/cruciverba-primaria/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 35,
+   "temi": [
+    "terremoto",
+    "meteo",
+    "volontariato"
+   ],
+   "desc": "8 definizioni orizzontali su temi della Protezione Civile (allerta, sisma, scale, radar, emergenza, volontario...). Soluzioni incluse per il docente.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Quando un dato manca",
+   "url": "/formazione/schede-stampabili/quando-un-dato-manca-secondaria1/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 45,
+   "temi": [],
+   "desc": "Trattare un dato mancante senza trasformarlo in zero. Con spazi per le risposte e guida docente.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Un messaggio perde pezzi",
+   "url": "/formazione/schede-stampabili/un-messaggio-perde-pezzi-secondaria1/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 40,
+   "temi": [
+    "informazione"
+   ],
+   "desc": "Verificare la fedeltà di una comunicazione. Con spazi per le risposte e guida docente.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "La batteria sulla carta",
+   "url": "/formazione/schede-stampabili/la-batteria-sulla-carta-secondaria1/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 45,
+   "temi": [],
+   "desc": "Calcolare un consumo e dichiarare i limiti del modello. Con spazi per le risposte e guida docente.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "La consegna accessibile",
+   "url": "/formazione/schede-stampabili/la-consegna-accessibile-secondaria1/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 45,
+   "temi": [],
+   "desc": "Verificare un messaggio senza dipendere solo dal colore. Con spazi per le risposte e guida docente.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Il registro degli aggiornamenti",
+   "url": "/formazione/schede-stampabili/il-registro-degli-aggiornamenti-secondaria1/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 45,
+   "temi": [],
+   "desc": "Riconoscere una versione superata. Con spazi per le risposte e guida docente.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Decodifica del Bollettino di Allerta",
+   "url": "/formazione/schede-stampabili/decodifica-bollettino-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 45,
+   "temi": [
+    "meteo"
+   ],
+   "desc": "Bollettino realistico del Centro Funzionale Lazio per Genzano: domande di analisi (codici colore, criticità, COC). Soluzioni per il docente.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Mappa dei Rischi del Mio Territorio",
+   "url": "/formazione/schede-stampabili/mappa-rischi-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 90,
+   "temi": [],
+   "desc": "Indagine territoriale: lo studente consulta INGV, ISPRA, DPC, EFFIS e disegna la mappa dei rischi del proprio quartiere. domande di analisi.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Audit del Piano di Emergenza Scolastico",
+   "url": "/formazione/schede-stampabili/audit-piano-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "Compito di realtà: la classe analizza il piano di emergenza della scuola in 4 fasi (documenti, sopralluogo, intervista, sintesi). Output: report al Dirigente.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Da Sendai a Genzano (Agenda 2030)",
+   "url": "/formazione/schede-stampabili/sendai-genzano-agenda2030-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 50,
+   "temi": [],
+   "desc": "Il traguardo 11.5 letto sui dati ISPRA IdroGEO di Genzano: percentuali, confronto con Città metropolitana e Lazio, differenza fra persone esposte e persone colpite.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Statistica dei Rischi Italiani",
+   "url": "/formazione/schede-stampabili/statistica-rischi-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 50,
+   "temi": [
+    "terremoto",
+    "vulcani",
+    "acqua",
+    "incendi"
+   ],
+   "desc": "Tabella DPC sui rischi italiani (sismico, idrogeologico, alluvioni, vulcanico, incendi). Calcolo percentuali, costruzione istogramma, riflessione sui dati.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Vulcanologia dei Castelli Romani",
+   "url": "/formazione/schede-stampabili/vulcanologia-castelli-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 50,
+   "temi": [
+    "vulcani"
+   ],
+   "desc": "Il Vulcano Laziale: caldera, fumarole, monitoraggio INGV. Schema della caldera con i due laghi. Glossario vulcanologico, domande di analisi.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Leggere il bollettino ondate di calore",
+   "url": "/formazione/schede-stampabili/ondate-calore-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 60,
+   "temi": [
+    "meteo",
+    "caldo"
+   ],
+   "desc": "Come si legge il bollettino ondate di calore del Ministero della Salute: livelli 0-1-2-3, città monitorate, comportamenti per sé e per le persone fragili. Con un bollettino di esempio da decodificare e soluzioni capovolte.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "La siccità ai Castelli Romani: leggere i dati",
+   "url": "/formazione/schede-stampabili/siccita-castelli-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 50,
+   "temi": [
+    "acqua",
+    "caldo"
+   ],
+   "desc": "La siccità spiegata con i dati climatici reali di Genzano (pioggia annua e giorni molto caldi, rianalisi ERA5): lettura della tabella, medie, scarti e discussione sul risparmio idrico.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Scrivi un Testo Informativo",
+   "url": "/formazione/schede-stampabili/scrittura-informativa-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 60,
+   "temi": [],
+   "desc": "Compito di scrittura: produrre un testo informativo di ~300 parole su un rischio del territorio (a scelta tra 4). Struttura 5W + conclusione, citazione fonti ufficiali.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Debate strutturato sui Rischi",
+   "url": "/formazione/schede-stampabili/debate-strutturato-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 60,
+   "temi": [
+    "terremoto"
+   ],
+   "desc": "Debate scolastico in 5 fasi (preparazione, apertura PRO/CONTRO, confronto, conclusione). Tema: vietare costruzioni in zona sismica 1. Griglia di valutazione.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Articolo, Comunicato Stampa e Post Social",
+   "url": "/formazione/schede-stampabili/articolo-stampa-social-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 75,
+   "temi": [
+    "meteo",
+    "informazione"
+   ],
+   "desc": "Piramide rovesciata + 5W+1H. Lo stesso evento PC raccontato in 3 formati (articolo, comunicato stampa, post Instagram) con esempio modello e hashtag strategici.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Notizie false in Emergenza",
+   "url": "/formazione/schede-stampabili/fake-news-emergenza-secondaria/",
+   "fasce": [
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": 55,
+   "temi": [
+    "informazione"
+   ],
+   "desc": "Riconoscere e fermare la disinformazione: regola dei 3 controlli (fonte/data/conferma), checklist \"prima di condividere\", classifica delle notizie a gruppi (verificata/dubbia/falsa) e mini quiz.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Cruciverba PC — definizioni tecniche",
+   "url": "/formazione/schede-stampabili/cruciverba-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 30,
+   "temi": [],
+   "desc": "20 definizioni tecniche di Protezione Civile: sigle istituzionali (NUE, DPC, COC), fenomeni geofisici, ruoli. Più impegnativo della versione Primaria, collegabile al glossario online.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Costituzione e PC — Analisi",
+   "url": "/formazione/schede-stampabili/costituzione-pc-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 45,
+   "temi": [
+    "volontariato"
+   ],
+   "desc": "Articoli 32, 117, 118 della Costituzione: testo originale + analisi + glossario costituzionale (concorrente, sussidiarietà, indigenti). domande di approfondimento.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Blackout e Servizi Essenziali",
+   "url": "/formazione/schede-stampabili/blackout-servizi-essenziali-secondaria/",
+   "fasce": [
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": 45,
+   "temi": [
+    "casa",
+    "informazione"
+   ],
+   "desc": "Disagio, urgenza ed emergenza quando saltano luce, telefono o acqua. box \"Prima/Durante/Comunicazioni/Quando chiamare\", mappa di casa, simulazione \"15 minuti senza corrente\", lista \"prima ora\" e mini quiz.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Monossido di Carbonio",
+   "url": "/formazione/schede-stampabili/monossido-carbonio-secondaria/",
+   "fasce": [
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": 45,
+   "temi": [],
+   "desc": "Il pericolo invisibile in case, garage e locali chiusi: caldaie, stufe, barbecue. box \"Prevenzione/Usi vietati/Segnali sospetti/Azione sicura\", caccia al rischio in casa, una regola per ciascun apparecchio e mini quiz.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Rischio Chimico-Industriale",
+   "url": "/formazione/schede-stampabili/rischio-industriale-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 45,
+   "temi": [],
+   "desc": "La regola \"al contrario\": davanti a una nube o un odore chimico anomalo, riparo al chiuso invece di fuga. Normativa Seveso, pannelli arancioni, confronto tra le regole dei diversi rischi e mini quiz.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Rischio Idrogeologico",
+   "url": "/formazione/schede-stampabili/rischio-idrogeologico-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 45,
+   "temi": [
+    "acqua",
+    "meteo"
+   ],
+   "desc": "Alluvioni, allagamenti e frane ai Castelli Romani: pericolosità vs allerta, bollettini del Centro Funzionale Regionale, la regola \"sali, non scendere\", piattaforma IdroGEO e mini quiz.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Rischio Nucleare e Radiologico",
+   "url": "/formazione/schede-stampabili/rischio-nucleare-radiologico-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 45,
+   "temi": [
+    "informazione"
+   ],
+   "desc": "Perché il rischio radiologico riguarda l'Italia anche senza centrali attive. I tre principi della radioprotezione (distanza, tempo, schermatura), il riparo al chiuso, la iodoprofilassi solo su indicazione ufficiale, confronto tra rischi e mini quiz.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Maremoto: la Fisica e i Comportamenti",
+   "url": "/formazione/schede-stampabili/maremoto-comportamenti-secondaria/",
+   "fasce": [
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": 45,
+   "temi": [
+    "acqua",
+    "meteo"
+   ],
+   "desc": "Come si genera un maremoto e perché rallenta e cresce in costa (velocità 700-800 km/h in mare aperto, 30-50 km/h in costa), il Sistema di Allertamento SiAM, i tre segnali naturali, i comportamenti di autoprotezione. Mini verifica e soluzioni.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "IT-alert e Comunicazioni Ufficiali",
+   "url": "/formazione/schede-stampabili/it-alert-comunicazioni-secondaria/",
+   "fasce": [
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": 50,
+   "temi": [
+    "acqua",
+    "meteo",
+    "informazione"
+   ],
+   "desc": "Sistema nazionale di allarme pubblico: tabella dei 5 elementi del messaggio (rischio/area/tempo/azione/fonte), esempio realistico con allerta idrogeologica per Genzano, risposta in 140 caratteri alla famiglia, mini quiz.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Piano di Emergenza Familiare — esteso",
+   "url": "/formazione/schede-stampabili/piano-familiare-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": null,
+   "temi": [
+    "casa",
+    "natura",
+    "informazione"
+   ],
+   "desc": "Versione estesa del piano familiare: scorte 72 ore, piano di comunicazione (contatto fuori comune), animali domestici, persone fragili, ruoli per ognuno. Esercitazioni semestrali.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Calcolo dei tempi di evacuazione",
+   "url": "/formazione/schede-stampabili/labirinto-evacuazione-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 50,
+   "temi": [
+    "casa"
+   ],
+   "desc": "Pianta scuola di esempio + dati di norma (DM 3/8/2015): calcolo capacità uscite, tempo evacuazione totale, verifica conformità. 7 problemi matematici applicati alla sicurezza.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Chiamare il 112 — Cosa NON dire",
+   "url": "/formazione/schede-stampabili/chiamo-112-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 40,
+   "temi": [
+    "112"
+   ],
+   "desc": "Confronto efficace/sbagliato + analisi di scenari (incidente bici, bambino al parco, anziano svenuto). Domande di riflessione su pragmatica + introduzione al sistema AML (localizzazione automatica).",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Cronaca Recente — Ischia 2022",
+   "url": "/formazione/schede-stampabili/cronaca-recente-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": 60,
+   "temi": [
+    "acqua"
+   ],
+   "desc": "Articolo di cronaca su frana di Casamicciola del 2022. Analisi 5W + domande critiche su pioggia/COC/abusivismo. Riferimento al rischio idrogeologico locale.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Il costo delle scelte",
+   "url": "/formazione/schede-stampabili/il-costo-delle-scelte-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": 55,
+   "temi": [],
+   "desc": "Confrontare alternative esplicitando le ipotesi. Con spazi per le risposte e guida docente.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Due archivi, una sola versione",
+   "url": "/formazione/schede-stampabili/due-archivi-una-sola-versione-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": 55,
+   "temi": [],
+   "desc": "Progettare un controllo fra formati didattici. Con spazi per le risposte e guida docente.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Il sensore non dice tutta la verità",
+   "url": "/formazione/schede-stampabili/il-sensore-non-dice-tutta-la-verita-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": 60,
+   "temi": [],
+   "desc": "Quantificare falsi allarmi e mancate rilevazioni. Con spazi per le risposte e guida docente.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Una catena di dipendenze",
+   "url": "/formazione/schede-stampabili/una-catena-di-dipendenze-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": 55,
+   "temi": [],
+   "desc": "Individuare punti comuni di guasto. Con spazi per le risposte e guida docente.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Dal test alla correzione",
+   "url": "/formazione/schede-stampabili/dal-test-alla-correzione-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": 60,
+   "temi": [],
+   "desc": "Valutare un materiale tramite prove osservabili. Con spazi per le risposte e guida docente.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Tettonica delle Placche e Magnitudo",
+   "url": "/formazione/schede-stampabili/placche-tettoniche-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": 50,
+   "temi": [
+    "terremoto"
+   ],
+   "desc": "Placche, faglie, formula della magnitudo momento Mw, scala Mercalli. Italia al margine convergente africano-eurasiatico. domande con calcolo dell'energia rilasciata.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Cambiamento Climatico e Rischi PC",
+   "url": "/formazione/schede-stampabili/climate-change-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": 60,
+   "temi": [
+    "caldo"
+   ],
+   "desc": "Sintesi IPCC, eventi italiani recenti (Vaia, Marmolada, Emilia-Romagna 2023), mitigazione vs adattamento, costruzione di grafico, domande di analisi.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Leggere un indicatore dell'Agenda 2030",
+   "url": "/formazione/schede-stampabili/indicatori-agenda2030-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": 90,
+   "temi": [],
+   "desc": "I traguardi 1.5, 11.5, 11.b e 13.1 nel testo ufficiale, gli indicatori in comune con il Quadro di Sendai, un esercizio di normalizzazione e un compito di realtà per il territorio.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Economia del Rischio",
+   "url": "/formazione/schede-stampabili/economia-rischio-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": 60,
+   "temi": [
+    "meteo"
+   ],
+   "desc": "Costi della ricostruzione italiana (290 mld in 50 anni), rapporto 1:5 prevenzione/ricostruzione, formula BCR, bias politici (asimmetria temporale, recency, optimism), quesito etico VSL.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Mappa rischi GIS + proposta mitigazione",
+   "url": "/formazione/schede-stampabili/mappa-rischi-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "Approccio GIS semplificato: formula R = P × V × E, costruzione mappa rischi area scelta, identificazione popolazione fragile, proposta mitigazione strutturale e organizzativa, segnalazione formale al Comune.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Analisi critica di tre bollettini",
+   "url": "/formazione/schede-stampabili/decodifica-bollettino-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "acqua",
+    "meteo"
+   ],
+   "desc": "Tre bollettini reali (giallo, arancione, rosso) della Regione Lazio: analisi linguistica, calcoli quantitativi (cumulati pioggia, zone allerta), critica costruttiva, riformulazione come post Instagram in 280 caratteri.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "La siccità e i dati del clima locale",
+   "url": "/formazione/schede-stampabili/siccita-dati-clima-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "acqua",
+    "meteo",
+    "caldo"
+   ],
+   "desc": "Analisi guidata della serie di pioggia annua di Genzano (dati ERA5/Open-Meteo): deficit idrico, differenza fra siccità meteorologica e idrologica, la siccità come rischio che cresce.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Simulazione: Comunicazione di Crisi",
+   "url": "/formazione/schede-stampabili/comunicazione-crisi-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": 90,
+   "temi": [
+    "meteo",
+    "informazione"
+   ],
+   "desc": "Lo studente è il responsabile comunicazione del Comune durante un'allerta arancione. Produce 3 testi: post social, messaggio Telegram, nota stampa. Vincoli e griglia valutazione.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "5 Tracce per l'Esame di Stato",
+   "url": "/formazione/schede-stampabili/traccia-esame-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "volontariato"
+   ],
+   "desc": "Tracce nello stile della prima prova (Beck, Ischia 2022, IT-alert, art. 2 D.Lgs. 1/2018, volontariato). 2 di Tipologia B, 3 di Tipologia C.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Il Codice della Protezione Civile",
+   "url": "/formazione/schede-stampabili/codice-pc-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": 60,
+   "temi": [],
+   "desc": "Analisi del D.Lgs. 1/2018: artt. 1, 2, 6, 12, 18, 32-35. Tabella delle autorità per livello (Comune/Regione/Stato). domande di applicazione + sussidiarietà verticale e orizzontale.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "English for Civil Protection",
+   "url": "/formazione/schede-stampabili/english-civil-protection-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": 60,
+   "temi": [
+    "112"
+   ],
+   "desc": "Glossario tecnico inglese (14 termini con IPA), articolo \"EU Civil Protection Mechanism for Greece floods\", comprehension, traduzione, gioco di ruolo in coppia per emergency call al 112 in inglese.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Glossario commentato del lessico PC",
+   "url": "/formazione/schede-stampabili/cruciverba-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto",
+    "acqua",
+    "meteo",
+    "informazione"
+   ],
+   "desc": "11 termini tecnici (allerta vs emergenza, magnitudo vs intensità, frana vs smottamento…) con uso corretto e errori tipici. Riformulazioni di frasi giornalistiche errate, paragrafo di articolo con 6 termini.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Emergenza Inclusiva",
+   "url": "/formazione/schede-stampabili/emergenza-inclusiva-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": 60,
+   "temi": [
+    "informazione"
+   ],
+   "desc": "Aiutare persone con disabilità, fragilità o bisogni specifici senza improvvisare: box \"Chiedi/Comunica/Prepara/Rete\", modello \"scheda bisogni essenziali\" da compilare, simulazione di comunicazione chiara, verifica inclusiva del percorso e mini quiz.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Diventare Volontario PC",
+   "url": "/formazione/schede-stampabili/percorso-volontariato-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": 60,
+   "temi": [
+    "incendi",
+    "volontariato",
+    "informazione"
+   ],
+   "desc": "Requisiti, specialità (AIB, sanitario, radio, GIS…), 7 step del percorso, diritti e doveri (D.Lgs. 1/2018), mini-progetto personale del proprio futuro volontariato. Per chi sta per fare 18.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Piano emergenza condominio o scuola",
+   "url": "/formazione/schede-stampabili/piano-familiare-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto",
+    "acqua",
+    "incendi",
+    "casa"
+   ],
+   "desc": "Progetto completo per un edificio reale: anagrafica, pianta vie di fuga, ruoli, procedure incendio/sisma/allagamento, persone con mobilità ridotta, esercitazioni. Vademecum A4 finale.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Progetto piano di evacuazione di un edificio",
+   "url": "/formazione/schede-stampabili/labirinto-evacuazione-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "casa"
+   ],
+   "desc": "Quadro normativo (D.Lgs. 81/2008, DM 3/8/2015), anagrafica, pianta in scala, calcoli dimensionamento DM 3/8/2015, squadre emergenza, procedure scenari, scheda esercitazione.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Chiamata 112 — Analisi linguistica + protocollo",
+   "url": "/formazione/schede-stampabili/chiamo-112-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "112"
+   ],
+   "desc": "Modello SBAR ai 6 elementi, 3 casi reali confrontati, sistema AML (Advanced Mobile Location) e implicazioni etiche, redazione protocollo di una pagina A4 per studenti delle scuole superiori.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Friuli — 6 maggio 1976",
+   "url": "/formazione/schede-stampabili/caso-friuli-primaria/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto"
+   ],
+   "desc": "\"Là dov'era, com'era\": ricostruzione esemplare e nascita della PC italiana moderna.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Irpinia — 23 novembre 1980",
+   "url": "/formazione/schede-stampabili/caso-irpinia-primaria/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto",
+    "volontariato"
+   ],
+   "desc": "Da Zamberletti alla nascita del Servizio Nazionale di Protezione Civile.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "L'Aquila — 6 aprile 2009",
+   "url": "/formazione/schede-stampabili/caso-aquila-primaria/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto",
+    "informazione"
+   ],
+   "desc": "Solidarietà nazionale, Case C.A.S.E., comunicazione del rischio.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Amatrice — 24 agosto 2016",
+   "url": "/formazione/schede-stampabili/caso-amatrice-primaria/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto"
+   ],
+   "desc": "Solidarietà fra cuochi e ristoranti italiani: la pasta all'amatriciana per la ricostruzione.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Vajont — 9 ottobre 1963",
+   "url": "/formazione/schede-stampabili/caso-vajont-primaria/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [
+    "acqua"
+   ],
+   "desc": "Ascoltare gli scienziati: Tina Merlin e il principio della voce critica nella società civile.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Rigopiano — 18 gennaio 2017",
+   "url": "/formazione/schede-stampabili/caso-rigopiano-primaria/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto",
+    "meteo"
+   ],
+   "desc": "Il coraggio dei soccorritori: 5 giorni nella neve per salvare 11 persone.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Messina-Reggio — 28 dicembre 1908",
+   "url": "/formazione/schede-stampabili/caso-messina-primaria/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto",
+    "natura"
+   ],
+   "desc": "Solidarietà internazionale: navi russe, britanniche, americane in aiuto.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Stava — 19 luglio 1985",
+   "url": "/formazione/schede-stampabili/caso-stava-primaria/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [
+    "acqua"
+   ],
+   "desc": "Il valore dei controlli: cosa significa \"responsabilità d'impresa\" per i bambini.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Sarno — 5 maggio 1998",
+   "url": "/formazione/schede-stampabili/caso-sarno-primaria/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [
+    "acqua"
+   ],
+   "desc": "Rispettare la fragilità del territorio: i boschi salvano i pendii.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Versilia — 19 giugno 1996",
+   "url": "/formazione/schede-stampabili/caso-versilia-primaria/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [
+    "meteo"
+   ],
+   "desc": "Allerta meteo e codici colore: il bollettino salvavita per famiglie in vacanza.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "I vulcani d'Italia",
+   "url": "/formazione/schede-stampabili/caso-vulcani-italia-primaria/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [
+    "vulcani",
+    "natura"
+   ],
+   "desc": "Etna, Stromboli, Vesuvio: i vulcani come bellezza naturale e oggetti di studio scientifico.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Campi Flegrei",
+   "url": "/formazione/schede-stampabili/caso-campi-flegrei-primaria/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [
+    "vulcani"
+   ],
+   "desc": "Il vulcano nascosto vicino Napoli: monitoraggio scientifico e fiducia nelle istituzioni.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Amatrice 2016",
+   "url": "/formazione/schede-stampabili/caso-amatrice-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto",
+    "casa"
+   ],
+   "desc": "Cronologia 24 agosto/30 ottobre 2016, IT-alert, evacuazioni preventive, ricostruzione.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Friuli 1976",
+   "url": "/formazione/schede-stampabili/caso-friuli-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto"
+   ],
+   "desc": "\"Dov'era, com'era\": modello internazionale di ricostruzione + L. 225/1992.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Irpinia 1980",
+   "url": "/formazione/schede-stampabili/caso-irpinia-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto",
+    "volontariato"
+   ],
+   "desc": "\"Fate presto\": Pertini in tv, Zamberletti, nascita Servizio Nazionale PC.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "L'Aquila 2009",
+   "url": "/formazione/schede-stampabili/caso-aquila-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto",
+    "informazione"
+   ],
+   "desc": "Sciame sismico, Commissione Grandi Rischi, Case C.A.S.E., riforma comunicazione del rischio.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Vajont 1963",
+   "url": "/formazione/schede-stampabili/caso-vajont-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": null,
+   "temi": [
+    "acqua"
+   ],
+   "desc": "Disastro annunciato: ascolto della scienza, responsabilità tecnica e politica, Tina Merlin.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Messina-Reggio 1908",
+   "url": "/formazione/schede-stampabili/caso-messina-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto"
+   ],
+   "desc": "Tsunami, prima legge antisismica italiana (R.D. 193/1909), cooperazione internazionale.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Stava 1985",
+   "url": "/formazione/schede-stampabili/caso-stava-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": null,
+   "temi": [
+    "acqua"
+   ],
+   "desc": "Responsabilità d'impresa, riforma controlli ambientali, Direttiva Seveso II.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Sarno 1998",
+   "url": "/formazione/schede-stampabili/caso-sarno-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": null,
+   "temi": [
+    "acqua"
+   ],
+   "desc": "Colata detritica, Legge 267/1998, Piani di Assetto Idrogeologico (PAI).",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Versilia 1996",
+   "url": "/formazione/schede-stampabili/caso-versilia-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": null,
+   "temi": [
+    "meteo"
+   ],
+   "desc": "Flash flood, nascita dei Centri Funzionali, codici colore allerta meteo, IT-alert.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Rigopiano 2017",
+   "url": "/formazione/schede-stampabili/caso-rigopiano-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto",
+    "meteo"
+   ],
+   "desc": "Rischio multiplo concomitante: sisma + neve + viabilità chiusa, responsabilità del Sindaco.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "I vulcani d'Italia",
+   "url": "/formazione/schede-stampabili/caso-vulcani-italia-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": null,
+   "temi": [
+    "vulcani",
+    "casa"
+   ],
+   "desc": "Etna, Stromboli, Vesuvio, Campi Flegrei, Vulcano: monitoraggio INGV, piani di evacuazione.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Campi Flegrei",
+   "url": "/formazione/schede-stampabili/caso-campi-flegrei-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto",
+    "vulcani",
+    "casa"
+   ],
+   "desc": "Caldera, bradisismo, monitoraggio INGV-OV, piano di evacuazione 500.000 persone.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "San Giuliano di Puglia 2002",
+   "url": "/formazione/schede-stampabili/caso-san-giuliano-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto"
+   ],
+   "desc": "Il terremoto del Molise e il crollo della scuola Jovine: perché oggi le scuole si controllano e si costruiscono antisismiche.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Vermicino 1981",
+   "url": "/formazione/schede-stampabili/caso-vermicino-secondaria/",
+   "fasce": [
+    "secondaria1"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "La vicenda di Alfredino Rampi: dal caos dei soccorsi senza coordinamento alla nascita della Protezione Civile italiana moderna.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Messina-Reggio — 28 dicembre 1908",
+   "url": "/formazione/schede-stampabili/caso-messina-reggio-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto"
+   ],
+   "desc": "Terremoto + tsunami, 80.000-120.000 vittime: la più grande catastrofe naturale d'Europa moderna. Prima legge antisismica italiana (R.D. 193/1909).",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Irpinia — 23 novembre 1980",
+   "url": "/formazione/schede-stampabili/caso-irpinia-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto",
+    "volontariato"
+   ],
+   "desc": "«Fate presto»: 2.914 vittime, soccorsi tardivi. Da Zamberletti commissario alla nascita del sistema italiano di Protezione Civile (L. 225/1992).",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "San Giuliano di Puglia — 31 ottobre 2002",
+   "url": "/formazione/schede-stampabili/caso-san-giuliano-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto"
+   ],
+   "desc": "La scuola Jovine crollata, 27 bambini e una maestra. OPCM 3274/2003: classificazione sismica obbligatoria di tutto il territorio italiano.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Vajont — 9 ottobre 1963",
+   "url": "/formazione/schede-stampabili/caso-vajont-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "acqua",
+    "informazione"
+   ],
+   "desc": "«La tragedia annunciata»: 1.917 vittime, frana del Toc, ruolo della responsabilità tecnica e della comunicazione del rischio ignorato.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Friuli — 6 maggio 1976",
+   "url": "/formazione/schede-stampabili/caso-friuli-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto"
+   ],
+   "desc": "«Là dov'era, com'era»: 989 vittime, modello di ricostruzione, nascita della Protezione Civile italiana moderna.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Vermicino — giugno 1981",
+   "url": "/formazione/schede-stampabili/caso-vermicino-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "Alfredino Rampi e le 18 ore di diretta TV. Il caso che ha portato alla nascita del Ministero per la Protezione Civile.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Stava — 19 luglio 1985",
+   "url": "/formazione/schede-stampabili/caso-stava-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "acqua"
+   ],
+   "desc": "Bacini di decantazione minerari ceduti, 268 vittime. Il rischio industriale e la responsabilità penale nelle catastrofi tecnologiche.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Versilia — 19 giugno 1996",
+   "url": "/formazione/schede-stampabili/caso-versilia-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "acqua",
+    "caldo"
+   ],
+   "desc": "L'alluvione di Cardoso: 14 vittime, \"bombe d'acqua\" sui versanti acclivi delle Apuane, cambiamento climatico.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Sarno — 5 maggio 1998",
+   "url": "/formazione/schede-stampabili/caso-sarno-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "acqua"
+   ],
+   "desc": "Le colate di fango sui Picentini, 161 vittime. Urbanizzazione fragile e nascita dei PAI: Decreto Sarno 1998.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Rigopiano — 18 gennaio 2017",
+   "url": "/formazione/schede-stampabili/caso-rigopiano-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto",
+    "informazione"
+   ],
+   "desc": "Valanga sull'hotel: 29 vittime. Comunicazione del rischio fallita, catena decisionale frammentata, processo penale.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Vulcani Attivi Italiani",
+   "url": "/formazione/schede-stampabili/caso-vulcani-italia-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "vulcani"
+   ],
+   "desc": "Vesuvio, Campi Flegrei, Etna, Stromboli, Vulcano, Marsili, Ischia: pericolosità, monitoraggio INGV, piani di emergenza.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Bradisismo Campi Flegrei",
+   "url": "/formazione/schede-stampabili/caso-campi-flegrei-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto",
+    "vulcani",
+    "meteo"
+   ],
+   "desc": "Sciami sismici, sollevamento del suolo, livello giallo INGV. Caso attivo da seguire con i bollettini settimanali. Decreto 2023, EXE Flegrei 2024.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Caso Studio: Amatrice 24 agosto 2016",
+   "url": "/formazione/schede-stampabili/caso-amatrice-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto"
+   ],
+   "desc": "Analisi sistemica del terremoto del Centro Italia 2016: dati essenziali, domande approfondite (fenomeno fisico, fattori predisponenti, risposta, criticità, lezione, riflessione personale).",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
+   "titolo": "Il Caso L'Aquila 2009",
+   "url": "/formazione/schede-stampabili/caso-aquila-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": 60,
+   "temi": [
+    "terremoto",
+    "informazione"
+   ],
+   "desc": "Il processo alla Commissione Grandi Rischi, citazione del \"bicchiere di vino\", distinzione fra valutazione scientifica e comunicazione pubblica, principio di precauzione. domande con dilemma personale.",
+   "facilitata": false
+  },
+  {
+   "tipo": "storia",
+   "titolo": "Tina e il temporale gentile",
+   "url": "/formazione/storie-e-racconti/tina-temporale-gentile/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 4,
+   "temi": [
+    "meteo"
+   ],
+   "desc": "Una storia da leggere insieme, quando il cielo brontola",
+   "facilitata": false
+  },
+  {
+   "tipo": "storia",
+   "titolo": "Il fischietto magico di Tina",
+   "url": "/formazione/storie-e-racconti/tina-fischietto-magico/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 4,
+   "temi": [],
+   "desc": "Il piccolo strumento che ti ritrova quando ti perdi",
+   "facilitata": false
+  },
+  {
+   "tipo": "storia",
+   "titolo": "La nuvola arrabbiata",
+   "url": "/formazione/storie-e-racconti/nuvola-arrabbiata/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 4,
+   "temi": [
+    "meteo"
+   ],
+   "desc": "I quattro colori che ci dicono come si comporta il cielo",
+   "facilitata": false
+  },
+  {
+   "tipo": "storia",
+   "titolo": "Tina e l'amico in difficoltà",
+   "url": "/formazione/storie-e-racconti/tina-amico-difficolta/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 4,
+   "temi": [
+    "112"
+   ],
+   "desc": "Quando un piccolo grida aiuto, un piccolo può chiamare un grande",
+   "facilitata": false
+  },
+  {
+   "tipo": "storia",
+   "titolo": "I tre pompieri amici",
+   "url": "/formazione/storie-e-racconti/tre-pompieri-amici/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 4,
+   "temi": [
+    "incendi"
+   ],
+   "desc": "Chi viene quando il fumo dice \"buongiorno\" senza essere stato invitato",
+   "facilitata": false
+  },
+  {
+   "tipo": "storia",
+   "titolo": "Quando la terra fa solletico",
+   "url": "/formazione/storie-e-racconti/terra-fa-solletico/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 4,
+   "temi": [
+    "terremoto"
+   ],
+   "desc": "La posizione della tartaruga, il segreto che salva",
+   "facilitata": false
+  },
+  {
+   "tipo": "storia",
+   "titolo": "Flavio e lo zaino rosso",
+   "url": "/formazione/schede-stampabili/flavio-libro-popup/",
+   "fasce": [
+    "primaria-bassa"
+   ],
+   "minuti": null,
+   "temi": [
+    "casa"
+   ],
+   "desc": "Il libro pop-up con la storia: si stampa, si taglia e si legge insieme",
+   "facilitata": false
+  },
+  {
+   "tipo": "storia",
+   "titolo": "La casa che ballava",
+   "url": "/formazione/storie-e-racconti/casa-che-balla/",
+   "fasce": [
+    "primaria-bassa"
+   ],
+   "minuti": 6,
+   "temi": [
+    "terremoto"
+   ],
+   "desc": "L'attimo decisivo di Flavio, fra una stanza e un'altra",
+   "facilitata": false
+  },
+  {
+   "tipo": "storia",
+   "titolo": "La pioggia che voleva conoscere il mare",
+   "url": "/formazione/storie-e-racconti/pioggia-mare/",
+   "fasce": [
+    "primaria-bassa"
+   ],
+   "minuti": 6,
+   "temi": [
+    "acqua"
+   ],
+   "desc": "L'attimo decisivo di Flavio sul gradino della cantina",
+   "facilitata": false
+  },
+  {
+   "tipo": "storia",
+   "titolo": "Il bosco che parlava",
+   "url": "/formazione/storie-e-racconti/bosco-parlava/",
+   "fasce": [
+    "primaria-bassa"
+   ],
+   "minuti": 6,
+   "temi": [
+    "incendi"
+   ],
+   "desc": "L'attimo decisivo di Flavio, fra una passeggiata e un piccolo fumo",
+   "facilitata": false
+  },
+  {
+   "tipo": "storia",
+   "titolo": "Notturno e il blackout",
+   "url": "/formazione/storie-e-racconti/notturno-blackout/",
+   "fasce": [
+    "primaria-bassa"
+   ],
+   "minuti": 6,
+   "temi": [
+    "casa"
+   ],
+   "desc": "L'attimo decisivo di Flavio, fra una candela e una torcia",
+   "facilitata": false
+  },
+  {
+   "tipo": "storia",
+   "titolo": "L'amica venuta dal cielo",
+   "url": "/formazione/storie-e-racconti/amica-cielo/",
+   "fasce": [
+    "primaria-bassa"
+   ],
+   "minuti": 6,
+   "temi": [
+    "volontariato"
+   ],
+   "desc": "L'attimo decisivo di Flavio, fra una paura grande e una mano calda",
+   "facilitata": false
+  },
+  {
+   "tipo": "storia",
+   "titolo": "Il muschio dispettoso",
+   "url": "/formazione/storie-e-racconti/muschio-dispettoso/",
+   "fasce": [
+    "primaria-bassa"
+   ],
+   "minuti": 6,
+   "temi": [],
+   "desc": "L'attimo decisivo di Flavio, fra una stradina sbagliata e un fischio salvavita",
+   "facilitata": false
+  },
+  {
+   "tipo": "storia",
+   "titolo": "Il cuore della montagna",
+   "url": "/formazione/storie-e-racconti/cuore-della-montagna/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 9,
+   "temi": [
+    "acqua"
+   ],
+   "desc": "Una fiaba sulla memoria, sull'ascolto e sull'attimo decisivo che cambiò il paese",
+   "facilitata": false
+  },
+  {
+   "tipo": "storia",
+   "titolo": "Il ragazzo che ascoltava il vento",
+   "url": "/formazione/storie-e-racconti/ragazzo-vento/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 9,
+   "temi": [
+    "meteo"
+   ],
+   "desc": "Una storia di scirocco, di mandorli e di un attimo che cambia un giorno",
+   "facilitata": false
+  },
+  {
+   "tipo": "storia",
+   "titolo": "Le sette sirene del paese",
+   "url": "/formazione/storie-e-racconti/sette-sirene-paese/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 8,
+   "temi": [
+    "casa"
+   ],
+   "desc": "Quando il paese si svuota, e un bambino impara cosa pesa davvero in uno zaino",
+   "facilitata": false
+  },
+  {
+   "tipo": "storia",
+   "titolo": "Polvere d'angelo",
+   "url": "/formazione/storie-e-racconti/polvere-angelo/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 9,
+   "temi": [],
+   "desc": "Una storia di ricostruzione, ispirata alla memoria del Centro Italia 2016",
+   "facilitata": false
+  },
+  {
+   "tipo": "storia",
+   "titolo": "La piccola radio dimenticata",
+   "url": "/formazione/storie-e-racconti/radio-dimenticata/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 9,
+   "temi": [
+    "volontariato",
+    "informazione"
+   ],
+   "desc": "Quando i telefoni tacciono, parlano le onde corte",
+   "facilitata": false
+  },
+  {
+   "tipo": "storia",
+   "titolo": "Il giardino delle parole sicure",
+   "url": "/formazione/storie-e-racconti/giardino-parole-sicure/",
+   "fasce": [
+    "primaria-alta"
+   ],
+   "minuti": 9,
+   "temi": [
+    "informazione"
+   ],
+   "desc": "Le parole della Protezione Civile crescono come piante: ognuna ha la sua stagione",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "Acchiappa il Pericolo",
+   "url": "/giochi/infanzia/acchiappa-pericolo/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "Tina ti mostra delle scene: tocca solo le cose pericolose. 6 round per imparare a riconoscere i pericoli di tutti i giorni. Per bambini 4-6 anni.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "Il Cielo di Oggi",
+   "url": "/giochi/infanzia/cielo-oggi/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "Guarda che tempo fa e scegli la bandiera giusta. Gioco per bambini dai 3 ai 6 anni.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "Memory Facile",
+   "url": "/giochi/infanzia/memory-facile/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "Memory con livelli (3, 4, 6 coppie) illustrato sulla protezione civile. Gioco semplice per bambini dai 3 ai 6 anni.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "Il Mezzo Giusto",
+   "url": "/giochi/infanzia/mezzo-giusto/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [
+    "volontariato"
+   ],
+   "desc": "Tina ha bisogno di aiuto: sceglie il mezzo giusto per ogni emergenza. Pompiere, ambulanza o volontari? 5 round per i bambini dai 4 ai 6 anni.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "Il Numero 112",
+   "url": "/giochi/infanzia/numero-emergenza/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [
+    "112"
+   ],
+   "desc": "Impara a comporre il 112 con la tastiera del telefono in 4 scenari diversi. Gioco educativo per bambini dai 3 ai 6 anni.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "Il Rifugio di Tina",
+   "url": "/giochi/infanzia/rifugio-tina/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "Trema la terra! 6 scene: trova il posto sicuro dove Tina si deve riparare in cucina, a scuola, in giardino, in cameretta, al supermercato e in bagno. Gioco per bambini dai 3 ai 6 anni.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "I Suoni dell'Emergenza",
+   "url": "/giochi/infanzia/suoni-emergenza/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [
+    "meteo"
+   ],
+   "desc": "Riconosci 12 suoni dell'emergenza: ambulanza, pompieri, polizia, tuono, allarme, IT-alert, vento e altri. Gioco audio per bambini dai 3 ai 6 anni.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "La Tartaruga Saggia",
+   "url": "/giochi/infanzia/tartaruga-saggia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "25 scene in 5 round: scegli SÌ o NO per imparare i comportamenti sicuri. Gli ultimi round sono su solidarieta' e gesti di prevenzione a casa. Gioco per bambini dai 3 ai 6 anni.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "Trova il Cartello",
+   "url": "/giochi/infanzia/trova-cartello/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "Tina ti chiede di trovare un cartello: tocca quello giusto tra quattro. 12 cartelli in 2 round. Gioco educativo per bambini dai 3 ai 6 anni.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "Lo Zaino di Tina",
+   "url": "/giochi/infanzia/vesti-tina/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": null,
+   "temi": [
+    "casa"
+   ],
+   "desc": "Tocca le cose giuste da mettere nello zaino dell'emergenza. 10 round in livelli. Gioco per bambini dai 3 ai 6 anni.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "Abbina e Impara",
+   "url": "/giochi/primaria/abbina-impara/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "Abbina i rischi ai comportamenti corretti. Gioco di abbinamento sulla protezione civile per bambini dai 6 agli 11 anni.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "Anagrammi della Sicurezza",
+   "url": "/giochi/primaria/anagrammi/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "Gioco di anagrammi con parole della protezione civile: riordina le lettere e scopri la parola nascosta.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "Caccia al Rischio",
+   "url": "/giochi/primaria/caccia-al-rischio/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "Trova i rischi nascosti in nove scene quotidiane: casa, scuola, cucina, parco. Gioco educativo per bambini dai 6 agli 11 anni.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "Chiamata al 112",
+   "url": "/giochi/primaria/chiamata-112/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [
+    "112"
+   ],
+   "desc": "Simula una chiamata al Numero Unico di Emergenza 112. Rispondi alle domande dell'operatore e impara cosa dire davvero in emergenza.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "Cosa Faccio Se...",
+   "url": "/giochi/primaria/cosa-faccio-se/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "Cosa faccio se c'è un'emergenza? Scegli i comportamenti corretti passo dopo passo. Gioco per bambini dai 6 agli 11 anni.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "Cruciverba della Sicurezza",
+   "url": "/giochi/primaria/cruciverba/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "Cruciverba con definizioni sulla protezione civile: risolvi le parole orizzontali e verticali.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "Labirinto di Evacuazione",
+   "url": "/giochi/primaria/labirinto-evacuazione/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [
+    "casa"
+   ],
+   "desc": "Guida l'alunno dalla classe al punto di raccolta seguendo le regole dell'evacuazione scolastica: niente ascensore, niente ritorni, segui le frecce.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "Memory dei Segnali",
+   "url": "/giochi/primaria/memory/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "Memory educativo: abbina i pittogrammi ISO 7010 di sicurezza al comportamento corretto. Tre livelli per scuola primaria.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "Posiziona i Cartelli",
+   "url": "/giochi/primaria/posiziona-cartelli/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "Sposta i cartelli di pericolo, divieto e sicurezza nei posti giusti della scena. Si gioca con dita, mouse o frecce della tastiera.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "Puzzle degli Scenari",
+   "url": "/giochi/primaria/puzzle-scenari/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto",
+    "acqua",
+    "incendi"
+   ],
+   "desc": "Rimetti in ordine i passi corretti per affrontare terremoto, alluvione e incendio.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "Quiz della Sicurezza",
+   "url": "/giochi/primaria/quiz/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "Quiz a risposta multipla sui rischi e le buone pratiche. Gioco educativo per bambini dai 6 agli 11 anni.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "Il Semaforo del Rischio",
+   "url": "/giochi/primaria/semaforo-rischio/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "Classifica le situazioni con il semaforo del rischio: verde, giallo, rosso. Gioco per bambini dai 6 agli 11 anni.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "Lo Zaino di Emergenza",
+   "url": "/giochi/primaria/zaino-emergenza/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [
+    "casa"
+   ],
+   "desc": "Scegli cosa mettere nello zaino di emergenza. Gioco educativo sulla protezione civile per bambini dai 6 agli 11 anni.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "Cartelli di Pericolo CLP, ADR e UNI",
+   "url": "/giochi/ragazzi/cartelli-pericolo/",
+   "fasce": [
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "Riconosci i pittogrammi CLP (etichettatura chimica), i simboli ADR (trasporto merci pericolose) e i cartelli di sicurezza UNI EN ISO 7010. Gioco educativo per ragazzi.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "Codice Arancione",
+   "url": "/giochi/ragazzi/codice-arancione/",
+   "fasce": [
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "Allestisci un'area di accoglienza per 200 sfollati rispettando i vincoli logistici e di sicurezza.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "Soccorritore in emergenza",
+   "url": "/giochi/ragazzi/emergency-responder/",
+   "fasce": [
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto",
+    "vulcani"
+   ],
+   "desc": "Avventura narrativa: terremoto nella notte ai Colli Albani. Ogni scelta ha conseguenze, finali multipli.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "Linea del Tempo",
+   "url": "/giochi/ragazzi/linea-tempo-eventi/",
+   "fasce": [
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "acqua"
+   ],
+   "desc": "Ordina cronologicamente otto grandi eventi della protezione civile italiana: dal Vajont 1963 a IT-alert 2024. Gioco didattico di memoria storica.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "La Mappa del Rischio",
+   "url": "/giochi/ragazzi/mappa-rischio/",
+   "fasce": [
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "Sulla mappa stilizzata di Genzano, posiziona rischi, aree di emergenza e strutture strategiche.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "Radio Emergency",
+   "url": "/giochi/ragazzi/radio-emergency/",
+   "fasce": [
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "informazione"
+   ],
+   "desc": "Alfabeto fonetico NATO, formato messaggio radio, dettato: impara a comunicare in emergenza.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "Scelte Difficili",
+   "url": "/giochi/ragazzi/scelte-difficili/",
+   "fasce": [
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto",
+    "casa"
+   ],
+   "desc": "5 scenari di emergenza con scelte multiple. Le tue decisioni cambiano la storia. Per ragazzi 11-14 anni: dal terremoto a scuola al blackout esteso.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "Simulatore COC",
+   "url": "/giochi/ragazzi/simulatore-coc/",
+   "fasce": [
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "meteo",
+    "volontariato"
+   ],
+   "desc": "Sei funzionario di sala al Centro Operativo Comunale: gestisci un'allerta arancione coordinando le 9 funzioni di supporto.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "Triage S.T.A.R.T.",
+   "url": "/giochi/ragazzi/triage-start/",
+   "fasce": [
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "primo-soccorso"
+   ],
+   "desc": "Applica il metodo START per assegnare il codice di triage (rosso, giallo, verde, nero) a 8 feriti in una maxi-emergenza. Strumento didattico per ragazzi.",
+   "facilitata": false
+  },
+  {
+   "tipo": "gioco",
+   "titolo": "Vero o Bufala?",
+   "url": "/giochi/ragazzi/vero-o-bufala/",
+   "fasce": [
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "informazione"
+   ],
+   "desc": "Smista 12 notizie di protezione civile fra fonti ufficiali (DPC, Regione Lazio, INGV) e fake news. Impara a riconoscere le bufale che girano sui social.",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "Vulcano lento o vulcano esplosivo?",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto",
+    "vulcani"
+   ],
+   "desc": "Terremoti e vulcani",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "Il terremoto di gelatina",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto",
+    "vulcani"
+   ],
+   "desc": "Terremoti e vulcani",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "Quando il terreno perde sostegno",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto",
+    "vulcani"
+   ],
+   "desc": "Terremoti e vulcani",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "Costruiamo un sismografo",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto",
+    "vulcani"
+   ],
+   "desc": "Terremoti e vulcani",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "Il ritmo che fa oscillare una torre",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "terremoto",
+    "vulcani"
+   ],
+   "desc": "Terremoti e vulcani",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "La spugna e il fango",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "acqua"
+   ],
+   "desc": "Frane, alluvioni e maremoti",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "Le radici che tengono la terra",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "acqua"
+   ],
+   "desc": "Frane, alluvioni e maremoti",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "Città di asfalto, città di prato",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "acqua"
+   ],
+   "desc": "Frane, alluvioni e maremoti",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "Quanta pioggia è caduta?",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "acqua"
+   ],
+   "desc": "Frane, alluvioni e maremoti",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "L'onda di maremoto",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "acqua"
+   ],
+   "desc": "Frane, alluvioni e maremoti",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "Il tombino ostruito",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "acqua"
+   ],
+   "desc": "Frane, alluvioni e maremoti",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "L'acqua risale da sola",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "infanzia",
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [
+    "acqua"
+   ],
+   "desc": "Frane, alluvioni e maremoti",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "Il triangolo del fuoco",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "incendi"
+   ],
+   "desc": "Incendi boschivi",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "Il bosco di tessere",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "infanzia",
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [
+    "incendi"
+   ],
+   "desc": "Incendi boschivi",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "Sole o ombra? Chiaro o scuro?",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "infanzia",
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [
+    "meteo",
+    "caldo"
+   ],
+   "desc": "Caldo, freddo, vento, temporali e siccità",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "Quale materiale conserva il calore?",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "meteo",
+    "caldo"
+   ],
+   "desc": "Caldo, freddo, vento, temporali e siccità",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "Il sale che scioglie il ghiaccio",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "meteo",
+    "caldo"
+   ],
+   "desc": "Caldo, freddo, vento, temporali e siccità",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "La forza del vento (la manica a vento)",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "infanzia",
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [
+    "meteo",
+    "caldo"
+   ],
+   "desc": "Caldo, freddo, vento, temporali e siccità",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "Quanto è lontano il temporale?",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "meteo",
+    "caldo"
+   ],
+   "desc": "Caldo, freddo, vento, temporali e siccità",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "L'acqua che sparisce (la siccità)",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "infanzia",
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [
+    "meteo",
+    "caldo"
+   ],
+   "desc": "Caldo, freddo, vento, temporali e siccità",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "Le goccioline vengono dall'aria",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "infanzia",
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [
+    "meteo",
+    "caldo"
+   ],
+   "desc": "Caldo, freddo, vento, temporali e siccità",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "Come si sparge una \"nube\"",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "Rischi legati all'attività dell'uomo",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "Caccia ai germi (il potere del sapone)",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "infanzia",
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "Rischi legati all'attività dell'uomo",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "Acqua limpida significa potabile?",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "Rischi legati all'attività dell'uomo",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "Più lontano, più al riparo",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "Rischi legati all'attività dell'uomo",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "Cosa metto nello zaino?",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "infanzia",
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "casa"
+   ],
+   "desc": "Prepararsi e pianificare",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "La mappa dei pericoli e dei luoghi sicuri",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "Prepararsi e pianificare",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "Memory dei segnali di sicurezza",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "infanzia",
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [],
+   "desc": "Prepararsi e pianificare",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "La chiamata perfetta al 112",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "112",
+    "informazione"
+   ],
+   "desc": "Comunicazione e soccorso",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "Il messaggio arriva corretto?",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "informazione"
+   ],
+   "desc": "Comunicazione e soccorso",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "Il telefono con i bicchieri",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "infanzia",
+    "primaria-bassa",
+    "primaria-alta"
+   ],
+   "minuti": null,
+   "temi": [
+    "informazione"
+   ],
+   "desc": "Comunicazione e soccorso",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "La voce che guida",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "primaria-bassa",
+    "primaria-alta",
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "informazione"
+   ],
+   "desc": "Comunicazione e soccorso",
+   "facilitata": false
+  },
+  {
+   "tipo": "esperimento",
+   "titolo": "Un piccolo allarme di livello",
+   "url": "/formazione/esperimenti/",
+   "fasce": [
+    "secondaria1",
+    "secondaria2"
+   ],
+   "minuti": null,
+   "temi": [
+    "informazione"
+   ],
+   "desc": "Comunicazione e soccorso",
+   "facilitata": false
+  }
+ ]
+}

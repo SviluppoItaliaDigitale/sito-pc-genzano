@@ -136,7 +136,13 @@ def main() -> int:
             pagina.on("pageerror", lambda e, js=js: js.append(str(e).splitlines()[0][:160]))
             url = f"http://127.0.0.1:{porta}/{rel[:-len('index.html')] if rel.endswith('index.html') else rel}"
             try:
-                pagina.goto(url, wait_until="load", timeout=45000)
+                risposta = pagina.goto(url, wait_until="load", timeout=45000)
+                if risposta is None or risposta.status >= 400:
+                    # una pagina d'errore stampa bene: senza questo controllo
+                    # un indirizzo del campione sparito passerebbe per verificato
+                    errori.append(f"{rel}: la pagina non esiste (HTTP {risposta.status if risposta else '—'})")
+                    pagina.close()
+                    continue
                 pagina.emulate_media(media="print")
                 doc = pymupdf.open(stream=pagina.pdf(format="A4", prefer_css_page_size=True,
                                                      print_background=True), filetype="pdf")
