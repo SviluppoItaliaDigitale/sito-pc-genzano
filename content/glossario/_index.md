@@ -133,6 +133,10 @@ Common Alerting Protocol. Standard internazionale con cui questo sito pubblica l
 Massima autorità tecnico-operativa del Servizio nazionale, alle dipendenze della Presidenza del Consiglio. Coordina la risposta alle emergenze di rilievo nazionale.
 *Approfondisci: [Il Servizio Nazionale](/conoscere/servizio-nazionale/).*
 
+### CARG {#carg}
+Progetto Cartografia Geologica e Geotematica. Coordinato dall'ISPRA, rifà la Carta geologica d'Italia in scala 1:50.000 (la carta storica è in scala 1:100.000), divisa in 634 fogli. I Castelli Romani stanno sui fogli 374 «Roma», 375 «Tivoli», 387 «Albano Laziale» e 388 «Velletri»; Genzano e il lago di Nemi cadono nel foglio 388.
+*Approfondisci: [La nuova Carta geologica d'Italia: i fogli che descrivono Genzano](/comunicazioni/2026-10-01-carta-geologica-italia-carg-fogli-genzano/).*
+
 ### CAT-INGV {#cat-ingv}
 Centro Allerta Tsunami dell'INGV. Dal 2017 sorveglia 24 ore su 24 i maremoti nel Mediterraneo, accreditato in ambito UNESCO. Fa parte del sistema di allertamento SiAM insieme a ISPRA e DPC.
 *Approfondisci: [Il rischio da maremoto](/conoscere/catalogo-dei-rischi/rischio-maremoto/).*
