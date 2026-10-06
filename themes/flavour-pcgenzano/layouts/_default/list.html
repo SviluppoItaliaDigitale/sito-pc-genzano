@@ -44,6 +44,7 @@
           {{ partial "leggi-ad-alta-voce.html" (dict "selector" ".list-intro-content") }}
           {{ partial "scarica-braille.html" . }}
           {{ partial "scarica-trascrizione-pdf.html" . }}
+          {{ partial "modalita-aula.html" (dict "page" . "selector" ".list-intro-content") }}
         </div>
       </div>
       {{ partial "lis-badge.html" . }}

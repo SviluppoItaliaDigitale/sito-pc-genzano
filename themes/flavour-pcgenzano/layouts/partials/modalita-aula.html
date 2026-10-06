@@ -1,0 +1,14 @@
+{{/* Modalità Aula (06/10/2026): pulsante che apre la pagina come sequenza di
+     schermate a tutto schermo, da proiettare in classe (js/modalita-aula.js).
+     Parametri: page (la pagina), selector (il contenitore del testo).
+     Il pulsante resta nascosto finché lo script non trova almeno due sezioni
+     (h2) da trasformare in schermate. */}}
+{{- $p := .page -}}
+{{- if ge (len $p.Fragments.Identifiers) 2 -}}
+{{- $v := readFile "themes/flavour-pcgenzano/static/js/modalita-aula.js" | hash.FNV32a -}}
+<button type="button" class="btn btn-outline-primary btn-sm btn-modalita-aula" hidden
+        data-aula-sorgente="{{ .selector }}">
+  <i class="bi bi-easel me-1" aria-hidden="true"></i> Modalità Aula
+</button>
+<script src="{{ "js/modalita-aula.js" | relURL }}?v={{ $v }}" defer></script>
+{{- end -}}

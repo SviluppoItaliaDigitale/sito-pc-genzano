@@ -363,7 +363,7 @@ Da maggio 2026 **tutte le pagine** del sito (articoli, sezioni con `_index.md`, 
 
 **Box sopra il corpo** — `.strumenti-articolo.strumenti-lettura`:
 - Header: *"ℹ️ Leggi questo articolo in altri modi"*
-- Contenuto: reading-time pill (`~N min`) + `leggi-ad-alta-voce` (TTS + segmented Lento/Normale/Veloce) + `scarica-braille` + `scarica-trascrizione-pdf`
+- Contenuto: reading-time pill (`~N min`) + `leggi-ad-alta-voce` (TTS + segmented Lento/Normale/Veloce) + `scarica-braille` + `scarica-trascrizione-pdf` + **«Modalità Aula»** (dal 06/10/2026, partial `modalita-aula.html` + `js/modalita-aula.js`: la pagina diventa una sequenza di schermate a tutto schermo con testo grande, una per sezione h2, da proiettare in classe; il pulsante compare solo con almeno due h2; i riquadri interattivi, cioè con pulsanti, iframe o moduli, restano nella pagina; finestra modale accessibile con frecce, Esc e fuoco al titolo; incluso anche in `rischi-prevenzione/single.html` accanto al tempo di lettura)
 - Condizione: `$ttsEnabled (gt .WordCount 30)` (stessa condizione del TTS legacy)
 - Logica WCAG: gli strumenti di **consumo accessibile** (TTS, braille, PDF) devono essere disponibili PRIMA del corpo, perché chi è cieco/dislessico/L2 deve trovarli subito.
 
