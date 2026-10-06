@@ -7817,3 +7817,67 @@ html.a11y-contrast-yellow-black .allerta-stato .allerta-stato-sotto { color: #ff
   .btn-salva-pagina, .link-miei-contenuti, #miei-contenuti-togli-tutto,
   .miei-contenuti-voce .btn { display: none !important; }
 }
+
+/* ==========================================================================
+ * MODALITÀ AULA v1.0 (06/10/2026) — la pagina come sequenza di schermate da
+ * proiettare (js/modalita-aula.js, partial modalita-aula.html). Fondo bianco,
+ * testo #1a1a1a (17:1), titoli #003366 (12,6:1), nessuna animazione.
+ * ========================================================================== */
+html.aula-aperta, html.aula-aperta body { overflow: hidden; }
+.aula {
+  --aula-scala: 1;
+  position: fixed; inset: 0; z-index: 2000;
+  display: flex; flex-direction: column;
+  background: #fff; color: #1a1a1a;
+}
+.aula-barra, .aula-navigazione {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: .75rem 1.5rem; background: #f4f7fb; border-bottom: 1px solid #d9dfe6;
+}
+.aula-navigazione { border-bottom: 0; border-top: 1px solid #d9dfe6; }
+.aula-contatore { font-weight: 600; color: #003366; }
+.aula-annuncio { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.aula-comandi { display: flex; gap: .5rem; }
+.aula-btn {
+  min-height: 44px; min-width: 44px; padding: .4rem .9rem;
+  border: 2px solid #003366; border-radius: 6px; background: #fff; color: #003366;
+  font-weight: 600; font-size: 1rem; cursor: pointer;
+}
+.aula-btn:hover { background: #e7f0fa; }
+.aula-btn:focus-visible { outline: 3px solid #ffbe2e; outline-offset: 2px; }
+.aula-btn:disabled { opacity: .45; cursor: default; }
+.aula-btn-grande { font-size: 1.25rem; padding: .6rem 1.6rem; }
+.aula-btn-avanti { background: #003366; color: #fff; }
+.aula-btn-avanti:hover { background: #00264d; }
+.aula-tasto { font-size: .75rem; border: 1px solid currentColor; border-radius: 3px; padding: 0 .3rem; margin-left: .3rem; }
+.aula-schermata {
+  flex: 1; overflow: auto;
+  padding: clamp(1.5rem, 4vw, 4rem) clamp(1.5rem, 8vw, 10rem);
+  font-size: calc(clamp(1.35rem, 2.4vw, 2.1rem) * var(--aula-scala));
+  line-height: 1.5;
+}
+.aula-schermata > * { max-width: 46ch; }
+.aula-schermata table, .aula-schermata figure { max-width: 100%; }
+.aula-schermata p, .aula-schermata li, .aula-schermata dd, .aula-schermata dt,
+.aula-schermata blockquote, .aula-schermata summary, .aula-schermata td,
+.aula-schermata th { font-size: inherit; line-height: inherit; }
+.aula-schermata h3 { font-size: 1.15em; color: #003366; }
+.aula-schermata h4 { font-size: 1em; color: #003366; }
+.aula-titolo:focus, .aula-titolo:focus-visible, .aula-titolo.focus--keyboard { outline: none !important; box-shadow: none !important; }   /* fuoco dato dallo script per gli screen reader, non un comando */
+.aula-titolo { color: #003366; font-size: 1.6em; font-weight: 700; margin: 0 0 1.2rem; line-height: 1.2; }
+.aula-apertura { display: flex; flex-direction: column; justify-content: center; }
+.aula-apertura .aula-titolo { font-size: 2.2em; }
+.aula-segue { font-size: .5em; font-weight: 400; color: #4d5a66; }
+.aula-schermata figure { margin: 0; text-align: center; }
+.aula-figura img { max-height: 62vh; width: auto; max-width: 100%; }
+.aula-schermata figcaption { font-size: .7em; color: #4d5a66; }
+.aula-schermata table { font-size: .7em; }
+.aula-schermata details { border: 2px solid #003366; border-radius: 8px; padding: .6em 1em; margin-bottom: 1em; }
+.aula-schermata summary { cursor: pointer; font-weight: 700; color: #003366; }
+.aula-fine { margin-top: 2em; font-size: .7em; color: #4d5a66; }
+@media (max-width: 575.98px) {
+  .aula-barra, .aula-navigazione { padding: .5rem .75rem; }
+  .aula-contatore-parola { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .aula-btn-grande { font-size: 1rem; padding: .5rem 1rem; }
+}
+@media print { .btn-modalita-aula, .aula { display: none !important; } }

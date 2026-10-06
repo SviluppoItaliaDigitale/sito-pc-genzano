@@ -50,6 +50,7 @@
           Lettura: <strong>~{{ .ReadingTime }} {{ if eq .ReadingTime 1 }}minuto{{ else }}minuti{{ end }}</strong>
           <span class="visually-hidden">— tempo di lettura stimato</span>
         </span>
+        {{ partial "modalita-aula.html" (dict "page" . "selector" ".article-body") }}
       </div>
       {{ partial "leggi-ad-alta-voce.html" (dict "selector" ".article-body") }}
       {{ end }}
