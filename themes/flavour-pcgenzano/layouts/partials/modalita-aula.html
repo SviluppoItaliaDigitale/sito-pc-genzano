@@ -4,7 +4,7 @@
      Il pulsante resta nascosto finché lo script non trova almeno due sezioni
      (h2) da trasformare in schermate. */}}
 {{- $p := .page -}}
-{{- if ge (len $p.Fragments.Identifiers) 3 -}}
+{{- if ge (len $p.Fragments.Identifiers) 2 -}}
 {{- $v := readFile "themes/flavour-pcgenzano/static/js/modalita-aula.js" | hash.FNV32a -}}
 <button type="button" class="btn btn-outline-primary btn-sm btn-modalita-aula" hidden
         data-aula-sorgente="{{ .selector }}">

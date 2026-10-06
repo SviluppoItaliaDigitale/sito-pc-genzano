@@ -84,7 +84,8 @@
     box.setAttribute('aria-label', 'Modalità Aula: ' + schermate[0].titolo);
     box.innerHTML =
       '<div class="aula-barra">' +
-        '<span class="aula-contatore" aria-live="polite"></span>' +
+        '<span class="aula-contatore"></span>' +
+        '<span class="aula-annuncio" aria-live="polite"></span>' +
         '<span class="aula-comandi">' +
           '<button type="button" class="aula-btn" data-azione="meno" aria-label="Testo più piccolo">A−</button>' +
           '<button type="button" class="aula-btn" data-azione="piu" aria-label="Testo più grande">A+</button>' +
@@ -98,6 +99,7 @@
       '</div>';
     var area = box.querySelector('.aula-schermata');
     var contatore = box.querySelector('.aula-contatore');
+    var annuncio = box.querySelector('.aula-annuncio');
     var btnIndietro = box.querySelector('[data-azione="indietro"]');
     var btnAvanti = box.querySelector('[data-azione="avanti"]');
 
@@ -129,7 +131,10 @@
       contatore.innerHTML = '<span class="aula-contatore-parola">Schermata </span>' + (indice + 1) + ' di ' + schermate.length;
       btnIndietro.disabled = indice === 0;
       btnAvanti.disabled = indice === schermate.length - 1;
-      if (focus !== false) h.focus();
+      // con le frecce il fuoco va al titolo; con i pulsanti resta sul pulsante
+      // (si può premere Avanti più volte) e il titolo nuovo si annuncia
+      if (focus !== false) { annuncio.textContent = ''; h.focus(); }
+      else annuncio.textContent = 'Schermata ' + (indice + 1) + ' di ' + schermate.length + ': ' + h.textContent;
     }
     function esci() {
       document.removeEventListener('keydown', tasti, true);

@@ -7836,6 +7836,7 @@ html.aula-aperta, html.aula-aperta body { overflow: hidden; }
 }
 .aula-navigazione { border-bottom: 0; border-top: 1px solid #d9dfe6; }
 .aula-contatore { font-weight: 600; color: #003366; }
+.aula-annuncio { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .aula-comandi { display: flex; gap: .5rem; }
 .aula-btn {
   min-height: 44px; min-width: 44px; padding: .4rem .9rem;
