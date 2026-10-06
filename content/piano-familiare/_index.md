@@ -104,7 +104,7 @@ Non inserire più dati personali o sanitari del necessario. Il piano stampato pu
 <div class="row g-3 mb-3">
 <div class="col-md-6">
 <label for="contatto-fuori" class="form-label">Contatto di riferimento fuori città</label>
-<input type="text" class="form-control" id="contatto-fuori" placeholder="Es. Zio Mario — 333 1234567">
+<input type="text" class="form-control" id="contatto-fuori" placeholder="Es. Zio Pasquale — 333 1234567">
 </div>
 <div class="col-md-6">
 <label for="medico" class="form-label">Medico di famiglia (nome e telefono)</label>
