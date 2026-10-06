@@ -85,6 +85,14 @@ jobs:
         # senza h1 o con un'immagine senza alt; più h1 e titoli doppi sono avvisi.
         run: python3 scripts/check-qualita-pagine.py public
 
+      - name: "🧭 Assistente virtuale e mappa del sito: tutte le voci, nessun collegamento rotto"
+        # 06/10/2026: all'assistente mancavano 19 voci del menu e due
+        # collegamenti portavano a pagine inesistenti; alla mappa ne mancavano
+        # 7. Ogni voce del menu e del piè di pagina deve stare in entrambi,
+        # l'albero dell'assistente deve essere integro e ogni collegamento
+        # deve portare a una pagina della build.
+        run: python3 scripts/check-navigazione.py --public public
+
       - name: "📊 Statistiche build"
         run: |
           echo "Pagine generate: $(find public -name '*.html' | wc -l)"
@@ -130,6 +138,21 @@ jobs:
         run: |
           pip install --quiet pyyaml
           python3 scripts/check-dati-canonici.py
+
+      - name: "🧑‍🏫 Catalogo di «Crea la mia lezione» aggiornato"
+        # 06/10/2026: la pagina compone le lezioni da data/materiali_lezione.json,
+        # ricavato dall'indice delle schede, dalle storie, dai giochi e dagli
+        # esperimenti. Una scheda aggiunta o rinominata senza rigenerare il
+        # catalogo resterebbe fuori dalle lezioni (o vi comparirebbe un link morto).
+        run: python3 scripts/genera-materiali-lezione.py --check
+
+      - name: "🧰 Indice dell'Open Kit aggiornato"
+        # La pagina /open-kit/ legge data/open_kit.json; gli ZIP si generano al
+        # deploy. Un componente aggiunto allo script senza rigenerare l'indice,
+        # o un file del componente sparito, si vede qui.
+        run: |
+          python3 scripts/genera-open-kit.py
+          git diff --exit-code data/open_kit.json || { echo "::error::data/open_kit.json non aggiornato: esegui python3 scripts/genera-open-kit.py"; exit 1; }
 
   fogli-stampa:
     name: "Fogli di stampa: niente fogli bianchi o quasi vuoti"

@@ -53,6 +53,7 @@ Non sai da dove partire? Scegli la tua situazione: ogni scelta ti porta ai mater
 
 <div class="consulta-rapida">
 {{< link-card url="/formazione/scuole-da-dove-cominciare/" icon="bi-signpost-2" titolo="Prima volta? Parti da qui" desc="Scegli il tuo ruolo e arriva subito ai materiali giusti." >}}
+{{< link-card url="/formazione/crea-la-mia-lezione/" icon="bi-magic" titolo="Crea la mia lezione" desc="Classe, minuti e argomento: il sito compone la lezione con schede, storie, giochi ed esperimenti." >}}
 {{< link-card url="/formazione/percorsi-didattici/" icon="bi-clock-history" titolo="Quanto tempo hai?" desc="Una lezione da un'ora, mezza giornata o un progetto: pacchetti con durata e obiettivi." >}}
 <a class="cr-card" href="#kit"><span class="cr-icon" aria-hidden="true"><i class="bi bi-mortarboard"></i></span><span class="cr-corpo"><span class="cr-titolo">Per fascia d'età</span><span class="cr-desc">Kit dedicati per infanzia, primaria, secondaria di primo e secondo grado.</span></span></a>
 {{< link-card url="/formazione/scuole-checklist-docente/" icon="bi-check2-square" titolo="Prepara la lezione" desc="Parole e tempi giusti per spiegare i rischi senza creare allarmismo." >}}
@@ -61,6 +62,10 @@ Non sai da dove partire? Scegli la tua situazione: ogni scelta ti porta ai mater
 {{< link-card url="/formazione/in-famiglia-dopo-la-lezione/" icon="bi-house-heart" titolo="A casa, in famiglia" desc="Azioni concrete per continuare a casa dopo la lezione." >}}
 {{< link-card url="/assistente/" icon="bi-chat-dots" titolo="Non sai cosa cercare?" desc="L'assistente guidato ti porta alla risposta giusta con poche domande." >}}
 </div>
+
+{{< callout tipo="info" titolo="Proietta le pagine in classe con la Modalità Aula" >}}
+Nelle pagine con più sezioni, in cima, accanto al tempo di lettura o nel riquadro «Leggi questa pagina in altri modi», trovi il pulsante **Modalità Aula**. La pagina diventa una serie di schermate a tutto schermo, con testo grande e senza menu: una per sezione. Vai avanti e indietro con i pulsanti o con le frecce della tastiera, ingrandisci il testo con A+ ed esci con Esc. Provala sulla pagina del [rischio sismico](/rischi-prevenzione/rischio-sismico/).
+{{< /callout >}}
 
 ### Kit per fascia d'età {#kit}
 

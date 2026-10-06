@@ -16,7 +16,7 @@ Ogni percorso riorganizza i materiali del Gruppo già esistenti (kit, schede sta
 > Per la **mappa completa** dei nostri materiali sui 3 Nuclei Concettuali del D.M. 183/2024 e sull'Agenda 2030: vedi la [pagina dedicata ai docenti](/formazione/educazione-civica/). Per l'archivio integrale delle [schede stampabili](/formazione/schede-stampabili/) (per fascia e disciplina): vedi l'indice. Questa pagina **non sostituisce** quegli strumenti: li riorganizza in percorsi di consumo immediato.
 
 ## <i class="bi bi-clock-fill text-primary me-2" aria-hidden="true"></i>Quanto tempo hai a disposizione? {#quanto-tempo}
-Scegli il riquadro che corrisponde al tempo che puoi davvero dedicare. I percorsi più lunghi non sono "migliori": sono solo più completi. Anche **una sola ora** ben preparata lascia un segno nei ragazzi.
+Scegli il riquadro che corrisponde al tempo che puoi davvero dedicare. Se hai una sola lezione e un argomento preciso, puoi anche usare [Crea la mia lezione](/formazione/crea-la-mia-lezione/): indichi classe, minuti e argomento e il sito compone il piano con i materiali già pubblicati. I percorsi più lunghi non sono "migliori": sono solo più completi. Anche **una sola ora** ben preparata lascia un segno nei ragazzi.
 
 <div class="tempo-grid" role="list" aria-label="Tre percorsi per tempo disponibile">
 

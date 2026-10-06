@@ -105,6 +105,12 @@ jobs:
         # perché lo script non era in CI e nessuno l'aveva lanciato manualmente.
         run: python3 scripts/genera-qr-articoli.py
 
+      - name: "🧰 Pacchetti dell'Open Kit"
+        # 06/10/2026: i componenti riusabili del sito (pagina /open-kit/) sono
+        # ZIP costruiti qui dai file veri, mai committati: un kit copiato a mano
+        # invecchierebbe dal giorno dopo. ZIP riproducibili (data fissa).
+        run: python3 scripts/genera-open-kit.py
+
       - name: "⚑ Aggiorna snapshot attivazioni Copernicus EMS"
         # L'API Rapid Mapping risponde 200 ma NON espone Access-Control-Allow-Origin
         # (verificato 24/08/2026): da browser la scheda EMS del cruscotto veniva

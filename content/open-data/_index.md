@@ -9,6 +9,8 @@ dataUltimaRevisione: "2026-07-31"
 
 Il **Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma** pubblica i dati delle proprie attività in **formato aperto** (CSV + JSON), riusabili da chiunque sotto **licenza Creative Commons BY 4.0** ai sensi del **D.Lgs. 36/2006** ("Codice di riutilizzo dell'informazione del settore pubblico") e della direttiva **(UE) 2019/1024** sui dati aperti.
 
+Oltre ai dati, mettiamo a disposizione anche il **codice** di alcune funzioni del sito, da riusare in altri siti di protezione civile: lo trovi nell'[Open Kit](/open-kit/).
+
 ## Dataset disponibili
 
 I seguenti dataset sono pubblicati **ora**, con dati reali e verificati, in formato **CSV** e **JSON**. Ogni file è scaricabile e riutilizzabile sotto licenza CC BY 4.0 (vedi sezione *Licenza*).
