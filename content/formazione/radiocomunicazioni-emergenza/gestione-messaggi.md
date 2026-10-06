@@ -285,7 +285,7 @@ oppure (se COC è occupato):
 
 *Testo: Richiesta autorizzazione sosta prolungata presso piazzale scuola Belardi per allestimento punto informazioni volontari. Area libera fino a ore 18 — spelling diciotto. Fine messaggio.*
 
-*Firma: ing. Laura Bianchi, coordinatore, tre quattro cinque uno due tre quattro cinque sei sette."*
+*Firma: ing. Lina Bianchi, coordinatore, tre quattro cinque uno due tre quattro cinque sei sette."*
 
 **7. Verifica ricezione**
 *"Punto A, COC ha ricevuto messaggio 12, attendo conferma check e passo alla consegna."*

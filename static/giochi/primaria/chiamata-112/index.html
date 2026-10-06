@@ -319,7 +319,7 @@
         id: 'bimbo-caduto',
         icon: '\uD83D\uDEB2',
         titolo: 'Caduta al parco',
-        intro: 'Sei al parco con il tuo amico Luca. Cadendo dalla bicicletta si fa male a una gamba e non riesce a rialzarsi. Non ci sono adulti vicino. Componi il 112.',
+        intro: 'Sei al parco con il tuo amico Elio. Cadendo dalla bicicletta si fa male a una gamba e non riesce a rialzarsi. Non ci sono adulti vicino. Componi il 112.',
         steps: [
           {
             op: 'Numero Unico Emergenze, buongiorno. Mi dica cosa è successo.',
@@ -344,7 +344,7 @@
             opCtx: 'Condizioni del ferito',
             options: [
               { text: 'Sì, parla e piange, ma non riesce a muovere la gamba destra.', kind: 'ok', fb: 'Perfetto: sai dire che è cosciente (parla) e qual è il problema (gamba). L\'operatore prepara il tipo di ambulanza giusto.' },
-              { text: 'Non lo so, non gli ho chiesto.', kind: 'meh', fb: 'Chiediglielo a voce mentre parli al telefono: "Luca, mi senti? Ti fa male qui?". Anche una risposta a metà è un\'informazione.' },
+              { text: 'Non lo so, non gli ho chiesto.', kind: 'meh', fb: 'Chiediglielo a voce mentre parli al telefono: "Elio, mi senti? Ti fa male qui?". Anche una risposta a metà è un\'informazione.' },
               { text: 'Lo sto scuotendo per svegliarlo.', kind: 'ko', fb: 'Non muovere e non scuotere mai una persona caduta: potresti peggiorare un infortunio alla schiena. Chiamalo a voce e aspetta i soccorsi.' }
             ]
           },
@@ -370,8 +370,8 @@
             op: 'Resti in linea. L\'ambulanza è già in viaggio. Mi avvisa se cambia qualcosa.',
             opCtx: 'Chiusura della chiamata',
             options: [
-              { text: 'Va bene, resto al telefono e la avviso se Luca si sente peggio.', kind: 'ok', fb: 'Esatto. Restare in linea permette di aggiornare i soccorsi fino al loro arrivo.' },
-              { text: 'Chiudo, così non consumo la batteria del telefono.', kind: 'ko', fb: 'Non chiudere mai prima dell\'operatore: se Luca peggiora, chi avvisa l\'ambulanza?' },
+              { text: 'Va bene, resto al telefono e la avviso se Elio si sente peggio.', kind: 'ok', fb: 'Esatto. Restare in linea permette di aggiornare i soccorsi fino al loro arrivo.' },
+              { text: 'Chiudo, così non consumo la batteria del telefono.', kind: 'ko', fb: 'Non chiudere mai prima dell\'operatore: se Elio peggiora, chi avvisa l\'ambulanza?' },
               { text: 'Vado a cercare aiuto altrove, tanto l\'ambulanza arriverà.', kind: 'meh', fb: 'Meglio restare dove sei: i soccorsi cercano te all\'indirizzo che hai dato. Allontanandoti rischi che non ti trovino.' }
             ]
           }

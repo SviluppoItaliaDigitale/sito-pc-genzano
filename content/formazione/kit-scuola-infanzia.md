@@ -573,7 +573,7 @@ Obiettivo: il bambino capisce che al 112 bisogna dire **cosa è successo** e **d
 > *Bambini*: "Non stare sotto l'albero!"
 
 **Scena 5 — Il piccolo fuoco**
-> *Docente*: "A casa la pentola sta fumando forte. Che cosa fa Luca?"
+> *Docente*: "A casa la pentola sta fumando forte. Che cosa fa Marco?"
 > *Bambini*: "Chiama la mamma!"
 > *Docente*: "E se non c'è nessuno?"
 > *Bambini*: "Esce di casa e chiama il 112!"
@@ -665,7 +665,7 @@ Attività stampabili con spazi per le risposte e guida per il docente nella pagi
 Percorso di educazione alla sicurezza su una sola regola, ripetuta in forme adatte all'età: **non tocco, mi allontano, avviso un adulto**. Le attività si svolgono soltanto su carta e con dialoghi: nessuna ricerca o manipolazione di oggetti reali, nessuna chiamata di prova al 112. Ogni scheda ha la nota per l'adulto e la soluzione capovolta. Leggete prima la guida per gli adulti. Le schede sono incluse nei pacchetti da stampare e da scaricare.
 
 - [Tre azioni che mi proteggono](/formazione/schede-stampabili/oggetti-tre-azioni-che-mi-proteggono-infanzia/) — 3–6 anni. Ripetere la sequenza con parole, gesti o immagini.
-- [La storia di Leo al parco](/formazione/schede-stampabili/oggetti-la-storia-di-leo-al-parco-infanzia/) — 3–6 anni. Raccontare una scelta prudente senza avvicinarsi all’oggetto.
+- [La storia di Elio al parco](/formazione/schede-stampabili/oggetti-la-storia-di-elio-al-parco-infanzia/) — 3–6 anni. Raccontare una scelta prudente senza avvicinarsi all’oggetto.
 - [Le persone che mi aiutano](/formazione/schede-stampabili/oggetti-le-persone-che-mi-aiutano-infanzia/) — 3–6 anni. Individuare gli adulti di riferimento e chiedere aiuto dopo un errore.
 - [Se non so che cosa è](/formazione/schede-stampabili/oggetti-se-non-so-che-cosa-e-facilitata/) — versione facilitata, età diverse. Chiedere aiuto attraverso il proprio modo di comunicare.
 - [Una bevanda trovata](/formazione/schede-stampabili/oggetti-una-bevanda-trovata-facilitata/) — versione facilitata, età diverse. Lasciare una bevanda sconosciuta e chiedere aiuto.
@@ -678,7 +678,7 @@ Percorso di educazione alla sicurezza su una sola regola, ripetuta in forme adat
 Percorso di educazione alla sicurezza all'aperto su una sola regola, ripetuta in forme adatte all'età: **guardo, non tocco, chiedo a un adulto**. Bacche e funghi, bruchi della processionaria, vespe, zecche, cani sconosciuti, serpenti. Le attività si svolgono soltanto su carta e con dialoghi, senza contatto con animali o piante reali. Ogni scheda ha la nota per l'adulto e la soluzione capovolta. Leggete prima la guida per gli adulti. Le schede sono incluse nei pacchetti da stampare e da scaricare.
 
 - [Guardo con gli occhi](/formazione/schede-stampabili/natura-guardo-con-gli-occhi-infanzia/) — 3–6 anni. Ripetere la sequenza davanti a bacche, fiori e funghi sconosciuti.
-- [Sara e il cane al parco](/formazione/schede-stampabili/natura-sara-e-il-cane-al-parco-infanzia/) — 3–6 anni. Chiedere al padrone prima di avvicinarsi a un cane.
+- [Silvia e il cane al parco](/formazione/schede-stampabili/natura-silvia-e-il-cane-al-parco-infanzia/) — 3–6 anni. Chiedere al padrone prima di avvicinarsi a un cane.
 - [Piccoli animali, mani ferme](/formazione/schede-stampabili/natura-piccoli-animali-mani-ferme-infanzia/) — 3–6 anni. Restare calmi davanti a un insetto e non toccare i bruchi in fila.
 - [Guardo, non tocco](/formazione/schede-stampabili/natura-guardo-non-tocco-facilitata/) — versione facilitata, età diverse. Chiedere aiuto davanti a una pianta o a un animale sconosciuto.
 - [Un insetto vola vicino](/formazione/schede-stampabili/natura-un-insetto-vola-vicino-facilitata/) — versione facilitata, età diverse. Restare calmi con un insetto vicino e segnalare subito una puntura.
@@ -690,7 +690,7 @@ Percorso di educazione alla sicurezza all'aperto su una sola regola, ripetuta in
 Percorso di educazione alla sicurezza domestica su una sola regola, ripetuta in forme adatte all'età: **non apro, non tocco, chiedo a un adulto**. Farmaci e prodotti per la casa, pile e magneti, cose calde, elettricità, principio di incendio in cucina, finestre e balconi. Le attività si svolgono soltanto su carta e con dialoghi, senza prove con prodotti o apparecchi reali. Ogni scheda ha la nota per l'adulto e la soluzione capovolta. Leggete prima la guida per gli adulti. Le schede sono incluse nei pacchetti da stampare e da scaricare.
 
 - [Le cose che non si aprono](/formazione/schede-stampabili/casa-le-cose-che-non-si-aprono-infanzia/) — 3–6 anni. Ripetere la sequenza davanti a flaconi, scatole e medicine.
-- [Nina e la pentola](/formazione/schede-stampabili/casa-nina-e-la-pentola-infanzia/) — 3–6 anni. Stare lontani dalle cose calde e chiamare un adulto.
+- [Maria e la pentola](/formazione/schede-stampabili/casa-maria-e-la-pentola-infanzia/) — 3–6 anni. Stare lontani dalle cose calde e chiamare un adulto.
 - [Chi mi aiuta in casa](/formazione/schede-stampabili/casa-chi-mi-aiuta-in-casa-infanzia/) — 3–6 anni. Individuare gli adulti di riferimento e chiedere aiuto dopo un errore.
 - [Non apro, chiedo](/formazione/schede-stampabili/casa-non-apro-chiedo-facilitata/) — versione facilitata, età diverse. Chiedere aiuto davanti a una bottiglia o a una scatola sconosciuta.
 - [Caldo: non tocco](/formazione/schede-stampabili/casa-caldo-non-tocco-facilitata/) — versione facilitata, età diverse. Stare lontani dalle cose calde e chiamare un adulto dopo una scottatura.
