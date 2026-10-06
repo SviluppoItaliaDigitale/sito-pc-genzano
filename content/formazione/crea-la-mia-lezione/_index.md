@@ -6,7 +6,7 @@ indice: false
 tts: false
 ---
 
-Indica la classe, il tempo che hai e l'argomento. Il sito compone una lezione in fasi (introduzione, racconto, attività, gioco, chiusura) con i materiali già pubblicati: schede da stampare, storie, giochi, esperimenti. Non scrive testi nuovi, sceglie fra quelli che ci sono.
+Indica la classe, il tempo che hai e l'argomento. Il sito compone una lezione in fasi (introduzione, racconto, attività, esperimento, gioco, chiusura) con i materiali già pubblicati: schede da stampare, storie, giochi, esperimenti. Non scrive testi nuovi, sceglie fra quelli che ci sono.
 
 {{< crea-lezione >}}
 
