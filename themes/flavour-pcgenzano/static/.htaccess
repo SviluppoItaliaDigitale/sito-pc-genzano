@@ -227,7 +227,7 @@ RedirectMatch 410 ^/areefiltrate\.html$
 # server e riceve sempre la versione corrente. Costo accettato: qualche KB
 # in più per visita in cambio di aggiornamenti visibili subito.
 # NON reintrodurre regole di cache (mod_expires, max-age, ExpiresByType):
-# istruzione permanente dell'utente, vedi .claude/rules/05 § "Cache".
+# istruzione permanente del curatore del sito (12/09/2026), vedi la documentazione interna del deploy, sezione "Cache".
 <IfModule mod_expires.c>
   ExpiresActive Off
 </IfModule>

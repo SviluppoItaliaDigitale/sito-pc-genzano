@@ -53,6 +53,24 @@ jobs:
         # erano visti da nessun controllo. lychee non segue i frammenti.
         run: python3 scripts/check-ancore.py public --base-path ""
 
+      - name: "🙋 Nessun riferimento allo strumento nel sito pubblicato"
+        # Il sito deve risultare fatto dal suo curatore, Alessandro Cuollo
+        # (istruzione permanente, CLAUDE.md § "Nessun riferimento all'IA"):
+        # nel sito compilato non deve comparire il nome dello strumento né del
+        # suo produttore, nemmeno in un commento di un file servito. Se il
+        # controllo scatta su un uso legittimo (un nome proprio in un articolo),
+        # si verifica il caso e si riformula.
+        shell: bash
+        run: |
+          trovati=$(grep -rIilE '\bclaude\b|anthropic' public || true)
+          if [ -n "$trovati" ]; then
+            echo "::error::Il sito compilato nomina lo strumento in questi file:"
+            echo "$trovati"
+            grep -rIinE '\bclaude\b|anthropic' public | cut -c1-200 | head -20
+            exit 1
+          fi
+          echo "Nessun riferimento allo strumento nel sito compilato."
+
       - name: "🔗 URL preferito sulle pagine statiche"
         # Audit esterno 14/09/2026: le pagine autonome di static/ (schede, giochi,
         # kit, storie) non dichiaravano il canonical, quindi produzione Aruba e
