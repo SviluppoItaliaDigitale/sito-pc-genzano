@@ -5,22 +5,40 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-06T20:02:33+00:00",
+  "generato": "2026-10-06T23:44:49+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-06T19:40:11+00:00",
+   "data": "2026-10-06T21:37:45+00:00",
    "fonte": "ANSA",
-   "titolo": "Il Governo temporeggia sui carburanti, dossier inflazione all'Ecofin",
-   "url": "https://www.ansa.it/canale_motori/notizie/istituzioni/2026/10/06/il-governo-temporeggia-sui-carburanti-dossier-inflazione-allecofin_5d0b1426-cd66-4a50-9d69-8e04bbe77190.html"
+   "titolo": "Allarme peste in Russia, Trump: 'A breve sentirò Putin'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/06/rubio-a-mosca-condivida-le-informazioni-sulla-peste-in-siberia_80f385c3-55e4-4341-b3a6-701440aeaac1.html"
   },
   {
-   "data": "2026-10-06T19:38:04+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Peste in Siberia, Burioni sui social: \"Non è preoccupante, ma può diventarlo\"",
-   "url": "https://www.adnkronos.com/cronaca/peste-siberia-burioni-post-social_2SEINzrdVmYcziQ9E3E7u8"
+   "data": "2026-10-06T21:21:56+00:00",
+   "fonte": "ANSA",
+   "titolo": "Due iniezioni letali, Christa Pike ha ripreso conoscenza e parla",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/06/due-iniezioni-letali-christa-pike-ha-ripreso-conoscenza-e-parla_bce4583f-1380-494d-b431-921fe2f8c54a.html"
+  },
+  {
+   "data": "2026-10-06T20:56:53+00:00",
+   "fonte": "ANSA",
+   "titolo": "Attentato di Modena, El Koudri tenta il suicidio in carcere",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/06/attentato-di-modena-el-koudri-tenta-il-suicidio-in-carcere_dc8802dc-c3f5-4b75-822e-36576ccf9789.html"
+  },
+  {
+   "data": "2026-10-06T20:31:51+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Attentato di Modena, El Koudri tenta il suicidio in carcere",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/06/attentato-di-modena-el-koudri-tenta-il-suicidio-in-carcere_e9afa7c7-4a56-4ee2-9033-152b54267248.html"
+  },
+  {
+   "data": "2026-10-06T20:25:13+00:00",
+   "fonte": "ANSA",
+   "titolo": "A Venezia il Trans-Regional Seapower Symposium, focus sulla geopolitica dei mari",
+   "url": "https://www.ansa.it/sito/notizie/eventi/2026/10/05/a-venezia-il-trans-regional-seapower-symposium-focus-sulla-geopolitica-dei-mari_2a47645f-af04-4515-a288-50c5c9a9992f.html"
   },
   {
    "data": "2026-10-06T19:30:54+00:00",
@@ -59,40 +77,16 @@
    "url": "https://www.ansa.it/sito/notizie/politica/2026/10/06/nuovo-attacco-di-vannacci-a-cerno-il-cda-rai-parole-inaccettabili_ceba8625-7aa5-4e59-8bbd-b7a0d5f52fea.html"
   },
   {
-   "data": "2026-10-06T19:04:56+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Al tempio di Roma la commemorazione per il 7 ottobre e l'attentato del 9 ottobre 1982",
-   "url": "https://www.adnkronos.com/cronaca/tempio-di-roma-commemorazione-comunita-ebraica_6gWnstQvHfoGuCTJADmuXc"
-  },
-  {
-   "data": "2026-10-06T18:52:38+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Legge elettorale, dalla Camera via libera alla fiducia su art.1 e 2. Opposizioni: \"Incostituzionale\"",
-   "url": "https://www.adnkronos.com/politica/legge-elettorale-camera-fiducia-articolo-1-e-2_iEKQHOAvyyLofNHzXSCB7"
-  },
-  {
    "data": "2026-10-06T18:51:38+00:00",
    "fonte": "ANSA",
    "titolo": "Garlasco, Sempio: 'Non vivo più. La condanna di Alberto Stasi è giusta'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/06/garlasco-andrea-sempio-io-non-sto-vivendo_9a664235-97ae-475c-809f-34a949ed181d.html"
   },
   {
-   "data": "2026-10-06T18:46:26+00:00",
-   "fonte": "ANSA",
-   "titolo": "Malagò commissario della Figc, nuove elezioni il 14 dicembre",
-   "url": "https://www.ansa.it/sito/notizie/sport/2026/10/06/malago-commissario-della-figc-la-giunta-del-coni-vota-allunanimita_4674284c-db5f-4be2-9d02-4d4ff65a52df.html"
-  },
-  {
    "data": "2026-10-06T18:25:05+00:00",
    "fonte": "ANSA",
    "titolo": "Occhiuto: 'I diritti civili non sono trattati con sufficiente coraggio dal centrodestra'",
    "url": "https://www.ansa.it/sito/notizie/speciali/italia-innovativa/2026/10/06/occhiuto-i-diritti-civili-non-sono-trattati-con-sufficiente-coraggio-dal_56bc8501-3f5b-4f78-a709-1bd54a7fc96c.html"
-  },
-  {
-   "data": "2026-10-06T18:18:56+00:00",
-   "fonte": "ANSA",
-   "titolo": "Allarme peste, Rubio chiede alla Russia tutte le informazioni",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/06/rubio-a-mosca-condivida-le-informazioni-sulla-peste-in-siberia_80f385c3-55e4-4341-b3a6-701440aeaac1.html"
   },
   {
    "data": "2026-10-06T18:18:51+00:00",
@@ -131,22 +125,10 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/06/precipita-in-un-canale-sulle-tofane-morto-escursionista-di-63-anni_f5947cb9-e72a-4b4d-b544-21f32c2cc41a.html"
   },
   {
-   "data": "2026-10-06T17:50:59+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Roma, uomo investito dal treno alla stazione Trastevere: ipotesi suicidio",
-   "url": "https://www.adnkronos.com/cronaca/uomo-investito-treno-stazione-trastevere-ipotesi-suicidio_5qFrGIMxfAECh8rdCnCd01"
-  },
-  {
    "data": "2026-10-06T17:50:19+00:00",
    "fonte": "ANSA CRONACA",
    "titolo": "Sempio, 'nessun errore giudiziario su Alberto Stasi, condanna giusta'",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/06/sempio-nessun-errore-giudiziario-su-alberto-stasi-condanna-giusta_b71002b3-8dfd-45ed-adcc-d6fa241ac5b5.html"
-  },
-  {
-   "data": "2026-10-06T17:49:37+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Sinner salta le Atp Finals, i tifosi... rivendono i biglietti: \"No Jannik, no tennis\"",
-   "url": "https://www.adnkronos.com/sport/sinner-salta-atp-finals-tifosi-rivendono-biglietti-cosa-succede_45fDmVddjhgraX7GoMlS5f"
   },
   {
    "data": "2026-10-06T17:48:08+00:00",
@@ -155,22 +137,10 @@
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/06/candidato-afd-eletto-presidente-del-parlamento-in-sassonia-anhalt-e-la-prima-volta_e9439bd1-1eff-4f5a-aa9c-003fe638d0e1.html"
   },
   {
-   "data": "2026-10-06T17:43:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Garlasco, Sempio: \"Condanna Stasi è giusta. Non sto vivendo, su tv e social solo il delitto\"",
-   "url": "https://www.adnkronos.com/cronaca/caso-garlasco-andrea-sempio-alberto-stasi-ultime-notizie_7u0dFjssGXiTR0sdJ8SBa5"
-  },
-  {
    "data": "2026-10-06T17:40:17+00:00",
    "fonte": "ANSA",
    "titolo": "Hamas pubblica un video di Sinwar prima di essere ucciso, travestito per spostarsi",
    "url": "https://www.ansa.it/sito/videogallery/mondo/2026/10/06/le-brigate-al-qassem-pubblicano-un-video-con-sinwar_91cbc433-7f91-4045-a591-5ae21066a904.html"
-  },
-  {
-   "data": "2026-10-06T17:38:53+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Open fiber ed Enea: turismo, energia e monitoraggio del territorio, ecco il modello di borgo",
-   "url": "https://www.adnkronos.com/economia/open-fiber-ed-enea-turismo-energia-e-monitoraggio-del-territorio-ecco-il-modello-di-borgo_5HRTRblD9j9wjojTY0rRMY"
   },
   {
    "data": "2026-10-06T17:35:28+00:00",
@@ -189,6 +159,36 @@
    "fonte": "ANSA CRONACA",
    "titolo": "Bloccati in partenza per Tel Aviv, avevano documenti falsi",
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/06/provano-a-salire-su-volo-per-tel-aviv-con-passaporti-falsi-denunciati_fe7238e5-8003-437e-ad83-6ddfae3ea8d5.html"
+  },
+  {
+   "data": "2026-10-06T17:21:36+00:00",
+   "fonte": "ANSA",
+   "titolo": "Battaglia nel Mar Nero, colpite navi cargo al largo della Bulgaria",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/06/la-bulgaria-due-navi-colpite-da-droni-sulle-coste-del-mar-nero._0231200e-b392-4867-969d-b60d3337c436.html"
+  },
+  {
+   "data": "2026-10-06T17:21:00+00:00",
+   "fonte": "ANSA",
+   "titolo": "Curva dei rendimenti: cosa significa quando si irripidisce o si appiattisce",
+   "url": "https://www.ansa.it/native/ansacom/2026/10/06/curva-dei-rendimenti-cosa-significa-quando-si-irripidisce-o-si-appiattisce_48c61c9d-684a-4e29-a6c6-659a28cb7ca3.html"
+  },
+  {
+   "data": "2026-10-06T17:20:35+00:00",
+   "fonte": "ANSA",
+   "titolo": "In Messico calo storico dei femminicidi. Come funziona la Linea antiviolenza",
+   "url": "https://www.ansa.it/donne/notizie/2026/10/06/in-messico-calo-storico-dei-femminicidi.-come-funziona-la-linea-antiviolenza_e9e7c3b1-ddd0-4215-876e-1b4fe89bac34.html"
+  },
+  {
+   "data": "2026-10-06T17:12:01+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Il progetto del nuovo San Siro può andare avanti, il Tar boccia 5 ricorsi",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/06/il-tar-boccia-tutti-i-ricorsi-contro-la-vendita-di-san-siro_05eaf229-80ff-4391-a873-2142ea395dd1.html"
+  },
+  {
+   "data": "2026-10-06T16:52:24+00:00",
+   "fonte": "ANSA",
+   "titolo": "Jessica Moretti chiede l'indennità per la perdita di guadagno",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/06/crans-montana-jessica-moretti-chiede-indennita-per-infortunio-nellincendio_6c8c1560-011c-4c3f-8986-3d998fab7192.html"
   }
  ]
 }
