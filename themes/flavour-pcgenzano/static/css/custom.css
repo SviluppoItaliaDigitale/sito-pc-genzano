@@ -7799,3 +7799,21 @@ html.a11y-contrast-yellow-black .allerta-stato .allerta-stato-sotto { color: #ff
   .allerta-stato, .allerta-stato-domani { background: #fff !important; color: #000 !important; border-color: #000 !important; }
   .allerta-stato .allerta-stato-titolo, .allerta-stato .allerta-stato-icona, .allerta-stato-domani { color: #000 !important; }
 }
+
+/* ==========================================================================
+ * I MIEI CONTENUTI v1.0 (06/10/2026) — pagine salvate sul dispositivo
+ * (js/miei-contenuti.js, pagina /i-miei-contenuti/, pulsante in page-tools).
+ * ========================================================================== */
+.miei-contenuti-elenco { list-style: none; padding: 0; margin: 0 0 1rem; }
+.miei-contenuti-voce {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: .75rem 0; border-bottom: 1px solid #d9dfe6;
+}
+.miei-contenuti-voce a { font-weight: 600; }
+.miei-contenuti-info { display: block; font-size: .875rem; color: #4d5a66; }
+.miei-contenuti-voce .btn { flex-shrink: 0; min-height: 32px; }
+.link-miei-contenuti { align-self: center; }
+@media print {
+  .btn-salva-pagina, .link-miei-contenuti, #miei-contenuti-togli-tutto,
+  .miei-contenuti-voce .btn { display: none !important; }
+}

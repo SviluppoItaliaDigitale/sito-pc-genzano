@@ -399,6 +399,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Standard ISO per la PC</p>
   <p class="ms-card-desc">Hub di consultazione su 30 standard internazionali ISO rilevanti per la Protezione Civile (emergency management, gestione del rischio, comunicazione di crisi, segnaletica, adattamento climatico).</p>
 </a>
+<a class="ms-card ms-edu" href="/i-miei-contenuti/">
+  <div class="ms-card-icon"><i class="bi bi-bookmark"></i></div>
+  <p class="ms-card-title">I miei contenuti</p>
+  <p class="ms-card-desc">Le pagine che hai salvato con il pulsante «Salva tra i miei contenuti». Restano solo sul tuo dispositivo, senza registrazione.</p>
+</a>
 <a class="ms-card ms-edu" href="/feed-rss/">
   <div class="ms-card-icon"><i class="bi bi-rss-fill"></i></div>
   <p class="ms-card-title">Feed RSS</p>

@@ -52,6 +52,18 @@
     {{/* QR code dell'articolo: si auto-nasconde se il QR non è stato
          generato (guardia fileExists nel partial). Solo /comunicazioni/. */}}
     {{ partial "qr-articolo.html" . }}
+    {{/* «I miei contenuti»: salva la pagina solo su questo dispositivo
+         (js/miei-contenuti.js). Nascosto finché lo script non verifica
+         che il browser permetta di salvare. */}}
+    {{ if and (not .IsHome) (ne .Section "i-miei-contenuti") }}
+    {{- $sezione := "" -}}
+    {{- with .CurrentSection }}{{ if ne .Permalink $.Permalink }}{{ $sezione = .Title }}{{ end }}{{ end -}}
+    <button type="button" class="btn btn-sm btn-outline-primary btn-salva-pagina" hidden
+            data-titolo="{{ .Title }}" data-sezione="{{ $sezione }}">
+      <i class="bi bi-bookmark me-1" aria-hidden="true"></i><span class="btn-salva-testo">Salva tra i miei contenuti</span>
+    </button>
+    <a class="link-miei-contenuti small" href="{{ "i-miei-contenuti/" | relURL }}" hidden>Vedi i miei contenuti</a>
+    {{ end }}
   </div>
 
   <div class="page-tools-share mt-2" role="group" aria-label="Condividi questa pagina">

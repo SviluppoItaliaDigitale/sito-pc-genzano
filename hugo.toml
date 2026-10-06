@@ -417,6 +417,12 @@ enableGitInfo = true
 # site-chrome.js), la loro sede semantica. Erano duplicate in entrambi i
 # posti — de-duplicate il 15/07/2026 (fix recuperato dalla PR #667).
 
+# Pagine salvate dal cittadino sul proprio dispositivo (06/10/2026).
+[[menus.footer]]
+  name = "I miei contenuti"
+  url = "/i-miei-contenuti/"
+  weight = 0
+
 # Trasparenza editoriale (E-E-A-T): come scriviamo e verifichiamo i contenuti.
 [[menus.footer]]
   name = "Metodo editoriale"

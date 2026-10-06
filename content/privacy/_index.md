@@ -4,7 +4,7 @@ description: "Informativa sul trattamento dei dati personali e sull'uso dei cook
 layout: "single"
 toc: true
 tts: true
-dataUltimaRevisione: "2026-09-21"
+dataUltimaRevisione: "2026-10-06"
 ---
 
 Questa pagina spiega quali dati possono essere trattati durante la navigazione del sito e come sono gestiti cookie, widget esterni e strumenti interattivi.
@@ -81,6 +81,16 @@ Questo sito usa solo cookie tecnici necessari al funzionamento. Non usa cookie d
 </div>
 
 La disabilitazione dei cookie tecnici può compromettere alcune funzionalità del sito.
+
+## Dati che restano solo nel tuo browser
+
+Alcune funzioni ricordano le tue scelte nella memoria locale del browser (*localStorage*). Questi dati **non vengono inviati al sito** né a terzi e servono solo a te. Per esempio:
+
+- le preferenze del pannello «Strumenti di accessibilità» e la velocità della lettura ad alta voce;
+- le pagine che salvi in [«I miei contenuti»](/i-miei-contenuti/);
+- l'ultimo dato ricevuto dalle schede del cruscotto, mostrato se la fonte non risponde.
+
+Si cancellano cancellando i dati del sito dalle impostazioni del browser; le pagine salvate si possono togliere anche dalla pagina «I miei contenuti».
 
 ## Statistiche di visita anonime
 
