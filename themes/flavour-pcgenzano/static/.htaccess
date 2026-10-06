@@ -111,9 +111,13 @@ RedirectMatch 301 ^/giochi-protezione-civile/?(.*)$ https://www.protezionecivile
 RedirectMatch 301 ^/formazione_pc/?(.*)$ https://www.protezionecivilegenzano.it/formazionepc/$1
 RedirectMatch 301 ^/quiz_pc/?(.*)$ https://www.protezionecivilegenzano.it/quizpc/$1
 
-# Libro pop-up rinominato il 06/10/2026: Flavio è il protagonista di tutte le
-# storie. Destinazione fissa, come per le cartelle del vecchio sito.
+# Libro pop-up e tre schede dell'infanzia rinominati il 06/10/2026: Flavio è il
+# protagonista delle storie e i personaggi prendono i nomi scelti dal Gruppo.
+# Destinazione fissa, come per le cartelle del vecchio sito.
 RedirectMatch 301 ^/formazione/schede-stampabili/flavia-libro-popup(/.*)?$ https://www.protezionecivilegenzano.it/formazione/schede-stampabili/flavio-libro-popup/
+RedirectMatch 301 ^/formazione/schede-stampabili/natura-sara-e-il-cane-al-parco-infanzia(/.*)?$ https://www.protezionecivilegenzano.it/formazione/schede-stampabili/natura-silvia-e-il-cane-al-parco-infanzia/
+RedirectMatch 301 ^/formazione/schede-stampabili/oggetti-la-storia-di-leo-al-parco-infanzia(/.*)?$ https://www.protezionecivilegenzano.it/formazione/schede-stampabili/oggetti-la-storia-di-elio-al-parco-infanzia/
+RedirectMatch 301 ^/formazione/schede-stampabili/casa-nina-e-la-pentola-infanzia(/.*)?$ https://www.protezionecivilegenzano.it/formazione/schede-stampabili/casa-maria-e-la-pentola-infanzia/
 
 # Pagine HTML standalone del vecchio sito senza corrispondenza diretta —
 # 410 Gone (rimossa) così Google le toglie subito.

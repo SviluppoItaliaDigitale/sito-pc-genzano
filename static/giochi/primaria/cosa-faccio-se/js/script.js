@@ -265,14 +265,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     ]
                 },
                 {
-                    text: 'Il signore si chiama Luigi ma non ricorda l’indirizzo. I tuoi genitori chiamano il 112. L’operatore chiede una descrizione. Cosa è utile dire?',
+                    text: 'Il signore si chiama Pasquale ma non ricorda l’indirizzo. I tuoi genitori chiamano il 112. L’operatore chiede una descrizione. Cosa è utile dire?',
                     choices: [
                         { text: '"È un signore vecchio"', correct: false, tip: 'Serve una descrizione precisa: altezza, capelli, vestiti, se porta occhiali o bastone.' },
-                        { text: '"Si chiama Luigi, è alto circa 1,70 m, capelli bianchi, giacca grigia, senza cappello"', correct: true, tip: 'Perfetto! Una descrizione precisa aiuta chi lo sta cercando a riconoscerlo subito.' }
+                        { text: '"Si chiama Pasquale, è alto circa 1,70 m, capelli bianchi, giacca grigia, senza cappello"', correct: true, tip: 'Perfetto! Una descrizione precisa aiuta chi lo sta cercando a riconoscerlo subito.' }
                     ]
                 },
                 {
-                    text: 'Mentre aspettate, Luigi vuole uscire dalla pizzeria e andare "a cercare casa da solo". Cosa fai?',
+                    text: 'Mentre aspettate, Pasquale vuole uscire dalla pizzeria e andare "a cercare casa da solo". Cosa fai?',
                     choices: [
                         { text: 'Lo lascio andare, ha detto che conosce la strada', correct: false, tip: 'Se è confuso non deve uscire da solo. In strada potrebbe perdersi ancora di più.' },
                         { text: 'Gli parlo con calma, gli offro dell’acqua e lo convinco ad aspettare con noi', correct: true, tip: 'Bravo! Parlare con calma ai confusi li rassicura. Offrire acqua o un posto a sedere aiuta a guadagnare tempo.' }
@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     text: 'Arriva la polizia chiamata dal 112. Un agente ti chiede cosa hai visto. Cosa fai?',
                     choices: [
                         { text: 'Mi nascondo, non voglio parlare', correct: false, tip: 'La tua testimonianza è utile. Puoi parlare con un adulto accanto a te.' },
-                        { text: 'Racconto con calma cosa ho visto, restando accanto ai miei genitori', correct: true, tip: 'Bravissimo! Sei stato un piccolo cittadino attivo. Anche tu hai contribuito a far ritrovare la famiglia di Luigi.' }
+                        { text: 'Racconto con calma cosa ho visto, restando accanto ai miei genitori', correct: true, tip: 'Bravissimo! Sei stato un piccolo cittadino attivo. Anche tu hai contribuito a far ritrovare la famiglia di Pasquale.' }
                     ]
                 }
             ],
