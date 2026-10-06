@@ -11,6 +11,10 @@
   .area-mappa { border: 2px solid #1a1a1a; border-radius: 6px; min-height: 130mm; background: #fafbfc; position: relative; }
   .area-mappa::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: linear-gradient(to right, rgba(0,51,102,0.07) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,51,102,0.07) 1px, transparent 1px); background-size: 8mm 8mm; }
 </style>
+  <!-- Stampa: un 10% in meno tiene l'ultimo foglio pieno; senza, la fascia
+       delle affiliazioni o la riga finale andavano da sole su un foglio in più
+       (controllo fogli di stampa, 06/10/2026). -->
+  <style>@media print { .scheda { zoom: 0.9; } }</style>
 </head>
 <body>
 <button class="btn-stampa no-print" onclick="window.print()">🖨️ Stampa A4</button>

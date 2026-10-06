@@ -11,6 +11,10 @@
   .item .quando span { width: 8mm; height: 8mm; border: 1.5px solid #1a1a1a; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 8pt; font-weight: 700; }
   .item .azione { font-size: 11pt; min-height: 8mm; padding: 0 2mm; }
 </style>
+  <!-- Stampa: un 10% in meno tiene l'ultimo foglio pieno; senza, la fascia
+       delle affiliazioni o la riga finale andavano da sole su un foglio in più
+       (controllo fogli di stampa, 06/10/2026). -->
+  <style>@media print { .scheda { zoom: 0.9; } }</style>
 </head>
 <body>
 <button class="btn-stampa no-print" onclick="window.print()">🖨️ Stampa A4</button>

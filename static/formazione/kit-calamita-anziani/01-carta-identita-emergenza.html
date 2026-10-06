@@ -4,6 +4,10 @@
 <meta charset="utf-8">
 <title>Scheda 1 — Carta d'identità di emergenza (anziani)</title>
 <link rel="stylesheet" href="../kit-calamita-shared/print.css">
+  <!-- Stampa: spazi fra le sezioni un po' più stretti, righe di scrittura sempre
+       da 11 mm: la carta resta su due fogli, senza un terzo con le sole fonti e la
+       fascia delle affiliazioni (controllo fogli di stampa, 06/10/2026). -->
+  <style>@media print { .carta-id-sez { margin-bottom: 2mm; padding: 2mm 4mm; } .carta-id-campo, .carta-id-coppia { margin: 2mm 0; } .carta-id-sez h2 { margin-bottom: 1mm; padding-bottom: 1mm; font-size: 12pt; } .scheda-istruzione { margin-bottom: 2mm; } .carta-id-campo > label, .carta-id-campo > .label { margin-bottom: .5mm; } }</style>
 </head>
 <body>
 <button class="btn-stampa no-print" onclick="window.print()">🖨️ Stampa A4</button>

@@ -5,6 +5,9 @@
 <title>Scheda 38 — Calendario emotivo settimanale (12-14 anni)</title>
 <link rel="stylesheet" href="../kit-calamita-shared/print.css">
 <style>table.cal{width:100%;border-collapse:collapse;margin:4mm 0;font-size:10pt}table.cal th{background:var(--pc-blue);color:#fff;padding:3mm 2mm;text-align:center;font-weight:700}table.cal td{border:1px solid #1a1a1a;padding:2mm;vertical-align:top;height:22mm}table.cal td:first-child{background:#fafbfc;font-weight:700;color:var(--pc-blue);width:22mm;text-align:center}.grade{display:flex;gap:1mm;justify-content:center;margin-top:1mm}.grade span{width:5mm;height:5mm;border:1px solid #999;border-radius:50%;font-size:7pt;line-height:5mm;text-align:center}</style>
+  <!-- Stampa: righe dei giorni da 14 mm invece di 22: con quelle più alte la fascia delle
+       affiliazioni e la riga delle fonti finivano da sole su un secondo foglio (controllo fogli di stampa, 06/10/2026). -->
+  <style>@media print { table.cal td { height: 14mm; } }</style>
 </head>
 <body>
 <button class="btn-stampa no-print" onclick="window.print()">🖨️ Stampa A4</button>

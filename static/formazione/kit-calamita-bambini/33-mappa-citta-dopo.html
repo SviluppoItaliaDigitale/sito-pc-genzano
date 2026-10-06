@@ -11,6 +11,10 @@
   .leg-cell { border: 1.5px solid #1a1a1a; border-radius: 4px; padding: 2mm; text-align: center; font-size: 9pt; font-weight: 700; }
   .leg-cell span { display: block; font-size: 16pt; margin-bottom: 1mm; }
 </style>
+  <!-- Stampa: un 12% in meno tiene l'ultimo foglio pieno; senza, la fascia
+       delle affiliazioni o la riga finale andavano da sole su un foglio in più
+       (controllo fogli di stampa, 06/10/2026). -->
+  <style>@media print { .scheda { zoom: 0.88; } }</style>
 </head>
 <body>
 <button class="btn-stampa no-print" onclick="window.print()">🖨️ Stampa A4</button>

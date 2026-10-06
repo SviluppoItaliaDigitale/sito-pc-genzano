@@ -1,0 +1,94 @@
+name: "🖨️ Controllo settimanale dei fogli di stampa"
+
+# Ogni lunedì stampa (Chromium, A4) TUTTE le schede stampabili, le schede dei
+# kit calamità, le storie e un campione di pagine del sito, e controlla che non
+# ci siano fogli bianchi, ultimi fogli quasi vuoti o errori JavaScript; poi
+# passa tutte le pagine del sito compilato (titolo, h1, testo alternativo).
+# Sulle pull request lo stesso controllo gira solo sulle pagine toccate
+# (validate-pr.yml, job fogli-stampa): questo giro intero intercetta ciò che
+# cambia senza una PR, per esempio un aggiornamento del browser o un foglio di
+# stile condiviso toccato da un workflow automatico.
+#
+# Nasce il 06/10/2026 dalla proposta «controllo qualità prima della
+# pubblicazione»: la prima misura ha trovato 49 schede con un foglio in più
+# quasi vuoto e la homepage che stampava sei fogli bianchi.
+# Una issue in-place, chiusa da sola quando tutto rientra.
+
+on:
+  schedule:
+    - cron: "37 7 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: "controllo-fogli-stampa"
+  cancel-in-progress: false
+
+jobs:
+  controllo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: "📥 Checkout"
+        uses: actions/checkout@v7
+
+      - name: "⚙️ Setup Hugo"
+        uses: peaceiris/actions-hugo@2752ce1d29631191ea3f27c23495fa06139a5b78 # v3.2.1
+        with:
+          hugo-version: '0.154.5'
+          extended: true
+
+      - name: "🏗️ Build"
+        run: hugo --minify --quiet --baseURL "https://www.protezionecivilegenzano.it/"
+
+      - name: "🌐 Browser e lettore PDF"
+        run: |
+          pip install --quiet playwright pymupdf
+          playwright install --with-deps chromium
+
+      - name: "🖨️ Fogli di stampa e qualità delle pagine"
+        id: controllo
+        shell: bash
+        run: |
+          set +e
+          python3 scripts/check-fogli-stampa.py > fogli.log 2>&1; f=$?
+          python3 scripts/check-qualita-pagine.py public > pagine.log 2>&1; q=$?
+          cat fogli.log pagine.log
+          if [ $f -ne 0 ] || [ $q -ne 0 ]; then echo "esito=ko" >> "$GITHUB_OUTPUT"; else echo "esito=ok" >> "$GITHUB_OUTPUT"; fi
+
+      - name: "📝 Issue in-place"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ESITO: ${{ steps.controllo.outputs.esito }}
+        shell: bash
+        run: |
+          TITOLO="🖨️ Fogli di stampa o pagine da correggere"
+          NUM=$(gh issue list --state open --search "\"$TITOLO\" in:title" --json number --jq '.[0].number // empty')
+          if [ "$ESITO" = "ok" ]; then
+            if [ -n "$NUM" ]; then
+              gh issue close "$NUM" --comment "Controllo del $(TZ=Europe/Rome date '+%d/%m/%Y'): nessun problema, chiusa automaticamente."
+            fi
+            exit 0
+          fi
+          {
+            echo "Controllo del $(TZ=Europe/Rome date '+%d/%m/%Y alle %H:%M'), ora italiana."
+            echo
+            echo "## Fogli di stampa"
+            echo '```'; grep -E '^(❌|Pagine|✅)' fogli.log; echo '```'
+            echo
+            echo "## Pagine del sito"
+            echo '```'; grep -E '^(❌|Pagine|✅)' pagine.log; echo '```'
+            echo
+            echo "Come si corregge: una scheda con l'ultimo foglio quasi vuoto si riduce in stampa"
+            echo "(vedi le schede con il commento «controllo fogli di stampa») o si stringono i suoi spazi."
+            echo "Per riprovare in locale: \`python3 scripts/check-fogli-stampa.py\` dopo la build."
+          } > corpo.md
+          if [ -n "$NUM" ]; then
+            gh issue edit "$NUM" --body-file corpo.md
+          else
+            gh issue create --title "$TITOLO" --label automazione --body-file corpo.md
+          fi
+          exit 1
