@@ -210,6 +210,8 @@
                 /* Note Legali / Privacy / Accessibilità vivono SOLO nella
                    striscia "Informazioni legali" più sotto (de-dup 15/07/2026,
                    speculare a hugo.toml menus.footer). */
+                /* «I miei contenuti» (06/10/2026): pagine salvate sul dispositivo. */
+                '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/i-miei-contenuti/" style="color:rgba(255,255,255,0.85);">I miei contenuti</a></li>' +
                 '<li role="listitem"><a class="list-item" href="' + SITE_URL + '/metodo-editoriale/" style="color:rgba(255,255,255,0.85);">Metodo editoriale</a></li>' +
                 /* Trasparenza + Stato del Sito spostati da "Risorse" a maggio 2026:
                    accountability istituzionale, coerenti nel footer accanto a
