@@ -492,7 +492,7 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 
 **Schede già pronte per la stampa per la scuola primaria:**
 
-- 👉 [**Flavia, Flavio e lo zaino rosso — il libro pop-up con la storia**](/formazione/schede-stampabili/flavia-libro-popup/) — dodici capitoli da leggere ad alta voce: un anno di piccole emergenze (la terra che trema, il temporale, il vento, l'alluvione, il fumo, il caldo, il buio) e due fratelli che sanno che cosa fare. Fogli A4 orizzontali: ogni doppia pagina ha il pop-up già disegnato, l'adulto piega, taglia due righe e la scena si alza. *(dai 4 anni, letto da un adulto)*
+- 👉 [**Flavio e lo zaino rosso — il libro pop-up con la storia**](/formazione/schede-stampabili/flavio-libro-popup/) — dodici capitoli da leggere ad alta voce: un anno di piccole emergenze (la terra che trema, il temporale, il vento, l'alluvione, il fumo, il caldo, il buio) e Flavio, con la sua amica Silvia, che impara che cosa fare. Fogli A4 orizzontali: ogni doppia pagina ha il pop-up già disegnato, l'adulto piega, taglia due righe e la scena si alza. *(dai 4 anni, letto da un adulto)*
 - 👉 [**Il libro pop-up della protezione civile**](/formazione/schede-stampabili/libro-popup-protezione-civile/) — libro da costruire in sedici fogli: tredici tavole che si alzano dalla pagina (terremoto, alluvione, temporale e fulmini, vento forte, incendio nel bosco, fumo in casa, caldo, blackout, gas nei posti chiusi, evacuazione a scuola, zaino di emergenza, chiamata al 112), più la guida, il diploma e il tesserino. Tutte le tavole si montano allo stesso modo — ritaglia, piega a metà, due tagli, spingi — quindi si impara una volta sola: niente colla e nessuna misura da rispettare. Dalla pagina si sceglie quali tavole stampare. *(ed. civica, laboratorio manuale, 15-20 minuti a tavola)*
 - 👉 [**Il gioco dell'oca della protezione civile**](/formazione/schede-stampabili/gioco-oca-protezione-civile/) — tabellone a spirale con le caselle numerate, carte **imprevisto** e carte **emergenza** da ritagliare, pedine e regole. Si gioca con un dado: sulle caselle rosse si pesca una domanda («la terra trema mentre sei in classe: che cosa fai?») e si risponde ad alta voce per proseguire. Chi non sa rispondere non torna indietro: si legge insieme la risposta, che segue le indicazioni ufficiali di autoprotezione e le pagine del sito. *(ed. civica, gioco di gruppo)*
 - 👉 [**Chiamo il 112**](/formazione/schede-stampabili/chiamo-112/) — gioco di ruolo scritto: l'alunno simula una chiamata al numero unico di emergenza con consegna passo-passo.
@@ -569,7 +569,7 @@ Queste schede sono pronte per essere fotocopiate e consegnate agli alunni come e
 
 Per la fascia **6-8 anni** (lettura autonoma o accompagnata, 400-700 parole):
 
-- 👉 [**La casa che ballava**](/formazione/storie-e-racconti/casa-che-balla/) — terremoto, l'attimo decisivo di Flavia.
+- 👉 [**La casa che ballava**](/formazione/storie-e-racconti/casa-che-balla/) — terremoto, l'attimo decisivo di Flavio.
 - 👉 [**La pioggia che voleva conoscere il mare**](/formazione/storie-e-racconti/pioggia-mare/) — alluvione, salire ai piani alti.
 - 👉 [**Il bosco che parlava**](/formazione/storie-e-racconti/bosco-parlava/) — incendi boschivi, segnalazione.
 - 👉 [**Notturno e il blackout**](/formazione/storie-e-racconti/notturno-blackout/) — sicurezza domestica, torcia sì candela no.
