@@ -111,6 +111,10 @@ RedirectMatch 301 ^/giochi-protezione-civile/?(.*)$ https://www.protezionecivile
 RedirectMatch 301 ^/formazione_pc/?(.*)$ https://www.protezionecivilegenzano.it/formazionepc/$1
 RedirectMatch 301 ^/quiz_pc/?(.*)$ https://www.protezionecivilegenzano.it/quizpc/$1
 
+# Libro pop-up rinominato il 06/10/2026: Flavio è il protagonista di tutte le
+# storie. Destinazione fissa, come per le cartelle del vecchio sito.
+RedirectMatch 301 ^/formazione/schede-stampabili/flavia-libro-popup(/.*)?$ https://www.protezionecivilegenzano.it/formazione/schede-stampabili/flavio-libro-popup/
+
 # Pagine HTML standalone del vecchio sito senza corrispondenza diretta —
 # 410 Gone (rimossa) così Google le toglie subito.
 RedirectMatch 410 ^/galleria\.html$

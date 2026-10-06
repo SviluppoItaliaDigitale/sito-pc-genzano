@@ -251,7 +251,7 @@ Capire un rischio è il primo passo per affrontarlo senza paura. Questi **esperi
 
 ### 29. La chiamata perfetta al 112 🔵🟠
 **Materiali:** due telefoni giocattolo (o spenti).
-**Come si fa:** l'adulto fa l'operatore del **112**, il bambino è il cittadino. L'adulto propone uno scenario (per esempio: *"Flavia vede del fumo salire dal bosco dietro casa"*) e fa domande; il bambino deve dire, con calma, **chi è, cosa vede e soprattutto dove si trova esattamente**.
+**Come si fa:** l'adulto fa l'operatore del **112**, il bambino è il cittadino. L'adulto propone uno scenario (per esempio: *"Silvia vede del fumo salire dal bosco dietro casa"*) e fa domande; il bambino deve dire, con calma, **chi è, cosa vede e soprattutto dove si trova esattamente**.
 **Cosa si impara:** gli operatori hanno bisogno di **informazioni precise** per mandare i soccorsi giusti. Urlare o piangere non aiuta: la calma e la precisione sì.
 **In chiave protezione civile:** il **112** è il **Numero Unico di Emergenza**, l'unico da chiamare nel Lazio. Prova anche il gioco digitale [La chiamata al 112](/giochi/) e leggi i [Numeri utili](/numeri-utili/).
 

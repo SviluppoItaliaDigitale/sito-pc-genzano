@@ -13,7 +13,7 @@ dati da cui nascono.
 | `genera-memory.py` | `memory-protezione-civile-infanzia/` | 3 (tessere, retro, regole) |
 | `genera-gioco-oca.py` | `gioco-oca-protezione-civile/` | 4 (tabellone, imprevisti, emergenze, regole e pedine) |
 | `genera-libro-popup.py` | `libro-popup-protezione-civile/` | 16 (copertina, guida, tredici tavole con la scelta di stampa, diploma) |
-| `genera-storia-popup.py` | `flavia-libro-popup/` | 14 fogli A4 **orizzontali** (copertina e retro, guida, dodici capitoli con la storia) |
+| `genera-storia-popup.py` | `flavio-libro-popup/` | 14 fogli A4 **orizzontali** (copertina e retro, guida, dodici capitoli con la storia) |
 
 I testi stanno nei due moduli di dati, non nei generatori:
 
@@ -25,8 +25,8 @@ I testi stanno nei due moduli di dati, non nei generatori:
 - `libro_popup_dati.py` — le tredici tavole del quaderno pop-up: titolo, testo,
   regole «che cosa si fa» (le stesse delle pagine sui rischi del sito) e
   pittogramma di ciascuna emergenza.
-- `storia_popup_dati.py` — il libro con la storia: i dodici capitoli di «Flavia,
-  Flavio e lo zaino rosso», con il testo da leggere ad alta voce e i rimandi
+- `storia_popup_dati.py` — il libro con la storia: i dodici capitoli di «Flavio e
+  lo zaino rosso», con il testo da leggere ad alta voce e i rimandi
   alle regole di `libro_popup_dati.py` (una regola sta scritta in un posto solo).
   I disegni delle scene sono tracciati dal generatore, non sono pittogrammi.
 - `oca_dati.py` — il gioco dell'oca: le 56 caselle del percorso, le 12 carte

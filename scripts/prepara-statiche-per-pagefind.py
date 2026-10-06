@@ -110,6 +110,10 @@ def main() -> int:
     for f in file_da_trattare():
         testo = f.read_text(encoding='utf-8', errors='replace')
         originale = testo
+        if re.search(r'http-equiv=["\']refresh["\']', testo, re.IGNORECASE):
+            # Pagina che rimanda a un indirizzo nuovo: nella ricerca comparirebbe
+            # come «Pagina spostata». Senza marcatore Pagefind la salta.
+            continue
         if HA_MARCATORE_RE.search(testo):
             gia_a_posto += 1
         else:

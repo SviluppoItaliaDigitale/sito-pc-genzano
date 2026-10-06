@@ -256,7 +256,7 @@ Le altre schede di questa sezione sono <strong>spunti operativi</strong> con cui
 
 **Schede già pronte per la stampa per la scuola dell'infanzia:**
 
-- 👉 [**Flavia, Flavio e lo zaino rosso — il libro pop-up con la storia**](/formazione/schede-stampabili/flavia-libro-popup/) — dodici capitoli da leggere ad alta voce: un anno di piccole emergenze (la terra che trema, il temporale, il vento, l'alluvione, il fumo, il caldo, il buio) e due fratelli che sanno che cosa fare. Fogli A4 orizzontali: ogni doppia pagina ha il pop-up già disegnato, l'adulto piega, taglia due righe e la scena si alza. *(dai 4 anni, letto da un adulto)*
+- 👉 [**Flavio e lo zaino rosso — il libro pop-up con la storia**](/formazione/schede-stampabili/flavio-libro-popup/) — dodici capitoli da leggere ad alta voce: un anno di piccole emergenze (la terra che trema, il temporale, il vento, l'alluvione, il fumo, il caldo, il buio) e Flavio, con la sua amica Silvia, che impara che cosa fare. Fogli A4 orizzontali: ogni doppia pagina ha il pop-up già disegnato, l'adulto piega, taglia due righe e la scena si alza. *(dai 4 anni, letto da un adulto)*
 - 👉 [**Vero o Falso con le Faccine**](/formazione/schede-stampabili/vero-falso-infanzia/) — il bambino colora di verde le frasi giuste e di rosso quelle sbagliate.
 - 👉 [**Il Labirinto dell'Uscita**](/formazione/schede-stampabili/labirinto-uscita/) — il bambino traccia con la matita il percorso sicuro evitando gli ostacoli.
 - 👉 [**La Tartaruga Saggia**](/formazione/schede-stampabili/tartaruga-saggia-infanzia/) — Tina spiega 4 comportamenti di autoprotezione, il bambino li ricostruisce.

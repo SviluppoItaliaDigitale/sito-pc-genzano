@@ -472,6 +472,10 @@ Il template `themes/flavour-pcgenzano/layouts/_default/single.html` mostra quest
 - Non scrivere date di revisione nel corpo del testo (stringhe tipo "Marzo 2026", "Ultimo aggiornamento: …"): il riferimento è unico e nel frontmatter.
 - Il workflow `audit-sito.yml` (sezione 32) verifica settimanalmente che le 4 pagine legali abbiano il campo `dataUltimaRevisione` impostato in formato `AAAA-MM-GG`.
 
+## Personaggi delle storie per bambini — Flavio protagonista
+
+🔴 **Decisione dell'utente del 06/10/2026.** Nelle storie, nei libri e nei racconti per la scuola primaria e secondaria il protagonista è sempre **Flavio**. I suoi amici sono **Silvia, Maria, Elio, Pasquale e Lina**: entrano dove la storia ha già coetanei (compagni di banco, amici al parco o a scuola), mai con scene aggiunte solo per nominarli. Il nome **Flavia** non si usa più: le sette storie e il libro pop-up che l'avevano come protagonista sono stati riscritti al maschile, e dove Flavia era solo un nome d'esempio (gioco del 112, scheda della telefonata, esperimento) è diventata Silvia. Gli adulti con nome (Anna la volontaria, la signora Caterina) restano. Le storie dell'infanzia (3-5 anni) mantengono **Tina la tartaruga**, la stessa del gioco «Tartaruga saggia». Una storia nuova, una scheda o un esercizio con bambini protagonisti segue questa regola; il libro pop-up si chiama «Flavio e lo zaino rosso» (`/formazione/schede-stampabili/flavio-libro-popup/`, il vecchio indirizzo `flavia-libro-popup/` rimanda lì).
+
 ## Coerenza kit didattici ↔ schede stampabili
 
 I kit didattici per le scuole (`content/formazione/kit-scuola-{infanzia,primaria,secondaria-primo-grado,secondaria-secondo-grado}.md`) devono **tutti** rimandare alle schede stampabili della loro fascia in `static/formazione/schede-stampabili/`. La regola è simmetrica: ogni scheda fisica deve essere linkata almeno una volta dal kit del proprio livello.

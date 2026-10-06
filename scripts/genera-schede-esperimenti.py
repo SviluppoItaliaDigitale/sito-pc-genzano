@@ -445,7 +445,7 @@ ESPERIMENTI = [
         "materiali": "Due telefoni giocattolo (o spenti).",
         "passi": [
             "Un adulto fa l'operatore del 112, il bambino è il cittadino.",
-            "L'adulto propone uno scenario (es.: «Flavia vede del fumo dal bosco dietro casa») e fa domande.",
+            "L'adulto propone uno scenario (es.: «Silvia vede del fumo dal bosco dietro casa») e fa domande.",
             "Il bambino risponde con calma: chi è, cosa vede e soprattutto dove si trova esattamente.",
         ],
         "impara": "Gli operatori hanno bisogno di informazioni precise per mandare i soccorsi giusti. Urlare o piangere non aiuta: la calma e la precisione sì.",
