@@ -138,6 +138,14 @@ jobs:
         # catalogo resterebbe fuori dalle lezioni (o vi comparirebbe un link morto).
         run: python3 scripts/genera-materiali-lezione.py --check
 
+      - name: "🧰 Indice dell'Open Kit aggiornato"
+        # La pagina /open-kit/ legge data/open_kit.json; gli ZIP si generano al
+        # deploy. Un componente aggiunto allo script senza rigenerare l'indice,
+        # o un file del componente sparito, si vede qui.
+        run: |
+          python3 scripts/genera-open-kit.py
+          git diff --exit-code data/open_kit.json || { echo "::error::data/open_kit.json non aggiornato: esegui python3 scripts/genera-open-kit.py"; exit 1; }
+
   fogli-stampa:
     name: "Fogli di stampa: niente fogli bianchi o quasi vuoti"
     runs-on: ubuntu-latest

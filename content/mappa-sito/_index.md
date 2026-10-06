@@ -464,6 +464,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Quanto sei preparato?</p>
   <p class="ms-card-desc">Quiz adattivo e non giudicante: scopri cosa ti manca per essere pronto a un'emergenza. Profilo di preparazione, piano d'azione su misura, badge scaricabile.</p>
 </a>
+<a class="ms-card ms-edu" href="/open-kit/">
+  <div class="ms-card-icon"><i class="bi bi-box-seam"></i></div>
+  <p class="ms-card-title">Open Kit</p>
+  <p class="ms-card-desc">Componenti del sito da riusare in altri siti di protezione civile (lettura ad alta voce, accessibilità, tabelle CAA, feed CAP, Modalità Aula), con licenza EUPL 1.2.</p>
+</a>
 <a class="ms-card ms-edu" href="/open-data/">
   <div class="ms-card-icon"><i class="bi bi-database"></i></div>
   <p class="ms-card-title">Open Data</p>

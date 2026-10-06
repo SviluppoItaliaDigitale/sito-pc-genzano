@@ -106,6 +106,15 @@ Tre shortcode nati dall'**audit esterno del 15/07/2026, punto 7 "ridurre l'HTML 
 
 ⚠️ Nota implementativa: l'inner è reso con `.Page.RenderString (dict "display" "block")` e **non** con `markdownify`, perché `markdownify` fa l'unwrap del `<p>` quando l'inner è un solo paragrafo (perdendo i margini del paragrafo nella card). Nessuna CSS aggiunta: bordi e dimensioni variabili sono parametri emessi dal template, il centraggio logo usa utility BI esistenti.
 
+## Open Kit — `/open-kit/` e shortcode `open-kit` (06/10/2026)
+
+Componenti del sito messi a disposizione di altri gruppi, associazioni e Comuni (proposta dell'utente). `scripts/genera-open-kit.py` costruisce in `static/open-kit/` uno ZIP per componente (lettura ad alta voce, pannello accessibilità, glossario, tabelle CAA, pagina rischio, feed CAP, «I miei contenuti», Modalità Aula, «Crea la mia lezione», controllo dei fogli di stampa) con i **file veri** del sito, le sole sezioni di `custom.css` che servono (estratte per titolo di sezione), un LEGGIMI e il testo della **EUPL 1.2** (licenza del codice scelta dall'autore; testi ed esempi restano CC BY 4.0).
+
+- Gli ZIP si generano **in `deploy.yml` prima della build** e sono in `.gitignore`: un kit copiato a mano invecchierebbe. ZIP riproducibili (data fissa delle voci).
+- La pagina legge `data/open_kit.json` (committato, controllato su PR da `validate-pr.yml`) e mostra la dimensione solo se lo ZIP esiste nella build.
+- 🔴 Mai nei pacchetti: librerie di terzi (Bootstrap Italia, Bootstrap Icons, Leaflet), pittogrammi ARASAAC (CC BY-NC-SA 4.0), dati personali, segreti. Il LEGGIMI dice dove prenderli.
+- Un componente nuovo = una voce in `COMPONENTI` dello script; se una sezione di CSS cambia titolo, lo script si ferma e lo dice.
+
 ## Shortcode `crea-lezione` — «Crea la mia lezione» (06/10/2026)
 
 Pagina `/formazione/crea-la-mia-lezione/` (proposta dell'utente): il docente sceglie classe (infanzia, primaria 1ª-2ª, primaria 3ª-5ª, secondaria I, secondaria II), minuti (30, 45, 60, 90), argomento e la presenza di alunni con bisogni educativi speciali; `static/js/crea-lezione.js` compone una lezione in fasi (introduzione con la pagina del rischio, racconto, attività principale, esperimento, gioco, chiusura) **solo con materiali già pubblicati**, togliendo le fasi senza materiale e dando il loro tempo all'attività principale. La durata mostrata è quella dichiarata dal materiale; dove manca, vale il tempo della fase. La scelta resta nell'indirizzo (`?classe=…&minuti=…&tema=…&bes=1`).

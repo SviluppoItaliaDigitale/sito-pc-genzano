@@ -1,0 +1,72 @@
+[
+ {
+  "id": "lettura-ad-alta-voce",
+  "titolo": "Leggi ad alta voce",
+  "desc": "Pulsante che legge la pagina con la voce del browser (Web Speech API), con tre velocità. Niente file audio, niente servizi esterni.",
+  "zip": "/open-kit/lettura-ad-alta-voce.zip",
+  "file": 4
+ },
+ {
+  "id": "pannello-accessibilita",
+  "titolo": "Pannello «Strumenti di accessibilità»",
+  "desc": "Pulsante fisso che apre le preferenze di lettura: dimensione del testo, carattere per dislessia, cinque contrasti, spaziatura, pausa animazioni. Le scelte restano nel browser.",
+  "zip": "/open-kit/pannello-accessibilita.zip",
+  "file": 5
+ },
+ {
+  "id": "glossario-inline",
+  "titolo": "Glossario nel testo",
+  "desc": "La prima volta che in una pagina compare una sigla (COC, NUE, IT-alert…) diventa un pulsante che apre la definizione, accessibile da tastiera.",
+  "zip": "/open-kit/glossario-inline.zip",
+  "file": 6
+ },
+ {
+  "id": "tabelle-caa",
+  "titolo": "Tabelle di comunicazione (CAA)",
+  "desc": "Griglie di pittogrammi e parole da indicare per chi in emergenza non riesce a parlare, stampabili su A4.",
+  "zip": "/open-kit/tabelle-caa.zip",
+  "file": 5
+ },
+ {
+  "id": "pagina-rischio",
+  "titolo": "Modello di pagina rischio",
+  "desc": "Struttura fissa delle pagine dei rischi (prima, durante, dopo, cosa non fare, chi chiamare) con i due riquadri finali.",
+  "zip": "/open-kit/pagina-rischio.zip",
+  "file": 6
+ },
+ {
+  "id": "feed-cap",
+  "titolo": "Feed CAP 1.2 dell'allerta",
+  "desc": "Il livello di allerta pubblicato come feed Common Alerting Protocol (standard OASIS), leggibile da app e aggregatori.",
+  "zip": "/open-kit/feed-cap.zip",
+  "file": 5
+ },
+ {
+  "id": "i-miei-contenuti",
+  "titolo": "I miei contenuti",
+  "desc": "Il cittadino salva le pagine che gli servono e le ritrova in un elenco. Tutto resta nel suo browser: nessun account, nessun dato inviato.",
+  "zip": "/open-kit/i-miei-contenuti.zip",
+  "file": 5
+ },
+ {
+  "id": "modalita-aula",
+  "titolo": "Modalità Aula",
+  "desc": "La pagina diventa una sequenza di schermate a tutto schermo, testo grande e niente menu, da proiettare in classe.",
+  "zip": "/open-kit/modalita-aula.zip",
+  "file": 5
+ },
+ {
+  "id": "crea-la-mia-lezione",
+  "titolo": "Crea la mia lezione",
+  "desc": "Il docente sceglie classe, minuti e argomento e il sito compone una lezione in fasi con i materiali già pubblicati.",
+  "zip": "/open-kit/crea-la-mia-lezione.zip",
+  "file": 6
+ },
+ {
+  "id": "controllo-fogli-stampa",
+  "titolo": "Controllo dei fogli di stampa e delle pagine",
+  "desc": "Stampa davvero le pagine con Chromium e blocca fogli bianchi, ultimi fogli quasi vuoti ed errori JavaScript; controlla titolo, h1 e testo alternativo di tutte le pagine.",
+  "zip": "/open-kit/controllo-fogli-stampa.zip",
+  "file": 5
+ }
+]
