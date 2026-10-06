@@ -99,11 +99,11 @@
                   '<div class="dropdown-menu" aria-labelledby="navDropdown-per-le-scuole"><div class="link-list-wrapper"><ul class="link-list" role="menu">' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/" role="menuitem"><span>Formazione e scuole</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/percorsi-didattici/" role="menuitem"><span>Percorsi didattici pronti</span></a></li>' +
+                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/crea-la-mia-lezione/" role="menuitem"><span>Crea la mia lezione</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/schede-stampabili/" role="menuitem"><span>Schede didattiche stampabili</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/educazione-civica/" role="menuitem"><span>Per i docenti &#8212; Ed. Civica</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/storie-e-racconti/" role="menuitem"><span>Storie e Racconti</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/giochi/" role="menuitem"><span>Giochi della Sicurezza</span></a></li>' +
-                    '<li role="none"><a class="list-item" href="' + SITE_URL + '/catalogo-giochi/" role="menuitem"><span>Catalogo dei giochi</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/formazione/esperimenti/" role="menuitem"><span>Esperimenti e attivit&#224;</span></a></li>' +
                     '<li role="none"><a class="list-item" href="' + SITE_URL + '/laboratorio-meteo/" role="menuitem"><span>Laboratorio meteo</span></a></li>' +
                   '</ul></div></div>' +
