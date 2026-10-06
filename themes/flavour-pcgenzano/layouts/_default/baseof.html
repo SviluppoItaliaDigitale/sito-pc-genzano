@@ -103,6 +103,8 @@
   {{ partial "structured-data.html" . }}
   {{ partial "jsonld-copyright.html" . }}
   {{ if .IsHome }}{{ partial "speculation-rules.html" . }}{{ end }}
+  {{- /* Senza JavaScript nessuno rende visibili le sezioni .fade-in-up. */}}
+  <noscript><style>.fade-in-up{opacity:1;transform:none}</style></noscript>
 </head>
 {{- /* has-bottomnav: attiva gli offset dei pulsanti flottanti sopra la
      BottomNav mobile (CSS sezione BOTTOM NAV v1.0). Esclusa la pagina

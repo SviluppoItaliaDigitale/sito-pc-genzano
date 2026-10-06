@@ -28,6 +28,10 @@
     .istruzioni-prof { margin-top: 0.8rem; padding: 0.55rem 0.85rem; background: #fff8e6; border-left: 4px solid var(--scheda-oro); border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45; }
     @media (max-width: 580px) { .due-colonne { grid-template-columns: 1fr; } }
   </style>
+  <!-- Stampa: un 2% in meno tiene l'ultimo foglio pieno; senza, la fascia
+       delle affiliazioni o la riga finale andavano da sole su un foglio in più
+       (controllo fogli di stampa, 06/10/2026). -->
+  <style>@media print { html { font-size: 98%; } }</style>
 </head>
 <body>
   <div class="scheda-toolbar no-print">

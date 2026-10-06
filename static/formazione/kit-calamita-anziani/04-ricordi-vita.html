@@ -12,6 +12,10 @@
   .righe { display: flex; flex-direction: column; gap: 7mm; }
   .righe > div { border-bottom: 1px solid #1a1a1a; min-height: 6mm; }
 </style>
+  <!-- Stampa: un 2% in meno tiene l'ultimo foglio pieno; senza, la fascia
+       delle affiliazioni o la riga finale andavano da sole su un foglio in più
+       (controllo fogli di stampa, 06/10/2026). -->
+  <style>@media print { .scheda { zoom: 0.98; } }</style>
 </head>
 <body>
 <button class="btn-stampa no-print" onclick="window.print()">🖨️ Stampa A4</button>

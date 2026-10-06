@@ -172,6 +172,9 @@
 :where([id="scheda-rubrica-valutativa-infanzia"]) .rubrica-tab .liv-2 { background: #fffaf0; }
 :where([id="scheda-rubrica-valutativa-infanzia"]) .rubrica-tab .liv-3 { background: #f0fdf4; }
 :where([id="scheda-rubrica-valutativa-infanzia"]) .istruzioni-prof { margin-top: 0.8rem; padding: 0.55rem 0.85rem; background: #fff8e6; border-left: 4px solid var(--scheda-oro); border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45; }
+@media print {
+:where([id="scheda-rubrica-valutativa-infanzia"]) { zoom: 0.98; }
+}
 
 :where([id="scheda-flavio-libro-popup"]) .scheda-page:has(> .st-foglio) { width: 297mm; min-height: 210mm; padding: 5mm; }
 :where([id="scheda-flavio-libro-popup"]) .scheda-page:has(> .st-foglio)::after { display: none; }
