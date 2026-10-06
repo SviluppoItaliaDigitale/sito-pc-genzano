@@ -5,13 +5,85 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-05T20:21:00+00:00",
+  "generato": "2026-10-06T01:23:43+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-05T20:01:34+00:00",
+   "data": "2026-10-05T22:30:18+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "D'Alema: \"Meloni ha attirato il centrosinistra in una trappola\"",
+   "url": "https://www.adnkronos.com/politica/dalema-augias-meloni-elezioni_2Ym5nWbhT1rx2lIMX2bUSY"
+  },
+  {
+   "data": "2026-10-05T22:06:33+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Peste polmonare, Russia nega tutto: \"Solo fake news, è polmonite\". Trump: \"Li aiuteremo\"",
+   "url": "https://www.adnkronos.com/internazionale/esteri/peste-polmonare-russia-putin-trump_3QF0zFvw3ojZx3BGnxbt9u"
+  },
+  {
+   "data": "2026-10-05T22:05:11+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Spagna, dalla crisi al voto: Sanchez tenta la rimonta con le elezioni anticipate",
+   "url": "https://www.adnkronos.com/internazionale/esteri/sanchez-elezioni-anticipate-spagna-governo_2q2HsbbBwgM7unAbdhS7wp"
+  },
+  {
+   "data": "2026-10-05T22:04:54+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Obiettivo Export, Adnkronos media partner: diretta speciale, interviste e podcast",
+   "url": "https://www.adnkronos.com/internazionale/esteri/obiettivo-export-adnkronos-media-partner-diretta-speciale-interviste-e-podcast_39BZMmVeCGJpDRbpuj7LQF"
+  },
+  {
+   "data": "2026-10-05T21:38:40+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il copilota di Flydubai agli inquirenti: 'Volevo vendicare Gaza'",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/05/shin-bet-avverte-il-governo-hamas-pronto-ad-attacco-a-ridosso-del-voto_8d1a440b-f1f3-4157-bb26-e1ec616ef874.html"
+  },
+  {
+   "data": "2026-10-05T21:36:55+00:00",
+   "fonte": "ANSA",
+   "titolo": "Nations League: l'Italia chiude in bellezza, a Bologna è 3-1 alla Turchia",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/05/nations-league-litalia-chiude-in-bellezza-a-bologna-e-3-1-alla-turchia_294cb6a1-8a5b-4345-b401-d99a94eaf076.html"
+  },
+  {
+   "data": "2026-10-05T21:32:02+00:00",
+   "fonte": "ANSA",
+   "titolo": "Foto inedite di Sinwar diffuse dalle Brigate al Qassem alla vigilia del 7 ottobre",
+   "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/10/05/foto-inedite-di-sinwar-diffuse-dalle-brigate-al-qassem-alla-vigilia-del_9637cf00-436e-4898-a474-827aa4bfee5c.html"
+  },
+  {
+   "data": "2026-10-05T21:19:00+00:00",
+   "fonte": "ANSA",
+   "titolo": "Il voto a maggio più vicino, e Meloni tutela la sua voce dai deepfake",
+   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/05/il-voto-a-maggio-piu-vicino-e-meloni-tutela-la-sua-voce-dai-deepfake_166e0661-729d-445b-b106-17c3ea8888c6.html"
+  },
+  {
+   "data": "2026-10-05T21:15:13+00:00",
+   "fonte": "ANSA",
+   "titolo": "Esplosione nel centro di Bergamo per una fuga di gas, 8 feriti",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/05/esplosione-nel-centro-di-bergamo-per-una-fuga-di-gas-8-feriti_f192acd0-1cec-4e0e-9b4f-7667f4c0cb97.html"
+  },
+  {
+   "data": "2026-10-05T21:05:11+00:00",
+   "fonte": "ANSA",
+   "titolo": "Per le donne il gender gap pesa anche sull'accesso all'abitare",
+   "url": "https://www.ansa.it/canale_lifestyle/notizie/societa_diritti/2026/10/05/per-le-donne-il-gender-gap-pesa-anche-sullaccesso-allabitare_e68af765-0617-407b-a838-4db5881b4058.html"
+  },
+  {
+   "data": "2026-10-05T20:55:33+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Mancini: \"Bravi a riprendere la partita, bilancio più che positivo\"",
+   "url": "https://www.adnkronos.com/sport/mancini-nations-league-italia-turchia_5LLKg9QCGF7b4UrejU3XzG"
+  },
+  {
+   "data": "2026-10-05T20:48:53+00:00",
+   "fonte": "ANSA",
+   "titolo": "Scattano accise sul gasolio più alte, nessun decreto in Gazzetta",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/05/scattano-accise-sul-gasolio-piu-alte-nessun-decreto-in-gazzetta_664823dc-12a3-42e9-851b-f10f32a6c4dd.html"
+  },
+  {
+   "data": "2026-10-05T20:01:00+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Caso Garlasco, i sospetti dei pm sui reperti: \"Distrutti dopo la sentenza definitiva su Stasi\"",
    "url": "https://www.adnkronos.com/cronaca/garlasco-procura-pavia-ris-reperti-stasi_3Ax8HqtfXptnDbxC0TqAlL"
@@ -21,24 +93,6 @@
    "fonte": "ANSA",
    "titolo": "Bolsonaro a un passo dalla presidenza, Trump: una 'grande vittoria'",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/05/bolsonaro-a-un-passo-dalla-presidenza-a-lula-servira-un-miracolo_bef2f600-8fd3-4a6b-8402-5f40da9c9da1.html"
-  },
-  {
-   "data": "2026-10-05T19:42:44+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il copilota di Flydubai agli inquirenti: 'Volevo vendicare Gaza'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/05/shin-bet-avverte-il-governo-hamas-pronto-ad-attacco-a-ridosso-del-voto_8d1a440b-f1f3-4157-bb26-e1ec616ef874.html"
-  },
-  {
-   "data": "2026-10-05T19:30:05+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il voto a maggio più vicino. Malan si sbilancia sull'election day",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/05/malan-potrebbe-esserci-lesigenza-di-votare-a-maggio-insieme-alle-comunali_1dc963ff-49ac-463e-8817-238d112b84e4.html"
-  },
-  {
-   "data": "2026-10-05T19:25:36+00:00",
-   "fonte": "ANSA",
-   "titolo": "Nations League, in campo Italia-Turchia LIVE",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/05/nations-league-italia-turchia-in-campo-alle-2045-diretta_294cb6a1-8a5b-4345-b401-d99a94eaf076.html"
   },
   {
    "data": "2026-10-05T19:10:43+00:00",
@@ -71,7 +125,7 @@
    "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/05/garlasco-tempi-piu-lunghi-per-listanza-di-revisione-di-alberto-stasi_7744924d-7adc-40cf-85c8-9c465fe8d05b.html"
   },
   {
-   "data": "2026-10-05T18:52:09+00:00",
+   "data": "2026-10-05T18:52:00+00:00",
    "fonte": "ADNKRONOS",
    "titolo": "Volo FlyDubai, il copilota e il piano contro Israele: \"Volevo vendicare Gaza\"",
    "url": "https://www.adnkronos.com/internazionale/esteri/volo-flydubai-pilota-israele-gaza_4Gi4uPsNGVsYUDklqaNBEY"
@@ -103,7 +157,7 @@
   {
    "data": "2026-10-05T18:11:00+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Domani incontro Buonfiglio-Malagò prima della Giunta, Ipotesi n.1 Figc commissario",
+   "titolo": "Incontro Buonfiglio-Malagò prima della Giunta, ipotesi n.1 Figc commissario",
    "url": "https://www.adnkronos.com/sport/coni-figc-buonfiglio-malago_1rOwRmJ4J5MtMJfL8W7Txm"
   },
   {
@@ -135,60 +189,6 @@
    "fonte": "ADNKRONOS",
    "titolo": "Nautica e turismo, una filiera strategica per generare crescita e valore sui territori",
    "url": "https://www.adnkronos.com/economia/nautica-e-turismo-una-filiera-strategica-per-generare-crescita-e-valore-sui-territori_5iqFBieR0ESF5VwucfLw2A"
-  },
-  {
-   "data": "2026-10-05T17:51:40+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Donna accoltellata a Salerno, il 57enne resta in carcere",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/05/donna-accoltellata-a-salerno-il-57enne-resta-in-carcere_94e5a8fa-d199-48fc-844a-42bb68ef3111.html"
-  },
-  {
-   "data": "2026-10-05T17:50:54+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "In 30 mesi prescritte quasi 4.000 dosi di Fentanyl, indagato un medico aostano",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/05/in-30-mesi-prescritte-quasi-4.000-dosi-di-fentanyl-indagato-un-medico-aostano_fb146102-cffb-4854-90d5-3beeaf45f6e5.html"
-  },
-  {
-   "data": "2026-10-05T17:46:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Nations League, oggi Italia-Turchia 2-1, Calafiori riporta avanti gli azzurri - Diretta",
-   "url": "https://www.adnkronos.com/sport/italia-turchia-nations-league-bologna_45BX9oDiM8Ym9ruIplBLwk"
-  },
-  {
-   "data": "2026-10-05T17:45:51+00:00",
-   "fonte": "ANSA",
-   "titolo": "Terminano gli sconti sui carburanti, attese le accise mobili",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/05/stop-allo-sconto-per-il-gasolio-poi-accise-mobili_664823dc-12a3-42e9-851b-f10f32a6c4dd.html"
-  },
-  {
-   "data": "2026-10-05T17:45:14+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Studente con disabilità ustionato dal compagno di scuola",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/05/studente-con-disabilita-ustionato-con-un-accendino-dal-compagno-di-scuola_5c80986d-5059-45ef-ab2b-60cf942b6b0f.html"
-  },
-  {
-   "data": "2026-10-05T17:44:30+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Luongo al Tg1, se qualcuno dell'Arma ha sbagliato su Garlasco pagherà",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/05/luongo-al-tg1-se-qualcuno-dellarma-ha-sbagliato-su-garlasco-paghera_15e0f6d6-2bd7-4a35-901d-a07d80a44c11.html"
-  },
-  {
-   "data": "2026-10-05T17:43:01+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Il caso di Yara Gambirasio, respinta la richiesta di nuove analisi sui reperti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/05/il-caso-di-yara-gambirasio-respinta-la-richiesta-di-nuove-analisi-sui-reperti_1561181a-d5c1-478e-ab56-5724ae1c9b44.html"
-  },
-  {
-   "data": "2026-10-05T17:42:25+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Firenze, bombola del gas sotto il David a piazzale Michelangelo, rientra l'allarme dopo l'intervento degli artificieri",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/05/firenze-bombola-del-gas-sotto-il-david-a-piazzale-michelangelo-rientra-lallarme_56fe9149-9c4d-4d95-ae1d-c01ed749181d.html"
-  },
-  {
-   "data": "2026-10-05T17:42:00+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Garlasco, gen. Luongo al Tg1: \"In caso di responsabilità Ris risposta Arma sarà di assoluta fermezza\"",
-   "url": "https://www.adnkronos.com/cronaca/caso-garlasco-ris-ultime-notizie_4F2QesMJOfEQDteToR4ztm"
   }
  ]
 }
