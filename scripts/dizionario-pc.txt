@@ -2068,3 +2068,6 @@ tartarughini
 distrattori
 crocus
 elevabili
+# --- Correzioni audit schede 06/10/2026: titolo EN della fonte Hanks e Kanamori; faglia trasforme (sinonimo di trascorrente) ---
+magnitude
+trasforme
