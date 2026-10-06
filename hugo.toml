@@ -182,32 +182,32 @@ enableGitInfo = true
   weight = 2
 
 [[menus.main]]
+  name = "Crea la mia lezione"
+  url = "/formazione/crea-la-mia-lezione/"
+  parent = "per-le-scuole"
+  weight = 3
+
+[[menus.main]]
   name = "Schede didattiche stampabili"
   url = "/formazione/schede-stampabili/"
   parent = "per-le-scuole"
-  weight = 3
+  weight = 4
 
 [[menus.main]]
   name = "Per i docenti — Ed. Civica"
   url = "/formazione/educazione-civica/"
   parent = "per-le-scuole"
-  weight = 4
+  weight = 5
 
 [[menus.main]]
   name = "Storie e Racconti"
   url = "/formazione/storie-e-racconti/"
   parent = "per-le-scuole"
-  weight = 5
+  weight = 6
 
 [[menus.main]]
   name = "Giochi della Sicurezza"
   url = "/giochi/"
-  parent = "per-le-scuole"
-  weight = 6
-
-[[menus.main]]
-  name = "Catalogo dei giochi"
-  url = "/catalogo-giochi/"
   parent = "per-le-scuole"
   weight = 7
 

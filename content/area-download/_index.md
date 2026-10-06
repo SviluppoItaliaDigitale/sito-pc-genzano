@@ -77,6 +77,10 @@ I quattro fogli della nuova Carta geologica d'Italia che coprono i Castelli Roma
 
 <p class="small text-muted mb-4">Slide di presentazione della struttura, dei contenuti, dell'accessibilità e delle fonti del portale del Gruppo Comunale, pensate per cittadini, scuole ed enti. Aggiornata a ogni evoluzione del sito.</p>
 
+## Componenti del sito da riusare (Open Kit)
+
+Pacchetti ZIP con il codice di alcune funzioni del sito (lettura ad alta voce, pannello di accessibilità, tabelle di comunicazione, feed CAP dell'allerta, Modalità Aula e altre), con istruzioni e licenza EUPL 1.2, per altri gruppi di protezione civile, associazioni e Comuni: vedi l'[Open Kit](/open-kit/).
+
 ## Normativa Regionale (Lazio)
 
 <div class="card border-primary mb-4">

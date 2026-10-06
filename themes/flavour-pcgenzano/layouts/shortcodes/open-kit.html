@@ -1,0 +1,25 @@
+{{/* Elenco dei componenti dell'Open Kit (06/10/2026). Legge data/open_kit.json
+     (scritto da scripts/genera-open-kit.py) e, se lo ZIP esiste nella build,
+     ne mostra la dimensione. Gli ZIP si generano solo nel deploy: in una build
+     locale senza pacchetti la card dice che il file arriva con la pubblicazione. */}}
+<div class="row g-3 open-kit-elenco">
+{{- range site.Data.open_kit }}
+  {{- $file := printf "static%s" .zip }}
+  <div class="col-md-6">
+    <div class="card h-100 open-kit-card">
+      <div class="card-body">
+        <h3 class="h5 card-title">{{ .titolo }}</h3>
+        <p class="card-text">{{ .desc }}</p>
+        {{- if fileExists $file }}
+        {{- $kb := div (os.Stat $file).Size 1024 | math.Max 1 }}
+        <a class="btn btn-outline-primary btn-sm" href="{{ .zip | strings.TrimPrefix "/" | relURL }}" download>
+          <i class="bi bi-file-earmark-zip me-1" aria-hidden="true"></i> Scarica il pacchetto <span class="visually-hidden">{{ .titolo }}</span> (ZIP, {{ $kb }} KB)
+        </a>
+        {{- else }}
+        <p class="small mb-0">Il pacchetto si genera con la pubblicazione del sito.</p>
+        {{- end }}
+      </div>
+    </div>
+  </div>
+{{- end }}
+</div>

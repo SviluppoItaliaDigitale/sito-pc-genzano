@@ -753,6 +753,12 @@ content("Dossier interattivi — racconti visivi", [
     "Ogni pagina è condivisibile; il primo dossier racconta la Terra vista dai satelliti.",
 ], N(), fonti="Immagini con licenza aperta: NASA · Copernicus / ESA")
 
+content("Crea la mia lezione e Modalità Aula", [
+    "Il docente sceglie classe, minuti e argomento: il sito compone la lezione con schede, storie, giochi ed esperimenti già pubblicati.",
+    "Con alunni con bisogni educativi speciali si aggiungono versioni facilitate, tabelle CAA, LIS e pittogrammi.",
+    "Modalità Aula: ogni pagina diventa una sequenza di schermate a testo grande, da proiettare in classe.",
+], N(), fonti="Materiali del sito · D.M. 183/2024 (Educazione Civica)")
+
 divider("Accessibilità e inclusione", N())
 
 content("Conformità WCAG 2.2 AA e barra strumenti", [
@@ -872,11 +878,18 @@ content("Audio e podcast", [
     "Utili per anziani, ipovedenti e chi è in movimento.",
 ], N())
 
-content("Open data e stato del sito", [
+content("I miei contenuti — le pagine che servono, sempre a portata di mano", [
+    "Ogni pagina si può salvare con un pulsante e ritrovare in un elenco personale.",
+    "Nessuna registrazione: l'elenco resta solo nel browser di chi lo usa.",
+    "Utile all'anziano che salva tre pagine come al docente che ne salva venti.",
+], N())
+
+content("Open data, Open Kit e stato del sito", [
     "Dati aperti riutilizzabili dalla cittadinanza.",
+    "Open Kit: i componenti del sito, con licenza EUPL 1.2, a disposizione di altri gruppi e Comuni.",
     "Pagina di trasparenza sullo stato tecnico del sito.",
     "Riuso libero, secondo il principio di trasparenza della PA.",
-], N())
+], N(), fonti="CC BY 4.0 · EUPL 1.2")
 
 content("Metodo editoriale — come scriviamo e verifichiamo", [
     "Fonti ufficiali sempre citate; ogni dato è verificabile da cittadini ed enti.",

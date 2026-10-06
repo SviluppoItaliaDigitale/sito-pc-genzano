@@ -106,6 +106,23 @@ Tre shortcode nati dall'**audit esterno del 15/07/2026, punto 7 "ridurre l'HTML 
 
 ⚠️ Nota implementativa: l'inner è reso con `.Page.RenderString (dict "display" "block")` e **non** con `markdownify`, perché `markdownify` fa l'unwrap del `<p>` quando l'inner è un solo paragrafo (perdendo i margini del paragrafo nella card). Nessuna CSS aggiunta: bordi e dimensioni variabili sono parametri emessi dal template, il centraggio logo usa utility BI esistenti.
 
+## Open Kit — `/open-kit/` e shortcode `open-kit` (06/10/2026)
+
+Componenti del sito messi a disposizione di altri gruppi, associazioni e Comuni (proposta dell'utente). `scripts/genera-open-kit.py` costruisce in `static/open-kit/` uno ZIP per componente (lettura ad alta voce, pannello accessibilità, glossario, tabelle CAA, pagina rischio, feed CAP, «I miei contenuti», Modalità Aula, «Crea la mia lezione», controllo dei fogli di stampa) con i **file veri** del sito, le sole sezioni di `custom.css` che servono (estratte per titolo di sezione), un LEGGIMI e il testo della **EUPL 1.2** (licenza del codice scelta dall'autore; testi ed esempi restano CC BY 4.0).
+
+- Gli ZIP si generano **in `deploy.yml` prima della build** e sono in `.gitignore`: un kit copiato a mano invecchierebbe. ZIP riproducibili (data fissa delle voci).
+- La pagina legge `data/open_kit.json` (committato, controllato su PR da `validate-pr.yml`) e mostra la dimensione solo se lo ZIP esiste nella build.
+- 🔴 Mai nei pacchetti: librerie di terzi (Bootstrap Italia, Bootstrap Icons, Leaflet), pittogrammi ARASAAC (CC BY-NC-SA 4.0), dati personali, segreti. Il LEGGIMI dice dove prenderli.
+- Un componente nuovo = una voce in `COMPONENTI` dello script; se una sezione di CSS cambia titolo, lo script si ferma e lo dice.
+
+## Shortcode `crea-lezione` — «Crea la mia lezione» (06/10/2026)
+
+Pagina `/formazione/crea-la-mia-lezione/` (proposta dell'utente): il docente sceglie classe (infanzia, primaria 1ª-2ª, primaria 3ª-5ª, secondaria I, secondaria II), minuti (30, 45, 60, 90), argomento e la presenza di alunni con bisogni educativi speciali; `static/js/crea-lezione.js` compone una lezione in fasi (introduzione con la pagina del rischio, racconto, attività principale, esperimento, gioco, chiusura) **solo con materiali già pubblicati**, togliendo le fasi senza materiale e dando il loro tempo all'attività principale. La durata mostrata è quella dichiarata dal materiale; dove manca, vale il tempo della fase. La scelta resta nell'indirizzo (`?classe=…&minuti=…&tema=…&bes=1`).
+
+- **Catalogo** `data/materiali_lezione.json`, generato da `scripts/genera-materiali-lezione.py` leggendo le card dell'indice delle schede, l'indice delle storie, i giochi in `static/giochi/` e i titoli `###` di `content/formazione/esperimenti.md` (fasce dai pallini 🟢🔵🟠). Temi per parole chiave (`TEMI` nello script, con la pagina d'introduzione di ciascuno, verificata all'esecuzione).
+- 🔴 **Il catalogo va rigenerato quando cambia l'indice delle schede**: `validate-pr.yml` esegue `--check` nel job `pacchetti-schede` e blocca la PR se non coincide.
+- Un tema nuovo si aggiunge solo se ha materiali per più fasce: con un solo materiale la lezione resterebbe vuota (il primo soccorso è stato tolto per questo).
+
 ## Componenti Bootstrap Italia — `callout`, `passi`, `timeline`, `galleria` (maggio 2026)
 
 Quattro shortcode di contenuto, AGID/WCAG, applicabili a contenuto già esistente per migliorarne lettura e orientamento.
@@ -619,6 +636,8 @@ Pagina interattiva che guida il cittadino con domande semplici fino a una rispos
 - **Subpath**: link interni via `window.SITO_BASEURL` (`{{ "" | relURL }}`) per Aruba + GitHub Pages.
 - **Accessibilità**: `aria-live="polite"`, focus sul `<h2>` ad ogni render, tastiera nativa, banner rosso 112, fallback `<noscript>`.
 - **Deep link**: stato in `location.hash` (es. `/assistente/#terremoto_casa`). **Homepage**: card "Cosa devo fare?" in `data/quick_links.yaml` → `servizi[0]`.
+
+**Copertura obbligatoria (dal 06/10/2026)**: l'assistente porta a ogni voce del menu e del piè di pagina, e ogni collegamento porta a una pagina che esiste. Lo controlla `scripts/check-navigazione.py` (bloccante in `validate-pr.yml`, rule 04b § menu): una voce di menu nuova senza la sua risposta nell'assistente non passa.
 
 **Per aggiungere un nuovo percorso**: aggiungere un nodo `question` collegato da `start.options`, poi le relative `answer` referenziate da `options[n].next`. Rispettare il criterio `emergency: true` solo per situazioni operative reali (coerenza con regola `06-protezione-civile-scientifica.md` sul tono di comunicazione del rischio). Ogni nodo `answer` può avere un `pittogramma` opzionale (es. `'arasaac/terremoto.png'`) renderizzato come `<figure>` accessibile sopra il corpo della risposta.
 

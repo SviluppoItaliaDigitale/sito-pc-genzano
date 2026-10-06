@@ -379,12 +379,12 @@
       options: [
         { text: 'Conoscere la Protezione Civile', description: 'La protezione civile spiegata come materia: il Servizio Nazionale, le quattro fasi, le telecomunicazioni in emergenza, il vulcano dei Colli Albani.', icon: 'bi-mortarboard', next: 'info_conoscere' },
         { text: 'Per il cittadino', description: 'Allerte, rischi, cartografia, numeri, piano di famiglia, kit pronti per situazioni vulnerabili.', icon: 'bi-person-fill', next: 'info_cittadino' },
-        { text: 'Per le scuole', description: 'Kit didattici per fascia, percorsi pronti, schede didattiche, ed. civica, storie, giochi.', icon: 'bi-mortarboard-fill', next: 'info_scuole' },
+        { text: 'Per le scuole', description: 'Kit didattici per fascia, Crea la mia lezione, Modalità Aula, percorsi pronti, schede, ed. civica, storie, giochi, esperimenti, laboratorio meteo.', icon: 'bi-mortarboard-fill', next: 'info_scuole' },
         { text: 'Kit Calamità per categorie vulnerabili', description: 'Schede stampabili A4 per bambini, anziani, disabilità, neonati, gravidanza, animali, caregiver, terapie salvavita, senza dimora, italiano L2, volontari PC.', icon: 'bi-printer-fill', next: 'info_kit_calamita' },
-        { text: 'Accessibilità e supporti', description: 'Attività accessibili (Abili a Proteggere), Facile da Leggere, glossario PC, strumenti di lettura del sito.', icon: 'bi-universal-access', next: 'info_accessibilita' },
-        { text: 'Volontariato', description: 'Diventare volontario, chi siamo, contatti del Gruppo.', icon: 'bi-heart-fill', next: 'info_volontariato' },
+        { text: 'Accessibilità e supporti', description: 'Attività accessibili (Abili a Proteggere), Facile da Leggere, tabelle di comunicazione (CAA), contenuti in LIS, glossario PC, strumenti di lettura del sito.', icon: 'bi-universal-access', next: 'info_accessibilita' },
+        { text: 'Volontariato', description: 'Diventare volontario, chi siamo, addestramento, campagna social, collaborazioni, contatti del Gruppo.', icon: 'bi-heart-fill', next: 'info_volontariato' },
         { text: 'Territorio e norme', description: 'Genzano, Castelli, normativa, piano di emergenza comunale.', icon: 'bi-geo-alt-fill', next: 'info_territorio' },
-        { text: 'Servizi e documenti', description: 'FAQ, area download, comunicazioni, mappa del sito.', icon: 'bi-files', next: 'info_servizi' }
+        { text: 'Servizi e documenti', description: 'FAQ, area download, comunicazioni, audio e podcast, dati aperti, Open Kit, siti utili, stato del sito, mappa del sito.', icon: 'bi-files', next: 'info_servizi' }
       ]
     },
 
@@ -398,7 +398,8 @@
         { text: 'Il Servizio Nazionale: chi fa cosa', next: 'info_conoscere_servizio' },
         { text: 'Le quattro fasi (previsione, prevenzione, soccorso, superamento)', next: 'info_conoscere_fasi' },
         { text: 'Le telecomunicazioni in emergenza', next: 'info_conoscere_radio' },
-        { text: 'Il vulcano dei Colli Albani', next: 'info_conoscere_vulcano' }
+        { text: 'Il vulcano dei Colli Albani', next: 'info_conoscere_vulcano' },
+        { text: 'Il Manuale di Protezione Civile (online e in PDF)', next: 'info_conoscere_manuale' }
       ]
     },
     info_conoscere_panoramica: {
@@ -458,12 +459,16 @@
       title: 'Per il cittadino',
       prompt: 'Cosa cerchi?',
       options: [
+        { text: 'Da dove comincio? (i contenuti giusti per la tua situazione)', next: 'info_cittadino_da_dove' },
         { text: 'Cosa fare in caso di emergenza', next: 'info_cittadino_cosa_fare' },
         { text: 'Allerte meteo e codici colore', next: 'info_cittadino_allerte' },
         { text: 'Rischi del territorio (sismico, idro, incendi)', next: 'info_cittadino_rischi' },
         { text: 'Cartografia operativa (aree di attesa)', next: 'info_cittadino_cartografia' },
         { text: 'Numeri utili (112 e altri)', next: 'info_cittadino_numeri' },
         { text: 'Piano di emergenza familiare', next: 'info_cittadino_piano' },
+        { text: 'Dati in tempo reale (meteo, terremoti, incendi, aria)', next: 'info_cittadino_strumenti' },
+        { text: 'Poster «In emergenza chiama il 112» in otto lingue', next: 'info_cittadino_poster' },
+        { text: 'Salvare le pagine che ti servono (I miei contenuti)', next: 'info_cittadino_miei' },
         { text: 'Kit per le organizzazioni (negozi, condomìni, associazioni, eventi)', next: 'info_cittadino_organizzazioni' }
       ]
     },
@@ -543,12 +548,16 @@
     info_scuole: {
       kind: 'question',
       title: 'Per le scuole',
-      prompt: 'Quale fascia ti interessa?',
+      prompt: 'Scegli la tua fascia o lo strumento che ti serve.',
       options: [
         { text: 'Insegnante Scuola dell\'Infanzia (3-6 anni)', next: 'info_scuole_infanzia' },
         { text: 'Insegnante Scuola Primaria (6-11 anni)', next: 'info_scuole_primaria' },
         { text: 'Insegnante Secondaria di Primo Grado (11-14)', next: 'info_scuole_sec1' },
         { text: 'Insegnante Secondaria di Secondo Grado (14-19)', next: 'info_scuole_sec2' },
+        { text: 'Crea la mia lezione (classe, minuti e argomento)', next: 'info_scuole_crea' },
+        { text: 'Proiettare una pagina in classe (Modalità Aula)', next: 'info_scuole_aula' },
+        { text: 'Educazione civica (D.M. 183/2024)', next: 'info_scuole_edciv' },
+        { text: 'Esperimenti e laboratorio meteo', next: 'info_scuole_esperimenti' },
         { text: 'Visione d\'insieme della formazione', next: 'info_scuole_panoramica' }
       ]
     },
@@ -600,7 +609,10 @@
         { text: 'Schede didattiche stampabili', url: '/formazione/schede-stampabili/' },
         { text: 'Tutti i giochi della sicurezza', url: '/giochi/' },
         { text: 'Percorsi didattici pronti', url: '/formazione/percorsi-didattici/' },
-        { text: 'Storie e racconti', url: '/formazione/storie-e-racconti/' }
+        { text: 'Storie e racconti', url: '/formazione/storie-e-racconti/' },
+        { text: 'Catalogo dei giochi', url: '/catalogo-giochi/' },
+        { text: 'Crea la mia lezione', url: '/formazione/crea-la-mia-lezione/' },
+        { text: 'Collaborazioni con scuole ed enti', url: '/per-gli-enti/' }
       ]
     },
 
@@ -612,6 +624,8 @@
       options: [
         { text: 'Attività accessibili — Abili a Proteggere', next: 'info_acc_abili' },
         { text: 'Versione "Facile da Leggere" del sito', next: 'info_acc_facile' },
+        { text: 'Tabelle di comunicazione (CAA) per chi non riesce a parlare', next: 'info_acc_caa' },
+        { text: 'Contenuti in Lingua Italiana dei Segni (LIS)', next: 'info_acc_lis' },
         { text: 'Glossario PC (sigle e termini spiegati)', next: 'info_acc_glossario' },
         { text: 'Standard ISO per la PC (riferimenti internazionali)', next: 'info_servizi_iso' },
         { text: 'Strumenti di accessibilità del sito (lettura ad alta voce, contrasto, ecc.)', next: 'info_acc_strumenti' },
@@ -765,6 +779,10 @@
         { text: 'Voglio diventare volontario', next: 'volontario' },
         { text: 'Chi siamo: il Gruppo Comunale', next: 'info_volontariato_chi' },
         { text: 'Le attività in corso del Gruppo', next: 'info_volontariato_attivita' },
+        { text: 'Addestramento e buone pratiche', next: 'info_volontariato_addestramento' },
+        { text: 'La campagna «Non c’è Protezione Civile senza di te»', next: 'info_volontariato_campagna' },
+        { text: 'Collaborare con il Gruppo (scuole, enti, altri gruppi)', next: 'info_volontariato_enti' },
+        { text: 'San Pio da Pietrelcina, patrono dei volontari', next: 'info_volontariato_patrono' },
         { text: 'Contattare la segreteria', next: 'info_volontariato_contatti' }
       ]
     },
@@ -832,8 +850,8 @@
       links: [
         { text: 'Hub normativa', url: '/normativa/' },
         { text: 'Codice della Protezione Civile (D.Lgs. 1/2018)', url: '/normativa/testo-unico-protezione-civile/' },
-        { text: 'Normativa regionale del Lazio', url: '/normativa/lazio/' },
-        { text: 'Regolamenti comunali di Genzano', url: '/normativa/regolamenti-comunali/' }
+        { text: 'Normativa regionale del Lazio', url: '/normativa/#normativa-regionale-del-lazio' },
+        { text: 'Il ruolo del Comune', url: '/normativa/#il-ruolo-del-comune' }
       ]
     },
     info_territorio_piano: {
@@ -856,12 +874,16 @@
         { text: 'Dossier interattivi (racconti visivi)', next: 'info_servizi_dossier' },
         { text: 'Documenti scaricabili e modulistica', next: 'info_servizi_download' },
         { text: 'Materiali pronti (podcast, infografiche, presentazioni)', next: 'info_servizi_materiali_pronti' },
-        { text: 'Podcast del Gruppo', next: 'info_servizi_podcast' },
+        { text: 'Audio e podcast', next: 'info_servizi_podcast' },
         { text: 'Comunicazioni e news', next: 'info_servizi_comunicazioni' },
         { text: 'Mappa del sito', next: 'info_servizi_mappa' },
         { text: 'Standard ISO per la Protezione Civile', next: 'info_servizi_iso' },
         { text: 'Trasparenza — natura ETS, statuto, accesso civico', next: 'info_servizi_trasparenza' },
         { text: 'Feed RSS — ricevi le notizie nel tuo aggregatore', next: 'info_servizi_rss' },
+        { text: 'Dati aperti (CSV e JSON)', next: 'info_servizi_opendata' },
+        { text: 'Open Kit — il nostro codice per altri gruppi', next: 'info_servizi_openkit' },
+        { text: 'Siti utili e risorse esterne', next: 'info_servizi_siti' },
+        { text: 'Stato del sito', next: 'info_servizi_stato' },
         { text: 'Versione "Facile da leggere"', next: 'info_servizi_facile' }
       ]
     },
@@ -895,6 +917,7 @@
         'Iscriviti al feed RSS per ricevere i nuovi episodi automaticamente nella tua app preferita (Spotify, Apple Podcasts, Pocket Casts, AntennaPod).'
       ],
       links: [
+        { text: 'Audio e podcast (podcast e articoli da ascoltare)', url: '/audio-e-podcast/' },
         { text: 'Apri la pagina Podcast', url: '/podcast/' },
         { text: 'Feed RSS del podcast', url: '/podcast/index.xml' }
       ]
@@ -946,6 +969,147 @@
       title: 'Versione "Facile da leggere"',
       body: ['Versione cognitivamente accessibile (D.Lgs. 62/2024) con frasi brevi, parole comuni, struttura semplice. Pensata per persone con difficoltà di lettura, anziani, italiano L2.'],
       links: [{ text: 'Apri versione facile da leggere', url: '/facile-da-leggere/' }]
+    },
+
+    // --- Nodi aggiunti il 06/10/2026: voci di menu e strumenti nuovi ---
+    info_conoscere_manuale: {
+      kind: 'answer',
+      title: 'Manuale di Protezione Civile',
+      body: ['Un manuale a impianto accademico: teoria del rischio, ordinamento del Servizio nazionale, gestione delle emergenze e commento dei testi unici. Si legge online, capitolo per capitolo, oppure si scarica in PDF.'],
+      links: [{ text: 'Apri il Manuale', url: '/manuale/' }]
+    },
+    info_cittadino_da_dove: {
+      kind: 'answer',
+      title: 'Da dove comincio?',
+      body: ['Una pagina che ti porta subito ai contenuti giusti per la tua situazione: nuovi residenti, famiglie, caregiver, docenti, volontari, attività del territorio.'],
+      links: [{ text: 'Apri «Da dove comincio?»', url: '/da-dove-comincio/' }]
+    },
+    info_cittadino_strumenti: {
+      kind: 'answer',
+      title: 'Dati in tempo reale',
+      body: ['Il cruscotto del territorio mostra terremoti, radar meteo, immagini da satellite, incendi e qualità dell’aria da fonti ufficiali. La pagina Strumenti raccoglie anche i servizi esterni per meteo, rischio idrogeologico e viabilità. Per sapere se c’è un’allerta fa fede il bollettino del Centro Funzionale Regionale.'],
+      links: [
+        { text: 'Cruscotto del territorio', url: '/cruscotto/' },
+        { text: 'Strumenti in tempo reale', url: '/strumenti/' },
+        { text: 'Allerte meteo', url: '/allerte-meteo/' }
+      ]
+    },
+    info_cittadino_poster: {
+      kind: 'answer',
+      title: 'Poster «In emergenza chiama il 112»',
+      body: ['Otto poster in italiano, inglese, francese, tedesco, spagnolo, portoghese, rumeno ed esperanto, da stampare e affiggere: si scaricano in PDF e PNG dall’Area Download. Una pagina del sito riporta il testo di ogni poster, leggibile con lo screen reader.'],
+      links: [
+        { text: 'Testo dei poster di emergenza', url: '/poster-emergenza/' },
+        { text: 'Area Download', url: '/area-download/' }
+      ]
+    },
+    info_cittadino_miei: {
+      kind: 'answer',
+      title: 'I miei contenuti',
+      body: [
+        'In fondo alle pagine del sito, nel riquadro «Condividi e scarica», c’è il pulsante «Salva tra i miei contenuti». Le pagine salvate le ritrovi tutte nella pagina «I miei contenuti», anche dal piè di pagina.',
+        'Restano solo sul tuo dispositivo, senza registrazione: non le riceviamo. Si salva il collegamento, non il testo, quindi per leggere la pagina serve la connessione.'
+      ],
+      links: [
+        { text: 'Apri I miei contenuti', url: '/i-miei-contenuti/' },
+        { text: 'Privacy: dati che restano nel browser', url: '/privacy/' }
+      ]
+    },
+    info_scuole_crea: {
+      kind: 'answer',
+      title: 'Crea la mia lezione',
+      body: ['Scegli la classe, i minuti (30, 45, 60 o 90) e l’argomento; puoi segnalare anche alunni con bisogni educativi speciali. Il sito compone una lezione in fasi con le schede, le storie, i giochi e gli esperimenti già pubblicati. La lezione si stampa o si manda a un collega con il suo indirizzo. Prima di entrare in classe leggi ogni materiale: la composizione è automatica.'],
+      links: [{ text: 'Apri Crea la mia lezione', url: '/formazione/crea-la-mia-lezione/' }]
+    },
+    info_scuole_aula: {
+      kind: 'answer',
+      title: 'Modalità Aula',
+      body: ['Nelle pagine con più sezioni c’è il pulsante «Modalità Aula»: sta in cima, accanto al tempo di lettura o nel riquadro «Leggi questa pagina in altri modi». La pagina diventa una serie di schermate a tutto schermo, con testo grande e senza menu, da proiettare in classe. Avanti e indietro con i pulsanti o con le frecce, A+ e A− per il testo, Esc per uscire.'],
+      links: [
+        { text: 'Provala sul rischio sismico', url: '/rischi-prevenzione/rischio-sismico/' },
+        { text: 'Formazione e scuole', url: '/formazione/' }
+      ]
+    },
+    info_scuole_edciv: {
+      kind: 'answer',
+      title: 'Educazione civica',
+      body: ['La pagina per i docenti collega i materiali del Gruppo ai nuclei dell’insegnamento di educazione civica (D.M. 183/2024) e all’Agenda 2030.'],
+      links: [{ text: 'Apri Educazione civica', url: '/formazione/educazione-civica/' }]
+    },
+    info_scuole_esperimenti: {
+      kind: 'answer',
+      title: 'Esperimenti e laboratorio meteo',
+      body: [
+        'Esperimenti scientifici e giochi semplici, con materiali facili da trovare, per spiegare a bambini e ragazzi i rischi naturali e come ci si protegge. Sempre con un adulto.',
+        'Il Laboratorio meteo permette di scegliere luogo, periodo e variabile, costruire il grafico e leggere la tabella dei dati climatici dei Castelli Romani.'
+      ],
+      links: [
+        { text: 'Esperimenti e attività', url: '/formazione/esperimenti/' },
+        { text: 'Laboratorio meteo', url: '/laboratorio-meteo/' }
+      ]
+    },
+    info_acc_caa: {
+      kind: 'answer',
+      title: 'Tabelle di comunicazione (CAA)',
+      body: ['Tabelle con simboli da indicare con il dito, per comunicare in emergenza: utili a chi non può parlare, a persone con afasia o disabilità cognitive e a chi non parla italiano. Si stampano e si tengono nel kit di emergenza.'],
+      links: [{ text: 'Apri le tabelle di comunicazione', url: '/tabelle-comunicazione/' }]
+    },
+    info_acc_lis: {
+      kind: 'answer',
+      title: 'Contenuti in LIS',
+      body: ['Video in Lingua Italiana dei Segni sulla sicurezza e sulla protezione civile, dai canali del Dipartimento della Protezione Civile e di Abili a Proteggere, ordinati per tema.'],
+      links: [{ text: 'Apri i contenuti in LIS', url: '/lis/' }]
+    },
+    info_volontariato_addestramento: {
+      kind: 'answer',
+      title: 'Addestramento e buone pratiche',
+      body: ['Come si addestra il Gruppo: turni, esercitazioni programmate, formazione su mezzi e attrezzature.'],
+      links: [{ text: 'Apri Addestramento e buone pratiche', url: '/esercitazioni/' }]
+    },
+    info_volontariato_campagna: {
+      kind: 'answer',
+      title: 'La campagna «Non c’è Protezione Civile senza di te»',
+      body: ['La campagna della Regione Lazio per cercare nuovi volontari, rilanciata dal nostro Gruppo: spot, caroselli, storie e video.'],
+      links: [
+        { text: 'Apri la campagna', url: '/campagna-volontari/' },
+        { text: 'Diventa volontario', url: '/diventa-volontario/' }
+      ]
+    },
+    info_volontariato_enti: {
+      kind: 'answer',
+      title: 'Collaborare con il Gruppo',
+      body: ['Come il Gruppo collabora con le scuole del territorio, con il Comune e con gli altri gruppi di protezione civile dei Castelli Romani.'],
+      links: [{ text: 'Apri Per gli enti e le scuole', url: '/per-gli-enti/' }]
+    },
+    info_volontariato_patrono: {
+      kind: 'answer',
+      title: 'San Pio da Pietrelcina',
+      body: ['Breve biografia di San Pio da Pietrelcina, la sua canonizzazione e i motivi per cui è il patrono dei volontari della protezione civile italiana.'],
+      links: [{ text: 'Apri la pagina', url: '/san-pio-da-pietrelcina/' }]
+    },
+    info_servizi_opendata: {
+      kind: 'answer',
+      title: 'Dati aperti',
+      body: ['I dati sulle attività del Gruppo in formato CSV e JSON, riusabili con licenza CC BY 4.0 citando la fonte.'],
+      links: [{ text: 'Apri i dati aperti', url: '/open-data/' }]
+    },
+    info_servizi_openkit: {
+      kind: 'answer',
+      title: 'Open Kit',
+      body: ['Alcune funzioni di questo sito, in pacchetti da scaricare con istruzioni, per altri gruppi, associazioni e Comuni: lettura ad alta voce, pannello di accessibilità, tabelle di comunicazione, feed delle allerte, Modalità Aula e altre. Il codice ha licenza EUPL 1.2. Prima di usarli vanno messi i numeri e i dati ufficiali del proprio territorio.'],
+      links: [{ text: 'Apri Open Kit', url: '/open-kit/' }]
+    },
+    info_servizi_siti: {
+      kind: 'answer',
+      title: 'Siti utili',
+      body: ['Link a siti istituzionali, portali operativi, fonti tecniche e risorse educative su protezione civile, prevenzione e sicurezza.'],
+      links: [{ text: 'Apri Siti utili', url: '/siti-utili/' }]
+    },
+    info_servizi_stato: {
+      kind: 'answer',
+      title: 'Stato del sito',
+      body: ['Il cruscotto di trasparenza tecnica: stato di allerta, modalità del sito, automazioni di manutenzione e conformità.'],
+      links: [{ text: 'Apri lo stato del sito', url: '/stato-sistema/' }]
     },
 
     // --------------------------- TERREMOTO -----------------------------------

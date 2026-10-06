@@ -37,6 +37,9 @@ controllo-documenti-report.md
 # I file .brf sono rigenerati dal workflow al deploy, mai committati.
 static/braille/
 
+# Pacchetti dell'Open Kit (scripts/genera-open-kit.py), generati al deploy.
+static/open-kit/
+
 # Staging del backup documenti solo-Aruba (scripts/backup-documenti-aruba.py).
 # I file vengono pubblicati come asset della Release "backup-documenti-aruba",
 # mai committati nel repo (l'Atlante da solo è 118 MB).
