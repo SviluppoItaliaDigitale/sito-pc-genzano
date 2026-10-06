@@ -5,190 +5,190 @@
    "https://www.ansa.it/sito/notizie/cronaca/cronaca_rss.xml",
    "https://www.adnkronos.com/RSS_PrimaPagina.xml"
   ],
-  "generato": "2026-10-06T01:23:43+00:00",
+  "generato": "2026-10-06T07:56:42+00:00",
   "nota": "Titoli e link dai feed RSS pubblici delle agenzie, con attribuzione. Copia locale per lettura same-origin dalla Sala situazioni."
  },
  "count": 30,
  "notizie": [
   {
-   "data": "2026-10-05T22:30:18+00:00",
+   "data": "2026-10-06T07:43:41+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "D'Alema: \"Meloni ha attirato il centrosinistra in una trappola\"",
-   "url": "https://www.adnkronos.com/politica/dalema-augias-meloni-elezioni_2Ym5nWbhT1rx2lIMX2bUSY"
+   "titolo": "Carburanti, torna l’accisa piena: il diesel aumenta di 6 centesimi",
+   "url": "https://www.adnkronos.com/economia/carburanti-prezzi-benzina-diesel-oggi-accise_1yexxRNuWyjsdX5bV1v6Gs"
   },
   {
-   "data": "2026-10-05T22:06:33+00:00",
+   "data": "2026-10-06T07:42:23+00:00",
+   "fonte": "ANSA",
+   "titolo": "Da oggi accise sul gasolio più alte, nessun decreto in Gazzetta",
+   "url": "https://www.ansa.it/canale_motori/notizie/istituzioni/2026/10/06/da-oggi-accise-sul-gasolio-piu-alte-nessun-decreto-in-gazzetta_5d0b1426-cd66-4a50-9d69-8e04bbe77190.html"
+  },
+  {
+   "data": "2026-10-06T07:38:24+00:00",
+   "fonte": "ANSA",
+   "titolo": "Lane (Bce): 'La flessibilità Ue? Servono misure mirate ai bassi redditi, non a pioggia'",
+   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/06/lane-bce-la-flessibilita-ue-servono-misure-mirate-ai-bassi-redditi-non-a-pioggia_ad476ae4-ebce-4be8-a45e-a42f14928493.html"
+  },
+  {
+   "data": "2026-10-06T07:37:44+00:00",
+   "fonte": "ANSA",
+   "titolo": "Arbitro 19enne colpito alla tempia da un mattone, 12 denunce a Ischia",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/06/arbitro-19enne-colpito-alla-tempia-da-un-mattone-12-denunce-a-ischia_f69cc575-c5c7-4fa3-8ff9-d6696c23713a.html"
+  },
+  {
+   "data": "2026-10-06T07:34:37+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Operaio ferito in incidente sul lavoro nel Napoletano",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/06/operaio-ferito-in-incidente-sul-lavoro-nel-napoletano_1d40a271-e049-4e3c-92a9-41e07bc13af1.html"
+  },
+  {
+   "data": "2026-10-06T07:34:20+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Perde controllo dello scooter, morto ventenne a Sorrento",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/06/perde-controllo-dello-scooter-morto-ventenne-a-sorrento_353879d4-a6a7-480e-a23a-80a5bfa135d2.html"
+  },
+  {
+   "data": "2026-10-06T07:33:04+00:00",
+   "fonte": "ANSA",
+   "titolo": "La Bulgaria: 'Due navi colpite da droni sulle coste del Mar Nero'. Una è affondata, l'equipaggio disperso",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/06/la-bulgaria-due-navi-colpite-da-droni-sulle-coste-del-mar-nero._0231200e-b392-4867-969d-b60d3337c436.html"
+  },
+  {
+   "data": "2026-10-06T07:28:56+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Riserva Biviere di Gela casa dei fenicotteri rosa, 276 avvistati in due giorni",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/06/riserva-biviere-di-gela-casa-dei-fenicotteri-rosa-276-avvistati-in-due_fa385876-d5e0-42de-a1b2-56a38d57237b.html"
+  },
+  {
+   "data": "2026-10-06T07:25:08+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Ucciso in casa a Torino, arrestati la moglie e il compagno",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/06/ucciso-in-casa-a-torino-arrestati-la-moglie-e-il-compagno_bc4a8eb2-ced7-418e-a194-175279df72e8.html"
+  },
+  {
+   "data": "2026-10-06T07:24:20+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Peste polmonare, Russia nega tutto: \"Solo fake news, è polmonite\". Trump: \"Li aiuteremo\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/peste-polmonare-russia-putin-trump_3QF0zFvw3ojZx3BGnxbt9u"
+   "titolo": "Roma, bomba carta esplode in cortile condominio a San Basilio: nessun ferito",
+   "url": "https://www.adnkronos.com/cronaca/roma-san-basilio-bomba-carta-condominio_4rYOf15rB58xHJ65OCPZoc"
   },
   {
-   "data": "2026-10-05T22:05:11+00:00",
+   "data": "2026-10-06T07:23:21+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Spagna, dalla crisi al voto: Sanchez tenta la rimonta con le elezioni anticipate",
-   "url": "https://www.adnkronos.com/internazionale/esteri/sanchez-elezioni-anticipate-spagna-governo_2q2HsbbBwgM7unAbdhS7wp"
+   "titolo": "Festival nazionale Economia civile, 5 amministrazioni condivise nominate 'Ambasciatori 2026'",
+   "url": "https://www.adnkronos.com/economia/festival-nazionale-economia-civile-5-amministrazioni-condivise-nominate-ambasciatori-2026_7Bs9XzecYMMeWH99ar4XmB"
   },
   {
-   "data": "2026-10-05T22:04:54+00:00",
+   "data": "2026-10-06T07:21:30+00:00",
+   "fonte": "ANSA CRONACA",
+   "titolo": "Scontri derby Torino-Juventus, sono una ventina le misure cautelari",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/06/scontri-derby-torino-juventus-sono-una-ventina-le-misure-cautelari_05b09067-682f-4b80-97da-ba94a4ed6c7a.html"
+  },
+  {
+   "data": "2026-10-06T07:19:46+00:00",
+   "fonte": "ANSA",
+   "titolo": "Curva dei rendimenti: cosa significa quando si irripidisce o si appiattisce",
+   "url": "https://www.ansa.it/native/ansacom/2026/10/06/curva-dei-rendimenti-cosa-significa-quando-si-irripidisce-o-si-appiattisce_48c61c9d-684a-4e29-a6c6-659a28cb7ca3.html"
+  },
+  {
+   "data": "2026-10-06T07:10:01+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Obiettivo Export, Adnkronos media partner: diretta speciale, interviste e podcast",
-   "url": "https://www.adnkronos.com/internazionale/esteri/obiettivo-export-adnkronos-media-partner-diretta-speciale-interviste-e-podcast_39BZMmVeCGJpDRbpuj7LQF"
+   "titolo": "Nations League, oggi Croazia-Spagna: orario, probabili formazioni e dove vederla in tv",
+   "url": "https://www.adnkronos.com/sport/croazia-spagna-oggi-nations-league-orario-dove-vederla-tv-probabili-formazioni_PHPti5Vt5b7rPa6UVSGLb"
   },
   {
-   "data": "2026-10-05T21:38:40+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il copilota di Flydubai agli inquirenti: 'Volevo vendicare Gaza'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/05/shin-bet-avverte-il-governo-hamas-pronto-ad-attacco-a-ridosso-del-voto_8d1a440b-f1f3-4157-bb26-e1ec616ef874.html"
-  },
-  {
-   "data": "2026-10-05T21:36:55+00:00",
-   "fonte": "ANSA",
-   "titolo": "Nations League: l'Italia chiude in bellezza, a Bologna è 3-1 alla Turchia",
-   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/05/nations-league-litalia-chiude-in-bellezza-a-bologna-e-3-1-alla-turchia_294cb6a1-8a5b-4345-b401-d99a94eaf076.html"
-  },
-  {
-   "data": "2026-10-05T21:32:02+00:00",
-   "fonte": "ANSA",
-   "titolo": "Foto inedite di Sinwar diffuse dalle Brigate al Qassem alla vigilia del 7 ottobre",
-   "url": "https://www.ansa.it/sito/notizie/mondo/mediooriente/2026/10/05/foto-inedite-di-sinwar-diffuse-dalle-brigate-al-qassem-alla-vigilia-del_9637cf00-436e-4898-a474-827aa4bfee5c.html"
-  },
-  {
-   "data": "2026-10-05T21:19:00+00:00",
-   "fonte": "ANSA",
-   "titolo": "Il voto a maggio più vicino, e Meloni tutela la sua voce dai deepfake",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/05/il-voto-a-maggio-piu-vicino-e-meloni-tutela-la-sua-voce-dai-deepfake_166e0661-729d-445b-b106-17c3ea8888c6.html"
-  },
-  {
-   "data": "2026-10-05T21:15:13+00:00",
-   "fonte": "ANSA",
-   "titolo": "Esplosione nel centro di Bergamo per una fuga di gas, 8 feriti",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/05/esplosione-nel-centro-di-bergamo-per-una-fuga-di-gas-8-feriti_f192acd0-1cec-4e0e-9b4f-7667f4c0cb97.html"
-  },
-  {
-   "data": "2026-10-05T21:05:11+00:00",
-   "fonte": "ANSA",
-   "titolo": "Per le donne il gender gap pesa anche sull'accesso all'abitare",
-   "url": "https://www.ansa.it/canale_lifestyle/notizie/societa_diritti/2026/10/05/per-le-donne-il-gender-gap-pesa-anche-sullaccesso-allabitare_e68af765-0617-407b-a838-4db5881b4058.html"
-  },
-  {
-   "data": "2026-10-05T20:55:33+00:00",
+   "data": "2026-10-06T07:08:03+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Mancini: \"Bravi a riprendere la partita, bilancio più che positivo\"",
-   "url": "https://www.adnkronos.com/sport/mancini-nations-league-italia-turchia_5LLKg9QCGF7b4UrejU3XzG"
+   "titolo": "Trovato morto in casa a Torino, arrestati la moglie e il nuovo compagno",
+   "url": "https://www.adnkronos.com/cronaca/torino-morto-casa-luglio-arrestata-moglie_1PgtUUkrdNEkYFBkSova5E"
   },
   {
-   "data": "2026-10-05T20:48:53+00:00",
+   "data": "2026-10-06T07:07:46+00:00",
    "fonte": "ANSA",
-   "titolo": "Scattano accise sul gasolio più alte, nessun decreto in Gazzetta",
-   "url": "https://www.ansa.it/sito/notizie/economia/2026/10/05/scattano-accise-sul-gasolio-piu-alte-nessun-decreto-in-gazzetta_664823dc-12a3-42e9-851b-f10f32a6c4dd.html"
+   "titolo": "Mancini: 'Sto ritrovando l'Italia, ma mi manca Vialli'",
+   "url": "https://www.ansa.it/sito/notizie/sport/calcio/2026/10/05/mancini-sto-ritrovando-litalia-ma-mi-manca-vialli_a83ee525-3338-441e-992c-ca5efb08dbf1.html"
   },
   {
-   "data": "2026-10-05T20:01:00+00:00",
+   "data": "2026-10-06T06:40:31+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Caso Garlasco, i sospetti dei pm sui reperti: \"Distrutti dopo la sentenza definitiva su Stasi\"",
-   "url": "https://www.adnkronos.com/cronaca/garlasco-procura-pavia-ris-reperti-stasi_3Ax8HqtfXptnDbxC0TqAlL"
+   "titolo": "Argentina-Benin, oggi l'ultima partita di Messi: orario e dove vederla in tv",
+   "url": "https://www.adnkronos.com/sport/messi-ultima-partita-oggi-argentina-benin-orario-dove-vederla-tv_5Z1ZBOfjNgCfQtQmFmJYSp"
   },
   {
-   "data": "2026-10-05T19:49:05+00:00",
-   "fonte": "ANSA",
-   "titolo": "Bolsonaro a un passo dalla presidenza, Trump: una 'grande vittoria'",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/05/bolsonaro-a-un-passo-dalla-presidenza-a-lula-servira-un-miracolo_bef2f600-8fd3-4a6b-8402-5f40da9c9da1.html"
+   "data": "2026-10-06T06:23:07+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Derby Torino-Juve, in corso misure cautelari in Piemonte e Nord Italia",
+   "url": "https://www.adnkronos.com/cronaca/derby-torino-juve-scontri-misure-cautelari_4SAjZSRfGJcOr0W5AqZ3hI"
   },
   {
-   "data": "2026-10-05T19:10:43+00:00",
-   "fonte": "ANSA",
-   "titolo": "La madre e la sorella di Pamela Genini contro le scuse di 'plastica' del killer",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/05/il-killer-di-pamela-comprendo-il-peso-delle-mie-azioni.-la-mamma-scuse-respinte_faa791e5-4155-45d6-bb3b-293e80d667f4.html"
-  },
-  {
-   "data": "2026-10-05T19:06:15+00:00",
-   "fonte": "ANSA",
-   "titolo": "Nuovo allarme degli 007 tedeschi, l'Estonia sposta le truppe",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/05/financial-times-lestonia-sposta-le-truppe-piu-vicino-al-confine-con-la-russia_ba3b1d1a-ca86-47b7-904e-b7cdf2c99464.html"
-  },
-  {
-   "data": "2026-10-05T19:04:59+00:00",
+   "data": "2026-10-06T06:18:23+00:00",
    "fonte": "ANSA",
    "titolo": "È morta la giornalista dell'ANSA Alessandra Moneti",
    "url": "https://www.ansa.it/sito/notizie/economia/2026/10/05/e-morta-la-giornalista-dellansa-alessandra-moneti_6c075924-092b-467f-b77a-4ad797b4e2b0.html"
   },
   {
-   "data": "2026-10-05T19:00:08+00:00",
-   "fonte": "ANSA CRONACA",
-   "titolo": "Esplosione in una casa a Bergamo, due feriti in codice rosso",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/05/esplosione-in-una-casa-a-bergamo-due-feriti-in-codice-rosso_75cbeddf-927f-4964-93b2-3ea23573c46f.html"
+   "data": "2026-10-06T06:08:00+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Centinaia di droni ucraini su Mosca. Russia colpisce ponte sul Dnipro a Zaporizhzhia",
+   "url": "https://www.adnkronos.com/internazionale/esteri/ucraina-russia-guerra-news-oggi_5952Zs2HRNtdCjd46ktltC"
   },
   {
-   "data": "2026-10-05T18:56:49+00:00",
+   "data": "2026-10-06T05:55:05+00:00",
+   "fonte": "ADNKRONOS",
+   "titolo": "Diesel, niente accise mobili: stop allo sconto, i prezzi salgono",
+   "url": "https://www.adnkronos.com/economia/diesel-accise-mobili-sconto-prezzi-alti_5eF8e5JSdnNe5sXzsPp2M"
+  },
+  {
+   "data": "2026-10-06T05:43:07+00:00",
    "fonte": "ANSA",
-   "titolo": "Garlasco, spunta una 'valutazione' su Stasi del 2007 mai depositata",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/05/garlasco-tempi-piu-lunghi-per-listanza-di-revisione-di-alberto-stasi_7744924d-7adc-40cf-85c8-9c465fe8d05b.html"
+   "titolo": "PRIME PAGINE | Nuovo allarme degli 007 tedeschi, l'Estonia sposta le truppe",
+   "url": "https://www.ansa.it/sito/podcast/ansa_voice_daily/2026/10/06/prime-pagine-nuovo-allarme-degli-007-tedeschi-lestonia-sposta-le-truppe_1ecf1232-3970-43e8-a2fb-e4b8edf532d6.html"
   },
   {
-   "data": "2026-10-05T18:52:00+00:00",
+   "data": "2026-10-06T05:42:13+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Volo FlyDubai, il copilota e il piano contro Israele: \"Volevo vendicare Gaza\"",
-   "url": "https://www.adnkronos.com/internazionale/esteri/volo-flydubai-pilota-israele-gaza_4Gi4uPsNGVsYUDklqaNBEY"
+   "titolo": "Coni-Figc, è il giorno della verità sul caso Malagò. Cosa succede oggi?",
+   "url": "https://www.adnkronos.com/sport/calcio-figc-coni-malago-buonfiglio-commissariamento-per-caso-tesseramento_38axT4v21oAN5KCXllzYdG"
   },
   {
-   "data": "2026-10-05T18:41:17+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "La potenza muscolare invecchia, cos'è la powerpenia: \"Si scopre con test funzionali, è reversibile\"",
-   "url": "https://www.adnkronos.com/cronaca/muscoli-powerpenia-sarcopenia-esercizio_YTjNuCL3eueg9km7WRItD"
-  },
-  {
-   "data": "2026-10-05T18:18:23+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "L'Italia Under 21 vola a Euro 2027: gli azzurrini travolgono 6-2 la Polonia",
-   "url": "https://www.adnkronos.com/sport/italia-polonia-under-21-pescara-koleosho-baldini_7mTck7bN70CFzXtjoE0XEY"
-  },
-  {
-   "data": "2026-10-05T18:15:28+00:00",
+   "data": "2026-10-06T05:29:24+00:00",
    "fonte": "ANSA",
-   "titolo": "Scaglia la pallina contro un tifoso, Medvedev squalificato e Djokovic è in finale",
-   "url": "https://www.ansa.it/sito/notizie/sport/2026/10/05/tennis-pallina-contro-un-tifoso-medvedev-squalificato-e-djokovic-e-in-finale_1b37d7d3-9ab5-4d51-aa1f-832098329240.html"
+   "titolo": "Maltempo in Spagna, ancora allagamenti in Catalogna",
+   "url": "https://www.ansa.it/sito/videogallery/mondo/2026/10/05/maltempo-in-spagna-ancora-allagamenti-in-catalogna_1f59d6fc-9601-494e-be3b-b1b9de8ecdcf.html"
   },
   {
-   "data": "2026-10-05T18:12:51+00:00",
+   "data": "2026-10-06T05:28:05+00:00",
+   "fonte": "ANSA",
+   "titolo": "Scoperto un pianeta-fenice, è rinato dalle ceneri della sua stella",
+   "url": "https://www.ansa.it/canale_scienza/notizie/spazio_astronomia/2026/10/06/scoperto-un-pianeta-fenice-e-rinato-dalle-ceneri-della-sua-stella_7906cecf-34a9-4a4f-a9bb-721f75907ac7.html"
+  },
+  {
+   "data": "2026-10-06T05:23:11+00:00",
+   "fonte": "ANSA",
+   "titolo": "In Italia oltre 12 milioni di caregiver familiari, è la Giornata europea",
+   "url": "https://www.ansa.it/canale_saluteebenessere/notizie/sanita/2026/10/06/in-italia-oltre-12-milioni-di-caregiver-familiari-e-la-giornata-europea_26afe26d-87bb-420d-ba9f-ce62cf05e0e4.html"
+  },
+  {
+   "data": "2026-10-06T05:20:49+00:00",
    "fonte": "ANSA",
    "titolo": "Cresce la paura per la peste in Siberia, gli Usa: 'Vigiliamo'",
    "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/05/rubio-gli-usa-monitorano-il-possibile-caso-di-peste-in-siberia_f23e5b5e-5cd3-4a95-94dd-558370a42ca4.html"
   },
   {
-   "data": "2026-10-05T18:11:00+00:00",
+   "data": "2026-10-06T04:52:57+00:00",
    "fonte": "ADNKRONOS",
-   "titolo": "Incontro Buonfiglio-Malagò prima della Giunta, ipotesi n.1 Figc commissario",
-   "url": "https://www.adnkronos.com/sport/coni-figc-buonfiglio-malago_1rOwRmJ4J5MtMJfL8W7Txm"
+   "titolo": "Garlasco, la relazione 'misteriosa' su Stasi e i sospetti dei pm sui reperti distrutti",
+   "url": "https://www.adnkronos.com/cronaca/garlasco-stasi-relazione-reperti-ris_7DDi9DNGCvIWF3d0Q5RLKg"
   },
   {
-   "data": "2026-10-05T18:10:17+00:00",
+   "data": "2026-10-06T04:01:34+00:00",
    "fonte": "ANSA",
-   "titolo": "La scommessa di Sanchez, elezioni anticipate il 29 novembre",
-   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/05/sanchez-ho-deciso-di-convocare-le-elezioni-anticipate-il-29-novembre_1a6ab6a9-c5ba-40c3-8694-65c484301904.html"
+   "titolo": "Incursione militare israeliana nel campo profughi di Balata in Cisgiordania",
+   "url": "https://www.ansa.it/sito/notizie/mondo/2026/10/06/incursione-militare-israeliana-nel-campo-profughi-di-balata-in-cisgiordania_6f044439-88f4-4a5f-af0c-3ab4c2d2c277.html"
   },
   {
-   "data": "2026-10-05T18:02:53+00:00",
-   "fonte": "ANSA",
-   "titolo": "Ranucci sospeso per 10 giorni dalla Rai, il legale: 'Faremo ricorso'",
-   "url": "https://www.ansa.it/sito/notizie/politica/2026/10/05/ranucci-sospeso-per-10-giorni-dalla-rai-il-legale-faremo-ricorso_2fef0e65-81ef-4744-85b5-1894f6d936a7.html"
-  },
-  {
-   "data": "2026-10-05T18:00:21+00:00",
-   "fonte": "ANSA",
-   "titolo": "I giudici di Milano confermano lo stop degli altiforni dell'ex Ilva",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/05/ex-ilva-la-corte-di-milano-conferma-il-blocco-degli-altoforni_28015c26-3e0b-46fa-9ba8-dff95a0f51ee.html"
-  },
-  {
-   "data": "2026-10-05T17:54:47+00:00",
+   "data": "2026-10-06T03:57:37+00:00",
    "fonte": "ANSA CRONACA",
-   "titolo": "Corteo per Gaza sul registro elettronico, Valditara manda gli ispettori",
-   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/05/corteo-per-gaza-sul-registro-elettronico-valditara-manda-gli-ispettori_d84e8200-cd1a-4a33-b73c-0a86efccdc11.html"
-  },
-  {
-   "data": "2026-10-05T17:53:37+00:00",
-   "fonte": "ADNKRONOS",
-   "titolo": "Nautica e turismo, una filiera strategica per generare crescita e valore sui territori",
-   "url": "https://www.adnkronos.com/economia/nautica-e-turismo-una-filiera-strategica-per-generare-crescita-e-valore-sui-territori_5iqFBieR0ESF5VwucfLw2A"
+   "titolo": "Palazzina inagibile dopo l'esplosione a Bergamo, circa 50 gli sfollati",
+   "url": "https://www.ansa.it/sito/notizie/cronaca/2026/10/05/esplosione-nel-centro-di-bergamo-per-una-fuga-di-gas-8-feriti_f192acd0-1cec-4e0e-9b4f-7667f4c0cb97.html"
   }
  ]
 }
