@@ -7909,4 +7909,7 @@ html.aula-aperta, html.aula-aperta body { overflow: hidden; }
 }
 @media print {
   .crea-lezione-form, #crea-lezione-nota, .crea-lezione-azioni { display: none !important; }
+  /* «Stampa la lezione» stampa solo il piano: il resto della pagina resta a
+     schermo (classe messa da js/crea-lezione.js solo per quella stampa) */
+  html.stampa-lezione .article-body > :not(#crea-lezione-esito) { display: none !important; }
 }

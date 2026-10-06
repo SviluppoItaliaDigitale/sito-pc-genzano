@@ -191,7 +191,13 @@
     altro.addEventListener('click', function () { genera(true); });
     var stampa = el('button', 'btn btn-outline-primary', 'Stampa la lezione');
     stampa.type = 'button';
-    stampa.addEventListener('click', function () { window.print(); });
+    stampa.addEventListener('click', function () {
+      var radice = document.documentElement;
+      var togli = function () { radice.classList.remove('stampa-lezione'); };
+      radice.classList.add('stampa-lezione');
+      window.addEventListener('afterprint', togli, { once: true });
+      window.print();
+    });
     azioni.appendChild(altro); azioni.appendChild(stampa);
     esito.appendChild(azioni);
     esito.hidden = false;

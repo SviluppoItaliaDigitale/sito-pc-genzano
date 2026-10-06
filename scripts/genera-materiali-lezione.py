@@ -133,7 +133,10 @@ def schede() -> list[dict]:
         desc = re.search(r'scheda-desc">(.*?)</p>', b, re.S)
         tit, fas = testo(titolo.group(1)), testo(fascia.group(1))
         d = testo(desc.group(1)) if desc else ""
-        slug = href.group(1).strip("/")
+        # «?autoprint=1» fa partire la stampa appena si apre la scheda: utile
+        # sul pulsante dell'indice, non in una lezione, dove il docente deve
+        # prima leggerla. Si tiene solo il percorso.
+        slug = href.group(1).split("?", 1)[0].split("#", 1)[0].strip("/")
         fasce = fasce_scheda(fas)
         if not fasce:
             continue
