@@ -106,6 +106,14 @@ Tre shortcode nati dall'**audit esterno del 15/07/2026, punto 7 "ridurre l'HTML 
 
 ⚠️ Nota implementativa: l'inner è reso con `.Page.RenderString (dict "display" "block")` e **non** con `markdownify`, perché `markdownify` fa l'unwrap del `<p>` quando l'inner è un solo paragrafo (perdendo i margini del paragrafo nella card). Nessuna CSS aggiunta: bordi e dimensioni variabili sono parametri emessi dal template, il centraggio logo usa utility BI esistenti.
 
+## Shortcode `crea-lezione` — «Crea la mia lezione» (06/10/2026)
+
+Pagina `/formazione/crea-la-mia-lezione/` (proposta dell'utente): il docente sceglie classe (infanzia, primaria 1ª-2ª, primaria 3ª-5ª, secondaria I, secondaria II), minuti (30, 45, 60, 90), argomento e la presenza di alunni con bisogni educativi speciali; `static/js/crea-lezione.js` compone una lezione in fasi (introduzione con la pagina del rischio, racconto, attività principale, esperimento, gioco, chiusura) **solo con materiali già pubblicati**, togliendo le fasi senza materiale e dando il loro tempo all'attività principale. La durata mostrata è quella dichiarata dal materiale; dove manca, vale il tempo della fase. La scelta resta nell'indirizzo (`?classe=…&minuti=…&tema=…&bes=1`).
+
+- **Catalogo** `data/materiali_lezione.json`, generato da `scripts/genera-materiali-lezione.py` leggendo le card dell'indice delle schede, l'indice delle storie, i giochi in `static/giochi/` e i titoli `###` di `content/formazione/esperimenti.md` (fasce dai pallini 🟢🔵🟠). Temi per parole chiave (`TEMI` nello script, con la pagina d'introduzione di ciascuno, verificata all'esecuzione).
+- 🔴 **Il catalogo va rigenerato quando cambia l'indice delle schede**: `validate-pr.yml` esegue `--check` nel job `pacchetti-schede` e blocca la PR se non coincide.
+- Un tema nuovo si aggiunge solo se ha materiali per più fasce: con un solo materiale la lezione resterebbe vuota (il primo soccorso è stato tolto per questo).
+
 ## Componenti Bootstrap Italia — `callout`, `passi`, `timeline`, `galleria` (maggio 2026)
 
 Quattro shortcode di contenuto, AGID/WCAG, applicabili a contenuto già esistente per migliorarne lettura e orientamento.

@@ -131,6 +131,13 @@ jobs:
           pip install --quiet pyyaml
           python3 scripts/check-dati-canonici.py
 
+      - name: "🧑‍🏫 Catalogo di «Crea la mia lezione» aggiornato"
+        # 06/10/2026: la pagina compone le lezioni da data/materiali_lezione.json,
+        # ricavato dall'indice delle schede, dalle storie, dai giochi e dagli
+        # esperimenti. Una scheda aggiunta o rinominata senza rigenerare il
+        # catalogo resterebbe fuori dalle lezioni (o vi comparirebbe un link morto).
+        run: python3 scripts/genera-materiali-lezione.py --check
+
   fogli-stampa:
     name: "Fogli di stampa: niente fogli bianchi o quasi vuoti"
     runs-on: ubuntu-latest

@@ -7881,3 +7881,32 @@ html.aula-aperta, html.aula-aperta body { overflow: hidden; }
   .aula-btn-grande { font-size: 1rem; padding: .5rem 1rem; }
 }
 @media print { .btn-modalita-aula, .aula { display: none !important; } }
+
+/* ==========================================================================
+ * CREA LA MIA LEZIONE v1.0 (06/10/2026) — shortcode crea-lezione + js/crea-lezione.js
+ * ========================================================================== */
+.crea-lezione-form { background: #f4f7fb; border-left: 4px solid #003366; border-radius: 6px; padding: 1.25rem; }
+.crea-lezione-esito:focus { outline: none; }
+.crea-lezione-sintesi { font-weight: 600; color: #003366; }
+.crea-lezione-fasi { list-style: none; padding: 0; margin: 1rem 0; counter-reset: fase; }
+.crea-lezione-fase {
+  display: grid; grid-template-columns: 7.5rem 1fr; gap: 1rem;
+  padding: 1rem 0; border-top: 1px solid #d9dfe6; break-inside: avoid;
+}
+.crea-lezione-tempo { font-weight: 700; color: #003366; font-variant-numeric: tabular-nums; }
+.crea-lezione-corpo h3 { font-size: 1.1rem; margin: 0 0 .4rem; color: #003366; }
+.crea-lezione-corpo p { margin-bottom: .4rem; }
+.crea-lezione-tipo {
+  display: inline-block; font-size: .8rem; font-weight: 600; color: #003366;
+  border: 1px solid #003366; border-radius: 3px; padding: 0 .4rem; margin-right: .2rem;
+}
+.crea-lezione-bes { border: 2px solid #15803d; border-radius: 6px; padding: 1rem 1.25rem; margin: 1rem 0; }
+.crea-lezione-bes h3 { font-size: 1.1rem; color: #15803d; }
+.crea-lezione-avviso { color: #4d5a66; }
+.crea-lezione-azioni { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1rem; }
+@media (max-width: 575.98px) {
+  .crea-lezione-fase { grid-template-columns: 1fr; gap: .25rem; }
+}
+@media print {
+  .crea-lezione-form, #crea-lezione-nota, .crea-lezione-azioni { display: none !important; }
+}

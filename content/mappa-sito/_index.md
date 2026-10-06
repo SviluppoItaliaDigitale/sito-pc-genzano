@@ -299,6 +299,11 @@ In questa pagina trovi **tutte le sezioni del sito** organizzate per tema. Se sa
   <p class="ms-card-title">Scuole: da dove cominciare</p>
   <p class="ms-card-desc">Cruscotto unico per ogni ruolo: scegli se sei docente di infanzia/primaria/sec I/sec II, di sostegno/BES, Dirigente/DSGA/RSPP, oppure genitore — e in 2 click arrivi ai materiali giusti.</p>
 </a>
+<a class="ms-card ms-edu" href="/formazione/crea-la-mia-lezione/">
+  <div class="ms-card-icon"><i class="bi bi-magic"></i></div>
+  <p class="ms-card-title">Crea la mia lezione</p>
+  <p class="ms-card-desc">Scegli classe, minuti e argomento: il sito compone una lezione in fasi con schede, storie, giochi ed esperimenti già pubblicati.</p>
+</a>
 <a class="ms-card ms-edu" href="/formazione/percorsi-didattici/">
   <div class="ms-card-icon"><i class="bi bi-rocket-takeoff-fill"></i></div>
   <p class="ms-card-title">Percorsi didattici pronti</p>

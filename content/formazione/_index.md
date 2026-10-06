@@ -53,6 +53,7 @@ Non sai da dove partire? Scegli la tua situazione: ogni scelta ti porta ai mater
 
 <div class="consulta-rapida">
 {{< link-card url="/formazione/scuole-da-dove-cominciare/" icon="bi-signpost-2" titolo="Prima volta? Parti da qui" desc="Scegli il tuo ruolo e arriva subito ai materiali giusti." >}}
+{{< link-card url="/formazione/crea-la-mia-lezione/" icon="bi-magic" titolo="Crea la mia lezione" desc="Classe, minuti e argomento: il sito compone la lezione con schede, storie, giochi ed esperimenti." >}}
 {{< link-card url="/formazione/percorsi-didattici/" icon="bi-clock-history" titolo="Quanto tempo hai?" desc="Una lezione da un'ora, mezza giornata o un progetto: pacchetti con durata e obiettivi." >}}
 <a class="cr-card" href="#kit"><span class="cr-icon" aria-hidden="true"><i class="bi bi-mortarboard"></i></span><span class="cr-corpo"><span class="cr-titolo">Per fascia d'età</span><span class="cr-desc">Kit dedicati per infanzia, primaria, secondaria di primo e secondo grado.</span></span></a>
 {{< link-card url="/formazione/scuole-checklist-docente/" icon="bi-check2-square" titolo="Prepara la lezione" desc="Parole e tempi giusti per spiegare i rischi senza creare allarmismo." >}}
