@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-10-07T13:03",
+  "aggiornato": "2026-10-07T14:03",
   "data_lunga": "mercoledì 7 ottobre 2026",
-  "aggiornato_label": "mercoledì 7 ottobre 2026, ore 13:03",
+  "aggiornato_label": "mercoledì 7 ottobre 2026, ore 14:03",
   "alba": "07:12",
   "tramonto": "18:40",
   "corrente": {
-    "temp": 21.0,
-    "percepita": 20.8,
+    "temp": 21.5,
+    "percepita": 21.3,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
     "umidita": 72,
-    "vento": 15,
-    "raffiche": 50
+    "vento": 16,
+    "raffiche": 44
   },
   "giorni": [
     {
@@ -22,19 +22,19 @@
       "tmin": 16,
       "pioggia": 45,
       "pioggia_mm": 0.7,
-      "raffiche": 55,
+      "raffiche": 54,
       "uv": 5,
       "uv_label": "moderato"
     },
     {
       "label": "Gio 8",
       "icona": "<g><g><ellipse cx=\"16.0\" cy=\"17.2\" rx=\"13.8\" ry=\"6.7\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"10.0\" cy=\"14.2\" r=\"6.2\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"20.7\" cy=\"12.9\" r=\"5.3\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.0\" cy=\"10.4\" r=\"6.2\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g><polygon points=\"15.1,24.1 20.5,24.1 16.4,33.1 18.7,25.9 14.2,25.9\" fill=\"#f6a800\"/></g>",
-      "cielo": "Temporale con grandine",
-      "tmax": 20,
+      "cielo": "Temporale",
+      "tmax": 19,
       "tmin": 17,
       "pioggia": 90,
-      "pioggia_mm": 28.5,
-      "raffiche": 68,
+      "pioggia_mm": 32.3,
+      "raffiche": 61,
       "uv": 5,
       "uv_label": "moderato"
     },
@@ -47,7 +47,7 @@
       "pioggia": 70,
       "pioggia_mm": 10.7,
       "raffiche": 38,
-      "uv": 4,
+      "uv": 5,
       "uv_label": "moderato"
     },
     {
