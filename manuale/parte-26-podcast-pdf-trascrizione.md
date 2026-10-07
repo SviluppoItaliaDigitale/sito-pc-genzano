@@ -98,7 +98,7 @@ Sezioni dedicate in `themes/flavour-pcgenzano/static/css/custom.css`:
 ## 26.6 Cosa NON entra nell'MVP
 
 1. **Generazione MP3 server-side**: richiederebbe TTS a pagamento (Google Cloud TTS, AWS Polly, Azure Cognitive Speech) — minimo $4/M caratteri. Su 388 articoli × ~4000 caratteri ≈ 1.5 M caratteri = $6/mese ricorrente. Scartato per coerenza con la politica "niente costi runtime ricorrenti".
-2. **Feed RSS podcast** (RSS 2.0 con `<enclosure>` audio): richiederebbe MP3 reali. Senza MP3, l'enclosure non ha URL → non è un podcast valido per app come Apple Podcasts, Spotify, ecc. Saltato.
+2. **Feed RSS podcast** (RSS 2.0 con `<enclosure>` audio): richiederebbe MP3 reali. Senza MP3, l'enclosure non ha URL → non è un podcast valido per app come Apple Podcasts, Spotify, ecc. Saltato. *Superato*: oggi gli episodi registrati sono in `static/podcast/episodi/` (M4A, 64 kbps mono) e il feed è `/podcast/index.xml` (`layouts/podcast/rss.xml`). Dal 07/10/2026 l'`<enclosure>` porta l'indirizzo completo, il tipo `audio/mp4` e il peso reale letto dal file: prima aveva un percorso relativo, il tipo `audio/mpeg` e peso zero, e alcune app lo scartavano.
 3. **Generazione PDF server-side** con WeasyPrint / wkhtmltopdf: 200+ MB di dipendenze sul runner CI + 5-10 sec extra per articolo. `window.print()` raggiunge lo stesso risultato senza costi.
 4. **Player audio embedded nella pagina** (tipo HTML5 `<audio controls>`): richiederebbe MP3 o lo stream TTS in tempo reale. Il bottone "Leggi ad alta voce" esistente già copre questo caso.
 5. **Statistiche di ascolto** (chi ha ascoltato cosa, quanto a lungo): impossibili senza tracking server-side. Coerente con la scelta privacy-first del sito.

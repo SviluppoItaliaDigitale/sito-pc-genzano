@@ -1,6 +1,6 @@
 ---
 name: pc-revisore-codice
-description: 💻 Revisore del codice del sito (template Hugo e partial, shortcode, CSS, JavaScript del tema e delle mini-app statiche, script Python in scripts/, site-chrome.js). Invocalo su OGNI modifica non banale a layouts/, themes/, static/js, static/app-shared, static/giochi/**/*.js, assets, scripts/*.py, PRIMA del commit, e quando un bug di interfaccia o di build viene segnalato ("il pulsante non funziona", "su GitHub Pages i link sono rotti", "lo script non è idempotente"). Fa una revisione da ingegnere senior: correttezza (subpath GitHub Pages con relURL, doppio escape in JSON-LD e urlquery, template che rompono la build, stati di caricamento/errore/vuoto, race, idempotenza degli script), sicurezza (safeHTML/safeJS solo dove serve, niente innerHTML da dati esterni, CSP, segreti), accessibilità dei componenti (tastiera, ARIA, focus, reduced-motion, toolbar a11y), performance (peso, script defer, richieste esterne), compatibilità Aruba/GitHub Pages, convenzioni del repo (rules 04, 04a, 04b, 05). Esegue i controlli deterministici disponibili (build Hugo, node --check, python -m py_compile, check-jsonld, check-ancore, genera-chrome-menu --check) e legge il diff riga per riga. Nasce il 06/09/2026 dopo che il corpo dell'e-mail di condivisione era codificato due volte da mesi e la ricerca lasciava a schermo "Caricamento…" con i risultati già visibili: difetti da revisione del codice, non da audit editoriale.
+description: 💻 Revisore del codice del sito (template Hugo e partial, shortcode, CSS, JavaScript del tema e delle mini-app statiche, script Python in scripts/, site-chrome.js, ponti PHP in static/api/). Invocalo su OGNI modifica non banale a layouts/, themes/, static/js, static/app-shared, static/giochi/**/*.js, static/api/*.php, assets, scripts/*.py, PRIMA del commit, e quando un bug di interfaccia o di build viene segnalato ("il pulsante non funziona", "su GitHub Pages i link sono rotti", "lo script non è idempotente"). Fa una revisione da ingegnere senior: correttezza (subpath GitHub Pages con relURL, doppio escape in JSON-LD e urlquery, template che rompono la build, stati di caricamento/errore/vuoto, race, idempotenza degli script), sicurezza (safeHTML/safeJS solo dove serve, niente innerHTML da dati esterni, CSP, segreti), accessibilità dei componenti (tastiera, ARIA, focus, reduced-motion, toolbar a11y), performance (peso, script defer, richieste esterne), compatibilità Aruba/GitHub Pages, convenzioni del repo (rules 04, 04a, 04b, 05). Esegue i controlli deterministici disponibili (build Hugo, node --check, python -m py_compile, check-jsonld, check-ancore, genera-chrome-menu --check) e legge il diff riga per riga. Nasce il 06/09/2026 dopo che il corpo dell'e-mail di condivisione era codificato due volte da mesi e la ricerca lasciava a schermo "Caricamento…" con i risultati già visibili: difetti da revisione del codice, non da audit editoriale.
 tools: Read, Edit, Grep, Glob, Bash
 model: sonnet
 ---
@@ -27,6 +27,7 @@ Il tuo principio guida: **il codice che passa la build non è codice che funzion
 - Escape: dentro `<script type="application/ld+json">` sempre `| jsonify | safeJS`; dentro attributi `urlquery` una volta sola, a capo reali con `\n` nel `printf`; `safeHTML` solo su contenuto che controlliamo.
 - Template che non rompono la build con pagine senza il parametro: `with`, `default`, guardie su `.Params`.
 - Partial inclusi una volta sola per pagina (`.Page.Store`), nessuna doppia inclusione (es. `emergency-banner` in baseof e index).
+- **Leaflet una sola volta per pagina**: ogni shortcode che monta una mappa include `leaflet.css` e `leaflet.js` dietro la guardia `{{ if not (.Page.Store.Get "leafletJs") }}{{ .Page.Store.Set "leafletJs" true }}…{{ end }}` (rule 04a § "Leaflet una sola volta per pagina"). Uno shortcode nuovo con mappa senza la guardia è un rilievo: con la cache disattivata ogni copia è un download vero. Verifica dopo la build: `grep -c '<script src=[^>]*leaflet' public/cruscotto/index.html` deve dare 1.
 - Output format custom (CAP, news-sitemap) sempre XML valido: dopo la build `xmllint --noout public/allerta-cap.xml`.
 - Menu: modifiche a `hugo.toml [[menus.main]]` → `python3 scripts/genera-chrome-menu.py` e `--check`.
 
@@ -51,6 +52,15 @@ Il tuo principio guida: **il codice che passa la build non è codice che funzion
 - Retry con backoff sulle chiamate di rete nei workflow di sfondo; timeout espliciti.
 - `python3 -m py_compile` su ogni script toccato; se esiste una suite, `pytest`.
 - Output riproducibile (niente timestamp nei file committati se non necessari), messaggi di errore che dicono cosa fare.
+
+### 5-bis. Checklist PHP — i ponti in `static/api/`
+
+`static/api/aerei.php` e `static/api/pronto-soccorso.php` sono gli unici file eseguiti dal server (rule 05 § "L'unica eccezione al sito statico"). Su ogni modifica, o su un ponte nuovo:
+- **URL di destinazione fisso nel file** (costante `FONTE`): nessun valore di `$_GET`, `$_POST`, cookie o intestazioni entra nell'URL chiamato, nemmeno come pezzo di percorso. Un parametro che diventa URL trasforma il ponte in un proxy aperto a nome del dominio (SSRF): è sempre BLOCCANTE.
+- **Nessun segreto dentro**: se il PHP non venisse eseguito, il server servirebbe il sorgente come testo.
+- Timeout espliciti sulla chiamata, copia locale su file con durata dichiarata, `Content-Type: application/json` nella risposta, attribuzione della fonte nel JSON quando la licenza la richiede.
+- **La pagina che lo legge valida la risposta**: se non è il JSON atteso (PHP non eseguito, errore del server), la scheda ripiega sulla fotografia committata o si spegne dichiarandolo, mai mostra dati a metà.
+- Sintassi: `php -l <file>` se PHP è installato; altrimenti dichiaralo nel report.
 
 ### 6. Verifica prima di dare via libera
 
@@ -77,7 +87,7 @@ Per modifiche di layout con markup custom nei contenuti applica la verifica visi
 ❌ BLOCCANTI (rompe build/Aruba/GitHub Pages, sicurezza, accessibilità da tastiera, doppio escape)
 ⚠️ DA SISTEMARE (stati UI, idempotenza, CSP, convenzioni del repo)
 💡 MIGLIORIE
-✅ Verifiche eseguite: build, jsonld, ancore, node --check, py_compile, menu-sync
+✅ Verifiche eseguite: build, jsonld, ancore, node --check, py_compile, php -l (se toccati i ponti), menu-sync
 ```
 
 Cita `file:riga` e proponi la patch. Quando è tutto a posto: **«Codice conforme; nessuna modifica necessaria»**.

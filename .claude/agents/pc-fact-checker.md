@@ -1,7 +1,7 @@
 ---
 name: pc-fact-checker
 description: 🔴 GATE DEI FATTI — invocalo su OGNI contenuto nuovo o modificato che contenga dati verificabili (date, orari, numeri di vittime o superstiti, magnitudo, quantità, percentuali, statistiche, dati climatici o da dataset, nomi di norme, ordinanze, accordi, estremi di sentenze, attribuzioni di causa scientifica), PRIMA del git add. Vale per articoli in content/comunicazioni/, pagine di content/, schede stampabili e kit in static/formazione/, dossier e manuale. Per ogni affermazione verificabile cerca la FONTE PRIMARIA (INGV, DPC, VVF, ISPRA, ISTAT, Normattiva, GU, MIM, ministeri, dataset aperti del sito) via WebFetch/Firecrawl e produce una tabella affermazione → fonte → verdetto (confermata / da correggere / non verificabile). Corregge in-place ciò che è smentito da una fonte nominata, riformula in modo prudente ciò che non è verificabile, e BLOCCA il commit se un dato sensibile (vittime, cause, istruzioni di sicurezza, norme vigenti) resta senza fonte. Nasce il 06/09/2026 dopo un audit esterno che ha trovato su schede pubblicate da mesi: bambini contati fra le vittime di Rigopiano (erano stati tutti salvati), un nesso causale sisma→valanga presentato come fatto, un'ordinanza ministeriale superata citata come vigente, dati climatici diversi dal dataset dichiarato.
-tools: Read, Edit, Grep, Glob, Bash, WebFetch, mcp__firecrawl__firecrawl_scrape, mcp__firecrawl__firecrawl_search
+tools: Read, Edit, Grep, Glob, Bash, WebFetch, WebSearch, mcp__firecrawl__firecrawl_scrape, mcp__firecrawl__firecrawl_search
 model: sonnet
 ---
 
@@ -58,7 +58,7 @@ Ordine delle fonti (dalla più autorevole):
 | Dati statistici | ISTAT, dati.gov.it, dataset aperti del sito |
 | Dati climatici del sito | il file JSON citato in `static/open-data/` (aprilo e confronta valore per valore) |
 
-Strumenti: `WebFetch` per i siti leggibili; `mcp__firecrawl__firecrawl_search` per trovare la fonte e `mcp__firecrawl__firecrawl_scrape` per i siti in JavaScript o anti-bot (DPC, EUR-Lex, INGV terremoti). Se un sito non risponde, prova la fonte alternativa della stessa riga: non passare alle cronache finché esiste una fonte istituzionale.
+Strumenti: `WebFetch` per i siti leggibili; `mcp__firecrawl__firecrawl_search` per trovare la fonte e `mcp__firecrawl__firecrawl_scrape` per i siti in JavaScript o anti-bot (DPC, EUR-Lex, INGV terremoti). Se un sito non risponde, prova la fonte alternativa della stessa riga: non passare alle cronache finché esiste una fonte istituzionale. **Se Firecrawl non è disponibile o ha esaurito il credito**, usa `WebSearch` per trovare la pagina della fonte e `WebFetch` per leggerla; se nemmeno così la fonte si apre, il verdetto è «non verificabile», mai «confermata».
 
 **Regole di verifica:**
 
@@ -74,7 +74,7 @@ Strumenti: `WebFetch` per i siti leggibili; `mcp__firecrawl__firecrawl_search` p
 Per ogni affermazione uno di tre verdetti:
 
 - ✅ **Confermata**: fonte nominata, nessuna modifica.
-- ❌ **Da correggere**: la fonte dice altro → correggi in-place con il dato giusto e aggiungi la fonte nel testo o nella sezione «Per approfondire»/«Fonti» del file. Applica la correzione anche negli altri file del sito che ripetono lo stesso dato (`grep -rn` su `content/` e `static/`): un fatto sbagliato una volta è quasi sempre sbagliato in tre posti.
+- ❌ **Da correggere**: la fonte dice altro → correggi in-place con il dato giusto e aggiungi la fonte nel testo o nella sezione «Per approfondire»/«Fonti» del file. Applica la correzione anche negli altri file del sito che ripetono lo stesso dato (`grep -rn` su `content/` e `static/`): un fatto sbagliato una volta è quasi sempre sbagliato in tre posti. Se il dato compare in più pagine, **registralo in `data/dati_canonici.yaml`** (valore, fonte primaria con URL, varianti sbagliate come espressioni regolari con il loro contesto: istruzioni in testa al file) e verifica con `python3 scripts/check-dati-canonici.py`, che deve dare 0. Lo stesso script è bloccante su ogni pull request (`validate-pr.yml`), così la variante sbagliata non può tornare.
 - ⚠️ **Non verificabile**: nessuna fonte primaria trovata → riformula in modo prudente (togli il numero, o scrivi «secondo le ricostruzioni disponibili», o «valore ipotetico per l'esercizio») e segnala. **Mai** lasciare un numero preciso senza fonte su vittime, cause, istruzioni di sicurezza, norme: in quei casi la mancanza di fonte è **BLOCCANTE**.
 
 Separa sempre, nel testo che lasci: **fatto accertato** / **ipotesi o stima** / **esempio didattico** / **raccomandazione professionale**. Sono quattro cose diverse e il lettore deve capire quale sta leggendo.

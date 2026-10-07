@@ -35,7 +35,7 @@ Regole: ogni job ha `timeout-minutes`; le action di terzi che toccano segreti so
 - Contenuti (push su main) → immediato, preempta gli sfondi.
 - Sfondi (meteo, ECMWF, clima, video, stato, QR, pacchetti, dati sala) → **solo commit**, deploy coalescato.
 - **Un merge per volta**: mai un secondo merge mentre `deploy.yml` sta caricando su FTP.
-- **Vietato** cambiare lo `state-name` FTP o usare `dangerous-clean-slate` (rule 05): rimedio solo con cache-bust mirato.
+- **File rimasti vecchi su Aruba** (rule 05 § "File stantii su Aruba"): la build si identifica da `/build-info.js` (`SITE_BUILD_SHA`) e `/build-manifest.json`; il controllo e la riparazione li fa `scripts/verifica-deploy-aruba.py` (lanciato anche da `deploy.yml` dopo l'FTP e da `verifica-deploy-aruba.yml`). Rimedio: rilanciare il deploy, oppure `--ripara` da una sessione con le credenziali FTP. **Vietato** cambiare lo `state-name` FTP (re-upload integrale che non completa mai e congela il sito, 03/07/2026) o usare `dangerous-clean-slate` (distruggerebbe `/documenti/`). Il «cache-bust» a mano su un `_index.md` è solo l'ultima risorsa.
 
 Ogni nuovo workflow deve dichiarare in quale classe ricade e comportarsi di conseguenza.
 

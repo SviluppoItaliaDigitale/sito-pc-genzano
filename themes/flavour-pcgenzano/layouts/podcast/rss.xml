@@ -62,7 +62,17 @@
       {{- with .Params.image }}
       <itunes:image href="{{ . | absURL }}" />
       {{- end }}
-      <enclosure url="{{ .Params.audio }}" length="{{ .Params.audio_bytes | default 0 }}" type="audio/mpeg" />
+      {{- /* Enclosure: URL assoluto (le app di podcast non risolvono i
+             percorsi relativi), tipo dal suffisso del file (gli episodi
+             sono M4A, non MP3) e peso reale letto dal file in static/. */ -}}
+      {{- with .Params.audio }}
+      {{- $file := printf "static/%s" (strings.TrimPrefix "/" .) -}}
+      {{- $bytes := 0 -}}
+      {{- if fileExists $file }}{{ $bytes = (os.Stat $file).Size }}{{ end -}}
+      {{- $tipo := "audio/mpeg" -}}
+      {{- if strings.HasSuffix . ".m4a" }}{{ $tipo = "audio/mp4" }}{{ end }}
+      <enclosure url="{{ strings.TrimPrefix "/" . | absURL }}" length="{{ $bytes }}" type="{{ $tipo }}" />
+      {{- end }}
     </item>
     {{- end }}
   </channel>

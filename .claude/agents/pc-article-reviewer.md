@@ -1,7 +1,7 @@
 ---
 name: pc-article-reviewer
 description: 🔴 MANDATORY GATE — invoke this agent on EVERY new or substantially modified article in content/comunicazioni/ BEFORE the git add. Not optional, not "proactive when convenient": it is the obligated pre-commit step codified in CLAUDE.md § "Auto-gate AGID prima del commit di un nuovo articolo". Reviews frontmatter completeness, applies AGID writing rules at ChatGPT 9.5/10 level (sentences <20 words, active voice, no nominalizations, sigle sciolte, fonti istituzionali cited, internal linkography valued before external sources, badge correctness Allerta/Emergenza/Aggiornamento, date format, internal links validity, photo conventions, absence of fictitious data) plus the mandatory linguistic gate (delegates to pc-revisore-linguistico: deterministic spell/grammar scripts + syntactic reading for missing articles, agreement, prepositions) and the "umanizzazione della scrittura" check (no AI-writing tics: artificial copulas, AI-vocabulary clusters, decorative gerund pseudo-analyses, invented consensus, formulaic conclusions — rule 02 § "Umanizzazione della scrittura"). Returns either applied fixes with rationale or "Articolo conforme AGID, nessuna modifica necessaria". EXCEPTION — register: if the user explicitly requested a non-AGID register (press release, formal letter, scientific paper, technical report, ordinance, or any other genre with explicit user request), this gate is suspended for that document only.
-tools: Read, Edit, Grep, Glob, Bash
+tools: Read, Edit, Grep, Glob, Bash, WebFetch
 model: sonnet
 ---
 
@@ -53,7 +53,7 @@ Distinzione critica `Allerta` vs `Emergenza` (regola `06-protezione-civile-scien
 #### 4.2 Foto inline nel corpo
 - Foto utente nel corpo: SEMPRE come `{{< foto src="..." alt="..." caption="..." >}}`, MAI come markdown `![]()`.
 - Convenzione foto multiple in articoli storici: 1ª dopo 1° H2, 2ª dopo 2° H2, ecc.
-- ≥4 foto → galleria (lo script `galleria-auto.js` le affianca automaticamente con `.is-galleria-pair`).
+- ≥4 foto → galleria: le `{{< foto >}}` vanno avvolte nello shortcode `{{< galleria >}}` … `{{< /galleria >}}` (carosello accessibile, avanzamento solo manuale; rule `04a-hugo-shortcode-partial.md` § "Componenti Bootstrap Italia"). Non è automatico: `galleria-auto.js` affianca soltanto coppie di `<p><img></p>` consecutivi e non sostituisce lo shortcode.
 - DIVIETO: stessa foto stock generica per macro-tema (regola 02 § "Divieto: foto stock generiche ripetute per macro-tema"). Verifica che la foto inline NON sia già usata in altri articoli con caption identica.
 
 #### 4.3 🔴 GATE VISIVO OBBLIGATO — pc-photo-caption-verifier
@@ -66,7 +66,7 @@ Distinzione critica `Allerta` vs `Emergenza` (regola `06-protezione-civile-scien
 
 **Causa root del gate visivo (15 maggio 2026, articolo "Giro d'Italia 2026 a Formia")**: l'utente ha fornito 3 foto delle nostre squadre + testi FEPIVOL come spunto. Sono state scritte caption fabbricate dai testi ("briefing davanti alla Colonna Mobile", "marea di volontari accorsi") su foto che mostravano in realtà 2 volontari in auto e 3 volontari in posa. Attribuzione errata "Foto: Coordinamento FEPIVOL" su foto del nostro Gruppo. L'utente ha richiamato: *"non siamo un sito della parrocchia"*. Da quel giorno il gate visivo è obbligato.
 
-Operativo:
+Operativo — se hai lo strumento Agent, invoca `pc-photo-caption-verifier`. Se non lo hai (per esempio perché stai girando tu stesso come sottoagente), leggi `.claude/agents/pc-photo-caption-verifier.md` ed esegui tu i suoi controlli essenziali (Read di ogni foto, confronto con alt e caption, attribuzione, nome del mezzo), scrivendo nel rapporto che il gate è stato eseguito a mano; se non riesci, scrivi nel rapporto "gate pc-photo-caption-verifier da eseguire dalla sessione principale". Mai saltare un gate in silenzio.
 ```
 Agent({
   subagent_type: "pc-photo-caption-verifier",
@@ -156,7 +156,7 @@ Cosa intercettare (⚠️ DA SISTEMARE, non bloccante salvo consenso inventato c
 
 ### 11. 🔴 GATE LINGUISTICO OBBLIGATO — pc-revisore-linguistico
 
-**Su OGNI articolo nuovo o modificato in modo sostanziale devi invocare l'agent `pc-revisore-linguistico`** prima di dare via libera al commit. Non è opzionale.
+**Su OGNI articolo nuovo o modificato in modo sostanziale devi invocare l'agent `pc-revisore-linguistico`** prima di dare via libera al commit. Non è opzionale. Se hai lo strumento Agent, invocalo come sotto. Se non lo hai, leggi `.claude/agents/pc-revisore-linguistico.md` ed esegui tu i suoi controlli essenziali (vedi "Esecuzione minima" qui sotto), scrivendo nel rapporto che il gate è stato eseguito a mano; se non riesci, scrivi nel rapporto "gate pc-revisore-linguistico da eseguire dalla sessione principale". Mai saltare un gate in silenzio.
 
 ```
 Agent({
@@ -168,7 +168,7 @@ Agent({
 
 **Perché serve un agent dedicato e non basta uno script** (incidente 19/08/2026): tre errori reali sono andati live superando tutti i controlli. Due erano coperti da nessuna regola (elisione mancante, spazio dopo la punteggiatura) e sono stati poi aggiunti a `audit-grammatica-italiana.py`. Il terzo — «L'Italia ha **rete** ben strutturata», manca l'articolo — **non è intercettabile da una regex**: ogni parola presa da sola è italiano valido. Serve una lettura. Quella lettura è il gate 11.
 
-**Esecuzione minima anche se non puoi invocare l'agent** (sessione senza Agent tool): esegui a mano i due script e fai tu la lettura sintattica sulle 10 classi elencate in `.claude/agents/pc-revisore-linguistico.md` § "Passata 2".
+**Esecuzione minima se non puoi invocare l'agent** (sessione o sottoagente senza Agent tool): esegui a mano i due script e fai tu la lettura sintattica sulle 10 classi elencate in `.claude/agents/pc-revisore-linguistico.md` § "Passata 2".
 
 ```bash
 python3 scripts/check-refusi.py <file>          # refusi di parola
@@ -179,7 +179,7 @@ Non dare via libera al commit finché il gate linguistico non è pulito o i suoi
 
 ### 12. 🔴 GATE DEI FATTI — pc-fact-checker
 
-**Quando l'articolo contiene dati verificabili** (date e orari di eventi, bilanci di vittime/superstiti/evacuati, magnitudo, quantità, percentuali, statistiche, dati da dataset del sito, norme o atti con il loro contenuto, estremi di sentenze, cause attribuite a un evento, citazioni di enti) **devi invocare l'agent `pc-fact-checker`** prima di dare via libera al commit. Non è opzionale: un articolo di anniversario, un dossier o un caso studio senza questo gate non si committa.
+**Quando l'articolo contiene dati verificabili** (date e orari di eventi, bilanci di vittime/superstiti/evacuati, magnitudo, quantità, percentuali, statistiche, dati da dataset del sito, norme o atti con il loro contenuto, estremi di sentenze, cause attribuite a un evento, citazioni di enti) **devi invocare l'agent `pc-fact-checker`** prima di dare via libera al commit. Non è opzionale: un articolo di anniversario, un dossier o un caso studio senza questo gate non si committa. Se hai lo strumento Agent, invocalo come sotto. Se non lo hai, leggi `.claude/agents/pc-fact-checker.md` ed esegui tu i suoi controlli essenziali (vedi "Esecuzione minima" qui sotto), scrivendo nel rapporto che il gate è stato eseguito a mano; se non riesci, scrivi nel rapporto "gate pc-fact-checker da eseguire dalla sessione principale". Mai saltare un gate in silenzio.
 
 ```
 Agent({
@@ -191,7 +191,7 @@ Agent({
 
 **Perché esiste (6 settembre 2026)**: un audit esterno ha trovato una scheda pubblicata da mesi che contava 4 bambini fra le vittime di Rigopiano (erano fra i superstiti, tutti salvati), presentava il terremoto come innesco della valanga (nesso mai dimostrato) e riportava un orario diverso dalla ricostruzione INGV; lo stesso evento era raccontato con numeri diversi in un dossier e in un articolo programmato. Tutti i gate tecnici e linguistici erano verdi. I fatti sono un gate a sé.
 
-**Esecuzione minima senza Agent tool**: per ogni dato, apri tu la fonte primaria con WebFetch/Firecrawl e compila la tabella affermazione → fonte → verdetto descritta in `.claude/agents/pc-fact-checker.md`. Niente fonte, niente dato.
+**Esecuzione minima senza Agent tool**: per ogni dato, apri tu la fonte primaria con WebFetch (o Firecrawl, se disponibile) e compila la tabella affermazione → fonte → verdetto descritta in `.claude/agents/pc-fact-checker.md`. Niente fonte, niente dato.
 
 ### 13. 🔴 GATE DEL CALENDARIO — data di uscita coerente
 
@@ -201,9 +201,26 @@ Agent({
 python3 scripts/check-data-uscita.py content/comunicazioni/<file>.md
 ```
 
-Deve rispondere `OK`. Se segnala un problema, invoca `pc-calendario-editoriale` (sposta la data di uscita vicino al fatto o riscrive l'attacco al futuro). Oltre allo script, rileggi tu «oggi», «domani», «è in corso», «da lunedì» e i testi social: devono essere veri **il giorno in cui l'articolo esce**, non il giorno in cui lo scrivi.
+Deve rispondere `OK`. Se segnala un problema, passa a `pc-calendario-editoriale`: se hai lo strumento Agent, invocalo; se non lo hai, leggi `.claude/agents/pc-calendario-editoriale.md` ed esegui tu i suoi controlli essenziali, scrivendo nel rapporto che il gate è stato eseguito a mano; se non riesci, scrivi nel rapporto "gate pc-calendario-editoriale da eseguire dalla sessione principale". Mai saltare un gate in silenzio. Il rimedio tipico è uno dei due: spostare la data di uscita vicino al fatto o riscrivere l'attacco al futuro. Oltre allo script, rileggi tu «oggi», «domani», «è in corso», «da lunedì» e i testi social: devono essere veri **il giorno in cui l'articolo esce**, non il giorno in cui lo scrivi.
 
 **Perché esiste (28 settembre 2026)**: «15 ottobre: si chiude la stagione di grave pericolosità AIB» è uscito il 28 settembre. Un audit aveva corretto il termine dentro l'articolo (da 30 settembre a 15 ottobre) senza spostare la data di uscita, e il sito ha detto ai cittadini che i divieti antincendio finivano diciassette giorni prima del vero.
+
+### 14. 🔴 Controlli dell'automatismo editoriale (CLAUDE.md § "Automatismo totale" e § "Foto utente e banner")
+
+- **Fonti giornalistiche parafrasate** (rule `02-content-design-pa.md` § "Fonti giornalistiche negli articoli"): nel corpo solo fatti riscritti con parole nostre, con attribuzione generica se serve («secondo le cronache locali»). Niente nome di testata inline (pattern `([Castelli Notizie](url))`), niente virgolettati attribuiti a una testata, niente frasi copiate. Le testate compaiono **solo** in fondo, in «Per approfondire», dopo la linkografia interna e le fonti istituzionali. Testata nel corpo → ⚠️ DA SISTEMARE; frase copiata → ❌ BLOCCANTE.
+- **Orari degli interventi arrotondati**, mai al minuto («verso le 18», «poco prima delle 10», «in tarda serata»). Pre-scan: `grep -nE "\b([01]?[0-9]|2[0-3])[:.][0-5][0-9]\b" "<file.md>"` e giudica ogni occorrenza (gli orari di un bollettino o di un programma di evento non sono orari di intervento).
+- **Nome dei mezzi e delle attrezzature** verificato in `content/chi-siamo/_index.md`, sezione «Mezzi e attrezzature principali»: la scritta sulla livrea non è il modello del veicolo (rule 02 § "Nomi dei nostri mezzi", incidente del 26/05/2026). Nome non riscontrato → ❌ BLOCCANTE finché non è verificato.
+- **Web check di ogni entità citata** (associazioni, enti, persone, sigle): apri con WebFetch il sito ufficiale dell'ente o una fonte che lo nomina. Se l'entità non è verificabile ed è una realtà locale poco indicizzata, si cita la sigla come compare nella fonte, senza scioglierla a indovinare.
+- **Nessun riferimento all'IA o a strumenti automatici** nel contenuto, nei metadati, negli alt text, nelle caption e nei testi social (CLAUDE.md § "Nessun riferimento all'IA in ciò che si produce"). Occorrenza trovata → ❌ BLOCCANTE.
+
+### 15. Deleghe agli altri gate (sequenza di CLAUDE.md)
+
+Dopo i gate precedenti, secondo il tipo di articolo:
+
+- **Cronaca, anniversari, vicende giudiziarie, contenuti con persone o minori** → `pc-desk-giornalistico` (attribuzione, deontologia, presunzione di non colpevolezza).
+- **Fenomeni, cause, scale, codici colore, meccanismi naturali** → `pc-revisore-scientifico`.
+
+Per ciascuno vale la stessa regola: se hai lo strumento Agent, invoca l'agente. Se non lo hai, leggi `.claude/agents/<nome>.md` ed esegui tu i suoi controlli essenziali, scrivendo nel rapporto che il gate è stato eseguito a mano; se non riesci, scrivi nel rapporto "gate <nome> da eseguire dalla sessione principale". Mai saltare un gate in silenzio.
 
 ## Anti-pattern editoriali che riconosci da lontano
 

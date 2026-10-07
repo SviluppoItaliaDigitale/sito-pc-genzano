@@ -67,7 +67,7 @@
     </div>
   </noscript>
 
-  <p class="small text-muted mt-2 mb-0">Mappa: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a> — libreria <a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer">Leaflet</a> 1.9.4 self-hosted. Dati DAE conformi ai criteri <a href="https://www.ircouncil.it/" target="_blank" rel="noopener noreferrer">IRC</a> (L. 116/2021). Idranti coordinati con Comando VVF Roma.</p>
+  <p class="small text-muted mt-2 mb-0">Mappa: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© OpenStreetMap contributors</a> — libreria <a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer">Leaflet</a> 1.9.4 self-hosted. Ogni punto è pubblicato solo dopo la verifica con l'ente responsabile: ASL Roma 6 e 118 per i DAE (L. 116/2021), Vigili del Fuoco e gestore della rete idrica per gli idranti.</p>
 
   {{ if not (.Page.Store.Get "leafletJs") }}{{ .Page.Store.Set "leafletJs" true }}<script src="{{ $leafletJS }}" crossorigin=""></script>{{ end }}
   <script id="dati-territorio" type="application/json">{{ dict "idranti" $idranti "dae" $dae | jsonify | safeJS }}</script>

@@ -247,3 +247,23 @@ dati:
         stessa_frase: true
         salvo_se_frase: 'chimic|attendi|aspetta|riavvicin|dura|minuti di cammino|occhi'
         salvo_se_prima: '(?:primi|non tocco)\s*$'
+
+  - id: volontari-limiti-art-39
+    dato: "Giorni di impiego dei volontari con i benefici dell'art. 39 del Codice di protezione civile"
+    valore: "soccorso e assistenza: 30 giorni continuativi e 90 l'anno; emergenze di rilievo nazionale, su autorizzazione del Dipartimento della protezione civile e per i casi di effettiva necessità singolarmente individuati: fino a 60 continuativi e 180 l'anno; pianificazione, esercitazioni, formazione e diffusione della cultura di protezione civile: 10 continuativi e 30 l'anno"
+    fonti:
+      - nome: "D.Lgs. 2 gennaio 2018, n. 1, art. 39, commi 1-3 (testo vigente su Normattiva, verificato il 07/10/2026; condizioni dell'elevazione al comma 2)"
+        url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1~art39"
+    vietati:
+      - regex: 'tetto\s+(?:annuale\s+complessivo\s+)?(?:è\s+)?di\s+\**180\s+giorni'
+        perche: "180 giorni l'anno è il limite elevato per le emergenze di rilievo nazionale, non un tetto generale: nel soccorso ordinario il limite è 90 giorni l'anno."
+        contesto: 'volontari|volontariato|datore di lavoro|art\. 39'
+        finestra: 300
+      - regex: 'ulteriori\s+\**10\s+giorni'
+        perche: "Per pianificazione, esercitazioni e formazione il limite è di 10 giorni continuativi e 30 l'anno, non «ulteriori 10 giorni»."
+        contesto: 'formazione|esercitazion'
+        finestra: 200
+      - regex: '90\s+giorni\s+annui\s+nelle\s+attività\s+ordinarie'
+        perche: "30 e 90 giorni valgono per il soccorso e l'assistenza, non per le «attività ordinarie»."
+        contesto: 'volontari|giorni consecutivi'
+        finestra: 200

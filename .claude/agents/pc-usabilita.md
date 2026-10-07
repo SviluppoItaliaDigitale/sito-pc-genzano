@@ -31,17 +31,18 @@ Per ciascun profilo, conta i passi dalla home (desktop e mobile 375 px) e annota
 | Giornalista / ente | chi siamo; contatti; comunicati; open data; trasparenza | ≤2 click |
 | Straniero | pagina nella sua lingua; 112 | selettore lingua visibile, ≤2 click |
 
-Strumenti: lettura di `hugo.toml [[menus.main]]`, `data/quick_links.yaml`, partial della home, `content/mappa-sito/`, `layouts/assistente/list.html`; build locale e navigazione con Playwright quando serve vedere davvero (delega a `pc-verifica-visiva` per gli screenshot).
+Strumenti: lettura di `hugo.toml [[menus.main]]`, `data/quick_links.yaml`, partial della home, `content/mappa-sito/`, `layouts/assistente/list.html`; build locale e navigazione con Playwright quando serve vedere davvero. Per gli screenshot serve `pc-verifica-visiva`: se hai lo strumento Agent, invoca `pc-verifica-visiva`; se non lo hai, leggi `.claude/agents/pc-verifica-visiva.md` ed esegui tu i suoi controlli essenziali, scrivendo nel rapporto che il gate è stato eseguito a mano; se non riesci, scrivi nel rapporto «gate pc-verifica-visiva da eseguire dalla sessione principale». Mai saltare un gate in silenzio.
 
 ### 2. Architettura dell'informazione
 
 - Menu: 8 voci di primo livello (limite accettato), dropdown entro 7±2, pesi senza pareggi, `hugo.toml` come fonte unica e `python3 scripts/genera-chrome-menu.py` per `site-chrome.js` (rule 04b).
 - Etichette **coerenti** fra menu, breadcrumb, H1, title, card e mappa del sito (WCAG 3.2.4): la stessa pagina ha lo stesso nome ovunque.
+- **Assistente e mappa del sito coprono la navigazione** (dal 06/10/2026): `python3 scripts/check-navigazione.py --public public` dopo la build verifica che ogni voce del menu e del piè di pagina abbia la sua risposta nell'assistente virtuale e la sua voce nella mappa del sito, che l'albero dell'assistente sia integro e che ogni loro collegamento porti a una pagina o a un'ancora esistente. È **bloccante** in `validate-pr.yml`: una voce nuova di menu o di piè di pagina si aggiunge nella stessa PR anche a `themes/flavour-pcgenzano/layouts/assistente/list.html` e a `content/mappa-sito/_index.md` (rule 04b).
 - Ogni pagina è raggiungibile da almeno un punto di navigazione (menu, hub, card, mappa) oltre alla ricerca: nessuna **pagina orfana** (`grep -rL` dei permalink nei contenuti e nei data file).
 - Niente **vicoli ciechi**: ogni pagina ha «torna a», correlati o «vedi anche»; i link «Contenuto non ancora disponibile» sono ammessi solo per articoli calendarizzati.
 - Hub e cataloghi: ordinati per compito dell'utente, non per cronologia del repo; filtri con stato iniziale chiaro; niente conteggi inventario.
 - Doppioni: la stessa informazione in due pagine deve avere una pagina canonica e l'altra che rimanda (con `pc-coerenza-trasversale`).
-- **Indirizzi scritti a intuito** (dal 07/10/2026): prova sul sito vero gli indirizzi che un cittadino scriverebbe senza passare dal menu, cioè il nome di ogni voce di primo livello e i sinonimi più ovvi (`/volontariato/`, `/meteo/`, `/allerta/`, `/emergenze/`, `/contatto/`). Ognuno deve rispondere 200 o portare con un 301 alla pagina giusta (`RedirectMatch` in `.htaccess`, rule 05), poi va aggiunto alla lista di `scripts/smoke-test-live.sh` § 4-bis. Nasce da un audit esterno che ha trovato `/volontariato/` in 404: i controlli del sito provavano solo gli indirizzi linkati, non quelli che la gente scrive.
+- **Indirizzi scritti a intuito** (`/volontariato/`, `/meteo/`, `/allerta/`…): il responsabile unico di questo controllo è `pc-visitatore-reale`, che li prova sul sito vero. Se una tua modifica aggiunge o rinomina una voce di primo livello, segnalalo nel rapporto perché il nuovo nome venga provato lì.
 
 ### 3. Mobile e stress
 
@@ -73,7 +74,7 @@ Applica rule 07: **raccomanda e procedi**. Per ogni modifica strutturale scrivi 
 | Profilo | Obiettivo | Passi (desktop/mobile) | Ostacoli | Azione |
 |---|---|---|---|---|
 
-Architettura: orfane N · vicoli ciechi N · etichette incoerenti N · menu entro Miller ✅/❌
+Architettura: orfane N · vicoli ciechi N · etichette incoerenti N · menu entro Miller ✅/❌ · check-navigazione ✅/❌
 Raccomandazione e motivazione: …
 ```
 

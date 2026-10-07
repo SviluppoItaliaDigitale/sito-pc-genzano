@@ -130,10 +130,11 @@ L'**articolo 39 del D.Lgs. 1/2018** stabilisce che i volontari appartenenti a Or
 
 Il datore di lavoro potrà successivamente chiedere il **rimborso al Dipartimento della Protezione Civile o alla Regione** per i giorni in cui il volontario è stato assente dal servizio per impiego di protezione civile.
 
-Il beneficio non è illimitato: il Codice fissa un **tetto di 180 giorni all'anno**, di cui:
+Il beneficio non è illimitato. L'articolo 39 del Codice fissa questi limiti:
 
-- massimo **60 giorni continuativi** per emergenze nazionali e missioni all'estero
-- ulteriori **10 giorni** per corsi di formazione regionali ed esercitazioni particolari
+- nel **soccorso e nell'assistenza**, fino a **30 giorni continuativi** e **90 giorni l'anno**;
+- nelle **emergenze di rilievo nazionale**, limiti elevabili fino a **60 giorni continuativi** e **180 giorni l'anno**, su autorizzazione del Dipartimento della protezione civile e per i casi di effettiva necessità;
+- nella **pianificazione, nelle esercitazioni e nella formazione**, fino a **10 giorni continuativi** e **30 giorni l'anno**.
 
 Questo quadro normativo è ciò che consente al volontariato italiano di operare in modo sostenibile. Il volontario sa che, quando viene attivato, non perde né il lavoro né lo stipendio. Il datore di lavoro sa di avere un meccanismo di rimborso previsto per legge.
 

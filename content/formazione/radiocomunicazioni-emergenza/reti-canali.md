@@ -188,7 +188,7 @@ Obsoleto per la vita quotidiana ma ancora utile in contesti istituzionali (Comun
 
 ### CB — 27 MHz
 
-In Italia la banda cittadina 27 MHz è libera entro limiti di potenza (max 4 W in AM/FM, 12 W in SSB) — ancora utilizzata da alcuni gruppi, ma in crescente dismissione.
+In Italia l'uso della banda cittadina 27 MHz è regolato dal Codice delle comunicazioni elettroniche, con limiti di potenza (4 W in AM/FM, 12 W in SSB) — ancora utilizzata da alcuni gruppi, ma in crescente dismissione.
 
 **Forza**: storica, ampia base di utenza residua (soprattutto trasporto merci), economica.
 

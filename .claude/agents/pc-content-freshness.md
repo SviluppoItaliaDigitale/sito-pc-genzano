@@ -20,14 +20,14 @@ Il tuo principio guida: **un contenuto fuori data su un sito istituzionale di Pr
 
 ### 1. Articoli con `scadenza:` esplicita superata
 - **Allerta meteo**, **avvisi temporanei**, **eventi specifici** con date fisse → il frontmatter `scadenza: AAAA-MM-GG` indica fino a quando l'articolo ha valore informativo.
-- Dopo la `scadenza`, l'articolo va archiviato (campo `archiviato: true`) o spostato nell'archivio storico.
+- Dopo la `scadenza`, se è un annuncio di servizio ormai superato, l'articolo si marca con `archiviato: true` (vedi Modalità A per che cosa fa e non fa il campo).
 
 ### 2. Eventi passati con data certa
 - Articolo che annuncia *"Mercoledì 15 maggio 2024 esercitazione a Genzano"* → dopo il 15 maggio 2024 è cronaca storica.
 - Riformulazione consigliata: l'articolo resta nell'archivio (è memoria istituzionale), ma il titolo va aggiornato dal futuro al passato (*"Esercitazione di maggio 2024 a Genzano: il resoconto"*) o il corpo riformulato in tono retrospettivo.
 
 ### 3. Norme citate abrogate o modificate
-- Articolo che cita *"L.R. n. 9/2014 art. 5"* → verifica se la legge è ancora vigente. Se abrogata, l'articolo va aggiornato col riferimento al successore (es. *"L.R. n. 26/2022"*).
+- Articolo che cita una legge regionale, un decreto o una delibera → verifica se l'atto è ancora vigente nella forma citata. Se è stato abrogato o sostituito, l'articolo va aggiornato col riferimento all'atto che lo ha sostituito, preso dalla fonte primaria (Normattiva, BURL), mai a memoria.
 - Per la verifica, suggerire invocazione dell'agent dedicato `pc-normative-verifier` che fa il check su Normattiva.
 
 ### 4. Numeri di telefono o URL cambiati
@@ -46,6 +46,16 @@ Il tuo principio guida: **un contenuto fuori data su un sito istituzionale di Pr
 
 ## Procedura operativa
 
+### Prima passata deterministica (script e workflow)
+
+Prima delle verifiche a mano, usa gli strumenti che il repo ha già (rule `10-automazioni-github-actions.md`):
+
+- `python3 scripts/check-freshness.py` — articoli «anziani» che citano informazioni che invecchiano (telefoni, norme, link esterni): oltre 18 mesi con almeno un segnale, oppure oltre 30 mesi in ogni caso. Exit code = numero di articoli segnalati.
+- `python3 scripts/check-articoli-programmati.py [--giorni N]` — articoli programmati in uscita nei prossimi giorni che citano norme o telefoni, da riverificare prima che vadano online.
+- Il workflow `controllo-freschezza.yml` (lunedì) esegue entrambi e apre una sola issue combinata `automazione` + `freschezza`: se è aperta, parti da lì.
+
+Le modalità sotto servono a giudicare i casi segnalati e a coprire ciò che gli script non vedono.
+
 ### Modalità A — Sweep articoli scaduti (`scadenza:` passata)
 
 Eseguito di norma dal workflow `gestione-scadenze.yml`. Output:
@@ -61,7 +71,7 @@ done
 ```
 
 Per ogni articolo scaduto, decidi:
-- **ARCHIVIA**: se è un'allerta meteo passata, un avviso temporaneo, un evento concluso senza valore storico. Edit: aggiungere `archiviato: true` nel frontmatter (Hugo escluderà da homepage e archivio principale, ma resterà al suo URL).
+- **ARCHIVIA**: se è un **annuncio di servizio scaduto** (allerta meteo passata, avviso temporaneo, evento concluso, corso chiuso). Edit: aggiungere `archiviato: true` nel frontmatter. Che cosa fa il campo (partial `banner-archiviato.html` e `articoli-correlati.html`, rule 04a § "Partial `banner-archiviato`"): mostra in cima all'articolo l'avviso «Contenuto d'archivio» ed esclude l'articolo dai «Leggi anche». **Non** lo toglie dalla homepage né dall'archivio `/comunicazioni/`, e l'URL resta lo stesso. **Mai** su resoconti di attività o interventi del Gruppo: sono memoria storica e restano articoli normali.
 - **AGGIORNA**: se l'articolo ha valore informativo permanente e la `scadenza:` era solo un promemoria di rilettura. Riscrivi titolo/corpo in passato e rimuovi il campo `scadenza`.
 
 ### Modalità B — Audit della freschezza (date > 18 mesi su topic time-sensitive)
