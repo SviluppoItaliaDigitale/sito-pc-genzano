@@ -1,0 +1,37 @@
+name: "Rigenera pacchetti revisione didattica"
+
+on:
+  push:
+    branches:
+      - chatgpt/revisione-disegni-didattica-20261007
+    paths-ignore:
+      - 'static/formazione/schede-stampabili/pacchetti/**'
+
+permissions:
+  contents: write
+
+jobs:
+  rigenera:
+    if: "!contains(github.event.head_commit.message, '[skip-rigenera-revisione]')"
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          ref: chatgpt/revisione-disegni-didattica-20261007
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Genera Stampa tutto
+        run: python3 scripts/genera-pacchetti-schede.py
+      - name: Commit pacchetti
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add static/formazione/schede-stampabili/pacchetti/*.html
+          if git diff --staged --quiet; then
+            echo "Pacchetti già allineati."
+          else
+            git commit -m "Didattica: rigenera pacchetti Stampa tutto [skip-rigenera-revisione]"
+            git push origin HEAD:chatgpt/revisione-disegni-didattica-20261007
+          fi
