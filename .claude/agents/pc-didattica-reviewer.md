@@ -61,7 +61,7 @@ Pagina singola, stampa singola, «Stampa tutto» e ZIP devono avere lo stesso te
 
 La stampa si controlla stampando, non leggendo il codice (rule 09 § 15-ter):
 
-- `python3 scripts/check-fogli-stampa.py --da-git origin/main` dopo la build in `public/` (`hugo --quiet --minify`): stampa con Chromium in A4 le pagine toccate e blocca il foglio bianco e l'ultimo foglio quasi vuoto. Se scatta su una scheda, la correzione è la scala di stampa della sola scheda, al massimo del 12%.
+- `python3 scripts/check-fogli-stampa.py --da-git origin/main` dopo la build in `public/` (`hugo --quiet --minify`): stampa con Chromium in A4 le pagine toccate e blocca il foglio bianco e l'foglio quasi vuoto in qualunque posizione. Se scatta su una scheda, la correzione è la scala di stampa della sola scheda, al massimo del 12%.
 - `python3 scripts/check-fascicolo-esperimenti.py` se tocchi gli esperimenti: un foglio per esperimento, nessuna scritta tagliata o sovrapposta, ogni figura con la sua descrizione.
 - `python3 scripts/genera-materiali-lezione.py --check` se cambia l'indice delle schede, delle storie, dei giochi o degli esperimenti: il catalogo di «Crea la mia lezione» va rigenerato (senza `--check`), altrimenti `validate-pr.yml` blocca la PR.
 

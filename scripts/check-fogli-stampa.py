@@ -11,8 +11,11 @@ accorgere: si vede solo stampando (rule 09 § 15-ter).
 
 Bloccante (exit 1):
   - un foglio completamente bianco, in qualunque posizione;
-  - nelle schede, nei kit e nelle storie: ultimo foglio quasi vuoto (meno
-    dell'8% dell'altezza con qualcosa stampato), quando i fogli sono più di uno;
+  - nelle schede, nei kit e nelle storie: un foglio quasi vuoto (meno
+    dell'8% dell'altezza con qualcosa stampato), in qualunque posizione,
+    quando i fogli sono più di uno. Fino al 07/10/2026 si guardava solo
+    l'ultimo, e una scheda di tre pagine con la fascia delle affiliazioni da
+    sola sul secondo foglio passava il controllo;
   - un errore JavaScript durante il caricamento della pagina.
 
 Pagine controllate:
@@ -42,7 +45,7 @@ import sys
 import threading
 from pathlib import Path
 
-SOGLIA_ULTIMO = 0.08      # frazione dell'altezza con qualcosa stampato
+SOGLIA_VUOTO = 0.08      # frazione dell'altezza con qualcosa stampato
 PAGINE_SITO = [
     "", "cosa-fare-adesso/", "numeri-utili/", "allerte-meteo/", "piano-familiare/",
     "rischi-prevenzione/rischio-sismico/", "rischi-prevenzione/kit-emergenza/",
@@ -154,9 +157,14 @@ def main() -> int:
             bianchi = [i + 1 for i, r in enumerate(fogli) if r == 0]
             if bianchi:
                 errori.append(f"{rel}: foglio bianco (n. {', '.join(map(str, bianchi))} di {len(fogli)})")
-            elif fam != "sito" and len(fogli) > 1 and fogli[-1] < SOGLIA_ULTIMO:
-                errori.append(f"{rel}: ultimo foglio quasi vuoto ({len(fogli)} fogli, "
-                              f"l'ultimo stampato al {fogli[-1]:.0%})")
+            elif fam != "sito" and len(fogli) > 1:
+                # Ogni foglio, non solo l'ultimo: una pagina che sfora di pochi
+                # millimetri manda la sola fascia delle affiliazioni sul foglio
+                # dopo, e se la scheda ha più pagine quel foglio sta in mezzo.
+                vuoti = [i + 1 for i, r in enumerate(fogli) if r < SOGLIA_VUOTO]
+                if vuoti:
+                    dett = ", ".join(f"n. {i} al {fogli[i - 1]:.0%}" for i in vuoti)
+                    errori.append(f"{rel}: foglio quasi vuoto ({len(fogli)} fogli; {dett})")
             for m in js:
                 errori.append(f"{rel}: errore JavaScript: {m}")
             pagina.close()
@@ -167,7 +175,7 @@ def main() -> int:
     for e in errori:
         print(f"❌ {e}")
     if errori:
-        print(f"\n{len(errori)} problemi. Una scheda che finisce con un foglio quasi vuoto si "
+        print(f"\n{len(errori)} problemi. Un foglio quasi vuoto in una scheda si "
               "corregge riducendo la scala di stampa della sola scheda (vedi le schede già "
               "corrette: commento «controllo fogli di stampa») o stringendo i suoi spazi.")
         return 1
