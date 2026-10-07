@@ -2752,6 +2752,22 @@
   },
   {
    "tipo": "scheda",
+   "titolo": "I Nobel che ci proteggono",
+   "url": "/formazione/schede-stampabili/nobel-che-ci-proteggono-secondaria2/",
+   "fasce": [
+    "secondaria2"
+   ],
+   "minuti": 60,
+   "temi": [
+    "caldo",
+    "casa",
+    "informazione"
+   ],
+   "desc": "Otto premi Nobel da abbinare agli strumenti di oggi (radio, defibrillatore, trasfusioni, kit, clima), fatti, previsioni e opinioni, le scorciatoie della mente davanti al rischio, una motivazione da scrivere con la sua fonte.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
    "titolo": "Economia del Rischio",
    "url": "/formazione/schede-stampabili/economia-rischio-secondaria2/",
    "fasce": [

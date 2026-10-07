@@ -522,7 +522,7 @@ HEAD = """<!DOCTYPE html>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Schede stampabili: Esperimenti di protezione civile (A4)</title>
-  <meta name="description" content="Schede A4 stampabili: {n} esperimenti e attività di protezione civile per la scuola e la famiglia. Un esperimento per foglio. Stampa tutto o solo le pagine che ti servono.">
+  <meta name="description" content="Schede A4 stampabili: esperimenti e attività di protezione civile per la scuola e la famiglia. Un esperimento per foglio. Stampa tutto o solo le pagine che ti servono.">
   <meta name="robots" content="index, follow">
   <!-- URL preferito: la copia su GitHub Pages rimanda alla produzione. -->
   <link rel="canonical" href="https://www.protezionecivilegenzano.it/formazione/schede-stampabili/esperimenti-protezione-civile/">
@@ -662,12 +662,12 @@ HEAD = """<!DOCTYPE html>
 <body>
   <div class="scheda-toolbar no-print">
     <a href="/formazione/schede-stampabili/">&larr; Torna alle schede</a>
-    <span class="scheda-titolo">Esperimenti di protezione civile &mdash; {n} schede A4</span>
+    <span class="scheda-titolo">Esperimenti di protezione civile &mdash; schede A4</span>
     <button type="button" onclick="window.print()">&#128424;&#65039; Stampa o salva come PDF</button>
   </div>
 
   <div class="esp-intro no-print">
-    <h1 class="esp-h1">Esperimenti di protezione civile: {n} schede A4</h1>
+    <h1 class="esp-h1">Esperimenti di protezione civile: le schede da stampare</h1>
     <strong>Un esperimento per foglio.</strong> Puoi stampare tutto il fascicolo oppure, dalla finestra di stampa, scegliere <strong>solo le pagine</strong> che ti servono. Ogni scheda indica età consigliata, materiali, procedura, cosa si impara e le note di sicurezza. Versione completa e interattiva: <a href="/formazione/esperimenti/">Esperimenti e attività di protezione civile</a>.
   </div>
 """

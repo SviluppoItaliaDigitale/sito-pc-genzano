@@ -6,7 +6,7 @@ Per ogni fascia scolastica (infanzia, primaria, secondaria I, secondaria II)
 produce un singolo file HTML che contiene tutte le schede del kit
 corrispondente, concatenate con page-break tra una e l'altra.
 
-L'utente clicca "Stampa tutte le schede di Infanzia (44 fogli A4)" dalla hub
+L'utente clicca "Stampa tutte le schede di Infanzia" dalla hub
 schede-stampabili → si apre il pacchetto con la finestra di stampa già aperta
 (grazie a ?autoprint=1 in querystring).
 
@@ -368,8 +368,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pacchetto stampa: __LABEL__ (__ETA__) — __N__ schede A4</title>
-  <meta name="description" content="Stampa in un click tutte le __N__ schede stampabili della __LABEL__ (__ETA__). Pacchetto auto-aggiornato dal sito istituzionale.">
+  <title>Pacchetto stampa: __LABEL__ (__ETA__) — schede A4</title>
+  <meta name="description" content="Stampa in un click tutte le schede stampabili della __LABEL__ (__ETA__). Pacchetto auto-aggiornato dal sito istituzionale.">
   <meta name="robots" content="noindex,follow">
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
@@ -542,8 +542,8 @@ __STYLES_SCHEDE__
 
   <header class="pacchetto-toolbar no-print" role="banner">
     <a href="/formazione/schede-stampabili/" aria-label="Torna alla hub delle schede stampabili">← Torna alle schede</a>
-    <span class="pacchetto-titolo">Pacchetto stampa: __LABEL__ · __N__ schede A4</span>
-    <button type="button" onclick="window.print()" aria-label="Apri la finestra di stampa per tutte le __N__ schede di __LABEL__">
+    <span class="pacchetto-titolo">Pacchetto stampa: __LABEL__ · schede A4</span>
+    <button type="button" onclick="window.print()" aria-label="Apri la finestra di stampa per tutte le schede di __LABEL__ (__N_PAGINE__ fogli A4)">
       🖨️ Stampa tutto (__N_PAGINE__ fogli A4)
     </button>
   </header>
@@ -551,8 +551,8 @@ __STYLES_SCHEDE__
   <section class="pacchetto-intro no-print" aria-labelledby="pacchetto-intro-h1">
     <h1 id="pacchetto-intro-h1">Pacchetto stampa — __LABEL__</h1>
     <p>
-      Questo pacchetto contiene <strong>__N__ schede stampabili</strong> della __LABEL__ (__ETA__),
-      per un totale di <strong>__N_PAGINE__ fogli A4</strong>.
+      Questo pacchetto contiene tutte le <strong>schede stampabili</strong> della __LABEL__ (__ETA__):
+      in stampa occupa <strong>__N_PAGINE__ fogli A4</strong>.
       Premi <strong>"Stampa tutto"</strong> in alto (oppure <kbd>Ctrl+P</kbd> su Windows/Linux, <kbd>Cmd+P</kbd> su Mac)
       per aprire la finestra di stampa. Per archiviare in digitale scegli <em>"Salva come PDF"</em> come stampante.
     </p>
@@ -569,7 +569,7 @@ __STYLES_SCHEDE__
   </section>
 
   <nav class="pacchetto-toc no-print" aria-label="Indice del pacchetto">
-    <h2>Indice — __N__ schede in questo pacchetto</h2>
+    <h2>Indice delle schede in questo pacchetto</h2>
     <ol>
 __TOC__
     </ol>
