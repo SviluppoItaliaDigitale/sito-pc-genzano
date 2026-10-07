@@ -343,7 +343,7 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 
 ## Agenti specializzati (`.claude/agents/`)
 
-35 agenti custom da usare PROATTIVAMENTE quando la conversazione fa match con la loro `description` (l'utente scrive in italiano naturale, fai tu il match e attiva da solo). I 17 aggiunti il 06/09/2026 (dopo l'audit esterno) formano il **sistema di affidabilità interno** descritto in § "Gate dei fatti e dei materiali scolastici":
+38 agenti custom da usare PROATTIVAMENTE quando la conversazione fa match con la loro `description` (l'utente scrive in italiano naturale, fai tu il match e attiva da solo). I 17 aggiunti il 06/09/2026 (dopo l'audit esterno) formano il **sistema di affidabilità interno** descritto in § "Gate dei fatti e dei materiali scolastici"; i 3 aggiunti il 07/10/2026 (`pc-visitatore-reale`, `pc-collaudo-funzionale`, `pc-prestazioni`) guardano il sito **da fuori**, sul sito pubblicato e con un browser vero, dopo che un audit esterno ha trovato `/volontariato/` in 404 con tutti i controlli interni verdi:
 
 | Agent | Trigger naturali |
 |---|---|
@@ -381,6 +381,9 @@ Le grafiche già aggiornate seguono questo schema: cover articoli, slide social,
 | `pc-usabilita` | menu, hub, percorsi, "l'utente lo trova?" — architettura dell'informazione, Miller, orfane, vicoli ciechi |
 | `pc-documentazione` | dopo ogni modifica strutturale — CLAUDE.md, rules, agenti, manuale, AGENTS.md, CONTESTO allineati ai componenti reali |
 | `pc-calendario-editoriale` | 🔴 gate del calendario: ogni articolo programmato nuovo o modificato, ogni correzione di data in un articolo in coda — la data di uscita deve essere coerente con ciò che annuncia (`scripts/check-data-uscita.py`, bloccante su PR + controllo serale `controllo-data-uscita.yml`) |
+| `pc-visitatore-reale` | "un anziano trova i numeri utili?", "si usa da telefono?" — usa il sito pubblicato come persone diverse senza la mappa: indirizzi scritti a mano, ricerca con le parole della gente, compiti per profilo |
+| `pc-collaudo-funzionale` | "funziona ancora tutto?", "il pulsante non fa niente" — prova sul sito pubblicato ogni strumento interattivo (assistente, giochi, quiz, cruscotto, Sala, Crea la mia lezione, Modalità Aula, salvataggi, ricerca, condivisione, stampa) |
+| `pc-prestazioni` | "il sito è lento?", "in emergenza si apre?" — peso e velocità per tipo di pagina su rete mobile lenta, budget e crescita rispetto alla misura precedente (registro in `riferimenti-interni/prestazioni/`) |
 | `pc-audit-completo` | "fammi l'audit completo", routine mensile — orchestra script e specialisti, rapporto in formato rilievi, correzioni fino a live |
 
 Specifiche + workflow combinati in `manuale/parte-19-agenti-specializzati.md`. Aggiungendo/modificando un agent, aggiorna la Parte 19 e questa tabella.
@@ -420,7 +423,7 @@ Specifiche + workflow combinati in `manuale/parte-19-agenti-specializzati.md`. A
 | Meta-work su skill/agent | `skill-stocktake` · `agent-sort` · `agent-architecture-audit` |
 | Imparare dal lavoro | `continuous-learning-v2` |
 
-**Agent custom + skill in sequenza** quando rilevanti: revisione articolo `pc-article-reviewer` → `pc-calendario-editoriale` (se programmato) → `pc-fact-checker` (se dati) → `pc-desk-giornalistico` (se cronaca) → `pc-revisore-scientifico` (se fenomeni) → `pc-photo-caption-verifier` (se foto) → `accessibility` → `seo-audit`; materiali scolastici `pc-didattica-reviewer` → `pc-fact-checker` → `pc-verifica-visiva`; pre-push `pc-revisore-codice` → `pc-deploy-validator` → `production-audit` → `security-scan`; nuovo script `search-first` → `python-patterns` → `python-testing` → `pc-revisore-automazioni` (se in CI); modifica strutturale → `pc-usabilita` → `pc-documentazione`.
+**Agent custom + skill in sequenza** quando rilevanti: revisione articolo `pc-article-reviewer` → `pc-calendario-editoriale` (se programmato) → `pc-fact-checker` (se dati) → `pc-desk-giornalistico` (se cronaca) → `pc-revisore-scientifico` (se fenomeni) → `pc-photo-caption-verifier` (se foto) → `accessibility` → `seo-audit`; materiali scolastici `pc-didattica-reviewer` → `pc-fact-checker` → `pc-verifica-visiva`; pre-push `pc-revisore-codice` → `pc-deploy-validator` → `production-audit` → `security-scan`; nuovo script `search-first` → `python-patterns` → `python-testing` → `pc-revisore-automazioni` (se in CI); modifica strutturale → `pc-usabilita` → `pc-documentazione`; modifica a uno strumento interattivo o a CSS/JS comuni → `pc-revisore-codice` → `pc-collaudo-funzionale` → `pc-prestazioni`; menu, home o ricerca → `pc-usabilita` → `pc-visitatore-reale`.
 
 ---
 

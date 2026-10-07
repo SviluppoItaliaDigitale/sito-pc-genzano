@@ -43,7 +43,11 @@ Il documento segue le raccomandazioni più recenti dell'Organizzazione Mondiale 
 
 Secondo il testo pubblicato, le risorse sono 50 milioni di euro per il 2025 e 150 per il 2026. Dal 2027 salgono a 300 milioni l'anno: nel quinquennio superano il miliardo di euro.
 
-Ora tocca alle Regioni: entro 90 giorni devono **recepire il Piano con una propria delibera** e un primo cronoprogramma. Seguiremo il percorso di recepimento della Regione Lazio, che si inserisce nella cornice della pianificazione regionale di protezione civile. Ne abbiamo appena parlato: il [Programma regionale di previsione e prevenzione 2026-2028](/comunicazioni/2026-07-29-regione-lazio-programma-protezione-civile-proroga-piano-aib/) tiene conto proprio dell'esperienza della pandemia.
+Ora tocca alle Regioni. Entro 90 giorni dall'accordo, cioè entro il 29 luglio 2026, ognuna deve **recepire il Piano con una propria delibera** e un primo cronoprogramma. Entro nove mesi serve una seconda delibera con le azioni regionali successive. Il recepimento della Regione Lazio si inserisce nella cornice della pianificazione regionale di protezione civile. Ne abbiamo appena parlato: il [Programma regionale di previsione e prevenzione 2026-2028](/comunicazioni/2026-07-29-regione-lazio-programma-protezione-civile-proroga-piano-aib/) tiene conto proprio dell'esperienza della pandemia.
+
+### Aggiornamento del 7 ottobre 2026
+
+Il termine del 29 luglio è passato. Al 7 ottobre non abbiamo trovato la delibera di recepimento della Regione Lazio fra gli atti pubblicati sul Bollettino ufficiale e sul sito della Regione. Quando la delibera regionale sarà pubblicata, la riporteremo in questa pagina con il collegamento all'atto.
 
 ## Cosa c'entra la protezione civile
 

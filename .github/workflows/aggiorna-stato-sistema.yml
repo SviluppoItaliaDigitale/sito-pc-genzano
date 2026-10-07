@@ -221,6 +221,24 @@ jobs:
           fi
 
           # ------------------------------------------------------------
+          # 3-bis) SCADENZA DELLA REGISTRAZIONE DEL DOMINIO (dal 07/10/2026).
+          #    Un dominio non rinnovato spegne sito, CAP e collegamenti dei
+          #    QR stampati. Il certificato si rinnova da sé, il dominio dipende
+          #    da un pagamento: va saputo con due mesi di anticipo.
+          # ------------------------------------------------------------
+          DOM=$(python3 scripts/scadenza-dominio.py 2>/dev/null || true)
+          if [ -n "$DOM" ]; then
+            GIORNI_DOM=${DOM%% *}
+            FINE_DOM=${DOM#* }
+            echo "Dominio: la registrazione scade fra $GIORNI_DOM giorni ($FINE_DOM)"
+            if [ "$GIORNI_DOM" -lt 60 ]; then
+              PROBLEMI="${PROBLEMI}### Registrazione del dominio in scadenza\n\nLa registrazione di protezionecivilegenzano.it scade fra **${GIORNI_DOM} giorni** (${FINE_DOM}, dato del registro .it). Verificare il rinnovo sul pannello Aruba: se il dominio scade si spengono sito, feed di allerta e collegamenti dei QR stampati.\n\n"
+            fi
+          else
+            echo "::warning::Impossibile leggere la scadenza del dominio da whois.nic.it (rete?)"
+          fi
+
+          # ------------------------------------------------------------
           # 4) CRESCITA DEL REPO (podcast, presentazioni, snapshot dati in git;
           #    l'indice Pagefind non è più versionato dal 15/07/2026).
           #    Sopra 3 GB va pianificata la migrazione audio→Drive già

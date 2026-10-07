@@ -56,7 +56,9 @@ Per un blocco specifico usa `page.locator("<selettore>").screenshot(...)`. Per l
 - elementi che dovrebbero esserci e non ci sono: note per l'adulto, banda affiliazioni con codice E10435833, soluzioni capovolte, pulsanti Stampa;
 - mobile a 375 px: niente scroll orizzontale, menu e pulsanti flottanti (SOS, assistente, a11y, torna su) che non coprono il contenuto essenziale;
 - **stampa**: la scheda sta in un A4 (o nel numero di fogli dichiarato), la toolbar è nascosta, nota e disegno sullo stesso foglio, niente pagine bianche, colori dei pittogrammi ISO 7010 mantenuti;
-- con la toolbar di accessibilità: contrasto invertito e giallo-su-nero non nascondono testo (aggiungi la classe su `<html>` via `page.add_init_script` o `page.evaluate`).
+- con la toolbar di accessibilità: contrasto invertito e giallo-su-nero non nascondono testo (aggiungi la classe su `<html>` via `page.add_init_script` o `page.evaluate`);
+- **loghi nelle grafiche istituzionali** (cover, slide social, schede A4, deck, locandine, dal 07/10/2026): esattamente **quattro** — la firma PC Genzano in testa, poi Quality Label ESC, FE.PI.VOL. e SNPC Volontariato nel blocco affiliazioni — mai doppioni, mai un quinto logo, e il Quality Label **sempre** con il codice `E10435833` leggibile accanto (Reg. UE 2021/888, CLAUDE.md § "Affiliazioni"). Le cover degli articoli non portano i loghi di affiliazione: un logo ESC sulla cover è un difetto, non un'aggiunta;
+- **aspetto da modello generico** (`.claude/rules/grafica.md`): due o più segni dell'elenco (palette crema e terracotta o gradienti viola, tre card identiche con icona nel quadratino, numeri grandi in fila, occhielli in maiuscoletto ovunque, emoji al posto di immagini) senza una ragione di brand sono un rilievo da segnalare con la proposta di correzione.
 
 Confronta con la versione precedente quando esiste (`git stash` / checkout del commit precedente su un secondo server alla porta 1315) e descrivi la differenza.
 

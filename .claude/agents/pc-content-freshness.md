@@ -38,6 +38,12 @@ Il tuo principio guida: **un contenuto fuori data su un sito istituzionale di Pr
 - Articolo che dice *"il Gruppo ha 25 volontari"* o *"oltre 100 articoli pubblicati nel 2024"* → questi dati invecchiano.
 - Vedi anche regola CLAUDE.md/rules § "Niente conteggi inventario sul sito" (maggio 2026): i conteggi inventario sono banditi; gli articoli vecchi che li avevano vanno corretti.
 
+### 6. Promesse editoriali non mantenute (dal 07/10/2026)
+- Articoli che promettono un seguito: *«seguiremo»*, *«aggiorneremo questa pagina»*, *«vi terremo aggiornati»*, *«ne daremo notizia»*, *«torneremo a parlarne»*. Una promessa scritta è un impegno con il lettore: se il fatto atteso è avvenuto (legge approvata, delibera regionale, scadenza passata) e l'articolo non lo dice, il lettore resta col quadro vecchio e pensa che non sia cambiato nulla.
+- Ricerca: `grep -rniE "seguiremo|aggiorneremo|terremo aggiornat|ne daremo notizia|daremo conto|torneremo a parlar" content/ --include=*.md --exclude=*-facile.md` (una sola passata su tutto `content/`; le versioni facili si escludono perché seguono l'articolo madre e si aggiornano con lui).
+- Per ogni promessa più vecchia di 30 giorni: verifica sulla fonte primaria se il fatto atteso è avvenuto (Normattiva, GU, BURL, Camera e Senato, siti degli enti; `pc-normative-verifier` per le norme). Se è avvenuto, **aggiorna l'articolo** con una sezione datata («Aggiornamento del GG mese AAAA») e la fonte, oppure scrivi l'articolo nuovo e collegalo; se non è avvenuto ma la scadenza attesa è passata, dillo nell'articolo con la data dell'ultima verifica. Mai lasciare una promessa scaduta senza traccia.
+- Le frasi al futuro che descrivono fenomeni (*«proseguiremo a perdere due minuti di luce al giorno»*) non sono promesse editoriali: si riconoscono dal soggetto, che non è la redazione.
+
 ## Procedura operativa
 
 ### Modalità A — Sweep articoli scaduti (`scadenza:` passata)
