@@ -3,7 +3,7 @@ title: "Il clima che cambia i rischi"
 date: 2026-06-10T19:20:00+02:00
 type: "dossier"
 tema: "rischi"
-description: "Non servono i poli: basta Genzano. Vent'anni di dati climatici del nostro territorio — elaborati da noi, scaricabili da chiunque — mostrano estati più calde di 2,4 °C e giornate roventi che prima non esistevano. E cosa significa per ogni rischio del catalogo."
+description: "Non servono i poli: basta Genzano. Vent'anni di dati climatici del nostro territorio — elaborati da noi, scaricabili da chiunque — mostrano estati più calde di quasi 2,5 °C e giornate roventi che prima non esistevano. E cosa significa per ogni rischio del catalogo."
 image: "/images/dossier/clima-luglio-genzano.webp"
 image_alt: "Grafico a barre: la temperatura massima media di luglio a Genzano dal 2005 al 2025, con le medie dei due decenni a confronto"
 autore: "Gruppo Comunale Volontari PC Genzano"
@@ -24,7 +24,7 @@ sezioni:
 {{< dossier-scena id="estati" image="/images/dossier/clima-luglio-genzano.webp" alt="Il grafico delle massime di luglio a Genzano: la linea tratteggiata ambra della media 2016-2025 (29,3 gradi) corre sopra quella grigia del decennio precedente (26,9)" align="top" kicker="Il dato di casa" title="Luglio, due gradi<br>e mezzo più caldo" credito="Elaborazione del Gruppo su dati ERA5/Open-Meteo (CC BY 4.0) — serie completa sul nostro portale open data" >}}
 Questo grafico non viene da un report internazionale: viene da **Genzano**. È la temperatura massima media di **luglio**, anno per anno, ricavata dalla rianalisi climatica europea ERA5 per le coordinate del nostro territorio — la stessa serie che chiunque può scaricare dal nostro [portale open data](/open-data/) o esplorare nel [Laboratorio meteo](/laboratorio-meteo/).
 
-La lettura è immediata: la media del decennio 2005-2014 era **26,9 °C**; quella degli ultimi dieci anni è **29,3 °C**. **Due gradi e quattro decimi** in più, in una generazione scarsa. Il luglio più caldo della serie, il 2022, ha toccato **31,6 °C** di massima media — un valore che vent'anni fa non apparteneva a questo territorio.
+La lettura è immediata: la media del decennio 2005-2014 era **26,9 °C**; quella degli ultimi dieci anni è **29,3 °C**. Sui valori non arrotondati la differenza è di **2,46 °C**: quasi due gradi e mezzo in più, in una generazione scarsa. Il luglio più caldo della serie, il 2022, ha toccato **31,6 °C** di massima media — un valore che vent'anni fa non apparteneva a questo territorio.
 
 Non è una percezione: è una misura. E le misure, in protezione civile, sono l'inizio di ogni decisione.
 {{< /dossier-scena >}}
@@ -60,7 +60,7 @@ I dati di questo dossier si aggiornano da soli, ogni anno, sul nostro [Laborator
 {{< /dossier-scena >}}
 
 {{< dossier-chiusura id="fine" titolo="Misurare casa nostra per proteggerla" cta1="Esplora i dati nel Laboratorio meteo" cta1url="/laboratorio-meteo/" cta2="Ondate di calore: cosa fare" cta2url="/rischi-prevenzione/ondate-di-calore/" >}}
-Il cambiamento climatico smette di essere astratto quando lo misuri sul tuo campanile: **+2,4 °C a luglio, giorni roventi che prima non esistevano, la stessa pioggia ma più cattiva**. Sono i numeri di Genzano, liberi e verificabili, e sono la lente con cui d'ora in poi va letto ogni rischio del territorio.
+Il cambiamento climatico smette di essere astratto quando lo misuri sul tuo campanile: **quasi +2,5 °C a luglio, giorni roventi che prima non esistevano, la stessa pioggia ma più cattiva**. Sono i numeri di Genzano, liberi e verificabili, e sono la lente con cui d'ora in poi va letto ogni rischio del territorio.
 
 Conoscerli è già protezione: [esplorali tu stesso](/laboratorio-meteo/), preparati al caldo e alle piogge violente, e in emergenza chiama il **112**.
 {{< /dossier-chiusura >}}

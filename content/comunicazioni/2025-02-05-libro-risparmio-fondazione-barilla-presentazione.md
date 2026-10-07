@@ -37,7 +37,7 @@ L'evento "Chi non spreca ci guadagna" si è svolto a Milano, moderato dalla gior
 - **Paolo Barilla**, Vicepresidente Fondazione Barilla e Gruppo Barilla
 - **Matteo Pauri**, Direttore Fondazione Barilla
 - **Marta Antonelli**, Direttrice della Ricerca di Fondazione Barilla
-- **Riccardo Valentini**, professore di Ecologia (Università della Tuscia) e premio Nobel per la Pace con l'IPCC
+- **Riccardo Valentini**, professore di Ecologia (Università della Tuscia), tra gli autori dei rapporti dell'IPCC, il gruppo di esperti sul clima premiato con il Nobel per la pace nel 2007
 
 Il libro è il risultato di una **collaborazione scientifica** con la dottoressa **Claudia Giordano** e l'**Università di Bologna**. Raccoglie in modo divulgativo le evidenze della letteratura nazionale e internazionale sul tema.
 
