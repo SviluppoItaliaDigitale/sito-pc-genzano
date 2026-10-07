@@ -82,7 +82,7 @@ jobs:
             echo "## Pagine del sito"
             echo '```'; grep -E '^(❌|Pagine|✅)' pagine.log; echo '```'
             echo
-            echo "Come si corregge: una scheda con l'ultimo foglio quasi vuoto si riduce in stampa"
+            echo "Come si corregge: una scheda con un foglio quasi vuoto si riduce in stampa"
             echo "(vedi le schede con il commento «controllo fogli di stampa») o si stringono i suoi spazi."
             echo "Per riprovare in locale: \`python3 scripts/check-fogli-stampa.py\` dopo la build."
           } > corpo.md

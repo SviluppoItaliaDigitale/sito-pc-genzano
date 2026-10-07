@@ -64,7 +64,7 @@ Confronta con la versione precedente quando esiste (`git stash` / checkout del c
 
 ### 2-bis. Il conteggio dei fogli lo fa lo script
 
-Lo screenshot in stampa mostra come appare il foglio; il **numero di fogli** e i fogli bianchi li misura `scripts/check-fogli-stampa.py`, che stampa con Chromium in A4 (`media=print`) e blocca un foglio bianco in qualunque posizione e, nelle schede, nei kit e nelle storie, l'ultimo foglio quasi vuoto. Dopo la build in `public/`: `python3 scripts/check-fogli-stampa.py --da-git origin/main` per le sole pagine toccate (è ciò che fa `validate-pr.yml` sulle PR), `python3 scripts/check-fogli-stampa.py` per tutte (lo fa `controllo-fogli-stampa.yml` ogni lunedì). Quando tocchi una scheda, una storia o il CSS di stampa, eseguilo e riporta l'esito nella riga «Stampa A4».
+Lo screenshot in stampa mostra come appare il foglio; il **numero di fogli** e i fogli bianchi li misura `scripts/check-fogli-stampa.py`, che stampa con Chromium in A4 (`media=print`) e blocca un foglio bianco in qualunque posizione e, nelle schede, nei kit e nelle storie, l'foglio quasi vuoto in qualunque posizione. Dopo la build in `public/`: `python3 scripts/check-fogli-stampa.py --da-git origin/main` per le sole pagine toccate (è ciò che fa `validate-pr.yml` sulle PR), `python3 scripts/check-fogli-stampa.py` per tutte (lo fa `controllo-fogli-stampa.yml` ogni lunedì). Quando tocchi una scheda, una storia o il CSS di stampa, eseguilo e riporta l'esito nella riga «Stampa A4».
 
 ### 3. Verdetto e correzione
 
