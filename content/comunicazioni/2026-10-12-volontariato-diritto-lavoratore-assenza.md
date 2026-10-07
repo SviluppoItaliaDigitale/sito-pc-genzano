@@ -1,6 +1,6 @@
 ---
 title: "Volontariato di PC e lavoro: i diritti del volontario attivato"
-date: 2026-10-12
+date: 2026-10-12T00:01:00+02:00
 description: "Il volontario di PC attivato in emergenza ha diritti riconosciuti dalla legge: assenza giustificata, rimborso, copertura assicurativa."
 badge: "Informazione"
 priorita: "normale"

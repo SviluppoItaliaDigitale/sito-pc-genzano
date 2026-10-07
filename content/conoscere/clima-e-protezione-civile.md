@@ -18,7 +18,7 @@ Per decenni la protezione civile ha ragionato così: c'è una normalità, ogni t
 
 Non servono i report internazionali: basta guardare i dati di casa nostra. Nel dossier [Il clima che cambia i rischi](/dossier/il-clima-che-cambia-i-rischi/) abbiamo elaborato vent'anni di dati climatici per le coordinate di Genzano (rianalisi ERA5 via Open-Meteo). I numeri principali:
 
-- la **massima media di luglio** è passata da 26,9 °C (decennio 2005-2014) a 29,3 °C (2016-2025): **+2,4 °C** in una generazione, con il record di 31,6 °C nel luglio 2022;
+- la **massima media di luglio** è passata da 26,9 °C (decennio 2005-2014) a 29,3 °C (2016-2025): **quasi +2,5 °C** in una generazione (2,46 °C sui valori non arrotondati), con il record di 31,6 °C nel luglio 2022;
 - i **giorni oltre i 35 °C**, assenti dalla serie fino al 2016, compaiono dal **2017** quasi un anno su due;
 - la **pioggia totale annua non è diminuita**, ma cade in modo diverso: eventi più rari e più violenti, con stagioni secche più lunghe.
 
