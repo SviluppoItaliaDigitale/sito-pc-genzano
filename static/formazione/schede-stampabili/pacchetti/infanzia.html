@@ -288,6 +288,8 @@
       font-size: 1.6rem;
       background: #fff;
     }
+:where([id="scheda-vero-falso-infanzia"]) .vf-faccia { display:flex; align-items:center; justify-content:center; line-height:normal; }
+:where([id="scheda-vero-falso-infanzia"]) .vf-icon { width:2.35rem; height:2.35rem; display:block; }
 
 :where([id="scheda-labirinto-uscita"]) .lab-griglia {
       display: grid;
@@ -381,6 +383,9 @@
 :where([id="scheda-labirinto-uscita"]) .lab-griglia { grid-template-columns: repeat(11, 30px); grid-template-rows: repeat(9, 30px); }
 :where([id="scheda-labirinto-uscita"]) .lab-cella { width: 30px; height: 30px; font-size: 1rem; }
 }
+:where([id="scheda-labirinto-uscita"]) .lab-cella svg { max-width:88%; max-height:88%; display:block; }
+:where([id="scheda-labirinto-uscita"]) .lab-legenda-icon svg { width:100%; height:100%; display:block; }
+:where([id="scheda-labirinto-uscita"]) .lab-muro-simbolo { width:1.1rem; height:1.1rem; background:#495057; display:inline-block; border:1px solid #111; }
 
 :where([id="scheda-tartaruga-saggia-infanzia"]) .ts-grande {
       text-align: center;
@@ -443,6 +448,10 @@
       color: #664d03;
       margin-top: 0.8rem;
     }
+:where([id="scheda-tartaruga-saggia-infanzia"]) .ts-grande { display:flex; justify-content:center; }
+:where([id="scheda-tartaruga-saggia-infanzia"]) .ts-grande .ts-turtle { width:7.2rem; height:auto; }
+:where([id="scheda-tartaruga-saggia-infanzia"]) .ts-regola .ts-emoji { width:3.6rem; height:3.6rem; display:flex; align-items:center; justify-content:center; font-size:0; }
+:where([id="scheda-tartaruga-saggia-infanzia"]) .ts-regola .ts-emoji img, :where([id="scheda-tartaruga-saggia-infanzia"]) .ts-regola .ts-emoji svg { width:3.5rem; height:3.5rem; object-fit:contain; display:block; }
 
 :where([id="scheda-trova-coppie-infanzia"]) .tc-area {
       display: grid;
@@ -495,6 +504,9 @@
 :where([id="scheda-trova-coppie-infanzia"]) .tc-card .tc-emoji { font-size: 1.3rem; width: auto; min-width: 1.8rem; }
 :where([id="scheda-trova-coppie-infanzia"]) .tc-card .tc-text { flex: 1 1 0; min-width: 0; font-size: 0.8rem; line-height: 1.2; overflow-wrap: anywhere; }
 }
+:where([id="scheda-trova-coppie-infanzia"]) .tc-card .tc-emoji { display:flex; align-items:center; justify-content:center; }
+:where([id="scheda-trova-coppie-infanzia"]) .tc-card .tc-emoji img, :where([id="scheda-trova-coppie-infanzia"]) .tc-card .tc-emoji svg { width:2.8rem; height:2.8rem; display:block; object-fit:contain; }
+:where([id="scheda-trova-coppie-infanzia"]) .tc-card .tc-emoji svg { fill:none; stroke:#111827; stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round; }
 
 :where([id="scheda-abc-vocali-infanzia"]) .vocali-griglia {
       display: flex;
@@ -598,6 +610,8 @@
 :where([id="scheda-abc-vocali-infanzia"]) .vocale-parola { min-width: 0; }
 :where([id="scheda-abc-vocali-infanzia"]) .vocale-parola .parola-modello { font-size: 1.15rem; letter-spacing: 0.08em; }
 }
+:where([id="scheda-abc-vocali-infanzia"]) .vocale-emoji img, :where([id="scheda-abc-vocali-infanzia"]) .vocale-emoji svg { width:2.8rem; height:2.8rem; display:block; margin:auto; object-fit:contain; }
+:where([id="scheda-abc-vocali-infanzia"]) .vocale-emoji svg { fill:none; stroke:#111827; stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round; }
 
 :where([id="scheda-alfabetiere-pc-infanzia"]) .scheda-page:has(> .alfT) { padding: 0; }
 :where([id="scheda-alfabetiere-pc-infanzia"]) .alfT { padding: 10mm 13mm 4mm; display: flex; flex-direction: column; min-height: 238mm; }
@@ -789,6 +803,8 @@
 @media screen and (max-width: 580px) {
 :where([id="scheda-riconosci-iniziale-infanzia"]) .ri-griglia { grid-template-columns: 1fr; }
 }
+:where([id="scheda-riconosci-iniziale-infanzia"]) .ri-emoji img, :where([id="scheda-riconosci-iniziale-infanzia"]) .ri-emoji svg { width:3rem; height:3rem; display:block; margin:auto; object-fit:contain; }
+:where([id="scheda-riconosci-iniziale-infanzia"]) .ri-emoji svg { fill:none; stroke:#111827; stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round; }
 
 :where([id="scheda-collega-parola-immagine-infanzia"]) .cpi-area {
       display: grid;
@@ -916,6 +932,7 @@
       line-height: 1.45;
     }
 :where([id="scheda-collega-parola-immagine-infanzia"]) .istruzioni-maestra strong { color: #664d03; }
+:where([id="scheda-collega-parola-immagine-infanzia"]) .cpi-griglia .figura-cella img { width:3.1rem; height:3.1rem; display:block; margin:auto; object-fit:contain; }
 
 :where([id="scheda-numeri-pc-infanzia"]) .num-griglia { display: flex; flex-direction: column; gap: 0.5rem; margin: 0.6rem 0; }
 :where([id="scheda-numeri-pc-infanzia"]) .num-riga {
@@ -959,6 +976,14 @@
       border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
     }
 :where([id="scheda-numeri-pc-infanzia"]) .istruzioni-maestra strong { color: #664d03; }
+:where([id="scheda-numeri-pc-infanzia"]) .num-oggetti { display:flex; align-items:center; justify-content:center; gap:.22rem; letter-spacing:normal; }
+:where([id="scheda-numeri-pc-infanzia"]) .num-oggetti img { width:2.05rem; height:2.05rem; object-fit:contain; }
+@media screen and (max-width:580px) {
+:where([id="scheda-numeri-pc-infanzia"]) .num-riga { grid-template-columns:3rem 3rem minmax(0,1fr); gap:.35rem; padding:.4rem; }
+:where([id="scheda-numeri-pc-infanzia"]) .num-riga-vuota { display:none; }
+:where([id="scheda-numeri-pc-infanzia"]) .num-ricalca, :where([id="scheda-numeri-pc-infanzia"]) .num-modello { font-size:2.7rem; }
+:where([id="scheda-numeri-pc-infanzia"]) .num-oggetti img { width:1.6rem; height:1.6rem; }
+}
 
 :where([id="scheda-ciclo-acqua-infanzia"]) .ciclo-griglia {
       display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem;
@@ -1010,6 +1035,9 @@
       background: #fff8e6; border-left: 4px solid var(--scheda-oro);
       border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
     }
+:where([id="scheda-ciclo-acqua-infanzia"]) .ciclo-cella .emo { width:5rem; height:5rem; display:flex; align-items:center; justify-content:center; font-size:0; }
+:where([id="scheda-ciclo-acqua-infanzia"]) .ciclo-cella .emo img, :where([id="scheda-ciclo-acqua-infanzia"]) .ciclo-cella .emo svg { width:5rem; height:5rem; display:block; object-fit:contain; }
+:where([id="scheda-ciclo-acqua-infanzia"]) .ciclo-cella .emo svg { fill:none; stroke:#111827; stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round; }
 
 :where([id="scheda-triangolo-fuoco-infanzia"]) .triangolo-svg {
       max-width: 360px; height: auto; margin: 0.4rem auto; display: block;
@@ -1228,6 +1256,9 @@
       background: #fff8e6; border-left: 4px solid var(--scheda-oro);
       border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
     }
+:where([id="scheda-conta-puntini-infanzia"]) .conta-card .oggetti { display:flex; align-items:center; justify-content:center; gap:.35rem; letter-spacing:normal; }
+:where([id="scheda-conta-puntini-infanzia"]) .conta-card .oggetti img, :where([id="scheda-conta-puntini-infanzia"]) .conta-card .oggetti svg { width:2.65rem; height:2.65rem; object-fit:contain; display:block; }
+:where([id="scheda-conta-puntini-infanzia"]) .conta-card .oggetti svg { fill:none; stroke:#111827; stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round; }
 
 :where([id="scheda-riconosci-forme-infanzia"]) .scheda-immagine-wrapper {max-width:900px;margin:1rem auto;padding:0 1rem}
 :where([id="scheda-riconosci-forme-infanzia"]) .special {background:#fff;border:1px solid #d7dee8;border-radius:8px;padding:9mm;box-shadow:0 4px 20px rgba(0,0,0,.12)}
