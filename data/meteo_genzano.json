@@ -1,17 +1,17 @@
 {
-  "aggiornato": "2026-10-07T10:04",
+  "aggiornato": "2026-10-07T11:04",
   "data_lunga": "mercoledì 7 ottobre 2026",
-  "aggiornato_label": "mercoledì 7 ottobre 2026, ore 10:04",
+  "aggiornato_label": "mercoledì 7 ottobre 2026, ore 11:04",
   "alba": "07:12",
   "tramonto": "18:40",
   "corrente": {
-    "temp": 19.1,
-    "percepita": 19.1,
+    "temp": 19.9,
+    "percepita": 19.7,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
     "umidita": 75,
-    "vento": 10,
-    "raffiche": 36
+    "vento": 14,
+    "raffiche": 41
   },
   "giorni": [
     {
