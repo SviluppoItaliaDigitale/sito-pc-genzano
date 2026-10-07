@@ -22,7 +22,8 @@
       padding: 0.6rem 0.5rem 0.7rem;
       text-align: center;
     }
-    .di-emo { font-size: 2.6rem; line-height: 1; }
+    .di-emo { height: 3.2rem; display:flex; align-items:center; justify-content:center; }
+    .di-emo img, .di-emo svg { max-width:3rem; max-height:3rem; object-fit:contain; }
     .di-riga {
       margin-top: 0.6rem;
       border-bottom: 2px solid var(--scheda-bordo);
@@ -38,11 +39,15 @@
        sola banda affiliazioni andava su una pagina in più: griglia un po' più
        serrata e un 5% in meno su tutto tengono il foglio intero. Solo in stampa. */
     @media print {
-      html { font-size: 95%; }
-      .di-griglia { gap: 0.5rem; }
-      .di-cella { padding: 0.45rem 0.5rem 0.5rem; }
-      .di-riga { margin-top: 0.45rem; }
-      .di-emo { font-size: 2.3rem; }
+      html { font-size: 88%; }
+      .scheda-page { padding-top: 5mm; padding-bottom: 2mm; }
+      .di-griglia { gap: 0.32rem; margin: 0.35rem 0; }
+      .di-cella { padding: 0.28rem 0.38rem 0.34rem; }
+      .di-emo { height: 2.45rem; }
+      .di-emo img, .di-emo svg { max-width: 2.2rem; max-height: 2.2rem; }
+      .di-riga { margin-top: 0.28rem; min-height: 1.25rem; }
+      .di-iniziale { margin-top: 0.1rem; }
+      .soluzione-capovolta { margin-top: 3mm !important; }
     }
   </style>
 </head>
@@ -76,15 +81,23 @@
     </p>
 
     <div class="di-griglia">
-      <div class="di-cella"><div class="di-emo" aria-hidden="true">👨‍🚒</div><div class="di-riga" aria-hidden="true"></div><div class="di-iniziale">inizia con <b>P</b></div></div>
-      <div class="di-cella"><div class="di-emo" aria-hidden="true">🚑</div><div class="di-riga" aria-hidden="true"></div><div class="di-iniziale">inizia con <b>A</b></div></div>
-      <div class="di-cella"><div class="di-emo" aria-hidden="true">⛑️</div><div class="di-riga" aria-hidden="true"></div><div class="di-iniziale">inizia con <b>C</b></div></div>
-      <div class="di-cella"><div class="di-emo" aria-hidden="true">🧭</div><div class="di-riga" aria-hidden="true"></div><div class="di-iniziale">inizia con <b>B</b></div></div>
-      <div class="di-cella"><div class="di-emo" aria-hidden="true">🎒</div><div class="di-riga" aria-hidden="true"></div><div class="di-iniziale">inizia con <b>Z</b></div></div>
-      <div class="di-cella"><div class="di-emo" aria-hidden="true">🔦</div><div class="di-riga" aria-hidden="true"></div><div class="di-iniziale">inizia con <b>T</b></div></div>
-      <div class="di-cella"><div class="di-emo" aria-hidden="true">🗺️</div><div class="di-riga" aria-hidden="true"></div><div class="di-iniziale">inizia con <b>M</b></div></div>
-      <div class="di-cella"><div class="di-emo" aria-hidden="true">📻</div><div class="di-riga" aria-hidden="true"></div><div class="di-iniziale">inizia con <b>R</b></div></div>
-      <div class="di-cella"><div class="di-emo" aria-hidden="true">🏥</div><div class="di-riga" aria-hidden="true"></div><div class="di-iniziale">inizia con <b>O</b></div></div>
+      <div class="di-cella"><div class="di-emo" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/dis-pompiere.png" alt=""></div><div class="di-riga" aria-hidden="true"></div><div class="di-iniziale">inizia con <b>P</b></div></div>
+      <div class="di-cella"><div class="di-emo" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/dis-ambulanza.png" alt=""></div><div class="di-riga" aria-hidden="true"></div><div class="di-iniziale">inizia con <b>A</b></div></div>
+      <div class="di-cella"><div class="di-emo" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-c-casco.png" alt=""></div><div class="di-riga" aria-hidden="true"></div><div class="di-iniziale">inizia con <b>C</b></div></div>
+      <div class="di-cella"><div class="di-emo" aria-hidden="true"><svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="31" fill="#fff" stroke="#003366" stroke-width="4"/><polygon points="40,10 48,40 40,70 32,40" fill="#003366"/><circle cx="40" cy="40" r="5" fill="#fff" stroke="#003366" stroke-width="3"/><text x="40" y="8" text-anchor="middle" font-size="11" font-weight="700" fill="#003366">N</text></svg></div><div class="di-riga" aria-hidden="true"></div><div class="di-iniziale">inizia con <b>B</b></div></div>
+      <div class="di-cella"><div class="di-emo" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-z-zaino.png" alt=""></div><div class="di-riga" aria-hidden="true"></div><div class="di-iniziale">inizia con <b>Z</b></div></div>
+      <div class="di-cella"><div class="di-emo" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/oca-torcia.png" alt=""></div><div class="di-riga" aria-hidden="true"></div><div class="di-iniziale">inizia con <b>T</b></div></div>
+      <div class="di-cella"><div class="di-emo" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-m-mappa.png" alt=""></div><div class="di-riga" aria-hidden="true"></div><div class="di-iniziale">inizia con <b>M</b></div></div>
+      <div class="di-cella"><div class="di-emo" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/dis-radio.png" alt=""></div><div class="di-riga" aria-hidden="true"></div><div class="di-iniziale">inizia con <b>R</b></div></div>
+      <div class="di-cella"><div class="di-emo" aria-hidden="true"><svg viewBox="0 0 80 80" aria-hidden="true">
+  <path d="M8 68 H72 V26 H58 V14 H22 V26 H8 Z" fill="#fff" stroke="#003366" stroke-width="3" stroke-linejoin="round"/>
+  <rect x="34" y="18" width="12" height="24" fill="#dc3545"/><rect x="28" y="24" width="24" height="12" fill="#dc3545"/>
+  <rect x="16" y="38" width="10" height="10" fill="#eaf2fb" stroke="#003366" stroke-width="1.5"/>
+  <rect x="54" y="38" width="10" height="10" fill="#eaf2fb" stroke="#003366" stroke-width="1.5"/>
+  <rect x="16" y="53" width="10" height="10" fill="#eaf2fb" stroke="#003366" stroke-width="1.5"/>
+  <rect x="54" y="53" width="10" height="10" fill="#eaf2fb" stroke="#003366" stroke-width="1.5"/>
+  <rect x="34" y="50" width="12" height="18" fill="#fff" stroke="#003366" stroke-width="2"/>
+</svg></div><div class="di-riga" aria-hidden="true"></div><div class="di-iniziale">inizia con <b>O</b></div></div>
     </div>
 
     <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.5rem 0; font-size: 0.92rem;">

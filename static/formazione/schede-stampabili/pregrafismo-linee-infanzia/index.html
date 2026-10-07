@@ -10,19 +10,7 @@
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
   <style>
-    body { margin: 0; padding: 0; background: #f4f7fb; }
-    .scheda-immagine-wrapper { max-width: 900px; margin: 1rem auto; padding: 0 1rem; }
-    .scheda-immagine-wrapper img { width: 100%; height: auto; display: block; box-shadow: 0 4px 20px rgba(0,0,0,0.12); border-radius: 4px; }
-    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
-    @media print {
-      body { background: #fff; }
-      .scheda-immagine-wrapper { max-width: 100%; margin: 0; padding: 0; }
-      .scheda-immagine-wrapper img { box-shadow: none; border-radius: 0; width: 100%; height: auto; max-height: calc(100vh - 16mm); object-fit: contain; }
-      /* Banda affiliazioni (Reg. UE 2021/888): Quality Label ESC + codice E10435833, Coordinamento FE.PI.VOL., SNPC Volontariato — stessa immagine di .scheda-page::after in assets/scheda-print.css */
-      .scheda-immagine-wrapper::after { content: ""; display: block; height: 12mm; margin-top: 2mm; background: url("/images/footer-print-affiliazioni.png") no-repeat center / contain; -webkit-print-color-adjust: exact; print-color-adjust: exact; page-break-inside: avoid; }
-      @page { size: A4 portrait; margin: 8mm; }
-    }
-  </style>
+body{margin:0;background:#f4f7fb}.scheda-immagine-wrapper{max-width:900px;margin:1rem auto;padding:0 1rem}.special{background:#fff;border:1px solid #d7dee8;border-radius:8px;padding:9mm;box-shadow:0 4px 20px rgba(0,0,0,.12)}.sp-head{display:flex;align-items:center;gap:5mm;justify-content:center}.sp-head img{width:20mm;height:20mm;object-fit:contain}.sp-head h1{font:800 23px/1.08 "Trebuchet MS",Arial,sans-serif;color:#003366;margin:0;text-align:center}.sp-sub{text-align:center;font:700 13px Arial,sans-serif;margin:3mm 0}.ex{display:grid;grid-template-columns:36mm 1fr;align-items:center;gap:4mm;border:2px solid #003366;border-radius:10px;padding:4mm;margin:4mm 0}.ex img{width:32mm;height:32mm;object-fit:contain}.ex h2{font:800 14px Arial,sans-serif;color:#003366;margin:0 0 2mm}.trace{width:100%;height:29mm}.foot{display:flex;justify-content:space-between;border-top:1px solid #b8c2cf;margin-top:4mm;padding-top:2mm;font:700 9px Arial,sans-serif;color:#334155}@media print{body{background:#fff}.scheda-immagine-wrapper{max-width:100%;margin:0;padding:0}.special{box-shadow:none;border:0;border-radius:0;padding:5mm 6mm 3mm}.scheda-immagine-wrapper::after{content:"";display:block;height:12mm;margin-top:2mm;background:url("/images/footer-print-affiliazioni.png") no-repeat center/contain;-webkit-print-color-adjust:exact;print-color-adjust:exact;page-break-inside:avoid}@page{size:A4 portrait;margin:8mm}}</style>
 </head>
 <body>
   <div class="scheda-toolbar no-print">
@@ -31,10 +19,11 @@
     <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
   </div>
 
-  <main class="scheda-immagine-wrapper">
-    <h1 class="sr-only">Pregrafismo: Le linee della Protezione Civile — Infanzia</h1>
-    <img src="scheda-completa.png"
-         alt="Scheda di pregrafismo: le linee della Protezione Civile. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo 'Le linee della Protezione Civile'. Sottotitolo 'Segui le linee tratteggiate con la matita!'. Quattro esercizi: 1) Linee dritte, illustrazione di un casco di sicurezza accanto a tre linee orizzontali tratteggiate; 2) Zig-zag, illustrazione di un fulmine accanto a due linee a zig-zag tratteggiate; 3) Onde, illustrazione di onde di mare accanto a due linee ondulate tratteggiate; 4) Spirali, illustrazione di un tornado accanto a tre spirali tratteggiate. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
-  </main>
+  <main class="scheda-immagine-wrapper"><div class="special"><div class="sp-head"><img src="/images/logo-pc-genzano.png" alt="Logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma"><h1>LE LINEE DELLA<br>PROTEZIONE CIVILE</h1></div><p class="sp-sub">Segui le linee tratteggiate con la matita!</p>
+<div class="ex"><img src="/pittogrammi/arasaac-bn/alf-c-casco.png" alt=""><div><h2>LINEE DRITTE</h2><svg class="trace" viewBox="0 0 500 100"><path d="M20 22 H480 M20 50 H480 M20 78 H480" fill="none" stroke="#555" stroke-width="5" stroke-dasharray="12 12"/></svg></div></div>
+<div class="ex"><img src="/pittogrammi/iso7010/pericolo-elettrico.svg" alt=""><div><h2>ZIG-ZAG</h2><svg class="trace" viewBox="0 0 500 100"><path d="M20 28 L90 72 L160 28 L230 72 L300 28 L370 72 L480 28 M20 65 L90 25 L160 65 L230 25 L300 65 L370 25 L480 65" fill="none" stroke="#555" stroke-width="5" stroke-dasharray="12 10"/></svg></div></div>
+<div class="ex"><img src="/pittogrammi/arasaac-bn/alf-f-fiume.png" alt=""><div><h2>ONDE</h2><svg class="trace" viewBox="0 0 500 100"><path d="M20 30 Q55 5 90 30 T160 30 T230 30 T300 30 T370 30 T480 30 M20 70 Q55 45 90 70 T160 70 T230 70 T300 70 T370 70 T480 70" fill="none" stroke="#555" stroke-width="5" stroke-dasharray="12 10"/></svg></div></div>
+<div class="ex"><img src="/pittogrammi/arasaac-bn/dis-temporale.png" alt=""><div><h2>SPIRALI</h2><svg class="trace" viewBox="0 0 500 100"><path d="M80 50 c0-30 50-35 60-5 c10 32-45 45-70 18 c-28-30 10-68 55-63 M260 50 c0-30 50-35 60-5 c10 32-45 45-70 18 c-28-30 10-68 55-63 M420 50 c0-24 38-28 47-4 c8 25-34 35-54 14 c-20-24 7-53 42-50" fill="none" stroke="#555" stroke-width="5" stroke-dasharray="10 9"/></svg></div></div>
+<div class="foot"><span>protezionecivilegenzano.it</span><span>Rev. 03 · Ottobre 2026</span></div></div></main>
 </body>
 </html>
