@@ -1,11 +1,11 @@
 {
  "_snapshot": {
-  "generato": "2026-10-07T09:19:34+00:00",
+  "generato": "2026-10-07T21:49:13+00:00",
   "fonte": "MeteoAlarm — EUMETNET, feed ufficiale per l'Italia",
   "fonte_url": "https://meteoalarm.org/",
-  "avvisi": 57,
-  "scaduti_scartati": 1,
-  "in_corso": 18,
+  "avvisi": 55,
+  "scaduti_scartati": 3,
+  "in_corso": 21,
   "avvertenza": "Quadro nazionale, non sostituisce il bollettino di criticità del Dipartimento della Protezione Civile: per Genzano di Roma fa fede la Zona F del bollettino DPC."
  },
  "avvisi": [
@@ -336,19 +336,6 @@
   },
   {
    "in_corso": true,
-   "regione": "Calabria",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-07T08:00:00+00:00",
-   "fine": "2026-10-07T17:59:00+00:00",
-   "emesso": "2026-10-07T09:00:58+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261007110057.151"
-  },
-  {
-   "in_corso": true,
    "regione": "Campania",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -439,7 +426,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261007110057.105"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Lazio",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -634,19 +621,6 @@
    "identificativo": "2.49.0.0.380.3.IT.261007110057.157"
   },
   {
-   "in_corso": true,
-   "regione": "Sicilia",
-   "fenomeno": "Temporali",
-   "livello": "gialla",
-   "evento_originale": "Yellow Thunderstorm Warning",
-   "severita": "Moderate",
-   "certezza": "Likely",
-   "inizio": "2026-10-07T08:00:00+00:00",
-   "fine": "2026-10-07T17:59:00+00:00",
-   "emesso": "2026-10-07T09:00:58+00:00",
-   "identificativo": "2.49.0.0.380.3.IT.261007110057.154"
-  },
-  {
    "in_corso": false,
    "regione": "Toscana",
    "fenomeno": "Vento",
@@ -660,7 +634,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261007110057.121"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Trentino Alto Adige",
    "fenomeno": "Pioggia",
    "livello": "gialla",
@@ -673,7 +647,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261007110057.102"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Trentino Alto Adige",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -725,7 +699,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261007110057.090"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Veneto",
    "fenomeno": "Temporali",
    "livello": "gialla",
@@ -738,7 +712,7 @@
    "identificativo": "2.49.0.0.380.3.IT.261007110057.108"
   },
   {
-   "in_corso": false,
+   "in_corso": true,
    "regione": "Veneto",
    "fenomeno": "Pioggia",
    "livello": "gialla",
