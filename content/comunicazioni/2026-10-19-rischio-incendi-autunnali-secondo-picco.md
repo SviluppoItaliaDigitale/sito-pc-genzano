@@ -32,7 +32,7 @@ Non si tratta di emergenze come a luglio, ma di **eventi locali** che richiedono
 
 ## Le bruciature abusive
 
-La pratica di **bruciare** sterpaglie, residui agricoli o rifiuti vegetali in proprio terreno **non è libera**. Richiede:
+La pratica di **bruciare** sterpaglie, residui agricoli o rifiuti vegetali nel proprio terreno **non è libera**. Richiede:
 
 - **rispetto** dei periodi di divieto regionale;
 - **autorizzazione** comunale in alcuni casi;
@@ -54,7 +54,7 @@ Il riferimento principale è la **Legge 353/2000** (legge quadro sugli incendi b
 
 ## Comportamenti nelle aree a rischio
 
-Chi **abita** in case sparse o confinate con aree boscate:
+Chi **abita** in case sparse o confinanti con aree boscate:
 
 - **rimuovere** vegetazione secca intorno all'edificio;
 - **pulire** grondaie da foglie e residui;
