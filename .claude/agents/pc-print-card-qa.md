@@ -74,7 +74,7 @@ python3 scripts/check-fascicolo-esperimenti.py          # se si tocca il fascico
 ```python
 # Per ogni parola: numero celle = lunghezza della soluzione
 # La prima cella ha la lettera-aiuto pre-stampata
-# Soluzione nel blocco .soluzione-capovolta (ruotata di 180°), con foglio operatore separato se serve
+# Soluzione nel blocco .soluzione-capovolta (ruotata di 180°) in fondo allo stesso foglio; mai su un foglio operatore separato (rule 09 § 16)
 # FAIL se: numero celle != lunghezza, lettera aiuto != prima lettera soluzione,
 #          soluzione dentro <details> o leggibile in chiaro sullo stesso foglio (vietato, rule 09 § 16)
 ```

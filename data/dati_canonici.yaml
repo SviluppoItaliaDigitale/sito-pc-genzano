@@ -250,9 +250,9 @@ dati:
 
   - id: volontari-limiti-art-39
     dato: "Giorni di impiego dei volontari con i benefici dell'art. 39 del Codice di protezione civile"
-    valore: "soccorso e assistenza: 30 giorni continuativi e 90 l'anno; emergenze di rilievo nazionale: fino a 60 continuativi e 180 l'anno; pianificazione, esercitazioni, formazione e diffusione della cultura di protezione civile: 10 continuativi e 30 l'anno"
+    valore: "soccorso e assistenza: 30 giorni continuativi e 90 l'anno; emergenze di rilievo nazionale, su autorizzazione del Dipartimento della protezione civile e per i casi di effettiva necessità singolarmente individuati: fino a 60 continuativi e 180 l'anno; pianificazione, esercitazioni, formazione e diffusione della cultura di protezione civile: 10 continuativi e 30 l'anno"
     fonti:
-      - nome: "D.Lgs. 2 gennaio 2018, n. 1, art. 39, commi 1-3 (testo vigente su Normattiva, verificato il 07/10/2026)"
+      - nome: "D.Lgs. 2 gennaio 2018, n. 1, art. 39, commi 1-3 (testo vigente su Normattiva, verificato il 07/10/2026; condizioni dell'elevazione al comma 2)"
         url: "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2018-01-02;1~art39"
     vietati:
       - regex: 'tetto\s+(?:annuale\s+complessivo\s+)?(?:è\s+)?di\s+\**180\s+giorni'

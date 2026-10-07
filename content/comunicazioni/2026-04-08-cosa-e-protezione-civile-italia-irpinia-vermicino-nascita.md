@@ -133,7 +133,7 @@ Il datore di lavoro potrà successivamente chiedere il **rimborso al Dipartiment
 Il beneficio non è illimitato. L'articolo 39 del Codice fissa questi limiti:
 
 - nel **soccorso e nell'assistenza**, fino a **30 giorni continuativi** e **90 giorni l'anno**;
-- nelle **emergenze di rilievo nazionale**, limiti elevabili fino a **60 giorni continuativi** e **180 giorni l'anno**;
+- nelle **emergenze di rilievo nazionale**, limiti elevabili fino a **60 giorni continuativi** e **180 giorni l'anno**, su autorizzazione del Dipartimento della protezione civile e per i casi di effettiva necessità;
 - nella **pianificazione, nelle esercitazioni e nella formazione**, fino a **10 giorni continuativi** e **30 giorni l'anno**.
 
 Questo quadro normativo è ciò che consente al volontariato italiano di operare in modo sostenibile. Il volontario sa che, quando viene attivato, non perde né il lavoro né lo stipendio. Il datore di lavoro sa di avere un meccanismo di rimborso previsto per legge.
