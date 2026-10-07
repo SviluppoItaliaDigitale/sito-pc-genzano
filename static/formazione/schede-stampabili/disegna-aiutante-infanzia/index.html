@@ -10,19 +10,7 @@
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="stylesheet" href="/formazione/schede-stampabili/assets/scheda-print.css">
   <style>
-    body { margin: 0; padding: 0; background: #f4f7fb; }
-    .scheda-immagine-wrapper { max-width: 900px; margin: 1rem auto; padding: 0 1rem; }
-    .scheda-immagine-wrapper img { width: 100%; height: auto; display: block; box-shadow: 0 4px 20px rgba(0,0,0,0.12); border-radius: 4px; }
-    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
-    @media print {
-      body { background: #fff; }
-      .scheda-immagine-wrapper { max-width: 100%; margin: 0; padding: 0; }
-      .scheda-immagine-wrapper img { box-shadow: none; border-radius: 0; width: 100%; height: auto; max-height: calc(70vh - 16mm); object-fit: contain; }
-      /* Banda affiliazioni (Reg. UE 2021/888): Quality Label ESC + codice E10435833, Coordinamento FE.PI.VOL., SNPC Volontariato — stessa immagine di .scheda-page::after in assets/scheda-print.css */
-      .scheda-immagine-wrapper::after { content: ""; display: block; height: 12mm; margin-top: 2mm; background: url("/images/footer-print-affiliazioni.png") no-repeat center / contain; -webkit-print-color-adjust: exact; print-color-adjust: exact; page-break-inside: avoid; }
-      @page { size: A4 portrait; margin: 8mm; }
-    }
-  </style>
+body{margin:0;background:#f4f7fb}.scheda-immagine-wrapper{max-width:900px;margin:1rem auto;padding:0 1rem}.special{background:#fff;border:1px solid #d7dee8;border-radius:8px;padding:10mm;box-shadow:0 4px 20px rgba(0,0,0,.12)}.sp-head{display:flex;align-items:center;gap:5mm;justify-content:center}.sp-head img{width:22mm;height:22mm;object-fit:contain}.sp-head h1{font:800 25px/1.08 "Trebuchet MS",Arial,sans-serif;color:#003366;margin:0;text-align:center}.sp-sub{text-align:center;font:700 13px Arial,sans-serif;margin:3mm 0}.helper{display:grid;grid-template-columns:2fr 1fr;gap:6mm;align-items:center}.helper svg{width:100%;height:auto;max-height:190mm}.bubble{border:2px dashed #003366;border-radius:999px;padding:5mm 3mm;margin:6mm 0;text-align:center;font:800 13px Arial,sans-serif;color:#003366}.foot{display:flex;justify-content:space-between;border-top:1px solid #b8c2cf;margin-top:4mm;padding-top:2mm;font:700 9px Arial,sans-serif;color:#334155}.@media print{body{background:#fff}.scheda-immagine-wrapper{max-width:100%;margin:0;padding:0}.special{box-shadow:none;border:0;border-radius:0;padding:5mm 6mm 3mm}.scheda-immagine-wrapper::after{content:"";display:block;height:12mm;margin-top:2mm;background:url("/images/footer-print-affiliazioni.png") no-repeat center/contain;-webkit-print-color-adjust:exact;print-color-adjust:exact;page-break-inside:avoid}@page{size:A4 portrait;margin:8mm}}</style>
 </head>
 <body>
   <div class="scheda-toolbar no-print">
@@ -31,26 +19,16 @@
     <button type="button" onclick="window.print()">🖨️ Stampa o salva come PDF</button>
   </div>
 
-  <main class="scheda-immagine-wrapper">
-    <h1 class="sr-only">Disegna il tuo aiutante — Infanzia</h1>
-    <div class="scheda-meta">
-      <span><strong>Destinatari:</strong> 3-6 anni</span>
-      <span><strong>Obiettivo:</strong> immaginare e disegnare il volontario di Protezione Civile</span>
-      <span><strong>Servono:</strong> matita, pennarelli o pastelli</span>
-    </div>
-    <p class="scheda-intro">
-      Guarda la sagoma tratteggiata del <strong>volontario di Protezione Civile</strong>. Ricalca il contorno con la matita, poi completalo come lo immagini tu: disegna gli <strong>occhi</strong>, la <strong>bocca</strong>, <strong>cosa tiene in mano</strong> e <strong>coloralo</strong> con i colori che preferisci.
-    </p>
-    <img src="scheda-completa.png"
-         alt="Scheda da colorare: disegna il tuo aiutante. In alto al centro il logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma. Titolo grande 'Disegna il tuo aiutante'. Sottotitolo 'Come immagini il volontario che ti aiuta? Disegnalo tu!'. A sinistra una silhouette tratteggiata di un volontario PC da ricalcare e completare: casco con triangolo PC accennato, gilet con scritta PC, occhi suggeriti da piccoli cerchi tratteggiati. A destra quattro ovali etichettati 'Occhi', 'Bocca', 'Cosa tiene in mano?', 'I colori' dove il bambino completa il personaggio con la propria fantasia. In basso 'Rev. 02 - Maggio 2026 - protezionecivilegenzano.it'.">
-    <div class="scheda-docente">
-      <strong>Per la maestra/maestro:</strong>
-      <ul style="margin: 0.3rem 0 0 1rem; padding: 0;">
-        <li>Attività di disegno libero guidato: avvicina il bambino alla figura del <strong>volontario</strong> in modo positivo e rassicurante (è una delle persone che ci aiutano nelle emergenze).</li>
-        <li>Dopo il disegno, far <strong>descrivere a voce</strong> il proprio aiutante: come si chiama, cosa fa, cosa tiene in mano.</li>
-        <li><strong>Estensione:</strong> appendere i disegni in classe e parlarne insieme; collegare al fatto che i volontari aiutano le persone quando c'è bisogno.</li>
-      </ul>
-    </div>
-  </main>
+  <main class="scheda-immagine-wrapper"><div class="special"><div class="sp-head"><img src="/images/logo-pc-genzano.png" alt="Logo del Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma"><h1>DISEGNA<br>IL TUO AIUTANTE</h1></div><p class="sp-sub">Come immagini il volontario che ti aiuta? Disegnalo tu!</p>
+<div class="helper"><svg viewBox="0 0 420 620" role="img" aria-label="Sagoma tratteggiata di un volontario da completare">
+<g fill="none" stroke="#444" stroke-width="6" stroke-dasharray="12 10" stroke-linecap="round" stroke-linejoin="round">
+<path d="M115 118 Q210 55 305 118 L282 170 Q210 145 138 170 Z"/><path d="M150 173 Q210 145 270 173 L260 220 Q210 245 160 220 Z"/>
+<circle cx="210" cy="235" r="66"/><path d="M150 315 Q210 285 270 315 L310 510 Q260 550 210 550 Q160 550 110 510 Z"/><path d="M145 335 L80 455 M275 335 L340 455"/><path d="M180 548 L165 610 M240 548 L255 610"/>
+</g>
+<path d="M180 210 Q210 195 240 210" fill="none" stroke="#999" stroke-width="4" stroke-dasharray="8 8"/>
+<text x="210" y="390" text-anchor="middle" font-family="Arial,sans-serif" font-size="38" font-weight="700" fill="#999">PC</text>
+<polygon points="210,92 224,116 196,116" fill="none" stroke="#999" stroke-width="4" stroke-dasharray="6 6"/>
+</svg><div><div class="bubble">OCCHI</div><div class="bubble">BOCCA</div><div class="bubble">COSA TIENE<br>IN MANO?</div><div class="bubble">I COLORI</div></div></div>
+<div class="foot"><span>protezionecivilegenzano.it</span><span>Rev. 03 · Ottobre 2026</span></div></div></main>
 </body>
 </html>
