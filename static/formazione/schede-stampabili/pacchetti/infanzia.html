@@ -2325,6 +2325,78 @@
 :where([id="scheda-blackout-infanzia"]) .bli-scelte { gap: 1.5rem; }
 }
 
+:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-attivita {
+      border: 2px dashed var(--scheda-bordo);
+      border-radius: 10px;
+      padding: 0.6rem 0.8rem;
+      margin: 0.5rem 0;
+      background: #fff;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-attivita h3 {
+      margin: 0 0 0.4rem 0;
+      font-size: 1.02rem;
+      color: var(--scheda-blu);
+    }
+:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-unisci {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 5rem;
+      row-gap: 0.4rem;
+      margin: 0.4rem auto;
+      max-width: 32rem;
+    }
+:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-unisci figure {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-unisci .dx figure { flex-direction: row-reverse; justify-content: flex-start; }
+:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-unisci img { width: 56px; height: 56px; flex-shrink: 0; }
+:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-unisci figcaption { font-size: 0.95rem; font-weight: 600; }
+:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-unisci .punto {
+      width: 0.9rem; height: 0.9rem; border-radius: 50%;
+      background: var(--scheda-blu); flex-shrink: 0;
+    }
+:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-zaino {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.6rem 1rem;
+      text-align: center;
+      margin: 0.4rem 0;
+    }
+:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-zaino figure { margin: 0; }
+:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-zaino img { width: 60px; height: 60px; display: block; margin: 0 auto 0.15rem auto; }
+:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-zaino figcaption { font-size: 0.95rem; font-weight: 600; }
+:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-medaglia {
+      width: 9.5rem; height: 9.5rem; margin: 0.4rem auto 0.2rem auto;
+      border: 3px dashed var(--scheda-blu); border-radius: 50%;
+    }
+:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-nastro { text-align: center; font-size: 0.9rem; color: var(--scheda-grigio); margin: 0 0 0.3rem 0; }
+:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-ricorda {
+      margin: 0.5rem 0; padding: 0.45rem 0.8rem; border: 2px solid var(--scheda-blu);
+      border-radius: 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 0.7rem;
+    }
+:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-ricorda img { width: 52px; height: 52px; flex-shrink: 0; }
+:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-insegnante {
+      margin-top: 0.6rem; padding: 0.5rem 0.85rem;
+      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
+      border-radius: 0 6px 6px 0; font-size: 0.8rem; color: #664d03; line-height: 1.45;
+    }
+:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-insegnante ul { margin: 0.3rem 0 0 1rem; padding: 0; }
+:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-attribuzione {
+      font-size: 0.72rem;
+      color: var(--scheda-grigio);
+      line-height: 1.4;
+      margin-top: 0.4rem;
+    }
+@media (max-width: 600px) {
+:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-unisci { column-gap: 2rem; }
+:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-zaino { grid-template-columns: repeat(2, 1fr); }
+}
+
 @page laboratorio26 { size: A4; margin: 5mm; }
 :where([id="scheda-la-mia-voce-arriva-anche-senza-parole-infanzia"]) .scheda-page:has(> .lab26-header) { page: laboratorio26; }
 :where([id="scheda-la-mia-voce-arriva-anche-senza-parole-infanzia"]) .lab26 { font-size: 14px; line-height: 1.4; }
@@ -3460,8 +3532,8 @@
   <header class="pacchetto-toolbar no-print" role="banner">
     <a href="/formazione/schede-stampabili/" aria-label="Torna alla hub delle schede stampabili">← Torna alle schede</a>
     <span class="pacchetto-titolo">Pacchetto stampa: Scuola dell'Infanzia · schede A4</span>
-    <button type="button" onclick="window.print()" aria-label="Apri la finestra di stampa per tutte le schede di Scuola dell'Infanzia (174 fogli A4)">
-      🖨️ Stampa tutto (174 fogli A4)
+    <button type="button" onclick="window.print()" aria-label="Apri la finestra di stampa per tutte le schede di Scuola dell'Infanzia (176 fogli A4)">
+      🖨️ Stampa tutto (176 fogli A4)
     </button>
   </header>
 
@@ -3469,7 +3541,7 @@
     <h1 id="pacchetto-intro-h1">Pacchetto stampa — Scuola dell'Infanzia</h1>
     <p>
       Questo pacchetto contiene tutte le <strong>schede stampabili</strong> della Scuola dell'Infanzia (3-6 anni):
-      in stampa occupa <strong>174 fogli A4</strong>.
+      in stampa occupa <strong>176 fogli A4</strong>.
       Premi <strong>"Stampa tutto"</strong> in alto (oppure <kbd>Ctrl+P</kbd> su Windows/Linux, <kbd>Cmd+P</kbd> su Mac)
       per aprire la finestra di stampa. Per archiviare in digitale scegli <em>"Salva come PDF"</em> come stampante.
     </p>
@@ -3538,6 +3610,7 @@
       <li><a href="#scheda-volontariato-ambiente-infanzia">VOLONTARIATO E AMBIENTE</a></li>
       <li><a href="#scheda-nodi-che-salvano-infanzia">I NODI CHE SALVANO</a></li>
       <li><a href="#scheda-blackout-infanzia">Quando va via la luce</a></li>
+      <li><a href="#scheda-nobel-che-ci-proteggono-infanzia">I Nobel che ci proteggono</a> <span class="toc-meta">· 2 fogli</span></li>
       <li><a href="#scheda-la-mia-voce-arriva-anche-senza-parole-infanzia">La mia voce arriva anche senza parole</a> <span class="toc-meta">· 2 fogli</span></li>
       <li><a href="#scheda-prima-ti-chiedo-infanzia">Prima ti chiedo</a> <span class="toc-meta">· 2 fogli</span></li>
       <li><a href="#scheda-la-consegna-si-puo-ripetere-infanzia">La consegna si può ripetere</a> <span class="toc-meta">· 2 fogli</span></li>
@@ -7986,6 +8059,137 @@
       <span>Scheda "Quando va via la luce" · Infanzia 3-6 anni · Rev. 01 - Agosto 2026</span>
     </footer>
 
+  </article>
+</section>
+
+<section id="scheda-nobel-che-ci-proteggono-infanzia" class="pacchetto-scheda" aria-label="Scheda: I Nobel che ci proteggono">
+  <article class="scheda-page">
+    <header class="scheda-header">
+      <div class="scheda-logo" aria-hidden="true">PC</div>
+      <div class="scheda-intestazione">
+        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
+        <h1 class="scheda-titolo-principale scheda-h1">I Nobel che ci proteggono</h1>
+        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola dell'Infanzia · 3-6 anni · da leggere con un adulto</div>
+      </div>
+    </header>
+
+    <div class="scheda-messaggio-chiave">
+      <strong>Per l'adulto che legge:</strong> ogni anno, in autunno, alcune persone ricevono un premio importante,
+      il premio Nobel, per scoperte che aiutano tutti. Alcune di quelle scoperte le usano anche i soccorritori:
+      la radio, la luce forte delle torce, l'idea di formare gruppi di volontari. Leggete insieme le domande,
+      poi il bambino fa le attività.
+    </div>
+
+    <h2 class="scheda-h2">Attività 1 — Unisci con una linea</h2>
+    <div class="nob-attivita">
+      <h3>A che cosa serve? Unisci ogni disegno a sinistra con il disegno giusto a destra.</h3>
+      <div class="nob-unisci">
+        <figure>
+          <img src="/pittogrammi/arasaac/torcia.png" alt="Pittogramma: torcia elettrica">
+          <figcaption>La torcia</figcaption>
+          <span class="punto" aria-hidden="true"></span>
+        </figure>
+        <div class="dx"><figure>
+          <img src="/pittogrammi/arasaac/ascoltare.png" alt="Pittogramma: persona che ascolta con la mano dietro l'orecchio">
+          <figcaption>Ascoltare</figcaption>
+          <span class="punto" aria-hidden="true"></span>
+        </figure></div>
+        <figure>
+          <img src="/pittogrammi/arasaac/radio.png" alt="Pittogramma: radio">
+          <figcaption>La radio</figcaption>
+          <span class="punto" aria-hidden="true"></span>
+        </figure>
+        <div class="dx"><figure>
+          <img src="/pittogrammi/arasaac/aiutare.png" alt="Pittogramma: una persona che aiuta un'altra">
+          <figcaption>Aiutare</figcaption>
+          <span class="punto" aria-hidden="true"></span>
+        </figure></div>
+        <figure>
+          <img src="/pittogrammi/arasaac/volontario.png" alt="Pittogramma: volontario che alza la mano, con il cartello ONG">
+          <figcaption>Il volontario</figcaption>
+          <span class="punto" aria-hidden="true"></span>
+        </figure>
+        <div class="dx"><figure>
+          <img src="/pittogrammi/arasaac/vedere.png" alt="Pittogramma: testa di profilo con una freccia davanti agli occhi, per dire vedere">
+          <figcaption>Vedere al buio</figcaption>
+          <span class="punto" aria-hidden="true"></span>
+        </figure></div>
+      </div>
+    </div>
+
+    <h2 class="scheda-h2">Attività 2 — Lo zaino di Tina</h2>
+    <div class="nob-attivita">
+      <h3>Tina la tartaruga prepara lo zaino per le emergenze con la sua famiglia. Cerchia le cose che mette nello zaino.</h3>
+      <div class="nob-zaino">
+        <figure>
+          <img src="/pittogrammi/arasaac/torcia.png" alt="Pittogramma: torcia elettrica">
+          <figcaption>Torcia</figcaption>
+        </figure>
+        <figure>
+          <img src="/pittogrammi/arasaac/candela.png" alt="Pittogramma: candela accesa">
+          <figcaption>Candela</figcaption>
+        </figure>
+        <figure>
+          <img src="/pittogrammi/arasaac/acqua.png" alt="Pittogramma: rubinetto da cui scorre l'acqua">
+          <figcaption>Acqua</figcaption>
+        </figure>
+        <figure>
+          <img src="/pittogrammi/arasaac/radio.png" alt="Pittogramma: radio">
+          <figcaption>Radio</figcaption>
+        </figure>
+        <figure>
+          <img src="/pittogrammi/arasaac/coperta.png" alt="Pittogramma: coperta">
+          <figcaption>Coperta</figcaption>
+        </figure>
+        <figure>
+          <img src="/pittogrammi/arasaac/fischietto.png" alt="Pittogramma: fischietto">
+          <figcaption>Fischietto</figcaption>
+        </figure>
+      </div>
+    </div>
+  </article>
+  <article class="scheda-page">
+    <h2 class="scheda-h2">Attività 3 — Una medaglia per chi aiuta</h2>
+    <div class="nob-attivita">
+      <h3>Il premio Nobel è una medaglia. Disegna dentro il cerchio una persona che ti aiuta: la mamma, il papà, la nonna, la maestra, un volontario…</h3>
+      <div class="nob-medaglia" role="img" aria-label="Cerchio vuoto in cui disegnare la medaglia"></div>
+      <p class="nob-nastro">La medaglia è per: ______________________________</p>
+    </div>
+
+    <div class="nob-ricorda">
+      <img src="/pittogrammi/arasaac/112.png" alt="Pittogramma: mano che compone il numero 112 su un telefono">
+      <span><strong>Ricorda:</strong> se c'è un pericolo, chiamo subito un adulto. Il numero per chiedere aiuto è il <strong>112</strong>: lo chiama l'adulto.</span>
+    </div>
+
+    <div class="nob-insegnante">
+      <strong>Per l'insegnante</strong>
+      <ul>
+        <li>Tempo: circa 30 minuti, con l'adulto che legge le consegne.</li>
+        <li>Cosa raccontare, in parole semplici: la radio senza fili deve molto agli esperimenti di Guglielmo Marconi, Nobel per la fisica nel 1909; le torce di oggi, con la loro luce bianca e forte, sono possibili grazie al LED blu, Nobel per la fisica nel 2014; Henry Dunant, primo premio Nobel per la pace nel 1901, ebbe l'idea di formare gruppi di volontari pronti ad aiutare.</li>
+        <li>Attività 2: la candela non va nello zaino perché la fiamma può fare un incendio. Quando manca la luce si usa la torcia, non la candela.</li>
+        <li>Attività 3: ogni disegno va bene. Lasciate che il bambino racconti chi ha scelto e perché.</li>
+        <li>Per approfondire con i più grandi: il dossier «I Nobel che ci proteggono» su protezionecivilegenzano.it/dossier/.</li>
+      </ul>
+    </div>
+
+    <div class="soluzione-capovolta">
+      <span class="titolo">Soluzioni (capovolte — per l'insegnante: gira il foglio)</span>
+      <p style="margin: 0;">
+        <strong>Attività 1:</strong> la torcia → vedere al buio · la radio → ascoltare · il volontario → aiutare.
+        <strong>Attività 2:</strong> nello zaino vanno torcia, acqua, radio, coperta e fischietto. La candela no.
+        <strong>Attività 3:</strong> risposta libera.
+      </p>
+    </div>
+
+    <p class="nob-attribuzione">
+      Pittogrammi: ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0.
+      Questa scheda eredita la stessa licenza.
+    </p>
+
+    <footer class="scheda-footer">
+      <span class="scheda-site">protezionecivilegenzano.it</span>
+      <span>Scheda "I Nobel che ci proteggono" · Infanzia 3-6 anni · rev. ottobre 2026</span>
+    </footer>
   </article>
 </section>
 
