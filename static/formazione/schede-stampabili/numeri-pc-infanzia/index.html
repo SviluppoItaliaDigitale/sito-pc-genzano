@@ -52,6 +52,15 @@
       border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
     }
     .istruzioni-maestra strong { color: #664d03; }
+  
+    .num-oggetti { display:flex; align-items:center; justify-content:center; gap:.22rem; letter-spacing:normal; }
+    .num-oggetti img { width:2.05rem; height:2.05rem; object-fit:contain; }
+    @media screen and (max-width:580px) {
+      .num-riga { grid-template-columns:3rem 3rem minmax(0,1fr); gap:.35rem; padding:.4rem; }
+      .num-riga-vuota { display:none; }
+      .num-ricalca, .num-modello { font-size:2.7rem; }
+      .num-oggetti img { width:1.6rem; height:1.6rem; }
+    }
   </style>
 </head>
 <body>
@@ -82,38 +91,38 @@
     </p>
 
     <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.5rem 0.8rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.92rem; line-height: 1.5;">
-      <strong style="color: var(--scheda-blu);">🔢 I numeri salvano la vita!</strong> Sai che il numero più importante della Protezione Civile è <strong>1, 1, 2</strong>? È il numero unico di emergenza europeo (NUE 112). Lo chiami quando ti serve aiuto: i pompieri, l'ambulanza, i carabinieri. Mentre impari a contare, ricorda questi <strong>tre numeri magici</strong>: 1-1-2.
+      <strong style="color: var(--scheda-blu);">I numeri salvano la vita!</strong> Sai che il numero più importante della Protezione Civile è <strong>1, 1, 2</strong>? È il numero unico di emergenza europeo (NUE 112). Lo chiami quando ti serve aiuto: i pompieri, l'ambulanza, i carabinieri. Mentre impari a contare, ricorda questi <strong>tre numeri magici</strong>: 1-1-2.
     </div>
 
     <div class="num-griglia">
       <div class="num-riga">
         <div class="num-ricalca" aria-hidden="true">1</div>
         <div class="num-modello" aria-hidden="true">1</div>
-        <div class="num-oggetti" aria-hidden="true">📞</div>
+        <div class="num-oggetti" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-n-telefono.png" alt=""></div>
         <span class="num-riga-vuota" aria-hidden="true"></span>
       </div>
       <div class="num-riga">
         <div class="num-ricalca" aria-hidden="true">2</div>
         <div class="num-modello" aria-hidden="true">2</div>
-        <div class="num-oggetti" aria-hidden="true">⛑️ ⛑️</div>
+        <div class="num-oggetti" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-c-casco.png" alt=""><img src="/pittogrammi/arasaac-bn/alf-c-casco.png" alt=""></div>
         <span class="num-riga-vuota" aria-hidden="true"></span>
       </div>
       <div class="num-riga">
         <div class="num-ricalca" aria-hidden="true">3</div>
         <div class="num-modello" aria-hidden="true">3</div>
-        <div class="num-oggetti" aria-hidden="true">🚒 🚒 🚒</div>
+        <div class="num-oggetti" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/dis-autopompa.png" alt=""><img src="/pittogrammi/arasaac-bn/dis-autopompa.png" alt=""><img src="/pittogrammi/arasaac-bn/dis-autopompa.png" alt=""></div>
         <span class="num-riga-vuota" aria-hidden="true"></span>
       </div>
       <div class="num-riga">
         <div class="num-ricalca" aria-hidden="true">4</div>
         <div class="num-modello" aria-hidden="true">4</div>
-        <div class="num-oggetti" aria-hidden="true">🔦 🔦 🔦 🔦</div>
+        <div class="num-oggetti" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/oca-torcia.png" alt=""><img src="/pittogrammi/arasaac-bn/oca-torcia.png" alt=""><img src="/pittogrammi/arasaac-bn/oca-torcia.png" alt=""><img src="/pittogrammi/arasaac-bn/oca-torcia.png" alt=""></div>
         <span class="num-riga-vuota" aria-hidden="true"></span>
       </div>
       <div class="num-riga">
         <div class="num-ricalca" aria-hidden="true">5</div>
         <div class="num-modello" aria-hidden="true">5</div>
-        <div class="num-oggetti" aria-hidden="true">🤝 🤝 🤝 🤝 🤝</div>
+        <div class="num-oggetti" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/dis-cuore.png" alt=""><img src="/pittogrammi/arasaac-bn/dis-cuore.png" alt=""><img src="/pittogrammi/arasaac-bn/dis-cuore.png" alt=""><img src="/pittogrammi/arasaac-bn/dis-cuore.png" alt=""><img src="/pittogrammi/arasaac-bn/dis-cuore.png" alt=""></div>
         <span class="num-riga-vuota" aria-hidden="true"></span>
       </div>
     </div>

@@ -94,6 +94,9 @@
     @media screen and (max-width: 580px) {
       .ri-griglia { grid-template-columns: 1fr; }
     }
+  
+    .ri-emoji img, .ri-emoji svg { width:3rem; height:3rem; display:block; margin:auto; object-fit:contain; }
+    .ri-emoji svg { fill:none; stroke:#111827; stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round; }
   </style>
 </head>
 <body>
@@ -126,15 +129,15 @@
     </p>
 
     <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.5rem 0.8rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.9rem; line-height: 1.5;">
-      <strong style="color: var(--scheda-blu);">🔤 Le parole della Protezione Civile</strong> di questa scheda iniziano con tante lettere diverse: <em>Ambulanza</em>, <em>Pompiere</em>, <em>Casco</em>, <em>Idrante</em>, <em>Radio</em>, <em>Mappa</em>… Imparare la lettera iniziale ti aiuta poi a riconoscere le parole nella scrittura. È un primo passo per leggere da solo!
+      <strong style="color: var(--scheda-blu);">Le parole della Protezione Civile</strong> di questa scheda iniziano con tante lettere diverse: <em>Ambulanza</em>, <em>Pompiere</em>, <em>Casco</em>, <em>Idrante</em>, <em>Radio</em>, <em>Mappa</em>… Imparare la lettera iniziale ti aiuta poi a riconoscere le parole nella scrittura. È un primo passo per leggere da solo!
     </div>
 
-    <div class="ri-consegna"><span class="icon" aria-hidden="true">✏️</span>Cerchia la lettera giusta:</div>
+    <div class="ri-consegna">Cerchia la lettera giusta:</div>
 
     <div class="ri-griglia">
 
       <div class="ri-cella">
-        <span class="ri-emoji" aria-hidden="true">⛑️</span>
+        <span class="ri-emoji" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-c-casco.png" alt=""></span>
         <div class="ri-parte-destra">
           <span class="ri-parola">CASCO</span>
           <div class="ri-opzioni">
@@ -146,7 +149,7 @@
       </div>
 
       <div class="ri-cella">
-        <span class="ri-emoji" aria-hidden="true">🚒</span>
+        <span class="ri-emoji" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/pop-sirena.png" alt=""></span>
         <div class="ri-parte-destra">
           <span class="ri-parola">SIRENA</span>
           <div class="ri-opzioni">
@@ -158,7 +161,7 @@
       </div>
 
       <div class="ri-cella">
-        <span class="ri-emoji" aria-hidden="true">🔥</span>
+        <span class="ri-emoji" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/pop-fuoco.png" alt=""></span>
         <div class="ri-parte-destra">
           <span class="ri-parola">FUOCO</span>
           <div class="ri-opzioni">
@@ -170,7 +173,7 @@
       </div>
 
       <div class="ri-cella">
-        <span class="ri-emoji" aria-hidden="true">📡</span>
+        <span class="ri-emoji" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-r-radio.png" alt=""></span>
         <div class="ri-parte-destra">
           <span class="ri-parola">RADIO</span>
           <div class="ri-opzioni">
@@ -182,7 +185,7 @@
       </div>
 
       <div class="ri-cella">
-        <span class="ri-emoji" aria-hidden="true">🗺️</span>
+        <span class="ri-emoji" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-m-mappa.png" alt=""></span>
         <div class="ri-parte-destra">
           <span class="ri-parola">MAPPA</span>
           <div class="ri-opzioni">
@@ -194,7 +197,7 @@
       </div>
 
       <div class="ri-cella">
-        <span class="ri-emoji" aria-hidden="true">🚪</span>
+        <span class="ri-emoji" aria-hidden="true"><img src="/pittogrammi/iso7010/uscita-emergenza-sinistra.svg" alt=""></span>
         <div class="ri-parte-destra">
           <span class="ri-parola">USCITA</span>
           <div class="ri-opzioni">
@@ -206,7 +209,7 @@
       </div>
 
       <div class="ri-cella">
-        <span class="ri-emoji" aria-hidden="true">🔦</span>
+        <span class="ri-emoji" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/oca-torcia.png" alt=""></span>
         <div class="ri-parte-destra">
           <span class="ri-parola">TORCIA</span>
           <div class="ri-opzioni">
@@ -218,7 +221,7 @@
       </div>
 
       <div class="ri-cella">
-        <span class="ri-emoji" aria-hidden="true">🤝</span>
+        <span class="ri-emoji" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/dis-adulto-bambino.png" alt=""></span>
         <div class="ri-parte-destra">
           <span class="ri-parola">AIUTO</span>
           <div class="ri-opzioni">
@@ -230,7 +233,7 @@
       </div>
 
       <div class="ri-cella">
-        <span class="ri-emoji" aria-hidden="true">🎒</span>
+        <span class="ri-emoji" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-z-zaino.png" alt=""></span>
         <div class="ri-parte-destra">
           <span class="ri-parola">ZAINO</span>
           <div class="ri-opzioni">
@@ -242,7 +245,7 @@
       </div>
 
       <div class="ri-cella">
-        <span class="ri-emoji" aria-hidden="true">🏥</span>
+        <span class="ri-emoji" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="10" y="16" width="44" height="38" rx="3"/><rect x="27" y="37" width="10" height="17"/><path d="M32 20v12M26 26h12"/><rect x="16" y="36" width="7" height="7"/><rect x="41" y="36" width="7" height="7"/></svg></span>
         <div class="ri-parte-destra">
           <span class="ri-parola">OSPEDALE</span>
           <div class="ri-opzioni">
