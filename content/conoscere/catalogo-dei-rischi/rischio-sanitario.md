@@ -40,7 +40,7 @@ Fonte: Organizzazione Mondiale della Sanità (OMS); ISS; ECDC.
 
 Contro le emergenze sanitarie collettive la difesa è la **preparazione** (*preparedness*). Gli strumenti principali sono:
 
-- il **Piano pandemico nazionale**, aggiornato periodicamente dal Ministero della Salute, che definisce come prepararsi e rispondere a una pandemia;
+- il **Piano pandemico nazionale 2025-2029**, approvato da Stato e Regioni il 30 aprile 2026, che definisce come prepararsi e rispondere a una pandemia da patogeni respiratori ([testo nella Gazzetta Ufficiale](https://www.gazzettaufficiale.it/eli/id/2026/06/15/26A02859/sg));
 - la **sorveglianza epidemiologica** continua, in Italia coordinata dall'**Istituto Superiore di Sanità (ISS)** e a livello europeo dal **Centro europeo per la prevenzione e il controllo delle malattie (ECDC)**;
 - le **misure di sanità pubblica**: igiene, vaccinazioni, tracciamento dei contagi, comunicazione corretta alla popolazione.
 

@@ -41,6 +41,7 @@ Strumenti: lettura di `hugo.toml [[menus.main]]`, `data/quick_links.yaml`, parti
 - Niente **vicoli ciechi**: ogni pagina ha «torna a», correlati o «vedi anche»; i link «Contenuto non ancora disponibile» sono ammessi solo per articoli calendarizzati.
 - Hub e cataloghi: ordinati per compito dell'utente, non per cronologia del repo; filtri con stato iniziale chiaro; niente conteggi inventario.
 - Doppioni: la stessa informazione in due pagine deve avere una pagina canonica e l'altra che rimanda (con `pc-coerenza-trasversale`).
+- **Indirizzi scritti a intuito** (dal 07/10/2026): prova sul sito vero gli indirizzi che un cittadino scriverebbe senza passare dal menu, cioè il nome di ogni voce di primo livello e i sinonimi più ovvi (`/volontariato/`, `/meteo/`, `/allerta/`, `/emergenze/`, `/contatto/`). Ognuno deve rispondere 200 o portare con un 301 alla pagina giusta (`RedirectMatch` in `.htaccess`, rule 05), poi va aggiunto alla lista di `scripts/smoke-test-live.sh` § 4-bis. Nasce da un audit esterno che ha trovato `/volontariato/` in 404: i controlli del sito provavano solo gli indirizzi linkati, non quelli che la gente scrive.
 
 ### 3. Mobile e stress
 

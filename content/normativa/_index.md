@@ -26,6 +26,15 @@ Il Codice definisce:
 
 [Approfondisci il Codice della protezione civile](/normativa/testo-unico-protezione-civile/)
 
+## Il piano pandemico nazionale
+
+Per le pandemie da virus e batteri a trasmissione respiratoria vale il piano nazionale 2025-2029. Il nome ufficiale è **Piano strategico operativo di preparazione e risposta ad una pandemia da patogeni a trasmissione respiratoria a maggiore potenziale pandemico 2025-2029**.
+
+È stato approvato con l'Accordo tra Stato e Regioni del 30 aprile 2026 (Rep. atti n. 50/CSR). È pubblicato nella *Gazzetta Ufficiale* n. 136 del 15 giugno 2026 (Supplemento Ordinario n. 25). Sostituisce il piano pandemico influenzale PanFlu 2021-2023. Ogni Regione lo recepisce con un proprio atto.
+
+- [Testo integrale nella Gazzetta Ufficiale](https://www.gazzettaufficiale.it/eli/id/2026/06/15/26A02859/sg)
+- [Che cosa prevede il nuovo piano](/comunicazioni/2026-07-29-piano-pandemico-2025-2029-in-vigore/)
+
 ## Il ruolo del Comune
 
 Ogni Comune deve dotarsi di un **Piano comunale di protezione civile**. Il Piano individua i rischi del territorio, le aree di emergenza, le procedure operative e le funzioni di supporto.

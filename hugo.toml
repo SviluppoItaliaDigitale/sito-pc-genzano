@@ -551,11 +551,8 @@ home = ["HTML", "RSS", "JSON", "BUILDINFO", "NEWSSITEMAP", "CAP"]
 
 # Sitemap
 [sitemap]
-  changefreq = "weekly"
-  priority = 0.5
   filename = "sitemap.xml"
 
-# Sitemap — priorità per sezione (override del default 0.5)
 [frontmatter]
   date = ["date"]
   lastmod = [":git", "lastmod", ":fileModTime"]

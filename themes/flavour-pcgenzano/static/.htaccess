@@ -119,6 +119,17 @@ RedirectMatch 301 ^/formazione/schede-stampabili/natura-sara-e-il-cane-al-parco-
 RedirectMatch 301 ^/formazione/schede-stampabili/oggetti-la-storia-di-leo-al-parco-infanzia(/.*)?$ https://www.protezionecivilegenzano.it/formazione/schede-stampabili/oggetti-la-storia-di-elio-al-parco-infanzia/
 RedirectMatch 301 ^/formazione/schede-stampabili/casa-nina-e-la-pentola-infanzia(/.*)?$ https://www.protezionecivilegenzano.it/formazione/schede-stampabili/casa-maria-e-la-pentola-infanzia/
 
+# Indirizzi che un cittadino scrive a mano, "a intuito" (audit esterno del
+# 07/10/2026: /volontariato/ dava 404). Solo l'indirizzo esatto, con o senza
+# barra finale: le sottopagine non vengono toccate. Prima di aggiungerne uno,
+# controllare che la pagina non esista nella build.
+RedirectMatch 301 ^/(volontariato|volontari|volontario)/?$ https://www.protezionecivilegenzano.it/diventa-volontario/
+RedirectMatch 301 ^/(piano-di-emergenza|piano-emergenza-comunale)/?$ https://www.protezionecivilegenzano.it/piano-emergenza/
+RedirectMatch 301 ^/(allerta|allerte|meteo)/?$ https://www.protezionecivilegenzano.it/allerte-meteo/
+RedirectMatch 301 ^/emergenze/?$ https://www.protezionecivilegenzano.it/emergenza/
+RedirectMatch 301 ^/contatto/?$ https://www.protezionecivilegenzano.it/contatti/
+RedirectMatch 301 ^/(numeri|numeri-emergenza)/?$ https://www.protezionecivilegenzano.it/numeri-utili/
+
 # Pagine HTML standalone del vecchio sito senza corrispondenza diretta —
 # 410 Gone (rimossa) così Google le toglie subito.
 RedirectMatch 410 ^/galleria\.html$
