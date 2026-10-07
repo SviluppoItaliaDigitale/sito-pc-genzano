@@ -1,15 +1,15 @@
 {
-  "aggiornato": "2026-10-07T07:03",
+  "aggiornato": "2026-10-07T08:04",
   "data_lunga": "mercoledì 7 ottobre 2026",
-  "aggiornato_label": "mercoledì 7 ottobre 2026, ore 07:03",
+  "aggiornato_label": "mercoledì 7 ottobre 2026, ore 08:04",
   "alba": "07:12",
   "tramonto": "18:40",
   "corrente": {
-    "temp": 16.9,
-    "percepita": 16.7,
+    "temp": 17.8,
+    "percepita": 17.8,
     "cielo": "Coperto",
     "icona": "<g><g><ellipse cx=\"28.0\" cy=\"33.6\" rx=\"25.8\" ry=\"12.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"16.8\" cy=\"28.0\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"36.8\" cy=\"25.6\" r=\"9.9\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/><circle cx=\"28.0\" cy=\"20.8\" r=\"11.5\" fill=\"#cfd8e0\" stroke=\"#9aa7b4\" stroke-width=\"1\"/></g></g>",
-    "umidita": 78,
+    "umidita": 77,
     "vento": 8,
     "raffiche": 34
   },
@@ -21,9 +21,9 @@
       "tmax": 22,
       "tmin": 16,
       "pioggia": 45,
-      "pioggia_mm": 0.9,
-      "raffiche": 51,
-      "uv": 4,
+      "pioggia_mm": 0.7,
+      "raffiche": 58,
+      "uv": 5,
       "uv_label": "moderato"
     },
     {
@@ -33,7 +33,7 @@
       "tmax": 19,
       "tmin": 17,
       "pioggia": 88,
-      "pioggia_mm": 32.1,
+      "pioggia_mm": 42.1,
       "raffiche": 77,
       "uv": 5,
       "uv_label": "moderato"
