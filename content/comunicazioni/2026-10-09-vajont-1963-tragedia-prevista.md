@@ -38,7 +38,7 @@ Le segnalazioni furono **minimizzate o ignorate**. Le decisioni operative furono
 
 ## La diga che resistette
 
-Paradossalmente la diga **non cedette**: è ancora lì, integra, visibile ancora oggi. La tragedia fu causata dalla **frana**, non da un cedimento strutturale. Questo rende il quadro ancora più amaro: l'opera ingegneristica ha retto, ma le segnalazioni degli esperti e degli abitanti — già ricordate sopra — non sono bastate a salvare chi viveva a valle.
+Paradossalmente la diga **non cedette**: è ancora lì, integra, visibile oggi. La tragedia fu causata dalla **frana**, non da un cedimento strutturale. Questo rende il quadro ancora più amaro: l'opera ingegneristica ha retto, ma le segnalazioni degli esperti e degli abitanti — già ricordate sopra — non sono bastate a salvare chi viveva a valle.
 
 ## Cosa ci insegna oggi
 
