@@ -365,7 +365,7 @@
       margin: 0.6rem 0;
     }
 :where([id="scheda-mappa-rischi-secondaria"]) .mr-leg-item {
-      padding: 0.3rem 0.5rem;
+      padding: 0.3rem 0.5rem; display:flex; align-items:center; gap:.45rem;
       background: #f8f9fa;
       border-radius: 6px;
       border-left: 3px solid var(--scheda-blu);
@@ -3129,14 +3129,14 @@ secondo quanto previsto dal piano di emergenza.</div>
     <p>Su un foglio bianco (o sulla griglia qui sotto) disegna il tuo quartiere/paese e segna con i simboli i rischi che hai trovato:</p>
 
     <div class="mr-legenda">
-      <div class="mr-leg-item">⚠️ <strong>Frana</strong>: pendio instabile, smottamento</div>
-      <div class="mr-leg-item">🌊 <strong>Allagamento</strong>: zona dove l'acqua si ferma</div>
-      <div class="mr-leg-item">🔥 <strong>Incendio</strong>: bosco, sterpaglia</div>
-      <div class="mr-leg-item">🌋 <strong>Vulcanico</strong>: area Colli Albani</div>
-      <div class="mr-leg-item">⚡ <strong>Sismico</strong>: edificio non antisismico</div>
-      <div class="mr-leg-item">🚧 <strong>Antropico</strong>: depositi, strada pericolosa</div>
-      <div class="mr-leg-item">🏞️ <strong>Area sicura</strong>: punto di raccolta</div>
-      <div class="mr-leg-item">🚪 <strong>Uscita</strong>: via di fuga del quartiere</div>
+      <div class="mr-leg-item"><img src="/pittogrammi/iso7010/pericolo-generico.svg" alt="" aria-hidden="true" style="width:1.45rem;height:1.45rem;object-fit:contain;flex:0 0 auto;"><strong>Frana</strong>: pendio instabile, smottamento</div>
+      <div class="mr-leg-item"><img src="/pittogrammi/arasaac-bn/alf-f-fiume.png" alt="" aria-hidden="true" style="width:1.45rem;height:1.45rem;object-fit:contain;flex:0 0 auto;"><strong>Allagamento</strong>: zona dove l'acqua si ferma</div>
+      <div class="mr-leg-item"><img src="/pittogrammi/arasaac-bn/pop-fuoco.png" alt="" aria-hidden="true" style="width:1.45rem;height:1.45rem;object-fit:contain;flex:0 0 auto;"><strong>Incendio</strong>: bosco, sterpaglia</div>
+      <div class="mr-leg-item"><span aria-hidden="true" style="font-weight:900;font-size:1.1rem;color:#7c2d12;">▲</span><strong>Vulcanico</strong>: area Colli Albani</div>
+      <div class="mr-leg-item"><img src="/pittogrammi/arasaac-bn/alf-t-terremoto.png" alt="" aria-hidden="true" style="width:1.45rem;height:1.45rem;object-fit:contain;flex:0 0 auto;"><strong>Sismico</strong>: edificio non antisismico</div>
+      <div class="mr-leg-item"><img src="/pittogrammi/iso7010/pericolo-generico.svg" alt="" aria-hidden="true" style="width:1.45rem;height:1.45rem;object-fit:contain;flex:0 0 auto;"><strong>Antropico</strong>: depositi, strada pericolosa</div>
+      <div class="mr-leg-item"><img src="/pittogrammi/iso7010/punto-raccolta.svg" alt="" aria-hidden="true" style="width:1.45rem;height:1.45rem;object-fit:contain;flex:0 0 auto;"><strong>Area sicura</strong>: punto di raccolta</div>
+      <div class="mr-leg-item"><img src="/pittogrammi/iso7010/uscita-emergenza-sinistra.svg" alt="" aria-hidden="true" style="width:1.45rem;height:1.45rem;object-fit:contain;flex:0 0 auto;"><strong>Uscita</strong>: via di fuga del quartiere</div>
     </div>
 
     <div class="mr-mappa"></div>
