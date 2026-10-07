@@ -74,6 +74,16 @@ Quando il perimetro lo richiede aggiungi `pc-normative-verifier` (norme), `pc-co
 
 Nell'audit **completo mensile** invochi tutti gli specialisti della tabella; nell'audit **mirato** solo quelli del perimetro, dicendo nel rapporto quali hai escluso e perché.
 
+### Fase 2-bis — Il sito visto da fuori (dal 07/10/2026)
+
+Le fasi 1 e 2 guardano il sito **da dentro**: controllano ciò che il sito stesso dichiara e collega. Un auditor esterno lo guarda **da fuori**, come un visitatore che non conosce la struttura, e trova ciò che da dentro non si vede. Il 07/10/2026 un audit esterno ha trovato `/volontariato/` in 404 e una sitemap con indicazioni che i motori ignorano, mentre ogni controllo interno era verde. Questa fase si fa sempre, sul sito vero e non sulla build:
+
+1. **Indirizzi scritti a mano**: il nome di ogni voce del menu di primo livello, delle sezioni principali e dei sinonimi ovvi (`/volontariato/`, `/meteo/`, `/scuole/`, `/scuola/`, `/kit/`, `/rischi/`, `/terremoto/`, `/incendi/`…). Ognuno risponde 200 o porta con un 301 alla pagina giusta; un 404 è un rilievo P2, e la correzione entra anche in `scripts/smoke-test-live.sh` § 4-bis.
+2. **File che leggono i motori e le macchine**: `robots.txt`, `sitemap.xml`, `news-sitemap.xml`, `allerta-cap.xml`, `llms.txt`, confrontati con le linee guida **attuali** di Google, Bing e degli standard (non con quelle di quando sono stati scritti).
+3. **Le decisioni del passato**: una scelta documentata non è giusta per il solo fatto di essere documentata. Ogni mese se ne riprendono almeno tre fra rules e manuale e ci si chiede se valgono ancora (standard cambiati, servizi chiusi, abitudini degli utenti).
+4. **I debiti dichiarati**: ciò che il sito ammette di non fare ancora (PDF non accessibili nella dichiarazione di accessibilità, conformità «parziale», funzioni annunciate) si elenca con una proposta e una data. Un debito dichiarato da mesi senza piano è un rilievo.
+5. **Una passata da auditor terzo**: leggi home, comunicazioni, piano di emergenza, area download, privacy, accessibilità come se non conoscessi il repository, e scrivi quello che un esperto esterno scriverebbe, comprese le opinioni (che nel rapporto restano «raccomandazioni motivate», non difetti).
+
 ### Fase 3 — Consolidamento
 
 1. Unisci i risultati; **elimina i duplicati** (lo stesso difetto visto da due agenti è un rilievo solo).
