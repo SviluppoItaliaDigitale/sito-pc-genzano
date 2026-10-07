@@ -159,7 +159,7 @@ Se il diff contiene righe `+image:` / `-image:` (anche solo `image_alt:`) e l'ut
 
 ## Nomi dei nostri mezzi, attrezzature e dotazioni — verifica dalla fonte canonica
 
-🔴 **Regola cogente** quando un articolo cita un **mezzo, un'attrezzatura o una dotazione in uso al Gruppo Comunale** (autocarro, autobotte, modulo AIB, fuoristrada, tenda sociale, generatore, radio, DPI, attrezzature manuali): **prima di scrivere il nome, verifica la denominazione tecnica ufficiale in `content/chi-siamo/_index.md` § "I nostri mezzi"** (sezione card con `<i class="bi bi-truck">`).
+🔴 **Regola cogente** quando un articolo cita un **mezzo, un'attrezzatura o una dotazione in uso al Gruppo Comunale** (autocarro, autobotte, modulo AIB, fuoristrada, tenda sociale, generatore, radio, DPI, attrezzature manuali): **prima di scrivere il nome, verifica la denominazione tecnica ufficiale in `content/chi-siamo/_index.md` § "Mezzi e attrezzature principali"** (sezione card con `<i class="bi bi-truck">`).
 
 **Why:** la scritta sulla **livrea** è quasi sempre una **classificazione di sistema** del Servizio Nazionale/Regionale di PC (es. *"Regione Lazio - Protezione Civile - Colonna Mobile - Volontariato"*), **non** il modello tecnico. Confonderli produce un articolo tecnicamente sbagliato anche se "letterale" rispetto alla foto.
 

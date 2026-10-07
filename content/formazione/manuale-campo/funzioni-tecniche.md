@@ -31,7 +31,7 @@ Collegamenti "ad hoc" tra squadre di organizzazioni diverse o tra due postazioni
 
 ### Bande di frequenza
 
-Lo spazio radio destinato alla protezione civile è **limitato**. Il DPC — d'intesa con il Ministero dello Sviluppo Economico — assegna bande dedicate. I volontari del Gruppo Comunale utilizzano apparati **programmati su canali autorizzati**: modifiche autonome sono vietate per legge (D.Lgs. 259/2003 — Codice delle comunicazioni elettroniche).
+Lo spazio radio destinato alla protezione civile è **limitato**. Il DPC — d'intesa con il Ministero delle Imprese e del Made in Italy (MIMIT, già Ministero dello Sviluppo Economico) — assegna bande dedicate. I volontari del Gruppo Comunale utilizzano apparati **programmati su canali autorizzati**: modifiche autonome sono vietate per legge (D.Lgs. 259/2003 — Codice delle comunicazioni elettroniche).
 
 Bande tipiche:
 

@@ -44,14 +44,19 @@ Il tuo principio guida: **prima rispondi al cittadino sul tuo sito, poi rinvialo
 ### Kit Calamità (cittadino in difficoltà — voce "Per il Cittadino")
 - `/formazione/kit-calamita/` — hub generale
 - `/formazione/kit-calamita-anziani/` — anziano in casa
-- `/formazione/kit-calamita-caregiver-familiari/` — caregiver
-- `/formazione/kit-calamita-disabilita-adulti/` — adulti con disabilità
+- `/formazione/kit-calamita-bambini/` — bambini
+- `/formazione/kit-calamita-neonati/` — neonati e prima infanzia (0-3 anni)
 - `/formazione/kit-calamita-gravidanza/` — gravidanza e neomamme
-- `/formazione/kit-calamita-italiano-l2/` — parlanti italiano L2
-- `/formazione/kit-calamita-rsa/` — RSA
-- `/formazione/kit-calamita-strutture-sanitarie/`
-- `/formazione/kit-calamita-volontari/`
-- `/formazione/kit-fragilita-vulnerabilita/` — neonati, bambini fragili
+- `/formazione/kit-calamita-disabilita-adulti/` — adulti con disabilità
+- `/formazione/kit-calamita-caregiver-familiari/` — caregiver familiari
+- `/formazione/kit-calamita-terapie-salvavita/` — pazienti con terapie salvavita continuative
+- `/formazione/kit-calamita-strutture-sanitarie/` — RSA, lungodegenze, hospice, ospedali geriatrici
+- `/formazione/kit-calamita-animali/` — animali domestici in evacuazione
+- `/formazione/kit-calamita-italiano-l2/` — persone straniere e parlanti italiano L2
+- `/formazione/kit-calamita-senza-fissa-dimora/` — persone senza fissa dimora
+- `/formazione/kit-calamita-volontari-pc/` — auto-cura dei volontari di Protezione Civile
+- `/formazione/kit-fragilita-vulnerabilita/` — pagina di raccordo fra i kit per le diverse fragilità
+- Pagine di solo rinvio, da non usare come destinazione: `/formazione/kit-calamita-animali-domestici/` (rimanda al kit animali) e `/formazione/kit-calamita-gravidanza-neonati/` (rimanda ai kit gravidanza e neonati). Linka direttamente il kit di arrivo.
 - (verifica con `ls content/formazione/` per l'elenco aggiornato)
 
 ### Kit didattici per scuole

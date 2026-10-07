@@ -34,7 +34,13 @@ a) **Naming**: il filename deve essere **diverso dallo slug dell'articolo**. Pat
 
 b) **Fascia blu istituzionale**: applica con `bash scripts/applica-fascia-foto.sh <file-sorgente> <nome-output-senza-ext>`. Il wrapper chiama Python+Pillow (no ImageMagick — vedi `feedback_pillow_vs_imagemagick_ci.md`). Output WebP 1200px max 200KB in `static/images/`.
 
-c) **Inserimento corpo articolo**: shortcode `{{< foto >}}` con `src`, `alt` significativo (mai stringa vuota o "Immagine di..."), `caption` opzionale.
+c) **Read multimodale della foto prima di scrivere alt e caption**: apri ogni foto con Read e descrivi **solo ciò che si vede** (persone, oggetti, divise, mezzi, scritte leggibili). Mai inferenze dal testo dell'articolo o dai materiali che accompagnano il task (CLAUDE.md § "Foto utente e banner", regola 2).
+
+d) **Attribuzione di default**: le foto fornite dall'utente si attribuiscono a «Foto: Gruppo Comunale Volontari di Protezione Civile di Genzano di Roma». Mai a terzi (FEPIVOL, Comune, DPC) solo perché nel task compaiono loro testi; eccezioni solo con evidenza certa (nome file da profilo social di terzi, fonti come Wikimedia/NASA/USGS/NOAA, foto storiche con autore noto).
+
+e) **Nomi di mezzi ed entità**: se la foto mostra un mezzo o un'attrezzatura del Gruppo, il nome nel corpo, nella caption e nei `social_punti` è quello di `content/chi-siamo/_index.md`, sezione «Mezzi e attrezzature principali»: la scritta sulla livrea non è il modello (rule 02 § "Nomi dei nostri mezzi"). Ogni associazione, ente o sigla citata nella caption va verificata con WebFetch sul sito ufficiale; se non è verificabile, si cita la sigla come compare nella fonte, senza scioglierla a indovinare.
+
+f) **Inserimento corpo articolo**: shortcode `{{< foto >}}` con `src`, `alt` significativo (mai stringa vuota o "Immagine di..."), `caption` opzionale.
 
 ```go-html-template
 {{< foto src="/images/AAAA-MM-GG-descrizione.webp"
@@ -49,7 +55,7 @@ Se l'articolo è una **memoria/anniversario/articolo storico** (≥5 H2, eventi 
 - 2ª foto → dopo il **2° H2**
 - 3ª+ → sull'H2 di ogni evento specifico citato
 
-Se l'articolo ha **≥4 foto** → galleria automatica via `galleria-auto.js` (ogni `<p><img></p>` consecutivo viene marcato `.is-galleria-pair` e affiancato dal CSS).
+Se l'articolo ha **≥4 foto** → avvolgi le `{{< foto >}}` nello shortcode `{{< galleria >}}` … `{{< /galleria >}}` (carosello accessibile, avanzamento solo manuale; rule `04a-hugo-shortcode-partial.md` § "Componenti Bootstrap Italia"). Non è automatico: `galleria-auto.js` affianca soltanto coppie di `<p><img></p>` consecutivi e non sostituisce lo shortcode.
 
 Convenzione: `02-content-design-pa.md` § "Posizionamento di foto multiple in articoli storici".
 
@@ -66,8 +72,13 @@ Convenzione: `02-content-design-pa.md` § "Posizionamento di foto multiple in ar
    - WebFetch "https://it.wikipedia.org/wiki/<Titolo>" prompt: "elenca URL immagini sostanziali"
    - WebFetch "https://commons.wikimedia.org/wiki/File:<Nome>.jpg" prompt: "autore + licenza esatta"
 
-2. curl per scaricare full-size in /tmp:
-   curl -sL "https://upload.wikimedia.org/wikipedia/commons/X/XX/Nome.jpg" -o /tmp/foto.jpg
+2. curl per scaricare in /tmp, sempre con User-Agent identificativo
+   (senza, Wikimedia risponde 429):
+   curl -sL -A "PCGenzanoBot/1.0 (https://www.protezionecivilegenzano.it/)" \
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/X/XX/Nome.jpg/1920px-Nome.jpg" -o /tmp/foto.jpg
+   Sui 429 riprova con attesa lunga (20-25 s fra i tentativi, 10-15 s fra un file
+   e l'altro, 3-5 tentativi). Le miniature solo a larghezze standard (es. 1920px-),
+   oppure Special:FilePath/<File>?width=1800.
 
 3. Applica fascia blu istituzionale (output WebP 1200px, max 200KB):
    bash scripts/applica-fascia-foto.sh /tmp/foto.jpg <slug-foto-DIVERSO-da-slug-articolo>
@@ -81,7 +92,11 @@ Convenzione: `02-content-design-pa.md` § "Posizionamento di foto multiple in ar
 
 **Naming file output (regola critica)**: il `<slug-foto>` deve essere **diverso dallo slug dell'articolo**, altrimenti sovrascrive la cover tipografica del banner. Esempio: per articolo `2026-05-03-radiocomunicazioni-emergenza-volontari.md` → foto in `2026-05-03-postazione-radioamatoriale-wikipedia.webp` (suffisso descrittivo, non slug).
 
-**Per i sandbox bloccati**: i domini Wikimedia/NASA/USGS sono whitelistati di default in `.claude/settings.local.json` se l'utente ha completato il setup di rule 08. Se la `curl` fallisce per "Host not in allowlist", chiedi all'utente di aggiungere il dominio + riavviare Claude Code.
+**Rete e sandbox** (rule `08-claude-code-setup.md` § "Sandbox CLOUD vs sandbox LOCALE", aggiornamento 16/08/2026):
+- **Sessione cloud con agent proxy** (variabile `HTTPS_PROXY`, CA in `/root/.ccr/`): Wikimedia si scarica direttamente, con User-Agent identificativo e backoff lungo sui 429 come sopra. NASA, USGS, NOAA e stock non sono stati ritestati da questo ambiente: prova il download prima di darlo per scontato.
+- **Sessione locale sul PC dell'utente**: i domini sono nell'allowlist di `.claude/settings.local.json` se il setup di rule 08 è completo. Solo in questo caso, se `curl` fallisce per "Host not in allowlist", chiedi all'utente di aggiungere il dominio e riavviare Claude Code (in cloud quel file non viene letto).
+
+**Read multimodale anche qui**: prima di scrivere alt e caption apri la foto scaricata con Read; la caption descrive ciò che si vede, la provenienza va nel credito.
 
 **Verifica licenza prima di scaricare**: ogni fonte ha vincoli diversi. Wikimedia Commons usa CC BY-SA / CC BY / PD-shape / CC0 — in tutti i casi l'attribuzione (autore + licenza + link Commons) è obbligatoria nella caption. Per CC BY-SA, ricorda che l'opera derivata (se ne fai una) eredita la licenza share-alike.
 
@@ -111,12 +126,13 @@ Quando l'utente ti fornisce 1+ foto da aggiungere a un articolo già pubblicato:
           sovrascrivere.
    ```
 
-3. **Rigenera carosello Instagram** (e story) dopo aver aggiornato le foto:
+3. **Social: cosa si può ancora cambiare.** Instagram e Facebook pubblicano da soli dal repo privato `social-pc-genzano` appena l'articolo è online (CLAUDE.md § "Pubblicazione automatica social"). Le **immagini dei post già usciti non si cambiano**, né su Instagram né su Facebook: una foto aggiunta dopo l'uscita entra solo nei post successivi. Se il post non è ancora uscito, rigenera le immagini perché la nuova foto entri nel carosello:
    ```bash
    python3 scripts/genera-immagini-social.py --force content/comunicazioni/<slug>.md
    ```
+   Se è già uscito, non rigenerare per «aggiornare» il post: riferisci all'utente che la foto resta solo sul sito. Su Facebook si può riscrivere il solo testo con `scripts/modifica-post.py fb-testo` del repo privato (manuale parte 42); su Instagram nemmeno il testo.
 
-4. **Testi social** (`x.txt`, `facebook.txt`, ecc.) sono rigenerati dal workflow CI `genera-social-bozze.yml` al prossimo push (richiede `GEMINI_API_KEY`), oppure dal PC utente con quella chiave in env. Dalla sandbox cloud non sono accessibili.
+4. **Testi social** (`x.txt`, `facebook.txt`, ecc.) sono generati dal workflow `genera-social-bozze.yml` (Gemini, con testi di riserva dal frontmatter se non risponde): valgono per i post non ancora usciti.
 
 ### Errore tipico da NON ripetere (incident 16/05/2026)
 
@@ -125,6 +141,10 @@ Quando l'utente ti fornisce 1+ foto da aggiungere a un articolo già pubblicato:
 Fix nello script (16/05/2026, v2): funzione `has_brand_band()` campiona pixel a **98% h E 80% h**, valuta delta, è idempotente. Detection robusta.
 
 **Tu come agent**: non rifare il pixel-check a mano nei tuoi prompt. **Fidati dello script**: applica e leggi il messaggio `[skip]` o `[ok]`. Se vedi `[skip]`, riporta all'utente che la foto era già con fascia e niente è stato modificato.
+
+## Controllo finale — pc-photo-caption-verifier
+
+Il via libera su alt, caption e attribuzione non lo dai tu: spetta a `pc-photo-caption-verifier`, richiamato da `pc-article-reviewer` su ogni articolo con `{{< foto >}}`. Se hai lo strumento Agent, invocalo al termine del tuo lavoro. Se non lo hai, leggi `.claude/agents/pc-photo-caption-verifier.md` ed esegui tu i suoi controlli essenziali, scrivendo nel rapporto che il gate è stato eseguito a mano; se non riesci, scrivi nel rapporto "gate pc-photo-caption-verifier da eseguire dalla sessione principale". Mai saltare un gate in silenzio.
 
 ## DIVIETI
 
@@ -144,7 +164,7 @@ Prima di toccare ≥5 articoli/foto in una passata: **fermati**, cita le rules p
 - **Foto di bambini con volti riconoscibili** in articoli di emergenza/incidente: GDPR + dignità del minore. Sempre sfocare i volti o scegliere foto di repertorio (con liberatoria) o paesaggi.
 - **Foto di vittime, sangue, danni a persone**: mai pubblicate nemmeno per "drammatizzare" l'allerta. La comunicazione del rischio efficace lavora sulla *prevenzione* prima dell'evento, non sulla *paura* durante.
 - **Foto stock con watermark visibile** (Shutterstock/Getty): immagine pirata, danno reputazionale + rischio legale. Solo fonti free-license documentate (Wikimedia Commons CC, NASA PD, USGS PD, Pexels/Pixabay/Unsplash con attribuzione corretta).
-- **Foto sproporzionata al testo**: una pagina con 2 paragrafi e 8 foto è un photo-album, non un articolo. Bilanciamento: 1 foto ogni ~3 H2, max gallery se >4 foto.
+- **Foto sproporzionata al testo**: una pagina con 2 paragrafi e 8 foto è un photo-album, non un articolo. Bilanciamento: 1 foto ogni ~3 H2, da 4 foto in su lo shortcode `{{< galleria >}}`.
 - **Foto di un evento storico citata in un articolo di servizio quotidiano** (es. foto del terremoto Irpinia 1980 in articolo "Cosa portare nel kit emergenza"): incoerenza narrativa, distrae dal messaggio.
 - **Caption che ripete l'alt text**: ridondante e fastidioso per chi usa screen reader (sente la stessa cosa 2 volte). Caption = contesto/credit aggiuntivo; alt = descrizione visiva.
 - **Logo del Gruppo distorto o ricolorato**: identità visiva istituzionale = elemento intoccabile. Sempre logo originale `static/images/logo-pc-genzano.png` con proporzioni preservate.

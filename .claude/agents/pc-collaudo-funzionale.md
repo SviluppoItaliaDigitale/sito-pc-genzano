@@ -70,7 +70,7 @@ Per ogni strumento: aprilo, compi il compito principale, prova un caso limite, r
 ## Output atteso
 
 ```
-## Collaudo funzionale — <data> — sito pubblicato (build <sha>)
+## Collaudo funzionale — <data> — sito pubblicato (build <SITE_BUILD_SHA letto da /build-info.js>)
 
 | Area | Strumento | Telefono | Desktop | Tastiera | Console | Esito e prova |
 |---|---|---|---|---|---|---|

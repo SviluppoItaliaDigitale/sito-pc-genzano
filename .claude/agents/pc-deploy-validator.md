@@ -98,21 +98,40 @@ Per ogni file in `git diff --name-only HEAD origin/main -- content/comunicazioni
 
 26. **Ordering articoli stesso giorno** (check **site-wide**, non solo diff): le giornate con 2+ articoli devono avere `date: AAAA-MM-GGTHH:MM:SS+02:00` con orari crescenti. Se 2+ articoli condividono una `date` in formato solo-giorno `AAAA-MM-GG`, Hugo ordina per filename → archivio instabile. Rule `02-content-design-pa.md` § "Regola critica formato data". Rilevazione: per ogni `date:` lunga 10 caratteri, conta i duplicati. Match = BLOCCANTE, fix con `python3 scripts/fix-ordering-articoli-stesso-giorno.py` (idempotente). Storia: 9 giornate trovate drift il 14 maggio 2026.
 
+### H-bis. Controlli bloccanti della CI — BLOCCANTI
+
+Sono gli stessi passi che `validate-pr.yml` esegue su ogni pull request: se non li esegui qui, un GO locale diventa una PR rossa. Prima costruisci il sito come in CI, cioè col baseURL di Aruba (`hugo --minify --baseURL "https://www.protezionecivilegenzano.it/"`), poi:
+
+28. **JSON-LD**: `python3 scripts/check-jsonld.py public` (blocchi parsabili e paternità `copyrightHolder`).
+29. **Ancore interne e `mailto:`**: `python3 scripts/check-ancore.py public --base-path ""`.
+30. **Nessun riferimento allo strumento nel sito compilato**: `grep -rIilE '\bclaude\b|anthropic' public` deve essere vuoto (CLAUDE.md § "Nessun riferimento all'IA").
+31. **URL preferito sulle pagine statiche**: `python3 scripts/aggiungi-canonical-statiche.py --check`.
+32. **Qualità delle pagine** (titolo, h1, alt): `python3 scripts/check-qualita-pagine.py public`.
+33. **Assistente virtuale e mappa del sito**: `python3 scripts/check-navigazione.py --public public` (ogni voce di menu e piè di pagina in entrambi, nessun collegamento rotto).
+34. **Pacchetti «Stampa tutto»**: `python3 scripts/genera-pacchetti-schede.py` e poi `git diff --quiet -- static/formazione/schede-stampabili/pacchetti/` (se cambia, il pacchetto committato è vecchio).
+35. **Parità schede e dati delle schede**: `python3 scripts/check-parita-schede.py` e `python3 scripts/check-dati-schede.py`.
+36. **Dati canonici**: `python3 scripts/check-dati-canonici.py` (registro `data/dati_canonici.yaml`).
+37. **Catalogo di «Crea la mia lezione»**: `python3 scripts/genera-materiali-lezione.py --check`.
+38. **Indice dell'Open Kit**: `python3 scripts/genera-open-kit.py` e poi `git diff --exit-code data/open_kit.json`.
+39. **Menu sincronizzato**: `python3 scripts/genera-chrome-menu.py --check` (il menu di `site-chrome.js` è generato da `hugo.toml`).
+40. **Data di uscita degli articoli programmati**: `python3 scripts/check-data-uscita.py <articoli aggiunti o modificati>`.
+41. **Fogli di stampa e fascicolo esperimenti** (servono Playwright e Chromium): `python3 scripts/check-fogli-stampa.py --da-git origin/main` e `python3 scripts/check-fascicolo-esperimenti.py`. In cloud indica il Chromium preinstallato con `CHROMIUM_PATH=/opt/pw-browsers/chromium` (entrambi gli script lo leggono). Se il browser non è disponibile, scrivilo nel report come «non eseguito», non come «OK».
+
+Non bloccano la PR ma girano in altri workflow, e conviene saperlo: `scripts/check-404-istituzionali.py` fa diventare rosso `check-links-sito.yml` quando un link verso un ente pubblico risponde 404/410; `scripts/check-carte-carg.py` (`controllo-carte-carg.yml`) segnala le copie delle carte geologiche CARG superate dall'archivio ISPRA.
+
 ### I. Smoke test browser POST-DEPLOY — WARNING opzionale
 
 🎭 **Quando eseguirlo**: dopo che il `deploy.yml` ha completato e Aruba/GitHub Pages hanno servito la nuova versione (ETA ~3 min dal push). Non blocca il push: gira **dopo** per catturare regressioni JS-only che HTTP-only non vede.
 
-27. **Smoke test Playwright sul sito live**: lancia 6 scenari interattivi in Chromium headless contro `https://www.protezionecivilegenzano.it`. Comando:
+42. **Smoke test Playwright sul sito live**: lancia 6 scenari interattivi in Chromium headless contro `https://www.protezionecivilegenzano.it`. Comando:
 
     ```bash
     node scripts/smoke-test-playwright.js https://www.protezionecivilegenzano.it
     ```
 
-    Setup una-tantum (~150 MB Chromium, ~30 MB pacchetto playwright):
-    ```bash
-    npm install --no-save playwright@1.60.0
-    npx playwright install chromium
-    ```
+    🔴 **Mai `npx playwright install`**: su Ubuntu 26.04 il browser-bundle di Playwright non si installa (rule `08-claude-code-setup.md`). Si usa un Chromium già presente:
+    - **Sessioni locali**: il server MCP `mcp__playwright__*` (Chrome di sistema), oppure lo script Node col pacchetto installato senza scaricare browser (`PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1 npm install --no-save playwright`).
+    - **Sessioni cloud**: Chromium preinstallato in `/opt/pw-browsers/chromium`, con il proxy dell'ambiente e la sua CA importata nel registro NSS (rule 08). Lo script chiama `chromium.launch({ headless: true })` senza percorso, quindi in cloud va lanciato con `executablePath: '/opt/pw-browsers/chromium'` e `proxy: { server: process.env.HTTPS_PROXY }` (per esempio da una copia temporanea nello scratchpad), oppure si ripetono gli stessi scenari con la libreria Python di Playwright (`executable_path='/opt/pw-browsers/chromium'`, `proxy={'server': os.environ['HTTPS_PROXY']}`). 🔴 Mai `ignore_https_errors`.
 
     **Scenari coperti** (~3 secondi totali sul sito live):
     - Home page load + title + H1 visibili
@@ -123,8 +142,8 @@ Per ogni file in `git diff --name-only HEAD origin/main -- content/comunicazioni
     - Footer: link `/feed-rss/` o `/index.xml` presente
 
     **Quando fallisce un test**:
-    - `FAB a11y dialog non aperto` → JS toolbar a11y rotto. Probabile regressione su `static/js/a11y-toolbar.js` o asset non deployato (cache stale FTP, vedi rule `05` § "File stantii"). Lanciare cache-bust simultaneo su `cosa-fare-adesso/_index.md` + `accessibilita/_index.md` + redeploy.
-    - `Modal Pagefind non aperto Ctrl+K` → keybinding rotto. Verificare partial `partials/ricerca-modal.html` + script `static/pagefind/pagefind-ui.js`.
+    - `FAB a11y dialog non aperto` → JS toolbar a11y rotto. Probabile regressione su `static/js/a11y-toolbar.js` o asset rimasto vecchio su Aruba (rule `05` § "File stantii"). Prima verifica con `python3 scripts/verifica-deploy-aruba.py --pagine /` (confronta il sito con `/build-manifest.json`; lo SHA servito è in `/build-info.js`); se ci sono file diversi, rilancia il deploy oppure, da una sessione con le credenziali FTP, `--ripara`. Il bump dello `state-name` FTP è VIETATO; il «cache-bust» a mano su un `_index.md` è solo l'ultima risorsa.
+    - `Modal Pagefind non aperto Ctrl+K` → keybinding rotto. Verificare il partial `partials/ricerca-modal.html` e che `/pagefind/pagefind-ui.js` risponda sul sito: l'indice non è nel repository (`static/pagefind/` è in `.gitignore` dal 15/07/2026), lo genera `deploy.yml` con `npx -y pagefind@1.5.2 --site public`, quindi se manca il problema è nel deploy, non in un file da committare.
     - `tel: encoding bug` → regressione fix 29/04/2026 (`printf "tel:%s" .Site.Params.telefono_tel | safeURL`). Verificare `partials/utility-bar.html` riga 19 + redeploy.
     - `Pill reading-time non trovata` → template `_default/single.html` ha perso il blocco reading-time (introdotto rule 03), oppure articolo specifico ha `tts: false` (escluderebbe anche reading-time).
     - `H1 mancante` → rendering rotto: questo è BLOCCANTE post-deploy, considera rollback.
@@ -176,5 +195,5 @@ Se GO con WARNING: l'utente decide se procedere o fixare prima.
 
 - ❌ Pushare tu. Mai. Nemmeno se sembra ovvio.
 - ❌ Fare modifiche al codice. Sei un validator, non un fixer.
-- ❌ Fare check non documentati nelle 26 voci sopra (sono il tuo perimetro).
+- ❌ Fare check non documentati nelle voci sopra (sezioni A-I, numerate da 1 a 42 con le sotto-voci 14bis, 15bis, 15ter e 22b: sono il tuo perimetro).
 - ❌ Aggiungere check "perché sembra una buona idea": prima documenta in regola, poi codifica nel validator.

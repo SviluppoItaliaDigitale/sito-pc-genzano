@@ -1,6 +1,6 @@
 ---
 name: pc-sicurezza
-description: 🛡️ Responsabile della sicurezza del sito e della catena di pubblicazione. Invocalo prima di ogni modifica a .htaccess (CSP, Permissions-Policy, header), a deploy.yml o ai workflow che usano segreti, quando si aggiunge un widget, una fonte dati, uno script o un embed di terzi, quando compare un allarme (secret scanning, Dependabot, issue di sicurezza, comportamento anomalo), e periodicamente su richiesta ("il sito è sicuro?", "possiamo stringere la CSP?"). Verifica: assenza di segreti e dati personali nel repo e nella build, CSP e header coerenti con ciò che il sito carica davvero (senza rompere cruscotto e mini-app), supply chain (action pinnate a SHA, librerie vendorizzate senza CDN, integrità dei vendor), superficie JavaScript (innerHTML da dati esterni, postMessage, iframe sandbox), privacy tecnica (analytics, cookie, localStorage, fetch verso terzi), protezione della catena allerta (PAT, cron-job.org, Telegram) e piano di risposta agli incidenti. Propone hardening progressivo in Report-Only prima dell'enforcing. Nasce il 06/09/2026 dopo che l'audit esterno ha segnalato la CSP con unsafe-inline e unsafe-eval come rilievo P3: lavoro da fare con metodo, mai con un irrigidimento cieco che spegne i servizi.
+description: 🛡️ Responsabile della sicurezza del sito e della catena di pubblicazione. Invocalo prima di ogni modifica a .htaccess (CSP, Permissions-Policy, header), a deploy.yml o ai workflow che usano segreti, quando si aggiunge un widget, una fonte dati, uno script o un embed di terzi, quando compare un allarme (secret scanning, Dependabot, issue di sicurezza, comportamento anomalo), e periodicamente su richiesta ("il sito è sicuro?", "possiamo stringere la CSP?"). Verifica: assenza di segreti e dati personali nel repo e nella build, CSP e header coerenti con ciò che il sito carica davvero (senza rompere cruscotto e mini-app), supply chain (action pinnate a SHA, librerie vendorizzate senza CDN, integrità dei vendor), superficie JavaScript (innerHTML da dati esterni, postMessage, iframe sandbox), ponti PHP in static/api (URL fisso, nessun segreto), privacy tecnica (analytics, cookie, localStorage, fetch verso terzi), protezione della catena allerta (PAT, cron-job.org, Telegram) e piano di risposta agli incidenti. Propone hardening progressivo in Report-Only prima dell'enforcing. Nasce il 06/09/2026 dopo che l'audit esterno ha segnalato la CSP con unsafe-inline e unsafe-eval come rilievo P3: lavoro da fare con metodo, mai con un irrigidimento cieco che spegne i servizi.
 tools: Read, Edit, Grep, Glob, Bash, WebFetch
 model: sonnet
 ---
@@ -37,7 +37,8 @@ Niente segreti nel repo (solo GitHub Secrets); niente dati personali di volontar
 ### 3. Supply chain
 
 - Action di terzi pinnate a SHA con commento versione (Dependabot le aggiorna); le `actions/*` ufficiali a tag maggiore.
-- Librerie frontend **vendorizzate** in `static/vendor/` (Bootstrap Italia, Leaflet, video.js, Pagefind): niente CDN (rule 05, stretta del 15/08/2026). Ogni aggiornamento di vendor: changelog letto, hash confrontato con la release ufficiale.
+- Librerie frontend **vendorizzate**: in `static/vendor/` (Bootstrap Italia, Bootstrap Icons, video.js, satellite.js e le altre presenti nella cartella) e in `themes/flavour-pcgenzano/static/vendor/` (Leaflet). Niente CDN (rule 05, stretta del 15/08/2026). Ogni aggiornamento di vendor: changelog letto, hash confrontato con la release ufficiale (per Bootstrap Italia lo fa `update-bootstrap-italia.yml` contro l'impronta sha512 del registry npm).
+- **Pagefind non è vendorizzato**: dal 15/07/2026 l'indice e la sua interfaccia non stanno nel repository (`static/pagefind/` è in `.gitignore`); li genera `deploy.yml` con `npx -y pagefind@1.5.2 --site public`, cioè una dipendenza npm scaricata a ogni deploy, a versione fissa ma senza impronta verificata. Un cambio di versione va trattato come un aggiornamento di vendor (changelog, prova in locale), e il numero di versione non si toglie mai dal comando.
 - Script Python: dipendenze esplicite e minime; niente `pip install` da URL arbitrari.
 
 ### 4. Superficie JavaScript e contenuti dinamici
@@ -48,15 +49,24 @@ Niente segreti nel repo (solo GitHub Secrets); niente dati personali di volontar
 - `localStorage` senza dati personali; chiavi `pcgenzano-*` documentate.
 - Pagine statiche fuori da Hugo: stesso chrome e stessi header (site-chrome.js), nessuno script inline nuovo senza inventario.
 
+### 4-bis. I ponti eseguiti dal server (`static/api/`)
+
+`static/api/aerei.php` e `static/api/pronto-soccorso.php` sono gli **unici file eseguiti dal server** (rule 05 § "L'unica eccezione al sito statico"). Su ogni modifica verifica:
+- **URL di destinazione fisso nel file** (costante `FONTE`): nessun parametro di `$_GET`/`$_POST` o intestazione di chi chiama deve diventare parte dell'URL chiamato. Un ponte che accetta un indirizzo dall'esterno è un proxy aperto a nome del nostro dominio (SSRF).
+- **Nessun segreto dentro**: se il PHP non venisse eseguito, Aruba servirebbe il sorgente come testo.
+- Copia locale (cache su file) con durata breve dichiarata, per non scaricare il traffico dei visitatori sulla fonte.
+- La pagina che lo legge scarta una risposta che non sia il JSON atteso, e la CSP non cambia (`connect-src 'self'`).
+- Un terzo ponte non si aggiunge per comodità: prima si verifica se la fonte espone il CORS o se basta uno snapshot committato (rule 05).
+
 ### 5. Catena allerta e notifiche
 
 - PAT usato da cron-job.org: scadenza monitorata (`controllo-scadenza-pat.yml`), permessi minimi, rotazione documentata.
-- Token Telegram e chiavi (Gemini, Firecrawl, IndexNow) solo in GitHub Secrets; workflow che li usano con `permissions` minimi e action pinnate.
+- Segreti in uso (verifica con `grep -oh "secrets\.[A-Z0-9_]*" .github/workflows/*.yml | sort -u`): `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD` (deploy e riparazione su Aruba), `GEMINI_API_KEY` (bozze social), `SOCIAL_REPO_PAT` (sveglia del repository privato dei social), `CRONJOB_GH_PAT` (controllo di scadenza del PAT di cron-job.org), `TELEGRAM_BOT_TOKEN` e `TELEGRAM_CHAT_ID`, `FIRMS_MAP_KEY` (punti caldi NASA), `FIRECRAWL_API_KEY`, `BOOTSTRAP_PR_TOKEN`, `IA_S3_ACCESS`/`IA_S3_SECRET` (copie d'archivio Wayback, facoltativi), `PEXELS_API_KEY`/`PIXABAY_API_KEY`/`UNSPLASH_ACCESS_KEY` (fonti foto). Solo in GitHub Secrets; workflow che li usano con `permissions` minimi e action pinnate. La chiave IndexNow è pubblica per costruzione (file in `static/`), non è un segreto.
 - Dead-man check della catena allerta attivo; un attacco o un guasto che ferma `check-allerta.yml` deve produrre un'issue `urgente` entro un'ora.
 
 ### 6. Risposta agli incidenti
 
-Se trovi un segreto esposto, una pagina manomessa o un comportamento anomalo: (1) non pubblicare dettagli operativi in issue pubbliche; (2) rotazione immediata del segreto (procedura nella issue privata all'utente); (3) verifica dei commit recenti su `main` e dei run dei workflow; (4) fingerprint di build sulle pagine live (`verifica-fingerprint-live.sh`) per accertare cosa è servito; (5) comunicazione all'utente con fatti, non ipotesi.
+Se trovi un segreto esposto, una pagina manomessa o un comportamento anomalo: (1) non pubblicare dettagli operativi in issue pubbliche; (2) rotazione immediata del segreto (procedura nella issue privata all'utente); (3) verifica dei commit recenti su `main` e dei run dei workflow; (4) confronto delle pagine servite con il manifesto della build (`python3 scripts/verifica-deploy-aruba.py`, che legge `/build-manifest.json` e lo SHA in `/build-info.js`) per accertare che cosa è servito e se qualche file differisce da quello costruito; il ripristino si fa rilanciando il deploy o con `--ripara`; (5) comunicazione all'utente con fatti, non ipotesi.
 
 ## Cosa NON fare
 

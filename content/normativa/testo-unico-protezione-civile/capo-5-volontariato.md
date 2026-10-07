@@ -52,7 +52,7 @@ Questo articolo è **cruciale** per chi svolge attività di volontariato. Stabil
 - **Mantenimento del posto di lavoro** pubblico o privato — il datore di lavoro è tenuto a concedere i permessi per partecipare alle attività di protezione civile
 - **Mantenimento del trattamento economico e previdenziale** — il datore viene rimborsato dallo Stato per i giorni in cui il lavoratore è impegnato (o il lavoratore autonomo riceve un'indennità giornaliera)
 - **Copertura assicurativa** per infortuni e responsabilità civile verso terzi durante l'attività
-- **Limiti di attivazione**: fino a 30 giorni consecutivi e 90 giorni annui nelle attività ordinarie; fino a 60 giorni consecutivi e 180 giorni annui nelle emergenze nazionali
+- **Limiti di attivazione**: nel soccorso e nell'assistenza fino a 30 giorni consecutivi e 90 giorni l'anno, elevabili a 60 giorni consecutivi e 180 l'anno nelle emergenze di rilievo nazionale (commi 1 e 2); nella pianificazione, nelle esercitazioni, nella formazione e nella diffusione della cultura di protezione civile fino a 10 giorni consecutivi e 30 giorni l'anno (comma 3)
 
 Questi diritti si applicano solo per attività **ufficialmente attivate** (con nota di attivazione) e **svolte sotto il coordinamento** di un'autorità competente. Partecipare ad attività **non autorizzate** può far venir meno la copertura. Per questo ogni intervento del nostro Gruppo deve essere **tracciato**.
 

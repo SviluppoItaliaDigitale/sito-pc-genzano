@@ -15,6 +15,8 @@ Il tuo lavoro è **automatizzare il passaggio "ho scaricato i file da NotebookLM
 
 L'utente ha appena scaricato file da [NotebookLM](https://notebooklm.google.com) (podcast M4A, infografiche PNG, presentazioni PPTX+PDF) e li ha messi in `~/Scrivania/materiali-output/<tema>/`. Tu li pubblichi automaticamente sul sito.
 
+⚠️ **Funziona solo in sessione locale, sul PC dell'utente.** La drop zone `~/Scrivania/materiali-output/` (e `~/Scrivania/materiali-pacchetti/`) esiste solo lì: in una sessione cloud, mobile o in un sottoagente senza accesso a quel disco la cartella non c'è. Se `ls` non la trova, fermati e dillo all'utente: i file vanno pubblicati da una sessione Claude Code aperta sul PC, oppure caricati nella sessione corrente e copiati a mano in una cartella equivalente indicata dall'utente.
+
 Trigger naturali (frasi che fanno scattare il tuo intervento):
 - "Pubblica gli output di NotebookLM per il tema X"
 - "Ho caricato i file di NotebookLM nella drop zone X, pubblica"
@@ -36,7 +38,7 @@ Slug temi validi al 16/05/2026:
 
 Se l'utente cita un tema con nome diverso (es. "incendio boschivo"), mappalo allo slug corretto. Se ambiguo, chiedi conferma.
 
-### 2. Verifica drop zone
+### 2. Verifica drop zone (solo sessione locale)
 
 ```bash
 ls -lh ~/Scrivania/materiali-output/<tema>/
@@ -98,12 +100,12 @@ Deve trovare la sezione del tema con le 4 card materiali. L'indice chip in cima 
 
 ### 7. Commit + push
 
-Messaggio commit standard:
+Messaggio commit standard. 🔴 Nessun riferimento all'IA o a strumenti automatici nel messaggio (CLAUDE.md § "Nessun riferimento all'IA in ciò che si produce"): niente nome dello strumento con cui sono stati prodotti i file, niente trailer `Co-Authored-By` né righe di sessione. Prima del commit verifica l'identità git (`git config user.name` deve essere `Alessandro Cuollo`; altrimenti `bash scripts/imposta-identita-git.sh`).
 
 ```
 Risorse pronte: pubblicati N materiali tema <tema>
 
-File pubblicati da NotebookLM (drop zone svuotata):
+Materiali multimediali per il tema <tema>:
 - podcast.m4a       → /podcast/episodi/<data>-<tema>-podcast.m4a (M MB, dura ...)
 - infografica.png   → /infografiche/<data>-<tema>-infografica.png (M MB)
 - presentazione.pptx → /presentazioni/<data>-<tema>-presentazione.pptx (M MB)
@@ -112,8 +114,6 @@ File pubblicati da NotebookLM (drop zone svuotata):
 N voci aggiunte a data/risorse_pronte.yaml.
 Episodio podcast #X creato in content/podcast/.
 Cross-link automatico sulla pagina /<sezione-rischio>/.
-
-Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>
 ```
 
 `git push`. Se fallisce per fast-forward (concorrenza con altri workflow): `git pull --rebase` + retry. Lo script `pubblica-materiali-multimediali.py` non gestisce il push (è il chiamante che lo fa).
@@ -133,7 +133,7 @@ Riporta in 5-7 righe:
 - **Mai pubblicare link condivisi NotebookLM** (es. quiz, flashcard) come fonti del sito. Consumerebbero quota PRO dell'utente proprietario notebook ad ogni visita. Convertirli in HTML statico nativo è scope futuro, non ora.
 - **Mai modificare manualmente `data/risorse_pronte.yaml`** se il flusso script funziona. Le voci sono auto-generate da `pubblica-materiali-multimediali.py`. Modifiche manuali rischiano collisioni id.
 - **Mai aggiungere foto utente** come `image:` nel frontmatter di `content/podcast/<slug>.md`. La cover del podcast è quella dichiarata in `content/podcast/_index.md` (Params `podcast_cover`), valida per tutto il feed RSS iTunes.
-- **Mai pubblicare se l'audio è > 200 MB**: Apple Podcasts ha limiti pratici. Se NotebookLM ti dà un M4A enorme, comprimi prima con ffmpeg (`ffmpeg -i input.m4a -b:a 64k output.m4a`).
+- **Mai pubblicare se l'audio è > 200 MB**: Apple Podcasts ha limiti pratici. Se NotebookLM ti dà un M4A enorme, comprimi prima con gli stessi parametri di `comprimi-podcast.yml` (rule 10, audit F14: 64 kbps mono, nessun tag né firma dell'encoder nel file pubblicato): `ffmpeg -y -i input.m4a -c:a aac -b:a 64k -ac 1 -map_metadata -1 -map_metadata:s:a -1 -fflags +bitexact -flags:a +bitexact -movflags +faststart output.m4a`.
 - **Mai inventare descrizioni** dei materiali: lo script usa DESC_TIPO standard. Se l'utente vuole descrizioni custom, le aggiungiamo in modo selettivo dopo conferma.
 
 ## Eccezioni
@@ -145,10 +145,10 @@ Riporta in 5-7 righe:
 ## Riferimenti
 
 - Script: `scripts/pubblica-materiali-multimediali.py` (fonte unica della logica di pubblicazione)
-- Script setup: `scripts/prepara-pacchetto-materiali.py` (genera i pacchetti su `~/Scrivania/materiali-pacchetti/`)
+- Script setup: `scripts/prepara-pacchetto-materiali.py` (genera i pacchetti su `~/Scrivania/materiali-pacchetti/`, solo sul PC dell'utente)
 - Workflow CI: nessuno (è on-demand via comando utente, l'agent lo lancia)
 - Manuale parte-30: `manuale/parte-30-materiali-pronti.md`
-- Guida utente: `~/Scrivania/GUIDA-NOTEBOOKLM-PC-GENZANO.md`
+- Guida utente: `~/Scrivania/GUIDA-NOTEBOOKLM-PC-GENZANO.md` (solo sul PC dell'utente)
 - Hub pubblico: `https://www.protezionecivilegenzano.it/risorse-pronte/`
 - Feed RSS podcast: `https://www.protezionecivilegenzano.it/podcast/index.xml`
 
