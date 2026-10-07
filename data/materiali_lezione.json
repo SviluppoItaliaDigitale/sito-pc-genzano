@@ -1489,6 +1489,22 @@
   },
   {
    "tipo": "scheda",
+   "titolo": "I Nobel che ci proteggono",
+   "url": "/formazione/schede-stampabili/nobel-che-ci-proteggono-infanzia/",
+   "fasce": [
+    "infanzia"
+   ],
+   "minuti": 30,
+   "temi": [
+    "casa",
+    "volontariato",
+    "informazione"
+   ],
+   "desc": "La torcia, la radio e i volontari: aiuti nati da scoperte premiate con il Nobel. Unisci con una linea, lo zaino di Tina la tartaruga, una medaglia da disegnare per chi ci aiuta. Pittogrammi ARASAAC, soluzioni capovolte.",
+   "facilitata": false
+  },
+  {
+   "tipo": "scheda",
    "titolo": "Le Regole della Tartaruga Saggia",
    "url": "/formazione/schede-stampabili/tartaruga-saggia-infanzia/",
    "fasce": [
