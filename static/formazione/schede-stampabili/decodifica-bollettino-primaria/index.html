@@ -41,6 +41,10 @@
       border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
     }
     @media (max-width: 580px) { .quattro-colori { grid-template-columns: 1fr; } }
+  
+    .allerta-dot{display:inline-block;width:1.05em;height:1.05em;border-radius:50%;border:1.5px solid #333;vertical-align:-.12em;margin-right:.25em}
+    .allerta-verde{background:#28a745}.allerta-giallo{background:#ffd43b}.allerta-arancione{background:#fd7e14}.allerta-rosso{background:#dc3545}
+    @media print{.allerta-dot{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
   </style>
 </head>
 <body>
@@ -71,32 +75,32 @@
     </p>
 
     <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.5rem 0; font-size: 0.9rem; line-height: 1.55;">
-      <strong style="color: var(--scheda-blu);">🌦️ Come nasce un bollettino di allerta</strong> — Ogni giorno, alle 13:00, esce il <strong>Bollettino di Criticità</strong>. Lo scrivono i meteorologi del <strong>Centro Funzionale Regionale (CFR)</strong> guardando i dati di pioggia, vento, neve e fiumi delle prossime 24 ore. Lo standard nazionale (Direttiva PCM 27/2/2004) prevede <strong>4 colori per 7 tipi di rischio</strong> (idrogeologico, idraulico, temporali, vento, neve, calore, valanghe). Ogni Comune appartiene a una <strong>Zona di Allerta</strong>: Genzano è in <strong>Zona F</strong> (Bacini Costieri Sud). Quando l'allerta è arancione o rossa, il Sindaco può chiudere scuole e parchi e avvisa i cittadini con i <strong>canali ufficiali del Comune</strong> (sito, social, altoparlanti) insieme al Gruppo di Protezione Civile.
+      <strong style="color: var(--scheda-blu);">Come nasce un bollettino di allerta</strong> — Ogni giorno, alle 13:00, esce il <strong>Bollettino di Criticità</strong>. Lo scrivono i meteorologi del <strong>Centro Funzionale Regionale (CFR)</strong> guardando i dati di pioggia, vento, neve e fiumi delle prossime 24 ore. Lo standard nazionale (Direttiva PCM 27/2/2004) prevede <strong>4 colori per 7 tipi di rischio</strong> (idrogeologico, idraulico, temporali, vento, neve, calore, valanghe). Ogni Comune appartiene a una <strong>Zona di Allerta</strong>: Genzano è in <strong>Zona F</strong> (Bacini Costieri Sud). Quando l'allerta è arancione o rossa, il Sindaco può chiudere scuole e parchi e avvisa i cittadini con i <strong>canali ufficiali del Comune</strong> (sito, social, altoparlanti) insieme al Gruppo di Protezione Civile.
       <br><em>Fonte: Centro Funzionale Regionale Lazio; DPC.</em>
     </div>
 
-    <h2 class="scheda-h2">🌈 I quattro colori</h2>
+    <h2 class="scheda-h2">I quattro colori</h2>
 
     <div class="quattro-colori">
       <div class="col-card col-verde">
-        <div class="colore-nome">🟢 VERDE</div>
+        <div class="colore-nome"><span class="allerta-dot allerta-verde" aria-label="verde"></span> VERDE</div>
         <div class="colore-significato">Tutto a posto. Tempo normale.</div>
       </div>
       <div class="col-card col-giallo">
-        <div class="colore-nome">🟡 GIALLO</div>
+        <div class="colore-nome"><span class="allerta-dot allerta-giallo" aria-label="giallo"></span> GIALLO</div>
         <div class="colore-significato">Attenzione: piove forte.</div>
       </div>
       <div class="col-card col-arancione">
-        <div class="colore-nome">🟠 ARANCIONE</div>
+        <div class="colore-nome"><span class="allerta-dot allerta-arancione" aria-label="arancione"></span> ARANCIONE</div>
         <div class="colore-significato">Pericolo: temporali forti.</div>
       </div>
       <div class="col-card col-rosso">
-        <div class="colore-nome">🔴 ROSSO</div>
+        <div class="colore-nome"><span class="allerta-dot allerta-rosso" aria-label="rosso"></span> ROSSO</div>
         <div class="colore-significato">Pericolo molto grande.</div>
       </div>
     </div>
 
-    <h2 class="scheda-h2">✏️ Abbina ogni situazione al colore giusto</h2>
+    <h2 class="scheda-h2">Abbina ogni situazione al colore giusto</h2>
     <p style="margin-bottom: 0.4rem; font-size: 0.92rem;">Scrivi nella casella la lettera del colore: <strong>V</strong> (verde), <strong>G</strong> (giallo), <strong>A</strong> (arancione), <strong>R</strong> (rosso).</p>
 
     <div class="scheda-tabella-scorrevole"><table class="abbina-tabella">
@@ -108,13 +112,13 @@
       <tr><td>6</td><td>Grandine grossa come palline da ping pong. Sto in casa.</td><td><span class="casella-risposta"></span></td></tr>
     </table></div>
 
-    <h2 class="scheda-h2">✏️ Per ogni colore, scrivi cosa fai</h2>
+    <h2 class="scheda-h2">Per ogni colore, scrivi cosa fai</h2>
 
     <div class="scheda-tabella-scorrevole"><table class="abbina-tabella">
-      <tr><td style="background: #e8f5e9; color: #1b5e20;"><strong>🟢</strong></td><td colspan="2">Cosa fai col verde? _______________________________________</td></tr>
-      <tr><td style="background: #fff8e1; color: #6d4c00;"><strong>🟡</strong></td><td colspan="2">Cosa fai col giallo? _______________________________________</td></tr>
-      <tr><td style="background: #fff3e0; color: #bf360c;"><strong>🟠</strong></td><td colspan="2">Cosa fai con l'arancione? _______________________________________</td></tr>
-      <tr><td style="background: #fde8ea; color: #842029;"><strong>🔴</strong></td><td colspan="2">Cosa fai col rosso? _______________________________________</td></tr>
+      <tr><td style="background: #e8f5e9; color: #1b5e20;"><strong><span class="allerta-dot allerta-verde" aria-label="verde"></span></strong></td><td colspan="2">Cosa fai col verde? _______________________________________</td></tr>
+      <tr><td style="background: #fff8e1; color: #6d4c00;"><strong><span class="allerta-dot allerta-giallo" aria-label="giallo"></span></strong></td><td colspan="2">Cosa fai col giallo? _______________________________________</td></tr>
+      <tr><td style="background: #fff3e0; color: #bf360c;"><strong><span class="allerta-dot allerta-arancione" aria-label="arancione"></span></strong></td><td colspan="2">Cosa fai con l'arancione? _______________________________________</td></tr>
+      <tr><td style="background: #fde8ea; color: #842029;"><strong><span class="allerta-dot allerta-rosso" aria-label="rosso"></span></strong></td><td colspan="2">Cosa fai col rosso? _______________________________________</td></tr>
     </table></div>
 
     <div class="istruzioni-maestra">
@@ -127,7 +131,7 @@
     <div class="soluzione-capovolta" style="margin-top: 5mm;">
       <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
       <p style="margin: 0;"><strong>Abbinamenti</strong>: 1=V, 2=R, 3=G, 4=R, 5=V, 6=A.<br>
-      <strong>Risposte attese ai colori</strong>: 🟢 attività normali; 🟡 attento al cielo, sentire le previsioni; 🟠 limitare le uscite, niente attività all'aperto; 🔴 stare in casa, seguire le indicazioni del Comune.</p>
+      <strong>Risposte attese ai colori</strong>: <span class="allerta-dot allerta-verde" aria-label="verde"></span> attività normali; <span class="allerta-dot allerta-giallo" aria-label="giallo"></span> attento al cielo, sentire le previsioni; <span class="allerta-dot allerta-arancione" aria-label="arancione"></span> limitare le uscite, niente attività all'aperto; <span class="allerta-dot allerta-rosso" aria-label="rosso"></span> stare in casa, seguire le indicazioni del Comune.</p>
     </div>
 
     <footer class="scheda-footer">

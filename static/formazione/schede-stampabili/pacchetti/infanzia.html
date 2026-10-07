@@ -288,6 +288,8 @@
       font-size: 1.6rem;
       background: #fff;
     }
+:where([id="scheda-vero-falso-infanzia"]) .vf-faccia { display:flex; align-items:center; justify-content:center; line-height:normal; }
+:where([id="scheda-vero-falso-infanzia"]) .vf-icon { width:2.35rem; height:2.35rem; display:block; }
 
 :where([id="scheda-labirinto-uscita"]) .lab-griglia {
       display: grid;
@@ -381,6 +383,9 @@
 :where([id="scheda-labirinto-uscita"]) .lab-griglia { grid-template-columns: repeat(11, 30px); grid-template-rows: repeat(9, 30px); }
 :where([id="scheda-labirinto-uscita"]) .lab-cella { width: 30px; height: 30px; font-size: 1rem; }
 }
+:where([id="scheda-labirinto-uscita"]) .lab-cella svg { max-width:88%; max-height:88%; display:block; }
+:where([id="scheda-labirinto-uscita"]) .lab-legenda-icon svg { width:100%; height:100%; display:block; }
+:where([id="scheda-labirinto-uscita"]) .lab-muro-simbolo { width:1.1rem; height:1.1rem; background:#495057; display:inline-block; border:1px solid #111; }
 
 :where([id="scheda-tartaruga-saggia-infanzia"]) .ts-grande {
       text-align: center;
@@ -443,6 +448,10 @@
       color: #664d03;
       margin-top: 0.8rem;
     }
+:where([id="scheda-tartaruga-saggia-infanzia"]) .ts-grande { display:flex; justify-content:center; }
+:where([id="scheda-tartaruga-saggia-infanzia"]) .ts-grande .ts-turtle { width:7.2rem; height:auto; }
+:where([id="scheda-tartaruga-saggia-infanzia"]) .ts-regola .ts-emoji { width:3.6rem; height:3.6rem; display:flex; align-items:center; justify-content:center; font-size:0; }
+:where([id="scheda-tartaruga-saggia-infanzia"]) .ts-regola .ts-emoji img, :where([id="scheda-tartaruga-saggia-infanzia"]) .ts-regola .ts-emoji svg { width:3.5rem; height:3.5rem; object-fit:contain; display:block; }
 
 :where([id="scheda-trova-coppie-infanzia"]) .tc-area {
       display: grid;
@@ -495,6 +504,9 @@
 :where([id="scheda-trova-coppie-infanzia"]) .tc-card .tc-emoji { font-size: 1.3rem; width: auto; min-width: 1.8rem; }
 :where([id="scheda-trova-coppie-infanzia"]) .tc-card .tc-text { flex: 1 1 0; min-width: 0; font-size: 0.8rem; line-height: 1.2; overflow-wrap: anywhere; }
 }
+:where([id="scheda-trova-coppie-infanzia"]) .tc-card .tc-emoji { display:flex; align-items:center; justify-content:center; }
+:where([id="scheda-trova-coppie-infanzia"]) .tc-card .tc-emoji img, :where([id="scheda-trova-coppie-infanzia"]) .tc-card .tc-emoji svg { width:2.8rem; height:2.8rem; display:block; object-fit:contain; }
+:where([id="scheda-trova-coppie-infanzia"]) .tc-card .tc-emoji svg { fill:none; stroke:#111827; stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round; }
 
 :where([id="scheda-abc-vocali-infanzia"]) .vocali-griglia {
       display: flex;
@@ -598,6 +610,8 @@
 :where([id="scheda-abc-vocali-infanzia"]) .vocale-parola { min-width: 0; }
 :where([id="scheda-abc-vocali-infanzia"]) .vocale-parola .parola-modello { font-size: 1.15rem; letter-spacing: 0.08em; }
 }
+:where([id="scheda-abc-vocali-infanzia"]) .vocale-emoji img, :where([id="scheda-abc-vocali-infanzia"]) .vocale-emoji svg { width:2.8rem; height:2.8rem; display:block; margin:auto; object-fit:contain; }
+:where([id="scheda-abc-vocali-infanzia"]) .vocale-emoji svg { fill:none; stroke:#111827; stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round; }
 
 :where([id="scheda-alfabetiere-pc-infanzia"]) .scheda-page:has(> .alfT) { padding: 0; }
 :where([id="scheda-alfabetiere-pc-infanzia"]) .alfT { padding: 10mm 13mm 4mm; display: flex; flex-direction: column; min-height: 238mm; }
@@ -789,6 +803,8 @@
 @media screen and (max-width: 580px) {
 :where([id="scheda-riconosci-iniziale-infanzia"]) .ri-griglia { grid-template-columns: 1fr; }
 }
+:where([id="scheda-riconosci-iniziale-infanzia"]) .ri-emoji img, :where([id="scheda-riconosci-iniziale-infanzia"]) .ri-emoji svg { width:3rem; height:3rem; display:block; margin:auto; object-fit:contain; }
+:where([id="scheda-riconosci-iniziale-infanzia"]) .ri-emoji svg { fill:none; stroke:#111827; stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round; }
 
 :where([id="scheda-collega-parola-immagine-infanzia"]) .cpi-area {
       display: grid;
@@ -916,6 +932,7 @@
       line-height: 1.45;
     }
 :where([id="scheda-collega-parola-immagine-infanzia"]) .istruzioni-maestra strong { color: #664d03; }
+:where([id="scheda-collega-parola-immagine-infanzia"]) .cpi-griglia .figura-cella img { width:3.1rem; height:3.1rem; display:block; margin:auto; object-fit:contain; }
 
 :where([id="scheda-numeri-pc-infanzia"]) .num-griglia { display: flex; flex-direction: column; gap: 0.5rem; margin: 0.6rem 0; }
 :where([id="scheda-numeri-pc-infanzia"]) .num-riga {
@@ -959,6 +976,14 @@
       border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
     }
 :where([id="scheda-numeri-pc-infanzia"]) .istruzioni-maestra strong { color: #664d03; }
+:where([id="scheda-numeri-pc-infanzia"]) .num-oggetti { display:flex; align-items:center; justify-content:center; gap:.22rem; letter-spacing:normal; }
+:where([id="scheda-numeri-pc-infanzia"]) .num-oggetti img { width:2.05rem; height:2.05rem; object-fit:contain; }
+@media screen and (max-width:580px) {
+:where([id="scheda-numeri-pc-infanzia"]) .num-riga { grid-template-columns:3rem 3rem minmax(0,1fr); gap:.35rem; padding:.4rem; }
+:where([id="scheda-numeri-pc-infanzia"]) .num-riga-vuota { display:none; }
+:where([id="scheda-numeri-pc-infanzia"]) .num-ricalca, :where([id="scheda-numeri-pc-infanzia"]) .num-modello { font-size:2.7rem; }
+:where([id="scheda-numeri-pc-infanzia"]) .num-oggetti img { width:1.6rem; height:1.6rem; }
+}
 
 :where([id="scheda-ciclo-acqua-infanzia"]) .ciclo-griglia {
       display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem;
@@ -1010,6 +1035,9 @@
       background: #fff8e6; border-left: 4px solid var(--scheda-oro);
       border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
     }
+:where([id="scheda-ciclo-acqua-infanzia"]) .ciclo-cella .emo { width:5rem; height:5rem; display:flex; align-items:center; justify-content:center; font-size:0; }
+:where([id="scheda-ciclo-acqua-infanzia"]) .ciclo-cella .emo img, :where([id="scheda-ciclo-acqua-infanzia"]) .ciclo-cella .emo svg { width:5rem; height:5rem; display:block; object-fit:contain; }
+:where([id="scheda-ciclo-acqua-infanzia"]) .ciclo-cella .emo svg { fill:none; stroke:#111827; stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round; }
 
 :where([id="scheda-triangolo-fuoco-infanzia"]) .triangolo-svg {
       max-width: 360px; height: auto; margin: 0.4rem auto; display: block;
@@ -1228,6 +1256,9 @@
       background: #fff8e6; border-left: 4px solid var(--scheda-oro);
       border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
     }
+:where([id="scheda-conta-puntini-infanzia"]) .conta-card .oggetti { display:flex; align-items:center; justify-content:center; gap:.35rem; letter-spacing:normal; }
+:where([id="scheda-conta-puntini-infanzia"]) .conta-card .oggetti img, :where([id="scheda-conta-puntini-infanzia"]) .conta-card .oggetti svg { width:2.65rem; height:2.65rem; object-fit:contain; display:block; }
+:where([id="scheda-conta-puntini-infanzia"]) .conta-card .oggetti svg { fill:none; stroke:#111827; stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round; }
 
 :where([id="scheda-riconosci-forme-infanzia"]) .scheda-immagine-wrapper {max-width:900px;margin:1rem auto;padding:0 1rem}
 :where([id="scheda-riconosci-forme-infanzia"]) .special {background:#fff;border:1px solid #d7dee8;border-radius:8px;padding:9mm;box-shadow:0 4px 20px rgba(0,0,0,.12)}
@@ -2292,78 +2323,6 @@
 @media (max-width: 600px) {
 :where([id="scheda-blackout-infanzia"]) .bli-regole { grid-template-columns: 1fr; }
 :where([id="scheda-blackout-infanzia"]) .bli-scelte { gap: 1.5rem; }
-}
-
-:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-attivita {
-      border: 2px dashed var(--scheda-bordo);
-      border-radius: 10px;
-      padding: 0.6rem 0.8rem;
-      margin: 0.5rem 0;
-      background: #fff;
-      break-inside: avoid;
-      page-break-inside: avoid;
-    }
-:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-attivita h3 {
-      margin: 0 0 0.4rem 0;
-      font-size: 1.02rem;
-      color: var(--scheda-blu);
-    }
-:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-unisci {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      column-gap: 5rem;
-      row-gap: 0.4rem;
-      margin: 0.4rem auto;
-      max-width: 32rem;
-    }
-:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-unisci figure {
-      margin: 0;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-unisci .dx figure { flex-direction: row-reverse; justify-content: flex-start; }
-:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-unisci img { width: 56px; height: 56px; flex-shrink: 0; }
-:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-unisci figcaption { font-size: 0.95rem; font-weight: 600; }
-:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-unisci .punto {
-      width: 0.9rem; height: 0.9rem; border-radius: 50%;
-      background: var(--scheda-blu); flex-shrink: 0;
-    }
-:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-zaino {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.6rem 1rem;
-      text-align: center;
-      margin: 0.4rem 0;
-    }
-:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-zaino figure { margin: 0; }
-:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-zaino img { width: 60px; height: 60px; display: block; margin: 0 auto 0.15rem auto; }
-:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-zaino figcaption { font-size: 0.95rem; font-weight: 600; }
-:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-medaglia {
-      width: 9.5rem; height: 9.5rem; margin: 0.4rem auto 0.2rem auto;
-      border: 3px dashed var(--scheda-blu); border-radius: 50%;
-    }
-:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-nastro { text-align: center; font-size: 0.9rem; color: var(--scheda-grigio); margin: 0 0 0.3rem 0; }
-:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-ricorda {
-      margin: 0.5rem 0; padding: 0.45rem 0.8rem; border: 2px solid var(--scheda-blu);
-      border-radius: 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 0.7rem;
-    }
-:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-ricorda img { width: 52px; height: 52px; flex-shrink: 0; }
-:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-insegnante {
-      margin-top: 0.6rem; padding: 0.5rem 0.85rem;
-      background: #fff8e6; border-left: 4px solid var(--scheda-oro);
-      border-radius: 0 6px 6px 0; font-size: 0.8rem; color: #664d03; line-height: 1.45;
-    }
-:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-insegnante ul { margin: 0.3rem 0 0 1rem; padding: 0; }
-:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-attribuzione {
-      font-size: 0.72rem;
-      color: var(--scheda-grigio);
-      line-height: 1.4;
-      margin-top: 0.4rem;
-    }
-@media (max-width: 600px) {
-:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-unisci { column-gap: 2rem; }
-:where([id="scheda-nobel-che-ci-proteggono-infanzia"]) .nob-zaino { grid-template-columns: repeat(2, 1fr); }
 }
 
 @page laboratorio26 { size: A4; margin: 5mm; }
@@ -3501,8 +3460,8 @@
   <header class="pacchetto-toolbar no-print" role="banner">
     <a href="/formazione/schede-stampabili/" aria-label="Torna alla hub delle schede stampabili">← Torna alle schede</a>
     <span class="pacchetto-titolo">Pacchetto stampa: Scuola dell'Infanzia · schede A4</span>
-    <button type="button" onclick="window.print()" aria-label="Apri la finestra di stampa per tutte le schede di Scuola dell'Infanzia (176 fogli A4)">
-      🖨️ Stampa tutto (176 fogli A4)
+    <button type="button" onclick="window.print()" aria-label="Apri la finestra di stampa per tutte le schede di Scuola dell'Infanzia (174 fogli A4)">
+      🖨️ Stampa tutto (174 fogli A4)
     </button>
   </header>
 
@@ -3510,7 +3469,7 @@
     <h1 id="pacchetto-intro-h1">Pacchetto stampa — Scuola dell'Infanzia</h1>
     <p>
       Questo pacchetto contiene tutte le <strong>schede stampabili</strong> della Scuola dell'Infanzia (3-6 anni):
-      in stampa occupa <strong>176 fogli A4</strong>.
+      in stampa occupa <strong>174 fogli A4</strong>.
       Premi <strong>"Stampa tutto"</strong> in alto (oppure <kbd>Ctrl+P</kbd> su Windows/Linux, <kbd>Cmd+P</kbd> su Mac)
       per aprire la finestra di stampa. Per archiviare in digitale scegli <em>"Salva come PDF"</em> come stampante.
     </p>
@@ -3579,7 +3538,6 @@
       <li><a href="#scheda-volontariato-ambiente-infanzia">VOLONTARIATO E AMBIENTE</a></li>
       <li><a href="#scheda-nodi-che-salvano-infanzia">I NODI CHE SALVANO</a></li>
       <li><a href="#scheda-blackout-infanzia">Quando va via la luce</a></li>
-      <li><a href="#scheda-nobel-che-ci-proteggono-infanzia">I Nobel che ci proteggono</a> <span class="toc-meta">· 2 fogli</span></li>
       <li><a href="#scheda-la-mia-voce-arriva-anche-senza-parole-infanzia">La mia voce arriva anche senza parole</a> <span class="toc-meta">· 2 fogli</span></li>
       <li><a href="#scheda-prima-ti-chiedo-infanzia">Prima ti chiedo</a> <span class="toc-meta">· 2 fogli</span></li>
       <li><a href="#scheda-la-consegna-si-puo-ripetere-infanzia">La consegna si può ripetere</a> <span class="toc-meta">· 2 fogli</span></li>
@@ -4072,19 +4030,19 @@
     </div>
 
     <p class="scheda-intro">
-      <strong>Il maestro o la maestra ti legge la frase.</strong> Tu colora <strong>la faccina felice 😊</strong> se la frase è vera (cosa giusta da fare), <strong>la faccina triste 😟</strong> se è falsa (cosa sbagliata).
+      <strong>Il maestro o la maestra ti legge la frase.</strong> Tu colora <strong>la faccina felice</strong> se la frase è vera (cosa giusta da fare), <strong>la faccina triste</strong> se è falsa (cosa sbagliata).
     </p>
 
     <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.5rem 0.8rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.92rem; line-height: 1.5;">
-      <strong style="color: var(--scheda-blu);">✓✗ Vero o falso ti insegna a scegliere bene</strong> in caso di emergenza. Le frasi che senti non sono casuali: sono le <em>regole-base</em> che ogni bambino dovrebbe sapere — quando trema la terra non si corre fuori, quando c'è fumo ci si abbassa, il 112 si chiama solo per emergenze vere. Sono le stesse regole che il Dipartimento Protezione Civile insegna in tutta Italia con "<em>Io non rischio</em>".
+      <strong style="color: var(--scheda-blu);">Vero o falso ti insegna a scegliere bene</strong> in caso di emergenza. Le frasi che senti non sono casuali: sono le <em>regole-base</em> che ogni bambino dovrebbe sapere — quando trema la terra non si corre fuori, quando c'è fumo ci si abbassa, il 112 si chiama solo per emergenze vere. Sono le stesse regole che il Dipartimento Protezione Civile insegna in tutta Italia con "<em>Io non rischio</em>".
     </div>
 
     <div class="vf-domanda">
       <div class="vf-num">1</div>
       <div class="vf-testo">Durante il terremoto esco di corsa fuori da scuola.</div>
       <div class="vf-faccine">
-        <div class="vf-faccia">😊</div>
-        <div class="vf-faccia">😟</div>
+        <div class="vf-faccia"><svg class="vf-icon" viewBox="0 0 64 64" role="img" aria-label="Faccina felice"><circle cx="32" cy="32" r="27" fill="#fff" stroke="#111827" stroke-width="3"/><circle cx="23" cy="26" r="2.5" fill="#111827"/><circle cx="41" cy="26" r="2.5" fill="#111827"/><path d="M18 35 Q32 49 46 35" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round"/></svg></div>
+        <div class="vf-faccia"><svg class="vf-icon" viewBox="0 0 64 64" role="img" aria-label="Faccina triste"><circle cx="32" cy="32" r="27" fill="#fff" stroke="#111827" stroke-width="3"/><circle cx="23" cy="26" r="2.5" fill="#111827"/><circle cx="41" cy="26" r="2.5" fill="#111827"/><path d="M18 45 Q32 31 46 45" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round"/></svg></div>
       </div>
     </div>
 
@@ -4092,8 +4050,8 @@
       <div class="vf-num">2</div>
       <div class="vf-testo">Quando suona la sirena prendo per mano un amico.</div>
       <div class="vf-faccine">
-        <div class="vf-faccia">😊</div>
-        <div class="vf-faccia">😟</div>
+        <div class="vf-faccia"><svg class="vf-icon" viewBox="0 0 64 64" role="img" aria-label="Faccina felice"><circle cx="32" cy="32" r="27" fill="#fff" stroke="#111827" stroke-width="3"/><circle cx="23" cy="26" r="2.5" fill="#111827"/><circle cx="41" cy="26" r="2.5" fill="#111827"/><path d="M18 35 Q32 49 46 35" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round"/></svg></div>
+        <div class="vf-faccia"><svg class="vf-icon" viewBox="0 0 64 64" role="img" aria-label="Faccina triste"><circle cx="32" cy="32" r="27" fill="#fff" stroke="#111827" stroke-width="3"/><circle cx="23" cy="26" r="2.5" fill="#111827"/><circle cx="41" cy="26" r="2.5" fill="#111827"/><path d="M18 45 Q32 31 46 45" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round"/></svg></div>
       </div>
     </div>
 
@@ -4101,8 +4059,8 @@
       <div class="vf-num">3</div>
       <div class="vf-testo">Il numero dell'emergenza è il <strong>112</strong>.</div>
       <div class="vf-faccine">
-        <div class="vf-faccia">😊</div>
-        <div class="vf-faccia">😟</div>
+        <div class="vf-faccia"><svg class="vf-icon" viewBox="0 0 64 64" role="img" aria-label="Faccina felice"><circle cx="32" cy="32" r="27" fill="#fff" stroke="#111827" stroke-width="3"/><circle cx="23" cy="26" r="2.5" fill="#111827"/><circle cx="41" cy="26" r="2.5" fill="#111827"/><path d="M18 35 Q32 49 46 35" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round"/></svg></div>
+        <div class="vf-faccia"><svg class="vf-icon" viewBox="0 0 64 64" role="img" aria-label="Faccina triste"><circle cx="32" cy="32" r="27" fill="#fff" stroke="#111827" stroke-width="3"/><circle cx="23" cy="26" r="2.5" fill="#111827"/><circle cx="41" cy="26" r="2.5" fill="#111827"/><path d="M18 45 Q32 31 46 45" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round"/></svg></div>
       </div>
     </div>
 
@@ -4110,8 +4068,8 @@
       <div class="vf-num">4</div>
       <div class="vf-testo">Posso usare l'ascensore quando suona l'allarme.</div>
       <div class="vf-faccine">
-        <div class="vf-faccia">😊</div>
-        <div class="vf-faccia">😟</div>
+        <div class="vf-faccia"><svg class="vf-icon" viewBox="0 0 64 64" role="img" aria-label="Faccina felice"><circle cx="32" cy="32" r="27" fill="#fff" stroke="#111827" stroke-width="3"/><circle cx="23" cy="26" r="2.5" fill="#111827"/><circle cx="41" cy="26" r="2.5" fill="#111827"/><path d="M18 35 Q32 49 46 35" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round"/></svg></div>
+        <div class="vf-faccia"><svg class="vf-icon" viewBox="0 0 64 64" role="img" aria-label="Faccina triste"><circle cx="32" cy="32" r="27" fill="#fff" stroke="#111827" stroke-width="3"/><circle cx="23" cy="26" r="2.5" fill="#111827"/><circle cx="41" cy="26" r="2.5" fill="#111827"/><path d="M18 45 Q32 31 46 45" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round"/></svg></div>
       </div>
     </div>
 
@@ -4119,8 +4077,8 @@
       <div class="vf-num">5</div>
       <div class="vf-testo">Quando piove forte sto dentro casa.</div>
       <div class="vf-faccine">
-        <div class="vf-faccia">😊</div>
-        <div class="vf-faccia">😟</div>
+        <div class="vf-faccia"><svg class="vf-icon" viewBox="0 0 64 64" role="img" aria-label="Faccina felice"><circle cx="32" cy="32" r="27" fill="#fff" stroke="#111827" stroke-width="3"/><circle cx="23" cy="26" r="2.5" fill="#111827"/><circle cx="41" cy="26" r="2.5" fill="#111827"/><path d="M18 35 Q32 49 46 35" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round"/></svg></div>
+        <div class="vf-faccia"><svg class="vf-icon" viewBox="0 0 64 64" role="img" aria-label="Faccina triste"><circle cx="32" cy="32" r="27" fill="#fff" stroke="#111827" stroke-width="3"/><circle cx="23" cy="26" r="2.5" fill="#111827"/><circle cx="41" cy="26" r="2.5" fill="#111827"/><path d="M18 45 Q32 31 46 45" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round"/></svg></div>
       </div>
     </div>
 
@@ -4128,8 +4086,8 @@
       <div class="vf-num">6</div>
       <div class="vf-testo">Chiamo il 112 per dire che è bello il mio disegno.</div>
       <div class="vf-faccine">
-        <div class="vf-faccia">😊</div>
-        <div class="vf-faccia">😟</div>
+        <div class="vf-faccia"><svg class="vf-icon" viewBox="0 0 64 64" role="img" aria-label="Faccina felice"><circle cx="32" cy="32" r="27" fill="#fff" stroke="#111827" stroke-width="3"/><circle cx="23" cy="26" r="2.5" fill="#111827"/><circle cx="41" cy="26" r="2.5" fill="#111827"/><path d="M18 35 Q32 49 46 35" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round"/></svg></div>
+        <div class="vf-faccia"><svg class="vf-icon" viewBox="0 0 64 64" role="img" aria-label="Faccina triste"><circle cx="32" cy="32" r="27" fill="#fff" stroke="#111827" stroke-width="3"/><circle cx="23" cy="26" r="2.5" fill="#111827"/><circle cx="41" cy="26" r="2.5" fill="#111827"/><path d="M18 45 Q32 31 46 45" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round"/></svg></div>
       </div>
     </div>
 
@@ -4137,8 +4095,8 @@
       <div class="vf-num">7</div>
       <div class="vf-testo">Quando sento tremare la terra mi metto sotto al banco.</div>
       <div class="vf-faccine">
-        <div class="vf-faccia">😊</div>
-        <div class="vf-faccia">😟</div>
+        <div class="vf-faccia"><svg class="vf-icon" viewBox="0 0 64 64" role="img" aria-label="Faccina felice"><circle cx="32" cy="32" r="27" fill="#fff" stroke="#111827" stroke-width="3"/><circle cx="23" cy="26" r="2.5" fill="#111827"/><circle cx="41" cy="26" r="2.5" fill="#111827"/><path d="M18 35 Q32 49 46 35" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round"/></svg></div>
+        <div class="vf-faccia"><svg class="vf-icon" viewBox="0 0 64 64" role="img" aria-label="Faccina triste"><circle cx="32" cy="32" r="27" fill="#fff" stroke="#111827" stroke-width="3"/><circle cx="23" cy="26" r="2.5" fill="#111827"/><circle cx="41" cy="26" r="2.5" fill="#111827"/><path d="M18 45 Q32 31 46 45" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round"/></svg></div>
       </div>
     </div>
 
@@ -4146,16 +4104,16 @@
       <div class="vf-num">8</div>
       <div class="vf-testo">Se vedo del fumo grande in casa, esco subito e avviso un adulto.</div>
       <div class="vf-faccine">
-        <div class="vf-faccia">😊</div>
-        <div class="vf-faccia">😟</div>
+        <div class="vf-faccia"><svg class="vf-icon" viewBox="0 0 64 64" role="img" aria-label="Faccina felice"><circle cx="32" cy="32" r="27" fill="#fff" stroke="#111827" stroke-width="3"/><circle cx="23" cy="26" r="2.5" fill="#111827"/><circle cx="41" cy="26" r="2.5" fill="#111827"/><path d="M18 35 Q32 49 46 35" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round"/></svg></div>
+        <div class="vf-faccia"><svg class="vf-icon" viewBox="0 0 64 64" role="img" aria-label="Faccina triste"><circle cx="32" cy="32" r="27" fill="#fff" stroke="#111827" stroke-width="3"/><circle cx="23" cy="26" r="2.5" fill="#111827"/><circle cx="41" cy="26" r="2.5" fill="#111827"/><path d="M18 45 Q32 31 46 45" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round"/></svg></div>
       </div>
     </div>
 
     <div class="soluzione-capovolta" style="margin-top: 6mm;">
       <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
       <span style="font-size: 0.9rem;">
-        1) 😟 falso · 2) 😊 vero · 3) 😊 vero · 4) 😟 falso ·
-        5) 😊 vero · 6) 😟 falso · 7) 😊 vero · 8) 😊 vero.
+        1) FALSO · 2) VERO · 3) VERO · 4) FALSO ·
+        5) VERO · 6) FALSO · 7) VERO · 8) VERO.
       </span>
     </div>
 
@@ -4186,16 +4144,16 @@
     </div>
 
     <p class="scheda-intro">
-      <strong>La maestra ti dice:</strong> «Suona la sirena di evacuazione! Il bambino 🧒 deve uscire dalla scuola e raggiungere il <strong>cartello verde dell'uscita</strong> 🚪.» Disegna con la matita il percorso, <strong>senza passare</strong> sopra agli ostacoli (gli zaini 🎒, i banchi rovesciati e il fuoco 🔥). <strong>Non correre</strong>: il percorso giusto è quello che evita gli ostacoli.
+      <strong>La maestra ti dice:</strong> «Suona la sirena di evacuazione! Il bambino deve uscire dalla scuola e raggiungere il <strong>cartello verde dell’uscita</strong>.» Disegna con la matita il percorso, <strong>senza passare</strong> sopra agli ostacoli (gli zaini, i banchi rovesciati e il fuoco). <strong>Non correre</strong>: il percorso giusto è quello che evita gli ostacoli.
     </p>
 
     <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.55rem 0.85rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.92rem; line-height: 1.5;">
-      <strong style="color: var(--scheda-blu);">🚪 Regole d'oro dell'evacuazione:</strong> <strong>(1)</strong> Cammina, non correre. <strong>(2)</strong> Segui i compagni in fila. <strong>(3)</strong> Non tornare indietro per niente (zaino, giacca, oggetti). <strong>(4)</strong> Segui i <strong>cartelli verdi</strong> con l'omino che corre (sono fosforescenti). <strong>(5)</strong> Al punto di raccolta aspetta la maestra: deve fare l'<strong>appello</strong> per sapere che ci sei tu e gli altri.
+      <strong style="color: var(--scheda-blu);">Regole d’oro dell’evacuazione:</strong> <strong>(1)</strong> Cammina, non correre. <strong>(2)</strong> Segui i compagni in fila. <strong>(3)</strong> Non tornare indietro per niente (zaino, giacca, oggetti). <strong>(4)</strong> Segui i <strong>cartelli verdi</strong> con l'omino che corre (sono fosforescenti). <strong>(5)</strong> Al punto di raccolta aspetta la maestra: deve fare l'<strong>appello</strong> per sapere che ci sei tu e gli altri.
     </div>
 
     <div class="lab-griglia" role="img" aria-label="Labirinto 11 colonne per 9 righe. Bambino in alto a sinistra, uscita in basso a destra.">
       <!-- Riga 1 -->
-      <div class="lab-cella start"><img src="/pittogrammi/arasaac-bn/alf-z-zaino.png" alt="Partenza"></div>
+      <div class="lab-cella start"><svg class="lab-bambino" viewBox="0 0 64 64" aria-hidden="true"><rect x="39" y="24" width="11" height="20" rx="4" fill="#fff" stroke="#111827" stroke-width="2.2"/><circle cx="30" cy="13" r="8" fill="#fff" stroke="#111827" stroke-width="2.5"/><path d="M23 11q7-8 15 0" fill="none" stroke="#111827" stroke-width="2.2" stroke-linecap="round"/><path d="M21 26q9-6 18 0l4 19H17z" fill="#fff" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/><path d="M20 28l-9 9q-2 2 0 5l3 2 11-11M40 28l9 8q2 2 0 5l-3 2-10-10" fill="#fff" stroke="#111827" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 45h9l-2 15H17zM32 45h9l4 15H35z" fill="#fff" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/><path d="M15 60h13M34 60h13" stroke="#111827" stroke-width="3" stroke-linecap="round"/></svg></div>
       <div class="lab-cella"></div>
       <div class="lab-cella ostacolo"><img src="/pittogrammi/arasaac-bn/alf-z-zaino.png" alt="Zaino"></div>
       <div class="lab-cella"></div>
@@ -4305,11 +4263,11 @@
     </div>
 
     <div class="lab-legenda">
-      <span class="lab-legenda-item"><span class="lab-legenda-icon"><img src="/pittogrammi/arasaac-bn/alf-z-zaino.png" alt=""></span> Partenza</span>
+      <span class="lab-legenda-item"><span class="lab-legenda-icon"><svg class="lab-bambino" viewBox="0 0 64 64" aria-hidden="true"><rect x="39" y="24" width="11" height="20" rx="4" fill="#fff" stroke="#111827" stroke-width="2.2"/><circle cx="30" cy="13" r="8" fill="#fff" stroke="#111827" stroke-width="2.5"/><path d="M23 11q7-8 15 0" fill="none" stroke="#111827" stroke-width="2.2" stroke-linecap="round"/><path d="M21 26q9-6 18 0l4 19H17z" fill="#fff" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/><path d="M20 28l-9 9q-2 2 0 5l3 2 11-11M40 28l9 8q2 2 0 5l-3 2-10-10" fill="#fff" stroke="#111827" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 45h9l-2 15H17zM32 45h9l4 15H35z" fill="#fff" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/><path d="M15 60h13M34 60h13" stroke="#111827" stroke-width="3" stroke-linecap="round"/></svg></span> Partenza</span>
       <span class="lab-legenda-item"><span class="lab-legenda-icon"><img src="/pittogrammi/iso7010/uscita-emergenza-sinistra.svg" alt=""></span> Uscita (arriva qui)</span>
       <span class="lab-legenda-item"><span class="lab-legenda-icon"><img src="/pittogrammi/arasaac-bn/alf-z-zaino.png" alt=""></span> Zaino (non passare)</span>
       <span class="lab-legenda-item"><span class="lab-legenda-icon"><img src="/pittogrammi/arasaac-bn/pop-fuoco.png" alt=""></span> Fuoco (pericolo)</span>
-      <span class="lab-legenda-item">⬛ Muro</span>
+      <span class="lab-legenda-item"><span class="lab-muro-simbolo" aria-hidden="true"></span> Muro</span>
     </div>
 
     <h2 class="scheda-h2">Quando hai finito il labirinto, ricorda:</h2>
@@ -4317,14 +4275,14 @@
       <li>Quando suona l'allarme <strong>cammina, non correre</strong>.</li>
       <li>Tieni per mano un compagno e segui la maestra.</li>
       <li>Non tornare indietro a prendere lo zaino.</li>
-      <li>Se vedi il fuoco 🔥, <strong>cerca un'altra strada</strong>.</li>
+      <li>Se vedi il fuoco, <strong>cerca un’altra strada</strong>.</li>
     </ul>
 
     <div class="soluzione-capovolta">
-      <span class="titolo">🔑 Per la maestra o il maestro — gira il foglio sottosopra per leggere</span>
+      <span class="titolo">Per la maestra o il maestro — gira il foglio sottosopra per leggere</span>
       Il labirinto ammette <strong>più percorsi corretti</strong>: il più breve richiede 18 passaggi, ma ne esistono altri validi.
-      Non c'è quindi una sola linea giusta da confrontare. È corretto ogni tracciato che parte dal bambino 🧒, arriva
-      all'uscita 🚪 e <strong>non attraversa mai lo zaino 🎒, il fuoco 🔥 o i muri ⬛</strong>. Se un bambino sceglie una strada più
+      Non c'è quindi una sola linea giusta da confrontare. È corretto ogni tracciato che parte dal bambino, arriva
+      all’uscita e <strong>non attraversa mai lo zaino, il fuoco o i muri</strong>. Se un bambino sceglie una strada più
       lunga ma pulita, la scheda è superata: l'obiettivo è evitare gli ostacoli, non trovare la scorciatoia.
     </div>
 
@@ -4359,57 +4317,57 @@
     </p>
 
     <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.5rem 0.8rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.92rem; line-height: 1.5;">
-      <strong style="color: var(--scheda-blu);">📚 Per la maestra:</strong> il comportamento dei bambini in caso di scossa segue il protocollo internazionale <strong>"Drop, Cover, Hold On"</strong> (USGS, Earthquake Country Alliance): <em>abbassati, copriti, tieniti</em>. È riconosciuto come comportamento sicuro dal Dipartimento Protezione Civile italiano e usato nelle campagne <em>"Io non rischio terremoto"</em>. La metafora della tartaruga lo rende memorizzabile a 5-6 anni. Mai correre fuori, mai fermarsi sotto i portoni vecchi.
+      <strong style="color: var(--scheda-blu);">Per la maestra:</strong> il comportamento dei bambini in caso di scossa segue il protocollo internazionale <strong>"Drop, Cover, Hold On"</strong> (USGS, Earthquake Country Alliance): <em>abbassati, copriti, tieniti</em>. È riconosciuto come comportamento sicuro dal Dipartimento Protezione Civile italiano e usato nelle campagne <em>"Io non rischio terremoto"</em>. La metafora della tartaruga lo rende memorizzabile a 5-6 anni. Mai correre fuori, mai fermarsi sotto i portoni vecchi.
     </div>
 
-    <div class="ts-grande" aria-hidden="true">🐢</div>
+    <div class="ts-grande"><svg class="ts-turtle" viewBox="0 0 120 90" role="img" aria-label="Tartaruga sorridente"><ellipse cx="56" cy="48" rx="34" ry="25" fill="#fff" stroke="#111827" stroke-width="4"/><path d="M30 48h52M39 29l34 38M73 29L39 67" fill="none" stroke="#111827" stroke-width="2.5"/><circle cx="99" cy="44" r="13" fill="#fff" stroke="#111827" stroke-width="4"/><circle cx="103" cy="41" r="2" fill="#111827"/><path d="M102 49q5 4 9 0" fill="none" stroke="#111827" stroke-width="2.5" stroke-linecap="round"/><ellipse cx="36" cy="75" rx="9" ry="5" transform="rotate(-25 36 75)" fill="#fff" stroke="#111827" stroke-width="3"/><ellipse cx="72" cy="75" rx="9" ry="5" transform="rotate(25 72 75)" fill="#fff" stroke="#111827" stroke-width="3"/><ellipse cx="34" cy="20" rx="9" ry="5" transform="rotate(25 34 20)" fill="#fff" stroke="#111827" stroke-width="3"/><ellipse cx="74" cy="20" rx="9" ry="5" transform="rotate(-25 74 20)" fill="#fff" stroke="#111827" stroke-width="3"/><path d="M22 48l-12 6 12 5" fill="#fff" stroke="#111827" stroke-width="3" stroke-linejoin="round"/></svg></div>
 
     <h2 class="scheda-h2 text-center" style="text-align: center;">Le 4 regole della Tartaruga</h2>
 
     <div class="ts-regole">
       <div class="ts-regola">
         <span class="ts-num">1</span>
-        <span class="ts-emoji">🪑</span>
+        <span class="ts-emoji" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/pop-tavolo.png" alt=""></span>
         <span class="ts-titolo">Mi nascondo</span>
         <span class="ts-frase">Mi metto sotto al tavolo o al banco, nel posto sicuro che la maestra mi ha mostrato.</span>
       </div>
       <div class="ts-regola">
         <span class="ts-num">2</span>
-        <span class="ts-emoji">🙇</span>
+        <span class="ts-emoji"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="18" r="9" fill="#fff" stroke="#111827" stroke-width="2.6"/><path d="M20 58V40c0-9 5-14 12-14s12 5 12 14v18" fill="#fff" stroke="#111827" stroke-width="2.6"/><path d="M19 38c3-8 7-13 13-15M45 38c-3-8-7-13-13-15" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round"/><path d="M20 15q12-12 24 0" fill="none" stroke="#111827" stroke-width="2.6" stroke-linecap="round"/></svg></span>
         <span class="ts-titolo">Mi proteggo</span>
         <span class="ts-frase">Metto le mani sulla testa per proteggermi.</span>
       </div>
       <div class="ts-regola">
         <span class="ts-num">3</span>
-        <span class="ts-emoji">⏳</span>
+        <span class="ts-emoji"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="24" fill="#fff" stroke="#111827" stroke-width="3"/><path d="M32 18v15l11 7" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round"/><path d="M20 6h24" fill="none" stroke="#111827" stroke-width="3" stroke-linecap="round"/></svg></span>
         <span class="ts-titolo">Aspetto</span>
         <span class="ts-frase">Resto fermo finché smette di tremare.</span>
       </div>
       <div class="ts-regola">
         <span class="ts-num">4</span>
-        <span class="ts-emoji">🚶‍♀️</span>
+        <span class="ts-emoji" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/pop-fila.png" alt=""></span>
         <span class="ts-titolo">Esco con calma</span>
         <span class="ts-frase">Esco in fila con la maestra, senza correre.</span>
       </div>
     </div>
 
     <div class="ts-filastrocca">
-      🐢 La tartaruga piccolina<br>
+      La tartaruga piccolina<br>
       quando trema la cucina<br>
       sotto il tavolo va in un lampo<br>
       e con le mani copre il capo.<br>
       Ferma aspetta, guscio chiuso,<br>
       finché il tremore è concluso.<br>
       Poi esce in fila, piano piano,<br>
-      con la maestra mano nella mano. 🐢
+      con la maestra mano nella mano.
     </div>
 
     <h2 class="scheda-h2">Cosa NON fare</h2>
     <ul style="padding-left: 1.3rem; line-height: 1.7;">
-      <li>❌ Non scappare in modo veloce e disordinato.</li>
-      <li>❌ Non usare l'ascensore.</li>
-      <li>❌ Non andare alle finestre.</li>
-      <li>❌ Non restare da solo: se hai paura va bene, i grandi sono con te e ti aiutano.</li>
+      <li><strong>NO:</strong> Non scappare in modo veloce e disordinato.</li>
+      <li><strong>NO:</strong> Non usare l'ascensore.</li>
+      <li><strong>NO:</strong> Non andare alle finestre.</li>
+      <li><strong>NO:</strong> Non restare da solo: se hai paura va bene, i grandi sono con te e ti aiutano.</li>
     </ul>
 
     <footer class="scheda-footer">
@@ -4443,38 +4401,35 @@
     </p>
 
     <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.5rem 0.8rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.92rem; line-height: 1.5;">
-      <strong style="color: var(--scheda-blu);">🔗 Le coppie ti aiutano a ragionare per <em>causa-effetto</em>:</strong> a ogni <strong>pericolo</strong> corrisponde un'<strong>azione giusta</strong>. <em>C'è il fuoco → chiamo i pompieri. Sento la scossa → mi nascondo sotto il tavolo. C'è un'inondazione → vado in alto.</em> È il modo di pensare che usano i grandi quando devono decidere in fretta!
+      <strong style="color: var(--scheda-blu);">Le coppie ti aiutano a ragionare per <em>causa-effetto</em>:</strong> a ogni <strong>pericolo</strong> corrisponde un'<strong>azione giusta</strong>. <em>C'è il fuoco → chiamo i pompieri. Sento la scossa → mi nascondo sotto il tavolo. C'è un'inondazione → vado in alto.</em> È il modo di pensare che usano i grandi quando devono decidere in fretta!
     </div>
 
     <div class="tc-area">
       <div class="tc-col">
-        <div class="tc-card"><span class="tc-emoji">🚪</span><span class="tc-text">Cartello uscita</span><span class="tc-puntino"></span></div>
-        <div class="tc-card"><span class="tc-emoji">🧯</span><span class="tc-text">Estintore</span><span class="tc-puntino"></span></div>
-        <div class="tc-card"><span class="tc-emoji">🐢</span><span class="tc-text">Tartaruga (terremoto)</span><span class="tc-puntino"></span></div>
-        <div class="tc-card"><span class="tc-emoji">🤝</span><span class="tc-text">Mano di un amico</span><span class="tc-puntino"></span></div>
-        <div class="tc-card"><span class="tc-emoji">☔</span><span class="tc-text">Pioggia forte</span><span class="tc-puntino"></span></div>
-        <div class="tc-card"><span class="tc-emoji">📞</span><span class="tc-text">Telefono</span><span class="tc-puntino"></span></div>
-        <div class="tc-card"><span class="tc-emoji">🔥</span><span class="tc-text">Fuoco</span><span class="tc-puntino"></span></div>
-        <div class="tc-card"><span class="tc-emoji">👩‍🏫</span><span class="tc-text">Maestra</span><span class="tc-puntino"></span></div>
+        <div class="tc-card"><span class="tc-emoji" aria-hidden="true"><img src="/pittogrammi/iso7010/uscita-emergenza-sinistra.svg" alt=""></span><span class="tc-text">Cartello uscita</span><span class="tc-puntino"></span></div>
+        <div class="tc-card"><span class="tc-emoji" aria-hidden="true"><img src="/pittogrammi/iso7010/estintore.svg" alt=""></span><span class="tc-text">Estintore</span><span class="tc-puntino"></span></div>
+        <div class="tc-card"><span class="tc-emoji" aria-hidden="true"><svg viewBox="0 0 64 64"><ellipse cx="31" cy="34" rx="19" ry="14"/><circle cx="53" cy="31" r="7"/><circle cx="55" cy="29" r="1.4" fill="#111827" stroke="none"/><ellipse cx="18" cy="48" rx="5" ry="3" transform="rotate(-25 18 48)"/><ellipse cx="42" cy="48" rx="5" ry="3" transform="rotate(25 42 48)"/><ellipse cx="17" cy="22" rx="5" ry="3" transform="rotate(25 17 22)"/><ellipse cx="42" cy="21" rx="5" ry="3" transform="rotate(-25 42 21)"/><path d="M12 34l-7 4 7 3"/><path d="M22 26l18 16M40 26L22 42"/></svg></span><span class="tc-text">Tartaruga (terremoto)</span><span class="tc-puntino"></span></div>
+        <div class="tc-card"><span class="tc-emoji" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/dis-adulto-bambino.png" alt=""></span><span class="tc-text">Mano di un amico</span><span class="tc-puntino"></span></div>
+        <div class="tc-card"><span class="tc-emoji" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/oca-pioggia.png" alt=""></span><span class="tc-text">Pioggia forte</span><span class="tc-puntino"></span></div>
+        <div class="tc-card"><span class="tc-emoji" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-n-telefono.png" alt=""></span><span class="tc-text">Telefono</span><span class="tc-puntino"></span></div>
+        <div class="tc-card"><span class="tc-emoji" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/pop-fuoco.png" alt=""></span><span class="tc-text">Fuoco</span><span class="tc-puntino"></span></div>
+        <div class="tc-card"><span class="tc-emoji" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/dis-adulto-bambino.png" alt=""></span><span class="tc-text">Maestra</span><span class="tc-puntino"></span></div>
       </div>
       <div class="tc-col">
-        <div class="tc-card tc-card-dx"><span class="tc-emoji">🚶</span><span class="tc-text">Mi metto in fila</span><span class="tc-puntino"></span></div>
-        <div class="tc-card tc-card-dx"><span class="tc-emoji">🪑</span><span class="tc-text">Mi nascondo sotto</span><span class="tc-puntino"></span></div>
-        <div class="tc-card tc-card-dx"><span class="tc-emoji">🏠</span><span class="tc-text">Sto dentro casa</span><span class="tc-puntino"></span></div>
-        <div class="tc-card tc-card-dx"><span class="tc-emoji">🆘</span><span class="tc-text">Spegne il fuoco</span><span class="tc-puntino"></span></div>
-        <div class="tc-card tc-card-dx"><span class="tc-emoji">➡️</span><span class="tc-text">Mostra dove si esce</span><span class="tc-puntino"></span></div>
+        <div class="tc-card tc-card-dx"><span class="tc-emoji" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/pop-fila.png" alt=""></span><span class="tc-text">Mi metto in fila</span><span class="tc-puntino"></span></div>
+        <div class="tc-card tc-card-dx"><span class="tc-emoji" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/pop-tavolo.png" alt=""></span><span class="tc-text">Mi nascondo sotto</span><span class="tc-puntino"></span></div>
+        <div class="tc-card tc-card-dx"><span class="tc-emoji" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/pop-casa.png" alt=""></span><span class="tc-text">Sto dentro casa</span><span class="tc-puntino"></span></div>
+        <div class="tc-card tc-card-dx"><span class="tc-emoji" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/dis-pompiere.png" alt=""></span><span class="tc-text">Spegne il fuoco</span><span class="tc-puntino"></span></div>
+        <div class="tc-card tc-card-dx"><span class="tc-emoji" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M8 32h42"/><path d="M38 18l14 14-14 14"/></svg></span><span class="tc-text">Mostra dove si esce</span><span class="tc-puntino"></span></div>
         <div class="tc-card tc-card-dx"><span class="tc-emoji">112</span><span class="tc-text">Numero emergenza</span><span class="tc-puntino"></span></div>
-        <div class="tc-card tc-card-dx"><span class="tc-emoji">👋</span><span class="tc-text">Lo prendo per mano</span><span class="tc-puntino"></span></div>
-        <div class="tc-card tc-card-dx"><span class="tc-emoji">😊</span><span class="tc-text">Mi aiuta sempre</span><span class="tc-puntino"></span></div>
+        <div class="tc-card tc-card-dx"><span class="tc-emoji" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/dis-adulto-bambino.png" alt=""></span><span class="tc-text">Lo prendo per mano</span><span class="tc-puntino"></span></div>
+        <div class="tc-card tc-card-dx"><span class="tc-emoji" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/dis-volontari.png" alt=""></span><span class="tc-text">Mi aiuta sempre</span><span class="tc-puntino"></span></div>
       </div>
     </div>
 
     <div class="soluzione-capovolta" style="margin-top: 6mm;">
       <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
-      <span style="font-size: 0.9rem;">
-        🚪 → ➡️ &nbsp;·&nbsp; 🧯 → 🆘 &nbsp;·&nbsp; 🐢 → 🪑 &nbsp;·&nbsp; 🤝 → 👋 &nbsp;·&nbsp;
-        ☔ → 🏠 &nbsp;·&nbsp; 📞 → 112 &nbsp;·&nbsp; 🔥 → 🚶 (in fila esco) &nbsp;·&nbsp; 👩‍🏫 → 😊
-      </span>
+      <span style="font-size: 0.9rem;">Cartello uscita → mostra dove si esce · Estintore → spegne il fuoco · Tartaruga → mi nascondo sotto · Mano di un amico → lo prendo per mano · Pioggia forte → sto dentro casa · Telefono → 112 · Fuoco → mi metto in fila e esco · Maestra → mi aiuta sempre.</span>
     </div>
 
     <footer class="scheda-footer">
@@ -4508,7 +4463,7 @@
     </p>
 
     <div style="background:#eaf2fb; border-left:4px solid #003366; padding:0.5rem 0.8rem; border-radius:0 8px 8px 0; margin:0.4rem 0; font-size:0.92rem; line-height:1.5;">
-      <strong style="color:#003366;">🆘 Le 5 parole che impari</strong> con le vocali sono parole della sicurezza: chiedere <em>Aiuto</em>, l'<em>Elmetto</em> che protegge la testa, l'<em>Idrante</em> da cui i pompieri prendono l'acqua, l'<em>Ospedale</em> dove si curano le persone, l'<em>Uscita</em> di emergenza da cui si esce con la maestra. Mentre impari le vocali, impari anche queste parole. <strong>La cosa più importante resta una sola: chiamare subito un adulto.</strong>
+      <strong style="color:#003366;">Le 5 parole che impari</strong> con le vocali sono parole della sicurezza: chiedere <em>Aiuto</em>, l'<em>Elmetto</em> che protegge la testa, l'<em>Idrante</em> da cui i pompieri prendono l'acqua, l'<em>Ospedale</em> dove si curano le persone, l'<em>Uscita</em> di emergenza da cui si esce con la maestra. Mentre impari le vocali, impari anche queste parole. <strong>La cosa più importante resta una sola: chiamare subito un adulto.</strong>
     </div>
 
     <div class="vocali-griglia">
@@ -4516,7 +4471,7 @@
       <div class="vocale-riga">
         <div class="vocale-ricalca" aria-hidden="true">A</div>
         <div class="vocale-modello" aria-hidden="true">A</div>
-        <div class="vocale-emoji" aria-hidden="true">🆘</div>
+        <div class="vocale-emoji" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/dis-adulto-bambino.png" alt=""></div>
         <div class="vocale-parola">
           <span class="parola-modello"><span class="parola-iniziale">A</span>IUTO</span>
           <span class="parola-riga" aria-hidden="true"></span>
@@ -4526,7 +4481,7 @@
       <div class="vocale-riga">
         <div class="vocale-ricalca" aria-hidden="true">E</div>
         <div class="vocale-modello" aria-hidden="true">E</div>
-        <div class="vocale-emoji" aria-hidden="true">⛑️</div>
+        <div class="vocale-emoji" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-c-casco.png" alt=""></div>
         <div class="vocale-parola">
           <span class="parola-modello"><span class="parola-iniziale">E</span>LMETTO</span>
           <span class="parola-riga" aria-hidden="true"></span>
@@ -4546,7 +4501,7 @@
       <div class="vocale-riga">
         <div class="vocale-ricalca" aria-hidden="true">O</div>
         <div class="vocale-modello" aria-hidden="true">O</div>
-        <div class="vocale-emoji" aria-hidden="true">🏥</div>
+        <div class="vocale-emoji" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="10" y="16" width="44" height="38" rx="3"/><rect x="27" y="37" width="10" height="17"/><path d="M32 20v12M26 26h12"/><rect x="16" y="36" width="7" height="7"/><rect x="41" y="36" width="7" height="7"/></svg></div>
         <div class="vocale-parola">
           <span class="parola-modello"><span class="parola-iniziale">O</span>SPEDALE</span>
           <span class="parola-riga" aria-hidden="true"></span>
@@ -4556,7 +4511,7 @@
       <div class="vocale-riga">
         <div class="vocale-ricalca" aria-hidden="true">U</div>
         <div class="vocale-modello" aria-hidden="true">U</div>
-        <div class="vocale-emoji" aria-hidden="true">🚪</div>
+        <div class="vocale-emoji" aria-hidden="true"><img src="/pittogrammi/iso7010/uscita-emergenza-sinistra.svg" alt=""></div>
         <div class="vocale-parola">
           <span class="parola-modello"><span class="parola-iniziale">U</span>SCITA</span>
           <span class="parola-riga" aria-hidden="true"></span>
@@ -4566,7 +4521,7 @@
     </div>
 
     <div class="esercizio-cerchia">
-      <div class="consegna">✏️ Cerchia tutte le vocali nelle parole qui sotto:</div>
+      <div class="consegna">Cerchia tutte le vocali nelle parole qui sotto:</div>
       <div class="esercizio-parole">
         <span>CASCO</span>
         <span>SIRENA</span>
@@ -5763,15 +5718,15 @@
     </p>
 
     <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.5rem 0.8rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.9rem; line-height: 1.5;">
-      <strong style="color: var(--scheda-blu);">🔤 Le parole della Protezione Civile</strong> di questa scheda iniziano con tante lettere diverse: <em>Ambulanza</em>, <em>Pompiere</em>, <em>Casco</em>, <em>Idrante</em>, <em>Radio</em>, <em>Mappa</em>… Imparare la lettera iniziale ti aiuta poi a riconoscere le parole nella scrittura. È un primo passo per leggere da solo!
+      <strong style="color: var(--scheda-blu);">Le parole della Protezione Civile</strong> di questa scheda iniziano con tante lettere diverse: <em>Ambulanza</em>, <em>Pompiere</em>, <em>Casco</em>, <em>Idrante</em>, <em>Radio</em>, <em>Mappa</em>… Imparare la lettera iniziale ti aiuta poi a riconoscere le parole nella scrittura. È un primo passo per leggere da solo!
     </div>
 
-    <div class="ri-consegna"><span class="icon" aria-hidden="true">✏️</span>Cerchia la lettera giusta:</div>
+    <div class="ri-consegna">Cerchia la lettera giusta:</div>
 
     <div class="ri-griglia">
 
       <div class="ri-cella">
-        <span class="ri-emoji" aria-hidden="true">⛑️</span>
+        <span class="ri-emoji" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-c-casco.png" alt=""></span>
         <div class="ri-parte-destra">
           <span class="ri-parola">CASCO</span>
           <div class="ri-opzioni">
@@ -5783,7 +5738,7 @@
       </div>
 
       <div class="ri-cella">
-        <span class="ri-emoji" aria-hidden="true">🚒</span>
+        <span class="ri-emoji" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/pop-sirena.png" alt=""></span>
         <div class="ri-parte-destra">
           <span class="ri-parola">SIRENA</span>
           <div class="ri-opzioni">
@@ -5795,7 +5750,7 @@
       </div>
 
       <div class="ri-cella">
-        <span class="ri-emoji" aria-hidden="true">🔥</span>
+        <span class="ri-emoji" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/pop-fuoco.png" alt=""></span>
         <div class="ri-parte-destra">
           <span class="ri-parola">FUOCO</span>
           <div class="ri-opzioni">
@@ -5807,7 +5762,7 @@
       </div>
 
       <div class="ri-cella">
-        <span class="ri-emoji" aria-hidden="true">📡</span>
+        <span class="ri-emoji" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-r-radio.png" alt=""></span>
         <div class="ri-parte-destra">
           <span class="ri-parola">RADIO</span>
           <div class="ri-opzioni">
@@ -5819,7 +5774,7 @@
       </div>
 
       <div class="ri-cella">
-        <span class="ri-emoji" aria-hidden="true">🗺️</span>
+        <span class="ri-emoji" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-m-mappa.png" alt=""></span>
         <div class="ri-parte-destra">
           <span class="ri-parola">MAPPA</span>
           <div class="ri-opzioni">
@@ -5831,7 +5786,7 @@
       </div>
 
       <div class="ri-cella">
-        <span class="ri-emoji" aria-hidden="true">🚪</span>
+        <span class="ri-emoji" aria-hidden="true"><img src="/pittogrammi/iso7010/uscita-emergenza-sinistra.svg" alt=""></span>
         <div class="ri-parte-destra">
           <span class="ri-parola">USCITA</span>
           <div class="ri-opzioni">
@@ -5843,7 +5798,7 @@
       </div>
 
       <div class="ri-cella">
-        <span class="ri-emoji" aria-hidden="true">🔦</span>
+        <span class="ri-emoji" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/oca-torcia.png" alt=""></span>
         <div class="ri-parte-destra">
           <span class="ri-parola">TORCIA</span>
           <div class="ri-opzioni">
@@ -5855,7 +5810,7 @@
       </div>
 
       <div class="ri-cella">
-        <span class="ri-emoji" aria-hidden="true">🤝</span>
+        <span class="ri-emoji" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/dis-adulto-bambino.png" alt=""></span>
         <div class="ri-parte-destra">
           <span class="ri-parola">AIUTO</span>
           <div class="ri-opzioni">
@@ -5867,7 +5822,7 @@
       </div>
 
       <div class="ri-cella">
-        <span class="ri-emoji" aria-hidden="true">🎒</span>
+        <span class="ri-emoji" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-z-zaino.png" alt=""></span>
         <div class="ri-parte-destra">
           <span class="ri-parola">ZAINO</span>
           <div class="ri-opzioni">
@@ -5879,7 +5834,7 @@
       </div>
 
       <div class="ri-cella">
-        <span class="ri-emoji" aria-hidden="true">🏥</span>
+        <span class="ri-emoji" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="10" y="16" width="44" height="38" rx="3"/><rect x="27" y="37" width="10" height="17"/><path d="M32 20v12M26 26h12"/><rect x="16" y="36" width="7" height="7"/><rect x="41" y="36" width="7" height="7"/></svg></span>
         <div class="ri-parte-destra">
           <span class="ri-parola">OSPEDALE</span>
           <div class="ri-opzioni">
@@ -5936,7 +5891,7 @@
     </p>
 
     <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.5rem 0.8rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.92rem; line-height: 1.5;">
-      <strong style="color: var(--scheda-blu);">🔍 Collegare parole e immagini</strong> è uno dei primi modi per leggere. Le parole che vedi sono tutte legate alla <strong>sicurezza</strong>: ambulanza, casco, idrante, mappa, allerta… Sono parole che troverai in tante storie e cartelli. Conoscere il loro significato è il primo passo per imparare a leggere da solo.
+      <strong style="color: var(--scheda-blu);">Collegare parole e immagini</strong> è uno dei primi modi per leggere. Le parole che vedi sono tutte legate alla <strong>sicurezza</strong>: ambulanza, casco, idrante, mappa, allerta… Sono parole che troverai in tante storie e cartelli. Conoscere il loro significato è il primo passo per imparare a leggere da solo.
     </div>
 
     <div class="cpi-griglia">
@@ -5948,49 +5903,49 @@
       <div class="pallino" aria-hidden="true"></div>
       <div class="puntini" aria-hidden="true">· · · · ·</div>
       <div class="pallino" aria-hidden="true"></div>
-      <div class="figura-cella" aria-hidden="true">🚪</div>
+      <div class="figura-cella" aria-hidden="true"><img src="/pittogrammi/iso7010/uscita-emergenza-sinistra.svg" alt=""></div>
 
       <div class="parola-cella">SIRENA</div>
       <div class="pallino" aria-hidden="true"></div>
       <div class="puntini" aria-hidden="true">· · · · ·</div>
       <div class="pallino" aria-hidden="true"></div>
-      <div class="figura-cella" aria-hidden="true">🆘</div>
+      <div class="figura-cella" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/dis-adulto-bambino.png" alt=""></div>
 
       <div class="parola-cella">USCITA</div>
       <div class="pallino" aria-hidden="true"></div>
       <div class="puntini" aria-hidden="true">· · · · ·</div>
       <div class="pallino" aria-hidden="true"></div>
-      <div class="figura-cella" aria-hidden="true">🔦</div>
+      <div class="figura-cella" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/oca-torcia.png" alt=""></div>
 
       <div class="parola-cella">RADIO</div>
       <div class="pallino" aria-hidden="true"></div>
       <div class="puntini" aria-hidden="true">· · · · ·</div>
       <div class="pallino" aria-hidden="true"></div>
-      <div class="figura-cella" aria-hidden="true">⛑️</div>
+      <div class="figura-cella" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-c-casco.png" alt=""></div>
 
       <div class="parola-cella">112</div>
       <div class="pallino" aria-hidden="true"></div>
       <div class="puntini" aria-hidden="true">· · · · ·</div>
       <div class="pallino" aria-hidden="true"></div>
-      <div class="figura-cella" aria-hidden="true">🚒</div>
+      <div class="figura-cella" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/pop-sirena.png" alt=""></div>
 
       <div class="parola-cella">FUOCO</div>
       <div class="pallino" aria-hidden="true"></div>
       <div class="puntini" aria-hidden="true">· · · · ·</div>
       <div class="pallino" aria-hidden="true"></div>
-      <div class="figura-cella" aria-hidden="true">📡</div>
+      <div class="figura-cella" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-r-radio.png" alt=""></div>
 
       <div class="parola-cella">TORCIA</div>
       <div class="pallino" aria-hidden="true"></div>
       <div class="puntini" aria-hidden="true">· · · · ·</div>
       <div class="pallino" aria-hidden="true"></div>
-      <div class="figura-cella" aria-hidden="true">📞</div>
+      <div class="figura-cella" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-n-telefono.png" alt=""></div>
 
       <div class="parola-cella">AIUTO</div>
       <div class="pallino" aria-hidden="true"></div>
       <div class="puntini" aria-hidden="true">· · · · ·</div>
       <div class="pallino" aria-hidden="true"></div>
-      <div class="figura-cella" aria-hidden="true">🔥</div>
+      <div class="figura-cella" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/pop-fuoco.png" alt=""></div>
 
     </div>
 
@@ -6005,8 +5960,7 @@
 
     <div class="soluzione-capovolta" style="margin-top: 5mm;">
       <span class="titolo">Soluzioni (capovolte — per il docente: gira il foglio)</span>
-      <p style="margin: 0;">CASCO→⛑️, SIRENA→🚒, USCITA→🚪, RADIO→📡,
-      112→📞, FUOCO→🔥, TORCIA→🔦, AIUTO→🆘.</p>
+      <p style="margin: 0;">CASCO → figura del casco · SIRENA → figura della sirena · USCITA → cartello di uscita · RADIO → radio · 112 → telefono · FUOCO → fiamme · TORCIA → torcia · AIUTO → adulto e bambino.</p>
     </div>
 
     <footer class="scheda-footer">
@@ -6039,38 +5993,38 @@
     </p>
 
     <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.5rem 0.8rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.92rem; line-height: 1.5;">
-      <strong style="color: var(--scheda-blu);">🔢 I numeri salvano la vita!</strong> Sai che il numero più importante della Protezione Civile è <strong>1, 1, 2</strong>? È il numero unico di emergenza europeo (NUE 112). Lo chiami quando ti serve aiuto: i pompieri, l'ambulanza, i carabinieri. Mentre impari a contare, ricorda questi <strong>tre numeri magici</strong>: 1-1-2.
+      <strong style="color: var(--scheda-blu);">I numeri salvano la vita!</strong> Sai che il numero più importante della Protezione Civile è <strong>1, 1, 2</strong>? È il numero unico di emergenza europeo (NUE 112). Lo chiami quando ti serve aiuto: i pompieri, l'ambulanza, i carabinieri. Mentre impari a contare, ricorda questi <strong>tre numeri magici</strong>: 1-1-2.
     </div>
 
     <div class="num-griglia">
       <div class="num-riga">
         <div class="num-ricalca" aria-hidden="true">1</div>
         <div class="num-modello" aria-hidden="true">1</div>
-        <div class="num-oggetti" aria-hidden="true">📞</div>
+        <div class="num-oggetti" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-n-telefono.png" alt=""></div>
         <span class="num-riga-vuota" aria-hidden="true"></span>
       </div>
       <div class="num-riga">
         <div class="num-ricalca" aria-hidden="true">2</div>
         <div class="num-modello" aria-hidden="true">2</div>
-        <div class="num-oggetti" aria-hidden="true">⛑️ ⛑️</div>
+        <div class="num-oggetti" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-c-casco.png" alt=""><img src="/pittogrammi/arasaac-bn/alf-c-casco.png" alt=""></div>
         <span class="num-riga-vuota" aria-hidden="true"></span>
       </div>
       <div class="num-riga">
         <div class="num-ricalca" aria-hidden="true">3</div>
         <div class="num-modello" aria-hidden="true">3</div>
-        <div class="num-oggetti" aria-hidden="true">🚒 🚒 🚒</div>
+        <div class="num-oggetti" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/dis-autopompa.png" alt=""><img src="/pittogrammi/arasaac-bn/dis-autopompa.png" alt=""><img src="/pittogrammi/arasaac-bn/dis-autopompa.png" alt=""></div>
         <span class="num-riga-vuota" aria-hidden="true"></span>
       </div>
       <div class="num-riga">
         <div class="num-ricalca" aria-hidden="true">4</div>
         <div class="num-modello" aria-hidden="true">4</div>
-        <div class="num-oggetti" aria-hidden="true">🔦 🔦 🔦 🔦</div>
+        <div class="num-oggetti" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/oca-torcia.png" alt=""><img src="/pittogrammi/arasaac-bn/oca-torcia.png" alt=""><img src="/pittogrammi/arasaac-bn/oca-torcia.png" alt=""><img src="/pittogrammi/arasaac-bn/oca-torcia.png" alt=""></div>
         <span class="num-riga-vuota" aria-hidden="true"></span>
       </div>
       <div class="num-riga">
         <div class="num-ricalca" aria-hidden="true">5</div>
         <div class="num-modello" aria-hidden="true">5</div>
-        <div class="num-oggetti" aria-hidden="true">🤝 🤝 🤝 🤝 🤝</div>
+        <div class="num-oggetti" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/dis-cuore.png" alt=""><img src="/pittogrammi/arasaac-bn/dis-cuore.png" alt=""><img src="/pittogrammi/arasaac-bn/dis-cuore.png" alt=""><img src="/pittogrammi/arasaac-bn/dis-cuore.png" alt=""><img src="/pittogrammi/arasaac-bn/dis-cuore.png" alt=""></div>
         <span class="num-riga-vuota" aria-hidden="true"></span>
       </div>
     </div>
@@ -6118,31 +6072,31 @@
     </p>
 
     <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.5rem 0.8rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.92rem; line-height: 1.5;">
-      <strong style="color: var(--scheda-blu);">💧 Perché impari il ciclo dell'acqua:</strong> ti aiuta a capire come funzionano i <strong>fiumi</strong> e perché a volte arriva un'<strong>alluvione</strong>. Quando piove tantissimo in un giorno, i fiumi non riescono a contenere tutta l'acqua e <em>escono</em> dal letto. I volontari di Protezione Civile sono pronti ad aiutare le persone proprio in queste situazioni.
+      <strong style="color: var(--scheda-blu);">Perché impari il ciclo dell’acqua:</strong> ti aiuta a capire come funzionano i <strong>fiumi</strong> e perché a volte arriva un'<strong>alluvione</strong>. Quando piove tantissimo in un giorno, i fiumi non riescono a contenere tutta l'acqua e <em>escono</em> dal letto. I volontari di Protezione Civile sono pronti ad aiutare le persone proprio in queste situazioni.
     </div>
 
     <div class="ciclo-griglia">
       <div class="ciclo-cella">
         <span class="lettera" aria-hidden="true">A</span>
-        <span class="emo" aria-hidden="true">🌧️</span>
+        <span class="emo" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/oca-pioggia.png" alt=""></span>
         <span class="didascalia">PIOGGIA</span>
         <span class="num-vuoto" aria-hidden="true">?</span>
       </div>
       <div class="ciclo-cella">
         <span class="lettera" aria-hidden="true">B</span>
-        <span class="emo" aria-hidden="true">☀️</span>
+        <span class="emo" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/dis-sole.png" alt=""></span>
         <span class="didascalia">SOLE SUL MARE</span>
         <span class="num-vuoto" aria-hidden="true">?</span>
       </div>
       <div class="ciclo-cella">
         <span class="lettera" aria-hidden="true">C</span>
-        <span class="emo" aria-hidden="true">☁️</span>
+        <span class="emo" aria-hidden="true"><svg viewBox="0 0 80 64"><path d="M17 48h46c8 0 12-5 12-11s-5-11-12-11h-2C59 16 51 10 41 10c-10 0-18 6-20 16h-4C9 26 4 31 4 37s5 11 13 11z"/></svg></span>
         <span class="didascalia">NUVOLA</span>
         <span class="num-vuoto" aria-hidden="true">?</span>
       </div>
       <div class="ciclo-cella">
         <span class="lettera" aria-hidden="true">D</span>
-        <span class="emo" aria-hidden="true">💨</span>
+        <span class="emo" aria-hidden="true"><svg viewBox="0 0 80 64"><path d="M8 52h64"/><path d="M24 46c-8-8 8-12 0-20s8-12 0-20"/><path d="M40 46c-8-8 8-12 0-20s8-12 0-20"/><path d="M56 46c-8-8 8-12 0-20s8-12 0-20"/></svg></span>
         <span class="didascalia">VAPORE CHE SALE</span>
         <span class="num-vuoto" aria-hidden="true">?</span>
       </div>
@@ -6421,7 +6375,7 @@
     </p>
 
     <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.5rem 0.8rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.92rem; line-height: 1.5;">
-      <strong style="color: var(--scheda-blu);">🧭 La bussola dei pompieri</strong> — quando i vigili del fuoco o i volontari di PC vanno in un bosco grande o in montagna, hanno sempre con sé una <strong>bussola</strong> (un piccolo strumento con una freccia che indica sempre il nord). Così non si perdono. Anche tu, se conosci i punti cardinali, sai sempre da che parte sei. Il sole sorge a est e tramonta a ovest: è la bussola che hai sempre con te!
+      <strong style="color: var(--scheda-blu);">La bussola dei soccorritori</strong> — quando i vigili del fuoco o i volontari di PC vanno in un bosco grande o in montagna, hanno sempre con sé una <strong>bussola</strong> (un piccolo strumento con una freccia che indica sempre il nord). Così non si perdono. Anche tu, se conosci i punti cardinali, sai sempre da che parte sei. Il sole sorge a est e tramonta a ovest: è la bussola che hai sempre con te!
     </div>
 
     <h2 class="scheda-h2">La rosa dei venti</h2>
@@ -6458,19 +6412,19 @@
         <span class="lettera" aria-hidden="true">E</span>
         <div class="info">
           <div class="nome">EST</div>
-          <div class="desc">A destra. Da dove sorge il sole 🌅</div>
+          <div class="desc">A destra. Da dove sorge il sole.</div>
         </div>
       </div>
       <div class="punto-card">
         <span class="lettera" aria-hidden="true">O</span>
         <div class="info">
           <div class="nome">OVEST</div>
-          <div class="desc">A sinistra. Dove il sole tramonta 🌇</div>
+          <div class="desc">A sinistra. Dove il sole tramonta.</div>
         </div>
       </div>
     </div>
 
-    <h2 class="scheda-h2">✏️ Scrivi tu le 4 lettere nella rosa dei venti</h2>
+    <h2 class="scheda-h2">Scrivi tu le 4 lettere nella rosa dei venti</h2>
     <p class="scheda-intro" style="margin: 0.2rem 0;">Ricorda: <strong>N</strong> in alto, <strong>S</strong> in basso, <strong>E</strong> a destra, <strong>O</strong> a sinistra.</p>
     <svg class="scrivi-rosa" viewBox="0 0 240 240" role="img" aria-label="Rosa dei venti vuota da completare">
       <polygon points="120,20 130,110 220,120 130,130 120,220 110,130 20,120 110,110" fill="#fff" stroke="#003366" stroke-width="2"/>
@@ -6482,7 +6436,7 @@
       <rect x="0" y="108" width="22" height="30" fill="#fff" stroke="#003366" stroke-width="1.5" stroke-dasharray="3,2"/>
     </svg>
 
-    <h2 class="scheda-h2">🌞 Il sole nel giorno</h2>
+    <h2 class="scheda-h2">Il sole nel giorno</h2>
     <p class="scheda-intro">
       Il sole <strong>sorge a est</strong> la mattina e <strong>tramonta a ovest</strong>
       la sera. Se sai dov'è il sole quando ti svegli, sai dov'è l'est!
@@ -6638,52 +6592,52 @@
     </p>
 
     <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.5rem 0.8rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.92rem; line-height: 1.5;">
-      <strong style="color: var(--scheda-blu);">🔢 Conta gli oggetti che salvano!</strong> Le cose che vedi in ogni quadrato sono le <strong>amiche della Protezione Civile</strong>: pompieri, ambulanze, idranti, caschi, torce. Mentre conti, impara i loro nomi.
+      <strong style="color: var(--scheda-blu);">Conta gli oggetti che salvano!</strong> Le cose che vedi in ogni quadrato sono le <strong>amiche della Protezione Civile</strong>: pompieri, ambulanze, idranti, caschi, torce. Mentre conti, impara i loro nomi.
     </div>
 
     <div class="conta-griglia">
 
       <div class="conta-card">
-        <div class="oggetti" aria-hidden="true">⛑️</div>
+        <div class="oggetti" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-c-casco.png" alt=""></div>
         <div class="domanda">Quanti caschi?</div>
         <div class="scelta"><span class="num">1</span><span class="num">2</span><span class="num">3</span></div>
       </div>
 
       <div class="conta-card">
-        <div class="oggetti" aria-hidden="true">🚨 🚨</div>
+        <div class="oggetti" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/pop-sirena.png" alt=""><img src="/pittogrammi/arasaac-bn/pop-sirena.png" alt=""></div>
         <div class="domanda">Quante sirene?</div>
         <div class="scelta"><span class="num">1</span><span class="num">2</span><span class="num">3</span></div>
       </div>
 
       <div class="conta-card">
-        <div class="oggetti" aria-hidden="true">🔦 🔦 🔦</div>
+        <div class="oggetti" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/oca-torcia.png" alt=""><img src="/pittogrammi/arasaac-bn/oca-torcia.png" alt=""><img src="/pittogrammi/arasaac-bn/oca-torcia.png" alt=""></div>
         <div class="domanda">Quante torce?</div>
         <div class="scelta"><span class="num">1</span><span class="num">2</span><span class="num">3</span></div>
       </div>
 
       <div class="conta-card">
-        <div class="oggetti" aria-hidden="true">🚪 🚪</div>
+        <div class="oggetti" aria-hidden="true"><img src="/pittogrammi/iso7010/uscita-emergenza-sinistra.svg" alt=""><img src="/pittogrammi/iso7010/uscita-emergenza-sinistra.svg" alt=""></div>
         <div class="domanda">Quante uscite?</div>
         <div class="scelta"><span class="num">1</span><span class="num">2</span><span class="num">3</span></div>
       </div>
 
       <div class="conta-card">
-        <div class="oggetti" aria-hidden="true">🤝</div>
+        <div class="oggetti" aria-hidden="true"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="12" r="8" fill="#fff" stroke="#111827" stroke-width="2.5"/><path d="M23 10h18l-4-5H27z" fill="#fff" stroke="#111827" stroke-width="2.3" stroke-linejoin="round"/><path d="M21 25q11-6 22 0l3 20H18z" fill="#fff" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/><path d="M21 27l-8 15 5 3 8-12M43 27l8 15-5 3-8-12" fill="#fff" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/><path d="M20 45h10l-2 15H17zM34 45h10l3 15H36z" fill="#fff" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/><path d="M15 60h14M35 60h14" stroke="#111827" stroke-width="3" stroke-linecap="round"/><path d="M29 29h6v6h-6zM32 26v12M26 32h12" fill="#fff" stroke="#111827" stroke-width="1.8"/></svg></div>
         <div class="domanda">Quanti volontari?</div>
         <div class="scelta"><span class="num">1</span><span class="num">2</span><span class="num">3</span></div>
       </div>
 
       <div class="conta-card">
-        <div class="oggetti" aria-hidden="true">👨‍🚒 👨‍🚒 👨‍🚒</div>
+        <div class="oggetti" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/dis-pompiere.png" alt=""><img src="/pittogrammi/arasaac-bn/dis-pompiere.png" alt=""><img src="/pittogrammi/arasaac-bn/dis-pompiere.png" alt=""></div>
         <div class="domanda">Quanti pompieri?</div>
         <div class="scelta"><span class="num">1</span><span class="num">2</span><span class="num">3</span></div>
       </div>
 
     </div>
 
-    <h2 class="scheda-h2">🌟 Disegna i tuoi numeri</h2>
+    <h2 class="scheda-h2">Disegna i tuoi numeri</h2>
     <p class="scheda-intro" style="margin: 0.2rem 0;">
-      Disegna nello spazio sotto: 1 sole ☀️, 2 nuvole ☁️ e 3 gocce 💧.
+      Disegna nello spazio sotto: 1 sole, 2 nuvole e 3 gocce d’acqua.
     </p>
     <div class="scheda-box-disegno" style="min-height: 5rem;"></div>
 
@@ -8032,137 +7986,6 @@
       <span>Scheda "Quando va via la luce" · Infanzia 3-6 anni · Rev. 01 - Agosto 2026</span>
     </footer>
 
-  </article>
-</section>
-
-<section id="scheda-nobel-che-ci-proteggono-infanzia" class="pacchetto-scheda" aria-label="Scheda: I Nobel che ci proteggono">
-  <article class="scheda-page">
-    <header class="scheda-header">
-      <div class="scheda-logo" aria-hidden="true">PC</div>
-      <div class="scheda-intestazione">
-        <div class="scheda-ente">Protezione Civile — Genzano di Roma</div>
-        <h1 class="scheda-titolo-principale scheda-h1">I Nobel che ci proteggono</h1>
-        <div class="scheda-sottotitolo">Scheda fotocopiabile — Scuola dell'Infanzia · 3-6 anni · da leggere con un adulto</div>
-      </div>
-    </header>
-
-    <div class="scheda-messaggio-chiave">
-      <strong>Per l'adulto che legge:</strong> ogni anno, in autunno, alcune persone ricevono un premio importante,
-      il premio Nobel, per scoperte che aiutano tutti. Alcune di quelle scoperte le usano anche i soccorritori:
-      la radio, la luce forte delle torce, l'idea di formare gruppi di volontari. Leggete insieme le domande,
-      poi il bambino fa le attività.
-    </div>
-
-    <h2 class="scheda-h2">Attività 1 — Unisci con una linea</h2>
-    <div class="nob-attivita">
-      <h3>A che cosa serve? Unisci ogni disegno a sinistra con il disegno giusto a destra.</h3>
-      <div class="nob-unisci">
-        <figure>
-          <img src="/pittogrammi/arasaac/torcia.png" alt="Pittogramma: torcia elettrica">
-          <figcaption>La torcia</figcaption>
-          <span class="punto" aria-hidden="true"></span>
-        </figure>
-        <div class="dx"><figure>
-          <img src="/pittogrammi/arasaac/ascoltare.png" alt="Pittogramma: persona che ascolta con la mano dietro l'orecchio">
-          <figcaption>Ascoltare</figcaption>
-          <span class="punto" aria-hidden="true"></span>
-        </figure></div>
-        <figure>
-          <img src="/pittogrammi/arasaac/radio.png" alt="Pittogramma: radio">
-          <figcaption>La radio</figcaption>
-          <span class="punto" aria-hidden="true"></span>
-        </figure>
-        <div class="dx"><figure>
-          <img src="/pittogrammi/arasaac/aiutare.png" alt="Pittogramma: una persona che aiuta un'altra">
-          <figcaption>Aiutare</figcaption>
-          <span class="punto" aria-hidden="true"></span>
-        </figure></div>
-        <figure>
-          <img src="/pittogrammi/arasaac/volontario.png" alt="Pittogramma: volontario che alza la mano, con il cartello ONG">
-          <figcaption>Il volontario</figcaption>
-          <span class="punto" aria-hidden="true"></span>
-        </figure>
-        <div class="dx"><figure>
-          <img src="/pittogrammi/arasaac/vedere.png" alt="Pittogramma: testa di profilo con una freccia davanti agli occhi, per dire vedere">
-          <figcaption>Vedere al buio</figcaption>
-          <span class="punto" aria-hidden="true"></span>
-        </figure></div>
-      </div>
-    </div>
-
-    <h2 class="scheda-h2">Attività 2 — Lo zaino di Tina</h2>
-    <div class="nob-attivita">
-      <h3>Tina la tartaruga prepara lo zaino per le emergenze con la sua famiglia. Cerchia le cose che mette nello zaino.</h3>
-      <div class="nob-zaino">
-        <figure>
-          <img src="/pittogrammi/arasaac/torcia.png" alt="Pittogramma: torcia elettrica">
-          <figcaption>Torcia</figcaption>
-        </figure>
-        <figure>
-          <img src="/pittogrammi/arasaac/candela.png" alt="Pittogramma: candela accesa">
-          <figcaption>Candela</figcaption>
-        </figure>
-        <figure>
-          <img src="/pittogrammi/arasaac/acqua.png" alt="Pittogramma: rubinetto da cui scorre l'acqua">
-          <figcaption>Acqua</figcaption>
-        </figure>
-        <figure>
-          <img src="/pittogrammi/arasaac/radio.png" alt="Pittogramma: radio">
-          <figcaption>Radio</figcaption>
-        </figure>
-        <figure>
-          <img src="/pittogrammi/arasaac/coperta.png" alt="Pittogramma: coperta">
-          <figcaption>Coperta</figcaption>
-        </figure>
-        <figure>
-          <img src="/pittogrammi/arasaac/fischietto.png" alt="Pittogramma: fischietto">
-          <figcaption>Fischietto</figcaption>
-        </figure>
-      </div>
-    </div>
-  </article>
-  <article class="scheda-page">
-    <h2 class="scheda-h2">Attività 3 — Una medaglia per chi aiuta</h2>
-    <div class="nob-attivita">
-      <h3>Il premio Nobel è una medaglia. Disegna dentro il cerchio una persona che ti aiuta: la mamma, il papà, la nonna, la maestra, un volontario…</h3>
-      <div class="nob-medaglia" role="img" aria-label="Cerchio vuoto in cui disegnare la medaglia"></div>
-      <p class="nob-nastro">La medaglia è per: ______________________________</p>
-    </div>
-
-    <div class="nob-ricorda">
-      <img src="/pittogrammi/arasaac/112.png" alt="Pittogramma: mano che compone il numero 112 su un telefono">
-      <span><strong>Ricorda:</strong> se c'è un pericolo, chiamo subito un adulto. Il numero per chiedere aiuto è il <strong>112</strong>: lo chiama l'adulto.</span>
-    </div>
-
-    <div class="nob-insegnante">
-      <strong>Per l'insegnante</strong>
-      <ul>
-        <li>Tempo: circa 30 minuti, con l'adulto che legge le consegne.</li>
-        <li>Cosa raccontare, in parole semplici: la radio senza fili deve molto agli esperimenti di Guglielmo Marconi, Nobel per la fisica nel 1909; le torce di oggi, con la loro luce bianca e forte, sono possibili grazie al LED blu, Nobel per la fisica nel 2014; Henry Dunant, primo premio Nobel per la pace nel 1901, ebbe l'idea di formare gruppi di volontari pronti ad aiutare.</li>
-        <li>Attività 2: la candela non va nello zaino perché la fiamma può fare un incendio. Quando manca la luce si usa la torcia, non la candela.</li>
-        <li>Attività 3: ogni disegno va bene. Lasciate che il bambino racconti chi ha scelto e perché.</li>
-        <li>Per approfondire con i più grandi: il dossier «I Nobel che ci proteggono» su protezionecivilegenzano.it/dossier/.</li>
-      </ul>
-    </div>
-
-    <div class="soluzione-capovolta">
-      <span class="titolo">Soluzioni (capovolte — per l'insegnante: gira il foglio)</span>
-      <p style="margin: 0;">
-        <strong>Attività 1:</strong> la torcia → vedere al buio · la radio → ascoltare · il volontario → aiutare.
-        <strong>Attività 2:</strong> nello zaino vanno torcia, acqua, radio, coperta e fischietto. La candela no.
-        <strong>Attività 3:</strong> risposta libera.
-      </p>
-    </div>
-
-    <p class="nob-attribuzione">
-      Pittogrammi: ARASAAC (arasaac.org), Governo d'Aragona — autore Sergio Palao, licenza CC BY-NC-SA 4.0.
-      Questa scheda eredita la stessa licenza.
-    </p>
-
-    <footer class="scheda-footer">
-      <span class="scheda-site">protezionecivilegenzano.it</span>
-      <span>Scheda "I Nobel che ci proteggono" · Infanzia 3-6 anni · rev. ottobre 2026</span>
-    </footer>
   </article>
 </section>
 

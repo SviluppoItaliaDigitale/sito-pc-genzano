@@ -45,6 +45,10 @@
       background: #fff8e6; border-left: 4px solid var(--scheda-oro);
       border-radius: 0 6px 6px 0; font-size: 0.82rem; color: #664d03; line-height: 1.45;
     }
+  
+    .conta-card .oggetti { display:flex; align-items:center; justify-content:center; gap:.35rem; letter-spacing:normal; }
+    .conta-card .oggetti img, .conta-card .oggetti svg { width:2.65rem; height:2.65rem; object-fit:contain; display:block; }
+    .conta-card .oggetti svg { fill:none; stroke:#111827; stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round; }
   </style>
 </head>
 <body>
@@ -75,52 +79,52 @@
     </p>
 
     <div style="background: #eaf2fb; border-left: 4px solid var(--scheda-blu); padding: 0.5rem 0.8rem; border-radius: 0 8px 8px 0; margin: 0.4rem 0; font-size: 0.92rem; line-height: 1.5;">
-      <strong style="color: var(--scheda-blu);">🔢 Conta gli oggetti che salvano!</strong> Le cose che vedi in ogni quadrato sono le <strong>amiche della Protezione Civile</strong>: pompieri, ambulanze, idranti, caschi, torce. Mentre conti, impara i loro nomi.
+      <strong style="color: var(--scheda-blu);">Conta gli oggetti che salvano!</strong> Le cose che vedi in ogni quadrato sono le <strong>amiche della Protezione Civile</strong>: pompieri, ambulanze, idranti, caschi, torce. Mentre conti, impara i loro nomi.
     </div>
 
     <div class="conta-griglia">
 
       <div class="conta-card">
-        <div class="oggetti" aria-hidden="true">⛑️</div>
+        <div class="oggetti" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/alf-c-casco.png" alt=""></div>
         <div class="domanda">Quanti caschi?</div>
         <div class="scelta"><span class="num">1</span><span class="num">2</span><span class="num">3</span></div>
       </div>
 
       <div class="conta-card">
-        <div class="oggetti" aria-hidden="true">🚨 🚨</div>
+        <div class="oggetti" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/pop-sirena.png" alt=""><img src="/pittogrammi/arasaac-bn/pop-sirena.png" alt=""></div>
         <div class="domanda">Quante sirene?</div>
         <div class="scelta"><span class="num">1</span><span class="num">2</span><span class="num">3</span></div>
       </div>
 
       <div class="conta-card">
-        <div class="oggetti" aria-hidden="true">🔦 🔦 🔦</div>
+        <div class="oggetti" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/oca-torcia.png" alt=""><img src="/pittogrammi/arasaac-bn/oca-torcia.png" alt=""><img src="/pittogrammi/arasaac-bn/oca-torcia.png" alt=""></div>
         <div class="domanda">Quante torce?</div>
         <div class="scelta"><span class="num">1</span><span class="num">2</span><span class="num">3</span></div>
       </div>
 
       <div class="conta-card">
-        <div class="oggetti" aria-hidden="true">🚪 🚪</div>
+        <div class="oggetti" aria-hidden="true"><img src="/pittogrammi/iso7010/uscita-emergenza-sinistra.svg" alt=""><img src="/pittogrammi/iso7010/uscita-emergenza-sinistra.svg" alt=""></div>
         <div class="domanda">Quante uscite?</div>
         <div class="scelta"><span class="num">1</span><span class="num">2</span><span class="num">3</span></div>
       </div>
 
       <div class="conta-card">
-        <div class="oggetti" aria-hidden="true">🤝</div>
+        <div class="oggetti" aria-hidden="true"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="12" r="8" fill="#fff" stroke="#111827" stroke-width="2.5"/><path d="M23 10h18l-4-5H27z" fill="#fff" stroke="#111827" stroke-width="2.3" stroke-linejoin="round"/><path d="M21 25q11-6 22 0l3 20H18z" fill="#fff" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/><path d="M21 27l-8 15 5 3 8-12M43 27l8 15-5 3-8-12" fill="#fff" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/><path d="M20 45h10l-2 15H17zM34 45h10l3 15H36z" fill="#fff" stroke="#111827" stroke-width="2.5" stroke-linejoin="round"/><path d="M15 60h14M35 60h14" stroke="#111827" stroke-width="3" stroke-linecap="round"/><path d="M29 29h6v6h-6zM32 26v12M26 32h12" fill="#fff" stroke="#111827" stroke-width="1.8"/></svg></div>
         <div class="domanda">Quanti volontari?</div>
         <div class="scelta"><span class="num">1</span><span class="num">2</span><span class="num">3</span></div>
       </div>
 
       <div class="conta-card">
-        <div class="oggetti" aria-hidden="true">👨‍🚒 👨‍🚒 👨‍🚒</div>
+        <div class="oggetti" aria-hidden="true"><img src="/pittogrammi/arasaac-bn/dis-pompiere.png" alt=""><img src="/pittogrammi/arasaac-bn/dis-pompiere.png" alt=""><img src="/pittogrammi/arasaac-bn/dis-pompiere.png" alt=""></div>
         <div class="domanda">Quanti pompieri?</div>
         <div class="scelta"><span class="num">1</span><span class="num">2</span><span class="num">3</span></div>
       </div>
 
     </div>
 
-    <h2 class="scheda-h2">🌟 Disegna i tuoi numeri</h2>
+    <h2 class="scheda-h2">Disegna i tuoi numeri</h2>
     <p class="scheda-intro" style="margin: 0.2rem 0;">
-      Disegna nello spazio sotto: 1 sole ☀️, 2 nuvole ☁️ e 3 gocce 💧.
+      Disegna nello spazio sotto: 1 sole, 2 nuvole e 3 gocce d’acqua.
     </p>
     <div class="scheda-box-disegno" style="min-height: 5rem;"></div>
 
