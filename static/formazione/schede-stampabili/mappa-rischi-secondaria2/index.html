@@ -13,7 +13,7 @@
     .legend-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin: 0.4rem 0; }
     .legend-item {
       padding: 0.4rem 0.7rem; border-radius: 6px;
-      font-size: 0.88rem; line-height: 1.45; border: 1.5px solid;
+      font-size: 0.88rem; line-height: 1.45; border: 1.5px solid; display:flex; align-items:center; gap:.5rem;
     }
     .legend-item.risk-1 { background: #fff8e1; border-color: #f9a825; color: #6d4c00; }
     .legend-item.risk-2 { background: #fff3e0; border-color: #e65100; color: #bf360c; }
@@ -104,10 +104,10 @@
     <p style="font-size: 0.92rem; margin-bottom: 0.4rem;">Disegna l'area scelta (un quartiere, una via, una piazza). Aggiungi i simboli della legenda dove individui un rischio. Poi rispondi alle domande sotto.</p>
 
     <div class="legend-grid">
-      <div class="legend-item risk-1">⚠️ <strong>Frana / dissesto</strong> — versante in pendenza, scarpata visibile, smottamenti precedenti.</div>
-      <div class="legend-item risk-2">🔥 <strong>Incendio interfaccia</strong> — bosco vicino a edifici, vegetazione secca incolta.</div>
-      <div class="legend-item risk-3">🌊 <strong>Allagamento</strong> — sottopasso, fosso tombato, area depressa, tombino sottodimensionato.</div>
-      <div class="legend-item risk-4">🏚️ <strong>Edificio vulnerabile</strong> — casa storica non adeguata, scuola, RSA, ospedale.</div>
+      <div class="legend-item risk-1"><img src="/pittogrammi/iso7010/pericolo-generico.svg" alt="" aria-hidden="true" style="width:1.55rem;height:1.55rem;object-fit:contain;flex:0 0 auto;"><strong>Frana / dissesto</strong> — versante in pendenza, scarpata visibile, smottamenti precedenti.</div>
+      <div class="legend-item risk-2"><img src="/pittogrammi/arasaac-bn/pop-fuoco.png" alt="" aria-hidden="true" style="width:1.55rem;height:1.55rem;object-fit:contain;flex:0 0 auto;"><strong>Incendio interfaccia</strong> — bosco vicino a edifici, vegetazione secca incolta.</div>
+      <div class="legend-item risk-3"><img src="/pittogrammi/arasaac-bn/alf-f-fiume.png" alt="" aria-hidden="true" style="width:1.55rem;height:1.55rem;object-fit:contain;flex:0 0 auto;"><strong>Allagamento</strong> — sottopasso, fosso tombato, area depressa, tombino sottodimensionato.</div>
+      <div class="legend-item risk-4"><img src="/pittogrammi/arasaac-bn/pop-casa.png" alt="" aria-hidden="true" style="width:1.55rem;height:1.55rem;object-fit:contain;flex:0 0 auto;"><strong>Edificio vulnerabile</strong> — casa storica non adeguata, scuola, RSA, ospedale.</div>
     </div>
 
     <p style="font-size: 0.85rem; margin: 0.4rem 0; color: #6c757d;">Disegna nella griglia qui sotto. Aggiungi nord, scala approssimativa e legenda.</p>
